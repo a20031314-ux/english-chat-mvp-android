@@ -1,0 +1,1044 @@
+"use client";
+
+import { FormEvent, useEffect, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
+import {
+  ARCHIVE_STORAGE_KEY,
+  ArchivePanel,
+  ChatMessage,
+  ConversationSession,
+  SavedItem,
+} from "./ArchivePanel";
+import { copy, Locale } from "@/lib/copy";
+import { CorrectionCard } from "./CorrectionCard";
+import { HowToSayCard } from "./HowToSayCard";
+import { LanguageSelector } from "./LanguageSelector";
+import { MessageBubble } from "./MessageBubble";
+import { SaveButton } from "./SaveButton";
+type CorrectionResult = {
+  highlighted: string;
+  corrected: string;
+  natural: string;
+  explanation: string;
+  hasError: boolean;
+};
+
+type ExpressionResult = {
+  expression: string;
+  explanation: string;
+  example: string;
+};
+
+type InputMode = "chat" | "how_to_say";
+
+type ChatTurn = {
+  id: string;
+  mode: InputMode;
+  userMessage: string;
+  assistantMessage?: string;
+  correctionResult?: CorrectionResult;
+  expressionResult?: ExpressionResult;
+  translatedMessage?: string;
+  isTranslating?: boolean;
+};
+
+type ChatModeApiResponse = {
+  assistantMessage: string;
+  correction: {
+    highlighted: string;
+    corrected: string;
+    natural: string;
+    explanation: string;
+  };
+};
+
+type ExpressionApiResponse = {
+  expression: string;
+  explanation: string;
+  example: string;
+};
+
+const SESSION_MESSAGE_LIMIT = 15;
+const CONVERSATION_SESSIONS_KEY = "conversationSessions";
+const LEARNING_CARDS_KEY = "learningCards";
+const API_BASE = "https://english-chat-mvp.vercel.app";
+
+type Plan = "free" | "pro";
+
+type EntitlementState = {
+  plan: Plan;
+  dailyUsed: number;
+  dailyLimit: number | null;
+};
+
+type LearningCard = {
+  id: number;
+  original: string;
+  corrected: string;
+  explanation: string;
+};
+
+function isDailyLimitReachedError(error: unknown) {
+  return error instanceof Error && error.message === "DAILY_LIMIT_REACHED";
+}
+
+function normalizeCorrectionResult(
+  originalMessage: string,
+  correction: ChatModeApiResponse["correction"],
+): CorrectionResult {
+  const corrected = correction.corrected?.trim() || originalMessage;
+  const highlighted = correction.highlighted?.trim() || originalMessage;
+  const natural = correction.natural?.trim() || corrected;
+  const explanation =
+    correction.explanation?.trim() || "일시적인 오류입니다. 다시 시도해주세요.";
+
+  const hasBracketError =
+    highlighted.includes("[") && (highlighted.includes("->") || highlighted.includes("→"));
+  const correctedChanged =
+    corrected.replace(/\s+/g, " ").trim() !==
+    originalMessage.replace(/\s+/g, " ").trim();
+  const hasError = hasBracketError || correctedChanged;
+
+  return {
+    corrected,
+    highlighted,
+    natural,
+    explanation,
+    hasError,
+  };
+}
+
+function makeSessionId() {
+  return `session-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
+}
+
+function loadSavedItems(): SavedItem[] {
+  if (typeof window === "undefined") {
+    return [];
+  }
+
+  try {
+    const raw = window.localStorage.getItem(ARCHIVE_STORAGE_KEY);
+    if (!raw) {
+      return [];
+    }
+    const parsed = JSON.parse(raw) as SavedItem[];
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function persistSavedItems(items: SavedItem[]) {
+  if (typeof window === "undefined") {
+    return;
+  }
+  window.localStorage.setItem(ARCHIVE_STORAGE_KEY, JSON.stringify(items));
+  window.dispatchEvent(new Event("archiveUpdated"));
+}
+
+function loadConversationSessions(): ConversationSession[] {
+  if (typeof window === "undefined") {
+    return [];
+  }
+
+  try {
+    const raw = window.localStorage.getItem(CONVERSATION_SESSIONS_KEY);
+    if (!raw) {
+      return [];
+    }
+    const parsed = JSON.parse(raw) as ConversationSession[];
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
+  }
+}
+
+function saveConversationSession(session: ConversationSession) {
+  if (typeof window === "undefined") {
+    return;
+  }
+
+  const current = loadConversationSessions();
+  const withoutCurrent = current.filter((item) => item.id !== session.id);
+  window.localStorage.setItem(
+    CONVERSATION_SESSIONS_KEY,
+    JSON.stringify([session, ...withoutCurrent]),
+  );
+}
+
+function deleteConversationSession(id: string) {
+  if (typeof window === "undefined") {
+    return;
+  }
+  const next = loadConversationSessions().filter((session) => session.id !== id);
+  window.localStorage.setItem(CONVERSATION_SESSIONS_KEY, JSON.stringify(next));
+}
+
+function clearConversationSessions() {
+  if (typeof window === "undefined") {
+    return;
+  }
+  window.localStorage.setItem(CONVERSATION_SESSIONS_KEY, JSON.stringify([]));
+}
+
+function toSessionMessages(turns: ChatTurn[]): ChatMessage[] {
+  return turns.flatMap((turn) => {
+    const userMessage: ChatMessage = {
+      id: `${turn.id}-user`,
+      role: "user",
+      content: turn.userMessage,
+      createdAt: Date.now(),
+    };
+
+    if (turn.mode === "chat") {
+      const assistantPayload = {
+        assistantMessage: turn.assistantMessage || "",
+        correctionResult: turn.correctionResult || null,
+      };
+      return [
+        userMessage,
+        {
+          id: `${turn.id}-assistant`,
+          role: "assistant",
+          content: JSON.stringify(assistantPayload),
+          createdAt: Date.now(),
+        },
+      ];
+    }
+
+    if (turn.expressionResult) {
+      return [
+        userMessage,
+        {
+          id: `${turn.id}-helper`,
+          role: "helper",
+          content: JSON.stringify({ expressionResult: turn.expressionResult }),
+          createdAt: Date.now(),
+        },
+      ];
+    }
+
+    return [userMessage];
+  });
+}
+
+function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
+  const turns: ChatTurn[] = [];
+  let pendingUser: ChatMessage | null = null;
+
+  for (const message of messages) {
+    if (message.role === "user") {
+      pendingUser = message;
+      continue;
+    }
+
+    if (!pendingUser) {
+      continue;
+    }
+
+    if (message.role === "assistant") {
+      let assistantMessage = "";
+      let correctionResult: CorrectionResult | undefined;
+      try {
+        const parsed = JSON.parse(message.content) as {
+          assistantMessage?: string;
+          correctionResult?: CorrectionResult;
+        };
+        assistantMessage = parsed.assistantMessage || "";
+        correctionResult = parsed.correctionResult;
+      } catch {
+        assistantMessage = message.content;
+      }
+
+      turns.push({
+        id: pendingUser.id.replace("-user", ""),
+        mode: "chat",
+        userMessage: pendingUser.content,
+        assistantMessage,
+        correctionResult,
+      });
+      pendingUser = null;
+      continue;
+    }
+
+    if (message.role === "helper") {
+      let expressionResult: ExpressionResult = {
+        expression: pendingUser.content,
+        explanation: "",
+        example: "",
+      };
+      try {
+        const parsed = JSON.parse(message.content) as {
+          expressionResult?: ExpressionResult;
+        };
+        if (parsed.expressionResult) {
+          expressionResult = parsed.expressionResult;
+        }
+      } catch {
+        expressionResult = {
+          expression: message.content,
+          explanation: "",
+          example: "",
+        };
+      }
+
+      turns.push({
+        id: pendingUser.id.replace("-user", ""),
+        mode: "how_to_say",
+        userMessage: pendingUser.content,
+        expressionResult,
+      });
+      pendingUser = null;
+    }
+  }
+
+  return turns;
+}
+
+function buildCorrectionSavedItem(turn: ChatTurn): SavedItem | null {
+  if (!turn.correctionResult) {
+    return null;
+  }
+
+  return {
+    id: `correction-${turn.id}`,
+    type: "correction",
+    title: turn.correctionResult.corrected,
+    original: turn.userMessage,
+    corrected: turn.correctionResult.corrected,
+    natural: turn.correctionResult.natural,
+    explanation: turn.correctionResult.explanation,
+    createdAt: Date.now(),
+  };
+}
+
+function buildExpressionSavedItem(turn: ChatTurn): SavedItem | null {
+  if (!turn.expressionResult) {
+    return null;
+  }
+
+  return {
+    id: `expression-${turn.id}`,
+    type: "expression",
+    title: turn.expressionResult.expression,
+    original: turn.userMessage,
+    corrected: turn.expressionResult.expression,
+    explanation: turn.expressionResult.explanation,
+    example: turn.expressionResult.example,
+    createdAt: Date.now(),
+  };
+}
+
+export function ChatWindow() {
+  const router = useRouter();
+  const showPayments = process.env.NEXT_PUBLIC_SHOW_PAYMENTS === "true";
+  const [locale, setLocale] = useState<Locale>("ko");
+  const ui = copy[locale];
+  const inputRef = useRef<HTMLTextAreaElement>(null);
+  const bottomRef = useRef<HTMLDivElement>(null);
+
+  const [mode, setMode] = useState<InputMode>("chat");
+  const [turns, setTurns] = useState<ChatTurn[]>([]);
+  const [input, setInput] = useState("");
+  const [isSending, setIsSending] = useState(false);
+  const [savedItems, setSavedItems] = useState<SavedItem[]>([]);
+  const [, setLearningCards] = useState<LearningCard[]>([]);
+  const [conversationSessions, setConversationSessions] = useState<ConversationSession[]>(
+    [],
+  );
+  const [entitlement, setEntitlement] = useState<EntitlementState>({
+    plan: "free",
+    dailyUsed: 0,
+    dailyLimit: SESSION_MESSAGE_LIMIT,
+  });
+  const [isDailyLimitModalOpen, setIsDailyLimitModalOpen] = useState(false);
+  const [currentSessionId, setCurrentSessionId] = useState<string>(makeSessionId());
+  const [currentSessionCreatedAt, setCurrentSessionCreatedAt] = useState<number>(
+    Date.now(),
+  );
+  const [isArchiveOpen, setIsArchiveOpen] = useState(false);
+  const [sessionEnded, setSessionEnded] = useState(false);
+
+  const isDailyLimitReached =
+    entitlement.plan === "free" &&
+    entitlement.dailyLimit !== null &&
+    entitlement.dailyUsed >= entitlement.dailyLimit;
+  const isInputDisabled = isDailyLimitReached;
+
+  const refreshEntitlement = async () => {
+    try {
+      const url = `${API_BASE}/api/entitlement`;
+      console.log("[API DEBUG] entitlement base:", API_BASE);
+      console.log("[API DEBUG] entitlement url:", url);
+      const response = await fetch(url);
+      console.log("[API DEBUG] entitlement status:", response.status);
+      if (!response.ok) {
+        return;
+      }
+      const data = (await response.json()) as {
+        plan?: Plan;
+        dailyUsed?: number;
+        dailyLimit?: number | null;
+      };
+      setEntitlement({
+        plan: data.plan === "pro" ? "pro" : "free",
+        dailyUsed: typeof data.dailyUsed === "number" ? data.dailyUsed : 0,
+        dailyLimit:
+          typeof data.dailyLimit === "number" || data.dailyLimit === null
+            ? data.dailyLimit
+            : SESSION_MESSAGE_LIMIT,
+      });
+    } catch {
+      // keep current entitlement as fallback
+    }
+  };
+
+  useEffect(() => {
+    setSavedItems(loadSavedItems());
+    setConversationSessions(loadConversationSessions());
+    try {
+      const existing = JSON.parse(localStorage.getItem(LEARNING_CARDS_KEY) || "[]");
+      setLearningCards(Array.isArray(existing) ? existing : []);
+    } catch {
+      setLearningCards([]);
+    }
+    void refreshEntitlement();
+  }, []);
+
+  useEffect(() => {
+    const handleArchiveUpdated = () => {
+      setSavedItems(loadSavedItems());
+    };
+
+    window.addEventListener("archiveUpdated", handleArchiveUpdated);
+    return () => window.removeEventListener("archiveUpdated", handleArchiveUpdated);
+  }, []);
+
+  useEffect(() => {
+    if (!currentSessionId) {
+      return;
+    }
+    if (turns.length === 0) {
+      return;
+    }
+
+    const firstMessage = turns[0]?.userMessage || "Conversation Session";
+    const session: ConversationSession = {
+      id: currentSessionId,
+      title:
+        firstMessage.length > 28 ? `${firstMessage.slice(0, 28)}...` : firstMessage,
+      createdAt: currentSessionCreatedAt,
+      endedAt: sessionEnded ? Date.now() : undefined,
+      messageCount: turns.length,
+      messages: toSessionMessages(turns),
+    };
+
+    saveConversationSession(session);
+    setConversationSessions(loadConversationSessions());
+  }, [turns, currentSessionId, currentSessionCreatedAt, sessionEnded]);
+
+  useEffect(() => {
+    if (isDailyLimitReached) {
+      setIsDailyLimitModalOpen(true);
+    }
+  }, [isDailyLimitReached]);
+
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "end",
+    });
+  }, [turns, currentSessionId]);
+
+  const sendChatMessage = async (message: string) => {
+    const url = `${API_BASE}/api/chat`;
+    console.log("[API DEBUG] chat base:", API_BASE);
+    console.log("[API DEBUG] chat url:", url);
+    let response: Response;
+    try {
+      response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ message, mode: "chat" }),
+      });
+    } catch (error) {
+      console.error("FETCH ERROR:", error);
+      throw error;
+    }
+    console.log("[API DEBUG] chat status:", response.status);
+
+    if (!response.ok) {
+      if (response.status === 403) {
+        const errorBody = (await response.json().catch(() => ({}))) as {
+          error?: string;
+        };
+        if (errorBody.error === "DAILY_LIMIT_REACHED") {
+          throw new Error("DAILY_LIMIT_REACHED");
+        }
+      }
+      throw new Error("Failed to get chat response.");
+    }
+
+    const data = (await response.json()) as ChatModeApiResponse;
+    const correctionResult = normalizeCorrectionResult(message, data.correction);
+
+    setTurns((previous) => [
+      ...previous,
+      {
+        id: `${Date.now()}`,
+        mode: "chat",
+        userMessage: message,
+        assistantMessage:
+          data.assistantMessage?.trim() || "Got it. Tell me one more sentence.",
+        correctionResult,
+      },
+    ]);
+  };
+
+  const fetchExpressionResult = async (message: string) => {
+    const url = `${API_BASE}/api/chat`;
+    console.log("[API DEBUG] chat(how_to_say) base:", API_BASE);
+    console.log("[API DEBUG] chat(how_to_say) url:", url);
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ message, mode: "how_to_say" }),
+    });
+    console.log("[API DEBUG] chat(how_to_say) status:", response.status);
+
+    if (!response.ok) {
+      if (response.status === 403) {
+        const errorBody = (await response.json().catch(() => ({}))) as {
+          error?: string;
+        };
+        if (errorBody.error === "DAILY_LIMIT_REACHED") {
+          throw new Error("DAILY_LIMIT_REACHED");
+        }
+      }
+      throw new Error("Failed to get expression response.");
+    }
+
+    const data = (await response.json()) as ExpressionApiResponse;
+
+    setTurns((previous) => [
+      ...previous,
+      {
+        id: `${Date.now()}`,
+        mode: "how_to_say",
+        userMessage: message,
+        expressionResult: {
+          expression: data.expression?.trim() || message,
+          explanation:
+            data.explanation?.trim() || "일시적인 오류입니다. 다시 시도해주세요.",
+          example: data.example?.trim() || "Please try again later.",
+        },
+      },
+    ]);
+  };
+
+  const saveItemFromTurn = (item: SavedItem | null) => {
+    if (!item) {
+      return;
+    }
+    setSavedItems((previous) => {
+      if (previous.some((saved) => saved.id === item.id)) {
+        return previous;
+      }
+      const updated = [item, ...previous];
+      persistSavedItems(updated);
+      return updated;
+    });
+  };
+
+  const saveLearningCardFromTurn = (turn: ChatTurn) => {
+    const corrected =
+      turn.mode === "how_to_say"
+        ? turn.expressionResult?.expression
+        : turn.correctionResult?.corrected;
+    const explanation =
+      turn.mode === "how_to_say"
+        ? turn.expressionResult?.explanation
+        : turn.correctionResult?.explanation;
+
+    const newItem: LearningCard = {
+      id: Date.now(),
+      original: turn.userMessage || "",
+      corrected: corrected || "",
+      explanation: explanation || "",
+    };
+
+    try {
+      const existing = JSON.parse(localStorage.getItem(LEARNING_CARDS_KEY) || "[]");
+      const safeExisting = Array.isArray(existing) ? existing : [];
+
+      setLearningCards((prev) => {
+        const base = prev.length > 0 ? prev : safeExisting;
+        const updated = [...base, newItem];
+        localStorage.setItem(LEARNING_CARDS_KEY, JSON.stringify(updated));
+        return updated;
+      });
+    } catch (e) {
+      console.error("Save error:", e);
+    }
+  };
+
+  const startNewChat = () => {
+    setTurns([]);
+    setInput("");
+    setMode("chat");
+    setSessionEnded(false);
+    setCurrentSessionId(makeSessionId());
+    setCurrentSessionCreatedAt(Date.now());
+    requestAnimationFrame(() => inputRef.current?.focus());
+  };
+
+  const endCurrentSession = () => {
+    if (turns.length === 0) {
+      startNewChat();
+      return;
+    }
+
+    setSessionEnded(true);
+    startNewChat();
+  };
+
+  const handleSend = async (event: FormEvent) => {
+    event.preventDefault();
+    const trimmed = input.trim();
+    if (!trimmed || isSending || isInputDisabled) {
+      return;
+    }
+
+    setIsSending(true);
+    try {
+      if (mode === "how_to_say") {
+        await fetchExpressionResult(trimmed);
+      } else {
+        await sendChatMessage(trimmed);
+      }
+      await refreshEntitlement();
+      setInput("");
+    } catch (error) {
+      if (isDailyLimitReachedError(error)) {
+        await refreshEntitlement();
+        setIsDailyLimitModalOpen(true);
+        return;
+      }
+      setTurns((previous) => [
+        ...previous,
+        {
+          id: `${Date.now()}`,
+          mode,
+          userMessage: trimmed,
+          ...(mode === "how_to_say"
+            ? {
+                expressionResult: {
+                  expression: trimmed,
+                  explanation: "일시적인 오류입니다. 잠시 후 다시 시도해 주세요.",
+                  example: "Please try again later.",
+                },
+              }
+            : {
+                assistantMessage: "지금 처리에 문제가 있었어요.",
+                correctionResult: {
+                  highlighted: trimmed,
+                  corrected: trimmed,
+                  natural: trimmed,
+                  explanation: "일시적인 오류입니다. 잠시 후 다시 시도해 주세요.",
+                  hasError: true,
+                },
+              }),
+        },
+      ]);
+    } finally {
+      setIsSending(false);
+    }
+  };
+
+  const handleUseExpressionAsMessage = async (text: string) => {
+    const message = text.trim();
+    if (!message || isSending || isInputDisabled) {
+      return;
+    }
+
+    setMode("chat");
+    setIsSending(true);
+    try {
+      await sendChatMessage(message);
+      await refreshEntitlement();
+    } catch (error) {
+      if (isDailyLimitReachedError(error)) {
+        await refreshEntitlement();
+        setIsDailyLimitModalOpen(true);
+        return;
+      }
+      setTurns((previous) => [
+        ...previous,
+        {
+          id: `${Date.now()}`,
+          mode: "chat",
+          userMessage: message,
+          assistantMessage: "지금 처리에 문제가 있었어요.",
+          correctionResult: {
+            highlighted: message,
+            corrected: message,
+            natural: message,
+            explanation: "일시적인 오류입니다. 잠시 후 다시 시도해 주세요.",
+            hasError: true,
+          },
+        },
+      ]);
+    } finally {
+      setIsSending(false);
+    }
+  };
+
+  const handleTranslate = async (turnId: string, text: string) => {
+    setTurns((previous) =>
+      previous.map((turn) =>
+        turn.id === turnId ? { ...turn, isTranslating: true } : turn,
+      ),
+    );
+
+    try {
+      const url = `${API_BASE}/api/translate`;
+      console.log("[API DEBUG] translate base:", API_BASE);
+      console.log("[API DEBUG] translate url:", url);
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ text }),
+      });
+      console.log("[API DEBUG] translate status:", response.status);
+
+      if (!response.ok) {
+        throw new Error("Failed to translate.");
+      }
+
+      const data = (await response.json()) as { translated: string };
+
+      setTurns((previous) =>
+        previous.map((turn) =>
+          turn.id === turnId
+            ? {
+                ...turn,
+                translatedMessage: data.translated,
+                isTranslating: false,
+              }
+            : turn,
+        ),
+      );
+    } catch {
+      setTurns((previous) =>
+        previous.map((turn) =>
+          turn.id === turnId
+            ? {
+                ...turn,
+                translatedMessage: ui.translateFailed,
+                isTranslating: false,
+              }
+            : turn,
+        ),
+      );
+    }
+  };
+
+  const openConversationSession = (session: ConversationSession) => {
+    setCurrentSessionId(session.id);
+    setCurrentSessionCreatedAt(session.createdAt);
+    setSessionEnded(false);
+    setTurns(fromSessionMessages(session.messages));
+    setMode("chat");
+    setIsArchiveOpen(false);
+  };
+
+  return (
+    <>
+      <section className="flex h-[92vh] w-full max-w-3xl flex-col overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 shadow-lg">
+        <header className="border-b border-slate-200 bg-white px-4 py-3">
+          <div className="flex items-center justify-between gap-3">
+            <button
+              type="button"
+              onClick={() => setIsArchiveOpen(true)}
+              aria-label="Open archive menu"
+              className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs text-slate-700 hover:bg-slate-50"
+            >
+              ☰
+            </button>
+
+            <div className="min-w-0 flex-1 text-center md:text-left">
+              <h1 className="truncate text-base font-semibold text-slate-900 sm:text-lg">
+                {ui.appTitle}
+              </h1>
+              <p className="text-[11px] text-slate-500 sm:text-xs">
+                {entitlement.plan === "pro"
+                  ? "프로 플랜 · 무제한"
+                  : `무료 플랜 · 오늘 ${entitlement.dailyUsed}/${entitlement.dailyLimit ?? SESSION_MESSAGE_LIMIT}`}
+              </p>
+              <p className="mt-1 whitespace-pre-line text-[11px] text-slate-600 sm:text-xs">
+                {"💭 먼저 말하고 싶은 상황을 떠올리세요\n→ 영어로 직접 표현해보세요\n→ 대화를 이어가며 자연스럽게 다듬어집니다"}
+              </p>
+            </div>
+
+            <div className="flex gap-1">
+              <button
+                type="button"
+                onClick={() => router.push("/learning")}
+                className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs text-slate-700 hover:bg-slate-50"
+              >
+                학습자료실
+              </button>
+              <button
+                type="button"
+                onClick={endCurrentSession}
+                className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs text-slate-700 hover:bg-slate-50"
+              >
+                {ui.endSession}
+              </button>
+            </div>
+          </div>
+          <div className="mt-2 flex justify-center md:mt-1 md:justify-end">
+            <LanguageSelector locale={locale} onChange={setLocale} />
+          </div>
+        </header>
+
+        <div className="flex-1 space-y-2 overflow-y-auto p-2.5 sm:space-y-4 sm:p-4">
+          {turns.length === 0 && (
+            <p className="rounded-lg border border-slate-200 bg-white p-3 text-sm text-slate-700">
+              {"예시: 'I had a really busy day today.'\n이런 식으로 직접 문장을 만들어보세요"}
+            </p>
+          )}
+          {turns.map((turn) => {
+            const correctionSavedId = `correction-${turn.id}`;
+            const expressionSavedId = `expression-${turn.id}`;
+            const correctionSaved = savedItems.some((item) => item.id === correctionSavedId);
+            const expressionSaved = savedItems.some((item) => item.id === expressionSavedId);
+
+            return (
+              <article key={turn.id} className="space-y-1.5 sm:space-y-2">
+                <MessageBubble
+                  role="user"
+                  message={turn.userMessage}
+                  labels={{
+                    translate: ui.translate,
+                    translating: ui.translating,
+                    translation: ui.translation,
+                    listen: ui.listen,
+                  }}
+                />
+
+                {turn.mode === "chat" &&
+                  turn.correctionResult &&
+                  turn.assistantMessage && (
+                    <>
+                      <CorrectionCard
+                        original={turn.userMessage}
+                        highlighted={turn.correctionResult.highlighted}
+                        corrected={turn.correctionResult.corrected}
+                        natural={turn.correctionResult.natural}
+                        explanation={turn.correctionResult.explanation}
+                        hasError={turn.correctionResult.hasError}
+                        feedback={
+                          turn.correctionResult.hasError
+                            ? ui.correctionFeedbackError
+                            : ui.correctionFeedbackCorrect
+                        }
+                        labels={{
+                          title: ui.correctionTitle,
+                          highlighted: ui.highlighted,
+                          corrected: ui.corrected,
+                          natural: ui.natural,
+                          explanation: ui.explanation,
+                          listen: ui.listen,
+                          noCorrectionNeeded: ui.noCorrectionNeeded,
+                        }}
+                        onRetry={(text) => {
+                          setMode("chat");
+                          setInput(text);
+                          requestAnimationFrame(() => inputRef.current?.focus());
+                        }}
+                        actions={
+                          <SaveButton
+                            isSaved={correctionSaved}
+                            saveLabel={ui.save}
+                            savedLabel={ui.saved}
+                            onSave={() => {
+                              saveItemFromTurn(buildCorrectionSavedItem(turn));
+                              saveLearningCardFromTurn(turn);
+                            }}
+                          />
+                        }
+                      />
+                      <MessageBubble
+                        role="assistant"
+                        message={turn.assistantMessage}
+                        translatedMessage={turn.translatedMessage}
+                        isTranslating={turn.isTranslating}
+                        onTranslate={() =>
+                          handleTranslate(turn.id, turn.assistantMessage ?? "")
+                        }
+                        labels={{
+                          translate: ui.translate,
+                          translating: ui.translating,
+                          translation: ui.translation,
+                          listen: ui.listen,
+                        }}
+                      />
+                    </>
+                  )}
+
+                {turn.mode === "how_to_say" && turn.expressionResult && (
+                  <HowToSayCard
+                    expression={turn.expressionResult.expression}
+                    explanation={turn.expressionResult.explanation}
+                    example={turn.expressionResult.example}
+                    labels={{
+                      title: ui.expressionHelperTitle,
+                      explanation: ui.explanation,
+                      example: ui.example,
+                    }}
+                    actions={
+                      <div className="flex flex-wrap gap-2">
+                        <button
+                          type="button"
+                          onClick={() =>
+                            handleUseExpressionAsMessage(
+                              turn.expressionResult?.expression || "",
+                            )
+                          }
+                          className="rounded-md bg-slate-900 px-2 py-1 text-xs text-white hover:bg-slate-700"
+                        >
+                          {ui.useThisExpression}
+                        </button>
+                        <SaveButton
+                          isSaved={expressionSaved}
+                          saveLabel={ui.save}
+                          savedLabel={ui.saved}
+                          onSave={() => {
+                            saveItemFromTurn(buildExpressionSavedItem(turn));
+                            saveLearningCardFromTurn(turn);
+                          }}
+                        />
+                      </div>
+                    }
+                  />
+                )}
+              </article>
+            );
+          })}
+          <div ref={bottomRef} />
+        </div>
+
+        <form
+          onSubmit={handleSend}
+          className="sticky bottom-0 z-20 border-t border-slate-200 bg-white p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] sm:p-4 sm:pb-4"
+        >
+          <>
+            <div className="mb-2 flex gap-2">
+              <button
+                type="button"
+                onClick={() => setMode("chat")}
+                className={`rounded-lg px-3 py-1.5 text-sm transition ${
+                  mode === "chat"
+                    ? "bg-slate-900 text-white"
+                    : "bg-slate-200 text-slate-700 hover:bg-slate-300"
+                }`}
+              >
+                {ui.chatMode}
+              </button>
+              <button
+                type="button"
+                onClick={() => setMode("how_to_say")}
+                className={`rounded-lg px-3 py-1.5 text-sm transition ${
+                  mode === "how_to_say"
+                    ? "bg-slate-900 text-white"
+                    : "bg-slate-200 text-slate-700 hover:bg-slate-300"
+                }`}
+              >
+                {ui.askExpression}
+              </button>
+            </div>
+
+            <div className="flex items-end gap-2">
+              <textarea
+                ref={inputRef}
+                value={input}
+                onChange={(event) => setInput(event.target.value)}
+                placeholder={
+                  mode === "chat" ? ui.inputPlaceholder : ui.expressionPlaceholder
+                }
+                rows={2}
+                disabled={isInputDisabled}
+                className="w-full resize-none rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none ring-0 transition focus:border-slate-500 disabled:cursor-not-allowed disabled:bg-slate-100"
+              />
+              <button
+                type="submit"
+                disabled={isSending || isInputDisabled}
+                className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-400"
+              >
+                {isSending ? `${ui.send}...` : ui.send}
+              </button>
+            </div>
+          </>
+        </form>
+      </section>
+
+      <ArchivePanel
+        isOpen={isArchiveOpen}
+        conversationSessions={conversationSessions}
+        ui={ui}
+        onClose={() => setIsArchiveOpen(false)}
+        onDeleteConversationSession={(id) => {
+          deleteConversationSession(id);
+          setConversationSessions(loadConversationSessions());
+        }}
+        onClearConversationSessions={() => {
+          clearConversationSessions();
+          setConversationSessions(loadConversationSessions());
+        }}
+        onOpenConversationSession={openConversationSession}
+      />
+
+      {showPayments && isDailyLimitModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+          <div className="w-full max-w-sm rounded-2xl bg-white p-5 shadow-2xl">
+            <h2 className="text-base font-semibold text-slate-900">
+              오늘 무료 메시지를 모두 사용했습니다
+            </h2>
+            <p className="mt-2 text-sm text-slate-600">
+              지금 업그레이드하면 계속 사용할 수 있습니다.
+            </p>
+            <div className="mt-4 flex flex-col gap-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setIsDailyLimitModalOpen(false);
+                  if (showPayments) {
+                    router.push("/subscribe");
+                  }
+                }}
+                className="rounded-lg bg-slate-900 px-3 py-2 text-sm text-white hover:bg-slate-700"
+              >
+                무제한 사용 시작하기 (4,900원/월)
+              </button>
+              <button
+                type="button"
+                onClick={() => setIsDailyLimitModalOpen(false)}
+                className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-700 hover:bg-slate-50"
+              >
+                나중에 하기
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
