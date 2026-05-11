@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/build-capacitor.mjs",
+    "build": "next build",
+    "build:capacitor": "node scripts/build-capacitor.mjs",
     "build:web": "next build",
     "start": "next start",
     "lint": "eslint"

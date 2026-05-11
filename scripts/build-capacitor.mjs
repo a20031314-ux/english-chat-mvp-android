@@ -2,6 +2,8 @@
  * Static export for Capacitor: Next.js cannot export `app/api` route handlers,
  * so we temporarily move `src/app/api` aside, run `next build` with CAPACITOR_STATIC=1,
  * copy `out/` → `www/`, then restore the API folder for normal web development.
+ *
+ * Run: `npm run build:capacitor` (not `npm run build` — Vercel uses `build` for server + API routes.)
  */
 import { execSync } from "node:child_process";
 import { cpSync, existsSync, renameSync, rmSync } from "node:fs";
