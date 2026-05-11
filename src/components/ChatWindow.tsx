@@ -61,7 +61,29 @@ type ExpressionApiResponse = {
 const SESSION_MESSAGE_LIMIT = 15;
 const CONVERSATION_SESSIONS_KEY = "conversationSessions";
 const LEARNING_CARDS_KEY = "learningCards";
-const API_BASE = "https://english-chat-mvp.vercel.app";
+const VERCEL_FALLBACK_API_BASE = "https://english-chat-mvp.vercel.app";
+
+/** Localhost uses same-origin `/api/*`. Android WebView / production hostname keeps the Vercel API. */
+function getApiBase(): string {
+  if (typeof window === "undefined") {
+    return VERCEL_FALLBACK_API_BASE;
+  }
+  const host = window.location.hostname;
+  if (host === "localhost" || host === "127.0.0.1") {
+    return "";
+  }
+  const fromEnv = process.env.NEXT_PUBLIC_API_BASE?.trim();
+  if (fromEnv) {
+    return fromEnv.replace(/\/+$/, "");
+  }
+  return VERCEL_FALLBACK_API_BASE;
+}
+
+function apiUrl(apiPath: string): string {
+  const path = apiPath.startsWith("/") ? apiPath : `/${apiPath}`;
+  const base = getApiBase().replace(/\/+$/, "");
+  return base === "" ? path : `${base}${path}`;
+}
 
 type Plan = "free" | "pro";
 
@@ -368,8 +390,8 @@ export function ChatWindow() {
 
   const refreshEntitlement = async () => {
     try {
-      const url = `${API_BASE}/api/entitlement`;
-      console.log("[API DEBUG] entitlement base:", API_BASE);
+      const url = apiUrl("/api/entitlement");
+      console.log("[API DEBUG] entitlement url:", url);
       console.log("[API DEBUG] entitlement url:", url);
       const response = await fetch(url);
       console.log("[API DEBUG] entitlement status:", response.status);
@@ -452,8 +474,7 @@ export function ChatWindow() {
   }, [turns, currentSessionId]);
 
   const sendChatMessage = async (message: string) => {
-    const url = `${API_BASE}/api/chat`;
-    console.log("[API DEBUG] chat base:", API_BASE);
+    const url = apiUrl("/api/chat");
     console.log("[API DEBUG] chat url:", url);
     let response: Response;
     try {
@@ -499,8 +520,7 @@ export function ChatWindow() {
   };
 
   const fetchExpressionResult = async (message: string) => {
-    const url = `${API_BASE}/api/chat`;
-    console.log("[API DEBUG] chat(how_to_say) base:", API_BASE);
+    const url = apiUrl("/api/chat");
     console.log("[API DEBUG] chat(how_to_say) url:", url);
     const response = await fetch(url, {
       method: "POST",
@@ -706,8 +726,7 @@ export function ChatWindow() {
     );
 
     try {
-      const url = `${API_BASE}/api/translate`;
-      console.log("[API DEBUG] translate base:", API_BASE);
+      const url = apiUrl("/api/translate");
       console.log("[API DEBUG] translate url:", url);
       const response = await fetch(url, {
         method: "POST",
