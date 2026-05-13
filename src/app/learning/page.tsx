@@ -1,73 +1,442 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
+import { LearningReviewModal } from "@/components/LearningReviewModal";
+import { LanguageSelector } from "@/components/LanguageSelector";
+import { APP_LOCALE_STORAGE_KEY, Locale, copy } from "@/lib/copy";
+import type { UICopy } from "@/lib/copy";
+import {
+  type LearningCard,
+  loadLearningCards,
+  persistLearningCards,
+  removeReviewEntry,
+  countSavedToday,
+  countByStatus,
+  shouldShowNatural,
+  type ReviewLevel,
+  applyReviewLevel,
+  isReviewQueueCard,
+} from "@/lib/learningCards";
 
-type LearningCard = {
-  id: number;
-  original: string;
-  corrected: string;
-  explanation: string;
-};
+type FilterTab = "all" | "new" | "practicing" | "usable";
 
-const LEARNING_CARDS_KEY = "learningCards";
+function readLocale(): Locale {
+  if (typeof window === "undefined") {
+    return "ko";
+  }
+  try {
+    const raw = localStorage.getItem(APP_LOCALE_STORAGE_KEY);
+    if (raw === "ko" || raw === "en" || raw === "es") {
+      return raw;
+    }
+  } catch {
+    // ignore
+  }
+  return "ko";
+}
+
+function matchesSearch(card: LearningCard, query: string): boolean {
+  const q = query.trim().toLowerCase();
+  if (!q) {
+    return true;
+  }
+  const pool = [card.original, card.corrected, card.explanation, card.natural ?? ""]
+    .join("\n")
+    .toLowerCase();
+  return pool.includes(q);
+}
+
+function matchesTab(card: LearningCard, tab: FilterTab): boolean {
+  switch (tab) {
+    case "all":
+      return true;
+    case "new":
+      return card.status === "new";
+    case "practicing":
+      return card.status === "practicing";
+    case "usable":
+      return card.status === "usable";
+    default:
+      return true;
+  }
+}
+
+function formatRelativeDay(timestamp: number | null, ui: UICopy): string | null {
+  if (!timestamp) {
+    return null;
+  }
+  const startToday = new Date();
+  startToday.setHours(0, 0, 0, 0);
+  const reviewedDay = new Date(timestamp);
+  reviewedDay.setHours(0, 0, 0, 0);
+  const days = Math.max(
+    0,
+    Math.floor((startToday.getTime() - reviewedDay.getTime()) / (24 * 60 * 60 * 1000)),
+  );
+  if (days === 0) {
+    return ui.progressLastReviewedToday;
+  }
+  if (days === 1) {
+    return ui.progressLastReviewedYesterday;
+  }
+  return ui.progressLastReviewedDays.replace("{count}", String(days));
+}
+
+function ProgressMetadata({ card, ui }: { card: LearningCard; ui: UICopy }) {
+  const savedToday = card.createdAt >= new Date().setHours(0, 0, 0, 0);
+  const status =
+    card.status === "usable"
+      ? ui.progressStatusUsable
+      : card.status === "practicing"
+        ? ui.progressStatusPracticing
+        : ui.progressStatusNew;
+  const detail =
+    card.status === "new"
+      ? savedToday
+        ? ui.progressSavedToday
+        : ui.progressNotReviewed
+      : ui.progressReviewCount.replace("{count}", String(card.reviewCount));
+  const lastReviewed =
+    card.status !== "new" && card.reviewCount > 0
+      ? formatRelativeDay(card.lastReviewedAt, ui)
+      : null;
+
+  return (
+    <div className="flex flex-wrap items-center gap-x-2 text-[11px] font-medium text-slate-500">
+      <span className="text-slate-700">{status}</span>
+      <span aria-hidden className="text-slate-300">·</span>
+      <span>{detail}</span>
+      {lastReviewed ? (
+        <>
+          <span aria-hidden className="text-slate-300">·</span>
+          <span className="font-normal text-slate-400">{lastReviewed}</span>
+        </>
+      ) : null}
+    </div>
+  );
+}
 
 export default function LearningPage() {
+  const [locale, setLocale] = useState<Locale>("ko");
   const [cards, setCards] = useState<LearningCard[]>([]);
+  const [reviewCard, setReviewCard] = useState<LearningCard | null>(null);
+  const [reviewSessionQueue, setReviewSessionQueue] = useState<LearningCard[] | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+  const [filterTab, setFilterTab] = useState<FilterTab>("all");
+  const [expanded, setExpanded] = useState<Record<number, boolean>>({});
+  const [reviewTodayHint, setReviewTodayHint] = useState<string | null>(null);
+
+  const ui = copy[locale];
+
+  // localStorage is client-only; hydrate after mount to keep server output stable.
+  /* eslint-disable react-hooks/set-state-in-effect */
+  useEffect(() => {
+    setLocale(readLocale());
+    setCards(loadLearningCards());
+  }, []);
+  /* eslint-enable react-hooks/set-state-in-effect */
 
   useEffect(() => {
     try {
-      const data = JSON.parse(localStorage.getItem(LEARNING_CARDS_KEY) || "[]");
-      setCards(Array.isArray(data) ? data : []);
+      localStorage.setItem(APP_LOCALE_STORAGE_KEY, locale);
     } catch {
-      setCards([]);
+      // ignore
     }
-  }, []);
+  }, [locale]);
+
+  const sortedCards = useMemo(
+    () => [...cards].sort((a, b) => b.id - a.id),
+    [cards],
+  );
+
+  const filteredCards = useMemo(() => {
+    return sortedCards.filter(
+      (card) => matchesSearch(card, searchQuery) && matchesTab(card, filterTab),
+    );
+  }, [sortedCards, searchQuery, filterTab]);
+
+  const savedToday = useMemo(() => countSavedToday(cards), [cards]);
+  const totalCards = cards.length;
+  const practicingCount = useMemo(() => countByStatus(cards, "practicing"), [cards]);
+  const usableCount = useMemo(() => countByStatus(cards, "usable"), [cards]);
+  const reviewCta = practicingCount > 0 ? ui.reviewPracticingCta : ui.reviewNewCta;
+
+  const hasCards = cards.length > 0;
+  const listEmpty = hasCards && filteredCards.length === 0;
+
+  const closeReviewModal = () => {
+    setReviewCard(null);
+    setReviewSessionQueue(null);
+  };
 
   const handleDelete = (id: number) => {
-    setCards((previous) => {
-      const updated = previous.filter((card) => card.id !== id);
-      localStorage.setItem(LEARNING_CARDS_KEY, JSON.stringify(updated));
-      return updated;
+    const updated = cards.filter((card) => card.id !== id);
+    persistLearningCards(updated);
+    removeReviewEntry(id);
+    setCards(updated);
+    setReviewCard((current) => (current?.id === id ? null : current));
+    setReviewSessionQueue((q) => {
+      if (!q) {
+        return null;
+      }
+      const next = q.filter((c) => c.id !== id);
+      if (reviewCard?.id === id && next.length > 0) {
+        setReviewCard(next[0]);
+      }
+      return next.length > 0 ? next : null;
+    });
+    setExpanded((e) => {
+      const next = { ...e };
+      delete next[id];
+      return next;
     });
   };
 
+  const handleRate = (level: ReviewLevel) => {
+    if (!reviewCard) {
+      return;
+    }
+    const reviewedCard = applyReviewLevel(reviewCard, level);
+    const updatedCards = cards.map((card) =>
+      card.id === reviewedCard.id ? reviewedCard : card,
+    );
+    persistLearningCards(updatedCards);
+    setCards(updatedCards);
+
+    if (reviewSessionQueue && reviewSessionQueue.length > 0) {
+      const remaining = reviewSessionQueue.filter((c) => c.id !== reviewCard.id);
+      if (remaining.length > 0) {
+        setReviewSessionQueue(remaining);
+        setReviewCard(remaining[0]);
+      } else {
+        setReviewCard(null);
+        setReviewSessionQueue(null);
+      }
+    } else {
+      setReviewCard(null);
+    }
+  };
+
+  const startReviewToday = () => {
+    setReviewTodayHint(null);
+    const queue = cards
+      .filter((c) =>
+        practicingCount > 0 ? c.status === "practicing" : c.status === "new",
+      )
+      .filter(isReviewQueueCard)
+      .sort((a, b) => a.id - b.id);
+    if (queue.length === 0) {
+      setReviewTodayHint(ui.reviewTodayEmpty);
+      return;
+    }
+    setReviewSessionQueue(queue);
+    setReviewCard(queue[0]);
+  };
+
+  const toggleExpanded = (id: number) => {
+    setExpanded((prev) => ({ ...prev, [id]: !prev[id] }));
+  };
+
+  const filterTabs: { key: FilterTab; label: string }[] = [
+    { key: "all", label: ui.filterAll },
+    { key: "new", label: ui.filterNew },
+    { key: "practicing", label: ui.filterPracticing },
+    { key: "usable", label: ui.filterUsable },
+  ];
+
   return (
-    <main className="mx-auto min-h-screen w-full max-w-3xl bg-slate-50 p-4">
-      <h1 className="mb-4 text-lg font-semibold text-slate-900">학습자료실</h1>
+    <main className="min-h-screen bg-gradient-to-b from-slate-100 to-slate-50 pb-12">
+      <div className="mx-auto w-full max-w-lg px-4 pt-4">
+        <header className="mb-6 flex flex-wrap items-center justify-between gap-3">
+          <Link
+            href="/"
+            className="text-sm font-medium text-slate-600 underline-offset-4 hover:text-slate-900 hover:underline"
+          >
+            {ui.learningBackToChat}
+          </Link>
+          <LanguageSelector locale={locale} onChange={setLocale} />
+        </header>
 
-      <div className="space-y-3">
-        {cards.length === 0 ? (
-          <p className="rounded-lg border border-dashed border-slate-300 bg-white p-4 text-sm text-slate-600">
-            저장된 학습 카드가 없습니다.
+        <section className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm">
+          <h1 className="text-xl font-semibold tracking-tight text-slate-900">
+            {ui.learningBookTitle}
+          </h1>
+          <p className="mt-1 text-xs text-slate-500">
+            {ui.dashboardTotalCardsSubtle.replace("{count}", String(totalCards))}
           </p>
-        ) : (
-          cards.map((card) => (
-            <article key={card.id} className="rounded-lg border border-slate-200 bg-white p-4">
-              <div className="space-y-2 text-sm text-slate-800">
-                <p>
-                  <span className="font-semibold">Original:</span> {card.original}
-                </p>
-                <p>
-                  <span className="font-semibold">Corrected:</span> {card.corrected}
-                </p>
-                <p>
-                  <span className="font-semibold">Explanation:</span> {card.explanation}
-                </p>
-              </div>
 
-              <div className="mt-3 flex gap-2">
+          <dl className="mt-5 grid grid-cols-3 gap-2 text-center sm:gap-3">
+            <div className="rounded-xl bg-slate-50 px-2 py-3">
+              <dt className="text-[11px] font-medium tracking-wide text-slate-500">
+                {ui.dashboardSavedToday}
+              </dt>
+              <dd className="mt-1.5 text-xl font-semibold tabular-nums text-slate-900">
+                {savedToday}
+              </dd>
+            </div>
+            <div className="rounded-xl bg-slate-50 px-2 py-3">
+              <dt className="text-[11px] font-medium tracking-wide text-slate-500">
+                {ui.dashboardPracticing}
+              </dt>
+              <dd className="mt-1.5 text-xl font-semibold tabular-nums text-slate-900">
+                {practicingCount}
+              </dd>
+            </div>
+            <div className="rounded-xl bg-slate-50 px-2 py-3">
+              <dt className="text-[11px] font-medium tracking-wide text-slate-500">
+                {ui.dashboardUsable}
+              </dt>
+              <dd className="mt-1.5 text-xl font-semibold tabular-nums text-slate-900">
+                {usableCount}
+              </dd>
+            </div>
+          </dl>
+
+          <button
+            type="button"
+            onClick={startReviewToday}
+            className="mt-5 w-full rounded-xl bg-slate-900 px-4 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-slate-800"
+          >
+            {reviewCta}
+          </button>
+          {reviewTodayHint ? (
+            <p className="mt-3 text-center text-sm leading-relaxed text-slate-500">{reviewTodayHint}</p>
+          ) : null}
+        </section>
+
+        {hasCards ? (
+          <div className="mt-5 space-y-3">
+            <label className="sr-only" htmlFor="learning-search">
+              {ui.learningSearchPlaceholder}
+            </label>
+            <input
+              id="learning-search"
+              type="search"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder={ui.learningSearchPlaceholder}
+              autoComplete="off"
+              className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 shadow-sm outline-none ring-slate-400/30 placeholder:text-slate-400 focus:border-slate-400 focus:ring-2"
+            />
+
+            <div className="-mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1 pt-0.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {filterTabs.map(({ key, label }) => (
                 <button
+                  key={key}
                   type="button"
-                  onClick={() => handleDelete(card.id)}
-                  className="rounded-md border border-rose-300 bg-white px-3 py-1.5 text-xs text-rose-700 hover:bg-rose-50"
+                  onClick={() => setFilterTab(key)}
+                  className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-medium transition ${
+                    filterTab === key
+                      ? "bg-slate-900 text-white"
+                      : "border border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+                  }`}
                 >
-                  삭제
+                  {label}
                 </button>
-              </div>
-            </article>
-          ))
-        )}
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        <div className="mt-5 space-y-3">
+          {!hasCards ? (
+            <p className="whitespace-pre-line rounded-2xl border border-dashed border-slate-300 bg-white/80 px-4 py-8 text-center text-sm leading-relaxed text-slate-600">
+              {ui.learningEmpty}
+            </p>
+          ) : listEmpty ? (
+            <p className="rounded-2xl border border-dashed border-slate-300 bg-white/80 px-4 py-8 text-center text-sm text-slate-600">
+              {searchQuery.trim() ? ui.learningSearchNoResults : ui.learningFilterEmpty}
+            </p>
+          ) : (
+            filteredCards.map((card) => {
+              const isOpen = !!expanded[card.id];
+              const showNat = shouldShowNatural(card);
+              return (
+                <article
+                  key={card.id}
+                  className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+                >
+                  <div className="border-b border-slate-100 px-3 py-2">
+                    <ProgressMetadata card={card} ui={ui} />
+                  </div>
+
+                  <div className="space-y-2 px-3 pb-3 pt-2">
+                    <p
+                      className={`text-[15px] font-semibold leading-snug text-emerald-950 sm:text-base ${isOpen ? "" : "line-clamp-3"}`}
+                      translate="no"
+                    >
+                      {card.corrected}
+                    </p>
+                    <p
+                      className={`text-[13px] leading-snug text-slate-600 sm:text-[14px] ${isOpen ? "" : "line-clamp-3"}`}
+                      translate="no"
+                    >
+                      {card.original}
+                    </p>
+                    {showNat ? (
+                      <p
+                        className={`text-[12px] leading-snug text-sky-950 sm:text-[13px] ${isOpen ? "" : "line-clamp-3"}`}
+                        translate="no"
+                      >
+                        {card.natural}
+                      </p>
+                    ) : null}
+                  </div>
+
+                  <div className="border-t border-slate-100 px-3 py-2">
+                    <button
+                      type="button"
+                      onClick={() => toggleExpanded(card.id)}
+                      className="text-xs font-medium text-slate-600 underline-offset-2 hover:text-slate-900 hover:underline"
+                    >
+                      {isOpen ? ui.cardHideDetails : ui.cardShowDetails}
+                    </button>
+                  </div>
+
+                  {isOpen ? (
+                    <div className="space-y-3 border-t border-slate-100 bg-slate-50/60 px-3 py-3">
+                      <div>
+                        <p className="text-[11px] font-medium uppercase tracking-wide text-slate-500">
+                          {ui.cardPoint}
+                        </p>
+                        <p className="mt-1 text-sm leading-relaxed text-slate-700">{card.explanation}</p>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setReviewSessionQueue(null);
+                            setReviewCard(card);
+                          }}
+                          className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-medium text-slate-800 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
+                        >
+                          {ui.practiceAgain}
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleDelete(card.id)}
+                          className="rounded-lg border border-rose-200 bg-white px-3 py-2 text-xs font-medium text-rose-800 shadow-sm transition hover:bg-rose-50"
+                        >
+                          {ui.deleteFromBook}
+                        </button>
+                      </div>
+                    </div>
+                  ) : null}
+                </article>
+              );
+            })
+          )}
+        </div>
       </div>
+
+      <LearningReviewModal
+        key={reviewCard?.id ?? "closed"}
+        card={reviewCard}
+        ui={ui}
+        onClose={closeReviewModal}
+        onRate={(level) => handleRate(level)}
+      />
     </main>
   );
 }

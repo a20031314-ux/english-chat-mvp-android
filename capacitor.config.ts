@@ -5,7 +5,7 @@ const config: CapacitorConfig = {
   appName: 'AI English Chat',
   webDir: 'www',
   server: {
-    url: 'https://english-chat-mvp.vercel.app',
+    url:'https://english-chat-mvp-android.vercel.app',
     cleartext: false,
   },
 };

@@ -9,7 +9,12 @@ import {
   ConversationSession,
   SavedItem,
 } from "./ArchivePanel";
-import { copy, Locale } from "@/lib/copy";
+import { APP_LOCALE_STORAGE_KEY, copy, Locale } from "@/lib/copy";
+import {
+  loadLearningCards,
+  persistLearningCards,
+  type LearningCard,
+} from "@/lib/learningCards";
 import { CorrectionCard } from "./CorrectionCard";
 import { HowToSayCard } from "./HowToSayCard";
 import { LanguageSelector } from "./LanguageSelector";
@@ -60,7 +65,6 @@ type ExpressionApiResponse = {
 
 const SESSION_MESSAGE_LIMIT = 15;
 const CONVERSATION_SESSIONS_KEY = "conversationSessions";
-const LEARNING_CARDS_KEY = "learningCards";
 const VERCEL_FALLBACK_API_BASE = "https://english-chat-mvp.vercel.app";
 
 /** Localhost uses same-origin `/api/*`. Android WebView / production hostname keeps the Vercel API. */
@@ -91,13 +95,6 @@ type EntitlementState = {
   plan: Plan;
   dailyUsed: number;
   dailyLimit: number | null;
-};
-
-type LearningCard = {
-  id: number;
-  original: string;
-  corrected: string;
-  explanation: string;
 };
 
 function isDailyLimitReachedError(error: unknown) {
@@ -355,8 +352,22 @@ function buildExpressionSavedItem(turn: ChatTurn): SavedItem | null {
 export function ChatWindow() {
   const router = useRouter();
   const showPayments = process.env.NEXT_PUBLIC_SHOW_PAYMENTS === "true";
-  const [locale, setLocale] = useState<Locale>("ko");
+  const [locale, setLocale] = useState<Locale>(() => {
+    if (typeof window === "undefined") {
+      return "ko";
+    }
+    try {
+      const raw = localStorage.getItem(APP_LOCALE_STORAGE_KEY);
+      if (raw === "ko" || raw === "en" || raw === "es") {
+        return raw;
+      }
+    } catch {
+      // ignore
+    }
+    return "ko";
+  });
   const ui = copy[locale];
+  const [bookToast, setBookToast] = useState<string | null>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
 
@@ -419,14 +430,25 @@ export function ChatWindow() {
   useEffect(() => {
     setSavedItems(loadSavedItems());
     setConversationSessions(loadConversationSessions());
-    try {
-      const existing = JSON.parse(localStorage.getItem(LEARNING_CARDS_KEY) || "[]");
-      setLearningCards(Array.isArray(existing) ? existing : []);
-    } catch {
-      setLearningCards([]);
-    }
+    setLearningCards(loadLearningCards());
     void refreshEntitlement();
   }, []);
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(APP_LOCALE_STORAGE_KEY, locale);
+    } catch {
+      // ignore
+    }
+  }, [locale]);
+
+  useEffect(() => {
+    if (!bookToast) {
+      return;
+    }
+    const timer = window.setTimeout(() => setBookToast(null), 3800);
+    return () => window.clearTimeout(timer);
+  }, [bookToast]);
 
   useEffect(() => {
     const handleArchiveUpdated = () => {
@@ -585,21 +607,33 @@ export function ChatWindow() {
         ? turn.expressionResult?.explanation
         : turn.correctionResult?.explanation;
 
+    const createdAt = Date.now();
     const newItem: LearningCard = {
-      id: Date.now(),
+      id: createdAt,
       original: turn.userMessage || "",
       corrected: corrected || "",
       explanation: explanation || "",
+      createdAt,
+      savedAt: createdAt,
+      status: "new",
+      reviewCount: 0,
+      lastReviewedAt: null,
     };
 
-    try {
-      const existing = JSON.parse(localStorage.getItem(LEARNING_CARDS_KEY) || "[]");
-      const safeExisting = Array.isArray(existing) ? existing : [];
+    if (turn.mode === "chat" && turn.correctionResult) {
+      const { natural, corrected: corr, hasError } = turn.correctionResult;
+      if (hasError && natural.trim() !== corr.trim()) {
+        newItem.natural = natural.trim();
+      }
+    }
 
+    try {
+      const safeExisting = loadLearningCards();
       setLearningCards((prev) => {
         const base = prev.length > 0 ? prev : safeExisting;
         const updated = [...base, newItem];
-        localStorage.setItem(LEARNING_CARDS_KEY, JSON.stringify(updated));
+        persistLearningCards(updated);
+        setBookToast(ui.savedToBookToast.replace("{count}", String(updated.length)));
         return updated;
       });
     } catch (e) {
@@ -812,7 +846,7 @@ export function ChatWindow() {
                 onClick={() => router.push("/learning")}
                 className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs text-slate-700 hover:bg-slate-50"
               >
-                학습자료실
+                {ui.learningBookNav}
               </button>
               <button
                 type="button"
@@ -1008,6 +1042,17 @@ export function ChatWindow() {
           </>
         </form>
       </section>
+
+      {bookToast ? (
+        <div
+          className="pointer-events-none fixed bottom-6 left-1/2 z-[70] max-w-[min(90vw,20rem)] -translate-x-1/2 px-4"
+          role="status"
+        >
+          <div className="pointer-events-auto rounded-xl border border-slate-200 bg-white px-4 py-3 text-center text-sm text-slate-800 shadow-lg">
+            {bookToast}
+          </div>
+        </div>
+      ) : null}
 
       <ArchivePanel
         isOpen={isArchiveOpen}
