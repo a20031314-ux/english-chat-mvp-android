@@ -830,13 +830,16 @@ export function ChatWindow() {
               <h1 className="truncate text-base font-semibold text-slate-900 sm:text-lg">
                 {ui.appTitle}
               </h1>
+              <p className="mt-0.5 text-[11px] leading-snug text-slate-600 sm:text-xs">
+                {ui.appSubtitle}
+              </p>
               <p className="text-[11px] text-slate-500 sm:text-xs">
                 {entitlement.plan === "pro"
                   ? "프로 플랜 · 무제한"
                   : `무료 플랜 · 오늘 ${entitlement.dailyUsed}/${entitlement.dailyLimit ?? SESSION_MESSAGE_LIMIT}`}
               </p>
               <p className="mt-1 whitespace-pre-line text-[11px] text-slate-600 sm:text-xs">
-                {"💭 먼저 말하고 싶은 상황을 떠올리세요\n→ 영어로 직접 표현해보세요\n→ 대화를 이어가며 자연스럽게 다듬어집니다"}
+                {ui.chatHeroIntro}
               </p>
             </div>
 
@@ -864,8 +867,8 @@ export function ChatWindow() {
 
         <div className="flex-1 space-y-2 overflow-y-auto p-2.5 sm:space-y-4 sm:p-4">
           {turns.length === 0 && (
-            <p className="rounded-lg border border-slate-200 bg-white p-3 text-sm text-slate-700">
-              {"예시: 'I had a really busy day today.'\n이런 식으로 직접 문장을 만들어보세요"}
+            <p className="whitespace-pre-line rounded-lg border border-slate-200 bg-white p-3 text-sm text-slate-700">
+              {ui.chatEmptyHint}
             </p>
           )}
           {turns.map((turn) => {
@@ -1048,7 +1051,7 @@ export function ChatWindow() {
           className="pointer-events-none fixed bottom-6 left-1/2 z-[70] max-w-[min(90vw,20rem)] -translate-x-1/2 px-4"
           role="status"
         >
-          <div className="pointer-events-auto rounded-xl border border-slate-200 bg-white px-4 py-3 text-center text-sm text-slate-800 shadow-lg">
+          <div className="pointer-events-auto whitespace-pre-line rounded-xl border border-slate-200 bg-white px-4 py-3 text-center text-sm leading-snug text-slate-800 shadow-lg">
             {bookToast}
           </div>
         </div>
