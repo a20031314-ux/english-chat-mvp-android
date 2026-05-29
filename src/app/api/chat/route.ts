@@ -1,11 +1,11 @@
 import OpenAI from "openai";
 import { NextRequest, NextResponse } from "next/server";
+import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
 import {
   getDailyUsed,
   incrementDailyUsed,
 } from "@/lib/server/entitlementStore";
-
-const FREE_DAILY_LIMIT = 15;
+import { isPremiumClientRequest } from "@/lib/server/premiumRequest";
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
 function requestUserId(request: NextRequest) {
@@ -130,9 +130,7 @@ export async function POST(request: NextRequest) {
   }
 
   const userId = requestUserId(request);
-  if (getDailyUsed(userId) >= FREE_DAILY_LIMIT) {
-    return NextResponse.json({ error: "DAILY_LIMIT_REACHED" }, { status: 403 });
-  }
+  const isPremium = isPremiumClientRequest(request);
 
   let body: { message?: string; mode?: string };
   try {
@@ -148,15 +146,24 @@ export async function POST(request: NextRequest) {
 
   const mode = body.mode === "how_to_say" ? "how_to_say" : "chat";
 
+  if (
+    mode === "chat" &&
+    !isPremium &&
+    getDailyUsed(userId) >= FREE_DAILY_CHAT_LIMIT
+  ) {
+    return NextResponse.json({ error: "DAILY_LIMIT_REACHED" }, { status: 403 });
+  }
+
   try {
     if (mode === "how_to_say") {
       const data = await runHowToSay(openai, message);
-      incrementDailyUsed(userId);
       return NextResponse.json(data);
     }
 
     const data = await runChat(openai, message);
-    incrementDailyUsed(userId);
+    if (!isPremium) {
+      incrementDailyUsed(userId);
+    }
     return NextResponse.json(data);
   } catch (error) {
     console.error("[chat]", error);

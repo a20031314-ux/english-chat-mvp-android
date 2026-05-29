@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useEffect, useRef, useState } from "react";
+import { FormEvent, useCallback, useEffect, useRef, useState } from "react";
 import { useRouter } from "next/navigation";
 import {
   ARCHIVE_STORAGE_KEY,
@@ -20,6 +20,13 @@ import { HowToSayCard } from "./HowToSayCard";
 import { LanguageSelector } from "./LanguageSelector";
 import { MessageBubble } from "./MessageBubble";
 import { SaveButton } from "./SaveButton";
+import { PaywallModal } from "./PaywallModal";
+import { usePremium } from "@/contexts/PremiumContext";
+import {
+  FREE_DAILY_CHAT_LIMIT,
+  PREMIUM_CLIENT_HEADER,
+} from "@/lib/billing/config";
+
 type CorrectionResult = {
   highlighted: string;
   corrected: string;
@@ -63,7 +70,14 @@ type ExpressionApiResponse = {
   example: string;
 };
 
-const SESSION_MESSAGE_LIMIT = 15;
+const SESSION_MESSAGE_LIMIT = FREE_DAILY_CHAT_LIMIT;
+
+function premiumRequestHeaders(isPremium: boolean): HeadersInit {
+  if (!isPremium) {
+    return {};
+  }
+  return { [PREMIUM_CLIENT_HEADER]: "1" };
+}
 const CONVERSATION_SESSIONS_KEY = "conversationSessions";
 const VERCEL_FALLBACK_API_BASE = "https://english-chat-mvp.vercel.app";
 
@@ -109,7 +123,7 @@ function normalizeCorrectionResult(
   const highlighted = correction.highlighted?.trim() || originalMessage;
   const natural = correction.natural?.trim() || corrected;
   const explanation =
-    correction.explanation?.trim() || "일시적인 오류입니다. 다시 시도해주세요.";
+    correction.explanation?.trim() || "일시적인 오류입니다. 다시 시도해 주세요.";
 
   const hasBracketError =
     highlighted.includes("[") && (highlighted.includes("->") || highlighted.includes("→"));
@@ -351,7 +365,7 @@ function buildExpressionSavedItem(turn: ChatTurn): SavedItem | null {
 
 export function ChatWindow() {
   const router = useRouter();
-  const showPayments = process.env.NEXT_PUBLIC_SHOW_PAYMENTS === "true";
+  const { isPremium, isBillingReady, refreshPremium } = usePremium();
   const [locale, setLocale] = useState<Locale>(() => {
     if (typeof window === "undefined") {
       return "ko";
@@ -385,7 +399,7 @@ export function ChatWindow() {
     dailyUsed: 0,
     dailyLimit: SESSION_MESSAGE_LIMIT,
   });
-  const [isDailyLimitModalOpen, setIsDailyLimitModalOpen] = useState(false);
+  const [isPaywallOpen, setIsPaywallOpen] = useState(false);
   const [currentSessionId, setCurrentSessionId] = useState<string>(makeSessionId());
   const [currentSessionCreatedAt, setCurrentSessionCreatedAt] = useState<number>(
     Date.now(),
@@ -393,18 +407,25 @@ export function ChatWindow() {
   const [isArchiveOpen, setIsArchiveOpen] = useState(false);
   const [sessionEnded, setSessionEnded] = useState(false);
 
-  const isDailyLimitReached =
-    entitlement.plan === "free" &&
-    entitlement.dailyLimit !== null &&
-    entitlement.dailyUsed >= entitlement.dailyLimit;
-  const isInputDisabled = isDailyLimitReached;
+  const dailyLimit = entitlement.dailyLimit ?? SESSION_MESSAGE_LIMIT;
+  const isChatDailyLimitReached =
+    !isPremium && entitlement.dailyUsed >= dailyLimit;
+  const isChatInputBlocked = mode === "chat" && isChatDailyLimitReached;
 
-  const refreshEntitlement = async () => {
+  const openPaywall = useCallback((reason?: string) => {
+    if (reason) {
+      console.log(reason);
+    }
+    setIsPaywallOpen(true);
+  }, []);
+
+  const refreshEntitlement = useCallback(async () => {
     try {
       const url = apiUrl("/api/entitlement");
       console.log("[API DEBUG] entitlement url:", url);
-      console.log("[API DEBUG] entitlement url:", url);
-      const response = await fetch(url);
+      const response = await fetch(url, {
+        headers: premiumRequestHeaders(isPremium),
+      });
       console.log("[API DEBUG] entitlement status:", response.status);
       if (!response.ok) {
         return;
@@ -425,14 +446,20 @@ export function ChatWindow() {
     } catch {
       // keep current entitlement as fallback
     }
-  };
+  }, [isPremium]);
 
   useEffect(() => {
     setSavedItems(loadSavedItems());
     setConversationSessions(loadConversationSessions());
     setLearningCards(loadLearningCards());
     void refreshEntitlement();
-  }, []);
+  }, [refreshEntitlement]);
+
+  useEffect(() => {
+    if (isBillingReady) {
+      void refreshEntitlement();
+    }
+  }, [isPremium, isBillingReady, refreshEntitlement]);
 
   useEffect(() => {
     try {
@@ -483,10 +510,10 @@ export function ChatWindow() {
   }, [turns, currentSessionId, currentSessionCreatedAt, sessionEnded]);
 
   useEffect(() => {
-    if (isDailyLimitReached) {
-      setIsDailyLimitModalOpen(true);
+    if (isChatDailyLimitReached) {
+      openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
     }
-  }, [isDailyLimitReached]);
+  }, [isChatDailyLimitReached, openPaywall]);
 
   useEffect(() => {
     bottomRef.current?.scrollIntoView({
@@ -504,6 +531,7 @@ export function ChatWindow() {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          ...premiumRequestHeaders(isPremium),
         },
         body: JSON.stringify({ message, mode: "chat" }),
       });
@@ -576,7 +604,7 @@ export function ChatWindow() {
         expressionResult: {
           expression: data.expression?.trim() || message,
           explanation:
-            data.explanation?.trim() || "일시적인 오류입니다. 다시 시도해주세요.",
+            data.explanation?.trim() || "일시적인 오류입니다. 다시 시도해 주세요.",
           example: data.example?.trim() || "Please try again later.",
         },
       },
@@ -663,8 +691,12 @@ export function ChatWindow() {
 
   const handleSend = async (event: FormEvent) => {
     event.preventDefault();
+    if (mode === "chat" && isChatInputBlocked) {
+      openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
+      return;
+    }
     const trimmed = input.trim();
-    if (!trimmed || isSending || isInputDisabled) {
+    if (!trimmed || isSending) {
       return;
     }
 
@@ -680,7 +712,7 @@ export function ChatWindow() {
     } catch (error) {
       if (isDailyLimitReachedError(error)) {
         await refreshEntitlement();
-        setIsDailyLimitModalOpen(true);
+        openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
         return;
       }
       setTurns((previous) => [
@@ -716,7 +748,11 @@ export function ChatWindow() {
 
   const handleUseExpressionAsMessage = async (text: string) => {
     const message = text.trim();
-    if (!message || isSending || isInputDisabled) {
+    if (!message || isSending) {
+      return;
+    }
+    if (isChatDailyLimitReached) {
+      openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
       return;
     }
 
@@ -728,7 +764,7 @@ export function ChatWindow() {
     } catch (error) {
       if (isDailyLimitReachedError(error)) {
         await refreshEntitlement();
-        setIsDailyLimitModalOpen(true);
+        openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
         return;
       }
       setTurns((previous) => [
@@ -833,11 +869,24 @@ export function ChatWindow() {
               <p className="mt-0.5 text-[11px] leading-snug text-slate-600 sm:text-xs">
                 {ui.appSubtitle}
               </p>
-              <p className="text-[11px] text-slate-500 sm:text-xs">
-                {entitlement.plan === "pro"
-                  ? "프로 플랜 · 무제한"
-                  : `무료 플랜 · 오늘 ${entitlement.dailyUsed}/${entitlement.dailyLimit ?? SESSION_MESSAGE_LIMIT}`}
-              </p>
+              <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5 md:justify-start">
+                <p className="text-[11px] text-slate-500 sm:text-xs">
+                  {isPremium
+                    ? ui.planPremium
+                    : ui.planFree
+                        .replace("{used}", String(entitlement.dailyUsed))
+                        .replace("{limit}", String(dailyLimit))}
+                </p>
+                {!isPremium ? (
+                  <button
+                    type="button"
+                    onClick={() => openPaywall()}
+                    className="shrink-0 rounded-full bg-slate-900 px-2.5 py-1 text-[10px] font-medium text-white shadow-sm hover:bg-slate-800 sm:text-[11px]"
+                  >
+                    {ui.upgradeCta}
+                  </button>
+                ) : null}
+              </div>
               <p className="mt-1 whitespace-pre-line text-[11px] text-slate-600 sm:text-xs">
                 {ui.chatHeroIntro}
               </p>
@@ -866,6 +915,18 @@ export function ChatWindow() {
         </header>
 
         <div className="flex-1 space-y-2 overflow-y-auto p-2.5 sm:space-y-4 sm:p-4">
+          {isChatDailyLimitReached ? (
+            <div className="rounded-xl border border-amber-200 bg-amber-50 px-3 py-3 text-sm text-amber-950">
+              <p className="leading-relaxed">{ui.paywallLimitBanner}</p>
+              <button
+                type="button"
+                onClick={() => openPaywall("PAYWALL_OPEN_LIMIT_REACHED")}
+                className="mt-2 rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-slate-800"
+              >
+                {ui.upgradeCta}
+              </button>
+            </div>
+          ) : null}
           {turns.length === 0 && (
             <p className="whitespace-pre-line rounded-lg border border-slate-200 bg-white p-3 text-sm text-slate-700">
               {ui.chatEmptyHint}
@@ -1031,12 +1092,25 @@ export function ChatWindow() {
                   mode === "chat" ? ui.inputPlaceholder : ui.expressionPlaceholder
                 }
                 rows={2}
-                disabled={isInputDisabled}
-                className="w-full resize-none rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none ring-0 transition focus:border-slate-500 disabled:cursor-not-allowed disabled:bg-slate-100"
+                readOnly={isChatInputBlocked}
+                onFocus={() => {
+                  if (isChatInputBlocked) {
+                    openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
+                  }
+                }}
+                className={`w-full resize-none rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none ring-0 transition focus:border-slate-500 ${
+                  isChatInputBlocked ? "cursor-pointer bg-slate-50" : ""
+                }`}
               />
               <button
                 type="submit"
-                disabled={isSending || isInputDisabled}
+                disabled={isSending}
+                onClick={(event) => {
+                  if (isChatInputBlocked) {
+                    event.preventDefault();
+                    openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
+                  }
+                }}
                 className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-400"
               >
                 {isSending ? `${ui.send}...` : ui.send}
@@ -1073,39 +1147,18 @@ export function ChatWindow() {
         onOpenConversationSession={openConversationSession}
       />
 
-      {showPayments && isDailyLimitModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
-          <div className="w-full max-w-sm rounded-2xl bg-white p-5 shadow-2xl">
-            <h2 className="text-base font-semibold text-slate-900">
-              오늘 무료 메시지를 모두 사용했습니다
-            </h2>
-            <p className="mt-2 text-sm text-slate-600">
-              지금 업그레이드하면 계속 사용할 수 있습니다.
-            </p>
-            <div className="mt-4 flex flex-col gap-2">
-              <button
-                type="button"
-                onClick={() => {
-                  setIsDailyLimitModalOpen(false);
-                  if (showPayments) {
-                    router.push("/subscribe");
-                  }
-                }}
-                className="rounded-lg bg-slate-900 px-3 py-2 text-sm text-white hover:bg-slate-700"
-              >
-                무제한 사용 시작하기 (4,900원/월)
-              </button>
-              <button
-                type="button"
-                onClick={() => setIsDailyLimitModalOpen(false)}
-                className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm text-slate-700 hover:bg-slate-50"
-              >
-                나중에 하기
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <PaywallModal
+        isOpen={isPaywallOpen}
+        locale={locale}
+        ui={ui}
+        onClose={() => setIsPaywallOpen(false)}
+        onPremiumActivated={(message) => {
+          setBookToast(message);
+          void refreshPremium();
+          void refreshEntitlement();
+        }}
+        onInfoToast={(message) => setBookToast(message)}
+      />
     </>
   );
 }
