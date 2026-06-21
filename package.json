@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:capacitor": "node scripts/build-capacitor.mjs",
+    "build:android": "npm run build:capacitor && npx cap sync android",
     "build:web": "next build",
     "start": "next start",
     "lint": "eslint"

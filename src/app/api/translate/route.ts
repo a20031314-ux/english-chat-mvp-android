@@ -1,5 +1,6 @@
 import OpenAI from "openai";
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
+import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -11,22 +12,26 @@ function getClient() {
   return new OpenAI({ apiKey });
 }
 
+export async function OPTIONS(request: NextRequest) {
+  return corsPreflightResponse(request);
+}
+
 export async function POST(request: NextRequest) {
   const client = getClient();
   if (!client) {
-    return NextResponse.json({ error: "MISSING_OPENAI_KEY" }, { status: 503 });
+    return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
 
   let body: { text?: string };
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+    return jsonWithCors(request, { error: "Invalid JSON" }, { status: 400 });
   }
 
   const text = body.text?.trim();
   if (!text) {
-    return NextResponse.json({ error: "text required" }, { status: 400 });
+    return jsonWithCors(request, { error: "text required" }, { status: 400 });
   }
 
   try {
@@ -46,7 +51,7 @@ export async function POST(request: NextRequest) {
 
     const raw = completion.choices[0]?.message?.content;
     if (!raw) {
-      return NextResponse.json({ error: "Empty model response" }, { status: 502 });
+      return jsonWithCors(request, { error: "Empty model response" }, { status: 502 });
     }
 
     const parsed = JSON.parse(raw) as { translated?: string };
@@ -55,9 +60,9 @@ export async function POST(request: NextRequest) {
         ? parsed.translated.trim()
         : text;
 
-    return NextResponse.json({ translated });
+    return jsonWithCors(request, { translated });
   } catch (error) {
     console.error("[translate]", error);
-    return NextResponse.json({ error: "TRANSLATION_FAILED" }, { status: 500 });
+    return jsonWithCors(request, { error: "TRANSLATION_FAILED" }, { status: 500 });
   }
 }

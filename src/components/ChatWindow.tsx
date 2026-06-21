@@ -22,6 +22,7 @@ import { MessageBubble } from "./MessageBubble";
 import { SaveButton } from "./SaveButton";
 import { PaywallModal } from "./PaywallModal";
 import { usePremium } from "@/contexts/PremiumContext";
+import { Capacitor } from "@capacitor/core";
 import {
   FREE_DAILY_CHAT_LIMIT,
   PREMIUM_CLIENT_HEADER,
@@ -81,20 +82,27 @@ function premiumRequestHeaders(isPremium: boolean): HeadersInit {
 const CONVERSATION_SESSIONS_KEY = "conversationSessions";
 const VERCEL_FALLBACK_API_BASE = "https://english-chat-mvp.vercel.app";
 
-/** Localhost uses same-origin `/api/*`. Android WebView / production hostname keeps the Vercel API. */
+/** Web dev uses same-origin `/api/*`. Capacitor WebView uses bundled UI + remote API. */
 function getApiBase(): string {
   if (typeof window === "undefined") {
     return VERCEL_FALLBACK_API_BASE;
   }
+
+  const fromEnv = process.env.NEXT_PUBLIC_API_BASE?.trim();
+  const remoteApiBase = fromEnv
+    ? fromEnv.replace(/\/+$/, "")
+    : VERCEL_FALLBACK_API_BASE;
+
+  if (Capacitor.isNativePlatform()) {
+    return remoteApiBase;
+  }
+
   const host = window.location.hostname;
   if (host === "localhost" || host === "127.0.0.1") {
     return "";
   }
-  const fromEnv = process.env.NEXT_PUBLIC_API_BASE?.trim();
-  if (fromEnv) {
-    return fromEnv.replace(/\/+$/, "");
-  }
-  return VERCEL_FALLBACK_API_BASE;
+
+  return remoteApiBase;
 }
 
 function apiUrl(apiPath: string): string {
@@ -524,7 +532,8 @@ export function ChatWindow() {
 
   const sendChatMessage = async (message: string) => {
     const url = apiUrl("/api/chat");
-    console.log("[API DEBUG] chat url:", url);
+    console.log("CHAT_SEND_START");
+    console.log("CHAT_FETCH_URL", url);
     let response: Response;
     try {
       response = await fetch(url, {
@@ -535,11 +544,12 @@ export function ChatWindow() {
         },
         body: JSON.stringify({ message, mode: "chat" }),
       });
+      console.log("CHAT_FETCH_RESPONSE_STATUS", response.status);
     } catch (error) {
-      console.error("FETCH ERROR:", error);
+      const errorMessage = error instanceof Error ? error.message : String(error);
+      console.log("CHAT_FETCH_ERROR", errorMessage);
       throw error;
     }
-    console.log("[API DEBUG] chat status:", response.status);
 
     if (!response.ok) {
       if (response.status === 403) {

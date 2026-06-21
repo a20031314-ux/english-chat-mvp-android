@@ -1,11 +1,12 @@
 import OpenAI from "openai";
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
 import {
   getDailyUsed,
   incrementDailyUsed,
 } from "@/lib/server/entitlementStore";
 import { isPremiumClientRequest } from "@/lib/server/premiumRequest";
+import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
 function requestUserId(request: NextRequest) {
@@ -123,10 +124,14 @@ async function runHowToSay(
   };
 }
 
+export async function OPTIONS(request: NextRequest) {
+  return corsPreflightResponse(request);
+}
+
 export async function POST(request: NextRequest) {
   const openai = getClient();
   if (!openai) {
-    return NextResponse.json({ error: "MISSING_OPENAI_KEY" }, { status: 503 });
+    return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
 
   const userId = requestUserId(request);
@@ -136,12 +141,12 @@ export async function POST(request: NextRequest) {
   try {
     body = await request.json();
   } catch {
-    return NextResponse.json({ error: "Invalid JSON" }, { status: 400 });
+    return jsonWithCors(request, { error: "Invalid JSON" }, { status: 400 });
   }
 
   const message = body.message?.trim();
   if (!message) {
-    return NextResponse.json({ error: "message required" }, { status: 400 });
+    return jsonWithCors(request, { error: "message required" }, { status: 400 });
   }
 
   const mode = body.mode === "how_to_say" ? "how_to_say" : "chat";
@@ -151,22 +156,22 @@ export async function POST(request: NextRequest) {
     !isPremium &&
     getDailyUsed(userId) >= FREE_DAILY_CHAT_LIMIT
   ) {
-    return NextResponse.json({ error: "DAILY_LIMIT_REACHED" }, { status: 403 });
+    return jsonWithCors(request, { error: "DAILY_LIMIT_REACHED" }, { status: 403 });
   }
 
   try {
     if (mode === "how_to_say") {
       const data = await runHowToSay(openai, message);
-      return NextResponse.json(data);
+      return jsonWithCors(request, data);
     }
 
     const data = await runChat(openai, message);
     if (!isPremium) {
       incrementDailyUsed(userId);
     }
-    return NextResponse.json(data);
+    return jsonWithCors(request, data);
   } catch (error) {
     console.error("[chat]", error);
-    return NextResponse.json({ error: "CHAT_FAILED" }, { status: 500 });
+    return jsonWithCors(request, { error: "CHAT_FAILED" }, { status: 500 });
   }
 }

@@ -133,7 +133,12 @@ export async function initializeBilling(): Promise<BillingInitResult> {
     return { isPremium: cached, isNative: true };
   }
 
-  const isPremium = await fetchPremiumFromRevenueCat();
+  let isPremium = readCachedPremium();
+  try {
+    isPremium = await fetchPremiumFromRevenueCat();
+  } catch (error) {
+    console.error("[billing] init premium check failed", error);
+  }
   writeCachedPremium(isPremium);
   return { isPremium, isNative: true };
 }

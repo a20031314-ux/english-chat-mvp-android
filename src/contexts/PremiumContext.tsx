@@ -39,10 +39,17 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
   const [isBillingReady, setIsBillingReady] = useState(false);
 
   const refreshPremium = useCallback(async () => {
-    const active = await fetchPremiumFromRevenueCat();
-    setIsPremium(active);
-    writeCachedPremium(active);
-    return active;
+    try {
+      const active = await fetchPremiumFromRevenueCat();
+      setIsPremium(active);
+      writeCachedPremium(active);
+      return active;
+    } catch (error) {
+      console.error("[premium] refresh failed", error);
+      const cached = readCachedPremium();
+      setIsPremium(cached);
+      return cached;
+    }
   }, []);
 
   useEffect(() => {
