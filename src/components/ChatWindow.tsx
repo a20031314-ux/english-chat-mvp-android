@@ -420,21 +420,16 @@ export function ChatWindow() {
     !isPremium && entitlement.dailyUsed >= dailyLimit;
   const isChatInputBlocked = mode === "chat" && isChatDailyLimitReached;
 
-  const openPaywall = useCallback((reason?: string) => {
-    if (reason) {
-      console.log(reason);
-    }
+  const openPaywall = useCallback((_reason?: string) => {
     setIsPaywallOpen(true);
   }, []);
 
   const refreshEntitlement = useCallback(async () => {
     try {
       const url = apiUrl("/api/entitlement");
-      console.log("[API DEBUG] entitlement url:", url);
       const response = await fetch(url, {
         headers: premiumRequestHeaders(isPremium),
       });
-      console.log("[API DEBUG] entitlement status:", response.status);
       if (!response.ok) {
         return;
       }
@@ -532,24 +527,14 @@ export function ChatWindow() {
 
   const sendChatMessage = async (message: string) => {
     const url = apiUrl("/api/chat");
-    console.log("CHAT_SEND_START");
-    console.log("CHAT_FETCH_URL", url);
-    let response: Response;
-    try {
-      response = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          ...premiumRequestHeaders(isPremium),
-        },
-        body: JSON.stringify({ message, mode: "chat" }),
-      });
-      console.log("CHAT_FETCH_RESPONSE_STATUS", response.status);
-    } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : String(error);
-      console.log("CHAT_FETCH_ERROR", errorMessage);
-      throw error;
-    }
+    const response = await fetch(url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...premiumRequestHeaders(isPremium),
+      },
+      body: JSON.stringify({ message, mode: "chat" }),
+    });
 
     if (!response.ok) {
       if (response.status === 403) {
@@ -581,7 +566,6 @@ export function ChatWindow() {
 
   const fetchExpressionResult = async (message: string) => {
     const url = apiUrl("/api/chat");
-    console.log("[API DEBUG] chat(how_to_say) url:", url);
     const response = await fetch(url, {
       method: "POST",
       headers: {
@@ -589,7 +573,6 @@ export function ChatWindow() {
       },
       body: JSON.stringify({ message, mode: "how_to_say" }),
     });
-    console.log("[API DEBUG] chat(how_to_say) status:", response.status);
 
     if (!response.ok) {
       if (response.status === 403) {
@@ -807,7 +790,6 @@ export function ChatWindow() {
 
     try {
       const url = apiUrl("/api/translate");
-      console.log("[API DEBUG] translate url:", url);
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -815,7 +797,6 @@ export function ChatWindow() {
         },
         body: JSON.stringify({ text }),
       });
-      console.log("[API DEBUG] translate status:", response.status);
 
       if (!response.ok) {
         throw new Error("Failed to translate.");
@@ -876,10 +857,7 @@ export function ChatWindow() {
               <h1 className="truncate text-base font-semibold text-slate-900 sm:text-lg">
                 {ui.appTitle}
               </h1>
-              <p className="mt-0.5 text-[11px] leading-snug text-slate-600 sm:text-xs">
-                {ui.appSubtitle}
-              </p>
-              <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5 md:justify-start">
+              <div className="mt-1 flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5 md:justify-start">
                 <p className="text-[11px] text-slate-500 sm:text-xs">
                   {isPremium
                     ? ui.planPremium
@@ -897,9 +875,6 @@ export function ChatWindow() {
                   </button>
                 ) : null}
               </div>
-              <p className="mt-1 whitespace-pre-line text-[11px] text-slate-600 sm:text-xs">
-                {ui.chatHeroIntro}
-              </p>
             </div>
 
             <div className="flex gap-1">

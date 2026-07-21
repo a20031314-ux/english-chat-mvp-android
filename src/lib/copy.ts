@@ -3,9 +3,6 @@ export const APP_LOCALE_STORAGE_KEY = "appUiLocale";
 export const copy = {
   ko: {
     appTitle: "영어 교정 채팅",
-    appSubtitle: "틀린 표현은 바로 고쳐 주고, 마음에 드는 표현은 내 영어 교재에 쌓여요",
-    chatHeroIntro:
-      "영어로 직접 말해보세요\n틀린 표현은 바로 교정하고\n좋은 표현은 내 영어 교재에 저장해 복습하세요",
     chatEmptyHint:
       "예: \"I had a really busy day today.\"\n내 말로 영어 문장을 직접 써보세요",
     chatMode: "영어로 대화",
@@ -121,13 +118,14 @@ export const copy = {
     paywallRestoredToast: "구매가 복원됐어요",
     paywallRestoreEmpty: "복원할 구매 내역이 없어요",
     paywallPurchaseFailed: "결제를 완료하지 못했어요. 다시 시도해 주세요.",
+    paywallPurchaseTimeout:
+      "결제 연결 시간이 초과됐어요. Play 스토어에서 설치한 앱인지 확인 후 다시 시도해 주세요.",
+    paywallNoProduct:
+      "결제 상품을 불러오지 못했어요. Play Console·RevenueCat 설정을 확인해 주세요.",
     paywallCancelled: "결제가 취소됐어요",
   },
   en: {
     appTitle: "English correction chat",
-    appSubtitle: "Fix mistakes as you chat — save useful phrases to your personal book.",
-    chatHeroIntro:
-      "Write in English yourself.\nGet awkward or wrong wording corrected.\nSave good phrases to My English Book and review them later.",
     chatEmptyHint:
       "Example: \"I had a really busy day today.\"\nTry writing full sentences in your own words.",
     chatMode: "Chat in English",
@@ -242,14 +240,14 @@ export const copy = {
     paywallRestoredToast: "Your purchase was restored",
     paywallRestoreEmpty: "No purchases to restore",
     paywallPurchaseFailed: "We couldn't complete the purchase. Please try again.",
+    paywallPurchaseTimeout:
+      "The purchase timed out. Install the app from the Play Store, then try again.",
+    paywallNoProduct:
+      "We couldn't load the subscription product. Check Play Console and RevenueCat setup.",
     paywallCancelled: "Purchase cancelled",
   },
   es: {
     appTitle: "Chat de corrección de inglés",
-    appSubtitle:
-      "Te corrige al momento — guarda frases útiles en tu libro personal para repasar.",
-    chatHeroIntro:
-      "Escribe tú mismo en inglés.\nCorrige lo que suene raro o esté mal.\nGuarda buenas frases en tu libro y repásalas después.",
     chatEmptyHint:
       "Ejemplo: \"I had a really busy day today.\"\nEscribe frases completas con tus palabras.",
     chatMode: "Hablar en ingles",
@@ -364,6 +362,10 @@ export const copy = {
     paywallRestoredToast: "Compra restaurada",
     paywallRestoreEmpty: "No hay compras para restaurar",
     paywallPurchaseFailed: "No se pudo completar la compra. Inténtalo de nuevo.",
+    paywallPurchaseTimeout:
+      "La compra tardó demasiado. Instala la app desde Play Store e inténtalo de nuevo.",
+    paywallNoProduct:
+      "No se pudo cargar el producto. Revisa Play Console y RevenueCat.",
     paywallCancelled: "Compra cancelada",
   },
 } as const;

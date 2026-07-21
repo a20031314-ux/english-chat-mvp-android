@@ -10,6 +10,7 @@ import {
   type ReactNode,
 } from "react";
 import {
+  ensureBillingReady,
   fetchPremiumFromRevenueCat,
   initializeBilling,
   isBillingNativePlatform,
@@ -17,6 +18,8 @@ import {
   readCachedPremium,
   restorePremiumPurchases,
   writeCachedPremium,
+  type BillingReadyResult,
+  type BillingStepListener,
   type PurchaseFlowResult,
   type RestoreFlowResult,
 } from "@/lib/billing/billingService";
@@ -25,8 +28,9 @@ type PremiumContextValue = {
   isPremium: boolean;
   isBillingNative: boolean;
   isBillingReady: boolean;
+  ensureBillingReady: (onStep?: BillingStepListener) => Promise<BillingReadyResult>;
   refreshPremium: () => Promise<boolean>;
-  purchasePremium: () => Promise<PurchaseFlowResult>;
+  purchasePremium: (onStep?: BillingStepListener) => Promise<PurchaseFlowResult>;
   restorePurchases: () => Promise<RestoreFlowResult>;
   setPremiumForUi: (value: boolean) => void;
 };
@@ -57,9 +61,17 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
 
     const boot = async () => {
       setIsPremium(readCachedPremium());
-      setIsBillingNative(isBillingNativePlatform());
+      const native = isBillingNativePlatform();
+      setIsBillingNative(native);
 
       try {
+        if (native) {
+          const billing = await ensureBillingReady();
+          if (!cancelled) {
+            setIsBillingReady(billing.ready);
+          }
+        }
+
         const result = await initializeBilling();
         if (cancelled) {
           return;
@@ -68,10 +80,6 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
         setIsBillingNative(result.isNative);
       } catch (error) {
         console.error("[premium] init failed", error);
-      } finally {
-        if (!cancelled) {
-          setIsBillingReady(true);
-        }
       }
     };
 
@@ -82,8 +90,8 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  const purchasePremium = useCallback(async () => {
-    const result = await purchaseMonthlyPremium();
+  const purchasePremium = useCallback(async (onStep?: BillingStepListener) => {
+    const result = await purchaseMonthlyPremium(onStep);
     if (result.status === "success") {
       setIsPremium(true);
     }
@@ -111,6 +119,7 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
       isPremium,
       isBillingNative,
       isBillingReady,
+      ensureBillingReady,
       refreshPremium,
       purchasePremium,
       restorePurchases,
@@ -120,6 +129,7 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
       isPremium,
       isBillingNative,
       isBillingReady,
+      ensureBillingReady,
       refreshPremium,
       purchasePremium,
       restorePurchases,

@@ -1,6 +1,7 @@
 "use client";
 
 import { usePremium } from "@/contexts/PremiumContext";
+import { resetBillingConfigure } from "@/lib/billing/billingService";
 import type { Locale, UICopy } from "@/lib/copy";
 import { useState } from "react";
 
@@ -21,7 +22,8 @@ export function PaywallModal({
   onPremiumActivated,
   onInfoToast,
 }: PaywallModalProps) {
-  const { isBillingNative, purchasePremium, restorePurchases } = usePremium();
+  const { isBillingNative, ensureBillingReady, purchasePremium, restorePurchases } =
+    usePremium();
   const [isPurchasing, setIsPurchasing] = useState(false);
   const [isRestoring, setIsRestoring] = useState(false);
 
@@ -32,8 +34,20 @@ export function PaywallModal({
   const benefits = ui.paywallBenefits.split("\n");
   const busy = isPurchasing || isRestoring;
 
+  const purchaseErrorMessage = (message?: string) => {
+    if (!message) {
+      return ui.paywallPurchaseFailed;
+    }
+    if (message.startsWith("BILLING_TIMEOUT:")) {
+      return ui.paywallPurchaseTimeout;
+    }
+    if (message === "NO_PACKAGE") {
+      return ui.paywallNoProduct;
+    }
+    return ui.paywallPurchaseFailed;
+  };
+
   const handlePurchase = async () => {
-    console.log("PAYWALL_PURCHASE_CLICKED");
     if (!isBillingNative) {
       onInfoToast(ui.paywallNativeOnly);
       return;
@@ -41,6 +55,16 @@ export function PaywallModal({
 
     setIsPurchasing(true);
     try {
+      let billing = await ensureBillingReady();
+      if (!billing.ready) {
+        resetBillingConfigure();
+        billing = await ensureBillingReady();
+      }
+      if (!billing.ready) {
+        onInfoToast(ui.paywallPurchaseFailed);
+        return;
+      }
+
       const result = await purchasePremium();
       if (result.status === "success") {
         onPremiumActivated(ui.paywallActivatedToast);
@@ -51,7 +75,7 @@ export function PaywallModal({
         onInfoToast(ui.paywallCancelled);
         return;
       }
-      onInfoToast(ui.paywallPurchaseFailed);
+      onInfoToast(purchaseErrorMessage(result.message));
     } finally {
       setIsPurchasing(false);
     }
@@ -65,6 +89,12 @@ export function PaywallModal({
 
     setIsRestoring(true);
     try {
+      const billing = await ensureBillingReady();
+      if (!billing.ready) {
+        onInfoToast(ui.paywallPurchaseFailed);
+        return;
+      }
+
       const result = await restorePurchases();
       if (result.status === "restored") {
         onPremiumActivated(ui.paywallRestoredToast);
