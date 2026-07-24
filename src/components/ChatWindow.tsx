@@ -1083,7 +1083,7 @@ export function ChatWindow() {
                     openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
                   }
                 }}
-                className={`w-full resize-none rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none ring-0 transition focus:border-slate-500 ${
+                className={`min-w-0 flex-1 resize-none rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none ring-0 transition focus:border-slate-500 ${
                   isChatInputBlocked ? "cursor-pointer bg-slate-50" : ""
                 }`}
               />
@@ -1096,7 +1096,7 @@ export function ChatWindow() {
                     openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
                   }
                 }}
-                className="rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-400"
+                className="shrink-0 whitespace-nowrap rounded-xl bg-slate-900 px-4 py-2 text-sm font-medium text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-400"
               >
                 {isSending ? `${ui.send}...` : ui.send}
               </button>
