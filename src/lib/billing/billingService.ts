@@ -94,7 +94,11 @@ function reportStep(onStep: BillingStepListener | undefined, step: string): void
 }
 
 function isDevPremiumOverrideEnabled(): boolean {
-  return process.env.NEXT_PUBLIC_BILLING_DEV_PREMIUM === "true";
+  if (process.env.NEXT_PUBLIC_BILLING_DEV_PREMIUM === "true") {
+    return true;
+  }
+  // Local `next dev`: unlock premium so daily free limits don't block testing.
+  return process.env.NODE_ENV === "development";
 }
 
 export function isBillingNativePlatform(): boolean {

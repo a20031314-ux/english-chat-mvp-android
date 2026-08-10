@@ -4,6 +4,18 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
+const TARGET_LANGUAGES: Record<string, string> = {
+  ko: "Korean",
+  en: "English",
+  es: "Spanish",
+  ja: "Japanese",
+  zh: "Simplified Chinese",
+  vi: "Vietnamese",
+  fr: "French",
+  pt: "Portuguese",
+  id: "Indonesian",
+};
+
 function getClient() {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
@@ -22,7 +34,7 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
 
-  let body: { text?: string };
+  let body: { text?: string; locale?: string };
   try {
     body = await request.json();
   } catch {
@@ -34,14 +46,16 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "text required" }, { status: 400 });
   }
 
+  const targetLanguage =
+    TARGET_LANGUAGES[body.locale ?? ""] ?? TARGET_LANGUAGES.ko;
+
   try {
     const completion = await client.chat.completions.create({
       model: MODEL,
       messages: [
         {
           role: "system",
-          content:
-            "You translate English learner chat text into natural Korean for display. Respond with ONLY compact JSON: {\"translated\":\"...\"}",
+          content: `You translate English learner chat text into natural ${targetLanguage} for display. Respond with ONLY compact JSON: {"translated":"..."}`,
         },
         { role: "user", content: text },
       ],

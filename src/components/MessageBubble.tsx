@@ -1,28 +1,38 @@
 import { TTSButton } from "./TTSButton";
+import { SelectableEnglishText } from "./SelectableEnglishText";
 
 type MessageBubbleProps = {
   role: "user" | "assistant";
   message: string;
   translatedMessage?: string;
   isTranslating?: boolean;
-  onTranslate?: () => void;
+  pickMode?: boolean;
+  isWordSaved?: (word: string) => boolean;
+  savingWord?: string | null;
+  onWordClick?: (word: string) => void;
   labels: {
-    translate: string;
-    translating: string;
-    translation: string;
     listen: string;
+    translate?: string;
+    translating?: string;
+    translation?: string;
   };
+  onTranslate?: () => void;
 };
 
 export function MessageBubble({
   role,
   message,
   translatedMessage,
-  isTranslating,
-  onTranslate,
+  isTranslating = false,
+  pickMode = false,
+  isWordSaved,
+  savingWord = null,
+  onWordClick,
   labels,
+  onTranslate,
 }: MessageBubbleProps) {
   const isUser = role === "user";
+  const canTranslate = Boolean(onTranslate && labels.translate);
 
   return (
     <div className={`flex w-full ${isUser ? "justify-end" : "justify-start"}`}>
@@ -33,27 +43,58 @@ export function MessageBubble({
             : "rounded-bl-sm bg-white text-slate-900"
         }`}
       >
-        <p className="whitespace-pre-wrap">{message}</p>
+        <p>
+          <SelectableEnglishText
+            text={message}
+            pickMode={pickMode}
+            tone={isUser ? "onDark" : "default"}
+            isWordSaved={isWordSaved}
+            savingWord={savingWord}
+            onWordClick={onWordClick}
+          />
+        </p>
 
-        {!isUser && (
-          <div className="mt-3 flex flex-wrap items-center gap-2">
+        {translatedMessage ? (
+          <div
+            className={`mt-2 border-t pt-2 text-xs leading-relaxed ${
+              isUser ? "border-slate-600 text-slate-200" : "border-slate-200 text-slate-600"
+            }`}
+          >
+            {labels.translation ? (
+              <p className="mb-0.5 font-medium opacity-80">{labels.translation}</p>
+            ) : null}
+            <p className="whitespace-pre-wrap">{translatedMessage}</p>
+          </div>
+        ) : null}
+
+        <div className="mt-3 flex flex-wrap items-center gap-2">
+          {isUser ? (
+            <TTSButton
+              text={message}
+              ariaLabel={labels.listen}
+              className="border-slate-600 bg-slate-800 text-white hover:bg-slate-700"
+            />
+          ) : (
             <TTSButton text={message} ariaLabel={labels.listen} />
+          )}
+
+          {canTranslate ? (
             <button
               type="button"
+              disabled={isTranslating || Boolean(translatedMessage)}
               onClick={onTranslate}
-              disabled={isTranslating}
-              className="rounded-md border border-slate-300 bg-white px-2 py-1 text-sm transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-60"
+              className={`rounded-md border px-2 py-1 text-xs transition disabled:cursor-default disabled:opacity-60 ${
+                isUser
+                  ? "border-slate-600 bg-slate-800 text-white hover:bg-slate-700"
+                  : "border-slate-300 bg-white text-slate-700 hover:bg-slate-50"
+              }`}
             >
-              {isTranslating ? labels.translating : labels.translate}
+              {isTranslating
+                ? labels.translating || labels.translate
+                : labels.translate}
             </button>
-          </div>
-        )}
-
-        {!isUser && translatedMessage && (
-          <p className="mt-2 rounded-md bg-slate-100 px-2 py-1 text-xs text-slate-700">
-            {labels.translation}: {translatedMessage}
-          </p>
-        )}
+          ) : null}
+        </div>
       </div>
     </div>
   );

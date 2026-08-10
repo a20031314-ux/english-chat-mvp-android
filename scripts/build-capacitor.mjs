@@ -6,7 +6,7 @@
  * Run: `npm run build:capacitor` (not `npm run build` — Vercel uses `build` for server + API routes.)
  */
 import { execSync } from "node:child_process";
-import { cpSync, existsSync, renameSync, rmSync } from "node:fs";
+import { cpSync, existsSync, rmSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -32,9 +32,15 @@ if (existsSync(apiBackup)) {
 
 rmSync(wwwDir, { recursive: true, force: true });
 
+function moveDir(from, to) {
+  // Prefer copy+remove over rename — rename often hits EPERM on Windows locks.
+  cpSync(from, to, { recursive: true });
+  rmSync(from, { recursive: true, force: true });
+}
+
 let apiMoved = false;
 if (existsSync(apiDir)) {
-  renameSync(apiDir, apiBackup);
+  moveDir(apiDir, apiBackup);
   apiMoved = true;
 }
 
@@ -45,7 +51,7 @@ function restoreApi() {
   if (existsSync(apiDir)) {
     rmSync(apiDir, { recursive: true, force: true });
   }
-  renameSync(apiBackup, apiDir);
+  moveDir(apiBackup, apiDir);
 }
 
 let buildFailed = false;
