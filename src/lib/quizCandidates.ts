@@ -4,13 +4,13 @@ import {
   type LearningPoint,
   type LearningPointType,
 } from "@/lib/learningPoints";
+import { isGrammarQuizSource } from "@/lib/quizGrammar";
 import {
   ensureReviewState,
   reviewPriorityScore,
   type QuizSourceType,
   type ReviewState,
 } from "@/lib/quizReviewState";
-import { loadVocabulary, type VocabularyEntry } from "@/lib/vocabulary";
 
 export type QuizCandidate = {
   id: string;
@@ -30,10 +30,6 @@ export type QuizCandidate = {
   gloss?: string;
   example?: string;
 };
-
-function isPhrase(word: string) {
-  return /\s/.test(word.trim()) || word.trim().split(/-/).length > 2;
-}
 
 function fromLearningPoint(point: LearningPoint): QuizCandidate {
   const review = ensureReviewState(
@@ -74,25 +70,6 @@ function fromLearningPoint(point: LearningPoint): QuizCandidate {
   };
 }
 
-function fromVocabulary(entry: VocabularyEntry): QuizCandidate {
-  const phrase = isPhrase(entry.word);
-  const sourceType: QuizSourceType = phrase
-    ? "saved_expression"
-    : "saved_vocabulary";
-  const review = ensureReviewState(sourceType, entry.id, entry.createdAt);
-  return {
-    id: entry.id,
-    sourceType,
-    category: phrase ? "expression" : "vocabulary",
-    concept: entry.word,
-    createdAt: entry.createdAt,
-    weight: reviewPriorityScore(review, entry.createdAt),
-    word: entry.word,
-    gloss: entry.gloss,
-    example: entry.example,
-  };
-}
-
 function pickWeighted(
   pool: QuizCandidate[],
   count: number,
@@ -122,52 +99,31 @@ function pickWeighted(
   return out;
 }
 
-/**
- * Build today's quiz mix from conversation errors + saved vocabulary.
- * Weighted by review value; not pure random.
- */
 export function collectQuizCandidates(): QuizCandidate[] {
   syncLearningPointsFromSources();
-  const points = loadLearningPoints().filter((p) => p.status !== "mastered");
-  const vocab = loadVocabulary();
-
-  const fromLp = points.map(fromLearningPoint);
-  const fromVocab = vocab
-    .map(fromVocabulary)
-    .filter((c) => {
-      // Skip mastered vocab reviews
-      const review = ensureReviewState(c.sourceType, c.id, c.createdAt);
-      return review.status !== "mastered";
-    });
-
-  return [...fromLp, ...fromVocab].sort((a, b) => b.weight - a.weight);
+  return loadLearningPoints()
+    .filter((p) => p.status !== "mastered")
+    .map(fromLearningPoint)
+    .filter((c) =>
+      isGrammarQuizSource({
+        category: c.category,
+        originalSentence: c.originalSentence,
+        correctedSentence: c.correctedSentence,
+        explanation: c.explanation,
+      }),
+    )
+    .sort((a, b) => b.weight - a.weight);
 }
 
 export function selectQuizCandidates(limit = 5): QuizCandidate[] {
-  const all = collectQuizCandidates();
-  if (all.length === 0) return [];
+  const grammar = collectQuizCandidates();
+  if (grammar.length === 0) return [];
 
-  const conversation = all.filter((c) => c.sourceType === "conversation_error");
-  const saved = all.filter((c) => c.sourceType !== "conversation_error");
-  const used = new Set<string>();
-  const picked: QuizCandidate[] = [];
-
-  // Mild mix when both pools exist
-  if (conversation.length > 0 && saved.length > 0 && limit >= 2) {
-    const savedTarget = Math.min(
-      saved.length,
-      Math.max(1, Math.round(limit * 0.4)),
-    );
-    const convTarget = Math.min(conversation.length, limit - savedTarget);
-    picked.push(...pickWeighted(conversation, convTarget, used));
-    picked.push(...pickWeighted(saved, savedTarget, used));
-  }
-
-  if (picked.length < limit) {
-    picked.push(...pickWeighted(all, limit - picked.length, used));
-  }
-
-  return picked.slice(0, limit);
+  return pickWeighted(grammar, limit, new Set()).map((c) => ({
+    ...c,
+    category: "grammar" as const,
+    sourceType: "conversation_error" as const,
+  }));
 }
 
 export function compositionFromCandidates(candidates: QuizCandidate[]) {

@@ -1,6 +1,8 @@
 export type DiffPart = {
   type: "equal" | "remove" | "add";
   text: string;
+  /** When type is equal, the corrected-side surface form (may differ only by case). */
+  matchText?: string;
 };
 
 export type HighlightPart = {
@@ -50,7 +52,7 @@ export function diffWords(original: string, corrected: string): DiffPart[] {
   let j = 0;
   while (i < n && j < m) {
     if (tokenKey(a[i]) === tokenKey(b[j])) {
-      parts.push({ type: "equal", text: a[i] });
+      parts.push({ type: "equal", text: a[i], matchText: b[j] });
       i += 1;
       j += 1;
     } else if (dp[i + 1][j] >= dp[i][j + 1]) {
@@ -120,5 +122,47 @@ export function correctedHighlightParts(
 ): CorrectedHighlightPart[] {
   return diffWords(original, corrected)
     .filter((p) => p.type === "equal" || p.type === "add")
-    .map((p) => ({ text: p.text, added: p.type === "add" }));
+    .map((p) => ({
+      text: p.type === "equal" ? p.matchText || p.text : p.text,
+      added: p.type === "add",
+    }));
+}
+
+function isContentToken(text: string) {
+  return /[\p{L}\p{N}]/u.test(text);
+}
+
+/**
+ * Word-level error mass for accuracy scoring.
+ * A substitution (remove+add) counts once.
+ */
+export function correctionErrorMass(
+  original: string,
+  corrected: string,
+): { writtenWords: number; wrongWords: number } {
+  const diffs = diffWords(original, corrected);
+  let writtenWords = 0;
+  let wrongWords = 0;
+  let missingWords = 0;
+
+  for (const part of diffs) {
+    if (!isContentToken(part.text)) continue;
+    if (part.type === "equal") {
+      writtenWords += 1;
+    } else if (part.type === "remove") {
+      writtenWords += 1;
+      wrongWords += 1;
+    } else {
+      missingWords += 1;
+    }
+  }
+
+  if (writtenWords === 0) {
+    writtenWords = original.trim().split(/\s+/).filter(Boolean).length || 1;
+  }
+
+  return {
+    writtenWords,
+    wrongWords: Math.min(writtenWords, Math.max(wrongWords, missingWords)),
+  };
 }

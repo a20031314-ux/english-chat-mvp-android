@@ -22,6 +22,8 @@ import {
   saveSessionReport,
   type SessionReport,
 } from "@/lib/sessionReports";
+import { CONVERSATION_ANALYSIS_VERSION } from "@/lib/conversationAnalysis";
+import { requestConversationAnalysis } from "@/lib/requestConversationAnalysis";
 import { seedDemoMonthlyReports } from "@/lib/seedDemoMonthlyReports";
 import { CorrectionCard } from "./CorrectionCard";
 import { HowToSayCard } from "./HowToSayCard";
@@ -40,8 +42,12 @@ import {
   FREE_DAILY_CHAT_LIMIT,
   PREMIUM_CLIENT_HEADER,
 } from "@/lib/billing/config";
-import { prepareQuizAfterReport } from "@/lib/quizService";
+import { prepareReviewAfterReport } from "@/lib/reviewService";
 import { resolveChatInputMode } from "@/lib/inputLanguage";
+import {
+  alignCorrectionToGrammar,
+  substantiveNorm,
+} from "@/lib/correctionNorm";
 import {
   isWordSaved,
   loadVocabulary,
@@ -73,6 +79,8 @@ type ChatTurn = {
   correctionResult?: CorrectionResult;
   expressionResult?: ExpressionResult;
   translatedMessage?: string;
+  /** Conversational equivalent in the UI language — not a literal translation */
+  spokenReply?: string;
   isTranslating?: boolean;
   /** From “use this expression” — continue chat without a grammar card */
   suppressCorrectionCard?: boolean;
@@ -80,6 +88,7 @@ type ChatTurn = {
 
 type ChatModeApiResponse = {
   assistantMessage: string;
+  spokenReply?: string;
   correction: {
     corrected: string;
     natural: string;
@@ -213,72 +222,16 @@ const FALLBACK_CORRECTION_EXPLANATION: Record<string, string> = {
   id: "Susunan ini terdengar lebih natural.",
 };
 
-/** Compare meaning-bearing text; ignore case, spacing, punctuation, and contractions. */
-function expandContractions(text: string) {
-  return text
-    .replace(/\bI'm\b/gi, "I am")
-    .replace(/\byou're\b/gi, "you are")
-    .replace(/\bhe's\b/gi, "he is")
-    .replace(/\bshe's\b/gi, "she is")
-    .replace(/\bit's\b/gi, "it is")
-    .replace(/\bwe're\b/gi, "we are")
-    .replace(/\bthey're\b/gi, "they are")
-    .replace(/\bI've\b/gi, "I have")
-    .replace(/\byou've\b/gi, "you have")
-    .replace(/\bwe've\b/gi, "we have")
-    .replace(/\bthey've\b/gi, "they have")
-    .replace(/\bI'll\b/gi, "I will")
-    .replace(/\byou'll\b/gi, "you will")
-    .replace(/\bhe'll\b/gi, "he will")
-    .replace(/\bshe'll\b/gi, "she will")
-    .replace(/\bwe'll\b/gi, "we will")
-    .replace(/\bthey'll\b/gi, "they will")
-    .replace(/\bI'd\b/gi, "I would")
-    .replace(/\byou'd\b/gi, "you would")
-    .replace(/\bhe'd\b/gi, "he would")
-    .replace(/\bshe'd\b/gi, "she would")
-    .replace(/\bwe'd\b/gi, "we would")
-    .replace(/\bthey'd\b/gi, "they would")
-    .replace(/\bisn't\b/gi, "is not")
-    .replace(/\baren't\b/gi, "are not")
-    .replace(/\bwasn't\b/gi, "was not")
-    .replace(/\bweren't\b/gi, "were not")
-    .replace(/\bdon't\b/gi, "do not")
-    .replace(/\bdoesn't\b/gi, "does not")
-    .replace(/\bdidn't\b/gi, "did not")
-    .replace(/\bcan't\b/gi, "cannot")
-    .replace(/\bcannot\b/gi, "cannot")
-    .replace(/\bwon't\b/gi, "will not")
-    .replace(/\bwouldn't\b/gi, "would not")
-    .replace(/\bcouldn't\b/gi, "could not")
-    .replace(/\bshouldn't\b/gi, "should not")
-    .replace(/\bhaven't\b/gi, "have not")
-    .replace(/\bhasn't\b/gi, "has not")
-    .replace(/\bhadn't\b/gi, "had not")
-    .replace(/\blet's\b/gi, "let us")
-    .replace(/\bthat's\b/gi, "that is")
-    .replace(/\bwhat's\b/gi, "what is")
-    .replace(/\bthere's\b/gi, "there is")
-    .replace(/\bhere's\b/gi, "here is");
-}
-
-function substantiveNorm(text: string) {
-  return expandContractions(text)
-    .replace(/\s+/g, " ")
-    .trim()
-    .toLowerCase()
-    .replace(/[^\p{L}\p{N}\s]/gu, "")
-    .replace(/\s+/g, " ")
-    .trim();
-}
-
 function normalizeCorrectionResult(
   originalMessage: string,
   correction: ChatModeApiResponse["correction"] | undefined,
   locale: string,
 ): CorrectionResult {
-  const corrected = correction?.corrected?.trim() || originalMessage;
-  const natural = correction?.natural?.trim() || corrected;
+  const aligned = alignCorrectionToGrammar(
+    originalMessage,
+    correction?.corrected?.trim() || originalMessage,
+    correction?.natural?.trim() || "",
+  );
   const rawExplanation = stripExplanationLabel(
     correction?.explanation?.trim() || "",
   );
@@ -286,20 +239,17 @@ function normalizeCorrectionResult(
     ? ""
     : rawExplanation;
 
-  const hasError =
-    substantiveNorm(corrected) !== substantiveNorm(originalMessage);
-
   return {
-    corrected: hasError ? corrected : originalMessage.trim(),
-    natural,
+    corrected: aligned.corrected,
+    natural: aligned.natural,
     explanation:
-      hasError && !explanation
+      aligned.hasError && !explanation
         ? (FALLBACK_CORRECTION_EXPLANATION[locale] ??
           FALLBACK_CORRECTION_EXPLANATION.ko)
-        : hasError
+        : aligned.hasError
           ? explanation
           : "",
-    hasError,
+    hasError: aligned.hasError,
   };
 }
 
@@ -391,44 +341,56 @@ function clearConversationSessions() {
   window.localStorage.setItem(CONVERSATION_SESSIONS_KEY, JSON.stringify([]));
 }
 
+function sessionTitleFromTurns(turns: ChatTurn[]): string {
+  for (const turn of turns) {
+    const text = turn.userMessage.trim() || turn.assistantMessage?.trim() || "";
+    if (text) {
+      return text.length > 28 ? `${text.slice(0, 28)}...` : text;
+    }
+  }
+  return "Conversation Session";
+}
+
+function hasLearnerMessages(turns: ChatTurn[]): boolean {
+  return turns.some((turn) => turn.userMessage.trim() !== "");
+}
+
 function toSessionMessages(turns: ChatTurn[]): ChatMessage[] {
   return turns.flatMap((turn) => {
-    const userMessage: ChatMessage = {
-      id: `${turn.id}-user`,
-      role: "user",
-      content: turn.userMessage,
-      createdAt: Date.now(),
-    };
+    const messages: ChatMessage[] = [];
+    if (turn.userMessage.trim()) {
+      messages.push({
+        id: `${turn.id}-user`,
+        role: "user",
+        content: turn.userMessage,
+        createdAt: Date.now(),
+      });
+    }
 
-    if (turn.mode === "chat") {
-      const assistantPayload = {
-        assistantMessage: turn.assistantMessage || "",
-        correctionResult: turn.correctionResult || null,
-      };
-      return [
-        userMessage,
-        {
-          id: `${turn.id}-assistant`,
-          role: "assistant",
-          content: JSON.stringify(assistantPayload),
-          createdAt: Date.now(),
-        },
-      ];
+    if (turn.mode === "chat" && turn.assistantMessage) {
+      messages.push({
+        id: `${turn.id}-assistant`,
+        role: "assistant",
+        content: JSON.stringify({
+          assistantMessage: turn.assistantMessage || "",
+          spokenReply: turn.spokenReply || "",
+          correctionResult: turn.correctionResult || null,
+        }),
+        createdAt: Date.now(),
+      });
+      return messages;
     }
 
     if (turn.expressionResult) {
-      return [
-        userMessage,
-        {
-          id: `${turn.id}-helper`,
-          role: "helper",
-          content: JSON.stringify({ expressionResult: turn.expressionResult }),
-          createdAt: Date.now(),
-        },
-      ];
+      messages.push({
+        id: `${turn.id}-helper`,
+        role: "helper",
+        content: JSON.stringify({ expressionResult: turn.expressionResult }),
+        createdAt: Date.now(),
+      });
     }
 
-    return [userMessage];
+    return messages;
   });
 }
 
@@ -442,22 +404,32 @@ function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
       continue;
     }
 
-    if (!pendingUser) {
-      continue;
-    }
-
     if (message.role === "assistant") {
       let assistantMessage = "";
+      let spokenReply = "";
       let correctionResult: CorrectionResult | undefined;
       try {
         const parsed = JSON.parse(message.content) as {
           assistantMessage?: string;
+          spokenReply?: string;
           correctionResult?: CorrectionResult;
         };
         assistantMessage = parsed.assistantMessage || "";
+        spokenReply = parsed.spokenReply || "";
         correctionResult = parsed.correctionResult;
       } catch {
         assistantMessage = message.content;
+      }
+
+      if (!pendingUser) {
+        turns.push({
+          id: message.id.replace(/-assistant$/, "") || message.id,
+          mode: "chat",
+          userMessage: "",
+          assistantMessage,
+          spokenReply: spokenReply || undefined,
+        });
+        continue;
       }
 
       turns.push({
@@ -465,9 +437,14 @@ function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
         mode: "chat",
         userMessage: pendingUser.content,
         assistantMessage,
+        spokenReply: spokenReply || undefined,
         correctionResult,
       });
       pendingUser = null;
+      continue;
+    }
+
+    if (!pendingUser) {
       continue;
     }
 
@@ -591,6 +568,7 @@ export function ChatWindow({
   const [previewLoadFailed, setPreviewLoadFailed] = useState(false);
   const [isVocabSaving, setIsVocabSaving] = useState(false);
   const [reportConfirmOpen, setReportConfirmOpen] = useState(false);
+  const [reportCreating, setReportCreating] = useState(false);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const previewRequestIdRef = useRef(0);
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -765,11 +743,9 @@ export function ChatWindow({
       return;
     }
 
-    const firstMessage = turns[0]?.userMessage || "Conversation Session";
     const session: ConversationSession = {
       id: currentSessionId,
-      title:
-        firstMessage.length > 28 ? `${firstMessage.slice(0, 28)}...` : firstMessage,
+      title: sessionTitleFromTurns(turns),
       createdAt: currentSessionCreatedAt,
       endedAt: sessionEnded ? Date.now() : undefined,
       messageCount: turns.length,
@@ -834,6 +810,7 @@ export function ChatWindow({
         userMessage: message,
         assistantMessage:
           data.assistantMessage?.trim() || "Got it. Tell me one more sentence.",
+        spokenReply: data.spokenReply?.trim() || undefined,
         correctionResult,
         suppressCorrectionCard: options?.fromExpression === true,
       },
@@ -847,7 +824,20 @@ export function ChatWindow({
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ message, mode: "how_to_say" }),
+      body: JSON.stringify({
+          message,
+          mode: "how_to_say",
+          recent: turns.flatMap((turn) => {
+            const lines: string[] = [];
+            if (turn.userMessage.trim() && turn.mode === "chat") {
+              lines.push(`me: ${turn.userMessage.trim()}`);
+            }
+            if (turn.assistantMessage?.trim()) {
+              lines.push(`other: ${turn.assistantMessage.trim()}`);
+            }
+            return lines;
+          }).slice(-8),
+        }),
     });
 
     if (!response.ok) {
@@ -1097,13 +1087,9 @@ export function ChatWindow({
     if (turns.length === 0) {
       return;
     }
-    const firstMessage = turns[0]?.userMessage || "Conversation Session";
     saveConversationSession({
       id: currentSessionId,
-      title:
-        firstMessage.length > 28
-          ? `${firstMessage.slice(0, 28)}...`
-          : firstMessage,
+      title: sessionTitleFromTurns(turns),
       createdAt: currentSessionCreatedAt,
       endedAt: undefined,
       messageCount: turns.length,
@@ -1142,13 +1128,9 @@ export function ChatWindow({
 
     const endedAt = Date.now();
     const messages = toSessionMessages(turns);
-    const firstMessage = turns[0]?.userMessage || "Conversation Session";
     saveConversationSession({
       id: currentSessionId,
-      title:
-        firstMessage.length > 28
-          ? `${firstMessage.slice(0, 28)}...`
-          : firstMessage,
+      title: sessionTitleFromTurns(turns),
       createdAt: currentSessionCreatedAt,
       endedAt,
       messageCount: turns.length,
@@ -1185,76 +1167,154 @@ export function ChatWindow({
   };
 
   const createReportFromCurrent = () => {
-    if (turns.length === 0) {
+    if (!hasLearnerMessages(turns)) {
       setBookToast(ui.reportCreateEmptyToast);
       return;
     }
     setReportConfirmOpen(true);
   };
 
-  const confirmCreateReportFromCurrent = () => {
-    if (turns.length === 0) {
+  const confirmCreateReportFromCurrent = async () => {
+    if (!hasLearnerMessages(turns)) {
       setReportConfirmOpen(false);
       setBookToast(ui.reportCreateEmptyToast);
       return;
     }
+    if (reportCreating) return;
 
-    const endedAt = Date.now();
-    const messages = toSessionMessages(turns);
-    const report = buildSessionReport({
-      sessionId: currentSessionId,
-      createdAt: currentSessionCreatedAt,
-      messages,
-      messageCount: turns.length,
-      locale,
-      endedAt,
-    });
-    saveSessionReport(report);
-    saveConversationSession({
-      id: currentSessionId,
-      title: report.title,
-      createdAt: currentSessionCreatedAt,
-      endedAt,
-      messageCount: turns.length,
-      messages,
-    });
-    setReportConfirmOpen(false);
-    openCreatedReport(report, { clearChat: true });
-    void prepareQuizAfterReport(locale).then((session) => {
-      if (session) {
-        setBookToast(ui.quizReadyToast);
+    setReportCreating(true);
+    try {
+      const endedAt = Date.now();
+      const messages = toSessionMessages(turns);
+      const report = buildSessionReport({
+        sessionId: currentSessionId,
+        createdAt: currentSessionCreatedAt,
+        messages,
+        messageCount: turns.length,
+        locale,
+        endedAt,
+      });
+      const aiAnalysis = await requestConversationAnalysis(messages, locale);
+      if (aiAnalysis) {
+        report.conversationAnalysis = aiAnalysis;
+        report.conversationAnalysisVersion = CONVERSATION_ANALYSIS_VERSION;
       }
-    });
+      saveSessionReport(report);
+      saveConversationSession({
+        id: currentSessionId,
+        title: report.title,
+        createdAt: currentSessionCreatedAt,
+        endedAt,
+        messageCount: turns.length,
+        messages,
+      });
+      setReportConfirmOpen(false);
+      openCreatedReport(report, { clearChat: true });
+      void prepareReviewAfterReport(locale, report).then((pack) => {
+        if (pack) {
+          setBookToast(ui.quizReadyToast);
+        }
+      });
+    } finally {
+      setReportCreating(false);
+    }
   };
 
-  const createReportFromHistorySession = (session: ConversationSession) => {
+  const createReportFromHistorySession = async (
+    session: ConversationSession,
+  ) => {
     if (!session.messages?.length) {
       setBookToast(ui.reportCreateEmptyToast);
       return;
     }
-    const endedAt = session.endedAt ?? Date.now();
-    const report = buildSessionReport({
-      sessionId: session.id,
-      createdAt: session.createdAt,
-      messages: session.messages,
-      messageCount: session.messageCount || session.messages.length,
-      locale,
-      endedAt,
-    });
-    saveSessionReport(report);
-    saveConversationSession({
-      ...session,
-      title: report.title,
-      endedAt,
-    });
-    openCreatedReport(report, {
-      clearChat: session.id === currentSessionId,
-    });
-    void prepareQuizAfterReport(locale).then((ready) => {
-      if (ready) {
-        setBookToast(ui.quizReadyToast);
+    if (reportCreating) return;
+
+    setReportCreating(true);
+    setBookToast(ui.reportAnalysisGenerating);
+    try {
+      const endedAt = session.endedAt ?? Date.now();
+      const report = buildSessionReport({
+        sessionId: session.id,
+        createdAt: session.createdAt,
+        messages: session.messages,
+        messageCount: session.messageCount || session.messages.length,
+        locale,
+        endedAt,
+      });
+      const aiAnalysis = await requestConversationAnalysis(
+        session.messages,
+        locale,
+      );
+      if (aiAnalysis) {
+        report.conversationAnalysis = aiAnalysis;
+        report.conversationAnalysisVersion = CONVERSATION_ANALYSIS_VERSION;
       }
-    });
+      saveSessionReport(report);
+      saveConversationSession({
+        ...session,
+        title: report.title,
+        endedAt,
+      });
+      openCreatedReport(report, {
+        clearChat: session.id === currentSessionId,
+      });
+      void prepareReviewAfterReport(locale, report).then((ready) => {
+        if (ready) {
+          setBookToast(ui.quizReadyToast);
+        }
+      });
+    } finally {
+      setReportCreating(false);
+    }
+  };
+
+  const handleAiStart = async () => {
+    if (isSending) return;
+    setChatModeOn(true);
+    setIsSending(true);
+    try {
+      const recent = turns.flatMap((turn) =>
+        [turn.userMessage, turn.assistantMessage || ""].filter((text) =>
+          text.trim(),
+        ),
+      );
+      const response = await fetch(apiUrl("/api/chat"), {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          ...premiumRequestHeaders(isPremium),
+        },
+        body: JSON.stringify({
+          mode: "start",
+          locale,
+          recent: recent.slice(-8),
+        }),
+      });
+      if (!response.ok) {
+        throw new Error("start failed");
+      }
+      const data = (await response.json()) as {
+        assistantMessage?: string;
+        spokenReply?: string;
+      };
+      const assistantMessage =
+        data.assistantMessage?.trim() || "Hey! How's your day going?";
+      setTurns((previous) => [
+        ...previous,
+        {
+          id: `${Date.now()}`,
+          mode: "chat",
+          userMessage: "",
+          assistantMessage,
+          spokenReply: data.spokenReply?.trim() || undefined,
+        },
+      ]);
+      requestAnimationFrame(() => inputRef.current?.focus());
+    } catch {
+      setBookToast(ui.chatStartFailed);
+    } finally {
+      setIsSending(false);
+    }
   };
 
   const handleSend = async (event: FormEvent) => {
@@ -1515,19 +1575,53 @@ export function ChatWindow({
 
             return (
               <article key={turn.id} className="space-y-1.5 sm:space-y-2">
-                <MessageBubble
-                  role="user"
-                  message={turn.userMessage}
-                  pickMode={vocabPickMode}
-                  isWordSaved={(word) => isWordSaved(vocabEntries, word)}
-                  savingWord={previewWord}
-                  onWordClick={(word) => {
-                    void openVocabPreview(word);
-                  }}
-                  labels={{
-                    listen: ui.listen,
-                  }}
-                />
+                {turn.userMessage.trim() ? (
+                  <MessageBubble
+                    role="user"
+                    message={turn.userMessage}
+                    pickMode={vocabPickMode}
+                    isWordSaved={(word) => isWordSaved(vocabEntries, word)}
+                    savingWord={previewWord}
+                    onWordClick={(word) => {
+                      void openVocabPreview(word);
+                    }}
+                    labels={{
+                      listen: ui.listen,
+                    }}
+                  />
+                ) : null}
+
+                {turn.mode === "chat" &&
+                  turn.assistantMessage &&
+                  !turn.correctionResult && (
+                    <MessageBubble
+                      role="assistant"
+                      message={turn.assistantMessage}
+                      translatedMessage={turn.translatedMessage}
+                      isTranslating={turn.isTranslating}
+                      pickMode={vocabPickMode}
+                      isWordSaved={(word) => isWordSaved(vocabEntries, word)}
+                      savingWord={previewWord}
+                      onWordClick={(word) => {
+                        void openVocabPreview(word);
+                      }}
+                      labels={{
+                        listen: ui.listen,
+                        translate: ui.translate,
+                        translating: ui.translating,
+                        translation: ui.translation,
+                      }}
+                      onTranslate={
+                        locale === "en"
+                          ? undefined
+                          : () =>
+                              void translateAssistantMessage(
+                                turn.id,
+                                turn.assistantMessage || "",
+                              )
+                      }
+                    />
+                  )}
 
                 {turn.mode === "chat" &&
                   turn.correctionResult &&
@@ -1598,7 +1692,6 @@ export function ChatWindow({
                 {turn.mode === "how_to_say" && turn.expressionResult && (
                   <HowToSayCard
                     expression={turn.expressionResult.expression}
-                    example={turn.expressionResult.example}
                     pickMode={vocabPickMode}
                     isWordSaved={(word) => isWordSaved(vocabEntries, word)}
                     savingWord={previewWord}
@@ -1607,7 +1700,6 @@ export function ChatWindow({
                     }}
                     labels={{
                       title: ui.expressionHelperTitle,
-                      example: ui.example,
                       listen: ui.listen,
                     }}
                     actions={
@@ -1722,6 +1814,15 @@ export function ChatWindow({
                   isChatInputBlocked ? "cursor-pointer bg-slate-50" : ""
                 }`}
               />
+              <div className="flex shrink-0 flex-col items-stretch gap-1.5">
+              <button
+                type="button"
+                disabled={isSending}
+                onClick={() => void handleAiStart()}
+                className="rounded-xl border border-slate-200 bg-white px-2 py-1.5 text-[11px] font-medium leading-tight text-slate-700 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
+              >
+                {ui.chatStartCta}
+              </button>
               <button
                 type="submit"
                 disabled={isSending}
@@ -1732,7 +1833,7 @@ export function ChatWindow({
                     openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
                   }
                 }}
-                className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-slate-900 text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-400"
+                className="inline-flex h-10 min-w-10 items-center justify-center rounded-xl bg-slate-900 text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-400"
               >
                 {isSending ? (
                   <svg
@@ -1776,6 +1877,7 @@ export function ChatWindow({
                   </svg>
                 )}
               </button>
+              </div>
             </div>
           </>
         </form>
@@ -1814,7 +1916,9 @@ export function ChatWindow({
             type="button"
             className="absolute inset-0 cursor-default"
             aria-label={ui.reportCreateConfirmCancel}
-            onClick={() => setReportConfirmOpen(false)}
+            onClick={() => {
+              if (!reportCreating) setReportConfirmOpen(false);
+            }}
           />
           <div
             role="dialog"
@@ -1830,23 +1934,29 @@ export function ChatWindow({
                 {ui.reportCreateConfirmTitle}
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                {ui.reportCreateConfirmBody}
+                {reportCreating
+                  ? ui.reportAnalysisGenerating
+                  : ui.reportCreateConfirmBody}
               </p>
             </div>
             <div className="flex gap-2 border-t border-slate-100 px-4 py-3">
               <button
                 type="button"
+                disabled={reportCreating}
                 onClick={() => setReportConfirmOpen(false)}
-                className="flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
+                className="flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-50"
               >
                 {ui.reportCreateConfirmCancel}
               </button>
               <button
                 type="button"
-                onClick={confirmCreateReportFromCurrent}
-                className="flex-1 rounded-xl bg-slate-900 px-3 py-2.5 text-sm font-medium text-white hover:bg-slate-800"
+                disabled={reportCreating}
+                onClick={() => void confirmCreateReportFromCurrent()}
+                className="flex-1 rounded-xl bg-slate-900 px-3 py-2.5 text-sm font-medium text-white hover:bg-slate-800 disabled:opacity-50"
               >
-                {ui.reportCreateConfirmCta}
+                {reportCreating
+                  ? ui.reportAnalysisGenerating
+                  : ui.reportCreateConfirmCta}
               </button>
             </div>
           </div>

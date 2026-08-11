@@ -1,16 +1,28 @@
 ﻿"use client";
 
-import { useMemo } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { Locale, UICopy } from "@/lib/copy";
 import {
+  analysisNeedsLearnerRefresh,
+  CONVERSATION_ANALYSIS_VERSION,
+  extractAnalysisTurns,
+  getConversationAnalysis,
+  hasConversationAnalysisContent,
+  type AnalysisCategory,
+  type ConversationAnalysis,
+  type ConversationInsight,
+} from "@/lib/conversationAnalysis";
+import { requestConversationAnalysis } from "@/lib/requestConversationAnalysis";
+import {
+  countGrammarCorrections,
   formatReportDate,
-  getReportAnalysisItems,
   getReportScoreBreakdown,
+  getSessionReport,
+  saveSessionReport,
   type ScoreFactorId,
   type SessionReport,
 } from "@/lib/sessionReports";
 import { SessionChatReplay } from "@/components/SessionChatReplay";
-import { DiffHighlightText } from "@/components/ErrorHighlightText";
 
 type SessionReportViewProps = {
   report: SessionReport;
@@ -34,22 +46,151 @@ function factorLabel(id: ScoreFactorId, ui: UICopy): string {
   }
 }
 
+function categoryLabel(category: AnalysisCategory, ui: UICopy): string {
+  switch (category) {
+    case "NATURAL":
+      return ui.reportAnalysisCategoryNatural;
+    case "NUANCE":
+      return ui.reportAnalysisCategoryNuance;
+    case "WORD_CHOICE":
+      return ui.reportAnalysisCategoryWordChoice;
+    case "TONE":
+      return ui.reportAnalysisCategoryTone;
+    case "FLOW":
+      return ui.reportAnalysisCategoryFlow;
+    case "VARIETY":
+      return ui.reportAnalysisCategoryVariety;
+    case "CONNECTION":
+      return ui.reportAnalysisCategoryConnection;
+    case "EXPRESSION":
+      return ui.reportAnalysisCategoryExpression;
+    case "CONVERSATION":
+      return ui.reportAnalysisCategoryConversation;
+    default:
+      return ui.reportAnalysisCategoryImprovement;
+  }
+}
+
+function InsightCard({
+  item,
+  ui,
+}: {
+  item: ConversationInsight;
+  ui: UICopy;
+}) {
+  const positive = item.sentiment === "positive";
+  return (
+    <article
+      className={
+        positive
+          ? "rounded-2xl border border-emerald-100 bg-emerald-50/50 px-4 py-4"
+          : "rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4"
+      }
+    >
+      <p
+        className={
+          positive
+            ? "text-[11px] font-semibold uppercase tracking-wide text-emerald-800"
+            : "text-[11px] font-semibold uppercase tracking-wide text-slate-500"
+        }
+      >
+        {categoryLabel(item.category, ui)}
+      </p>
+      <h3 className="mt-1.5 text-sm font-semibold text-slate-900">
+        {item.title}
+      </h3>
+      {item.evidence ? (
+        <p
+          className="mt-3 border-l-2 border-slate-300 pl-3 text-[13px] leading-relaxed text-slate-600"
+          translate="no"
+        >
+          “{item.evidence}”
+        </p>
+      ) : null}
+      <p className="mt-3 text-sm leading-relaxed text-slate-600">
+        {item.analysis}
+      </p>
+      {item.suggestion ? (
+        <p className="mt-2 text-sm leading-relaxed text-slate-600">
+          {item.suggestion}
+        </p>
+      ) : null}
+      {item.example ? (
+        <p
+          className="mt-2 text-[13px] leading-relaxed text-slate-800"
+          translate="no"
+        >
+          “{item.example}”
+        </p>
+      ) : null}
+    </article>
+  );
+}
+
 export function SessionReportView({
   report,
   ui,
   locale,
   onBack,
 }: SessionReportViewProps) {
-  const analysisItems = useMemo(
-    () => getReportAnalysisItems(report, locale),
-    [report, locale],
-  );
   const scoreBreakdown = useMemo(
     () => getReportScoreBreakdown(report),
     [report],
   );
+  const correctionCount = useMemo(
+    () => countGrammarCorrections(report),
+    [report],
+  );
+  const [analysis, setAnalysis] = useState<ConversationAnalysis>(() =>
+    getConversationAnalysis(
+      report.messages,
+      locale,
+      report.conversationAnalysis,
+    ),
+  );
 
-  const correctionCount = analysisItems.length;
+  useEffect(() => {
+    const latest = getSessionReport(report.id) ?? report;
+    const stored = latest.conversationAnalysis;
+    const turns = extractAnalysisTurns(report.messages);
+    const display = getConversationAnalysis(
+      report.messages,
+      locale,
+      stored,
+    );
+    setAnalysis(display);
+
+    const stale =
+      (latest.conversationAnalysisVersion ?? 0) <
+        CONVERSATION_ANALYSIS_VERSION ||
+      Boolean(stored && analysisNeedsLearnerRefresh(stored, turns));
+
+    if (stored && stale) {
+      saveSessionReport({
+        ...latest,
+        conversationAnalysis: display,
+      });
+    }
+    if (!stale) return;
+
+    let cancelled = false;
+    void requestConversationAnalysis(report.messages, locale).then((ai) => {
+      if (cancelled || !ai) return;
+      if (analysisNeedsLearnerRefresh(ai, turns)) return;
+      setAnalysis(ai);
+      saveSessionReport({
+        ...latest,
+        conversationAnalysis: ai,
+        conversationAnalysisVersion: CONVERSATION_ANALYSIS_VERSION,
+      });
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [report, locale]);
+
+  const showAnalysis = hasConversationAnalysisContent(analysis);
 
   return (
     <div className="flex h-full min-h-0 flex-col bg-white">
@@ -106,10 +247,7 @@ export function SessionReportView({
 
           {scoreBreakdown ? (
             <section className="mt-8">
-              <div className="flex flex-wrap items-end justify-between gap-2">
-                <p className="text-xs text-slate-500">
-                  {ui.reportScoreNativeHint}
-                </p>
+              <div className="flex flex-wrap items-end justify-end">
                 <p className="text-3xl font-semibold tabular-nums text-slate-900">
                   {scoreBreakdown.total}
                   <span className="ml-1 text-base font-medium text-slate-400">
@@ -170,72 +308,60 @@ export function SessionReportView({
             <h2 className="text-sm font-semibold text-slate-900">
               {ui.reportAnalysisTitle}
             </h2>
-            {analysisItems.length === 0 ? (
-              <p className="mt-3 text-sm leading-relaxed text-slate-600">
+            <p className="mt-2 text-sm leading-relaxed text-slate-500">
+              {ui.reportAnalysisHint}
+            </p>
+
+            {!showAnalysis ? (
+              <p className="mt-4 text-sm leading-relaxed text-slate-600">
                 {ui.reportAnalysisEmpty}
               </p>
             ) : (
-              <ul className="mt-6 space-y-10">
-                {analysisItems.map((item) => (
-                  <li key={item.id}>
-                    {item.grammarPoint ? (
-                      <p className="text-[11px] font-semibold uppercase tracking-wide text-rose-800">
-                        {item.grammarPoint}
-                      </p>
-                    ) : (
-                      <p className="text-[11px] font-medium text-slate-500">
-                        {ui.correctionMyLine}
-                      </p>
-                    )}
-                    <p
-                      className="mt-2 text-[15px] leading-relaxed text-slate-800"
-                      translate="no"
-                    >
-                      {item.corrected ? (
-                        <DiffHighlightText
-                          original={item.original}
-                          corrected={item.corrected}
-                          side="original"
-                        />
-                      ) : (
-                        item.original
-                      )}
-                    </p>
-                    {item.corrected ? (
-                      <>
-                        <p className="mt-1 text-center text-slate-300">↓</p>
-                        <p className="text-[11px] font-medium text-teal-800">
-                          {ui.correctionTryThis}
-                        </p>
-                        <p
-                          className="mt-1.5 text-[15px] font-semibold leading-relaxed text-slate-900"
-                          translate="no"
-                        >
-                          <DiffHighlightText
-                            original={item.original}
-                            corrected={item.corrected}
-                            side="corrected"
-                          />
-                        </p>
-                      </>
-                    ) : null}
-                    {item.explanation.trim() ? (
-                      <p className="mt-3 text-sm leading-relaxed text-slate-600">
-                        {item.explanation}
-                      </p>
-                    ) : null}
-                    {item.example?.trim() ? (
-                      <p className="mt-3 rounded-xl bg-slate-50 px-3 py-2.5 text-sm leading-relaxed text-slate-700">
-                        <span className="font-medium text-slate-500">
-                          {ui.reportAnalysisExample}
-                        </span>
-                        {" · "}
-                        <span translate="no">{item.example.replace(/^예:\s*|^e\.g\.\s*|^Ej\.:\s*/i, "")}</span>
-                      </p>
-                    ) : null}
-                  </li>
+              <div className="mt-6 space-y-4">
+                {analysis.shortConversationNote ? (
+                  <p className="text-sm leading-relaxed text-slate-600">
+                    {analysis.shortConversationNote}
+                  </p>
+                ) : null}
+
+                {analysis.insights.map((item) => (
+                  <InsightCard
+                    key={`${item.category}-${item.title}-${item.evidence || ""}`}
+                    item={item}
+                    ui={ui}
+                  />
                 ))}
-              </ul>
+
+                {analysis.nextGoal ? (
+                  <article className="rounded-2xl border border-slate-900/10 bg-slate-900 px-4 py-4 text-white">
+                    <h3 className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
+                      {ui.reportAnalysisNextGoalTitle}
+                    </h3>
+                    <p className="mt-2 text-[15px] font-medium leading-relaxed">
+                      {analysis.nextGoal.title}
+                    </p>
+                    {analysis.nextGoal.body &&
+                    analysis.nextGoal.body !== analysis.nextGoal.title ? (
+                      <p className="mt-2 text-sm leading-relaxed text-slate-300">
+                        {analysis.nextGoal.body}
+                      </p>
+                    ) : null}
+                    {analysis.nextGoal.pattern ? (
+                      <p className="mt-3 text-[13px] text-slate-200" translate="no">
+                        {analysis.nextGoal.pattern}
+                      </p>
+                    ) : null}
+                    {analysis.nextGoal.example ? (
+                      <p
+                        className="mt-2 text-[13px] leading-relaxed text-white"
+                        translate="no"
+                      >
+                        “{analysis.nextGoal.example}”
+                      </p>
+                    ) : null}
+                  </article>
+                ) : null}
+              </div>
             )}
           </section>
         </article>

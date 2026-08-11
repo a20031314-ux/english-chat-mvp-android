@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from "react";
 import { ChatWindow } from "@/components/ChatWindow";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { readAppLocale } from "@/components/LearningBookPanel";
-import { QuizTab } from "@/components/QuizTab";
+import { ReviewTab } from "@/components/ReviewTab";
 import { ReportsTab } from "@/components/ReportsTab";
 import { TAB_ICON_META } from "@/components/TabIcons";
 import { VocabularyPanel } from "@/components/VocabularyPanel";
@@ -154,16 +154,21 @@ export function AppHome() {
           </div>
         ) : null}
 
-        {tab === "quiz" ? (
-          <div className="h-full">
-            <QuizTab
-              locale={locale}
-              ui={ui}
-              onLocaleChange={setLocale}
-              onGoChat={() => openTab("chat")}
-            />
-          </div>
-        ) : null}
+        <div
+          className={
+            tab === "quiz"
+              ? "h-full"
+              : "pointer-events-none invisible absolute inset-0 -z-10 overflow-hidden opacity-0"
+          }
+          aria-hidden={tab !== "quiz"}
+        >
+          <ReviewTab
+            locale={locale}
+            ui={ui}
+            onLocaleChange={setLocale}
+            onGoChat={() => openTab("chat")}
+          />
+        </div>
 
         {tab === "vocab" ? (
           <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">

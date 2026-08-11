@@ -1,7 +1,15 @@
 import type { ChatMessage, ConversationSession } from "@/components/ArchivePanel";
 import type { Locale } from "@/lib/copy";
+import {
+  buildHeuristicConversationAnalysis,
+  CONVERSATION_ANALYSIS_VERSION,
+  type ConversationAnalysis,
+} from "@/lib/conversationAnalysis";
+import { dropAddedStyleWords, isGrammarError } from "@/lib/correctionNorm";
+import { correctionErrorMass } from "@/lib/textDiff";
 
 export const SESSION_REPORTS_KEY = "sessionReports";
+export const SESSION_REPORTS_UPDATED_EVENT = "sessionReportsUpdated";
 const SESSION_REPORTS_MIGRATED_KEY = "sessionReportsMigratedV1";
 
 /** Below this many user chat turns, score is withheld */
@@ -76,6 +84,9 @@ export type SessionReport = {
   learningItems: ReportLearningItem[];
   /** Preferred detailed-analysis payload; older reports may omit this */
   analysisItems?: ReportAnalysisItem[];
+  /** Conversation-level coaching; older reports may omit this */
+  conversationAnalysis?: ConversationAnalysis;
+  conversationAnalysisVersion?: number;
 };
 
 type CorrectionPayload = {
@@ -121,6 +132,7 @@ export function loadSessionReports(): SessionReport[] {
 export function persistSessionReports(reports: SessionReport[]) {
   if (typeof window === "undefined") return;
   window.localStorage.setItem(SESSION_REPORTS_KEY, JSON.stringify(reports));
+  window.dispatchEvent(new Event(SESSION_REPORTS_UPDATED_EVENT));
 }
 
 export function saveSessionReport(report: SessionReport) {
@@ -198,6 +210,90 @@ function parseTurns(messages: ChatMessage[]): TurnSlice[] {
 
 function wordCount(text: string) {
   return text.trim().split(/\s+/).filter(Boolean).length;
+}
+
+/** Average sentence length that earns the full 20 fluency points. */
+const FLUENCY_FULL_CHARS = 60;
+
+function learnerSentences(text: string): string[] {
+  const trimmed = text.trim();
+  if (!trimmed) return [];
+  const parts = trimmed
+    .split(/(?<=[.!?])(?:\s+|$)/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+  return parts.length > 0 ? parts : [trimmed];
+}
+
+function averageSentenceChars(turns: TurnSlice[]): number {
+  const lengths = turns.flatMap((turn) =>
+    learnerSentences(turn.userMessage).map((sentence) => sentence.length),
+  );
+  if (lengths.length === 0) return 0;
+  return lengths.reduce((sum, n) => sum + n, 0) / lengths.length;
+}
+
+function normPhrase(text: string) {
+  return text.replace(/\s+/g, " ").trim().toLowerCase();
+}
+
+function contentWords(text: string): string[] {
+  return text.toLowerCase().match(/[a-z0-9']+/g) ?? [];
+}
+
+function englishProductionRatio(text: string): number {
+  const englishWords = (text.match(/[A-Za-z]+/g) || []).length;
+  const otherWords = (
+    text.match(/[\uac00-\ud7af]+|[\u3040-\u30ff\u3400-\u9fff]+/g) || []
+  ).length;
+  if (englishWords + otherWords === 0) return 0;
+  return englishWords / (englishWords + otherWords);
+}
+
+function styleProximity(from: string, to: string): number {
+  if (normPhrase(from) === normPhrase(to)) return 1;
+  const fromWords = contentWords(from);
+  if (fromWords.length === 0) return 0;
+  const toWords = new Set(contentWords(to));
+  const kept = fromWords.filter((word) => toWords.has(word)).length;
+  return kept / fromWords.length;
+}
+
+const SPOKEN_NATIVE_PATTERN =
+  /\b(because|so|since|though|anyway|actually|maybe|probably|I guess|I think|kind of|sort of|it depends|I'm gonna|I wanna|gonna|wanna|haven't|hasn't|don't|doesn't|didn't|I'm|I've|I'd|that's|there's|what's|can't|won't|isn't|aren't)\b/i;
+
+/**
+ * 0 = almost no English, 1 = everyday native speech.
+ * Ignores grammar mistakes (compares the grammar-fixed line to the native rewrite).
+ */
+function turnNativeNaturalness(turn: TurnSlice): number {
+  const text = turn.userMessage;
+  const english = englishProductionRatio(text);
+  if (english < 0.15) {
+    return english * 0.2;
+  }
+
+  const styleBase = (turn.corrected || text).trim();
+  const natural = (turn.natural || styleBase).trim();
+  let style = 1;
+  if (
+    natural &&
+    normPhrase(natural) !== normPhrase(styleBase) &&
+    normPhrase(natural) !== normPhrase(text)
+  ) {
+    style = styleProximity(styleBase, natural);
+  }
+
+  const spoken = SPOKEN_NATIVE_PATTERN.test(text)
+    ? 1
+    : english > 0.6
+      ? 0.4
+      : 0.15;
+
+  return Math.max(
+    0,
+    Math.min(1, 0.55 * style + 0.3 * english + 0.15 * spoken),
+  );
 }
 
 function detectTopics(texts: string[], locale: Locale): string[] {
@@ -377,46 +473,44 @@ function computeScoreBreakdown(turns: TurnSlice[]): ScoreBreakdown {
   const chatTurns = turns.filter(
     (t) => t.corrected !== undefined || t.assistantMessage,
   );
-  const n = Math.max(1, chatTurns.length);
 
-  // Accuracy (40): fewer corrections needed → closer to native
-  const errorRate = chatTurns.filter((t) => t.hasError).length / n;
-  const accuracy = Math.round((1 - errorRate) * 40);
+  // Weight by words so mixed long/short turns ≈ a short session of average lines.
+  let writtenWords = 0;
+  let wrongWords = 0;
+  let naturalWeighted = 0;
+  let spokenWeighted = 0;
+  let lengthSum = 0;
 
-  // Naturalness (25): utterance already natural / close to native phrasing
-  let naturalSum = 0;
   for (const turn of chatTurns) {
-    const user = turn.userMessage.replace(/\s+/g, " ").trim().toLowerCase();
-    const natural = (turn.natural || turn.corrected || "")
-      .replace(/\s+/g, " ")
-      .trim()
-      .toLowerCase();
-    if (!turn.hasError) {
-      naturalSum += 1;
-    } else if (natural && natural === user) {
-      naturalSum += 0.85;
-    } else if (natural && turn.corrected) {
-      const corrected = turn.corrected.replace(/\s+/g, " ").trim().toLowerCase();
-      // Partial credit when a more natural alternative exists beyond bare correction
-      naturalSum += natural !== corrected ? 0.35 : 0.2;
+    const written = Math.max(1, wordCount(turn.userMessage));
+    lengthSum += written;
+
+    if (!turn.corrected?.trim() || !isGrammarError(turn.userMessage, turn.corrected)) {
+      writtenWords += written;
+    } else {
+      const mass = correctionErrorMass(turn.userMessage, turn.corrected);
+      writtenWords += mass.writtenWords;
+      wrongWords += mass.wrongWords;
+    }
+
+    naturalWeighted += turnNativeNaturalness(turn) * written;
+    if (SPOKEN_NATIVE_PATTERN.test(turn.userMessage)) {
+      spokenWeighted += written;
     }
   }
-  const naturalness = Math.round((naturalSum / n) * 25);
 
-  // Fluency / utterance length (20): conversational turns usually need some length
-  const avgLen =
-    chatTurns.reduce((s, t) => s + wordCount(t.userMessage), 0) / n;
-  // 0 words → 0, ~8+ words → full 20 (spoken chat, not essays)
+  const wordMass = Math.max(1, writtenWords);
+  const lengthMass = Math.max(1, lengthSum);
+  const errorRate = wrongWords / wordMass;
+  const accuracy = Math.round((1 - Math.min(1, errorRate)) * 40);
+  const naturalness = Math.round((naturalWeighted / lengthMass) * 25);
+
+  const avgChars = averageSentenceChars(chatTurns);
   const fluency = Math.round(
-    Math.max(0, Math.min(20, ((avgLen - 2) / 6) * 20)),
+    Math.max(0, Math.min(20, (avgChars / FLUENCY_FULL_CHARS) * 20)),
   );
 
-  // Spoken / colloquial style (15): connectors, contractions, hedges common in speech
-  const spokenPattern =
-    /\b(because|so|since|though|anyway|actually|maybe|probably|I guess|I think|kind of|sort of|it depends|I'm gonna|I wanna|gonna|wanna|haven't|hasn't|don't|doesn't|didn't|I'm|I've|I'd|that's|there's|what's|can't|won't|isn't|aren't)\b/i;
-  const spokenRate =
-    chatTurns.filter((t) => spokenPattern.test(t.userMessage)).length / n;
-  const spokenStyle = Math.round(spokenRate * 15);
+  const spokenStyle = Math.round((spokenWeighted / lengthMass) * 15);
 
   const factors: ScoreFactor[] = [
     { id: "accuracy", earned: accuracy, max: 40 },
@@ -436,15 +530,24 @@ function computeScoreBreakdown(turns: TurnSlice[]): ScoreBreakdown {
   return { factors, total };
 }
 
-/** Prefer stored breakdown; recompute from transcript for older reports. */
+/** Grammar-error turns in the frozen transcript — not analysis-card count. */
+export function countGrammarCorrections(report: SessionReport): number {
+  return parseTurns(report.messages).filter(
+    (turn) =>
+      Boolean(turn.corrected) &&
+      isGrammarError(turn.userMessage, turn.corrected || ""),
+  ).length;
+}
+
+/** Recompute from transcript so naturalness tweaks apply to existing reports. */
 export function getReportScoreBreakdown(
   report: SessionReport,
 ): ScoreBreakdown | null {
   if (report.scoreInsufficient || report.score == null) return null;
-  if (report.scoreBreakdown?.factors?.length) {
-    return report.scoreBreakdown;
-  }
   const turns = parseTurns(report.messages);
+  if (turns.length === 0) {
+    return report.scoreBreakdown ?? null;
+  }
   return computeScoreBreakdown(turns);
 }
 
@@ -512,9 +615,11 @@ function buildImprovements(
   const out: ReportImprovement[] = [];
   for (const turn of turns) {
     if (out.length >= 5) break;
-    if (!turn.hasError || !turn.corrected) continue;
+    if (!turn.corrected || !isGrammarError(turn.userMessage, turn.corrected)) {
+      continue;
+    }
     const original = turn.userMessage.trim();
-    const better = (turn.natural || turn.corrected).trim();
+    const better = dropAddedStyleWords(turn.userMessage, turn.corrected);
     if (!better || better === original) continue;
 
     let explanation =
@@ -821,10 +926,12 @@ function buildAnalysisItems(
       (t) => t.userMessage.trim() === imp.original.trim(),
     );
     if (!turn || usedMessageIds.has(turn.userMessageId)) continue;
-    if (!turn.hasError) continue;
+    if (!turn.corrected || !isGrammarError(turn.userMessage, turn.corrected)) {
+      continue;
+    }
     usedMessageIds.add(turn.userMessageId);
 
-    const corrected = (turn.corrected || imp.better).trim();
+    const corrected = dropAddedStyleWords(turn.userMessage, turn.corrected);
     const natural = (turn.natural || "").trim();
     const alternative =
       natural &&
@@ -834,7 +941,7 @@ function buildAnalysisItems(
         : undefined;
     const focus = buildGrammarFocus(
       imp.original,
-      corrected || imp.better,
+      corrected,
       imp.explanation,
       locale,
     );
@@ -844,7 +951,7 @@ function buildAnalysisItems(
       messageId: turn.userMessageId,
       type: "correction",
       original: imp.original,
-      corrected: imp.better,
+      corrected,
       explanation: imp.explanation,
       alternative,
       grammarPoint: focus.grammarPoint,
@@ -855,9 +962,11 @@ function buildAnalysisItems(
   // Fill from remaining error turns
   for (const turn of turns) {
     if (items.length >= 8) break;
-    if (!turn.hasError || !turn.corrected) continue;
+    if (!turn.corrected || !isGrammarError(turn.userMessage, turn.corrected)) {
+      continue;
+    }
     if (usedMessageIds.has(turn.userMessageId)) continue;
-    const better = (turn.natural || turn.corrected).trim();
+    const better = dropAddedStyleWords(turn.userMessage, turn.corrected);
     if (!better || better === turn.userMessage.trim()) continue;
     usedMessageIds.add(turn.userMessageId);
     const explanation =
@@ -902,9 +1011,40 @@ export function getReportAnalysisItems(
   locale: Locale = "en",
 ): ReportAnalysisItem[] {
   const turns = parseTurns(report.messages);
-  const stored = (report.analysisItems || []).filter(
-    (item) => item.type === "correction",
-  );
+  const stored = (report.analysisItems || [])
+    .filter((item) => item.type === "correction" && item.corrected)
+    .map((item) => {
+      const grammarCorrected = dropAddedStyleWords(
+        item.original,
+        item.corrected || "",
+      );
+      const turn = turns.find(
+        (t) => t.userMessage.trim() === item.original.trim(),
+      );
+      const natural = (
+        item.alternative ||
+        turn?.natural ||
+        item.corrected ||
+        ""
+      ).trim();
+      return {
+        ...item,
+        corrected: grammarCorrected,
+        alternative:
+          natural &&
+          natural.toLowerCase() !== grammarCorrected.toLowerCase() &&
+          natural.toLowerCase() !== item.original.trim().toLowerCase()
+            ? natural
+            : undefined,
+      };
+    })
+    .filter(
+      (item) =>
+        item.corrected &&
+        isGrammarError(item.original, item.corrected) &&
+        item.corrected.trim().toLowerCase() !==
+          item.original.trim().toLowerCase(),
+    );
   if (stored.length > 0) {
     return stored.map((item) => withGrammarFocus(item, locale));
   }
@@ -1048,6 +1188,10 @@ export function buildSessionReport(input: BuildReportInput): SessionReport {
     improvements,
     input.locale,
   );
+  const conversationAnalysis = buildHeuristicConversationAnalysis(
+    input.messages,
+    input.locale,
+  );
   const scoreInsufficient = chatTurnCount < REPORT_MIN_TURNS_FOR_SCORE;
   const scoreBreakdown = scoreInsufficient
     ? undefined
@@ -1069,6 +1213,8 @@ export function buildSessionReport(input: BuildReportInput): SessionReport {
     improvements,
     learningItems,
     analysisItems,
+    conversationAnalysis,
+    conversationAnalysisVersion: CONVERSATION_ANALYSIS_VERSION,
   };
 }
 

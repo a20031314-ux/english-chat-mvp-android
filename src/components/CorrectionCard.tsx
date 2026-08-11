@@ -74,6 +74,9 @@ export function CorrectionCard({
             <span className="font-medium text-slate-600">{labels.natural}</span>
             {" · "}
             <span translate="no">{natural}</span>
+            <span className="ml-2 inline-block align-middle">
+              <TTSButton text={natural} ariaLabel={labels.listen} />
+            </span>
           </p>
         ) : null}
         {!pickMode && actions ? <div className="mt-3">{actions}</div> : null}

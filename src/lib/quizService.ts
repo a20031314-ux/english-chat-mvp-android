@@ -1,5 +1,17 @@
 import { apiUrl } from "@/lib/apiBase";
 import type { Locale } from "@/lib/copy";
+import { ensureWellFormedQuizQuestion } from "@/lib/quizBlank";
+import {
+  isGrammarQuizSource,
+  isVocabularyStyleQuestion,
+  sessionHasVocabularyQuiz,
+} from "@/lib/quizGrammar";
+import {
+  hasUniqueLocalAnswer,
+  keepUniqueQuestions,
+  QUIZ_CANDIDATE_POOL,
+  TARGET_QUIZ_SIZE,
+} from "@/lib/quizUniqueness";
 import {
   selectQuizCandidates,
   type QuizCandidate,
@@ -8,6 +20,7 @@ import { syncLearningPointsFromSources } from "@/lib/learningPoints";
 import type { QuizSourceType } from "@/lib/quizReviewState";
 import {
   compositionFromQuestions,
+  loadTodayQuizSession,
   localDateKey,
   persistTodayQuizSession,
   type QuizQuestion,
@@ -27,6 +40,8 @@ type ApiQuestion = {
   correctIndex: number;
   explanation: string;
   sourceHint: string;
+  example?: string;
+  choiceNotes?: string[];
 };
 
 function notifyQuizSessionUpdated() {
@@ -38,12 +53,23 @@ export async function generateTodayQuiz(
   candidates: QuizCandidate[],
   locale: Locale,
 ): Promise<TodayQuizSession> {
+  const grammarCandidates = candidates.filter((c) =>
+    isGrammarQuizSource({
+      category: c.category,
+      originalSentence: c.originalSentence,
+      correctedSentence: c.correctedSentence,
+      explanation: c.explanation,
+    }),
+  );
+  if (grammarCandidates.length === 0) {
+    throw new Error("QUIZ_EMPTY");
+  }
   const response = await fetch(apiUrl("/api/quiz"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       locale,
-      items: candidates.map((c) => ({
+      items: grammarCandidates.map((c) => ({
         id: c.id,
         sourceType: c.sourceType,
         type: c.category,
@@ -68,29 +94,38 @@ export async function generateTodayQuiz(
   }
 
   const data = (await response.json()) as { questions?: ApiQuestion[] };
-  const byId = new Map(candidates.map((c) => [c.id, c]));
-  const questions: QuizQuestion[] = (data.questions || [])
-    .map((q) => {
-      const sourceId = q.sourceId || q.learningPointId || "";
-      const candidate = byId.get(sourceId);
-      if (!candidate) return null;
-      return {
-        id: `q-${localDateKey()}-${sourceId}`,
-        learningPointId: sourceId,
-        sourceId,
-        sourceType: q.sourceType || candidate.sourceType,
-        type: q.type || candidate.category,
-        concept: q.concept || candidate.concept,
-        prompt: q.prompt,
-        choices: q.choices,
-        correctIndex: q.correctIndex,
-        explanation: q.explanation,
-        sourceHint: q.sourceHint,
-        sourceReportId: candidate.sourceReportId ?? null,
-        sourceMessageId: candidate.sourceMessageId ?? null,
-      } satisfies QuizQuestion;
-    })
-    .filter((q): q is QuizQuestion => q !== null);
+  const byId = new Map(grammarCandidates.map((c) => [c.id, c]));
+  const questions: QuizQuestion[] = [];
+  for (const q of data.questions || []) {
+    const sourceId = q.sourceId || q.learningPointId || "";
+    const candidate = byId.get(sourceId);
+    if (!candidate) continue;
+    const built: QuizQuestion = {
+      id: `q-${localDateKey()}-${sourceId}`,
+      learningPointId: sourceId,
+      sourceId,
+      sourceType: "conversation_error",
+      type: "grammar",
+      concept: q.concept || candidate.concept,
+      prompt: q.prompt,
+      choices: q.choices,
+      correctIndex: q.correctIndex,
+      explanation: q.explanation,
+      sourceHint: q.sourceHint,
+      example: q.example,
+      choiceNotes: q.choiceNotes,
+      sourceReportId: candidate.sourceReportId ?? null,
+      sourceMessageId: candidate.sourceMessageId ?? null,
+    };
+    const next = ensureWellFormedQuizQuestion(built);
+    if (isVocabularyStyleQuestion(next.prompt, next.choices, next.type)) {
+      continue;
+    }
+    if (!hasUniqueLocalAnswer(next.prompt, next.choices, next.correctIndex)) {
+      continue;
+    }
+    questions.push(next);
+  }
 
   if (questions.length === 0) {
     throw new Error("QUIZ_EMPTY");
@@ -99,7 +134,7 @@ export async function generateTodayQuiz(
   const session: TodayQuizSession = {
     dateKey: localDateKey(),
     locale,
-    questions,
+    questions: questions.slice(0, TARGET_QUIZ_SIZE),
     answers: [],
     completedAt: null,
     composition: compositionFromQuestions(questions),
@@ -118,7 +153,28 @@ export async function prepareQuizAfterReport(
 ): Promise<TodayQuizSession | null> {
   try {
     syncLearningPointsFromSources();
-    const pool = selectQuizCandidates(5);
+    const existing = loadTodayQuizSession();
+    if (existing && existing.locale === locale) {
+      const usable = keepUniqueQuestions(
+        existing.questions.filter(
+          (question) =>
+            !sessionHasVocabularyQuiz([question]),
+        ),
+      );
+      if (usable.length > 0) {
+        if (usable.length !== existing.questions.length) {
+          const next = {
+            ...existing,
+            questions: usable,
+            composition: compositionFromQuestions(usable),
+          };
+          persistTodayQuizSession(next);
+          return next;
+        }
+        return existing;
+      }
+    }
+    const pool = selectQuizCandidates(QUIZ_CANDIDATE_POOL);
     if (pool.length === 0) {
       return null;
     }

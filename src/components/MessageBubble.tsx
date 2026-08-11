@@ -81,7 +81,7 @@ export function MessageBubble({
           {canTranslate ? (
             <button
               type="button"
-              disabled={isTranslating || Boolean(translatedMessage)}
+              disabled={isTranslating}
               onClick={onTranslate}
               className={`rounded-md border px-2 py-1 text-xs transition disabled:cursor-default disabled:opacity-60 ${
                 isUser

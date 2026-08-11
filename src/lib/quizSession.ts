@@ -16,6 +16,8 @@ export type QuizQuestion = {
   correctIndex: number;
   explanation: string;
   sourceHint: string;
+  example?: string;
+  choiceNotes?: string[];
   sourceReportId: string | null;
   sourceMessageId: string | null;
 };
@@ -83,6 +85,10 @@ function normalizeQuestion(raw: unknown): QuizQuestion | null {
     correctIndex: typeof o.correctIndex === "number" ? o.correctIndex : 0,
     explanation: typeof o.explanation === "string" ? o.explanation : "",
     sourceHint: typeof o.sourceHint === "string" ? o.sourceHint : "",
+    example: typeof o.example === "string" ? o.example : undefined,
+    choiceNotes: Array.isArray(o.choiceNotes)
+      ? o.choiceNotes.filter((note): note is string => typeof note === "string")
+      : undefined,
     sourceReportId:
       typeof o.sourceReportId === "string" ? o.sourceReportId : null,
     sourceMessageId:

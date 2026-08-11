@@ -1,6 +1,7 @@
 import OpenAI from "openai";
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { spokenTranslateSystem } from "@/lib/spokenTranslate";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -46,8 +47,10 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "text required" }, { status: 400 });
   }
 
-  const targetLanguage =
-    TARGET_LANGUAGES[body.locale ?? ""] ?? TARGET_LANGUAGES.ko;
+  const locale =
+    typeof body.locale === "string" && body.locale in TARGET_LANGUAGES
+      ? body.locale
+      : "ko";
 
   try {
     const completion = await client.chat.completions.create({
@@ -55,12 +58,12 @@ export async function POST(request: NextRequest) {
       messages: [
         {
           role: "system",
-          content: `You translate English learner chat text into natural ${targetLanguage} for display. Respond with ONLY compact JSON: {"translated":"..."}`,
+          content: spokenTranslateSystem(locale),
         },
         { role: "user", content: text },
       ],
       response_format: { type: "json_object" },
-      temperature: 0.3,
+      temperature: 0.35,
     });
 
     const raw = completion.choices[0]?.message?.content;

@@ -24,11 +24,13 @@ export function SessionChatReplay({ messages, ui }: SessionChatReplayProps) {
     <div className="max-h-[min(70dvh,40rem)] space-y-3 overflow-y-auto border-l border-slate-200 pl-3 sm:space-y-4 sm:pl-4">
       {turns.map((turn) => (
         <article key={turn.id} className="space-y-2">
-          <MessageBubble
-            role="user"
-            message={turn.userMessage}
-            labels={{ listen: ui.listen }}
-          />
+          {turn.userMessage.trim() ? (
+            <MessageBubble
+              role="user"
+              message={turn.userMessage}
+              labels={{ listen: ui.listen }}
+            />
+          ) : null}
 
           {turn.mode === "chat" && turn.correctionResult && turn.assistantMessage ? (
             <>
@@ -72,10 +74,8 @@ export function SessionChatReplay({ messages, ui }: SessionChatReplayProps) {
           {turn.mode === "how_to_say" && turn.expressionResult ? (
             <HowToSayCard
               expression={turn.expressionResult.expression}
-              example={turn.expressionResult.example}
               labels={{
                 title: ui.expressionHelperTitle,
-                example: ui.example,
                 listen: ui.listen,
               }}
             />

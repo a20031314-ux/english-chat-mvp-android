@@ -1,4 +1,5 @@
 import type { ChatMessage } from "@/components/ArchivePanel";
+import { alignCorrectionToGrammar } from "@/lib/correctionNorm";
 
 export type ReplayCorrection = {
   corrected: string;
@@ -34,10 +35,6 @@ export function hydrateReplayTurns(messages: ChatMessage[]): ReplayTurn[] {
       continue;
     }
 
-    if (!pendingUser) {
-      continue;
-    }
-
     if (message.role === "assistant") {
       let assistantMessage = "";
       let correctionResult: ReplayCorrection | undefined;
@@ -48,27 +45,24 @@ export function hydrateReplayTurns(messages: ChatMessage[]): ReplayTurn[] {
         };
         assistantMessage = parsed.assistantMessage || "";
         const c = parsed.correctionResult;
-        if (c) {
-          const corrected =
+        if (c && pendingUser) {
+          const aligned = alignCorrectionToGrammar(
+            pendingUser.content,
             typeof c.corrected === "string" && c.corrected.trim()
               ? c.corrected
-              : pendingUser.content;
-          const natural =
+              : pendingUser.content,
             typeof c.natural === "string" && c.natural.trim()
               ? c.natural
-              : corrected;
-          const explanation =
-            typeof c.explanation === "string" ? c.explanation : "";
-          const hasError =
-            typeof c.hasError === "boolean"
-              ? c.hasError
-              : corrected.replace(/\s+/g, " ").trim().toLowerCase() !==
-                pendingUser.content.replace(/\s+/g, " ").trim().toLowerCase();
+              : "",
+          );
           correctionResult = {
-            corrected,
-            natural,
-            explanation,
-            hasError,
+            corrected: aligned.corrected,
+            natural: aligned.natural,
+            explanation:
+              typeof c.explanation === "string" && aligned.hasError
+                ? c.explanation
+                : "",
+            hasError: aligned.hasError,
           };
         }
       } catch {
@@ -76,13 +70,19 @@ export function hydrateReplayTurns(messages: ChatMessage[]): ReplayTurn[] {
       }
 
       turns.push({
-        id: pendingUser.id.replace(/-user$/, "") || message.id,
+        id: (pendingUser?.id.replace(/-user$/, "") ||
+          message.id.replace(/-assistant$/, "") ||
+          message.id),
         mode: "chat",
-        userMessage: pendingUser.content,
+        userMessage: pendingUser?.content || "",
         assistantMessage,
         correctionResult,
       });
       pendingUser = null;
+      continue;
+    }
+
+    if (!pendingUser) {
       continue;
     }
 

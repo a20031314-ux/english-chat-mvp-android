@@ -6,8 +6,10 @@ import { apiUrl } from "@/lib/apiBase";
 import type { Locale, UICopy } from "@/lib/copy";
 import {
   isWordSaved,
+  loadHideVocabGloss,
   loadVocabulary,
   makeVocabId,
+  persistHideVocabGloss,
   persistVocabulary,
   type VocabLookupResult,
   type VocabularyEntry,
@@ -26,9 +28,13 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
   const [searched, setSearched] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [toast, setToast] = useState<string | null>(null);
+  const [hideGloss, setHideGloss] = useState(false);
+  const [revealedIds, setRevealedIds] = useState<Set<string>>(new Set());
+  const [orderIds, setOrderIds] = useState<string[] | null>(null);
 
   useEffect(() => {
     setEntries(loadVocabulary());
+    setHideGloss(loadHideVocabGloss());
   }, []);
 
   useEffect(() => {
@@ -91,6 +97,17 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
     const updated = entries.filter((e) => e.id !== id);
     setEntries(updated);
     persistVocabulary(updated);
+    setOrderIds((prev) => (prev ? prev.filter((item) => item !== id) : prev));
+  };
+
+  const handleShuffle = () => {
+    const next = [...entries];
+    for (let i = next.length - 1; i > 0; i -= 1) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [next[i], next[j]] = [next[j], next[i]];
+    }
+    setOrderIds(next.map((entry) => entry.id));
+    setRevealedIds(new Set());
   };
 
   const handleClearSearch = () => {
@@ -101,6 +118,16 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
   };
 
   const showResults = searched && !isSearching;
+
+  const displayedEntries = (() => {
+    if (!orderIds) return entries;
+    const byId = new Map(entries.map((entry) => [entry.id, entry]));
+    const ordered = orderIds
+      .map((id) => byId.get(id))
+      .filter((entry): entry is VocabularyEntry => Boolean(entry));
+    const seen = new Set(ordered.map((entry) => entry.id));
+    return [...ordered, ...entries.filter((entry) => !seen.has(entry.id))];
+  })();
 
   return (
     <div className="relative flex h-full min-h-0 flex-col">
@@ -193,53 +220,136 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
         ) : null}
 
         <section className="mt-6">
-          <h2 className="text-sm font-semibold text-slate-900">
-            {ui.vocabSavedTitle}
-          </h2>
+          <div className="flex items-center justify-between gap-3">
+            <h2 className="text-sm font-semibold text-slate-900">
+              {ui.vocabSavedTitle}
+            </h2>
+            {entries.length > 0 ? (
+              <div className="flex shrink-0 items-center gap-2">
+                {entries.length > 1 ? (
+                  <button
+                    type="button"
+                    onClick={handleShuffle}
+                    className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50"
+                  >
+                    {ui.vocabShuffle}
+                  </button>
+                ) : null}
+                <button
+                  type="button"
+                  aria-pressed={hideGloss}
+                  onClick={() => {
+                    const next = !hideGloss;
+                    setHideGloss(next);
+                    persistHideVocabGloss(next);
+                    setRevealedIds(new Set());
+                  }}
+                  className={`rounded-full px-3 py-1.5 text-xs font-medium ${
+                    hideGloss
+                      ? "bg-slate-900 text-white"
+                      : "border border-slate-200 bg-white text-slate-600"
+                  }`}
+                >
+                  {ui.vocabHideGloss}
+                </button>
+              </div>
+            ) : null}
+          </div>
           {entries.length === 0 ? (
             <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-slate-600">
               {ui.vocabEmpty}
             </p>
           ) : (
             <ul className="mt-3 space-y-3">
-              {entries.map((entry) => (
-                <li
-                  key={entry.id}
-                  className="rounded-2xl border border-slate-200 bg-white p-4"
-                >
-                  <div className="flex items-start justify-between gap-3">
-                    <div className="min-w-0">
-                      <div className="flex flex-wrap items-center gap-2">
-                        <p
-                          className="text-base font-semibold text-slate-900"
-                          translate="no"
-                        >
-                          {entry.word}
-                        </p>
-                        <TTSButton text={entry.word} ariaLabel={ui.listen} />
+              {displayedEntries.map((entry) => {
+                const revealed = revealedIds.has(entry.id);
+                const meaningHidden = hideGloss && !revealed;
+                return (
+                  <li
+                    key={entry.id}
+                    className="rounded-2xl border border-slate-200 bg-white p-4"
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div className="min-w-0 flex-1">
+                        <div className="flex flex-wrap items-center gap-2">
+                          <p
+                            className="text-base font-semibold text-slate-900"
+                            translate="no"
+                          >
+                            {entry.word}
+                          </p>
+                          <TTSButton text={entry.word} ariaLabel={ui.listen} />
+                        </div>
+                        {meaningHidden ? (
+                          <button
+                            type="button"
+                            onClick={() =>
+                              setRevealedIds((prev) => {
+                                const next = new Set(prev);
+                                next.add(entry.id);
+                                return next;
+                              })
+                            }
+                            className="mt-2 w-full rounded-xl bg-slate-50 px-3 py-2.5 text-left text-xs text-slate-500"
+                          >
+                            {ui.vocabRevealGloss}
+                          </button>
+                        ) : (
+                          <div
+                            role={hideGloss ? "button" : undefined}
+                            tabIndex={hideGloss ? 0 : undefined}
+                            onClick={
+                              hideGloss
+                                ? () =>
+                                    setRevealedIds((prev) => {
+                                      const next = new Set(prev);
+                                      next.delete(entry.id);
+                                      return next;
+                                    })
+                                : undefined
+                            }
+                            onKeyDown={
+                              hideGloss
+                                ? (event) => {
+                                    if (event.key !== "Enter" && event.key !== " ") {
+                                      return;
+                                    }
+                                    event.preventDefault();
+                                    setRevealedIds((prev) => {
+                                      const next = new Set(prev);
+                                      next.delete(entry.id);
+                                      return next;
+                                    });
+                                  }
+                                : undefined
+                            }
+                            className={`mt-1 ${hideGloss ? "cursor-pointer" : ""}`}
+                          >
+                            <p className="text-sm text-slate-700">
+                              {entry.gloss}
+                            </p>
+                            {entry.example ? (
+                              <p
+                                className="mt-1 text-xs leading-relaxed text-slate-500"
+                                translate="no"
+                              >
+                                {entry.example}
+                              </p>
+                            ) : null}
+                          </div>
+                        )}
                       </div>
-                      <p className="mt-1 text-sm text-slate-700">
-                        {entry.gloss}
-                      </p>
-                      {entry.example ? (
-                        <p
-                          className="mt-1 text-xs leading-relaxed text-slate-500"
-                          translate="no"
-                        >
-                          {entry.example}
-                        </p>
-                      ) : null}
+                      <button
+                        type="button"
+                        onClick={() => handleDelete(entry.id)}
+                        className="shrink-0 text-xs font-medium text-rose-700 hover:underline"
+                      >
+                        {ui.vocabDelete}
+                      </button>
                     </div>
-                    <button
-                      type="button"
-                      onClick={() => handleDelete(entry.id)}
-                      className="shrink-0 text-xs font-medium text-rose-700 hover:underline"
-                    >
-                      {ui.vocabDelete}
-                    </button>
-                  </div>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
           )}
         </section>

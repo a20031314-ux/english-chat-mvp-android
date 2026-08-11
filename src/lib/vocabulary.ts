@@ -1,4 +1,5 @@
 export const VOCABULARY_STORAGE_KEY = "vocabularyEntries";
+export const VOCABULARY_HIDE_GLOSS_KEY = "vocabularyHideGloss";
 
 export type VocabularyEntry = {
   id: string;
@@ -57,6 +58,24 @@ export function loadVocabulary(): VocabularyEntry[] {
       .sort((a, b) => b.createdAt - a.createdAt);
   } catch {
     return [];
+  }
+}
+
+export function loadHideVocabGloss(): boolean {
+  if (typeof window === "undefined") return false;
+  try {
+    return window.localStorage.getItem(VOCABULARY_HIDE_GLOSS_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+export function persistHideVocabGloss(hidden: boolean) {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(VOCABULARY_HIDE_GLOSS_KEY, hidden ? "1" : "0");
+  } catch {
+    // ignore quota / private mode
   }
 }
 
