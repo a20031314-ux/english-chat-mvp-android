@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { ChatWindow } from "@/components/ChatWindow";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { readAppLocale } from "@/components/LearningBookPanel";
@@ -35,6 +35,8 @@ export function AppHome() {
   const [pendingSessionReportId, setPendingSessionReportId] = useState<
     string | null
   >(null);
+  const [isCreatingReport, setIsCreatingReport] = useState(false);
+  const pendingReportIdRef = useRef<string | null>(null);
 
   const ui = copy[locale];
 
@@ -99,6 +101,13 @@ export function AppHome() {
     return () => window.removeEventListener("popstate", onPopState);
   }, []);
 
+  const handleSessionReportCreating = useCallback(() => {
+    pendingReportIdRef.current = null;
+    setPendingSessionReportId(null);
+    setIsCreatingReport(true);
+    openTab("reports");
+  }, [openTab]);
+
   const handleSessionReportCreated = useCallback(
     (report: SessionReport) => {
       try {
@@ -106,14 +115,23 @@ export function AppHome() {
       } catch {
         // ignore
       }
+      pendingReportIdRef.current = report.id;
       setPendingSessionReportId(report.id);
       openTab("reports");
     },
     [openTab],
   );
 
+  const handleSessionReportCreateFinished = useCallback(() => {
+    if (!pendingReportIdRef.current) {
+      setIsCreatingReport(false);
+    }
+  }, []);
+
   const clearPendingReport = useCallback(() => {
+    pendingReportIdRef.current = null;
     setPendingSessionReportId(null);
+    setIsCreatingReport(false);
   }, []);
 
   const tabItems: { id: AppTab; label: string }[] = [
@@ -138,7 +156,9 @@ export function AppHome() {
             tabMode
             locale={locale}
             onLocaleChange={setLocale}
+            onSessionReportCreating={handleSessionReportCreating}
             onSessionReportCreated={handleSessionReportCreated}
+            onSessionReportCreateFinished={handleSessionReportCreateFinished}
           />
         </div>
 
@@ -148,6 +168,7 @@ export function AppHome() {
               locale={locale}
               ui={ui}
               onLocaleChange={setLocale}
+              isCreatingReport={isCreatingReport}
               initialReportId={pendingSessionReportId}
               onInitialReportConsumed={clearPendingReport}
             />

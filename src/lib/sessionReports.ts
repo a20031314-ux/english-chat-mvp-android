@@ -215,6 +215,12 @@ function wordCount(text: string) {
 /** Average sentence length that earns the full 20 fluency points. */
 const FLUENCY_FULL_CHARS = 60;
 
+/**
+ * Learner English words needed before zero errors can earn the full accuracy 40.
+ * Short perfect sessions stay below the ceiling until there is enough evidence.
+ */
+const ACCURACY_FULL_WORDS = 40;
+
 function learnerSentences(text: string): string[] {
   const trimmed = text.trim();
   if (!trimmed) return [];
@@ -502,7 +508,13 @@ function computeScoreBreakdown(turns: TurnSlice[]): ScoreBreakdown {
   const wordMass = Math.max(1, writtenWords);
   const lengthMass = Math.max(1, lengthSum);
   const errorRate = wrongWords / wordMass;
-  const accuracy = Math.round((1 - Math.min(1, errorRate)) * 40);
+  const observedAccuracy = 1 - Math.min(1, errorRate);
+  // One correct line ≠ full accuracy; scale the ceiling with how much English was produced.
+  const accuracyEvidence = Math.min(1, wordMass / ACCURACY_FULL_WORDS);
+  const accuracyCeiling = 12 + 28 * accuracyEvidence;
+  const accuracy = Math.round(
+    Math.min(observedAccuracy * 40, accuracyCeiling),
+  );
   const naturalness = Math.round((naturalWeighted / lengthMass) * 25);
 
   const avgChars = averageSentenceChars(chatTurns);
@@ -1219,10 +1231,9 @@ export function buildSessionReport(input: BuildReportInput): SessionReport {
 }
 
 /**
- * Compatible migration from conversationSessions → reports.
- * - First run: import all existing archive sessions (legacy had no reliable endedAt).
- * - Later: only sessions with endedAt (completed learning).
- * Never deletes conversationSessions.
+ * Import completed conversationSessions into reports.
+ * Only sessions with endedAt (explicitly finished / reported) are imported —
+ * never auto-convert an in-progress chat into a report.
  */
 export function migrateSessionsToReports(
   sessions: ConversationSession[],
@@ -1231,14 +1242,18 @@ export function migrateSessionsToReports(
   if (typeof window === "undefined") return [];
 
   const existing = loadSessionReports();
-  const bySession = new Set(existing.map((r) => r.sessionId));
+  const openSessionIds = new Set(
+    sessions.filter((session) => !session.endedAt).map((session) => session.id),
+  );
+  // Drop reports that were auto-created from chats still in progress.
+  let kept = existing.filter((report) => !openSessionIds.has(report.sessionId));
+  const bySession = new Set(kept.map((r) => r.sessionId));
   const added: SessionReport[] = [];
-  const migratedOnce = window.localStorage.getItem(SESSION_REPORTS_MIGRATED_KEY) === "1";
 
   for (const session of sessions) {
     if (bySession.has(session.id)) continue;
     if (!session.messages?.length) continue;
-    if (migratedOnce && !session.endedAt) continue;
+    if (!session.endedAt) continue;
 
     const report = buildSessionReport({
       sessionId: session.id,
@@ -1246,17 +1261,19 @@ export function migrateSessionsToReports(
       messages: session.messages,
       messageCount: session.messageCount || session.messages.length,
       locale,
-      endedAt: session.endedAt ?? session.createdAt,
+      endedAt: session.endedAt,
     });
     added.push(report);
     bySession.add(session.id);
   }
 
-  if (added.length > 0) {
-    persistSessionReports([...added, ...existing]);
+  if (added.length > 0 || kept.length !== existing.length) {
+    persistSessionReports([...added, ...kept]);
   }
-  if (!migratedOnce) {
+  try {
     window.localStorage.setItem(SESSION_REPORTS_MIGRATED_KEY, "1");
+  } catch {
+    // ignore
   }
   return loadSessionReports();
 }

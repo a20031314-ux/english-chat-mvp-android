@@ -4,7 +4,6 @@ import { useEffect, useMemo, useState } from "react";
 import type { Locale, UICopy } from "@/lib/copy";
 import {
   canGoNextMonth,
-  formatDelta,
   formatYearMonthLabel,
   getCurrentYearMonth,
   getEarliestYearMonth,
@@ -142,20 +141,8 @@ export function MonthlyReportPage({
                 </div>
                 <div>
                   <p className="text-xs text-slate-500">{ui.monthlyChange}</p>
-                  <p
-                    className={`mt-2 text-3xl font-semibold tabular-nums ${
-                      stats.scoreChange
-                        ? stats.scoreChange.delta > 0
-                          ? "text-teal-800"
-                          : stats.scoreChange.delta < 0
-                            ? "text-rose-700"
-                            : "text-slate-900"
-                        : "text-slate-400"
-                    }`}
-                  >
-                    {stats.scoreChange
-                      ? formatDelta(stats.scoreChange.delta)
-                      : "—"}
+                  <p className="mt-2 text-3xl font-semibold tabular-nums text-slate-900">
+                    {stats.averageScore != null ? stats.averageScore : "—"}
                   </p>
                 </div>
                 <div>

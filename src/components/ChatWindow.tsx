@@ -24,7 +24,7 @@ import {
 } from "@/lib/sessionReports";
 import { CONVERSATION_ANALYSIS_VERSION } from "@/lib/conversationAnalysis";
 import { requestConversationAnalysis } from "@/lib/requestConversationAnalysis";
-import { seedDemoMonthlyReports } from "@/lib/seedDemoMonthlyReports";
+import { purgeDemoMonthlyReports } from "@/lib/seedDemoMonthlyReports";
 import { CorrectionCard } from "./CorrectionCard";
 import { HowToSayCard } from "./HowToSayCard";
 import { LanguageSelector } from "./LanguageSelector";
@@ -110,6 +110,7 @@ function premiumRequestHeaders(isPremium: boolean): HeadersInit {
   return { [PREMIUM_CLIENT_HEADER]: "1" };
 }
 const CONVERSATION_SESSIONS_KEY = "conversationSessions";
+const ACTIVE_CONVERSATION_ID_KEY = "activeConversationSessionId";
 const CHAT_CARDS_VISIBLE_KEY = "chatCardsVisible";
 const VOCAB_CHECK_ON_KEY = "chatVocabCheckOn";
 const VERCEL_FALLBACK_API_BASE = "https://english-chat-mvp.vercel.app";
@@ -326,6 +327,45 @@ function saveConversationSession(session: ConversationSession) {
   );
 }
 
+function loadActiveConversationId(): string | null {
+  if (typeof window === "undefined") return null;
+  try {
+    return window.localStorage.getItem(ACTIVE_CONVERSATION_ID_KEY);
+  } catch {
+    return null;
+  }
+}
+
+function persistActiveConversationId(id: string | null) {
+  if (typeof window === "undefined") return;
+  try {
+    if (!id) {
+      window.localStorage.removeItem(ACTIVE_CONVERSATION_ID_KEY);
+    } else {
+      window.localStorage.setItem(ACTIVE_CONVERSATION_ID_KEY, id);
+    }
+  } catch {
+    // ignore
+  }
+}
+
+function findResumableSession(
+  sessions: ConversationSession[],
+): ConversationSession | null {
+  const activeId = loadActiveConversationId();
+  if (activeId) {
+    const active = sessions.find(
+      (session) => session.id === activeId && !session.endedAt && session.messages?.length,
+    );
+    if (active) return active;
+  }
+  return (
+    sessions.find(
+      (session) => !session.endedAt && (session.messages?.length || 0) > 0,
+    ) ?? null
+  );
+}
+
 function deleteConversationSession(id: string) {
   if (typeof window === "undefined") {
     return;
@@ -522,7 +562,11 @@ type ChatWindowProps = {
   tabMode?: boolean;
   locale?: Locale;
   onLocaleChange?: (locale: Locale) => void;
+  /** Called right after the user confirms report creation (before analysis finishes). */
+  onSessionReportCreating?: () => void;
   onSessionReportCreated?: (report: SessionReport) => void;
+  /** Always called when report creation finishes (success or failure). */
+  onSessionReportCreateFinished?: () => void;
   onBackToHome?: () => void;
 };
 
@@ -530,7 +574,9 @@ export function ChatWindow({
   tabMode = false,
   locale: localeProp,
   onLocaleChange,
+  onSessionReportCreating,
   onSessionReportCreated,
+  onSessionReportCreateFinished,
   onBackToHome,
 }: ChatWindowProps) {
   const { isPremium, isBillingReady, refreshPremium } = usePremium();
@@ -685,10 +731,22 @@ export function ChatWindow({
     const sessions = loadConversationSessions();
     setConversationSessions(sessions);
     migrateSessionsToReports(sessions, locale);
-    setSessionReports(seedDemoMonthlyReports());
+    setSessionReports(purgeDemoMonthlyReports());
     setLearningCards(loadLearningCards());
     setShowChatCards(loadChatCardsVisible());
     setVocabPickMode(loadVocabCheckOn());
+
+    const resumable = findResumableSession(sessions);
+    if (resumable) {
+      setCurrentSessionId(resumable.id);
+      setCurrentSessionCreatedAt(resumable.createdAt);
+      setTurns(fromSessionMessages(resumable.messages));
+      setSessionEnded(false);
+      persistActiveConversationId(resumable.id);
+    } else {
+      persistActiveConversationId(null);
+    }
+
     void refreshEntitlement();
     // Migrate once on mount; locale is read for title/summary language of new imports only.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -753,6 +811,9 @@ export function ChatWindow({
     };
 
     saveConversationSession(session);
+    if (!session.endedAt) {
+      persistActiveConversationId(session.id);
+    }
     setConversationSessions(loadConversationSessions());
   }, [turns, currentSessionId, currentSessionCreatedAt, sessionEnded]);
 
@@ -780,7 +841,23 @@ export function ChatWindow({
         "Content-Type": "application/json",
         ...premiumRequestHeaders(isPremium),
       },
-      body: JSON.stringify({ message, mode: "chat", locale }),
+      body: JSON.stringify({
+        message,
+        mode: "chat",
+        locale,
+        recent: turns
+          .flatMap((turn) => {
+            const lines: string[] = [];
+            if (turn.userMessage.trim() && turn.mode === "chat") {
+              lines.push(`me: ${turn.userMessage.trim()}`);
+            }
+            if (turn.assistantMessage?.trim()) {
+              lines.push(`other: ${turn.assistantMessage.trim()}`);
+            }
+            return lines;
+          })
+          .slice(-8),
+      }),
     });
 
     if (!response.ok) {
@@ -944,6 +1021,28 @@ export function ChatWindow({
     });
   };
 
+  const allModesOn =
+    chatModeOn && askExpressionOn && vocabPickMode && showChatCards;
+
+  const toggleAllModes = () => {
+    const next = !allModesOn;
+    setChatModeOn(next);
+    setAskExpressionOn(next);
+    setVocabPickMode(next);
+    persistVocabCheckOn(next);
+    setShowChatCards(next);
+    persistChatCardsVisible(next);
+    if (!next) {
+      setPreviewWord(null);
+      setPreviewDetail(null);
+      setIsPreviewLoading(false);
+      setPreviewLoadFailed(false);
+      setIsVocabSaving(false);
+    } else {
+      setVocabEntries(loadVocabulary());
+    }
+  };
+
   const closeVocabPreview = () => {
     if (isVocabSaving) return;
     setPreviewWord(null);
@@ -1080,6 +1179,7 @@ export function ChatWindow({
     setSessionEnded(false);
     setCurrentSessionId(makeSessionId());
     setCurrentSessionCreatedAt(Date.now());
+    persistActiveConversationId(null);
     requestAnimationFrame(() => inputRef.current?.focus());
   };
 
@@ -1095,6 +1195,7 @@ export function ChatWindow({
       messageCount: turns.length,
       messages: toSessionMessages(turns),
     });
+    persistActiveConversationId(currentSessionId);
     setConversationSessions(loadConversationSessions());
   };
 
@@ -1107,9 +1208,11 @@ export function ChatWindow({
     if (session.endedAt) {
       setCurrentSessionId(makeSessionId());
       setCurrentSessionCreatedAt(Date.now());
+      persistActiveConversationId(null);
     } else {
       setCurrentSessionId(session.id);
       setCurrentSessionCreatedAt(session.createdAt);
+      persistActiveConversationId(session.id);
     }
     setSessionEnded(false);
     setTurns(fromSessionMessages(session.messages));
@@ -1136,6 +1239,7 @@ export function ChatWindow({
       messageCount: turns.length,
       messages,
     });
+    persistActiveConversationId(null);
     setConversationSessions(loadConversationSessions());
     setBookToast(ui.sessionSavedToHistoryToast);
     setIsArchiveOpen(false);
@@ -1182,15 +1286,25 @@ export function ChatWindow({
     }
     if (reportCreating) return;
 
+    const endedAt = Date.now();
+    const messages = toSessionMessages(turns);
+    const sessionId = currentSessionId;
+    const sessionCreatedAt = currentSessionCreatedAt;
+    const messageCount = turns.length;
+
+    setReportConfirmOpen(false);
     setReportCreating(true);
+    if (tabMode) {
+      onSessionReportCreating?.();
+    }
+    startNewChat();
+
     try {
-      const endedAt = Date.now();
-      const messages = toSessionMessages(turns);
       const report = buildSessionReport({
-        sessionId: currentSessionId,
-        createdAt: currentSessionCreatedAt,
+        sessionId,
+        createdAt: sessionCreatedAt,
         messages,
-        messageCount: turns.length,
+        messageCount,
         locale,
         endedAt,
       });
@@ -1201,22 +1315,27 @@ export function ChatWindow({
       }
       saveSessionReport(report);
       saveConversationSession({
-        id: currentSessionId,
+        id: sessionId,
         title: report.title,
-        createdAt: currentSessionCreatedAt,
+        createdAt: sessionCreatedAt,
         endedAt,
-        messageCount: turns.length,
+        messageCount,
         messages,
       });
-      setReportConfirmOpen(false);
-      openCreatedReport(report, { clearChat: true });
+      openCreatedReport(report, { clearChat: false });
       void prepareReviewAfterReport(locale, report).then((pack) => {
         if (pack) {
           setBookToast(ui.quizReadyToast);
         }
       });
+    } catch (error) {
+      console.error("[report] create failed", error);
+      setBookToast(ui.reportCreateEmptyToast);
     } finally {
       setReportCreating(false);
+      if (tabMode) {
+        onSessionReportCreateFinished?.();
+      }
     }
   };
 
@@ -1269,15 +1388,10 @@ export function ChatWindow({
   };
 
   const handleAiStart = async () => {
-    if (isSending) return;
+    if (isSending || turns.length > 0) return;
     setChatModeOn(true);
     setIsSending(true);
     try {
-      const recent = turns.flatMap((turn) =>
-        [turn.userMessage, turn.assistantMessage || ""].filter((text) =>
-          text.trim(),
-        ),
-      );
       const response = await fetch(apiUrl("/api/chat"), {
         method: "POST",
         headers: {
@@ -1287,7 +1401,7 @@ export function ChatWindow({
         body: JSON.stringify({
           mode: "start",
           locale,
-          recent: recent.slice(-8),
+          recent: [],
         }),
       });
       if (!response.ok) {
@@ -1299,8 +1413,7 @@ export function ChatWindow({
       };
       const assistantMessage =
         data.assistantMessage?.trim() || "Hey! How's your day going?";
-      setTurns((previous) => [
-        ...previous,
+      setTurns([
         {
           id: `${Date.now()}`,
           mode: "chat",
@@ -1731,6 +1844,35 @@ export function ChatWindow({
             <div className="mb-2 flex flex-wrap items-center gap-2">
               <button
                 type="button"
+                onClick={toggleAllModes}
+                aria-label={`${ui.chatMode}, ${ui.askExpression}`}
+                aria-pressed={allModesOn}
+                title={`${ui.chatMode} · ${ui.askExpression}`}
+                className={`inline-flex h-8 w-8 items-center justify-center rounded-lg transition ${
+                  allModesOn
+                    ? "bg-teal-500 text-white"
+                    : "border border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
+                }`}
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-4 w-4"
+                  aria-hidden
+                >
+                  <path
+                    d="M4 7h16M4 12h16M4 17h16"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                  />
+                  <circle cx="9" cy="7" r="2" fill="currentColor" />
+                  <circle cx="15" cy="12" r="2" fill="currentColor" />
+                  <circle cx="11" cy="17" r="2" fill="currentColor" />
+                </svg>
+              </button>
+              <button
+                type="button"
                 onClick={toggleChatMode}
                 className={`rounded-lg px-3 py-1.5 text-sm transition ${
                   chatModeOn
@@ -1815,14 +1957,48 @@ export function ChatWindow({
                 }`}
               />
               <div className="flex shrink-0 flex-col items-stretch gap-1.5">
+              {turns.length === 0 ? (
               <button
                 type="button"
                 disabled={isSending}
                 onClick={() => void handleAiStart()}
-                className="rounded-xl border border-slate-200 bg-white px-2 py-1.5 text-[11px] font-medium leading-tight text-slate-700 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
+                aria-label={ui.chatStartCta}
+                title={ui.chatStartCta}
+                className="inline-flex h-10 min-w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
               >
-                {ui.chatStartCta}
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  className="h-5 w-5"
+                  aria-hidden
+                >
+                  <rect
+                    x="5"
+                    y="7"
+                    width="14"
+                    height="11"
+                    rx="3"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                  />
+                  <path
+                    d="M12 4v3"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                  />
+                  <circle cx="12" cy="3.5" r="1.2" fill="currentColor" />
+                  <circle cx="9.2" cy="12" r="1.2" fill="currentColor" />
+                  <circle cx="14.8" cy="12" r="1.2" fill="currentColor" />
+                  <path
+                    d="M5 12H3.5M20.5 12H19"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                  />
+                </svg>
               </button>
+              ) : null}
               <button
                 type="submit"
                 disabled={isSending}
@@ -1934,29 +2110,23 @@ export function ChatWindow({
                 {ui.reportCreateConfirmTitle}
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                {reportCreating
-                  ? ui.reportAnalysisGenerating
-                  : ui.reportCreateConfirmBody}
+                {ui.reportCreateConfirmBody}
               </p>
             </div>
             <div className="flex gap-2 border-t border-slate-100 px-4 py-3">
               <button
                 type="button"
-                disabled={reportCreating}
                 onClick={() => setReportConfirmOpen(false)}
-                className="flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-50"
+                className="flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
               >
                 {ui.reportCreateConfirmCancel}
               </button>
               <button
                 type="button"
-                disabled={reportCreating}
                 onClick={() => void confirmCreateReportFromCurrent()}
-                className="flex-1 rounded-xl bg-slate-900 px-3 py-2.5 text-sm font-medium text-white hover:bg-slate-800 disabled:opacity-50"
+                className="flex-1 rounded-xl bg-slate-900 px-3 py-2.5 text-sm font-medium text-white hover:bg-slate-800"
               >
-                {reportCreating
-                  ? ui.reportAnalysisGenerating
-                  : ui.reportCreateConfirmCta}
+                {ui.reportCreateConfirmCta}
               </button>
             </div>
           </div>

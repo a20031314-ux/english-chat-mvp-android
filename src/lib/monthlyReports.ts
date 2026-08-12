@@ -24,6 +24,7 @@ export type MonthlyLearningStats = {
   totalMessageCount: number;
   learningDayCount: number;
   currentScore: number | null;
+  averageScore: number | null;
   scoreChange: MonthlyScoreChange | null;
 };
 
@@ -126,6 +127,14 @@ export function getLatestScore(reports: SessionReport[]): number | null {
   return scored[scored.length - 1].score;
 }
 
+/** Mean of valid scored reports in the month. */
+export function getAverageScore(reports: SessionReport[]): number | null {
+  const scored = getValidScoredReports(reports);
+  if (scored.length === 0) return null;
+  const sum = scored.reduce((total, point) => total + point.score, 0);
+  return Math.round(sum / scored.length);
+}
+
 /**
  * Month change = last valid score − first valid score in the month.
  * Needs at least two scored sessions.
@@ -161,6 +170,7 @@ export function getMonthlyLearningStats(
     totalMessageCount: reports.reduce((sum, r) => sum + (r.messageCount || 0), 0),
     learningDayCount: days.size,
     currentScore: getLatestScore(reports),
+    averageScore: getAverageScore(reports),
     scoreChange: getMonthlyScoreChange(reports),
   };
 }

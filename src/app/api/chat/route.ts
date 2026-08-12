@@ -85,13 +85,18 @@ CRITICAL for explanation:
 - Example style: "if 조건절에서는 미래의 일도 현재형을 써요."`
       : "";
 
-  return `You are a friendly English conversation tutor. The user sends one English message they composed.
+  return `You are a friendly English conversation partner for a language learner.
+The user JSON has "message" (their English line) and optional "recent" chat lines for continuity.
 
 1) First fix their English into corrected (what they meant to say).
 2) Then write assistantMessage as a reply to the CORRECTED sentence only — never to the broken original.
 - If corrected is a question, answer that question.
 - If corrected is a statement, respond to that statement.
 - Do not treat a broken question like "You are you good at running?" as a compliment ("You are good at running").
+- Keep the chat moving: after a brief reaction or answer, ALWAYS invite them to continue with one easy follow-up question or soft prompt they can answer in 1–2 sentences.
+- Prefer concrete, personal openings ("What did you do next?", "How was it?", "What about you?").
+- Do NOT end on a closed dead-end like only "Nice!", "Got it.", "Cool.", or "That sounds fun." with nothing to answer.
+- Do not lecture, quiz grammar, or correct them inside assistantMessage.
 3) Fill the rest of correction:
 - corrected: fully corrected English (fix grammar/wording mistakes; keep meaning).
 - natural: a more natural/colloquial native alternative that is DIFFERENT from corrected whenever a more fluent option exists. If corrected is already the most natural, repeat corrected.
@@ -149,20 +154,30 @@ const FALLBACK_EXPLANATION: Record<string, string> = {
 async function replyToCorrected(
   openai: OpenAI,
   corrected: string,
+  recent: string[] = [],
 ): Promise<string> {
   const completion = await openai.chat.completions.create({
     model: MODEL,
     messages: [
       {
         role: "system",
-        content: `The learner meant the English line below (already corrected). Reply in 1-2 short spoken English sentences.
-Match the speech act: answer a question, react to a statement. Do not thank them unless they complimented you.
+        content: `The learner meant the English line below (already corrected). Reply as a friendly conversation partner in 1-2 short spoken English sentences.
+
+1) Briefly react or answer, matching the speech act.
+2) Always leave an easy opening for them to keep talking — usually one short follow-up question or soft invite ("What about you?", "How was it?", "Tell me more.").
+Do not end on a closed dead-end ("Nice!", "Got it.", "Cool.") with nothing to answer.
+Do not lecture, correct their English, or thank them unless they complimented you.
+Use RECENT only for continuity; do not repeat yourself.
+
 Return ONLY JSON: {"assistantMessage":"..."}`,
       },
-      { role: "user", content: corrected },
+      {
+        role: "user",
+        content: JSON.stringify({ corrected, recent }),
+      },
     ],
     response_format: { type: "json_object" },
-    temperature: 0.6,
+    temperature: 0.7,
   });
   const raw = completion.choices[0]?.message?.content;
   if (!raw) return "";
@@ -174,15 +189,22 @@ async function runChat(
   openai: OpenAI,
   message: string,
   locale: string,
+  recent: string[] = [],
 ): Promise<ChatPayload> {
   const completion = await openai.chat.completions.create({
     model: MODEL,
     messages: [
       { role: "system", content: buildChatSystem(locale) },
-      { role: "user", content: message },
+      {
+        role: "user",
+        content: JSON.stringify({
+          message,
+          recent: recent.slice(-8),
+        }),
+      },
     ],
     response_format: { type: "json_object" },
-    temperature: 0.6,
+    temperature: 0.7,
   });
 
   const raw = completion.choices[0]?.message?.content;
@@ -217,7 +239,7 @@ async function runChat(
   let reply = assistantMessage;
   if (needsExplanation && corrected.trim()) {
     try {
-      const reread = await replyToCorrected(openai, corrected);
+      const reread = await replyToCorrected(openai, corrected, recent);
       if (reread) reply = reread;
     } catch (error) {
       console.error("[chat-reply-corrected]", error);
@@ -304,6 +326,7 @@ Decide ONE short opener, then write it in English and (if asked) in the learner'
 Write 1-2 short spoken English sentences as assistantMessage.
 Ask one easy, concrete question they can answer in a sentence or two.
 Be warm and natural. Do not lecture or correct anyone.
+Make it easy for them to keep talking after they answer.
 Vary the topic. Do not reuse questions from RECENT.
 ${spokenRule}
 
@@ -451,7 +474,12 @@ export async function POST(request: NextRequest) {
       return jsonWithCors(request, data);
     }
 
-    const data = await runChat(openai, message, locale);
+    const data = await runChat(
+      openai,
+      message,
+      locale,
+      parseRecent(body.recent),
+    );
     if (!isPremium) {
       incrementDailyUsed(userId);
     }

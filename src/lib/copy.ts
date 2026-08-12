@@ -303,7 +303,7 @@ export const copy = {
     reportCreateConfirmCancel: "계속 대화하기",
     monthlyGrowthTitle: "{month} 영어 성장",
     monthlyCurrentScore: "현재 점수",
-    monthlyChange: "이번 달",
+    monthlyChange: "평균 점수",
     monthlySessions: "완료한 학습",
     monthlySessionCount: "{count}회",
     monthlyEmpty:
@@ -655,7 +655,7 @@ export const copy = {
     reportCreateConfirmCancel: "Keep chatting",
     monthlyGrowthTitle: "{month} growth",
     monthlyCurrentScore: "Current score",
-    monthlyChange: "This month",
+    monthlyChange: "Average",
     monthlySessions: "Completed",
     monthlySessionCount: "{count}",
     monthlyEmpty:
@@ -1007,7 +1007,7 @@ export const copy = {
     reportCreateConfirmCancel: "Seguir hablando",
     monthlyGrowthTitle: "Crecimiento · {month}",
     monthlyCurrentScore: "Puntuación actual",
-    monthlyChange: "Este mes",
+    monthlyChange: "Promedio",
     monthlySessions: "Completadas",
     monthlySessionCount: "{count}",
     monthlyEmpty:

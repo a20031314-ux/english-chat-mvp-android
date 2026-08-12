@@ -80,7 +80,10 @@ function seedsFromReport(report: SessionReport): {
         ? `${original.toLowerCase()}::${corrected.toLowerCase()}`
         : seed.id;
     if (seenGrammar.has(key) || grammar.length >= PER_TYPE_LIMIT) return;
-    if (!original && !corrected && !seed.explanation.trim()) return;
+    if (!original || !corrected) return;
+    // Pattern tips with no real correction make empty / generic review cards.
+    if (original.toLowerCase() === corrected.toLowerCase()) return;
+    if (!seed.explanation.trim() && !isGrammarError(original, corrected)) return;
     seenGrammar.add(key);
     grammar.push({ ...seed, original, corrected });
   };
@@ -121,21 +124,6 @@ function seedsFromReport(report: SessionReport): {
         item.example.trim().toLowerCase() !== item.corrected.trim().toLowerCase()
           ? [item.example.trim()]
           : [],
-      sourceReportId: report.id,
-    });
-  }
-
-  for (const item of report.learningItems || []) {
-    const expression = item.expression.trim();
-    if (!expression) continue;
-    if (!expression.includes("~") && expression.split(/\s+/).length <= 3) continue;
-    pushGrammar({
-      id: `g-learn-${report.id}-${expression}`,
-      title: item.reason.slice(0, 48) || expression,
-      original: expression,
-      corrected: expression,
-      explanation: item.reason,
-      examples: [],
       sourceReportId: report.id,
     });
   }

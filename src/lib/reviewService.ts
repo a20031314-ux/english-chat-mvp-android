@@ -20,11 +20,18 @@ const inflightReports = new Set<string>();
 function fallbackCards(seeds: ReviewSeeds): ReviewCard[] {
   const cards: ReviewCard[] = [];
   for (const item of seeds.grammar) {
+    const explanation = item.explanation.trim();
+    if (!explanation) continue;
+    if (
+      item.original.toLowerCase() === item.corrected.toLowerCase()
+    ) {
+      continue;
+    }
     cards.push({
       kind: "grammar",
       id: item.id,
       title: "",
-      explanation: item.explanation,
+      explanation,
       original: item.original,
       corrected: item.corrected,
       examples: uniqueReviewSentences(item.examples, [
@@ -52,12 +59,20 @@ function fallbackCards(seeds: ReviewSeeds): ReviewCard[] {
 
 function normalizeCards(cards: ReviewCard[]): ReviewCard[] {
   return cards
-    .filter(
-      (card) =>
-        card &&
-        (card.kind === "grammar" || card.kind === "vocabulary") &&
-        typeof card.id === "string",
-    )
+    .filter((card) => {
+      if (!card || typeof card.id !== "string") return false;
+      if (card.kind === "vocabulary") return true;
+      if (card.kind !== "grammar") return false;
+      if (!card.explanation?.trim()) return false;
+      if (
+        card.original &&
+        card.corrected &&
+        card.original.toLowerCase() === card.corrected.toLowerCase()
+      ) {
+        return false;
+      }
+      return true;
+    })
     .map((card) =>
       card.kind === "grammar"
         ? {

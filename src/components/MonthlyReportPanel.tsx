@@ -4,7 +4,6 @@ import { useMemo, useState } from "react";
 import type { Locale, UICopy } from "@/lib/copy";
 import {
   canGoNextMonth,
-  formatDelta,
   formatYearMonthLabel,
   getCurrentYearMonth,
   getEarliestYearMonth,
@@ -89,9 +88,7 @@ export function MonthlyReportPanel({
             <div>
               <p className="text-[9px] text-slate-500">{ui.monthlyChange}</p>
               <p className="mt-0.5 text-sm font-semibold tabular-nums text-slate-900">
-                {stats.scoreChange
-                  ? formatDelta(stats.scoreChange.delta)
-                  : "—"}
+                {stats.averageScore ?? "—"}
               </p>
             </div>
             <div>

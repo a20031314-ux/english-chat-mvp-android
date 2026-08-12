@@ -64,6 +64,64 @@ function asStringArray(value: unknown): string[] {
     .slice(0, 4);
 }
 
+/** True when a non-English locale explanation is mostly English filler. */
+function explanationWrongLanguage(text: string, locale: string): boolean {
+  const trimmed = text.trim();
+  if (!trimmed || locale === "en") return false;
+  const latin = (trimmed.match(/[A-Za-z]/g) || []).length;
+  if (locale === "ko") {
+    const hangul = (trimmed.match(/[\uac00-\ud7af]/g) || []).length;
+    return latin >= 12 && hangul < Math.max(4, latin * 0.25);
+  }
+  if (locale === "ja") {
+    const kanaKanji =
+      (trimmed.match(/[\u3040-\u30ff\u3400-\u9fff]/g) || []).length;
+    return latin >= 12 && kanaKanji < Math.max(4, latin * 0.25);
+  }
+  if (locale === "zh") {
+    const han = (trimmed.match(/[\u3400-\u9fff]/g) || []).length;
+    return latin >= 12 && han < Math.max(4, latin * 0.25);
+  }
+  return false;
+}
+
+function isGenericGrammarFiller(text: string): boolean {
+  const lower = text.trim().toLowerCase();
+  if (!lower) return true;
+  return (
+    /this (phrase|expression|sentence|structure) is useful/.test(lower) ||
+    /softens the request/.test(lower) ||
+    /making it more courteous/.test(lower) ||
+    /politely expressing a desire/.test(lower) ||
+    /this is a (common|polite|natural) (way|phrase)/.test(lower) ||
+    /useful for politely/.test(lower)
+  );
+}
+
+function pickGrammarExplanation(
+  generated: string,
+  source: GrammarSeed,
+  locale: string,
+): string {
+  const candidate = generated.trim();
+  const fallback = (source.explanation || "").trim();
+  if (
+    candidate &&
+    !explanationWrongLanguage(candidate, locale) &&
+    !isGenericGrammarFiller(candidate)
+  ) {
+    return candidate;
+  }
+  if (
+    fallback &&
+    !explanationWrongLanguage(fallback, locale) &&
+    !isGenericGrammarFiller(fallback)
+  ) {
+    return fallback;
+  }
+  return fallback || candidate;
+}
+
 export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
 }
@@ -88,10 +146,17 @@ export async function POST(request: NextRequest) {
   const locale =
     typeof body.locale === "string" && body.locale in TARGET_LANGUAGES
       ? body.locale
-      : "en";
-  const language = TARGET_LANGUAGES[locale] ?? "English";
+      : "ko";
+  const language = TARGET_LANGUAGES[locale] ?? "Korean";
   const grammar = (Array.isArray(body.grammar) ? body.grammar : [])
-    .filter((item) => item && typeof item.id === "string")
+    .filter(
+      (item) =>
+        item &&
+        typeof item.id === "string" &&
+        item.original?.trim() &&
+        item.corrected?.trim() &&
+        item.original.trim().toLowerCase() !== item.corrected.trim().toLowerCase(),
+    )
     .slice(0, 16);
   const vocabulary = (Array.isArray(body.vocabulary) ? body.vocabulary : [])
     .filter((item) => item && typeof item.id === "string" && item.word?.trim())
@@ -104,14 +169,19 @@ export async function POST(request: NextRequest) {
   const system = `You create English review study cards from ONE session report. This is NOT a quiz.
 Use only the items given. Do not invent extra grammar or words from other lessons.
 
-Write explanation and glosses in ${language}.
+CRITICAL language rule:
+- Write explanation and glosses entirely in ${language}.
+- If ${language} is Korean, write Hangul. You may quote English words inside quotes, but the explanation itself must be Korean.
+- Never write the explanation in English when ${language} is not English.
+
 Keep example sentences in English.
 
-Grammar cards:
+Grammar cards (each item is a real learner mistake: original → corrected):
 - Do NOT write a title.
-- Focus on the mistake in original → corrected. If original and corrected are the same, treat it as a pattern to practice.
-- explanation: why the corrected sentence is right, tied to THIS sentence. 2 short sentences. Do not repeat the original or corrected sentence.
-- examples: 2-3 NEW English sentences using the same grammar. Never reuse original, corrected, or the same sentence twice.
+- explanation: 1-2 short ${language} sentences naming WHAT was wrong and WHY the corrected form is right, tied to THIS pair. Be concrete (tense, article, preposition, word order, agreement, etc.).
+- Forbidden filler (any language): "this phrase is useful", "softens the request", "more courteous", "politely expressing a desire", vague praise with no grammar point.
+- Do not repeat the original or corrected sentence as the whole explanation.
+- examples: 2-3 NEW English sentences using the same grammar point. Never reuse original, corrected, or the same sentence twice.
 
 Vocabulary cards:
 - If the word has multiple common meanings, give 2-3 senses. Each sense: gloss in ${language} + 1-2 English examples.
@@ -131,11 +201,11 @@ Return ONLY JSON:
         { role: "system", content: system },
         {
           role: "user",
-          content: JSON.stringify({ locale, grammar, vocabulary }),
+          content: JSON.stringify({ locale, language, grammar, vocabulary }),
         },
       ],
       response_format: { type: "json_object" },
-      temperature: 0.5,
+      temperature: 0.4,
     });
 
     const raw = completion.choices[0]?.message?.content;
@@ -168,18 +238,29 @@ Return ONLY JSON:
           blocked.add(key);
           return true;
         });
-        if (examples.length === 0) continue;
+        const explanation = pickGrammarExplanation(
+          typeof o.explanation === "string" ? o.explanation : "",
+          source,
+          locale,
+        );
+        if (!explanation.trim()) continue;
+        if (examples.length === 0 && !(source.examples && source.examples.length)) {
+          continue;
+        }
         cards.push({
           kind: "grammar",
           id,
           title: "",
-          explanation:
-            typeof o.explanation === "string" && o.explanation.trim()
-              ? o.explanation.trim()
-              : source.explanation || "",
+          explanation,
           original,
           corrected,
-          examples,
+          examples:
+            examples.length > 0
+              ? examples
+              : asStringArray(source.examples).filter((example) => {
+                  const key = example.replace(/\s+/g, " ").trim().toLowerCase();
+                  return key && !blocked.has(key);
+                }),
         });
         continue;
       }
@@ -194,11 +275,19 @@ Return ONLY JSON:
             const gloss = typeof s.gloss === "string" ? s.gloss.trim() : "";
             const examples = asStringArray(s.examples);
             if (!gloss || examples.length === 0) return null;
+            if (explanationWrongLanguage(gloss, locale)) return null;
             return { gloss, examples };
           })
           .filter((sense): sense is { gloss: string; examples: string[] } => sense !== null)
           .slice(0, 3);
-        if (senses.length === 0) continue;
+        if (senses.length === 0) {
+          const gloss = (source.gloss || "").trim();
+          if (gloss && source.context?.trim()) {
+            senses.push({ gloss, examples: [source.context.trim()] });
+          } else {
+            continue;
+          }
+        }
         const similar = (Array.isArray(o.similar) ? o.similar : [])
           .map((row) => {
             if (!row || typeof row !== "object") return null;
@@ -206,6 +295,7 @@ Return ONLY JSON:
             const word = typeof s.word === "string" ? s.word.trim() : "";
             const gloss = typeof s.gloss === "string" ? s.gloss.trim() : "";
             if (!word || !gloss) return null;
+            if (explanationWrongLanguage(gloss, locale)) return null;
             return { word, gloss };
           })
           .filter((row): row is { word: string; gloss: string } => row !== null)
