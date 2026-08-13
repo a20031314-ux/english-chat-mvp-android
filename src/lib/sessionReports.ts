@@ -31,6 +31,14 @@ export type ReportLearningItem = {
   reason: string;
 };
 
+export type ReportExpressionItem = {
+  original: string;
+  used: string;
+  simpler?: string;
+  moreNative?: string;
+  analysis?: string;
+};
+
 /** Deep-learning unit linked to a user message (Detailed Analysis). */
 export type ReportAnalysisItem = {
   id: string;
@@ -82,6 +90,8 @@ export type SessionReport = {
   strengths: ReportStrength[];
   improvements: ReportImprovement[];
   learningItems: ReportLearningItem[];
+  /** how_to_say lines used in this session */
+  expressionItems?: ReportExpressionItem[];
   /** Preferred detailed-analysis payload; older reports may omit this */
   analysisItems?: ReportAnalysisItem[];
   /** Conversation-level coaching; older reports may omit this */
@@ -196,16 +206,62 @@ function parseTurns(messages: ChatMessage[]): TurnSlice[] {
     }
 
     if (message.role === "helper") {
-      turns.push({
-        userMessageId: pending.id,
-        userMessage: pending.content,
-        hasError: false,
-      });
       pending = null;
     }
   }
 
   return turns;
+}
+
+function parseExpressionItems(messages: ChatMessage[]): ReportExpressionItem[] {
+  const items: ReportExpressionItem[] = [];
+  let pending: ChatMessage | null = null;
+
+  for (const message of messages) {
+    if (message.role === "user") {
+      pending = message;
+      continue;
+    }
+    if (message.role !== "helper" || !pending) {
+      if (message.role === "assistant") pending = null;
+      continue;
+    }
+
+    let used = "";
+    let simpler = "";
+    let moreNative = "";
+    let analysis = "";
+    try {
+      const parsed = JSON.parse(message.content) as {
+        expressionResult?: {
+          expression?: string;
+          simpler?: string;
+          moreNative?: string;
+          analysis?: string;
+        };
+      };
+      const expr = parsed.expressionResult;
+      used = expr?.expression?.trim() || "";
+      simpler = expr?.simpler?.trim() || "";
+      moreNative = expr?.moreNative?.trim() || "";
+      analysis = expr?.analysis?.trim() || "";
+    } catch {
+      used = message.content.trim();
+    }
+
+    if (used) {
+      items.push({
+        original: pending.content.trim(),
+        used,
+        ...(simpler ? { simpler } : {}),
+        ...(moreNative ? { moreNative } : {}),
+        ...(analysis ? { analysis } : {}),
+      });
+    }
+    pending = null;
+  }
+
+  return items;
 }
 
 function wordCount(text: string) {
@@ -731,17 +787,6 @@ function buildLearningItems(
     }
   }
 
-  if (items.length < 3) {
-    push(
-      "I'd like to ~",
-      t(locale, {
-        ko: "원하는 활동을 부드럽게 말할 때 유용합니다.",
-        en: "Useful for saying what you’d like to do.",
-        es: "Útil para decir lo que te gustaría hacer.",
-      }),
-    );
-  }
-
   return items.slice(0, 5);
 }
 
@@ -1183,6 +1228,7 @@ export type BuildReportInput = {
  */
 export function buildSessionReport(input: BuildReportInput): SessionReport {
   const turns = parseTurns(input.messages);
+  const expressionItems = parseExpressionItems(input.messages);
   const chatTurnCount = turns.filter(
     (x) => x.assistantMessage !== undefined || x.corrected !== undefined,
   ).length;
@@ -1224,6 +1270,7 @@ export function buildSessionReport(input: BuildReportInput): SessionReport {
     strengths,
     improvements,
     learningItems,
+    ...(expressionItems.length > 0 ? { expressionItems } : {}),
     analysisItems,
     conversationAnalysis,
     conversationAnalysisVersion: CONVERSATION_ANALYSIS_VERSION,

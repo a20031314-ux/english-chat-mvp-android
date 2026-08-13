@@ -6,6 +6,7 @@ import {
   incrementDailyUsed,
 } from "@/lib/server/entitlementStore";
 import { isPremiumClientRequest } from "@/lib/server/premiumRequest";
+import { normalizeHowToSayExpression } from "@/lib/howToSay";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -36,6 +37,12 @@ type ChatPayload = {
 type ExpressionPayload = {
   expression: string;
   example: string;
+  simpler?: string;
+  moreNative?: string;
+  analysis?: string;
+  assistantMessage: string;
+  spokenReply: string;
+  correction: ChatCorrection;
 };
 
 const EXPLANATION_LANGUAGES: Record<string, string> = {
@@ -120,24 +127,41 @@ Return ONLY valid JSON (no markdown) with this exact shape:
 {"assistantMessage":"...","correction":{"corrected":"...","natural":"...","explanation":"..."}}`;
 }
 
-const HOW_TO_SAY_SYSTEM = `The user wants a natural English line THEY can say next. They may write in Korean, English, or mixed.
+const HOW_TO_SAY_SYSTEM = `The user wants a natural English line THEY can say (or write) to another person. They may write in Korean, English, or mixed.
 
-Give the English for what they intend to communicate — keep the speech act.
+You are a phrase helper, NOT a tutor. Do not answer their question, explain the topic, or ask them what they meant.
 
-Checking / asking back what the other person meant:
-- "묻는 거야?" / "물어본 거야?" / "그 말이야?" → "Are you asking ...?" / "Do you mean ...?"
-- NEVER turn that into a new question they would ask someone else.
+Give ONE spoken English line that keeps their speech act.
 
+If they asked for information (뭐/몇/어떻게/왜, a factual or opinion question), translate THAT question into English they would ask someone else:
+Bad: "체지방 12%를 만들려면 남자 골격근량은 체중의 몇 퍼센트여야해?" → "Are you asking what the muscle mass percentage should be...?"
+Good: "For men, what's a typical skeletal muscle percentage at 12% body fat?"
+
+Only use "Are you asking...?" / "Do you mean...?" when THEY are checking the other person's previous question — their text itself is a confirmation ("묻는 거야?", "물어본 거야?", "그 말이야?") AND RECENT has the other person's line.
 Bad: "하루를 기준으로 무슨 운동을 하는지 묻는거야?" → "What kind of exercise do you do in a day?"
 Good: "Are you asking what I do for a workout each day?"
 
 Other acts to keep: confirming, refusing, suggesting, answering, joking.
-If RECENT has the other person's last line, use it to resolve what they are checking.
-
 If they ask "how can I say X in English?" / "X 영어로?", extract X and give English for X — do not echo the meta question.
+
+No quotes, no Korean, no extra commentary.
 
 Return ONLY JSON:
 {"expression":"the English they would say"}`;
+
+function buildHowToSaySystem(locale: string, premium: boolean) {
+  if (!premium) return HOW_TO_SAY_SYSTEM;
+  const analysisLanguage =
+    EXPLANATION_LANGUAGES[locale] ?? EXPLANATION_LANGUAGES.ko;
+  return `${HOW_TO_SAY_SYSTEM}
+
+Also include (same meaning, not an answer to their question):
+- simpler: a shorter, easier English line. Empty string if expression is already simple.
+- moreNative: a more colloquial native line, not a synonym swap. Empty if nothing different.
+- analysis: 1-2 sentences in ${analysisLanguage} on nuance / when to use which line.
+
+{"expression":"...","simpler":"...","moreNative":"...","analysis":"..."}`;
+}
 
 const FALLBACK_EXPLANATION: Record<string, string> = {
   ko: "이 부분을 이렇게 고치면 더 자연스러워요.",
@@ -371,11 +395,13 @@ async function runHowToSay(
   openai: OpenAI,
   message: string,
   recent: string[],
+  locale: string,
+  isPremium: boolean,
 ): Promise<ExpressionPayload> {
   const completion = await openai.chat.completions.create({
     model: MODEL,
     messages: [
-      { role: "system", content: HOW_TO_SAY_SYSTEM },
+      { role: "system", content: buildHowToSaySystem(locale, isPremium) },
       {
         role: "user",
         content: JSON.stringify({ wantToSay: message, recent }),
@@ -391,13 +417,20 @@ async function runHowToSay(
   }
 
   const parsed = JSON.parse(raw) as Partial<ExpressionPayload>;
+  const expression = normalizeHowToSayExpression(message, parsed);
+  const chat = await runChat(openai, expression.expression, locale, recent);
+
   return {
-    expression:
-      typeof parsed.expression === "string" ? parsed.expression : message,
-    example:
-      typeof parsed.example === "string"
-        ? parsed.example
-        : "Please try again later.",
+    expression: expression.expression,
+    example: expression.example || "Please try again later.",
+    ...(isPremium && expression.simpler ? { simpler: expression.simpler } : {}),
+    ...(isPremium && expression.moreNative
+      ? { moreNative: expression.moreNative }
+      : {}),
+    ...(isPremium && expression.analysis ? { analysis: expression.analysis } : {}),
+    assistantMessage: chat.assistantMessage,
+    spokenReply: chat.spokenReply,
+    correction: chat.correction,
   };
 }
 
@@ -461,7 +494,7 @@ export async function POST(request: NextRequest) {
   }
 
   if (
-    mode === "chat" &&
+    (mode === "chat" || mode === "how_to_say") &&
     !isPremium &&
     getDailyUsed(userId) >= FREE_DAILY_CHAT_LIMIT
   ) {
@@ -470,7 +503,16 @@ export async function POST(request: NextRequest) {
 
   try {
     if (mode === "how_to_say") {
-      const data = await runHowToSay(openai, message, parseRecent(body.recent));
+      const data = await runHowToSay(
+        openai,
+        message,
+        parseRecent(body.recent),
+        locale,
+        isPremium,
+      );
+      if (!isPremium) {
+        incrementDailyUsed(userId);
+      }
       return jsonWithCors(request, data);
     }
 

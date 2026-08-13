@@ -3,7 +3,6 @@
 import { useMemo } from "react";
 import type { ChatMessage } from "@/components/ArchivePanel";
 import { CorrectionCard } from "@/components/CorrectionCard";
-import { HowToSayCard } from "@/components/HowToSayCard";
 import { MessageBubble } from "@/components/MessageBubble";
 import type { UICopy } from "@/lib/copy";
 import { hydrateReplayTurns } from "@/lib/replayChatTurns";
@@ -28,6 +27,11 @@ export function SessionChatReplay({ messages, ui }: SessionChatReplayProps) {
             <MessageBubble
               role="user"
               message={turn.userMessage}
+              attachedEnglish={
+                turn.mode === "how_to_say"
+                  ? turn.expressionResult?.expression
+                  : undefined
+              }
               labels={{ listen: ui.listen }}
             />
           ) : null}
@@ -71,13 +75,11 @@ export function SessionChatReplay({ messages, ui }: SessionChatReplayProps) {
             />
           ) : null}
 
-          {turn.mode === "how_to_say" && turn.expressionResult ? (
-            <HowToSayCard
-              expression={turn.expressionResult.expression}
-              labels={{
-                title: ui.expressionHelperTitle,
-                listen: ui.listen,
-              }}
+          {turn.mode === "how_to_say" && turn.assistantMessage ? (
+            <MessageBubble
+              role="assistant"
+              message={turn.assistantMessage}
+              labels={{ listen: ui.listen }}
             />
           ) : null}
         </article>

@@ -22,10 +22,9 @@ import {
   saveSessionReport,
   type SessionReport,
 } from "@/lib/sessionReports";
-import { CONVERSATION_ANALYSIS_VERSION } from "@/lib/conversationAnalysis";
+import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 import { purgeDemoMonthlyReports } from "@/lib/seedDemoMonthlyReports";
 import { CorrectionCard } from "./CorrectionCard";
-import { HowToSayCard } from "./HowToSayCard";
 import { LanguageSelector } from "./LanguageSelector";
 import { MessageBubble } from "./MessageBubble";
 import { MonthlyReportPage } from "./MonthlyReportPage";
@@ -41,15 +40,12 @@ import {
   FREE_DAILY_CHAT_LIMIT,
   PREMIUM_CLIENT_HEADER,
 } from "@/lib/billing/config";
+import { isLocalPlanDebugEnabled } from "@/lib/billing/billingService";
 import {
   canCreateFreeReport,
   recordFreeReportCreated,
 } from "@/lib/billing/freeReportLimit";
 import { prepareReviewAfterReport } from "@/lib/reviewService";
-import {
-  ReportDailyLimitError,
-  requestConversationAnalysis,
-} from "@/lib/requestConversationAnalysis";
 import { resolveChatInputMode } from "@/lib/inputLanguage";
 import {
   alignCorrectionToGrammar,
@@ -71,10 +67,7 @@ type CorrectionResult = {
   hasError: boolean;
 };
 
-type ExpressionResult = {
-  expression: string;
-  example: string;
-};
+type ExpressionResult = HowToSayExpression;
 
 type InputMode = "chat" | "how_to_say";
 
@@ -103,9 +96,14 @@ type ChatModeApiResponse = {
   };
 };
 
-type ExpressionApiResponse = {
-  expression: string;
-  example: string;
+type ExpressionApiResponse = HowToSayExpression & {
+  assistantMessage?: string;
+  spokenReply?: string;
+  correction?: {
+    corrected: string;
+    natural: string;
+    explanation: string;
+  };
 };
 
 const SESSION_MESSAGE_LIMIT = FREE_DAILY_CHAT_LIMIT;
@@ -437,6 +435,20 @@ function toSessionMessages(turns: ChatTurn[]): ChatMessage[] {
       });
     }
 
+    if (turn.mode === "how_to_say" && turn.assistantMessage) {
+      messages.push({
+        id: `${turn.id}-assistant`,
+        role: "assistant",
+        content: JSON.stringify({
+          assistantMessage: turn.assistantMessage || "",
+          spokenReply: turn.spokenReply || "",
+          correctionResult: turn.correctionResult || null,
+          fromHowToSay: true,
+        }),
+        createdAt: Date.now(),
+      });
+    }
+
     return messages;
   });
 }
@@ -444,10 +456,53 @@ function toSessionMessages(turns: ChatTurn[]): ChatMessage[] {
 function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
   const turns: ChatTurn[] = [];
   let pendingUser: ChatMessage | null = null;
+  let pendingExpression: ExpressionResult | null = null;
+
+  const flushHowToSay = (extra?: {
+    assistantMessage?: string;
+    spokenReply?: string;
+    correctionResult?: CorrectionResult;
+  }) => {
+    if (!pendingUser || !pendingExpression) return;
+    turns.push({
+      id: pendingUser.id.replace("-user", ""),
+      mode: "how_to_say",
+      userMessage: pendingUser.content,
+      expressionResult: pendingExpression,
+      assistantMessage: extra?.assistantMessage,
+      spokenReply: extra?.spokenReply,
+      correctionResult: extra?.correctionResult,
+      suppressCorrectionCard: true,
+    });
+    pendingUser = null;
+    pendingExpression = null;
+  };
 
   for (const message of messages) {
     if (message.role === "user") {
+      flushHowToSay();
       pendingUser = message;
+      continue;
+    }
+
+    if (message.role === "helper") {
+      if (!pendingUser) continue;
+      try {
+        const parsed = JSON.parse(message.content) as {
+          expressionResult?: ExpressionResult;
+        };
+        pendingExpression = parsed.expressionResult
+          ? normalizeHowToSayExpression(
+              pendingUser.content,
+              parsed.expressionResult,
+            )
+          : { expression: pendingUser.content, example: "" };
+      } catch {
+        pendingExpression = {
+          expression: message.content,
+          example: "",
+        };
+      }
       continue;
     }
 
@@ -466,6 +521,15 @@ function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
         correctionResult = parsed.correctionResult;
       } catch {
         assistantMessage = message.content;
+      }
+
+      if (pendingExpression) {
+        flushHowToSay({
+          assistantMessage,
+          spokenReply: spokenReply || undefined,
+          correctionResult,
+        });
+        continue;
       }
 
       if (!pendingUser) {
@@ -488,45 +552,10 @@ function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
         correctionResult,
       });
       pendingUser = null;
-      continue;
-    }
-
-    if (!pendingUser) {
-      continue;
-    }
-
-    if (message.role === "helper") {
-      let expressionResult: ExpressionResult = {
-        expression: pendingUser.content,
-        example: "",
-      };
-      try {
-        const parsed = JSON.parse(message.content) as {
-          expressionResult?: ExpressionResult;
-        };
-        if (parsed.expressionResult) {
-          expressionResult = {
-            expression: parsed.expressionResult.expression,
-            example: parsed.expressionResult.example,
-          };
-        }
-      } catch {
-        expressionResult = {
-          expression: message.content,
-          example: "",
-        };
-      }
-
-      turns.push({
-        id: pendingUser.id.replace("-user", ""),
-        mode: "how_to_say",
-        userMessage: pendingUser.content,
-        expressionResult,
-      });
-      pendingUser = null;
     }
   }
 
+  flushHowToSay();
   return turns;
 }
 
@@ -586,7 +615,8 @@ export function ChatWindow({
   onSessionReportCreateFinished,
   onBackToHome,
 }: ChatWindowProps) {
-  const { isPremium, isBillingReady, refreshPremium } = usePremium();
+  const { isPremium, isBillingReady, refreshPremium, setPremiumForUi } =
+    usePremium();
   const [localeState, setLocaleState] = useState<Locale>(() => {
     if (typeof window === "undefined") {
       return "ko";
@@ -657,8 +687,7 @@ export function ChatWindow({
   const dailyLimit = entitlement.dailyLimit ?? SESSION_MESSAGE_LIMIT;
   const isChatDailyLimitReached =
     !isPremium && entitlement.dailyUsed >= dailyLimit;
-  const isChatInputBlocked =
-    chatModeOn && !askExpressionOn && isChatDailyLimitReached;
+  const isChatInputBlocked = isChatDailyLimitReached;
 
   const openPaywall = useCallback((_reason?: string) => {
     setIsPaywallOpen(true);
@@ -735,10 +764,11 @@ export function ChatWindow({
 
   useEffect(() => {
     setSavedItems(loadSavedItems());
+    setSessionReports(purgeDemoMonthlyReports());
     const sessions = loadConversationSessions();
     setConversationSessions(sessions);
     migrateSessionsToReports(sessions, locale);
-    setSessionReports(purgeDemoMonthlyReports());
+    setSessionReports(loadSessionReports());
     setLearningCards(loadLearningCards());
     setShowChatCards(loadChatCardsVisible());
     setVocabPickMode(loadVocabCheckOn());
@@ -837,10 +867,7 @@ export function ChatWindow({
     });
   }, [turns, currentSessionId]);
 
-  const sendChatMessage = async (
-    message: string,
-    options?: { fromExpression?: boolean },
-  ) => {
+  const sendChatMessage = async (message: string) => {
     const url = apiUrl("/api/chat");
     const response = await fetch(url, {
       method: "POST",
@@ -855,7 +882,9 @@ export function ChatWindow({
         recent: turns
           .flatMap((turn) => {
             const lines: string[] = [];
-            if (turn.userMessage.trim() && turn.mode === "chat") {
+            if (turn.mode === "how_to_say" && turn.expressionResult?.expression) {
+              lines.push(`me: ${turn.expressionResult.expression}`);
+            } else if (turn.userMessage.trim() && turn.mode === "chat") {
               lines.push(`me: ${turn.userMessage.trim()}`);
             }
             if (turn.assistantMessage?.trim()) {
@@ -896,7 +925,6 @@ export function ChatWindow({
           data.assistantMessage?.trim() || "Got it. Tell me one more sentence.",
         spokenReply: data.spokenReply?.trim() || undefined,
         correctionResult,
-        suppressCorrectionCard: options?.fromExpression === true,
       },
     ]);
   };
@@ -907,21 +935,27 @@ export function ChatWindow({
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        ...premiumRequestHeaders(isPremium),
       },
       body: JSON.stringify({
-          message,
-          mode: "how_to_say",
-          recent: turns.flatMap((turn) => {
+        message,
+        mode: "how_to_say",
+        locale,
+        recent: turns
+          .flatMap((turn) => {
             const lines: string[] = [];
-            if (turn.userMessage.trim() && turn.mode === "chat") {
+            if (turn.mode === "how_to_say" && turn.expressionResult?.expression) {
+              lines.push(`me: ${turn.expressionResult.expression}`);
+            } else if (turn.userMessage.trim() && turn.mode === "chat") {
               lines.push(`me: ${turn.userMessage.trim()}`);
             }
             if (turn.assistantMessage?.trim()) {
               lines.push(`other: ${turn.assistantMessage.trim()}`);
             }
             return lines;
-          }).slice(-8),
-        }),
+          })
+          .slice(-8),
+      }),
     });
 
     if (!response.ok) {
@@ -937,6 +971,11 @@ export function ChatWindow({
     }
 
     const data = (await response.json()) as ExpressionApiResponse;
+    const expressionResult = normalizeHowToSayExpression(message, data);
+    const spokenEnglish = expressionResult.expression;
+    const correctionResult = data.correction
+      ? normalizeCorrectionResult(spokenEnglish, data.correction, locale)
+      : undefined;
 
     setTurns((previous) => [
       ...previous,
@@ -944,10 +983,13 @@ export function ChatWindow({
         id: `${Date.now()}`,
         mode: "how_to_say",
         userMessage: message,
-        expressionResult: {
-          expression: data.expression?.trim() || message,
-          example: data.example?.trim() || "Please try again later.",
-        },
+        expressionResult,
+        assistantMessage:
+          data.assistantMessage?.trim() ||
+          "Got it. Tell me one more sentence.",
+        spokenReply: data.spokenReply?.trim() || undefined,
+        correctionResult,
+        suppressCorrectionCard: true,
       },
     ]);
   };
@@ -1326,13 +1368,6 @@ export function ChatWindow({
         locale,
         endedAt,
       });
-      const aiAnalysis = await requestConversationAnalysis(messages, locale, {
-        isPremium,
-      });
-      if (aiAnalysis) {
-        report.conversationAnalysis = aiAnalysis;
-        report.conversationAnalysisVersion = CONVERSATION_ANALYSIS_VERSION;
-      }
       saveSessionReport(report);
       saveConversationSession({
         id: sessionId,
@@ -1353,12 +1388,7 @@ export function ChatWindow({
       });
     } catch (error) {
       console.error("[report] create failed", error);
-      if (error instanceof ReportDailyLimitError) {
-        openPaywall("PAYWALL_OPEN_REPORT_LIMIT");
-        setBookToast(ui.reportDailyLimitToast);
-      } else {
-        setBookToast(ui.reportCreateEmptyToast);
-      }
+      setBookToast(ui.reportCreateEmptyToast);
     } finally {
       setReportCreating(false);
       if (tabMode) {
@@ -1382,7 +1412,6 @@ export function ChatWindow({
     if (reportCreating) return;
 
     setReportCreating(true);
-    setBookToast(ui.reportAnalysisGenerating);
     try {
       const endedAt = session.endedAt ?? Date.now();
       const report = buildSessionReport({
@@ -1393,15 +1422,6 @@ export function ChatWindow({
         locale,
         endedAt,
       });
-      const aiAnalysis = await requestConversationAnalysis(
-        session.messages,
-        locale,
-        { isPremium },
-      );
-      if (aiAnalysis) {
-        report.conversationAnalysis = aiAnalysis;
-        report.conversationAnalysisVersion = CONVERSATION_ANALYSIS_VERSION;
-      }
       saveSessionReport(report);
       saveConversationSession({
         ...session,
@@ -1421,12 +1441,7 @@ export function ChatWindow({
       });
     } catch (error) {
       console.error("[report] create from history failed", error);
-      if (error instanceof ReportDailyLimitError) {
-        openPaywall("PAYWALL_OPEN_REPORT_LIMIT");
-        setBookToast(ui.reportDailyLimitToast);
-      } else {
-        setBookToast(ui.reportCreateEmptyToast);
-      }
+      setBookToast(ui.reportCreateEmptyToast);
     } finally {
       setReportCreating(false);
     }
@@ -1488,7 +1503,7 @@ export function ChatWindow({
       locale,
     });
 
-    if (modeToUse === "chat" && isChatDailyLimitReached) {
+    if (isChatDailyLimitReached) {
       openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
       return;
     }
@@ -1530,48 +1545,6 @@ export function ChatWindow({
                   hasError: true,
                 },
               }),
-        },
-      ]);
-    } finally {
-      setIsSending(false);
-    }
-  };
-
-  const handleUseExpressionAsMessage = async (text: string) => {
-    const message = text.trim();
-    if (!message || isSending) {
-      return;
-    }
-    if (isChatDailyLimitReached) {
-      openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
-      return;
-    }
-
-    setChatModeOn(true);
-    setIsSending(true);
-    try {
-      await sendChatMessage(message, { fromExpression: true });
-      await refreshEntitlement();
-    } catch (error) {
-      if (isDailyLimitReachedError(error)) {
-        await refreshEntitlement();
-        openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
-        return;
-      }
-      setTurns((previous) => [
-        ...previous,
-        {
-          id: `${Date.now()}`,
-          mode: "chat",
-          userMessage: message,
-          assistantMessage: "지금 처리에 문제가 있었어요.",
-          suppressCorrectionCard: true,
-          correctionResult: {
-            corrected: message,
-            natural: message,
-            explanation: "일시적인 오류입니다. 잠시 후 다시 시도해 주세요.",
-            hasError: true,
-          },
         },
       ]);
     } finally {
@@ -1663,7 +1636,32 @@ export function ChatWindow({
                         .replace("{used}", String(entitlement.dailyUsed))
                         .replace("{limit}", String(dailyLimit))}
                 </p>
-                {!isPremium ? (
+                {isLocalPlanDebugEnabled() ? (
+                  <div className="flex overflow-hidden rounded-full border border-slate-200 text-[10px] font-medium">
+                    <button
+                      type="button"
+                      onClick={() => setPremiumForUi(false)}
+                      className={`px-2 py-0.5 ${
+                        !isPremium
+                          ? "bg-slate-900 text-white"
+                          : "bg-white text-slate-600 hover:bg-slate-50"
+                      }`}
+                    >
+                      무료
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setPremiumForUi(true)}
+                      className={`px-2 py-0.5 ${
+                        isPremium
+                          ? "bg-slate-900 text-white"
+                          : "bg-white text-slate-600 hover:bg-slate-50"
+                      }`}
+                    >
+                      프리미엄
+                    </button>
+                  </div>
+                ) : !isPremium ? (
                   <button
                     type="button"
                     onClick={() => openPaywall()}
@@ -1737,6 +1735,11 @@ export function ChatWindow({
                   <MessageBubble
                     role="user"
                     message={turn.userMessage}
+                    attachedEnglish={
+                      turn.mode === "how_to_say"
+                        ? turn.expressionResult?.expression
+                        : undefined
+                    }
                     pickMode={vocabPickMode}
                     isWordSaved={(word) => isWordSaved(vocabEntries, word)}
                     savingWord={previewWord}
@@ -1847,9 +1850,12 @@ export function ChatWindow({
                     </>
                   )}
 
-                {turn.mode === "how_to_say" && turn.expressionResult && (
-                  <HowToSayCard
-                    expression={turn.expressionResult.expression}
+                {turn.mode === "how_to_say" && turn.assistantMessage ? (
+                  <MessageBubble
+                    role="assistant"
+                    message={turn.assistantMessage}
+                    translatedMessage={turn.translatedMessage}
+                    isTranslating={turn.isTranslating}
                     pickMode={vocabPickMode}
                     isWordSaved={(word) => isWordSaved(vocabEntries, word)}
                     savingWord={previewWord}
@@ -1857,24 +1863,22 @@ export function ChatWindow({
                       void openVocabPreview(word);
                     }}
                     labels={{
-                      title: ui.expressionHelperTitle,
                       listen: ui.listen,
+                      translate: ui.translate,
+                      translating: ui.translating,
+                      translation: ui.translation,
                     }}
-                    actions={
-                      <button
-                        type="button"
-                        onClick={() =>
-                          handleUseExpressionAsMessage(
-                            turn.expressionResult?.expression || "",
-                          )
-                        }
-                        className="rounded-md bg-slate-900 px-2 py-1 text-xs text-white hover:bg-slate-700"
-                      >
-                        {ui.useThisExpression}
-                      </button>
+                    onTranslate={
+                      locale === "en"
+                        ? undefined
+                        : () =>
+                            void translateAssistantMessage(
+                              turn.id,
+                              turn.assistantMessage || "",
+                            )
                     }
                   />
-                )}
+                ) : null}
               </article>
             );
           })}

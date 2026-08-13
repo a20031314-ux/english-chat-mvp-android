@@ -1,5 +1,6 @@
 import type { ChatMessage } from "@/components/ArchivePanel";
 import { alignCorrectionToGrammar } from "@/lib/correctionNorm";
+import type { HowToSayExpression } from "@/lib/howToSay";
 
 export type ReplayCorrection = {
   corrected: string;
@@ -8,10 +9,7 @@ export type ReplayCorrection = {
   hasError: boolean;
 };
 
-export type ReplayExpression = {
-  expression: string;
-  example: string;
-};
+export type ReplayExpression = HowToSayExpression;
 
 export type ReplayTurn = {
   id: string;
@@ -22,16 +20,70 @@ export type ReplayTurn = {
   expressionResult?: ReplayExpression;
 };
 
+function parseExpression(
+  content: string,
+  fallback: string,
+): ReplayExpression {
+  try {
+    const parsed = JSON.parse(content) as {
+      expressionResult?: Partial<HowToSayExpression>;
+    };
+    const expr = parsed.expressionResult;
+    if (expr && typeof expr.expression === "string" && expr.expression.trim()) {
+      return {
+        expression: expr.expression.trim(),
+        example: typeof expr.example === "string" ? expr.example : "",
+        ...(typeof expr.simpler === "string" && expr.simpler.trim()
+          ? { simpler: expr.simpler.trim() }
+          : {}),
+        ...(typeof expr.moreNative === "string" && expr.moreNative.trim()
+          ? { moreNative: expr.moreNative.trim() }
+          : {}),
+        ...(typeof expr.analysis === "string" && expr.analysis.trim()
+          ? { analysis: expr.analysis.trim() }
+          : {}),
+      };
+    }
+  } catch {
+    // plain
+  }
+  return { expression: content.trim() || fallback, example: "" };
+}
+
 /**
  * Rebuild chat turns from a frozen session transcript for report replay.
  */
 export function hydrateReplayTurns(messages: ChatMessage[]): ReplayTurn[] {
   const turns: ReplayTurn[] = [];
   let pendingUser: ChatMessage | null = null;
+  let pendingExpression: ReplayExpression | null = null;
+
+  const flushHowToSay = (assistantMessage?: string) => {
+    if (!pendingUser || !pendingExpression) return;
+    turns.push({
+      id: pendingUser.id.replace(/-user$/, "") || pendingUser.id,
+      mode: "how_to_say",
+      userMessage: pendingUser.content,
+      expressionResult: pendingExpression,
+      ...(assistantMessage ? { assistantMessage } : {}),
+    });
+    pendingUser = null;
+    pendingExpression = null;
+  };
 
   for (const message of messages) {
     if (message.role === "user") {
+      flushHowToSay();
       pendingUser = message;
+      continue;
+    }
+
+    if (message.role === "helper") {
+      if (!pendingUser) continue;
+      pendingExpression = parseExpression(
+        message.content,
+        pendingUser.content,
+      );
       continue;
     }
 
@@ -45,7 +97,7 @@ export function hydrateReplayTurns(messages: ChatMessage[]): ReplayTurn[] {
         };
         assistantMessage = parsed.assistantMessage || "";
         const c = parsed.correctionResult;
-        if (c && pendingUser) {
+        if (c && pendingUser && !pendingExpression) {
           const aligned = alignCorrectionToGrammar(
             pendingUser.content,
             typeof c.corrected === "string" && c.corrected.trim()
@@ -69,6 +121,11 @@ export function hydrateReplayTurns(messages: ChatMessage[]): ReplayTurn[] {
         assistantMessage = message.content;
       }
 
+      if (pendingExpression) {
+        flushHowToSay(assistantMessage);
+        continue;
+      }
+
       turns.push({
         id: (pendingUser?.id.replace(/-user$/, "") ||
           message.id.replace(/-assistant$/, "") ||
@@ -79,51 +136,10 @@ export function hydrateReplayTurns(messages: ChatMessage[]): ReplayTurn[] {
         correctionResult,
       });
       pendingUser = null;
-      continue;
-    }
-
-    if (!pendingUser) {
-      continue;
-    }
-
-    if (message.role === "helper") {
-      let expressionResult: ReplayExpression = {
-        expression: pendingUser.content,
-        example: "",
-      };
-      try {
-        const parsed = JSON.parse(message.content) as {
-          expressionResult?: Partial<ReplayExpression>;
-        };
-        if (parsed.expressionResult) {
-          expressionResult = {
-            expression:
-              typeof parsed.expressionResult.expression === "string"
-                ? parsed.expressionResult.expression
-                : pendingUser.content,
-            example:
-              typeof parsed.expressionResult.example === "string"
-                ? parsed.expressionResult.example
-                : "",
-          };
-        }
-      } catch {
-        expressionResult = {
-          expression: message.content,
-          example: "",
-        };
-      }
-
-      turns.push({
-        id: pendingUser.id.replace(/-user$/, "") || message.id,
-        mode: "how_to_say",
-        userMessage: pendingUser.content,
-        expressionResult,
-      });
-      pendingUser = null;
     }
   }
 
+  flushHowToSay();
   if (pendingUser) {
     turns.push({
       id: pendingUser.id.replace(/-user$/, "") || pendingUser.id,

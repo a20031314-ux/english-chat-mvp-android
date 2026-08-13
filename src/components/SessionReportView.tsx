@@ -1,24 +1,11 @@
 ﻿"use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo } from "react";
 import type { Locale, UICopy } from "@/lib/copy";
-import {
-  analysisNeedsLearnerRefresh,
-  CONVERSATION_ANALYSIS_VERSION,
-  extractAnalysisTurns,
-  getConversationAnalysis,
-  hasConversationAnalysisContent,
-  type AnalysisCategory,
-  type ConversationAnalysis,
-  type ConversationInsight,
-} from "@/lib/conversationAnalysis";
-import { requestConversationAnalysis } from "@/lib/requestConversationAnalysis";
 import {
   countGrammarCorrections,
   formatReportDate,
   getReportScoreBreakdown,
-  getSessionReport,
-  saveSessionReport,
   type ScoreFactorId,
   type SessionReport,
 } from "@/lib/sessionReports";
@@ -46,87 +33,6 @@ function factorLabel(id: ScoreFactorId, ui: UICopy): string {
   }
 }
 
-function categoryLabel(category: AnalysisCategory, ui: UICopy): string {
-  switch (category) {
-    case "NATURAL":
-      return ui.reportAnalysisCategoryNatural;
-    case "NUANCE":
-      return ui.reportAnalysisCategoryNuance;
-    case "WORD_CHOICE":
-      return ui.reportAnalysisCategoryWordChoice;
-    case "TONE":
-      return ui.reportAnalysisCategoryTone;
-    case "FLOW":
-      return ui.reportAnalysisCategoryFlow;
-    case "VARIETY":
-      return ui.reportAnalysisCategoryVariety;
-    case "CONNECTION":
-      return ui.reportAnalysisCategoryConnection;
-    case "EXPRESSION":
-      return ui.reportAnalysisCategoryExpression;
-    case "CONVERSATION":
-      return ui.reportAnalysisCategoryConversation;
-    default:
-      return ui.reportAnalysisCategoryImprovement;
-  }
-}
-
-function InsightCard({
-  item,
-  ui,
-}: {
-  item: ConversationInsight;
-  ui: UICopy;
-}) {
-  const positive = item.sentiment === "positive";
-  return (
-    <article
-      className={
-        positive
-          ? "rounded-2xl border border-emerald-100 bg-emerald-50/50 px-4 py-4"
-          : "rounded-2xl border border-slate-200 bg-slate-50 px-4 py-4"
-      }
-    >
-      <p
-        className={
-          positive
-            ? "text-[11px] font-semibold uppercase tracking-wide text-emerald-800"
-            : "text-[11px] font-semibold uppercase tracking-wide text-slate-500"
-        }
-      >
-        {categoryLabel(item.category, ui)}
-      </p>
-      <h3 className="mt-1.5 text-sm font-semibold text-slate-900">
-        {item.title}
-      </h3>
-      {item.evidence ? (
-        <p
-          className="mt-3 border-l-2 border-slate-300 pl-3 text-[13px] leading-relaxed text-slate-600"
-          translate="no"
-        >
-          “{item.evidence}”
-        </p>
-      ) : null}
-      <p className="mt-3 text-sm leading-relaxed text-slate-600">
-        {item.analysis}
-      </p>
-      {item.suggestion ? (
-        <p className="mt-2 text-sm leading-relaxed text-slate-600">
-          {item.suggestion}
-        </p>
-      ) : null}
-      {item.example ? (
-        <p
-          className="mt-2 text-[13px] leading-relaxed text-slate-800"
-          translate="no"
-        >
-          “{item.example}”
-        </p>
-      ) : null}
-    </article>
-  );
-}
-
 export function SessionReportView({
   report,
   ui,
@@ -141,56 +47,6 @@ export function SessionReportView({
     () => countGrammarCorrections(report),
     [report],
   );
-  const [analysis, setAnalysis] = useState<ConversationAnalysis>(() =>
-    getConversationAnalysis(
-      report.messages,
-      locale,
-      report.conversationAnalysis,
-    ),
-  );
-
-  useEffect(() => {
-    const latest = getSessionReport(report.id) ?? report;
-    const stored = latest.conversationAnalysis;
-    const turns = extractAnalysisTurns(report.messages);
-    const display = getConversationAnalysis(
-      report.messages,
-      locale,
-      stored,
-    );
-    setAnalysis(display);
-
-    const stale =
-      (latest.conversationAnalysisVersion ?? 0) <
-        CONVERSATION_ANALYSIS_VERSION ||
-      Boolean(stored && analysisNeedsLearnerRefresh(stored, turns));
-
-    if (stored && stale) {
-      saveSessionReport({
-        ...latest,
-        conversationAnalysis: display,
-      });
-    }
-    if (!stale) return;
-
-    let cancelled = false;
-    void requestConversationAnalysis(report.messages, locale).then((ai) => {
-      if (cancelled || !ai) return;
-      if (analysisNeedsLearnerRefresh(ai, turns)) return;
-      setAnalysis(ai);
-      saveSessionReport({
-        ...latest,
-        conversationAnalysis: ai,
-        conversationAnalysisVersion: CONVERSATION_ANALYSIS_VERSION,
-      });
-    });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [report, locale]);
-
-  const showAnalysis = hasConversationAnalysisContent(analysis);
 
   return (
     <div className="flex h-full min-h-0 flex-col bg-white">
@@ -295,74 +151,98 @@ export function SessionReportView({
             </section>
           ) : null}
 
-          <section className="mt-12">
+          {(report.expressionItems?.length ?? 0) > 0 ? (
+            <section className="mt-12">
+              <h2 className="text-sm font-semibold text-slate-900">
+                {ui.reportExpressionsTitle}
+              </h2>
+              <p className="mt-2 text-sm leading-relaxed text-slate-500">
+                {ui.reportExpressionsHint}
+              </p>
+              <div className="mt-4 space-y-4">
+                {report.expressionItems?.map((item, index) => {
+                  const extras =
+                    Boolean(item.simpler) ||
+                    Boolean(item.moreNative) ||
+                    Boolean(item.analysis);
+                  return (
+                    <article
+                      key={`${item.used}-${index}`}
+                      className="rounded-2xl border border-blue-100 bg-blue-50/40 px-4 py-4"
+                    >
+                      {item.original ? (
+                        <>
+                          <p className="text-xs font-medium text-slate-500">
+                            {ui.reportExpressionIntent}
+                          </p>
+                          <p className="mt-1 text-sm leading-relaxed text-slate-700">
+                            {item.original}
+                          </p>
+                        </>
+                      ) : null}
+                      <p className="mt-3 text-xs font-medium text-slate-500">
+                        {ui.reportExpressionUsed}
+                      </p>
+                      <p
+                        className="mt-1 text-[15px] font-medium leading-relaxed text-slate-900"
+                        translate="no"
+                      >
+                        {item.used}
+                      </p>
+                      {extras ? (
+                        <div className="mt-3 space-y-3 border-t border-blue-100 pt-3">
+                          {item.simpler ? (
+                            <div>
+                              <p className="text-xs font-medium text-blue-800">
+                                {ui.reportExpressionSimpler}
+                              </p>
+                              <p
+                                className="mt-1 text-sm leading-relaxed text-slate-800"
+                                translate="no"
+                              >
+                                {item.simpler}
+                              </p>
+                            </div>
+                          ) : null}
+                          {item.moreNative ? (
+                            <div>
+                              <p className="text-xs font-medium text-blue-800">
+                                {ui.reportExpressionNative}
+                              </p>
+                              <p
+                                className="mt-1 text-sm leading-relaxed text-slate-800"
+                                translate="no"
+                              >
+                                {item.moreNative}
+                              </p>
+                            </div>
+                          ) : null}
+                          {item.analysis ? (
+                            <div>
+                              <p className="text-xs font-medium text-blue-800">
+                                {ui.reportExpressionAnalysis}
+                              </p>
+                              <p className="mt-1 text-sm leading-relaxed text-slate-700">
+                                {item.analysis}
+                              </p>
+                            </div>
+                          ) : null}
+                        </div>
+                      ) : null}
+                    </article>
+                  );
+                })}
+              </div>
+            </section>
+          ) : null}
+
+          <section className="mt-12 pb-12">
             <h2 className="text-sm font-semibold text-slate-900">
               {ui.reportTimelineTitle}
             </h2>
             <div className="mt-4">
               <SessionChatReplay messages={report.messages} ui={ui} />
             </div>
-          </section>
-
-          <section className="mt-14 border-t border-slate-100 pb-12 pt-10">
-            <h2 className="text-sm font-semibold text-slate-900">
-              {ui.reportAnalysisTitle}
-            </h2>
-            <p className="mt-2 text-sm leading-relaxed text-slate-500">
-              {ui.reportAnalysisHint}
-            </p>
-
-            {!showAnalysis ? (
-              <p className="mt-4 text-sm leading-relaxed text-slate-600">
-                {ui.reportAnalysisEmpty}
-              </p>
-            ) : (
-              <div className="mt-6 space-y-4">
-                {analysis.shortConversationNote ? (
-                  <p className="text-sm leading-relaxed text-slate-600">
-                    {analysis.shortConversationNote}
-                  </p>
-                ) : null}
-
-                {analysis.insights.map((item) => (
-                  <InsightCard
-                    key={`${item.category}-${item.title}-${item.evidence || ""}`}
-                    item={item}
-                    ui={ui}
-                  />
-                ))}
-
-                {analysis.nextGoal ? (
-                  <article className="rounded-2xl border border-slate-900/10 bg-slate-900 px-4 py-4 text-white">
-                    <h3 className="text-[11px] font-semibold uppercase tracking-wide text-slate-300">
-                      {ui.reportAnalysisNextGoalTitle}
-                    </h3>
-                    <p className="mt-2 text-[15px] font-medium leading-relaxed">
-                      {analysis.nextGoal.title}
-                    </p>
-                    {analysis.nextGoal.body &&
-                    analysis.nextGoal.body !== analysis.nextGoal.title ? (
-                      <p className="mt-2 text-sm leading-relaxed text-slate-300">
-                        {analysis.nextGoal.body}
-                      </p>
-                    ) : null}
-                    {analysis.nextGoal.pattern ? (
-                      <p className="mt-3 text-[13px] text-slate-200" translate="no">
-                        {analysis.nextGoal.pattern}
-                      </p>
-                    ) : null}
-                    {analysis.nextGoal.example ? (
-                      <p
-                        className="mt-2 text-[13px] leading-relaxed text-white"
-                        translate="no"
-                      >
-                        “{analysis.nextGoal.example}”
-                      </p>
-                    ) : null}
-                  </article>
-                ) : null}
-              </div>
-            )}
           </section>
         </article>
       </div>

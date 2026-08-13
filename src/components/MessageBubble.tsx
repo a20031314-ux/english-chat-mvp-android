@@ -4,6 +4,8 @@ import { SelectableEnglishText } from "./SelectableEnglishText";
 type MessageBubbleProps = {
   role: "user" | "assistant";
   message: string;
+  /** English line attached under a how-to-say user message */
+  attachedEnglish?: string;
   translatedMessage?: string;
   isTranslating?: boolean;
   pickMode?: boolean;
@@ -22,6 +24,7 @@ type MessageBubbleProps = {
 export function MessageBubble({
   role,
   message,
+  attachedEnglish,
   translatedMessage,
   isTranslating = false,
   pickMode = false,
@@ -33,6 +36,7 @@ export function MessageBubble({
 }: MessageBubbleProps) {
   const isUser = role === "user";
   const canTranslate = Boolean(onTranslate && labels.translate);
+  const listenText = attachedEnglish?.trim() || message;
 
   return (
     <div className={`flex w-full ${isUser ? "justify-end" : "justify-start"}`}>
@@ -54,6 +58,24 @@ export function MessageBubble({
           />
         </p>
 
+        {attachedEnglish?.trim() ? (
+          <p
+            className={`mt-2 border-t pt-2 text-sm leading-relaxed ${
+              isUser ? "border-slate-600 text-slate-100" : "border-slate-200"
+            }`}
+            translate="no"
+          >
+            <SelectableEnglishText
+              text={attachedEnglish}
+              pickMode={pickMode}
+              tone={isUser ? "onDark" : "default"}
+              isWordSaved={isWordSaved}
+              savingWord={savingWord}
+              onWordClick={onWordClick}
+            />
+          </p>
+        ) : null}
+
         {translatedMessage ? (
           <div
             className={`mt-2 border-t pt-2 text-xs leading-relaxed ${
@@ -70,7 +92,7 @@ export function MessageBubble({
         <div className="mt-3 flex flex-wrap items-center gap-2">
           {isUser ? (
             <TTSButton
-              text={message}
+              text={listenText}
               ariaLabel={labels.listen}
               className="border-slate-600 bg-slate-800 text-white hover:bg-slate-700"
             />

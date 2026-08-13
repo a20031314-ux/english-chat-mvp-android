@@ -94,10 +94,11 @@ function reportStep(onStep: BillingStepListener | undefined, step: string): void
 }
 
 function isDevPremiumOverrideEnabled(): boolean {
-  if (process.env.NEXT_PUBLIC_BILLING_DEV_PREMIUM === "true") {
-    return true;
-  }
-  // Local `next dev`: unlock premium so daily free limits don't block testing.
+  return process.env.NEXT_PUBLIC_BILLING_DEV_PREMIUM === "true";
+}
+
+/** localhost `next dev` only — never shipped in production builds. */
+export function isLocalPlanDebugEnabled(): boolean {
   return process.env.NODE_ENV === "development";
 }
 
@@ -251,8 +252,8 @@ export async function initializeBilling(): Promise<BillingInitResult> {
   }
 
   if (!isBillingNativePlatform()) {
-    writeCachedPremium(false);
-    return { isPremium: false, isNative: false };
+    const cached = readCachedPremium();
+    return { isPremium: cached, isNative: false };
   }
 
   const ready = await ensureConfigured();
@@ -270,7 +271,7 @@ export async function initializeBilling(): Promise<BillingInitResult> {
 
 export async function fetchPremiumFromRevenueCat(): Promise<boolean> {
   if (!isBillingNativePlatform()) {
-    return isDevPremiumOverrideEnabled();
+    return readCachedPremium();
   }
 
   const ready = await ensureConfigured();
