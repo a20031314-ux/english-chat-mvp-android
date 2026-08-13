@@ -301,6 +301,8 @@ export const copy = {
       "지금 대화를 마치고 이 내용으로 학습 리포트를 생성합니다. 계속할까요?",
     reportCreateConfirmCta: "리포트 생성",
     reportCreateConfirmCancel: "계속 대화하기",
+    reportDailyLimitToast:
+      "오늘은 무료 리포트를 이미 만들었어요. 프리미엄으로 더 만들 수 있어요.",
     monthlyGrowthTitle: "{month} 영어 성장",
     monthlyCurrentScore: "현재 점수",
     monthlyChange: "평균 점수",
@@ -350,7 +352,7 @@ export const copy = {
       "하루 제한 없이 영어 문장을 만들고, 교정받고, 내 영어 교재에 저장하세요.",
     paywallBenefitsTitle: "프리미엄 혜택",
     paywallBenefits:
-      "하루 채팅 제한 해제\nAI 문장 교정 계속 사용\n내 영어 교재 저장 및 복습",
+      "하루 채팅 제한 해제\n리포트·복습 무제한\n내 영어 교재 저장 및 복습",
     paywallCta: "월 4,900원으로 시작하기",
     paywallRestore: "구매 복원",
     paywallLater: "나중에 하기",
@@ -653,6 +655,8 @@ export const copy = {
       "This will end the current chat and create a learning report from it. Continue?",
     reportCreateConfirmCta: "Create report",
     reportCreateConfirmCancel: "Keep chatting",
+    reportDailyLimitToast:
+      "You’ve already made today’s free report. Go Premium for more.",
     monthlyGrowthTitle: "{month} growth",
     monthlyCurrentScore: "Current score",
     monthlyChange: "Average",
@@ -701,7 +705,7 @@ export const copy = {
       "Write, get corrections, and save to My English Book — without a daily chat limit.",
     paywallBenefitsTitle: "Premium includes",
     paywallBenefits:
-      "No daily chat limit\nKeep using AI corrections\nSave and review in My English Book",
+      "No daily chat limit\nUnlimited reports and review\nSave and review in My English Book",
     paywallCta: "Start for ₩4,900/month",
     paywallRestore: "Restore purchases",
     paywallLater: "Not now",
@@ -1005,6 +1009,8 @@ export const copy = {
       "Esto terminará el chat actual y creará un informe de aprendizaje. ¿Continuar?",
     reportCreateConfirmCta: "Crear informe",
     reportCreateConfirmCancel: "Seguir hablando",
+    reportDailyLimitToast:
+      "Ya usaste el informe gratis de hoy. Pasa a Premium para crear más.",
     monthlyGrowthTitle: "Crecimiento · {month}",
     monthlyCurrentScore: "Puntuación actual",
     monthlyChange: "Promedio",
@@ -1054,7 +1060,7 @@ export const copy = {
       "Escribe, recibe correcciones y guarda en tu libro — sin límite diario de chat.",
     paywallBenefitsTitle: "Premium incluye",
     paywallBenefits:
-      "Sin límite diario de chat\nCorrección con IA sin parar\nGuardar y repasar en tu libro",
+      "Sin límite diario de chat\nInformes y repaso ilimitados\nGuardar y repasar en tu libro",
     paywallCta: "Empezar por 4.900 ₩/mes",
     paywallRestore: "Restaurar compras",
     paywallLater: "Ahora no",

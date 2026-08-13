@@ -1,6 +1,7 @@
 type UsageRecord = {
   date: string;
   used: number;
+  reportsUsed: number;
 };
 
 const globalUsageStore = globalThis as typeof globalThis & {
@@ -27,7 +28,13 @@ function getOrInitUsage(userId: string): UsageRecord {
   const current = usageByUser.get(userId);
 
   if (!current || current.date !== today) {
-    const next: UsageRecord = { date: today, used: 0 };
+    const next: UsageRecord = { date: today, used: 0, reportsUsed: 0 };
+    usageByUser.set(userId, next);
+    return next;
+  }
+
+  if (typeof current.reportsUsed !== "number") {
+    const next = { ...current, reportsUsed: 0 };
     usageByUser.set(userId, next);
     return next;
   }
@@ -49,3 +56,16 @@ export function incrementDailyUsed(userId: string, amount = 1) {
   return next.used;
 }
 
+export function getDailyReportsUsed(userId: string) {
+  return getOrInitUsage(userId).reportsUsed;
+}
+
+export function incrementDailyReportsUsed(userId: string, amount = 1) {
+  const current = getOrInitUsage(userId);
+  const next = {
+    ...current,
+    reportsUsed: Math.max(0, current.reportsUsed + amount),
+  };
+  usageByUser.set(userId, next);
+  return next.reportsUsed;
+}

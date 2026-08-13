@@ -10,4 +10,9 @@ export const PREMIUM_CACHE_STORAGE_KEY = "ec_premium_cached";
 /** MVP: client signals premium to API when RevenueCat entitlement is active (no server receipt validation yet). */
 export const PREMIUM_CLIENT_HEADER = "x-client-premium";
 
-export const FREE_DAILY_CHAT_LIMIT = 15;
+export const FREE_DAILY_CHAT_LIMIT = 10;
+
+/** Free plan: one learning report per calendar day. */
+export const FREE_DAILY_REPORT_LIMIT = 1;
+
+export const FREE_DAILY_REPORTS_STORAGE_KEY = "ec_free_daily_reports";

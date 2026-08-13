@@ -55,8 +55,8 @@ export default function SubscribePage() {
         <h1 className="text-xl font-semibold text-slate-900">무제한 사용 시작하기</h1>
         <p className="mt-2 text-lg font-medium text-slate-900">월 4,900원</p>
         <p className="mt-3 text-sm text-slate-600">
-          무료 사용자는 하루 15회까지 사용할 수 있고, 구독 시 제한 없이 사용할 수
-          있습니다.
+          무료 사용자는 하루 채팅 10회·리포트 1개까지 사용할 수 있고, 구독 시 제한
+          없이 사용할 수 있습니다.
         </p>
 
         <div className="mt-6 space-y-2">

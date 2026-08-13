@@ -23,7 +23,6 @@ import {
   type SessionReport,
 } from "@/lib/sessionReports";
 import { CONVERSATION_ANALYSIS_VERSION } from "@/lib/conversationAnalysis";
-import { requestConversationAnalysis } from "@/lib/requestConversationAnalysis";
 import { purgeDemoMonthlyReports } from "@/lib/seedDemoMonthlyReports";
 import { CorrectionCard } from "./CorrectionCard";
 import { HowToSayCard } from "./HowToSayCard";
@@ -42,7 +41,15 @@ import {
   FREE_DAILY_CHAT_LIMIT,
   PREMIUM_CLIENT_HEADER,
 } from "@/lib/billing/config";
+import {
+  canCreateFreeReport,
+  recordFreeReportCreated,
+} from "@/lib/billing/freeReportLimit";
 import { prepareReviewAfterReport } from "@/lib/reviewService";
+import {
+  ReportDailyLimitError,
+  requestConversationAnalysis,
+} from "@/lib/requestConversationAnalysis";
 import { resolveChatInputMode } from "@/lib/inputLanguage";
 import {
   alignCorrectionToGrammar,
@@ -1275,6 +1282,11 @@ export function ChatWindow({
       setBookToast(ui.reportCreateEmptyToast);
       return;
     }
+    if (!isPremium && !canCreateFreeReport()) {
+      openPaywall("PAYWALL_OPEN_REPORT_LIMIT");
+      setBookToast(ui.reportDailyLimitToast);
+      return;
+    }
     setReportConfirmOpen(true);
   };
 
@@ -1282,6 +1294,12 @@ export function ChatWindow({
     if (!hasLearnerMessages(turns)) {
       setReportConfirmOpen(false);
       setBookToast(ui.reportCreateEmptyToast);
+      return;
+    }
+    if (!isPremium && !canCreateFreeReport()) {
+      setReportConfirmOpen(false);
+      openPaywall("PAYWALL_OPEN_REPORT_LIMIT");
+      setBookToast(ui.reportDailyLimitToast);
       return;
     }
     if (reportCreating) return;
@@ -1308,7 +1326,9 @@ export function ChatWindow({
         locale,
         endedAt,
       });
-      const aiAnalysis = await requestConversationAnalysis(messages, locale);
+      const aiAnalysis = await requestConversationAnalysis(messages, locale, {
+        isPremium,
+      });
       if (aiAnalysis) {
         report.conversationAnalysis = aiAnalysis;
         report.conversationAnalysisVersion = CONVERSATION_ANALYSIS_VERSION;
@@ -1322,6 +1342,9 @@ export function ChatWindow({
         messageCount,
         messages,
       });
+      if (!isPremium) {
+        recordFreeReportCreated();
+      }
       openCreatedReport(report, { clearChat: false });
       void prepareReviewAfterReport(locale, report).then((pack) => {
         if (pack) {
@@ -1330,7 +1353,12 @@ export function ChatWindow({
       });
     } catch (error) {
       console.error("[report] create failed", error);
-      setBookToast(ui.reportCreateEmptyToast);
+      if (error instanceof ReportDailyLimitError) {
+        openPaywall("PAYWALL_OPEN_REPORT_LIMIT");
+        setBookToast(ui.reportDailyLimitToast);
+      } else {
+        setBookToast(ui.reportCreateEmptyToast);
+      }
     } finally {
       setReportCreating(false);
       if (tabMode) {
@@ -1344,6 +1372,11 @@ export function ChatWindow({
   ) => {
     if (!session.messages?.length) {
       setBookToast(ui.reportCreateEmptyToast);
+      return;
+    }
+    if (!isPremium && !canCreateFreeReport()) {
+      openPaywall("PAYWALL_OPEN_REPORT_LIMIT");
+      setBookToast(ui.reportDailyLimitToast);
       return;
     }
     if (reportCreating) return;
@@ -1363,6 +1396,7 @@ export function ChatWindow({
       const aiAnalysis = await requestConversationAnalysis(
         session.messages,
         locale,
+        { isPremium },
       );
       if (aiAnalysis) {
         report.conversationAnalysis = aiAnalysis;
@@ -1374,6 +1408,9 @@ export function ChatWindow({
         title: report.title,
         endedAt,
       });
+      if (!isPremium) {
+        recordFreeReportCreated();
+      }
       openCreatedReport(report, {
         clearChat: session.id === currentSessionId,
       });
@@ -1382,6 +1419,14 @@ export function ChatWindow({
           setBookToast(ui.quizReadyToast);
         }
       });
+    } catch (error) {
+      console.error("[report] create from history failed", error);
+      if (error instanceof ReportDailyLimitError) {
+        openPaywall("PAYWALL_OPEN_REPORT_LIMIT");
+        setBookToast(ui.reportDailyLimitToast);
+      } else {
+        setBookToast(ui.reportCreateEmptyToast);
+      }
     } finally {
       setReportCreating(false);
     }

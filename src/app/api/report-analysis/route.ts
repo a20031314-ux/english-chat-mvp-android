@@ -1,6 +1,12 @@
 import OpenAI from "openai";
 import { NextRequest } from "next/server";
+import { FREE_DAILY_REPORT_LIMIT } from "@/lib/billing/config";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import {
+  getDailyReportsUsed,
+  incrementDailyReportsUsed,
+} from "@/lib/server/entitlementStore";
+import { isPremiumClientRequest } from "@/lib/server/premiumRequest";
 import {
   normalizeConversationAnalysis,
   type AnalysisTurn,
@@ -24,6 +30,10 @@ function getClient() {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) return null;
   return new OpenAI({ apiKey });
+}
+
+function requestUserId(request: NextRequest) {
+  return request.cookies.get("ec_uid")?.value ?? "local-anonymous";
 }
 
 function asTurns(value: unknown): AnalysisTurn[] {
@@ -105,6 +115,20 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  const userId = requestUserId(request);
+  const isPremium = isPremiumClientRequest(request);
+
+  if (
+    !isPremium &&
+    getDailyReportsUsed(userId) >= FREE_DAILY_REPORT_LIMIT
+  ) {
+    return jsonWithCors(
+      request,
+      { error: "REPORT_DAILY_LIMIT_REACHED" },
+      { status: 403 },
+    );
+  }
+
   const openai = getClient();
   if (!openai) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
@@ -152,6 +176,10 @@ export async function POST(request: NextRequest) {
     const analysis = normalizeConversationAnalysis(parsed, turns);
     if (!analysis) {
       return jsonWithCors(request, { error: "empty analysis" }, { status: 500 });
+    }
+
+    if (!isPremium) {
+      incrementDailyReportsUsed(userId);
     }
 
     return jsonWithCors(request, analysis);

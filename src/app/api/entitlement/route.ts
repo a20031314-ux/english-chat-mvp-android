@@ -1,6 +1,12 @@
 import { NextRequest } from "next/server";
-import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
-import { getDailyUsed } from "@/lib/server/entitlementStore";
+import {
+  FREE_DAILY_CHAT_LIMIT,
+  FREE_DAILY_REPORT_LIMIT,
+} from "@/lib/billing/config";
+import {
+  getDailyReportsUsed,
+  getDailyUsed,
+} from "@/lib/server/entitlementStore";
 import { isPremiumClientRequest } from "@/lib/server/premiumRequest";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 
@@ -15,11 +21,14 @@ export async function OPTIONS(request: NextRequest) {
 export async function GET(request: NextRequest) {
   const userId = requestUserId(request);
   const dailyUsed = getDailyUsed(userId);
+  const reportsUsed = getDailyReportsUsed(userId);
   const isPremium = isPremiumClientRequest(request);
 
   return jsonWithCors(request, {
     plan: isPremium ? ("pro" as const) : ("free" as const),
     dailyUsed,
     dailyLimit: isPremium ? null : FREE_DAILY_CHAT_LIMIT,
+    reportsUsed,
+    reportLimit: isPremium ? null : FREE_DAILY_REPORT_LIMIT,
   });
 }
