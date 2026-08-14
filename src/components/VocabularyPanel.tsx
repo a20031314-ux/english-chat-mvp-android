@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useState } from "react";
 import { TTSButton } from "@/components/TTSButton";
+import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
 import { apiUrl } from "@/lib/apiBase";
 import type { Locale, UICopy } from "@/lib/copy";
 import {
@@ -178,24 +179,21 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                       <div className="flex items-start justify-between gap-3">
                         <div className="min-w-0">
                           <div className="flex flex-wrap items-center gap-2">
-                            <p
+                            <AnalyzableEnglish
+                              sentence={item.word}
+                              context={item.example ? [item.example] : undefined}
                               className="text-base font-semibold text-slate-900"
-                              translate="no"
-                            >
-                              {item.word}
-                            </p>
+                            />
                             <TTSButton text={item.word} ariaLabel={ui.listen} />
                           </div>
                           <p className="mt-1 text-sm text-slate-700">
                             {item.gloss}
                           </p>
                           {item.example ? (
-                            <p
+                            <AnalyzableEnglish
+                              sentence={item.example}
                               className="mt-1 text-xs leading-relaxed text-slate-500"
-                              translate="no"
-                            >
-                              {item.example}
-                            </p>
+                            />
                           ) : null}
                         </div>
                         <button
@@ -272,12 +270,11 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                     <div className="flex items-start justify-between gap-3">
                       <div className="min-w-0 flex-1">
                         <div className="flex flex-wrap items-center gap-2">
-                          <p
+                          <AnalyzableEnglish
+                            sentence={entry.word}
+                            context={entry.example ? [entry.example] : undefined}
                             className="text-base font-semibold text-slate-900"
-                            translate="no"
-                          >
-                            {entry.word}
-                          </p>
+                          />
                           <TTSButton text={entry.word} ariaLabel={ui.listen} />
                         </div>
                         {meaningHidden ? (
@@ -329,12 +326,10 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                               {entry.gloss}
                             </p>
                             {entry.example ? (
-                              <p
+                              <AnalyzableEnglish
+                                sentence={entry.example}
                                 className="mt-1 text-xs leading-relaxed text-slate-500"
-                                translate="no"
-                              >
-                                {entry.example}
-                              </p>
+                              />
                             ) : null}
                           </div>
                         )}

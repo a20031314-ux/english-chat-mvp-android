@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { TTSButton } from "@/components/TTSButton";
+import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
 import type { Locale, UICopy } from "@/lib/copy";
 import {
   REVIEW_BUSY_EVENT,
@@ -181,18 +182,22 @@ function ReviewCardView({ card, ui }: { card: ReviewCard; ui: UICopy }) {
         card.corrected &&
         card.original !== card.corrected ? (
           <div className="mt-3 space-y-2 rounded-xl bg-slate-50 px-3 py-3 text-sm">
-            <p className="text-slate-500">
+            <div className="text-slate-500">
               {ui.reviewMySentence}:{" "}
-              <span className="text-slate-800" translate="no">
-                {card.original}
-              </span>
-            </p>
-            <p className="text-slate-500">
+              <AnalyzableEnglish
+                sentence={card.original}
+                inline
+                className="text-slate-800"
+              />
+            </div>
+            <div className="text-slate-500">
               {ui.reviewBetterSentence}:{" "}
-              <span className="font-medium text-teal-800" translate="no">
-                {card.corrected}
-              </span>
-            </p>
+              <AnalyzableEnglish
+                sentence={card.corrected}
+                inline
+                className="font-medium text-teal-800"
+              />
+            </div>
           </div>
         ) : null}
         <p className="mt-3 text-sm leading-relaxed text-slate-700">
@@ -214,9 +219,10 @@ function ReviewCardView({ card, ui }: { card: ReviewCard; ui: UICopy }) {
       <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-400">
         {ui.reviewFilterVocab}
       </p>
-      <h2 className="mt-1 text-xl font-semibold text-slate-900" translate="no">
-        {card.word}
-      </h2>
+      <AnalyzableEnglish
+        sentence={card.word}
+        className="mt-1 text-xl font-semibold text-slate-900"
+      />
       <div className="mt-3 space-y-4">
         {card.senses.map((sense, index) => (
           <div key={`${card.id}-s-${index}`}>
@@ -233,9 +239,11 @@ function ReviewCardView({ card, ui }: { card: ReviewCard; ui: UICopy }) {
           <ul className="mt-2 space-y-1.5">
             {card.similar.map((item) => (
               <li key={`${card.id}-${item.word}`} className="text-sm text-slate-700">
-                <span className="font-medium" translate="no">
-                  {item.word}
-                </span>
+                <AnalyzableEnglish
+                  sentence={item.word}
+                  inline
+                  className="font-medium text-slate-900"
+                />
                 <span className="text-slate-500"> — {item.gloss}</span>
               </li>
             ))}
@@ -263,9 +271,10 @@ function ExampleList({
       ) : null}
       {examples.map((example) => (
         <div key={example} className="flex items-start justify-between gap-2">
-          <p className="text-sm leading-relaxed text-slate-700" translate="no">
-            {example}
-          </p>
+          <AnalyzableEnglish
+            sentence={example}
+            className="text-sm leading-relaxed text-slate-700"
+          />
           <TTSButton text={example} />
         </div>
       ))}

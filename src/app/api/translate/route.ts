@@ -2,6 +2,7 @@ import OpenAI from "openai";
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { spokenTranslateSystem } from "@/lib/spokenTranslate";
+import { asTranslationSourceType } from "@/lib/naturalTranslation";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -35,7 +36,12 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
 
-  let body: { text?: string; locale?: string };
+  let body: {
+    text?: string;
+    locale?: string;
+    context?: unknown;
+    sourceType?: unknown;
+  };
   try {
     body = await request.json();
   } catch {
@@ -51,6 +57,14 @@ export async function POST(request: NextRequest) {
     typeof body.locale === "string" && body.locale in TARGET_LANGUAGES
       ? body.locale
       : "ko";
+  const sourceType = asTranslationSourceType(body.sourceType);
+  const context = Array.isArray(body.context)
+    ? body.context
+        .filter((item): item is string => typeof item === "string")
+        .map((item) => item.replace(/\s+/g, " ").trim())
+        .filter(Boolean)
+        .slice(-6)
+    : [];
 
   try {
     const completion = await client.chat.completions.create({
@@ -58,12 +72,18 @@ export async function POST(request: NextRequest) {
       messages: [
         {
           role: "system",
-          content: spokenTranslateSystem(locale),
+          content: spokenTranslateSystem(locale, sourceType),
         },
-        { role: "user", content: text },
+        {
+          role: "user",
+          content: JSON.stringify({
+            text,
+            ...(context.length ? { context } : {}),
+          }),
+        },
       ],
       response_format: { type: "json_object" },
-      temperature: 0.35,
+      temperature: 0.4,
     });
 
     const raw = completion.choices[0]?.message?.content;

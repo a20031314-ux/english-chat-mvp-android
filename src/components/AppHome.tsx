@@ -1,20 +1,21 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { ChatWindow } from "@/components/ChatWindow";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { readAppLocale } from "@/components/LearningBookPanel";
-import { ReviewTab } from "@/components/ReviewTab";
-import { ReportsTab } from "@/components/ReportsTab";
+import { EnglishAnalysisProvider } from "@/components/EnglishAnalysisProvider";
 import { TAB_ICON_META } from "@/components/TabIcons";
 import { VocabularyPanel } from "@/components/VocabularyPanel";
+import { WebReadingTab } from "@/components/WebReadingTab";
+import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
 import { APP_LOCALE_STORAGE_KEY, copy, type Locale } from "@/lib/copy";
-import { syncLearningPointsFromSources } from "@/lib/learningPoints";
-import type { SessionReport } from "@/lib/sessionReports";
+import { ExpressionInsightProvider } from "@/components/ExpressionInsightProvider";
+import { VocabPreviewProvider } from "@/components/VocabPreviewProvider";
 
-export type AppTab = "chat" | "reports" | "quiz" | "vocab";
+export type AppTab = "chat" | "read" | "video" | "vocab";
 
-const TABS: AppTab[] = ["chat", "reports", "quiz", "vocab"];
+const TABS: AppTab[] = ["chat", "read", "video", "vocab"];
 
 function isAppTab(value: string | null): value is AppTab {
   return TABS.includes(value as AppTab);
@@ -22,7 +23,10 @@ function isAppTab(value: string | null): value is AppTab {
 
 function resolveTab(raw: string | null | undefined): AppTab {
   if (!raw || raw === "home" || raw === "saved") return "chat";
-  if (raw === "sessions" || raw === "monthly") return "reports";
+  if (raw === "reports" || raw === "sessions" || raw === "monthly") return "chat";
+  if (raw === "quiz" || raw === "explore") return "chat";
+  if (raw === "web" || raw === "reader") return "read";
+  if (raw === "watch" || raw === "youtube") return "video";
   if (isAppTab(raw)) return raw;
   return "chat";
 }
@@ -32,11 +36,6 @@ type HistoryState = { talkbankScreen?: AppTab };
 export function AppHome() {
   const [locale, setLocale] = useState<Locale>("ko");
   const [tab, setTab] = useState<AppTab>("chat");
-  const [pendingSessionReportId, setPendingSessionReportId] = useState<
-    string | null
-  >(null);
-  const [isCreatingReport, setIsCreatingReport] = useState(false);
-  const pendingReportIdRef = useRef<string | null>(null);
 
   const ui = copy[locale];
 
@@ -101,47 +100,17 @@ export function AppHome() {
     return () => window.removeEventListener("popstate", onPopState);
   }, []);
 
-  const handleSessionReportCreating = useCallback(() => {
-    pendingReportIdRef.current = null;
-    setPendingSessionReportId(null);
-    setIsCreatingReport(true);
-    openTab("reports");
-  }, [openTab]);
-
-  const handleSessionReportCreated = useCallback(
-    (report: SessionReport) => {
-      try {
-        syncLearningPointsFromSources();
-      } catch {
-        // ignore
-      }
-      pendingReportIdRef.current = report.id;
-      setPendingSessionReportId(report.id);
-      openTab("reports");
-    },
-    [openTab],
-  );
-
-  const handleSessionReportCreateFinished = useCallback(() => {
-    if (!pendingReportIdRef.current) {
-      setIsCreatingReport(false);
-    }
-  }, []);
-
-  const clearPendingReport = useCallback(() => {
-    pendingReportIdRef.current = null;
-    setPendingSessionReportId(null);
-    setIsCreatingReport(false);
-  }, []);
-
   const tabItems: { id: AppTab; label: string }[] = [
     { id: "chat", label: ui.homeTabChat },
-    { id: "reports", label: ui.homeTabReports },
-    { id: "quiz", label: ui.homeTabQuiz },
+    { id: "read", label: ui.homeTabRead },
+    { id: "video", label: ui.homeTabVideo },
     { id: "vocab", label: ui.homeTabVocab },
   ];
 
   return (
+    <ExpressionInsightProvider locale={locale} ui={ui}>
+    <VocabPreviewProvider locale={locale} ui={ui}>
+    <EnglishAnalysisProvider locale={locale} ui={ui}>
     <div className="mx-auto flex h-[100dvh] w-full max-w-4xl flex-col bg-slate-100">
       <div className="relative min-h-0 flex-1 overflow-hidden p-2 pb-0 sm:p-4 sm:pb-0">
         <div
@@ -156,38 +125,38 @@ export function AppHome() {
             tabMode
             locale={locale}
             onLocaleChange={setLocale}
-            onSessionReportCreating={handleSessionReportCreating}
-            onSessionReportCreated={handleSessionReportCreated}
-            onSessionReportCreateFinished={handleSessionReportCreateFinished}
           />
         </div>
 
-        {tab === "reports" ? (
-          <div className="h-full">
-            <ReportsTab
-              locale={locale}
-              ui={ui}
-              onLocaleChange={setLocale}
-              isCreatingReport={isCreatingReport}
-              initialReportId={pendingSessionReportId}
-              onInitialReportConsumed={clearPendingReport}
-            />
-          </div>
-        ) : null}
-
         <div
           className={
-            tab === "quiz"
+            tab === "read"
               ? "h-full"
               : "pointer-events-none invisible absolute inset-0 -z-10 overflow-hidden opacity-0"
           }
-          aria-hidden={tab !== "quiz"}
+          aria-hidden={tab !== "read"}
         >
-          <ReviewTab
+          <WebReadingTab
             locale={locale}
             ui={ui}
+            active={tab === "read"}
             onLocaleChange={setLocale}
-            onGoChat={() => openTab("chat")}
+          />
+        </div>
+
+        <div
+          className={
+            tab === "video"
+              ? "h-full"
+              : "pointer-events-none invisible absolute inset-0 -z-10 overflow-hidden opacity-0"
+          }
+          aria-hidden={tab !== "video"}
+        >
+          <VideoLearningTab
+            locale={locale}
+            ui={ui}
+            active={tab === "video"}
+            onLocaleChange={setLocale}
           />
         </div>
 
@@ -233,5 +202,8 @@ export function AppHome() {
         </div>
       </nav>
     </div>
+    </EnglishAnalysisProvider>
+    </VocabPreviewProvider>
+    </ExpressionInsightProvider>
   );
 }

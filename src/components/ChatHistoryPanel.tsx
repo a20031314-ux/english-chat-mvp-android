@@ -9,12 +9,10 @@ type ChatHistoryPanelProps = {
   isOpen: boolean;
   sessions: ConversationSession[];
   currentSessionId: string;
-  reportedSessionIds: Set<string>;
   locale: Locale;
   ui: UICopy;
   onClose: () => void;
   onOpenSession: (session: ConversationSession) => void;
-  onCreateReport: (session: ConversationSession) => void;
   onDeleteSession: (id: string) => void;
   onClearSessions: () => void;
   onStartNewChat: () => void;
@@ -24,12 +22,10 @@ export function ChatHistoryPanel({
   isOpen,
   sessions,
   currentSessionId,
-  reportedSessionIds,
   locale,
   ui,
   onClose,
   onOpenSession,
-  onCreateReport,
   onDeleteSession,
   onClearSessions,
   onStartNewChat,
@@ -112,7 +108,6 @@ export function ChatHistoryPanel({
             <div className="space-y-2">
               {sessions.map((session) => {
                 const isCurrent = session.id === currentSessionId;
-                const hasReport = reportedSessionIds.has(session.id);
                 return (
                   <article
                     key={session.id}
@@ -136,7 +131,6 @@ export function ChatHistoryPanel({
                         String(session.messageCount),
                       )}
                       {isCurrent ? ` · ${ui.chatHistoryCurrent}` : ""}
-                      {hasReport ? ` · ${ui.chatHistoryHasReport}` : ""}
                     </p>
                     <div className="mt-2 flex flex-wrap gap-2">
                       <button
@@ -146,15 +140,6 @@ export function ChatHistoryPanel({
                       >
                         {ui.chatHistoryContinue}
                       </button>
-                      {!hasReport ? (
-                        <button
-                          type="button"
-                          onClick={() => onCreateReport(session)}
-                          className="rounded-md border border-teal-700 bg-teal-800 px-2 py-1 text-[11px] text-white hover:bg-teal-700"
-                        >
-                          {ui.createReport}
-                        </button>
-                      ) : null}
                       <button
                         type="button"
                         onClick={() => onDeleteSession(session.id)}

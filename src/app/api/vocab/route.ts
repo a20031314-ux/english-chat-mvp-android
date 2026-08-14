@@ -1,6 +1,7 @@
 import OpenAI from "openai";
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { naturalTranslationPrinciples } from "@/lib/naturalTranslation";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -77,8 +78,11 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "query required" }, { status: 400 });
   }
 
-  const sourceLanguage =
-    SOURCE_LANGUAGES[body.locale ?? ""] ?? SOURCE_LANGUAGES.ko;
+  const locale =
+    typeof body.locale === "string" && body.locale in SOURCE_LANGUAGES
+      ? body.locale
+      : "ko";
+  const sourceLanguage = SOURCE_LANGUAGES[locale];
 
   try {
     const completion = await client.chat.completions.create({
@@ -92,9 +96,11 @@ The user searches in ${sourceLanguage}. Return English headwords that match thei
 Rules:
 - results: 1–6 useful English words/phrases (prefer common, learnable items).
 - word: English only.
-- gloss: short meaning in ${sourceLanguage} (match the user's search language).
+- gloss: short natural meaning in ${sourceLanguage} of the whole item (not a word-by-word calque).
 - partOfSpeech: optional short tag in English (noun, verb, adjective, phrase, …).
 - example: optional short English example sentence using the word.
+
+${naturalTranslationPrinciples({ locale, role: "gloss", sourceType: "unknown" })}
 
 Respond with ONLY compact JSON:
 {"results":[{"word":"...","gloss":"...","partOfSpeech":"...","example":"..."}]}`,

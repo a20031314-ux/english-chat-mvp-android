@@ -1,6 +1,7 @@
 import OpenAI from "openai";
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { naturalTranslationPrinciples } from "@/lib/naturalTranslation";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -92,8 +93,11 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "words required" }, { status: 400 });
   }
 
-  const targetLanguage =
-    TARGET_LANGUAGES[body.locale ?? ""] ?? TARGET_LANGUAGES.ko;
+  const locale =
+    typeof body.locale === "string" && body.locale in TARGET_LANGUAGES
+      ? body.locale
+      : "ko";
+  const targetLanguage = TARGET_LANGUAGES[locale];
 
   try {
     const completion = await client.chat.completions.create({
@@ -108,6 +112,12 @@ For each item, return:
 - gloss: short meaning in ${targetLanguage} for the whole item as a unit
 - partOfSpeech: optional English tag (noun, verb, adjective, phrase, idiom, …)
 - example: optional short English example sentence using the item
+
+${naturalTranslationPrinciples({
+  locale,
+  role: "gloss",
+  sourceType: "unknown",
+})}
 
 Respond with ONLY compact JSON:
 {"items":[{"word":"...","gloss":"...","partOfSpeech":"...","example":"..."}]}`,

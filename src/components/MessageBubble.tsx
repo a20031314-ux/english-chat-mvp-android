@@ -1,11 +1,14 @@
 import { TTSButton } from "./TTSButton";
 import { SelectableEnglishText } from "./SelectableEnglishText";
+import { AnalyzableEnglish } from "./AnalyzableEnglish";
 
 type MessageBubbleProps = {
   role: "user" | "assistant";
   message: string;
   /** English line attached under a how-to-say user message */
   attachedEnglish?: string;
+  /** Inline correction attached to a chat user message */
+  correction?: { original: string; corrected: string } | null;
   translatedMessage?: string;
   isTranslating?: boolean;
   pickMode?: boolean;
@@ -21,10 +24,44 @@ type MessageBubbleProps = {
   onTranslate?: () => void;
 };
 
+function EnglishLine({
+  text,
+  pickMode,
+  tone,
+  isWordSaved,
+  savingWord,
+  onWordClick,
+  className,
+}: {
+  text: string;
+  pickMode: boolean;
+  tone: "default" | "onDark";
+  isWordSaved?: (word: string) => boolean;
+  savingWord?: string | null;
+  onWordClick?: (word: string) => void;
+  className?: string;
+}) {
+  return (
+    <AnalyzableEnglish sentence={text} tone={tone} className={className}>
+      {pickMode && onWordClick ? (
+        <SelectableEnglishText
+          text={text}
+          pickMode={pickMode}
+          tone={tone}
+          isWordSaved={isWordSaved}
+          savingWord={savingWord}
+          onWordClick={onWordClick}
+        />
+      ) : undefined}
+    </AnalyzableEnglish>
+  );
+}
+
 export function MessageBubble({
   role,
   message,
   attachedEnglish,
+  correction,
   translatedMessage,
   isTranslating = false,
   pickMode = false,
@@ -36,7 +73,16 @@ export function MessageBubble({
 }: MessageBubbleProps) {
   const isUser = role === "user";
   const canTranslate = Boolean(onTranslate && labels.translate);
-  const listenText = attachedEnglish?.trim() || message;
+  const correctedLine = correction?.corrected.trim() || "";
+  const showCorrection = Boolean(correctedLine);
+  const listenText = showCorrection
+    ? correctedLine
+    : attachedEnglish?.trim() || message;
+  const tone = isUser ? "onDark" : "default";
+  const analyzeMain =
+    !attachedEnglish?.trim() &&
+    !showCorrection &&
+    (!isUser || /[A-Za-z]/.test(message));
 
   return (
     <div className={`flex w-full ${isUser ? "justify-end" : "justify-start"}`}>
@@ -47,33 +93,75 @@ export function MessageBubble({
             : "rounded-bl-sm bg-white text-slate-900"
         }`}
       >
-        <p>
-          <SelectableEnglishText
+        {showCorrection && correction ? (
+          <AnalyzableEnglish
+            sentence={correction.original}
+            tone={tone}
+            diff={{
+              original: correction.original,
+              corrected: correction.corrected,
+              side: "original",
+            }}
+          />
+        ) : analyzeMain ? (
+          <EnglishLine
             text={message}
             pickMode={pickMode}
-            tone={isUser ? "onDark" : "default"}
+            tone={tone}
             isWordSaved={isWordSaved}
             savingWord={savingWord}
             onWordClick={onWordClick}
           />
-        </p>
-
-        {attachedEnglish?.trim() ? (
-          <p
-            className={`mt-2 border-t pt-2 text-sm leading-relaxed ${
-              isUser ? "border-slate-600 text-slate-100" : "border-slate-200"
-            }`}
-            translate="no"
-          >
+        ) : (
+          <p>
             <SelectableEnglishText
-              text={attachedEnglish}
+              text={message}
               pickMode={pickMode}
-              tone={isUser ? "onDark" : "default"}
+              tone={tone}
               isWordSaved={isWordSaved}
               savingWord={savingWord}
               onWordClick={onWordClick}
             />
           </p>
+        )}
+
+        {showCorrection && correction ? (
+          <div
+            className={`mt-2 border-t pt-2 ${
+              isUser ? "border-slate-600" : "border-slate-200"
+            }`}
+          >
+            <AnalyzableEnglish
+              sentence={correction.corrected}
+              tone={tone}
+              className={`text-sm leading-relaxed ${
+                isUser ? "text-teal-100" : ""
+              }`}
+              diff={{
+                original: correction.original,
+                corrected: correction.corrected,
+                side: "corrected",
+              }}
+            />
+          </div>
+        ) : attachedEnglish?.trim() ? (
+          <div
+            className={`mt-2 border-t pt-2 ${
+              isUser ? "border-slate-600" : "border-slate-200"
+            }`}
+          >
+            <EnglishLine
+              text={attachedEnglish}
+              pickMode={pickMode}
+              tone={tone}
+              isWordSaved={isWordSaved}
+              savingWord={savingWord}
+              onWordClick={onWordClick}
+              className={`text-sm leading-relaxed ${
+                isUser ? "text-slate-100" : ""
+              }`}
+            />
+          </div>
         ) : null}
 
         {translatedMessage ? (

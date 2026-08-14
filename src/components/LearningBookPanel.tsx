@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { LearningReviewModal } from "@/components/LearningReviewModal";
+import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { APP_LOCALE_STORAGE_KEY, isLocale, Locale, copy } from "@/lib/copy";
 import type { UICopy } from "@/lib/copy";
@@ -347,25 +348,19 @@ export function LearningBookPanel({
                     </div>
 
                     <div className="space-y-2 px-3 pb-3 pt-2">
-                      <p
+                      <AnalyzableEnglish
+                        sentence={card.corrected}
                         className={`text-[15px] font-semibold leading-snug text-emerald-950 sm:text-base ${isOpen ? "" : "line-clamp-3"}`}
-                        translate="no"
-                      >
-                        {card.corrected}
-                      </p>
-                      <p
+                      />
+                      <AnalyzableEnglish
+                        sentence={card.original}
                         className={`text-[13px] leading-snug text-slate-600 sm:text-[14px] ${isOpen ? "" : "line-clamp-3"}`}
-                        translate="no"
-                      >
-                        {card.original}
-                      </p>
+                      />
                       {showNat ? (
-                        <p
+                        <AnalyzableEnglish
+                          sentence={card.natural ?? ""}
                           className={`text-[12px] leading-snug text-sky-950 sm:text-[13px] ${isOpen ? "" : "line-clamp-3"}`}
-                          translate="no"
-                        >
-                          {card.natural}
-                        </p>
+                        />
                       ) : null}
                     </div>
 

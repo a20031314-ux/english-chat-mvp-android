@@ -3,6 +3,7 @@
 import { ReactNode } from "react";
 import { DiffHighlightText } from "./ErrorHighlightText";
 import { SelectableEnglishText } from "./SelectableEnglishText";
+import { AnalyzableEnglish } from "./AnalyzableEnglish";
 import { TTSButton } from "./TTSButton";
 
 type CorrectionCardProps = {
@@ -60,7 +61,10 @@ export function CorrectionCard({
     return (
       <div className="mt-2 rounded-2xl border border-emerald-200/80 bg-emerald-50/60 px-3.5 py-3">
         <p className="text-xs text-emerald-800/90">{feedback}</p>
-        <p className="mt-2 text-[15px] font-medium text-slate-900" translate="no">
+        <AnalyzableEnglish
+          sentence={original}
+          className="mt-2 text-[15px] font-medium text-slate-900"
+        >
           <SelectableEnglishText
             text={original}
             pickMode={pickMode}
@@ -68,16 +72,23 @@ export function CorrectionCard({
             savingWord={savingWord}
             onWordClick={onWordClick}
           />
-        </p>
+        </AnalyzableEnglish>
+        <div className="mt-2">
+          <TTSButton text={original} ariaLabel={labels.listen} />
+        </div>
         {showNatural ? (
-          <p className="mt-3 text-xs leading-relaxed text-slate-500">
+          <div className="mt-3 text-xs leading-relaxed text-slate-500">
             <span className="font-medium text-slate-600">{labels.natural}</span>
             {" · "}
-            <span translate="no">{natural}</span>
+            <AnalyzableEnglish
+              sentence={natural}
+              inline
+              className="text-slate-700"
+            />
             <span className="ml-2 inline-block align-middle">
               <TTSButton text={natural} ariaLabel={labels.listen} />
             </span>
-          </p>
+          </div>
         ) : null}
         {!pickMode && actions ? <div className="mt-3">{actions}</div> : null}
       </div>
@@ -95,7 +106,10 @@ export function CorrectionCard({
       <div className="space-y-4 px-3.5 py-3.5">
         <div>
           <p className="text-[11px] font-medium text-slate-500">{myLine}</p>
-          <p className="mt-1.5 text-[15px] leading-relaxed text-slate-800" translate="no">
+          <AnalyzableEnglish
+            sentence={original}
+            className="mt-1.5 text-[15px] leading-relaxed text-slate-800"
+          >
             <DiffHighlightText
               original={original}
               corrected={corrected}
@@ -105,7 +119,10 @@ export function CorrectionCard({
               savingWord={savingWord}
               onWordClick={onWordClick}
             />
-          </p>
+          </AnalyzableEnglish>
+          <div className="mt-2">
+            <TTSButton text={original} ariaLabel={labels.listen} />
+          </div>
         </div>
 
         <div className="flex justify-center text-slate-300" aria-hidden>
@@ -114,9 +131,9 @@ export function CorrectionCard({
 
         <div>
           <p className="text-[11px] font-medium text-teal-800">{tryThis}</p>
-          <p
+          <AnalyzableEnglish
+            sentence={corrected}
             className="mt-1.5 text-base font-semibold leading-relaxed text-slate-900"
-            translate="no"
           >
             <DiffHighlightText
               original={original}
@@ -127,7 +144,7 @@ export function CorrectionCard({
               savingWord={savingWord}
               onWordClick={onWordClick}
             />
-          </p>
+          </AnalyzableEnglish>
           <div className="mt-2">
             <TTSButton text={corrected} ariaLabel={labels.listen} />
           </div>
@@ -143,16 +160,18 @@ export function CorrectionCard({
         ) : null}
 
         {showNatural ? (
-          <p className="border-t border-slate-100 pt-3 text-xs leading-relaxed text-slate-500">
+          <div className="border-t border-slate-100 pt-3 text-xs leading-relaxed text-slate-500">
             <span className="font-medium text-slate-600">{labels.natural}</span>
             {" · "}
-            <span className="text-slate-700" translate="no">
-              {natural}
-            </span>
+            <AnalyzableEnglish
+              sentence={natural}
+              inline
+              className="text-slate-700"
+            />
             <span className="ml-2 inline-block align-middle">
               <TTSButton text={natural} ariaLabel={labels.listen} />
             </span>
-          </p>
+          </div>
         ) : null}
       </div>
 

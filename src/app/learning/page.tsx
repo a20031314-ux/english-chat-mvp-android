@@ -8,6 +8,8 @@ import {
 } from "@/components/LearningBookPanel";
 import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
 import { copy } from "@/lib/copy";
+import { ExpressionInsightProvider } from "@/components/ExpressionInsightProvider";
+import { VocabPreviewProvider } from "@/components/VocabPreviewProvider";
 
 /** Legacy route — redirects UX to home saved tab via link; keeps panel for deep links. */
 export default function LearningPage() {
@@ -27,6 +29,8 @@ export default function LearningPage() {
   }, [locale]);
 
   return (
+    <ExpressionInsightProvider locale={locale} ui={ui}>
+    <VocabPreviewProvider locale={locale} ui={ui}>
     <main className="flex min-h-screen flex-col bg-slate-100">
       <div className="mx-auto w-full max-w-lg px-4 pt-4">
         <Link
@@ -46,5 +50,7 @@ export default function LearningPage() {
         </div>
       </div>
     </main>
+    </VocabPreviewProvider>
+    </ExpressionInsightProvider>
   );
 }

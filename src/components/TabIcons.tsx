@@ -5,7 +5,7 @@ type TabIconProps = {
   className?: string;
 };
 
-type TabId = "chat" | "reports" | "quiz" | "vocab";
+type TabId = "chat" | "read" | "video" | "vocab";
 
 const iconBox = "h-6 w-6";
 
@@ -31,33 +31,7 @@ export function ChatTabIcon({ active, className = "" }: TabIconProps) {
   );
 }
 
-export function ReportsTabIcon({ active, className = "" }: TabIconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      className={`${iconBox} ${className}`}
-      aria-hidden
-    >
-      <rect
-        x="4"
-        y="4"
-        width="16"
-        height="16"
-        rx="3"
-        className={active ? "fill-teal-600" : "fill-teal-300"}
-      />
-      <path
-        d="M8 14.5v-2M12 14.5v-5M16 14.5v-3.5"
-        stroke="white"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
-export function QuizTabIcon({ active, className = "" }: TabIconProps) {
+export function ReadTabIcon({ active, className = "" }: TabIconProps) {
   return (
     <svg
       viewBox="0 0 24 24"
@@ -68,16 +42,41 @@ export function QuizTabIcon({ active, className = "" }: TabIconProps) {
       <circle
         cx="12"
         cy="12"
-        r="9"
-        className={active ? "fill-amber-500" : "fill-amber-300"}
+        r="8"
+        className={active ? "fill-indigo-500" : "fill-indigo-300"}
       />
       <path
-        d="M9.2 9.4c0-1.5 1.1-2.5 2.8-2.5 1.6 0 2.7.9 2.7 2.3 0 1.1-.6 1.7-1.6 2.3-.9.5-1.2.9-1.2 1.7v.4"
+        d="M12 5.5c2.4 2 3.7 4.2 3.7 6.5S14.4 16.5 12 18.5C9.6 16.5 8.3 14.3 8.3 12S9.6 7.5 12 5.5Z"
+        fill="white"
+        fillOpacity="0.9"
+      />
+      <path
+        d="M4.8 12h14.4"
         stroke="white"
-        strokeWidth="1.7"
+        strokeWidth="1.5"
         strokeLinecap="round"
       />
-      <circle cx="12" cy="16.6" r="1" fill="white" />
+    </svg>
+  );
+}
+
+export function VideoTabIcon({ active, className = "" }: TabIconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`${iconBox} ${className}`}
+      aria-hidden
+    >
+      <rect
+        x="3.5"
+        y="6"
+        width="17"
+        height="12"
+        rx="2.5"
+        className={active ? "fill-violet-500" : "fill-violet-300"}
+      />
+      <path d="M10.2 9.2 15.3 12 10.2 14.8V9.2Z" fill="white" />
     </svg>
   );
 }
@@ -117,15 +116,15 @@ export const TAB_ICON_META: Record<
     activeBg: "bg-sky-50",
     idleBg: "hover:bg-sky-50/70",
   },
-  reports: {
-    Icon: ReportsTabIcon,
-    activeBg: "bg-teal-50",
-    idleBg: "hover:bg-teal-50/70",
+  read: {
+    Icon: ReadTabIcon,
+    activeBg: "bg-indigo-50",
+    idleBg: "hover:bg-indigo-50/70",
   },
-  quiz: {
-    Icon: QuizTabIcon,
-    activeBg: "bg-amber-50",
-    idleBg: "hover:bg-amber-50/70",
+  video: {
+    Icon: VideoTabIcon,
+    activeBg: "bg-violet-50",
+    idleBg: "hover:bg-violet-50/70",
   },
   vocab: {
     Icon: VocabTabIcon,

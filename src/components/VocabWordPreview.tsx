@@ -1,5 +1,6 @@
 "use client";
 
+import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
 import type { UICopy } from "@/lib/copy";
 import type { VocabLookupResult } from "@/lib/vocabulary";
 
@@ -34,7 +35,7 @@ export function VocabWordPreview({
     !loadFailed;
 
   return (
-    <div className="fixed inset-0 z-[80] flex items-end justify-center bg-slate-900/40 p-3 sm:items-center">
+    <div className="fixed inset-0 z-[100] flex items-end justify-center bg-slate-900/40 p-3 sm:items-center">
       <button
         type="button"
         className="absolute inset-0 cursor-default"
@@ -49,13 +50,13 @@ export function VocabWordPreview({
         className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl"
       >
         <div className="px-4 py-4">
-          <p
-            id="vocab-preview-title"
-            className="text-xl font-semibold text-slate-900"
-            translate="no"
-          >
-            {word}
-          </p>
+          <div id="vocab-preview-title">
+            <AnalyzableEnglish
+              sentence={word}
+              context={detail?.example ? [detail.example] : undefined}
+              className="text-xl font-semibold text-slate-900"
+            />
+          </div>
           {detail?.partOfSpeech ? (
             <p className="mt-1 text-[11px] uppercase tracking-wide text-slate-500">
               {detail.partOfSpeech}
@@ -72,9 +73,10 @@ export function VocabWordPreview({
                 {detail?.gloss}
               </p>
               {detail?.example ? (
-                <p className="mt-2 text-xs leading-relaxed text-slate-500" translate="no">
-                  {detail.example}
-                </p>
+                <AnalyzableEnglish
+                  sentence={detail.example}
+                  className="mt-2 text-xs leading-relaxed text-slate-500"
+                />
               ) : null}
             </>
           )}

@@ -8,6 +8,11 @@ import {
 import { isPremiumClientRequest } from "@/lib/server/premiumRequest";
 import { normalizeHowToSayExpression } from "@/lib/howToSay";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import {
+  conversationKoreanParallel,
+  conversationVoicePrinciples,
+} from "@/lib/conversationVoice";
+
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
 function requestUserId(request: NextRequest) {
@@ -92,17 +97,19 @@ CRITICAL for explanation:
 - Example style: "if 조건절에서는 미래의 일도 현재형을 써요."`
       : "";
 
-  return `You are a friendly English conversation partner for a language learner.
-The user JSON has "message" (their English line) and optional "recent" chat lines for continuity.
+  return `You chat in English with the user. Correction is a separate job from talking.
 
-1) First fix their English into corrected (what they meant to say).
-2) Then write assistantMessage as a reply to the CORRECTED sentence only — never to the broken original.
+The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only).
+
+${conversationVoicePrinciples()}
+${conversationKoreanParallel(locale)}
+
+1) First fix their English into corrected (what they meant to say in THIS turn). This is for the learner, not for the chat voice.
+- Do not change the topic to match recent. Pronouns like "that"/"they" may refer back; a new question or new subject does not.
+2) Then write assistantMessage as a reply to the CORRECTED current turn only — never to the broken original, and never to an older recent line instead.
 - If corrected is a question, answer that question.
 - If corrected is a statement, respond to that statement.
 - Do not treat a broken question like "You are you good at running?" as a compliment ("You are good at running").
-- Keep the chat moving: after a brief reaction or answer, ALWAYS invite them to continue with one easy follow-up question or soft prompt they can answer in 1–2 sentences.
-- Prefer concrete, personal openings ("What did you do next?", "How was it?", "What about you?").
-- Do NOT end on a closed dead-end like only "Nice!", "Got it.", "Cool.", or "That sounds fun." with nothing to answer.
 - Do not lecture, quiz grammar, or correct them inside assistantMessage.
 3) Fill the rest of correction:
 - corrected: fully corrected English (fix grammar/wording mistakes; keep meaning).
@@ -124,7 +131,7 @@ The user JSON has "message" (their English line) and optional "recent" chat line
 ${mustBeKorean}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
-{"assistantMessage":"...","correction":{"corrected":"...","natural":"...","explanation":"..."}}`;
+{"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","explanation":"..."}}`;
 }
 
 const HOW_TO_SAY_SYSTEM = `The user wants a natural English line THEY can say (or write) to another person. They may write in Korean, English, or mixed.
@@ -132,6 +139,8 @@ const HOW_TO_SAY_SYSTEM = `The user wants a natural English line THEY can say (o
 You are a phrase helper, NOT a tutor. Do not answer their question, explain the topic, or ask them what they meant.
 
 Give ONE spoken English line that keeps their speech act.
+Match the situation (friend, work, interview, joke, online). Casual intent → casual English, including contractions, fragments, slang, or mild profanity if that is what they would actually say. Formal intent → that register. Do not turn casual talk into textbook English.
+RECENT is only for resolving "that/they/this" or whose previous question they are confirming. Do not rewrite their line into the previous topic.
 
 If they asked for information (뭐/몇/어떻게/왜, a factual or opinion question), translate THAT question into English they would ask someone else:
 Bad: "체지방 12%를 만들려면 남자 골격근량은 체중의 몇 퍼센트여야해?" → "Are you asking what the muscle mass percentage should be...?"
@@ -179,34 +188,46 @@ async function replyToCorrected(
   openai: OpenAI,
   corrected: string,
   recent: string[] = [],
-): Promise<string> {
+  locale = "ko",
+): Promise<{ assistantMessage: string; spokenReply: string }> {
   const completion = await openai.chat.completions.create({
     model: MODEL,
     messages: [
       {
         role: "system",
-        content: `The learner meant the English line below (already corrected). Reply as a friendly conversation partner in 1-2 short spoken English sentences.
+        content: `The person meant the English line in "corrected" (this turn). Reply to THAT line.
 
-1) Briefly react or answer, matching the speech act.
-2) Always leave an easy opening for them to keep talking — usually one short follow-up question or soft invite ("What about you?", "How was it?", "Tell me more.").
-Do not end on a closed dead-end ("Nice!", "Got it.", "Cool.") with nothing to answer.
+${conversationVoicePrinciples()}
+${conversationKoreanParallel(locale)}
+
+recent is background only. If this turn is a new question or a new subject, answer it. Do not keep the previous topic going unless this line clearly refers back.
 Do not lecture, correct their English, or thank them unless they complimented you.
-Use RECENT only for continuity; do not repeat yourself.
 
-Return ONLY JSON: {"assistantMessage":"..."}`,
+Return ONLY JSON: {"assistantMessage":"...","spokenReply":"..."}`,
       },
       {
         role: "user",
-        content: JSON.stringify({ corrected, recent }),
+        content: JSON.stringify({
+          corrected,
+          recent,
+          instruction:
+            "Reply to corrected. Use recent only if this turn still refers to it.",
+        }),
       },
     ],
     response_format: { type: "json_object" },
-    temperature: 0.7,
+    temperature: 0.9,
   });
   const raw = completion.choices[0]?.message?.content;
-  if (!raw) return "";
-  const parsed = JSON.parse(raw) as { assistantMessage?: unknown };
-  return asText(parsed.assistantMessage).trim();
+  if (!raw) return { assistantMessage: "", spokenReply: "" };
+  const parsed = JSON.parse(raw) as {
+    assistantMessage?: unknown;
+    spokenReply?: unknown;
+  };
+  return {
+    assistantMessage: asText(parsed.assistantMessage).trim(),
+    spokenReply: locale === "en" ? "" : asText(parsed.spokenReply).trim(),
+  };
 }
 
 async function runChat(
@@ -224,11 +245,13 @@ async function runChat(
         content: JSON.stringify({
           message,
           recent: recent.slice(-8),
+          instruction:
+            "Reply to message. Use recent only if this turn still refers to it.",
         }),
       },
     ],
     response_format: { type: "json_object" },
-    temperature: 0.7,
+    temperature: 0.9,
   });
 
   const raw = completion.choices[0]?.message?.content;
@@ -261,10 +284,12 @@ async function runChat(
   }
 
   let reply = assistantMessage;
+  let spoken = spokenReply;
   if (needsExplanation && corrected.trim()) {
     try {
-      const reread = await replyToCorrected(openai, corrected, recent);
-      if (reread) reply = reread;
+      const reread = await replyToCorrected(openai, corrected, recent, locale);
+      if (reread.assistantMessage) reply = reread.assistantMessage;
+      if (reread.spokenReply) spoken = reread.spokenReply;
     } catch (error) {
       console.error("[chat-reply-corrected]", error);
     }
@@ -272,35 +297,35 @@ async function runChat(
 
   return {
     assistantMessage: reply,
-    spokenReply,
+    spokenReply: spoken,
     correction: { corrected, natural, explanation },
   };
 }
 
 const FALLBACK_STARTERS = [
   {
-    en: "Hey! What did you do today?",
-    ko: "안녕! 오늘 뭐 했어?",
+    en: "Hey — you been up to anything, or just surviving the week?",
+    ko: "야, 요즘 뭐 했어? 아니면 그냥 주간 생존 중?",
   },
   {
-    en: "Hi there. Have you eaten yet? What did you have?",
-    ko: "안녕. 밥은 먹었어? 뭐 먹었어?",
+    en: "Okay be honest. How tired are you right now?",
+    ko: "솔직히 말해봐. 지금 얼마나 피곤해?",
   },
   {
-    en: "Good to see you. What's something fun you did this week?",
-    ko: "반가워. 이번 주에 뭐 재미있는 거 했어?",
+    en: "I just wasted like twenty minutes staring at my phone. You ever do that?",
+    ko: "방금 폰만 보다가 이십 분은 날렸어. 너도 그런 적 있지?",
   },
   {
-    en: "Hey. Are you more of a morning person or a night person?",
-    ko: "너는 아침형이야, 저녁형이야?",
+    en: "Random one: would you rather cook tonight or just order something?",
+    ko: "갑자기 궁금한데, 오늘 저녁 해 먹을 거야, 아니면 그냥 시킬 거야?",
   },
   {
-    en: "Hi! If you could travel anywhere next month, where would you go?",
-    ko: "다음 달에 어디든 갈 수 있으면 어디 가고 싶어?",
+    en: "Ugh, I cannot decide what to watch. What's the last thing you actually liked?",
+    ko: "아 뭐 볼지 못 정하겠어. 최근에 진짜 괜찮았던 거 뭐야?",
   },
   {
-    en: "Hey. What kind of music have you been listening to lately?",
-    ko: "요즘 어떤 음악 듣고 있어?",
+    en: "Morning person or night person? No in-between, pick a side.",
+    ko: "아침형이야, 저녁형이야? 중간은 없고 하나만 골라.",
   },
 ];
 
@@ -328,31 +353,21 @@ async function runStart(
   recent: string[],
   locale: string,
 ): Promise<{ assistantMessage: string; spokenReply: string }> {
-  const spokenLanguage =
-    locale === "en"
-      ? ""
-      : EXPLANATION_LANGUAGES[locale] ?? EXPLANATION_LANGUAGES.ko;
-  const spokenRule =
-    locale === "en"
-      ? ""
-      : `
-Also write spokenReply: the SAME opener a native ${spokenLanguage} speaker would actually say.
-Same meaning. Not a word-for-word translation.`;
+  const spokenRule = conversationKoreanParallel(locale);
 
   const completion = await openai.chat.completions.create({
     model: MODEL,
     messages: [
       {
         role: "system",
-        content: `You start a casual English conversation for a language learner.
+        content: `Start a casual English conversation. You are not a tutor opening a lesson.
 
-Decide ONE short opener, then write it in English and (if asked) in the learner's language.
-Write 1-2 short spoken English sentences as assistantMessage.
-Ask one easy, concrete question they can answer in a sentence or two.
-Be warm and natural. Do not lecture or correct anyone.
-Make it easy for them to keep talking after they answer.
-Vary the topic. Do not reuse questions from RECENT.
+${conversationVoicePrinciples()}
 ${spokenRule}
+
+Write 1–2 spoken English lines as assistantMessage. Sound like texting a friend, not greeting a class.
+A question is fine if it feels natural — not required, and not a study prompt.
+Vary the topic. Do not reuse questions from RECENT.
 
 Return ONLY JSON:
 {"assistantMessage":"...","spokenReply":"..."}`,
@@ -408,7 +423,7 @@ async function runHowToSay(
       },
     ],
     response_format: { type: "json_object" },
-    temperature: 0.6,
+      temperature: 0.75,
   });
 
   const raw = completion.choices[0]?.message?.content;

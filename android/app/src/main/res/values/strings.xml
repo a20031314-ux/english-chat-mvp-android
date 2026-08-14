@@ -4,4 +4,9 @@
     <string name="title_activity_main">AI English Chat</string>
     <string name="package_name">com.yourname.englishchat</string>
     <string name="custom_url_scheme">com.yourname.englishchat</string>
+    <string name="process_text_analyze">분석</string>
+    <string name="screen_read_running">화면 영어 분석</string>
+    <string name="screen_read_running_body">다른 앱 화면의 영어를 분석하고 있습니다. 길게 누르면 종료됩니다.</string>
+    <string name="screen_read_loading">이 표현을 살펴보는 중...</string>
+    <string name="screen_read_failed">설명을 불러오지 못했어요. 다시 시도해 주세요.</string>
 </resources>

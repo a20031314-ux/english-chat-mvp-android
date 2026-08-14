@@ -1,6 +1,7 @@
 import OpenAI from "openai";
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { naturalTranslationPrinciples } from "@/lib/naturalTranslation";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -187,6 +188,9 @@ Vocabulary cards:
 - If the word has multiple common meanings, give 2-3 senses. Each sense: gloss in ${language} + 1-2 English examples.
 - If mainly one meaning, still give 2-3 varied example sentences in one sense.
 - similar: 2-4 related or easily confused words, each with a short gloss in ${language}.
+- Gloss the item as a unit. Idioms/phrasals are one meaning, not each word.
+
+${naturalTranslationPrinciples({ locale, role: "gloss", sourceType: "report" })}
 
 Return ONLY JSON:
 {"cards":[

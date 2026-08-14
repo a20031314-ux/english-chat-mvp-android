@@ -13,52 +13,23 @@ import {
   persistLearningCards,
   type LearningCard,
 } from "@/lib/learningCards";
-import {
-  buildSessionReport,
-  clearSessionReports,
-  deleteSessionReport,
-  loadSessionReports,
-  migrateSessionsToReports,
-  saveSessionReport,
-  type SessionReport,
-} from "@/lib/sessionReports";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
-import { purgeDemoMonthlyReports } from "@/lib/seedDemoMonthlyReports";
-import { CorrectionCard } from "./CorrectionCard";
 import { LanguageSelector } from "./LanguageSelector";
 import { MessageBubble } from "./MessageBubble";
-import { MonthlyReportPage } from "./MonthlyReportPage";
 import { ChatHistoryPanel } from "./ChatHistoryPanel";
-import { ReportPanel } from "./ReportPanel";
-import { SessionReportView } from "./SessionReportView";
-import { VocabWordPreview } from "./VocabWordPreview";
 import { PaywallModal } from "./PaywallModal";
 import { usePremium } from "@/contexts/PremiumContext";
 import { Capacitor } from "@capacitor/core";
-import type { YearMonth } from "@/lib/monthlyReports";
 import {
   FREE_DAILY_CHAT_LIMIT,
   PREMIUM_CLIENT_HEADER,
 } from "@/lib/billing/config";
 import { isLocalPlanDebugEnabled } from "@/lib/billing/billingService";
-import {
-  canCreateFreeReport,
-  recordFreeReportCreated,
-} from "@/lib/billing/freeReportLimit";
-import { prepareReviewAfterReport } from "@/lib/reviewService";
 import { resolveChatInputMode } from "@/lib/inputLanguage";
 import {
   alignCorrectionToGrammar,
   substantiveNorm,
 } from "@/lib/correctionNorm";
-import {
-  isWordSaved,
-  loadVocabulary,
-  persistVocabulary,
-  saveVocabularyWords,
-  type VocabularyEntry,
-  type VocabLookupResult,
-} from "@/lib/vocabulary";
 
 type CorrectionResult = {
   corrected: string;
@@ -116,47 +87,7 @@ function premiumRequestHeaders(isPremium: boolean): HeadersInit {
 }
 const CONVERSATION_SESSIONS_KEY = "conversationSessions";
 const ACTIVE_CONVERSATION_ID_KEY = "activeConversationSessionId";
-const CHAT_CARDS_VISIBLE_KEY = "chatCardsVisible";
-const VOCAB_CHECK_ON_KEY = "chatVocabCheckOn";
 const VERCEL_FALLBACK_API_BASE = "https://english-chat-mvp.vercel.app";
-
-function loadChatCardsVisible(): boolean {
-  if (typeof window === "undefined") return true;
-  try {
-    const raw = window.localStorage.getItem(CHAT_CARDS_VISIBLE_KEY);
-    if (raw === null) return true;
-    return raw !== "0";
-  } catch {
-    return true;
-  }
-}
-
-function persistChatCardsVisible(visible: boolean) {
-  if (typeof window === "undefined") return;
-  try {
-    window.localStorage.setItem(CHAT_CARDS_VISIBLE_KEY, visible ? "1" : "0");
-  } catch {
-    // ignore
-  }
-}
-
-function loadVocabCheckOn(): boolean {
-  if (typeof window === "undefined") return false;
-  try {
-    return window.localStorage.getItem(VOCAB_CHECK_ON_KEY) === "1";
-  } catch {
-    return false;
-  }
-}
-
-function persistVocabCheckOn(on: boolean) {
-  if (typeof window === "undefined") return;
-  try {
-    window.localStorage.setItem(VOCAB_CHECK_ON_KEY, on ? "1" : "0");
-  } catch {
-    // ignore
-  }
-}
 
 /** Web dev uses same-origin `/api/*`. Capacitor WebView uses bundled UI + remote API. */
 function getApiBase(): string {
@@ -188,15 +119,6 @@ function apiUrl(apiPath: string): string {
 }
 
 type Plan = "free" | "pro";
-
-type MainView =
-  | { type: "chat" }
-  | { type: "monthlyReport"; ym: YearMonth; returnPanel?: boolean }
-  | { type: "sessionReport"; reportId: string; returnPanel?: boolean };
-
-type HistoryState = {
-  talkbankMainView?: MainView;
-};
 
 type EntitlementState = {
   plan: Plan;
@@ -396,10 +318,6 @@ function sessionTitleFromTurns(turns: ChatTurn[]): string {
   return "Conversation Session";
 }
 
-function hasLearnerMessages(turns: ChatTurn[]): boolean {
-  return turns.some((turn) => turn.userMessage.trim() !== "");
-}
-
 function toSessionMessages(turns: ChatTurn[]): ChatMessage[] {
   return turns.flatMap((turn) => {
     const messages: ChatMessage[] = [];
@@ -471,6 +389,7 @@ function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
       expressionResult: pendingExpression,
       assistantMessage: extra?.assistantMessage,
       spokenReply: extra?.spokenReply,
+      translatedMessage: extra?.spokenReply,
       correctionResult: extra?.correctionResult,
       suppressCorrectionCard: true,
     });
@@ -539,6 +458,7 @@ function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
           userMessage: "",
           assistantMessage,
           spokenReply: spokenReply || undefined,
+          translatedMessage: spokenReply || undefined,
         });
         continue;
       }
@@ -549,6 +469,7 @@ function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
         userMessage: pendingUser.content,
         assistantMessage,
         spokenReply: spokenReply || undefined,
+        translatedMessage: spokenReply || undefined,
         correctionResult,
       });
       pendingUser = null;
@@ -594,26 +515,15 @@ function buildExpressionSavedItem(turn: ChatTurn): SavedItem | null {
 }
 
 type ChatWindowProps = {
-  /** Home-tab embedding: hide report side nav; report opens via parent tabs. */
   tabMode?: boolean;
   locale?: Locale;
   onLocaleChange?: (locale: Locale) => void;
-  /** Called right after the user confirms report creation (before analysis finishes). */
-  onSessionReportCreating?: () => void;
-  onSessionReportCreated?: (report: SessionReport) => void;
-  /** Always called when report creation finishes (success or failure). */
-  onSessionReportCreateFinished?: () => void;
-  onBackToHome?: () => void;
 };
 
 export function ChatWindow({
   tabMode = false,
   locale: localeProp,
   onLocaleChange,
-  onSessionReportCreating,
-  onSessionReportCreated,
-  onSessionReportCreateFinished,
-  onBackToHome,
 }: ChatWindowProps) {
   const { isPremium, isBillingReady, refreshPremium, setPremiumForUi } =
     usePremium();
@@ -641,24 +551,11 @@ export function ChatWindow({
   };
   const ui = copy[locale];
   const [bookToast, setBookToast] = useState<string | null>(null);
-  const [vocabPickMode, setVocabPickMode] = useState(false);
-  const [vocabEntries, setVocabEntries] = useState<VocabularyEntry[]>([]);
-  const [previewWord, setPreviewWord] = useState<string | null>(null);
-  const [previewDetail, setPreviewDetail] = useState<VocabLookupResult | null>(
-    null,
-  );
-  const [isPreviewLoading, setIsPreviewLoading] = useState(false);
-  const [previewLoadFailed, setPreviewLoadFailed] = useState(false);
-  const [isVocabSaving, setIsVocabSaving] = useState(false);
-  const [reportConfirmOpen, setReportConfirmOpen] = useState(false);
-  const [reportCreating, setReportCreating] = useState(false);
   const inputRef = useRef<HTMLTextAreaElement>(null);
-  const previewRequestIdRef = useRef(0);
   const bottomRef = useRef<HTMLDivElement>(null);
 
   const [chatModeOn, setChatModeOn] = useState(true);
   const [askExpressionOn, setAskExpressionOn] = useState(false);
-  const [showChatCards, setShowChatCards] = useState(true);
   const [turns, setTurns] = useState<ChatTurn[]>([]);
   const [input, setInput] = useState("");
   const [isSending, setIsSending] = useState(false);
@@ -667,9 +564,6 @@ export function ChatWindow({
   const [conversationSessions, setConversationSessions] = useState<ConversationSession[]>(
     [],
   );
-  const [sessionReports, setSessionReports] = useState<SessionReport[]>([]);
-  const [mainView, setMainView] = useState<MainView>({ type: "chat" });
-  const mainViewRef = useRef<MainView>({ type: "chat" });
   const [entitlement, setEntitlement] = useState<EntitlementState>({
     plan: "free",
     dailyUsed: 0,
@@ -680,7 +574,6 @@ export function ChatWindow({
   const [currentSessionCreatedAt, setCurrentSessionCreatedAt] = useState<number>(
     Date.now(),
   );
-  const [isArchiveOpen, setIsArchiveOpen] = useState(false);
   const [isChatHistoryOpen, setIsChatHistoryOpen] = useState(false);
   const [sessionEnded, setSessionEnded] = useState(false);
 
@@ -721,57 +614,10 @@ export function ChatWindow({
   }, [isPremium]);
 
   useEffect(() => {
-    mainViewRef.current = mainView;
-  }, [mainView]);
-
-  const pushMainView = useCallback((next: MainView) => {
-    if (typeof window !== "undefined") {
-      window.history.pushState(
-        { talkbankMainView: next } satisfies HistoryState,
-        "",
-      );
-    }
-    setMainView(next);
-    setIsArchiveOpen(false);
-  }, []);
-
-  const goBackMainView = useCallback(() => {
-    if (typeof window !== "undefined" && window.history.length > 1) {
-      window.history.back();
-      return;
-    }
-    setMainView({ type: "chat" });
-  }, []);
-
-  useEffect(() => {
-    const onPopState = (event: PopStateEvent) => {
-      const prev = mainViewRef.current;
-      const next =
-        (event.state as HistoryState | null)?.talkbankMainView ??
-        ({ type: "chat" } as const);
-      setMainView(next);
-      if (
-        next.type === "chat" &&
-        (prev.type === "sessionReport" || prev.type === "monthlyReport") &&
-        prev.returnPanel
-      ) {
-        setIsArchiveOpen(true);
-      }
-    };
-    window.addEventListener("popstate", onPopState);
-    return () => window.removeEventListener("popstate", onPopState);
-  }, []);
-
-  useEffect(() => {
     setSavedItems(loadSavedItems());
-    setSessionReports(purgeDemoMonthlyReports());
     const sessions = loadConversationSessions();
     setConversationSessions(sessions);
-    migrateSessionsToReports(sessions, locale);
-    setSessionReports(loadSessionReports());
     setLearningCards(loadLearningCards());
-    setShowChatCards(loadChatCardsVisible());
-    setVocabPickMode(loadVocabCheckOn());
 
     const resumable = findResumableSession(sessions);
     if (resumable) {
@@ -785,7 +631,6 @@ export function ChatWindow({
     }
 
     void refreshEntitlement();
-    // Migrate once on mount; locale is read for title/summary language of new imports only.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [refreshEntitlement]);
 
@@ -922,8 +767,12 @@ export function ChatWindow({
         mode: "chat",
         userMessage: message,
         assistantMessage:
-          data.assistantMessage?.trim() || "Got it. Tell me one more sentence.",
+          data.assistantMessage?.trim() || "Yeah, go on.",
         spokenReply: data.spokenReply?.trim() || undefined,
+        translatedMessage:
+          locale === "en"
+            ? undefined
+            : data.spokenReply?.trim() || undefined,
         correctionResult,
       },
     ]);
@@ -985,9 +834,12 @@ export function ChatWindow({
         userMessage: message,
         expressionResult,
         assistantMessage:
-          data.assistantMessage?.trim() ||
-          "Got it. Tell me one more sentence.",
+          data.assistantMessage?.trim() || "Yeah, go on.",
         spokenReply: data.spokenReply?.trim() || undefined,
+        translatedMessage:
+          locale === "en"
+            ? undefined
+            : data.spokenReply?.trim() || undefined,
         correctionResult,
         suppressCorrectionCard: true,
       },
@@ -1023,10 +875,22 @@ export function ChatWindow({
     );
 
     try {
+      const nearby = turns
+        .flatMap((turn) =>
+          [turn.userMessage, turn.assistantMessage].filter(
+            (line): line is string => Boolean(line?.trim()),
+          ),
+        )
+        .slice(-6);
       const response = await fetch(apiUrl("/api/translate"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ text: trimmed, locale }),
+        body: JSON.stringify({
+          text: trimmed,
+          locale,
+          sourceType: "conversation",
+          context: nearby,
+        }),
       });
       if (!response.ok) {
         throw new Error("translate failed");
@@ -1053,113 +917,12 @@ export function ChatWindow({
     }
   };
 
-  const toggleVocabCheck = () => {
-    setVocabPickMode((prev) => {
-      const next = !prev;
-      persistVocabCheckOn(next);
-      if (!next) {
-        setPreviewWord(null);
-        setPreviewDetail(null);
-        setIsPreviewLoading(false);
-        setPreviewLoadFailed(false);
-        setIsVocabSaving(false);
-      } else {
-        setVocabEntries(loadVocabulary());
-      }
-      return next;
-    });
-  };
-
-  const allModesOn =
-    chatModeOn && askExpressionOn && vocabPickMode && showChatCards;
+  const allModesOn = chatModeOn && askExpressionOn;
 
   const toggleAllModes = () => {
     const next = !allModesOn;
     setChatModeOn(next);
     setAskExpressionOn(next);
-    setVocabPickMode(next);
-    persistVocabCheckOn(next);
-    setShowChatCards(next);
-    persistChatCardsVisible(next);
-    if (!next) {
-      setPreviewWord(null);
-      setPreviewDetail(null);
-      setIsPreviewLoading(false);
-      setPreviewLoadFailed(false);
-      setIsVocabSaving(false);
-    } else {
-      setVocabEntries(loadVocabulary());
-    }
-  };
-
-  const closeVocabPreview = () => {
-    if (isVocabSaving) return;
-    setPreviewWord(null);
-    setPreviewDetail(null);
-    setIsPreviewLoading(false);
-    setPreviewLoadFailed(false);
-  };
-
-  const openVocabPreview = async (word: string) => {
-    const trimmed = word.trim();
-    if (!trimmed || isVocabSaving) return;
-
-    const requestId = previewRequestIdRef.current + 1;
-    previewRequestIdRef.current = requestId;
-
-    setPreviewWord(trimmed);
-    setPreviewDetail(null);
-    setPreviewLoadFailed(false);
-    setIsPreviewLoading(true);
-    setVocabEntries(loadVocabulary());
-
-    try {
-      const response = await fetch(apiUrl("/api/vocab/gloss"), {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ words: [trimmed], locale }),
-      });
-      if (!response.ok) {
-        throw new Error("gloss failed");
-      }
-      const data = (await response.json()) as { items?: VocabLookupResult[] };
-      if (previewRequestIdRef.current !== requestId) return;
-      const item =
-        Array.isArray(data.items) && data.items.length > 0
-          ? data.items[0]
-          : { word: trimmed, gloss: trimmed };
-      setPreviewDetail({
-        word: item.word || trimmed,
-        gloss: item.gloss || trimmed,
-        ...(item.example ? { example: item.example } : {}),
-        ...(item.partOfSpeech ? { partOfSpeech: item.partOfSpeech } : {}),
-      });
-    } catch {
-      if (previewRequestIdRef.current !== requestId) return;
-      setPreviewLoadFailed(true);
-    } finally {
-      if (previewRequestIdRef.current === requestId) {
-        setIsPreviewLoading(false);
-      }
-    }
-  };
-
-  const confirmSaveVocabWord = () => {
-    if (!previewWord || !previewDetail || isVocabSaving) return;
-    setIsVocabSaving(true);
-    try {
-      const updated = saveVocabularyWords(loadVocabulary(), [previewDetail]);
-      persistVocabulary(updated);
-      setVocabEntries(updated);
-      setBookToast(ui.vocabPickSavedToast);
-      setPreviewWord(null);
-      setPreviewDetail(null);
-      setPreviewLoadFailed(false);
-    } catch {
-      setBookToast(ui.vocabPickFailed);
-    } finally {
-      setIsVocabSaving(false);
-    }
   };
 
   const saveLearningCardFromTurn = (turn: ChatTurn) => {
@@ -1253,7 +1016,7 @@ export function ChatWindow({
       snapshotCurrentChat();
     }
 
-    // Ended sessions already have a frozen report — continue as a new session id.
+    // Ended sessions stay in history — continue as a new session id.
     if (session.endedAt) {
       setCurrentSessionId(makeSessionId());
       setCurrentSessionCreatedAt(Date.now());
@@ -1291,160 +1054,8 @@ export function ChatWindow({
     persistActiveConversationId(null);
     setConversationSessions(loadConversationSessions());
     setBookToast(ui.sessionSavedToHistoryToast);
-    setIsArchiveOpen(false);
     setIsChatHistoryOpen(false);
     startNewChat();
-  };
-
-  const openCreatedReport = (
-    report: SessionReport,
-    options?: { clearChat?: boolean },
-  ) => {
-    setSessionReports(loadSessionReports());
-    setConversationSessions(loadConversationSessions());
-    setBookToast(ui.reportCreatedToast);
-    setIsArchiveOpen(false);
-    setIsChatHistoryOpen(false);
-    if (options?.clearChat !== false) {
-      startNewChat();
-    }
-    if (tabMode && onSessionReportCreated) {
-      onSessionReportCreated(report);
-    } else {
-      pushMainView({
-        type: "sessionReport",
-        reportId: report.id,
-        returnPanel: false,
-      });
-    }
-  };
-
-  const createReportFromCurrent = () => {
-    if (!hasLearnerMessages(turns)) {
-      setBookToast(ui.reportCreateEmptyToast);
-      return;
-    }
-    if (!isPremium && !canCreateFreeReport()) {
-      openPaywall("PAYWALL_OPEN_REPORT_LIMIT");
-      setBookToast(ui.reportDailyLimitToast);
-      return;
-    }
-    setReportConfirmOpen(true);
-  };
-
-  const confirmCreateReportFromCurrent = async () => {
-    if (!hasLearnerMessages(turns)) {
-      setReportConfirmOpen(false);
-      setBookToast(ui.reportCreateEmptyToast);
-      return;
-    }
-    if (!isPremium && !canCreateFreeReport()) {
-      setReportConfirmOpen(false);
-      openPaywall("PAYWALL_OPEN_REPORT_LIMIT");
-      setBookToast(ui.reportDailyLimitToast);
-      return;
-    }
-    if (reportCreating) return;
-
-    const endedAt = Date.now();
-    const messages = toSessionMessages(turns);
-    const sessionId = currentSessionId;
-    const sessionCreatedAt = currentSessionCreatedAt;
-    const messageCount = turns.length;
-
-    setReportConfirmOpen(false);
-    setReportCreating(true);
-    if (tabMode) {
-      onSessionReportCreating?.();
-    }
-    startNewChat();
-
-    try {
-      const report = buildSessionReport({
-        sessionId,
-        createdAt: sessionCreatedAt,
-        messages,
-        messageCount,
-        locale,
-        endedAt,
-      });
-      saveSessionReport(report);
-      saveConversationSession({
-        id: sessionId,
-        title: report.title,
-        createdAt: sessionCreatedAt,
-        endedAt,
-        messageCount,
-        messages,
-      });
-      if (!isPremium) {
-        recordFreeReportCreated();
-      }
-      openCreatedReport(report, { clearChat: false });
-      void prepareReviewAfterReport(locale, report).then((pack) => {
-        if (pack) {
-          setBookToast(ui.quizReadyToast);
-        }
-      });
-    } catch (error) {
-      console.error("[report] create failed", error);
-      setBookToast(ui.reportCreateEmptyToast);
-    } finally {
-      setReportCreating(false);
-      if (tabMode) {
-        onSessionReportCreateFinished?.();
-      }
-    }
-  };
-
-  const createReportFromHistorySession = async (
-    session: ConversationSession,
-  ) => {
-    if (!session.messages?.length) {
-      setBookToast(ui.reportCreateEmptyToast);
-      return;
-    }
-    if (!isPremium && !canCreateFreeReport()) {
-      openPaywall("PAYWALL_OPEN_REPORT_LIMIT");
-      setBookToast(ui.reportDailyLimitToast);
-      return;
-    }
-    if (reportCreating) return;
-
-    setReportCreating(true);
-    try {
-      const endedAt = session.endedAt ?? Date.now();
-      const report = buildSessionReport({
-        sessionId: session.id,
-        createdAt: session.createdAt,
-        messages: session.messages,
-        messageCount: session.messageCount || session.messages.length,
-        locale,
-        endedAt,
-      });
-      saveSessionReport(report);
-      saveConversationSession({
-        ...session,
-        title: report.title,
-        endedAt,
-      });
-      if (!isPremium) {
-        recordFreeReportCreated();
-      }
-      openCreatedReport(report, {
-        clearChat: session.id === currentSessionId,
-      });
-      void prepareReviewAfterReport(locale, report).then((ready) => {
-        if (ready) {
-          setBookToast(ui.quizReadyToast);
-        }
-      });
-    } catch (error) {
-      console.error("[report] create from history failed", error);
-      setBookToast(ui.reportCreateEmptyToast);
-    } finally {
-      setReportCreating(false);
-    }
   };
 
   const handleAiStart = async () => {
@@ -1472,7 +1083,7 @@ export function ChatWindow({
         spokenReply?: string;
       };
       const assistantMessage =
-        data.assistantMessage?.trim() || "Hey! How's your day going?";
+        data.assistantMessage?.trim() || "Hey — you been up to anything?";
       setTurns([
         {
           id: `${Date.now()}`,
@@ -1480,6 +1091,10 @@ export function ChatWindow({
           userMessage: "",
           assistantMessage,
           spokenReply: data.spokenReply?.trim() || undefined,
+          translatedMessage:
+            locale === "en"
+              ? undefined
+              : data.spokenReply?.trim() || undefined,
         },
       ]);
       requestAnimationFrame(() => inputRef.current?.focus());
@@ -1552,71 +1167,24 @@ export function ChatWindow({
     }
   };
 
-  const openReport = (report: SessionReport, options?: { returnPanel?: boolean }) => {
-    pushMainView({
-      type: "sessionReport",
-      reportId: report.id,
-      returnPanel: options?.returnPanel ?? true,
-    });
-  };
-
-  const openMonthlyReport = (ym: YearMonth) => {
-    pushMainView({ type: "monthlyReport", ym, returnPanel: true });
-  };
-
-  const activeSessionReport =
-    mainView.type === "sessionReport"
-      ? sessionReports.find((r) => r.id === mainView.reportId) ?? null
-      : null;
-
-  const isReportMain =
-    !tabMode &&
-    (mainView.type === "monthlyReport" || mainView.type === "sessionReport");
-
   return (
     <>
       <section
         className={`flex w-full flex-col overflow-hidden rounded-2xl border border-slate-200 shadow-lg ${
-          tabMode ? "h-full" : "h-[92vh]"
-        } ${
-          isReportMain
-            ? "max-w-4xl bg-white"
-            : tabMode
-              ? "max-w-none bg-slate-50"
-              : "max-w-3xl bg-slate-50"
+          tabMode ? "h-full max-w-none bg-slate-50" : "h-[92vh] max-w-3xl bg-slate-50"
         }`}
       >
-        {!tabMode && mainView.type === "monthlyReport" ? (
-          <MonthlyReportPage
-            key={`${mainView.ym.year}-${mainView.ym.month}`}
-            reports={sessionReports}
-            locale={locale}
-            ui={ui}
-            initialYm={mainView.ym}
-            onBack={goBackMainView}
-            onOpenReport={(report) =>
-              openReport(report, { returnPanel: false })
-            }
-          />
-        ) : !tabMode &&
-          mainView.type === "sessionReport" &&
-          activeSessionReport ? (
-          <SessionReportView
-            key={activeSessionReport.id}
-            report={activeSessionReport}
-            ui={ui}
-            locale={locale}
-            onBack={goBackMainView}
-          />
-        ) : (
-          <>
         <header className="border-b border-slate-200 bg-white px-4 py-3">
           <div className="flex items-center justify-between gap-3">
             {!tabMode ? (
               <button
                 type="button"
-                onClick={() => setIsArchiveOpen(true)}
-                aria-label="Open reports menu"
+                onClick={() => {
+                  snapshotCurrentChat();
+                  setConversationSessions(loadConversationSessions());
+                  setIsChatHistoryOpen(true);
+                }}
+                aria-label={ui.chatHistoryTitle}
                 className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs text-slate-700 hover:bg-slate-50"
               >
                 ☰
@@ -1676,13 +1244,6 @@ export function ChatWindow({
             <div className="flex flex-col items-end gap-1">
               <button
                 type="button"
-                onClick={createReportFromCurrent}
-                className="rounded-full border border-teal-600 bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-800 hover:bg-teal-100"
-              >
-                {ui.createReport}
-              </button>
-              <button
-                type="button"
                 onClick={endCurrentSession}
                 className="rounded-full border border-teal-600 bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-800 hover:bg-teal-100"
               >
@@ -1740,12 +1301,20 @@ export function ChatWindow({
                         ? turn.expressionResult?.expression
                         : undefined
                     }
-                    pickMode={vocabPickMode}
-                    isWordSaved={(word) => isWordSaved(vocabEntries, word)}
-                    savingWord={previewWord}
-                    onWordClick={(word) => {
-                      void openVocabPreview(word);
-                    }}
+                    correction={
+                      turn.mode === "chat" &&
+                      turn.correctionResult &&
+                      turn.correctionResult.hasError &&
+                      shouldShowCorrectionCard(
+                        turn.userMessage,
+                        turn.correctionResult,
+                      )
+                        ? {
+                            original: turn.userMessage,
+                            corrected: turn.correctionResult.corrected,
+                          }
+                        : undefined
+                    }
                     labels={{
                       listen: ui.listen,
                     }}
@@ -1760,12 +1329,6 @@ export function ChatWindow({
                       message={turn.assistantMessage}
                       translatedMessage={turn.translatedMessage}
                       isTranslating={turn.isTranslating}
-                      pickMode={vocabPickMode}
-                      isWordSaved={(word) => isWordSaved(vocabEntries, word)}
-                      savingWord={previewWord}
-                      onWordClick={(word) => {
-                        void openVocabPreview(word);
-                      }}
                       labels={{
                         listen: ui.listen,
                         translate: ui.translate,
@@ -1787,67 +1350,27 @@ export function ChatWindow({
                 {turn.mode === "chat" &&
                   turn.correctionResult &&
                   turn.assistantMessage && (
-                    <>
-                      {showChatCards &&
-                      !turn.suppressCorrectionCard &&
-                      shouldShowCorrectionCard(
-                        turn.userMessage,
-                        turn.correctionResult,
-                      ) ? (
-                        <CorrectionCard
-                          original={turn.userMessage}
-                          corrected={turn.correctionResult.corrected}
-                          natural={turn.correctionResult.natural}
-                          explanation={turn.correctionResult.explanation}
-                          hasError={turn.correctionResult.hasError}
-                          feedback={
-                            turn.correctionResult.hasError
-                              ? ui.correctionFeedbackError
-                              : ui.correctionFeedbackCorrect
-                          }
-                          pickMode={vocabPickMode}
-                          isWordSaved={(word) => isWordSaved(vocabEntries, word)}
-                          savingWord={previewWord}
-                          onWordClick={(word) => {
-                            void openVocabPreview(word);
-                          }}
-                          labels={{
-                            listen: ui.listen,
-                            natural: ui.natural,
-                            blockTitle: ui.correctionBlockTitle,
-                            myLine: ui.correctionMyLine,
-                            tryThis: ui.correctionTryThis,
-                          }}
-                        />
-                      ) : null}
-                      <MessageBubble
-                        role="assistant"
-                        message={turn.assistantMessage}
-                        translatedMessage={turn.translatedMessage}
-                        isTranslating={turn.isTranslating}
-                        pickMode={vocabPickMode}
-                        isWordSaved={(word) => isWordSaved(vocabEntries, word)}
-                        savingWord={previewWord}
-                        onWordClick={(word) => {
-                          void openVocabPreview(word);
-                        }}
-                        labels={{
-                          listen: ui.listen,
-                          translate: ui.translate,
-                          translating: ui.translating,
-                          translation: ui.translation,
-                        }}
-                        onTranslate={
-                          locale === "en"
-                            ? undefined
-                            : () =>
-                                void translateAssistantMessage(
-                                  turn.id,
-                                  turn.assistantMessage || "",
-                                )
-                        }
-                      />
-                    </>
+                    <MessageBubble
+                      role="assistant"
+                      message={turn.assistantMessage}
+                      translatedMessage={turn.translatedMessage}
+                      isTranslating={turn.isTranslating}
+                      labels={{
+                        listen: ui.listen,
+                        translate: ui.translate,
+                        translating: ui.translating,
+                        translation: ui.translation,
+                      }}
+                      onTranslate={
+                        locale === "en"
+                          ? undefined
+                          : () =>
+                              void translateAssistantMessage(
+                                turn.id,
+                                turn.assistantMessage || "",
+                              )
+                      }
+                    />
                   )}
 
                 {turn.mode === "how_to_say" && turn.assistantMessage ? (
@@ -1856,12 +1379,6 @@ export function ChatWindow({
                     message={turn.assistantMessage}
                     translatedMessage={turn.translatedMessage}
                     isTranslating={turn.isTranslating}
-                    pickMode={vocabPickMode}
-                    isWordSaved={(word) => isWordSaved(vocabEntries, word)}
-                    savingWord={previewWord}
-                    onWordClick={(word) => {
-                      void openVocabPreview(word);
-                    }}
                     labels={{
                       listen: ui.listen,
                       translate: ui.translate,
@@ -1943,36 +1460,6 @@ export function ChatWindow({
                 aria-pressed={askExpressionOn}
               >
                 {ui.askExpression}
-              </button>
-              <button
-                type="button"
-                onClick={toggleVocabCheck}
-                className={`rounded-lg px-3 py-1.5 text-sm transition ${
-                  vocabPickMode
-                    ? "bg-teal-500 text-white"
-                    : "border border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
-                }`}
-                aria-pressed={vocabPickMode}
-              >
-                {ui.vocabSaveFromChat}
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  setShowChatCards((prev) => {
-                    const next = !prev;
-                    persistChatCardsVisible(next);
-                    return next;
-                  });
-                }}
-                className={`rounded-lg px-3 py-1.5 text-sm transition ${
-                  showChatCards
-                    ? "bg-teal-500 text-white"
-                    : "border border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
-                }`}
-                aria-pressed={showChatCards}
-              >
-                {ui.chatCardsLabel}
               </button>
               <span
                 className="ml-1 inline-flex items-center gap-2 text-[10px] text-slate-500"
@@ -2106,8 +1593,6 @@ export function ChatWindow({
             </div>
           </>
         </form>
-          </>
-        )}
       </section>
 
       {bookToast ? (
@@ -2121,97 +1606,14 @@ export function ChatWindow({
         </div>
       ) : null}
 
-      {previewWord ? (
-        <VocabWordPreview
-          word={previewWord}
-          detail={previewDetail}
-          isLoading={isPreviewLoading}
-          isSaving={isVocabSaving}
-          loadFailed={previewLoadFailed}
-          alreadySaved={isWordSaved(vocabEntries, previewWord)}
-          ui={ui}
-          onClose={closeVocabPreview}
-          onSave={confirmSaveVocabWord}
-        />
-      ) : null}
-
-      {reportConfirmOpen ? (
-        <div className="fixed inset-0 z-[80] flex items-end justify-center bg-slate-900/40 p-3 sm:items-center">
-          <button
-            type="button"
-            className="absolute inset-0 cursor-default"
-            aria-label={ui.reportCreateConfirmCancel}
-            onClick={() => {
-              if (!reportCreating) setReportConfirmOpen(false);
-            }}
-          />
-          <div
-            role="dialog"
-            aria-modal="true"
-            aria-labelledby="report-create-confirm-title"
-            className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl"
-          >
-            <div className="px-4 py-4">
-              <h2
-                id="report-create-confirm-title"
-                className="text-base font-semibold text-slate-900"
-              >
-                {ui.reportCreateConfirmTitle}
-              </h2>
-              <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                {ui.reportCreateConfirmBody}
-              </p>
-            </div>
-            <div className="flex gap-2 border-t border-slate-100 px-4 py-3">
-              <button
-                type="button"
-                onClick={() => setReportConfirmOpen(false)}
-                className="flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50"
-              >
-                {ui.reportCreateConfirmCancel}
-              </button>
-              <button
-                type="button"
-                onClick={() => void confirmCreateReportFromCurrent()}
-                className="flex-1 rounded-xl bg-slate-900 px-3 py-2.5 text-sm font-medium text-white hover:bg-slate-800"
-              >
-                {ui.reportCreateConfirmCta}
-              </button>
-            </div>
-          </div>
-        </div>
-      ) : null}
-
-      {!tabMode ? (
-        <ReportPanel
-          isOpen={isArchiveOpen}
-          reports={sessionReports}
-          locale={locale}
-          ui={ui}
-          onClose={() => setIsArchiveOpen(false)}
-          onDeleteReport={(id) => {
-            deleteSessionReport(id);
-            setSessionReports(loadSessionReports());
-          }}
-          onClearReports={() => {
-            clearSessionReports();
-            setSessionReports([]);
-          }}
-          onOpenReport={(report) => openReport(report, { returnPanel: true })}
-          onOpenMonthly={openMonthlyReport}
-        />
-      ) : null}
-
       <ChatHistoryPanel
         isOpen={isChatHistoryOpen}
         sessions={conversationSessions.filter((s) => s.messageCount > 0)}
         currentSessionId={currentSessionId}
-        reportedSessionIds={new Set(sessionReports.map((r) => r.sessionId))}
         locale={locale}
         ui={ui}
         onClose={() => setIsChatHistoryOpen(false)}
         onOpenSession={openConversationSession}
-        onCreateReport={createReportFromHistorySession}
         onDeleteSession={(id) => {
           if (id === currentSessionId) {
             return;

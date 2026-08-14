@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="process_text_analyze">Analyze</string>
+    <string name="screen_read_running">Screen English analysis</string>
+    <string name="screen_read_running_body">Analyzing English on the other app’s screen. Long-press the button to stop.</string>
+    <string name="screen_read_loading">Looking at this English...</string>
+    <string name="screen_read_failed">Couldn’t load the explanation. Try again.</string>
+</resources>

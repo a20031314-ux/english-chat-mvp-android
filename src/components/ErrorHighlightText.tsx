@@ -18,14 +18,23 @@ type DiffHighlightTextProps = {
   savingWord?: string | null;
   onWordClick?: (word: string) => void;
   className?: string;
+  tone?: "default" | "onDark";
 };
 
-const removeClass =
-  "rounded-sm bg-rose-500/15 px-0.5 font-semibold text-rose-700 underline decoration-2 decoration-rose-500 underline-offset-2";
-const addClass =
-  "rounded-sm bg-teal-500/15 px-0.5 font-semibold text-teal-800 underline decoration-2 decoration-teal-600 underline-offset-2";
-const gapClass =
-  "mx-0.5 inline-flex items-center rounded-sm border border-dashed border-rose-400 bg-rose-50 px-1 py-0.5 text-[11px] font-semibold leading-none text-rose-700";
+const markClasses = {
+  default: {
+    remove:
+      "rounded-sm bg-rose-500/15 px-0.5 font-semibold text-rose-700 underline decoration-2 decoration-rose-500 underline-offset-2",
+    add: "rounded-sm bg-teal-500/15 px-0.5 font-semibold text-teal-800 underline decoration-2 decoration-teal-600 underline-offset-2",
+    gap: "mx-0.5 inline-flex items-center rounded-sm border border-dashed border-rose-400 bg-rose-50 px-1 py-0.5 text-[11px] font-semibold leading-none text-rose-700",
+  },
+  onDark: {
+    remove:
+      "rounded-sm bg-rose-400/35 px-0.5 font-semibold text-rose-100 underline decoration-2 decoration-rose-300 underline-offset-2",
+    add: "rounded-sm bg-teal-400/30 px-0.5 font-semibold text-teal-100 underline decoration-2 decoration-teal-200 underline-offset-2",
+    gap: "mx-0.5 inline-flex items-center rounded-sm border border-dashed border-rose-200/80 bg-rose-400/20 px-1 py-0.5 text-[11px] font-semibold leading-none text-rose-100",
+  },
+};
 
 function PickableToken({
   text,
@@ -73,7 +82,9 @@ export function DiffHighlightText({
   savingWord = null,
   onWordClick,
   className = "",
+  tone = "default",
 }: DiffHighlightTextProps) {
+  const marks = markClasses[tone];
   if (side === "original") {
     const parts = originalHighlightParts(original, corrected);
     const hasMarks = parts.some(
@@ -98,7 +109,7 @@ export function DiffHighlightText({
             return (
               <span
                 key={`gap-${index}`}
-                className={gapClass}
+                className={marks.gap}
                 title={part.missingHint}
               >
                 +{part.missingHint}
@@ -112,7 +123,7 @@ export function DiffHighlightText({
             <PickableToken
               key={`${index}-${part.text}`}
               text={part.text}
-              markClass={part.error ? removeClass : undefined}
+              markClass={part.error ? marks.remove : undefined}
               pickMode={pickMode}
               isWordSaved={isWordSaved}
               savingWord={savingWord}
@@ -145,7 +156,7 @@ export function DiffHighlightText({
         <PickableToken
           key={`${index}-${part.text}`}
           text={part.text}
-          markClass={part.added ? addClass : undefined}
+          markClass={part.added ? marks.add : undefined}
           pickMode={pickMode}
           isWordSaved={isWordSaved}
           savingWord={savingWord}

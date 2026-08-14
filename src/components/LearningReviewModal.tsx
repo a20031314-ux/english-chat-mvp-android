@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
 import type { UICopy } from "@/lib/copy";
 import type { LearningCard, ReviewLevel } from "@/lib/learningCards";
 import { shouldShowNatural } from "@/lib/learningCards";
@@ -52,9 +53,10 @@ export function LearningReviewModal({
             <p className="text-[11px] font-medium uppercase tracking-wide text-slate-500">
               {ui.cardMySentence}
             </p>
-            <p className="mt-2 text-base leading-relaxed text-slate-900" translate="no">
-              {card.original}
-            </p>
+            <AnalyzableEnglish
+              sentence={card.original}
+              className="mt-2 text-base leading-relaxed text-slate-900"
+            />
           </div>
 
           {!revealed ? (
@@ -71,9 +73,10 @@ export function LearningReviewModal({
                 <p className="text-[11px] font-medium uppercase tracking-wide text-emerald-800">
                   {ui.cardBetterExpression}
                 </p>
-                <p className="mt-1.5 text-base font-medium text-emerald-950" translate="no">
-                  {card.corrected}
-                </p>
+                <AnalyzableEnglish
+                  sentence={card.corrected}
+                  className="mt-1.5 text-base font-medium text-emerald-950"
+                />
               </div>
 
               {showNatural && (
@@ -81,9 +84,10 @@ export function LearningReviewModal({
                   <p className="text-[11px] font-medium uppercase tracking-wide text-sky-800">
                     {ui.cardMoreNatural}
                   </p>
-                  <p className="mt-1.5 text-base text-sky-950" translate="no">
-                    {card.natural}
-                  </p>
+                  <AnalyzableEnglish
+                    sentence={card.natural ?? ""}
+                    className="mt-1.5 text-base text-sky-950"
+                  />
                 </div>
               )}
 
