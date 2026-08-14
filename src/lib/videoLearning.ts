@@ -5,14 +5,76 @@ export type VideoSubtitle = {
   original: string;
   translation: string;
   rawOriginal?: string;
+  meaning?: string;
+  literalMeaning?: string;
+  tone?: {
+    formality: string;
+    politeness: string;
+    intimacy: string;
+    emotion: string;
+    intensity: string;
+    confidence: string;
+    hesitation: string;
+    humor: string;
+    sarcasm: string;
+    attitude: string;
+  };
+  speakerStyle?: string;
+  interpretationConfidence?: number;
   confidence?: number;
-  translationStatus?: "draft" | "final";
+  translationStatus?: "draft" | "final" | "english";
+  /** Dev-only caption decision trace (never shown in production UI). */
+  debug?: {
+    original: string;
+    scene?: {
+      setting?: string;
+      situation?: string;
+      interaction?: string;
+      mood?: string;
+      visualCues?: string[];
+      confidence?: number;
+      startTime: number;
+      endTime: number;
+    };
+    previous: string[];
+    next: string[];
+    meaning?: string;
+    toneSummary?: string;
+    finalSubtitle: string;
+    nativeUnderstanding?: {
+      understoodMeaning: string;
+      references?: Array<{
+        expression: string;
+        refersTo: string;
+        evidenceLevel?: string;
+        confidence?: number;
+      }>;
+      intent?: string;
+      tone?: string;
+    };
+  };
+  /** Native-viewer understanding reused by 「이 표현은 뭐야?」. */
+  nativeUnderstanding?: {
+    understoodMeaning: string;
+    references?: Array<{
+      expression: string;
+      refersTo: string;
+      evidenceLevel?: string;
+      confidence?: number;
+    }>;
+    intent?: string;
+    tone?: string;
+    establishedNote?: string;
+    confidence?: number;
+  };
 };
 
 export type VideoSubtitleAnalysis = {
   subtitleId: string;
   keyExpression: string;
   keyMeaning: string;
+  /** Why this caption was chosen (learning layer — not shown on the caption itself). */
+  whyThisSubtitle?: string;
   meaningInSentence: string;
   nuance: string;
   similar: string[];
@@ -71,14 +133,35 @@ export function parseYouTubeInput(raw: string):
 export function findActiveSubtitle(
   currentTime: number,
   subtitles: VideoSubtitle[],
+  mode: "english" | "korean" = "korean",
 ): VideoSubtitle | null {
   if (subtitles.length === 0) return null;
-  let current: VideoSubtitle | null = null;
-  for (const cue of subtitles) {
-    if (cue.startTime <= currentTime) current = cue;
-    else break;
+
+  const ready =
+    mode === "english"
+      ? subtitles.filter((cue) => cue.original.trim().length > 0)
+      : subtitles.filter((cue) => {
+          if (cue.translationStatus === "draft") return false;
+          if (cue.translationStatus === "english") return false;
+          const text = cue.translation.trim();
+          if (!text) return false;
+          if (text === cue.original.trim()) return false;
+          return /[가-힣]/.test(text) || cue.translationStatus === "final";
+        });
+  if (ready.length === 0) return null;
+
+  for (const cue of ready) {
+    if (currentTime >= cue.startTime && currentTime < cue.endTime) {
+      return cue;
+    }
   }
-  return current ?? subtitles[0] ?? null;
+  let best: VideoSubtitle | null = null;
+  for (const cue of ready) {
+    if (cue.endTime <= currentTime && currentTime - cue.endTime <= 0.35) {
+      if (!best || cue.endTime > best.endTime) best = cue;
+    }
+  }
+  return best;
 }
 
 function asSave(raw: unknown): VideoLearningSave | null {

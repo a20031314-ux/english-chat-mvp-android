@@ -14,9 +14,9 @@ function fallbackContext(segments: NormalizedSegment[]): VideoContext {
     .join(" ")
     .slice(0, 400);
   return {
-    topic: "English video",
+    topic: "video",
     domain: "general",
-    summary: summary || "Spoken English from a video.",
+    summary: summary || "Spoken audio from a video.",
     speakerStyle: "unknown",
     terminology: [],
   };
@@ -38,6 +38,10 @@ function parseTerms(value: unknown): VideoContextTerm[] {
   return terms.slice(0, 40);
 }
 
+export function quickVideoContext(segments: NormalizedSegment[]): VideoContext {
+  return fallbackContext(segments);
+}
+
 export async function analyzeVideoContext(
   segments: NormalizedSegment[],
 ): Promise<VideoContext> {
@@ -57,30 +61,29 @@ export async function analyzeVideoContext(
       messages: [
         {
           role: "system",
-          content: `Analyze this English video transcript. Do not translate the transcript.
+          content: `Analyze this video transcript. Detect its language. Do not translate the transcript.
 
 Return JSON:
 {
   "topic": "short topic",
   "domain": "e.g. software development, everyday conversation, science",
-  "summary": "2-4 sentences in English",
+  "summary": "2-4 sentences in the transcript language",
   "speakerStyle": "e.g. casual technical explanation",
   "terminology": [
-    {"term": "...", "meaning": "optional English gloss", "preferredTranslation": "Korean or keep English"}
+    {"term": "...", "meaning": "optional gloss", "preferredTranslation": "how to keep this term in the learner locale"}
   ]
 }
 
 Terminology rules:
 - List domain terms the translator must not mistranslate.
-- If developers/speakers keep the English term in Korean speech, set preferredTranslation to that English term.
-- Do not force Korean for React, hook, component, runtime, repository, API, etc. when the field uses the English word.`,
+- Keep terms that speakers leave in the original (product names, APIs, titles).`,
         },
         { role: "user", content: transcript },
       ],
     });
     const parsed = asRecord(parseModelJson(completion.choices[0]?.message?.content));
     return {
-      topic: asString(parsed?.topic) || "English video",
+      topic: asString(parsed?.topic) || "video",
       domain: asString(parsed?.domain) || "general",
       summary: asString(parsed?.summary) || fallbackContext(segments).summary,
       speakerStyle: asString(parsed?.speakerStyle) || "spoken",

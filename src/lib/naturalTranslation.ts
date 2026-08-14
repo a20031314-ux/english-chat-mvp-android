@@ -48,7 +48,7 @@ const SOURCE_HINT: Record<TranslationSourceType, string> = {
   web: "Web/article English. Register may be newsy or casual.",
   community: "Forum/comment English. Slang, sarcasm, memes, and emoji are possible — never assumed.",
   social: "Social/SNS English. Abbreviations and tone markers are possible — never assumed.",
-  subtitle: "Spoken line as heard. Keep the speech act (ask, joke, refuse).",
+  subtitle: "Theatrical / streaming subtitle. Sense-for-sense, short enough to read on screen, spoken register — not a textbook gloss of each word.",
   formal: "More careful English. Keep a natural formal register; do not make it slangy.",
   unknown: "Register unknown. Infer only from the line and nearby context.",
 };

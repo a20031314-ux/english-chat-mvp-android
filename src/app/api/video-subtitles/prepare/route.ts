@@ -4,14 +4,14 @@ import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { prepareVideoTranscript } from "@/lib/videoSubtitle/pipeline";
 
 export const runtime = "nodejs";
-export const maxDuration = 60;
+export const maxDuration = 300;
 
 export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
 }
 
 export async function POST(request: NextRequest) {
-  let body: { videoUrl?: unknown };
+  let body: { videoUrl?: unknown; locale?: unknown };
   try {
     body = await request.json();
   } catch {
@@ -19,8 +19,9 @@ export async function POST(request: NextRequest) {
   }
 
   const videoUrl = typeof body.videoUrl === "string" ? body.videoUrl : "";
+  const locale = typeof body.locale === "string" && body.locale ? body.locale : "ko";
   try {
-    const prepared = await prepareVideoTranscript(videoUrl);
+    const prepared = await prepareVideoTranscript(videoUrl, locale);
     return jsonWithCors(request, prepared);
   } catch (error) {
     if (error instanceof VideoPipelineError) {

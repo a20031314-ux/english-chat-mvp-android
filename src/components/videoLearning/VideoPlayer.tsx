@@ -12,6 +12,10 @@ import { formatSubtitleTime } from "@/lib/videoLearning";
 
 export type VideoPlayerHandle = {
   seekTo: (seconds: number) => void;
+  play: () => void;
+  pause: () => void;
+  /** Seek to start, play until end, then pause. */
+  playSegment: (start: number, end: number) => void;
 };
 
 type YtPlayer = {
@@ -20,6 +24,7 @@ type YtPlayer = {
   seekTo: (seconds: number, allowSeekAhead: boolean) => void;
   getCurrentTime: () => number;
   getPlayerState: () => number;
+  unMute?: () => void;
   destroy: () => void;
 };
 
@@ -36,6 +41,7 @@ declare global {
           events: {
             onReady?: () => void;
             onError?: () => void;
+            onStateChange?: (event: { data: number }) => void;
           };
         },
       ) => YtPlayer;
@@ -94,22 +100,51 @@ export const VideoPlayer = forwardRef<
     videoId: string;
     active: boolean;
     durationHint: number;
+    autoPlay?: boolean;
     onTimeUpdate: (seconds: number) => void;
+    onEnded?: () => void;
+    onSegmentEnd?: () => void;
   }
 >(function VideoPlayer(
-  { videoId, active, durationHint, onTimeUpdate },
+  {
+    videoId,
+    active,
+    durationHint,
+    autoPlay = false,
+    onTimeUpdate,
+    onEnded,
+    onSegmentEnd,
+  },
   ref,
 ) {
   const hostRef = useRef<HTMLDivElement>(null);
   const playerRef = useRef<YtPlayer | null>(null);
   const clockRef = useRef(0);
   const playingRef = useRef(false);
+  const endedFiredRef = useRef(false);
+  /** Exclusive end time for clip playback; null = normal play. */
+  const segmentEndRef = useRef<number | null>(null);
+  const segmentTokenRef = useRef(0);
+  const segmentTimerRef = useRef<number | null>(null);
+  /** After a clip stop, ignore YT "still playing" sync briefly. */
+  const suppressYtPlaySyncUntilRef = useRef(0);
   const onTimeRef = useRef(onTimeUpdate);
+  const onEndedRef = useRef(onEnded);
+  const onSegmentEndRef = useRef(onSegmentEnd);
   onTimeRef.current = onTimeUpdate;
+  onEndedRef.current = onEnded;
+  onSegmentEndRef.current = onSegmentEnd;
 
   const [playing, setPlaying] = useState(false);
   const [displayTime, setDisplayTime] = useState(0);
   const duration = Math.max(durationHint, 70);
+
+  const clearSegmentTimer = useCallback(() => {
+    if (segmentTimerRef.current != null) {
+      window.clearTimeout(segmentTimerRef.current);
+      segmentTimerRef.current = null;
+    }
+  }, []);
 
   const emitTime = useCallback(
     (seconds: number) => {
@@ -121,8 +156,68 @@ export const VideoPlayer = forwardRef<
     [duration],
   );
 
+  const finishSegment = useCallback(
+    (endAt: number | null) => {
+      clearSegmentTimer();
+      const hadSegment = segmentEndRef.current != null;
+      segmentEndRef.current = null;
+      playingRef.current = false;
+      setPlaying(false);
+      suppressYtPlaySyncUntilRef.current = Date.now() + 800;
+      try {
+        playerRef.current?.pauseVideo();
+        if (endAt != null) {
+          playerRef.current?.seekTo(endAt, true);
+          emitTime(endAt);
+        }
+      } catch {
+        // ignore
+      }
+      if (hadSegment) onSegmentEndRef.current?.();
+    },
+    [clearSegmentTimer, emitTime],
+  );
+
+  const pause = useCallback(() => {
+    clearSegmentTimer();
+    segmentTokenRef.current += 1;
+    const hadSegment = segmentEndRef.current != null;
+    const endAt = segmentEndRef.current;
+    segmentEndRef.current = null;
+    playingRef.current = false;
+    setPlaying(false);
+    suppressYtPlaySyncUntilRef.current = Date.now() + 400;
+    try {
+      playerRef.current?.pauseVideo();
+      if (hadSegment && endAt != null) {
+        playerRef.current?.seekTo(endAt, true);
+        emitTime(endAt);
+      }
+    } catch {
+      // ignore
+    }
+    if (hadSegment) onSegmentEndRef.current?.();
+  }, [clearSegmentTimer, emitTime]);
+
+  const play = useCallback(() => {
+    clearSegmentTimer();
+    segmentTokenRef.current += 1;
+    segmentEndRef.current = null;
+    endedFiredRef.current = false;
+    suppressYtPlaySyncUntilRef.current = 0;
+    playingRef.current = true;
+    setPlaying(true);
+    try {
+      playerRef.current?.unMute?.();
+      playerRef.current?.playVideo();
+    } catch {
+      // ignore
+    }
+  }, [clearSegmentTimer]);
+
   const seekTo = useCallback(
     (seconds: number) => {
+      endedFiredRef.current = false;
       emitTime(seconds);
       try {
         playerRef.current?.seekTo(seconds, true);
@@ -133,18 +228,74 @@ export const VideoPlayer = forwardRef<
     [emitTime],
   );
 
-  useImperativeHandle(ref, () => ({ seekTo }), [seekTo]);
+  const playSegment = useCallback(
+    (start: number, end: number) => {
+      clearSegmentTimer();
+      const safeStart = Math.max(0, start);
+      const rawEnd = Number.isFinite(end) ? end : safeStart + 3;
+      // Allow multi-cue ranges; still hard-cap runaway endTimes.
+      const safeEnd = Math.min(
+        Math.max(safeStart + 0.45, rawEnd),
+        safeStart + 180,
+      );
+
+      const token = segmentTokenRef.current + 1;
+      segmentTokenRef.current = token;
+      segmentEndRef.current = safeEnd;
+      endedFiredRef.current = false;
+      suppressYtPlaySyncUntilRef.current = 0;
+      emitTime(safeStart);
+      playingRef.current = true;
+      setPlaying(true);
+
+      try {
+        const player = playerRef.current;
+        player?.unMute?.();
+        player?.seekTo(safeStart, true);
+        window.setTimeout(() => {
+          if (segmentTokenRef.current !== token) return;
+          try {
+            player?.playVideo();
+          } catch {
+            // ignore
+          }
+        }, 100);
+      } catch {
+        // ignore
+      }
+
+      // Backup stop — don't rely only on time polling (YT can lag).
+      const budgetMs = Math.ceil((safeEnd - safeStart) * 1000) + 250;
+      segmentTimerRef.current = window.setTimeout(() => {
+        if (segmentTokenRef.current !== token) return;
+        if (segmentEndRef.current == null) return;
+        finishSegment(safeEnd);
+      }, budgetMs);
+    },
+    [clearSegmentTimer, emitTime, finishSegment],
+  );
+
+  useImperativeHandle(
+    ref,
+    () => ({ seekTo, play, pause, playSegment }),
+    [seekTo, play, pause, playSegment],
+  );
+
+  const autoPlayRef = useRef(autoPlay);
+  autoPlayRef.current = autoPlay;
 
   useEffect(() => {
     let cancelled = false;
     const host = hostRef.current;
     if (!host) return;
+    endedFiredRef.current = false;
 
     void (async () => {
       try {
         await loadYouTubeApi();
         if (cancelled || !hostRef.current || !window.YT?.Player) return;
-        const player = new window.YT.Player(hostRef.current, {
+        let player!: YtPlayer;
+        player = new window.YT.Player(hostRef.current, {
           videoId,
           width: "100%",
           height: "100%",
@@ -155,8 +306,29 @@ export const VideoPlayer = forwardRef<
             origin: window.location.origin,
             enablejsapi: 1,
             controls: 1,
+            autoplay: autoPlayRef.current ? 1 : 0,
           },
           events: {
+            onReady: () => {
+              if (!autoPlayRef.current) return;
+              try {
+                player.playVideo();
+                playingRef.current = true;
+                setPlaying(true);
+              } catch {
+                // user gesture may still be required
+              }
+            },
+            onStateChange: (event) => {
+              if (event.data === 0 && !endedFiredRef.current) {
+                endedFiredRef.current = true;
+                playingRef.current = false;
+                setPlaying(false);
+                segmentEndRef.current = null;
+                clearSegmentTimer();
+                onEndedRef.current?.();
+              }
+            },
             onError: () => {
               // keep mock transport
             },
@@ -170,6 +342,7 @@ export const VideoPlayer = forwardRef<
 
     return () => {
       cancelled = true;
+      clearSegmentTimer();
       try {
         playerRef.current?.destroy();
       } catch {
@@ -177,7 +350,7 @@ export const VideoPlayer = forwardRef<
       }
       playerRef.current = null;
     };
-  }, [videoId]);
+  }, [videoId, clearSegmentTimer]);
 
   useEffect(() => {
     const timer = window.setInterval(() => {
@@ -188,31 +361,47 @@ export const VideoPlayer = forwardRef<
           clockRef.current = t;
           setDisplayTime(t);
           onTimeRef.current(t);
+
+          const segmentEnd = segmentEndRef.current;
+          if (segmentEnd != null && t >= segmentEnd - 0.08) {
+            finishSegment(segmentEnd);
+            return;
+          }
         }
-        if (state === 1 && !playingRef.current) {
-          playingRef.current = true;
-          setPlaying(true);
-        } else if ((state === 2 || state === 0) && playingRef.current) {
+
+        const suppressPlaySync = Date.now() < suppressYtPlaySyncUntilRef.current;
+        if (state === 1 && !playingRef.current && !suppressPlaySync) {
+          // User pressed YT native play — leave segment mode.
+          if (segmentEndRef.current == null) {
+            playingRef.current = true;
+            setPlaying(true);
+          }
+        } else if (
+          (state === 2 || state === 0) &&
+          playingRef.current &&
+          segmentEndRef.current == null
+        ) {
           playingRef.current = false;
           setPlaying(false);
+        }
+
+        if (state === 0 && !endedFiredRef.current) {
+          endedFiredRef.current = true;
+          segmentEndRef.current = null;
+          clearSegmentTimer();
+          onEndedRef.current?.();
         }
       } catch {
         // ignore
       }
-    }, 400);
+    }, 50);
     return () => window.clearInterval(timer);
-  }, [videoId]);
+  }, [videoId, finishSegment, clearSegmentTimer]);
 
   useEffect(() => {
     if (active) return;
-    playingRef.current = false;
-    setPlaying(false);
-    try {
-      playerRef.current?.pauseVideo();
-    } catch {
-      // ignore
-    }
-  }, [active]);
+    pause();
+  }, [active, pause]);
 
   useEffect(() => {
     if (!playing) return;
@@ -231,13 +420,24 @@ export const VideoPlayer = forwardRef<
         // keep local clock
       }
       emitTime(next);
-      if (next >= duration) {
-        playingRef.current = false;
-        setPlaying(false);
-        try {
-          playerRef.current?.pauseVideo();
-        } catch {
-          // ignore
+
+      const segmentEnd = segmentEndRef.current;
+      if (segmentEnd != null && next >= segmentEnd - 0.08) {
+        finishSegment(segmentEnd);
+        return;
+      }
+
+      if (segmentEndRef.current == null && next >= duration - 0.15) {
+        if (!endedFiredRef.current) {
+          endedFiredRef.current = true;
+          playingRef.current = false;
+          setPlaying(false);
+          try {
+            playerRef.current?.pauseVideo();
+          } catch {
+            // ignore
+          }
+          onEndedRef.current?.();
         }
         return;
       }
@@ -245,18 +445,11 @@ export const VideoPlayer = forwardRef<
     };
     frame = requestAnimationFrame(tick);
     return () => cancelAnimationFrame(frame);
-  }, [playing, duration, emitTime]);
+  }, [playing, duration, emitTime, finishSegment]);
 
   const togglePlay = () => {
-    const next = !playingRef.current;
-    playingRef.current = next;
-    setPlaying(next);
-    try {
-      if (next) playerRef.current?.playVideo();
-      else playerRef.current?.pauseVideo();
-    } catch {
-      // ignore
-    }
+    if (playingRef.current) pause();
+    else play();
   };
 
   return (

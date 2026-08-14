@@ -7,9 +7,10 @@ import {
 export function useActiveSubtitle(
   currentTime: number,
   subtitles: VideoSubtitle[],
+  mode: "english" | "korean" = "korean",
 ): VideoSubtitle | null {
   return useMemo(
-    () => findActiveSubtitle(currentTime, subtitles),
-    [currentTime, subtitles],
+    () => findActiveSubtitle(currentTime, subtitles, mode),
+    [currentTime, subtitles, mode],
   );
 }

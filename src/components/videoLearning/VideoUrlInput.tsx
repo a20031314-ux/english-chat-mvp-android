@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent } from "react";
+import { FormEvent, type ReactNode } from "react";
 import type { UICopy } from "@/lib/copy";
 
 export function VideoUrlInput({
@@ -9,12 +9,14 @@ export function VideoUrlInput({
   error,
   onChange,
   onSubmit,
+  children,
 }: {
   ui: UICopy;
   value: string;
   error: string | null;
   onChange: (value: string) => void;
   onSubmit: () => void;
+  children?: ReactNode;
 }) {
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
@@ -49,6 +51,7 @@ export function VideoUrlInput({
       {error ? (
         <p className="mt-3 text-center text-sm text-rose-700">{error}</p>
       ) : null}
+      {children}
     </div>
   );
 }

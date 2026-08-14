@@ -178,14 +178,15 @@ export const MOCK_VIDEO_ANALYSES: Record<string, VideoSubtitleAnalysis> = {
     subtitleId: "9",
     keyExpression: "go that far",
     keyMeaning: "그 정도까지 주장하다 / 나아가다",
+    whyThisSubtitle:
+      "go that far는 여기서 물리적으로 멀리 간다는 뜻이 아니라, 상대 주장이 그 정도 수준까지 나아간다는 의미입니다. I wouldn't이 붙으며 직설적 반박보다 한발 물러선 태도가 됩니다. 그래서 「그렇게까지 말하진 않겠어요」처럼 옮기는 편이 화자 태도에 가깝습니다.",
     meaningInSentence:
-      "`I wouldn't go that far.`는 직역하면 “나는 그렇게 멀리 가지 않을 것이다”지만, 실제 회화에서는 상대방의 주장에 대해 “거기까지는 동의하지 않는다”는 의미로 자주 쓰입니다.",
+      "상대 의견에 선을 긋되, 완전히 싸움을 걸지는 않는 한 박자 늦은 거절입니다.",
     nuance:
       "상대 의견을 완전히 부정하기보다 조금 선을 긋는 부드러운 표현입니다.",
     similar: [
-      "I wouldn't say that.",
-      "That's a bit much.",
-      "I don't think I'd put it that way.",
+      "그렇게까지 말하긴 좀 그래요.",
+      "저도 거기까지는 동의 못 하겠어요.",
     ],
   },
   "10": {

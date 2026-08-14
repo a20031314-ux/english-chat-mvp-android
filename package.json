@@ -1,6 +1,6 @@
 {
   "name": "english-chat-mvp",
-  "version": "2.18.0",
+  "version": "2.19.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -9,7 +9,9 @@
     "build:android": "npm run build:capacitor && npx cap sync android",
     "build:web": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "test:subtitle": "node --experimental-strip-types --test src/lib/videoSubtitle/groupMeaningUnits.test.ts src/lib/videoSubtitle/windows.test.ts src/lib/videoSubtitle/sceneContext.speech.test.ts src/lib/videoSubtitle/viewerContext.test.ts",
+    "compare:subtitle": "node --experimental-strip-types scripts/compare-subtitle-naturalization.mjs"
   },
   "dependencies": {
     "@capacitor-community/text-to-speech": "^8.0.2",

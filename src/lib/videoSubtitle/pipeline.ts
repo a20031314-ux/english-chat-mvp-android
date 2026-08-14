@@ -1,18 +1,11 @@
-import { parseYouTubeInput } from "@/lib/videoLearning";
-import { analyzeVideoContext } from "@/lib/videoSubtitle/analyzeVideoContext";
+import { buildSceneContextsForWindow } from "@/lib/videoSubtitle/buildSceneContexts";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { extractAudio } from "@/lib/videoSubtitle/extractAudio";
-import { formatSubtitles } from "@/lib/videoSubtitle/formatSubtitles";
 import { getOpenAIClient } from "@/lib/videoSubtitle/openaiClient";
 import { normalizeTranscript } from "@/lib/videoSubtitle/normalizeTranscript";
-import {
-  transcribeAudio,
-  transcriptLooksEnglish,
-} from "@/lib/videoSubtitle/transcribeAudio";
-import {
-  retryMissingTranslations,
-  translateSegments,
-} from "@/lib/videoSubtitle/translateSegments";
+import { sketchVideoContent } from "@/lib/videoSubtitle/sketchVideoContent";
+import { transcribeAudio } from "@/lib/videoSubtitle/transcribeAudio";
+import { translateSubtitleWindowPipeline } from "@/lib/videoSubtitle/translateSegments";
 import type {
   NormalizedSegment,
   PreparedTranscript,
@@ -20,11 +13,24 @@ import type {
   SubtitleSegment,
   TranslateWindowInput,
 } from "@/lib/videoSubtitle/types";
-import { validateTranslation } from "@/lib/videoSubtitle/validateTranslation";
+import { parseYouTubeInput } from "@/lib/videoLearning";
 import { transcribeYouTubeCaptions } from "@/lib/videoSubtitle/youtubeCaptions";
 import { resolveYouTubeSource } from "@/lib/videoSubtitle/youtubePlayer";
+import {
+  FIRST_WINDOW_SECONDS,
+  neighborsAround,
+  processingWindows,
+  segmentsInWindow,
+} from "@/lib/videoSubtitle/windows";
+import type { SceneContext } from "@/lib/videoSubtitle/sceneTypes";
+import {
+  emptyViewerContext,
+  type ViewerContext,
+} from "@/lib/videoSubtitle/viewerTypes";
 
-const MAX_SEGMENTS = 480;
+const MAX_SEGMENTS = 800;
+/** Prefer as much audio as Whisper/download allows for full-video grasp. */
+const WHISPER_MAX_SECONDS = 900;
 
 function isMarkerOnly(text: string): boolean {
   return /^\s*\[(music|applause|laughter|silence|inaudible).*\]\s*$/i.test(
@@ -42,19 +48,54 @@ function usableSpeech(segments: SttSegment[]): SttSegment[] {
     .slice(0, MAX_SEGMENTS);
 }
 
-function coverage(segments: SttSegment[], durationSeconds: number): number {
-  if (segments.length === 0) return 0;
-  if (durationSeconds <= 0) return 1;
-  const end = segments[segments.length - 1]!.endTime;
-  return Math.min(1, end / durationSeconds);
-}
-
 function withoutWords(segments: NormalizedSegment[]): NormalizedSegment[] {
   return segments.map(({ words: _words, ...rest }) => rest);
 }
 
+async function buildFirstWindowCues(
+  segments: NormalizedSegment[],
+  locale: string,
+  context: PreparedTranscript["context"],
+  sceneContexts?: SceneContext[],
+  viewerContext?: ViewerContext,
+): Promise<{ cues: SubtitleSegment[]; viewerContext: ViewerContext }> {
+  const window = { start: 0, end: FIRST_WINDOW_SECONDS };
+  let currentSegments = segmentsInWindow(segments, window);
+  if (currentSegments.length === 0) {
+    currentSegments = segments.slice(0, 8);
+  }
+  if (currentSegments.length === 0) {
+    return {
+      cues: [],
+      viewerContext:
+        viewerContext ??
+        emptyViewerContext({
+          topic: context.topic,
+          summary: context.summary,
+        }),
+    };
+  }
+  const startIndex = segments.indexOf(currentSegments[0]!);
+  const endIndex = startIndex + currentSegments.length;
+  const { previous, next } = neighborsAround(segments, startIndex, endIndex);
+  return translateSubtitleWindow({
+    locale,
+    context,
+    currentSegments,
+    previousSegments: previous,
+    nextSegments: next,
+    sceneContexts,
+    viewerContext,
+  });
+}
+
+/**
+ * Prepare full transcript + topic, then adapt the first 20s window so playback
+ * can start. Remaining 20s windows are adapted on the client.
+ */
 export async function prepareVideoTranscript(
   videoUrl: string,
+  locale = "ko",
 ): Promise<PreparedTranscript> {
   if (!getOpenAIClient()) {
     throw new VideoPipelineError("MISSING_OPENAI_KEY");
@@ -66,33 +107,64 @@ export async function prepareVideoTranscript(
   }
 
   const source = await resolveYouTubeSource(parsed.url);
-  let sttSource: PreparedTranscript["sttSource"] = "youtube-asr";
+  let sttSource: PreparedTranscript["sttSource"] = "whisper";
   let stt: SttSegment[] = [];
 
-  const audio = await extractAudio({
-    audioStreamUrl: source.audioStreamUrl,
-    audioMimeType: source.audioMimeType,
-  });
-  if (audio) {
-    try {
-      const whispered = usableSpeech(await transcribeAudio(audio));
-      const enough =
-        whispered.length > 0 &&
-        (coverage(whispered, source.durationSeconds) >= 0.45 ||
-          source.captionTracks.length === 0);
-      if (enough) {
-        stt = whispered;
-        sttSource = "whisper";
-      }
-    } catch (error) {
-      console.error("[video-prepare-whisper]", error);
+  // Prefer full YouTube captions when available (covers whole video).
+  try {
+    const captionStt = usableSpeech(
+      await transcribeYouTubeCaptions(
+        source.captionTracks,
+        source.videoId,
+        source.cookie,
+      ),
+    );
+    if (captionStt.length > 0) {
+      stt = captionStt;
+      sttSource = "youtube-asr";
     }
+  } catch (error) {
+    console.error("[video-prepare-captions]", error);
   }
 
   if (stt.length === 0) {
-    stt = usableSpeech(await transcribeYouTubeCaptions(source.captionTracks));
-    sttSource = "youtube-asr";
+    const audio = await extractAudio({
+      audioStreamUrl: source.audioStreamUrl,
+      audioMimeType: source.audioMimeType,
+      mediaUserAgent: source.mediaUserAgent,
+      maxSeconds: WHISPER_MAX_SECONDS,
+    });
+    console.error("[video-prepare-audio]", {
+      videoId: parsed.videoId,
+      extracted: Boolean(audio),
+      bytes: audio?.bytes.byteLength ?? 0,
+      mimeType: audio?.mimeType,
+      filename: audio?.filename,
+    });
+    if (audio) {
+      try {
+        const raw = await transcribeAudio(audio);
+        stt = usableSpeech(raw);
+        console.error("[video-prepare-stt]", {
+          videoId: parsed.videoId,
+          rawLines: raw.length,
+          usableLines: stt.length,
+          sample: raw.slice(0, 3).map((row) => row.text),
+        });
+        if (stt.length > 0) sttSource = "whisper";
+      } catch (error) {
+        console.error("[video-prepare-whisper]", error);
+      }
+    }
   }
+
+  console.error("[video-prepare]", {
+    videoId: parsed.videoId,
+    hasAudio: Boolean(source.audioStreamUrl),
+    hasVideo: Boolean(source.videoStreamUrl),
+    sttLines: stt.length,
+    sttSource,
+  });
 
   if (stt.length === 0) {
     throw new VideoPipelineError(
@@ -102,17 +174,51 @@ export async function prepareVideoTranscript(
     );
   }
 
-  if (!transcriptLooksEnglish(stt)) {
-    throw new VideoPipelineError("UNKNOWN_LANGUAGE");
-  }
+  const normalized = withoutWords(
+    await normalizeTranscript(stt, {
+      gptThroughSeconds: FIRST_WINDOW_SECONDS,
+    }),
+  );
 
-  const normalized = withoutWords(await normalizeTranscript(stt));
-  const context = await analyzeVideoContext(normalized);
   const last = normalized[normalized.length - 1];
   const durationSeconds = Math.max(
     source.durationSeconds,
     last ? last.endTime : 0,
   );
+  // Fixed 20s clock slices for progressive adaptation.
+  const windows = processingWindows(normalized, durationSeconds);
+
+  const [context, sceneContexts] = await Promise.all([
+    sketchVideoContent({
+      title: source.title,
+      segments: normalized,
+    }),
+    buildSceneContextsForWindow({
+      videoStreamUrl: source.videoStreamUrl,
+      mediaUserAgent: source.mediaUserAgent,
+      videoTitle: source.title,
+      fromSeconds: 0,
+      toSeconds: FIRST_WINDOW_SECONDS,
+    }),
+  ]);
+
+  // First playback uses English STT only — Korean interpretation runs after the video ends.
+  const viewerContext = emptyViewerContext({
+    topic: context.topic,
+    summary: context.summary,
+  });
+
+  console.error("[video-prepare-sections]", {
+    videoId: parsed.videoId,
+    windowSeconds: FIRST_WINDOW_SECONDS,
+    sectionCount: windows.length,
+    durationSeconds,
+    segments: normalized.length,
+    firstCues: 0,
+    sceneContexts: sceneContexts.length,
+    viewerFacts: viewerContext.establishedFacts.length,
+    locale,
+  });
 
   return {
     videoId: parsed.videoId,
@@ -121,40 +227,50 @@ export async function prepareVideoTranscript(
     sttSource,
     context,
     segments: normalized,
+    sceneContexts: sceneContexts.length ? sceneContexts : undefined,
+    viewerContext,
+    firstWindowEnd: FIRST_WINDOW_SECONDS,
+    processingWindows: windows,
   };
 }
 
 export async function translateSubtitleWindow(
   input: TranslateWindowInput,
-): Promise<SubtitleSegment[]> {
+): Promise<{ cues: SubtitleSegment[]; viewerContext: ViewerContext }> {
   if (!getOpenAIClient()) {
     throw new VideoPipelineError("MISSING_OPENAI_KEY");
   }
-  if (input.currentSegments.length === 0) return [];
-
-  let translations = await translateSegments(input);
-  const missing = retryMissingTranslations(input.currentSegments, translations);
-  if (missing.length > 0) {
-    try {
-      const extra = await translateSegments({
-        ...input,
-        currentSegments: missing,
-      });
-      extra.forEach((value, key) => translations.set(key, value));
-    } catch (error) {
-      console.error("[video-translate-retry]", error);
-    }
+  if (input.currentSegments.length === 0) {
+    return {
+      cues: [],
+      viewerContext:
+        input.viewerContext ??
+        emptyViewerContext({
+          topic: input.context.topic,
+          summary: input.context.summary,
+        }),
+    };
   }
-
-  translations = await validateTranslation({
-    locale: input.locale,
-    context: input.context,
-    segments: input.currentSegments,
-    translations,
-  });
-
-  return formatSubtitles({
-    segments: input.currentSegments,
-    translations,
-  });
+  return translateSubtitleWindowPipeline(input);
 }
+
+/** @deprecated unused after full-video prepare; kept for tests/helpers */
+export function segmentsForWindow(
+  segments: NormalizedSegment[],
+  start: number,
+  end: number,
+): NormalizedSegment[] {
+  return segmentsInWindow(segments, { start, end });
+}
+
+export function windowNeighbors(
+  segments: NormalizedSegment[],
+  current: NormalizedSegment[],
+): { previous: NormalizedSegment[]; next: NormalizedSegment[] } {
+  if (current.length === 0) return { previous: [], next: [] };
+  const startIndex = segments.indexOf(current[0]!);
+  const endIndex = startIndex + current.length;
+  return neighborsAround(segments, startIndex, endIndex);
+}
+
+export type { SceneContext };

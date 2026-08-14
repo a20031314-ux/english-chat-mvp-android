@@ -23,7 +23,22 @@ export function SubtitleAnalysisCard({
 
   return (
     <div className="mx-4 mb-3 rounded-xl bg-slate-50 px-3 py-3">
-      <p className="text-[11px] font-semibold tracking-wide text-slate-500">
+      {analysis.whyThisSubtitle ? (
+        <>
+          <p className="text-[11px] font-semibold tracking-wide text-slate-500">
+            {ui.videoLearnWhyDetail}
+          </p>
+          <p className="mt-1 text-sm leading-relaxed text-slate-800">
+            {analysis.whyThisSubtitle}
+          </p>
+        </>
+      ) : null}
+
+      <p
+        className={`text-[11px] font-semibold tracking-wide text-slate-500 ${
+          analysis.whyThisSubtitle ? "mt-3" : ""
+        }`}
+      >
         {ui.videoLearnKeyExpression}
       </p>
       <p className="mt-1 text-sm font-medium text-slate-900">

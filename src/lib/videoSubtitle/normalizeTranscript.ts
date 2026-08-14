@@ -11,23 +11,38 @@ function fallbackNormalize(text: string): string {
   return trimmed.charAt(0).toUpperCase() + trimmed.slice(1);
 }
 
+function toNormalized(
+  segment: SttSegment,
+  normalizedText: string,
+): NormalizedSegment {
+  return {
+    id: segment.id,
+    startTime: segment.startTime,
+    endTime: segment.endTime,
+    rawText: segment.text,
+    normalizedText,
+    words: segment.words,
+    confidence: segment.confidence,
+    uncertain: segment.uncertain,
+  };
+}
+
 function normalizeSystem(): string {
-  return `You clean English speech-to-text. You do not translate.
+  return `You clean speech-to-text in the same language as the source. You do not translate.
 
 Allowed:
-- Restore punctuation and capitalization
+- Restore punctuation and capitalization appropriate to that language
 - Restore sentence boundaries
-- Fix obvious STT errors (homophones, missing apostrophes)
+- Fix obvious STT errors
 - Restore proper nouns and technical terms
-- Drop filler (uh, um, er) only when it carries no meaning
-- Keep hedges such as like, kind of, I guess, I would say
+- Drop filler only when it carries no meaning
 
 Forbidden:
 - Change the speaker's meaning
 - Add information they did not say
 - Summarize
-- Translate
-- Rewrite into "better" English
+- Translate into another language
+- Rewrite into "better" prose
 - Invent words for unclear audio
 
 Return JSON:
@@ -71,30 +86,46 @@ async function normalizeBatch(
   return map;
 }
 
+/**
+ * Fast path: GPT-clean only the first window; remainder gets light cleanup.
+ * Cuts prepare latency so playback can start after section 1.
+ */
 export async function normalizeTranscript(
   segments: SttSegment[],
+  options?: { gptThroughSeconds?: number },
 ): Promise<NormalizedSegment[]> {
-  const out: NormalizedSegment[] = [];
-  for (let i = 0; i < segments.length; i += BATCH) {
-    const batch = segments.slice(i, i + BATCH);
-    let map = new Map<string, string>();
+  const gptThrough = options?.gptThroughSeconds;
+  const gptSegments =
+    gptThrough == null
+      ? segments
+      : segments.filter((segment) => segment.startTime < gptThrough);
+  const restSegments =
+    gptThrough == null
+      ? []
+      : segments.filter((segment) => segment.startTime >= gptThrough);
+
+  const gptMap = new Map<string, string>();
+  for (let i = 0; i < gptSegments.length; i += BATCH) {
+    const batch = gptSegments.slice(i, i + BATCH);
     try {
-      map = await normalizeBatch(batch);
+      const map = await normalizeBatch(batch);
+      map.forEach((value, key) => gptMap.set(key, value));
     } catch (error) {
       console.error("[video-normalize]", error);
     }
-    for (const segment of batch) {
-      out.push({
-        id: segment.id,
-        startTime: segment.startTime,
-        endTime: segment.endTime,
-        rawText: segment.text,
-        normalizedText: map.get(segment.id) || fallbackNormalize(segment.text),
-        words: segment.words,
-        confidence: segment.confidence,
-        uncertain: segment.uncertain,
-      });
-    }
   }
-  return out;
+
+  const out: NormalizedSegment[] = [];
+  for (const segment of gptSegments) {
+    out.push(
+      toNormalized(
+        segment,
+        gptMap.get(segment.id) || fallbackNormalize(segment.text),
+      ),
+    );
+  }
+  for (const segment of restSegments) {
+    out.push(toNormalized(segment, fallbackNormalize(segment.text)));
+  }
+  return out.sort((a, b) => a.startTime - b.startTime);
 }

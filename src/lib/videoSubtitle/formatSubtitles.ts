@@ -1,4 +1,5 @@
-import type { NormalizedSegment, SubtitleSegment } from "@/lib/videoSubtitle/types";
+import type { SubtitleDraft } from "./subtitleDraft";
+import type { NormalizedSegment, SubtitleSegment } from "./types";
 
 const MAX_CHARS = 42;
 
@@ -6,13 +7,35 @@ function charLen(text: string): number {
   return [...text].length;
 }
 
-function splitReadable(text: string): string[] {
-  const trimmed = text.replace(/\s+/g, " ").trim();
+/**
+ * Soft line breaks for display only — does NOT create new timed cues.
+ * Timing must stay aligned with the original speech/caption span.
+ */
+export function splitReadable(text: string): string[] {
+  const normalized = text.replace(/\r\n/g, "\n").trim();
+  if (!normalized) return [];
+
+  const explicit = normalized
+    .split("\n")
+    .map((part) => part.replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+  if (explicit.length > 1) {
+    return explicit.flatMap((line) =>
+      charLen(line) <= MAX_CHARS ? [line] : splitLongLine(line),
+    );
+  }
+
+  return splitLongLine(explicit[0] ?? normalized.replace(/\s+/g, " ").trim());
+}
+
+function splitLongLine(trimmed: string): string[] {
   if (!trimmed) return [];
   if (charLen(trimmed) <= MAX_CHARS) return [trimmed];
 
   const sentences = trimmed
-    .split(/(?<=(?:다|요|죠|까|네|습니다|해요|예요|이에요|네요)[.?!]?)(?:\s+|$)|(?<=[.?!])\s+/)
+    .split(
+      /(?<=(?:다|요|죠|까|네|습니다|해요|예요|이에요|네요)[.?!]?)(?:\s+|$)|(?<=[.?!])\s+/,
+    )
     .map((part) => part.trim())
     .filter(Boolean);
 
@@ -22,7 +45,7 @@ function splitReadable(text: string): string[] {
       lines.push(sentence);
       continue;
     }
-    const chunks = sentence.split(/(?<=,|만|고|는데|지만)\s+/);
+    const chunks = sentence.split(/(?<=,|만|고|는데|지만|니까|거든요)\s+/);
     let buf = "";
     for (const chunk of chunks) {
       const next = buf ? `${buf} ${chunk}` : chunk;
@@ -38,58 +61,89 @@ function splitReadable(text: string): string[] {
   return lines.length ? lines : [trimmed];
 }
 
-function splitTimes(
-  start: number,
-  end: number,
-  parts: string[],
-): Array<{ start: number; end: number }> {
-  const total = Math.max(0.8, end - start);
-  const weights = parts.map((part) => Math.max(1, charLen(part)));
-  const sum = weights.reduce((a, b) => a + b, 0);
-  const out: Array<{ start: number; end: number }> = [];
-  let cursor = start;
-  for (let i = 0; i < parts.length; i += 1) {
-    const share = total * (weights[i]! / sum);
-    const next = i === parts.length - 1 ? end : cursor + share;
-    out.push({
-      start: cursor,
-      end: Math.max(cursor + 0.7, next),
-    });
-    cursor = next;
-  }
-  return out;
-}
-
-export function formatSubtitles(input: {
-  segments: NormalizedSegment[];
-  translations: Map<string, string>;
-}): SubtitleSegment[] {
+/**
+ * One meaning unit → one timed cue.
+ * Keep STT/caption timestamps; never stretch end past the next cue.
+ */
+export function formatSubtitleDrafts(drafts: SubtitleDraft[]): SubtitleSegment[] {
+  const sorted = [...drafts].sort((a, b) => a.startTime - b.startTime);
   const cues: SubtitleSegment[] = [];
-  for (const segment of input.segments) {
-    const translation = (input.translations.get(segment.id) || "").trim();
+
+  for (let i = 0; i < sorted.length; i += 1) {
+    const draft = sorted[i]!;
+    // Never drop a timed cue — empty Korean would create mid-video gaps.
+    const translation =
+      draft.naturalSubtitle.trim() ||
+      (draft.literalMeaning || "").trim() ||
+      (draft.meaning || "").trim() ||
+      draft.original.trim();
+    if (!translation) continue;
     const parts = splitReadable(translation);
-    const lines = parts.length > 0 ? parts : [translation];
-    const times = splitTimes(segment.startTime, segment.endTime, lines);
-    const status: SubtitleSegment["translationStatus"] = translation
-      ? "final"
-      : "draft";
-    lines.forEach((line, index) => {
-      const time = times[index] ?? {
-        start: segment.startTime,
-        end: segment.endTime,
-      };
-      cues.push({
-        id: lines.length === 1 ? segment.id : `${segment.id}-${index + 1}`,
-        startTime: time.start,
-        endTime: time.end,
-        rawOriginal: segment.rawText,
-        original: segment.normalizedText,
-        translation: line,
-        confidence: segment.confidence,
-        translationStatus: status,
-        analysis: segment.uncertain ? { flags: ["uncertain-stt"] } : undefined,
-      });
+    const display =
+      parts.length > 1 ? parts.join("\n") : parts[0] ?? translation;
+
+    const next = sorted[i + 1];
+    let endTime = Math.max(draft.startTime + 0.3, draft.endTime);
+    if (next && endTime > next.startTime) {
+      endTime = Math.max(draft.startTime + 0.25, next.startTime);
+    }
+
+    cues.push({
+      id: draft.id,
+      startTime: draft.startTime,
+      endTime,
+      rawOriginal: draft.original,
+      original: draft.original,
+      translation: display,
+      meaning: draft.meaning,
+      literalMeaning: draft.meaning,
+      tone: draft.tone,
+      speakerStyle: draft.speakerStyle,
+      interpretationConfidence: draft.interpretationConfidence,
+      confidence: draft.confidence,
+      translationStatus: "final",
+      analysis: draft.uncertain ? { flags: ["uncertain-stt"] } : undefined,
     });
   }
   return cues;
+}
+
+/** Legacy path: one string per STT segment id. */
+export function formatSubtitles(input: {
+  segments: NormalizedSegment[];
+  translations: Map<string, string>;
+  literalMeanings?: Map<string, string>;
+}): SubtitleSegment[] {
+  const drafts: SubtitleDraft[] = input.segments.map((segment) => {
+    const natural = (input.translations.get(segment.id) || "").trim();
+    const meaning =
+      (input.literalMeanings?.get(segment.id) || natural).trim() || natural;
+    return {
+      id: segment.id,
+      segmentIds: [segment.id],
+      startTime: segment.startTime,
+      endTime: segment.endTime,
+      original: segment.normalizedText,
+      meaning,
+      tone: {
+        formality: "neutral",
+        politeness: "neutral",
+        intimacy: "neutral",
+        emotion: "neutral",
+        intensity: "medium",
+        confidence: "medium",
+        hesitation: "none",
+        humor: "none",
+        sarcasm: "none",
+        attitude: "neutral",
+      },
+      speakerStyle: "spoken",
+      naturalSubtitle: natural,
+      interpretationConfidence: 0.5,
+      literalMeaning: meaning,
+      confidence: segment.confidence,
+      uncertain: segment.uncertain,
+    };
+  });
+  return formatSubtitleDrafts(drafts);
 }

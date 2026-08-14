@@ -12,19 +12,44 @@ const STEPS = [
 export function SubtitleGenerationStatus({
   ui,
   stepIndex,
+  progressPercent,
 }: {
   ui: UICopy;
   stepIndex: number;
+  /** 0–100 overall material generation progress */
+  progressPercent: number;
 }) {
+  const percent = Math.max(0, Math.min(100, Math.round(progressPercent)));
+
   return (
-    <div className="px-4 py-6">
+    <div className="px-4 py-8">
       <p className="text-center text-sm font-medium text-slate-800">
         {ui.videoLearnGenerating}
       </p>
-      <ul className="mx-auto mt-4 max-w-xs space-y-2">
+
+      <div className="mx-auto mt-5 max-w-sm">
+        <div
+          className="h-2.5 overflow-hidden rounded-full bg-slate-200"
+          role="progressbar"
+          aria-valuemin={0}
+          aria-valuemax={100}
+          aria-valuenow={percent}
+          aria-label={ui.videoLearnGenerating}
+        >
+          <div
+            className="h-full rounded-full bg-slate-800 transition-[width] duration-300 ease-out"
+            style={{ width: `${percent}%` }}
+          />
+        </div>
+        <p className="mt-2 text-center text-sm font-semibold tabular-nums text-slate-700">
+          {percent}%
+        </p>
+      </div>
+
+      <ul className="mx-auto mt-6 max-w-xs space-y-2">
         {STEPS.map((key, index) => {
-          const done = index < stepIndex;
-          const current = index === stepIndex;
+          const done = index < stepIndex || percent >= 100;
+          const current = index === stepIndex && percent < 100;
           return (
             <li
               key={key}

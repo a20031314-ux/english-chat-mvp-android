@@ -35,21 +35,24 @@ export async function transcribeAudio(
     throw new VideoPipelineError("MISSING_OPENAI_KEY");
   }
 
-  const file = await toFile(audio.bytes, audio.filename, {
-    type: audio.mimeType,
-  });
+  const makeFile = () =>
+    toFile(audio.bytes, audio.filename, {
+      type: audio.mimeType,
+    });
 
   try {
-    const result = await client.audio.transcriptions.create({
-      file,
-      model: transcribeModel(),
-      language: "en",
-      temperature: 0,
-      response_format: "verbose_json",
-      timestamp_granularities: ["segment", "word"],
-      prompt:
-        "English speech from a video. Transcribe only words that are clearly audible. Do not invent missing speech. Do not translate.",
-    });
+    const prompt =
+      "Transcribe clearly audible speech from this video in its original language. Do not invent missing speech. Do not translate.";
+    const request = async (withWords: boolean) =>
+      client.audio.transcriptions.create({
+        file: await makeFile(),
+        model: transcribeModel(),
+        temperature: 0,
+        response_format: "verbose_json",
+        ...(withWords ? { timestamp_granularities: ["segment", "word"] } : {}),
+        prompt,
+      });
+    const result = await request(true).catch(() => request(false));
 
     const words: SttWord[] | undefined = result.words?.map((word) => ({
       word: word.word,
@@ -94,12 +97,4 @@ export async function transcribeAudio(
     console.error("[video-stt]", error);
     throw new VideoPipelineError("STT_FAILED");
   }
-}
-
-export function transcriptLooksEnglish(segments: SttSegment[]): boolean {
-  const text = segments.map((segment) => segment.text).join(" ");
-  const letters = text.replace(/[^A-Za-z]/g, "");
-  const compact = text.replace(/\s+/g, "");
-  if (letters.length < 24) return letters.length > 0;
-  return letters.length / Math.max(compact.length, 1) > 0.55;
 }

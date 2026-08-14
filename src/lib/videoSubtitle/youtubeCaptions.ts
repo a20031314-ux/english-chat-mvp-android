@@ -1,31 +1,84 @@
-import { fetchWithTimeout } from "@/lib/videoSubtitle/http";
+import { BROWSER_UA, fetchWithTimeout } from "@/lib/videoSubtitle/http";
 import { asNumber, asRecord, asString } from "@/lib/videoSubtitle/parseModelJson";
 import type { CaptionTrack, SttSegment, SttWord } from "@/lib/videoSubtitle/types";
 
-function json3Url(baseUrl: string): string {
-  const url = new URL(baseUrl);
-  url.searchParams.set("fmt", "json3");
+function rankTracks(tracks: CaptionTrack[]): CaptionTrack[] {
+  return [...tracks].sort((a, b) => {
+    const asr = (track: CaptionTrack) => (track.kind === "asr" ? 1 : 0);
+    return asr(a) - asr(b);
+  });
+}
+
+function absoluteCaptionUrl(baseUrl: string): string {
+  const raw = baseUrl.startsWith("//") ? `https:${baseUrl}` : baseUrl;
+  return raw;
+}
+
+function withFmt(baseUrl: string, fmt: string): string {
+  const url = new URL(absoluteCaptionUrl(baseUrl));
+  url.searchParams.set("fmt", fmt);
+  url.searchParams.set("html5", "1");
   return url.toString();
 }
 
-function vttUrl(baseUrl: string): string {
-  const url = new URL(baseUrl);
-  url.searchParams.set("fmt", "vtt");
-  return url.toString();
+function xmlAttr(source: string, name: string): string | undefined {
+  const match = source.match(new RegExp(`${name}="([^"]*)"`, "i"));
+  return match?.[1];
 }
 
-function pickCaptionTrack(tracks: CaptionTrack[]): CaptionTrack | null {
-  if (tracks.length === 0) return null;
-  const english = tracks.filter((track) =>
-    track.languageCode.toLowerCase().startsWith("en"),
-  );
-  const pool = english.length > 0 ? english : tracks;
-  return (
-    pool.find((track) => track.kind !== "asr") ??
-    pool.find((track) => track.kind === "asr") ??
-    pool[0] ??
-    null
-  );
+function captionHeaders(videoId?: string, cookie?: string): HeadersInit {
+  return {
+    "User-Agent": BROWSER_UA,
+    "Accept-Language": "en-US,en;q=0.9",
+    Referer: videoId
+      ? `https://www.youtube.com/watch?v=${videoId}`
+      : "https://www.youtube.com/",
+    Origin: "https://www.youtube.com",
+    ...(cookie ? { Cookie: cookie } : {}),
+  };
+}
+
+function timedTextUrl(videoId: string, lang: string, kind?: string): string {
+  const params = new URLSearchParams({
+    v: videoId,
+    lang,
+    fmt: "json3",
+  });
+  if (kind) params.set("kind", kind);
+  return `https://www.youtube.com/api/timedtext?${params.toString()}`;
+}
+
+function tracksFromTimedTextList(xml: string, videoId: string): CaptionTrack[] {
+  const out: CaptionTrack[] = [];
+  const regex = /<track\b([^>]*)\/?>/gi;
+  let match: RegExpExecArray | null;
+  while ((match = regex.exec(xml))) {
+    const attrs = match[1] ?? "";
+    const languageCode = xmlAttr(attrs, "lang_code");
+    if (!languageCode) continue;
+    const kind = xmlAttr(attrs, "kind");
+    const name =
+      xmlAttr(attrs, "lang_translated") ?? xmlAttr(attrs, "lang_original");
+    out.push({
+      languageCode,
+      ...(kind ? { kind } : {}),
+      ...(name ? { name } : {}),
+      baseUrl: timedTextUrl(videoId, languageCode, kind),
+    });
+  }
+  return out;
+}
+
+function mergeTracks(tracks: CaptionTrack[]): CaptionTrack[] {
+  const out: CaptionTrack[] = [];
+  const seen = new Set<string>();
+  for (const track of tracks) {
+    const key = `${track.languageCode}:${track.kind ?? "manual"}:${track.baseUrl}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    out.push(track);
+  }
+  return out;
 }
 
 function wordsFromJson3(payload: unknown): SttWord[] {
@@ -98,7 +151,7 @@ function groupWords(words: SttWord[]): SttSegment[] {
     const punct = /[.?!]$/.test(prev?.word ?? "");
     const shouldFlush =
       i > cueStart &&
-      (gap > 0.45 || duration > 6.8 || cue.length >= 18 || punct);
+      (gap > 0.32 || duration > 3.2 || cue.length >= 10 || punct);
     if (shouldFlush) {
       const segment = flushCue(words.slice(cueStart, i), 0);
       if (segment) segments.push(segment);
@@ -121,7 +174,7 @@ function parseVtt(vtt: string): SttSegment[] {
     const timeLine = lines.find((line) => line.includes("-->"));
     if (!timeLine) continue;
     const match = timeLine.match(
-      /(\d{2}:)?(\d{2}):(\d{2})\.(\d{3})\s+-->\s+(\d{2}:)?(\d{2}):(\d{2})\.(\d{3})/,
+      /(\d{2}:)?(\d{2}):(\d{2})[.,](\d{3})\s+-->\s+(\d{2}:)?(\d{2}):(\d{2})[.,](\d{3})/,
     );
     if (!match) continue;
     const toSeconds = (
@@ -153,39 +206,134 @@ function parseVtt(vtt: string): SttSegment[] {
   return segments;
 }
 
-async function fetchCaptionJson3(track: CaptionTrack): Promise<SttSegment[]> {
-  const response = await fetchWithTimeout(json3Url(track.baseUrl), {
-    timeoutMs: 15000,
-    headers: { "Accept-Language": "en-US,en;q=0.9" },
-  });
-  if (!response.ok) return [];
-  const payload = await response.json();
-  return groupWords(wordsFromJson3(payload));
+function decodeXml(value: string): string {
+  return value
+    .replace(/<[^>]+>/g, " ")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
-async function fetchCaptionVtt(track: CaptionTrack): Promise<SttSegment[]> {
-  const response = await fetchWithTimeout(vttUrl(track.baseUrl), {
+function parseTimedTextXml(xml: string): SttSegment[] {
+  const segments: SttSegment[] = [];
+  const regex = /<text\b([^>]*)>([\s\S]*?)<\/text>/gi;
+  let match: RegExpExecArray | null;
+  while ((match = regex.exec(xml))) {
+    const start = Number(xmlAttr(match[1] ?? "", "start") ?? NaN);
+    const dur = Number(xmlAttr(match[1] ?? "", "dur") ?? 0);
+    const text = decodeXml(match[2] ?? "");
+    if (!text || !Number.isFinite(start)) continue;
+    segments.push({
+      id: `c-${segments.length}-${Math.round(start * 1000)}`,
+      text,
+      startTime: start,
+      endTime: Math.max(start + 0.4, start + (Number.isFinite(dur) ? dur : 0.4)),
+    });
+  }
+  return segments;
+}
+
+function parseSrv3(xml: string): SttSegment[] {
+  const segments: SttSegment[] = [];
+  const regex = /<p\b([^>]*)>([\s\S]*?)<\/p>/gi;
+  let match: RegExpExecArray | null;
+  while ((match = regex.exec(xml))) {
+    const t = Number(xmlAttr(match[1] ?? "", "t") ?? NaN);
+    const d = Number(xmlAttr(match[1] ?? "", "d") ?? 0);
+    const text = decodeXml(match[2] ?? "");
+    if (!text || !Number.isFinite(t)) continue;
+    const startTime = t / 1000;
+    const endTime = Math.max(startTime + 0.4, startTime + d / 1000);
+    segments.push({
+      id: `c-${segments.length}-${Math.round(t)}`,
+      text,
+      startTime,
+      endTime,
+    });
+  }
+  return segments;
+}
+
+function parseCaptionBody(body: string): SttSegment[] {
+  const trimmed = body.replace(/^\uFEFF/, "").trim();
+  if (!trimmed || trimmed === "{}") return [];
+  if (trimmed.includes("WEBVTT")) return parseVtt(trimmed);
+  if (trimmed.includes("<transcript") || trimmed.includes("<text ")) {
+    return parseTimedTextXml(trimmed);
+  }
+  if (trimmed.includes("<p ") || trimmed.includes("<p>")) {
+    return parseSrv3(trimmed);
+  }
+  try {
+    return groupWords(wordsFromJson3(JSON.parse(trimmed)));
+  } catch {
+    return [];
+  }
+}
+
+async function fetchCaptionFmt(
+  track: CaptionTrack,
+  fmt: string,
+  videoId?: string,
+  cookie?: string,
+): Promise<SttSegment[]> {
+  const response = await fetchWithTimeout(withFmt(track.baseUrl, fmt), {
     timeoutMs: 15000,
-    headers: { "Accept-Language": "en-US,en;q=0.9" },
+    headers: captionHeaders(videoId, cookie),
   });
   if (!response.ok) return [];
-  return parseVtt(await response.text());
+  return parseCaptionBody(await response.text());
+}
+
+async function segmentsFromTrack(
+  track: CaptionTrack,
+  videoId?: string,
+  cookie?: string,
+): Promise<SttSegment[]> {
+  for (const fmt of ["json3", "srv3", "vtt", "srv1"]) {
+    try {
+      const segments = await fetchCaptionFmt(track, fmt, videoId, cookie);
+      if (segments.length > 0) return segments;
+    } catch {
+      // next format
+    }
+  }
+  return [];
+}
+
+async function timedTextTracks(
+  videoId: string,
+  cookie?: string,
+): Promise<CaptionTrack[]> {
+  try {
+    const response = await fetchWithTimeout(
+      `https://www.youtube.com/api/timedtext?type=list&v=${videoId}`,
+      { timeoutMs: 12000, headers: captionHeaders(videoId, cookie) },
+    );
+    if (response.ok) {
+      const listed = tracksFromTimedTextList(await response.text(), videoId);
+      if (listed.length > 0) return listed;
+    }
+  } catch {
+    // ignore
+  }
+  return [];
 }
 
 export async function transcribeYouTubeCaptions(
   tracks: CaptionTrack[],
+  videoId?: string,
+  cookie?: string,
 ): Promise<SttSegment[]> {
-  const track = pickCaptionTrack(tracks);
-  if (!track) return [];
-  try {
-    const json3 = await fetchCaptionJson3(track);
-    if (json3.length > 0) return json3;
-  } catch {
-    // try vtt
+  const extra = videoId ? await timedTextTracks(videoId, cookie) : [];
+  const pool = rankTracks(mergeTracks([...tracks, ...extra]));
+  for (const track of pool.slice(0, 8)) {
+    const segments = await segmentsFromTrack(track, videoId, cookie);
+    if (segments.length > 0) return segments;
   }
-  try {
-    return await fetchCaptionVtt(track);
-  } catch {
-    return [];
-  }
+  return [];
 }
