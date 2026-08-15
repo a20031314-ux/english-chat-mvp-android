@@ -2,8 +2,10 @@ import {
   naturalTranslationPrinciples,
   type TranslationSourceType,
 } from "@/lib/naturalTranslation";
+import { learningLanguageName } from "@/lib/learningLanguages";
+import { interfaceLanguageDisplayName } from "@/lib/languageLearningAnalysis";
 
-const TARGET_LANGUAGES: Record<string, string> = {
+const INTERFACE_LANGUAGES: Record<string, string> = {
   ko: "Korean",
   en: "English",
   es: "Spanish",
@@ -16,18 +18,58 @@ const TARGET_LANGUAGES: Record<string, string> = {
 };
 
 export function spokenTranslateTarget(locale: string): string {
-  return TARGET_LANGUAGES[locale] ?? TARGET_LANGUAGES.ko;
+  return INTERFACE_LANGUAGES[locale] ?? INTERFACE_LANGUAGES.ko;
 }
 
-/** Colloquial translation of a spoken English line — meaning-faithful, not a calque. */
-export function spokenTranslateSystem(
-  locale: string,
+export type SpokenTranslateOptions = {
+  /** @deprecated Prefer interfaceLanguage. */
+  locale?: string;
+  targetLanguage?: string;
+  interfaceLanguage?: string;
+  sourceType?: TranslationSourceType;
+};
+
+function resolveOptions(
+  localeOrOptions: string | SpokenTranslateOptions,
+  sourceType: TranslationSourceType = "conversation",
+): Required<
+  Pick<SpokenTranslateOptions, "interfaceLanguage" | "targetLanguage" | "sourceType">
+> & { locale: string } {
+  const options: SpokenTranslateOptions =
+    typeof localeOrOptions === "string"
+      ? { locale: localeOrOptions, sourceType }
+      : { sourceType, ...localeOrOptions };
+
+  const interfaceLanguage =
+    options.interfaceLanguage ?? options.locale ?? "ko";
+  return {
+    locale: interfaceLanguage,
+    interfaceLanguage,
+    targetLanguage: options.targetLanguage ?? "en",
+    sourceType: options.sourceType ?? sourceType,
+  };
+}
+
+/**
+ * Shared meaning-faithful translation craft used by chat translate and
+ * video learning gloss / captions. Callers supply their own output schema.
+ */
+export function spokenTranslatePrinciples(
+  localeOrOptions: string | SpokenTranslateOptions,
   sourceType: TranslationSourceType = "conversation",
 ): string {
-  const target = spokenTranslateTarget(locale);
-  const tutorKo =
-    locale === "ko"
-      ? `
+  const options = resolveOptions(localeOrOptions, sourceType);
+  const { interfaceLanguage, targetLanguage, sourceType: resolvedSourceType } =
+    options;
+  const interfaceName =
+    INTERFACE_LANGUAGES[interfaceLanguage] ??
+    interfaceLanguageDisplayName(interfaceLanguage);
+  const targetName = learningLanguageName(targetLanguage);
+  const keepEnKoCraft =
+    targetLanguage === "en" && interfaceLanguage === "ko";
+
+  const tutorKo = keepEnKoCraft
+    ? `
 
 Conversation Korean:
 - Casual chat → 반말. Formal English → 해요체.
@@ -40,11 +82,30 @@ Conversation Korean:
 - "Damn, I totally screwed that up." → "아, 나 그거 완전 망쳤네."
 - Keep the joke. Keep the force. Do not textbook-sanitize.
 `
-      : "";
+    : "";
 
-  return `Translate the English into natural spoken ${target}.
+  const lead = keepEnKoCraft
+    ? `Translate the English into natural spoken ${interfaceName}.`
+    : `Interpret the ${targetName} content naturally in ${interfaceName}.`;
 
-${naturalTranslationPrinciples({ locale, role: "utterance", sourceType })}
-${tutorKo}
+  return `${lead}
+
+${naturalTranslationPrinciples({
+  locale: interfaceLanguage,
+  targetLanguage,
+  interfaceLanguage,
+  role: "utterance",
+  sourceType: resolvedSourceType,
+})}
+${tutorKo}`.trim();
+}
+
+/** Colloquial translation of a spoken target-language line — meaning-faithful, not a calque. */
+export function spokenTranslateSystem(
+  localeOrOptions: string | SpokenTranslateOptions,
+  sourceType: TranslationSourceType = "conversation",
+): string {
+  return `${spokenTranslatePrinciples(localeOrOptions, sourceType)}
+
 Return ONLY JSON: {"translated":"..."}`;
 }

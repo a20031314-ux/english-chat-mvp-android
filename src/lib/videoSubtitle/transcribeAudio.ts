@@ -1,6 +1,7 @@
 import { toFile } from "openai";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { getOpenAIClient, transcribeModel } from "@/lib/videoSubtitle/openaiClient";
+import { looksLikeMusicBleed } from "@/lib/videoSubtitle/speechNoise";
 import type { ExtractedAudio, SttSegment, SttWord } from "@/lib/videoSubtitle/types";
 
 function segmentConfidence(input: {
@@ -42,7 +43,9 @@ export async function transcribeAudio(
 
   try {
     const prompt =
-      "Transcribe clearly audible speech from this video in its original language. Do not invent missing speech. Do not translate.";
+      "Transcribe only clearly spoken dialogue and narration in the original language. " +
+      "Ignore background music, instrumentals, hummed melodies, and song lyrics unless a person is clearly speaking them as dialogue. " +
+      "If you only hear music, output nothing or [music]. Do not invent speech. Do not translate.";
     const request = async (withWords: boolean) =>
       client.audio.transcriptions.create({
         file: await makeFile(),
@@ -63,12 +66,22 @@ export async function transcribeAudio(
     const segments: SttSegment[] = [];
     for (const [index, segment] of (result.segments ?? []).entries()) {
       const text = segment.text.replace(/\s+/g, " ").trim();
+      const noSpeechProb = segment.no_speech_prob ?? 0;
       const { confidence, uncertain } = segmentConfidence({
         avgLogprob: segment.avg_logprob,
-        noSpeechProb: segment.no_speech_prob,
+        noSpeechProb,
       });
       if (!text) continue;
-      if ((segment.no_speech_prob ?? 0) > 0.85 && text.length < 8) continue;
+      if (
+        looksLikeMusicBleed({
+          text,
+          noSpeechProb,
+          confidence,
+          uncertain,
+        })
+      ) {
+        continue;
+      }
       const slice = wordsForSegment(words, segment.start, segment.end);
       segments.push({
         id: `w-${index}-${Math.round(segment.start * 1000)}`,
@@ -82,15 +95,23 @@ export async function transcribeAudio(
     }
 
     if (segments.length === 0 && result.text.trim()) {
-      return [
-        {
-          id: "w-0",
-          text: result.text.trim(),
-          startTime: 0,
-          endTime: result.duration || 4,
-          ...(words?.length ? { words } : {}),
-        },
-      ];
+      const fallback = result.text.trim();
+      if (
+        !looksLikeMusicBleed({
+          text: fallback,
+          noSpeechProb: 0.2,
+        })
+      ) {
+        return [
+          {
+            id: "w-0",
+            text: fallback,
+            startTime: 0,
+            endTime: result.duration || 4,
+            ...(words?.length ? { words } : {}),
+          },
+        ];
+      }
     }
     return segments;
   } catch (error) {

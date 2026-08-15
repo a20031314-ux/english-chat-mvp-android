@@ -5,20 +5,49 @@ import {
   type PointerEvent as ReactPointerEvent,
 } from "react";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import type { EnglishChunk } from "@/lib/englishAnalysis";
+import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
 import type { TranslationSourceType } from "@/lib/naturalTranslation";
 import { snapToExpressionUnit } from "@/lib/expressionUnits";
 import {
   loadExpressionUnits,
   prefetchExpressionUnits,
 } from "@/lib/requestExpressionUnits";
+import { normalizeVocabHeadword } from "@/lib/vocabulary";
 
 function tokenize(sentence: string): string[] {
-  return sentence.split(/(\s+)/).filter((part) => part.length > 0);
+  const parts = sentence.split(/(\s+)/).filter((part) => part.length > 0);
+  const out: string[] = [];
+  for (const part of parts) {
+    if (/^\s+$/.test(part)) {
+      out.push(part);
+      continue;
+    }
+    if (/[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]/.test(part)) {
+      out.push(...Array.from(part));
+      continue;
+    }
+    out.push(...splitAffixedPunctuation(part));
+  }
+  return out;
+}
+
+function splitAffixedPunctuation(part: string): string[] {
+  const re =
+    /([^\p{L}\p{M}\p{N}'’_-]+)|([\p{L}\p{M}\p{N}]+(?:['’_-][\p{L}\p{M}\p{N}]+)*)/gu;
+  const pieces: string[] = [];
+  let match: RegExpExecArray | null;
+  while ((match = re.exec(part)) !== null) {
+    pieces.push(match[0]);
+  }
+  return pieces.length > 0 ? pieces : [part];
 }
 
 function isWordToken(token: string) {
-  return /[A-Za-z]/.test(token);
+  if (!token || /^\s+$/.test(token)) return false;
+  if (!/[\p{L}\p{M}]/u.test(token)) return false;
+  return true;
 }
 
 function rangeText(tokens: string[], start: number, end: number) {
@@ -49,6 +78,9 @@ export function InteractiveEnglishText({
   language?: string;
 }) {
   const analysis = useEnglishAnalysisOptional();
+  const learningLanguage = useLearningLanguageOptional();
+  const targetLanguage =
+    learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
   const rootRef = useRef<HTMLParagraphElement>(null);
   const dragRef = useRef<{
     start: number;
@@ -83,7 +115,7 @@ export function InteractiveEnglishText({
                   selectedText: chunk.text,
                   contextSentence: sentence,
                   ...(sourceType ? { sourceType } : {}),
-                  ...(language ? { language } : {}),
+                  language: language || targetLanguage,
                 })
               }
               className={`rounded-sm px-0.5 align-baseline transition ${
@@ -117,7 +149,7 @@ export function InteractiveEnglishText({
   };
 
   const onPointerDown = (event: ReactPointerEvent<HTMLParagraphElement>) => {
-    prefetchExpressionUnits(sentence);
+    prefetchExpressionUnits(sentence, targetLanguage);
     const index = tokenIndexFromPoint(event.clientX, event.clientY);
     if (index == null || !isWordToken(tokens[index])) {
       dragRef.current = null;
@@ -151,18 +183,28 @@ export function InteractiveEnglishText({
     const drag = dragRef.current;
     dragRef.current = null;
     if (!drag || drag.scrolling) return;
-    const picked = rangeText(tokens, drag.start, drag.end);
+    let from = Math.min(drag.start, drag.end);
+    let to = Math.max(drag.start, drag.end);
+    while (from <= to && !isWordToken(tokens[from])) from += 1;
+    while (to >= from && !isWordToken(tokens[to])) to -= 1;
+    const pickedRaw = from <= to ? rangeText(tokens, from, to) : "";
+    const picked = pickedRaw
+      ? normalizeVocabHeadword(pickedRaw) || pickedRaw
+      : "";
     if (!picked) return;
     event.preventDefault();
-    const hint = tokenStartOffset(tokens, Math.min(drag.start, drag.end));
+    const hint = tokenStartOffset(tokens, from);
     void (async () => {
-      const units = await loadExpressionUnits(sentence);
+      const units = await loadExpressionUnits(sentence, targetLanguage);
       const snapped = snapToExpressionUnit(sentence, picked, units, hint);
+      const selectedText = snapped
+        ? normalizeVocabHeadword(snapped.text) || snapped.text
+        : picked;
       analysis.open({
-        selectedText: snapped?.text || picked,
+        selectedText,
         contextSentence: sentence,
         ...(sourceType ? { sourceType } : {}),
-        ...(language ? { language } : {}),
+        language: language || targetLanguage,
       });
     })();
   };

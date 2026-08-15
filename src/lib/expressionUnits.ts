@@ -1,6 +1,9 @@
 import { segmentEnglishForLookup } from "@/lib/englishPhrases";
 import { selectionFitsSentence } from "@/lib/expressionInsight";
-import { isLearnableEnglishWord } from "@/lib/vocabulary";
+import {
+  isLearnableEnglishWord,
+  normalizeVocabHeadword,
+} from "@/lib/vocabulary";
 
 export type ExpressionUnitSpan = {
   text: string;
@@ -13,7 +16,7 @@ function normalizePiece(value: string) {
 }
 
 function isWordChar(char: string | undefined) {
-  return Boolean(char && /[A-Za-z']/.test(char));
+  return Boolean(char && /[\p{L}\p{M}'’]/u.test(char));
 }
 
 function sitsOnTokenEdge(sentence: string, start: number, end: number) {
@@ -100,7 +103,10 @@ export function normalizeUnitTexts(raw: unknown, sentence: string): string[] {
   const seen = new Set<string>();
   const out: string[] = [];
   for (const item of list) {
-    const text = typeof item === "string" ? normalizePiece(item) : "";
+    const text =
+      typeof item === "string"
+        ? normalizeVocabHeadword(normalizePiece(item))
+        : "";
     if (!text || text.length > 80) continue;
     if (!selectionFitsSentence(sentence, text)) continue;
     const key = text.toLowerCase();

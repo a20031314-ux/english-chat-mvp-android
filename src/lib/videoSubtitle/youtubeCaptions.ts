@@ -1,11 +1,38 @@
 import { BROWSER_UA, fetchWithTimeout } from "@/lib/videoSubtitle/http";
 import { asNumber, asRecord, asString } from "@/lib/videoSubtitle/parseModelJson";
+import {
+  captionLanguageMatches,
+  isManualCaptionTrack,
+} from "@/lib/videoSubtitle/captionLanguages";
 import type { CaptionTrack, SttSegment, SttWord } from "@/lib/videoSubtitle/types";
 
-function rankTracks(tracks: CaptionTrack[]): CaptionTrack[] {
+export type CaptionFetchOptions = {
+  /** Prefer / require tracks matching this UI/locale language. */
+  preferredLocale?: string;
+  /** Only accept manual (non-asr) tracks. */
+  manualOnly?: boolean;
+  /**
+   * When preferredLocale is set and no track matches, return nothing
+   * (do not fall back to other languages).
+   */
+  requireLanguageMatch?: boolean;
+};
+
+function rankTracks(
+  tracks: CaptionTrack[],
+  options?: CaptionFetchOptions,
+): CaptionTrack[] {
+  const preferred = options?.preferredLocale;
   return [...tracks].sort((a, b) => {
-    const asr = (track: CaptionTrack) => (track.kind === "asr" ? 1 : 0);
-    return asr(a) - asr(b);
+    const score = (track: CaptionTrack) => {
+      let value = 0;
+      if (isManualCaptionTrack(track.kind)) value += 100;
+      if (preferred && captionLanguageMatches(track.languageCode, preferred)) {
+        value += 50;
+      }
+      return value;
+    };
+    return score(b) - score(a);
   });
 }
 
@@ -324,13 +351,62 @@ async function timedTextTracks(
   return [];
 }
 
+/** Public track list for a video (manual vs asr). */
+export async function listYouTubeCaptionTracks(
+  videoId: string,
+  cookie?: string,
+): Promise<CaptionTrack[]> {
+  return timedTextTracks(videoId, cookie);
+}
+
+/** True when the video has at least one non-ASR (uploader/official) caption track. */
+export async function hasOfficialYouTubeCaptions(
+  videoId: string,
+  cookie?: string,
+): Promise<boolean> {
+  const tracks = await listYouTubeCaptionTracks(videoId, cookie);
+  return tracks.some((track) => isManualCaptionTrack(track.kind));
+}
+
+function filterTracks(
+  tracks: CaptionTrack[],
+  options?: CaptionFetchOptions,
+): CaptionTrack[] {
+  let pool = tracks;
+  if (options?.manualOnly) {
+    pool = pool.filter((track) => isManualCaptionTrack(track.kind));
+  }
+  if (options?.preferredLocale) {
+    const locale = options.preferredLocale;
+    const matched = pool.filter((track) =>
+      captionLanguageMatches(track.languageCode, locale),
+    );
+    if (matched.length > 0) {
+      pool = matched;
+    } else if (
+      options.manualOnly ||
+      options.requireLanguageMatch
+    ) {
+      // Do not silently pick Arabic/etc. when the learner asked for Japanese.
+      return [];
+    }
+  }
+  return pool;
+}
+
+/**
+ * Fetch caption segments. When `manualOnly` + `preferredLocale` are set,
+ * only returns text if an official track in that language exists.
+ */
 export async function transcribeYouTubeCaptions(
   tracks: CaptionTrack[],
   videoId?: string,
   cookie?: string,
+  options?: CaptionFetchOptions,
 ): Promise<SttSegment[]> {
   const extra = videoId ? await timedTextTracks(videoId, cookie) : [];
-  const pool = rankTracks(mergeTracks([...tracks, ...extra]));
+  const merged = mergeTracks([...tracks, ...extra]);
+  const pool = rankTracks(filterTracks(merged, options), options);
   for (const track of pool.slice(0, 8)) {
     const segments = await segmentsFromTrack(track, videoId, cookie);
     if (segments.length > 0) return segments;

@@ -3,10 +3,11 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { spokenTranslateSystem } from "@/lib/spokenTranslate";
 import { asTranslationSourceType } from "@/lib/naturalTranslation";
+import { coerceLanguageCode } from "@/lib/learningLanguages";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
-const TARGET_LANGUAGES: Record<string, string> = {
+const INTERFACE_LANGUAGES: Record<string, string> = {
   ko: "Korean",
   en: "English",
   es: "Spanish",
@@ -39,6 +40,8 @@ export async function POST(request: NextRequest) {
   let body: {
     text?: string;
     locale?: string;
+    interfaceLanguage?: string;
+    targetLanguage?: string;
     context?: unknown;
     sourceType?: unknown;
   };
@@ -54,9 +57,15 @@ export async function POST(request: NextRequest) {
   }
 
   const locale =
-    typeof body.locale === "string" && body.locale in TARGET_LANGUAGES
+    typeof body.locale === "string" && body.locale in INTERFACE_LANGUAGES
       ? body.locale
       : "ko";
+  const interfaceLanguage =
+    typeof body.interfaceLanguage === "string" &&
+    body.interfaceLanguage in INTERFACE_LANGUAGES
+      ? body.interfaceLanguage
+      : locale;
+  const targetLanguage = coerceLanguageCode(body.targetLanguage);
   const sourceType = asTranslationSourceType(body.sourceType);
   const context = Array.isArray(body.context)
     ? body.context
@@ -72,7 +81,12 @@ export async function POST(request: NextRequest) {
       messages: [
         {
           role: "system",
-          content: spokenTranslateSystem(locale, sourceType),
+          content: spokenTranslateSystem({
+            locale,
+            interfaceLanguage,
+            targetLanguage,
+            sourceType,
+          }),
         },
         {
           role: "user",

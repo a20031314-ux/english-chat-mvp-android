@@ -1,12 +1,22 @@
 import OpenAI from "openai";
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
-import { ENGLISH_ANALYSIS_LANGUAGES, normalizeEnglishInputAnalysis } from "@/lib/englishAnalysis";
 import {
-  asLearnerLevel,
-  languageOverviewSystem,
-} from "@/lib/languageAnalysisPrompt";
+  ENGLISH_ANALYSIS_LANGUAGES,
+  normalizeEnglishInputAnalysis,
+} from "@/lib/englishAnalysis";
+import { englishOverviewSystem } from "@/lib/englishAnalysisPrompt";
+import {
+  adaptiveOverviewSystem,
+  mapAdaptiveSentenceToEnglishInput,
+  normalizeAdaptiveSentenceAnalysis,
+} from "@/lib/adaptiveLanguageAnalysis";
+import { asLearnerLevel } from "@/lib/languageAnalysisPrompt";
 import { asTranslationSourceType } from "@/lib/naturalTranslation";
+import {
+  coerceLanguageCode,
+  learningLanguageName,
+} from "@/lib/learningLanguages";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -29,6 +39,8 @@ export async function POST(request: NextRequest) {
   let body: {
     text?: unknown;
     locale?: unknown;
+    interfaceLanguage?: unknown;
+    targetLanguage?: unknown;
     sourceType?: unknown;
     language?: unknown;
     learnerLevel?: unknown;
@@ -48,10 +60,20 @@ export async function POST(request: NextRequest) {
     typeof body.locale === "string" && body.locale in ENGLISH_ANALYSIS_LANGUAGES
       ? body.locale
       : "ko";
+  const interfaceLanguage =
+    typeof body.interfaceLanguage === "string" &&
+    body.interfaceLanguage in ENGLISH_ANALYSIS_LANGUAGES
+      ? body.interfaceLanguage
+      : locale;
+  const targetLanguage = coerceLanguageCode(body.targetLanguage);
   const sourceType = asTranslationSourceType(body.sourceType);
   const learnerLevel = asLearnerLevel(body.learnerLevel);
   const languageHint =
-    typeof body.language === "string" ? body.language.trim() : "";
+    typeof body.language === "string" && body.language.trim()
+      ? body.language.trim()
+      : learningLanguageName(targetLanguage);
+
+  const useEnglishPipeline = targetLanguage === "en";
 
   try {
     const completion = await openai.chat.completions.create({
@@ -59,18 +81,28 @@ export async function POST(request: NextRequest) {
       messages: [
         {
           role: "system",
-          content: languageOverviewSystem({
-            locale,
-            sourceType,
-            learnerLevel,
-            ...(languageHint ? { languageHint } : {}),
-          }),
+          content: useEnglishPipeline
+            ? englishOverviewSystem({
+                locale,
+                interfaceLanguage,
+                sourceType,
+                learnerLevel,
+              })
+            : adaptiveOverviewSystem({
+                locale,
+                interfaceLanguage,
+                targetLanguage,
+                sourceType,
+                learnerLevel,
+                languageHint,
+              }),
         },
         {
           role: "user",
           content: JSON.stringify({
             text,
-            ...(languageHint ? { languageHint } : {}),
+            languageHint,
+            targetLanguage,
             ...(learnerLevel ? { learnerLevel } : {}),
           }),
         },
@@ -82,11 +114,21 @@ export async function POST(request: NextRequest) {
     if (!raw) {
       return jsonWithCors(request, { error: "empty completion" }, { status: 500 });
     }
-    const analysis = normalizeEnglishInputAnalysis(JSON.parse(raw), text);
-    if (!analysis) {
+    const parsed = JSON.parse(raw);
+
+    if (useEnglishPipeline) {
+      const analysis = normalizeEnglishInputAnalysis(parsed, text);
+      if (!analysis) {
+        return jsonWithCors(request, { error: "empty analysis" }, { status: 500 });
+      }
+      return jsonWithCors(request, analysis);
+    }
+
+    const adaptive = normalizeAdaptiveSentenceAnalysis(parsed, text);
+    if (!adaptive) {
       return jsonWithCors(request, { error: "empty analysis" }, { status: 500 });
     }
-    return jsonWithCors(request, analysis);
+    return jsonWithCors(request, mapAdaptiveSentenceToEnglishInput(adaptive));
   } catch (error) {
     console.error("[english-analysis/input]", error);
     return jsonWithCors(request, { error: "ANALYSIS_FAILED" }, { status: 500 });

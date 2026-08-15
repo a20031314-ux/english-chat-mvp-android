@@ -27,16 +27,16 @@ import {
   emptyViewerContext,
   type ViewerContext,
 } from "@/lib/videoSubtitle/viewerTypes";
+import { speechLooksWrongLanguage } from "@/lib/videoSubtitle/languageMatch";
+import {
+  isLearningLanguageCode,
+  type LearningLanguageCode,
+} from "@/lib/learningLanguages";
+import { isNonSpeechMarker } from "@/lib/videoSubtitle/speechNoise";
 
 const MAX_SEGMENTS = 800;
 /** Prefer as much audio as Whisper/download allows for full-video grasp. */
 const WHISPER_MAX_SECONDS = 900;
-
-function isMarkerOnly(text: string): boolean {
-  return /^\s*\[(music|applause|laughter|silence|inaudible).*\]\s*$/i.test(
-    text,
-  );
-}
 
 function usableSpeech(segments: SttSegment[]): SttSegment[] {
   return segments
@@ -44,7 +44,13 @@ function usableSpeech(segments: SttSegment[]): SttSegment[] {
       ...segment,
       text: segment.text.replace(/\s+/g, " ").trim(),
     }))
-    .filter((segment) => segment.text && !isMarkerOnly(segment.text))
+    .filter(
+      (segment) =>
+        segment.text &&
+        !isNonSpeechMarker(segment.text) &&
+        // Caption tracks sometimes include [Music] / ♪ lines too.
+        !(segment.uncertain && (segment.confidence ?? 1) < 0.3),
+    )
     .slice(0, MAX_SEGMENTS);
 }
 
@@ -89,13 +95,32 @@ async function buildFirstWindowCues(
   });
 }
 
+function asOfficialSegments(segments: SttSegment[]): NormalizedSegment[] {
+  return withoutWords(
+    segments.map((segment) => ({
+      id: segment.id,
+      startTime: segment.startTime,
+      endTime: segment.endTime,
+      rawText: segment.text,
+      normalizedText: segment.text.replace(/\s+/g, " ").trim(),
+      words: segment.words,
+      confidence: segment.confidence,
+      uncertain: segment.uncertain,
+    })),
+  );
+}
+
 /**
  * Prepare full transcript + topic, then adapt the first 20s window so playback
  * can start. Remaining 20s windows are adapted on the client.
+ *
+ * When an official (non-ASR) caption track matches the UI locale, those cues
+ * become learning captions and playback units — AI gloss is skipped client-side.
  */
 export async function prepareVideoTranscript(
   videoUrl: string,
   locale = "ko",
+  targetLanguage = "en",
 ): Promise<PreparedTranscript> {
   if (!getOpenAIClient()) {
     throw new VideoPipelineError("MISSING_OPENAI_KEY");
@@ -109,19 +134,52 @@ export async function prepareVideoTranscript(
   const source = await resolveYouTubeSource(parsed.url);
   let sttSource: PreparedTranscript["sttSource"] = "whisper";
   let stt: SttSegment[] = [];
+  let officialUi: SttSegment[] = [];
+  let captionMode: PreparedTranscript["captionMode"] = "speech";
 
-  // Prefer full YouTube captions when available (covers whole video).
+  // Official UI-locale captions (manual only, language must match).
   try {
-    const captionStt = usableSpeech(
+    officialUi = usableSpeech(
       await transcribeYouTubeCaptions(
         source.captionTracks,
         source.videoId,
         source.cookie,
+        { preferredLocale: locale, manualOnly: true },
       ),
     );
-    if (captionStt.length > 0) {
-      stt = captionStt;
-      sttSource = "youtube-asr";
+  } catch (error) {
+    console.error("[video-prepare-official-ui]", error);
+  }
+
+  // Speech / learning-language transcript only (never another language's track).
+  try {
+    const targetManual = usableSpeech(
+      await transcribeYouTubeCaptions(
+        source.captionTracks,
+        source.videoId,
+        source.cookie,
+        { preferredLocale: targetLanguage, manualOnly: true },
+      ),
+    );
+    if (targetManual.length > 0) {
+      stt = targetManual;
+      sttSource = "youtube-manual";
+    } else {
+      const targetCaptions = usableSpeech(
+        await transcribeYouTubeCaptions(
+          source.captionTracks,
+          source.videoId,
+          source.cookie,
+          {
+            preferredLocale: targetLanguage,
+            requireLanguageMatch: true,
+          },
+        ),
+      );
+      if (targetCaptions.length > 0) {
+        stt = targetCaptions;
+        sttSource = "youtube-asr";
+      }
     }
   } catch (error) {
     console.error("[video-prepare-captions]", error);
@@ -132,7 +190,13 @@ export async function prepareVideoTranscript(
       audioStreamUrl: source.audioStreamUrl,
       audioMimeType: source.audioMimeType,
       mediaUserAgent: source.mediaUserAgent,
-      maxSeconds: WHISPER_MAX_SECONDS,
+      maxSeconds: Math.min(
+        WHISPER_MAX_SECONDS,
+        Math.max(
+          90,
+          Math.ceil((source.durationSeconds || WHISPER_MAX_SECONDS) + 15),
+        ),
+      ),
     });
     console.error("[video-prepare-audio]", {
       videoId: parsed.videoId,
@@ -158,11 +222,22 @@ export async function prepareVideoTranscript(
     }
   }
 
+  // Only reuse UI official captions as the speech track when UI == learning language.
+  if (stt.length === 0 && officialUi.length > 0) {
+    const uiBase = locale.split(/[-_]/)[0]?.toLowerCase();
+    const targetBase = targetLanguage.split(/[-_]/)[0]?.toLowerCase();
+    if (uiBase && targetBase && uiBase === targetBase) {
+      stt = officialUi;
+      sttSource = "youtube-official-ui";
+    }
+  }
+
   console.error("[video-prepare]", {
     videoId: parsed.videoId,
     hasAudio: Boolean(source.audioStreamUrl),
     hasVideo: Boolean(source.videoStreamUrl),
     sttLines: stt.length,
+    officialUiLines: officialUi.length,
     sttSource,
   });
 
@@ -174,11 +249,39 @@ export async function prepareVideoTranscript(
     );
   }
 
-  const normalized = withoutWords(
+  const targetCode: LearningLanguageCode = isLearningLanguageCode(targetLanguage)
+    ? targetLanguage
+    : "en";
+  const speechSample = stt
+    .slice(0, 40)
+    .map((row) => row.text)
+    .join(" ");
+  if (speechLooksWrongLanguage(speechSample, targetCode)) {
+    console.error("[video-prepare-wrong-language]", {
+      videoId: parsed.videoId,
+      targetLanguage: targetCode,
+      sttSource,
+      sample: speechSample.slice(0, 160),
+    });
+    throw new VideoPipelineError("UNKNOWN_LANGUAGE");
+  }
+
+  const useOfficialUi = officialUi.length > 0;
+  captionMode = useOfficialUi ? "official-ui" : "speech";
+  if (useOfficialUi) {
+    sttSource = "youtube-official-ui";
+  }
+
+  // Study / playback units always follow learning-language speech timing.
+  const speechNormalized = withoutWords(
     await normalizeTranscript(stt, {
       gptThroughSeconds: FIRST_WINDOW_SECONDS,
     }),
   );
+  const officialNormalized = useOfficialUi
+    ? asOfficialSegments(officialUi)
+    : [];
+  const normalized = speechNormalized;
 
   const last = normalized[normalized.length - 1];
   const durationSeconds = Math.max(
@@ -214,6 +317,8 @@ export async function prepareVideoTranscript(
     sectionCount: windows.length,
     durationSeconds,
     segments: normalized.length,
+    captionMode,
+    officialUi: officialNormalized.length,
     firstCues: 0,
     sceneContexts: sceneContexts.length,
     viewerFacts: viewerContext.establishedFacts.length,
@@ -225,8 +330,12 @@ export async function prepareVideoTranscript(
     videoUrl: parsed.url,
     durationSeconds,
     sttSource,
+    captionMode,
     context,
     segments: normalized,
+    ...(officialNormalized.length > 0
+      ? { officialUiSegments: officialNormalized }
+      : {}),
     sceneContexts: sceneContexts.length ? sceneContexts : undefined,
     viewerContext,
     firstWindowEnd: FIRST_WINDOW_SECONDS,

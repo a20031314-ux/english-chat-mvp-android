@@ -3,16 +3,21 @@
 import { useCallback, useMemo, useRef, useState, type ReactNode } from "react";
 import { VocabWordPreview } from "@/components/VocabWordPreview";
 import { VocabPreviewContext } from "@/contexts/VocabPreviewContext";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { apiUrl } from "@/lib/apiBase";
 import type { Locale, UICopy } from "@/lib/copy";
+import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
 import {
   isWordSaved,
+  isVocabLookupEligible,
   loadVocabulary,
+  normalizeVocabHeadword,
   persistVocabulary,
   saveVocabularyWords,
   type VocabLookupResult,
   type VocabularyEntry,
 } from "@/lib/vocabulary";
+import { isPronounceableAlphabetLetter } from "@/lib/letterPronunciation";
 
 export function VocabPreviewProvider({
   locale,
@@ -23,6 +28,9 @@ export function VocabPreviewProvider({
   ui: UICopy;
   children: ReactNode;
 }) {
+  const learningLanguage = useLearningLanguageOptional();
+  const targetLanguage =
+    learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
   const [entries, setEntries] = useState<VocabularyEntry[]>(() =>
     typeof window === "undefined" ? [] : loadVocabulary(),
   );
@@ -45,8 +53,12 @@ export function VocabPreviewProvider({
 
   const open = useCallback(
     async (word: string) => {
-      const trimmed = word.replace(/\s+/g, " ").trim();
+      const trimmed = normalizeVocabHeadword(word);
       if (!trimmed || isVocabSaving) return;
+      // Alphabet letters use the inline sound tip, not the vocab sheet.
+      if (isPronounceableAlphabetLetter(trimmed)) return;
+      // Skip bare function words / contractions that aren't real lookup units.
+      if (!isVocabLookupEligible(trimmed)) return;
 
       const requestId = requestIdRef.current + 1;
       requestIdRef.current = requestId;
@@ -60,7 +72,12 @@ export function VocabPreviewProvider({
         const response = await fetch(apiUrl("/api/vocab/gloss"), {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ words: [trimmed], locale }),
+          body: JSON.stringify({
+            words: [trimmed],
+            locale,
+            interfaceLanguage: locale,
+            targetLanguage,
+          }),
         });
         if (!response.ok) throw new Error("gloss failed");
         const data = (await response.json()) as { items?: VocabLookupResult[] };
@@ -68,12 +85,26 @@ export function VocabPreviewProvider({
         const item =
           Array.isArray(data.items) && data.items.length > 0
             ? data.items[0]
-            : { word: trimmed, gloss: trimmed };
+            : null;
+        const head =
+          normalizeVocabHeadword(item?.word || trimmed) || trimmed;
+        const gloss = (item?.gloss || "").trim();
+        // Empty gloss or model echoing the headword = failed lookup (retryable).
+        if (
+          !gloss ||
+          gloss.toLowerCase() === head.toLowerCase() ||
+          normalizeVocabHeadword(gloss).toLowerCase() === head.toLowerCase()
+        ) {
+          setPreviewLoadFailed(true);
+          setPreviewDetail({ word: head, gloss: "" });
+          return;
+        }
         setPreviewDetail({
-          word: item.word || trimmed,
-          gloss: item.gloss || trimmed,
-          ...(item.example ? { example: item.example } : {}),
-          ...(item.partOfSpeech ? { partOfSpeech: item.partOfSpeech } : {}),
+          word: head,
+          gloss,
+          ...(item?.example ? { example: item.example } : {}),
+          ...(item?.partOfSpeech ? { partOfSpeech: item.partOfSpeech } : {}),
+          ...(item?.reading ? { reading: item.reading } : {}),
         });
       } catch {
         if (requestIdRef.current !== requestId) return;
@@ -84,7 +115,7 @@ export function VocabPreviewProvider({
         }
       }
     },
-    [isVocabSaving, locale],
+    [isVocabSaving, locale, targetLanguage],
   );
 
   const close = useCallback(() => {
@@ -100,7 +131,11 @@ export function VocabPreviewProvider({
     if (!previewWord || !previewDetail || isVocabSaving) return;
     setIsVocabSaving(true);
     try {
-      const updated = saveVocabularyWords(loadVocabulary(), [previewDetail]);
+      const updated = saveVocabularyWords(
+        loadVocabulary(),
+        [previewDetail],
+        targetLanguage,
+      );
       persistVocabulary(updated);
       setEntries(updated);
       showToast(ui.vocabPickSavedToast);
@@ -112,17 +147,26 @@ export function VocabPreviewProvider({
     } finally {
       setIsVocabSaving(false);
     }
-  }, [isVocabSaving, previewDetail, previewWord, showToast, ui.vocabPickFailed, ui.vocabPickSavedToast]);
+  }, [
+    isVocabSaving,
+    previewDetail,
+    previewWord,
+    showToast,
+    targetLanguage,
+    ui.vocabPickFailed,
+    ui.vocabPickSavedToast,
+  ]);
 
   const value = useMemo(
     () => ({
       open,
       close,
       saveLabel: ui.insightSaveWord,
-      isWordSaved: (word: string) => isWordSaved(entries, word),
+      isWordSaved: (word: string) =>
+        isWordSaved(entries, word, targetLanguage),
       savingWord: previewWord,
     }),
-    [close, entries, open, previewWord, ui.insightSaveWord],
+    [close, entries, open, previewWord, targetLanguage, ui.insightSaveWord],
   );
 
   return (
@@ -135,7 +179,7 @@ export function VocabPreviewProvider({
           isLoading={isPreviewLoading}
           isSaving={isVocabSaving}
           loadFailed={previewLoadFailed}
-          alreadySaved={isWordSaved(entries, previewWord)}
+          alreadySaved={isWordSaved(entries, previewWord, targetLanguage)}
           ui={ui}
           onClose={close}
           onSave={save}

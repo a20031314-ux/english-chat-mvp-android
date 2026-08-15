@@ -1,12 +1,14 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import type { Locale } from "@/lib/copy";
 import type {
   EnglishAnalysisTarget,
   EnglishElementAnalysis,
 } from "@/lib/englishAnalysis";
 import { analyzeEnglishElement } from "@/lib/englishAnalysisService";
+import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
 
 export type EnglishAnalysisFrame = {
   id: number;
@@ -17,6 +19,9 @@ export type EnglishAnalysisFrame = {
 };
 
 export function useEnglishAnalysis(locale: Locale) {
+  const learningLanguage = useLearningLanguageOptional();
+  const targetLanguage =
+    learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
   const [stack, setStack] = useState<EnglishAnalysisFrame[]>([]);
   const idRef = useRef(0);
 
@@ -54,6 +59,8 @@ export function useEnglishAnalysis(locale: Locale) {
           selectedText,
           contextSentence,
           locale,
+          interfaceLanguage: locale,
+          targetLanguage,
           context: next.context,
           sourceType: next.sourceType,
           language: next.language,
@@ -83,7 +90,7 @@ export function useEnglishAnalysis(locale: Locale) {
         );
       }
     },
-    [locale],
+    [locale, targetLanguage],
   );
 
   return {

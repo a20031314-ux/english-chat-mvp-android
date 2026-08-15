@@ -145,10 +145,21 @@ export function grammarNorm(text: string) {
   return stripStyleWords(substantiveNorm(text)).replace(/\s+/g, " ").trim();
 }
 
+function isMostlyUnspacedScript(text: string): boolean {
+  if (/\s/.test(text)) return false;
+  return /[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]/.test(text);
+}
+
 function contentWords(text: string): string[] {
-  return grammarNorm(text)
-    .split(/\s+/)
-    .filter((word) => word && !CONTENT_STOP.has(word));
+  const norm = grammarNorm(text);
+  if (!norm) return [];
+  // Japanese/Chinese/Korean often have no spaces. Splitting on whitespace
+  // makes the whole sentence one "word", so a particle fix (を→が) looks like
+  // a total meaning rewrite and gets discarded.
+  if (isMostlyUnspacedScript(norm)) {
+    return Array.from(norm);
+  }
+  return norm.split(/\s+/).filter((word) => word && !CONTENT_STOP.has(word));
 }
 
 /** True when the rewrite changes the message's content words, not just grammar. */
@@ -169,6 +180,10 @@ export function isGrammarError(original: string, corrected: string): boolean {
 /** Remove optional fillers the model added on top of a real grammar fix. */
 /** Capitalize the first letter of an English sentence (Are, not are). */
 export function sentenceCaseEnglish(text: string): string {
+  // Only title-case Latin sentence starts; leave CJK / other scripts alone.
+  if (!/^\s*\p{Ll}/u.test(text) || /^\s*[^A-Za-z]/.test(text)) {
+    return text;
+  }
   return text.replace(/^(\s*)(\p{Ll})/u, (_, space: string, letter: string) => {
     return `${space}${letter.toUpperCase()}`;
   });

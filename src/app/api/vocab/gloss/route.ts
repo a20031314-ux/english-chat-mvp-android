@@ -2,10 +2,16 @@ import OpenAI from "openai";
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { naturalTranslationPrinciples } from "@/lib/naturalTranslation";
+import {
+  coerceLanguageCode,
+  learningLanguageName,
+} from "@/lib/learningLanguages";
+import { interfaceLanguageDisplayName } from "@/lib/languageLearningAnalysis";
+import { normalizeVocabHeadword } from "@/lib/vocabulary";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
-const TARGET_LANGUAGES: Record<string, string> = {
+const INTERFACE_LANGUAGES: Record<string, string> = {
   ko: "Korean",
   en: "English",
   es: "Spanish",
@@ -22,6 +28,7 @@ type GlossItem = {
   gloss: string;
   example?: string;
   partOfSpeech?: string;
+  reading?: string;
 };
 
 function getClient() {
@@ -30,6 +37,10 @@ function getClient() {
     return null;
   }
   return new OpenAI({ apiKey });
+}
+
+function glossLookupKey(word: string): string {
+  return normalizeVocabHeadword(word).toLowerCase();
 }
 
 function normalizeItems(raw: unknown, requested: string[]): GlossItem[] {
@@ -43,24 +54,31 @@ function normalizeItems(raw: unknown, requested: string[]): GlossItem[] {
     const o = item as Record<string, unknown>;
     if (typeof o.word !== "string" || !o.word.trim()) continue;
     if (typeof o.gloss !== "string" || !o.gloss.trim()) continue;
-    byWord.set(o.word.trim().toLowerCase(), {
-      word: o.word.trim(),
-      gloss: o.gloss.trim(),
+    const word = normalizeVocabHeadword(o.word);
+    const gloss = o.gloss.trim();
+    if (!word || !gloss) continue;
+    byWord.set(glossLookupKey(word), {
+      word,
+      gloss,
       ...(typeof o.example === "string" && o.example.trim()
         ? { example: o.example.trim() }
         : {}),
       ...(typeof o.partOfSpeech === "string" && o.partOfSpeech.trim()
         ? { partOfSpeech: o.partOfSpeech.trim() }
         : {}),
+      ...(typeof o.reading === "string" && o.reading.trim()
+        ? { reading: o.reading.trim() }
+        : {}),
     });
   }
 
   return requested.map((word) => {
-    const found = byWord.get(word.toLowerCase());
+    const normalized = normalizeVocabHeadword(word) || word.trim();
+    const found = byWord.get(glossLookupKey(normalized));
     if (found) {
-      return { ...found, word };
+      return { ...found, word: normalized };
     }
-    return { word, gloss: word };
+    return { word: normalized, gloss: "" };
   });
 }
 
@@ -74,7 +92,12 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
 
-  let body: { words?: unknown; locale?: string };
+  let body: {
+    words?: unknown;
+    locale?: string;
+    interfaceLanguage?: string;
+    targetLanguage?: string;
+  };
   try {
     body = await request.json();
   } catch {
@@ -84,7 +107,7 @@ export async function POST(request: NextRequest) {
   const words = Array.isArray(body.words)
     ? body.words
         .filter((w): w is string => typeof w === "string")
-        .map((w) => w.trim())
+        .map((w) => normalizeVocabHeadword(w))
         .filter(Boolean)
         .slice(0, 40)
     : [];
@@ -94,10 +117,24 @@ export async function POST(request: NextRequest) {
   }
 
   const locale =
-    typeof body.locale === "string" && body.locale in TARGET_LANGUAGES
+    typeof body.locale === "string" && body.locale in INTERFACE_LANGUAGES
       ? body.locale
       : "ko";
-  const targetLanguage = TARGET_LANGUAGES[locale];
+  const interfaceLanguage =
+    typeof body.interfaceLanguage === "string" &&
+    body.interfaceLanguage in INTERFACE_LANGUAGES
+      ? body.interfaceLanguage
+      : locale;
+  const targetLanguage = coerceLanguageCode(body.targetLanguage);
+  const targetName = learningLanguageName(targetLanguage);
+  const interfaceName =
+    INTERFACE_LANGUAGES[interfaceLanguage] ??
+    interfaceLanguageDisplayName(interfaceLanguage);
+  const englishOnlyHeadwords = targetLanguage === "en";
+  const characterAware =
+    targetLanguage === "ja" ||
+    targetLanguage === "zh" ||
+    targetLanguage === "ko";
 
   try {
     const completion = await client.chat.completions.create({
@@ -105,22 +142,48 @@ export async function POST(request: NextRequest) {
       messages: [
         {
           role: "system",
-          content: `You write short learner-friendly glosses for English vocabulary.
-Items may be single words OR multi-word phrases / compounds / idioms (e.g. "reading room", "look forward to").
+          content: `You write short learner-friendly glosses for ${targetName} vocabulary.
+Items may be single words, multi-word phrases / compounds / idioms${
+            characterAware
+              ? ", OR single characters / syllables that learners tap for meaning"
+              : ""
+          }.
 For each item, return:
-- word: the same English item (keep multi-word phrases intact; do not split them)
-- gloss: short meaning in ${targetLanguage} for the whole item as a unit
-- partOfSpeech: optional English tag (noun, verb, adjective, phrase, idiom, …)
-- example: optional short English example sentence using the item
+- word: the same ${englishOnlyHeadwords ? "English" : targetName} item (keep multi-word phrases intact; do not split them)
+- gloss: short meaning in ${interfaceName} for the whole item as a unit
+- partOfSpeech: optional short tag (noun, verb, adjective, phrase, idiom, particle, kanji, character, …)
+- reading: ${
+            characterAware
+              ? targetLanguage === "ja"
+                ? "optional reading for kanji/kana items (hiragana; for kanji prefer common 音読み/訓読み the learner needs). Empty for items that need no reading."
+                : targetLanguage === "zh"
+                  ? "optional pinyin for Chinese characters/words. Empty if not useful."
+                  : "optional romanization/reading when helpful for Hangul syllables or hanja. Empty if not useful."
+              : "omit (leave empty)"
+          }
+- example: optional short ${targetName} example sentence using the item
+
+${
+  characterAware
+    ? `Character rules:
+- If the item is a single character, explain THAT character (meaning + how it is used), not a random longer word.
+- Japanese kanji: include reading in "reading". Particles/okurigana: say the grammatical role briefly in gloss.
+- Chinese characters: include pinyin in "reading" when useful.
+- Do not invent rare readings; prefer the most common learner-facing reading.
+`
+    : ""
+}
 
 ${naturalTranslationPrinciples({
-  locale,
+  locale: interfaceLanguage,
+  targetLanguage,
+  interfaceLanguage,
   role: "gloss",
   sourceType: "unknown",
 })}
 
 Respond with ONLY compact JSON:
-{"items":[{"word":"...","gloss":"...","partOfSpeech":"...","example":"..."}]}`,
+{"items":[{"word":"...","gloss":"...","partOfSpeech":"...","reading":"...","example":"..."}]}`,
         },
         {
           role: "user",

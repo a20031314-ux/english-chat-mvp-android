@@ -9,6 +9,10 @@ import {
   persistLearningCards,
   type LearningCard,
 } from "@/lib/learningCards";
+import {
+  coerceLanguageCode,
+  type LearningLanguageCode,
+} from "@/lib/learningLanguages";
 
 export function saveVideoLearningItem(input: {
   original: string;
@@ -16,7 +20,9 @@ export function saveVideoLearningItem(input: {
   explanation: string;
   videoUrl: string;
   timestamp: number;
+  languageCode?: LearningLanguageCode;
 }): { save: VideoLearningSave; alreadySaved: boolean } {
+  const languageCode = input.languageCode ?? coerceLanguageCode(undefined);
   const existing = loadVideoLearningSaves();
   if (
     isVideoSubtitleSaved(existing, {
@@ -43,6 +49,7 @@ export function saveVideoLearningItem(input: {
     explanation: input.explanation,
     videoUrl: input.videoUrl,
     timestamp: input.timestamp,
+    languageCode,
     createdAt,
   };
   persistVideoLearningSaves([save, ...existing].slice(0, 200));
@@ -53,6 +60,7 @@ export function saveVideoLearningItem(input: {
     corrected: input.original,
     explanation: input.explanation || input.translation,
     natural: input.translation,
+    languageCode,
     createdAt,
     savedAt: createdAt,
     status: "new",

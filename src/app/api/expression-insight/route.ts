@@ -8,8 +8,17 @@ import {
 import {
   ANALYSIS_LANGUAGES,
   asLearnerLevel,
-  languageElementSystem,
 } from "@/lib/languageAnalysisPrompt";
+import { englishElementSystem } from "@/lib/englishAnalysisPrompt";
+import {
+  adaptiveElementSystem,
+  mapAdaptiveElementToExpressionInsight,
+  normalizeAdaptiveElementAnalysis,
+} from "@/lib/adaptiveLanguageAnalysis";
+import {
+  coerceLanguageCode,
+  learningLanguageName,
+} from "@/lib/learningLanguages";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -34,6 +43,8 @@ export async function POST(request: NextRequest) {
     selected?: unknown;
     context?: unknown;
     locale?: unknown;
+    interfaceLanguage?: unknown;
+    targetLanguage?: unknown;
     language?: unknown;
     learnerLevel?: unknown;
   };
@@ -55,9 +66,17 @@ export async function POST(request: NextRequest) {
     typeof body.locale === "string" && body.locale in ANALYSIS_LANGUAGES
       ? body.locale
       : "ko";
+  const interfaceLanguage =
+    typeof body.interfaceLanguage === "string" &&
+    body.interfaceLanguage in ANALYSIS_LANGUAGES
+      ? body.interfaceLanguage
+      : locale;
+  const targetLanguage = coerceLanguageCode(body.targetLanguage);
   const learnerLevel = asLearnerLevel(body.learnerLevel);
   const languageHint =
-    typeof body.language === "string" ? body.language.trim() : "";
+    typeof body.language === "string" && body.language.trim()
+      ? body.language.trim()
+      : learningLanguageName(targetLanguage);
   const context = Array.isArray(body.context)
     ? body.context
         .filter((item): item is string => typeof item === "string")
@@ -66,18 +85,29 @@ export async function POST(request: NextRequest) {
         .slice(-6)
     : [];
 
+  const useEnglishPipeline = targetLanguage === "en";
+
   try {
     const completion = await openai.chat.completions.create({
       model: MODEL,
       messages: [
         {
           role: "system",
-          content: languageElementSystem({
-            locale,
-            sourceType: "conversation",
-            learnerLevel,
-            ...(languageHint ? { languageHint } : {}),
-          }),
+          content: useEnglishPipeline
+            ? englishElementSystem({
+                locale,
+                interfaceLanguage,
+                sourceType: "conversation",
+                learnerLevel,
+              })
+            : adaptiveElementSystem({
+                locale,
+                interfaceLanguage,
+                targetLanguage,
+                sourceType: "conversation",
+                learnerLevel,
+                languageHint,
+              }),
         },
         {
           role: "user",
@@ -85,7 +115,8 @@ export async function POST(request: NextRequest) {
             selectedText: selected,
             contextSentence: sentence,
             ...(context.length ? { context } : {}),
-            ...(languageHint ? { languageHint } : {}),
+            languageHint,
+            targetLanguage,
             ...(learnerLevel ? { learnerLevel } : {}),
           }),
         },
@@ -97,11 +128,24 @@ export async function POST(request: NextRequest) {
     if (!raw) {
       return jsonWithCors(request, { error: "empty completion" }, { status: 500 });
     }
-    const insight = normalizeExpressionInsight(JSON.parse(raw), selected);
-    if (!insight) {
+    const parsed = JSON.parse(raw);
+
+    if (useEnglishPipeline) {
+      const insight = normalizeExpressionInsight(parsed, selected);
+      if (!insight) {
+        return jsonWithCors(request, { error: "empty insight" }, { status: 500 });
+      }
+      return jsonWithCors(request, insight);
+    }
+
+    const adaptive = normalizeAdaptiveElementAnalysis(parsed, selected, sentence);
+    if (!adaptive) {
       return jsonWithCors(request, { error: "empty insight" }, { status: 500 });
     }
-    return jsonWithCors(request, insight);
+    return jsonWithCors(
+      request,
+      mapAdaptiveElementToExpressionInsight(adaptive),
+    );
   } catch (error) {
     console.error("[expression-insight]", error);
     return jsonWithCors(request, { error: "INSIGHT_FAILED" }, { status: 500 });

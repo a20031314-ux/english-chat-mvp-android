@@ -14,7 +14,26 @@ export type HighlightPart = {
 };
 
 function tokenize(text: string): string[] {
-  return text.match(/\S+|\s+/g) ?? [];
+  // Space-delimited languages: keep words + whitespace.
+  // CJK / Hangul without spaces: character tokens so particle/ending
+  // fixes highlight only the changed glyphs (not the whole sentence).
+  const rough = text.match(/\S+|\s+/g) ?? [];
+  const out: string[] = [];
+  for (const part of rough) {
+    if (/^\s+$/.test(part)) {
+      out.push(part);
+      continue;
+    }
+    if (
+      !/\s/.test(part) &&
+      /[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]/.test(part)
+    ) {
+      out.push(...Array.from(part));
+      continue;
+    }
+    out.push(part);
+  }
+  return out;
 }
 
 function tokenKey(token: string): string {
@@ -126,6 +145,93 @@ export function correctedHighlightParts(
       text: p.type === "equal" ? p.matchText || p.text : p.text,
       added: p.type === "add",
     }));
+}
+
+function isCjkLetterToken(text: string) {
+  return /^[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]$/u.test(text);
+}
+
+const CJK_FUNCTION_CHARS = new Set([
+  "は",
+  "が",
+  "を",
+  "に",
+  "で",
+  "と",
+  "も",
+  "の",
+  "へ",
+  "や",
+  "か",
+  "ね",
+  "よ",
+  "わ",
+  "さ",
+  "은",
+  "는",
+  "이",
+  "가",
+  "을",
+  "를",
+  "에",
+  "의",
+  "도",
+  "만",
+  "를",
+]);
+
+/**
+ * Surface form(s) to show as the inline fix — changed tokens only.
+ * For CJK verb/adjective endings, keep a short shared stem (行 + った → 行った).
+ * Particle swaps (を→が) stay as the single corrected particle.
+ */
+export function correctionReplacementSnippet(
+  original: string,
+  corrected: string,
+): string {
+  const diffs = diffWords(original, corrected);
+  const snippets: string[] = [];
+
+  for (let i = 0; i < diffs.length; i += 1) {
+    if (diffs[i]?.type !== "add") continue;
+
+    let added = "";
+    let j = i;
+    while (j < diffs.length && diffs[j]?.type === "add") {
+      added += diffs[j]!.text;
+      j += 1;
+    }
+
+    let removeCount = 0;
+    let k = i - 1;
+    while (k >= 0 && diffs[k]?.type === "remove") {
+      removeCount += 1;
+      k -= 1;
+    }
+
+    // Particle-sized swaps: show only the new particle/word.
+    const attachStem = removeCount > 1 || [...added].length > 2;
+    let stem = "";
+    if (attachStem) {
+      while (
+        k >= 0 &&
+        diffs[k]?.type === "equal" &&
+        isCjkLetterToken(diffs[k]!.text) &&
+        !CJK_FUNCTION_CHARS.has(diffs[k]!.text) &&
+        stem.length < 2
+      ) {
+        stem = (diffs[k]!.matchText || diffs[k]!.text) + stem;
+        k -= 1;
+      }
+    }
+
+    const piece = `${stem}${added}`.replace(/\s+/g, " ").trim();
+    if (piece) snippets.push(piece);
+    i = j - 1;
+  }
+
+  if (snippets.length > 0) return snippets.join(" · ");
+  return corrected.replace(/\s+/g, " ").trim();
 }
 
 function isContentToken(text: string) {

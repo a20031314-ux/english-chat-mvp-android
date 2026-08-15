@@ -1,3 +1,8 @@
+import {
+  coerceLanguageCode,
+  type LearningLanguageCode,
+} from "@/lib/learningLanguages";
+
 export type VideoSubtitle = {
   id: string;
   startTime: number;
@@ -88,6 +93,7 @@ export type VideoLearningSave = {
   explanation: string;
   videoUrl: string;
   timestamp: number;
+  languageCode: LearningLanguageCode;
   createdAt: number;
 };
 
@@ -179,6 +185,7 @@ function asSave(raw: unknown): VideoLearningSave | null {
     explanation: typeof o.explanation === "string" ? o.explanation : "",
     videoUrl: o.videoUrl,
     timestamp: typeof o.timestamp === "number" ? o.timestamp : 0,
+    languageCode: coerceLanguageCode(o.languageCode),
     createdAt: typeof o.createdAt === "number" ? o.createdAt : Date.now(),
   };
 }

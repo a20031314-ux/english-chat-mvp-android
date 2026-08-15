@@ -101,6 +101,10 @@ export const VideoPlayer = forwardRef<
     active: boolean;
     durationHint: number;
     autoPlay?: boolean;
+    /** Fill parent height (watch fullscreen) instead of 16:9 shrink box. */
+    fill?: boolean;
+    /** Hide play/seek chrome (use with overlay controls). */
+    hideChrome?: boolean;
     onTimeUpdate: (seconds: number) => void;
     onEnded?: () => void;
     onSegmentEnd?: () => void;
@@ -111,6 +115,8 @@ export const VideoPlayer = forwardRef<
     active,
     durationHint,
     autoPlay = false,
+    fill = false,
+    hideChrome = false,
     onTimeUpdate,
     onEnded,
     onSegmentEnd,
@@ -166,9 +172,12 @@ export const VideoPlayer = forwardRef<
       suppressYtPlaySyncUntilRef.current = Date.now() + 800;
       try {
         playerRef.current?.pauseVideo();
+        // Settle slightly before the exclusive end so we don't land on the
+        // next cue's startTime (which made "click 1:40 → next line" feel true).
         if (endAt != null) {
-          playerRef.current?.seekTo(endAt, true);
-          emitTime(endAt);
+          const settle = Math.max(0, endAt - 0.15);
+          playerRef.current?.seekTo(settle, true);
+          emitTime(settle);
         }
       } catch {
         // ignore
@@ -190,8 +199,9 @@ export const VideoPlayer = forwardRef<
     try {
       playerRef.current?.pauseVideo();
       if (hadSegment && endAt != null) {
-        playerRef.current?.seekTo(endAt, true);
-        emitTime(endAt);
+        const settle = Math.max(0, endAt - 0.15);
+        playerRef.current?.seekTo(settle, true);
+        emitTime(settle);
       }
     } catch {
       // ignore
@@ -453,34 +463,48 @@ export const VideoPlayer = forwardRef<
   };
 
   return (
-    <div className="shrink-0 bg-slate-950">
-      <div className="relative aspect-video w-full overflow-hidden bg-slate-900">
+    <div
+      className={
+        fill
+          ? "flex h-full min-h-0 flex-col bg-black"
+          : "shrink-0 bg-slate-950"
+      }
+    >
+      <div
+        className={
+          fill
+            ? "relative min-h-0 flex-1 overflow-hidden bg-black"
+            : "relative aspect-video w-full overflow-hidden bg-slate-900"
+        }
+      >
         <div className="absolute inset-0 [&_iframe]:h-full [&_iframe]:w-full">
           <div ref={hostRef} className="h-full w-full" />
         </div>
       </div>
-      <div className="flex items-center gap-3 px-3 py-2">
-        <button
-          type="button"
-          onClick={togglePlay}
-          className="shrink-0 rounded-md px-2 py-1 text-xs text-white/90 hover:bg-white/10"
-        >
-          {playing ? "Pause" : "Play"}
-        </button>
-        <input
-          type="range"
-          min={0}
-          max={duration}
-          step={0.1}
-          value={Math.min(displayTime, duration)}
-          onChange={(event) => seekTo(Number(event.target.value))}
-          className="min-w-0 flex-1 accent-white"
-          aria-label="Seek"
-        />
-        <span className="shrink-0 text-[11px] tabular-nums text-white/70">
-          {formatSubtitleTime(displayTime)}
-        </span>
-      </div>
+      {!hideChrome ? (
+        <div className="flex shrink-0 items-center gap-3 px-3 py-2">
+          <button
+            type="button"
+            onClick={togglePlay}
+            className="shrink-0 rounded-md px-2 py-1 text-xs text-white/90 hover:bg-white/10"
+          >
+            {playing ? "Pause" : "Play"}
+          </button>
+          <input
+            type="range"
+            min={0}
+            max={duration}
+            step={0.1}
+            value={Math.min(displayTime, duration)}
+            onChange={(event) => seekTo(Number(event.target.value))}
+            className="min-w-0 flex-1 accent-white"
+            aria-label="Seek"
+          />
+          <span className="shrink-0 text-[11px] tabular-nums text-white/70">
+            {formatSubtitleTime(displayTime)}
+          </span>
+        </div>
+      ) : null}
     </div>
   );
 });

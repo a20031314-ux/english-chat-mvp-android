@@ -2,10 +2,16 @@ import OpenAI from "openai";
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { naturalTranslationPrinciples } from "@/lib/naturalTranslation";
+import {
+  coerceLanguageCode,
+  learningLanguageName,
+} from "@/lib/learningLanguages";
+import { interfaceLanguageDisplayName } from "@/lib/languageLearningAnalysis";
+import { normalizeVocabHeadword } from "@/lib/vocabulary";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
-const SOURCE_LANGUAGES: Record<string, string> = {
+const INTERFACE_LANGUAGES: Record<string, string> = {
   ko: "Korean",
   en: "English",
   es: "Spanish",
@@ -42,9 +48,12 @@ function normalizeResults(raw: unknown): VocabResult[] {
     const o = item as Record<string, unknown>;
     if (typeof o.word !== "string" || !o.word.trim()) continue;
     if (typeof o.gloss !== "string" || !o.gloss.trim()) continue;
+    const word = normalizeVocabHeadword(o.word);
+    const gloss = o.gloss.trim();
+    if (!word || !gloss) continue;
     out.push({
-      word: o.word.trim(),
-      gloss: o.gloss.trim(),
+      word,
+      gloss,
       ...(typeof o.example === "string" && o.example.trim()
         ? { example: o.example.trim() }
         : {}),
@@ -66,23 +75,38 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
 
-  let body: { query?: string; locale?: string };
+  let body: {
+    query?: string;
+    locale?: string;
+    interfaceLanguage?: string;
+    targetLanguage?: string;
+  };
   try {
     body = await request.json();
   } catch {
     return jsonWithCors(request, { error: "Invalid JSON" }, { status: 400 });
   }
 
-  const query = body.query?.trim();
+  const query = normalizeVocabHeadword(body.query || "") || body.query?.trim();
   if (!query) {
     return jsonWithCors(request, { error: "query required" }, { status: 400 });
   }
 
   const locale =
-    typeof body.locale === "string" && body.locale in SOURCE_LANGUAGES
+    typeof body.locale === "string" && body.locale in INTERFACE_LANGUAGES
       ? body.locale
       : "ko";
-  const sourceLanguage = SOURCE_LANGUAGES[locale];
+  const interfaceLanguage =
+    typeof body.interfaceLanguage === "string" &&
+    body.interfaceLanguage in INTERFACE_LANGUAGES
+      ? body.interfaceLanguage
+      : locale;
+  const targetLanguage = coerceLanguageCode(body.targetLanguage);
+  const targetName = learningLanguageName(targetLanguage);
+  const interfaceName =
+    INTERFACE_LANGUAGES[interfaceLanguage] ??
+    interfaceLanguageDisplayName(interfaceLanguage);
+  const englishOnlyHeadwords = targetLanguage === "en";
 
   try {
     const completion = await client.chat.completions.create({
@@ -90,17 +114,23 @@ export async function POST(request: NextRequest) {
       messages: [
         {
           role: "system",
-          content: `You help English learners look up vocabulary.
-The user searches in ${sourceLanguage}. Return English headwords that match their meaning.
+          content: `You help ${targetName} learners look up vocabulary.
+The user searches in ${interfaceName} (or mixed). Return ${targetName} headwords that match their meaning.
 
 Rules:
-- results: 1–6 useful English words/phrases (prefer common, learnable items).
-- word: English only.
-- gloss: short natural meaning in ${sourceLanguage} of the whole item (not a word-by-word calque).
+- results: 1–6 useful ${targetName} words/phrases (prefer common, learnable items).
+- word: ${englishOnlyHeadwords ? "English only" : `${targetName} only`}.
+- gloss: short natural meaning in ${interfaceName} of the whole item (not a word-by-word calque).
 - partOfSpeech: optional short tag in English (noun, verb, adjective, phrase, …).
-- example: optional short English example sentence using the word.
+- example: optional short ${targetName} example sentence using the word.
 
-${naturalTranslationPrinciples({ locale, role: "gloss", sourceType: "unknown" })}
+${naturalTranslationPrinciples({
+  locale: interfaceLanguage,
+  targetLanguage,
+  interfaceLanguage,
+  role: "gloss",
+  sourceType: "unknown",
+})}
 
 Respond with ONLY compact JSON:
 {"results":[{"word":"...","gloss":"...","partOfSpeech":"...","example":"..."}]}`,

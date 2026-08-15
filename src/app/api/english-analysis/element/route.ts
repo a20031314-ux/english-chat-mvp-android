@@ -5,11 +5,18 @@ import {
   ENGLISH_ANALYSIS_LANGUAGES,
   normalizeEnglishElementAnalysis,
 } from "@/lib/englishAnalysis";
+import { englishElementSystem } from "@/lib/englishAnalysisPrompt";
 import {
-  asLearnerLevel,
-  languageElementSystem,
-} from "@/lib/languageAnalysisPrompt";
+  adaptiveElementSystem,
+  mapAdaptiveElementToEnglishElement,
+  normalizeAdaptiveElementAnalysis,
+} from "@/lib/adaptiveLanguageAnalysis";
+import { asLearnerLevel } from "@/lib/languageAnalysisPrompt";
 import { asTranslationSourceType } from "@/lib/naturalTranslation";
+import {
+  coerceLanguageCode,
+  learningLanguageName,
+} from "@/lib/learningLanguages";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -34,6 +41,8 @@ export async function POST(request: NextRequest) {
     contextSentence?: unknown;
     context?: unknown;
     locale?: unknown;
+    interfaceLanguage?: unknown;
+    targetLanguage?: unknown;
     sourceType?: unknown;
     language?: unknown;
     learnerLevel?: unknown;
@@ -65,10 +74,18 @@ export async function POST(request: NextRequest) {
     typeof body.locale === "string" && body.locale in ENGLISH_ANALYSIS_LANGUAGES
       ? body.locale
       : "ko";
+  const interfaceLanguage =
+    typeof body.interfaceLanguage === "string" &&
+    body.interfaceLanguage in ENGLISH_ANALYSIS_LANGUAGES
+      ? body.interfaceLanguage
+      : locale;
+  const targetLanguage = coerceLanguageCode(body.targetLanguage);
   const sourceType = asTranslationSourceType(body.sourceType);
   const learnerLevel = asLearnerLevel(body.learnerLevel);
   const languageHint =
-    typeof body.language === "string" ? body.language.trim() : "";
+    typeof body.language === "string" && body.language.trim()
+      ? body.language.trim()
+      : learningLanguageName(targetLanguage);
   const context = Array.isArray(body.context)
     ? body.context
         .filter((item): item is string => typeof item === "string")
@@ -77,18 +94,29 @@ export async function POST(request: NextRequest) {
         .slice(-6)
     : [];
 
+  const useEnglishPipeline = targetLanguage === "en";
+
   try {
     const completion = await openai.chat.completions.create({
       model: MODEL,
       messages: [
         {
           role: "system",
-          content: languageElementSystem({
-            locale,
-            sourceType,
-            learnerLevel,
-            ...(languageHint ? { languageHint } : {}),
-          }),
+          content: useEnglishPipeline
+            ? englishElementSystem({
+                locale,
+                interfaceLanguage,
+                sourceType,
+                learnerLevel,
+              })
+            : adaptiveElementSystem({
+                locale,
+                interfaceLanguage,
+                targetLanguage,
+                sourceType,
+                learnerLevel,
+                languageHint,
+              }),
         },
         {
           role: "user",
@@ -96,7 +124,8 @@ export async function POST(request: NextRequest) {
             selectedText,
             contextSentence,
             ...(context.length ? { context } : {}),
-            ...(languageHint ? { languageHint } : {}),
+            languageHint,
+            targetLanguage,
             ...(learnerLevel ? { learnerLevel } : {}),
           }),
         },
@@ -108,15 +137,32 @@ export async function POST(request: NextRequest) {
     if (!raw) {
       return jsonWithCors(request, { error: "empty completion" }, { status: 500 });
     }
-    const analysis = normalizeEnglishElementAnalysis(
-      JSON.parse(raw),
+    const parsed = JSON.parse(raw);
+
+    if (useEnglishPipeline) {
+      const analysis = normalizeEnglishElementAnalysis(
+        parsed,
+        selectedText,
+        contextSentence,
+      );
+      if (!analysis) {
+        return jsonWithCors(request, { error: "empty analysis" }, { status: 500 });
+      }
+      return jsonWithCors(request, analysis);
+    }
+
+    const adaptive = normalizeAdaptiveElementAnalysis(
+      parsed,
       selectedText,
       contextSentence,
     );
-    if (!analysis) {
+    if (!adaptive) {
       return jsonWithCors(request, { error: "empty analysis" }, { status: 500 });
     }
-    return jsonWithCors(request, analysis);
+    return jsonWithCors(
+      request,
+      mapAdaptiveElementToEnglishElement(adaptive),
+    );
   } catch (error) {
     console.error("[english-analysis/element]", error);
     return jsonWithCors(request, { error: "ANALYSIS_FAILED" }, { status: 500 });

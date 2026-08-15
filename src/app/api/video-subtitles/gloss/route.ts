@@ -68,6 +68,8 @@ export async function OPTIONS(request: NextRequest) {
 export async function POST(request: NextRequest) {
   let body: {
     locale?: unknown;
+    interfaceLanguage?: unknown;
+    targetLanguage?: unknown;
     context?: unknown;
     segments?: unknown;
   };
@@ -91,6 +93,9 @@ export async function POST(request: NextRequest) {
   try {
     const items = await glossEnglishLines({
       locale: asString(body.locale) || "ko",
+      interfaceLanguage:
+        asString(body.interfaceLanguage) || asString(body.locale) || "ko",
+      targetLanguage: asString(body.targetLanguage) || "en",
       context,
       segments,
     });

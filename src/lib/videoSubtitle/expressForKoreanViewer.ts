@@ -17,6 +17,7 @@ import type {
   ViewerContext,
 } from "@/lib/videoSubtitle/viewerTypes";
 import { compactViewerContext } from "@/lib/videoSubtitle/viewerTypes";
+import { spokenTranslatePrinciples } from "@/lib/spokenTranslate";
 
 const BATCH = 6;
 
@@ -38,11 +39,13 @@ function parseTone(value: unknown): UtteranceTone {
 }
 
 /**
- * Express an already-understood native meaning as a natural Korean (locale) caption.
- * Does not re-translate from English word-by-word.
+ * Express an already-understood native meaning as a natural locale caption.
+ * Uses the same spoken-translate craft as chat `/api/translate`.
  */
 export async function expressForKoreanViewer(input: {
   locale: string;
+  /** Learning / source language of the video (defaults to English). */
+  targetLanguage?: string;
   speakerStyle: string;
   units: MeaningUnit[];
   interpretations: NativeInterpretation[];
@@ -53,7 +56,9 @@ export async function expressForKoreanViewer(input: {
   const client = getOpenAIClient();
   if (!client) throw new VideoPipelineError("MISSING_OPENAI_KEY");
 
-  const target = localeTargetName(input.locale);
+  const interfaceLanguage = input.locale || "ko";
+  const targetLanguage = input.targetLanguage || "en";
+  const target = localeTargetName(interfaceLanguage);
   const byId = new Map(input.interpretations.map((row) => [row.unitId, row]));
   const drafts = new Map<string, SubtitleDraft>();
   const memory = compactViewerContext(input.viewerContext);
@@ -63,29 +68,28 @@ export async function expressForKoreanViewer(input: {
     try {
       const completion = await client.chat.completions.create({
         model: chatModel(),
-        temperature: 0.65,
+        temperature: 0.4,
         response_format: { type: "json_object" },
         messages: [
           {
             role: "system",
-            content: `You write on-screen ${target} movie/drama subtitles.
+            content: `${spokenTranslatePrinciples({
+              locale: interfaceLanguage,
+              interfaceLanguage,
+              targetLanguage,
+              sourceType: "subtitle",
+            })}
 
-You are NOT a dictionary translator.
-You receive a native English viewer's UNDERSTOOD MEANING of each line (already resolved with video context).
+Caption task:
+You write on-screen ${target} movie/drama subtitles.
+You receive a native viewer's UNDERSTOOD MEANING of each line (already resolved with video context).
+Express that same understood meaning so a ${target} viewer reaches the SAME understanding.
 
-Your job:
-Express that same understood meaning so a Korean viewer reaches the SAME understanding.
-
-Rules:
-- Prefer natural spoken ${target} (의역), not English word order.
-- You MAY make established/implicit English info explicit in ${target} only when needed for equivalent understanding (evidence established or strongly_implied — never speculative).
-- Do NOT over-explain. Only add what a Korean viewer needs to match the English viewer.
-- Caption only — no tutor notes, no "이 말은 ~".
+Extra caption rules:
+- Prefer natural spoken ${target} (의역), not source-language word order.
+- You MAY make established/implicit info explicit in ${target} only when needed for equivalent understanding (evidence established or strongly_implied — never speculative).
+- Do NOT over-explain. Caption only — no tutor notes.
 - Keep short (one breath).
-- Examples of spirit:
-  "I'm losing my mind" → "정신 나갈 것 같아" (not "내 정신이 나가고 있어")
-  "Can you get rid of that monster?" + established "monster inside A"
-    → "네 안에 있는 그 괴물, 없앨 수 있어?" when needed for same understanding
 
 Return JSON:
 {
@@ -149,6 +153,7 @@ Return JSON:
         const interp = byId.get(unit.id);
         const natural =
           asString(row?.naturalSubtitle) ||
+          asString(row?.translated) ||
           asString(row?.translation) ||
           "";
         const conf = asNumber(row?.interpretationConfidence);
@@ -175,7 +180,6 @@ Return JSON:
     if (draft?.naturalSubtitle.trim()) return draft;
     const interp = byId.get(unit.id);
     const base = emptyDraftFromUnit(unit, input.speakerStyle);
-    // Leave empty rather than echoing English onto the Korean caption line.
     return {
       ...base,
       ...draft,

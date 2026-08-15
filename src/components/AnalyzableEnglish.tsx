@@ -10,12 +10,14 @@ import {
 } from "react";
 import { useExpressionInsightOptional } from "@/contexts/ExpressionInsightContext";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 import { selectionFitsSentence } from "@/lib/expressionInsight";
 import {
   snapToExpressionUnit,
   type ExpressionUnitSpan,
 } from "@/lib/expressionUnits";
+import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
 import {
   loadExpressionUnits,
   prefetchExpressionUnits,
@@ -24,6 +26,11 @@ import {
   correctedHighlightParts,
   originalHighlightParts,
 } from "@/lib/textDiff";
+import { normalizeVocabHeadword, isVocabLookupEligible } from "@/lib/vocabulary";
+import {
+  isPronounceableAlphabetLetter,
+  letterPronunciation,
+} from "@/lib/letterPronunciation";
 
 type AnalyzableEnglishProps = {
   sentence: string;
@@ -42,11 +49,56 @@ type AnalyzableEnglishProps = {
 };
 
 function tokenize(sentence: string): string[] {
-  return sentence.split(/(\s+)/).filter((part) => part.length > 0);
+  const parts = sentence.split(/(\s+)/).filter((part) => part.length > 0);
+  const out: string[] = [];
+  for (const part of parts) {
+    if (/^\s+$/.test(part)) {
+      out.push(part);
+      continue;
+    }
+    // Character-level tokens for scripts without spaces / letter-study alphabets.
+    if (/[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af\u0400-\u04FF]/.test(part)) {
+      out.push(...Array.from(part));
+      continue;
+    }
+    // Peel punctuation from Latin/Cyrillic tokens: "imbatível." → word + "."
+    out.push(...splitAffixedPunctuation(part));
+  }
+  return out;
+}
+
+/** Split leading/trailing punctuation while keeping the word intact. */
+function splitAffixedPunctuation(part: string): string[] {
+  const re =
+    /([^\p{L}\p{M}\p{N}'’_-]+)|([\p{L}\p{M}\p{N}]+(?:['’_-][\p{L}\p{M}\p{N}]+)*)/gu;
+  const pieces: string[] = [];
+  let match: RegExpExecArray | null;
+  while ((match = re.exec(part)) !== null) {
+    pieces.push(match[0]);
+  }
+  return pieces.length > 0 ? pieces : [part];
+}
+
+function isCjkMeaningChar(text: string) {
+  // Kanji / Hanzi / Hangul syllable — meaning lookup, not alphabet sound tip.
+  return /^[\u3400-\u9fff\uac00-\ud7af]$/u.test(text);
+}
+
+function tokenIndexAtStart(tokens: string[], start: number) {
+  let offset = 0;
+  for (let i = 0; i < tokens.length; i += 1) {
+    const next = offset + tokens[i].length;
+    if (start >= offset && start < next) return i;
+    offset = next;
+  }
+  return null;
 }
 
 function isWordToken(token: string) {
-  return /[A-Za-z]/.test(token);
+  if (!token || /^\s+$/.test(token)) return false;
+  // Punctuation-only is not a word.
+  if (!/[\p{L}\p{M}]/u.test(token)) return false;
+  return true;
 }
 
 function rangeText(tokens: string[], start: number, end: number) {
@@ -165,6 +217,9 @@ export function AnalyzableEnglish({
   const insight = useExpressionInsightOptional();
   const analysis = useEnglishAnalysisOptional();
   const vocab = useVocabPreviewOptional();
+  const learningLanguage = useLearningLanguageOptional();
+  const targetLanguage =
+    learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
   const label = analyzeLabel ?? insight?.analyzeLabel;
   const handleAnalyze =
     onAnalyze ??
@@ -175,13 +230,18 @@ export function AnalyzableEnglish({
             contextSentence: sentence,
             context,
             sourceType: "conversation",
+            language: targetLanguage,
           })
       : insight
         ? (selected: string) => insight.open({ sentence, selected, context })
         : undefined);
   const canAnalyze = Boolean(label && handleAnalyze);
   const canSave = Boolean(vocab?.open);
-  const enabled = (canAnalyze || canSave) && /[A-Za-z]/.test(sentence);
+  const hasContent =
+    targetLanguage === "en"
+      ? /[A-Za-z]/.test(sentence)
+      : sentence.trim().length > 0;
+  const enabled = (canAnalyze || canSave) && hasContent;
   const tokens = tokenize(sentence);
   const useTokens = enabled && !children;
 
@@ -189,7 +249,12 @@ export function AnalyzableEnglish({
   const wrapRef = useRef<HTMLSpanElement>(null);
   const [pending, setPending] = useState<ExpressionUnitSpan | null>(null);
   const [snapping, setSnapping] = useState(false);
+  const [letterTip, setLetterTip] = useState<{
+    index: number;
+    sound: string;
+  } | null>(null);
   const commitIdRef = useRef(0);
+  const letterTipTimerRef = useRef<number | null>(null);
   const dragRef = useRef<{
     start: number;
     end: number;
@@ -198,56 +263,139 @@ export function AnalyzableEnglish({
     scrolling: boolean;
   } | null>(null);
 
+  const showLetterTip = useCallback((index: number, sound: string) => {
+    if (letterTipTimerRef.current) {
+      window.clearTimeout(letterTipTimerRef.current);
+      letterTipTimerRef.current = null;
+    }
+    setLetterTip({ index, sound });
+    letterTipTimerRef.current = window.setTimeout(() => {
+      setLetterTip(null);
+      letterTipTimerRef.current = null;
+    }, 1800);
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (letterTipTimerRef.current) {
+        window.clearTimeout(letterTipTimerRef.current);
+      }
+    };
+  }, []);
+
   const commit = useCallback(
     (picked: string | null, hintStart?: number) => {
-      if (!picked || !selectionFitsSentence(sentence, picked)) return;
+      const cleaned = picked ? normalizeVocabHeadword(picked) || picked.trim() : "";
+      if (!cleaned || !selectionFitsSentence(sentence, cleaned)) return;
+
+      // Unfamiliar alphabet / syllabary letter: show sound tip immediately.
+      if (isPronounceableAlphabetLetter(cleaned)) {
+        const sound = letterPronunciation(cleaned);
+        commitIdRef.current += 1;
+        setPending(null);
+        setSnapping(false);
+        if (sound) {
+          const index =
+            hintStart != null
+              ? tokenIndexAtStart(tokenize(sentence), hintStart)
+              : null;
+          if (index != null) showLetterTip(index, sound);
+        }
+        return;
+      }
+
+      // Kanji / Hanzi / Hangul: open character gloss immediately (no phrase snap).
+      if (isCjkMeaningChar(cleaned) && vocab?.open) {
+        commitIdRef.current += 1;
+        setPending(null);
+        setSnapping(false);
+        setLetterTip(null);
+        void vocab.open(cleaned);
+        return;
+      }
+
+      setLetterTip(null);
+
       const id = commitIdRef.current + 1;
       commitIdRef.current = id;
       const optimisticStart =
-        hintStart ?? sentence.toLowerCase().indexOf(picked.toLowerCase());
-      setPending(
-        optimisticStart >= 0
-          ? {
-              text: picked,
-              start: optimisticStart,
-              end: optimisticStart + picked.length,
-            }
-          : { text: picked, start: 0, end: picked.length },
-      );
+        hintStart ?? sentence.toLowerCase().indexOf(cleaned.toLowerCase());
+      // Only flash a chip for clearly lookup-worthy taps; bare contractions
+      // wait for snap in case they expand into a fixed phrase.
+      if (isVocabLookupEligible(cleaned) && optimisticStart >= 0) {
+        setPending({
+          text: cleaned,
+          start: optimisticStart,
+          end: optimisticStart + cleaned.length,
+        });
+      } else {
+        setPending(null);
+      }
       setSnapping(true);
       void (async () => {
         try {
-          const units = await loadExpressionUnits(sentence);
+          const units = await loadExpressionUnits(sentence, targetLanguage);
           if (commitIdRef.current !== id) return;
           const snapped = snapToExpressionUnit(
             sentence,
-            picked,
+            cleaned,
             units,
             hintStart,
           );
           if (commitIdRef.current !== id) return;
-          setPending(
-            snapped ?? {
-              text: picked,
+          if (snapped) {
+            const snappedText =
+              normalizeVocabHeadword(snapped.text) || snapped.text;
+            // Only keep units that are content words or idioms/phrases.
+            if (!isVocabLookupEligible(snappedText)) {
+              setPending(null);
+              return;
+            }
+            // Re-locate after stripping edge punctuation from model units.
+            const start =
+              snappedText === snapped.text
+                ? snapped.start
+                : sentence
+                    .toLowerCase()
+                    .indexOf(snappedText.toLowerCase(), snapped.start);
+            setPending({
+              text: snappedText,
+              start: start >= 0 ? start : snapped.start,
+              end:
+                start >= 0
+                  ? start + snappedText.length
+                  : snapped.start + snappedText.length,
+            });
+          } else if (isVocabLookupEligible(cleaned)) {
+            // Model missed a clear content word — still allow lookup.
+            setPending({
+              text: cleaned,
               start: optimisticStart >= 0 ? optimisticStart : 0,
               end:
-                (optimisticStart >= 0 ? optimisticStart : 0) + picked.length,
-            },
-          );
+                (optimisticStart >= 0 ? optimisticStart : 0) + cleaned.length,
+            });
+          } else {
+            // Function word / bare contraction / non-unit fragment.
+            setPending(null);
+          }
         } catch {
           if (commitIdRef.current !== id) return;
-          setPending({
-            text: picked,
-            start: optimisticStart >= 0 ? optimisticStart : 0,
-            end:
-              (optimisticStart >= 0 ? optimisticStart : 0) + picked.length,
-          });
+          if (isVocabLookupEligible(cleaned)) {
+            setPending({
+              text: cleaned,
+              start: optimisticStart >= 0 ? optimisticStart : 0,
+              end:
+                (optimisticStart >= 0 ? optimisticStart : 0) + cleaned.length,
+            });
+          } else {
+            setPending(null);
+          }
         } finally {
           if (commitIdRef.current === id) setSnapping(false);
         }
       })();
     },
-    [sentence],
+    [sentence, targetLanguage, vocab, showLetterTip],
   );
 
   const syncNativeSelection = useCallback(() => {
@@ -265,6 +413,7 @@ export function AnalyzableEnglish({
       commitIdRef.current += 1;
       setPending(null);
       setSnapping(false);
+      setLetterTip(null);
     };
     document.addEventListener("pointerdown", onDocPointerDown);
     return () => document.removeEventListener("pointerdown", onDocPointerDown);
@@ -285,7 +434,7 @@ export function AnalyzableEnglish({
   };
 
   const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
-    prefetchExpressionUnits(sentence);
+    prefetchExpressionUnits(sentence, targetLanguage);
     if (!useTokens) return;
     const index = tokenIndexFromPoint(event.clientX, event.clientY);
     if (index == null || !isWordToken(tokens[index])) {
@@ -322,13 +471,15 @@ export function AnalyzableEnglish({
       const drag = dragRef.current;
       dragRef.current = null;
       if (drag && !drag.scrolling) {
-        const picked = rangeText(tokens, drag.start, drag.end);
+        let from = Math.min(drag.start, drag.end);
+        let to = Math.max(drag.start, drag.end);
+        // Drop leading/trailing punctuation tokens so "imbatível." → "imbatível".
+        while (from <= to && !isWordToken(tokens[from])) from += 1;
+        while (to >= from && !isWordToken(tokens[to])) to -= 1;
+        const picked = from <= to ? rangeText(tokens, from, to) : "";
         if (picked) {
           event.preventDefault();
-          commit(
-            picked,
-            tokenStartOffset(tokens, Math.min(drag.start, drag.end)),
-          );
+          commit(picked, tokenStartOffset(tokens, from));
         }
       }
       return;
@@ -363,21 +514,38 @@ export function AnalyzableEnglish({
       return <span key={`${index}-s`}>{token}</span>;
     }
     const mark = marks?.get(index);
+    const tip = letterTip?.index === index ? letterTip.sound : null;
     return (
       <span
         key={`${index}-${token}`}
         data-token-index={index}
-        className={`cursor-pointer rounded-sm ${
+        className={`relative cursor-pointer rounded-sm ${
           pending && tokenOverlapsSpan(tokens, index, pending)
             ? tone === "onDark"
               ? "bg-white/25"
               : "bg-amber-200/80"
-            : mark
-              ? markStyles[mark]
-              : "hover:bg-amber-100/70"
+            : tip
+              ? tone === "onDark"
+                ? "bg-white/30"
+                : "bg-amber-200/90"
+              : mark
+                ? markStyles[mark]
+                : "hover:bg-amber-100/70"
         }`}
       >
         {token}
+        {tip ? (
+          <span
+            className={`pointer-events-none absolute bottom-full left-1/2 z-20 mb-1 -translate-x-1/2 whitespace-nowrap rounded-md px-2 py-0.5 text-sm font-semibold shadow-md ${
+              tone === "onDark"
+                ? "bg-white text-slate-900"
+                : "bg-slate-900 text-white"
+            }`}
+            role="status"
+          >
+            {tip}
+          </span>
+        ) : null}
       </span>
     );
   };

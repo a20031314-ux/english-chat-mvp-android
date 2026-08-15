@@ -1,3 +1,9 @@
+import {
+  learningLanguageName,
+  type LearningLanguageCode,
+} from "@/lib/learningLanguages";
+import { interfaceLanguageDisplayName } from "@/lib/languageLearningAnalysis";
+
 export const TRANSLATION_SOURCE_TYPES = [
   "conversation",
   "report",
@@ -41,7 +47,7 @@ export type TranslationRole =
   | "example"
   | "meaning-in-context";
 
-const SOURCE_HINT: Record<TranslationSourceType, string> = {
+const SOURCE_HINT_EN_KO: Record<TranslationSourceType, string> = {
   conversation: "Spoken chat. Match the English register. Casual → 반말/구어, not a polite tutor.",
   report: "Learner English from a session. Keep their intent; do not polish them into a different person.",
   example: "A teaching example. Still sound like a real person would say it.",
@@ -53,20 +59,61 @@ const SOURCE_HINT: Record<TranslationSourceType, string> = {
   unknown: "Register unknown. Infer only from the line and nearby context.",
 };
 
-/**
- * Shared English → learner-language translation principles.
- * Output schema stays with each caller; this only governs how meaning is rendered.
- */
-export function naturalTranslationPrinciples(options: {
-  locale: string;
+const SOURCE_HINT_GENERIC: Record<TranslationSourceType, string> = {
+  conversation: "Spoken chat. Match the source register.",
+  report: "Learner output from a session. Keep their intent; do not polish them into a different person.",
+  example: "A teaching example. Still sound like a real person would say it.",
+  web: "Web/article text. Register may be newsy or casual.",
+  community: "Forum/comment text. Slang, sarcasm, memes, and emoji are possible — never assumed.",
+  social: "Social/SNS text. Abbreviations and tone markers are possible — never assumed.",
+  subtitle: "Theatrical / streaming subtitle. Sense-for-sense, short enough to read on screen, spoken register — not a textbook gloss of each word.",
+  formal: "More careful wording. Keep a natural formal register; do not make it slangy.",
+  unknown: "Register unknown. Infer only from the line and nearby context.",
+};
+
+export type NaturalTranslationOptions = {
+  /** @deprecated Prefer interfaceLanguage. Treated as interface/output language. */
+  locale?: string;
+  /** Source / content language being interpreted (learning target). Defaults to "en". */
+  targetLanguage?: string;
+  /** App UI / output language for the rendering. Falls back to locale, then "ko". */
+  interfaceLanguage?: string;
   role: TranslationRole;
   sourceType?: TranslationSourceType;
-}): string {
+};
+
+/**
+ * Shared source → interface-language translation principles.
+ * Output schema stays with each caller; this only governs how meaning is rendered.
+ */
+export function naturalTranslationPrinciples(
+  options: NaturalTranslationOptions,
+): string {
+  const interfaceLanguage =
+    options.interfaceLanguage ?? options.locale ?? "ko";
+  const targetLanguage = (options.targetLanguage ?? "en") as string;
   const sourceType = options.sourceType ?? "unknown";
-  const sourceHint = SOURCE_HINT[sourceType];
-  const korean =
-    options.locale === "ko"
-      ? `
+  const keepEnKoCraft =
+    targetLanguage === "en" && interfaceLanguage === "ko";
+
+  if (keepEnKoCraft) {
+    return enToKoPrinciples(options.role, sourceType);
+  }
+
+  return genericInterpretPrinciples({
+    targetLanguage,
+    interfaceLanguage,
+    role: options.role,
+    sourceType,
+  });
+}
+
+function enToKoPrinciples(
+  role: TranslationRole,
+  sourceType: TranslationSourceType,
+): string {
+  const sourceHint = SOURCE_HINT_EN_KO[sourceType];
+  const korean = `
 
 Korean rendering:
 - Prefer Korean a speaker would actually say. Drop repeated subjects when natural.
@@ -76,19 +123,18 @@ Korean rendering:
 - Emoji: 💀 in jokes/comments may be 황당/웃김, not death. Render the reaction (ㅋㅋ) only when that is clearly the use.
 - Profanity: keep force. "That's fucking amazing" → "와 그거 진짜 미쳤다". "Damn, I totally screwed that up." → "아, 나 그거 완전 망쳤네." Do not invent harsher Korean swearing, and do not sanitize a real insult into textbook Korean ("그것은 형편없다").
 - Humor: keep the joke. Do not add a new joke that was not in the English.
-`
-      : "";
+`;
 
   const roleHint =
-    options.role === "gloss"
+    role === "gloss"
       ? `This is a SHORT gloss of a word/phrase as a unit. Not a full sentence. Not a word-by-word gloss of each piece ("look forward to" ≠ look + forward + to). If slang is the usual learner lookup, say that meaning; do not invent a meme reading without a sentence.`
-      : options.role === "meaning-in-context"
+      : role === "meaning-in-context"
         ? `This is ONE short natural rendering of THIS use in THIS sentence. No lecture. No extra senses. Analysis of why belongs in other fields.`
-        : options.role === "example"
+        : role === "example"
           ? `Translate the example as a standalone spoken line. Same tone as the English example.`
           : `This is a full-line translation for quick understanding. No translator notes.`;
 
-  return `Translation goal: render what the speaker is actually doing with this English — meaning, intent, tone, and force — as a natural ${options.locale === "ko" ? "Korean" : "target-language"} line. Not English words mapped onto target words.
+  return `Translation goal: render what the speaker is actually doing with this English — meaning, intent, tone, and force — as a natural Korean line. Not English words mapped onto target words.
 
 Order of thought: context → intent/speech-act → idiom/phrasal/slang? → tone/emotion → natural line.
 ${roleHint}
@@ -110,4 +156,47 @@ Do not:
 
 Self-check before returning: same core meaning and attitude; right reading for this context; no leftover English syntax; natural spoken target language; no invented extra idea.
 ${korean}`;
+}
+
+function genericInterpretPrinciples(options: {
+  targetLanguage: string;
+  interfaceLanguage: string;
+  role: TranslationRole;
+  sourceType: TranslationSourceType;
+}): string {
+  const sourceName = learningLanguageName(
+    options.targetLanguage as LearningLanguageCode,
+  );
+  const interfaceName = interfaceLanguageDisplayName(options.interfaceLanguage);
+  const sourceHint = SOURCE_HINT_GENERIC[options.sourceType];
+
+  const roleHint =
+    options.role === "gloss"
+      ? `This is a SHORT gloss of a word/phrase as a unit. Not a full sentence. Not a word-by-word gloss of each piece.`
+      : options.role === "meaning-in-context"
+        ? `This is ONE short natural rendering of THIS use in THIS sentence. No lecture. No extra senses. Analysis of why belongs in other fields.`
+        : options.role === "example"
+          ? `Translate the example as a standalone spoken line. Same tone as the ${sourceName} example.`
+          : `This is a full-line translation for quick understanding. No translator notes.`;
+
+  return `Interpret the ${sourceName} content naturally in ${interfaceName}.
+
+Translation goal: render what the speaker is actually doing — meaning, intent, tone, and force — as a natural ${interfaceName} line. Not ${sourceName} words mapped onto ${interfaceName} words.
+
+Order of thought: context → intent/speech-act → idiom/slang? → tone/emotion → natural line.
+${roleHint}
+Source hint (auxiliary only): ${sourceHint}
+
+Do:
+- Prefer natural paraphrase that a ${interfaceName} speaker would say in the same situation.
+- Keep speech-act, hedges, certainty, polarity, and attitude.
+- Treat multi-word expressions as units when they function as units in ${sourceName}.
+- Judge slang/memes from THIS sentence + neighbors; do not invent trendy readings.
+
+Do not:
+- Calque ${sourceName} word order into ${interfaceName}.
+- Add meaning, soften or amp emotion, or flip positive/negative to "sound nicer".
+- Put explanations, labels, or quotes in the translation itself.
+
+Self-check before returning: same core meaning and attitude; right reading for this context; natural spoken ${interfaceName}; no invented extra idea.`;
 }

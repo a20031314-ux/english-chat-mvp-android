@@ -12,6 +12,12 @@ import {
   conversationKoreanParallel,
   conversationVoicePrinciples,
 } from "@/lib/conversationVoice";
+import {
+  coerceLanguageCode,
+  learningLanguageName,
+  type LearningLanguageCode,
+} from "@/lib/learningLanguages";
+import { commonLanguageInstructions } from "@/lib/languageLearningAnalysis";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -62,6 +68,33 @@ const EXPLANATION_LANGUAGES: Record<string, string> = {
   id: "Indonesian",
 };
 
+type ChatLanguages = {
+  locale: string;
+  interfaceLanguage: string;
+  targetLanguage: LearningLanguageCode;
+};
+
+function resolveChatLanguages(body: {
+  locale?: unknown;
+  interfaceLanguage?: unknown;
+  targetLanguage?: unknown;
+}): ChatLanguages {
+  const locale =
+    typeof body.locale === "string" && body.locale in EXPLANATION_LANGUAGES
+      ? body.locale
+      : "ko";
+  const interfaceLanguage =
+    typeof body.interfaceLanguage === "string" &&
+    body.interfaceLanguage in EXPLANATION_LANGUAGES
+      ? body.interfaceLanguage
+      : locale;
+  return {
+    locale,
+    interfaceLanguage,
+    targetLanguage: coerceLanguageCode(body.targetLanguage),
+  };
+}
+
 function asText(value: unknown): string {
   if (typeof value === "string") return value;
   if (typeof value === "number" || typeof value === "boolean") {
@@ -84,27 +117,11 @@ function normCompare(text: string) {
   return text.replace(/\s+/g, " ").trim().toLowerCase();
 }
 
-function buildChatSystem(locale: string) {
-  const explanationLanguage =
-    EXPLANATION_LANGUAGES[locale] ?? EXPLANATION_LANGUAGES.ko;
-  const mustBeKorean =
-    locale === "ko"
-      ? `
-
-CRITICAL for explanation:
-- Write explanation ONLY in Korean Hangul (한국어).
-- Never write the explanation in English.
-- Example style: "if 조건절에서는 미래의 일도 현재형을 써요."`
-      : "";
-
-  return `You chat in English with the user. Correction is a separate job from talking.
-
-The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only).
-
-${conversationVoicePrinciples()}
-${conversationKoreanParallel(locale)}
-
-1) First fix their English into corrected (what they meant to say in THIS turn). This is for the learner, not for the chat voice.
+function englishCorrectionPolicy(
+  explanationLanguage: string,
+  mustBeKorean: string,
+): string {
+  return `1) First fix their English into corrected (what they meant to say in THIS turn). This is for the learner, not for the chat voice.
 - Do not change the topic to match recent. Pronouns like "that"/"they" may refer back; a new question or new subject does not.
 2) Then write assistantMessage as a reply to the CORRECTED current turn only — never to the broken original, and never to an older recent line instead.
 - If corrected is a question, answer that question.
@@ -128,13 +145,125 @@ ${conversationKoreanParallel(locale)}
 - Never change the meaning in corrected (do not rewrite "I'm studying nothing" into "I'm just chilling"). Meaning/style rewrites belong in natural only.
 - If there is no real grammar/agreement/article/preposition/tense error, corrected MUST equal the user's message.
 - If the user embeds a Hangul/CJK word inside an otherwise English sentence (proper noun or a word they don't know yet), that is NOT a grammar error — keep it in corrected, and you may gloss the meaning in assistantMessage.
-${mustBeKorean}
+${mustBeKorean}`;
+}
+
+/** Language-specific mistake families — still analyze in THAT language's own terms. */
+function targetLanguageFocusHints(targetLanguage: LearningLanguageCode): string {
+  switch (targetLanguage) {
+    case "ja":
+      return `Japanese focus (use Japanese terms, not English labels):
+- Particles (は/が/を/に/で/と/も…), verb/adjective conjugation, polite vs plain (です/ます vs 辞書形), word order, counters, transitive/intransitive pairs when wrong, unnatural calques from Korean/English.`;
+    case "ko":
+      return `Korean focus (use Korean terms):
+- Particles (은/는/이/가/을/를/에/에서…), endings/politeness (해요체/반말/합쇼체), conjugation, honorifics when required by context, spacing, unnatural calques.`;
+    case "zh":
+      return `Chinese focus (use Chinese terms):
+- Word order, 了/过/着, measure words, 的/地/得, aspect/result complements, coverbs (在/把/被), missing or wrong function words, unnatural calques.`;
+    case "es":
+    case "fr":
+    case "it":
+    case "pt":
+      return `Romance focus (use ${learningLanguageName(targetLanguage)} terms, not English labels):
+- Gender/number agreement, articles, verb conjugation/tense/mood (incl. subjunctive when required), clitics/pronouns, prepositions, ser/estar or language-specific copula pairs when relevant, false friends, unnatural calques.`;
+    case "ru":
+      return `Russian focus (use Russian terms):
+- Case endings, verb aspect (perfective/imperfective), agreement, prepositions + case, word order only when it breaks meaning, unnatural calques.`;
+    default:
+      return `Focus on real morphosyntax, agreement, function words, and patterns that natives would mark as wrong in ${learningLanguageName(targetLanguage)}.`;
+  }
+}
+
+/**
+ * Detailed correction for non-English learning languages.
+ * Same thoroughness as English, but in the target language's own grammar terms.
+ */
+function detailedTargetCorrectionPolicy(
+  targetLanguage: LearningLanguageCode,
+  explanationLanguage: string,
+  mustBeKorean: string,
+): string {
+  const targetName = learningLanguageName(targetLanguage);
+  return `1) First fix their ${targetName} into corrected (what they meant to say in THIS turn). This is for the learner, not for the chat voice.
+- Do not change the topic to match recent. Pronouns/deixis may refer back; a new question or new subject does not.
+2) Then write assistantMessage as a reply to the CORRECTED current turn only — never to the broken original, and never to an older recent line instead.
+- If corrected is a question, answer that question.
+- If corrected is a statement, respond to that statement.
+- Do not reinterpret a broken question/statement into a different speech-act.
+- Do not lecture, quiz grammar, or correct them inside assistantMessage.
+3) Fill the rest of correction carefully and thoroughly:
+- corrected: fully corrected ${targetName}. Fix REAL mistakes — agreement, conjugation/inflection, particles/case markers, function words, word order that breaks the language, wrong tense/aspect/mood, wrong politeness form when the form is ungrammatical for the intended move, wrong collocation that sounds broken.
+- natural: a more natural/colloquial native alternative that is DIFFERENT from corrected whenever a more fluent option exists. If corrected is already the most natural, repeat corrected.
+- explanation: 1–2 short sentences in ${explanationLanguage} explaining WHAT was wrong and why (point to the mistaken word/pattern). Do not include a label like "설명" / "Explanation".
+- If corrected differs from the user's message (even slightly), explanation MUST be non-empty.
+- Only if the user's message needs no change at all, set explanation to "".
+
+${targetLanguageFocusHints(targetLanguage)}
+
+Hard rules:
+- Analyze ${targetName} in ITS own terms. Never force English grammar labels onto ${targetName} (no "article/preposition" lectures unless that category actually exists and matters here).
+- Do NOT "correct" informal-but-acceptable spoken ${targetName} into textbook wording; put style upgrades only in natural.
+- Do NOT change meaning in corrected. Meaning/style rewrites belong in natural only.
+- Do NOT invent mistakes. If the line is already grammatical for the intended register, corrected MUST equal the user's message.
+- Prefer keeping the learner's register (casual vs polite) in corrected unless that register is itself ungrammatical for what they are trying to say.
+- If the user embeds UI-language words (e.g. Hangul/CJK) inside an otherwise ${targetName} sentence as a placeholder, that is NOT a grammar error — keep it in corrected; you may gloss it in assistantMessage.
+${mustBeKorean}`;
+}
+
+function buildChatSystem(langs: ChatLanguages) {
+  const { interfaceLanguage, targetLanguage } = langs;
+  const explanationLanguage =
+    EXPLANATION_LANGUAGES[interfaceLanguage] ?? EXPLANATION_LANGUAGES.ko;
+  const mustBeKorean =
+    interfaceLanguage === "ko"
+      ? `
+
+CRITICAL for explanation:
+- Write explanation ONLY in Korean Hangul (한국어).
+- Never write the explanation in English.
+- Example style: "if 조건절에서는 미래의 일도 현재형을 써요."`
+      : "";
+
+  const targetName = learningLanguageName(targetLanguage);
+  const voice = conversationVoicePrinciples(targetLanguage);
+  const spoken = conversationKoreanParallel(interfaceLanguage, targetLanguage);
+
+  if (targetLanguage === "en") {
+    return `You chat in English with the user. Correction is a separate job from talking.
+
+The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only).
+
+${voice}
+${spoken}
+
+${englishCorrectionPolicy(explanationLanguage, mustBeKorean)}
+
+Return ONLY valid JSON (no markdown) with this exact shape:
+{"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","explanation":"..."}}`;
+  }
+
+  return `${commonLanguageInstructions({
+    targetLanguage,
+    interfaceLanguage,
+  })}
+
+You chat in ${targetName} with the user. Correction is a separate, DETAILED job from talking — catch real ${targetName} mistakes carefully, the same way an English tutor would for English, but using ${targetName}'s own grammar.
+
+The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only).
+
+${voice}
+${spoken}
+
+${detailedTargetCorrectionPolicy(targetLanguage, explanationLanguage, mustBeKorean)}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
 {"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","explanation":"..."}}`;
 }
 
-const HOW_TO_SAY_SYSTEM = `The user wants a natural English line THEY can say (or write) to another person. They may write in Korean, English, or mixed.
+function buildHowToSaySystemBase(targetLanguage: LearningLanguageCode): string {
+  const targetName = learningLanguageName(targetLanguage);
+  if (targetLanguage === "en") {
+    return `The user wants a natural English line THEY can say (or write) to another person. They may write in Korean, English, or mixed.
 
 You are a phrase helper, NOT a tutor. Do not answer their question, explain the topic, or ask them what they meant.
 
@@ -157,15 +286,37 @@ No quotes, no Korean, no extra commentary.
 
 Return ONLY JSON:
 {"expression":"the English they would say"}`;
+  }
 
-function buildHowToSaySystem(locale: string, premium: boolean) {
-  if (!premium) return HOW_TO_SAY_SYSTEM;
+  return `The user wants a natural ${targetName} line THEY can say (or write) to another person. They may write in their UI language, ${targetName}, or mixed.
+
+You are a phrase helper, NOT a tutor. Do not answer their question, explain the topic, or ask them what they meant.
+
+Give ONE spoken ${targetName} line that keeps their speech act.
+Match the situation (friend, work, interview, joke, online). Casual intent → casual ${targetName}. Formal intent → that register. Do not turn casual talk into textbook ${targetName}.
+RECENT is only for resolving references or whose previous question they are confirming. Do not rewrite their line into the previous topic.
+
+If they asked for information, translate THAT question into ${targetName} they would ask someone else — do not turn it into a meta "Are you asking...?" unless they themselves are confirming the other person's previous question AND RECENT has that line.
+
+Other acts to keep: confirming, refusing, suggesting, answering, joking.
+If they ask "how can I say X in ${targetName}?", extract X and give ${targetName} for X — do not echo the meta question.
+
+No quotes, no extra commentary. Output the expression in ${targetName}.
+
+Return ONLY JSON:
+{"expression":"the ${targetName} they would say"}`;
+}
+
+function buildHowToSaySystem(langs: ChatLanguages, premium: boolean) {
+  const base = buildHowToSaySystemBase(langs.targetLanguage);
+  if (!premium) return base;
   const analysisLanguage =
-    EXPLANATION_LANGUAGES[locale] ?? EXPLANATION_LANGUAGES.ko;
-  return `${HOW_TO_SAY_SYSTEM}
+    EXPLANATION_LANGUAGES[langs.interfaceLanguage] ?? EXPLANATION_LANGUAGES.ko;
+  const targetName = learningLanguageName(langs.targetLanguage);
+  return `${base}
 
 Also include (same meaning, not an answer to their question):
-- simpler: a shorter, easier English line. Empty string if expression is already simple.
+- simpler: a shorter, easier ${targetName} line. Empty string if expression is already simple.
 - moreNative: a more colloquial native line, not a synonym swap. Empty if nothing different.
 - analysis: 1-2 sentences in ${analysisLanguage} on nuance / when to use which line.
 
@@ -188,20 +339,20 @@ async function replyToCorrected(
   openai: OpenAI,
   corrected: string,
   recent: string[] = [],
-  locale = "ko",
+  langs: ChatLanguages,
 ): Promise<{ assistantMessage: string; spokenReply: string }> {
   const completion = await openai.chat.completions.create({
     model: MODEL,
     messages: [
       {
         role: "system",
-        content: `The person meant the English line in "corrected" (this turn). Reply to THAT line.
+        content: `The person meant the ${learningLanguageName(langs.targetLanguage)} line in "corrected" (this turn). Reply to THAT line.
 
-${conversationVoicePrinciples()}
-${conversationKoreanParallel(locale)}
+${conversationVoicePrinciples(langs.targetLanguage)}
+${conversationKoreanParallel(langs.interfaceLanguage, langs.targetLanguage)}
 
 recent is background only. If this turn is a new question or a new subject, answer it. Do not keep the previous topic going unless this line clearly refers back.
-Do not lecture, correct their English, or thank them unless they complimented you.
+Do not lecture, correct their language, or thank them unless they complimented you.
 
 Return ONLY JSON: {"assistantMessage":"...","spokenReply":"..."}`,
       },
@@ -226,20 +377,21 @@ Return ONLY JSON: {"assistantMessage":"...","spokenReply":"..."}`,
   };
   return {
     assistantMessage: asText(parsed.assistantMessage).trim(),
-    spokenReply: locale === "en" ? "" : asText(parsed.spokenReply).trim(),
+    spokenReply:
+      langs.interfaceLanguage === "en" ? "" : asText(parsed.spokenReply).trim(),
   };
 }
 
 async function runChat(
   openai: OpenAI,
   message: string,
-  locale: string,
+  langs: ChatLanguages,
   recent: string[] = [],
 ): Promise<ChatPayload> {
   const completion = await openai.chat.completions.create({
     model: MODEL,
     messages: [
-      { role: "system", content: buildChatSystem(locale) },
+      { role: "system", content: buildChatSystem(langs) },
       {
         role: "user",
         content: JSON.stringify({
@@ -266,7 +418,7 @@ async function runChat(
   };
   const assistantMessage = asText(parsed.assistantMessage);
   const spokenReply =
-    locale === "en"
+    langs.interfaceLanguage === "en"
       ? ""
       : asText(parsed.spokenReply) ||
         asText(parsed.assistantSpoken) ||
@@ -280,14 +432,14 @@ async function runChat(
   const needsExplanation = normCompare(corrected) !== normCompare(message);
   if (needsExplanation && !explanation.trim()) {
     explanation =
-      FALLBACK_EXPLANATION[locale] ?? FALLBACK_EXPLANATION.ko;
+      FALLBACK_EXPLANATION[langs.interfaceLanguage] ?? FALLBACK_EXPLANATION.ko;
   }
 
   let reply = assistantMessage;
   let spoken = spokenReply;
   if (needsExplanation && corrected.trim()) {
     try {
-      const reread = await replyToCorrected(openai, corrected, recent, locale);
+      const reread = await replyToCorrected(openai, corrected, recent, langs);
       if (reread.assistantMessage) reply = reread.assistantMessage;
       if (reread.spokenReply) spoken = reread.spokenReply;
     } catch (error) {
@@ -340,32 +492,36 @@ function pickStarter(recent: string[]): (typeof FALLBACK_STARTERS)[number] {
 
 function starterPayload(
   starter: (typeof FALLBACK_STARTERS)[number],
-  locale: string,
+  langs: ChatLanguages,
 ) {
   return {
     assistantMessage: starter.en,
-    spokenReply: locale === "ko" ? starter.ko : "",
+    spokenReply: langs.interfaceLanguage === "ko" ? starter.ko : "",
   };
 }
 
 async function runStart(
   openai: OpenAI,
   recent: string[],
-  locale: string,
+  langs: ChatLanguages,
 ): Promise<{ assistantMessage: string; spokenReply: string }> {
-  const spokenRule = conversationKoreanParallel(locale);
+  const targetName = learningLanguageName(langs.targetLanguage);
+  const spokenRule = conversationKoreanParallel(
+    langs.interfaceLanguage,
+    langs.targetLanguage,
+  );
 
   const completion = await openai.chat.completions.create({
     model: MODEL,
     messages: [
       {
         role: "system",
-        content: `Start a casual English conversation. You are not a tutor opening a lesson.
+        content: `Start a casual ${targetName} conversation. You are not a tutor opening a lesson.
 
-${conversationVoicePrinciples()}
+${conversationVoicePrinciples(langs.targetLanguage)}
 ${spokenRule}
 
-Write 1–2 spoken English lines as assistantMessage. Sound like texting a friend, not greeting a class.
+Write 1–2 spoken ${targetName} lines as assistantMessage. Sound like texting a friend, not greeting a class.
 A question is fine if it feels natural — not required, and not a study prompt.
 Vary the topic. Do not reuse questions from RECENT.
 
@@ -383,16 +539,17 @@ Return ONLY JSON:
 
   const raw = completion.choices[0]?.message?.content;
   if (!raw) {
-    return starterPayload(pickStarter(recent), locale);
+    return starterPayload(pickStarter(recent), langs);
   }
   const parsed = JSON.parse(raw) as {
     assistantMessage?: unknown;
     spokenReply?: unknown;
   };
   const assistantMessage = asText(parsed.assistantMessage).trim();
-  const spokenReply = locale === "en" ? "" : asText(parsed.spokenReply).trim();
+  const spokenReply =
+    langs.interfaceLanguage === "en" ? "" : asText(parsed.spokenReply).trim();
   if (!assistantMessage) {
-    return starterPayload(pickStarter(recent), locale);
+    return starterPayload(pickStarter(recent), langs);
   }
   return { assistantMessage, spokenReply };
 }
@@ -410,20 +567,20 @@ async function runHowToSay(
   openai: OpenAI,
   message: string,
   recent: string[],
-  locale: string,
+  langs: ChatLanguages,
   isPremium: boolean,
 ): Promise<ExpressionPayload> {
   const completion = await openai.chat.completions.create({
     model: MODEL,
     messages: [
-      { role: "system", content: buildHowToSaySystem(locale, isPremium) },
+      { role: "system", content: buildHowToSaySystem(langs, isPremium) },
       {
         role: "user",
         content: JSON.stringify({ wantToSay: message, recent }),
       },
     ],
     response_format: { type: "json_object" },
-      temperature: 0.75,
+    temperature: 0.75,
   });
 
   const raw = completion.choices[0]?.message?.content;
@@ -433,7 +590,7 @@ async function runHowToSay(
 
   const parsed = JSON.parse(raw) as Partial<ExpressionPayload>;
   const expression = normalizeHowToSayExpression(message, parsed);
-  const chat = await runChat(openai, expression.expression, locale, recent);
+  const chat = await runChat(openai, expression.expression, langs, recent);
 
   return {
     expression: expression.expression,
@@ -463,6 +620,8 @@ export async function POST(request: NextRequest) {
     message?: string;
     mode?: string;
     locale?: string;
+    interfaceLanguage?: string;
+    targetLanguage?: string;
     recent?: unknown;
   };
   try {
@@ -471,10 +630,7 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "Invalid JSON" }, { status: 400 });
   }
 
-  const locale =
-    typeof body.locale === "string" && body.locale in EXPLANATION_LANGUAGES
-      ? body.locale
-      : "ko";
+  const langs = resolveChatLanguages(body);
   const mode =
     body.mode === "how_to_say"
       ? "how_to_say"
@@ -485,16 +641,16 @@ export async function POST(request: NextRequest) {
   if (mode === "start") {
     const recent = parseRecent(body.recent);
     if (!openai) {
-      return jsonWithCors(request, starterPayload(pickStarter(recent), locale));
+      return jsonWithCors(request, starterPayload(pickStarter(recent), langs));
     }
     try {
-      const data = await runStart(openai, recent, locale);
+      const data = await runStart(openai, recent, langs);
       return jsonWithCors(request, data);
     } catch (error) {
       console.error("[chat-start]", error);
       return jsonWithCors(
         request,
-        starterPayload(pickStarter(recent), locale),
+        starterPayload(pickStarter(recent), langs),
       );
     }
   }
@@ -522,7 +678,7 @@ export async function POST(request: NextRequest) {
         openai,
         message,
         parseRecent(body.recent),
-        locale,
+        langs,
         isPremium,
       );
       if (!isPremium) {
@@ -534,7 +690,7 @@ export async function POST(request: NextRequest) {
     const data = await runChat(
       openai,
       message,
-      locale,
+      langs,
       parseRecent(body.recent),
     );
     if (!isPremium) {

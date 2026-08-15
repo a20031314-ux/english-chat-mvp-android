@@ -1,4 +1,8 @@
 import {
+  coerceLanguageCode,
+  type LearningLanguageCode,
+} from "@/lib/learningLanguages";
+import {
   normalizeYouTubeWatchUrl,
   parseYouTubeVideoId,
   type VideoSubtitle,
@@ -20,6 +24,8 @@ export type VideoStudySession = {
   situationSummary?: string;
   durationSeconds: number;
   cues: StoredVideoCue[];
+  /** Learning language of the source lines (legacy → "en") */
+  languageCode: LearningLanguageCode;
   createdAt: number;
   updatedAt: number;
 };
@@ -76,6 +82,7 @@ function asSession(raw: unknown): VideoStudySession | null {
     id,
     videoId,
     videoUrl,
+    languageCode: coerceLanguageCode(row.languageCode),
     ...(title ? { title } : {}),
     ...(situationSummary ? { situationSummary } : {}),
     durationSeconds: Math.max(durationSeconds, cues[cues.length - 1]!.endTime),
@@ -155,6 +162,7 @@ export function upsertVideoStudySession(input: {
   situationSummary?: string;
   durationSeconds: number;
   cues: VideoSubtitle[];
+  languageCode?: LearningLanguageCode;
 }): { session: VideoStudySession; created: boolean } {
   const cues = cuesToStored(input.cues);
   if (cues.length === 0) {
@@ -165,10 +173,15 @@ export function upsertVideoStudySession(input: {
   const now = Date.now();
   const situationSummary =
     input.situationSummary?.trim() || prev?.situationSummary;
+  const languageCode =
+    input.languageCode ??
+    prev?.languageCode ??
+    coerceLanguageCode(undefined);
   const session: VideoStudySession = {
     id: prev?.id ?? `vsession-${input.videoId}-${now}`,
     videoId: input.videoId,
     videoUrl: input.videoUrl,
+    languageCode,
     ...(input.title || prev?.title
       ? { title: input.title || prev?.title }
       : {}),
@@ -187,6 +200,13 @@ export function upsertVideoStudySession(input: {
   ];
   persistVideoStudySessions(next);
   return { session, created: !prev };
+}
+
+export function filterVideoStudySessionsByLanguage(
+  sessions: VideoStudySession[],
+  languageCode: LearningLanguageCode,
+): VideoStudySession[] {
+  return sessions.filter((s) => s.languageCode === languageCode);
 }
 
 export function deleteVideoStudySession(videoId: string) {

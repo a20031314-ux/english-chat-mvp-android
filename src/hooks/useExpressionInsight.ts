@@ -1,9 +1,11 @@
 "use client";
 
 import { useCallback, useRef, useState } from "react";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import type { Locale } from "@/lib/copy";
 import type { ExpressionInsight } from "@/lib/expressionInsight";
 import { selectionFitsSentence } from "@/lib/expressionInsight";
+import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
 import { requestExpressionInsight } from "@/lib/requestExpressionInsight";
 
 export type InsightTarget = {
@@ -21,6 +23,9 @@ type InsightFrame = {
 };
 
 export function useExpressionInsight(locale: Locale) {
+  const learningLanguage = useLearningLanguageOptional();
+  const targetLanguage =
+    learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
   const [frame, setFrame] = useState<InsightFrame | null>(null);
   const idRef = useRef(0);
 
@@ -49,6 +54,8 @@ export function useExpressionInsight(locale: Locale) {
           sentence,
           selected,
           locale,
+          interfaceLanguage: locale,
+          targetLanguage,
           context: next.context,
         });
         if (idRef.current !== id) return;
@@ -70,7 +77,7 @@ export function useExpressionInsight(locale: Locale) {
         });
       }
     },
-    [locale],
+    [locale, targetLanguage],
   );
 
   return {

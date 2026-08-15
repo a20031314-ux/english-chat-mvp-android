@@ -11,7 +11,12 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  let body: { videoUrl?: unknown; locale?: unknown };
+  let body: {
+    videoUrl?: unknown;
+    locale?: unknown;
+    interfaceLanguage?: unknown;
+    targetLanguage?: unknown;
+  };
   try {
     body = await request.json();
   } catch {
@@ -19,9 +24,20 @@ export async function POST(request: NextRequest) {
   }
 
   const videoUrl = typeof body.videoUrl === "string" ? body.videoUrl : "";
-  const locale = typeof body.locale === "string" && body.locale ? body.locale : "ko";
+  const locale =
+    (typeof body.interfaceLanguage === "string" && body.interfaceLanguage) ||
+    (typeof body.locale === "string" && body.locale) ||
+    "ko";
+  const targetLanguage =
+    typeof body.targetLanguage === "string" && body.targetLanguage
+      ? body.targetLanguage
+      : "en";
   try {
-    const prepared = await prepareVideoTranscript(videoUrl, locale);
+    const prepared = await prepareVideoTranscript(
+      videoUrl,
+      locale,
+      targetLanguage,
+    );
     return jsonWithCors(request, prepared);
   } catch (error) {
     if (error instanceof VideoPipelineError) {

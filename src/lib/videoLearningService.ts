@@ -76,6 +76,74 @@ export function englishCuesFromSegments(
   }));
 }
 
+/** Overlapping caption text for a speech time window (prefer contained cues). */
+function captionTextForWindow(
+  captions: NormalizedSegment[] | undefined,
+  startTime: number,
+  endTime: number,
+): string {
+  if (!captions || captions.length === 0) return "";
+  const span = Math.max(0.2, endTime - startTime);
+  const scored = captions
+    .map((segment) => {
+      const overlap =
+        Math.min(segment.endTime, endTime) - Math.max(segment.startTime, startTime);
+      if (overlap <= 0.05) return null;
+      const segSpan = Math.max(0.2, segment.endTime - segment.startTime);
+      // Prefer captions mostly inside this speech beat (avoids dumping a long
+      // neighboring line into a short window).
+      const coverage = overlap / segSpan;
+      const focus = overlap / span;
+      return { segment, score: coverage * 2 + focus + overlap };
+    })
+    .filter((row): row is { segment: NormalizedSegment; score: number } =>
+      Boolean(row),
+    )
+    .sort(
+      (a, b) =>
+        a.segment.startTime - b.segment.startTime || b.score - a.score,
+    );
+
+  if (scored.length === 0) return "";
+  // Keep captions that meaningfully overlap this beat.
+  const picked = scored.filter((row) => row.score >= 0.35);
+  const use = picked.length > 0 ? picked : scored.slice(0, 1);
+  return use
+    .map((row) => row.segment.normalizedText)
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/**
+ * Learning-language sentence units + official UI translations by time overlap.
+ * Keeps playback sync on speech, not on (often shorter) caption cue boxes.
+ */
+export function officialUiCuesFromPrepared(
+  prepared: PreparedTranscript,
+): VideoSubtitle[] {
+  const official =
+    prepared.officialUiSegments ||
+    prepared.speechSegments ||
+    [];
+  const base = englishCuesFromSegments(prepared.segments);
+  return base.map((cue) => {
+    const translation = captionTextForWindow(
+      official,
+      cue.startTime,
+      cue.endTime,
+    );
+    if (!translation) return cue;
+    return {
+      ...cue,
+      translation,
+      meaning: translation,
+      literalMeaning: translation,
+      translationStatus: "final" as const,
+    };
+  });
+}
+
 /**
  * Re-apply merge rules to already-built study lines (e.g. older saved sessions
  * that still have "... our." / "schedule ..." splits).
@@ -127,6 +195,17 @@ function cuesAsGlossSegments(cues: VideoSubtitle[]): NormalizedSegment[] {
   }));
 }
 
+function interpretationForId(
+  byId: Map<string, string>,
+  id: string,
+): string | undefined {
+  return (
+    byId.get(id) ||
+    byId.get(`mu-${id}`) ||
+    (id.startsWith("mu-") ? byId.get(id.slice(3)) : undefined)
+  );
+}
+
 function overlapsWindow(cue: VideoSubtitle, window: TimeWindow): boolean {
   return cue.startTime < window.end && cue.endTime > window.start;
 }
@@ -163,19 +242,27 @@ export async function prepareEnglishWatch(
   videoUrl: string,
   options?: {
     locale?: string;
+    interfaceLanguage?: string;
+    targetLanguage?: string;
     onStatus?: (step: SubtitleStatusStep) => void;
     onProgress?: (progress: SubtitleProgress) => void;
     signal?: AbortSignal;
   },
 ): Promise<{ prepared: PreparedTranscript; englishCues: VideoSubtitle[] }> {
-  const locale = options?.locale ?? "ko";
+  const locale = options?.interfaceLanguage ?? options?.locale ?? "ko";
+  const targetLanguage = options?.targetLanguage ?? "en";
   options?.onStatus?.("speech");
   options?.onProgress?.({ percent: 10, step: "speech" });
 
   const prepareResponse = await fetch(apiUrl("/api/video-subtitles/prepare"), {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ videoUrl, locale }),
+    body: JSON.stringify({
+      videoUrl,
+      locale,
+      interfaceLanguage: locale,
+      targetLanguage,
+    }),
     signal: options?.signal,
   });
   if (!prepareResponse.ok) {
@@ -185,7 +272,10 @@ export async function prepareEnglishWatch(
   options?.onStatus?.("cleanup");
   options?.onProgress?.({ percent: 100, step: "cleanup" });
 
-  const englishCues = englishCuesFromSegments(prepared.segments);
+  const englishCues =
+    prepared.captionMode === "official-ui"
+      ? officialUiCuesFromPrepared(prepared)
+      : englishCuesFromSegments(prepared.segments);
   if (englishCues.length === 0) {
     throw new VideoSubtitleClientError("NO_SPEECH");
   }
@@ -310,12 +400,15 @@ export async function generateLineInterpretations(
   prepared: PreparedTranscript,
   options?: {
     locale?: string;
+    interfaceLanguage?: string;
+    targetLanguage?: string;
     onProgress?: (progress: SubtitleProgress) => void;
     onPartial?: (cues: VideoSubtitle[], done: boolean) => void;
     signal?: AbortSignal;
   },
 ): Promise<VideoSubtitle[]> {
-  const locale = options?.locale ?? "ko";
+  const locale = options?.interfaceLanguage ?? options?.locale ?? "ko";
+  const targetLanguage = options?.targetLanguage ?? "en";
   let cues = englishCuesFromSegments(prepared.segments);
   const glossSegments = cuesAsGlossSegments(cues);
   const chunkSize = 24;
@@ -338,6 +431,8 @@ export async function generateLineInterpretations(
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
             locale,
+            interfaceLanguage: locale,
+            targetLanguage,
             context: prepared.context,
             segments: slice,
           }),
@@ -392,6 +487,102 @@ export async function generateLineInterpretations(
   options?.onProgress?.({ percent: 100, step: "cleanup" });
   options?.onPartial?.(cues, true);
   return cues;
+}
+
+/**
+ * Gloss only the given cue ids (e.g. after merge/split). Keeps other lines intact.
+ */
+export async function glossStudyCues(
+  cues: VideoSubtitle[],
+  ids: string[],
+  options?: {
+    locale?: string;
+    interfaceLanguage?: string;
+    targetLanguage?: string;
+    context?: PreparedTranscript["context"];
+    signal?: AbortSignal;
+  },
+): Promise<VideoSubtitle[]> {
+  const idSet = new Set(ids);
+  const targets = cues.filter((cue) => idSet.has(cue.id) && cue.original.trim());
+  if (targets.length === 0) return cues;
+
+  const locale = options?.interfaceLanguage ?? options?.locale ?? "ko";
+  const targetLanguage = options?.targetLanguage ?? "en";
+  const context = options?.context ?? {
+    topic: "video",
+    domain: "general",
+    summary: "",
+    speakerStyle: "spoken",
+    terminology: [],
+  };
+
+  let response: Response | null = null;
+  for (let attempt = 0; attempt < 2; attempt += 1) {
+    if (options?.signal?.aborted) {
+      throw new VideoSubtitleClientError("TIMEOUT");
+    }
+    try {
+      response = await fetch(apiUrl("/api/video-subtitles/gloss"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          locale,
+          interfaceLanguage: locale,
+          targetLanguage,
+          context,
+          segments: cuesAsGlossSegments(targets),
+        }),
+        signal: options?.signal,
+      });
+      if (response.ok) break;
+    } catch (error) {
+      console.error("[video-edit-gloss]", { attempt, error });
+      response = null;
+    }
+    if (attempt === 0) {
+      await new Promise((resolve) => setTimeout(resolve, 400));
+    }
+  }
+
+  if (!response?.ok) {
+    console.error("[video-edit-gloss] request failed", response?.status);
+    return cues;
+  }
+
+  const payload = (await response.json()) as {
+    items?: Array<{ id?: string; interpretation?: string }>;
+  };
+  const byId = new Map<string, string>();
+  for (const item of payload.items ?? []) {
+    const id = typeof item.id === "string" ? item.id.trim() : "";
+    const interpretation =
+      typeof item.interpretation === "string" ? item.interpretation.trim() : "";
+    if (id && interpretation) {
+      byId.set(id, interpretation);
+      if (id.startsWith("mu-") && id.length > 3) {
+        byId.set(id.slice(3), interpretation);
+      }
+    }
+  }
+  if (byId.size === 0) {
+    console.error("[video-edit-gloss] empty items", {
+      ids: targets.map((cue) => cue.id),
+    });
+    return cues;
+  }
+
+  return cues.map((cue) => {
+    const interpretation = interpretationForId(byId, cue.id);
+    if (!interpretation) return cue;
+    return {
+      ...cue,
+      translation: interpretation,
+      meaning: interpretation,
+      literalMeaning: interpretation,
+      translationStatus: "final" as const,
+    };
+  });
 }
 
 /** @deprecated Prefer prepareEnglishWatch + generateLineInterpretations */

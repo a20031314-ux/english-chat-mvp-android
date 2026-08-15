@@ -5,8 +5,9 @@ import {
   asString,
   parseModelJson,
 } from "@/lib/videoSubtitle/parseModelJson";
-import { localeTargetName } from "@/lib/videoSubtitle/subtitleDraft";
 import type { NormalizedSegment, VideoContext } from "@/lib/videoSubtitle/types";
+import { learningLanguageName } from "@/lib/learningLanguages";
+import { spokenTranslatePrinciples } from "@/lib/spokenTranslate";
 
 const BATCH = 8;
 
@@ -17,7 +18,11 @@ export type LineGloss = {
 };
 
 function cueId(segmentId: string): string {
-  return segmentId.startsWith("mu-") ? segmentId : `mu-${segmentId}`;
+  // Study lines already use mu-*; merge/split lines use edit-*. Keep as-is.
+  if (segmentId.startsWith("mu-") || segmentId.startsWith("edit-")) {
+    return segmentId;
+  }
+  return `mu-${segmentId}`;
 }
 
 function normalizeCompare(text: string): string {
@@ -26,11 +31,12 @@ function normalizeCompare(text: string): string {
 
 /**
  * Per-line learner gloss tied to each STT segment id.
- * Does NOT use the native-viewer caption pipeline (which over-writes short lines
- * with neighboring conversational meaning).
+ * Uses the same spoken-translate craft as chat `/api/translate`.
  */
 export async function glossEnglishLines(input: {
   locale: string;
+  targetLanguage?: string;
+  interfaceLanguage?: string;
   context: VideoContext;
   segments: NormalizedSegment[];
 }): Promise<LineGloss[]> {
@@ -38,8 +44,19 @@ export async function glossEnglishLines(input: {
   if (!client) throw new VideoPipelineError("MISSING_OPENAI_KEY");
   if (input.segments.length === 0) return [];
 
-  const target = localeTargetName(input.locale);
+  const interfaceLanguage = input.interfaceLanguage || input.locale || "ko";
+  const targetLanguage = input.targetLanguage || "en";
+  const sourceName = learningLanguageName(targetLanguage);
   const out: LineGloss[] = [];
+
+  const lineRules = `
+Video-line constraints (on top of the shared translate craft):
+- Gloss THIS ${sourceName} line only. Keep the same id.
+- Short reactions (Yeah / Ok / Right / Mm / etc.) stay short in the output language. Never expand them into the next sentence's content.
+- previous/next are only for pronouns/deixis (this/that/it/he…).
+- Keep captions short enough to read on screen (one breath).
+- Do not write tutor notes, labels, or leftover source-language wording in the gloss.
+`.trim();
 
   for (let i = 0; i < input.segments.length; i += BATCH) {
     const batch = input.segments.slice(i, i + BATCH);
@@ -49,7 +66,7 @@ export async function glossEnglishLines(input: {
       const next = input.segments[abs + 1];
       return {
         id: cueId(segment.id),
-        english: segment.normalizedText,
+        text: segment.normalizedText,
         previous: prev?.normalizedText || "",
         next: next?.normalizedText || "",
       };
@@ -58,22 +75,23 @@ export async function glossEnglishLines(input: {
     try {
       const completion = await client.chat.completions.create({
         model: chatModel(),
-        temperature: 0.3,
+        temperature: 0.4,
         response_format: { type: "json_object" },
         messages: [
           {
             role: "system",
-            content: `You write a short ${target} gloss for each English video line (language learning).
+            content: `${spokenTranslatePrinciples({
+              locale: interfaceLanguage,
+              interfaceLanguage,
+              targetLanguage,
+              sourceType: "subtitle",
+            })}
 
-Hard rules:
-- Gloss THIS english line only. Keep the same id.
-- Short reactions (Yeah / Ok / Right / Mm) stay short (응 / 그래 / 맞아 / 음). Never expand them into the next sentence's content.
-- previous/next are only for pronouns/deixis (this/that/it/he…).
-- Do not write tutor notes, labels, or English.
-- One short spoken line per item.
+${lineRules}
 
 Return JSON:
-{"items":[{"id":"...","interpretation":"..."}]}`,
+{"items":[{"id":"...","interpretation":"..."}]}
+Each interpretation is the natural spoken rendering of that line (same field as chat "translated").`,
           },
           {
             role: "user",
@@ -96,6 +114,7 @@ Return JSON:
         const id = asString(item?.id);
         const interpretation =
           asString(item?.interpretation) ||
+          asString(item?.translated) ||
           asString(item?.naturalSubtitle) ||
           asString(item?.translation) ||
           "";
@@ -109,19 +128,23 @@ Return JSON:
         const id = cueId(segment.id);
         let interpretation = byId.get(id) || "";
         // Index fallback only when the model omitted ids but kept order,
-        // and only if we can sanity-check against the English text.
+        // and only if we can sanity-check against the source text.
         if (!interpretation && rows.length === batch.length) {
           const row = asRecord(rows[index]);
           const candidate =
             asString(row?.interpretation) ||
+            asString(row?.translated) ||
             asString(row?.naturalSubtitle) ||
             asString(row?.translation);
-          const rowEnglish =
-            asString(row?.english) || asString(row?.original) || "";
+          const rowSource =
+            asString(row?.text) ||
+            asString(row?.english) ||
+            asString(row?.original) ||
+            "";
           if (
             candidate &&
-            (!rowEnglish ||
-              normalizeCompare(rowEnglish) ===
+            (!rowSource ||
+              normalizeCompare(rowSource) ===
                 normalizeCompare(segment.normalizedText))
           ) {
             interpretation = candidate.trim();

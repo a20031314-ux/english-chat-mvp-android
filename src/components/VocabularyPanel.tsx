@@ -1,11 +1,16 @@
 "use client";
 
-import { FormEvent, useEffect, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 import { TTSButton } from "@/components/TTSButton";
 import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
 import { apiUrl } from "@/lib/apiBase";
 import type { Locale, UICopy } from "@/lib/copy";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import {
+  DEFAULT_LEARNING_LANGUAGE_CODE,
+} from "@/lib/learningLanguages";
+import {
+  filterVocabularyByLanguage,
   isWordSaved,
   loadHideVocabGloss,
   loadVocabulary,
@@ -22,7 +27,10 @@ type VocabularyPanelProps = {
 };
 
 export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
-  const [entries, setEntries] = useState<VocabularyEntry[]>([]);
+  const learningLanguage = useLearningLanguageOptional();
+  const targetLanguage =
+    learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
+  const [allEntries, setAllEntries] = useState<VocabularyEntry[]>([]);
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<VocabLookupResult[]>([]);
   const [isSearching, setIsSearching] = useState(false);
@@ -33,10 +41,23 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
   const [revealedIds, setRevealedIds] = useState<Set<string>>(new Set());
   const [orderIds, setOrderIds] = useState<string[] | null>(null);
 
+  const entries = useMemo(
+    () => filterVocabularyByLanguage(allEntries, targetLanguage),
+    [allEntries, targetLanguage],
+  );
+
   useEffect(() => {
-    setEntries(loadVocabulary());
+    setAllEntries(loadVocabulary());
     setHideGloss(loadHideVocabGloss());
   }, []);
+
+  useEffect(() => {
+    setOrderIds(null);
+    setRevealedIds(new Set());
+    setResults([]);
+    setSearched(false);
+    setError(null);
+  }, [targetLanguage]);
 
   useEffect(() => {
     if (!toast) return;
@@ -63,7 +84,12 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
       const response = await fetch(apiUrl("/api/vocab"), {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query: trimmed, locale }),
+        body: JSON.stringify({
+          query: trimmed,
+          locale,
+          interfaceLanguage: locale,
+          targetLanguage,
+        }),
       });
       if (!response.ok) {
         throw new Error("lookup failed");
@@ -79,24 +105,25 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
   };
 
   const handleSave = (item: VocabLookupResult) => {
-    if (isWordSaved(entries, item.word)) return;
+    if (isWordSaved(allEntries, item.word, targetLanguage)) return;
     const next: VocabularyEntry = {
       id: makeVocabId(item.word),
       word: item.word,
       gloss: item.gloss,
+      languageCode: targetLanguage,
       createdAt: Date.now(),
       ...(item.example ? { example: item.example } : {}),
       ...(item.partOfSpeech ? { partOfSpeech: item.partOfSpeech } : {}),
     };
-    const updated = [next, ...entries];
-    setEntries(updated);
+    const updated = [next, ...allEntries];
+    setAllEntries(updated);
     persistVocabulary(updated);
     setToast(ui.vocabSavedToast);
   };
 
   const handleDelete = (id: string) => {
-    const updated = entries.filter((e) => e.id !== id);
-    setEntries(updated);
+    const updated = allEntries.filter((e) => e.id !== id);
+    setAllEntries(updated);
     persistVocabulary(updated);
     setOrderIds((prev) => (prev ? prev.filter((item) => item !== id) : prev));
   };

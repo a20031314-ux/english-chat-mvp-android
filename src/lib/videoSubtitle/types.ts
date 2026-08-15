@@ -122,7 +122,9 @@ export type SubtitleSegment = {
   debug?: SubtitleDebugInfo;
 };
 
-export type SttSource = "whisper" | "youtube-asr";
+export type SttSource = "whisper" | "youtube-asr" | "youtube-manual" | "youtube-official-ui";
+
+export type CaptionMode = "speech" | "official-ui";
 
 export type ExtractedAudio = {
   bytes: Buffer;
@@ -156,8 +158,18 @@ export type PreparedTranscript = {
   videoUrl: string;
   durationSeconds: number;
   sttSource: SttSource;
+  /** How on-screen learning captions / translations are sourced. */
+  captionMode?: CaptionMode;
   context: VideoContext;
+  /** Learning-language speech lines (playback / study unit source). */
   segments: NormalizedSegment[];
+  /**
+   * Official UI-locale caption lines used as translations when captionMode
+   * is official-ui (mapped onto speech units by time overlap).
+   */
+  officialUiSegments?: NormalizedSegment[];
+  /** @deprecated use officialUiSegments — kept for older clients */
+  speechSegments?: NormalizedSegment[];
   /** Cached visual scene contexts for the progressive window. */
   sceneContexts?: import("@/lib/videoSubtitle/sceneTypes").SceneContext[];
   /** Accumulated native-viewer memory after prepare/first window. */

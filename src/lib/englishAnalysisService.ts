@@ -11,6 +11,8 @@ import type { TranslationSourceType } from "@/lib/naturalTranslation";
 export async function analyzeEnglishInput(input: {
   text: string;
   locale: string;
+  interfaceLanguage?: string;
+  targetLanguage?: string;
   sourceType?: TranslationSourceType;
   language?: string;
   learnerLevel?: LearnerLevel;
@@ -23,6 +25,8 @@ export async function analyzeEnglishInput(input: {
     body: JSON.stringify({
       text,
       locale: input.locale,
+      interfaceLanguage: input.interfaceLanguage ?? input.locale,
+      ...(input.targetLanguage ? { targetLanguage: input.targetLanguage } : {}),
       ...(input.sourceType ? { sourceType: input.sourceType } : {}),
       ...(input.language ? { language: input.language } : {}),
       ...(input.learnerLevel ? { learnerLevel: input.learnerLevel } : {}),
@@ -38,6 +42,8 @@ export async function analyzeEnglishElement(input: {
   selectedText: string;
   contextSentence: string;
   locale: string;
+  interfaceLanguage?: string;
+  targetLanguage?: string;
   context?: string[];
   sourceType?: TranslationSourceType;
   language?: string;
@@ -53,6 +59,8 @@ export async function analyzeEnglishElement(input: {
       selectedText,
       contextSentence,
       locale: input.locale,
+      interfaceLanguage: input.interfaceLanguage ?? input.locale,
+      ...(input.targetLanguage ? { targetLanguage: input.targetLanguage } : {}),
       ...(input.context?.length ? { context: input.context } : {}),
       ...(input.sourceType ? { sourceType: input.sourceType } : {}),
       ...(input.language ? { language: input.language } : {}),

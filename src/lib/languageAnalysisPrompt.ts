@@ -2,6 +2,11 @@ import {
   naturalTranslationPrinciples,
   type TranslationSourceType,
 } from "@/lib/naturalTranslation";
+import {
+  commonLanguageInstructions,
+  LANGUAGE_LEARNING_LIMITS,
+} from "@/lib/languageLearningAnalysis";
+import { learningLanguageName } from "@/lib/learningLanguages";
 
 export const LEARNER_LEVELS = ["beginner", "intermediate", "advanced"] as const;
 export type LearnerLevel = (typeof LEARNER_LEVELS)[number];
@@ -69,16 +74,34 @@ function sourceLanguageHint(hint?: string): string {
   return "Detect the source language from the sentence. Do not assume English.";
 }
 
+function resolveAnalysisLanguages(options: {
+  locale: string;
+  interfaceLanguage?: string;
+  targetLanguage?: string;
+  languageHint?: string;
+}) {
+  const interfaceLanguage = options.interfaceLanguage ?? options.locale;
+  const targetLanguage = options.targetLanguage ?? "en";
+  const languageHint =
+    options.languageHint?.trim() ||
+    learningLanguageName(targetLanguage);
+  return { interfaceLanguage, targetLanguage, languageHint };
+}
+
 export function languageOverviewSystem(options: {
   locale: string;
   sourceType: TranslationSourceType;
   languageHint?: string;
   learnerLevel?: LearnerLevel;
+  targetLanguage?: string;
+  interfaceLanguage?: string;
 }): string {
+  const { interfaceLanguage, targetLanguage, languageHint } =
+    resolveAnalysisLanguages(options);
   const language =
-    ANALYSIS_LANGUAGES[options.locale] ?? ANALYSIS_LANGUAGES.ko;
+    ANALYSIS_LANGUAGES[interfaceLanguage] ?? ANALYSIS_LANGUAGES.ko;
   const mustBeKorean =
-    options.locale === "ko"
+    interfaceLanguage === "ko"
       ? `
 Write translation, correctionNote, element.label (learner-facing part), element.gloss, and element.reading labels in Korean Hangul where those fields are explanations.
 element.text MUST be an exact substring of the source.
@@ -86,17 +109,30 @@ element.label may mix source script with a short Korean gloss cue (映画・え�
 `
       : "";
 
-  return `${usefulAnalysisPhilosophy()}
+  const maxElements = LANGUAGE_LEARNING_LIMITS.maxExpressions;
+
+  return `${commonLanguageInstructions({
+    targetLanguage,
+    interfaceLanguage,
+  })}
+
+${usefulAnalysisPhilosophy()}
 
 Write learner-facing text in ${language}.
 ${mustBeKorean}
-${sourceLanguageHint(options.languageHint)}
+${sourceLanguageHint(languageHint)}
 ${levelHint(options.learnerLevel)}
 
-First give the natural meaning of the WHOLE sentence, then 2–4 key elements (1–2 if the sentence is very simple). Never pad to 5–10.
+First give the natural meaning of the WHOLE sentence, then 0–${maxElements} key elements (prefer ≤${maxElements}; 1–2 if the sentence is very simple). Never pad to 5–10. Empty elements is fine when translation alone is enough.
 
 translation = natural ${language} for THIS sentence. No lecture inside translation.
-${naturalTranslationPrinciples({ locale: options.locale, role: "utterance", sourceType: options.sourceType })}
+${naturalTranslationPrinciples({
+  locale: interfaceLanguage,
+  targetLanguage,
+  interfaceLanguage,
+  role: "utterance",
+  sourceType: options.sourceType,
+})}
 
 Return ONLY JSON:
 {
@@ -127,24 +163,33 @@ export function languageElementSystem(options: {
   sourceType?: TranslationSourceType;
   languageHint?: string;
   learnerLevel?: LearnerLevel;
+  targetLanguage?: string;
+  interfaceLanguage?: string;
 }): string {
+  const { interfaceLanguage, targetLanguage, languageHint } =
+    resolveAnalysisLanguages(options);
   const language =
-    ANALYSIS_LANGUAGES[options.locale] ?? ANALYSIS_LANGUAGES.ko;
+    ANALYSIS_LANGUAGES[interfaceLanguage] ?? ANALYSIS_LANGUAGES.ko;
   const mustBeKorean =
-    options.locale === "ko"
+    interfaceLanguage === "ko"
       ? `
 Write meaningInContext, whyUsed, example translations, and otherUsages.meaning in Korean Hangul.
 Keep source-language forms in title, pattern, reading, and example.english/text.
 `
       : "";
 
-  return `${usefulAnalysisPhilosophy()}
+  return `${commonLanguageInstructions({
+    targetLanguage,
+    interfaceLanguage,
+  })}
+
+${usefulAnalysisPhilosophy()}
 
 This request is ELEMENT DETAIL (the zoom-in). The learner already saw a short gloss. Now explain ONE selected span inside ONE sentence.
 
 Write learner-facing text in ${language}.
 ${mustBeKorean}
-${sourceLanguageHint(options.languageHint)}
+${sourceLanguageHint(languageHint)}
 ${levelHint(options.learnerLevel)}
 
 Default shape (keep short):
@@ -155,7 +200,13 @@ Default shape (keep short):
 Extra fields only if they prevent a real confusion (contrasting use, look-alike form).
 
 meaningInContext follows:
-${naturalTranslationPrinciples({ locale: options.locale, role: "meaning-in-context", sourceType: options.sourceType ?? "unknown" })}
+${naturalTranslationPrinciples({
+  locale: interfaceLanguage,
+  targetLanguage,
+  interfaceLanguage,
+  role: "meaning-in-context",
+  sourceType: options.sourceType ?? "unknown",
+})}
 
 Judge the span from selectedText + the whole sentence + neighbors. Same letters can be different grammar or slang ("I'm cooked" vs food cooked). Do not decide from the string alone.
 If this span is slang/idiom/nuance, say that. Do not invent grammar to look thorough.

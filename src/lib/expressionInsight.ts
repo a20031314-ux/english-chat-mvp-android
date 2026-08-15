@@ -25,6 +25,8 @@ export type ExpressionInsightRequest = {
   selected: string;
   context?: string[];
   locale: string;
+  interfaceLanguage?: string;
+  targetLanguage?: string;
 };
 
 function asLine(value: unknown): string {

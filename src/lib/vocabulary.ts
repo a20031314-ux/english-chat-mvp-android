@@ -1,16 +1,26 @@
+import {
+  coerceLanguageCode,
+  DEFAULT_LEARNING_LANGUAGE_CODE,
+  type LearningLanguageCode,
+} from "@/lib/learningLanguages";
+
 export const VOCABULARY_STORAGE_KEY = "vocabularyEntries";
 export const VOCABULARY_HIDE_GLOSS_KEY = "vocabularyHideGloss";
 
 export type VocabularyEntry = {
   id: string;
-  /** English headword */
+  /** Headword in the learning (target) language */
   word: string;
   /** Meaning in the UI language used when saving */
   gloss: string;
-  /** Optional English example sentence */
+  /** Optional example sentence in the target language */
   example?: string;
   /** Optional part of speech */
   partOfSpeech?: string;
+  /** Reading / pronunciation (kanji, pinyin, …) */
+  reading?: string;
+  /** Learning language this entry belongs to (legacy rows → "en") */
+  languageCode: LearningLanguageCode;
   createdAt: number;
 };
 
@@ -19,6 +29,8 @@ export type VocabLookupResult = {
   gloss: string;
   example?: string;
   partOfSpeech?: string;
+  /** Reading / pronunciation for characters (e.g. kanji 音読み・訓読み, pinyin). */
+  reading?: string;
 };
 
 function normalizeEntry(raw: unknown): VocabularyEntry | null {
@@ -35,12 +47,16 @@ function normalizeEntry(raw: unknown): VocabularyEntry | null {
     id: o.id,
     word: o.word.trim(),
     gloss: o.gloss.trim(),
+    languageCode: coerceLanguageCode(o.languageCode),
     createdAt,
     ...(typeof o.example === "string" && o.example.trim()
       ? { example: o.example.trim() }
       : {}),
     ...(typeof o.partOfSpeech === "string" && o.partOfSpeech.trim()
       ? { partOfSpeech: o.partOfSpeech.trim() }
+      : {}),
+    ...(typeof o.reading === "string" && o.reading.trim()
+      ? { reading: o.reading.trim() }
       : {}),
   };
 }
@@ -52,13 +68,37 @@ export function loadVocabulary(): VocabularyEntry[] {
     if (!raw) return [];
     const parsed = JSON.parse(raw) as unknown;
     if (!Array.isArray(parsed)) return [];
-    return parsed
+    const entries = parsed
       .map(normalizeEntry)
       .filter((e): e is VocabularyEntry => e !== null)
       .sort((a, b) => b.createdAt - a.createdAt);
+    // Quietly backfill languageCode on legacy rows so data is never lost.
+    const needsRewrite = parsed.some(
+      (row) =>
+        row &&
+        typeof row === "object" &&
+        !isLearningLanguageCodeField(
+          (row as Record<string, unknown>).languageCode,
+        ),
+    );
+    if (needsRewrite && entries.length > 0) {
+      persistVocabulary(entries);
+    }
+    return entries;
   } catch {
     return [];
   }
+}
+
+function isLearningLanguageCodeField(value: unknown): boolean {
+  return coerceLanguageCode(value) === value;
+}
+
+export function filterVocabularyByLanguage(
+  entries: VocabularyEntry[],
+  languageCode: LearningLanguageCode,
+): VocabularyEntry[] {
+  return entries.filter((e) => e.languageCode === languageCode);
 }
 
 export function loadHideVocabGloss(): boolean {
@@ -88,9 +128,17 @@ export function persistVocabulary(entries: VocabularyEntry[]) {
   }
 }
 
-export function isWordSaved(entries: VocabularyEntry[], word: string) {
+export function isWordSaved(
+  entries: VocabularyEntry[],
+  word: string,
+  languageCode?: LearningLanguageCode,
+) {
   const key = word.trim().toLowerCase();
-  return entries.some((e) => e.word.trim().toLowerCase() === key);
+  return entries.some(
+    (e) =>
+      e.word.trim().toLowerCase() === key &&
+      (languageCode == null || e.languageCode === languageCode),
+  );
 }
 
 export function makeVocabId(word: string) {
@@ -236,6 +284,10 @@ const ENGLISH_STOPWORDS = new Set(
     "heres",
     "whats",
     "whos",
+    "hows",
+    "wheres",
+    "whens",
+    "whys",
     "ok",
     "okay",
     "oh",
@@ -261,38 +313,84 @@ const ENGLISH_STOPWORDS = new Set(
   ].map((w) => w.toLowerCase()),
 );
 
-/** Whether a token is worth offering as a vocabulary save target. */
-export function isLearnableEnglishWord(token: string): boolean {
-  const cleaned = token.replace(/^'+|'+$/g, "");
-  if (cleaned.length < 3) return false;
-  if (!/^[A-Za-z][A-Za-z']*$/.test(cleaned)) return false;
-  return !ENGLISH_STOPWORDS.has(cleaned.toLowerCase());
+/** Strip leading/trailing punctuation so "imbatível." → "imbatível". */
+export function normalizeVocabHeadword(raw: string): string {
+  let s = raw.replace(/\s+/g, " ").trim();
+  if (!s) return "";
+  // Keep letters/marks/numbers/internal apostrophes & hyphens; peel edge punct.
+  s = s.replace(/^[^\p{L}\p{M}\p{N}]+/u, "").replace(/[^\p{L}\p{M}\p{N}]+$/u, "");
+  // Common dangling quotes/apostrophes after peel
+  s = s.replace(/^['’]+|['’]+$/g, "").trim();
+  return s;
 }
 
-/** Any English word or known multi-word phrase that can be tapped to look up. */
-export function isLookupableEnglishWord(token: string): boolean {
-  const cleaned = token.replace(/^'+|'+$/g, "").trim();
-  if (cleaned.length < 1) return false;
-  if (/^[A-Za-z][A-Za-z']*(?:-[A-Za-z][A-Za-z']*)*$/.test(cleaned)) {
+function foldEnglishStopKey(token: string): string {
+  return token.toLowerCase().replace(/['’]/g, "");
+}
+
+function isEnglishStopwordToken(token: string): boolean {
+  if (!/^[A-Za-z'’]+$/.test(token)) return false;
+  const lower = token.toLowerCase();
+  const folded = foldEnglishStopKey(token);
+  return ENGLISH_STOPWORDS.has(lower) || ENGLISH_STOPWORDS.has(folded);
+}
+
+/** Whether a token is worth offering as a vocabulary save target. */
+export function isLearnableEnglishWord(token: string): boolean {
+  const cleaned = normalizeVocabHeadword(token);
+  if (!cleaned) return false;
+  // CJK / Hangul runs are valid learning units (incl. 2-char words like 今日).
+  if (/^[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]+$/u.test(cleaned)) {
     return true;
   }
-  // Multi-word phrase (spaces between English tokens)
-  return /^[A-Za-z][A-Za-z']*(?:-[A-Za-z][A-Za-z']*)?(?:\s+[A-Za-z][A-Za-z']*(?:-[A-Za-z][A-Za-z']*)?)+$/.test(
+  if (cleaned.length < 3) return false;
+  if (!/^[\p{L}\p{M}][\p{L}\p{M}'’]*(?:-[\p{L}\p{M}'’]*)*$/u.test(cleaned)) {
+    return false;
+  }
+  // English stopwords / bare contractions only apply to ASCII Latin tokens.
+  if (isEnglishStopwordToken(cleaned)) {
+    return false;
+  }
+  return true;
+}
+
+/** Any word or known multi-word phrase that can be tapped to look up. */
+export function isLookupableEnglishWord(token: string): boolean {
+  const cleaned = normalizeVocabHeadword(token);
+  if (cleaned.length < 1) return false;
+  if (/^[\p{L}\p{M}][\p{L}\p{M}'’]*(?:-[\p{L}\p{M}'’]*)*$/u.test(cleaned)) {
+    return true;
+  }
+  // Multi-word phrase (spaces between letter tokens)
+  return /^[\p{L}\p{M}][\p{L}\p{M}'’]*(?:-[\p{L}\p{M}'’]*)?(?:\s+[\p{L}\p{M}][\p{L}\p{M}'’]*(?:-[\p{L}\p{M}'’]*)?)+$/u.test(
     cleaned,
   );
+}
+
+/**
+ * Vocab preview should open only for content words or multi-word idioms/phrases —
+ * not bare function words / contractions like "how's".
+ */
+export function isVocabLookupEligible(token: string): boolean {
+  const cleaned = normalizeVocabHeadword(token);
+  if (!cleaned) return false;
+  if (/\s/.test(cleaned)) {
+    return isLookupableEnglishWord(cleaned);
+  }
+  return isLearnableEnglishWord(cleaned);
 }
 
 /** Pull learnable English word candidates from free text. */
 export function extractEnglishWords(texts: string[]): string[] {
   const seen = new Set<string>();
   const out: string[] = [];
-  const pattern = /[A-Za-z][A-Za-z']*/g;
+  const pattern = /[\p{L}\p{M}][\p{L}\p{M}'’]*(?:-[\p{L}\p{M}'’]*)*/gu;
 
   for (const text of texts) {
     if (!text) continue;
     const matches = text.match(pattern) ?? [];
     for (const raw of matches) {
-      const cleaned = raw.replace(/^'+|'+$/g, "");
+      const cleaned = normalizeVocabHeadword(raw);
       if (!isLearnableEnglishWord(cleaned)) continue;
       const key = cleaned.toLowerCase();
       if (seen.has(key)) continue;
@@ -307,17 +405,23 @@ export function extractEnglishWords(texts: string[]): string[] {
 export function saveVocabularyWords(
   existing: VocabularyEntry[],
   items: VocabLookupResult[],
+  languageCode: LearningLanguageCode = DEFAULT_LEARNING_LANGUAGE_CODE,
 ): VocabularyEntry[] {
   const next = [...existing];
   for (const item of items) {
-    if (isWordSaved(next, item.word)) continue;
+    const word = normalizeVocabHeadword(item.word) || item.word.trim();
+    const gloss = item.gloss.trim();
+    if (!word || !gloss) continue;
+    if (isWordSaved(next, word, languageCode)) continue;
     next.unshift({
-      id: makeVocabId(item.word),
-      word: item.word.trim(),
-      gloss: item.gloss.trim(),
+      id: makeVocabId(word),
+      word,
+      gloss,
+      languageCode,
       createdAt: Date.now(),
       ...(item.example ? { example: item.example } : {}),
       ...(item.partOfSpeech ? { partOfSpeech: item.partOfSpeech } : {}),
+      ...(item.reading ? { reading: item.reading } : {}),
     });
   }
   return next;

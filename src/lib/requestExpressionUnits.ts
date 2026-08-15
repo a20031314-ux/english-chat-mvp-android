@@ -3,21 +3,29 @@ import {
   localExpressionUnits,
   normalizeUnitTexts,
 } from "@/lib/expressionUnits";
+import {
+  DEFAULT_LEARNING_LANGUAGE_CODE,
+  type LearningLanguageCode,
+} from "@/lib/learningLanguages";
 
 const cache = new Map<string, string[]>();
 const inflight = new Map<string, Promise<string[]>>();
 
-function cacheKey(sentence: string) {
-  return sentence.replace(/\s+/g, " ").trim();
+function cacheKey(sentence: string, targetLanguage: LearningLanguageCode) {
+  return `${targetLanguage}:${sentence.replace(/\s+/g, " ").trim()}`;
 }
 
-async function fetchExpressionUnits(sentence: string): Promise<string[]> {
-  const fallback = localExpressionUnits(sentence);
+async function fetchExpressionUnits(
+  sentence: string,
+  targetLanguage: LearningLanguageCode,
+): Promise<string[]> {
+  const fallback =
+    targetLanguage === "en" ? localExpressionUnits(sentence) : [];
   try {
     const response = await fetch(apiUrl("/api/expression-units"), {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ sentence }),
+      body: JSON.stringify({ sentence, targetLanguage }),
       signal: AbortSignal.timeout(12000),
     });
     if (!response.ok) return fallback;
@@ -29,15 +37,19 @@ async function fetchExpressionUnits(sentence: string): Promise<string[]> {
   }
 }
 
-export function loadExpressionUnits(sentence: string): Promise<string[]> {
-  const key = cacheKey(sentence);
-  if (!key) return Promise.resolve([]);
+export function loadExpressionUnits(
+  sentence: string,
+  targetLanguage: LearningLanguageCode = DEFAULT_LEARNING_LANGUAGE_CODE,
+): Promise<string[]> {
+  const trimmed = sentence.replace(/\s+/g, " ").trim();
+  if (!trimmed) return Promise.resolve([]);
+  const key = cacheKey(trimmed, targetLanguage);
   const hit = cache.get(key);
   if (hit) return Promise.resolve(hit);
   const pending = inflight.get(key);
   if (pending) return pending;
 
-  const request = fetchExpressionUnits(key)
+  const request = fetchExpressionUnits(trimmed, targetLanguage)
     .then((units) => {
       cache.set(key, units);
       return units;
@@ -49,6 +61,9 @@ export function loadExpressionUnits(sentence: string): Promise<string[]> {
   return request;
 }
 
-export function prefetchExpressionUnits(sentence: string) {
-  void loadExpressionUnits(sentence);
+export function prefetchExpressionUnits(
+  sentence: string,
+  targetLanguage: LearningLanguageCode = DEFAULT_LEARNING_LANGUAGE_CODE,
+) {
+  void loadExpressionUnits(sentence, targetLanguage);
 }

@@ -26,12 +26,12 @@ const OPEN_TAIL_MAX_CHARS = 280;
 const CONTINUATION_START =
   /^(and|or|but|because|so|then|which|to|of|for|with|without|by|from|into|onto|is|are|was|were|been|being)\b/i;
 
-const INCOMPLETE_END =
-  /\b(and|or|but|because|that|than|to|of|the|a|an|with|without|for|if|when|while|which|who|as|by|from|into|my|your|our|their|his|her|its|this|these|those|an?)\s*$/i;
+const DANGLING_END =
+  /\b(already|just|really|very|been|being|getting|going|gonna|wanna|gotta|kinda|more|most|less|so|too|not|never|always|still|also|even|only|had|have|has|was|were|is|are|am|will|would|could|should|can|do|does|did|to|a|an|the)\s*$/i;
 
 /** Trailing words that usually expect a complement (STT often splits here). */
-const DANGLING_END =
-  /\b(already|just|really|very|been|being|getting|going|gonna|wanna|gotta|kinda|more|most|so|too|not|never|always|still|also|even|only|had|have|has|was|were|is|are|am|will|would|could|should|can|do|does|did|to|a|an|the)\s*$/i;
+const INCOMPLETE_END =
+  /\b(and|or|but|because|that|than|to|of|the|a|an|with|without|for|if|when|while|which|who|as|by|from|into|my|your|our|their|his|her|its|this|these|those|an?|less|more)\s*$/i;
 
 /** "... as a first." / "the other." — STT often puts a period before the noun. */
 const OPEN_NOUN_PHRASE_END =

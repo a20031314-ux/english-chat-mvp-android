@@ -4,8 +4,9 @@ import { useEffect, useMemo, useState } from "react";
 import { LearningReviewModal } from "@/components/LearningReviewModal";
 import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
 import { LanguageSelector } from "@/components/LanguageSelector";
-import { APP_LOCALE_STORAGE_KEY, isLocale, Locale, copy } from "@/lib/copy";
+import { APP_LOCALE_STORAGE_KEY, isLocale, Locale } from "@/lib/copy";
 import type { UICopy } from "@/lib/copy";
+import { useUiCopy } from "@/hooks/useUiCopy";
 import {
   type LearningCard,
   loadLearningCards,
@@ -17,7 +18,10 @@ import {
   type ReviewLevel,
   applyReviewLevel,
   isReviewQueueCard,
+  filterLearningCardsByLanguage,
 } from "@/lib/learningCards";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
+import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
 
 type FilterTab = "all" | "new" | "practicing" | "usable";
 
@@ -111,6 +115,9 @@ export function LearningBookPanel({
   onLocaleChange,
   showLanguageSelector = false,
 }: LearningBookPanelProps) {
+  const learningLanguage = useLearningLanguageOptional();
+  const targetLanguage =
+    learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
   const [cards, setCards] = useState<LearningCard[]>([]);
   const [reviewCard, setReviewCard] = useState<LearningCard | null>(null);
   const [reviewSessionQueue, setReviewSessionQueue] = useState<
@@ -121,7 +128,7 @@ export function LearningBookPanel({
   const [expanded, setExpanded] = useState<Record<number, boolean>>({});
   const [reviewTodayHint, setReviewTodayHint] = useState<string | null>(null);
 
-  const ui = copy[locale];
+  const ui = useUiCopy(locale);
 
   useEffect(() => {
     setCards(loadLearningCards());
@@ -137,9 +144,14 @@ export function LearningBookPanel({
     return () => document.removeEventListener("visibilitychange", onVisible);
   }, []);
 
+  const languageCards = useMemo(
+    () => filterLearningCardsByLanguage(cards, targetLanguage),
+    [cards, targetLanguage],
+  );
+
   const sortedCards = useMemo(
-    () => [...cards].sort((a, b) => b.id - a.id),
-    [cards],
+    () => [...languageCards].sort((a, b) => b.id - a.id),
+    [languageCards],
   );
 
   const filteredCards = useMemo(() => {
@@ -148,16 +160,22 @@ export function LearningBookPanel({
     );
   }, [sortedCards, searchQuery, filterTab]);
 
-  const savedToday = useMemo(() => countSavedToday(cards), [cards]);
-  const totalCards = cards.length;
-  const practicingCount = useMemo(
-    () => countByStatus(cards, "practicing"),
-    [cards],
+  const savedToday = useMemo(
+    () => countSavedToday(languageCards),
+    [languageCards],
   );
-  const usableCount = useMemo(() => countByStatus(cards, "usable"), [cards]);
+  const totalCards = languageCards.length;
+  const practicingCount = useMemo(
+    () => countByStatus(languageCards, "practicing"),
+    [languageCards],
+  );
+  const usableCount = useMemo(
+    () => countByStatus(languageCards, "usable"),
+    [languageCards],
+  );
   const reviewCta = practicingCount > 0 ? ui.reviewPracticingCta : ui.reviewNewCta;
 
-  const hasCards = cards.length > 0;
+  const hasCards = languageCards.length > 0;
   const listEmpty = hasCards && filteredCards.length === 0;
 
   const closeReviewModal = () => {
@@ -207,7 +225,7 @@ export function LearningBookPanel({
 
   const startReviewToday = () => {
     setReviewTodayHint(null);
-    const queue = cards.filter(isReviewQueueCard);
+    const queue = languageCards.filter(isReviewQueueCard);
     if (queue.length === 0) {
       setReviewTodayHint(ui.reviewTodayEmpty);
       return;

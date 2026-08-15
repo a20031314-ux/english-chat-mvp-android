@@ -5,9 +5,12 @@ import {
   ARCHIVE_STORAGE_KEY,
   ChatMessage,
   ConversationSession,
+  normalizeConversationSession,
+  normalizeSavedItem,
   SavedItem,
 } from "./ArchivePanel";
-import { APP_LOCALE_STORAGE_KEY, copy, isLocale, Locale } from "@/lib/copy";
+import { APP_LOCALE_STORAGE_KEY, isLocale, Locale } from "@/lib/copy";
+import { useUiCopy } from "@/hooks/useUiCopy";
 import {
   loadLearningCards,
   persistLearningCards,
@@ -19,6 +22,7 @@ import { MessageBubble } from "./MessageBubble";
 import { ChatHistoryPanel } from "./ChatHistoryPanel";
 import { PaywallModal } from "./PaywallModal";
 import { usePremium } from "@/contexts/PremiumContext";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { Capacitor } from "@capacitor/core";
 import {
   FREE_DAILY_CHAT_LIMIT,
@@ -30,6 +34,11 @@ import {
   alignCorrectionToGrammar,
   substantiveNorm,
 } from "@/lib/correctionNorm";
+import {
+  DEFAULT_LEARNING_LANGUAGE_CODE,
+  isLearningLanguageCode,
+  type LearningLanguageCode,
+} from "@/lib/learningLanguages";
 
 type CorrectionResult = {
   corrected: string;
@@ -86,7 +95,9 @@ function premiumRequestHeaders(isPremium: boolean): HeadersInit {
   return { [PREMIUM_CLIENT_HEADER]: "1" };
 }
 const CONVERSATION_SESSIONS_KEY = "conversationSessions";
+/** Legacy single active-id key (migrated into per-language map). */
 const ACTIVE_CONVERSATION_ID_KEY = "activeConversationSessionId";
+const ACTIVE_CONVERSATION_IDS_KEY = "activeConversationSessionIds";
 const VERCEL_FALLBACK_API_BASE = "https://english-chat-mvp.vercel.app";
 
 /** Web dev uses same-origin `/api/*`. Capacitor WebView uses bundled UI + remote API. */
@@ -209,8 +220,11 @@ function loadSavedItems(): SavedItem[] {
     if (!raw) {
       return [];
     }
-    const parsed = JSON.parse(raw) as SavedItem[];
-    return Array.isArray(parsed) ? parsed : [];
+    const parsed = JSON.parse(raw) as unknown;
+    if (!Array.isArray(parsed)) return [];
+    return parsed
+      .map(normalizeSavedItem)
+      .filter((item): item is SavedItem => item !== null);
   } catch {
     return [];
   }
@@ -234,8 +248,12 @@ function loadConversationSessions(): ConversationSession[] {
     if (!raw) {
       return [];
     }
-    const parsed = JSON.parse(raw) as ConversationSession[];
-    return Array.isArray(parsed) ? parsed : [];
+    const parsed = JSON.parse(raw) as unknown;
+    if (!Array.isArray(parsed)) return [];
+    const sessions = parsed
+      .map(normalizeConversationSession)
+      .filter((item): item is ConversationSession => item !== null);
+    return sessions;
   } catch {
     return [];
   }
@@ -254,40 +272,103 @@ function saveConversationSession(session: ConversationSession) {
   );
 }
 
-function loadActiveConversationId(): string | null {
-  if (typeof window === "undefined") return null;
+function loadActiveConversationIds(): Partial<
+  Record<LearningLanguageCode, string>
+> {
+  if (typeof window === "undefined") return {};
   try {
-    return window.localStorage.getItem(ACTIVE_CONVERSATION_ID_KEY);
+    const raw = window.localStorage.getItem(ACTIVE_CONVERSATION_IDS_KEY);
+    if (raw) {
+      const parsed = JSON.parse(raw) as unknown;
+      if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) {
+        const out: Partial<Record<LearningLanguageCode, string>> = {};
+        for (const [key, value] of Object.entries(
+          parsed as Record<string, unknown>,
+        )) {
+          if (typeof value === "string" && value && isLearningLanguageCode(key)) {
+            out[key] = value;
+          }
+        }
+        return out;
+      }
+    }
+    // Migrate legacy single key → English workspace.
+    const legacy = window.localStorage.getItem(ACTIVE_CONVERSATION_ID_KEY);
+    if (legacy) {
+      const migrated = { [DEFAULT_LEARNING_LANGUAGE_CODE]: legacy };
+      window.localStorage.setItem(
+        ACTIVE_CONVERSATION_IDS_KEY,
+        JSON.stringify(migrated),
+      );
+      window.localStorage.removeItem(ACTIVE_CONVERSATION_ID_KEY);
+      return migrated;
+    }
   } catch {
-    return null;
+    // ignore
   }
+  return {};
 }
 
-function persistActiveConversationId(id: string | null) {
+function loadActiveConversationId(
+  languageCode: LearningLanguageCode,
+): string | null {
+  return loadActiveConversationIds()[languageCode] ?? null;
+}
+
+function persistActiveConversationId(
+  languageCode: LearningLanguageCode,
+  id: string | null,
+) {
   if (typeof window === "undefined") return;
   try {
+    const current = loadActiveConversationIds();
     if (!id) {
-      window.localStorage.removeItem(ACTIVE_CONVERSATION_ID_KEY);
+      delete current[languageCode];
     } else {
-      window.localStorage.setItem(ACTIVE_CONVERSATION_ID_KEY, id);
+      current[languageCode] = id;
+    }
+    window.localStorage.setItem(
+      ACTIVE_CONVERSATION_IDS_KEY,
+      JSON.stringify(current),
+    );
+    // Keep legacy key in sync for older builds reading English only.
+    if (languageCode === DEFAULT_LEARNING_LANGUAGE_CODE) {
+      if (!id) {
+        window.localStorage.removeItem(ACTIVE_CONVERSATION_ID_KEY);
+      } else {
+        window.localStorage.setItem(ACTIVE_CONVERSATION_ID_KEY, id);
+      }
     }
   } catch {
     // ignore
   }
 }
 
+function sessionLanguageOf(
+  session: ConversationSession,
+): LearningLanguageCode {
+  return session.languageCode || DEFAULT_LEARNING_LANGUAGE_CODE;
+}
+
 function findResumableSession(
   sessions: ConversationSession[],
+  languageCode: LearningLanguageCode,
 ): ConversationSession | null {
-  const activeId = loadActiveConversationId();
+  const forLanguage = sessions.filter(
+    (session) => sessionLanguageOf(session) === languageCode,
+  );
+  const activeId = loadActiveConversationId(languageCode);
   if (activeId) {
-    const active = sessions.find(
-      (session) => session.id === activeId && !session.endedAt && session.messages?.length,
+    const active = forLanguage.find(
+      (session) =>
+        session.id === activeId &&
+        !session.endedAt &&
+        session.messages?.length,
     );
     if (active) return active;
   }
   return (
-    sessions.find(
+    forLanguage.find(
       (session) => !session.endedAt && (session.messages?.length || 0) > 0,
     ) ?? null
   );
@@ -301,11 +382,14 @@ function deleteConversationSession(id: string) {
   window.localStorage.setItem(CONVERSATION_SESSIONS_KEY, JSON.stringify(next));
 }
 
-function clearConversationSessions() {
+function clearConversationSessionsForLanguage(languageCode: LearningLanguageCode) {
   if (typeof window === "undefined") {
     return;
   }
-  window.localStorage.setItem(CONVERSATION_SESSIONS_KEY, JSON.stringify([]));
+  const kept = loadConversationSessions().filter(
+    (session) => sessionLanguageOf(session) !== languageCode,
+  );
+  window.localStorage.setItem(CONVERSATION_SESSIONS_KEY, JSON.stringify(kept));
 }
 
 function sessionTitleFromTurns(turns: ChatTurn[]): string {
@@ -480,7 +564,10 @@ function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
   return turns;
 }
 
-function buildCorrectionSavedItem(turn: ChatTurn): SavedItem | null {
+function buildCorrectionSavedItem(
+  turn: ChatTurn,
+  languageCode: LearningLanguageCode,
+): SavedItem | null {
   if (!turn.correctionResult) {
     return null;
   }
@@ -493,11 +580,15 @@ function buildCorrectionSavedItem(turn: ChatTurn): SavedItem | null {
     corrected: turn.correctionResult.corrected,
     natural: turn.correctionResult.natural,
     explanation: turn.correctionResult.explanation,
+    languageCode,
     createdAt: Date.now(),
   };
 }
 
-function buildExpressionSavedItem(turn: ChatTurn): SavedItem | null {
+function buildExpressionSavedItem(
+  turn: ChatTurn,
+  languageCode: LearningLanguageCode,
+): SavedItem | null {
   if (!turn.expressionResult) {
     return null;
   }
@@ -510,6 +601,7 @@ function buildExpressionSavedItem(turn: ChatTurn): SavedItem | null {
     corrected: turn.expressionResult.expression,
     explanation: "",
     example: turn.expressionResult.example,
+    languageCode,
     createdAt: Date.now(),
   };
 }
@@ -527,6 +619,11 @@ export function ChatWindow({
 }: ChatWindowProps) {
   const { isPremium, isBillingReady, refreshPremium, setPremiumForUi } =
     usePremium();
+  const learningLanguage = useLearningLanguageOptional();
+  const targetLanguage =
+    learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
+  const [sessionLanguageCode, setSessionLanguageCode] =
+    useState<LearningLanguageCode>(targetLanguage);
   const [localeState, setLocaleState] = useState<Locale>(() => {
     if (typeof window === "undefined") {
       return "ko";
@@ -549,7 +646,7 @@ export function ChatWindow({
       setLocaleState(next);
     }
   };
-  const ui = copy[locale];
+  const ui = useUiCopy(locale);
   const [bookToast, setBookToast] = useState<string | null>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
@@ -619,15 +716,20 @@ export function ChatWindow({
     setConversationSessions(sessions);
     setLearningCards(loadLearningCards());
 
-    const resumable = findResumableSession(sessions);
+    const resumable = findResumableSession(sessions, targetLanguage);
+    setSessionLanguageCode(targetLanguage);
     if (resumable) {
       setCurrentSessionId(resumable.id);
       setCurrentSessionCreatedAt(resumable.createdAt);
       setTurns(fromSessionMessages(resumable.messages));
       setSessionEnded(false);
-      persistActiveConversationId(resumable.id);
+      persistActiveConversationId(targetLanguage, resumable.id);
     } else {
-      persistActiveConversationId(null);
+      setTurns([]);
+      setCurrentSessionId(makeSessionId());
+      setCurrentSessionCreatedAt(Date.now());
+      setSessionEnded(false);
+      persistActiveConversationId(targetLanguage, null);
     }
 
     void refreshEntitlement();
@@ -690,14 +792,75 @@ export function ChatWindow({
       endedAt: sessionEnded ? Date.now() : undefined,
       messageCount: turns.length,
       messages: toSessionMessages(turns),
+      languageCode: sessionLanguageCode,
     };
 
     saveConversationSession(session);
     if (!session.endedAt) {
-      persistActiveConversationId(session.id);
+      persistActiveConversationId(sessionLanguageCode, session.id);
     }
     setConversationSessions(loadConversationSessions());
-  }, [turns, currentSessionId, currentSessionCreatedAt, sessionEnded]);
+  }, [
+    turns,
+    currentSessionId,
+    currentSessionCreatedAt,
+    sessionEnded,
+    sessionLanguageCode,
+  ]);
+
+  // Learning-language workspaces are separate: switching target language
+  // saves the current chat and opens that language's own conversation.
+  const prevTargetLanguageRef = useRef(targetLanguage);
+  useEffect(() => {
+    if (prevTargetLanguageRef.current === targetLanguage) {
+      return;
+    }
+    const previousLanguage = prevTargetLanguageRef.current;
+    prevTargetLanguageRef.current = targetLanguage;
+
+    if (turns.length > 0) {
+      saveConversationSession({
+        id: currentSessionId,
+        title: sessionTitleFromTurns(turns),
+        createdAt: currentSessionCreatedAt,
+        endedAt: sessionEnded ? Date.now() : undefined,
+        messageCount: turns.length,
+        messages: toSessionMessages(turns),
+        languageCode: previousLanguage,
+      });
+      if (!sessionEnded) {
+        persistActiveConversationId(previousLanguage, currentSessionId);
+      } else {
+        persistActiveConversationId(previousLanguage, null);
+      }
+    }
+
+    const sessions = loadConversationSessions();
+    setConversationSessions(sessions);
+    const resumable = findResumableSession(sessions, targetLanguage);
+    setSessionLanguageCode(targetLanguage);
+    setInput("");
+    setChatModeOn(true);
+    setAskExpressionOn(false);
+    setIsChatHistoryOpen(false);
+
+    if (resumable) {
+      setCurrentSessionId(resumable.id);
+      setCurrentSessionCreatedAt(resumable.createdAt);
+      setTurns(fromSessionMessages(resumable.messages));
+      setSessionEnded(false);
+      persistActiveConversationId(targetLanguage, resumable.id);
+    } else {
+      setTurns([]);
+      setCurrentSessionId(makeSessionId());
+      setCurrentSessionCreatedAt(Date.now());
+      setSessionEnded(false);
+      persistActiveConversationId(targetLanguage, null);
+    }
+    // Intentionally keyed only on targetLanguage — workspace snapshot uses
+    // current render values at the moment of the switch.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [targetLanguage]);
 
   useEffect(() => {
     if (isChatDailyLimitReached) {
@@ -724,6 +887,8 @@ export function ChatWindow({
         message,
         mode: "chat",
         locale,
+        interfaceLanguage: locale,
+        targetLanguage: sessionLanguageCode,
         recent: turns
           .flatMap((turn) => {
             const lines: string[] = [];
@@ -790,6 +955,8 @@ export function ChatWindow({
         message,
         mode: "how_to_say",
         locale,
+        interfaceLanguage: locale,
+        targetLanguage: sessionLanguageCode,
         recent: turns
           .flatMap((turn) => {
             const lines: string[] = [];
@@ -888,6 +1055,8 @@ export function ChatWindow({
         body: JSON.stringify({
           text: trimmed,
           locale,
+          interfaceLanguage: locale,
+          targetLanguage: sessionLanguageCode,
           sourceType: "conversation",
           context: nearby,
         }),
@@ -941,6 +1110,7 @@ export function ChatWindow({
       original: turn.userMessage || "",
       corrected: corrected || "",
       explanation: explanation || "",
+      languageCode: sessionLanguageCode,
       createdAt,
       savedAt: createdAt,
       status: "new",
@@ -991,7 +1161,8 @@ export function ChatWindow({
     setSessionEnded(false);
     setCurrentSessionId(makeSessionId());
     setCurrentSessionCreatedAt(Date.now());
-    persistActiveConversationId(null);
+    setSessionLanguageCode(targetLanguage);
+    persistActiveConversationId(targetLanguage, null);
     requestAnimationFrame(() => inputRef.current?.focus());
   };
 
@@ -1006,8 +1177,9 @@ export function ChatWindow({
       endedAt: undefined,
       messageCount: turns.length,
       messages: toSessionMessages(turns),
+      languageCode: sessionLanguageCode,
     });
-    persistActiveConversationId(currentSessionId);
+    persistActiveConversationId(sessionLanguageCode, currentSessionId);
     setConversationSessions(loadConversationSessions());
   };
 
@@ -1016,15 +1188,19 @@ export function ChatWindow({
       snapshotCurrentChat();
     }
 
+    const language = sessionLanguageOf(session);
+
     // Ended sessions stay in history — continue as a new session id.
     if (session.endedAt) {
       setCurrentSessionId(makeSessionId());
       setCurrentSessionCreatedAt(Date.now());
-      persistActiveConversationId(null);
+      setSessionLanguageCode(language);
+      persistActiveConversationId(language, null);
     } else {
       setCurrentSessionId(session.id);
       setCurrentSessionCreatedAt(session.createdAt);
-      persistActiveConversationId(session.id);
+      setSessionLanguageCode(language);
+      persistActiveConversationId(language, session.id);
     }
     setSessionEnded(false);
     setTurns(fromSessionMessages(session.messages));
@@ -1050,8 +1226,9 @@ export function ChatWindow({
       endedAt,
       messageCount: turns.length,
       messages,
+      languageCode: sessionLanguageCode,
     });
-    persistActiveConversationId(null);
+    persistActiveConversationId(sessionLanguageCode, null);
     setConversationSessions(loadConversationSessions());
     setBookToast(ui.sessionSavedToHistoryToast);
     setIsChatHistoryOpen(false);
@@ -1072,6 +1249,8 @@ export function ChatWindow({
         body: JSON.stringify({
           mode: "start",
           locale,
+          interfaceLanguage: locale,
+          targetLanguage: sessionLanguageCode,
           recent: [],
         }),
       });
@@ -1608,7 +1787,11 @@ export function ChatWindow({
 
       <ChatHistoryPanel
         isOpen={isChatHistoryOpen}
-        sessions={conversationSessions.filter((s) => s.messageCount > 0)}
+        sessions={conversationSessions.filter(
+          (s) =>
+            s.messageCount > 0 &&
+            sessionLanguageOf(s) === sessionLanguageCode,
+        )}
         currentSessionId={currentSessionId}
         locale={locale}
         ui={ui}
@@ -1624,12 +1807,20 @@ export function ChatWindow({
         onClearSessions={() => {
           const keepCurrent =
             turns.length > 0
-              ? conversationSessions.filter((s) => s.id === currentSessionId)
+              ? conversationSessions.filter(
+                  (s) =>
+                    s.id === currentSessionId &&
+                    sessionLanguageOf(s) === sessionLanguageCode,
+                )
               : [];
-          clearConversationSessions();
+          clearConversationSessionsForLanguage(sessionLanguageCode);
           for (const session of keepCurrent) {
             saveConversationSession(session);
           }
+          persistActiveConversationId(
+            sessionLanguageCode,
+            keepCurrent[0]?.id ?? null,
+          );
           setConversationSessions(loadConversationSessions());
         }}
         onStartNewChat={() => {

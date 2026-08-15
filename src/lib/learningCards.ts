@@ -1,3 +1,8 @@
+import {
+  coerceLanguageCode,
+  type LearningLanguageCode,
+} from "@/lib/learningLanguages";
+
 export const LEARNING_CARDS_KEY = "learningCards";
 
 /** Legacy recall confidence from the previous review flow */
@@ -13,6 +18,8 @@ export type LearningCard = {
   explanation: string;
   /** More native/natural wording when distinct from corrected */
   natural?: string;
+  /** Learning language this card belongs to (legacy → "en") */
+  languageCode: LearningLanguageCode;
   /** ms since epoch */
   createdAt: number;
   /** Legacy name kept readable so old localStorage cards continue to work */
@@ -71,6 +78,7 @@ export function normalizeLearningCard(raw: unknown): LearningCard | null {
     original: o.original,
     corrected: o.corrected,
     explanation: o.explanation,
+    languageCode: coerceLanguageCode(o.languageCode),
     createdAt,
     status,
     reviewCount,
@@ -86,12 +94,29 @@ export function loadLearningCards(): LearningCard[] {
     if (!Array.isArray(data)) {
       return [];
     }
-    return data
+    const cards = data
       .map(normalizeLearningCard)
       .filter((c): c is LearningCard => c !== null);
+    const needsRewrite = data.some(
+      (row) =>
+        row &&
+        typeof row === "object" &&
+        (row as Record<string, unknown>).languageCode == null,
+    );
+    if (needsRewrite && cards.length > 0) {
+      persistLearningCards(cards);
+    }
+    return cards;
   } catch {
     return [];
   }
+}
+
+export function filterLearningCardsByLanguage(
+  cards: LearningCard[],
+  languageCode: LearningLanguageCode,
+): LearningCard[] {
+  return cards.filter((c) => c.languageCode === languageCode);
 }
 
 export function persistLearningCards(cards: LearningCard[]) {

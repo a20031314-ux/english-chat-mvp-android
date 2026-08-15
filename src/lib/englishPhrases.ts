@@ -611,6 +611,9 @@ const ENGLISH_PHRASES = [
   "pleased to meet you",
   "how are you",
   "how have you been",
+  "how's it going",
+  "how is it going",
+  "what is up",
   "what's up",
   "what's going on",
   "what's the matter",
@@ -676,7 +679,7 @@ type WordHit = { index: number; value: string };
 export function segmentEnglishForLookup(text: string): EnglishLookupSegment[] {
   if (!text) return [];
 
-  const wordRe = /[A-Za-z][A-Za-z']*(?:-[A-Za-z][A-Za-z']*)*/g;
+  const wordRe = /[\p{L}\p{M}][\p{L}\p{M}'’]*(?:-[\p{L}\p{M}'’]*)*/gu;
   const words: WordHit[] = [];
   let match: RegExpExecArray | null;
   while ((match = wordRe.exec(text)) !== null) {
@@ -699,7 +702,7 @@ export function segmentEnglishForLookup(text: string): EnglishLookupSegment[] {
   };
 
   const isPhraseSpan = (span: string) =>
-    /^[A-Za-z']+(?:-[A-Za-z']+)*(?:\s+[A-Za-z']+(?:-[A-Za-z']+)*)+$/.test(
+    /^[\p{L}\p{M}'’]+(?:-[\p{L}\p{M}'’]+)*(?:\s+[\p{L}\p{M}'’]+(?:-[\p{L}\p{M}'’]+)*)+$/u.test(
       span,
     );
 

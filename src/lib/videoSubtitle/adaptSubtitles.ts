@@ -24,31 +24,31 @@ import {
   unitPromptItem,
 } from "@/lib/videoSubtitle/subtitleDraft";
 import type { VideoContext } from "@/lib/videoSubtitle/types";
+import { spokenTranslatePrinciples } from "@/lib/spokenTranslate";
 
 const BATCH = 6;
 
-function adaptSystem(locale: string): string {
-  const target = localeTargetName(locale);
-  return `You write on-screen ${target} movie/drama subtitles — NOT dictionary translations.
+function adaptSystem(locale: string, targetLanguage = "en"): string {
+  const interfaceLanguage = locale || "ko";
+  const target = localeTargetName(interfaceLanguage);
+  return `${spokenTranslatePrinciples({
+    locale: interfaceLanguage,
+    interfaceLanguage,
+    targetLanguage,
+    sourceType: "subtitle",
+  })}
+
+Caption task:
+You write on-screen ${target} movie/drama subtitles — NOT dictionary translations.
 
 Core job:
 1) What does this line MEAN in this scene (intent + feeling)?
 2) What would a native ${target} speaker SAY aloud with the same vibe?
 
-Prefer 의역 (sense + tone) over 직역 (word mapping).
-
-WRONG → RIGHT examples (follow this spirit, do not memorize only these):
-- "I'm losing my mind." → WRONG "내 정신이 지금 나가고 있어" / RIGHT "정신 나갈 것 같아" / "미치겠어"
-- "How would you decide what parts of nature are good or bad?" → WRONG "자연에서 좋은 것과 나쁜 것을 어떻게 구분하지?" / RIGHT "뭐가 좋고 나쁜 건지 어떻게 판단하지?"
-- "I don't buy that." → WRONG "나는 그걸 사지 않아" / RIGHT "그건 말도 안 돼" / "믿기 힘든데"
-- "I wasn't unconscious!" → WRONG "난 unconscious 아니었어" / RIGHT "나 기절한 거 아니야!"
-
-Write like spoken dialogue a Korean would actually say — compress English scaffolding ("parts of…", "how would you decide…") into natural speech. Do NOT keep English noun phrases in Korean word order.
-
 HARD BAN:
-- word-for-word glosses / 번역투 / textbook Korean
-- mapping each English word into Korean in the same order
-- English content words left in ${target} (names like Wade/Deadpool OK)
+- word-for-word glosses / 번역투 / textbook wording
+- mapping each source word into ${target} in the same order
+- source content words left in ${target} (proper names OK)
 
 You receive VIDEO CONTEXT, optional SCENE CONTEXT (soft evidence only), PREVIOUS / CURRENT / NEXT.
 
@@ -104,16 +104,17 @@ async function adaptBatch(
   units: MeaningUnit[],
   sceneByUnitId: Map<string, SceneContext | undefined>,
   conversation?: ConversationContext,
+  targetLanguage = "en",
 ): Promise<Map<string, SubtitleDraft>> {
   const client = getOpenAIClient();
   if (!client) throw new VideoPipelineError("MISSING_OPENAI_KEY");
 
   const completion = await client.chat.completions.create({
     model: chatModel(),
-    temperature: 0.7,
+    temperature: 0.4,
     response_format: { type: "json_object" },
     messages: [
-      { role: "system", content: adaptSystem(locale) },
+      { role: "system", content: adaptSystem(locale, targetLanguage) },
       {
         role: "user",
         content: JSON.stringify({

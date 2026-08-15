@@ -167,7 +167,9 @@ export function MessageBubble({
         {translatedMessage ? (
           <div
             className={`mt-2 border-t pt-2 text-xs leading-relaxed ${
-              isUser ? "border-slate-600 text-slate-200" : "border-slate-200 text-slate-600"
+              isUser
+                ? "border-slate-600 text-slate-200"
+                : "border-slate-200 text-slate-600"
             }`}
           >
             {labels.translation ? (

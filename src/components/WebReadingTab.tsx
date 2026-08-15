@@ -3,18 +3,21 @@
 import { FormEvent, useCallback, useEffect, useState } from "react";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { getApiBase } from "@/lib/apiBase";
 import type { Locale, UICopy } from "@/lib/copy";
 import type { EnglishInputAnalysis } from "@/lib/englishAnalysis";
 import { rememberEnglishAnalysis } from "@/lib/englishAnalysisRecent";
 import { analyzeEnglishInput } from "@/lib/englishAnalysisService";
 import { resolveWebReaderAnalysis } from "@/lib/genericWebReader";
+import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
 import { inferTranslationSourceType } from "@/lib/naturalTranslation";
 import {
   normalizeWebReaderUrl,
   WEB_READER_SHORTCUTS,
 } from "@/lib/webReaderUrl";
 import { WebReader } from "@/plugins/webReader";
+import { ContentDiscoveryPanel } from "@/components/contentDiscovery/ContentDiscoveryPanel";
 
 export function WebReadingTab({
   locale,
@@ -28,6 +31,9 @@ export function WebReadingTab({
 }) {
   const analysis = useEnglishAnalysisOptional();
   const openAnalysis = analysis?.open;
+  const learningLanguage = useLearningLanguageOptional();
+  const targetLanguage =
+    learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
   const [draftUrl, setDraftUrl] = useState("");
   const [pasteText, setPasteText] = useState("");
   const [urlError, setUrlError] = useState<string | null>(null);
@@ -63,6 +69,8 @@ export function WebReadingTab({
           const result = await analyzeEnglishInput({
             text: request.text,
             locale,
+            interfaceLanguage: locale,
+            targetLanguage,
             sourceType: inferTranslationSourceType(sessionUrl),
           });
           if (!result) {
@@ -81,7 +89,7 @@ export function WebReadingTab({
         }
       })();
     },
-    [locale, openAnalysis, sessionUrl, ui.webReadNoSelection],
+    [locale, openAnalysis, sessionUrl, targetLanguage, ui.webReadNoSelection],
   );
 
   useEffect(() => {
@@ -233,6 +241,17 @@ export function WebReadingTab({
             ))}
           </div>
 
+          <ContentDiscoveryPanel
+            ui={ui}
+            locale={locale}
+            targetLanguage={targetLanguage}
+            fixedContentType="reading"
+            compact
+            onSelect={(candidate) => {
+              void openUrl(candidate.url);
+            }}
+          />
+
           {sessionUrl ? (
             <div className="mt-8 rounded-xl bg-slate-50 px-3 py-3 text-center">
               <p className="whitespace-pre-line text-sm text-slate-600">
@@ -318,7 +337,7 @@ export function WebReadingTab({
                 <p className="mt-4 text-sm text-slate-600">{ui.exploreLoading}</p>
               ) : sentenceFailed ? (
                 <p className="mt-4 text-sm text-rose-700">{ui.exploreFailed}</p>
-              ) : sentenceResult ? (
+              ) : sentenceResult && sentenceResult.elements.length > 0 ? (
                 <div className="mt-4">
                   <p className="text-[11px] font-semibold tracking-wide text-slate-500">
                     {ui.analysisKeyElements}

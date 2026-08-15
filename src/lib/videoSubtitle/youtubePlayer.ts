@@ -254,8 +254,13 @@ function audioFromPlayer(player: Record<string, unknown>): {
       : []),
     ...(Array.isArray(streaming?.formats) ? streaming.formats : []),
   ];
-  const audio: { url: string; mimeType: string; bitrate: number; rank: number }[] =
-    [];
+  const audio: {
+    url: string;
+    mimeType: string;
+    bitrate: number;
+    contentLength: number;
+    rank: number;
+  }[] = [];
   for (const item of formats) {
     const row = asRecord(item);
     if (!row) continue;
@@ -273,6 +278,7 @@ function audioFromPlayer(player: Record<string, unknown>): {
       url,
       mimeType,
       bitrate: asNumber(row.bitrate) ?? asNumber(row.averageBitrate) ?? 0,
+      contentLength: asNumber(row.contentLength) ?? 0,
       rank: audioOnly
         ? lower.includes("mp4") || lower.includes("mp4a")
           ? 0
@@ -280,7 +286,14 @@ function audioFromPlayer(player: Record<string, unknown>): {
         : 2,
     });
   }
-  audio.sort((a, b) => a.rank - b.rank || a.bitrate - b.bitrate);
+  // Prefer audio-only AAC, then streams that advertise a full contentLength
+  // (avoids tiny partial dash stubs), then lower bitrate for smaller downloads.
+  audio.sort(
+    (a, b) =>
+      a.rank - b.rank ||
+      (b.contentLength > 0 ? 1 : 0) - (a.contentLength > 0 ? 1 : 0) ||
+      a.bitrate - b.bitrate,
+  );
   const pick = audio[0];
   return pick ? { url: pick.url, mimeType: pick.mimeType } : {};
 }

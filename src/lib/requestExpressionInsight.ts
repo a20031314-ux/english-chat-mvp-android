@@ -15,6 +15,8 @@ export async function requestExpressionInsight(
       sentence: input.sentence,
       selected: input.selected,
       locale: input.locale,
+      interfaceLanguage: input.interfaceLanguage ?? input.locale,
+      ...(input.targetLanguage ? { targetLanguage: input.targetLanguage } : {}),
       ...(input.context?.length ? { context: input.context } : {}),
     }),
     signal: AbortSignal.timeout(20000),
