@@ -9,7 +9,6 @@ import type { Locale, UICopy } from "@/lib/copy";
 import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
 import {
   isWordSaved,
-  isVocabLookupEligible,
   loadVocabulary,
   normalizeVocabHeadword,
   persistVocabulary,
@@ -52,13 +51,11 @@ export function VocabPreviewProvider({
   }, []);
 
   const open = useCallback(
-    async (word: string) => {
+    async (word: string, contextSentence?: string) => {
       const trimmed = normalizeVocabHeadword(word);
       if (!trimmed || isVocabSaving) return;
       // Alphabet letters use the inline sound tip, not the vocab sheet.
       if (isPronounceableAlphabetLetter(trimmed)) return;
-      // Skip bare function words / contractions that aren't real lookup units.
-      if (!isVocabLookupEligible(trimmed)) return;
 
       const requestId = requestIdRef.current + 1;
       requestIdRef.current = requestId;
@@ -77,6 +74,9 @@ export function VocabPreviewProvider({
             locale,
             interfaceLanguage: locale,
             targetLanguage,
+            ...(contextSentence?.trim()
+              ? { contextSentence: contextSentence.trim() }
+              : {}),
           }),
         });
         if (!response.ok) throw new Error("gloss failed");
@@ -88,7 +88,21 @@ export function VocabPreviewProvider({
             : null;
         const head =
           normalizeVocabHeadword(item?.word || trimmed) || trimmed;
-        const gloss = (item?.gloss || "").trim();
+        const senses = item
+          ? item.senses && item.senses.length > 0
+            ? item.senses
+            : item.gloss
+              ? [
+                  {
+                    gloss: item.gloss,
+                    ...(item.partOfSpeech
+                      ? { partOfSpeech: item.partOfSpeech }
+                      : {}),
+                  },
+                ]
+              : []
+          : [];
+        const gloss = (senses[0]?.gloss || item?.gloss || "").trim();
         // Empty gloss or model echoing the headword = failed lookup (retryable).
         if (
           !gloss ||
@@ -102,8 +116,13 @@ export function VocabPreviewProvider({
         setPreviewDetail({
           word: head,
           gloss,
+          ...(senses.length > 0 ? { senses } : {}),
           ...(item?.example ? { example: item.example } : {}),
-          ...(item?.partOfSpeech ? { partOfSpeech: item.partOfSpeech } : {}),
+          ...(senses[0]?.partOfSpeech
+            ? { partOfSpeech: senses[0].partOfSpeech }
+            : item?.partOfSpeech
+              ? { partOfSpeech: item.partOfSpeech }
+              : {}),
           ...(item?.reading ? { reading: item.reading } : {}),
         });
       } catch {
@@ -161,12 +180,12 @@ export function VocabPreviewProvider({
     () => ({
       open,
       close,
-      saveLabel: ui.insightSaveWord,
+      saveLabel: ui.vocabSaveFromChat,
       isWordSaved: (word: string) =>
         isWordSaved(entries, word, targetLanguage),
       savingWord: previewWord,
     }),
-    [close, entries, open, previewWord, targetLanguage, ui.insightSaveWord],
+    [close, entries, open, previewWord, targetLanguage, ui.vocabSaveFromChat],
   );
 
   return (

@@ -25,13 +25,13 @@ export async function rankCandidates(
 ): Promise<ContentCandidate[]> {
   if (candidates.length === 0) return [];
   if (!client) {
-    return candidates.slice(0, 5).map((item, index) => ({
+    return candidates.slice(0, 10).map((item, index) => ({
       ...item,
       learningScore: 70 - index,
     }));
   }
 
-  const payload = candidates.slice(0, 8).map((item) => ({
+  const payload = candidates.slice(0, 16).map((item) => ({
     id: item.id,
     type: item.type,
     source: item.source,
@@ -76,7 +76,7 @@ Write reason in ${interfaceLanguage === "en" ? "English" : interfaceLanguage ===
 
 Return JSON:
 {"items":[{"id":"...","score":0,"reason":"..."}]}
-Return at most 5 items, best first.`,
+Return at most 10 items, best first.`,
         },
         {
           role: "user",
@@ -86,7 +86,7 @@ Return at most 5 items, best first.`,
     });
 
     const raw = completion.choices[0]?.message?.content;
-    if (!raw) return candidates.slice(0, 5);
+    if (!raw) return candidates.slice(0, 10);
 
     const parsed = JSON.parse(raw) as { items?: RankRow[] };
     const rows = Array.isArray(parsed.items) ? parsed.items : [];
@@ -110,15 +110,15 @@ Return at most 5 items, best first.`,
             ? row.reason.trim().slice(0, 120)
             : undefined,
       });
-      if (ranked.length >= 5) break;
+      if (ranked.length >= 10) break;
     }
 
     if (ranked.length === 0) {
-      return candidates.slice(0, 5);
+      return candidates.slice(0, 10);
     }
     return ranked;
   } catch (error) {
     console.error("[content-discovery/rank]", error);
-    return candidates.slice(0, 5);
+    return candidates.slice(0, 10);
   }
 }

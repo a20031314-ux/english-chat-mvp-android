@@ -2,8 +2,9 @@
 
 import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
 import { TTSButton } from "@/components/TTSButton";
+import { VocabSenseList } from "@/components/VocabSenseList";
 import type { UICopy } from "@/lib/copy";
-import type { VocabLookupResult } from "@/lib/vocabulary";
+import { vocabSensesOf, type VocabLookupResult } from "@/lib/vocabulary";
 
 type VocabWordPreviewProps = {
   word: string;
@@ -65,11 +66,6 @@ export function VocabWordPreview({
           {detail?.reading ? (
             <p className="mt-1 text-sm text-slate-600">{detail.reading}</p>
           ) : null}
-          {detail?.partOfSpeech ? (
-            <p className="mt-1 text-[11px] uppercase tracking-wide text-slate-500">
-              {detail.partOfSpeech}
-            </p>
-          ) : null}
 
           {isLoading ? (
             <p className="mt-3 text-sm text-slate-600">{ui.vocabPreviewLoading}</p>
@@ -77,9 +73,16 @@ export function VocabWordPreview({
             <p className="mt-3 text-sm text-rose-700">{ui.vocabPickFailed}</p>
           ) : (
             <>
-              <p className="mt-3 text-sm leading-relaxed text-slate-800">
-                {detail?.gloss}
-              </p>
+              <div className="mt-3">
+                <VocabSenseList
+                  senses={vocabSensesOf({
+                    gloss: detail?.gloss || "",
+                    partOfSpeech: detail?.partOfSpeech,
+                    senses: detail?.senses,
+                  })}
+                  otherLabel={ui.vocabOtherSenses}
+                />
+              </div>
               {detail?.example ? (
                 <div className="mt-2 flex items-start gap-2">
                   <AnalyzableEnglish

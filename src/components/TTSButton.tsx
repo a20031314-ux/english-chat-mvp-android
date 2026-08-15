@@ -1,12 +1,12 @@
 "use client";
 
-import { Capacitor } from "@capacitor/core";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import {
   DEFAULT_LEARNING_LANGUAGE_CODE,
   learningLanguageSpeechTag,
 } from "@/lib/learningLanguages";
+import { playTts, prefetchTts } from "@/lib/ttsPlayer";
 
 type TTSButtonProps = {
   text: string;
@@ -16,49 +16,50 @@ type TTSButtonProps = {
   lang?: string;
 };
 
-async function speakNative(text: string, lang: string) {
-  const { TextToSpeech } = await import(
-    "@capacitor-community/text-to-speech"
-  );
-  await TextToSpeech.stop();
-  await TextToSpeech.speak({
-    text,
-    lang,
-    rate: 1.0,
-    pitch: 1.0,
-    volume: 1.0,
-    category: "playback",
-  });
-}
-
-function speakWeb(text: string, lang: string) {
-  if (typeof window === "undefined" || !("speechSynthesis" in window)) {
-    return;
-  }
-  window.speechSynthesis.cancel();
-  const utterance = new SpeechSynthesisUtterance(text);
-  utterance.lang = lang;
-
-  const voices = window.speechSynthesis.getVoices();
-  const prefix = lang.slice(0, 2).toLowerCase();
-  const match =
-    voices.find((v) => v.lang === lang) ??
-    voices.find((v) => v.lang.toLowerCase().startsWith(prefix));
-  if (match) {
-    utterance.voice = match;
-  }
-
-  window.speechSynthesis.speak(utterance);
-}
-
 export function TTSButton({ text, className, ariaLabel, lang }: TTSButtonProps) {
   const [busy, setBusy] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
   const learningLanguage = useLearningLanguageOptional();
   const speechLang =
     lang ||
     learningLanguageSpeechTag(
       learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE,
     );
+
+  useEffect(() => {
+    const trimmed = text.trim();
+    if (!trimmed) return;
+
+    const node = buttonRef.current;
+    let visible = !node;
+    let debounce: number | undefined;
+
+    const queue = () => {
+      window.clearTimeout(debounce);
+      debounce = window.setTimeout(() => {
+        if (visible) prefetchTts(trimmed, speechLang);
+      }, 400);
+    };
+
+    if (!node || typeof IntersectionObserver === "undefined") {
+      queue();
+      return () => window.clearTimeout(debounce);
+    }
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        visible = entries.some((entry) => entry.isIntersecting);
+        if (visible) queue();
+      },
+      { rootMargin: "160px" },
+    );
+    observer.observe(node);
+
+    return () => {
+      observer.disconnect();
+      window.clearTimeout(debounce);
+    };
+  }, [text, speechLang]);
 
   const handleSpeak = async () => {
     const trimmed = text.trim();
@@ -68,19 +69,9 @@ export function TTSButton({ text, className, ariaLabel, lang }: TTSButtonProps) 
 
     setBusy(true);
     try {
-      if (Capacitor.isNativePlatform()) {
-        await speakNative(trimmed, speechLang);
-      } else {
-        speakWeb(trimmed, speechLang);
-      }
+      await playTts(trimmed, speechLang);
     } catch (error) {
       console.error("TTS failed:", error);
-      // Last resort: try Web Speech API even on native if plugin fails
-      try {
-        speakWeb(trimmed, speechLang);
-      } catch {
-        // ignore
-      }
     } finally {
       setBusy(false);
     }
@@ -88,11 +79,17 @@ export function TTSButton({ text, className, ariaLabel, lang }: TTSButtonProps) 
 
   return (
     <button
+      ref={buttonRef}
       type="button"
+      onPointerDown={() => {
+        const trimmed = text.trim();
+        if (trimmed) prefetchTts(trimmed, speechLang);
+      }}
       onClick={() => {
         void handleSpeak();
       }}
       disabled={busy || !text.trim()}
+      lang={speechLang}
       aria-label={ariaLabel ?? "Listen"}
       aria-busy={busy}
       className={`rounded-md border border-slate-300 bg-white px-2 py-1 text-sm transition hover:bg-slate-50 disabled:opacity-50 ${className ?? ""}`}

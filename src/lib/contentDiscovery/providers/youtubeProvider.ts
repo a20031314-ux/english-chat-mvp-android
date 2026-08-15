@@ -1,4 +1,4 @@
-import { buildSearchQuery } from "@/lib/contentDiscovery/parseSearchIntent";
+import { buildSearchQueries } from "@/lib/contentDiscovery/parseSearchIntent";
 import type {
   ContentCandidate,
   ContentSearchIntent,
@@ -90,6 +90,81 @@ function thumbnailOf(
   );
 }
 
+function regionCode(language: string): string {
+  switch (language) {
+    case "ko":
+      return "KR";
+    case "ja":
+      return "JP";
+    case "zh":
+      return "TW";
+    case "es":
+      return "ES";
+    case "fr":
+      return "FR";
+    case "it":
+      return "IT";
+    case "pt":
+      return "BR";
+    case "ru":
+      return "RU";
+    default:
+      return "US";
+  }
+}
+
+async function searchVideoIds(
+  apiKey: string,
+  query: string,
+  intent: ContentSearchIntent,
+): Promise<{ ids: string[]; warning?: string }> {
+  const params = new URLSearchParams({
+    part: "snippet",
+    type: "video",
+    maxResults: "25",
+    q: query,
+    key: apiKey,
+    safeSearch: "moderate",
+    relevanceLanguage: relevanceLanguage(intent.language),
+    regionCode: regionCode(intent.language),
+  });
+  const durationFilter = youtubeDurationFilter(intent.durationBucket);
+  if (durationFilter !== "any") {
+    params.set("videoDuration", durationFilter);
+  }
+  if (intent.requireOriginalCaptions) {
+    params.set("videoCaption", "closedCaption");
+  }
+
+  try {
+    const response = await fetch(
+      `https://www.googleapis.com/youtube/v3/search?${params.toString()}`,
+      { next: { revalidate: 0 } },
+    );
+    const searchJson = (await response.json()) as {
+      items?: YoutubeSearchItem[];
+      error?: { message?: string };
+    };
+    if (!response.ok) {
+      console.error("[youtube-search]", searchJson?.error?.message || response.status);
+      return {
+        ids: [],
+        warning:
+          response.status === 403 || response.status === 429
+            ? "YOUTUBE_QUOTA"
+            : "YOUTUBE_FAILED",
+      };
+    }
+    const ids = (searchJson.items || [])
+      .map((item) => item.id?.videoId?.trim())
+      .filter((id): id is string => Boolean(id));
+    return { ids };
+  } catch (error) {
+    console.error("[youtube-search]", error);
+    return { ids: [], warning: "YOUTUBE_FAILED" };
+  }
+}
+
 export async function searchYouTubeVideos(
   intent: ContentSearchIntent,
 ): Promise<{ candidates: ContentCandidate[]; warning?: string }> {
@@ -101,53 +176,25 @@ export async function searchYouTubeVideos(
     };
   }
 
-  const q = buildSearchQuery(intent);
-  const params = new URLSearchParams({
-    part: "snippet",
-    type: "video",
-    maxResults: "20",
-    q,
-    key: apiKey,
-    safeSearch: "moderate",
-    videoEmbeddable: "true",
-    relevanceLanguage: relevanceLanguage(intent.language),
-  });
-  const durationFilter = youtubeDurationFilter(intent.durationBucket);
-  if (durationFilter !== "any") {
-    params.set("videoDuration", durationFilter);
-  }
-  if (intent.requireOriginalCaptions) {
-    // YouTube search: videos that declare closed captions (manual or auto).
-    params.set("videoCaption", "closedCaption");
-  }
-
-  let searchJson: { items?: YoutubeSearchItem[]; error?: { message?: string } };
-  try {
-    const response = await fetch(
-      `https://www.googleapis.com/youtube/v3/search?${params.toString()}`,
-      { next: { revalidate: 0 } },
-    );
-    searchJson = (await response.json()) as typeof searchJson;
-    if (!response.ok) {
-      console.error("[youtube-search]", searchJson?.error?.message || response.status);
-      return {
-        candidates: [],
-        warning:
-          response.status === 403 || response.status === 429
-            ? "YOUTUBE_QUOTA"
-            : "YOUTUBE_FAILED",
-      };
+  const queries = buildSearchQueries(intent);
+  const searches = await Promise.all(
+    queries.map((query) => searchVideoIds(apiKey, query, intent)),
+  );
+  const seen = new Set<string>();
+  const ids: string[] = [];
+  let warning: string | undefined;
+  for (const result of searches) {
+    if (result.warning) warning = result.warning;
+    for (const id of result.ids) {
+      if (seen.has(id)) continue;
+      seen.add(id);
+      ids.push(id);
+      if (ids.length >= 50) break;
     }
-  } catch (error) {
-    console.error("[youtube-search]", error);
-    return { candidates: [], warning: "YOUTUBE_FAILED" };
+    if (ids.length >= 50) break;
   }
-
-  const ids = (searchJson.items || [])
-    .map((item) => item.id?.videoId?.trim())
-    .filter((id): id is string => Boolean(id));
   if (ids.length === 0) {
-    return { candidates: [] };
+    return { candidates: [], ...(warning ? { warning } : {}) };
   }
 
   const detailsParams = new URLSearchParams({

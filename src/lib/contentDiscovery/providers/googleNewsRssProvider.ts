@@ -122,7 +122,7 @@ export async function searchGoogleNewsRss(
       estimatedReadingMinutes: estimateReadingMinutes(description),
       language: intent.language,
     });
-    if (candidates.length >= 20) break;
+    if (candidates.length >= 40) break;
   }
 
   return { candidates };

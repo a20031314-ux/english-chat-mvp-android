@@ -2,6 +2,7 @@
 
 import {
   useRef,
+  type MouseEvent as ReactMouseEvent,
   type PointerEvent as ReactPointerEvent,
 } from "react";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
@@ -89,6 +90,7 @@ export function InteractiveEnglishText({
     y: number;
     scrolling: boolean;
   } | null>(null);
+  const suppressClickRef = useRef(false);
 
   if (!analysis) {
     return (
@@ -155,6 +157,9 @@ export function InteractiveEnglishText({
       dragRef.current = null;
       return;
     }
+    suppressClickRef.current = true;
+    window.getSelection()?.removeAllRanges();
+    event.stopPropagation();
     dragRef.current = {
       start: index,
       end: index,
@@ -173,6 +178,7 @@ export function InteractiveEnglishText({
       drag.scrolling = true;
       return;
     }
+    if (dx < 24 && dy < 24) return;
     const index = tokenIndexFromPoint(event.clientX, event.clientY);
     if (index != null && isWordToken(tokens[index])) {
       drag.end = index;
@@ -192,14 +198,30 @@ export function InteractiveEnglishText({
       ? normalizeVocabHeadword(pickedRaw) || pickedRaw
       : "";
     if (!picked) return;
+    suppressClickRef.current = true;
     event.preventDefault();
-    const hint = tokenStartOffset(tokens, from);
+    event.stopPropagation();
+    window.getSelection()?.removeAllRanges();
+    const dist = Math.hypot(event.clientX - drag.x, event.clientY - drag.y);
+    const isTap = dist < 24 || drag.start === drag.end;
+    const hint = tokenStartOffset(tokens, isTap ? drag.start : from);
+    const selectedPick = isTap
+      ? normalizeVocabHeadword(tokens[drag.start]) || tokens[drag.start]
+      : picked;
     void (async () => {
-      const units = await loadExpressionUnits(sentence, targetLanguage);
-      const snapped = snapToExpressionUnit(sentence, picked, units, hint);
-      const selectedText = snapped
-        ? normalizeVocabHeadword(snapped.text) || snapped.text
-        : picked;
+      let selectedText = selectedPick;
+      if (!isTap) {
+        const units = await loadExpressionUnits(sentence, targetLanguage);
+        const snapped = snapToExpressionUnit(
+          sentence,
+          picked,
+          units,
+          hint,
+        );
+        selectedText = snapped
+          ? normalizeVocabHeadword(snapped.text) || snapped.text
+          : picked;
+      }
       analysis.open({
         selectedText,
         contextSentence: sentence,
@@ -209,14 +231,22 @@ export function InteractiveEnglishText({
     })();
   };
 
+  const onClick = (event: ReactMouseEvent<HTMLParagraphElement>) => {
+    if (!suppressClickRef.current) return;
+    suppressClickRef.current = false;
+    event.preventDefault();
+    event.stopPropagation();
+  };
+
   return (
     <p
       ref={rootRef}
       translate="no"
-      className={`whitespace-pre-wrap ${className}`}
+      className={`select-none whitespace-pre-wrap ${className}`}
       onPointerDown={onPointerDown}
       onPointerMove={onPointerMove}
       onPointerUp={onPointerUp}
+      onClick={onClick}
     >
       {tokens.map((token, index) =>
         isWordToken(token) ? (

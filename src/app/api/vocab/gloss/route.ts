@@ -7,7 +7,7 @@ import {
   learningLanguageName,
 } from "@/lib/learningLanguages";
 import { interfaceLanguageDisplayName } from "@/lib/languageLearningAnalysis";
-import { normalizeVocabHeadword } from "@/lib/vocabulary";
+import { assembleVocabLookup, normalizeVocabHeadword } from "@/lib/vocabulary";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -26,6 +26,7 @@ const INTERFACE_LANGUAGES: Record<string, string> = {
 type GlossItem = {
   word: string;
   gloss: string;
+  senses?: Array<{ gloss: string; partOfSpeech?: string }>;
   example?: string;
   partOfSpeech?: string;
   reading?: string;
@@ -51,25 +52,14 @@ function normalizeItems(raw: unknown, requested: string[]): GlossItem[] {
   const byWord = new Map<string, GlossItem>();
   for (const item of list) {
     if (!item || typeof item !== "object") continue;
-    const o = item as Record<string, unknown>;
-    if (typeof o.word !== "string" || !o.word.trim()) continue;
-    if (typeof o.gloss !== "string" || !o.gloss.trim()) continue;
-    const word = normalizeVocabHeadword(o.word);
-    const gloss = o.gloss.trim();
-    if (!word || !gloss) continue;
-    byWord.set(glossLookupKey(word), {
-      word,
-      gloss,
-      ...(typeof o.example === "string" && o.example.trim()
-        ? { example: o.example.trim() }
-        : {}),
-      ...(typeof o.partOfSpeech === "string" && o.partOfSpeech.trim()
-        ? { partOfSpeech: o.partOfSpeech.trim() }
-        : {}),
-      ...(typeof o.reading === "string" && o.reading.trim()
-        ? { reading: o.reading.trim() }
-        : {}),
-    });
+    const assembled = assembleVocabLookup(
+      typeof (item as { word?: unknown }).word === "string"
+        ? (item as { word: string }).word
+        : "",
+      item as Record<string, unknown>,
+    );
+    if (!assembled) continue;
+    byWord.set(glossLookupKey(assembled.word), assembled);
   }
 
   return requested.map((word) => {
@@ -97,6 +87,7 @@ export async function POST(request: NextRequest) {
     locale?: string;
     interfaceLanguage?: string;
     targetLanguage?: string;
+    contextSentence?: unknown;
   };
   try {
     body = await request.json();
@@ -135,6 +126,10 @@ export async function POST(request: NextRequest) {
     targetLanguage === "ja" ||
     targetLanguage === "zh" ||
     targetLanguage === "ko";
+  const contextSentence =
+    typeof body.contextSentence === "string"
+      ? body.contextSentence.replace(/\s+/g, " ").trim().slice(0, 280)
+      : "";
 
   try {
     const completion = await client.chat.completions.create({
@@ -142,16 +137,13 @@ export async function POST(request: NextRequest) {
       messages: [
         {
           role: "system",
-          content: `You write short learner-friendly glosses for ${targetName} vocabulary.
-Items may be single words, multi-word phrases / compounds / idioms${
-            characterAware
-              ? ", OR single characters / syllables that learners tap for meaning"
-              : ""
-          }.
+          content: `You write short dictionary-style glosses for ${targetName} vocabulary.
+Items may be single words, multi-word phrases / compounds / idioms.
 For each item, return:
 - word: the same ${englishOnlyHeadwords ? "English" : targetName} item (keep multi-word phrases intact; do not split them)
-- gloss: short meaning in ${interfaceName} for the whole item as a unit
-- partOfSpeech: optional short tag (noun, verb, adjective, phrase, idiom, particle, kanji, character, …)
+- senses: 1–5 distinct learner meanings, most useful first
+  - gloss: short meaning in ${interfaceName} of that sense
+  - partOfSpeech: optional short tag (noun, verb, adjective, phrase, idiom, particle, kanji, character, …)
 - reading: ${
             characterAware
               ? targetLanguage === "ja"
@@ -161,15 +153,26 @@ For each item, return:
                   : "optional romanization/reading when helpful for Hangul syllables or hanja. Empty if not useful."
               : "omit (leave empty)"
           }
-- example: optional short ${targetName} example sentence using the item
+- example: omit unless one short ${targetName} sentence for the FIRST sense is truly helpful. Never write an example per sense.
+
+Sense rules:
+- If the word/phrase has only one ordinary meaning, return ONE sense.
+- If it is polysemous, first sense = ${
+            contextSentence
+              ? "the meaning used in the given context sentence"
+              : "the most common learner meaning"
+          }. Then other common meanings a beginner/intermediate should know.
+- Do not list rare, archaic, slang-only, or overly technical senses.
+- Do not repeat the same meaning in different wording.
 
 ${
   characterAware
-    ? `Character rules:
-- If the item is a single character, explain THAT character (meaning + how it is used), not a random longer word.
-- Japanese kanji: include reading in "reading". Particles/okurigana: say the grammatical role briefly in gloss.
-- Chinese characters: include pinyin in "reading" when useful.
+    ? `Reading:
+- Japanese: include a kana reading in "reading" when the headword has kanji.
+- Chinese: include pinyin in "reading" when useful.
+- Korean: optional romanization only for multi-syllable words, not isolated Hangul taps.
 - Do not invent rare readings; prefer the most common learner-facing reading.
+- Do not treat a single character or syllable as a lookup item; gloss the word/phrase as given.
 `
     : ""
 }
@@ -183,11 +186,14 @@ ${naturalTranslationPrinciples({
 })}
 
 Respond with ONLY compact JSON:
-{"items":[{"word":"...","gloss":"...","partOfSpeech":"...","reading":"...","example":"..."}]}`,
+{"items":[{"word":"...","senses":[{"gloss":"...","partOfSpeech":"..."}],"reading":"...","example":"..."}]}`,
         },
         {
           role: "user",
-          content: JSON.stringify({ words }),
+          content: JSON.stringify({
+            words,
+            ...(contextSentence ? { contextSentence } : {}),
+          }),
         },
       ],
       response_format: { type: "json_object" },

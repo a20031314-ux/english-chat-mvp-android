@@ -62,10 +62,7 @@ export function CurrentSubtitleCard({
         <div className="flex items-start justify-between gap-2">
           <div
             className="min-w-0 flex-1"
-            onClick={(event) => {
-              const selected = window.getSelection()?.toString().trim();
-              if (selected) event.stopPropagation();
-            }}
+            onClick={(event) => event.stopPropagation()}
           >
             <AnalyzableEnglish
               sentence={cue.original}

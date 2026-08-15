@@ -1,6 +1,7 @@
 /**
  * Discovery topic categories — together they cover the full video/reading
- * search surface (YouTube + News RSS). Search strings stay English for APIs.
+ * search surface (YouTube + News RSS + Wikipedia). Public topic labels
+ * stay English internally; actual search queries are in the learning language.
  */
 
 export const DISCOVERY_TOPIC_IDS = [

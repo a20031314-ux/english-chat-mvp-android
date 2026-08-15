@@ -8,6 +8,7 @@ import { filterCandidates } from "@/lib/contentDiscovery/filterCandidates";
 import { parseSearchIntent } from "@/lib/contentDiscovery/parseSearchIntent";
 import { rankCandidates } from "@/lib/contentDiscovery/rankCandidates";
 import { searchGoogleNewsRss } from "@/lib/contentDiscovery/providers/googleNewsRssProvider";
+import { searchWikipedia } from "@/lib/contentDiscovery/providers/wikipediaProvider";
 import { searchYouTubeVideos } from "@/lib/contentDiscovery/providers/youtubeProvider";
 import type {
   ContentCandidate,
@@ -51,8 +52,12 @@ export async function discoverContent(
     raw = youtube.candidates;
     if (youtube.warning) warnings.push(youtube.warning);
   } else {
-    const news = await searchGoogleNewsRss(intent);
-    raw = news.candidates;
+    const [news, wiki] = await Promise.all([
+      searchGoogleNewsRss(intent),
+      searchWikipedia(intent),
+    ]);
+    raw = [...wiki.candidates, ...news.candidates];
+    if (wiki.warning) warnings.push(wiki.warning);
     if (news.warning) warnings.push(news.warning);
   }
 

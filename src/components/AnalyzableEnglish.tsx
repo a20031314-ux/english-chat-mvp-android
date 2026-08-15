@@ -5,6 +5,7 @@ import {
   useEffect,
   useRef,
   useState,
+  type MouseEvent as ReactMouseEvent,
   type PointerEvent as ReactPointerEvent,
   type ReactNode,
 } from "react";
@@ -56,8 +57,13 @@ function tokenize(sentence: string): string[] {
       out.push(part);
       continue;
     }
-    // Character-level tokens for scripts without spaces / letter-study alphabets.
-    if (/[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af\u0400-\u04FF]/.test(part)) {
+    // Character-level tokens for scripts without spaces (kana / hanzi / kanji).
+    // Hangul uses spaces like Latin, so keep syllable-blocks as whole words.
+    if (/[\u3040-\u30ff\u3400-\u9fff]/.test(part)) {
+      out.push(...Array.from(part));
+      continue;
+    }
+    if (/^[\u0400-\u04FF]/u.test(part)) {
       out.push(...Array.from(part));
       continue;
     }
@@ -77,11 +83,6 @@ function splitAffixedPunctuation(part: string): string[] {
     pieces.push(match[0]);
   }
   return pieces.length > 0 ? pieces : [part];
-}
-
-function isCjkMeaningChar(text: string) {
-  // Kanji / Hanzi / Hangul syllable — meaning lookup, not alphabet sound tip.
-  return /^[\u3400-\u9fff\uac00-\ud7af]$/u.test(text);
 }
 
 function tokenIndexAtStart(tokens: string[], start: number) {
@@ -114,6 +115,8 @@ function rangeText(tokens: string[], start: number, end: number) {
 function tokenStartOffset(tokens: string[], index: number) {
   return tokens.slice(0, index).join("").length;
 }
+
+const TAP_MOVE_PX = 24;
 
 function tokenOverlapsSpan(
   tokens: string[],
@@ -262,6 +265,8 @@ export function AnalyzableEnglish({
     y: number;
     scrolling: boolean;
   } | null>(null);
+  const suppressClickRef = useRef(false);
+  const skipTokenClickRef = useRef(false);
 
   const showLetterTip = useCallback((index: number, sound: string) => {
     if (letterTipTimerRef.current) {
@@ -284,7 +289,7 @@ export function AnalyzableEnglish({
   }, []);
 
   const commit = useCallback(
-    (picked: string | null, hintStart?: number) => {
+    (picked: string | null, hintStart?: number, allowSnap = true) => {
       const cleaned = picked ? normalizeVocabHeadword(picked) || picked.trim() : "";
       if (!cleaned || !selectionFitsSentence(sentence, cleaned)) return;
 
@@ -304,33 +309,30 @@ export function AnalyzableEnglish({
         return;
       }
 
-      // Kanji / Hanzi / Hangul: open character gloss immediately (no phrase snap).
-      if (isCjkMeaningChar(cleaned) && vocab?.open) {
+      setLetterTip(null);
+
+      const optimisticStart =
+        hintStart ?? sentence.toLowerCase().indexOf(cleaned.toLowerCase());
+      const wordSpan =
+        optimisticStart >= 0
+          ? {
+              text: cleaned,
+              start: optimisticStart,
+              end: optimisticStart + cleaned.length,
+            }
+          : null;
+
+      // A tap on one word stays that word — do not wait for phrase snap.
+      if (!allowSnap) {
         commitIdRef.current += 1;
-        setPending(null);
+        setPending(wordSpan);
         setSnapping(false);
-        setLetterTip(null);
-        void vocab.open(cleaned);
         return;
       }
 
-      setLetterTip(null);
-
       const id = commitIdRef.current + 1;
       commitIdRef.current = id;
-      const optimisticStart =
-        hintStart ?? sentence.toLowerCase().indexOf(cleaned.toLowerCase());
-      // Only flash a chip for clearly lookup-worthy taps; bare contractions
-      // wait for snap in case they expand into a fixed phrase.
-      if (isVocabLookupEligible(cleaned) && optimisticStart >= 0) {
-        setPending({
-          text: cleaned,
-          start: optimisticStart,
-          end: optimisticStart + cleaned.length,
-        });
-      } else {
-        setPending(null);
-      }
+      setPending(wordSpan);
       setSnapping(true);
       void (async () => {
         try {
@@ -441,6 +443,9 @@ export function AnalyzableEnglish({
       dragRef.current = null;
       return;
     }
+    suppressClickRef.current = true;
+    window.getSelection()?.removeAllRanges();
+    event.stopPropagation();
     dragRef.current = {
       start: index,
       end: index,
@@ -448,7 +453,6 @@ export function AnalyzableEnglish({
       y: event.clientY,
       scrolling: false,
     };
-    event.currentTarget.setPointerCapture(event.pointerId);
   };
 
   const onPointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
@@ -460,6 +464,8 @@ export function AnalyzableEnglish({
       drag.scrolling = true;
       return;
     }
+    // Ignore jitter so a click does not grow into a sentence-wide drag.
+    if (dx < TAP_MOVE_PX && dy < TAP_MOVE_PX) return;
     const index = tokenIndexFromPoint(event.clientX, event.clientY);
     if (index != null && isWordToken(tokens[index])) {
       drag.end = index;
@@ -471,21 +477,46 @@ export function AnalyzableEnglish({
       const drag = dragRef.current;
       dragRef.current = null;
       if (drag && !drag.scrolling) {
+        const dist = Math.hypot(
+          event.clientX - drag.x,
+          event.clientY - drag.y,
+        );
+        const isTap = dist < TAP_MOVE_PX || drag.start === drag.end;
+        suppressClickRef.current = true;
+        event.stopPropagation();
+        window.getSelection()?.removeAllRanges();
+        if (isTap) {
+          skipTokenClickRef.current = true;
+          event.preventDefault();
+          commit(
+            tokens[drag.start],
+            tokenStartOffset(tokens, drag.start),
+            false,
+          );
+          return;
+        }
         let from = Math.min(drag.start, drag.end);
         let to = Math.max(drag.start, drag.end);
-        // Drop leading/trailing punctuation tokens so "imbatível." → "imbatível".
         while (from <= to && !isWordToken(tokens[from])) from += 1;
         while (to >= from && !isWordToken(tokens[to])) to -= 1;
         const picked = from <= to ? rangeText(tokens, from, to) : "";
         if (picked) {
+          skipTokenClickRef.current = true;
           event.preventDefault();
-          commit(picked, tokenStartOffset(tokens, from));
+          commit(picked, tokenStartOffset(tokens, from), true);
         }
       }
       return;
     }
     window.setTimeout(syncNativeSelection, 0);
     window.setTimeout(syncNativeSelection, 280);
+  };
+
+  const onClick = (event: ReactMouseEvent<HTMLDivElement>) => {
+    if (!suppressClickRef.current) return;
+    suppressClickRef.current = false;
+    event.preventDefault();
+    event.stopPropagation();
   };
 
   const clearPending = () => {
@@ -506,6 +537,7 @@ export function AnalyzableEnglish({
   const tabClass =
     "inline-flex items-center justify-center px-3 py-1.5 transition";
   const ready = Boolean(pending) && !snapping;
+  const showSave = Boolean(pending) && canSave;
 
   const marks = diff ? tokenDiffMarks(diff) : null;
   const markStyles = diffMarkClass[tone];
@@ -519,6 +551,22 @@ export function AnalyzableEnglish({
       <span
         key={`${index}-${token}`}
         data-token-index={index}
+        role="button"
+        tabIndex={0}
+        onClick={(event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          if (skipTokenClickRef.current) {
+            skipTokenClickRef.current = false;
+            return;
+          }
+          commit(token, tokenStartOffset(tokens, index), false);
+        }}
+        onKeyDown={(event) => {
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          commit(token, tokenStartOffset(tokens, index), false);
+        }}
         className={`relative cursor-pointer rounded-sm ${
           pending && tokenOverlapsSpan(tokens, index, pending)
             ? tone === "onDark"
@@ -589,14 +637,19 @@ export function AnalyzableEnglish({
       <div
         ref={rootRef}
         translate="no"
-        className={`whitespace-pre-wrap [user-select:text] [-webkit-user-select:text] ${className}`}
+        className={`whitespace-pre-wrap ${
+          useTokens
+            ? "select-none"
+            : "[user-select:text] [-webkit-user-select:text]"
+        } ${className}`}
         onPointerDown={onPointerDown}
         onPointerMove={onPointerMove}
         onPointerUp={onPointerUp}
+        onClick={onClick}
       >
         {children ? children : tokenNodes}
       </div>
-      {pending ? (
+      {pending && (showSave || canAnalyze) ? (
         <div
           className={`mt-2 inline-flex max-w-full overflow-hidden rounded-full border text-[11px] shadow-sm ${
             tone === "onDark"
@@ -604,14 +657,14 @@ export function AnalyzableEnglish({
               : "border-slate-200 bg-white"
           } ${snapping ? "opacity-70" : ""}`}
         >
-          {canSave ? (
+          {showSave ? (
             <button
               type="button"
               disabled={!ready}
               onPointerDown={(event) => event.preventDefault()}
               onClick={() => {
                 if (!pending || snapping) return;
-                vocab?.open(pending.text);
+                vocab?.open(pending.text, sentence);
                 clearPending();
               }}
               className={`${tabClass} hover:bg-rose-50 disabled:opacity-50`}
@@ -621,7 +674,7 @@ export function AnalyzableEnglish({
               <SaveWordIcon />
             </button>
           ) : null}
-          {canSave && canAnalyze ? (
+          {showSave && canAnalyze ? (
             <span className="w-px bg-slate-200" aria-hidden />
           ) : null}
           {canAnalyze ? (

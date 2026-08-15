@@ -7,15 +7,22 @@ import {
 export const VOCABULARY_STORAGE_KEY = "vocabularyEntries";
 export const VOCABULARY_HIDE_GLOSS_KEY = "vocabularyHideGloss";
 
+export type VocabSense = {
+  gloss: string;
+  partOfSpeech?: string;
+};
+
 export type VocabularyEntry = {
   id: string;
   /** Headword in the learning (target) language */
   word: string;
-  /** Meaning in the UI language used when saving */
+  /** Primary / representative meaning in the UI language */
   gloss: string;
+  /** Other common meanings when the word is polysemous */
+  senses?: VocabSense[];
   /** Optional example sentence in the target language */
   example?: string;
-  /** Optional part of speech */
+  /** Optional part of speech for the primary sense */
   partOfSpeech?: string;
   /** Reading / pronunciation (kanji, pinyin, …) */
   reading?: string;
@@ -27,11 +34,88 @@ export type VocabularyEntry = {
 export type VocabLookupResult = {
   word: string;
   gloss: string;
+  senses?: VocabSense[];
   example?: string;
   partOfSpeech?: string;
   /** Reading / pronunciation for characters (e.g. kanji 音読み・訓読み, pinyin). */
   reading?: string;
 };
+
+function asOptionalLine(value: unknown): string {
+  return typeof value === "string" ? value.trim() : "";
+}
+
+export function normalizeVocabSenses(raw: unknown): VocabSense[] {
+  if (!Array.isArray(raw)) return [];
+  const seen = new Set<string>();
+  const out: VocabSense[] = [];
+  for (const item of raw) {
+    if (!item || typeof item !== "object") continue;
+    const o = item as Record<string, unknown>;
+    const gloss = asOptionalLine(o.gloss) || asOptionalLine(o.meaning);
+    if (!gloss) continue;
+    const key = gloss.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    const partOfSpeech = asOptionalLine(o.partOfSpeech);
+    out.push({
+      gloss,
+      ...(partOfSpeech ? { partOfSpeech } : {}),
+    });
+    if (out.length >= 6) break;
+  }
+  return out;
+}
+
+export function vocabSensesOf(
+  item: Pick<VocabLookupResult, "gloss" | "partOfSpeech" | "senses">,
+): VocabSense[] {
+  if (item.senses && item.senses.length > 0) return item.senses;
+  const gloss = item.gloss.trim();
+  if (!gloss) return [];
+  return [
+    {
+      gloss,
+      ...(item.partOfSpeech?.trim()
+        ? { partOfSpeech: item.partOfSpeech.trim() }
+        : {}),
+    },
+  ];
+}
+
+export function assembleVocabLookup(
+  word: string,
+  raw: Record<string, unknown>,
+): VocabLookupResult | null {
+  const head = normalizeVocabHeadword(word) || word.trim();
+  if (!head) return null;
+  const fallbackPos = asOptionalLine(raw.partOfSpeech);
+  let senses = normalizeVocabSenses(raw.senses);
+  if (senses.length === 0) {
+    const gloss = asOptionalLine(raw.gloss);
+    if (gloss) {
+      senses = [
+        {
+          gloss,
+          ...(fallbackPos ? { partOfSpeech: fallbackPos } : {}),
+        },
+      ];
+    }
+  }
+  if (senses.length === 0) return null;
+  const example = asOptionalLine(raw.example);
+  const reading = asOptionalLine(raw.reading);
+  return {
+    word: head,
+    gloss: senses[0].gloss,
+    senses,
+    ...(senses[0].partOfSpeech
+      ? { partOfSpeech: senses[0].partOfSpeech }
+      : {}),
+    ...(example ? { example } : {}),
+    ...(reading ? { reading } : {}),
+  };
+}
 
 function normalizeEntry(raw: unknown): VocabularyEntry | null {
   if (!raw || typeof raw !== "object") return null;
@@ -43,6 +127,7 @@ function normalizeEntry(raw: unknown): VocabularyEntry | null {
     typeof o.createdAt === "number" && Number.isFinite(o.createdAt)
       ? o.createdAt
       : Date.now();
+  const senses = normalizeVocabSenses(o.senses);
   return {
     id: o.id,
     word: o.word.trim(),
@@ -58,6 +143,7 @@ function normalizeEntry(raw: unknown): VocabularyEntry | null {
     ...(typeof o.reading === "string" && o.reading.trim()
       ? { reading: o.reading.trim() }
       : {}),
+    ...(senses.length > 0 ? { senses } : {}),
   };
 }
 
@@ -339,9 +425,10 @@ function isEnglishStopwordToken(token: string): boolean {
 export function isLearnableEnglishWord(token: string): boolean {
   const cleaned = normalizeVocabHeadword(token);
   if (!cleaned) return false;
-  // CJK / Hangul runs are valid learning units (incl. 2-char words like 今日).
+  // CJK / Hangul / kana runs are valid learning units (今日, 한국) —
+  // not a single character/syllable pronunciation tap.
   if (/^[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]+$/u.test(cleaned)) {
-    return true;
+    return Array.from(cleaned).length >= 2;
   }
   if (cleaned.length < 3) return false;
   if (!/^[\p{L}\p{M}][\p{L}\p{M}'’]*(?:-[\p{L}\p{M}'’]*)*$/u.test(cleaned)) {
@@ -413,12 +500,14 @@ export function saveVocabularyWords(
     const gloss = item.gloss.trim();
     if (!word || !gloss) continue;
     if (isWordSaved(next, word, languageCode)) continue;
+    const senses = vocabSensesOf(item);
     next.unshift({
       id: makeVocabId(word),
       word,
       gloss,
       languageCode,
       createdAt: Date.now(),
+      ...(senses.length > 1 ? { senses } : {}),
       ...(item.example ? { example: item.example } : {}),
       ...(item.partOfSpeech ? { partOfSpeech: item.partOfSpeech } : {}),
       ...(item.reading ? { reading: item.reading } : {}),

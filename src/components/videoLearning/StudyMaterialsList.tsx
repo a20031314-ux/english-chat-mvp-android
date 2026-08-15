@@ -584,10 +584,7 @@ export function EnglishSentenceList({
                 ) : (
                   <div
                     className={`mt-1.5 ${highlighted ? "[&_*]:!text-white" : ""}`}
-                    onClick={(event) => {
-                      const selected = window.getSelection()?.toString().trim();
-                      if (selected) event.stopPropagation();
-                    }}
+                    onClick={(event) => event.stopPropagation()}
                   >
                     <AnalyzableEnglish
                       sentence={cue.original}

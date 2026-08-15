@@ -3,6 +3,7 @@
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { TTSButton } from "@/components/TTSButton";
 import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
+import { VocabSenseList } from "@/components/VocabSenseList";
 import { apiUrl } from "@/lib/apiBase";
 import type { Locale, UICopy } from "@/lib/copy";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
@@ -19,6 +20,7 @@ import {
   persistVocabulary,
   type VocabLookupResult,
   type VocabularyEntry,
+  vocabSensesOf,
 } from "@/lib/vocabulary";
 
 type VocabularyPanelProps = {
@@ -106,12 +108,14 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
 
   const handleSave = (item: VocabLookupResult) => {
     if (isWordSaved(allEntries, item.word, targetLanguage)) return;
+    const senses = vocabSensesOf(item);
     const next: VocabularyEntry = {
       id: makeVocabId(item.word),
       word: item.word,
       gloss: item.gloss,
       languageCode: targetLanguage,
       createdAt: Date.now(),
+      ...(senses.length > 1 ? { senses } : {}),
       ...(item.example ? { example: item.example } : {}),
       ...(item.partOfSpeech ? { partOfSpeech: item.partOfSpeech } : {}),
     };
@@ -213,9 +217,12 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                             />
                             <TTSButton text={item.word} ariaLabel={ui.listen} />
                           </div>
-                          <p className="mt-1 text-sm text-slate-700">
-                            {item.gloss}
-                          </p>
+                          <div className="mt-1">
+                            <VocabSenseList
+                              senses={vocabSensesOf(item)}
+                              otherLabel={ui.vocabOtherSenses}
+                            />
+                          </div>
                           {item.example ? (
                             <AnalyzableEnglish
                               sentence={item.example}
@@ -349,9 +356,10 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                             }
                             className={`mt-1 ${hideGloss ? "cursor-pointer" : ""}`}
                           >
-                            <p className="text-sm text-slate-700">
-                              {entry.gloss}
-                            </p>
+                            <VocabSenseList
+                              senses={vocabSensesOf(entry)}
+                              otherLabel={ui.vocabOtherSenses}
+                            />
                             {entry.example ? (
                               <AnalyzableEnglish
                                 sentence={entry.example}

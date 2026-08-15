@@ -1,4 +1,7 @@
-import { segmentEnglishForLookup } from "@/lib/englishPhrases";
+import {
+  isKnownEnglishPhrase,
+  segmentEnglishForLookup,
+} from "@/lib/englishPhrases";
 import { selectionFitsSentence } from "@/lib/expressionInsight";
 import {
   isLearnableEnglishWord,
@@ -109,6 +112,9 @@ export function normalizeUnitTexts(raw: unknown, sentence: string): string[] {
         : "";
     if (!text || text.length > 80) continue;
     if (!selectionFitsSentence(sentence, text)) continue;
+    if (coversWholeSentence(sentence, text) && !isShortSaying(sentence)) {
+      continue;
+    }
     const key = text.toLowerCase();
     if (seen.has(key)) continue;
     seen.add(key);
@@ -122,8 +128,73 @@ function overlap(a: ExpressionUnitSpan, b: ExpressionUnitSpan) {
   return Math.max(0, Math.min(a.end, b.end) - Math.max(a.start, b.start));
 }
 
+function lettersOnly(value: string) {
+  return normalizePiece(value)
+    .toLowerCase()
+    .replace(/[^\p{L}\p{M}\p{N}\s]+/gu, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function countWords(value: string) {
+  return normalizePiece(value).split(" ").filter(Boolean).length;
+}
+
+function isShortSaying(sentence: string) {
+  return countWords(sentence) <= 4 && sentence.length <= 40;
+}
+
+function coversWholeSentence(sentence: string, text: string) {
+  const a = lettersOnly(sentence);
+  const b = lettersOnly(text);
+  return Boolean(a && b && a === b);
+}
+
+/** True when snapping would swallow a word tap into a sentence-sized chunk. */
+export function isOversizedExpressionSnap(
+  sentence: string,
+  selected: string,
+  unitText: string,
+) {
+  if (
+    coversWholeSentence(sentence, unitText) &&
+    !coversWholeSentence(sentence, selected) &&
+    !isShortSaying(sentence)
+  ) {
+    return true;
+  }
+  const selectedCount = countWords(selected);
+  const unitCount = countWords(unitText);
+  if (
+    selectedCount <= 1 &&
+    unitCount >= 2 &&
+    isKnownEnglishPhrase(unitText)
+  ) {
+    return false;
+  }
+  if (selectedCount <= 1 && unitCount > 4) return true;
+  if (
+    selectedCount <= 1 &&
+    !/\s/.test(normalizePiece(selected)) &&
+    unitText.replace(/\s/g, "").length >=
+      Math.max(8, normalizePiece(selected).length * 4)
+  ) {
+    return !isKnownEnglishPhrase(unitText);
+  }
+  return false;
+}
+
+function acceptableSnap(
+  sentence: string,
+  selected: string,
+  unit: ExpressionUnitSpan,
+) {
+  return !isOversizedExpressionSnap(sentence, selected, unit.text);
+}
+
 /**
  * Snap a free selection onto the tightest meaningful unit that covers it.
+ * Single-word taps stay words — phrase snap is only for multi-word drags.
  * Returns null when the tap did not land on a unit (e.g. a lone "the").
  */
 export function snapToExpressionUnit(
@@ -153,6 +224,9 @@ export function snapToExpressionUnit(
   }
   if (!selection) return null;
 
+  // Clicking one word must not grow into a phrase or the whole sentence.
+  if (countWords(selected) <= 1) return null;
+
   const containing = units.filter(
     (unit) => unit.start <= selection.start && unit.end >= selection.end,
   );
@@ -160,12 +234,19 @@ export function snapToExpressionUnit(
     containing.sort(
       (a, b) => a.end - a.start - (b.end - b.start) || a.start - b.start,
     );
-    return containing[0];
+    const best = containing.find((unit) =>
+      acceptableSnap(sentence, selected, unit),
+    );
+    if (best) return best;
+    return null;
   }
 
   const overlapping = units
     .map((unit) => ({ unit, score: overlap(unit, selection) }))
-    .filter((item) => item.score > 0)
+    .filter(
+      (item) =>
+        item.score > 0 && acceptableSnap(sentence, selected, item.unit),
+    )
     .sort(
       (a, b) =>
         b.score - a.score ||

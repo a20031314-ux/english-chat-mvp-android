@@ -13,6 +13,7 @@ import {
   getDiscoveryTopicCategory,
   isDiscoveryTopicId,
 } from "@/lib/contentDiscovery/topicCategories";
+import { nativeSearchTerms } from "@/lib/contentDiscovery/nativeSearchTerms";
 import {
   DURATION_BUCKETS,
   type ContentDiscoveryRequest,
@@ -55,9 +56,7 @@ function defaultIntent(
       .trim() ||
     "everyday conversation";
   const level = asLearnerLevel(request.learnerLevel);
-  const keywords = category
-    ? [...category.keywords, learningLanguageName(language)]
-    : [topic, learningLanguageName(language)];
+  const keywords = nativeSearchTerms(category?.id, language);
   return {
     language,
     topic,
@@ -125,11 +124,10 @@ function normalizeIntent(
         .filter(Boolean)
         .slice(0, 8)
     : [];
-  const keywords = category
-    ? [...category.keywords, ...(modelKeywords.slice(0, 3))]
-    : modelKeywords.length
-      ? modelKeywords
-      : base.keywords;
+  const native = nativeSearchTerms(category?.id, language);
+  const keywords = modelKeywords.length
+    ? [...modelKeywords, ...native.slice(0, 2)]
+    : native;
 
   return {
     language,
@@ -198,9 +196,10 @@ Return JSON:
 Rules:
 - language defaults to ${request.targetLanguage} unless the user clearly asks for another learning language.
 - contentType defaults to ${request.contentType}.
-- keywords should help a search API find authentic ${learningLanguageName(request.targetLanguage)} content about the topic.
-- Prefer conversation-heavy / spoken content cues for video (vlog, interview, dialogue) when relevant.
-- Prefer news/article cues for reading when relevant.
+- keywords MUST be written in ${learningLanguageName(request.targetLanguage)} as a native would type them into YouTube or Google. Example: Italian + travel → "viaggio", "vacanza", NOT "travel Italian".
+- Never add the English name of the language to the query (no "Italian", "Portuguese", "Korean" as search words) unless the target language is English.
+- Prefer conversation-heavy / spoken content cues for video (vlog, interview, dialogue) in the target language when relevant.
+- Prefer news/article cues for reading in the target language when relevant.
 - duration: short≈under 5m, medium≈5–15m, long≈15m+.
 - level must be one of ${LEARNER_LEVELS.join(", ")} or null.
 - If a topicCategory is provided, keep keywords close to that category; use naturalQuery only to refine.`,
@@ -229,24 +228,34 @@ Rules:
 }
 
 export function buildSearchQuery(intent: ContentSearchIntent): string {
-  const langName = learningLanguageName(intent.language);
-  const parts = [
-    ...intent.keywords.slice(0, 5),
-    intent.topic,
-    langName,
-  ]
-    .map((p) => p.replace(/\s+/g, " ").trim())
+  return buildSearchQueries(intent)[0] || learningLanguageName(intent.language);
+}
+
+/**
+ * Short queries in the learning language. Do not append "Italian" / "Portuguese".
+ */
+export function buildSearchQueries(intent: ContentSearchIntent): string[] {
+  const terms = intent.keywords
+    .map((item) => item.replace(/\s+/g, " ").trim())
     .filter(Boolean);
-  // Dedupe while preserving order
+
+  const queries: string[] = [];
+  if (terms[0]) queries.push(terms[0]);
+  if (terms[1]) queries.push(terms[1]);
+  if (terms[0] && terms[2] && terms[2].toLowerCase() !== terms[0].toLowerCase()) {
+    queries.push(`${terms[0]} ${terms[2]}`.trim());
+  }
+
   const seen = new Set<string>();
   const unique: string[] = [];
-  for (const part of parts) {
-    const key = part.toLowerCase();
-    if (seen.has(key)) continue;
+  for (const query of queries) {
+    const key = query.toLowerCase();
+    if (!query || seen.has(key)) continue;
     seen.add(key);
-    unique.push(part);
+    unique.push(query);
+    if (unique.length >= 3) break;
   }
-  return unique.slice(0, 8).join(" ");
+  return unique.length ? unique : nativeSearchTerms("any", intent.language);
 }
 
 export type { LearnerLevel };

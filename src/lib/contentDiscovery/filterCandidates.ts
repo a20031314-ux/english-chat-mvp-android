@@ -51,7 +51,7 @@ export function filterCandidates(
     }
 
     out.push(item);
-    if (out.length >= 12) break;
+    if (out.length >= 24) break;
   }
 
   return out;

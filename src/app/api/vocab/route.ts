@@ -7,7 +7,7 @@ import {
   learningLanguageName,
 } from "@/lib/learningLanguages";
 import { interfaceLanguageDisplayName } from "@/lib/languageLearningAnalysis";
-import { normalizeVocabHeadword } from "@/lib/vocabulary";
+import { assembleVocabLookup, normalizeVocabHeadword } from "@/lib/vocabulary";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -23,12 +23,7 @@ const INTERFACE_LANGUAGES: Record<string, string> = {
   id: "Indonesian",
 };
 
-type VocabResult = {
-  word: string;
-  gloss: string;
-  example?: string;
-  partOfSpeech?: string;
-};
+type VocabLookupLike = NonNullable<ReturnType<typeof assembleVocabLookup>>;
 
 function getClient() {
   const apiKey = process.env.OPENAI_API_KEY;
@@ -38,29 +33,18 @@ function getClient() {
   return new OpenAI({ apiKey });
 }
 
-function normalizeResults(raw: unknown): VocabResult[] {
+function normalizeResults(raw: unknown): VocabLookupLike[] {
   if (!raw || typeof raw !== "object") return [];
   const list = (raw as { results?: unknown }).results;
   if (!Array.isArray(list)) return [];
-  const out: VocabResult[] = [];
+  const out: VocabLookupLike[] = [];
   for (const item of list) {
     if (!item || typeof item !== "object") continue;
     const o = item as Record<string, unknown>;
-    if (typeof o.word !== "string" || !o.word.trim()) continue;
-    if (typeof o.gloss !== "string" || !o.gloss.trim()) continue;
-    const word = normalizeVocabHeadword(o.word);
-    const gloss = o.gloss.trim();
-    if (!word || !gloss) continue;
-    out.push({
-      word,
-      gloss,
-      ...(typeof o.example === "string" && o.example.trim()
-        ? { example: o.example.trim() }
-        : {}),
-      ...(typeof o.partOfSpeech === "string" && o.partOfSpeech.trim()
-        ? { partOfSpeech: o.partOfSpeech.trim() }
-        : {}),
-    });
+    const word = typeof o.word === "string" ? o.word : "";
+    const assembled = assembleVocabLookup(word, o);
+    if (!assembled) continue;
+    out.push(assembled);
   }
   return out.slice(0, 8);
 }
@@ -120,9 +104,11 @@ The user searches in ${interfaceName} (or mixed). Return ${targetName} headwords
 Rules:
 - results: 1–6 useful ${targetName} words/phrases (prefer common, learnable items).
 - word: ${englishOnlyHeadwords ? "English only" : `${targetName} only`}.
-- gloss: short natural meaning in ${interfaceName} of the whole item (not a word-by-word calque).
-- partOfSpeech: optional short tag in English (noun, verb, adjective, phrase, …).
-- example: optional short ${targetName} example sentence using the word.
+- senses: 1–5 distinct learner meanings, most useful first.
+  - gloss: short natural meaning in ${interfaceName} of that sense (not a word-by-word calque).
+  - partOfSpeech: optional short tag (noun, verb, adjective, phrase, …).
+- If the word has only one ordinary meaning, return one sense. If polysemous, include other common meanings a learner should know. Skip rare/archaic senses.
+- example: omit unless one short ${targetName} sentence for the first sense is helpful. Never write an example per sense.
 
 ${naturalTranslationPrinciples({
   locale: interfaceLanguage,
@@ -133,7 +119,7 @@ ${naturalTranslationPrinciples({
 })}
 
 Respond with ONLY compact JSON:
-{"results":[{"word":"...","gloss":"...","partOfSpeech":"...","example":"..."}]}`,
+{"results":[{"word":"...","senses":[{"gloss":"...","partOfSpeech":"..."}],"example":"..."}]}`,
         },
         { role: "user", content: query },
       ],

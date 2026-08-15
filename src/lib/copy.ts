@@ -475,6 +475,7 @@ export const copy = {
     vocabPreviewLoading: "뜻을 불러오는 중...",
     vocabPreviewSave: "저장",
     vocabPreviewClose: "닫기",
+    vocabOtherSenses: "다른 뜻",
     chatHistoryTitle: "채팅 기록",
     chatHistoryListTitle: "이전 대화",
     chatHistoryEmpty:
@@ -1026,6 +1027,7 @@ export const copy = {
     vocabPreviewLoading: "Loading meaning...",
     vocabPreviewSave: "Save",
     vocabPreviewClose: "Close",
+    vocabOtherSenses: "Other meanings",
     chatHistoryTitle: "Chat history",
     chatHistoryListTitle: "Past chats",
     chatHistoryEmpty:
@@ -1577,6 +1579,7 @@ export const copy = {
     vocabPreviewLoading: "Cargando significado...",
     vocabPreviewSave: "Guardar",
     vocabPreviewClose: "Cerrar",
+    vocabOtherSenses: "Otros sentidos",
     chatHistoryTitle: "Historial de chat",
     chatHistoryListTitle: "Chats anteriores",
     chatHistoryEmpty:

@@ -3,7 +3,7 @@
 import { createContext, useContext } from "react";
 
 export type VocabPreviewContextValue = {
-  open: (word: string) => void;
+  open: (word: string, contextSentence?: string) => void;
   close: () => void;
   saveLabel: string;
   isWordSaved: (word: string) => boolean;
