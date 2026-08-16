@@ -5,12 +5,9 @@ import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { getApiBase } from "@/lib/apiBase";
 import type { Locale, UICopy } from "@/lib/copy";
-import type { EnglishInputAnalysis } from "@/lib/englishAnalysis";
 import { rememberEnglishAnalysis } from "@/lib/englishAnalysisRecent";
-import { analyzeEnglishInput } from "@/lib/englishAnalysisService";
 import { resolveWebReaderAnalysis } from "@/lib/genericWebReader";
 import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
-import { inferTranslationSourceType } from "@/lib/naturalTranslation";
 import {
   normalizeWebReaderUrl,
   webReaderShortcutsForLanguage,
@@ -36,12 +33,6 @@ export function WebReadingTab({
   const [urlError, setUrlError] = useState<string | null>(null);
   const [sessionUrl, setSessionUrl] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
-  const [sentenceOpen, setSentenceOpen] = useState(false);
-  const [sentenceText, setSentenceText] = useState("");
-  const [sentenceResult, setSentenceResult] =
-    useState<EnglishInputAnalysis | null>(null);
-  const [sentenceLoading, setSentenceLoading] = useState(false);
-  const [sentenceFailed, setSentenceFailed] = useState(false);
 
   const analyzePayload = useCallback(
     (raw: unknown) => {
@@ -51,42 +42,14 @@ export function WebReadingTab({
         return;
       }
       setNotice(null);
-      if (request.kind === "element") {
-        rememberEnglishAnalysis({ input: request.target.contextSentence });
-        openAnalysis?.(request.target);
-        return;
-      }
-      setSentenceText(request.text);
-      setSentenceResult(null);
-      setSentenceFailed(false);
-      setSentenceLoading(true);
-      setSentenceOpen(true);
-      void (async () => {
-        try {
-          const result = await analyzeEnglishInput({
-            text: request.text,
-            locale,
-            interfaceLanguage: locale,
-            targetLanguage,
-            sourceType: inferTranslationSourceType(sessionUrl),
-          });
-          if (!result) {
-            setSentenceFailed(true);
-            return;
-          }
-          setSentenceResult(result);
-          rememberEnglishAnalysis({
-            input: result.input,
-            translation: result.translation,
-          });
-        } catch {
-          setSentenceFailed(true);
-        } finally {
-          setSentenceLoading(false);
-        }
-      })();
+      rememberEnglishAnalysis({ input: request.target.contextSentence });
+      openAnalysis?.({
+        ...request.target,
+        language: targetLanguage,
+        intent: "sentence",
+      });
     },
-    [locale, openAnalysis, sessionUrl, targetLanguage, ui.webReadNoSelection],
+    [openAnalysis, targetLanguage, ui.webReadNoSelection],
   );
 
   useEffect(() => {
@@ -116,7 +79,7 @@ export function WebReadingTab({
       for (const handle of handles) void handle.remove();
       void WebReader.removeAllListeners();
     };
-  }, [analyzePayload]);
+  }, [analyzePayload, sessionUrl]);
 
   useEffect(() => {
     if (!notice) return;
@@ -162,7 +125,6 @@ export function WebReadingTab({
   const closeSession = useCallback(() => {
     setSessionUrl(null);
     setPasteText("");
-    setSentenceOpen(false);
     setNotice(null);
     void WebReader.close();
   }, []);
@@ -282,95 +244,6 @@ export function WebReadingTab({
         <p className="pointer-events-none absolute bottom-20 left-1/2 z-10 max-w-[90%] -translate-x-1/2 rounded-full bg-slate-900/90 px-3 py-1.5 text-center text-xs text-white">
           {notice}
         </p>
-      ) : null}
-
-      {sentenceOpen ? (
-        <div className="fixed inset-0 z-[80] flex items-end justify-center bg-slate-900/40 sm:items-center sm:p-3">
-          <button
-            type="button"
-            className="absolute inset-0 cursor-default"
-            aria-label={ui.insightClose}
-            onClick={() => setSentenceOpen(false)}
-          />
-          <div
-            role="dialog"
-            aria-modal="true"
-            className="relative z-10 flex max-h-[86vh] w-full max-w-md flex-col overflow-hidden rounded-t-2xl border border-slate-200 bg-white shadow-xl sm:rounded-2xl"
-            onPointerDown={(event) => event.stopPropagation()}
-          >
-            <div className="flex shrink-0 items-center justify-end px-3 pt-3">
-              <button
-                type="button"
-                onClick={() => setSentenceOpen(false)}
-                className="rounded-lg px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900"
-                aria-label={ui.insightClose}
-              >
-                ✕
-              </button>
-            </div>
-            <div className="min-h-0 flex-1 overflow-y-auto px-4 pb-6 pt-1">
-              <p
-                translate="no"
-                className="text-base font-medium leading-relaxed text-slate-900"
-              >
-                {sentenceResult?.input || sentenceText}
-              </p>
-              {sentenceResult?.translation ? (
-                <p className="mt-1 text-sm leading-relaxed text-slate-600">
-                  {sentenceResult.translation}
-                </p>
-              ) : null}
-              {sentenceResult?.correctionNote ? (
-                <p className="mt-2 text-sm leading-relaxed text-slate-500">
-                  {sentenceResult.correctionNote}
-                </p>
-              ) : null}
-              {sentenceLoading ? (
-                <p className="mt-4 text-sm text-slate-600">{ui.exploreLoading}</p>
-              ) : sentenceFailed ? (
-                <p className="mt-4 text-sm text-rose-700">{ui.exploreFailed}</p>
-              ) : sentenceResult && sentenceResult.elements.length > 0 ? (
-                <div className="mt-4">
-                  <p className="text-[11px] font-semibold tracking-wide text-slate-500">
-                    {ui.analysisKeyElements}
-                  </p>
-                  <ul className="mt-2 space-y-1">
-                    {sentenceResult.elements.map((element) => (
-                      <li key={`${element.text}-${element.label}`}>
-                        <button
-                          type="button"
-                          onClick={() =>
-                            openAnalysis?.({
-                              selectedText: element.text,
-                              contextSentence: sentenceResult.input,
-                              sourceType: inferTranslationSourceType(sessionUrl),
-                              ...(sentenceResult.language
-                                ? { language: sentenceResult.language }
-                                : {}),
-                            })
-                          }
-                          className="w-full rounded-lg px-2 py-2 text-left transition hover:bg-slate-50"
-                        >
-                          <p className="text-sm font-medium text-slate-900">
-                            [{element.label}]
-                          </p>
-                          {element.reading ? (
-                            <p className="text-xs text-slate-500">
-                              {element.reading}
-                            </p>
-                          ) : null}
-                          <p className="mt-0.5 text-sm leading-relaxed text-slate-600">
-                            {element.gloss}
-                          </p>
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-            </div>
-          </div>
-        </div>
       ) : null}
     </div>
   );

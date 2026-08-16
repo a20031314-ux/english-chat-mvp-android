@@ -22,7 +22,14 @@ function isWordChar(char: string | undefined) {
   return Boolean(char && /[\p{L}\p{M}'’]/u.test(char));
 }
 
+function isCjkRun(value: string) {
+  return /[\u3040-\u30ff\u3400-\u9fff]/u.test(value);
+}
+
 function sitsOnTokenEdge(sentence: string, start: number, end: number) {
+  const piece = sentence.slice(start, end);
+  // Japanese/Chinese have no spaces between words; exact substrings are valid units.
+  if (isCjkRun(piece)) return true;
   const before = start <= 0 ? "" : sentence[start - 1];
   const after = end >= sentence.length ? "" : sentence[end];
   return !isWordChar(before) && !isWordChar(after);
@@ -141,7 +148,11 @@ function countWords(value: string) {
 }
 
 function isShortSaying(sentence: string) {
-  return countWords(sentence) <= 4 && sentence.length <= 40;
+  const text = normalizePiece(sentence);
+  if (isCjkRun(text) && !/\s/.test(text)) {
+    return Array.from(lettersOnly(text).replace(/\s/g, "")).length <= 8;
+  }
+  return countWords(text) <= 4 && text.length <= 40;
 }
 
 function coversWholeSentence(sentence: string, text: string) {
@@ -224,8 +235,8 @@ export function snapToExpressionUnit(
   }
   if (!selection) return null;
 
-  // Clicking one word must not grow into a phrase or the whole sentence.
-  if (countWords(selected) <= 1) return null;
+  // A single-word tap stays that word. Phrase snap is only for multi-word drags.
+  if (countWords(selected) <= 1 && !/\s/.test(normalizePiece(selected))) return null;
 
   const containing = units.filter(
     (unit) => unit.start <= selection.start && unit.end >= selection.end,
@@ -253,4 +264,32 @@ export function snapToExpressionUnit(
         a.unit.end - a.unit.start - (b.unit.end - b.unit.start),
     );
   return overlapping[0]?.unit ?? null;
+}
+
+/**
+ * Smallest multi-word idiom/chunk that fully covers this tap.
+ * Used when a learner taps one word and should get the whole expression.
+ */
+export function idiomUnitContaining(
+  sentence: string,
+  start: number,
+  end: number,
+  unitTexts: string[],
+): ExpressionUnitSpan | null {
+  const covering = locateUnits(sentence, unitTexts)
+    .filter((unit) => unit.start <= start && unit.end >= end)
+    .filter((unit) => {
+      if (countWords(unit.text) >= 2) return true;
+      if (isCjkRun(unit.text) && unit.end - unit.start > end - start) return true;
+      return false;
+    })
+    .filter(
+      (unit) =>
+        !coversWholeSentence(sentence, unit.text) || isShortSaying(sentence),
+    );
+  if (covering.length === 0) return null;
+  covering.sort(
+    (a, b) => a.end - a.start - (b.end - b.start) || a.start - b.start,
+  );
+  return covering[0];
 }

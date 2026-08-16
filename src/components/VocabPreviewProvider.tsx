@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useMemo, useRef, useState, type ReactNode } from "react";
-import { VocabWordPreview } from "@/components/VocabWordPreview";
+import { VocabWordPanel } from "@/components/VocabWordPreview";
 import { VocabPreviewContext } from "@/contexts/VocabPreviewContext";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { apiUrl } from "@/lib/apiBase";
@@ -13,6 +13,7 @@ import {
   normalizeVocabHeadword,
   persistVocabulary,
   saveVocabularyWords,
+  isSentenceVocabUnit,
   type VocabLookupResult,
   type VocabularyEntry,
 } from "@/lib/vocabulary";
@@ -21,10 +22,12 @@ import { isPronounceableAlphabetLetter } from "@/lib/letterPronunciation";
 export function VocabPreviewProvider({
   locale,
   ui,
+  hideOverlay = false,
   children,
 }: {
   locale: Locale;
   ui: UICopy;
+  hideOverlay?: boolean;
   children: ReactNode;
 }) {
   const learningLanguage = useLearningLanguageOptional();
@@ -54,6 +57,7 @@ export function VocabPreviewProvider({
     async (word: string, contextSentence?: string) => {
       const trimmed = normalizeVocabHeadword(word);
       if (!trimmed || isVocabSaving) return;
+      if (isSentenceVocabUnit(trimmed, contextSentence)) return;
       // Alphabet letters use the inline sound tip, not the vocab sheet.
       if (isPronounceableAlphabetLetter(trimmed)) return;
 
@@ -74,9 +78,6 @@ export function VocabPreviewProvider({
             locale,
             interfaceLanguage: locale,
             targetLanguage,
-            ...(contextSentence?.trim()
-              ? { contextSentence: contextSentence.trim() }
-              : {}),
           }),
         });
         if (!response.ok) throw new Error("gloss failed");
@@ -148,6 +149,7 @@ export function VocabPreviewProvider({
 
   const save = useCallback(() => {
     if (!previewWord || !previewDetail || isVocabSaving) return;
+    if (isSentenceVocabUnit(previewWord)) return;
     setIsVocabSaving(true);
     try {
       const updated = saveVocabularyWords(
@@ -158,9 +160,6 @@ export function VocabPreviewProvider({
       persistVocabulary(updated);
       setEntries(updated);
       showToast(ui.vocabPickSavedToast);
-      setPreviewWord(null);
-      setPreviewDetail(null);
-      setPreviewLoadFailed(false);
     } catch {
       showToast(ui.vocabPickFailed);
     } finally {
@@ -180,29 +179,72 @@ export function VocabPreviewProvider({
     () => ({
       open,
       close,
+      save,
       saveLabel: ui.vocabSaveFromChat,
       isWordSaved: (word: string) =>
         isWordSaved(entries, word, targetLanguage),
-      savingWord: previewWord,
+      savingWord: isVocabSaving ? previewWord : null,
+      word: previewWord,
+      detail: previewDetail,
+      isLoading: isPreviewLoading,
+      loadFailed: previewLoadFailed,
+      isSaving: isVocabSaving,
+      alreadySaved: previewWord
+        ? isWordSaved(entries, previewWord, targetLanguage)
+        : false,
     }),
-    [close, entries, open, previewWord, targetLanguage, ui.vocabSaveFromChat],
+    [
+      close,
+      entries,
+      isPreviewLoading,
+      isVocabSaving,
+      open,
+      previewDetail,
+      previewLoadFailed,
+      previewWord,
+      save,
+      targetLanguage,
+      ui.vocabSaveFromChat,
+    ],
   );
 
   return (
     <VocabPreviewContext.Provider value={value}>
       {children}
-      {previewWord ? (
-        <VocabWordPreview
-          word={previewWord}
-          detail={previewDetail}
-          isLoading={isPreviewLoading}
-          isSaving={isVocabSaving}
-          loadFailed={previewLoadFailed}
-          alreadySaved={isWordSaved(entries, previewWord, targetLanguage)}
-          ui={ui}
-          onClose={close}
-          onSave={save}
-        />
+      {!hideOverlay && previewWord ? (
+        <div className="fixed inset-0 z-[100] flex items-end justify-center bg-slate-900/40 p-3 sm:items-center">
+          <button
+            type="button"
+            className="absolute inset-0 cursor-default"
+            aria-label={ui.vocabPreviewClose}
+            onClick={close}
+            disabled={isVocabSaving}
+          />
+          <div
+            role="dialog"
+            aria-modal="true"
+            className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-xl"
+          >
+            <VocabWordPanel
+              word={previewWord}
+              detail={previewDetail}
+              isLoading={isPreviewLoading}
+              isSaving={isVocabSaving}
+              loadFailed={previewLoadFailed}
+              alreadySaved={isWordSaved(entries, previewWord, targetLanguage)}
+              ui={ui}
+              onSave={save}
+            />
+            <button
+              type="button"
+              onClick={close}
+              disabled={isVocabSaving}
+              className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-50"
+            >
+              {ui.vocabPreviewClose}
+            </button>
+          </div>
+        </div>
       ) : null}
       {toast ? (
         <div

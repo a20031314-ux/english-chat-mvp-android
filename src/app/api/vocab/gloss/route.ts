@@ -128,10 +128,6 @@ export async function POST(request: NextRequest) {
     targetLanguage === "ja" ||
     targetLanguage === "zh" ||
     targetLanguage === "ko";
-  const contextSentence =
-    typeof body.contextSentence === "string"
-      ? body.contextSentence.replace(/\s+/g, " ").trim().slice(0, 280)
-      : "";
 
   try {
     const completion = await client.chat.completions.create({
@@ -139,13 +135,16 @@ export async function POST(request: NextRequest) {
       messages: [
         {
           role: "system",
-          content: `You write short dictionary-style glosses for ${targetName} vocabulary.
+          content: `You write a compact LEARNER DICTIONARY entry for ${targetName} vocabulary.
+This is NOT sentence analysis. Do not explain how the word is used in a nearby chat sentence or idiom.
+
 Items may be single words, multi-word phrases / compounds / idioms.
 For each item, return:
 - word: the same ${englishOnlyHeadwords ? "English" : targetName} item (keep multi-word phrases intact; do not split them)
-- senses: 1–5 distinct learner meanings, most useful first
-  - gloss: short meaning in ${interfaceName} of that sense
-  - partOfSpeech: optional short tag (noun, verb, adjective, phrase, idiom, particle, kanji, character, …)
+- senses: 2–5 distinct ordinary dictionary meanings, most common first
+  - gloss: short dictionary meaning in ${interfaceName} of THAT sense
+  - partOfSpeech: short tag (noun, verb, adjective, pronoun, phrase, idiom, particle, …)
+  - example: one short ${targetName} sentence that illustrates THIS sense. Required.
 - reading: ${
             characterAware
               ? targetLanguage === "ja"
@@ -155,17 +154,15 @@ For each item, return:
                   : "optional romanization/reading when helpful for Hangul syllables or hanja. Empty if not useful."
               : "omit (leave empty)"
           }
-- example: omit unless one short ${targetName} sentence for the FIRST sense is truly helpful. Never write an example per sense.
 
 Sense rules:
-- If the word/phrase has only one ordinary meaning, return ONE sense.
-- If it is polysemous, first sense = ${
-            contextSentence
-              ? "the meaning used in the given context sentence"
-              : "the most common learner meaning"
-          }. Then other common meanings a beginner/intermediate should know.
+- Return ONE sense only if the word truly has a single ordinary meaning.
+- Common function words and polysemous verbs (it, that, this, get, have, go, make, …) MUST have 3–5 ordinary dictionary senses. Never collapse them into a paraphrase of a greeting or idiom ("How's it going?" is not a definition of it).
+- First sense = the most common dictionary meaning, not a sentence-specific reading.
+- Each sense needs its own example sentence in ${targetName}.
 - Do not list rare, archaic, slang-only, or overly technical senses.
 - Do not repeat the same meaning in different wording.
+- Do not gloss the surrounding sentence. Gloss THIS headword only.
 
 ${
   characterAware
@@ -188,13 +185,12 @@ ${naturalTranslationPrinciples({
 })}
 
 Respond with ONLY compact JSON:
-{"items":[{"word":"...","senses":[{"gloss":"...","partOfSpeech":"..."}],"reading":"...","example":"..."}]}`,
+{"items":[{"word":"...","senses":[{"gloss":"...","partOfSpeech":"...","example":"..."}],"reading":"..."}]}`,
         },
         {
           role: "user",
           content: JSON.stringify({
             words,
-            ...(contextSentence ? { contextSentence } : {}),
           }),
         },
       ],

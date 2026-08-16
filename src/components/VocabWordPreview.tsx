@@ -1,35 +1,33 @@
 "use client";
 
-import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
 import { TTSButton } from "@/components/TTSButton";
 import { VocabSenseList } from "@/components/VocabSenseList";
 import type { UICopy } from "@/lib/copy";
 import { vocabSensesOf, type VocabLookupResult } from "@/lib/vocabulary";
 
-type VocabWordPreviewProps = {
-  word: string;
-  detail: VocabLookupResult | null;
-  isLoading: boolean;
-  isSaving: boolean;
-  loadFailed: boolean;
-  alreadySaved?: boolean;
-  ui: UICopy;
-  onClose: () => void;
-  onSave: () => void;
-};
-
-export function VocabWordPreview({
+export function VocabWordPanel({
   word,
   detail,
   isLoading,
   isSaving,
   loadFailed,
   alreadySaved = false,
+  allowSave = true,
   ui,
-  onClose,
   onSave,
-}: VocabWordPreviewProps) {
+}: {
+  word: string;
+  detail: VocabLookupResult | null;
+  isLoading: boolean;
+  isSaving: boolean;
+  loadFailed: boolean;
+  alreadySaved?: boolean;
+  allowSave?: boolean;
+  ui: UICopy;
+  onSave: () => void;
+}) {
   const canSave =
+    allowSave &&
     Boolean(detail) &&
     !alreadySaved &&
     !isLoading &&
@@ -37,92 +35,53 @@ export function VocabWordPreview({
     !loadFailed;
 
   return (
-    <div className="fixed inset-0 z-[100] flex items-end justify-center bg-slate-900/40 p-3 sm:items-center">
-      <button
-        type="button"
-        className="absolute inset-0 cursor-default"
-        aria-label={ui.vocabPreviewClose}
-        onClick={onClose}
-        disabled={isSaving}
-      />
-      <div
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="vocab-preview-title"
-        className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl"
-      >
-        <div className="px-4 py-4">
-          <div
-            id="vocab-preview-title"
-            className="flex flex-wrap items-center gap-2"
-          >
-            <AnalyzableEnglish
-              sentence={word}
-              context={detail?.example ? [detail.example] : undefined}
-              className="text-xl font-semibold text-slate-900"
-            />
-            <TTSButton text={word} ariaLabel={ui.listen} />
-          </div>
-          {detail?.reading ? (
-            <p className="mt-1 text-sm text-slate-600">{detail.reading}</p>
-          ) : null}
-
-          {isLoading ? (
-            <p className="mt-3 text-sm text-slate-600">{ui.vocabPreviewLoading}</p>
-          ) : loadFailed ? (
-            <p className="mt-3 text-sm text-rose-700">{ui.vocabPickFailed}</p>
-          ) : (
-            <>
-              <div className="mt-3">
-                <VocabSenseList
-                  senses={vocabSensesOf({
-                    gloss: detail?.gloss || "",
-                    partOfSpeech: detail?.partOfSpeech,
-                    senses: detail?.senses,
-                  })}
-                  otherLabel={ui.vocabOtherSenses}
-                />
-              </div>
-              {detail?.example ? (
-                <div className="mt-2 flex items-start gap-2">
-                  <AnalyzableEnglish
-                    sentence={detail.example}
-                    className="min-w-0 flex-1 text-xs leading-relaxed text-slate-500"
-                  />
-                  <TTSButton text={detail.example} ariaLabel={ui.listen} />
-                </div>
-              ) : null}
-            </>
-          )}
-        </div>
-
-        <div className="flex gap-2 border-t border-slate-100 px-4 py-3">
-          <button
-            type="button"
-            onClick={onClose}
-            disabled={isSaving}
-            className="flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-50"
-          >
-            {ui.vocabPreviewClose}
-          </button>
-          <button
-            type="button"
-            onClick={onSave}
-            disabled={!canSave}
-            className={`flex-1 rounded-xl px-3 py-2.5 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-50 ${
-              alreadySaved
-                ? "bg-teal-50 text-teal-800"
-                : "bg-slate-900 text-white hover:bg-slate-800"
-            }`}
-          >
-            {alreadySaved
-              ? ui.vocabSaved
-              : isSaving
-                ? ui.vocabPickSaving
-                : ui.vocabPreviewSave}
-          </button>
-        </div>
+    <div>
+      <div className="flex flex-wrap items-center gap-2">
+        <p className="text-xl font-semibold text-slate-900">{word}</p>
+        <TTSButton text={word} ariaLabel={ui.listen} />
       </div>
+      {detail?.reading ? (
+        <p className="mt-1 text-sm text-slate-600">{detail.reading}</p>
+      ) : null}
+
+      {isLoading ? (
+        <p className="mt-3 text-sm text-slate-600">{ui.vocabPreviewLoading}</p>
+      ) : loadFailed ? (
+        <p className="mt-3 text-sm text-rose-700">{ui.vocabPickFailed}</p>
+      ) : (
+        <>
+          <div className="mt-3">
+            <VocabSenseList
+              senses={vocabSensesOf({
+                gloss: detail?.gloss || "",
+                partOfSpeech: detail?.partOfSpeech,
+                senses: detail?.senses,
+              })}
+              otherLabel={ui.vocabOtherSenses}
+              listenLabel={ui.listen}
+            />
+          </div>
+        </>
+      )}
+
+      {allowSave ? (
+        <button
+          type="button"
+          onClick={onSave}
+          disabled={!canSave}
+          className={`mt-4 w-full rounded-xl px-3 py-2.5 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-50 ${
+            alreadySaved
+              ? "bg-teal-50 text-teal-800"
+              : "bg-slate-900 text-white hover:bg-slate-800"
+          }`}
+        >
+          {alreadySaved
+            ? ui.vocabSaved
+            : isSaving
+              ? ui.vocabPickSaving
+              : ui.vocabPreviewSave}
+        </button>
+      ) : null}
     </div>
   );
 }

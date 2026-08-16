@@ -67,6 +67,8 @@ export function CurrentSubtitleCard({
             <AnalyzableEnglish
               sentence={cue.original}
               analyzeLabel={ui.insightAnalyze}
+              sourceType="subtitle"
+              translation={interpretation || undefined}
               tone={playing ? "onDark" : "default"}
               className={`text-[1.05rem] font-semibold leading-snug ${
                 playing ? "text-white" : "text-slate-900"

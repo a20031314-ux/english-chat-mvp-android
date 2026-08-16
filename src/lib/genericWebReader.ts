@@ -15,8 +15,7 @@ export type WebReaderSelection = {
 };
 
 export type WebReaderAnalysisRequest =
-  | { kind: "element"; target: EnglishAnalysisTarget }
-  | { kind: "sentence"; text: string }
+  | { kind: "target"; target: EnglishAnalysisTarget }
   | { kind: "invalid"; reason: "empty" };
 
 function clean(value: unknown, max = 800) {
@@ -70,22 +69,22 @@ export function resolveWebReaderAnalysis(
   const selection = parseWebReaderSelection(raw);
   if (!selection) return { kind: "invalid", reason: "empty" };
 
-  if (
+  const sentenceLevel =
     isSentenceLevelSelection(
       selection.selectedText,
       selection.contextSentence,
-    ) ||
-    selection.selectedText.length > 200
-  ) {
-    return { kind: "sentence", text: selection.selectedText };
-  }
+    ) || selection.selectedText.length > 200;
+  const contextSentence = sentenceLevel
+    ? selection.selectedText
+    : selection.contextSentence || selection.selectedText;
 
   return {
-    kind: "element",
+    kind: "target",
     target: {
       selectedText: selection.selectedText,
-      contextSentence: selection.contextSentence || selection.selectedText,
+      contextSentence,
       sourceType: inferTranslationSourceType(selection.sourceUrl),
+      intent: "sentence",
       ...(selection.surroundingContext?.length
         ? { context: selection.surroundingContext }
         : {}),

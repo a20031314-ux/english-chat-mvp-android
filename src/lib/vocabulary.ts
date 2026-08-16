@@ -3,6 +3,7 @@ import {
   DEFAULT_LEARNING_LANGUAGE_CODE,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
+import { listWordSpans } from "@/lib/textTokens";
 
 export const VOCABULARY_STORAGE_KEY = "vocabularyEntries";
 export const VOCABULARY_HIDE_GLOSS_KEY = "vocabularyHideGloss";
@@ -10,6 +11,7 @@ export const VOCABULARY_HIDE_GLOSS_KEY = "vocabularyHideGloss";
 export type VocabSense = {
   gloss: string;
   partOfSpeech?: string;
+  example?: string;
 };
 
 export type VocabularyEntry = {
@@ -58,9 +60,11 @@ export function normalizeVocabSenses(raw: unknown): VocabSense[] {
     if (seen.has(key)) continue;
     seen.add(key);
     const partOfSpeech = asOptionalLine(o.partOfSpeech);
+    const example = asOptionalLine(o.example);
     out.push({
       gloss,
       ...(partOfSpeech ? { partOfSpeech } : {}),
+      ...(example ? { example } : {}),
     });
     if (out.length >= 6) break;
   }
@@ -103,7 +107,8 @@ export function assembleVocabLookup(
     }
   }
   if (senses.length === 0) return null;
-  const example = asOptionalLine(raw.example);
+  const example =
+    asOptionalLine(raw.example) || asOptionalLine(senses[0].example);
   const reading = asOptionalLine(raw.reading);
   return {
     word: head,
@@ -425,8 +430,11 @@ function isEnglishStopwordToken(token: string): boolean {
 export function isLearnableEnglishWord(token: string): boolean {
   const cleaned = normalizeVocabHeadword(token);
   if (!cleaned) return false;
-  // CJK / Hangul / kana runs are valid learning units (今日, 한국) —
-  // not a single character/syllable pronunciation tap.
+  // Kanji can be a one-character word (木, 山). Kana/Hangul need 2+
+  // so lone particles and syllables are not treated as vocabulary.
+  if (/^[\u3400-\u9fff]+$/u.test(cleaned)) {
+    return Array.from(cleaned).length >= 1;
+  }
   if (/^[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]+$/u.test(cleaned)) {
     return Array.from(cleaned).length >= 2;
   }
@@ -465,6 +473,32 @@ export function isVocabLookupEligible(token: string): boolean {
     return isLookupableEnglishWord(cleaned);
   }
   return isLearnableEnglishWord(cleaned);
+}
+
+function normalizeVocabSpan(value: string) {
+  return value
+    .replace(/\s+/g, " ")
+    .replace(/[。．.!?！？…]+$/u, "")
+    .trim()
+    .toLowerCase();
+}
+
+/** Whole sentences and long clauses are not vocab-book items. */
+export function isSentenceVocabUnit(text: string, contextSentence?: string) {
+  const cleaned = text.replace(/\s+/g, " ").trim();
+  if (!cleaned) return true;
+  const span = normalizeVocabSpan(cleaned);
+  if (
+    contextSentence &&
+    span &&
+    span === normalizeVocabSpan(contextSentence)
+  ) {
+    return true;
+  }
+  const words = listWordSpans(cleaned);
+  if (words.length >= 6) return true;
+  if (words.length >= 4 && /[.!?。．！？…]$/u.test(cleaned)) return true;
+  return false;
 }
 
 /** Pull learnable English word candidates from free text. */

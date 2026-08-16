@@ -55,6 +55,8 @@ export function LearningReviewModal({
             </p>
             <AnalyzableEnglish
               sentence={card.original}
+              analyzeLabel={ui.insightAnalyze}
+              sourceType="example"
               className="mt-2 text-base leading-relaxed text-slate-900"
             />
           </div>
@@ -75,6 +77,8 @@ export function LearningReviewModal({
                 </p>
                 <AnalyzableEnglish
                   sentence={card.corrected}
+                  analyzeLabel={ui.insightAnalyze}
+                  sourceType="example"
                   className="mt-1.5 text-base font-medium text-emerald-950"
                 />
               </div>
@@ -86,6 +90,8 @@ export function LearningReviewModal({
                   </p>
                   <AnalyzableEnglish
                     sentence={card.natural ?? ""}
+                    analyzeLabel={ui.insightAnalyze}
+                    sourceType="example"
                     className="mt-1.5 text-base text-sky-950"
                   />
                 </div>

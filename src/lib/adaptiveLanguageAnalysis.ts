@@ -19,10 +19,14 @@ import {
   naturalTranslationPrinciples,
   type TranslationSourceType,
 } from "@/lib/naturalTranslation";
-import type {
-  EnglishElementAnalysis,
-  EnglishInputAnalysis,
-  LanguageKeyElement,
+import {
+  parseEnglishGrammarNotes,
+  parseEnglishIdiomNote,
+  type EnglishElementAnalysis,
+  type EnglishGrammarNote,
+  type EnglishIdiomNote,
+  type EnglishInputAnalysis,
+  type LanguageKeyElement,
 } from "@/lib/englishAnalysis";
 import type { ExpressionInsight } from "@/lib/expressionInsight";
 
@@ -80,6 +84,8 @@ export type AdaptiveElementAnalysis = {
   baseForm?: string;
   examples?: Array<{ sentence: string; meaning: string }>;
   otherUsages?: Array<{ pattern: string; meaning: string }>;
+  idiom?: EnglishIdiomNote;
+  grammar?: EnglishGrammarNote[];
 };
 
 function adaptiveLevelHint(level?: LearnerLevel): string {
@@ -222,7 +228,7 @@ export function adaptiveElementSystem(options: {
   const explanationGuard = explanationLanguageGuard({
     interfaceLanguage,
     fieldsDescription:
-      "meaningInContext, whyUsed, example meanings, and otherUsages.meaning",
+      "meaningInContext, grammar.why, grammar.general, grammar.inThisSentence, example translations, and inner.explanation",
   });
   const sourceFormNote =
     interfaceLanguage === "ko"
@@ -241,11 +247,14 @@ Caller language hint: ${options.languageHint?.trim() || targetName}.
 ${adaptiveLevelHint(options.learnerLevel)}
 
 Default shape:
-1) meaning in THIS sentence (one line)
-2) why it is used this way here (2–4 short sentences)
-3) reusable pattern if there is one
-4) 1–2 new example sentences in ${targetName}
-Do not turn this into a linguistics lecture or full paradigm table.
+1) meaningInContext: ONLY what THIS selected span means in THIS sentence. One short line. Not a paraphrase of the whole sentence.
+2) If the selected span contains a grammar / form pattern worth teaching in ${targetName}, fill grammar.
+   - why: which marker/form in THIS span makes it that pattern
+   - general: how the pattern works
+   - inThisSentence: how THIS sentence uses it
+   - examples: 2 short ${targetName} sentences of the same pattern, with ${interfaceName} translations
+   - inner: explain a smaller clause/chunk inside the span when one exists
+Do not write a linguistics lecture.
 
 meaningInContext follows:
 ${naturalTranslationPrinciples({
@@ -262,24 +271,33 @@ Return ONLY JSON:
   "contextSentence": "...",
   "title": "short label of THIS use",
   "type": "word|expression|grammar|character|pronunciation|form|nuance|slang|other",
-  "meaningInContext": "one short line: meaning HERE",
-  "whyUsed": "why this sentence uses it this way",
-  "pattern": "reuse pattern or empty",
-  "reading": "optional",
-  "romanization": "optional",
-  "pronunciation": "optional",
-  "baseForm": "optional",
-  "examples": [
-    { "sentence": "example in ${targetName}", "meaning": "natural ${interfaceName}" }
-  ],
-  "otherUsages": [
-    { "pattern": "...", "meaning": "..." }
+  "meaningInContext": "one short line: what THIS span means HERE",
+  "grammar": [
+    {
+      "name": "short grammar/form label",
+      "why": "which marker/form in THIS span makes it that pattern",
+      "general": "how this grammar/form works in general, 1–2 sentences",
+      "inThisSentence": "how THIS sentence uses it, 1–2 sentences",
+      "examples": [
+        {"english": "...", "translation": "..."},
+        {"english": "...", "translation": "..."}
+      ],
+      "inner": [
+        {
+          "text": "exact inner substring",
+          "name": "inner pattern label",
+          "explanation": "how this inner piece is built here"
+        }
+      ]
+    }
   ]
 }
 
 Rules:
-- Omit empty fields. examples: 0–2 NEW sentences, never a copy of the context sentence.
-- otherUsages: only a contrast that matters now.`;
+- Omit empty fields. Do not pad idiom, whyUsed, pattern, or otherUsages.
+- meaningInContext is the selected span only. Never retell the whole sentence.
+- If the span is a clause or grammar/form chunk, ALWAYS fill grammar, why, examples (2), and inner when a smaller piece sits inside.
+- inner.text MUST be an exact substring of selectedText.`;
 }
 
 function asLine(value: unknown): string {
@@ -374,7 +392,12 @@ export function normalizeAdaptiveElementAnalysis(
   const meaningInContext =
     asLine(o.meaningInContext) || asLine(o.meaning) || "";
   const whyUsed = asLine(o.whyUsed) || asLine(o.explanation);
-  if (!meaningInContext && !whyUsed) return null;
+  const idiom = parseEnglishIdiomNote(o.idiom, contextSentence);
+  const grammar = parseEnglishGrammarNotes(
+    o.grammar ?? o.grammarNotes,
+    contextSentence,
+  );
+  if (!meaningInContext && !whyUsed && !idiom && grammar.length === 0) return null;
 
   const examples: Array<{ sentence: string; meaning: string }> = [];
   if (Array.isArray(o.examples)) {
@@ -429,6 +452,8 @@ export function normalizeAdaptiveElementAnalysis(
     ...(baseForm ? { baseForm } : {}),
     ...(examples.length ? { examples } : {}),
     ...(otherUsages.length ? { otherUsages } : {}),
+    ...(idiom ? { idiom } : {}),
+    ...(grammar.length ? { grammar } : {}),
   };
 }
 
@@ -455,10 +480,8 @@ export function mapAdaptiveSentenceToEnglishInput(
   analysis: AdaptiveSentenceAnalysis,
 ): EnglishInputAnalysis {
   const elements = analysis.learningUnits.map(unitToKeyElement);
-  const noteParts = [
-    analysis.optionalLanguageNote,
-    analysis.nuance,
-  ].filter((part): part is string => Boolean(part?.trim()));
+  const correctionNote = analysis.optionalLanguageNote?.trim() || "";
+  const nuance = analysis.nuance?.trim() || "";
   return {
     input: analysis.input,
     translation: analysis.naturalMeaning,
@@ -469,9 +492,8 @@ export function mapAdaptiveSentenceToEnglishInput(
       type: "expression" as const,
       analysisRecommended: true,
     })),
-    ...(noteParts.length
-      ? { correctionNote: noteParts.join(" · ") }
-      : {}),
+    ...(nuance ? { nuance } : {}),
+    ...(correctionNote ? { correctionNote } : {}),
   };
 }
 
@@ -514,6 +536,8 @@ export function mapAdaptiveElementToEnglishElement(
           })),
         }
       : {}),
+    ...(analysis.idiom ? { idiom: analysis.idiom } : {}),
+    ...(analysis.grammar?.length ? { grammar: analysis.grammar } : {}),
   };
 }
 

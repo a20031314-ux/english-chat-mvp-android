@@ -90,6 +90,7 @@ Return ONLY JSON:
   "input": "English as written, light cleanup only",
   "language": "en",
   "translation": "natural meaning in ${language}",
+  "nuance": "optional: what this is doing in THIS situation, only if translation is not enough, else empty",
   "correctionNote": "only if the English is clearly broken AND that would mislead, else empty",
   "elements": [
     {
@@ -123,7 +124,7 @@ export function englishElementSystem(options: {
   const explanationGuard = explanationLanguageGuard({
     interfaceLanguage,
     fieldsDescription:
-      "meaningInContext, whyUsed, example translations, and otherUsages.meaning",
+      "meaningInContext, grammar.why, grammar.general, grammar.inThisSentence, example translations, and inner.explanation",
   });
   const sourceFormNote =
     interfaceLanguage === "ko"
@@ -140,11 +141,13 @@ ${sourceFormNote}
 ${englishLevelHint(options.learnerLevel)}
 
 Default shape (keep short):
-1) meaning in THIS sentence (one line)
-2) why it is used this way here (2–4 spoken sentences)
-3) reuse pattern if there is one
-4) 1–2 new English example sentences
-Extra fields only if they prevent a real confusion.
+1) meaningInContext: ONLY what THIS selected span means in THIS sentence. One short line. Not a paraphrase of the whole sentence. No dictionary list.
+2) If the selected span contains a grammar pattern (when-clause, tense/aspect, dummy it, relative clause, inversion, comparison, modal, contraction, SVC, etc.), fill grammar. Always do this for a clause.
+   - why: name the marker in THIS span that makes it that pattern (e.g. conjunction "when" + subject + verb → time adverbial clause).
+   - general: how learners use this pattern.
+   - inThisSentence: what this span is doing in the parent sentence.
+   - examples: 2 short English sentences of the SAME pattern, each with a ${language} translation.
+   - inner: if a smaller clause/chunk sits inside the span (I'm bored inside when I'm bored), explain that inner piece too.
 
 meaningInContext follows:
 ${naturalTranslationPrinciples({
@@ -156,29 +159,39 @@ ${naturalTranslationPrinciples({
 })}
 
 Judge the span from selectedText + the whole sentence + neighbors. Same letters can be different grammar or slang ("I'm cooked" vs food cooked). Do not decide from the string alone.
-If this span is slang/idiom/nuance, say that. Do not invent grammar to look thorough.
-If a word-for-word calque helps, put ONE contrast inside whyUsed — never as meaningInContext.
 
 Return ONLY JSON:
 {
   "selectedText": "...",
   "contextSentence": "...",
   "title": "short label of THIS use",
-  "reading": "optional",
-  "meaningInContext": "one short line: meaning HERE",
-  "whyUsed": "why this sentence uses it this way",
-  "pattern": "reuse pattern or empty",
-  "examples": [
-    { "english": "example in English", "translation": "natural ${language}" }
-  ],
-  "otherUsages": [
-    { "pattern": "...", "meaning": "...", "examples": [{ "english": "...", "translation": "..." }] }
+  "meaningInContext": "one short line: what THIS span means HERE",
+  "grammar": [
+    {
+      "name": "시간 부사절",
+      "why": "which word/form in THIS span makes it that pattern, and the shape (when + subject + verb)",
+      "general": "how this grammar works, 1–2 sentences",
+      "inThisSentence": "how THIS sentence uses this span, 1–2 sentences",
+      "examples": [
+        {"english": "Call me when you arrive.", "translation": "..."},
+        {"english": "I listen to music when I study.", "translation": "..."}
+      ],
+      "inner": [
+        {
+          "text": "I'm bored",
+          "name": "주어 + be + 형용사",
+          "explanation": "what this inner piece is, and how it is built here"
+        }
+      ]
+    }
   ]
 }
 
 Rules:
-- Omit empty fields. Do not pad every section. Do not write a long lecture.
-- examples: 0–2 NEW English sentences, never a repeat of the context sentence.
-- otherUsages: only a contrast the learner should know now.
-- title: short. Not a chapter heading.`;
+- Omit empty fields. Do not pad idiom, whyUsed, pattern, or otherUsages.
+- meaningInContext is the selected span only. Never retell the whole sentence.
+- If the span is a clause or grammar chunk, ALWAYS fill grammar, why, examples (2), and inner when a smaller clause sits inside.
+- grammar.why must point at the actual English in the span (when, I'm, -ing, …). Not a textbook title only.
+- inner.text MUST be an exact substring of selectedText.
+- Skip trivial labels (this is a noun) unless that is the whole point.`;
 }

@@ -183,7 +183,12 @@ export function VideoLearningTab({
         },
       }).catch((error) => {
         if (seq !== loadSeq.current || signal.aborted) return;
-        console.error("[video-interpret]", error);
+        if (
+          error instanceof VideoSubtitleClientError &&
+          error.code === "TIMEOUT"
+        ) {
+          return;
+        }
       });
     },
     [locale, targetLanguage],
@@ -620,8 +625,17 @@ export function VideoLearningTab({
         </div>
       </header>
 
-      {phase === "input" ? (
+      {phase === "input" || phase === "extracting" ? (
         <div className="min-h-0 flex-1 overflow-y-auto">
+          {phase === "extracting" ? (
+            <div className="sticky top-0 z-10 border-b border-slate-200 bg-white/95 backdrop-blur-[2px]">
+              <SubtitleGenerationStatus
+                ui={ui}
+                stepIndex={stepIndex}
+                progressPercent={progressPercent}
+              />
+            </div>
+          ) : null}
           <VideoUrlInput
             ui={ui}
             value={draftUrl}
@@ -649,14 +663,6 @@ export function VideoLearningTab({
               onDelete={onDeleteSession}
             />
           </VideoUrlInput>
-        </div>
-      ) : phase === "extracting" ? (
-        <div className="min-h-0 flex-1 overflow-y-auto">
-          <SubtitleGenerationStatus
-            ui={ui}
-            stepIndex={stepIndex}
-            progressPercent={progressPercent}
-          />
         </div>
       ) : (
         <div

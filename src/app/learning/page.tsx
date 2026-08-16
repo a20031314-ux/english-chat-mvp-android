@@ -6,8 +6,8 @@ import {
   LearningBookPanel,
   readAppLocale,
 } from "@/components/LearningBookPanel";
+import { EnglishAnalysisProvider } from "@/components/EnglishAnalysisProvider";
 import { ExpressionInsightProvider } from "@/components/ExpressionInsightProvider";
-import { VocabPreviewProvider } from "@/components/VocabPreviewProvider";
 import { LearningLanguageProvider } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
 import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
@@ -23,7 +23,7 @@ function LearningPageInner({
 
   return (
     <ExpressionInsightProvider locale={locale} ui={ui}>
-      <VocabPreviewProvider locale={locale} ui={ui}>
+      <EnglishAnalysisProvider locale={locale} ui={ui}>
         <main className="flex min-h-screen flex-col bg-slate-100">
           <div className="mx-auto w-full max-w-lg px-4 pt-4">
             <Link
@@ -39,7 +39,7 @@ function LearningPageInner({
             showLanguageSelector
           />
         </main>
-      </VocabPreviewProvider>
+      </EnglishAnalysisProvider>
     </ExpressionInsightProvider>
   );
 }

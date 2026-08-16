@@ -3,6 +3,7 @@ import {
   ANALYSIS_LANGUAGES,
   type LearnerLevel,
 } from "@/lib/languageAnalysisPrompt";
+import { listWordSpans } from "@/lib/textTokens";
 
 export const ENGLISH_ANALYSIS_LANGUAGES = ANALYSIS_LANGUAGES;
 
@@ -32,11 +33,27 @@ export type LanguageKeyElement = {
 export type EnglishInputAnalysis = {
   input: string;
   translation?: string;
+  /** What this utterance is doing in context, when a plain translation is not enough. */
+  nuance?: string;
   correctionNote?: string;
   language?: string;
   elements: LanguageKeyElement[];
   chunks: EnglishChunk[];
 };
+
+export function normalizeAnalysisSpan(value: string) {
+  return value
+    .replace(/\s+/g, " ")
+    .replace(/[。．.!?！？…]+$/u, "")
+    .trim()
+    .toLowerCase();
+}
+
+export function isSameAnalysisSpan(a: string, b: string) {
+  const left = normalizeAnalysisSpan(a);
+  const right = normalizeAnalysisSpan(b);
+  return Boolean(left && right && left === right);
+}
 
 export type EnglishAnalysisExample = {
   english: string;
@@ -57,6 +74,27 @@ export type EnglishRelatedConcept = {
   kind?: "grammar" | "expression";
 };
 
+export type EnglishIdiomNote = {
+  text: string;
+  withWords: string[];
+  meaning: string;
+};
+
+export type EnglishGrammarInner = {
+  text: string;
+  name: string;
+  explanation: string;
+};
+
+export type EnglishGrammarNote = {
+  name: string;
+  general: string;
+  why?: string;
+  inThisSentence: string;
+  examples?: EnglishAnalysisExample[];
+  inner?: EnglishGrammarInner[];
+};
+
 export type EnglishElementAnalysis = {
   selectedText: string;
   contextSentence: string;
@@ -70,6 +108,8 @@ export type EnglishElementAnalysis = {
   examples?: EnglishAnalysisExample[];
   otherUsages?: EnglishOtherUsage[];
   relatedConcepts?: EnglishRelatedConcept[];
+  idiom?: EnglishIdiomNote;
+  grammar?: EnglishGrammarNote[];
 };
 
 export type EnglishAnalysisTarget = {
@@ -79,13 +119,94 @@ export type EnglishAnalysisTarget = {
   sourceType?: TranslationSourceType;
   language?: string;
   learnerLevel?: LearnerLevel;
+  /** Force sentence overview or element detail. Default: sentence-first, then drill-in. */
+  intent?: "sentence" | "element" | "word";
+  /** Allow vocab save from the word sheet (idioms only in analysis). */
+  allowVocabSave?: boolean;
+  /** Existing UI-language translation to reuse (chat, video, …). */
+  translation?: string;
 };
 
 function asLine(value: unknown): string {
   return typeof value === "string" ? value.replace(/\s+/g, " ").trim() : "";
 }
 
-function asExamples(value: unknown): EnglishAnalysisExample[] {
+export function parseEnglishIdiomNote(
+  raw: unknown,
+  contextSentence: string,
+): EnglishIdiomNote | undefined {
+  if (!raw || typeof raw !== "object") return undefined;
+  const o = raw as Record<string, unknown>;
+  const text = asLine(o.text);
+  const meaning = asLine(o.meaning);
+  if (!text || !meaning) return undefined;
+  const hay = contextSentence.toLowerCase();
+  if (!hay.includes(text.toLowerCase())) return undefined;
+  if (normalizeAnalysisSpan(text) === normalizeAnalysisSpan(contextSentence)) {
+    return undefined;
+  }
+  const withWords: string[] = [];
+  if (Array.isArray(o.withWords)) {
+    for (const item of o.withWords) {
+      const word = asLine(item);
+      if (!word) continue;
+      withWords.push(word);
+      if (withWords.length >= 8) break;
+    }
+  }
+  const tokens =
+    withWords.length >= 2 ? withWords : listWordSpans(text).map((word) => word.text);
+  if (tokens.length < 2) return undefined;
+  return { text, meaning, withWords: tokens };
+}
+
+export function parseEnglishGrammarNotes(
+  raw: unknown,
+  contextSentence: string,
+): EnglishGrammarNote[] {
+  const items = Array.isArray(raw) ? raw : raw ? [raw] : [];
+  const out: EnglishGrammarNote[] = [];
+  const hay = contextSentence.toLowerCase();
+  for (const item of items) {
+    if (!item || typeof item !== "object") continue;
+    const o = item as Record<string, unknown>;
+    const name = asLine(o.name) || asLine(o.pattern) || asLine(o.title);
+    const general =
+      asLine(o.general) || asLine(o.usageExplanation) || asLine(o.explanation);
+    const inThisSentence =
+      asLine(o.inThisSentence) ||
+      asLine(o.howUsedHere) ||
+      asLine(o.contextExplanation);
+    if (!name || !general || !inThisSentence) continue;
+    const why = asLine(o.why) || asLine(o.whyThis) || asLine(o.marker);
+    const examples = asExamples(o.examples, 2);
+    const inner: EnglishGrammarInner[] = [];
+    const innerRaw = Array.isArray(o.inner) ? o.inner : [];
+    for (const nested of innerRaw) {
+      if (!nested || typeof nested !== "object") continue;
+      const n = nested as Record<string, unknown>;
+      const text = asLine(n.text);
+      const innerName = asLine(n.name) || asLine(n.pattern);
+      const explanation = asLine(n.explanation) || asLine(n.meaning);
+      if (!text || !innerName || !explanation) continue;
+      if (!hay.includes(text.toLowerCase())) continue;
+      inner.push({ text, name: innerName, explanation });
+      if (inner.length >= 3) break;
+    }
+    out.push({
+      name,
+      general,
+      inThisSentence,
+      ...(why ? { why } : {}),
+      ...(examples.length ? { examples } : {}),
+      ...(inner.length ? { inner } : {}),
+    });
+    if (out.length >= 3) break;
+  }
+  return out;
+}
+
+function asExamples(value: unknown, max = 2): EnglishAnalysisExample[] {
   if (!Array.isArray(value)) return [];
   const out: EnglishAnalysisExample[] = [];
   for (const item of value) {
@@ -100,7 +221,7 @@ function asExamples(value: unknown): EnglishAnalysisExample[] {
       ...(translation ? { translation } : {}),
       ...(note ? { note } : {}),
     });
-    if (out.length >= 2) break;
+    if (out.length >= max) break;
   }
   return out;
 }
@@ -113,7 +234,8 @@ export function normalizeEnglishInputAnalysis(
   const o = raw as Record<string, unknown>;
   const source = asLine(o.input) || asLine(input);
   if (!source) return null;
-  const translation = asLine(o.translation);
+  const translation = asLine(o.translation) || asLine(o.naturalMeaning);
+  const nuance = asLine(o.nuance);
   const correctionNote = asLine(o.correctionNote);
   const language = asLine(o.language);
 
@@ -149,14 +271,6 @@ export function normalizeEnglishInputAnalysis(
     }
   }
 
-  if (elements.length === 0) {
-    elements.push({
-      text: source,
-      label: source,
-      gloss: translation || source,
-    });
-  }
-
   const chunks: EnglishChunk[] = elements.map((element) => ({
     text: element.text,
     type: "expression",
@@ -168,6 +282,7 @@ export function normalizeEnglishInputAnalysis(
     elements,
     chunks,
     ...(translation ? { translation } : {}),
+    ...(nuance ? { nuance } : {}),
     ...(correctionNote ? { correctionNote } : {}),
     ...(language ? { language } : {}),
   };
@@ -184,7 +299,19 @@ export function normalizeEnglishElementAnalysis(
   const contextExplanation = asLine(o.contextExplanation);
   const whyUsed = asLine(o.whyUsed);
   const usageExplanation = asLine(o.usageExplanation);
-  if (!meaningInContext && !contextExplanation && !whyUsed && !usageExplanation) {
+  const idiom = parseEnglishIdiomNote(o.idiom, contextSentence);
+  const grammar = parseEnglishGrammarNotes(
+    o.grammar ?? o.grammarNotes,
+    contextSentence,
+  );
+  if (
+    !meaningInContext &&
+    !contextExplanation &&
+    !whyUsed &&
+    !usageExplanation &&
+    !idiom &&
+    grammar.length === 0
+  ) {
     return null;
   }
 
@@ -243,5 +370,7 @@ export function normalizeEnglishElementAnalysis(
     ...(examples.length ? { examples } : {}),
     ...(otherUsages.length ? { otherUsages } : {}),
     ...(relatedConcepts.length ? { relatedConcepts } : {}),
+    ...(idiom ? { idiom } : {}),
+    ...(grammar.length ? { grammar } : {}),
   };
 }

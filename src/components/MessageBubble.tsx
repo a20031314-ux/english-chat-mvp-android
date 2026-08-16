@@ -32,6 +32,7 @@ function EnglishLine({
   savingWord,
   onWordClick,
   className,
+  translation,
 }: {
   text: string;
   pickMode: boolean;
@@ -40,9 +41,15 @@ function EnglishLine({
   savingWord?: string | null;
   onWordClick?: (word: string) => void;
   className?: string;
+  translation?: string;
 }) {
   return (
-    <AnalyzableEnglish sentence={text} tone={tone} className={className}>
+    <AnalyzableEnglish
+      sentence={text}
+      tone={tone}
+      className={className}
+      translation={translation}
+    >
       {pickMode && onWordClick ? (
         <SelectableEnglishText
           text={text}
@@ -82,7 +89,10 @@ export function MessageBubble({
   const analyzeMain =
     !attachedEnglish?.trim() &&
     !showCorrection &&
-    (!isUser || /[A-Za-z]/.test(message));
+    (!isUser ||
+      /[A-Za-z\u0400-\u04FF\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]/.test(
+        message,
+      ));
 
   return (
     <div className={`flex w-full ${isUser ? "justify-end" : "justify-start"}`}>
@@ -111,6 +121,7 @@ export function MessageBubble({
             isWordSaved={isWordSaved}
             savingWord={savingWord}
             onWordClick={onWordClick}
+            translation={translatedMessage}
           />
         ) : (
           <p>
@@ -157,6 +168,7 @@ export function MessageBubble({
               isWordSaved={isWordSaved}
               savingWord={savingWord}
               onWordClick={onWordClick}
+              translation={message}
               className={`text-sm leading-relaxed ${
                 isUser ? "text-slate-100" : ""
               }`}

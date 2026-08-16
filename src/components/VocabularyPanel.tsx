@@ -226,6 +226,8 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                           {item.example ? (
                             <AnalyzableEnglish
                               sentence={item.example}
+                              analyzeLabel={ui.insightAnalyze}
+                              sourceType="example"
                               className="mt-1 text-xs leading-relaxed text-slate-500"
                             />
                           ) : null}
@@ -363,6 +365,8 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                             {entry.example ? (
                               <AnalyzableEnglish
                                 sentence={entry.example}
+                                analyzeLabel={ui.insightAnalyze}
+                                sourceType="example"
                                 className="mt-1 text-xs leading-relaxed text-slate-500"
                               />
                             ) : null}

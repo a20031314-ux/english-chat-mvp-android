@@ -10,7 +10,6 @@ import { TAB_ICON_META } from "@/components/TabIcons";
 import { TargetLanguageSelector } from "@/components/TargetLanguageSelector";
 import { VocabularyPanel } from "@/components/VocabularyPanel";
 import { StudyMaterialsTab } from "@/components/studyMaterials/StudyMaterialsTab";
-import { VocabPreviewProvider } from "@/components/VocabPreviewProvider";
 import { WebReadingTab } from "@/components/WebReadingTab";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
 import { LearningLanguageProvider } from "@/contexts/LearningLanguageContext";
@@ -110,8 +109,7 @@ function AppHomeInner({
 
   return (
     <ExpressionInsightProvider locale={locale} ui={ui}>
-      <VocabPreviewProvider locale={locale} ui={ui}>
-        <EnglishAnalysisProvider locale={locale} ui={ui}>
+      <EnglishAnalysisProvider locale={locale} ui={ui}>
           <div className="mx-auto flex h-[100dvh] w-full max-w-4xl flex-col bg-slate-100">
             <div className="flex shrink-0 flex-wrap items-center gap-2 border-b border-slate-200/80 bg-white/90 px-3 py-1.5 sm:px-4">
               <TargetLanguageSelector label={ui.learningLanguageLabel} />
@@ -216,7 +214,6 @@ function AppHomeInner({
             </nav>
           </div>
         </EnglishAnalysisProvider>
-      </VocabPreviewProvider>
     </ExpressionInsightProvider>
   );
 }

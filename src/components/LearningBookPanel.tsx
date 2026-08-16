@@ -374,15 +374,21 @@ export function LearningBookPanel({
                     <div className="space-y-2 px-3 pb-3 pt-2">
                       <AnalyzableEnglish
                         sentence={card.corrected}
+                        analyzeLabel={ui.insightAnalyze}
+                        sourceType="example"
                         className={`text-[15px] font-semibold leading-snug text-emerald-950 sm:text-base ${isOpen ? "" : "line-clamp-3"}`}
                       />
                       <AnalyzableEnglish
                         sentence={card.original}
+                        analyzeLabel={ui.insightAnalyze}
+                        sourceType="example"
                         className={`text-[13px] leading-snug text-slate-600 sm:text-[14px] ${isOpen ? "" : "line-clamp-3"}`}
                       />
                       {showNat ? (
                         <AnalyzableEnglish
                           sentence={card.natural ?? ""}
+                          analyzeLabel={ui.insightAnalyze}
+                          sourceType="example"
                           className={`text-[12px] leading-snug text-sky-950 sm:text-[13px] ${isOpen ? "" : "line-clamp-3"}`}
                         />
                       ) : null}

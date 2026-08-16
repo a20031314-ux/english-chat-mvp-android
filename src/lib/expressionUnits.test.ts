@@ -56,3 +56,15 @@ test("normalizeUnitTexts drops a whole-sentence unit", () => {
   );
   assert.deepEqual(units, ["movie", "interesting"]);
 });
+
+test("tapping a Japanese word does not snap to the whole sentence", () => {
+  const sentence = "今日はいい天気ですね。";
+  const snapped = snapToExpressionUnit(sentence, "今日", [sentence, "今日"]);
+  assert.equal(snapped, null);
+});
+
+test("a Japanese word tap does not snap when only the whole sentence is listed", () => {
+  const sentence = "今日はいい天気ですね。";
+  const snapped = snapToExpressionUnit(sentence, "今日", [sentence]);
+  assert.equal(snapped, null);
+});

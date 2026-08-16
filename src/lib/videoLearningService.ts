@@ -22,6 +22,13 @@ export class VideoSubtitleClientError extends Error {
   }
 }
 
+function isAbortError(error: unknown, signal?: AbortSignal): boolean {
+  if (signal?.aborted) return true;
+  if (!error || typeof error !== "object") return false;
+  const name = "name" in error ? String(error.name) : "";
+  return name === "AbortError";
+}
+
 async function readError(response: Response): Promise<string> {
   try {
     const data = (await response.json()) as { error?: string };
@@ -440,7 +447,9 @@ export async function generateLineInterpretations(
         });
         if (response.ok) break;
       } catch (error) {
-        console.error("[video-line-gloss]", { attempt, error });
+        if (isAbortError(error, options?.signal)) {
+          throw new VideoSubtitleClientError("TIMEOUT");
+        }
         response = null;
       }
       if (attempt === 0) {
@@ -537,7 +546,9 @@ export async function glossStudyCues(
       });
       if (response.ok) break;
     } catch (error) {
-      console.error("[video-edit-gloss]", { attempt, error });
+      if (isAbortError(error, options?.signal)) {
+        throw new VideoSubtitleClientError("TIMEOUT");
+      }
       response = null;
     }
     if (attempt === 0) {

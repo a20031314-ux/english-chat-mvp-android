@@ -53,6 +53,7 @@ export function sentenceAnalysisTarget(input: {
     contextSentence: input.sentence.text,
     context: neighborContext(input.paragraph, input.sentence),
     sourceType: "web",
+    intent: "sentence",
     ...(input.language ? { language: input.language } : {}),
   };
 }

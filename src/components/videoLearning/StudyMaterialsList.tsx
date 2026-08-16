@@ -589,6 +589,8 @@ export function EnglishSentenceList({
                     <AnalyzableEnglish
                       sentence={cue.original}
                       analyzeLabel={ui.insightAnalyze}
+                      sourceType="subtitle"
+                      translation={interpretation || undefined}
                       tone={highlighted ? "onDark" : "default"}
                       className={`text-sm leading-snug ${
                         highlighted

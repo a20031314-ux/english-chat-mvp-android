@@ -2,9 +2,7 @@
 
 import {
   useCallback,
-  useEffect,
   useRef,
-  useState,
   type MouseEvent as ReactMouseEvent,
   type PointerEvent as ReactPointerEvent,
   type ReactNode,
@@ -14,24 +12,17 @@ import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 import { selectionFitsSentence } from "@/lib/expressionInsight";
-import {
-  snapToExpressionUnit,
-  type ExpressionUnitSpan,
-} from "@/lib/expressionUnits";
 import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
-import {
-  loadExpressionUnits,
-  prefetchExpressionUnits,
-} from "@/lib/requestExpressionUnits";
+import type { TranslationSourceType } from "@/lib/naturalTranslation";
+import { isSameAnalysisSpan } from "@/lib/englishAnalysis";
+import { splitSentences } from "@/lib/studyMaterials/splitSentences";
+import { isWordToken, tokenize } from "@/lib/textTokens";
+import { prefetchExpressionUnits } from "@/lib/requestExpressionUnits";
 import {
   correctedHighlightParts,
   originalHighlightParts,
 } from "@/lib/textDiff";
-import { normalizeVocabHeadword, isVocabLookupEligible } from "@/lib/vocabulary";
-import {
-  isPronounceableAlphabetLetter,
-  letterPronunciation,
-} from "@/lib/letterPronunciation";
+import { normalizeVocabHeadword } from "@/lib/vocabulary";
 
 type AnalyzableEnglishProps = {
   sentence: string;
@@ -42,65 +33,18 @@ type AnalyzableEnglishProps = {
   context?: string[];
   onAnalyze?: (selected: string) => void;
   children?: ReactNode;
+  sourceType?: TranslationSourceType;
+  language?: string;
+  /** Existing UI-language line to reuse in the sentence inspect sheet. */
+  translation?: string;
+  /** Inside a sentence sheet: pick words/phrases only, no sentence rail. */
+  elementsOnly?: boolean;
   diff?: {
     original: string;
     corrected: string;
     side: "original" | "corrected";
   };
 };
-
-function tokenize(sentence: string): string[] {
-  const parts = sentence.split(/(\s+)/).filter((part) => part.length > 0);
-  const out: string[] = [];
-  for (const part of parts) {
-    if (/^\s+$/.test(part)) {
-      out.push(part);
-      continue;
-    }
-    // Character-level tokens for scripts without spaces (kana / hanzi / kanji).
-    // Hangul uses spaces like Latin, so keep syllable-blocks as whole words.
-    if (/[\u3040-\u30ff\u3400-\u9fff]/.test(part)) {
-      out.push(...Array.from(part));
-      continue;
-    }
-    if (/^[\u0400-\u04FF]/u.test(part)) {
-      out.push(...Array.from(part));
-      continue;
-    }
-    // Peel punctuation from Latin/Cyrillic tokens: "imbatível." → word + "."
-    out.push(...splitAffixedPunctuation(part));
-  }
-  return out;
-}
-
-/** Split leading/trailing punctuation while keeping the word intact. */
-function splitAffixedPunctuation(part: string): string[] {
-  const re =
-    /([^\p{L}\p{M}\p{N}'’_-]+)|([\p{L}\p{M}\p{N}]+(?:['’_-][\p{L}\p{M}\p{N}]+)*)/gu;
-  const pieces: string[] = [];
-  let match: RegExpExecArray | null;
-  while ((match = re.exec(part)) !== null) {
-    pieces.push(match[0]);
-  }
-  return pieces.length > 0 ? pieces : [part];
-}
-
-function tokenIndexAtStart(tokens: string[], start: number) {
-  let offset = 0;
-  for (let i = 0; i < tokens.length; i += 1) {
-    const next = offset + tokens[i].length;
-    if (start >= offset && start < next) return i;
-    offset = next;
-  }
-  return null;
-}
-
-function isWordToken(token: string) {
-  if (!token || /^\s+$/.test(token)) return false;
-  // Punctuation-only is not a word.
-  if (!/[\p{L}\p{M}]/u.test(token)) return false;
-  return true;
-}
 
 function rangeText(tokens: string[], start: number, end: number) {
   const from = Math.min(start, end);
@@ -112,21 +56,7 @@ function rangeText(tokens: string[], start: number, end: number) {
     .trim();
 }
 
-function tokenStartOffset(tokens: string[], index: number) {
-  return tokens.slice(0, index).join("").length;
-}
-
 const TAP_MOVE_PX = 24;
-
-function tokenOverlapsSpan(
-  tokens: string[],
-  index: number,
-  span: ExpressionUnitSpan,
-) {
-  const start = tokenStartOffset(tokens, index);
-  const end = start + tokens[index].length;
-  return start < span.end && end > span.start;
-}
 
 function tokenDiffMarks(diff: {
   original: string;
@@ -168,32 +98,6 @@ const diffMarkClass = {
   },
 };
 
-function SaveWordIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden>
-      <path
-        d="M7 4.25h10A1.75 1.75 0 0 1 18.75 6v13.35a.75.75 0 0 1-1.18.62L12 16.05l-5.57 3.92a.75.75 0 0 1-1.18-.62V6A1.75 1.75 0 0 1 7 4.25Z"
-        className="fill-rose-500"
-      />
-    </svg>
-  );
-}
-
-function AnalyzeIcon() {
-  return (
-    <svg viewBox="0 0 24 24" fill="none" className="h-4 w-4" aria-hidden>
-      <circle cx="10.5" cy="10.5" r="6.25" className="fill-teal-500" />
-      <circle cx="10.5" cy="10.5" r="2.4" fill="white" />
-      <path
-        d="M15.4 15.4 20 20"
-        className="stroke-teal-600"
-        strokeWidth="2.4"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
 function readNativeSelection(root: HTMLElement, sentence: string): string | null {
   const selection = window.getSelection();
   if (!selection || selection.rangeCount === 0 || selection.isCollapsed) {
@@ -215,6 +119,10 @@ export function AnalyzableEnglish({
   context,
   onAnalyze,
   children,
+  sourceType,
+  language,
+  translation: attachedTranslation,
+  elementsOnly = false,
   diff,
 }: AnalyzableEnglishProps) {
   const insight = useExpressionInsightOptional();
@@ -224,22 +132,38 @@ export function AnalyzableEnglish({
   const targetLanguage =
     learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
   const label = analyzeLabel ?? insight?.analyzeLabel;
+  const reusedTranslation = attachedTranslation?.replace(/\s+/g, " ").trim() || "";
+  const inspect = useCallback(
+    (selected: string, intent: "sentence" | "word") => {
+      analysis?.open({
+        selectedText: selected,
+        contextSentence: sentence,
+        context,
+        sourceType: sourceType ?? "conversation",
+        language: language || targetLanguage,
+        intent,
+        ...(reusedTranslation ? { translation: reusedTranslation } : {}),
+      });
+    },
+    [
+      analysis,
+      context,
+      language,
+      reusedTranslation,
+      sentence,
+      sourceType,
+      targetLanguage,
+    ],
+  );
   const handleAnalyze =
     onAnalyze ??
     (analysis
-      ? (selected: string) =>
-          analysis.open({
-            selectedText: selected,
-            contextSentence: sentence,
-            context,
-            sourceType: "conversation",
-            language: targetLanguage,
-          })
+      ? (selected: string) => inspect(selected, "sentence")
       : insight
         ? (selected: string) => insight.open({ sentence, selected, context })
         : undefined);
   const canAnalyze = Boolean(label && handleAnalyze);
-  const canSave = Boolean(vocab?.open);
+  const canSave = Boolean(analysis || vocab?.open);
   const hasContent =
     targetLanguage === "en"
       ? /[A-Za-z]/.test(sentence)
@@ -250,14 +174,6 @@ export function AnalyzableEnglish({
 
   const rootRef = useRef<HTMLDivElement>(null);
   const wrapRef = useRef<HTMLSpanElement>(null);
-  const [pending, setPending] = useState<ExpressionUnitSpan | null>(null);
-  const [snapping, setSnapping] = useState(false);
-  const [letterTip, setLetterTip] = useState<{
-    index: number;
-    sound: string;
-  } | null>(null);
-  const commitIdRef = useRef(0);
-  const letterTipTimerRef = useRef<number | null>(null);
   const dragRef = useRef<{
     start: number;
     end: number;
@@ -268,158 +184,42 @@ export function AnalyzableEnglish({
   const suppressClickRef = useRef(false);
   const skipTokenClickRef = useRef(false);
 
-  const showLetterTip = useCallback((index: number, sound: string) => {
-    if (letterTipTimerRef.current) {
-      window.clearTimeout(letterTipTimerRef.current);
-      letterTipTimerRef.current = null;
-    }
-    setLetterTip({ index, sound });
-    letterTipTimerRef.current = window.setTimeout(() => {
-      setLetterTip(null);
-      letterTipTimerRef.current = null;
-    }, 1800);
-  }, []);
-
-  useEffect(() => {
-    return () => {
-      if (letterTipTimerRef.current) {
-        window.clearTimeout(letterTipTimerRef.current);
-      }
-    };
-  }, []);
-
   const commit = useCallback(
-    (picked: string | null, hintStart?: number, allowSnap = true) => {
-      const cleaned = picked ? normalizeVocabHeadword(picked) || picked.trim() : "";
+    (picked: string | null, isTap = true) => {
+      const cleaned = picked
+        ? normalizeVocabHeadword(picked) || picked.trim()
+        : "";
       if (!cleaned || !selectionFitsSentence(sentence, cleaned)) return;
-
-      // Unfamiliar alphabet / syllabary letter: show sound tip immediately.
-      if (isPronounceableAlphabetLetter(cleaned)) {
-        const sound = letterPronunciation(cleaned);
-        commitIdRef.current += 1;
-        setPending(null);
-        setSnapping(false);
-        if (sound) {
-          const index =
-            hintStart != null
-              ? tokenIndexAtStart(tokenize(sentence), hintStart)
-              : null;
-          if (index != null) showLetterTip(index, sound);
+      if (isSameAnalysisSpan(cleaned, sentence)) {
+        if (onAnalyze) {
+          onAnalyze(cleaned);
+          return;
         }
+        if (analysis) inspect(sentence, "sentence");
         return;
       }
-
-      setLetterTip(null);
-
-      const optimisticStart =
-        hintStart ?? sentence.toLowerCase().indexOf(cleaned.toLowerCase());
-      const wordSpan =
-        optimisticStart >= 0
-          ? {
-              text: cleaned,
-              start: optimisticStart,
-              end: optimisticStart + cleaned.length,
-            }
-          : null;
-
-      // A tap on one word stays that word — do not wait for phrase snap.
-      if (!allowSnap) {
-        commitIdRef.current += 1;
-        setPending(wordSpan);
-        setSnapping(false);
+      if (onAnalyze) {
+        onAnalyze(cleaned);
         return;
       }
-
-      const id = commitIdRef.current + 1;
-      commitIdRef.current = id;
-      setPending(wordSpan);
-      setSnapping(true);
-      void (async () => {
-        try {
-          const units = await loadExpressionUnits(sentence, targetLanguage);
-          if (commitIdRef.current !== id) return;
-          const snapped = snapToExpressionUnit(
-            sentence,
-            cleaned,
-            units,
-            hintStart,
-          );
-          if (commitIdRef.current !== id) return;
-          if (snapped) {
-            const snappedText =
-              normalizeVocabHeadword(snapped.text) || snapped.text;
-            // Only keep units that are content words or idioms/phrases.
-            if (!isVocabLookupEligible(snappedText)) {
-              setPending(null);
-              return;
-            }
-            // Re-locate after stripping edge punctuation from model units.
-            const start =
-              snappedText === snapped.text
-                ? snapped.start
-                : sentence
-                    .toLowerCase()
-                    .indexOf(snappedText.toLowerCase(), snapped.start);
-            setPending({
-              text: snappedText,
-              start: start >= 0 ? start : snapped.start,
-              end:
-                start >= 0
-                  ? start + snappedText.length
-                  : snapped.start + snappedText.length,
-            });
-          } else if (isVocabLookupEligible(cleaned)) {
-            // Model missed a clear content word — still allow lookup.
-            setPending({
-              text: cleaned,
-              start: optimisticStart >= 0 ? optimisticStart : 0,
-              end:
-                (optimisticStart >= 0 ? optimisticStart : 0) + cleaned.length,
-            });
-          } else {
-            // Function word / bare contraction / non-unit fragment.
-            setPending(null);
-          }
-        } catch {
-          if (commitIdRef.current !== id) return;
-          if (isVocabLookupEligible(cleaned)) {
-            setPending({
-              text: cleaned,
-              start: optimisticStart >= 0 ? optimisticStart : 0,
-              end:
-                (optimisticStart >= 0 ? optimisticStart : 0) + cleaned.length,
-            });
-          } else {
-            setPending(null);
-          }
-        } finally {
-          if (commitIdRef.current === id) setSnapping(false);
-        }
-      })();
+      if (analysis) {
+        inspect(cleaned, isTap ? "word" : "sentence");
+        return;
+      }
+      if (!isTap && handleAnalyze) {
+        handleAnalyze(cleaned);
+        return;
+      }
+      vocab?.open(cleaned, sentence);
     },
-    [sentence, targetLanguage, vocab, showLetterTip],
+    [analysis, handleAnalyze, inspect, onAnalyze, sentence, vocab],
   );
 
   const syncNativeSelection = useCallback(() => {
     const root = rootRef.current;
     if (!root) return;
-    commit(readNativeSelection(root, sentence));
+    commit(readNativeSelection(root, sentence), false);
   }, [commit, sentence]);
-
-  useEffect(() => {
-    if (!enabled) return;
-    const onDocPointerDown = (event: PointerEvent) => {
-      const wrap = wrapRef.current;
-      if (!wrap) return;
-      if (event.target instanceof Node && wrap.contains(event.target)) return;
-      commitIdRef.current += 1;
-      setPending(null);
-      setSnapping(false);
-      setLetterTip(null);
-    };
-    document.addEventListener("pointerdown", onDocPointerDown);
-    return () => document.removeEventListener("pointerdown", onDocPointerDown);
-  }, [enabled]);
 
   const tokenIndexFromPoint = (clientX: number, clientY: number) => {
     const root = rootRef.current;
@@ -488,11 +288,7 @@ export function AnalyzableEnglish({
         if (isTap) {
           skipTokenClickRef.current = true;
           event.preventDefault();
-          commit(
-            tokens[drag.start],
-            tokenStartOffset(tokens, drag.start),
-            false,
-          );
+          commit(tokens[drag.start], true);
           return;
         }
         let from = Math.min(drag.start, drag.end);
@@ -503,7 +299,7 @@ export function AnalyzableEnglish({
         if (picked) {
           skipTokenClickRef.current = true;
           event.preventDefault();
-          commit(picked, tokenStartOffset(tokens, from), true);
+          commit(picked, false);
         }
       }
       return;
@@ -519,13 +315,6 @@ export function AnalyzableEnglish({
     event.stopPropagation();
   };
 
-  const clearPending = () => {
-    window.getSelection()?.removeAllRanges();
-    commitIdRef.current += 1;
-    setPending(null);
-    setSnapping(false);
-  };
-
   if (!enabled) {
     return (
       <div translate="no" className={`whitespace-pre-wrap ${className}`}>
@@ -534,10 +323,35 @@ export function AnalyzableEnglish({
     );
   }
 
-  const tabClass =
-    "inline-flex items-center justify-center px-3 py-1.5 transition";
-  const ready = Boolean(pending) && !snapping;
-  const showSave = Boolean(pending) && canSave;
+  if (!elementsOnly && !children && !diff) {
+    const parts = splitSentences(sentence);
+    if (parts.length > 1) {
+      return (
+        <span
+          className={`relative min-w-0 flex-col gap-2 ${
+            inline ? "inline-flex max-w-full" : "flex flex-1"
+          }`}
+        >
+          {parts.map((part, index) => (
+            <AnalyzableEnglish
+              key={`${index}-${part.slice(0, 20)}`}
+              sentence={part}
+              className={className}
+              analyzeLabel={analyzeLabel}
+              tone={tone}
+              context={context}
+              onAnalyze={onAnalyze}
+              sourceType={sourceType}
+              language={language}
+            />
+          ))}
+        </span>
+      );
+    }
+  }
+
+  const showSentenceRail = useTokens && !elementsOnly;
+  const sentenceLabel = label ?? "sentence";
 
   const marks = diff ? tokenDiffMarks(diff) : null;
   const markStyles = diffMarkClass[tone];
@@ -546,7 +360,6 @@ export function AnalyzableEnglish({
       return <span key={`${index}-s`}>{token}</span>;
     }
     const mark = marks?.get(index);
-    const tip = letterTip?.index === index ? letterTip.sound : null;
     return (
       <span
         key={`${index}-${token}`}
@@ -560,40 +373,18 @@ export function AnalyzableEnglish({
             skipTokenClickRef.current = false;
             return;
           }
-          commit(token, tokenStartOffset(tokens, index), false);
+          commit(token, true);
         }}
         onKeyDown={(event) => {
           if (event.key !== "Enter" && event.key !== " ") return;
           event.preventDefault();
-          commit(token, tokenStartOffset(tokens, index), false);
+          commit(token, true);
         }}
         className={`relative cursor-pointer rounded-sm ${
-          pending && tokenOverlapsSpan(tokens, index, pending)
-            ? tone === "onDark"
-              ? "bg-white/25"
-              : "bg-amber-200/80"
-            : tip
-              ? tone === "onDark"
-                ? "bg-white/30"
-                : "bg-amber-200/90"
-              : mark
-                ? markStyles[mark]
-                : "hover:bg-amber-100/70"
+          mark ? markStyles[mark] : "hover:bg-amber-100/70"
         }`}
       >
         {token}
-        {tip ? (
-          <span
-            className={`pointer-events-none absolute bottom-full left-1/2 z-20 mb-1 -translate-x-1/2 whitespace-nowrap rounded-md px-2 py-0.5 text-sm font-semibold shadow-md ${
-              tone === "onDark"
-                ? "bg-white text-slate-900"
-                : "bg-slate-900 text-white"
-            }`}
-            role="status"
-          >
-            {tip}
-          </span>
-        ) : null}
       </span>
     );
   };
@@ -632,71 +423,58 @@ export function AnalyzableEnglish({
   return (
     <span
       ref={wrapRef}
-      className={`relative min-w-0 ${inline ? "inline-block max-w-full" : "block flex-1"}`}
+      className={`relative min-w-0 ${
+        showSentenceRail
+          ? inline
+            ? "inline-flex max-w-full items-stretch gap-1.5"
+            : "flex flex-1 items-stretch gap-1.5"
+          : inline
+            ? "inline-block max-w-full"
+            : "block flex-1"
+      }`}
     >
-      <div
-        ref={rootRef}
-        translate="no"
-        className={`whitespace-pre-wrap ${
-          useTokens
-            ? "select-none"
-            : "[user-select:text] [-webkit-user-select:text]"
-        } ${className}`}
-        onPointerDown={onPointerDown}
-        onPointerMove={onPointerMove}
-        onPointerUp={onPointerUp}
-        onClick={onClick}
-      >
-        {children ? children : tokenNodes}
-      </div>
-      {pending && (showSave || canAnalyze) ? (
-        <div
-          className={`mt-2 inline-flex max-w-full overflow-hidden rounded-full border text-[11px] shadow-sm ${
+      {showSentenceRail ? (
+        <button
+          type="button"
+          aria-label={sentenceLabel}
+          title={sentenceLabel}
+          onPointerDown={(event) => {
+            event.preventDefault();
+            event.stopPropagation();
+          }}
+          onClick={(event) => {
+            event.preventDefault();
+            event.stopPropagation();
+            if (analysis) {
+              inspect(sentence, "sentence");
+              return;
+            }
+            commit(sentence, false);
+          }}
+          className={`w-1 shrink-0 self-stretch rounded-full ${
             tone === "onDark"
-              ? "border-white/30 bg-white"
-              : "border-slate-200 bg-white"
-          } ${snapping ? "opacity-70" : ""}`}
-        >
-          {showSave ? (
-            <button
-              type="button"
-              disabled={!ready}
-              onPointerDown={(event) => event.preventDefault()}
-              onClick={() => {
-                if (!pending || snapping) return;
-                vocab?.open(pending.text, sentence);
-                clearPending();
-              }}
-              className={`${tabClass} hover:bg-rose-50 disabled:opacity-50`}
-              aria-label={vocab?.saveLabel}
-              title={vocab?.saveLabel}
-            >
-              <SaveWordIcon />
-            </button>
-          ) : null}
-          {showSave && canAnalyze ? (
-            <span className="w-px bg-slate-200" aria-hidden />
-          ) : null}
-          {canAnalyze ? (
-            <button
-              type="button"
-              disabled={!ready}
-              onPointerDown={(event) => event.preventDefault()}
-              onClick={() => {
-                if (!pending || snapping) return;
-                vocab?.close();
-                handleAnalyze?.(pending.text);
-                clearPending();
-              }}
-              className={`${tabClass} hover:bg-teal-50 disabled:opacity-50`}
-              aria-label={label}
-              title={label}
-            >
-              <AnalyzeIcon />
-            </button>
-          ) : null}
-        </div>
+              ? "bg-white/35 hover:bg-white/70"
+              : "bg-slate-300 hover:bg-teal-500"
+          }`}
+        />
       ) : null}
+      <span className={showSentenceRail ? "min-w-0 flex-1" : "min-w-0"}>
+        <div
+          ref={rootRef}
+          translate="no"
+          className={`whitespace-pre-wrap ${
+            useTokens
+              ? "select-none"
+              : "[user-select:text] [-webkit-user-select:text]"
+          } ${className}`}
+          onPointerDown={onPointerDown}
+          onPointerMove={onPointerMove}
+          onPointerUp={onPointerUp}
+          onClick={onClick}
+        >
+          {children ? children : tokenNodes}
+        </div>
+      </span>
     </span>
   );
 }

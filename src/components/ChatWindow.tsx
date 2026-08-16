@@ -38,6 +38,7 @@ import {
   isLearningLanguageCode,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
+import { translateUtterance } from "@/lib/translateUtterance";
 
 type CorrectionResult = {
   corrected: string;
@@ -1039,23 +1040,14 @@ export function ChatWindow({
           ),
         )
         .slice(-6);
-      const response = await fetch(apiUrl("/api/translate"), {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          text: trimmed,
-          locale,
-          interfaceLanguage: locale,
-          targetLanguage: sessionLanguageCode,
-          sourceType: "conversation",
-          context: nearby,
-        }),
+      const translated = await translateUtterance({
+        text: trimmed,
+        locale,
+        interfaceLanguage: locale,
+        targetLanguage: sessionLanguageCode,
+        sourceType: "conversation",
+        context: nearby,
       });
-      if (!response.ok) {
-        throw new Error("translate failed");
-      }
-      const data = (await response.json()) as { translated?: string };
-      const translated = data.translated?.trim() || "";
       if (!translated) {
         throw new Error("empty translation");
       }

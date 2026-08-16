@@ -191,6 +191,8 @@ function ReviewCardView({ card, ui }: { card: ReviewCard; ui: UICopy }) {
               <AnalyzableEnglish
                 sentence={card.original}
                 inline
+                analyzeLabel={ui.insightAnalyze}
+                sourceType="example"
                 className="text-slate-800"
               />
             </div>
@@ -199,6 +201,8 @@ function ReviewCardView({ card, ui }: { card: ReviewCard; ui: UICopy }) {
               <AnalyzableEnglish
                 sentence={card.corrected}
                 inline
+                analyzeLabel={ui.insightAnalyze}
+                sourceType="example"
                 className="font-medium text-teal-800"
               />
             </div>
@@ -209,6 +213,7 @@ function ReviewCardView({ card, ui }: { card: ReviewCard; ui: UICopy }) {
         </p>
         <ExampleList
           label={ui.reviewExamples}
+          analyzeLabel={ui.insightAnalyze}
           examples={uniqueReviewSentences(card.examples, [
             card.original,
             card.corrected,
@@ -231,7 +236,10 @@ function ReviewCardView({ card, ui }: { card: ReviewCard; ui: UICopy }) {
         {card.senses.map((sense, index) => (
           <div key={`${card.id}-s-${index}`}>
             <p className="text-sm font-medium text-slate-800">{sense.gloss}</p>
-            <ExampleList examples={sense.examples} />
+            <ExampleList
+              examples={sense.examples}
+              analyzeLabel={ui.insightAnalyze}
+            />
           </div>
         ))}
       </div>
@@ -261,9 +269,11 @@ function ReviewCardView({ card, ui }: { card: ReviewCard; ui: UICopy }) {
 function ExampleList({
   label,
   examples,
+  analyzeLabel,
 }: {
   label?: string;
   examples: string[];
+  analyzeLabel?: string;
 }) {
   if (examples.length === 0) return null;
   return (
@@ -277,6 +287,8 @@ function ExampleList({
         <div key={example} className="flex items-start justify-between gap-2">
           <AnalyzableEnglish
             sentence={example}
+            analyzeLabel={analyzeLabel}
+            sourceType="example"
             className="text-sm leading-relaxed text-slate-700"
           />
           <TTSButton text={example} />
