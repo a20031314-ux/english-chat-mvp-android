@@ -17,7 +17,6 @@ import {
   type LearningCard,
 } from "@/lib/learningCards";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
-import { LanguageSelector } from "./LanguageSelector";
 import { MessageBubble } from "./MessageBubble";
 import { ChatHistoryPanel } from "./ChatHistoryPanel";
 import { PaywallModal } from "./PaywallModal";
@@ -609,13 +608,11 @@ function buildExpressionSavedItem(
 type ChatWindowProps = {
   tabMode?: boolean;
   locale?: Locale;
-  onLocaleChange?: (locale: Locale) => void;
 };
 
 export function ChatWindow({
   tabMode = false,
   locale: localeProp,
-  onLocaleChange,
 }: ChatWindowProps) {
   const { isPremium, isBillingReady, refreshPremium, setPremiumForUi } =
     usePremium();
@@ -624,7 +621,7 @@ export function ChatWindow({
     learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
   const [sessionLanguageCode, setSessionLanguageCode] =
     useState<LearningLanguageCode>(targetLanguage);
-  const [localeState, setLocaleState] = useState<Locale>(() => {
+  const [localeState] = useState<Locale>(() => {
     if (typeof window === "undefined") {
       return "ko";
     }
@@ -639,13 +636,6 @@ export function ChatWindow({
     return "ko";
   });
   const locale = localeProp ?? localeState;
-  const setLocale = (next: Locale) => {
-    if (onLocaleChange) {
-      onLocaleChange(next);
-    } else {
-      setLocaleState(next);
-    }
-  };
   const ui = useUiCopy(locale);
   const [bookToast, setBookToast] = useState<string | null>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
@@ -1368,11 +1358,7 @@ export function ChatWindow({
               >
                 ☰
               </button>
-            ) : (
-              <div className="shrink-0">
-                <LanguageSelector locale={locale} onChange={setLocale} />
-              </div>
-            )}
+            ) : null}
 
             <div className="min-w-0 flex-1 text-center md:text-left">
               <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5 md:justify-start">

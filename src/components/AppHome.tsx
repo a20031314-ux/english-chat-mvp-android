@@ -9,6 +9,7 @@ import { ExpressionInsightProvider } from "@/components/ExpressionInsightProvide
 import { TAB_ICON_META } from "@/components/TabIcons";
 import { TargetLanguageSelector } from "@/components/TargetLanguageSelector";
 import { VocabularyPanel } from "@/components/VocabularyPanel";
+import { StudyMaterialsTab } from "@/components/studyMaterials/StudyMaterialsTab";
 import { VocabPreviewProvider } from "@/components/VocabPreviewProvider";
 import { WebReadingTab } from "@/components/WebReadingTab";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
@@ -16,9 +17,9 @@ import { LearningLanguageProvider } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
 import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
 
-export type AppTab = "chat" | "read" | "video" | "vocab";
+export type AppTab = "chat" | "read" | "study" | "video" | "vocab";
 
-const TABS: AppTab[] = ["chat", "read", "video", "vocab"];
+const TABS: AppTab[] = ["chat", "read", "study", "video", "vocab"];
 
 function isAppTab(value: string | null): value is AppTab {
   return TABS.includes(value as AppTab);
@@ -29,6 +30,7 @@ function resolveTab(raw: string | null | undefined): AppTab {
   if (raw === "reports" || raw === "sessions" || raw === "monthly") return "chat";
   if (raw === "quiz" || raw === "explore") return "chat";
   if (raw === "web" || raw === "reader") return "read";
+  if (raw === "study" || raw === "materials" || raw === "library") return "study";
   if (raw === "watch" || raw === "youtube") return "video";
   if (isAppTab(raw)) return raw;
   return "chat";
@@ -101,6 +103,7 @@ function AppHomeInner({
   const tabItems: { id: AppTab; label: string }[] = [
     { id: "chat", label: ui.homeTabChat },
     { id: "read", label: ui.homeTabRead },
+    { id: "study", label: ui.homeTabStudy },
     { id: "video", label: ui.homeTabVideo },
     { id: "vocab", label: ui.homeTabVocab },
   ];
@@ -110,8 +113,13 @@ function AppHomeInner({
       <VocabPreviewProvider locale={locale} ui={ui}>
         <EnglishAnalysisProvider locale={locale} ui={ui}>
           <div className="mx-auto flex h-[100dvh] w-full max-w-4xl flex-col bg-slate-100">
-            <div className="flex shrink-0 items-center justify-between gap-2 border-b border-slate-200/80 bg-white/90 px-3 py-1.5 sm:px-4">
+            <div className="flex shrink-0 flex-wrap items-center gap-2 border-b border-slate-200/80 bg-white/90 px-3 py-1.5 sm:px-4">
               <TargetLanguageSelector label={ui.learningLanguageLabel} />
+              <LanguageSelector
+                locale={locale}
+                onChange={setLocale}
+                label={ui.uiLanguageLabel}
+              />
             </div>
             <div className="relative min-h-0 flex-1 overflow-hidden p-2 pb-0 sm:p-4 sm:pb-0">
               <div
@@ -122,11 +130,7 @@ function AppHomeInner({
                 }
                 aria-hidden={tab !== "chat"}
               >
-                <ChatWindow
-                  tabMode
-                  locale={locale}
-                  onLocaleChange={setLocale}
-                />
+                <ChatWindow tabMode locale={locale} />
               </div>
 
               <div
@@ -141,8 +145,18 @@ function AppHomeInner({
                   locale={locale}
                   ui={ui}
                   active={tab === "read"}
-                  onLocaleChange={setLocale}
                 />
+              </div>
+
+              <div
+                className={
+                  tab === "study"
+                    ? "h-full"
+                    : "pointer-events-none invisible absolute inset-0 -z-10 overflow-hidden opacity-0"
+                }
+                aria-hidden={tab !== "study"}
+              >
+                <StudyMaterialsTab locale={locale} ui={ui} />
               </div>
 
               <div
@@ -157,7 +171,6 @@ function AppHomeInner({
                   locale={locale}
                   ui={ui}
                   active={tab === "video"}
-                  onLocaleChange={setLocale}
                 />
               </div>
 
@@ -167,7 +180,6 @@ function AppHomeInner({
                     <h1 className="text-base font-semibold text-slate-900">
                       {ui.homeTabVocab}
                     </h1>
-                    <LanguageSelector locale={locale} onChange={setLocale} />
                   </header>
                   <div className="min-h-0 flex-1 overflow-hidden">
                     <VocabularyPanel locale={locale} ui={ui} />
@@ -180,7 +192,7 @@ function AppHomeInner({
               className="shrink-0 border-t border-slate-200 bg-white px-1 pb-[env(safe-area-inset-bottom)] pt-1 shadow-[0_-4px_16px_rgba(15,23,42,0.04)]"
               aria-label="Main"
             >
-              <div className="mx-auto grid max-w-4xl grid-cols-4 gap-0.5">
+              <div className="mx-auto grid max-w-4xl grid-cols-5 gap-0.5">
                 {tabItems.map((item) => {
                   const active = tab === item.id;
                   const meta = TAB_ICON_META[item.id];

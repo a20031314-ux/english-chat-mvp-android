@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 import { LearningReviewModal } from "@/components/LearningReviewModal";
 import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
 import { LanguageSelector } from "@/components/LanguageSelector";
+import { TargetLanguageSelector } from "@/components/TargetLanguageSelector";
 import { APP_LOCALE_STORAGE_KEY, isLocale, Locale } from "@/lib/copy";
 import type { UICopy } from "@/lib/copy";
 import { useUiCopy } from "@/hooks/useUiCopy";
@@ -250,8 +251,13 @@ export function LearningBookPanel({
       <div className="min-h-0 flex-1 overflow-y-auto px-4 pb-4 pt-4">
         <div className="mx-auto w-full max-w-lg">
           {showLanguageSelector && onLocaleChange ? (
-            <div className="mb-4 flex justify-end">
-              <LanguageSelector locale={locale} onChange={onLocaleChange} />
+            <div className="mb-4 flex flex-wrap items-center justify-end gap-2">
+              <TargetLanguageSelector label={ui.learningLanguageLabel} />
+              <LanguageSelector
+                locale={locale}
+                onChange={onLocaleChange}
+                label={ui.uiLanguageLabel}
+              />
             </div>
           ) : null}
 

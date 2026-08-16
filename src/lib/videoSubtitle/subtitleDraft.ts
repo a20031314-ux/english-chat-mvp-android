@@ -90,6 +90,8 @@ export function localeTargetName(locale: string): string {
     fr: "French",
     pt: "Portuguese",
     id: "Indonesian",
+    it: "Italian",
+    ru: "Russian",
   };
   return names[locale] ?? names.ko!;
 }

@@ -103,16 +103,21 @@ const LATIN_ALLOW = new Set([
 ]);
 
 /**
- * Content English words (lowercase in original) left inside a Korean caption.
- * e.g. "난 unconscious 아니었어" — must be rewritten.
+ * Content English words (lowercase in original) left inside a caption.
+ * e.g. "난 unconscious 아니었어" / "Estoy losing my mind" — must be rewritten.
  * Title-case names (Wade, Deadpool) are allowed to stay.
  */
 export function leftoverEnglishContentWords(
   original: string,
   subtitle: string,
+  locale = "ko",
 ): string[] {
   const sub = subtitle.replace(/\s+/g, " ").trim();
-  if (!sub || !/[가-힣]/.test(sub)) return [];
+  if (!sub) return [];
+  if (locale === "en") return [];
+  if (locale === "ko" && !/[가-힣]/.test(sub)) return [];
+  if (locale === "ja" && !/[\u3040-\u30ff\u3400-\u9fff]/.test(sub)) return [];
+  if (locale === "zh" && !/[\u3400-\u9fff]/.test(sub)) return [];
 
   const leftovers: string[] = [];
   const seen = new Set<string>();
@@ -132,7 +137,7 @@ export function leftoverEnglishContentWords(
   return leftovers;
 }
 
-/** Korean locale captions that are still mostly English / gloss mirrors / mixed leftovers. */
+/** Locale captions that are still mostly English / gloss mirrors / mixed leftovers. */
 export function looksLikeLiteralOrForeignCaption(
   original: string,
   subtitle: string,
@@ -140,9 +145,15 @@ export function looksLikeLiteralOrForeignCaption(
 ): boolean {
   const sub = subtitle.replace(/\s+/g, " ").trim();
   if (!sub) return true;
+  if (locale === "en") return false;
+  if (leftoverEnglishContentWords(original, sub, locale).length > 0) return true;
+
+  const orig = original.toLowerCase().replace(/[^a-z0-9\s]/g, " ").trim();
+  const subLatin = sub.toLowerCase().replace(/[^a-z0-9\s]/g, " ").trim();
+  if (orig.length > 8 && subLatin.length > 8 && orig === subLatin) return true;
+
   if (locale === "ko") {
     if (looksLikeCalqueKorean(sub)) return true;
-    if (leftoverEnglishContentWords(original, sub).length > 0) return true;
     // Idioms must not keep a word-mapped calque shape.
     if (
       looksIdiomaticEnglish(original) &&
@@ -162,9 +173,6 @@ export function looksLikeLiteralOrForeignCaption(
     const latinHeavy =
       (sub.match(/[A-Za-z]/g)?.length ?? 0) > Math.max(8, sub.length * 0.45);
     if (!hasHangul && latinHeavy) return true;
-    const orig = original.toLowerCase().replace(/[^a-z0-9\s]/g, " ");
-    const subLatin = sub.toLowerCase().replace(/[^a-z0-9\s]/g, " ");
-    if (orig.length > 8 && subLatin.length > 8 && orig === subLatin) return true;
   }
   return false;
 }

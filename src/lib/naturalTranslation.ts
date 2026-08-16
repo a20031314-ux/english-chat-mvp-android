@@ -60,16 +60,30 @@ const SOURCE_HINT_EN_KO: Record<TranslationSourceType, string> = {
 };
 
 const SOURCE_HINT_GENERIC: Record<TranslationSourceType, string> = {
-  conversation: "Spoken chat. Match the source register.",
-  report: "Learner output from a session. Keep their intent; do not polish them into a different person.",
+  conversation:
+    "Spoken chat. Match the source register — casual → casual spoken UI language, not a polite tutor.",
+  report:
+    "Learner output from a session. Keep their intent; do not polish them into a different person.",
   example: "A teaching example. Still sound like a real person would say it.",
   web: "Web/article text. Register may be newsy or casual.",
-  community: "Forum/comment text. Slang, sarcasm, memes, and emoji are possible — never assumed.",
-  social: "Social/SNS text. Abbreviations and tone markers are possible — never assumed.",
-  subtitle: "Theatrical / streaming subtitle. Sense-for-sense, short enough to read on screen, spoken register — not a textbook gloss of each word.",
-  formal: "More careful wording. Keep a natural formal register; do not make it slangy.",
+  community:
+    "Forum/comment text. Slang, sarcasm, memes, and emoji are possible — never assumed.",
+  social:
+    "Social/SNS text. Abbreviations and tone markers are possible — never assumed.",
+  subtitle:
+    "Theatrical / streaming subtitle. Sense-for-sense, short enough to read on screen, spoken register — not a textbook gloss of each word.",
+  formal:
+    "More careful wording. Keep a natural formal register; do not make it slangy.",
   unknown: "Register unknown. Infer only from the line and nearby context.",
 };
+
+/** English learning + Korean UI is the gold craft pack. Other pairs reuse the same target→UI relationship. */
+export function isEnKoCraftPair(
+  targetLanguage: string,
+  interfaceLanguage: string,
+): boolean {
+  return targetLanguage === "en" && interfaceLanguage === "ko";
+}
 
 export type NaturalTranslationOptions = {
   /** @deprecated Prefer interfaceLanguage. Treated as interface/output language. */
@@ -93,10 +107,7 @@ export function naturalTranslationPrinciples(
     options.interfaceLanguage ?? options.locale ?? "ko";
   const targetLanguage = (options.targetLanguage ?? "en") as string;
   const sourceType = options.sourceType ?? "unknown";
-  const keepEnKoCraft =
-    targetLanguage === "en" && interfaceLanguage === "ko";
-
-  if (keepEnKoCraft) {
+  if (isEnKoCraftPair(targetLanguage, interfaceLanguage)) {
     return enToKoPrinciples(options.role, sourceType);
   }
 
@@ -172,7 +183,7 @@ function genericInterpretPrinciples(options: {
 
   const roleHint =
     options.role === "gloss"
-      ? `This is a SHORT gloss of a word/phrase as a unit. Not a full sentence. Not a word-by-word gloss of each piece.`
+      ? `This is a SHORT gloss of a word/phrase as a unit. Not a full sentence. Not a word-by-word gloss of each piece. If slang is the usual learner lookup, say that meaning; do not invent a meme reading without a sentence.`
       : options.role === "meaning-in-context"
         ? `This is ONE short natural rendering of THIS use in THIS sentence. No lecture. No extra senses. Analysis of why belongs in other fields.`
         : options.role === "example"
@@ -181,22 +192,33 @@ function genericInterpretPrinciples(options: {
 
   return `Interpret the ${sourceName} content naturally in ${interfaceName}.
 
-Translation goal: render what the speaker is actually doing — meaning, intent, tone, and force — as a natural ${interfaceName} line. Not ${sourceName} words mapped onto ${interfaceName} words.
+Translation goal: render what the speaker is actually doing with this ${sourceName} — meaning, intent, tone, and force — as a natural ${interfaceName} line. Not ${sourceName} words mapped onto ${interfaceName} words.
 
-Order of thought: context → intent/speech-act → idiom/slang? → tone/emotion → natural line.
+Order of thought: context → intent/speech-act → idiom/phrasal/slang? → tone/emotion → natural line.
 ${roleHint}
-Source hint (auxiliary only): ${sourceHint}
+Source hint (auxiliary only, never a rule that "everything is slang"): ${sourceHint}
+
+${interfaceName} rendering:
+- Prefer ${interfaceName} a speaker would actually say. Drop repeated subjects/pronouns when that language does.
+- Casual ${sourceName} → casual spoken ${interfaceName}. Formal ${sourceName} → a natural formal register. Internet comments → community wording only when needed. Not a tutor voice.
+- Keep loanwords speakers of ${interfaceName} actually use. Do not unpack them into textbook paraphrases.
+- Emoji: render the reaction only when that is clearly the use.
+- Profanity: keep force. Do not invent harsher swearing, and do not sanitize a real insult into textbook ${interfaceName}.
+- Humor: keep the joke. Do not add a new joke that was not in the ${sourceName}.
 
 Do:
 - Prefer natural paraphrase that a ${interfaceName} speaker would say in the same situation.
-- Keep speech-act, hedges, certainty, polarity, and attitude.
-- Treat multi-word expressions as units when they function as units in ${sourceName}.
-- Judge slang/memes from THIS sentence + neighbors; do not invent trendy readings.
+- Keep speech-act: a request stays a request (ability-question form → ask them to do it, not "are you able to").
+- Treat idioms, phrasal verbs, and collocations as units.
+- Judge slang/memes from THIS sentence + neighbors. Same letters can be different readings.
+- Keep hedges, certainty, polarity, and attitude. Do not add or drop the closing question.
+- If context is too thin to claim sarcasm or a brand-new meme, stay with the reading the sentence itself supports.
 
 Do not:
 - Calque ${sourceName} word order into ${interfaceName}.
 - Add meaning, soften or amp emotion, or flip positive/negative to "sound nicer".
-- Put explanations, labels, or quotes in the translation itself.
+- Split a phrasal/idiom into dictionary parts.
+- Put explanations, labels, or quotes in the translation itself. Translation = quick understanding. Why it means that = analysis fields.
 
-Self-check before returning: same core meaning and attitude; right reading for this context; natural spoken ${interfaceName}; no invented extra idea.`;
+Self-check before returning: same core meaning and attitude; right reading for this context; no leftover ${sourceName} syntax; natural spoken ${interfaceName}; no invented extra idea.`;
 }

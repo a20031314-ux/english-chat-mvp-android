@@ -24,6 +24,8 @@ const OUTPUT_LANGUAGES: Record<string, string> = {
   fr: "French",
   pt: "Portuguese",
   id: "Indonesian",
+  it: "Italian (italiano)",
+  ru: "Russian (русский)",
 };
 
 function getClient() {

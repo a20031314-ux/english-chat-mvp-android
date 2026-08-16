@@ -28,6 +28,8 @@ const TARGET_LANGUAGES: Record<string, string> = {
   fr: "French",
   pt: "Portuguese",
   id: "Indonesian",
+  it: "Italian",
+  ru: "Russian",
 };
 
 type IncomingItem = {

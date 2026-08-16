@@ -1,7 +1,7 @@
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { chatModel, getOpenAIClient } from "@/lib/videoSubtitle/openaiClient";
 import { asRecord, asString, parseModelJson } from "@/lib/videoSubtitle/parseModelJson";
-import { scenePayload } from "@/lib/videoSubtitle/subtitleDraft";
+import { scenePayload, localeTargetName } from "@/lib/videoSubtitle/subtitleDraft";
 import type { SceneContext } from "@/lib/videoSubtitle/sceneTypes";
 import type { UtteranceTone } from "@/lib/videoSubtitle/subtitleDraft";
 import type { VideoContext } from "@/lib/videoSubtitle/types";
@@ -44,6 +44,7 @@ export async function analyzeAdaptedSubtitle(input: {
   if (!client) throw new VideoPipelineError("MISSING_OPENAI_KEY");
 
   const inKorean = input.locale === "ko";
+  const target = localeTargetName(input.locale);
 
   const completion = await client.chat.completions.create({
     model: chatModel(),
@@ -72,10 +73,26 @@ JSON으로만 답한다:
   "nuance": "태도·강도·친밀도·농담/진지 등 감각적인 메모",
   "similar": ["비슷한 한국어 감각의 다른 말 1~3개"]
 }`
-          : `The learner asked what this expression is like.
-Explain in order: (1) what a native viewer understood in THIS scene, (2) why the subtitle feels that way, (3) optional general usage.
-Use nativeUnderstanding / SCENE CONTEXT only as soft evidence.
-Return JSON with keyExpression, keyMeaning, whyThisSubtitle, meaningInSentence, nuance, similar.`,
+          : `Answer as if the learner asked what this expression is.
+
+Write learner-facing fields ONLY in ${target}.
+Order:
+1) What a native viewer actually understood in THIS scene (prefer nativeUnderstanding when present)
+2) Why the ${target} subtitle feels that way — how deixis/implication was unpacked
+3) Optional short note on general usage
+
+SCENE CONTEXT / nativeUnderstanding is extra evidence. Do not state guesses as facts.
+Prefer “how a ${target} speaker would hear this vibe” over a dictionary dump.
+
+Return JSON only:
+{
+  "keyExpression": "the key source expression",
+  "keyMeaning": "short meaning in ${target}",
+  "whyThisSubtitle": "why the caption has that ${target} feel — scene, referent, tone",
+  "meaningInSentence": "what this line is doing in this conversation/scene",
+  "nuance": "attitude, force, intimacy, joke vs serious",
+  "similar": ["1–3 other ${target} lines with a similar feel"]
+}`,
       },
       {
         role: "user",

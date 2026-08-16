@@ -91,7 +91,11 @@ export function ReviewTab({
               {ui.reviewResetCta}
             </button>
           ) : null}
-          <LanguageSelector locale={locale} onChange={onLocaleChange} />
+          <LanguageSelector
+            locale={locale}
+            onChange={onLocaleChange}
+            label={ui.uiLanguageLabel}
+          />
         </div>
       </header>
 

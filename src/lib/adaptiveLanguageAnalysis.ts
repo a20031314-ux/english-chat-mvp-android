@@ -11,6 +11,7 @@ import {
   type LearnerLevel,
 } from "@/lib/languageAnalysisPrompt";
 import {
+  explanationLanguageGuard,
   interfaceLanguageDisplayName,
 } from "@/lib/languageLearningAnalysis";
 import { learningLanguageName } from "@/lib/learningLanguages";
@@ -147,20 +148,23 @@ export function adaptiveOverviewSystem(options: {
   const interfaceName =
     ANALYSIS_LANGUAGES[interfaceLanguage] ??
     interfaceLanguageDisplayName(interfaceLanguage);
-  const mustBeKorean =
+  const explanationGuard = explanationLanguageGuard({
+    interfaceLanguage,
+    fieldsDescription:
+      "naturalMeaning, learningUnits.meaning, explanation, nuance, and optionalLanguageNote",
+  });
+  const sourceFormNote =
     interfaceLanguage === "ko"
-      ? `
-Write naturalMeaning, learningUnits.meaning, explanation, nuance, and optionalLanguageNote in Korean Hangul.
-Keep source-language forms in text / reading / romanization / pronunciation / example.sentence.
-`
-      : "";
+      ? `Keep source-language forms in text / reading / romanization / pronunciation / example.sentence.`
+      : `Keep source-language forms in text / reading / romanization / pronunciation / example.sentence. Learner-facing explanations stay in ${interfaceName}.`;
 
   return `${adaptiveCorePhilosophy(targetName)}
 
 Target language being learned: ${targetName} (${options.targetLanguage}).
 Caller language hint: ${options.languageHint?.trim() || targetName}. Still verify from the actual sentence.
 Write learner-facing explanations in ${interfaceName}.
-${mustBeKorean}
+${explanationGuard}
+${sourceFormNote}
 ${adaptiveLevelHint(options.learnerLevel)}
 
 Natural meaning follows:
@@ -215,13 +219,15 @@ export function adaptiveElementSystem(options: {
   const interfaceName =
     ANALYSIS_LANGUAGES[interfaceLanguage] ??
     interfaceLanguageDisplayName(interfaceLanguage);
-  const mustBeKorean =
+  const explanationGuard = explanationLanguageGuard({
+    interfaceLanguage,
+    fieldsDescription:
+      "meaningInContext, whyUsed, example meanings, and otherUsages.meaning",
+  });
+  const sourceFormNote =
     interfaceLanguage === "ko"
-      ? `
-Write meaningInContext, whyUsed, example meanings, and otherUsages.meaning in Korean Hangul.
-Keep source forms in title, pattern, reading, romanization, pronunciation, baseForm, and example.sentence.
-`
-      : "";
+      ? `Keep source forms in title, pattern, reading, romanization, pronunciation, baseForm, and example.sentence.`
+      : `Keep source forms in title, pattern, reading, romanization, pronunciation, baseForm, and example.sentence. Learner-facing explanations stay in ${interfaceName}.`;
 
   return `${adaptiveCorePhilosophy(targetName)}
 
@@ -229,7 +235,8 @@ This request is DETAIL ZOOM for ONE selected learning unit inside ONE ${targetNa
 Adapt the depth to what THIS unit needs in ${targetName} (reading, conjugation, tone, register, etc.) — but keep it short.
 
 Write learner-facing text in ${interfaceName}.
-${mustBeKorean}
+${explanationGuard}
+${sourceFormNote}
 Caller language hint: ${options.languageHint?.trim() || targetName}.
 ${adaptiveLevelHint(options.learnerLevel)}
 

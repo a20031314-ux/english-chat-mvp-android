@@ -75,6 +75,12 @@ function defaultIntent(
   };
 }
 
+export function contentSearchIntentFromRequest(
+  request: ContentDiscoveryRequest,
+): ContentSearchIntent {
+  return defaultIntent(request);
+}
+
 function normalizeIntent(
   raw: unknown,
   request: ContentDiscoveryRequest,
@@ -162,7 +168,7 @@ export async function parseSearchIntent(
 ): Promise<ContentSearchIntent> {
   const fallback = defaultIntent(request);
   const natural = request.naturalQuery?.trim();
-  // Category-only search: keep curated keywords (covers full crawl surface).
+  // Category-only search: keep curated keywords for the search provider.
   if (!natural) {
     return fallback;
   }

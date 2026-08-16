@@ -44,6 +44,10 @@ export async function POST(request: NextRequest) {
     sourceType?: unknown;
     language?: unknown;
     learnerLevel?: unknown;
+    context?: unknown;
+    paragraph?: unknown;
+    previousContext?: unknown;
+    nextContext?: unknown;
   };
   try {
     body = await request.json();
@@ -72,6 +76,18 @@ export async function POST(request: NextRequest) {
     typeof body.language === "string" && body.language.trim()
       ? body.language.trim()
       : learningLanguageName(targetLanguage);
+  const paragraph =
+    typeof body.paragraph === "string"
+      ? body.paragraph.replace(/\s+/g, " ").trim().slice(0, 1200)
+      : "";
+  const previousContext =
+    typeof body.previousContext === "string"
+      ? body.previousContext.replace(/\s+/g, " ").trim()
+      : "";
+  const nextContext =
+    typeof body.nextContext === "string"
+      ? body.nextContext.replace(/\s+/g, " ").trim()
+      : "";
 
   const useEnglishPipeline = targetLanguage === "en";
 
@@ -104,6 +120,9 @@ export async function POST(request: NextRequest) {
             languageHint,
             targetLanguage,
             ...(learnerLevel ? { learnerLevel } : {}),
+            ...(previousContext ? { previousContext } : {}),
+            ...(nextContext ? { nextContext } : {}),
+            ...(paragraph && paragraph !== text ? { paragraph } : {}),
           }),
         },
       ],

@@ -295,6 +295,28 @@ const LEARNING_LANGUAGE_UI_LABELS: Record<
     pt: "bahasa Portugis",
     ru: "bahasa Rusia",
   },
+  it: {
+    en: "inglese",
+    ko: "coreano",
+    ja: "giapponese",
+    zh: "cinese",
+    es: "spagnolo",
+    fr: "francese",
+    it: "italiano",
+    pt: "portoghese",
+    ru: "russo",
+  },
+  ru: {
+    en: "английский",
+    ko: "корейский",
+    ja: "японский",
+    zh: "китайский",
+    es: "испанский",
+    fr: "французский",
+    it: "итальянский",
+    pt: "португальский",
+    ru: "русский",
+  },
 };
 
 export function learningLanguageUiLabel(

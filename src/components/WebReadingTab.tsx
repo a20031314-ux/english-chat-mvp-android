@@ -1,7 +1,6 @@
 "use client";
 
 import { FormEvent, useCallback, useEffect, useState } from "react";
-import { LanguageSelector } from "@/components/LanguageSelector";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { getApiBase } from "@/lib/apiBase";
@@ -14,7 +13,7 @@ import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
 import { inferTranslationSourceType } from "@/lib/naturalTranslation";
 import {
   normalizeWebReaderUrl,
-  WEB_READER_SHORTCUTS,
+  webReaderShortcutsForLanguage,
 } from "@/lib/webReaderUrl";
 import { WebReader } from "@/plugins/webReader";
 import { ContentDiscoveryPanel } from "@/components/contentDiscovery/ContentDiscoveryPanel";
@@ -22,12 +21,10 @@ import { ContentDiscoveryPanel } from "@/components/contentDiscovery/ContentDisc
 export function WebReadingTab({
   locale,
   ui,
-  onLocaleChange,
 }: {
   locale: Locale;
   ui: UICopy;
   active?: boolean;
-  onLocaleChange: (locale: Locale) => void;
 }) {
   const analysis = useEnglishAnalysisOptional();
   const openAnalysis = analysis?.open;
@@ -189,7 +186,6 @@ export function WebReadingTab({
         <h1 className="text-base font-semibold text-slate-900">
           {ui.homeTabRead}
         </h1>
-        <LanguageSelector locale={locale} onChange={onLocaleChange} />
       </header>
 
       <div className="relative min-h-0 flex-1 overflow-y-auto px-4 py-8">
@@ -225,18 +221,14 @@ export function WebReadingTab({
             <p className="mt-3 text-center text-sm text-rose-700">{urlError}</p>
           ) : null}
           <div className="mt-8 flex flex-wrap justify-center gap-2">
-            {WEB_READER_SHORTCUTS.map((item) => (
+            {webReaderShortcutsForLanguage(targetLanguage).map((item) => (
               <button
                 key={item.id}
                 type="button"
                 onClick={() => void openUrl(item.url)}
                 className="rounded-full border border-slate-200 px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50"
               >
-                {item.id === "reddit"
-                  ? ui.webReadShortcutReddit
-                  : item.id === "bbc"
-                    ? ui.webReadShortcutBbc
-                    : ui.webReadShortcutOther}
+                {item.label}
               </button>
             ))}
           </div>

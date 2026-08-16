@@ -1,6 +1,7 @@
 import OpenAI from "openai";
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { explanationLanguageGuard } from "@/lib/languageLearningAnalysis";
 import { naturalTranslationPrinciples } from "@/lib/naturalTranslation";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
@@ -15,6 +16,8 @@ const TARGET_LANGUAGES: Record<string, string> = {
   fr: "French",
   pt: "Portuguese",
   id: "Indonesian",
+  it: "Italian",
+  ru: "Russian",
 };
 
 type GrammarSeed = {
@@ -170,11 +173,10 @@ export async function POST(request: NextRequest) {
   const system = `You create English review study cards from ONE session report. This is NOT a quiz.
 Use only the items given. Do not invent extra grammar or words from other lessons.
 
-CRITICAL language rule:
-- Write explanation and glosses entirely in ${language}.
-- If ${language} is Korean, write Hangul. You may quote English words inside quotes, but the explanation itself must be Korean.
-- Never write the explanation in English when ${language} is not English.
-
+${explanationLanguageGuard({
+  interfaceLanguage: locale,
+  fieldsDescription: "explanation and glosses",
+})}
 Keep example sentences in English.
 
 Grammar cards (each item is a real learner mistake: original → corrected):
@@ -190,7 +192,13 @@ Vocabulary cards:
 - similar: 2-4 related or easily confused words, each with a short gloss in ${language}.
 - Gloss the item as a unit. Idioms/phrasals are one meaning, not each word.
 
-${naturalTranslationPrinciples({ locale, role: "gloss", sourceType: "report" })}
+${naturalTranslationPrinciples({
+  locale,
+  interfaceLanguage: locale,
+  targetLanguage: "en",
+  role: "gloss",
+  sourceType: "report",
+})}
 
 Return ONLY JSON:
 {"cards":[

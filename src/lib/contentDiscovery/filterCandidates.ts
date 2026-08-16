@@ -51,8 +51,26 @@ export function filterCandidates(
     }
 
     out.push(item);
-    if (out.length >= 24) break;
+    if (out.length >= 50) break;
   }
 
+  return out;
+}
+
+/** Channel uploads: keep playlist order. Do not apply category duration/caption/topic filters. */
+export function filterChannelUploads(
+  candidates: ContentCandidate[],
+): ContentCandidate[] {
+  const seen = new Set<string>();
+  const out: ContentCandidate[] = [];
+  for (const item of candidates) {
+    const key = (item.url || item.externalId || item.id).toLowerCase();
+    if (!key || seen.has(key)) continue;
+    seen.add(key);
+    if (item.type !== "video") continue;
+    if (!item.title?.trim() || !item.url?.trim()) continue;
+    out.push(item);
+    if (out.length >= 50) break;
+  }
   return out;
 }

@@ -1,4 +1,5 @@
 import {
+  isEnKoCraftPair,
   naturalTranslationPrinciples,
   type TranslationSourceType,
 } from "@/lib/naturalTranslation";
@@ -15,6 +16,8 @@ const INTERFACE_LANGUAGES: Record<string, string> = {
   fr: "French",
   pt: "Portuguese",
   id: "Indonesian",
+  it: "Italian",
+  ru: "Russian",
 };
 
 export function spokenTranslateTarget(locale: string): string {
@@ -65,8 +68,7 @@ export function spokenTranslatePrinciples(
     INTERFACE_LANGUAGES[interfaceLanguage] ??
     interfaceLanguageDisplayName(interfaceLanguage);
   const targetName = learningLanguageName(targetLanguage);
-  const keepEnKoCraft =
-    targetLanguage === "en" && interfaceLanguage === "ko";
+  const keepEnKoCraft = isEnKoCraftPair(targetLanguage, interfaceLanguage);
 
   const tutorKo = keepEnKoCraft
     ? `
@@ -82,7 +84,13 @@ Conversation Korean:
 - "Damn, I totally screwed that up." → "아, 나 그거 완전 망쳤네."
 - Keep the joke. Keep the force. Do not textbook-sanitize.
 `
-    : "";
+    : `
+
+Conversation ${interfaceName}:
+- Casual ${targetName} → casual spoken ${interfaceName}. Formal/professional ${targetName} → a natural formal register — not a tutor voice.
+- Do not follow ${targetName} word order.
+- Keep the joke. Keep the force. Do not textbook-sanitize. Do not invent a new joke.
+`;
 
   const lead = keepEnKoCraft
     ? `Translate the English into natural spoken ${interfaceName}.`

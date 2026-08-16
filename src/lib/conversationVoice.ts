@@ -92,7 +92,7 @@ export function conversationKoreanParallel(
   const language = interfaceLanguageDisplayName(interfaceLanguage);
   const targetName = learningLanguageName(targetLanguage);
 
-  const korean =
+  const registerPack =
     interfaceLanguage === "ko"
       ? `
 Korean spokenReply:
@@ -105,10 +105,16 @@ Korean spokenReply:
         }
 - 농담은 한국어에서도 농담으로. 원문에 없는 새 농담은 만들지 말 것.
 `
-      : "";
+      : `
+${language} spokenReply:
+- Casual ${targetName} → casual spoken ${language}. Formal/professional ${targetName} → a natural formal register — not a tutor voice.
+- Match humor, slang, and profanity force to the ${targetName}. Do not sanitize or amp it.
+- Do not calque ${targetName} word order. Render meaning, intent, and tone as natural ${language}.
+- A joke stays a joke in ${language}. Do not invent a new joke that was not in the ${targetName}.
+`;
 
   return `
 Also write spokenReply: the SAME move a native ${language} speaker would actually say in this situation — meaning, intent, feeling, humor, and register. Not a word-for-word copy of the ${targetName}.
 Generate it from the intent, not by translating ${targetName} word order.
-${korean}`;
+${registerPack}`;
 }

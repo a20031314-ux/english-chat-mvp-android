@@ -4,6 +4,7 @@ import {
 } from "@/lib/naturalTranslation";
 import {
   commonLanguageInstructions,
+  explanationLanguageGuard,
   LANGUAGE_LEARNING_LIMITS,
 } from "@/lib/languageLearningAnalysis";
 import { learningLanguageName } from "@/lib/learningLanguages";
@@ -21,6 +22,8 @@ export const ANALYSIS_LANGUAGES: Record<string, string> = {
   fr: "French",
   pt: "Portuguese",
   id: "Indonesian",
+  it: "Italian (italiano)",
+  ru: "Russian (русский)",
 };
 
 export function asLearnerLevel(value: unknown): LearnerLevel | undefined {
@@ -100,14 +103,17 @@ export function languageOverviewSystem(options: {
     resolveAnalysisLanguages(options);
   const language =
     ANALYSIS_LANGUAGES[interfaceLanguage] ?? ANALYSIS_LANGUAGES.ko;
-  const mustBeKorean =
+  const explanationGuard = explanationLanguageGuard({
+    interfaceLanguage,
+    fieldsDescription:
+      "translation, correctionNote, element.label (learner-facing part), element.gloss, and element.reading labels",
+  });
+  const sourceFormNote =
     interfaceLanguage === "ko"
-      ? `
-Write translation, correctionNote, element.label (learner-facing part), element.gloss, and element.reading labels in Korean Hangul where those fields are explanations.
-element.text MUST be an exact substring of the source.
-element.label may mix source script with a short Korean gloss cue (映画・えいが, ended up ~ing).
-`
-      : "";
+      ? `element.text MUST be an exact substring of the source.
+element.label may mix source script with a short Korean gloss cue (映画・えいが, ended up ~ing).`
+      : `element.text MUST be an exact substring of the source.
+Keep source-language forms in element.text. Learner-facing labels/glosses stay in ${language}.`;
 
   const maxElements = LANGUAGE_LEARNING_LIMITS.maxExpressions;
 
@@ -119,7 +125,8 @@ element.label may mix source script with a short Korean gloss cue (映画・え�
 ${usefulAnalysisPhilosophy()}
 
 Write learner-facing text in ${language}.
-${mustBeKorean}
+${explanationGuard}
+${sourceFormNote}
 ${sourceLanguageHint(languageHint)}
 ${levelHint(options.learnerLevel)}
 
@@ -170,13 +177,15 @@ export function languageElementSystem(options: {
     resolveAnalysisLanguages(options);
   const language =
     ANALYSIS_LANGUAGES[interfaceLanguage] ?? ANALYSIS_LANGUAGES.ko;
-  const mustBeKorean =
+  const explanationGuard = explanationLanguageGuard({
+    interfaceLanguage,
+    fieldsDescription:
+      "meaningInContext, whyUsed, example translations, and otherUsages.meaning",
+  });
+  const sourceFormNote =
     interfaceLanguage === "ko"
-      ? `
-Write meaningInContext, whyUsed, example translations, and otherUsages.meaning in Korean Hangul.
-Keep source-language forms in title, pattern, reading, and example.english/text.
-`
-      : "";
+      ? `Keep source-language forms in title, pattern, reading, and example.english/text.`
+      : `Keep source-language forms in title, pattern, reading, and example.english/text. Learner-facing explanations stay in ${language}.`;
 
   return `${commonLanguageInstructions({
     targetLanguage,
@@ -188,7 +197,8 @@ ${usefulAnalysisPhilosophy()}
 This request is ELEMENT DETAIL (the zoom-in). The learner already saw a short gloss. Now explain ONE selected span inside ONE sentence.
 
 Write learner-facing text in ${language}.
-${mustBeKorean}
+${explanationGuard}
+${sourceFormNote}
 ${sourceLanguageHint(languageHint)}
 ${levelHint(options.learnerLevel)}
 

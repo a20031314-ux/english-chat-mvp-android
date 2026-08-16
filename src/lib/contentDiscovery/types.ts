@@ -61,12 +61,21 @@ export type ContentDiscoveryRequest = {
   naturalQuery?: string;
   interfaceLanguage?: string;
   requireOriginalCaptions?: boolean;
+  /** YouTube search page cursor for background/prefetch pages. */
+  pageToken?: string;
+  /** YouTube channel id (UC…) for listing that channel’s uploads. */
+  youtubeChannelId?: string;
+  /** @deprecated use youtubeChannelId */
+  recommendedChannelId?: string;
 };
 
 export type ContentDiscoveryResult = {
   intent: ContentSearchIntent;
   candidates: ContentCandidate[];
   warnings: string[];
+  nextPageToken?: string;
+  /** Query actually sent to YouTube (learning-language). */
+  searchQuery?: string;
 };
 
 export const DURATION_BUCKETS: Record<

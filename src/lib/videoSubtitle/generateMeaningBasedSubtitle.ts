@@ -4,6 +4,7 @@ import {
   sceneDebugSlice,
   toneSummary,
 } from "@/lib/videoSubtitle/debugSubtitleContext";
+import { looksLikeLiteralOrForeignCaption } from "@/lib/videoSubtitle/calqueDetect";
 import { expressForKoreanViewer } from "@/lib/videoSubtitle/expressForKoreanViewer";
 import { formatSubtitleDrafts } from "@/lib/videoSubtitle/formatSubtitles";
 import { groupMeaningUnits } from "@/lib/videoSubtitle/groupMeaningUnits";
@@ -123,7 +124,7 @@ function attachInterpretations(
 }
 
 /**
- * Continuous native-viewer understanding → Korean expression.
+ * Continuous native-viewer understanding → UI-language expression.
  * ViewerContext accumulates across windows (client passes it back).
  *
  * Order is tuned so caption text is produced before long-term memory update,
@@ -172,7 +173,7 @@ export async function generateMeaningBasedSubtitle(input: {
       sceneContexts: input.sceneContexts,
     });
 
-    // 2) Express understood meaning in Korean (use prior-window memory;
+    // 2) Express understood meaning in the UI language (use prior-window memory;
     //    same-window refs already live on each interpretation).
     let drafts = await expressForKoreanViewer({
       locale: input.locale,
@@ -183,12 +184,19 @@ export async function generateMeaningBasedSubtitle(input: {
       sceneContexts: input.sceneContexts,
     });
 
-    // 3) Anti-calque only when needed (Hangul missing / looks like gloss).
-    //    Skipping the always-on native+adapt passes keeps windows near real-time.
+    // 3) Anti-calque only when needed.
+    //    Korean keeps the Hangul-missing fast path (always-on rewrite is too slow).
+    //    Other UI languages catch leftover source words / copied English.
     const needsAdapt = drafts.some((draft) => {
       const text = draft.naturalSubtitle.trim();
       if (!text) return true;
       if (input.locale === "ko" && !/[가-힣]/.test(text)) return true;
+      if (
+        input.locale !== "ko" &&
+        looksLikeLiteralOrForeignCaption(draft.original, text, input.locale)
+      ) {
+        return true;
+      }
       return false;
     });
     if (needsAdapt) {

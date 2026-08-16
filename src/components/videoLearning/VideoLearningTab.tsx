@@ -1,7 +1,6 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { LanguageSelector } from "@/components/LanguageSelector";
 import { CurrentSubtitleCard } from "@/components/videoLearning/CurrentSubtitleCard";
 import { SavedVideoSessions } from "@/components/videoLearning/SavedVideoSessions";
 import { EnglishSentenceList } from "@/components/videoLearning/StudyMaterialsList";
@@ -54,12 +53,10 @@ export function VideoLearningTab({
   locale,
   ui,
   active = true,
-  onLocaleChange,
 }: {
   locale: Locale;
   ui: UICopy;
   active?: boolean;
-  onLocaleChange: (locale: Locale) => void;
 }) {
   const learningLanguage = useLearningLanguageOptional();
   const targetLanguage =
@@ -621,7 +618,6 @@ export function VideoLearningTab({
             {ui.homeTabVideo}
           </h1>
         </div>
-        <LanguageSelector locale={locale} onChange={onLocaleChange} />
       </header>
 
       {phase === "input" ? (

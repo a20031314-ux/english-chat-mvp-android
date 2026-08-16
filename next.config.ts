@@ -5,6 +5,7 @@ const capacitorStatic = process.env.CAPACITOR_STATIC === "1";
 
 const nextConfig: NextConfig = {
   ...(capacitorStatic ? { output: "export" as const } : {}),
+  serverExternalPackages: ["pdfjs-dist"],
   images: {
     unoptimized: true,
   },

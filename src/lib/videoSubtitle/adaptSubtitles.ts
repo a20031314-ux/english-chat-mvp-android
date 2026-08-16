@@ -46,9 +46,11 @@ Core job:
 2) What would a native ${target} speaker SAY aloud with the same vibe?
 
 HARD BAN:
-- word-for-word glosses / 번역투 / textbook wording
+- word-for-word glosses / translationese / textbook wording
 - mapping each source word into ${target} in the same order
-- source content words left in ${target} (proper names OK)
+- source content words left in ${target} (proper names OK)${
+    interfaceLanguage === "ko" ? "\n- Korean 번역투 / 직역체" : ""
+  }
 
 You receive VIDEO CONTEXT, optional SCENE CONTEXT (soft evidence only), PREVIOUS / CURRENT / NEXT.
 

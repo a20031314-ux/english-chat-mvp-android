@@ -12,6 +12,7 @@ import {
   ANALYSIS_LANGUAGES,
   type LearnerLevel,
 } from "@/lib/languageAnalysisPrompt";
+import { explanationLanguageGuard } from "@/lib/languageLearningAnalysis";
 
 function englishLevelHint(level?: LearnerLevel): string {
   if (level === "beginner") {
@@ -38,14 +39,17 @@ export function englishOverviewSystem(options: {
   const interfaceLanguage = options.interfaceLanguage ?? options.locale;
   const language =
     ANALYSIS_LANGUAGES[interfaceLanguage] ?? ANALYSIS_LANGUAGES.ko;
-  const mustBeKorean =
+  const explanationGuard = explanationLanguageGuard({
+    interfaceLanguage,
+    fieldsDescription:
+      "translation, correctionNote, element.label (learner-facing part), element.gloss, and element.reading labels",
+  });
+  const sourceFormNote =
     interfaceLanguage === "ko"
-      ? `
-Write translation, correctionNote, element.label (learner-facing part), element.gloss, and element.reading labels in Korean Hangul where those fields are explanations.
-element.text MUST be an exact substring of the English source.
-element.label may mix English with a short Korean gloss cue (ended up ~ing).
-`
-      : "";
+      ? `element.text MUST be an exact substring of the English source.
+element.label may mix English with a short Korean gloss cue (ended up ~ing).`
+      : `element.text MUST be an exact substring of the English source.
+Keep English forms in element.text. Learner-facing labels/glosses stay in ${language}.`;
 
   return `You analyze ENGLISH sentences for language learners.
 
@@ -66,7 +70,8 @@ Slang, idiom, meme, and nuance can be THE element. Do not invent extra grammar t
 Do not dump etymology, full paradigm tables, every dictionary sense, or every exception.
 
 Write learner-facing text in ${language}.
-${mustBeKorean}
+${explanationGuard}
+${sourceFormNote}
 ${englishLevelHint(options.learnerLevel)}
 
 First give the natural meaning of the WHOLE English sentence, then 0–4 key elements (1–2 if very simple). Never pad to 5–10. Empty elements is fine when translation alone is enough.
@@ -115,20 +120,23 @@ export function englishElementSystem(options: {
   const interfaceLanguage = options.interfaceLanguage ?? options.locale;
   const language =
     ANALYSIS_LANGUAGES[interfaceLanguage] ?? ANALYSIS_LANGUAGES.ko;
-  const mustBeKorean =
+  const explanationGuard = explanationLanguageGuard({
+    interfaceLanguage,
+    fieldsDescription:
+      "meaningInContext, whyUsed, example translations, and otherUsages.meaning",
+  });
+  const sourceFormNote =
     interfaceLanguage === "ko"
-      ? `
-Write meaningInContext, whyUsed, example translations, and otherUsages.meaning in Korean Hangul.
-Keep English forms in title, pattern, reading, and example.english/text.
-`
-      : "";
+      ? `Keep English forms in title, pattern, reading, and example.english/text.`
+      : `Keep English forms in title, pattern, reading, and example.english/text. Learner-facing explanations stay in ${language}.`;
 
   return `You explain ONE selected English span inside ONE English sentence for a learner.
 
 The learner already saw a short gloss. Now zoom in on THIS English expression/word/pattern.
 
 Write learner-facing text in ${language}.
-${mustBeKorean}
+${explanationGuard}
+${sourceFormNote}
 ${englishLevelHint(options.learnerLevel)}
 
 Default shape (keep short):

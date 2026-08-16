@@ -76,8 +76,43 @@ export function interfaceLanguageDisplayName(locale: string): string {
     fr: "French",
     pt: "Portuguese",
     id: "Indonesian",
+    it: "Italian",
+    ru: "Russian",
   };
   return map[locale] ?? "Korean";
+}
+
+/**
+ * Learner-facing explanations must be in the UI language.
+ * English→Korean keeps the Hangul-only extra; every other pair uses the same rule.
+ */
+export function explanationLanguageGuard(options: {
+  interfaceLanguage: string;
+  fieldsDescription?: string;
+}): string {
+  const interfaceName = interfaceLanguageDisplayName(options.interfaceLanguage);
+  const fields = options.fieldsDescription
+    ? ` (${options.fieldsDescription})`
+    : "";
+
+  if (options.interfaceLanguage === "ko") {
+    return `CRITICAL for learner-facing explanations${fields}:
+- Write them ONLY in Korean Hangul (한국어).
+- Never write the explanation in English.
+- You may quote source-language words inside quotes, but the explanation itself must be Korean.`;
+  }
+
+  if (options.interfaceLanguage === "en") {
+    return `CRITICAL for learner-facing explanations${fields}:
+- Write them ONLY in English.
+- Do not switch into another language for the explanation.
+- You may quote the learning-language forms inside quotes.`;
+  }
+
+  return `CRITICAL for learner-facing explanations${fields}:
+- Write them ONLY in ${interfaceName}.
+- Do not switch into English (or another language) for the explanation.
+- You may quote source-language words inside quotes, but the explanation itself must be ${interfaceName}.`;
 }
 
 /** Clamp model output to shared limits. */

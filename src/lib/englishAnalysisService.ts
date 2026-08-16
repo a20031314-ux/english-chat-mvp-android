@@ -16,6 +16,10 @@ export async function analyzeEnglishInput(input: {
   sourceType?: TranslationSourceType;
   language?: string;
   learnerLevel?: LearnerLevel;
+  context?: string[];
+  paragraph?: string;
+  previousContext?: string;
+  nextContext?: string;
 }): Promise<EnglishInputAnalysis | null> {
   const text = input.text.replace(/\s+/g, " ").trim();
   if (!text) return null;
@@ -30,6 +34,12 @@ export async function analyzeEnglishInput(input: {
       ...(input.sourceType ? { sourceType: input.sourceType } : {}),
       ...(input.language ? { language: input.language } : {}),
       ...(input.learnerLevel ? { learnerLevel: input.learnerLevel } : {}),
+      ...(input.context?.length ? { context: input.context } : {}),
+      ...(input.paragraph ? { paragraph: input.paragraph } : {}),
+      ...(input.previousContext
+        ? { previousContext: input.previousContext }
+        : {}),
+      ...(input.nextContext ? { nextContext: input.nextContext } : {}),
     }),
     signal: AbortSignal.timeout(25000),
   });

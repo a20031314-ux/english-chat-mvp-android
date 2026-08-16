@@ -17,7 +17,7 @@ import {
   learningLanguageName,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
-import { commonLanguageInstructions } from "@/lib/languageLearningAnalysis";
+import { commonLanguageInstructions, explanationLanguageGuard } from "@/lib/languageLearningAnalysis";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
@@ -66,6 +66,8 @@ const EXPLANATION_LANGUAGES: Record<string, string> = {
   fr: "French",
   pt: "Portuguese",
   id: "Indonesian",
+  it: "Italian (italiano)",
+  ru: "Russian (русский)",
 };
 
 type ChatLanguages = {
@@ -119,7 +121,7 @@ function normCompare(text: string) {
 
 function englishCorrectionPolicy(
   explanationLanguage: string,
-  mustBeKorean: string,
+  explanationGuard: string,
 ): string {
   return `1) First fix their English into corrected (what they meant to say in THIS turn). This is for the learner, not for the chat voice.
 - Do not change the topic to match recent. Pronouns like "that"/"they" may refer back; a new question or new subject does not.
@@ -144,8 +146,8 @@ function englishCorrectionPolicy(
 - Never mention a missing optional word (especially "right" before "now") as a grammar mistake. Suggest it only in natural. If you also fix a real grammar error, do not add those optional words into corrected.
 - Never change the meaning in corrected (do not rewrite "I'm studying nothing" into "I'm just chilling"). Meaning/style rewrites belong in natural only.
 - If there is no real grammar/agreement/article/preposition/tense error, corrected MUST equal the user's message.
-- If the user embeds a Hangul/CJK word inside an otherwise English sentence (proper noun or a word they don't know yet), that is NOT a grammar error — keep it in corrected, and you may gloss the meaning in assistantMessage.
-${mustBeKorean}`;
+- If the user embeds a word from their UI language inside an otherwise English sentence (proper noun or a word they don't know yet), that is NOT a grammar error — keep it in corrected, and you may gloss the meaning in assistantMessage.
+${explanationGuard}`;
 }
 
 /** Language-specific mistake families — still analyze in THAT language's own terms. */
@@ -181,7 +183,7 @@ function targetLanguageFocusHints(targetLanguage: LearningLanguageCode): string 
 function detailedTargetCorrectionPolicy(
   targetLanguage: LearningLanguageCode,
   explanationLanguage: string,
-  mustBeKorean: string,
+  explanationGuard: string,
 ): string {
   const targetName = learningLanguageName(targetLanguage);
   return `1) First fix their ${targetName} into corrected (what they meant to say in THIS turn). This is for the learner, not for the chat voice.
@@ -206,23 +208,23 @@ Hard rules:
 - Do NOT change meaning in corrected. Meaning/style rewrites belong in natural only.
 - Do NOT invent mistakes. If the line is already grammatical for the intended register, corrected MUST equal the user's message.
 - Prefer keeping the learner's register (casual vs polite) in corrected unless that register is itself ungrammatical for what they are trying to say.
-- If the user embeds UI-language words (e.g. Hangul/CJK) inside an otherwise ${targetName} sentence as a placeholder, that is NOT a grammar error — keep it in corrected; you may gloss it in assistantMessage.
-${mustBeKorean}`;
+- If the user embeds UI-language words inside an otherwise ${targetName} sentence as a placeholder, that is NOT a grammar error — keep it in corrected; you may gloss it in assistantMessage.
+${explanationGuard}`;
 }
 
 function buildChatSystem(langs: ChatLanguages) {
   const { interfaceLanguage, targetLanguage } = langs;
   const explanationLanguage =
     EXPLANATION_LANGUAGES[interfaceLanguage] ?? EXPLANATION_LANGUAGES.ko;
-  const mustBeKorean =
-    interfaceLanguage === "ko"
+  const explanationGuard =
+    explanationLanguageGuard({
+      interfaceLanguage,
+      fieldsDescription: "correction.explanation",
+    }) +
+    (interfaceLanguage === "ko"
       ? `
-
-CRITICAL for explanation:
-- Write explanation ONLY in Korean Hangul (한국어).
-- Never write the explanation in English.
 - Example style: "if 조건절에서는 미래의 일도 현재형을 써요."`
-      : "";
+      : "");
 
   const targetName = learningLanguageName(targetLanguage);
   const voice = conversationVoicePrinciples(targetLanguage);
@@ -236,7 +238,7 @@ The user JSON has "message" (the current turn — reply to THIS) and optional "r
 ${voice}
 ${spoken}
 
-${englishCorrectionPolicy(explanationLanguage, mustBeKorean)}
+${englishCorrectionPolicy(explanationLanguage, explanationGuard)}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
 {"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","explanation":"..."}}`;
@@ -254,24 +256,24 @@ The user JSON has "message" (the current turn — reply to THIS) and optional "r
 ${voice}
 ${spoken}
 
-${detailedTargetCorrectionPolicy(targetLanguage, explanationLanguage, mustBeKorean)}
+${detailedTargetCorrectionPolicy(targetLanguage, explanationLanguage, explanationGuard)}
 
 Return ONLY valid JSON (no markdown) with this exact shape:
 {"assistantMessage":"...","spokenReply":"...","correction":{"corrected":"...","natural":"...","explanation":"..."}}`;
 }
 
-function buildHowToSaySystemBase(targetLanguage: LearningLanguageCode): string {
+function buildHowToSaySystemBase(
+  targetLanguage: LearningLanguageCode,
+  interfaceLanguage: string,
+): string {
   const targetName = learningLanguageName(targetLanguage);
+  const interfaceName =
+    EXPLANATION_LANGUAGES[interfaceLanguage] ?? EXPLANATION_LANGUAGES.ko;
+  const keepKoExamples = interfaceLanguage === "ko";
+
   if (targetLanguage === "en") {
-    return `The user wants a natural English line THEY can say (or write) to another person. They may write in Korean, English, or mixed.
-
-You are a phrase helper, NOT a tutor. Do not answer their question, explain the topic, or ask them what they meant.
-
-Give ONE spoken English line that keeps their speech act.
-Match the situation (friend, work, interview, joke, online). Casual intent → casual English, including contractions, fragments, slang, or mild profanity if that is what they would actually say. Formal intent → that register. Do not turn casual talk into textbook English.
-RECENT is only for resolving "that/they/this" or whose previous question they are confirming. Do not rewrite their line into the previous topic.
-
-If they asked for information (뭐/몇/어떻게/왜, a factual or opinion question), translate THAT question into English they would ask someone else:
+    const infoHint = keepKoExamples
+      ? `If they asked for information (뭐/몇/어떻게/왜, a factual or opinion question), translate THAT question into English they would ask someone else:
 Bad: "체지방 12%를 만들려면 남자 골격근량은 체중의 몇 퍼센트여야해?" → "Are you asking what the muscle mass percentage should be...?"
 Good: "For men, what's a typical skeletal muscle percentage at 12% body fat?"
 
@@ -279,16 +281,32 @@ Only use "Are you asking...?" / "Do you mean...?" when THEY are checking the oth
 Bad: "하루를 기준으로 무슨 운동을 하는지 묻는거야?" → "What kind of exercise do you do in a day?"
 Good: "Are you asking what I do for a workout each day?"
 
-Other acts to keep: confirming, refusing, suggesting, answering, joking.
 If they ask "how can I say X in English?" / "X 영어로?", extract X and give English for X — do not echo the meta question.
 
-No quotes, no Korean, no extra commentary.
+No quotes, no Korean, no extra commentary.`
+      : `If they asked for information (a factual or opinion question), translate THAT question into English they would ask someone else — do not turn it into a meta "Are you asking...?" unless they themselves are confirming the other person's previous question AND RECENT has that line.
+
+If they ask "how can I say X in English?", extract X and give English for X — do not echo the meta question.
+
+No quotes, no leftover ${interfaceName}, no extra commentary.`;
+
+    return `The user wants a natural English line THEY can say (or write) to another person. They may write in ${interfaceName}, English, or mixed.
+
+You are a phrase helper, NOT a tutor. Do not answer their question, explain the topic, or ask them what they meant.
+
+Give ONE spoken English line that keeps their speech act.
+Match the situation (friend, work, interview, joke, online). Casual intent → casual English, including contractions, fragments, slang, or mild profanity if that is what they would actually say. Formal intent → that register. Do not turn casual talk into textbook English.
+RECENT is only for resolving "that/they/this" or whose previous question they are confirming. Do not rewrite their line into the previous topic.
+
+${infoHint}
+
+Other acts to keep: confirming, refusing, suggesting, answering, joking.
 
 Return ONLY JSON:
 {"expression":"the English they would say"}`;
   }
 
-  return `The user wants a natural ${targetName} line THEY can say (or write) to another person. They may write in their UI language, ${targetName}, or mixed.
+  return `The user wants a natural ${targetName} line THEY can say (or write) to another person. They may write in ${interfaceName}, ${targetName}, or mixed.
 
 You are a phrase helper, NOT a tutor. Do not answer their question, explain the topic, or ask them what they meant.
 
@@ -308,7 +326,10 @@ Return ONLY JSON:
 }
 
 function buildHowToSaySystem(langs: ChatLanguages, premium: boolean) {
-  const base = buildHowToSaySystemBase(langs.targetLanguage);
+  const base = buildHowToSaySystemBase(
+    langs.targetLanguage,
+    langs.interfaceLanguage,
+  );
   if (!premium) return base;
   const analysisLanguage =
     EXPLANATION_LANGUAGES[langs.interfaceLanguage] ?? EXPLANATION_LANGUAGES.ko;
@@ -319,6 +340,10 @@ Also include (same meaning, not an answer to their question):
 - simpler: a shorter, easier ${targetName} line. Empty string if expression is already simple.
 - moreNative: a more colloquial native line, not a synonym swap. Empty if nothing different.
 - analysis: 1-2 sentences in ${analysisLanguage} on nuance / when to use which line.
+${explanationLanguageGuard({
+  interfaceLanguage: langs.interfaceLanguage,
+  fieldsDescription: "analysis",
+})}
 
 {"expression":"...","simpler":"...","moreNative":"...","analysis":"..."}`;
 }
@@ -333,6 +358,8 @@ const FALLBACK_EXPLANATION: Record<string, string> = {
   fr: "Cette formulation est plus naturelle.",
   pt: "Essa formulação fica mais natural.",
   id: "Susunan ini terdengar lebih natural.",
+  it: "Così suona più chiaro e naturale.",
+  ru: "Так звучит понятнее и естественнее.",
 };
 
 async function replyToCorrected(

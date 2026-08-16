@@ -17,6 +17,8 @@ const INTERFACE_LANGUAGES: Record<string, string> = {
   fr: "French",
   pt: "Portuguese",
   id: "Indonesian",
+  it: "Italian",
+  ru: "Russian",
 };
 
 function getClient() {

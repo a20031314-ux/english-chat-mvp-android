@@ -15,6 +15,51 @@ import type { VideoContext } from "@/lib/videoSubtitle/types";
 
 const BATCH = 10;
 
+function rewriteEmergencySystem(target: string, locale: string): string {
+  const koExamples =
+    locale === "ko"
+      ? `"I'm losing my mind" → "정신 나갈 것 같아" or "미치겠어"
+"How would you decide what parts of nature are good or bad?" → "뭐가 좋고 나쁜 건지 어떻게 판단하지?"
+`
+      : "";
+  return `Emergency: write ONE short natural spoken ${target} caption per id.
+NEVER leave naturalSubtitle empty.
+NEVER use dictionary/word-order calques.
+${koExamples}Return a JSON object:
+{"revisions":[{"id":"...","naturalSubtitle":"..."}]} — every id required, non-empty.`;
+}
+
+function rewritePoliceSystem(target: string, locale: string): string {
+  const koCraft =
+    locale === "ko"
+      ? `HARD RULES — prefer 의역 (what a native would say) over 직역 (word mapping):
+- WRONG: "I'm losing my mind" → "내 정신이 지금 나가고 있어"
+  RIGHT: "정신 나갈 것 같아" / "미치겠어"
+- WRONG: "How would you decide what parts of nature are good or bad?"
+  → "자연에서 좋은 것과 나쁜 것을 어떻게 구분하지?"
+  RIGHT: "뭐가 좋고 나쁜 건지 어떻게 판단하지?"
+- WRONG: "I don't buy that" → "나는 그걸 사지 않아"
+  RIGHT: "그건 말도 안 돼"
+- Never keep English phrase scaffolding in Korean order.
+- Compress into short spoken Korean. Never leave English content words inside Korean captions.
+`
+      : `HARD RULES — prefer sense-for-sense (what a native would say) over word mapping:
+- Never keep source phrase scaffolding in ${target} word order.
+- Compress into short spoken ${target}. Never leave source-language content words inside captions.
+`;
+  return `You police on-screen ${target} video captions for movies/drama.
+
+${koCraft}- Proper names may remain; ordinary vocabulary must not.
+- If naturalSubtitle is stiff, literal, textbook, or calque — rewrite it.
+- NEVER return an empty caption. Always produce a natural spoken line.
+- Sound like spoken ${target} on screen. No tutor notes.
+
+Return a JSON object:
+{"revisions":[{"id":"...","naturalSubtitle":"..."}]}
+You MUST include every forceRewriteIds entry with a NON-EMPTY naturalSubtitle.
+Also revise any other item that still sounds like a dictionary gloss.`;
+}
+
 async function rewriteLines(input: {
   client: NonNullable<ReturnType<typeof getOpenAIClient>>;
   locale: string;
@@ -27,34 +72,8 @@ async function rewriteLines(input: {
 }): Promise<void> {
   if (input.drafts.length === 0) return;
   const system = input.emergency
-    ? `Emergency: write ONE short natural spoken ${input.target} caption per id.
-NEVER leave naturalSubtitle empty.
-NEVER use dictionary/word-order calques.
-"I'm losing my mind" → "정신 나갈 것 같아" or "미치겠어"
-"How would you decide what parts of nature are good or bad?" → "뭐가 좋고 나쁜 건지 어떻게 판단하지?"
-Return a JSON object:
-{"revisions":[{"id":"...","naturalSubtitle":"..."}]} — every id required, non-empty.`
-    : `You police on-screen ${input.target} video captions for movies/drama.
-
-HARD RULES — prefer 의역 (what a native would say) over 직역 (word mapping):
-- WRONG: "I'm losing my mind" → "내 정신이 지금 나가고 있어"
-  RIGHT: "정신 나갈 것 같아" / "미치겠어"
-- WRONG: "How would you decide what parts of nature are good or bad?"
-  → "자연에서 좋은 것과 나쁜 것을 어떻게 구분하지?"
-  RIGHT: "뭐가 좋고 나쁜 건지 어떻게 판단하지?"
-- WRONG: "I don't buy that" → "나는 그걸 사지 않아"
-  RIGHT: "그건 말도 안 돼"
-- Never keep English phrase scaffolding in Korean order.
-- Compress into short spoken Korean. Never leave English content words inside Korean captions.
-- Proper names may remain; ordinary vocabulary must not.
-- If naturalSubtitle is stiff, literal, textbook, or calque — rewrite it.
-- NEVER return an empty caption. Always produce a natural spoken line.
-- Sound like spoken ${input.target} on screen. No tutor notes.
-
-Return a JSON object:
-{"revisions":[{"id":"...","naturalSubtitle":"..."}]}
-You MUST include every forceRewriteIds entry with a NON-EMPTY naturalSubtitle.
-Also revise any other item that still sounds like a dictionary gloss.`;
+    ? rewriteEmergencySystem(input.target, input.locale)
+    : rewritePoliceSystem(input.target, input.locale);
 
   const completion = await input.client.chat.completions.create({
     model: chatModel(),
@@ -81,6 +100,7 @@ Also revise any other item that still sounds like a dictionary gloss.`;
             leftoverEnglish: leftoverEnglishContentWords(
               draft.original,
               input.revised.get(draft.id) || draft.naturalSubtitle,
+              input.locale,
             ),
           })),
         }),
@@ -199,18 +219,20 @@ export async function validateAdaptedSubtitles(input: {
     } catch (error) {
       console.error("[video-adapt-calque-emergency]", error);
     }
-    // Last resort: keep meaning if it's already Korean; else a short spoken fallback.
+    // Last resort: keep meaning if it's already in the UI language; else a short spoken fallback.
     if (!natural) {
       const meaning = (draft.meaning || "").trim();
-      if (/[가-힣]/.test(meaning)) {
+      if (input.locale === "ko" && /[가-힣]/.test(meaning)) {
         natural = meaning;
-      } else if (looksIdiomaticEnglish(draft.original)) {
+      } else if (input.locale === "ko" && looksIdiomaticEnglish(draft.original)) {
         // Safe spoken fallback for the known failure case — better than blank.
         if (/\blosing my mind|lose my mind|lost my mind\b/i.test(draft.original)) {
           natural = "정신 나갈 것 같아.";
         } else {
           natural = draft.original;
         }
+      } else if (meaning) {
+        natural = meaning;
       } else {
         natural = draft.original;
       }

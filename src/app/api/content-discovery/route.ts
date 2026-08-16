@@ -41,6 +41,9 @@ export async function POST(request: NextRequest) {
     interfaceLanguage?: unknown;
     locale?: unknown;
     requireOriginalCaptions?: unknown;
+    pageToken?: unknown;
+    recommendedChannelId?: unknown;
+    youtubeChannelId?: unknown;
   };
   try {
     body = await request.json();
@@ -64,10 +67,21 @@ export async function POST(request: NextRequest) {
   const topicCategory = isDiscoveryTopicId(body.topicCategory)
     ? body.topicCategory
     : undefined;
-  if (!topic && !naturalQuery && !topicCategory) {
+  const recommendedChannelId =
+    typeof body.recommendedChannelId === "string"
+      ? body.recommendedChannelId.trim()
+      : "";
+  const youtubeChannelId =
+    (typeof body.youtubeChannelId === "string"
+      ? body.youtubeChannelId.trim()
+      : "") || recommendedChannelId;
+  if (!topic && !naturalQuery && !topicCategory && !youtubeChannelId) {
     return jsonWithCors(
       request,
-      { error: "topicCategory, topic, or naturalQuery required" },
+      {
+        error:
+          "topicCategory, topic, naturalQuery, or youtubeChannelId required",
+      },
       { status: 400 },
     );
   }
@@ -79,6 +93,7 @@ export async function POST(request: NextRequest) {
       ...(topic ? { topic } : {}),
       ...(topicCategory ? { topicCategory } : {}),
       ...(naturalQuery ? { naturalQuery } : {}),
+      ...(youtubeChannelId ? { youtubeChannelId } : {}),
       ...(asDurationBucket(body.preferredDuration)
         ? { preferredDuration: asDurationBucket(body.preferredDuration) }
         : {}),
@@ -93,12 +108,17 @@ export async function POST(request: NextRequest) {
       ...(body.requireOriginalCaptions === true
         ? { requireOriginalCaptions: true }
         : {}),
+      ...(typeof body.pageToken === "string" && body.pageToken.trim()
+        ? { pageToken: body.pageToken.trim() }
+        : {}),
     });
 
     return jsonWithCors(request, {
       intent: result.intent,
       candidates: result.candidates,
       warnings: result.warnings,
+      ...(result.nextPageToken ? { nextPageToken: result.nextPageToken } : {}),
+      ...(result.searchQuery ? { searchQuery: result.searchQuery } : {}),
     });
   } catch (error) {
     console.error("[content-discovery]", error);
