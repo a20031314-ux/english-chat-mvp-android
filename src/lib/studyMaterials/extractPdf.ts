@@ -31,7 +31,6 @@ export async function extractPdfDocument(input: {
   }
 
   const sections: ExtractedSection[] = [];
-  let textChars = 0;
 
   for (let pageNumber = 1; pageNumber <= pdf.numPages; pageNumber += 1) {
     const page = await pdf.getPage(pageNumber);
@@ -65,26 +64,22 @@ export async function extractPdfDocument(input: {
     }
     if (buf.length) paragraphs.push(buf.join(" "));
 
-    const pageText = paragraphs.join(" ");
-    textChars += pageText.replace(/\s/g, "").length;
     sections.push({
       title: `p. ${pageNumber}`,
       page: pageNumber,
+      keepEmpty: true,
       paragraphs: paragraphs.length > 0 ? paragraphs : [],
     });
-  }
-
-  if (textChars < 40) {
-    throw new StudyImportError(
-      "no_text",
-      "No text layer was found in this PDF.",
-    );
   }
 
   const title =
     input.fileName?.replace(/\.[^.]+$/, "") ||
     sections[0]?.paragraphs[0]?.slice(0, 80) ||
     "PDF";
+
+  if (pdf.numPages === 0) {
+    throw new StudyImportError("no_text", "No pages were found in this PDF.");
+  }
 
   return buildStudyDocument({
     title,

@@ -574,7 +574,14 @@
     "characterFormInitial": "語頭",
     "characterFormMedial": "語中",
     "characterFormFinal": "語末",
-    "studyImageHint": "画像の文字をタップすると分析できます。"
+    "studyImageHint": "文をタップすると意味と分析を見られます。ピンチで拡大できます。",
+    "studySelectGloss": "意味",
+    "studySelectHint": "文をタップすると意味と分析を見られます。ピンチで拡大できます。",
+    "studyChapterPrev": "前へ",
+    "studyChapterNext": "次へ",
+    "studyOcrPage": "このページの文字を探しています...",
+    "studyZoomIn": "拡大",
+    "studyZoomOut": "縮小"
   },
   "zh": {
     "appTitle": "{targetLanguage}批改聊天",
@@ -1151,7 +1158,14 @@
     "characterFormInitial": "词首",
     "characterFormMedial": "词中",
     "characterFormFinal": "词尾",
-    "studyImageHint": "点图片上的文字即可分析。"
+    "studyImageHint": "点句子即可查看意思和分析。双指可放大。",
+    "studySelectGloss": "意思",
+    "studySelectHint": "点句子即可查看意思和分析。双指可放大。",
+    "studyChapterPrev": "上一章",
+    "studyChapterNext": "下一章",
+    "studyOcrPage": "正在识别本页文字...",
+    "studyZoomIn": "放大",
+    "studyZoomOut": "缩小"
   },
   "vi": {
     "appTitle": "Chat sửa {targetLanguage}",
@@ -1728,7 +1742,14 @@
     "characterFormInitial": "Đầu",
     "characterFormMedial": "Giữa",
     "characterFormFinal": "Cuối",
-    "studyImageHint": "Chạm chữ trên ảnh để phân tích."
+    "studyImageHint": "Chạm câu để xem nghĩa và phân tích. Vuốt hai ngón để phóng to.",
+    "studySelectGloss": "Nghĩa",
+    "studySelectHint": "Chạm câu để xem nghĩa và phân tích. Vuốt hai ngón để phóng to.",
+    "studyChapterPrev": "Trước",
+    "studyChapterNext": "Sau",
+    "studyOcrPage": "Đang tìm chữ trên trang này...",
+    "studyZoomIn": "Phóng to",
+    "studyZoomOut": "Thu nhỏ"
   },
   "fr": {
     "appTitle": "Chat de correction d'{targetLanguage}",
@@ -2305,7 +2326,14 @@
     "characterFormInitial": "Initiale",
     "characterFormMedial": "Médiane",
     "characterFormFinal": "Finale",
-    "studyImageHint": "Touchez le texte de l’image pour l’analyser."
+    "studyImageHint": "Touchez une phrase pour voir le sens et l’analyse. Pincez pour zoomer.",
+    "studySelectGloss": "Sens",
+    "studySelectHint": "Touchez une phrase pour voir le sens et l’analyse. Pincez pour zoomer.",
+    "studyChapterPrev": "Précédent",
+    "studyChapterNext": "Suivant",
+    "studyOcrPage": "Recherche du texte sur cette page...",
+    "studyZoomIn": "Zoom avant",
+    "studyZoomOut": "Zoom arrière"
   },
   "pt": {
     "appTitle": "Chat de correção de {targetLanguage}",
@@ -2882,7 +2910,14 @@
     "characterFormInitial": "Inicial",
     "characterFormMedial": "Medial",
     "characterFormFinal": "Final",
-    "studyImageHint": "Toque no texto da imagem para analisar."
+    "studyImageHint": "Toque numa frase para ver o significado e a análise. Aperte para ampliar.",
+    "studySelectGloss": "Significado",
+    "studySelectHint": "Toque numa frase para ver o significado e a análise. Aperte para ampliar.",
+    "studyChapterPrev": "Anterior",
+    "studyChapterNext": "Seguinte",
+    "studyOcrPage": "A procurar texto nesta página...",
+    "studyZoomIn": "Ampliar",
+    "studyZoomOut": "Reduzir"
   },
   "id": {
     "appTitle": "Chat koreksi {targetLanguage}",
@@ -3459,7 +3494,14 @@
     "characterFormInitial": "Awal",
     "characterFormMedial": "Tengah",
     "characterFormFinal": "Akhir",
-    "studyImageHint": "Ketuk teks pada gambar untuk menganalisis."
+    "studyImageHint": "Ketuk kalimat untuk melihat arti dan analisis. Cubit untuk memperbesar.",
+    "studySelectGloss": "Arti",
+    "studySelectHint": "Ketuk kalimat untuk melihat arti dan analisis. Cubit untuk memperbesar.",
+    "studyChapterPrev": "Sebelumnya",
+    "studyChapterNext": "Berikutnya",
+    "studyOcrPage": "Mencari teks di halaman ini...",
+    "studyZoomIn": "Perbesar",
+    "studyZoomOut": "Perkecil"
   },
   "it": {
     "appTitle": "Chat di correzione {targetLanguage}",
@@ -4036,7 +4078,14 @@
     "characterFormInitial": "Iniziale",
     "characterFormMedial": "Mediana",
     "characterFormFinal": "Finale",
-    "studyImageHint": "Tocca il testo sull’immagine per analizzarlo."
+    "studyImageHint": "Tocca una frase per vedere significato e analisi. Pizzica per ingrandire.",
+    "studySelectGloss": "Significato",
+    "studySelectHint": "Tocca una frase per vedere significato e analisi. Pizzica per ingrandire.",
+    "studyChapterPrev": "Precedente",
+    "studyChapterNext": "Successivo",
+    "studyOcrPage": "Sto cercando il testo in questa pagina...",
+    "studyZoomIn": "Ingrandisci",
+    "studyZoomOut": "Riduci"
   },
   "ru": {
     "appTitle": "Чат для правки {targetLanguage}",
@@ -4613,7 +4662,14 @@
     "characterFormInitial": "В начале",
     "characterFormMedial": "В середине",
     "characterFormFinal": "В конце",
-    "studyImageHint": "Нажмите на текст на изображении, чтобы разобрать его."
+    "studyImageHint": "Нажмите предложение, чтобы увидеть значение и разбор. Разведите пальцы для увеличения.",
+    "studySelectGloss": "Значение",
+    "studySelectHint": "Нажмите предложение, чтобы увидеть значение и разбор. Разведите пальцы для увеличения.",
+    "studyChapterPrev": "Назад",
+    "studyChapterNext": "Далее",
+    "studyOcrPage": "Ищем текст на этой странице...",
+    "studyZoomIn": "Увеличить",
+    "studyZoomOut": "Уменьшить"
   },
   "ar": {
     "appTitle": "دردشة تصحيح {targetLanguage}",
@@ -5190,7 +5246,14 @@
     "characterFormInitial": "بداية",
     "characterFormMedial": "وسط",
     "characterFormFinal": "نهاية",
-    "studyImageHint": "اضغط على النص في الصورة لتحليله."
+    "studyImageHint": "اضغط الجملة لرؤية المعنى والتحليل. استخدم إصبعين للتكبير.",
+    "studySelectGloss": "المعنى",
+    "studySelectHint": "اضغط الجملة لرؤية المعنى والتحليل. استخدم إصبعين للتكبير.",
+    "studyChapterPrev": "السابق",
+    "studyChapterNext": "التالي",
+    "studyOcrPage": "جاري البحث عن النص في هذه الصفحة...",
+    "studyZoomIn": "تكبير",
+    "studyZoomOut": "تصغير"
   },
   "th": {
     "appTitle": "แชทตรวจ {targetLanguage}",
@@ -5767,7 +5830,14 @@
     "characterFormInitial": "ต้น",
     "characterFormMedial": "กลาง",
     "characterFormFinal": "ท้าย",
-    "studyImageHint": "แตะข้อความบนรูปเพื่อวิเคราะห์"
+    "studyImageHint": "แตะประโยคเพื่อดูความหมายและการวิเคราะห์ ใช้สองนิ้วขยายได้",
+    "studySelectGloss": "ความหมาย",
+    "studySelectHint": "แตะประโยคเพื่อดูความหมายและการวิเคราะห์ ใช้สองนิ้วขยายได้",
+    "studyChapterPrev": "ก่อนหน้า",
+    "studyChapterNext": "ถัดไป",
+    "studyOcrPage": "กำลังค้นหาข้อความในหน้านี้...",
+    "studyZoomIn": "ขยาย",
+    "studyZoomOut": "ย่อ"
   },
   "hi": {
     "appTitle": "{targetLanguage} सुधार चैट",
@@ -6344,6 +6414,13 @@
     "characterFormInitial": "आरंभ",
     "characterFormMedial": "मध्य",
     "characterFormFinal": "अंत",
-    "studyImageHint": "विश्लेषण के लिए चित्र पर लिखे शब्द टैप करें।"
+    "studyImageHint": "अर्थ और विश्लेषण देखने के लिए वाक्य टैप करें। ज़ूम के लिए पिंच करें।",
+    "studySelectGloss": "अर्थ",
+    "studySelectHint": "अर्थ और विश्लेषण देखने के लिए वाक्य टैप करें। ज़ूम के लिए पिंच करें।",
+    "studyChapterPrev": "पिछला",
+    "studyChapterNext": "अगला",
+    "studyOcrPage": "इस पेज पर टेक्स्ट ढूँढ रहे हैं...",
+    "studyZoomIn": "ज़ूम इन",
+    "studyZoomOut": "ज़ूम आउट"
   }
 }

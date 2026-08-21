@@ -78,18 +78,6 @@ export function parseLooseModelJson(raw: string | null | undefined): unknown {
   }
 }
 
-export function stackedOcrBox(index: number, total: number): Omit<StudyOcrBox, "text"> {
-  const count = Math.max(1, total);
-  const gap = 0.012;
-  const h = Math.max(0.04, (0.9 - gap * (count - 1)) / count);
-  return {
-    x: 0.06,
-    y: 0.05 + index * (h + gap),
-    w: 0.88,
-    h,
-  };
-}
-
 export function parseStudyOcrResult(raw: unknown): StudyOcrResult {
   if (!raw || typeof raw !== "object") {
     return { title: "", paragraphs: [], boxes: [] };
@@ -97,13 +85,39 @@ export function parseStudyOcrResult(raw: unknown): StudyOcrResult {
   const row = raw as Record<string, unknown>;
   const title = asTrimmed(row.title).slice(0, 80);
   const boxes: StudyOcrBox[] = [];
-  const blockList = Array.isArray(row.blocks)
-    ? row.blocks
-    : Array.isArray(row.regions)
-      ? row.regions
-      : Array.isArray(row.boxes)
-        ? row.boxes
-        : [];
+  const paragraphs: string[] = [];
+  const sentenceList = Array.isArray(row.sentences)
+    ? row.sentences
+    : Array.isArray(row.blocks)
+      ? row.blocks
+      : Array.isArray(row.regions)
+        ? row.regions
+        : Array.isArray(row.boxes)
+          ? row.boxes
+          : [];
+
+  const pushSentence = (value: unknown) => {
+    const text =
+      typeof value === "string"
+        ? asTrimmed(value)
+        : asTrimmed((value as { text?: unknown } | null)?.text).replace(
+            /\s+/g,
+            " ",
+          );
+    const clean = text.replace(/\s+/g, " ").trim();
+    if (!clean) return;
+    paragraphs.push(clean.slice(0, 4000));
+  };
+
+  if (Array.isArray(row.sentences) && row.sentences.length > 0) {
+    for (const item of row.sentences) {
+      pushSentence(item);
+      if (paragraphs.length >= 160) break;
+    }
+    return { title, paragraphs, boxes };
+  }
+
+  const blockList = sentenceList;
 
   for (const item of blockList) {
     if (!item || typeof item !== "object") continue;
@@ -112,18 +126,17 @@ export function parseStudyOcrResult(raw: unknown): StudyOcrResult {
       " ",
     );
     if (!text) continue;
-    const box = normalizeOcrBox(item) ?? stackedOcrBox(boxes.length, 12);
-    boxes.push({ text: text.slice(0, 4000), ...box });
-    if (boxes.length >= 80) break;
+    paragraphs.push(text.slice(0, 4000));
+    const box = normalizeOcrBox(item);
+    if (box) boxes.push({ text: text.slice(0, 4000), ...box });
+    if (boxes.length >= 160) break;
   }
-
-  const paragraphs: string[] = boxes.map((box) => box.text);
 
   if (paragraphs.length === 0 && Array.isArray(row.paragraphs)) {
     for (const item of row.paragraphs) {
       const text = asTrimmed(item).replace(/\s+/g, " ");
       if (text) paragraphs.push(text.slice(0, 4000));
-      if (paragraphs.length >= 80) break;
+      if (paragraphs.length >= 160) break;
     }
   }
 
@@ -133,18 +146,9 @@ export function parseStudyOcrResult(raw: unknown): StudyOcrResult {
       for (const block of text.split(/\n{2,}/)) {
         const line = block.replace(/\s+/g, " ").trim();
         if (line) paragraphs.push(line.slice(0, 4000));
-        if (paragraphs.length >= 80) break;
+        if (paragraphs.length >= 160) break;
       }
     }
-  }
-
-  if (boxes.length === 0 && paragraphs.length > 0) {
-    paragraphs.forEach((text, index) => {
-      boxes.push({
-        text,
-        ...stackedOcrBox(index, paragraphs.length),
-      });
-    });
   }
 
   return { title, paragraphs, boxes };

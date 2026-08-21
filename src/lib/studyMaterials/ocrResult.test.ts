@@ -6,6 +6,23 @@ import {
   parseStudyOcrResult,
 } from "./ocrResult.ts";
 
+test("study OCR parser reads vision sentences without boxes", () => {
+  const result = parseStudyOcrResult({
+    title: "The Last Train Home",
+    sentences: [
+      "11:47 p.m.",
+      "His last train was leaving in thirteen minutes.",
+      "I couldn't figure out what he meant.",
+    ],
+  });
+  assert.deepEqual(result.paragraphs, [
+    "11:47 p.m.",
+    "His last train was leaving in thirteen minutes.",
+    "I couldn't figure out what he meant.",
+  ]);
+  assert.equal(result.boxes.length, 0);
+});
+
 test("study OCR parser keeps paragraphs and a short title", () => {
   const result = parseStudyOcrResult({
     title: "Lesson 1",
@@ -13,7 +30,7 @@ test("study OCR parser keeps paragraphs and a short title", () => {
   });
   assert.equal(result.title, "Lesson 1");
   assert.deepEqual(result.paragraphs, ["Hello there.", "How are you?"]);
-  assert.equal(result.boxes.length, 2);
+  assert.equal(result.boxes.length, 0);
 });
 
 test("study OCR parser falls back to a text blob", () => {

@@ -3,10 +3,11 @@ import type {
   ReadingProgress,
   StudyAnnotation,
   StudyDocument,
+  StudySourceFile,
 } from "@/lib/studyMaterials/types";
 
 const DB_NAME = "talkbank-study-materials";
-const DB_VERSION = 1;
+const DB_VERSION = 2;
 
 function openDb(): Promise<IDBDatabase> {
   return new Promise((resolve, reject) => {
@@ -19,6 +20,10 @@ function openDb(): Promise<IDBDatabase> {
       if (!db.objectStoreNames.contains("annotations")) {
         const store = db.createObjectStore("annotations", { keyPath: "id" });
         store.createIndex("documentId", "documentId", { unique: false });
+      }
+      if (!db.objectStoreNames.contains("files")) {
+        const files = db.createObjectStore("files", { keyPath: "id" });
+        files.createIndex("documentId", "documentId", { unique: false });
       }
     };
     request.onsuccess = () => resolve(request.result);
@@ -63,18 +68,50 @@ export async function saveStudyDocument(document: StudyDocument): Promise<void> 
 
 export async function deleteStudyDocument(id: string): Promise<void> {
   const db = await openDb();
-  const tx = db.transaction(["documents", "annotations"], "readwrite");
+  const stores = ["documents", "annotations"];
+  if (db.objectStoreNames.contains("files")) stores.push("files");
+  const tx = db.transaction(stores, "readwrite");
   tx.objectStore("documents").delete(id);
   const index = tx.objectStore("annotations").index("documentId");
   const annotations = await req(index.getAll(id));
   for (const row of annotations as StudyAnnotation[]) {
     tx.objectStore("annotations").delete(row.id);
   }
+  if (db.objectStoreNames.contains("files")) {
+    const files = tx.objectStore("files");
+    const fileIndex = files.index("documentId");
+    const rows = await req(fileIndex.getAll(id));
+    for (const row of rows as StudySourceFile[]) {
+      files.delete(row.id);
+    }
+  }
   await new Promise<void>((resolve, reject) => {
     tx.oncomplete = () => resolve();
     tx.onerror = () => reject(tx.error);
   });
   db.close();
+}
+
+export async function saveStudySourceFile(file: StudySourceFile): Promise<void> {
+  const db = await openDb();
+  await req(db.transaction("files", "readwrite").objectStore("files").put(file));
+  db.close();
+}
+
+export async function getStudySourceFile(
+  documentId: string,
+): Promise<StudySourceFile | null> {
+  const db = await openDb();
+  if (!db.objectStoreNames.contains("files")) {
+    db.close();
+    return null;
+  }
+  const rows = await req(
+    db.transaction("files").objectStore("files").index("documentId").getAll(documentId),
+  );
+  db.close();
+  const list = Array.isArray(rows) ? (rows as StudySourceFile[]) : [];
+  return list[0] ?? null;
 }
 
 export async function updateStudyProgress(

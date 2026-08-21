@@ -52,9 +52,9 @@ export function StudyMaterialsTab({
     );
   }
 
-  if (view === "reader" && active) {
+    if (view === "reader" && active) {
     return (
-      <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
+      <div className="fixed inset-0 z-[80] flex flex-col bg-white">
         <StudyReader
           document={active}
           locale={locale}

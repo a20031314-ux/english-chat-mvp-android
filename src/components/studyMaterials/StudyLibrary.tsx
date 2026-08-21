@@ -75,6 +75,11 @@ export function StudyLibrary({
                   key={document.id}
                   className="rounded-2xl border border-slate-200 bg-white p-4 shadow-sm"
                 >
+                  <button
+                    type="button"
+                    onClick={() => onOpen(document)}
+                    className="w-full text-left"
+                  >
                   <p className="text-sm font-semibold text-slate-900">
                     {document.title}
                   </p>
@@ -100,6 +105,7 @@ export function StudyLibrary({
                       String(document.stats.analyzedSentences),
                     )}
                   </p>
+                  </button>
                   <div className="mt-3 flex items-center gap-2">
                     <button
                       type="button"
@@ -110,7 +116,10 @@ export function StudyLibrary({
                     </button>
                     <button
                       type="button"
-                      onClick={() => onDelete(document.id)}
+                      onClick={(event) => {
+                        event.stopPropagation();
+                        onDelete(document.id);
+                      }}
                       className="rounded-full px-3 py-1.5 text-xs text-slate-500 hover:bg-slate-50 hover:text-rose-700"
                     >
                       {ui.studyDelete}

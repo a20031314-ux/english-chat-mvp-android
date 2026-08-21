@@ -1,20 +1,32 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
-import { StudyImageBoard } from "@/components/studyMaterials/StudyImageBoard";
+import {
+  canUseOriginalViewer,
+  InteractiveContentViewer,
+} from "@/components/studyMaterials/InteractiveContentViewer";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
+import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 import type { Locale, UICopy } from "@/lib/copy";
 import { rememberEnglishAnalysis } from "@/lib/englishAnalysisRecent";
 import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
+import type { ContentSelection } from "@/lib/studyMaterials/contentSelection";
 import {
   locationForSentence,
   neighborContext,
+  selectionAnalysisTarget,
   sentenceAnalysisTarget,
 } from "@/lib/studyMaterials/analysisAdapter";
 import {
+  applyOcrToImageSection,
+  requestStudyImageOcr,
+} from "@/lib/studyMaterials/extractImage";
+import { imageOverlaysNeedRefresh, OCR_LAYOUT_VERSION } from "@/lib/studyMaterials/mergeSentences";
+import {
   addStudyAnnotation,
+  saveStudyDocument,
   updateStudyProgress,
 } from "@/lib/studyMaterials/storage";
 import type {
@@ -23,6 +35,28 @@ import type {
   StudySection,
   StudySentence,
 } from "@/lib/studyMaterials/types";
+import { isSentenceVocabUnit } from "@/lib/vocabulary";
+
+function nearestSentence(
+  section: StudySection | undefined,
+  text: string,
+): { paragraph: StudyParagraph; sentence: StudySentence } | null {
+  if (!section) return null;
+  const needle = text.replace(/\s+/g, " ").trim().toLowerCase();
+  if (!needle) return null;
+  for (const paragraph of section.paragraphs) {
+    for (const sentence of paragraph.sentences) {
+      const hay = sentence.text.toLowerCase();
+      if (hay.includes(needle) || needle.includes(hay.slice(0, 48))) {
+        return { paragraph, sentence };
+      }
+    }
+  }
+  const paragraph = section.paragraphs[0];
+  const sentence = paragraph?.sentences[0];
+  if (!paragraph || !sentence) return null;
+  return { paragraph, sentence };
+}
 
 export function StudyReader({
   document,
@@ -38,6 +72,7 @@ export function StudyReader({
   onDocumentChange: (next: StudyDocument) => void;
 }) {
   const analysis = useEnglishAnalysisOptional();
+  const vocab = useVocabPreviewOptional();
   const learning = useLearningLanguageOptional();
   const targetLanguage =
     learning?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
@@ -47,12 +82,67 @@ export function StudyReader({
   const [selectedId, setSelectedId] = useState<string | null>(
     document.progress.sentenceId ?? null,
   );
+  const [ocrHint, setOcrHint] = useState("");
+  const originalViewer = canUseOriginalViewer(document);
 
   const restoredFor = useRef<string | null>(null);
+  const overlayRepair = useRef<string | null>(null);
 
   documentRef.current = document;
 
   useEffect(() => {
+    if (document.type !== "image") return;
+    const repairKey = `${document.id}:${OCR_LAYOUT_VERSION}`;
+    if (overlayRepair.current === repairKey) return;
+    const needsRepair = document.sections.some(
+      (section) =>
+        Boolean(section.imageDataUrl) && imageOverlaysNeedRefresh(section),
+    );
+    if (!needsRepair) {
+      overlayRepair.current = repairKey;
+      return;
+    }
+
+    let cancelled = false;
+    setOcrHint(ui.studyOcrPage);
+    void (async () => {
+      const sections = [];
+      for (const section of document.sections) {
+        if (
+          !section.imageDataUrl ||
+          !imageOverlaysNeedRefresh(section)
+        ) {
+          sections.push(section);
+          continue;
+        }
+        const ocr = await requestStudyImageOcr({
+          image: section.imageDataUrl,
+          targetLanguage,
+        });
+        if (cancelled) return;
+        sections.push(applyOcrToImageSection(section, ocr));
+      }
+      if (cancelled) return;
+      overlayRepair.current = repairKey;
+      const next = { ...document, sections };
+      await saveStudyDocument(next);
+      if (cancelled) return;
+      onDocumentChange(next);
+      setOcrHint("");
+    })().catch(() => {
+      if (!cancelled) {
+        overlayRepair.current = repairKey;
+        setOcrHint("");
+      }
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [document, onDocumentChange, targetLanguage, ui.studyOcrPage]);
+
+  useEffect(() => {
+    if (originalViewer) return;
     if (restoredFor.current === document.id) return;
     restoredFor.current = document.id;
     const sectionId = document.progress.sectionId;
@@ -68,30 +158,48 @@ export function StudyReader({
     if (node instanceof HTMLElement) {
       node.scrollIntoView({ block: "start" });
     }
-  }, [document.id, document.progress.sectionId, document.progress.sentenceId]);
+  }, [
+    document.id,
+    document.progress.sectionId,
+    document.progress.sentenceId,
+    originalViewer,
+  ]);
 
-  const recordProgress = (
-    section: StudySection,
-    paragraph?: StudyParagraph,
-    sentence?: StudySentence,
-  ) => {
-    const current = documentRef.current;
-    const index = current.sections.findIndex((row) => row.id === section.id);
-    const total = current.sections.length || 1;
-    const progressPercent = Math.round(((index + 1) / total) * 100);
-    if (progressTimer.current) window.clearTimeout(progressTimer.current);
-    progressTimer.current = window.setTimeout(() => {
-      void updateStudyProgress(current.id, {
-        sectionId: section.id,
-        paragraphId: paragraph?.id,
-        sentenceId: sentence?.id,
-        page: section.page,
-        progressPercent,
-      }).then((next) => {
-        if (next) onDocumentChange(next);
-      });
-    }, 400);
-  };
+  const recordProgress = useCallback(
+    (
+      section: StudySection,
+      paragraph?: StudyParagraph,
+      sentence?: StudySentence,
+      page?: number,
+    ) => {
+      const current = documentRef.current;
+      const index = current.sections.findIndex((row) => row.id === section.id);
+      const total = current.sections.length || 1;
+      const progressPercent = Math.round(((index + 1) / total) * 100);
+      const nextPage = page ?? section.page;
+      if (
+        current.progress.sectionId === section.id &&
+        current.progress.page === nextPage &&
+        current.progress.progressPercent === progressPercent &&
+        current.progress.sentenceId === sentence?.id
+      ) {
+        return;
+      }
+      if (progressTimer.current) window.clearTimeout(progressTimer.current);
+      progressTimer.current = window.setTimeout(() => {
+        void updateStudyProgress(current.id, {
+          sectionId: section.id,
+          paragraphId: paragraph?.id,
+          sentenceId: sentence?.id,
+          page: nextPage,
+          progressPercent,
+        }).then((next) => {
+          if (next) onDocumentChange(next);
+        });
+      }, 400);
+    },
+    [onDocumentChange],
+  );
 
   useEffect(() => {
     return () => {
@@ -100,6 +208,7 @@ export function StudyReader({
   }, []);
 
   useEffect(() => {
+    if (originalViewer) return;
     const root = scrollerRef.current;
     if (!root) return;
     const observer = new IntersectionObserver(
@@ -120,7 +229,7 @@ export function StudyReader({
       observer.observe(node);
     });
     return () => observer.disconnect();
-  }, [document.id, document.sections.length]);
+  }, [document.id, document.sections.length, originalViewer, recordProgress]);
 
   const analyzeSentence = (
     section: StudySection,
@@ -176,6 +285,67 @@ export function StudyReader({
     );
   };
 
+  const handleOriginalAction = (
+    selection: ContentSelection,
+    action: "gloss" | "analyze" | "save",
+  ) => {
+    const section =
+      document.sections.find((row) => row.id === selection.sectionId) ||
+      document.sections.find((row) => row.page === selection.page) ||
+      document.sections[0];
+    const hit = nearestSentence(section, selection.text);
+    if (section && hit) {
+      setSelectedId(hit.sentence.id);
+      void addStudyAnnotation(
+        locationForSentence({
+          document,
+          section,
+          paragraph: hit.paragraph,
+          sentence: hit.sentence,
+          selectedText: selection.text,
+          kind: action === "analyze" ? "sentence" : "span",
+          ...(selection.boundingBox
+            ? { boundingBox: selection.boundingBox }
+            : {}),
+        }),
+      );
+      recordProgress(section, hit.paragraph, hit.sentence, selection.page);
+    } else if (section) {
+      recordProgress(section, undefined, undefined, selection.page);
+    }
+
+    const sentenceText =
+      selection.mode === "sentence"
+        ? selection.text
+        : selection.contextSentence || selection.text;
+    const target = selectionAnalysisTarget({
+      selectedText:
+        action === "analyze" || selection.mode === "sentence"
+          ? sentenceText
+          : selection.text,
+      contextSentence: sentenceText,
+      previous: selection.previous,
+      next: selection.next,
+      language: targetLanguage,
+      intent:
+        action === "analyze" || selection.mode === "sentence"
+          ? "sentence"
+          : undefined,
+    });
+
+    if (action === "analyze") {
+      rememberEnglishAnalysis({ input: selection.contextSentence });
+      analysis?.open(target);
+      return;
+    }
+
+    if (isSentenceVocabUnit(selection.text, selection.contextSentence)) {
+      analysis?.open({ ...target, intent: "sentence" });
+      return;
+    }
+    vocab?.open(selection.text, selection.contextSentence);
+  };
+
   const typeLabel =
     document.type === "epub"
       ? "EPUB"
@@ -223,106 +393,108 @@ export function StudyReader({
           {resumeHint}
         </p>
       ) : null}
-
-      <div
-        ref={scrollerRef}
-        className="min-h-0 flex-1 overflow-y-auto px-4 py-6"
-      >
-        <article
-          className={`mx-auto w-full ${
-            document.type === "image" ? "max-w-3xl" : "max-w-prose"
-          }`}
+      {originalViewer ? (
+        <>
+          <p className="shrink-0 px-4 py-1.5 text-center text-[11px] text-slate-500">
+            {ocrHint ||
+              (document.type === "image"
+                ? ui.studyImageHint
+                : ui.studySelectHint)}
+          </p>
+          <InteractiveContentViewer
+            document={document}
+            ui={ui}
+            selectedId={selectedId}
+            onSelectionAction={handleOriginalAction}
+            onProgress={({ section, page }) => {
+              recordProgress(section, undefined, undefined, page);
+            }}
+          />
+        </>
+      ) : (
+        <div
+          ref={scrollerRef}
+          className="min-h-0 flex-1 overflow-y-auto px-4 py-6"
         >
-          {document.sections.map((section) => (
-            <section
-              key={section.id}
-              data-section-id={section.id}
-              className="mb-8"
-            >
-              {section.imageDataUrl ? (
-                <StudyImageBoard
-                  section={section}
-                  selectedId={selectedId}
-                  hint={ui.studyImageHint}
-                  onSelect={({ paragraph, sentence }) => {
-                    analyzeSentence(section, paragraph, sentence);
-                  }}
-                />
-              ) : (
-                <>
-              {section.title ? (
-                <h3 className="mb-3 text-base font-semibold tracking-tight text-slate-900">
-                  {section.title}
-                </h3>
-              ) : null}
-              {section.paragraphs.map((paragraph) => {
-                const selectedSentence = paragraph.sentences.find(
-                  (row) => row.id === selectedId,
-                );
-                return (
-                  <div key={paragraph.id} className="mb-4">
-                    <div className="text-[17px] leading-8 text-slate-800">
-                      {paragraph.sentences.map((sentence, index) => {
-                        const selected = selectedId === sentence.id;
-                        return (
-                          <span
-                            key={sentence.id}
-                            data-sentence-id={sentence.id}
-                            onPointerDown={() => {
-                              setSelectedId(sentence.id);
-                              recordProgress(section, paragraph, sentence);
-                            }}
-                          >
-                            {index > 0 ? " " : null}
-                            <AnalyzableEnglish
-                              inline
-                              sentence={sentence.text}
-                              context={neighborContext(paragraph, sentence)}
-                              analyzeLabel={ui.insightAnalyze}
-                              sourceType="web"
-                              language={targetLanguage}
-                              className={
-                                selected
-                                  ? "rounded-md bg-amber-50 px-0.5 text-[17px] leading-8 text-slate-800"
-                                  : "rounded-md px-0.5 text-[17px] leading-8 text-slate-800"
-                              }
-                              onAnalyze={(selectedText) =>
-                                analyzeSpan(
-                                  section,
-                                  paragraph,
-                                  sentence,
-                                  selectedText,
-                                )
-                              }
-                            />
-                          </span>
-                        );
-                      })}
+          <article className="mx-auto w-full max-w-prose">
+            {document.sections.map((section) => (
+              <section
+                key={section.id}
+                data-section-id={section.id}
+                className="mb-8"
+              >
+                {section.title ? (
+                  <h3 className="mb-3 text-base font-semibold tracking-tight text-slate-900">
+                    {section.title}
+                  </h3>
+                ) : null}
+                {section.paragraphs.map((paragraph) => {
+                  const selectedSentence = paragraph.sentences.find(
+                    (row) => row.id === selectedId,
+                  );
+                  return (
+                    <div key={paragraph.id} className="mb-4">
+                      <div className="text-[17px] leading-8 text-slate-800">
+                        {paragraph.sentences.map((sentence, index) => {
+                          const selected = selectedId === sentence.id;
+                          return (
+                            <span
+                              key={sentence.id}
+                              data-sentence-id={sentence.id}
+                              onPointerDown={() => {
+                                setSelectedId(sentence.id);
+                                recordProgress(section, paragraph, sentence);
+                              }}
+                            >
+                              {index > 0 ? " " : null}
+                              <AnalyzableEnglish
+                                inline
+                                sentence={sentence.text}
+                                context={neighborContext(paragraph, sentence)}
+                                analyzeLabel={ui.insightAnalyze}
+                                sourceType="web"
+                                language={targetLanguage}
+                                className={
+                                  selected
+                                    ? "rounded-md bg-amber-50 px-0.5 text-[17px] leading-8 text-slate-800"
+                                    : "rounded-md px-0.5 text-[17px] leading-8 text-slate-800"
+                                }
+                                onAnalyze={(selectedText) =>
+                                  analyzeSpan(
+                                    section,
+                                    paragraph,
+                                    sentence,
+                                    selectedText,
+                                  )
+                                }
+                              />
+                            </span>
+                          );
+                        })}
+                      </div>
+                      {selectedSentence ? (
+                        <button
+                          type="button"
+                          onClick={() =>
+                            analyzeSentence(
+                              section,
+                              paragraph,
+                              selectedSentence,
+                            )
+                          }
+                          className="mt-1 rounded-full bg-slate-900 px-3 py-1 text-[11px] font-medium text-white hover:bg-slate-800"
+                        >
+                          {ui.exploreSubmit}
+                        </button>
+                      ) : null}
                     </div>
-                    {selectedSentence ? (
-                      <button
-                        type="button"
-                        onClick={() =>
-                          analyzeSentence(
-                            section,
-                            paragraph,
-                            selectedSentence,
-                          )
-                        }
-                        className="mt-1 rounded-full bg-slate-900 px-3 py-1 text-[11px] font-medium text-white hover:bg-slate-800"
-                      >
-                        {ui.exploreSubmit}
-                      </button>
-                    ) : null}
-                  </div>
-                );
-              })}
-                </>
-              )}
-            </section>
-          ))}
-        </article>
-      </div>
+                  );
+                })}
+              </section>
+            ))}
+          </article>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,15 +1,17 @@
 import { apiUrl } from "@/lib/apiBase";
 import { parseStudyOcrResult, type StudyOcrResult } from "@/lib/studyMaterials/ocrResult";
+import { OCR_LAYOUT_VERSION } from "@/lib/studyMaterials/mergeSentences";
 import { buildStudyDocument } from "@/lib/studyMaterials/normalizeDocument";
 import {
   StudyImportError,
   type ExtractedSection,
   type StudyDocument,
+  type StudySection,
 } from "@/lib/studyMaterials/types";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
 
-const MAX_EDGE = 1280;
-const JPEG_QUALITY = 0.74;
+const MAX_EDGE = 1600;
+const JPEG_QUALITY = 0.82;
 const MAX_DATA_URL_CHARS = 3_500_000;
 
 export function extractImageDocument(input: {
@@ -67,6 +69,34 @@ export async function prepareStudyImageDataUrl(file: File): Promise<string> {
     throw new StudyImportError("too_large", "This file is too large.");
   }
   return dataUrl;
+}
+
+export function applyOcrToImageSection(
+  section: StudySection,
+  ocr: StudyOcrResult,
+): StudySection {
+  const rebuilt = buildStudyDocument({
+    title: section.title || "Image",
+    type: "image",
+    sections: [
+      {
+        title: section.title,
+        page: section.page,
+        paragraphs: ocr.paragraphs,
+        readySentences: true,
+        imageDataUrl: section.imageDataUrl,
+      },
+    ],
+  }).sections[0];
+  if (!rebuilt) {
+    return { ...section, lineBoxes: true, ocrEngine: OCR_LAYOUT_VERSION };
+  }
+  return {
+    ...rebuilt,
+    id: section.id,
+    lineBoxes: true,
+    ocrEngine: OCR_LAYOUT_VERSION,
+  };
 }
 
 export async function requestStudyImageOcr(input: {

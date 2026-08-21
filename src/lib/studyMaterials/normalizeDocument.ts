@@ -1,5 +1,8 @@
 import { newStudyId } from "@/lib/studyMaterials/ids";
-import { stackedOcrBox } from "@/lib/studyMaterials/ocrResult";
+import {
+  OCR_LAYOUT_VERSION,
+  groupLinesIntoSentences,
+} from "@/lib/studyMaterials/mergeSentences";
 import { splitSentences } from "@/lib/studyMaterials/splitSentences";
 import type {
   ExtractedSection,
@@ -34,43 +37,84 @@ export function buildStudyDocument(input: {
 
   for (const raw of input.sections.slice(0, MAX_SECTIONS)) {
     const paragraphs: StudyParagraph[] = [];
-    for (const block of raw.paragraphs) {
-      const text = block.replace(/\s+/g, " ").trim();
-      if (!text) continue;
-      if (paragraphCount >= MAX_PARAGRAPHS) break;
-      const keepWhole = Boolean(raw.imageDataUrl || raw.boxes?.length);
-      const sentences = (keepWhole ? [text] : splitSentences(text)).map(
-        (sentence, position) => ({
+    const overlays: StudyImageOverlay[] = [];
+    const useReadySentences = Boolean(raw.readySentences);
+    const regions =
+      !useReadySentences && raw.boxes?.length
+        ? groupLinesIntoSentences(raw.boxes)
+        : [];
+
+    if (useReadySentences) {
+      for (const block of raw.paragraphs) {
+        const text = block.replace(/\s+/g, " ").trim();
+        if (!text) continue;
+        if (paragraphCount >= MAX_PARAGRAPHS) break;
+        const sentence = {
+          id: newStudyId("s"),
+          text,
+          position: 0,
+        };
+        paragraphs.push({
+          id: newStudyId("p"),
+          text,
+          sentences: [sentence],
+        });
+        paragraphCount += 1;
+      }
+    } else if (regions.length > 0) {
+      for (const region of regions) {
+        if (paragraphCount >= MAX_PARAGRAPHS) break;
+        const sentence = {
+          id: newStudyId("s"),
+          text: region.text,
+          position: 0,
+        };
+        const paragraph: StudyParagraph = {
+          id: newStudyId("p"),
+          text: region.text,
+          sentences: [sentence],
+        };
+        paragraphs.push(paragraph);
+        paragraphCount += 1;
+        if (raw.imageDataUrl) {
+          for (const line of region.lines) {
+            overlays.push({
+              sentenceId: sentence.id,
+              paragraphId: paragraph.id,
+              x: line.x,
+              y: line.y,
+              w: line.w,
+              h: line.h,
+            });
+          }
+        }
+      }
+    } else {
+      for (const block of raw.paragraphs) {
+        const text = block.replace(/\s+/g, " ").trim();
+        if (!text) continue;
+        if (paragraphCount >= MAX_PARAGRAPHS) break;
+        const sentences = splitSentences(text).map((sentence, position) => ({
           id: newStudyId("s"),
           text: sentence,
           position,
-        }),
-      );
-      if (sentences.length === 0) continue;
-      paragraphs.push({
-        id: newStudyId("p"),
-        text,
-        sentences,
-      });
-      paragraphCount += 1;
-    }
-    if (paragraphs.length === 0 && !raw.imageDataUrl) continue;
-    const overlays: StudyImageOverlay[] = [];
-    if (raw.imageDataUrl && raw.boxes && raw.boxes.length > 0) {
-      paragraphs.forEach((paragraph, index) => {
-        const sentence = paragraph.sentences[0];
-        if (!sentence) return;
-        const box = raw.boxes?.[index];
-        const fallback = stackedOcrBox(index, paragraphs.length);
-        overlays.push({
-          sentenceId: sentence.id,
-          paragraphId: paragraph.id,
-          x: box?.x ?? fallback.x,
-          y: box?.y ?? fallback.y,
-          w: box?.w ?? fallback.w,
-          h: box?.h ?? fallback.h,
+        }));
+        if (sentences.length === 0) continue;
+        paragraphs.push({
+          id: newStudyId("p"),
+          text: sentences.map((row) => row.text).join(" "),
+          sentences,
         });
-      });
+        paragraphCount += 1;
+      }
+    }
+    if (
+      paragraphs.length === 0 &&
+      !raw.imageDataUrl &&
+      !raw.keepEmpty &&
+      !raw.sourcePath
+    ) {
+      continue;
     }
     sections.push({
       id: newStudyId("sec"),
@@ -78,8 +122,10 @@ export function buildStudyDocument(input: {
       ...(raw.title ? { title: raw.title } : {}),
       ...(typeof raw.page === "number" ? { page: raw.page } : {}),
       ...(raw.chapter ? { chapter: raw.chapter } : {}),
+      ...(raw.sourcePath ? { sourcePath: raw.sourcePath } : {}),
       ...(raw.imageDataUrl ? { imageDataUrl: raw.imageDataUrl } : {}),
       ...(overlays.length ? { overlays } : {}),
+      ...(raw.imageDataUrl ? { ocrEngine: OCR_LAYOUT_VERSION } : {}),
     });
   }
 
@@ -114,6 +160,10 @@ export function countSentences(document: StudyDocument): number {
 }
 
 export function documentHasText(document: StudyDocument): boolean {
+  if (document.sourceFileId) return true;
   if (countSentences(document) > 0) return true;
-  return document.sections.some((section) => Boolean(section.imageDataUrl));
+  return document.sections.some(
+    (section) =>
+      Boolean(section.imageDataUrl) || typeof section.page === "number",
+  );
 }

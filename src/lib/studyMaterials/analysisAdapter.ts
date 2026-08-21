@@ -39,6 +39,8 @@ export function neighborContext(
   );
 }
 
+export { selectionAnalysisTarget } from "@/lib/studyMaterials/contentSelection";
+
 export function sentenceAnalysisTarget(input: {
   sentence: StudySentence;
   paragraph: StudyParagraph;
@@ -87,6 +89,7 @@ export function locationForSentence(input: {
   sentence: StudySentence;
   selectedText?: string;
   kind: "sentence" | "span";
+  boundingBox?: { x: number; y: number; w: number; h: number };
 }) {
   return {
     documentId: input.document.id,
@@ -100,5 +103,6 @@ export function locationForSentence(input: {
       ? { page: input.section.page }
       : {}),
     ...(input.section.chapter ? { chapter: input.section.chapter } : {}),
+    ...(input.boundingBox ? { boundingBox: input.boundingBox } : {}),
   };
 }

@@ -7,6 +7,7 @@ import {
 import { extractPdfDocument } from "@/lib/studyMaterials/extractPdf";
 import { extractTxtDocument } from "@/lib/studyMaterials/extractTxt";
 import { documentHasText } from "@/lib/studyMaterials/normalizeDocument";
+import { saveStudySourceFile } from "@/lib/studyMaterials/storage";
 import {
   StudyImportError,
   type ExtractedSection,
@@ -92,8 +93,28 @@ export async function importStudyFile(
     document = await extractEpubDocument({ data, fileName: file.name });
   }
 
+  if (kind === "pdf" || kind === "epub") {
+    document.sourceFileId = document.id;
+  }
+
   if (!documentHasText(document)) {
     throw new StudyImportError("no_text", "No text was found in this file.");
+  }
+
+  if (document.sourceFileId) {
+    await saveStudySourceFile({
+      id: document.id,
+      documentId: document.id,
+      mime:
+        file.type ||
+        (kind === "pdf" ? "application/pdf" : "application/epub+zip"),
+      name: file.name,
+      blob: new Blob([data], {
+        type:
+          file.type ||
+          (kind === "pdf" ? "application/pdf" : "application/epub+zip"),
+      }),
+    });
   }
 
   onStage?.("normalizing");
@@ -122,14 +143,11 @@ async function importStudyImages(
       targetLanguage: options?.targetLanguage,
     });
     if (!title) title = ocr.title || file.name.replace(/\.[^.]+$/, "");
-    const boxes = ocr.boxes.length > 0 ? ocr.boxes : [];
-    const paragraphs =
-      boxes.length > 0 ? boxes.map((box) => box.text) : ocr.paragraphs;
     sections.push({
       page: files.length > 1 ? index + 1 : undefined,
-      paragraphs,
+      paragraphs: ocr.paragraphs,
       imageDataUrl: image,
-      boxes,
+      readySentences: true,
     });
   }
 

@@ -12,6 +12,8 @@ import { getOpenAIClient } from "@/lib/videoSubtitle/openaiClient";
 import { asRecord } from "@/lib/videoSubtitle/parseModelJson";
 import { VISION_MODEL } from "@/lib/videoSubtitle/sceneConfig";
 
+const OCR_MODEL = process.env.OPENAI_OCR_MODEL?.trim() || "gpt-4o";
+
 export const runtime = "nodejs";
 export const maxDuration = 60;
 
@@ -52,19 +54,26 @@ export async function POST(request: NextRequest) {
 
   const targetLanguage = coerceLanguageCode(body.targetLanguage);
   const languageName = learningLanguageName(targetLanguage);
-  const system = `You find readable text on a poster, photo, worksheet, or screenshot.
+  const system = `You read a photo of a textbook page, poster, worksheet, or screenshot.
 The learner is studying ${languageName}.
-Copy the written text as faithfully as possible. Keep the original language. Do not translate.
-Group nearby words into lines or short phrases. Return at most 40 blocks.
-x,y are the top-left of each block; w,h are its size. Use percentages 0-100 of the image.
-If there is no readable text, return empty blocks.
+Look at the ENTIRE image. Your only job is to list every complete SENTENCE.
+
+Rules:
+- One array item = one complete sentence.
+- If a sentence wraps onto the next line, keep it as ONE item.
+- If two sentences are on the same line, they are TWO items.
+- Do not split on abbreviations like Mr. Dr. p.m. a.m. U.S. etc. unless a new sentence really starts.
+- Headings, titles, and short labels may be their own items.
+- Copy the original language faithfully. Do not translate.
+- Skip photos, clocks, and decorations that are not readable study text.
+- Do not return coordinates or bounding boxes.
 
 Return JSON:
-{"title":"short title or empty","blocks":[{"text":"exact text","x":12,"y":8,"w":70,"h":10}]}`;
+{"title":"short title or empty","sentences":["First complete sentence.","Second complete sentence."]}`;
 
-  const run = async (detail: "high" | "low") => {
+  const run = async (model: string) => {
     const completion = await client.chat.completions.create({
-      model: VISION_MODEL,
+      model,
       temperature: 0,
       response_format: { type: "json_object" },
       max_tokens: 8000,
@@ -75,11 +84,11 @@ Return JSON:
           content: [
             {
               type: "text",
-              text: "Find each text line on this image and return the words plus position.",
+              text: "Read the whole page. Return each complete sentence as its own item. Do not guess word positions.",
             },
             {
               type: "image_url",
-              image_url: { url: image, detail },
+              image_url: { url: image, detail: "high" },
             },
           ],
         },
@@ -92,9 +101,17 @@ Return JSON:
   };
 
   try {
-    const result = await run("high");
+    const result = await run(OCR_MODEL);
     return jsonWithCors(request, result);
   } catch (error) {
+    if (OCR_MODEL !== VISION_MODEL) {
+      try {
+        const result = await run(VISION_MODEL);
+        return jsonWithCors(request, result);
+      } catch (fallbackError) {
+        console.error("[study-ocr]", fallbackError);
+      }
+    }
     console.error("[study-ocr]", error);
     return jsonWithCors(request, { error: "OCR_FAILED" }, { status: 502 });
   }

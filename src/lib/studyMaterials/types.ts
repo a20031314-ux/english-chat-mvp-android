@@ -29,10 +29,16 @@ export type StudySection = {
   title?: string;
   page?: number;
   chapter?: string;
+  /** EPUB spine path, used to render the original chapter HTML. */
+  sourcePath?: string;
   paragraphs: StudyParagraph[];
   /** Original photo/poster; shown instead of extracted text. */
   imageDataUrl?: string;
   overlays?: StudyImageOverlay[];
+  /** True after a line-level OCR pass, even if no usable boxes were found. */
+  lineBoxes?: boolean;
+  /** Word-layout engine version, e.g. tess-words-1. */
+  ocrEngine?: string;
 };
 
 export type ReadingProgress = {
@@ -42,6 +48,8 @@ export type ReadingProgress = {
   sentenceId?: string;
   page?: number;
   progressPercent: number;
+  scrollTop?: number;
+  zoom?: number;
   updatedAt: string;
 };
 
@@ -50,6 +58,8 @@ export type StudyDocument = {
   title: string;
   source: StudySource;
   type: StudyDocumentType;
+  /** Original file in IndexedDB `files` store. */
+  sourceFileId?: string;
   fileName?: string;
   language?: string;
   sections: StudySection[];
@@ -72,6 +82,7 @@ export type StudyAnnotation = {
   sourceText: string;
   selectedText: string;
   kind: "sentence" | "span";
+  boundingBox?: { x: number; y: number; w: number; h: number };
   createdAt: string;
 };
 
@@ -98,6 +109,28 @@ export class StudyImportError extends Error {
   }
 }
 
+export type ContentTextAnchor = {
+  id: string;
+  text: string;
+  sourceType: "epub" | "pdf" | "image" | "txt";
+  previousText?: string;
+  nextText?: string;
+  location: {
+    sectionId?: string;
+    chapter?: string;
+    page?: number;
+    boundingBox?: { x: number; y: number; w: number; h: number };
+  };
+};
+
+export type StudySourceFile = {
+  id: string;
+  documentId: string;
+  mime: string;
+  name: string;
+  blob: Blob;
+};
+
 export type ExtractedTextBox = {
   text: string;
   x: number;
@@ -110,7 +143,11 @@ export type ExtractedSection = {
   title?: string;
   page?: number;
   chapter?: string;
+  sourcePath?: string;
+  keepEmpty?: boolean;
   paragraphs: string[];
   imageDataUrl?: string;
   boxes?: ExtractedTextBox[];
+  /** Each paragraph is already one complete sentence from vision OCR. */
+  readySentences?: boolean;
 };
