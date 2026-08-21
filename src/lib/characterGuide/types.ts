@@ -1,4 +1,4 @@
-import type { LearningLanguageCode } from "../learningLanguages.ts";
+import type { LearningLanguageCode } from "../learningLanguages";
 
 /** Korean + English, with English/Korean fallback for other UI locales. */
 export type LocalizedText = string | { ko?: string; en?: string };

@@ -1,4 +1,4 @@
-import type { LocalizedText } from "./types.ts";
+import type { LocalizedText } from "./types";
 
 export function localizedText(
   text: LocalizedText | undefined,

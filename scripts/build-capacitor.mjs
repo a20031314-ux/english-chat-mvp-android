@@ -6,7 +6,13 @@
  * Run: `npm run build:capacitor` (not `npm run build` — Vercel uses `build` for server + API routes.)
  */
 import { execSync } from "node:child_process";
-import { cpSync, existsSync, rmSync } from "node:fs";
+import {
+  cpSync,
+  existsSync,
+  readFileSync,
+  rmSync,
+  writeFileSync,
+} from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -17,11 +23,13 @@ const apiBackup = path.join(root, "src", "_capacitor_build_backup_api");
 const outDir = path.join(root, "out");
 const wwwDir = path.join(root, "www");
 const nextDir = path.join(root, ".next");
+const tsconfigPath = path.join(root, "tsconfig.json");
 
 process.chdir(root);
 
 // Drop stale generated types that still reference `src/app/api/*` before we move that folder.
 rmSync(nextDir, { recursive: true, force: true });
+rmSync(path.join(nextDir, "dev"), { recursive: true, force: true });
 
 if (existsSync(apiBackup)) {
   console.error(
@@ -44,6 +52,15 @@ if (existsSync(apiDir)) {
   apiMoved = true;
 }
 
+const tsconfigRaw = readFileSync(tsconfigPath, "utf8");
+const tsconfig = JSON.parse(tsconfigRaw);
+if (Array.isArray(tsconfig.include)) {
+  tsconfig.include = tsconfig.include.filter(
+    (entry) => !String(entry).includes(".next/dev"),
+  );
+  writeFileSync(tsconfigPath, `${JSON.stringify(tsconfig, null, 2)}\n`);
+}
+
 function restoreApi() {
   if (!apiMoved || !existsSync(apiBackup)) {
     return;
@@ -52,6 +69,10 @@ function restoreApi() {
     rmSync(apiDir, { recursive: true, force: true });
   }
   moveDir(apiBackup, apiDir);
+}
+
+function restoreTsconfig() {
+  writeFileSync(tsconfigPath, tsconfigRaw);
 }
 
 let buildFailed = false;
@@ -63,6 +84,7 @@ try {
 } catch {
   buildFailed = true;
 } finally {
+  restoreTsconfig();
   restoreApi();
 }
 

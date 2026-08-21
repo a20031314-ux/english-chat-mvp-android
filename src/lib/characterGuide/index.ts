@@ -2,13 +2,13 @@ import {
   isLearningLanguageCode,
   learningLanguageScript,
   type LearningLanguageCode,
-} from "../learningLanguages.ts";
-import { AR_GUIDE } from "./ar.ts";
-import { JA_GUIDE } from "./ja.ts";
-import { KO_GUIDE } from "./ko.ts";
-import { RU_GUIDE } from "./ru.ts";
-import type { CharacterGuide, CharacterItem } from "./types.ts";
-import { ZH_GUIDE } from "./zh.ts";
+} from "../learningLanguages";
+import { AR_GUIDE } from "./ar";
+import { JA_GUIDE } from "./ja";
+import { KO_GUIDE } from "./ko";
+import { RU_GUIDE } from "./ru";
+import type { CharacterGuide, CharacterItem } from "./types";
+import { ZH_GUIDE } from "./zh";
 
 const GUIDES: Partial<Record<LearningLanguageCode, CharacterGuide>> = {
   ja: JA_GUIDE,
@@ -104,4 +104,4 @@ export type {
   CharacterItem,
   CharacterNote,
   LocalizedText,
-} from "./types.ts";
+} from "./types";

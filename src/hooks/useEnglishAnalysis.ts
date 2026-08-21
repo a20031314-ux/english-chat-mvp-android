@@ -198,7 +198,7 @@ export function useEnglishAnalysis(locale: Locale) {
       const tab = resolveTab(target);
       const prev = sessionRef.current;
       const sameSentence =
-        Boolean(prev) &&
+        prev != null &&
         isSameAnalysisSpan(prev.target.contextSentence, contextSentence);
       const subsetRange =
         tab === "sentence" && !isSameAnalysisSpan(selectedText, contextSentence)

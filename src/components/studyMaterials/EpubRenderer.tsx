@@ -3,6 +3,7 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import JSZip from "jszip";
 import { ZoomableStage } from "@/components/studyMaterials/ZoomableStage";
+import type { UICopy } from "@/lib/copy";
 import type { ContentSelection } from "@/lib/studyMaterials/contentSelection";
 import {
   neighborTextFromSelection,

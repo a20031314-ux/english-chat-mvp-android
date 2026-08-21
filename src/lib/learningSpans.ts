@@ -3,14 +3,14 @@
  * English must keep using textTokens + expressionUnits — never this module.
  */
 
-import { selectionFitsSentence } from "./expressionInsight.ts";
-import { isLearningLanguageCode } from "./learningLanguages.ts";
+import { selectionFitsSentence } from "./expressionInsight";
+import { isLearningLanguageCode } from "./learningLanguages";
 import {
   isWordToken,
   listWordSpans,
   tokenize,
   type WordSpan,
-} from "./textTokens.ts";
+} from "./textTokens";
 
 export type LearningSpanKind = "expression" | "word" | "grammar_unit";
 export type LearningInnerKind = "word" | "character" | "morpheme";

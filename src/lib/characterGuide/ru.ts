@@ -1,4 +1,4 @@
-import type { CharacterGuide, CharacterItem, LocalizedText } from "./types.ts";
+import type { CharacterGuide, CharacterItem, LocalizedText } from "./types";
 
 function m(ko: string, en: string): LocalizedText {
   return { ko, en };

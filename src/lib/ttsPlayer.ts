@@ -61,6 +61,18 @@ function concatBytes(a: Uint8Array, b: Uint8Array): Uint8Array {
   return out;
 }
 
+/**
+ * TS 5.7+ types Uint8Array as Uint8Array<ArrayBuffer> by default, while
+ * subarray() is Uint8Array<ArrayBufferLike>. Copy into a real ArrayBuffer
+ * so leftover stays assignable without changing PCM bytes.
+ */
+function remainderBytes(bytes: Uint8Array, start: number): Uint8Array<ArrayBuffer> {
+  if (start >= bytes.byteLength) return new Uint8Array(0);
+  const rest = new Uint8Array(bytes.byteLength - start);
+  rest.set(bytes.subarray(start));
+  return rest;
+}
+
 function getAudioContext(): AudioContext {
   if (!audioCtx) {
     audioCtx = new AudioContext();
@@ -262,7 +274,7 @@ async function playPcmStream(state: StreamState, gen: number): Promise<void> {
   const ctx = getAudioContext();
   await ctx.resume();
   let chunkIndex = 0;
-  let leftover = new Uint8Array(0);
+  let leftover: Uint8Array<ArrayBuffer> = new Uint8Array(0);
   let nextStart = ctx.currentTime;
   let lastSource: AudioBufferSourceNode | null = null;
 
@@ -272,8 +284,7 @@ async function playPcmStream(state: StreamState, gen: number): Promise<void> {
       chunkIndex += 1;
       const merged = concatBytes(leftover, chunk);
       const even = merged.byteLength & ~1;
-      leftover =
-        even < merged.byteLength ? merged.subarray(even) : new Uint8Array(0);
+      leftover = remainderBytes(merged, even);
       if (even < 2) continue;
       const scheduled = schedulePcm(ctx, merged.subarray(0, even), nextStart);
       nextStart = scheduled.nextStart;
