@@ -14,12 +14,25 @@ export type StudyParagraph = {
   sentences: StudySentence[];
 };
 
+export type StudyImageOverlay = {
+  sentenceId: string;
+  paragraphId: string;
+  /** Normalized 0–1 box on the source image. */
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+};
+
 export type StudySection = {
   id: string;
   title?: string;
   page?: number;
   chapter?: string;
   paragraphs: StudyParagraph[];
+  /** Original photo/poster; shown instead of extracted text. */
+  imageDataUrl?: string;
+  overlays?: StudyImageOverlay[];
 };
 
 export type ReadingProgress = {
@@ -85,9 +98,19 @@ export class StudyImportError extends Error {
   }
 }
 
+export type ExtractedTextBox = {
+  text: string;
+  x: number;
+  y: number;
+  w: number;
+  h: number;
+};
+
 export type ExtractedSection = {
   title?: string;
   page?: number;
   chapter?: string;
   paragraphs: string[];
+  imageDataUrl?: string;
+  boxes?: ExtractedTextBox[];
 };

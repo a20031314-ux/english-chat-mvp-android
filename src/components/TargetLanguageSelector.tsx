@@ -64,7 +64,7 @@ export function TargetLanguageSelector({
       {open ? (
         <ul
           role="listbox"
-          className="absolute left-0 top-full z-30 mt-1 min-w-[12rem] overflow-hidden rounded-lg border border-slate-200 bg-white py-1 shadow-lg sm:left-auto sm:right-0"
+          className="absolute left-0 top-full z-30 mt-1 max-h-[min(24rem,70vh)] min-w-[12rem] overflow-y-auto overflow-x-hidden rounded-lg border border-slate-200 bg-white py-1 shadow-lg sm:left-auto sm:right-0"
         >
           {SUPPORTED_LEARNING_LANGUAGES.map((lang) => (
             <li

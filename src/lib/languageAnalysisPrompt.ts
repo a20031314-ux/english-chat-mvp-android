@@ -7,24 +7,12 @@ import {
   explanationLanguageGuard,
   LANGUAGE_LEARNING_LIMITS,
 } from "@/lib/languageLearningAnalysis";
-import { learningLanguageName } from "@/lib/learningLanguages";
+import { learningLanguageName, INTERFACE_LANGUAGE_LABELS } from "@/lib/learningLanguages";
 
 export const LEARNER_LEVELS = ["beginner", "intermediate", "advanced"] as const;
 export type LearnerLevel = (typeof LEARNER_LEVELS)[number];
 
-export const ANALYSIS_LANGUAGES: Record<string, string> = {
-  ko: "Korean (한국어)",
-  en: "English",
-  es: "Spanish",
-  ja: "Japanese",
-  zh: "Simplified Chinese",
-  vi: "Vietnamese",
-  fr: "French",
-  pt: "Portuguese",
-  id: "Indonesian",
-  it: "Italian (italiano)",
-  ru: "Russian (русский)",
-};
+export const ANALYSIS_LANGUAGES: Record<string, string> = INTERFACE_LANGUAGE_LABELS;
 
 export function asLearnerLevel(value: unknown): LearnerLevel | undefined {
   return typeof value === "string" &&
@@ -184,8 +172,8 @@ export function languageElementSystem(options: {
   });
   const sourceFormNote =
     interfaceLanguage === "ko"
-      ? `Keep source-language forms in title, pattern, reading, and example.english/text.`
-      : `Keep source-language forms in title, pattern, reading, and example.english/text. Learner-facing explanations stay in ${language}.`;
+      ? `Keep source-language forms in title, pattern, reading, and examples[].sentence.`
+      : `Keep source-language forms in title, pattern, reading, and examples[].sentence. Learner-facing explanations stay in ${language}.`;
 
   return `${commonLanguageInstructions({
     targetLanguage,
@@ -233,16 +221,16 @@ Return ONLY JSON:
   "whyUsed": "why this sentence uses it this way",
   "pattern": "reuse pattern or empty",
   "examples": [
-    { "english": "example in the SOURCE language", "translation": "natural ${language}" }
+    { "sentence": "NEW example in the SOURCE / learning language", "translation": "natural ${language}" }
   ],
   "otherUsages": [
-    { "pattern": "...", "meaning": "...", "examples": [{ "english": "...", "translation": "..." }] }
+    { "pattern": "...", "meaning": "...", "examples": [{ "sentence": "...", "translation": "..." }] }
   ]
 }
 
 Rules:
 - Omit empty fields. Do not pad every section. Do not write a long lecture.
-- examples: 0–2 NEW sentences in the source language, never a repeat of the context sentence.
+- examples: 0–2 NEW sentences in the source / learning language, never a repeat of the context sentence. Never write English examples unless the learning language is English.
 - otherUsages: only a contrast the learner should know now.
 - title: short. Not a chapter heading.`;
 }

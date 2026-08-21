@@ -4,26 +4,13 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { naturalTranslationPrinciples } from "@/lib/naturalTranslation";
 import {
   coerceLanguageCode,
+  isInterfaceLanguage,
   learningLanguageName,
 } from "@/lib/learningLanguages";
 import { interfaceLanguageDisplayName } from "@/lib/languageLearningAnalysis";
 import { assembleVocabLookup, normalizeVocabHeadword } from "@/lib/vocabulary";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
-
-const INTERFACE_LANGUAGES: Record<string, string> = {
-  ko: "Korean",
-  en: "English",
-  es: "Spanish",
-  ja: "Japanese",
-  zh: "Simplified Chinese",
-  vi: "Vietnamese",
-  fr: "French",
-  pt: "Portuguese",
-  id: "Indonesian",
-  it: "Italian",
-  ru: "Russian",
-};
 
 type VocabLookupLike = NonNullable<ReturnType<typeof assembleVocabLookup>>;
 
@@ -79,19 +66,17 @@ export async function POST(request: NextRequest) {
   }
 
   const locale =
-    typeof body.locale === "string" && body.locale in INTERFACE_LANGUAGES
+    typeof body.locale === "string" && isInterfaceLanguage(body.locale)
       ? body.locale
       : "ko";
   const interfaceLanguage =
     typeof body.interfaceLanguage === "string" &&
-    body.interfaceLanguage in INTERFACE_LANGUAGES
+    isInterfaceLanguage(body.interfaceLanguage)
       ? body.interfaceLanguage
       : locale;
   const targetLanguage = coerceLanguageCode(body.targetLanguage);
   const targetName = learningLanguageName(targetLanguage);
-  const interfaceName =
-    INTERFACE_LANGUAGES[interfaceLanguage] ??
-    interfaceLanguageDisplayName(interfaceLanguage);
+  const interfaceName = interfaceLanguageDisplayName(interfaceLanguage);
   const englishOnlyHeadwords = targetLanguage === "en";
 
   try {

@@ -108,6 +108,16 @@ function regionCode(language: string): string {
       return "BR";
     case "ru":
       return "RU";
+    case "ar":
+      return "SA";
+    case "id":
+      return "ID";
+    case "vi":
+      return "VN";
+    case "th":
+      return "TH";
+    case "hi":
+      return "IN";
     default:
       return "US";
   }

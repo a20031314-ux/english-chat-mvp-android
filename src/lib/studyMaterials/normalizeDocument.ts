@@ -1,10 +1,12 @@
 import { newStudyId } from "@/lib/studyMaterials/ids";
+import { stackedOcrBox } from "@/lib/studyMaterials/ocrResult";
 import { splitSentences } from "@/lib/studyMaterials/splitSentences";
 import type {
   ExtractedSection,
   ReadingProgress,
   StudyDocument,
   StudyDocumentType,
+  StudyImageOverlay,
   StudyParagraph,
   StudySection,
   StudySource,
@@ -36,11 +38,14 @@ export function buildStudyDocument(input: {
       const text = block.replace(/\s+/g, " ").trim();
       if (!text) continue;
       if (paragraphCount >= MAX_PARAGRAPHS) break;
-      const sentences = splitSentences(text).map((sentence, position) => ({
-        id: newStudyId("s"),
-        text: sentence,
-        position,
-      }));
+      const keepWhole = Boolean(raw.imageDataUrl || raw.boxes?.length);
+      const sentences = (keepWhole ? [text] : splitSentences(text)).map(
+        (sentence, position) => ({
+          id: newStudyId("s"),
+          text: sentence,
+          position,
+        }),
+      );
       if (sentences.length === 0) continue;
       paragraphs.push({
         id: newStudyId("p"),
@@ -49,13 +54,32 @@ export function buildStudyDocument(input: {
       });
       paragraphCount += 1;
     }
-    if (paragraphs.length === 0) continue;
+    if (paragraphs.length === 0 && !raw.imageDataUrl) continue;
+    const overlays: StudyImageOverlay[] = [];
+    if (raw.imageDataUrl && raw.boxes && raw.boxes.length > 0) {
+      paragraphs.forEach((paragraph, index) => {
+        const sentence = paragraph.sentences[0];
+        if (!sentence) return;
+        const box = raw.boxes?.[index];
+        const fallback = stackedOcrBox(index, paragraphs.length);
+        overlays.push({
+          sentenceId: sentence.id,
+          paragraphId: paragraph.id,
+          x: box?.x ?? fallback.x,
+          y: box?.y ?? fallback.y,
+          w: box?.w ?? fallback.w,
+          h: box?.h ?? fallback.h,
+        });
+      });
+    }
     sections.push({
       id: newStudyId("sec"),
       paragraphs,
       ...(raw.title ? { title: raw.title } : {}),
       ...(typeof raw.page === "number" ? { page: raw.page } : {}),
       ...(raw.chapter ? { chapter: raw.chapter } : {}),
+      ...(raw.imageDataUrl ? { imageDataUrl: raw.imageDataUrl } : {}),
+      ...(overlays.length ? { overlays } : {}),
     });
   }
 
@@ -90,5 +114,6 @@ export function countSentences(document: StudyDocument): number {
 }
 
 export function documentHasText(document: StudyDocument): boolean {
-  return countSentences(document) > 0;
+  if (countSentences(document) > 0) return true;
+  return document.sections.some((section) => Boolean(section.imageDataUrl));
 }

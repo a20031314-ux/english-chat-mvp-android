@@ -1,8 +1,10 @@
 "use client";
 
 import { useRef, useState, type DragEvent, type FormEvent } from "react";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import type { UICopy } from "@/lib/copy";
-import { importStudyFile } from "@/lib/studyMaterials/importFile";
+import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
+import { importStudyFiles } from "@/lib/studyMaterials/importFile";
 import { saveStudyDocument } from "@/lib/studyMaterials/storage";
 import {
   StudyImportError,
@@ -10,7 +12,8 @@ import {
   type StudyDocument,
 } from "@/lib/studyMaterials/types";
 
-const ACCEPT = ".pdf,.epub,.txt,.text,application/pdf,application/epub+zip,text/plain";
+const ACCEPT =
+  ".pdf,.epub,.txt,.text,application/pdf,application/epub+zip,text/plain,image/*";
 
 function stageLabel(stage: ImportStage, ui: UICopy): string {
   if (stage === "reading") return ui.studyStageReading;
@@ -40,18 +43,22 @@ export function StudyUpload({
   onCancel: () => void;
 }) {
   const inputRef = useRef<HTMLInputElement>(null);
+  const learningLanguage = useLearningLanguageOptional();
+  const targetLanguage =
+    learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
   const [dragOver, setDragOver] = useState(false);
   const [stage, setStage] = useState<ImportStage | null>(null);
   const [error, setError] = useState<string | null>(null);
   const busy = stage !== null && stage !== "ready";
 
   const handleFiles = async (files: FileList | File[]) => {
-    const file = files[0];
-    if (!file || busy) return;
+    if (!files[0] || busy) return;
     setError(null);
     setStage("reading");
     try {
-      const document = await importStudyFile(file, setStage);
+      const document = await importStudyFiles(files, setStage, {
+        targetLanguage,
+      });
       await saveStudyDocument(document);
       setStage("ready");
       onImported(document);
@@ -67,10 +74,11 @@ export function StudyUpload({
     void handleFiles(event.dataTransfer.files);
   };
 
-  const pick = (accept: string) => {
+  const pick = (accept: string, multiple = false) => {
     const input = inputRef.current;
     if (!input) return;
     input.accept = accept;
+    input.multiple = multiple;
     input.click();
   };
 
@@ -101,7 +109,9 @@ export function StudyUpload({
               : "border-slate-200 bg-white"
           }`}
         >
-          <p className="text-sm font-medium text-slate-800">{ui.studyDropHint}</p>
+          <p className="whitespace-pre-line text-sm font-medium text-slate-800">
+            {ui.studyDropHint}
+          </p>
           <form
             onSubmit={(event: FormEvent) => event.preventDefault()}
             className="mt-4 flex flex-wrap justify-center gap-2"
@@ -133,7 +143,7 @@ export function StudyUpload({
             <button
               type="button"
               disabled={busy}
-              onClick={() => pick("image/*")}
+              onClick={() => pick("image/*", true)}
               className="rounded-full border border-slate-200 px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50 disabled:opacity-50"
             >
               {ui.studyAddImage}

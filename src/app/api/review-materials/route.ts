@@ -1,24 +1,11 @@
 import OpenAI from "openai";
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { interfaceLanguageName, isInterfaceLanguage } from "@/lib/learningLanguages";
 import { explanationLanguageGuard } from "@/lib/languageLearningAnalysis";
 import { naturalTranslationPrinciples } from "@/lib/naturalTranslation";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
-
-const TARGET_LANGUAGES: Record<string, string> = {
-  ko: "Korean",
-  en: "English",
-  es: "Spanish",
-  ja: "Japanese",
-  zh: "Simplified Chinese",
-  vi: "Vietnamese",
-  fr: "French",
-  pt: "Portuguese",
-  id: "Indonesian",
-  it: "Italian",
-  ru: "Russian",
-};
 
 type GrammarSeed = {
   id: string;
@@ -86,6 +73,18 @@ function explanationWrongLanguage(text: string, locale: string): boolean {
     const han = (trimmed.match(/[\u3400-\u9fff]/g) || []).length;
     return latin >= 12 && han < Math.max(4, latin * 0.25);
   }
+  if (locale === "ar") {
+    const arabic = (trimmed.match(/[\u0600-\u06ff]/g) || []).length;
+    return latin >= 12 && arabic < Math.max(4, latin * 0.25);
+  }
+  if (locale === "th") {
+    const thai = (trimmed.match(/[\u0e00-\u0e7f]/g) || []).length;
+    return latin >= 12 && thai < Math.max(4, latin * 0.25);
+  }
+  if (locale === "hi") {
+    const hindi = (trimmed.match(/[\u0900-\u097f]/g) || []).length;
+    return latin >= 12 && hindi < Math.max(4, latin * 0.25);
+  }
   return false;
 }
 
@@ -148,10 +147,10 @@ export async function POST(request: NextRequest) {
   }
 
   const locale =
-    typeof body.locale === "string" && body.locale in TARGET_LANGUAGES
+    typeof body.locale === "string" && isInterfaceLanguage(body.locale)
       ? body.locale
       : "ko";
-  const language = TARGET_LANGUAGES[locale] ?? "Korean";
+  const language = interfaceLanguageName(locale);
   const grammar = (Array.isArray(body.grammar) ? body.grammar : [])
     .filter(
       (item) =>

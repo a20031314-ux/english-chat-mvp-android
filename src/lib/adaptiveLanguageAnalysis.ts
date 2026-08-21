@@ -14,7 +14,10 @@ import {
   explanationLanguageGuard,
   interfaceLanguageDisplayName,
 } from "@/lib/languageLearningAnalysis";
-import { learningLanguageName } from "@/lib/learningLanguages";
+import {
+  isLearningLanguageCode,
+  learningLanguageName,
+} from "@/lib/learningLanguages";
 import {
   naturalTranslationPrinciples,
   type TranslationSourceType,
@@ -29,6 +32,7 @@ import {
   type LanguageKeyElement,
 } from "@/lib/englishAnalysis";
 import type { ExpressionInsight } from "@/lib/expressionInsight";
+import { speechLooksWrongLanguage } from "@/lib/videoSubtitle/languageMatch";
 
 export const ADAPTIVE_MAX_LEARNING_UNITS = 4;
 
@@ -232,11 +236,12 @@ export function adaptiveElementSystem(options: {
   });
   const sourceFormNote =
     interfaceLanguage === "ko"
-      ? `Keep source forms in title, pattern, reading, romanization, pronunciation, baseForm, and example.sentence.`
-      : `Keep source forms in title, pattern, reading, romanization, pronunciation, baseForm, and example.sentence. Learner-facing explanations stay in ${interfaceName}.`;
+      ? `Keep ${targetName} forms in title, pattern, reading, romanization, pronunciation, baseForm, inner.text, and grammar.examples[].sentence.`
+      : `Keep ${targetName} forms in title, pattern, reading, romanization, pronunciation, baseForm, inner.text, and grammar.examples[].sentence. Learner-facing explanations stay in ${interfaceName}.`;
 
   return `${adaptiveCorePhilosophy(targetName)}
 
+Target language being learned: ${targetName} (${options.targetLanguage}).
 This request is DETAIL ZOOM for ONE selected learning unit inside ONE ${targetName} sentence.
 Adapt the depth to what THIS unit needs in ${targetName} (reading, conjugation, tone, register, etc.) — but keep it short.
 
@@ -252,7 +257,7 @@ Default shape:
    - why: which marker/form in THIS span makes it that pattern
    - general: how the pattern works
    - inThisSentence: how THIS sentence uses it
-   - examples: 2 short ${targetName} sentences of the same pattern, with ${interfaceName} translations
+   - examples: 2 short NEW ${targetName} sentences of the same pattern, each with a ${interfaceName} translation. Never English unless the learning language is English.
    - inner: explain a smaller clause/chunk inside the span when one exists
 Do not write a linguistics lecture.
 
@@ -279,8 +284,8 @@ Return ONLY JSON:
       "general": "how this grammar/form works in general, 1–2 sentences",
       "inThisSentence": "how THIS sentence uses it, 1–2 sentences",
       "examples": [
-        {"english": "...", "translation": "..."},
-        {"english": "...", "translation": "..."}
+        {"sentence": "NEW short ${targetName} sentence of this pattern", "translation": "natural ${interfaceName}"},
+        {"sentence": "another NEW ${targetName} sentence of this pattern", "translation": "natural ${interfaceName}"}
       ],
       "inner": [
         {
@@ -297,7 +302,9 @@ Rules:
 - Omit empty fields. Do not pad idiom, whyUsed, pattern, or otherUsages.
 - meaningInContext is the selected span only. Never retell the whole sentence.
 - If the span is a clause or grammar/form chunk, ALWAYS fill grammar, why, examples (2), and inner when a smaller piece sits inside.
-- inner.text MUST be an exact substring of selectedText.`;
+- grammar.examples[].sentence MUST be written in ${targetName}. Do not write English example sentences when the learning language is not English. Do not copy English teaching lines such as "Call me when you arrive."
+- grammar.examples[].translation MUST be in ${interfaceName}.
+- inner.text MUST be an exact ${targetName} substring of selectedText.`;
 }
 
 function asLine(value: unknown): string {
@@ -386,6 +393,7 @@ export function normalizeAdaptiveElementAnalysis(
   raw: unknown,
   selectedText: string,
   contextSentence: string,
+  targetLanguage?: string,
 ): AdaptiveElementAnalysis | null {
   if (!raw || typeof raw !== "object") return null;
   const o = raw as Record<string, unknown>;
@@ -396,6 +404,7 @@ export function normalizeAdaptiveElementAnalysis(
   const grammar = parseEnglishGrammarNotes(
     o.grammar ?? o.grammarNotes,
     contextSentence,
+    targetLanguage,
   );
   if (!meaningInContext && !whyUsed && !idiom && grammar.length === 0) return null;
 
@@ -407,6 +416,13 @@ export function normalizeAdaptiveElementAnalysis(
       const sentence = asLine(e.sentence) || asLine(e.english) || asLine(e.text);
       const meaning = asLine(e.meaning) || asLine(e.translation);
       if (!sentence || !meaning) continue;
+      if (
+        isLearningLanguageCode(targetLanguage) &&
+        targetLanguage !== "en" &&
+        speechLooksWrongLanguage(sentence, targetLanguage)
+      ) {
+        continue;
+      }
       examples.push({ sentence, meaning });
       if (examples.length >= 2) break;
     }

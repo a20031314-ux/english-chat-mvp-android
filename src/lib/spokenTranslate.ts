@@ -3,25 +3,11 @@ import {
   naturalTranslationPrinciples,
   type TranslationSourceType,
 } from "@/lib/naturalTranslation";
-import { learningLanguageName } from "@/lib/learningLanguages";
+import { interfaceLanguageName, learningLanguageName } from "@/lib/learningLanguages";
 import { interfaceLanguageDisplayName } from "@/lib/languageLearningAnalysis";
 
-const INTERFACE_LANGUAGES: Record<string, string> = {
-  ko: "Korean",
-  en: "English",
-  es: "Spanish",
-  ja: "Japanese",
-  zh: "Simplified Chinese",
-  vi: "Vietnamese",
-  fr: "French",
-  pt: "Portuguese",
-  id: "Indonesian",
-  it: "Italian",
-  ru: "Russian",
-};
-
 export function spokenTranslateTarget(locale: string): string {
-  return INTERFACE_LANGUAGES[locale] ?? INTERFACE_LANGUAGES.ko;
+  return interfaceLanguageName(locale);
 }
 
 export type SpokenTranslateOptions = {
@@ -64,9 +50,7 @@ export function spokenTranslatePrinciples(
   const options = resolveOptions(localeOrOptions, sourceType);
   const { interfaceLanguage, targetLanguage, sourceType: resolvedSourceType } =
     options;
-  const interfaceName =
-    INTERFACE_LANGUAGES[interfaceLanguage] ??
-    interfaceLanguageDisplayName(interfaceLanguage);
+  const interfaceName = interfaceLanguageDisplayName(interfaceLanguage);
   const targetName = learningLanguageName(targetLanguage);
   const keepEnKoCraft = isEnKoCraftPair(targetLanguage, interfaceLanguage);
 

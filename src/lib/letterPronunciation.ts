@@ -1,4 +1,4 @@
-import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
+import { APP_LOCALE_STORAGE_KEY, isLocale, type Locale } from "@/lib/copy";
 
 /** Cyrillic letter → Korean approximate sound (learner-facing). */
 const CYRILLIC_KO: Record<string, string> = {
@@ -78,17 +78,7 @@ function readUiLocale(): Locale {
   if (typeof window === "undefined") return "ko";
   try {
     const raw = window.localStorage.getItem(APP_LOCALE_STORAGE_KEY);
-    if (
-      raw === "ko" ||
-      raw === "en" ||
-      raw === "es" ||
-      raw === "ja" ||
-      raw === "zh" ||
-      raw === "vi" ||
-      raw === "fr" ||
-      raw === "pt" ||
-      raw === "id"
-    ) {
+    if (raw && isLocale(raw)) {
       return raw;
     }
   } catch {

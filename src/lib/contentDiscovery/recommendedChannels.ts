@@ -61,6 +61,26 @@ const CHANNELS: Record<LearningLanguageCode, RecommendedChannelSeed[]> = {
     { id: "tvrain", name: "Дождь", handle: "tvrain" },
     { id: "moscow24", name: "Москва 24", handle: "moscow24" },
   ],
+  ar: [
+    { id: "aljazeera", name: "الجزيرة", handle: "aljazeera" },
+    { id: "bbc-arabic", name: "BBC News عربي", handle: "BBCNewsArabic" },
+  ],
+  id: [
+    { id: "narasi", name: "Narasi", handle: "NarasiTV" },
+    { id: "kompas-tv", name: "KompasTV", handle: "KompasTV" },
+  ],
+  vi: [
+    { id: "vtv24", name: "VTV24", handle: "vtv24" },
+    { id: "vnexpress", name: "VnExpress", handle: "VnExpressOnline" },
+  ],
+  th: [
+    { id: "thai-pbs", name: "Thai PBS", handle: "ThaiPBS" },
+    { id: "workpoint", name: "Workpoint", handle: "workpointofficial" },
+  ],
+  hi: [
+    { id: "aaj-tak", name: "Aaj Tak", handle: "aajtak" },
+    { id: "bbc-hindi", name: "BBC News हिंदी", handle: "bbchindi" },
+  ],
 };
 
 export function recommendedChannelSeeds(

@@ -10,12 +10,12 @@ import type {
 } from "@/lib/englishAnalysis";
 import { isSameAnalysisSpan } from "@/lib/englishAnalysis";
 import { analyzeEnglishElement } from "@/lib/englishAnalysisService";
-import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
 import {
-  listWordSpans,
-  textForWordRange,
-  wordRangeForText,
-} from "@/lib/textTokens";
+  clickRangeForText,
+  listClickableSpans,
+  textForClickRange,
+} from "@/lib/learningSpans";
+import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
 import { translateUtterance } from "@/lib/translateUtterance";
 
 export type InspectTab = "sentence" | "word";
@@ -202,9 +202,9 @@ export function useEnglishAnalysis(locale: Locale) {
         isSameAnalysisSpan(prev.target.contextSentence, contextSentence);
       const subsetRange =
         tab === "sentence" && !isSameAnalysisSpan(selectedText, contextSentence)
-          ? wordRangeForText(contextSentence, selectedText)
+          ? clickRangeForText(contextSentence, selectedText, targetLanguage)
           : null;
-      const words = listWordSpans(contextSentence);
+      const words = listClickableSpans(contextSentence, targetLanguage);
       const partialRange =
         subsetRange &&
         words.length > 0 &&
@@ -215,7 +215,7 @@ export function useEnglishAnalysis(locale: Locale) {
       if (sameSentence && prev && tab === "word") {
         setSession({
           ...prev,
-          target: { ...prev.target, ...target },
+          target: { ...prev.target, ...target, innerUnits: target.innerUnits },
           tab: "word",
           focusText: selectedText,
         });
@@ -234,10 +234,11 @@ export function useEnglishAnalysis(locale: Locale) {
         tab === "word"
           ? selectedText
           : partialRange
-            ? textForWordRange(
+            ? textForClickRange(
                 contextSentence,
                 partialRange.start,
                 partialRange.end,
+                targetLanguage,
               )
             : sameSentence && prev?.rangeActive
               ? prev.focusText
@@ -271,7 +272,7 @@ export function useEnglishAnalysis(locale: Locale) {
 
       setSession({
         ...prev,
-        target: { ...prev.target, ...target },
+        target: { ...prev.target, ...target, innerUnits: target.innerUnits },
         tab,
         focusText,
         rangeActive,
@@ -296,11 +297,16 @@ export function useEnglishAnalysis(locale: Locale) {
   const setRange = useCallback((start: number, end: number) => {
     const prev = sessionRef.current;
     if (!prev) return;
-    const words = listWordSpans(prev.target.contextSentence);
+    const words = listClickableSpans(prev.target.contextSentence, targetLanguage);
     if (words.length === 0) return;
     const from = Math.max(0, Math.min(start, end, words.length - 1));
     const to = Math.min(words.length - 1, Math.max(start, end));
-    const focusText = textForWordRange(prev.target.contextSentence, from, to);
+    const focusText = textForClickRange(
+      prev.target.contextSentence,
+      from,
+      to,
+      targetLanguage,
+    );
     const rangeChanged =
       !prev.rangeActive || prev.rangeStart !== from || prev.rangeEnd !== to;
     if (rangeChanged) {
@@ -321,20 +327,21 @@ export function useEnglishAnalysis(locale: Locale) {
           }
         : {}),
     });
-  }, []);
+  }, [targetLanguage]);
 
   const analyzeRange = useCallback(() => {
     const prev = sessionRef.current;
     if (!prev || !prev.rangeActive) return;
-    const selected = textForWordRange(
+    const selected = textForClickRange(
       prev.target.contextSentence,
       prev.rangeStart,
       prev.rangeEnd,
+      targetLanguage,
     );
     if (!selected) return;
     if (isSameAnalysisSpan(selected, prev.target.contextSentence)) return;
     void loadElement(prev.target, selected);
-  }, [loadElement]);
+  }, [loadElement, targetLanguage]);
 
   const setTab = useCallback(
     (tab: InspectTab) => {

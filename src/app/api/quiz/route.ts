@@ -15,22 +15,9 @@ import {
   TARGET_QUIZ_SIZE,
 } from "@/lib/quizUniqueness";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { interfaceLanguageName, isInterfaceLanguage } from "@/lib/learningLanguages";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
-
-const TARGET_LANGUAGES: Record<string, string> = {
-  ko: "Korean",
-  en: "English",
-  es: "Spanish",
-  ja: "Japanese",
-  zh: "Simplified Chinese",
-  vi: "Vietnamese",
-  fr: "French",
-  pt: "Portuguese",
-  id: "Indonesian",
-  it: "Italian",
-  ru: "Russian",
-};
 
 type IncomingItem = {
   id: string;
@@ -403,10 +390,10 @@ export async function POST(request: NextRequest) {
   }
 
   const locale =
-    typeof body.locale === "string" && body.locale in TARGET_LANGUAGES
+    typeof body.locale === "string" && isInterfaceLanguage(body.locale)
       ? body.locale
       : "en";
-  const language = TARGET_LANGUAGES[locale] ?? "English";
+  const language = interfaceLanguageName(locale);
 
   const rawItems = Array.isArray(body.items)
     ? body.items

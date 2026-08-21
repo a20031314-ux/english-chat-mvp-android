@@ -24,6 +24,11 @@ export function speechLangCandidates(lang: string): string[] {
     ko: ["ko-KR", "ko"],
     zh: ["zh-CN", "zh-TW", "zh-HK", "cmn-Hans-CN", "zh"],
     ru: ["ru-RU", "ru"],
+    ar: ["ar-SA", "ar-EG", "ar"],
+    id: ["id-ID", "id"],
+    vi: ["vi-VN", "vi"],
+    th: ["th-TH", "th"],
+    hi: ["hi-IN", "hi"],
   };
   return [...new Set([lang, ...(extras[prefix] ?? [prefix])])];
 }
@@ -49,6 +54,11 @@ const VOICE_NAME_HINTS: Record<string, string[]> = {
   ko: ["korean", "한국어", "hangul"],
   zh: ["chinese", "中文", "pinyin", "mandarin", "cantonese"],
   ru: ["russian", "русский"],
+  ar: ["arabic", "عربي", "العربية"],
+  id: ["indonesian", "indonesia"],
+  vi: ["vietnamese", "tiếng việt", "tieng viet"],
+  th: ["thai", "ไทย"],
+  hi: ["hindi", "हिन्दी", "हिंदी"],
   en: ["english"],
 };
 
@@ -132,6 +142,11 @@ const SPEECH_LANGUAGE_NAMES: Record<string, string> = {
   ko: "Korean",
   zh: "Chinese",
   ru: "Russian",
+  ar: "Arabic",
+  id: "Indonesian",
+  vi: "Vietnamese",
+  th: "Thai",
+  hi: "Hindi",
 };
 
 /** Prompt for OpenAI TTS. Local device TTS has no prompt. */

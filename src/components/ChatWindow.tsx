@@ -36,6 +36,7 @@ import {
 import {
   DEFAULT_LEARNING_LANGUAGE_CODE,
   isLearningLanguageCode,
+  learningLanguageTextDir,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
 import { translateUtterance } from "@/lib/translateUtterance";
@@ -1648,6 +1649,7 @@ export function ChatWindow({
                 className={`w-full resize-none rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none ring-0 transition focus:border-slate-500 ${
                   isChatInputBlocked ? "cursor-pointer bg-slate-50" : ""
                 }`}
+                dir={learningLanguageTextDir(targetLanguage)}
               />
               <div className="flex shrink-0 flex-col items-stretch gap-1.5">
               {turns.length === 0 ? (

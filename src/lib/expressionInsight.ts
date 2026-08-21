@@ -55,7 +55,8 @@ function asExamples(value: unknown): ExpressionInsightExample[] {
   for (const item of value) {
     if (!item || typeof item !== "object") continue;
     const o = item as Record<string, unknown>;
-    const english = asLine(o.text) || asLine(o.english);
+    const english =
+      asLine(o.sentence) || asLine(o.text) || asLine(o.english);
     if (!english) continue;
     const translation = asLine(o.translation);
     out.push(translation ? { english, translation } : { english });

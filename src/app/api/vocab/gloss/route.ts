@@ -4,26 +4,13 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { naturalTranslationPrinciples } from "@/lib/naturalTranslation";
 import {
   coerceLanguageCode,
+  isInterfaceLanguage,
   learningLanguageName,
 } from "@/lib/learningLanguages";
 import { interfaceLanguageDisplayName } from "@/lib/languageLearningAnalysis";
 import { assembleVocabLookup, normalizeVocabHeadword } from "@/lib/vocabulary";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
-
-const INTERFACE_LANGUAGES: Record<string, string> = {
-  ko: "Korean",
-  en: "English",
-  es: "Spanish",
-  ja: "Japanese",
-  zh: "Simplified Chinese",
-  vi: "Vietnamese",
-  fr: "French",
-  pt: "Portuguese",
-  id: "Indonesian",
-  it: "Italian",
-  ru: "Russian",
-};
 
 type GlossItem = {
   word: string;
@@ -110,24 +97,25 @@ export async function POST(request: NextRequest) {
   }
 
   const locale =
-    typeof body.locale === "string" && body.locale in INTERFACE_LANGUAGES
+    typeof body.locale === "string" && isInterfaceLanguage(body.locale)
       ? body.locale
       : "ko";
   const interfaceLanguage =
     typeof body.interfaceLanguage === "string" &&
-    body.interfaceLanguage in INTERFACE_LANGUAGES
+    isInterfaceLanguage(body.interfaceLanguage)
       ? body.interfaceLanguage
       : locale;
   const targetLanguage = coerceLanguageCode(body.targetLanguage);
   const targetName = learningLanguageName(targetLanguage);
-  const interfaceName =
-    INTERFACE_LANGUAGES[interfaceLanguage] ??
-    interfaceLanguageDisplayName(interfaceLanguage);
+  const interfaceName = interfaceLanguageDisplayName(interfaceLanguage);
   const englishOnlyHeadwords = targetLanguage === "en";
   const characterAware =
     targetLanguage === "ja" ||
     targetLanguage === "zh" ||
-    targetLanguage === "ko";
+    targetLanguage === "ko" ||
+    targetLanguage === "ar" ||
+    targetLanguage === "th" ||
+    targetLanguage === "hi";
 
   try {
     const completion = await client.chat.completions.create({
@@ -151,7 +139,13 @@ For each item, return:
                 ? "optional reading for kanji/kana items (hiragana; for kanji prefer common 音読み/訓読み the learner needs). Empty for items that need no reading."
                 : targetLanguage === "zh"
                   ? "optional pinyin for Chinese characters/words. Empty if not useful."
-                  : "optional romanization/reading when helpful for Hangul syllables or hanja. Empty if not useful."
+                  : targetLanguage === "ar"
+                    ? "optional simple learner romanization for Arabic. Empty if not useful."
+                    : targetLanguage === "th"
+                      ? "optional RTGS romanization for Thai. Empty if not useful."
+                      : targetLanguage === "hi"
+                        ? "optional simple romanization for Hindi. Empty if not useful."
+                        : "optional romanization/reading when helpful for Hangul syllables or hanja. Empty if not useful."
               : "omit (leave empty)"
           }
 
@@ -170,6 +164,9 @@ ${
 - Japanese: include a kana reading in "reading" when the headword has kanji.
 - Chinese: include pinyin in "reading" when useful.
 - Korean: optional romanization only for multi-syllable words, not isolated Hangul taps.
+- Arabic: optional simple romanization (not Arabic script repeated).
+- Thai: optional RTGS romanization.
+- Hindi: optional simple romanization.
 - Do not invent rare readings; prefer the most common learner-facing reading.
 - Do not treat a single character or syllable as a lookup item; gloss the word/phrase as given.
 `

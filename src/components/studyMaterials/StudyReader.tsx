@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
+import { StudyImageBoard } from "@/components/studyMaterials/StudyImageBoard";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import type { Locale, UICopy } from "@/lib/copy";
@@ -227,13 +228,28 @@ export function StudyReader({
         ref={scrollerRef}
         className="min-h-0 flex-1 overflow-y-auto px-4 py-6"
       >
-        <article className="mx-auto w-full max-w-prose">
+        <article
+          className={`mx-auto w-full ${
+            document.type === "image" ? "max-w-3xl" : "max-w-prose"
+          }`}
+        >
           {document.sections.map((section) => (
             <section
               key={section.id}
               data-section-id={section.id}
               className="mb-8"
             >
+              {section.imageDataUrl ? (
+                <StudyImageBoard
+                  section={section}
+                  selectedId={selectedId}
+                  hint={ui.studyImageHint}
+                  onSelect={({ paragraph, sentence }) => {
+                    analyzeSentence(section, paragraph, sentence);
+                  }}
+                />
+              ) : (
+                <>
               {section.title ? (
                 <h3 className="mb-3 text-base font-semibold tracking-tight text-slate-900">
                   {section.title}
@@ -245,7 +261,7 @@ export function StudyReader({
                 );
                 return (
                   <div key={paragraph.id} className="mb-4">
-                    <p className="text-[17px] leading-8 text-slate-800">
+                    <div className="text-[17px] leading-8 text-slate-800">
                       {paragraph.sentences.map((sentence, index) => {
                         const selected = selectedId === sentence.id;
                         return (
@@ -282,7 +298,7 @@ export function StudyReader({
                           </span>
                         );
                       })}
-                    </p>
+                    </div>
                     {selectedSentence ? (
                       <button
                         type="button"
@@ -301,6 +317,8 @@ export function StudyReader({
                   </div>
                 );
               })}
+                </>
+              )}
             </section>
           ))}
         </article>

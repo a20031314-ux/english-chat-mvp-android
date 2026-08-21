@@ -11,7 +11,7 @@ function typeLabel(document: StudyDocument): string {
 }
 
 function pageHint(document: StudyDocument, ui: UICopy): string | null {
-  if (document.type !== "pdf") return null;
+  if (document.type !== "pdf" && document.type !== "image") return null;
   const total = document.sections.length;
   const current = document.progress.page ?? 0;
   if (!total) return null;

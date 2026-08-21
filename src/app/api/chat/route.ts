@@ -14,6 +14,8 @@ import {
 } from "@/lib/conversationVoice";
 import {
   coerceLanguageCode,
+  INTERFACE_LANGUAGE_LABELS,
+  isInterfaceLanguage,
   learningLanguageName,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
@@ -56,19 +58,7 @@ type ExpressionPayload = {
   correction: ChatCorrection;
 };
 
-const EXPLANATION_LANGUAGES: Record<string, string> = {
-  ko: "Korean (한국어)",
-  en: "English",
-  es: "Spanish",
-  ja: "Japanese",
-  zh: "Simplified Chinese",
-  vi: "Vietnamese",
-  fr: "French",
-  pt: "Portuguese",
-  id: "Indonesian",
-  it: "Italian (italiano)",
-  ru: "Russian (русский)",
-};
+const EXPLANATION_LANGUAGES: Record<string, string> = INTERFACE_LANGUAGE_LABELS;
 
 type ChatLanguages = {
   locale: string;
@@ -82,12 +72,12 @@ function resolveChatLanguages(body: {
   targetLanguage?: unknown;
 }): ChatLanguages {
   const locale =
-    typeof body.locale === "string" && body.locale in EXPLANATION_LANGUAGES
+    typeof body.locale === "string" && isInterfaceLanguage(body.locale)
       ? body.locale
       : "ko";
   const interfaceLanguage =
     typeof body.interfaceLanguage === "string" &&
-    body.interfaceLanguage in EXPLANATION_LANGUAGES
+    isInterfaceLanguage(body.interfaceLanguage)
       ? body.interfaceLanguage
       : locale;
   return {
@@ -171,6 +161,21 @@ function targetLanguageFocusHints(targetLanguage: LearningLanguageCode): string 
     case "ru":
       return `Russian focus (use Russian terms):
 - Case endings, verb aspect (perfective/imperfective), agreement, prepositions + case, word order only when it breaks meaning, unnatural calques.`;
+    case "ar":
+      return `Arabic focus (use Arabic terms):
+- Root-and-pattern morphology, definite article, gender/number agreement, idafa, attached pronouns/clitics, verb form, case only when it is clearly wrong, MSA vs dialect mismatch when it breaks the intended register.`;
+    case "id":
+      return `Indonesian focus (use Indonesian terms):
+- Affixes (me-/ber-/ter-/di-/ke-an), reduplication, particles (lah/kah/pun), word order, unnatural calques. Do not invent tense endings.`;
+    case "vi":
+      return `Vietnamese focus (use Vietnamese terms):
+- Classifiers, aspect particles (đã/đang/sẽ), word order, pronouns/register, missing function words, unnatural calques. Do not split tones as spelling errors.`;
+    case "th":
+      return `Thai focus (use Thai terms):
+- Word boundaries, classifiers, polite particles (ครับ/ค่ะ), serial verbs, missing function words, unnatural calques. Do not split words into letters.`;
+    case "hi":
+      return `Hindi focus (use Hindi terms):
+- Postpositions, gender/number agreement, split verbs, honorifics, SOV word order, unnatural calques from English.`;
     default:
       return `Focus on real morphosyntax, agreement, function words, and patterns that natives would mark as wrong in ${learningLanguageName(targetLanguage)}.`;
   }
@@ -360,6 +365,9 @@ const FALLBACK_EXPLANATION: Record<string, string> = {
   id: "Susunan ini terdengar lebih natural.",
   it: "Così suona più chiaro e naturale.",
   ru: "Так звучит понятнее и естественнее.",
+  ar: "هذه الصياغة أوضح وأكثر طبيعية.",
+  th: "แบบนี้ชัดเจนและเป็นธรรมชาติกว่า",
+  hi: "यह वाक्य ज़्यादा साफ़ और स्वाभाविक है।",
 };
 
 async function replyToCorrected(

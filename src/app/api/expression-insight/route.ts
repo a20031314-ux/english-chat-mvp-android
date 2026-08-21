@@ -138,7 +138,12 @@ export async function POST(request: NextRequest) {
       return jsonWithCors(request, insight);
     }
 
-    const adaptive = normalizeAdaptiveElementAnalysis(parsed, selected, sentence);
+    const adaptive = normalizeAdaptiveElementAnalysis(
+      parsed,
+      selected,
+      sentence,
+      targetLanguage,
+    );
     if (!adaptive) {
       return jsonWithCors(request, { error: "empty insight" }, { status: 500 });
     }

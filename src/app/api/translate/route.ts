@@ -3,23 +3,9 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { spokenTranslateSystem } from "@/lib/spokenTranslate";
 import { asTranslationSourceType } from "@/lib/naturalTranslation";
-import { coerceLanguageCode } from "@/lib/learningLanguages";
+import { coerceLanguageCode, isInterfaceLanguage } from "@/lib/learningLanguages";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
-
-const INTERFACE_LANGUAGES: Record<string, string> = {
-  ko: "Korean",
-  en: "English",
-  es: "Spanish",
-  ja: "Japanese",
-  zh: "Simplified Chinese",
-  vi: "Vietnamese",
-  fr: "French",
-  pt: "Portuguese",
-  id: "Indonesian",
-  it: "Italian",
-  ru: "Russian",
-};
 
 function getClient() {
   const apiKey = process.env.OPENAI_API_KEY;
@@ -59,12 +45,12 @@ export async function POST(request: NextRequest) {
   }
 
   const locale =
-    typeof body.locale === "string" && body.locale in INTERFACE_LANGUAGES
+    typeof body.locale === "string" && isInterfaceLanguage(body.locale)
       ? body.locale
       : "ko";
   const interfaceLanguage =
     typeof body.interfaceLanguage === "string" &&
-    body.interfaceLanguage in INTERFACE_LANGUAGES
+    isInterfaceLanguage(body.interfaceLanguage)
       ? body.interfaceLanguage
       : locale;
   const targetLanguage = coerceLanguageCode(body.targetLanguage);

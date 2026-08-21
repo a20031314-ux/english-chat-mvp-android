@@ -12,11 +12,16 @@ import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 import { isSameAnalysisSpan } from "@/lib/englishAnalysis";
+import { idiomUnitContaining } from "@/lib/expressionUnits";
 import {
-  idiomUnitContaining,
-} from "@/lib/expressionUnits";
-import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
+  findLearningSpan,
+  listClickableSpans,
+  peekLearningSpans,
+  type LearningInnerUnit,
+} from "@/lib/learningSpans";
+import { DEFAULT_LEARNING_LANGUAGE_CODE, learningLanguageTextDir } from "@/lib/learningLanguages";
 import { loadExpressionUnits } from "@/lib/requestExpressionUnits";
+import { loadLearningSpans } from "@/lib/requestLearningSpans";
 import { listWordSpans } from "@/lib/textTokens";
 import { isSentenceVocabUnit } from "@/lib/vocabulary";
 
@@ -128,7 +133,8 @@ function SentenceTab({
     session.target.translation?.replace(/\s+/g, " ").trim() ||
     session.sentenceAnalysis?.translation;
   const nuance = session.sentenceAnalysis?.nuance;
-  const words = listWordSpans(sentence);
+  const [spanTick, setSpanTick] = useState(0);
+  const words = listClickableSpans(sentence, targetLanguage);
   const analysis = session.elementAnalysis;
   const selected = session.rangeActive ? session.focusText : "";
   const rangeIsSentence =
@@ -138,9 +144,25 @@ function SentenceTab({
   const drillIns = (session.sentenceAnalysis?.elements ?? []).filter(
     (element) => !isSameAnalysisSpan(element.text, sentence),
   );
+  const useIdiomUnderline = targetLanguage === "en";
   const [unitTexts, setUnitTexts] = useState<string[]>([]);
 
   useEffect(() => {
+    if (targetLanguage === "en") return;
+    let cancelled = false;
+    void loadLearningSpans(sentence, targetLanguage).then(() => {
+      if (!cancelled) setSpanTick((tick) => tick + 1);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [sentence, targetLanguage]);
+
+  useEffect(() => {
+    if (!useIdiomUnderline) {
+      setUnitTexts([]);
+      return;
+    }
     let cancelled = false;
     const extra = drillIns
       .map((element) => element.text.replace(/\s+/g, " ").trim())
@@ -160,9 +182,13 @@ function SentenceTab({
     return () => {
       cancelled = true;
     };
-  }, [sentence, targetLanguage, drillIns.map((element) => element.text).join("|")]);
+  }, [sentence, targetLanguage, useIdiomUnderline, drillIns.map((element) => element.text).join("|")]);
 
-  const openSpan = (text: string, asIdiom: boolean) => {
+  const openSpan = (
+    text: string,
+    asIdiom: boolean,
+    extra?: { innerUnits?: LearningInnerUnit[]; allowSave?: boolean },
+  ) => {
     const cleaned = text.replace(/\s+/g, " ").trim();
     if (!cleaned) return;
     if (!asIdiom && isSameAnalysisSpan(cleaned, sentence)) return;
@@ -173,7 +199,8 @@ function SentenceTab({
       sourceType: session.target.sourceType,
       language: session.target.language,
       intent: "word",
-      ...(asIdiom ? { allowVocabSave: true } : {}),
+      ...(asIdiom || extra?.allowSave ? { allowVocabSave: true } : {}),
+      ...(extra?.innerUnits?.length ? { innerUnits: extra.innerUnits } : {}),
     });
   };
 
@@ -187,12 +214,9 @@ function SentenceTab({
   let index = 0;
   while (index < words.length) {
     const word = words[index];
-    const idiom = idiomUnitContaining(
-      sentence,
-      word.start,
-      word.end,
-      unitTexts,
-    );
+    const idiom = useIdiomUnderline
+      ? idiomUnitContaining(sentence, word.start, word.end, unitTexts)
+      : null;
     const gap = sentence.slice(cursor, idiom ? idiom.start : word.start);
     if (idiom) {
       const covered = words.filter(
@@ -225,16 +249,34 @@ function SentenceTab({
     index += 1;
   }
 
+  void spanTick;
+  const cachedSpans = peekLearningSpans(sentence, targetLanguage);
+
   return (
     <>
       <div className="flex items-start gap-2">
-        <p className="min-w-0 flex-1 text-base font-medium leading-relaxed text-slate-900">
-          {pieces.map((piece, pieceIndex) => (
+        <p
+          className="min-w-0 flex-1 text-base font-medium leading-relaxed text-slate-900"
+          dir={learningLanguageTextDir(targetLanguage)}
+        >
+          {pieces.map((piece, pieceIndex) => {
+            const span =
+              targetLanguage === "en"
+                ? null
+                : findLearningSpan(cachedSpans, piece.text);
+            return (
             <span key={`${pieceIndex}-${piece.text}`}>
               {piece.gap}
               <button
                 type="button"
-                onClick={() => openSpan(piece.text, piece.idiom)}
+                onClick={() =>
+                  openSpan(piece.text, piece.idiom, {
+                    innerUnits: span?.inner,
+                    allowSave:
+                      span?.kind === "expression" ||
+                      span?.kind === "grammar_unit",
+                  })
+                }
                 className={`cursor-pointer rounded-sm hover:bg-amber-100/70 ${
                   piece.idiom ? "underline decoration-amber-400 decoration-2 underline-offset-2" : ""
                 } ${piece.active ? "bg-amber-200/80" : ""}`}
@@ -242,7 +284,8 @@ function SentenceTab({
                 {piece.text}
               </button>
             </span>
-          ))}
+            );
+          })}
           {sentence.slice(cursor)}
         </p>
         <TTSButton text={sentence} ariaLabel={ui.listen} />
@@ -282,7 +325,12 @@ function SentenceTab({
       />
 
       {selected && !rangeIsSentence ? (
-        <p className="mt-2 text-xs text-slate-500">{selected}</p>
+        <div className="mt-3 flex items-start gap-2">
+          <p className="min-w-0 flex-1 text-xl font-semibold leading-snug text-slate-900">
+            {selected}
+          </p>
+          <TTSButton text={selected} ariaLabel={ui.listen} />
+        </div>
       ) : null}
 
       {showRangeAnalyze ? (
@@ -398,9 +446,11 @@ function WordTab({
   session: EnglishAnalysisSession;
   ui: UICopy;
 }) {
+  const analysisApi = useEnglishAnalysisOptional();
   const vocab = useVocabPreviewOptional();
   const word = session.focusText;
   const sentence = session.target.contextSentence;
+  const innerUnits = session.target.innerUnits ?? [];
   const wholeSentence = isSameAnalysisSpan(word, sentence);
   const blockedSentence =
     wholeSentence && session.target.allowVocabSave !== true;
@@ -437,8 +487,21 @@ function WordTab({
       loadFailed={vocab?.loadFailed ?? false}
       alreadySaved={vocab?.alreadySaved ?? false}
       allowSave={allowSave}
+      innerUnits={innerUnits}
       ui={ui}
       onSave={() => vocab?.save()}
+      onInnerClick={(text) => {
+        if (!text || isSameAnalysisSpan(text, word)) return;
+        analysisApi?.open({
+          selectedText: text,
+          contextSentence: sentence,
+          context: session.target.context,
+          sourceType: session.target.sourceType,
+          language: session.target.language,
+          intent: "word",
+          translation: session.target.translation,
+        });
+      }}
     />
   );
 }

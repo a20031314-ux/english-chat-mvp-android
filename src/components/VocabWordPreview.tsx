@@ -13,8 +13,10 @@ export function VocabWordPanel({
   loadFailed,
   alreadySaved = false,
   allowSave = true,
+  innerUnits,
   ui,
   onSave,
+  onInnerClick,
 }: {
   word: string;
   detail: VocabLookupResult | null;
@@ -23,8 +25,15 @@ export function VocabWordPanel({
   loadFailed: boolean;
   alreadySaved?: boolean;
   allowSave?: boolean;
+  innerUnits?: Array<{
+    text: string;
+    kind?: string;
+    reading?: string;
+    meaning?: string;
+  }>;
   ui: UICopy;
   onSave: () => void;
+  onInnerClick?: (text: string) => void;
 }) {
   const canSave =
     allowSave &&
@@ -49,20 +58,45 @@ export function VocabWordPanel({
       ) : loadFailed ? (
         <p className="mt-3 text-sm text-rose-700">{ui.vocabPickFailed}</p>
       ) : (
-        <>
-          <div className="mt-3">
-            <VocabSenseList
-              senses={vocabSensesOf({
-                gloss: detail?.gloss || "",
-                partOfSpeech: detail?.partOfSpeech,
-                senses: detail?.senses,
-              })}
-              otherLabel={ui.vocabOtherSenses}
-              listenLabel={ui.listen}
-            />
-          </div>
-        </>
+        <div className="mt-3">
+          <VocabSenseList
+            senses={vocabSensesOf({
+              gloss: detail?.gloss || "",
+              partOfSpeech: detail?.partOfSpeech,
+              senses: detail?.senses,
+            })}
+            otherLabel={ui.vocabOtherSenses}
+            listenLabel={ui.listen}
+          />
+        </div>
       )}
+      {innerUnits && innerUnits.length > 0 ? (
+        <ul className="mt-3 space-y-1.5">
+          {innerUnits.map((unit) => (
+            <li key={`${unit.kind ?? "part"}-${unit.text}`}>
+              <button
+                type="button"
+                onClick={() => onInnerClick?.(unit.text)}
+                className="w-full rounded-lg bg-slate-50 px-3 py-2 text-left hover:bg-amber-50"
+              >
+                <p className="text-sm font-medium text-slate-900">
+                  {unit.text}
+                  {unit.reading ? (
+                    <span className="ml-2 text-xs font-normal text-slate-500">
+                      {unit.reading}
+                    </span>
+                  ) : null}
+                </p>
+                {unit.meaning ? (
+                  <p className="mt-0.5 text-xs leading-relaxed text-slate-500">
+                    {unit.meaning}
+                  </p>
+                ) : null}
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : null}
 
       {allowSave ? (
         <button

@@ -1,20 +1,13 @@
 import generatedLocales from "@/lib/locales/generated.json";
+import {
+  type LearningLanguageCode,
+  uiLocaleOptions,
+} from "@/lib/learningLanguages";
 
 export const APP_LOCALE_STORAGE_KEY = "appUiLocale";
 
-export const LOCALE_OPTIONS = [
-  { key: "ko", label: "한국어", flag: "🇰🇷", flagCountry: "kr" },
-  { key: "en", label: "English", flag: "🇺🇸", flagCountry: "us" },
-  { key: "es", label: "Español", flag: "🇪🇸", flagCountry: "es" },
-  { key: "ja", label: "日本語", flag: "🇯🇵", flagCountry: "jp" },
-  { key: "zh", label: "中文", flag: "🇨🇳", flagCountry: "cn" },
-  { key: "vi", label: "Tiếng Việt", flag: "🇻🇳", flagCountry: "vn" },
-  { key: "fr", label: "Français", flag: "🇫🇷", flagCountry: "fr" },
-  { key: "it", label: "Italiano", flag: "🇮🇹", flagCountry: "it" },
-  { key: "pt", label: "Português", flag: "🇵🇹", flagCountry: "pt" },
-  { key: "ru", label: "Русский", flag: "🇷🇺", flagCountry: "ru" },
-  { key: "id", label: "Bahasa Indonesia", flag: "🇮🇩", flagCountry: "id" },
-] as const;
+/** UI languages follow learning languages — do not maintain a separate list. */
+export const LOCALE_OPTIONS = uiLocaleOptions();
 
 export const copy = {
   ko: {
@@ -210,7 +203,7 @@ export const copy = {
     studyLibraryTitle: "내 학습자료",
     studyAdd: "+ 자료 추가",
     studyAddImage: "이미지",
-    studyDropHint: "파일을 선택하거나 여기에 놓으세요.\nPDF, EPUB, TXT를 읽을 수 있어요.",
+    studyDropHint: "파일을 선택하거나 여기에 놓으세요.\nPDF, EPUB, TXT, 이미지를 읽을 수 있어요.",
     studyOpen: "열기",
     studyContinue: "이어서 읽기",
     studyDelete: "삭제",
@@ -227,7 +220,8 @@ export const copy = {
     studyProtected: "이 파일은 보호되어 있어 현재 불러올 수 없습니다.",
     studyNoText: "이 PDF에서는 텍스트를 찾지 못했습니다.",
     studyTooLarge: "파일이 너무 커서 불러올 수 없습니다.",
-    studyImageSoon: "이미지 텍스트 인식은 아직 준비 중입니다.",
+    studyImageSoon: "이 이미지는 열 수 없어요. JPG 또는 PNG로 다시 시도해 주세요.",
+    studyImageHint: "글자가 있는 곳을 누르면 바로 분석할 수 있어요.",
     studyFailed: "자료를 불러오지 못했어요. 다른 파일로 시도해 주세요.",
     studyResumeHint: "이전에 {percent}%까지 읽었습니다.",
     learningLanguageLabel: "학습 언어",
@@ -519,6 +513,26 @@ export const copy = {
     vocabPreviewSave: "저장",
     vocabPreviewClose: "닫기",
     vocabOtherSenses: "다른 뜻",
+    vocabTabSaved: "저장한 단어",
+    vocabTabCharacters: "문자",
+    characterGuideHint:
+      "문자를 누르면 발음과 쓰임을 바로 확인할 수 있어요.",
+    characterPronunciation: "발음",
+    characterCategory: "종류",
+    characterMeaning: "의미",
+    characterUsage: "쓰임",
+    characterTone: "성조",
+    characterTone1: "1성",
+    characterTone2: "2성",
+    characterTone3: "3성",
+    characterTone4: "4성",
+    characterToneNeutral: "경성",
+    characterExamples: "예시",
+    characterForms: "단어 속 형태",
+    characterFormIsolated: "단독",
+    characterFormInitial: "앞",
+    characterFormMedial: "가운데",
+    characterFormFinal: "끝",
     chatHistoryTitle: "채팅 기록",
     chatHistoryListTitle: "이전 대화",
     chatHistoryEmpty:
@@ -803,7 +817,7 @@ export const copy = {
     studyLibraryTitle: "My study files",
     studyAdd: "+ Add file",
     studyAddImage: "Image",
-    studyDropHint: "Choose a file or drop it here.\nPDF, EPUB, and TXT are supported.",
+    studyDropHint: "Choose a file or drop it here.\nPDF, EPUB, TXT, and images are supported.",
     studyOpen: "Open",
     studyContinue: "Continue reading",
     studyDelete: "Delete",
@@ -820,7 +834,8 @@ export const copy = {
     studyProtected: "This file is protected and can’t be opened.",
     studyNoText: "No text was found in this PDF.",
     studyTooLarge: "This file is too large to open.",
-    studyImageSoon: "Image text recognition isn’t ready yet.",
+    studyImageSoon: "This image couldn’t be opened. Try a JPG or PNG.",
+    studyImageHint: "Tap the words on the image to analyze them.",
     studyFailed: "Couldn’t load this file. Try another one.",
     studyResumeHint: "You left off at {percent}%.",
     learningLanguageLabel: "Learning language",
@@ -1112,6 +1127,25 @@ export const copy = {
     vocabPreviewSave: "Save",
     vocabPreviewClose: "Close",
     vocabOtherSenses: "Other meanings",
+    vocabTabSaved: "Saved words",
+    vocabTabCharacters: "Characters",
+    characterGuideHint: "Tap a character to see how it sounds and how it’s used.",
+    characterPronunciation: "Pronunciation",
+    characterCategory: "Type",
+    characterMeaning: "Meaning",
+    characterUsage: "Usage",
+    characterTone: "Tone",
+    characterTone1: "1st tone",
+    characterTone2: "2nd tone",
+    characterTone3: "3rd tone",
+    characterTone4: "4th tone",
+    characterToneNeutral: "Neutral tone",
+    characterExamples: "Examples",
+    characterForms: "Shapes in a word",
+    characterFormIsolated: "Isolated",
+    characterFormInitial: "Initial",
+    characterFormMedial: "Medial",
+    characterFormFinal: "Final",
     chatHistoryTitle: "Chat history",
     chatHistoryListTitle: "Past chats",
     chatHistoryEmpty:
@@ -1395,7 +1429,7 @@ export const copy = {
     studyLibraryTitle: "Mis materiales",
     studyAdd: "+ Añadir archivo",
     studyAddImage: "Imagen",
-    studyDropHint: "Elige un archivo o suéltalo aquí.\nPDF, EPUB y TXT están disponibles.",
+    studyDropHint: "Elige un archivo o suéltalo aquí.\nPDF, EPUB, TXT e imágenes están disponibles.",
     studyOpen: "Abrir",
     studyContinue: "Seguir leyendo",
     studyDelete: "Eliminar",
@@ -1412,7 +1446,8 @@ export const copy = {
     studyProtected: "Este archivo está protegido y no se puede abrir.",
     studyNoText: "No se encontró texto en este PDF.",
     studyTooLarge: "El archivo es demasiado grande.",
-    studyImageSoon: "El reconocimiento de texto en imágenes aún no está listo.",
+    studyImageSoon: "No se pudo abrir esta imagen. Prueba con JPG o PNG.",
+    studyImageHint: "Toca el texto de la imagen para analizarlo.",
     studyFailed: "No se pudo cargar el archivo. Prueba con otro.",
     studyResumeHint: "Lo dejaste en el {percent}%.",
     learningLanguageLabel: "Idioma de estudio",
@@ -1705,6 +1740,26 @@ export const copy = {
     vocabPreviewSave: "Guardar",
     vocabPreviewClose: "Cerrar",
     vocabOtherSenses: "Otros sentidos",
+    vocabTabSaved: "Palabras guardadas",
+    vocabTabCharacters: "Caracteres",
+    characterGuideHint:
+      "Toca un carácter para ver cómo suena y cómo se usa.",
+    characterPronunciation: "Pronunciación",
+    characterCategory: "Tipo",
+    characterMeaning: "Significado",
+    characterUsage: "Uso",
+    characterTone: "Tono",
+    characterTone1: "1.er tono",
+    characterTone2: "2.º tono",
+    characterTone3: "3.er tono",
+    characterTone4: "4.º tono",
+    characterToneNeutral: "Tono neutro",
+    characterExamples: "Ejemplos",
+    characterForms: "Formas en la palabra",
+    characterFormIsolated: "Aislada",
+    characterFormInitial: "Inicial",
+    characterFormMedial: "Media",
+    characterFormFinal: "Final",
     chatHistoryTitle: "Historial de chat",
     chatHistoryListTitle: "Chats anteriores",
     chatHistoryEmpty:
@@ -1804,6 +1859,9 @@ export const copy = {
   pt: generatedLocales.pt,
   ru: generatedLocales.ru,
   id: generatedLocales.id,
+  ar: generatedLocales.ar,
+  th: generatedLocales.th,
+  hi: generatedLocales.hi,
 } as const;
 
 export type Locale = keyof typeof copy;
@@ -1812,3 +1870,8 @@ export type UICopy = (typeof copy)[Locale];
 export function isLocale(value: string): value is Locale {
   return Object.prototype.hasOwnProperty.call(copy, value);
 }
+
+type _LearningLanguagesAreUiLocales =
+  LearningLanguageCode extends Locale ? true : never;
+const _learningLanguagesAreUiLocales: _LearningLanguagesAreUiLocales = true;
+void _learningLanguagesAreUiLocales;

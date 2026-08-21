@@ -1,8 +1,10 @@
 function inferSegmenterLocale(text: string): string {
+  if (/[\u0600-\u06ff]/u.test(text)) return "ar";
+  if (/[\u0e00-\u0e7f]/u.test(text)) return "th";
+  if (/[\u0900-\u097f]/u.test(text)) return "hi";
   if (/[\u3040-\u30ff]/u.test(text)) return "ja";
   if (/[\u3400-\u9fff]/u.test(text)) return "zh";
   if (/[\uac00-\ud7af]/u.test(text)) return "ko";
-  if (/[\u0e00-\u0e7f]/u.test(text)) return "th";
   if (/[\u0400-\u04ff]/u.test(text)) return "ru";
   return "en";
 }

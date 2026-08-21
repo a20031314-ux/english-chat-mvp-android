@@ -63,15 +63,18 @@ function sentenceLooksValid(
   if (
     targetLanguage === "ja" ||
     targetLanguage === "zh" ||
-    targetLanguage === "ko"
+    targetLanguage === "ko" ||
+    targetLanguage === "th" ||
+    targetLanguage === "ar" ||
+    targetLanguage === "hi"
   ) {
     return true;
   }
   if (targetLanguage === "ru") {
     return /[A-Za-zА-Яа-яЁё]/.test(sentence);
   }
-  // Latin-script targets (en, es, fr, it, pt, …)
-  return /[A-Za-zÀ-ÿ]/.test(sentence);
+  // Latin-script targets (en, es, fr, it, pt, id, vi, …)
+  return /[\p{L}]/u.test(sentence);
 }
 
 export async function OPTIONS(request: NextRequest) {

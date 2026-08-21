@@ -26,6 +26,12 @@ export function localeCaptionLanguageCodes(locale: string): string[] {
       return ["ru", "ru-RU"];
     case "it":
       return ["it", "it-IT"];
+    case "ar":
+      return ["ar", "ar-SA", "ar-EG"];
+    case "th":
+      return ["th", "th-TH"];
+    case "hi":
+      return ["hi", "hi-IN"];
     default:
       return [base];
   }

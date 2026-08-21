@@ -155,6 +155,7 @@ export async function POST(request: NextRequest) {
       parsed,
       selectedText,
       contextSentence,
+      targetLanguage,
     );
     if (!adaptive) {
       return jsonWithCors(request, { error: "empty analysis" }, { status: 500 });

@@ -4,6 +4,7 @@ import type {
   SceneContext,
 } from "@/lib/videoSubtitle/sceneTypes";
 import type { VideoContext } from "@/lib/videoSubtitle/types";
+import { interfaceLanguageName } from "@/lib/learningLanguages";
 
 /** Instantaneous tone of this utterance (not global speaker style). */
 export type UtteranceTone = {
@@ -80,20 +81,7 @@ export function emptyDraftFromUnit(
 }
 
 export function localeTargetName(locale: string): string {
-  const names: Record<string, string> = {
-    ko: "Korean",
-    en: "English",
-    es: "Spanish",
-    ja: "Japanese",
-    zh: "Simplified Chinese",
-    vi: "Vietnamese",
-    fr: "French",
-    pt: "Portuguese",
-    id: "Indonesian",
-    it: "Italian",
-    ru: "Russian",
-  };
-  return names[locale] ?? names.ko!;
+  return interfaceLanguageName(locale);
 }
 
 export function contextPayload(context: VideoContext) {

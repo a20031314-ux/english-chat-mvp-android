@@ -18,7 +18,12 @@ export type LearningLanguageCode =
   | "fr"
   | "it"
   | "pt"
-  | "ru";
+  | "ru"
+  | "ar"
+  | "id"
+  | "vi"
+  | "th"
+  | "hi";
 
 export type LearningLanguage = {
   code: LearningLanguageCode;
@@ -96,6 +101,41 @@ export const SUPPORTED_LEARNING_LANGUAGES: readonly LearningLanguage[] = [
     flag: "🇷🇺",
     flagCountry: "ru",
   },
+  {
+    code: "ar",
+    name: "Arabic",
+    nativeLabel: "العربية",
+    flag: "🇸🇦",
+    flagCountry: "sa",
+  },
+  {
+    code: "id",
+    name: "Indonesian",
+    nativeLabel: "Bahasa Indonesia",
+    flag: "🇮🇩",
+    flagCountry: "id",
+  },
+  {
+    code: "vi",
+    name: "Vietnamese",
+    nativeLabel: "Tiếng Việt",
+    flag: "🇻🇳",
+    flagCountry: "vn",
+  },
+  {
+    code: "th",
+    name: "Thai",
+    nativeLabel: "ไทย",
+    flag: "🇹🇭",
+    flagCountry: "th",
+  },
+  {
+    code: "hi",
+    name: "Hindi",
+    nativeLabel: "हिन्दी",
+    flag: "🇮🇳",
+    flagCountry: "in",
+  },
 ] as const;
 
 const BY_CODE = Object.fromEntries(
@@ -146,8 +186,58 @@ export function learningLanguageSpeechTag(
       return "pt-PT";
     case "ru":
       return "ru-RU";
+    case "ar":
+      return "ar-SA";
+    case "id":
+      return "id-ID";
+    case "vi":
+      return "vi-VN";
+    case "th":
+      return "th-TH";
+    case "hi":
+      return "hi-IN";
     default:
       return "en-US";
+  }
+}
+
+export function learningLanguageTextDir(
+  code: LearningLanguageCode | string | null | undefined,
+): "rtl" | "ltr" {
+  return getLearningLanguage(code).code === "ar" ? "rtl" : "ltr";
+}
+
+export type LearningScript =
+  | "latin"
+  | "hangul"
+  | "japanese"
+  | "hanzi"
+  | "cyrillic"
+  | "arabic"
+  | "thai"
+  | "devanagari";
+
+/** Writing system of a learning / UI language. Used to hide redundant alphabet guides. */
+export function learningLanguageScript(
+  code: LearningLanguageCode | string | null | undefined,
+): LearningScript {
+  switch (getLearningLanguage(code).code) {
+    case "ko":
+      return "hangul";
+    case "ja":
+      return "japanese";
+    case "zh":
+      return "hanzi";
+    case "ru":
+      return "cyrillic";
+    case "ar":
+      return "arabic";
+    case "th":
+      return "thai";
+    case "hi":
+      return "devanagari";
+    default:
+      return "latin";
   }
 }
 
@@ -155,6 +245,71 @@ export function learningLanguageName(
   code: LearningLanguageCode | string | null | undefined,
 ): string {
   return getLearningLanguage(code).name;
+}
+
+/** Prompt-facing English name for the app UI / explanation language. */
+export function interfaceLanguageName(
+  code: LearningLanguageCode | string | null | undefined,
+): string {
+  const lang = isLearningLanguageCode(code)
+    ? getLearningLanguage(code)
+    : getLearningLanguage("ko");
+  return lang.code === "zh" ? "Simplified Chinese" : lang.name;
+}
+
+/** Prompt label, e.g. "Korean (한국어)". */
+export function interfaceLanguagePromptLabel(
+  code: LearningLanguageCode | string | null | undefined,
+): string {
+  const lang = isLearningLanguageCode(code)
+    ? getLearningLanguage(code)
+    : getLearningLanguage("ko");
+  if (lang.code === "en") return "English";
+  if (lang.code === "zh") return "Simplified Chinese";
+  return `${lang.name} (${lang.nativeLabel})`;
+}
+
+/**
+ * UI locales are the learning languages. Adding a learning language
+ * automatically adds it as an interface language.
+ */
+export const INTERFACE_LANGUAGE_LABELS: Record<string, string> =
+  Object.fromEntries(
+    SUPPORTED_LEARNING_LANGUAGES.map((lang) => [
+      lang.code,
+      interfaceLanguagePromptLabel(lang.code),
+    ]),
+  );
+
+export function isInterfaceLanguage(
+  value: unknown,
+): value is LearningLanguageCode {
+  return isLearningLanguageCode(value);
+}
+
+export function uiLocaleOptions(): Array<{
+  key: LearningLanguageCode;
+  label: string;
+  flag: string;
+  flagCountry: string;
+}> {
+  const preferred: LearningLanguageCode[] = ["ko", "en"];
+  const seen = new Set<string>();
+  const ordered: LearningLanguage[] = [];
+  for (const code of [
+    ...preferred,
+    ...SUPPORTED_LEARNING_LANGUAGES.map((lang) => lang.code),
+  ]) {
+    if (seen.has(code)) continue;
+    seen.add(code);
+    ordered.push(getLearningLanguage(code));
+  }
+  return ordered.map((lang) => ({
+    key: lang.code,
+    label: lang.nativeLabel,
+    flag: lang.flag,
+    flagCountry: lang.flagCountry,
+  }));
 }
 
 export function readStoredTargetLanguage(): LearningLanguageCode {
@@ -206,6 +361,11 @@ const LEARNING_LANGUAGE_UI_LABELS: Record<
     it: "이탈리아어",
     pt: "포르투갈어",
     ru: "러시아어",
+    ar: "아랍어",
+    id: "인도네시아어",
+    vi: "베트남어",
+    th: "태국어",
+    hi: "힌디어",
   },
   en: {
     en: "English",
@@ -217,6 +377,11 @@ const LEARNING_LANGUAGE_UI_LABELS: Record<
     it: "Italian",
     pt: "Portuguese",
     ru: "Russian",
+    ar: "Arabic",
+    id: "Indonesian",
+    vi: "Vietnamese",
+    th: "Thai",
+    hi: "Hindi",
   },
   es: {
     en: "inglés",
@@ -228,6 +393,11 @@ const LEARNING_LANGUAGE_UI_LABELS: Record<
     it: "italiano",
     pt: "portugués",
     ru: "ruso",
+    ar: "árabe",
+    id: "indonesio",
+    vi: "vietnamita",
+    th: "tailandés",
+    hi: "hindi",
   },
   ja: {
     en: "英語",
@@ -239,6 +409,11 @@ const LEARNING_LANGUAGE_UI_LABELS: Record<
     it: "イタリア語",
     pt: "ポルトガル語",
     ru: "ロシア語",
+    ar: "アラビア語",
+    id: "インドネシア語",
+    vi: "ベトナム語",
+    th: "タイ語",
+    hi: "ヒンディー語",
   },
   zh: {
     en: "英语",
@@ -250,6 +425,11 @@ const LEARNING_LANGUAGE_UI_LABELS: Record<
     it: "意大利语",
     pt: "葡萄牙语",
     ru: "俄语",
+    ar: "阿拉伯语",
+    id: "印尼语",
+    vi: "越南语",
+    th: "泰语",
+    hi: "印地语",
   },
   vi: {
     en: "tiếng Anh",
@@ -261,6 +441,11 @@ const LEARNING_LANGUAGE_UI_LABELS: Record<
     it: "tiếng Ý",
     pt: "tiếng Bồ Đào Nha",
     ru: "tiếng Nga",
+    ar: "tiếng Ả Rập",
+    id: "tiếng Indonesia",
+    vi: "tiếng Việt",
+    th: "tiếng Thái",
+    hi: "tiếng Hindi",
   },
   fr: {
     en: "anglais",
@@ -272,6 +457,11 @@ const LEARNING_LANGUAGE_UI_LABELS: Record<
     it: "italien",
     pt: "portugais",
     ru: "russe",
+    ar: "arabe",
+    id: "indonésien",
+    vi: "vietnamien",
+    th: "thaï",
+    hi: "hindi",
   },
   pt: {
     en: "inglês",
@@ -283,6 +473,11 @@ const LEARNING_LANGUAGE_UI_LABELS: Record<
     it: "italiano",
     pt: "português",
     ru: "russo",
+    ar: "árabe",
+    id: "indonésio",
+    vi: "vietnamita",
+    th: "tailandês",
+    hi: "hindi",
   },
   id: {
     en: "bahasa Inggris",
@@ -294,6 +489,11 @@ const LEARNING_LANGUAGE_UI_LABELS: Record<
     it: "bahasa Italia",
     pt: "bahasa Portugis",
     ru: "bahasa Rusia",
+    ar: "bahasa Arab",
+    id: "bahasa Indonesia",
+    vi: "bahasa Vietnam",
+    th: "bahasa Thai",
+    hi: "bahasa Hindi",
   },
   it: {
     en: "inglese",
@@ -305,6 +505,11 @@ const LEARNING_LANGUAGE_UI_LABELS: Record<
     it: "italiano",
     pt: "portoghese",
     ru: "russo",
+    ar: "arabo",
+    id: "indonesiano",
+    vi: "vietnamita",
+    th: "thai",
+    hi: "hindi",
   },
   ru: {
     en: "английский",
@@ -316,6 +521,59 @@ const LEARNING_LANGUAGE_UI_LABELS: Record<
     it: "итальянский",
     pt: "португальский",
     ru: "русский",
+    ar: "арабский",
+    id: "индонезийский",
+    vi: "вьетнамский",
+    th: "тайский",
+    hi: "хинди",
+  },
+  ar: {
+    en: "الإنجليزية",
+    ko: "الكورية",
+    ja: "اليابانية",
+    zh: "الصينية",
+    es: "الإسبانية",
+    fr: "الفرنسية",
+    it: "الإيطالية",
+    pt: "البرتغالية",
+    ru: "الروسية",
+    ar: "العربية",
+    id: "الإندونيسية",
+    vi: "الفيتنامية",
+    th: "التايلاندية",
+    hi: "الهندية",
+  },
+  th: {
+    en: "ภาษาอังกฤษ",
+    ko: "ภาษาเกาหลี",
+    ja: "ภาษาญี่ปุ่น",
+    zh: "ภาษาจีน",
+    es: "ภาษาสเปน",
+    fr: "ภาษาฝรั่งเศส",
+    it: "ภาษาอิตาลี",
+    pt: "ภาษาโปรตุเกส",
+    ru: "ภาษารัสเซีย",
+    ar: "ภาษาอาหรับ",
+    id: "ภาษาอินโดนีเซีย",
+    vi: "ภาษาเวียดนาม",
+    th: "ภาษาไทย",
+    hi: "ภาษาฮินดี",
+  },
+  hi: {
+    en: "अंग्रेज़ी",
+    ko: "कोरियाई",
+    ja: "जापानी",
+    zh: "चीनी",
+    es: "स्पेनिश",
+    fr: "फ़्रेंच",
+    it: "इतालवी",
+    pt: "पुर्तगाली",
+    ru: "रूसी",
+    ar: "अरबी",
+    id: "इंडोनेशियाई",
+    vi: "वियतनामी",
+    th: "थाई",
+    hi: "हिन्दी",
   },
 };
 

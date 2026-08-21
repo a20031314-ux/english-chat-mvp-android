@@ -17,6 +17,11 @@ const NEWS_LOCALE: Record<LearningLanguageCode, NewsLocale> = {
   it: { hl: "it", gl: "IT", ceid: "IT:it" },
   pt: { hl: "pt-PT", gl: "PT", ceid: "PT:pt-150" },
   ru: { hl: "ru", gl: "RU", ceid: "RU:ru" },
+  ar: { hl: "ar", gl: "SA", ceid: "SA:ar" },
+  id: { hl: "id", gl: "ID", ceid: "ID:id" },
+  vi: { hl: "vi", gl: "VN", ceid: "VN:vi" },
+  th: { hl: "th", gl: "TH", ceid: "TH:th" },
+  hi: { hl: "hi", gl: "IN", ceid: "IN:hi" },
 };
 
 function decodeXml(text: string): string {

@@ -3,7 +3,9 @@ import {
   ANALYSIS_LANGUAGES,
   type LearnerLevel,
 } from "@/lib/languageAnalysisPrompt";
+import { isLearningLanguageCode } from "@/lib/learningLanguages";
 import { listWordSpans } from "@/lib/textTokens";
+import { speechLooksWrongLanguage } from "@/lib/videoSubtitle/languageMatch";
 
 export const ENGLISH_ANALYSIS_LANGUAGES = ANALYSIS_LANGUAGES;
 
@@ -125,6 +127,13 @@ export type EnglishAnalysisTarget = {
   allowVocabSave?: boolean;
   /** Existing UI-language translation to reuse (chat, video, …). */
   translation?: string;
+  /** Non-English nested pieces (characters / inner words). English never sets this. */
+  innerUnits?: Array<{
+    text: string;
+    kind?: string;
+    reading?: string;
+    meaning?: string;
+  }>;
 };
 
 function asLine(value: unknown): string {
@@ -163,6 +172,7 @@ export function parseEnglishIdiomNote(
 export function parseEnglishGrammarNotes(
   raw: unknown,
   contextSentence: string,
+  targetLanguage?: string,
 ): EnglishGrammarNote[] {
   const items = Array.isArray(raw) ? raw : raw ? [raw] : [];
   const out: EnglishGrammarNote[] = [];
@@ -179,7 +189,7 @@ export function parseEnglishGrammarNotes(
       asLine(o.contextExplanation);
     if (!name || !general || !inThisSentence) continue;
     const why = asLine(o.why) || asLine(o.whyThis) || asLine(o.marker);
-    const examples = asExamples(o.examples, 2);
+    const examples = asExamples(o.examples, 2, targetLanguage);
     const inner: EnglishGrammarInner[] = [];
     const innerRaw = Array.isArray(o.inner) ? o.inner : [];
     for (const nested of innerRaw) {
@@ -206,14 +216,28 @@ export function parseEnglishGrammarNotes(
   return out;
 }
 
-function asExamples(value: unknown, max = 2): EnglishAnalysisExample[] {
+function asExampleSource(o: Record<string, unknown>): string {
+  return (
+    asLine(o.sentence) ||
+    asLine(o.text) ||
+    asLine(o.english) ||
+    asLine(o.source)
+  );
+}
+
+function asExamples(
+  value: unknown,
+  max = 2,
+  targetLanguage?: string,
+): EnglishAnalysisExample[] {
   if (!Array.isArray(value)) return [];
   const out: EnglishAnalysisExample[] = [];
   for (const item of value) {
     if (!item || typeof item !== "object") continue;
     const o = item as Record<string, unknown>;
-    const english = asLine(o.text) || asLine(o.english);
+    const english = asExampleSource(o);
     if (!english) continue;
+    if (exampleSentenceMismatchesTarget(english, targetLanguage)) continue;
     const translation = asLine(o.translation);
     const note = asLine(o.note);
     out.push({
@@ -224,6 +248,16 @@ function asExamples(value: unknown, max = 2): EnglishAnalysisExample[] {
     if (out.length >= max) break;
   }
   return out;
+}
+
+function exampleSentenceMismatchesTarget(
+  sentence: string,
+  targetLanguage?: string,
+): boolean {
+  if (!isLearningLanguageCode(targetLanguage) || targetLanguage === "en") {
+    return false;
+  }
+  return speechLooksWrongLanguage(sentence, targetLanguage);
 }
 
 export function normalizeEnglishInputAnalysis(

@@ -1,12 +1,14 @@
 "use client";
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
+import { CharacterGuidePanel } from "@/components/CharacterGuidePanel";
 import { TTSButton } from "@/components/TTSButton";
 import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
 import { VocabSenseList } from "@/components/VocabSenseList";
 import { apiUrl } from "@/lib/apiBase";
 import type { Locale, UICopy } from "@/lib/copy";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
+import { shouldShowCharacterGuide } from "@/lib/characterGuide";
 import {
   DEFAULT_LEARNING_LANGUAGE_CODE,
 } from "@/lib/learningLanguages";
@@ -42,6 +44,8 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
   const [hideGloss, setHideGloss] = useState(false);
   const [revealedIds, setRevealedIds] = useState<Set<string>>(new Set());
   const [orderIds, setOrderIds] = useState<string[] | null>(null);
+  const [section, setSection] = useState<"saved" | "characters">("saved");
+  const showCharacters = shouldShowCharacterGuide(targetLanguage, locale);
 
   const entries = useMemo(
     () => filterVocabularyByLanguage(allEntries, targetLanguage),
@@ -59,19 +63,16 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
     setResults([]);
     setSearched(false);
     setError(null);
-  }, [targetLanguage]);
+    if (!shouldShowCharacterGuide(targetLanguage, locale)) {
+      setSection("saved");
+    }
+  }, [targetLanguage, locale]);
 
   useEffect(() => {
     if (!toast) return;
     const timer = window.setTimeout(() => setToast(null), 2800);
     return () => window.clearTimeout(timer);
   }, [toast]);
-
-  useEffect(() => {
-    setResults([]);
-    setSearched(false);
-    setError(null);
-  }, [locale]);
 
   const handleSearch = async (event?: FormEvent) => {
     event?.preventDefault();
@@ -164,6 +165,41 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
   return (
     <div className="relative flex h-full min-h-0 flex-col">
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4 sm:px-6">
+        {showCharacters ? (
+          <div className="mb-4 flex gap-1 rounded-xl bg-slate-100 p-1">
+            <button
+              type="button"
+              onClick={() => setSection("saved")}
+              className={`flex-1 rounded-lg px-3 py-1.5 text-xs font-medium ${
+                section === "saved"
+                  ? "bg-white text-slate-900 shadow-sm"
+                  : "text-slate-500"
+              }`}
+            >
+              {ui.vocabTabSaved}
+            </button>
+            <button
+              type="button"
+              onClick={() => setSection("characters")}
+              className={`flex-1 rounded-lg px-3 py-1.5 text-xs font-medium ${
+                section === "characters"
+                  ? "bg-white text-slate-900 shadow-sm"
+                  : "text-slate-500"
+              }`}
+            >
+              {ui.vocabTabCharacters}
+            </button>
+          </div>
+        ) : null}
+
+        {section === "characters" && showCharacters ? (
+          <CharacterGuidePanel
+            targetLanguage={targetLanguage}
+            locale={locale}
+            ui={ui}
+          />
+        ) : (
+          <>
         <form onSubmit={handleSearch} className="flex gap-2">
           <input
             type="search"
@@ -387,6 +423,8 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
             </ul>
           )}
         </section>
+          </>
+        )}
       </div>
 
       {toast ? (

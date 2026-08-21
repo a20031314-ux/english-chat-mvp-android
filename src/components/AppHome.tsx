@@ -15,6 +15,7 @@ import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
 import { LearningLanguageProvider } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
 import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
+import { learningLanguageTextDir } from "@/lib/learningLanguages";
 
 export type AppTab = "chat" | "read" | "study" | "video" | "vocab";
 
@@ -46,6 +47,11 @@ function AppHomeInner({
 }) {
   const [tab, setTab] = useState<AppTab>("chat");
   const ui = useUiCopy(locale);
+
+  useEffect(() => {
+    document.documentElement.lang = locale;
+    document.documentElement.dir = learningLanguageTextDir(locale);
+  }, [locale]);
 
   useEffect(() => {
     try {
@@ -110,7 +116,11 @@ function AppHomeInner({
   return (
     <ExpressionInsightProvider locale={locale} ui={ui}>
       <EnglishAnalysisProvider locale={locale} ui={ui}>
-          <div className="mx-auto flex h-[100dvh] w-full max-w-4xl flex-col bg-slate-100">
+          <div
+            className="mx-auto flex h-[100dvh] w-full max-w-4xl flex-col bg-slate-100"
+            dir={learningLanguageTextDir(locale)}
+            lang={locale}
+          >
             <div className="flex shrink-0 flex-wrap items-center gap-2 border-b border-slate-200/80 bg-white/90 px-3 py-1.5 sm:px-4">
               <TargetLanguageSelector label={ui.learningLanguageLabel} />
               <LanguageSelector

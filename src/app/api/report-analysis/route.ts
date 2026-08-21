@@ -11,22 +11,11 @@ import {
   normalizeConversationAnalysis,
   type AnalysisTurn,
 } from "@/lib/conversationAnalysis";
+import { INTERFACE_LANGUAGE_LABELS } from "@/lib/learningLanguages";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
 
-const OUTPUT_LANGUAGES: Record<string, string> = {
-  ko: "Korean (한국어)",
-  en: "English",
-  es: "Spanish",
-  ja: "Japanese",
-  zh: "Simplified Chinese",
-  vi: "Vietnamese",
-  fr: "French",
-  pt: "Portuguese",
-  id: "Indonesian",
-  it: "Italian (italiano)",
-  ru: "Russian (русский)",
-};
+const OUTPUT_LANGUAGES: Record<string, string> = INTERFACE_LANGUAGE_LABELS;
 
 function getClient() {
   const apiKey = process.env.OPENAI_API_KEY;

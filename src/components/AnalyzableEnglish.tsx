@@ -2,7 +2,9 @@
 
 import {
   useCallback,
+  useEffect,
   useRef,
+  useState,
   type MouseEvent as ReactMouseEvent,
   type PointerEvent as ReactPointerEvent,
   type ReactNode,
@@ -12,12 +14,18 @@ import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 import { selectionFitsSentence } from "@/lib/expressionInsight";
-import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
+import { DEFAULT_LEARNING_LANGUAGE_CODE, learningLanguageTextDir } from "@/lib/learningLanguages";
+import {
+  findLearningSpan,
+  tokensFromLearningSpans,
+  type LearningSpan,
+} from "@/lib/learningSpans";
 import type { TranslationSourceType } from "@/lib/naturalTranslation";
 import { isSameAnalysisSpan } from "@/lib/englishAnalysis";
 import { splitSentences } from "@/lib/studyMaterials/splitSentences";
 import { isWordToken, tokenize } from "@/lib/textTokens";
 import { prefetchExpressionUnits } from "@/lib/requestExpressionUnits";
+import { prefetchLearningSpans, loadLearningSpans } from "@/lib/requestLearningSpans";
 import {
   correctedHighlightParts,
   originalHighlightParts,
@@ -134,7 +142,11 @@ export function AnalyzableEnglish({
   const label = analyzeLabel ?? insight?.analyzeLabel;
   const reusedTranslation = attachedTranslation?.replace(/\s+/g, " ").trim() || "";
   const inspect = useCallback(
-    (selected: string, intent: "sentence" | "word") => {
+    (
+      selected: string,
+      intent: "sentence" | "word",
+      span?: LearningSpan | null,
+    ) => {
       analysis?.open({
         selectedText: selected,
         contextSentence: sentence,
@@ -143,6 +155,10 @@ export function AnalyzableEnglish({
         language: language || targetLanguage,
         intent,
         ...(reusedTranslation ? { translation: reusedTranslation } : {}),
+        ...(span?.inner?.length ? { innerUnits: span.inner } : {}),
+        ...(span?.kind === "expression" || span?.kind === "grammar_unit"
+          ? { allowVocabSave: true }
+          : {}),
       });
     },
     [
@@ -169,10 +185,29 @@ export function AnalyzableEnglish({
       ? /[A-Za-z]/.test(sentence)
       : sentence.trim().length > 0;
   const enabled = (canAnalyze || canSave) && hasContent;
-  const tokens = tokenize(sentence);
+  const [learningSpans, setLearningSpans] = useState<LearningSpan[] | null>(
+    null,
+  );
+  useEffect(() => {
+    if (targetLanguage === "en") {
+      setLearningSpans(null);
+      return;
+    }
+    let cancelled = false;
+    void loadLearningSpans(sentence, targetLanguage).then((spans) => {
+      if (!cancelled) setLearningSpans(spans);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [sentence, targetLanguage]);
+  const tokens =
+    targetLanguage === "en" || !learningSpans
+      ? tokenize(sentence)
+      : tokensFromLearningSpans(sentence, learningSpans);
   const useTokens = enabled && !children;
 
-  const rootRef = useRef<HTMLDivElement>(null);
+  const rootRef = useRef<HTMLSpanElement>(null);
   const wrapRef = useRef<HTMLSpanElement>(null);
   const dragRef = useRef<{
     start: number;
@@ -203,7 +238,11 @@ export function AnalyzableEnglish({
         return;
       }
       if (analysis) {
-        inspect(cleaned, isTap ? "word" : "sentence");
+        inspect(
+          cleaned,
+          isTap ? "word" : "sentence",
+          isTap ? findLearningSpan(learningSpans, cleaned) : null,
+        );
         return;
       }
       if (!isTap && handleAnalyze) {
@@ -212,7 +251,7 @@ export function AnalyzableEnglish({
       }
       vocab?.open(cleaned, sentence);
     },
-    [analysis, handleAnalyze, inspect, onAnalyze, sentence, vocab],
+    [analysis, handleAnalyze, inspect, learningSpans, onAnalyze, sentence, vocab],
   );
 
   const syncNativeSelection = useCallback(() => {
@@ -235,8 +274,12 @@ export function AnalyzableEnglish({
     return Number.isInteger(index) ? index : null;
   };
 
-  const onPointerDown = (event: ReactPointerEvent<HTMLDivElement>) => {
-    prefetchExpressionUnits(sentence, targetLanguage);
+  const onPointerDown = (event: ReactPointerEvent<HTMLSpanElement>) => {
+    if (targetLanguage === "en") {
+      prefetchExpressionUnits(sentence, targetLanguage);
+    } else {
+      prefetchLearningSpans(sentence, targetLanguage);
+    }
     if (!useTokens) return;
     const index = tokenIndexFromPoint(event.clientX, event.clientY);
     if (index == null || !isWordToken(tokens[index])) {
@@ -255,7 +298,7 @@ export function AnalyzableEnglish({
     };
   };
 
-  const onPointerMove = (event: ReactPointerEvent<HTMLDivElement>) => {
+  const onPointerMove = (event: ReactPointerEvent<HTMLSpanElement>) => {
     const drag = dragRef.current;
     if (!drag) return;
     const dy = Math.abs(event.clientY - drag.y);
@@ -272,7 +315,7 @@ export function AnalyzableEnglish({
     }
   };
 
-  const onPointerUp = (event: ReactPointerEvent<HTMLDivElement>) => {
+  const onPointerUp = (event: ReactPointerEvent<HTMLSpanElement>) => {
     if (useTokens) {
       const drag = dragRef.current;
       dragRef.current = null;
@@ -308,7 +351,7 @@ export function AnalyzableEnglish({
     window.setTimeout(syncNativeSelection, 280);
   };
 
-  const onClick = (event: ReactMouseEvent<HTMLDivElement>) => {
+  const onClick = (event: ReactMouseEvent<HTMLSpanElement>) => {
     if (!suppressClickRef.current) return;
     suppressClickRef.current = false;
     event.preventDefault();
@@ -317,9 +360,12 @@ export function AnalyzableEnglish({
 
   if (!enabled) {
     return (
-      <div translate="no" className={`whitespace-pre-wrap ${className}`}>
+      <span
+        translate="no"
+        className={`${inline ? "" : "block"} whitespace-pre-wrap ${className}`}
+      >
         {children ?? sentence}
-      </div>
+      </span>
     );
   }
 
@@ -459,21 +505,22 @@ export function AnalyzableEnglish({
         />
       ) : null}
       <span className={showSentenceRail ? "min-w-0 flex-1" : "min-w-0"}>
-        <div
+        <span
           ref={rootRef}
           translate="no"
-          className={`whitespace-pre-wrap ${
+          className={`${inline ? "" : "block"} whitespace-pre-wrap ${
             useTokens
               ? "select-none"
               : "[user-select:text] [-webkit-user-select:text]"
           } ${className}`}
+          dir={learningLanguageTextDir(targetLanguage)}
           onPointerDown={onPointerDown}
           onPointerMove={onPointerMove}
           onPointerUp={onPointerUp}
           onClick={onClick}
         >
           {children ? children : tokenNodes}
-        </div>
+        </span>
       </span>
     </span>
   );

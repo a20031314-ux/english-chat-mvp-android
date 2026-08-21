@@ -4,7 +4,10 @@
  * grammar only when needed; never pad with textbook dumps.
  */
 
-import { learningLanguageName } from "@/lib/learningLanguages";
+import {
+  interfaceLanguageName,
+  learningLanguageName,
+} from "@/lib/learningLanguages";
 
 export type LanguageLearningAnalysis = {
   naturalMeaning: string;
@@ -66,20 +69,7 @@ This is NOT a grammar textbook generator.
 }
 
 export function interfaceLanguageDisplayName(locale: string): string {
-  const map: Record<string, string> = {
-    ko: "Korean",
-    en: "English",
-    es: "Spanish",
-    ja: "Japanese",
-    zh: "Simplified Chinese",
-    vi: "Vietnamese",
-    fr: "French",
-    pt: "Portuguese",
-    id: "Indonesian",
-    it: "Italian",
-    ru: "Russian",
-  };
-  return map[locale] ?? "Korean";
+  return interfaceLanguageName(locale);
 }
 
 /**

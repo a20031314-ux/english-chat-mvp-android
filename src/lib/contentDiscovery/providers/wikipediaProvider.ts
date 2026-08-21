@@ -15,6 +15,11 @@ const WIKI_HOST: Record<LearningLanguageCode, string> = {
   it: "it.wikipedia.org",
   pt: "pt.wikipedia.org",
   ru: "ru.wikipedia.org",
+  ar: "ar.wikipedia.org",
+  id: "id.wikipedia.org",
+  vi: "vi.wikipedia.org",
+  th: "th.wikipedia.org",
+  hi: "hi.wikipedia.org",
 };
 
 type WikiSearchItem = {
