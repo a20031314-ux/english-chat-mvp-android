@@ -283,18 +283,34 @@ export async function optimizeAudioForStt(
 export async function extractAudio(input: {
   audioStreamUrl?: string;
   audioMimeType?: string;
+  videoStreamUrl?: string;
+  videoMimeType?: string;
   mediaUserAgent?: string;
   maxSeconds?: number;
 }): Promise<ExtractedAudio | null> {
-  if (!input.audioStreamUrl) return null;
   const maxSeconds = input.maxSeconds ?? 600;
   const maxBytes = targetBytesForSeconds(maxSeconds);
-  const downloaded = await downloadAudioUrl(
-    input.audioStreamUrl,
-    input.audioMimeType || "audio/webm",
-    input.mediaUserAgent || YOUTUBE_ANDROID_UA,
-    maxBytes,
-  );
-  if (!downloaded) return null;
-  return optimizeAudioForStt(downloaded, maxSeconds);
+  const userAgent = input.mediaUserAgent || YOUTUBE_ANDROID_UA;
+
+  if (input.audioStreamUrl) {
+    const downloaded = await downloadAudioUrl(
+      input.audioStreamUrl,
+      input.audioMimeType || "audio/webm",
+      userAgent,
+      maxBytes,
+    );
+    if (downloaded) return optimizeAudioForStt(downloaded, maxSeconds);
+  }
+
+  if (input.videoStreamUrl) {
+    const downloaded = await downloadAudioUrl(
+      input.videoStreamUrl,
+      input.videoMimeType || "video/mp4",
+      userAgent,
+      maxBytes,
+    );
+    if (downloaded) return optimizeAudioForStt(downloaded, maxSeconds);
+  }
+
+  return null;
 }

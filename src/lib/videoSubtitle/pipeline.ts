@@ -189,6 +189,7 @@ export async function prepareVideoTranscript(
     const audio = await extractAudio({
       audioStreamUrl: source.audioStreamUrl,
       audioMimeType: source.audioMimeType,
+      videoStreamUrl: source.videoStreamUrl,
       mediaUserAgent: source.mediaUserAgent,
       maxSeconds: Math.min(
         WHISPER_MAX_SECONDS,

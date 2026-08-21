@@ -18,6 +18,14 @@ export type CaptionFetchOptions = {
   requireLanguageMatch?: boolean;
 };
 
+function trackClientScore(track: CaptionTrack): number {
+  if (track.client === "android") return 40;
+  if (track.client === "ios") return 20;
+  // WEB timedtext URLs often return empty 200 without a PoToken.
+  if (/[?&]exp=/i.test(track.baseUrl)) return -80;
+  return 0;
+}
+
 function rankTracks(
   tracks: CaptionTrack[],
   options?: CaptionFetchOptions,
@@ -25,7 +33,7 @@ function rankTracks(
   const preferred = options?.preferredLocale;
   return [...tracks].sort((a, b) => {
     const score = (track: CaptionTrack) => {
-      let value = 0;
+      let value = trackClientScore(track);
       if (isManualCaptionTrack(track.kind)) value += 100;
       if (preferred && captionLanguageMatches(track.languageCode, preferred)) {
         value += 50;
@@ -43,8 +51,9 @@ function absoluteCaptionUrl(baseUrl: string): string {
 
 function withFmt(baseUrl: string, fmt: string): string {
   const url = new URL(absoluteCaptionUrl(baseUrl));
+  url.searchParams.delete("fmt");
+  url.searchParams.delete("html5");
   url.searchParams.set("fmt", fmt);
-  url.searchParams.set("html5", "1");
   return url.toString();
 }
 
@@ -60,7 +69,6 @@ function captionHeaders(videoId?: string, cookie?: string): HeadersInit {
     Referer: videoId
       ? `https://www.youtube.com/watch?v=${videoId}`
       : "https://www.youtube.com/",
-    Origin: "https://www.youtube.com",
     ...(cookie ? { Cookie: cookie } : {}),
   };
 }
@@ -97,15 +105,15 @@ function tracksFromTimedTextList(xml: string, videoId: string): CaptionTrack[] {
 }
 
 function mergeTracks(tracks: CaptionTrack[]): CaptionTrack[] {
-  const out: CaptionTrack[] = [];
-  const seen = new Set<string>();
+  const byKey = new Map<string, CaptionTrack>();
   for (const track of tracks) {
-    const key = `${track.languageCode}:${track.kind ?? "manual"}:${track.baseUrl}`;
-    if (seen.has(key)) continue;
-    seen.add(key);
-    out.push(track);
+    const key = `${track.languageCode}:${track.kind ?? "manual"}`;
+    const existing = byKey.get(key);
+    if (!existing || trackClientScore(track) > trackClientScore(existing)) {
+      byKey.set(key, track);
+    }
   }
-  return out;
+  return [...byKey.values()];
 }
 
 function wordsFromJson3(payload: unknown): SttWord[] {
@@ -312,8 +320,28 @@ async function fetchCaptionFmt(
     timeoutMs: 15000,
     headers: captionHeaders(videoId, cookie),
   });
-  if (!response.ok) return [];
-  return parseCaptionBody(await response.text());
+  if (!response.ok) {
+    console.error("[youtube-captions-http]", {
+      lang: track.languageCode,
+      kind: track.kind,
+      client: track.client,
+      fmt,
+      status: response.status,
+    });
+    return [];
+  }
+  const body = await response.text();
+  const segments = parseCaptionBody(body);
+  if (segments.length === 0) {
+    console.error("[youtube-captions-empty]", {
+      lang: track.languageCode,
+      kind: track.kind,
+      client: track.client,
+      fmt,
+      bytes: body.length,
+    });
+  }
+  return segments;
 }
 
 async function segmentsFromTrack(
@@ -404,10 +432,12 @@ export async function transcribeYouTubeCaptions(
   cookie?: string,
   options?: CaptionFetchOptions,
 ): Promise<SttSegment[]> {
-  const extra = videoId ? await timedTextTracks(videoId, cookie) : [];
+  const hasAndroid = tracks.some((track) => track.client === "android");
+  const extra =
+    !hasAndroid && videoId ? await timedTextTracks(videoId, cookie) : [];
   const merged = mergeTracks([...tracks, ...extra]);
   const pool = rankTracks(filterTracks(merged, options), options);
-  for (const track of pool.slice(0, 8)) {
+  for (const track of pool.slice(0, 12)) {
     const segments = await segmentsFromTrack(track, videoId, cookie);
     if (segments.length > 0) return segments;
   }

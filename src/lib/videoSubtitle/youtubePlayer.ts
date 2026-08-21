@@ -182,6 +182,27 @@ function extractJsonArray(source: string, fromIndex: number): unknown | null {
   return null;
 }
 
+/** Public WEB innertube key embedded on every watch page; used if HTML parse fails. */
+const FALLBACK_INNERTUBE_KEY = "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8";
+
+function clientFromUserAgent(userAgent?: string): CaptionTrack["client"] {
+  const ua = userAgent ?? "";
+  if (ua.includes("android.youtube")) return "android";
+  if (ua.includes("ios.youtube")) return "ios";
+  return "web";
+}
+
+function withCaptionClient(
+  tracks: CaptionTrack[],
+  client?: CaptionTrack["client"],
+): CaptionTrack[] {
+  if (!client) return tracks;
+  return tracks.map((track) => ({
+    ...track,
+    client: track.client ?? client,
+  }));
+}
+
 function cookiesFromResponse(response: Response): string {
   const header =
     typeof response.headers.getSetCookie === "function"
@@ -370,22 +391,23 @@ async function fetchInnertubePlayer(
   client: PlayerClient,
   visitorData?: string,
   cookie?: string,
+  apiKey?: string,
 ): Promise<{ player: Record<string, unknown> | null; userAgent: string }> {
   try {
-    const response = await fetchWithTimeout(
-      "https://www.youtube.com/youtubei/v1/player?prettyPrint=false",
-      {
-        method: "POST",
-        timeoutMs: 15000,
-        headers: {
-          "Content-Type": "application/json",
-          "User-Agent": client.userAgent,
-          ...(cookie ? { Cookie: cookie } : {}),
-          ...client.headers,
-        },
-        body: JSON.stringify(client.body(videoId, visitorData)),
+    const endpoint = apiKey
+      ? `https://www.youtube.com/youtubei/v1/player?key=${encodeURIComponent(apiKey)}&prettyPrint=false`
+      : "https://www.youtube.com/youtubei/v1/player?prettyPrint=false";
+    const response = await fetchWithTimeout(endpoint, {
+      method: "POST",
+      timeoutMs: 15000,
+      headers: {
+        "Content-Type": "application/json",
+        "User-Agent": client.userAgent,
+        ...(cookie ? { Cookie: cookie } : {}),
+        ...client.headers,
       },
-    );
+      body: JSON.stringify(client.body(videoId, visitorData)),
+    });
     if (!response.ok) return { player: null, userAgent: client.userAgent };
     return {
       player: asRecord(await response.json()),
@@ -401,6 +423,7 @@ async function fetchWatchPage(videoId: string): Promise<{
   htmlTracks: CaptionTrack[];
   cookie: string;
   visitorData?: string;
+  apiKey: string;
 }> {
   const seed =
     "CONSENT=YES+; SOCS=CAISNQgDEitib3FfaWRlbnRpdHlmcm9udGVuZHVpc2VydmVyXzIwMjQwMzE3LjA3X3AxGgJlbiACGgYIgNnOsAY";
@@ -417,21 +440,35 @@ async function fetchWatchPage(videoId: string): Promise<{
       },
     );
     if (!response.ok) {
-      return { player: null, htmlTracks: [], cookie: seed };
+      return {
+        player: null,
+        htmlTracks: [],
+        cookie: seed,
+        apiKey: FALLBACK_INNERTUBE_KEY,
+      };
     }
     const html = await response.text();
     const fromResponse = cookiesFromResponse(response);
     const cookie = fromResponse ? `${seed}; ${fromResponse}` : seed;
     const visitorData = html.match(/"VISITOR_DATA":"([^"]+)"/)?.[1];
+    const apiKey =
+      html.match(/"INNERTUBE_API_KEY"\s*:\s*"([^"]+)"/)?.[1] ||
+      FALLBACK_INNERTUBE_KEY;
     const player = asRecord(extractJsonObject(html, "ytInitialPlayerResponse"));
     return {
       player,
-      htmlTracks: captionsFromHtml(html),
+      htmlTracks: withCaptionClient(captionsFromHtml(html), "web"),
       cookie,
       visitorData,
+      apiKey,
     };
   } catch {
-    return { player: null, htmlTracks: [], cookie: seed };
+    return {
+      player: null,
+      htmlTracks: [],
+      cookie: seed,
+      apiKey: FALLBACK_INNERTUBE_KEY,
+    };
   }
 }
 
@@ -458,6 +495,9 @@ function mergePlayers(
     seenCaptions.add(track.baseUrl);
     captionTracks.push(track);
   };
+
+  const clientRank = (track: CaptionTrack) =>
+    track.client === "android" ? 2 : track.client === "ios" ? 1 : 0;
 
   // Prefer clients that expose direct stream URLs (Android/iOS) over WEB HTML,
   // which often returns format stubs without url/cipher.
@@ -490,16 +530,25 @@ function mergePlayers(
           mediaUserAgent = mediaUserAgent ?? entry.userAgent;
         }
       }
-      for (const track of captionTracksFromPlayer(player)) pushTrack(track);
+      for (const track of withCaptionClient(
+        captionTracksFromPlayer(player),
+        clientFromUserAgent(entry.userAgent),
+      )) {
+        pushTrack(track);
+      }
     }
     for (const track of entry.extraTracks ?? []) pushTrack(track);
   }
+
+  captionTracks.sort((a, b) => clientRank(b) - clientRank(a));
 
   console.error("[youtube-source]", {
     videoId,
     hasAudio: Boolean(audioStreamUrl),
     hasVideo: Boolean(videoStreamUrl),
     captionTracks: captionTracks.length,
+    androidCaptions: captionTracks.filter((track) => track.client === "android")
+      .length,
     durationSeconds,
     title,
   });
@@ -525,7 +574,13 @@ export async function resolveYouTubeSource(videoUrl: string): Promise<YouTubeSou
   const watch = await fetchWatchPage(videoId);
   const innertube = await Promise.all(
     CLIENTS.map((client) =>
-      fetchInnertubePlayer(videoId, client, watch.visitorData, watch.cookie),
+      fetchInnertubePlayer(
+        videoId,
+        client,
+        watch.visitorData,
+        watch.cookie,
+        watch.apiKey,
+      ),
     ),
   );
   return mergePlayers(

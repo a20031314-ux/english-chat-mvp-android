@@ -138,6 +138,8 @@ export type CaptionTrack = {
   kind?: string;
   name?: string;
   baseUrl: string;
+  /** Innertube client that produced this URL. ANDROID tracks work without a PoToken. */
+  client?: "android" | "ios" | "web";
 };
 
 export type YouTubeSource = {
