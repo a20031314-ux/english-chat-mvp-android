@@ -110,6 +110,13 @@ function asOfficialSegments(segments: SttSegment[]): NormalizedSegment[] {
   );
 }
 
+export type PrepareTranscriptOptions = {
+  /** Skip YouTube audio download (native clients upload chunks instead). */
+  skipServerAudio?: boolean;
+  /** Already-transcribed speech (from device-uploaded Whisper chunks). */
+  sttOverride?: SttSegment[];
+};
+
 /**
  * Prepare full transcript + topic, then adapt the first 20s window so playback
  * can start. Remaining 20s windows are adapted on the client.
@@ -121,6 +128,7 @@ export async function prepareVideoTranscript(
   videoUrl: string,
   locale = "ko",
   targetLanguage = "en",
+  options?: PrepareTranscriptOptions,
 ): Promise<PreparedTranscript> {
   if (!getOpenAIClient()) {
     throw new VideoPipelineError("MISSING_OPENAI_KEY");
@@ -151,6 +159,10 @@ export async function prepareVideoTranscript(
     console.error("[video-prepare-official-ui]", error);
   }
 
+  if (options?.sttOverride && options.sttOverride.length > 0) {
+    stt = usableSpeech(options.sttOverride);
+    sttSource = "whisper";
+  } else {
   // Speech / learning-language transcript only (never another language's track).
   try {
     const targetManual = usableSpeech(
@@ -185,7 +197,7 @@ export async function prepareVideoTranscript(
     console.error("[video-prepare-captions]", error);
   }
 
-  if (stt.length === 0) {
+  if (stt.length === 0 && !options?.skipServerAudio) {
     const audio = await extractAudio({
       audioStreamUrl: source.audioStreamUrl,
       audioMimeType: source.audioMimeType,
@@ -208,7 +220,9 @@ export async function prepareVideoTranscript(
     });
     if (audio) {
       try {
-        const raw = await transcribeAudio(audio);
+        const raw = await transcribeAudio(audio, {
+          language: targetLanguage,
+        });
         stt = usableSpeech(raw);
         console.error("[video-prepare-stt]", {
           videoId: parsed.videoId,
@@ -221,6 +235,7 @@ export async function prepareVideoTranscript(
         console.error("[video-prepare-whisper]", error);
       }
     }
+  }
   }
 
   // Only reuse UI official captions as the speech track when UI == learning language.
@@ -244,9 +259,11 @@ export async function prepareVideoTranscript(
 
   if (stt.length === 0) {
     throw new VideoPipelineError(
-      source.audioStreamUrl || source.captionTracks.length
-        ? "NO_SPEECH"
-        : "NO_AUDIO",
+      options?.skipServerAudio
+        ? "CLIENT_AUDIO_REQUIRED"
+        : source.audioStreamUrl || source.captionTracks.length
+          ? "NO_SPEECH"
+          : "NO_AUDIO",
     );
   }
 

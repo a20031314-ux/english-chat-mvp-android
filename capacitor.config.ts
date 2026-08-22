@@ -16,6 +16,11 @@ const config: CapacitorConfig = {
   android: {
     allowMixedContent: false,
   },
+  plugins: {
+    CapacitorHttp: {
+      enabled: true,
+    },
+  },
   ...(devServerUrl
     ? {
         server: {

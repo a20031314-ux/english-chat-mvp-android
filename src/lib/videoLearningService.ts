@@ -1,4 +1,9 @@
+import { Capacitor } from "@capacitor/core";
 import { apiUrl } from "@/lib/apiBase";
+import {
+  ClientAudioError,
+  transcribeYouTubeAudioOnDevice,
+} from "@/lib/videoSubtitle/clientVideoAudio";
 import type { VideoSubtitle, VideoSubtitleAnalysis } from "@/lib/videoLearning";
 import { MOCK_VIDEO_ANALYSES } from "@/lib/videoLearningMock";
 import { getSceneContextAtTime } from "@/lib/videoSubtitle/getSceneContextAtTime";
@@ -258,6 +263,7 @@ export async function prepareEnglishWatch(
 ): Promise<{ prepared: PreparedTranscript; englishCues: VideoSubtitle[] }> {
   const locale = options?.interfaceLanguage ?? options?.locale ?? "ko";
   const targetLanguage = options?.targetLanguage ?? "en";
+  const skipServerAudio = Capacitor.isNativePlatform();
   options?.onStatus?.("speech");
   options?.onProgress?.({ percent: 10, step: "speech" });
 
@@ -269,13 +275,52 @@ export async function prepareEnglishWatch(
       locale,
       interfaceLanguage: locale,
       targetLanguage,
+      skipServerAudio,
     }),
     signal: options?.signal,
   });
-  if (!prepareResponse.ok) {
+  let prepared: PreparedTranscript;
+  if (
+    skipServerAudio &&
+    prepareResponse.status === 409 &&
+    (await readError(prepareResponse.clone())) === "CLIENT_AUDIO_REQUIRED"
+  ) {
+    options?.onProgress?.({ percent: 16, step: "speech" });
+    try {
+      const segments = await transcribeYouTubeAudioOnDevice(videoUrl, {
+        targetLanguage,
+        signal: options?.signal,
+        onProgress: (percent) =>
+          options?.onProgress?.({ percent, step: "speech" }),
+      });
+      const fromStt = await fetch(apiUrl("/api/video-subtitles/prepare-from-stt"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          videoUrl,
+          locale,
+          interfaceLanguage: locale,
+          targetLanguage,
+          segments,
+        }),
+        signal: options?.signal,
+      });
+      if (!fromStt.ok) {
+        throw new VideoSubtitleClientError(await readError(fromStt));
+      }
+      prepared = (await fromStt.json()) as PreparedTranscript;
+    } catch (error) {
+      if (error instanceof VideoSubtitleClientError) throw error;
+      if (error instanceof ClientAudioError) {
+        throw new VideoSubtitleClientError(error.code);
+      }
+      throw new VideoSubtitleClientError("NO_SPEECH");
+    }
+  } else if (!prepareResponse.ok) {
     throw new VideoSubtitleClientError(await readError(prepareResponse));
+  } else {
+    prepared = (await prepareResponse.json()) as PreparedTranscript;
   }
-  const prepared = (await prepareResponse.json()) as PreparedTranscript;
   options?.onStatus?.("cleanup");
   options?.onProgress?.({ percent: 100, step: "cleanup" });
 

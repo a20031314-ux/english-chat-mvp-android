@@ -3,6 +3,7 @@ export type VideoSubtitleErrorCode =
   | "INVALID_URL"
   | "NO_AUDIO"
   | "NO_SPEECH"
+  | "CLIENT_AUDIO_REQUIRED"
   | "STT_FAILED"
   | "UNKNOWN_LANGUAGE"
   | "TRANSLATION_FAILED"

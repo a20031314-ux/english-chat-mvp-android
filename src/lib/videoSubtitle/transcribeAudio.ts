@@ -30,11 +30,14 @@ function wordsForSegment(
 
 export async function transcribeAudio(
   audio: ExtractedAudio,
+  options?: { language?: string; offsetSeconds?: number },
 ): Promise<SttSegment[]> {
   const client = getOpenAIClient();
   if (!client) {
     throw new VideoPipelineError("MISSING_OPENAI_KEY");
   }
+  const offset = Math.max(0, options?.offsetSeconds ?? 0);
+  const language = options?.language?.trim().toLowerCase().split(/[-_]/)[0];
 
   const makeFile = () =>
     toFile(audio.bytes, audio.filename, {
@@ -53,14 +56,15 @@ export async function transcribeAudio(
         temperature: 0,
         response_format: "verbose_json",
         ...(withWords ? { timestamp_granularities: ["segment", "word"] } : {}),
+        ...(language && language.length === 2 ? { language } : {}),
         prompt,
       });
     const result = await request(true).catch(() => request(false));
 
     const words: SttWord[] | undefined = result.words?.map((word) => ({
       word: word.word,
-      start: word.start,
-      end: word.end,
+      start: word.start + offset,
+      end: word.end + offset,
     }));
 
     const segments: SttSegment[] = [];
@@ -82,12 +86,12 @@ export async function transcribeAudio(
       ) {
         continue;
       }
-      const slice = wordsForSegment(words, segment.start, segment.end);
+      const slice = wordsForSegment(words, segment.start + offset, segment.end + offset);
       segments.push({
-        id: `w-${index}-${Math.round(segment.start * 1000)}`,
+        id: `w-${index}-${Math.round((segment.start + offset) * 1000)}`,
         text,
-        startTime: segment.start,
-        endTime: Math.max(segment.start + 0.3, segment.end),
+        startTime: segment.start + offset,
+        endTime: Math.max(segment.start + offset + 0.3, segment.end + offset),
         ...(slice ? { words: slice } : {}),
         confidence,
         uncertain,
@@ -106,8 +110,8 @@ export async function transcribeAudio(
           {
             id: "w-0",
             text: fallback,
-            startTime: 0,
-            endTime: result.duration || 4,
+            startTime: offset,
+            endTime: offset + (result.duration || 4),
             ...(words?.length ? { words } : {}),
           },
         ];
