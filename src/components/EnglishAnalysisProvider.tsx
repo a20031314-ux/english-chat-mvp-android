@@ -91,7 +91,6 @@ export function EnglishAnalysisProvider({
             ui={ui}
             onTab={analysis.setTab}
             onRange={analysis.setRange}
-            onPickRecommendation={analysis.pickRecommendation}
             onAnalyzeRange={analysis.analyzeRange}
             onClose={analysis.close}
           />

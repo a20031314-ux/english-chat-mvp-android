@@ -162,6 +162,7 @@ export function adaptiveOverviewSystem(options: {
     interfaceLanguage,
     fieldsDescription:
       "naturalMeaning, learningUnits.meaning, explanation, nuance, and optionalLanguageNote",
+    learningLanguage: options.targetLanguage,
   });
   const sourceFormNote =
     interfaceLanguage === "ko"
@@ -233,6 +234,7 @@ export function adaptiveElementSystem(options: {
     interfaceLanguage,
     fieldsDescription:
       "meaningInContext, grammar.why, grammar.general, grammar.inThisSentence, example translations, and inner.explanation",
+    learningLanguage: options.targetLanguage,
   });
   const sourceFormNote =
     interfaceLanguage === "ko"

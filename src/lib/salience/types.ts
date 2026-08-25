@@ -76,11 +76,14 @@ export type DimensionPromptContext = {
   spanText: string;
   signalTags: string[];
   focus: string[];
+  siblingDimensions?: AnalysisDimension[];
 };
 
 export type DimensionCall = {
   dimension: AnalysisDimension;
   prompt: string;
+  explanationLanguage: string;
+  learningLanguage: string;
 };
 
 export type AnalysisResult = {

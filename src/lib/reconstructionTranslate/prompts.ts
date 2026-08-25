@@ -58,8 +58,11 @@ export function extractMeaningSystem(ctx: TranslationContext): string {
   const source = langName(ctx.sourceLang);
   return `You extract WHAT a ${source} utterance is doing. You do not translate it.
 
-Write the idea as a situation description in simple ${source}:
-who is doing what, toward whom, with what attitude.
+Restate WHAT WAS SAID as plain ${source} content — the idea a listener takes away.
+Write the content of the utterance, not a reporter describing the speaker.
+WRONG: "The speaker is mentioning DeepSeek" / "Someone is asking about OpenAI"
+RIGHT: "And China — well, DeepSeek, which shocked the world" / "Asking: is it called open-weight?"
+Do NOT start with "The speaker is", "Someone is talking/mentioning/asking/explaining".
 Do NOT copy the original clause pattern (clefts like "the reason X is", "what I'm saying is", "the thing is").
 Do NOT write a sentence that could be used as a ${langName(ctx.targetLang)} subtitle or translation.
 Do NOT mention word order.
@@ -74,7 +77,7 @@ Texture is not a translation. Do not rewrite fillers into ${langName(ctx.targetL
 
 Return ONLY JSON:
 {
-  "coreMeaning": "plain situation description, not a translation",
+  "coreMeaning": "plain restatement of what was said, not a reporter note, not a translation",
   "speakerIntent": "inform | advise | refuse | hedge | question | sarcasm | joke | complain | other",
   "formalityLevel": "intimate | casual | polite | formal",
   "speakerRelationship": "friends | public explainer | host-guest | stranger-polite | unknown",
@@ -104,7 +107,11 @@ export function generateTranslationSystem(ctx: TranslationContext): string {
   const target = langName(ctx.targetLang);
   return `You will receive the MEANING of something someone said — not the original wording.
 
-Write an ON-SCREEN ${target} caption: what a native would actually put on screen in that situation, in the same spoken register this app's ${target} UI uses.
+Write an ON-SCREEN ${target} caption: the line THE SPEAKER said, in the same spoken register this app's ${target} UI uses. What a native would actually put on screen.
+
+The caption IS the utterance. Not a recap of the utterance.
+WRONG: "Someone is asking about OpenAI" / "오픈AI에 대해 질문하고 있어" / "~에 대해 이야기하고 있어요"
+RIGHT: "오픈웨이트라는 거예요?" / "그리고 최근 뭐니뭐니 해도 화제의 문샷 AI."
 
 Permissions (use them):
 - You are composing a new utterance, not mapping words.
@@ -127,6 +134,7 @@ Constraints:
 - No translator notes, labels, or quotes around the line.
 - Do not invent facts, dates, topics, or objects that were not in the meaning.
 - Do not unpack the line into extra commentary. Caption only.
+- Do not describe the speaker ("someone is talking/mentioning/explaining/asking"). Say what they said.
 
 Return ONLY JSON: {"translated":"..."}`;
 }
@@ -161,6 +169,7 @@ Keep the information the speaker packed in, including discourse frames
 ("what I'm trying to say", "the reason is") when they are doing work.
 Match the source register in ${target} (casual source → casual ${target}, not a textbook).
 Do not add tutor notes. Do not invent facts.
+Do not recap the speaker ("someone is talking about X", "~에 대해 이야기하고 있어요"). Write the line they said.
 
 Return ONLY JSON: {"translated":"..."}`;
 }
@@ -187,6 +196,8 @@ Rewrite it only when needed.
 Rewrite when:
 - leftover ${langName(ctx.sourceLang)} clause shape / translationese
 - the joke or sarcasm was explained instead of performed
+- the line recaps the speaker instead of being the utterance
+  ("someone is talking about X", "~에 대해 이야기하고 있어요")
 - facts were added that the meaning did not contain
 - registerType was casual_spoken but the line reads like tidy written prose
   (hedges, stalls, self-correction, or emphasis rhythm were ironed out)

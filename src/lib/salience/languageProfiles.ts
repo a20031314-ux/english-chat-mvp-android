@@ -66,10 +66,14 @@ export const LANGUAGE_PROFILES: Record<LearningLanguageCode, LanguageProfile> = 
     languageCode: "ja",
     activeDimensions: ["syntax", "usageInContext", "morphology", "pragmatics"],
     dimensionFocus: {
-      syntax: ["SOV", "particles as case", "relative clauses before the noun"],
+      syntax: [
+        "verb-final word order",
+        "case particles",
+        "relative clauses before the noun",
+      ],
       usageInContext: ["set expressions", "why this form here"],
-      morphology: ["活用", "助詞", "て-form chains"],
-      pragmatics: ["敬語", "丁寧体 vs 普通体"],
+      morphology: ["verb conjugation", "particles", "te-form chains"],
+      pragmatics: ["honorifics", "polite vs plain form"],
     },
   },
   zh: {

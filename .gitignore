@@ -49,3 +49,4 @@ next-env.d.ts
 # local verify fixtures
 /scripts/_verify-*.json
 /public/verify-bundle.json
+/tmp/verify/

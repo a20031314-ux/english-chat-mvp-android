@@ -26,3 +26,22 @@ export function splitSentences(text: string): string[] {
   if (tail) parts.push(tail);
   return parts.length > 0 ? parts : [raw];
 }
+
+/** The sentence inside `text` that contains `selected`, or `text` if it is already one unit. */
+export function sentenceContainingSelection(
+  text: string,
+  selected: string,
+): string {
+  const full = text.replace(/\s+/g, " ").trim();
+  const needle = selected.replace(/\s+/g, " ").trim();
+  if (!full) return text;
+  if (!needle) return full;
+  const parts = splitSentences(full);
+  if (parts.length <= 1) return full;
+  const hit = parts.find((part) => {
+    const hay = part.toLowerCase();
+    const want = needle.toLowerCase();
+    return hay === want || hay.includes(want);
+  });
+  return hit ?? full;
+}

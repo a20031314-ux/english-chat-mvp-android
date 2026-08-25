@@ -249,11 +249,7 @@ export async function generateMeaningBasedSubtitle(input: {
     const needsAdapt = drafts.some((draft) => {
       const text = draft.naturalSubtitle.trim();
       if (!text) return true;
-      if (input.locale === "ko" && !/[가-힣]/.test(text)) return true;
-      if (
-        input.locale !== "ko" &&
-        looksLikeLiteralOrForeignCaption(draft.original, text, input.locale)
-      ) {
+      if (looksLikeLiteralOrForeignCaption(draft.original, text, input.locale)) {
         return true;
       }
       return false;

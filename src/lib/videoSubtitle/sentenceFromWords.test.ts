@@ -189,6 +189,51 @@ test("matched LLM sentences must equal the original word sequence", () => {
   );
 });
 
+test("Japanese tokens stay in LLM sentence matching", () => {
+  const list = words([
+    ["アメリカはですね", 0, 2.4],
+    ["次の話題に入ります", 2.5, 4.8],
+    ["逆にこの君K3の課題があるとすれば何ですか?", 5.0, 8.2],
+  ]);
+  const matched = matchSentencesToWordIndices(list, [
+    "アメリカはですね",
+    "次の話題に入ります",
+    "逆にこの君K3の課題があるとすれば何ですか?",
+  ]);
+  assert.ok(matched);
+  assert.equal(matched?.length, 3);
+  assert.equal(matched?.[0]?.startIndex, 0);
+  assert.equal(matched?.[2]?.endIndex, 2);
+});
+
+test("regularizeSttSegments keeps consecutive Japanese Whisper lines", () => {
+  const rows = regularizeSttSegments([
+    {
+      id: "a",
+      text: "アメリカはですねOpenAI、Claude、Geminiを使っています",
+      startTime: 2.1,
+      endTime: 6.4,
+    },
+    {
+      id: "b",
+      text: "DeepSeekやMoonshotも同じように見ています",
+      startTime: 6.5,
+      endTime: 10.2,
+    },
+    {
+      id: "c",
+      text: "逆にこの君K3の課題があるとすれば何ですか?",
+      startTime: 52.5,
+      endTime: 55.1,
+    },
+  ]);
+  assert.equal(rows.length, 3);
+  assert.match(rows[0]!.text, /OpenAI/);
+  assert.match(rows[1]!.text, /DeepSeek/);
+  assert.match(rows[2]!.text, /K3/);
+  assert.ok(rows[0]!.startTime < 3);
+});
+
 test("flattenSttToTimedWords concatenates chunk words in list order", () => {
   const list = flattenSttToTimedWords([
     {

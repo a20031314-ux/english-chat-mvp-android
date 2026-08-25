@@ -17,5 +17,6 @@ test("speechRegisterHint tells Korean captions to follow the video genre", () =>
   assert.match(hint, /live football commentary/);
   assert.match(hint, /현장 해설체/);
   assert.match(hint, /뉴스 앵커/);
+  assert.match(hint, /중계는 금지/);
   assert.match(hint, /movie\/drama/);
 });

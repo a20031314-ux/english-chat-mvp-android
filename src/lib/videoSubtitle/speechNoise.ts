@@ -3,6 +3,11 @@
  * Not perfect — sung-over-dialogue and clear vocal tracks can still leak.
  */
 
+import {
+  isJunkCue,
+  looksLikeSubstantialDialogue,
+} from "@/lib/videoSubtitle/sttTokens";
+
 const MARKER_ONLY =
   /^\s*[\[(]\s*(music|applause|laughter|silence|inaudible|singing)\b[^\]\)]*[\])]\s*$/i;
 
@@ -42,18 +47,22 @@ export function looksLikeMusicBleed(input: {
 
   const noSpeech = input.noSpeechProb ?? 0;
   const confidence = input.confidence;
-  const short = text.length <= 24;
-  const veryShort = text.length <= 12;
+  const substantial = looksLikeSubstantialDialogue(text);
+  const short = text.length <= 24 && !substantial;
+  const veryShort = text.length <= 12 && !substantial;
 
   // Strong no-speech signal → almost never useful dialogue.
-  if (noSpeech >= 0.72) return true;
+  // Keep long CJK/Korean lines: TV BGM often inflates no_speech_prob.
+  if (noSpeech >= 0.88) return true;
+  if (noSpeech >= 0.72 && !substantial) return true;
   if (noSpeech >= 0.55 && short) return true;
   if (noSpeech >= 0.45 && veryShort) return true;
 
   if (
     typeof confidence === "number" &&
     confidence < 0.28 &&
-    (short || input.uncertain)
+    (short || input.uncertain) &&
+    !substantial
   ) {
     return true;
   }
@@ -68,6 +77,20 @@ export function looksLikeMusicBleed(input: {
   }
 
   return false;
+}
+
+/** Drop empty / marker / junk lines. Keep substantial speech even if Whisper is unsure. */
+export function isUsableSpeechSegment(segment: {
+  text: string;
+  uncertain?: boolean;
+  confidence?: number;
+}): boolean {
+  const text = segment.text.replace(/\s+/g, " ").trim();
+  if (!text || isNonSpeechMarker(text) || isJunkCue(text)) return false;
+  if (segment.uncertain && (segment.confidence ?? 1) < 0.3) {
+    return looksLikeSubstantialDialogue(text);
+  }
+  return true;
 }
 
 export function filterSpeechSegments<

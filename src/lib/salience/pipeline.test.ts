@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { recommendSalience } from "./pipeline.ts";
-import { buildRankPrompt } from "./rankCandidates.ts";
+import { buildRankPrompt, isLearnerFacingSalienceReason } from "./rankCandidates.ts";
 import { sourceContextFromTranslation } from "./sourceContext.ts";
 import { buildSourceExpressionPrompt } from "./sourceSignals.ts";
 
@@ -67,6 +67,8 @@ test("source lexicon + linguistic merge logs video vs web vs ebook candidates", 
     candidates: video.merged,
   });
   assert.match(rankPrompt, /Beginner/);
+  assert.match(rankPrompt, /ONLY in Korean Hangul/);
+  assert.match(rankPrompt, /ranked\.reason/);
 });
 
 test("advanced level drops lone article contrast; LLM rank can reorder", async () => {
@@ -94,4 +96,34 @@ test("advanced level drops lone article contrast; LLM rank can reorder", async (
   });
   assert.equal(ranked.recommendations[0]?.originalText.toLowerCase().includes("turf"), true);
   assert.match(ranked.recommendations[0]?.salienceReason ?? "", /Idiom/);
+});
+
+test("unspaced Japanese LLM spans attach to segmented tokens", async () => {
+  const sentence = "今日はいい天気ですね";
+  const result = await recommendSalience({
+    sentence,
+    language: "ja",
+    nativeLanguage: "ko",
+    sourceType: "conversation",
+    learnerLevel: "intermediate",
+    sourceExpressionJson: async () => ({
+      expressions: [
+        { text: "今日は", tags: ["key_expression"], score: 0.85 },
+        { text: "天気", tags: ["key_expression"], score: 0.6 },
+      ],
+    }),
+  });
+  const hit = result.recommendations.find((item) => item.originalText === "今日は");
+  assert.ok(hit, result.recommendations.map((item) => item.originalText).join(","));
+  assert.equal(sentence.slice(hit.charStart, hit.charEnd), "今日は");
+});
+
+test("scanner tags are not learner-facing salience reasons", () => {
+  assert.equal(isLearnerFacingSalienceReason("key_expression"), false);
+  assert.equal(isLearnerFacingSalienceReason("phrasal_verb, idiom"), false);
+  assert.equal(isLearnerFacingSalienceReason(""), false);
+  assert.equal(
+    isLearnerFacingSalienceReason("자막에서 핵심이 되는 관용 표현입니다."),
+    true,
+  );
 });

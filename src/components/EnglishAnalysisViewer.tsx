@@ -22,10 +22,6 @@ import {
 import { DEFAULT_LEARNING_LANGUAGE_CODE, learningLanguageTextDir } from "@/lib/learningLanguages";
 import { loadExpressionUnits } from "@/lib/requestExpressionUnits";
 import { loadLearningSpans } from "@/lib/requestLearningSpans";
-import type {
-  AnalysisDimension,
-  RankedSalienceCandidate,
-} from "@/lib/salience/types";
 import { listWordSpans } from "@/lib/textTokens";
 import { isSentenceVocabUnit } from "@/lib/vocabulary";
 
@@ -34,7 +30,6 @@ export function EnglishAnalysisViewer({
   ui,
   onTab,
   onRange,
-  onPickRecommendation,
   onAnalyzeRange,
   onClose,
 }: {
@@ -42,7 +37,6 @@ export function EnglishAnalysisViewer({
   ui: UICopy;
   onTab: (tab: InspectTab) => void;
   onRange: (start: number, end: number) => void;
-  onPickRecommendation: (candidate: RankedSalienceCandidate) => void;
   onAnalyzeRange: () => void;
   onClose: () => void;
 }) {
@@ -109,7 +103,6 @@ export function EnglishAnalysisViewer({
               session={session}
               ui={ui}
               onRange={onRange}
-              onPickRecommendation={onPickRecommendation}
               onAnalyzeRange={onAnalyzeRange}
             />
           )}
@@ -123,13 +116,11 @@ function SentenceTab({
   session,
   ui,
   onRange,
-  onPickRecommendation,
   onAnalyzeRange,
 }: {
   session: EnglishAnalysisSession;
   ui: UICopy;
   onRange: (start: number, end: number) => void;
-  onPickRecommendation: (candidate: RankedSalienceCandidate) => void;
   onAnalyzeRange: () => void;
 }) {
   const analysisApi = useEnglishAnalysisOptional();
@@ -157,9 +148,8 @@ function SentenceTab({
     session.rangeActive &&
     !rangeIsSentence &&
     !analysis &&
-    !session.elementLoading &&
-    !session.dimensionAnalysis &&
-    !session.dimensionLoading;
+    !session.elementLoading;
+
   const drillIns = (session.sentenceAnalysis?.elements ?? []).filter(
     (element) => !isSameAnalysisSpan(element.text, sentence),
   );
@@ -230,41 +220,11 @@ function SentenceTab({
     text: string;
     idiom: boolean;
     active: boolean;
-    recommended: RankedSalienceCandidate | null;
   }> = [];
   let cursor = 0;
   let index = 0;
   while (index < words.length) {
     const word = words[index];
-    const prevWord = index > 0 ? words[index - 1] : null;
-    const rec =
-      session.recommendations.find((item) => {
-        const overlaps = item.charStart < word.end && item.charEnd > word.start;
-        if (!overlaps) return false;
-        return !prevWord || prevWord.end <= item.charStart || prevWord.start >= item.charEnd;
-      }) ?? null;
-    if (rec) {
-      const gap = sentence.slice(cursor, Math.min(rec.charStart, word.start));
-      const covered = words.filter(
-        (item) => item.start < rec.charEnd && item.end > rec.charStart,
-      );
-      const active = covered.some((_, wordIndex) => {
-        const at = words.indexOf(covered[wordIndex]!);
-        return session.rangeActive && at >= session.rangeStart && at <= session.rangeEnd;
-      });
-      pieces.push({
-        gap,
-        text: sentence.slice(rec.charStart, rec.charEnd),
-        idiom: false,
-        active,
-        recommended: rec,
-      });
-      cursor = rec.charEnd;
-      while (index < words.length && words[index]!.start < rec.charEnd) {
-        index += 1;
-      }
-      continue;
-    }
     const idiom = useIdiomUnderline
       ? idiomUnitContaining(sentence, word.start, word.end, unitTexts)
       : null;
@@ -284,7 +244,6 @@ function SentenceTab({
         text: sentence.slice(idiom.start, idiom.end),
         idiom: true,
         active,
-        recommended: null,
       });
       cursor = idiom.end;
       while (index < words.length && words[index]!.start < idiom.end) {
@@ -296,7 +255,7 @@ function SentenceTab({
       session.rangeActive &&
       index >= session.rangeStart &&
       index <= session.rangeEnd;
-    pieces.push({ gap, text: word.text, idiom: false, active, recommended: null });
+    pieces.push({ gap, text: word.text, idiom: false, active });
     cursor = word.end;
     index += 1;
   }
@@ -322,21 +281,15 @@ function SentenceTab({
               <button
                 type="button"
                 onClick={() =>
-                  piece.recommended
-                    ? onPickRecommendation(piece.recommended)
-                    : openSpan(piece.text, piece.idiom, {
-                        innerUnits: span?.inner,
-                        allowSave:
-                          span?.kind === "expression" ||
-                          span?.kind === "grammar_unit",
-                      })
+                  openSpan(piece.text, piece.idiom, {
+                    innerUnits: span?.inner,
+                    allowSave:
+                      span?.kind === "expression" ||
+                      span?.kind === "grammar_unit",
+                  })
                 }
                 className={`cursor-pointer rounded-sm hover:bg-white/10 ${
                   piece.idiom ? "underline decoration-white decoration-2 underline-offset-2" : ""
-                } ${
-                  piece.recommended
-                    ? "bg-white/15 ring-1 ring-inset ring-white/50"
-                    : ""
                 } ${piece.active ? "bg-white/25" : ""}`}
               >
                 {piece.text}
@@ -385,30 +338,6 @@ function SentenceTab({
         <p className="mt-4 text-sm text-rose-300">{ui.exploreFailed}</p>
       ) : null}
 
-      {session.salienceLoading ? (
-        <p className="mt-3 text-sm text-slate-300">{ui.salienceLoading}</p>
-      ) : session.salienceFailed ? (
-        <p className="mt-3 text-sm text-slate-500">{ui.salienceFailed}</p>
-      ) : session.recommendations.length > 0 ? (
-        <section className="mt-3">
-          <p className="text-[11px] font-semibold tracking-wide text-slate-500">
-            {ui.salienceRecommended}
-          </p>
-          <div className="mt-1.5 flex flex-wrap gap-1.5">
-            {session.recommendations.map((item) => (
-              <button
-                key={`${item.charStart}-${item.charEnd}-${item.originalText}`}
-                type="button"
-                onClick={() => onPickRecommendation(item)}
-                className="rounded-full bg-white/10 px-2.5 py-1 text-xs font-medium text-neutral-200 ring-1 ring-white/35 hover:bg-white/15"
-              >
-                {item.originalText}
-              </button>
-            ))}
-          </div>
-        </section>
-      ) : null}
-
       <WordRangeGauge
         count={words.length}
         start={session.rangeStart}
@@ -416,9 +345,6 @@ function SentenceTab({
         active={session.rangeActive}
         onRange={onRange}
       />
-      <p className="mt-1.5 text-[11px] leading-relaxed text-slate-500">
-        {ui.salienceManualHint}
-      </p>
 
       {selected && !rangeIsSentence ? (
         <div className="mt-3 flex items-start gap-2">
@@ -437,14 +363,6 @@ function SentenceTab({
         >
           {ui.exploreSubmit}
         </button>
-      ) : null}
-
-      {session.dimensionLoading ? (
-        <p className="mt-4 text-sm text-slate-300">{ui.insightLoading}</p>
-      ) : session.dimensionFailed ? (
-        <p className="mt-4 text-sm text-rose-300">{ui.insightFailed}</p>
-      ) : session.dimensionAnalysis ? (
-        <DimensionResults result={session.dimensionAnalysis} ui={ui} />
       ) : null}
 
       {session.elementLoading ? (
@@ -540,68 +458,6 @@ function SentenceTab({
         </div>
       ) : null}
     </>
-  );
-}
-
-const DIMENSION_ORDER: AnalysisDimension[] = [
-  "syntax",
-  "usageInContext",
-  "phonology",
-  "morphology",
-  "pragmatics",
-  "etymology",
-];
-
-function dimensionLabel(ui: UICopy, dimension: AnalysisDimension): string {
-  switch (dimension) {
-    case "syntax":
-      return ui.dimensionSyntax;
-    case "usageInContext":
-      return ui.dimensionUsage;
-    case "phonology":
-      return ui.dimensionPhonology;
-    case "morphology":
-      return ui.dimensionMorphology;
-    case "pragmatics":
-      return ui.dimensionPragmatics;
-    case "etymology":
-      return ui.dimensionEtymology;
-  }
-}
-
-function DimensionResults({
-  result,
-  ui,
-}: {
-  result: EnglishAnalysisSession["dimensionAnalysis"];
-  ui: UICopy;
-}) {
-  if (!result) return null;
-  return (
-    <div className="mt-4 space-y-4 rounded-xl bg-white/5 px-3 py-3">
-      {result.salienceReason ? (
-        <section>
-          <p className="text-[11px] font-semibold tracking-wide text-slate-500">
-            {ui.salienceReasonLabel}
-          </p>
-          <p className="mt-1 text-sm leading-relaxed text-slate-100">
-            {result.salienceReason}
-          </p>
-        </section>
-      ) : null}
-      {DIMENSION_ORDER.map((dimension) => {
-        const text = result.dimensionResults[dimension];
-        if (!text) return null;
-        return (
-          <section key={dimension}>
-            <p className="text-[11px] font-semibold tracking-wide text-slate-500">
-              {dimensionLabel(ui, dimension)}
-            </p>
-            <p className="mt-1 text-sm leading-relaxed text-slate-100">{text}</p>
-          </section>
-        );
-      })}
-    </div>
   );
 }
 

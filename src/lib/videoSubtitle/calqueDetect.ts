@@ -29,6 +29,33 @@ export function looksLikeCalqueKorean(text: string): boolean {
   );
 }
 
+/**
+ * Reporter recap of the speech act instead of the utterance itself.
+ * "중국 AI에 대해 언급하고 있어요" / "Someone is asking about OpenAI"
+ */
+export function looksLikeNarratorGloss(text: string): boolean {
+  const t = text.replace(/\s+/g, " ").trim();
+  if (!t) return false;
+  if (
+    /^(the speaker|someone|the host|the narrator|a speaker|the guest)\b/i.test(t)
+  ) {
+    return true;
+  }
+  if (
+    /\b(is|are)\s+(now\s+)?(talking|mentioning|asking|explaining|discussing|describing)\b/i.test(
+      t,
+    )
+  ) {
+    return true;
+  }
+  if (/^누군가\s/.test(t)) return true;
+  if (/(화자|진행자|사회자|출연자)[는가]\s/.test(t)) return true;
+  if (/에\s*대해\s*(이야기|언급|설명|질문|말)하고\s*있/.test(t)) return true;
+  if (/(언급|질문)하고\s*있(어|어요|습니다|는)/.test(t)) return true;
+  if (/(다|라)고\s*(설명|이야기|언급)하고\s*있/.test(t)) return true;
+  return false;
+}
+
 /** English lines that almost always need 의역, not word mapping. */
 export function looksIdiomaticEnglish(original: string): boolean {
   const t = original.replace(/\s+/g, " ").trim();
@@ -153,6 +180,7 @@ export function looksLikeLiteralOrForeignCaption(
   if (orig.length > 8 && subLatin.length > 8 && orig === subLatin) return true;
 
   if (locale === "ko") {
+    if (looksLikeNarratorGloss(sub)) return true;
     if (looksLikeCalqueKorean(sub)) return true;
     // Idioms must not keep a word-mapped calque shape.
     if (

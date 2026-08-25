@@ -1,3 +1,8 @@
+import {
+  explanationLanguageGuard,
+  interfaceLanguageDisplayName,
+} from "../languageLearningAnalysis.ts";
+import { learningLanguageName } from "../learningLanguages.ts";
 import { pickNonOverlapping, withCharOffsets } from "./candidates.ts";
 import type {
   LearnerLevel,
@@ -57,6 +62,15 @@ export function reasonFromTags(tags: string[]): string {
   return "High-value span for this sentence.";
 }
 
+/** Hide scanner tags and empty strings from learner-facing "why here" copy. */
+export function isLearnerFacingSalienceReason(
+  text: string | null | undefined,
+): boolean {
+  const trimmed = (text ?? "").trim();
+  if (!trimmed) return false;
+  return !/^[a-z][a-z0-9_]*(?:\s*,\s*[a-z][a-z0-9_]*)*$/i.test(trimmed);
+}
+
 export function rankByScore(
   tokens: UdToken[],
   candidates: SalienceCandidate[],
@@ -65,7 +79,7 @@ export function rankByScore(
   const ranked = candidates
     .slice()
     .sort((a, b) => b.totalScore - a.totalScore || a.tokenRange.start - b.tokenRange.start)
-    .map((item) => withCharOffsets(tokens, item, reasonFromTags(item.signalTags)));
+    .map((item) => withCharOffsets(tokens, item, ""));
   return pickNonOverlapping(ranked, topN);
 }
 
@@ -77,7 +91,16 @@ export function buildRankPrompt(input: {
   topN: number;
   candidates: SalienceCandidate[];
 }): string {
-  return `You rank learning spans for a ${input.learnerLevel} learner of ${input.language} (native language: ${input.nativeLanguage}).
+  const explanationName = interfaceLanguageDisplayName(input.nativeLanguage);
+  const languageName = learningLanguageName(input.language);
+  const guard = explanationLanguageGuard({
+    interfaceLanguage: input.nativeLanguage,
+    fieldsDescription: "each ranked.reason",
+    learningLanguage: input.language,
+  });
+
+  return `You rank learning spans for a ${input.learnerLevel} learner of ${languageName} (explanation language: ${explanationName}).
+${guard}
 
 Sentence:
 ${input.sentence}
@@ -100,10 +123,11 @@ Advanced: prefer nuance, idiom, register; drop elementary articles/prepositions 
 Intermediate: reusable chunks and patterns.
 
 Return ONLY JSON:
-{"ranked":[{"start":0,"end":1,"reason":"why this is worth learning, 1 sentence"}]}
+{"ranked":[{"start":0,"end":1,"reason":"one sentence in ${explanationName} why this is worth learning"}]}
 
 Rules:
 - start/end MUST be one of the candidate ranges.
+- reason MUST be written only in ${explanationName}. Do not put scanner tags like key_expression in reason.
 - Order best-first.
 - Fewer than ${input.topN} is fine. Empty ranked is fine if nothing is worth teaching.`;
 }
@@ -129,9 +153,10 @@ export function applyRankedJson(
     const found = byKey.get(`${start}:${end}`);
     if (!found) continue;
     const reason =
-      typeof o.reason === "string" && o.reason.trim()
+      typeof o.reason === "string" &&
+      isLearnerFacingSalienceReason(o.reason)
         ? o.reason.trim()
-        : reasonFromTags(found.signalTags);
+        : "";
     out.push(withCharOffsets(tokens, found, reason));
     if (out.length >= topN) break;
   }

@@ -436,6 +436,47 @@ test("looksLikeCalqueKorean catches 번역투", async () => {
   );
 });
 
+test("looksLikeNarratorGloss catches speech-act recaps, not real progressives", async () => {
+  const { looksLikeNarratorGloss, looksLikeLiteralOrForeignCaption } =
+    await import("./calqueDetect.ts");
+  assert.equal(
+    looksLikeNarratorGloss("중국의 AI 개발에 대해 언급하고 있어요. 디프시크도 포함해서요."),
+    true,
+  );
+  assert.equal(
+    looksLikeNarratorGloss("최근 주목받고 있는 문샷 AI에 대해 이야기하고 있어요."),
+    true,
+  );
+  assert.equal(
+    looksLikeNarratorGloss("누군가 오픈AI에 대해 질문하고 있어."),
+    true,
+  );
+  assert.equal(
+    looksLikeNarratorGloss("누군가 누구나 AI를 쉽게 쓸 수 있다고 설명하고 있어."),
+    true,
+  );
+  assert.equal(
+    looksLikeNarratorGloss("Someone is asking about OpenAI."),
+    true,
+  );
+  assert.equal(
+    looksLikeNarratorGloss("The speaker is mentioning China's DeepSeek."),
+    true,
+  );
+  assert.equal(looksLikeNarratorGloss("나 지금 밥 먹고 있어."), false);
+  assert.equal(looksLikeNarratorGloss("잘하고 있어요."), false);
+  assert.equal(looksLikeNarratorGloss("오픈웨이트라는 거예요?"), false);
+  assert.equal(looksLikeNarratorGloss("그리고 중국은, 뭐, 역시 세계를 충격에 빠뜨린 딥시크."), false);
+  assert.equal(
+    looksLikeLiteralOrForeignCaption(
+      "オープンウェイトってんですか?",
+      "누군가 오픈AI에 대해 질문하고 있어.",
+      "ko",
+    ),
+    true,
+  );
+});
+
 test("naturalization fixture set covers 20+ diverse cases", () => {
   assert.ok(SUBTITLE_NATURALIZATION_CASES.length >= 20);
   const categories = new Set(

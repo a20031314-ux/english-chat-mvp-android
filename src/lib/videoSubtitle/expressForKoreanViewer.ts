@@ -21,6 +21,7 @@ import type {
 import { compactViewerContext } from "@/lib/videoSubtitle/viewerTypes";
 import { spokenTranslatePrinciples } from "@/lib/spokenTranslate";
 import { speechRegisterHint } from "@/lib/videoSubtitle/speechRegister";
+import { looksLikeNarratorGloss } from "@/lib/videoSubtitle/calqueDetect";
 
 const BATCH = 6;
 
@@ -91,12 +92,14 @@ Express that same understood meaning so a ${target} viewer reaches the SAME unde
 ${speechRegisterHint(input.context, interfaceLanguage)}
 
 Extra caption rules:
+- Write the caption AS THE SPEAKER's line. The output IS the utterance, not a recap of it.
 - Prefer natural spoken ${target} in this app's UI register (의역), not source-language word order.
 - Drop source discourse frames (the reason X is / what I'm saying is). Say the point.
 - You MAY make established/implicit info explicit in ${target} only when needed for equivalent understanding (evidence established or strongly_implied — never speculative).
 - Do NOT over-explain. Caption only — no tutor notes.
 - Keep short (one breath). Do not unpack into extra commentary.
 - Do not invent facts, dates, or topics that were not in the understood meaning.
+- HARD BAN narrator recaps: "someone is talking about X" / "~에 대해 이야기하고 있어요" / "~에 대해 언급하고 있어요" / "누군가 …하고 있어" / "~라고 설명하고 있어".
 
 Return JSON:
 {
@@ -126,12 +129,15 @@ Return JSON:
               viewerMemory: memory,
               items: batch.map((unit) => {
                 const interp = byId.get(unit.id);
+                const understood =
+                  interp?.understoodMeaning || unit.original;
+                const meaningIsRecap = looksLikeNarratorGloss(understood);
                 return {
                   id: unit.id,
+                  ...(meaningIsRecap ? { original: unit.original } : {}),
                   previous: unit.previousTexts,
                   next: unit.nextTexts,
-                  understoodMeaning:
-                    interp?.understoodMeaning || unit.original,
+                  understoodMeaning: understood,
                   references: interp?.references ?? [],
                   intent: interp?.intent,
                   nativeTone: interp?.tone,

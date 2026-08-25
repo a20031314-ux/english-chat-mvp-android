@@ -1,3 +1,4 @@
+import { tokenText } from "./candidates.ts";
 import { PARTICLES } from "./englishClosedClass.ts";
 import type { SalienceCandidate, UdToken } from "./types.ts";
 
@@ -95,13 +96,6 @@ function nativeKey(code: string): string {
   if (lower.startsWith("zh")) return "zh";
   if (lower.startsWith("es")) return "es";
   return lower.slice(0, 2);
-}
-
-function tokenText(tokens: UdToken[], start: number, end: number): string {
-  return tokens
-    .slice(start, end + 1)
-    .map((t) => t.text)
-    .join(" ");
 }
 
 function pushCandidate(

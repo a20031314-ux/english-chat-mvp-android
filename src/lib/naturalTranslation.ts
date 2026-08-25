@@ -145,7 +145,7 @@ Korean rendering:
           ? `Translate the example as a standalone spoken line. Same tone as the English example.`
           : `This is a full-line translation for quick understanding. No translator notes.`;
 
-  return `Translation goal: render what the speaker is actually doing with this English — meaning, intent, tone, and force — as a natural Korean line. Not English words mapped onto target words.
+  return `Translation goal: write the line itself in natural Korean — same meaning, intent, tone, and force — as if the speaker had said it in Korean. Not a recap of the speaker, and not English words mapped onto Korean words.
 
 Order of thought: context → intent/speech-act → idiom/phrasal/slang? → tone/emotion → natural line.
 ${roleHint}
@@ -164,6 +164,7 @@ Do not:
 - Add meaning, soften or amp emotion, or flip positive/negative to "sound nicer".
 - Split a phrasal/idiom into dictionary parts.
 - Put explanations, labels, or quotes in the translation itself. Translation = quick understanding. Why it means that = analysis fields.
+- Recap the speech act ("someone is talking about X", "~에 대해 이야기하고 있어요", "~에 대해 언급하고 있어요", "누군가 …하고 있어"). The output IS the utterance.
 
 Self-check before returning: same core meaning and attitude; right reading for this context; no leftover English syntax; natural spoken target language; no invented extra idea.
 ${korean}`;
@@ -192,7 +193,7 @@ function genericInterpretPrinciples(options: {
 
   return `Interpret the ${sourceName} content naturally in ${interfaceName}.
 
-Translation goal: render what the speaker is actually doing with this ${sourceName} — meaning, intent, tone, and force — as a natural ${interfaceName} line. Not ${sourceName} words mapped onto ${interfaceName} words.
+Translation goal: write the line itself in natural ${interfaceName} — same meaning, intent, tone, and force — as if the speaker had said it in ${interfaceName}. Not a recap of the speaker, and not ${sourceName} words mapped onto ${interfaceName} words.
 
 Order of thought: context → intent/speech-act → idiom/phrasal/slang? → tone/emotion → natural line.
 ${roleHint}
@@ -219,6 +220,7 @@ Do not:
 - Add meaning, soften or amp emotion, or flip positive/negative to "sound nicer".
 - Split a phrasal/idiom into dictionary parts.
 - Put explanations, labels, or quotes in the translation itself. Translation = quick understanding. Why it means that = analysis fields.
+- Recap the speech act ("someone is talking about X", "~에 대해 이야기하고 있어요", "누군가 …하고 있어"). The output IS the utterance.
 
 Self-check before returning: same core meaning and attitude; right reading for this context; no leftover ${sourceName} syntax; natural spoken ${interfaceName}; no invented extra idea.`;
 }

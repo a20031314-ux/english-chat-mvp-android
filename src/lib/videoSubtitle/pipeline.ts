@@ -32,7 +32,7 @@ import {
   isLearningLanguageCode,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
-import { isNonSpeechMarker } from "@/lib/videoSubtitle/speechNoise";
+import { isUsableSpeechSegment } from "@/lib/videoSubtitle/speechNoise";
 import { regularizeSttSegments, speechCoversDuration } from "@/lib/videoSubtitle/sttChunks";
 import { logSentenceSplits } from "@/lib/videoSubtitle/sentenceFromWords";
 import { refineSttSentencesWithLlm } from "@/lib/videoSubtitle/llmSentenceSplit";
@@ -42,20 +42,26 @@ const MAX_SEGMENTS = 800;
 const WHISPER_MAX_SECONDS = 900;
 
 function usableSpeech(segments: SttSegment[]): SttSegment[] {
-  return regularizeSttSegments(
-    segments
-      .map((segment) => ({
-        ...segment,
-        text: segment.text.replace(/\s+/g, " ").trim(),
-      }))
-      .filter(
-        (segment) =>
-          segment.text &&
-          !isNonSpeechMarker(segment.text) &&
-          // Caption tracks sometimes include [Music] / ♪ lines too.
-          !(segment.uncertain && (segment.confidence ?? 1) < 0.3),
-      ),
-  ).slice(0, MAX_SEGMENTS);
+  const cleaned = segments.map((segment) => ({
+    ...segment,
+    text: segment.text.replace(/\s+/g, " ").trim(),
+  }));
+  const kept = cleaned.filter(isUsableSpeechSegment);
+  if (kept.length !== cleaned.length) {
+    console.error("[video-usable-speech]", {
+      raw: cleaned.length,
+      kept: kept.length,
+      dropped: cleaned
+        .filter((segment) => !isUsableSpeechSegment(segment))
+        .slice(0, 8)
+        .map((segment) => ({
+          text: segment.text.slice(0, 80),
+          confidence: segment.confidence,
+          uncertain: segment.uncertain,
+        })),
+    });
+  }
+  return regularizeSttSegments(kept).slice(0, MAX_SEGMENTS);
 }
 
 function withoutWords(segments: NormalizedSegment[]): NormalizedSegment[] {

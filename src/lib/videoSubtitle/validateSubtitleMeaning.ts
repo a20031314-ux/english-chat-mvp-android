@@ -45,8 +45,11 @@ function rewritePoliceSystem(
   RIGHT: "뭐가 좋고 나쁜 건지 어떻게 판단하지?"
 - WRONG: "I don't buy that" → "나는 그걸 사지 않아"
   RIGHT: "그건 말도 안 돼"
+- WRONG narrator recap: "중국 AI에 대해 언급하고 있어요" / "누군가 오픈AI에 대해 질문하고 있어"
+  RIGHT: the speaker's line ("그리고 중국은, 뭐, 역시 세계를 충격에 빠뜨린 딥시크" / "오픈웨이트라는 거예요?")
 - Never keep English phrase scaffolding in Korean order.
 - Compress into short spoken Korean. Never leave English content words inside Korean captions.
+- Never recap the speaker ("~에 대해 이야기하고 있어요", "누군가 …하고 있어"). Write the utterance.
 `
       : `HARD RULES — prefer sense-for-sense (what a native would say) over word mapping:
 - Never keep source phrase scaffolding in ${target} word order.
@@ -57,7 +60,7 @@ function rewritePoliceSystem(
 ${speechRegisterHint(context, locale)}
 
 ${koCraft}- Proper names may remain; ordinary vocabulary must not.
-- If naturalSubtitle is stiff, literal, textbook, or calque — rewrite it.
+- If naturalSubtitle is stiff, literal, textbook, calque, or a narrator recap of the speaker — rewrite it.
 - NEVER return an empty caption. Always produce a natural spoken line.
 - Sound like spoken ${target} on screen. No tutor notes.
 

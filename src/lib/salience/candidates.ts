@@ -9,10 +9,16 @@ export function rangeKey(range: { start: number; end: number }): string {
 }
 
 export function tokenText(tokens: UdToken[], start: number, end: number): string {
-  return tokens
-    .slice(start, end + 1)
-    .map((t) => t.text)
-    .join(" ");
+  const slice = tokens.slice(start, end + 1);
+  if (slice.length === 0) return "";
+  let out = slice[0]!.text;
+  for (let i = 1; i < slice.length; i += 1) {
+    const prev = slice[i - 1]!;
+    const cur = slice[i]!;
+    const glue = prev.charEnd === cur.charStart ? "" : " ";
+    out += glue + cur.text;
+  }
+  return out;
 }
 
 export function charRangeForTokens(
@@ -129,23 +135,29 @@ export function locatePhrase(
   tokens: UdToken[],
   phrase: string,
 ): Array<{ start: number; end: number }> {
-  const parts = phrase
+  const needle = phrase.replace(/\s+/g, " ").trim();
+  if (!needle || tokens.length === 0) return [];
+  const byKey = new Map<string, { start: number; end: number }>();
+  const add = (start: number, end: number) => {
+    if (start < 0 || end < start || end >= tokens.length) return;
+    byKey.set(`${start}:${end}`, { start, end });
+  };
+
+  const parts = needle
     .toLowerCase()
     .split(/\s+/)
     .map((part) => part.replace(/^-+|-+$/g, ""))
     .filter(Boolean);
-  if (parts.length === 0 || tokens.length === 0) return [];
   const keys = tokens.map((token) =>
     (token.lemma || token.text).toLowerCase().replace(/['’]/g, "'"),
   );
-  const out: Array<{ start: number; end: number }> = [];
 
   for (let i = 0; i < keys.length; i += 1) {
     if (keys[i] !== parts[0] && tokens[i]?.text.toLowerCase() !== parts[0]) {
       continue;
     }
     if (parts.length === 1) {
-      out.push({ start: i, end: i });
+      add(i, i);
       continue;
     }
     let partIndex = 1;
@@ -170,8 +182,24 @@ export function locatePhrase(
       break;
     }
     if (partIndex === parts.length) {
-      out.push({ start: i, end: j - 1 });
+      add(i, j - 1);
     }
   }
-  return out;
+
+  for (let i = 0; i < tokens.length; i += 1) {
+    let built = "";
+    for (let j = i; j < tokens.length; j += 1) {
+      const prev = j === i ? null : tokens[j - 1]!;
+      const cur = tokens[j]!;
+      const glue = prev && prev.charEnd !== cur.charStart ? " " : "";
+      built += glue + cur.text;
+      if (built === needle) {
+        add(i, j);
+        break;
+      }
+      if (built.length >= needle.length) break;
+    }
+  }
+
+  return [...byKey.values()].sort((a, b) => a.start - b.start || a.end - b.end);
 }

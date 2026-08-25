@@ -19,6 +19,11 @@ import {
   FREE_DAILY_CHAT_LIMIT,
   PREMIUM_CLIENT_HEADER,
 } from "@/lib/billing/config";
+import { monthlyImportPoints } from "@/lib/billing/videoPrep";
+import {
+  getImportPointsUsed,
+  IMPORT_QUOTA_CHANGED_EVENT,
+} from "@/lib/billing/videoPrepQuota";
 import type { Locale, UICopy } from "@/lib/copy";
 
 type BillingUiValue = {
@@ -41,13 +46,66 @@ export function BillingOpenButton({ ui }: { ui: UICopy }) {
   const { openBilling } = useBillingUi();
   const { isPremium } = usePremium();
   return (
+    <div className="ml-auto flex items-center gap-2">
+      <HeaderImportPoints ui={ui} onOpen={openBilling} />
+      <button
+        type="button"
+        onClick={openBilling}
+        className="rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] font-medium text-slate-100 hover:bg-white/10"
+      >
+        {isPremium ? ui.billingPremiumLabel : ui.billingOpen}
+      </button>
+    </div>
+  );
+}
+
+function HeaderImportPoints({
+  ui,
+  onOpen,
+}: {
+  ui: UICopy;
+  onOpen: () => void;
+}) {
+  const { isPremium } = usePremium();
+  const [used, setUsed] = useState(0);
+
+  useEffect(() => {
+    const refresh = () => setUsed(getImportPointsUsed());
+    refresh();
+    window.addEventListener(IMPORT_QUOTA_CHANGED_EVENT, refresh);
+    window.addEventListener("focus", refresh);
+    return () => {
+      window.removeEventListener(IMPORT_QUOTA_CHANGED_EVENT, refresh);
+      window.removeEventListener("focus", refresh);
+    };
+  }, []);
+
+  const remaining = Math.max(0, monthlyImportPoints(isPremium) - used);
+  return (
     <button
       type="button"
-      onClick={openBilling}
-      className="ml-auto rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] font-medium text-slate-100 hover:bg-white/10"
+      onClick={onOpen}
+      aria-label={ui.headerImportPoints.replace("{remaining}", String(remaining))}
+      className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-100 hover:bg-white/10"
     >
-      {isPremium ? ui.billingPremiumLabel : ui.billingOpen}
+      <PointsIcon />
+      <span className="tabular-nums">{remaining}</span>
     </button>
+  );
+}
+
+function PointsIcon() {
+  return (
+    <svg
+      viewBox="0 0 16 16"
+      fill="none"
+      className="h-3.5 w-3.5 shrink-0"
+      aria-hidden
+    >
+      <circle cx="8" cy="8" r="6.35" fill="#e8e8e4" />
+      <circle cx="8" cy="8" r="4.2" stroke="#121212" strokeWidth="1.15" />
+      <circle cx="8" cy="8" r="1.35" fill="#121212" />
+    </svg>
   );
 }
 

@@ -38,7 +38,6 @@ import {
   learningLanguageTextDir,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
-import { translateUtterance } from "@/lib/translateUtterance";
 import { chatPartnerForLanguage } from "@/lib/chatPartner";
 import {
   detectConversationMode,
@@ -72,7 +71,6 @@ type ChatTurn = {
   translatedMessage?: string;
   /** Conversational equivalent in the UI language — not a literal translation */
   spokenReply?: string;
-  isTranslating?: boolean;
   /** From “use this expression” — continue chat without a grammar card */
   suppressCorrectionCard?: boolean;
   attachmentUrl?: string;
@@ -774,16 +772,6 @@ export function ChatWindow({
   }, [locale]);
 
   useEffect(() => {
-    setTurns((previous) =>
-      previous.map((turn) =>
-        turn.translatedMessage || turn.isTranslating
-          ? { ...turn, translatedMessage: undefined, isTranslating: false }
-          : turn,
-      ),
-    );
-  }, [locale]);
-
-  useEffect(() => {
     if (!bookToast) {
       return;
     }
@@ -1087,56 +1075,6 @@ export function ChatWindow({
       persistSavedItems(updated);
       return updated;
     });
-  };
-
-  const translateAssistantMessage = async (turnId: string, text: string) => {
-    const trimmed = text.trim();
-    if (!trimmed || locale === "en") {
-      return;
-    }
-
-    setTurns((previous) =>
-      previous.map((turn) =>
-        turn.id === turnId
-          ? { ...turn, isTranslating: true }
-          : turn,
-      ),
-    );
-
-    try {
-      const nearby = turns
-        .flatMap((turn) =>
-          [turn.userMessage, turn.assistantMessage].filter(
-            (line): line is string => Boolean(line?.trim()),
-          ),
-        )
-        .slice(-6);
-      const translated = await translateUtterance({
-        text: trimmed,
-        locale,
-        interfaceLanguage: locale,
-        targetLanguage: sessionLanguageCode,
-        sourceType: "conversation",
-        context: nearby,
-      });
-      if (!translated) {
-        throw new Error("empty translation");
-      }
-      setTurns((previous) =>
-        previous.map((turn) =>
-          turn.id === turnId
-            ? { ...turn, translatedMessage: translated, isTranslating: false }
-            : turn,
-        ),
-      );
-    } catch {
-      setTurns((previous) =>
-        previous.map((turn) =>
-          turn.id === turnId ? { ...turn, isTranslating: false } : turn,
-        ),
-      );
-      setBookToast(ui.translateFailed);
-    }
   };
 
   const allModesOn = chatModeOn && askExpressionOn;
@@ -1579,6 +1517,16 @@ export function ChatWindow({
             </div>
           ) : null}
           {turns.map((turn) => {
+            const assistantReading =
+              locale === "en"
+                ? undefined
+                : turn.spokenReply?.trim() ||
+                  turn.translatedMessage?.trim() ||
+                  undefined;
+            const assistantLabels = {
+              listen: ui.listen,
+              ...(assistantReading ? { reading: ui.chatReading } : {}),
+            };
 
             return (
               <article key={turn.id} className="space-y-1.5 sm:space-y-2">
@@ -1626,23 +1574,8 @@ export function ChatWindow({
                     <MessageBubble
                       role="assistant"
                       message={turn.assistantMessage}
-                      translatedMessage={turn.translatedMessage}
-                      isTranslating={turn.isTranslating}
-                      labels={{
-                        listen: ui.listen,
-                        translate: ui.translate,
-                        translating: ui.translating,
-                        translation: ui.translation,
-                      }}
-                      onTranslate={
-                        locale === "en"
-                          ? undefined
-                          : () =>
-                              void translateAssistantMessage(
-                                turn.id,
-                                turn.assistantMessage || "",
-                              )
-                      }
+                      reading={assistantReading}
+                      labels={assistantLabels}
                     />
                   )}
 
@@ -1652,23 +1585,8 @@ export function ChatWindow({
                     <MessageBubble
                       role="assistant"
                       message={turn.assistantMessage}
-                      translatedMessage={turn.translatedMessage}
-                      isTranslating={turn.isTranslating}
-                      labels={{
-                        listen: ui.listen,
-                        translate: ui.translate,
-                        translating: ui.translating,
-                        translation: ui.translation,
-                      }}
-                      onTranslate={
-                        locale === "en"
-                          ? undefined
-                          : () =>
-                              void translateAssistantMessage(
-                                turn.id,
-                                turn.assistantMessage || "",
-                              )
-                      }
+                      reading={assistantReading}
+                      labels={assistantLabels}
                     />
                   )}
 
@@ -1676,23 +1594,8 @@ export function ChatWindow({
                   <MessageBubble
                     role="assistant"
                     message={turn.assistantMessage}
-                    translatedMessage={turn.translatedMessage}
-                    isTranslating={turn.isTranslating}
-                    labels={{
-                      listen: ui.listen,
-                      translate: ui.translate,
-                      translating: ui.translating,
-                      translation: ui.translation,
-                    }}
-                    onTranslate={
-                      locale === "en"
-                        ? undefined
-                        : () =>
-                            void translateAssistantMessage(
-                              turn.id,
-                              turn.assistantMessage || "",
-                            )
-                    }
+                    reading={assistantReading}
+                    labels={assistantLabels}
                   />
                 ) : null}
               </article>

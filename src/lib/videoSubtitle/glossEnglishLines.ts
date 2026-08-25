@@ -14,8 +14,10 @@ import {
   firstInterpretationsForAnalysis,
 } from "@/lib/reconstructionTranslate/refineCaptions";
 import type { MeaningExtraction } from "@/lib/reconstructionTranslate/types";
-import { distinctSpokenLine } from "@/lib/videoSubtitle/subtitleDraft";
+import { distinctSpokenLine, NEUTRAL_TONE, type SubtitleDraft } from "@/lib/videoSubtitle/subtitleDraft";
 import { speechRegisterHint } from "@/lib/videoSubtitle/speechRegister";
+import { looksLikeNarratorGloss } from "@/lib/videoSubtitle/calqueDetect";
+import { validateAdaptedSubtitles } from "@/lib/videoSubtitle/validateSubtitleMeaning";
 
 const BATCH = 8;
 
@@ -71,15 +73,19 @@ export async function glossEnglishLines(input: {
 
   const lineRules = `
 Video-line constraints (on top of the shared translate craft):
-- You receive the MEANING of a ${sourceName} line — not the original wording.
+- You receive the MEANING of a ${sourceName} line — not the original wording — unless sourceText is present.
 - Keep the same id.
-- This is an ON-SCREEN caption in the app's UI language. Match that spoken register.
+- This is an ON-SCREEN caption: the line THE SPEAKER said, in the app's UI-language spoken register.
+- The caption IS the utterance. Not a recap of the speaker.
+- WRONG: "Someone is asking about OpenAI" / "오픈AI에 대해 질문하고 있어" / "~에 대해 이야기하고 있어요" / "~에 대해 언급하고 있어요"
+- RIGHT: "오픈웨이트라는 거예요?" / "그리고 최근 뭐니뭐니 해도 화제의 문샷 AI."
 - Drop source discourse frames (the reason X is / what I'm saying is). Say the point.
 - short-reaction lines stay short. Never expand them into the next sentence's content.
 - brief/fragment meanings: gloss ONLY that idea. Do not dump neighboring sentences onto this line.
 - Keep captions short enough to read on screen (one breath). Do not unpack into commentary.
 - Do not invent facts, dates, or topics that were not in the meaning.
 - Do not write tutor notes, labels, or leftover source-language wording in the gloss.
+- If sourceText is present (meaning was a reporter note), translate THAT line as the speaker.
 `.trim();
 
   for (let i = 0; i < input.segments.length; i += BATCH) {
@@ -112,19 +118,27 @@ Video-line constraints (on top of the shared translate craft):
       const meaning = meanings.get(id);
       const prev = input.segments[abs - 1];
       const next = input.segments[abs + 1];
+      const core =
+        meaning?.coreMeaning && !looksLikeNarratorGloss(meaning.coreMeaning)
+          ? meaning.coreMeaning
+          : "";
       return {
         id,
         brevityHint: brevityHint(segment.normalizedText),
-        coreMeaning: meaning?.coreMeaning,
-        speakerIntent: meaning?.speakerIntent,
-        formalityLevel: meaning?.formalityLevel,
-        mustKeep: meaning?.keyEntities ?? [],
-        speechTexture: meaning?.speechTexture,
+        ...(core
+          ? {
+              coreMeaning: core,
+              speakerIntent: meaning?.speakerIntent,
+              formalityLevel: meaning?.formalityLevel,
+              mustKeep: meaning?.keyEntities ?? [],
+              speechTexture: meaning?.speechTexture,
+            }
+          : { sourceText: segment.normalizedText }),
         previousMeaning: prev ? meanings.get(cueId(prev.id))?.coreMeaning : "",
         nextMeaning: next ? meanings.get(cueId(next.id))?.coreMeaning : "",
       };
     });
-    const useMeaning = meaningItems.every((item) => item.coreMeaning);
+    const useMeaning = meaningItems.every((item) => "coreMeaning" in item && item.coreMeaning);
 
     try {
       const completion = await client.chat.completions.create({
@@ -219,6 +233,48 @@ Each interpretation is the on-screen caption for that meaning (same field as cha
         }
         if (interpretation) {
           captions.push({ id, interpretation });
+        }
+      }
+
+      const recapCaptions = captions.filter((row) =>
+        looksLikeNarratorGloss(row.interpretation),
+      );
+      if (recapCaptions.length > 0) {
+        try {
+          const drafts: SubtitleDraft[] = recapCaptions.map((row) => {
+            const segment =
+              batch.find((item) => cueId(item.id) === row.id) ?? batch[0]!;
+            const meaning = meanings.get(row.id);
+            return {
+              id: row.id,
+              segmentIds: [segment.id],
+              startTime: segment.startTime,
+              endTime: segment.endTime,
+              original: segment.normalizedText,
+              meaning: meaning?.coreMeaning || segment.normalizedText,
+              tone: { ...NEUTRAL_TONE },
+              speakerStyle: input.context.speakerStyle,
+              naturalSubtitle: row.interpretation,
+              interpretationConfidence: 0.5,
+              literalMeaning: meaning?.coreMeaning || segment.normalizedText,
+            };
+          });
+          const revised = await validateAdaptedSubtitles({
+            locale: interfaceLanguage,
+            context: input.context,
+            drafts,
+          });
+          const rewritten = new Map(
+            revised.map((draft) => [draft.id, draft.naturalSubtitle]),
+          );
+          for (const row of captions) {
+            const next = rewritten.get(row.id)?.trim();
+            if (next && !looksLikeNarratorGloss(next)) {
+              row.interpretation = next;
+            }
+          }
+        } catch (error) {
+          console.error("[gloss-narrator-rewrite]", error);
         }
       }
 

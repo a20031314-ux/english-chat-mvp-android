@@ -43,6 +43,7 @@ export function englishOverviewSystem(options: {
     interfaceLanguage,
     fieldsDescription:
       "translation, correctionNote, element.label (learner-facing part), element.gloss, and element.reading labels",
+    learningLanguage: "en",
   });
   const sourceFormNote =
     interfaceLanguage === "ko"
@@ -125,6 +126,7 @@ export function englishElementSystem(options: {
     interfaceLanguage,
     fieldsDescription:
       "meaningInContext, grammar.why, grammar.general, grammar.inThisSentence, example translations, and inner.explanation",
+    learningLanguage: "en",
   });
   const sourceFormNote =
     interfaceLanguage === "ko"

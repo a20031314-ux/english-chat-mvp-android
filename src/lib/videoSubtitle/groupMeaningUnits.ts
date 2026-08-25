@@ -1,4 +1,5 @@
 import type { NormalizedSegment } from "./types";
+import { normalizeSttToken } from "./sttTokens.ts";
 
 export type MeaningUnit = {
   id: string;
@@ -52,7 +53,7 @@ function stripTrailingPunct(text: string): string {
 }
 
 function normalizeToken(value: string): string {
-  return value.toLowerCase().replace(/^[^a-z0-9가-힣]+|[^a-z0-9가-힣]+$/gi, "");
+  return normalizeSttToken(value);
 }
 
 function stripLeadingOverlap(previous: string, next: string): string {

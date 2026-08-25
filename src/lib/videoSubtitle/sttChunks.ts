@@ -1,5 +1,6 @@
 import type { SttSegment } from "./types";
 import { sentenceSegmentsFromStt } from "./sentenceFromWords.ts";
+import { normalizeSttToken } from "./sttTokens.ts";
 
 /** Whisper upload slices. Long enough for context, small enough for Vercel body limits. */
 export const STT_CHUNK_SECONDS = 75;
@@ -57,7 +58,7 @@ export function speechCoversDuration(
 }
 
 function normalizeWord(value: string): string {
-  return value.toLowerCase().replace(/^[^a-z0-9가-힣]+|[^a-z0-9가-힣]+$/gi, "");
+  return normalizeSttToken(value);
 }
 
 export function stripLeadingOverlap(previous: string, next: string): string {

@@ -22,7 +22,7 @@ import {
 } from "@/lib/learningSpans";
 import type { TranslationSourceType } from "@/lib/naturalTranslation";
 import { isSameAnalysisSpan } from "@/lib/englishAnalysis";
-import { splitSentences } from "@/lib/studyMaterials/splitSentences";
+import { splitSentences, sentenceContainingSelection } from "@/lib/studyMaterials/splitSentences";
 import { isWordToken, tokenize } from "@/lib/textTokens";
 import { prefetchExpressionUnits } from "@/lib/requestExpressionUnits";
 import { prefetchLearningSpans, loadLearningSpans } from "@/lib/requestLearningSpans";
@@ -152,15 +152,20 @@ export function AnalyzableEnglish({
       intent: "sentence" | "word",
       span?: LearningSpan | null,
     ) => {
+      const unit = sentenceContainingSelection(sentence, selected);
+      const reuseAttached =
+        Boolean(reusedTranslation) && isSameAnalysisSpan(unit, sentence);
       analysis?.open({
         selectedText: selected,
-        contextSentence: sentence,
+        contextSentence: unit,
         context,
         sourceType: sourceType ?? "conversation",
         language: language || targetLanguage,
         intent,
-        ...(reusedTranslation ? { translation: reusedTranslation } : {}),
-        ...(reusedAnalysis ? { analysisTranslation: reusedAnalysis } : {}),
+        ...(reuseAttached ? { translation: reusedTranslation } : {}),
+        ...(reuseAttached && reusedAnalysis
+          ? { analysisTranslation: reusedAnalysis }
+          : {}),
         ...(span?.inner?.length ? { innerUnits: span.inner } : {}),
         ...(span?.kind === "expression" || span?.kind === "grammar_unit"
           ? { allowVocabSave: true }
@@ -388,7 +393,6 @@ export function AnalyzableEnglish({
               onAnalyze={onAnalyze}
               sourceType={sourceType}
               language={language}
-              translation={attachedTranslation}
             />
           ))}
         </span>

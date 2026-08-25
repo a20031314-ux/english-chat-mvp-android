@@ -95,6 +95,7 @@ export function languageOverviewSystem(options: {
     interfaceLanguage,
     fieldsDescription:
       "translation, correctionNote, element.label (learner-facing part), element.gloss, and element.reading labels",
+    learningLanguage: targetLanguage,
   });
   const sourceFormNote =
     interfaceLanguage === "ko"
@@ -169,6 +170,7 @@ export function languageElementSystem(options: {
     interfaceLanguage,
     fieldsDescription:
       "meaningInContext, whyUsed, example translations, and otherUsages.meaning",
+    learningLanguage: targetLanguage,
   });
   const sourceFormNote =
     interfaceLanguage === "ko"

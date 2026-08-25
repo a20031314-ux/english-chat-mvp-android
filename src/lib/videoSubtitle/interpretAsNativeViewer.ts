@@ -91,6 +91,10 @@ Mark evidenceLevel:
 - strongly_implied: very likely from context
 - speculative: guess — do not treat as fact in understoodMeaning
 
+understoodMeaning is the CONTENT of this line (what was said), restated in English.
+NOT a reporter note.
+WRONG: "The speaker is mentioning China's DeepSeek" / "Someone is asking about OpenAI"
+RIGHT: "And as for China — well, DeepSeek, which shocked the world" / "Asking: is it called open-weight?"
 Keep understoodMeaning in clear English (1–2 sentences).
 Keep tone short (e.g. "serious, concerned" or "sarcastic").
 

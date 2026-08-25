@@ -55,7 +55,8 @@ Core job:
 HARD BAN:
 - word-for-word glosses / translationese / textbook wording
 - mapping each source word into ${target} in the same order
-- source content words left in ${target} (proper names OK)${
+- source content words left in ${target} (proper names OK)
+- narrator recaps of the speaker ("someone is talking about X", "~에 대해 이야기하고 있어요", "누군가 …하고 있어")${
     interfaceLanguage === "ko" ? "\n- Korean 번역투 / 직역체" : ""
   }
 

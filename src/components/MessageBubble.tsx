@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import { TTSButton } from "./TTSButton";
 import { SelectableEnglishText } from "./SelectableEnglishText";
 import { AnalyzableEnglish } from "./AnalyzableEnglish";
@@ -9,19 +12,16 @@ type MessageBubbleProps = {
   attachedEnglish?: string;
   /** Inline correction attached to a chat user message */
   correction?: { original: string; corrected: string } | null;
-  translatedMessage?: string;
-  isTranslating?: boolean;
+  /** Conversational reading in the UI language — not a second translation */
+  reading?: string;
   pickMode?: boolean;
   isWordSaved?: (word: string) => boolean;
   savingWord?: string | null;
   onWordClick?: (word: string) => void;
   labels: {
     listen: string;
-    translate?: string;
-    translating?: string;
-    translation?: string;
+    reading?: string;
   };
-  onTranslate?: () => void;
   imageUrl?: string;
 };
 
@@ -70,18 +70,17 @@ export function MessageBubble({
   message,
   attachedEnglish,
   correction,
-  translatedMessage,
-  isTranslating = false,
+  reading,
   pickMode = false,
   isWordSaved,
   savingWord = null,
   onWordClick,
   labels,
-  onTranslate,
   imageUrl,
 }: MessageBubbleProps) {
   const isUser = role === "user";
-  const canTranslate = Boolean(onTranslate && labels.translate);
+  const readingText = reading?.replace(/\s+/g, " ").trim() || "";
+  const [readingOpen, setReadingOpen] = useState(false);
   const correctedLine = correction?.corrected.trim() || "";
   const showCorrection = Boolean(correctedLine);
   const listenText = showCorrection
@@ -130,7 +129,7 @@ export function MessageBubble({
             isWordSaved={isWordSaved}
             savingWord={savingWord}
             onWordClick={onWordClick}
-            translation={translatedMessage}
+            translation={readingText || undefined}
           />
         ) : (
           <p>
@@ -162,6 +161,7 @@ export function MessageBubble({
                 corrected: correction.corrected,
                 side: "corrected",
               }}
+              translation={readingText || undefined}
             />
           </div>
         ) : attachedEnglish?.trim() ? (
@@ -185,19 +185,16 @@ export function MessageBubble({
           </div>
         ) : null}
 
-        {translatedMessage ? (
-          <div
+        {readingText && readingOpen ? (
+          <p
             className={`mt-2 border-t pt-2 text-xs leading-relaxed ${
               isUser
                 ? "border-neutral-400 text-neutral-700"
                 : "border-white/10 text-slate-300"
             }`}
           >
-            {labels.translation ? (
-              <p className="mb-0.5 font-medium opacity-80">{labels.translation}</p>
-            ) : null}
-            <p className="whitespace-pre-wrap">{translatedMessage}</p>
-          </div>
+            {readingText}
+          </p>
         ) : null}
 
         <div className="mt-3 flex flex-wrap items-center gap-2">
@@ -211,20 +208,18 @@ export function MessageBubble({
             <TTSButton text={message} ariaLabel={labels.listen} />
           )}
 
-          {canTranslate ? (
+          {readingText && labels.reading ? (
             <button
               type="button"
-              disabled={isTranslating}
-              onClick={onTranslate}
-              className={`rounded-md border px-2 py-1 text-xs transition disabled:cursor-default disabled:opacity-60 ${
+              aria-expanded={readingOpen}
+              onClick={() => setReadingOpen((open) => !open)}
+              className={`rounded-md border px-2 py-1 text-xs transition ${
                 isUser
                   ? "border-slate-600 bg-slate-800 text-white hover:bg-slate-700"
                   : "border-white/10 bg-white/5 text-slate-200 hover:bg-white/10"
               }`}
             >
-              {isTranslating
-                ? labels.translating || labels.translate
-                : labels.translate}
+              {labels.reading}
             </button>
           ) : null}
         </div>

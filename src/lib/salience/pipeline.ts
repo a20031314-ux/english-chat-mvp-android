@@ -3,6 +3,7 @@ import {
   applyRankedJson,
   buildRankPrompt,
   filterByLearnerLevel,
+  isLearnerFacingSalienceReason,
   rankByScore,
 } from "./rankCandidates.ts";
 import { runActiveDimensions, type DimensionCaller } from "./runDimensions.ts";
@@ -138,9 +139,10 @@ export async function analyzeRecommendedSpan(input: {
   callDimension: DimensionCaller;
 }): Promise<AnalysisResult> {
   const salienceReason =
-    "salienceReason" in input.candidate
+    "salienceReason" in input.candidate &&
+    isLearnerFacingSalienceReason(input.candidate.salienceReason)
       ? input.candidate.salienceReason
-      : input.candidate.signalTags.join(", ");
+      : "";
   return runActiveDimensions({
     sentence: input.sentence,
     language: input.language,

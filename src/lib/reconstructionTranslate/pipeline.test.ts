@@ -50,6 +50,8 @@ test("generate prompt does not include the source sentence (anti-calque)", () =>
   assert.match(generateTranslationSystem(ctx), /ON-SCREEN/);
   assert.match(generateTranslationSystem(ctx), /Do not invent facts/);
   assert.match(generateTranslationSystem(ctx), /tidy written sentence/);
+  assert.match(generateTranslationSystem(ctx), /Not a recap of the utterance/);
+  assert.match(generateTranslationSystem(ctx), /이야기하고 있어요/);
   assert.ok(generateUser.includes("speechTexture"));
   assert.doesNotMatch(generateTranslationSystem(ctx), /잖아|것 같아|말 끝/);
 });
@@ -58,6 +60,8 @@ test("extract prompt forbids producing a target caption", () => {
   assert.match(extractMeaningSystem(ctx), /do not translate/i);
   assert.match(extractMeaningSystem(ctx), /Do NOT write a sentence that could be used as a Korean/);
   assert.match(extractMeaningSystem(ctx), /speechTexture/);
+  assert.match(extractMeaningSystem(ctx), /not a reporter describing the speaker/);
+  assert.doesNotMatch(extractMeaningSystem(ctx), /who is doing what/);
   assert.ok(extractMeaningUser(ctx).includes(ctx.sourceText));
 });
 

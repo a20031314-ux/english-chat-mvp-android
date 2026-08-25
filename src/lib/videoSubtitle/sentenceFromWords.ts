@@ -4,15 +4,16 @@ import {
   spanFromWordSlice,
   textFromTimedWords,
 } from "./timedWords.ts";
+import { countCjkLetters, countLetters, normalizeSttToken } from "./sttTokens.ts";
 import type { SentenceSpan, SttSegment, TimedWord } from "./types";
 
-const SENTENCE_PUNCT = /[.!?…]["')\]]*$/;
+const SENTENCE_PUNCT = /[.!?…。！？]["')\]]*$/u;
 const ABBREV =
   /^(mr|mrs|ms|dr|prof|sr|jr|vs|etc|st|no|u\.s|u\.k|e\.g|i\.e)\.?$/i;
 const SPEAKER_MARK = /^>>/;
 
 function stripTrailingPunct(text: string): string {
-  return text.trim().replace(/[.!?…]+$/g, "").trim();
+  return text.trim().replace(/[.!?…。！？]+$/gu, "").trim();
 }
 
 function lastToken(text: string): string {
@@ -38,12 +39,21 @@ function looksFinished(text: string): boolean {
   const trimmed = text.replace(/\s+/g, " ").trim();
   if (!trimmed || endsOpen(trimmed) || openNounPhrase(trimmed)) return false;
   const words = trimmed.split(/\s+/).filter(Boolean).length;
-  if (SENTENCE_PUNCT.test(trimmed) && words >= 3) return true;
+  if (SENTENCE_PUNCT.test(trimmed) && (words >= 3 || countCjkLetters(trimmed) >= 8)) {
+    return true;
+  }
   return false;
 }
 
 function normalizeMatchToken(value: string): string {
-  return value.toLowerCase().replace(/^[^a-z0-9가-힣']+|[^a-z0-9가-힣']+$/gi, "");
+  return normalizeSttToken(value);
+}
+
+/** Whole Whisper line interpolated as one unspaced CJK token. */
+function isUnspacedCjkClause(text: string): boolean {
+  const trimmed = text.trim();
+  if (!trimmed || /\s/.test(trimmed)) return false;
+  return countCjkLetters(trimmed) >= 8;
 }
 
 function isAbbrevWord(word: string): boolean {
@@ -75,6 +85,16 @@ export function splitWordsByPunctAndSpeaker(words: TimedWord[]): SentenceSpan[] 
       word.speakerTag &&
       next.speakerTag &&
       word.speakerTag !== next.speakerTag
+    ) {
+      cuts.push(i);
+      start = i + 1;
+      continue;
+    }
+    if (
+      next &&
+      isUnspacedCjkClause(word.text) &&
+      isUnspacedCjkClause(next.text) &&
+      i >= start
     ) {
       cuts.push(i);
       start = i + 1;
@@ -172,6 +192,9 @@ export function applyLlmSentenceMarks(
 
 export function needsLlmSentenceSplit(span: SentenceSpan): boolean {
   const words = span.text.split(/\s+/).filter(Boolean).length;
+  const cjk = countCjkLetters(span.text);
+  // One Whisper Japanese line is already a sentence.
+  if (isUnspacedCjkClause(span.text) && cjk < 80) return false;
   if (words < 8) return false;
   if (looksFinished(span.text) && words <= 16) return false;
   return !SENTENCE_PUNCT.test(span.text.trim()) || words >= 18;

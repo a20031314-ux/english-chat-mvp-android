@@ -10,8 +10,8 @@
     "build:web": "next build",
     "start": "next start",
     "lint": "eslint",
-      "test:subtitle": "node --experimental-strip-types --test src/lib/videoSubtitle/groupMeaningUnits.test.ts src/lib/videoSubtitle/windows.test.ts src/lib/videoSubtitle/sceneContext.speech.test.ts src/lib/videoSubtitle/viewerContext.test.ts src/lib/videoSubtitle/sttChunks.test.ts src/lib/videoSubtitle/speechRegister.test.ts src/lib/videoSubtitle/sentenceFromWords.test.ts src/lib/videoSubtitle/formatSubtitles.test.ts",
-    "test:salience": "node --experimental-strip-types --test src/lib/salience/scanSalience.test.ts src/lib/salience/runDimensions.test.ts src/lib/salience/pipeline.test.ts",
+      "test:subtitle": "node --experimental-strip-types --test src/lib/videoSubtitle/groupMeaningUnits.test.ts src/lib/videoSubtitle/windows.test.ts src/lib/videoSubtitle/sceneContext.speech.test.ts src/lib/videoSubtitle/viewerContext.test.ts src/lib/videoSubtitle/sttChunks.test.ts src/lib/videoSubtitle/speechRegister.test.ts src/lib/videoSubtitle/sentenceFromWords.test.ts src/lib/videoSubtitle/formatSubtitles.test.ts src/lib/videoSubtitle/speechNoise.test.ts",
+    "test:salience": "node --experimental-strip-types --test src/lib/languageLearningAnalysis.test.ts src/lib/salience/scanSalience.test.ts src/lib/salience/runDimensions.test.ts src/lib/salience/pipeline.test.ts src/lib/salience/candidates.test.ts",
     "compare:subtitle": "node --experimental-strip-types scripts/compare-subtitle-naturalization.mjs",
     "compare:translate": "node --experimental-strip-types scripts/compare-reconstruction-translate.mjs",
     "test:translate": "node --experimental-strip-types --test src/lib/reconstructionTranslate/pipeline.test.ts"

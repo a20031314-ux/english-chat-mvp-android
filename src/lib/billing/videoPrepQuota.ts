@@ -5,6 +5,8 @@ import {
   VIDEO_PREP_SECONDS_STORAGE_KEY,
 } from "@/lib/billing/config";
 
+export const IMPORT_QUOTA_CHANGED_EVENT = "talkbank-import-quota-changed";
+
 function monthKey() {
   const now = new Date();
   const month = String(now.getMonth() + 1).padStart(2, "0");
@@ -70,6 +72,7 @@ function writeUsage(usage: MonthlyImportUsage) {
       VIDEO_IMPORT_USAGE_STORAGE_KEY,
       JSON.stringify(usage),
     );
+    window.dispatchEvent(new Event(IMPORT_QUOTA_CHANGED_EVENT));
   } catch {
     // ignore quota / private mode
   }

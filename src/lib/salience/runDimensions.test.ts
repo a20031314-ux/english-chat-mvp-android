@@ -98,9 +98,81 @@ test("English, Spanish, and Korean activate different dimension sets", async () 
   });
   assert.match(esPhonology, /sinalefa/i);
   assert.match(koPragmatics, /존댓말/);
+
+  const jaSyntaxKoUi = buildDimensionPrompt("syntax", {
+    language: "ja",
+    languageName: "Japanese",
+    nativeLanguage: "ko",
+    explanationLanguage: "ko",
+    sentence: "毎日勉強する。",
+    spanText: "勉強する",
+    signalTags: ["key_expression"],
+    focus: ["SOV", "particles as case"],
+  });
+  assert.match(jaSyntaxKoUi, /ONLY in Korean Hangul/);
+  assert.match(jaSyntaxKoUi, /Do not write the explanation in Japanese/);
+  assert.match(jaSyntaxKoUi, /주어-목적어-동사/);
+  assert.match(jaSyntaxKoUi, /OUTPUT LANGUAGE LOCK/);
+  assert.match(jaSyntaxKoUi, /설명 문장은 전부 한국어로만/);
+  assert.match(jaSyntaxKoUi, /BAD: 「勉強する」は普通体です/);
+  assert.match(jaSyntaxKoUi, /Do not SKIP only because the span is written in Japanese/);
+  assert.equal(jaSyntaxKoUi.includes("Write learner-facing text in ko"), false);
+  assert.match(jaSyntaxKoUi, /never paste these labels/i);
 });
 
 test("unknown language still runs using the default profile (no code fork)", async () => {
   const called = await calledFor("xx");
   assert.deepEqual(called, DEFAULT_LANGUAGE_PROFILE.activeDimensions);
+});
+
+test("tag-like salience reasons are not shown as learner copy", async () => {
+  const result = await runActiveDimensions({
+    sentence: "毎日勉強する。",
+    language: "ja",
+    nativeLanguage: "ko",
+    candidate: {
+      tokenRange: { start: 0, end: 1 },
+      originalText: "勉強する",
+      signalTags: ["key_expression"],
+    },
+    salienceReason: "key_expression",
+    callDimension: async () => "SKIP",
+  });
+  assert.equal(result.salienceReason, "");
+});
+
+test("near-duplicate dimension copy is dropped", async () => {
+  const same =
+    '"been"은 "be"의 과거 분사형입니다. 경험이나 상태를 나타냅니다.';
+  const result = await runActiveDimensions({
+    sentence: "Have you been there before?",
+    language: "en",
+    nativeLanguage: "ko",
+    candidate: {
+      tokenRange: { start: 0, end: 1 },
+      originalText: "been",
+      signalTags: ["irregular_verb"],
+    },
+    callDimension: async () => same,
+  });
+  assert.ok(result.dimensionResults.usageInContext);
+  assert.equal(result.dimensionResults.etymology, undefined);
+  assert.equal(result.dimensionResults.syntax, undefined);
+});
+
+test("etymology prompt tells the model to skip plain verb forms", () => {
+  const prompt = buildDimensionPrompt("etymology", {
+    language: "en",
+    languageName: "English",
+    nativeLanguage: "ko",
+    explanationLanguage: "ko",
+    sentence: "Have you been there before?",
+    spanText: "been",
+    signalTags: ["irregular_verb"],
+    focus: ["idiom origin"],
+    siblingDimensions: ["syntax", "usageInContext", "morphology", "etymology"],
+  });
+  assert.match(prompt, /plain\/irregular form/);
+  assert.match(prompt, /do not repeat their facts/i);
+  assert.match(prompt, /usageInContext/);
 });

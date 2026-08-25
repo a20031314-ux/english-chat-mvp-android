@@ -1,7 +1,8 @@
+import { normalizeSttToken } from "./sttTokens.ts";
 import type { SentenceSpan, SttSegment, SttWord, TimedWord } from "./types";
 
 function normalizeToken(value: string): string {
-  return value.toLowerCase().replace(/^[^a-z0-9가-힣']+|[^a-z0-9가-힣']+$/gi, "");
+  return normalizeSttToken(value);
 }
 
 function toMs(seconds: number): number {
