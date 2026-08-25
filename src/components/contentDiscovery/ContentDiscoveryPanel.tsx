@@ -21,6 +21,7 @@ import {
   saveDiscoveryChannel,
   type SavedDiscoveryChannel,
 } from "@/lib/contentDiscovery/savedChannels";
+import { importPointsForDuration } from "@/lib/billing/videoPrep";
 
 const INITIAL_VISIBLE = 8;
 const REVEAL_COUNT = 8;
@@ -1087,6 +1088,12 @@ export function ContentDiscoveryPanel({
                             String(item.estimatedReadingMinutes),
                           )
                         : "",
+                    item.type === "video" && item.durationSeconds
+                      ? ui.discoverImportPoints.replace(
+                          "{n}",
+                          String(importPointsForDuration(item.durationSeconds)),
+                        )
+                      : "",
                     item.hasOriginalCaptions ? ui.discoverCaptionsBadge : "",
                     item.source,
                   ]

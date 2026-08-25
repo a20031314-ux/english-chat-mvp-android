@@ -61,6 +61,7 @@ const generatedBillingOverlay = {
   billingPremiumLabel: "Premium",
   billingClose: "Close",
   headerImportPoints: "{remaining} pts",
+  discoverImportPoints: "{n} pts",
   chatReading: "Reading",
 } as const;
 
@@ -463,6 +464,7 @@ export const copy = {
     discoverCaptionsAny: "상관없음",
     discoverCaptionsOriginal: "공식 자막 있음",
     discoverCaptionsBadge: "공식 자막",
+    discoverImportPoints: "{n}포인트",
     discoverSearch: "자료 찾기",
     discoverMore: "더 보기",
     discoverFindingMore: "뒤에서 더 찾아 두는 중…",
@@ -1131,6 +1133,7 @@ export const copy = {
     discoverCaptionsAny: "Any",
     discoverCaptionsOriginal: "Official captions",
     discoverCaptionsBadge: "Official captions",
+    discoverImportPoints: "{n} pts",
     discoverSearch: "Find content",
     discoverMore: "Show more",
     discoverFindingMore: "Finding more in the background…",
@@ -1796,6 +1799,7 @@ export const copy = {
     discoverCaptionsAny: "Cualquiera",
     discoverCaptionsOriginal: "Con subtítulos oficiales",
     discoverCaptionsBadge: "Subtítulos oficiales",
+    discoverImportPoints: "{n} pts",
     discoverSearch: "Buscar",
     discoverMore: "Ver más",
     discoverFindingMore: "Buscando más en segundo plano…",

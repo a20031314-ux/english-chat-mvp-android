@@ -128,6 +128,34 @@ test("a video longer than 15 minutes is rejected, not billed", () => {
   }
 });
 
+test("every learning language has an August 2026 library pack", () => {
+  const languages = [
+    "en",
+    "ko",
+    "ja",
+    "zh",
+    "es",
+    "fr",
+    "it",
+    "pt",
+    "ru",
+    "ar",
+    "id",
+    "vi",
+    "th",
+    "hi",
+  ] as const;
+  for (const language of languages) {
+    const pack = currentLibraryPack(language, new Date("2026-08-15T00:00:00Z"));
+    assert.ok(pack, `missing library pack for ${language}`);
+    assert.ok(pack.clips.length >= 4, `${language} pack is too small`);
+    assert.ok(
+      pack.clips.every((clip) => clip.durationSeconds <= 15 * 60),
+      `${language} has a clip over 15 minutes`,
+    );
+  }
+});
+
 test("monthly import points block another custom video", () => {
   const decision = evaluateVideoAccess({
     isPremium: true,
