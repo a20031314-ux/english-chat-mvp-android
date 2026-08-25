@@ -153,12 +153,6 @@ export function PdfRenderer({
         }, 0);
 
         if (chars < 12 && section) {
-          setOcrHint(ui.studyOcrPage);
-          const image = canvas.toDataURL("image/jpeg", 0.82);
-          const ocr = await requestStudyImageOcr({ image });
-          if (cancelled) return;
-          const merged = mergeOcrBoxesToSentences(ocr.boxes);
-          setSentenceBoxes(merged);
           setOcrHint("");
         }
       } catch {
@@ -269,12 +263,12 @@ export function PdfRenderer({
           )}
         </ZoomableStage>
       </div>
-      <div className="flex shrink-0 items-center justify-between gap-2 border-t border-slate-200 bg-white px-3 py-2">
+      <div className="flex shrink-0 items-center justify-between gap-2 border-t border-white/10 bg-[#0a0a0a] px-3 py-2">
         <button
           type="button"
           disabled={page <= 1}
           onClick={() => go(-1)}
-          className="rounded-lg px-2 py-1.5 text-xs text-slate-700 disabled:text-slate-300"
+          className="rounded-lg px-2 py-1.5 text-xs text-slate-300 hover:text-white disabled:text-slate-600"
         >
           {ui.studyChapterPrev}
         </button>
@@ -287,7 +281,7 @@ export function PdfRenderer({
           type="button"
           disabled={page >= pageCount}
           onClick={() => go(1)}
-          className="rounded-lg px-2 py-1.5 text-xs text-slate-700 disabled:text-slate-300"
+          className="rounded-lg px-2 py-1.5 text-xs text-slate-300 hover:text-white disabled:text-slate-600"
         >
           {ui.studyChapterNext}
         </button>

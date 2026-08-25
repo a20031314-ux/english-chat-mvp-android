@@ -136,7 +136,7 @@ function BundleRangeGauge({
             onChange(from, Math.max(to - 1, anchor));
           }
         }}
-        className="relative w-10 shrink-0 cursor-ns-resize touch-none rounded-full bg-slate-100 ring-1 ring-slate-200"
+        className="relative w-10 shrink-0 cursor-ns-resize touch-none rounded-full bg-white/10 ring-1 ring-white/15"
         style={{ height: heightPx }}
       >
         {/* Full-list texture: one tick per cue */}
@@ -153,7 +153,7 @@ function BundleRangeGauge({
 
         {/* Selected band */}
         <div
-          className="pointer-events-none absolute inset-x-0 rounded-full bg-slate-900/85"
+          className="pointer-events-none absolute inset-x-0 rounded-full bg-white/80"
           style={{
             top: `${(from / total) * 100}%`,
             height: `${((to - from + 1) / total) * 100}%`,
@@ -326,7 +326,7 @@ export function EnglishSentenceList({
   };
 
   return (
-    <div className="border-t border-slate-100 px-4 py-3">
+    <div className="border-t border-white/10 px-4 py-3">
       <p className="text-[11px] leading-snug text-slate-400">
         {bundlingId
           ? ui.videoLearnBundleClickHint
@@ -338,7 +338,7 @@ export function EnglishSentenceList({
             <button
               type="button"
               onClick={onUndoLastEdit}
-              className="rounded-lg border border-slate-300 bg-white px-2.5 py-1.5 text-xs font-medium text-slate-800 hover:bg-slate-50"
+              className="rounded-lg border border-white/15 bg-[#121212] px-2.5 py-1.5 text-xs font-medium text-slate-100 hover:bg-white/10"
             >
               {lastEditKind === "merge"
                 ? ui.videoLearnUndoMerge
@@ -351,7 +351,7 @@ export function EnglishSentenceList({
             <button
               type="button"
               onClick={onResetAllCues}
-              className="rounded-lg px-2.5 py-1.5 text-xs font-medium text-slate-500 hover:bg-slate-100"
+              className="rounded-lg border border-white/15 bg-[#121212] px-2.5 py-1.5 text-xs font-medium text-slate-100 hover:bg-white/10"
             >
               {ui.videoLearnResetAllCues}
             </button>
@@ -368,8 +368,9 @@ export function EnglishSentenceList({
           const isBundling = cue.id === bundlingId;
           const bundlePicking = Boolean(bundlingId);
           const editing = isSplitting || isBundling;
+          const rangeActive = inRange && bundlePicking;
           const highlighted =
-            !editing && (active || playing || (inRange && bundlePicking));
+            !editing && (active || playing || rangeActive);
           const canSplit = cue.endTime - cue.startTime >= 0.8;
           const canBundle = cues.length >= 2;
 
@@ -399,20 +400,22 @@ export function EnglishSentenceList({
                 }}
                 className={`rounded-xl px-3 py-2.5 text-left transition ${
                   isBundling
-                    ? "bg-white ring-1 ring-slate-300"
+                    ? "bg-[#121212] ring-2 ring-white/50"
                     : isSplitting
-                      ? "bg-white ring-1 ring-slate-300"
-                      : highlighted
-                        ? "cursor-pointer bg-slate-900 text-white"
-                        : bundlePicking
-                          ? "cursor-pointer bg-slate-50 ring-1 ring-transparent hover:ring-slate-300"
-                          : "cursor-pointer bg-slate-50 hover:bg-slate-100"
+                      ? "bg-[#121212] ring-1 ring-white/20"
+                      : inRange && bundlePicking
+                        ? "cursor-pointer bg-[#e8e8e4] text-neutral-900 ring-2 ring-white/50"
+                        : highlighted
+                          ? "cursor-pointer bg-[#e8e8e4] text-neutral-900"
+                          : bundlePicking
+                            ? "cursor-pointer bg-white/5 ring-1 ring-white/15 hover:ring-white/40"
+                            : "cursor-pointer bg-white/5 hover:bg-white/10"
                 }`}
               >
                 <div className="flex items-start justify-between gap-2">
                   <p
                     className={`text-[11px] tabular-nums ${
-                      highlighted ? "text-white/60" : "text-slate-400"
+                      highlighted ? "text-neutral-500" : "text-slate-400"
                     }`}
                   >
                     {formatSubtitleTime(cue.startTime)}
@@ -430,8 +433,8 @@ export function EnglishSentenceList({
                         }}
                         className={`rounded-md px-1.5 py-0.5 text-[10px] font-medium ${
                           highlighted
-                            ? "bg-white/15 text-white hover:bg-white/25"
-                            : "bg-white text-slate-600 hover:bg-slate-200"
+                            ? "bg-black/10 text-neutral-800 hover:bg-black/15"
+                            : "bg-[#121212] text-slate-300 hover:bg-white/10"
                         }`}
                       >
                         {ui.videoLearnRangeMode}
@@ -447,8 +450,8 @@ export function EnglishSentenceList({
                         }}
                         className={`rounded-md px-1.5 py-0.5 text-[10px] font-medium ${
                           highlighted
-                            ? "bg-white/15 text-white hover:bg-white/25"
-                            : "bg-white text-slate-600 hover:bg-slate-200"
+                            ? "bg-black/10 text-neutral-800 hover:bg-black/15"
+                            : "bg-[#121212] text-slate-300 hover:bg-white/10"
                         }`}
                       >
                         {ui.videoLearnSplitCue}
@@ -467,7 +470,7 @@ export function EnglishSentenceList({
                         className={`rounded-md px-1.5 py-0.5 text-[10px] font-medium ${
                           highlighted
                             ? "bg-white/20 text-white"
-                            : "bg-slate-200 text-slate-700"
+                            : "bg-white/10 text-neutral-200"
                         }`}
                       >
                         {isBundling ? `#${cueIndex + 1}` : "✓"}
@@ -494,7 +497,7 @@ export function EnglishSentenceList({
                       ariaLabel={ui.videoLearnBundleGaugeHint}
                       onChange={syncBundleRange}
                     />
-                    <p className="line-clamp-3 text-[12px] leading-snug text-slate-600">
+                    <p className="line-clamp-3 text-[12px] leading-snug text-slate-300">
                       {cues
                         .slice(bundleFrom, bundleTo + 1)
                         .map((row) => row.original.trim())
@@ -506,7 +509,7 @@ export function EnglishSentenceList({
                         type="button"
                         disabled={!canPlayRange}
                         onClick={() => onPlayRange(rangeIds)}
-                        className="rounded-lg bg-slate-900 px-2.5 py-1.5 text-xs font-medium text-white hover:bg-slate-800 disabled:opacity-50"
+                        className="rounded-lg bg-[#e8e8e4] shadow-[0_0_12px_rgba(255,255,255,0.22)] px-2.5 py-1.5 text-xs font-medium text-neutral-900 hover:bg-[#f5f5f3] disabled:opacity-50"
                       >
                         {ui.videoLearnPlayRange}
                       </button>
@@ -517,17 +520,29 @@ export function EnglishSentenceList({
                           onMergeRange(rangeIds);
                           setBundlingId(null);
                         }}
-                        className="rounded-lg border border-slate-300 bg-white px-2.5 py-1.5 text-xs font-medium text-slate-800 hover:bg-slate-50 disabled:opacity-50"
+                        className="rounded-lg border border-white/15 bg-[#121212] px-2.5 py-1.5 text-xs font-medium text-slate-100 hover:bg-white/10 disabled:opacity-50"
                       >
                         {ui.videoLearnMergeCues}
                       </button>
                       <button
                         type="button"
                         onClick={closeBundle}
-                        className="rounded-lg px-2.5 py-1.5 text-xs text-slate-500 hover:bg-slate-100"
+                        className="rounded-lg px-2.5 py-1.5 text-xs text-slate-500 hover:bg-white/10"
                       >
                         {ui.videoLearnClearRange}
                       </button>
+                      {canResetAllCues && onResetAllCues ? (
+                        <button
+                          type="button"
+                          onClick={() => {
+                            closeBundle();
+                            onResetAllCues();
+                          }}
+                          className="rounded-lg border border-white/15 bg-[#121212] px-2.5 py-1.5 text-xs font-medium text-slate-100 hover:bg-white/10"
+                        >
+                          {ui.videoLearnResetAllCues}
+                        </button>
+                      ) : null}
                     </div>
                   </div>
                 ) : isSplitting ? (
@@ -539,7 +554,7 @@ export function EnglishSentenceList({
                       {ui.videoLearnSplitSliderHint}
                     </p>
                     <p className="text-sm leading-snug">
-                      <span className="font-medium text-slate-900">
+                      <span className="font-medium text-slate-100">
                         {splitPreview.left}
                       </span>
                       <span className="mx-1 inline-block h-4 w-px align-middle bg-rose-500" />
@@ -560,7 +575,7 @@ export function EnglishSentenceList({
                         onChange={(event) =>
                           setSplitRatio(Number(event.target.value) / 100)
                         }
-                        className="h-2 w-full cursor-pointer appearance-none rounded-full bg-slate-200 accent-slate-900 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-slate-900"
+                        className="h-2 w-full cursor-pointer appearance-none rounded-full bg-white/15 accent-neutral-200 [&::-webkit-slider-thumb]:h-4 [&::-webkit-slider-thumb]:w-4 [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:bg-[#e8e8e4]"
                       />
                     </div>
                     <div className="flex flex-wrap gap-2">
@@ -568,40 +583,44 @@ export function EnglishSentenceList({
                         type="button"
                         disabled={splitPreview.cut == null}
                         onClick={confirmSplit}
-                        className="rounded-lg bg-slate-900 px-2.5 py-1.5 text-xs font-medium text-white hover:bg-slate-800 disabled:opacity-50"
+                        className="rounded-lg bg-[#e8e8e4] shadow-[0_0_12px_rgba(255,255,255,0.22)] px-2.5 py-1.5 text-xs font-medium text-neutral-900 hover:bg-[#f5f5f3] disabled:opacity-50"
                       >
                         {ui.videoLearnSplitConfirm}
                       </button>
                       <button
                         type="button"
                         onClick={() => setSplittingId(null)}
-                        className="rounded-lg px-2.5 py-1.5 text-xs text-slate-500 hover:bg-slate-100"
+                        className="rounded-lg px-2.5 py-1.5 text-xs text-slate-500 hover:bg-white/10"
                       >
                         {ui.videoLearnSplitCancel}
                       </button>
                     </div>
                   </div>
                 ) : (
-                  <div
-                    className={`mt-1.5 ${highlighted ? "[&_*]:!text-white" : ""}`}
-                    onClick={(event) => event.stopPropagation()}
-                  >
+                  <div className="mt-1.5">
                     <AnalyzableEnglish
                       sentence={cue.original}
                       analyzeLabel={ui.insightAnalyze}
                       sourceType="subtitle"
                       translation={interpretation || undefined}
-                      tone={highlighted ? "onDark" : "default"}
+                      analysisTranslation={cue.analysisTranslation}
+                      tone={
+                        highlighted || (inRange && bundlePicking)
+                          ? "default"
+                          : "onDark"
+                      }
                       className={`text-sm leading-snug ${
-                        highlighted
-                          ? "font-medium text-white"
-                          : "text-slate-900"
+                        highlighted || (inRange && bundlePicking)
+                          ? "font-medium text-neutral-900"
+                          : "text-slate-100"
                       }`}
                     />
                     {interpretation ? (
                       <p
                         className={`mt-1.5 text-[13px] leading-snug ${
-                          highlighted ? "text-white/75" : "text-slate-600"
+                            highlighted || (inRange && bundlePicking)
+                            ? "text-neutral-700"
+                            : "text-slate-300"
                         }`}
                       >
                         {interpretation}

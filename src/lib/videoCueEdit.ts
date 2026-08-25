@@ -98,6 +98,7 @@ function blankInterpretation(cue: VideoSubtitle, original: string): VideoSubtitl
     meaning: original,
     literalMeaning: original,
     translationStatus: "english",
+    analysisTranslation: undefined,
   };
 }
 
@@ -204,4 +205,8 @@ export function newCueIds(
 ): string[] {
   const old = new Set(prev.map((cue) => cue.id));
   return next.filter((cue) => !old.has(cue.id)).map((cue) => cue.id);
+}
+
+export function cuesLookUserEdited(cues: Array<{ id: string }>): boolean {
+  return cues.some((cue) => cue.id.startsWith("edit-"));
 }

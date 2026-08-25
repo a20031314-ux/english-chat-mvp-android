@@ -1,5 +1,9 @@
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import {
+  assertVideoPrepAllowed,
+  recordVideoPrepForRequest,
+} from "@/lib/server/videoPrepGate";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { prepareVideoTranscript } from "@/lib/videoSubtitle/pipeline";
 
@@ -35,12 +39,21 @@ export async function POST(request: NextRequest) {
       : "en";
   const skipServerAudio = body.skipServerAudio === true;
   try {
+    const limits = assertVideoPrepAllowed(request, { videoUrl });
     const prepared = await prepareVideoTranscript(
       videoUrl,
       locale,
       targetLanguage,
-      { skipServerAudio },
+      {
+        skipServerAudio: skipServerAudio,
+        maxDurationSeconds: limits.maxDurationSeconds,
+        remainingPrepSeconds:
+          limits.decision.kind === "import"
+            ? limits.remainingPrepSeconds
+            : undefined,
+      },
     );
+    recordVideoPrepForRequest(request, prepared.durationSeconds, videoUrl);
     return jsonWithCors(request, prepared);
   } catch (error) {
     if (error instanceof VideoPipelineError) {
@@ -51,7 +64,12 @@ export async function POST(request: NextRequest) {
             ? 400
             : error.code === "CLIENT_AUDIO_REQUIRED"
               ? 409
-              : 422;
+              : error.code === "VIDEO_QUOTA" ||
+                  error.code === "VIDEO_TOO_LONG" ||
+                  error.code === "CATALOG_LOCKED" ||
+                  error.code === "IMPORT_LOCKED"
+                ? 403
+                : 422;
       return jsonWithCors(request, { error: error.code }, { status });
     }
     console.error("[video-subtitles/prepare]", error);

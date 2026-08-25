@@ -66,14 +66,14 @@ export async function sketchVideoContent(input: {
         {
           role: "system",
           content: `Quickly identify what this whole video is (type + content), from title and dialogue samples (opening + later lines).
-Be free and concise. Capture the overall subject so later captions stay consistent across the video.
+Be free and concise. Capture the overall subject AND how people talk (commentary vs news vs chat vs lecture) so later captions stay in that voice.
 
 Return JSON:
 {
   "topic": "short label",
-  "domain": "trailer|interview|tutorial|vlog|drama|other",
+  "domain": "sports-commentary|news|vlog|tutorial|interview|drama|podcast|other",
   "summary": "1-3 sentences: what this video is about overall and what seems to be happening",
-  "speakerStyle": "how people talk / vibe"
+  "speakerStyle": "how people talk — e.g. live football commentary, news anchor, casual friends, explainer"
 }`,
         },
         {

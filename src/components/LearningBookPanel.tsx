@@ -88,7 +88,7 @@ function ProgressMetadata({ card, ui }: { card: LearningCard; ui: UICopy }) {
 
   return (
     <div className="flex flex-wrap items-center gap-x-2 text-[11px] font-medium text-slate-500">
-      <span className="text-slate-700">{status}</span>
+      <span className="text-slate-200">{status}</span>
       <span aria-hidden className="text-slate-300">
         ·
       </span>
@@ -261,8 +261,8 @@ export function LearningBookPanel({
             </div>
           ) : null}
 
-          <section className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm">
-            <h1 className="text-xl font-semibold tracking-tight text-slate-900">
+          <section className="rounded-2xl border border-white/10 bg-[#121212] p-5 shadow-sm">
+            <h1 className="text-xl font-semibold tracking-tight text-slate-100">
               {ui.learningBookTitle}
             </h1>
             <p className="mt-1 text-xs text-slate-500">
@@ -273,27 +273,27 @@ export function LearningBookPanel({
             </p>
 
             <dl className="mt-5 grid grid-cols-3 gap-2 text-center sm:gap-3">
-              <div className="rounded-xl bg-slate-50 px-2 py-3">
+              <div className="rounded-xl bg-white/5 px-2 py-3">
                 <dt className="text-[11px] font-medium tracking-wide text-slate-500">
                   {ui.dashboardSavedToday}
                 </dt>
-                <dd className="mt-1.5 text-xl font-semibold tabular-nums text-slate-900">
+                <dd className="mt-1.5 text-xl font-semibold tabular-nums text-slate-100">
                   {savedToday}
                 </dd>
               </div>
-              <div className="rounded-xl bg-slate-50 px-2 py-3">
+              <div className="rounded-xl bg-white/5 px-2 py-3">
                 <dt className="text-[11px] font-medium tracking-wide text-slate-500">
                   {ui.dashboardPracticing}
                 </dt>
-                <dd className="mt-1.5 text-xl font-semibold tabular-nums text-slate-900">
+                <dd className="mt-1.5 text-xl font-semibold tabular-nums text-slate-100">
                   {practicingCount}
                 </dd>
               </div>
-              <div className="rounded-xl bg-slate-50 px-2 py-3">
+              <div className="rounded-xl bg-white/5 px-2 py-3">
                 <dt className="text-[11px] font-medium tracking-wide text-slate-500">
                   {ui.dashboardUsable}
                 </dt>
-                <dd className="mt-1.5 text-xl font-semibold tabular-nums text-slate-900">
+                <dd className="mt-1.5 text-xl font-semibold tabular-nums text-slate-100">
                   {usableCount}
                 </dd>
               </div>
@@ -302,7 +302,7 @@ export function LearningBookPanel({
             <button
               type="button"
               onClick={startReviewToday}
-              className="mt-5 w-full rounded-xl bg-slate-900 px-4 py-3 text-sm font-medium text-white shadow-sm transition hover:bg-slate-800"
+              className="mt-5 w-full rounded-xl bg-[#e8e8e4] shadow-[0_0_14px_rgba(255,255,255,0.28)] px-4 py-3 text-sm font-medium text-neutral-900 shadow-sm transition hover:bg-[#f5f5f3]"
             >
               {reviewCta}
             </button>
@@ -325,7 +325,7 @@ export function LearningBookPanel({
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder={ui.learningSearchPlaceholder}
                 autoComplete="off"
-                className="w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 shadow-sm outline-none ring-slate-400/30 placeholder:text-slate-400 focus:border-slate-400 focus:ring-2"
+                className="w-full rounded-xl border border-white/10 bg-[#121212] px-3 py-2.5 text-sm text-slate-100 shadow-sm outline-none ring-slate-400/30 placeholder:text-slate-400 focus:border-white/40 focus:ring-2"
               />
 
               <div className="-mx-1 flex gap-1.5 overflow-x-auto px-1 pb-1 pt-0.5 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
@@ -336,8 +336,8 @@ export function LearningBookPanel({
                     onClick={() => setFilterTab(key)}
                     className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-medium transition ${
                       filterTab === key
-                        ? "bg-slate-900 text-white"
-                        : "border border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+                        ? "bg-[#e8e8e4] text-neutral-900"
+                        : "border border-white/10 bg-[#121212] text-slate-200 hover:bg-white/10"
                     }`}
                   >
                     {label}
@@ -349,11 +349,11 @@ export function LearningBookPanel({
 
           <div className="mt-5 space-y-3">
             {!hasCards ? (
-              <p className="whitespace-pre-line rounded-2xl border border-dashed border-slate-300 bg-white/80 px-4 py-8 text-center text-sm leading-relaxed text-slate-600">
+              <p className="whitespace-pre-line rounded-2xl border border-dashed border-white/15 bg-white/5 px-4 py-8 text-center text-sm leading-relaxed text-slate-300">
                 {ui.learningEmpty}
               </p>
             ) : listEmpty ? (
-              <p className="rounded-2xl border border-dashed border-slate-300 bg-white/80 px-4 py-8 text-center text-sm text-slate-600">
+              <p className="rounded-2xl border border-dashed border-white/15 bg-white/5 px-4 py-8 text-center text-sm text-slate-300">
                 {searchQuery.trim()
                   ? ui.learningSearchNoResults
                   : ui.learningFilterEmpty}
@@ -365,9 +365,9 @@ export function LearningBookPanel({
                 return (
                   <article
                     key={card.id}
-                    className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+                    className="overflow-hidden rounded-2xl border border-white/10 bg-[#121212] shadow-sm"
                   >
-                    <div className="border-b border-slate-100 px-3 py-2">
+                    <div className="border-b border-white/10 px-3 py-2">
                       <ProgressMetadata card={card} ui={ui} />
                     </div>
 
@@ -376,42 +376,45 @@ export function LearningBookPanel({
                         sentence={card.corrected}
                         analyzeLabel={ui.insightAnalyze}
                         sourceType="example"
-                        className={`text-[15px] font-semibold leading-snug text-emerald-950 sm:text-base ${isOpen ? "" : "line-clamp-3"}`}
+                        tone="onDark"
+                        className={`text-[15px] font-semibold leading-snug text-emerald-100 sm:text-base ${isOpen ? "" : "line-clamp-3"}`}
                       />
                       <AnalyzableEnglish
                         sentence={card.original}
                         analyzeLabel={ui.insightAnalyze}
                         sourceType="example"
-                        className={`text-[13px] leading-snug text-slate-600 sm:text-[14px] ${isOpen ? "" : "line-clamp-3"}`}
+                        tone="onDark"
+                        className={`text-[13px] leading-snug text-slate-300 sm:text-[14px] ${isOpen ? "" : "line-clamp-3"}`}
                       />
                       {showNat ? (
                         <AnalyzableEnglish
                           sentence={card.natural ?? ""}
                           analyzeLabel={ui.insightAnalyze}
                           sourceType="example"
-                          className={`text-[12px] leading-snug text-sky-950 sm:text-[13px] ${isOpen ? "" : "line-clamp-3"}`}
+                          tone="onDark"
+                          className={`text-[12px] leading-snug text-[#e4e4e0] sm:text-[13px] ${isOpen ? "" : "line-clamp-3"}`}
                         />
                       ) : null}
                     </div>
 
-                    <div className="border-t border-slate-100 px-3 py-2">
+                    <div className="border-t border-white/10 px-3 py-2">
                       <button
                         type="button"
                         onClick={() => toggleExpanded(card.id)}
-                        className="text-xs font-medium text-slate-600 underline-offset-2 hover:text-slate-900 hover:underline"
+                        className="text-xs font-medium text-slate-300 underline-offset-2 hover:text-white hover:underline"
                       >
                         {isOpen ? ui.cardHideDetails : ui.cardShowDetails}
                       </button>
                     </div>
 
                     {isOpen ? (
-                      <div className="space-y-3 border-t border-slate-100 bg-slate-50/60 px-3 py-3">
+                      <div className="space-y-3 border-t border-white/10 bg-white/5 px-3 py-3">
                         {card.explanation.trim() ? (
                           <div>
                             <p className="text-[11px] font-medium uppercase tracking-wide text-slate-500">
                               {ui.cardPoint}
                             </p>
-                            <p className="mt-1 text-sm leading-relaxed text-slate-700">
+                            <p className="mt-1 text-sm leading-relaxed text-slate-200">
                               {card.explanation}
                             </p>
                           </div>
@@ -423,14 +426,14 @@ export function LearningBookPanel({
                               setReviewSessionQueue(null);
                               setReviewCard(card);
                             }}
-                            className="rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs font-medium text-slate-800 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
+                            className="rounded-lg border border-white/10 bg-[#121212] px-3 py-2 text-xs font-medium text-slate-100 shadow-sm transition hover:border-white/15 hover:bg-white/10"
                           >
                             {ui.practiceAgain}
                           </button>
                           <button
                             type="button"
                             onClick={() => handleDelete(card.id)}
-                            className="rounded-lg border border-rose-200 bg-white px-3 py-2 text-xs font-medium text-rose-800 shadow-sm transition hover:bg-rose-50"
+                            className="rounded-lg border border-rose-400/30 bg-rose-500/15 px-3 py-2 text-xs font-medium text-rose-200 transition hover:bg-rose-500/25"
                           >
                             {ui.deleteFromBook}
                           </button>

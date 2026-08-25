@@ -4,7 +4,7 @@ import { AppHome } from "@/components/AppHome";
 
 export default function Home() {
   return (
-    <main className="min-h-screen w-full bg-slate-100">
+    <main className="min-h-screen w-full bg-transparent">
       <AppHome />
     </main>
   );

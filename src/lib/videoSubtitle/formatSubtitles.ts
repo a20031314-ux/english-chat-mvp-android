@@ -85,9 +85,17 @@ export function formatSubtitleDrafts(drafts: SubtitleDraft[]): SubtitleSegment[]
     const next = sorted[i + 1];
     let endTime = Math.max(draft.startTime + 0.3, draft.endTime);
     if (next && endTime > next.startTime) {
-      endTime = Math.max(draft.startTime + 0.25, next.startTime);
+      const overlap = endTime - next.startTime;
+      if (overlap <= 0.4) {
+        endTime = Math.max(draft.startTime + 0.25, next.startTime);
+      }
     }
 
+    const analysis =
+      (draft.analysisTranslation || "").replace(/\s+/g, " ").trim();
+    const captionKey = display.replace(/\s+/g, " ").trim();
+    const analysisTranslation =
+      analysis && analysis !== captionKey ? analysis : undefined;
     cues.push({
       id: draft.id,
       startTime: draft.startTime,
@@ -95,6 +103,7 @@ export function formatSubtitleDrafts(drafts: SubtitleDraft[]): SubtitleSegment[]
       rawOriginal: draft.original,
       original: draft.original,
       translation: display,
+      ...(analysisTranslation ? { analysisTranslation } : {}),
       meaning: draft.meaning,
       literalMeaning: draft.meaning,
       tone: draft.tone,

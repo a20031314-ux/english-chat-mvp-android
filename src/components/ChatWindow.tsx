@@ -19,7 +19,7 @@ import {
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 import { MessageBubble } from "./MessageBubble";
 import { ChatHistoryPanel } from "./ChatHistoryPanel";
-import { PaywallModal } from "./PaywallModal";
+import { useBillingUi } from "./BillingScreen";
 import { usePremium } from "@/contexts/PremiumContext";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { Capacitor } from "@capacitor/core";
@@ -27,7 +27,6 @@ import {
   FREE_DAILY_CHAT_LIMIT,
   PREMIUM_CLIENT_HEADER,
 } from "@/lib/billing/config";
-import { isLocalPlanDebugEnabled } from "@/lib/billing/billingService";
 import { resolveChatInputMode } from "@/lib/inputLanguage";
 import {
   alignCorrectionToGrammar,
@@ -40,6 +39,17 @@ import {
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
 import { translateUtterance } from "@/lib/translateUtterance";
+import { chatPartnerForLanguage } from "@/lib/chatPartner";
+import {
+  detectConversationMode,
+  type ConversationMode,
+} from "@/lib/conversationMode";
+import { compressChatImage } from "@/lib/chatImage";
+import {
+  formatCallDuration,
+  type CallPhase,
+  type ChatCallEvent,
+} from "@/lib/callSession";
 
 type CorrectionResult = {
   corrected: string;
@@ -65,6 +75,9 @@ type ChatTurn = {
   isTranslating?: boolean;
   /** From “use this expression” — continue chat without a grammar card */
   suppressCorrectionCard?: boolean;
+  attachmentUrl?: string;
+  conversationMode?: ConversationMode;
+  callEvent?: ChatCallEvent;
 };
 
 type ChatModeApiResponse = {
@@ -406,16 +419,17 @@ function sessionTitleFromTurns(turns: ChatTurn[]): string {
 function toSessionMessages(turns: ChatTurn[]): ChatMessage[] {
   return turns.flatMap((turn) => {
     const messages: ChatMessage[] = [];
-    if (turn.userMessage.trim()) {
+    if (turn.userMessage.trim() || turn.attachmentUrl) {
       messages.push({
         id: `${turn.id}-user`,
         role: "user",
         content: turn.userMessage,
         createdAt: Date.now(),
+        ...(turn.attachmentUrl ? { attachmentUrl: turn.attachmentUrl } : {}),
       });
     }
 
-    if (turn.mode === "chat" && turn.assistantMessage) {
+    if (turn.mode === "chat" && (turn.assistantMessage || turn.callEvent)) {
       messages.push({
         id: `${turn.id}-assistant`,
         role: "assistant",
@@ -423,6 +437,7 @@ function toSessionMessages(turns: ChatTurn[]): ChatMessage[] {
           assistantMessage: turn.assistantMessage || "",
           spokenReply: turn.spokenReply || "",
           correctionResult: turn.correctionResult || null,
+          ...(turn.callEvent ? { callEvent: turn.callEvent } : {}),
         }),
         createdAt: Date.now(),
       });
@@ -514,15 +529,18 @@ function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
       let assistantMessage = "";
       let spokenReply = "";
       let correctionResult: CorrectionResult | undefined;
+      let callEvent: ChatCallEvent | undefined;
       try {
         const parsed = JSON.parse(message.content) as {
           assistantMessage?: string;
           spokenReply?: string;
           correctionResult?: CorrectionResult;
+          callEvent?: ChatCallEvent;
         };
         assistantMessage = parsed.assistantMessage || "";
         spokenReply = parsed.spokenReply || "";
         correctionResult = parsed.correctionResult;
+        callEvent = parsed.callEvent;
       } catch {
         assistantMessage = message.content;
       }
@@ -544,6 +562,7 @@ function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
           assistantMessage,
           spokenReply: spokenReply || undefined,
           translatedMessage: spokenReply || undefined,
+          callEvent,
         });
         continue;
       }
@@ -556,6 +575,8 @@ function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
         spokenReply: spokenReply || undefined,
         translatedMessage: spokenReply || undefined,
         correctionResult,
+        attachmentUrl: pendingUser.attachmentUrl,
+        callEvent,
       });
       pendingUser = null;
     }
@@ -616,8 +637,8 @@ export function ChatWindow({
   tabMode = false,
   locale: localeProp,
 }: ChatWindowProps) {
-  const { isPremium, isBillingReady, refreshPremium, setPremiumForUi } =
-    usePremium();
+  const { isPremium, isBillingReady } = usePremium();
+  const billing = useBillingUi();
   const learningLanguage = useLearningLanguageOptional();
   const targetLanguage =
     learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
@@ -658,13 +679,23 @@ export function ChatWindow({
     dailyUsed: 0,
     dailyLimit: SESSION_MESSAGE_LIMIT,
   });
-  const [isPaywallOpen, setIsPaywallOpen] = useState(false);
   const [currentSessionId, setCurrentSessionId] = useState<string>(makeSessionId());
   const [currentSessionCreatedAt, setCurrentSessionCreatedAt] = useState<number>(
     Date.now(),
   );
   const [isChatHistoryOpen, setIsChatHistoryOpen] = useState(false);
+  const [sessionMenuOpen, setSessionMenuOpen] = useState(false);
+  const sessionMenuRef = useRef<HTMLDivElement>(null);
   const [sessionEnded, setSessionEnded] = useState(false);
+  const photoInputRef = useRef<HTMLInputElement>(null);
+  const [pendingPhoto, setPendingPhoto] = useState<string | null>(null);
+  const [conversationMode, setConversationMode] =
+    useState<ConversationMode>("native");
+  const [callPhase, setCallPhase] = useState<CallPhase>("idle");
+  const [callMuted, setCallMuted] = useState(false);
+  const [callStartedAt, setCallStartedAt] = useState<number | null>(null);
+  const [callNow, setCallNow] = useState(() => Date.now());
+  const partner = chatPartnerForLanguage(sessionLanguageCode);
 
   const dailyLimit = entitlement.dailyLimit ?? SESSION_MESSAGE_LIMIT;
   const isChatDailyLimitReached =
@@ -672,8 +703,8 @@ export function ChatWindow({
   const isChatInputBlocked = isChatDailyLimitReached;
 
   const openPaywall = useCallback((_reason?: string) => {
-    setIsPaywallOpen(true);
-  }, []);
+    billing.openBilling();
+  }, [billing]);
 
   const refreshEntitlement = useCallback(async () => {
     try {
@@ -861,13 +892,48 @@ export function ChatWindow({
   }, [isChatDailyLimitReached, openPaywall]);
 
   useEffect(() => {
+    if (!sessionMenuOpen) return;
+    const onPointerDown = (event: MouseEvent | TouchEvent) => {
+      const target = event.target as Node | null;
+      if (
+        sessionMenuRef.current &&
+        target &&
+        !sessionMenuRef.current.contains(target)
+      ) {
+        setSessionMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", onPointerDown);
+    document.addEventListener("touchstart", onPointerDown);
+    return () => {
+      document.removeEventListener("mousedown", onPointerDown);
+      document.removeEventListener("touchstart", onPointerDown);
+    };
+  }, [sessionMenuOpen]);
+
+  useEffect(() => {
     bottomRef.current?.scrollIntoView({
       behavior: "smooth",
       block: "end",
     });
   }, [turns, currentSessionId]);
 
-  const sendChatMessage = async (message: string) => {
+  useEffect(() => {
+    if (callPhase !== "calling") return;
+    const timer = window.setTimeout(() => {
+      setCallPhase("connected");
+      setCallStartedAt(Date.now());
+    }, 1200);
+    return () => window.clearTimeout(timer);
+  }, [callPhase]);
+
+  useEffect(() => {
+    if (callPhase !== "connected") return;
+    const timer = window.setInterval(() => setCallNow(Date.now()), 1000);
+    return () => window.clearInterval(timer);
+  }, [callPhase]);
+
+  const sendChatMessage = async (message: string, imageDataUrl?: string) => {
     const url = apiUrl("/api/chat");
     const response = await fetch(url, {
       method: "POST",
@@ -881,6 +947,8 @@ export function ChatWindow({
         locale,
         interfaceLanguage: locale,
         targetLanguage: sessionLanguageCode,
+        conversationMode,
+        ...(imageDataUrl ? { imageDataUrl } : {}),
         recent: turns
           .flatMap((turn) => {
             const lines: string[] = [];
@@ -931,6 +999,8 @@ export function ChatWindow({
             ? undefined
             : data.spokenReply?.trim() || undefined,
         correctionResult,
+        attachmentUrl: imageDataUrl,
+        conversationMode,
       },
     ]);
   };
@@ -1270,30 +1340,37 @@ export function ChatWindow({
   const handleSend = async (event: FormEvent) => {
     event.preventDefault();
     const trimmed = input.trim();
-    if (!trimmed || isSending) {
+    const photo = pendingPhoto;
+    if ((!trimmed && !photo) || isSending) {
       return;
     }
 
-    const modeToUse = resolveChatInputMode(trimmed, {
-      chatEnabled: chatModeOn,
-      askExpressionEnabled: askExpressionOn,
-      locale,
-    });
+    const modeToUse =
+      photo && !trimmed
+        ? "chat"
+        : resolveChatInputMode(trimmed, {
+            chatEnabled: chatModeOn,
+            askExpressionEnabled: askExpressionOn,
+            locale,
+          });
 
     if (isChatDailyLimitReached) {
       openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
       return;
     }
 
+    const nextMode = detectConversationMode(trimmed);
+    setConversationMode(nextMode);
     setIsSending(true);
     try {
       if (modeToUse === "how_to_say") {
         await fetchExpressionResult(trimmed);
       } else {
-        await sendChatMessage(trimmed);
+        await sendChatMessage(trimmed, photo || undefined);
       }
       await refreshEntitlement();
       setInput("");
+      setPendingPhoto(null);
     } catch (error) {
       if (isDailyLimitReachedError(error)) {
         await refreshEntitlement();
@@ -1306,6 +1383,7 @@ export function ChatWindow({
           id: `${Date.now()}`,
           mode: modeToUse,
           userMessage: trimmed,
+          attachmentUrl: photo || undefined,
           ...(modeToUse === "how_to_say"
             ? {
                 expressionResult: {
@@ -1329,109 +1407,163 @@ export function ChatWindow({
     }
   };
 
+  const handlePickPhoto = async (
+    event: React.ChangeEvent<HTMLInputElement>,
+  ) => {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+    try {
+      const dataUrl = await compressChatImage(file);
+      setPendingPhoto(dataUrl);
+    } catch {
+      setBookToast(ui.chatStartFailed);
+    }
+  };
+
+  const startMockCall = () => {
+    if (callPhase !== "idle") return;
+    setCallMuted(false);
+    setCallPhase("calling");
+  };
+
+  const hangUpMockCall = () => {
+    const started = callStartedAt;
+    const durationSeconds = started
+      ? Math.max(0, Math.round((Date.now() - started) / 1000))
+      : 0;
+    setCallPhase("idle");
+    setCallStartedAt(null);
+    setCallMuted(false);
+    setTurns((previous) => [
+      ...previous,
+      {
+        id: `${Date.now()}`,
+        mode: "chat",
+        userMessage: "",
+        callEvent: { kind: "ended", durationSeconds },
+      },
+    ]);
+  };
+
   return (
     <>
       <section
-        className={`flex w-full flex-col overflow-hidden rounded-2xl border border-slate-200 shadow-lg ${
-          tabMode ? "h-full max-w-none bg-slate-50" : "h-[92vh] max-w-3xl bg-slate-50"
+        className={`relative flex w-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0a] ${
+          tabMode ? "h-full max-w-none" : "h-[92vh] max-w-3xl"
         }`}
       >
-        <header className="border-b border-slate-200 bg-white px-4 py-3">
-          <div className="flex items-center justify-between gap-3">
-            {!tabMode ? (
+        <header className="border-b border-white/10 bg-white/5 px-3 py-2">
+          <div className="flex items-center gap-2">
+            <div className="relative shrink-0" ref={sessionMenuRef}>
               <button
                 type="button"
-                onClick={() => {
-                  snapshotCurrentChat();
-                  setConversationSessions(loadConversationSessions());
-                  setIsChatHistoryOpen(true);
-                }}
-                aria-label={ui.chatHistoryTitle}
-                className="rounded-md border border-slate-300 bg-white px-2 py-1 text-xs text-slate-700 hover:bg-slate-50"
+                aria-label={ui.sessionMenu}
+                aria-expanded={sessionMenuOpen}
+                onClick={() => setSessionMenuOpen((open) => !open)}
+                className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
               >
-                ☰
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5" aria-hidden>
+                  <circle cx="12" cy="6" r="1.6" />
+                  <circle cx="12" cy="12" r="1.6" />
+                  <circle cx="12" cy="18" r="1.6" />
+                </svg>
               </button>
-            ) : null}
-
-            <div className="min-w-0 flex-1 text-center md:text-left">
-              <div className="flex flex-wrap items-center justify-center gap-x-2 gap-y-0.5 md:justify-start">
-                <p className="text-[11px] text-slate-500 sm:text-xs">
-                  {isPremium
-                    ? ui.planPremium
-                    : ui.planFree
-                        .replace("{used}", String(entitlement.dailyUsed))
-                        .replace("{limit}", String(dailyLimit))}
-                </p>
-                {isLocalPlanDebugEnabled() ? (
-                  <div className="flex overflow-hidden rounded-full border border-slate-200 text-[10px] font-medium">
-                    <button
-                      type="button"
-                      onClick={() => setPremiumForUi(false)}
-                      className={`px-2 py-0.5 ${
-                        !isPremium
-                          ? "bg-slate-900 text-white"
-                          : "bg-white text-slate-600 hover:bg-slate-50"
-                      }`}
-                    >
-                      무료
-                    </button>
-                    <button
-                      type="button"
-                      onClick={() => setPremiumForUi(true)}
-                      className={`px-2 py-0.5 ${
-                        isPremium
-                          ? "bg-slate-900 text-white"
-                          : "bg-white text-slate-600 hover:bg-slate-50"
-                      }`}
-                    >
-                      프리미엄
-                    </button>
-                  </div>
-                ) : !isPremium ? (
+              {sessionMenuOpen ? (
+                <div className="absolute left-0 top-full z-30 mt-1 w-40 overflow-hidden rounded-xl border border-white/10 bg-[#121212] py-1 shadow-2xl">
                   <button
                     type="button"
-                    onClick={() => openPaywall()}
-                    className="shrink-0 rounded-full bg-slate-900 px-2.5 py-1 text-[10px] font-medium text-white shadow-sm hover:bg-slate-800 sm:text-[11px]"
+                    onClick={() => {
+                      setSessionMenuOpen(false);
+                      snapshotCurrentChat();
+                      setConversationSessions(loadConversationSessions());
+                      setIsChatHistoryOpen(true);
+                    }}
+                    className="block w-full px-3 py-2 text-left text-xs text-slate-100 hover:bg-white/10"
                   >
-                    {ui.upgradeCta}
+                    {ui.chatHistoryTitle}
                   </button>
-                ) : null}
-              </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSessionMenuOpen(false);
+                      endCurrentSession();
+                    }}
+                    className="block w-full px-3 py-2 text-left text-xs text-slate-100 hover:bg-white/10"
+                  >
+                    {ui.endSession}
+                  </button>
+                </div>
+              ) : null}
             </div>
-
-            <div className="flex flex-col items-end gap-1">
-              <button
-                type="button"
-                onClick={endCurrentSession}
-                className="rounded-full border border-teal-600 bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-800 hover:bg-teal-100"
+            <div className="flex min-w-0 flex-1 items-center gap-2">
+              <span className="inline-flex min-w-0 items-center gap-1 text-[11px] text-slate-300">
+                <img
+                  src={`/flags/${partner.flagCountry}.png`}
+                  alt=""
+                  className="h-3.5 w-5 rounded-[2px] object-cover"
+                />
+                <span className="truncate">{partner.givenName}</span>
+              </span>
+              <span
+                className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-medium ${
+                  conversationMode === "tutor"
+                    ? "bg-amber-500/20 text-amber-100"
+                    : "bg-white/10 text-slate-200"
+                }`}
               >
-                {ui.endSession}
-              </button>
-              <button
-                type="button"
-                onClick={() => {
-                  snapshotCurrentChat();
-                  setConversationSessions(loadConversationSessions());
-                  setIsChatHistoryOpen(true);
-                }}
-                className="rounded-full border border-teal-600 bg-teal-50 px-3 py-1 text-xs font-semibold text-teal-800 hover:bg-teal-100"
-              >
-                {ui.chatHistoryTitle}
-              </button>
+                {conversationMode === "tutor"
+                  ? ui.chatTutorMode
+                  : ui.chatNativeMode}
+              </span>
             </div>
           </div>
         </header>
+        {callPhase !== "idle" ? (
+          <div className="flex items-center justify-between gap-2 border-b border-white/20 bg-white/10 px-4 py-2 text-xs text-neutral-200">
+            <p>
+              {callPhase === "calling"
+                ? ui.chatCalling
+                : `${ui.chatInCall} · ${formatCallDuration(
+                    Math.max(
+                      0,
+                      Math.round(
+                        (callNow - (callStartedAt ?? callNow)) / 1000,
+                      ),
+                    ),
+                  )}`}
+            </p>
+            <div className="flex gap-1">
+              {callPhase === "connected" ? (
+                <button
+                  type="button"
+                  onClick={() => setCallMuted((value) => !value)}
+                  className="rounded-full border border-white/30 bg-[#121212] px-2 py-0.5 text-[11px] text-neutral-200"
+                >
+                  {callMuted ? ui.chatUnmute : ui.chatMute}
+                </button>
+              ) : null}
+              <button
+                type="button"
+                onClick={hangUpMockCall}
+                className="rounded-full bg-rose-600 px-2 py-0.5 text-[11px] text-white"
+              >
+                {ui.chatHangUp}
+              </button>
+            </div>
+          </div>
+        ) : null}
 
         <div className="flex-1 space-y-2 overflow-y-auto p-2.5 sm:space-y-4 sm:p-4">
           {isChatDailyLimitReached ? (
-            <div className="rounded-xl border border-amber-200 bg-amber-50 px-3 py-3 text-sm text-amber-950">
+            <div className="rounded-xl border border-amber-400/30 bg-amber-500/10 px-3 py-3 text-sm text-amber-100">
               <p className="leading-relaxed">{ui.paywallLimitBanner}</p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {turns.length > 0 ? (
                   <button
                     type="button"
                     onClick={endCurrentSession}
-                    className="rounded-lg border border-amber-300 bg-white px-3 py-1.5 text-xs font-medium text-amber-950 hover:bg-amber-100"
+                    className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-amber-100 hover:bg-white/10"
                   >
                     {ui.endSession}
                   </button>
@@ -1439,7 +1571,7 @@ export function ChatWindow({
                 <button
                   type="button"
                   onClick={() => openPaywall("PAYWALL_OPEN_LIMIT_REACHED")}
-                  className="rounded-lg bg-slate-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-slate-800"
+                  className="rounded-lg bg-[#e8e8e4] shadow-[0_0_12px_rgba(255,255,255,0.22)] px-3 py-1.5 text-xs font-medium text-neutral-900 hover:bg-[#f5f5f3]"
                 >
                   {ui.upgradeCta}
                 </button>
@@ -1450,10 +1582,19 @@ export function ChatWindow({
 
             return (
               <article key={turn.id} className="space-y-1.5 sm:space-y-2">
-                {turn.userMessage.trim() ? (
+                {turn.callEvent?.kind === "ended" ? (
+                  <p className="text-center text-[11px] text-slate-500">
+                    {ui.chatCallEnded.replace(
+                      "{duration}",
+                      formatCallDuration(turn.callEvent.durationSeconds),
+                    )}
+                  </p>
+                ) : null}
+                {turn.userMessage.trim() || turn.attachmentUrl ? (
                   <MessageBubble
                     role="user"
                     message={turn.userMessage}
+                    imageUrl={turn.attachmentUrl}
                     attachedEnglish={
                       turn.mode === "how_to_say"
                         ? turn.expressionResult?.expression
@@ -1562,7 +1703,7 @@ export function ChatWindow({
 
         <form
           onSubmit={handleSend}
-          className="sticky bottom-0 z-20 border-t border-slate-200 bg-white p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] sm:p-4 sm:pb-4"
+          className="sticky bottom-0 z-20 border-t border-white/10 bg-[#0a0a0a]/92 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] backdrop-blur-md sm:p-4 sm:pb-4"
         >
           <>
             <div className="mb-2 flex flex-wrap items-center gap-2">
@@ -1574,8 +1715,8 @@ export function ChatWindow({
                 title={`${ui.chatMode} · ${ui.askExpression}`}
                 className={`inline-flex h-8 w-8 items-center justify-center rounded-lg transition ${
                   allModesOn
-                    ? "bg-teal-500 text-white"
-                    : "border border-slate-200 bg-white text-slate-600 hover:bg-slate-50"
+                    ? "bg-[#e8e8e4] text-neutral-900"
+                    : "border border-white/15 bg-white/5 text-slate-300 hover:bg-white/10"
                 }`}
               >
                 <svg
@@ -1600,8 +1741,8 @@ export function ChatWindow({
                 onClick={toggleChatMode}
                 className={`rounded-lg px-3 py-1.5 text-sm transition ${
                   chatModeOn
-                    ? "bg-teal-500 text-white"
-                    : "border border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+                    ? "bg-[#e8e8e4] text-neutral-900"
+                    : "border border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
                 }`}
                 aria-pressed={chatModeOn}
               >
@@ -1612,8 +1753,8 @@ export function ChatWindow({
                 onClick={toggleAskExpression}
                 className={`rounded-lg px-3 py-1.5 text-sm transition ${
                   askExpressionOn
-                    ? "bg-teal-500 text-white"
-                    : "border border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+                    ? "bg-[#e8e8e4] text-neutral-900"
+                    : "border border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
                 }`}
                 aria-pressed={askExpressionOn}
               >
@@ -1624,17 +1765,65 @@ export function ChatWindow({
                 aria-hidden
               >
                 <span className="inline-flex items-center gap-1">
-                  <span className="inline-block h-2.5 w-2.5 rounded-[2px] bg-teal-500" />
+                  <span className="inline-block h-2.5 w-2.5 rounded-[2px] bg-[#e8e8e4]" />
                   {ui.toggleLegendOn}
                 </span>
                 <span className="inline-flex items-center gap-1">
-                  <span className="inline-block h-2.5 w-2.5 rounded-[2px] border border-slate-300 bg-white" />
+                  <span className="inline-block h-2.5 w-2.5 rounded-[2px] border border-white/15 bg-[#121212]" />
                   {ui.toggleLegendOff}
                 </span>
               </span>
             </div>
 
+            {pendingPhoto ? (
+              <div className="mb-2 flex items-start gap-2">
+                <img
+                  src={pendingPhoto}
+                  alt=""
+                  className="h-16 w-16 rounded-lg object-cover"
+                />
+                <button
+                  type="button"
+                  onClick={() => setPendingPhoto(null)}
+                  className="rounded-md border border-white/10 px-2 py-1 text-[11px] text-slate-300"
+                >
+                  {ui.chatRemovePhoto}
+                </button>
+              </div>
+            ) : null}
+
             <div className="flex items-end gap-2">
+              <input
+                ref={photoInputRef}
+                type="file"
+                accept="image/*"
+                className="hidden"
+                onChange={(event) => void handlePickPhoto(event)}
+              />
+              <button
+                type="button"
+                onClick={() => photoInputRef.current?.click()}
+                aria-label={ui.chatAttachPhoto}
+                title={ui.chatAttachPhoto}
+                className="inline-flex h-10 min-w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
+              >
+                +
+              </button>
+              <button
+                type="button"
+                onClick={callPhase === "idle" ? startMockCall : hangUpMockCall}
+                aria-label={callPhase === "idle" ? ui.chatCall : ui.chatHangUp}
+                title={callPhase === "idle" ? ui.chatCall : ui.chatHangUp}
+                className={`inline-flex h-10 min-w-10 items-center justify-center rounded-xl border transition ${
+                  callPhase === "idle"
+                    ? "border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
+                    : "border-rose-400/40 bg-rose-500/20 text-rose-100 hover:bg-rose-500/30"
+                }`}
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden>
+                  <path d="M7.4 3.6c.5-.5 1.3-.6 1.9-.2l2.1 1.4c.6.4.8 1.2.5 1.9L11 8.8c-.2.4-.1.8.1 1.1 1 1.6 2.4 3 4 4 .4.2.8.3 1.1.1l2.1-.9c.7-.3 1.5-.1 1.9.5l1.4 2.1c.4.6.3 1.4-.2 1.9l-1.3 1.3c-.5.5-1.2.8-1.9.7-2.3-.2-5.6-1.5-8.8-4.7S4.9 9 4.7 6.7c-.1-.7.2-1.4.7-1.9L7.4 3.6Z" />
+                </svg>
+              </button>
               <textarea
                 ref={inputRef}
                 value={input}
@@ -1646,8 +1835,8 @@ export function ChatWindow({
                     openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
                   }
                 }}
-                className={`w-full resize-none rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none ring-0 transition focus:border-slate-500 ${
-                  isChatInputBlocked ? "cursor-pointer bg-slate-50" : ""
+                className={`w-full resize-none rounded-xl border border-white/15 bg-[#101010] px-3 py-2 text-sm text-slate-100 outline-none ring-0 transition placeholder:text-slate-500 focus:border-white/40 ${
+                  isChatInputBlocked ? "cursor-pointer" : ""
                 }`}
                 dir={learningLanguageTextDir(targetLanguage)}
               />
@@ -1659,7 +1848,7 @@ export function ChatWindow({
                 onClick={() => void handleAiStart()}
                 aria-label={ui.chatStartCta}
                 title={ui.chatStartCta}
-                className="inline-flex h-10 min-w-10 items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-700 transition hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-50"
+                className="inline-flex h-10 min-w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-slate-200 transition hover:bg-white/10 disabled:cursor-not-allowed disabled:opacity-50"
               >
                 <svg
                   viewBox="0 0 24 24"
@@ -1704,7 +1893,7 @@ export function ChatWindow({
                     openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
                   }
                 }}
-                className="inline-flex h-10 min-w-10 items-center justify-center rounded-xl bg-slate-900 text-white transition hover:bg-slate-700 disabled:cursor-not-allowed disabled:bg-slate-400"
+                className="inline-flex h-10 min-w-10 items-center justify-center rounded-xl bg-[#e8e8e4] text-neutral-900 shadow-[0_0_16px_rgba(255,255,255,0.32)] transition hover:bg-[#f5f5f3] disabled:cursor-not-allowed disabled:bg-slate-600 disabled:shadow-none"
               >
                 {isSending ? (
                   <svg
@@ -1759,7 +1948,7 @@ export function ChatWindow({
           className="pointer-events-none fixed bottom-6 left-1/2 z-[70] max-w-[min(90vw,20rem)] -translate-x-1/2 px-4"
           role="status"
         >
-          <div className="pointer-events-auto whitespace-pre-line rounded-xl border border-slate-200 bg-white px-4 py-3 text-center text-sm leading-snug text-slate-800 shadow-lg">
+          <div className="pointer-events-auto whitespace-pre-line rounded-xl border border-white/10 bg-[#121212] px-4 py-3 text-center text-sm leading-snug text-slate-100 shadow-lg">
             {bookToast}
           </div>
         </div>
@@ -1807,19 +1996,6 @@ export function ChatWindow({
           snapshotCurrentChat();
           startNewChat();
         }}
-      />
-
-      <PaywallModal
-        isOpen={isPaywallOpen}
-        locale={locale}
-        ui={ui}
-        onClose={() => setIsPaywallOpen(false)}
-        onPremiumActivated={(message) => {
-          setBookToast(message);
-          void refreshPremium();
-          void refreshEntitlement();
-        }}
-        onInfoToast={(message) => setBookToast(message)}
       />
     </>
   );

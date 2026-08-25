@@ -12,6 +12,12 @@ import {
   conversationKoreanParallel,
   conversationVoicePrinciples,
 } from "@/lib/conversationVoice";
+import { conversationPartnerIdentity } from "@/lib/chatPartner";
+import {
+  isConversationMode,
+  type ConversationMode,
+} from "@/lib/conversationMode";
+import { isChatImageDataUrl } from "@/lib/chatImage";
 import {
   coerceLanguageCode,
   INTERFACE_LANGUAGE_LABELS,
@@ -64,6 +70,11 @@ type ChatLanguages = {
   locale: string;
   interfaceLanguage: string;
   targetLanguage: LearningLanguageCode;
+};
+
+type ChatTurnOptions = {
+  conversationMode?: ConversationMode;
+  imageDataUrl?: string;
 };
 
 function resolveChatLanguages(body: {
@@ -217,7 +228,10 @@ Hard rules:
 ${explanationGuard}`;
 }
 
-function buildChatSystem(langs: ChatLanguages) {
+function buildChatSystem(
+  langs: ChatLanguages,
+  options: ChatTurnOptions = {},
+) {
   const { interfaceLanguage, targetLanguage } = langs;
   const explanationLanguage =
     EXPLANATION_LANGUAGES[interfaceLanguage] ?? EXPLANATION_LANGUAGES.ko;
@@ -234,9 +248,25 @@ function buildChatSystem(langs: ChatLanguages) {
   const targetName = learningLanguageName(targetLanguage);
   const voice = conversationVoicePrinciples(targetLanguage);
   const spoken = conversationKoreanParallel(interfaceLanguage, targetLanguage);
+  const identity = conversationPartnerIdentity(targetLanguage);
+  const mode = options.conversationMode === "tutor" ? "tutor" : "native";
+  const tutorBlock =
+    mode === "tutor"
+      ? `
+This turn is temporary tutor mode: they are stuck. You may briefly explain in ${explanationLanguage}, then go back to speaking ${targetName} as yourself. Do not stay in teacher voice after this turn. Correction still belongs in the correction JSON field, not as a lecture inside assistantMessage.`
+      : `
+conversationMode is native. Talk like a person on a messenger. Do not teach, quiz, or explain grammar unless they asked for help.`;
+  const imageBlock = options.imageDataUrl
+    ? `
+They attached a photo. Look at it and react the way a friend would in chat. Do not caption it like a vision demo unless they asked what is in the picture. If they also sent text, reply to the text and the photo together. Correction applies to their text only, not the image.`
+    : "";
 
   if (targetLanguage === "en") {
-    return `You chat in English with the user. Correction is a separate job from talking.
+    return `${identity}
+
+You chat in English with the user. Correction is a separate job from talking.
+${tutorBlock}
+${imageBlock}
 
 The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only).
 
@@ -254,7 +284,11 @@ Return ONLY valid JSON (no markdown) with this exact shape:
     interfaceLanguage,
   })}
 
+${identity}
+
 You chat in ${targetName} with the user. Correction is a separate, DETAILED job from talking — catch real ${targetName} mistakes carefully, the same way an English tutor would for English, but using ${targetName}'s own grammar.
+${tutorBlock}
+${imageBlock}
 
 The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only).
 
@@ -422,19 +456,31 @@ async function runChat(
   message: string,
   langs: ChatLanguages,
   recent: string[] = [],
+  options: ChatTurnOptions = {},
 ): Promise<ChatPayload> {
+  const payload = JSON.stringify({
+    message,
+    recent: recent.slice(-8),
+    instruction:
+      "Reply to message. Use recent only if this turn still refers to it.",
+    hasImage: Boolean(options.imageDataUrl),
+  });
+  const userContent = options.imageDataUrl
+    ? [
+        { type: "text" as const, text: payload },
+        {
+          type: "image_url" as const,
+          image_url: { url: options.imageDataUrl },
+        },
+      ]
+    : payload;
   const completion = await openai.chat.completions.create({
     model: MODEL,
     messages: [
-      { role: "system", content: buildChatSystem(langs) },
+      { role: "system", content: buildChatSystem(langs, options) },
       {
         role: "user",
-        content: JSON.stringify({
-          message,
-          recent: recent.slice(-8),
-          instruction:
-            "Reply to message. Use recent only if this turn still refers to it.",
-        }),
+        content: userContent,
       },
     ],
     response_format: { type: "json_object" },
@@ -464,7 +510,9 @@ async function runChat(
   let explanation =
     asText(c?.explanation) || asText(parsed.explanation);
 
-  const needsExplanation = normCompare(corrected) !== normCompare(message);
+  const needsExplanation =
+    Boolean(message.trim()) &&
+    normCompare(corrected) !== normCompare(message);
   if (needsExplanation && !explanation.trim()) {
     explanation =
       FALLBACK_EXPLANATION[langs.interfaceLanguage] ?? FALLBACK_EXPLANATION.ko;
@@ -553,6 +601,7 @@ async function runStart(
         role: "system",
         content: `Start a casual ${targetName} conversation. You are not a tutor opening a lesson.
 
+${conversationPartnerIdentity(langs.targetLanguage)}
 ${conversationVoicePrinciples(langs.targetLanguage)}
 ${spokenRule}
 
@@ -658,6 +707,8 @@ export async function POST(request: NextRequest) {
     interfaceLanguage?: string;
     targetLanguage?: string;
     recent?: unknown;
+    imageDataUrl?: unknown;
+    conversationMode?: unknown;
   };
   try {
     body = await request.json();
@@ -694,8 +745,14 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
 
-  const message = body.message?.trim();
-  if (!message) {
+  const imageDataUrl = isChatImageDataUrl(body.imageDataUrl)
+    ? body.imageDataUrl
+    : undefined;
+  const conversationMode = isConversationMode(body.conversationMode)
+    ? body.conversationMode
+    : undefined;
+  const message = body.message?.trim() ?? "";
+  if (!message && !(mode === "chat" && imageDataUrl)) {
     return jsonWithCors(request, { error: "message required" }, { status: 400 });
   }
 
@@ -727,6 +784,7 @@ export async function POST(request: NextRequest) {
       message,
       langs,
       parseRecent(body.recent),
+      { conversationMode, imageDataUrl },
     );
     if (!isPremium) {
       incrementDailyUsed(userId);

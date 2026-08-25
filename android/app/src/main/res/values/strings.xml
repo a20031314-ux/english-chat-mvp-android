@@ -6,7 +6,12 @@
     <string name="custom_url_scheme">com.yourname.englishchat</string>
     <string name="process_text_analyze">분석</string>
     <string name="screen_read_running">화면 영어 분석</string>
-    <string name="screen_read_running_body">다른 앱 화면의 영어를 분석하고 있습니다. 길게 누르면 종료됩니다.</string>
+    <string name="screen_read_running_body">다른 앱 화면의 글자를 읽고 있습니다. 길게 누르면 종료됩니다.</string>
+    <string name="screen_read_finding">화면의 문장을 찾는 중...</string>
+    <string name="screen_read_pick">화면의 문장을 누르세요. 아래에서 골라도 됩니다.</string>
+    <string name="screen_read_close">닫기</string>
+    <string name="screen_read_open_in_app">앱에서 자세히 보기</string>
+    <string name="screen_read_none">이 화면에서 문장을 찾지 못했어요. 캡처할 때 브라우저를 고르고, 학습 언어가 보이게 해 주세요.</string>
     <string name="screen_read_loading">이 표현을 살펴보는 중...</string>
     <string name="screen_read_failed">설명을 불러오지 못했어요. 다시 시도해 주세요.</string>
 </resources>

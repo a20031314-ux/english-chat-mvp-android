@@ -14,28 +14,30 @@ export type MeaningUnit = {
   voiceHints?: string[];
 };
 
-/** Prefer short on-screen beats — over-merge breaks A/V sync. */
-const MAX_SEGMENTS_PER_UNIT = 5;
-const MAX_CHARS_PER_UNIT = 180;
-const MAX_UNIT_SECONDS = 10;
-const MAX_GAP_SECONDS = 0.75;
+/** Merge STT crumbs into a sentence; do not cap to a clock beat. */
+const MAX_SEGMENTS_PER_UNIT = 8;
+const MAX_CHARS_PER_UNIT = 240;
+const MAX_UNIT_SECONDS = 14;
+const MAX_GAP_SECONDS = 0.9;
 /** When the previous line clearly needs a complement, allow a longer join. */
 const OPEN_TAIL_MAX_SECONDS = 18;
-const OPEN_TAIL_MAX_CHARS = 280;
+const OPEN_TAIL_MAX_CHARS = 320;
 
 const CONTINUATION_START =
   /^(and|or|but|because|so|then|which|to|of|for|with|without|by|from|into|onto|is|are|was|were|been|being)\b/i;
 
+const NEEDS_COMPLEMENT_END =
+  /\b(tell|told|telling|make|made|making|take|took|give|gave|let|put|keep|want|wanted|try|tried|trying|need|needed|ask|asked|show|shown|call|called)\s*$/i;
+
+const CLAUSE_VERB =
+  /\b(am|is|are|was|were|be|been|being|'s|'re|'m|do|does|did|have|has|had|'ve|will|would|can|could|should|might|may|need|needs|needed|go|goes|went|get|got|know|think|want|said|say|make|made|take|see|come|came|tell|told|leave|left|call|called|talk|keep|try|tried|ask|asked|show|give|gave|feel|look|like|love|use|used|start|stop|work|play|mean|seem)\b/i;
+
 const DANGLING_END =
-  /\b(already|just|really|very|been|being|getting|going|gonna|wanna|gotta|kinda|more|most|less|so|too|not|never|always|still|also|even|only|had|have|has|was|were|is|are|am|will|would|could|should|can|do|does|did|to|a|an|the)\s*$/i;
+  /\b(already|just|really|very|been|being|getting|going|gonna|wanna|gotta|kinda|adding|making|taking|giving|looking|trying|saying|using|putting|more|most|less|so|too|not|never|always|still|also|even|only|had|have|has|was|were|is|are|am|will|would|could|should|can|do|does|did|to|a|an|the)\s*$/i;
 
 /** Trailing words that usually expect a complement (STT often splits here). */
-const INCOMPLETE_END =
-  /\b(and|or|but|because|that|than|to|of|the|a|an|with|without|for|if|when|while|which|who|as|by|from|into|my|your|our|their|his|her|its|this|these|those|an?|less|more)\s*$/i;
-
-/** "... as a first." / "the other." — STT often puts a period before the noun. */
 const OPEN_NOUN_PHRASE_END =
-  /\b(a|an|the|my|your|our|their|his|her|its|this|that|these|those)\s+(first|last|next|other|same|new|old|good|bad|little|big|more|most|few|many|own|only|main|real|right|wrong|best|worst|[a-z]{2,14})\s*[.!?…]?$/i;
+  /\b(a|an|the|my|your|our|their|his|her|its|this|that|these|those)\s+(first|last|next|other|same|new|old|good|bad|little|big|more|most|few|many|own|only|main|real|right|wrong|best|worst)\s*[.!?…]?$/i;
 
 function avgConfidence(segments: NormalizedSegment[]): number | undefined {
   const values = segments
@@ -47,6 +49,37 @@ function avgConfidence(segments: NormalizedSegment[]): number | undefined {
 
 function stripTrailingPunct(text: string): string {
   return text.trim().replace(/[.!?…]+$/g, "").trim();
+}
+
+function normalizeToken(value: string): string {
+  return value.toLowerCase().replace(/^[^a-z0-9가-힣]+|[^a-z0-9가-힣]+$/gi, "");
+}
+
+function stripLeadingOverlap(previous: string, next: string): string {
+  const prevWords = previous.split(/\s+/).filter(Boolean);
+  const nextWords = next.split(/\s+/).filter(Boolean);
+  if (prevWords.length === 0 || nextWords.length === 0) return next;
+  const max = Math.min(6, prevWords.length, nextWords.length);
+  for (let count = max; count >= 1; count -= 1) {
+    if (count === nextWords.length && nextWords.length > 4) continue;
+    const left = prevWords.slice(-count).map(normalizeToken).join(" ");
+    const right = nextWords.slice(0, count).map(normalizeToken).join(" ");
+    if (left && left === right) return nextWords.slice(count).join(" ");
+  }
+  return next;
+}
+
+function dedupeRepeatedWords(text: string): string {
+  const words = text.split(/\s+/).filter(Boolean);
+  const out: string[] = [];
+  for (const word of words) {
+    const prev = out[out.length - 1];
+    if (prev && normalizeToken(prev) === normalizeToken(word) && normalizeToken(word).length >= 3) {
+      continue;
+    }
+    out.push(word);
+  }
+  return out.join(" ");
 }
 
 function looksIncomplete(text: string): boolean {
@@ -74,7 +107,21 @@ function looksIncomplete(text: string): boolean {
     return DANGLING_END.test(core);
   }
 
-  return INCOMPLETE_END.test(core) || DANGLING_END.test(core);
+  if (endsWithOpenFunctionWord(trimmed) || OPEN_NOUN_PHRASE_END.test(trimmed)) {
+    return true;
+  }
+  if (DANGLING_END.test(core) || NEEDS_COMPLEMENT_END.test(core)) return true;
+  const words = core.split(/\s+/).filter(Boolean).length;
+  if (
+    /^(the reason|the thing|what i|what we|how i|how we)\b/i.test(core) &&
+    !/\b(is|was|are|were|'s)\b/i.test(core)
+  ) {
+    return true;
+  }
+  if (words <= 2 && !looksStandaloneReaction(trimmed)) return true;
+  if (words <= 4 && !CLAUSE_VERB.test(trimmed)) return true;
+  // Unpunctuated but already a spoken thought — do not keep gluing fast speech.
+  return false;
 }
 
 function looksContinuation(text: string): boolean {
@@ -109,9 +156,50 @@ function looksStandaloneReaction(text: string): boolean {
   );
 }
 
-/** Lowercase start = almost always a mid-sentence STT split. */
+/** Lowercase start is a continuation only for short crumbs / clause glue. */
 function looksLowercaseContinuation(text: string): boolean {
-  return /^[a-z]/.test(text.trim());
+  const trimmed = text.trim();
+  if (!/^[a-z]/.test(trimmed)) return false;
+  if (CONTINUATION_START.test(trimmed)) return true;
+  const words = trimmed.split(/\s+/).filter(Boolean).length;
+  return words <= 3;
+}
+
+/** A full spoken thought, even when ASR omitted the period. */
+function looksFinishedThought(text: string): boolean {
+  const trimmed = text.trim();
+  if (!trimmed) return false;
+  if (endsWithOpenFunctionWord(trimmed) || OPEN_NOUN_PHRASE_END.test(trimmed)) {
+    return false;
+  }
+  if (DANGLING_END.test(stripTrailingPunct(trimmed))) return false;
+  if (NEEDS_COMPLEMENT_END.test(stripTrailingPunct(trimmed))) return false;
+  if (
+    /^(the reason|the thing|what i|what we|how i|how we)\b/i.test(trimmed) &&
+    !/\b(is|was|are|were|'s)\b/i.test(trimmed)
+  ) {
+    return false;
+  }
+  const words = trimmed.split(/\s+/).filter(Boolean).length;
+  if (/[.!?…]"?$/.test(trimmed) && !looksIncomplete(trimmed) && words >= 3) {
+    return true;
+  }
+  if (CONTINUATION_START.test(trimmed)) return false;
+  if (words >= 5 && CLAUSE_VERB.test(trimmed) && /^[A-Z]/.test(trimmed)) {
+    return true;
+  }
+  if (words >= 6 && CLAUSE_VERB.test(trimmed)) return true;
+  if (words >= 8) return true;
+  return false;
+}
+
+function looksParallelLyric(prev: string, next: string): boolean {
+  const left = prev.trim().split(/\s+/).filter(Boolean);
+  const right = next.trim().split(/\s+/).filter(Boolean);
+  if (left.length < 4 || right.length < 4) return false;
+  const a = left.slice(0, 2).join(" ").toLowerCase();
+  const b = right.slice(0, 2).join(" ").toLowerCase();
+  return Boolean(a) && a === b;
 }
 
 /** Ends on a word that cannot finish a thought (e.g. "... you are the.", "... he didn't"). */
@@ -138,10 +226,32 @@ function shouldMerge(
   const first = current[0]!;
   const last = current[current.length - 1]!;
   const gap = next.startTime - last.endTime;
-  if (gap > MAX_GAP_SECONDS || gap < -0.05) return false;
+  const incompleteGuess =
+    looksIncomplete(last.normalizedText) ||
+    endsWithOpenFunctionWord(last.normalizedText);
+  const mergeGap = incompleteGuess ? 1.45 : MAX_GAP_SECONDS;
+  if (gap > mergeGap || gap < -1.8) return false;
 
-  const openTail = endsWithOpenFunctionWord(last.normalizedText);
-  const incomplete = looksIncomplete(last.normalizedText) || openTail;
+  const joinedPrev = current.map((segment) => segment.normalizedText).join(" ");
+  const openTail =
+    endsWithOpenFunctionWord(joinedPrev) ||
+    endsWithOpenFunctionWord(last.normalizedText);
+  const nextLooksFinished =
+    /[.!?…]"?$/.test(next.normalizedText.trim()) &&
+    /^[A-Z]/.test(next.normalizedText.trim());
+  // A pause plus a finished new sentence should not glue onto an open crumb.
+  if (nextLooksFinished && gap >= 0.45 && !openTail) {
+    return false;
+  }
+  if (
+    looksContinuation(next.normalizedText) &&
+    !looksStandaloneReaction(next.normalizedText) &&
+    gap <= MAX_GAP_SECONDS &&
+    !/[.!?…]"?$/.test(joinedPrev.trim())
+  ) {
+    return true;
+  }
+  const incomplete = looksIncomplete(joinedPrev) || openTail;
   const maxSpan =
     openTail || incomplete ? OPEN_TAIL_MAX_SECONDS : MAX_UNIT_SECONDS;
   const maxChars =
@@ -165,6 +275,48 @@ function shouldMerge(
     return true;
   }
 
+  const wordsOf = (value: string) => value.trim().split(/\s+/).filter(Boolean).length;
+  const prevFinished = looksFinishedThought(joinedPrev);
+  const nextFinished = looksFinishedThought(next.normalizedText);
+  if (looksParallelLyric(last.normalizedText, next.normalizedText) && !openTail) {
+    return false;
+  }
+  const prevLooksLikeCaptionLine =
+    prevFinished &&
+    !openTail &&
+    !endsWithOpenFunctionWord(last.normalizedText) &&
+    !DANGLING_END.test(stripTrailingPunct(last.normalizedText));
+  const nextLooksLikeCaptionLine =
+    nextFinished &&
+    !continuation &&
+    !lowercaseNext;
+  // Karaoke/ASR lines are often unpunctuated full thoughts. Do not glue verse
+  // lines just because they sit on adjacent clocks.
+  if (prevLooksLikeCaptionLine && nextLooksLikeCaptionLine && prevFinished) {
+    return false;
+  }
+  if (prevFinished && nextFinished && !continuation && !lowercaseNext && !openTail) {
+    return false;
+  }
+  if (
+    prevFinished &&
+    !openTail &&
+    !continuation &&
+    wordsOf(next.normalizedText) >= 5 &&
+    !lowercaseNext &&
+    !orphanNext
+  ) {
+    return false;
+  }
+  if (
+    !prevFinished &&
+    wordsOf(last.normalizedText) <= 6 &&
+    !reactionNext &&
+    (incomplete || openTail || looksIncomplete(last.normalizedText))
+  ) {
+    return true;
+  }
+
   // Capitalized VP after an unfinished clause: "... didn't" + "Murder us..."
   if (
     incomplete &&
@@ -177,8 +329,29 @@ function shouldMerge(
 
   if (
     incomplete &&
-    (continuation || gap <= 0.45 || orphanNext || lowercaseNext)
+    (continuation || orphanNext || lowercaseNext)
   ) {
+    return true;
+  }
+  if (incomplete && gap <= 1.2) {
+    if (
+      prevFinished &&
+      nextFinished &&
+      !openTail &&
+      !continuation &&
+      !lowercaseNext
+    ) {
+      return false;
+    }
+    if (
+      wordsOf(last.normalizedText) >= 5 &&
+      wordsOf(next.normalizedText) >= 5 &&
+      !openTail &&
+      !continuation &&
+      !lowercaseNext
+    ) {
+      return false;
+    }
     return true;
   }
   // Lonely content crumbs (names, final nouns) always attach to the previous beat.
@@ -235,12 +408,16 @@ function buildUnit(
     ...nextWindow.filter((text) => !localNext.includes(text)),
   ].slice(0, 3);
 
-  const original = members
-    .map((segment) => segment.normalizedText.trim())
-    .filter(Boolean)
-    .join(" ")
-    .replace(/\s+/g, " ")
-    .trim();
+  const original = dedupeRepeatedWords(
+    members
+      .map((segment) => segment.normalizedText.trim())
+      .filter(Boolean)
+      .reduce((joined, text) => {
+        if (!joined) return text;
+        const rest = stripLeadingOverlap(joined, text);
+        return rest ? `${joined} ${rest}` : joined;
+      }, ""),
+  );
   const voiceHints = voiceHintsFromText(original);
 
   return {
@@ -299,7 +476,138 @@ export function groupMeaningUnits(input: {
   if (bucket.length > 0) {
     units.push(buildUnit(bucket, all, previousWindow, nextWindow));
   }
-  return units;
+  for (let i = 1; i < units.length; i += 1) {
+    const prev = units[i - 1]!;
+    const current = units[i]!;
+    const stripped = dedupeRepeatedWords(
+      stripLeadingOverlap(prev.original, current.original),
+    );
+    if (!stripped) {
+      prev.endTime = Math.max(prev.endTime, current.endTime);
+      prev.segmentIds = [...prev.segmentIds, ...current.segmentIds];
+      units.splice(i, 1);
+      i -= 1;
+      continue;
+    }
+    current.original = stripped;
+  }
+  return refineMeaningUnits(units);
+}
+
+function unitAsSegment(unit: MeaningUnit): NormalizedSegment {
+  return {
+    id: unit.id,
+    startTime: unit.startTime,
+    endTime: unit.endTime,
+    rawText: unit.original,
+    normalizedText: unit.original,
+    confidence: unit.confidence,
+  };
+}
+
+function joinUnitText(left: string, right: string): string {
+  return dedupeRepeatedWords(
+    [left.trim(), stripLeadingOverlap(left, right).trim()]
+      .filter(Boolean)
+      .join(" "),
+  );
+}
+
+function mergeRefinedUnits(left: MeaningUnit, right: MeaningUnit): MeaningUnit {
+  return {
+    ...left,
+    original: joinUnitText(left.original, right.original),
+    endTime: Math.max(left.endTime, right.endTime),
+    segmentIds: [...left.segmentIds, ...right.segmentIds],
+    confidence:
+      left.confidence != null && right.confidence != null
+        ? (left.confidence + right.confidence) / 2
+        : left.confidence ?? right.confidence,
+    uncertain: Boolean(left.uncertain || right.uncertain),
+    nextTexts: right.nextTexts,
+  };
+}
+
+function allocateUnitParts(unit: MeaningUnit, parts: string[]): MeaningUnit[] {
+  const duration = Math.max(0.3, unit.endTime - unit.startTime);
+  const total = parts.reduce((sum, part) => sum + part.length, 0) || 1;
+  let cursor = unit.startTime;
+  return parts.map((part, index) => {
+    const span = duration * (part.length / total);
+    const startTime = cursor;
+    const endTime =
+      index === parts.length - 1 ? unit.endTime : cursor + span;
+    cursor = endTime;
+    return {
+      ...unit,
+      id: index === 0 ? unit.id : `${unit.id}-v${index}`,
+      original: part,
+      startTime,
+      endTime: Math.max(startTime + 0.25, endTime),
+      segmentIds:
+        index === 0 ? unit.segmentIds : [`${unit.id}-v${index}`],
+    };
+  });
+}
+
+function splitRunOnUnit(unit: MeaningUnit): MeaningUnit[] {
+  const text = unit.original.replace(/\s+/g, " ").trim();
+  if (!text) return [unit];
+
+  const punctParts = text
+    .split(/(?<=[.!?…])["']?\s+/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+  if (
+    punctParts.length >= 2 &&
+    punctParts.every((part) => part.split(/\s+/).filter(Boolean).length >= 4)
+  ) {
+    const safeBreaks = punctParts.every((part, index) => {
+      if (index === punctParts.length - 1) return true;
+      return looksFinishedThought(part) && !looksIncomplete(part);
+    });
+    if (safeBreaks) return allocateUnitParts(unit, punctParts);
+  }
+
+  const words = text.split(/\s+/).filter(Boolean);
+  if (words.length < 10) return [unit];
+  for (let index = 4; index <= words.length - 4; index += 1) {
+    const left = words.slice(0, index).join(" ");
+    const right = words.slice(index).join(" ");
+    const nextWord = (words[index] ?? "").replace(/[^a-zA-Z']/g, "");
+    if (
+      looksFinishedThought(left) &&
+      !endsWithOpenFunctionWord(left) &&
+      /^(I|We|You|They|He|She|And|But|So|Then)$/.test(nextWord) &&
+      looksFinishedThought(right)
+    ) {
+      return allocateUnitParts(unit, [left, right]);
+    }
+  }
+  return [unit];
+}
+
+function mergeFragmentUnits(units: MeaningUnit[]): MeaningUnit[] {
+  const out: MeaningUnit[] = [];
+  for (const unit of units) {
+    const prev = out[out.length - 1];
+    if (prev && shouldMerge([unitAsSegment(prev)], unitAsSegment(unit))) {
+      out[out.length - 1] = mergeRefinedUnits(prev, unit);
+      continue;
+    }
+    out.push({ ...unit });
+  }
+  return out;
+}
+
+/**
+ * Second look at 1st-pass study lines: split run-on cues, then merge
+ * leftover fragments. Does not replace the first grouping pass.
+ */
+export function refineMeaningUnits(units: MeaningUnit[]): MeaningUnit[] {
+  if (units.length === 0) return units;
+  const split = units.flatMap((unit) => splitRunOnUnit(unit));
+  return mergeFragmentUnits(split);
 }
 
 /** Exported for unit tests. */
@@ -309,6 +617,7 @@ export const meaningUnitHeuristics = {
   looksOrphanFragment,
   looksStandaloneReaction,
   looksLowercaseContinuation,
+  looksFinishedThought,
   endsWithOpenFunctionWord,
   shouldMerge,
 };

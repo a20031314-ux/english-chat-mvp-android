@@ -223,7 +223,7 @@ export function VocabPreviewProvider({
           <div
             role="dialog"
             aria-modal="true"
-            className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 shadow-xl"
+            className="relative z-10 w-full max-w-md overflow-hidden rounded-2xl border border-white/10 bg-[#121212] p-4 shadow-xl"
           >
             <VocabWordPanel
               word={previewWord}
@@ -239,7 +239,7 @@ export function VocabPreviewProvider({
               type="button"
               onClick={close}
               disabled={isVocabSaving}
-              className="mt-2 w-full rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-50"
+              className="mt-2 w-full rounded-xl border border-white/10 bg-[#121212] px-3 py-2.5 text-sm font-medium text-slate-200 hover:bg-white/10 disabled:opacity-50"
             >
               {ui.vocabPreviewClose}
             </button>
@@ -251,7 +251,7 @@ export function VocabPreviewProvider({
           className="pointer-events-none fixed bottom-6 left-1/2 z-[110] max-w-[min(90vw,20rem)] -translate-x-1/2 px-4"
           role="status"
         >
-          <div className="whitespace-pre-line rounded-xl border border-slate-200 bg-white px-4 py-3 text-center text-sm leading-snug text-slate-800 shadow-lg">
+          <div className="whitespace-pre-line rounded-xl border border-white/10 bg-[#121212] px-4 py-3 text-center text-sm leading-snug text-slate-100 shadow-lg">
             {toast}
           </div>
         </div>

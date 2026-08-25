@@ -108,7 +108,7 @@ function ChannelAvatar({
   }
   return (
     <span
-      className={`flex ${box} items-center justify-center rounded-full bg-slate-200 font-semibold ${ring}`}
+      className={`flex ${box} items-center justify-center rounded-full bg-white/10 font-semibold ${ring}`}
     >
       {name.slice(0, 1)}
     </span>
@@ -578,7 +578,7 @@ export function ContentDiscoveryPanel({
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className="w-full rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700 hover:bg-slate-100"
+          className="w-full rounded-xl border border-dashed border-white/15 bg-white/5 px-4 py-3 text-sm font-medium text-slate-200 hover:bg-white/10"
         >
           {ui.discoverCta}
         </button>
@@ -591,17 +591,17 @@ export function ContentDiscoveryPanel({
 
   return (
     <div className={compact ? "mt-4" : "mt-6"}>
-      <div className="overflow-hidden rounded-2xl border border-slate-200">
+      <div className="overflow-hidden rounded-2xl border border-white/10">
         <button
           type="button"
           onClick={collapse}
-          className="w-full border-b border-dashed border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100"
+          className="w-full border-b border-dashed border-white/15 bg-[#121212] px-4 py-2 text-sm font-medium text-slate-300 hover:bg-white/10"
         >
           {ui.discoverClose}
         </button>
-        <div className={`bg-slate-50 ${compact ? "p-3" : "p-4"}`}>
+        <div className={`bg-white/5 ${compact ? "p-3" : "p-4"}`}>
       <div>
-        <p className="text-sm font-semibold text-slate-900">
+        <p className="text-sm font-semibold text-slate-100">
           {ui.discoverTitle}
         </p>
         <p className="mt-0.5 text-xs text-slate-500">{ui.discoverSubtitle}</p>
@@ -625,8 +625,8 @@ export function ContentDiscoveryPanel({
               }}
               className={`flex-1 rounded-xl px-3 py-2 text-sm font-medium ${
                 discoverMode === tab.id
-                  ? "bg-slate-900 text-white"
-                  : "border border-slate-300 bg-white text-slate-700"
+                  ? "bg-[#e8e8e4] text-neutral-900"
+                  : "border border-white/15 bg-[#121212] text-slate-200"
               }`}
             >
               {tab.label}
@@ -664,13 +664,13 @@ export function ContentDiscoveryPanel({
                   void findChannels(channelQuery, false);
                 }}
                 placeholder={ui.discoverChannelSearchPlaceholder}
-                className="min-w-0 flex-1 rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-slate-500"
+                className="min-w-0 flex-1 rounded-xl border border-white/15 bg-[#121212] px-3 py-2 text-sm text-slate-100 outline-none focus:border-white/40"
               />
               <button
                 type="button"
                 onClick={() => void findChannels(channelQuery, false)}
                 disabled={channelSearching}
-                className="shrink-0 rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-60"
+                className="shrink-0 rounded-xl border border-white/15 bg-[#121212] px-3 py-2 text-sm font-medium text-slate-200 hover:bg-white/10 disabled:opacity-60"
               >
                 {channelSearching
                   ? ui.discoverSearching
@@ -678,7 +678,7 @@ export function ContentDiscoveryPanel({
               </button>
             </div>
             {channelHits.length > 0 ? (
-              <div className="mt-2 overflow-hidden rounded-xl border border-slate-200">
+              <div className="mt-2 overflow-hidden rounded-xl border border-white/10">
               <button
                 type="button"
                 onClick={() => {
@@ -686,11 +686,11 @@ export function ContentDiscoveryPanel({
                   setChannelHits([]);
                   setChannelSearching(false);
                 }}
-                className="w-full border-b border-dashed border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100"
+                className="w-full border-b border-dashed border-white/15 bg-[#121212] px-4 py-2 text-sm font-medium text-slate-300 hover:bg-white/10"
               >
                 {ui.discoverClose}
               </button>
-              <ul className="divide-y divide-slate-100 bg-white">
+              <ul className="divide-y divide-slate-100 bg-[#121212]">
                 {channelHits.map((hit) => {
                   const added = channels.some(
                     (row) => row.channelId === hit.channelId,
@@ -700,21 +700,24 @@ export function ContentDiscoveryPanel({
                       key={hit.channelId}
                       className="flex items-center gap-2 px-2 py-2"
                     >
-                      <a
-                        href={hit.url}
-                        target="_blank"
-                        rel="noreferrer"
+                      <button
+                        type="button"
+                        disabled={loading}
                         title={ui.discoverChannelOpen}
-                        className="shrink-0"
+                        onClick={() => {
+                          setChannelHits([]);
+                          void search(undefined, hit.channelId);
+                        }}
+                        className="shrink-0 disabled:opacity-60"
                       >
                         <ChannelAvatar
                           name={hit.name}
                           thumbnailUrl={hit.thumbnailUrl}
                           size="sm"
                         />
-                      </a>
+                      </button>
                       <div className="min-w-0 flex-1">
-                        <p className="truncate text-sm font-medium text-slate-900">
+                        <p className="truncate text-sm font-medium text-slate-100">
                           {hit.name}
                         </p>
                         {typeof hit.subscriberCount === "number" ? (
@@ -733,7 +736,7 @@ export function ContentDiscoveryPanel({
                         type="button"
                         disabled={added}
                         onClick={() => addChannel(hit)}
-                        className="shrink-0 rounded-lg border border-slate-200 px-2 py-1 text-xs font-medium text-slate-700 hover:bg-slate-50 disabled:opacity-50"
+                        className="shrink-0 rounded-lg border border-white/10 px-2 py-1 text-xs font-medium text-slate-200 hover:bg-white/10 disabled:opacity-50"
                       >
                         {added
                           ? ui.discoverChannelAdded
@@ -760,23 +763,25 @@ export function ContentDiscoveryPanel({
                       <div
                         key={channel.channelId}
                         className={`flex w-16 shrink-0 flex-col items-center ${
-                          selected ? "text-slate-900" : "text-slate-600"
+                          selected ? "text-slate-100" : "text-slate-300"
                         }`}
                       >
                         <div className="relative">
-                          <a
-                            href={channel.url}
-                            target="_blank"
-                            rel="noreferrer"
+                          <button
+                            type="button"
+                            disabled={loading}
                             title={ui.discoverChannelOpen}
-                            className="block"
+                            onClick={() =>
+                              void search(undefined, channel.channelId)
+                            }
+                            className="block disabled:opacity-60"
                           >
                             <ChannelAvatar
                               name={channel.name}
                               thumbnailUrl={channel.thumbnailUrl}
                               selected={selected}
                             />
-                          </a>
+                          </button>
                           {saved ? (
                             <button
                               type="button"
@@ -838,23 +843,25 @@ export function ContentDiscoveryPanel({
                     <div
                       key={channel.channelId}
                       className={`flex w-16 shrink-0 flex-col items-center ${
-                        selected ? "text-slate-900" : "text-slate-600"
+                        selected ? "text-slate-100" : "text-slate-300"
                       }`}
                     >
                       <div className="relative">
-                        <a
-                          href={channel.url}
-                          target="_blank"
-                          rel="noreferrer"
+                        <button
+                          type="button"
+                          disabled={loading}
                           title={ui.discoverChannelOpen}
-                          className="block"
+                          onClick={() =>
+                            void search(undefined, channel.channelId)
+                          }
+                          className="block disabled:opacity-60"
                         >
                           <ChannelAvatar
                             name={channel.name}
                             thumbnailUrl={channel.thumbnailUrl}
                             selected={selected}
                           />
-                        </a>
+                        </button>
                         <button
                           type="button"
                           title={ui.discoverChannelRemove}
@@ -900,8 +907,8 @@ export function ContentDiscoveryPanel({
                 onClick={() => setTopicCategory(category.id)}
                 className={`rounded-full px-3 py-1 text-xs font-medium ${
                   topicCategory === category.id
-                    ? "bg-slate-900 text-white"
-                    : "border border-slate-300 bg-white text-slate-700"
+                    ? "bg-[#e8e8e4] text-neutral-900"
+                    : "border border-white/15 bg-[#121212] text-slate-200"
                 }`}
               >
                 {topicLabel(ui, category.id)}
@@ -918,7 +925,7 @@ export function ContentDiscoveryPanel({
             value={naturalQuery}
             onChange={(event) => setNaturalQuery(event.target.value)}
             placeholder={ui.discoverNaturalPlaceholder}
-            className="w-full rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-slate-500"
+            className="w-full rounded-xl border border-white/15 bg-[#121212] px-3 py-2 text-sm text-slate-100 outline-none focus:border-white/40"
           />
         </label>
 
@@ -936,8 +943,8 @@ export function ContentDiscoveryPanel({
                 onClick={() => setContentType(option.id)}
                 className={`flex-1 rounded-xl px-3 py-2 text-sm font-medium ${
                   contentType === option.id
-                    ? "bg-slate-900 text-white"
-                    : "border border-slate-300 bg-white text-slate-700"
+                    ? "bg-[#e8e8e4] text-neutral-900"
+                    : "border border-white/15 bg-[#121212] text-slate-200"
                 }`}
               >
                 {option.label}
@@ -958,8 +965,8 @@ export function ContentDiscoveryPanel({
                 onClick={() => setDuration(option.id)}
                 className={`rounded-full px-3 py-1 text-xs font-medium ${
                   duration === option.id
-                    ? "bg-slate-900 text-white"
-                    : "border border-slate-300 bg-white text-slate-700"
+                    ? "bg-[#e8e8e4] text-neutral-900"
+                    : "border border-white/15 bg-[#121212] text-slate-200"
                 }`}
               >
                 {option.label}
@@ -980,8 +987,8 @@ export function ContentDiscoveryPanel({
                 onClick={() => setLevel(option.id)}
                 className={`rounded-full px-3 py-1 text-xs font-medium ${
                   level === option.id
-                    ? "bg-slate-900 text-white"
-                    : "border border-slate-300 bg-white text-slate-700"
+                    ? "bg-[#e8e8e4] text-neutral-900"
+                    : "border border-white/15 bg-[#121212] text-slate-200"
                 }`}
               >
                 {option.label}
@@ -1003,8 +1010,8 @@ export function ContentDiscoveryPanel({
                   onClick={() => setRequireOriginalCaptions(option.id)}
                   className={`rounded-full px-3 py-1 text-xs font-medium ${
                     requireOriginalCaptions === option.id
-                      ? "bg-slate-900 text-white"
-                      : "border border-slate-300 bg-white text-slate-700"
+                      ? "bg-[#e8e8e4] text-neutral-900"
+                      : "border border-white/15 bg-[#121212] text-slate-200"
                   }`}
                 >
                   {option.label}
@@ -1017,7 +1024,7 @@ export function ContentDiscoveryPanel({
         <button
           type="submit"
           disabled={loading}
-          className="w-full rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-medium text-white hover:bg-slate-800 disabled:opacity-60"
+          className="w-full rounded-xl bg-[#e8e8e4] shadow-[0_0_14px_rgba(255,255,255,0.28)] px-4 py-2.5 text-sm font-medium text-neutral-900 hover:bg-[#f5f5f3] disabled:opacity-60"
         >
           {loading ? ui.discoverSearching : ui.discoverSearch}
         </button>
@@ -1026,14 +1033,14 @@ export function ContentDiscoveryPanel({
       </form>
 
       {error ? (
-        <p className="mt-3 text-center text-sm text-rose-700">{error}</p>
+        <p className="mt-3 text-center text-sm text-rose-300">{error}</p>
       ) : null}
 
       {visible.length > 0 ? (
         <div
           className={
             discoverMode === "channel"
-              ? "mt-4 overflow-hidden rounded-2xl border border-slate-200"
+              ? "mt-4 overflow-hidden rounded-2xl border border-white/10"
               : ""
           }
         >
@@ -1041,7 +1048,7 @@ export function ContentDiscoveryPanel({
             <button
               type="button"
               onClick={clearResults}
-              className="w-full border-b border-dashed border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100"
+              className="w-full border-b border-dashed border-white/15 bg-[#121212] px-4 py-2 text-sm font-medium text-slate-300 hover:bg-white/10"
             >
               {ui.discoverClose}
             </button>
@@ -1054,7 +1061,7 @@ export function ContentDiscoveryPanel({
           {visible.map((item) => (
             <li
               key={item.id}
-              className="overflow-hidden rounded-2xl border border-slate-200 bg-white"
+              className="overflow-hidden rounded-2xl border border-white/10 bg-[#121212]"
             >
               {item.thumbnail ? (
                 // eslint-disable-next-line @next/next/no-img-element
@@ -1066,7 +1073,7 @@ export function ContentDiscoveryPanel({
                 />
               ) : null}
               <div className="p-3">
-                <p className="text-sm font-semibold leading-snug text-slate-900">
+                <p className="text-sm font-semibold leading-snug text-slate-100">
                   {item.title}
                 </p>
                 <p className="mt-1 text-xs text-slate-500">
@@ -1087,7 +1094,7 @@ export function ContentDiscoveryPanel({
                     .join(" · ")}
                 </p>
                 {item.preview ? (
-                  <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-slate-600">
+                  <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-slate-300">
                     {item.preview}
                   </p>
                 ) : null}
@@ -1101,7 +1108,7 @@ export function ContentDiscoveryPanel({
                     href={item.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2 text-center text-sm font-medium text-slate-700 hover:bg-slate-50"
+                    className="flex-1 rounded-xl border border-white/10 bg-[#121212] px-3 py-2 text-center text-sm font-medium text-slate-200 hover:bg-white/10"
                   >
                     {item.type === "video"
                       ? ui.discoverOpenPreview
@@ -1110,7 +1117,7 @@ export function ContentDiscoveryPanel({
                   <button
                     type="button"
                     onClick={() => onSelect(item)}
-                    className="flex-1 rounded-xl bg-slate-900 px-3 py-2 text-sm font-medium text-white hover:bg-slate-800"
+                    className="flex-1 rounded-xl bg-[#e8e8e4] shadow-[0_0_14px_rgba(255,255,255,0.28)] px-3 py-2 text-sm font-medium text-neutral-900 hover:bg-[#f5f5f3]"
                   >
                     {ui.discoverLearn}
                   </button>
@@ -1131,7 +1138,7 @@ export function ContentDiscoveryPanel({
                   void prefetchMore();
                 }
               }}
-              className={`rounded-xl border border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-700 hover:bg-slate-100 disabled:opacity-60 ${
+              className={`rounded-xl border border-white/15 bg-[#121212] px-4 py-2 text-sm font-medium text-slate-200 hover:bg-white/10 disabled:opacity-60 ${
                 discoverMode === "channel"
                   ? "mx-3 mb-3 w-[calc(100%-1.5rem)]"
                   : "mt-3 w-full"
@@ -1144,7 +1151,7 @@ export function ContentDiscoveryPanel({
             <button
               type="button"
               onClick={clearResults}
-              className="w-full border-t border-dashed border-slate-300 bg-white px-4 py-2 text-sm font-medium text-slate-600 hover:bg-slate-100"
+              className="w-full border-t border-dashed border-white/15 bg-[#121212] px-4 py-2 text-sm font-medium text-slate-300 hover:bg-white/10"
             >
               {ui.discoverClose}
             </button>

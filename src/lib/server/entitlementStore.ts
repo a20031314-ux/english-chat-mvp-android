@@ -69,3 +69,105 @@ export function incrementDailyReportsUsed(userId: string, amount = 1) {
   usageByUser.set(userId, next);
   return next.reportsUsed;
 }
+
+type VideoPrepRecord = {
+  month: string;
+  usedPoints: number;
+  billedVideoIds: string[];
+};
+
+const globalVideoPrepStore = globalThis as typeof globalThis & {
+  __videoPrepUsageByUser?: Map<string, VideoPrepRecord>;
+};
+
+const videoPrepByUser =
+  globalVideoPrepStore.__videoPrepUsageByUser ??
+  (globalVideoPrepStore.__videoPrepUsageByUser = new Map<
+    string,
+    VideoPrepRecord
+  >());
+
+const globalCatalogTrialStore = globalThis as typeof globalThis & {
+  __catalogTrialByUser?: Map<string, string[]>;
+};
+
+const catalogTrialByUser =
+  globalCatalogTrialStore.__catalogTrialByUser ??
+  (globalCatalogTrialStore.__catalogTrialByUser = new Map<string, string[]>());
+
+function monthKey() {
+  const now = new Date();
+  const month = String(now.getMonth() + 1).padStart(2, "0");
+  return `${now.getFullYear()}-${month}`;
+}
+
+function getOrInitVideoPrep(userId: string): VideoPrepRecord {
+  const month = monthKey();
+  const current = videoPrepByUser.get(userId);
+  if (!current || current.month !== month) {
+    const next: VideoPrepRecord = {
+      month,
+      usedPoints: 0,
+      billedVideoIds: [],
+    };
+    videoPrepByUser.set(userId, next);
+    return next;
+  }
+  if (!Array.isArray(current.billedVideoIds)) {
+    const next = { ...current, billedVideoIds: [] as string[] };
+    videoPrepByUser.set(userId, next);
+    return next;
+  }
+  return current;
+}
+
+export function getMonthlyImportPointsUsed(userId: string) {
+  return getOrInitVideoPrep(userId).usedPoints;
+}
+
+export function getBilledImportVideoIds(userId: string) {
+  return getOrInitVideoPrep(userId).billedVideoIds;
+}
+
+export function addMonthlyImportPoints(
+  userId: string,
+  points: number,
+  videoId?: string,
+) {
+  const billed = Math.max(0, Math.ceil(points));
+  const current = getOrInitVideoPrep(userId);
+  const billedVideoIds =
+    videoId && !current.billedVideoIds.includes(videoId)
+      ? [...current.billedVideoIds, videoId]
+      : current.billedVideoIds;
+  const next = {
+    ...current,
+    usedPoints: current.usedPoints + billed,
+    billedVideoIds,
+  };
+  videoPrepByUser.set(userId, next);
+  return next.usedPoints;
+}
+
+/** @deprecated Seconds view of import points. */
+export function getMonthlyVideoPrepUsed(userId: string) {
+  return getMonthlyImportPointsUsed(userId) * 180;
+}
+
+/** @deprecated */
+export function addMonthlyVideoPrepUsed(userId: string, seconds: number) {
+  return addMonthlyImportPoints(userId, Math.ceil(seconds / 180));
+}
+
+export function getCatalogTrialVideoIds(userId: string) {
+  return catalogTrialByUser.get(userId) ?? [];
+}
+
+export function addCatalogTrialVideo(userId: string, videoId: string) {
+  const current = getCatalogTrialVideoIds(userId);
+  if (current.includes(videoId)) return current;
+  const next = [...current, videoId];
+  catalogTrialByUser.set(userId, next);
+  return next;
+}
+

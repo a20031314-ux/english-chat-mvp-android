@@ -15,6 +15,9 @@ export async function fetchWithTimeout(
 export const YOUTUBE_ANDROID_UA =
   "com.google.android.youtube/20.10.38 (Linux; U; Android 14) gzip";
 
+export const YOUTUBE_ANDROID_VR_UA =
+  "com.google.android.apps.youtube.vr.oculus/1.65.10 (Linux; U; Android 12; eureka-user Build/SQ3A.220605.009.A1) gzip";
+
 export const YOUTUBE_IOS_UA =
   "com.google.ios.youtube/20.10.4 (iPhone16,2; U; CPU iOS 18_1 like Mac OS X)";
 

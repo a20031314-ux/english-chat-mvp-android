@@ -25,13 +25,13 @@ const markClasses = {
   default: {
     remove:
       "rounded-sm bg-rose-500/15 px-0.5 font-semibold text-rose-700 underline decoration-2 decoration-rose-500 underline-offset-2",
-    add: "rounded-sm bg-teal-500/15 px-0.5 font-semibold text-teal-800 underline decoration-2 decoration-teal-600 underline-offset-2",
+    add: "rounded-sm bg-neutral-200 px-0.5 font-semibold text-neutral-900 underline decoration-2 decoration-neutral-600 underline-offset-2",
     gap: "mx-0.5 inline-flex items-center rounded-sm border border-dashed border-rose-400 bg-rose-50 px-1 py-0.5 text-[11px] font-semibold leading-none text-rose-700",
   },
   onDark: {
     remove:
       "rounded-sm bg-rose-400/35 px-0.5 font-semibold text-rose-100 underline decoration-2 decoration-rose-300 underline-offset-2",
-    add: "rounded-sm bg-teal-400/30 px-0.5 font-semibold text-teal-100 underline decoration-2 decoration-teal-200 underline-offset-2",
+    add: "rounded-sm bg-white/20 px-0.5 font-semibold text-white underline decoration-2 decoration-white underline-offset-2",
     gap: "mx-0.5 inline-flex items-center rounded-sm border border-dashed border-rose-200/80 bg-rose-400/20 px-1 py-0.5 text-[11px] font-semibold leading-none text-rose-100",
   },
 };

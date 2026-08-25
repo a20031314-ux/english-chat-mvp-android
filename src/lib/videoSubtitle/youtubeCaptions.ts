@@ -1,9 +1,11 @@
 import { BROWSER_UA, fetchWithTimeout } from "@/lib/videoSubtitle/http";
+import { nativeGetText } from "@/lib/videoSubtitle/nativeHttp";
 import { asNumber, asRecord, asString } from "@/lib/videoSubtitle/parseModelJson";
 import {
   captionLanguageMatches,
   isManualCaptionTrack,
 } from "@/lib/videoSubtitle/captionLanguages";
+import { uniqueTextAdvance } from "@/lib/videoSubtitle/sttChunks";
 import type { CaptionTrack, SttSegment, SttWord } from "@/lib/videoSubtitle/types";
 
 export type CaptionFetchOptions = {
@@ -116,11 +118,52 @@ function mergeTracks(tracks: CaptionTrack[]): CaptionTrack[] {
   return [...byKey.values()];
 }
 
+function segsToText(segs: unknown[]): string {
+  return segs
+    .map((seg) => {
+      const part = asRecord(seg);
+      return asString(part?.utf8)?.replace(/\n/g, " ") ?? "";
+    })
+    .join("")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function wordsAcrossSpan(text: string, start: number, end: number): SttWord[] {
+  const parts = text.split(/\s+/).filter(Boolean);
+  if (parts.length === 0) return [];
+  const expected = Math.min(12, Math.max(0.4, parts.length / 3.2));
+  const from = Math.max(0, start);
+  let to = Math.max(from + 0.35, end);
+  if (parts.length >= 3 && to - from < expected * 0.5) {
+    to = from + expected;
+  }
+  const step = (to - from) / parts.length;
+  return parts.map((word, index) => ({
+    word,
+    start: from + index * step,
+    end: from + (index + 1) * step,
+  }));
+}
+
 function wordsFromJson3(payload: unknown): SttWord[] {
   const root = asRecord(payload);
   const events = root?.events;
   if (!Array.isArray(events)) return [];
   const words: SttWord[] = [];
+  let roll: { startMs: number; endMs: number; text: string } | null = null;
+
+  const flushRoll = () => {
+    if (!roll?.text) {
+      roll = null;
+      return;
+    }
+    words.push(
+      ...wordsAcrossSpan(roll.text, roll.startMs / 1000, roll.endMs / 1000),
+    );
+    roll = null;
+  };
+
   for (const event of events) {
     const row = asRecord(event);
     if (!row) continue;
@@ -128,77 +171,101 @@ function wordsFromJson3(payload: unknown): SttWord[] {
     if (startMs == null) continue;
     const segs = Array.isArray(row.segs) ? row.segs : [];
     if (segs.length === 0) continue;
-    for (const seg of segs) {
-      const part = asRecord(seg);
-      const utf8 = asString(part?.utf8)?.replace(/\n/g, " ");
-      if (!utf8 || !utf8.trim() || utf8 === "\n") continue;
-      const offset = asNumber(part?.tOffsetMs) ?? 0;
-      const start = (startMs + offset) / 1000;
-      const prev = words[words.length - 1];
-      if (prev && start > prev.start) {
-        prev.end = Math.max(prev.end, start);
-      }
-      words.push({
-        word: utf8.trim(),
-        start,
-        end: start + 0.35,
-      });
+    const durationMs = asNumber(row.dDurationMs) ?? 0;
+    const hasOffsets = segs.some((seg) => {
+      const offset = asNumber(asRecord(seg)?.tOffsetMs) ?? 0;
+      return offset > 0;
+    });
+    const text = segsToText(segs);
+    if (!text) {
+      flushRoll();
+      continue;
     }
+
+    if (hasOffsets) {
+      flushRoll();
+      for (const seg of segs) {
+        const part = asRecord(seg);
+        const utf8 = asString(part?.utf8)?.replace(/\n/g, " ");
+        if (!utf8 || !utf8.trim() || utf8 === "\n") continue;
+        const offset = asNumber(part?.tOffsetMs) ?? 0;
+        const start = (startMs + offset) / 1000;
+        const prev = words[words.length - 1];
+        if (prev && start > prev.start) {
+          prev.end = Math.max(prev.end, start);
+        }
+        words.push({
+          word: utf8.trim(),
+          start,
+          end: start + 0.35,
+        });
+      }
+      const last = words[words.length - 1];
+      if (last && durationMs > 0) {
+        last.end = Math.max(last.end, startMs / 1000 + durationMs / 1000);
+      }
+      continue;
+    }
+
+    const endMs = startMs + Math.max(durationMs, 400);
+    if (roll) {
+      const advance = uniqueTextAdvance(roll.text, text);
+      if (
+        advance !== null &&
+        startMs >= roll.startMs &&
+        startMs - roll.startMs < 8000
+      ) {
+        const nextText = advance
+          ? `${roll.text} ${advance}`.replace(/\s+/g, " ").trim()
+          : roll.text;
+        const nextWords = nextText.split(/\s+/).filter(Boolean).length;
+        const nextSpan = (Math.max(roll.endMs, endMs) - roll.startMs) / 1000;
+        if (nextWords > 28 || nextSpan > 14) {
+          flushRoll();
+          roll = {
+            startMs,
+            endMs,
+            text: advance || text,
+          };
+          continue;
+        }
+        roll.text = nextText;
+        roll.endMs = Math.max(roll.endMs, endMs);
+        continue;
+      }
+    }
+    flushRoll();
+    roll = { startMs, endMs, text };
   }
+  flushRoll();
   for (let i = 0; i < words.length; i += 1) {
     const current = words[i]!;
     const next = words[i + 1];
-    if (next) current.end = Math.max(current.start + 0.08, next.start);
+    if (next && next.start > current.start) {
+      current.end = Math.max(current.start + 0.08, next.start);
+    }
   }
   return words;
 }
 
-function flushCue(words: SttWord[], startIndex: number): SttSegment | null {
-  const slice = words.slice(startIndex);
-  if (slice.length === 0) return null;
-  const text = slice
+function groupWords(words: SttWord[]): SttSegment[] {
+  if (words.length === 0) return [];
+  const text = words
     .map((word) => word.word)
     .join(" ")
     .replace(/\s+/g, " ")
     .trim();
-  if (!text) return null;
-  const startTime = slice[0]!.start;
-  const endTime = Math.max(startTime + 0.4, slice[slice.length - 1]!.end);
-  return {
-    id: `c-${Math.round(startTime * 1000)}`,
-    text,
-    startTime,
-    endTime,
-    words: slice,
-  };
-}
-
-function groupWords(words: SttWord[]): SttSegment[] {
-  if (words.length === 0) return [];
-  const segments: SttSegment[] = [];
-  let cueStart = 0;
-  for (let i = 0; i < words.length; i += 1) {
-    const word = words[i]!;
-    const prev = i > cueStart ? words[i - 1] : null;
-    const cue = words.slice(cueStart, i);
-    const duration = cue.length > 0 ? word.end - words[cueStart]!.start : 0;
-    const gap = prev ? word.start - prev.end : 0;
-    const punct = /[.?!]$/.test(prev?.word ?? "");
-    const shouldFlush =
-      i > cueStart &&
-      (gap > 0.32 || duration > 3.2 || cue.length >= 10 || punct);
-    if (shouldFlush) {
-      const segment = flushCue(words.slice(cueStart, i), 0);
-      if (segment) segments.push(segment);
-      cueStart = i;
-    }
-  }
-  const last = flushCue(words.slice(cueStart), 0);
-  if (last) segments.push(last);
-  return segments.map((segment, index) => ({
-    ...segment,
-    id: `c-${index}-${Math.round(segment.startTime * 1000)}`,
-  }));
+  if (!text) return [];
+  const startTime = Math.max(0, words[0]!.start);
+  return [
+    {
+      id: `c-0-${Math.round(startTime * 1000)}`,
+      text,
+      startTime,
+      endTime: Math.max(startTime + 0.25, words[words.length - 1]!.end),
+      words,
+    },
+  ];
 }
 
 function parseVtt(vtt: string): SttSegment[] {
@@ -316,21 +383,32 @@ async function fetchCaptionFmt(
   videoId?: string,
   cookie?: string,
 ): Promise<SttSegment[]> {
-  const response = await fetchWithTimeout(withFmt(track.baseUrl, fmt), {
-    timeoutMs: 15000,
-    headers: captionHeaders(videoId, cookie),
-  });
-  if (!response.ok) {
+  const url = withFmt(track.baseUrl, fmt);
+  const headers = captionHeaders(videoId, cookie) as Record<string, string>;
+  const native = await nativeGetText(url, headers, 15000);
+  let status = 0;
+  let body = "";
+  if (native) {
+    status = native.status;
+    body = native.text;
+  } else {
+    const response = await fetchWithTimeout(url, {
+      timeoutMs: 15000,
+      headers,
+    });
+    status = response.status;
+    if (response.ok) body = await response.text();
+  }
+  if (status < 200 || status >= 300) {
     console.error("[youtube-captions-http]", {
       lang: track.languageCode,
       kind: track.kind,
       client: track.client,
       fmt,
-      status: response.status,
+      status,
     });
     return [];
   }
-  const body = await response.text();
   const segments = parseCaptionBody(body);
   if (segments.length === 0) {
     console.error("[youtube-captions-empty]", {

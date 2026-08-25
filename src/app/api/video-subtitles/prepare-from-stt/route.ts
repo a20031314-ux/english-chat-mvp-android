@@ -1,5 +1,9 @@
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import {
+  assertVideoPrepAllowed,
+  recordVideoPrepForRequest,
+} from "@/lib/server/videoPrepGate";
 import { asNumber, asRecord, asString } from "@/lib/videoSubtitle/parseModelJson";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { prepareVideoTranscript } from "@/lib/videoSubtitle/pipeline";
@@ -65,12 +69,26 @@ export async function POST(request: NextRequest) {
   }
 
   try {
+    const last = segments[segments.length - 1];
+    const hintedDuration = last ? Math.ceil(last.endTime) : 0;
+    const limits = assertVideoPrepAllowed(request, {
+      durationSeconds: hintedDuration || null,
+      videoUrl,
+    });
     const prepared = await prepareVideoTranscript(
       videoUrl,
       locale,
       targetLanguage,
-      { sttOverride: segments },
+      {
+        sttOverride: segments,
+        maxDurationSeconds: limits.maxDurationSeconds,
+        remainingPrepSeconds:
+          limits.decision.kind === "import"
+            ? limits.remainingPrepSeconds
+            : undefined,
+      },
     );
+    recordVideoPrepForRequest(request, prepared.durationSeconds, videoUrl);
     return jsonWithCors(request, prepared);
   } catch (error) {
     if (error instanceof VideoPipelineError) {
@@ -79,7 +97,12 @@ export async function POST(request: NextRequest) {
           ? 503
           : error.code === "INVALID_URL"
             ? 400
-            : 422;
+            : error.code === "VIDEO_QUOTA" ||
+                error.code === "VIDEO_TOO_LONG" ||
+                error.code === "CATALOG_LOCKED" ||
+                error.code === "IMPORT_LOCKED"
+              ? 403
+              : 422;
       return jsonWithCors(request, { error: error.code }, { status });
     }
     console.error("[video-subtitles/prepare-from-stt]", error);

@@ -22,6 +22,7 @@ type MessageBubbleProps = {
     translation?: string;
   };
   onTranslate?: () => void;
+  imageUrl?: string;
 };
 
 function EnglishLine({
@@ -77,6 +78,7 @@ export function MessageBubble({
   onWordClick,
   labels,
   onTranslate,
+  imageUrl,
 }: MessageBubbleProps) {
   const isUser = role === "user";
   const canTranslate = Boolean(onTranslate && labels.translate);
@@ -85,7 +87,7 @@ export function MessageBubble({
   const listenText = showCorrection
     ? correctedLine
     : attachedEnglish?.trim() || message;
-  const tone = isUser ? "onDark" : "default";
+  const tone = isUser ? "default" : "onDark";
   const analyzeMain =
     !attachedEnglish?.trim() &&
     !showCorrection &&
@@ -99,10 +101,17 @@ export function MessageBubble({
       <div
         className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm shadow-sm sm:max-w-[75%] ${
           isUser
-            ? "rounded-br-sm bg-slate-900 text-white"
-            : "rounded-bl-sm bg-white text-slate-900"
+            ? "rounded-br-sm bg-[#e8e8e4] text-neutral-900 shadow-[0_0_18px_rgba(255,255,255,0.28)]"
+            : "rounded-bl-sm border border-white/10 bg-[#161616] text-slate-50"
         }`}
       >
+        {imageUrl ? (
+          <img
+            src={imageUrl}
+            alt=""
+            className="mb-2 max-h-52 w-full rounded-xl object-cover"
+          />
+        ) : null}
         {showCorrection && correction ? (
           <AnalyzableEnglish
             sentence={correction.original}
@@ -139,14 +148,14 @@ export function MessageBubble({
         {showCorrection && correction ? (
           <div
             className={`mt-2 border-t pt-2 ${
-              isUser ? "border-slate-600" : "border-slate-200"
+              isUser ? "border-slate-600" : "border-white/10"
             }`}
           >
             <AnalyzableEnglish
               sentence={correction.corrected}
               tone={tone}
               className={`text-sm leading-relaxed ${
-                isUser ? "text-teal-100" : ""
+                isUser ? "text-neutral-800" : ""
               }`}
               diff={{
                 original: correction.original,
@@ -158,7 +167,7 @@ export function MessageBubble({
         ) : attachedEnglish?.trim() ? (
           <div
             className={`mt-2 border-t pt-2 ${
-              isUser ? "border-slate-600" : "border-slate-200"
+              isUser ? "border-slate-600" : "border-white/10"
             }`}
           >
             <EnglishLine
@@ -170,7 +179,7 @@ export function MessageBubble({
               onWordClick={onWordClick}
               translation={message}
               className={`text-sm leading-relaxed ${
-                isUser ? "text-slate-100" : ""
+                isUser ? "text-neutral-800" : ""
               }`}
             />
           </div>
@@ -180,8 +189,8 @@ export function MessageBubble({
           <div
             className={`mt-2 border-t pt-2 text-xs leading-relaxed ${
               isUser
-                ? "border-slate-600 text-slate-200"
-                : "border-slate-200 text-slate-600"
+                ? "border-neutral-400 text-neutral-700"
+                : "border-white/10 text-slate-300"
             }`}
           >
             {labels.translation ? (
@@ -210,7 +219,7 @@ export function MessageBubble({
               className={`rounded-md border px-2 py-1 text-xs transition disabled:cursor-default disabled:opacity-60 ${
                 isUser
                   ? "border-slate-600 bg-slate-800 text-white hover:bg-slate-700"
-                  : "border-slate-300 bg-white text-slate-700 hover:bg-slate-50"
+                  : "border-white/10 bg-white/5 text-slate-200 hover:bg-white/10"
               }`}
             >
               {isTranslating

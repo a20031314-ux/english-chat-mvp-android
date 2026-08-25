@@ -11,12 +11,30 @@ import {
   VideoPlayer,
   type VideoPlayerHandle,
 } from "@/components/videoLearning/VideoPlayer";
+import { CatalogLibrary } from "@/components/videoLearning/CatalogLibrary";
 import { VideoUrlInput } from "@/components/videoLearning/VideoUrlInput";
 import { ContentDiscoveryPanel } from "@/components/contentDiscovery/ContentDiscoveryPanel";
+import { useBillingUi } from "@/components/BillingScreen";
+import { usePremium } from "@/contexts/PremiumContext";
 import type { Locale, UICopy } from "@/lib/copy";
+import {
+  evaluateVideoAccess,
+  maxVideoPrepSeconds,
+  monthlyImportPoints,
+  videoPrepMinutes,
+} from "@/lib/billing/videoPrep";
+import { FREE_CATALOG_TRIAL_COUNT } from "@/lib/billing/config";
+import {
+  getBilledImportVideoIds,
+  getCatalogTrialVideoIds,
+  getImportPointsUsed,
+  recordCatalogTrial,
+  recordImportCharge,
+} from "@/lib/billing/videoPrepQuota";
+import { currentLibraryPack } from "@/lib/videoLibrary/catalog";
 import { useActiveSubtitle } from "@/hooks/useActiveSubtitle";
-import { parseYouTubeInput, type VideoSubtitle } from "@/lib/videoLearning";
-import { mergeVideoCues, newCueIds, splitVideoCue } from "@/lib/videoCueEdit";
+import { parseYouTubeInput, type VideoSubtitle, cueHasUiLanguage, openingCuesHaveUiLanguage } from "@/lib/videoLearning";
+import { cuesLookUserEdited, mergeVideoCues, newCueIds, splitVideoCue } from "@/lib/videoCueEdit";
 import {
   generateLineInterpretations,
   glossStudyCues,
@@ -25,6 +43,16 @@ import {
   VideoSubtitleClientError,
   type PreparedTranscript,
 } from "@/lib/videoLearningService";
+import {
+  deleteVideoStudySession,
+  filterVideoStudySessionsByLanguage,
+  loadVideoStudySessions,
+  storedCuesToSubtitles,
+  upsertVideoStudySession,
+  type VideoStudySession,
+} from "@/lib/videoStudySessions";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
+import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
 
 type CueEditKind = "merge" | "split";
 
@@ -36,16 +64,37 @@ type CueEditSnapshot = {
 function cloneCues(cues: VideoSubtitle[]): VideoSubtitle[] {
   return cues.map((cue) => ({ ...cue }));
 }
-import {
-  deleteVideoStudySession,
-  filterVideoStudySessionsByLanguage,
-  loadVideoStudySessions,
-  storedCuesToSubtitles,
-  upsertVideoStudySession,
-  type VideoStudySession,
-} from "@/lib/videoStudySessions";
-import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
-import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
+
+function resolveSegmentEndFor(
+  item: VideoSubtitle,
+  index: number,
+  cues: VideoSubtitle[],
+  maxSpan = 24,
+): number {
+  const next = index >= 0 ? cues[index + 1] : undefined;
+  let end = item.endTime;
+  if (next && next.startTime > item.startTime) {
+    end = Math.min(end, next.startTime);
+  }
+  if (!(end > item.startTime + 0.25)) {
+    end = Math.min(
+      item.startTime + 0.3,
+      next?.startTime ?? item.startTime + 0.3,
+    );
+  }
+  return Math.min(end, item.startTime + maxSpan);
+}
+
+function shouldHoldForGloss(cues: VideoSubtitle[], time: number): boolean {
+  const upcoming = cues.find(
+    (cue) =>
+      cue.original.trim().length > 0 &&
+      cue.endTime > time + 0.05 &&
+      !cueHasUiLanguage(cue),
+  );
+  if (!upcoming) return false;
+  return upcoming.startTime <= time + 0.45;
+}
 
 type Phase = "input" | "extracting" | "watching";
 
@@ -59,6 +108,9 @@ export function VideoLearningTab({
   active?: boolean;
 }) {
   const learningLanguage = useLearningLanguageOptional();
+  const { isPremium } = usePremium();
+  const { openBilling } = useBillingUi();
+  const [quotaVersion, setQuotaVersion] = useState(0);
   const targetLanguage =
     learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
   const playerRef = useRef<VideoPlayerHandle>(null);
@@ -90,14 +142,25 @@ export function VideoLearningTab({
   const editHistoryRef = useRef<CueEditSnapshot[]>([]);
   const [editHistoryLen, setEditHistoryLen] = useState(0);
   const [lastEditKind, setLastEditKind] = useState<CueEditKind | null>(null);
+  const [canRestoreOriginal, setCanRestoreOriginal] = useState(false);
+  const [waitingGloss, setWaitingGloss] = useState(false);
   /** After merge/split, ignore bulk interpretation overwrites. */
   const cuesDirtyRef = useRef(false);
+  const englishCuesRef = useRef<VideoSubtitle[]>([]);
+  const glossInFlightRef = useRef(false);
+  const pausedForGlossRef = useRef(false);
+  const pendingPlayIdRef = useRef<string | null>(null);
+  const currentTimeRef = useRef(0);
+  const playingIdRef = useRef<string | null>(null);
+  englishCuesRef.current = englishCues;
+  playingIdRef.current = playingId;
 
   const replaceBaseline = useCallback((cues: VideoSubtitle[]) => {
     baselineCuesRef.current = cloneCues(cues);
     editHistoryRef.current = [];
     setEditHistoryLen(0);
     setLastEditKind(null);
+    setCanRestoreOriginal(false);
   }, []);
 
   const cue = useActiveSubtitle(currentTime, englishCues, "english");
@@ -140,6 +203,8 @@ export function VideoLearningTab({
           cues[cues.length - 1]!.endTime,
         ),
         cues,
+        baselineCues:
+          baselineCuesRef.current.length > 0 ? baselineCuesRef.current : cues,
         languageCode: targetLanguage,
       });
       setSessionsVersion((value) => value + 1);
@@ -153,29 +218,97 @@ export function VideoLearningTab({
       seq: number,
       signal: AbortSignal,
       videoMeta: { videoId: string; videoUrl: string },
+      initialCues: VideoSubtitle[],
     ) => {
       const summary = prepared.context.summary?.trim() || "";
       if (summary) setSituationSummary(summary);
+      glossInFlightRef.current = true;
+      let openedWatch = false;
+
+      const openWatch = (partial: VideoSubtitle[]) => {
+        if (openedWatch || seq !== loadSeq.current) return;
+        openedWatch = true;
+        setEnglishCues(partial);
+        setProgressPercent(100);
+        setPhase("watching");
+        upsertVideoStudySession({
+          videoId: videoMeta.videoId,
+          videoUrl: videoMeta.videoUrl,
+          situationSummary: summary || undefined,
+          durationSeconds: prepared.durationSeconds,
+          cues: partial,
+          baselineCues:
+            baselineCuesRef.current.length > 0
+              ? baselineCuesRef.current
+              : partial,
+          languageCode: targetLanguage,
+        });
+        setSessionsVersion((value) => value + 1);
+        setToast(ui.videoLearnSessionSavedToast);
+      };
+
+      const resumeIfReady = (partial: VideoSubtitle[]) => {
+        const pendingId = pendingPlayIdRef.current;
+        if (pendingId) {
+          const pending = partial.find((cue) => cue.id === pendingId);
+          if (pending && cueHasUiLanguage(pending)) {
+            pendingPlayIdRef.current = null;
+            setWaitingGloss(false);
+            const index = partial.findIndex((cue) => cue.id === pending.id);
+            const end = resolveSegmentEndFor(pending, index, partial);
+            setPlayingId(pending.id);
+            setPlayingIds([pending.id]);
+            setCurrentTime(pending.startTime);
+            playerRef.current?.playSegment(pending.startTime, end);
+          }
+        }
+        if (pausedForGlossRef.current && !shouldHoldForGloss(partial, currentTimeRef.current)) {
+          pausedForGlossRef.current = false;
+          setWaitingGloss(false);
+          playerRef.current?.play();
+        }
+      };
 
       void generateLineInterpretations(prepared, {
         locale,
         interfaceLanguage: locale,
         targetLanguage,
+        cues: initialCues,
         signal,
+        onProgress: (progress) => {
+          if (seq !== loadSeq.current) return;
+          setStepIndex(
+            { speech: 0, context: 1, translate: 2, cleanup: 3 }[progress.step],
+          );
+          setProgressPercent(55 + Math.round(progress.percent * 0.4));
+        },
         onPartial: (partial, done) => {
           if (seq !== loadSeq.current) return;
-          if (cuesDirtyRef.current) return;
+          if (cuesDirtyRef.current) {
+            if (done) glossInFlightRef.current = false;
+            return;
+          }
           setEnglishCues(partial);
           if (editHistoryRef.current.length === 0) {
             baselineCuesRef.current = cloneCues(partial);
           }
+          if (!openedWatch && (openingCuesHaveUiLanguage(partial) || done)) {
+            openWatch(partial);
+          }
+          resumeIfReady(partial);
           if (done) {
+            glossInFlightRef.current = false;
+            if (!openedWatch) openWatch(partial);
             upsertVideoStudySession({
               videoId: videoMeta.videoId,
               videoUrl: videoMeta.videoUrl,
               situationSummary: summary || undefined,
               durationSeconds: prepared.durationSeconds,
               cues: partial,
+              baselineCues:
+                baselineCuesRef.current.length > 0
+                  ? baselineCuesRef.current
+                  : partial,
               languageCode: targetLanguage,
             });
             setSessionsVersion((value) => value + 1);
@@ -183,6 +316,9 @@ export function VideoLearningTab({
         },
       }).catch((error) => {
         if (seq !== loadSeq.current || signal.aborted) return;
+        glossInFlightRef.current = false;
+        setWaitingGloss(false);
+        if (!openedWatch) openWatch(englishCuesRef.current);
         if (
           error instanceof VideoSubtitleClientError &&
           error.code === "TIMEOUT"
@@ -191,11 +327,34 @@ export function VideoLearningTab({
         }
       });
     },
-    [locale, targetLanguage],
+    [locale, targetLanguage, ui.videoLearnSessionSavedToast],
   );
 
   const onTimeUpdate = useCallback((seconds: number) => {
+    currentTimeRef.current = seconds;
     setCurrentTime(seconds);
+    if (playingIdRef.current) return;
+    if (!glossInFlightRef.current) {
+      if (pausedForGlossRef.current) {
+        pausedForGlossRef.current = false;
+        setWaitingGloss(false);
+        playerRef.current?.play();
+      }
+      return;
+    }
+    if (shouldHoldForGloss(englishCuesRef.current, seconds)) {
+      if (!pausedForGlossRef.current) {
+        pausedForGlossRef.current = true;
+        setWaitingGloss(true);
+        playerRef.current?.pause();
+      }
+      return;
+    }
+    if (pausedForGlossRef.current) {
+      pausedForGlossRef.current = false;
+      setWaitingGloss(false);
+      playerRef.current?.play();
+    }
   }, []);
 
   const onSegmentEnded = useCallback(() => {
@@ -204,18 +363,8 @@ export function VideoLearningTab({
   }, []);
 
   const resolveSegmentEnd = useCallback(
-    (item: VideoSubtitle, index: number, maxSpan = 10) => {
-      const next = index >= 0 ? englishCues[index + 1] : undefined;
-      let end = item.endTime;
-      // Stop just before the next cue so YouTube seek/pause doesn't spill over.
-      if (next && next.startTime > item.startTime + 0.2) {
-        end = Math.min(end, next.startTime - 0.05);
-      }
-      if (!(end > item.startTime + 0.25)) {
-        end = item.startTime + 2.5;
-      }
-      return Math.min(end, item.startTime + maxSpan);
-    },
+    (item: VideoSubtitle, index: number, maxSpan = 24) =>
+      resolveSegmentEndFor(item, index, englishCues, maxSpan),
     [englishCues],
   );
 
@@ -225,10 +374,18 @@ export function VideoLearningTab({
         playerRef.current?.pause();
         setPlayingId(null);
         setPlayingIds([]);
+        pendingPlayIdRef.current = null;
         return;
       }
+      if (glossInFlightRef.current && !cueHasUiLanguage(item)) {
+        pendingPlayIdRef.current = item.id;
+        setSelectedId(item.id);
+        setWaitingGloss(true);
+        return;
+      }
+      pendingPlayIdRef.current = null;
       const index = englishCues.findIndex((row) => row.id === item.id);
-      const end = resolveSegmentEnd(item, index, 10);
+      const end = resolveSegmentEnd(item, index, 24);
 
       setRangeIds([]);
       setSelectedId(item.id);
@@ -288,6 +445,7 @@ export function VideoLearningTab({
       setEditHistoryLen(editHistoryRef.current.length);
       setLastEditKind(kind);
       cuesDirtyRef.current = true;
+      setCanRestoreOriginal(true);
       setEnglishCues(next);
       setPlayingId(null);
       setPlayingIds([]);
@@ -378,6 +536,7 @@ export function VideoLearningTab({
     setLastEditKind(editHistoryRef.current.at(-1)?.kind ?? null);
     if (editHistoryRef.current.length === 0) {
       cuesDirtyRef.current = false;
+      setCanRestoreOriginal(false);
     }
     const restored = cloneCues(last.cues);
     setEnglishCues(restored);
@@ -405,6 +564,7 @@ export function VideoLearningTab({
     setEditHistoryLen(0);
     setLastEditKind(null);
     cuesDirtyRef.current = false;
+    setCanRestoreOriginal(false);
     const restored = cloneCues(baseline);
     setEnglishCues(restored);
     setPlayingId(null);
@@ -446,9 +606,24 @@ export function VideoLearningTab({
     setDraftUrl(session.videoUrl);
     setVideoId(session.videoId);
     setVideoUrl(session.videoUrl);
-    const restored = regroupStudyCues(storedCuesToSubtitles(session.cues));
+    const current = storedCuesToSubtitles(session.cues);
+    const restored = cuesLookUserEdited(current)
+      ? current
+      : regroupStudyCues(current);
     setEnglishCues(restored);
-    replaceBaseline(restored);
+    const baseline = session.baselineCues?.length
+      ? storedCuesToSubtitles(session.baselineCues)
+      : restored;
+    replaceBaseline(baseline);
+    setCanRestoreOriginal(
+      baseline.length > 0 &&
+        (restored.length !== baseline.length ||
+          restored.some(
+            (cue, index) =>
+              cue.id !== baseline[index]?.id ||
+              cue.original !== baseline[index]?.original,
+          )),
+    );
     setSituationSummary(session.situationSummary ?? "");
     setDurationSeconds(session.durationSeconds);
     setCurrentTime(0);
@@ -457,6 +632,10 @@ export function VideoLearningTab({
     setPlayingIds([]);
     setRangeIds([]);
     setWatchFullscreen(false);
+    setWaitingGloss(false);
+    glossInFlightRef.current = false;
+    pausedForGlossRef.current = false;
+    pendingPlayIdRef.current = null;
     setProgressPercent(100);
     setPhase("watching");
   };
@@ -472,7 +651,7 @@ export function VideoLearningTab({
     setToast(ui.videoLearnSessionSavedToast);
   };
 
-  const loadVideo = (rawUrl?: string) => {
+  const loadVideo = (rawUrl?: string, durationSeconds?: number) => {
     const parsed = parseYouTubeInput(rawUrl ?? draftUrl);
     if (!parsed.ok) {
       setUrlError(ui.videoLearnInvalidUrl);
@@ -485,6 +664,36 @@ export function VideoLearningTab({
     );
     if (existing) {
       openSession(existing);
+      return;
+    }
+
+    const decision = evaluateVideoAccess({
+      isPremium,
+      videoId: parsed.videoId,
+      language: targetLanguage,
+      durationSeconds,
+      usedPoints: getImportPointsUsed(),
+      billedVideoIds: getBilledImportVideoIds(),
+      trialVideoIds: getCatalogTrialVideoIds(),
+    });
+    if (!decision.ok) {
+      if (decision.reason === "too_long") {
+        setUrlError(
+          ui.videoLearnTooLong.replace(
+            "{max}",
+            String(videoPrepMinutes(decision.maxSeconds)),
+          ),
+        );
+      } else if (decision.reason === "import_locked") {
+        setUrlError(ui.videoLearnImportLocked);
+        openBilling();
+      } else if (decision.reason === "catalog_locked") {
+        setUrlError(ui.videoLearnCatalogLocked);
+        openBilling();
+      } else {
+        setUrlError(ui.videoLearnQuotaReached);
+        if (!isPremium) openBilling();
+      }
       return;
     }
 
@@ -516,6 +725,7 @@ export function VideoLearningTab({
             locale,
             interfaceLanguage: locale,
             targetLanguage,
+            isPremium,
             signal: abort.signal,
             onStatus: (step) => {
               if (seq !== loadSeq.current) return;
@@ -536,29 +746,23 @@ export function VideoLearningTab({
         );
         if (seq !== loadSeq.current) return;
         preparedRef.current = prepared;
+        if (decision.kind === "library") {
+          if (!isPremium) recordCatalogTrial(parsed.videoId);
+        } else if (decision.billablePoints > 0) {
+          recordImportCharge(parsed.videoId, decision.billablePoints);
+        }
+        setQuotaVersion((value) => value + 1);
         const summary = prepared.context.summary?.trim() || "";
         setEnglishCues(cues);
         replaceBaseline(cues);
         setSituationSummary(summary);
         setDurationSeconds(prepared.durationSeconds);
-        setProgressPercent(100);
-        setPhase("watching");
-        upsertVideoStudySession({
+        setStepIndex(2);
+        setProgressPercent(55);
+        startInterpretation(prepared, seq, abort.signal, {
           videoId: parsed.videoId,
           videoUrl: parsed.url,
-          situationSummary: summary || undefined,
-          durationSeconds: prepared.durationSeconds,
-          cues,
-          languageCode: targetLanguage,
-        });
-        setSessionsVersion((value) => value + 1);
-        setToast(ui.videoLearnSessionSavedToast);
-        if (prepared.captionMode !== "official-ui") {
-          startInterpretation(prepared, seq, abort.signal, {
-            videoId: parsed.videoId,
-            videoUrl: parsed.url,
-          });
-        }
+        }, cues);
       } catch (error) {
         if (seq !== loadSeq.current || abort.signal.aborted) return;
         const code =
@@ -571,8 +775,27 @@ export function VideoLearningTab({
             ? ui.videoLearnNoSpeech
             : code === "UNKNOWN_LANGUAGE"
               ? ui.videoLearnWrongLanguage
-              : ui.videoLearnFailed,
+              : code === "VIDEO_QUOTA"
+                ? ui.videoLearnQuotaReached
+                : code === "IMPORT_LOCKED"
+                  ? ui.videoLearnImportLocked
+                  : code === "CATALOG_LOCKED"
+                    ? ui.videoLearnCatalogLocked
+                : code === "VIDEO_TOO_LONG"
+                  ? ui.videoLearnTooLong.replace(
+                      "{max}",
+                      String(videoPrepMinutes(maxVideoPrepSeconds(isPremium))),
+                    )
+                  : ui.videoLearnFailed,
         );
+        if (
+          (code === "VIDEO_QUOTA" ||
+            code === "IMPORT_LOCKED" ||
+            code === "CATALOG_LOCKED") &&
+          !isPremium
+        ) {
+          openBilling();
+        }
       }
     })();
   };
@@ -596,6 +819,10 @@ export function VideoLearningTab({
     setPlayingIds([]);
     setRangeIds([]);
     setWatchFullscreen(false);
+    setWaitingGloss(false);
+    glossInFlightRef.current = false;
+    pausedForGlossRef.current = false;
+    pendingPlayIdRef.current = null;
   };
 
   const durationHint = Math.max(
@@ -607,19 +834,19 @@ export function VideoLearningTab({
   );
 
   return (
-    <div className="relative flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
-      <header className="flex shrink-0 items-center justify-between gap-2 border-b border-slate-200 px-4 py-3">
+    <div className="relative flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#0a0a0a]">
+      <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
         <div className="flex min-w-0 items-center gap-2">
           {phase !== "input" ? (
             <button
               type="button"
               onClick={reset}
-              className="shrink-0 text-sm text-slate-500 hover:text-slate-800"
+              className="shrink-0 text-sm text-slate-400 hover:text-white"
             >
               {ui.videoLearnBack}
             </button>
           ) : null}
-          <h1 className="truncate text-base font-semibold text-slate-900">
+          <h1 className="truncate text-base font-semibold text-white">
             {ui.homeTabVideo}
           </h1>
         </div>
@@ -628,7 +855,7 @@ export function VideoLearningTab({
       {phase === "input" || phase === "extracting" ? (
         <div className="min-h-0 flex-1 overflow-y-auto">
           {phase === "extracting" ? (
-            <div className="sticky top-0 z-10 border-b border-slate-200 bg-white/95 backdrop-blur-[2px]">
+            <div className="sticky top-0 z-10 border-b border-white/10 bg-white/95 backdrop-blur-[2px]">
               <SubtitleGenerationStatus
                 ui={ui}
                 stepIndex={stepIndex}
@@ -640,12 +867,41 @@ export function VideoLearningTab({
             ui={ui}
             value={draftUrl}
             error={urlError}
+            hint={
+              isPremium
+                ? ui.videoLearnQuotaHint
+                    .replace("{used}", String(getImportPointsUsed()))
+                    .replace(
+                      "{limit}",
+                      String(monthlyImportPoints(true)),
+                    )
+                : ui.videoLearnQuotaHint
+                    .replace(
+                      "{used}",
+                      String(getCatalogTrialVideoIds().length),
+                    )
+                    .replace("{limit}", String(FREE_CATALOG_TRIAL_COUNT))
+            }
             onChange={(value) => {
               setDraftUrl(value);
               setUrlError(null);
             }}
             onSubmit={() => loadVideo()}
+            library={
+              <CatalogLibrary
+                ui={ui}
+                clips={currentLibraryPack(targetLanguage)?.clips ?? []}
+                trialVideoIds={getCatalogTrialVideoIds()}
+                isPremium={isPremium}
+                onOpen={(url, durationSeconds) => loadVideo(url, durationSeconds)}
+                onLocked={() => {
+                  setUrlError(ui.videoLearnCatalogLocked);
+                  openBilling();
+                }}
+              />
+            }
           >
+            {isPremium ? (
             <ContentDiscoveryPanel
               ui={ui}
               locale={locale}
@@ -653,9 +909,10 @@ export function VideoLearningTab({
               fixedContentType="video"
               compact
               onSelect={(candidate) => {
-                loadVideo(candidate.url);
+                loadVideo(candidate.url, candidate.durationSeconds);
               }}
             />
+            ) : null}
             <SavedVideoSessions
               ui={ui}
               sessions={savedSessions}
@@ -691,6 +948,11 @@ export function VideoLearningTab({
                 onTimeUpdate={onTimeUpdate}
                 onSegmentEnd={onSegmentEnded}
               />
+              {waitingGloss ? (
+                <p className="absolute bottom-12 left-2 right-2 z-10 rounded-lg bg-black/70 px-2.5 py-1.5 text-center text-[11px] text-white">
+                  {ui.videoLearnWaitingGloss}
+                </p>
+              ) : null}
               {!watchFullscreen ? (
                 <button
                   type="button"
@@ -743,7 +1005,7 @@ export function VideoLearningTab({
                 rangeIds={rangeIds}
                 canUndoEdit={editHistoryLen > 0}
                 lastEditKind={lastEditKind}
-                canResetAllCues={editHistoryLen > 0}
+                canResetAllCues={editHistoryLen > 0 || canRestoreOriginal}
                 onBundleRange={onBundleRange}
                 onClearRange={clearRange}
                 onPlaySegment={playCueSegment}
@@ -763,7 +1025,7 @@ export function VideoLearningTab({
           className="pointer-events-none absolute bottom-4 left-1/2 z-20 max-w-[min(90vw,20rem)] -translate-x-1/2 px-4"
           role="status"
         >
-          <div className="rounded-xl border border-slate-200 bg-white px-4 py-2.5 text-center text-sm text-slate-800 shadow-lg">
+          <div className="rounded-xl border border-white/10 bg-[#121212] px-4 py-2.5 text-center text-sm text-slate-100 shadow-lg">
             {toast}
           </div>
         </div>

@@ -11,6 +11,7 @@ import {
   localeTargetName,
   type SubtitleDraft,
 } from "@/lib/videoSubtitle/subtitleDraft";
+import { speechRegisterHint } from "@/lib/videoSubtitle/speechRegister";
 import type { VideoContext } from "@/lib/videoSubtitle/types";
 
 const BATCH = 10;
@@ -29,7 +30,11 @@ ${koExamples}Return a JSON object:
 {"revisions":[{"id":"...","naturalSubtitle":"..."}]} — every id required, non-empty.`;
 }
 
-function rewritePoliceSystem(target: string, locale: string): string {
+function rewritePoliceSystem(
+  target: string,
+  locale: string,
+  context: VideoContext,
+): string {
   const koCraft =
     locale === "ko"
       ? `HARD RULES — prefer 의역 (what a native would say) over 직역 (word mapping):
@@ -47,7 +52,9 @@ function rewritePoliceSystem(target: string, locale: string): string {
 - Never keep source phrase scaffolding in ${target} word order.
 - Compress into short spoken ${target}. Never leave source-language content words inside captions.
 `;
-  return `You police on-screen ${target} video captions for movies/drama.
+  return `You police on-screen ${target} video captions so they match THIS video's speech genre (commentary, news, chat, lecture — not a default movie/drama voice).
+
+${speechRegisterHint(context, locale)}
 
 ${koCraft}- Proper names may remain; ordinary vocabulary must not.
 - If naturalSubtitle is stiff, literal, textbook, or calque — rewrite it.
@@ -73,7 +80,7 @@ async function rewriteLines(input: {
   if (input.drafts.length === 0) return;
   const system = input.emergency
     ? rewriteEmergencySystem(input.target, input.locale)
-    : rewritePoliceSystem(input.target, input.locale);
+    : rewritePoliceSystem(input.target, input.locale, input.context);
 
   const completion = await input.client.chat.completions.create({
     model: chatModel(),

@@ -12,6 +12,7 @@ import { VocabularyPanel } from "@/components/VocabularyPanel";
 import { StudyMaterialsTab } from "@/components/studyMaterials/StudyMaterialsTab";
 import { WebReadingTab } from "@/components/WebReadingTab";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
+import { BillingUiProvider, BillingOpenButton } from "@/components/BillingScreen";
 import { LearningLanguageProvider } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
 import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
@@ -114,22 +115,24 @@ function AppHomeInner({
   ];
 
   return (
+    <BillingUiProvider locale={locale} ui={ui}>
     <ExpressionInsightProvider locale={locale} ui={ui}>
       <EnglishAnalysisProvider locale={locale} ui={ui}>
           <div
-            className="mx-auto flex h-[100dvh] w-full max-w-4xl flex-col bg-slate-100"
+            className="mx-auto flex h-[100dvh] w-full max-w-4xl flex-col bg-transparent"
             dir={learningLanguageTextDir(locale)}
             lang={locale}
           >
-            <div className="flex shrink-0 flex-wrap items-center gap-2 border-b border-slate-200/80 bg-white/90 px-3 py-1.5 sm:px-4">
+            <div className="relative z-50 flex shrink-0 flex-wrap items-center gap-2 overflow-visible border-b border-white/10 bg-[#050505]/80 px-3 py-1.5 backdrop-blur-md sm:px-4">
               <TargetLanguageSelector label={ui.learningLanguageLabel} />
               <LanguageSelector
                 locale={locale}
                 onChange={setLocale}
                 label={ui.uiLanguageLabel}
               />
+              <BillingOpenButton ui={ui} />
             </div>
-            <div className="relative min-h-0 flex-1 overflow-hidden p-2 pb-0 sm:p-4 sm:pb-0">
+            <div className="relative z-0 min-h-0 flex-1 overflow-hidden p-2 pb-0 sm:p-4 sm:pb-0">
               <div
                 className={
                   tab === "chat"
@@ -183,9 +186,9 @@ function AppHomeInner({
               </div>
 
               {tab === "vocab" ? (
-                <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
-                  <header className="flex shrink-0 items-center justify-between gap-2 border-b border-slate-200 px-4 py-3">
-                    <h1 className="text-base font-semibold text-slate-900">
+                <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
+                  <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
+                    <h1 className="text-base font-semibold text-white">
                       {ui.homeTabVocab}
                     </h1>
                   </header>
@@ -197,7 +200,7 @@ function AppHomeInner({
             </div>
 
             <nav
-              className="shrink-0 border-t border-slate-200 bg-white px-1 pb-[env(safe-area-inset-bottom)] pt-1 shadow-[0_-4px_16px_rgba(15,23,42,0.04)]"
+              className="shrink-0 border-t border-white/10 bg-[#050505]/95 px-1 pb-[env(safe-area-inset-bottom)] pt-1 backdrop-blur-md"
               aria-label="Main"
             >
               <div className="mx-auto grid max-w-4xl grid-cols-5 gap-0.5">
@@ -212,11 +215,18 @@ function AppHomeInner({
                       onClick={() => openTab(item.id)}
                       aria-label={item.label}
                       aria-current={active ? "page" : undefined}
-                      className={`flex min-h-[3.25rem] flex-col items-center justify-center rounded-xl px-1 py-1.5 transition ${
+                      className={`flex min-h-[3.5rem] flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1.5 transition ${
                         active ? meta.activeBg : meta.idleBg
                       }`}
                     >
                       <Icon active={active} />
+                      <span
+                        className={`max-w-full truncate text-[10px] font-medium ${
+                          active ? "text-[#e4e4e0]" : "text-slate-400"
+                        }`}
+                      >
+                        {item.label}
+                      </span>
                     </button>
                   );
                 })}
@@ -225,6 +235,7 @@ function AppHomeInner({
           </div>
         </EnglishAnalysisProvider>
     </ExpressionInsightProvider>
+    </BillingUiProvider>
   );
 }
 

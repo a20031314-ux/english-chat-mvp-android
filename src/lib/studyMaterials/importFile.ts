@@ -56,7 +56,10 @@ export async function importStudyFiles(
   }
   const kinds = list.map((file) => detectStudyFileType(file));
   if (list.length > 1 && kinds.every((kind) => kind === "image")) {
-    return importStudyImages(list, onStage, options);
+    throw new StudyImportError(
+      "image_ocr_unavailable",
+      "Photo reading is turned off for now.",
+    );
   }
   return importStudyFile(list[0], onStage, options);
 }
@@ -76,7 +79,10 @@ export async function importStudyFile(
   }
 
   if (kind === "image") {
-    return importStudyImages([file], onStage, options);
+    throw new StudyImportError(
+      "image_ocr_unavailable",
+      "Photo reading is turned off for now.",
+    );
   }
 
   onStage?.("reading");

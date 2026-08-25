@@ -12,6 +12,7 @@ import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 import type { Locale, UICopy } from "@/lib/copy";
 import { rememberEnglishAnalysis } from "@/lib/englishAnalysisRecent";
 import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
+import { studyDocumentSourceType } from "@/lib/salience/sourceContext";
 import type { ContentSelection } from "@/lib/studyMaterials/contentSelection";
 import {
   locationForSentence,
@@ -92,54 +93,8 @@ export function StudyReader({
 
   useEffect(() => {
     if (document.type !== "image") return;
-    const repairKey = `${document.id}:${OCR_LAYOUT_VERSION}`;
-    if (overlayRepair.current === repairKey) return;
-    const needsRepair = document.sections.some(
-      (section) =>
-        Boolean(section.imageDataUrl) && imageOverlaysNeedRefresh(section),
-    );
-    if (!needsRepair) {
-      overlayRepair.current = repairKey;
-      return;
-    }
-
-    let cancelled = false;
-    setOcrHint(ui.studyOcrPage);
-    void (async () => {
-      const sections = [];
-      for (const section of document.sections) {
-        if (
-          !section.imageDataUrl ||
-          !imageOverlaysNeedRefresh(section)
-        ) {
-          sections.push(section);
-          continue;
-        }
-        const ocr = await requestStudyImageOcr({
-          image: section.imageDataUrl,
-          targetLanguage,
-        });
-        if (cancelled) return;
-        sections.push(applyOcrToImageSection(section, ocr));
-      }
-      if (cancelled) return;
-      overlayRepair.current = repairKey;
-      const next = { ...document, sections };
-      await saveStudyDocument(next);
-      if (cancelled) return;
-      onDocumentChange(next);
-      setOcrHint("");
-    })().catch(() => {
-      if (!cancelled) {
-        overlayRepair.current = repairKey;
-        setOcrHint("");
-      }
-    });
-
-    return () => {
-      cancelled = true;
-    };
-  }, [document, onDocumentChange, targetLanguage, ui.studyOcrPage]);
+    overlayRepair.current = `${document.id}:${OCR_LAYOUT_VERSION}`;
+  }, [document.id, document.type]);
 
   useEffect(() => {
     if (originalViewer) return;
@@ -253,6 +208,7 @@ export function StudyReader({
         sentence,
         paragraph,
         language: targetLanguage,
+        sourceType: studyDocumentSourceType(document.type),
       }),
     );
   };
@@ -281,6 +237,7 @@ export function StudyReader({
         paragraph,
         selectedText: selected,
         language: targetLanguage,
+        sourceType: studyDocumentSourceType(document.type),
       }),
     );
   };
@@ -327,6 +284,7 @@ export function StudyReader({
       previous: selection.previous,
       next: selection.next,
       language: targetLanguage,
+      sourceType: studyDocumentSourceType(document.type),
       intent:
         action === "analyze" || selection.mode === "sentence"
           ? "sentence"
@@ -365,16 +323,16 @@ export function StudyReader({
 
   return (
     <div className="flex h-full min-h-0 flex-col">
-      <header className="flex shrink-0 items-center gap-2 border-b border-slate-200 px-3 py-2.5">
+      <header className="flex shrink-0 items-center gap-2 border-b border-white/10 px-3 py-2.5">
         <button
           type="button"
           onClick={onBack}
-          className="shrink-0 rounded-lg px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+          className="shrink-0 rounded-lg px-2 py-1.5 text-sm text-slate-300 hover:bg-white/10 hover:text-white"
         >
           {ui.studyBack}
         </button>
         <div className="min-w-0 flex-1">
-          <h2 className="truncate text-sm font-semibold text-slate-900">
+          <h2 className="truncate text-sm font-semibold text-slate-100">
             {document.title}
           </h2>
           <p className="text-[11px] text-slate-500">
@@ -389,7 +347,7 @@ export function StudyReader({
         </div>
       </header>
       {resumeHint ? (
-        <p className="shrink-0 bg-amber-50 px-4 py-1.5 text-center text-[11px] text-amber-900">
+        <p className="shrink-0 bg-white/10 px-4 py-1.5 text-center text-[11px] text-neutral-200">
           {resumeHint}
         </p>
       ) : null}
@@ -424,7 +382,7 @@ export function StudyReader({
                 className="mb-8"
               >
                 {section.title ? (
-                  <h3 className="mb-3 text-base font-semibold tracking-tight text-slate-900">
+                  <h3 className="mb-3 text-base font-semibold tracking-tight text-slate-100">
                     {section.title}
                   </h3>
                 ) : null}
@@ -434,7 +392,7 @@ export function StudyReader({
                   );
                   return (
                     <div key={paragraph.id} className="mb-4">
-                      <div className="text-[17px] leading-8 text-slate-800">
+                      <div className="text-[17px] leading-8 text-slate-100">
                         {paragraph.sentences.map((sentence, index) => {
                           const selected = selectedId === sentence.id;
                           return (
@@ -452,12 +410,12 @@ export function StudyReader({
                                 sentence={sentence.text}
                                 context={neighborContext(paragraph, sentence)}
                                 analyzeLabel={ui.insightAnalyze}
-                                sourceType="web"
+                                sourceType={studyDocumentSourceType(document.type)}
                                 language={targetLanguage}
                                 className={
                                   selected
-                                    ? "rounded-md bg-amber-50 px-0.5 text-[17px] leading-8 text-slate-800"
-                                    : "rounded-md px-0.5 text-[17px] leading-8 text-slate-800"
+                                    ? "rounded-md bg-white/10 px-0.5 text-[17px] leading-8 text-slate-100"
+                                    : "rounded-md px-0.5 text-[17px] leading-8 text-slate-100"
                                 }
                                 onAnalyze={(selectedText) =>
                                   analyzeSpan(
@@ -482,7 +440,7 @@ export function StudyReader({
                               selectedSentence,
                             )
                           }
-                          className="mt-1 rounded-full bg-slate-900 px-3 py-1 text-[11px] font-medium text-white hover:bg-slate-800"
+                          className="mt-1 rounded-full bg-[#e8e8e4] px-3 py-1 text-[11px] font-medium text-neutral-900 hover:bg-[#f5f5f3]"
                         >
                           {ui.exploreSubmit}
                         </button>

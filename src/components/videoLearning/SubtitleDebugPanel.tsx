@@ -9,8 +9,8 @@ export function SubtitleDebugPanel({ cue }: { cue: VideoSubtitle | null }) {
   const d = cue.debug;
   const native = cue.nativeUnderstanding ?? d?.nativeUnderstanding;
   return (
-    <aside className="mx-3 mb-2 max-h-56 overflow-auto rounded-lg border border-amber-200 bg-amber-50/90 px-3 py-2 text-[11px] leading-snug text-amber-950">
-      <div className="mb-1 font-semibold uppercase tracking-wide text-amber-800">
+    <aside className="mx-3 mb-2 max-h-56 overflow-auto rounded-lg border border-white/10 bg-[#121212] px-3 py-2 text-[11px] leading-snug text-slate-200">
+      <div className="mb-1 font-semibold uppercase tracking-wide text-[#e4e4e0]">
         Subtitle debug
       </div>
       <div>

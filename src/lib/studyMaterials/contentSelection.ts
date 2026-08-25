@@ -35,6 +35,7 @@ export function selectionAnalysisTarget(input: {
   next?: string;
   language?: string;
   intent?: "sentence" | "word";
+  sourceType?: EnglishAnalysisTarget["sourceType"];
 }): EnglishAnalysisTarget {
   const selected = input.selectedText.replace(/\s+/g, " ").trim();
   const sentence =
@@ -49,7 +50,7 @@ export function selectionAnalysisTarget(input: {
   return {
     selectedText: selected,
     contextSentence: sentence,
-    sourceType: "web",
+    sourceType: input.sourceType ?? "web",
     intent,
     allowVocabSave: true,
     ...(context.length ? { context } : {}),

@@ -8,13 +8,24 @@ import {
 import type { NormalizedSegment, VideoContext } from "@/lib/videoSubtitle/types";
 import { learningLanguageName } from "@/lib/learningLanguages";
 import { spokenTranslatePrinciples } from "@/lib/spokenTranslate";
+import { openAiJsonCompleter } from "@/lib/reconstructionTranslate/openaiJson";
+import {
+  extractMeaningsForCaptions,
+  firstInterpretationsForAnalysis,
+} from "@/lib/reconstructionTranslate/refineCaptions";
+import type { MeaningExtraction } from "@/lib/reconstructionTranslate/types";
+import { distinctSpokenLine } from "@/lib/videoSubtitle/subtitleDraft";
+import { speechRegisterHint } from "@/lib/videoSubtitle/speechRegister";
 
 const BATCH = 8;
 
 export type LineGloss = {
   /** Same id as English study cue: mu-${segment.id} */
   id: string;
+  /** On-screen caption (2-pass, UI-language spoken register). */
   interpretation: string;
+  /** 1-pass first reading for sentence analysis. Not shown as the caption. */
+  analysisTranslation?: string;
 };
 
 function cueId(segmentId: string): string {
@@ -29,9 +40,17 @@ function normalizeCompare(text: string): string {
   return text.toLowerCase().replace(/\s+/g, " ").trim();
 }
 
+function brevityHint(text: string): "short-reaction" | "brief" | "normal" {
+  const n = text.trim().split(/\s+/).filter(Boolean).length;
+  if (n <= 2) return "short-reaction";
+  if (n <= 6) return "brief";
+  return "normal";
+}
+
 /**
  * Per-line learner gloss tied to each STT segment id.
- * Uses the same spoken-translate craft as chat `/api/translate`.
+ * Captions are composed from meaning (original omitted) in the UI-language
+ * spoken register. Analysis gets a 1-pass first reading of the source.
  */
 export async function glossEnglishLines(input: {
   locale: string;
@@ -48,29 +67,64 @@ export async function glossEnglishLines(input: {
   const targetLanguage = input.targetLanguage || "en";
   const sourceName = learningLanguageName(targetLanguage);
   const out: LineGloss[] = [];
+  const completeJson = openAiJsonCompleter();
 
   const lineRules = `
 Video-line constraints (on top of the shared translate craft):
-- Gloss THIS ${sourceName} line only. Keep the same id.
-- Short reactions (Yeah / Ok / Right / Mm / etc.) stay short in the output language. Never expand them into the next sentence's content.
-- previous/next are only for pronouns/deixis (this/that/it/he…).
-- Keep captions short enough to read on screen (one breath).
+- You receive the MEANING of a ${sourceName} line — not the original wording.
+- Keep the same id.
+- This is an ON-SCREEN caption in the app's UI language. Match that spoken register.
+- Drop source discourse frames (the reason X is / what I'm saying is). Say the point.
+- short-reaction lines stay short. Never expand them into the next sentence's content.
+- brief/fragment meanings: gloss ONLY that idea. Do not dump neighboring sentences onto this line.
+- Keep captions short enough to read on screen (one breath). Do not unpack into commentary.
+- Do not invent facts, dates, or topics that were not in the meaning.
 - Do not write tutor notes, labels, or leftover source-language wording in the gloss.
 `.trim();
 
   for (let i = 0; i < input.segments.length; i += BATCH) {
     const batch = input.segments.slice(i, i + BATCH);
-    const payload = batch.map((segment, index) => {
+    const ids = batch.map((segment) => cueId(segment.id));
+    let meanings = new Map<string, MeaningExtraction>();
+    try {
+      meanings = await extractMeaningsForCaptions(
+        {
+          sourceLang: targetLanguage,
+          targetLang: interfaceLanguage,
+          sourceType: "subtitle",
+          videoContext: [input.context.topic, input.context.summary]
+            .filter(Boolean)
+            .join(" — "),
+        },
+        batch.map((segment) => ({
+          id: cueId(segment.id),
+          sourceText: segment.normalizedText,
+        })),
+        completeJson,
+      );
+    } catch (error) {
+      console.error("[gloss-extract-meaning]", error);
+    }
+
+    const meaningItems = batch.map((segment, index) => {
       const abs = i + index;
+      const id = ids[index]!;
+      const meaning = meanings.get(id);
       const prev = input.segments[abs - 1];
       const next = input.segments[abs + 1];
       return {
-        id: cueId(segment.id),
-        text: segment.normalizedText,
-        previous: prev?.normalizedText || "",
-        next: next?.normalizedText || "",
+        id,
+        brevityHint: brevityHint(segment.normalizedText),
+        coreMeaning: meaning?.coreMeaning,
+        speakerIntent: meaning?.speakerIntent,
+        formalityLevel: meaning?.formalityLevel,
+        mustKeep: meaning?.keyEntities ?? [],
+        speechTexture: meaning?.speechTexture,
+        previousMeaning: prev ? meanings.get(cueId(prev.id))?.coreMeaning : "",
+        nextMeaning: next ? meanings.get(cueId(next.id))?.coreMeaning : "",
       };
     });
+    const useMeaning = meaningItems.every((item) => item.coreMeaning);
 
     try {
       const completion = await client.chat.completions.create({
@@ -89,16 +143,30 @@ Video-line constraints (on top of the shared translate craft):
 
 ${lineRules}
 
+${speechRegisterHint(input.context, interfaceLanguage)}
+
 Return JSON:
 {"items":[{"id":"...","interpretation":"..."}]}
-Each interpretation is the natural spoken rendering of that line (same field as chat "translated").`,
+Each interpretation is the on-screen caption for that meaning (same field as chat "translated").`,
           },
           {
             role: "user",
             content: JSON.stringify({
               topic: input.context.topic,
               situation: input.context.summary,
-              items: payload,
+              items: useMeaning
+                ? meaningItems
+                : batch.map((segment, index) => {
+                    const abs = i + index;
+                    const prev = input.segments[abs - 1];
+                    const next = input.segments[abs + 1];
+                    return {
+                      id: cueId(segment.id),
+                      text: segment.normalizedText,
+                      previous: prev?.normalizedText || "",
+                      next: next?.normalizedText || "",
+                    };
+                  }),
             }),
           },
         ],
@@ -123,12 +191,11 @@ Each interpretation is the natural spoken rendering of that line (same field as 
         }
       }
 
+      const captions: LineGloss[] = [];
       for (let index = 0; index < batch.length; index += 1) {
         const segment = batch[index]!;
         const id = cueId(segment.id);
         let interpretation = byId.get(id) || "";
-        // Index fallback only when the model omitted ids but kept order,
-        // and only if we can sanity-check against the source text.
         if (!interpretation && rows.length === batch.length) {
           const row = asRecord(rows[index]);
           const candidate =
@@ -151,8 +218,51 @@ Each interpretation is the natural spoken rendering of that line (same field as 
           }
         }
         if (interpretation) {
-          out.push({ id, interpretation });
+          captions.push({ id, interpretation });
         }
+      }
+
+      try {
+        const firstReadings = await firstInterpretationsForAnalysis(
+          {
+            sourceLang: targetLanguage,
+            targetLang: interfaceLanguage,
+            sourceType: "subtitle",
+            videoContext: [input.context.topic, input.context.summary]
+              .filter(Boolean)
+              .join(" — "),
+          },
+          captions.map((row, index) => {
+            const segment =
+              batch.find((item) => cueId(item.id) === row.id) ?? batch[index]!;
+            return {
+              id: row.id,
+              sourceText: segment.normalizedText,
+            };
+          }),
+          completeJson,
+        );
+        for (const row of captions) {
+          const analysisTranslation = distinctSpokenLine(
+            row.interpretation,
+            firstReadings.get(row.id),
+          );
+          if (analysisTranslation) {
+            console.error("[translate:caption-pair]", {
+              id: row.id,
+              caption: row.interpretation,
+              firstReading: analysisTranslation,
+            });
+          }
+          out.push(
+            analysisTranslation
+              ? { ...row, analysisTranslation }
+              : row,
+          );
+        }
+      } catch (error) {
+        console.error("[gloss-first-reading]", error);
+        out.push(...captions);
       }
     } catch (error) {
       console.error("[gloss-english-lines]", error);

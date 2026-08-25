@@ -4,6 +4,22 @@ export type SttWord = {
   end: number;
 };
 
+/** Canonical word stream for sentence slicing. Times are milliseconds. */
+export type TimedWord = {
+  text: string;
+  startMs: number;
+  endMs: number;
+  speakerTag?: string | null;
+};
+
+export type SentenceSpan = {
+  startIndex: number;
+  endIndex: number;
+  text: string;
+  startMs: number;
+  endMs: number;
+};
+
 export type SttSegment = {
   id: string;
   text: string;
@@ -94,6 +110,10 @@ export type SubtitleSegment = {
   original: string;
   /** On-screen adapted caption (what the user reads). */
   translation: string;
+  /**
+   * Critique-on line for analysis explanations. Not shown as the caption.
+   */
+  analysisTranslation?: string;
   /** Internal: what the speaker meant. */
   meaning?: string;
   /** @deprecated use meaning */

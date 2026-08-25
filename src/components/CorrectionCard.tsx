@@ -59,15 +59,17 @@ export function CorrectionCard({
 
   if (!showRecommended) {
     return (
-      <div className="mt-2 rounded-2xl border border-emerald-200/80 bg-emerald-50/60 px-3.5 py-3">
-        <p className="text-xs text-emerald-800/90">{feedback}</p>
+      <div className="mt-2 rounded-2xl border border-emerald-400/25 bg-emerald-500/10 px-3.5 py-3">
+        <p className="text-xs text-emerald-200">{feedback}</p>
         <AnalyzableEnglish
           sentence={original}
-          className="mt-2 text-[15px] font-medium text-slate-900"
+          tone="onDark"
+          className="mt-2 text-[15px] font-medium text-slate-100"
         >
           <SelectableEnglishText
             text={original}
             pickMode={pickMode}
+            tone="onDark"
             isWordSaved={isWordSaved}
             savingWord={savingWord}
             onWordClick={onWordClick}
@@ -78,12 +80,13 @@ export function CorrectionCard({
         </div>
         {showNatural ? (
           <div className="mt-3 text-xs leading-relaxed text-slate-500">
-            <span className="font-medium text-slate-600">{labels.natural}</span>
+            <span className="font-medium text-slate-300">{labels.natural}</span>
             {" · "}
             <AnalyzableEnglish
               sentence={natural}
               inline
-              className="text-slate-700"
+              tone="onDark"
+              className="text-slate-200"
             />
             <span className="ml-2 inline-block align-middle">
               <TTSButton text={natural} ariaLabel={labels.listen} />
@@ -96,8 +99,8 @@ export function CorrectionCard({
   }
 
   return (
-    <div className="mt-2 overflow-hidden rounded-2xl border border-slate-200 bg-white">
-      <div className="border-b border-slate-100 px-3.5 py-2">
+    <div className="mt-2 overflow-hidden rounded-2xl border border-white/10 bg-[#121212]">
+      <div className="border-b border-white/10 px-3.5 py-2">
         <p className="text-[11px] font-semibold tracking-wide text-slate-500">
           {blockTitle}
         </p>
@@ -108,12 +111,14 @@ export function CorrectionCard({
           <p className="text-[11px] font-medium text-slate-500">{myLine}</p>
           <AnalyzableEnglish
             sentence={original}
-            className="mt-1.5 text-[15px] leading-relaxed text-slate-800"
+            tone="onDark"
+            className="mt-1.5 text-[15px] leading-relaxed text-slate-100"
           >
             <DiffHighlightText
               original={original}
               corrected={corrected}
               side="original"
+              tone="onDark"
               pickMode={pickMode}
               isWordSaved={isWordSaved}
               savingWord={savingWord}
@@ -130,15 +135,17 @@ export function CorrectionCard({
         </div>
 
         <div>
-          <p className="text-[11px] font-medium text-teal-800">{tryThis}</p>
+          <p className="text-[11px] font-medium text-[#e4e4e0]">{tryThis}</p>
           <AnalyzableEnglish
             sentence={corrected}
-            className="mt-1.5 text-base font-semibold leading-relaxed text-slate-900"
+            tone="onDark"
+            className="mt-1.5 text-base font-semibold leading-relaxed text-slate-100"
           >
             <DiffHighlightText
               original={original}
               corrected={corrected}
               side="corrected"
+              tone="onDark"
               pickMode={pickMode}
               isWordSaved={isWordSaved}
               savingWord={savingWord}
@@ -151,7 +158,7 @@ export function CorrectionCard({
         </div>
 
         {showExplanation ? (
-          <p className="text-xs leading-relaxed text-slate-600">
+          <p className="text-xs leading-relaxed text-slate-300">
             <span className="mr-1" aria-hidden>
               💡
             </span>
@@ -160,13 +167,14 @@ export function CorrectionCard({
         ) : null}
 
         {showNatural ? (
-          <div className="border-t border-slate-100 pt-3 text-xs leading-relaxed text-slate-500">
-            <span className="font-medium text-slate-600">{labels.natural}</span>
+          <div className="border-t border-white/10 pt-3 text-xs leading-relaxed text-slate-500">
+            <span className="font-medium text-slate-300">{labels.natural}</span>
             {" · "}
             <AnalyzableEnglish
               sentence={natural}
               inline
-              className="text-slate-700"
+              tone="onDark"
+              className="text-slate-200"
             />
             <span className="ml-2 inline-block align-middle">
               <TTSButton text={natural} ariaLabel={labels.listen} />
@@ -176,7 +184,7 @@ export function CorrectionCard({
       </div>
 
       {!pickMode && actions ? (
-        <div className="border-t border-slate-100 px-3.5 py-2.5">{actions}</div>
+        <div className="border-t border-white/10 px-3.5 py-2.5">{actions}</div>
       ) : null}
     </div>
   );

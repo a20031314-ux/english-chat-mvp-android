@@ -48,6 +48,8 @@ export async function POST(request: NextRequest) {
     paragraph?: unknown;
     previousContext?: unknown;
     nextContext?: unknown;
+    translation?: unknown;
+    analysisTranslation?: unknown;
   };
   try {
     body = await request.json();
@@ -123,6 +125,13 @@ export async function POST(request: NextRequest) {
             ...(previousContext ? { previousContext } : {}),
             ...(nextContext ? { nextContext } : {}),
             ...(paragraph && paragraph !== text ? { paragraph } : {}),
+            ...(typeof body.translation === "string" && body.translation.trim()
+              ? { captionTranslation: body.translation.trim() }
+              : {}),
+            ...(typeof body.analysisTranslation === "string" &&
+            body.analysisTranslation.trim()
+              ? { analysisTranslation: body.analysisTranslation.trim() }
+              : {}),
           }),
         },
       ],

@@ -21,6 +21,7 @@ export async function analyzeAdaptedSubtitle(input: {
   locale: string;
   original: string;
   naturalSubtitle: string;
+  analysisTranslation?: string;
   meaning?: string;
   tone?: UtteranceTone;
   speakerStyle?: string;
@@ -62,6 +63,7 @@ export async function analyzeAdaptedSubtitle(input: {
 3) 그 다음, 단어/표현의 일반적인 쓰임은 짧게 덧붙여도 된다
 
 SCENE CONTEXT / nativeUnderstanding는 추가 증거다. 추측을 사실처럼 단정하지 않는다.
+analysisSpoken이 있으면 자막(subtitle)과 다를 수 있다. 자막이 틀렸다는 식으로 말하지 말고, analysisSpoken은 원문을 풀어 읽은 처음 해석으로만 쓴다.
 사전 나열보다 “한국인이 들으면 이런 분위기”를 우선한다.
 
 JSON으로만 답한다:
@@ -82,6 +84,7 @@ Order:
 3) Optional short note on general usage
 
 SCENE CONTEXT / nativeUnderstanding is extra evidence. Do not state guesses as facts.
+If analysisSpoken is present it may differ from the on-screen subtitle. Do not say the subtitle is wrong; use analysisSpoken as the fuller first reading of the source.
 Prefer “how a ${target} speaker would hear this vibe” over a dictionary dump.
 
 Return JSON only:
@@ -99,6 +102,7 @@ Return JSON only:
         content: JSON.stringify({
           original: input.original,
           subtitle: input.naturalSubtitle,
+          analysisSpoken: input.analysisTranslation || undefined,
           meaning: input.meaning,
           tone: input.tone,
           speakerStyle: input.speakerStyle,

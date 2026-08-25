@@ -29,6 +29,7 @@ function SheetEnglish({
       sentence={sentence}
       context={context}
       className={className}
+      tone="onDark"
     />
   );
 }
@@ -54,40 +55,40 @@ export function ExpressionInsightSheet({
         role="dialog"
         aria-modal="true"
         aria-labelledby="expression-insight-title"
-        className="relative z-10 max-h-[86vh] w-full max-w-md overflow-y-auto rounded-t-2xl border border-slate-200 bg-white shadow-xl sm:rounded-2xl"
+        className="relative z-10 max-h-[86vh] w-full max-w-md overflow-y-auto rounded-t-2xl border border-white/10 bg-[#121212] shadow-xl sm:rounded-2xl"
         onPointerDown={(event) => event.stopPropagation()}
       >
         <div className="px-4 pb-6 pt-4">
-          <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-slate-200 sm:hidden" />
+          <div className="mx-auto mb-3 h-1 w-10 rounded-full bg-white/20 sm:hidden" />
           <p
             id="expression-insight-title"
-            className="text-lg font-semibold text-slate-900"
+            className="text-lg font-semibold text-slate-100"
           >
             {insight?.title || selected}
           </p>
           {insight?.meaning ? (
-            <p className="mt-1 text-sm font-medium text-teal-800">
+            <p className="mt-1 text-sm font-medium text-[#e4e4e0]">
               {insight.meaning}
             </p>
           ) : null}
 
           {sentence.trim() ? (
-            <div className="mt-3 rounded-xl bg-slate-50 px-3 py-2">
+            <div className="mt-3 rounded-xl bg-white/5 px-3 py-2">
               <SheetEnglish
                 sentence={sentence}
-                className="text-sm leading-relaxed text-slate-800"
+                className="text-sm leading-relaxed text-slate-100"
               />
             </div>
           ) : null}
 
           {isLoading ? (
-            <p className="mt-4 text-sm text-slate-600">{ui.insightLoading}</p>
+            <p className="mt-4 text-sm text-slate-300">{ui.insightLoading}</p>
           ) : failed ? (
-            <p className="mt-4 text-sm text-rose-700">{ui.insightFailed}</p>
+            <p className="mt-4 text-sm text-rose-300">{ui.insightFailed}</p>
           ) : insight ? (
             <div className="mt-4 space-y-4">
               {insight.explanation ? (
-                <p className="text-sm leading-relaxed text-slate-800">
+                <p className="text-sm leading-relaxed text-slate-100">
                   {insight.explanation}
                 </p>
               ) : null}
@@ -96,7 +97,7 @@ export function ExpressionInsightSheet({
                   <p className="text-[11px] font-semibold tracking-wide text-slate-500">
                     {ui.insightInSentence}
                   </p>
-                  <p className="mt-1 text-sm leading-relaxed text-slate-800">
+                  <p className="mt-1 text-sm leading-relaxed text-slate-100">
                     {insight.roleInSentence}
                   </p>
                 </div>
@@ -110,10 +111,10 @@ export function ExpressionInsightSheet({
                     <SheetEnglish
                       sentence={insight.pattern}
                       context={[sentence]}
-                      className="mt-1 text-sm font-medium leading-relaxed text-slate-900"
+                      className="mt-1 text-sm font-medium leading-relaxed text-slate-100"
                     />
                   ) : (
-                    <p className="mt-1 text-sm font-medium text-slate-900">
+                    <p className="mt-1 text-sm font-medium text-slate-100">
                       {insight.pattern}
                     </p>
                   )}
@@ -131,7 +132,7 @@ export function ExpressionInsightSheet({
                           <SheetEnglish
                             sentence={example.english}
                             context={[sentence]}
-                            className="text-sm font-medium leading-relaxed text-slate-900"
+                            className="text-sm font-medium leading-relaxed text-slate-100"
                           />
                           <TTSButton
                             text={example.english}
@@ -153,7 +154,7 @@ export function ExpressionInsightSheet({
                   <p className="text-[11px] font-semibold tracking-wide text-slate-500">
                     {ui.insightTip}
                   </p>
-                  <p className="mt-1 text-sm leading-relaxed text-slate-800">
+                  <p className="mt-1 text-sm leading-relaxed text-slate-100">
                     {insight.tip}
                   </p>
                 </div>
@@ -166,9 +167,9 @@ export function ExpressionInsightSheet({
                   <SheetEnglish
                     sentence={insight.comparison.expression}
                     context={[sentence, selected]}
-                    className="mt-1 text-sm font-medium leading-relaxed text-slate-900"
+                    className="mt-1 text-sm font-medium leading-relaxed text-slate-100"
                   />
-                  <p className="mt-1 text-sm leading-relaxed text-slate-700">
+                  <p className="mt-1 text-sm leading-relaxed text-slate-200">
                     {insight.comparison.explanation}
                   </p>
                 </div>
@@ -179,7 +180,7 @@ export function ExpressionInsightSheet({
           <button
             type="button"
             onClick={onClose}
-            className="mt-5 w-full rounded-xl border border-slate-200 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50"
+            className="mt-5 w-full rounded-xl border border-white/10 px-3 py-2 text-sm text-slate-200 hover:bg-white/10"
           >
             {ui.insightClose}
           </button>

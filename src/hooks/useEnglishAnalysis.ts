@@ -16,6 +16,11 @@ import {
   textForClickRange,
 } from "@/lib/learningSpans";
 import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
+import type { AnalysisResult, RankedSalienceCandidate } from "@/lib/salience/types";
+import {
+  fetchSalienceAnalysis,
+  fetchSalienceRecommendations,
+} from "@/lib/salienceService";
 import { translateUtterance } from "@/lib/translateUtterance";
 
 export type InspectTab = "sentence" | "word";
@@ -33,6 +38,12 @@ export type EnglishAnalysisSession = {
   elementAnalysis: EnglishElementAnalysis | null;
   elementLoading: boolean;
   elementFailed: boolean;
+  salienceLoading: boolean;
+  salienceFailed: boolean;
+  recommendations: RankedSalienceCandidate[];
+  dimensionAnalysis: AnalysisResult | null;
+  dimensionLoading: boolean;
+  dimensionFailed: boolean;
 };
 
 function resolveTab(target: EnglishAnalysisTarget): InspectTab {
@@ -60,10 +71,14 @@ export function useEnglishAnalysis(locale: Locale) {
   sessionRef.current = session;
   const sentenceReqRef = useRef(0);
   const elementReqRef = useRef(0);
+  const salienceReqRef = useRef(0);
+  const dimensionReqRef = useRef(0);
 
   const close = useCallback(() => {
     sentenceReqRef.current += 1;
     elementReqRef.current += 1;
+    salienceReqRef.current += 1;
+    dimensionReqRef.current += 1;
     setSession(null);
   }, []);
 
@@ -159,6 +174,8 @@ export function useEnglishAnalysis(locale: Locale) {
           sourceType: target.sourceType,
           language: target.language,
           learnerLevel: target.learnerLevel,
+          translation: target.translation,
+          analysisTranslation: target.analysisTranslation,
         });
         if (elementReqRef.current !== req) return;
         setSession((prev) =>
@@ -180,6 +197,110 @@ export function useEnglishAnalysis(locale: Locale) {
                 elementAnalysis: null,
                 elementLoading: false,
                 elementFailed: true,
+              }
+            : prev,
+        );
+      }
+    },
+    [locale, targetLanguage],
+  );
+
+  const loadSalience = useCallback(
+    async (target: EnglishAnalysisTarget) => {
+      const req = salienceReqRef.current + 1;
+      salienceReqRef.current = req;
+      setSession((prev) =>
+        prev
+          ? {
+              ...prev,
+              salienceLoading: true,
+              salienceFailed: false,
+              recommendations: [],
+            }
+          : prev,
+      );
+      try {
+        const recommendations = await fetchSalienceRecommendations({
+          sentence: target.contextSentence,
+          language: target.language || targetLanguage,
+          nativeLanguage: locale,
+          sourceType: target.sourceType,
+          learnerLevel: target.learnerLevel,
+        });
+        if (salienceReqRef.current !== req) return;
+        setSession((prev) =>
+          prev
+            ? {
+                ...prev,
+                recommendations,
+                salienceLoading: false,
+                salienceFailed: false,
+              }
+            : prev,
+        );
+      } catch {
+        if (salienceReqRef.current !== req) return;
+        setSession((prev) =>
+          prev
+            ? {
+                ...prev,
+                recommendations: [],
+                salienceLoading: false,
+                salienceFailed: true,
+              }
+            : prev,
+        );
+      }
+    },
+    [locale, targetLanguage],
+  );
+
+  const loadDimension = useCallback(
+    async (target: EnglishAnalysisTarget, candidate: RankedSalienceCandidate) => {
+      const req = dimensionReqRef.current + 1;
+      dimensionReqRef.current = req;
+      setSession((prev) =>
+        prev
+          ? {
+              ...prev,
+              dimensionAnalysis: null,
+              dimensionLoading: true,
+              dimensionFailed: false,
+              elementAnalysis: null,
+              elementLoading: false,
+              elementFailed: false,
+            }
+          : prev,
+      );
+      try {
+        const dimensionAnalysis = await fetchSalienceAnalysis({
+          sentence: target.contextSentence,
+          language: target.language || targetLanguage,
+          nativeLanguage: locale,
+          explanationLanguage: locale,
+          translation: target.translation,
+          candidate,
+        });
+        if (dimensionReqRef.current !== req) return;
+        setSession((prev) =>
+          prev
+            ? {
+                ...prev,
+                dimensionAnalysis,
+                dimensionLoading: false,
+                dimensionFailed: !dimensionAnalysis,
+              }
+            : prev,
+        );
+      } catch {
+        if (dimensionReqRef.current !== req) return;
+        setSession((prev) =>
+          prev
+            ? {
+                ...prev,
+                dimensionAnalysis: null,
+                dimensionLoading: false,
+                dimensionFailed: true,
               }
             : prev,
         );
@@ -247,6 +368,8 @@ export function useEnglishAnalysis(locale: Locale) {
       if (!sameSentence || !prev) {
         sentenceReqRef.current += 1;
         elementReqRef.current += 1;
+        salienceReqRef.current += 1;
+        dimensionReqRef.current += 1;
         const provided = target.translation?.replace(/\s+/g, " ").trim() || "";
         const needsTranslate = !provided && locale !== targetLanguage;
         setSession({
@@ -265,8 +388,15 @@ export function useEnglishAnalysis(locale: Locale) {
           elementAnalysis: null,
           elementLoading: false,
           elementFailed: false,
+          salienceLoading: tab === "sentence",
+          salienceFailed: false,
+          recommendations: [],
+          dimensionAnalysis: null,
+          dimensionLoading: false,
+          dimensionFailed: false,
         });
         if (needsTranslate) void loadSentence(target);
+        if (tab === "sentence") void loadSalience(target);
         return;
       }
 
@@ -291,7 +421,7 @@ export function useEnglishAnalysis(locale: Locale) {
         void loadSentence(prev.target);
       }
     },
-    [loadSentence, locale, targetLanguage],
+    [loadSalience, loadSentence, locale, targetLanguage],
   );
 
   const setRange = useCallback((start: number, end: number) => {
@@ -311,6 +441,7 @@ export function useEnglishAnalysis(locale: Locale) {
       !prev.rangeActive || prev.rangeStart !== from || prev.rangeEnd !== to;
     if (rangeChanged) {
       elementReqRef.current += 1;
+      dimensionReqRef.current += 1;
     }
     setSession({
       ...prev,
@@ -324,10 +455,38 @@ export function useEnglishAnalysis(locale: Locale) {
             elementAnalysis: null,
             elementLoading: false,
             elementFailed: false,
+            dimensionAnalysis: null,
+            dimensionLoading: false,
+            dimensionFailed: false,
           }
         : {}),
     });
   }, [targetLanguage]);
+
+  const pickRecommendation = useCallback(
+    (candidate: RankedSalienceCandidate) => {
+      const prev = sessionRef.current;
+      if (!prev) return;
+      const range = clickRangeForText(
+        prev.target.contextSentence,
+        candidate.originalText,
+        targetLanguage,
+      );
+      setSession({
+        ...prev,
+        tab: "sentence",
+        focusText: candidate.originalText,
+        rangeActive: Boolean(range),
+        rangeStart: range?.start ?? prev.rangeStart,
+        rangeEnd: range?.end ?? prev.rangeEnd,
+        elementAnalysis: null,
+        elementLoading: false,
+        elementFailed: false,
+      });
+      void loadDimension(prev.target, candidate);
+    },
+    [loadDimension, targetLanguage],
+  );
 
   const analyzeRange = useCallback(() => {
     const prev = sessionRef.current;
@@ -340,6 +499,13 @@ export function useEnglishAnalysis(locale: Locale) {
     );
     if (!selected) return;
     if (isSameAnalysisSpan(selected, prev.target.contextSentence)) return;
+    dimensionReqRef.current += 1;
+    setSession({
+      ...prev,
+      dimensionAnalysis: null,
+      dimensionLoading: false,
+      dimensionFailed: false,
+    });
     void loadElement(prev.target, selected);
   }, [loadElement, targetLanguage]);
 
@@ -351,8 +517,15 @@ export function useEnglishAnalysis(locale: Locale) {
       if (tab === "sentence" && !prev.sentenceAnalysis && !prev.sentenceLoading) {
         void loadSentence(prev.target);
       }
+      if (
+        tab === "sentence" &&
+        prev.recommendations.length === 0 &&
+        !prev.salienceLoading
+      ) {
+        void loadSalience(prev.target);
+      }
     },
-    [loadSentence],
+    [loadSalience, loadSentence],
   );
 
   return {
@@ -360,6 +533,7 @@ export function useEnglishAnalysis(locale: Locale) {
     open,
     setTab,
     setRange,
+    pickRecommendation,
     analyzeRange,
     close,
   };

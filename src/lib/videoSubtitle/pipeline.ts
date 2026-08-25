@@ -33,25 +33,29 @@ import {
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
 import { isNonSpeechMarker } from "@/lib/videoSubtitle/speechNoise";
+import { regularizeSttSegments, speechCoversDuration } from "@/lib/videoSubtitle/sttChunks";
+import { logSentenceSplits } from "@/lib/videoSubtitle/sentenceFromWords";
+import { refineSttSentencesWithLlm } from "@/lib/videoSubtitle/llmSentenceSplit";
 
 const MAX_SEGMENTS = 800;
 /** Prefer as much audio as Whisper/download allows for full-video grasp. */
 const WHISPER_MAX_SECONDS = 900;
 
 function usableSpeech(segments: SttSegment[]): SttSegment[] {
-  return segments
-    .map((segment) => ({
-      ...segment,
-      text: segment.text.replace(/\s+/g, " ").trim(),
-    }))
-    .filter(
-      (segment) =>
-        segment.text &&
-        !isNonSpeechMarker(segment.text) &&
-        // Caption tracks sometimes include [Music] / ♪ lines too.
-        !(segment.uncertain && (segment.confidence ?? 1) < 0.3),
-    )
-    .slice(0, MAX_SEGMENTS);
+  return regularizeSttSegments(
+    segments
+      .map((segment) => ({
+        ...segment,
+        text: segment.text.replace(/\s+/g, " ").trim(),
+      }))
+      .filter(
+        (segment) =>
+          segment.text &&
+          !isNonSpeechMarker(segment.text) &&
+          // Caption tracks sometimes include [Music] / ♪ lines too.
+          !(segment.uncertain && (segment.confidence ?? 1) < 0.3),
+      ),
+  ).slice(0, MAX_SEGMENTS);
 }
 
 function withoutWords(segments: NormalizedSegment[]): NormalizedSegment[] {
@@ -115,6 +119,10 @@ export type PrepareTranscriptOptions = {
   skipServerAudio?: boolean;
   /** Already-transcribed speech (from device-uploaded Whisper chunks). */
   sttOverride?: SttSegment[];
+  /** Longest video this plan may prepare (seconds). */
+  maxDurationSeconds?: number;
+  /** Remaining monthly new-prep seconds for this user. */
+  remainingPrepSeconds?: number;
 };
 
 /**
@@ -140,6 +148,19 @@ export async function prepareVideoTranscript(
   }
 
   const source = await resolveYouTubeSource(parsed.url);
+  const duration = Math.max(0, Math.ceil(source.durationSeconds || 0));
+  if (
+    options?.maxDurationSeconds &&
+    duration > options.maxDurationSeconds
+  ) {
+    throw new VideoPipelineError("VIDEO_TOO_LONG");
+  }
+  if (
+    options?.remainingPrepSeconds != null &&
+    duration > options.remainingPrepSeconds
+  ) {
+    throw new VideoPipelineError("VIDEO_QUOTA");
+  }
   let sttSource: PreparedTranscript["sttSource"] = "whisper";
   let stt: SttSegment[] = [];
   let officialUi: SttSegment[] = [];
@@ -173,7 +194,10 @@ export async function prepareVideoTranscript(
         { preferredLocale: targetLanguage, manualOnly: true },
       ),
     );
-    if (targetManual.length > 0) {
+    if (
+      targetManual.length > 0 &&
+      speechCoversDuration(targetManual, source.durationSeconds)
+    ) {
       stt = targetManual;
       sttSource = "youtube-manual";
     } else {
@@ -188,7 +212,10 @@ export async function prepareVideoTranscript(
           },
         ),
       );
-      if (targetCaptions.length > 0) {
+      if (
+        targetCaptions.length > 0 &&
+        speechCoversDuration(targetCaptions, source.durationSeconds)
+      ) {
         stt = targetCaptions;
         sttSource = "youtube-asr";
       }
@@ -265,6 +292,13 @@ export async function prepareVideoTranscript(
           ? "NO_SPEECH"
           : "NO_AUDIO",
     );
+  }
+
+  stt = await refineSttSentencesWithLlm(stt);
+  logSentenceSplits(sttSource, stt);
+  if (officialUi.length > 0) {
+    officialUi = await refineSttSentencesWithLlm(officialUi);
+    logSentenceSplits("official-ui", officialUi);
   }
 
   const targetCode: LearningLanguageCode = isLearningLanguageCode(targetLanguage)

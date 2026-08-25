@@ -97,7 +97,7 @@ export function VideoWatchFullscreenDock({
                 }}
                 className={`min-w-[6px] max-w-[4.5rem] shrink-0 rounded-sm transition ${
                   active
-                    ? "bg-white"
+                    ? "bg-[#121212]"
                     : "bg-white/35 hover:bg-white/60"
                 }`}
               >

@@ -166,14 +166,14 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
     <div className="relative flex h-full min-h-0 flex-col">
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4 sm:px-6">
         {showCharacters ? (
-          <div className="mb-4 flex gap-1 rounded-xl bg-slate-100 p-1">
+          <div className="mb-4 flex gap-1 rounded-xl bg-white/5 p-1">
             <button
               type="button"
               onClick={() => setSection("saved")}
               className={`flex-1 rounded-lg px-3 py-1.5 text-xs font-medium ${
                 section === "saved"
-                  ? "bg-white text-slate-900 shadow-sm"
-                  : "text-slate-500"
+                  ? "bg-[#e8e8e4] text-neutral-900 shadow-sm"
+                  : "text-slate-400 hover:text-slate-200"
               }`}
             >
               {ui.vocabTabSaved}
@@ -183,8 +183,8 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
               onClick={() => setSection("characters")}
               className={`flex-1 rounded-lg px-3 py-1.5 text-xs font-medium ${
                 section === "characters"
-                  ? "bg-white text-slate-900 shadow-sm"
-                  : "text-slate-500"
+                  ? "bg-[#e8e8e4] text-neutral-900 shadow-sm"
+                  : "text-slate-400 hover:text-slate-200"
               }`}
             >
               {ui.vocabTabCharacters}
@@ -205,12 +205,12 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            className="min-w-0 flex-1 rounded-xl border border-slate-200 bg-white px-3 py-2.5 text-sm text-slate-900 outline-none focus:border-slate-400"
+            className="min-w-0 flex-1 rounded-xl border border-white/10 bg-[#121212] px-3 py-2.5 text-sm text-slate-100 outline-none focus:border-white/40"
           />
           <button
             type="submit"
             disabled={isSearching || !query.trim()}
-            className="shrink-0 rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-medium text-white disabled:opacity-40"
+            className="shrink-0 rounded-xl bg-[#e8e8e4] shadow-[0_0_14px_rgba(255,255,255,0.28)] px-4 py-2.5 text-sm font-medium text-neutral-900 disabled:opacity-40"
           >
             {isSearching ? ui.vocabSearching : ui.vocabSearchCta}
           </button>
@@ -219,21 +219,21 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
         {showResults ? (
           <section className="mt-5">
             <div className="flex items-center justify-between gap-3">
-              <h2 className="text-sm font-semibold text-slate-900">
+              <h2 className="text-sm font-semibold text-slate-100">
                 {ui.vocabResultsTitle}
               </h2>
               <button
                 type="button"
                 onClick={handleClearSearch}
-                className="shrink-0 text-xs font-medium text-slate-500 hover:text-slate-900"
+                className="shrink-0 text-xs font-medium text-slate-500 hover:text-white"
               >
                 {ui.vocabPreviewClose}
               </button>
             </div>
             {error ? (
-              <p className="mt-2 text-sm text-rose-700">{error}</p>
+              <p className="mt-2 text-sm text-rose-300">{error}</p>
             ) : results.length === 0 ? (
-              <p className="mt-2 text-sm text-slate-600">{ui.vocabNoResults}</p>
+              <p className="mt-2 text-sm text-slate-300">{ui.vocabNoResults}</p>
             ) : (
               <ul className="mt-3 space-y-3">
                 {results.map((item) => {
@@ -241,7 +241,7 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                   return (
                     <li
                       key={`${item.word}-${item.gloss}`}
-                      className="rounded-2xl border border-slate-200 bg-white p-4"
+                      className="rounded-2xl border border-white/10 bg-[#121212] p-4"
                     >
                       <div className="flex items-start justify-between gap-3">
                         <div className="min-w-0">
@@ -249,7 +249,7 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                             <AnalyzableEnglish
                               sentence={item.word}
                               context={item.example ? [item.example] : undefined}
-                              className="text-base font-semibold text-slate-900"
+                              className="text-base font-semibold text-slate-100"
                             />
                             <TTSButton text={item.word} ariaLabel={ui.listen} />
                           </div>
@@ -274,8 +274,8 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                           onClick={() => handleSave(item)}
                           className={`shrink-0 rounded-full px-3 py-1.5 text-xs font-medium ${
                             saved
-                              ? "bg-teal-50 text-teal-800"
-                              : "bg-slate-900 text-white"
+                              ? "bg-white/10 text-[#d4d4d0]"
+                              : "bg-[#e8e8e4] text-neutral-900 hover:bg-[#f5f5f3]"
                           }`}
                         >
                           {saved ? ui.vocabSaved : ui.vocabSave}
@@ -291,7 +291,7 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
 
         <section className="mt-6">
           <div className="flex items-center justify-between gap-3">
-            <h2 className="text-sm font-semibold text-slate-900">
+            <h2 className="text-sm font-semibold text-slate-100">
               {ui.vocabSavedTitle}
             </h2>
             {entries.length > 0 ? (
@@ -300,7 +300,7 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                   <button
                     type="button"
                     onClick={handleShuffle}
-                    className="rounded-full border border-slate-200 bg-white px-3 py-1.5 text-xs font-medium text-slate-600 hover:bg-slate-50"
+                    className="rounded-full border border-white/10 bg-[#121212] px-3 py-1.5 text-xs font-medium text-slate-300 hover:bg-white/10"
                   >
                     {ui.vocabShuffle}
                   </button>
@@ -316,8 +316,8 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                   }}
                   className={`rounded-full px-3 py-1.5 text-xs font-medium ${
                     hideGloss
-                      ? "bg-slate-900 text-white"
-                      : "border border-slate-200 bg-white text-slate-600"
+                      ? "bg-[#e8e8e4] text-neutral-900"
+                      : "border border-white/10 bg-[#121212] text-slate-300"
                   }`}
                 >
                   {ui.vocabHideGloss}
@@ -326,7 +326,7 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
             ) : null}
           </div>
           {entries.length === 0 ? (
-            <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-slate-600">
+            <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-slate-300">
               {ui.vocabEmpty}
             </p>
           ) : (
@@ -337,7 +337,7 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                 return (
                   <li
                     key={entry.id}
-                    className="rounded-2xl border border-slate-200 bg-white p-4"
+                    className="rounded-2xl border border-white/10 bg-[#121212] p-4"
                   >
                     <div className="flex items-start justify-between gap-3">
                       <div className="min-w-0 flex-1">
@@ -345,7 +345,7 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                           <AnalyzableEnglish
                             sentence={entry.word}
                             context={entry.example ? [entry.example] : undefined}
-                            className="text-base font-semibold text-slate-900"
+                            className="text-base font-semibold text-slate-100"
                           />
                           <TTSButton text={entry.word} ariaLabel={ui.listen} />
                         </div>
@@ -359,7 +359,7 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                                 return next;
                               })
                             }
-                            className="mt-2 w-full rounded-xl bg-slate-50 px-3 py-2.5 text-left text-xs text-slate-500"
+                            className="mt-2 w-full rounded-xl bg-white/5 px-3 py-2.5 text-left text-xs text-slate-500"
                           >
                             {ui.vocabRevealGloss}
                           </button>
@@ -412,7 +412,7 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                       <button
                         type="button"
                         onClick={() => handleDelete(entry.id)}
-                        className="shrink-0 text-xs font-medium text-rose-700 hover:underline"
+                        className="shrink-0 text-xs font-medium text-rose-300 hover:underline"
                       >
                         {ui.vocabDelete}
                       </button>
@@ -428,7 +428,7 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
       </div>
 
       {toast ? (
-        <div className="pointer-events-none absolute bottom-4 left-1/2 z-10 max-w-[min(90vw,18rem)] -translate-x-1/2 rounded-full bg-slate-900 px-4 py-2 text-center text-xs text-white shadow-lg">
+        <div className="pointer-events-none absolute bottom-4 left-1/2 z-10 max-w-[min(90vw,18rem)] -translate-x-1/2 rounded-full bg-[#e8e8e4] px-4 py-2 text-center text-xs text-neutral-900 shadow-lg">
           {toast}
         </div>
       ) : null}

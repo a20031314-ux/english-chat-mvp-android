@@ -45,6 +45,8 @@ type AnalyzableEnglishProps = {
   language?: string;
   /** Existing UI-language line to reuse in the sentence inspect sheet. */
   translation?: string;
+  /** 1-pass first reading for analysis (not the on-screen caption). */
+  analysisTranslation?: string;
   /** Inside a sentence sheet: pick words/phrases only, no sentence rail. */
   elementsOnly?: boolean;
   diff?: {
@@ -94,14 +96,14 @@ const diffMarkClass = {
     error:
       "bg-rose-500/15 font-semibold text-rose-700 underline decoration-2 decoration-rose-500 underline-offset-2",
     added:
-      "bg-teal-500/15 font-semibold text-teal-800 underline decoration-2 decoration-teal-600 underline-offset-2",
+      "bg-neutral-200 font-semibold text-neutral-900 underline decoration-2 decoration-neutral-600 underline-offset-2",
     gap: "mx-0.5 inline-flex items-center rounded-sm border border-dashed border-rose-400 bg-rose-50 px-1 py-0.5 text-[11px] font-semibold leading-none text-rose-700",
   },
   onDark: {
     error:
       "bg-rose-400/35 font-semibold text-rose-100 underline decoration-2 decoration-rose-300 underline-offset-2",
     added:
-      "bg-teal-400/30 font-semibold text-teal-100 underline decoration-2 decoration-teal-200 underline-offset-2",
+      "bg-white/20 font-semibold text-white underline decoration-2 decoration-white underline-offset-2",
     gap: "mx-0.5 inline-flex items-center rounded-sm border border-dashed border-rose-200/80 bg-rose-400/20 px-1 py-0.5 text-[11px] font-semibold leading-none text-rose-100",
   },
 };
@@ -130,6 +132,7 @@ export function AnalyzableEnglish({
   sourceType,
   language,
   translation: attachedTranslation,
+  analysisTranslation: attachedAnalysisTranslation,
   elementsOnly = false,
   diff,
 }: AnalyzableEnglishProps) {
@@ -141,6 +144,8 @@ export function AnalyzableEnglish({
     learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
   const label = analyzeLabel ?? insight?.analyzeLabel;
   const reusedTranslation = attachedTranslation?.replace(/\s+/g, " ").trim() || "";
+  const reusedAnalysis =
+    attachedAnalysisTranslation?.replace(/\s+/g, " ").trim() || "";
   const inspect = useCallback(
     (
       selected: string,
@@ -155,6 +160,7 @@ export function AnalyzableEnglish({
         language: language || targetLanguage,
         intent,
         ...(reusedTranslation ? { translation: reusedTranslation } : {}),
+        ...(reusedAnalysis ? { analysisTranslation: reusedAnalysis } : {}),
         ...(span?.inner?.length ? { innerUnits: span.inner } : {}),
         ...(span?.kind === "expression" || span?.kind === "grammar_unit"
           ? { allowVocabSave: true }
@@ -165,6 +171,7 @@ export function AnalyzableEnglish({
       analysis,
       context,
       language,
+      reusedAnalysis,
       reusedTranslation,
       sentence,
       sourceType,
@@ -185,11 +192,15 @@ export function AnalyzableEnglish({
       ? /[A-Za-z]/.test(sentence)
       : sentence.trim().length > 0;
   const enabled = (canAnalyze || canSave) && hasContent;
+  const pickWords = enabled && !children && elementsOnly;
+  const showDiffMarks = Boolean(diff) && !children;
+  const useTokens = pickWords || showDiffMarks;
+  const showSentenceRail = enabled && !children && !elementsOnly;
   const [learningSpans, setLearningSpans] = useState<LearningSpan[] | null>(
     null,
   );
   useEffect(() => {
-    if (targetLanguage === "en") {
+    if (!pickWords || targetLanguage === "en") {
       setLearningSpans(null);
       return;
     }
@@ -200,12 +211,13 @@ export function AnalyzableEnglish({
     return () => {
       cancelled = true;
     };
-  }, [sentence, targetLanguage]);
+  }, [pickWords, sentence, targetLanguage]);
   const tokens =
-    targetLanguage === "en" || !learningSpans
-      ? tokenize(sentence)
-      : tokensFromLearningSpans(sentence, learningSpans);
-  const useTokens = enabled && !children;
+    pickWords || showDiffMarks
+      ? targetLanguage === "en" || !learningSpans
+        ? tokenize(sentence)
+        : tokensFromLearningSpans(sentence, learningSpans)
+      : [];
 
   const rootRef = useRef<HTMLSpanElement>(null);
   const wrapRef = useRef<HTMLSpanElement>(null);
@@ -275,12 +287,7 @@ export function AnalyzableEnglish({
   };
 
   const onPointerDown = (event: ReactPointerEvent<HTMLSpanElement>) => {
-    if (targetLanguage === "en") {
-      prefetchExpressionUnits(sentence, targetLanguage);
-    } else {
-      prefetchLearningSpans(sentence, targetLanguage);
-    }
-    if (!useTokens) return;
+    if (!pickWords) return;
     const index = tokenIndexFromPoint(event.clientX, event.clientY);
     if (index == null || !isWordToken(tokens[index])) {
       dragRef.current = null;
@@ -316,39 +323,31 @@ export function AnalyzableEnglish({
   };
 
   const onPointerUp = (event: ReactPointerEvent<HTMLSpanElement>) => {
-    if (useTokens) {
-      const drag = dragRef.current;
-      dragRef.current = null;
-      if (drag && !drag.scrolling) {
-        const dist = Math.hypot(
-          event.clientX - drag.x,
-          event.clientY - drag.y,
-        );
-        const isTap = dist < TAP_MOVE_PX || drag.start === drag.end;
-        suppressClickRef.current = true;
-        event.stopPropagation();
-        window.getSelection()?.removeAllRanges();
-        if (isTap) {
-          skipTokenClickRef.current = true;
-          event.preventDefault();
-          commit(tokens[drag.start], true);
-          return;
-        }
-        let from = Math.min(drag.start, drag.end);
-        let to = Math.max(drag.start, drag.end);
-        while (from <= to && !isWordToken(tokens[from])) from += 1;
-        while (to >= from && !isWordToken(tokens[to])) to -= 1;
-        const picked = from <= to ? rangeText(tokens, from, to) : "";
-        if (picked) {
-          skipTokenClickRef.current = true;
-          event.preventDefault();
-          commit(picked, false);
-        }
-      }
+    if (!pickWords) return;
+    const drag = dragRef.current;
+    dragRef.current = null;
+    if (!drag || drag.scrolling) return;
+    const dist = Math.hypot(event.clientX - drag.x, event.clientY - drag.y);
+    const isTap = dist < TAP_MOVE_PX || drag.start === drag.end;
+    suppressClickRef.current = true;
+    event.stopPropagation();
+    window.getSelection()?.removeAllRanges();
+    if (isTap) {
+      skipTokenClickRef.current = true;
+      event.preventDefault();
+      commit(tokens[drag.start], true);
       return;
     }
-    window.setTimeout(syncNativeSelection, 0);
-    window.setTimeout(syncNativeSelection, 280);
+    let from = Math.min(drag.start, drag.end);
+    let to = Math.max(drag.start, drag.end);
+    while (from <= to && !isWordToken(tokens[from])) from += 1;
+    while (to >= from && !isWordToken(tokens[to])) to -= 1;
+    const picked = from <= to ? rangeText(tokens, from, to) : "";
+    if (picked) {
+      skipTokenClickRef.current = true;
+      event.preventDefault();
+      commit(picked, false);
+    }
   };
 
   const onClick = (event: ReactMouseEvent<HTMLSpanElement>) => {
@@ -389,6 +388,7 @@ export function AnalyzableEnglish({
               onAnalyze={onAnalyze}
               sourceType={sourceType}
               language={language}
+              translation={attachedTranslation}
             />
           ))}
         </span>
@@ -396,7 +396,6 @@ export function AnalyzableEnglish({
     }
   }
 
-  const showSentenceRail = useTokens && !elementsOnly;
   const sentenceLabel = label ?? "sentence";
 
   const marks = diff ? tokenDiffMarks(diff) : null;
@@ -406,6 +405,16 @@ export function AnalyzableEnglish({
       return <span key={`${index}-s`}>{token}</span>;
     }
     const mark = marks?.get(index);
+    if (!pickWords) {
+      return (
+        <span
+          key={`${index}-${token}`}
+          className={mark ? markStyles[mark] : undefined}
+        >
+          {token}
+        </span>
+      );
+    }
     return (
       <span
         key={`${index}-${token}`}
@@ -427,7 +436,11 @@ export function AnalyzableEnglish({
           commit(token, true);
         }}
         className={`relative cursor-pointer rounded-sm ${
-          mark ? markStyles[mark] : "hover:bg-amber-100/70"
+          mark
+            ? markStyles[mark]
+            : tone === "onDark"
+              ? "hover:bg-white/15"
+              : "hover:bg-amber-100/70"
         }`}
       >
         {token}
@@ -491,35 +504,46 @@ export function AnalyzableEnglish({
           onClick={(event) => {
             event.preventDefault();
             event.stopPropagation();
+            if (targetLanguage === "en") {
+              prefetchExpressionUnits(sentence, targetLanguage);
+            } else {
+              prefetchLearningSpans(sentence, targetLanguage);
+            }
             if (analysis) {
               inspect(sentence, "sentence");
               return;
             }
             commit(sentence, false);
           }}
-          className={`w-1 shrink-0 self-stretch rounded-full ${
+          className={`pointer-events-auto w-1 shrink-0 self-stretch rounded-full ${
             tone === "onDark"
               ? "bg-white/35 hover:bg-white/70"
-              : "bg-slate-300 hover:bg-teal-500"
+              : "bg-slate-300 hover:bg-[#e8e8e4]"
           }`}
         />
       ) : null}
-      <span className={showSentenceRail ? "min-w-0 flex-1" : "min-w-0"}>
+      <span
+        className={`${showSentenceRail ? "min-w-0 flex-1" : "min-w-0"} ${
+          pickWords ? "" : "pointer-events-none"
+        }`}
+      >
         <span
           ref={rootRef}
           translate="no"
           className={`${inline ? "" : "block"} whitespace-pre-wrap ${
-            useTokens
+            pickWords
               ? "select-none"
-              : "[user-select:text] [-webkit-user-select:text]"
+              : showSentenceRail
+                ? "select-none"
+                : "[user-select:text] [-webkit-user-select:text]"
           } ${className}`}
           dir={learningLanguageTextDir(targetLanguage)}
-          onPointerDown={onPointerDown}
-          onPointerMove={onPointerMove}
-          onPointerUp={onPointerUp}
-          onClick={onClick}
+          onPointerDown={pickWords ? onPointerDown : undefined}
+          onPointerMove={pickWords ? onPointerMove : undefined}
+          onPointerUp={pickWords ? onPointerUp : undefined}
+          onClick={pickWords ? onClick : undefined}
         >
-          {children ? children : tokenNodes}
+          {children ? children : useTokens ? tokenNodes : sentence}
         </span>
       </span>
     </span>

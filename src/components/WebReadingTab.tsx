@@ -54,32 +54,21 @@ export function WebReadingTab({
 
   useEffect(() => {
     let cancelled = false;
-    const handles: Array<{ remove: () => Promise<void> }> = [];
-    const bind = async () => {
-      handles.push(
-        await WebReader.addListener("captureText", (payload) => {
-          if (cancelled) return;
-          const text = payload.text?.replace(/\s+/g, " ").trim() || "";
-          analyzePayload({
-            selectedText: text,
-            contextSentence: text,
-            sourceUrl: sessionUrl,
-          });
-        }),
-      );
-      handles.push(
-        await WebReader.addListener("closed", () => {
-          if (!cancelled) setSessionUrl(null);
-        }),
-      );
-    };
-    void bind();
+    let handle: { remove: () => Promise<void> } | null = null;
+    void WebReader.addListener("closed", () => {
+      if (!cancelled) setSessionUrl(null);
+    }).then((next) => {
+      if (cancelled) {
+        void next.remove();
+        return;
+      }
+      handle = next;
+    });
     return () => {
       cancelled = true;
-      for (const handle of handles) void handle.remove();
-      void WebReader.removeAllListeners();
+      if (handle) void handle.remove();
     };
-  }, [analyzePayload, sessionUrl]);
+  }, []);
 
   useEffect(() => {
     if (!notice) return;
@@ -143,19 +132,19 @@ export function WebReadingTab({
   };
 
   return (
-    <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
-      <header className="flex shrink-0 items-center justify-between gap-2 border-b border-slate-200 px-4 py-3">
-        <h1 className="text-base font-semibold text-slate-900">
+    <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl tb-panel">
+      <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
+        <h1 className="text-base font-semibold text-white">
           {ui.homeTabRead}
         </h1>
       </header>
 
       <div className="relative min-h-0 flex-1 overflow-y-auto px-4 py-8">
         <div className="mx-auto flex w-full max-w-lg flex-col">
-          <p className="whitespace-pre-line text-center text-lg font-semibold text-slate-900">
+          <p className="whitespace-pre-line text-center text-lg font-semibold text-white">
             {ui.webReadHeadline}
           </p>
-          <p className="mt-2 whitespace-pre-line text-center text-sm leading-relaxed text-slate-600">
+          <p className="mt-2 whitespace-pre-line text-center text-sm leading-relaxed text-slate-400">
             {ui.webReadHowTo}
           </p>
           <form onSubmit={onSubmit} className="mt-6 flex items-center gap-2">
@@ -169,18 +158,18 @@ export function WebReadingTab({
               inputMode="url"
               autoCapitalize="none"
               autoCorrect="off"
-              className="min-w-0 flex-1 rounded-xl border border-slate-300 bg-white px-3 py-2.5 text-sm text-slate-900 outline-none focus:border-slate-500"
+              className="min-w-0 flex-1 rounded-xl border border-white/15 bg-[#101010] px-3 py-2.5 text-sm text-slate-100 outline-none placeholder:text-slate-500 focus:border-white/40"
             />
             <button
               type="submit"
               disabled={!draftUrl.trim()}
-              className="shrink-0 rounded-xl bg-slate-900 px-4 py-2.5 text-sm font-medium text-white hover:bg-slate-800 disabled:cursor-default disabled:opacity-50"
+              className="shrink-0 rounded-xl bg-[#e8e8e4] px-4 py-2.5 text-sm font-medium text-neutral-900 shadow-[0_0_14px_rgba(255,255,255,0.28)] hover:bg-[#f5f5f3] disabled:cursor-default disabled:opacity-50 disabled:shadow-none"
             >
               {ui.webReadOpen}
             </button>
           </form>
           {urlError ? (
-            <p className="mt-3 text-center text-sm text-rose-700">{urlError}</p>
+            <p className="mt-3 text-center text-sm text-rose-300">{urlError}</p>
           ) : null}
           <div className="mt-8 flex flex-wrap justify-center gap-2">
             {webReaderShortcutsForLanguage(targetLanguage).map((item) => (
@@ -188,7 +177,7 @@ export function WebReadingTab({
                 key={item.id}
                 type="button"
                 onClick={() => void openUrl(item.url)}
-                className="rounded-full border border-slate-200 px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50"
+                className="rounded-full border border-white/15 px-3 py-1.5 text-sm text-slate-200 hover:bg-white/10"
               >
                 {item.label}
               </button>
@@ -207,8 +196,8 @@ export function WebReadingTab({
           />
 
           {sessionUrl ? (
-            <div className="mt-8 rounded-xl bg-slate-50 px-3 py-3 text-center">
-              <p className="whitespace-pre-line text-sm text-slate-600">
+            <div className="mt-8 rounded-xl bg-white/5 px-3 py-3 text-center">
+              <p className="whitespace-pre-line text-sm text-slate-300">
                 {ui.webReadSelectionHint}
               </p>
               <button
@@ -227,12 +216,12 @@ export function WebReadingTab({
               onChange={(event) => setPasteText(event.target.value)}
               rows={3}
               placeholder={ui.webReadPastePlaceholder}
-              className="w-full resize-none rounded-xl border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 outline-none focus:border-slate-500"
+              className="w-full resize-none rounded-xl border border-white/15 bg-[#121212] px-3 py-2 text-sm text-slate-100 outline-none focus:border-white/40"
             />
             <button
               type="submit"
               disabled={!pasteText.trim()}
-              className="mt-2 w-full rounded-xl border border-slate-200 py-2.5 text-sm font-medium text-slate-800 hover:bg-slate-50 disabled:cursor-default disabled:opacity-50"
+              className="mt-2 w-full rounded-xl border border-white/10 py-2.5 text-sm font-medium text-slate-100 hover:bg-white/10 disabled:cursor-default disabled:opacity-50"
             >
               {ui.exploreSubmit}
             </button>
@@ -241,7 +230,7 @@ export function WebReadingTab({
       </div>
 
       {notice ? (
-        <p className="pointer-events-none absolute bottom-20 left-1/2 z-10 max-w-[90%] -translate-x-1/2 rounded-full bg-slate-900/90 px-3 py-1.5 text-center text-xs text-white">
+        <p className="pointer-events-none absolute bottom-20 left-1/2 z-10 max-w-[90%] -translate-x-1/2 rounded-full bg-white/90 px-3 py-1.5 text-center text-xs text-white">
           {notice}
         </p>
       ) : null}

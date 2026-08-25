@@ -13,7 +13,7 @@ import {
 } from "@/lib/studyMaterials/types";
 
 const ACCEPT =
-  ".pdf,.epub,.txt,.text,application/pdf,application/epub+zip,text/plain,image/*";
+  ".pdf,.epub,.txt,.text,application/pdf,application/epub+zip,text/plain";
 
 function stageLabel(stage: ImportStage, ui: UICopy): string {
   if (stage === "reading") return ui.studyStageReading;
@@ -84,15 +84,15 @@ export function StudyUpload({
 
   return (
     <div className="flex h-full min-h-0 flex-col">
-      <header className="flex shrink-0 items-center gap-2 border-b border-slate-200 px-3 py-2.5">
+      <header className="flex shrink-0 items-center gap-2 border-b border-white/10 px-3 py-2.5">
         <button
           type="button"
           onClick={onCancel}
-          className="rounded-lg px-2 py-1.5 text-sm text-slate-600 hover:bg-slate-50"
+          className="rounded-lg px-2 py-1.5 text-sm text-slate-300 hover:bg-white/10"
         >
           {ui.studyBack}
         </button>
-        <h2 className="text-sm font-semibold text-slate-900">{ui.studyAdd}</h2>
+        <h2 className="text-sm font-semibold text-slate-100">{ui.studyAdd}</h2>
       </header>
 
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-6">
@@ -105,11 +105,11 @@ export function StudyUpload({
           onDrop={onDrop}
           className={`rounded-2xl border-2 border-dashed px-4 py-8 text-center ${
             dragOver
-              ? "border-slate-700 bg-slate-50"
-              : "border-slate-200 bg-white"
+              ? "border-slate-700 bg-white/5"
+              : "border-white/10 bg-[#121212]"
           }`}
         >
-          <p className="whitespace-pre-line text-sm font-medium text-slate-800">
+          <p className="whitespace-pre-line text-sm font-medium text-slate-100">
             {ui.studyDropHint}
           </p>
           <form
@@ -120,7 +120,7 @@ export function StudyUpload({
               type="button"
               disabled={busy}
               onClick={() => pick(".pdf,application/pdf")}
-              className="rounded-full border border-slate-200 px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50 disabled:opacity-50"
+              className="rounded-full border border-white/10 px-3 py-1.5 text-sm text-slate-200 hover:bg-white/10 disabled:opacity-50"
             >
               PDF
             </button>
@@ -128,7 +128,7 @@ export function StudyUpload({
               type="button"
               disabled={busy}
               onClick={() => pick(".epub,application/epub+zip")}
-              className="rounded-full border border-slate-200 px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50 disabled:opacity-50"
+              className="rounded-full border border-white/10 px-3 py-1.5 text-sm text-slate-200 hover:bg-white/10 disabled:opacity-50"
             >
               EPUB
             </button>
@@ -136,17 +136,9 @@ export function StudyUpload({
               type="button"
               disabled={busy}
               onClick={() => pick(".txt,.text,text/plain")}
-              className="rounded-full border border-slate-200 px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50 disabled:opacity-50"
+              className="rounded-full border border-white/10 px-3 py-1.5 text-sm text-slate-200 hover:bg-white/10 disabled:opacity-50"
             >
               TXT
-            </button>
-            <button
-              type="button"
-              disabled={busy}
-              onClick={() => pick("image/*", true)}
-              className="rounded-full border border-slate-200 px-3 py-1.5 text-sm text-slate-700 hover:bg-slate-50 disabled:opacity-50"
-            >
-              {ui.studyAddImage}
             </button>
           </form>
           <input
@@ -162,12 +154,12 @@ export function StudyUpload({
         </div>
 
         {busy || stage === "ready" ? (
-          <p className="mt-4 text-center text-sm text-slate-600">
+          <p className="mt-4 text-center text-sm text-slate-300">
             {stage ? stageLabel(stage, ui) : ui.studyStageReading}
           </p>
         ) : null}
         {error ? (
-          <p className="mt-4 text-center text-sm text-rose-700">{error}</p>
+          <p className="mt-4 text-center text-sm text-rose-300">{error}</p>
         ) : null}
       </div>
     </div>

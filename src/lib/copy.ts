@@ -9,6 +9,59 @@ export const APP_LOCALE_STORAGE_KEY = "appUiLocale";
 /** UI languages follow learning languages — do not maintain a separate list. */
 export const LOCALE_OPTIONS = uiLocaleOptions();
 
+const generatedBillingOverlay = {
+  videoLearnQuotaReached:
+    "You’ve used this month’s import points. Library and saved videos can still be replayed.",
+  videoLearnTooLong:
+    "This video is longer than 15 minutes, so it can’t be prepared.",
+  videoLearnQuotaHint:
+    "{used}/{limit} import points this month · 1 point per 3 minutes · library and saved videos are free",
+  studyImageSoon:
+    "Photo reading is off for now. Please use PDF, EPUB, or TXT.",
+  studyDropHint:
+    "Choose a file or drop it here.\nPDF, EPUB, and TXT are supported.",
+  planPremium: "Premium · this month’s library + {limit} import points",
+  paywallCta: "Start for ₩9,900/month",
+  paywallLimitBanner:
+    "You've reached a free limit. Go Premium to keep learning from video.",
+  paywallSubtitle:
+    "Premium opens this month’s study library and 80 import points for your own links. Saved videos and library titles don’t use points.",
+  paywallBenefits:
+    "This month’s full study library\n80 import points for your own videos (3 min = 1 point)\nReplaying saved videos is free\nNo daily chat limit",
+  videoLearnBody:
+    "Pick a title from this month’s library, or paste your own link. Library titles are free; custom links use import points.",
+  videoLearnLibraryTitle: "This month’s library",
+  videoLearnLibrarySubtitleFree:
+    "Free trial: {used}/{limit} episodes. Subscribe to open the full monthly pack.",
+  videoLearnLibrarySubtitlePremium:
+    "This month’s study pack · no points charged",
+  videoLearnLibraryEmpty:
+    "A library for this language isn’t ready yet. Premium members can paste a link instead.",
+  videoLearnLibraryTrial: "Trial",
+  videoLearnLibraryLocked: "Locked",
+  videoLearnImportLocked:
+    "Pasting your own link is a Premium feature and uses import points.",
+  videoLearnCatalogLocked:
+    "This episode is in the Premium library.",
+  chatAttachPhoto: "Photo",
+  chatRemovePhoto: "Remove photo",
+  chatCall: "Call",
+  chatCalling: "Calling…",
+  chatInCall: "On a call",
+  chatMute: "Mute",
+  chatUnmute: "Unmute",
+  chatHangUp: "Hang up",
+  chatCallEnded: "Call ended · {duration}",
+  chatNativeMode: "Chat",
+  chatTutorMode: "Help",
+  sessionMenu: "Menu",
+  billingOpen: "Plan",
+  billingScreenTitle: "Plan & billing",
+  billingFreeLabel: "Free",
+  billingPremiumLabel: "Premium",
+  billingClose: "Close",
+} as const;
+
 export const copy = {
   ko: {
     appTitle: "{targetLanguage} 교정 채팅",
@@ -21,6 +74,23 @@ export const copy = {
     send: "전송",
     chatStartCta: "먼저 말하기",
     chatStartFailed: "대화를 시작하지 못했어요. 잠시 후 다시 시도해 주세요.",
+    chatAttachPhoto: "사진",
+    chatRemovePhoto: "사진 빼기",
+    chatCall: "통화",
+    chatCalling: "연결 중…",
+    chatInCall: "통화 중",
+    chatMute: "음소거",
+    chatUnmute: "음소거 해제",
+    chatHangUp: "끊기",
+    chatCallEnded: "통화 종료 · {duration}",
+    chatNativeMode: "일상 대화",
+    chatTutorMode: "도움 모드",
+    sessionMenu: "메뉴",
+    billingOpen: "플랜",
+    billingScreenTitle: "플랜 및 결제",
+    billingFreeLabel: "무료",
+    billingPremiumLabel: "프리미엄",
+    billingClose: "닫기",
     translate: "번역",
     listen: "듣기",
     insightAnalyze: "분석",
@@ -203,7 +273,7 @@ export const copy = {
     studyLibraryTitle: "내 학습자료",
     studyAdd: "+ 자료 추가",
     studyAddImage: "이미지",
-    studyDropHint: "파일을 선택하거나 여기에 놓으세요.\nPDF, EPUB, TXT, 이미지를 읽을 수 있어요.",
+    studyDropHint: "파일을 선택하거나 여기에 놓으세요.\nPDF, EPUB, TXT를 읽을 수 있어요.",
     studyOpen: "열기",
     studyContinue: "이어서 읽기",
     studyDelete: "삭제",
@@ -220,7 +290,7 @@ export const copy = {
     studyProtected: "이 파일은 보호되어 있어 현재 불러올 수 없습니다.",
     studyNoText: "이 PDF에서는 텍스트를 찾지 못했습니다.",
     studyTooLarge: "파일이 너무 커서 불러올 수 없습니다.",
-    studyImageSoon: "이 이미지는 열 수 없어요. JPG 또는 PNG로 다시 시도해 주세요.",
+    studyImageSoon: "사진으로 읽는 기능은 잠시 꺼 두었어요. PDF, EPUB, TXT를 이용해 주세요.",
     studyImageHint: "아래 문장을 누르면 해석과 분석을 볼 수 있어요. 사진은 두 손가락으로 확대할 수 있어요.",
     studySelectGloss: "뜻",
     studySelectHint: "문장을 누르면 해석과 분석을 볼 수 있어요. 두 손가락으로 확대할 수 있어요.",
@@ -235,7 +305,7 @@ export const copy = {
     uiLanguageLabel: "UI 언어",
     videoLearnHeadline: "영상으로 {targetLanguage} 배우기",
     videoLearnBody:
-      "보고 싶은 {targetLanguage} 영상 링크를 입력하면 자막과 번역을 생성하고, 궁금한 표현을 바로 분석할 수 있어요.",
+      "이번 달 라이브러리에서 고르거나, 링크를 붙여 직접 가져올 수 있어요. 라이브러리는 차감이 없고, 가져오기는 3분당 1포인트예요.",
     videoLearnUrlPlaceholder: "YouTube 영상 링크를 붙여넣으세요",
     videoLearnLoad: "영상 불러오기",
     videoLearnInvalidUrl: "YouTube 영상 링크를 입력해 주세요.",
@@ -261,23 +331,43 @@ export const copy = {
     videoLearnNoSpeech: "이 영상에서 음성을 찾지 못했어요.",
     videoLearnWrongLanguage:
       "이 영상은 학습 언어와 달라요. {targetLanguage}로 된 영상을 골라 주세요.",
-    videoLearnMoreGenerating: "영상이 끝난 뒤 한국어 학습자료를 만들고 있어요…",
+    videoLearnQuotaReached:
+      "이번 달 가져오기 포인트를 다 썼어요. 라이브러리와 저장한 영상은 다시 볼 수 있어요.",
+    videoLearnTooLong:
+      "이 영상은 15분을 넘어서 준비할 수 없어요.",
+    videoLearnQuotaHint:
+      "가져오기 {used}/{limit}포인트 · 3분당 1포인트 · 라이브러리·저장 영상은 차감 없음",
+    videoLearnLibraryTitle: "이번 달 라이브러리",
+    videoLearnLibrarySubtitleFree:
+      "무료 체험 {used}/{limit}편 · 구독하면 이번 달 전체를 볼 수 있어요.",
+    videoLearnLibrarySubtitlePremium:
+      "이번 달 학습 팩 · 포인트 차감 없음",
+    videoLearnLibraryEmpty:
+      "이 언어 라이브러리는 아직 준비 중이에요. 프리미엄이면 링크를 붙여 가져올 수 있어요.",
+    videoLearnLibraryTrial: "체험",
+    videoLearnLibraryLocked: "잠김",
+    videoLearnImportLocked:
+      "직접 가져오기는 프리미엄에서 포인트를 씁니다.",
+    videoLearnCatalogLocked:
+      "이 편은 프리미엄 라이브러리예요.",
+    videoLearnMoreGenerating: "나머지 해석을 만들고 있어요…",
+    videoLearnWaitingGloss: "해석이 준비되면 재생합니다",
     videoLearnStudyTitle: "{targetLanguage} 문장",
     videoLearnStudyHint:
-      "문장을 누르면 그 구간만 재생됩니다. 단어를 드래그해 선택하면 분석할 수 있어요.",
+      "문장을 누르면 그 구간만 재생됩니다. 왼쪽 막대를 누르면 문장 분석이 열리고, 그 안에서 단어를 고를 수 있어요.",
     videoLearnStudyEmpty: "아직 추출된 문장이 없어요.",
     videoLearnRangeMode: "구간 묶기",
     videoLearnRangeHint:
-      "구간 묶기를 누르면 세로 게이지가 나와요. 위로 올리면 위 구간, 아래로 내리면 아래 구간과 묶어요.",
+      "구간 묶기를 누른 뒤, 위·아래 문장을 눌러 범위를 고르세요. 끝 구간을 다시 누르면 줄어듭니다.",
     videoLearnPlayRange: "묶어서 듣기",
     videoLearnClearRange: "선택 해제",
     videoLearnMergeCues: "구간 통합",
     videoLearnSplitCue: "구간 쪼개기",
-    videoLearnMergeNeedRange: "게이지로 2개 이상 구간을 묶은 뒤 통합하세요.",
+    videoLearnMergeNeedRange: "위·아래 문장을 눌러 2개 이상 고른 뒤 통합하세요.",
     videoLearnBundleGaugeHint:
-      "게이지를 위·아래로 밀어 묶을 범위를 정하세요. 빨간 점은 지금 구간입니다.",
+      "게이지를 위·아래로 밀어도 됩니다. 빨간 점은 지금 구간입니다.",
     videoLearnBundleClickHint:
-      "또는 위·아래 문장을 눌러 범위에 넣으세요. (끝 구간을 다시 누르면 줄어들어요.)",
+      "위·아래 문장을 눌러 범위에 넣으세요. 끝 구간을 다시 누르면 줄어들어요.",
     videoLearnBundleUp: "위",
     videoLearnBundleDown: "아래",
     videoLearnSplitTooShort: "이 구간은 너무 짧아서 쪼갤 수 없어요.",
@@ -294,7 +384,7 @@ export const copy = {
     videoLearnUndoMerge: "묶기 취소",
     videoLearnUndoSplit: "쪼개기 취소",
     videoLearnUndoEdit: "이전으로",
-    videoLearnResetAllCues: "전체 초기화",
+    videoLearnResetAllCues: "원상태 복구",
     videoLearnUndoMergeToast: "묶기 전으로 되돌렸어요",
     videoLearnUndoSplitToast: "쪼개기 전으로 되돌렸어요",
     videoLearnResetAllCuesToast: "구간을 처음 상태로 되돌렸어요",
@@ -302,7 +392,7 @@ export const copy = {
     videoLearnFullscreenExit: "전체화면 종료",
     videoLearnFullscreenHint: "아래 얇은 바를 누르면 그 구간만 재생해요.",
     videoLearnWatchHint:
-      "{targetLanguage} 자막을 보며 들으세요. 문장을 누르면 그 구간만 재생되고, 단어를 골라 분석할 수 있어요.",
+      "{targetLanguage} 자막을 보며 들으세요. 문장을 누르면 그 구간만 재생되고, 왼쪽 막대로 문장 분석을 연 뒤 단어를 고를 수 있어요.",
     videoLearnSaveSession: "이 영상 학습자료 저장",
     videoLearnSessionSaved: "저장됨",
     videoLearnSessionSavedToast: "영상 학습자료를 저장했어요. 나중에 다시 볼 수 있어요.",
@@ -323,9 +413,9 @@ export const copy = {
     discoverChannelAdd: "추가",
     discoverChannelAdded: "추가됨",
     discoverChannelRemove: "삭제",
-    discoverChannelOpen: "유튜브에서 보기",
+    discoverChannelOpen: "채널 영상 보기",
     discoverChannelEmpty:
-      "채널을 검색해 추가하세요. 아이콘은 유튜브로 가고, 이름을 누르면 영상을 가져와요.",
+      "채널을 검색해 추가하세요. 아이콘이나 이름을 누르면 그 채널 영상을 가져와요.",
     discoverChannelSearchEmpty: "채널을 찾지 못했어요.",
     discoverChannelSubscribers: "구독자 {count}",
     discoverClose: "접기",
@@ -386,7 +476,7 @@ export const copy = {
     discoverReadingMinutes: "예상 {minutes}분",
     webReadHeadline: "{targetLanguage} 콘텐츠를 읽다가\n궁금한 표현을 바로 분석해보세요.",
     webReadHowTo:
-      "사이트를 그대로 읽고,\n화면의 분석을 눌러 {targetLanguage}를 고르세요.",
+      "다른 앱에서 문장을 길게 눌러 선택한 뒤, 메뉴의 「분석」을 누르면 이 앱의 문장 분석이 열립니다.\n브라우저 오버레이로 화면의 문장을 눌러도 됩니다.",
     webReadReadingTitle: "이어서 읽고 분석하세요",
     webReadUrlPlaceholder: "URL을 입력하세요",
     webReadOpen: "열기",
@@ -403,7 +493,7 @@ export const copy = {
     webReadWebLimited:
       "선택한 {targetLanguage}를 아래에 붙여 넣어도 됩니다.",
     webReadSelectionHint:
-      "다른 앱 화면에서 분석을 누른 뒤\n{targetLanguage}를 고르세요. 길게 누르면 종료됩니다.",
+      "다른 앱에서 글을 고른 뒤 「분석」을 누르세요. 문장 분석 창이 이 앱에서 열립니다.",
     webReadNeedOverlay:
       "다른 앱 위에 표시와 화면 녹화 허용이 필요합니다.",
     webReadShortcutReddit: "Reddit",
@@ -421,6 +511,18 @@ export const copy = {
     exploreUsage: "기본적인 사용",
     exploreOtherUsages: "다른 쓰임",
     exploreMeaningHere: "이 문장에서는",
+    analysisSpokenAlso: "처음 해석",
+    salienceRecommended: "추천 지점",
+    salienceReasonLabel: "왜 여기인가요?",
+    salienceManualHint: "추천이 아니면 아래 막대에서 직접 고른 뒤 분석하세요.",
+    salienceLoading: "배울 지점을 찾는 중...",
+    salienceFailed: "추천 지점을 찾지 못했어요. 직접 골라 분석할 수 있어요.",
+    dimensionSyntax: "문법 구조",
+    dimensionUsage: "쓰임",
+    dimensionPhonology: "발음",
+    dimensionMorphology: "형태",
+    dimensionPragmatics: "뉘앙스",
+    dimensionEtymology: "유래",
     analysisKeyElements: "알아두면 좋아요",
     quizTodayTitle: "오늘의 복습",
     quizTodaySubtitle: "최근 대화에서 헷갈렸던 내용을 다시 연습해요.",
@@ -605,17 +707,18 @@ export const copy = {
     languageKorean: "한국어",
     languageEnglish: "English",
     languageSpanish: "Español",
-    planPremium: "프리미엄 플랜 · 무제한",
+    planPremium: "프리미엄 · 이번 달 라이브러리 + 가져오기 {limit}포인트",
     planFree: "무료 플랜 · 오늘 {used}/{limit}",
     upgradeCta: "프리미엄 업그레이드",
-    paywallLimitBanner: "오늘 무료 채팅 한도에 도달했어요. 프리미엄으로 계속 학습할 수 있어요.",
+    paywallLimitBanner:
+      "무료 한도에 도달했어요. 프리미엄으로 영상 학습을 이어갈 수 있어요.",
     paywallTitle: "프리미엄으로 계속 학습하기",
     paywallSubtitle:
-      "하루 제한 없이 {targetLanguage} 문장을 만들고, 교정받고, 내 {targetLanguage} 교재에 저장하세요.",
+      "프리미엄은 이번 달 학습 라이브러리 전체와, 직접 가져오기 80포인트를 줍니다. 라이브러리와 저장한 영상은 포인트가 나가지 않아요.",
     paywallBenefitsTitle: "프리미엄 혜택",
     paywallBenefits:
-      "하루 채팅 제한 해제\n복습 무제한\n내 {targetLanguage} 교재 저장 및 복습",
-    paywallCta: "월 4,900원으로 시작하기",
+      "이번 달 학습 라이브러리 전체\n직접 가져오기 80포인트 (3분=1포인트)\n저장한 영상 다시 보기는 차감 없음\n하루 채팅 제한 해제",
+    paywallCta: "월 9,900원으로 시작하기",
     paywallRestore: "구매 복원",
     paywallLater: "나중에 하기",
     paywallNativeOnly: "앱에서 결제를 진행할 수 있어요",
@@ -642,6 +745,23 @@ export const copy = {
     send: "Send",
     chatStartCta: "AI starts",
     chatStartFailed: "Couldn’t start the conversation. Please try again.",
+    chatAttachPhoto: "Photo",
+    chatRemovePhoto: "Remove photo",
+    chatCall: "Call",
+    chatCalling: "Calling…",
+    chatInCall: "On a call",
+    chatMute: "Mute",
+    chatUnmute: "Unmute",
+    chatHangUp: "Hang up",
+    chatCallEnded: "Call ended · {duration}",
+    chatNativeMode: "Chat",
+    chatTutorMode: "Help",
+    sessionMenu: "Menu",
+    billingOpen: "Plan",
+    billingScreenTitle: "Plan & billing",
+    billingFreeLabel: "Free",
+    billingPremiumLabel: "Premium",
+    billingClose: "Close",
     translate: "Translate",
     listen: "Listen",
     insightAnalyze: "Analyze",
@@ -824,7 +944,7 @@ export const copy = {
     studyLibraryTitle: "My study files",
     studyAdd: "+ Add file",
     studyAddImage: "Image",
-    studyDropHint: "Choose a file or drop it here.\nPDF, EPUB, TXT, and images are supported.",
+    studyDropHint: "Choose a file or drop it here.\nPDF, EPUB, and TXT are supported.",
     studyOpen: "Open",
     studyContinue: "Continue reading",
     studyDelete: "Delete",
@@ -841,7 +961,7 @@ export const copy = {
     studyProtected: "This file is protected and can’t be opened.",
     studyNoText: "No text was found in this PDF.",
     studyTooLarge: "This file is too large to open.",
-    studyImageSoon: "This image couldn’t be opened. Try a JPG or PNG.",
+    studyImageSoon: "Photo reading is off for now. Please use PDF, EPUB, or TXT.",
     studyImageHint: "Tap a sentence below to see meaning and analysis. Pinch the photo to zoom.",
     studySelectGloss: "Meaning",
     studySelectHint: "Tap a sentence to see meaning and analysis. Pinch to zoom.",
@@ -856,7 +976,7 @@ export const copy = {
     uiLanguageLabel: "App language",
     videoLearnHeadline: "Learn {targetLanguage} from video",
     videoLearnBody:
-      "Paste a video link to generate subtitles and translation, then analyze any line you’re curious about.",
+      "Pick a title from this month’s library, or paste your own link. Library titles are free; custom links use import points.",
     videoLearnUrlPlaceholder: "Paste a YouTube link",
     videoLearnLoad: "Load video",
     videoLearnInvalidUrl: "Please enter a valid YouTube link.",
@@ -882,19 +1002,39 @@ export const copy = {
     videoLearnNoSpeech: "No speech was found in this video.",
     videoLearnWrongLanguage:
       "This video isn’t in your learning language. Pick a video in {targetLanguage}.",
-    videoLearnMoreGenerating: "Building Korean study notes after the video…",
+    videoLearnQuotaReached:
+      "You’ve used this month’s import points. Library and saved videos can still be replayed.",
+    videoLearnTooLong:
+      "This video is longer than 15 minutes, so it can’t be prepared.",
+    videoLearnQuotaHint:
+      "{used}/{limit} import points this month · 1 point per 3 minutes · library and saved videos are free",
+    videoLearnLibraryTitle: "This month’s library",
+    videoLearnLibrarySubtitleFree:
+      "Free trial: {used}/{limit} episodes. Subscribe to open the full monthly pack.",
+    videoLearnLibrarySubtitlePremium:
+      "This month’s study pack · no points charged",
+    videoLearnLibraryEmpty:
+      "A library for this language isn’t ready yet. Premium members can paste a link instead.",
+    videoLearnLibraryTrial: "Trial",
+    videoLearnLibraryLocked: "Locked",
+    videoLearnImportLocked:
+      "Pasting your own link is a Premium feature and uses import points.",
+    videoLearnCatalogLocked:
+      "This episode is in the Premium library.",
+    videoLearnMoreGenerating: "Finishing the remaining translations…",
+    videoLearnWaitingGloss: "Playback waits until the translation is ready",
     videoLearnStudyTitle: "{targetLanguage} lines",
     videoLearnStudyHint:
-      "Tap a line to play just that clip. Drag to select words, then analyze.",
+      "Tap a line to play just that clip. Tap the bar on the left to open sentence analysis, then pick words there.",
     videoLearnStudyEmpty: "No lines extracted yet.",
     videoLearnRangeMode: "Link clips",
     videoLearnRangeHint:
-      "Tap Bundle to open a vertical gauge. Drag up to include earlier clips, down for later ones.",
+      "Tap Link clips, then tap sentences above or below to set the range. Tap an end clip again to shrink.",
     videoLearnPlayRange: "Play linked clips",
     videoLearnClearRange: "Clear selection",
     videoLearnMergeCues: "Merge clips",
     videoLearnSplitCue: "Split clip",
-    videoLearnMergeNeedRange: "Bundle 2 or more clips with the gauge, then merge.",
+    videoLearnMergeNeedRange: "Tap neighboring sentences to select 2 or more clips, then merge.",
     videoLearnBundleGaugeHint:
       "Slide the gauge up or down to set the range. The red dot is this clip.",
     videoLearnBundleClickHint:
@@ -915,7 +1055,7 @@ export const copy = {
     videoLearnUndoMerge: "Undo merge",
     videoLearnUndoSplit: "Undo split",
     videoLearnUndoEdit: "Undo",
-    videoLearnResetAllCues: "Reset all clips",
+    videoLearnResetAllCues: "Restore original",
     videoLearnUndoMergeToast: "Restored clips from before the merge",
     videoLearnUndoSplitToast: "Restored clips from before the split",
     videoLearnResetAllCuesToast: "Restored the original clips",
@@ -923,7 +1063,7 @@ export const copy = {
     videoLearnFullscreenExit: "Exit fullscreen",
     videoLearnFullscreenHint: "Tap a bar below to play that clip.",
     videoLearnWatchHint:
-      "Watch with {targetLanguage} captions. Tap a line to play that clip; select words to analyze.",
+      "Watch with {targetLanguage} captions. Tap a line to play that clip. Tap the left bar to open sentence analysis, then pick words there.",
     videoLearnSaveSession: "Save this video study pack",
     videoLearnSessionSaved: "Saved",
     videoLearnSessionSavedToast: "Saved. You can reopen this video to keep studying.",
@@ -944,9 +1084,9 @@ export const copy = {
     discoverChannelAdd: "Add",
     discoverChannelAdded: "Added",
     discoverChannelRemove: "Remove",
-    discoverChannelOpen: "Open on YouTube",
+    discoverChannelOpen: "Show channel videos",
     discoverChannelEmpty:
-      "Search to add a channel. The icon opens YouTube; tap the name to load its videos.",
+      "Search to add a channel. Tap the icon or name to load its videos.",
     discoverChannelSearchEmpty: "No channels found.",
     discoverChannelSubscribers: "{count} subscribers",
     discoverClose: "Collapse",
@@ -1007,7 +1147,7 @@ export const copy = {
     discoverReadingMinutes: "~{minutes} min",
     webReadHeadline: "Read {targetLanguage} on the web,\nthen analyze what you’re curious about.",
     webReadHowTo:
-      "Read the site as usual,\nthen tap Analyze on screen and pick {targetLanguage}.",
+      "In any app, long-press to select a sentence, then tap Analyze in the menu. The same sentence analysis sheet opens here.\nYou can still use the on-screen overlay in the browser.",
     webReadReadingTitle: "Keep reading, then analyze",
     webReadUrlPlaceholder: "Enter a URL",
     webReadOpen: "Open",
@@ -1024,7 +1164,7 @@ export const copy = {
     webReadWebLimited:
       "You can also paste the {targetLanguage} below.",
     webReadSelectionHint:
-      "On the other app, tap Analyze and pick {targetLanguage}.\nLong-press the button to stop.",
+      "Select text in another app, then tap Analyze. Sentence analysis opens in this app.",
     webReadNeedOverlay:
       "Allow display over other apps and screen capture.",
     webReadShortcutReddit: "Reddit",
@@ -1042,6 +1182,18 @@ export const copy = {
     exploreUsage: "How to use it",
     exploreOtherUsages: "Other uses",
     exploreMeaningHere: "In this sentence",
+    analysisSpokenAlso: "First reading",
+    salienceRecommended: "Suggested spots",
+    salienceReasonLabel: "Why this spot?",
+    salienceManualHint: "If the suggestions miss it, pick a span on the bar and analyze.",
+    salienceLoading: "Finding what is worth learning...",
+    salienceFailed: "Couldn’t suggest spots. You can still pick a span yourself.",
+    dimensionSyntax: "Grammar",
+    dimensionUsage: "Usage",
+    dimensionPhonology: "Pronunciation",
+    dimensionMorphology: "Word form",
+    dimensionPragmatics: "Nuance",
+    dimensionEtymology: "Origin",
     analysisKeyElements: "Worth knowing",
     quizTodayTitle: "Today’s review",
     quizTodaySubtitle: "Practice what you struggled with in recent chats.",
@@ -1224,17 +1376,17 @@ export const copy = {
     languageKorean: "Korean",
     languageEnglish: "English",
     languageSpanish: "Spanish",
-    planPremium: "Premium · Unlimited",
+    planPremium: "Premium · this month’s library + {limit} import points",
     planFree: "Free plan · {used}/{limit} today",
     upgradeCta: "Upgrade to Premium",
-    paywallLimitBanner: "You've reached today's free chat limit. Go Premium to keep practicing.",
+    paywallLimitBanner: "You've reached a free limit. Go Premium to keep learning from video.",
     paywallTitle: "Keep learning with Premium",
     paywallSubtitle:
-      "Write, get corrections, and save to My {targetLanguage} Book — without a daily chat limit.",
+      "Premium opens this month’s study library and 80 import points for your own links. Saved videos and library titles don’t use points.",
     paywallBenefitsTitle: "Premium includes",
     paywallBenefits:
-      "No daily chat limit\nUnlimited review\nSave and review in My {targetLanguage} Book",
-    paywallCta: "Start for ₩4,900/month",
+      "This month’s full study library\n80 import points for your own videos (3 min = 1 point)\nReplaying saved videos is free\nNo daily chat limit",
+    paywallCta: "Start for ₩9,900/month",
     paywallRestore: "Restore purchases",
     paywallLater: "Not now",
     paywallNativeOnly: "You can complete payment in the app",
@@ -1261,6 +1413,23 @@ export const copy = {
     send: "Enviar",
     chatStartCta: "Empieza la IA",
     chatStartFailed: "No se pudo empezar la conversación. Inténtalo de nuevo.",
+    chatAttachPhoto: "Foto",
+    chatRemovePhoto: "Quitar foto",
+    chatCall: "Llamar",
+    chatCalling: "Llamando…",
+    chatInCall: "En llamada",
+    chatMute: "Silenciar",
+    chatUnmute: "Activar sonido",
+    chatHangUp: "Colgar",
+    chatCallEnded: "Llamada terminada · {duration}",
+    chatNativeMode: "Chat",
+    chatTutorMode: "Ayuda",
+    sessionMenu: "Menú",
+    billingOpen: "Plan",
+    billingScreenTitle: "Plan y pago",
+    billingFreeLabel: "Gratis",
+    billingPremiumLabel: "Premium",
+    billingClose: "Cerrar",
     translate: "Traducir",
     listen: "Escuchar",
     insightAnalyze: "Analizar",
@@ -1443,7 +1612,7 @@ export const copy = {
     studyLibraryTitle: "Mis materiales",
     studyAdd: "+ Añadir archivo",
     studyAddImage: "Imagen",
-    studyDropHint: "Elige un archivo o suéltalo aquí.\nPDF, EPUB, TXT e imágenes están disponibles.",
+    studyDropHint: "Elige un archivo o suéltalo aquí.\nPDF, EPUB y TXT están disponibles.",
     studyOpen: "Abrir",
     studyContinue: "Seguir leyendo",
     studyDelete: "Eliminar",
@@ -1460,7 +1629,7 @@ export const copy = {
     studyProtected: "Este archivo está protegido y no se puede abrir.",
     studyNoText: "No se encontró texto en este PDF.",
     studyTooLarge: "El archivo es demasiado grande.",
-    studyImageSoon: "No se pudo abrir esta imagen. Prueba con JPG o PNG.",
+    studyImageSoon: "La lectura de fotos está desactivada por ahora. Usa PDF, EPUB o TXT.",
     studyImageHint: "Toca una frase abajo para ver el significado y el análisis. Pellizca la foto para ampliar.",
     studySelectGloss: "Significado",
     studySelectHint: "Toca una frase para ver el significado y el análisis. Pellizca para ampliar.",
@@ -1475,7 +1644,7 @@ export const copy = {
     uiLanguageLabel: "Idioma de la app",
     videoLearnHeadline: "Aprende {targetLanguage} con vídeos",
     videoLearnBody:
-      "Pega un enlace para generar subtítulos y traducción, y analiza la frase que te interese.",
+      "Pega un enlace para generar subtítulos y traducción. Los vídeos nuevos usan los minutos del mes; los guardados se pueden repetir gratis.",
     videoLearnUrlPlaceholder: "Pega un enlace de YouTube",
     videoLearnLoad: "Cargar vídeo",
     videoLearnInvalidUrl: "Introduce un enlace válido de YouTube.",
@@ -1501,7 +1670,27 @@ export const copy = {
     videoLearnNoSpeech: "No se encontró habla en este vídeo.",
     videoLearnWrongLanguage:
       "Este vídeo no está en tu idioma de aprendizaje. Elige uno en {targetLanguage}.",
-    videoLearnMoreGenerating: "Creando el material en coreano tras el vídeo…",
+    videoLearnQuotaReached:
+      "Ya usaste los puntos de importación de este mes. La biblioteca y los vídeos guardados se pueden repetir.",
+    videoLearnTooLong:
+      "Este vídeo supera los 15 minutos y no se puede preparar.",
+    videoLearnQuotaHint:
+      "{used}/{limit} puntos de importación este mes · 1 punto cada 3 min · biblioteca y guardados son gratis",
+    videoLearnLibraryTitle: "Biblioteca de este mes",
+    videoLearnLibrarySubtitleFree:
+      "Prueba gratis: {used}/{limit} episodios. Suscríbete para abrir el pack mensual.",
+    videoLearnLibrarySubtitlePremium:
+      "Pack de este mes · sin puntos",
+    videoLearnLibraryEmpty:
+      "Aún no hay biblioteca para este idioma. Con Premium puedes pegar un enlace.",
+    videoLearnLibraryTrial: "Prueba",
+    videoLearnLibraryLocked: "Bloqueado",
+    videoLearnImportLocked:
+      "Pegar tu propio enlace es de Premium y usa puntos.",
+    videoLearnCatalogLocked:
+      "Este episodio está en la biblioteca Premium.",
+    videoLearnMoreGenerating: "Terminando el resto de las traducciones…",
+    videoLearnWaitingGloss: "La reproducción espera a que esté la traducción",
     videoLearnStudyTitle: "Frases en {targetLanguage}",
     videoLearnStudyHint:
       "Usa 🔊 para oír ese momento del vídeo y toca la frase para analizarla.",
@@ -1534,7 +1723,7 @@ export const copy = {
     videoLearnUndoMerge: "Deshacer unión",
     videoLearnUndoSplit: "Deshacer división",
     videoLearnUndoEdit: "Deshacer",
-    videoLearnResetAllCues: "Restablecer todo",
+    videoLearnResetAllCues: "Restaurar original",
     videoLearnUndoMergeToast: "Se restauró el estado anterior a la unión",
     videoLearnUndoSplitToast: "Se restauró el estado anterior a la división",
     videoLearnResetAllCuesToast: "Se restauraron los clips originales",
@@ -1563,9 +1752,9 @@ export const copy = {
     discoverChannelAdd: "Añadir",
     discoverChannelAdded: "Añadido",
     discoverChannelRemove: "Quitar",
-    discoverChannelOpen: "Ver en YouTube",
+    discoverChannelOpen: "Ver vídeos del canal",
     discoverChannelEmpty:
-      "Busca un canal para añadirlo. El icono abre YouTube; el nombre carga sus vídeos.",
+      "Busca un canal para añadirlo. El icono o el nombre carga sus vídeos.",
     discoverChannelSearchEmpty: "No se encontraron canales.",
     discoverChannelSubscribers: "{count} suscriptores",
     discoverClose: "Plegar",
@@ -1626,7 +1815,7 @@ export const copy = {
     discoverReadingMinutes: "~{minutes} min",
     webReadHeadline: "Lee {targetLanguage} en la web\ny analiza lo que te interese.",
     webReadHowTo:
-      "Lee el sitio en su propia pantalla.\nSelecciona {targetLanguage} y esta app lo analiza.",
+      "Lee el sitio en su propia pantalla.\nToca Analizar y elige una frase.",
     webReadReadingTitle: "Sigue leyendo y analiza",
     webReadUrlPlaceholder: "Introduce una URL",
     webReadOpen: "Abrir",
@@ -1643,7 +1832,7 @@ export const copy = {
     webReadWebLimited:
       "También puedes pegar el {targetLanguage} abajo.",
     webReadSelectionHint:
-      "En la otra app, toca Analizar y elige el {targetLanguage}.\nMantén pulsado el botón para terminar.",
+      "En la otra app, toca Analizar y luego una frase.\nMantén pulsado el botón para terminar.",
     webReadNeedOverlay:
       "Hay que permitir mostrar sobre otras apps y capturar la pantalla.",
     webReadShortcutReddit: "Reddit",
@@ -1661,6 +1850,18 @@ export const copy = {
     exploreUsage: "Cómo usarlo",
     exploreOtherUsages: "Otros usos",
     exploreMeaningHere: "En esta frase",
+    analysisSpokenAlso: "Primera lectura",
+    salienceRecommended: "Puntos sugeridos",
+    salienceReasonLabel: "¿Por qué aquí?",
+    salienceManualHint: "Si no encaja, elige un tramo en la barra y analízalo.",
+    salienceLoading: "Buscando qué merece la pena aprender...",
+    salienceFailed: "No se pudieron sugerir puntos. Puedes elegir un tramo tú.",
+    dimensionSyntax: "Gramática",
+    dimensionUsage: "Uso",
+    dimensionPhonology: "Pronunciación",
+    dimensionMorphology: "Forma",
+    dimensionPragmatics: "Matiz",
+    dimensionEtymology: "Origen",
     analysisKeyElements: "Conviene saber",
     quizTodayTitle: "Repaso de hoy",
     quizTodaySubtitle:
@@ -1846,17 +2047,17 @@ export const copy = {
     languageKorean: "Coreano",
     languageEnglish: "Ingles",
     languageSpanish: "Espanol",
-    planPremium: "Premium · Ilimitado",
+    planPremium: "Premium · biblioteca del mes + {limit} puntos",
     planFree: "Plan gratis · {used}/{limit} hoy",
     upgradeCta: "Mejorar a Premium",
-    paywallLimitBanner: "Llegaste al límite gratis de hoy. Premium te deja seguir practicando.",
+    paywallLimitBanner: "Llegaste a un límite gratis. Premium te deja seguir con vídeos.",
     paywallTitle: "Sigue aprendiendo con Premium",
     paywallSubtitle:
-      "Escribe, recibe correcciones y guarda en tu libro — sin límite diario de chat.",
+      "Premium abre la biblioteca de este mes y 80 puntos para importar tus enlaces. La biblioteca y los vídeos guardados no gastan puntos.",
     paywallBenefitsTitle: "Premium incluye",
     paywallBenefits:
-      "Sin límite diario de chat\nRepaso ilimitado\nGuardar y repasar en tu libro",
-    paywallCta: "Empezar por 4.900 ₩/mes",
+      "Biblioteca de estudio de este mes\n80 puntos para importar tus vídeos (3 min = 1 punto)\nRepetir vídeos guardados es gratis\nSin límite diario de chat",
+    paywallCta: "Empezar por 9.900 ₩/mes",
     paywallRestore: "Restaurar compras",
     paywallLater: "Ahora no",
     paywallNativeOnly: "Puedes pagar en la app",
@@ -1872,17 +2073,17 @@ export const copy = {
       "No se pudo cargar el producto. Revisa Play Console y RevenueCat.",
     paywallCancelled: "Compra cancelada",
   },
-  ja: generatedLocales.ja,
-  zh: generatedLocales.zh,
-  vi: generatedLocales.vi,
-  fr: generatedLocales.fr,
-  it: generatedLocales.it,
-  pt: generatedLocales.pt,
-  ru: generatedLocales.ru,
-  id: generatedLocales.id,
-  ar: generatedLocales.ar,
-  th: generatedLocales.th,
-  hi: generatedLocales.hi,
+  ja: { ...generatedLocales.ja, ...generatedBillingOverlay },
+  zh: { ...generatedLocales.zh, ...generatedBillingOverlay },
+  vi: { ...generatedLocales.vi, ...generatedBillingOverlay },
+  fr: { ...generatedLocales.fr, ...generatedBillingOverlay },
+  it: { ...generatedLocales.it, ...generatedBillingOverlay },
+  pt: { ...generatedLocales.pt, ...generatedBillingOverlay },
+  ru: { ...generatedLocales.ru, ...generatedBillingOverlay },
+  id: { ...generatedLocales.id, ...generatedBillingOverlay },
+  ar: { ...generatedLocales.ar, ...generatedBillingOverlay },
+  th: { ...generatedLocales.th, ...generatedBillingOverlay },
+  hi: { ...generatedLocales.hi, ...generatedBillingOverlay },
 } as const;
 
 export type Locale = keyof typeof copy;

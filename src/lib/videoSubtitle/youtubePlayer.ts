@@ -4,8 +4,10 @@ import {
   BROWSER_UA,
   fetchWithTimeout,
   YOUTUBE_ANDROID_UA,
+  YOUTUBE_ANDROID_VR_UA,
   YOUTUBE_IOS_UA,
 } from "@/lib/videoSubtitle/http";
+import { nativeGetText } from "@/lib/videoSubtitle/nativeHttp";
 import { asNumber, asRecord, asString } from "@/lib/videoSubtitle/parseModelJson";
 import type { CaptionTrack, YouTubeSource } from "@/lib/videoSubtitle/types";
 
@@ -15,8 +17,34 @@ type PlayerClient = {
   body: (videoId: string, visitorData?: string) => unknown;
 };
 
-/** Prefer Android — it still returns direct googlevideo URLs without n-sig. */
+/** Prefer Android VR / Android — they still return direct googlevideo URLs without n-sig. */
 const CLIENTS: PlayerClient[] = [
+  {
+    userAgent: YOUTUBE_ANDROID_VR_UA,
+    headers: {
+      "X-YouTube-Client-Name": "28",
+      "X-YouTube-Client-Version": "1.65.10",
+    },
+    body: (videoId, visitorData) => ({
+      context: {
+        client: {
+          clientName: "ANDROID_VR",
+          clientVersion: "1.65.10",
+          deviceMake: "Oculus",
+          deviceModel: "Quest 3",
+          androidSdkVersion: 32,
+          osName: "Android",
+          osVersion: "12",
+          hl: "en",
+          gl: "US",
+          ...(visitorData ? { visitorData } : {}),
+        },
+      },
+      videoId,
+      contentCheckOk: true,
+      racyCheckOk: true,
+    }),
+  },
   {
     userAgent: YOUTUBE_ANDROID_UA,
     headers: {
@@ -187,7 +215,7 @@ const FALLBACK_INNERTUBE_KEY = "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8";
 
 function clientFromUserAgent(userAgent?: string): CaptionTrack["client"] {
   const ua = userAgent ?? "";
-  if (ua.includes("android.youtube")) return "android";
+  if (ua.includes("android.youtube") || ua.includes("youtube.vr")) return "android";
   if (ua.includes("ios.youtube")) return "ios";
   return "web";
 }
@@ -427,28 +455,35 @@ async function fetchWatchPage(videoId: string): Promise<{
 }> {
   const seed =
     "CONSENT=YES+; SOCS=CAISNQgDEitib3FfaWRlbnRpdHlmcm9udGVuZHVpc2VydmVyXzIwMjQwMzE3LjA3X3AxGgJlbiACGgYIgNnOsAY";
+  const watchUrl = `https://www.youtube.com/watch?v=${videoId}&hl=en&bpctr=9999999999&has_verified=1`;
+  const watchHeaders = {
+    "User-Agent": BROWSER_UA,
+    "Accept-Language": "en-US,en;q=0.9",
+    Cookie: seed,
+  };
   try {
-    const response = await fetchWithTimeout(
-      `https://www.youtube.com/watch?v=${videoId}&hl=en&bpctr=9999999999&has_verified=1`,
-      {
+    const native = await nativeGetText(watchUrl, watchHeaders, 15000);
+    let html = "";
+    let fromResponse = "";
+    if (native && native.status >= 200 && native.status < 400 && native.text) {
+      html = native.text;
+      fromResponse = native.header("set-cookie");
+    } else {
+      const response = await fetchWithTimeout(watchUrl, {
         timeoutMs: 15000,
-        headers: {
-          "User-Agent": BROWSER_UA,
-          "Accept-Language": "en-US,en;q=0.9",
-          Cookie: seed,
-        },
-      },
-    );
-    if (!response.ok) {
-      return {
-        player: null,
-        htmlTracks: [],
-        cookie: seed,
-        apiKey: FALLBACK_INNERTUBE_KEY,
-      };
+        headers: watchHeaders,
+      });
+      if (!response.ok) {
+        return {
+          player: null,
+          htmlTracks: [],
+          cookie: seed,
+          apiKey: FALLBACK_INNERTUBE_KEY,
+        };
+      }
+      html = await response.text();
+      fromResponse = cookiesFromResponse(response);
     }
-    const html = await response.text();
-    const fromResponse = cookiesFromResponse(response);
     const cookie = fromResponse ? `${seed}; ${fromResponse}` : seed;
     const visitorData = html.match(/"VISITOR_DATA":"([^"]+)"/)?.[1];
     const apiKey =

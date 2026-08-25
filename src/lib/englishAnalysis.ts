@@ -125,8 +125,13 @@ export type EnglishAnalysisTarget = {
   intent?: "sentence" | "element" | "word";
   /** Allow vocab save from the word sheet (idioms only in analysis). */
   allowVocabSave?: boolean;
-  /** Existing UI-language translation to reuse (chat, video, …). */
+  /** Existing UI-language translation to reuse (chat, video, …). Caption / 2-pass. */
   translation?: string;
+  /**
+   * Critique-on rendering to include in analysis explanations.
+   * May differ from `translation` (the on-screen / 2-pass line).
+   */
+  analysisTranslation?: string;
   /** Non-English nested pieces (characters / inner words). English never sets this. */
   innerUnits?: Array<{
     text: string;

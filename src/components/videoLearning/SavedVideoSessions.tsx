@@ -22,8 +22,8 @@ export function SavedVideoSessions({
   if (sessions.length === 0) return null;
 
   return (
-    <div className="mt-8 border-t border-slate-100 pt-6">
-      <p className="text-center text-[11px] font-semibold tracking-wide text-slate-500">
+    <div className="mt-8 border-t border-white/10 pt-6">
+      <p className="text-center text-[11px] font-semibold tracking-wide text-[#e4e4e0]">
         {ui.videoLearnSavedSessions}
       </p>
       <ul className="mt-3 space-y-2">
@@ -31,7 +31,7 @@ export function SavedVideoSessions({
           const preview = session.cues[0]?.original ?? "";
           return (
             <li key={session.id}>
-              <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
+              <div className="overflow-hidden rounded-xl border border-white/10 bg-white/5">
                 <button
                   type="button"
                   onClick={() => onOpen(session)}
@@ -43,7 +43,7 @@ export function SavedVideoSessions({
                     width={128}
                     height={72}
                     loading="lazy"
-                    className="h-[4.5rem] w-28 shrink-0 rounded-lg object-cover bg-slate-100"
+                    className="h-[4.5rem] w-28 shrink-0 rounded-lg object-cover bg-white/10"
                   />
                   <span className="min-w-0 flex-1 py-0.5">
                     <span className="block text-[11px] tabular-nums text-slate-400">
@@ -52,23 +52,23 @@ export function SavedVideoSessions({
                       {session.cues.length}
                       {ui.videoLearnSessionLines}
                     </span>
-                    <span className="mt-1 line-clamp-2 block text-sm leading-snug text-slate-900">
+                    <span className="mt-1 line-clamp-2 block text-sm leading-snug text-slate-100">
                       {preview || session.videoUrl}
                     </span>
                   </span>
                 </button>
-                <div className="flex items-center gap-2 border-t border-slate-100 px-2.5 py-2">
+                <div className="flex items-center gap-2 border-t border-white/10 px-2.5 py-2">
                   <button
                     type="button"
                     onClick={() => onOpen(session)}
-                    className="rounded-lg bg-slate-900 px-2.5 py-1.5 text-xs font-medium text-white hover:bg-slate-800"
+                    className="rounded-lg bg-[#e8e8e4] px-2.5 py-1.5 text-xs font-medium text-neutral-900 hover:bg-[#f5f5f3]"
                   >
                     {ui.videoLearnOpenSession}
                   </button>
                   <button
                     type="button"
                     onClick={() => onDelete(session)}
-                    className="rounded-lg px-2.5 py-1.5 text-xs text-slate-500 hover:bg-slate-100"
+                    className="rounded-lg px-2.5 py-1.5 text-xs text-slate-400 hover:bg-white/10"
                   >
                     {ui.videoLearnDeleteSession}
                   </button>

@@ -14,7 +14,7 @@ export function SubtitleAnalysisCard({
 }) {
   if (loading) {
     return (
-      <div className="mx-4 mb-3 rounded-xl bg-slate-50 px-3 py-3">
+      <div className="mx-4 mb-3 rounded-xl bg-white/5 px-3 py-3">
         <p className="text-sm text-slate-500">{ui.insightLoading}</p>
       </div>
     );
@@ -22,13 +22,13 @@ export function SubtitleAnalysisCard({
   if (!analysis) return null;
 
   return (
-    <div className="mx-4 mb-3 rounded-xl bg-slate-50 px-3 py-3">
+    <div className="mx-4 mb-3 rounded-xl bg-white/5 px-3 py-3">
       {analysis.whyThisSubtitle ? (
         <>
           <p className="text-[11px] font-semibold tracking-wide text-slate-500">
             {ui.videoLearnWhyDetail}
           </p>
-          <p className="mt-1 text-sm leading-relaxed text-slate-800">
+          <p className="mt-1 text-sm leading-relaxed text-slate-100">
             {analysis.whyThisSubtitle}
           </p>
         </>
@@ -41,22 +41,22 @@ export function SubtitleAnalysisCard({
       >
         {ui.videoLearnKeyExpression}
       </p>
-      <p className="mt-1 text-sm font-medium text-slate-900">
+      <p className="mt-1 text-sm font-medium text-slate-100">
         {analysis.keyExpression}
       </p>
-      <p className="mt-0.5 text-sm text-slate-600">{analysis.keyMeaning}</p>
+      <p className="mt-0.5 text-sm text-slate-300">{analysis.keyMeaning}</p>
 
       <p className="mt-3 text-[11px] font-semibold tracking-wide text-slate-500">
         {ui.videoLearnMeaningHere}
       </p>
-      <p className="mt-1 text-sm leading-relaxed text-slate-800">
+      <p className="mt-1 text-sm leading-relaxed text-slate-100">
         {analysis.meaningInSentence}
       </p>
 
       <p className="mt-3 text-[11px] font-semibold tracking-wide text-slate-500">
         {ui.videoLearnNuance}
       </p>
-      <p className="mt-1 text-sm leading-relaxed text-slate-800">
+      <p className="mt-1 text-sm leading-relaxed text-slate-100">
         {analysis.nuance}
       </p>
 
@@ -69,7 +69,7 @@ export function SubtitleAnalysisCard({
             {analysis.similar.map((line) => (
               <li
                 key={line}
-                className="text-sm leading-relaxed text-slate-800"
+                className="text-sm leading-relaxed text-slate-100"
               >
                 {line}
               </li>

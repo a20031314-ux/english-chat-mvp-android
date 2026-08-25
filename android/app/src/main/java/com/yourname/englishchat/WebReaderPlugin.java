@@ -3,6 +3,8 @@ package com.yourname.englishchat;
 import android.content.Intent;
 import android.media.projection.MediaProjectionManager;
 import android.net.Uri;
+import android.os.Handler;
+import android.os.Looper;
 import android.provider.Settings;
 import androidx.activity.result.ActivityResult;
 import com.getcapacitor.JSObject;
@@ -17,36 +19,59 @@ public class WebReaderPlugin extends Plugin {
 
     private static WebReaderPlugin instance;
     private static String pendingText;
+    private static String heldText;
+    private final Handler handler = new Handler(Looper.getMainLooper());
+    private final Runnable flushPending = this::flushPendingText;
     private String pendingUrl = "";
     private String pendingApiBase = "";
     private String pendingLocale = "ko";
     private String pendingLabel = "Analyze";
 
     static void deliverCapturedText(String text) {
-        if (text == null) return;
-        String cleaned = text.replaceAll("\\s+", " ").trim();
+        String cleaned = CapturedText.clean(text);
         if (cleaned.isEmpty()) return;
-        if (cleaned.length() > 2000) cleaned = cleaned.substring(0, 2000);
+        pendingText = cleaned;
+        heldText = cleaned;
         if (instance != null) {
-            instance.emitCapturedText(cleaned);
-        } else {
-            pendingText = cleaned;
+            instance.handler.removeCallbacks(instance.flushPending);
+            instance.handler.postDelayed(instance.flushPending, 280);
         }
+    }
+
+    @PluginMethod
+    public void takePendingText(PluginCall call) {
+        JSObject data = new JSObject();
+        String text = pendingText != null ? pendingText : heldText;
+        pendingText = null;
+        heldText = null;
+        data.put("text", text == null ? "" : text);
+        call.resolve(data);
     }
 
     @Override
     public void load() {
         instance = this;
-        if (pendingText != null) {
-            String text = pendingText;
-            pendingText = null;
-            emitCapturedText(text);
-        }
+        handler.removeCallbacks(flushPending);
+        handler.postDelayed(flushPending, 80);
+    }
+
+    @Override
+    protected void handleOnResume() {
+        handler.removeCallbacks(flushPending);
+        handler.postDelayed(flushPending, 280);
     }
 
     @Override
     protected void handleOnDestroy() {
+        handler.removeCallbacks(flushPending);
         if (instance == this) instance = null;
+    }
+
+    private void flushPendingText() {
+        if (pendingText == null) return;
+        String text = pendingText;
+        pendingText = null;
+        emitCapturedText(text);
     }
 
     @PluginMethod

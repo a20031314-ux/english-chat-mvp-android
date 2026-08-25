@@ -72,7 +72,7 @@ export function InteractiveContentViewer({
     (document.type === "epub" || document.type === "pdf");
 
   return (
-    <div className="relative flex min-h-0 flex-1 flex-col bg-slate-100">
+    <div className="relative flex min-h-0 flex-1 flex-col bg-[#080808]">
       {document.type === "epub" && original ? (
         <EpubRenderer
           document={document}
@@ -119,7 +119,7 @@ export function InteractiveContentViewer({
             />
           </div>
           {imageSections.length > 1 ? (
-            <div className="flex shrink-0 items-center justify-between gap-2 border-t border-slate-200 bg-white px-3 py-2">
+            <div className="flex shrink-0 items-center justify-between gap-2 border-t border-white/10 bg-[#121212] px-3 py-2">
               <button
                 type="button"
                 disabled={imageIndex <= 0}
@@ -134,7 +134,7 @@ export function InteractiveContentViewer({
                     index: next,
                   });
                 }}
-                className="rounded-lg px-2 py-1.5 text-xs text-slate-700 disabled:text-slate-300"
+                className="rounded-lg px-2 py-1.5 text-xs text-slate-200 disabled:text-slate-300"
               >
                 {ui.studyChapterPrev}
               </button>
@@ -157,7 +157,7 @@ export function InteractiveContentViewer({
                     index: next,
                   });
                 }}
-                className="rounded-lg px-2 py-1.5 text-xs text-slate-700 disabled:text-slate-300"
+                className="rounded-lg px-2 py-1.5 text-xs text-slate-200 disabled:text-slate-300"
               >
                 {ui.studyChapterNext}
               </button>

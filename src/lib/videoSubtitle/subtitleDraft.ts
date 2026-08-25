@@ -49,6 +49,11 @@ export type SubtitleDraft = {
   speakerStyle: string;
   /** On-screen Korean (or locale) caption. */
   naturalSubtitle: string;
+  /**
+   * Critique-on rendering for sentence analysis only.
+   * Screen still shows naturalSubtitle (critique off).
+   */
+  analysisTranslation?: string;
   interpretationConfidence: number;
   /** @deprecated alias of meaning — kept for older cue fields */
   literalMeaning?: string;
@@ -57,6 +62,17 @@ export type SubtitleDraft = {
   /** Optional STT voice/event hints — never alone decide emotion. */
   voiceHints?: string[];
 };
+
+/** Collapse caption vs analysis lines so we do not show the same Korean twice. */
+export function distinctSpokenLine(
+  caption: string,
+  other?: string,
+): string | undefined {
+  const primary = caption.replace(/\s+/g, " ").trim();
+  const next = (other ?? "").replace(/\s+/g, " ").trim();
+  if (!next || next === primary) return undefined;
+  return next;
+}
 
 export function emptyDraftFromUnit(
   unit: MeaningUnit,

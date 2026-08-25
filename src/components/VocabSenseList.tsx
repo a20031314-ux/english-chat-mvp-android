@@ -43,7 +43,7 @@ function SenseRow({
 }) {
   return (
     <div>
-      <p className="text-sm leading-relaxed text-slate-800">
+      <p className="text-sm leading-relaxed text-slate-100">
         {sense.partOfSpeech ? (
           <span className="mr-2 text-[11px] uppercase tracking-wide text-slate-500">
             {sense.partOfSpeech}

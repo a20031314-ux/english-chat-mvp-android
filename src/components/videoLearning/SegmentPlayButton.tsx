@@ -49,7 +49,7 @@ export function SegmentPlayButton({
       className={`inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-md border transition ${
         tone === "onDark"
           ? "border-white/30 bg-white/10 text-white hover:bg-white/15"
-          : "border-slate-300 bg-white text-slate-800 hover:bg-slate-50"
+          : "border-white/15 bg-[#121212] text-slate-100 hover:bg-white/10"
       }`}
     >
       {playing ? (

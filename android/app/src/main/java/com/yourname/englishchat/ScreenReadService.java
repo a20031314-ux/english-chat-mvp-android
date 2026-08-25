@@ -28,7 +28,6 @@ import com.google.mlkit.vision.text.Text;
 import com.google.mlkit.vision.text.TextRecognition;
 import com.google.mlkit.vision.text.latin.TextRecognizerOptions;
 import java.nio.ByteBuffer;
-import java.util.ArrayList;
 import java.util.List;
 
 public class ScreenReadService extends Service {
@@ -39,7 +38,8 @@ public class ScreenReadService extends Service {
     public static final String EXTRA_ANALYZE_LABEL = "analyzeLabel";
     private static final String CHANNEL_ID = "screen_read";
     private static final int NOTIF_ID = 71;
-    private static final int LOOP_MS = 900;
+    private static final int LOOP_MS = 500;
+    private int emptyStreak;
 
     private final Handler handler = new Handler(Looper.getMainLooper());
     private MediaProjection projection;
@@ -115,17 +115,19 @@ public class ScreenReadService extends Service {
             startForeground(NOTIF_ID, notification);
         }
 
-        String apiBase = intent.getStringExtra(EXTRA_API_BASE);
-        String locale = intent.getStringExtra(EXTRA_LOCALE);
         String analyzeLabel = intent.getStringExtra(EXTRA_ANALYZE_LABEL);
         if (analyzeLabel == null || analyzeLabel.isEmpty()) analyzeLabel = getString(R.string.process_text_analyze);
-        analyzer = new ScreenReadAnalyzer(
-            apiBase == null || apiBase.isEmpty() ? "https://english-chat-mvp.vercel.app" : apiBase,
-            locale
-        );
+        String apiBase = intent.getStringExtra(EXTRA_API_BASE);
+        if (apiBase == null || apiBase.isEmpty()) apiBase = "https://english-chat-mvp.vercel.app";
+        String locale = intent.getStringExtra(EXTRA_LOCALE);
+        if (locale == null || locale.isEmpty()) locale = "ko";
+        if (analyzer != null) analyzer.shutdown();
+        analyzer = new ScreenReadAnalyzer(apiBase, locale);
+        if (overlay != null) overlay.destroy();
         overlay = new ScreenReadOverlay(this, analyzeLabel, new ScreenReadOverlay.Listener() {
             @Override
             public void onPickRequested() {
+                emptyStreak = 0;
                 if (overlay != null) overlay.openPick();
             }
 
@@ -136,28 +138,18 @@ public class ScreenReadService extends Service {
 
             @Override
             public void onAnalyzeRequested(ScreenReadBox box) {
-                if (analyzer == null || overlay == null) return;
-                analyzer.analyze(box.text, box.line, new ScreenReadAnalyzer.Callback() {
-                    @Override
-                    public void onLoading(String selected, String sentence) {
-                        if (overlay != null) overlay.showLoading(selected);
-                    }
+                String sentence = box.line == null || box.line.isEmpty() ? box.text : box.line;
+                analyzeOnOverlay(sentence);
+            }
 
-                    @Override
-                    public void onResult(String title, String body) {
-                        if (overlay != null) overlay.showResult(title, body);
-                    }
-
-                    @Override
-                    public void onError() {
-                        if (overlay != null) overlay.showError();
-                    }
-                });
+            @Override
+            public void onOpenInApp(String sentence) {
+                openSentenceInApp(sentence);
             }
 
             @Override
             public void onAnalysisClosed() {
-                // back to browsing the underlying app
+                // stay on the other app; hits come back in the overlay
             }
         });
         overlay.show();
@@ -209,7 +201,7 @@ public class ScreenReadService extends Service {
 
     private void loop() {
         if (!running) return;
-        if (overlay == null || overlay.isPickOpen() || overlay.isPanelOpen() || ocrBusy) {
+        if (overlay == null || overlay.isPanelOpen() || ocrBusy) {
             handler.postDelayed(this::loop, LOOP_MS);
             return;
         }
@@ -223,7 +215,18 @@ public class ScreenReadService extends Service {
         TextRecognition.getClient(TextRecognizerOptions.DEFAULT_OPTIONS)
             .process(image)
             .addOnSuccessListener(text -> {
-                overlay.setBoxes(toBoxes(text, bitmap.getWidth(), bitmap.getHeight()));
+                List<ScreenReadBox> boxes = toBoxes(text, bitmap.getWidth(), bitmap.getHeight());
+                if (overlay != null) {
+                    overlay.setBoxes(boxes);
+                    if (boxes.isEmpty()) {
+                        emptyStreak += 1;
+                        if (overlay.isPickOpen() && emptyStreak >= 3) {
+                            overlay.setScanFinishedEmpty();
+                        }
+                    } else {
+                        emptyStreak = 0;
+                    }
+                }
                 bitmap.recycle();
                 ocrBusy = false;
             })
@@ -262,31 +265,50 @@ public class ScreenReadService extends Service {
     }
 
     private List<ScreenReadBox> toBoxes(Text text, int imageWidth, int imageHeight) {
-        List<ScreenReadBox> boxes = new ArrayList<>();
-        float sx = screenWidth / (float) Math.max(1, imageWidth);
-        float sy = screenHeight / (float) Math.max(1, imageHeight);
-        for (Text.TextBlock block : text.getTextBlocks()) {
-            for (Text.Line line : block.getLines()) {
-                String lineText = line.getText() == null ? "" : line.getText().replaceAll("\\s+", " ").trim();
-                if (lineText.isEmpty() || !lineText.matches(".*\\p{L}.*")) continue;
-                for (Text.Element element : line.getElements()) {
-                    if (element.getBoundingBox() == null) continue;
-                    String word = element.getText() == null ? "" : element.getText().trim();
-                    if (word.isEmpty() || !word.matches(".*\\p{L}.*")) continue;
-                    android.graphics.Rect r = element.getBoundingBox();
-                    boxes.add(new ScreenReadBox(
-                        Math.round(r.left * sx),
-                        Math.round(r.top * sy),
-                        Math.round(r.right * sx),
-                        Math.round(r.bottom * sy),
-                        word,
-                        lineText
-                    ));
-                    if (boxes.size() >= 40) return boxes;
-                }
+        return ScreenReadSentences.fromOcr(
+            text,
+            imageWidth,
+            imageHeight,
+            screenWidth,
+            screenHeight,
+            getResources().getDisplayMetrics().density
+        );
+    }
+
+    private void analyzeOnOverlay(String sentence) {
+        String cleaned = sentence == null ? "" : sentence.replaceAll("\\s+", " ").trim();
+        if (cleaned.isEmpty() || overlay == null || analyzer == null) return;
+        overlay.showAnalysisLoading(cleaned);
+        analyzer.analyze(cleaned, cleaned, new ScreenReadAnalyzer.Callback() {
+            @Override
+            public void onLoading(String selected, String contextSentence) {
+                if (overlay != null) overlay.showAnalysisLoading(selected);
             }
-        }
-        return boxes;
+
+            @Override
+            public void onResult(String title, String body) {
+                if (overlay != null) overlay.showAnalysisResult(title, body);
+            }
+
+            @Override
+            public void onError() {
+                if (overlay != null) overlay.showAnalysisError();
+            }
+        });
+    }
+
+    private void openSentenceInApp(String sentence) {
+        String cleaned = sentence == null ? "" : sentence.replaceAll("\\s+", " ").trim();
+        if (cleaned.isEmpty()) return;
+        WebReaderPlugin.deliverCapturedText(cleaned);
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(
+            Intent.FLAG_ACTIVITY_NEW_TASK
+                | Intent.FLAG_ACTIVITY_REORDER_TO_FRONT
+                | Intent.FLAG_ACTIVITY_SINGLE_TOP
+        );
+        intent.putExtra(CapturedText.EXTRA, cleaned);
+        startActivity(intent);
     }
 
     @Override

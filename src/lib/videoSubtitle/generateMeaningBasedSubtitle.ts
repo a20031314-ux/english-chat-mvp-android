@@ -11,7 +11,7 @@ import { groupMeaningUnits } from "@/lib/videoSubtitle/groupMeaningUnits";
 import { interpretAsNativeViewer } from "@/lib/videoSubtitle/interpretAsNativeViewer";
 import { sceneContextForUnit } from "@/lib/videoSubtitle/getSceneContextAtTime";
 import type { SceneContext } from "@/lib/videoSubtitle/sceneTypes";
-import { emptyDraftFromUnit, type SubtitleDraft } from "@/lib/videoSubtitle/subtitleDraft";
+import { emptyDraftFromUnit, distinctSpokenLine, type SubtitleDraft } from "@/lib/videoSubtitle/subtitleDraft";
 import type {
   NormalizedSegment,
   SubtitleSegment,
@@ -28,6 +28,8 @@ import {
   emptyViewerContext,
 } from "@/lib/videoSubtitle/viewerTypes";
 import type { MeaningUnit } from "@/lib/videoSubtitle/groupMeaningUnits";
+import { openAiJsonCompleter } from "@/lib/reconstructionTranslate/openaiJson";
+import { firstInterpretationsForAnalysis } from "@/lib/reconstructionTranslate/refineCaptions";
 
 export type MeaningSubtitleResult = {
   cues: SubtitleSegment[];
@@ -83,8 +85,13 @@ function attachInterpretations(
       });
     }
 
+    const analysisTranslation = distinctSpokenLine(
+      cue.translation,
+      draft?.analysisTranslation ?? cue.analysisTranslation,
+    );
     return {
       ...cue,
+      ...(analysisTranslation ? { analysisTranslation } : {}),
       meaning: interp?.understoodMeaning || cue.meaning,
       ...(interp
         ? {
@@ -121,6 +128,52 @@ function attachInterpretations(
         : {}),
     };
   });
+}
+
+async function attachFirstReadings(
+  locale: string,
+  drafts: SubtitleDraft[],
+  context: VideoContext,
+): Promise<SubtitleDraft[]> {
+  const withCaption = drafts.filter((draft) => draft.naturalSubtitle.trim());
+  if (withCaption.length === 0) return drafts;
+  try {
+    const completeJson = openAiJsonCompleter();
+    const firstReadings = await firstInterpretationsForAnalysis(
+      {
+        sourceLang: "en",
+        targetLang: locale || "ko",
+        sourceType: "subtitle",
+        videoContext: [context.topic, context.summary]
+          .filter(Boolean)
+          .join(" — "),
+      },
+      withCaption.map((draft) => ({
+        id: draft.id,
+        sourceText: draft.original,
+      })),
+      completeJson,
+    );
+    return drafts.map((draft) => {
+      const analysisTranslation = distinctSpokenLine(
+        draft.naturalSubtitle,
+        firstReadings.get(draft.id),
+      );
+      if (analysisTranslation) {
+        console.error("[translate:caption-pair]", {
+          id: draft.id,
+          caption: draft.naturalSubtitle,
+          firstReading: analysisTranslation,
+        });
+      }
+      return analysisTranslation
+        ? { ...draft, analysisTranslation }
+        : draft;
+    });
+  } catch (error) {
+    console.error("[caption-first-reading]", error);
+    return drafts;
+  }
 }
 
 /**
@@ -171,13 +224,19 @@ export async function generateMeaningBasedSubtitle(input: {
       units,
       viewerContext,
       sceneContexts: input.sceneContexts,
+      videoContext: {
+        topic: context.topic,
+        domain: context.domain,
+        summary: context.summary,
+        speakerStyle: context.speakerStyle,
+      },
     });
 
     // 2) Express understood meaning in the UI language (use prior-window memory;
     //    same-window refs already live on each interpretation).
     let drafts = await expressForKoreanViewer({
       locale: input.locale,
-      speakerStyle: context.speakerStyle,
+      context,
       units,
       interpretations,
       viewerContext,
@@ -206,6 +265,9 @@ export async function generateMeaningBasedSubtitle(input: {
         drafts,
       });
     }
+
+    // 3b) 1-pass first reading for sentence analysis. Captions stay 2-pass.
+    drafts = await attachFirstReadings(input.locale, drafts, context);
 
     // 4) Long-term memory for the next window (local-first; API when refs appear)
     const hasRefs = interpretations.some(
@@ -268,6 +330,11 @@ export async function generateMeaningBasedSubtitle(input: {
       });
     } catch (adaptError) {
       console.error("[meaning-subtitle-fallback-adapt]", adaptError);
+    }
+    try {
+      drafts = await attachFirstReadings(input.locale, drafts, context);
+    } catch (refineError) {
+      console.error("[meaning-subtitle-fallback-refine]", refineError);
     }
     viewerContext = {
       ...viewerContext,

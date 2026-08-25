@@ -42,7 +42,7 @@ export function TargetLanguageSelector({
       className={`relative flex items-center gap-2 ${className}`.trim()}
     >
       {label ? (
-        <span className="shrink-0 text-[11px] font-medium text-slate-500">
+        <span className="shrink-0 text-[11px] font-medium text-slate-400">
           {label}
         </span>
       ) : null}
@@ -52,7 +52,7 @@ export function TargetLanguageSelector({
         aria-expanded={open}
         aria-haspopup="listbox"
         aria-label={label ?? "Learning language"}
-        className="inline-flex items-center gap-1.5 rounded-md border border-slate-300 bg-white px-2.5 py-1.5 text-xs font-medium text-slate-800 hover:bg-slate-50"
+        className="inline-flex items-center gap-1.5 rounded-lg border border-white/15 bg-white/5 px-2.5 py-1.5 text-xs font-medium text-slate-100 hover:bg-white/10"
       >
         <LearningLanguageFlag language={targetLanguageInfo} />
         <span>{targetLanguageInfo.nativeLabel}</span>
@@ -64,7 +64,7 @@ export function TargetLanguageSelector({
       {open ? (
         <ul
           role="listbox"
-          className="absolute left-0 top-full z-30 mt-1 max-h-[min(24rem,70vh)] min-w-[12rem] overflow-y-auto overflow-x-hidden rounded-lg border border-slate-200 bg-white py-1 shadow-lg sm:left-auto sm:right-0"
+          className="absolute left-0 top-full z-50 mt-1 max-h-[min(24rem,70vh)] min-w-[12rem] overflow-y-auto overflow-x-hidden rounded-xl border border-white/15 bg-[#141414] py-1 shadow-2xl sm:left-auto sm:right-0"
         >
           {SUPPORTED_LEARNING_LANGUAGES.map((lang) => (
             <li
@@ -80,8 +80,8 @@ export function TargetLanguageSelector({
                 }}
                 className={`flex w-full items-center gap-2 px-3 py-2 text-left text-xs transition ${
                   targetLanguage === lang.code
-                    ? "bg-slate-900 text-white"
-                    : "text-slate-700 hover:bg-slate-50"
+                    ? "bg-white/10 text-white"
+                    : "text-slate-200 hover:bg-white/8"
                 }`}
               >
                 <LearningLanguageFlag language={lang} />

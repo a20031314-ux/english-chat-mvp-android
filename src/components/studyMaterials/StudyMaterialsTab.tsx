@@ -38,7 +38,7 @@ export function StudyMaterialsTab({
 
   if (view === "upload") {
     return (
-      <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
+      <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl tb-panel">
         <StudyUpload
           ui={ui}
           onCancel={() => setView("library")}
@@ -54,7 +54,7 @@ export function StudyMaterialsTab({
 
     if (view === "reader" && active) {
     return (
-      <div className="fixed inset-0 z-[80] flex flex-col bg-white">
+      <div className="fixed inset-0 z-[80] flex flex-col bg-[#000000]">
         <StudyReader
           document={active}
           locale={locale}
@@ -71,7 +71,7 @@ export function StudyMaterialsTab({
   }
 
   return (
-    <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
+    <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl tb-panel">
       <StudyLibrary
         documents={documents}
         ui={ui}

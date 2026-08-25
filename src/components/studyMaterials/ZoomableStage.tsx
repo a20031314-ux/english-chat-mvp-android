@@ -92,7 +92,7 @@ export function ZoomableStage({
     <div className="relative flex min-h-0 flex-1 flex-col">
       <div
         ref={scrollerRef}
-        className="min-h-0 flex-1 overflow-auto overscroll-contain bg-slate-100"
+        className="min-h-0 flex-1 overflow-auto overscroll-contain bg-[#080808]"
       >
         <div
           className="relative origin-top-left"
@@ -107,7 +107,7 @@ export function ZoomableStage({
           aria-label={zoomInLabel}
           onClick={() => applyZoom(zoom + 0.25)}
           disabled={zoom >= MAX_ZOOM}
-          className="pointer-events-auto flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white/95 text-lg font-medium text-slate-800 shadow disabled:text-slate-300"
+          className="pointer-events-auto flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-[#121212]/90 text-lg font-medium text-slate-100 shadow disabled:text-slate-500"
         >
           +
         </button>
@@ -116,7 +116,7 @@ export function ZoomableStage({
           aria-label={zoomOutLabel}
           onClick={() => applyZoom(zoom - 0.25)}
           disabled={zoom <= MIN_ZOOM}
-          className="pointer-events-auto flex h-9 w-9 items-center justify-center rounded-full border border-slate-200 bg-white/95 text-lg font-medium text-slate-800 shadow disabled:text-slate-300"
+          className="pointer-events-auto flex h-9 w-9 items-center justify-center rounded-full border border-white/15 bg-[#121212]/90 text-lg font-medium text-slate-100 shadow disabled:text-slate-500"
         >
           −
         </button>

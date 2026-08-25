@@ -91,3 +91,27 @@ export function resolveWebReaderAnalysis(
     },
   };
 }
+
+/** One entry: any selected string becomes the existing sentence-analysis target. */
+export function analysisTargetFromSelectedText(
+  selectedText: string,
+  extras?: {
+    contextSentence?: string;
+    surroundingContext?: string[];
+    sourceUrl?: string;
+    language?: string;
+  },
+): EnglishAnalysisTarget | null {
+  const request = resolveWebReaderAnalysis({
+    selectedText,
+    contextSentence: extras?.contextSentence || selectedText,
+    surroundingContext: extras?.surroundingContext,
+    sourceUrl: extras?.sourceUrl,
+  });
+  if (request.kind !== "target") return null;
+  return {
+    ...request.target,
+    intent: "sentence",
+    ...(extras?.language ? { language: extras.language } : {}),
+  };
+}

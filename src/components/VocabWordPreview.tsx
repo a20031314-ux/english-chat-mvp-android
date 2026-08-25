@@ -46,17 +46,17 @@ export function VocabWordPanel({
   return (
     <div>
       <div className="flex flex-wrap items-center gap-2">
-        <p className="text-xl font-semibold text-slate-900">{word}</p>
+        <p className="text-xl font-semibold text-slate-100">{word}</p>
         <TTSButton text={word} ariaLabel={ui.listen} />
       </div>
       {detail?.reading ? (
-        <p className="mt-1 text-sm text-slate-600">{detail.reading}</p>
+        <p className="mt-1 text-sm text-slate-300">{detail.reading}</p>
       ) : null}
 
       {isLoading ? (
-        <p className="mt-3 text-sm text-slate-600">{ui.vocabPreviewLoading}</p>
+        <p className="mt-3 text-sm text-slate-300">{ui.vocabPreviewLoading}</p>
       ) : loadFailed ? (
-        <p className="mt-3 text-sm text-rose-700">{ui.vocabPickFailed}</p>
+        <p className="mt-3 text-sm text-rose-300">{ui.vocabPickFailed}</p>
       ) : (
         <div className="mt-3">
           <VocabSenseList
@@ -77,9 +77,9 @@ export function VocabWordPanel({
               <button
                 type="button"
                 onClick={() => onInnerClick?.(unit.text)}
-                className="w-full rounded-lg bg-slate-50 px-3 py-2 text-left hover:bg-amber-50"
+                className="w-full rounded-lg bg-white/5 px-3 py-2 text-left hover:bg-white/10"
               >
-                <p className="text-sm font-medium text-slate-900">
+                <p className="text-sm font-medium text-slate-100">
                   {unit.text}
                   {unit.reading ? (
                     <span className="ml-2 text-xs font-normal text-slate-500">
@@ -105,8 +105,8 @@ export function VocabWordPanel({
           disabled={!canSave}
           className={`mt-4 w-full rounded-xl px-3 py-2.5 text-sm font-medium disabled:cursor-not-allowed disabled:opacity-50 ${
             alreadySaved
-              ? "bg-teal-50 text-teal-800"
-              : "bg-slate-900 text-white hover:bg-slate-800"
+              ? "bg-white/10 text-[#d4d4d0]"
+              : "bg-[#e8e8e4] text-neutral-900 hover:bg-[#f5f5f3]"
           }`}
         >
           {alreadySaved

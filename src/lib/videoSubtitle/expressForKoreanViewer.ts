@@ -5,6 +5,7 @@ import { chatModel, getOpenAIClient } from "@/lib/videoSubtitle/openaiClient";
 import { asNumber, asRecord, asString, parseModelJson } from "@/lib/videoSubtitle/parseModelJson";
 import type { SceneContext } from "@/lib/videoSubtitle/sceneTypes";
 import {
+  contextPayload,
   emptyDraftFromUnit,
   localeTargetName,
   NEUTRAL_TONE,
@@ -12,12 +13,14 @@ import {
   type SubtitleDraft,
   type UtteranceTone,
 } from "@/lib/videoSubtitle/subtitleDraft";
+import type { VideoContext } from "@/lib/videoSubtitle/types";
 import type {
   NativeInterpretation,
   ViewerContext,
 } from "@/lib/videoSubtitle/viewerTypes";
 import { compactViewerContext } from "@/lib/videoSubtitle/viewerTypes";
 import { spokenTranslatePrinciples } from "@/lib/spokenTranslate";
+import { speechRegisterHint } from "@/lib/videoSubtitle/speechRegister";
 
 const BATCH = 6;
 
@@ -46,7 +49,7 @@ export async function expressForKoreanViewer(input: {
   locale: string;
   /** Learning / source language of the video (defaults to English). */
   targetLanguage?: string;
-  speakerStyle: string;
+  context: VideoContext;
   units: MeaningUnit[];
   interpretations: NativeInterpretation[];
   viewerContext: ViewerContext;
@@ -81,15 +84,19 @@ export async function expressForKoreanViewer(input: {
             })}
 
 Caption task:
-You write on-screen ${target} movie/drama subtitles.
+You write on-screen ${target} captions for THIS video's speech genre — not generic movie/drama subtitles.
 You receive a native viewer's UNDERSTOOD MEANING of each line (already resolved with video context).
-Express that same understood meaning so a ${target} viewer reaches the SAME understanding.
+Express that same understood meaning so a ${target} viewer reaches the SAME understanding, in the same kind of voice.
+
+${speechRegisterHint(input.context, interfaceLanguage)}
 
 Extra caption rules:
-- Prefer natural spoken ${target} (의역), not source-language word order.
+- Prefer natural spoken ${target} in this app's UI register (의역), not source-language word order.
+- Drop source discourse frames (the reason X is / what I'm saying is). Say the point.
 - You MAY make established/implicit info explicit in ${target} only when needed for equivalent understanding (evidence established or strongly_implied — never speculative).
 - Do NOT over-explain. Caption only — no tutor notes.
-- Keep short (one breath).
+- Keep short (one breath). Do not unpack into extra commentary.
+- Do not invent facts, dates, or topics that were not in the understood meaning.
 
 Return JSON:
 {
@@ -115,12 +122,12 @@ Return JSON:
           {
             role: "user",
             content: JSON.stringify({
+              video: contextPayload(input.context),
               viewerMemory: memory,
               items: batch.map((unit) => {
                 const interp = byId.get(unit.id);
                 return {
                   id: unit.id,
-                  original: unit.original,
                   previous: unit.previousTexts,
                   next: unit.nextTexts,
                   understoodMeaning:
@@ -157,7 +164,7 @@ Return JSON:
           asString(row?.translation) ||
           "";
         const conf = asNumber(row?.interpretationConfidence);
-        const base = emptyDraftFromUnit(unit, input.speakerStyle);
+        const base = emptyDraftFromUnit(unit, input.context.speakerStyle);
         drafts.set(unit.id, {
           ...base,
           meaning: interp?.understoodMeaning || unit.original,
@@ -179,7 +186,7 @@ Return JSON:
     const draft = drafts.get(unit.id);
     if (draft?.naturalSubtitle.trim()) return draft;
     const interp = byId.get(unit.id);
-    const base = emptyDraftFromUnit(unit, input.speakerStyle);
+    const base = emptyDraftFromUnit(unit, input.context.speakerStyle);
     return {
       ...base,
       ...draft,

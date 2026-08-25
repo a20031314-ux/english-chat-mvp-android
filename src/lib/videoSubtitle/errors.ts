@@ -7,7 +7,11 @@ export type VideoSubtitleErrorCode =
   | "STT_FAILED"
   | "UNKNOWN_LANGUAGE"
   | "TRANSLATION_FAILED"
-  | "TIMEOUT";
+  | "TIMEOUT"
+  | "VIDEO_TOO_LONG"
+  | "VIDEO_QUOTA"
+  | "CATALOG_LOCKED"
+  | "IMPORT_LOCKED";
 
 export class VideoPipelineError extends Error {
   constructor(

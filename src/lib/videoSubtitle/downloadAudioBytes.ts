@@ -1,11 +1,13 @@
+import { Capacitor } from "@capacitor/core";
 import {
   fetchWithTimeout,
   youtubeMediaHeaders,
   YOUTUBE_ANDROID_UA,
 } from "@/lib/videoSubtitle/http";
+import { nativeGetBytes } from "@/lib/videoSubtitle/nativeHttp";
 
 export const MAX_AUDIO_BYTES = 24 * 1024 * 1024;
-const RANGE_CHUNK_BYTES = 1024 * 1024;
+const RANGE_CHUNK_BYTES = 384 * 1024;
 const DOWNLOAD_TIMEOUT_MS = 90000;
 export const MIN_AUDIO_BYTES = 2000;
 /** Rough AAC/HE-AAC bytes/sec used to decide if download is truncated. */
@@ -118,13 +120,32 @@ async function downloadRange(
   start: number,
   end: number,
 ): Promise<{ status: number; buffer: Uint8Array; totalSize?: number } | null> {
+  const headers = {
+    ...youtubeMediaHeaders(userAgent),
+    Range: `bytes=${start}-${end}`,
+    "Accept-Encoding": "identity",
+  };
   try {
+    const native = await nativeGetBytes(url, headers, DOWNLOAD_TIMEOUT_MS);
+    if (native || (typeof window !== "undefined" && Capacitor.isNativePlatform())) {
+      if (!native || (native.status !== 200 && native.status !== 206)) {
+        return {
+          status: native?.status ?? 0,
+          buffer: new Uint8Array(0),
+        };
+      }
+      const contentRange = native.header("content-range");
+      const totalMatch = /\/(\d+)\s*$/.exec(contentRange);
+      const totalSize = totalMatch ? Number(totalMatch[1]) : undefined;
+      return {
+        status: native.status,
+        buffer: native.bytes,
+        ...(Number.isFinite(totalSize) && totalSize! > 0 ? { totalSize } : {}),
+      };
+    }
     const response = await fetchWithTimeout(url, {
       timeoutMs: DOWNLOAD_TIMEOUT_MS,
-      headers: {
-        ...youtubeMediaHeaders(userAgent),
-        Range: `bytes=${start}-${end}`,
-      },
+      headers,
     });
     if (!response.ok && response.status !== 206) {
       return { status: response.status, buffer: new Uint8Array(0) };
@@ -149,10 +170,17 @@ async function downloadStreamCapped(
   maxBytes: number,
   notify?: { maybeSend: (bytes: Uint8Array) => void },
 ): Promise<Uint8Array | null> {
+  // Native GET sends the whole body over the Capacitor bridge — too large for audio.
+  if (typeof window !== "undefined" && Capacitor.isNativePlatform()) {
+    return null;
+  }
   try {
     const response = await fetchWithTimeout(url, {
       timeoutMs: Math.max(DOWNLOAD_TIMEOUT_MS, 120000),
-      headers: youtubeMediaHeaders(userAgent),
+      headers: {
+        ...youtubeMediaHeaders(userAgent),
+        "Accept-Encoding": "identity",
+      },
     });
     if (!response.ok) return null;
     const buffer = await readBodyCapped(response, maxBytes, notify);

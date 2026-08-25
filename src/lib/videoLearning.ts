@@ -9,6 +9,10 @@ export type VideoSubtitle = {
   endTime: number;
   original: string;
   translation: string;
+  /**
+   * Critique-on line for sentence analysis. The caption stays `translation`.
+   */
+  analysisTranslation?: string;
   rawOriginal?: string;
   meaning?: string;
   literalMeaning?: string;
@@ -134,6 +138,24 @@ export function parseYouTubeInput(raw: string):
   const videoId = parseYouTubeVideoId(trimmed);
   if (!videoId) return { ok: false, reason: "invalid" };
   return { ok: true, videoId, url: normalizeYouTubeWatchUrl(videoId) };
+}
+
+export function cueHasUiLanguage(cue: VideoSubtitle): boolean {
+  const translation = cue.translation.trim();
+  if (!translation) return false;
+  if (translation === cue.original.trim()) return false;
+  return cue.translationStatus !== "english";
+}
+
+/** Opening spoken lines must have a learner-language gloss before playback. */
+export function openingCuesHaveUiLanguage(cues: VideoSubtitle[]): boolean {
+  const spoken = cues.filter((cue) => cue.original.trim());
+  if (spoken.length === 0) return false;
+  const firstStart = spoken[0]!.startTime;
+  const opening = spoken
+    .filter((cue) => cue.startTime <= firstStart + 12)
+    .slice(0, 8);
+  return opening.length > 0 && opening.every(cueHasUiLanguage);
 }
 
 export function findActiveSubtitle(

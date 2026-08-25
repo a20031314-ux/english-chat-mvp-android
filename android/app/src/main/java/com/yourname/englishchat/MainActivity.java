@@ -21,15 +21,15 @@ public class MainActivity extends BridgeActivity {
 
     private void handleCapturedText(Intent intent) {
         if (intent == null) return;
+        String text = CapturedText.clean(intent.getStringExtra(CapturedText.EXTRA));
         String action = intent.getAction();
-        String text = null;
-        if (Intent.ACTION_PROCESS_TEXT.equals(action)) {
+        if (text.isEmpty() && Intent.ACTION_PROCESS_TEXT.equals(action)) {
             CharSequence value = intent.getCharSequenceExtra(Intent.EXTRA_PROCESS_TEXT);
-            if (value != null) text = value.toString();
-        } else if (Intent.ACTION_SEND.equals(action)) {
-            text = intent.getStringExtra(Intent.EXTRA_TEXT);
+            if (value != null) text = CapturedText.clean(value.toString());
+        } else if (text.isEmpty() && Intent.ACTION_SEND.equals(action)) {
+            text = CapturedText.clean(intent.getStringExtra(Intent.EXTRA_TEXT));
         }
-        if (text != null) {
+        if (!text.isEmpty()) {
             WebReaderPlugin.deliverCapturedText(text);
         }
     }

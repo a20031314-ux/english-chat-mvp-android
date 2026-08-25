@@ -58,6 +58,8 @@ export async function analyzeEnglishElement(input: {
   sourceType?: TranslationSourceType;
   language?: string;
   learnerLevel?: LearnerLevel;
+  translation?: string;
+  analysisTranslation?: string;
 }): Promise<EnglishElementAnalysis | null> {
   const selectedText = input.selectedText.replace(/\s+/g, " ").trim();
   const contextSentence = input.contextSentence.replace(/\s+/g, " ").trim();
@@ -75,6 +77,10 @@ export async function analyzeEnglishElement(input: {
       ...(input.sourceType ? { sourceType: input.sourceType } : {}),
       ...(input.language ? { language: input.language } : {}),
       ...(input.learnerLevel ? { learnerLevel: input.learnerLevel } : {}),
+      ...(input.translation ? { translation: input.translation } : {}),
+      ...(input.analysisTranslation
+        ? { analysisTranslation: input.analysisTranslation }
+        : {}),
     }),
     signal: AbortSignal.timeout(25000),
   });

@@ -16,7 +16,7 @@ export function SaveLearningButton({
       type="button"
       onClick={onSave}
       disabled={saved}
-      className="rounded-lg px-2.5 py-1.5 text-xs text-slate-600 hover:bg-slate-100 disabled:text-slate-400"
+      className="rounded-lg px-2.5 py-1.5 text-xs text-slate-300 hover:bg-white/10 disabled:text-slate-400"
     >
       {saved ? ui.saved : ui.videoLearnSave}
     </button>

@@ -54,6 +54,7 @@ export async function interpretAsNativeViewer(input: {
   units: MeaningUnit[];
   viewerContext: ViewerContext;
   sceneContexts?: SceneContext[];
+  videoContext?: { topic?: string; domain?: string; summary?: string; speakerStyle?: string };
 }): Promise<NativeInterpretation[]> {
   if (input.units.length === 0) return [];
   const client = getOpenAIClient();
@@ -76,6 +77,9 @@ export async function interpretAsNativeViewer(input: {
 
 Do NOT translate into Korean.
 Do NOT behave as a dictionary translator.
+
+VIDEO tells you what kind of show this is (sports commentary, news, vlog, tutorial, drama…).
+Understand each line as a viewer of THAT kind of show.
 
 For each CURRENT utterance, answer:
 "What would I, as a native viewer who knows everything established so far, actually understand the speaker to mean here?"
@@ -106,6 +110,7 @@ Return JSON:
           {
             role: "user",
             content: JSON.stringify({
+              video: input.videoContext ?? null,
               viewerMemory: memory,
               items: batch.map((unit) => ({
                 id: unit.id,

@@ -66,9 +66,9 @@ export async function analyzeVideoContext(
 Return JSON:
 {
   "topic": "short topic",
-  "domain": "e.g. software development, everyday conversation, science",
+  "domain": "e.g. sports commentary, news, everyday conversation, software tutorial",
   "summary": "2-4 sentences in the transcript language",
-  "speakerStyle": "e.g. casual technical explanation",
+  "speakerStyle": "e.g. live football commentary, news anchor, casual friends chatting, technical explainer",
   "terminology": [
     {"term": "...", "meaning": "optional gloss", "preferredTranslation": "how to keep this term in the learner locale"}
   ]

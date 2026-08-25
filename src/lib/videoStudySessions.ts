@@ -14,6 +14,7 @@ export type StoredVideoCue = {
   endTime: number;
   original: string;
   translation?: string;
+  analysisTranslation?: string;
 };
 
 export type VideoStudySession = {
@@ -24,6 +25,8 @@ export type VideoStudySession = {
   situationSummary?: string;
   durationSeconds: number;
   cues: StoredVideoCue[];
+  /** Cues before any merge/split, used by Restore original. */
+  baselineCues?: StoredVideoCue[];
   /** Learning language of the source lines (legacy → "en") */
   languageCode: LearningLanguageCode;
   createdAt: number;
@@ -49,12 +52,14 @@ function asCue(raw: unknown): StoredVideoCue | null {
   const endTime = asNumber(row.endTime);
   if (!id || !original || startTime == null || endTime == null) return null;
   const translation = asString(row.translation) || undefined;
+  const analysisTranslation = asString(row.analysisTranslation) || undefined;
   return {
     id,
     startTime,
     endTime: Math.max(startTime + 0.3, endTime),
     original,
     ...(translation ? { translation } : {}),
+    ...(analysisTranslation ? { analysisTranslation } : {}),
   };
 }
 
@@ -78,6 +83,11 @@ function asSession(raw: unknown): VideoStudySession | null {
   if (!id || !videoId || !videoUrl || cues.length === 0) return null;
   const title = asString(row.title) || undefined;
   const situationSummary = asString(row.situationSummary) || undefined;
+  const baselineRaw = Array.isArray(row.baselineCues) ? row.baselineCues : [];
+  const baselineCues = baselineRaw
+    .map(asCue)
+    .filter((cue): cue is StoredVideoCue => cue !== null)
+    .slice(0, 800);
   return {
     id,
     videoId,
@@ -87,6 +97,7 @@ function asSession(raw: unknown): VideoStudySession | null {
     ...(situationSummary ? { situationSummary } : {}),
     durationSeconds: Math.max(durationSeconds, cues[cues.length - 1]!.endTime),
     cues,
+    ...(baselineCues.length > 0 ? { baselineCues } : {}),
     createdAt,
     updatedAt,
   };
@@ -96,12 +107,14 @@ export function cuesToStored(cues: VideoSubtitle[]): StoredVideoCue[] {
   return cues
     .map((cue) => {
       const translation = cue.translation.trim();
+      const analysisTranslation = cue.analysisTranslation?.trim();
       return {
         id: cue.id,
         startTime: cue.startTime,
         endTime: Math.max(cue.startTime + 0.3, cue.endTime),
         original: cue.original.trim(),
         ...(translation ? { translation } : {}),
+        ...(analysisTranslation ? { analysisTranslation } : {}),
       };
     })
     .filter((cue) => cue.original.length > 0)
@@ -111,6 +124,7 @@ export function cuesToStored(cues: VideoSubtitle[]): StoredVideoCue[] {
 export function storedCuesToSubtitles(cues: StoredVideoCue[]): VideoSubtitle[] {
   return cues.map((cue) => {
     const translation = cue.translation?.trim() || "";
+    const analysisTranslation = cue.analysisTranslation?.trim();
     return {
       id: cue.id,
       startTime: cue.startTime,
@@ -120,6 +134,7 @@ export function storedCuesToSubtitles(cues: StoredVideoCue[]): VideoSubtitle[] {
       translationStatus: translation
         ? ("final" as const)
         : ("english" as const),
+      ...(analysisTranslation ? { analysisTranslation } : {}),
     };
   });
 }
@@ -162,6 +177,7 @@ export function upsertVideoStudySession(input: {
   situationSummary?: string;
   durationSeconds: number;
   cues: VideoSubtitle[];
+  baselineCues?: VideoSubtitle[];
   languageCode?: LearningLanguageCode;
 }): { session: VideoStudySession; created: boolean } {
   const cues = cuesToStored(input.cues);
@@ -177,6 +193,11 @@ export function upsertVideoStudySession(input: {
     input.languageCode ??
     prev?.languageCode ??
     coerceLanguageCode(undefined);
+  const baselineCues = cuesToStored(
+    input.baselineCues && input.baselineCues.length > 0
+      ? input.baselineCues
+      : storedCuesToSubtitles(prev?.baselineCues ?? []),
+  );
   const session: VideoStudySession = {
     id: prev?.id ?? `vsession-${input.videoId}-${now}`,
     videoId: input.videoId,
@@ -191,6 +212,11 @@ export function upsertVideoStudySession(input: {
       cues[cues.length - 1]!.endTime,
     ),
     cues,
+    ...(baselineCues.length > 0
+      ? { baselineCues }
+      : !prev
+        ? { baselineCues: cues }
+        : {}),
     createdAt: prev?.createdAt ?? now,
     updatedAt: now,
   };

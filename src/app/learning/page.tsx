@@ -24,11 +24,11 @@ function LearningPageInner({
   return (
     <ExpressionInsightProvider locale={locale} ui={ui}>
       <EnglishAnalysisProvider locale={locale} ui={ui}>
-        <main className="flex min-h-screen flex-col bg-slate-100">
+        <main className="flex min-h-screen flex-col bg-[#000000]">
           <div className="mx-auto w-full max-w-lg px-4 pt-4">
             <Link
               href="/?screen=saved"
-              className="text-sm font-medium text-slate-600 underline-offset-4 hover:text-slate-900 hover:underline"
+              className="text-sm font-medium text-slate-300 underline-offset-4 hover:text-white hover:underline"
             >
               {ui.learningBackToChat}
             </Link>

@@ -25,10 +25,15 @@ import {
 } from "@/lib/videoSubtitle/subtitleDraft";
 import type { VideoContext } from "@/lib/videoSubtitle/types";
 import { spokenTranslatePrinciples } from "@/lib/spokenTranslate";
+import { speechRegisterHint } from "@/lib/videoSubtitle/speechRegister";
 
 const BATCH = 6;
 
-function adaptSystem(locale: string, targetLanguage = "en"): string {
+function adaptSystem(
+  locale: string,
+  context: VideoContext,
+  targetLanguage = "en",
+): string {
   const interfaceLanguage = locale || "ko";
   const target = localeTargetName(interfaceLanguage);
   return `${spokenTranslatePrinciples({
@@ -39,11 +44,13 @@ function adaptSystem(locale: string, targetLanguage = "en"): string {
   })}
 
 Caption task:
-You write on-screen ${target} movie/drama subtitles — NOT dictionary translations.
+You write on-screen ${target} captions that match THIS video's speech genre — NOT dictionary translations and NOT a default movie/drama voice.
+
+${speechRegisterHint(context, interfaceLanguage)}
 
 Core job:
 1) What does this line MEAN in this scene (intent + feeling)?
-2) What would a native ${target} speaker SAY aloud with the same vibe?
+2) What would a native ${target} speaker SAY aloud with the same vibe, in this video's genre?
 
 HARD BAN:
 - word-for-word glosses / translationese / textbook wording
@@ -116,7 +123,7 @@ async function adaptBatch(
     temperature: 0.4,
     response_format: { type: "json_object" },
     messages: [
-      { role: "system", content: adaptSystem(locale, targetLanguage) },
+      { role: "system", content: adaptSystem(locale, context, targetLanguage) },
       {
         role: "user",
         content: JSON.stringify({

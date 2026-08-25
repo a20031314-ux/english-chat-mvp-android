@@ -20,6 +20,7 @@ export type WebReaderPlugin = {
     eventName: "closed",
     listener: () => void,
   ): Promise<PluginListenerHandle>;
+  takePendingText(): Promise<{ text: string }>;
   removeAllListeners(): Promise<void>;
 };
 

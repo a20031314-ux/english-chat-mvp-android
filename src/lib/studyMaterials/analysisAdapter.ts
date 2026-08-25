@@ -46,6 +46,7 @@ export function sentenceAnalysisTarget(input: {
   paragraph: StudyParagraph;
   selectedText?: string;
   language?: string;
+  sourceType?: EnglishAnalysisTarget["sourceType"];
 }): EnglishAnalysisTarget {
   const selected = (input.selectedText || input.sentence.text)
     .replace(/\s+/g, " ")
@@ -54,7 +55,7 @@ export function sentenceAnalysisTarget(input: {
     selectedText: selected,
     contextSentence: input.sentence.text,
     context: neighborContext(input.paragraph, input.sentence),
-    sourceType: "web",
+    sourceType: input.sourceType ?? "web",
     intent: "sentence",
     ...(input.language ? { language: input.language } : {}),
   };

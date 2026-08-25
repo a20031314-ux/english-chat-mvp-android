@@ -25,7 +25,7 @@ export function TranscriptList({
 }) {
   const ready = cues.filter(isReadyTranscriptCue);
   return (
-    <div className="border-t border-slate-100 px-4 py-3">
+    <div className="border-t border-white/10 px-4 py-3">
       <p className="text-[11px] font-semibold tracking-wide text-slate-500">
         {ui.videoLearnTranscriptShow}
       </p>
@@ -38,7 +38,7 @@ export function TranscriptList({
                 type="button"
                 onClick={() => onSeek(cue.startTime)}
                 className={`w-full rounded-xl px-2.5 py-2 text-left ${
-                  active ? "bg-slate-100" : "hover:bg-slate-50"
+                  active ? "bg-white/10" : "hover:bg-white/10"
                 }`}
               >
                 <p className="text-[11px] tabular-nums text-slate-400">
@@ -46,7 +46,7 @@ export function TranscriptList({
                 </p>
                 <p
                   className={`mt-0.5 whitespace-pre-line text-sm leading-snug ${
-                    active ? "font-medium text-slate-900" : "text-slate-800"
+                    active ? "font-medium text-slate-100" : "text-slate-100"
                   }`}
                 >
                   {cue.original}

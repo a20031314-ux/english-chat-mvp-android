@@ -3,6 +3,11 @@
     <string name="process_text_analyze">Analyze</string>
     <string name="screen_read_running">Screen English analysis</string>
     <string name="screen_read_running_body">Analyzing English on the other app’s screen. Long-press the button to stop.</string>
+    <string name="screen_read_finding">Finding sentences on this screen...</string>
+    <string name="screen_read_pick">Tap a sentence on the page, or pick one below.</string>
+    <string name="screen_read_none">No sentences found. When capturing, choose the browser and keep the learning language visible.</string>
+    <string name="screen_read_close">Close</string>
+    <string name="screen_read_open_in_app">Open full analysis in the app</string>
     <string name="screen_read_loading">Looking at this English...</string>
     <string name="screen_read_failed">Couldn’t load the explanation. Try again.</string>
 </resources>

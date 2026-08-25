@@ -78,15 +78,15 @@ export function ReviewTab({
     .filter((item) => item.cards.length > 0);
 
   return (
-    <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-lg">
-      <header className="flex shrink-0 items-center justify-between gap-2 border-b border-slate-200 px-4 py-3">
-        <h1 className="text-base font-semibold text-slate-900">{ui.homeTabQuiz}</h1>
+    <div className="flex h-full min-h-0 flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#121212] shadow-lg">
+      <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
+        <h1 className="text-base font-semibold text-slate-100">{ui.homeTabQuiz}</h1>
         <div className="flex items-center gap-2">
           {packs.length > 0 ? (
             <button
               type="button"
               onClick={() => clearReviewQueue()}
-              className="rounded-full px-3 py-1 text-xs font-medium text-slate-500 hover:bg-slate-100 hover:text-slate-800"
+              className="rounded-full px-3 py-1 text-xs font-medium text-slate-500 hover:bg-white/10 hover:text-white"
             >
               {ui.reviewResetCta}
             </button>
@@ -99,7 +99,7 @@ export function ReviewTab({
         </div>
       </header>
 
-      <div className="flex shrink-0 gap-2 border-b border-slate-100 px-4 py-2">
+      <div className="flex shrink-0 gap-2 border-b border-white/10 px-4 py-2">
         {(
           [
             ["all", ui.reviewFilterAll],
@@ -113,8 +113,8 @@ export function ReviewTab({
             onClick={() => setFilter(id)}
             className={`rounded-full px-3 py-1 text-sm ${
               filter === id
-                ? "bg-slate-900 text-white"
-                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+                ? "bg-[#e8e8e4] text-neutral-900"
+                : "bg-white/10 text-slate-300 hover:bg-white/15"
             }`}
           >
             {label}
@@ -127,13 +127,13 @@ export function ReviewTab({
           <p className="py-10 text-center text-sm text-slate-500">{ui.quizLoading}</p>
         ) : packs.length === 0 && !isGenerating ? (
           <div className="mx-auto flex max-w-lg flex-col items-center py-16 text-center">
-            <p className="text-sm leading-relaxed text-slate-600">
+            <p className="text-sm leading-relaxed text-slate-300">
               {ui.reviewEmptyBody}
             </p>
             <button
               type="button"
               onClick={onGoChat}
-              className="mt-8 rounded-2xl bg-slate-900 px-5 py-3 text-sm font-medium text-white hover:bg-slate-800"
+              className="mt-8 rounded-2xl bg-[#e8e8e4] px-5 py-3 text-sm font-medium text-neutral-900 hover:bg-[#f5f5f3]"
             >
               {ui.quizEmptyCta}
             </button>
@@ -148,13 +148,13 @@ export function ReviewTab({
             {visiblePacks.map(({ pack, index, cards }) => (
               <section key={pack.reportId} className="flex flex-col gap-4">
                 <div className="flex items-center justify-between gap-3">
-                  <h2 className="min-w-0 truncate text-sm font-semibold text-slate-800">
+                  <h2 className="min-w-0 truncate text-sm font-semibold text-slate-100">
                     {sectionTitle(pack, index, ui)}
                   </h2>
                   <button
                     type="button"
                     onClick={() => completeReviewPack(pack.reportId)}
-                    className="shrink-0 rounded-full bg-slate-900 px-3 py-1.5 text-xs font-medium text-white hover:bg-slate-800"
+                    className="shrink-0 rounded-full bg-[#e8e8e4] px-3 py-1.5 text-xs font-medium text-neutral-900 hover:bg-[#f5f5f3]"
                   >
                     {ui.reviewCompleteCta}
                   </button>
@@ -178,14 +178,14 @@ export function ReviewTab({
 function ReviewCardView({ card, ui }: { card: ReviewCard; ui: UICopy }) {
   if (card.kind === "grammar") {
     return (
-      <article className="rounded-2xl border border-slate-200 p-4">
+      <article className="rounded-2xl border border-white/10 p-4">
         <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-400">
           {ui.reviewFilterGrammar}
         </p>
         {card.original &&
         card.corrected &&
         card.original !== card.corrected ? (
-          <div className="mt-3 space-y-2 rounded-xl bg-slate-50 px-3 py-3 text-sm">
+          <div className="mt-3 space-y-2 rounded-xl bg-white/5 px-3 py-3 text-sm">
             <div className="text-slate-500">
               {ui.reviewMySentence}:{" "}
               <AnalyzableEnglish
@@ -193,7 +193,8 @@ function ReviewCardView({ card, ui }: { card: ReviewCard; ui: UICopy }) {
                 inline
                 analyzeLabel={ui.insightAnalyze}
                 sourceType="example"
-                className="text-slate-800"
+                tone="onDark"
+                className="text-slate-100"
               />
             </div>
             <div className="text-slate-500">
@@ -203,12 +204,13 @@ function ReviewCardView({ card, ui }: { card: ReviewCard; ui: UICopy }) {
                 inline
                 analyzeLabel={ui.insightAnalyze}
                 sourceType="example"
-                className="font-medium text-teal-800"
+                tone="onDark"
+                className="font-medium text-[#e4e4e0]"
               />
             </div>
           </div>
         ) : null}
-        <p className="mt-3 text-sm leading-relaxed text-slate-700">
+        <p className="mt-3 text-sm leading-relaxed text-slate-200">
           {card.explanation}
         </p>
         <ExampleList
@@ -224,18 +226,19 @@ function ReviewCardView({ card, ui }: { card: ReviewCard; ui: UICopy }) {
   }
 
   return (
-    <article className="rounded-2xl border border-slate-200 p-4">
+    <article className="rounded-2xl border border-white/10 p-4">
       <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-400">
         {ui.reviewFilterVocab}
       </p>
       <AnalyzableEnglish
         sentence={card.word}
-        className="mt-1 text-xl font-semibold text-slate-900"
+        tone="onDark"
+        className="mt-1 text-xl font-semibold text-slate-100"
       />
       <div className="mt-3 space-y-4">
         {card.senses.map((sense, index) => (
           <div key={`${card.id}-s-${index}`}>
-            <p className="text-sm font-medium text-slate-800">{sense.gloss}</p>
+            <p className="text-sm font-medium text-slate-100">{sense.gloss}</p>
             <ExampleList
               examples={sense.examples}
               analyzeLabel={ui.insightAnalyze}
@@ -244,17 +247,18 @@ function ReviewCardView({ card, ui }: { card: ReviewCard; ui: UICopy }) {
         ))}
       </div>
       {card.similar.length > 0 ? (
-        <div className="mt-4 border-t border-slate-100 pt-3">
+        <div className="mt-4 border-t border-white/10 pt-3">
           <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-400">
             {ui.reviewSimilar}
           </p>
           <ul className="mt-2 space-y-1.5">
             {card.similar.map((item) => (
-              <li key={`${card.id}-${item.word}`} className="text-sm text-slate-700">
+              <li key={`${card.id}-${item.word}`} className="text-sm text-slate-200">
                 <AnalyzableEnglish
                   sentence={item.word}
                   inline
-                  className="font-medium text-slate-900"
+                  tone="onDark"
+                  className="font-medium text-slate-100"
                 />
                 <span className="text-slate-500"> — {item.gloss}</span>
               </li>
@@ -289,7 +293,8 @@ function ExampleList({
             sentence={example}
             analyzeLabel={analyzeLabel}
             sourceType="example"
-            className="text-sm leading-relaxed text-slate-700"
+            tone="onDark"
+            className="text-sm leading-relaxed text-slate-200"
           />
           <TTSButton text={example} />
         </div>

@@ -23,7 +23,9 @@ type YtPlayer = {
   pauseVideo: () => void;
   seekTo: (seconds: number, allowSeekAhead: boolean) => void;
   getCurrentTime: () => number;
+  getDuration?: () => number;
   getPlayerState: () => number;
+  mute?: () => void;
   unMute?: () => void;
   destroy: () => void;
 };
@@ -130,6 +132,9 @@ export const VideoPlayer = forwardRef<
   const endedFiredRef = useRef(false);
   /** Exclusive end time for clip playback; null = normal play. */
   const segmentEndRef = useRef<number | null>(null);
+  const segmentStartRef = useRef<number | null>(null);
+  const segmentReadyRef = useRef(false);
+  const segmentSawStartRef = useRef(false);
   const segmentTokenRef = useRef(0);
   const segmentTimerRef = useRef<number | null>(null);
   /** After a clip stop, ignore YT "still playing" sync briefly. */
@@ -143,7 +148,15 @@ export const VideoPlayer = forwardRef<
 
   const [playing, setPlaying] = useState(false);
   const [displayTime, setDisplayTime] = useState(0);
-  const duration = Math.max(durationHint, 70);
+  const [mediaDuration, setMediaDuration] = useState(0);
+  const mediaDurationRef = useRef(0);
+  const duration = Math.max(durationHint, mediaDuration, 70);
+
+  const noteMediaDuration = useCallback((seconds: number) => {
+    if (!(seconds > mediaDurationRef.current + 0.5)) return;
+    mediaDurationRef.current = seconds;
+    setMediaDuration(seconds);
+  }, []);
 
   const clearSegmentTimer = useCallback(() => {
     if (segmentTimerRef.current != null) {
@@ -166,16 +179,23 @@ export const VideoPlayer = forwardRef<
     (endAt: number | null) => {
       clearSegmentTimer();
       const hadSegment = segmentEndRef.current != null;
+      const startAt = segmentStartRef.current;
+      segmentTokenRef.current += 1;
       segmentEndRef.current = null;
+      segmentStartRef.current = null;
+      segmentReadyRef.current = false;
+      segmentSawStartRef.current = false;
       playingRef.current = false;
       setPlaying(false);
       suppressYtPlaySyncUntilRef.current = Date.now() + 800;
       try {
         playerRef.current?.pauseVideo();
-        // Settle slightly before the exclusive end so we don't land on the
-        // next cue's startTime (which made "click 1:40 → next line" feel true).
-        if (endAt != null) {
-          const settle = Math.max(0, endAt - 0.15);
+        playerRef.current?.unMute?.();
+        // Stay on this cue. Seeking to end-ε landed on the next line and the
+        // following play often started there because YT seek had not settled.
+        const settle =
+          startAt != null ? startAt : endAt != null ? Math.max(0, endAt - 0.2) : null;
+        if (settle != null) {
           playerRef.current?.seekTo(settle, true);
           emitTime(settle);
         }
@@ -191,17 +211,20 @@ export const VideoPlayer = forwardRef<
     clearSegmentTimer();
     segmentTokenRef.current += 1;
     const hadSegment = segmentEndRef.current != null;
-    const endAt = segmentEndRef.current;
+    const startAt = segmentStartRef.current;
     segmentEndRef.current = null;
+    segmentStartRef.current = null;
+    segmentReadyRef.current = false;
+    segmentSawStartRef.current = false;
     playingRef.current = false;
     setPlaying(false);
     suppressYtPlaySyncUntilRef.current = Date.now() + 400;
     try {
       playerRef.current?.pauseVideo();
-      if (hadSegment && endAt != null) {
-        const settle = Math.max(0, endAt - 0.15);
-        playerRef.current?.seekTo(settle, true);
-        emitTime(settle);
+      playerRef.current?.unMute?.();
+      if (hadSegment && startAt != null) {
+        playerRef.current?.seekTo(startAt, true);
+        emitTime(startAt);
       }
     } catch {
       // ignore
@@ -213,6 +236,9 @@ export const VideoPlayer = forwardRef<
     clearSegmentTimer();
     segmentTokenRef.current += 1;
     segmentEndRef.current = null;
+    segmentStartRef.current = null;
+    segmentReadyRef.current = false;
+    segmentSawStartRef.current = false;
     endedFiredRef.current = false;
     suppressYtPlaySyncUntilRef.current = 0;
     playingRef.current = true;
@@ -243,44 +269,84 @@ export const VideoPlayer = forwardRef<
       clearSegmentTimer();
       const safeStart = Math.max(0, start);
       const rawEnd = Number.isFinite(end) ? end : safeStart + 3;
-      // Allow multi-cue ranges; still hard-cap runaway endTimes.
       const safeEnd = Math.min(
-        Math.max(safeStart + 0.45, rawEnd),
+        Math.max(safeStart + 0.3, rawEnd),
         safeStart + 180,
       );
+      // YouTube snaps to keyframes. Seeking a little early, then unmuting at
+      // `safeStart`, keeps the clip from starting mid-sentence on long videos.
+      const seekAt = Math.max(0, safeStart - 1.35);
 
       const token = segmentTokenRef.current + 1;
       segmentTokenRef.current = token;
       segmentEndRef.current = safeEnd;
+      segmentStartRef.current = safeStart;
+      segmentReadyRef.current = false;
+      segmentSawStartRef.current = false;
       endedFiredRef.current = false;
-      suppressYtPlaySyncUntilRef.current = 0;
+      suppressYtPlaySyncUntilRef.current = Date.now() + 1600;
       emitTime(safeStart);
       playingRef.current = true;
       setPlaying(true);
 
-      try {
-        const player = playerRef.current;
-        player?.unMute?.();
-        player?.seekTo(safeStart, true);
-        window.setTimeout(() => {
+      const player = playerRef.current;
+      const armStopTimer = (fromTime: number) => {
+        clearSegmentTimer();
+        if (segmentTokenRef.current !== token) return;
+        const remaining = Math.max(0.2, safeEnd - fromTime);
+        segmentTimerRef.current = window.setTimeout(() => {
           if (segmentTokenRef.current !== token) return;
-          try {
-            player?.playVideo();
-          } catch {
-            // ignore
-          }
-        }, 100);
+          if (segmentEndRef.current == null) return;
+          finishSegment(safeEnd);
+        }, Math.ceil(remaining * 1000) + 80);
+      };
+
+      try {
+        player?.mute?.();
+        player?.pauseVideo();
+        player?.seekTo(seekAt, true);
       } catch {
         // ignore
       }
 
-      // Backup stop — don't rely only on time polling (YT can lag).
-      const budgetMs = Math.ceil((safeEnd - safeStart) * 1000) + 250;
-      segmentTimerRef.current = window.setTimeout(() => {
+      let tries = 0;
+      const startWhenSeeked = () => {
         if (segmentTokenRef.current !== token) return;
-        if (segmentEndRef.current == null) return;
-        finishSegment(safeEnd);
-      }, budgetMs);
+        let now = seekAt;
+        try {
+          const t = player?.getCurrentTime();
+          if (typeof t === "number" && Number.isFinite(t)) now = t;
+        } catch {
+          // ignore
+        }
+        const landedEarly = now <= safeStart + 0.35;
+        const landedInClip = now >= safeStart - 0.2 && now < safeEnd - 0.12;
+        if (!landedEarly && !landedInClip && tries < 28) {
+          tries += 1;
+          try {
+            player?.seekTo(seekAt, true);
+          } catch {
+            // ignore
+          }
+          window.setTimeout(startWhenSeeked, 80);
+          return;
+        }
+        suppressYtPlaySyncUntilRef.current = 0;
+        segmentReadyRef.current = true;
+        if (now >= safeStart - 0.05) {
+          segmentSawStartRef.current = true;
+        }
+        try {
+          if (now < safeStart - 0.05) player?.mute?.();
+          else player?.unMute?.();
+          player?.playVideo();
+        } catch {
+          // ignore
+        }
+        const playHead = Math.max(now, landedInClip ? now : Math.min(now, safeStart));
+        armStopTimer(Math.min(Math.max(playHead, seekAt), safeEnd));
+      };
+      window.setTimeout(startWhenSeeked, 80);
     },
     [clearSegmentTimer, emitTime, finishSegment],
   );
@@ -320,6 +386,14 @@ export const VideoPlayer = forwardRef<
           },
           events: {
             onReady: () => {
+              try {
+                const loaded = player.getDuration?.();
+                if (typeof loaded === "number" && loaded > 1) {
+                  noteMediaDuration(loaded);
+                }
+              } catch {
+                // ignore
+              }
               if (!autoPlayRef.current) return;
               try {
                 player.playVideo();
@@ -360,22 +434,59 @@ export const VideoPlayer = forwardRef<
       }
       playerRef.current = null;
     };
-  }, [videoId, clearSegmentTimer]);
+  }, [videoId, clearSegmentTimer, noteMediaDuration]);
 
   useEffect(() => {
     const timer = window.setInterval(() => {
       try {
         const t = playerRef.current?.getCurrentTime();
         const state = playerRef.current?.getPlayerState();
+        try {
+          const loaded = playerRef.current?.getDuration?.();
+          if (typeof loaded === "number") noteMediaDuration(loaded);
+        } catch {
+          // ignore
+        }
         if (typeof t === "number" && Number.isFinite(t)) {
+          const segmentEnd = segmentEndRef.current;
+          const segmentStart = segmentStartRef.current;
+          if (segmentEnd != null && !segmentReadyRef.current) {
+            const shown = segmentStart ?? t;
+            clockRef.current = shown;
+            setDisplayTime(shown);
+            onTimeRef.current(shown);
+            return;
+          }
+
           clockRef.current = t;
           setDisplayTime(t);
           onTimeRef.current(t);
 
-          const segmentEnd = segmentEndRef.current;
-          if (segmentEnd != null && t >= segmentEnd - 0.08) {
-            finishSegment(segmentEnd);
-            return;
+          if (segmentEnd != null) {
+            const start = segmentStart ?? 0;
+            if (t >= segmentEnd - 0.05) {
+              finishSegment(segmentEnd);
+              return;
+            }
+            if (t < start - 0.05) {
+              try {
+                playerRef.current?.mute?.();
+              } catch {
+                // ignore
+              }
+              clockRef.current = start;
+              setDisplayTime(start);
+              onTimeRef.current(start);
+              return;
+            }
+            if (!segmentSawStartRef.current) {
+              segmentSawStartRef.current = true;
+            }
+            try {
+              playerRef.current?.unMute?.();
+            } catch {
+              // ignore
+            }
           }
         }
 
@@ -406,7 +517,7 @@ export const VideoPlayer = forwardRef<
       }
     }, 50);
     return () => window.clearInterval(timer);
-  }, [videoId, finishSegment, clearSegmentTimer]);
+  }, [videoId, finishSegment, clearSegmentTimer, noteMediaDuration]);
 
   useEffect(() => {
     if (active) return;
@@ -429,13 +540,22 @@ export const VideoPlayer = forwardRef<
       } catch {
         // keep local clock
       }
-      emitTime(next);
-
       const segmentEnd = segmentEndRef.current;
-      if (segmentEnd != null && next >= segmentEnd - 0.08) {
+      const segmentStart = segmentStartRef.current;
+      if (segmentEnd != null && next >= segmentEnd - 0.05) {
         finishSegment(segmentEnd);
         return;
       }
+      if (
+        segmentEnd != null &&
+        segmentStart != null &&
+        next < segmentStart - 0.05
+      ) {
+        emitTime(segmentStart);
+        frame = requestAnimationFrame(tick);
+        return;
+      }
+      emitTime(next);
 
       if (segmentEndRef.current == null && next >= duration - 0.15) {
         if (!endedFiredRef.current) {

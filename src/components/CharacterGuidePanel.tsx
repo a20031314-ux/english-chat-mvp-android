@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState, type RefObject } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { createPortal } from "react-dom";
 import { TTSButton } from "@/components/TTSButton";
 import type { Locale, UICopy } from "@/lib/copy";
 import {
@@ -46,7 +47,6 @@ export function CharacterGuidePanel({
   const guide = getCharacterGuide(targetLanguage);
   const [categoryId, setCategoryId] = useState(guide?.categories[0]?.id ?? "");
   const [selectedId, setSelectedId] = useState<string | null>(null);
-  const detailRef = useRef<HTMLDivElement>(null);
   const speechLang = learningLanguageSpeechTag(targetLanguage);
 
   useEffect(() => {
@@ -66,7 +66,11 @@ export function CharacterGuidePanel({
 
   useEffect(() => {
     if (!selected) return;
-    detailRef.current?.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSelectedId(null);
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
   }, [selected]);
 
   if (!guide) return null;
@@ -76,7 +80,7 @@ export function CharacterGuidePanel({
 
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-sm leading-relaxed text-slate-600">
+      <p className="text-sm leading-relaxed text-slate-300">
         {ui.characterGuideHint}
       </p>
 
@@ -94,8 +98,8 @@ export function CharacterGuidePanel({
                 }}
                 className={`rounded-full px-3 py-1.5 text-xs font-medium ${
                   active
-                    ? "bg-slate-900 text-white"
-                    : "border border-slate-200 bg-white text-slate-600"
+                    ? "bg-[#e8e8e4] text-neutral-900"
+                    : "border border-white/10 bg-[#121212] text-slate-300"
                 }`}
               >
                 {localizedText(category.label, locale)}
@@ -106,13 +110,13 @@ export function CharacterGuidePanel({
       ) : null}
 
       {notes && notes.length > 0 ? (
-        <div className="space-y-2 rounded-2xl border border-slate-200 bg-slate-50 px-3 py-3">
+        <div className="space-y-2 rounded-2xl border border-white/10 bg-white/5 px-3 py-3">
           {notes.map((note) => (
             <div key={localizedText(note.title, locale)}>
               <p className="text-[11px] font-semibold tracking-wide text-slate-500">
                 {localizedText(note.title, locale)}
               </p>
-              <p className="mt-0.5 text-xs leading-relaxed text-slate-700">
+              <p className="mt-0.5 text-xs leading-relaxed text-slate-200">
                 {localizedText(note.body, locale)}
               </p>
             </div>
@@ -137,8 +141,8 @@ export function CharacterGuidePanel({
               }
               className={`min-h-11 rounded-xl border px-1 py-2 text-lg font-semibold leading-none ${
                 active
-                  ? "border-slate-900 bg-slate-900 text-white"
-                  : "border-slate-200 bg-white text-slate-900 hover:bg-slate-50"
+                  ? "border-white/40 bg-[#e8e8e4] text-neutral-900"
+                  : "border-white/10 bg-[#121212] text-slate-100 hover:bg-white/10"
               }`}
             >
               {item.character}
@@ -147,16 +151,45 @@ export function CharacterGuidePanel({
         })}
       </div>
 
-      {selected ? (
-        <CharacterDetail
-          item={selected}
-          locale={locale}
-          ui={ui}
-          speechLang={speechLang}
-          categoryLabel={categoryLabel(guide, selected.category, locale)}
-          detailRef={detailRef}
-        />
-      ) : null}
+      {selected
+        ? createPortal(
+            <div className="fixed inset-0 z-[100] flex items-end justify-center bg-slate-900/40 p-3 sm:items-center">
+              <button
+                type="button"
+                className="absolute inset-0 cursor-default"
+                aria-label={ui.vocabPreviewClose}
+                onClick={() => setSelectedId(null)}
+              />
+              <div
+                role="dialog"
+                aria-modal="true"
+                aria-labelledby="character-guide-title"
+                className="relative z-10 max-h-[86vh] w-full max-w-md overflow-y-auto rounded-2xl border border-white/10 bg-[#121212] p-4 shadow-xl"
+                onPointerDown={(event) => event.stopPropagation()}
+              >
+                <CharacterDetail
+                  item={selected}
+                  locale={locale}
+                  ui={ui}
+                  speechLang={speechLang}
+                  categoryLabel={categoryLabel(
+                    guide,
+                    selected.category,
+                    locale,
+                  )}
+                />
+                <button
+                  type="button"
+                  onClick={() => setSelectedId(null)}
+                  className="mt-4 w-full rounded-xl border border-white/10 bg-[#121212] px-3 py-2.5 text-sm font-medium text-slate-200 hover:bg-white/10"
+                >
+                  {ui.vocabPreviewClose}
+                </button>
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
     </div>
   );
 }
@@ -167,14 +200,12 @@ function CharacterDetail({
   ui,
   speechLang,
   categoryLabel,
-  detailRef,
 }: {
   item: CharacterItem;
   locale: string;
   ui: UICopy;
   speechLang: string;
   categoryLabel: string;
-  detailRef: RefObject<HTMLDivElement | null>;
 }) {
   const meaning = localizedText(item.meaning, locale);
   const usage = localizedText(item.usage, locale);
@@ -183,13 +214,11 @@ function CharacterDetail({
   const forms = item.forms;
 
   return (
-    <div
-      ref={detailRef}
-      className="rounded-2xl border border-slate-200 bg-white p-4"
-    >
+    <div>
       <div className="flex flex-wrap items-center gap-2">
         <p
-          className="text-3xl font-semibold leading-none text-slate-900"
+          id="character-guide-title"
+          className="text-3xl font-semibold leading-none text-slate-100"
           dir="auto"
         >
           {item.character}
@@ -203,7 +232,7 @@ function CharacterDetail({
             <dt className="text-[11px] font-semibold tracking-wide text-slate-500">
               {ui.characterPronunciation}
             </dt>
-            <dd className="mt-0.5 text-slate-800">
+            <dd className="mt-0.5 text-slate-100">
               {item.reading || item.pronunciation}
               {item.reading &&
               item.pronunciation &&
@@ -218,7 +247,7 @@ function CharacterDetail({
             <dt className="text-[11px] font-semibold tracking-wide text-slate-500">
               {ui.characterTone}
             </dt>
-            <dd className="mt-0.5 text-slate-800">{tone}</dd>
+            <dd className="mt-0.5 text-slate-100">{tone}</dd>
           </div>
         ) : null}
         {categoryLabel ? (
@@ -226,7 +255,7 @@ function CharacterDetail({
             <dt className="text-[11px] font-semibold tracking-wide text-slate-500">
               {ui.characterCategory}
             </dt>
-            <dd className="mt-0.5 text-slate-800">{categoryLabel}</dd>
+            <dd className="mt-0.5 text-slate-100">{categoryLabel}</dd>
           </div>
         ) : null}
         {meaning ? (
@@ -234,7 +263,7 @@ function CharacterDetail({
             <dt className="text-[11px] font-semibold tracking-wide text-slate-500">
               {ui.characterMeaning}
             </dt>
-            <dd className="mt-0.5 text-slate-800">{meaning}</dd>
+            <dd className="mt-0.5 text-slate-100">{meaning}</dd>
           </div>
         ) : null}
         {usage ? (
@@ -242,7 +271,7 @@ function CharacterDetail({
             <dt className="text-[11px] font-semibold tracking-wide text-slate-500">
               {ui.characterUsage}
             </dt>
-            <dd className="mt-0.5 text-slate-800">{usage}</dd>
+            <dd className="mt-0.5 text-slate-100">{usage}</dd>
           </div>
         ) : null}
         {forms && (forms.initial || forms.medial || forms.final) ? (
@@ -250,24 +279,24 @@ function CharacterDetail({
             <dt className="text-[11px] font-semibold tracking-wide text-slate-500">
               {ui.characterForms}
             </dt>
-            <dd className="mt-1 flex flex-wrap gap-2 text-slate-800" dir="rtl">
+            <dd className="mt-1 flex flex-wrap gap-2 text-slate-100" dir="rtl">
               {forms.isolated ? (
-                <span className="rounded-lg bg-slate-50 px-2 py-1">
+                <span className="rounded-lg bg-white/5 px-2 py-1">
                   {ui.characterFormIsolated} {forms.isolated}
                 </span>
               ) : null}
               {forms.initial ? (
-                <span className="rounded-lg bg-slate-50 px-2 py-1">
+                <span className="rounded-lg bg-white/5 px-2 py-1">
                   {ui.characterFormInitial} {forms.initial}
                 </span>
               ) : null}
               {forms.medial ? (
-                <span className="rounded-lg bg-slate-50 px-2 py-1">
+                <span className="rounded-lg bg-white/5 px-2 py-1">
                   {ui.characterFormMedial} {forms.medial}
                 </span>
               ) : null}
               {forms.final ? (
-                <span className="rounded-lg bg-slate-50 px-2 py-1">
+                <span className="rounded-lg bg-white/5 px-2 py-1">
                   {ui.characterFormFinal} {forms.final}
                 </span>
               ) : null}
@@ -285,10 +314,10 @@ function CharacterDetail({
             {item.examples.map((example) => (
               <li
                 key={`${example.text}-${example.reading ?? ""}`}
-                className="flex items-start justify-between gap-2 rounded-xl bg-slate-50 px-3 py-2"
+                className="flex items-start justify-between gap-2 rounded-xl bg-white/5 px-3 py-2"
               >
                 <div className="min-w-0">
-                  <p className="text-sm font-medium text-slate-900" dir="auto">
+                  <p className="text-sm font-medium text-slate-100" dir="auto">
                     {example.text}
                     {example.reading ? (
                       <span className="ml-2 text-xs font-normal text-slate-500">
@@ -297,7 +326,7 @@ function CharacterDetail({
                     ) : null}
                   </p>
                   {localizedText(example.meaning, locale) ? (
-                    <p className="mt-0.5 text-xs text-slate-600">
+                    <p className="mt-0.5 text-xs text-slate-300">
                       {localizedText(example.meaning, locale)}
                     </p>
                   ) : null}

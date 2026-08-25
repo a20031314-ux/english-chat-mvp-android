@@ -46,6 +46,8 @@ export async function POST(request: NextRequest) {
     sourceType?: unknown;
     language?: unknown;
     learnerLevel?: unknown;
+    translation?: unknown;
+    analysisTranslation?: unknown;
   };
   try {
     body = await request.json();
@@ -127,6 +129,13 @@ export async function POST(request: NextRequest) {
             languageHint,
             targetLanguage,
             ...(learnerLevel ? { learnerLevel } : {}),
+            ...(typeof body.translation === "string" && body.translation.trim()
+              ? { captionTranslation: body.translation.trim() }
+              : {}),
+            ...(typeof body.analysisTranslation === "string" &&
+            body.analysisTranslation.trim()
+              ? { analysisTranslation: body.analysisTranslation.trim() }
+              : {}),
           }),
         },
       ],

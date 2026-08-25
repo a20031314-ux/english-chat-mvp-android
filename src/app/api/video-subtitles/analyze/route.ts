@@ -116,6 +116,7 @@ export async function POST(request: NextRequest) {
       locale: asString(body.locale) || "ko",
       original,
       naturalSubtitle,
+      analysisTranslation: asString(body.analysisTranslation) || undefined,
       meaning: asString(body.meaning) || asString(body.literalMeaning) || undefined,
       tone: asTone(body.tone),
       speakerStyle: asString(body.speakerStyle) || undefined,
