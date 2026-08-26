@@ -7,6 +7,7 @@ import { realtimeCallSessionConfig } from "@/lib/realtimeCallSession";
 export const dynamic = "force-dynamic";
 
 const OPENAI_CALLS = "https://api.openai.com/v1/realtime/calls";
+const CRLF = "\r\n";
 
 function requestUserId(request: NextRequest) {
   return request.cookies.get("ec_uid")?.value ?? "local-anonymous";
@@ -14,6 +15,15 @@ function requestUserId(request: NextRequest) {
 
 function safetyIdentifier(userId: string): string {
   return createHash("sha256").update(`call:${userId}`).digest("hex").slice(0, 32);
+}
+
+/**
+ * Every SDP line must end in CRLF, the last one included — trimming the offer
+ * makes the parser hit EOF mid-line and reject the call as an invalid offer.
+ */
+function normalizeOffer(raw: string): string {
+  const trimmed = raw.replace(/\s+$/, "");
+  return trimmed ? trimmed + CRLF : "";
 }
 
 export async function OPTIONS(request: NextRequest) {
@@ -33,7 +43,7 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "Invalid JSON" }, { status: 400 });
   }
 
-  const sdp = typeof body.sdp === "string" ? body.sdp.trim() : "";
+  const sdp = normalizeOffer(typeof body.sdp === "string" ? body.sdp : "");
   if (!sdp.startsWith("v=")) {
     return jsonWithCors(request, { error: "sdp required" }, { status: 400 });
   }
