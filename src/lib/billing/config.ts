@@ -12,11 +12,6 @@ export const PREMIUM_CLIENT_HEADER = "x-client-premium";
 
 export const FREE_DAILY_CHAT_LIMIT = 10;
 
-/** Free plan: one learning report per calendar day. */
-export const FREE_DAILY_REPORT_LIMIT = 1;
-
-export const FREE_DAILY_REPORTS_STORAGE_KEY = "ec_free_daily_reports";
-
 /** Display price only. Play Console still owns the billed amount for `premium_monthly`. */
 export const PREMIUM_MONTHLY_PRICE_KRW = 9900;
 

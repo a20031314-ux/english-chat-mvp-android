@@ -3,7 +3,7 @@
 import { useEffect } from "react";
 import type { ConversationSession } from "@/components/ArchivePanel";
 import type { Locale, UICopy } from "@/lib/copy";
-import { formatReportDate } from "@/lib/sessionReports";
+import { formatShortDate } from "@/lib/dateLabels";
 
 type ChatHistoryPanelProps = {
   isOpen: boolean;
@@ -117,7 +117,7 @@ export function ChatHistoryPanel({
                       {session.title}
                     </p>
                     <p className="mt-1.5 text-slate-500">
-                      {formatReportDate(
+                      {formatShortDate(
                         session.endedAt ?? session.createdAt,
                         locale,
                       )}

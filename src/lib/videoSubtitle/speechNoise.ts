@@ -6,7 +6,7 @@
 import {
   isJunkCue,
   looksLikeSubstantialDialogue,
-} from "@/lib/videoSubtitle/sttTokens";
+} from "./sttTokens.ts";
 
 const MARKER_ONLY =
   /^\s*[\[(]\s*(music|applause|laughter|silence|inaudible|singing)\b[^\]\)]*[\])]\s*$/i;
