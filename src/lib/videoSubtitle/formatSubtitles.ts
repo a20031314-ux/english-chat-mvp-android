@@ -99,6 +99,7 @@ export function formatSubtitleDrafts(drafts: SubtitleDraft[]): SubtitleSegment[]
       analysis && analysis !== captionKey ? analysis : undefined;
     cues.push({
       id: draft.id,
+      segmentIds: draft.segmentIds,
       startTime: draft.startTime,
       endTime,
       rawOriginal: draft.original,

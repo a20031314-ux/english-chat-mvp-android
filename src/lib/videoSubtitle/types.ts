@@ -122,6 +122,8 @@ export type SubtitleSegment = {
   speakerStyle?: string;
   interpretationConfidence?: number;
   confidence?: number;
+  /** Source segments this cue was built from. More than one means they merged. */
+  segmentIds?: string[];
   translationStatus: "draft" | "final";
   analysis?: SubtitleAnalysis;
   /** Native-viewer understanding used to build this caption (for learning/debug). */

@@ -52,6 +52,7 @@ function toKoreanCue(segment: SubtitleSegment): VideoSubtitle {
   const hasKorean = /[가-힣]/.test(translation);
   return {
     id: segment.id,
+    ...(segment.segmentIds?.length ? { segmentIds: segment.segmentIds } : {}),
     startTime: segment.startTime,
     endTime: segment.endTime,
     original: segment.original,
@@ -163,6 +164,12 @@ function mergeCuesWithSameGloss(cues: VideoSubtitle[]): VideoSubtitle[] {
 }
 
 function shouldJoinStudyCues(left: VideoSubtitle, right: VideoSubtitle): boolean {
+  // Lines split back out of one meaning unit share its reading on purpose.
+  // Joining them again on that shared text would undo the split.
+  const unit = left.segmentIds ?? [];
+  if (unit.length > 1 && unit.join("|") === (right.segmentIds ?? []).join("|")) {
+    return false;
+  }
   const gap = right.startTime - left.endTime;
   if (gap > 1.5) return false;
   const leftEn = englishWordCount(left.original);
@@ -415,15 +422,56 @@ function overlapsWindow(cue: VideoSubtitle, window: TimeWindow): boolean {
   return cue.startTime < window.end && cue.endTime > window.start;
 }
 
+/**
+ * The English lines are the spine: one line per source segment, each with its
+ * own timing. A window cue can cover several of them, because the pipeline
+ * groups short fragments into one meaning unit, so the reading is given back to
+ * every line it came from. Keying by cue id alone left the absorbed lines
+ * untranslated and stretched one caption over several utterances.
+ */
+function applyWindowCues(
+  lines: VideoSubtitle[],
+  incoming: VideoSubtitle[],
+): VideoSubtitle[] {
+  const bySegmentId = new Map<string, VideoSubtitle>();
+  for (const cue of incoming) {
+    for (const segmentId of cue.segmentIds ?? []) {
+      bySegmentId.set(`mu-${segmentId}`, cue);
+    }
+    bySegmentId.set(cue.id, cue);
+  }
+
+  const covering = (line: VideoSubtitle) => {
+    const middle = (line.startTime + line.endTime) / 2;
+    return incoming.find(
+      (cue) => cue.startTime <= middle && middle < cue.endTime,
+    );
+  };
+
+  return lines.map((line) => {
+    const cue = bySegmentId.get(line.id) ?? covering(line);
+    if (!cue) return line;
+    return {
+      ...cue,
+      id: line.id,
+      segmentIds: cue.segmentIds,
+      startTime: line.startTime,
+      endTime: line.endTime,
+      original: line.original,
+      rawOriginal: line.rawOriginal ?? line.original,
+    };
+  });
+}
+
 function replaceWindowCues(
   current: VideoSubtitle[],
   window: TimeWindow,
   incoming: VideoSubtitle[],
 ): VideoSubtitle[] {
   const kept = current.filter((cue) => !overlapsWindow(cue, window));
-  const map = new Map(kept.map((cue) => [cue.id, cue]));
-  for (const cue of incoming) map.set(cue.id, cue);
-  return [...map.values()].sort((a, b) => a.startTime - b.startTime);
+  const inWindow = current.filter((cue) => overlapsWindow(cue, window));
+  const translated = applyWindowCues(inWindow, incoming);
+  return [...kept, ...translated].sort((a, b) => a.startTime - b.startTime);
 }
 
 export type SubtitleStatusStep =

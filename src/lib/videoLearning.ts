@@ -5,6 +5,8 @@ import {
 
 export type VideoSubtitle = {
   id: string;
+  /** Source segments behind this cue; more than one means the pipeline merged them. */
+  segmentIds?: string[];
   startTime: number;
   endTime: number;
   original: string;
