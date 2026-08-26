@@ -441,6 +441,9 @@ function applyWindowCues(
     bySegmentId.set(cue.id, cue);
   }
 
+  // A unit's segment ids can reach past its own time range, so the clock wins:
+  // taking the id match first handed a line the reading of speech that had
+  // already gone by, and the captions ran ahead of the audio.
   const covering = (line: VideoSubtitle) => {
     const middle = (line.startTime + line.endTime) / 2;
     return incoming.find(
@@ -449,7 +452,7 @@ function applyWindowCues(
   };
 
   return lines.map((line) => {
-    const cue = bySegmentId.get(line.id) ?? covering(line);
+    const cue = covering(line) ?? bySegmentId.get(line.id);
     if (!cue) return line;
     return {
       ...cue,
