@@ -20,12 +20,14 @@ function draft(input: {
   original: string;
   naturalSubtitle: string;
   analysisTranslation?: string;
+  startTime?: number;
+  endTime?: number;
 }) {
   return {
     id: input.id,
     segmentIds: [input.id],
-    startTime: 0,
-    endTime: 2,
+    startTime: input.startTime ?? 0,
+    endTime: input.endTime ?? 2,
     original: input.original,
     meaning: input.original,
     tone,
@@ -63,4 +65,47 @@ test("formatSubtitleDrafts omits analysisTranslation when it matches the caption
     }),
   ]);
   assert.equal(cues[0]!.analysisTranslation, undefined);
+});
+
+test("a cue never runs past the next one, however far it overran", () => {
+  const cues = formatSubtitleDrafts([
+    draft({
+      id: "a",
+      original: "First line that overruns badly.",
+      naturalSubtitle: "첫 줄",
+      startTime: 0,
+      endTime: 9,
+    }),
+    draft({
+      id: "b",
+      original: "Second line.",
+      naturalSubtitle: "둘째 줄",
+      startTime: 3,
+      endTime: 5,
+    }),
+  ]);
+  assert.equal(cues.length, 2);
+  // 6s of overrun used to be left alone, so both cues covered 3s-9s at once.
+  assert.equal(cues[0]!.endTime, 3);
+  assert.ok(cues[0]!.endTime <= cues[1]!.startTime);
+});
+
+test("a short cue still keeps a minimum length when the next starts immediately", () => {
+  const cues = formatSubtitleDrafts([
+    draft({
+      id: "a",
+      original: "Tiny.",
+      naturalSubtitle: "짧음",
+      startTime: 10,
+      endTime: 10.05,
+    }),
+    draft({
+      id: "b",
+      original: "Right after.",
+      naturalSubtitle: "바로 다음",
+      startTime: 10.1,
+      endTime: 12,
+    }),
+  ]);
+  assert.equal(cues[0]!.endTime, 10.25);
 });

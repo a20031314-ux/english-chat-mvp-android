@@ -84,11 +84,12 @@ export function formatSubtitleDrafts(drafts: SubtitleDraft[]): SubtitleSegment[]
 
     const next = sorted[i + 1];
     let endTime = Math.max(draft.startTime + 0.3, draft.endTime);
-    if (next && endTime > next.startTime) {
-      const overlap = endTime - next.startTime;
-      if (overlap <= 0.4) {
-        endTime = Math.max(draft.startTime + 0.25, next.startTime);
-      }
+    if (next) {
+      // Clamp every overlap, not just the small ones. A cue that ran past the
+      // next one kept winning the active-cue lookup, so the caption lagged the
+      // speech and clip playback ran on into the following line.
+      const limit = Math.max(draft.startTime + 0.25, next.startTime);
+      if (endTime > limit) endTime = limit;
     }
 
     const analysis =
