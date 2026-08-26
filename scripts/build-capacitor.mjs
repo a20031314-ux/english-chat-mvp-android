@@ -27,6 +27,34 @@ const tsconfigPath = path.join(root, "tsconfig.json");
 
 process.chdir(root);
 
+/**
+ * Play only enforces versionCode, so nothing ever complained when package.json and
+ * the Android versionName drifted apart — they were four minor versions out by 2.36.
+ * Checked before anything is moved or deleted, so a mismatch costs nothing to fix.
+ */
+function assertVersionsAgree() {
+  const pkgVersion =
+    JSON.parse(readFileSync(path.join(root, "package.json"), "utf8")).version ?? "";
+  const gradlePath = path.join(root, "android", "app", "build.gradle");
+  const versionName = readFileSync(gradlePath, "utf8").match(
+    /versionName\s+"([^"]+)"/,
+  )?.[1];
+  if (!versionName) {
+    console.error(`Could not read versionName from ${gradlePath}.`);
+    process.exit(1);
+  }
+  const majorMinor = (value) => value.split(".").slice(0, 2).join(".");
+  if (majorMinor(pkgVersion) !== majorMinor(versionName)) {
+    console.error(
+      `Version mismatch: package.json is ${pkgVersion}, android versionName is ${versionName}.\n` +
+        "Bump both. android/app/build.gradle also needs a versionCode above the last Play upload.",
+    );
+    process.exit(1);
+  }
+}
+
+assertVersionsAgree();
+
 // Drop stale generated types that still reference `src/app/api/*` before we move that folder.
 rmSync(nextDir, { recursive: true, force: true });
 rmSync(path.join(nextDir, "dev"), { recursive: true, force: true });
