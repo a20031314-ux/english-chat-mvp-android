@@ -1,4 +1,4 @@
-import OpenAI from "openai";
+import type OpenAI from "openai";
 import {
   LEARNER_LEVELS,
   asLearnerLevel,
@@ -22,7 +22,7 @@ import {
   type PreferredDurationBucket,
 } from "@/lib/contentDiscovery/types";
 
-const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
+import { chatModel } from "@/lib/server/openai";
 
 function asContentType(value: unknown): ContentDiscoveryType | null {
   return value === "video" || value === "reading" ? value : null;
@@ -178,7 +178,7 @@ export async function parseSearchIntent(
 
   try {
     const completion = await client.chat.completions.create({
-      model: MODEL,
+      model: chatModel(),
       temperature: 0.2,
       response_format: { type: "json_object" },
       messages: [

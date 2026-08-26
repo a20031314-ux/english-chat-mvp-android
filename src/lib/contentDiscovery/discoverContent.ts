@@ -1,4 +1,4 @@
-import OpenAI from "openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 import {
   discoveryCacheGet,
   discoveryCacheKey,
@@ -24,12 +24,6 @@ import type {
   ContentDiscoveryRequest,
   ContentDiscoveryResult,
 } from "@/lib/contentDiscovery/types";
-
-function getOpenAI(): OpenAI | null {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) return null;
-  return new OpenAI({ apiKey });
-}
 
 /**
  * Discover learning content via Search Providers (and reading APIs).
@@ -110,7 +104,7 @@ export async function discoverContent(
   const cached = discoveryCacheGet<ContentDiscoveryResult>(cacheKey);
   if (cached) return cached;
 
-  const client = getOpenAI();
+  const client = getOpenAIClient();
 
   const typedQuery = request.naturalQuery?.trim() || "";
   const useTypedYoutubeSearch =

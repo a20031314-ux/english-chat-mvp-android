@@ -1,6 +1,6 @@
-import OpenAI from "openai";
 import { NextRequest, NextResponse } from "next/server";
 import { corsHeaders, corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { getOpenAIClient } from "@/lib/server/openai";
 import {
   spokenFormForTts,
   speechLangPrefix,
@@ -11,12 +11,6 @@ export const dynamic = "force-dynamic";
 
 const MODEL = process.env.OPENAI_TTS_MODEL ?? "gpt-4o-mini-tts";
 const MAX_CHARS = 2000;
-
-function getClient() {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) return null;
-  return new OpenAI({ apiKey });
-}
 
 function streamHeaders(request: NextRequest, lang: string): Record<string, string> {
   return {
@@ -30,7 +24,7 @@ function streamHeaders(request: NextRequest, lang: string): Record<string, strin
 }
 
 async function synthesize(request: NextRequest, rawText: string, rawLang: string) {
-  const client = getClient();
+  const client = getOpenAIClient();
   if (!client) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }

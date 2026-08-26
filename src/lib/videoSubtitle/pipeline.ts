@@ -1,7 +1,7 @@
 import { buildSceneContextsForWindow } from "@/lib/videoSubtitle/buildSceneContexts";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { extractAudio } from "@/lib/videoSubtitle/extractAudio";
-import { getOpenAIClient } from "@/lib/videoSubtitle/openaiClient";
+import { getOpenAIClient } from "@/lib/server/openai";
 import { normalizeTranscript } from "@/lib/videoSubtitle/normalizeTranscript";
 import { sketchVideoContent } from "@/lib/videoSubtitle/sketchVideoContent";
 import { transcribeAudio } from "@/lib/videoSubtitle/transcribeAudio";

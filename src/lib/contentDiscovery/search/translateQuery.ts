@@ -1,10 +1,10 @@
-import OpenAI from "openai";
+import type OpenAI from "openai";
 import {
   learningLanguageName,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
 
-const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
+import { chatModel } from "@/lib/server/openai";
 
 /**
  * Turn whatever the user typed into a YouTube query in the learning language.
@@ -22,7 +22,7 @@ export async function translateYoutubeQuery(
   const languageName = learningLanguageName(language);
   try {
     const completion = await client.chat.completions.create({
-      model: MODEL,
+      model: chatModel(),
       temperature: 0,
       messages: [
         {

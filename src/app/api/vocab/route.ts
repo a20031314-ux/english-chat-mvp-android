@@ -1,5 +1,5 @@
-import OpenAI from "openai";
 import { NextRequest } from "next/server";
+import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { naturalTranslationPrinciples } from "@/lib/naturalTranslation";
 import {
@@ -10,17 +10,7 @@ import {
 import { interfaceLanguageDisplayName } from "@/lib/languageLearningAnalysis";
 import { assembleVocabLookup, normalizeVocabHeadword } from "@/lib/vocabulary";
 
-const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
-
 type VocabLookupLike = NonNullable<ReturnType<typeof assembleVocabLookup>>;
-
-function getClient() {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    return null;
-  }
-  return new OpenAI({ apiKey });
-}
 
 function normalizeResults(raw: unknown): VocabLookupLike[] {
   if (!raw || typeof raw !== "object") return [];
@@ -43,7 +33,7 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const client = getClient();
+  const client = getOpenAIClient();
   if (!client) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
@@ -81,7 +71,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const completion = await client.chat.completions.create({
-      model: MODEL,
+      model: chatModel(),
       messages: [
         {
           role: "system",

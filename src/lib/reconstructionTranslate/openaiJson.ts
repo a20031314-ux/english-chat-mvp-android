@@ -1,4 +1,4 @@
-import { chatModel, getOpenAIClient } from "../videoSubtitle/openaiClient.ts";
+import { chatModel, getOpenAIClient } from "../server/openai.ts";
 import { parseModelJson } from "../videoSubtitle/parseModelJson.ts";
 import type { JsonCompleter } from "./types.ts";
 

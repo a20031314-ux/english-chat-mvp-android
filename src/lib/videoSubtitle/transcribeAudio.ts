@@ -1,6 +1,6 @@
 import { toFile } from "openai";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
-import { getOpenAIClient, transcribeModel } from "@/lib/videoSubtitle/openaiClient";
+import { getOpenAIClient, transcribeModel } from "@/lib/server/openai";
 import { looksLikeMusicBleed } from "@/lib/videoSubtitle/speechNoise";
 import type { ExtractedAudio, SttSegment, SttWord } from "@/lib/videoSubtitle/types";
 

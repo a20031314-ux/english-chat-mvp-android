@@ -1,5 +1,6 @@
 import OpenAI from "openai";
 
+/** Shared OpenAI client. Returns null when the key is unset so callers can degrade. */
 export function getOpenAIClient(): OpenAI | null {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) return null;

@@ -1,5 +1,5 @@
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
-import { getOpenAIClient } from "@/lib/videoSubtitle/openaiClient";
+import { getOpenAIClient } from "@/lib/server/openai";
 import { asNumber, asRecord, asString, parseModelJson } from "@/lib/videoSubtitle/parseModelJson";
 import { VISION_MODEL } from "@/lib/videoSubtitle/sceneConfig";
 import type {

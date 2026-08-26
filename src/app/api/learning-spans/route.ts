@@ -1,5 +1,5 @@
-import OpenAI from "openai";
 import { NextRequest } from "next/server";
+import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
   fallbackLearningSpans,
@@ -11,14 +11,6 @@ import {
   learningLanguageName,
 } from "@/lib/learningLanguages";
 import { ANALYSIS_LANGUAGES } from "@/lib/languageAnalysisPrompt";
-
-const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
-
-function getClient() {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) return null;
-  return new OpenAI({ apiKey });
-}
 
 function sentenceLooksValid(sentence: string, targetLanguage: string) {
   if (!sentence || sentence.length > 500) return false;
@@ -71,14 +63,14 @@ export async function POST(request: NextRequest) {
   }
 
   const fallback = fallbackLearningSpans(sentence);
-  const openai = getClient();
+  const openai = getOpenAIClient();
   if (!openai) {
     return jsonWithCors(request, { spans: fallback });
   }
 
   try {
     const completion = await openai.chat.completions.create({
-      model: MODEL,
+      model: chatModel(),
       messages: [
         {
           role: "system",

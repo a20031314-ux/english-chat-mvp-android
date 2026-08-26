@@ -1,11 +1,11 @@
-import OpenAI from "openai";
+import type OpenAI from "openai";
 import { learningLanguageName } from "@/lib/learningLanguages";
 import type {
   ContentCandidate,
   ContentSearchIntent,
 } from "@/lib/contentDiscovery/types";
 
-const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
+import { chatModel } from "@/lib/server/openai";
 
 type RankRow = {
   id?: string;
@@ -46,7 +46,7 @@ export async function rankCandidates(
 
   try {
     const completion = await client.chat.completions.create({
-      model: MODEL,
+      model: chatModel(),
       temperature: 0.3,
       response_format: { type: "json_object" },
       messages: [

@@ -1,5 +1,6 @@
-import OpenAI from "openai";
 import { NextRequest } from "next/server";
+import type OpenAI from "openai";
+import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
 import {
   getDailyUsed,
@@ -27,18 +28,8 @@ import {
 } from "@/lib/learningLanguages";
 import { commonLanguageInstructions, explanationLanguageGuard } from "@/lib/languageLearningAnalysis";
 
-const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
-
 function requestUserId(request: NextRequest) {
   return request.cookies.get("ec_uid")?.value ?? "local-anonymous";
-}
-
-function getClient() {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    return null;
-  }
-  return new OpenAI({ apiKey });
 }
 
 type ChatCorrection = {
@@ -411,7 +402,7 @@ async function replyToCorrected(
   langs: ChatLanguages,
 ): Promise<{ assistantMessage: string; spokenReply: string }> {
   const completion = await openai.chat.completions.create({
-    model: MODEL,
+    model: chatModel(),
     messages: [
       {
         role: "system",
@@ -475,7 +466,7 @@ async function runChat(
       ]
     : payload;
   const completion = await openai.chat.completions.create({
-    model: MODEL,
+    model: chatModel(),
     messages: [
       { role: "system", content: buildChatSystem(langs, options) },
       {
@@ -595,7 +586,7 @@ async function runStart(
   );
 
   const completion = await openai.chat.completions.create({
-    model: MODEL,
+    model: chatModel(),
     messages: [
       {
         role: "system",
@@ -655,7 +646,7 @@ async function runHowToSay(
   isPremium: boolean,
 ): Promise<ExpressionPayload> {
   const completion = await openai.chat.completions.create({
-    model: MODEL,
+    model: chatModel(),
     messages: [
       { role: "system", content: buildHowToSaySystem(langs, isPremium) },
       {
@@ -695,7 +686,7 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  const openai = getClient();
+  const openai = getOpenAIClient();
 
   const userId = requestUserId(request);
   const isPremium = isPremiumClientRequest(request);

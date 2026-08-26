@@ -1,5 +1,5 @@
-import OpenAI from "openai";
 import { NextRequest } from "next/server";
+import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
   localExpressionUnits,
@@ -10,14 +10,6 @@ import {
   learningLanguageName,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
-
-const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
-
-function getClient() {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) return null;
-  return new OpenAI({ apiKey });
-}
 
 function buildSystem(targetLanguage: LearningLanguageCode): string {
   const targetName = learningLanguageName(targetLanguage);
@@ -100,14 +92,14 @@ export async function POST(request: NextRequest) {
 
   const fallback =
     targetLanguage === "en" ? localExpressionUnits(sentence) : [];
-  const openai = getClient();
+  const openai = getOpenAIClient();
   if (!openai) {
     return jsonWithCors(request, { units: fallback });
   }
 
   try {
     const completion = await openai.chat.completions.create({
-      model: MODEL,
+      model: chatModel(),
       messages: [
         { role: "system", content: buildSystem(targetLanguage) },
         { role: "user", content: JSON.stringify({ sentence }) },

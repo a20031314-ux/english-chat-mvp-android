@@ -1,5 +1,5 @@
-import OpenAI from "openai";
 import { NextRequest } from "next/server";
+import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
   normalizeExpressionInsight,
@@ -20,20 +20,12 @@ import {
   learningLanguageName,
 } from "@/lib/learningLanguages";
 
-const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
-
-function getClient() {
-  const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) return null;
-  return new OpenAI({ apiKey });
-}
-
 export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
 }
 
 export async function POST(request: NextRequest) {
-  const openai = getClient();
+  const openai = getOpenAIClient();
   if (!openai) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
@@ -89,7 +81,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const completion = await openai.chat.completions.create({
-      model: MODEL,
+      model: chatModel(),
       messages: [
         {
           role: "system",

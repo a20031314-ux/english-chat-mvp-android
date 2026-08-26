@@ -1,5 +1,5 @@
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
-import { chatModel, getOpenAIClient } from "@/lib/videoSubtitle/openaiClient";
+import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { asRecord, asString, parseModelJson } from "@/lib/videoSubtitle/parseModelJson";
 import type { NormalizedSegment, SttSegment } from "@/lib/videoSubtitle/types";
 

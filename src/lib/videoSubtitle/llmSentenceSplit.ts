@@ -1,4 +1,4 @@
-import { chatModel, getOpenAIClient } from "@/lib/videoSubtitle/openaiClient";
+import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import {
   refineSpansWithLlm,
   splitSentencesFromWords,

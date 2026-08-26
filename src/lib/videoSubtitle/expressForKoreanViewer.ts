@@ -1,7 +1,7 @@
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import type { MeaningUnit } from "@/lib/videoSubtitle/groupMeaningUnits";
 import { sceneContextForUnit } from "@/lib/videoSubtitle/getSceneContextAtTime";
-import { chatModel, getOpenAIClient } from "@/lib/videoSubtitle/openaiClient";
+import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { asNumber, asRecord, asString, parseModelJson } from "@/lib/videoSubtitle/parseModelJson";
 import type { SceneContext } from "@/lib/videoSubtitle/sceneTypes";
 import {
