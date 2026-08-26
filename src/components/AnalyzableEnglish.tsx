@@ -22,7 +22,7 @@ import {
 } from "@/lib/learningSpans";
 import type { TranslationSourceType } from "@/lib/naturalTranslation";
 import { isSameAnalysisSpan } from "@/lib/englishAnalysis";
-import { splitSentences, sentenceContainingSelection } from "@/lib/studyMaterials/splitSentences";
+import { splitSentences, sentenceContainingSelection } from "@/lib/splitSentences";
 import { isWordToken, tokenize } from "@/lib/textTokens";
 import { prefetchExpressionUnits } from "@/lib/requestExpressionUnits";
 import { prefetchLearningSpans, loadLearningSpans } from "@/lib/requestLearningSpans";

@@ -9,8 +9,6 @@ import { ExpressionInsightProvider } from "@/components/ExpressionInsightProvide
 import { TAB_ICON_META } from "@/components/TabIcons";
 import { TargetLanguageSelector } from "@/components/TargetLanguageSelector";
 import { VocabularyPanel } from "@/components/VocabularyPanel";
-import { StudyMaterialsTab } from "@/components/studyMaterials/StudyMaterialsTab";
-import { WebReadingTab } from "@/components/WebReadingTab";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
 import { BillingUiProvider, BillingOpenButton } from "@/components/BillingScreen";
 import { LearningLanguageProvider } from "@/contexts/LearningLanguageContext";
@@ -18,9 +16,9 @@ import { useUiCopy } from "@/hooks/useUiCopy";
 import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
 import { learningLanguageTextDir } from "@/lib/learningLanguages";
 
-export type AppTab = "chat" | "read" | "study" | "video" | "vocab";
+export type AppTab = "chat" | "video" | "vocab";
 
-const TABS: AppTab[] = ["chat", "read", "study", "video", "vocab"];
+const TABS: AppTab[] = ["chat", "video", "vocab"];
 
 function isAppTab(value: string | null): value is AppTab {
   return TABS.includes(value as AppTab);
@@ -30,8 +28,9 @@ function resolveTab(raw: string | null | undefined): AppTab {
   if (!raw || raw === "home" || raw === "saved") return "chat";
   if (raw === "reports" || raw === "sessions" || raw === "monthly") return "chat";
   if (raw === "quiz" || raw === "explore") return "chat";
-  if (raw === "web" || raw === "reader") return "read";
-  if (raw === "study" || raw === "materials" || raw === "library") return "study";
+  // Retired tabs: web reading and study materials both fall back to chat.
+  if (raw === "read" || raw === "web" || raw === "reader") return "chat";
+  if (raw === "study" || raw === "materials" || raw === "library") return "chat";
   if (raw === "watch" || raw === "youtube") return "video";
   if (isAppTab(raw)) return raw;
   return "chat";
@@ -108,8 +107,6 @@ function AppHomeInner({
 
   const tabItems: { id: AppTab; label: string }[] = [
     { id: "chat", label: ui.homeTabChat },
-    { id: "read", label: ui.homeTabRead },
-    { id: "study", label: ui.homeTabStudy },
     { id: "video", label: ui.homeTabVideo },
     { id: "vocab", label: ui.homeTabVocab },
   ];
@@ -142,32 +139,6 @@ function AppHomeInner({
                 aria-hidden={tab !== "chat"}
               >
                 <ChatWindow tabMode locale={locale} />
-              </div>
-
-              <div
-                className={
-                  tab === "read"
-                    ? "h-full"
-                    : "pointer-events-none invisible absolute inset-0 -z-10 overflow-hidden opacity-0"
-                }
-                aria-hidden={tab !== "read"}
-              >
-                <WebReadingTab
-                  locale={locale}
-                  ui={ui}
-                  active={tab === "read"}
-                />
-              </div>
-
-              <div
-                className={
-                  tab === "study"
-                    ? "h-full"
-                    : "pointer-events-none invisible absolute inset-0 -z-10 overflow-hidden opacity-0"
-                }
-                aria-hidden={tab !== "study"}
-              >
-                <StudyMaterialsTab locale={locale} ui={ui} />
               </div>
 
               <div

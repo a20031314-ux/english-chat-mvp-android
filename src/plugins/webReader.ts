@@ -2,23 +2,11 @@
 
 import { registerPlugin, type PluginListenerHandle } from "@capacitor/core";
 
+/** Text the user selected in another app, handed over by PROCESS_TEXT / share. */
 export type WebReaderPlugin = {
-  open(options: {
-    url: string;
-    apiBase: string;
-    locale: string;
-    analyzeLabel: string;
-  }): Promise<void>;
-  close(): Promise<void>;
-  hide(): Promise<void>;
-  show(): Promise<void>;
   addListener(
     eventName: "captureText",
     listener: (payload: { text?: string }) => void,
-  ): Promise<PluginListenerHandle>;
-  addListener(
-    eventName: "closed",
-    listener: () => void,
   ): Promise<PluginListenerHandle>;
   takePendingText(): Promise<{ text: string }>;
   removeAllListeners(): Promise<void>;

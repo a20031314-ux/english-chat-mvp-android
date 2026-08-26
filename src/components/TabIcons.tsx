@@ -5,7 +5,7 @@ type TabIconProps = {
   className?: string;
 };
 
-type TabId = "chat" | "read" | "study" | "video" | "vocab";
+type TabId = "chat" | "video" | "vocab";
 
 const iconBox = "h-6 w-6";
 
@@ -25,35 +25,6 @@ export function ChatTabIcon({ active, className = "" }: TabIconProps) {
         d="M8 9.25h8M8 12.25h5"
         stroke="white"
         strokeWidth="1.6"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
-export function ReadTabIcon({ active, className = "" }: TabIconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      className={`${iconBox} ${className}`}
-      aria-hidden
-    >
-      <circle
-        cx="12"
-        cy="12"
-        r="8"
-        className={active ? "fill-[#e8e8e4]" : "fill-white/40"}
-      />
-      <path
-        d="M12 5.5c2.4 2 3.7 4.2 3.7 6.5S14.4 16.5 12 18.5C9.6 16.5 8.3 14.3 8.3 12S9.6 7.5 12 5.5Z"
-        fill="white"
-        fillOpacity="0.9"
-      />
-      <path
-        d="M4.8 12h14.4"
-        stroke="white"
-        strokeWidth="1.5"
         strokeLinecap="round"
       />
     </svg>
@@ -103,28 +74,6 @@ export function VocabTabIcon({ active, className = "" }: TabIconProps) {
   );
 }
 
-export function StudyTabIcon({ active, className = "" }: TabIconProps) {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      fill="none"
-      className={`${iconBox} ${className}`}
-      aria-hidden
-    >
-      <path
-        d="M6.2 5.2h5.1c.7 0 1.3.3 1.7.8L13 6.2l.1-.2c.4-.5 1-.8 1.7-.8h5A1.8 1.8 0 0 1 21.6 7v10.4c0 .9-.7 1.6-1.6 1.6h-5.2c-.6 0-1.2.2-1.6.6l-.2.2-.2-.2c-.4-.4-1-.6-1.6-.6H6.2c-.9 0-1.6-.7-1.6-1.6V7c0-.9.7-1.8 1.6-1.8Z"
-        className={active ? "fill-[#e8e8e4]" : "fill-white/40"}
-      />
-      <path
-        d="M12 6.6v11.2"
-        stroke="white"
-        strokeWidth="1.5"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
 export const TAB_ICON_META: Record<
   TabId,
   {
@@ -138,11 +87,6 @@ export const TAB_ICON_META: Record<
     activeBg: "bg-white/10 tb-glow-platinum",
     idleBg: "hover:bg-white/5",
   },
-  read: {
-    Icon: ReadTabIcon,
-    activeBg: "bg-white/10 tb-glow-platinum",
-    idleBg: "hover:bg-white/5",
-  },
   video: {
     Icon: VideoTabIcon,
     activeBg: "bg-white/10 tb-glow-platinum",
@@ -150,11 +94,6 @@ export const TAB_ICON_META: Record<
   },
   vocab: {
     Icon: VocabTabIcon,
-    activeBg: "bg-white/10 tb-glow-platinum",
-    idleBg: "hover:bg-white/5",
-  },
-  study: {
-    Icon: StudyTabIcon,
     activeBg: "bg-white/10 tb-glow-platinum",
     idleBg: "hover:bg-white/5",
   },
