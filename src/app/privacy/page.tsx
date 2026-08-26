@@ -19,6 +19,7 @@ const sections = [
     body: [
       "Depending on how you use languagebank, we may process:",
       "• Chat messages and learning content you submit so the app can provide corrections and practice feedback.",
+      "• Microphone audio, but only while you are on a practice call and only for as long as that call lasts. Audio is streamed to our AI provider so the assistant can hear and answer you. It is not recorded or stored by languagebank, and calls only start when you tap the call button and grant microphone permission.",
       "• App usage information needed for free daily limits and premium features.",
       "• Purchase-related status for premium subscriptions (handled through Google Play Billing / RevenueCat).",
       "• Basic technical information such as device or platform details needed to run the app securely.",
@@ -40,7 +41,8 @@ const sections = [
     title: "AI Services",
     body: [
       "User messages may be temporarily processed by AI services (including OpenAI) to generate responses, corrections, and learning suggestions.",
-      "This processing is used only to operate languagebank features. We do not sell your chat content.",
+      "During a practice call, your microphone audio is streamed to the same AI provider in real time so the assistant can respond in speech. The call ends when you hang up, and audio is not kept afterwards.",
+      "This processing is used only to operate languagebank features. We do not sell your chat content or your call audio.",
     ],
   },
   {
@@ -63,7 +65,7 @@ const sections = [
     title: "Third-Party Services",
     body: [
       "languagebank may use trusted third-party services to operate the app, including:",
-      "• OpenAI — AI response generation",
+      "• OpenAI — AI response generation, and real-time speech during practice calls",
       "• Google Play Billing — in-app purchases and subscriptions",
       "• RevenueCat — subscription status / entitlements",
       "• Vercel — hosting for web and API services",
@@ -102,7 +104,7 @@ export default function PrivacyPage() {
           <h1 className="mt-2 text-3xl font-semibold tracking-tight sm:text-4xl">
             Privacy Policy
           </h1>
-          <p className="mt-3 text-sm text-slate-300">Last updated: July 21, 2026</p>
+          <p className="mt-3 text-sm text-slate-300">Last updated: August 27, 2026</p>
         </header>
 
         <div className="space-y-8">

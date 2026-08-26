@@ -14,7 +14,8 @@
     "test:salience": "node --experimental-strip-types --test src/lib/languageLearningAnalysis.test.ts src/lib/salience/runDimensions.test.ts src/lib/salience/candidates.test.ts",
     "compare:subtitle": "node --experimental-strip-types scripts/compare-subtitle-naturalization.mjs",
     "compare:translate": "node --experimental-strip-types scripts/compare-reconstruction-translate.mjs",
-    "test:translate": "node --experimental-strip-types --test src/lib/reconstructionTranslate/pipeline.test.ts"
+    "test:translate": "node --experimental-strip-types --test src/lib/reconstructionTranslate/pipeline.test.ts",
+    "test:call": "node --experimental-strip-types --test src/lib/realtimeCallSession.test.ts"
   },
   "dependencies": {
     "@capacitor-community/text-to-speech": "^8.0.2",

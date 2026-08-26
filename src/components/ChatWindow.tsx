@@ -44,11 +44,8 @@ import {
   type ConversationMode,
 } from "@/lib/conversationMode";
 import { compressChatImage } from "@/lib/chatImage";
-import {
-  formatCallDuration,
-  type CallPhase,
-  type ChatCallEvent,
-} from "@/lib/callSession";
+import { formatCallDuration, type ChatCallEvent } from "@/lib/callSession";
+import { useCall } from "@/contexts/CallContext";
 
 type CorrectionResult = {
   corrected: string;
@@ -689,10 +686,7 @@ export function ChatWindow({
   const [pendingPhoto, setPendingPhoto] = useState<string | null>(null);
   const [conversationMode, setConversationMode] =
     useState<ConversationMode>("native");
-  const [callPhase, setCallPhase] = useState<CallPhase>("idle");
-  const [callMuted, setCallMuted] = useState(false);
-  const [callStartedAt, setCallStartedAt] = useState<number | null>(null);
-  const [callNow, setCallNow] = useState(() => Date.now());
+  const call = useCall();
   const partner = chatPartnerForLanguage(sessionLanguageCode);
 
   const dailyLimit = entitlement.dailyLimit ?? SESSION_MESSAGE_LIMIT;
@@ -829,6 +823,8 @@ export function ChatWindow({
     const previousLanguage = prevTargetLanguageRef.current;
     prevTargetLanguageRef.current = targetLanguage;
 
+    call.stop();
+
     if (turns.length > 0) {
       saveConversationSession({
         id: currentSessionId,
@@ -906,20 +902,21 @@ export function ChatWindow({
     });
   }, [turns, currentSessionId]);
 
+  // The provider owns the connection; the chat only logs the call once it ends.
+  const subscribeCallEnded = call.subscribeEnded;
   useEffect(() => {
-    if (callPhase !== "calling") return;
-    const timer = window.setTimeout(() => {
-      setCallPhase("connected");
-      setCallStartedAt(Date.now());
-    }, 1200);
-    return () => window.clearTimeout(timer);
-  }, [callPhase]);
-
-  useEffect(() => {
-    if (callPhase !== "connected") return;
-    const timer = window.setInterval(() => setCallNow(Date.now()), 1000);
-    return () => window.clearInterval(timer);
-  }, [callPhase]);
+    return subscribeCallEnded((durationSeconds) => {
+      setTurns((previous) => [
+        ...previous,
+        {
+          id: `${Date.now()}`,
+          mode: "chat",
+          userMessage: "",
+          callEvent: { kind: "ended", durationSeconds },
+        },
+      ]);
+    });
+  }, [subscribeCallEnded]);
 
   const sendChatMessage = async (message: string, imageDataUrl?: string) => {
     const url = apiUrl("/api/chat");
@@ -1359,29 +1356,12 @@ export function ChatWindow({
     }
   };
 
-  const startMockCall = () => {
-    if (callPhase !== "idle") return;
-    setCallMuted(false);
-    setCallPhase("calling");
-  };
-
-  const hangUpMockCall = () => {
-    const started = callStartedAt;
-    const durationSeconds = started
-      ? Math.max(0, Math.round((Date.now() - started) / 1000))
-      : 0;
-    setCallPhase("idle");
-    setCallStartedAt(null);
-    setCallMuted(false);
-    setTurns((previous) => [
-      ...previous,
-      {
-        id: `${Date.now()}`,
-        mode: "chat",
-        userMessage: "",
-        callEvent: { kind: "ended", durationSeconds },
-      },
-    ]);
+  const startLiveCall = async () => {
+    const result = await call.start(sessionLanguageCode);
+    if (result.ok || result.reason === "aborted") return;
+    setBookToast(
+      result.reason === "mic" ? ui.chatMicDenied : ui.chatCallFailed,
+    );
   };
 
   return (
@@ -1457,40 +1437,6 @@ export function ChatWindow({
             </div>
           </div>
         </header>
-        {callPhase !== "idle" ? (
-          <div className="flex items-center justify-between gap-2 border-b border-white/20 bg-white/10 px-4 py-2 text-xs text-neutral-200">
-            <p>
-              {callPhase === "calling"
-                ? ui.chatCalling
-                : `${ui.chatInCall} · ${formatCallDuration(
-                    Math.max(
-                      0,
-                      Math.round(
-                        (callNow - (callStartedAt ?? callNow)) / 1000,
-                      ),
-                    ),
-                  )}`}
-            </p>
-            <div className="flex gap-1">
-              {callPhase === "connected" ? (
-                <button
-                  type="button"
-                  onClick={() => setCallMuted((value) => !value)}
-                  className="rounded-full border border-white/30 bg-[#121212] px-2 py-0.5 text-[11px] text-neutral-200"
-                >
-                  {callMuted ? ui.chatUnmute : ui.chatMute}
-                </button>
-              ) : null}
-              <button
-                type="button"
-                onClick={hangUpMockCall}
-                className="rounded-full bg-rose-600 px-2 py-0.5 text-[11px] text-white"
-              >
-                {ui.chatHangUp}
-              </button>
-            </div>
-          </div>
-        ) : null}
 
         <div className="flex-1 space-y-2 overflow-y-auto p-2.5 sm:space-y-4 sm:p-4">
           {isChatDailyLimitReached ? (
@@ -1714,11 +1660,13 @@ export function ChatWindow({
               </button>
               <button
                 type="button"
-                onClick={callPhase === "idle" ? startMockCall : hangUpMockCall}
-                aria-label={callPhase === "idle" ? ui.chatCall : ui.chatHangUp}
-                title={callPhase === "idle" ? ui.chatCall : ui.chatHangUp}
+                onClick={
+                  call.phase === "idle" ? () => void startLiveCall() : call.hangUp
+                }
+                aria-label={call.phase === "idle" ? ui.chatCall : ui.chatHangUp}
+                title={call.phase === "idle" ? ui.chatCall : ui.chatHangUp}
                 className={`inline-flex h-10 min-w-10 items-center justify-center rounded-xl border transition ${
-                  callPhase === "idle"
+                  call.phase === "idle"
                     ? "border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
                     : "border-rose-400/40 bg-rose-500/20 text-rose-100 hover:bg-rose-500/30"
                 }`}
