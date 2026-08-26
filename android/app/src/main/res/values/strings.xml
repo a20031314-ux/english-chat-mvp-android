@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <resources>
-    <string name="app_name">AI English Chat</string>
-    <string name="title_activity_main">AI English Chat</string>
+    <string name="app_name">languagebank</string>
+    <string name="title_activity_main">languagebank</string>
     <string name="package_name">com.yourname.englishchat</string>
     <string name="custom_url_scheme">com.yourname.englishchat</string>
     <string name="process_text_analyze">분석</string>

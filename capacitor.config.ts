@@ -11,7 +11,7 @@ const devServerUrl = process.env.CAPACITOR_DEV_SERVER_URL?.trim();
 
 const config: CapacitorConfig = {
   appId: "com.yourname.englishchat",
-  appName: "AI English Chat",
+  appName: "languagebank",
   webDir: "www",
   android: {
     allowMixedContent: false,
