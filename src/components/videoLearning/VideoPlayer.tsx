@@ -139,6 +139,8 @@ export const VideoPlayer = forwardRef<
   const segmentTimerRef = useRef<number | null>(null);
   /** After a clip stop, ignore YT "still playing" sync briefly. */
   const suppressYtPlaySyncUntilRef = useRef(0);
+  /** Last mute state we asked the player for; null until we have asked. */
+  const mutedRef = useRef<boolean | null>(null);
   const onTimeRef = useRef(onTimeUpdate);
   const onEndedRef = useRef(onEnded);
   const onSegmentEndRef = useRef(onSegmentEnd);
@@ -165,6 +167,22 @@ export const VideoPlayer = forwardRef<
     }
   }, []);
 
+  /**
+   * Only touch the player when the mute state actually changes. The clip tick
+   * runs 20 times a second, and calling mute/unMute on every one of them made
+   * the audio stutter on and off around the clip's start.
+   */
+  const applyMute = useCallback((shouldMute: boolean) => {
+    if (mutedRef.current === shouldMute) return;
+    mutedRef.current = shouldMute;
+    try {
+      if (shouldMute) playerRef.current?.mute?.();
+      else playerRef.current?.unMute?.();
+    } catch {
+      // ignore
+    }
+  }, []);
+
   const emitTime = useCallback(
     (seconds: number) => {
       const next = Math.max(0, Math.min(seconds, duration));
@@ -188,9 +206,9 @@ export const VideoPlayer = forwardRef<
       playingRef.current = false;
       setPlaying(false);
       suppressYtPlaySyncUntilRef.current = Date.now() + 800;
+      applyMute(false);
       try {
         playerRef.current?.pauseVideo();
-        playerRef.current?.unMute?.();
         // Stay on this cue. Seeking to end-ε landed on the next line and the
         // following play often started there because YT seek had not settled.
         const settle =
@@ -204,7 +222,7 @@ export const VideoPlayer = forwardRef<
       }
       if (hadSegment) onSegmentEndRef.current?.();
     },
-    [clearSegmentTimer, emitTime],
+    [applyMute, clearSegmentTimer, emitTime],
   );
 
   const pause = useCallback(() => {
@@ -219,9 +237,9 @@ export const VideoPlayer = forwardRef<
     playingRef.current = false;
     setPlaying(false);
     suppressYtPlaySyncUntilRef.current = Date.now() + 400;
+    applyMute(false);
     try {
       playerRef.current?.pauseVideo();
-      playerRef.current?.unMute?.();
       if (hadSegment && startAt != null) {
         playerRef.current?.seekTo(startAt, true);
         emitTime(startAt);
@@ -230,7 +248,7 @@ export const VideoPlayer = forwardRef<
       // ignore
     }
     if (hadSegment) onSegmentEndRef.current?.();
-  }, [clearSegmentTimer, emitTime]);
+  }, [applyMute, clearSegmentTimer, emitTime]);
 
   const play = useCallback(() => {
     clearSegmentTimer();
@@ -243,13 +261,13 @@ export const VideoPlayer = forwardRef<
     suppressYtPlaySyncUntilRef.current = 0;
     playingRef.current = true;
     setPlaying(true);
+    applyMute(false);
     try {
-      playerRef.current?.unMute?.();
       playerRef.current?.playVideo();
     } catch {
       // ignore
     }
-  }, [clearSegmentTimer]);
+  }, [applyMute, clearSegmentTimer]);
 
   const seekTo = useCallback(
     (seconds: number) => {
@@ -301,8 +319,8 @@ export const VideoPlayer = forwardRef<
         }, Math.ceil(remaining * 1000) + 80);
       };
 
+      applyMute(true);
       try {
-        player?.mute?.();
         player?.pauseVideo();
         player?.seekTo(seekAt, true);
       } catch {
@@ -336,9 +354,8 @@ export const VideoPlayer = forwardRef<
         if (now >= safeStart - 0.05) {
           segmentSawStartRef.current = true;
         }
+        applyMute(now < safeStart - 0.05);
         try {
-          if (now < safeStart - 0.05) player?.mute?.();
-          else player?.unMute?.();
           player?.playVideo();
         } catch {
           // ignore
@@ -348,7 +365,7 @@ export const VideoPlayer = forwardRef<
       };
       window.setTimeout(startWhenSeeked, 80);
     },
-    [clearSegmentTimer, emitTime, finishSegment],
+    [applyMute, clearSegmentTimer, emitTime, finishSegment],
   );
 
   useImperativeHandle(
@@ -469,11 +486,7 @@ export const VideoPlayer = forwardRef<
               return;
             }
             if (t < start - 0.05) {
-              try {
-                playerRef.current?.mute?.();
-              } catch {
-                // ignore
-              }
+              applyMute(true);
               clockRef.current = start;
               setDisplayTime(start);
               onTimeRef.current(start);
@@ -482,11 +495,7 @@ export const VideoPlayer = forwardRef<
             if (!segmentSawStartRef.current) {
               segmentSawStartRef.current = true;
             }
-            try {
-              playerRef.current?.unMute?.();
-            } catch {
-              // ignore
-            }
+            applyMute(false);
           }
         }
 
@@ -517,7 +526,7 @@ export const VideoPlayer = forwardRef<
       }
     }, 50);
     return () => window.clearInterval(timer);
-  }, [videoId, finishSegment, clearSegmentTimer, noteMediaDuration]);
+  }, [videoId, applyMute, finishSegment, clearSegmentTimer, noteMediaDuration]);
 
   useEffect(() => {
     if (active) return;
