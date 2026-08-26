@@ -5,6 +5,7 @@ import { CurrentSubtitleCard } from "@/components/videoLearning/CurrentSubtitleC
 import { SavedVideoSessions } from "@/components/videoLearning/SavedVideoSessions";
 import { EnglishSentenceList } from "@/components/videoLearning/StudyMaterialsList";
 import { SubtitleDebugPanel } from "@/components/videoLearning/SubtitleDebugPanel";
+import { CueTimingDebug } from "@/components/videoLearning/CueTimingDebug";
 import { SubtitleGenerationStatus } from "@/components/videoLearning/SubtitleGenerationStatus";
 import { VideoWatchFullscreenDock } from "@/components/videoLearning/VideoWatchFullscreenDock";
 import {
@@ -163,7 +164,53 @@ export function VideoLearningTab({
     setCanRestoreOriginal(false);
   }, []);
 
+  const reset = useCallback(() => {
+    loadSeq.current += 1;
+    abortRef.current?.abort();
+    preparedRef.current = null;
+    cuesDirtyRef.current = false;
+    replaceBaseline([]);
+    setPhase("input");
+    setVideoId(null);
+    setVideoUrl("");
+    setEnglishCues([]);
+    setSituationSummary("");
+    setDurationSeconds(0);
+    setCurrentTime(0);
+    setProgressPercent(0);
+    setStepIndex(0);
+    setSelectedId(null);
+    setPlayingId(null);
+    setPlayingIds([]);
+    setRangeIds([]);
+    setWatchFullscreen(false);
+    setWaitingGloss(false);
+    setToast(null);
+    glossInFlightRef.current = false;
+    pausedForGlossRef.current = false;
+    pendingPlayIdRef.current = null;
+  }, [replaceBaseline]);
+
+  const languageRef = useRef(targetLanguage);
+  useEffect(() => {
+    if (languageRef.current === targetLanguage) return;
+    languageRef.current = targetLanguage;
+    reset();
+    setDraftUrl("");
+    setUrlError(null);
+  }, [targetLanguage, reset]);
+
   const cue = useActiveSubtitle(currentTime, englishCues, "english");
+  // TEMPORARY: feeds the cue-timing diagnostic. Remove with CueTimingDebug.
+  const readCueTimingSource = useCallback(() => {
+    const prepared = preparedRef.current;
+    return {
+      sttSource: prepared?.sttSource,
+      captionMode: prepared?.captionMode,
+      durationSeconds: prepared?.durationSeconds,
+      segmentCount: prepared?.segments?.length,
+    };
+  }, []);
   const displayCue =
     (selectedId
       ? englishCues.find((row) => row.id === selectedId)
@@ -800,31 +847,6 @@ export function VideoLearningTab({
     })();
   };
 
-  const reset = () => {
-    loadSeq.current += 1;
-    abortRef.current?.abort();
-    preparedRef.current = null;
-    cuesDirtyRef.current = false;
-    replaceBaseline([]);
-    setPhase("input");
-    setVideoId(null);
-    setVideoUrl("");
-    setEnglishCues([]);
-    setSituationSummary("");
-    setDurationSeconds(0);
-    setCurrentTime(0);
-    setProgressPercent(0);
-    setSelectedId(null);
-    setPlayingId(null);
-    setPlayingIds([]);
-    setRangeIds([]);
-    setWatchFullscreen(false);
-    setWaitingGloss(false);
-    glossInFlightRef.current = false;
-    pausedForGlossRef.current = false;
-    pendingPlayIdRef.current = null;
-  };
-
   const durationHint = Math.max(
     durationSeconds,
     preparedRef.current?.durationSeconds ?? 0,
@@ -996,6 +1018,7 @@ export function VideoLearningTab({
                 onSaveSession={onSaveSession}
               />
               <SubtitleDebugPanel cue={displayCue} />
+              <CueTimingDebug cues={englishCues} getSource={readCueTimingSource} />
               <EnglishSentenceList
                 ui={ui}
                 cues={englishCues}
