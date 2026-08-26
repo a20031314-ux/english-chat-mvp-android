@@ -21,7 +21,10 @@ type MessageBubbleProps = {
   labels: {
     listen: string;
     reading?: string;
+    report?: string;
   };
+  /** Present on AI output only, so learners can flag what the model said. */
+  onReport?: () => void;
   imageUrl?: string;
 };
 
@@ -77,6 +80,7 @@ export function MessageBubble({
   onWordClick,
   labels,
   imageUrl,
+  onReport,
 }: MessageBubbleProps) {
   const isUser = role === "user";
   const readingText = reading?.replace(/\s+/g, " ").trim() || "";
@@ -220,6 +224,18 @@ export function MessageBubble({
               }`}
             >
               {labels.reading}
+            </button>
+          ) : null}
+
+          {!isUser && onReport && labels.report ? (
+            <button
+              type="button"
+              onClick={onReport}
+              aria-label={labels.report}
+              title={labels.report}
+              className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-slate-400 transition hover:bg-white/10 hover:text-slate-200"
+            >
+              ⚑
             </button>
           ) : null}
         </div>

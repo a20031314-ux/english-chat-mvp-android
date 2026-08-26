@@ -46,6 +46,10 @@ import {
 import { compressChatImage } from "@/lib/chatImage";
 import { formatCallDuration, type ChatCallEvent } from "@/lib/callSession";
 import { useCall } from "@/contexts/CallContext";
+import {
+  ReportContentDialog,
+  type ReportTarget,
+} from "@/components/ReportContentDialog";
 
 type CorrectionResult = {
   corrected: string;
@@ -687,6 +691,7 @@ export function ChatWindow({
   const [conversationMode, setConversationMode] =
     useState<ConversationMode>("native");
   const call = useCall();
+  const [reportTarget, setReportTarget] = useState<ReportTarget | null>(null);
   const partner = chatPartnerForLanguage(sessionLanguageCode);
 
   const dailyLimit = entitlement.dailyLimit ?? SESSION_MESSAGE_LIMIT;
@@ -1411,6 +1416,16 @@ export function ChatWindow({
                   >
                     {ui.endSession}
                   </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setSessionMenuOpen(false);
+                      setReportTarget({ surface: "chat", excerpt: "" });
+                    }}
+                    className="block w-full px-3 py-2 text-left text-xs text-slate-100 hover:bg-white/10"
+                  >
+                    {ui.reportTitle}
+                  </button>
                 </div>
               ) : null}
             </div>
@@ -1471,6 +1486,7 @@ export function ChatWindow({
                   undefined;
             const assistantLabels = {
               listen: ui.listen,
+              report: ui.reportContent,
               ...(assistantReading ? { reading: ui.chatReading } : {}),
             };
 
@@ -1522,6 +1538,12 @@ export function ChatWindow({
                       message={turn.assistantMessage}
                       reading={assistantReading}
                       labels={assistantLabels}
+                      onReport={() =>
+                        setReportTarget({
+                          surface: "chat",
+                          excerpt: turn.assistantMessage ?? "",
+                        })
+                      }
                     />
                   )}
 
@@ -1533,6 +1555,12 @@ export function ChatWindow({
                       message={turn.assistantMessage}
                       reading={assistantReading}
                       labels={assistantLabels}
+                      onReport={() =>
+                        setReportTarget({
+                          surface: "chat",
+                          excerpt: turn.assistantMessage ?? "",
+                        })
+                      }
                     />
                   )}
 
@@ -1542,6 +1570,12 @@ export function ChatWindow({
                     message={turn.assistantMessage}
                     reading={assistantReading}
                     labels={assistantLabels}
+                    onReport={() =>
+                      setReportTarget({
+                        surface: "chat",
+                        excerpt: turn.assistantMessage ?? "",
+                      })
+                    }
                   />
                 ) : null}
               </article>
@@ -1848,6 +1882,17 @@ export function ChatWindow({
           startNewChat();
         }}
       />
+
+      {reportTarget ? (
+        <ReportContentDialog
+          ui={ui}
+          locale={locale}
+          learningLanguage={sessionLanguageCode}
+          target={reportTarget}
+          onClose={() => setReportTarget(null)}
+          onSent={(ok) => setBookToast(ok ? ui.reportThanks : ui.reportFailed)}
+        />
+      ) : null}
     </>
   );
 }
