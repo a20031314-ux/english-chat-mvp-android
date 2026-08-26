@@ -308,6 +308,12 @@ export const VideoPlayer = forwardRef<
       setPlaying(true);
 
       const player = playerRef.current;
+      // The timer is armed before the player has actually started: seeking and
+      // buffering both eat into the clip, by a different amount every time. So
+      // it checks the playhead and waits again rather than cutting the clip
+      // short, which used to leave only the last moment audible because the
+      // muted lead-in had swallowed the rest.
+      let stallChecks = 0;
       const armStopTimer = (fromTime: number) => {
         clearSegmentTimer();
         if (segmentTokenRef.current !== token) return;
@@ -315,6 +321,18 @@ export const VideoPlayer = forwardRef<
         segmentTimerRef.current = window.setTimeout(() => {
           if (segmentTokenRef.current !== token) return;
           if (segmentEndRef.current == null) return;
+          let now = safeEnd;
+          try {
+            const t = player?.getCurrentTime();
+            if (typeof t === "number" && Number.isFinite(t)) now = t;
+          } catch {
+            // fall through and stop
+          }
+          if (now < safeEnd - 0.15 && stallChecks < 40) {
+            stallChecks += 1;
+            armStopTimer(now);
+            return;
+          }
           finishSegment(safeEnd);
         }, Math.ceil(remaining * 1000) + 80);
       };
