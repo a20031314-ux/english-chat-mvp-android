@@ -1294,10 +1294,11 @@ export function ChatWindow({
             locale,
           });
 
-    if (call.phase !== "idle") {
-      // The tutor is already answering out loud. A second written reply only
-      // ends up disagreeing with what was just said, so the line is kept as a
-      // record of the call and nothing is asked of the chat model.
+    // Only while a call is actually up, and never for "how to say", which is
+    // a lookup the learner asked for rather than a second voice in the
+    // conversation. Dialing does not count: a call that never connects must not
+    // leave the chat silently dead.
+    if (call.phase === "connected" && modeToUse !== "how_to_say") {
       setTurns((previous) => [
         ...previous,
         {
@@ -1309,6 +1310,7 @@ export function ChatWindow({
       ]);
       setInput("");
       setPendingPhoto(null);
+      setBookToast(ui.chatDuringCall);
       return;
     }
 

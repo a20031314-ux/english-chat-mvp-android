@@ -1,5 +1,8 @@
 import { apiUrl } from "@/lib/apiBase";
-import type { LearningLanguageCode } from "@/lib/learningLanguages";
+import {
+  learningLanguageName,
+  type LearningLanguageCode,
+} from "@/lib/learningLanguages";
 
 export type RealtimeCall = {
   setMuted: (muted: boolean) => void;
@@ -147,8 +150,13 @@ export async function startRealtimeCall(input: {
         JSON.stringify({
           type: "response.create",
           response: {
-            instructions:
-              "The call just connected. Greet them in one short spoken line as if you picked up the phone.",
+            // In English this opened the call in English and, told not to mix
+            // languages, it never came back out of it.
+            instructions: `The call just connected. Greet them in ${learningLanguageName(
+              input.targetLanguage,
+            )} in one short spoken line, as if you picked up the phone. Speak only ${learningLanguageName(
+              input.targetLanguage,
+            )}.`,
           },
         }),
       );
