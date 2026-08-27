@@ -18,6 +18,8 @@ export function CatalogLibrary({
   isPremium,
   onOpen,
   onLocked,
+  preparingVideoId = null,
+  progressPercent = 0,
 }: {
   ui: UICopy;
   clips: LibraryClip[];
@@ -25,6 +27,9 @@ export function CatalogLibrary({
   isPremium: boolean;
   onOpen: (url: string, durationSeconds: number) => void;
   onLocked: () => void;
+  /** The clip being prepared, so the wait shows on the card that started it. */
+  preparingVideoId?: string | null;
+  progressPercent?: number;
 }) {
   if (clips.length === 0) {
     return (
@@ -57,10 +62,12 @@ export function CatalogLibrary({
             isPremium ||
             trialVideoIds.includes(clip.videoId) ||
             (trialVideoIds.length < 3 && index < 3);
+          const preparing = clip.videoId === preparingVideoId;
           return (
-            <li key={clip.videoId}>
+            <li key={clip.videoId} className="relative">
               <button
                 type="button"
+                disabled={preparing}
                 onClick={() => {
                   if (unlocked) {
                     onOpen(libraryWatchUrl(clip.videoId), clip.durationSeconds);
@@ -68,7 +75,9 @@ export function CatalogLibrary({
                     onLocked();
                   }
                 }}
-                className="flex w-full gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/5 p-2.5 text-left"
+                className={`flex w-full gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/5 p-2.5 text-left ${
+                  preparing ? "opacity-60" : ""
+                }`}
               >
                 <span className="relative h-[4.5rem] w-28 shrink-0 overflow-hidden rounded-lg bg-white/10">
                   <img
@@ -97,6 +106,23 @@ export function CatalogLibrary({
                   </span>
                 </span>
               </button>
+              {preparing ? (
+                <span
+                  className="absolute inset-x-2.5 bottom-1.5 block h-1 overflow-hidden rounded-full bg-white/10"
+                  role="progressbar"
+                  aria-valuemin={0}
+                  aria-valuemax={100}
+                  aria-valuenow={Math.round(progressPercent)}
+                  aria-label={ui.videoLearnGenerating}
+                >
+                  <span
+                    className="block h-full rounded-full bg-[#e8e8e4] transition-[width] duration-300 ease-out"
+                    style={{
+                      width: `${Math.max(0, Math.min(100, Math.round(progressPercent)))}%`,
+                    }}
+                  />
+                </span>
+              ) : null}
             </li>
           );
         })}

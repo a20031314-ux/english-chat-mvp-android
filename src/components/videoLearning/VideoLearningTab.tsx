@@ -121,7 +121,9 @@ export function VideoLearningTab({
   const [videoId, setVideoId] = useState<string | null>(null);
   const [videoUrl, setVideoUrl] = useState("");
   const [phase, setPhase] = useState<Phase>("input");
-  const [stepIndex, setStepIndex] = useState(0);
+  // Nothing reads the step while the bar is a bare gauge; the setters stay so a
+  // stage readout can come back without rewiring every progress callback.
+  const [, setStepIndex] = useState(0);
   const [englishCues, setEnglishCues] = useState<VideoSubtitle[]>([]);
   const [situationSummary, setSituationSummary] = useState("");
   const [durationSeconds, setDurationSeconds] = useState(0);
@@ -154,6 +156,16 @@ export function VideoLearningTab({
   const playingIdRef = useRef<string | null>(null);
   englishCuesRef.current = englishCues;
   playingIdRef.current = playingId;
+
+  const cancelPreparation = useCallback(() => {
+    loadSeq.current += 1;
+    abortRef.current?.abort();
+    abortRef.current = null;
+    setPhase("input");
+    setVideoId(null);
+    setProgressPercent(0);
+    setStepIndex(0);
+  }, []);
 
   const replaceBaseline = useCallback((cues: VideoSubtitle[]) => {
     baselineCuesRef.current = cloneCues(cues);
@@ -873,8 +885,8 @@ export function VideoLearningTab({
             <div className="sticky top-0 z-10 border-b border-white/10 bg-white/95 backdrop-blur-[2px]">
               <SubtitleGenerationStatus
                 ui={ui}
-                stepIndex={stepIndex}
                 progressPercent={progressPercent}
+                onCancel={cancelPreparation}
               />
             </div>
           ) : null}
@@ -908,6 +920,8 @@ export function VideoLearningTab({
                 clips={currentLibraryPack(targetLanguage)?.clips ?? []}
                 trialVideoIds={getCatalogTrialVideoIds()}
                 isPremium={isPremium}
+                preparingVideoId={phase === "extracting" ? videoId : null}
+                progressPercent={progressPercent}
                 onOpen={(url, durationSeconds) => loadVideo(url, durationSeconds)}
                 onLocked={() => {
                   setUrlError(ui.videoLearnCatalogLocked);
