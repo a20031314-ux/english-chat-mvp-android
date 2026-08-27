@@ -1294,6 +1294,24 @@ export function ChatWindow({
             locale,
           });
 
+    if (call.phase !== "idle") {
+      // The tutor is already answering out loud. A second written reply only
+      // ends up disagreeing with what was just said, so the line is kept as a
+      // record of the call and nothing is asked of the chat model.
+      setTurns((previous) => [
+        ...previous,
+        {
+          id: `${Date.now()}`,
+          mode: "chat" as const,
+          userMessage: trimmed,
+          ...(photo ? { attachmentUrl: photo } : {}),
+        },
+      ]);
+      setInput("");
+      setPendingPhoto(null);
+      return;
+    }
+
     if (isChatDailyLimitReached) {
       openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
       return;
