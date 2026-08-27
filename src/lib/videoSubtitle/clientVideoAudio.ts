@@ -2,6 +2,7 @@ import { apiUrl } from "@/lib/apiBase";
 import { downloadYouTubeAudioBytes } from "@/lib/videoSubtitle/downloadAudioBytes";
 import {
   audioBufferSliceToWav,
+  captionLinesForDisplay,
   mergeSttChunks,
   regularizeSttSegments,
   speechCoversDuration,
@@ -109,7 +110,12 @@ export async function transcribeYouTubeAudioOnDevice(
     signal?: AbortSignal;
     onProgress?: (percent: number) => void;
   },
-): Promise<{ segments: SttSegment[]; source: SttSource }> {
+): Promise<{
+  segments: SttSegment[];
+  source: SttSource;
+  /** Finer lines to show, when the source has them. */
+  displayLines: SttSegment[];
+}> {
   console.error("[video-client-audio] start 2.31");
   options.onProgress?.(18);
   let source: YouTubeSource;
@@ -136,6 +142,7 @@ export async function transcribeYouTubeAudioOnDevice(
       return {
         segments: regularizeSttSegments(captions),
         source: "youtube-asr",
+        displayLines: captionLinesForDisplay(captions),
       };
     }
     if (captions.length > 0) {
@@ -219,5 +226,6 @@ export async function transcribeYouTubeAudioOnDevice(
   const merged = mergeSttChunks(chunks);
   if (merged.length === 0) throw new ClientAudioError("NO_SPEECH");
   options.onProgress?.(80);
-  return { segments: merged, source: "whisper" };
+  // Whisper gives sentences already; there is nothing finer to fall back on.
+  return { segments: merged, source: "whisper", displayLines: merged };
 }

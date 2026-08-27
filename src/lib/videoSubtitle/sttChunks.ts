@@ -356,6 +356,23 @@ function collapseOverlappingCaptions(segments: SttSegment[]): SttSegment[] {
 }
 
 /** Flatten STT chunks to a word list, then slice sentences by punctuation. */
+/**
+ * Caption lines at their own granularity, for display. regularizeSttSegments
+ * regroups them into sentences, which reads better but leaves one line on
+ * screen across several utterances — too coarse to follow along with.
+ */
+export function captionLinesForDisplay(segments: SttSegment[]): SttSegment[] {
+  const kept = segments.filter((segment) =>
+    segment.text.replace(/s+/g, " ").trim(),
+  );
+  return collapseOverlappingCaptions(kept)
+    .filter((segment) => segment.endTime > segment.startTime + 0.08)
+    .map((segment, index) => ({
+      ...segment,
+      id: `d-${index}-${Math.round(segment.startTime * 1000)}`,
+    }));
+}
+
 export function regularizeSttSegments(segments: SttSegment[]): SttSegment[] {
   // Keep incoming order (YouTube event / Whisper line order). Sorting by the
   // often-wrong ASR clock is what reversed karaoke lyrics.

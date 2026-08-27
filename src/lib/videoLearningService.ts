@@ -601,7 +601,7 @@ export async function prepareEnglishWatch(
         throw new VideoSubtitleClientError(await readError(fromStt));
       }
       prepared = (await fromStt.json()) as PreparedTranscript;
-      deviceSegments = device.segments;
+      deviceSegments = device.displayLines;
     } catch (error) {
       if (error instanceof VideoSubtitleClientError) throw error;
       if (error instanceof ClientAudioError) {
