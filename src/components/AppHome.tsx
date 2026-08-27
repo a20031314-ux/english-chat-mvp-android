@@ -13,7 +13,7 @@ import { TargetLanguageSelector } from "@/components/TargetLanguageSelector";
 import { VocabularyPanel } from "@/components/VocabularyPanel";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
 import { BillingUiProvider, BillingOpenButton } from "@/components/BillingScreen";
-import { LearningLanguageProvider } from "@/contexts/LearningLanguageContext";
+import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
 import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
 import { learningLanguageTextDir } from "@/lib/learningLanguages";
@@ -49,6 +49,7 @@ function AppHomeInner({
 }) {
   const [tab, setTab] = useState<AppTab>("chat");
   const ui = useUiCopy(locale);
+  const { targetLanguage } = useLearningLanguage();
 
   useEffect(() => {
     document.documentElement.lang = locale;
@@ -122,7 +123,7 @@ function AppHomeInner({
             dir={learningLanguageTextDir(locale)}
             lang={locale}
           >
-            <div className="relative z-50 flex shrink-0 flex-wrap items-center gap-2 overflow-visible border-b border-white/10 bg-[#050505]/80 px-3 py-1.5 backdrop-blur-md sm:px-4">
+            <div className="relative z-[60] flex shrink-0 flex-wrap items-center gap-2 overflow-visible border-b border-white/10 bg-[#050505]/80 px-3 py-1.5 backdrop-blur-md sm:px-4">
               <TargetLanguageSelector label={ui.learningLanguageLabel} />
               <LanguageSelector
                 locale={locale}
@@ -153,6 +154,7 @@ function AppHomeInner({
                 aria-hidden={tab !== "video"}
               >
                 <VideoLearningTab
+                  key={targetLanguage}
                   locale={locale}
                   ui={ui}
                   active={tab === "video"}
@@ -177,7 +179,7 @@ function AppHomeInner({
               className="shrink-0 border-t border-white/10 bg-[#050505]/95 px-1 pb-[env(safe-area-inset-bottom)] pt-1 backdrop-blur-md"
               aria-label="Main"
             >
-              <div className="mx-auto grid max-w-4xl grid-cols-5 gap-0.5">
+              <div className="mx-auto flex max-w-4xl gap-0.5">
                 {tabItems.map((item) => {
                   const active = tab === item.id;
                   const meta = TAB_ICON_META[item.id];
@@ -189,7 +191,7 @@ function AppHomeInner({
                       onClick={() => openTab(item.id)}
                       aria-label={item.label}
                       aria-current={active ? "page" : undefined}
-                      className={`flex min-h-[3.5rem] flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1.5 transition ${
+                      className={`flex min-h-[3.5rem] flex-1 basis-0 flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1.5 transition ${
                         active ? meta.activeBg : meta.idleBg
                       }`}
                     >
