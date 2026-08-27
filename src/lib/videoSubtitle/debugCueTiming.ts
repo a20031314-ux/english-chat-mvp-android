@@ -22,11 +22,18 @@ export function cueTimingReport(
 ): string {
   const sorted = [...cues].sort((a, b) => a.startTime - b.startTime);
   const lines: string[] = [];
-  lines.push(
-    `source=${source.sttSource ?? "?"} mode=${source.captionMode ?? "?"} ` +
-      `dur=${(source.durationSeconds ?? 0).toFixed(1)} ` +
-      `segments=${source.segmentCount ?? "?"} cues=${sorted.length}`,
-  );
+  // A restored session has no prepare behind it, so its cues are whatever was
+  // saved — including anything a later fix would have changed. Saying so keeps
+  // a stale session from reading like a fresh run that ignored the fix.
+  if (!source.sttSource && !source.durationSeconds) {
+    lines.push(`RESTORED SESSION (saved cues, not prepared) cues=${sorted.length}`);
+  } else {
+    lines.push(
+      `source=${source.sttSource ?? "?"} mode=${source.captionMode ?? "?"} ` +
+        `dur=${(source.durationSeconds ?? 0).toFixed(1)} ` +
+        `segments=${source.segmentCount ?? "?"} cues=${sorted.length}`,
+    );
+  }
   lines.push("idx   start     end     len     gap   ko");
 
   let overlaps = 0;
