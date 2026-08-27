@@ -140,6 +140,16 @@ export async function transcribeYouTubeAudioOnDevice(
         lines: captions.length,
         duration: source.durationSeconds,
       });
+    } else {
+      // The only silent way into Whisper: no track survived the language match.
+      // Whisper timestamps come from the audio, not the video timeline, so the
+      // reason matters when captions and speech drift apart.
+      console.error("[video-client-audio] no matching captions, using audio", {
+        want: options.targetLanguage,
+        tracks: source.captionTracks.map(
+          (track) => `${track.languageCode}${track.kind ? ":" + track.kind : ""}`,
+        ),
+      });
     }
   } catch (error) {
     console.error("[video-client-audio] device captions failed", error);
