@@ -5,7 +5,6 @@ import { CurrentSubtitleCard } from "@/components/videoLearning/CurrentSubtitleC
 import { SavedVideoSessions } from "@/components/videoLearning/SavedVideoSessions";
 import { EnglishSentenceList } from "@/components/videoLearning/StudyMaterialsList";
 import { SubtitleDebugPanel } from "@/components/videoLearning/SubtitleDebugPanel";
-import { CueTimingDebug } from "@/components/videoLearning/CueTimingDebug";
 import { SubtitleGenerationStatus } from "@/components/videoLearning/SubtitleGenerationStatus";
 import { VideoWatchFullscreenDock } from "@/components/videoLearning/VideoWatchFullscreenDock";
 import {
@@ -201,16 +200,6 @@ export function VideoLearningTab({
   }, [targetLanguage, reset]);
 
   const cue = useActiveSubtitle(currentTime, englishCues, "english");
-  // TEMPORARY: feeds the cue-timing diagnostic. Remove with CueTimingDebug.
-  const readCueTimingSource = useCallback(() => {
-    const prepared = preparedRef.current;
-    return {
-      sttSource: prepared?.sttSource,
-      captionMode: prepared?.captionMode,
-      durationSeconds: prepared?.durationSeconds,
-      segmentCount: prepared?.segments?.length,
-    };
-  }, []);
   const displayCue =
     (selectedId
       ? englishCues.find((row) => row.id === selectedId)
@@ -1018,7 +1007,6 @@ export function VideoLearningTab({
                 onSaveSession={onSaveSession}
               />
               <SubtitleDebugPanel cue={displayCue} />
-              <CueTimingDebug cues={englishCues} getSource={readCueTimingSource} />
               <EnglishSentenceList
                 ui={ui}
                 cues={englishCues}
