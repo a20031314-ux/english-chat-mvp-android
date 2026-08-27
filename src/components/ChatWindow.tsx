@@ -1310,7 +1310,7 @@ export function ChatWindow({
       ]);
       setInput("");
       setPendingPhoto(null);
-      setBookToast(ui.chatDuringCall);
+      if (!call.sendText(trimmed)) setBookToast(ui.chatDuringCall);
       return;
     }
 
@@ -1855,7 +1855,7 @@ export function ChatWindow({
 
       {bookToast ? (
         <div
-          className="pointer-events-none fixed bottom-6 left-1/2 z-[70] max-w-[min(90vw,20rem)] -translate-x-1/2 px-4"
+          className="pointer-events-none fixed bottom-28 left-1/2 z-[70] max-w-[min(90vw,20rem)] -translate-x-1/2 px-4"
           role="status"
         >
           <div className="pointer-events-auto whitespace-pre-line rounded-xl border border-white/10 bg-[#121212] px-4 py-3 text-center text-sm leading-snug text-slate-100 shadow-lg">

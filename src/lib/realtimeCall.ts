@@ -7,6 +7,8 @@ import {
 export type RealtimeCall = {
   setMuted: (muted: boolean) => void;
   hangUp: () => void;
+  /** Hand the tutor a line the learner typed. False if the channel is not open. */
+  sendText: (text: string) => boolean;
 };
 
 export class RealtimeCallError extends Error {
@@ -219,6 +221,24 @@ export async function startRealtimeCall(input: {
     },
     hangUp() {
       cleanup();
+    },
+    sendText(text) {
+      const line = text.trim();
+      if (!line || dataChannel?.readyState !== "open") return false;
+      // The learner is looking at the same screen; what they type is part of
+      // the same conversation, so it goes to the tutor as their own turn.
+      dataChannel.send(
+        JSON.stringify({
+          type: "conversation.item.create",
+          item: {
+            type: "message",
+            role: "user",
+            content: [{ type: "input_text", text: line }],
+          },
+        }),
+      );
+      dataChannel.send(JSON.stringify({ type: "response.create" }));
+      return true;
     },
   };
 }

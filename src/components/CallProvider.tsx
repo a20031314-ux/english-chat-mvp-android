@@ -116,6 +116,11 @@ export function CallProvider({ children }: { children: ReactNode }) {
     [emitEnded, phase, teardown],
   );
 
+  const sendText = useCallback(
+    (text: string) => callRef.current?.sendText(text) ?? false,
+    [],
+  );
+
   const toggleMuted = useCallback(() => {
     setMuted((value) => {
       const next = !value;
@@ -150,6 +155,7 @@ export function CallProvider({ children }: { children: ReactNode }) {
       hangUp,
       stop,
       toggleMuted,
+      sendText,
       subscribeEnded,
     }),
     [
@@ -160,6 +166,7 @@ export function CallProvider({ children }: { children: ReactNode }) {
       startedAt,
       stop,
       subscribeEnded,
+      sendText,
       toggleMuted,
     ],
   );

@@ -25,6 +25,8 @@ export type CallContextValue = {
   /** Silent teardown, e.g. the learner switched language. Emits nothing. */
   stop: () => void;
   toggleMuted: () => void;
+  /** Give the tutor a typed line. False when no call is carrying it. */
+  sendText: (text: string) => boolean;
   /** Fires when a call ends by hang-up or by the far end dropping. */
   subscribeEnded: (listener: (durationSeconds: number) => void) => () => void;
 };
