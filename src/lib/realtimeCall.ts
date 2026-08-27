@@ -16,6 +16,25 @@ export class RealtimeCallError extends Error {
   }
 }
 
+const SDP_CR = String.fromCharCode(13);
+const SDP_LF = String.fromCharCode(10);
+const SDP_EOL = SDP_CR + SDP_LF;
+
+/**
+ * Restore the answer's CRLF endings. On Android the CapacitorHttp bridge hands
+ * the body back with bare newlines, and WebRTC rejects the whole description on
+ * the first line it cannot parse.
+ */
+function normalizeAnswerSdp(raw: string): string {
+  const lines = raw
+    .split(SDP_LF)
+    .map((line) => (line.endsWith(SDP_CR) ? line.slice(0, -1) : line));
+  while (lines.length > 0 && lines[lines.length - 1]!.trim() === "") {
+    lines.pop();
+  }
+  return lines.length > 0 ? lines.join(SDP_EOL) + SDP_EOL : "";
+}
+
 function waitForIce(pc: RTCPeerConnection, timeoutMs = 2500): Promise<void> {
   if (pc.iceGatheringState === "complete") return Promise.resolve();
   return new Promise((resolve) => {
@@ -159,7 +178,7 @@ export async function startRealtimeCall(input: {
       }),
       signal: input.signal,
     });
-    const answerSdp = await response.text();
+    const answerSdp = normalizeAnswerSdp(await response.text());
     if (!response.ok || !answerSdp.includes("v=")) {
       throw new RealtimeCallError("connect", "REALTIME_FAILED");
     }
