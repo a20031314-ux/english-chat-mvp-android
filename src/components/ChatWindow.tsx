@@ -1380,7 +1380,12 @@ export function ChatWindow({
   };
 
   const startLiveCall = async () => {
-    const result = await call.start(sessionLanguageCode);
+    // The UI language is what the learner falls back into mid-call, so the
+    // tutor has to be told to expect it rather than guess from the audio.
+    const nativeLanguage = isLearningLanguageCode(locale)
+      ? locale
+      : DEFAULT_LEARNING_LANGUAGE_CODE;
+    const result = await call.start(sessionLanguageCode, nativeLanguage);
     if (result.ok || result.reason === "aborted") return;
     setBookToast(
       result.reason === "mic" ? ui.chatMicDenied : ui.chatCallFailed,

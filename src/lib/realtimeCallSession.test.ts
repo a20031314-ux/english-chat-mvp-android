@@ -30,3 +30,17 @@ test("session config uses realtime type and a voice", () => {
   assert.equal(session.audio.output.voice, "ash");
   assert.ok(session.instructions.length > 80);
 });
+
+test("a call in another language is told to stay in it and expect the native one", () => {
+  const text = realtimeCallInstructions("ja", "ko");
+  assert.match(text, /Speak Japanese/);
+  assert.match(text, /Do NOT use English/);
+  assert.match(text, /Korean speaker learning Japanese/);
+  // The old wording let it drift by only "preferring" the target language.
+  assert.doesNotMatch(text, /prefer Japanese unless/);
+});
+
+test("the native language reaches the session config", () => {
+  const session = realtimeCallSessionConfig("ja", "vi");
+  assert.match(session.instructions, /Vietnamese speaker learning Japanese/);
+});

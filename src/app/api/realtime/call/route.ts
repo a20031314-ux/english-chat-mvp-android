@@ -36,7 +36,11 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
 
-  let body: { sdp?: unknown; targetLanguage?: unknown };
+  let body: {
+    sdp?: unknown;
+    targetLanguage?: unknown;
+    interfaceLanguage?: unknown;
+  };
   try {
     body = await request.json();
   } catch {
@@ -49,7 +53,10 @@ export async function POST(request: NextRequest) {
   }
 
   const targetLanguage = coerceLanguageCode(body.targetLanguage);
-  const session = JSON.stringify(realtimeCallSessionConfig(targetLanguage));
+  const nativeLanguage = coerceLanguageCode(body.interfaceLanguage);
+  const session = JSON.stringify(
+    realtimeCallSessionConfig(targetLanguage, nativeLanguage),
+  );
   const form = new FormData();
   form.set("sdp", sdp);
   form.set("session", session);

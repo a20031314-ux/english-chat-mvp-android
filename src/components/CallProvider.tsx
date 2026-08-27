@@ -66,7 +66,10 @@ export function CallProvider({ children }: { children: ReactNode }) {
   }, [emitEnded, teardown]);
 
   const start = useCallback(
-    async (targetLanguage: LearningLanguageCode): Promise<CallStartResult> => {
+    async (
+      targetLanguage: LearningLanguageCode,
+      nativeLanguage: LearningLanguageCode,
+    ): Promise<CallStartResult> => {
       if (phase !== "idle") return { ok: true };
       const abort = new AbortController();
       abortRef.current = abort;
@@ -75,6 +78,7 @@ export function CallProvider({ children }: { children: ReactNode }) {
       try {
         const call = await startRealtimeCall({
           targetLanguage,
+          nativeLanguage,
           signal: abort.signal,
           onConnected: () => {
             const now = Date.now();

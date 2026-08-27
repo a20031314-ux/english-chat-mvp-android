@@ -16,7 +16,10 @@ export type CallContextValue = {
    * bar runs its own clock so a call does not re-render every consumer each second.
    */
   startedAt: number | null;
-  start: (targetLanguage: LearningLanguageCode) => Promise<CallStartResult>;
+  start: (
+    targetLanguage: LearningLanguageCode,
+    nativeLanguage: LearningLanguageCode,
+  ) => Promise<CallStartResult>;
   /** User-initiated. Emits an ended event so the chat can log the call. */
   hangUp: () => void;
   /** Silent teardown, e.g. the learner switched language. Emits nothing. */

@@ -53,6 +53,8 @@ function waitForIce(pc: RTCPeerConnection, timeoutMs = 2500): Promise<void> {
 
 export async function startRealtimeCall(input: {
   targetLanguage: LearningLanguageCode;
+  /** What the learner speaks natively, so the call expects it mid-sentence. */
+  nativeLanguage: LearningLanguageCode;
   signal?: AbortSignal;
   onConnected: () => void;
   onDisconnected: () => void;
@@ -175,6 +177,7 @@ export async function startRealtimeCall(input: {
       body: JSON.stringify({
         sdp: pc.localDescription?.sdp ?? offer.sdp,
         targetLanguage: input.targetLanguage,
+        interfaceLanguage: input.nativeLanguage,
       }),
       signal: input.signal,
     });
