@@ -1294,14 +1294,14 @@ export function ChatWindow({
             locale,
           });
 
-    // Anything typed on a live call goes to the tutor, since both sides are
-    // looking at the same screen. "How to say" then carries on to its lookup so
-    // the written answer still appears; a plain line stops here, because the
-    // tutor is about to answer it out loud. Dialing does not count: a call that
+    // On a live call the tutor is the only one who answers. Everything typed
+    // goes to it — both sides are looking at the same screen — and nothing is
+    // asked of the chat model, "how to say" included: that toggle stays on
+    // across messages, so leaving it through meant a written answer arriving
+    // over the top of every spoken one. Dialing does not count: a call that
     // never connects must not leave the chat silently dead.
-    const onLiveCall = call.phase === "connected";
-    const deliveredToTutor = onLiveCall ? call.sendText(trimmed) : false;
-    if (onLiveCall && modeToUse !== "how_to_say") {
+    if (call.phase === "connected") {
+      const deliveredToTutor = call.sendText(trimmed);
       setTurns((previous) => [
         ...previous,
         {
