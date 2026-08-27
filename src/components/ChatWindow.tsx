@@ -1294,11 +1294,14 @@ export function ChatWindow({
             locale,
           });
 
-    // Only while a call is actually up, and never for "how to say", which is
-    // a lookup the learner asked for rather than a second voice in the
-    // conversation. Dialing does not count: a call that never connects must not
-    // leave the chat silently dead.
-    if (call.phase === "connected" && modeToUse !== "how_to_say") {
+    // Anything typed on a live call goes to the tutor, since both sides are
+    // looking at the same screen. "How to say" then carries on to its lookup so
+    // the written answer still appears; a plain line stops here, because the
+    // tutor is about to answer it out loud. Dialing does not count: a call that
+    // never connects must not leave the chat silently dead.
+    const onLiveCall = call.phase === "connected";
+    const deliveredToTutor = onLiveCall ? call.sendText(trimmed) : false;
+    if (onLiveCall && modeToUse !== "how_to_say") {
       setTurns((previous) => [
         ...previous,
         {
@@ -1310,7 +1313,7 @@ export function ChatWindow({
       ]);
       setInput("");
       setPendingPhoto(null);
-      if (!call.sendText(trimmed)) setBookToast(ui.chatDuringCall);
+      if (!deliveredToTutor) setBookToast(ui.chatDuringCall);
       return;
     }
 

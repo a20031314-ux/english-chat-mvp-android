@@ -33,9 +33,12 @@ test("session config uses realtime type and a voice", () => {
 
 test("a call in another language is told to stay in it and expect the native one", () => {
   const text = realtimeCallInstructions("ja", "ko");
-  assert.match(text, /Speak Japanese/);
-  assert.match(text, /Do NOT use English/);
+  assert.match(text, /Default to Japanese/);
+  assert.match(text, /neither Japanese nor Korean/);
   assert.match(text, /Korean speaker learning Japanese/);
+  // Bilingual, not a monolingual who refuses: Korean is allowed when asked for.
+  assert.match(text, /You also speak Korean/);
+  assert.match(text, /answer in Korean for as long as they need/);
   // The old wording let it drift by only "preferring" the target language.
   assert.doesNotMatch(text, /prefer Japanese unless/);
 });
