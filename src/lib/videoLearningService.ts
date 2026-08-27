@@ -512,11 +512,14 @@ export type SubtitleProgress = {
  * Extract speech + light context, then return English captions for first watch.
  * Korean interpretation is deferred until the video ends.
  */
-function jsonHeaders(isPremium?: boolean) {
+function jsonHeaders(isPremium?: boolean, learningLanguage?: string) {
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
   };
   if (isPremium) headers[PREMIUM_CLIENT_HEADER] = "1";
+  // Without this the prep gate assumes English, and a library clip in any other
+  // language stops looking like one — so it is charged as a custom import.
+  if (learningLanguage) headers["x-learning-language"] = learningLanguage;
   return headers;
 }
 
@@ -540,7 +543,7 @@ export async function prepareEnglishWatch(
 
   const prepareResponse = await fetch(apiUrl("/api/video-subtitles/prepare"), {
     method: "POST",
-    headers: jsonHeaders(options?.isPremium),
+    headers: jsonHeaders(options?.isPremium, targetLanguage),
     body: JSON.stringify({
       videoUrl,
       locale,
@@ -586,7 +589,7 @@ export async function prepareEnglishWatch(
       });
       const fromStt = await fetch(apiUrl("/api/video-subtitles/prepare-from-stt"), {
         method: "POST",
-        headers: jsonHeaders(options?.isPremium),
+        headers: jsonHeaders(options?.isPremium, targetLanguage),
         body: JSON.stringify({
           videoUrl,
           locale,
