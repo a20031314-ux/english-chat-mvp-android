@@ -1079,6 +1079,7 @@ export function ChatWindow({
     });
   };
 
+  const onCall = call.phase === "connected";
   const allModesOn = chatModeOn && askExpressionOn;
 
   const toggleAllModes = () => {
@@ -1647,14 +1648,19 @@ export function ChatWindow({
                   <circle cx="11" cy="17" r="2" fill="currentColor" />
                 </svg>
               </button>
+              {/* On a call the tutor answers everything itself, so these decide
+                  nothing. Left visible but plainly inert rather than silently
+                  ignored. */}
               <button
                 type="button"
                 onClick={toggleChatMode}
+                disabled={onCall}
+                title={onCall ? ui.chatDuringCall : undefined}
                 className={`rounded-lg px-3 py-1.5 text-sm transition ${
                   chatModeOn
                     ? "bg-[#e8e8e4] text-neutral-900"
                     : "border border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
-                }`}
+                } ${onCall ? "cursor-not-allowed opacity-40" : ""}`}
                 aria-pressed={chatModeOn}
               >
                 {ui.chatMode}
@@ -1662,11 +1668,13 @@ export function ChatWindow({
               <button
                 type="button"
                 onClick={toggleAskExpression}
+                disabled={onCall}
+                title={onCall ? ui.chatDuringCall : undefined}
                 className={`rounded-lg px-3 py-1.5 text-sm transition ${
                   askExpressionOn
                     ? "bg-[#e8e8e4] text-neutral-900"
                     : "border border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
-                }`}
+                } ${onCall ? "cursor-not-allowed opacity-40" : ""}`}
                 aria-pressed={askExpressionOn}
               >
                 {ui.askExpression}
