@@ -10,6 +10,7 @@ import type {
   NormalizedSegment,
   PreparedTranscript,
   SttSegment,
+  SttSource,
   SubtitleSegment,
   TranslateWindowInput,
 } from "@/lib/videoSubtitle/types";
@@ -123,8 +124,10 @@ function asOfficialSegments(segments: SttSegment[]): NormalizedSegment[] {
 export type PrepareTranscriptOptions = {
   /** Skip YouTube audio download (native clients upload chunks instead). */
   skipServerAudio?: boolean;
-  /** Already-transcribed speech (from device-uploaded Whisper chunks). */
+  /** Speech the device already has: its own captions, or Whisper chunks. */
   sttOverride?: SttSegment[];
+  /** Where sttOverride came from. Without it every upload looked like Whisper. */
+  sttOverrideSource?: SttSource;
   /** Longest video this plan may prepare (seconds). */
   maxDurationSeconds?: number;
   /** Remaining monthly new-prep seconds for this user. */
@@ -188,7 +191,7 @@ export async function prepareVideoTranscript(
 
   if (options?.sttOverride && options.sttOverride.length > 0) {
     stt = usableSpeech(options.sttOverride);
-    sttSource = "whisper";
+    sttSource = options.sttOverrideSource ?? "whisper";
   } else {
   // Speech / learning-language transcript only (never another language's track).
   try {

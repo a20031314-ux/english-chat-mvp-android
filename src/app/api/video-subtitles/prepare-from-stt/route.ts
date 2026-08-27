@@ -7,7 +7,14 @@ import {
 import { asNumber, asRecord, asString } from "@/lib/videoSubtitle/parseModelJson";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { prepareVideoTranscript } from "@/lib/videoSubtitle/pipeline";
-import type { SttSegment } from "@/lib/videoSubtitle/types";
+import type { SttSegment, SttSource } from "@/lib/videoSubtitle/types";
+
+const STT_SOURCES: SttSource[] = [
+  "whisper",
+  "youtube-asr",
+  "youtube-manual",
+  "youtube-official-ui",
+];
 
 export const runtime = "nodejs";
 export const maxDuration = 180;
@@ -41,6 +48,7 @@ export async function POST(request: NextRequest) {
     interfaceLanguage?: unknown;
     targetLanguage?: unknown;
     segments?: unknown;
+    sttSource?: unknown;
   };
   try {
     body = await request.json();
@@ -68,6 +76,8 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "NO_SPEECH" }, { status: 422 });
   }
 
+  const sttSource = STT_SOURCES.find((value) => value === body.sttSource);
+
   try {
     const last = segments[segments.length - 1];
     const hintedDuration = last ? Math.ceil(last.endTime) : 0;
@@ -81,6 +91,7 @@ export async function POST(request: NextRequest) {
       targetLanguage,
       {
         sttOverride: segments,
+        ...(sttSource ? { sttOverrideSource: sttSource } : {}),
         maxDurationSeconds: limits.maxDurationSeconds,
         remainingPrepSeconds:
           limits.decision.kind === "import"

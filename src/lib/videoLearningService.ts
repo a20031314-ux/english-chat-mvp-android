@@ -12,6 +12,7 @@ import { groupMeaningUnits } from "@/lib/videoSubtitle/groupMeaningUnits";
 import { distinctSpokenLine } from "@/lib/videoSubtitle/subtitleDraft";
 import type {
   NormalizedSegment,
+  SttSegment,
   PreparedTranscript,
   SubtitleSegment,
 } from "@/lib/videoSubtitle/types";
@@ -343,6 +344,23 @@ export function regroupStudyCues(cues: VideoSubtitle[]): VideoSubtitle[] {
   return mergeCuesWithSameGloss(regrouped);
 }
 
+/**
+ * The device's own caption lines, kept as the display spine. The server groups
+ * them into sentence units for translation — good for the reading, far too
+ * coarse to follow, since one unit can span ten seconds of speech.
+ */
+function segmentsFromDeviceStt(segments: SttSegment[]): NormalizedSegment[] {
+  return segments.map((segment) => ({
+    id: segment.id,
+    startTime: segment.startTime,
+    endTime: segment.endTime,
+    rawText: segment.text,
+    normalizedText: segment.text,
+    confidence: segment.confidence,
+    uncertain: segment.uncertain,
+  }));
+}
+
 function cuesAsGlossSegments(cues: VideoSubtitle[]): NormalizedSegment[] {
   return cues.map((cue) => ({
     id: cue.id,
@@ -533,6 +551,7 @@ export async function prepareEnglishWatch(
     signal: options?.signal,
   });
   let prepared: PreparedTranscript;
+  let deviceSegments: SttSegment[] | null = null;
   const preparePayload = (await prepareResponse.json().catch(() => ({}))) as {
     error?: string;
     segments?: PreparedTranscript["segments"];
@@ -559,7 +578,7 @@ export async function prepareEnglishWatch(
   } else if (needsClientAudio) {
     options?.onProgress?.({ percent: 16, step: "speech" });
     try {
-      const segments = await transcribeYouTubeAudioOnDevice(videoUrl, {
+      const device = await transcribeYouTubeAudioOnDevice(videoUrl, {
         targetLanguage,
         signal: options?.signal,
         onProgress: (percent) =>
@@ -573,7 +592,8 @@ export async function prepareEnglishWatch(
           locale,
           interfaceLanguage: locale,
           targetLanguage,
-          segments,
+          segments: device.segments,
+          sttSource: device.source,
         }),
         signal: options?.signal,
       });
@@ -581,6 +601,7 @@ export async function prepareEnglishWatch(
         throw new VideoSubtitleClientError(await readError(fromStt));
       }
       prepared = (await fromStt.json()) as PreparedTranscript;
+      deviceSegments = device.segments;
     } catch (error) {
       if (error instanceof VideoSubtitleClientError) throw error;
       if (error instanceof ClientAudioError) {
@@ -597,10 +618,14 @@ export async function prepareEnglishWatch(
   options?.onStatus?.("cleanup");
   options?.onProgress?.({ percent: 100, step: "cleanup" });
 
+  const spine =
+    deviceSegments && deviceSegments.length > prepared.segments.length
+      ? segmentsFromDeviceStt(deviceSegments)
+      : prepared.segments;
   const englishCues =
     prepared.captionMode === "official-ui"
       ? officialUiCuesFromPrepared(prepared)
-      : englishCuesFromSegments(prepared.segments);
+      : englishCuesFromSegments(spine);
   if (englishCues.length === 0) {
     throw new VideoSubtitleClientError("NO_SPEECH");
   }

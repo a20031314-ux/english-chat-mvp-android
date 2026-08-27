@@ -8,7 +8,7 @@ import {
   STT_CHUNK_SECONDS,
   sttChunkStarts,
 } from "@/lib/videoSubtitle/sttChunks";
-import type { SttSegment, YouTubeSource } from "@/lib/videoSubtitle/types";
+import type { SttSegment, SttSource, YouTubeSource } from "@/lib/videoSubtitle/types";
 import { transcribeYouTubeCaptions } from "@/lib/videoSubtitle/youtubeCaptions";
 import { resolveYouTubeSource } from "@/lib/videoSubtitle/youtubePlayer";
 
@@ -109,7 +109,7 @@ export async function transcribeYouTubeAudioOnDevice(
     signal?: AbortSignal;
     onProgress?: (percent: number) => void;
   },
-): Promise<SttSegment[]> {
+): Promise<{ segments: SttSegment[]; source: SttSource }> {
   console.error("[video-client-audio] start 2.31");
   options.onProgress?.(18);
   let source: YouTubeSource;
@@ -133,7 +133,10 @@ export async function transcribeYouTubeAudioOnDevice(
     ) {
       console.error("[video-client-audio] device captions", captions.length);
       options.onProgress?.(80);
-      return regularizeSttSegments(captions);
+      return {
+        segments: regularizeSttSegments(captions),
+        source: "youtube-asr",
+      };
     }
     if (captions.length > 0) {
       console.error("[video-client-audio] sparse captions, using audio", {
@@ -216,5 +219,5 @@ export async function transcribeYouTubeAudioOnDevice(
   const merged = mergeSttChunks(chunks);
   if (merged.length === 0) throw new ClientAudioError("NO_SPEECH");
   options.onProgress?.(80);
-  return merged;
+  return { segments: merged, source: "whisper" };
 }
