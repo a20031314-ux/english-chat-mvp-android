@@ -800,11 +800,15 @@ export function VideoLearningTab({
           videoUrl: parsed.url,
         }, cues);
       } catch (error) {
-        if (seq !== loadSeq.current || abort.signal.aborted) return;
-        const code =
-          error instanceof VideoSubtitleClientError ? error.code : "";
+        // Only a newer load may leave this alone — it owns the screen now.
+        // Anything else has to put the screen back, including a request that
+        // was aborted: bailing out early left the loading state up for good.
+        if (seq !== loadSeq.current) return;
         setPhase("input");
         setVideoId(null);
+        if (abort.signal.aborted) return;
+        const code =
+          error instanceof VideoSubtitleClientError ? error.code : "";
         setUrlError(
             code === "NO_SPEECH" ||
             code === "NO_AUDIO"

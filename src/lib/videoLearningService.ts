@@ -610,8 +610,10 @@ export async function prepareEnglishWatch(
       if (error instanceof ClientAudioError) {
         throw new VideoSubtitleClientError(error.code);
       }
+      // Reaching here is usually the network dropping, not silence in the
+      // video. Reporting it as "no speech" sent people looking at the clip.
       console.error("[video-client-audio] prepare fallback", error);
-      throw new VideoSubtitleClientError("NO_SPEECH");
+      throw new VideoSubtitleClientError("PREPARE_FAILED");
     }
   } else if (!prepareResponse.ok) {
     throw new VideoSubtitleClientError(prepareError);
