@@ -37,7 +37,8 @@ export function SubtitleGenerationStatus({
         <button
           type="button"
           onClick={onCancel}
-          className="shrink-0 rounded-md border border-white/15 bg-white/5 px-2 py-1 text-[11px] text-slate-200 hover:bg-white/10"
+          /* Same red as hanging up a call: this is the app's other stop button. */
+          className="shrink-0 rounded-md bg-rose-600 px-2.5 py-1 text-[11px] font-medium text-white hover:bg-rose-500"
         >
           {ui.videoLearnCancelPrep}
         </button>
