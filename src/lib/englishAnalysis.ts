@@ -4,6 +4,9 @@ import {
   type LearnerLevel,
 } from "@/lib/languageAnalysisPrompt";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
+import { ALL_ANALYSIS_DIMENSIONS } from "@/lib/salience/languageProfiles";
+import type { SentenceSpanAnalysis } from "@/lib/salience/sentenceSpanPrompt";
+import type { AnalysisDimension } from "@/lib/salience/types";
 import { listWordSpans } from "@/lib/textTokens";
 import { speechLooksWrongLanguage } from "@/lib/videoSubtitle/languageMatch";
 
@@ -112,6 +115,7 @@ export type EnglishElementAnalysis = {
   relatedConcepts?: EnglishRelatedConcept[];
   idiom?: EnglishIdiomNote;
   grammar?: EnglishGrammarNote[];
+  dimensionResults?: Partial<Record<AnalysisDimension, string>>;
 };
 
 export type EnglishAnalysisTarget = {
@@ -327,6 +331,50 @@ export function normalizeEnglishInputAnalysis(
   };
 }
 
+function parseDimensionResults(
+  o: Record<string, unknown>,
+): Partial<Record<AnalysisDimension, string>> | undefined {
+  const nested =
+    o.dimensionResults &&
+    typeof o.dimensionResults === "object" &&
+    !Array.isArray(o.dimensionResults)
+      ? (o.dimensionResults as Record<string, unknown>)
+      : o;
+  const out: Partial<Record<AnalysisDimension, string>> = {};
+  for (const dimension of ALL_ANALYSIS_DIMENSIONS) {
+    const text = asLine(nested[dimension]);
+    if (!text || /^skip$/i.test(text)) continue;
+    out[dimension] = text;
+  }
+  return Object.keys(out).length ? out : undefined;
+}
+
+export function mapSentenceSpanToEnglishElement(
+  analysis: SentenceSpanAnalysis,
+  targetLanguage?: string,
+): EnglishElementAnalysis {
+  const examples = asExamples(
+    analysis.examples.map((example) => ({
+      sentence: example.sentence,
+      translation: example.meaning,
+    })),
+    2,
+    targetLanguage,
+  );
+  const dimensionResults = Object.keys(analysis.dimensionResults).length
+    ? analysis.dimensionResults
+    : undefined;
+  return {
+    selectedText: analysis.selectedText,
+    contextSentence: analysis.contextSentence,
+    title: analysis.selectedText,
+    meaningInContext: analysis.meaningInContext,
+    ...(analysis.reading ? { reading: analysis.reading } : {}),
+    ...(examples.length ? { examples } : {}),
+    ...(dimensionResults ? { dimensionResults } : {}),
+  };
+}
+
 export function normalizeEnglishElementAnalysis(
   raw: unknown,
   selectedText: string,
@@ -343,13 +391,15 @@ export function normalizeEnglishElementAnalysis(
     o.grammar ?? o.grammarNotes,
     contextSentence,
   );
+  const dimensionResults = parseDimensionResults(o);
   if (
     !meaningInContext &&
     !contextExplanation &&
     !whyUsed &&
     !usageExplanation &&
     !idiom &&
-    grammar.length === 0
+    grammar.length === 0 &&
+    !dimensionResults
   ) {
     return null;
   }
@@ -411,5 +461,6 @@ export function normalizeEnglishElementAnalysis(
     ...(relatedConcepts.length ? { relatedConcepts } : {}),
     ...(idiom ? { idiom } : {}),
     ...(grammar.length ? { grammar } : {}),
+    ...(dimensionResults ? { dimensionResults } : {}),
   };
 }

@@ -14,6 +14,10 @@ import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 import { isSameAnalysisSpan } from "@/lib/englishAnalysis";
 import { idiomUnitContaining } from "@/lib/expressionUnits";
 import {
+  analysisDimensionLabel,
+  orderedDimensionEntries,
+} from "@/lib/salience/dimensionLabels";
+import {
   findLearningSpan,
   listClickableSpans,
   peekLearningSpans,
@@ -28,6 +32,7 @@ import { isSentenceVocabUnit } from "@/lib/vocabulary";
 export function EnglishAnalysisViewer({
   session,
   ui,
+  locale,
   onTab,
   onRange,
   onAnalyzeRange,
@@ -35,6 +40,7 @@ export function EnglishAnalysisViewer({
 }: {
   session: EnglishAnalysisSession;
   ui: UICopy;
+  locale: string;
   onTab: (tab: InspectTab) => void;
   onRange: (start: number, end: number) => void;
   onAnalyzeRange: () => void;
@@ -102,6 +108,7 @@ export function EnglishAnalysisViewer({
             <SentenceTab
               session={session}
               ui={ui}
+              locale={locale}
               onRange={onRange}
               onAnalyzeRange={onAnalyzeRange}
             />
@@ -115,11 +122,13 @@ export function EnglishAnalysisViewer({
 function SentenceTab({
   session,
   ui,
+  locale,
   onRange,
   onAnalyzeRange,
 }: {
   session: EnglishAnalysisSession;
   ui: UICopy;
+  locale: string;
   onRange: (start: number, end: number) => void;
   onAnalyzeRange: () => void;
 }) {
@@ -376,7 +385,50 @@ function SentenceTab({
               {analysis.meaningInContext}
             </p>
           ) : null}
-          {analysis.grammar?.map((note) => (
+          {analysis.reading ? (
+            <p className="text-sm leading-relaxed text-slate-400">
+              {analysis.reading}
+            </p>
+          ) : null}
+          {orderedDimensionEntries(analysis.dimensionResults).map((entry) => (
+            <section key={entry.dimension}>
+              <p className="text-[11px] font-semibold tracking-wide text-slate-500">
+                {analysisDimensionLabel(locale, entry.dimension)}
+              </p>
+              <p className="mt-1 text-sm leading-relaxed text-slate-100">
+                {entry.text}
+              </p>
+            </section>
+          ))}
+          {analysis.examples?.length ? (
+            <section>
+              <p className="text-[11px] font-semibold tracking-wide text-slate-500">
+                {ui.insightExamples}
+              </p>
+              <ul className="mt-1.5 space-y-2">
+                {analysis.examples.map((example) => (
+                  <li key={example.english}>
+                    <div className="flex items-start gap-2">
+                      <p className="min-w-0 flex-1 text-sm leading-relaxed text-slate-100">
+                        {example.english}
+                      </p>
+                      <TTSButton
+                        text={example.english}
+                        ariaLabel={ui.listen}
+                      />
+                    </div>
+                    {example.translation ? (
+                      <p className="mt-0.5 text-xs leading-relaxed text-slate-500">
+                        {example.translation}
+                      </p>
+                    ) : null}
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ) : null}
+          {!analysis.dimensionResults &&
+            analysis.grammar?.map((note) => (
             <section key={note.name}>
               <p className="text-[11px] font-semibold tracking-wide text-slate-500">
                 {ui.insightPattern}

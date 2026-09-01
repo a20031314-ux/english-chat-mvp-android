@@ -38,7 +38,7 @@ const DIMENSION_ROLE_KO: Record<AnalysisDimension, string> = {
     "관용구나 덩어리의 유래가 기억에 도움이 될 때만. 불규칙 동사·분사·평범한 단어는 SKIP.",
 };
 
-function dimensionRole(
+export function dimensionRole(
   dimension: AnalysisDimension,
   explanationLanguage: string,
 ): string {

@@ -3,20 +3,17 @@ import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
   ENGLISH_ANALYSIS_LANGUAGES,
-  normalizeEnglishElementAnalysis,
+  mapSentenceSpanToEnglishElement,
 } from "@/lib/englishAnalysis";
-import { englishElementSystem } from "@/lib/englishAnalysisPrompt";
-import {
-  adaptiveElementSystem,
-  mapAdaptiveElementToEnglishElement,
-  normalizeAdaptiveElementAnalysis,
-} from "@/lib/adaptiveLanguageAnalysis";
 import { asLearnerLevel } from "@/lib/languageAnalysisPrompt";
-import { asTranslationSourceType } from "@/lib/naturalTranslation";
 import {
   coerceLanguageCode,
   learningLanguageName,
 } from "@/lib/learningLanguages";
+import {
+  buildSentenceSpanPrompt,
+  parseSentenceSpanAnalysis,
+} from "@/lib/salience/sentenceSpanPrompt";
 
 export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
@@ -74,7 +71,6 @@ export async function POST(request: NextRequest) {
       ? body.interfaceLanguage
       : locale;
   const targetLanguage = coerceLanguageCode(body.targetLanguage);
-  const sourceType = asTranslationSourceType(body.sourceType);
   const learnerLevel = asLearnerLevel(body.learnerLevel);
   const languageHint =
     typeof body.language === "string" && body.language.trim()
@@ -87,8 +83,11 @@ export async function POST(request: NextRequest) {
         .filter(Boolean)
         .slice(-6)
     : [];
-
-  const useEnglishPipeline = targetLanguage === "en";
+  const translation =
+    (typeof body.analysisTranslation === "string" &&
+      body.analysisTranslation.trim()) ||
+    (typeof body.translation === "string" && body.translation.trim()) ||
+    "";
 
   try {
     const completion = await openai.chat.completions.create({
@@ -96,21 +95,15 @@ export async function POST(request: NextRequest) {
       messages: [
         {
           role: "system",
-          content: useEnglishPipeline
-            ? englishElementSystem({
-                locale,
-                interfaceLanguage,
-                sourceType,
-                learnerLevel,
-              })
-            : adaptiveElementSystem({
-                locale,
-                interfaceLanguage,
-                targetLanguage,
-                sourceType,
-                learnerLevel,
-                languageHint,
-              }),
+          content: buildSentenceSpanPrompt({
+            sentence: contextSentence,
+            spanText: selectedText,
+            language: targetLanguage,
+            nativeLanguage: interfaceLanguage,
+            explanationLanguage: interfaceLanguage,
+            ...(translation ? { translation } : {}),
+            ...(learnerLevel ? { learnerLevel } : {}),
+          }),
         },
         {
           role: "user",
@@ -139,31 +132,17 @@ export async function POST(request: NextRequest) {
       return jsonWithCors(request, { error: "empty completion" }, { status: 500 });
     }
     const parsed = JSON.parse(raw);
-
-    if (useEnglishPipeline) {
-      const analysis = normalizeEnglishElementAnalysis(
-        parsed,
-        selectedText,
-        contextSentence,
-      );
-      if (!analysis) {
-        return jsonWithCors(request, { error: "empty analysis" }, { status: 500 });
-      }
-      return jsonWithCors(request, analysis);
-    }
-
-    const adaptive = normalizeAdaptiveElementAnalysis(
-      parsed,
-      selectedText,
-      contextSentence,
-      targetLanguage,
-    );
-    if (!adaptive) {
+    const span = parseSentenceSpanAnalysis(parsed, {
+      sentence: contextSentence,
+      spanText: selectedText,
+      language: targetLanguage,
+    });
+    if (!span) {
       return jsonWithCors(request, { error: "empty analysis" }, { status: 500 });
     }
     return jsonWithCors(
       request,
-      mapAdaptiveElementToEnglishElement(adaptive),
+      mapSentenceSpanToEnglishElement(span, targetLanguage),
     );
   } catch (error) {
     console.error("[english-analysis/element]", error);

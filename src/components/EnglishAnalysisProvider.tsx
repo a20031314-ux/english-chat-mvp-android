@@ -89,6 +89,7 @@ export function EnglishAnalysisProvider({
           <EnglishAnalysisViewer
             session={analysis.session}
             ui={ui}
+            locale={locale}
             onTab={analysis.setTab}
             onRange={analysis.setRange}
             onAnalyzeRange={analysis.analyzeRange}
