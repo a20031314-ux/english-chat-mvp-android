@@ -1,6 +1,6 @@
 {
   "name": "english-chat-mvp",
-  "version": "2.37.0",
+  "version": "2.38.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -10,7 +10,7 @@
     "build:web": "next build",
     "start": "next start",
     "lint": "eslint",
-      "test:subtitle": "node --experimental-strip-types --test src/lib/videoSubtitle/groupMeaningUnits.test.ts src/lib/videoSubtitle/windows.test.ts src/lib/videoSubtitle/sceneContext.speech.test.ts src/lib/videoSubtitle/viewerContext.test.ts src/lib/videoSubtitle/sttChunks.test.ts src/lib/videoSubtitle/speechRegister.test.ts src/lib/videoSubtitle/sentenceFromWords.test.ts src/lib/videoSubtitle/formatSubtitles.test.ts src/lib/videoSubtitle/speechNoise.test.ts",
+    "test:subtitle": "node --experimental-strip-types --test src/lib/videoSubtitle/groupMeaningUnits.test.ts src/lib/videoSubtitle/windows.test.ts src/lib/videoSubtitle/sceneContext.speech.test.ts src/lib/videoSubtitle/viewerContext.test.ts src/lib/videoSubtitle/sttChunks.test.ts src/lib/videoSubtitle/speechRegister.test.ts src/lib/videoSubtitle/sentenceFromWords.test.ts src/lib/videoSubtitle/formatSubtitles.test.ts src/lib/videoSubtitle/speechNoise.test.ts",
     "test:salience": "node --experimental-strip-types --test src/lib/languageLearningAnalysis.test.ts src/lib/salience/runDimensions.test.ts src/lib/salience/candidates.test.ts",
     "compare:subtitle": "node --experimental-strip-types scripts/compare-subtitle-naturalization.mjs",
     "compare:translate": "node --experimental-strip-types scripts/compare-reconstruction-translate.mjs",
