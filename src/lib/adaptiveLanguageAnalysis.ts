@@ -14,25 +14,15 @@ import {
   explanationLanguageGuard,
   interfaceLanguageDisplayName,
 } from "@/lib/languageLearningAnalysis";
-import {
-  isLearningLanguageCode,
-  learningLanguageName,
-} from "@/lib/learningLanguages";
+import { learningLanguageName } from "@/lib/learningLanguages";
 import {
   naturalTranslationPrinciples,
   type TranslationSourceType,
 } from "@/lib/naturalTranslation";
-import {
-  parseEnglishGrammarNotes,
-  parseEnglishIdiomNote,
-  type EnglishElementAnalysis,
-  type EnglishGrammarNote,
-  type EnglishIdiomNote,
-  type EnglishInputAnalysis,
-  type LanguageKeyElement,
+import type {
+  EnglishInputAnalysis,
+  LanguageKeyElement,
 } from "@/lib/englishAnalysis";
-import type { ExpressionInsight } from "@/lib/expressionInsight";
-import { speechLooksWrongLanguage } from "@/lib/videoSubtitle/languageMatch";
 
 export const ADAPTIVE_MAX_LEARNING_UNITS = 4;
 
@@ -72,24 +62,6 @@ export type AdaptiveSentenceAnalysis = {
   nuance?: string | null;
   optionalLanguageNote?: string | null;
   language?: string;
-};
-
-export type AdaptiveElementAnalysis = {
-  selectedText: string;
-  contextSentence: string;
-  title: string;
-  type?: LearningUnitType;
-  meaningInContext: string;
-  whyUsed?: string;
-  pattern?: string;
-  pronunciation?: string;
-  reading?: string;
-  romanization?: string;
-  baseForm?: string;
-  examples?: Array<{ sentence: string; meaning: string }>;
-  otherUsages?: Array<{ pattern: string; meaning: string }>;
-  idiom?: EnglishIdiomNote;
-  grammar?: EnglishGrammarNote[];
 };
 
 function adaptiveLevelHint(level?: LearnerLevel): string {
@@ -217,98 +189,6 @@ Rules:
 - Omit unused optional fields. Do not pad.`;
 }
 
-export function adaptiveElementSystem(options: {
-  locale: string;
-  interfaceLanguage?: string;
-  targetLanguage: string;
-  sourceType?: TranslationSourceType;
-  learnerLevel?: LearnerLevel;
-  languageHint?: string;
-}): string {
-  const interfaceLanguage = options.interfaceLanguage ?? options.locale;
-  const targetName = learningLanguageName(options.targetLanguage);
-  const interfaceName =
-    ANALYSIS_LANGUAGES[interfaceLanguage] ??
-    interfaceLanguageDisplayName(interfaceLanguage);
-  const explanationGuard = explanationLanguageGuard({
-    interfaceLanguage,
-    fieldsDescription:
-      "meaningInContext, grammar.why, grammar.general, grammar.inThisSentence, example translations, and inner.explanation",
-    learningLanguage: options.targetLanguage,
-  });
-  const sourceFormNote =
-    interfaceLanguage === "ko"
-      ? `Keep ${targetName} forms in title, pattern, reading, romanization, pronunciation, baseForm, inner.text, and grammar.examples[].sentence.`
-      : `Keep ${targetName} forms in title, pattern, reading, romanization, pronunciation, baseForm, inner.text, and grammar.examples[].sentence. Learner-facing explanations stay in ${interfaceName}.`;
-
-  return `${adaptiveCorePhilosophy(targetName)}
-
-Target language being learned: ${targetName} (${options.targetLanguage}).
-This request is DETAIL ZOOM for ONE selected learning unit inside ONE ${targetName} sentence.
-Adapt the depth to what THIS unit needs in ${targetName} (reading, conjugation, tone, register, etc.) — but keep it short.
-
-Write learner-facing text in ${interfaceName}.
-${explanationGuard}
-${sourceFormNote}
-Caller language hint: ${options.languageHint?.trim() || targetName}.
-${adaptiveLevelHint(options.learnerLevel)}
-
-Default shape:
-1) meaningInContext: ONLY what THIS selected span means in THIS sentence. One short line. Not a paraphrase of the whole sentence.
-2) If the selected span contains a grammar / form pattern worth teaching in ${targetName}, fill grammar.
-   - why: which marker/form in THIS span makes it that pattern
-   - general: how the pattern works
-   - inThisSentence: how THIS sentence uses it
-   - examples: 2 short NEW ${targetName} sentences of the same pattern, each with a ${interfaceName} translation. Never English unless the learning language is English.
-   - inner: explain a smaller clause/chunk inside the span when one exists
-Do not write a linguistics lecture.
-
-meaningInContext follows:
-${naturalTranslationPrinciples({
-  locale: interfaceLanguage,
-  targetLanguage: options.targetLanguage,
-  interfaceLanguage,
-  role: "meaning-in-context",
-  sourceType: options.sourceType ?? "unknown",
-})}
-
-Return ONLY JSON:
-{
-  "selectedText": "...",
-  "contextSentence": "...",
-  "title": "short label of THIS use",
-  "type": "word|expression|grammar|character|pronunciation|form|nuance|slang|other",
-  "meaningInContext": "one short line: what THIS span means HERE",
-  "grammar": [
-    {
-      "name": "short grammar/form label",
-      "why": "which marker/form in THIS span makes it that pattern",
-      "general": "how this grammar/form works in general, 1–2 sentences",
-      "inThisSentence": "how THIS sentence uses it, 1–2 sentences",
-      "examples": [
-        {"sentence": "NEW short ${targetName} sentence of this pattern", "translation": "natural ${interfaceName}"},
-        {"sentence": "another NEW ${targetName} sentence of this pattern", "translation": "natural ${interfaceName}"}
-      ],
-      "inner": [
-        {
-          "text": "exact inner substring",
-          "name": "inner pattern label",
-          "explanation": "how this inner piece is built here"
-        }
-      ]
-    }
-  ]
-}
-
-Rules:
-- Omit empty fields. Do not pad idiom, whyUsed, pattern, or otherUsages.
-- meaningInContext is the selected span only. Never retell the whole sentence.
-- If the span is a clause or grammar/form chunk, ALWAYS fill grammar, why, examples (2), and inner when a smaller piece sits inside.
-- grammar.examples[].sentence MUST be written in ${targetName}. Do not write English example sentences when the learning language is not English. Do not copy English teaching lines such as "Call me when you arrive."
-- grammar.examples[].translation MUST be in ${interfaceName}.
-- inner.text MUST be an exact ${targetName} substring of selectedText.`;
-}
-
 function asLine(value: unknown): string {
   return typeof value === "string" ? value.replace(/\s+/g, " ").trim() : "";
 }
@@ -391,90 +271,6 @@ export function normalizeAdaptiveSentenceAnalysis(
   };
 }
 
-export function normalizeAdaptiveElementAnalysis(
-  raw: unknown,
-  selectedText: string,
-  contextSentence: string,
-  targetLanguage?: string,
-): AdaptiveElementAnalysis | null {
-  if (!raw || typeof raw !== "object") return null;
-  const o = raw as Record<string, unknown>;
-  const meaningInContext =
-    asLine(o.meaningInContext) || asLine(o.meaning) || "";
-  const whyUsed = asLine(o.whyUsed) || asLine(o.explanation);
-  const idiom = parseEnglishIdiomNote(o.idiom, contextSentence);
-  const grammar = parseEnglishGrammarNotes(
-    o.grammar ?? o.grammarNotes,
-    contextSentence,
-    targetLanguage,
-  );
-  if (!meaningInContext && !whyUsed && !idiom && grammar.length === 0) return null;
-
-  const examples: Array<{ sentence: string; meaning: string }> = [];
-  if (Array.isArray(o.examples)) {
-    for (const item of o.examples) {
-      if (!item || typeof item !== "object") continue;
-      const e = item as Record<string, unknown>;
-      const sentence = asLine(e.sentence) || asLine(e.english) || asLine(e.text);
-      const meaning = asLine(e.meaning) || asLine(e.translation);
-      if (!sentence || !meaning) continue;
-      if (
-        isLearningLanguageCode(targetLanguage) &&
-        targetLanguage !== "en" &&
-        speechLooksWrongLanguage(sentence, targetLanguage)
-      ) {
-        continue;
-      }
-      examples.push({ sentence, meaning });
-      if (examples.length >= 2) break;
-    }
-  }
-
-  const otherUsages: Array<{ pattern: string; meaning: string }> = [];
-  if (Array.isArray(o.otherUsages)) {
-    for (const item of o.otherUsages) {
-      if (!item || typeof item !== "object") continue;
-      const u = item as Record<string, unknown>;
-      const pattern = asLine(u.pattern);
-      const meaning = asLine(u.meaning);
-      if (!pattern || !meaning) continue;
-      otherUsages.push({ pattern, meaning });
-      if (otherUsages.length >= 3) break;
-    }
-  }
-
-  const reading =
-    asLine(o.reading) ||
-    asLine(o.romanization) ||
-    asLine(o.pronunciation) ||
-    "";
-  const type = asUnitType(o.type);
-  const title = asLine(o.title) || selectedText;
-  const pattern = asLine(o.pattern);
-  const pronunciation = asLine(o.pronunciation);
-  const romanization = asLine(o.romanization);
-  const readingOnly = asLine(o.reading);
-  const baseForm = asLine(o.baseForm);
-
-  return {
-    selectedText: asLine(o.selectedText) || selectedText,
-    contextSentence: asLine(o.contextSentence) || contextSentence,
-    title,
-    type,
-    meaningInContext: meaningInContext || whyUsed,
-    ...(whyUsed ? { whyUsed } : {}),
-    ...(pattern ? { pattern } : {}),
-    ...(pronunciation ? { pronunciation } : {}),
-    ...(readingOnly ? { reading: readingOnly } : reading ? { reading } : {}),
-    ...(romanization ? { romanization } : {}),
-    ...(baseForm ? { baseForm } : {}),
-    ...(examples.length ? { examples } : {}),
-    ...(otherUsages.length ? { otherUsages } : {}),
-    ...(idiom ? { idiom } : {}),
-    ...(grammar.length ? { grammar } : {}),
-  };
-}
-
 function unitToKeyElement(unit: LearningUnit): LanguageKeyElement {
   const reading =
     unit.reading || unit.romanization || unit.pronunciation || undefined;
@@ -512,70 +308,5 @@ export function mapAdaptiveSentenceToEnglishInput(
     })),
     ...(nuance ? { nuance } : {}),
     ...(correctionNote ? { correctionNote } : {}),
-  };
-}
-
-/** Map adaptive detail → existing element viewer schema. */
-export function mapAdaptiveElementToEnglishElement(
-  analysis: AdaptiveElementAnalysis,
-): EnglishElementAnalysis {
-  const reading =
-    analysis.reading ||
-    analysis.romanization ||
-    analysis.pronunciation ||
-    undefined;
-  const whyParts = [analysis.whyUsed];
-  if (analysis.baseForm) {
-    whyParts.push(`Base form: ${analysis.baseForm}`);
-  }
-  const whyUsed = whyParts.filter(Boolean).join("\n\n") || undefined;
-
-  return {
-    selectedText: analysis.selectedText,
-    contextSentence: analysis.contextSentence,
-    title: analysis.title,
-    meaningInContext: analysis.meaningInContext,
-    ...(reading ? { reading } : {}),
-    ...(whyUsed ? { whyUsed } : {}),
-    ...(analysis.pattern ? { pattern: analysis.pattern } : {}),
-    ...(analysis.examples?.length
-      ? {
-          examples: analysis.examples.map((ex) => ({
-            english: ex.sentence,
-            translation: ex.meaning,
-          })),
-        }
-      : {}),
-    ...(analysis.otherUsages?.length
-      ? {
-          otherUsages: analysis.otherUsages.map((u) => ({
-            pattern: u.pattern,
-            meaning: u.meaning,
-          })),
-        }
-      : {}),
-    ...(analysis.idiom ? { idiom: analysis.idiom } : {}),
-    ...(analysis.grammar?.length ? { grammar: analysis.grammar } : {}),
-  };
-}
-
-/** Map adaptive detail → expression-insight sheet schema. */
-export function mapAdaptiveElementToExpressionInsight(
-  analysis: AdaptiveElementAnalysis,
-): ExpressionInsight {
-  return {
-    selectedText: analysis.selectedText,
-    title: analysis.title,
-    meaning: analysis.meaningInContext,
-    ...(analysis.whyUsed ? { explanation: analysis.whyUsed } : {}),
-    ...(analysis.pattern ? { pattern: analysis.pattern } : {}),
-    ...(analysis.examples?.length
-      ? {
-          examples: analysis.examples.map((ex) => ({
-            english: ex.sentence,
-            translation: ex.meaning,
-          })),
-        }
-      : {}),
   };
 }
