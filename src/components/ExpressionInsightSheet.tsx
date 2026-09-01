@@ -93,7 +93,7 @@ export function ExpressionInsightSheet({
             <p className="mt-4 text-sm text-rose-300">{ui.insightFailed}</p>
           ) : insight ? (
             <div className="mt-4 space-y-4">
-              {insight.explanation ? (
+              {insight.explanation && !insight.dimensionResults ? (
                 <p className="text-sm leading-relaxed text-slate-100">
                   {insight.explanation}
                 </p>

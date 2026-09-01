@@ -117,7 +117,7 @@ export async function POST(request: NextRequest) {
     if (!span) {
       return jsonWithCors(request, { error: "empty insight" }, { status: 500 });
     }
-    return jsonWithCors(request, mapSentenceSpanToExpressionInsight(span));
+    return jsonWithCors(request, mapSentenceSpanToExpressionInsight(span, interfaceLanguage));
   } catch (error) {
     console.error("[expression-insight]", error);
     return jsonWithCors(request, { error: "INSIGHT_FAILED" }, { status: 500 });

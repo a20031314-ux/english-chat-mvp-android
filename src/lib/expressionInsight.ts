@@ -1,5 +1,6 @@
 import type { SentenceSpanAnalysis } from "@/lib/salience/sentenceSpanPrompt";
 import { parseDimensionResults } from "@/lib/englishAnalysis";
+import { legacyDimensionProse } from "@/lib/salience/dimensionLabels";
 import type { AnalysisDimension } from "@/lib/salience/types";
 
 export type ExpressionInsightExample = {
@@ -136,10 +137,16 @@ export function selectionFitsSentence(sentence: string, selected: string): boole
  */
 export function mapSentenceSpanToExpressionInsight(
   analysis: SentenceSpanAnalysis,
+  interfaceLanguage?: string,
 ): ExpressionInsight {
   const dimensionResults = Object.keys(analysis.dimensionResults).length
     ? analysis.dimensionResults
     : undefined;
+  // Sheets older than the dimension list render explanation, not dimensions.
+  const legacyExplanation =
+    dimensionResults && interfaceLanguage
+      ? legacyDimensionProse(interfaceLanguage, dimensionResults)
+      : "";
   return {
     selectedText: analysis.selectedText,
     title: analysis.selectedText,
@@ -153,6 +160,7 @@ export function mapSentenceSpanToExpressionInsight(
           })),
         }
       : {}),
+    ...(legacyExplanation ? { explanation: legacyExplanation } : {}),
     ...(dimensionResults ? { dimensionResults } : {}),
   };
 }

@@ -142,7 +142,7 @@ export async function POST(request: NextRequest) {
     }
     return jsonWithCors(
       request,
-      mapSentenceSpanToEnglishElement(span, targetLanguage),
+      mapSentenceSpanToEnglishElement(span, targetLanguage, interfaceLanguage),
     );
   } catch (error) {
     console.error("[english-analysis/element]", error);

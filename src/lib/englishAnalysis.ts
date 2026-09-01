@@ -5,6 +5,7 @@ import {
 } from "@/lib/languageAnalysisPrompt";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
 import { ALL_ANALYSIS_DIMENSIONS } from "@/lib/salience/languageProfiles";
+import { legacyDimensionProse } from "@/lib/salience/dimensionLabels";
 import type { SentenceSpanAnalysis } from "@/lib/salience/sentenceSpanPrompt";
 import type { AnalysisDimension } from "@/lib/salience/types";
 import { listWordSpans } from "@/lib/textTokens";
@@ -352,6 +353,7 @@ export function parseDimensionResults(
 export function mapSentenceSpanToEnglishElement(
   analysis: SentenceSpanAnalysis,
   targetLanguage?: string,
+  interfaceLanguage?: string,
 ): EnglishElementAnalysis {
   const examples = asExamples(
     analysis.examples.map((example) => ({
@@ -364,6 +366,20 @@ export function mapSentenceSpanToEnglishElement(
   const dimensionResults = Object.keys(analysis.dimensionResults).length
     ? analysis.dimensionResults
     : undefined;
+  // Viewers older than the dimension list read a grammar note and nothing
+  // else — not even top-level examples — so without this they show only the
+  // meaning line. Newer viewers skip grammar whenever dimensionResults is set.
+  const legacyGrammar =
+    dimensionResults && interfaceLanguage
+      ? [
+          {
+            name: analysis.selectedText,
+            general: legacyDimensionProse(interfaceLanguage, dimensionResults),
+            inThisSentence: analysis.meaningInContext,
+            ...(examples.length ? { examples } : {}),
+          },
+        ]
+      : undefined;
   return {
     selectedText: analysis.selectedText,
     contextSentence: analysis.contextSentence,
@@ -372,6 +388,7 @@ export function mapSentenceSpanToEnglishElement(
     ...(analysis.reading ? { reading: analysis.reading } : {}),
     ...(examples.length ? { examples } : {}),
     ...(dimensionResults ? { dimensionResults } : {}),
+    ...(legacyGrammar ? { grammar: legacyGrammar } : {}),
   };
 }
 

@@ -124,6 +124,25 @@ export function analysisDimensionLabel(
   return LABELS[code]?.[dimension] ?? LABELS.en[dimension];
 }
 
+/**
+ * The dimension notes as one paragraph, each prefixed with its label.
+ *
+ * Only for app builds older than the dimension-aware viewers, which read a
+ * single prose field and would otherwise show a bare meaning line. Delete
+ * this and its callers once those builds are gone.
+ */
+export function legacyDimensionProse(
+  locale: string,
+  results: Partial<Record<AnalysisDimension, string>> | undefined,
+): string {
+  return orderedDimensionEntries(results)
+    .map(
+      (entry) =>
+        analysisDimensionLabel(locale, entry.dimension) + ": " + entry.text,
+    )
+    .join(" ");
+}
+
 export function orderedDimensionEntries(
   results: Partial<Record<AnalysisDimension, string>> | undefined,
 ): Array<{ dimension: AnalysisDimension; text: string }> {
