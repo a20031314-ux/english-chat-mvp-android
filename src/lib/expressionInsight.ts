@@ -1,3 +1,7 @@
+import type { SentenceSpanAnalysis } from "@/lib/salience/sentenceSpanPrompt";
+import { parseDimensionResults } from "@/lib/englishAnalysis";
+import type { AnalysisDimension } from "@/lib/salience/types";
+
 export type ExpressionInsightExample = {
   english: string;
   translation?: string;
@@ -12,12 +16,16 @@ export type ExpressionInsight = {
   selectedText: string;
   title?: string;
   meaning?: string;
+  /** Pronunciation or reading for the span, when the language has one worth showing. */
+  reading?: string;
   explanation?: string;
   roleInSentence?: string;
   pattern?: string;
   examples?: ExpressionInsightExample[];
   tip?: string;
   comparison?: ExpressionInsightComparison;
+  /** Per-axis notes from the sentence-span prompt, already in the interface language. */
+  dimensionResults?: Partial<Record<AnalysisDimension, string>>;
 };
 
 export type ExpressionInsightRequest = {
@@ -77,7 +85,12 @@ export function normalizeExpressionInsight(
     asLine(o.explanation) || asLine(o.whyUsed) || asLine(o.usageExplanation);
   const roleInSentence =
     asLine(o.roleInSentence) || asLine(o.contextExplanation);
-  if (!meaning && !explanation && !roleInSentence) return null;
+  const reading = asLine(o.reading);
+  const dimensionResults = parseDimensionResults(o);
+  // A sentence-span answer can be dimensions and nothing else; that is not empty.
+  if (!meaning && !explanation && !roleInSentence && !dimensionResults) {
+    return null;
+  }
 
   const title = compactInsightTitle(asLine(o.title));
   const pattern = asLine(o.pattern);
@@ -97,12 +110,14 @@ export function normalizeExpressionInsight(
     selectedText,
     ...(title ? { title } : {}),
     ...(meaning ? { meaning } : {}),
+    ...(reading ? { reading } : {}),
     ...(explanation ? { explanation } : {}),
     ...(roleInSentence ? { roleInSentence } : {}),
     ...(pattern ? { pattern } : {}),
     ...(examples.length ? { examples } : {}),
     ...(tip ? { tip } : {}),
     ...(comparison ? { comparison } : {}),
+    ...(dimensionResults ? { dimensionResults } : {}),
   };
 }
 
@@ -111,4 +126,33 @@ export function selectionFitsSentence(sentence: string, selected: string): boole
   const needle = selected.replace(/\s+/g, " ").trim().toLowerCase();
   if (!hay || !needle || needle.length > 160) return false;
   return hay.includes(needle);
+}
+
+/**
+ * The sentence-span prompt answers along the learning language's own axes, not
+ * in the flat explanation/role/pattern slots this sheet was built around. The
+ * dimensions therefore travel as themselves rather than being flattened back
+ * into one paragraph — flattening is what that prompt exists to undo.
+ */
+export function mapSentenceSpanToExpressionInsight(
+  analysis: SentenceSpanAnalysis,
+): ExpressionInsight {
+  const dimensionResults = Object.keys(analysis.dimensionResults).length
+    ? analysis.dimensionResults
+    : undefined;
+  return {
+    selectedText: analysis.selectedText,
+    title: analysis.selectedText,
+    ...(analysis.meaningInContext ? { meaning: analysis.meaningInContext } : {}),
+    ...(analysis.reading ? { reading: analysis.reading } : {}),
+    ...(analysis.examples.length
+      ? {
+          examples: analysis.examples.map((example) => ({
+            english: example.sentence,
+            translation: example.meaning,
+          })),
+        }
+      : {}),
+    ...(dimensionResults ? { dimensionResults } : {}),
+  };
 }

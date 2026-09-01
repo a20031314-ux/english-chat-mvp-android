@@ -331,7 +331,7 @@ export function normalizeEnglishInputAnalysis(
   };
 }
 
-function parseDimensionResults(
+export function parseDimensionResults(
   o: Record<string, unknown>,
 ): Partial<Record<AnalysisDimension, string>> | undefined {
   const nested =

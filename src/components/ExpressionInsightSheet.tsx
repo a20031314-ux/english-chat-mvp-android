@@ -2,12 +2,17 @@
 
 import type { UICopy } from "@/lib/copy";
 import type { ExpressionInsight } from "@/lib/expressionInsight";
+import {
+  analysisDimensionLabel,
+  orderedDimensionEntries,
+} from "@/lib/salience/dimensionLabels";
 import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
 import { TTSButton } from "@/components/TTSButton";
 
 type ExpressionInsightSheetProps = {
   sentence: string;
   selected: string;
+  locale: string;
   insight: ExpressionInsight | null;
   isLoading: boolean;
   failed: boolean;
@@ -37,6 +42,7 @@ function SheetEnglish({
 export function ExpressionInsightSheet({
   sentence,
   selected,
+  locale,
   insight,
   isLoading,
   failed,
@@ -92,6 +98,21 @@ export function ExpressionInsightSheet({
                   {insight.explanation}
                 </p>
               ) : null}
+              {insight.reading ? (
+                <p className="text-sm leading-relaxed text-slate-400">
+                  {insight.reading}
+                </p>
+              ) : null}
+              {orderedDimensionEntries(insight.dimensionResults).map((entry) => (
+                <div key={entry.dimension}>
+                  <p className="text-[11px] font-semibold tracking-wide text-slate-500">
+                    {analysisDimensionLabel(locale, entry.dimension)}
+                  </p>
+                  <p className="mt-1 text-sm leading-relaxed text-slate-100">
+                    {entry.text}
+                  </p>
+                </div>
+              ))}
               {insight.roleInSentence ? (
                 <div>
                   <p className="text-[11px] font-semibold tracking-wide text-slate-500">

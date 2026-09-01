@@ -2,23 +2,21 @@ import { NextRequest } from "next/server";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
-  normalizeExpressionInsight,
+  mapSentenceSpanToExpressionInsight,
   selectionFitsSentence,
 } from "@/lib/expressionInsight";
 import {
   ANALYSIS_LANGUAGES,
   asLearnerLevel,
 } from "@/lib/languageAnalysisPrompt";
-import { englishElementSystem } from "@/lib/englishAnalysisPrompt";
-import {
-  adaptiveElementSystem,
-  mapAdaptiveElementToExpressionInsight,
-  normalizeAdaptiveElementAnalysis,
-} from "@/lib/adaptiveLanguageAnalysis";
 import {
   coerceLanguageCode,
   learningLanguageName,
 } from "@/lib/learningLanguages";
+import {
+  buildSentenceSpanPrompt,
+  parseSentenceSpanAnalysis,
+} from "@/lib/salience/sentenceSpanPrompt";
 
 export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
@@ -77,29 +75,20 @@ export async function POST(request: NextRequest) {
         .slice(-6)
     : [];
 
-  const useEnglishPipeline = targetLanguage === "en";
-
   try {
     const completion = await openai.chat.completions.create({
       model: chatModel(),
       messages: [
         {
           role: "system",
-          content: useEnglishPipeline
-            ? englishElementSystem({
-                locale,
-                interfaceLanguage,
-                sourceType: "conversation",
-                learnerLevel,
-              })
-            : adaptiveElementSystem({
-                locale,
-                interfaceLanguage,
-                targetLanguage,
-                sourceType: "conversation",
-                learnerLevel,
-                languageHint,
-              }),
+          content: buildSentenceSpanPrompt({
+            sentence,
+            spanText: selected,
+            language: targetLanguage,
+            nativeLanguage: interfaceLanguage,
+            explanationLanguage: interfaceLanguage,
+            ...(learnerLevel ? { learnerLevel } : {}),
+          }),
         },
         {
           role: "user",
@@ -120,29 +109,15 @@ export async function POST(request: NextRequest) {
     if (!raw) {
       return jsonWithCors(request, { error: "empty completion" }, { status: 500 });
     }
-    const parsed = JSON.parse(raw);
-
-    if (useEnglishPipeline) {
-      const insight = normalizeExpressionInsight(parsed, selected);
-      if (!insight) {
-        return jsonWithCors(request, { error: "empty insight" }, { status: 500 });
-      }
-      return jsonWithCors(request, insight);
-    }
-
-    const adaptive = normalizeAdaptiveElementAnalysis(
-      parsed,
-      selected,
+    const span = parseSentenceSpanAnalysis(JSON.parse(raw), {
       sentence,
-      targetLanguage,
-    );
-    if (!adaptive) {
+      spanText: selected,
+      language: targetLanguage,
+    });
+    if (!span) {
       return jsonWithCors(request, { error: "empty insight" }, { status: 500 });
     }
-    return jsonWithCors(
-      request,
-      mapAdaptiveElementToExpressionInsight(adaptive),
-    );
+    return jsonWithCors(request, mapSentenceSpanToExpressionInsight(span));
   } catch (error) {
     console.error("[expression-insight]", error);
     return jsonWithCors(request, { error: "INSIGHT_FAILED" }, { status: 500 });

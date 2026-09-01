@@ -31,6 +31,7 @@ export function ExpressionInsightProvider({
         <ExpressionInsightSheet
           sentence={insight.current.target.sentence}
           selected={insight.current.target.selected}
+          locale={locale}
           insight={insight.current.insight}
           isLoading={insight.current.isLoading}
           failed={insight.current.failed}
