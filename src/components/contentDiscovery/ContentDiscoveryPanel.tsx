@@ -22,6 +22,7 @@ import {
   type SavedDiscoveryChannel,
 } from "@/lib/contentDiscovery/savedChannels";
 import { importPointsForDuration } from "@/lib/billing/videoPrep";
+import { PointsIcon } from "@/components/PointsIcon";
 
 const INITIAL_VISIBLE = 8;
 const REVEAL_COUNT = 8;
@@ -152,6 +153,64 @@ function formatDuration(seconds?: number): string {
   const m = Math.floor(seconds / 60);
   const s = Math.floor(seconds % 60);
   return `${m}:${String(s).padStart(2, "0")}`;
+}
+
+function DiscoveryResultMeta({
+  item,
+  ui,
+}: {
+  item: ContentCandidate;
+  ui: UICopy;
+}) {
+  const points =
+    item.type === "video" && item.durationSeconds
+      ? importPointsForDuration(item.durationSeconds)
+      : null;
+  const bits: Array<string | { points: number }> = [
+    item.authorOrChannel,
+    item.type === "video"
+      ? formatDuration(item.durationSeconds)
+      : item.estimatedReadingMinutes
+        ? ui.discoverReadingMinutes.replace(
+            "{minutes}",
+            String(item.estimatedReadingMinutes),
+          )
+        : "",
+    ...(points != null ? [{ points }] : []),
+    item.hasOriginalCaptions ? ui.discoverCaptionsBadge : "",
+    item.source,
+  ].filter(
+    (bit): bit is string | { points: number } =>
+      typeof bit === "object" || Boolean(bit),
+  );
+
+  return (
+    <p className="mt-1 flex flex-wrap items-center gap-x-1.5 gap-y-0.5 text-xs text-slate-500">
+      {bits.map((bit, index) => (
+        <span key={index} className="inline-flex items-center gap-0.5">
+          {index > 0 ? (
+            <span aria-hidden className="text-slate-600">
+              ·
+            </span>
+          ) : null}
+          {typeof bit === "object" ? (
+            <span
+              className="inline-flex items-center gap-0.5 text-slate-200"
+              aria-label={ui.discoverImportPoints.replace(
+                "{n}",
+                String(bit.points),
+              )}
+            >
+              <PointsIcon />
+              <span className="tabular-nums">{bit.points}</span>
+            </span>
+          ) : (
+            bit
+          )}
+        </span>
+      ))}
+    </p>
+  );
 }
 
 function warningMessage(code: string, ui: UICopy): string {
@@ -1077,29 +1136,7 @@ export function ContentDiscoveryPanel({
                 <p className="text-sm font-semibold leading-snug text-slate-100">
                   {item.title}
                 </p>
-                <p className="mt-1 text-xs text-slate-500">
-                  {[
-                    item.authorOrChannel,
-                    item.type === "video"
-                      ? formatDuration(item.durationSeconds)
-                      : item.estimatedReadingMinutes
-                        ? ui.discoverReadingMinutes.replace(
-                            "{minutes}",
-                            String(item.estimatedReadingMinutes),
-                          )
-                        : "",
-                    item.type === "video" && item.durationSeconds
-                      ? ui.discoverImportPoints.replace(
-                          "{n}",
-                          String(importPointsForDuration(item.durationSeconds)),
-                        )
-                      : "",
-                    item.hasOriginalCaptions ? ui.discoverCaptionsBadge : "",
-                    item.source,
-                  ]
-                    .filter(Boolean)
-                    .join(" · ")}
-                </p>
+                <DiscoveryResultMeta item={item} ui={ui} />
                 {item.preview ? (
                   <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-slate-300">
                     {item.preview}

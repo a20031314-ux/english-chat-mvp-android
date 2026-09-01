@@ -4,7 +4,7 @@ import {
   spanFromWordSlice,
   textFromTimedWords,
 } from "./timedWords.ts";
-import { countCjkLetters, countLetters, normalizeSttToken } from "./sttTokens.ts";
+import { countCjkLetters, normalizeSttToken } from "./sttTokens.ts";
 import type { SentenceSpan, SttSegment, TimedWord } from "./types";
 
 const SENTENCE_PUNCT = /[.!?…。！？]["')\]]*$/u;

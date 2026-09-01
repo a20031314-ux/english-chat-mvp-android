@@ -82,7 +82,7 @@ export async function analyzeEnglishElement(input: {
         ? { analysisTranslation: input.analysisTranslation }
         : {}),
     }),
-    signal: AbortSignal.timeout(25000),
+    signal: AbortSignal.timeout(40000),
   });
   if (!response.ok) return null;
   const data: unknown = await response.json();
