@@ -3,6 +3,7 @@ import {
   looksLikeLiteralOrForeignCaption,
   leftoverEnglishContentWords,
 } from "@/lib/videoSubtitle/calqueDetect";
+import { lockedCollocationPromptRule } from "@/lib/videoSubtitle/lockedCollocations";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { asRecord, asString, parseModelJson } from "@/lib/videoSubtitle/parseModelJson";
@@ -26,7 +27,8 @@ function rewriteEmergencySystem(target: string, locale: string): string {
   return `Emergency: write ONE short natural spoken ${target} caption per id.
 NEVER leave naturalSubtitle empty.
 NEVER use dictionary/word-order calques.
-${koExamples}Return a JSON object:
+${locale === "ko" ? `"It's not just water" → "물뿐만이 아니야" (never "물이 아니야")
+` : ""}${koExamples}Return a JSON object:
 {"revisions":[{"id":"...","naturalSubtitle":"..."}]} — every id required, non-empty.`;
 }
 
@@ -50,8 +52,11 @@ function rewritePoliceSystem(
 - Never keep English phrase scaffolding in Korean order.
 - Compress into short spoken Korean. Never leave English content words inside Korean captions.
 - Never recap the speaker ("~에 대해 이야기하고 있어요", "누군가 …하고 있어"). Write the utterance.
+${lockedCollocationPromptRule()}
 `
       : `HARD RULES — prefer sense-for-sense (what a native would say) over word mapping:
+${lockedCollocationPromptRule()}
+
 - Never keep source phrase scaffolding in ${target} word order.
 - Compress into short spoken ${target}. Never leave source-language content words inside captions.
 `;

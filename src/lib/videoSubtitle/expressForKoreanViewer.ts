@@ -22,6 +22,10 @@ import { compactViewerContext } from "@/lib/videoSubtitle/viewerTypes";
 import { spokenTranslatePrinciples } from "@/lib/spokenTranslate";
 import { speechRegisterHint } from "@/lib/videoSubtitle/speechRegister";
 import { looksLikeNarratorGloss } from "@/lib/videoSubtitle/calqueDetect";
+import {
+  lockedCollocationLabels,
+  lockedCollocationPromptRule,
+} from "@/lib/videoSubtitle/lockedCollocations";
 
 const BATCH = 6;
 
@@ -95,6 +99,7 @@ Extra caption rules:
 - Write the caption AS THE SPEAKER's line. The output IS the utterance, not a recap of it.
 - Prefer natural spoken ${target} in this app's UI register (의역), not source-language word order.
 - Drop source discourse frames (the reason X is / what I'm saying is). Say the point.
+- ${lockedCollocationPromptRule()}
 - You MAY make established/implicit info explicit in ${target} only when needed for equivalent understanding (evidence established or strongly_implied — never speculative).
 - Do NOT over-explain. Caption only — no tutor notes.
 - Keep short (one breath). Do not unpack into extra commentary.
@@ -138,6 +143,7 @@ Return JSON:
                   previous: unit.previousTexts,
                   next: unit.nextTexts,
                   understoodMeaning: understood,
+                  lockedCollocations: lockedCollocationLabels(unit.original),
                   references: interp?.references ?? [],
                   intent: interp?.intent,
                   nativeTone: interp?.tone,

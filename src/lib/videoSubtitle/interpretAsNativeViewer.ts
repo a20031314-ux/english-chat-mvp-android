@@ -12,6 +12,10 @@ import type {
   ViewerContext,
 } from "@/lib/videoSubtitle/viewerTypes";
 import { compactViewerContext } from "@/lib/videoSubtitle/viewerTypes";
+import {
+  lockedCollocationLabels,
+  lockedCollocationPromptRule,
+} from "@/lib/videoSubtitle/lockedCollocations";
 
 const BATCH = 5;
 
@@ -93,6 +97,8 @@ Mark evidenceLevel:
 
 understoodMeaning is the CONTENT of this line (what was said), restated in English.
 NOT a reporter note.
+${lockedCollocationPromptRule()}
+If lockedCollocations is non-empty, those phrases MUST remain in understoodMeaning. Do not treat "just" as a filler when it is part of them.
 WRONG: "The speaker is mentioning China's DeepSeek" / "Someone is asking about OpenAI"
 RIGHT: "And as for China — well, DeepSeek, which shocked the world" / "Asking: is it called open-weight?"
 Keep understoodMeaning in clear English (1–2 sentences).
@@ -120,6 +126,7 @@ Return JSON:
                 id: unit.id,
                 previous: unit.previousTexts,
                 current: unit.original,
+                lockedCollocations: lockedCollocationLabels(unit.original),
                 next: unit.nextTexts,
                 scene: scenePayload(
                   sceneContextForUnit(

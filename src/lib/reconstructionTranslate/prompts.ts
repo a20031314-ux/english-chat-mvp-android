@@ -64,6 +64,7 @@ WRONG: "The speaker is mentioning DeepSeek" / "Someone is asking about OpenAI"
 RIGHT: "And China — well, DeepSeek, which shocked the world" / "Asking: is it called open-weight?"
 Do NOT start with "The speaker is", "Someone is talking/mentioning/asking/explaining".
 Do NOT copy the original clause pattern (clefts like "the reason X is", "what I'm saying is", "the thing is").
+Do not treat "just" as a filler when it is part of "not just" / "not only" / "not even" / "not yet" / "more than just" — those phrases change meaning if a word is dropped.
 Do NOT write a sentence that could be used as a ${langName(ctx.targetLang)} subtitle or translation.
 Do NOT mention word order.
 
@@ -116,6 +117,7 @@ RIGHT: "오픈웨이트라는 거예요?" / "그리고 최근 뭐니뭐니 해�
 Permissions (use them):
 - You are composing a new utterance, not mapping words.
 - Drop source discourse frames (the reason X is / what I'm saying is / the thing is). Say the point.
+- "not just" / "not only" / "not even" / "not yet" / "more than just" are atomic. Filler "just" may drop; these may not.
 - Split or merge only if a caption still stays one breath. Prefer shorter than the meaning note.
 - Drop subjects/objects that a native would leave implicit.
 - Frozen idioms become ${target} idioms or ordinary talk, never a word-for-word calque.

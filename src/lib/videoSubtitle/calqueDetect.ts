@@ -1,3 +1,5 @@
+import { droppedLockedCollocation } from "./lockedCollocations.ts";
+
 /** Stiff “번역투” fingerprints — must never ship as on-screen captions. */
 export function looksLikeCalqueKorean(text: string): boolean {
   const t = text.replace(/\s+/g, " ").trim();
@@ -182,6 +184,7 @@ export function looksLikeLiteralOrForeignCaption(
   if (locale === "ko") {
     if (looksLikeNarratorGloss(sub)) return true;
     if (looksLikeCalqueKorean(sub)) return true;
+    if (droppedLockedCollocation(original, sub, locale)) return true;
     // Idioms must not keep a word-mapped calque shape.
     if (
       looksIdiomaticEnglish(original) &&

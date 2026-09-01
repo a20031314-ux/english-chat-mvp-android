@@ -155,6 +155,7 @@ Do:
 - Prefer natural paraphrase that a native would say in the same situation.
 - Keep speech-act: request stays a request ("Could you open the window?" → ask them to open it, not "are you able to").
 - Treat idioms, phrasal verbs, and collocations as units (end up, come across, last straw, wrap my head around).
+- "not just" / "not only" / "not even" / "not yet" stay as units. Filler "just" ("I just think") may drop; these may not.
 - Judge slang/memes from THIS sentence + neighbors. "I'm cooked" vs "The chicken is cooked" vs "Let him cook" are different.
 - Keep hedges, certainty, polarity, and attitude. Do not add or drop the closing question.
 - If context is too thin to claim sarcasm or a brand-new meme, stay with the reading the sentence itself supports. Do not guess trendy slang.

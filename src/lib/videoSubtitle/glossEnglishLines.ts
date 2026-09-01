@@ -17,6 +17,11 @@ import type { MeaningExtraction } from "@/lib/reconstructionTranslate/types";
 import { distinctSpokenLine, NEUTRAL_TONE, type SubtitleDraft } from "@/lib/videoSubtitle/subtitleDraft";
 import { speechRegisterHint } from "@/lib/videoSubtitle/speechRegister";
 import { looksLikeNarratorGloss } from "@/lib/videoSubtitle/calqueDetect";
+import {
+  droppedLockedCollocation,
+  lockedCollocationLabels,
+  lockedCollocationPromptRule,
+} from "@/lib/videoSubtitle/lockedCollocations";
 import { validateAdaptedSubtitles } from "@/lib/videoSubtitle/validateSubtitleMeaning";
 
 const BATCH = 8;
@@ -80,6 +85,7 @@ Video-line constraints (on top of the shared translate craft):
 - WRONG: "Someone is asking about OpenAI" / "오픈AI에 대해 질문하고 있어" / "~에 대해 이야기하고 있어요" / "~에 대해 언급하고 있어요"
 - RIGHT: "오픈웨이트라는 거예요?" / "그리고 최근 뭐니뭐니 해도 화제의 문샷 AI."
 - Drop source discourse frames (the reason X is / what I'm saying is). Say the point.
+- ${lockedCollocationPromptRule()}
 - short-reaction lines stay short. Never expand them into the next sentence's content.
 - brief/fragment meanings: gloss ONLY that idea. Do not dump neighboring sentences onto this line.
 - Keep captions short enough to read on screen (one breath). Do not unpack into commentary.
@@ -122,6 +128,7 @@ Video-line constraints (on top of the shared translate craft):
         meaning?.coreMeaning && !looksLikeNarratorGloss(meaning.coreMeaning)
           ? meaning.coreMeaning
           : "";
+      const locked = lockedCollocationLabels(segment.normalizedText);
       return {
         id,
         brevityHint: brevityHint(segment.normalizedText),
@@ -132,8 +139,11 @@ Video-line constraints (on top of the shared translate craft):
               formalityLevel: meaning?.formalityLevel,
               mustKeep: meaning?.keyEntities ?? [],
               speechTexture: meaning?.speechTexture,
+              ...(locked.length > 0
+                ? { sourceText: segment.normalizedText, lockedCollocations: locked }
+                : {}),
             }
-          : { sourceText: segment.normalizedText }),
+          : { sourceText: segment.normalizedText, lockedCollocations: locked }),
         previousMeaning: prev ? meanings.get(cueId(prev.id))?.coreMeaning : "",
         nextMeaning: next ? meanings.get(cueId(next.id))?.coreMeaning : "",
       };
@@ -236,9 +246,18 @@ Each interpretation is the on-screen caption for that meaning (same field as cha
         }
       }
 
-      const recapCaptions = captions.filter((row) =>
-        looksLikeNarratorGloss(row.interpretation),
-      );
+      const recapCaptions = captions.filter((row) => {
+        const segment =
+          batch.find((item) => cueId(item.id) === row.id) ?? batch[0]!;
+        return (
+          looksLikeNarratorGloss(row.interpretation) ||
+          droppedLockedCollocation(
+            segment.normalizedText,
+            row.interpretation,
+            interfaceLanguage,
+          )
+        );
+      });
       if (recapCaptions.length > 0) {
         try {
           const drafts: SubtitleDraft[] = recapCaptions.map((row) => {
