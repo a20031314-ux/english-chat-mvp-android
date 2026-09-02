@@ -750,7 +750,7 @@ export async function POST(request: NextRequest) {
   if (
     (mode === "chat" || mode === "how_to_say") &&
     !isPremium &&
-    getDailyUsed(userId) >= FREE_DAILY_CHAT_LIMIT
+    (await getDailyUsed(userId)) >= FREE_DAILY_CHAT_LIMIT
   ) {
     return jsonWithCors(request, { error: "DAILY_LIMIT_REACHED" }, { status: 403 });
   }
@@ -765,7 +765,7 @@ export async function POST(request: NextRequest) {
         isPremium,
       );
       if (!isPremium) {
-        incrementDailyUsed(userId);
+        await incrementDailyUsed(userId);
       }
       return jsonWithCors(request, data);
     }
@@ -778,7 +778,7 @@ export async function POST(request: NextRequest) {
       { conversationMode, imageDataUrl },
     );
     if (!isPremium) {
-      incrementDailyUsed(userId);
+      await incrementDailyUsed(userId);
     }
     return jsonWithCors(request, data);
   } catch (error) {

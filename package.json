@@ -15,7 +15,8 @@
     "compare:subtitle": "node --experimental-strip-types scripts/compare-subtitle-naturalization.mjs",
     "compare:translate": "node --experimental-strip-types scripts/compare-reconstruction-translate.mjs",
     "test:translate": "node --experimental-strip-types --test src/lib/reconstructionTranslate/pipeline.test.ts",
-    "test:call": "node --experimental-strip-types --test src/lib/realtimeCallSession.test.ts"
+    "test:call": "node --experimental-strip-types --test src/lib/realtimeCallSession.test.ts",
+    "test:billing": "node --experimental-strip-types --test src/lib/billing/videoPrep.test.ts src/lib/server/entitlementStore.test.ts"
   },
   "dependencies": {
     "@capacitor-community/text-to-speech": "^8.0.2",

@@ -27,20 +27,22 @@ export async function OPTIONS(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   const userId = requestUserId(request);
-  const dailyUsed = getDailyUsed(userId);
+  const dailyUsed = await getDailyUsed(userId);
   const isPremium = isPremiumClientRequest(request);
 
   return jsonWithCors(request, {
     plan: isPremium ? ("pro" as const) : ("free" as const),
     dailyUsed,
     dailyLimit: isPremium ? null : FREE_DAILY_CHAT_LIMIT,
-    videoPrepUsedMinutes: videoPrepMinutes(getMonthlyVideoPrepUsed(userId)),
+    videoPrepUsedMinutes: videoPrepMinutes(
+      await getMonthlyVideoPrepUsed(userId),
+    ),
     videoPrepLimitMinutes: videoPrepMinutes(
       monthlyVideoPrepAllowanceSeconds(isPremium),
     ),
-    importPointsUsed: getMonthlyImportPointsUsed(userId),
+    importPointsUsed: await getMonthlyImportPointsUsed(userId),
     importPointsLimit: monthlyImportPoints(isPremium),
-    catalogTrialUsed: getCatalogTrialVideoIds(userId).length,
+    catalogTrialUsed: (await getCatalogTrialVideoIds(userId)).length,
     catalogTrialLimit: FREE_CATALOG_TRIAL_COUNT,
   });
 }

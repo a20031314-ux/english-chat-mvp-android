@@ -39,7 +39,7 @@ export async function POST(request: NextRequest) {
       : "en";
   const skipServerAudio = body.skipServerAudio === true;
   try {
-    const limits = assertVideoPrepAllowed(request, { videoUrl });
+    const limits = await assertVideoPrepAllowed(request, { videoUrl });
     const prepared = await prepareVideoTranscript(
       videoUrl,
       locale,
@@ -53,7 +53,7 @@ export async function POST(request: NextRequest) {
             : undefined,
       },
     );
-    recordVideoPrepForRequest(request, prepared.durationSeconds, videoUrl);
+    await recordVideoPrepForRequest(request, prepared.durationSeconds, videoUrl);
     return jsonWithCors(request, prepared);
   } catch (error) {
     if (error instanceof VideoPipelineError) {

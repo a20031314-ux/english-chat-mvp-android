@@ -1,78 +1,29 @@
-type UsageRecord = {
-  date: string;
-  used: number;
-};
+/**
+ * Usage counters that survive the request that wrote them.
+ *
+ * These used to be maps in module scope. That reads as a store and is not one:
+ * serverless instances do not share memory and are recycled constantly, so the
+ * free daily chat limit, the monthly import points and the catalog trial count
+ * all silently reset. They are keyed rows in KV now — see kv.ts, which also
+ * explains what happens when no KV credentials are configured.
+ *
+ * Every key names its own window, so nothing has to be reset on a rollover: the
+ * old key simply stops being read and expires on its own.
+ */
 
-const globalUsageStore = globalThis as typeof globalThis & {
-  __entitlementUsageByUser?: Map<string, UsageRecord>;
-};
+import { kvGetJson, kvGetNumber, kvIncrBy, kvSetJson } from "./kv.ts";
 
-const usageByUser =
-  globalUsageStore.__entitlementUsageByUser ??
-  (globalUsageStore.__entitlementUsageByUser = new Map<string, UsageRecord>());
+/** Long enough that a day's counter outlives the day in every timezone. */
+const DAILY_TTL_SECONDS = 3 * 24 * 60 * 60;
+/** Same idea for a month, with room for a late-arriving write. */
+const MONTHLY_TTL_SECONDS = 70 * 24 * 60 * 60;
 
-function getTodayKey() {
+function dayKey() {
   const now = new Date();
   const month = String(now.getMonth() + 1).padStart(2, "0");
   const day = String(now.getDate()).padStart(2, "0");
   return `${now.getFullYear()}-${month}-${day}`;
 }
-
-export function getTodayUsageKey() {
-  return getTodayKey();
-}
-
-function getOrInitUsage(userId: string): UsageRecord {
-  const today = getTodayKey();
-  const current = usageByUser.get(userId);
-
-  if (!current || current.date !== today) {
-    const next: UsageRecord = { date: today, used: 0 };
-    usageByUser.set(userId, next);
-    return next;
-  }
-
-  return current;
-}
-
-export function getDailyUsed(userId: string) {
-  return getOrInitUsage(userId).used;
-}
-
-export function incrementDailyUsed(userId: string, amount = 1) {
-  const current = getOrInitUsage(userId);
-  const next = {
-    ...current,
-    used: Math.max(0, current.used + amount),
-  };
-  usageByUser.set(userId, next);
-  return next.used;
-}
-
-type VideoPrepRecord = {
-  month: string;
-  usedPoints: number;
-  billedVideoIds: string[];
-};
-
-const globalVideoPrepStore = globalThis as typeof globalThis & {
-  __videoPrepUsageByUser?: Map<string, VideoPrepRecord>;
-};
-
-const videoPrepByUser =
-  globalVideoPrepStore.__videoPrepUsageByUser ??
-  (globalVideoPrepStore.__videoPrepUsageByUser = new Map<
-    string,
-    VideoPrepRecord
-  >());
-
-const globalCatalogTrialStore = globalThis as typeof globalThis & {
-  __catalogTrialByUser?: Map<string, string[]>;
-};
-
-const catalogTrialByUser =
-  globalCatalogTrialStore.__catalogTrialByUser ??
-  (globalCatalogTrialStore.__catalogTrialByUser = new Map<string, string[]>());
 
 function monthKey() {
   const now = new Date();
@@ -80,73 +31,110 @@ function monthKey() {
   return `${now.getFullYear()}-${month}`;
 }
 
-function getOrInitVideoPrep(userId: string): VideoPrepRecord {
-  const month = monthKey();
-  const current = videoPrepByUser.get(userId);
-  if (!current || current.month !== month) {
-    const next: VideoPrepRecord = {
-      month,
-      usedPoints: 0,
-      billedVideoIds: [],
-    };
-    videoPrepByUser.set(userId, next);
-    return next;
-  }
-  if (!Array.isArray(current.billedVideoIds)) {
-    const next = { ...current, billedVideoIds: [] as string[] };
-    videoPrepByUser.set(userId, next);
-    return next;
-  }
-  return current;
+function dailyChatKey(userId: string) {
+  return `usage:chat:${userId}:${dayKey()}`;
 }
 
-export function getMonthlyImportPointsUsed(userId: string) {
-  return getOrInitVideoPrep(userId).usedPoints;
+function videoPrepKey(userId: string) {
+  return `usage:video:${userId}:${monthKey()}`;
 }
 
-export function getBilledImportVideoIds(userId: string) {
-  return getOrInitVideoPrep(userId).billedVideoIds;
+function catalogTrialKey(userId: string) {
+  return `usage:trial:${userId}`;
 }
 
-export function addMonthlyImportPoints(
+export async function getDailyUsed(userId: string): Promise<number> {
+  return kvGetNumber(dailyChatKey(userId));
+}
+
+export async function incrementDailyUsed(
+  userId: string,
+  amount = 1,
+): Promise<number> {
+  return kvIncrBy(dailyChatKey(userId), amount, DAILY_TTL_SECONDS);
+}
+
+type VideoPrepRecord = {
+  usedPoints: number;
+  billedVideoIds: string[];
+};
+
+const EMPTY_VIDEO_PREP: VideoPrepRecord = {
+  usedPoints: 0,
+  billedVideoIds: [],
+};
+
+async function readVideoPrep(userId: string): Promise<VideoPrepRecord> {
+  const stored = await kvGetJson<Partial<VideoPrepRecord>>(
+    videoPrepKey(userId),
+  );
+  if (!stored) return EMPTY_VIDEO_PREP;
+  return {
+    usedPoints:
+      typeof stored.usedPoints === "number" && stored.usedPoints > 0
+        ? stored.usedPoints
+        : 0,
+    billedVideoIds: Array.isArray(stored.billedVideoIds)
+      ? stored.billedVideoIds.filter(
+          (id): id is string => typeof id === "string",
+        )
+      : [],
+  };
+}
+
+export async function getMonthlyImportPointsUsed(
+  userId: string,
+): Promise<number> {
+  return (await readVideoPrep(userId)).usedPoints;
+}
+
+export async function getBilledImportVideoIds(
+  userId: string,
+): Promise<string[]> {
+  return (await readVideoPrep(userId)).billedVideoIds;
+}
+
+export async function addMonthlyImportPoints(
   userId: string,
   points: number,
   videoId?: string,
-) {
+): Promise<number> {
   const billed = Math.max(0, Math.ceil(points));
-  const current = getOrInitVideoPrep(userId);
-  const billedVideoIds =
-    videoId && !current.billedVideoIds.includes(videoId)
-      ? [...current.billedVideoIds, videoId]
-      : current.billedVideoIds;
-  const next = {
-    ...current,
+  const current = await readVideoPrep(userId);
+  const next: VideoPrepRecord = {
     usedPoints: current.usedPoints + billed,
-    billedVideoIds,
+    billedVideoIds:
+      videoId && !current.billedVideoIds.includes(videoId)
+        ? [...current.billedVideoIds, videoId]
+        : current.billedVideoIds,
   };
-  videoPrepByUser.set(userId, next);
+  await kvSetJson(videoPrepKey(userId), next, MONTHLY_TTL_SECONDS);
   return next.usedPoints;
 }
 
-/** @deprecated Seconds view of import points. */
-export function getMonthlyVideoPrepUsed(userId: string) {
-  return getMonthlyImportPointsUsed(userId) * 180;
+/** @deprecated Seconds view of import points, kept for the entitlement route. */
+export async function getMonthlyVideoPrepUsed(
+  userId: string,
+): Promise<number> {
+  return (await getMonthlyImportPointsUsed(userId)) * 180;
 }
 
-/** @deprecated */
-export function addMonthlyVideoPrepUsed(userId: string, seconds: number) {
-  return addMonthlyImportPoints(userId, Math.ceil(seconds / 180));
+/** Lifetime, not monthly — so this key deliberately carries no expiry. */
+export async function getCatalogTrialVideoIds(
+  userId: string,
+): Promise<string[]> {
+  const stored = await kvGetJson<unknown>(catalogTrialKey(userId));
+  if (!Array.isArray(stored)) return [];
+  return stored.filter((id): id is string => typeof id === "string");
 }
 
-export function getCatalogTrialVideoIds(userId: string) {
-  return catalogTrialByUser.get(userId) ?? [];
-}
-
-export function addCatalogTrialVideo(userId: string, videoId: string) {
-  const current = getCatalogTrialVideoIds(userId);
+export async function addCatalogTrialVideo(
+  userId: string,
+  videoId: string,
+): Promise<string[]> {
+  const current = await getCatalogTrialVideoIds(userId);
   if (current.includes(videoId)) return current;
   const next = [...current, videoId];
-  catalogTrialByUser.set(userId, next);
+  await kvSetJson(catalogTrialKey(userId), next);
   return next;
 }
-

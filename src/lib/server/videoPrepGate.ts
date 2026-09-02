@@ -33,16 +33,16 @@ function requestLanguage(request: NextRequest): LearningLanguageCode {
   return DEFAULT_LEARNING_LANGUAGE_CODE;
 }
 
-export function videoPrepLimitsForRequest(request: NextRequest) {
+export async function videoPrepLimitsForRequest(request: NextRequest) {
   const isPremium = isPremiumClientRequest(request);
   const userId = requestUserId(request);
-  const usedPoints = getMonthlyImportPointsUsed(userId);
+  const usedPoints = await getMonthlyImportPointsUsed(userId);
   return {
     isPremium,
     userId,
     usedPoints,
-    billedVideoIds: getBilledImportVideoIds(userId),
-    trialVideoIds: getCatalogTrialVideoIds(userId),
+    billedVideoIds: await getBilledImportVideoIds(userId),
+    trialVideoIds: await getCatalogTrialVideoIds(userId),
     remainingPrepSeconds: remainingImportSeconds(usedPoints, isPremium),
     maxDurationSeconds: maxVideoPrepSeconds(isPremium),
     language: requestLanguage(request),
@@ -59,12 +59,12 @@ function errorCodeForReason(
   return "VIDEO_QUOTA";
 }
 
-export function assertVideoPrepAllowed(
+export async function assertVideoPrepAllowed(
   request: NextRequest,
   options?: { durationSeconds?: number | null; videoUrl?: string },
 ) {
   const parsed = parseYouTubeInput(options?.videoUrl ?? "");
-  const limits = videoPrepLimitsForRequest(request);
+  const limits = await videoPrepLimitsForRequest(request);
   const decision = evaluateVideoAccess({
     isPremium: limits.isPremium,
     videoId: parsed.ok ? parsed.videoId : "",
@@ -80,24 +80,24 @@ export function assertVideoPrepAllowed(
   return { ...limits, decision };
 }
 
-export function recordVideoPrepForRequest(
+export async function recordVideoPrepForRequest(
   request: NextRequest,
   durationSeconds: number,
   videoUrl?: string,
 ) {
   const parsed = parseYouTubeInput(videoUrl ?? "");
   const videoId = parsed.ok ? parsed.videoId : "";
-  const checked = assertVideoPrepAllowed(request, {
+  const checked = await assertVideoPrepAllowed(request, {
     durationSeconds,
     videoUrl,
   });
   if (checked.decision.kind === "library") {
     if (!checked.isPremium && videoId) {
-      addCatalogTrialVideo(checked.userId, videoId);
+      await addCatalogTrialVideo(checked.userId, videoId);
     }
     return checked.usedPoints;
   }
-  return addMonthlyImportPoints(
+  return await addMonthlyImportPoints(
     checked.userId,
     checked.decision.billablePoints,
     videoId,

@@ -81,7 +81,7 @@ export async function POST(request: NextRequest) {
   try {
     const last = segments[segments.length - 1];
     const hintedDuration = last ? Math.ceil(last.endTime) : 0;
-    const limits = assertVideoPrepAllowed(request, {
+    const limits = await assertVideoPrepAllowed(request, {
       durationSeconds: hintedDuration || null,
       videoUrl,
     });
@@ -99,7 +99,7 @@ export async function POST(request: NextRequest) {
             : undefined,
       },
     );
-    recordVideoPrepForRequest(request, prepared.durationSeconds, videoUrl);
+    await recordVideoPrepForRequest(request, prepared.durationSeconds, videoUrl);
     return jsonWithCors(request, prepared);
   } catch (error) {
     if (error instanceof VideoPipelineError) {
