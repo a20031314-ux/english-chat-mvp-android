@@ -23,10 +23,8 @@ import { useBillingUi } from "./BillingScreen";
 import { usePremium } from "@/contexts/PremiumContext";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { Capacitor } from "@capacitor/core";
-import {
-  FREE_DAILY_CHAT_LIMIT,
-  PREMIUM_CLIENT_HEADER,
-} from "@/lib/billing/config";
+import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
+import { entitlementHeaders } from "@/lib/billing/billingService";
 import { resolveChatInputMode } from "@/lib/inputLanguage";
 import {
   alignCorrectionToGrammar,
@@ -102,10 +100,7 @@ type ExpressionApiResponse = HowToSayExpression & {
 const SESSION_MESSAGE_LIMIT = FREE_DAILY_CHAT_LIMIT;
 
 function premiumRequestHeaders(isPremium: boolean): HeadersInit {
-  if (!isPremium) {
-    return {};
-  }
-  return { [PREMIUM_CLIENT_HEADER]: "1" };
+  return entitlementHeaders(isPremium);
 }
 const CONVERSATION_SESSIONS_KEY = "conversationSessions";
 /** Legacy single active-id key (migrated into per-language map). */

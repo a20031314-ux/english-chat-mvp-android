@@ -15,15 +15,11 @@ import {
   getCatalogTrialVideoIds,
   getMonthlyImportPointsUsed,
 } from "@/lib/server/entitlementStore";
-import { isPremiumClientRequest } from "@/lib/server/premiumRequest";
+import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import {
   VideoPipelineError,
   type VideoSubtitleErrorCode,
 } from "@/lib/videoSubtitle/errors";
-
-export function requestUserId(request: NextRequest) {
-  return request.cookies.get("ec_uid")?.value ?? "local-anonymous";
-}
 
 function requestLanguage(request: NextRequest): LearningLanguageCode {
   const header = request.headers.get("x-learning-language");
@@ -34,8 +30,7 @@ function requestLanguage(request: NextRequest): LearningLanguageCode {
 }
 
 export async function videoPrepLimitsForRequest(request: NextRequest) {
-  const isPremium = isPremiumClientRequest(request);
-  const userId = requestUserId(request);
+  const { isPremium, userId } = await resolveRequestEntitlement(request);
   const usedPoints = await getMonthlyImportPointsUsed(userId);
   return {
     isPremium,

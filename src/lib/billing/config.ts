@@ -10,6 +10,12 @@ export const PREMIUM_CACHE_STORAGE_KEY = "ec_premium_cached";
 /** MVP: client signals premium to API when RevenueCat entitlement is active (no server receipt validation yet). */
 export const PREMIUM_CLIENT_HEADER = "x-client-premium";
 
+/**
+ * The RevenueCat subscriber id, so the server can ask RevenueCat directly
+ * instead of believing the header above. Also what usage is counted against.
+ */
+export const REVENUECAT_USER_HEADER = "x-rc-user";
+
 export const FREE_DAILY_CHAT_LIMIT = 10;
 
 /** Display price only. Play Console still owns the billed amount for `premium_monthly`. */

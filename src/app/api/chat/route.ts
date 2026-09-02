@@ -6,7 +6,7 @@ import {
   getDailyUsed,
   incrementDailyUsed,
 } from "@/lib/server/entitlementStore";
-import { isPremiumClientRequest } from "@/lib/server/premiumRequest";
+import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { normalizeHowToSayExpression } from "@/lib/howToSay";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
@@ -27,10 +27,6 @@ import {
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
 import { commonLanguageInstructions, explanationLanguageGuard } from "@/lib/languageLearningAnalysis";
-
-function requestUserId(request: NextRequest) {
-  return request.cookies.get("ec_uid")?.value ?? "local-anonymous";
-}
 
 type ChatCorrection = {
   corrected: string;
@@ -688,8 +684,7 @@ export async function OPTIONS(request: NextRequest) {
 export async function POST(request: NextRequest) {
   const openai = getOpenAIClient();
 
-  const userId = requestUserId(request);
-  const isPremium = isPremiumClientRequest(request);
+  const { userId, isPremium } = await resolveRequestEntitlement(request);
 
   let body: {
     message?: string;

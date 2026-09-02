@@ -1,5 +1,5 @@
 import { Capacitor } from "@capacitor/core";
-import { PREMIUM_CLIENT_HEADER } from "@/lib/billing/config";
+import { entitlementHeaders } from "@/lib/billing/billingService";
 import { apiUrl } from "@/lib/apiBase";
 import {
   ClientAudioError,
@@ -516,7 +516,7 @@ function jsonHeaders(isPremium?: boolean, learningLanguage?: string) {
   const headers: Record<string, string> = {
     "Content-Type": "application/json",
   };
-  if (isPremium) headers[PREMIUM_CLIENT_HEADER] = "1";
+  Object.assign(headers, entitlementHeaders(isPremium));
   // Without this the prep gate assumes English, and a library clip in any other
   // language stops looking like one — so it is charged as a custom import.
   if (learningLanguage) headers["x-learning-language"] = learningLanguage;

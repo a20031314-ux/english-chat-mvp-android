@@ -13,12 +13,10 @@ import { usePremium } from "@/contexts/PremiumContext";
 import { apiUrl } from "@/lib/apiBase";
 import {
   isLocalPlanDebugEnabled,
+  entitlementHeaders,
   resetBillingConfigure,
 } from "@/lib/billing/billingService";
-import {
-  FREE_DAILY_CHAT_LIMIT,
-  PREMIUM_CLIENT_HEADER,
-} from "@/lib/billing/config";
+import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
 import { monthlyImportPoints } from "@/lib/billing/videoPrep";
 import { PointsIcon } from "@/components/PointsIcon";
 import {
@@ -158,7 +156,7 @@ export function BillingScreen({
     void (async () => {
       try {
         const response = await fetch(apiUrl("/api/entitlement"), {
-          headers: isPremium ? { [PREMIUM_CLIENT_HEADER]: "1" } : {},
+          headers: entitlementHeaders(isPremium),
         });
         if (!response.ok || cancelled) return;
         const data = (await response.json()) as {

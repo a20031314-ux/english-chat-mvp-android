@@ -8,8 +8,10 @@ import {
 } from "@revenuecat/purchases-capacitor";
 import {
   PREMIUM_CACHE_STORAGE_KEY,
+  PREMIUM_CLIENT_HEADER,
   PREMIUM_ENTITLEMENT_ID,
   PREMIUM_MONTHLY_PRODUCT_ID,
+  REVENUECAT_USER_HEADER,
 } from "./config";
 
 export type BillingInitResult = {
@@ -175,6 +177,26 @@ export function resetBillingConfigure(): void {
   configurePromise = null;
 }
 
+
+/**
+ * The RevenueCat subscriber id for this install, remembered once billing has
+ * configured. The server uses it to ask RevenueCat what this user actually
+ * bought, rather than believing a header, and counts usage against it.
+ */
+let cachedAppUserId: string | null = null;
+
+export function revenueCatUserId(): string | null {
+  return cachedAppUserId;
+}
+
+/** Headers that tell the API who is asking. Safe to call before billing is ready. */
+export function entitlementHeaders(isPremium?: boolean): Record<string, string> {
+  const headers: Record<string, string> = {};
+  if (isPremium) headers[PREMIUM_CLIENT_HEADER] = "1";
+  if (cachedAppUserId) headers[REVENUECAT_USER_HEADER] = cachedAppUserId;
+  return headers;
+}
+
 async function ensureConfigured(onStep?: BillingStepListener): Promise<boolean> {
   if (!isBillingNativePlatform()) {
     lastConfigureStep = "NOT_NATIVE";
@@ -210,6 +232,12 @@ async function ensureConfigured(onStep?: BillingStepListener): Promise<boolean> 
       );
       lastConfigureStep = "CONFIGURED";
       lastConfigureError = null;
+      try {
+        const { appUserID } = await plugin.getAppUserID();
+        cachedAppUserId = appUserID?.trim() || null;
+      } catch (error) {
+        console.warn("[billing] could not read the RevenueCat user id", error);
+      }
     })();
   }
 
