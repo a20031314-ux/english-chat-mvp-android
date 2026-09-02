@@ -3,7 +3,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { corsHeaders, corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { realtimeCallSessionConfig } from "@/lib/realtimeCallSession";
-import { FREE_TRIAL_CALL_COUNT } from "@/lib/billing/config";
+import {
+  FREE_TRIAL_CALL_COUNT,
+  REVENUECAT_USER_HEADER,
+} from "@/lib/billing/config";
 import {
   getCallsStarted,
   incrementCallsStarted,
@@ -58,7 +61,20 @@ export async function POST(request: NextRequest) {
   // the handshake below succeeds it runs phone-to-OpenAI with no session left
   // for us to end. Refusing to open it is the whole of the enforcement.
   const { userId, isPremium } = await resolveRequestEntitlement(request);
-  if (!isPremium && (await getCallsStarted(userId)) >= FREE_TRIAL_CALL_COUNT) {
+
+  // Builds before 2.41 sent no entitlement headers on this route at all, so a
+  // subscriber calling from one is indistinguishable from a trial user and
+  // would be cut off after two calls for something they had paid for. Those
+  // builds are left alone; the gate applies to requests that say who they are.
+  // Nothing regresses — the call was ungated for everyone until now — and this
+  // heals itself as people update, with no flag anyone has to remember to flip.
+  const identifiesItself = request.headers.has(REVENUECAT_USER_HEADER);
+
+  if (
+    identifiesItself &&
+    !isPremium &&
+    (await getCallsStarted(userId)) >= FREE_TRIAL_CALL_COUNT
+  ) {
     return jsonWithCors(request, { error: "CALL_TRIAL_USED" }, { status: 403 });
   }
 
@@ -85,7 +101,9 @@ export async function POST(request: NextRequest) {
       console.error("[realtime-call]", upstream.status, answer.slice(0, 500));
       return jsonWithCors(request, { error: "REALTIME_FAILED" }, { status: 502 });
     }
-    if (!isPremium) await incrementCallsStarted(userId);
+    if (identifiesItself && !isPremium) {
+      await incrementCallsStarted(userId);
+    }
     return new NextResponse(answer, {
       status: 200,
       headers: {

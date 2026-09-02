@@ -1,6 +1,6 @@
 {
-  "name": "english-chat-mvp",
-  "version": "2.40.0",
+  "name": "languagebank",
+  "version": "2.41.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
