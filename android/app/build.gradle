@@ -1,5 +1,17 @@
 apply plugin: 'com.android.application'
 
+// Signing values live outside the repository. Copy keystore.properties.example
+// to android/keystore.properties and fill it in. Without that file the release
+// build still runs, but comes out unsigned and Play will refuse it.
+def keystorePropertiesFile = rootProject.file("keystore.properties")
+def keystoreProperties = new Properties()
+def hasKeystore = keystorePropertiesFile.exists()
+if (hasKeystore) {
+    keystorePropertiesFile.withInputStream { keystoreProperties.load(it) }
+} else {
+    logger.warn("keystore.properties not found - the release build will be UNSIGNED. See android/keystore.properties.example.")
+}
+
 android {
     namespace = "com.yourname.englishchat"
     compileSdk = rootProject.ext.compileSdkVersion
@@ -16,6 +28,17 @@ android {
             ignoreAssetsPattern = '!.svn:!.git:!.ds_store:!*.scc:.*:!CVS:!thumbs.db:!picasa.ini:!*~'
         }
     }
+    signingConfigs {
+        release {
+            if (hasKeystore) {
+                // A relative storeFile is resolved against the android/ directory.
+                storeFile rootProject.file(keystoreProperties['storeFile'])
+                storePassword keystoreProperties['storePassword']
+                keyAlias keystoreProperties['keyAlias']
+                keyPassword keystoreProperties['keyPassword']
+            }
+        }
+    }
     buildTypes {
         debug {
             // Installs beside the Play build instead of being refused for a
@@ -24,6 +47,9 @@ android {
             versionNameSuffix "-debug"
         }
         release {
+            if (hasKeystore) {
+                signingConfig signingConfigs.release
+            }
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
