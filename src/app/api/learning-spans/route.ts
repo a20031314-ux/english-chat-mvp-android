@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { meterRequest } from "@/lib/server/meterRequest";
 import {
   fallbackLearningSpans,
   normalizeLearningSpans,
@@ -35,6 +36,8 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  await meterRequest(request, "learningSpans");
+
   let body: {
     sentence?: unknown;
     targetLanguage?: unknown;

@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { meterRequest } from "@/lib/server/meterRequest";
 import { naturalTranslationPrinciples } from "@/lib/naturalTranslation";
 import {
   coerceLanguageCode,
@@ -60,6 +61,8 @@ export async function POST(request: NextRequest) {
   if (!client) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
+
+  await meterRequest(request, "vocabGloss");
 
   let body: {
     words?: unknown;

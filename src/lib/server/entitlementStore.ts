@@ -51,6 +51,10 @@ function callSecondsKey(userId: string) {
   return `usage:callsec:${userId}:${monthKey()}`;
 }
 
+function opKey(userId: string, op: string) {
+  return `usage:op:${op}:${userId}:${dayKey()}`;
+}
+
 export async function getDailyUsed(userId: string): Promise<number> {
   return kvGetNumber(dailyChatKey(userId));
 }
@@ -159,6 +163,32 @@ export async function addMonthlyCallSeconds(
   const rounded = Math.max(0, Math.round(seconds));
   if (rounded === 0) return getMonthlyCallSeconds(userId);
   return kvIncrBy(callSecondsKey(userId), rounded, MONTHLY_TTL_SECONDS);
+}
+
+/**
+ * How many times someone used one metered route today.
+ *
+ * The daily chat counter above answers this for chat alone. Every other route
+ * that spends model time — analysis, glossing, translation, speech — went
+ * uncounted, which made the chat limit look like a fence around the spending
+ * when most of the spending was happening beside it.
+ *
+ * Daily, like chat, because the question these answer is what a normal day of
+ * use costs. Nothing reads them to refuse anything.
+ */
+export async function getDailyOpUsed(
+  userId: string,
+  op: string,
+): Promise<number> {
+  return kvGetNumber(opKey(userId, op));
+}
+
+export async function incrementDailyOpUsed(
+  userId: string,
+  op: string,
+  amount = 1,
+): Promise<number> {
+  return kvIncrBy(opKey(userId, op), amount, DAILY_TTL_SECONDS);
 }
 
 /** Lifetime, not monthly — so this key deliberately carries no expiry. */

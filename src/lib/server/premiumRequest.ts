@@ -43,6 +43,19 @@ function cookieUserId(request: NextRequest): string {
 }
 
 /**
+ * Who is asking, worked out without asking RevenueCat.
+ *
+ * The full resolve below makes a network call to learn whether someone has
+ * paid. That is worth a round trip on a route that may refuse service, and pure
+ * waste on one that only wants to count — it would put a call to RevenueCat in
+ * front of every word lookup to learn something the counter never reads.
+ */
+export function requestUserId(request: NextRequest): string {
+  const appUserId = revenueCatUserId(request);
+  return appUserId ? `rc:${appUserId}` : cookieUserId(request);
+}
+
+/**
  * Works out who is asking and whether they have paid.
  *
  * Prefers the RevenueCat subscriber id, because that is both an identity worth

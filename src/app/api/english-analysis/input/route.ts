@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { meterRequest } from "@/lib/server/meterRequest";
 import {
   ENGLISH_ANALYSIS_LANGUAGES,
   normalizeEnglishInputAnalysis,
@@ -27,6 +28,8 @@ export async function POST(request: NextRequest) {
   if (!openai) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
+
+  await meterRequest(request, "analysisInput");
 
   let body: {
     text?: unknown;

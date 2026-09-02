@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { corsHeaders, corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
 import {
   spokenFormForTts,
@@ -28,6 +29,8 @@ async function synthesize(request: NextRequest, rawText: string, rawLang: string
   if (!client) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
+
+  await meterRequest(request, "tts");
 
   const text = rawText.trim();
   if (!text) {
