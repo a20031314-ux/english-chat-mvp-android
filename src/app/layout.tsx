@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import { Providers } from "@/components/Providers";
-import { copy } from "@/lib/copy";
+import { resolveUiCopy } from "@/lib/resolveUiCopy";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: copy.ko.appTitle,
+  title: resolveUiCopy("ko").appTitle,
   description: "간단한 AI 영어 교정 채팅 MVP 앱",
 };
 
