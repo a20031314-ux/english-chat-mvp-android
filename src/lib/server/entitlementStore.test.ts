@@ -2,11 +2,13 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   addCatalogTrialVideo,
+  addMonthlyCallSeconds,
   addMonthlyImportPoints,
   getBilledImportVideoIds,
   getCatalogTrialVideoIds,
   getCallsStarted,
   getDailyUsed,
+  getMonthlyCallSeconds,
   getMonthlyImportPointsUsed,
   incrementCallsStarted,
   incrementDailyUsed,
@@ -83,4 +85,15 @@ test("trial calls are counted per user and never expire", async () => {
 
   assert.equal(await getCallsStarted("caller-a"), 2);
   assert.equal(await getCallsStarted("caller-b"), 0);
+});
+
+test("call seconds accumulate for the month and ignore junk", async () => {
+  assert.equal(await getMonthlyCallSeconds("talker"), 0);
+
+  await addMonthlyCallSeconds("talker", 90);
+  await addMonthlyCallSeconds("talker", 30.4);
+  await addMonthlyCallSeconds("talker", 0);
+  await addMonthlyCallSeconds("talker", -100);
+
+  assert.equal(await getMonthlyCallSeconds("talker"), 120);
 });

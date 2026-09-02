@@ -47,6 +47,10 @@ function catalogTrialKey(userId: string) {
   return `usage:trial:${userId}`;
 }
 
+function callSecondsKey(userId: string) {
+  return `usage:callsec:${userId}:${monthKey()}`;
+}
+
 export async function getDailyUsed(userId: string): Promise<number> {
   return kvGetNumber(dailyChatKey(userId));
 }
@@ -130,6 +134,31 @@ export async function getCallsStarted(userId: string): Promise<number> {
 
 export async function incrementCallsStarted(userId: string): Promise<number> {
   return kvIncrBy(callsKey(userId), 1);
+}
+
+/**
+ * How many seconds of realtime audio a subscriber has spent this month.
+ *
+ * Counted, not enforced. Opening a call is the only lever the server holds, so
+ * this exists to answer a question the counter above cannot: a started call and
+ * a forty-minute call cost very different amounts, and premium currently has no
+ * limit on either. Monthly, because that is the window a subscription is sold in.
+ *
+ * Read it as a floor. The number arrives from the client — the server never sees
+ * a call end — so a killed app loses its report, and a hostile one could inflate
+ * it. Good enough to price a plan, not good enough to bill against.
+ */
+export async function getMonthlyCallSeconds(userId: string): Promise<number> {
+  return kvGetNumber(callSecondsKey(userId));
+}
+
+export async function addMonthlyCallSeconds(
+  userId: string,
+  seconds: number,
+): Promise<number> {
+  const rounded = Math.max(0, Math.round(seconds));
+  if (rounded === 0) return getMonthlyCallSeconds(userId);
+  return kvIncrBy(callSecondsKey(userId), rounded, MONTHLY_TTL_SECONDS);
 }
 
 /** Lifetime, not monthly — so this key deliberately carries no expiry. */

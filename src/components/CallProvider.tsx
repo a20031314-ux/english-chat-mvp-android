@@ -14,6 +14,8 @@ import {
   type CallStartResult,
 } from "@/contexts/CallContext";
 import type { CallPhase } from "@/lib/callSession";
+import { apiUrl } from "@/lib/apiBase";
+import { entitlementHeaders } from "@/lib/billing/billingService";
 import { TRIAL_CALL_MAX_SECONDS } from "@/lib/billing/config";
 import { usePremium } from "@/contexts/PremiumContext";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
@@ -151,6 +153,26 @@ export function CallProvider({ children }: { children: ReactNode }) {
     }, TRIAL_CALL_MAX_SECONDS * 1000);
     return () => clearTimeout(timer);
   }, [hangUp, isPremium, phase]);
+
+  // Tell the server how long the call ran. It opened the call and then lost
+  // sight of it — the audio runs phone-to-OpenAI — so this is the only account
+  // of a call's length there is, and length is what realtime audio is billed by.
+  // keepalive so a report survives the app being put away; failures are dropped
+  // because nothing about the call should depend on the bookkeeping.
+  useEffect(() => {
+    return subscribeEnded((durationSeconds) => {
+      if (durationSeconds <= 0) return;
+      void fetch(apiUrl("/api/realtime/call/ended"), {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          ...entitlementHeaders(isPremium),
+        },
+        body: JSON.stringify({ seconds: durationSeconds }),
+        keepalive: true,
+      }).catch(() => undefined);
+    });
+  }, [isPremium, subscribeEnded]);
 
   useEffect(() => {
     return () => {
