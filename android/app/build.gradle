@@ -8,6 +8,14 @@ def keystoreProperties = new Properties()
 def hasKeystore = keystorePropertiesFile.exists()
 if (hasKeystore) {
     keystorePropertiesFile.withInputStream { keystoreProperties.load(it) }
+    // A half-filled file would otherwise fail the build with an obscure error.
+    def missing = ['storeFile', 'storePassword', 'keyAlias', 'keyPassword'].findAll {
+        !keystoreProperties[it]?.trim()
+    }
+    if (missing) {
+        hasKeystore = false
+        logger.warn("keystore.properties is missing " + missing.join(", ") + " - the release build will be UNSIGNED.")
+    }
 } else {
     logger.warn("keystore.properties not found - the release build will be UNSIGNED. See android/keystore.properties.example.")
 }
