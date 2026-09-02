@@ -20,7 +20,8 @@ export type LibraryPack = {
  * Prefer short, speech-heavy, captioned lessons in the learning language
  * (official TED-Ed dubs where they exist; native educational series otherwise).
  */
-const PACKS: LibraryPack[] = [
+/** Exported so scripts/verify-video-library.mjs can check every clip. */
+export const PACKS: LibraryPack[] = [
   {
     id: "en-2026-08",
     month: "2026-08",
