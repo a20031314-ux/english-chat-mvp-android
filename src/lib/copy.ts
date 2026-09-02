@@ -32,7 +32,7 @@ const generatedBillingOverlay = {
     "Pick a title from this month’s library, or paste your own link. Library titles are free; custom links use import points.",
   videoLearnLibraryTitle: "This month’s library",
   videoLearnLibrarySubtitleFree:
-    "Free trial: {used}/{limit} episodes. Subscribe to open the full monthly pack.",
+    "Free trial: {used}/{limit} episodes. It doesn’t refill each month — subscribe to open the full monthly pack.",
   videoLearnLibrarySubtitlePremium:
     "This month’s study pack · no points charged",
   videoLearnLibraryEmpty:
@@ -376,7 +376,7 @@ export const copy = {
       "가져오기 {used}/{limit}포인트 · 3분당 1포인트 · 라이브러리·저장 영상은 차감 없음",
     videoLearnLibraryTitle: "이번 달 라이브러리",
     videoLearnLibrarySubtitleFree:
-      "무료 체험 {used}/{limit}편 · 구독하면 이번 달 전체를 볼 수 있어요.",
+      "무료 체험 {used}/{limit}편 · 매달 채워지지 않아요. 구독하면 이번 달 전체를 볼 수 있어요.",
     videoLearnLibrarySubtitlePremium:
       "이번 달 학습 팩 · 포인트 차감 없음",
     videoLearnLibraryEmpty:
@@ -1061,7 +1061,7 @@ export const copy = {
       "{used}/{limit} import points this month · 1 point per 3 minutes · library and saved videos are free",
     videoLearnLibraryTitle: "This month’s library",
     videoLearnLibrarySubtitleFree:
-      "Free trial: {used}/{limit} episodes. Subscribe to open the full monthly pack.",
+      "Free trial: {used}/{limit} episodes. It doesn’t refill each month — subscribe to open the full monthly pack.",
     videoLearnLibrarySubtitlePremium:
       "This month’s study pack · no points charged",
     videoLearnLibraryEmpty:
@@ -1743,7 +1743,7 @@ export const copy = {
       "{used}/{limit} puntos de importación este mes · 1 punto cada 3 min · biblioteca y guardados son gratis",
     videoLearnLibraryTitle: "Biblioteca de este mes",
     videoLearnLibrarySubtitleFree:
-      "Prueba gratis: {used}/{limit} episodios. Suscríbete para abrir el pack mensual.",
+      "Prueba gratis: {used}/{limit} episodios. No se renueva cada mes; suscríbete para abrir el pack mensual.",
     videoLearnLibrarySubtitlePremium:
       "Pack de este mes · sin puntos",
     videoLearnLibraryEmpty:
