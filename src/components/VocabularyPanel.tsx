@@ -249,6 +249,7 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                             <AnalyzableEnglish
                               sentence={item.word}
                               context={item.example ? [item.example] : undefined}
+                              sentenceRail={false}
                               className="text-base font-semibold text-slate-100"
                             />
                             <TTSButton text={item.word} ariaLabel={ui.listen} />
@@ -345,6 +346,7 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                           <AnalyzableEnglish
                             sentence={entry.word}
                             context={entry.example ? [entry.example] : undefined}
+                            sentenceRail={false}
                             className="text-base font-semibold text-slate-100"
                           />
                           <TTSButton text={entry.word} ariaLabel={ui.listen} />

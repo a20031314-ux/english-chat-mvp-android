@@ -49,6 +49,13 @@ type AnalyzableEnglishProps = {
   analysisTranslation?: string;
   /** Inside a sentence sheet: pick words/phrases only, no sentence rail. */
   elementsOnly?: boolean;
+  /**
+   * A vocabulary headword is a word, not a sentence, so offering to analyse it
+   * as one is meaningless. Text rendering is still wanted — writing direction
+   * and the do-not-translate marking — so this drops the rail rather than the
+   * component.
+   */
+  sentenceRail?: boolean;
   diff?: {
     original: string;
     corrected: string;
@@ -134,6 +141,7 @@ export function AnalyzableEnglish({
   translation: attachedTranslation,
   analysisTranslation: attachedAnalysisTranslation,
   elementsOnly = false,
+  sentenceRail = true,
   diff,
 }: AnalyzableEnglishProps) {
   const insight = useExpressionInsightOptional();
@@ -200,7 +208,8 @@ export function AnalyzableEnglish({
   const pickWords = enabled && !children && elementsOnly;
   const showDiffMarks = Boolean(diff) && !children;
   const useTokens = pickWords || showDiffMarks;
-  const showSentenceRail = enabled && !children && !elementsOnly;
+  const showSentenceRail =
+    enabled && !children && !elementsOnly && sentenceRail;
   const [learningSpans, setLearningSpans] = useState<LearningSpan[] | null>(
     null,
   );
