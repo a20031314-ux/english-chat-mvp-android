@@ -9,7 +9,11 @@ const ALLOWED_ORIGIN_PREFIXES = [
   "https://english-chat-mvp-android.vercel.app",
 ];
 
-const ALLOWED_HEADERS = "Content-Type, x-client-premium";
+// Every header the app actually sends. A missing one fails the preflight, which
+// the Android build hides today because CapacitorHttp bypasses CORS entirely —
+// so an omission here stays invisible until something makes a plain fetch.
+const ALLOWED_HEADERS =
+  "Content-Type, x-client-premium, x-rc-user, x-learning-language";
 
 function resolveAllowOrigin(request: NextRequest): string {
   const origin = request.headers.get("origin");

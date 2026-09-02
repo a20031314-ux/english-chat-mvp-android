@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { usePremium } from "@/contexts/PremiumContext";
 
-export default function SubscribePage() {
+export function SubscribePage() {
   const router = useRouter();
   const { isBillingNative, ensureBillingReady, purchasePremium } = usePremium();
   const [isPurchasing, setIsPurchasing] = useState(false);

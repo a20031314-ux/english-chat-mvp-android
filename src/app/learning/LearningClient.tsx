@@ -45,7 +45,7 @@ function LearningPageInner({
 }
 
 /** Legacy route — redirects UX to home saved tab via link; keeps panel for deep links. */
-export default function LearningPage() {
+export function LearningPage() {
   const [locale, setLocale] = useState<Locale>("ko");
 
   useEffect(() => {
