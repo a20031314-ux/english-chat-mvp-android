@@ -39,6 +39,10 @@ function videoPrepKey(userId: string) {
   return `usage:video:${userId}:${monthKey()}`;
 }
 
+function callsKey(userId: string) {
+  return `usage:calls:${userId}`;
+}
+
 function catalogTrialKey(userId: string) {
   return `usage:trial:${userId}`;
 }
@@ -117,6 +121,15 @@ export async function getMonthlyVideoPrepUsed(
   userId: string,
 ): Promise<number> {
   return (await getMonthlyImportPointsUsed(userId)) * 180;
+}
+
+/** Lifetime, like the catalog trial, so this key carries no expiry either. */
+export async function getCallsStarted(userId: string): Promise<number> {
+  return kvGetNumber(callsKey(userId));
+}
+
+export async function incrementCallsStarted(userId: string): Promise<number> {
+  return kvIncrBy(callsKey(userId), 1);
 }
 
 /** Lifetime, not monthly — so this key deliberately carries no expiry. */

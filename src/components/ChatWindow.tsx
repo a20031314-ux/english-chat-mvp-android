@@ -1388,6 +1388,10 @@ export function ChatWindow({
       : DEFAULT_LEARNING_LANGUAGE_CODE;
     const result = await call.start(sessionLanguageCode, nativeLanguage);
     if (result.ok || result.reason === "aborted") return;
+    if (result.reason === "trial") {
+      openPaywall("PAYWALL_OPEN_CALL_TRIAL_USED");
+      return;
+    }
     setBookToast(
       result.reason === "mic" ? ui.chatMicDenied : ui.chatCallFailed,
     );

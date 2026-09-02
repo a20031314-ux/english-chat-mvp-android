@@ -6,7 +6,7 @@ import type { LearningLanguageCode } from "@/lib/learningLanguages";
 
 export type CallStartResult =
   | { ok: true }
-  | { ok: false; reason: "mic" | "connect" | "aborted" };
+  | { ok: false; reason: "mic" | "connect" | "aborted" | "trial" };
 
 export type CallContextValue = {
   phase: CallPhase;

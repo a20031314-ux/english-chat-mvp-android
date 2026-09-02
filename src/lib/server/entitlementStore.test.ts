@@ -5,8 +5,10 @@ import {
   addMonthlyImportPoints,
   getBilledImportVideoIds,
   getCatalogTrialVideoIds,
+  getCallsStarted,
   getDailyUsed,
   getMonthlyImportPointsUsed,
+  incrementCallsStarted,
   incrementDailyUsed,
 } from "./entitlementStore.ts";
 
@@ -71,4 +73,14 @@ test("counters written for one user are invisible to another", async () => {
 
   assert.equal(await getMonthlyImportPointsUsed("isolated-b"), 0);
   assert.deepEqual(await getCatalogTrialVideoIds("isolated-b"), []);
+});
+
+test("trial calls are counted per user and never expire", async () => {
+  assert.equal(await getCallsStarted("caller-a"), 0);
+
+  await incrementCallsStarted("caller-a");
+  await incrementCallsStarted("caller-a");
+
+  assert.equal(await getCallsStarted("caller-a"), 2);
+  assert.equal(await getCallsStarted("caller-b"), 0);
 });

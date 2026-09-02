@@ -36,6 +36,20 @@ export const PREMIUM_MONTHLY_IMPORT_POINTS = 80;
 /** Longest custom/library video that can be prepared. Matches Whisper's 15 min cap. */
 export const MAX_VIDEO_PREP_SECONDS = 15 * 60;
 
+/**
+ * Lifetime free tutor calls. Two rather than one, so a call that drops on a
+ * bad connection does not cost someone their only look at the feature.
+ *
+ * A count, not a budget of minutes, because once the SDP handshake is done
+ * the audio runs straight between the phone and OpenAI — the server brokers
+ * the offer and then has no session left to cut short. Whether to open one
+ * at all is the only lever it holds.
+ */
+export const FREE_TRIAL_CALL_COUNT = 2;
+
+/** How long a trial call runs before the app ends it itself. */
+export const TRIAL_CALL_MAX_SECONDS = 3 * 60;
+
 /** Lifetime free catalog opens (not a monthly reset). */
 export const FREE_CATALOG_TRIAL_COUNT = 3;
 

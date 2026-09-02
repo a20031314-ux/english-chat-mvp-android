@@ -3,15 +3,17 @@ import { NextRequest, NextResponse } from "next/server";
 import { corsHeaders, corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { realtimeCallSessionConfig } from "@/lib/realtimeCallSession";
+import { FREE_TRIAL_CALL_COUNT } from "@/lib/billing/config";
+import {
+  getCallsStarted,
+  incrementCallsStarted,
+} from "@/lib/server/entitlementStore";
+import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 
 export const dynamic = "force-dynamic";
 
 const OPENAI_CALLS = "https://api.openai.com/v1/realtime/calls";
 const CRLF = "\r\n";
-
-function requestUserId(request: NextRequest) {
-  return request.cookies.get("ec_uid")?.value ?? "local-anonymous";
-}
 
 function safetyIdentifier(userId: string): string {
   return createHash("sha256").update(`call:${userId}`).digest("hex").slice(0, 32);
@@ -52,6 +54,14 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "sdp required" }, { status: 400 });
   }
 
+  // Realtime audio is the most expensive thing this app can start, and once
+  // the handshake below succeeds it runs phone-to-OpenAI with no session left
+  // for us to end. Refusing to open it is the whole of the enforcement.
+  const { userId, isPremium } = await resolveRequestEntitlement(request);
+  if (!isPremium && (await getCallsStarted(userId)) >= FREE_TRIAL_CALL_COUNT) {
+    return jsonWithCors(request, { error: "CALL_TRIAL_USED" }, { status: 403 });
+  }
+
   const targetLanguage = coerceLanguageCode(body.targetLanguage);
   const nativeLanguage = coerceLanguageCode(body.interfaceLanguage);
   const session = JSON.stringify(
@@ -66,7 +76,7 @@ export async function POST(request: NextRequest) {
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
-        "OpenAI-Safety-Identifier": safetyIdentifier(requestUserId(request)),
+        "OpenAI-Safety-Identifier": safetyIdentifier(userId),
       },
       body: form,
     });
@@ -75,6 +85,7 @@ export async function POST(request: NextRequest) {
       console.error("[realtime-call]", upstream.status, answer.slice(0, 500));
       return jsonWithCors(request, { error: "REALTIME_FAILED" }, { status: 502 });
     }
+    if (!isPremium) await incrementCallsStarted(userId);
     return new NextResponse(answer, {
       status: 200,
       headers: {

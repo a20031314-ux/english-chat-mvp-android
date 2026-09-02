@@ -14,6 +14,8 @@ import {
   type CallStartResult,
 } from "@/contexts/CallContext";
 import type { CallPhase } from "@/lib/callSession";
+import { TRIAL_CALL_MAX_SECONDS } from "@/lib/billing/config";
+import { usePremium } from "@/contexts/PremiumContext";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
 import {
   RealtimeCallError,
@@ -31,6 +33,7 @@ function secondsSince(started: number | null) {
  * audio kept playing.
  */
 export function CallProvider({ children }: { children: ReactNode }) {
+  const { isPremium } = usePremium();
   const [phase, setPhase] = useState<CallPhase>("idle");
   const [muted, setMuted] = useState(false);
   const [startedAt, setStartedAt] = useState<number | null>(null);
@@ -79,6 +82,7 @@ export function CallProvider({ children }: { children: ReactNode }) {
         const call = await startRealtimeCall({
           targetLanguage,
           nativeLanguage,
+          isPremium,
           signal: abort.signal,
           onConnected: () => {
             const now = Date.now();
@@ -104,16 +108,14 @@ export function CallProvider({ children }: { children: ReactNode }) {
         if (error instanceof DOMException && error.name === "AbortError") {
           return { ok: false, reason: "aborted" };
         }
-        return {
-          ok: false,
-          reason:
-            error instanceof RealtimeCallError && error.code === "mic"
-              ? "mic"
-              : "connect",
-        };
+        if (error instanceof RealtimeCallError) {
+          if (error.code === "trial") return { ok: false, reason: "trial" };
+          if (error.code === "mic") return { ok: false, reason: "mic" };
+        }
+        return { ok: false, reason: "connect" };
       }
     },
-    [emitEnded, phase, teardown],
+    [emitEnded, isPremium, phase, teardown],
   );
 
   const sendText = useCallback(
@@ -138,6 +140,17 @@ export function CallProvider({ children }: { children: ReactNode }) {
     },
     [],
   );
+
+  // A trial call ends itself. The server can refuse to open a call but cannot
+  // close one — after the handshake the audio runs phone-to-OpenAI — so the
+  // only place a length limit can live is here.
+  useEffect(() => {
+    if (isPremium || phase !== "connected") return;
+    const timer = setTimeout(() => {
+      hangUp();
+    }, TRIAL_CALL_MAX_SECONDS * 1000);
+    return () => clearTimeout(timer);
+  }, [hangUp, isPremium, phase]);
 
   useEffect(() => {
     return () => {

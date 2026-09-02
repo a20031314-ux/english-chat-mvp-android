@@ -1,4 +1,5 @@
 import { apiUrl } from "@/lib/apiBase";
+import { entitlementHeaders } from "@/lib/billing/billingService";
 import {
   learningLanguageName,
   type LearningLanguageCode,
@@ -12,9 +13,9 @@ export type RealtimeCall = {
 };
 
 export class RealtimeCallError extends Error {
-  readonly code: "mic" | "connect";
+  readonly code: "mic" | "connect" | "trial";
 
-  constructor(code: "mic" | "connect", message: string) {
+  constructor(code: "mic" | "connect" | "trial", message: string) {
     super(message);
     this.code = code;
     this.name = "RealtimeCallError";
@@ -61,6 +62,8 @@ export async function startRealtimeCall(input: {
   /** What the learner speaks natively, so the call expects it mid-sentence. */
   nativeLanguage: LearningLanguageCode;
   signal?: AbortSignal;
+  /** Decides whether this call spends one of the free trial calls. */
+  isPremium?: boolean;
   onConnected: () => void;
   onDisconnected: () => void;
 }): Promise<RealtimeCall> {
@@ -183,7 +186,12 @@ export async function startRealtimeCall(input: {
 
     const response = await fetch(apiUrl("/api/realtime/call"), {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
+      headers: {
+        "Content-Type": "application/json",
+        // Without these the server cannot tell a subscriber from a trial user,
+        // and would spend a free call on someone who has paid.
+        ...entitlementHeaders(input.isPremium),
+      },
       body: JSON.stringify({
         sdp: pc.localDescription?.sdp ?? offer.sdp,
         targetLanguage: input.targetLanguage,
@@ -191,7 +199,11 @@ export async function startRealtimeCall(input: {
       }),
       signal: input.signal,
     });
-    const answerSdp = normalizeAnswerSdp(await response.text());
+    const rawAnswer = await response.text();
+    if (response.status === 403 && rawAnswer.includes("CALL_TRIAL_USED")) {
+      throw new RealtimeCallError("trial", "CALL_TRIAL_USED");
+    }
+    const answerSdp = normalizeAnswerSdp(rawAnswer);
     if (!response.ok || !answerSdp.includes("v=")) {
       throw new RealtimeCallError("connect", "REALTIME_FAILED");
     }
