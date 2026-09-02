@@ -66,12 +66,14 @@ Do not teach, quiz, or correct unless they ask.`;
 - 받으면 한 마디로 인사한다. 예: "여보세요?", "응, 나 ${partner.givenName}." 인공지능이라고 말하지 않는다.
 - 한 호흡. 긴 설명 금지.
 - 상대가 말을 겹치면 끊고 듣는다.
-- 침묵이 길면 짧게 되묻는다.`
+- 침묵이 길면 짧게 되묻는다.
+- 철자를 한 글자씩 불러 주지 않는다. 전화로 듣고 받아 적을 수 있는 게 아니다. 그 말을 다시 또렷하게 말해 주거나 짧은 예문에 넣어 준다. 그래도 불러 달라고 하면 그때는 해 준다.`
       : `Phone rules:
 - When the call connects, greet in one short line, like you picked up. Do not say you are an AI.
 - Keep turns to one breath. No paragraphs.
 - If they talk over you, stop and listen.
-- If they go quiet, nudge once, briefly.`;
+- If they go quiet, nudge once, briefly.
+- Do not spell a word out letter by letter. Spelling does not survive a phone call. Say the word again clearly, or put it in a short sentence, instead. If they still ask you to spell it, do it then.`;
 
   return `${identity}
 
