@@ -15,6 +15,8 @@ import {
   getMonthlyVideoPrepUsed,
 } from "@/lib/server/entitlementStore";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
+import { kvConfigured } from "@/lib/server/kv";
+import { revenueCatConfigured } from "@/lib/server/revenueCat";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 
 export async function OPTIONS(request: NextRequest) {
@@ -22,7 +24,7 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function GET(request: NextRequest) {
-  const { userId, isPremium } = await resolveRequestEntitlement(request);
+  const { userId, isPremium, verified } = await resolveRequestEntitlement(request);
   const dailyUsed = await getDailyUsed(userId);
 
   return jsonWithCors(request, {
@@ -39,5 +41,14 @@ export async function GET(request: NextRequest) {
     importPointsLimit: monthlyImportPoints(isPremium),
     catalogTrialUsed: (await getCatalogTrialVideoIds(userId)).length,
     catalogTrialLimit: FREE_CATALOG_TRIAL_COUNT,
+    // Both of these degrade quietly when their environment variables are
+    // missing, so say which way they went rather than making someone read
+    // the function logs to find out.
+    storage: kvConfigured() ? ("kv" as const) : ("memory" as const),
+    premiumSource: verified
+      ? ("revenuecat" as const)
+      : revenueCatConfigured()
+        ? ("client-claim" as const)
+        : ("client-claim-unconfigured" as const),
   });
 }
