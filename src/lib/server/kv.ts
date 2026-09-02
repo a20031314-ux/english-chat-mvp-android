@@ -74,6 +74,27 @@ function memoryWrite(key: string, value: string, ttlSeconds?: number) {
   });
 }
 
+/**
+ * A counter that cannot be reached is not a reason to fail the request it
+ * belongs to. Every failure here degrades to "nothing recorded", which leaves
+ * the caller permissive — the wrong answer for the counter, but far better than
+ * a store outage taking chat and video preparation down with it. Counting usage
+ * is a side concern of those requests, and a side concern must not be able to
+ * end them.
+ */
+async function attempt<T>(
+  what: string,
+  run: () => Promise<T>,
+  fallback: T,
+): Promise<T> {
+  try {
+    return await run();
+  } catch (error) {
+    console.error(`[kv] ${what} failed, continuing without it`, error);
+    return fallback;
+  }
+}
+
 /** Upstash takes a command as a JSON array and answers with `{ result }`. */
 async function command(parts: (string | number)[]): Promise<unknown> {
   const creds = credentials();
@@ -100,8 +121,14 @@ export async function kvGetJson<T>(key: string): Promise<T | null> {
     warnOnce();
     raw = memoryRead(key);
   } else {
-    const result = await command(["GET", key]);
-    raw = typeof result === "string" ? result : null;
+    raw = await attempt(
+      `GET ${key}`,
+      async () => {
+        const result = await command(["GET", key]);
+        return typeof result === "string" ? result : null;
+      },
+      null,
+    );
   }
   if (raw === null) return null;
   try {
@@ -122,8 +149,13 @@ export async function kvSetJson(
     memoryWrite(key, raw, ttlSeconds);
     return;
   }
-  await command(
-    ttlSeconds ? ["SET", key, raw, "EX", ttlSeconds] : ["SET", key, raw],
+  await attempt(
+    `SET ${key}`,
+    () =>
+      command(
+        ttlSeconds ? ["SET", key, raw, "EX", ttlSeconds] : ["SET", key, raw],
+      ),
+    null,
   );
 }
 
@@ -144,9 +176,15 @@ export async function kvIncrBy(
     memoryWrite(key, String(next), ttlSeconds);
     return next;
   }
-  const result = await command(["INCRBY", key, amount]);
-  if (ttlSeconds) await command(["EXPIRE", key, ttlSeconds]);
-  return Number(result ?? 0);
+  return attempt(
+    `INCRBY ${key}`,
+    async () => {
+      const result = await command(["INCRBY", key, amount]);
+      if (ttlSeconds) await command(["EXPIRE", key, ttlSeconds]);
+      return Number(result ?? 0);
+    },
+    0,
+  );
 }
 
 export async function kvGetNumber(key: string): Promise<number> {
@@ -154,8 +192,14 @@ export async function kvGetNumber(key: string): Promise<number> {
     warnOnce();
     return Number(memoryRead(key) ?? 0);
   }
-  const result = await command(["GET", key]);
-  return typeof result === "string" || typeof result === "number"
-    ? Number(result)
-    : 0;
+  return attempt(
+    `GET ${key}`,
+    async () => {
+      const result = await command(["GET", key]);
+      return typeof result === "string" || typeof result === "number"
+        ? Number(result)
+        : 0;
+    },
+    0,
+  );
 }
