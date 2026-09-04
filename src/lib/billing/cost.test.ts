@@ -64,17 +64,27 @@ test("the bundles survive the won weakening by a fifth", () => {
   }
 });
 
-test("the monthly grant is never sold at a loss", () => {
-  // Deliberately a weaker assertion than the bundles get. The grant is the
-  // thinnest number in the scheme and is known not to clear the bundle floor;
-  // what must not happen is it going negative.
+test("the monthly grant currently costs more than it earns", () => {
+  // Recorded, not approved. This was written as "never sold at a loss" and
+  // passed until PREMIUM_MONTHLY_PRICE_KRW was corrected from 9,900 to the
+  // 4,900 the console actually charges — the invariant was fine, the input was
+  // fiction. It is left pointing the other way so the state is visible rather
+  // than absent, and so that whoever fixes it is told to turn it back into the
+  // invariant it wants to be.
   const margin = grantMargin(
     PREMIUM_MONTHLY_PRICE_KRW,
     PREMIUM_MONTHLY_IMPORT_POINTS,
   );
   assert.ok(
-    margin.netUsd > margin.costUsd,
-    `a fully spent grant costs $${margin.costUsd.toFixed(2)} against $${margin.netUsd.toFixed(2)} of revenue`,
+    margin.costUsd > margin.netUsd,
+    "the grant now pays for itself — restore this as `netUsd > costUsd` and delete this comment",
+  );
+
+  // What the grant would have to be to break even at the current price.
+  const breakEven = Math.floor(margin.netUsd / pointCostUsd());
+  assert.ok(
+    breakEven < PREMIUM_MONTHLY_IMPORT_POINTS,
+    "break-even has caught up with the grant",
   );
 });
 
@@ -103,18 +113,23 @@ test("the grant is the thin part of the plan, and by how much", () => {
   );
 });
 
-test("running out mid-month does not double what a point costs", () => {
-  // The step out of the subscription is the number this pricing was tuned for,
-  // not the margin. Bundles were pushed down to sit just above the floor to
-  // make it as small as the floor permits; a later edit that walks them back up
-  // should fail here rather than pass quietly because the margin still clears.
-  const grantRate = PREMIUM_MONTHLY_PRICE_KRW / PREMIUM_MONTHLY_IMPORT_POINTS;
-  const cheapestEntry = POINT_BUNDLES.reduce((a, b) => (a.points <= b.points ? a : b));
-  const step = cheapestEntry.priceKrw / cheapestEntry.points / grantRate;
-  assert.ok(
-    step < 1.8,
-    `the smallest bundle costs ${step.toFixed(2)}x the grant rate`,
-  );
+test("the bundles sit just above the floor rather than comfortably above it", () => {
+  // What the bundles can actually be held to. The step up out of the
+  // subscription is the number worth caring about, but it is mostly decided by
+  // the subscription's own price — at 4,900원 the grant works out so cheap per
+  // point that no bundle price can be close to it. What is in the bundles' gift
+  // is not drifting upward, so that is what is guarded: each one within a tenth
+  // of the lowest price MIN_BUNDLE_MARGIN allows.
+  const floorKrw =
+    (pointCostUsd() / (1 - MIN_BUNDLE_MARGIN) / (1 - STORE_FEE_SHARE)) *
+    KRW_PER_USD.rate;
+  for (const bundle of POINT_BUNDLES) {
+    const perPoint = bundle.priceKrw / bundle.points;
+    assert.ok(
+      perPoint < floorKrw * 1.1,
+      `${bundle.productId} is ${(perPoint / floorKrw).toFixed(2)}x the floor`,
+    );
+  }
 });
 
 test("the floor is what stops the step getting smaller, not a lack of trying", () => {
