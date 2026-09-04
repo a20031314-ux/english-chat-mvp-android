@@ -22,6 +22,7 @@ import type { LearningLanguageCode } from "@/lib/learningLanguages";
 import {
   RealtimeCallError,
   startRealtimeCall,
+  type CallLine,
   type RealtimeCall,
 } from "@/lib/realtimeCall";
 
@@ -39,6 +40,7 @@ export function CallProvider({ children }: { children: ReactNode }) {
   const [phase, setPhase] = useState<CallPhase>("idle");
   const [muted, setMuted] = useState(false);
   const [startedAt, setStartedAt] = useState<number | null>(null);
+  const [lines, setLines] = useState<CallLine[]>([]);
 
   const callRef = useRef<RealtimeCall | null>(null);
   const abortRef = useRef<AbortController | null>(null);
@@ -79,6 +81,9 @@ export function CallProvider({ children }: { children: ReactNode }) {
       const abort = new AbortController();
       abortRef.current = abort;
       setMuted(false);
+      // Cleared here rather than on teardown: the transcript is most useful
+      // after the call, when there is time to ask about what went past.
+      setLines([]);
       setPhase("calling");
       try {
         const call = await startRealtimeCall({
@@ -98,6 +103,7 @@ export function CallProvider({ children }: { children: ReactNode }) {
             teardown();
             if (wasConnected) emitEnded(seconds);
           },
+          onLine: (line) => setLines((current) => [...current, line]),
         });
         if (abort.signal.aborted) {
           call.hangUp();
@@ -123,6 +129,17 @@ export function CallProvider({ children }: { children: ReactNode }) {
   const sendText = useCallback(
     (text: string) => callRef.current?.sendText(text) ?? false,
     [],
+  );
+
+  const askAboutLine = useCallback(
+    (line: CallLine, question: string) => {
+      const asked = question.trim();
+      if (!asked) return false;
+      // The tutor gets the line, never its number. Nothing here depends on the
+      // model counting turns or on a number holding still.
+      return sendText(`"${line.text}"\n\n${asked}`);
+    },
+    [sendText],
   );
 
   const toggleMuted = useCallback(() => {
@@ -192,9 +209,13 @@ export function CallProvider({ children }: { children: ReactNode }) {
       toggleMuted,
       sendText,
       subscribeEnded,
+      lines,
+      askAboutLine,
     }),
     [
+      askAboutLine,
       hangUp,
+      lines,
       muted,
       phase,
       start,

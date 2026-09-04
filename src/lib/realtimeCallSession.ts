@@ -11,6 +11,14 @@ import {
 export const REALTIME_CALL_MODEL =
   process.env.OPENAI_REALTIME_MODEL ?? "gpt-realtime-2.1";
 
+/**
+ * Transcribes what the learner says, alongside the call. Env-overridable because
+ * the name of the right small transcription model has changed more than once and
+ * will again; this should not need a deploy to follow it.
+ */
+export const CALL_TRANSCRIBE_MODEL =
+  process.env.OPENAI_REALTIME_TRANSCRIBE_MODEL ?? "gpt-4o-mini-transcribe";
+
 const VOICE_BY_LANGUAGE: Partial<Record<LearningLanguageCode, string>> = {
   en: "ash",
   ko: "cedar",
@@ -91,6 +99,15 @@ export function realtimeCallSessionConfig(
     model: REALTIME_CALL_MODEL,
     instructions: realtimeCallInstructions(targetLanguage, nativeLanguage),
     audio: {
+      input: {
+        /**
+         * Without this the learner's own turns never come back as text, and the
+         * transcript is missing exactly the half they are most likely to have
+         * questions about. A separate model does the transcribing, at a fraction
+         * of what the audio it listens to already costs.
+         */
+        transcription: { model: CALL_TRANSCRIBE_MODEL },
+      },
       output: {
         voice: realtimeCallVoice(targetLanguage),
       },

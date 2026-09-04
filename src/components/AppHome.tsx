@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { CallBar } from "@/components/CallBar";
 import { CallProvider } from "@/components/CallProvider";
+import { CallTranscript } from "@/components/CallTranscript";
 import { ChatWindow } from "@/components/ChatWindow";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { readAppLocale } from "@/components/LearningBookPanel";
@@ -133,6 +134,7 @@ function AppHomeInner({
               <BillingOpenButton ui={ui} />
             </div>
             <CallBar ui={ui} />
+            <CallTranscript />
             <div className="relative z-0 min-h-0 flex-1 overflow-hidden p-2 pb-0 sm:p-4 sm:pb-0">
               <div
                 className={

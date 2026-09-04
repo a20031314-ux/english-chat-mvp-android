@@ -3,6 +3,7 @@
 import { createContext, useContext } from "react";
 import type { CallPhase } from "@/lib/callSession";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
+import type { CallLine } from "@/lib/realtimeCall";
 
 export type CallStartResult =
   | { ok: true }
@@ -27,6 +28,16 @@ export type CallContextValue = {
   toggleMuted: () => void;
   /** Give the tutor a typed line. False when no call is carrying it. */
   sendText: (text: string) => boolean;
+  /** Finished turns of the current call, oldest first. Cleared when one starts. */
+  lines: CallLine[];
+  /**
+   * Ask the tutor about a line the learner pointed at.
+   *
+   * The number on screen is for the person. The tutor is handed the line itself,
+   * so nothing rests on it counting turns or on a number still meaning what it
+   * meant a moment ago.
+   */
+  askAboutLine: (line: CallLine, question: string) => boolean;
   /** Fires when a call ends by hang-up or by the far end dropping. */
   subscribeEnded: (listener: (durationSeconds: number) => void) => () => void;
 };
