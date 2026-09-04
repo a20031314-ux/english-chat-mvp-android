@@ -22,6 +22,8 @@ export function CallTranscript() {
   const [question, setQuestion] = useState("");
   const endRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
+  /** The tapped line, so it can be kept in view once the list shrinks. */
+  const selectedRef = useRef<HTMLButtonElement | null>(null);
 
   // Follow the conversation, but only while it is still running — scrolling the
   // list out from under someone reading it after the call would be the opposite
@@ -31,8 +33,14 @@ export function CallTranscript() {
     endRef.current?.scrollIntoView({ block: "end" });
   }, [lines.length, phase]);
 
+  // Opening the ask bar takes height away from the list, which can push the
+  // tapped line out of sight even though the bar no longer covers it. Focus
+  // without scrolling, then put that line back on screen — you should be able
+  // to read the sentence while typing the question about it.
   useEffect(() => {
-    if (asking) inputRef.current?.focus();
+    if (!asking) return;
+    inputRef.current?.focus({ preventScroll: true });
+    selectedRef.current?.scrollIntoView({ block: "nearest" });
   }, [asking]);
 
   if (lines.length === 0) return null;
@@ -48,9 +56,16 @@ export function CallTranscript() {
   return (
     <section
       aria-label="call transcript"
-      className="flex max-h-56 shrink-0 flex-col overflow-y-auto border-b border-white/10 bg-[#0a0a0a]"
+      className="flex max-h-56 shrink-0 flex-col border-b border-white/10 bg-[#0a0a0a]"
     >
-      <ol className="flex flex-col gap-px p-2">
+      {/*
+        The list scrolls; the ask bar below does not sit inside it. Sticky
+        inside the scroller put the bar on top of the line it was asking
+        about — tap the last line and the sentence disappeared behind the
+        input you were typing the question into.
+      */}
+      <div className="min-h-0 flex-1 overflow-y-auto">
+        <ol className="flex flex-col gap-px p-2">
         {lines.map((line) => {
           const isTutor = line.role === "tutor";
           const selected = asking?.id === line.id;
@@ -58,6 +73,7 @@ export function CallTranscript() {
             <li key={line.id}>
               <button
                 type="button"
+                ref={selected ? selectedRef : null}
                 onClick={() => {
                   setAsking(selected ? null : line);
                   setQuestion("");
@@ -88,11 +104,12 @@ export function CallTranscript() {
             </li>
           );
         })}
-      </ol>
-      <div ref={endRef} />
+        </ol>
+        <div ref={endRef} />
+      </div>
 
       {asking ? (
-        <div className="sticky bottom-0 flex gap-1.5 border-t border-white/10 bg-[#0a0a0a] p-2">
+        <div className="flex shrink-0 gap-1.5 border-t border-white/10 bg-[#0a0a0a] p-2">
           <input
             ref={inputRef}
             value={question}
