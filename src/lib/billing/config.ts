@@ -18,7 +18,15 @@ export const REVENUECAT_USER_HEADER = "x-rc-user";
 
 export const FREE_DAILY_CHAT_LIMIT = 10;
 
-/** Display price only. Play Console still owns the billed amount for `premium_monthly`. */
+/**
+ * Display price only. Play Console still owns the billed amount for
+ * `premium_monthly`.
+ *
+ * See cost.ts for what this has to cover. A subscriber who spends the whole
+ * monthly grant on calls leaves about a fifth of it behind, which is thin — the
+ * grant below is larger than this price strictly supports, and is kept there
+ * rather than cut because no one has measured what people actually use yet.
+ */
 export const PREMIUM_MONTHLY_PRICE_KRW = 9900;
 
 /**
@@ -30,7 +38,15 @@ export const VIDEO_IMPORT_POINT_SECONDS = 3 * 60;
 /** Free users cannot import custom videos. They get catalog trial clips instead. */
 export const FREE_MONTHLY_IMPORT_POINTS = 0;
 
-/** 240 minutes of custom prep, billed in 3-minute points. */
+/**
+ * The monthly grant: 240 minutes of custom video prep, or 80 minutes of call,
+ * or any mix — points buy both now.
+ *
+ * Knowingly generous for the price. cost.ts puts the ceiling nearer fifty at
+ * the margin the bundles hold to, and a test records the gap rather than
+ * asserting it away. Cutting it is a product decision that wants real usage
+ * behind it, not a list-price argument.
+ */
 export const PREMIUM_MONTHLY_IMPORT_POINTS = 80;
 
 /** Longest custom/library video that can be prepared. Matches Whisper's 15 min cap. */

@@ -17,7 +17,7 @@
     "test:translate": "node --experimental-strip-types --test src/lib/reconstructionTranslate/pipeline.test.ts",
     "test:call": "node --experimental-strip-types --test src/lib/realtimeCallSession.test.ts src/lib/callLines.test.ts",
     "verify:library": "node --experimental-strip-types scripts/verify-video-library.mjs",
-    "test:billing": "node --experimental-strip-types --test src/lib/billing/videoPrep.test.ts src/lib/billing/points.test.ts src/lib/server/entitlementStore.test.ts src/lib/server/callHold.test.ts src/lib/server/kv.test.ts"
+    "test:billing": "node --experimental-strip-types --test src/lib/billing/videoPrep.test.ts src/lib/billing/points.test.ts src/lib/billing/cost.test.ts src/lib/server/entitlementStore.test.ts src/lib/server/callHold.test.ts src/lib/server/kv.test.ts"
   },
   "dependencies": {
     "@capacitor-community/text-to-speech": "^8.0.2",

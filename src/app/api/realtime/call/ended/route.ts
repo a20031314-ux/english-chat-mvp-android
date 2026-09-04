@@ -5,6 +5,7 @@ import {
   getMonthlyCallSeconds,
   settleCallHold,
 } from "@/lib/server/entitlementStore";
+import { callMinuteUsd } from "@/lib/billing/cost";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 
 export const dynamic = "force-dynamic";
@@ -76,6 +77,11 @@ export async function POST(request: NextRequest) {
       isPremium,
       verified,
       refundedPoints,
+      // Derived from list prices, so this is an estimate and not a bill. It is
+      // here so the log reads as money without anyone having to redo the
+      // arithmetic, and so the assumptions behind it get checked against real
+      // months rather than staying assumptions.
+      estimatedUsd: Number(((seconds / 60) * callMinuteUsd()).toFixed(4)),
     });
   } catch (error) {
     // Counting must never be the reason a request fails, least of all one the
