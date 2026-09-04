@@ -1,11 +1,14 @@
 import { Capacitor } from "@capacitor/core";
 import {
+  PRODUCT_CATEGORY,
   Purchases,
   type CustomerInfo,
   type PurchasesPackage,
   type PurchasesStoreProduct,
   type SubscriptionOption,
 } from "@revenuecat/purchases-capacitor";
+import { apiUrl } from "@/lib/apiBase";
+import { POINT_BUNDLES } from "@/lib/billing/cost";
 import {
   PREMIUM_CACHE_STORAGE_KEY,
   PREMIUM_CLIENT_HEADER,
@@ -524,5 +527,147 @@ export async function restorePremiumPurchases(): Promise<RestoreFlowResult> {
   } catch (error) {
     console.error("[billing] restore failed", error);
     return { status: "error" };
+  }
+}
+
+export type PointBundleOffer = {
+  productId: string;
+  points: number;
+  /** The store's own formatted price. Never a figure written into the app. */
+  priceLabel: string;
+};
+
+export type PointPurchaseResult =
+  | { status: "success"; creditedPoints: number; purchasedPoints: number }
+  | { status: "cancelled" }
+  | { status: "error"; message?: string };
+
+/**
+ * The point bundles, as the store describes them.
+ *
+ * Prices come back from Play rather than from POINT_BUNDLES, which holds what
+ * we intend to charge, not what a given person in a given country is actually
+ * shown. The subscription's paywall learned this the hard way by hard-coding
+ * "9,900원" into copy while the console charged 4,900.
+ *
+ * A bundle the store does not return is dropped rather than shown at a price we
+ * made up: almost always a product id that exists here and not in the console.
+ */
+export async function fetchPointBundles(): Promise<PointBundleOffer[]> {
+  if (!isBillingNativePlatform()) return [];
+  const plugin = getPurchasesPlugin();
+  if (!plugin) return [];
+  try {
+    const { products } = await withBillingTimeout(
+      "getProducts",
+      plugin.getProducts({
+        productIdentifiers: POINT_BUNDLES.map((bundle) => bundle.productId),
+        // These are consumables, not subscriptions. Asking for the wrong
+        // category is how a correctly configured product comes back as nothing.
+        type: PRODUCT_CATEGORY.NON_SUBSCRIPTION,
+      }),
+      BILLING_FETCH_TIMEOUT_MS,
+    );
+    const offers: PointBundleOffer[] = [];
+    for (const bundle of POINT_BUNDLES) {
+      const product = products.find(
+        (item) => item.identifier === bundle.productId,
+      );
+      if (!product) {
+        console.error("[billing] point bundle missing from store", bundle.productId);
+        continue;
+      }
+      offers.push({
+        productId: bundle.productId,
+        points: bundle.points,
+        priceLabel: product.priceString,
+      });
+    }
+    return offers;
+  } catch (error) {
+    console.error("[billing] fetchPointBundles failed", error);
+    return [];
+  }
+}
+
+/**
+ * Buy a bundle, then have the server work out what that is worth.
+ *
+ * The purchase and the balance are two separate facts. Play says the money
+ * moved; only the server, asking RevenueCat over a secret key, decides that a
+ * balance goes up — the app never tells it how many points to add, because an
+ * app that could would be a way to mint them.
+ *
+ * A sync that fails after a successful purchase is not a lost purchase. The
+ * receipt stays on RevenueCat's record and the next sync credits it, which is
+ * the whole reason crediting is keyed on the transaction rather than the call.
+ */
+export async function purchasePointBundle(
+  productId: string,
+): Promise<PointPurchaseResult> {
+  if (!isBillingNativePlatform()) {
+    return { status: "error", message: "NOT_NATIVE" };
+  }
+  const plugin = getPurchasesPlugin();
+  if (!plugin) return { status: "error", message: "PLUGIN_UNAVAILABLE" };
+
+  try {
+    const { products } = await withBillingTimeout(
+      "getProducts",
+      plugin.getProducts({
+        productIdentifiers: [productId],
+        type: PRODUCT_CATEGORY.NON_SUBSCRIPTION,
+      }),
+      BILLING_FETCH_TIMEOUT_MS,
+    );
+    const product = products.find((item) => item.identifier === productId);
+    if (!product) return { status: "error", message: "NO_PRODUCT" };
+
+    await withBillingTimeout(
+      "purchaseStoreProduct",
+      plugin.purchaseStoreProduct({ product }),
+      BILLING_PURCHASE_TIMEOUT_MS,
+    );
+  } catch (error) {
+    if (isPurchaseCancelledError(error)) return { status: "cancelled" };
+    console.error("[billing] point purchase failed", error);
+    return { status: "error", message: "PURCHASE_FAILED" };
+  }
+
+  return syncPurchasedPoints();
+}
+
+/**
+ * Ask the server to credit anything bought but not yet counted.
+ *
+ * Also worth calling on launch: a purchase can complete while the app is being
+ * killed, and the store keeps the receipt either way.
+ */
+export async function syncPurchasedPoints(): Promise<PointPurchaseResult> {
+  try {
+    const response = await fetch(apiUrl("/api/points/sync"), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...entitlementHeaders(readCachedPremium()),
+      },
+      body: JSON.stringify({}),
+    });
+    if (!response.ok) {
+      console.error("[billing] points sync failed with", response.status);
+      return { status: "error", message: "SYNC_FAILED" };
+    }
+    const body = (await response.json()) as {
+      credited?: number;
+      purchasedPoints?: number;
+    };
+    return {
+      status: "success",
+      creditedPoints: body.credited ?? 0,
+      purchasedPoints: body.purchasedPoints ?? 0,
+    };
+  } catch (error) {
+    console.error("[billing] points sync threw", error);
+    return { status: "error", message: "SYNC_FAILED" };
   }
 }

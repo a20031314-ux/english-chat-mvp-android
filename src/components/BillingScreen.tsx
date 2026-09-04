@@ -19,6 +19,7 @@ import {
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
 import { monthlyImportPoints } from "@/lib/billing/videoPrep";
 import { PointsIcon } from "@/components/PointsIcon";
+import { PointStore } from "@/components/PointStore";
 import {
   getImportPointsUsed,
   IMPORT_QUOTA_CHANGED_EVENT,
@@ -366,6 +367,11 @@ export function BillingScreen({
             {notice ? (
               <p className="text-center text-sm text-slate-300">{notice}</p>
             ) : null}
+            {/*
+              Below the subscription, because a top-up only makes sense once
+              there is a plan whose allowance can run out.
+            */}
+            {isPremium ? <PointStore ui={ui} /> : null}
           </div>
         </section>
       </div>

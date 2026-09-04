@@ -50,7 +50,74 @@ const chatCallNoPoints = {
   hi: "आपके कॉल पॉइंट खत्म हो गए हैं। ये अगले महीने फिर से भर जाएंगे।",
 };
 
-const packs = { callTranscriptTitle, chatCallNoPoints };
+/** Heading over the top-up bundles. */
+const pointsSectionTitle = {
+  ja: "ポイントの追加",
+  zh: "补充点数",
+  vi: "Nạp thêm điểm",
+  fr: "Recharger des points",
+  pt: "Recarregar pontos",
+  id: "Isi ulang poin",
+  it: "Ricarica punti",
+  ru: "Пополнить баланс",
+  ar: "شحن النقاط",
+  th: "เติมพอยต์",
+  hi: "पॉइंट रीचार्ज करें",
+};
+
+/** Current balance. {n} is a numeral, so no plural rule is needed. */
+const pointsBalance = {
+  ja: "残り {n}P",
+  zh: "剩余 {n}P",
+  vi: "Còn {n}P",
+  fr: "{n} P restants",
+  pt: "{n}P restantes",
+  id: "Sisa {n}P",
+  it: "{n}P rimanenti",
+  ru: "Осталось {n}P",
+  ar: "المتبقي {n}P",
+  th: "เหลือ {n}P",
+  hi: "{n}P शेष",
+};
+
+/** Shown after a purchase is credited. */
+const pointsPurchased = {
+  ja: "{n}P を追加しました。",
+  zh: "已添加 {n}P。",
+  vi: "Đã cộng {n}P.",
+  fr: "{n} P ajoutés.",
+  pt: "{n}P adicionados.",
+  id: "{n}P ditambahkan.",
+  it: "{n}P aggiunti.",
+  ru: "Начислено {n}P.",
+  ar: "تمت إضافة {n}P.",
+  th: "เพิ่ม {n}P แล้ว",
+  hi: "{n}P जोड़े गए।",
+};
+
+/** The store returned nothing to sell. */
+const pointsUnavailable = {
+  ja: "現在ポイントを追加できません。",
+  zh: "目前无法补充点数。",
+  vi: "Hiện chưa thể nạp điểm.",
+  fr: "Recharge indisponible pour le moment.",
+  pt: "Recarga indisponível no momento.",
+  id: "Isi ulang belum tersedia saat ini.",
+  it: "Ricarica non disponibile al momento.",
+  ru: "Пополнение сейчас недоступно.",
+  ar: "الشحن غير متاح حاليًا.",
+  th: "ยังเติมพอยต์ไม่ได้ในขณะนี้",
+  hi: "अभी रीचार्ज उपलब्ध नहीं है।",
+};
+
+const packs = {
+  callTranscriptTitle,
+  chatCallNoPoints,
+  pointsSectionTitle,
+  pointsBalance,
+  pointsPurchased,
+  pointsUnavailable,
+};
 
 for (const [key, byLocale] of Object.entries(packs)) {
   const missing = Object.keys(generated).filter((locale) => !byLocale[locale]);

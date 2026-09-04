@@ -596,7 +596,11 @@
     "dimensionEtymology": "由来",
     "analysisSpokenAlso": "最初の解釈",
     "callTranscriptTitle": "通話の記録",
-    "chatCallNoPoints": "通話ポイントを使い切りました。来月また補充されます。"
+    "chatCallNoPoints": "通話ポイントを使い切りました。来月また補充されます。",
+    "pointsSectionTitle": "ポイントの追加",
+    "pointsBalance": "残り {n}P",
+    "pointsPurchased": "{n}P を追加しました。",
+    "pointsUnavailable": "現在ポイントを追加できません。"
   },
   "zh": {
     "appTitle": "{targetLanguage}批改聊天",
@@ -1195,7 +1199,11 @@
     "dimensionEtymology": "来源",
     "analysisSpokenAlso": "初读",
     "callTranscriptTitle": "通话记录",
-    "chatCallNoPoints": "通话点数已用完，下个月会重新补充。"
+    "chatCallNoPoints": "通话点数已用完，下个月会重新补充。",
+    "pointsSectionTitle": "补充点数",
+    "pointsBalance": "剩余 {n}P",
+    "pointsPurchased": "已添加 {n}P。",
+    "pointsUnavailable": "目前无法补充点数。"
   },
   "vi": {
     "appTitle": "Chat sửa {targetLanguage}",
@@ -1794,7 +1802,11 @@
     "dimensionEtymology": "Nguồn gốc",
     "analysisSpokenAlso": "Cách hiểu ban đầu",
     "callTranscriptTitle": "Bản ghi cuộc gọi",
-    "chatCallNoPoints": "Bạn đã dùng hết điểm gọi. Điểm sẽ được nạp lại vào tháng sau."
+    "chatCallNoPoints": "Bạn đã dùng hết điểm gọi. Điểm sẽ được nạp lại vào tháng sau.",
+    "pointsSectionTitle": "Nạp thêm điểm",
+    "pointsBalance": "Còn {n}P",
+    "pointsPurchased": "Đã cộng {n}P.",
+    "pointsUnavailable": "Hiện chưa thể nạp điểm."
   },
   "fr": {
     "appTitle": "Chat de correction d'{targetLanguage}",
@@ -2393,7 +2405,11 @@
     "dimensionEtymology": "Origine",
     "analysisSpokenAlso": "Première lecture",
     "callTranscriptTitle": "Transcription de l’appel",
-    "chatCallNoPoints": "Vous n’avez plus de points d’appel. Ils seront rechargés le mois prochain."
+    "chatCallNoPoints": "Vous n’avez plus de points d’appel. Ils seront rechargés le mois prochain.",
+    "pointsSectionTitle": "Recharger des points",
+    "pointsBalance": "{n} P restants",
+    "pointsPurchased": "{n} P ajoutés.",
+    "pointsUnavailable": "Recharge indisponible pour le moment."
   },
   "pt": {
     "appTitle": "Chat de correção de {targetLanguage}",
@@ -2992,7 +3008,11 @@
     "dimensionEtymology": "Origem",
     "analysisSpokenAlso": "Primeira leitura",
     "callTranscriptTitle": "Transcrição da chamada",
-    "chatCallNoPoints": "Você ficou sem pontos de chamada. Eles são recarregados no próximo mês."
+    "chatCallNoPoints": "Você ficou sem pontos de chamada. Eles são recarregados no próximo mês.",
+    "pointsSectionTitle": "Recarregar pontos",
+    "pointsBalance": "{n}P restantes",
+    "pointsPurchased": "{n}P adicionados.",
+    "pointsUnavailable": "Recarga indisponível no momento."
   },
   "id": {
     "appTitle": "Chat koreksi {targetLanguage}",
@@ -3591,7 +3611,11 @@
     "dimensionEtymology": "Asal usul",
     "analysisSpokenAlso": "Bacaan pertama",
     "callTranscriptTitle": "Transkrip panggilan",
-    "chatCallNoPoints": "Poin panggilan Anda habis. Poin akan diisi ulang bulan depan."
+    "chatCallNoPoints": "Poin panggilan Anda habis. Poin akan diisi ulang bulan depan.",
+    "pointsSectionTitle": "Isi ulang poin",
+    "pointsBalance": "Sisa {n}P",
+    "pointsPurchased": "{n}P ditambahkan.",
+    "pointsUnavailable": "Isi ulang belum tersedia saat ini."
   },
   "it": {
     "appTitle": "Chat di correzione {targetLanguage}",
@@ -4190,7 +4214,11 @@
     "dimensionEtymology": "Origine",
     "analysisSpokenAlso": "Prima lettura",
     "callTranscriptTitle": "Trascrizione della chiamata",
-    "chatCallNoPoints": "Hai esaurito i punti chiamata. Si ricaricano il mese prossimo."
+    "chatCallNoPoints": "Hai esaurito i punti chiamata. Si ricaricano il mese prossimo.",
+    "pointsSectionTitle": "Ricarica punti",
+    "pointsBalance": "{n}P rimanenti",
+    "pointsPurchased": "{n}P aggiunti.",
+    "pointsUnavailable": "Ricarica non disponibile al momento."
   },
   "ru": {
     "appTitle": "Чат для правки {targetLanguage}",
@@ -4789,7 +4817,11 @@
     "dimensionEtymology": "Происхождение",
     "analysisSpokenAlso": "Первое прочтение",
     "callTranscriptTitle": "Расшифровка звонка",
-    "chatCallNoPoints": "Минуты звонков закончились. Они пополнятся в следующем месяце."
+    "chatCallNoPoints": "Минуты звонков закончились. Они пополнятся в следующем месяце.",
+    "pointsSectionTitle": "Пополнить баланс",
+    "pointsBalance": "Осталось {n}P",
+    "pointsPurchased": "Начислено {n}P.",
+    "pointsUnavailable": "Пополнение сейчас недоступно."
   },
   "ar": {
     "appTitle": "دردشة تصحيح {targetLanguage}",
@@ -5388,7 +5420,11 @@
     "dimensionEtymology": "الأصل",
     "analysisSpokenAlso": "القراءة الأولى",
     "callTranscriptTitle": "نص المكالمة",
-    "chatCallNoPoints": "لقد استنفدت نقاط المكالمات. سيتم تجديدها الشهر المقبل."
+    "chatCallNoPoints": "لقد استنفدت نقاط المكالمات. سيتم تجديدها الشهر المقبل.",
+    "pointsSectionTitle": "شحن النقاط",
+    "pointsBalance": "المتبقي {n}P",
+    "pointsPurchased": "تمت إضافة {n}P.",
+    "pointsUnavailable": "الشحن غير متاح حاليًا."
   },
   "th": {
     "appTitle": "แชทตรวจ {targetLanguage}",
@@ -5987,7 +6023,11 @@
     "dimensionEtymology": "ที่มา",
     "analysisSpokenAlso": "การอ่านครั้งแรก",
     "callTranscriptTitle": "บันทึกการโทร",
-    "chatCallNoPoints": "คุณใช้พอยต์โทรหมดแล้ว พอยต์จะเติมใหม่เดือนหน้า"
+    "chatCallNoPoints": "คุณใช้พอยต์โทรหมดแล้ว พอยต์จะเติมใหม่เดือนหน้า",
+    "pointsSectionTitle": "เติมพอยต์",
+    "pointsBalance": "เหลือ {n}P",
+    "pointsPurchased": "เพิ่ม {n}P แล้ว",
+    "pointsUnavailable": "ยังเติมพอยต์ไม่ได้ในขณะนี้"
   },
   "hi": {
     "appTitle": "{targetLanguage} सुधार चैट",
@@ -6586,6 +6626,10 @@
     "dimensionEtymology": "उद्गम",
     "analysisSpokenAlso": "पहली रीडिंग",
     "callTranscriptTitle": "कॉल ट्रांसक्रिप्ट",
-    "chatCallNoPoints": "आपके कॉल पॉइंट खत्म हो गए हैं। ये अगले महीने फिर से भर जाएंगे।"
+    "chatCallNoPoints": "आपके कॉल पॉइंट खत्म हो गए हैं। ये अगले महीने फिर से भर जाएंगे।",
+    "pointsSectionTitle": "पॉइंट रीचार्ज करें",
+    "pointsBalance": "{n}P शेष",
+    "pointsPurchased": "{n}P जोड़े गए।",
+    "pointsUnavailable": "अभी रीचार्ज उपलब्ध नहीं है।"
   }
 }
