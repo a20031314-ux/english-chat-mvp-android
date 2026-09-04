@@ -13,7 +13,15 @@ const ALLOWED_ORIGIN_PREFIXES = [
 // the Android build hides today because CapacitorHttp bypasses CORS entirely —
 // so an omission here stays invisible until something makes a plain fetch.
 const ALLOWED_HEADERS =
-  "Content-Type, x-client-premium, x-rc-user, x-learning-language";
+  "Content-Type, x-client-premium, x-rc-user, x-learning-language, x-call-blocks";
+
+/**
+ * The call route answers with SDP and says what it charged in headers, which a
+ * browser hides from script unless they are named here. The Android build does
+ * not need this — CapacitorHttp bypasses CORS — so an omission would only ever
+ * show up on the web path.
+ */
+const EXPOSED_HEADERS = "x-call-hold, x-call-seconds";
 
 function resolveAllowOrigin(request: NextRequest): string {
   const origin = request.headers.get("origin");
@@ -31,6 +39,7 @@ export function corsHeaders(request: NextRequest): Record<string, string> {
     "Access-Control-Allow-Origin": resolveAllowOrigin(request),
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": ALLOWED_HEADERS,
+    "Access-Control-Expose-Headers": EXPOSED_HEADERS,
     "Access-Control-Max-Age": "86400",
   };
 }

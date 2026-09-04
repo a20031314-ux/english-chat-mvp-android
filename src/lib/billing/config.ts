@@ -50,6 +50,48 @@ export const FREE_TRIAL_CALL_COUNT = 2;
 /** How long a trial call runs before the app ends it itself. */
 export const TRIAL_CALL_MAX_SECONDS = 3 * 60;
 
+/**
+ * What one point buys of a call.
+ *
+ * A minute, chosen so the point keeps the meaning it already had elsewhere: a
+ * point is roughly a nickel of model time either way, whether it goes on a
+ * minute of realtime audio or on three minutes of video preparation. That let
+ * calls join the same currency without redefining VIDEO_IMPORT_POINT_SECONDS
+ * or restating what anyone's existing balance is worth.
+ */
+export const POINT_CALL_SECONDS = 60;
+
+/**
+ * How much a call takes up front, and so how long it is allowed to run.
+ *
+ * The server cannot end a call — after the handshake the audio runs between the
+ * phone and OpenAI — so it charges for a block at the moment it opens one and
+ * hands back what went unused. This number is therefore the most that a single
+ * call can cost if the app never reports back: the ceiling on being lied to,
+ * not just a convenient unit.
+ *
+ * Ten minutes is long enough that ordinary calls are one block, and short
+ * enough that a lost report is a small loss.
+ */
+export const CALL_BLOCK_POINTS = 10;
+
+/**
+ * Sent by a build that understands call blocks and will hang up at the end of
+ * one. Only such a build is charged points.
+ *
+ * The server cannot enforce the block itself, so charging a client that ignores
+ * it would take the points and still leave the audio running — the worst of
+ * both. Older builds therefore keep the behaviour they shipped with, and this
+ * heals as people update, the way the entitlement header did before it.
+ */
+export const CALL_BLOCK_CLIENT_HEADER = "x-call-blocks";
+
+/** Names the hold on the way out, so the app can settle it on the way back. */
+export const CALL_HOLD_HEADER = "x-call-hold";
+
+/** How many seconds the block bought, so the app knows when to hang up. */
+export const CALL_BLOCK_SECONDS_HEADER = "x-call-seconds";
+
 /** Lifetime free catalog opens (not a monthly reset). */
 export const FREE_CATALOG_TRIAL_COUNT = 3;
 

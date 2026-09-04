@@ -4,12 +4,18 @@ import { corsHeaders, corsPreflightResponse, jsonWithCors } from "@/lib/server/c
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { realtimeCallSessionConfig } from "@/lib/realtimeCallSession";
 import {
+  CALL_BLOCK_CLIENT_HEADER,
+  CALL_BLOCK_SECONDS_HEADER,
+  CALL_HOLD_HEADER,
   FREE_TRIAL_CALL_COUNT,
   REVENUECAT_USER_HEADER,
 } from "@/lib/billing/config";
+import { monthlyImportPoints } from "@/lib/billing/videoPrep";
 import {
   getCallsStarted,
   incrementCallsStarted,
+  openCallHold,
+  settleCallHold,
 } from "@/lib/server/entitlementStore";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 
@@ -78,6 +84,20 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "CALL_TRIAL_USED" }, { status: 403 });
   }
 
+  // Points are charged only to a build that will hang up at the end of the block
+  // it was sold. The server cannot end a call itself, so charging one that
+  // ignores the block would take the points and leave the audio running anyway.
+  const honoursBlocks =
+    identifiesItself && request.headers.get(CALL_BLOCK_CLIENT_HEADER) === "1";
+
+  let hold: { holdId: string; points: number; seconds: number } | null = null;
+  if (honoursBlocks && isPremium) {
+    hold = await openCallHold(userId, monthlyImportPoints(isPremium));
+    if (!hold) {
+      return jsonWithCors(request, { error: "NO_POINTS" }, { status: 402 });
+    }
+  }
+
   const targetLanguage = coerceLanguageCode(body.targetLanguage);
   const nativeLanguage = coerceLanguageCode(body.interfaceLanguage);
   const session = JSON.stringify(
@@ -99,6 +119,9 @@ export async function POST(request: NextRequest) {
     const answer = await upstream.text();
     if (!upstream.ok || !answer.includes("v=")) {
       console.error("[realtime-call]", upstream.status, answer.slice(0, 500));
+      // No call was opened, so nothing was spent. Settling at zero seconds
+      // returns the whole block rather than charging for a failed handshake.
+      if (hold) await settleCallHold(userId, hold.holdId, 0);
       return jsonWithCors(request, { error: "REALTIME_FAILED" }, { status: 502 });
     }
     if (identifiesItself && !isPremium) {
@@ -109,10 +132,17 @@ export async function POST(request: NextRequest) {
       headers: {
         ...corsHeaders(request),
         "Content-Type": "application/sdp",
+        ...(hold
+          ? {
+              [CALL_HOLD_HEADER]: hold.holdId,
+              [CALL_BLOCK_SECONDS_HEADER]: String(hold.seconds),
+            }
+          : {}),
       },
     });
   } catch (error) {
     console.error("[realtime-call]", error);
+    if (hold) await settleCallHold(userId, hold.holdId, 0);
     return jsonWithCors(request, { error: "REALTIME_FAILED" }, { status: 502 });
   }
 }

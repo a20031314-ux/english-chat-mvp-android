@@ -3,6 +3,7 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
   addMonthlyCallSeconds,
   getMonthlyCallSeconds,
+  settleCallHold,
 } from "@/lib/server/entitlementStore";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 
@@ -34,7 +35,7 @@ export async function OPTIONS(request: NextRequest) {
  * fires this and forgets it, and so does this route.
  */
 export async function POST(request: NextRequest) {
-  let body: { seconds?: unknown };
+  let body: { seconds?: unknown; holdId?: unknown };
   try {
     body = await request.json();
   } catch {
@@ -49,6 +50,22 @@ export async function POST(request: NextRequest) {
   const seconds = Math.min(Math.round(reported), MAX_REPORTED_SECONDS);
   const { userId, isPremium, verified } = await resolveRequestEntitlement(request);
 
+  // Settling is what returns the unused part of the block that opening the call
+  // took. A report with no hold — an older build, or one whose call was never
+  // charged — still counts towards the month; it simply has nothing to give
+  // back. A report that never arrives leaves the block spent, which is the
+  // whole reason it is safe to charge in advance.
+  const holdId = typeof body.holdId === "string" ? body.holdId : null;
+  let refundedPoints: number | null = null;
+  if (holdId) {
+    try {
+      const settled = await settleCallHold(userId, holdId, seconds);
+      refundedPoints = settled?.refundedPoints ?? null;
+    } catch (error) {
+      console.error("[call-ended] hold not settled", holdId, error);
+    }
+  }
+
   try {
     const monthSeconds = await addMonthlyCallSeconds(userId, seconds);
     // The line to read when working out what a month of calling costs.
@@ -58,6 +75,7 @@ export async function POST(request: NextRequest) {
       monthSeconds,
       isPremium,
       verified,
+      refundedPoints,
     });
   } catch (error) {
     // Counting must never be the reason a request fails, least of all one the
@@ -65,5 +83,5 @@ export async function POST(request: NextRequest) {
     console.error("[call-ended] not recorded", error);
   }
 
-  return jsonWithCors(request, { ok: true });
+  return jsonWithCors(request, { ok: true, refundedPoints });
 }
