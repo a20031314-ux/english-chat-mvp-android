@@ -1,31 +1,12 @@
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
+import { createCallLineReader, type CallLine } from "@/lib/callLines";
 import {
   learningLanguageName,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
 
-/**
- * One finished turn of a call, as text.
- *
- * A call leaves nothing behind to point at: a learner who missed something does
- * not know what they missed, so the question never gets asked. These are the
- * handles that make asking possible.
- *
- * `index` is assigned when the turn is finalized and never reassigned — the
- * number on screen has to still mean the same line a second later. Only
- * completed turns become lines; the streaming deltas are dropped, which is what
- * keeps the numbering still.
- */
-export type CallLine = {
-  /** Stable across repeats of the same event. */
-  id: string;
-  /** 1-based, in the order turns were finalized. */
-  index: number;
-  role: "tutor" | "learner";
-  text: string;
-  at: number;
-};
+export type { CallLine };
 
 export type RealtimeCall = {
   setMuted: (muted: boolean) => void;
@@ -191,51 +172,13 @@ export async function startRealtimeCall(input: {
       );
     });
 
-    let lineCount = 0;
-    const emittedLineIds = new Set<string>();
-
-    const emitLine = (
-      itemId: string | undefined,
-      role: CallLine["role"],
-      rawText: string,
-    ) => {
-      if (closed || !input.onLine) return;
-      const text = rawText.trim();
-      if (!text) return;
-      // The same completion can arrive twice; a repeat must not take a number.
-      const id = `${role}:${itemId ?? text}`;
-      if (emittedLineIds.has(id)) return;
-      emittedLineIds.add(id);
-      lineCount += 1;
-      input.onLine({ id, index: lineCount, role, text, at: Date.now() });
-    };
+    // One reader per call, so the numbering starts at 1 with the call.
+    const lineReader = createCallLineReader();
 
     dataChannel.addEventListener("message", (event) => {
-      if (typeof event.data !== "string") return;
-      let payload: { type?: unknown; item_id?: unknown; transcript?: unknown };
-      try {
-        payload = JSON.parse(event.data);
-      } catch {
-        return;
-      }
-      const type = typeof payload.type === "string" ? payload.type : "";
-      const transcript =
-        typeof payload.transcript === "string" ? payload.transcript : "";
-      if (!type || !transcript) return;
-      const itemId =
-        typeof payload.item_id === "string" ? payload.item_id : undefined;
-
-      if (type === "conversation.item.input_audio_transcription.completed") {
-        emitLine(itemId, "learner", transcript);
-        return;
-      }
-      // The tutor's own transcript has been spelled `response.audio_transcript.done`
-      // and `response.output_audio_transcript.done` across realtime versions.
-      // Matching the tail keeps this working through the next rename instead of
-      // going quietly empty.
-      if (type.endsWith("audio_transcript.done")) {
-        emitLine(itemId, "tutor", transcript);
-      }
+      if (closed || !input.onLine) return;
+      const line = lineReader.read(event.data);
+      if (line) input.onLine(line);
     });
 
     pc.onconnectionstatechange = () => {

@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  CALL_TRANSCRIBE_MODEL,
   realtimeCallInstructions,
   realtimeCallSessionConfig,
   realtimeCallVoice,
@@ -29,6 +30,15 @@ test("session config uses realtime type and a voice", () => {
   assert.equal(session.type, "realtime");
   assert.equal(session.audio.output.voice, "ash");
   assert.ok(session.instructions.length > 80);
+});
+
+test("the session asks for the learner's own turns to be transcribed", () => {
+  // Without this the learner's half of the transcript is simply absent, and it
+  // is the half they are most likely to have questions about. Nothing in the
+  // call fails when it goes missing, so only a check like this would notice.
+  const session = realtimeCallSessionConfig("en");
+  assert.equal(session.audio.input.transcription.model, CALL_TRANSCRIBE_MODEL);
+  assert.ok(CALL_TRANSCRIBE_MODEL.length > 0);
 });
 
 test("a call in another language is told to stay in it and expect the native one", () => {
