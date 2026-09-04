@@ -595,7 +595,8 @@
     "dimensionPragmatics": "ニュアンス",
     "dimensionEtymology": "由来",
     "analysisSpokenAlso": "最初の解釈",
-    "callTranscriptTitle": "通話の記録"
+    "callTranscriptTitle": "通話の記録",
+    "chatCallNoPoints": "通話ポイントを使い切りました。来月また補充されます。"
   },
   "zh": {
     "appTitle": "{targetLanguage}批改聊天",
@@ -1193,7 +1194,8 @@
     "dimensionPragmatics": "语气",
     "dimensionEtymology": "来源",
     "analysisSpokenAlso": "初读",
-    "callTranscriptTitle": "通话记录"
+    "callTranscriptTitle": "通话记录",
+    "chatCallNoPoints": "通话点数已用完，下个月会重新补充。"
   },
   "vi": {
     "appTitle": "Chat sửa {targetLanguage}",
@@ -1791,7 +1793,8 @@
     "dimensionPragmatics": "Sắc thái",
     "dimensionEtymology": "Nguồn gốc",
     "analysisSpokenAlso": "Cách hiểu ban đầu",
-    "callTranscriptTitle": "Bản ghi cuộc gọi"
+    "callTranscriptTitle": "Bản ghi cuộc gọi",
+    "chatCallNoPoints": "Bạn đã dùng hết điểm gọi. Điểm sẽ được nạp lại vào tháng sau."
   },
   "fr": {
     "appTitle": "Chat de correction d'{targetLanguage}",
@@ -2389,7 +2392,8 @@
     "dimensionPragmatics": "Nuance",
     "dimensionEtymology": "Origine",
     "analysisSpokenAlso": "Première lecture",
-    "callTranscriptTitle": "Transcription de l’appel"
+    "callTranscriptTitle": "Transcription de l’appel",
+    "chatCallNoPoints": "Vous n’avez plus de points d’appel. Ils seront rechargés le mois prochain."
   },
   "pt": {
     "appTitle": "Chat de correção de {targetLanguage}",
@@ -2987,7 +2991,8 @@
     "dimensionPragmatics": "Nuance",
     "dimensionEtymology": "Origem",
     "analysisSpokenAlso": "Primeira leitura",
-    "callTranscriptTitle": "Transcrição da chamada"
+    "callTranscriptTitle": "Transcrição da chamada",
+    "chatCallNoPoints": "Você ficou sem pontos de chamada. Eles são recarregados no próximo mês."
   },
   "id": {
     "appTitle": "Chat koreksi {targetLanguage}",
@@ -3585,7 +3590,8 @@
     "dimensionPragmatics": "Nuansa",
     "dimensionEtymology": "Asal usul",
     "analysisSpokenAlso": "Bacaan pertama",
-    "callTranscriptTitle": "Transkrip panggilan"
+    "callTranscriptTitle": "Transkrip panggilan",
+    "chatCallNoPoints": "Poin panggilan Anda habis. Poin akan diisi ulang bulan depan."
   },
   "it": {
     "appTitle": "Chat di correzione {targetLanguage}",
@@ -4183,7 +4189,8 @@
     "dimensionPragmatics": "Sfumatura",
     "dimensionEtymology": "Origine",
     "analysisSpokenAlso": "Prima lettura",
-    "callTranscriptTitle": "Trascrizione della chiamata"
+    "callTranscriptTitle": "Trascrizione della chiamata",
+    "chatCallNoPoints": "Hai esaurito i punti chiamata. Si ricaricano il mese prossimo."
   },
   "ru": {
     "appTitle": "Чат для правки {targetLanguage}",
@@ -4781,7 +4788,8 @@
     "dimensionPragmatics": "Нюанс",
     "dimensionEtymology": "Происхождение",
     "analysisSpokenAlso": "Первое прочтение",
-    "callTranscriptTitle": "Расшифровка звонка"
+    "callTranscriptTitle": "Расшифровка звонка",
+    "chatCallNoPoints": "Минуты звонков закончились. Они пополнятся в следующем месяце."
   },
   "ar": {
     "appTitle": "دردشة تصحيح {targetLanguage}",
@@ -5379,7 +5387,8 @@
     "dimensionPragmatics": "الفارق الدقيق",
     "dimensionEtymology": "الأصل",
     "analysisSpokenAlso": "القراءة الأولى",
-    "callTranscriptTitle": "نص المكالمة"
+    "callTranscriptTitle": "نص المكالمة",
+    "chatCallNoPoints": "لقد استنفدت نقاط المكالمات. سيتم تجديدها الشهر المقبل."
   },
   "th": {
     "appTitle": "แชทตรวจ {targetLanguage}",
@@ -5977,7 +5986,8 @@
     "dimensionPragmatics": "นัย",
     "dimensionEtymology": "ที่มา",
     "analysisSpokenAlso": "การอ่านครั้งแรก",
-    "callTranscriptTitle": "บันทึกการโทร"
+    "callTranscriptTitle": "บันทึกการโทร",
+    "chatCallNoPoints": "คุณใช้พอยต์โทรหมดแล้ว พอยต์จะเติมใหม่เดือนหน้า"
   },
   "hi": {
     "appTitle": "{targetLanguage} सुधार चैट",
@@ -6575,6 +6585,7 @@
     "dimensionPragmatics": "भाव",
     "dimensionEtymology": "उद्गम",
     "analysisSpokenAlso": "पहली रीडिंग",
-    "callTranscriptTitle": "कॉल ट्रांसक्रिप्ट"
+    "callTranscriptTitle": "कॉल ट्रांसक्रिप्ट",
+    "chatCallNoPoints": "आपके कॉल पॉइंट खत्म हो गए हैं। ये अगले महीने फिर से भर जाएंगे।"
   }
 }

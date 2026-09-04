@@ -1392,6 +1392,12 @@ export function ChatWindow({
       openPaywall("PAYWALL_OPEN_CALL_TRIAL_USED");
       return;
     }
+    // Not a failure and not a reason to sell them the subscription again: they
+    // already have it, and what ran out is the allowance inside it.
+    if (result.reason === "points") {
+      setBookToast(ui.chatCallNoPoints);
+      return;
+    }
     setBookToast(
       result.reason === "mic" ? ui.chatMicDenied : ui.chatCallFailed,
     );

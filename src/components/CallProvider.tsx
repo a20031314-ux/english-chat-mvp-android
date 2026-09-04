@@ -42,10 +42,18 @@ export function CallProvider({ children }: { children: ReactNode }) {
   const [muted, setMuted] = useState(false);
   const [startedAt, setStartedAt] = useState<number | null>(null);
   const [lines, setLines] = useState<CallLine[]>([]);
+  /** How long this call was sold, when it was opened against a points block. */
+  const [blockSeconds, setBlockSeconds] = useState<number | null>(null);
 
   const callRef = useRef<RealtimeCall | null>(null);
   /** The line the tutor was last handed by a tap, or null. */
   const pointedLineIdRef = useRef<string | null>(null);
+  /**
+   * The hold this call was charged against. Deliberately not cleared by
+   * teardown: the report that returns the unused points is sent after the call
+   * object is already gone.
+   */
+  const holdIdRef = useRef<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
   const startedAtRef = useRef<number | null>(null);
   const endedListeners = useRef(new Set<(durationSeconds: number) => void>());
@@ -88,6 +96,8 @@ export function CallProvider({ children }: { children: ReactNode }) {
       // after the call, when there is time to ask about what went past.
       setLines([]);
       pointedLineIdRef.current = null;
+      holdIdRef.current = null;
+      setBlockSeconds(null);
       setPhase("calling");
       try {
         const call = await startRealtimeCall({
@@ -114,6 +124,8 @@ export function CallProvider({ children }: { children: ReactNode }) {
           return { ok: false, reason: "aborted" };
         }
         callRef.current = call;
+        holdIdRef.current = call.holdId;
+        setBlockSeconds(call.blockSeconds);
         return { ok: true };
       } catch (error) {
         teardown();
@@ -122,6 +134,7 @@ export function CallProvider({ children }: { children: ReactNode }) {
         }
         if (error instanceof RealtimeCallError) {
           if (error.code === "trial") return { ok: false, reason: "trial" };
+          if (error.code === "points") return { ok: false, reason: "points" };
           if (error.code === "mic") return { ok: false, reason: "mic" };
         }
         return { ok: false, reason: "connect" };
@@ -174,16 +187,25 @@ export function CallProvider({ children }: { children: ReactNode }) {
     [],
   );
 
-  // A trial call ends itself. The server can refuse to open a call but cannot
-  // close one — after the handshake the audio runs phone-to-OpenAI — so the
-  // only place a length limit can live is here.
+  // A call ends itself. The server can refuse to open one but cannot close it —
+  // after the handshake the audio runs phone-to-OpenAI — so the only place a
+  // length limit can live is here.
+  //
+  // A call opened against a points block runs for exactly what was paid for:
+  // the block was charged up front precisely because this is the only thing
+  // that can honour it, and running past it would spend audio nobody bought.
+  // Otherwise the old rule stands, a trial call is capped and a subscriber's
+  // is not.
   useEffect(() => {
-    if (isPremium || phase !== "connected") return;
+    if (phase !== "connected") return;
+    const limitSeconds =
+      blockSeconds ?? (isPremium ? null : TRIAL_CALL_MAX_SECONDS);
+    if (limitSeconds === null) return;
     const timer = setTimeout(() => {
       hangUp();
-    }, TRIAL_CALL_MAX_SECONDS * 1000);
+    }, limitSeconds * 1000);
     return () => clearTimeout(timer);
-  }, [hangUp, isPremium, phase]);
+  }, [blockSeconds, hangUp, isPremium, phase]);
 
   // Tell the server how long the call ran. It opened the call and then lost
   // sight of it — the audio runs phone-to-OpenAI — so this is the only account
@@ -193,13 +215,20 @@ export function CallProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     return subscribeEnded((durationSeconds) => {
       if (durationSeconds <= 0) return;
+      // The hold rides along: this report is what returns the unused part of
+      // the block, and a report that never arrives leaves it spent.
+      const holdId = holdIdRef.current;
+      holdIdRef.current = null;
       void fetch(apiUrl("/api/realtime/call/ended"), {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
           ...entitlementHeaders(isPremium),
         },
-        body: JSON.stringify({ seconds: durationSeconds }),
+        body: JSON.stringify({
+          seconds: durationSeconds,
+          ...(holdId ? { holdId } : {}),
+        }),
         keepalive: true,
       }).catch(() => undefined);
     });

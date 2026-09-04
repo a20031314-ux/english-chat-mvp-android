@@ -1,6 +1,11 @@
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import {
+  CALL_BLOCK_CLIENT_HEADER,
+  CALL_BLOCK_SECONDS_HEADER,
+  CALL_HOLD_HEADER,
+} from "@/lib/billing/config";
+import {
   createCallLineReader,
   pointedLineNote,
   type CallLine,
@@ -23,12 +28,23 @@ export type RealtimeCall = {
    * False if the channel is not open.
    */
   pointAtLine: (text: string) => boolean;
+  /**
+   * The points hold this call was opened against, or null when nothing was
+   * charged. Handed back when the call ends so the unused part is returned.
+   */
+  holdId: string | null;
+  /**
+   * How long the block bought, or null when the call is not on one. The app
+   * hangs up at this mark: the server cannot end a call, so a build that asked
+   * to be charged in blocks is the thing that has to honour them.
+   */
+  blockSeconds: number | null;
 };
 
 export class RealtimeCallError extends Error {
-  readonly code: "mic" | "connect" | "trial";
+  readonly code: "mic" | "connect" | "trial" | "points";
 
-  constructor(code: "mic" | "connect" | "trial", message: string) {
+  constructor(code: "mic" | "connect" | "trial" | "points", message: string) {
     super(message);
     this.code = code;
     this.name = "RealtimeCallError";
@@ -52,6 +68,21 @@ function normalizeAnswerSdp(raw: string): string {
     lines.pop();
   }
   return lines.length > 0 ? lines.join(SDP_EOL) + SDP_EOL : "";
+}
+
+/**
+ * Read one response header, tolerating a client that has none.
+ *
+ * On Android the request goes through the CapacitorHttp bridge rather than the
+ * browser's own fetch, and a bridge that hands back a plain object instead of
+ * Headers should cost the call its refund, not the call itself.
+ */
+function readHeader(response: Response, name: string): string | null {
+  try {
+    return response.headers?.get(name) ?? null;
+  } catch {
+    return null;
+  }
 }
 
 function waitForIce(pc: RTCPeerConnection, timeoutMs = 2500): Promise<void> {
@@ -92,6 +123,9 @@ export async function startRealtimeCall(input: {
     let dataChannel: RTCDataChannel | null = null;
     let closed = false;
     let notifiedConnected = false;
+    // Filled from the answer's headers when the server charged for a block.
+    let holdId: string | null = null;
+    let blockSeconds: number | null = null;
 
     const notifyConnected = () => {
       if (closed || notifiedConnected) return;
@@ -212,6 +246,10 @@ export async function startRealtimeCall(input: {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        // Says this build will hang up when its block runs out. The server
+        // charges points only against that promise, because it cannot enforce
+        // the block itself once the audio is running.
+        [CALL_BLOCK_CLIENT_HEADER]: "1",
         // Without these the server cannot tell a subscriber from a trial user,
         // and would spend a free call on someone who has paid.
         ...entitlementHeaders(input.isPremium),
@@ -227,10 +265,17 @@ export async function startRealtimeCall(input: {
     if (response.status === 403 && rawAnswer.includes("CALL_TRIAL_USED")) {
       throw new RealtimeCallError("trial", "CALL_TRIAL_USED");
     }
+    if (response.status === 402) {
+      throw new RealtimeCallError("points", "NO_POINTS");
+    }
     const answerSdp = normalizeAnswerSdp(rawAnswer);
     if (!response.ok || !answerSdp.includes("v=")) {
       throw new RealtimeCallError("connect", "REALTIME_FAILED");
     }
+    holdId = readHeader(response, CALL_HOLD_HEADER);
+    const soldSeconds = Number(readHeader(response, CALL_BLOCK_SECONDS_HEADER));
+    blockSeconds =
+      Number.isFinite(soldSeconds) && soldSeconds > 0 ? soldSeconds : null;
     throwIfAborted();
     await pc.setRemoteDescription({ type: "answer", sdp: answerSdp });
     notifyConnected();
@@ -264,6 +309,8 @@ export async function startRealtimeCall(input: {
   };
 
   return {
+    holdId,
+    blockSeconds,
     setMuted(muted) {
       for (const track of mic?.getAudioTracks() ?? []) {
         track.enabled = !muted;

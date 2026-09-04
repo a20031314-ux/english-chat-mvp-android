@@ -7,7 +7,11 @@ import type { CallLine } from "@/lib/realtimeCall";
 
 export type CallStartResult =
   | { ok: true }
-  | { ok: false; reason: "mic" | "connect" | "aborted" | "trial" };
+  | {
+      ok: false;
+      /** "points" means the account is out of them, not that anything failed. */
+      reason: "mic" | "connect" | "aborted" | "trial" | "points";
+    };
 
 export type CallContextValue = {
   phase: CallPhase;

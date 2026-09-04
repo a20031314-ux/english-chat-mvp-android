@@ -97,6 +97,7 @@ export const copy = {
     chatRemovePhoto: "사진 빼기",
     chatCall: "통화",
     callTranscriptTitle: "통화 기록",
+    chatCallNoPoints: "통화 포인트를 다 썼어요. 다음 달에 다시 채워져요.",
     chatCalling: "연결 중…",
     chatInCall: "통화 중",
     chatMute: "음소거",
@@ -783,6 +784,8 @@ export const copy = {
     chatRemovePhoto: "Remove photo",
     chatCall: "Call",
     callTranscriptTitle: "Call transcript",
+    chatCallNoPoints:
+      "You're out of call points. They refill next month.",
     chatCalling: "Calling…",
     chatInCall: "On a call",
     chatMute: "Mute",
@@ -1466,6 +1469,8 @@ export const copy = {
     chatRemovePhoto: "Quitar foto",
     chatCall: "Llamar",
     callTranscriptTitle: "Transcripción de la llamada",
+    chatCallNoPoints:
+      "Te quedaste sin puntos de llamada. Se recargan el próximo mes.",
     chatCalling: "Llamando…",
     chatInCall: "En llamada",
     chatMute: "Silenciar",
