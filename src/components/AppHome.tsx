@@ -134,7 +134,7 @@ function AppHomeInner({
               <BillingOpenButton ui={ui} />
             </div>
             <CallBar ui={ui} />
-            <CallTranscript />
+            <CallTranscript ui={ui} />
             <div className="relative z-0 min-h-0 flex-1 overflow-hidden p-2 pb-0 sm:p-4 sm:pb-0">
               <div
                 className={

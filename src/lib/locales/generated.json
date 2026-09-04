@@ -594,7 +594,8 @@
     "dimensionMorphology": "語形",
     "dimensionPragmatics": "ニュアンス",
     "dimensionEtymology": "由来",
-    "analysisSpokenAlso": "最初の解釈"
+    "analysisSpokenAlso": "最初の解釈",
+    "callTranscriptTitle": "通話の記録"
   },
   "zh": {
     "appTitle": "{targetLanguage}批改聊天",
@@ -1191,7 +1192,8 @@
     "dimensionMorphology": "词形",
     "dimensionPragmatics": "语气",
     "dimensionEtymology": "来源",
-    "analysisSpokenAlso": "初读"
+    "analysisSpokenAlso": "初读",
+    "callTranscriptTitle": "通话记录"
   },
   "vi": {
     "appTitle": "Chat sửa {targetLanguage}",
@@ -1788,7 +1790,8 @@
     "dimensionMorphology": "Hình thái",
     "dimensionPragmatics": "Sắc thái",
     "dimensionEtymology": "Nguồn gốc",
-    "analysisSpokenAlso": "Cách hiểu ban đầu"
+    "analysisSpokenAlso": "Cách hiểu ban đầu",
+    "callTranscriptTitle": "Bản ghi cuộc gọi"
   },
   "fr": {
     "appTitle": "Chat de correction d'{targetLanguage}",
@@ -2385,7 +2388,8 @@
     "dimensionMorphology": "Forme",
     "dimensionPragmatics": "Nuance",
     "dimensionEtymology": "Origine",
-    "analysisSpokenAlso": "Première lecture"
+    "analysisSpokenAlso": "Première lecture",
+    "callTranscriptTitle": "Transcription de l’appel"
   },
   "pt": {
     "appTitle": "Chat de correção de {targetLanguage}",
@@ -2982,7 +2986,8 @@
     "dimensionMorphology": "Forma",
     "dimensionPragmatics": "Nuance",
     "dimensionEtymology": "Origem",
-    "analysisSpokenAlso": "Primeira leitura"
+    "analysisSpokenAlso": "Primeira leitura",
+    "callTranscriptTitle": "Transcrição da chamada"
   },
   "id": {
     "appTitle": "Chat koreksi {targetLanguage}",
@@ -3579,7 +3584,8 @@
     "dimensionMorphology": "Bentuk kata",
     "dimensionPragmatics": "Nuansa",
     "dimensionEtymology": "Asal usul",
-    "analysisSpokenAlso": "Bacaan pertama"
+    "analysisSpokenAlso": "Bacaan pertama",
+    "callTranscriptTitle": "Transkrip panggilan"
   },
   "it": {
     "appTitle": "Chat di correzione {targetLanguage}",
@@ -4176,7 +4182,8 @@
     "dimensionMorphology": "Forma",
     "dimensionPragmatics": "Sfumatura",
     "dimensionEtymology": "Origine",
-    "analysisSpokenAlso": "Prima lettura"
+    "analysisSpokenAlso": "Prima lettura",
+    "callTranscriptTitle": "Trascrizione della chiamata"
   },
   "ru": {
     "appTitle": "Чат для правки {targetLanguage}",
@@ -4773,7 +4780,8 @@
     "dimensionMorphology": "Форма",
     "dimensionPragmatics": "Нюанс",
     "dimensionEtymology": "Происхождение",
-    "analysisSpokenAlso": "Первое прочтение"
+    "analysisSpokenAlso": "Первое прочтение",
+    "callTranscriptTitle": "Расшифровка звонка"
   },
   "ar": {
     "appTitle": "دردشة تصحيح {targetLanguage}",
@@ -5370,7 +5378,8 @@
     "dimensionMorphology": "الصيغة",
     "dimensionPragmatics": "الفارق الدقيق",
     "dimensionEtymology": "الأصل",
-    "analysisSpokenAlso": "القراءة الأولى"
+    "analysisSpokenAlso": "القراءة الأولى",
+    "callTranscriptTitle": "نص المكالمة"
   },
   "th": {
     "appTitle": "แชทตรวจ {targetLanguage}",
@@ -5967,7 +5976,8 @@
     "dimensionMorphology": "รูปคำ",
     "dimensionPragmatics": "นัย",
     "dimensionEtymology": "ที่มา",
-    "analysisSpokenAlso": "การอ่านครั้งแรก"
+    "analysisSpokenAlso": "การอ่านครั้งแรก",
+    "callTranscriptTitle": "บันทึกการโทร"
   },
   "hi": {
     "appTitle": "{targetLanguage} सुधार चैट",
@@ -6564,6 +6574,7 @@
     "dimensionMorphology": "रूप",
     "dimensionPragmatics": "भाव",
     "dimensionEtymology": "उद्गम",
-    "analysisSpokenAlso": "पहली रीडिंग"
+    "analysisSpokenAlso": "पहली रीडिंग",
+    "callTranscriptTitle": "कॉल ट्रांसक्रिप्ट"
   }
 }
