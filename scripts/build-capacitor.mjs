@@ -1,7 +1,8 @@
 /**
- * Static export for Capacitor: Next.js cannot export `app/api` route handlers,
- * so we temporarily move `src/app/api` aside, run `next build` with CAPACITOR_STATIC=1,
- * copy `out/` → `www/`, then restore the API folder for normal web development.
+ * Static export for Capacitor: some route folders cannot or must not be in the
+ * bundle the APK carries, so we temporarily move them aside (see
+ * MOVED_FOR_BUILD), run `next build` with CAPACITOR_STATIC=1, copy `out/` →
+ * `www/`, then put them back for normal web development.
  *
  * Run: `npm run build:capacitor` (not `npm run build` — Vercel uses `build` for server + API routes.)
  */
@@ -18,8 +19,23 @@ import { fileURLToPath } from "node:url";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(__dirname, "..");
-const apiDir = path.join(root, "src", "app", "api");
-const apiBackup = path.join(root, "src", "_capacitor_build_backup_api");
+/**
+ * Route folders the APK must not carry, moved aside for the build.
+ *
+ * `api` is here because Next cannot export route handlers at all. `dev` is here
+ * for a different reason: it exports perfectly well, which is the problem — a
+ * static export takes every page it finds, so scratch pages meant for `next dev`
+ * would be built into the bundle and shipped to users unless something takes
+ * them out.
+ */
+const MOVED_FOR_BUILD = [
+  { dir: "api", backup: "_capacitor_build_backup_api" },
+  { dir: "dev", backup: "_capacitor_build_backup_dev" },
+].map(({ dir, backup }) => ({
+  name: dir,
+  from: path.join(root, "src", "app", dir),
+  to: path.join(root, "src", backup),
+}));
 const outDir = path.join(root, "out");
 const wwwDir = path.join(root, "www");
 const nextDir = path.join(root, ".next");
@@ -59,11 +75,13 @@ assertVersionsAgree();
 rmSync(nextDir, { recursive: true, force: true });
 rmSync(path.join(nextDir, "dev"), { recursive: true, force: true });
 
-if (existsSync(apiBackup)) {
-  console.error(
-    "Found stale src/_capacitor_build_backup_api — remove it manually, then retry.",
-  );
-  process.exit(1);
+for (const { to } of MOVED_FOR_BUILD) {
+  if (existsSync(to)) {
+    console.error(
+      `Found stale ${path.relative(root, to)} — remove it manually, then retry.`,
+    );
+    process.exit(1);
+  }
 }
 
 rmSync(wwwDir, { recursive: true, force: true });
@@ -74,10 +92,11 @@ function moveDir(from, to) {
   rmSync(from, { recursive: true, force: true });
 }
 
-let apiMoved = false;
-if (existsSync(apiDir)) {
-  moveDir(apiDir, apiBackup);
-  apiMoved = true;
+const moved = [];
+for (const entry of MOVED_FOR_BUILD) {
+  if (!existsSync(entry.from)) continue;
+  moveDir(entry.from, entry.to);
+  moved.push(entry);
 }
 
 const tsconfigRaw = readFileSync(tsconfigPath, "utf8");
@@ -89,14 +108,14 @@ if (Array.isArray(tsconfig.include)) {
   writeFileSync(tsconfigPath, `${JSON.stringify(tsconfig, null, 2)}\n`);
 }
 
-function restoreApi() {
-  if (!apiMoved || !existsSync(apiBackup)) {
-    return;
+function restoreMoved() {
+  for (const { from, to } of moved) {
+    if (!existsSync(to)) continue;
+    if (existsSync(from)) {
+      rmSync(from, { recursive: true, force: true });
+    }
+    moveDir(to, from);
   }
-  if (existsSync(apiDir)) {
-    rmSync(apiDir, { recursive: true, force: true });
-  }
-  moveDir(apiBackup, apiDir);
 }
 
 function restoreTsconfig() {
@@ -113,7 +132,7 @@ try {
   buildFailed = true;
 } finally {
   restoreTsconfig();
-  restoreApi();
+  restoreMoved();
 }
 
 if (buildFailed) {
@@ -122,6 +141,14 @@ if (buildFailed) {
 
 if (!existsSync(outDir)) {
   console.error("Expected out/ after next build (static export).");
+  process.exit(1);
+}
+
+for (const { name } of MOVED_FOR_BUILD) {
+  if (!existsSync(path.join(outDir, name))) continue;
+  console.error(
+    `out/${name}/ exists after the build — it was meant to be left out of the bundle.`,
+  );
   process.exit(1);
 }
 

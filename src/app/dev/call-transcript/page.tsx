@@ -11,8 +11,10 @@
  * the tutor are fake.
  *
  * Dev-only: reachable at /dev/call-transcript in `next dev`. It is not linked
- * from anywhere in the app, and the static export that becomes the APK does not
- * include it.
+ * from anywhere in the app, and it stays out of the APK because
+ * `scripts/build-capacitor.mjs` moves this whole folder aside for the static
+ * export — a static export would otherwise take every page it found, this one
+ * included.
  */
 
 import { useMemo, useState } from "react";
