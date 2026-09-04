@@ -43,6 +43,57 @@ const LEARNER_TRANSCRIPT_DONE =
  */
 const TUTOR_TRANSCRIPT_DONE_SUFFIX = "audio_transcript.done";
 
+/**
+ * How a pointed-at line is handed to the tutor.
+ *
+ * A tag rather than a sentence, and the same tag in every language. The tutor
+ * has to recognise this as a thing the learner touched on a screen, not as
+ * words they said, and must never read it out — a marker phrased in English
+ * would also invite an English answer on a call that is not in English.
+ */
+export const POINTED_LINE_TAG = "pointed-line";
+
+/**
+ * Put a line in front of the tutor without asking for an answer yet.
+ *
+ * Tapping a line and then *speaking* the question is the case this exists for.
+ * The tap alone tells the model nothing, so "why is this wrong?" arrives with
+ * nothing for "this" to mean, and the model answers about whatever was said
+ * last instead of saying it cannot tell — the learner never learns that the
+ * pointing did not land. Sending the line first gives the spoken question
+ * something to attach to.
+ *
+ * Returns null for an empty line, so callers send nothing rather than an empty
+ * tag.
+ */
+export function pointedLineNote(lineText: string): string | null {
+  const text = lineText.trim();
+  if (!text) return null;
+  return `<${POINTED_LINE_TAG}>${text}</${POINTED_LINE_TAG}>`;
+}
+
+/**
+ * The message a typed question becomes.
+ *
+ * When the line was already sent by the tap, the question travels alone — the
+ * sentence is directly above it in the conversation and repeating it just makes
+ * the tutor answer as if asked twice. When the tap's note did not go out, the
+ * question carries the line itself, so a typed question never depends on the
+ * tap having worked.
+ */
+export function askAboutLineText(
+  lineText: string,
+  question: string,
+  options: { alreadyPointed: boolean },
+): string | null {
+  const asked = question.trim();
+  if (!asked) return null;
+  if (options.alreadyPointed) return asked;
+  const text = lineText.trim();
+  if (!text) return asked;
+  return `"${text}"\n\n${asked}`;
+}
+
 export type CallLineReader = {
   /**
    * Read one datachannel message. Returns the line it finished, or null for

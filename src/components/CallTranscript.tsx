@@ -17,7 +17,7 @@ import type { CallLine } from "@/lib/realtimeCall";
  * reassigned, so "the fourth one" still means what it meant a moment ago.
  */
 export function CallTranscript() {
-  const { lines, askAboutLine, phase } = useCall();
+  const { lines, askAboutLine, pointAtLine, phase } = useCall();
   const [asking, setAsking] = useState<CallLine | null>(null);
   const [question, setQuestion] = useState("");
   const endRef = useRef<HTMLDivElement | null>(null);
@@ -61,6 +61,10 @@ export function CallTranscript() {
                 onClick={() => {
                   setAsking(selected ? null : line);
                   setQuestion("");
+                  // Hand the line over on the tap, not on submit, so the
+                  // question can just as well be spoken. Untapping sends
+                  // nothing — there is no unpointing a sentence already said.
+                  if (!selected) pointAtLine(line);
                 }}
                 aria-pressed={selected}
                 className={`flex w-full gap-2 rounded-lg px-2 py-1.5 text-left transition ${

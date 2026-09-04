@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { POINTED_LINE_TAG } from "./callLines.ts";
 import {
   CALL_TRANSCRIBE_MODEL,
   realtimeCallInstructions,
@@ -56,4 +57,19 @@ test("a call in another language is told to stay in it and expect the native one
 test("the native language reaches the session config", () => {
   const session = realtimeCallSessionConfig("ja", "vi");
   assert.match(session.instructions, /Vietnamese speaker learning Japanese/);
+});
+
+test("every language tells the tutor what a pointed line is", () => {
+  // The tag only works if the tutor is told what it means. A language whose
+  // instructions never mention it would have the tutor reading markup aloud,
+  // or answering the tap as if it were a question.
+  for (const language of ["en", "ko", "ja"] as const) {
+    const text = realtimeCallInstructions(language);
+    assert.match(text, new RegExp(POINTED_LINE_TAG), `${language} names the tag`);
+    assert.match(
+      text,
+      /읽지 마라|read the tag/,
+      `${language} says not to read it aloud`,
+    );
+  }
 });

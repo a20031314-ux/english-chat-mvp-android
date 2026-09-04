@@ -1,6 +1,10 @@
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
-import { createCallLineReader, type CallLine } from "@/lib/callLines";
+import {
+  createCallLineReader,
+  pointedLineNote,
+  type CallLine,
+} from "@/lib/callLines";
 import {
   learningLanguageName,
   type LearningLanguageCode,
@@ -13,6 +17,12 @@ export type RealtimeCall = {
   hangUp: () => void;
   /** Hand the tutor a line the learner typed. False if the channel is not open. */
   sendText: (text: string) => boolean;
+  /**
+   * Put a transcript line in front of the tutor without asking for an answer,
+   * so a question spoken straight afterwards has something to refer to.
+   * False if the channel is not open.
+   */
+  pointAtLine: (text: string) => boolean;
 };
 
 export class RealtimeCallError extends Error {
@@ -239,6 +249,20 @@ export async function startRealtimeCall(input: {
     throw new RealtimeCallError("connect", "REALTIME_FAILED");
   }
 
+  /** Append a turn from the learner. Says nothing about who answers next. */
+  const addUserItem = (text: string) => {
+    dataChannel?.send(
+      JSON.stringify({
+        type: "conversation.item.create",
+        item: {
+          type: "message",
+          role: "user",
+          content: [{ type: "input_text", text }],
+        },
+      }),
+    );
+  };
+
   return {
     setMuted(muted) {
       for (const track of mic?.getAudioTracks() ?? []) {
@@ -253,17 +277,18 @@ export async function startRealtimeCall(input: {
       if (!line || dataChannel?.readyState !== "open") return false;
       // The learner is looking at the same screen; what they type is part of
       // the same conversation, so it goes to the tutor as their own turn.
-      dataChannel.send(
-        JSON.stringify({
-          type: "conversation.item.create",
-          item: {
-            type: "message",
-            role: "user",
-            content: [{ type: "input_text", text: line }],
-          },
-        }),
-      );
+      addUserItem(line);
       dataChannel.send(JSON.stringify({ type: "response.create" }));
+      return true;
+    },
+    pointAtLine(text) {
+      const note = pointedLineNote(text);
+      if (!note || dataChannel?.readyState !== "open") return false;
+      // Deliberately no `response.create`. Pointing is not a question, and a
+      // tutor who answered the tap would be talking over a learner who is
+      // still deciding what to ask. The note simply waits in the conversation
+      // for whatever they say or type next.
+      addUserItem(note);
       return true;
     },
   };

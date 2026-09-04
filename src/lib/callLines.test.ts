@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { createCallLineReader } from "./callLines.ts";
+import {
+  askAboutLineText,
+  createCallLineReader,
+  pointedLineNote,
+} from "./callLines.ts";
 
 /** A datachannel frame, as the realtime API sends it: a JSON string. */
 function frame(payload: Record<string, unknown>): string {
@@ -118,4 +122,45 @@ test("a new call starts its numbering at one", () => {
   first.read(tutorDone("Two.", "b"));
   const second = createCallLineReader(() => 0);
   assert.equal(second.read(tutorDone("One.", "a"))?.index, 1);
+});
+
+test("a pointed line is wrapped in the tag, and only the text is carried", () => {
+  assert.equal(
+    pointedLineNote("  I ate a sandwich very fast.  "),
+    "<pointed-line>I ate a sandwich very fast.</pointed-line>",
+  );
+});
+
+test("an empty line is not worth pointing at", () => {
+  // Callers send nothing rather than an empty tag the tutor has to puzzle over.
+  assert.equal(pointedLineNote(""), null);
+  assert.equal(pointedLineNote("   \n "), null);
+});
+
+test("a typed question travels alone when the tap already sent the line", () => {
+  assert.equal(
+    askAboutLineText("I ate a sandwich.", "  왜 틀렸어?  ", { alreadyPointed: true }),
+    "왜 틀렸어?",
+  );
+});
+
+test("a typed question carries the line when the tap's note did not go out", () => {
+  // A typed question must not depend on the tap having worked.
+  assert.equal(
+    askAboutLineText("I ate a sandwich.", "왜 틀렸어?", { alreadyPointed: false }),
+    '"I ate a sandwich."\n\n왜 틀렸어?',
+  );
+});
+
+test("no question means no message, pointed or not", () => {
+  for (const alreadyPointed of [true, false]) {
+    assert.equal(askAboutLineText("A line.", "   ", { alreadyPointed }), null);
+  }
+});
+
+test("a question about an empty line is still just the question", () => {
+  assert.equal(
+    askAboutLineText("  ", "무슨 뜻이야?", { alreadyPointed: false }),
+    "무슨 뜻이야?",
+  );
 });

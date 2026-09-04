@@ -38,6 +38,15 @@ export type CallContextValue = {
    * meant a moment ago.
    */
   askAboutLine: (line: CallLine, question: string) => boolean;
+  /**
+   * Hand the tutor a line the learner tapped, without asking for an answer.
+   *
+   * Called on the tap itself so the question can be *spoken*. Without it a tap
+   * changes nothing the tutor can see, and "why is this wrong?" said out loud
+   * arrives with nothing for "this" to mean — the tutor then answers about the
+   * last thing it heard, and the learner never finds out the pointing missed.
+   */
+  pointAtLine: (line: CallLine) => boolean;
   /** Fires when a call ends by hang-up or by the far end dropping. */
   subscribeEnded: (listener: (durationSeconds: number) => void) => () => void;
 };

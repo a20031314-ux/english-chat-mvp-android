@@ -19,6 +19,7 @@ import { entitlementHeaders } from "@/lib/billing/billingService";
 import { TRIAL_CALL_MAX_SECONDS } from "@/lib/billing/config";
 import { usePremium } from "@/contexts/PremiumContext";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
+import { askAboutLineText } from "@/lib/callLines";
 import {
   RealtimeCallError,
   startRealtimeCall,
@@ -43,6 +44,8 @@ export function CallProvider({ children }: { children: ReactNode }) {
   const [lines, setLines] = useState<CallLine[]>([]);
 
   const callRef = useRef<RealtimeCall | null>(null);
+  /** The line the tutor was last handed by a tap, or null. */
+  const pointedLineIdRef = useRef<string | null>(null);
   const abortRef = useRef<AbortController | null>(null);
   const startedAtRef = useRef<number | null>(null);
   const endedListeners = useRef(new Set<(durationSeconds: number) => void>());
@@ -84,6 +87,7 @@ export function CallProvider({ children }: { children: ReactNode }) {
       // Cleared here rather than on teardown: the transcript is most useful
       // after the call, when there is time to ask about what went past.
       setLines([]);
+      pointedLineIdRef.current = null;
       setPhase("calling");
       try {
         const call = await startRealtimeCall({
@@ -131,13 +135,23 @@ export function CallProvider({ children }: { children: ReactNode }) {
     [],
   );
 
+  const pointAtLine = useCallback((line: CallLine) => {
+    const sent = callRef.current?.pointAtLine(line.text) ?? false;
+    // Remembered so a typed question does not repeat a sentence the tutor was
+    // just handed. Only a note that actually went out counts.
+    pointedLineIdRef.current = sent ? line.id : null;
+    return sent;
+  }, []);
+
   const askAboutLine = useCallback(
     (line: CallLine, question: string) => {
-      const asked = question.trim();
-      if (!asked) return false;
       // The tutor gets the line, never its number. Nothing here depends on the
       // model counting turns or on a number holding still.
-      return sendText(`"${line.text}"\n\n${asked}`);
+      const text = askAboutLineText(line.text, question, {
+        alreadyPointed: pointedLineIdRef.current === line.id,
+      });
+      if (!text) return false;
+      return sendText(text);
     },
     [sendText],
   );
@@ -211,11 +225,13 @@ export function CallProvider({ children }: { children: ReactNode }) {
       subscribeEnded,
       lines,
       askAboutLine,
+      pointAtLine,
     }),
     [
       askAboutLine,
       hangUp,
       lines,
+      pointAtLine,
       muted,
       phase,
       start,
