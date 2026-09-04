@@ -64,27 +64,19 @@ test("the bundles survive the won weakening by a fifth", () => {
   }
 });
 
-test("the monthly grant currently costs more than it earns", () => {
-  // Recorded, not approved. This was written as "never sold at a loss" and
-  // passed until PREMIUM_MONTHLY_PRICE_KRW was corrected from 9,900 to the
-  // 4,900 the console actually charges — the invariant was fine, the input was
-  // fiction. It is left pointing the other way so the state is visible rather
-  // than absent, and so that whoever fixes it is told to turn it back into the
-  // invariant it wants to be.
+test("the monthly grant is never sold at a loss", () => {
+  // Deliberately a weaker assertion than the bundles get: the grant is the
+  // thinnest number in the scheme and is known not to clear the bundle floor.
+  // What must not happen is it going negative — which it did, silently, for as
+  // long as this constant said 9,900 while the console charged 4,900. The
+  // invariant was always right; only its input was wrong.
   const margin = grantMargin(
     PREMIUM_MONTHLY_PRICE_KRW,
     PREMIUM_MONTHLY_IMPORT_POINTS,
   );
   assert.ok(
-    margin.costUsd > margin.netUsd,
-    "the grant now pays for itself — restore this as `netUsd > costUsd` and delete this comment",
-  );
-
-  // What the grant would have to be to break even at the current price.
-  const breakEven = Math.floor(margin.netUsd / pointCostUsd());
-  assert.ok(
-    breakEven < PREMIUM_MONTHLY_IMPORT_POINTS,
-    "break-even has caught up with the grant",
+    margin.netUsd > margin.costUsd,
+    `a fully spent grant costs $${margin.costUsd.toFixed(2)} against $${margin.netUsd.toFixed(2)} of revenue`,
   );
 });
 

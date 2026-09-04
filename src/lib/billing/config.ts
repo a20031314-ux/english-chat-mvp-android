@@ -23,14 +23,14 @@ export const FREE_DAILY_CHAT_LIMIT = 10;
  *
  * Kept in step with the Play Console by hand, which is exactly how it went
  * wrong once: this said 9,900 while the console charged 4,900, and every margin
- * derived from it was therefore computed against a price nobody paid. Anything
- * shown to a user should come from the store product's own price string rather
- * than from here.
+ * derived from it was computed against a price nobody paid until the console
+ * was corrected to match. Anything shown to a user should come from the store
+ * product's own price string rather than from here, so that the next drift is
+ * invisible to users even if it happens.
  *
- * See cost.ts for what this has to cover. At this price the monthly grant below
- * costs more than it brings in when it is spent on calls.
+ * See cost.ts for what this has to cover.
  */
-export const PREMIUM_MONTHLY_PRICE_KRW = 4900;
+export const PREMIUM_MONTHLY_PRICE_KRW = 9900;
 
 /**
  * Internal meter only — not a Play IAP. Custom (user-imported) first prepares
@@ -45,13 +45,12 @@ export const FREE_MONTHLY_IMPORT_POINTS = 0;
  * The monthly grant: 240 minutes of custom video prep, or 80 minutes of call,
  * or any mix — points buy both now.
  *
- * Underwater at the current price if it is spent on calls: eighty points cost
- * more than a 4,900원 subscription brings in, before anything else that month.
- * Break-even is around fifty, and the margin the bundles hold to would want
- * fewer still. Left where it is because cutting what subscribers already have,
- * or raising what they pay, is a product decision — and because it is only a
- * loss for someone who spends the whole grant on the expensive side, which no
- * one has yet been observed doing. A test records the gap.
+ * Knowingly generous for the price: eighty points spent on calls leave about a
+ * fifth of the subscription behind, and everything else that month comes out of
+ * that fifth. The margin the bundles hold to would want nearer fifty. Left at
+ * eighty because cutting what subscribers already have is a product decision
+ * that wants real usage behind it, and a test records the gap rather than
+ * asserting it away.
  */
 export const PREMIUM_MONTHLY_IMPORT_POINTS = 80;
 

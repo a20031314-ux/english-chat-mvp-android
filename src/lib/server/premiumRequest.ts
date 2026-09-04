@@ -30,7 +30,7 @@ function claimsPremium(request: NextRequest): boolean {
   return request.headers.get(PREMIUM_CLIENT_HEADER) === "1";
 }
 
-function revenueCatUserId(request: NextRequest): string | null {
+export function revenueCatUserId(request: NextRequest): string | null {
   const value = request.headers.get(REVENUECAT_USER_HEADER)?.trim();
   // Long enough for RevenueCat's anonymous ids, short enough to not be a payload.
   if (!value || value.length > 128) return null;

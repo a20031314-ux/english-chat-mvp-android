@@ -219,3 +219,16 @@ export function grantMargin(
     priceKrw: monthlyPriceKrw,
   });
 }
+
+/**
+ * How many points a store product is worth, or null if it is not one of ours.
+ *
+ * Null rather than zero on purpose. A product id RevenueCat reports that this
+ * table does not know about is a configuration mistake — a typo in the console,
+ * a bundle added in one place and not the other — and it should be visible as
+ * one, not silently credited as nothing.
+ */
+export function pointsForProduct(productId: string): number | null {
+  const bundle = POINT_BUNDLES.find((entry) => entry.productId === productId);
+  return bundle ? bundle.points : null;
+}

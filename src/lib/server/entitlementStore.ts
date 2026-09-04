@@ -362,3 +362,29 @@ export async function settleCallHold(
   if (refunded > 0) await applySpend(userId, refund, -1);
   return { refundedPoints: refunded };
 }
+
+function creditedPurchaseKey(userId: string, transactionId: string) {
+  return `points:credited:${userId}:${transactionId}`;
+}
+
+/**
+ * Credit a purchase once, and say whether this call was the one that did it.
+ *
+ * The marker is written before the points are added, so a crash between the two
+ * loses a credit rather than repeating one — the safe direction when the
+ * alternative is handing out points every time an app restarts and re-syncs.
+ * It carries no expiry: a purchase is credited once, forever, and a row that
+ * lapsed would let the same transaction pay out twice.
+ */
+export async function creditPurchaseOnce(
+  userId: string,
+  transactionId: string,
+  points: number,
+): Promise<boolean> {
+  const key = creditedPurchaseKey(userId, transactionId);
+  const already = await kvGetJson<{ points: number }>(key);
+  if (already) return false;
+  await kvSetJson(key, { points, at: Date.now() });
+  await addPurchasedPoints(userId, points);
+  return true;
+}

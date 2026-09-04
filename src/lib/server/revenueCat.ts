@@ -33,7 +33,24 @@ export function revenueCatConfigured(): boolean {
 type SubscriberResponse = {
   subscriber?: {
     entitlements?: Record<string, { expires_date?: string | null }>;
+    /**
+     * One-time purchases, keyed by store product id, each an array of the times
+     * that product was bought. Subscriptions live in `entitlements`; consumables
+     * only ever appear here, because RevenueCat does not track whether one has
+     * been used up — that is the app's job.
+     */
+    non_subscriptions?: Record<
+      string,
+      { id?: string; purchase_date?: string }[]
+    >;
   };
+};
+
+/** One consumable purchase, as much of it as crediting needs. */
+export type NonSubscriptionPurchase = {
+  /** RevenueCat's id for this transaction. What makes crediting idempotent. */
+  transactionId: string;
+  productId: string;
 };
 
 function entitlementIsActive(body: SubscriberResponse): boolean {
@@ -85,6 +102,55 @@ export async function isPremiumInRevenueCat(
     return active;
   } catch (error) {
     console.error("[revenuecat] lookup threw", error);
+    return null;
+  }
+}
+
+
+/**
+ * Every one-time purchase RevenueCat has on record for this subscriber.
+ *
+ * Null, not an empty list, when we could not find out — no key configured, or
+ * the API was unreachable. The difference matters: an empty list means nothing
+ * was bought, and null means we do not know, and crediting points off a guess
+ * in either direction is worse than not crediting them yet.
+ *
+ * Deliberately uncached, unlike the entitlement lookup above. That one answers
+ * "are they premium", which is fine to be five minutes stale; this one answers
+ * "what have they paid for that we have not given them", and a purchase the
+ * caller is standing in front of should not have to wait out a cache.
+ */
+export async function fetchNonSubscriptions(
+  appUserId: string,
+): Promise<NonSubscriptionPurchase[] | null> {
+  const key = secretKey();
+  if (!key || !appUserId) return null;
+
+  try {
+    const response = await fetch(
+      `${API_ROOT}/${encodeURIComponent(appUserId)}`,
+      { headers: { Authorization: `Bearer ${key}` }, cache: "no-store" },
+    );
+    // An id RevenueCat has never seen has bought nothing, which is an answer.
+    if (response.status === 404) return [];
+    if (!response.ok) {
+      console.error("[revenuecat] purchases lookup failed with", response.status);
+      return null;
+    }
+    const body = (await response.json()) as SubscriberResponse;
+    const byProduct = body.subscriber?.non_subscriptions ?? {};
+    const purchases: NonSubscriptionPurchase[] = [];
+    for (const [productId, entries] of Object.entries(byProduct)) {
+      for (const entry of entries ?? []) {
+        // Without an id there is nothing to make crediting idempotent against,
+        // so such a row is skipped rather than credited once per sync forever.
+        if (typeof entry?.id !== "string" || !entry.id) continue;
+        purchases.push({ transactionId: entry.id, productId });
+      }
+    }
+    return purchases;
+  } catch (error) {
+    console.error("[revenuecat] purchases lookup threw", error);
     return null;
   }
 }
