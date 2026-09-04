@@ -6,6 +6,7 @@ import {
 } from "./config.ts";
 import {
   KRW_PER_USD,
+  videoPointCostUsd,
   MIN_BUNDLE_MARGIN,
   POINT_BUNDLES,
   STORE_FEE_SHARE,
@@ -17,7 +18,7 @@ import {
 
 test("a point costs what a minute of call costs", () => {
   // The call is the expensive thing a point can be spent on, so it is what the
-  // price is set against; video preparation can only come in under it.
+  // price is set against; video can only come in under it.
   assert.equal(pointCostUsd(), callMinuteUsd());
   // A sanity bracket, not a precise claim: if this ever moves by an order of
   // magnitude the derivation changed and every number below needs revisiting.
@@ -127,5 +128,25 @@ test("the floor is what stops the step getting smaller, not a lack of trying", (
   assert.ok(
     floorKrw > grantRate * 1.5,
     "if the floor has dropped below 1.5x the grant, the bundles can come down with it",
+  );
+});
+
+test("a call minute is the expensive way to spend a point", () => {
+  // Everything above rests on this ordering: the price is set against the call
+  // because the call costs more, so the video side can only come in cheaper
+  // than assumed. If a pipeline change ever flips it, every margin in this file
+  // is overstated and nothing else here would notice.
+  assert.ok(
+    videoPointCostUsd({ transcribed: true }) < callMinuteUsd(),
+    "video has become the expensive side; the price is no longer conservative",
+  );
+});
+
+test("a video with captions costs less than one that has to be transcribed", () => {
+  // The library is curated to captioned clips, so the cheap path is the common
+  // one and the transcribed figure is a ceiling rather than a typical case.
+  assert.ok(
+    videoPointCostUsd({ transcribed: false }) <
+      videoPointCostUsd({ transcribed: true }),
   );
 });

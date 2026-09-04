@@ -55,13 +55,70 @@ export function callMinuteUsd(): number {
   return input + output + CALL_TRANSCRIBE_USD_PER_MINUTE;
 }
 
+/** USD per 1M tokens, gpt-4o-mini, which every text pass in the app uses. */
+export const MINI_USD_PER_MTOK = { input: 0.15, output: 0.6 } as const;
+
+/** USD per minute, whisper-1, used on video only when no caption track exists. */
+export const WHISPER_USD_PER_MINUTE = 0.006;
+
+/**
+ * Tokens one subtitle pass moves.
+ *
+ * A window is twenty seconds of speech plus the context the pass is given, so
+ * these are of that order rather than of a whole transcript. An assumption, like
+ * the audio conversion above, and for the same reason: nothing measures it yet.
+ */
+export const SUBTITLE_PASS_TOKENS = { input: 1500, output: 400 } as const;
+
+/** USD of one gpt-4o-mini pass over a subtitle window. */
+function subtitlePassUsd(): number {
+  return (
+    (SUBTITLE_PASS_TOKENS.input * MINI_USD_PER_MTOK.input) / 1_000_000 +
+    (SUBTITLE_PASS_TOKENS.output * MINI_USD_PER_MTOK.output) / 1_000_000
+  );
+}
+
+/**
+ * Model calls a video sets off, counted from the pipeline rather than guessed.
+ *
+ * Preparing refines the transcript and normalises it. Then every twenty seconds
+ * of video is its own translation window, and each window interprets the line,
+ * expresses it for the viewer, and updates the running context — three passes,
+ * nine windows for a three-minute clip. Which is the point: preparation is the
+ * small half, and the twenty-seven passes that follow are charged nothing.
+ */
+export const VIDEO_MODEL_CALLS = {
+  prepare: 3,
+  perWindow: 3,
+  windowSeconds: 20,
+} as const;
+
+/**
+ * USD of model time in one point's worth of video, which is three minutes.
+ *
+ * `transcribed` is the expensive path: a clip with no caption track of any kind
+ * has to go through whisper first. A clip that carries captions — which the
+ * library is curated to — skips that entirely.
+ */
+export function videoPointCostUsd(options: { transcribed: boolean }): number {
+  const seconds = 3 * 60;
+  const windows = Math.ceil(seconds / VIDEO_MODEL_CALLS.windowSeconds);
+  const passes =
+    VIDEO_MODEL_CALLS.prepare + windows * VIDEO_MODEL_CALLS.perWindow;
+  const whisper = options.transcribed
+    ? (seconds / 60) * WHISPER_USD_PER_MINUTE
+    : 0;
+  return passes * subtitlePassUsd() + whisper;
+}
+
 /**
  * What one point is assumed to cost to serve.
  *
- * A point buys either a minute of call or three minutes of video preparation,
- * and the call is the more expensive of the two — whisper plus a handful of
- * gpt-4o-mini passes comes to roughly half a call minute. Pricing against the
- * expensive side means the cheap side can only be better than assumed.
+ * A point buys either a minute of call or three minutes of video, and the call
+ * is the more expensive of the two even against video's worst path. Pricing
+ * against the expensive side means the cheap side can only come in under what
+ * was assumed — a test holds that ordering, because the whole price rests on it
+ * and nothing else in here would notice if it flipped.
  */
 export function pointCostUsd(): number {
   return callMinuteUsd();

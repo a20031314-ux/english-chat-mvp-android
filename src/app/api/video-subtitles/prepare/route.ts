@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { meterRequest } from "@/lib/server/meterRequest";
 import {
   assertVideoPrepAllowed,
   recordVideoPrepForRequest,
@@ -15,6 +16,7 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  void meterRequest(request, "videoPrepare");
   let body: {
     videoUrl?: unknown;
     locale?: unknown;

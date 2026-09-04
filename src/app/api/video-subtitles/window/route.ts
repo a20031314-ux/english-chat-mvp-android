@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { meterRequest } from "@/lib/server/meterRequest";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { asNumber, asRecord, asString } from "@/lib/videoSubtitle/parseModelJson";
 import { translateSubtitleWindow } from "@/lib/videoSubtitle/pipeline";
@@ -194,6 +195,7 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  void meterRequest(request, "videoWindow");
   let body: {
     locale?: unknown;
     context?: unknown;

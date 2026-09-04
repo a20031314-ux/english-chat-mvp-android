@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { meterRequest } from "@/lib/server/meterRequest";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { glossEnglishLines } from "@/lib/videoSubtitle/glossEnglishLines";
 import { asNumber, asRecord, asString } from "@/lib/videoSubtitle/parseModelJson";
@@ -66,6 +67,7 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  void meterRequest(request, "videoGloss");
   let body: {
     locale?: unknown;
     interfaceLanguage?: unknown;

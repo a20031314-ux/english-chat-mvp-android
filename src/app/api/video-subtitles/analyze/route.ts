@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { meterRequest } from "@/lib/server/meterRequest";
 import { analyzeAdaptedSubtitle } from "@/lib/videoSubtitle/analyzeAdaptedSubtitle";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { asNumber, asRecord, asString } from "@/lib/videoSubtitle/parseModelJson";
@@ -94,6 +95,7 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  void meterRequest(request, "videoAnalyze");
   let body: Record<string, unknown>;
   try {
     body = (await request.json()) as Record<string, unknown>;

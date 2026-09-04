@@ -19,6 +19,15 @@ export const MODEL_CALLS_PER_REQUEST = {
   learningSpans: 1,
   translate: 1,
   tts: 1,
+  // The video routes, which were the remaining gap. An import point is charged
+  // once when a video is prepared, and then every twenty seconds of watching is
+  // its own window costing three passes — so the charge lands on the small half
+  // and the rest went by uncounted. Counting it does not charge for it; it makes
+  // the shape of the spending visible before anyone prices against it.
+  videoPrepare: 3,
+  videoWindow: 3,
+  videoGloss: 1,
+  videoAnalyze: 1,
 } as const;
 
 export type MeteredOp = keyof typeof MODEL_CALLS_PER_REQUEST;
@@ -29,7 +38,8 @@ export type MeteredOp = keyof typeof MODEL_CALLS_PER_REQUEST;
  * Chat and calls were the only routes anyone counted, so the daily chat limit
  * read as a fence around the spending while analysis, glossing, translation and
  * speech sat open beside it — reachable, like every route here, without an
- * account. This closes the gap in the ledger, not in the service: nothing here
+ * account. The video routes were missed in that first pass and are counted now
+ * too. This closes the gap in the ledger, not in the service: nothing here
  * refuses anyone, and no caller changes behaviour. What it buys is the ability
  * to set those limits, and the price, against measured use.
  *
