@@ -101,3 +101,31 @@ test("the grant is the thin part of the plan, and by how much", () => {
     "the grant is only thin while it is larger than what the price supports",
   );
 });
+
+test("running out mid-month does not double what a point costs", () => {
+  // The step out of the subscription is the number this pricing was tuned for,
+  // not the margin. Bundles were pushed down to sit just above the floor to
+  // make it as small as the floor permits; a later edit that walks them back up
+  // should fail here rather than pass quietly because the margin still clears.
+  const grantRate = PREMIUM_MONTHLY_PRICE_KRW / PREMIUM_MONTHLY_IMPORT_POINTS;
+  const cheapestEntry = POINT_BUNDLES.reduce((a, b) => (a.points <= b.points ? a : b));
+  const step = cheapestEntry.priceKrw / cheapestEntry.points / grantRate;
+  assert.ok(
+    step < 1.8,
+    `the smallest bundle costs ${step.toFixed(2)}x the grant rate`,
+  );
+});
+
+test("the floor is what stops the step getting smaller, not a lack of trying", () => {
+  // Worth stating because it is the answer to "why not price them lower": at
+  // MIN_BUNDLE_MARGIN exactly a point still costs well over the grant rate, so
+  // the remaining gap can only be closed by moving the subscription.
+  const grantRate = PREMIUM_MONTHLY_PRICE_KRW / PREMIUM_MONTHLY_IMPORT_POINTS;
+  const floorKrw =
+    (pointCostUsd() / (1 - MIN_BUNDLE_MARGIN) / (1 - STORE_FEE_SHARE)) *
+    KRW_PER_USD.rate;
+  assert.ok(
+    floorKrw > grantRate * 1.5,
+    "if the floor has dropped below 1.5x the grant, the bundles can come down with it",
+  );
+});

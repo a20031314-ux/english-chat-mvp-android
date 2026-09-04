@@ -105,13 +105,24 @@ export type PointBundle = {
 /**
  * Point bundles, cheaper per point as they get larger.
  *
- * Sized so the smallest is an ordinary impulse purchase next to a 9,900원
- * subscription rather than a second subscription, and so the largest still
- * clears MIN_BUNDLE_MARGIN even at the thinnest per-point price.
+ * Priced as near MIN_BUNDLE_MARGIN as clean won figures allow, because the
+ * number that matters here is not the margin but the step up out of the
+ * subscription. The grant works out at about 124원 a point and the floor sits
+ * at about 200원, so someone who runs out mid-month pays roughly 1.7 times what
+ * the same point cost them inside the plan.
+ *
+ * That gap cannot be closed much further from this side. At the floor exactly
+ * it is still 1.61 times, and going under it would mean selling points at a
+ * loss to make the cliff look gentler. Closing it properly means moving the
+ * subscription — its price or its grant — which is a decision that wants real
+ * usage behind it.
+ *
+ * The smallest bundle is the one to keep honest: someone who runs out reaches
+ * for that one, not for five hundred points.
  */
 export const POINT_BUNDLES: readonly PointBundle[] = [
-  { productId: "points_60", points: 60, priceKrw: 14900 },
-  { productId: "points_200", points: 200, priceKrw: 44900 },
+  { productId: "points_60", points: 60, priceKrw: 12900 },
+  { productId: "points_200", points: 200, priceKrw: 41900 },
   { productId: "points_500", points: 500, priceKrw: 99900 },
 ] as const;
 
