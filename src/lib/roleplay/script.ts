@@ -95,21 +95,29 @@ export type RoleplayScenario = {
 };
 
 /**
- * A 64-bit FNV-1a, so an audio file can be named after what it contains.
+ * FNV-1a twice with different seeds, so an audio file can be named after what
+ * it contains.
  *
  * Written out rather than taken from node:crypto because this module is read on
  * the client too, and a hash used for a filename needs to be reproducible, not
- * cryptographic. Sixty-four bits leaves collisions out of reach at any library
- * size this will ever have.
+ * cryptographic. Two thirty-two bit passes rather than one sixty-four bit one
+ * because BigInt literals need a newer target than this project compiles to,
+ * and two independent halves put collisions out of reach at any library size
+ * this will ever have.
  */
-function fnv1a64(value: string): string {
-  const prime = 1099511628211n;
-  const mask = (1n << 64n) - 1n;
-  let hash = 14695981039346656037n;
+function fnv1a32(value: string, seed: number): number {
+  let hash = seed;
   for (let i = 0; i < value.length; i += 1) {
-    hash = ((hash ^ BigInt(value.charCodeAt(i))) * prime) & mask;
+    hash ^= value.charCodeAt(i);
+    hash = Math.imul(hash, 16777619);
   }
-  return hash.toString(36);
+  return hash >>> 0;
+}
+
+function contentHash(value: string): string {
+  const low = fnv1a32(value, 2166136261);
+  const high = fnv1a32(value, 1099511628); // A different seed, so the halves differ.
+  return low.toString(36) + high.toString(36);
 }
 
 /**
@@ -128,7 +136,7 @@ export function sentenceAudioPath(
   voice: string,
   language: string,
 ): string {
-  return `/roleplay/audio/${language}/${fnv1a64(`${voice}:${text.trim()}`)}.mp3`;
+  return `/roleplay/audio/${language}/${contentHash(`${voice}:${text.trim()}`)}.mp3`;
 }
 
 export function isTutorNode(node: ScriptNode): node is TutorNode {
