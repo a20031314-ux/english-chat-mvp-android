@@ -602,7 +602,8 @@
     "pointsPurchased": "{n}P を追加しました。",
     "pointsUnavailable": "現在ポイントを追加できません。",
     "roleplayTitle": "ロールプレイ",
-    "roleplayIntro": "決まった場面で話す練習です。詰まったら講師が入ります。"
+    "roleplayIntro": "決まった場面で話す練習です。詰まったら講師が入ります。",
+    "roleplayNoHelp": "うまく説明できませんでした。もう一度話すか、講師を呼んでください。"
   },
   "zh": {
     "appTitle": "{targetLanguage}批改聊天",
@@ -1207,7 +1208,8 @@
     "pointsPurchased": "已添加 {n}P。",
     "pointsUnavailable": "目前无法补充点数。",
     "roleplayTitle": "情景对话",
-    "roleplayIntro": "在设定好的场景中练习对话。卡住时导师会介入。"
+    "roleplayIntro": "在设定好的场景中练习对话。卡住时导师会介入。",
+    "roleplayNoHelp": "这次没能给出说明。可以再说一次，或叫导师。"
   },
   "vi": {
     "appTitle": "Chat sửa {targetLanguage}",
@@ -1812,7 +1814,8 @@
     "pointsPurchased": "Đã cộng {n}P.",
     "pointsUnavailable": "Hiện chưa thể nạp điểm.",
     "roleplayTitle": "Đóng vai",
-    "roleplayIntro": "Luyện nói trong tình huống có sẵn. Gia sư sẽ vào khi bạn bí."
+    "roleplayIntro": "Luyện nói trong tình huống có sẵn. Gia sư sẽ vào khi bạn bí.",
+    "roleplayNoHelp": "Lần này chưa đưa ra được gợi ý. Hãy thử lại hoặc gọi gia sư."
   },
   "fr": {
     "appTitle": "Chat de correction d'{targetLanguage}",
@@ -2417,7 +2420,8 @@
     "pointsPurchased": "{n} P ajoutés.",
     "pointsUnavailable": "Recharge indisponible pour le moment.",
     "roleplayTitle": "Mise en situation",
-    "roleplayIntro": "Entraînez-vous dans une situation donnée. Le tuteur intervient si vous bloquez."
+    "roleplayIntro": "Entraînez-vous dans une situation donnée. Le tuteur intervient si vous bloquez.",
+    "roleplayNoHelp": "Impossible de proposer une correction. Réessayez ou appelez le tuteur."
   },
   "pt": {
     "appTitle": "Chat de correção de {targetLanguage}",
@@ -3022,7 +3026,8 @@
     "pointsPurchased": "{n}P adicionados.",
     "pointsUnavailable": "Recarga indisponível no momento.",
     "roleplayTitle": "Simulação",
-    "roleplayIntro": "Pratique em uma situação definida. O tutor entra quando você travar."
+    "roleplayIntro": "Pratique em uma situação definida. O tutor entra quando você travar.",
+    "roleplayNoHelp": "Não consegui sugerir uma correção. Tente de novo ou chame o tutor."
   },
   "id": {
     "appTitle": "Chat koreksi {targetLanguage}",
@@ -3627,7 +3632,8 @@
     "pointsPurchased": "{n}P ditambahkan.",
     "pointsUnavailable": "Isi ulang belum tersedia saat ini.",
     "roleplayTitle": "Simulasi percakapan",
-    "roleplayIntro": "Berlatih dalam situasi yang sudah disiapkan. Tutor masuk saat Anda buntu."
+    "roleplayIntro": "Berlatih dalam situasi yang sudah disiapkan. Tutor masuk saat Anda buntu.",
+    "roleplayNoHelp": "Belum bisa memberi koreksi. Coba lagi atau panggil tutor."
   },
   "it": {
     "appTitle": "Chat di correzione {targetLanguage}",
@@ -4232,7 +4238,8 @@
     "pointsPurchased": "{n}P aggiunti.",
     "pointsUnavailable": "Ricarica non disponibile al momento.",
     "roleplayTitle": "Simulazione",
-    "roleplayIntro": "Esercitati in una situazione definita. Il tutor interviene se ti blocchi."
+    "roleplayIntro": "Esercitati in una situazione definita. Il tutor interviene se ti blocchi.",
+    "roleplayNoHelp": "Non sono riuscito a dare una correzione. Riprova o chiama il tutor."
   },
   "ru": {
     "appTitle": "Чат для правки {targetLanguage}",
@@ -4837,7 +4844,8 @@
     "pointsPurchased": "Начислено {n}P.",
     "pointsUnavailable": "Пополнение сейчас недоступно.",
     "roleplayTitle": "Ролевая игра",
-    "roleplayIntro": "Практика в заданной ситуации. Преподаватель подключится, если вы застрянете."
+    "roleplayIntro": "Практика в заданной ситуации. Преподаватель подключится, если вы застрянете.",
+    "roleplayNoHelp": "Не удалось подсказать. Попробуйте ещё раз или позовите преподавателя."
   },
   "ar": {
     "appTitle": "دردشة تصحيح {targetLanguage}",
@@ -5442,7 +5450,8 @@
     "pointsPurchased": "تمت إضافة {n}P.",
     "pointsUnavailable": "الشحن غير متاح حاليًا.",
     "roleplayTitle": "محادثة تمثيلية",
-    "roleplayIntro": "تدرّب في موقف محدّد. يتدخّل المعلّم عندما تتعثّر."
+    "roleplayIntro": "تدرّب في موقف محدّد. يتدخّل المعلّم عندما تتعثّر.",
+    "roleplayNoHelp": "تعذّر تقديم تصحيح. حاول مرة أخرى أو اتصل بالمعلّم."
   },
   "th": {
     "appTitle": "แชทตรวจ {targetLanguage}",
@@ -6047,7 +6056,8 @@
     "pointsPurchased": "เพิ่ม {n}P แล้ว",
     "pointsUnavailable": "ยังเติมพอยต์ไม่ได้ในขณะนี้",
     "roleplayTitle": "บทสนทนาจำลอง",
-    "roleplayIntro": "ฝึกพูดในสถานการณ์ที่กำหนดไว้ ติวเตอร์จะเข้ามาช่วยเมื่อคุณติด"
+    "roleplayIntro": "ฝึกพูดในสถานการณ์ที่กำหนดไว้ ติวเตอร์จะเข้ามาช่วยเมื่อคุณติด",
+    "roleplayNoHelp": "ยังให้คำแนะนำไม่ได้ ลองพูดอีกครั้งหรือเรียกติวเตอร์"
   },
   "hi": {
     "appTitle": "{targetLanguage} सुधार चैट",
@@ -6652,6 +6662,7 @@
     "pointsPurchased": "{n}P जोड़े गए।",
     "pointsUnavailable": "अभी रीचार्ज उपलब्ध नहीं है।",
     "roleplayTitle": "रोल-प्ले",
-    "roleplayIntro": "तय स्थिति में बोलने का अभ्यास। अटकने पर ट्यूटर आ जाएगा।"
+    "roleplayIntro": "तय स्थिति में बोलने का अभ्यास। अटकने पर ट्यूटर आ जाएगा।",
+    "roleplayNoHelp": "सुझाव नहीं दे सका। दोबारा बोलें या ट्यूटर को बुलाएँ।"
   }
 }

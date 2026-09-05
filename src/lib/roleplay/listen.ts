@@ -135,3 +135,50 @@ export async function listenForTurn(input: {
     },
   };
 }
+
+/**
+ * Ask for a correction the scenario did not have written.
+ *
+ * The rung between a recorded line and a call: one sentence, made now because
+ * nobody anticipated this particular miss. Null when it could not be made, so
+ * the caller can offer a retry rather than showing a failure the learner had
+ * nothing to do with.
+ */
+export async function fetchCorrection(input: {
+  context: { setting: string; tutorRole: string; goal: string; heard: string };
+  targetLanguage: string;
+  nativeLanguage: string;
+  isPremium: boolean;
+}): Promise<{ text: string; translation: string } | null> {
+  try {
+    const response = await fetch(apiUrl("/api/roleplay/correct"), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...entitlementHeaders(input.isPremium),
+      },
+      body: JSON.stringify({
+        ...input.context,
+        targetLanguage: input.targetLanguage,
+        interfaceLanguage: input.nativeLanguage,
+      }),
+    });
+    if (!response.ok) {
+      console.error("[roleplay] correction failed with", response.status);
+      return null;
+    }
+    const body = (await response.json()) as {
+      text?: unknown;
+      translation?: unknown;
+    };
+    if (typeof body.text !== "string" || !body.text.trim()) return null;
+    return {
+      text: body.text.trim(),
+      translation:
+        typeof body.translation === "string" ? body.translation.trim() : "",
+    };
+  } catch (error) {
+    console.error("[roleplay] correction threw", error);
+    return null;
+  }
+}

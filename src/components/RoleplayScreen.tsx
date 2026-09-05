@@ -3,9 +3,13 @@
 import { useCallback, useEffect, useRef, useState } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { usePremium } from "@/contexts/PremiumContext";
-import { learningLanguageName } from "@/lib/learningLanguages";
+import {
+  learningLanguageName,
+  learningLanguageSpeechTag,
+  type LearningLanguageCode,
+} from "@/lib/learningLanguages";
 import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
-import { listenForTurn, type Recorder } from "@/lib/roleplay/listen";
+import { fetchCorrection, listenForTurn, type Recorder } from "@/lib/roleplay/listen";
 import {
   afterSaying,
   afterTutor,
@@ -17,6 +21,8 @@ import {
   type Instruction,
   type SessionState,
 } from "@/lib/roleplay/session";
+import type { RoleplayScenario } from "@/lib/roleplay/script";
+import { playTts } from "@/lib/ttsPlayer";
 import type { UICopy } from "@/lib/copy";
 
 /**
@@ -42,11 +48,14 @@ const STALLED_AUDIO_MS = 8000;
 
 export function RoleplayScreen({
   scenarioId,
+  nativeLanguage,
   ui,
   onClose,
   onWakeTutor,
 }: {
   scenarioId: string;
+  /** What the learner speaks, so a made correction can be explained to them. */
+  nativeLanguage: LearningLanguageCode;
   ui: UICopy;
   onClose: () => void;
   /**
@@ -264,6 +273,10 @@ export function RoleplayScreen({
         {correcting ? (
           <Correction
             spoken={correcting.spoken}
+            context={correcting.context}
+            scenario={scenario}
+            nativeLanguage={nativeLanguage}
+            isPremium={isPremium}
             onRetry={afterCorrection}
             onCall={callTutor}
             ui={ui}
@@ -294,38 +307,83 @@ export function RoleplayScreen({
  */
 function Correction({
   spoken,
+  context,
+  scenario,
+  nativeLanguage,
+  isPremium,
   onRetry,
   onCall,
   ui,
 }: {
   spoken?: { text: string; translation?: string; audioPath: string };
+  context: { setting: string; tutorRole: string; goal: string; heard: string };
+  scenario: RoleplayScenario;
+  nativeLanguage: LearningLanguageCode;
+  isPremium: boolean;
   onRetry: () => void;
   onCall: () => void;
   ui: UICopy;
 }) {
+  const [made, setMade] = useState<{ text: string; translation: string } | null>(
+    null,
+  );
+  const [failed, setFailed] = useState(false);
+
+  // A written correction plays from a file. Anything else has to be made, and
+  // then read aloud through the same voice, so the tutor stays one person.
   useEffect(() => {
-    if (!spoken) return;
-    const audio = new Audio(spoken.audioPath);
-    void audio.play().catch(() => undefined);
-    return () => audio.pause();
+    if (spoken) {
+      const audio = new Audio(spoken.audioPath);
+      void audio.play().catch(() => undefined);
+      return () => audio.pause();
+    }
+    let cancelled = false;
+    void (async () => {
+      const correction = await fetchCorrection({
+        context,
+        targetLanguage: scenario.language,
+        nativeLanguage,
+        isPremium,
+      });
+      if (cancelled) return;
+      if (!correction) {
+        setFailed(true);
+        return;
+      }
+      setMade(correction);
+      void playTts(
+        correction.text,
+        learningLanguageSpeechTag(scenario.language),
+      ).catch(() => undefined);
+    })();
+    return () => {
+      cancelled = true;
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [spoken]);
+
+  const shown = spoken ?? made;
 
   return (
     <div className="flex flex-col gap-2">
-      {spoken ? (
+      {shown ? (
         <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-2">
-          <p className="text-[14px] text-neutral-100">{spoken.text}</p>
-          {spoken.translation ? (
-            <p className="mt-1 text-[12px] text-neutral-400">{spoken.translation}</p>
+          <p className="text-[14px] text-neutral-100">{shown.text}</p>
+          {shown.translation ? (
+            <p className="mt-1 text-[12px] text-neutral-400">{shown.translation}</p>
           ) : null}
         </div>
       ) : (
-        <p className="text-[13px] text-neutral-400">{ui.chatCallFailed}</p>
+        // Not an error the learner caused, and not a call that failed: the
+        // scenario simply had nothing written for this and the making of one is
+        // still in flight, or did not work.
+        <p className="text-[13px] text-neutral-500">{failed ? ui.roleplayNoHelp : "…"}</p>
       )}
       <div className="flex gap-2">
         <button
           type="button"
           onClick={onRetry}
+          aria-label="retry"
           className="flex-1 rounded-xl bg-white/15 px-4 py-3 text-sm text-neutral-100"
         >
           ↻

@@ -140,6 +140,21 @@ const roleplayIntro = {
   hi: "तय स्थिति में बोलने का अभ्यास। अटकने पर ट्यूटर आ जाएगा।",
 };
 
+/** Shown when the scenario had nothing written and none could be made. */
+const roleplayNoHelp = {
+  ja: "うまく説明できませんでした。もう一度話すか、講師を呼んでください。",
+  zh: "这次没能给出说明。可以再说一次，或叫导师。",
+  vi: "Lần này chưa đưa ra được gợi ý. Hãy thử lại hoặc gọi gia sư.",
+  fr: "Impossible de proposer une correction. Réessayez ou appelez le tuteur.",
+  pt: "Não consegui sugerir uma correção. Tente de novo ou chame o tutor.",
+  id: "Belum bisa memberi koreksi. Coba lagi atau panggil tutor.",
+  it: "Non sono riuscito a dare una correzione. Riprova o chiama il tutor.",
+  ru: "Не удалось подсказать. Попробуйте ещё раз или позовите преподавателя.",
+  ar: "تعذّر تقديم تصحيح. حاول مرة أخرى أو اتصل بالمعلّم.",
+  th: "ยังให้คำแนะนำไม่ได้ ลองพูดอีกครั้งหรือเรียกติวเตอร์",
+  hi: "सुझाव नहीं दे सका। दोबारा बोलें या ट्यूटर को बुलाएँ।",
+};
+
 const packs = {
   callTranscriptTitle,
   chatCallNoPoints,
@@ -149,6 +164,7 @@ const packs = {
   pointsUnavailable,
   roleplayTitle,
   roleplayIntro,
+  roleplayNoHelp,
 };
 
 for (const [key, byLocale] of Object.entries(packs)) {

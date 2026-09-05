@@ -91,6 +91,7 @@ export function RoleplayLauncher({
       {playing ? (
         <RoleplayScreen
           scenarioId={playing}
+          nativeLanguage={nativeLanguage}
           ui={ui}
           onClose={() => {
             setPlaying(null);

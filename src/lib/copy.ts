@@ -104,6 +104,7 @@ export const copy = {
     pointsUnavailable: "지금은 충전할 수 없어요.",
     roleplayTitle: "상황 연습",
     roleplayIntro: "정해진 상황에서 말하기를 연습해요. 막히면 튜터가 들어옵니다.",
+    roleplayNoHelp: "이번엔 설명을 만들지 못했어요. 다시 말해보거나 튜터를 불러보세요.",
     chatCalling: "연결 중…",
     chatInCall: "통화 중",
     chatMute: "음소거",
@@ -799,6 +800,8 @@ export const copy = {
     roleplayTitle: "Roleplay",
     roleplayIntro:
       "Practise speaking in a set situation. The tutor steps in when you get stuck.",
+    roleplayNoHelp:
+      "Couldn't put a correction together. Try again, or call the tutor.",
     chatCalling: "Calling…",
     chatInCall: "On a call",
     chatMute: "Mute",
@@ -1491,6 +1494,8 @@ export const copy = {
     roleplayTitle: "Situaciones",
     roleplayIntro:
       "Practica en una situación concreta. El tutor interviene si te atascas.",
+    roleplayNoHelp:
+      "No pude formular una corrección. Inténtalo otra vez o llama al tutor.",
     chatCalling: "Llamando…",
     chatInCall: "En llamada",
     chatMute: "Silenciar",

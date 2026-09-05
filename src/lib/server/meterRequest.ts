@@ -32,6 +32,11 @@ export const MODEL_CALLS_PER_REQUEST = {
   // scene costs one transcription per learner turn and nothing else — which is
   // the claim the whole mode rests on, and therefore the one worth counting.
   roleplayListen: 1,
+  // A correction the scenario did not have written. Rarer than listening by
+  // design — most misses at a turn are the same miss and were recorded — so a
+  // count that climbs towards the listen count means the scripts are missing
+  // the trouble they were supposed to anticipate.
+  roleplayCorrect: 1,
 } as const;
 
 export type MeteredOp = keyof typeof MODEL_CALLS_PER_REQUEST;
