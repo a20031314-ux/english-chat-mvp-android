@@ -11,6 +11,7 @@ import {
   sentenceIdsUsed,
   unreachableNodes,
 } from "./script.ts";
+import { SITUATIONS, findSituation } from "./situations.ts";
 
 /**
  * Voices gpt-4o-mini-tts accepts, from OpenAI's text-to-speech guide.
@@ -137,4 +138,32 @@ test("a branch can rejoin the line it came from", () => {
   const milk = scenario.nodes["milk-answer"];
   assert.ok(milk && milk.type === "tutor");
   assert.equal(milk.next, "order", "the milk answer should return to the order");
+});
+
+test("the situation list is briefs, and every field earns its place", () => {
+  // These are drafted from and reviewed against, so a thin brief becomes a thin
+  // scenario. The trouble note especially: a drafter cannot guess where a
+  // conversation goes wrong, and a reviewer should not have to rediscover it.
+  const ids = new Set<string>();
+  for (const situation of SITUATIONS) {
+    assert.ok(!ids.has(situation.id), `${situation.id} is listed twice`);
+    ids.add(situation.id);
+    assert.ok(situation.setting.length > 60, `${situation.id} setting is thin`);
+    assert.ok(situation.objective.length > 20, `${situation.id} objective is thin`);
+    assert.ok(
+      situation.likelyTrouble.length > 20,
+      `${situation.id} does not say where it goes wrong`,
+    );
+    assert.ok(situation.tutorRole.length > 0, `${situation.id} has no role`);
+  }
+});
+
+test("every written scenario traces back to a situation on the list", () => {
+  // Otherwise the list stops describing what exists and starts being decoration.
+  for (const scenario of SCENARIOS) {
+    assert.ok(
+      findSituation(scenario.id),
+      `${scenario.id} is written but not on the situation list`,
+    );
+  }
 });

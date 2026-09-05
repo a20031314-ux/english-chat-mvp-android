@@ -18,6 +18,7 @@
     "test:call": "node --experimental-strip-types --test src/lib/realtimeCallSession.test.ts src/lib/callLines.test.ts src/lib/roleplay/script.test.ts src/lib/roleplay/difficulty.test.ts src/lib/roleplay/session.test.ts",
     "verify:library": "node --experimental-strip-types scripts/verify-video-library.mjs",
     "roleplay:audio": "node --experimental-strip-types scripts/build-roleplay-audio.mjs",
+    "roleplay:draft": "node --experimental-strip-types scripts/draft-roleplay-scenario.mjs",
     "test:billing": "node --experimental-strip-types --test src/lib/billing/videoPrep.test.ts src/lib/billing/points.test.ts src/lib/billing/cost.test.ts src/lib/server/entitlementStore.test.ts src/lib/server/callHold.test.ts src/lib/server/creditPurchase.test.ts src/lib/server/kv.test.ts"
   },
   "dependencies": {
