@@ -62,8 +62,12 @@ export type RoleplayScenario = {
   setting: string;
   /** Who the tutor is playing. The learner plays themselves. */
   tutorRole: string;
-  /** Roughly CEFR, used to order scenarios rather than to gate them. */
-  level: "A1" | "A2" | "B1" | "B2";
+  /**
+   * Deliberately no difficulty here. A scenario is walked differently by
+   * different people — one takes the main line, another wanders through every
+   * branch — so a label on the scenario describes neither of them. Difficulty
+   * lives in difficulty.ts as a dial that moves while the conversation runs.
+   */
   steps: ScriptStep[];
 };
 

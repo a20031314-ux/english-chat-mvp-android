@@ -20,7 +20,6 @@ export const SCENARIOS: RoleplayScenario[] = [
     setting:
       "A small café at mid-morning. The tutor is the barista behind the counter; the learner is a customer who has just walked in. It is not busy, so the barista has time to be friendly and to repeat things.",
     tutorRole: "barista",
-    level: "A1",
     steps: [
       {
         type: "tutor",
