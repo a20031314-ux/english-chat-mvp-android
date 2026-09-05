@@ -24,6 +24,11 @@ export type CallContextValue = {
   start: (
     targetLanguage: LearningLanguageCode,
     nativeLanguage: LearningLanguageCode,
+    /**
+     * What the tutor should open with, when it is being woken into a scene
+     * already in progress rather than answering a call.
+     */
+    opening?: { scene: string; ask: string },
   ) => Promise<CallStartResult>;
   /** User-initiated. Emits an ended event so the chat can log the call. */
   hangUp: () => void;

@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { usePremium } from "@/contexts/PremiumContext";
 import { learningLanguageName } from "@/lib/learningLanguages";
 import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
@@ -30,6 +31,13 @@ import type { UICopy } from "@/lib/copy";
  */
 
 type Spoken = { who: "tutor" | "learner"; text: string; translation?: string };
+
+/**
+ * How long to wait for a line that has not started playing before carrying on
+ * without it. Long enough for a slow connection, short enough that a stall does
+ * not read as the app having hung.
+ */
+const STALLED_AUDIO_MS = 8000;
 
 export function RoleplayScreen({
   scenarioId,
@@ -79,19 +87,40 @@ export function RoleplayScreen({
     ]);
     const audio = new Audio(instruction.audioPath);
     audioRef.current = audio;
+    let advanced = false;
     const advance = () => {
-      if (cancelled) return;
+      if (cancelled || advanced) return;
+      advanced = true;
+      window.clearTimeout(watchdog);
       const moved = afterSaying(scenario, bank, state, Date.now());
       setState(moved.state);
       setInstruction(moved.instruction);
     };
+    /**
+     * Audio that never finishes must not take the scenario with it.
+     *
+     * `error` covers a file that is missing, but a load that stalls raises
+     * nothing at all — it simply never ends, and the line stays on screen with
+     * no way forward. The text has already been shown by this point, so going
+     * on without the voice is a worse lesson but not a dead one.
+     */
+    let watchdog = window.setTimeout(advance, STALLED_AUDIO_MS);
+    audio.addEventListener(
+      "loadedmetadata",
+      () => {
+        if (!Number.isFinite(audio.duration)) return;
+        window.clearTimeout(watchdog);
+        // Its own length plus a moment, once that length is actually known.
+        watchdog = window.setTimeout(advance, audio.duration * 1000 + 2000);
+      },
+      { once: true },
+    );
     audio.addEventListener("ended", advance, { once: true });
-    // A missing file should not strand the scenario: the line has been shown,
-    // so carrying on silently is better than stopping on a network hiccup.
     audio.addEventListener("error", advance, { once: true });
     void audio.play().catch(advance);
     return () => {
       cancelled = true;
+      window.clearTimeout(watchdog);
       audio.pause();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -151,7 +180,7 @@ export function RoleplayScreen({
     : null;
 
   return (
-    <div className="fixed inset-0 z-50 flex flex-col bg-[#050505]">
+    <FullScreenLayer>
       <header className="flex shrink-0 items-center justify-between border-b border-white/10 px-4 py-3">
         <div>
           <h2 className="text-sm font-semibold text-white">{scenario.title}</h2>
@@ -237,7 +266,7 @@ export function RoleplayScreen({
           </button>
         ) : null}
       </footer>
-    </div>
+    </FullScreenLayer>
   );
 }
 

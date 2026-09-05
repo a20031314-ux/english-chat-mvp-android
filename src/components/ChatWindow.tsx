@@ -19,6 +19,7 @@ import {
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 import { MessageBubble } from "./MessageBubble";
 import { ChatHistoryPanel } from "./ChatHistoryPanel";
+import { RoleplayLauncher } from "@/components/RoleplayLauncher";
 import { useBillingUi } from "./BillingScreen";
 import { usePremium } from "@/contexts/PremiumContext";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
@@ -1750,6 +1751,17 @@ export function ChatWindow({
                   <path d="M7.4 3.6c.5-.5 1.3-.6 1.9-.2l2.1 1.4c.6.4.8 1.2.5 1.9L11 8.8c-.2.4-.1.8.1 1.1 1 1.6 2.4 3 4 4 .4.2.8.3 1.1.1l2.1-.9c.7-.3 1.5-.1 1.9.5l1.4 2.1c.4.6.3 1.4-.2 1.9l-1.3 1.3c-.5.5-1.2.8-1.9.7-2.3-.2-5.6-1.5-8.8-4.7S4.9 9 4.7 6.7c-.1-.7.2-1.4.7-1.9L7.4 3.6Z" />
                 </svg>
               </button>
+              {/* Beside the call, because it is the cheap way to do the same
+                  thing: the tutor's lines here are already recorded. */}
+              <RoleplayLauncher
+                targetLanguage={sessionLanguageCode}
+                nativeLanguage={
+                  isLearningLanguageCode(locale)
+                    ? locale
+                    : DEFAULT_LEARNING_LANGUAGE_CODE
+                }
+                ui={ui}
+              />
               <textarea
                 ref={inputRef}
                 value={input}

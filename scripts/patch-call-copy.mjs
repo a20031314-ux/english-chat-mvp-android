@@ -110,6 +110,36 @@ const pointsUnavailable = {
   hi: "अभी रीचार्ज उपलब्ध नहीं है।",
 };
 
+/** The mode's name, shown on a button and over the scenario list. */
+const roleplayTitle = {
+  ja: "ロールプレイ",
+  zh: "情景对话",
+  vi: "Đóng vai",
+  fr: "Mise en situation",
+  pt: "Simulação",
+  id: "Simulasi percakapan",
+  it: "Simulazione",
+  ru: "Ролевая игра",
+  ar: "محادثة تمثيلية",
+  th: "บทสนทนาจำลอง",
+  hi: "रोल-प्ले",
+};
+
+/** One line over the list, saying what this is for. */
+const roleplayIntro = {
+  ja: "決まった場面で話す練習です。詰まったら講師が入ります。",
+  zh: "在设定好的场景中练习对话。卡住时导师会介入。",
+  vi: "Luyện nói trong tình huống có sẵn. Gia sư sẽ vào khi bạn bí.",
+  fr: "Entraînez-vous dans une situation donnée. Le tuteur intervient si vous bloquez.",
+  pt: "Pratique em uma situação definida. O tutor entra quando você travar.",
+  id: "Berlatih dalam situasi yang sudah disiapkan. Tutor masuk saat Anda buntu.",
+  it: "Esercitati in una situazione definita. Il tutor interviene se ti blocchi.",
+  ru: "Практика в заданной ситуации. Преподаватель подключится, если вы застрянете.",
+  ar: "تدرّب في موقف محدّد. يتدخّل المعلّم عندما تتعثّر.",
+  th: "ฝึกพูดในสถานการณ์ที่กำหนดไว้ ติวเตอร์จะเข้ามาช่วยเมื่อคุณติด",
+  hi: "तय स्थिति में बोलने का अभ्यास। अटकने पर ट्यूटर आ जाएगा।",
+};
+
 const packs = {
   callTranscriptTitle,
   chatCallNoPoints,
@@ -117,6 +147,8 @@ const packs = {
   pointsBalance,
   pointsPurchased,
   pointsUnavailable,
+  roleplayTitle,
+  roleplayIntro,
 };
 
 for (const [key, byLocale] of Object.entries(packs)) {

@@ -87,6 +87,7 @@ export function CallProvider({ children }: { children: ReactNode }) {
     async (
       targetLanguage: LearningLanguageCode,
       nativeLanguage: LearningLanguageCode,
+      opening?: { scene: string; ask: string },
     ): Promise<CallStartResult> => {
       if (phase !== "idle") return { ok: true };
       const abort = new AbortController();
@@ -118,6 +119,9 @@ export function CallProvider({ children }: { children: ReactNode }) {
             if (wasConnected) emitEnded(seconds);
           },
           onLine: (line) => setLines((current) => [...current, line]),
+          // Present when a roleplay called for help: the tutor arrives into a
+          // scene rather than picking up the phone.
+          opening,
         });
         if (abort.signal.aborted) {
           call.hangUp();

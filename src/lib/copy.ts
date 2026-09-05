@@ -102,6 +102,8 @@ export const copy = {
     pointsBalance: "잔여 {n}P",
     pointsPurchased: "{n}P 충전됐어요.",
     pointsUnavailable: "지금은 충전할 수 없어요.",
+    roleplayTitle: "상황 연습",
+    roleplayIntro: "정해진 상황에서 말하기를 연습해요. 막히면 튜터가 들어옵니다.",
     chatCalling: "연결 중…",
     chatInCall: "통화 중",
     chatMute: "음소거",
@@ -794,6 +796,9 @@ export const copy = {
     pointsBalance: "{n}P left",
     pointsPurchased: "{n}P added.",
     pointsUnavailable: "Top-ups aren't available right now.",
+    roleplayTitle: "Roleplay",
+    roleplayIntro:
+      "Practise speaking in a set situation. The tutor steps in when you get stuck.",
     chatCalling: "Calling…",
     chatInCall: "On a call",
     chatMute: "Mute",
@@ -1483,6 +1488,9 @@ export const copy = {
     pointsBalance: "{n}P restantes",
     pointsPurchased: "{n}P añadidos.",
     pointsUnavailable: "La recarga no está disponible ahora.",
+    roleplayTitle: "Situaciones",
+    roleplayIntro:
+      "Practica en una situación concreta. El tutor interviene si te atascas.",
     chatCalling: "Llamando…",
     chatInCall: "En llamada",
     chatMute: "Silenciar",

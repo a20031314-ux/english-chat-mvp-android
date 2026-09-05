@@ -600,7 +600,9 @@
     "pointsSectionTitle": "ポイントの追加",
     "pointsBalance": "残り {n}P",
     "pointsPurchased": "{n}P を追加しました。",
-    "pointsUnavailable": "現在ポイントを追加できません。"
+    "pointsUnavailable": "現在ポイントを追加できません。",
+    "roleplayTitle": "ロールプレイ",
+    "roleplayIntro": "決まった場面で話す練習です。詰まったら講師が入ります。"
   },
   "zh": {
     "appTitle": "{targetLanguage}批改聊天",
@@ -1203,7 +1205,9 @@
     "pointsSectionTitle": "补充点数",
     "pointsBalance": "剩余 {n}P",
     "pointsPurchased": "已添加 {n}P。",
-    "pointsUnavailable": "目前无法补充点数。"
+    "pointsUnavailable": "目前无法补充点数。",
+    "roleplayTitle": "情景对话",
+    "roleplayIntro": "在设定好的场景中练习对话。卡住时导师会介入。"
   },
   "vi": {
     "appTitle": "Chat sửa {targetLanguage}",
@@ -1806,7 +1810,9 @@
     "pointsSectionTitle": "Nạp thêm điểm",
     "pointsBalance": "Còn {n}P",
     "pointsPurchased": "Đã cộng {n}P.",
-    "pointsUnavailable": "Hiện chưa thể nạp điểm."
+    "pointsUnavailable": "Hiện chưa thể nạp điểm.",
+    "roleplayTitle": "Đóng vai",
+    "roleplayIntro": "Luyện nói trong tình huống có sẵn. Gia sư sẽ vào khi bạn bí."
   },
   "fr": {
     "appTitle": "Chat de correction d'{targetLanguage}",
@@ -2409,7 +2415,9 @@
     "pointsSectionTitle": "Recharger des points",
     "pointsBalance": "{n} P restants",
     "pointsPurchased": "{n} P ajoutés.",
-    "pointsUnavailable": "Recharge indisponible pour le moment."
+    "pointsUnavailable": "Recharge indisponible pour le moment.",
+    "roleplayTitle": "Mise en situation",
+    "roleplayIntro": "Entraînez-vous dans une situation donnée. Le tuteur intervient si vous bloquez."
   },
   "pt": {
     "appTitle": "Chat de correção de {targetLanguage}",
@@ -3012,7 +3020,9 @@
     "pointsSectionTitle": "Recarregar pontos",
     "pointsBalance": "{n}P restantes",
     "pointsPurchased": "{n}P adicionados.",
-    "pointsUnavailable": "Recarga indisponível no momento."
+    "pointsUnavailable": "Recarga indisponível no momento.",
+    "roleplayTitle": "Simulação",
+    "roleplayIntro": "Pratique em uma situação definida. O tutor entra quando você travar."
   },
   "id": {
     "appTitle": "Chat koreksi {targetLanguage}",
@@ -3615,7 +3625,9 @@
     "pointsSectionTitle": "Isi ulang poin",
     "pointsBalance": "Sisa {n}P",
     "pointsPurchased": "{n}P ditambahkan.",
-    "pointsUnavailable": "Isi ulang belum tersedia saat ini."
+    "pointsUnavailable": "Isi ulang belum tersedia saat ini.",
+    "roleplayTitle": "Simulasi percakapan",
+    "roleplayIntro": "Berlatih dalam situasi yang sudah disiapkan. Tutor masuk saat Anda buntu."
   },
   "it": {
     "appTitle": "Chat di correzione {targetLanguage}",
@@ -4218,7 +4230,9 @@
     "pointsSectionTitle": "Ricarica punti",
     "pointsBalance": "{n}P rimanenti",
     "pointsPurchased": "{n}P aggiunti.",
-    "pointsUnavailable": "Ricarica non disponibile al momento."
+    "pointsUnavailable": "Ricarica non disponibile al momento.",
+    "roleplayTitle": "Simulazione",
+    "roleplayIntro": "Esercitati in una situazione definita. Il tutor interviene se ti blocchi."
   },
   "ru": {
     "appTitle": "Чат для правки {targetLanguage}",
@@ -4821,7 +4835,9 @@
     "pointsSectionTitle": "Пополнить баланс",
     "pointsBalance": "Осталось {n}P",
     "pointsPurchased": "Начислено {n}P.",
-    "pointsUnavailable": "Пополнение сейчас недоступно."
+    "pointsUnavailable": "Пополнение сейчас недоступно.",
+    "roleplayTitle": "Ролевая игра",
+    "roleplayIntro": "Практика в заданной ситуации. Преподаватель подключится, если вы застрянете."
   },
   "ar": {
     "appTitle": "دردشة تصحيح {targetLanguage}",
@@ -5424,7 +5440,9 @@
     "pointsSectionTitle": "شحن النقاط",
     "pointsBalance": "المتبقي {n}P",
     "pointsPurchased": "تمت إضافة {n}P.",
-    "pointsUnavailable": "الشحن غير متاح حاليًا."
+    "pointsUnavailable": "الشحن غير متاح حاليًا.",
+    "roleplayTitle": "محادثة تمثيلية",
+    "roleplayIntro": "تدرّب في موقف محدّد. يتدخّل المعلّم عندما تتعثّر."
   },
   "th": {
     "appTitle": "แชทตรวจ {targetLanguage}",
@@ -6027,7 +6045,9 @@
     "pointsSectionTitle": "เติมพอยต์",
     "pointsBalance": "เหลือ {n}P",
     "pointsPurchased": "เพิ่ม {n}P แล้ว",
-    "pointsUnavailable": "ยังเติมพอยต์ไม่ได้ในขณะนี้"
+    "pointsUnavailable": "ยังเติมพอยต์ไม่ได้ในขณะนี้",
+    "roleplayTitle": "บทสนทนาจำลอง",
+    "roleplayIntro": "ฝึกพูดในสถานการณ์ที่กำหนดไว้ ติวเตอร์จะเข้ามาช่วยเมื่อคุณติด"
   },
   "hi": {
     "appTitle": "{targetLanguage} सुधार चैट",
@@ -6630,6 +6650,8 @@
     "pointsSectionTitle": "पॉइंट रीचार्ज करें",
     "pointsBalance": "{n}P शेष",
     "pointsPurchased": "{n}P जोड़े गए।",
-    "pointsUnavailable": "अभी रीचार्ज उपलब्ध नहीं है।"
+    "pointsUnavailable": "अभी रीचार्ज उपलब्ध नहीं है।",
+    "roleplayTitle": "रोल-प्ले",
+    "roleplayIntro": "तय स्थिति में बोलने का अभ्यास। अटकने पर ट्यूटर आ जाएगा।"
   }
 }
