@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { corsHeaders, corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
+import { coerceLanguageCode } from "@/lib/learningLanguages";
+import { realtimeCallVoice } from "@/lib/realtimeCallSession";
 import {
   spokenFormForTts,
   speechLangPrefix,
@@ -47,7 +49,11 @@ async function synthesize(request: NextRequest, rawText: string, rawLang: string
   try {
     const speech = await client.audio.speech.create({
       model: MODEL,
-      voice: "nova",
+      // The same voice the call uses for this language. They were different —
+      // "nova" here, "ash" or "cedar" on the call — which is fine while the two
+      // never meet, and wrong the moment a spoken line and a live tutor belong
+      // to the same conversation: the tutor changes person mid-sentence.
+      voice: realtimeCallVoice(coerceLanguageCode(speechLangPrefix(lang))),
       input: spoken,
       response_format: "pcm",
       ...(useInstructions
