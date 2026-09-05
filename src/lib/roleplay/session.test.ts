@@ -9,6 +9,7 @@ import {
   judge,
   phraseScore,
   startSession,
+  askTutor,
   submitSpeech,
   tutorHandover,
   type SessionState,
@@ -80,7 +81,7 @@ test("an unrecognised answer takes the scripted recovery, not a tutor", () => {
   assert.equal(missed.state.nodeId, "pardon-order");
 });
 
-test("a node with no recovery wakes the tutor, and hands it the scene", () => {
+test("a node with no recovery plays its written correction, not a call", () => {
   let state = runToListen(startSession(scenario));
   state = submitSpeech(scenario, bank, state, "Can I get a latte", 1000).state;
   state = afterSaying(scenario, bank, state, 1100).state; // size
@@ -88,16 +89,19 @@ test("a node with no recovery wakes the tutor, and hands it the scene", () => {
   state = afterSaying(scenario, bank, state, 1300).state; // here-or-to-go
 
   const stuck = submitSpeech(scenario, bank, state, "what do you mean", 2000);
-  assert.equal(stuck.instruction.do, "wakeTutor");
-  if (stuck.instruction.do !== "wakeTutor") return;
-  // It has been silent until now, so nothing about the scene is in its context.
+  assert.equal(stuck.instruction.do, "correct");
+  if (stuck.instruction.do !== "correct") return;
+  // Written in advance, so playing it costs nothing where a live session would
+  // cost about fifty times a judgement.
+  assert.ok(stuck.instruction.spoken, "this turn's trouble was predictable");
+  assert.match(stuck.instruction.spoken.text, /for here/i);
+  assert.match(stuck.instruction.spoken.audioPath, /\.mp3$/);
+  // The context rides along for the tutor, if the learner asks back.
   assert.match(stuck.instruction.context.setting, /caf/i);
-  assert.equal(stuck.instruction.context.tutorRole, "barista");
   assert.equal(stuck.instruction.context.heard, "what do you mean");
-  assert.ok(stuck.instruction.context.goal.length > 0);
 });
 
-test("the tutor is woken at the same question, not past it", () => {
+test("a correction leaves the learner at the same question, not past it", () => {
   let state = runToListen(startSession(scenario));
   state = submitSpeech(scenario, bank, state, "Can I get a latte", 1000).state;
   state = afterSaying(scenario, bank, state, 1100).state;
@@ -106,6 +110,7 @@ test("the tutor is woken at the same question, not past it", () => {
   const before = state.nodeId;
 
   const stuck = submitSpeech(scenario, bank, state, "no idea", 2000);
+  assert.equal(stuck.instruction.do, "correct");
   assert.equal(stuck.state.nodeId, before, "the question should still stand");
 
   const resumed = afterTutor(scenario, bank, stuck.state, 3000);
@@ -133,9 +138,8 @@ test("a retry is the same question, so attempts keep counting", () => {
   assert.equal(back.state.attempts, 1, "the first miss should still count");
 
   const second = submitSpeech(scenario, bank, back.state, "uhh", 2000);
-  // Patience has run out, so this one is a person's problem rather than another
-  // round of "sorry?".
-  assert.equal(second.instruction.do, "wakeTutor");
+  // Patience has run out, so this one is corrected rather than asked again.
+  assert.equal(second.instruction.do, "correct");
 });
 
 test("struggling pulls the level down over the course of a scenario", () => {
@@ -185,22 +189,23 @@ test("the gentlest level is more forgiving than the strictest", () => {
 });
 
 test("the handover tells the tutor everything, because it has heard nothing", () => {
-  // The scripted half happened as audio files; the realtime session is opening
-  // for the first time at this moment.
+  // The scripted half happened as audio files; the realtime session opens for
+  // the first time at this moment, and only because the learner asked back.
   let state = runToListen(startSession(scenario));
   state = submitSpeech(scenario, bank, state, "Can I get a latte", 1000).state;
   state = afterSaying(scenario, bank, state, 1100).state;
   state = submitSpeech(scenario, bank, state, "small", 1200).state;
   state = afterSaying(scenario, bank, state, 1300).state;
-  const stuck = submitSpeech(scenario, bank, state, "sorry I don't know", 2000);
-  assert.equal(stuck.instruction.do, "wakeTutor");
-  if (stuck.instruction.do !== "wakeTutor") return;
 
-  const { scene, ask } = tutorHandover(stuck.instruction.context, "English");
+  const asked = askTutor(scenario, state, "why is 'here' wrong?");
+  assert.equal(asked.do, "wakeTutor");
+  if (asked.do !== "wakeTutor") return;
+
+  const { scene } = tutorHandover(asked.context, "English");
   assert.match(scene, /barista/, "it should know who it is");
   assert.match(scene, /caf/i, "it should know where it is");
-  assert.match(scene, /sorry I don't know/, "it should know what was said");
-  assert.ok(scene.includes(stuck.instruction.context.goal), "and what was wanted");
+  assert.match(scene, /why is 'here' wrong\?/, "and what was asked");
+  assert.ok(scene.includes(asked.context.goal), "and what was wanted");
 });
 
 test("the tutor is asked for one turn, not for the conversation", () => {
@@ -225,4 +230,45 @@ test("the handover never asks the tutor to read its own markup", () => {
   );
   assert.match(scene, /<scene>/, "the scene is tagged so it reads as context");
   assert.match(ask, /Do not read the tags aloud/);
+});
+
+
+test("a side question can be asked once, not forever", () => {
+  // The milk branch rejoins the order, and the graph has no memory of it — so
+  // without this it can be asked round and round. A simulation walked into
+  // exactly that loop.
+  let state = runToListen(startSession(scenario));
+  const first = submitSpeech(scenario, bank, state, "Do you have oat milk?", 1000);
+  assert.equal(first.state.nodeId, "milk-answer");
+  state = runToListen(first.state, 2000);
+  assert.equal(state.nodeId, "order", "back at the order");
+
+  const again = submitSpeech(scenario, bank, state, "Do you have oat milk?", 3000);
+  assert.notEqual(
+    again.state.nodeId,
+    "milk-answer",
+    "the same side question should not be answered twice",
+  );
+});
+
+test("the main path still works after a side question was used up", () => {
+  // Exhausting one branch must not take the others with it.
+  let state = runToListen(startSession(scenario));
+  state = runToListen(
+    submitSpeech(scenario, bank, state, "Do you have oat milk?", 1000).state,
+    2000,
+  );
+  const ordered = submitSpeech(scenario, bank, state, "Can I get a latte", 3000);
+  assert.equal(ordered.matched, true);
+  assert.equal(ordered.state.nodeId, "size");
+});
+
+test("only asking back opens a live session", () => {
+  // The one door to a call. Nobody is charged for one by missing a turn.
+  const state = runToListen(startSession(scenario));
+  const asked = askTutor(scenario, state, "why not 'I want a coffee'?");
+  assert.equal(asked.do, "wakeTutor");
+  if (asked.do !== "wakeTutor") return;
+  assert.equal(asked.context.heard, "why not 'I want a coffee'?");
+  assert.match(asked.context.setting, /caf/i);
 });

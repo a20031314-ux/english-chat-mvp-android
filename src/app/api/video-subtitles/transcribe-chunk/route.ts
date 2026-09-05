@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { meterRequest } from "@/lib/server/meterRequest";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { transcribeAudio } from "@/lib/videoSubtitle/transcribeAudio";
 
@@ -64,6 +65,9 @@ async function transcribeBytes(
 }
 
 export async function POST(request: NextRequest) {
+  // Counted as the roleplay's, because that is what sends most of these: the
+  // video path submits whole chunks, this submits one spoken turn.
+  void meterRequest(request, "roleplayListen");
   const contentType = request.headers.get("content-type") || "";
   if (contentType.includes("application/json")) {
     let body: {

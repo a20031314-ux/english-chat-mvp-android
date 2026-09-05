@@ -9,6 +9,7 @@ import { listenForTurn, type Recorder } from "@/lib/roleplay/listen";
 import {
   afterSaying,
   afterTutor,
+  askTutor,
   currentInstruction,
   startSession,
   submitSpeech,
@@ -171,13 +172,32 @@ export function RoleplayScreen({
 
   if (!scenario) return null;
 
-  const wakeTutor = instruction?.do === "wakeTutor" ? instruction : null;
-  const handover = wakeTutor
-    ? tutorHandover(
-        wakeTutor.context,
-        learningLanguageName(scenario.language),
-      )
-    : null;
+  const correcting = instruction?.do === "correct" ? instruction : null;
+
+  /** Deliver the correction, then put them back at the same question. */
+  const afterCorrection = () => {
+    if (!state) return;
+    const resumed = afterTutor(scenario, bank, state, Date.now());
+    setState(resumed.state);
+    setInstruction(resumed.instruction);
+  };
+
+  /**
+   * The only door to a live session, and it is a button.
+   *
+   * A correction is one sentence and a recording delivers it; a question about
+   * the correction is a conversation, which is what a call is for. Keeping them
+   * apart means nobody is charged for a call by missing a turn.
+   */
+  const callTutor = () => {
+    if (!state || !correcting) return;
+    const asked = askTutor(scenario, state, correcting.context.heard);
+    if (asked.do !== "wakeTutor") return;
+    onWakeTutor(
+      tutorHandover(asked.context, learningLanguageName(scenario.language)),
+    );
+    afterCorrection();
+  };
 
   return (
     <FullScreenLayer>
@@ -241,17 +261,11 @@ export function RoleplayScreen({
           </div>
         ) : null}
 
-        {handover ? (
-          // Nothing about the scene is in the tutor's context, so the whole
-          // handover goes with the call rather than being summarised for it.
-          <TutorHandoff
-            onCall={() => onWakeTutor(handover)}
-            onDone={() => {
-              if (!state) return;
-              const resumed = afterTutor(scenario, bank, state, Date.now());
-              setState(resumed.state);
-              setInstruction(resumed.instruction);
-            }}
+        {correcting ? (
+          <Correction
+            spoken={correcting.spoken}
+            onRetry={afterCorrection}
+            onCall={callTutor}
             ui={ui}
           />
         ) : null}
@@ -271,42 +285,58 @@ export function RoleplayScreen({
 }
 
 /**
- * The moment the script hands over.
+ * What to do when the script cannot take the answer.
  *
- * Kept as its own piece because it is the expensive one: everything above is a
- * file being played, and this is a live realtime session opening. Making it a
- * button rather than something automatic means the learner chooses to spend it.
+ * `spoken` is a line the scenario wrote for this turn, generated with every
+ * other line and free to play. When it is missing the trouble here was not
+ * predictable, and a correction has to be made — still a fraction of opening a
+ * live session for what is usually one sentence of advice.
  */
-function TutorHandoff({
+function Correction({
+  spoken,
+  onRetry,
   onCall,
-  onDone,
   ui,
 }: {
+  spoken?: { text: string; translation?: string; audioPath: string };
+  onRetry: () => void;
   onCall: () => void;
-  onDone: () => void;
   ui: UICopy;
 }) {
+  useEffect(() => {
+    if (!spoken) return;
+    const audio = new Audio(spoken.audioPath);
+    void audio.play().catch(() => undefined);
+    return () => audio.pause();
+  }, [spoken]);
+
   return (
     <div className="flex flex-col gap-2">
-      <p className="text-[12px] text-neutral-400">{ui.chatDuringCall}</p>
+      {spoken ? (
+        <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-2">
+          <p className="text-[14px] text-neutral-100">{spoken.text}</p>
+          {spoken.translation ? (
+            <p className="mt-1 text-[12px] text-neutral-400">{spoken.translation}</p>
+          ) : null}
+        </div>
+      ) : (
+        <p className="text-[13px] text-neutral-400">{ui.chatCallFailed}</p>
+      )}
       <div className="flex gap-2">
         <button
           type="button"
-          onClick={onCall}
-          className="flex-1 rounded-xl bg-[#4f86ff] px-4 py-3 text-sm font-medium text-white"
-        >
-          {ui.chatCall}
-        </button>
-        {/* Carrying on without the tutor: the learner may have worked it out
-            while the button was sitting there, and should not have to spend a
-            call to say so. */}
-        <button
-          type="button"
-          onClick={onDone}
-          aria-label="retry"
-          className="rounded-xl border border-white/15 px-4 py-3 text-sm text-neutral-300"
+          onClick={onRetry}
+          className="flex-1 rounded-xl bg-white/15 px-4 py-3 text-sm text-neutral-100"
         >
           ↻
+        </button>
+        {/* Asking back is the only thing that opens a call, and it is chosen. */}
+        <button
+          type="button"
+          onClick={onCall}
+          className="rounded-xl border border-white/15 px-4 py-3 text-sm text-neutral-300"
+        >
+          {ui.chatCall}
         </button>
       </div>
     </div>

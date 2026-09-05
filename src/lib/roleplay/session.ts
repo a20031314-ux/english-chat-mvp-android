@@ -9,6 +9,7 @@ import {
 import {
   isLearnerNode,
   isTutorNode,
+  liveBranches,
   sentenceAudioPath,
   type LearnerNode,
   type RoleplayScenario,
@@ -43,6 +44,25 @@ export type Instruction =
       hint?: string;
     }
   | {
+      /**
+       * Put a correction in front of them, then let them try again.
+       *
+       * `spoken` is present when the scenario wrote one for this turn: its audio
+       * was generated with everything else and costs nothing to play. When it is
+       * absent the caller has to make one, which costs about ten times as much —
+       * still a fraction of opening a live session for what is usually a single
+       * sentence of advice.
+       */
+      do: "correct";
+      spoken?: { text: string; translation?: string; audioPath: string };
+      context: {
+        setting: string;
+        tutorRole: string;
+        goal: string;
+        heard: string;
+      };
+    }
+  | {
       do: "wakeTutor";
       /**
        * Everything the live tutor needs to arrive knowing where it is. It has
@@ -67,6 +87,8 @@ export type SessionState = {
   hintShown: boolean;
   /** When the current listen began, so hesitation can be measured. */
   listeningSince: number | null;
+  /** Branch targets already reached, so a rejoining side question is asked once. */
+  visited: string[];
   finished: boolean;
 };
 
@@ -81,6 +103,7 @@ export function startSession(
     attempts: 0,
     hintShown: false,
     listeningSince: null,
+    visited: [],
     finished: false,
   };
 }
@@ -120,11 +143,13 @@ export function judge(
   node: LearnerNode,
   heard: string,
   strictness: number,
+  visited: string[] = [],
 ): { go: string; score: number } | null {
   let best: { go: string; score: number } | null = null;
   // Branches are checked in order and ties keep the earlier one, so a scenario
-  // can put the specific before the general and rely on it.
-  for (const branch of node.expect) {
+  // can put the specific before the general and rely on it. A side question
+  // already answered is not offered again, or it could be asked forever.
+  for (const branch of liveBranches(node, visited)) {
     for (const phrase of branch.match) {
       const score = phraseScore(phrase, heard);
       if (!best || score > best.score) best = { go: branch.go, score };
@@ -251,17 +276,19 @@ export function submitSpeech(
   }
 
   const settings = settingsForLevel(state.difficulty.level);
-  const hit = judge(node, heard, settings.matchStrictness);
+  const hit = judge(node, heard, settings.matchStrictness, state.visited);
   const attempts = state.attempts + 1;
   const hesitationMs = state.listeningSince ? now - state.listeningSince : 0;
   const outOfPatience = !hit && attempts >= settings.tutorPatienceAttempts;
-  const wakingTutor = !hit && (!node.onMiss || outOfPatience);
+  const correcting = !hit && (!node.onMiss || outOfPatience);
 
   const outcome: TurnOutcome = {
     matched: Boolean(hit),
     attempts,
     usedHint: state.hintShown,
-    wokeTutor: wakingTutor,
+    // Being corrected is the same struggle whether a person delivered it or a
+    // recording did; the dial should not care which was affordable.
+    wokeTutor: correcting,
     hesitationMs,
   };
   const adjusted = applyTurn(state.difficulty, outcome);
@@ -274,6 +301,9 @@ export function submitSpeech(
       attempts: 0,
       hintShown: false,
       listeningSince: null,
+      visited: state.visited.includes(hit.go)
+        ? state.visited
+        : [...state.visited, hit.go],
     };
     return {
       state: moved,
@@ -283,25 +313,41 @@ export function submitSpeech(
     };
   }
 
-  if (wakingTutor) {
-    // The node is not left: after the tutor has helped, the learner answers the
-    // same question. Attempts are kept so a second miss is still a second miss.
+  const context = {
+    setting: scenario.setting,
+    tutorRole: scenario.tutorRole,
+    goal: node.goal,
+    heard,
+  };
+
+  if (correcting) {
+    // The node is not left: after the correction they answer the same question,
+    // and the attempt still counts, so a second miss is still a second miss.
     const held: SessionState = {
       ...state,
       difficulty: adjusted.state,
       attempts,
       listeningSince: null,
     };
+    const written = node.correction ? bank[node.correction] : undefined;
     return {
       state: held,
       instruction: {
-        do: "wakeTutor",
-        context: {
-          setting: scenario.setting,
-          tutorRole: scenario.tutorRole,
-          goal: node.goal,
-          heard,
-        },
+        do: "correct",
+        ...(written
+          ? {
+              spoken: {
+                text: written.text,
+                translation: written.translation,
+                audioPath: sentenceAudioPath(
+                  written.text,
+                  realtimeCallVoice(scenario.language),
+                  scenario.language,
+                ),
+              },
+            }
+          : {}),
+        context,
       },
       matched: false,
       difficultyChanged: adjusted.changed,
@@ -324,7 +370,32 @@ export function submitSpeech(
   };
 }
 
-/** Carry on at the same question once the live tutor has finished helping. */
+/**
+ * The learner wants to ask back.
+ *
+ * The only door to a live session. A correction is one sentence and a recording
+ * can deliver it; a question about the correction is a conversation, and that is
+ * what a call is for. Making it explicit means nobody is charged for one by
+ * missing a turn.
+ */
+export function askTutor(
+  scenario: RoleplayScenario,
+  state: SessionState,
+  heard: string,
+): Instruction {
+  const node = scenario.nodes[state.nodeId];
+  return {
+    do: "wakeTutor",
+    context: {
+      setting: scenario.setting,
+      tutorRole: scenario.tutorRole,
+      goal: node && isLearnerNode(node) ? node.goal : "",
+      heard,
+    },
+  };
+}
+
+/** Carry on at the same question once the correction or the tutor is done. */
 export function afterTutor(
   scenario: RoleplayScenario,
   bank: SentenceBank,

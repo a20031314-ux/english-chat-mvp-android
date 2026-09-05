@@ -41,6 +41,25 @@ export const SENTENCES: Record<string, SentenceBank> = {
       text: "Sorry, what was that?",
       translation: "죄송해요, 뭐라고 하셨죠?",
     },
+    // Corrections. Written in advance because most misses at a given turn are
+    // the same miss — which is what the situation briefs record. Generated with
+    // every other line and free to play.
+    "cafe.fix-order": {
+      text: "You can just say: can I get a latte, please.",
+      translation: '"Can I get a latte, please."라고 하면 돼요.',
+    },
+    "cafe.fix-size": {
+      text: "Small or large — you can just say the word.",
+      translation: '"Small" 또는 "Large" 한 단어면 됩니다.',
+    },
+    "cafe.fix-here": {
+      text: "If you're drinking it here, say: for here. If you're taking it away, say: to go.",
+      translation: '여기서 마시면 "For here", 가져가면 "To go"예요.',
+    },
+    "cafe.fix-payment": {
+      text: "You can just say: card, please.",
+      translation: '"Card, please."라고 하면 됩니다.',
+    },
   },
 };
 
@@ -87,6 +106,7 @@ export const SCENARIOS: RoleplayScenario[] = [
           },
         ],
         onMiss: "pardon-order",
+        correction: "cafe.fix-order",
       },
       // A branch that rejoins: the milk question is answered and the order
       // carries on where it left off, so it costs one sentence, not a new path.
@@ -114,6 +134,7 @@ export const SCENARIOS: RoleplayScenario[] = [
           },
         ],
         onMiss: "pardon-size",
+        correction: "cafe.fix-size",
       },
       "pardon-size": {
         type: "tutor",
@@ -138,7 +159,9 @@ export const SCENARIOS: RoleplayScenario[] = [
             go: "total",
           },
         ],
-        // No onMiss: this one is worth a person if the script cannot place it.
+        // No onMiss: a miss here goes straight to the correction, because the
+        // trouble is known and the answer is one written sentence.
+        correction: "cafe.fix-here",
       },
       total: { type: "tutor", id: "total", say: "cafe.total", next: "payment" },
       payment: {
@@ -152,6 +175,7 @@ export const SCENARIOS: RoleplayScenario[] = [
           },
         ],
         onMiss: "pardon-payment",
+        correction: "cafe.fix-payment",
       },
       "pardon-payment": {
         type: "tutor",

@@ -63,11 +63,24 @@ export type LearnerNode = {
    * Where to go when nothing matched — normally a scripted "sorry?" that loops
    * back, which is far cheaper than waking the tutor for a mumble.
    *
-   * Leaving it out means the tutor is woken instead. That is the whole design:
-   * the script covers what it can, and the live tutor is what happens at the
-   * edges rather than what happens by default.
+   * Leaving it out means the correction ladder is entered instead. That is the
+   * whole design: the script covers what it can, and anything that costs money
+   * happens at the edges rather than by default.
    */
   onMiss?: string;
+  /**
+   * What to say when they still cannot get there: a sentence id, like any other.
+   *
+   * The point of writing it in advance is that most misses at a given turn are
+   * the same miss — everyone who stumbles on "for here or to go" stumbles on it
+   * the same way, which is why the situation briefs record where each exchange
+   * goes wrong. A correction written here is generated once and costs nothing to
+   * play, where generating one per learner costs about ten times as much and
+   * waking a live tutor about fifty.
+   *
+   * Left out where the trouble is not predictable. Then it is generated.
+   */
+  correction?: string;
 };
 
 export type ScriptNode = TutorNode | LearnerNode;
@@ -154,11 +167,28 @@ export function successorsOf(node: ScriptNode): string[] {
   return node.onMiss ? [...targets, node.onMiss] : targets;
 }
 
+/**
+ * Branches worth offering, given where the learner has already been.
+ *
+ * A side question that rejoins — "do you have oat milk?" answered, then back to
+ * the order — can be asked forever, because the graph has no memory of it. Once
+ * its answer has been heard, the branch stops counting, so asking again falls
+ * through to the recovery rather than round the loop again.
+ */
+export function liveBranches(node: LearnerNode, visited: string[]): Branch[] {
+  const seen = new Set(visited);
+  const fresh = node.expect.filter((branch) => !seen.has(branch.go));
+  // Never strand a node: if every branch has been taken, they all count again.
+  return fresh.length > 0 ? fresh : node.expect;
+}
+
 /** Sentence ids a scenario needs, which is exactly what needs audio. */
 export function sentenceIdsUsed(scenario: RoleplayScenario): string[] {
   const ids = new Set<string>();
   for (const node of Object.values(scenario.nodes)) {
     if (isTutorNode(node)) ids.add(node.say);
+    // Corrections are spoken too, so they are generated with everything else.
+    else if (node.correction) ids.add(node.correction);
   }
   return [...ids];
 }

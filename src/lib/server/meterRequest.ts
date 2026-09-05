@@ -28,6 +28,10 @@ export const MODEL_CALLS_PER_REQUEST = {
   videoWindow: 3,
   videoGloss: 1,
   videoAnalyze: 1,
+  // The roleplay's only model call. Its tutor speaks from files, so a scripted
+  // scene costs one transcription per learner turn and nothing else — which is
+  // the claim the whole mode rests on, and therefore the one worth counting.
+  roleplayListen: 1,
 } as const;
 
 export type MeteredOp = keyof typeof MODEL_CALLS_PER_REQUEST;
