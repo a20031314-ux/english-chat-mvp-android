@@ -337,3 +337,37 @@ export function afterTutor(
     instruction: currentInstruction(scenario, bank, listening),
   };
 }
+
+/**
+ * What to hand the live tutor when it is woken mid-scene.
+ *
+ * It has heard nothing: the scripted half of the conversation happened as audio
+ * files, and the realtime session is being opened for the first time right now.
+ * So everything it needs has to arrive in one message — where it is, who it is,
+ * what the learner was trying to do, and what they actually said.
+ *
+ * `ask` is deliberately narrow. The tutor is being called for one stuck turn,
+ * not taking over the scenario, and a tutor that starts a conversation here
+ * leaves the learner somewhere the script cannot pick up again.
+ */
+export function tutorHandover(
+  context: Extract<Instruction, { do: "wakeTutor" }>["context"],
+  languageName: string,
+): { scene: string; ask: string } {
+  return {
+    scene: [
+      `<scene>`,
+      `You are already in this conversation, playing the ${context.tutorRole}.`,
+      context.setting,
+      `The learner was trying to: ${context.goal}`,
+      `They just said: "${context.heard}"`,
+      `It did not fit, and they are stuck.`,
+      `</scene>`,
+    ].join("\n"),
+    ask:
+      `Help with this one turn, in ${languageName}, in a sentence or two. ` +
+      `Stay the ${context.tutorRole} — do not explain that you are a tutor or that this is practice. ` +
+      `Say what they could have said, then hand the turn straight back. ` +
+      `Do not read the tags aloud and do not start a new conversation.`,
+  };
+}

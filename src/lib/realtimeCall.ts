@@ -112,6 +112,16 @@ export async function startRealtimeCall(input: {
   onDisconnected: () => void;
   /** Fires once per finished turn, tutor's and learner's alike. */
   onLine?: (line: CallLine) => void;
+  /**
+   * What to say instead of picking up the phone.
+   *
+   * A call opened from a roleplay is not a call starting: the learner is
+   * part-way through a scene the tutor has been silent for, and greeting them
+   * would be answering a question nobody asked. `scene` is put into the
+   * conversation first, with no response, so the tutor has somewhere to arrive;
+   * `ask` is what it is then asked to do.
+   */
+  opening?: { scene: string; ask: string };
 }): Promise<RealtimeCall> {
   if (!navigator.mediaDevices?.getUserMedia) {
     throw new RealtimeCallError("mic", "getUserMedia unavailable");
@@ -200,6 +210,18 @@ export async function startRealtimeCall(input: {
     dataChannel = pc.createDataChannel("oai-events");
     dataChannel.addEventListener("open", () => {
       if (closed || dataChannel?.readyState !== "open") return;
+      if (input.opening) {
+        // The scene goes in without asking for an answer, so the tutor speaks
+        // once — about the thing it was called for — rather than twice.
+        addUserItem(input.opening.scene);
+        dataChannel.send(
+          JSON.stringify({
+            type: "response.create",
+            response: { instructions: input.opening.ask },
+          }),
+        );
+        return;
+      }
       dataChannel.send(
         JSON.stringify({
           type: "response.create",

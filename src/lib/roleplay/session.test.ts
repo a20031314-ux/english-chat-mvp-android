@@ -10,6 +10,7 @@ import {
   phraseScore,
   startSession,
   submitSpeech,
+  tutorHandover,
   type SessionState,
 } from "./session.ts";
 import { isLearnerNode } from "./script.ts";
@@ -181,4 +182,47 @@ test("the gentlest level is more forgiving than the strictest", () => {
     "an exact phrase should pass at either end",
   );
   assert.ok(easy.difficulty.level < hard.difficulty.level);
+});
+
+test("the handover tells the tutor everything, because it has heard nothing", () => {
+  // The scripted half happened as audio files; the realtime session is opening
+  // for the first time at this moment.
+  let state = runToListen(startSession(scenario));
+  state = submitSpeech(scenario, bank, state, "Can I get a latte", 1000).state;
+  state = afterSaying(scenario, bank, state, 1100).state;
+  state = submitSpeech(scenario, bank, state, "small", 1200).state;
+  state = afterSaying(scenario, bank, state, 1300).state;
+  const stuck = submitSpeech(scenario, bank, state, "sorry I don't know", 2000);
+  assert.equal(stuck.instruction.do, "wakeTutor");
+  if (stuck.instruction.do !== "wakeTutor") return;
+
+  const { scene, ask } = tutorHandover(stuck.instruction.context, "English");
+  assert.match(scene, /barista/, "it should know who it is");
+  assert.match(scene, /caf/i, "it should know where it is");
+  assert.match(scene, /sorry I don't know/, "it should know what was said");
+  assert.ok(scene.includes(stuck.instruction.context.goal), "and what was wanted");
+});
+
+test("the tutor is asked for one turn, not for the conversation", () => {
+  // A tutor that starts something here leaves the learner somewhere the script
+  // cannot pick up again.
+  const { ask } = tutorHandover(
+    { setting: "A café.", tutorRole: "barista", goal: "주문하세요.", heard: "uh" },
+    "English",
+  );
+  assert.match(ask, /one turn/i);
+  assert.match(ask, /hand the turn/i);
+  assert.match(ask, /do not start a new conversation/i);
+  // It stays in character: being told it is a tutor breaks the scene.
+  assert.match(ask, /Stay the barista/);
+  assert.match(ask, /English/);
+});
+
+test("the handover never asks the tutor to read its own markup", () => {
+  const { scene, ask } = tutorHandover(
+    { setting: "A café.", tutorRole: "barista", goal: "주문하세요.", heard: "uh" },
+    "English",
+  );
+  assert.match(scene, /<scene>/, "the scene is tagged so it reads as context");
+  assert.match(ask, /Do not read the tags aloud/);
 });
