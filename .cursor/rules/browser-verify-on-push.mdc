@@ -1,0 +1,26 @@
+---
+description: Batch browser checks to save/push, not every UI change
+alwaysApply: true
+---
+
+# Browser verification cadence
+
+Do **not** open the browser after each coding change. Feature work finishes with code + tests (or the closest non-browser substitute). Keep the session moving.
+
+## When to run the browser
+
+Only when the user asks to **save** (commit) and/or **push**. Treat that as end-of-day wrap-up:
+
+1. List today’s **user-visible functional changes** (short checklist: screens, flows, languages).
+2. Exercise each changed flow once with **realistic input**, not a blank screen. Example: if sentence analysis changed, open a real chat line, open 문장분석, and read the generated sections.
+3. Take **1–3 screenshots** of those screens (not a gallery). Attach them in the wrap-up so they show in chat, and copy them to `tmp/verify/YYYY-MM-DD/` (gitignored) for next-day review.
+4. Commit/push as requested. Do **not** start a new fix loop from what the check found.
+5. In the wrap-up, put **다음 날 확인**: what was tried, screenshots, pass/fail, and concrete mismatches (e.g. 쓰임 still in Japanese). The user reviews this later and asks if they want a fix.
+
+Skip the browser on save/push when the diff has no user-visible UI/behavior. Say so in the wrap-up instead of forcing a visit.
+
+## Do not
+
+- Treat the browser pass as “keep coding until it looks right.”
+- Hold save/push open while repairing every issue found.
+- Mix coding, tests, and a long browser pass in one unending turn.
