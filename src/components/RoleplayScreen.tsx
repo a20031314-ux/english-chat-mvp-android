@@ -46,6 +46,15 @@ type Spoken = { who: "tutor" | "learner"; text: string; translation?: string };
  */
 const STALLED_AUDIO_MS = 8000;
 
+/**
+ * What the screen needs back from whoever owns the call.
+ *
+ * `message` is null when there is nothing to say here — the learner hung up
+ * during connection, or a paywall has already been put in front of them and
+ * saying it twice would be worse than saying it once.
+ */
+export type CallAttempt = { ok: true } | { ok: false; message: string | null };
+
 export function RoleplayScreen({
   scenarioId,
   nativeLanguage,
@@ -62,8 +71,12 @@ export function RoleplayScreen({
    * Open a live call with this opening. Owned by the caller because a call is
    * a thing there should only ever be one of, and this screen is not the only
    * place one can start.
+   *
+   * It reports back, because a call can be refused — the trial is used up, the
+   * points ran out, the microphone was denied — and this screen has to know
+   * whether a tutor is actually coming before it takes the help away.
    */
-  onWakeTutor: (opening: { scene: string; ask: string }) => void;
+  onWakeTutor: (opening: { scene: string; ask: string }) => Promise<CallAttempt>;
 }) {
   const { isPremium } = usePremium();
   const scenario = findScenario(scenarioId);
@@ -72,6 +85,11 @@ export function RoleplayScreen({
   const [said, setSaid] = useState<Spoken[]>([]);
   const [recording, setRecording] = useState(false);
   const [thinking, setThinking] = useState(false);
+  // Kept here rather than in Correction: the outcome of asking for a tutor
+  // decides whether the correction stays on screen at all, which is this
+  // component's business.
+  const [calling, setCalling] = useState(false);
+  const [callError, setCallError] = useState<string | null>(null);
   const recorderRef = useRef<Recorder | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -187,6 +205,7 @@ export function RoleplayScreen({
   const afterCorrection = () => {
     if (!state) return;
     const resumed = afterTutor(scenario, bank, state, Date.now());
+    setCallError(null);
     setState(resumed.state);
     setInstruction(resumed.instruction);
   };
@@ -198,14 +217,25 @@ export function RoleplayScreen({
    * the correction is a conversation, which is what a call is for. Keeping them
    * apart means nobody is charged for a call by missing a turn.
    */
-  const callTutor = () => {
-    if (!state || !correcting) return;
+  const callTutor = async () => {
+    if (!state || !correcting || calling) return;
     const asked = askTutor(scenario, state, correcting.context.heard);
     if (asked.do !== "wakeTutor") return;
-    onWakeTutor(
+    setCalling(true);
+    setCallError(null);
+    const attempt = await onWakeTutor(
       tutorHandover(asked.context, learningLanguageName(scenario.language)),
     );
-    afterCorrection();
+    setCalling(false);
+    // The help is only taken away once a tutor is actually coming. Clearing it
+    // first meant a refused call left nothing at all on screen: the correction
+    // vanished and no reason arrived in its place, which reads as the button
+    // being broken rather than as the allowance being spent.
+    if (attempt.ok) {
+      afterCorrection();
+      return;
+    }
+    if (attempt.message) setCallError(attempt.message);
   };
 
   return (
@@ -278,7 +308,9 @@ export function RoleplayScreen({
             nativeLanguage={nativeLanguage}
             isPremium={isPremium}
             onRetry={afterCorrection}
-            onCall={callTutor}
+            onCall={() => void callTutor()}
+            calling={calling}
+            callError={callError}
             ui={ui}
           />
         ) : null}
@@ -313,6 +345,8 @@ function Correction({
   isPremium,
   onRetry,
   onCall,
+  calling,
+  callError,
   ui,
 }: {
   spoken?: { text: string; translation?: string; audioPath: string };
@@ -322,6 +356,10 @@ function Correction({
   isPremium: boolean;
   onRetry: () => void;
   onCall: () => void;
+  /** A tutor has been asked for and has not arrived or been refused yet. */
+  calling: boolean;
+  /** Why the last ask was refused, when it is worth saying so here. */
+  callError: string | null;
   ui: UICopy;
 }) {
   const [made, setMade] = useState<{ text: string; translation: string } | null>(
@@ -392,11 +430,17 @@ function Correction({
         <button
           type="button"
           onClick={onCall}
-          className="rounded-xl border border-white/15 px-4 py-3 text-sm text-neutral-300"
+          disabled={calling}
+          className="rounded-xl border border-white/15 px-4 py-3 text-sm text-neutral-300 disabled:opacity-50"
         >
-          {ui.chatCall}
+          {calling ? "…" : ui.chatCall}
         </button>
       </div>
+      {/* A refusal is not a failure of the scenario, so it is said here and the
+          correction stays put — they can read it again, or try the turn. */}
+      {callError ? (
+        <p className="text-[12px] text-[#e2a0a0]">{callError}</p>
+      ) : null}
     </div>
   );
 }

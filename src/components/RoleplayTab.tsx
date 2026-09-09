@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { useBillingUi } from "@/components/BillingScreen";
 import { RoleplayScreen } from "@/components/RoleplayScreen";
 import { useCall } from "@/contexts/CallContext";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
@@ -50,6 +51,7 @@ export function RoleplayTab({
   ui: UICopy;
 }) {
   const call = useCall();
+  const { openBilling } = useBillingUi();
   const [playing, setPlaying] = useState<string | null>(null);
   const scenarios = scenariosForLanguage(targetLanguage);
 
@@ -85,11 +87,33 @@ export function RoleplayTab({
           nativeLanguage={nativeLanguage}
           ui={ui}
           onClose={() => setPlaying(null)}
-          onWakeTutor={(opening) => {
-            // Deliberately not awaited: the scenario should stay on screen
-            // while the call connects, so the learner can see the line they
-            // were stuck on while the tutor is arriving.
-            void call.start(targetLanguage, nativeLanguage, opening);
+          onWakeTutor={async (opening) => {
+            const result = await call.start(
+              targetLanguage,
+              nativeLanguage,
+              opening,
+            );
+            if (result.ok) return { ok: true };
+            // Hung up while it was connecting. They know why; saying it back to
+            // them would be the app arguing with a decision they just made.
+            if (result.reason === "aborted") return { ok: false, message: null };
+            // The trial is spent. The paywall carries the explanation, and it
+            // renders above this screen rather than behind it, so the message
+            // would only be said twice.
+            if (result.reason === "trial") {
+              openBilling();
+              return { ok: false, message: null };
+            }
+            // A subscriber whose allowance ran out already bought the thing;
+            // selling it to them again would be the wrong answer.
+            if (result.reason === "points") {
+              return { ok: false, message: ui.chatCallNoPoints };
+            }
+            return {
+              ok: false,
+              message:
+                result.reason === "mic" ? ui.chatMicDenied : ui.chatCallFailed,
+            };
           }}
         />
       ) : null}
