@@ -188,3 +188,58 @@ test("a written correction is accepted by the node that offers it", () => {
     }
   }
 });
+
+test("a yes-or-no question accepts a yes", () => {
+  // The bug this guards was reported from a real session: the driver asks "is
+  // that alright?" and the only accepted phrasing was "that's fine". Every
+  // ordinary answer — yes, sure, okay, it's ok — was heard as a miss, so the
+  // learner was corrected for answering correctly.
+  //
+  // Only the turns that actually ask something answerable with a yes. A node
+  // asking "small or large?" is right to refuse one.
+  const yesNo: [string, string][] = [
+    ["shop-size", "try-answer"],
+    ["taxi", "route-answer"],
+    ["hotel-checkin", "id-answer"],
+  ];
+  for (const [scenarioId, nodeId] of yesNo) {
+    const scenario = findScenario(scenarioId);
+    const node = scenario?.nodes[nodeId];
+    assert.ok(scenario && node && isLearnerNode(node), `${scenarioId}/${nodeId}`);
+    for (const said of ["yes", "sure", "okay"]) {
+      assert.ok(
+        judge(node, said, 0.8, []),
+        `${scenarioId}/${nodeId} refuses "${said}"`,
+      );
+    }
+  }
+});
+
+test("widening a node did not let its side question through", () => {
+  // Accepting fragments makes the main branch easier to hit, which is exactly
+  // what could swallow a question that has its own answer. Ties keep the
+  // earlier branch, so the specific ones are written first and this checks the
+  // arrangement still holds.
+  const routes: [string, string, string, string][] = [
+    ["cafe-order", "order", "do you have oat milk", "milk-answer"],
+    ["restaurant-order", "order", "what is in the chicken", "dish-answer"],
+    ["restaurant-order", "order", "the chicken please", "sides"],
+    ["shop-size", "ask-size", "how much is this", "price-answer"],
+    ["taxi", "destination", "how much is it to the station", "price-answer"],
+    ["taxi", "destination", "the airport please", "route"],
+    ["hotel-checkin", "id-answer", "do you need my passport", "id-repeat"],
+    ["introducing-yourself", "job", "do you know many people here", "host-answer"],
+  ];
+  for (const [scenarioId, nodeId, said, expected] of routes) {
+    const scenario = findScenario(scenarioId);
+    const node = scenario?.nodes[nodeId];
+    assert.ok(scenario && node && isLearnerNode(node), `${scenarioId}/${nodeId}`);
+    for (const strictness of [0.4, 0.6, 0.8]) {
+      assert.equal(
+        judge(node, said, strictness, [])?.go,
+        expected,
+        `${scenarioId}/${nodeId} at ${strictness}: "${said}"`,
+      );
+    }
+  }
+});

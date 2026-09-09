@@ -368,6 +368,13 @@ export const SCENARIOS: RoleplayScenario[] = [
               "a latte please",
               "could I have an americano",
               "one coffee please",
+              // Bare nouns, because an order is usually just the drink. A long
+              // phrasing needs most of its words back to clear the threshold,
+              // so "one americano" would miss "could I have an americano".
+              "latte",
+              "coffee",
+              "americano",
+              "tea",
             ],
             go: "size",
           },
@@ -422,7 +429,14 @@ export const SCENARIOS: RoleplayScenario[] = [
         hint: '매장에서 마시면 "For here", 가져가면 "To go"예요.',
         expect: [
           {
-            match: ["for here", "to go", "take away", "i'll drink it here"],
+            match: [
+              "for here",
+              "to go",
+              "take away",
+              "takeaway",
+              "eat in",
+              "i'll drink it here",
+            ],
             go: "total",
           },
         ],
@@ -482,6 +496,9 @@ export const SCENARIOS: RoleplayScenario[] = [
             match: [
               "what is in it",
               "what's in it",
+              // Short enough to survive "what is in the chicken", where the
+              // longer phrasing above loses a word and drops under the bar.
+              "what is in",
               "does it come with",
               "is it spicy",
             ],
@@ -493,6 +510,13 @@ export const SCENARIOS: RoleplayScenario[] = [
               "can I get the",
               "i'd like the",
               "i'll take the",
+              // Naming the dish alone is the commonest answer of all. These tie
+              // with "what is in" on a question like "what is in the chicken",
+              // and ties keep the earlier branch, so the question still wins.
+              "chicken",
+              "pasta",
+              "steak",
+              "salmon",
             ],
             go: "sides",
           },
@@ -548,8 +572,14 @@ export const SCENARIOS: RoleplayScenario[] = [
               "water",
               "a glass of wine",
               "a beer",
-              "nothing for me",
               "just a coke",
+              // Declining is half the answers to "anything to drink?", and not
+              // one of these was accepted before.
+              "nothing for me",
+              "nothing",
+              "no thanks",
+              "i'm good",
+              "no drinks",
             ],
             go: "confirm",
           },
@@ -628,6 +658,7 @@ export const SCENARIOS: RoleplayScenario[] = [
           {
             match: [
               "could you say that again",
+              "say that again",
               "can you repeat that",
               "one more time",
               "sorry, again",
@@ -717,6 +748,10 @@ export const SCENARIOS: RoleplayScenario[] = [
               "have you got this in",
               "is this in a",
               "do you have a bigger",
+              "another size",
+              "a bigger one",
+              "a smaller one",
+              "in a medium",
             ],
             go: "check",
           },
@@ -743,7 +778,16 @@ export const SCENARIOS: RoleplayScenario[] = [
         goal: "입어보겠다고 하거나, 그냥 사겠다고 답하세요.",
         expect: [
           {
-            match: ["yes please", "can I try it on", "sure", "no thanks"],
+            match: [
+              "yes please",
+              "can I try it on",
+              "sure",
+              "yes",
+              "okay",
+              "no thanks",
+              "i'm good",
+              "it's ok",
+            ],
             go: "fitting",
           },
         ],
@@ -770,6 +814,9 @@ export const SCENARIOS: RoleplayScenario[] = [
           {
             match: [
               "i'll take it",
+              "i'll buy it",
+              "i like it",
+              "too tight",
               "it fits",
               "it's a bit tight",
               "it doesn't fit",
@@ -812,7 +859,9 @@ export const SCENARIOS: RoleplayScenario[] = [
             match: [
               "i have a booking under",
               "the name is",
+              "my name is",
               "it's under",
+              "under",
               "i booked under",
             ],
             go: "ask-id",
@@ -851,7 +900,18 @@ export const SCENARIOS: RoleplayScenario[] = [
             go: "id-repeat",
           },
           {
-            match: ["here you are", "here it is", "here you go", "of course"],
+            match: [
+              "here you are",
+              "here it is",
+              "here you go",
+              "of course",
+              // Handing something over is mostly done with a word, not a
+              // sentence. "Sure", "yes" and "here" were all refused.
+              "sure",
+              "yes",
+              "here",
+              "okay",
+            ],
             go: "breakfast-info",
           },
         ],
@@ -880,6 +940,8 @@ export const SCENARIOS: RoleplayScenario[] = [
               "when does breakfast start",
               "where is breakfast",
               "is breakfast included",
+              "breakfast time",
+              "what time",
             ],
             go: "answer",
           },
@@ -939,6 +1001,9 @@ export const SCENARIOS: RoleplayScenario[] = [
               // So that answering the driver's own question with just the place
               // works, which is what a person actually says.
               "the central station",
+              "the address",
+              "the airport",
+              "the station",
             ],
             go: "route",
           },
@@ -972,6 +1037,13 @@ export const SCENARIOS: RoleplayScenario[] = [
           {
             match: [
               "that's fine",
+              "yes",
+              "yeah",
+              "sure",
+              "okay",
+              "fine",
+              "it's ok",
+              "no problem",
               "go ahead",
               "the normal road",
               "whichever is faster",
@@ -1005,6 +1077,10 @@ export const SCENARIOS: RoleplayScenario[] = [
               "just here please",
               "anywhere here",
               "you can stop here",
+              "stop here",
+              "this is fine",
+              "right here",
+              "here",
             ],
             go: "close",
           },
@@ -1033,7 +1109,15 @@ export const SCENARIOS: RoleplayScenario[] = [
         goal: "이름을 말하고 인사하세요.",
         expect: [
           {
-            match: ["i'm", "my name is", "nice to meet you", "hi i'm"],
+            match: [
+              "i'm",
+              "my name is",
+              "nice to meet you",
+              "hi i'm",
+              "hi",
+              "hello",
+              "hey",
+            ],
             go: "job-q",
           },
         ],
@@ -1061,7 +1145,15 @@ export const SCENARIOS: RoleplayScenario[] = [
             go: "host-answer",
           },
           {
-            match: ["i work", "i'm a", "i'm studying", "i work at"],
+            match: [
+              "i work",
+              "i'm a",
+              "i'm studying",
+              "i work at",
+              "i study",
+              "a student",
+              "a designer",
+            ],
             go: "job-answer",
           },
         ],
@@ -1094,9 +1186,12 @@ export const SCENARIOS: RoleplayScenario[] = [
           {
             match: [
               "yes we work together",
+              "we work together",
               "i came with her",
               "we're old friends",
+              "a friend",
               "what about you",
+              "and you",
               "how do you know her",
             ],
             go: "close",
