@@ -94,7 +94,11 @@ test("a node with no recovery plays its written correction, not a call", () => {
   // Written in advance, so playing it costs nothing where a live session would
   // cost about fifty times a judgement.
   assert.ok(stuck.instruction.spoken, "this turn's trouble was predictable");
-  assert.match(stuck.instruction.spoken.text, /for here/i);
+  // Identified by which sentence was reached, not by a phrase inside it. The
+  // corrections are written in character now — the barista asks the question
+  // again more simply rather than explaining English — so pinning this to any
+  // particular wording would break every time one is reworded.
+  assert.equal(stuck.instruction.spoken.text, bank["cafe.fix-here"]!.text);
   assert.match(stuck.instruction.spoken.audioPath, /\.mp3$/);
   // The context rides along for the tutor, if the learner asks back.
   assert.match(stuck.instruction.context.setting, /caf/i);

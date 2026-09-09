@@ -45,20 +45,24 @@ export const SENTENCES: Record<string, SentenceBank> = {
     // the same miss — which is what the situation briefs record. Generated with
     // every other line and free to play.
     "cafe.fix-order": {
-      text: "You can just say: can I get a latte, please.",
-      translation: '"Can I get a latte, please."라고 하면 돼요.',
+      text: "No rush. Can I get you a latte? Or a coffee?",
+      translation:
+        '천천히 보세요. 라떼 드릴까요, 커피 드릴까요?  ·  "Can I get a latte, please."라고 하면 됩니다.',
     },
     "cafe.fix-size": {
-      text: "Small or large — you can just say the word.",
-      translation: '"Small" 또는 "Large" 한 단어면 됩니다.',
+      text: "Sorry — small, or large?",
+      translation:
+        '죄송해요, 스몰이요 라지요?  ·  "Small" 또는 "Large" 한 단어면 됩니다.',
     },
     "cafe.fix-here": {
-      text: "If you're drinking it here, say: for here. If you're taking it away, say: to go.",
-      translation: '여기서 마시면 "For here", 가져가면 "To go"예요.',
+      text: "Are you drinking it here? Or is it to go?",
+      translation:
+        '여기서 드시고 가세요? 아니면 가져가세요?  ·  매장에서 드시면 "For here", 가져가시면 "To go"예요.',
     },
     "cafe.fix-payment": {
-      text: "You can just say: card, please.",
-      translation: '"Card, please."라고 하면 됩니다.',
+      text: "Sorry — card, or cash?",
+      translation:
+        '죄송해요, 카드요 현금이요?  ·  "Card, please."라고 답하면 됩니다.',
     },
     // --- Ordering a meal. The trouble the brief names is wanting to ask what is
     // in a dish and having no phrase for it, so the correction hands one over
@@ -88,17 +92,19 @@ export const SENTENCES: Record<string, SentenceBank> = {
       translation: "죄송해요, 못 들었어요.",
     },
     "restaurant.fix-order": {
-      text: "You can ask me what's in it — or just say: I'll have the chicken, please.",
+      text: "Take your time. Can I get you the chicken? Or shall I tell you what's in it?",
       translation:
-        '뭐가 들었는지 궁금하면 "What\'s in it?"이라고 물어보세요. 주문은 "I\'ll have the chicken, please."',
+        '천천히 보세요. 치킨으로 드릴까요? 아니면 뭐가 들었는지 말씀드릴까요?  ·  "I\'ll have the chicken, please."로 주문하거나 "What\'s in it?"이라고 물어보세요.',
     },
     "restaurant.fix-sides": {
-      text: "Fries or salad — just the word is fine.",
-      translation: '"Fries" 또는 "Salad" 한 단어면 됩니다.',
+      text: "Sorry — fries, or salad?",
+      translation:
+        '죄송해요, 감자튀김이요 샐러드요?  ·  "Fries" 또는 "Salad" 한 단어면 됩니다.',
     },
     "restaurant.fix-drinks": {
-      text: "You can just say: water's fine, thanks.",
-      translation: '"Water\'s fine, thanks."라고 하면 됩니다.',
+      text: "Something to drink? Water, maybe?",
+      translation:
+        '음료는요? 물 드릴까요?  ·  "Water\'s fine, thanks."라고 하면 됩니다.',
     },
     // --- Asking the way. The trouble is nodding through directions nobody
     // understood, so the branch that asks for them again is the lesson rather
@@ -128,17 +134,19 @@ export const SENTENCES: Record<string, SentenceBank> = {
       translation: "네? 다시 말씀해 주시겠어요?",
     },
     "directions.fix-ask": {
-      text: "You can start with: excuse me, how do I get to the station?",
-      translation: '"Excuse me, how do I get to the station?"으로 시작하면 됩니다.',
+      text: "Where is it you're trying to get to? The station, maybe?",
+      translation:
+        '어디로 가시려는 거예요? 역이요?  ·  "How do I get to the station?"처럼 물어보면 됩니다.',
     },
     "directions.fix-confirm": {
-      text: "Say it back to me — so, straight on, then left? Or just ask me to repeat it.",
+      text: "So that's straight on, then left. Got it? Or shall I say it again?",
       translation:
-        '들은 대로 되물어 보세요. "So, straight on, then left?" 못 들었으면 "Could you say that again?"',
+        '그러니까 쭉 가서 왼쪽이요. 아시겠어요? 다시 말해 드릴까요?  ·  들은 대로 "So, straight on, then left?"라고 확인하거나 "Could you say that again?"이라고 하세요.',
     },
     "directions.fix-far": {
-      text: "You can ask: is it far? Or — can I walk there?",
-      translation: '"Is it far?" 또는 "Can I walk there?"라고 물어보면 됩니다.',
+      text: "Is it far? Is that what you wanted to ask?",
+      translation:
+        '먼지 궁금하신 거예요?  ·  "Is it far?" 또는 "Can I walk there?"라고 물어보면 됩니다.',
     },
     // --- Trying something on. Asking for a size without naming the item is the
     // miss the brief records, so the correction is about the words that are
@@ -171,17 +179,19 @@ export const SENTENCES: Record<string, SentenceBank> = {
       translation: "죄송해요, 뭐라고 하셨죠?",
     },
     "shop.fix-ask": {
-      text: "Tell me which one, too — like: do you have this shirt in a medium?",
+      text: "Which one is it? Do you have this in a medium, is that it?",
       translation:
-        '어떤 옷인지도 같이 말해 주세요. "Do you have this shirt in a medium?"처럼요.',
+        '어떤 거요? 이거 미디엄 있냐는 말씀이신가요?  ·  어떤 옷인지 함께 말해 주세요. "Do you have this in a medium?"처럼요.',
     },
     "shop.fix-try": {
-      text: "Just say: yes, please. Or: no thanks, I'll take it.",
-      translation: '"Yes, please." 또는 "No thanks, I\'ll take it."라고 하면 됩니다.',
+      text: "Do you want to try it on? Yes, please — or no thanks?",
+      translation:
+        '입어보실래요? 네, 아니면 괜찮으세요?  ·  "Yes, please." 또는 "No thanks."라고 하면 됩니다.',
     },
     "shop.fix-decide": {
-      text: "You can say: I'll take it. Or: it's a bit tight.",
-      translation: '"I\'ll take it." 또는 "It\'s a bit tight."라고 하면 됩니다.',
+      text: "How was it? I'll take it — or was it a bit tight?",
+      translation:
+        '어떠셨어요? 사시겠어요, 아니면 좀 꽉 끼던가요?  ·  "I\'ll take it." 또는 "It\'s a bit tight."라고 하면 됩니다.',
     },
     // --- Checking in. The brief's trouble is being asked for a document and not
     // catching which one, so asking back is written in as a branch: it is the
@@ -212,16 +222,19 @@ export const SENTENCES: Record<string, SentenceBank> = {
       translation: "죄송해요, 다시 말씀해 주시겠어요?",
     },
     "hotel.fix-name": {
-      text: "Just the name on the booking — like: it's under Kim.",
-      translation: '예약하신 이름만 말하면 돼요. "It\'s under Kim."처럼요.',
+      text: "What's the name it's under? Kim, perhaps?",
+      translation:
+        '어느 성함으로 예약하셨어요? Kim이신가요?  ·  "It\'s under Kim."처럼 예약자 이름만 말하면 됩니다.',
     },
     "hotel.fix-id": {
-      text: "I need your passport. You can just say: here you are.",
-      translation: '여권을 달라는 거예요. "Here you are."라고 하면서 건네면 됩니다.',
+      text: "Your passport, if you have it — here you are, and I'll be quick.",
+      translation:
+        '여권 있으시면 주세요. 금방 확인해 드릴게요.  ·  여권을 달라는 거예요. "Here you are."라고 하며 건네면 됩니다.',
     },
     "hotel.fix-breakfast": {
-      text: "You can ask: what time is breakfast?",
-      translation: '"What time is breakfast?"라고 물어보면 됩니다.',
+      text: "Was there anything else? What time is breakfast, maybe?",
+      translation:
+        '더 궁금하신 거 있으세요? 조식 시간이요?  ·  "What time is breakfast?"라고 물어보면 됩니다.',
     },
     // --- A taxi. The scenario exists for its last turn: the brief says people
     // cannot say "here is fine" at the moment they need it, so that node is the
@@ -251,17 +264,19 @@ export const SENTENCES: Record<string, SentenceBank> = {
       translation: "죄송해요, 뭐라고 하셨죠?",
     },
     "taxi.fix-dest": {
-      text: "Just tell me the place — like: can you take me to the central station?",
+      text: "Where to? The central station? Or have you got an address for me?",
       translation:
-        '목적지만 말하면 됩니다. "Can you take me to the central station?"처럼요.',
+        '어디로 갈까요? 중앙역이요? 아니면 주소 있으세요?  ·  "Can you take me to the central station."처럼 말하면 됩니다.',
     },
     "taxi.fix-route": {
-      text: "You can just say: that's fine. Or: the normal road, please.",
-      translation: '"That\'s fine." 또는 "The normal road, please."라고 하면 됩니다.',
+      text: "That's fine? Or would you rather I took the normal road?",
+      translation:
+        '괜찮으세요? 아니면 일반 도로로 갈까요?  ·  "That\'s fine." 또는 "The normal road, please."라고 하면 됩니다.',
     },
     "taxi.fix-stop": {
-      text: "When you see your spot, just say: here is fine.",
-      translation: '내리고 싶은 곳이 보이면 "Here is fine."이라고 하면 됩니다.',
+      text: "Just say when. Here is fine? Or a bit further?",
+      translation:
+        '말씀만 하세요. 여기 세울까요, 좀 더 갈까요?  ·  "Here is fine."이라고 하면 됩니다.',
     },
     // --- Meeting someone new. The only one here that is not an errand, and the
     // one whose trouble is silence rather than a missing word: the brief says
@@ -296,18 +311,21 @@ export const SENTENCES: Record<string, SentenceBank> = {
       translation: "죄송해요, 못 들었어요.",
     },
     "intro.fix-name": {
-      text: "Just your name is fine — like: hi, I'm Jisoo.",
-      translation: '이름만 말해도 돼요. "Hi, I\'m Jisoo."처럼요.',
+      text: "Sorry, I didn't catch your name — I'm Sam, and you are?",
+      translation:
+        '죄송해요, 성함을 못 들었어요. 저는 Sam이에요.  ·  "Hi, I\'m Jisoo."처럼 이름만 말해도 됩니다.',
     },
     "intro.fix-job": {
-      text: "Keep it short — I work at a bank. Or: I'm a student.",
-      translation: '짧게 말해도 됩니다. "I work at a bank." 또는 "I\'m a student."',
+      text: "Work, study, something else? I work in design, myself.",
+      translation:
+        '일하세요, 공부하세요? 저는 디자인 쪽이에요.  ·  "I work at a bank." 또는 "I\'m a student."처럼 짧게요.',
     },
     // A correction has to name something the node will actually accept, or it
     // hands the learner a sentence and then refuses it.
     "intro.fix-common": {
-      text: "Ask me something back — like: what about you? Or: how do you know her?",
-      translation: '되물어 보세요. "What about you?" 또는 "How do you know her?"',
+      text: "How do you know her, then? Or did you come with someone?",
+      translation:
+        '미나는 어떻게 아세요? 아니면 누구랑 오셨어요?  ·  "How do you know her?" 또는 "What about you?"라고 되물어 보세요.',
     },
   },
 };
@@ -918,6 +936,9 @@ export const SCENARIOS: RoleplayScenario[] = [
               "i'm going to",
               "this address please",
               "could you take me to",
+              // So that answering the driver's own question with just the place
+              // works, which is what a person actually says.
+              "the central station",
             ],
             go: "route",
           },
