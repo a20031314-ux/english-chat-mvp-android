@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { realtimeCallVoice } from "../realtimeCallSession.ts";
+import { judge } from "./session.ts";
 import { SCENARIOS, findScenario, sentencesFor } from "./catalog.ts";
 import {
   danglingTargets,
@@ -165,5 +166,25 @@ test("every written scenario traces back to a situation on the list", () => {
       findSituation(scenario.id),
       `${scenario.id} is written but not on the situation list`,
     );
+  }
+});
+
+test("a written correction is accepted by the node that offers it", () => {
+  // The failure this catches is quiet and cruel: a correction hands the learner
+  // a sentence, they say it, and the same node refuses it — so the one rung of
+  // the ladder that was supposed to be free sends them round again, or to a
+  // call. Checked at the strictest setting, because that is where the margin is
+  // thinnest and the learner most likely to be at the top of the dial.
+  const STRICTEST = 0.8;
+  for (const scenario of SCENARIOS) {
+    const bank = sentencesFor(scenario.language);
+    for (const node of Object.values(scenario.nodes)) {
+      if (!isLearnerNode(node) || !node.correction) continue;
+      const spoken = bank[node.correction]?.text ?? "";
+      assert.ok(
+        judge(node, spoken, STRICTEST, []),
+        `${scenario.id}/${node.id} suggests "${spoken}", which it would then refuse`,
+      );
+    }
   }
 });

@@ -24,8 +24,8 @@
  */
 import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { SENTENCES } from "../src/lib/roleplay/catalog.ts";
-import { sentenceAudioPath } from "../src/lib/roleplay/script.ts";
+import { SCENARIOS, SENTENCES } from "../src/lib/roleplay/catalog.ts";
+import { sentenceAudioPath, sentenceIdsUsed } from "../src/lib/roleplay/script.ts";
 import { realtimeCallVoice } from "../src/lib/realtimeCallSession.ts";
 
 const PRUNE = process.argv.includes("--prune");
@@ -56,14 +56,41 @@ function apiKey() {
 }
 
 /**
+ * Who says each sentence, taken from the scenario that uses it.
+ *
+ * The role is not on the sentence, because it belongs to the scenario — but a
+ * single generic role read every line, which was survivable while a café was the
+ * only scenario and stopped being so the moment a taxi driver and a stranger at
+ * a party were reading their lines as a shop assistant addressing a customer.
+ *
+ * A sentence used by two scenarios with different roles would need the role in
+ * its hash to have two recordings; it does not, so the first scenario to claim
+ * it wins and both hear that reading. The only sentences shared today are the
+ * "sorry?" lines, which sound the same in any job.
+ */
+function rolesBySentenceId() {
+  const roles = new Map();
+  for (const scenario of SCENARIOS) {
+    for (const id of sentenceIdsUsed(scenario)) {
+      if (!roles.has(id)) roles.set(id, scenario.tutorRole);
+    }
+  }
+  return roles;
+}
+
+/**
  * The instruction the voice is given.
  *
  * These lines are a person doing their job, not an announcer reading copy. A
  * roleplay whose barista sounds like a documentary narrator teaches the learner
  * to expect a register they will never meet.
+ *
+ * Deliberately says "someone" rather than "a customer": not every role here is
+ * behind a counter, and a passer-by giving directions to a customer is a reading
+ * nobody has ever heard.
  */
 function speechInstructions(role) {
-  return `You are a ${role} speaking to a customer in person. Natural, unhurried, friendly. Do not perform or announce; just talk.`;
+  return `You are a ${role}, talking to someone in person. Natural, unhurried, friendly. Do not perform or announce; just talk.`;
 }
 
 async function synthesize(key, text, voice, role) {
@@ -88,13 +115,23 @@ async function synthesize(key, text, voice, role) {
   return Buffer.from(await response.arrayBuffer());
 }
 
+const roles = rolesBySentenceId();
 const wanted = new Map();
 for (const [language, bank] of Object.entries(SENTENCES)) {
   const voice = realtimeCallVoice(language);
   for (const [id, sentence] of Object.entries(bank)) {
     const urlPath = sentenceAudioPath(sentence.text, voice, language);
     // Two ids carrying identical text land on one file, which is the point.
-    wanted.set(urlPath, { id, language, voice, text: sentence.text });
+    wanted.set(urlPath, {
+      id,
+      language,
+      voice,
+      text: sentence.text,
+      // A sentence no scenario uses has no role to read it in. It also has no
+      // way to be heard, so this is a placeholder for a line on its way in or
+      // out rather than a case worth designing for.
+      role: roles.get(id) ?? "shop assistant",
+    });
   }
 }
 
@@ -114,15 +151,14 @@ for (const [urlPath, sentence] of wanted) {
   const seconds = sentence.text.length / CHARS_PER_SECOND;
   estimatedUsd += (seconds * AUDIO_TOKENS_PER_SECOND * USD_PER_1M_AUDIO_TOKENS) / 1e6;
   if (DRY) {
-    console.log(`would make  ${sentence.language}/${sentence.id}  "${sentence.text}"`);
+    console.log(
+      `would make  ${sentence.language}/${sentence.id}  (${sentence.role})  "${sentence.text}"`,
+    );
     made += 1;
     continue;
   }
   mkdirSync(path.dirname(filePath), { recursive: true });
-  // Role is not on the sentence — it belongs to the scenario — so the generic
-  // one is used here. A sentence said by two different roles would want the
-  // role in the hash; no sentence does that yet.
-  const audio = await synthesize(key, sentence.text, sentence.voice, "shop assistant");
+  const audio = await synthesize(key, sentence.text, sentence.voice, sentence.role);
   writeFileSync(filePath, audio);
   console.log(`made  ${filePath}  (${audio.length} bytes)  "${sentence.text}"`);
   made += 1;
