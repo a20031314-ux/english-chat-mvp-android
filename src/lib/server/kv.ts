@@ -203,3 +203,72 @@ export async function kvGetNumber(key: string): Promise<number> {
     0,
   );
 }
+
+
+/**
+ * Every key matching a glob, read in pages.
+ *
+ * Never call this from a request path. It walks the keyspace, so what it costs
+ * grows with the store rather than with the answer — the opposite of every
+ * other function here. It exists so a person can ask, offline and afterwards,
+ * what a fortnight of use actually looked like.
+ *
+ * It throws where the rest of this file shrugs. A counter that quietly returns
+ * zero costs one data point; a report built from half a scan is a wrong number
+ * wearing the clothes of a right one, and someone would put it in an
+ * application.
+ */
+export async function kvScanKeys(match: string, pageSize = 500): Promise<string[]> {
+  if (!credentials()) {
+    warnOnce();
+    const pattern = new RegExp(
+      "^" + match.split("*").map((part) => part.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")).join(".*") + "$",
+    );
+    return [...memory().keys()].filter((key) => pattern.test(key));
+  }
+  const found: string[] = [];
+  const seen = new Set<string>();
+  let cursor = "0";
+  do {
+    const result = await command(["SCAN", cursor, "MATCH", match, "COUNT", pageSize]);
+    if (!Array.isArray(result) || result.length < 2) break;
+    cursor = String(result[0]);
+    const page = result[1];
+    // SCAN may return the same key twice across pages; the caller is counting
+    // distinct things, so dedupe here rather than in every caller.
+    if (Array.isArray(page)) {
+      for (const key of page) {
+        if (typeof key === "string" && !seen.has(key)) {
+          seen.add(key);
+          found.push(key);
+        }
+      }
+    }
+  } while (cursor !== "0");
+  return found;
+}
+
+/**
+ * Several counters at once, in the order asked for. Missing keys read as zero.
+ *
+ * Chunked because a scan of a busy week produces more keys than belong in one
+ * URL or one request body, and a report should not fail for being thorough.
+ */
+export async function kvGetNumbers(keys: string[], chunk = 200): Promise<number[]> {
+  if (keys.length === 0) return [];
+  if (!credentials()) {
+    warnOnce();
+    return keys.map((key) => Number(memoryRead(key) ?? 0));
+  }
+  const values: number[] = [];
+  for (let at = 0; at < keys.length; at += chunk) {
+    const slice = keys.slice(at, at + chunk);
+    const result = await command(["MGET", ...slice]);
+    const row = Array.isArray(result) ? result : [];
+    for (let i = 0; i < slice.length; i += 1) {
+      const raw = row[i];
+      values.push(typeof raw === "string" || typeof raw === "number" ? Number(raw) : 0);
+    }
+  }
+  return values;
+}

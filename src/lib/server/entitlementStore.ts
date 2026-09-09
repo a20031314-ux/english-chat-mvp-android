@@ -27,6 +27,23 @@ const DAILY_TTL_SECONDS = 3 * 24 * 60 * 60;
 /** Same idea for a month, with room for a late-arriving write. */
 const MONTHLY_TTL_SECONDS = 70 * 24 * 60 * 60;
 
+/**
+ * How long the per-op ledger is kept, which is a different question from how
+ * long a limit needs its counter.
+ *
+ * Three days is right for a daily allowance: tomorrow reads tomorrow's key and
+ * yesterday's is dead weight. But these rows are read by a person weeks later,
+ * asking what a fortnight of closed testing looked like — and a counter that
+ * expires eleven days before the window closes cannot answer that. It could
+ * only ever have described the last three days, which is the shape of an
+ * anecdote rather than of evidence.
+ *
+ * Kept separate from DAILY_TTL_SECONDS rather than lengthening it, because the
+ * chat limit has no reason to hold rows for a month and every key here already
+ * names its own day — nothing reads a stale one either way.
+ */
+const OP_LEDGER_TTL_SECONDS = 45 * 24 * 60 * 60;
+
 function dayKey() {
   const now = new Date();
   const month = String(now.getMonth() + 1).padStart(2, "0");
@@ -213,7 +230,7 @@ export async function incrementDailyOpUsed(
   op: string,
   amount = 1,
 ): Promise<number> {
-  return kvIncrBy(opKey(userId, op), amount, DAILY_TTL_SECONDS);
+  return kvIncrBy(opKey(userId, op), amount, OP_LEDGER_TTL_SECONDS);
 }
 
 /** Lifetime, not monthly — so this key deliberately carries no expiry. */
