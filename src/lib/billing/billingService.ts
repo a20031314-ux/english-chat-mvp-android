@@ -8,6 +8,7 @@ import {
   type SubscriptionOption,
 } from "@revenuecat/purchases-capacitor";
 import { apiUrl } from "@/lib/apiBase";
+import { APP_VERSION_HEADER, appVersion } from "@/lib/appVersion";
 import { POINT_BUNDLES } from "@/lib/billing/cost";
 import {
   PREMIUM_CACHE_STORAGE_KEY,
@@ -197,6 +198,10 @@ export function entitlementHeaders(isPremium?: boolean): Record<string, string> 
   const headers: Record<string, string> = {};
   if (isPremium) headers[PREMIUM_CLIENT_HEADER] = "1";
   if (cachedAppUserId) headers[REVENUECAT_USER_HEADER] = cachedAppUserId;
+  // Every caller that talks to the API comes through here, so the build says
+  // which one it is exactly once rather than at each fetch.
+  const version = appVersion();
+  if (version) headers[APP_VERSION_HEADER] = version;
   return headers;
 }
 

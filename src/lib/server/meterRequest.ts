@@ -1,4 +1,5 @@
 import type { NextRequest } from "next/server";
+import { requestAppVersion } from "@/lib/appVersion";
 import { incrementDailyOpUsed } from "@/lib/server/entitlementStore";
 import { requestUserId } from "@/lib/server/premiumRequest";
 
@@ -63,12 +64,15 @@ export async function meterRequest(
   try {
     const userId = requestUserId(request);
     const todayCount = await incrementDailyOpUsed(userId, op);
-    // Grep [meter] to see what a day of use actually costs.
+    // Grep [meter] to see what a day of use actually costs, and which builds
+    // are doing the spending — "unknown" is every install older than the one
+    // that started saying so.
     console.log("[meter]", {
       op,
       userId,
       todayCount,
       modelCalls: MODEL_CALLS_PER_REQUEST[op],
+      appVersion: requestAppVersion(request.headers),
     });
   } catch (error) {
     console.error("[meter] not recorded", op, error);

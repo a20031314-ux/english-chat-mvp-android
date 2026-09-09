@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { requestAppVersion } from "@/lib/appVersion";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
   addMonthlyCallSeconds,
@@ -77,6 +78,7 @@ export async function POST(request: NextRequest) {
       isPremium,
       verified,
       refundedPoints,
+      appVersion: requestAppVersion(request.headers),
       // Derived from list prices, so this is an estimate and not a bill. It is
       // here so the log reads as money without anyone having to redo the
       // arithmetic, and so the assumptions behind it get checked against real
