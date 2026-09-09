@@ -87,9 +87,144 @@ async function transcribe(
  * scenario. A scripted roleplay spends most of its time playing audio, and a
  * live microphone through all of it is a recording light on for no reason.
  */
+/**
+ * When a turn has started and when it has ended, worked out from the sound.
+ *
+ * The learner used to hold a button down while speaking, which is the one thing
+ * on this screen that a conversation never asks of anybody. Listening for the
+ * speech instead costs nothing — it is measured in the browser, and the turn
+ * still leaves as a single transcription — and it removes the last obviously
+ * mechanical step from a mode meant to read as a conversation that continues.
+ *
+ * A live session would also have removed the button, and would have cost about
+ * fifty times as much: what is expensive about a call is the tutor generating
+ * speech, not the microphone being open, so paying for one to avoid a button
+ * would be buying the wrong thing.
+ */
+
+/** Loud enough to be someone talking rather than a room being a room. */
+const SPEECH_RMS = 0.02;
+/** Below this a burst is a cough, a chair, a door — not a turn. */
+const MIN_SPEECH_MS = 300;
+/**
+ * How long a pause has to last before the turn counts as finished.
+ *
+ * Long enough to survive the gap between words and a moment of thinking
+ * mid-sentence; short enough that finishing does not feel like waiting. People
+ * pause longer in a language they are learning, which is why this is not the
+ * 500ms a native-speaker VAD would use.
+ */
+const TRAILING_SILENCE_MS = 1400;
+/** Nobody's single turn runs this long. A stuck detector should still send. */
+const MAX_TURN_MS = 20000;
+/** How long to wait for a first word before giving up and calling it silence. */
+const NO_SPEECH_MS = 12000;
+
+/**
+ * One context for analysis, kept apart from the one the tutor's voice plays
+ * through. Created on the first turn, which happens inside the tap that opened
+ * the scenario — Safari will not run a context created outside a gesture.
+ */
+let analysisCtx: AudioContext | null = null;
+
+function analysisContext(): AudioContext {
+  if (!analysisCtx) analysisCtx = new AudioContext();
+  void analysisCtx.resume().catch(() => undefined);
+  return analysisCtx;
+}
+
+type VoiceWatch = { stop: () => void };
+
+function watchForVoice(
+  stream: MediaStream,
+  on: { speaking: (yes: boolean) => void; settled: () => void },
+): VoiceWatch {
+  let source: MediaStreamAudioSourceNode;
+  let analyser: AnalyserNode;
+  try {
+    const ctx = analysisContext();
+    source = ctx.createMediaStreamSource(stream);
+    analyser = ctx.createAnalyser();
+    analyser.fftSize = 1024;
+    source.connect(analyser);
+  } catch {
+    // No analysis available — the caller still has its own control, and a turn
+    // that cannot be detected is better than a turn that cannot be spoken.
+    return { stop: () => undefined };
+  }
+
+  const samples = new Float32Array(analyser.fftSize);
+  const startedAt = Date.now();
+  let speechSince: number | null = null;
+  let silenceSince: number | null = null;
+  let spoke = false;
+  let done = false;
+
+  const finish = () => {
+    if (done) return;
+    done = true;
+    window.clearInterval(timer);
+    try {
+      source.disconnect();
+    } catch {
+      // Already gone with the stream.
+    }
+    on.settled();
+  };
+
+  const timer = window.setInterval(() => {
+    analyser.getFloatTimeDomainData(samples);
+    let sum = 0;
+    for (const sample of samples) sum += sample * sample;
+    const level = Math.sqrt(sum / samples.length);
+    const now = Date.now();
+
+    if (level >= SPEECH_RMS) {
+      silenceSince = null;
+      if (speechSince === null) speechSince = now;
+      if (!spoke && now - speechSince >= MIN_SPEECH_MS) {
+        spoke = true;
+        on.speaking(true);
+      }
+    } else {
+      speechSince = null;
+      if (silenceSince === null) silenceSince = now;
+      // Only a pause after real speech ends a turn. Silence before it just
+      // means they have not started.
+      if (spoke && now - silenceSince >= TRAILING_SILENCE_MS) {
+        on.speaking(false);
+        finish();
+        return;
+      }
+    }
+
+    if (spoke && now - startedAt >= MAX_TURN_MS) {
+      on.speaking(false);
+      finish();
+      return;
+    }
+    if (!spoke && now - startedAt >= NO_SPEECH_MS) finish();
+  }, 60);
+
+  return { stop: () => {
+    if (done) return;
+    done = true;
+    window.clearInterval(timer);
+    try {
+      source.disconnect();
+    } catch {
+      // Already gone with the stream.
+    }
+  } };
+}
+
 export async function listenForTurn(input: {
   language: string;
   isPremium: boolean;
+  /** Whether the learner is audibly speaking, so the screen can show it. */
+  onSpeaking?: (speaking: boolean) => void;
+  /** Their turn has plainly ended. The caller stops and sends. */
+  onSettled?: () => void;
 }): Promise<Recorder> {
   const stream = await navigator.mediaDevices.getUserMedia({
     audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true },
@@ -102,7 +237,13 @@ export async function listenForTurn(input: {
   });
   recorder.start();
 
+  const watch = watchForVoice(stream, {
+    speaking: (yes) => input.onSpeaking?.(yes),
+    settled: () => input.onSettled?.(),
+  });
+
   const release = () => {
+    watch.stop();
     for (const track of stream.getTracks()) track.stop();
   };
 

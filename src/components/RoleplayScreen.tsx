@@ -84,6 +84,11 @@ export function RoleplayScreen({
   const [instruction, setInstruction] = useState<Instruction | null>(null);
   const [said, setSaid] = useState<Spoken[]>([]);
   const [recording, setRecording] = useState(false);
+  const [speaking, setSpeaking] = useState(false);
+  // Bumped when the microphone decides a turn has ended. An effect does the
+  // sending rather than the callback itself: the callback is created once, at
+  // the start of the turn, and would still be holding that moment's state.
+  const [settled, setSettled] = useState(0);
   const [thinking, setThinking] = useState(false);
   // Kept here rather than in Correction: the outcome of asking for a tutor
   // decides whether the correction stays on screen at all, which is this
@@ -167,14 +172,19 @@ export function RoleplayScreen({
   );
 
   const startRecording = async () => {
-    if (recording || !scenario) return;
+    if (recording || recorderRef.current || !scenario) return;
     try {
       recorderRef.current = await listenForTurn({
         language: scenario.language,
         isPremium,
+        onSpeaking: setSpeaking,
+        onSettled: () => setSettled((count) => count + 1),
       });
       setRecording(true);
     } catch {
+      // No microphone, or it was refused. The scenario cannot continue without
+      // one, and stranding them on a turn they cannot answer is worse than
+      // ending it.
       setInstruction({ do: "finish" });
     }
   };
@@ -184,11 +194,34 @@ export function RoleplayScreen({
     if (!recorder) return;
     recorderRef.current = null;
     setRecording(false);
+    setSpeaking(false);
     setThinking(true);
     const heard = await recorder.stop();
     setThinking(false);
     await answer(heard);
   };
+
+  /**
+   * The microphone opens with the turn rather than with a button.
+   *
+   * Holding a button down to speak is the one thing on this screen a
+   * conversation never asks of anyone, and it was the last obviously mechanical
+   * step left in a mode meant to read as a conversation that carries on. The
+   * turn is still one transcription, so this costs nothing.
+   */
+  useEffect(() => {
+    if (instruction?.do !== "listen") return;
+    void startRecording();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [instruction]);
+
+  // Sent from here, where the closure is this render's, rather than from the
+  // callback that was made when the turn began.
+  useEffect(() => {
+    if (settled === 0) return;
+    void stopRecording();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [settled]);
 
   useEffect(() => {
     return () => {
@@ -283,19 +316,20 @@ export function RoleplayScreen({
             {instruction.hint ? (
               <p className="text-[12px] text-neutral-500">{instruction.hint}</p>
             ) : null}
+            {/* Not how you speak any more — the microphone is already open and
+                sends when you stop. This is for finishing early, and for the
+                room too quiet or too loud for the level to be read. */}
             <button
               type="button"
-              onPointerDown={() => void startRecording()}
-              onPointerUp={() => void stopRecording()}
-              onPointerLeave={() => void (recording && stopRecording())}
-              disabled={thinking}
+              onClick={() => void stopRecording()}
+              disabled={thinking || !recording}
               className={`w-full rounded-xl px-4 py-3 text-sm font-medium transition ${
-                recording
+                speaking
                   ? "bg-[#b91c3c] text-white"
                   : "bg-white/15 text-neutral-100 hover:bg-white/20"
               } disabled:opacity-50`}
             >
-              {thinking ? "…" : recording ? "●" : "🎙"}
+              {thinking ? "…" : `${speaking ? "●" : "🎙"} ${ui.send}`}
             </button>
           </div>
         ) : null}
