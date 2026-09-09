@@ -5,7 +5,7 @@ type TabIconProps = {
   className?: string;
 };
 
-type TabId = "chat" | "video" | "vocab";
+type TabId = "chat" | "roleplay" | "video" | "vocab";
 
 const iconBox = "h-6 w-6";
 
@@ -26,6 +26,28 @@ export function ChatTabIcon({ active, className = "" }: TabIconProps) {
         stroke="white"
         strokeWidth="1.6"
         strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+export function RoleplayTabIcon({ active, className = "" }: TabIconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`${iconBox} ${className}`}
+      aria-hidden
+    >
+      {/* Two bubbles rather than the chat tab's one: a roleplay is a scene with
+          a second person already speaking in it. */}
+      <path
+        d="M3.2 6.4A1.9 1.9 0 0 1 5.1 4.5h8.2a1.9 1.9 0 0 1 1.9 1.9v4.4a1.9 1.9 0 0 1-1.9 1.9H7.6l-3 2.6a.6.6 0 0 1-1-.46V6.4Z"
+        className={active ? "fill-[#e8e8e4]" : "fill-white/40"}
+      />
+      <path
+        d="M20.8 12.2a1.7 1.7 0 0 0-1.7-1.7h-2.2v1.7a3.2 3.2 0 0 1-3.2 3.2h-4v.9c0 .94.76 1.7 1.7 1.7h5.3l2.7 2.3a.55.55 0 0 0 .9-.42V12.2Z"
+        className={active ? "fill-white/55" : "fill-white/20"}
       />
     </svg>
   );
@@ -84,6 +106,11 @@ export const TAB_ICON_META: Record<
 > = {
   chat: {
     Icon: ChatTabIcon,
+    activeBg: "bg-white/10 tb-glow-platinum",
+    idleBg: "hover:bg-white/5",
+  },
+  roleplay: {
+    Icon: RoleplayTabIcon,
     activeBg: "bg-white/10 tb-glow-platinum",
     idleBg: "hover:bg-white/5",
   },

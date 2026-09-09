@@ -12,16 +12,21 @@ import { ExpressionInsightProvider } from "@/components/ExpressionInsightProvide
 import { TAB_ICON_META } from "@/components/TabIcons";
 import { TargetLanguageSelector } from "@/components/TargetLanguageSelector";
 import { VocabularyPanel } from "@/components/VocabularyPanel";
+import { RoleplayTab, hasRoleplay } from "@/components/RoleplayTab";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
 import { BillingUiProvider, BillingOpenButton } from "@/components/BillingScreen";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
 import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
-import { learningLanguageTextDir } from "@/lib/learningLanguages";
+import {
+  DEFAULT_LEARNING_LANGUAGE_CODE,
+  isLearningLanguageCode,
+  learningLanguageTextDir,
+} from "@/lib/learningLanguages";
 
-export type AppTab = "chat" | "video" | "vocab";
+export type AppTab = "chat" | "roleplay" | "video" | "vocab";
 
-const TABS: AppTab[] = ["chat", "video", "vocab"];
+const TABS: AppTab[] = ["chat", "roleplay", "video", "vocab"];
 
 function isAppTab(value: string | null): value is AppTab {
   return TABS.includes(value as AppTab);
@@ -51,6 +56,16 @@ function AppHomeInner({
   const [tab, setTab] = useState<AppTab>("chat");
   const ui = useUiCopy(locale);
   const { targetLanguage } = useLearningLanguage();
+  // Hidden rather than shown empty: only English has scenarios written, so a
+  // learner of anything else would get a tab with nothing behind it.
+  const roleplayAvailable = hasRoleplay(targetLanguage);
+
+  // Derived rather than synced back into state. Switching the target language
+  // can pull the tab out from under the person standing on it — including via
+  // ?screen=roleplay on a language that has none — and correcting that in an
+  // effect would render the empty tab once before replacing it.
+  const shownTab: AppTab =
+    tab === "roleplay" && !roleplayAvailable ? "chat" : tab;
 
   useEffect(() => {
     document.documentElement.lang = locale;
@@ -111,6 +126,9 @@ function AppHomeInner({
 
   const tabItems: { id: AppTab; label: string }[] = [
     { id: "chat", label: ui.homeTabChat },
+    ...(roleplayAvailable
+      ? [{ id: "roleplay" as const, label: ui.homeTabRoleplay }]
+      : []),
     { id: "video", label: ui.homeTabVideo },
     { id: "vocab", label: ui.homeTabVocab },
   ];
@@ -138,32 +156,53 @@ function AppHomeInner({
             <div className="relative z-0 min-h-0 flex-1 overflow-hidden p-2 pb-0 sm:p-4 sm:pb-0">
               <div
                 className={
-                  tab === "chat"
+                  shownTab === "chat"
                     ? "h-full"
                     : "pointer-events-none invisible absolute inset-0 -z-10 overflow-hidden opacity-0"
                 }
-                aria-hidden={tab !== "chat"}
+                aria-hidden={shownTab !== "chat"}
               >
                 <ChatWindow tabMode locale={locale} />
               </div>
 
               <div
                 className={
-                  tab === "video"
+                  shownTab === "video"
                     ? "h-full"
                     : "pointer-events-none invisible absolute inset-0 -z-10 overflow-hidden opacity-0"
                 }
-                aria-hidden={tab !== "video"}
+                aria-hidden={shownTab !== "video"}
               >
                 <VideoLearningTab
                   key={targetLanguage}
                   locale={locale}
                   ui={ui}
-                  active={tab === "video"}
+                  active={shownTab === "video"}
                 />
               </div>
 
-              {tab === "vocab" ? (
+              {shownTab === "roleplay" ? (
+                <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
+                  <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
+                    <h1 className="text-base font-semibold text-white">
+                      {ui.roleplayTitle}
+                    </h1>
+                  </header>
+                  <div className="min-h-0 flex-1 overflow-hidden">
+                    <RoleplayTab
+                      targetLanguage={targetLanguage}
+                      nativeLanguage={
+                        isLearningLanguageCode(locale)
+                          ? locale
+                          : DEFAULT_LEARNING_LANGUAGE_CODE
+                      }
+                      ui={ui}
+                    />
+                  </div>
+                </div>
+              ) : null}
+
+              {shownTab === "vocab" ? (
                 <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
                   <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
                     <h1 className="text-base font-semibold text-white">
@@ -183,7 +222,7 @@ function AppHomeInner({
             >
               <div className="mx-auto flex max-w-4xl gap-0.5">
                 {tabItems.map((item) => {
-                  const active = tab === item.id;
+                  const active = shownTab === item.id;
                   const meta = TAB_ICON_META[item.id];
                   const Icon = meta.Icon;
                   return (
