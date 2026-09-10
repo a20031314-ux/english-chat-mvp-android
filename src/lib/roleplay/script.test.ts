@@ -27,7 +27,15 @@ const TTS_VOICES = [
   "nova", "onyx", "sage", "shimmer", "verse", "marin", "cedar",
 ];
 
-test("the call's voice is one the scripted lines can also be spoken in", () => {
+test("every scene is read in a voice the speech model has", () => {
+  for (const scenario of SCENARIOS) {
+    assert.ok(
+      TTS_VOICES.includes(scenario.voice),
+      `${scenario.id} is written for "${scenario.voice}", which gpt-4o-mini-tts cannot speak`,
+    );
+  }
+  // Generated corrections and the chat's spoken lines still go out through
+  // /api/tts, which speaks in the call's voice for the language.
   for (const language of ["en", "ko", "ja", "vi"] as const) {
     const voice = realtimeCallVoice(language);
     assert.ok(
@@ -35,6 +43,19 @@ test("the call's voice is one the scripted lines can also be spoken in", () => {
       `${language} calls use "${voice}", which gpt-4o-mini-tts cannot speak`,
     );
   }
+});
+
+test("the catalog does not sound like one employee", () => {
+  // The reason the scenarios stopped sharing the call's voice. Not "all
+  // distinct" — thirteen voices will not cover thirty scenarios, and two cafés
+  // may reasonably share a barista — but enough that a learner can tell a taxi
+  // driver from a hotel receptionist.
+  const voices = new Set(SCENARIOS.map((scenario) => scenario.voice));
+  const wanted = Math.min(SCENARIOS.length, 5);
+  assert.ok(
+    voices.size >= wanted,
+    `${SCENARIOS.length} scenarios share only ${voices.size} voice(s)`,
+  );
 });
 
 test("nothing points at a node that does not exist", () => {

@@ -1,4 +1,3 @@
-import { realtimeCallVoice } from "../realtimeCallSession.ts";
 import {
   applyTurn,
   settingsForLevel,
@@ -178,7 +177,7 @@ function instructionFor(
       translation: sentence.translation,
       audioPath: sentenceAudioPath(
         sentence.text,
-        realtimeCallVoice(scenario.language),
+        scenario.voice,
         scenario.language,
       ),
     };
@@ -341,7 +340,7 @@ export function submitSpeech(
                 translation: written.translation,
                 audioPath: sentenceAudioPath(
                   written.text,
-                  realtimeCallVoice(scenario.language),
+                  scenario.voice,
                   scenario.language,
                 ),
               },

@@ -26,7 +26,6 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, rmSync, writeFileSync
 import path from "node:path";
 import { SCENARIOS, SENTENCES } from "../src/lib/roleplay/catalog.ts";
 import { sentenceAudioPath, sentenceIdsUsed } from "../src/lib/roleplay/script.ts";
-import { realtimeCallVoice } from "../src/lib/realtimeCallSession.ts";
 
 const PRUNE = process.argv.includes("--prune");
 const DRY = process.argv.includes("--dry");
@@ -56,26 +55,36 @@ function apiKey() {
 }
 
 /**
- * Who says each sentence, taken from the scenario that uses it.
+ * Every recording that needs to exist, keyed by where it will live.
  *
- * The role is not on the sentence, because it belongs to the scenario — but a
- * single generic role read every line, which was survivable while a café was the
- * only scenario and stopped being so the moment a taxi driver and a stranger at
- * a party were reading their lines as a shop assistant addressing a customer.
+ * Built from the scenarios rather than from the sentence bank, because a
+ * sentence's voice belongs to the scene saying it. The two "sorry?" lines are
+ * word for word each other's across scenarios and now land on two files rather
+ * than one, since the file name is a hash of the voice as well as the text —
+ * which is exactly right: the same words, said by two different people.
  *
- * A sentence used by two scenarios with different roles would need the role in
- * its hash to have two recordings; it does not, so the first scenario to claim
- * it wins and both hear that reading. The only sentences shared today are the
- * "sorry?" lines, which sound the same in any job.
+ * A sentence no scenario uses is not built. It also cannot be heard, so there
+ * is nothing to build it for.
  */
-function rolesBySentenceId() {
-  const roles = new Map();
+function recordingsWanted() {
+  const wanted = new Map();
   for (const scenario of SCENARIOS) {
+    const bank = SENTENCES[scenario.language] ?? {};
     for (const id of sentenceIdsUsed(scenario)) {
-      if (!roles.has(id)) roles.set(id, scenario.tutorRole);
+      const sentence = bank[id];
+      if (!sentence) continue;
+      const urlPath = sentenceAudioPath(sentence.text, scenario.voice, scenario.language);
+      if (wanted.has(urlPath)) continue;
+      wanted.set(urlPath, {
+        id,
+        language: scenario.language,
+        voice: scenario.voice,
+        text: sentence.text,
+        role: scenario.tutorRole,
+      });
     }
   }
-  return roles;
+  return wanted;
 }
 
 /**
@@ -115,27 +124,9 @@ async function synthesize(key, text, voice, role) {
   return Buffer.from(await response.arrayBuffer());
 }
 
-const roles = rolesBySentenceId();
-const wanted = new Map();
-for (const [language, bank] of Object.entries(SENTENCES)) {
-  const voice = realtimeCallVoice(language);
-  for (const [id, sentence] of Object.entries(bank)) {
-    const urlPath = sentenceAudioPath(sentence.text, voice, language);
-    // Two ids carrying identical text land on one file, which is the point.
-    wanted.set(urlPath, {
-      id,
-      language,
-      voice,
-      text: sentence.text,
-      // A sentence no scenario uses has no role to read it in. It also has no
-      // way to be heard, so this is a placeholder for a line on its way in or
-      // out rather than a case worth designing for.
-      role: roles.get(id) ?? "shop assistant",
-    });
-  }
-}
+const wanted = recordingsWanted();
 
-console.log(`${wanted.size} sentence(s) across ${Object.keys(SENTENCES).length} language(s), model ${MODEL}\n`);
+console.log(`${wanted.size} recording(s) across ${SCENARIOS.length} scenario(s), model ${MODEL}\n`);
 
 let made = 0;
 let skipped = 0;

@@ -99,6 +99,22 @@ export type RoleplayScenario = {
   /** Who the tutor is playing. The learner plays themselves. */
   tutorRole: string;
   /**
+   * Who this scene sounds like.
+   *
+   * Every scenario used to be read in the one voice the live call speaks in, so
+   * that a tutor summoned mid-scene would not change person. That bought a rare
+   * moment — the call is behind a button, by design, and most learners never
+   * open one — at the price of a constant one: a barista, a taxi driver and a
+   * hotel receptionist all sounding like the same employee.
+   *
+   * The trade is the other way round now. Each scene gets its own voice, and
+   * the summoned tutor is allowed to sound different, because the learner
+   * pressed a button to bring it and already knows something arrived.
+   *
+   * Must be a voice gpt-4o-mini-tts accepts; a test holds that.
+   */
+  voice: string;
+  /**
    * Deliberately no difficulty here. A graph is walked differently by different
    * people, so a label on the scenario describes neither of them. Difficulty
    * lives in difficulty.ts as a dial that moves while the conversation runs.
