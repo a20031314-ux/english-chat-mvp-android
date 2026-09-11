@@ -6,6 +6,12 @@ import {
   type TurnOutcome,
 } from "./difficulty.ts";
 import {
+  questionFor,
+  type Direction,
+  type DirectorRequest,
+  type SpokenLine,
+} from "./director.ts";
+import {
   isLearnerNode,
   isTutorNode,
   liveBranches,
@@ -19,13 +25,22 @@ import {
  * Walking a scenario.
  *
  * Pure: it says what should happen next and never does it. Playing audio,
- * capturing speech and waking the live tutor are the caller's, which is what
- * lets the part that decides — which branch was taken, when a retry is a retry,
- * when the script has run out — be exercised without a microphone.
+ * capturing speech and asking the director are the caller's, which is what lets
+ * the part that decides — which branch was taken, when a retry is a retry, when
+ * the script has run out — be exercised without a microphone.
  *
- * The shape mirrors the call transcript's reader: hand it what happened, take
- * back what to do.
+ * The script goes first on every turn it can take. When it cannot, the turn is
+ * handed to the director (director.ts), whose answer comes back through
+ * `applyDirection` and is spoken like any other line. There is no correction
+ * step and no button: from the learner's side the character simply answers.
  */
+
+/** A line waiting to be spoken. Without `audioPath` it is synthesised in the scene's voice. */
+export type QueuedLine = {
+  text: string;
+  translation?: string;
+  audioPath?: string;
+};
 
 /** What the caller should do next. */
 export type Instruction =
@@ -33,52 +48,35 @@ export type Instruction =
       do: "say";
       text: string;
       translation?: string;
-      /** Where the pre-generated audio for this line lives. */
-      audioPath: string;
+      /**
+       * Where the recorded audio for this line lives. Absent for a line the
+       * director wrote just now, which the caller synthesises in `voice`.
+       */
+      audioPath?: string;
+      voice: string;
     }
   | {
       do: "listen";
+      /** Empty while the conversation is off the script: there is no task then. */
       goal: string;
       /** Present only when the difficulty dial is low enough to offer it. */
       hint?: string;
     }
   | {
-      /**
-       * Put a correction in front of them, then let them try again.
-       *
-       * `spoken` is present when the scenario wrote one for this turn: its audio
-       * was generated with everything else and costs nothing to play. When it is
-       * absent the caller has to make one, which costs about ten times as much —
-       * still a fraction of opening a live session for what is usually a single
-       * sentence of advice.
-       */
-      do: "correct";
-      spoken?: { text: string; translation?: string; audioPath: string };
-      context: {
-        setting: string;
-        tutorRole: string;
-        goal: string;
-        heard: string;
-      };
-    }
-  | {
-      do: "wakeTutor";
-      /**
-       * Everything the live tutor needs to arrive knowing where it is. It has
-       * been silent until now, so nothing about the scene is in its context.
-       */
-      context: {
-        setting: string;
-        tutorRole: string;
-        goal: string;
-        heard: string;
-      };
+      /** The script cannot take this turn. Ask the director, then `applyDirection`. */
+      do: "direct";
+      request: Omit<DirectorRequest, "targetLanguage" | "nativeLanguage">;
     }
   | { do: "finish" };
 
 export type SessionState = {
   scenarioId: string;
+  /**
+   * The node the scenario is on. While the conversation is off the script this
+   * stays on the learner step it will come back to.
+   */
   nodeId: string;
+  mode: "script" | "free";
   difficulty: DifficultyState;
   /** Tries on the current learner node. Reset on arrival at a new one. */
   attempts: number;
@@ -88,6 +86,18 @@ export type SessionState = {
   listeningSince: number | null;
   /** Branch targets already reached, so a rejoining side question is asked once. */
   visited: string[];
+  /** Lines the director asked for, spoken before anything else happens. */
+  queue: QueuedLine[];
+  /** A turn waiting on the director, with what is needed to score it afterwards. */
+  pending: { heard: string; attempts: number; hesitationMs: number } | null;
+  /** Consecutive turns spent off the script. */
+  freeTurns: number;
+  /** Director turns this session. */
+  directedTurns: number;
+  /** What has been said, for the director to read. */
+  history: SpokenLine[];
+  /** The director has closed the conversation; finish once the queue is spoken. */
+  closing: boolean;
   finished: boolean;
 };
 
@@ -98,11 +108,18 @@ export function startSession(
   return {
     scenarioId: scenario.id,
     nodeId: scenario.start,
+    mode: "script",
     difficulty: startingDifficulty(level),
     attempts: 0,
     hintShown: false,
     listeningSince: null,
     visited: [],
+    queue: [],
+    pending: null,
+    freeTurns: 0,
+    directedTurns: 0,
+    history: [],
+    closing: false,
     finished: false,
   };
 }
@@ -116,6 +133,19 @@ function normalize(text: string): string[] {
     .filter(Boolean);
 }
 
+/** Sounds people make while thinking, which transcription writes down as words. */
+const FILLERS = new Set(["um", "umm", "uh", "uhh", "er", "erm", "hmm", "hm", "mm", "mmm", "ah", "eh"]);
+
+/**
+ * Whether a turn had nothing in it but hesitation.
+ *
+ * Such a turn goes to the scene's recorded "sorry?" where it has one: asking the
+ * director what to say to "mmm" buys nothing a recording does not already say.
+ */
+export function isMumble(heard: string): boolean {
+  return normalize(heard).every((word) => FILLERS.has(word));
+}
+
 /**
  * How much of a phrasing is present in what was heard, 0 to 1.
  *
@@ -124,10 +154,9 @@ function normalize(text: string): string[] {
  * the end has not said something less correct. Comparing whole strings would
  * punish them for being polite.
  *
- * Deliberately not a model. A wrong answer here costs a scripted retry or, at
- * worst, a tutor who explains something the learner already knew; paying for a
- * judgement on every turn to avoid that is the wrong trade. The seam is here if
- * that turns out to be false.
+ * Deliberately not a model. A miss here is not a verdict any more — it hands the
+ * turn to the director, who can still find the answer right — so this only has
+ * to be good at the easy cases, and it is free and instant on those.
  */
 export function phraseScore(phrase: string, heard: string): number {
   const wanted = normalize(phrase);
@@ -158,30 +187,54 @@ export function judge(
   return best;
 }
 
+function recorded(
+  scenario: RoleplayScenario,
+  bank: SentenceBank,
+  id: string,
+): QueuedLine | null {
+  const sentence = bank[id];
+  if (!sentence) return null;
+  return {
+    text: sentence.text,
+    translation: sentence.translation,
+    audioPath: sentenceAudioPath(sentence.text, scenario.voice, scenario.language),
+  };
+}
+
 function instructionFor(
   scenario: RoleplayScenario,
   bank: SentenceBank,
   state: SessionState,
 ): Instruction {
   if (state.finished) return { do: "finish" };
+  const queued = state.queue[0];
+  if (queued) return { do: "say", ...queued, voice: scenario.voice };
+  if (state.closing) return { do: "finish" };
+  if (state.pending) {
+    return {
+      do: "direct",
+      request: {
+        scenarioId: scenario.id,
+        nodeId: state.nodeId,
+        mode: state.mode,
+        heard: state.pending.heard,
+        history: state.history,
+        freeTurns: state.freeTurns,
+        directedTurns: state.directedTurns,
+        level: state.difficulty.level,
+      },
+    };
+  }
   const node = scenario.nodes[state.nodeId];
   if (!node) return { do: "finish" };
   if (isTutorNode(node)) {
-    const sentence = bank[node.say];
+    const line = recorded(scenario, bank, node.say);
     // A missing sentence is a content bug the tests catch; ending is better
     // than playing silence at someone.
-    if (!sentence) return { do: "finish" };
-    return {
-      do: "say",
-      text: sentence.text,
-      translation: sentence.translation,
-      audioPath: sentenceAudioPath(
-        sentence.text,
-        scenario.voice,
-        scenario.language,
-      ),
-    };
+    if (!line) return { do: "finish" };
+    return { do: "say", ...line, voice: scenario.voice };
   }
+  if (state.mode === "free") return { do: "listen", goal: "" };
   const settings = settingsForLevel(state.difficulty.level);
   return {
     do: "listen",
@@ -203,8 +256,25 @@ export function currentInstruction(
   return instructionFor(scenario, bank, state);
 }
 
+function remember(history: SpokenLine[], line: SpokenLine): SpokenLine[] {
+  return [...history, line];
+}
+
+/** Stamp the start of listening on a state that is about to listen. */
+function listeningIfDue(
+  scenario: RoleplayScenario,
+  bank: SentenceBank,
+  state: SessionState,
+  now: number,
+): { state: SessionState; instruction: Instruction } {
+  const instruction = currentInstruction(scenario, bank, state);
+  const stamped =
+    instruction.do === "listen" ? { ...state, listeningSince: now } : state;
+  return { state: stamped, instruction };
+}
+
 /**
- * Move on from a tutor line that has finished playing.
+ * Move on from a line that has finished playing.
  *
  * Separate from answering, because these are different events: one is audio
  * ending, the other is a person speaking, and folding them together made it
@@ -216,13 +286,31 @@ export function afterSaying(
   state: SessionState,
   now: number,
 ): { state: SessionState; instruction: Instruction } {
+  const queued = state.queue[0];
+  if (queued) {
+    const rest = state.queue.slice(1);
+    const spoken: SessionState = {
+      ...state,
+      queue: rest,
+      history: remember(state.history, { who: "tutor", text: queued.text }),
+      finished: state.closing && rest.length === 0,
+    };
+    return listeningIfDue(scenario, bank, spoken, now);
+  }
+
   const node = scenario.nodes[state.nodeId];
   if (!node || !isTutorNode(node)) {
     return { state, instruction: currentInstruction(scenario, bank, state) };
   }
+  const said = bank[node.say];
+  const history = said
+    ? remember(state.history, { who: "tutor", text: said.text })
+    : state.history;
   if (node.next === null) {
-    const finished = { ...state, finished: true };
-    return { state: finished, instruction: { do: "finish" } };
+    return {
+      state: { ...state, history, finished: true },
+      instruction: { do: "finish" },
+    };
   }
   const next = scenario.nodes[node.next];
   const arriving = isLearnerNode(next!)
@@ -234,6 +322,7 @@ export function afterSaying(
     : state;
   const moved: SessionState = {
     ...arriving,
+    history,
     nodeId: node.next,
     listeningSince: next && isLearnerNode(next) ? now : null,
   };
@@ -243,7 +332,7 @@ export function afterSaying(
 export type SubmitResult = {
   state: SessionState;
   instruction: Instruction;
-  /** Whether the answer was accepted for this turn. */
+  /** Whether the script took the answer. A director turn is decided later. */
   matched: boolean;
   /** Whether the level moved as a result. Usually not worth showing. */
   difficultyChanged: boolean;
@@ -252,10 +341,11 @@ export type SubmitResult = {
 /**
  * Take what the learner said and move.
  *
- * A miss goes to the scripted recovery when the node has one, and wakes the
- * live tutor when it does not or when patience has run out. That is the whole
- * arrangement: the script handles what it can, cheaply, and a person is what
- * happens at the edges.
+ * The script takes what it can: a matched answer moves along the graph, and a
+ * turn with nothing but hesitation in it gets the scene's recorded "sorry?".
+ * Everything else — a real sentence the script did not expect, a question about
+ * something else, a change of subject, being stuck past the point where "sorry?"
+ * helps — is handed to the director.
  */
 export function submitSpeech(
   scenario: RoleplayScenario,
@@ -265,7 +355,7 @@ export function submitSpeech(
   now: number,
 ): SubmitResult {
   const node = scenario.nodes[state.nodeId];
-  if (!node || !isLearnerNode(node)) {
+  if (!node || !isLearnerNode(node) || state.pending || state.queue.length > 0) {
     return {
       state,
       instruction: currentInstruction(scenario, bank, state),
@@ -275,26 +365,30 @@ export function submitSpeech(
   }
 
   const settings = settingsForLevel(state.difficulty.level);
-  const hit = judge(node, heard, settings.matchStrictness, state.visited);
   const attempts = state.attempts + 1;
   const hesitationMs = state.listeningSince ? now - state.listeningSince : 0;
-  const outOfPatience = !hit && attempts >= settings.tutorPatienceAttempts;
-  const correcting = !hit && (!node.onMiss || outOfPatience);
-
-  const outcome: TurnOutcome = {
-    matched: Boolean(hit),
-    attempts,
-    usedHint: state.hintShown,
-    // Being corrected is the same struggle whether a person delivered it or a
-    // recording did; the dial should not care which was affordable.
-    wokeTutor: correcting,
-    hesitationMs,
-  };
-  const adjusted = applyTurn(state.difficulty, outcome);
+  const history = heard.trim()
+    ? remember(state.history, { who: "learner", text: heard.trim() })
+    : state.history;
+  // Off the script, a word that happens to match the step waiting at home is
+  // not an answer to it: "I love large dogs" is not a size. The director reads
+  // every turn until it brings the conversation back.
+  const hit =
+    state.mode === "script"
+      ? judge(node, heard, settings.matchStrictness, state.visited)
+      : null;
 
   if (hit) {
+    const adjusted = applyTurn(state.difficulty, {
+      matched: true,
+      attempts,
+      usedHint: state.hintShown,
+      wokeTutor: false,
+      hesitationMs,
+    });
     const moved: SessionState = {
       ...state,
+      history,
       nodeId: hit.go,
       difficulty: adjusted.state,
       attempts: 0,
@@ -312,132 +406,161 @@ export function submitSpeech(
     };
   }
 
-  const context = {
-    setting: scenario.setting,
-    tutorRole: scenario.tutorRole,
-    goal: node.goal,
-    heard,
-  };
-
-  if (correcting) {
-    // The node is not left: after the correction they answer the same question,
-    // and the attempt still counts, so a second miss is still a second miss.
-    const held: SessionState = {
+  const pardon =
+    state.mode === "script" &&
+    node.onMiss &&
+    isMumble(heard) &&
+    attempts < settings.tutorPatienceAttempts;
+  if (pardon) {
+    const adjusted = applyTurn(state.difficulty, {
+      matched: false,
+      attempts,
+      usedHint: state.hintShown,
+      wokeTutor: false,
+      hesitationMs,
+    });
+    const recovering: SessionState = {
       ...state,
+      history,
+      nodeId: node.onMiss!,
       difficulty: adjusted.state,
       attempts,
+      hintShown: settingsForLevel(adjusted.state.level).showHints,
       listeningSince: null,
     };
-    const written = node.correction ? bank[node.correction] : undefined;
     return {
-      state: held,
-      instruction: {
-        do: "correct",
-        ...(written
-          ? {
-              spoken: {
-                text: written.text,
-                translation: written.translation,
-                audioPath: sentenceAudioPath(
-                  written.text,
-                  scenario.voice,
-                  scenario.language,
-                ),
-              },
-            }
-          : {}),
-        context,
-      },
+      state: recovering,
+      instruction: currentInstruction(scenario, bank, recovering),
       matched: false,
       difficultyChanged: adjusted.changed,
     };
   }
 
-  const recovering: SessionState = {
+  const waiting: SessionState = {
     ...state,
-    nodeId: node.onMiss!,
-    difficulty: adjusted.state,
-    attempts,
-    hintShown: settingsForLevel(adjusted.state.level).showHints,
+    history,
     listeningSince: null,
+    pending: { heard: heard.trim(), attempts, hesitationMs },
   };
   return {
-    state: recovering,
-    instruction: currentInstruction(scenario, bank, recovering),
+    state: waiting,
+    instruction: currentInstruction(scenario, bank, waiting),
     matched: false,
-    difficultyChanged: adjusted.changed,
+    difficultyChanged: false,
   };
+}
+
+function withNote(translation: string | undefined, note: string): string | undefined {
+  if (!note) return translation || undefined;
+  return translation ? `${translation}  ·  ${note}` : note;
 }
 
 /**
- * The learner wants to ask back.
+ * Carry out what the director decided.
  *
- * The only door to a live session. A correction is one sentence and a recording
- * can deliver it; a question about the correction is a conversation, and that is
- * what a call is for. Making it explicit means nobody is charged for one by
- * missing a turn.
+ * The line is queued to be spoken — from its recording when it is a bank line,
+ * synthesised in the scene's voice when it was written now — and the scene moves
+ * to wherever the director sent it. The turn is scored here rather than when it
+ * was heard, because only now is it known whether it was a struggle: a correct
+ * answer nobody wrote down is not one, and should not pull the level down.
  */
-export function askTutor(
+export function applyDirection(
   scenario: RoleplayScenario,
+  bank: SentenceBank,
   state: SessionState,
-  heard: string,
-): Instruction {
-  const node = scenario.nodes[state.nodeId];
-  return {
-    do: "wakeTutor",
-    context: {
-      setting: scenario.setting,
-      tutorRole: scenario.tutorRole,
-      goal: node && isLearnerNode(node) ? node.goal : "",
-      heard,
-    },
+  direction: Direction,
+  now: number,
+): { state: SessionState; instruction: Instruction; difficultyChanged: boolean } {
+  const pending = state.pending ?? { heard: "", attempts: state.attempts, hesitationMs: 0 };
+
+  const said: QueuedLine | null =
+    "id" in direction.say
+      ? recorded(scenario, bank, direction.say.id)
+      : { text: direction.say.text, translation: direction.say.translation };
+  const queue: QueuedLine[] = [];
+  if (said) queue.push({ ...said, translation: withNote(said.translation, direction.note) });
+  const follow = direction.follow ? recorded(scenario, bank, direction.follow) : null;
+  if (follow) queue.push(follow);
+
+  const struggled = direction.assessment === "stuck";
+  const outcome: TurnOutcome = {
+    matched: !struggled,
+    attempts: struggled ? pending.attempts : 1,
+    usedHint: state.hintShown,
+    wokeTutor: struggled,
+    hesitationMs: pending.hesitationMs,
   };
+  const adjusted = applyTurn(state.difficulty, outcome);
+
+  let moved: SessionState = {
+    ...state,
+    queue,
+    pending: null,
+    difficulty: adjusted.state,
+    directedTurns: state.directedTurns + 1,
+    listeningSince: null,
+  };
+  if ("end" in direction.next) {
+    moved = { ...moved, closing: true };
+  } else if ("free" in direction.next) {
+    moved = { ...moved, mode: "free", freeTurns: state.freeTurns + 1 };
+  } else {
+    const stayed = direction.next.step === state.nodeId;
+    moved = {
+      ...moved,
+      mode: "script",
+      freeTurns: 0,
+      nodeId: direction.next.step,
+      attempts: stayed ? pending.attempts : 0,
+      hintShown: stayed ? state.hintShown : false,
+    };
+  }
+  // A director that answered with nothing sayable still has to leave the
+  // learner somewhere they can speak from.
+  if (queue.length === 0 && moved.closing) moved = { ...moved, finished: true };
+  const next = listeningIfDue(scenario, bank, moved, now);
+  return { ...next, difficultyChanged: adjusted.changed };
 }
 
-/** Carry on at the same question once the correction or the tutor is done. */
-export function afterTutor(
+/**
+ * The director could not be reached, or answered with nothing usable.
+ *
+ * The scene falls back on what it has recorded: the help written for this step,
+ * or its "sorry?", or — off the script — the question it is waiting to come
+ * back to. The learner hears the character carry on, only less cleverly.
+ */
+export function directionFailed(
   scenario: RoleplayScenario,
   bank: SentenceBank,
   state: SessionState,
   now: number,
 ): { state: SessionState; instruction: Instruction } {
-  const listening: SessionState = { ...state, listeningSince: now };
-  return {
-    state: listening,
-    instruction: currentInstruction(scenario, bank, listening),
+  const node = scenario.nodes[state.nodeId];
+  const base: SessionState = {
+    ...state,
+    pending: null,
+    listeningSince: null,
+    // The turn still happened, so a second miss is still a second miss.
+    attempts: state.pending?.attempts ?? state.attempts,
   };
-}
+  if (!node || !isLearnerNode(node)) return listeningIfDue(scenario, bank, base, now);
 
-/**
- * What to hand the live tutor when it is woken mid-scene.
- *
- * It has heard nothing: the scripted half of the conversation happened as audio
- * files, and the realtime session is being opened for the first time right now.
- * So everything it needs has to arrive in one message — where it is, who it is,
- * what the learner was trying to do, and what they actually said.
- *
- * `ask` is deliberately narrow. The tutor is being called for one stuck turn,
- * not taking over the scenario, and a tutor that starts a conversation here
- * leaves the learner somewhere the script cannot pick up again.
- */
-export function tutorHandover(
-  context: Extract<Instruction, { do: "wakeTutor" }>["context"],
-  languageName: string,
-): { scene: string; ask: string } {
-  return {
-    scene: [
-      `<scene>`,
-      `You are already in this conversation, playing the ${context.tutorRole}.`,
-      context.setting,
-      `The learner was trying to: ${context.goal}`,
-      `They just said: "${context.heard}"`,
-      `It did not fit, and they are stuck.`,
-      `</scene>`,
-    ].join("\n"),
-    ask:
-      `Help with this one turn, in ${languageName}, in a sentence or two. ` +
-      `Stay the ${context.tutorRole} — do not explain that you are a tutor or that this is practice. ` +
-      `Say what they could have said, then hand the turn straight back. ` +
-      `Do not read the tags aloud and do not start a new conversation.`,
-  };
+  if (state.mode === "free") {
+    const question = questionFor(scenario, node.id);
+    const line = question ? recorded(scenario, bank, question) : null;
+    const back: SessionState = {
+      ...base,
+      mode: "script",
+      freeTurns: 0,
+      queue: line ? [line] : [],
+    };
+    return listeningIfDue(scenario, bank, back, now);
+  }
+  const help = node.correction ? recorded(scenario, bank, node.correction) : null;
+  if (help) return listeningIfDue(scenario, bank, { ...base, queue: [help] }, now);
+  if (node.onMiss) {
+    const pardon: SessionState = { ...base, nodeId: node.onMiss };
+    return listeningIfDue(scenario, bank, pardon, now);
+  }
+  return listeningIfDue(scenario, bank, base, now);
 }

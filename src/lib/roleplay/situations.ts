@@ -33,6 +33,16 @@ export type SituationBrief = {
 
 export const SITUATIONS: SituationBrief[] = [
   {
+    id: "open-talk",
+    title: "Just talk",
+    tutorRole: "friend",
+    setting:
+      "A relaxed catch-up with a friendly acquaintance over coffee, with no errand to finish. The tutor is someone easy to talk to and curious about the learner's day, plans and interests.",
+    objective: "Keep a conversation going about anything: answer, ask back, and follow it where it goes.",
+    likelyTrouble:
+      "Answering in one word and leaving the other person to carry the whole conversation.",
+  },
+  {
     id: "cafe-order",
     title: "Ordering at a café",
     tutorRole: "barista",

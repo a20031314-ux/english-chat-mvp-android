@@ -46,6 +46,11 @@ export const MODEL_CALLS_PER_REQUEST = {
   // count that climbs towards the listen count means the scripts are missing
   // the trouble they were supposed to anticipate.
   roleplayCorrect: 1,
+  // The director: a turn the script could not take. What the watching tutor
+  // costs is this count, plus a tts for each line it wrote rather than picked
+  // from the recordings — so its ratio to roleplayListen is how much of the
+  // conversation the script is actually carrying.
+  roleplayTurn: 1,
 } as const;
 
 export type MeteredOp = keyof typeof MODEL_CALLS_PER_REQUEST;

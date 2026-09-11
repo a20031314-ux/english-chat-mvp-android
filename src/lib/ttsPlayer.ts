@@ -16,15 +16,15 @@ type StreamState = {
 const completeCache = new Map<string, Uint8Array>();
 const inflight = new Map<string, StreamState>();
 const activeSources = new Set<AudioBufferSourceNode>();
-const prefetchQueue: Array<{ key: string; spoken: string; lang: string }> = [];
+const prefetchQueue: Array<{ key: string; spoken: string; lang: string; voice?: string }> = [];
 
 let audioCtx: AudioContext | null = null;
 let playGen = 0;
 let unlocked = false;
 let activePrefetch = 0;
 
-function cacheKey(lang: string, spoken: string): string {
-  return `${lang}:${spoken}`;
+function cacheKey(lang: string, spoken: string, voice?: string): string {
+  return voice ? `${lang}:${voice}:${spoken}` : `${lang}:${spoken}`;
 }
 
 function notify(state: StreamState) {
@@ -143,8 +143,16 @@ function schedulePcm(
   return { nextStart: startAt + buffer.duration, source };
 }
 
-function ttsUrl(spoken: string, lang: string): { url: string; init: RequestInit } {
-  const params = new URLSearchParams({ text: spoken, lang });
+/**
+ * `voice` is a roleplay scene's own voice. Left out, the server speaks in the
+ * call's voice for the language, which is what everything else wants.
+ */
+function ttsUrl(
+  spoken: string,
+  lang: string,
+  voice?: string,
+): { url: string; init: RequestInit } {
+  const params = new URLSearchParams({ text: spoken, lang, ...(voice ? { voice } : {}) });
   const query = params.toString();
   if (query.length < GET_QUERY_LIMIT) {
     return { url: apiUrl(`/api/tts?${query}`), init: { method: "GET" } };
@@ -154,7 +162,7 @@ function ttsUrl(spoken: string, lang: string): { url: string; init: RequestInit 
     init: {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ text: spoken, lang }),
+      body: JSON.stringify({ text: spoken, lang, ...(voice ? { voice } : {}) }),
     },
   };
 }
@@ -180,7 +188,7 @@ function pumpPrefetch() {
     if (!job) break;
     if (completeCache.has(job.key) || inflight.has(job.key)) continue;
     activePrefetch += 1;
-    const state = ensureStream(job.key, job.spoken, job.lang);
+    const state = ensureStream(job.key, job.spoken, job.lang, job.voice);
     void whenStreamSettles(state)
       .catch(() => undefined)
       .finally(() => {
@@ -190,13 +198,18 @@ function pumpPrefetch() {
   }
 }
 
-function startNow(key: string, spoken: string, lang: string): StreamState {
+function startNow(key: string, spoken: string, lang: string, voice?: string): StreamState {
   const index = prefetchQueue.findIndex((job) => job.key === key);
   if (index >= 0) prefetchQueue.splice(index, 1);
-  return ensureStream(key, spoken, lang);
+  return ensureStream(key, spoken, lang, voice);
 }
 
-function ensureStream(key: string, spoken: string, lang: string): StreamState {
+function ensureStream(
+  key: string,
+  spoken: string,
+  lang: string,
+  voice?: string,
+): StreamState {
   const cached = completeCache.get(key);
   if (cached) {
     return {
@@ -219,7 +232,7 @@ function ensureStream(key: string, spoken: string, lang: string): StreamState {
 
   void (async () => {
     try {
-      const { url, init } = ttsUrl(spoken, lang);
+      const { url, init } = ttsUrl(spoken, lang, voice);
       const res = await fetch(url, init);
       if (!res.ok) {
         throw new Error(`cloud TTS ${res.status}`);
@@ -321,14 +334,14 @@ export function prefetchTts(text: string, lang: string) {
   pumpPrefetch();
 }
 
-export async function playTts(text: string, lang: string): Promise<void> {
+export async function playTts(text: string, lang: string, voice?: string): Promise<void> {
   const spoken = spokenFormForTts(text, lang);
   if (!spoken) return;
   stopTts();
   const gen = playGen;
   await unlockAudio();
   if (gen !== playGen) return;
-  const key = cacheKey(lang, spoken);
-  const state = startNow(key, spoken, lang);
+  const key = cacheKey(lang, spoken, voice);
+  const state = startNow(key, spoken, lang, voice);
   await playPcmStream(state, gen);
 }

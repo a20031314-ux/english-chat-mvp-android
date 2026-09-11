@@ -4,37 +4,38 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { usePremium } from "@/contexts/PremiumContext";
 import {
-  learningLanguageName,
   learningLanguageSpeechTag,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
 import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
-import { fetchCorrection, listenForTurn, type Recorder } from "@/lib/roleplay/listen";
+import { fetchDirection, listenForTurn, type Recorder } from "@/lib/roleplay/listen";
 import {
   afterSaying,
-  afterTutor,
-  askTutor,
+  applyDirection,
   currentInstruction,
+  directionFailed,
   startSession,
   submitSpeech,
-  tutorHandover,
   type Instruction,
   type SessionState,
 } from "@/lib/roleplay/session";
-import type { RoleplayScenario } from "@/lib/roleplay/script";
-import { playTts } from "@/lib/ttsPlayer";
+import { playTts, stopTts } from "@/lib/ttsPlayer";
 import type { UICopy } from "@/lib/copy";
 
 /**
- * Playing a scripted roleplay.
+ * Playing a roleplay.
  *
- * All the deciding happens in session.ts; this does the three things that
- * cannot be pure — play a file, record a turn, and put a live tutor on when the
- * script runs out. Every branch it takes is one the state machine asked for.
+ * All the deciding happens in session.ts; this does the things that cannot be
+ * pure — play a line, record a turn, and ask the director when the script
+ * cannot take one. Every branch it takes is one the state machine asked for.
+ *
+ * There is deliberately nothing here that looks like a correction or a way to
+ * summon help. When the script runs out the character simply answers, in the
+ * same voice and the same bubble, and any explicit teaching sits in the line
+ * under it. The learner is meant to feel one conversation carrying on.
  *
  * The transcript builds downward as it goes, so the learner can see what was
- * said rather than having to hold a conversation in their head. That is the
- * same reason the call has one.
+ * said rather than having to hold a conversation in their head.
  */
 
 type Spoken = { who: "tutor" | "learner"; text: string; translation?: string };
@@ -47,36 +48,22 @@ type Spoken = { who: "tutor" | "learner"; text: string; translation?: string };
 const STALLED_AUDIO_MS = 8000;
 
 /**
- * What the screen needs back from whoever owns the call.
- *
- * `message` is null when there is nothing to say here — the learner hung up
- * during connection, or a paywall has already been put in front of them and
- * saying it twice would be worse than saying it once.
+ * The same, for a line synthesised on the spot. It streams, so it starts before
+ * it has fully arrived, but the whole of it has to play before the turn passes.
  */
-export type CallAttempt = { ok: true } | { ok: false; message: string | null };
+const GENERATED_AUDIO_MS = 30000;
 
 export function RoleplayScreen({
   scenarioId,
   nativeLanguage,
   ui,
   onClose,
-  onWakeTutor,
 }: {
   scenarioId: string;
-  /** What the learner speaks, so a made correction can be explained to them. */
+  /** What the learner speaks, so the director's notes are written in it. */
   nativeLanguage: LearningLanguageCode;
   ui: UICopy;
   onClose: () => void;
-  /**
-   * Open a live call with this opening. Owned by the caller because a call is
-   * a thing there should only ever be one of, and this screen is not the only
-   * place one can start.
-   *
-   * It reports back, because a call can be refused — the trial is used up, the
-   * points ran out, the microphone was denied — and this screen has to know
-   * whether a tutor is actually coming before it takes the help away.
-   */
-  onWakeTutor: (opening: { scene: string; ask: string }) => Promise<CallAttempt>;
 }) {
   const { isPremium } = usePremium();
   const scenario = findScenario(scenarioId);
@@ -90,11 +77,9 @@ export function RoleplayScreen({
   // the start of the turn, and would still be holding that moment's state.
   const [settled, setSettled] = useState(0);
   const [thinking, setThinking] = useState(false);
-  // Kept here rather than in Correction: the outcome of asking for a tutor
-  // decides whether the correction stays on screen at all, which is this
-  // component's business.
-  const [calling, setCalling] = useState(false);
-  const [callError, setCallError] = useState<string | null>(null);
+  // The director is deciding what the character says. Shown as the character
+  // about to speak, not as the app working.
+  const [directing, setDirecting] = useState(false);
   const recorderRef = useRef<Recorder | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
@@ -118,9 +103,8 @@ export function RoleplayScreen({
       ...current,
       { who: "tutor", text: instruction.text, translation: instruction.translation },
     ]);
-    const audio = new Audio(instruction.audioPath);
-    audioRef.current = audio;
     let advanced = false;
+    let watchdog = 0;
     const advance = () => {
       if (cancelled || advanced) return;
       advanced = true;
@@ -129,6 +113,25 @@ export function RoleplayScreen({
       setState(moved.state);
       setInstruction(moved.instruction);
     };
+
+    if (!instruction.audioPath) {
+      // Written by the director just now, so there is no file: it is spoken in
+      // the scene's own voice, which is what keeps it the same person.
+      watchdog = window.setTimeout(advance, GENERATED_AUDIO_MS);
+      void playTts(
+        instruction.text,
+        learningLanguageSpeechTag(scenario.language),
+        instruction.voice,
+      ).then(advance, advance);
+      return () => {
+        cancelled = true;
+        window.clearTimeout(watchdog);
+        stopTts();
+      };
+    }
+
+    const audio = new Audio(instruction.audioPath);
+    audioRef.current = audio;
     /**
      * Audio that never finishes must not take the scenario with it.
      *
@@ -137,7 +140,7 @@ export function RoleplayScreen({
      * no way forward. The text has already been shown by this point, so going
      * on without the voice is a worse lesson but not a dead one.
      */
-    let watchdog = window.setTimeout(advance, STALLED_AUDIO_MS);
+    watchdog = window.setTimeout(advance, STALLED_AUDIO_MS);
     audio.addEventListener(
       "loadedmetadata",
       () => {
@@ -155,6 +158,36 @@ export function RoleplayScreen({
       cancelled = true;
       window.clearTimeout(watchdog);
       audio.pause();
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [instruction]);
+
+  /**
+   * The script could not take the turn: the director decides the next line.
+   *
+   * If it cannot be reached the scene falls back on what it has recorded, so a
+   * failed request is heard as the character carrying on, not as an error.
+   */
+  useEffect(() => {
+    if (!scenario || !state || instruction?.do !== "direct") return;
+    let cancelled = false;
+    setDirecting(true);
+    void fetchDirection({
+      request: instruction.request,
+      nativeLanguage,
+      isPremium,
+    }).then((direction) => {
+      if (cancelled) return;
+      setDirecting(false);
+      const moved = direction
+        ? applyDirection(scenario, bank, state, direction, Date.now())
+        : directionFailed(scenario, bank, state, Date.now());
+      setState(moved.state);
+      setInstruction(moved.instruction);
+    });
+    return () => {
+      cancelled = true;
+      setDirecting(false);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [instruction]);
@@ -232,45 +265,6 @@ export function RoleplayScreen({
 
   if (!scenario) return null;
 
-  const correcting = instruction?.do === "correct" ? instruction : null;
-
-  /** Deliver the correction, then put them back at the same question. */
-  const afterCorrection = () => {
-    if (!state) return;
-    const resumed = afterTutor(scenario, bank, state, Date.now());
-    setCallError(null);
-    setState(resumed.state);
-    setInstruction(resumed.instruction);
-  };
-
-  /**
-   * The only door to a live session, and it is a button.
-   *
-   * A correction is one sentence and a recording delivers it; a question about
-   * the correction is a conversation, which is what a call is for. Keeping them
-   * apart means nobody is charged for a call by missing a turn.
-   */
-  const callTutor = async () => {
-    if (!state || !correcting || calling) return;
-    const asked = askTutor(scenario, state, correcting.context.heard);
-    if (asked.do !== "wakeTutor") return;
-    setCalling(true);
-    setCallError(null);
-    const attempt = await onWakeTutor(
-      tutorHandover(asked.context, learningLanguageName(scenario.language)),
-    );
-    setCalling(false);
-    // The help is only taken away once a tutor is actually coming. Clearing it
-    // first meant a refused call left nothing at all on screen: the correction
-    // vanished and no reason arrived in its place, which reads as the button
-    // being broken rather than as the allowance being spent.
-    if (attempt.ok) {
-      afterCorrection();
-      return;
-    }
-    if (attempt.message) setCallError(attempt.message);
-  };
-
   return (
     <FullScreenLayer>
       <header className="flex shrink-0 items-center justify-between border-b border-white/10 px-4 py-3">
@@ -307,12 +301,21 @@ export function RoleplayScreen({
             </div>
           </li>
         ))}
+        {directing ? (
+          <li className="mb-2 flex justify-start">
+            <div className="rounded-2xl bg-[#141414] px-3 py-2 text-[14px] text-neutral-500">
+              …
+            </div>
+          </li>
+        ) : null}
       </ol>
 
       <footer className="shrink-0 border-t border-white/10 p-3 pb-[env(safe-area-inset-bottom)]">
         {instruction?.do === "listen" ? (
           <div className="flex flex-col gap-2">
-            <p className="text-[13px] text-neutral-300">{instruction.goal}</p>
+            {instruction.goal ? (
+              <p className="text-[13px] text-neutral-300">{instruction.goal}</p>
+            ) : null}
             {instruction.hint ? (
               <p className="text-[12px] text-neutral-500">{instruction.hint}</p>
             ) : null}
@@ -334,21 +337,6 @@ export function RoleplayScreen({
           </div>
         ) : null}
 
-        {correcting ? (
-          <Correction
-            spoken={correcting.spoken}
-            context={correcting.context}
-            scenario={scenario}
-            nativeLanguage={nativeLanguage}
-            isPremium={isPremium}
-            onRetry={afterCorrection}
-            onCall={() => void callTutor()}
-            calling={calling}
-            callError={callError}
-            ui={ui}
-          />
-        ) : null}
-
         {instruction?.do === "finish" ? (
           <button
             type="button"
@@ -360,121 +348,5 @@ export function RoleplayScreen({
         ) : null}
       </footer>
     </FullScreenLayer>
-  );
-}
-
-/**
- * What to do when the script cannot take the answer.
- *
- * `spoken` is a line the scenario wrote for this turn, generated with every
- * other line and free to play. When it is missing the trouble here was not
- * predictable, and a correction has to be made — still a fraction of opening a
- * live session for what is usually one sentence of advice.
- */
-function Correction({
-  spoken,
-  context,
-  scenario,
-  nativeLanguage,
-  isPremium,
-  onRetry,
-  onCall,
-  calling,
-  callError,
-  ui,
-}: {
-  spoken?: { text: string; translation?: string; audioPath: string };
-  context: { setting: string; tutorRole: string; goal: string; heard: string };
-  scenario: RoleplayScenario;
-  nativeLanguage: LearningLanguageCode;
-  isPremium: boolean;
-  onRetry: () => void;
-  onCall: () => void;
-  /** A tutor has been asked for and has not arrived or been refused yet. */
-  calling: boolean;
-  /** Why the last ask was refused, when it is worth saying so here. */
-  callError: string | null;
-  ui: UICopy;
-}) {
-  const [made, setMade] = useState<{ text: string; translation: string } | null>(
-    null,
-  );
-  const [failed, setFailed] = useState(false);
-
-  // A written correction plays from a file. Anything else has to be made, and
-  // then read aloud through the same voice, so the tutor stays one person.
-  useEffect(() => {
-    if (spoken) {
-      const audio = new Audio(spoken.audioPath);
-      void audio.play().catch(() => undefined);
-      return () => audio.pause();
-    }
-    let cancelled = false;
-    void (async () => {
-      const correction = await fetchCorrection({
-        context,
-        targetLanguage: scenario.language,
-        nativeLanguage,
-        isPremium,
-      });
-      if (cancelled) return;
-      if (!correction) {
-        setFailed(true);
-        return;
-      }
-      setMade(correction);
-      void playTts(
-        correction.text,
-        learningLanguageSpeechTag(scenario.language),
-      ).catch(() => undefined);
-    })();
-    return () => {
-      cancelled = true;
-    };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [spoken]);
-
-  const shown = spoken ?? made;
-
-  return (
-    <div className="flex flex-col gap-2">
-      {shown ? (
-        <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-2">
-          <p className="text-[14px] text-neutral-100">{shown.text}</p>
-          {shown.translation ? (
-            <p className="mt-1 text-[12px] text-neutral-400">{shown.translation}</p>
-          ) : null}
-        </div>
-      ) : (
-        // Not an error the learner caused, and not a call that failed: the
-        // scenario simply had nothing written for this and the making of one is
-        // still in flight, or did not work.
-        <p className="text-[13px] text-neutral-500">{failed ? ui.roleplayNoHelp : "…"}</p>
-      )}
-      <div className="flex gap-2">
-        <button
-          type="button"
-          onClick={onRetry}
-          aria-label="retry"
-          className="flex-1 rounded-xl bg-white/15 px-4 py-3 text-sm text-neutral-100"
-        >
-          ↻
-        </button>
-        {/* Asking back is the only thing that opens a call, and it is chosen. */}
-        <button
-          type="button"
-          onClick={onCall}
-          disabled={calling}
-          className="rounded-xl border border-white/15 px-4 py-3 text-sm text-neutral-300 disabled:opacity-50"
-        >
-          {calling ? "…" : ui.chatCall}
-        </button>
-      </div>
-      {/* A refusal is not a failure of the scenario, so it is said here and the
-          correction stays put — they can read it again, or try the turn. */}
-      {callError ? (
-        <p className="text-[12px] text-[#e2a0a0]">{callError}</p>
-      ) : null}
-    </div>
   );
 }

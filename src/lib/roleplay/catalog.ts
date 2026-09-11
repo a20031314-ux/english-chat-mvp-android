@@ -12,6 +12,16 @@ import type { RoleplayScenario, SentenceBank } from "./script.ts";
  */
 export const SENTENCES: Record<string, SentenceBank> = {
   en: {
+    // --- Just talk. No errand, so only the opening and the goodbye are
+    // written; everything between is the director's.
+    "open.hi": {
+      text: "Hey! Good to see you. How's your day going?",
+      translation: "안녕! 반가워. 오늘 하루 어때?",
+    },
+    "open.bye": {
+      text: "Alright — it was really nice talking to you. See you next time!",
+      translation: "좋아, 얘기 즐거웠어. 다음에 또 봐!",
+    },
     "cafe.greet": {
       text: "Hi there! What can I get you?",
       translation: "안녕하세요! 뭐 드릴까요?",
@@ -339,6 +349,42 @@ export const SENTENCES: Record<string, SentenceBank> = {
  * covers what it can and the tutor handles the edges.
  */
 export const SCENARIOS: RoleplayScenario[] = [
+  // First, because it is the one that asks nothing of the learner up front: no
+  // topic to pick, just a person to talk to.
+  {
+    id: "open-talk",
+    language: "en",
+    voice: "marin",
+    title: "Just talk",
+    setting:
+      "A relaxed catch-up with a friendly acquaintance over coffee, with no errand to finish. The tutor is someone easy to talk to and curious about the learner's day, plans and interests; the learner can bring up anything at all.",
+    tutorRole: "friend",
+    openEnded: true,
+    start: "hi",
+    nodes: {
+      hi: { type: "tutor", id: "hi", say: "open.hi", next: "talk" },
+      talk: {
+        type: "learner",
+        id: "talk",
+        goal: "편하게 아무 얘기나 해 보세요.",
+        // Only the way out is scripted. Everything else the learner says is
+        // the conversation, and goes to the director.
+        expect: [
+          {
+            match: [
+              "goodbye",
+              "i have to go",
+              "i gotta go",
+              "talk to you later",
+              "see you later",
+            ],
+            go: "bye",
+          },
+        ],
+      },
+      bye: { type: "tutor", id: "bye", say: "open.bye", next: null },
+    },
+  },
   {
     id: "cafe-order",
     language: "en",

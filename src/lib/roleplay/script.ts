@@ -6,7 +6,7 @@ import type { LearningLanguageCode } from "../learningLanguages.ts";
  * A roleplay is the cheap half of talking: the tutor's lines are known before
  * anyone opens the app, so their audio is made once and served to everyone from
  * a file. What costs anything at run time is listening to the learner, and the
- * live tutor on the occasions the script cannot answer.
+ * director (director.ts) on the turns the script cannot take.
  *
  * Two decisions shape everything here.
  *
@@ -101,19 +101,22 @@ export type RoleplayScenario = {
   /**
    * Who this scene sounds like.
    *
-   * Every scenario used to be read in the one voice the live call speaks in, so
-   * that a tutor summoned mid-scene would not change person. That bought a rare
-   * moment — the call is behind a button, by design, and most learners never
-   * open one — at the price of a constant one: a barista, a taxi driver and a
-   * hotel receptionist all sounding like the same employee.
-   *
-   * The trade is the other way round now. Each scene gets its own voice, and
-   * the summoned tutor is allowed to sound different, because the learner
-   * pressed a button to bring it and already knows something arrived.
+   * Recorded lines are made in it, and a line the director writes on the spot
+   * is synthesised in it too, so the barista stays the barista whether or not
+   * the line was written in advance. That is what lets the tutor step in
+   * without the learner hearing anyone new arrive.
    *
    * Must be a voice gpt-4o-mini-tts accepts; a test holds that.
    */
   voice: string;
+  /**
+   * The conversation itself is the point, and there is no script to return to.
+   *
+   * Set on the scene a learner opens without choosing a topic. Its one learner
+   * step is "keep talking", every turn goes to the director, and the director
+   * is told to keep the conversation going rather than to steer it home.
+   */
+  openEnded?: boolean;
   /**
    * Deliberately no difficulty here. A graph is walked differently by different
    * people, so a label on the scenario describes neither of them. Difficulty

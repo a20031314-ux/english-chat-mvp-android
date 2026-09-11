@@ -4,6 +4,7 @@ import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { realtimeCallVoice } from "@/lib/realtimeCallSession";
+import { isTtsVoice } from "@/lib/roleplay/voices";
 import {
   spokenFormForTts,
   speechLangPrefix,
@@ -26,7 +27,12 @@ function streamHeaders(request: NextRequest, lang: string): Record<string, strin
   };
 }
 
-async function synthesize(request: NextRequest, rawText: string, rawLang: string) {
+async function synthesize(
+  request: NextRequest,
+  rawText: string,
+  rawLang: string,
+  rawVoice?: unknown,
+) {
   const client = getOpenAIClient();
   if (!client) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
@@ -53,7 +59,14 @@ async function synthesize(request: NextRequest, rawText: string, rawLang: string
       // "nova" here, "ash" or "cedar" on the call — which is fine while the two
       // never meet, and wrong the moment a spoken line and a live tutor belong
       // to the same conversation: the tutor changes person mid-sentence.
-      voice: realtimeCallVoice(coerceLanguageCode(speechLangPrefix(lang))),
+      //
+      // A roleplay scene passes its own voice, so a line the director wrote on
+      // the spot comes out of the same mouth as the recorded ones around it.
+      // Anything else — including every build that predates the parameter —
+      // gets the call's voice exactly as before.
+      voice: isTtsVoice(rawVoice)
+        ? rawVoice
+        : realtimeCallVoice(coerceLanguageCode(speechLangPrefix(lang))),
       input: spoken,
       response_format: "pcm",
       ...(useInstructions
@@ -88,11 +101,11 @@ export async function OPTIONS(request: NextRequest) {
 export async function GET(request: NextRequest) {
   const text = request.nextUrl.searchParams.get("text") ?? "";
   const lang = request.nextUrl.searchParams.get("lang") ?? "en-US";
-  return synthesize(request, text, lang);
+  return synthesize(request, text, lang, request.nextUrl.searchParams.get("voice"));
 }
 
 export async function POST(request: NextRequest) {
-  let body: { text?: unknown; lang?: unknown };
+  let body: { text?: unknown; lang?: unknown; voice?: unknown };
   try {
     body = await request.json();
   } catch {
@@ -101,5 +114,5 @@ export async function POST(request: NextRequest) {
 
   const text = typeof body.text === "string" ? body.text : "";
   const lang = typeof body.lang === "string" ? body.lang : "en-US";
-  return synthesize(request, text, lang);
+  return synthesize(request, text, lang, body.voice);
 }

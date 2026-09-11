@@ -13,33 +13,21 @@ import {
   unreachableNodes,
 } from "./script.ts";
 import { SITUATIONS, findSituation } from "./situations.ts";
-
-/**
- * Voices gpt-4o-mini-tts accepts, from OpenAI's text-to-speech guide.
- *
- * Held here because a scripted line and the tutor that interrupts it have to be
- * the same person: the script is synthesised through the TTS model and the live
- * tutor speaks through the realtime one, so a voice only one of them supports
- * would change who is talking mid-conversation.
- */
-const TTS_VOICES = [
-  "alloy", "ash", "ballad", "coral", "echo", "fable",
-  "nova", "onyx", "sage", "shimmer", "verse", "marin", "cedar",
-];
+import { TTS_VOICES } from "./voices.ts";
 
 test("every scene is read in a voice the speech model has", () => {
   for (const scenario of SCENARIOS) {
     assert.ok(
-      TTS_VOICES.includes(scenario.voice),
+      (TTS_VOICES as readonly string[]).includes(scenario.voice),
       `${scenario.id} is written for "${scenario.voice}", which gpt-4o-mini-tts cannot speak`,
     );
   }
-  // Generated corrections and the chat's spoken lines still go out through
-  // /api/tts, which speaks in the call's voice for the language.
+  // The chat's spoken lines still go out through /api/tts in the call's voice
+  // for the language; only a roleplay passes a voice of its own.
   for (const language of ["en", "ko", "ja", "vi"] as const) {
     const voice = realtimeCallVoice(language);
     assert.ok(
-      TTS_VOICES.includes(voice),
+      (TTS_VOICES as readonly string[]).includes(voice),
       `${language} calls use "${voice}", which gpt-4o-mini-tts cannot speak`,
     );
   }

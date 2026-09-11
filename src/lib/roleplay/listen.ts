@@ -1,5 +1,10 @@
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
+import {
+  HISTORY_LINES,
+  type Direction,
+  type DirectorRequest,
+} from "@/lib/roleplay/director";
 
 /**
  * Recording a learner's turn and getting it back as text.
@@ -278,48 +283,49 @@ export async function listenForTurn(input: {
 }
 
 /**
- * Ask for a correction the scenario did not have written.
+ * Ask the director what the character says to a turn the script could not take.
  *
- * The rung between a recorded line and a call: one sentence, made now because
- * nobody anticipated this particular miss. Null when it could not be made, so
- * the caller can offer a retry rather than showing a failure the learner had
- * nothing to do with.
+ * Null when it could not be reached or answered with nothing usable, so the
+ * caller can fall back on the scene's recorded lines rather than showing a
+ * failure the learner had nothing to do with.
  */
-export async function fetchCorrection(input: {
-  context: { setting: string; tutorRole: string; goal: string; heard: string };
-  targetLanguage: string;
+export async function fetchDirection(input: {
+  request: Omit<DirectorRequest, "targetLanguage" | "nativeLanguage">;
   nativeLanguage: string;
   isPremium: boolean;
-}): Promise<{ text: string; translation: string } | null> {
+}): Promise<Direction | null> {
   try {
-    const response = await fetch(apiUrl("/api/roleplay/correct"), {
+    const response = await fetch(apiUrl("/api/roleplay/turn"), {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         ...entitlementHeaders(input.isPremium),
       },
       body: JSON.stringify({
-        ...input.context,
-        targetLanguage: input.targetLanguage,
-        interfaceLanguage: input.nativeLanguage,
+        ...input.request,
+        // The director reads only the last few lines; the rest would be bytes
+        // for nothing on every turn.
+        history: input.request.history.slice(-HISTORY_LINES),
+        nativeLanguage: input.nativeLanguage,
       }),
     });
     if (!response.ok) {
-      console.error("[roleplay] correction failed with", response.status);
+      console.error("[roleplay] direction failed with", response.status);
       return null;
     }
-    const body = (await response.json()) as {
-      text?: unknown;
-      translation?: unknown;
-    };
-    if (typeof body.text !== "string" || !body.text.trim()) return null;
+    const body = (await response.json()) as Partial<Direction>;
+    // The server already held the answer to the scene; this only makes sure
+    // it has the shape the session expects before it is acted on.
+    if (!body.say || !body.next || !body.assessment) return null;
     return {
-      text: body.text.trim(),
-      translation:
-        typeof body.translation === "string" ? body.translation.trim() : "",
+      assessment: body.assessment,
+      say: body.say,
+      note: typeof body.note === "string" ? body.note : "",
+      next: body.next,
+      ...(typeof body.follow === "string" ? { follow: body.follow } : {}),
     };
   } catch (error) {
-    console.error("[roleplay] correction threw", error);
+    console.error("[roleplay] direction threw", error);
     return null;
   }
 }

@@ -2,16 +2,17 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { findScenario, sentencesFor } from "./catalog.ts";
 import { MIN_LEVEL } from "./difficulty.ts";
+import type { Direction } from "./director.ts";
 import {
   afterSaying,
-  afterTutor,
+  applyDirection,
   currentInstruction,
+  directionFailed,
+  isMumble,
   judge,
   phraseScore,
   startSession,
-  askTutor,
   submitSpeech,
-  tutorHandover,
   type SessionState,
 } from "./session.ts";
 import { isLearnerNode } from "./script.ts";
@@ -46,7 +47,7 @@ test("the scenario opens by speaking, not by listening", () => {
   const state = startSession(scenario);
   const instruction = currentInstruction(scenario, bank, state);
   assert.equal(instruction.do, "say");
-  assert.match(instruction.do === "say" ? instruction.audioPath : "", /\.mp3$/);
+  assert.match(instruction.do === "say" ? instruction.audioPath ?? "" : "", /\.mp3$/);
 });
 
 test("a good answer walks the scenario forward", () => {
@@ -72,8 +73,8 @@ test("a branch answers the question and comes back to it", () => {
   assert.equal(back.instruction.do, "listen");
 });
 
-test("an unrecognised answer takes the scripted recovery, not a tutor", () => {
-  // Waking a live tutor for a mumble is paying call rates for "sorry?".
+test("a mumble takes the scripted recovery, not the director", () => {
+  // Asking a model what to say to "mmm" buys nothing a recorded "sorry?" does not.
   const state = runToListen(startSession(scenario));
   const missed = submitSpeech(scenario, bank, state, "mmm er", 1000);
   assert.equal(missed.matched, false);
@@ -81,45 +82,181 @@ test("an unrecognised answer takes the scripted recovery, not a tutor", () => {
   assert.equal(missed.state.nodeId, "pardon-order");
 });
 
-test("a node with no recovery plays its written correction, not a call", () => {
+/** Walk the café to "for here or to go?", which has no scripted "sorry?". */
+function atHereOrToGo(): SessionState {
   let state = runToListen(startSession(scenario));
   state = submitSpeech(scenario, bank, state, "Can I get a latte", 1000).state;
   state = afterSaying(scenario, bank, state, 1100).state; // size
   state = submitSpeech(scenario, bank, state, "small", 1200).state;
   state = afterSaying(scenario, bank, state, 1300).state; // here-or-to-go
+  assert.equal(state.nodeId, "here-answer");
+  return state;
+}
 
-  const stuck = submitSpeech(scenario, bank, state, "what do you mean", 2000);
-  assert.equal(stuck.instruction.do, "correct");
-  if (stuck.instruction.do !== "correct") return;
-  // Written in advance, so playing it costs nothing where a live session would
-  // cost about fifty times a judgement.
-  assert.ok(stuck.instruction.spoken, "this turn's trouble was predictable");
-  // Identified by which sentence was reached, not by a phrase inside it. The
-  // corrections are written in character now — the barista asks the question
-  // again more simply rather than explaining English — so pinning this to any
-  // particular wording would break every time one is reworded.
-  assert.equal(stuck.instruction.spoken.text, bank["cafe.fix-here"]!.text);
-  assert.match(stuck.instruction.spoken.audioPath, /\.mp3$/);
-  // The context rides along for the tutor, if the learner asks back.
-  assert.match(stuck.instruction.context.setting, /caf/i);
-  assert.equal(stuck.instruction.context.heard, "what do you mean");
+function direction(partial: Partial<Direction> & Pick<Direction, "next">): Direction {
+  return {
+    assessment: "on_track",
+    say: { text: "Sure thing.", translation: "그럼요." },
+    note: "",
+    ...partial,
+  };
+}
+
+test("a real sentence the script did not expect goes to the director", () => {
+  // Not to a correction panel and not to a call: the character answers it.
+  const state = atHereOrToGo();
+  const turn = submitSpeech(scenario, bank, state, "what do you mean", 2000);
+  assert.equal(turn.matched, false);
+  assert.equal(turn.instruction.do, "direct");
+  if (turn.instruction.do !== "direct") return;
+  assert.equal(turn.instruction.request.heard, "what do you mean");
+  assert.equal(turn.instruction.request.nodeId, "here-answer");
+  assert.equal(turn.state.nodeId, "here-answer", "the question should still stand");
+  const history = turn.instruction.request.history;
+  assert.equal(history[history.length - 1]?.text, "what do you mean");
 });
 
-test("a correction leaves the learner at the same question, not past it", () => {
-  let state = runToListen(startSession(scenario));
-  state = submitSpeech(scenario, bank, state, "Can I get a latte", 1000).state;
-  state = afterSaying(scenario, bank, state, 1100).state;
-  state = submitSpeech(scenario, bank, state, "small", 1200).state;
-  state = afterSaying(scenario, bank, state, 1300).state;
-  const before = state.nodeId;
+test("a written line the director picks is played from its recording", () => {
+  const waiting = submitSpeech(scenario, bank, atHereOrToGo(), "what?", 2000).state;
+  const moved = applyDirection(
+    scenario,
+    bank,
+    waiting,
+    direction({
+      assessment: "stuck",
+      say: { id: "cafe.fix-here" },
+      note: "For here / To go",
+      next: { step: "here-answer" },
+    }),
+    3000,
+  );
+  assert.equal(moved.instruction.do, "say");
+  if (moved.instruction.do !== "say") return;
+  assert.equal(moved.instruction.text, bank["cafe.fix-here"]!.text);
+  assert.match(moved.instruction.audioPath ?? "", /\.mp3$/);
+  assert.match(
+    moved.instruction.translation ?? "",
+    /For here \/ To go$/,
+    "the tip rides under the line",
+  );
+  const heard = afterSaying(scenario, bank, moved.state, 4000);
+  assert.equal(heard.instruction.do, "listen");
+  assert.equal(heard.state.listeningSince, 4000);
+  assert.equal(heard.state.attempts, 1, "a struggle on the same step still counts");
+});
 
-  const stuck = submitSpeech(scenario, bank, state, "no idea", 2000);
-  assert.equal(stuck.instruction.do, "correct");
-  assert.equal(stuck.state.nodeId, before, "the question should still stand");
+test("a line the director wrote is spoken in the scene's own voice", () => {
+  const waiting = submitSpeech(scenario, bank, atHereOrToGo(), "is it cold outside", 2000).state;
+  const moved = applyDirection(
+    scenario,
+    bank,
+    waiting,
+    direction({
+      assessment: "topic_change",
+      say: { text: "Freezing! Anyway — for here or to go?", translation: "추워요!" },
+      next: { step: "here-answer" },
+    }),
+    3000,
+  );
+  assert.equal(moved.instruction.do, "say");
+  if (moved.instruction.do !== "say") return;
+  assert.equal(moved.instruction.audioPath, undefined, "nothing recorded it");
+  assert.equal(moved.instruction.voice, scenario.voice);
+});
 
-  const resumed = afterTutor(scenario, bank, stuck.state, 3000);
-  assert.equal(resumed.instruction.do, "listen");
-  assert.equal(resumed.state.listeningSince, 3000);
+test("off the script, every turn goes to the director until it brings them back", () => {
+  const waiting = submitSpeech(scenario, bank, atHereOrToGo(), "do you like working here", 2000).state;
+  let state = applyDirection(
+    scenario,
+    bank,
+    waiting,
+    direction({ assessment: "off_script", next: { free: true } }),
+    3000,
+  ).state;
+  state = afterSaying(scenario, bank, state, 3500).state;
+  assert.equal(state.mode, "free");
+  const listen = currentInstruction(scenario, bank, state);
+  assert.equal(listen.do === "listen" ? listen.goal : "x", "", "no task while off the script");
+
+  // "to go" would match the step waiting at home, but off the script it is
+  // the director's to read, not the graph's.
+  const turn = submitSpeech(scenario, bank, state, "I love to go hiking", 4000);
+  assert.equal(turn.instruction.do, "direct");
+  if (turn.instruction.do !== "direct") return;
+  assert.equal(turn.instruction.request.mode, "free");
+  assert.equal(turn.instruction.request.freeTurns, 1);
+
+  const back = applyDirection(
+    scenario,
+    bank,
+    turn.state,
+    direction({ say: { id: "cafe.here-or-to-go" }, next: { step: "here-answer" } }),
+    5000,
+  );
+  assert.equal(back.state.mode, "script");
+  assert.equal(back.state.freeTurns, 0);
+});
+
+test("the director can move the scene on when the answer was right", () => {
+  // Fine English the script did not write down.
+  const waiting = submitSpeech(scenario, bank, atHereOrToGo(), "I will drink it inside", 2000).state;
+  const moved = applyDirection(
+    scenario,
+    bank,
+    waiting,
+    direction({ say: { id: "cafe.total" }, next: { step: "payment" } }),
+    3000,
+  );
+  assert.equal(moved.state.nodeId, "payment");
+  assert.equal(moved.state.attempts, 0);
+  const after = afterSaying(scenario, bank, moved.state, 4000);
+  assert.equal(after.instruction.do, "listen");
+});
+
+test("an answer the director accepts does not pull the level down", () => {
+  let state = atHereOrToGo();
+  const before = state.difficulty.level;
+  for (let i = 0; i < 3; i += 1) {
+    state = submitSpeech(scenario, bank, state, "I will drink it inside", 2000).state;
+    state = afterSaying(
+      scenario,
+      bank,
+      applyDirection(scenario, bank, state, direction({ next: { step: "here-answer" } }), 2100)
+        .state,
+      2200,
+    ).state;
+  }
+  assert.ok(state.difficulty.level >= before);
+});
+
+test("the director closing the scene finishes it after the line", () => {
+  const waiting = submitSpeech(scenario, bank, atHereOrToGo(), "sorry I have to leave", 2000).state;
+  const moved = applyDirection(
+    scenario,
+    bank,
+    waiting,
+    direction({ assessment: "closing", say: { id: "cafe.closing" }, next: { end: true } }),
+    3000,
+  );
+  assert.equal(moved.instruction.do, "say");
+  const done = afterSaying(scenario, bank, moved.state, 4000);
+  assert.equal(done.instruction.do, "finish");
+});
+
+test("an unreachable director is heard as the scene's recorded help", () => {
+  const waiting = submitSpeech(scenario, bank, atHereOrToGo(), "what do you mean", 2000).state;
+  const fallen = directionFailed(scenario, bank, waiting, 3000);
+  assert.equal(fallen.instruction.do, "say");
+  if (fallen.instruction.do !== "say") return;
+  assert.equal(fallen.instruction.text, bank["cafe.fix-here"]!.text);
+  assert.equal(fallen.state.pending, null);
+});
+
+test("hesitation alone is a mumble, words are not", () => {
+  assert.equal(isMumble("mmm er"), true);
+  assert.equal(isMumble("Um... uh"), true);
+  assert.equal(isMumble(""), true);
+  assert.equal(isMumble("um to go"), false);
 });
 
 test("a hint is held back until they have missed once", () => {
@@ -142,8 +279,8 @@ test("a retry is the same question, so attempts keep counting", () => {
   assert.equal(back.state.attempts, 1, "the first miss should still count");
 
   const second = submitSpeech(scenario, bank, back.state, "uhh", 2000);
-  // Patience has run out, so this one is corrected rather than asked again.
-  assert.equal(second.instruction.do, "correct");
+  // Patience has run out, so the director helps rather than "sorry?" again.
+  assert.equal(second.instruction.do, "direct");
 });
 
 test("struggling pulls the level down over the course of a scenario", () => {
@@ -152,8 +289,15 @@ test("struggling pulls the level down over the course of a scenario", () => {
   const first = submitSpeech(scenario, bank, state, "mmm", 1000);
   state = afterSaying(scenario, bank, first.state, 1500).state;
   const second = submitSpeech(scenario, bank, state, "uhh", 9000);
+  const helped = applyDirection(
+    scenario,
+    bank,
+    second.state,
+    direction({ assessment: "stuck", next: { step: "order" } }),
+    9500,
+  );
   assert.ok(
-    second.state.difficulty.level < before,
+    helped.state.difficulty.level < before,
     "two struggles in a row should have moved the dial",
   );
 });
@@ -192,51 +336,6 @@ test("the gentlest level is more forgiving than the strictest", () => {
   assert.ok(easy.difficulty.level < hard.difficulty.level);
 });
 
-test("the handover tells the tutor everything, because it has heard nothing", () => {
-  // The scripted half happened as audio files; the realtime session opens for
-  // the first time at this moment, and only because the learner asked back.
-  let state = runToListen(startSession(scenario));
-  state = submitSpeech(scenario, bank, state, "Can I get a latte", 1000).state;
-  state = afterSaying(scenario, bank, state, 1100).state;
-  state = submitSpeech(scenario, bank, state, "small", 1200).state;
-  state = afterSaying(scenario, bank, state, 1300).state;
-
-  const asked = askTutor(scenario, state, "why is 'here' wrong?");
-  assert.equal(asked.do, "wakeTutor");
-  if (asked.do !== "wakeTutor") return;
-
-  const { scene } = tutorHandover(asked.context, "English");
-  assert.match(scene, /barista/, "it should know who it is");
-  assert.match(scene, /caf/i, "it should know where it is");
-  assert.match(scene, /why is 'here' wrong\?/, "and what was asked");
-  assert.ok(scene.includes(asked.context.goal), "and what was wanted");
-});
-
-test("the tutor is asked for one turn, not for the conversation", () => {
-  // A tutor that starts something here leaves the learner somewhere the script
-  // cannot pick up again.
-  const { ask } = tutorHandover(
-    { setting: "A café.", tutorRole: "barista", goal: "주문하세요.", heard: "uh" },
-    "English",
-  );
-  assert.match(ask, /one turn/i);
-  assert.match(ask, /hand the turn/i);
-  assert.match(ask, /do not start a new conversation/i);
-  // It stays in character: being told it is a tutor breaks the scene.
-  assert.match(ask, /Stay the barista/);
-  assert.match(ask, /English/);
-});
-
-test("the handover never asks the tutor to read its own markup", () => {
-  const { scene, ask } = tutorHandover(
-    { setting: "A café.", tutorRole: "barista", goal: "주문하세요.", heard: "uh" },
-    "English",
-  );
-  assert.match(scene, /<scene>/, "the scene is tagged so it reads as context");
-  assert.match(ask, /Do not read the tags aloud/);
-});
-
-
 test("a side question can be asked once, not forever", () => {
   // The milk branch rejoins the order, and the graph has no memory of it — so
   // without this it can be asked round and round. A simulation walked into
@@ -265,14 +364,4 @@ test("the main path still works after a side question was used up", () => {
   const ordered = submitSpeech(scenario, bank, state, "Can I get a latte", 3000);
   assert.equal(ordered.matched, true);
   assert.equal(ordered.state.nodeId, "size");
-});
-
-test("only asking back opens a live session", () => {
-  // The one door to a call. Nobody is charged for one by missing a turn.
-  const state = runToListen(startSession(scenario));
-  const asked = askTutor(scenario, state, "why not 'I want a coffee'?");
-  assert.equal(asked.do, "wakeTutor");
-  if (asked.do !== "wakeTutor") return;
-  assert.equal(asked.context.heard, "why not 'I want a coffee'?");
-  assert.match(asked.context.setting, /caf/i);
 });
