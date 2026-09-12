@@ -54,6 +54,9 @@ export const MODEL_CALLS_PER_REQUEST = {
   // Folding lines the tutor no longer reads verbatim into its notes. Once per
   // ten lines past the thirtieth, so only long conversations make any.
   roleplayContext: 1,
+  // Looking back at a turn the learner got stuck on. Only ever from a button
+  // they pressed, so this counts the ones who wanted to know why.
+  roleplayReview: 1,
 } as const;
 
 export type MeteredOp = keyof typeof MODEL_CALLS_PER_REQUEST;

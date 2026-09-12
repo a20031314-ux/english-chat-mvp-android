@@ -6,6 +6,11 @@ import {
   type DirectorRequest,
   type SpokenLine,
 } from "@/lib/roleplay/director";
+import {
+  REVIEW_LINES,
+  type Review,
+  type StuckTurn,
+} from "@/lib/roleplay/review";
 
 /**
  * Recording a learner's turn and getting it back as text.
@@ -384,6 +389,48 @@ export async function fetchContext(input: {
     return typeof body.notes === "string" && body.notes.trim() ? body.notes.trim() : null;
   } catch (error) {
     console.error("[roleplay] context threw", error);
+    return null;
+  }
+}
+
+/**
+ * Look back at a turn the learner got stuck on, because they asked to.
+ *
+ * Nothing in the scene waits on this — the conversation already carried on
+ * without it — so a failure is simply nothing to show, and the button stays
+ * where it was for them to try again.
+ */
+export async function fetchReview(input: {
+  scenarioId: string;
+  turn: StuckTurn;
+  nativeLanguage: string;
+  isPremium: boolean;
+}): Promise<Review | null> {
+  try {
+    const response = await fetch(apiUrl("/api/roleplay/review"), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...entitlementHeaders(input.isPremium),
+      },
+      body: JSON.stringify({
+        scenarioId: input.scenarioId,
+        asked: input.turn.asked,
+        heard: input.turn.heard,
+        attempts: input.turn.attempts,
+        hesitationMs: input.turn.hesitationMs,
+        history: input.turn.history.slice(-REVIEW_LINES),
+        nativeLanguage: input.nativeLanguage,
+      }),
+    });
+    if (!response.ok) {
+      console.error("[roleplay] review failed with", response.status);
+      return null;
+    }
+    const body = (await response.json()) as { why?: unknown };
+    return typeof body.why === "string" && body.why.trim() ? (body as Review) : null;
+  } catch (error) {
+    console.error("[roleplay] review threw", error);
     return null;
   }
 }

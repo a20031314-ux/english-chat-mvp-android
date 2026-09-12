@@ -11,6 +11,7 @@ import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
 import {
   fetchContext,
   fetchDirection,
+  fetchReview,
   listenForTurn,
   type Recorder,
 } from "@/lib/roleplay/listen";
@@ -21,10 +22,16 @@ import {
   type ConversationMemory,
 } from "@/lib/roleplay/memory";
 import {
+  REVIEW_LINES,
+  type Review,
+  type StuckTurn,
+} from "@/lib/roleplay/review";
+import {
   afterSaying,
   applyDirection,
   currentInstruction,
   directionFailed,
+  resumeListening,
   startSession,
   submitSpeech,
   type Instruction,
@@ -40,16 +47,48 @@ import type { UICopy } from "@/lib/copy";
  * pure — play a line, record a turn, and ask the director when the script
  * cannot take one. Every branch it takes is one the state machine asked for.
  *
- * There is deliberately nothing here that looks like a correction or a way to
- * summon help. When the script runs out the character simply answers, in the
- * same voice and the same bubble, and any explicit teaching sits in the line
- * under it. The learner is meant to feel one conversation carrying on.
+ * Nothing interrupts the conversation. When the script runs out the character
+ * simply answers, in the same voice and the same bubble, and the scene carries
+ * on whether or not the turn went well.
+ *
+ * What the learner may do afterwards is look back. A turn the tutor judged a
+ * struggle keeps a button, and pressing it stops the scene and explains what
+ * happened there — which is where explicit teaching now lives, because under a
+ * bubble, mid-turn, with the microphone open, nobody was ever reading it. The
+ * button waits rather than expires: deciding inside the two seconds before you
+ * must speak is not a choice.
  *
  * The transcript builds downward as it goes, so the learner can see what was
  * said rather than having to hold a conversation in their head.
  */
 
-type Spoken = { who: "tutor" | "learner"; text: string; translation?: string };
+type Spoken = {
+  who: "tutor" | "learner";
+  text: string;
+  translation?: string;
+  /** Present on a turn the tutor judged a struggle, which can be looked back at. */
+  stuck?: StuckTurn;
+};
+
+/**
+ * Mark the turn they just struggled on, once the tutor has said so.
+ *
+ * The learner's line is already in the transcript by then — it went up the
+ * moment they stopped speaking — so the evidence is attached to it afterwards
+ * rather than held back until the answer arrives.
+ */
+function markStuck(lines: Spoken[], turn: Omit<StuckTurn, "asked">): Spoken[] {
+  const index = lines.map((line) => line.who).lastIndexOf("learner");
+  if (index < 0) return lines;
+  const asked =
+    lines
+      .slice(0, index)
+      .reverse()
+      .find((line) => line.who === "tutor")?.text ?? "";
+  const marked = [...lines];
+  marked[index] = { ...marked[index], stuck: { ...turn, asked } };
+  return marked;
+}
 
 /**
  * How long to wait for a line that has not started playing before carrying on
@@ -99,6 +138,14 @@ export function RoleplayScreen({
   // the value it started with — so notes stored inside it would be overwritten
   // by the next line that finished playing.
   const [memory, setMemory] = useState<ConversationMemory>(EMPTY_MEMORY);
+  // The turn being looked back at, if any. `review` is null while it is being
+  // put together, and `failed` says the attempt came back with nothing — the
+  // button stays where it was either way.
+  const [reviewing, setReviewing] = useState<{
+    turn: StuckTurn;
+    review: Review | null;
+    failed: boolean;
+  } | null>(null);
   const folding = useRef(false);
   // Bumped per session, so a fold that comes back after the scene changed is
   // dropped rather than applied to the wrong conversation.
@@ -113,6 +160,7 @@ export function RoleplayScreen({
     setInstruction(currentInstruction(scenario, bank, fresh));
     setSaid([]);
     setMemory(EMPTY_MEMORY);
+    setReviewing(null);
     folding.current = false;
     sessionRef.current += 1;
     // The bank is derived from the scenario, so it moves with it.
@@ -208,6 +256,20 @@ export function RoleplayScreen({
     }).then((direction) => {
       if (cancelled) return;
       setDirecting(false);
+      // The tutor's own reading of the turn is what marks it: it is the one
+      // judgement in the scene that looked at what they meant, not at whether
+      // a recorded phrase happened to match.
+      if (direction?.assessment === "stuck") {
+        const pending = state.pending;
+        setSaid((current) =>
+          markStuck(current, {
+            heard: instruction.request.heard,
+            attempts: pending?.attempts ?? 1,
+            hesitationMs: pending?.hesitationMs ?? 0,
+            history: instruction.request.history.slice(-REVIEW_LINES),
+          }),
+        );
+      }
       const moved = direction
         ? applyDirection(scenario, bank, state, direction, Date.now())
         : directionFailed(scenario, bank, state, Date.now());
@@ -261,6 +323,52 @@ export function RoleplayScreen({
     [scenario, state],
   );
 
+  /**
+   * Stop the scene and look back at a turn.
+   *
+   * The microphone closes first. Reading is not answering, and a turn left open
+   * would go on counting the silence as theirs — and would send whatever the
+   * room said while they read.
+   */
+  const openReview = useCallback(
+    (turn: StuckTurn) => {
+      recorderRef.current?.cancel();
+      recorderRef.current = null;
+      setRecording(false);
+      setSpeaking(false);
+      setReviewing({ turn, review: null, failed: false });
+      if (!scenario) return;
+      void fetchReview({
+        scenarioId: scenario.id,
+        turn,
+        nativeLanguage,
+        isPremium,
+      }).then((review) => {
+        setReviewing((current) =>
+          current && current.turn === turn
+            ? { ...current, review, failed: review === null }
+            : current,
+        );
+      });
+    },
+    [scenario, nativeLanguage, isPremium],
+  );
+
+  /**
+   * Back to the scene, on the same turn, with the clock started again.
+   *
+   * The question has not changed and the tries already spent still stand; only
+   * the silence is forgiven, because it was spent reading.
+   */
+  const closeReview = useCallback(() => {
+    setReviewing(null);
+    if (!scenario || !state) return;
+    const resumed = resumeListening(scenario, bank, state, Date.now());
+    setState(resumed.state);
+    setInstruction(resumed.instruction);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scenario, state]);
+
   const startRecording = async () => {
     if (recording || recorderRef.current || !scenario) return;
     try {
@@ -304,10 +412,10 @@ export function RoleplayScreen({
    * turn is still one transcription, so this costs nothing.
    */
   useEffect(() => {
-    if (instruction?.do !== "listen") return;
+    if (instruction?.do !== "listen" || reviewing) return;
     void startRecording();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [instruction]);
+  }, [instruction, reviewing]);
 
   // Sent from here, where the closure is this render's, rather than from the
   // callback that was made when the turn began.
@@ -359,6 +467,18 @@ export function RoleplayScreen({
               {line.translation ? (
                 <p className="mt-1 text-[12px] text-neutral-500">{line.translation}</p>
               ) : null}
+              {/* Stays on the turn for the rest of the scene. Pressing it is a
+                  decision the learner can take later, when they are not in the
+                  middle of being asked to speak. */}
+              {line.stuck ? (
+                <button
+                  type="button"
+                  onClick={() => openReview(line.stuck!)}
+                  className="mt-1.5 rounded-full border border-white/20 px-2.5 py-1 text-[11px] text-neutral-300 hover:bg-white/10"
+                >
+                  {ui.roleplayWhyStuck}
+                </button>
+              ) : null}
             </div>
           </li>
         ))}
@@ -408,6 +528,54 @@ export function RoleplayScreen({
           </button>
         ) : null}
       </footer>
+
+      {reviewing ? (
+        <div className="absolute inset-0 z-10 flex flex-col justify-end bg-black/70 p-3">
+          <div className="max-h-[80%] overflow-y-auto rounded-2xl border border-white/10 bg-[#0e0e0e] p-4">
+            <h3 className="text-sm font-semibold text-white">
+              {ui.roleplayReviewTitle}
+            </h3>
+            <p className="mt-1 text-[12px] text-neutral-500">
+              {reviewing.turn.asked}
+            </p>
+
+            {reviewing.review ? (
+              <>
+                <p className="mt-3 whitespace-pre-line text-[13px] leading-relaxed text-neutral-200">
+                  {reviewing.review.why}
+                </p>
+                {reviewing.review.say ? (
+                  <div className="mt-3 rounded-xl bg-white/5 p-3">
+                    <p className="text-[11px] text-neutral-500">
+                      {ui.roleplayReviewSay}
+                    </p>
+                    <p className="mt-1 text-[14px] text-neutral-100">
+                      {reviewing.review.say}
+                    </p>
+                    {reviewing.review.meaning ? (
+                      <p className="mt-0.5 text-[12px] text-neutral-500">
+                        {reviewing.review.meaning}
+                      </p>
+                    ) : null}
+                  </div>
+                ) : null}
+              </>
+            ) : (
+              <p className="mt-3 text-[13px] text-neutral-400">
+                {reviewing.failed ? ui.roleplayReviewFailed : ui.roleplayReviewLoading}
+              </p>
+            )}
+
+            <button
+              type="button"
+              onClick={closeReview}
+              className="mt-4 w-full rounded-xl bg-white/15 px-4 py-3 text-sm text-neutral-100"
+            >
+              {ui.billingClose}
+            </button>
+          </div>
+        </div>
+      ) : null}
     </FullScreenLayer>
   );
 }

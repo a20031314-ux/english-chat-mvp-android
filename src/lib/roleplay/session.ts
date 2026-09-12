@@ -274,6 +274,24 @@ function listeningIfDue(
 }
 
 /**
+ * Start the turn's clock again after the learner stopped to read a review.
+ *
+ * Hesitation is the silence from `listeningSince` to the moment they speak, so
+ * time spent reading would otherwise be counted as struggling and pull the
+ * level down under someone who stopped precisely because they wanted to
+ * understand. The turn is not otherwise touched: the same question is still
+ * being asked, and the attempts already spent on it still stand.
+ */
+export function resumeListening(
+  scenario: RoleplayScenario,
+  bank: SentenceBank,
+  state: SessionState,
+  now: number,
+): { state: SessionState; instruction: Instruction } {
+  return listeningIfDue(scenario, bank, state, now);
+}
+
+/**
  * Move on from a line that has finished playing.
  *
  * Separate from answering, because these are different events: one is audio

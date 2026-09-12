@@ -14,6 +14,7 @@ import {
   startSession,
   submitSpeech,
   type SessionState,
+  resumeListening,
 } from "./session.ts";
 import { isLearnerNode } from "./script.ts";
 
@@ -400,4 +401,40 @@ test("the main path still works after a side question was used up", () => {
   const ordered = submitSpeech(scenario, bank, state, "Can I get a latte", 3000);
   assert.equal(ordered.matched, true);
   assert.equal(ordered.state.nodeId, "size");
+});
+
+test("reading a review does not count as hesitating", () => {
+  // The button exists so someone can stop and understand. Charging them for
+  // the time they spent reading would take the level down for it.
+  let state = runToListen(startSession(scenario, 3), 1000);
+  const before = state.difficulty.level;
+  const listening = state.listeningSince ?? 1000;
+
+  // Thirty seconds with the review open, then an ordinary answer.
+  const resumed = resumeListening(scenario, bank, state, listening + 30000);
+  assert.equal(resumed.instruction.do, "listen");
+  const result = submitSpeech(
+    scenario,
+    bank,
+    resumed.state,
+    "Can I get a latte please",
+    listening + 32000,
+    listening + 30800,
+  );
+  assert.equal(result.matched, true);
+  state = runToListen(result.state, listening + 33000);
+  assert.ok(
+    state.difficulty.level >= before,
+    `reading pulled the level from ${before} to ${state.difficulty.level}`,
+  );
+});
+
+test("a review does not forgive the attempts already spent", () => {
+  // Someone on their second go is still on their second go: the same question
+  // is being asked, and the scene has not moved.
+  const state = runToListen(startSession(scenario, 3), 1000);
+  const missed = submitSpeech(scenario, bank, state, "mmm", 2000, 1500);
+  const resumed = resumeListening(scenario, bank, missed.state, 40000);
+  assert.equal(resumed.state.attempts, missed.state.attempts);
+  assert.equal(resumed.state.nodeId, missed.state.nodeId);
 });
