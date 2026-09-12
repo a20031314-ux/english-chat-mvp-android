@@ -607,7 +607,10 @@
     "roleplayReviewLoading": "振り返っています…",
     "roleplayReviewFailed": "今は用意できませんでした。少ししてからもう一度押してください。",
     "homeTabCall": "通話",
-    "roleplayOutOfPoints": "無料の通話レッスンを使い切りました。定期購入で続けられます。"
+    "roleplayOutOfPoints": "無料の通話レッスンを使い切りました。定期購入で続けられます。",
+    "updateAvailable": "新しいバージョンがあります",
+    "updateRequired": "このバージョンでは続けられません。更新してください。",
+    "updateAction": "更新"
   },
   "zh": {
     "appTitle": "{targetLanguage}批改聊天",
@@ -1217,7 +1220,10 @@
     "roleplayReviewLoading": "正在回顾…",
     "roleplayReviewFailed": "现在没能整理出来，请稍后再点一次。",
     "homeTabCall": "通话",
-    "roleplayOutOfPoints": "免费的通话练习已用完。订阅后可以继续。"
+    "roleplayOutOfPoints": "免费的通话练习已用完。订阅后可以继续。",
+    "updateAvailable": "有新版本了",
+    "updateRequired": "当前版本无法继续使用，请更新。",
+    "updateAction": "更新"
   },
   "vi": {
     "appTitle": "Chat sửa {targetLanguage}",
@@ -1827,7 +1833,10 @@
     "roleplayReviewLoading": "Đang xem lại…",
     "roleplayReviewFailed": "Hiện chưa tạo được. Hãy bấm lại sau giây lát.",
     "homeTabCall": "Gọi",
-    "roleplayOutOfPoints": "Bạn đã dùng hết phần luyện gọi miễn phí. Đăng ký để tiếp tục."
+    "roleplayOutOfPoints": "Bạn đã dùng hết phần luyện gọi miễn phí. Đăng ký để tiếp tục.",
+    "updateAvailable": "Đã có bản mới",
+    "updateRequired": "Bản này không tiếp tục được nữa. Hãy cập nhật.",
+    "updateAction": "Cập nhật"
   },
   "fr": {
     "appTitle": "Chat de correction d'{targetLanguage}",
@@ -2437,7 +2446,10 @@
     "roleplayReviewLoading": "Retour en arrière…",
     "roleplayReviewFailed": "Impossible de le préparer pour l'instant. Réessayez dans un moment.",
     "homeTabCall": "Appel",
-    "roleplayOutOfPoints": "L'entraînement à l'appel gratuit est épuisé. L'abonnement prend le relais."
+    "roleplayOutOfPoints": "L'entraînement à l'appel gratuit est épuisé. L'abonnement prend le relais.",
+    "updateAvailable": "Une nouvelle version est disponible",
+    "updateRequired": "Cette version ne peut plus continuer. Mettez à jour.",
+    "updateAction": "Mettre à jour"
   },
   "pt": {
     "appTitle": "Chat de correção de {targetLanguage}",
@@ -3047,7 +3059,10 @@
     "roleplayReviewLoading": "Revendo…",
     "roleplayReviewFailed": "Não deu para preparar agora. Toque de novo em instantes.",
     "homeTabCall": "Chamada",
-    "roleplayOutOfPoints": "A prática de chamada gratuita acabou. A assinatura continua daqui."
+    "roleplayOutOfPoints": "A prática de chamada gratuita acabou. A assinatura continua daqui.",
+    "updateAvailable": "Saiu uma versão nova",
+    "updateRequired": "Esta versão não pode continuar. Atualize para seguir.",
+    "updateAction": "Atualizar"
   },
   "id": {
     "appTitle": "Chat koreksi {targetLanguage}",
@@ -3657,7 +3672,10 @@
     "roleplayReviewLoading": "Menengok kembali…",
     "roleplayReviewFailed": "Belum bisa disiapkan sekarang. Coba tekan lagi sebentar lagi.",
     "homeTabCall": "Telepon",
-    "roleplayOutOfPoints": "Latihan telepon gratis sudah habis. Langganan melanjutkan dari sini."
+    "roleplayOutOfPoints": "Latihan telepon gratis sudah habis. Langganan melanjutkan dari sini.",
+    "updateAvailable": "Ada versi baru",
+    "updateRequired": "Versi ini tidak bisa dilanjutkan. Silakan perbarui.",
+    "updateAction": "Perbarui"
   },
   "it": {
     "appTitle": "Chat di correzione {targetLanguage}",
@@ -4267,7 +4285,10 @@
     "roleplayReviewLoading": "Sto rivedendo…",
     "roleplayReviewFailed": "Non è stato possibile prepararlo ora. Riprova tra un momento.",
     "homeTabCall": "Chiamata",
-    "roleplayOutOfPoints": "La pratica di chiamata gratuita è esaurita. L'abbonamento prosegue da qui."
+    "roleplayOutOfPoints": "La pratica di chiamata gratuita è esaurita. L'abbonamento prosegue da qui.",
+    "updateAvailable": "È uscita una nuova versione",
+    "updateRequired": "Questa versione non può più continuare. Aggiorna.",
+    "updateAction": "Aggiorna"
   },
   "ru": {
     "appTitle": "Чат для правки {targetLanguage}",
@@ -4877,7 +4898,10 @@
     "roleplayReviewLoading": "Разбираем…",
     "roleplayReviewFailed": "Сейчас не получилось. Нажмите ещё раз через минуту.",
     "homeTabCall": "Звонок",
-    "roleplayOutOfPoints": "Бесплатная практика звонков закончилась. С подпиской можно продолжить."
+    "roleplayOutOfPoints": "Бесплатная практика звонков закончилась. С подпиской можно продолжить.",
+    "updateAvailable": "Вышла новая версия",
+    "updateRequired": "Эта версия больше не работает. Обновите приложение.",
+    "updateAction": "Обновить"
   },
   "ar": {
     "appTitle": "دردشة تصحيح {targetLanguage}",
@@ -5487,7 +5511,10 @@
     "roleplayReviewLoading": "نراجع…",
     "roleplayReviewFailed": "تعذّر تجهيزه الآن. اضغط الزر مرة أخرى بعد قليل.",
     "homeTabCall": "مكالمة",
-    "roleplayOutOfPoints": "انتهى تدريب المكالمة المجاني. يمكنك المتابعة مع الاشتراك."
+    "roleplayOutOfPoints": "انتهى تدريب المكالمة المجاني. يمكنك المتابعة مع الاشتراك.",
+    "updateAvailable": "صدرت نسخة جديدة",
+    "updateRequired": "لا يمكن متابعة العمل بهذه النسخة. يرجى التحديث.",
+    "updateAction": "تحديث"
   },
   "th": {
     "appTitle": "แชทตรวจ {targetLanguage}",
@@ -6097,7 +6124,10 @@
     "roleplayReviewLoading": "กำลังทบทวน…",
     "roleplayReviewFailed": "ตอนนี้ยังสร้างไม่ได้ ลองกดอีกครั้งในอีกสักครู่",
     "homeTabCall": "โทร",
-    "roleplayOutOfPoints": "ใช้การฝึกโทรแบบฟรีหมดแล้ว สมัครสมาชิกเพื่อใช้ต่อได้"
+    "roleplayOutOfPoints": "ใช้การฝึกโทรแบบฟรีหมดแล้ว สมัครสมาชิกเพื่อใช้ต่อได้",
+    "updateAvailable": "มีเวอร์ชันใหม่แล้ว",
+    "updateRequired": "เวอร์ชันนี้ใช้ต่อไม่ได้ กรุณาอัปเดต",
+    "updateAction": "อัปเดต"
   },
   "hi": {
     "appTitle": "{targetLanguage} सुधार चैट",
@@ -6707,6 +6737,9 @@
     "roleplayReviewLoading": "पीछे देख रहे हैं…",
     "roleplayReviewFailed": "अभी तैयार नहीं हो सका। थोड़ी देर बाद फिर दबाएँ।",
     "homeTabCall": "कॉल",
-    "roleplayOutOfPoints": "मुफ़्त कॉल अभ्यास ख़त्म हो गया। सदस्यता लेकर जारी रख सकते हैं।"
+    "roleplayOutOfPoints": "मुफ़्त कॉल अभ्यास ख़त्म हो गया। सदस्यता लेकर जारी रख सकते हैं।",
+    "updateAvailable": "नया वर्शन आया है",
+    "updateRequired": "यह वर्शन आगे नहीं चल सकता। कृपया अपडेट करें।",
+    "updateAction": "अपडेट"
   }
 }

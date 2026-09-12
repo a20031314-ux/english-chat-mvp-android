@@ -9,6 +9,7 @@ import { ExpressionInsightProvider } from "@/components/ExpressionInsightProvide
 import { TAB_ICON_META } from "@/components/TabIcons";
 import { TargetLanguageSelector } from "@/components/TargetLanguageSelector";
 import { VocabularyPanel } from "@/components/VocabularyPanel";
+import { UpdateNotice } from "@/components/UpdateNotice";
 import { RoleplayTab, hasRoleplay } from "@/components/RoleplayTab";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
 import { BillingUiProvider, BillingOpenButton } from "@/components/BillingScreen";
@@ -148,6 +149,9 @@ function AppHomeInner({
               />
               <BillingOpenButton ui={ui} />
             </div>
+            {/* Above everything, because it is about everything: this is the
+                only way anyone gets told their build has to be replaced. */}
+            <UpdateNotice ui={ui} />
             <div className="relative z-0 min-h-0 flex-1 overflow-hidden p-2 pb-0 sm:p-4 sm:pb-0">
               <div
                 className={

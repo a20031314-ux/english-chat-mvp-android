@@ -17,6 +17,7 @@ import {
   type LearningCard,
 } from "@/lib/learningCards";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
+import { noteUpdateLevel } from "@/lib/appUpdate";
 import { MessageBubble } from "./MessageBubble";
 import { ChatHistoryPanel } from "./ChatHistoryPanel";
 import { useBillingUi } from "./BillingScreen";
@@ -707,6 +708,9 @@ export function ChatWindow({
       const response = await fetch(url, {
         headers: premiumRequestHeaders(isPremium),
       });
+      // Costs nothing and is read off every answer: the server says on each one
+      // whether this build has been left behind (lib/appUpdate.ts).
+      noteUpdateLevel(response);
       if (!response.ok) {
         return;
       }

@@ -1,4 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
+import {
+  APP_UPDATE_HEADER,
+  requestAppVersion,
+  updateLevelFor,
+} from "@/lib/appVersion";
 
 /** Capacitor Android/iOS WebView origins + deployed web app. */
 const ALLOWED_ORIGIN_PREFIXES = [
@@ -13,7 +18,7 @@ const ALLOWED_ORIGIN_PREFIXES = [
 // the Android build hides today because CapacitorHttp bypasses CORS entirely —
 // so an omission here stays invisible until something makes a plain fetch.
 const ALLOWED_HEADERS =
-  "Content-Type, x-client-premium, x-rc-user, x-learning-language, x-call-blocks";
+  "Content-Type, x-client-premium, x-rc-user, x-learning-language, x-call-blocks, x-app-version, x-roleplay-points, x-roleplay-session";
 
 /**
  * The call route answers with SDP and says what it charged in headers, which a
@@ -21,7 +26,7 @@ const ALLOWED_HEADERS =
  * not need this — CapacitorHttp bypasses CORS — so an omission would only ever
  * show up on the web path.
  */
-const EXPOSED_HEADERS = "x-call-hold, x-call-seconds";
+const EXPOSED_HEADERS = "x-call-hold, x-call-seconds, x-app-update";
 
 function resolveAllowOrigin(request: NextRequest): string {
   const origin = request.headers.get("origin");
@@ -34,8 +39,17 @@ function resolveAllowOrigin(request: NextRequest): string {
   return allowed ? origin : "https://localhost";
 }
 
+/**
+ * What every answer carries, whatever route wrote it.
+ *
+ * The update signal rides here because this is the one thing every response
+ * already goes through. No route has to know about it, no body changes shape,
+ * and a build too old to understand it never sees it — headers it does not read
+ * cost it nothing (appVersion.ts).
+ */
 export function corsHeaders(request: NextRequest): Record<string, string> {
   return {
+    [APP_UPDATE_HEADER]: updateLevelFor(requestAppVersion(request.headers)),
     "Access-Control-Allow-Origin": resolveAllowOrigin(request),
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": ALLOWED_HEADERS,
