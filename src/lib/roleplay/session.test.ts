@@ -302,6 +302,42 @@ test("struggling pulls the level down over the course of a scenario", () => {
   );
 });
 
+test("a long answer that started promptly is not a struggle", () => {
+  // The bug: once the turn began ending itself, hesitation was measured to the
+  // moment it was sent — the whole sentence plus the pause after it. Every
+  // answer over a couple of seconds read as a struggle, the level sank, and at
+  // the bottom the matcher took "I walked here" for "for here".
+  const answers = ["Can I get a latte please", "small please", "for here please"];
+  // Not zero: a listen stamped at 0 reads as no listen at all.
+  let state = runToListen(startSession(scenario, 3), 1000);
+  const before = state.difficulty.level;
+  let clock = 1000;
+  for (const said of answers) {
+    const listening = state.listeningSince ?? clock;
+    // Started talking within a second, and took seven more to finish.
+    const result = submitSpeech(scenario, bank, state, said, listening + 8000, listening + 800);
+    assert.equal(result.matched, true, `"${said}" should have been accepted`);
+    clock = listening + 9000;
+    state = runToListen(result.state, clock);
+  }
+  assert.ok(
+    state.difficulty.level >= before,
+    `prompt answers moved the level from ${before} to ${state.difficulty.level}`,
+  );
+});
+
+test("the same turns measured to the send would have sunk the level", () => {
+  // What the fix is against, kept so the measure cannot quietly drift back.
+  let state = runToListen(startSession(scenario, 3), 1000);
+  const before = state.difficulty.level;
+  for (const said of ["Can I get a latte please", "small please"]) {
+    const listening = state.listeningSince ?? 1000;
+    const result = submitSpeech(scenario, bank, state, said, listening + 8000);
+    state = runToListen(result.state, listening + 9000);
+  }
+  assert.ok(state.difficulty.level < before);
+});
+
 test("a scenario that reaches its last line finishes", () => {
   let state = runToListen(startSession(scenario));
   for (const said of ["Can I get a latte", "small", "for here", "card"]) {

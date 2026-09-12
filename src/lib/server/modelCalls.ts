@@ -51,6 +51,9 @@ export const MODEL_CALLS_PER_REQUEST = {
   // from the recordings — so its ratio to roleplayListen is how much of the
   // conversation the script is actually carrying.
   roleplayTurn: 1,
+  // Folding lines the tutor no longer reads verbatim into its notes. Once per
+  // ten lines past the thirtieth, so only long conversations make any.
+  roleplayContext: 1,
 } as const;
 
 export type MeteredOp = keyof typeof MODEL_CALLS_PER_REQUEST;

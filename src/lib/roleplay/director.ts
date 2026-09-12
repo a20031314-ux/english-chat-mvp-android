@@ -13,22 +13,29 @@ import {
 } from "./script.ts";
 
 /**
- * The tutor who watches the conversation and steps in where the script cannot.
+ * The tutor who has been in the conversation all along, and speaks up where the
+ * script cannot.
  *
  * The script carries the conversation for as long as it can: recorded lines,
  * matched answers, no model involved. When the learner says something it cannot
  * take — they are stuck, they said something right that nobody wrote down, they
  * asked about something else, they changed the subject — the turn comes here.
- * One text-model call decides what the character says next and where the
- * conversation goes after it: back into the script at some step, or off it for a
- * turn or two, or to a close.
+ *
+ * The model is not handed a transcript to direct. It is the character: every
+ * line the scene has spoken, recorded or not, arrives as its own turn, so it
+ * simply says the next thing, the way it would in any conversation it had been
+ * having. An observer picking lines and steps from lists made observer's
+ * mistakes — a goodbye chosen mid-order, the right question asked while the
+ * scene jumped past it — where a speaker carrying on its own conversation does
+ * not. It says where the conversation is afterwards in one field: back into the
+ * script at some step, off it for a moment, or closed.
  *
  * Nothing about this is visible to the learner. The line comes out in the
- * scene's own voice, in the same bubble as every other line, and whenever a
- * recorded line fits the director picks that instead of writing one — which is
- * both cheaper (no synthesis) and better (a line a person wrote and checked).
- * The explicit teaching, when there is any, goes in the note under the bubble,
- * in the learner's own language, never in the character's mouth.
+ * scene's own voice, in the same bubble as every other line, and when it is a
+ * line the scene has a recording of, the recording plays — cheaper, and a read
+ * someone checked. The explicit teaching, when there is any, goes in the note
+ * under the bubble, in the learner's own language, never in the character's
+ * mouth.
  *
  * What stops this becoming the open-ended free conversation it replaces is the
  * leash: a run of turns off the script is capped, and at the cap the director is
@@ -47,8 +54,12 @@ export const FREE_TURN_LIMIT = 4;
  */
 export const DIRECTED_TURN_LIMIT = 40;
 
-/** How much of the conversation the director is shown. */
-export const HISTORY_LINES = 12;
+/**
+ * The most conversation a request carries verbatim. The app sends every line
+ * its notes do not cover (memory.ts), which stays between twenty and thirty;
+ * this is the ceiling for when the notes have fallen behind.
+ */
+export const HISTORY_LINES = 40;
 
 export type Assessment =
   | "on_track"
@@ -75,7 +86,10 @@ export type DirectorRequest = {
   mode: "script" | "free";
   /** What was just heard. Empty when they said nothing usable. */
   heard: string;
+  /** The lines the tutor reads verbatim: every line its notes do not cover. */
   history: SpokenLine[];
+  /** Notes on everything older than `history`, or empty (memory.ts). */
+  context?: string;
   /** Consecutive turns already spent off the script. */
   freeTurns: number;
   /** Director turns already spent this session. */
@@ -152,6 +166,28 @@ export function scriptSteps(scenario: RoleplayScenario): Step[] {
 }
 
 /**
+ * Conversation lines out of a request body, trusting nothing about their shape.
+ * Anything that is not a learner line is the tutor's; empty lines are dropped;
+ * long ones are cut, since a turn nobody could say is not worth a model's time.
+ */
+export function readSpokenLines(raw: unknown): SpokenLine[] {
+  if (!Array.isArray(raw)) return [];
+  return raw
+    .map((line): SpokenLine => {
+      const record = (typeof line === "object" && line !== null ? line : {}) as {
+        who?: unknown;
+        text?: unknown;
+      };
+      return {
+        who: record.who === "learner" ? "learner" : "tutor",
+        text: typeof record.text === "string" ? record.text.trim().slice(0, 500) : "",
+      };
+    })
+    .filter((line) => line.text)
+    .slice(-HISTORY_LINES);
+}
+
+/**
  * Lines that already have audio in this scene's voice.
  *
  * A recording is the text in one voice, so the bank is only free to reuse where
@@ -186,7 +222,21 @@ function lastTurn(request: DirectorRequest): boolean {
   return request.directedTurns + 1 >= DIRECTED_TURN_LIMIT;
 }
 
-export function directorSystemPrompt(input: {
+/**
+ * Who the model is, where it is, and what it still has to get done.
+ *
+ * Written as the character's own brief, not an observer's. The conversation
+ * itself arrives as messages (`tutorMessages`) in which every line the scene
+ * spoke — recorded or not — is the model's own turn, so when the script runs
+ * out it is not a director reading a transcript and picking the next line from
+ * a list: it is the barista, who has been talking all along, saying the next
+ * thing. Continuing its own conversation is what a chat model does best, and it
+ * is what keeps the voice from changing when help arrives.
+ *
+ * Fixed parts first and the moving parts last, so the start of it is the same
+ * from one turn to the next and can be served from the prompt cache.
+ */
+export function tutorSystemPrompt(input: {
   scenario: RoleplayScenario;
   bank: SentenceBank;
   recorded: { id: string; text: string }[];
@@ -197,87 +247,103 @@ export function directorSystemPrompt(input: {
   const native = interfaceLanguageName(request.nativeLanguage);
   const role = scenario.tutorRole;
   const steps = scriptSteps(scenario);
-  const current = steps.find((step) => step.id === request.nodeId);
-  const quote = (id?: string) => (id && bank[id] ? `"${bank[id]!.text}"` : "(none)");
+  const quote = (id?: string) => (id && bank[id] ? `"${bank[id]!.text}"` : "");
 
-  const where = scenario.openEnded
-    ? `This is an open conversation with no script to return to. Keep it going the way a friendly person would: answer, react, ask them something back, and keep your turns short so they do most of the talking. Use "next": "free" unless they are ending it.`
-    : [
-        `Where the scene is:`,
-        current
-          ? `- Current step "${current.id}": ${current.goal} — normally asked with ${quote(current.questionId)}${current.helpId ? `; help written for it: ${current.helpId}` : ""}`
-          : `- Current step: (unknown)`,
-        request.mode === "free"
-          ? `- The conversation is off the script right now (${request.freeTurns} of ${FREE_TURN_LIMIT} free turns used), and "${request.nodeId}" is the step to come back to.`
-          : "",
-        `- Steps of the scene, in order:`,
-        ...steps.map(
-          (step) => `  - step:${step.id} — ${step.goal} — asked with ${quote(step.questionId)}`,
-        ),
-      ]
-        .filter(Boolean)
-        .join("\n");
+  const fixed = `You are the ${role}. ${scenario.setting}
 
-  const nextRules = scenario.openEnded
-    ? `- "free" — the conversation carries on.\n- "end" — your line closes the conversation.`
-    : [
-        `- "step:<id>" — your line leads into that step, so it must ask that step's question (or be that step's recorded question). Use this to go back to the script, including jumping ahead when they already answered later steps.`,
-        `- "free" — stay off the script for one more turn.`,
-        `- "end" — your line closes the conversation.`,
-        `Go back to the script as soon as it feels natural; a real ${role} would.`,
-        mustReturn(request, scenario)
-          ? `You have used up the free turns: you must answer with "step:<id>" now.`
-          : "",
-      ]
-        .filter(Boolean)
-        .join("\n");
+You are talking out loud with someone who is learning ${target}. Everything said on your side of this conversation so far was you, and you carry on as yourself. Never mention a tutor, practice, mistakes, lessons or a script, and never step out of the scene.
 
-  return `You are the ${role} in a spoken conversation with someone learning ${target}.
-
-${scenario.setting}
-
-The conversation normally follows a script. You are the one watching it: the learner has just said something the script could not take, and you decide what the ${role} says next. To the learner this has to feel like the same person simply carrying on. Never step out of the scene, and never mention a tutor, practice, mistakes, or a script.
-
-Learner level: ${request.level} of 5. At 1–2 use short, common words and one idea per sentence; at 4–5 talk naturally.
-
-${where}
-
-Recorded lines you can say. When one fits exactly, answer with its id instead of writing a line — it is what a person wrote for this scene:
-${recorded.map((line) => `- ${line.id}: "${line.text}"`).join("\n") || "- (none)"}
-
-First decide what happened ("assessment"). Judge what they meant, not their wording — someone who says they will sit by the window has answered "for here or to go?":
-- "on_track": they answered, just not in words the script expected. Accept it and move on to the next step.
-- "stuck": they could not do it — silence, a fragment, the wrong words. Help in character: ask again more simply, or offer the choices out loud (the step's written help, if it has one, is usually the right line). "note" is required here: the phrase they could use, explained in ${native}.
-- "off_script": something reasonable but beside the point. Answer it briefly, the way a real ${role} would.
-- "topic_change": they took the conversation somewhere else. Go along with it.
-- "closing": they are ending the conversation.
-
-Then say one line — one or two short sentences, in ${target} — and choose "next":
-${nextRules}
-${lastTurn(request) ? `\nThis is the last turn of the session: close the conversation warmly and answer with "end".\n` : ""}
-When you write a line yourself, "translation" is always required: it is shown under the line.
-"note" is for teaching and is shown in writing under your line. Leave it empty unless it helps; never put teaching in the spoken line.
-
-Reply as JSON only:
-{"assessment": "...", "say": {"id": "<recorded id>"} or {"text": "<in ${target}>", "translation": "<in ${native}>"}, "note": "<in ${native}, or empty>", "next": "step:<id>" or "free" or "end"}`;
+${
+  scenario.openEnded
+    ? `There is nothing to get done: this is just a conversation. Answer, react, ask them something back, and keep your turns short so they do most of the talking.`
+    : `What you are here to get done, in this order:
+${steps
+  .map((step) => `- step:${step.id} — ${step.goal}${quote(step.questionId) ? ` — you ask it with ${quote(step.questionId)}` : ""}`)
+  .join("\n")}`
 }
 
-/** The conversation so far and the turn that could not be taken, as the model reads it. */
-export function directorUserMessage(request: DirectorRequest): string {
+How to answer them:
+- Judge what they meant, not their wording. Someone who says they will sit by the window has told you "for here".
+- If they answered, just not in the words you expected, take it and move on.
+- If they are stuck — silence, a fragment, the wrong words — help the way a real ${role} would: ask again more simply, or say the choices out loud. Put the phrase they could use in "note", explained in ${native}.
+- If they asked or said something else, answer it briefly, like a person would.
+- One or two short sentences. Teaching never goes in what you say out loud; it goes in "note", which is shown in writing under your line. Leave "note" empty unless it helps.
+- "translation" is always required: your line as a ${native} speaker would say it in that situation, not word for word — "to go" at a café is takeaway, not travelling.
+
+Reply as JSON only:
+{"say": "<your line, in ${target}>", "translation": "<in ${native}>", "note": "<in ${native}, or empty>", "assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
+
+"assessment" is how their last turn went, for you to keep track: on_track (answered fine), stuck, off_script (something beside the point), topic_change, closing (they are leaving).
+"next" is where the conversation is after your line:
+${
+  scenario.openEnded
+    ? `- "free": it carries on.\n- "end": your line closes it.`
+    : `- "step:<id>": your line ends by asking that step's question. Jump ahead if they already answered later steps; never go back to a step that is done — if they change an earlier answer, say so and stay where you are.
+- "free": you are off your list for a moment, talking about something else.
+- "end": your line closes the conversation.
+Get back to your list as soon as it feels natural.`
+}`;
+
+  const current = steps.find((step) => step.id === request.nodeId);
+  // Only the lines for where the conversation is and where it goes next. Shown
+  // every line of the scene, the model copied whichever sounded close: asked
+  // for something hot to eat, it answered with the milk line, and it asked the
+  // size step's "small, or large?" while waiting on for-here-or-to-go.
+  const upcoming = current ? steps[steps.indexOf(current) + 1] : undefined;
+  const usual = [current?.questionId, current?.helpId, upcoming?.questionId]
+    .filter((id): id is string => Boolean(id && recorded.some((line) => line.id === id)))
+    .map((id) => `- "${bank[id]!.text}"`);
+  const now = [
+    `Level: ${request.level} of 5. At 1–2 use short, common words and one idea per sentence; at 4–5 talk naturally.`,
+    usual.length > 0
+      ? `What you usually say around here — when one fits, say it word for word:\n${usual.join("\n")}`
+      : "",
+    scenario.openEnded || !current
+      ? ""
+      : request.mode === "free"
+        ? `Right now you have drifted off your list (${request.freeTurns} of ${FREE_TURN_LIMIT} turns); step:${current.id} is where to come back to.${
+            mustReturn(request, scenario) ? ` Come back to it now, with "step:${current.id}".` : ""
+          }`
+        : `Right now you are on step:${current.id} — ${current.goal}.`,
+    request.context?.trim()
+      ? `What you remember from earlier in this conversation:
+${request.context.trim()}`
+      : "",
+    lastTurn(request)
+      ? `This is the last turn you have: close the conversation warmly, with "end".`
+      : "",
+  ]
+    .filter(Boolean)
+    .join("\n");
+
+  return `${fixed}\n\n${now}`;
+}
+
+/**
+ * The conversation as the model lives it: its own lines as its turns.
+ *
+ * Recorded lines go in as assistant messages exactly like lines it wrote,
+ * because to the learner there is no difference and there should be none to
+ * the model either. The turn the script could not take is the last user
+ * message, said once.
+ */
+export function tutorMessages(
+  request: DirectorRequest,
+): { role: "assistant" | "user"; content: string }[] {
   const last = request.history[request.history.length - 1];
-  // The turn in question is said once, at the end, where it cannot be mistaken
-  // for something the director already answered.
   const earlier =
     last && last.who === "learner" && last.text.trim() === request.heard.trim()
       ? request.history.slice(0, -1)
       : request.history;
-  const lines = earlier
-    .slice(-HISTORY_LINES)
-    .map((line) => `${line.who === "tutor" ? "You" : "Learner"}: ${line.text}`);
-  const heard = request.heard.trim()
-    ? `The learner just said: "${request.heard.trim()}"`
-    : `The learner just said nothing usable — silence, or a sound that was not words.`;
-  return [...lines, "", heard].join("\n");
+  const messages = earlier.slice(-HISTORY_LINES).map((line) => ({
+    role: line.who === "tutor" ? ("assistant" as const) : ("user" as const),
+    content: line.text,
+  }));
+  messages.push({
+    role: "user",
+    content: request.heard.trim() || "(silence — they have not said anything)",
+  });
+  return messages;
 }
 
 function words(text: string): string {
@@ -331,6 +397,7 @@ export function parseDirection(
   const record = parsed as {
     assessment?: unknown;
     say?: unknown;
+    translation?: unknown;
     note?: unknown;
     next?: unknown;
   };
@@ -339,10 +406,15 @@ export function parseDirection(
     ? (record.assessment as Assessment)
     : "off_script";
 
+  // The tutor answers with its line as a plain string. The older shape — a
+  // recorded id, or text and translation in an object — is still read, so a
+  // model that falls back on it is not thrown away for the form of its answer.
   const sayRecord =
-    typeof record.say === "object" && record.say !== null
-      ? (record.say as { id?: unknown; text?: unknown; translation?: unknown })
-      : {};
+    typeof record.say === "string"
+      ? { text: record.say, translation: record.translation }
+      : typeof record.say === "object" && record.say !== null
+        ? (record.say as { id?: unknown; text?: unknown; translation?: unknown })
+        : {};
   const id = typeof sayRecord.id === "string" ? sayRecord.id.trim() : "";
   const text = typeof sayRecord.text === "string" ? sayRecord.text.trim() : "";
   const translation =
@@ -366,40 +438,125 @@ export function parseDirection(
     return null;
   }
 
-  const note = typeof record.note === "string" ? record.note.trim().slice(0, 300) : "";
+  // The field's own name sometimes comes back inside it — "note: ..." — which
+  // would be read under the line as if it were part of the tip.
+  const note =
+    typeof record.note === "string"
+      ? record.note.trim().replace(/^note\s*:\s*/i, "").slice(0, 300)
+      : "";
 
-  const learnerIds = new Set(
-    Object.values(scenario.nodes)
-      .filter(isLearnerNode)
-      .map((node) => node.id),
-  );
+  // Learner steps in the order the scene walks them.
+  const order = scriptSteps(scenario).map((step) => step.id);
+  const learnerIds = new Set(order);
   let next = parseNext(record.next) ?? { step: request.nodeId };
   if ("step" in next && !learnerIds.has(next.step)) next = { step: request.nodeId };
   // An open conversation has nowhere else to be; its one step is the talking.
   if (scenario.openEnded && "free" in next) next = { step: request.nodeId };
 
-  // Seen from the real model: it moves the scene on to payment and, in the
-  // same answer, picks the recording that asks "for here or to go?" again. A
-  // step can only be walked into with its own question, so a recorded question
-  // belonging to some other step is swapped for the target's.
+  // Seen from the real model: a silent turn at payment sent the scene back to
+  // "for here or to go?", which the learner had already answered. A scene only
+  // moves forward. Someone who changes an earlier answer is acknowledged in the
+  // line, and the scene stays where it is.
+  if ("step" in next && order.indexOf(next.step) < order.indexOf(request.nodeId)) {
+    next = { step: request.nodeId };
+  }
+
+  // Recorded lines that belong to a step — its question, its written help — are
+  // only used for that step, and when the line and "next" disagree, which half
+  // is right depends on how the turn went. Every model tried got this wrong in
+  // one direction or the other.
+  //
+  // Stuck, and the line asks the current step again (or is its help): the line
+  // is right. "yes please, thank you" to "for here or to go?" was met with the
+  // question again and a jump to payment — but what was said out loud is what
+  // they will answer, so the scene stays.
+  //
+  // Otherwise the line is the wrong one and is swapped for the right step's.
+  // "I'll sit by the window" was accepted and the scene moved to payment with
+  // "for here or to go?" all over again; a stuck turn at for-here-or-to-go was
+  // helped with the size step's "small, or large?".
+  const steps = scriptSteps(scenario);
+  const here = steps.find((step) => step.id === request.nodeId);
+  const currentHelp = here?.helpId;
   if ("step" in next && "id" in say) {
-    const going = next.step;
     const picked = say.id;
-    const target = questionFor(scenario, going);
-    const askedFor = [...learnerIds].find(
-      (step) => step !== going && questionFor(scenario, step) === picked,
-    );
-    if (askedFor && target && recordedIds.has(target)) say = { id: target };
+    const going = next.step;
+    const belongsTo = steps.find(
+      (step) => step.questionId === picked || step.helpId === picked,
+    )?.id;
+    if (belongsTo && belongsTo !== going) {
+      const movingOn = going !== request.nodeId;
+      if (
+        movingOn &&
+        belongsTo === request.nodeId &&
+        (assessment === "stuck" || picked === currentHelp)
+      ) {
+        next = { step: request.nodeId };
+      } else {
+        const stuckHere = assessment === "stuck" && going === request.nodeId;
+        const replacement = stuckHere ? currentHelp : questionFor(scenario, going);
+        if (replacement && recordedIds.has(replacement)) say = { id: replacement };
+      }
+    }
+  }
+
+  // Seen from the real model: "just the latte to go", said at payment, closed
+  // the conversation with "have a good one!" and nobody ever paid. A scene
+  // closes when the learner is leaving or its last step is done — not while
+  // there are steps still ahead of it.
+  if ("end" in next && !scenario.openEnded && assessment !== "closing") {
+    const last = order[order.length - 1];
+    if (request.nodeId !== last) next = { step: request.nodeId };
+  }
+
+  // Stuck and given no tip: the step's written help is the line for exactly
+  // this moment — in character, with the phrase they need under it — so it is
+  // used rather than a line that helps nobody learn anything.
+  if (
+    assessment === "stuck" &&
+    !note &&
+    "step" in next &&
+    next.step === request.nodeId &&
+    currentHelp &&
+    recordedIds.has(currentHelp)
+  ) {
+    say = { id: currentHelp };
   }
 
   let follow: string | undefined;
-  if (mustReturn(request, scenario) && "free" in next) {
-    next = { step: request.nodeId };
-    const question = questionFor(scenario, request.nodeId);
-    // The director's line was written to stay off the script, so it does not
-    // ask the question the conversation is going back to. The recording does.
-    if (question && recordedIds.has(question) && !("id" in say && say.id === question)) {
-      follow = question;
+  const forcedHome = mustReturn(request, scenario) && "free" in next;
+  if (forcedHome) next = { step: request.nodeId };
+
+  // Whatever step the conversation lands on, the learner has to have been
+  // asked its question, or the turn is handed to them with nothing to answer.
+  // Seen from the real model: "No problem! Just to confirm, that's a small latte
+  // to go." — right, friendly, and it moved the scene to payment without ever
+  // asking card or cash. A line that asks nothing is followed by the step's
+  // recorded question. So is any line when the conversation was dragged home,
+  // because it was written to stay off the script.
+  //
+  // The step's own asking line is used, except where that line is the scene's
+  // greeting: "Hi there! What can I get you?" in the middle of an order is a
+  // second hello, so the step's written help asks instead. The help is not the
+  // default because it is written for a mishearing — "Sorry — card, or cash?"
+  // after "That's fine, a latte to go" apologises for nothing.
+  if ("step" in next && !scenario.openEnded) {
+    const staying = next.step === request.nodeId;
+    const opening = questionFor(scenario, next.step);
+    const start = scenario.nodes[scenario.start];
+    const greeting = start && isTutorNode(start) ? start.say : undefined;
+    // Moving on, only the target's own asking line will do: the help belongs to
+    // the step being left.
+    const candidates = !staying
+      ? [opening]
+      : opening === greeting
+        ? [currentHelp, opening]
+        : [opening, currentHelp];
+    const asking = candidates.find((id) => id && recordedIds.has(id));
+    const spoken = "id" in say ? bank[say.id]?.text ?? "" : say.text;
+    const alreadyAsked = "id" in say && candidates.includes(say.id);
+    if (asking && !alreadyAsked && (forcedHome || !spoken.includes("?"))) {
+      follow = asking;
     }
   }
   if (lastTurn(request)) {

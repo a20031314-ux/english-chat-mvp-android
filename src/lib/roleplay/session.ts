@@ -353,6 +353,14 @@ export function submitSpeech(
   state: SessionState,
   heard: string,
   now: number,
+  /**
+   * When their voice began, if the microphone could tell. Hesitation is the
+   * silence before an answer, so it ends here — not at `now`, which since the
+   * turn started ending itself also counts the whole sentence and the pause
+   * after it. Measured to `now`, any answer longer than a couple of seconds
+   * read as a struggle, and the level sank on learners who were doing fine.
+   */
+  speechStartedAt?: number | null,
 ): SubmitResult {
   const node = scenario.nodes[state.nodeId];
   if (!node || !isLearnerNode(node) || state.pending || state.queue.length > 0) {
@@ -366,7 +374,10 @@ export function submitSpeech(
 
   const settings = settingsForLevel(state.difficulty.level);
   const attempts = state.attempts + 1;
-  const hesitationMs = state.listeningSince ? now - state.listeningSince : 0;
+  const answeredAt = speechStartedAt ?? now;
+  const hesitationMs = state.listeningSince
+    ? Math.max(0, answeredAt - state.listeningSince)
+    : 0;
   const history = heard.trim()
     ? remember(state.history, { who: "learner", text: heard.trim() })
     : state.history;

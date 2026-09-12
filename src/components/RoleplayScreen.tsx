@@ -8,7 +8,18 @@ import {
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
 import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
-import { fetchDirection, listenForTurn, type Recorder } from "@/lib/roleplay/listen";
+import {
+  fetchContext,
+  fetchDirection,
+  listenForTurn,
+  type Recorder,
+} from "@/lib/roleplay/listen";
+import {
+  EMPTY_MEMORY,
+  foldDue,
+  rawLines,
+  type ConversationMemory,
+} from "@/lib/roleplay/memory";
 import {
   afterSaying,
   applyDirection,
@@ -82,6 +93,16 @@ export function RoleplayScreen({
   const [directing, setDirecting] = useState(false);
   const recorderRef = useRef<Recorder | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  // The tutor's notes on what has left its verbatim view (memory.ts). Kept out
+  // of the session state on purpose: a fold lands whenever its request comes
+  // back, and every other update here replaces the session state wholesale from
+  // the value it started with — so notes stored inside it would be overwritten
+  // by the next line that finished playing.
+  const [memory, setMemory] = useState<ConversationMemory>(EMPTY_MEMORY);
+  const folding = useRef(false);
+  // Bumped per session, so a fold that comes back after the scene changed is
+  // dropped rather than applied to the wrong conversation.
+  const sessionRef = useRef(0);
 
   const bank = scenario ? sentencesFor(scenario.language) : {};
 
@@ -91,6 +112,9 @@ export function RoleplayScreen({
     setState(fresh);
     setInstruction(currentInstruction(scenario, bank, fresh));
     setSaid([]);
+    setMemory(EMPTY_MEMORY);
+    folding.current = false;
+    sessionRef.current += 1;
     // The bank is derived from the scenario, so it moves with it.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scenarioId]);
@@ -173,7 +197,12 @@ export function RoleplayScreen({
     let cancelled = false;
     setDirecting(true);
     void fetchDirection({
-      request: instruction.request,
+      // Verbatim, every line the notes do not cover; the notes for the rest.
+      request: {
+        ...instruction.request,
+        history: rawLines(instruction.request.history, memory),
+        context: memory.text,
+      },
       nativeLanguage,
       isPremium,
     }).then((direction) => {
@@ -192,11 +221,39 @@ export function RoleplayScreen({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [instruction]);
 
+  /**
+   * Fold what has left the tutor's verbatim view into its notes, in the
+   * background. No turn waits on this: the next one simply has the notes if
+   * they are back by then, and a failed fold is tried again later.
+   */
+  const historyLength = state?.history.length ?? 0;
+  useEffect(() => {
+    if (!scenario || !state || folding.current) return;
+    const due = foldDue(state.history, memory);
+    if (!due) return;
+    folding.current = true;
+    const session = sessionRef.current;
+    void fetchContext({
+      scenarioId: scenario.id,
+      previous: memory.text,
+      lines: due.lines,
+      isPremium,
+    }).then((notes) => {
+      if (session !== sessionRef.current) return;
+      folding.current = false;
+      if (!notes) return;
+      setMemory((current) =>
+        current.upTo < due.upTo ? { text: notes, upTo: due.upTo } : current,
+      );
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [historyLength, memory]);
+
   const answer = useCallback(
-    async (heard: string) => {
+    async (heard: string, endedAt: number, speechStartedAt: number | null) => {
       if (!scenario || !state) return;
       setSaid((current) => [...current, { who: "learner", text: heard || "…" }]);
-      const result = submitSpeech(scenario, bank, state, heard, Date.now());
+      const result = submitSpeech(scenario, bank, state, heard, endedAt, speechStartedAt);
       setState(result.state);
       setInstruction(result.instruction);
     },
@@ -226,12 +283,16 @@ export function RoleplayScreen({
     const recorder = recorderRef.current;
     if (!recorder) return;
     recorderRef.current = null;
+    // Both read before transcribing: the wait for the words to come back is the
+    // network's time, not the learner's.
+    const endedAt = Date.now();
+    const speechStartedAt = recorder.speechStartedAt();
     setRecording(false);
     setSpeaking(false);
     setThinking(true);
     const heard = await recorder.stop();
     setThinking(false);
-    await answer(heard);
+    await answer(heard, endedAt, speechStartedAt);
   };
 
   /**

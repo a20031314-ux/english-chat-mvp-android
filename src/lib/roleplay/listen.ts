@@ -4,6 +4,7 @@ import {
   HISTORY_LINES,
   type Direction,
   type DirectorRequest,
+  type SpokenLine,
 } from "@/lib/roleplay/director";
 
 /**
@@ -24,6 +25,16 @@ export type Recorder = {
   stop: () => Promise<string>;
   /** Give up without transcribing, for a turn the learner abandoned. */
   cancel: () => void;
+  /**
+   * When the learner's voice began, or null if none was ever detected.
+   *
+   * This, not the moment the turn was sent, is where their hesitation ends.
+   * Since the turn started ending itself, "sent" means speaking plus the pause
+   * that closes it — and measured that way every ordinary sentence read as a
+   * struggle, pulling the level down until the matcher waved through anything
+   * sharing a word with an answer.
+   */
+  speechStartedAt: () => number | null;
 };
 
 /** Below this, the recording is a click or a breath rather than an answer. */
@@ -138,7 +149,7 @@ function analysisContext(): AudioContext {
   return analysisCtx;
 }
 
-type VoiceWatch = { stop: () => void };
+type VoiceWatch = { stop: () => void; speechStartedAt: () => number | null };
 
 function watchForVoice(
   stream: MediaStream,
@@ -155,7 +166,7 @@ function watchForVoice(
   } catch {
     // No analysis available — the caller still has its own control, and a turn
     // that cannot be detected is better than a turn that cannot be spoken.
-    return { stop: () => undefined };
+    return { stop: () => undefined, speechStartedAt: () => null };
   }
 
   const samples = new Float32Array(analyser.fftSize);
@@ -163,6 +174,9 @@ function watchForVoice(
   let speechSince: number | null = null;
   let silenceSince: number | null = null;
   let spoke = false;
+  // The start of the burst that turned out to be speech, not the moment it was
+  // confirmed as such: the learner began talking then.
+  let firstSpeechAt: number | null = null;
   let done = false;
 
   const finish = () => {
@@ -189,6 +203,7 @@ function watchForVoice(
       if (speechSince === null) speechSince = now;
       if (!spoke && now - speechSince >= MIN_SPEECH_MS) {
         spoke = true;
+        firstSpeechAt = speechSince;
         on.speaking(true);
       }
     } else {
@@ -211,16 +226,19 @@ function watchForVoice(
     if (!spoke && now - startedAt >= NO_SPEECH_MS) finish();
   }, 60);
 
-  return { stop: () => {
-    if (done) return;
-    done = true;
-    window.clearInterval(timer);
-    try {
-      source.disconnect();
-    } catch {
-      // Already gone with the stream.
-    }
-  } };
+  return {
+    stop: () => {
+      if (done) return;
+      done = true;
+      window.clearInterval(timer);
+      try {
+        source.disconnect();
+      } catch {
+        // Already gone with the stream.
+      }
+    },
+    speechStartedAt: () => firstSpeechAt,
+  };
 }
 
 export async function listenForTurn(input: {
@@ -279,6 +297,7 @@ export async function listenForTurn(input: {
       if (recorder.state !== "inactive") recorder.stop();
       release();
     },
+    speechStartedAt: () => watch.speechStartedAt(),
   };
 }
 
@@ -303,9 +322,10 @@ export async function fetchDirection(input: {
       },
       body: JSON.stringify({
         ...input.request,
-        // The director reads only the last few lines; the rest would be bytes
-        // for nothing on every turn.
+        // The caller has already cut this to the lines the notes do not cover;
+        // the ceiling is for when the notes have fallen behind.
         history: input.request.history.slice(-HISTORY_LINES),
+        context: input.request.context ?? "",
         nativeLanguage: input.nativeLanguage,
       }),
     });
@@ -326,6 +346,44 @@ export async function fetchDirection(input: {
     };
   } catch (error) {
     console.error("[roleplay] direction threw", error);
+    return null;
+  }
+}
+
+/**
+ * Fold lines the tutor no longer reads verbatim into its notes.
+ *
+ * Fired beside the conversation, not in front of it: nothing waits on this,
+ * and null just means the notes stay as they were and the fold is tried again
+ * on a later turn.
+ */
+export async function fetchContext(input: {
+  scenarioId: string;
+  previous: string;
+  lines: SpokenLine[];
+  isPremium: boolean;
+}): Promise<string | null> {
+  try {
+    const response = await fetch(apiUrl("/api/roleplay/context"), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...entitlementHeaders(input.isPremium),
+      },
+      body: JSON.stringify({
+        scenarioId: input.scenarioId,
+        previous: input.previous,
+        lines: input.lines,
+      }),
+    });
+    if (!response.ok) {
+      console.error("[roleplay] context failed with", response.status);
+      return null;
+    }
+    const body = (await response.json()) as { notes?: unknown };
+    return typeof body.notes === "string" && body.notes.trim() ? body.notes.trim() : null;
+  } catch (error) {
+    console.error("[roleplay] context threw", error);
     return null;
   }
 }

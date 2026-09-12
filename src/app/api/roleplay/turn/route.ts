@@ -2,36 +2,41 @@ import { NextRequest } from "next/server";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { SCENARIOS, findScenario, sentencesFor } from "@/lib/roleplay/catalog";
 import {
-  directorSystemPrompt,
-  directorUserMessage,
   parseDirection,
+  readSpokenLines,
   recordedLines,
+  tutorMessages,
+  tutorSystemPrompt,
   type DirectorRequest,
-  type SpokenLine,
 } from "@/lib/roleplay/director";
+import { MAX_CONTEXT_CHARS } from "@/lib/roleplay/memory";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 
 export const dynamic = "force-dynamic";
 
-export async function OPTIONS(request: NextRequest) {
-  return corsPreflightResponse(request);
+/**
+ * The model the tutor speaks through, apart from the one everything else uses.
+ *
+ * It only runs on turns the script could not take, so a better model than the
+ * app's default costs well under a won more per intervention — nothing beside a
+ * minute of call — and those turns are all judgement: hearing that "I'll sit by
+ * the window" means "for here", and bringing a detour home.
+ *
+ * Chosen on six turns taken from a real session, each run twice. gpt-4.1-mini
+ * got all six right both times in about a second and a half. gpt-5-mini read
+ * meaning a little better but twice skipped a question the scene still needed,
+ * and took two to three seconds — silence, in a spoken conversation. gpt-4o-mini,
+ * the app's default, picked a goodbye mid-order. Set by environment so the
+ * choice can move without a release.
+ */
+function tutorModel(): string {
+  return process.env.OPENAI_DIRECTOR_MODEL?.trim() || "gpt-4.1-mini";
 }
 
-function readHistory(raw: unknown): SpokenLine[] {
-  if (!Array.isArray(raw)) return [];
-  return raw
-    .map((line) => {
-      const record = (typeof line === "object" && line !== null ? line : {}) as {
-        who?: unknown;
-        text?: unknown;
-      };
-      const who = record.who === "learner" ? "learner" : "tutor";
-      const text = typeof record.text === "string" ? record.text.trim().slice(0, 500) : "";
-      return { who, text } as SpokenLine;
-    })
-    .filter((line) => line.text);
+export async function OPTIONS(request: NextRequest) {
+  return corsPreflightResponse(request);
 }
 
 function readCount(raw: unknown): number {
@@ -74,7 +79,9 @@ export async function POST(request: NextRequest) {
     nodeId,
     mode: body.mode === "free" ? "free" : "script",
     heard: typeof body.heard === "string" ? body.heard.trim().slice(0, 500) : "",
-    history: readHistory(body.history),
+    history: readSpokenLines(body.history),
+    context:
+      typeof body.context === "string" ? body.context.trim().slice(0, MAX_CONTEXT_CHARS) : "",
     freeTurns: readCount(body.freeTurns),
     directedTurns: readCount(body.directedTurns),
     level: Math.min(5, Math.max(1, readCount(body.level) || 3)),
@@ -86,18 +93,24 @@ export async function POST(request: NextRequest) {
   const recorded = recordedLines(scenario, SCENARIOS, bank);
 
   try {
+    const model = tutorModel();
+    // Reasoning models spend hidden tokens before answering and take their cap
+    // under another name. Minimal effort: this is one spoken line, and every
+    // second of thinking is a second of silence in a conversation.
+    const reasoning = /^(gpt-5|o\d)/.test(model);
     const completion = await client.chat.completions.create({
-      model: chatModel(),
+      model,
       messages: [
         {
           role: "system",
-          content: directorSystemPrompt({ scenario, bank, recorded, request: turn }),
+          content: tutorSystemPrompt({ scenario, bank, recorded, request: turn }),
         },
-        { role: "user", content: directorUserMessage(turn) },
+        ...tutorMessages(turn),
       ],
       response_format: { type: "json_object" },
-      // One line and a note. A cap is cheaper than trimming afterwards.
-      max_tokens: 300,
+      ...(reasoning
+        ? { max_completion_tokens: 2000, reasoning_effort: "minimal" as const }
+        : { max_tokens: 300 }),
     });
     const direction = parseDirection(completion.choices[0]?.message?.content ?? "", {
       scenario,
