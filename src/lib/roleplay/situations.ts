@@ -314,6 +314,21 @@ export const SITUATIONS: SituationBrief[] = [
   },
 ];
 
+/**
+ * The situation a scenario id belongs to.
+ *
+ * A situation is a situation in any language — "just talk" is the same brief
+ * whether the friend speaks Thai or Portuguese — so a scene written for a
+ * particular language carries it as a suffix on the id, and the situation is
+ * what comes before. Ids without one are their own situation.
+ */
+export function situationForScenario(scenarioId: string): SituationBrief | null {
+  const direct = findSituation(scenarioId);
+  if (direct) return direct;
+  const base = scenarioId.slice(0, scenarioId.lastIndexOf("-"));
+  return base ? findSituation(base) : null;
+}
+
 export function findSituation(id: string): SituationBrief | null {
   return SITUATIONS.find((situation) => situation.id === id) ?? null;
 }

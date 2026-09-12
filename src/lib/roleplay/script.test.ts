@@ -2,7 +2,8 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { realtimeCallVoice } from "../realtimeCallSession.ts";
 import { judge } from "./session.ts";
-import { SCENARIOS, findScenario, sentencesFor } from "./catalog.ts";
+import { SCENARIOS, findScenario, scenariosForLanguage, sentencesFor } from "./catalog.ts";
+import { SUPPORTED_LEARNING_LANGUAGES } from "../learningLanguages.ts";
 import {
   danglingTargets,
   hasEnding,
@@ -12,7 +13,7 @@ import {
   sentenceIdsUsed,
   unreachableNodes,
 } from "./script.ts";
-import { SITUATIONS, findSituation } from "./situations.ts";
+import { SITUATIONS, situationForScenario } from "./situations.ts";
 import { TTS_VOICES } from "./voices.ts";
 
 test("every scene is read in a voice the speech model has", () => {
@@ -172,7 +173,7 @@ test("every written scenario traces back to a situation on the list", () => {
   // Otherwise the list stops describing what exists and starts being decoration.
   for (const scenario of SCENARIOS) {
     assert.ok(
-      findSituation(scenario.id),
+      situationForScenario(scenario.id),
       `${scenario.id} is written but not on the situation list`,
     );
   }
@@ -250,5 +251,36 @@ test("widening a node did not let its side question through", () => {
         `${scenarioId}/${nodeId} at ${strictness}: "${said}"`,
       );
     }
+  }
+});
+
+test("every language the app teaches has something to talk to", () => {
+  // The hole this fills: calling used to be a realtime call reached from the
+  // chat screen, which worked in any language, and the scripted tab only ever
+  // spoke English. Folding them together without this would have left everyone
+  // learning anything else with no way to speak at all.
+  for (const language of SUPPORTED_LEARNING_LANGUAGES) {
+    const scenarios = scenariosForLanguage(language.code);
+    assert.ok(
+      scenarios.length > 0,
+      `${language.code} has no scenario, so its tab is hidden and nothing replaces it`,
+    );
+    assert.ok(
+      scenarios.some((scenario) => scenario.openEnded),
+      `${language.code} has no open conversation, only errands`,
+    );
+  }
+});
+
+test("an open conversation is scripted only at its ends", () => {
+  // What makes it affordable in fourteen languages: two recorded lines each.
+  // Everything between them is the character, spoken in the same voice.
+  for (const scenario of SCENARIOS) {
+    if (!scenario.openEnded) continue;
+    assert.equal(
+      sentenceIdsUsed(scenario).length,
+      2,
+      `${scenario.id} records more than a greeting and a goodbye`,
+    );
   }
 });

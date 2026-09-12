@@ -1,3 +1,4 @@
+import { justTalkScenarios, justTalkSentences } from "./justTalk.ts";
 import type { RoleplayScenario, SentenceBank } from "./script.ts";
 
 /**
@@ -1258,6 +1259,14 @@ export const SCENARIOS: RoleplayScenario[] = [
     },
   },
 ];
+
+// "Just talk" exists in every language the app teaches (justTalk.ts). Merged in
+// rather than written out here, because thirteen near-identical scenes in the
+// middle of the scripted ones would bury them.
+for (const [language, bank] of Object.entries(justTalkSentences())) {
+  SENTENCES[language] = { ...bank, ...SENTENCES[language] };
+}
+SCENARIOS.push(...justTalkScenarios());
 
 export function sentencesFor(language: string): SentenceBank {
   return SENTENCES[language] ?? {};
