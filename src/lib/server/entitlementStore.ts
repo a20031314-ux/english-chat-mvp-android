@@ -13,14 +13,20 @@
 
 import { kvGetJson, kvGetNumber, kvIncrBy, kvSetJson } from "./kv.ts";
 import {
+  FREE_LIFETIME_ROLEPLAY_POINTS,
+  ROLEPLAY_POINT_SECONDS,
+} from "../billing/config.ts";
+import {
   planCallBlock,
   pointsForCallSeconds,
   refundSplit,
   splitSpend,
   spentPoints,
+  totalPoints,
   type PointBalance,
   type PointSpend,
 } from "../billing/points.ts";
+import { monthlyImportPoints } from "../billing/videoPrep.ts";
 
 /** Long enough that a day's counter outlives the day in every timezone. */
 const DAILY_TTL_SECONDS = 3 * 24 * 60 * 60;
@@ -85,6 +91,24 @@ function opKey(userId: string, op: string) {
 function purchasedPointsKey(userId: string) {
   return `points:bought:${userId}`;
 }
+
+/** Lifetime, like the catalog trial: the free fifteen minutes do not come back. */
+function roleplayTrialKey(userId: string) {
+  return `usage:rptrial:${userId}`;
+}
+
+/** One conversation's clock, so a charge knows how long it has been running. */
+function roleplaySessionKey(userId: string, sessionId: string) {
+  return `points:rpsession:${userId}:${sessionId}`;
+}
+
+/**
+ * Long enough to outlive any conversation — the scene closes itself after forty
+ * turns — and short enough that abandoned rows do not pile up. A row that
+ * expires mid-conversation restarts the clock, which charges the learner for
+ * one more block than they owed; a lost row cannot overcharge by more than that.
+ */
+const ROLEPLAY_SESSION_TTL_SECONDS = 6 * 60 * 60;
 
 function callHoldKey(userId: string, holdId: string) {
   return `points:hold:${userId}:${holdId}`;
@@ -378,6 +402,80 @@ export async function settleCallHold(
   const refunded = spentPoints(refund);
   if (refunded > 0) await applySpend(userId, refund, -1);
   return { refundedPoints: refunded };
+}
+
+type RoleplaySession = { startedAt: number; charged: number };
+
+/** Points left for call learning: the free lifetime allowance, or the balance. */
+export async function roleplayPointsLeft(
+  userId: string,
+  isPremium: boolean,
+): Promise<number> {
+  if (!isPremium) {
+    const used = await kvGetNumber(roleplayTrialKey(userId));
+    return Math.max(0, FREE_LIFETIME_ROLEPLAY_POINTS - used);
+  }
+  const balance = await readPointBalance(userId, monthlyImportPoints(true));
+  return totalPoints(balance);
+}
+
+/**
+ * Charge for the conversation so far, and say whether it may go on.
+ *
+ * Charged as it runs rather than held up front, which the realtime call had to
+ * do because it could not see its own call: here every turn comes through the
+ * server, so the clock can be read from the server's own first sighting of the
+ * conversation and there is nothing to refund and nothing to take on trust.
+ *
+ * The first block is owed the moment the conversation starts — five minutes are
+ * bought, not accrued — and each later block falls due as its five minutes
+ * begin. A turn that cannot be paid for is refused, and the caller ends the
+ * scene rather than leaving someone talking to a character that has stopped
+ * answering.
+ */
+export async function chargeRoleplayTurn(
+  userId: string,
+  isPremium: boolean,
+  sessionId: string,
+  now: number,
+): Promise<{ ok: boolean; charged: number; left: number }> {
+  const key = roleplaySessionKey(userId, sessionId);
+  const session = (await kvGetJson<RoleplaySession>(key)) ?? {
+    startedAt: now,
+    charged: 0,
+  };
+  const elapsed = Math.max(0, now - session.startedAt);
+  const due =
+    Math.floor(elapsed / (ROLEPLAY_POINT_SECONDS * 1000)) + 1;
+  const owed = due - session.charged;
+
+  if (owed <= 0) {
+    // Nothing has fallen due since the last turn, which is most turns.
+    if (session.charged === 0) {
+      await kvSetJson(key, session, ROLEPLAY_SESSION_TTL_SECONDS);
+    }
+    return { ok: true, charged: 0, left: await roleplayPointsLeft(userId, isPremium) };
+  }
+
+  if (!isPremium) {
+    const used = await kvGetNumber(roleplayTrialKey(userId));
+    if (used + owed > FREE_LIFETIME_ROLEPLAY_POINTS) {
+      return { ok: false, charged: 0, left: Math.max(0, FREE_LIFETIME_ROLEPLAY_POINTS - used) };
+    }
+    await kvIncrBy(roleplayTrialKey(userId), owed);
+  } else {
+    const balance = await readPointBalance(userId, monthlyImportPoints(true));
+    const spend = splitSpend(balance, owed);
+    if (!spend) return { ok: false, charged: 0, left: totalPoints(balance) };
+    await applySpend(userId, spend, 1);
+  }
+
+  await kvSetJson(
+    key,
+    { startedAt: session.startedAt, charged: due } satisfies RoleplaySession,
+    ROLEPLAY_SESSION_TTL_SECONDS,
+  );
+  return { ok: true, charged: owed, left: await roleplayPointsLeft(userId, isPremium) };
 }
 
 function creditedPurchaseKey(userId: string, transactionId: string) {

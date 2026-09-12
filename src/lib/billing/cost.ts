@@ -13,6 +13,8 @@
  * and to stop a bundle being edited into a loss.
  */
 
+import { ROLEPLAY_POINT_SECONDS } from "./config.ts";
+
 /** Where the model prices came from, so the next person can check them. */
 export const PRICE_SOURCE = {
   url: "https://developers.openai.com/api/docs/pricing",
@@ -109,6 +111,62 @@ export function videoPointCostUsd(options: { transcribed: boolean }): number {
     ? (seconds / 60) * WHISPER_USD_PER_MINUTE
     : 0;
   return passes * subtitlePassUsd() + whisper;
+}
+
+/** USD per 1M tokens, gpt-4.1-mini, which the call-learning character speaks through. */
+export const TUTOR_USD_PER_MTOK = { input: 0.4, output: 1.6 } as const;
+
+/**
+ * USD per minute of speech from gpt-4o-mini-tts.
+ *
+ * The weakest number in this file and the largest share of what a minute of
+ * call learning costs, so it is the one to check against a real bill first.
+ * OpenAI quotes this model per token of text; this is that converted at the
+ * rate the scene actually speaks at, which is roughly a spoken minute per
+ * seven hundred characters.
+ */
+export const TTS_USD_PER_MINUTE = 0.015;
+
+/**
+ * A turn of call learning, measured rather than guessed.
+ *
+ * `input` is what tutorSystemPrompt plus twenty lines of conversation and a
+ * page of notes actually comes to; `output` is one line, its translation and a
+ * tip, well inside the 300-token cap the route sets. `turnSeconds` is a spoken
+ * exchange end to end: the character's line, the learner's answer, and the
+ * moment in between.
+ */
+export const ROLEPLAY_TURN = {
+  input: 1060,
+  output: 120,
+  turnSeconds: 15,
+  tutorSpeakingSeconds: 5,
+  learnerSpeakingSeconds: 6,
+} as const;
+
+/**
+ * USD of model time in one minute of call learning.
+ *
+ * Three bills, not one: the character deciding what to say, the speech it is
+ * said in, and the transcription of the answer. Synthesis is the largest of
+ * them, which is why a scene that plays recorded lines is so much cheaper than
+ * one that invents every line — and why the number here is the expensive case,
+ * with nothing recorded but the greeting and the goodbye.
+ */
+export function roleplayMinuteUsd(): number {
+  const turns = 60 / ROLEPLAY_TURN.turnSeconds;
+  const think =
+    (ROLEPLAY_TURN.input * TUTOR_USD_PER_MTOK.input) / 1_000_000 +
+    (ROLEPLAY_TURN.output * TUTOR_USD_PER_MTOK.output) / 1_000_000;
+  const speak = (ROLEPLAY_TURN.tutorSpeakingSeconds / 60) * TTS_USD_PER_MINUTE;
+  const hear =
+    (ROLEPLAY_TURN.learnerSpeakingSeconds / 60) * CALL_TRANSCRIBE_USD_PER_MINUTE;
+  return turns * (think + speak + hear);
+}
+
+/** USD of model time in one point's worth of call learning. */
+export function roleplayPointCostUsd(): number {
+  return roleplayMinuteUsd() * (ROLEPLAY_POINT_SECONDS / 60);
 }
 
 /**

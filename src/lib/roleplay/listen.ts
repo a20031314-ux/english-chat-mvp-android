@@ -1,6 +1,10 @@
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import {
+  ROLEPLAY_POINTS_CLIENT_HEADER,
+  ROLEPLAY_SESSION_HEADER,
+} from "@/lib/billing/config";
+import {
   HISTORY_LINES,
   type Direction,
   type DirectorRequest,
@@ -313,17 +317,37 @@ export async function listenForTurn(input: {
  * caller can fall back on the scene's recorded lines rather than showing a
  * failure the learner had nothing to do with.
  */
+/**
+ * A turn that could not be paid for, told apart from a turn that failed.
+ *
+ * They look the same over the wire and must not look the same on screen: a
+ * failure is a dropped turn the learner should simply say again, and this is a
+ * conversation that has to end. Returned rather than thrown so the caller
+ * decides what the scene does about it.
+ */
+export type OutOfPoints = { outOfPoints: true };
+
+export function isOutOfPoints(value: unknown): value is OutOfPoints {
+  return typeof value === "object" && value !== null && "outOfPoints" in value;
+}
+
 export async function fetchDirection(input: {
   request: Omit<DirectorRequest, "targetLanguage" | "nativeLanguage">;
   nativeLanguage: string;
   isPremium: boolean;
-}): Promise<Direction | null> {
+  /** Names this conversation, so the server can keep its clock between turns. */
+  sessionId: string;
+}): Promise<Direction | OutOfPoints | null> {
   try {
     const response = await fetch(apiUrl("/api/roleplay/turn"), {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         ...entitlementHeaders(input.isPremium),
+        // Says this build will show the learner what a refusal means, which is
+        // what makes it safe for the server to refuse (billing/config.ts).
+        [ROLEPLAY_POINTS_CLIENT_HEADER]: "1",
+        [ROLEPLAY_SESSION_HEADER]: input.sessionId,
       },
       body: JSON.stringify({
         ...input.request,
@@ -334,6 +358,7 @@ export async function fetchDirection(input: {
         nativeLanguage: input.nativeLanguage,
       }),
     });
+    if (response.status === 402) return { outOfPoints: true };
     if (!response.ok) {
       console.error("[roleplay] direction failed with", response.status);
       return null;

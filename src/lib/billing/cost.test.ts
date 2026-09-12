@@ -14,6 +14,10 @@ import {
   callMinuteUsd,
   grantMargin,
   pointCostUsd,
+  ROLEPLAY_TURN,
+  TTS_USD_PER_MINUTE,
+  roleplayMinuteUsd,
+  roleplayPointCostUsd,
 } from "./cost.ts";
 
 test("a point costs what a minute of call costs", () => {
@@ -155,5 +159,28 @@ test("a video with captions costs less than one that has to be transcribed", () 
   assert.ok(
     videoPointCostUsd({ transcribed: false }) <
       videoPointCostUsd({ transcribed: true }),
+  );
+});
+
+test("call learning comes in under what a point is assumed to cost", () => {
+  // The whole price rests on this ordering. A point buys five minutes of call
+  // learning or one minute of realtime audio, and if the cheap side ever cost
+  // more than the expensive one, every margin in this file would be wrong and
+  // nothing else here would notice.
+  assert.ok(
+    roleplayPointCostUsd() < pointCostUsd(),
+    `five minutes of call learning costs ${roleplayPointCostUsd().toFixed(4)}, a point is assumed to cost ${pointCostUsd().toFixed(4)}`,
+  );
+});
+
+test("what one point of call learning buys is written down, not guessed", () => {
+  // Synthesis is the largest share of it, which is why the scripted scenes —
+  // which play recordings instead — are what makes this number fall.
+  const perMinute = roleplayMinuteUsd();
+  const turns = 60 / ROLEPLAY_TURN.turnSeconds;
+  const speak = turns * (ROLEPLAY_TURN.tutorSpeakingSeconds / 60) * TTS_USD_PER_MINUTE;
+  assert.ok(
+    speak / perMinute > 0.5,
+    `speech is ${Math.round((speak / perMinute) * 100)}% of a minute, so it is the number to check first`,
   );
 });

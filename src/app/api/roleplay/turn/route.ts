@@ -10,6 +10,12 @@ import {
   type DirectorRequest,
 } from "@/lib/roleplay/director";
 import { MAX_CONTEXT_CHARS } from "@/lib/roleplay/memory";
+import {
+  ROLEPLAY_POINTS_CLIENT_HEADER,
+  ROLEPLAY_SESSION_HEADER,
+} from "@/lib/billing/config";
+import { chargeRoleplayTurn } from "@/lib/server/entitlementStore";
+import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
@@ -70,6 +76,20 @@ export async function POST(request: NextRequest) {
   const nodeId = typeof body.nodeId === "string" ? body.nodeId : "";
   if (!scenario.nodes[nodeId]) {
     return jsonWithCors(request, { error: "unknown step" }, { status: 400 });
+  }
+
+  // Charged as the conversation runs, and only for a build that can be told it
+  // has run out: an older one reads a refused turn as a failed one, drops it,
+  // and leaves the learner talking to a scene that has gone quiet.
+  if (request.headers.get(ROLEPLAY_POINTS_CLIENT_HEADER) === "1") {
+    const sessionId = request.headers.get(ROLEPLAY_SESSION_HEADER)?.trim().slice(0, 64);
+    if (sessionId) {
+      const { isPremium, userId } = await resolveRequestEntitlement(request);
+      const charge = await chargeRoleplayTurn(userId, isPremium, sessionId, Date.now());
+      if (!charge.ok) {
+        return jsonWithCors(request, { error: "NO_POINTS", left: charge.left }, { status: 402 });
+      }
+    }
   }
 
   await meterRequest(request, "roleplayTurn");

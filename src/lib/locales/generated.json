@@ -606,7 +606,8 @@
     "roleplayReviewSay": "こう言えました",
     "roleplayReviewLoading": "振り返っています…",
     "roleplayReviewFailed": "今は用意できませんでした。少ししてからもう一度押してください。",
-    "homeTabCall": "通話"
+    "homeTabCall": "通話",
+    "roleplayOutOfPoints": "無料の通話レッスンを使い切りました。定期購入で続けられます。"
   },
   "zh": {
     "appTitle": "{targetLanguage}批改聊天",
@@ -1215,7 +1216,8 @@
     "roleplayReviewSay": "你可以这样说",
     "roleplayReviewLoading": "正在回顾…",
     "roleplayReviewFailed": "现在没能整理出来，请稍后再点一次。",
-    "homeTabCall": "通话"
+    "homeTabCall": "通话",
+    "roleplayOutOfPoints": "免费的通话练习已用完。订阅后可以继续。"
   },
   "vi": {
     "appTitle": "Chat sửa {targetLanguage}",
@@ -1824,7 +1826,8 @@
     "roleplayReviewSay": "Bạn có thể nói",
     "roleplayReviewLoading": "Đang xem lại…",
     "roleplayReviewFailed": "Hiện chưa tạo được. Hãy bấm lại sau giây lát.",
-    "homeTabCall": "Gọi"
+    "homeTabCall": "Gọi",
+    "roleplayOutOfPoints": "Bạn đã dùng hết phần luyện gọi miễn phí. Đăng ký để tiếp tục."
   },
   "fr": {
     "appTitle": "Chat de correction d'{targetLanguage}",
@@ -2433,7 +2436,8 @@
     "roleplayReviewSay": "Vous auriez pu dire",
     "roleplayReviewLoading": "Retour en arrière…",
     "roleplayReviewFailed": "Impossible de le préparer pour l'instant. Réessayez dans un moment.",
-    "homeTabCall": "Appel"
+    "homeTabCall": "Appel",
+    "roleplayOutOfPoints": "L'entraînement à l'appel gratuit est épuisé. L'abonnement prend le relais."
   },
   "pt": {
     "appTitle": "Chat de correção de {targetLanguage}",
@@ -3042,7 +3046,8 @@
     "roleplayReviewSay": "Você poderia ter dito",
     "roleplayReviewLoading": "Revendo…",
     "roleplayReviewFailed": "Não deu para preparar agora. Toque de novo em instantes.",
-    "homeTabCall": "Chamada"
+    "homeTabCall": "Chamada",
+    "roleplayOutOfPoints": "A prática de chamada gratuita acabou. A assinatura continua daqui."
   },
   "id": {
     "appTitle": "Chat koreksi {targetLanguage}",
@@ -3651,7 +3656,8 @@
     "roleplayReviewSay": "Kamu bisa bilang",
     "roleplayReviewLoading": "Menengok kembali…",
     "roleplayReviewFailed": "Belum bisa disiapkan sekarang. Coba tekan lagi sebentar lagi.",
-    "homeTabCall": "Telepon"
+    "homeTabCall": "Telepon",
+    "roleplayOutOfPoints": "Latihan telepon gratis sudah habis. Langganan melanjutkan dari sini."
   },
   "it": {
     "appTitle": "Chat di correzione {targetLanguage}",
@@ -4260,7 +4266,8 @@
     "roleplayReviewSay": "Potevi dire",
     "roleplayReviewLoading": "Sto rivedendo…",
     "roleplayReviewFailed": "Non è stato possibile prepararlo ora. Riprova tra un momento.",
-    "homeTabCall": "Chiamata"
+    "homeTabCall": "Chiamata",
+    "roleplayOutOfPoints": "La pratica di chiamata gratuita è esaurita. L'abbonamento prosegue da qui."
   },
   "ru": {
     "appTitle": "Чат для правки {targetLanguage}",
@@ -4869,7 +4876,8 @@
     "roleplayReviewSay": "Можно было сказать",
     "roleplayReviewLoading": "Разбираем…",
     "roleplayReviewFailed": "Сейчас не получилось. Нажмите ещё раз через минуту.",
-    "homeTabCall": "Звонок"
+    "homeTabCall": "Звонок",
+    "roleplayOutOfPoints": "Бесплатная практика звонков закончилась. С подпиской можно продолжить."
   },
   "ar": {
     "appTitle": "دردشة تصحيح {targetLanguage}",
@@ -5478,7 +5486,8 @@
     "roleplayReviewSay": "كان يمكنك أن تقول",
     "roleplayReviewLoading": "نراجع…",
     "roleplayReviewFailed": "تعذّر تجهيزه الآن. اضغط الزر مرة أخرى بعد قليل.",
-    "homeTabCall": "مكالمة"
+    "homeTabCall": "مكالمة",
+    "roleplayOutOfPoints": "انتهى تدريب المكالمة المجاني. يمكنك المتابعة مع الاشتراك."
   },
   "th": {
     "appTitle": "แชทตรวจ {targetLanguage}",
@@ -6087,7 +6096,8 @@
     "roleplayReviewSay": "คุณพูดแบบนี้ได้",
     "roleplayReviewLoading": "กำลังทบทวน…",
     "roleplayReviewFailed": "ตอนนี้ยังสร้างไม่ได้ ลองกดอีกครั้งในอีกสักครู่",
-    "homeTabCall": "โทร"
+    "homeTabCall": "โทร",
+    "roleplayOutOfPoints": "ใช้การฝึกโทรแบบฟรีหมดแล้ว สมัครสมาชิกเพื่อใช้ต่อได้"
   },
   "hi": {
     "appTitle": "{targetLanguage} सुधार चैट",
@@ -6696,6 +6706,7 @@
     "roleplayReviewSay": "आप यह कह सकते थे",
     "roleplayReviewLoading": "पीछे देख रहे हैं…",
     "roleplayReviewFailed": "अभी तैयार नहीं हो सका। थोड़ी देर बाद फिर दबाएँ।",
-    "homeTabCall": "कॉल"
+    "homeTabCall": "कॉल",
+    "roleplayOutOfPoints": "मुफ़्त कॉल अभ्यास ख़त्म हो गया। सदस्यता लेकर जारी रख सकते हैं।"
   }
 }

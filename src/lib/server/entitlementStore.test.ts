@@ -12,6 +12,8 @@ import {
   getMonthlyImportPointsUsed,
   incrementCallsStarted,
   incrementDailyUsed,
+  chargeRoleplayTurn,
+  roleplayPointsLeft,
 } from "./entitlementStore.ts";
 
 // No KV credentials are set here, so these exercise the in-memory fallback.
@@ -96,4 +98,64 @@ test("call seconds accumulate for the month and ignore junk", async () => {
   await addMonthlyCallSeconds("talker", -100);
 
   assert.equal(await getMonthlyCallSeconds("talker"), 120);
+});
+
+const FIVE_MINUTES = 5 * 60 * 1000;
+
+test("call learning is free for fifteen minutes and then is not", async () => {
+  // The lifetime allowance: three points, five minutes each. Charged as the
+  // conversation runs, so the fourth block is where it stops.
+  const t0 = 1_700_000_000_000;
+  const first = await chargeRoleplayTurn("rp-free", false, "s1", t0);
+  assert.equal(first.ok, true);
+  assert.equal(first.charged, 1, "the first five minutes are bought, not accrued");
+  assert.equal(first.left, 2);
+
+  // Another turn inside the same block costs nothing.
+  const same = await chargeRoleplayTurn("rp-free", false, "s1", t0 + 60_000);
+  assert.equal(same.charged, 0);
+  assert.equal(same.left, 2);
+
+  const second = await chargeRoleplayTurn("rp-free", false, "s1", t0 + FIVE_MINUTES);
+  assert.equal(second.charged, 1);
+  const third = await chargeRoleplayTurn("rp-free", false, "s1", t0 + 2 * FIVE_MINUTES);
+  assert.equal(third.charged, 1);
+  assert.equal(third.left, 0);
+
+  const refused = await chargeRoleplayTurn("rp-free", false, "s1", t0 + 3 * FIVE_MINUTES);
+  assert.equal(refused.ok, false, "the sixteenth minute is not free");
+  assert.equal(refused.charged, 0);
+});
+
+test("the free allowance does not come back with a new conversation", async () => {
+  const t0 = 1_700_000_000_000;
+  for (const session of ["a", "b", "c"]) {
+    const charge = await chargeRoleplayTurn("rp-lifetime", false, session, t0);
+    assert.equal(charge.ok, true, `${session} should still be affordable`);
+    assert.equal(charge.charged, 1);
+  }
+  const fourth = await chargeRoleplayTurn("rp-lifetime", false, "d", t0);
+  assert.equal(fourth.ok, false, "three conversations is the whole of it");
+});
+
+test("a conversation is charged by its own clock, not by the last one's", async () => {
+  const t0 = 1_700_000_000_000;
+  await chargeRoleplayTurn("rp-clock", true, "one", t0);
+  // An hour later, a new conversation owes one block — not thirteen.
+  const later = await chargeRoleplayTurn("rp-clock", true, "two", t0 + 60 * 60 * 1000);
+  assert.equal(later.charged, 1);
+});
+
+test("a subscriber spends the monthly grant rather than the free allowance", async () => {
+  const t0 = 1_700_000_000_000;
+  const charge = await chargeRoleplayTurn("rp-premium", true, "s1", t0);
+  assert.equal(charge.ok, true);
+  assert.equal(charge.charged, 1);
+  // Taken out of the same pool video imports draw on, which is the point of
+  // there being one currency.
+  assert.equal(await getMonthlyImportPointsUsed("rp-premium"), 1);
+  assert.equal(await roleplayPointsLeft("rp-premium", true), 79);
+  // And the free lifetime allowance is untouched, so cancelling does not hand
+  // anyone a fresh fifteen minutes they already had.
+  assert.equal(await roleplayPointsLeft("rp-premium", false), 3);
 });

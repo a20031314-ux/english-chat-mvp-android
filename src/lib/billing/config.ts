@@ -113,6 +113,45 @@ export const CALL_HOLD_HEADER = "x-call-hold";
 /** How many seconds the block bought, so the app knows when to hang up. */
 export const CALL_BLOCK_SECONDS_HEADER = "x-call-seconds";
 
+/**
+ * What one point buys of call learning.
+ *
+ * Five minutes, against a minute of realtime audio for the same point. The
+ * gap is the whole argument for the mode: the character is a text model and a
+ * recorded or synthesised line, not an audio model listening in real time, and
+ * measured against the prompt it actually sends this comes in under what a
+ * point is assumed to cost (roleplayPointCostUsd in cost.ts).
+ *
+ * It buys less than it should today, because every tutor line is synthesised.
+ * The scripted scenes play recordings instead, and synthesis is more than half
+ * of what a minute costs — so this number can rise, without the price moving,
+ * once those are offered again.
+ */
+export const ROLEPLAY_POINT_SECONDS = 5 * 60;
+
+/**
+ * Free call learning, once, for as long as the account exists.
+ *
+ * Fifteen minutes: long enough to have a conversation, be stopped in it, and
+ * read why — which is the thing worth trying before paying for it. Lifetime
+ * rather than monthly because a monthly free grant has no ceiling. It renews
+ * for everyone who never pays, and reinstalling renews it sooner.
+ */
+export const FREE_LIFETIME_ROLEPLAY_POINTS = 3;
+
+/**
+ * Sent by a build that understands being told it has run out.
+ *
+ * Only such a build is charged. An older one reads a refused turn as a turn
+ * that simply failed, drops it, and leaves the learner talking to a scene that
+ * does not answer — worse than serving it for free. This heals as people
+ * update, the way the call's own block header did before it.
+ */
+export const ROLEPLAY_POINTS_CLIENT_HEADER = "x-roleplay-points";
+
+/** Names the conversation being charged, so its clock survives between turns. */
+export const ROLEPLAY_SESSION_HEADER = "x-roleplay-session";
+
 /** Lifetime free catalog opens (not a monthly reset). */
 export const FREE_CATALOG_TRIAL_COUNT = 3;
 

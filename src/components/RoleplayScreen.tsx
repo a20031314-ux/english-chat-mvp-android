@@ -17,6 +17,7 @@ import {
   fetchContext,
   fetchDirection,
   fetchReview,
+  isOutOfPoints,
   listenForTurn,
   type Recorder,
 } from "@/lib/roleplay/listen";
@@ -146,6 +147,13 @@ export function RoleplayScreen({
     failed: boolean;
   } | null>(null);
   const folding = useRef(false);
+  // Names this conversation to the server, which charges by how long it has
+  // been running (billing/config.ts). New on every scene, so a new scene is a
+  // new five minutes rather than a continuation of the last one.
+  const conversationId = useRef("");
+  // Set when a turn could not be paid for. The scene ends on it rather than
+  // going quiet, which is what a dropped turn looks like and is not this.
+  const [outOfPoints, setOutOfPoints] = useState(false);
   // Bumped per session, so a fold that comes back after the scene changed is
   // dropped rather than applied to the wrong conversation.
   const sessionRef = useRef(0);
@@ -160,6 +168,9 @@ export function RoleplayScreen({
     setSaid([]);
     setMemory(EMPTY_MEMORY);
     setReviewing(null);
+    setOutOfPoints(false);
+    conversationId.current =
+      globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`;
     folding.current = false;
     sessionRef.current += 1;
     // The bank is derived from the scenario, so it moves with it.
@@ -252,9 +263,18 @@ export function RoleplayScreen({
       },
       nativeLanguage,
       isPremium,
-    }).then((direction) => {
+      sessionId: conversationId.current,
+    }).then((answer) => {
       if (cancelled) return;
       setDirecting(false);
+      // Out of points is not a failed turn: the scene closes and says so,
+      // instead of standing there not answering.
+      if (isOutOfPoints(answer)) {
+        setOutOfPoints(true);
+        setInstruction({ do: "finish" });
+        return;
+      }
+      const direction = answer;
       // The tutor's own reading of the turn is what marks it: it is the one
       // judgement in the scene that looked at what they meant, not at whether
       // a recorded phrase happened to match.
@@ -487,6 +507,12 @@ export function RoleplayScreen({
               {thinking ? "…" : `${speaking ? "●" : "🎙"} ${ui.send}`}
             </button>
           </div>
+        ) : null}
+
+        {instruction?.do === "finish" && outOfPoints ? (
+          <p className="mb-2 text-[13px] leading-relaxed text-neutral-300">
+            {ui.roleplayOutOfPoints}
+          </p>
         ) : null}
 
         {instruction?.do === "finish" ? (
