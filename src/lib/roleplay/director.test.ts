@@ -149,9 +149,11 @@ test("a step is only walked into with its own question", () => {
 });
 
 test("a step that does not exist leaves the scene where it was", () => {
-  const direction = parse({ say: { text: "Hm?", translation: "" }, next: "step:dessert" });
+  // Said rather than asked, so the step is the only thing under test here: a
+  // line that asks about something else has a rule of its own, further down.
+  const direction = parse({ say: { text: "Right.", translation: "" }, next: "step:dessert" });
   assert.deepEqual(direction?.next, { step: "here-answer" });
-  const tutorNode = parse({ say: { text: "Hm?", translation: "" }, next: "step:total" });
+  const tutorNode = parse({ say: { text: "Right.", translation: "" }, next: "step:total" });
   assert.deepEqual(tutorNode?.next, { step: "here-answer" }, "only learner steps can be returned to");
 });
 
@@ -351,4 +353,95 @@ test("malformed answers are refused rather than half-read", () => {
     context,
   );
   assert.equal(unknownAssessment?.assessment, "off_script");
+});
+
+test("a question about something else leaves the scene off its list, not waiting", () => {
+  // Seen from the real model: asked about oat milk with the scene on the size
+  // step, it said "Yes, we have oat milk. Would you like it in your latte?" and
+  // called the scene still on size — so "yes please" was matched against
+  // "small" and "large", and missed. The character asked something; the answer
+  // belongs to the character until the size is asked again.
+  const elsewhere = parse(
+    {
+      assessment: "on_track",
+      say: { text: "Yes, we have oat milk. Would you like it in your latte?", translation: "" },
+      next: "step:size-answer",
+    },
+    { nodeId: "size-answer", heard: "Do you have oat milk here" },
+  );
+  assert.deepEqual(elsewhere?.next, { free: true });
+  assert.equal(elsewhere?.follow, undefined, "no second question stacked on the first");
+
+  // The same turn asked properly: the scene's own question in the model's
+  // words, which is the point of letting it speak at all.
+  const asked = parse(
+    {
+      assessment: "on_track",
+      say: {
+        text: "Yes, we have oat milk for your latte. What size would you like, small or large?",
+        translation: "",
+      },
+      next: "step:size-answer",
+    },
+    { nodeId: "size-answer", heard: "Do you have oat milk here" },
+  );
+  assert.deepEqual(asked?.next, { step: "size-answer" });
+  assert.equal(asked?.follow, undefined);
+
+  // Moving on is the same rule: a question about something else does not walk
+  // the scene into a step.
+  const moving = parse(
+    {
+      assessment: "on_track",
+      say: { text: "Would you like your latte with oat milk?", translation: "" },
+      next: "step:size-answer",
+    },
+    { nodeId: "order", heard: "Do you have oat milk here" },
+  );
+  assert.deepEqual(moving?.next, { free: true });
+});
+
+test("a line that asks nothing still brings the step's question", () => {
+  // The other half of the rule, kept beside it: silence on the scene's own
+  // question is filled by the recording, not by drifting off the list.
+  const quiet = parse(
+    {
+      assessment: "off_script",
+      say: { text: "No problem! Just to confirm, that's a small latte to go.", translation: "" },
+      next: "step:payment",
+    },
+    { heard: "Just the latte to go" },
+  );
+  assert.deepEqual(quiet?.next, { step: "payment" });
+  assert.equal(quiet?.follow, "cafe.total");
+});
+
+test("asking again in its own words is not asked twice", () => {
+  // Staying put and asking this step's question, however worded, stands alone:
+  // the recording underneath would ask the same thing a second time.
+  const again = parse(
+    {
+      assessment: "stuck",
+      say: { text: "Sorry - did you want that small, or large?", translation: "" },
+      note: "스몰 또는 라지라고 답하면 돼요.",
+      next: "step:size-answer",
+    },
+    { nodeId: "size-answer", heard: "um" },
+  );
+  assert.deepEqual(again?.next, { step: "size-answer" });
+  assert.equal(again?.follow, undefined);
+});
+
+test("a struggling learner is not led off the list", () => {
+  // Stuck, the question worth asking is this step's own — so even a line that
+  // asks something else keeps the scene where it is, with the written help.
+  const stuck = parse(
+    {
+      assessment: "stuck",
+      say: { text: "Are you alright there?", translation: "" },
+      next: "step:size-answer",
+    },
+    { nodeId: "size-answer", heard: "" },
+  );
+  assert.deepEqual(stuck?.next, { step: "size-answer" });
 });

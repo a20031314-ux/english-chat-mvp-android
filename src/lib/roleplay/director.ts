@@ -360,6 +360,39 @@ function sameWords(a: string, b: string): boolean {
   return words(a) === words(b);
 }
 
+/**
+ * Words that carry no subject of their own, so sharing them means nothing.
+ *
+ * Not a general stopword list. "Here" and "go" stay, because "for here or to
+ * go" is a question about almost nothing else. The tails apostrophes leave
+ * behind ("that'll" arrives as "that ll") go in, and so do the number words a
+ * price is made of: what "that'll be four fifty, card or cash?" asks is card or
+ * cash.
+ */
+const COMMON_WORDS = new Set(
+  (
+    "a an and are as at be been can could d did do does eight eighty eleven fifteen fifty five for forty four fourteen from give got had has have how hundred i if in is it its just like ll m me my nine ninety of ok okay on one or our out please re right s say see seven seventy six sixty so sorry sure t ten than that thats the their them then these they thirteen thirty this three to too twelve twenty two up us ve want was we well what when which who will with would yeah yes you your"
+  ).split(" "),
+);
+
+/**
+ * Whether a line asks what a written question asks, rather than merely ending
+ * in a question mark.
+ *
+ * Judged on the words carrying the question's subject, so the scene's own
+ * wording is not required: "small or large?" is the size question however it is
+ * phrased, and "would you like oat milk?" is not, though both are questions.
+ */
+function asksAbout(spoken: string, question: string): boolean {
+  if (!spoken.includes("?")) return false;
+  const subject = words(question)
+    .split(" ")
+    .filter((word) => word && !COMMON_WORDS.has(word));
+  if (subject.length === 0) return true;
+  const said = new Set(words(spoken).split(" "));
+  return subject.filter((word) => said.has(word)).length / subject.length >= 0.5;
+}
+
 function parseNext(raw: unknown): DirectionNext | null {
   if (typeof raw !== "string") return null;
   const value = raw.trim();
@@ -557,6 +590,25 @@ export function parseDirection(
     const alreadyAsked = "id" in say && candidates.includes(say.id);
     if (asking && !alreadyAsked && (forcedHome || !spoken.includes("?"))) {
       follow = asking;
+    }
+
+    // A line that asks something else is not that step's question, whatever the
+    // model called it. Seen from the real model: "Yes, we have oat milk. Would
+    // you like it in your latte?" with the scene left sitting on the size step
+    // — so "yes please" was matched against "small" and "large" and missed.
+    //
+    // The scene is off its list for a moment, which is what "free" is for: the
+    // answer goes to the character rather than the matcher, and the leash
+    // brings it back. Not while they are stuck, where the question to keep
+    // asking is this step's own, and not with the free turns spent, where the
+    // recorded question is what drags the scene home.
+    else if (
+      !alreadyAsked &&
+      assessment !== "stuck" &&
+      !mustReturn(request, scenario) &&
+      !asksAbout(spoken, (asking && bank[asking]?.text) || "")
+    ) {
+      next = { free: true };
     }
   }
   if (lastTurn(request)) {
