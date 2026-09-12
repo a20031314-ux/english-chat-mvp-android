@@ -14,7 +14,7 @@ import {
 } from "./director.ts";
 
 const cafe = findScenario("cafe-order")!;
-const open = findScenario("open-talk")!;
+const open = findScenario("open-talk-en")!;
 const bank = sentencesFor("en");
 
 function request(partial: Partial<DirectorRequest> = {}): DirectorRequest {

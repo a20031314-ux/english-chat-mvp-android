@@ -9,10 +9,15 @@ import type { UICopy } from "@/lib/copy";
 /**
  * The scenes available to practise, and the door into one.
  *
- * The first entry asks for no topic at all — "Just talk" — and the rest are
- * situations. In every one of them the script carries what it can and the
- * director (roleplay/director.ts) takes the turns it cannot, so a scene can
- * wander off its errand and come back, and the open one never needs one.
+ * One scene today, in every language: "Just talk", where there is no errand to
+ * finish and the character carries the whole conversation. The scripted errands
+ * are written and recorded but not offered, because they exist in English alone
+ * and a tab that is a list of scenes in one language and a single conversation
+ * in another is two products — see SCRIPTED_SCENES_OFFERED in catalog.ts.
+ *
+ * A list of one reads as a start button, which is what it is. Opening the scene
+ * is what opens the microphone, and doing that the moment someone taps the tab
+ * would ask for a permission and start recording before they meant to begin.
  *
  * This is the whole of calling now. The realtime free-talk call used to be a
  * separate feature behind a phone button in the chat tab; "Just talk" is that

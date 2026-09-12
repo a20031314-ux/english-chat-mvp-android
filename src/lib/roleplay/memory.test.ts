@@ -75,7 +75,7 @@ test("notes are read out of the answer, or not at all", () => {
 });
 
 test("the notes reach the tutor at the tail of its brief, leaving the fixed part alone", () => {
-  const scenario = findScenario("open-talk")!;
+  const scenario = findScenario("open-talk-en")!;
   const bank = sentencesFor("en");
   const brief = (context: string) =>
     tutorSystemPrompt({

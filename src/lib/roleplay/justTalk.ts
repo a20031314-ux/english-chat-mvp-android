@@ -51,6 +51,22 @@ const BYE_GLOSS = "좋아, 얘기 즐거웠어. 다음에 또 봐!";
 
 const LANGUAGES: JustTalk[] = [
   {
+    language: "en",
+    title: "Just talk",
+    voice: "marin",
+    greeting: "Hey! Good to see you. How's your day going?",
+    goodbye: "Alright — it was really nice talking to you. See you next time!",
+    greetingGloss: "안녕! 반가워. 오늘 하루 어때?",
+    goodbyeGloss: "좋아, 얘기 즐거웠어. 다음에 또 봐!",
+    leaving: [
+      "goodbye",
+      "i have to go",
+      "i gotta go",
+      "talk to you later",
+      "see you later",
+    ],
+  },
+  {
     language: "ko",
     title: "그냥 수다",
     voice: "sage",

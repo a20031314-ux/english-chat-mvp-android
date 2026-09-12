@@ -272,6 +272,21 @@ test("every language the app teaches has something to talk to", () => {
   }
 });
 
+test("the tab is the same product whatever you are learning", () => {
+  // The reason the scripted errands are not offered yet: they exist in English
+  // and nowhere else, so offering them where they happen to exist would make
+  // this a list of scenes for one language and a single conversation for the
+  // other thirteen. Everyone gets the same thing until everyone can.
+  const offered = SUPPORTED_LEARNING_LANGUAGES.map((language) =>
+    scenariosForLanguage(language.code).map((scenario) => scenario.title).length,
+  );
+  assert.deepEqual(
+    [...new Set(offered)],
+    [1],
+    `languages are offered different numbers of scenes: ${offered.join(", ")}`,
+  );
+});
+
 test("an open conversation is scripted only at its ends", () => {
   // What makes it affordable in fourteen languages: two recorded lines each.
   // Everything between them is the character, spoken in the same voice.

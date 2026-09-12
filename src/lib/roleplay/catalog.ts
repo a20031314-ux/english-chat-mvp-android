@@ -13,16 +13,6 @@ import type { RoleplayScenario, SentenceBank } from "./script.ts";
  */
 export const SENTENCES: Record<string, SentenceBank> = {
   en: {
-    // --- Just talk. No errand, so only the opening and the goodbye are
-    // written; everything between is the director's.
-    "open.hi": {
-      text: "Hey! Good to see you. How's your day going?",
-      translation: "안녕! 반가워. 오늘 하루 어때?",
-    },
-    "open.bye": {
-      text: "Alright — it was really nice talking to you. See you next time!",
-      translation: "좋아, 얘기 즐거웠어. 다음에 또 봐!",
-    },
     "cafe.greet": {
       text: "Hi there! What can I get you?",
       translation: "안녕하세요! 뭐 드릴까요?",
@@ -350,42 +340,6 @@ export const SENTENCES: Record<string, SentenceBank> = {
  * covers what it can and the tutor handles the edges.
  */
 export const SCENARIOS: RoleplayScenario[] = [
-  // First, because it is the one that asks nothing of the learner up front: no
-  // topic to pick, just a person to talk to.
-  {
-    id: "open-talk",
-    language: "en",
-    voice: "marin",
-    title: "Just talk",
-    setting:
-      "A relaxed catch-up with a friendly acquaintance over coffee, with no errand to finish. The tutor is someone easy to talk to and curious about the learner's day, plans and interests; the learner can bring up anything at all.",
-    tutorRole: "friend",
-    openEnded: true,
-    start: "hi",
-    nodes: {
-      hi: { type: "tutor", id: "hi", say: "open.hi", next: "talk" },
-      talk: {
-        type: "learner",
-        id: "talk",
-        goal: "편하게 아무 얘기나 해 보세요.",
-        // Only the way out is scripted. Everything else the learner says is
-        // the conversation, and goes to the director.
-        expect: [
-          {
-            match: [
-              "goodbye",
-              "i have to go",
-              "i gotta go",
-              "talk to you later",
-              "see you later",
-            ],
-            go: "bye",
-          },
-        ],
-      },
-      bye: { type: "tutor", id: "bye", say: "open.bye", next: null },
-    },
-  },
   {
     id: "cafe-order",
     language: "en",
@@ -1272,8 +1226,28 @@ export function sentencesFor(language: string): SentenceBank {
   return SENTENCES[language] ?? {};
 }
 
+/**
+ * Whether the scripted errands are offered yet.
+ *
+ * They are written for English and nothing else, and recording a set for every
+ * language is megabytes the app cannot carry today. Offering them where they
+ * happen to exist would make the tab a different product depending on what you
+ * are learning — a list of scenes in English, one conversation in Thai — so
+ * until every language has them, nobody gets them, and everyone gets the same
+ * open conversation.
+ *
+ * Deliberately one switch rather than a deletion: the scenes, their wording and
+ * their recordings are all still here and still tested. Flip this when a set
+ * exists for every language in SUPPORTED_LEARNING_LANGUAGES.
+ */
+const SCRIPTED_SCENES_OFFERED = false;
+
 export function scenariosForLanguage(language: string): RoleplayScenario[] {
-  return SCENARIOS.filter((scenario) => scenario.language === language);
+  return SCENARIOS.filter(
+    (scenario) =>
+      scenario.language === language &&
+      (SCRIPTED_SCENES_OFFERED || scenario.openEnded),
+  );
 }
 
 export function findScenario(id: string): RoleplayScenario | null {
