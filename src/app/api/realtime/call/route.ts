@@ -19,6 +19,22 @@ import {
 } from "@/lib/server/entitlementStore";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 
+/**
+ * The realtime free-talk call — served for builds that still ask for it.
+ *
+ * Nothing in this repository calls it any more. The call was a separate feature
+ * reached from a phone button in the chat tab, and it has been folded into the
+ * call-learning tab, where a script carries the conversation cheaply and the
+ * character speaks up only where it cannot. The button and the whole client
+ * side of it are gone.
+ *
+ * This route stays because released builds are not gone: an APK reaches users
+ * on its own clock, and v2.47 is out there with the old button on its chat
+ * screen. Deleting this would break that screen for everyone who has not
+ * updated. It can go once no shipped build calls it — check with
+ * `git show <tag>:src/components/ChatWindow.tsx` before deleting, not the
+ * working tree.
+ */
 export const dynamic = "force-dynamic";
 
 const OPENAI_CALLS = "https://api.openai.com/v1/realtime/calls";

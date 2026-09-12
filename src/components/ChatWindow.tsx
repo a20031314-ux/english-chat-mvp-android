@@ -43,7 +43,6 @@ import {
 } from "@/lib/conversationMode";
 import { compressChatImage } from "@/lib/chatImage";
 import { formatCallDuration, type ChatCallEvent } from "@/lib/callSession";
-import { useCall } from "@/contexts/CallContext";
 import {
   ReportContentDialog,
   type ReportTarget,
@@ -74,6 +73,11 @@ type ChatTurn = {
   suppressCorrectionCard?: boolean;
   attachmentUrl?: string;
   conversationMode?: ConversationMode;
+  /**
+   * A call that was placed from this screen back when the chat had a phone
+   * button. Nothing writes these any more — calling lives in its own tab — but
+   * saved conversations still hold them, so they are still read and shown.
+   */
   callEvent?: ChatCallEvent;
 };
 
@@ -685,7 +689,6 @@ export function ChatWindow({
   const [pendingPhoto, setPendingPhoto] = useState<string | null>(null);
   const [conversationMode, setConversationMode] =
     useState<ConversationMode>("native");
-  const call = useCall();
   const [reportTarget, setReportTarget] = useState<ReportTarget | null>(null);
   const partner = chatPartnerForLanguage(sessionLanguageCode);
 
@@ -823,8 +826,6 @@ export function ChatWindow({
     const previousLanguage = prevTargetLanguageRef.current;
     prevTargetLanguageRef.current = targetLanguage;
 
-    call.stop();
-
     if (turns.length > 0) {
       saveConversationSession({
         id: currentSessionId,
@@ -901,22 +902,6 @@ export function ChatWindow({
       block: "end",
     });
   }, [turns, currentSessionId]);
-
-  // The provider owns the connection; the chat only logs the call once it ends.
-  const subscribeCallEnded = call.subscribeEnded;
-  useEffect(() => {
-    return subscribeCallEnded((durationSeconds) => {
-      setTurns((previous) => [
-        ...previous,
-        {
-          id: `${Date.now()}`,
-          mode: "chat",
-          userMessage: "",
-          callEvent: { kind: "ended", durationSeconds },
-        },
-      ]);
-    });
-  }, [subscribeCallEnded]);
 
   const sendChatMessage = async (message: string, imageDataUrl?: string) => {
     const url = apiUrl("/api/chat");
@@ -1074,7 +1059,6 @@ export function ChatWindow({
     });
   };
 
-  const onCall = call.phase === "connected";
   const allModesOn = chatModeOn && askExpressionOn;
 
   const toggleAllModes = () => {
@@ -1290,29 +1274,6 @@ export function ChatWindow({
             locale,
           });
 
-    // On a live call the tutor is the only one who answers. Everything typed
-    // goes to it — both sides are looking at the same screen — and nothing is
-    // asked of the chat model, "how to say" included: that toggle stays on
-    // across messages, so leaving it through meant a written answer arriving
-    // over the top of every spoken one. Dialing does not count: a call that
-    // never connects must not leave the chat silently dead.
-    if (call.phase === "connected") {
-      const deliveredToTutor = call.sendText(trimmed);
-      setTurns((previous) => [
-        ...previous,
-        {
-          id: `${Date.now()}`,
-          mode: "chat" as const,
-          userMessage: trimmed,
-          ...(photo ? { attachmentUrl: photo } : {}),
-        },
-      ]);
-      setInput("");
-      setPendingPhoto(null);
-      if (!deliveredToTutor) setBookToast(ui.chatDuringCall);
-      return;
-    }
-
     if (isChatDailyLimitReached) {
       openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
       return;
@@ -1378,29 +1339,6 @@ export function ChatWindow({
     } catch {
       setBookToast(ui.chatStartFailed);
     }
-  };
-
-  const startLiveCall = async () => {
-    // The UI language is what the learner falls back into mid-call, so the
-    // tutor has to be told to expect it rather than guess from the audio.
-    const nativeLanguage = isLearningLanguageCode(locale)
-      ? locale
-      : DEFAULT_LEARNING_LANGUAGE_CODE;
-    const result = await call.start(sessionLanguageCode, nativeLanguage);
-    if (result.ok || result.reason === "aborted") return;
-    if (result.reason === "trial") {
-      openPaywall("PAYWALL_OPEN_CALL_TRIAL_USED");
-      return;
-    }
-    // Not a failure and not a reason to sell them the subscription again: they
-    // already have it, and what ran out is the allowance inside it.
-    if (result.reason === "points") {
-      setBookToast(ui.chatCallNoPoints);
-      return;
-    }
-    setBookToast(
-      result.reason === "mic" ? ui.chatMicDenied : ui.chatCallFailed,
-    );
   };
 
   return (
@@ -1653,19 +1591,14 @@ export function ChatWindow({
                   <circle cx="11" cy="17" r="2" fill="currentColor" />
                 </svg>
               </button>
-              {/* On a call the tutor answers everything itself, so these decide
-                  nothing. Left visible but plainly inert rather than silently
-                  ignored. */}
               <button
                 type="button"
                 onClick={toggleChatMode}
-                disabled={onCall}
-                title={onCall ? ui.chatDuringCall : undefined}
                 className={`rounded-lg px-3 py-1.5 text-sm transition ${
                   chatModeOn
                     ? "bg-[#e8e8e4] text-neutral-900"
                     : "border border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
-                } ${onCall ? "cursor-not-allowed opacity-40" : ""}`}
+                }`}
                 aria-pressed={chatModeOn}
               >
                 {ui.chatMode}
@@ -1673,13 +1606,11 @@ export function ChatWindow({
               <button
                 type="button"
                 onClick={toggleAskExpression}
-                disabled={onCall}
-                title={onCall ? ui.chatDuringCall : undefined}
                 className={`rounded-lg px-3 py-1.5 text-sm transition ${
                   askExpressionOn
                     ? "bg-[#e8e8e4] text-neutral-900"
                     : "border border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
-                } ${onCall ? "cursor-not-allowed opacity-40" : ""}`}
+                }`}
                 aria-pressed={askExpressionOn}
               >
                 {ui.askExpression}
@@ -1732,23 +1663,6 @@ export function ChatWindow({
                 className="inline-flex h-10 min-w-10 items-center justify-center rounded-xl border border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
               >
                 +
-              </button>
-              <button
-                type="button"
-                onClick={
-                  call.phase === "idle" ? () => void startLiveCall() : call.hangUp
-                }
-                aria-label={call.phase === "idle" ? ui.chatCall : ui.chatHangUp}
-                title={call.phase === "idle" ? ui.chatCall : ui.chatHangUp}
-                className={`inline-flex h-10 min-w-10 items-center justify-center rounded-xl border transition ${
-                  call.phase === "idle"
-                    ? "border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
-                    : "border-rose-400/40 bg-rose-500/20 text-rose-100 hover:bg-rose-500/30"
-                }`}
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5" aria-hidden>
-                  <path d="M7.4 3.6c.5-.5 1.3-.6 1.9-.2l2.1 1.4c.6.4.8 1.2.5 1.9L11 8.8c-.2.4-.1.8.1 1.1 1 1.6 2.4 3 4 4 .4.2.8.3 1.1.1l2.1-.9c.7-.3 1.5-.1 1.9.5l1.4 2.1c.4.6.3 1.4-.2 1.9l-1.3 1.3c-.5.5-1.2.8-1.9.7-2.3-.2-5.6-1.5-8.8-4.7S4.9 9 4.7 6.7c-.1-.7.2-1.4.7-1.9L7.4 3.6Z" />
-                </svg>
               </button>
               <textarea
                 ref={inputRef}

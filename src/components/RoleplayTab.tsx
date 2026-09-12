@@ -14,8 +14,15 @@ import type { UICopy } from "@/lib/copy";
  * director (roleplay/director.ts) takes the turns it cannot, so a scene can
  * wander off its errand and come back, and the open one never needs one.
  *
- * Nothing here reaches the live call any more. Help arrives inside the
- * conversation, as the character's next line, rather than behind a button.
+ * This is the whole of calling now. The realtime free-talk call used to be a
+ * separate feature behind a phone button in the chat tab; "Just talk" is that
+ * conversation, carried by the same character who carries the scenes, at a
+ * fraction of the price. There is no other door.
+ *
+ * Help arrives inside the conversation, as the character's next line, never
+ * behind a button. What can be asked for afterwards is an explanation: a turn
+ * the tutor judged a struggle keeps a button that stops and looks back at it
+ * (roleplay/review.ts).
  *
  * Not metered yet. What it costs is the ratio of roleplayTurn to roleplayListen
  * in the meter — how much of the conversation the script is carrying — and
