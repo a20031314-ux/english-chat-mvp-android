@@ -610,7 +610,14 @@
     "roleplayOutOfPoints": "無料の通話レッスンを使い切りました。定期購入で続けられます。",
     "updateAvailable": "新しいバージョンがあります",
     "updateRequired": "このバージョンでは続けられません。更新してください。",
-    "updateAction": "更新"
+    "updateAction": "更新",
+    "roleplayPracticeCta": "言ってみる",
+    "roleplayPracticeListening": "聞いています…",
+    "roleplayPracticeHeard": "こう聞こえました",
+    "roleplayPracticeRetry": "もう一度",
+    "roleplayListening": "聞いています",
+    "roleplaySpeaking": "聞こえています",
+    "roleplayThinking": "考え中…"
   },
   "zh": {
     "appTitle": "{targetLanguage}批改聊天",
@@ -1223,7 +1230,14 @@
     "roleplayOutOfPoints": "免费的通话练习已用完。订阅后可以继续。",
     "updateAvailable": "有新版本了",
     "updateRequired": "当前版本无法继续使用，请更新。",
-    "updateAction": "更新"
+    "updateAction": "更新",
+    "roleplayPracticeCta": "跟着说一遍",
+    "roleplayPracticeListening": "正在听…",
+    "roleplayPracticeHeard": "听到的是",
+    "roleplayPracticeRetry": "再试一次",
+    "roleplayListening": "正在听",
+    "roleplaySpeaking": "听到你了",
+    "roleplayThinking": "思考中…"
   },
   "vi": {
     "appTitle": "Chat sửa {targetLanguage}",
@@ -1836,7 +1850,14 @@
     "roleplayOutOfPoints": "Bạn đã dùng hết phần luyện gọi miễn phí. Đăng ký để tiếp tục.",
     "updateAvailable": "Đã có bản mới",
     "updateRequired": "Bản này không tiếp tục được nữa. Hãy cập nhật.",
-    "updateAction": "Cập nhật"
+    "updateAction": "Cập nhật",
+    "roleplayPracticeCta": "Nói lại thử",
+    "roleplayPracticeListening": "Đang nghe…",
+    "roleplayPracticeHeard": "Nghe được là",
+    "roleplayPracticeRetry": "Thử lại",
+    "roleplayListening": "Đang nghe",
+    "roleplaySpeaking": "Nghe thấy bạn",
+    "roleplayThinking": "Đang nghĩ…"
   },
   "fr": {
     "appTitle": "Chat de correction d'{targetLanguage}",
@@ -2449,7 +2470,14 @@
     "roleplayOutOfPoints": "L'entraînement à l'appel gratuit est épuisé. L'abonnement prend le relais.",
     "updateAvailable": "Une nouvelle version est disponible",
     "updateRequired": "Cette version ne peut plus continuer. Mettez à jour.",
-    "updateAction": "Mettre à jour"
+    "updateAction": "Mettre à jour",
+    "roleplayPracticeCta": "Répétez-le",
+    "roleplayPracticeListening": "J'écoute…",
+    "roleplayPracticeHeard": "Ce qui est passé",
+    "roleplayPracticeRetry": "Encore",
+    "roleplayListening": "J'écoute",
+    "roleplaySpeaking": "Je vous entends",
+    "roleplayThinking": "Je réfléchis…"
   },
   "pt": {
     "appTitle": "Chat de correção de {targetLanguage}",
@@ -3062,7 +3090,14 @@
     "roleplayOutOfPoints": "A prática de chamada gratuita acabou. A assinatura continua daqui.",
     "updateAvailable": "Saiu uma versão nova",
     "updateRequired": "Esta versão não pode continuar. Atualize para seguir.",
-    "updateAction": "Atualizar"
+    "updateAction": "Atualizar",
+    "roleplayPracticeCta": "Repita",
+    "roleplayPracticeListening": "Ouvindo…",
+    "roleplayPracticeHeard": "O que saiu",
+    "roleplayPracticeRetry": "De novo",
+    "roleplayListening": "Ouvindo",
+    "roleplaySpeaking": "Estou te ouvindo",
+    "roleplayThinking": "Pensando…"
   },
   "id": {
     "appTitle": "Chat koreksi {targetLanguage}",
@@ -3675,7 +3710,14 @@
     "roleplayOutOfPoints": "Latihan telepon gratis sudah habis. Langganan melanjutkan dari sini.",
     "updateAvailable": "Ada versi baru",
     "updateRequired": "Versi ini tidak bisa dilanjutkan. Silakan perbarui.",
-    "updateAction": "Perbarui"
+    "updateAction": "Perbarui",
+    "roleplayPracticeCta": "Coba ucapkan",
+    "roleplayPracticeListening": "Mendengarkan…",
+    "roleplayPracticeHeard": "Yang terdengar",
+    "roleplayPracticeRetry": "Ulangi",
+    "roleplayListening": "Mendengarkan",
+    "roleplaySpeaking": "Terdengar",
+    "roleplayThinking": "Berpikir…"
   },
   "it": {
     "appTitle": "Chat di correzione {targetLanguage}",
@@ -4288,7 +4330,14 @@
     "roleplayOutOfPoints": "La pratica di chiamata gratuita è esaurita. L'abbonamento prosegue da qui.",
     "updateAvailable": "È uscita una nuova versione",
     "updateRequired": "Questa versione non può più continuare. Aggiorna.",
-    "updateAction": "Aggiorna"
+    "updateAction": "Aggiorna",
+    "roleplayPracticeCta": "Ripetilo",
+    "roleplayPracticeListening": "In ascolto…",
+    "roleplayPracticeHeard": "Quello che è arrivato",
+    "roleplayPracticeRetry": "Ancora",
+    "roleplayListening": "In ascolto",
+    "roleplaySpeaking": "Ti sento",
+    "roleplayThinking": "Sto pensando…"
   },
   "ru": {
     "appTitle": "Чат для правки {targetLanguage}",
@@ -4901,7 +4950,14 @@
     "roleplayOutOfPoints": "Бесплатная практика звонков закончилась. С подпиской можно продолжить.",
     "updateAvailable": "Вышла новая версия",
     "updateRequired": "Эта версия больше не работает. Обновите приложение.",
-    "updateAction": "Обновить"
+    "updateAction": "Обновить",
+    "roleplayPracticeCta": "Повторите",
+    "roleplayPracticeListening": "Слушаю…",
+    "roleplayPracticeHeard": "Что получилось",
+    "roleplayPracticeRetry": "Ещё раз",
+    "roleplayListening": "Слушаю",
+    "roleplaySpeaking": "Слышу вас",
+    "roleplayThinking": "Думаю…"
   },
   "ar": {
     "appTitle": "دردشة تصحيح {targetLanguage}",
@@ -5514,7 +5570,14 @@
     "roleplayOutOfPoints": "انتهى تدريب المكالمة المجاني. يمكنك المتابعة مع الاشتراك.",
     "updateAvailable": "صدرت نسخة جديدة",
     "updateRequired": "لا يمكن متابعة العمل بهذه النسخة. يرجى التحديث.",
-    "updateAction": "تحديث"
+    "updateAction": "تحديث",
+    "roleplayPracticeCta": "قلها مرة أخرى",
+    "roleplayPracticeListening": "أستمع…",
+    "roleplayPracticeHeard": "ما وصل",
+    "roleplayPracticeRetry": "مرة أخرى",
+    "roleplayListening": "أستمع",
+    "roleplaySpeaking": "أسمعك",
+    "roleplayThinking": "أفكر…"
   },
   "th": {
     "appTitle": "แชทตรวจ {targetLanguage}",
@@ -6127,7 +6190,14 @@
     "roleplayOutOfPoints": "ใช้การฝึกโทรแบบฟรีหมดแล้ว สมัครสมาชิกเพื่อใช้ต่อได้",
     "updateAvailable": "มีเวอร์ชันใหม่แล้ว",
     "updateRequired": "เวอร์ชันนี้ใช้ต่อไม่ได้ กรุณาอัปเดต",
-    "updateAction": "อัปเดต"
+    "updateAction": "อัปเดต",
+    "roleplayPracticeCta": "ลองพูดตาม",
+    "roleplayPracticeListening": "กำลังฟัง…",
+    "roleplayPracticeHeard": "ที่ได้ยินคือ",
+    "roleplayPracticeRetry": "ลองอีกครั้ง",
+    "roleplayListening": "กำลังฟัง",
+    "roleplaySpeaking": "ได้ยินแล้ว",
+    "roleplayThinking": "กำลังคิด…"
   },
   "hi": {
     "appTitle": "{targetLanguage} सुधार चैट",
@@ -6740,6 +6810,13 @@
     "roleplayOutOfPoints": "मुफ़्त कॉल अभ्यास ख़त्म हो गया। सदस्यता लेकर जारी रख सकते हैं।",
     "updateAvailable": "नया वर्शन आया है",
     "updateRequired": "यह वर्शन आगे नहीं चल सकता। कृपया अपडेट करें।",
-    "updateAction": "अपडेट"
+    "updateAction": "अपडेट",
+    "roleplayPracticeCta": "बोलकर देखें",
+    "roleplayPracticeListening": "सुन रहे हैं…",
+    "roleplayPracticeHeard": "जो सुनाई दिया",
+    "roleplayPracticeRetry": "फिर से",
+    "roleplayListening": "सुन रहे हैं",
+    "roleplaySpeaking": "सुनाई दे रहा है",
+    "roleplayThinking": "सोच रहे हैं…"
   }
 }

@@ -1,5 +1,8 @@
 "use client";
 
+import { useState } from "react";
+import { compareToTarget, type WordOutcome } from "@/lib/roleplay/practice";
+import type { Practice } from "@/lib/roleplay/practice";
 import type { Review, StuckTurn } from "@/lib/roleplay/review";
 import type { UICopy } from "@/lib/copy";
 
@@ -64,6 +67,97 @@ export function RoleplayLine({
 }
 
 /**
+ * The line as it came out, with the words that did not survive marked.
+ *
+ * Shown before anything is said about it, because it is the finding: which word
+ * turned into which is arithmetic the learner can check against their own ears,
+ * and it stands whether or not the sentence explaining it ever arrives.
+ */
+function Attempt({ outcomes, ui }: { outcomes: WordOutcome[]; ui: UICopy }) {
+  return (
+    <div className="mt-3 rounded-xl bg-white/5 p-3">
+      <p className="text-[11px] text-neutral-500">{ui.roleplayPracticeHeard}</p>
+      <p className="mt-1 text-[14px] leading-relaxed">
+        {outcomes.map((outcome, index) => (
+          <span key={index}>
+            {outcome.kind === "kept" ? (
+              <span className="text-neutral-100">{outcome.word}</span>
+            ) : outcome.kind === "changed" ? (
+              <span className="text-amber-300">
+                {outcome.heardAs}
+                <span className="text-neutral-500"> ({outcome.word})</span>
+              </span>
+            ) : (
+              <span className="text-neutral-500 line-through">{outcome.word}</span>
+            )}{" "}
+          </span>
+        ))}
+      </p>
+    </div>
+  );
+}
+
+/**
+ * Saying the line back, inside the panel.
+ *
+ * Its own microphone, opened and closed here. The scene's is shut for as long
+ * as the panel is up, and it has to stay shut: a line said in practice must not
+ * arrive as the next turn of the conversation.
+ */
+function SayItBack({
+  target,
+  ui,
+  onListen,
+}: {
+  target: string;
+  ui: UICopy;
+  onListen: (target: string) => Promise<{ heard: string; practice: Practice | null }>;
+}) {
+  const [state, setState] = useState<
+    | { at: "idle" }
+    | { at: "listening" }
+    | { at: "read"; heard: string; practice: Practice | null }
+  >({ at: "idle" });
+
+  const listen = async () => {
+    setState({ at: "listening" });
+    const result = await onListen(target);
+    setState({ at: "read", ...result });
+  };
+
+  if (state.at === "read") {
+    return (
+      <>
+        <Attempt outcomes={compareToTarget(target, state.heard).outcomes} ui={ui} />
+        {state.practice ? (
+          <p className="mt-2 text-[13px] leading-relaxed text-neutral-200">
+            {state.practice.note}
+          </p>
+        ) : null}
+        <button
+          type="button"
+          onClick={() => void listen()}
+          className="mt-2 rounded-full border border-white/20 px-3 py-1.5 text-[12px] text-neutral-300 hover:bg-white/10"
+        >
+          {ui.roleplayPracticeRetry}
+        </button>
+      </>
+    );
+  }
+
+  return (
+    <button
+      type="button"
+      onClick={() => void listen()}
+      disabled={state.at === "listening"}
+      className="mt-2 w-full rounded-xl border border-white/20 px-4 py-2.5 text-[13px] text-neutral-200 hover:bg-white/10 disabled:opacity-60"
+    >
+      {state.at === "listening" ? ui.roleplayPracticeListening : ui.roleplayPracticeCta}
+    </button>
+  );
+}
+
+/**
  * The panel itself. `review` is null while it is being put together, and
  * `failed` says the attempt came back with nothing.
  *
@@ -77,12 +171,15 @@ export function RoleplayReviewPanel({
   failed,
   ui,
   onClose,
+  onSayItBack,
 }: {
   turn: StuckTurn;
   review: Review | null;
   failed: boolean;
   ui: UICopy;
   onClose: () => void;
+  /** Listen once and read the attempt. Absent where there is no microphone. */
+  onSayItBack?: (target: string) => Promise<{ heard: string; practice: Practice | null }>;
 }) {
   return (
     <div className="absolute inset-0 z-10 flex flex-col justify-end bg-black/70 p-3">
@@ -101,6 +198,12 @@ export function RoleplayReviewPanel({
                 <p className="mt-1 text-[14px] text-neutral-100">{review.say}</p>
                 {review.meaning ? (
                   <p className="mt-0.5 text-[12px] text-neutral-500">{review.meaning}</p>
+                ) : null}
+                {/* Reading it is not saying it. The line is right here and the
+                    scene is already stopped, so this is the cheapest moment
+                    there will ever be to try it. */}
+                {onSayItBack ? (
+                  <SayItBack target={review.say} ui={ui} onListen={onSayItBack} />
                 ) : null}
               </div>
             ) : null}

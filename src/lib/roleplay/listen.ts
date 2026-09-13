@@ -15,6 +15,7 @@ import {
   type Review,
   type StuckTurn,
 } from "@/lib/roleplay/review";
+import type { Practice } from "@/lib/roleplay/practice";
 
 /**
  * Recording a learner's turn and getting it back as text.
@@ -456,6 +457,84 @@ export async function fetchReview(input: {
     return typeof body.why === "string" && body.why.trim() ? (body as Review) : null;
   } catch (error) {
     console.error("[roleplay] review threw", error);
+    return null;
+  }
+}
+
+/**
+ * Listen once and hand back the words, for a line said outside the scene.
+ *
+ * The scene's own microphone is closed while a review is open, on purpose —
+ * reading is not answering, and whatever the room says while they read must not
+ * be sent as their next turn. Saying a line back needs a microphone of its own,
+ * opened and closed inside that moment, and this is it: one turn, one
+ * transcript, nothing left running.
+ */
+export async function listenOnce(input: {
+  language: string;
+  isPremium: boolean;
+  onSpeaking?: (speaking: boolean) => void;
+}): Promise<{ heard: string; cancel: () => void }> {
+  let settle: (() => void) | null = null;
+  const settled = new Promise<void>((resolve) => {
+    settle = resolve;
+  });
+  const recorder = await listenForTurn({
+    language: input.language,
+    isPremium: input.isPremium,
+    onSpeaking: input.onSpeaking,
+    onSettled: () => settle?.(),
+  });
+  let given = false;
+  const cancel = () => {
+    if (given) return;
+    given = true;
+    recorder.cancel();
+    settle?.();
+  };
+  await settled;
+  if (given) return { heard: "", cancel };
+  given = true;
+  return { heard: await recorder.stop(), cancel };
+}
+
+/**
+ * Read one attempt at a line the review handed them.
+ *
+ * Null is nothing to show rather than a failure to report: the comparison the
+ * learner can already see on screen stands on its own, and the sentence about
+ * it is the part that did not arrive.
+ */
+export async function fetchPractice(input: {
+  scenarioId: string;
+  target: string;
+  heard: string;
+  nativeLanguage: string;
+  isPremium: boolean;
+}): Promise<Practice | null> {
+  try {
+    const response = await fetch(apiUrl("/api/roleplay/practice"), {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        ...entitlementHeaders(input.isPremium),
+      },
+      body: JSON.stringify({
+        scenarioId: input.scenarioId,
+        target: input.target,
+        heard: input.heard,
+        nativeLanguage: input.nativeLanguage,
+      }),
+    });
+    if (!response.ok) {
+      console.error("[roleplay] practice failed with", response.status);
+      return null;
+    }
+    const body = (await response.json()) as { note?: unknown; good?: unknown };
+    if (typeof body.note !== "string" || !body.note.trim()) return null;
+    return { good: body.good === true, note: body.note.trim() };
+  } catch (error) {
+    console.error("[roleplay] practice threw", error);
     return null;
   }
 }

@@ -16,9 +16,11 @@ import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
 import {
   fetchContext,
   fetchDirection,
+  fetchPractice,
   fetchReview,
   isOutOfPoints,
   listenForTurn,
+  listenOnce,
   type Recorder,
 } from "@/lib/roleplay/listen";
 import {
@@ -379,6 +381,34 @@ export function RoleplayScreen({
    * The question has not changed and the tries already spent still stand; only
    * the silence is forgiven, because it was spent reading.
    */
+  /**
+   * Say a line from the review back, and read what came out.
+   *
+   * Its own microphone. The scene's stays shut for as long as the panel is up,
+   * which is what keeps a line said in practice from arriving as the next turn
+   * of the conversation.
+   */
+  const sayItBack = useCallback(
+    async (target: string) => {
+      if (!scenario) return { heard: "", practice: null };
+      const { heard } = await listenOnce({
+        language: scenario.language,
+        isPremium,
+        onSpeaking: setSpeaking,
+      });
+      setSpeaking(false);
+      const practice = await fetchPractice({
+        scenarioId: scenario.id,
+        target,
+        heard,
+        nativeLanguage,
+        isPremium,
+      });
+      return { heard, practice };
+    },
+    [scenario, nativeLanguage, isPremium],
+  );
+
   const closeReview = useCallback(() => {
     setReviewing(null);
     if (!scenario || !state) return;
@@ -491,21 +521,24 @@ export function RoleplayScreen({
             {instruction.hint ? (
               <p className="text-[12px] text-neutral-500">{instruction.hint}</p>
             ) : null}
-            {/* Not how you speak any more — the microphone is already open and
-                sends when you stop. This is for finishing early, and for the
-                room too quiet or too loud for the level to be read. */}
-            <button
-              type="button"
-              onClick={() => void stopRecording()}
-              disabled={thinking || !recording}
-              className={`w-full rounded-xl px-4 py-3 text-sm font-medium transition ${
-                speaking
-                  ? "bg-[#b91c3c] text-white"
-                  : "bg-white/15 text-neutral-100 hover:bg-white/20"
-              } disabled:opacity-50`}
+            {/* Not a control. The microphone opens with the turn and closes
+                itself: after speech it waits out a pause, and it gives up on
+                its own after twenty seconds either way, so there is nothing a
+                send button would rescue. What is left is the one thing a
+                voice-only screen cannot do without — saying whether it is
+                listening, hearing you, or thinking. */}
+            <p
+              className={`w-full rounded-xl px-4 py-3 text-center text-sm ${
+                speaking ? "bg-[#b91c3c]/80 text-white" : "bg-white/10 text-neutral-300"
+              }`}
+              aria-live="polite"
             >
-              {thinking ? "…" : `${speaking ? "●" : "🎙"} ${ui.send}`}
-            </button>
+              {thinking
+                ? ui.roleplayThinking
+                : speaking
+                  ? `● ${ui.roleplaySpeaking}`
+                  : `🎙 ${ui.roleplayListening}`}
+            </p>
           </div>
         ) : null}
 
@@ -533,6 +566,7 @@ export function RoleplayScreen({
           failed={reviewing.failed}
           ui={ui}
           onClose={closeReview}
+          onSayItBack={sayItBack}
         />
       ) : null}
     </FullScreenLayer>

@@ -83,6 +83,23 @@ const TRANSCRIPT: TranscriptLine[] = [
   },
 ];
 
+/**
+ * Saying the line back, with the microphone and the model both stood in for.
+ *
+ * A fixed mishearing, so the marked-up attempt can be looked at: the recogniser
+ * "hears" please as peace, which is the case the whole comparison exists for.
+ */
+async function sayItBack(target: string) {
+  await new Promise((resolve) => setTimeout(resolve, 800));
+  return {
+    heard: target.toLowerCase().replace("please", "peace"),
+    practice: {
+      good: false,
+      note: "'please'가 'peace'로 들렸어요. p 다음에 l 소리를 붙여서 '플리즈'처럼 이어 보세요.",
+    },
+  };
+}
+
 export default function RoleplayReviewPreview() {
   const ui = copy.ko;
   const [shown, setShown] = useState<number | null>(null);
@@ -128,6 +145,7 @@ export default function RoleplayReviewPreview() {
             failed={CASES[shown]!.failed}
             ui={ui}
             onClose={() => setShown(null)}
+            onSayItBack={sayItBack}
           />
         ) : null}
       </div>
