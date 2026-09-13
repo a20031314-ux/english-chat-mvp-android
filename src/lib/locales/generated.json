@@ -600,7 +600,7 @@
     "pointsPurchased": "{n}P を追加しました。",
     "pointsUnavailable": "現在ポイントを追加できません。",
     "roleplayTitle": "通話レッスン",
-    "roleplayIntro": "決まった場面で話す練習です。詰まったら講師が入ります。",
+    "roleplayIntro": "何でも好きに話してみましょう。つまずいたら相手が助けてくれて、あとでどこで止まったか見られます。",
     "roleplayWhyStuck": "つまずいた理由を見る",
     "roleplayReviewTitle": "つまずいたところ",
     "roleplayReviewSay": "こう言えました",
@@ -617,7 +617,8 @@
     "roleplayPracticeRetry": "もう一度",
     "roleplayListening": "聞いています",
     "roleplaySpeaking": "聞こえています",
-    "roleplayThinking": "考え中…"
+    "roleplayThinking": "考え中…",
+    "roleplayStart": "話しはじめる"
   },
   "zh": {
     "appTitle": "{targetLanguage}批改聊天",
@@ -1220,7 +1221,7 @@
     "pointsPurchased": "已添加 {n}P。",
     "pointsUnavailable": "目前无法补充点数。",
     "roleplayTitle": "通话练习",
-    "roleplayIntro": "在设定好的场景中练习对话。卡住时导师会介入。",
+    "roleplayIntro": "随便聊什么都行。卡住了对方会帮你，结束后可以看看卡在哪里。",
     "roleplayWhyStuck": "看看卡在哪里",
     "roleplayReviewTitle": "卡住的地方",
     "roleplayReviewSay": "你可以这样说",
@@ -1237,7 +1238,8 @@
     "roleplayPracticeRetry": "再试一次",
     "roleplayListening": "正在听",
     "roleplaySpeaking": "听到你了",
-    "roleplayThinking": "思考中…"
+    "roleplayThinking": "思考中…",
+    "roleplayStart": "开始对话"
   },
   "vi": {
     "appTitle": "Chat sửa {targetLanguage}",
@@ -1840,7 +1842,7 @@
     "pointsPurchased": "Đã cộng {n}P.",
     "pointsUnavailable": "Hiện chưa thể nạp điểm.",
     "roleplayTitle": "Luyện gọi",
-    "roleplayIntro": "Luyện nói trong tình huống có sẵn. Gia sư sẽ vào khi bạn bí.",
+    "roleplayIntro": "Nói về bất cứ điều gì. Nếu bạn vướng, họ sẽ giúp bạn đi tiếp, và sau đó bạn xem lại được chỗ vướng.",
     "roleplayWhyStuck": "Xem bạn vướng ở đâu",
     "roleplayReviewTitle": "Chỗ bạn bị vướng",
     "roleplayReviewSay": "Bạn có thể nói",
@@ -1857,7 +1859,8 @@
     "roleplayPracticeRetry": "Thử lại",
     "roleplayListening": "Đang nghe",
     "roleplaySpeaking": "Nghe thấy bạn",
-    "roleplayThinking": "Đang nghĩ…"
+    "roleplayThinking": "Đang nghĩ…",
+    "roleplayStart": "Bắt đầu nói"
   },
   "fr": {
     "appTitle": "Chat de correction d'{targetLanguage}",
@@ -2460,7 +2463,7 @@
     "pointsPurchased": "{n} P ajoutés.",
     "pointsUnavailable": "Recharge indisponible pour le moment.",
     "roleplayTitle": "Entraînement à l'appel",
-    "roleplayIntro": "Entraînez-vous dans une situation donnée. Le tuteur intervient si vous bloquez.",
+    "roleplayIntro": "Parlez de ce que vous voulez. Si vous bloquez, on vous aide à continuer, et vous pouvez ensuite voir où.",
     "roleplayWhyStuck": "Voir ce qui a bloqué",
     "roleplayReviewTitle": "Là où vous avez bloqué",
     "roleplayReviewSay": "Vous auriez pu dire",
@@ -2477,7 +2480,8 @@
     "roleplayPracticeRetry": "Encore",
     "roleplayListening": "J'écoute",
     "roleplaySpeaking": "Je vous entends",
-    "roleplayThinking": "Je réfléchis…"
+    "roleplayThinking": "Je réfléchis…",
+    "roleplayStart": "Commencer à parler"
   },
   "pt": {
     "appTitle": "Chat de correção de {targetLanguage}",
@@ -3080,7 +3084,7 @@
     "pointsPurchased": "{n}P adicionados.",
     "pointsUnavailable": "Recarga indisponível no momento.",
     "roleplayTitle": "Prática de chamada",
-    "roleplayIntro": "Pratique em uma situação definida. O tutor entra quando você travar.",
+    "roleplayIntro": "Fale sobre o que quiser. Se travar, te ajudam a seguir, e depois você vê onde foi.",
     "roleplayWhyStuck": "Ver o que travou você",
     "roleplayReviewTitle": "Onde você travou",
     "roleplayReviewSay": "Você poderia ter dito",
@@ -3097,7 +3101,8 @@
     "roleplayPracticeRetry": "De novo",
     "roleplayListening": "Ouvindo",
     "roleplaySpeaking": "Estou te ouvindo",
-    "roleplayThinking": "Pensando…"
+    "roleplayThinking": "Pensando…",
+    "roleplayStart": "Começar a falar"
   },
   "id": {
     "appTitle": "Chat koreksi {targetLanguage}",
@@ -3700,7 +3705,7 @@
     "pointsPurchased": "{n}P ditambahkan.",
     "pointsUnavailable": "Isi ulang belum tersedia saat ini.",
     "roleplayTitle": "Latihan telepon",
-    "roleplayIntro": "Berlatih dalam situasi yang sudah disiapkan. Tutor masuk saat Anda buntu.",
+    "roleplayIntro": "Bicarakan apa saja. Kalau tersendat mereka bantu kamu lanjut, dan setelahnya kamu bisa lihat di mana.",
     "roleplayWhyStuck": "Lihat apa yang menghambat",
     "roleplayReviewTitle": "Tempat kamu tersendat",
     "roleplayReviewSay": "Kamu bisa bilang",
@@ -3717,7 +3722,8 @@
     "roleplayPracticeRetry": "Ulangi",
     "roleplayListening": "Mendengarkan",
     "roleplaySpeaking": "Terdengar",
-    "roleplayThinking": "Berpikir…"
+    "roleplayThinking": "Berpikir…",
+    "roleplayStart": "Mulai bicara"
   },
   "it": {
     "appTitle": "Chat di correzione {targetLanguage}",
@@ -4320,7 +4326,7 @@
     "pointsPurchased": "{n}P aggiunti.",
     "pointsUnavailable": "Ricarica non disponibile al momento.",
     "roleplayTitle": "Pratica di chiamata",
-    "roleplayIntro": "Esercitati in una situazione definita. Il tutor interviene se ti blocchi.",
+    "roleplayIntro": "Parla di quello che vuoi. Se ti blocchi ti aiutano a proseguire, e dopo puoi vedere dove.",
     "roleplayWhyStuck": "Vedi cosa ti ha bloccato",
     "roleplayReviewTitle": "Dove ti sei bloccato",
     "roleplayReviewSay": "Potevi dire",
@@ -4337,7 +4343,8 @@
     "roleplayPracticeRetry": "Ancora",
     "roleplayListening": "In ascolto",
     "roleplaySpeaking": "Ti sento",
-    "roleplayThinking": "Sto pensando…"
+    "roleplayThinking": "Sto pensando…",
+    "roleplayStart": "Inizia a parlare"
   },
   "ru": {
     "appTitle": "Чат для правки {targetLanguage}",
@@ -4940,7 +4947,7 @@
     "pointsPurchased": "Начислено {n}P.",
     "pointsUnavailable": "Пополнение сейчас недоступно.",
     "roleplayTitle": "Практика звонка",
-    "roleplayIntro": "Практика в заданной ситуации. Преподаватель подключится, если вы застрянете.",
+    "roleplayIntro": "Говорите о чём угодно. Если застрянете, вам помогут продолжить, а потом можно посмотреть, где это было.",
     "roleplayWhyStuck": "Посмотреть, что помешало",
     "roleplayReviewTitle": "Где вы застряли",
     "roleplayReviewSay": "Можно было сказать",
@@ -4957,7 +4964,8 @@
     "roleplayPracticeRetry": "Ещё раз",
     "roleplayListening": "Слушаю",
     "roleplaySpeaking": "Слышу вас",
-    "roleplayThinking": "Думаю…"
+    "roleplayThinking": "Думаю…",
+    "roleplayStart": "Начать разговор"
   },
   "ar": {
     "appTitle": "دردشة تصحيح {targetLanguage}",
@@ -5560,7 +5568,7 @@
     "pointsPurchased": "تمت إضافة {n}P.",
     "pointsUnavailable": "الشحن غير متاح حاليًا.",
     "roleplayTitle": "تدريب المكالمة",
-    "roleplayIntro": "تدرّب في موقف محدّد. يتدخّل المعلّم عندما تتعثّر.",
+    "roleplayIntro": "تحدّث عن أي شيء. إذا تعثّرت سيساعدونك على المتابعة، ويمكنك بعدها أن ترى أين حدث ذلك.",
     "roleplayWhyStuck": "اعرف ما الذي أوقفك",
     "roleplayReviewTitle": "أين تعثّرت",
     "roleplayReviewSay": "كان يمكنك أن تقول",
@@ -5577,7 +5585,8 @@
     "roleplayPracticeRetry": "مرة أخرى",
     "roleplayListening": "أستمع",
     "roleplaySpeaking": "أسمعك",
-    "roleplayThinking": "أفكر…"
+    "roleplayThinking": "أفكر…",
+    "roleplayStart": "ابدأ الحديث"
   },
   "th": {
     "appTitle": "แชทตรวจ {targetLanguage}",
@@ -6180,7 +6189,7 @@
     "pointsPurchased": "เพิ่ม {n}P แล้ว",
     "pointsUnavailable": "ยังเติมพอยต์ไม่ได้ในขณะนี้",
     "roleplayTitle": "ฝึกโทร",
-    "roleplayIntro": "ฝึกพูดในสถานการณ์ที่กำหนดไว้ ติวเตอร์จะเข้ามาช่วยเมื่อคุณติด",
+    "roleplayIntro": "คุยเรื่องอะไรก็ได้ ถ้าติดตรงไหนอีกฝ่ายจะช่วย และดูย้อนหลังได้ว่าติดตรงไหน",
     "roleplayWhyStuck": "ดูว่าติดตรงไหน",
     "roleplayReviewTitle": "จุดที่คุณติด",
     "roleplayReviewSay": "คุณพูดแบบนี้ได้",
@@ -6197,7 +6206,8 @@
     "roleplayPracticeRetry": "ลองอีกครั้ง",
     "roleplayListening": "กำลังฟัง",
     "roleplaySpeaking": "ได้ยินแล้ว",
-    "roleplayThinking": "กำลังคิด…"
+    "roleplayThinking": "กำลังคิด…",
+    "roleplayStart": "เริ่มคุย"
   },
   "hi": {
     "appTitle": "{targetLanguage} सुधार चैट",
@@ -6800,7 +6810,7 @@
     "pointsPurchased": "{n}P जोड़े गए।",
     "pointsUnavailable": "अभी रीचार्ज उपलब्ध नहीं है।",
     "roleplayTitle": "कॉल अभ्यास",
-    "roleplayIntro": "तय स्थिति में बोलने का अभ्यास। अटकने पर ट्यूटर आ जाएगा।",
+    "roleplayIntro": "कुछ भी बात करें। अटक जाएँ तो सामने वाला मदद करेगा, और बाद में देख सकते हैं कहाँ अटके।",
     "roleplayWhyStuck": "देखें कहाँ अटके",
     "roleplayReviewTitle": "जहाँ आप अटके",
     "roleplayReviewSay": "आप यह कह सकते थे",
@@ -6817,6 +6827,7 @@
     "roleplayPracticeRetry": "फिर से",
     "roleplayListening": "सुन रहे हैं",
     "roleplaySpeaking": "सुनाई दे रहा है",
-    "roleplayThinking": "सोच रहे हैं…"
+    "roleplayThinking": "सोच रहे हैं…",
+    "roleplayStart": "बात शुरू करें"
   }
 }
