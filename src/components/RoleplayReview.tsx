@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { compareToTarget, type WordOutcome } from "@/lib/roleplay/practice";
 import type { Practice } from "@/lib/roleplay/practice";
 import type { Review, StuckTurn } from "@/lib/roleplay/review";
@@ -108,10 +108,13 @@ function SayItBack({
   target,
   ui,
   onListen,
+  onGrew,
 }: {
   target: string;
   ui: UICopy;
   onListen: (target: string) => Promise<{ heard: string; practice: Practice | null }>;
+  /** The panel got taller — bring what appeared into view. */
+  onGrew: () => void;
 }) {
   const [state, setState] = useState<
     | { at: "idle" }
@@ -124,6 +127,14 @@ function SayItBack({
     const result = await onListen(target);
     setState({ at: "read", ...result });
   };
+
+  // An attempt lands below everything already on screen, and on a phone that is
+  // below the fold: without this the learner says the line and nothing visibly
+  // happens. After the paint, so the panel has its new height by then.
+  useEffect(() => {
+    if (state.at === "read") onGrew();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state]);
 
   if (state.at === "read") {
     return (
@@ -181,9 +192,19 @@ export function RoleplayReviewPanel({
   /** Listen once and read the attempt. Absent where there is no microphone. */
   onSayItBack?: (target: string) => Promise<{ heard: string; practice: Practice | null }>;
 }) {
+  const scroller = useRef<HTMLDivElement | null>(null);
+  const toBottom = () => {
+    const panel = scroller.current;
+    if (!panel) return;
+    panel.scrollTo({ top: panel.scrollHeight, behavior: "smooth" });
+  };
+
   return (
     <div className="absolute inset-0 z-10 flex flex-col justify-end bg-black/70 p-3">
-      <div className="max-h-[80%] overflow-y-auto rounded-2xl border border-white/10 bg-[#0e0e0e] p-4">
+      <div
+        ref={scroller}
+        className="max-h-[80%] overflow-y-auto rounded-2xl border border-white/10 bg-[#0e0e0e] p-4"
+      >
         <h3 className="text-sm font-semibold text-white">{ui.roleplayReviewTitle}</h3>
         <p className="mt-1 text-[12px] text-neutral-500">{turn.asked}</p>
 
@@ -203,7 +224,12 @@ export function RoleplayReviewPanel({
                     scene is already stopped, so this is the cheapest moment
                     there will ever be to try it. */}
                 {onSayItBack ? (
-                  <SayItBack target={review.say} ui={ui} onListen={onSayItBack} />
+                  <SayItBack
+                    target={review.say}
+                    ui={ui}
+                    onListen={onSayItBack}
+                    onGrew={toBottom}
+                  />
                 ) : null}
               </div>
             ) : null}
