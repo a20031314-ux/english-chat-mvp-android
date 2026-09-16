@@ -123,11 +123,14 @@ export function RoleplayScreen({
   const [instruction, setInstruction] = useState<Instruction | null>(null);
   const [said, setSaid] = useState<Spoken[]>([]);
   const [recording, setRecording] = useState(false);
-  const [speaking, setSpeaking] = useState(false);
   // Bumped when the microphone decides a turn has ended. An effect does the
   // sending rather than the callback itself: the callback is created once, at
   // the start of the turn, and would still be holding that moment's state.
   const [settled, setSettled] = useState(0);
+  // The wait between their last word and the character's first: transcribing
+  // what was said, then deciding what to answer. Shown in the conversation as
+  // a line being composed, because that is where the learner is looking and
+  // what is actually happening.
   const [thinking, setThinking] = useState(false);
   // The director is deciding what the character says. Shown as the character
   // about to speak, not as the app working.
@@ -356,7 +359,6 @@ export function RoleplayScreen({
       recorderRef.current?.cancel();
       recorderRef.current = null;
       setRecording(false);
-      setSpeaking(false);
       setReviewing({ turn, review: null, failed: false });
       if (!scenario) return;
       void fetchReview({
@@ -394,9 +396,7 @@ export function RoleplayScreen({
       const { heard } = await listenOnce({
         language: scenario.language,
         isPremium,
-        onSpeaking: setSpeaking,
       });
-      setSpeaking(false);
       const practice = await fetchPractice({
         scenarioId: scenario.id,
         target,
@@ -424,7 +424,6 @@ export function RoleplayScreen({
       recorderRef.current = await listenForTurn({
         language: scenario.language,
         isPremium,
-        onSpeaking: setSpeaking,
         onSettled: () => setSettled((count) => count + 1),
       });
       setRecording(true);
@@ -445,7 +444,6 @@ export function RoleplayScreen({
     const endedAt = Date.now();
     const speechStartedAt = recorder.speechStartedAt();
     setRecording(false);
-    setSpeaking(false);
     setThinking(true);
     const heard = await recorder.stop();
     setThinking(false);
@@ -503,7 +501,7 @@ export function RoleplayScreen({
         {said.map((line, index) => (
           <RoleplayLine key={index} line={line} ui={ui} onReview={openReview} />
         ))}
-        {directing ? (
+        {directing || thinking ? (
           <li className="mb-2 flex justify-start">
             <div className="rounded-2xl bg-[#141414] px-3 py-2 text-[14px] text-neutral-500">
               …
@@ -521,24 +519,6 @@ export function RoleplayScreen({
             {instruction.hint ? (
               <p className="text-[12px] text-neutral-500">{instruction.hint}</p>
             ) : null}
-            {/* Not a control. The microphone opens with the turn and closes
-                itself: after speech it waits out a pause, and it gives up on
-                its own after twenty seconds either way, so there is nothing a
-                send button would rescue. What is left is the one thing a
-                voice-only screen cannot do without — saying whether it is
-                listening, hearing you, or thinking. */}
-            <p
-              className={`w-full rounded-xl px-4 py-3 text-center text-sm ${
-                speaking ? "bg-[#b91c3c]/80 text-white" : "bg-white/10 text-neutral-300"
-              }`}
-              aria-live="polite"
-            >
-              {thinking
-                ? ui.roleplayThinking
-                : speaking
-                  ? `● ${ui.roleplaySpeaking}`
-                  : `🎙 ${ui.roleplayListening}`}
-            </p>
           </div>
         ) : null}
 

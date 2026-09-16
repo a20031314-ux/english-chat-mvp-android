@@ -615,9 +615,6 @@
     "roleplayPracticeListening": "聞いています…",
     "roleplayPracticeHeard": "こう聞こえました",
     "roleplayPracticeRetry": "もう一度",
-    "roleplayListening": "聞いています",
-    "roleplaySpeaking": "聞こえています",
-    "roleplayThinking": "考え中…",
     "roleplayStart": "話しはじめる"
   },
   "zh": {
@@ -1236,9 +1233,6 @@
     "roleplayPracticeListening": "正在听…",
     "roleplayPracticeHeard": "听到的是",
     "roleplayPracticeRetry": "再试一次",
-    "roleplayListening": "正在听",
-    "roleplaySpeaking": "听到你了",
-    "roleplayThinking": "思考中…",
     "roleplayStart": "开始对话"
   },
   "vi": {
@@ -1857,9 +1851,6 @@
     "roleplayPracticeListening": "Đang nghe…",
     "roleplayPracticeHeard": "Nghe được là",
     "roleplayPracticeRetry": "Thử lại",
-    "roleplayListening": "Đang nghe",
-    "roleplaySpeaking": "Nghe thấy bạn",
-    "roleplayThinking": "Đang nghĩ…",
     "roleplayStart": "Bắt đầu nói"
   },
   "fr": {
@@ -2478,9 +2469,6 @@
     "roleplayPracticeListening": "J'écoute…",
     "roleplayPracticeHeard": "Ce qui est passé",
     "roleplayPracticeRetry": "Encore",
-    "roleplayListening": "J'écoute",
-    "roleplaySpeaking": "Je vous entends",
-    "roleplayThinking": "Je réfléchis…",
     "roleplayStart": "Commencer à parler"
   },
   "pt": {
@@ -3099,9 +3087,6 @@
     "roleplayPracticeListening": "Ouvindo…",
     "roleplayPracticeHeard": "O que saiu",
     "roleplayPracticeRetry": "De novo",
-    "roleplayListening": "Ouvindo",
-    "roleplaySpeaking": "Estou te ouvindo",
-    "roleplayThinking": "Pensando…",
     "roleplayStart": "Começar a falar"
   },
   "id": {
@@ -3720,9 +3705,6 @@
     "roleplayPracticeListening": "Mendengarkan…",
     "roleplayPracticeHeard": "Yang terdengar",
     "roleplayPracticeRetry": "Ulangi",
-    "roleplayListening": "Mendengarkan",
-    "roleplaySpeaking": "Terdengar",
-    "roleplayThinking": "Berpikir…",
     "roleplayStart": "Mulai bicara"
   },
   "it": {
@@ -4341,9 +4323,6 @@
     "roleplayPracticeListening": "In ascolto…",
     "roleplayPracticeHeard": "Quello che è arrivato",
     "roleplayPracticeRetry": "Ancora",
-    "roleplayListening": "In ascolto",
-    "roleplaySpeaking": "Ti sento",
-    "roleplayThinking": "Sto pensando…",
     "roleplayStart": "Inizia a parlare"
   },
   "ru": {
@@ -4962,9 +4941,6 @@
     "roleplayPracticeListening": "Слушаю…",
     "roleplayPracticeHeard": "Что получилось",
     "roleplayPracticeRetry": "Ещё раз",
-    "roleplayListening": "Слушаю",
-    "roleplaySpeaking": "Слышу вас",
-    "roleplayThinking": "Думаю…",
     "roleplayStart": "Начать разговор"
   },
   "ar": {
@@ -5583,9 +5559,6 @@
     "roleplayPracticeListening": "أستمع…",
     "roleplayPracticeHeard": "ما وصل",
     "roleplayPracticeRetry": "مرة أخرى",
-    "roleplayListening": "أستمع",
-    "roleplaySpeaking": "أسمعك",
-    "roleplayThinking": "أفكر…",
     "roleplayStart": "ابدأ الحديث"
   },
   "th": {
@@ -6204,9 +6177,6 @@
     "roleplayPracticeListening": "กำลังฟัง…",
     "roleplayPracticeHeard": "ที่ได้ยินคือ",
     "roleplayPracticeRetry": "ลองอีกครั้ง",
-    "roleplayListening": "กำลังฟัง",
-    "roleplaySpeaking": "ได้ยินแล้ว",
-    "roleplayThinking": "กำลังคิด…",
     "roleplayStart": "เริ่มคุย"
   },
   "hi": {
@@ -6825,9 +6795,6 @@
     "roleplayPracticeListening": "सुन रहे हैं…",
     "roleplayPracticeHeard": "जो सुनाई दिया",
     "roleplayPracticeRetry": "फिर से",
-    "roleplayListening": "सुन रहे हैं",
-    "roleplaySpeaking": "सुनाई दे रहा है",
-    "roleplayThinking": "सोच रहे हैं…",
     "roleplayStart": "बात शुरू करें"
   }
 }

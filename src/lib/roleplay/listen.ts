@@ -78,7 +78,7 @@ async function transcribe(
   language: string,
   isPremium: boolean,
 ): Promise<string> {
-  const response = await fetch(apiUrl("/api/video-subtitles/transcribe-chunk"), {
+  const response = await fetch(apiUrl("/api/roleplay/listen"), {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
