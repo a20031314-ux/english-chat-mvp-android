@@ -2,6 +2,7 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
+import { heardOrNothing } from "@/lib/roleplay/transcript";
 import { toFile } from "openai";
 
 export const dynamic = "force-dynamic";
@@ -73,8 +74,15 @@ export async function POST(request: NextRequest) {
       response_format: "text",
       temperature: 0,
       ...(language.length === 2 ? { language } : {}),
+      // Says what kind of audio this is, which is most of what stops a model
+      // handed half a second of sound from filling the gap with something it
+      // has heard often. The language hint alone did not.
+      prompt: "One person speaking a single short turn in a casual spoken conversation.",
     });
-    return jsonWithCors(request, { text: String(text).trim() });
+    // Checked on the way back as well, because neither the hint nor the prompt
+    // is a guarantee: a reply in a script this language does not use was not a
+    // transcription of it (roleplay/transcript.ts).
+    return jsonWithCors(request, { text: heardOrNothing(String(text), language) });
   } catch (error) {
     console.error("[roleplay/listen]", error);
     return jsonWithCors(request, { error: "STT_FAILED" }, { status: 502 });
