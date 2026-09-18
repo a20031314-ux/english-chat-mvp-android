@@ -21,6 +21,18 @@
  * multiplier anyone will reach for when turning counts into cost.
  */
 export const MODEL_CALLS_PER_REQUEST = {
+  // The oldest route in the app and the last one counted, which is why the
+  // ledger had a hole exactly where most of the traffic is: chat was counted by
+  // the free tier's daily limiter, which answers "how many messages" and not
+  // "how much did they cost". One call, or two when a correction rewrote the
+  // line enough that the reply had to be written again — that second call is
+  // counted on its own below, so the pair says how often it happens.
+  chat: 1,
+  chatReread: 1,
+  // A "how do I say this" turn. One call, and the same model.
+  howToSay: 1,
+  // The opening line of a conversation nobody has spoken in yet.
+  chatStart: 1,
   analysisInput: 5,
   analysisElement: 1,
   expressionInsight: 1,

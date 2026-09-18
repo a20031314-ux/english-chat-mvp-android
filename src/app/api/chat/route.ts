@@ -1,3 +1,4 @@
+import { meterRequest } from "@/lib/server/meterRequest";
 import { NextRequest } from "next/server";
 import type OpenAI from "openai";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
@@ -443,7 +444,7 @@ async function runChat(
   message: string,
   langs: ChatLanguages,
   recent: string[] = [],
-  options: ChatTurnOptions = {},
+  options: ChatTurnOptions & { onReread?: () => void } = {},
 ): Promise<ChatPayload> {
   const payload = JSON.stringify({
     message,
@@ -509,6 +510,7 @@ async function runChat(
   let spoken = spokenReply;
   if (needsExplanation && corrected.trim()) {
     try {
+      options.onReread?.();
       const reread = await replyToCorrected(openai, corrected, recent, langs);
       if (reread.assistantMessage) reply = reread.assistantMessage;
       if (reread.spokenReply) spoken = reread.spokenReply;
@@ -716,6 +718,7 @@ export async function POST(request: NextRequest) {
       return jsonWithCors(request, starterPayload(pickStarter(recent), langs));
     }
     try {
+      void meterRequest(request, "chatStart");
       const data = await runStart(openai, recent, langs);
       return jsonWithCors(request, data);
     } catch (error) {
@@ -752,6 +755,7 @@ export async function POST(request: NextRequest) {
 
   try {
     if (mode === "how_to_say") {
+      void meterRequest(request, "howToSay");
       const data = await runHowToSay(
         openai,
         message,
@@ -765,12 +769,21 @@ export async function POST(request: NextRequest) {
       return jsonWithCors(request, data);
     }
 
+    // Counted here rather than by the daily limiter, which answers how many
+    // messages someone sent and not what they cost. The reread is counted as it
+    // happens, so the two together say how often a correction is large enough
+    // to need the reply written twice.
+    void meterRequest(request, "chat");
     const data = await runChat(
       openai,
       message,
       langs,
       parseRecent(body.recent),
-      { conversationMode, imageDataUrl },
+      {
+        conversationMode,
+        imageDataUrl,
+        onReread: () => void meterRequest(request, "chatReread"),
+      },
     );
     if (!isPremium) {
       await incrementDailyUsed(userId);
