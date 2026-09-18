@@ -16,11 +16,44 @@ export const dynamic = "force-dynamic";
 const MODEL = process.env.OPENAI_TTS_MODEL ?? "gpt-4o-mini-tts";
 const MAX_CHARS = 2000;
 
-function streamHeaders(request: NextRequest, lang: string): Record<string, string> {
+/**
+ * How long a cached line is worth keeping.
+ *
+ * A year, because the answer cannot go stale: the same words in the same voice
+ * are the same audio, and the URL carries both. A line that changes is a
+ * different URL.
+ */
+const CACHE_SECONDS = 365 * 24 * 60 * 60;
+
+/**
+ * Whether this response may be kept and handed to somebody else.
+ *
+ * Only a line said in a scene's own voice. That is the character speaking —
+ * words this app wrote, in a voice it chose — and two learners who reach the
+ * same line deserve the same recording rather than two syntheses of it.
+ *
+ * Everything else stays private. The chat speaks whatever is in front of it,
+ * which can be a sentence the learner wrote, and a shared cache is the wrong
+ * place for that however small the risk of anyone finding it.
+ */
+function mayBeShared(request: NextRequest, rawVoice: unknown): boolean {
+  return request.method === "GET" && isTtsVoice(rawVoice);
+}
+
+function streamHeaders(
+  request: NextRequest,
+  lang: string,
+  shared = false,
+): Record<string, string> {
   return {
     ...corsHeaders(request),
     "Content-Type": "application/octet-stream",
-    "Cache-Control": "private, max-age=3600",
+    // The bank of recorded lines names its files after a hash of the voice and
+    // the text (roleplay/script.ts) for the same reason this works: identical
+    // words in one voice are one recording. Here the URL is the hash.
+    "Cache-Control": shared
+      ? `public, max-age=${CACHE_SECONDS}, s-maxage=${CACHE_SECONDS}, immutable`
+      : "private, max-age=3600",
     "X-Accel-Buffering": "no",
     "X-Speech-Lang": speechLangPrefix(lang),
     "X-TTS-Format": "pcm_s16le_24k",
@@ -38,6 +71,10 @@ async function synthesize(
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
 
+  // Counted here, which is inside the function — so once a line is cached at
+  // the edge, the repeats do not reach this and are not counted. That is the
+  // right meaning for a cost meter: this counts syntheses performed, and the
+  // gap between it and how often lines are spoken is what the cache is saving.
   await meterRequest(request, "tts");
 
   const text = rawText.trim();
@@ -76,17 +113,18 @@ async function synthesize(
           }
         : {}),
     });
+    const shared = mayBeShared(request, rawVoice);
     const body = speech.body;
     if (!body) {
       const bytes = Buffer.from(await speech.arrayBuffer());
       return new NextResponse(bytes, {
         status: 200,
-        headers: streamHeaders(request, lang),
+        headers: streamHeaders(request, lang, shared),
       });
     }
     return new NextResponse(body, {
       status: 200,
-      headers: streamHeaders(request, lang),
+      headers: streamHeaders(request, lang, shared),
     });
   } catch (error) {
     console.error("TTS failed:", error);
