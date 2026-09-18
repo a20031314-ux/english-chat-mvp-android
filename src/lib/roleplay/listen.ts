@@ -139,8 +139,20 @@ const MIN_SPEECH_MS = 300;
  * mid-sentence; short enough that finishing does not feel like waiting. People
  * pause longer in a language they are learning, which is why this is not the
  * 500ms a native-speaker VAD would use.
+ *
+ * Was 1400, and came down after the first real conversation on a phone: from
+ * the learner's last word there are three more waits before they hear anything
+ * — hearing what was said, deciding what to answer, saying it out loud, about
+ * six seconds in all — and this one is the only part of it that is a number
+ * rather than a model. Half a second off the front of six is worth having, and
+ * it is the cheapest half second available.
+ *
+ * It is a dial, and this is the direction with a cost: too short and someone
+ * thinking mid-sentence gets cut off, which is worse than waiting. If turns
+ * start being sent while people are still talking, this is the reason, and 1400
+ * is where it was.
  */
-const TRAILING_SILENCE_MS = 1400;
+const TRAILING_SILENCE_MS = 900;
 /** Nobody's single turn runs this long. A stuck detector should still send. */
 const MAX_TURN_MS = 20000;
 /** How long to wait for a first word before giving up and calling it silence. */
