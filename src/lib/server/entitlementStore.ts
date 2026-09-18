@@ -27,6 +27,7 @@ import {
   type PointSpend,
 } from "../billing/points.ts";
 import { monthlyImportPoints } from "../billing/videoPrep.ts";
+import { isIdentified } from "./identity.ts";
 
 /** Long enough that a day's counter outlives the day in every timezone. */
 const DAILY_TTL_SECONDS = 3 * 24 * 60 * 60;
@@ -439,6 +440,16 @@ export async function chargeRoleplayTurn(
   sessionId: string,
   now: number,
 ): Promise<{ ok: boolean; charged: number; left: number }> {
+  // Nobody in particular is asking, so there is nobody to charge. Every caller
+  // without a RevenueCat id shares one name, and an allowance keyed to it is a
+  // single allowance for every such install at once — the first conversation
+  // anywhere would spend it and every other would be refused, which is what a
+  // debug build did within three sessions. Served rather than refused: the
+  // failure to identify someone is ours, not theirs.
+  if (!isIdentified(userId)) {
+    return { ok: true, charged: 0, left: FREE_LIFETIME_ROLEPLAY_POINTS };
+  }
+
   const key = roleplaySessionKey(userId, sessionId);
   const session = (await kvGetJson<RoleplaySession>(key)) ?? {
     startedAt: now,

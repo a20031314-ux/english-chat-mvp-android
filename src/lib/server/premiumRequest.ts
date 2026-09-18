@@ -1,3 +1,4 @@
+import { SHARED_ANONYMOUS_ID } from "./identity.ts";
 import type { NextRequest } from "next/server";
 import {
   PREMIUM_CLIENT_HEADER,
@@ -39,7 +40,7 @@ export function revenueCatUserId(request: NextRequest): string | null {
 
 /** Falls back to a client-set cookie, which is only as stable as the install. */
 function cookieUserId(request: NextRequest): string {
-  return request.cookies.get("ec_uid")?.value ?? "local-anonymous";
+  return request.cookies.get("ec_uid")?.value ?? SHARED_ANONYMOUS_ID;
 }
 
 /**

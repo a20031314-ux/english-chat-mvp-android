@@ -15,6 +15,7 @@ import {
   chargeRoleplayTurn,
   roleplayPointsLeft,
 } from "./entitlementStore.ts";
+import { SHARED_ANONYMOUS_ID } from "./identity.ts";
 
 // No KV credentials are set here, so these exercise the in-memory fallback.
 // Each test uses its own user id because that fallback is process-wide.
@@ -158,4 +159,25 @@ test("a subscriber spends the monthly grant rather than the free allowance", asy
   // And the free lifetime allowance is untouched, so cancelling does not hand
   // anyone a fresh fifteen minutes they already had.
   assert.equal(await roleplayPointsLeft("rp-premium", false), 3);
+});
+
+test("nobody in particular is never charged", async () => {
+  // Every caller without a RevenueCat id shares one name, so an allowance keyed
+  // to it is one allowance for every install at once. A debug build spent it in
+  // three sessions and then refused a fourth — for a different phone, a
+  // different person, and no reason they could see.
+  const t0 = 1_700_000_000_000;
+  for (let session = 0; session < 6; session += 1) {
+    const charge = await chargeRoleplayTurn(
+      SHARED_ANONYMOUS_ID,
+      false,
+      `anon-${session}`,
+      t0 + session * 20 * 60 * 1000,
+    );
+    assert.equal(charge.ok, true, `session ${session} should be served`);
+    assert.equal(charge.charged, 0, "and nothing taken from anyone");
+  }
+  // Someone with a name is still charged normally.
+  const named = await chargeRoleplayTurn("rc:someone", false, "s1", t0);
+  assert.equal(named.charged, 1);
 });
