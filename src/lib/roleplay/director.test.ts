@@ -58,13 +58,32 @@ test("a step's question is its asking line, not its 'sorry?'", () => {
   assert.equal(steps.find((step) => step.id === "here-answer")?.helpId, "cafe.fix-here");
 });
 
-test("only lines recorded in this scene's voice are offered as free", () => {
-  // A recording is a text in one voice; the barista's lines do not exist in
-  // the taxi driver's mouth.
+test("every line this voice has ever said is offered, whatever scene wrote it", () => {
+  // This used to be the opposite test: a recording was a text in one voice, and
+  // the barista's lines did not exist in the taxi driver's mouth. The English
+  // scenes are one person now, so the pool is that person's whole repertoire —
+  // which is the point of giving them one voice, and what lets a line written
+  // for one situation be said in another without synthesising it again.
   const ids = recordedLines(cafe, SCENARIOS, bank).map((line) => line.id);
   assert.ok(ids.includes("cafe.greet"));
   assert.ok(ids.includes("cafe.fix-here"), "written help is a recording too");
-  assert.ok(!ids.includes("taxi.greet"));
+  assert.ok(ids.includes("taxi.greet"), "another scene's line, in the same voice");
+});
+
+test("a voice does not borrow from a language it does not speak", () => {
+  // The other filter, and the one that still has to hold: every language has
+  // its own recordings, and a Korean line has no English audio to play.
+  const ids = recordedLines(cafe, SCENARIOS, bank).map((line) => line.id);
+  const korean = recordedLines(
+    findScenario("open-talk-ko")!,
+    SCENARIOS,
+    sentencesFor("ko"),
+  ).map((line) => line.id);
+  assert.ok(korean.length > 0);
+  assert.ok(
+    korean.every((id) => !ids.includes(id) || bank[id]),
+    "a line offered in English must exist in the English bank",
+  );
 });
 
 test("the prompt is the character's own brief, not an observer's", () => {
@@ -115,9 +134,10 @@ test("a recorded line is kept by id, and a line with no recording is spoken as t
   const recordedPick = parse({ assessment: "stuck", say: { id: "cafe.fix-here" }, next: "step:here-answer" });
   assert.deepEqual(recordedPick?.say, { id: "cafe.fix-here" });
 
-  // Real words, wrong voice: spoken rather than thrown away.
+  // Another scene's line, in the same voice: played, not spoken, because the
+  // recording exists and is the same person.
   const elsewhere = parse({ say: { id: "taxi.greet" }, next: "free" });
-  assert.ok(elsewhere && "text" in elsewhere.say);
+  assert.deepEqual(elsewhere?.say, { id: "taxi.greet" });
 
   // Seen from the real model: the recorded help written out instead of named.
   const writtenOut = parse({

@@ -343,7 +343,7 @@ export const SCENARIOS: RoleplayScenario[] = [
   {
     id: "cafe-order",
     language: "en",
-    voice: "coral",
+    voice: "marin",
     title: "Ordering at a café",
     setting:
       "A small café at mid-morning. The tutor is the barista behind the counter; the learner is a customer who has just walked in. It is not busy, so the barista has time to be friendly and to repeat things.",
@@ -472,7 +472,7 @@ export const SCENARIOS: RoleplayScenario[] = [
   {
     id: "restaurant-order",
     language: "en",
-    voice: "sage",
+    voice: "marin",
     title: "Ordering a meal",
     setting:
       "A restaurant table, menus already handed out. The tutor is the server coming back to take the order; the learner has read the menu but not decided everything.",
@@ -607,7 +607,7 @@ export const SCENARIOS: RoleplayScenario[] = [
   {
     id: "directions",
     language: "en",
-    voice: "echo",
+    voice: "marin",
     title: "Asking the way",
     setting:
       "A street corner. The tutor is a local who is happy to help but walking somewhere; the learner is lost and holding a phone.",
@@ -729,7 +729,7 @@ export const SCENARIOS: RoleplayScenario[] = [
   {
     id: "shop-size",
     language: "en",
-    voice: "shimmer",
+    voice: "marin",
     title: "Trying something on",
     setting:
       "A clothing shop. The tutor works there; the learner is holding something in the wrong size.",
@@ -847,7 +847,7 @@ export const SCENARIOS: RoleplayScenario[] = [
   {
     id: "hotel-checkin",
     language: "en",
-    voice: "nova",
+    voice: "marin",
     title: "Checking into a hotel",
     setting:
       "A hotel front desk in the afternoon. The tutor is the receptionist; the learner has a booking on their phone.",
@@ -972,7 +972,7 @@ export const SCENARIOS: RoleplayScenario[] = [
   {
     id: "taxi",
     language: "en",
-    voice: "onyx",
+    voice: "marin",
     title: "Taking a taxi",
     setting:
       "The back of a taxi that has just pulled over. The tutor is the driver; the learner has an address written down.",
@@ -1103,7 +1103,7 @@ export const SCENARIOS: RoleplayScenario[] = [
   {
     id: "introducing-yourself",
     language: "en",
-    voice: "verse",
+    voice: "marin",
     title: "Meeting someone new",
     setting:
       "A party where the learner knows one person. The tutor is a stranger who has just said hello.",
