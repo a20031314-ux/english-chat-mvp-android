@@ -78,7 +78,8 @@ const TRANSCRIPT: TranscriptLine[] = [
     text: "I go to gym yesterday",
     better: "I went to the gym yesterday",
   },
-  { who: "tutor", text: "Nice! Was it busy?", translation: "좋네요! 사람 많았어요?" },
+  // No gloss: a line the character wrote just now, which is tappable for one.
+  { who: "tutor", text: "Nice! Was it busy?" },
   {
     who: "learner",
     text: "I very like this coffee",
@@ -145,6 +146,7 @@ export default function RoleplayReviewPreview() {
               line={line}
               ui={ui}
               onReview={() => setShown(0)}
+            onTranslate={(text) => console.log("[dev] translate asked for:", text)}
             />
           ))}
         </ol>

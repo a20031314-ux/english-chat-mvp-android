@@ -546,3 +546,36 @@ test("the brief says when to leave the rewrite alone", () => {
   assert.match(prompt, /Correcting something they said correctly costs more than saying nothing/);
   assert.match(prompt, /never said aloud/);
 });
+
+test("a written line is not made to carry a translation", () => {
+  // Half of what this answer used to contain was never spoken, and output
+  // arrives a character at a time — so the learner waited in silence for words
+  // that only ever appear on screen. The gloss is fetched when asked for.
+  const prompt = tutorSystemPrompt({
+    scenario: cafe,
+    bank,
+    recorded: recordedLines(cafe, SCENARIOS, bank),
+    request: request(),
+  });
+  assert.doesNotMatch(prompt, /"translation" is always required/);
+  assert.doesNotMatch(prompt, /"translation":/, "not asked for in the shape either");
+
+  const written = parse(
+    { say: { text: "Oh, nice — how long were you there?" }, next: "free" },
+    { heard: "I went to the gym" },
+  );
+  assert.deepEqual(written?.say, {
+    text: "Oh, nice — how long were you there?",
+    translation: "",
+  });
+});
+
+test("a recorded line keeps the gloss that was written with it", () => {
+  // That one cost nothing: it was written once, by hand, and ships in the bank.
+  const recorded = parse(
+    { assessment: "stuck", say: { id: "cafe.fix-here" }, next: "step:here-answer" },
+    { heard: "" },
+  );
+  assert.deepEqual(recorded?.say, { id: "cafe.fix-here" });
+  assert.ok(bank["cafe.fix-here"]?.translation, "and the bank still has it");
+});

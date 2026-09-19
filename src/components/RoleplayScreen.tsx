@@ -46,6 +46,7 @@ import {
   type SessionState,
 } from "@/lib/roleplay/session";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
+import { translateUtterance } from "@/lib/translateUtterance";
 import type { UICopy } from "@/lib/copy";
 
 /**
@@ -171,6 +172,8 @@ export function RoleplayScreen({
     failed: boolean;
   } | null>(null);
   const folding = useRef(false);
+  /** Lines already asked about, so a second tap does not ask twice. */
+  const translating = useRef(new Set<string>());
   // Names this conversation to the server, which charges by how long it has
   // been running (billing/config.ts). New on every scene, so a new scene is a
   // new five minutes rather than a continuation of the last one.
@@ -193,6 +196,7 @@ export function RoleplayScreen({
     setMemory(EMPTY_MEMORY);
     setReviewing(null);
     setOutOfPoints(false);
+    translating.current = new Set();
     conversationId.current =
       globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`;
     folding.current = false;
@@ -423,6 +427,44 @@ export function RoleplayScreen({
    * which is what keeps a line said in practice from arriving as the next turn
    * of the conversation.
    */
+  /**
+   * Fetch the gloss of a line the character wrote, because they asked for it.
+   *
+   * Written lines come back without one so that the sound can start as soon as
+   * the words exist. Most are never asked about — the learner is listening, not
+   * reading — and the ones that are cost a small call at the moment of asking
+   * rather than a wait on every turn.
+   */
+  const translateLine = useCallback(
+    (text: string) => {
+      if (!scenario || translating.current.has(text)) return;
+      translating.current.add(text);
+      void translateUtterance({
+        text,
+        locale: nativeLanguage,
+        interfaceLanguage: nativeLanguage,
+        targetLanguage: scenario.language,
+        sourceType: "conversation",
+      })
+        .then((translated) => {
+          if (!translated) return;
+          setSaid((current) =>
+            current.map((line) =>
+              line.who === "tutor" && line.text === text && !line.translation
+                ? { ...line, translation: translated }
+                : line,
+            ),
+          );
+        })
+        .catch(() => {
+          // Nothing to show and nothing to say about it: the line is still
+          // there to tap again.
+          translating.current.delete(text);
+        });
+    },
+    [scenario, nativeLanguage],
+  );
+
   const sayItBack = useCallback(
     async (target: string) => {
       if (!scenario) return { heard: "", practice: null };
@@ -532,7 +574,13 @@ export function RoleplayScreen({
 
       <ol className="min-h-0 flex-1 overflow-y-auto p-3">
         {said.map((line, index) => (
-          <RoleplayLine key={index} line={line} ui={ui} onReview={openReview} />
+          <RoleplayLine
+            key={index}
+            line={line}
+            ui={ui}
+            onReview={openReview}
+            onTranslate={translateLine}
+          />
         ))}
         {directing || thinking ? (
           <li className="mb-2 flex justify-start">

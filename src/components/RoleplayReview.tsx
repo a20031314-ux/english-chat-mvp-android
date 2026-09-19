@@ -35,10 +35,13 @@ export function RoleplayLine({
   line,
   ui,
   onReview,
+  onTranslate,
 }: {
   line: TranscriptLine;
   ui: UICopy;
   onReview: (turn: StuckTurn) => void;
+  /** Ask for the gloss of a line that has none. Absent where nothing can. */
+  onTranslate?: (text: string) => void;
 }) {
   return (
     <li className={`mb-2 flex ${line.who === "learner" ? "justify-end" : "justify-start"}`}>
@@ -49,7 +52,21 @@ export function RoleplayLine({
             : "bg-[#141414] text-neutral-100"
         }`}
       >
-        <p className="text-[14px] leading-snug">{line.text}</p>
+        {/* Tapping a line the character wrote asks for its gloss. Written
+            lines arrive without one on purpose: the answer is spoken as soon as
+            the words exist, and a translation nobody has asked to read should
+            not be standing between them and the sound. */}
+        {line.who === "tutor" && !line.translation && onTranslate ? (
+          <button
+            type="button"
+            onClick={() => onTranslate(line.text)}
+            className="text-left text-[14px] leading-snug"
+          >
+            {line.text}
+          </button>
+        ) : (
+          <p className="text-[14px] leading-snug">{line.text}</p>
+        )}
         {line.translation ? (
           <p className="mt-1 text-[12px] text-neutral-500">{line.translation}</p>
         ) : null}

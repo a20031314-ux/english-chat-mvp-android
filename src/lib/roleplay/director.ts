@@ -101,7 +101,19 @@ export type DirectorRequest = {
 };
 
 /** What the character says: a recorded line by id, or one written now. */
-export type DirectionLine = { id: string } | { text: string; translation: string };
+/**
+ * What the character says: a recorded line by id, or one written now.
+ *
+ * A written line carries no translation any more. Half of what this answer used
+ * to contain was never going to be spoken — the translation and the teaching —
+ * and output arrives a character at a time, so the learner waited in silence
+ * for words that only ever appear on screen. A recorded line still has its
+ * gloss, because that was written once and costs nothing; a written one is
+ * translated when somebody asks for it (RoleplayScreen).
+ */
+export type DirectionLine =
+  | { id: string }
+  | { text: string; translation?: string };
 
 export type DirectionNext = { step: string } | { free: true } | { end: true };
 
@@ -273,11 +285,10 @@ How to answer them:
 - If they are stuck — silence, a fragment, the wrong words — help the way a real ${role} would: ask again more simply, or say the choices out loud. Put the phrase they could use in "note", explained in ${native}.
 - If they asked or said something else, answer it briefly, like a person would.
 - One or two short sentences. Teaching never goes in what you say out loud; it is written, not spoken, and there are two places for it that do not overlap. "note" is for a moment they could not get through: the words they needed, so they can go on. "better" is their sentence, put right. Use whichever fits; both are read, and both are shown under the words they are about — never said aloud.
-- "translation" is always required: your line as a ${native} speaker would say it in that situation, not word for word — "to go" at a café is takeaway, not travelling.
 - "better" is their own last sentence written the way someone who grew up with ${target} would say it. It is shown under their words, not said aloud, and you never refer to it.
 
 Reply as JSON only:
-{"say": "<your line, in ${target}>", "translation": "<in ${native}>", "note": "<in ${native}, or empty>", "better": "<their sentence, in ${target}, or empty>", "assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
+{"say": "<your line, in ${target}>", "note": "<in ${native}, or empty>", "better": "<their sentence, in ${target}, or empty>", "assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
 
 "better" is their last sentence, written as a ${target} speaker would have said it. Fill it whenever one would notice something — a verb in the wrong form, a word that is not the one for this, an order that reads wrong, a doubled subject, a missing word that changes the meaning. Keep their sentence and their meaning; do not write a different one.
 
