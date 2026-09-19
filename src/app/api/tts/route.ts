@@ -47,6 +47,14 @@ function streamHeaders(
 ): Record<string, string> {
   return {
     ...corsHeaders(request),
+    // A shared response is stored once and handed to whoever asks next, and the
+    // allowed origin is normally the asking origin echoed back — so the copy
+    // that gets stored carries whichever origin happened to warm it. Measured:
+    // a request from one origin was served a header naming another. The audio
+    // is not credentialed and belongs to nobody, so it is opened to everyone
+    // rather than split into one cache entry per origin, which would undo the
+    // caching it is in aid of.
+    ...(shared ? { "Access-Control-Allow-Origin": "*" } : {}),
     "Content-Type": "application/octet-stream",
     // The bank of recorded lines names its files after a hash of the voice and
     // the text (roleplay/script.ts) for the same reason this works: identical
