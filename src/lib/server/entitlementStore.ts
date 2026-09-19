@@ -11,7 +11,7 @@
  * old key simply stops being read and expires on its own.
  */
 
-import { kvGetJson, kvGetNumber, kvIncrBy, kvSetJson } from "./kv.ts";
+import { kvGetJson, kvGetNumber, kvGetNumbers, kvIncrBy, kvSetJson } from "./kv.ts";
 import {
   FREE_LIFETIME_ROLEPLAY_POINTS,
   ROLEPLAY_POINT_SECONDS,
@@ -403,6 +403,53 @@ export async function settleCallHold(
   const refunded = spentPoints(refund);
   if (refunded > 0) await applySpend(userId, refund, -1);
   return { refundedPoints: refunded };
+}
+
+/**
+ * A line said, counted against the sentence that said it.
+ *
+ * Lifetime, not monthly: the question this answers is whether a sentence ever
+ * earns its place, and a month is too short a window to retire one on. A tally
+ * and the day it was last said, which together say both "is it used" and "is it
+ * still used".
+ */
+function sentenceSaidKey(language: string, id: string) {
+  return `bank:said:${language}:${id}`;
+}
+
+function sentenceLastKey(language: string, id: string) {
+  return `bank:last:${language}:${id}`;
+}
+
+/**
+ * Note that the character said a line out of the bank.
+ *
+ * Never throws and never blocks the turn: a lost tally costs one data point,
+ * and the conversation is worth more than the count of it.
+ */
+export async function noteSentenceSaid(language: string, id: string): Promise<void> {
+  try {
+    await kvIncrBy(sentenceSaidKey(language, id), 1);
+    await kvSetJson(sentenceLastKey(language, id), { at: Date.now() }, MONTHLY_TTL_SECONDS);
+  } catch {
+    // Counting is not the product.
+  }
+}
+
+/** How often each of these has been said, and when it last was. */
+export async function readSentenceTally(
+  language: string,
+  ids: string[],
+): Promise<Record<string, { said: number; lastAt: number | null }>> {
+  const counts = await kvGetNumbers(ids.map((id) => sentenceSaidKey(language, id)));
+  const lasts = await Promise.all(
+    ids.map((id) => kvGetJson<{ at: number }>(sentenceLastKey(language, id))),
+  );
+  const out: Record<string, { said: number; lastAt: number | null }> = {};
+  ids.forEach((id, index) => {
+    out[id] = { said: counts[index] ?? 0, lastAt: lasts[index]?.at ?? null };
+  });
+  return out;
 }
 
 type RoleplaySession = { startedAt: number; charged: number };

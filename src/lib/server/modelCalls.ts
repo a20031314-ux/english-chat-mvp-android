@@ -72,6 +72,16 @@ export const MODEL_CALLS_PER_REQUEST = {
   // One attempt at saying a line the review handed them. Counts how many go on
   // from reading the explanation to using it, which is the harder step.
   roleplayPractice: 1,
+  // Not model calls — both are zero — but counted here so the ledger can answer
+  // what the bank is for. A turn where the character reached for a line that
+  // already exists costs no synthesis and plays a read somebody checked; one
+  // where it invented a line costs both. Their ratio is the bank's hit rate,
+  // and it is the number that says whether growing the bank did anything.
+  roleplayBankLine: 0,
+  roleplayInventedLine: 0,
+  // The first director call of a conversation, so per-session figures have a
+  // denominator. Stateless: it is the turn that reports no directed turns yet.
+  roleplaySession: 0,
 } as const;
 
 export type MeteredOp = keyof typeof MODEL_CALLS_PER_REQUEST;

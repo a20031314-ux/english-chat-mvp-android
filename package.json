@@ -22,6 +22,7 @@
     "roleplay:draft": "node --experimental-strip-types scripts/draft-roleplay-scenario.mjs",
     "roleplay:review": "node --experimental-strip-types scripts/review-roleplay-lines.mjs",
     "roleplay:warm": "node --experimental-strip-types scripts/warm-roleplay-speech.mjs",
+    "roleplay:bank": "node --experimental-strip-types scripts/bank-report.mjs",
     "test:billing": "node --experimental-strip-types --test src/lib/appVersion.test.ts src/lib/billing/videoPrep.test.ts src/lib/billing/points.test.ts src/lib/billing/cost.test.ts src/lib/server/entitlementStore.test.ts src/lib/server/callHold.test.ts src/lib/server/creditPurchase.test.ts src/lib/server/kv.test.ts"
   },
   "dependencies": {

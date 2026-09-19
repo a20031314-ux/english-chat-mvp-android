@@ -14,7 +14,7 @@ import {
   ROLEPLAY_POINTS_CLIENT_HEADER,
   ROLEPLAY_SESSION_HEADER,
 } from "@/lib/billing/config";
-import { chargeRoleplayTurn } from "@/lib/server/entitlementStore";
+import { chargeRoleplayTurn, noteSentenceSaid } from "@/lib/server/entitlementStore";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -93,6 +93,10 @@ export async function POST(request: NextRequest) {
   }
 
   await meterRequest(request, "roleplayTurn");
+  // The first director call of a conversation, so per-session figures have a
+  // denominator. Stateless, and therefore an undercount by exactly the
+  // conversations whose first turn the script took on its own.
+  if (readCount(body.directedTurns) === 0) void meterRequest(request, "roleplaySession");
 
   const turn: DirectorRequest = {
     scenarioId: scenario.id,
@@ -141,6 +145,17 @@ export async function POST(request: NextRequest) {
     if (!direction) {
       return jsonWithCors(request, { error: "NO_DIRECTION" }, { status: 502 });
     }
+
+    // What the bank is for, counted where it is decided. A line reached for
+    // out of the bank costs no synthesis and plays a read somebody checked; an
+    // invented one costs both. Nothing waits on any of this.
+    if ("id" in direction.say) {
+      void meterRequest(request, "roleplayBankLine");
+      void noteSentenceSaid(scenario.language, direction.say.id);
+    } else {
+      void meterRequest(request, "roleplayInventedLine");
+    }
+
     return jsonWithCors(request, direction);
   } catch (error) {
     console.error("[roleplay/turn]", error);

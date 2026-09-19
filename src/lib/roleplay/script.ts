@@ -28,6 +28,19 @@ export type Sentence = {
   text: string;
   /** Shown beside the audio, in the learner's own language. */
   translation?: string;
+  /**
+   * Where the sentence came from, so the bank can be asked which way of
+   * growing it actually produces lines that get said.
+   *
+   * "written" is a person at a keyboard, which is every sentence that predates
+   * the question. "grown" is drafted in a batch and read by the automatic pass
+   * before a person saw it. "harvested" is a line the character said often
+   * enough in real conversations to be worth keeping.
+   *
+   * Absent means written: the oldest lines have no marking and should not be
+   * back-dated into a category that did not exist when they were made.
+   */
+  source?: "written" | "grown" | "harvested";
 };
 
 /** Sentences for one language, keyed by an id scenarios refer to. */
