@@ -118,6 +118,20 @@ export type RoleplayScenario = {
    */
   openEnded?: boolean;
   /**
+   * Lines the character may reach for that no node asks for.
+   *
+   * A scene's nodes cover its errand; an open conversation has no errand, and
+   * the things that actually keep one going — a "how was it?", an "oh really?",
+   * asking someone to say that again — belong to no step. They are listed here
+   * so the character can be offered them, and so the pipeline knows they exist.
+   *
+   * Deliberately kept out of sentenceIdsUsed: these are not built into the app
+   * as files. The bank stopped being limited by what an APK can carry once a
+   * line could be spoken without one, and a repertoire is where that headroom
+   * goes — warmed into the edge cache before a release instead of shipped.
+   */
+  repertoire?: string[];
+  /**
    * Deliberately no difficulty here. A graph is walked differently by different
    * people, so a label on the scenario describes neither of them. Difficulty
    * lives in difficulty.ts as a dial that moves while the conversation runs.
@@ -202,6 +216,17 @@ export function liveBranches(node: LearnerNode, visited: string[]): Branch[] {
 }
 
 /** Sentence ids a scenario needs, which is exactly what needs audio. */
+/**
+ * Every sentence a scene can say: its nodes and its repertoire.
+ *
+ * What the bank has to hold and what may be offered to the character. Distinct
+ * from sentenceIdsUsed, which is what gets recorded into a file, because a
+ * repertoire line is spoken rather than shipped.
+ */
+export function scenarioSentenceIds(scenario: RoleplayScenario): string[] {
+  return [...new Set([...sentenceIdsUsed(scenario), ...(scenario.repertoire ?? [])])];
+}
+
 export function sentenceIdsUsed(scenario: RoleplayScenario): string[] {
   const ids = new Set<string>();
   for (const node of Object.values(scenario.nodes)) {

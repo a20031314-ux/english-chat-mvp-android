@@ -579,3 +579,38 @@ test("a recorded line keeps the gloss that was written with it", () => {
   assert.deepEqual(recorded?.say, { id: "cafe.fix-here" });
   assert.ok(bank["cafe.fix-here"]?.translation, "and the bank still has it");
 });
+
+test("an open conversation is offered what it says often; an errand is not", () => {
+  // The list of lines was taken out of the brief because a scene with steps
+  // copied whichever sounded close. An open conversation has no step to be
+  // wrong about, so it gets a repertoire instead — and a scripted scene still
+  // does not.
+  const brief = (id: string, nodeId: string) => {
+    const scenario = findScenario(id)!;
+    const theirBank = sentencesFor(scenario.language);
+    return tutorSystemPrompt({
+      scenario,
+      bank: theirBank,
+      recorded: recordedLines(scenario, SCENARIOS, theirBank),
+      request: request({ scenarioId: id, nodeId }),
+    });
+  };
+  assert.match(brief("open-talk-en", "talk"), /Things you say often/);
+  assert.match(brief("open-talk-en", "talk"), /never say one that does not answer what they just said/);
+  assert.doesNotMatch(brief("cafe-order", "order"), /Things you say often/);
+  // A language with no repertoire written yet is not given an empty heading.
+  assert.doesNotMatch(brief("open-talk-ko", "talk"), /Things you say often/);
+});
+
+test("a repertoire line is playable, not just writable", () => {
+  // Offering the character a line it cannot actually play would have it say
+  // the words while the recording sits unused — the pool and the offer have to
+  // come from the same place.
+  const open = findScenario("open-talk-en")!;
+  const playable = new Set(
+    recordedLines(open, SCENARIOS, sentencesFor("en")).map((line) => line.id),
+  );
+  for (const id of open.repertoire ?? []) {
+    assert.ok(playable.has(id), `${id} is offered but not in the pool`);
+  }
+});

@@ -30,7 +30,7 @@
 import { existsSync } from "node:fs";
 import path from "node:path";
 import { SCENARIOS, SENTENCES } from "../src/lib/roleplay/catalog.ts";
-import { sentenceAudioPath, sentenceIdsUsed } from "../src/lib/roleplay/script.ts";
+import { scenarioSentenceIds, sentenceAudioPath } from "../src/lib/roleplay/script.ts";
 import { learningLanguageSpeechTag } from "../src/lib/learningLanguages.ts";
 import { spokenFormForTts } from "../src/lib/speech.ts";
 
@@ -56,7 +56,9 @@ function linesWanted() {
   const wanted = new Map();
   for (const scenario of SCENARIOS) {
     const bank = SENTENCES[scenario.language] ?? {};
-    for (const id of sentenceIdsUsed(scenario)) {
+    // Everything the scene can say, nodes and repertoire alike — a repertoire
+    // line is exactly the case this exists for: in the bank, not in the APK.
+    for (const id of scenarioSentenceIds(scenario)) {
       const sentence = bank[id];
       if (!sentence) continue;
 

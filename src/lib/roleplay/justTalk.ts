@@ -196,6 +196,43 @@ const LANGUAGES: JustTalk[] = [
   },
 ];
 
+/**
+ * What keeps a conversation going, as opposed to what finishes an errand.
+ *
+ * The scripted scenes are made of lines that answer a step — "what size?",
+ * "card or cash?" — and none of them fit a conversation about somebody's
+ * weekend. These belong to no step: a reaction, a follow-up question, asking
+ * someone to say it again. They were drafted, read by a model that did not
+ * write them, and none tripped the list.
+ *
+ * English only for now, and they ship as words rather than as audio: sixty
+ * kilobytes a line is what kept the bank at ninety-three sentences, and a line
+ * can be spoken without a file now. Warmed into the edge before a release so
+ * that the first person to hear one does not wait for it.
+ */
+const TALK_LINES: SentenceBank = {
+  "talk.go-on": { text: "Oh really? Tell me more.", translation: "정말요? 좀 더 얘기해 주세요." },
+  "talk.nice": { text: "That sounds great.", translation: "좋네요." },
+  "talk.rough": { text: "Oh no, that sounds rough.", translation: "아이고, 힘들었겠어요." },
+  "talk.same": { text: "Same here, actually.", translation: "저도 그래요." },
+  "talk.how-was": { text: "How was it?", translation: "어땠어요?" },
+  "talk.why": { text: "Oh yeah? Why's that?", translation: "그래요? 왜요?" },
+  "talk.when": { text: "When was that?", translation: "그게 언제였어요?" },
+  "talk.who-with": { text: "Who did you go with?", translation: "누구랑 갔어요?" },
+  "talk.often": { text: "Do you do that a lot?", translation: "자주 하세요?" },
+  "talk.pardon": { text: "Sorry, say that again?", translation: "죄송해요, 다시 한 번요?" },
+  "talk.didnt-catch": { text: "I didn't quite catch that.", translation: "잘 못 들었어요." },
+  "talk.slower": { text: "Take your time.", translation: "천천히 하세요." },
+  "talk.you-mean": { text: "You mean like on the weekend?", translation: "주말에 말이죠?" },
+  "talk.by-the-way": { text: "Oh, by the way —", translation: "아 그런데요," },
+  "talk.speaking-of": { text: "Speaking of which, how's work?", translation: "그러고 보니 일은 어때요?" },
+  "talk.and-you": { text: "What about you?", translation: "그쪽은요?" },
+  "talk.agree": { text: "Yeah, exactly.", translation: "네, 맞아요." },
+  "talk.surprised": { text: "Wait, seriously?", translation: "잠깐, 진짜요?" },
+  "talk.think-so": { text: "Hmm, I'm not sure about that one.", translation: "음, 그건 잘 모르겠네요." },
+  "talk.good-point": { text: "That's a good point.", translation: "좋은 지적이에요." },
+};
+
 /** The brief, which is the model's to read and so stays in one language. */
 const SETTING =
   "A relaxed catch-up with a friendly acquaintance over coffee, with no errand to finish. The tutor is someone easy to talk to and curious about the learner's day, plans and interests; the learner can bring up anything at all.";
@@ -221,6 +258,7 @@ export function justTalkSentences(): Record<string, SentenceBank> {
         text: entry.goodbye,
         ...(entry.goodbyeGloss ? { translation: entry.goodbyeGloss } : {}),
       },
+      ...(entry.language === "en" ? TALK_LINES : {}),
     };
   }
   return banks;
@@ -242,6 +280,7 @@ export function justTalkScenarios(): RoleplayScenario[] {
     setting: SETTING,
     tutorRole: "friend",
     openEnded: true,
+    ...(entry.language === "en" ? { repertoire: Object.keys(TALK_LINES) } : {}),
     start: "hi",
     nodes: {
       hi: { type: "tutor", id: "hi", say: JUST_TALK_HELLO, next: "talk" },

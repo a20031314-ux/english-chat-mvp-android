@@ -1,0 +1,27 @@
+{
+  "language": "English",
+  "tutorRole": "friend",
+  "setting": "A relaxed catch-up with a friendly acquaintance over coffee, with no errand to finish. The learner can bring up anything at all, and these are the lines that keep a conversation moving rather than finishing an errand.",
+  "sentences": {
+    "talk.go-on": { "text": "Oh really? Tell me more.", "translation": "정말요? 좀 더 얘기해 주세요." },
+    "talk.nice": { "text": "That sounds great.", "translation": "좋네요." },
+    "talk.rough": { "text": "Oh no, that sounds rough.", "translation": "아이고, 힘들었겠어요." },
+    "talk.same": { "text": "Same here, actually.", "translation": "저도 그래요." },
+    "talk.how-was": { "text": "How was it?", "translation": "어땠어요?" },
+    "talk.why": { "text": "Oh yeah? Why's that?", "translation": "그래요? 왜요?" },
+    "talk.when": { "text": "When was that?", "translation": "그게 언제였어요?" },
+    "talk.who-with": { "text": "Who did you go with?", "translation": "누구랑 갔어요?" },
+    "talk.often": { "text": "Do you do that a lot?", "translation": "자주 하세요?" },
+    "talk.pardon": { "text": "Sorry, say that again?", "translation": "죄송해요, 다시 한 번요?" },
+    "talk.didnt-catch": { "text": "I didn't quite catch that.", "translation": "잘 못 들었어요." },
+    "talk.slower": { "text": "Take your time.", "translation": "천천히 하세요." },
+    "talk.you-mean": { "text": "You mean like on the weekend?", "translation": "주말에 말이죠?" },
+    "talk.by-the-way": { "text": "Oh, by the way —", "translation": "아 그런데요," },
+    "talk.speaking-of": { "text": "Speaking of which, how's work?", "translation": "그러고 보니 일은 어때요?" },
+    "talk.and-you": { "text": "What about you?", "translation": "그쪽은요?" },
+    "talk.agree": { "text": "Yeah, exactly.", "translation": "네, 맞아요." },
+    "talk.surprised": { "text": "Wait, seriously?", "translation": "잠깐, 진짜요?" },
+    "talk.think-so": { "text": "Hmm, I'm not sure about that one.", "translation": "음, 그건 잘 모르겠네요." },
+    "talk.good-point": { "text": "That's a good point.", "translation": "좋은 지적이에요." }
+  }
+}

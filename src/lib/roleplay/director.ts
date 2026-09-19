@@ -6,6 +6,7 @@ import {
 import {
   isLearnerNode,
   isTutorNode,
+  scenarioSentenceIds,
   sentenceIdsUsed,
   type LearnerNode,
   type RoleplayScenario,
@@ -220,7 +221,7 @@ export function recordedLines(
   const ids = new Set<string>();
   for (const other of scenarios) {
     if (other.voice !== scenario.voice || other.language !== scenario.language) continue;
-    for (const id of sentenceIdsUsed(other)) ids.add(id);
+    for (const id of scenarioSentenceIds(other)) ids.add(id);
   }
   return [...ids]
     .filter((id) => bank[id])
@@ -318,10 +319,22 @@ Get back to your list as soon as it feels natural.`
   const usual = [current?.questionId, current?.helpId, upcoming?.questionId]
     .filter((id): id is string => Boolean(id && recorded.some((line) => line.id === id)))
     .map((id) => `- "${bank[id]!.text}"`);
+  // An open conversation has no step, so there is no line it is supposed to be
+  // saying — which is why the mistake the list above guards against cannot
+  // happen here. What it has instead is a repertoire: the things this person
+  // says to keep a conversation going rather than to finish an errand.
+  const repertoire = scenario.openEnded
+    ? (scenario.repertoire ?? [])
+        .filter((id) => bank[id] && recorded.some((line) => line.id === id))
+        .map((id) => `- "${bank[id]!.text}"`)
+    : [];
   const now = [
     `Level: ${request.level} of 5. At 1–2 use short, common words and one idea per sentence; at 4–5 talk naturally.`,
     usual.length > 0
       ? `What you usually say around here — when one fits, say it word for word:\n${usual.join("\n")}`
+      : "",
+    repertoire.length > 0
+      ? `Things you say often. Say one word for word when it is what you would have said anyway — it is your own voice and it is ready to play. Never bend the conversation towards one, and never say one that does not answer what they just said:\n${repertoire.join("\n")}`
       : "",
     scenario.openEnded || !current
       ? ""
