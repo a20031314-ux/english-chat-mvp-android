@@ -385,6 +385,9 @@ export async function fetchDirection(input: {
       say: body.say,
       note: typeof body.note === "string" ? body.note : "",
       next: body.next,
+      ...(typeof body.better === "string" && body.better.trim()
+        ? { better: body.better.trim() }
+        : {}),
       ...(typeof body.follow === "string" ? { follow: body.follow } : {}),
     };
   } catch (error) {

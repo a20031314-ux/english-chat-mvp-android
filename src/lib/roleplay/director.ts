@@ -111,6 +111,11 @@ export type Direction = {
   say: DirectionLine;
   /** A tip in the learner's own language, shown under the line. May be empty. */
   note: string;
+  /**
+   * What they just said, said better — their own sentence rewritten, shown
+   * under their own bubble. Empty unless there is something real to fix.
+   */
+  better?: string;
   next: DirectionNext;
   /**
    * A recorded line to say straight after, when the conversation had to be
@@ -267,11 +272,20 @@ How to answer them:
 - If they answered, just not in the words you expected, take it and move on.
 - If they are stuck — silence, a fragment, the wrong words — help the way a real ${role} would: ask again more simply, or say the choices out loud. Put the phrase they could use in "note", explained in ${native}.
 - If they asked or said something else, answer it briefly, like a person would.
-- One or two short sentences. Teaching never goes in what you say out loud; it goes in "note", which is shown in writing under your line. Leave "note" empty unless it helps.
+- One or two short sentences. Teaching never goes in what you say out loud; it is written, not spoken, and there are two places for it that do not overlap. "note" is for a moment they could not get through: the words they needed, so they can go on. "better" is their sentence, put right. Use whichever fits; both are read, and both are shown under the words they are about — never said aloud.
 - "translation" is always required: your line as a ${native} speaker would say it in that situation, not word for word — "to go" at a café is takeaway, not travelling.
+- "better" is their own last sentence written the way someone who grew up with ${target} would say it. It is shown under their words, not said aloud, and you never refer to it.
 
 Reply as JSON only:
-{"say": "<your line, in ${target}>", "translation": "<in ${native}>", "note": "<in ${native}, or empty>", "assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
+{"say": "<your line, in ${target}>", "translation": "<in ${native}>", "note": "<in ${native}, or empty>", "better": "<their sentence, in ${target}, or empty>", "assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
+
+"better" is their last sentence, written as a ${target} speaker would have said it. Fill it whenever one would notice something — a verb in the wrong form, a word that is not the one for this, an order that reads wrong, a doubled subject, a missing word that changes the meaning. Keep their sentence and their meaning; do not write a different one.
+
+Leave it empty when:
+- they were understandable and simply informal, or answered in a fragment, which is how people talk
+- the only thing you would change is a small ending or article, which is as likely to be the speech recogniser's doing as theirs
+- nothing is wrong with it
+Correcting something they said correctly costs more than saying nothing.
 
 "assessment" is how their last turn went, for you to keep track: on_track (answered fine), stuck, off_script (something beside the point), topic_change, closing (they are leaving).
 "next" is where the conversation is after your line:
@@ -432,6 +446,7 @@ export function parseDirection(
     say?: unknown;
     translation?: unknown;
     note?: unknown;
+    better?: unknown;
     next?: unknown;
   };
 
@@ -616,5 +631,24 @@ export function parseDirection(
     follow = undefined;
   }
 
-  return { assessment, say, note, next, ...(follow ? { follow } : {}) };
+  // Their own sentence, said better. Held to being about what they actually
+  // said: nothing to rewrite when they said nothing, and a rewrite that comes
+  // back word for word is not a correction, it is noise under their line.
+  const rewritten =
+    typeof record.better === "string" ? record.better.trim().slice(0, 200) : "";
+  // Said in both places, which the model does when it cannot decide: the
+  // rewrite is the one shown under their own words, so the note goes.
+  const better =
+    rewritten && request.heard.trim() && !sameWords(rewritten, request.heard)
+      ? rewritten
+      : "";
+
+  return {
+    assessment,
+    say,
+    note: better ? "" : note,
+    next,
+    ...(better ? { better } : {}),
+    ...(follow ? { follow } : {}),
+  };
 }

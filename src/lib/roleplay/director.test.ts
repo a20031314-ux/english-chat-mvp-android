@@ -465,3 +465,84 @@ test("a struggling learner is not led off the list", () => {
   );
   assert.deepEqual(stuck?.next, { step: "size-answer" });
 });
+
+test("their own sentence, said better, rides under their own line", () => {
+  const direction = parse(
+    {
+      assessment: "on_track",
+      say: { text: "Nice! Was it busy?", translation: "" },
+      better: "I went to the gym yesterday.",
+      next: "step:here-answer",
+    },
+    { heard: "I go to gym yesterday" },
+  );
+  assert.equal(direction?.better, "I went to the gym yesterday.");
+});
+
+test("a word about their sentence does not also ride with the answer", () => {
+  // Both fields are read and both are shown under the words they are about, so
+  // a note that went with the character's line as well would say it twice —
+  // once where they are looking and once where they are not.
+  const direction = parse(
+    {
+      assessment: "on_track",
+      say: { text: "Nice one.", translation: "좋네요." },
+      note: "과거에는 went를 써요.",
+      next: "free",
+    },
+    { heard: "I go to the gym yesterday" },
+  );
+  assert.equal(direction?.note, "과거에는 went를 써요.");
+
+  const stuck = parse(
+    {
+      assessment: "stuck",
+      say: { id: "cafe.fix-here" },
+      note: "여기서 드시면 for here라고 해요.",
+      next: "step:here-answer",
+    },
+    { heard: "" },
+  );
+  assert.equal(stuck?.note, "여기서 드시면 for here라고 해요.", "help to get through still comes back");
+});
+
+test("a rewrite that rewrote nothing is not shown", () => {
+  // Word for word what they said is not a correction; under their line it is
+  // just noise, and noise there teaches them to stop looking.
+  const same = parse(
+    {
+      say: { text: "Right.", translation: "" },
+      better: "  I went to the gym yesterday!  ",
+      next: "free",
+    },
+    { heard: "I went to the gym yesterday" },
+  );
+  assert.equal(same?.better, undefined);
+});
+
+test("nothing said is nothing to rewrite", () => {
+  const silent = parse(
+    {
+      assessment: "stuck",
+      say: { text: "Take your time.", translation: "" },
+      better: "I would like a latte, please.",
+      next: "step:here-answer",
+    },
+    { heard: "" },
+  );
+  assert.equal(silent?.better, undefined);
+});
+
+test("the brief says when to leave the rewrite alone", () => {
+  // The failure to guard against is confident correction of something they got
+  // right — a fragment, an informal turn, or an ending the recogniser invented.
+  const prompt = tutorSystemPrompt({
+    scenario: cafe,
+    bank,
+    recorded: recordedLines(cafe, SCENARIOS, bank),
+    request: request(),
+  });
+  assert.match(prompt, /as likely to be the speech recogniser's doing as theirs/);
+  assert.match(prompt, /Correcting something they said correctly costs more than saying nothing/);
+  assert.match(prompt, /never said aloud/);
+});

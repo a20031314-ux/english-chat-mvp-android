@@ -507,7 +507,11 @@ export function applyDirection(
       ? recorded(scenario, bank, direction.say.id)
       : { text: direction.say.text, translation: direction.say.translation };
   const queue: QueuedLine[] = [];
-  if (said) queue.push({ ...said, translation: withNote(said.translation, direction.note) });
+  // A note rides with the character's line only when it is help for getting
+  // through a moment they were stuck in. Anything said about a sentence they
+  // managed to say belongs under that sentence, which the caller attaches.
+  const spokenNote = direction.assessment === "stuck" ? direction.note : "";
+  if (said) queue.push({ ...said, translation: withNote(said.translation, spokenNote) });
   const follow = direction.follow ? recorded(scenario, bank, direction.follow) : null;
   if (follow) queue.push(follow);
 

@@ -79,6 +79,25 @@ type Spoken = TranscriptLine;
  * moment they stopped speaking — so the evidence is attached to it afterwards
  * rather than held back until the answer arrives.
  */
+/**
+ * Put what was said about their sentence under their sentence.
+ *
+ * Either field, because the character uses whichever it reaches for: a rewrite
+ * of what they said, a word about it in their own language, or both. What
+ * matters is that it lands under the words it is about, where they are looking
+ * in the seconds before they are answered.
+ */
+function markAboutTheirLine(
+  lines: Spoken[],
+  about: { better?: string; about?: string },
+): Spoken[] {
+  const index = lines.map((line) => line.who).lastIndexOf("learner");
+  if (index < 0) return lines;
+  const marked = [...lines];
+  marked[index] = { ...marked[index]!, ...about };
+  return marked;
+}
+
 function markStuck(lines: Spoken[], turn: Omit<StuckTurn, "asked">): Spoken[] {
   const index = lines.map((line) => line.who).lastIndexOf("learner");
   if (index < 0) return lines;
@@ -283,6 +302,20 @@ export function RoleplayScreen({
       // The tutor's own reading of the turn is what marks it: it is the one
       // judgement in the scene that looked at what they meant, not at whether
       // a recorded phrase happened to match.
+      // Anything about the sentence they just said goes under it, rather than
+      // under the character's answer. A note only rides with the character's
+      // line when they were stuck, where it is help for getting through rather
+      // than a word about something they managed to say.
+      const better = direction?.better ?? "";
+      const about = direction && direction.assessment !== "stuck" ? direction.note : "";
+      if (better || about) {
+        setSaid((current) =>
+          markAboutTheirLine(current, {
+            ...(better ? { better } : {}),
+            ...(about ? { about } : {}),
+          }),
+        );
+      }
       if (direction?.assessment === "stuck") {
         const pending = state.pending;
         setSaid((current) =>

@@ -73,6 +73,17 @@ const CASES: { label: string; turn: StuckTurn; review: Review | null; failed: bo
 
 const TRANSCRIPT: TranscriptLine[] = [
   { who: "tutor", text: "Hi there! What can I get you?", translation: "안녕하세요! 뭐 드릴까요?" },
+  {
+    who: "learner",
+    text: "I go to gym yesterday",
+    better: "I went to the gym yesterday",
+  },
+  { who: "tutor", text: "Nice! Was it busy?", translation: "좋네요! 사람 많았어요?" },
+  {
+    who: "learner",
+    text: "I very like this coffee",
+    about: "'I very like' 대신 'I really like'라고 해요.",
+  },
   { who: "learner", text: "Can I get a latte please" },
   { who: "tutor", text: "Sure. What size — small or large?", translation: "네. 사이즈는 스몰이요, 라지요?" },
   { who: "learner", text: "um... the, the big one?", stuck: SIZE_TURN },

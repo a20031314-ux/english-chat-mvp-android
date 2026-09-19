@@ -615,7 +615,8 @@
     "roleplayPracticeListening": "聞いています…",
     "roleplayPracticeHeard": "こう聞こえました",
     "roleplayPracticeRetry": "もう一度",
-    "roleplayStart": "話しはじめる"
+    "roleplayStart": "話しはじめる",
+    "roleplayBetter": "こう言えます"
   },
   "zh": {
     "appTitle": "{targetLanguage}批改聊天",
@@ -1233,7 +1234,8 @@
     "roleplayPracticeListening": "正在听…",
     "roleplayPracticeHeard": "听到的是",
     "roleplayPracticeRetry": "再试一次",
-    "roleplayStart": "开始对话"
+    "roleplayStart": "开始对话",
+    "roleplayBetter": "可以这样说"
   },
   "vi": {
     "appTitle": "Chat sửa {targetLanguage}",
@@ -1851,7 +1853,8 @@
     "roleplayPracticeListening": "Đang nghe…",
     "roleplayPracticeHeard": "Nghe được là",
     "roleplayPracticeRetry": "Thử lại",
-    "roleplayStart": "Bắt đầu nói"
+    "roleplayStart": "Bắt đầu nói",
+    "roleplayBetter": "Bạn có thể nói"
   },
   "fr": {
     "appTitle": "Chat de correction d'{targetLanguage}",
@@ -2469,7 +2472,8 @@
     "roleplayPracticeListening": "J'écoute…",
     "roleplayPracticeHeard": "Ce qui est passé",
     "roleplayPracticeRetry": "Encore",
-    "roleplayStart": "Commencer à parler"
+    "roleplayStart": "Commencer à parler",
+    "roleplayBetter": "Vous pourriez dire"
   },
   "pt": {
     "appTitle": "Chat de correção de {targetLanguage}",
@@ -3087,7 +3091,8 @@
     "roleplayPracticeListening": "Ouvindo…",
     "roleplayPracticeHeard": "O que saiu",
     "roleplayPracticeRetry": "De novo",
-    "roleplayStart": "Começar a falar"
+    "roleplayStart": "Começar a falar",
+    "roleplayBetter": "Você poderia dizer"
   },
   "id": {
     "appTitle": "Chat koreksi {targetLanguage}",
@@ -3705,7 +3710,8 @@
     "roleplayPracticeListening": "Mendengarkan…",
     "roleplayPracticeHeard": "Yang terdengar",
     "roleplayPracticeRetry": "Ulangi",
-    "roleplayStart": "Mulai bicara"
+    "roleplayStart": "Mulai bicara",
+    "roleplayBetter": "Bisa juga bilang"
   },
   "it": {
     "appTitle": "Chat di correzione {targetLanguage}",
@@ -4323,7 +4329,8 @@
     "roleplayPracticeListening": "In ascolto…",
     "roleplayPracticeHeard": "Quello che è arrivato",
     "roleplayPracticeRetry": "Ancora",
-    "roleplayStart": "Inizia a parlare"
+    "roleplayStart": "Inizia a parlare",
+    "roleplayBetter": "Potresti dire"
   },
   "ru": {
     "appTitle": "Чат для правки {targetLanguage}",
@@ -4941,7 +4948,8 @@
     "roleplayPracticeListening": "Слушаю…",
     "roleplayPracticeHeard": "Что получилось",
     "roleplayPracticeRetry": "Ещё раз",
-    "roleplayStart": "Начать разговор"
+    "roleplayStart": "Начать разговор",
+    "roleplayBetter": "Можно сказать"
   },
   "ar": {
     "appTitle": "دردشة تصحيح {targetLanguage}",
@@ -5559,7 +5567,8 @@
     "roleplayPracticeListening": "أستمع…",
     "roleplayPracticeHeard": "ما وصل",
     "roleplayPracticeRetry": "مرة أخرى",
-    "roleplayStart": "ابدأ الحديث"
+    "roleplayStart": "ابدأ الحديث",
+    "roleplayBetter": "يمكنك أن تقول"
   },
   "th": {
     "appTitle": "แชทตรวจ {targetLanguage}",
@@ -6177,7 +6186,8 @@
     "roleplayPracticeListening": "กำลังฟัง…",
     "roleplayPracticeHeard": "ที่ได้ยินคือ",
     "roleplayPracticeRetry": "ลองอีกครั้ง",
-    "roleplayStart": "เริ่มคุย"
+    "roleplayStart": "เริ่มคุย",
+    "roleplayBetter": "พูดแบบนี้ก็ได้"
   },
   "hi": {
     "appTitle": "{targetLanguage} सुधार चैट",
@@ -6795,6 +6805,7 @@
     "roleplayPracticeListening": "सुन रहे हैं…",
     "roleplayPracticeHeard": "जो सुनाई दिया",
     "roleplayPracticeRetry": "फिर से",
-    "roleplayStart": "बात शुरू करें"
+    "roleplayStart": "बात शुरू करें",
+    "roleplayBetter": "यह भी कह सकते हैं"
   }
 }

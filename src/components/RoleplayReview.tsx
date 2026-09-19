@@ -25,6 +25,10 @@ export type TranscriptLine = {
   text: string;
   translation?: string;
   stuck?: StuckTurn;
+  /** Their own sentence, said better. Shown under it, never spoken. */
+  better?: string;
+  /** A word about that sentence, in their own language. Also never spoken. */
+  about?: string;
 };
 
 export function RoleplayLine({
@@ -48,6 +52,32 @@ export function RoleplayLine({
         <p className="text-[14px] leading-snug">{line.text}</p>
         {line.translation ? (
           <p className="mt-1 text-[12px] text-neutral-500">{line.translation}</p>
+        ) : null}
+        {/* Read in the seconds after they stop talking, while they wait to be
+            answered — the one moment in a spoken turn when their eyes are free.
+            Never said aloud; the character does not know it is here. */}
+        {line.better || line.about ? (
+          <div className="mt-1.5 border-t border-white/10 pt-1.5">
+            {line.better ? (
+              <>
+                <p className="text-[10px] uppercase tracking-wide text-neutral-500">
+                  {ui.roleplayBetter}
+                </p>
+                <p className="mt-0.5 text-[13px] leading-snug text-emerald-200">
+                  {line.better}
+                </p>
+              </>
+            ) : null}
+            {line.about ? (
+              <p
+                className={`text-[12px] leading-snug text-neutral-400 ${
+                  line.better ? "mt-1" : ""
+                }`}
+              >
+                {line.about}
+              </p>
+            ) : null}
+          </div>
         ) : null}
         {/* Stays on the turn for the rest of the scene. Pressing it is a
             decision the learner can take later, when they are not in the
