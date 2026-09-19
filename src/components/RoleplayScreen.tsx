@@ -224,15 +224,27 @@ export function RoleplayScreen({
       setInstruction(moved.instruction);
     };
 
-    if (!instruction.audioPath) {
-      // Written by the director just now, so there is no file: it is spoken in
-      // the scene's own voice, which is what keeps it the same person.
+    /**
+     * Say it in the scene's voice, because no file says it.
+     *
+     * Two lines end up here. One the character wrote just now, which never had
+     * a file. And one the bank holds as words alone — a sentence can be added
+     * to the bank without shipping sixty kilobytes of audio with it, and the
+     * edge cache means only the first person to reach it waits (scripts/
+     * warm-roleplay-speech.mjs warms them before a release so that nobody
+     * does).
+     */
+    const speak = () => {
       watchdog = window.setTimeout(advance, GENERATED_AUDIO_MS);
       void playTts(
         instruction.text,
         learningLanguageSpeechTag(scenario.language),
         instruction.voice,
       ).then(advance, advance);
+    };
+
+    if (!instruction.audioPath) {
+      speak();
       return () => {
         cancelled = true;
         window.clearTimeout(watchdog);
@@ -262,12 +274,29 @@ export function RoleplayScreen({
       { once: true },
     );
     audio.addEventListener("ended", advance, { once: true });
-    audio.addEventListener("error", advance, { once: true });
-    void audio.play().catch(advance);
+    // A file that is not there is a sentence the bank holds as words alone, not
+    // a broken line: it is spoken instead of skipped. The failure is local and
+    // immediate — the recordings ship inside the app — so this costs nothing
+    // when the file does exist.
+    audio.addEventListener(
+      "error",
+      () => {
+        if (cancelled || advanced) return;
+        window.clearTimeout(watchdog);
+        speak();
+      },
+      { once: true },
+    );
+    void audio.play().catch(() => {
+      if (cancelled || advanced) return;
+      window.clearTimeout(watchdog);
+      speak();
+    });
     return () => {
       cancelled = true;
       window.clearTimeout(watchdog);
       audio.pause();
+      stopTts();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [instruction]);
