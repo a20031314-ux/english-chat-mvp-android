@@ -580,11 +580,12 @@ test("a recorded line keeps the gloss that was written with it", () => {
   assert.ok(bank["cafe.fix-here"]?.translation, "and the bank still has it");
 });
 
-test("an open conversation is offered what it says often; an errand is not", () => {
-  // The list of lines was taken out of the brief because a scene with steps
-  // copied whichever sounded close. An open conversation has no step to be
-  // wrong about, so it gets a repertoire instead — and a scripted scene still
-  // does not.
+test("no scene is handed a list of lines to choose from", () => {
+  // Measured: shown twenty ready-made lines, the character used the bank nought
+  // times in twenty-three turns — it used one and then added a question to it,
+  // every time, because that is what a turn is for this model. The lines stay
+  // in the bank; sending them cost two hundred tokens a turn and bought
+  // nothing, on the one path where the wait is what is being fought.
   const brief = (id: string, nodeId: string) => {
     const scenario = findScenario(id)!;
     const theirBank = sentencesFor(scenario.language);
@@ -595,11 +596,11 @@ test("an open conversation is offered what it says often; an errand is not", () 
       request: request({ scenarioId: id, nodeId }),
     });
   };
-  assert.match(brief("open-talk-en", "talk"), /Things you say often/);
-  assert.match(brief("open-talk-en", "talk"), /never say one that does not answer what they just said/);
-  assert.doesNotMatch(brief("cafe-order", "order"), /Things you say often/);
-  // A language with no repertoire written yet is not given an empty heading.
-  assert.doesNotMatch(brief("open-talk-ko", "talk"), /Things you say often/);
+  assert.doesNotMatch(brief("open-talk-en", "talk"), /Things you say often/);
+  assert.doesNotMatch(brief("open-talk-en", "talk"), /Lines you have ready/);
+  // A step still gets the line for where it is, which is a different thing: one
+  // line for one moment, not a list to pick from.
+  assert.match(brief("cafe-order", "order"), /What you usually say around here/);
 });
 
 test("a repertoire line is playable, not just writable", () => {

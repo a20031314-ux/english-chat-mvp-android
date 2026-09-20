@@ -7,7 +7,6 @@ import {
   isLearnerNode,
   isTutorNode,
   scenarioSentenceIds,
-  sentenceIdsUsed,
   type LearnerNode,
   type RoleplayScenario,
   type SentenceBank,
@@ -319,23 +318,26 @@ Get back to your list as soon as it feels natural.`
   const usual = [current?.questionId, current?.helpId, upcoming?.questionId]
     .filter((id): id is string => Boolean(id && recorded.some((line) => line.id === id)))
     .map((id) => `- "${bank[id]!.text}"`);
-  // An open conversation has no step, so there is no line it is supposed to be
-  // saying — which is why the mistake the list above guards against cannot
-  // happen here. What it has instead is a repertoire: the things this person
-  // says to keep a conversation going rather than to finish an errand.
-  const repertoire = scenario.openEnded
-    ? (scenario.repertoire ?? [])
-        .filter((id) => bank[id] && recorded.some((line) => line.id === id))
-        .map((id) => `- "${bank[id]!.text}"`)
-    : [];
   const now = [
     `Level: ${request.level} of 5. At 1–2 use short, common words and one idea per sentence; at 4–5 talk naturally.`,
     usual.length > 0
       ? `What you usually say around here — when one fits, say it word for word:\n${usual.join("\n")}`
       : "",
-    repertoire.length > 0
-      ? `Things you say often. Say one word for word when it is what you would have said anyway — it is your own voice and it is ready to play. Never bend the conversation towards one, and never say one that does not answer what they just said:\n${repertoire.join("\n")}`
-      : "",
+    // The repertoire is not offered here, and this is the measurement that
+    // settled it. Shown twenty ready-made lines, the character used the bank
+    // nought times in twenty-three turns across two runs — not by ignoring
+    // them, which was the guess, but by using one and then adding to it:
+    // "Oh really? Tell me more." came back as "Oh really? Tell me more. What
+    // did you do in Busan?" Every turn it wrote ended in a question.
+    //
+    // Which is what a conversational turn is for this model: react, then ask.
+    // A ready line is only the reacting half, so a whole turn will almost
+    // never equal one, and telling it that a turn may be just the line changed
+    // nothing. The lines stay in the bank — they are good lines, and a scripted
+    // step is a place where one line really is the whole turn — but sending
+    // them costs about two hundred tokens on every turn of the one path where
+    // the wait is already the thing being fought, and buys nothing.
+    "",
     scenario.openEnded || !current
       ? ""
       : request.mode === "free"
