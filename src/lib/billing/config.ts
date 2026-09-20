@@ -132,12 +132,22 @@ export const ROLEPLAY_POINT_SECONDS = 5 * 60;
 /**
  * Free call learning, once, for as long as the account exists.
  *
- * Fifteen minutes: long enough to have a conversation, be stopped in it, and
- * read why — which is the thing worth trying before paying for it. Lifetime
- * rather than monthly because a monthly free grant has no ceiling. It renews
- * for everyone who never pays, and reinstalling renews it sooner.
+ * A hundred minutes. It was fifteen, on the reasoning that it was long enough
+ * to have a conversation, be stopped in it, and read why. Used, it was not: a
+ * block is charged the moment a conversation starts, so fifteen minutes is
+ * three conversations, and the second or third of them ends against a wall.
+ * Measured on a real phone and again in the ledger, where the only tester who
+ * reached the call tab at all had spent all three.
+ *
+ * Somebody who has not had one good conversation has no reason to pay for
+ * more, so the old number was buying nothing and costing the first impression.
+ * At about sixty won a point this is roughly twelve hundred won a person, once,
+ * and only for the people who actually use the thing.
+ *
+ * Lifetime rather than monthly because a monthly free grant has no ceiling: it
+ * renews for everyone who never pays, and reinstalling renews it sooner.
  */
-export const FREE_LIFETIME_ROLEPLAY_POINTS = 3;
+export const FREE_LIFETIME_ROLEPLAY_POINTS = 20;
 
 /**
  * Sent by a build that understands being told it has run out.

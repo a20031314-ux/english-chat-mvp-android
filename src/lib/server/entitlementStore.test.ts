@@ -16,6 +16,7 @@ import {
   roleplayPointsLeft,
 } from "./entitlementStore.ts";
 import { SHARED_ANONYMOUS_ID } from "./identity.ts";
+import { FREE_LIFETIME_ROLEPLAY_POINTS } from "../billing/config.ts";
 
 // No KV credentials are set here, so these exercise the in-memory fallback.
 // Each test uses its own user id because that fallback is process-wide.
@@ -103,40 +104,45 @@ test("call seconds accumulate for the month and ignore junk", async () => {
 
 const FIVE_MINUTES = 5 * 60 * 1000;
 
-test("call learning is free for fifteen minutes and then is not", async () => {
-  // The lifetime allowance: three points, five minutes each. Charged as the
-  // conversation runs, so the fourth block is where it stops.
+test("call learning is free for its allowance and then is not", async () => {
+  // Written against the allowance rather than a number, because that number is
+  // a product decision and has already moved once: fifteen minutes turned out
+  // to be three conversations, the last of which ended against a wall.
+  const free = FREE_LIFETIME_ROLEPLAY_POINTS;
   const t0 = 1_700_000_000_000;
   const first = await chargeRoleplayTurn("rp-free", false, "s1", t0);
   assert.equal(first.ok, true);
   assert.equal(first.charged, 1, "the first five minutes are bought, not accrued");
-  assert.equal(first.left, 2);
+  assert.equal(first.left, free - 1);
 
   // Another turn inside the same block costs nothing.
   const same = await chargeRoleplayTurn("rp-free", false, "s1", t0 + 60_000);
   assert.equal(same.charged, 0);
-  assert.equal(same.left, 2);
+  assert.equal(same.left, free - 1);
 
-  const second = await chargeRoleplayTurn("rp-free", false, "s1", t0 + FIVE_MINUTES);
-  assert.equal(second.charged, 1);
-  const third = await chargeRoleplayTurn("rp-free", false, "s1", t0 + 2 * FIVE_MINUTES);
-  assert.equal(third.charged, 1);
-  assert.equal(third.left, 0);
+  // One block at a time until it is spent.
+  for (let block = 1; block < free; block += 1) {
+    const charge = await chargeRoleplayTurn("rp-free", false, "s1", t0 + block * FIVE_MINUTES);
+    assert.equal(charge.charged, 1, `block ${block} should cost one`);
+  }
+  const spent = await chargeRoleplayTurn("rp-free", false, "s1", t0 + (free - 1) * FIVE_MINUTES);
+  assert.equal(spent.left, 0);
 
-  const refused = await chargeRoleplayTurn("rp-free", false, "s1", t0 + 3 * FIVE_MINUTES);
-  assert.equal(refused.ok, false, "the sixteenth minute is not free");
+  const refused = await chargeRoleplayTurn("rp-free", false, "s1", t0 + free * FIVE_MINUTES);
+  assert.equal(refused.ok, false, "the minute after the allowance is not free");
   assert.equal(refused.charged, 0);
 });
 
 test("the free allowance does not come back with a new conversation", async () => {
+  const free = FREE_LIFETIME_ROLEPLAY_POINTS;
   const t0 = 1_700_000_000_000;
-  for (const session of ["a", "b", "c"]) {
-    const charge = await chargeRoleplayTurn("rp-lifetime", false, session, t0);
-    assert.equal(charge.ok, true, `${session} should still be affordable`);
-    assert.equal(charge.charged, 1);
+  for (let conversation = 0; conversation < free; conversation += 1) {
+    const charge = await chargeRoleplayTurn("rp-lifetime", false, `s${conversation}`, t0);
+    assert.equal(charge.ok, true, `conversation ${conversation} should still be affordable`);
+    assert.equal(charge.charged, 1, "a new conversation buys its first block");
   }
-  const fourth = await chargeRoleplayTurn("rp-lifetime", false, "d", t0);
-  assert.equal(fourth.ok, false, "three conversations is the whole of it");
+  const after = await chargeRoleplayTurn("rp-lifetime", false, "one-too-many", t0);
+  assert.equal(after.ok, false, "the allowance is for the life of the account");
 });
 
 test("a conversation is charged by its own clock, not by the last one's", async () => {
@@ -158,7 +164,10 @@ test("a subscriber spends the monthly grant rather than the free allowance", asy
   assert.equal(await roleplayPointsLeft("rp-premium", true), 79);
   // And the free lifetime allowance is untouched, so cancelling does not hand
   // anyone a fresh fifteen minutes they already had.
-  assert.equal(await roleplayPointsLeft("rp-premium", false), 3);
+  assert.equal(
+    await roleplayPointsLeft("rp-premium", false),
+    FREE_LIFETIME_ROLEPLAY_POINTS,
+  );
 });
 
 test("nobody in particular is never charged", async () => {
