@@ -18,7 +18,7 @@ const ALLOWED_ORIGIN_PREFIXES = [
 // the Android build hides today because CapacitorHttp bypasses CORS entirely —
 // so an omission here stays invisible until something makes a plain fetch.
 const ALLOWED_HEADERS =
-  "Content-Type, x-client-premium, x-rc-user, x-learning-language, x-call-blocks, x-app-version, x-roleplay-points, x-roleplay-session";
+  "Content-Type, x-client-premium, x-rc-user, x-learning-language, x-call-blocks, x-app-version, x-roleplay-points, x-roleplay-session, x-roleplay-bank";
 
 /**
  * The call route answers with SDP and says what it charged in headers, which a

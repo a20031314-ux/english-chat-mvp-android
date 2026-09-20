@@ -4,6 +4,7 @@ import { SCENARIOS, findScenario, sentencesFor } from "./catalog.ts";
 import {
   DIRECTED_TURN_LIMIT,
   FREE_TURN_LIMIT,
+  flattenForOldClients,
   parseDirection,
   questionFor,
   recordedLines,
@@ -614,4 +615,130 @@ test("a repertoire line is playable, not just writable", () => {
   for (const id of open.repertoire ?? []) {
     assert.ok(playable.has(id), `${id} is offered but not in the pool`);
   }
+});
+
+test("a turn can be two ready lines: a reaction, then a question", () => {
+  // What the bank is for in an open conversation. Neither half is the whole
+  // turn on its own, and together they cost no synthesis at all.
+  const both = parse(
+    { open: "talk.nice", follow: "talk.there-what", say: "", assessment: "on_track", next: "free" },
+    { nodeId: "talk" },
+    open,
+  );
+  assert.deepEqual(both?.say, { id: "talk.nice" });
+  assert.equal(both?.follow, "talk.there-what");
+});
+
+test("a ready question with no reaction in front of it is still a turn", () => {
+  // It would otherwise be thrown away for having nothing to lead with, and a
+  // turn that is only a question is an ordinary thing to say.
+  const alone = parse(
+    { open: "", follow: "talk.there-what", say: "", assessment: "on_track", next: "free" },
+    { nodeId: "talk" },
+    open,
+  );
+  assert.deepEqual(alone?.say, { id: "talk.there-what" });
+  assert.equal(alone?.follow, undefined);
+});
+
+test("a turn never says the same thing twice", () => {
+  // All three seen from the real model. Naming one line for both halves plays
+  // "What did you do there? What did you do there?"; writing a line out and
+  // then naming it is the same repeat in a shape the id check cannot see.
+  const twice = parse(
+    {
+      open: "talk.there-what",
+      follow: "talk.there-what",
+      say: "",
+      assessment: "on_track",
+      next: "free",
+    },
+    { nodeId: "talk" },
+    open,
+  );
+  assert.deepEqual(twice?.say, { id: "talk.there-what" });
+  assert.equal(twice?.follow, undefined);
+
+  const written = parse(
+    {
+      open: "",
+      follow: "talk.know-feeling",
+      say: "Yeah, I know that feeling. It must be hard to find the time.",
+      assessment: "on_track",
+      next: "free",
+    },
+    { nodeId: "talk" },
+    open,
+  );
+  assert.equal(written?.follow, undefined);
+
+  const asked = parse(
+    {
+      open: "",
+      follow: "talk.pardon",
+      say: "Sorry, can you say that again?",
+      assessment: "on_track",
+      next: "free",
+    },
+    { nodeId: "talk" },
+    open,
+  );
+  assert.equal(asked?.follow, undefined);
+});
+
+test("a build that cannot play the bank is told the whole turn in words", () => {
+  // Every build on a phone today was released before these lines existed, and
+  // would look up an id it does not have, queue nothing, and open the
+  // microphone on a character that said nothing. Written out, the same turn is
+  // one line, which every build has always been able to say.
+  const both = flattenForOldClients(
+    {
+      assessment: "on_track",
+      say: { id: "talk.nice" },
+      follow: "talk.there-what",
+      note: "",
+      next: { step: "talk" },
+    },
+    bank,
+  );
+  assert.deepEqual(both.say, {
+    text: "That sounds great. What did you do there?",
+    translation: "좋네요. 거기서 뭐 했어요?",
+  });
+  assert.equal(both.follow, undefined);
+
+  // What the director wrote itself was always sayable; only the follow moves.
+  const written = flattenForOldClients(
+    {
+      assessment: "on_track",
+      say: { text: "That sounds lovely." },
+      follow: "talk.there-what",
+      note: "",
+      next: { step: "talk" },
+    },
+    bank,
+  );
+  assert.deepEqual(written.say, {
+    text: "That sounds lovely. What did you do there?",
+    translation: "거기서 뭐 했어요?",
+  });
+
+  // And the rest of the decision is carried through untouched.
+  assert.equal(written.assessment, "on_track");
+  assert.deepEqual(written.next, { step: "talk" });
+});
+
+test("an id nothing can resolve is left alone rather than blanked", () => {
+  // Writing out a line the bank does not hold would replace the turn with an
+  // empty string, which is the silence this exists to prevent.
+  const unknown = flattenForOldClients(
+    {
+      assessment: "on_track",
+      say: { id: "talk.does-not-exist" },
+      note: "",
+      next: { step: "talk" },
+    },
+    bank,
+  );
+  assert.deepEqual(unknown.say, { id: "talk.does-not-exist" });
 });

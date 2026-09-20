@@ -136,6 +136,56 @@ export type Direction = {
   follow?: string;
 };
 
+/**
+ * Says the build can play a turn made of two bank lines.
+ *
+ * The lines an open conversation reaches for do not ship as audio — fifty-two
+ * of the fifty-three have no file — so they exist in the app only as entries in
+ * its own copy of the bank. A build released before those entries existed
+ * cannot resolve their ids: it looks one up, finds nothing, queues nothing, and
+ * opens the microphone on a character that said nothing at all. The server
+ * deploys the moment this is pushed and the app does not follow for weeks, so
+ * every build on a phone today is one of those.
+ *
+ * So the split turn is asked for rather than assumed, the same way the points
+ * refusal is. A build that does not ask gets the same conversation written out
+ * as one line, which every build can say.
+ *
+ * Temporary. It can go when MIN_SUPPORTED_APP_VERSION has passed the first
+ * release that sends this, at which point `flattenForOldClients` goes with it.
+ */
+export const ROLEPLAY_BANK_CLIENT_HEADER = "x-roleplay-bank";
+
+/**
+ * The same turn, written out for a build that cannot play it in two pieces.
+ *
+ * Both halves become one written line, because a written line is the one thing
+ * every build has always been able to say. Nothing is lost but the caching: the
+ * edge stores a line by the words asked for, so "That sounds great." warmed
+ * once is free for everybody, while the same words joined to a question are a
+ * string nobody has asked for before.
+ */
+export function flattenForOldClients(
+  direction: Direction,
+  bank: SentenceBank,
+): Direction {
+  const spoken = (line: DirectionLine) =>
+    "id" in line
+      ? { text: bank[line.id]?.text ?? "", translation: bank[line.id]?.translation ?? "" }
+      : { text: line.text, translation: line.translation ?? "" };
+
+  const head = spoken(direction.say);
+  const tail = direction.follow ? spoken({ id: direction.follow }) : { text: "", translation: "" };
+  // A line whose id this build does not know either: there is nothing to say
+  // and nothing to gain by pretending, so the turn is left as it was.
+  if (!head.text) return direction;
+
+  const text = [head.text, tail.text].filter(Boolean).join(" ");
+  const translation = [head.translation, tail.translation].filter(Boolean).join(" ");
+  const { follow: _dropped, ...rest } = direction;
+  return { ...rest, say: { text, ...(translation ? { translation } : {}) } };
+}
+
 export type Step = {
   id: string;
   goal: string;
@@ -288,7 +338,7 @@ How to answer them:
 - "better" is their own last sentence written the way someone who grew up with ${target} would say it. It is shown under their words, not said aloud, and you never refer to it.
 
 Reply as JSON only:
-{"say": "<your line, in ${target}>", "note": "<in ${native}, or empty>", "better": "<their sentence, in ${target}, or empty>", "assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
+{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence, in ${target}, or empty>", "assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
 
 "better" is their last sentence, written as a ${target} speaker would have said it. Fill it whenever one would notice something — a verb in the wrong form, a word that is not the one for this, an order that reads wrong, a doubled subject, a missing word that changes the meaning. Keep their sentence and their meaning; do not write a different one.
 
@@ -318,26 +368,19 @@ Get back to your list as soon as it feels natural.`
   const usual = [current?.questionId, current?.helpId, upcoming?.questionId]
     .filter((id): id is string => Boolean(id && recorded.some((line) => line.id === id)))
     .map((id) => `- "${bank[id]!.text}"`);
+  const repertoire = scenario.openEnded
+    ? (scenario.repertoire ?? [])
+        .filter((id) => bank[id] && recorded.some((line) => line.id === id))
+        .map((id) => `- ${id}: "${bank[id]!.text}"`)
+    : [];
   const now = [
     `Level: ${request.level} of 5. At 1–2 use short, common words and one idea per sentence; at 4–5 talk naturally.`,
     usual.length > 0
       ? `What you usually say around here — when one fits, say it word for word:\n${usual.join("\n")}`
       : "",
-    // The repertoire is not offered here, and this is the measurement that
-    // settled it. Shown twenty ready-made lines, the character used the bank
-    // nought times in twenty-three turns across two runs — not by ignoring
-    // them, which was the guess, but by using one and then adding to it:
-    // "Oh really? Tell me more." came back as "Oh really? Tell me more. What
-    // did you do in Busan?" Every turn it wrote ended in a question.
-    //
-    // Which is what a conversational turn is for this model: react, then ask.
-    // A ready line is only the reacting half, so a whole turn will almost
-    // never equal one, and telling it that a turn may be just the line changed
-    // nothing. The lines stay in the bank — they are good lines, and a scripted
-    // step is a place where one line really is the whole turn — but sending
-    // them costs about two hundred tokens on every turn of the one path where
-    // the wait is already the thing being fought, and buys nothing.
-    "",
+    repertoire.length > 0
+      ? `Lines you already have, ready to play in your own voice. A turn of yours is usually a reaction and then a question, and both halves can come from here — "That sounds great." then "What did you do there?" is a whole turn. Use them when they are what you would have said: answer with "open" for the reaction and "follow" for the question, by their ids. Either may be left out, and when nothing here is what you would have said, write your own line in "say" instead. Whatever you put in "follow" has to move the conversation on: asking them to repeat themselves is a whole turn by itself, never the second half of one. The questions here point back at what they just said rather than naming it, which is why they fit anything:\n${repertoire.join("\n")}`
+      : "",
     scenario.openEnded || !current
       ? ""
       : request.mode === "free"
@@ -469,6 +512,8 @@ export function parseDirection(
   if (typeof parsed !== "object" || parsed === null) return null;
   const record = parsed as {
     assessment?: unknown;
+    open?: unknown;
+    follow?: unknown;
     say?: unknown;
     translation?: unknown;
     note?: unknown;
@@ -493,6 +538,19 @@ export function parseDirection(
   const text = typeof sayRecord.text === "string" ? sayRecord.text.trim() : "";
   const translation =
     typeof sayRecord.translation === "string" ? sayRecord.translation.trim() : "";
+  // A turn built out of ready lines: a reaction, then a question, each played
+  // from its own recording. Both halves are optional, and what is left over is
+  // whatever the model wrote — so "open" plus a written line works too.
+  const readyId = (value: unknown) => {
+    const candidate = typeof value === "string" ? value.trim() : "";
+    return candidate && recordedIds.has(candidate) ? candidate : "";
+  };
+  const openId = readyId(record.open);
+  // Seen from the real model: the same id answered both halves, which plays
+  // "What did you do there? What did you do there?" A repeat is worse than a
+  // shorter turn, so the second copy is dropped rather than spoken.
+  const followId = readyId(record.follow) === openId ? "" : readyId(record.follow);
+
   let say: DirectionLine;
   if (id && recordedIds.has(id)) {
     say = { id };
@@ -508,6 +566,12 @@ export function parseDirection(
     // A real line with no recording in this voice: still the right words, so
     // they are spoken rather than thrown away.
     say = { text: bank[id]!.text, translation: bank[id]!.translation ?? "" };
+  } else if (openId || followId) {
+    // Nothing written, because the ready lines said it: the reaction is the
+    // turn, and the question after it rides in "follow". A turn that is only a
+    // question is a turn too, so the follow leads when there is no reaction —
+    // it would otherwise be thrown away for having nothing in front of it.
+    say = { id: openId || followId };
   } else {
     return null;
   }
@@ -597,6 +661,13 @@ export function parseDirection(
     say = { id: currentHelp };
   }
 
+  // A reaction chosen from the ready lines always leads the turn. Anything the
+  // model wrote as well becomes the part that plays after it — one turn, two
+  // clips, which is what the queue has always done.
+  if (openId && !("id" in say)) {
+    say = { id: openId };
+  }
+
   let follow: string | undefined;
   const forcedHome = mustReturn(request, scenario) && "free" in next;
   if (forcedHome) next = { step: request.nodeId };
@@ -669,12 +740,30 @@ export function parseDirection(
       ? rewritten
       : "";
 
+  // The ready question the model asked for, unless the turn already asks it.
+  // Naming the same line twice is caught above, but the same question can
+  // arrive in two different shapes: seen from the real model, "Sorry, can you
+  // say that again?" written out, with "Sorry, say that again?" named after it.
+  // One turn, asked twice, which is worse than a turn with one half.
+  const opening = "id" in say ? bank[say.id]?.text ?? "" : say.text;
+  const followText = followId ? bank[followId]?.text ?? "" : "";
+  const repeats =
+    ("id" in say && say.id === followId) ||
+    Boolean(
+      followText &&
+        // The same question in other words, and — seen from the real model —
+        // the same words outright: "Yeah, I know that feeling. It must be hard
+        // to find time then." with "Yeah, I know that feeling." named after it.
+        (asksAbout(opening, followText) || words(opening).includes(words(followText))),
+    );
+  const chosenFollow = (repeats ? "" : followId) || follow;
+
   return {
     assessment,
     say,
     note: better ? "" : note,
     next,
     ...(better ? { better } : {}),
-    ...(follow ? { follow } : {}),
+    ...(chosenFollow ? { follow: chosenFollow } : {}),
   };
 }

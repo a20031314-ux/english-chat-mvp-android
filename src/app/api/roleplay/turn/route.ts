@@ -2,6 +2,8 @@ import { NextRequest } from "next/server";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { SCENARIOS, findScenario, sentencesFor } from "@/lib/roleplay/catalog";
 import {
+  ROLEPLAY_BANK_CLIENT_HEADER,
+  flattenForOldClients,
   parseDirection,
   readSpokenLines,
   recordedLines,
@@ -146,17 +148,27 @@ export async function POST(request: NextRequest) {
       return jsonWithCors(request, { error: "NO_DIRECTION" }, { status: 502 });
     }
 
-    // What the bank is for, counted where it is decided. A line reached for
-    // out of the bank costs no synthesis and plays a read somebody checked; an
-    // invented one costs both. Nothing waits on any of this.
+    // What the bank is for, counted where it is decided and before the answer
+    // is reshaped for whoever asked, so the figures describe the conversation
+    // rather than the build having it. A line reached for out of the bank is
+    // the same words every time, which the edge cache can hold and hand back
+    // to everybody; an invented one is a string nobody has asked for before.
     if ("id" in direction.say) {
       void meterRequest(request, "roleplayBankLine");
       void noteSentenceSaid(scenario.language, direction.say.id);
     } else {
       void meterRequest(request, "roleplayInventedLine");
     }
+    if (direction.follow) void noteSentenceSaid(scenario.language, direction.follow);
 
-    return jsonWithCors(request, direction);
+    // Two clips only for a build that said it can play them. Everything on a
+    // phone today was released before these lines existed and would queue
+    // nothing at all for them (director.ts).
+    const canPlayBank = request.headers.get(ROLEPLAY_BANK_CLIENT_HEADER) === "1";
+    return jsonWithCors(
+      request,
+      canPlayBank ? direction : flattenForOldClients(direction, bank),
+    );
   } catch (error) {
     console.error("[roleplay/turn]", error);
     return jsonWithCors(request, { error: "DIRECTION_FAILED" }, { status: 502 });

@@ -21,15 +21,24 @@ import { isLearnerNode } from "./script.ts";
 const scenario = findScenario("cafe-order")!;
 const bank = sentencesFor("en");
 
-/** Play tutor lines until the scenario is waiting on the learner, or ends. */
-function runToListen(state: SessionState, clock = 0): SessionState {
+/** Play tutor lines until a scenario is waiting on the learner, or ends. */
+function runToListenIn(
+  which: typeof scenario,
+  state: SessionState,
+  clock = 0,
+): SessionState {
   let current = state;
   for (let i = 0; i < 20; i += 1) {
-    const instruction = currentInstruction(scenario, bank, current);
+    const instruction = currentInstruction(which, bank, current);
     if (instruction.do !== "say") return current;
-    current = afterSaying(scenario, bank, current, clock).state;
+    current = afterSaying(which, bank, current, clock).state;
   }
   throw new Error("scenario did not stop talking");
+}
+
+/** The same, for the cafe, which is what most of these are about. */
+function runToListen(state: SessionState, clock = 0): SessionState {
+  return runToListenIn(scenario, state, clock);
 }
 
 test("a phrasing counts even when the learner says more than it", () => {
@@ -437,4 +446,63 @@ test("a review does not forgive the attempts already spent", () => {
   const resumed = resumeListening(scenario, bank, missed.state, 40000);
   assert.equal(resumed.state.attempts, missed.state.attempts);
   assert.equal(resumed.state.nodeId, missed.state.nodeId);
+});
+
+test("a turn made of two ready lines plays as one turn", () => {
+  // The open conversation's whole point: a reaction and then a question, both
+  // already in the bank, spoken back to back before the microphone opens. The
+  // queue has always been able to hold more than one line — this is the first
+  // thing that fills it from the bank on both sides.
+  const talk = findScenario("open-talk-en")!;
+  const opened = runToListenIn(talk, startSession(talk));
+  const waiting = submitSpeech(talk, bank, opened, "I went to Busan last weekend", 2000).state;
+  const moved = applyDirection(
+    talk,
+    bank,
+    waiting,
+    direction({
+      say: { id: "talk.nice" },
+      follow: "talk.there-what",
+      next: { step: "talk" },
+    }),
+    3000,
+  );
+
+  assert.equal(moved.instruction.do, "say");
+  assert.equal(
+    moved.instruction.do === "say" ? moved.instruction.text : "",
+    bank["talk.nice"]!.text,
+  );
+
+  // The question follows without the learner being asked to speak in between.
+  const second = afterSaying(talk, bank, moved.state, 4000);
+  assert.equal(second.instruction.do, "say");
+  assert.equal(
+    second.instruction.do === "say" ? second.instruction.text : "",
+    bank["talk.there-what"]!.text,
+  );
+
+  // And only then is it their turn.
+  assert.equal(afterSaying(talk, bank, second.state, 5000).instruction.do, "listen");
+});
+
+test("a repertoire line is spoken even with no file shipped for it", () => {
+  // Sixty kilobytes a line is why these ship as words alone. The screen falls
+  // back to the scene's voice when the file is not there, and the edge cache
+  // means only the first person to reach one waits — but that only works if
+  // the line arrives with its words, not just a path.
+  const talk = findScenario("open-talk-en")!;
+  const opened = runToListenIn(talk, startSession(talk));
+  const waiting = submitSpeech(talk, bank, opened, "it was really fun", 2000).state;
+  const moved = applyDirection(
+    talk,
+    bank,
+    waiting,
+    direction({ say: { id: "talk.go-on" }, next: { step: "talk" } }),
+    3000,
+  );
+  assert.equal(moved.instruction.do, "say");
+  if (moved.instruction.do !== "say") return;
+  assert.equal(moved.instruction.text, bank["talk.go-on"]!.text);
+  assert.equal(moved.instruction.voice, talk.voice);
 });

@@ -6,6 +6,7 @@ import {
 } from "@/lib/billing/config";
 import {
   HISTORY_LINES,
+  ROLEPLAY_BANK_CLIENT_HEADER,
   type Direction,
   type DirectorRequest,
   type SpokenLine,
@@ -361,6 +362,10 @@ export async function fetchDirection(input: {
         // what makes it safe for the server to refuse (billing/config.ts).
         [ROLEPLAY_POINTS_CLIENT_HEADER]: "1",
         [ROLEPLAY_SESSION_HEADER]: input.sessionId,
+        // Says this build knows the lines an open conversation reaches for, so
+        // the server may answer with their ids and with a turn made of two of
+        // them (director.ts).
+        [ROLEPLAY_BANK_CLIENT_HEADER]: "1",
       },
       body: JSON.stringify({
         ...input.request,
