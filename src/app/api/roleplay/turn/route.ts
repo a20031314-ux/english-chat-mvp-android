@@ -3,12 +3,15 @@ import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { SCENARIOS, findScenario, sentencesFor } from "@/lib/roleplay/catalog";
 import {
   ROLEPLAY_BANK_CLIENT_HEADER,
+  ROLEPLAY_STREAM_CLIENT_HEADER,
   flattenForOldClients,
+  leadFromPartial,
   parseDirection,
   readSpokenLines,
   recordedLines,
   tutorMessages,
   tutorSystemPrompt,
+  type Direction,
   type DirectorRequest,
 } from "@/lib/roleplay/director";
 import { MAX_CONTEXT_CHARS } from "@/lib/roleplay/memory";
@@ -18,7 +21,7 @@ import {
 } from "@/lib/billing/config";
 import { chargeRoleplayTurn, noteSentenceSaid } from "@/lib/server/entitlementStore";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
-import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
 
@@ -118,41 +121,22 @@ export async function POST(request: NextRequest) {
   const bank = sentencesFor(scenario.language);
   const recorded = recordedLines(scenario, SCENARIOS, bank);
 
-  try {
-    const model = tutorModel();
-    // Reasoning models spend hidden tokens before answering and take their cap
-    // under another name. Minimal effort: this is one spoken line, and every
-    // second of thinking is a second of silence in a conversation.
-    const reasoning = /^(gpt-5|o\d)/.test(model);
-    const completion = await client.chat.completions.create({
-      model,
-      messages: [
-        {
-          role: "system",
-          content: tutorSystemPrompt({ scenario, bank, recorded, request: turn }),
-        },
-        ...tutorMessages(turn),
-      ],
-      response_format: { type: "json_object" },
-      ...(reasoning
-        ? { max_completion_tokens: 2000, reasoning_effort: "minimal" as const }
-        : { max_tokens: 300 }),
-    });
-    const direction = parseDirection(completion.choices[0]?.message?.content ?? "", {
-      scenario,
-      bank,
-      recordedIds: new Set(recorded.map((line) => line.id)),
-      request: turn,
-    });
-    if (!direction) {
-      return jsonWithCors(request, { error: "NO_DIRECTION" }, { status: 502 });
-    }
+  // Two clips only for a build that said it can play them. Everything on a
+  // phone today was released before these lines existed and would queue
+  // nothing at all for them (director.ts).
+  const canPlayBank = request.headers.get(ROLEPLAY_BANK_CLIENT_HEADER) === "1";
+  // And an answer in pieces only for a build that reads one (director.ts).
+  const wantsStream =
+    canPlayBank && request.headers.get(ROLEPLAY_STREAM_CLIENT_HEADER) === "1";
 
-    // What the bank is for, counted where it is decided and before the answer
-    // is reshaped for whoever asked, so the figures describe the conversation
-    // rather than the build having it. A line reached for out of the bank is
-    // the same words every time, which the edge cache can hold and hand back
-    // to everybody; an invented one is a string nobody has asked for before.
+  /**
+   * What the bank is for, counted where it is decided and before the answer is
+   * reshaped for whoever asked, so the figures describe the conversation rather
+   * than the build having it. A line reached for out of the bank is the same
+   * words every time, which the edge cache can hold and hand back to everybody;
+   * an invented one is a string nobody has asked for before.
+   */
+  const noteDirection = (direction: Direction) => {
     if ("id" in direction.say) {
       void meterRequest(request, "roleplayBankLine");
       void noteSentenceSaid(scenario.language, direction.say.id);
@@ -160,15 +144,103 @@ export async function POST(request: NextRequest) {
       void meterRequest(request, "roleplayInventedLine");
     }
     if (direction.follow) void noteSentenceSaid(scenario.language, direction.follow);
+  };
 
-    // Two clips only for a build that said it can play them. Everything on a
-    // phone today was released before these lines existed and would queue
-    // nothing at all for them (director.ts).
-    const canPlayBank = request.headers.get(ROLEPLAY_BANK_CLIENT_HEADER) === "1";
-    return jsonWithCors(
-      request,
-      canPlayBank ? direction : flattenForOldClients(direction, bank),
-    );
+  const model = tutorModel();
+  // Reasoning models spend hidden tokens before answering and take their cap
+  // under another name. Minimal effort: this is one spoken line, and every
+  // second of thinking is a second of silence in a conversation.
+  const reasoning = /^(gpt-5|o\d)/.test(model);
+  const ask = {
+    model,
+    messages: [
+      {
+        role: "system" as const,
+        content: tutorSystemPrompt({ scenario, bank, recorded, request: turn }),
+      },
+      ...tutorMessages(turn),
+    ],
+    response_format: { type: "json_object" as const },
+    ...(reasoning
+      ? { max_completion_tokens: 2000, reasoning_effort: "minimal" as const }
+      : { max_tokens: 300 }),
+  };
+  const parse = (text: string) =>
+    parseDirection(text, {
+      scenario,
+      bank,
+      recordedIds: new Set(recorded.map((line) => line.id)),
+      request: turn,
+    });
+
+  try {
+    if (!wantsStream) {
+      const completion = await client.chat.completions.create(ask);
+      const direction = parse(completion.choices[0]?.message?.content ?? "");
+      if (!direction) {
+        return jsonWithCors(request, { error: "NO_DIRECTION" }, { status: 502 });
+      }
+      noteDirection(direction);
+      return jsonWithCors(
+        request,
+        canPlayBank ? direction : flattenForOldClients(direction, bank),
+      );
+    }
+
+    /**
+     * The same answer, handed over in the order it is written.
+     *
+     * The line the turn opens with is named in the first key and the rest of
+     * the answer is a note and a rewrite — text, read after the fact. Measured
+     * against the real model, the id is in hand about a third of a second
+     * before the object closes, which is a third of a second the app can spend
+     * fetching the audio rather than waiting to be told what to fetch.
+     *
+     * Everything that can fail with a status still does: the model call is
+     * started before a single byte of this response, so a refusal, a bad key
+     * or an unreachable model is the same 402 or 502 it always was. Only a
+     * failure part way through the answer arrives in the body, where the app
+     * reads it as the dropped turn it is.
+     */
+    const completion = await client.chat.completions.create({ ...ask, stream: true });
+    const encoder = new TextEncoder();
+    const body = new ReadableStream<Uint8Array>({
+      async start(controller) {
+        const write = (value: unknown) =>
+          controller.enqueue(encoder.encode(`${JSON.stringify(value)}\n`));
+        let text = "";
+        let led = false;
+        try {
+          for await (const part of completion) {
+            const piece = part.choices[0]?.delta?.content ?? "";
+            if (!piece) continue;
+            text += piece;
+            // Only where a named reaction cannot be outranked by a step's own
+            // question, which is every open conversation and no scripted scene
+            // (director.ts), and only for a line this voice can really play.
+            if (led || !scenario.openEnded) continue;
+            const lead = leadFromPartial(text);
+            if (lead && recorded.some((line) => line.id === lead)) {
+              led = true;
+              write({ lead });
+            }
+          }
+          const direction = parse(text);
+          if (!direction) {
+            write({ error: "NO_DIRECTION" });
+          } else {
+            noteDirection(direction);
+            write({ direction });
+          }
+        } catch (error) {
+          console.error("[roleplay/turn] mid-answer", error);
+          write({ error: "DIRECTION_FAILED" });
+        } finally {
+          controller.close();
+        }
+      },
+    });
+    return streamWithCors(request, body);
   } catch (error) {
     console.error("[roleplay/turn]", error);
     return jsonWithCors(request, { error: "DIRECTION_FAILED" }, { status: 502 });

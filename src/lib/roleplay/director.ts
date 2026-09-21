@@ -61,6 +61,24 @@ export const DIRECTED_TURN_LIMIT = 40;
  */
 export const HISTORY_LINES = 40;
 
+/**
+ * How many of the character's own last lines count as just said.
+ *
+ * Measured over a hundred and twenty-seven plays: one line, "That sounds
+ * great.", was 39% of them, and the top five were 64%. The bank has fifty-three
+ * lines and the character kept reaching for the same handful, which is fine
+ * arithmetic and bad conversation — the complaint a learner has is not that the
+ * bank is small but that they heard this exact sentence two turns ago.
+ *
+ * So a line it has just said is not offered again for a while. Counted in
+ * lines rather than turns because that is what the conversation is made of
+ * here, and a turn may now be two of them: eight lines is roughly four
+ * exchanges. Nothing is suppressed for good, and nothing stops the character
+ * writing those words itself — this only takes the line off the list in front
+ * of it, which is where the repetition was coming from.
+ */
+export const REPERTOIRE_COOLDOWN_LINES = 8;
+
 export type Assessment =
   | "on_track"
   | "stuck"
@@ -155,6 +173,44 @@ export type Direction = {
  * release that sends this, at which point `flattenForOldClients` goes with it.
  */
 export const ROLEPLAY_BANK_CLIENT_HEADER = "x-roleplay-bank";
+
+/**
+ * Says the build reads the answer as it is written rather than all at once.
+ *
+ * Measured against the real model, eight runs a side: the whole answer takes
+ * about a second (median 1020ms) and the ready line's id is in hand at 692ms,
+ * because `open` is the first key and everything after it — the note, the
+ * rewrite — is text nobody has to hear. So a third of a second can be spent
+ * fetching the audio instead of waiting for words that only get read.
+ *
+ * Asked for, because the answer stops being one JSON object: a build that does
+ * not ask gets exactly what it always got.
+ */
+export const ROLEPLAY_STREAM_CLIENT_HEADER = "x-roleplay-stream";
+
+/**
+ * The ready line the turn will open with, read out of an answer still arriving.
+ *
+ * Only ever a promise the finished answer will keep. `parseDirection` puts a
+ * written line ahead of a named one, so a lead is claimed only once `say` has
+ * come back empty — at which point nothing in the bank of rules can outrank the
+ * named reaction, and the line this returns is the line that gets played.
+ *
+ * Null while either key is still being written, and null for an answer that
+ * writes its own line. Both simply mean nothing is warmed early.
+ */
+export function leadFromPartial(partial: string): string | null {
+  // A JSON string value up to the quote that closes it, escapes and all. A
+  // value still being written has no closing quote yet and must not be read as
+  // an empty one: that is the whole difference between warming the line the
+  // answer is about to name and promising one it never will.
+  const value = (name: string) =>
+    new RegExp(`"${name}"\\s*:\\s*"((?:[^"\\\\]|\\\\.)*)"`).exec(partial)?.[1];
+  const open = value("open");
+  const say = value("say");
+  if (open === undefined || say === undefined) return null;
+  return open && say === "" ? open : null;
+}
 
 /**
  * The same turn, written out for a build that cannot play it in two pieces.
@@ -252,6 +308,32 @@ export function readSpokenLines(raw: unknown): SpokenLine[] {
     })
     .filter((line) => line.text)
     .slice(-HISTORY_LINES);
+}
+
+/**
+ * Whether the character has just said these words.
+ *
+ * Reads the conversation it is already being sent rather than asking the app to
+ * remember anything: the lines are right there in `history`, and a rule kept on
+ * the server is one no released build has to be waiting for.
+ *
+ * Matched on the words, ignoring case and punctuation, and as a run inside the
+ * line rather than the whole of it. A turn reaches the app as two lines now but
+ * an older build is sent both halves joined into one (`flattenForOldClients`),
+ * so "That sounds great." comes back as its own line from one and inside a
+ * longer one from the other, and both have to count as said.
+ */
+export function saidRecently(
+  history: readonly SpokenLine[],
+): (text: string) => boolean {
+  const recent = history
+    .filter((line) => line.who === "tutor")
+    .slice(-REPERTOIRE_COOLDOWN_LINES)
+    .map((line) => ` ${words(line.text)} `);
+  return (text: string) => {
+    const said = words(text);
+    return said !== "" && recent.some((line) => line.includes(` ${said} `));
+  };
 }
 
 /**
@@ -368,9 +450,11 @@ Get back to your list as soon as it feels natural.`
   const usual = [current?.questionId, current?.helpId, upcoming?.questionId]
     .filter((id): id is string => Boolean(id && recorded.some((line) => line.id === id)))
     .map((id) => `- "${bank[id]!.text}"`);
+  const justSaid = saidRecently(request.history);
   const repertoire = scenario.openEnded
     ? (scenario.repertoire ?? [])
         .filter((id) => bank[id] && recorded.some((line) => line.id === id))
+        .filter((id) => !justSaid(bank[id]!.text))
         .map((id) => `- ${id}: "${bank[id]!.text}"`)
     : [];
   const now = [

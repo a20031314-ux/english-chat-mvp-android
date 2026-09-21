@@ -13,6 +13,7 @@ import {
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
 import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
+import type { RoleplayScenario, SentenceBank } from "@/lib/roleplay/script";
 import {
   fetchContext,
   fetchDirection,
@@ -45,9 +46,46 @@ import {
   type Instruction,
   type SessionState,
 } from "@/lib/roleplay/session";
-import { playTts, stopTts } from "@/lib/ttsPlayer";
+import { playTts, prefetchTts, stopTts } from "@/lib/ttsPlayer";
 import { translateUtterance } from "@/lib/translateUtterance";
 import type { UICopy } from "@/lib/copy";
+
+/**
+ * Fetch a line the scene is about to say, before it has to be said.
+ *
+ * Only for lines that have no recording in the app. A repertoire line is one:
+ * scripts/build-roleplay-audio.mjs records `sentenceIdsUsed`, which is the
+ * scene's nodes and not its repertoire, on purpose — sixty kilobytes a line is
+ * what kept the bank small. Warming a line that does ship as a file would buy
+ * nothing and pay for a synthesis to do it.
+ */
+function warmLine(scenario: RoleplayScenario, bank: SentenceBank, text: string): void {
+  const spokenOnly = new Set(
+    (scenario.repertoire ?? []).map((id) => bank[id]?.text).filter(Boolean),
+  );
+  if (!spokenOnly.has(text)) return;
+  prefetchTts(text, learningLanguageSpeechTag(scenario.language), scenario.voice);
+}
+
+/**
+ * The rest of the turn, fetched while the first half is still being said.
+ *
+ * A turn is two lines now — a reaction, then the question after it — and they
+ * were played strictly one after the other: the second line's audio was not
+ * asked for until the first had finished, so the learner heard a gap the length
+ * of a round trip in the middle of one sentence-and-a-half. The first line
+ * takes a second or so to say and nothing used that second, which is exactly
+ * long enough to have fetched the other one.
+ */
+function warmNextLine(
+  scenario: RoleplayScenario,
+  bank: SentenceBank,
+  state: SessionState,
+): void {
+  // The line being said now is queue[0]; afterSaying drops it when it ends.
+  const next = state.queue[1];
+  if (next) warmLine(scenario, bank, next.text);
+}
 
 /**
  * Playing a roleplay.
@@ -213,6 +251,8 @@ export function RoleplayScreen({
       ...current,
       { who: "tutor", text: instruction.text, translation: instruction.translation },
     ]);
+    // Nothing waits on this: it is the next line being fetched behind this one.
+    warmNextLine(scenario, bank, state);
     let advanced = false;
     let watchdog = 0;
     const advance = () => {
@@ -321,6 +361,12 @@ export function RoleplayScreen({
       nativeLanguage,
       isPremium,
       sessionId: conversationId.current,
+      // Named before the rest of the answer exists, so the audio is on its way
+      // while the note and the rewrite are still being written (listen.ts).
+      onLead: (id) => {
+        const text = bank[id]?.text;
+        if (text) warmLine(scenario, bank, text);
+      },
     }).then((answer) => {
       if (cancelled) return;
       setDirecting(false);

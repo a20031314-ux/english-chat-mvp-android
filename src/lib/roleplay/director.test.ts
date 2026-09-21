@@ -5,9 +5,11 @@ import {
   DIRECTED_TURN_LIMIT,
   FREE_TURN_LIMIT,
   flattenForOldClients,
+  leadFromPartial,
   parseDirection,
   questionFor,
   recordedLines,
+  REPERTOIRE_COOLDOWN_LINES,
   scriptSteps,
   tutorMessages,
   tutorSystemPrompt,
@@ -615,6 +617,95 @@ test("a repertoire line is playable, not just writable", () => {
   for (const id of open.repertoire ?? []) {
     assert.ok(playable.has(id), `${id} is offered but not in the pool`);
   }
+});
+
+function openBrief(history: DirectorRequest["history"]): string {
+  return tutorSystemPrompt({
+    scenario: open,
+    bank,
+    recorded: recordedLines(open, SCENARIOS, bank),
+    request: request({ scenarioId: open.id, nodeId: "talk", history }),
+  });
+}
+
+test("a line it just said is not offered again", () => {
+  // Measured over a hundred and twenty-seven plays: "That sounds great." was
+  // 39% of them and the top five were 64%, out of fifty-three lines. What a
+  // learner notices there is not a small bank, it is the same sentence twice.
+  const fresh = openBrief([{ who: "learner", text: "i went to busan last weekend" }]);
+  assert.match(fresh, /talk\.nice: "That sounds great\."/);
+
+  const again = openBrief([
+    { who: "tutor", text: "That sounds great." },
+    { who: "learner", text: "yeah it was really fun" },
+  ]);
+  assert.doesNotMatch(again, /talk\.nice/);
+  assert.match(again, /talk\.there-what/, "the rest of the bank is untouched");
+});
+
+test("both halves of a turn an old build joined into one line count as said", () => {
+  // A build that cannot play a turn in two pieces is sent them joined
+  // (flattenForOldClients), so the line comes back inside a longer one — and a
+  // match on the whole line would miss it and offer both halves straight back.
+  const joined = openBrief([
+    { who: "tutor", text: "That sounds great. What did you do there?" },
+    { who: "learner", text: "we went to the beach" },
+  ]);
+  assert.doesNotMatch(joined, /talk\.nice/);
+  assert.doesNotMatch(joined, /talk\.there-what/);
+});
+
+test("a line comes back once the conversation has moved past it", () => {
+  // Suppressed for good, the bank would drain over a long conversation and end
+  // it writing every line itself, which is the cost this was avoiding.
+  const since: DirectorRequest["history"] = Array.from(
+    { length: REPERTOIRE_COOLDOWN_LINES },
+    (_, turn) => ({ who: "tutor" as const, text: `Mm, I see, number ${turn}.` }),
+  );
+  const later = openBrief([{ who: "tutor", text: "That sounds great." }, ...since]);
+  assert.match(later, /talk\.nice: "That sounds great\."/);
+});
+
+test("the opening line is read out of an answer still being written", () => {
+  // "open" is the first key and the note and the rewrite are the last, so the
+  // id is in hand about a third of a second before the object closes —
+  // measured against the real model, eight runs a side: 692ms against 1020ms.
+  const head = '{"open": "talk.nice", "follow": "talk.there-what", "say": ""';
+  assert.equal(leadFromPartial(head), "talk.nice");
+  assert.equal(
+    leadFromPartial('{"say": "", "open": "talk.nice"'),
+    "talk.nice",
+    "whatever order the keys come in",
+  );
+});
+
+test("nothing is claimed while the answer could still say otherwise", () => {
+  // A value with no closing quote yet is not an empty one, and an answer that
+  // writes its own line does not open with a named one — parseDirection puts
+  // the written line first, so promising the id here would promise a line the
+  // finished answer never plays.
+  assert.equal(leadFromPartial('{"open": "talk.nice", "follow": "talk'), null);
+  assert.equal(leadFromPartial('{"open": "talk.nice", "say": "Oh, nice!"'), null);
+  assert.equal(leadFromPartial('{"open": "", "say": ""'), null);
+  assert.equal(leadFromPartial('{"open": "talk.nice", "say": "He said \\"hi\\""'), null);
+});
+
+test("a lead that was claimed is the line that gets played", () => {
+  // The whole design rests on this: the app is told to fetch a line before the
+  // answer exists, so the finished answer has to open with it. Nothing in an
+  // open conversation can outrank a named reaction once "say" is empty —
+  // there is no step whose question could replace it.
+  const raw = {
+    open: "talk.nice",
+    follow: "talk.there-what",
+    say: "",
+    assessment: "on_track",
+    next: "free",
+  };
+  const lead = leadFromPartial(JSON.stringify(raw));
+  assert.equal(lead, "talk.nice");
+  const direction = parse(raw, { nodeId: "talk" }, open);
+  assert.deepEqual(direction?.say, { id: lead });
 });
 
 test("a turn can be two ready lines: a reaction, then a question", () => {

@@ -7,6 +7,7 @@ import {
 import {
   HISTORY_LINES,
   ROLEPLAY_BANK_CLIENT_HEADER,
+  ROLEPLAY_STREAM_CLIENT_HEADER,
   type Direction,
   type DirectorRequest,
   type SpokenLine,
@@ -345,60 +346,180 @@ export function isOutOfPoints(value: unknown): value is OutOfPoints {
   return typeof value === "object" && value !== null && "outOfPoints" in value;
 }
 
+/**
+ * The answer, whichever way it arrived, checked before it is acted on.
+ *
+ * The server already held it to the scene; this only makes sure it has the
+ * shape the session expects.
+ */
+function shapeDirection(raw: unknown): Direction | null {
+  const body = (typeof raw === "object" && raw !== null ? raw : {}) as Partial<Direction>;
+  if (!body.say || !body.next || !body.assessment) return null;
+  return {
+    assessment: body.assessment,
+    say: body.say,
+    note: typeof body.note === "string" ? body.note : "",
+    next: body.next,
+    ...(typeof body.better === "string" && body.better.trim()
+      ? { better: body.better.trim() }
+      : {}),
+    ...(typeof body.follow === "string" ? { follow: body.follow } : {}),
+  };
+}
+
+/**
+ * A fetch that really streams, even inside the app.
+ *
+ * CapacitorHttp is on for the whole app, and it splits by method: a GET goes to
+ * the WebView's own fetch and streams, while a POST is handed to the native
+ * layer, which reads the entire body and hands back a Response built from a
+ * string that is already complete. Every word of the director's answer would
+ * therefore arrive at once on a phone, which is the thing being fixed here.
+ *
+ * The bridge keeps the untouched fetch on the window when it installs its own,
+ * so the way around it is to use the one it saved. Nothing else in the app does
+ * this, which is why the origin and the headers in server/cors.ts suddenly
+ * matter: this call is a plain browser fetch from https://localhost and is held
+ * to CORS like any other, where every other call the app makes is not.
+ */
+function streamingFetch(): typeof fetch {
+  const saved = (globalThis as { CapacitorWebFetch?: typeof fetch }).CapacitorWebFetch;
+  return saved ?? fetch;
+}
+
+/**
+ * Whether the streaming path is worth trying again this run.
+ *
+ * Decided once. If going around the bridge fails — a preflight this server does
+ * not answer, an origin it does not know — the turn is retried the ordinary
+ * way and every turn after it skips straight there. The retry can in principle
+ * pay for a turn twice, when the request reached the server and the answer did
+ * not come back; a failed preflight, which is the way this actually breaks,
+ * never sends the request at all. One turn, once, against a director that
+ * would otherwise be dead on every phone.
+ */
+let streamingWorks = true;
+
 export async function fetchDirection(input: {
   request: Omit<DirectorRequest, "targetLanguage" | "nativeLanguage">;
   nativeLanguage: string;
   isPremium: boolean;
   /** Names this conversation, so the server can keep its clock between turns. */
   sessionId: string;
+  /**
+   * The ready line the turn will open with, as soon as the server names it and
+   * before the rest of the answer exists. There to be fetched, not played: the
+   * line is spoken from the finished answer like any other.
+   */
+  onLead?: (id: string) => void;
 }): Promise<Direction | OutOfPoints | null> {
+  const headers: Record<string, string> = {
+    "Content-Type": "application/json",
+    ...entitlementHeaders(input.isPremium),
+    // Says this build will show the learner what a refusal means, which is
+    // what makes it safe for the server to refuse (billing/config.ts).
+    [ROLEPLAY_POINTS_CLIENT_HEADER]: "1",
+    [ROLEPLAY_SESSION_HEADER]: input.sessionId,
+    // Says this build knows the lines an open conversation reaches for, so
+    // the server may answer with their ids and with a turn made of two of
+    // them (director.ts).
+    [ROLEPLAY_BANK_CLIENT_HEADER]: "1",
+  };
+  const body = JSON.stringify({
+    ...input.request,
+    // The caller has already cut this to the lines the notes do not cover;
+    // the ceiling is for when the notes have fallen behind.
+    history: input.request.history.slice(-HISTORY_LINES),
+    context: input.request.context ?? "",
+    nativeLanguage: input.nativeLanguage,
+  });
+
+  if (streamingWorks) {
+    try {
+      const response = await streamingFetch()(apiUrl("/api/roleplay/turn"), {
+        method: "POST",
+        headers: { ...headers, [ROLEPLAY_STREAM_CLIENT_HEADER]: "1" },
+        body,
+      });
+      if (response.status === 402) return { outOfPoints: true };
+      if (!response.ok) {
+        console.error("[roleplay] direction failed with", response.status);
+        return null;
+      }
+      return await readDirection(response, input.onLead);
+    } catch (error) {
+      // Never reached the server, or never came back from it. Either way this
+      // path is not available here, so nothing tries it again.
+      streamingWorks = false;
+      console.error("[roleplay] streaming direction threw, falling back", error);
+    }
+  }
+
   try {
     const response = await fetch(apiUrl("/api/roleplay/turn"), {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        ...entitlementHeaders(input.isPremium),
-        // Says this build will show the learner what a refusal means, which is
-        // what makes it safe for the server to refuse (billing/config.ts).
-        [ROLEPLAY_POINTS_CLIENT_HEADER]: "1",
-        [ROLEPLAY_SESSION_HEADER]: input.sessionId,
-        // Says this build knows the lines an open conversation reaches for, so
-        // the server may answer with their ids and with a turn made of two of
-        // them (director.ts).
-        [ROLEPLAY_BANK_CLIENT_HEADER]: "1",
-      },
-      body: JSON.stringify({
-        ...input.request,
-        // The caller has already cut this to the lines the notes do not cover;
-        // the ceiling is for when the notes have fallen behind.
-        history: input.request.history.slice(-HISTORY_LINES),
-        context: input.request.context ?? "",
-        nativeLanguage: input.nativeLanguage,
-      }),
+      headers,
+      body,
     });
     if (response.status === 402) return { outOfPoints: true };
     if (!response.ok) {
       console.error("[roleplay] direction failed with", response.status);
       return null;
     }
-    const body = (await response.json()) as Partial<Direction>;
-    // The server already held the answer to the scene; this only makes sure
-    // it has the shape the session expects before it is acted on.
-    if (!body.say || !body.next || !body.assessment) return null;
-    return {
-      assessment: body.assessment,
-      say: body.say,
-      note: typeof body.note === "string" ? body.note : "",
-      next: body.next,
-      ...(typeof body.better === "string" && body.better.trim()
-        ? { better: body.better.trim() }
-        : {}),
-      ...(typeof body.follow === "string" ? { follow: body.follow } : {}),
-    };
+    return shapeDirection(await response.json());
   } catch (error) {
     console.error("[roleplay] direction threw", error);
     return null;
   }
+}
+
+/**
+ * One answer written as several lines of JSON, read as they land.
+ *
+ * A transport that buffered the whole body anyway is not a failure: the same
+ * lines are all there, and reading them costs nothing but the head start.
+ */
+async function readDirection(
+  response: Response,
+  onLead?: (id: string) => void,
+): Promise<Direction | null> {
+  let direction: unknown = null;
+  const take = (line: string) => {
+    if (!line.trim()) return;
+    let parsed: { lead?: unknown; direction?: unknown; error?: unknown };
+    try {
+      parsed = JSON.parse(line);
+    } catch {
+      return;
+    }
+    if (typeof parsed.lead === "string" && parsed.lead) onLead?.(parsed.lead);
+    if (parsed.direction) direction = parsed.direction;
+    // A turn that failed part way through the answer. The caller reads null as
+    // the dropped turn it is and the scene carries on with what it has.
+    if (parsed.error) direction = null;
+  };
+
+  if (!response.body) {
+    for (const line of (await response.text()).split("\n")) take(line);
+    return shapeDirection(direction);
+  }
+
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = "";
+  for (;;) {
+    const { value, done } = await reader.read();
+    if (done) break;
+    buffer += decoder.decode(value, { stream: true });
+    let at = buffer.indexOf("\n");
+    while (at >= 0) {
+      take(buffer.slice(0, at));
+      buffer = buffer.slice(at + 1);
+      at = buffer.indexOf("\n");
+    }
+  }
+  take(buffer);
+  return shapeDirection(direction);
 }
 
 /**

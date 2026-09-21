@@ -299,3 +299,20 @@ test("an open conversation is scripted only at its ends", () => {
     );
   }
 });
+
+test("a repertoire line ships as words, not as a file", () => {
+  // scripts/build-roleplay-audio.mjs records sentenceIdsUsed and nothing else,
+  // so a repertoire line has no recording inside the app and is spoken through
+  // the TTS route instead. RoleplayScreen leans on exactly that when it fetches
+  // the second half of a turn while the first half is playing: a line that did
+  // ship as a file would be paid for a synthesis it never needed.
+  for (const scenario of SCENARIOS) {
+    const recorded = new Set(sentenceIdsUsed(scenario));
+    for (const id of scenario.repertoire ?? []) {
+      assert.ok(
+        !recorded.has(id),
+        `${scenario.id}: ${id} is both recorded and offered as words`,
+      );
+    }
+  }
+});

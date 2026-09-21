@@ -15,10 +15,13 @@ const ALLOWED_ORIGIN_PREFIXES = [
 ];
 
 // Every header the app actually sends. A missing one fails the preflight, which
-// the Android build hides today because CapacitorHttp bypasses CORS entirely —
-// so an omission here stays invisible until something makes a plain fetch.
+// the Android build used to hide entirely because CapacitorHttp bypasses CORS.
+// One call no longer does: the director is fetched around the native bridge so
+// its answer can be read as it arrives (listen.ts), which is a plain browser
+// fetch from https://localhost and is held to all of this. An omission here now
+// breaks that call on a phone rather than staying invisible.
 const ALLOWED_HEADERS =
-  "Content-Type, x-client-premium, x-rc-user, x-learning-language, x-call-blocks, x-app-version, x-roleplay-points, x-roleplay-session, x-roleplay-bank";
+  "Content-Type, x-client-premium, x-rc-user, x-learning-language, x-call-blocks, x-app-version, x-roleplay-points, x-roleplay-session, x-roleplay-bank, x-roleplay-stream";
 
 /**
  * The call route answers with SDP and says what it charged in headers, which a
@@ -73,6 +76,28 @@ export function corsPreflightResponse(request: NextRequest): NextResponse {
   return new NextResponse(null, {
     status: 204,
     headers: corsHeaders(request),
+  });
+}
+
+/**
+ * An answer written a piece at a time, with everything a JSON one carries.
+ *
+ * Newline-delimited JSON rather than a single object, because the point is to
+ * hand over the first useful part before the rest exists. `no-store` and the
+ * buffering-off hint are not optional: a proxy that holds the body until it is
+ * complete turns this back into the response it replaced, and silently.
+ */
+export function streamWithCors(
+  request: NextRequest,
+  stream: ReadableStream<Uint8Array>,
+): NextResponse {
+  return new NextResponse(stream, {
+    headers: {
+      ...corsHeaders(request),
+      "Content-Type": "application/x-ndjson; charset=utf-8",
+      "Cache-Control": "no-store",
+      "X-Accel-Buffering": "no",
+    },
   });
 }
 

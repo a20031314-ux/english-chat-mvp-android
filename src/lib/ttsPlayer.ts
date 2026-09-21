@@ -323,14 +323,23 @@ async function playPcmStream(state: StreamState, gen: number): Promise<void> {
   });
 }
 
-export function prefetchTts(text: string, lang: string) {
+/**
+ * Fetch a line before anybody asks to hear it.
+ *
+ * `voice` is a roleplay scene's own voice, and leaving it out is not a detail:
+ * the cache is keyed by it and so is the URL, so a line warmed without one is
+ * stored under a key `playTts` will not look at and fetched in the wrong voice
+ * besides — a request paid for twice and used once. It went in late, which is
+ * why the whole queue carried a voice before this did.
+ */
+export function prefetchTts(text: string, lang: string, voice?: string) {
   const spoken = spokenFormForTts(text, lang);
   if (!spoken) return;
-  const key = cacheKey(lang, spoken);
+  const key = cacheKey(lang, spoken, voice);
   if (completeCache.has(key) || inflight.has(key)) return;
   const queued = prefetchQueue.findIndex((job) => job.key === key);
   if (queued >= 0) prefetchQueue.splice(queued, 1);
-  prefetchQueue.unshift({ key, spoken, lang });
+  prefetchQueue.unshift({ key, spoken, lang, voice });
   pumpPrefetch();
 }
 
