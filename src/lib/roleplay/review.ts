@@ -18,6 +18,26 @@ import type { SpokenLine } from "./director.ts";
  */
 
 /** What the scene knows about the turn they got stuck on. */
+/**
+ * One line of the conversation as the screen holds it.
+ *
+ * The spoken text plus everything that was learned about it afterwards: a gloss
+ * fetched when somebody tapped it, their own sentence said better, a word about
+ * it, and the evidence for a turn they got stuck on. It lives here rather than
+ * beside the component that draws it because a saved conversation is a list of
+ * these, and a library module cannot reach into a component for its shape.
+ */
+export type TranscriptLine = {
+  who: "tutor" | "learner";
+  text: string;
+  translation?: string;
+  stuck?: StuckTurn;
+  /** Their own sentence, said better. Shown under it, never spoken. */
+  better?: string;
+  /** A word about that sentence, in their own language. Also never spoken. */
+  about?: string;
+};
+
 export type StuckTurn = {
   /** The tutor's line they were answering. */
   asked: string;

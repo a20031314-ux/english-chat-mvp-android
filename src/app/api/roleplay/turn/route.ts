@@ -143,7 +143,10 @@ export async function POST(request: NextRequest) {
     } else {
       void meterRequest(request, "roleplayInventedLine");
     }
-    if (direction.follow) void noteSentenceSaid(scenario.language, direction.follow);
+    if (direction.follow) {
+      void meterRequest(request, "roleplaySplitTurn");
+      void noteSentenceSaid(scenario.language, direction.follow);
+    }
   };
 
   const model = tutorModel();

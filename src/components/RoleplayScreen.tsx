@@ -15,6 +15,11 @@ import {
 import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
 import type { RoleplayScenario, SentenceBank } from "@/lib/roleplay/script";
 import {
+  stateToResume,
+  titleFor,
+  type SavedConversation,
+} from "@/lib/roleplay/saved";
+import {
   fetchContext,
   fetchDirection,
   fetchPractice,
@@ -168,12 +173,25 @@ export function RoleplayScreen({
   nativeLanguage,
   ui,
   onClose,
+  resume,
+  onSaved,
 }: {
   scenarioId: string;
   /** What the learner speaks, so the director's notes are written in it. */
   nativeLanguage: LearningLanguageCode;
   ui: UICopy;
   onClose: () => void;
+  /**
+   * A conversation to carry on with rather than a new one. Its billing id is
+   * deliberately not carried over — see saved.ts: the server charges by how long
+   * the conversation has been running, so a resumed one starts a new clock.
+   */
+  resume?: SavedConversation | null;
+  /**
+   * Called with the conversation as it stands, every time it changes. Writing
+   * it down is the caller's business; this only says what there is to write.
+   */
+  onSaved?: (saved: SavedConversation) => void;
 }) {
   const { isPremium } = usePremium();
   const scenario = findScenario(scenarioId);
@@ -225,13 +243,27 @@ export function RoleplayScreen({
 
   const bank = scenario ? sentencesFor(scenario.language) : {};
 
+  // Which saved conversation this is, kept so that every write replaces the
+  // same row instead of leaving a trail of one row per turn.
+  const savedId = useRef("");
+  const startedAt = useRef(0);
+
   useEffect(() => {
     if (!scenario) return;
-    const fresh = startSession(scenario);
+    // Carrying one on, or starting one. A resumed conversation comes back
+    // where it can be spoken to: the queue and the turn in flight are the
+    // middle of a moment that did not survive the screen going away.
+    const carrying = resume && resume.scenarioId === scenarioId ? resume : null;
+    const fresh = carrying ? stateToResume(carrying.state) : startSession(scenario);
     setState(fresh);
     setInstruction(currentInstruction(scenario, bank, fresh));
-    setSaid([]);
-    setMemory(EMPTY_MEMORY);
+    setSaid(carrying ? carrying.said : []);
+    setMemory(carrying ? carrying.memory : EMPTY_MEMORY);
+    savedId.current =
+      carrying?.id ??
+      globalThis.crypto?.randomUUID?.() ??
+      `${Date.now()}-${Math.random()}`;
+    startedAt.current = carrying?.startedAt ?? Date.now();
     setReviewing(null);
     setOutOfPoints(false);
     translating.current = new Set();
@@ -239,9 +271,38 @@ export function RoleplayScreen({
       globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`;
     folding.current = false;
     sessionRef.current += 1;
-    // The bank is derived from the scenario, so it moves with it.
+    // The bank is derived from the scenario, so it moves with it. `resume` is
+    // read once, on the way in: the caller hands back every row this saves, and
+    // reacting to that would restart the conversation on its own first turn.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [scenarioId]);
+
+  /**
+   * Write the conversation down as it happens.
+   *
+   * Not on the way out. A scene can end because the microphone was refused, or
+   * because the app was killed while the phone rang, and neither of those calls
+   * anything on the way out — the version worth keeping is the one from the
+   * last thing that was said.
+   */
+  useEffect(() => {
+    if (!scenario || !state || !onSaved || !savedId.current) return;
+    if (said.length === 0) return;
+    const now = Date.now();
+    onSaved({
+      id: savedId.current,
+      scenarioId: scenario.id,
+      language: scenario.language,
+      title: titleFor(said, scenario.title),
+      startedAt: startedAt.current || now,
+      updatedAt: now,
+      ...(state.finished ? { finishedAt: now } : {}),
+      state,
+      said,
+      memory,
+    });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [said, state, memory]);
 
   /** Play the current line, then hand control back to the state machine. */
   useEffect(() => {
@@ -638,12 +699,18 @@ export function RoleplayScreen({
           <h2 className="text-sm font-semibold text-white">{scenario.title}</h2>
           <p className="text-[11px] text-neutral-500">{scenario.tutorRole}</p>
         </div>
+        {/* A conversation that is still going is put down, not shut. It is
+            written down as it happens, so leaving here loses nothing and the
+            door offers to carry on with it. Once it has ended there is nothing
+            to come back to and the button says so. */}
         <button
           type="button"
           onClick={onClose}
           className="rounded-lg border border-white/15 px-3 py-1.5 text-[12px] text-neutral-300 hover:bg-white/10"
         >
-          {ui.billingClose}
+          {state?.finished || instruction?.do === "finish"
+            ? ui.billingClose
+            : ui.roleplayPause}
         </button>
       </header>
 

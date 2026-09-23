@@ -9,6 +9,13 @@ export const APP_LOCALE_STORAGE_KEY = "appUiLocale";
 /** UI languages follow learning languages — do not maintain a separate list. */
 export const LOCALE_OPTIONS = uiLocaleOptions();
 
+const generatedRoleplayOverlay = {
+  roleplayPause: "Pause",
+  roleplayResume: "Carry on",
+  roleplayPast: "Past conversations",
+  roleplayPastEmpty: "Nothing here yet.",
+} as const;
+
 const generatedBillingOverlay = {
   videoLearnQuotaReached:
     "You’ve used this month’s import points. Library and saved videos can still be replayed.",
@@ -113,6 +120,10 @@ export const copy = {
     roleplayReviewLoading: "돌아보는 중…",
     roleplayReviewFailed: "지금은 회고를 만들지 못했어요. 잠시 후 다시 눌러보세요.",
     roleplayOutOfPoints: "무료로 쓸 수 있는 통화 학습 시간을 다 썼어요. 구독하면 이어서 할 수 있어요.",
+    roleplayPause: "중단",
+    roleplayResume: "이어서 하기",
+    roleplayPast: "지난 대화",
+    roleplayPastEmpty: "아직 지난 대화가 없어요.",
     updateAvailable: "새 버전이 나왔어요",
     updateRequired: "업데이트가 필요해요. 지금 버전으로는 대화를 이어갈 수 없어요.",
     updateAction: "업데이트",
@@ -811,6 +822,10 @@ export const copy = {
     roleplayReviewLoading: "Looking back…",
     roleplayReviewFailed: "Couldn't put this together just now. Try the button again in a moment.",
     roleplayOutOfPoints: "That's the free call practice used up. A subscription carries on from here.",
+    roleplayPause: "Pause",
+    roleplayResume: "Carry on",
+    roleplayPast: "Past conversations",
+    roleplayPastEmpty: "Nothing here yet.",
     updateAvailable: "A newer version is out",
     updateRequired: "This version can't keep going. Please update to carry on.",
     updateAction: "Update",
@@ -1506,6 +1521,10 @@ export const copy = {
     roleplayReviewLoading: "Repasando…",
     roleplayReviewFailed: "No se pudo preparar ahora mismo. Vuelve a pulsar en un momento.",
     roleplayOutOfPoints: "Has agotado la práctica de llamada gratuita. La suscripción continúa desde aquí.",
+    roleplayPause: "Pausar",
+    roleplayResume: "Continuar",
+    roleplayPast: "Conversaciones anteriores",
+    roleplayPastEmpty: "Aquí todavía no hay nada.",
     updateAvailable: "Hay una versión nueva",
     updateRequired: "Esta versión ya no puede continuar. Actualiza para seguir.",
     updateAction: "Actualizar",
@@ -2173,17 +2192,17 @@ export const copy = {
       "No se pudo cargar el producto. Revisa Play Console y RevenueCat.",
     paywallCancelled: "Compra cancelada",
   },
-  ja: { ...generatedLocales.ja, ...generatedBillingOverlay },
-  zh: { ...generatedLocales.zh, ...generatedBillingOverlay },
-  vi: { ...generatedLocales.vi, ...generatedBillingOverlay },
-  fr: { ...generatedLocales.fr, ...generatedBillingOverlay },
-  it: { ...generatedLocales.it, ...generatedBillingOverlay },
-  pt: { ...generatedLocales.pt, ...generatedBillingOverlay },
-  ru: { ...generatedLocales.ru, ...generatedBillingOverlay },
-  id: { ...generatedLocales.id, ...generatedBillingOverlay },
-  ar: { ...generatedLocales.ar, ...generatedBillingOverlay },
-  th: { ...generatedLocales.th, ...generatedBillingOverlay },
-  hi: { ...generatedLocales.hi, ...generatedBillingOverlay },
+  ja: { ...generatedLocales.ja, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
+  zh: { ...generatedLocales.zh, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
+  vi: { ...generatedLocales.vi, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
+  fr: { ...generatedLocales.fr, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
+  it: { ...generatedLocales.it, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
+  pt: { ...generatedLocales.pt, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
+  ru: { ...generatedLocales.ru, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
+  id: { ...generatedLocales.id, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
+  ar: { ...generatedLocales.ar, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
+  th: { ...generatedLocales.th, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
+  hi: { ...generatedLocales.hi, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
 } as const;
 
 export type Locale = keyof typeof copy;

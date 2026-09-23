@@ -114,6 +114,7 @@ const invented = get("roleplayInventedLine");
 const spokenTurns = bankLine + invented;
 const sessions = get("roleplaySession");
 const turns = get("roleplayTurn");
+const split = get("roleplaySplitTurn");
 const tts = get("tts");
 
 const pct = (part, whole) => (whole > 0 ? `${((part / whole) * 100).toFixed(1)}%` : "—");
@@ -123,6 +124,9 @@ console.log(`Bank report — last ${DAYS} days\n`);
 
 console.log("[2] Before and after");
 console.log(`  bank hit rate          ${pct(bankLine, spokenTurns)}  (${bankLine} of ${spokenTurns} lines came from the bank)`);
+// Two clips in a row sound like one turn, so whether this ever happens cannot
+// be told by listening — the first person to use the build could not say.
+console.log(`  whole turns from bank  ${pct(split, turns)}  (${split} of ${turns} turns came back as two lines)`);
 console.log(`  tts / roleplayTurn     ${turns > 0 ? (tts / turns).toFixed(2) : "—"}  (${tts} syntheses, ${turns} character turns)`);
 console.log(`  syntheses per session  ${per(tts, sessions)}`);
 console.log(`  turns per session      ${per(turns, sessions)}`);

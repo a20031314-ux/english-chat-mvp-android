@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { compareToTarget, type WordOutcome } from "@/lib/roleplay/practice";
 import type { Practice } from "@/lib/roleplay/practice";
-import type { Review, StuckTurn } from "@/lib/roleplay/review";
+import type { Review, StuckTurn, TranscriptLine } from "@/lib/roleplay/review";
 import type { UICopy } from "@/lib/copy";
 
 /**
@@ -20,16 +20,7 @@ import type { UICopy } from "@/lib/copy";
  */
 
 /** A line of the transcript, with the offer on it when the turn was a struggle. */
-export type TranscriptLine = {
-  who: "tutor" | "learner";
-  text: string;
-  translation?: string;
-  stuck?: StuckTurn;
-  /** Their own sentence, said better. Shown under it, never spoken. */
-  better?: string;
-  /** A word about that sentence, in their own language. Also never spoken. */
-  about?: string;
-};
+export type { TranscriptLine } from "@/lib/roleplay/review";
 
 export function RoleplayLine({
   line,

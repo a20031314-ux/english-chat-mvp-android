@@ -79,6 +79,13 @@ export const MODEL_CALLS_PER_REQUEST = {
   // and it is the number that says whether growing the bank did anything.
   roleplayBankLine: 0,
   roleplayInventedLine: 0,
+  // A turn that came back as two lines rather than one: a reaction from the
+  // bank and the question after it, both played from their own recordings.
+  // Counted because it cannot be seen from outside — two clips in a row sound
+  // like one turn, and the first person to use the build could not tell whether
+  // it had ever happened. Its ratio to roleplayTurn is how often the bank
+  // carries a whole turn rather than half of one.
+  roleplaySplitTurn: 0,
   // The first director call of a conversation, so per-session figures have a
   // denominator. Stateless: it is the turn that reports no directed turns yet.
   roleplaySession: 0,
