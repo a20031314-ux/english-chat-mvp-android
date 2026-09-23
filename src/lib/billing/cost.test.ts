@@ -16,6 +16,7 @@ import {
   pointCostUsd,
   ROLEPLAY_TURN,
   TTS_USD_PER_MINUTE,
+  TUTOR_USD_PER_MTOK,
   roleplayMinuteUsd,
   roleplayPointCostUsd,
 } from "./cost.ts";
@@ -174,13 +175,40 @@ test("call learning comes in under what a point is assumed to cost", () => {
 });
 
 test("what one point of call learning buys is written down, not guessed", () => {
-  // Synthesis is the largest share of it, which is why the scripted scenes —
-  // which play recordings instead — are what makes this number fall.
+  // Speech and deciding are within a couple of points of each other now, so
+  // this no longer names one of them as the number to check first. What it
+  // holds is that they are both large: if either fell away to a rounding error
+  // the shape of the estimate would have changed and somebody should look.
+  //
+  // It used to assert that speech was over half, back when it was 58% of a
+  // minute. The bank took it to 43% — most lines are served from the edge and
+  // never synthesised — while the list of those lines in the prompt took
+  // deciding from 28% to 41%.
   const perMinute = roleplayMinuteUsd();
   const turns = 60 / ROLEPLAY_TURN.turnSeconds;
-  const speak = turns * (ROLEPLAY_TURN.tutorSpeakingSeconds / 60) * TTS_USD_PER_MINUTE;
+  const speak =
+    turns *
+    (ROLEPLAY_TURN.tutorSpeakingSeconds / 60) *
+    TTS_USD_PER_MINUTE *
+    ROLEPLAY_TURN.linesSynthesised;
+  const think =
+    turns *
+    ((ROLEPLAY_TURN.input * TUTOR_USD_PER_MTOK.input) / 1_000_000 +
+      (ROLEPLAY_TURN.output * TUTOR_USD_PER_MTOK.output) / 1_000_000);
+  const share = (part: number) => Math.round((part / perMinute) * 100);
   assert.ok(
-    speak / perMinute > 0.5,
-    `speech is ${Math.round((speak / perMinute) * 100)}% of a minute, so it is the number to check first`,
+    share(speak) > 25 && share(think) > 25,
+    `speech is ${share(speak)}% and deciding ${share(think)}% of a minute; one of them has stopped mattering`,
+  );
+});
+
+test("a line out of the bank is not paid for twice", () => {
+  // The whole saving rests on this: a bank line is the same words every time,
+  // warmed into the edge before a release, so it is served without reaching the
+  // function. If this share ever went back to 1 the estimate would silently
+  // return to pricing every line as though it were written on the spot.
+  assert.ok(
+    ROLEPLAY_TURN.linesSynthesised > 0 && ROLEPLAY_TURN.linesSynthesised < 1,
+    "some lines come from the bank and some are written; neither is all of them",
   );
 });

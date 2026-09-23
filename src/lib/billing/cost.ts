@@ -130,35 +130,72 @@ export const TTS_USD_PER_MINUTE = 0.015;
 /**
  * A turn of call learning, measured rather than guessed.
  *
- * `input` is what tutorSystemPrompt plus twenty lines of conversation and a
- * page of notes actually comes to; `output` is one line, its translation and a
- * tip, well inside the 300-token cap the route sets. `turnSeconds` is a spoken
- * exchange end to end: the character's line, the learner's answer, and the
- * moment in between.
+ * Taken on 2026-09-23 from six turns of a real open conversation against
+ * gpt-4.1-mini, reading what the API itself reported rather than counting
+ * characters: mean 1673 tokens in and 48 out. The figures before these were
+ * 1060 and 120, and both had drifted, in opposite directions, so that the error
+ * hid itself in the total.
+ *
+ * `input` went up because the bank is in the prompt. An open conversation is
+ * offered the lines it may reach for, which is about 884 tokens of the 1673 —
+ * bought deliberately, and it pays for itself several times over below.
+ * `output` came down because a written line stopped carrying its translation:
+ * that was half the answer and none of it was ever spoken, so it is fetched
+ * when somebody taps the line instead.
+ *
+ * `turnSeconds` is a spoken exchange end to end: the character's line, the
+ * learner's answer, and the moment in between.
  */
 export const ROLEPLAY_TURN = {
-  input: 1060,
-  output: 120,
+  input: 1673,
+  output: 48,
   turnSeconds: 15,
   tutorSpeakingSeconds: 5,
   learnerSpeakingSeconds: 6,
+  /**
+   * The share of the character's lines that cost a synthesis.
+   *
+   * A line out of the bank is the same words every time, so the edge holds it
+   * and hands it back to everybody — and every one of them is warmed before a
+   * release (scripts/warm-roleplay-speech.mjs), so in production a bank line is
+   * a cache hit that never reaches the function at all. A line the model wrote
+   * is a string nobody has asked for before and is always paid for.
+   *
+   * So this is one minus the bank's hit rate. Two readings of that: the ledger
+   * says 36.8% over 285 lines, and six turns measured after the anaphoric lines
+   * and the two-line turn landed came back at 69%. The ledger's is the older
+   * and worse of the two — most of it was recorded before either of those
+   * existed — and it is the one used here, because every price in this file is
+   * set against the expensive case on purpose.
+   */
+  linesSynthesised: 0.63,
 } as const;
 
 /**
  * USD of model time in one minute of call learning.
  *
  * Three bills, not one: the character deciding what to say, the speech it is
- * said in, and the transcription of the answer. Synthesis is the largest of
- * them, which is why a scene that plays recorded lines is so much cheaper than
- * one that invents every line — and why the number here is the expensive case,
- * with nothing recorded but the greeting and the goodbye.
+ * said in, and the transcription of the answer. Speech is still the largest,
+ * but only just — 43% against 41% for deciding, where it used to be 58%
+ * against 28%. The two are close enough now that neither can be called the
+ * number to check first without looking.
+ *
+ * The bank did that, from both ends at once. Most of what the character says is
+ * a line that already exists, served from the edge for nothing, so only the
+ * lines it writes itself are paid for; and the prompt grew by the list of lines
+ * it may reach for. Turn for turn that trade is about 884 tokens of input
+ * against roughly two fifths of the synthesis, and it comes out a little over
+ * twice in favour of the bank — a minute fell from $0.00866 to $0.00733.
  */
 export function roleplayMinuteUsd(): number {
   const turns = 60 / ROLEPLAY_TURN.turnSeconds;
   const think =
     (ROLEPLAY_TURN.input * TUTOR_USD_PER_MTOK.input) / 1_000_000 +
     (ROLEPLAY_TURN.output * TUTOR_USD_PER_MTOK.output) / 1_000_000;
-  const speak = (ROLEPLAY_TURN.tutorSpeakingSeconds / 60) * TTS_USD_PER_MINUTE;
+  const speak =
+    (ROLEPLAY_TURN.tutorSpeakingSeconds / 60) *
+    TTS_USD_PER_MINUTE *
+    ROLEPLAY_TURN.linesSynthesised;
   const hear =
     (ROLEPLAY_TURN.learnerSpeakingSeconds / 60) * CALL_TRANSCRIBE_USD_PER_MINUTE;
   return turns * (think + speak + hear);

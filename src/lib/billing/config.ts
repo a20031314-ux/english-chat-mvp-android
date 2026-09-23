@@ -122,10 +122,19 @@ export const CALL_BLOCK_SECONDS_HEADER = "x-call-seconds";
  * measured against the prompt it actually sends this comes in under what a
  * point is assumed to cost (roleplayPointCostUsd in cost.ts).
  *
- * It buys less than it should today, because every tutor line is synthesised.
- * The scripted scenes play recordings instead, and synthesis is more than half
- * of what a minute costs — so this number can rise, without the price moving,
- * once those are offered again.
+ * This used to say the number bought less than it should because every tutor
+ * line was synthesised. That stopped being true: the bank carries most of what
+ * the character says now, those lines are warmed into the edge before a release
+ * and cost nothing to serve, and measured on 2026-09-23 a minute comes in 15%
+ * to 34% under what cost.ts had been assuming. Five minutes is therefore
+ * comfortable rather than tight.
+ *
+ * There is still room above it, and the same two things would make it: the
+ * scripted scenes play recordings shipped inside the app, which are cheaper
+ * again than a cached line, and a bank that carries a larger share of turns
+ * leaves less to write and less to say out loud. Neither is a reason to move
+ * this on its own — a number that buys more is easy to raise and unpleasant to
+ * lower, so it wants real usage behind it rather than a better cost model.
  */
 export const ROLEPLAY_POINT_SECONDS = 5 * 60;
 
