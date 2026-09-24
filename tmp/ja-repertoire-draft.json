@@ -1,0 +1,220 @@
+{
+  "language": "ja",
+  "tutorRole": "friend",
+  "setting": "A relaxed catch-up with a friendly acquaintance over coffee, with no errand to finish. The tutor is someone easy to talk to and curious about the learner's day, plans and interests; the learner can bring up anything at all.",
+  "register": "やあ！会えてうれしいよ。今日はどんな一日だった？",
+  "sentences": {
+    "talk.go-on": {
+      "text": "へえ、もっと教えてよ。",
+      "translation": "그래? 더 이야기해줘."
+    },
+    "talk.nice": {
+      "text": "それ、いいね。",
+      "translation": "좋네."
+    },
+    "talk.rough": {
+      "text": "うわ、それは大変だったね。",
+      "translation": "아이고, 힘들었겠다."
+    },
+    "talk.same": {
+      "text": "あ、実は私もそうだったよ。",
+      "translation": "나도 사실 그런데."
+    },
+    "talk.how-was": {
+      "text": "どうだった？",
+      "translation": "어땠어?"
+    },
+    "talk.why": {
+      "text": "そうなんだ、なんで？",
+      "translation": "그래? 왜?"
+    },
+    "talk.when": {
+      "text": "それ、いつだったの？",
+      "translation": "그거 언제였어?"
+    },
+    "talk.who-with": {
+      "text": "誰と行ったの？",
+      "translation": "누구랑 갔어?"
+    },
+    "talk.often": {
+      "text": "それ、よくやるの？",
+      "translation": "그거 자주 해?"
+    },
+    "talk.pardon": {
+      "text": "ごめん、もう一回言ってくれる？",
+      "translation": "미안, 다시 말해줄래?"
+    },
+    "talk.didnt-catch": {
+      "text": "ちょっと聞き取れなかった。",
+      "translation": "잘 못 들었어."
+    },
+    "talk.slower": {
+      "text": "ゆっくりで大丈夫だよ。",
+      "translation": "천천히 말해도 돼."
+    },
+    "talk.you-mean": {
+      "text": "あ、週末みたいな感じ？",
+      "translation": "아, 주말처럼?"
+    },
+    "talk.by-the-way": {
+      "text": "あ、ところでさ―",
+      "translation": "아, 근데 있잖아―"
+    },
+    "talk.speaking-of": {
+      "text": "そういえば、仕事はどう？",
+      "translation": "그러고 보니, 일은 어때?"
+    },
+    "talk.and-you": {
+      "text": "で、そっちは？",
+      "translation": "너는?"
+    },
+    "talk.agree": {
+      "text": "うん、ほんとそれ。",
+      "translation": "응, 진짜 그래."
+    },
+    "talk.surprised": {
+      "text": "え、マジで？",
+      "translation": "에, 진짜야?"
+    },
+    "talk.think-so": {
+      "text": "うーん、それはどうかな。",
+      "translation": "음… 그건 잘 모르겠다."
+    },
+    "talk.there-what": {
+      "text": "そこで何したの？",
+      "translation": "거기서 뭐 했어?"
+    },
+    "talk.there-long": {
+      "text": "どれくらいそこにいたの？",
+      "translation": "거기 얼마나 있었어?"
+    },
+    "talk.then-what": {
+      "text": "そのあとどうなったの？",
+      "translation": "그다음엔 어떻게 됐어?"
+    },
+    "talk.next": {
+      "text": "次はどうなった？",
+      "translation": "다음에는 어떻게 됐어?"
+    },
+    "talk.how-go": {
+      "text": "うまくいった？",
+      "translation": "잘 됐어?"
+    },
+    "talk.hard": {
+      "text": "それ、難しかった？",
+      "translation": "그거 어려웠어?"
+    },
+    "talk.what-like": {
+      "text": "どんな人？",
+      "translation": "어떤 사람이야?"
+    },
+    "talk.how-know": {
+      "text": "その人とはどうやって知り合ったの？",
+      "translation": "그 사람이랑 어떻게 알게 됐어?"
+    },
+    "talk.who-else": {
+      "text": "他には誰がいたの？",
+      "translation": "다른 사람도 있었어?"
+    },
+    "talk.again": {
+      "text": "またやりたいと思う？",
+      "translation": "다시 하고 싶어?"
+    },
+    "talk.why-that": {
+      "text": "それはどうして選んだの？",
+      "translation": "왜 그걸 골랐어?"
+    },
+    "talk.feel": {
+      "text": "それについてどう感じた？",
+      "translation": "그거 어떻게 느꼈어?"
+    },
+    "talk.always": {
+      "text": "前からずっとそうだったの？",
+      "translation": "전부터 쭉 그랬어?"
+    },
+    "talk.best-part": {
+      "text": "一番良かったところは？",
+      "translation": "제일 좋았던 점이 뭐야?"
+    },
+    "talk.busy": {
+      "text": "いつもそんなに忙しいの？",
+      "translation": "항상 그렇게 바빠?"
+    },
+    "talk.good-point": {
+      "text": "それ、いいとこついてるね。",
+      "translation": "그거 좋은 지적이야."
+    },
+    "talk.tough": {
+      "text": "それはきっとつらかったよね。",
+      "translation": "그거 많이 힘들었겠다."
+    },
+    "talk.glad": {
+      "text": "うまくいってよかったね。",
+      "translation": "잘 돼서 다행이다."
+    },
+    "talk.impressive": {
+      "text": "すごいね、それ！",
+      "translation": "대단하다!"
+    },
+    "talk.funny": {
+      "text": "あはは、それ面白いね。",
+      "translation": "하하, 그거 웃기네."
+    },
+    "talk.makes-sense": {
+      "text": "あー、なるほどね。",
+      "translation": "아, 그렇구나."
+    },
+    "talk.never-done": {
+      "text": "それやったことないなあ。",
+      "translation": "그건 해본 적 없어."
+    },
+    "talk.jealous": {
+      "text": "正直、ちょっとうらやましいな。",
+      "translation": "솔직히 좀 부럽다."
+    },
+    "talk.know-feeling": {
+      "text": "うん、その気持ちわかるよ。",
+      "translation": "그 기분 나도 알아."
+    },
+    "talk.since-when": {
+      "text": "いつからそれやってるの？",
+      "translation": "언제부터 그거 했어?"
+    },
+    "talk.worth-it": {
+      "text": "やってみてよかった？",
+      "translation": "해볼 만했어?"
+    },
+    "talk.hard-part": {
+      "text": "一番大変なのはどこ？",
+      "translation": "제일 힘든 부분이 뭐야?"
+    },
+    "talk.how-start": {
+      "text": "それ、どうやって始めたの？",
+      "translation": "그거 어떻게 시작하게 됐어?"
+    },
+    "talk.where-that": {
+      "text": "それってどこだった？",
+      "translation": "그거 어디였어?"
+    },
+    "talk.they-say": {
+      "text": "その人、なんて言ってた？",
+      "translation": "그 사람이 뭐라고 했어?"
+    },
+    "talk.any-help": {
+      "text": "それ誰か手伝ってくれるの？",
+      "translation": "그거 누가 도와줘?"
+    },
+    "talk.how-long-take": {
+      "text": "どのくらいかかったの？",
+      "translation": "얼마나 걸렸어?"
+    },
+    "talk.ok-now": {
+      "text": "今はもう大丈夫？",
+      "translation": "지금은 괜찮아?"
+    },
+    "talk.what-next": {
+      "text": "じゃあ、次はどうするの？",
+      "translation": "그럼 이제 어떻게 할 거야?"
+    }
+  }
+}

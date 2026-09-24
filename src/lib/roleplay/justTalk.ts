@@ -205,12 +205,15 @@ const LANGUAGES: JustTalk[] = [
  * someone to say it again. They were drafted, read by a model that did not
  * write them, and none tripped the list.
  *
- * English only for now, and they ship as words rather than as audio: sixty
- * kilobytes a line is what kept the bank at ninety-three sentences, and a line
- * can be spoken without a file now. Warmed into the edge before a release so
- * that the first person to hear one does not wait for it.
+ * They ship as words rather than as audio: sixty kilobytes a line is what kept
+ * the bank at ninety-three sentences, and a line can be spoken without a file
+ * now. Warmed into the edge before a release so that the first person to hear
+ * one does not wait.
+ *
+ * Japanese has its own set below. The other twelve languages have none, and
+ * their character writes every line it says.
  */
-const TALK_LINES: SentenceBank = {
+const TALK_LINES_EN: SentenceBank = {
   "talk.go-on": { text: "Oh really? Tell me more.", translation: "정말요? 좀 더 얘기해 주세요.", source: "grown" },
   "talk.nice": { text: "That sounds great.", translation: "좋네요.", source: "grown" },
   "talk.rough": { text: "Oh no, that sounds rough.", translation: "아이고, 힘들었겠어요.", source: "grown" },
@@ -266,6 +269,92 @@ const TALK_LINES: SentenceBank = {
   "talk.what-next": { text: "So what's next?", translation: "그럼 이제 뭐 할 거예요?", source: "grown" },
 };
 
+/**
+ * The same, in Japanese.
+ *
+ * Drafted by scripts/draft-roleplay-repertoire.mjs, which is given three things
+ * the English set had to be written without: what goes wrong in Japanese in its
+ * own terms (lib/languageFocus.ts), the scene's own two lines as the register to
+ * hold, and each id as a job to fill rather than a string to translate. Read
+ * afterwards by a model that did not write them, which passed fifty and put
+ * three in front of a person — the same shape the English pass had, and all
+ * three were things only a reader of the language could see: 自分 reading rough
+ * for some speakers, a line about being crowded under a gloss about being busy,
+ * and a missing particle. Those three are corrected here.
+ *
+ * The register held on its own: every line is plain, matching やあ！会えてうれしいよ,
+ * with no です/ます anywhere. That was the instruction worth giving as an example
+ * rather than as a rule.
+ */
+const TALK_LINES_JA: SentenceBank = {
+  "talk.go-on": { text: "へえ、もっと教えてよ。", translation: "그래? 더 이야기해줘.", source: "grown" },
+  "talk.nice": { text: "それ、いいね。", translation: "좋네.", source: "grown" },
+  "talk.rough": { text: "うわ、それは大変だったね。", translation: "아이고, 힘들었겠다.", source: "grown" },
+  "talk.same": { text: "あ、実は私もそうだったよ。", translation: "나도 사실 그런데.", source: "grown" },
+  "talk.how-was": { text: "どうだった？", translation: "어땠어?", source: "grown" },
+  "talk.why": { text: "そうなんだ、なんで？", translation: "그래? 왜?", source: "grown" },
+  "talk.when": { text: "それ、いつだったの？", translation: "그거 언제였어?", source: "grown" },
+  "talk.who-with": { text: "誰と行ったの？", translation: "누구랑 갔어?", source: "grown" },
+  "talk.often": { text: "それ、よくやるの？", translation: "그거 자주 해?", source: "grown" },
+  "talk.pardon": { text: "ごめん、もう一回言ってくれる？", translation: "미안, 다시 말해줄래?", source: "grown" },
+  "talk.didnt-catch": { text: "ちょっと聞き取れなかった。", translation: "잘 못 들었어.", source: "grown" },
+  "talk.slower": { text: "ゆっくりで大丈夫だよ。", translation: "천천히 말해도 돼.", source: "grown" },
+  "talk.you-mean": { text: "あ、週末みたいな感じ？", translation: "아, 주말처럼?", source: "grown" },
+  "talk.by-the-way": { text: "あ、ところでさ―", translation: "아, 근데 있잖아―", source: "grown" },
+  "talk.speaking-of": { text: "そういえば、仕事はどう？", translation: "그러고 보니, 일은 어때?", source: "grown" },
+  "talk.and-you": { text: "で、そっちは？", translation: "너는?", source: "grown" },
+  "talk.agree": { text: "うん、ほんとそれ。", translation: "응, 진짜 그래.", source: "grown" },
+  "talk.surprised": { text: "え、マジで？", translation: "에, 진짜야?", source: "grown" },
+  "talk.think-so": { text: "うーん、それはどうかな。", translation: "음… 그건 잘 모르겠다.", source: "grown" },
+  "talk.there-what": { text: "そこで何したの？", translation: "거기서 뭐 했어?", source: "grown" },
+  "talk.there-long": { text: "どれくらいそこにいたの？", translation: "거기 얼마나 있었어?", source: "grown" },
+  "talk.then-what": { text: "そのあとどうなったの？", translation: "그다음엔 어떻게 됐어?", source: "grown" },
+  "talk.next": { text: "次はどうなった？", translation: "다음에는 어떻게 됐어?", source: "grown" },
+  "talk.how-go": { text: "うまくいった？", translation: "잘 됐어?", source: "grown" },
+  "talk.hard": { text: "それ、難しかった？", translation: "그거 어려웠어?", source: "grown" },
+  "talk.what-like": { text: "どんな人？", translation: "어떤 사람이야?", source: "grown" },
+  "talk.how-know": { text: "その人とはどうやって知り合ったの？", translation: "그 사람이랑 어떻게 알게 됐어?", source: "grown" },
+  "talk.who-else": { text: "他には誰がいたの？", translation: "다른 사람도 있었어?", source: "grown" },
+  "talk.again": { text: "またやりたいと思う？", translation: "다시 하고 싶어?", source: "grown" },
+  "talk.why-that": { text: "それはどうして選んだの？", translation: "왜 그걸 골랐어?", source: "grown" },
+  "talk.feel": { text: "それについてどう感じた？", translation: "그거 어떻게 느꼈어?", source: "grown" },
+  "talk.always": { text: "前からずっとそうだったの？", translation: "전부터 쭉 그랬어?", source: "grown" },
+  "talk.best-part": { text: "一番良かったところは？", translation: "제일 좋았던 점이 뭐야?", source: "grown" },
+  "talk.busy": { text: "いつもそんなに忙しいの？", translation: "항상 그렇게 바빠?", source: "grown" },
+  "talk.good-point": { text: "それ、いいとこついてるね。", translation: "그거 좋은 지적이야.", source: "grown" },
+  "talk.tough": { text: "それはきっとつらかったよね。", translation: "그거 많이 힘들었겠다.", source: "grown" },
+  "talk.glad": { text: "うまくいってよかったね。", translation: "잘 돼서 다행이다.", source: "grown" },
+  "talk.impressive": { text: "すごいね、それ！", translation: "대단하다!", source: "grown" },
+  "talk.funny": { text: "あはは、それ面白いね。", translation: "하하, 그거 웃기네.", source: "grown" },
+  "talk.makes-sense": { text: "あー、なるほどね。", translation: "아, 그렇구나.", source: "grown" },
+  "talk.never-done": { text: "それやったことないなあ。", translation: "그건 해본 적 없어.", source: "grown" },
+  "talk.jealous": { text: "正直、ちょっとうらやましいな。", translation: "솔직히 좀 부럽다.", source: "grown" },
+  "talk.know-feeling": { text: "うん、その気持ちわかるよ。", translation: "그 기분 나도 알아.", source: "grown" },
+  "talk.since-when": { text: "いつからそれやってるの？", translation: "언제부터 그거 했어?", source: "grown" },
+  "talk.worth-it": { text: "やってみてよかった？", translation: "해볼 만했어?", source: "grown" },
+  "talk.hard-part": { text: "一番大変なのはどこ？", translation: "제일 힘든 부분이 뭐야?", source: "grown" },
+  "talk.how-start": { text: "それ、どうやって始めたの？", translation: "그거 어떻게 시작하게 됐어?", source: "grown" },
+  "talk.where-that": { text: "それってどこだった？", translation: "그거 어디였어?", source: "grown" },
+  "talk.they-say": { text: "その人、なんて言ってた？", translation: "그 사람이 뭐라고 했어?", source: "grown" },
+  "talk.any-help": { text: "それ誰か手伝ってくれるの？", translation: "그거 누가 도와줘?", source: "grown" },
+  "talk.how-long-take": { text: "どのくらいかかったの？", translation: "얼마나 걸렸어?", source: "grown" },
+  "talk.ok-now": { text: "今はもう大丈夫？", translation: "지금은 괜찮아?", source: "grown" },
+  "talk.what-next": { text: "じゃあ、次はどうするの？", translation: "그럼 이제 어떻게 할 거야?", source: "grown" },
+};
+
+/**
+ * The languages whose open conversation has lines of its own.
+ *
+ * Add a row to give a language a bank; everything else — the two-line turn, the
+ * cooldown that stops a line repeating, the edge warming, the counters — reads
+ * this and needs no change. Twelve languages still have none and their
+ * character writes every line it says.
+ */
+const TALK_LINES: Partial<Record<LearningLanguageCode, SentenceBank>> = {
+  en: TALK_LINES_EN,
+  ja: TALK_LINES_JA,
+};
+
 /** The brief, which is the model's to read and so stays in one language. */
 const SETTING =
   "A relaxed catch-up with a friendly acquaintance over coffee, with no errand to finish. The tutor is someone easy to talk to and curious about the learner's day, plans and interests; the learner can bring up anything at all.";
@@ -291,7 +380,7 @@ export function justTalkSentences(): Record<string, SentenceBank> {
         text: entry.goodbye,
         ...(entry.goodbyeGloss ? { translation: entry.goodbyeGloss } : {}),
       },
-      ...(entry.language === "en" ? TALK_LINES : {}),
+      ...(TALK_LINES[entry.language] ?? {}),
     };
   }
   return banks;
@@ -313,7 +402,9 @@ export function justTalkScenarios(): RoleplayScenario[] {
     setting: SETTING,
     tutorRole: "friend",
     openEnded: true,
-    ...(entry.language === "en" ? { repertoire: Object.keys(TALK_LINES) } : {}),
+    ...(TALK_LINES[entry.language]
+      ? { repertoire: Object.keys(TALK_LINES[entry.language]!) }
+      : {}),
     start: "hi",
     nodes: {
       hi: { type: "tutor", id: "hi", say: JUST_TALK_HELLO, next: "talk" },
