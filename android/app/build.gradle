@@ -83,6 +83,46 @@ dependencies {
     implementation project(':capacitor-cordova-android-plugins')
 }
 
+
+/**
+ * Refuse to wrap a new version number around an old app.
+ *
+ * Gradle takes versionName from this file and packages whatever is sitting in
+ * src/main/assets/public. Those two have no reason to agree: the assets are
+ * only ever refreshed by `npx cap sync`, which runs from `npm run
+ * build:android`. Run gradle on its own and the release is a new number around
+ * an old bundle, and nothing anywhere says so — not the build, not Play, not
+ * the app.
+ *
+ * It went unnoticed for five releases. 2.52, 2.53 and 2.54 each shipped the
+ * bundle built on the 19th, so a learner on "2.54" was running three weeks of
+ * code they had never received. The only symptom was the app asking them to
+ * update to the version they already had, which reads as a bug in the banner.
+ *
+ * build-capacitor.mjs checks package.json against versionName, but it lives
+ * inside the script that was skipped. This is the same question asked where
+ * gradle can hear it.
+ */
+tasks.named('preBuild').configure {
+    doFirst {
+        def stamp = file('src/main/assets/public/build-version.txt')
+        def want = android.defaultConfig.versionName
+        def majorMinor = { String value -> value.split('\\.').take(2).join('.') }
+        if (!stamp.exists()) {
+            throw new GradleException(
+                "No web bundle to package, or one built before this check existed.\n" +
+                "Run: npm run build:android    (next build, then npx cap sync android)")
+        }
+        def got = stamp.text.trim()
+        if (majorMinor(got) != majorMinor(want)) {
+            throw new GradleException(
+                "The packaged web bundle is version ${got}, this release is ${want}.\n" +
+                "Gradle would wrap a new number around an old app. Run: npm run build:android")
+        }
+        logger.lifecycle("Web bundle is version ${got}, matching versionName ${want}.")
+    }
+}
+
 apply from: 'capacitor.build.gradle'
 
 try {

@@ -153,4 +153,26 @@ for (const { name } of MOVED_FOR_BUILD) {
 }
 
 cpSync(outDir, wwwDir, { recursive: true });
-console.log("Static web bundle copied to www/ (from out/).");
+
+/**
+ * Which version this bundle is, written where the Android build can read it.
+ *
+ * Gradle takes versionName from build.gradle and packages whatever happens to
+ * be sitting in android/app/src/main/assets/public, and those two have no
+ * reason to agree: the assets are only ever refreshed by `npx cap sync`. Run
+ * gradle without it and the release is a new number wrapped around an old app,
+ * which is silent — nothing in the build, the store or the app says so.
+ *
+ * It was not caught for five releases. 2.52, 2.53 and 2.54 all shipped a bundle
+ * built on the 19th; a learner on "2.54" was running three weeks of code they
+ * had never received, and the only visible symptom was an update banner for a
+ * version they already had.
+ *
+ * So the bundle says what it is, and app/build.gradle refuses to build a
+ * release around one that disagrees.
+ */
+const appVersion = JSON.parse(
+  readFileSync(path.join(root, "package.json"), "utf8"),
+).version;
+writeFileSync(path.join(wwwDir, "build-version.txt"), appVersion + "\n");
+console.log(`Static web bundle copied to www/ (from out/), version ${appVersion}.`);
