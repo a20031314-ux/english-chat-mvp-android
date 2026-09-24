@@ -37,10 +37,24 @@ export type Comparison = {
   clean: boolean;
 };
 
+/**
+ * The sentence as words, for lining one up against the other.
+ *
+ * Marks are letters here. A Devanagari vowel sign and a Thai tone mark are
+ * \p{M} rather than \p{L}, and stripping them does not tidy a sentence up — it
+ * cuts every syllable into its bare consonant. Measured on the scene's own two
+ * lines: Thai came apart into twenty-one pieces where there are six, and Hindi
+ * into thirty averaging 1.4 characters, which is one consonant each.
+ *
+ * That is worse than useless here, because this is the one place the pieces are
+ * shown to the learner as the words they said: it told them, with confidence,
+ * that นใหม had come out as นเก — two things that are not words. Everything
+ * else in the app that splits a sentence already keeps marks (learningSpans.ts).
+ */
 function words(text: string): string[] {
   return text
     .toLowerCase()
-    .replace(/[^\p{L}\p{N}\s']/gu, " ")
+    .replace(/[^\p{L}\p{M}\p{N}\s']/gu, " ")
     .split(/\s+/)
     .filter(Boolean);
 }

@@ -105,3 +105,47 @@ test("an answer without a note is nothing to show", () => {
   const bad = parsePractice('{"good": "yes", "note": "please의 l이 빠졌어요."}');
   assert.equal(bad?.good, false, "only a real true is good");
 });
+
+test("a mark is a letter, not punctuation to be stripped", () => {
+  // Devanagari vowel signs and Thai tone marks are \p{M}. Dropping them does
+  // not tidy a sentence up, it cuts every syllable down to its bare consonant:
+  // measured on the scene's own lines, Hindi came apart into thirty pieces
+  // averaging 1.4 characters and Thai into twenty-one where there are six.
+  //
+  // Nowhere else does that matter as much as here, because here the pieces are
+  // shown to the learner as the words they said. It told them that नउम had
+  // become नए — neither of which is a word.
+  const hindi = compareToTarget("मुझे जाना है", "मुझे खाना है");
+  assert.equal(hindi.outcomes.length, 3, "three words, not a heap of consonants");
+  assert.deepEqual(
+    hindi.outcomes.map((outcome) => outcome.kind),
+    ["kept", "changed", "kept"],
+    "and it points at the one that changed",
+  );
+});
+
+test("a script with no spaces is one piece rather than several wrong ones", () => {
+  // Thai and Japanese write without spaces, so there is nothing here to split
+  // on and the whole line is compared as one. That is the honest answer: it
+  // says the line came out differently and does not pretend to know where.
+  // Locating it wants a segmenter, which is a larger thing than this.
+  for (const [target, heard] of [
+    ["ไว้เจอกันใหม่นะ", "ไว้เจอกันเก่านะ"],
+    ["そこで何したの", "そこで何時なの"],
+  ]) {
+    const out = compareToTarget(target, heard);
+    assert.equal(out.outcomes.length, 1);
+    assert.equal(out.outcomes[0]!.kind, "changed");
+    assert.equal(out.clean, false);
+  }
+});
+
+test("languages that do use spaces are untouched by any of this", () => {
+  const english = compareToTarget("Can I get a latte please", "Can I get a latte peace");
+  assert.equal(english.outcomes.length, 6);
+  assert.deepEqual(english.outcomes.at(-1), {
+    kind: "changed",
+    word: "please",
+    heardAs: "peace",
+  });
+});

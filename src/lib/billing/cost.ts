@@ -183,9 +183,23 @@ export const ROLEPLAY_TURN = {
  * The bank did that, from both ends at once. Most of what the character says is
  * a line that already exists, served from the edge for nothing, so only the
  * lines it writes itself are paid for; and the prompt grew by the list of lines
- * it may reach for. Turn for turn that trade is about 884 tokens of input
- * against roughly two fifths of the synthesis, and it comes out a little over
- * twice in favour of the bank — a minute fell from $0.00866 to $0.00733.
+ * it may reach for.
+ *
+ * Those two very nearly cancel, which is worth saying plainly because an
+ * earlier version of this comment did not. Measured against the real model on
+ * the same turn, a language with a bank sends 1809 tokens and one without sends
+ * 820; the first pays $0.00311 a minute to think and $0.00315 to speak, the
+ * second $0.00161 and $0.00500. That is $0.00746 against $0.00781 — the bank is
+ * about five per cent cheaper, not twice. The fall from $0.00866 to $0.00733
+ * was mostly this file being corrected, not the bank being added.
+ *
+ * So the bank is not a cost measure and nothing here should be read as saying
+ * it is. What it buys is measured elsewhere: a line already at the edge comes
+ * back in about a fifth of a second instead of being synthesised, it holds the
+ * scene's register where a model writing fresh drifts, and it is the only thing
+ * a repetition cooldown can act on. At scale the edge would tell a different
+ * story, since one warmed line serves everybody and a written one is paid for
+ * every time it is said — but that is not today's arithmetic.
  */
 export function roleplayMinuteUsd(): number {
   const turns = 60 / ROLEPLAY_TURN.turnSeconds;

@@ -554,7 +554,12 @@ export function tutorMessages(
 function words(text: string): string {
   return text
     .toLowerCase()
-    .replace(/[^\p{L}\p{N}\s]/gu, " ")
+    // Marks are letters: stripping them cuts Thai and Devanagari syllables down
+    // to bare consonants, and two lines that share nothing can end up sharing a
+    // token string. Both sides of a comparison are mangled alike, so nothing
+    // was visibly wrong — but saidRecently asks whether one line occurs inside
+    // another, and that is exactly the question a collision answers wrongly.
+    .replace(/[^\p{L}\p{M}\p{N}\s]/gu, " ")
     .split(/\s+/)
     .filter(Boolean)
     .join(" ");
