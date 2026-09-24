@@ -320,6 +320,19 @@ export function RoleplayScreen({
       if (cancelled || advanced) return;
       advanced = true;
       window.clearTimeout(watchdog);
+      // Now that it has been said, ask what it meant.
+      //
+      // The gloss was taken out of the director's answer because it was half of
+      // what came back and none of it was ever spoken, so the sound could not
+      // start until words nobody had asked to read had finished being written.
+      // Fetching it here costs that nothing: the line has already been said.
+      //
+      // It was left to a tap, and the tap was invisible — reported from a
+      // Japanese conversation, where the bank has no lines to lend their own
+      // glosses and so every line after the greeting had none. Asking for it
+      // is about three per cent of what a minute costs, which is not a reason
+      // to make somebody press something to find out what they just heard.
+      if (!instruction.translation) translateLine(instruction.text);
       const moved = afterSaying(scenario, bank, state, Date.now());
       setState(moved.state);
       setInstruction(moved.instruction);
@@ -574,6 +587,8 @@ export function RoleplayScreen({
   const translateLine = useCallback(
     (text: string) => {
       if (!scenario || translating.current.has(text)) return;
+      // A scene that already speaks their language has nothing to say twice.
+      if (scenario.language === nativeLanguage) return;
       translating.current.add(text);
       void translateUtterance({
         text,

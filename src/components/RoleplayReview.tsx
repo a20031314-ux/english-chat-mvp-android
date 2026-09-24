@@ -46,12 +46,21 @@ export function RoleplayLine({
         {/* Tapping a line the character wrote asks for its gloss. Written
             lines arrive without one on purpose: the answer is spoken as soon as
             the words exist, and a translation nobody has asked to read should
-            not be standing between them and the sound. */}
+            not be standing between them and the sound.
+ 
+            It has to look tappable, which it did not. This was a button drawn
+            exactly like the paragraph beside it, so the offer existed and
+            nobody could see it — reported from a Japanese conversation, where
+            every line after the greeting is written rather than picked from the
+            bank and so every line after the greeting appeared to have lost its
+            translation. In English the bank's own glosses covered most lines
+            and hid the problem. A dotted underline says there is more here
+            without needing a word in fourteen languages to say it. */}
         {line.who === "tutor" && !line.translation && onTranslate ? (
           <button
             type="button"
             onClick={() => onTranslate(line.text)}
-            className="text-left text-[14px] leading-snug"
+            className="text-left text-[14px] leading-snug decoration-dotted decoration-neutral-500 underline-offset-4 [text-decoration-line:underline]"
           >
             {line.text}
           </button>
