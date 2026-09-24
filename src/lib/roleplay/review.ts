@@ -89,6 +89,14 @@ function evidence(turn: StuckTurn): string {
 }
 
 export function reviewPrompt(input: {
+  /**
+   * What this language in particular gets wrong, in its own terms
+   * (lib/languageFocus.ts). The sentence written into "say" is the one thing a
+   * learner takes away from being stuck, so it had better be the one a speaker
+   * would use — right particles, right register — and not merely correct.
+   * Absent for English, which has no row.
+   */
+  focus?: string;
   tutorRole: string;
   setting: string;
   targetLanguage: string;
@@ -116,7 +124,14 @@ Work out what actually stopped them and say it plainly. Some possibilities: they
 Write for them, in ${input.nativeLanguage}, speaking to them directly. Address them politely, and keep the same level of politeness throughout.
 - "why": two or three sentences. What was being asked, and what went wrong for them. No praise, no scolding, no talk of scores or levels.
 - "say": one thing they could have said, in ${input.targetLanguage}. Short, the way a person really answers.
-- "meaning": that sentence in ${input.nativeLanguage}, and nothing else — no "it means", no quotation marks, no alternatives.
+- "meaning": that sentence in ${input.nativeLanguage}, and nothing else — no "it means", no quotation marks, no alternatives.${
+    input.focus
+      ? `
+
+What goes wrong in ${input.targetLanguage} in particular, which the sentence you write must not get wrong:
+${input.focus}`
+      : ""
+  }
 
 Reply as JSON only: {"why": "...", "say": "...", "meaning": "..."}`;
 }

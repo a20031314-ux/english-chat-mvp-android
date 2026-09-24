@@ -912,3 +912,51 @@ test("an id nothing can resolve is left alone rather than blanked", () => {
   );
   assert.deepEqual(unknown.say, { id: "talk.does-not-exist" });
 });
+
+test("the character corrects against what this language in particular gets wrong", () => {
+  // The call tab was correcting against nothing while the chat tab corrected
+  // against a hand-written row per language — the same learner held to two
+  // standards depending which tab they were in. "better" is written on every
+  // turn, so this is the correction a learner actually gets most of.
+  const japanese = tutorSystemPrompt({
+    scenario: open,
+    bank,
+    recorded: recordedLines(open, SCENARIOS, bank),
+    request: request({ targetLanguage: "ja" }),
+  });
+  assert.match(japanese, /What goes wrong in Japanese in particular/);
+  assert.match(japanese, /polite vs plain/);
+  assert.match(japanese, /は\/が\/を/, "in its own terms, not English labels");
+});
+
+test("English is given no row, because there is none and it needs none", () => {
+  // The list of failures was drawn up from English. A generic paragraph would
+  // be a rule applied to every turn that can never be satisfied.
+  const english = tutorSystemPrompt({
+    scenario: open,
+    bank,
+    recorded: recordedLines(open, SCENARIOS, bank),
+    request: request({ targetLanguage: "en" }),
+  });
+  assert.doesNotMatch(english, /What goes wrong in/);
+  assert.doesNotMatch(english, /Focus on real morphosyntax/, "not the fallback either");
+});
+
+test("the row sits in the half of the brief that does not move", () => {
+  // The brief is built fixed-part-first so the prompt cache can serve the start
+  // of it. A language's row is the same on every turn of a conversation, so it
+  // belongs before "Level:" — putting it after would cost a cache miss a turn
+  // for the whole of a language's use.
+  const brief = (partial: Partial<DirectorRequest>) =>
+    tutorSystemPrompt({
+      scenario: open,
+      bank,
+      recorded: recordedLines(open, SCENARIOS, bank),
+      request: request({ targetLanguage: "ja", ...partial }),
+    });
+  const a = brief({ level: 2 });
+  const b = brief({ level: 4, freeTurns: 3 });
+  const fixed = a.slice(0, a.indexOf("Level:"));
+  assert.match(fixed, /What goes wrong in Japanese in particular/);
+  assert.ok(b.startsWith(fixed), "and the fixed half really is the same");
+});

@@ -4,6 +4,7 @@ import {
   type LearningLanguageCode,
 } from "../learningLanguages.ts";
 import { compareVersions } from "../appVersion.ts";
+import { targetLanguageFocusHints } from "../languageFocus.ts";
 import { REPERTOIRE_SINCE } from "./justTalk.ts";
 import {
   isLearnerNode,
@@ -431,6 +432,23 @@ export function tutorSystemPrompt(input: {
 }): string {
   const { scenario, bank, recorded, request } = input;
   const target = learningLanguageName(request.targetLanguage);
+  /**
+   * What this language in particular gets wrong, in its own terms.
+   *
+   * The chat tab has corrected against this since long before the call tab
+   * existed, and the call tab has been correcting against nothing: the same
+   * learner got a rewrite judged on Korean particles in one place and on
+   * general good sense in the other. Since it is fixed per language it sits in
+   * the fixed half of the brief, where the prompt cache can keep it.
+   *
+   * Not for English, which has no row and needs none — the list of failures was
+   * drawn up from English in the first place, and a generic paragraph here
+   * would be a rule the model applies to every turn and can never satisfy.
+   */
+  const focus =
+    request.targetLanguage === "en"
+      ? ""
+      : targetLanguageFocusHints(request.targetLanguage);
   const native = interfaceLanguageName(request.nativeLanguage);
   const role = scenario.tutorRole;
   const steps = scriptSteps(scenario);
@@ -466,7 +484,14 @@ Leave it empty when:
 - they were understandable and simply informal, or answered in a fragment, which is how people talk
 - the only thing you would change is a small ending or article, which is as likely to be the speech recogniser's doing as theirs
 - nothing is wrong with it
-Correcting something they said correctly costs more than saying nothing.
+Correcting something they said correctly costs more than saying nothing.${
+    focus
+      ? `
+
+What goes wrong in ${target} in particular, which is what to look at before deciding there is nothing to fix:
+${focus}`
+      : ""
+  }
 
 "assessment" is how their last turn went, for you to keep track: on_track (answered fine), stuck, off_script (something beside the point), topic_change, closing (they are leaving).
 "next" is where the conversation is after your line:

@@ -4,6 +4,7 @@ import { findScenario } from "@/lib/roleplay/catalog";
 import { readSpokenLines } from "@/lib/roleplay/director";
 import { parseReview, reviewPrompt, type StuckTurn } from "@/lib/roleplay/review";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { targetLanguageFocusHints } from "@/lib/languageFocus";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
 
@@ -73,6 +74,11 @@ export async function POST(request: NextRequest) {
             tutorRole: scenario.tutorRole,
             setting: scenario.setting,
             targetLanguage: interfaceLanguageName(scenario.language),
+            // The same rubric the chat tab corrects against, so a learner is
+            // not held to two different standards in two tabs.
+            ...(scenario.language === "en"
+              ? {}
+              : { focus: targetLanguageFocusHints(coerceLanguageCode(scenario.language)) }),
             nativeLanguage: interfaceLanguageName(coerceLanguageCode(body.nativeLanguage)),
             turn,
           }),
