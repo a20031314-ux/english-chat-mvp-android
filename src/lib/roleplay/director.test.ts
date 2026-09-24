@@ -1,11 +1,13 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { SCENARIOS, findScenario, sentencesFor } from "./catalog.ts";
+import { REPERTOIRE_SINCE } from "./justTalk.ts";
 import {
   DIRECTED_TURN_LIMIT,
   FREE_TURN_LIMIT,
   flattenForOldClients,
   leadFromPartial,
+  playableBy,
   parseDirection,
   questionFor,
   recordedLines,
@@ -604,6 +606,83 @@ test("no scene is handed a list of lines to choose from", () => {
   // A step still gets the line for where it is, which is a different thing: one
   // line for one moment, not a list to pick from.
   assert.match(brief("cafe-order", "order"), /What you usually say around here/);
+});
+
+test("a build released before a language's lines is offered none of them", () => {
+  // The failure this exists for, and it was real: 2.53 went to production, the
+  // Japanese lines were written after it was cut, and 2.53 says yes to the bank
+  // header. Simulated against the bank 2.53 actually ships, a turn answered by
+  // id queued nothing at all and opened the microphone on a character that had
+  // said nothing.
+  const japanese = (version: string) =>
+    playableBy(SCENARIOS, version).find((one) => one.id === "open-talk-ja")!;
+  assert.deepEqual(japanese("2.53").repertoire, [], "the build in production today");
+  assert.equal(japanese("2.54").repertoire?.length, 53, "the build that will carry them");
+});
+
+test("a build that has a language's lines keeps them", () => {
+  const english = (version: string) =>
+    playableBy(SCENARIOS, version).find((one) => one.id === "open-talk-en")!;
+  assert.equal(english("2.52").repertoire?.length, 53, "the release that shipped them");
+  assert.equal(english("2.53").repertoire?.length, 53, "and everything after it");
+  assert.deepEqual(english("2.51").repertoire, [], "but not the one before");
+});
+
+test("a build that will not say which one it is gets nothing", () => {
+  // "unknown" is every install older than the header that reports a version,
+  // and those are the oldest builds there are. Guessing generously about them
+  // is guessing about the ones least able to cope.
+  const open = playableBy(SCENARIOS, "unknown").find((one) => one.id === "open-talk-en")!;
+  assert.deepEqual(open.repertoire, []);
+});
+
+test("a language nobody has written a release down for is treated as unshipped", () => {
+  // Adding a bank and forgetting the row is the likely mistake, and it has to
+  // fail towards silence-free rather than towards silence.
+  const invented = {
+    ...findScenario("open-talk-en")!,
+    id: "open-talk-xx",
+    language: "ru" as const,
+    repertoire: ["talk.nice"],
+  };
+  const [only] = playableBy([invented], "9.99");
+  assert.deepEqual(only!.repertoire, [], "no row in REPERTOIRE_SINCE");
+});
+
+test("stripping the repertoire leaves the scene otherwise untouched", () => {
+  // It is the saving that is withheld, never the conversation: the scene still
+  // has its nodes, its voice and its way out, and the character writes its own
+  // lines exactly as it does in the twelve languages with no bank at all.
+  const before = findScenario("open-talk-ja")!;
+  const after = playableBy(SCENARIOS, "2.53").find((one) => one.id === "open-talk-ja")!;
+  assert.deepEqual(after.nodes, before.nodes);
+  assert.equal(after.voice, before.voice);
+  assert.equal(after.start, before.start);
+  assert.equal(after.openEnded, before.openEnded);
+});
+
+test("the pool a scene draws from is filtered too, not only the scene", () => {
+  // recordedLines gathers every scene sharing a voice, so a scene filtered on
+  // its own would have its own ids handed back to it by its neighbour — and an
+  // id that reaches recordedIds is an id parseDirection will accept.
+  const scenarios = playableBy(SCENARIOS, "2.53");
+  const japanese = scenarios.find((one) => one.id === "open-talk-ja")!;
+  const pool = recordedLines(japanese, scenarios, sentencesFor("ja")).map((line) => line.id);
+  assert.ok(!pool.some((id) => id.startsWith("talk.")), `leaked: ${pool.filter((id) => id.startsWith("talk."))}`);
+  assert.ok(pool.includes("open.hi"), "the two recorded lines are still there");
+});
+
+test("every language with a bank has written down the release that carries it", () => {
+  // The one mistake playableBy cannot catch is a row naming a release that has
+  // already shipped without the lines. This catches the other one: a bank with
+  // no row at all, which would quietly never be offered to anybody.
+  for (const scenario of SCENARIOS) {
+    if (!scenario.repertoire || scenario.repertoire.length === 0) continue;
+    assert.ok(
+      REPERTOIRE_SINCE[scenario.language],
+      `${scenario.language} has a bank and no release named for it`,
+    );
+  }
 });
 
 test("a repertoire line is playable, not just writable", () => {

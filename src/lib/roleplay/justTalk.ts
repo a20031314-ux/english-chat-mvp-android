@@ -355,6 +355,33 @@ const TALK_LINES: Partial<Record<LearningLanguageCode, SentenceBank>> = {
   ja: TALK_LINES_JA,
 };
 
+/**
+ * The release that first carried each language's lines inside the app.
+ *
+ * A repertoire line is named by id and resolved against the bank compiled into
+ * the APK, so the server can only answer with one to a build that has it. The
+ * server deploys on a push and the app arrives weeks later, which makes every
+ * language added here a compatibility question rather than only a content one.
+ *
+ * It is not enough to ask whether a build understands the bank at all — that is
+ * what x-roleplay-bank asks, and 2.53 answers yes while holding no Japanese
+ * lines whatsoever. Simulated against the bank 2.53 actually ships: nothing is
+ * queued and the microphone opens, which is the character saying nothing.
+ *
+ * So the question is per language and the answer is a version. A build older
+ * than this is offered no repertoire for that language and its character writes
+ * its own lines, which is exactly what every language without a bank does
+ * today — the fallback is the present, not a worse version of it.
+ *
+ * Adding a language means adding its row here too, naming the release that will
+ * carry it. Naming one that has already shipped without the lines is the one
+ * mistake this cannot catch.
+ */
+export const REPERTOIRE_SINCE: Partial<Record<LearningLanguageCode, string>> = {
+  en: "2.52",
+  ja: "2.54",
+};
+
 /** The brief, which is the model's to read and so stays in one language. */
 const SETTING =
   "A relaxed catch-up with a friendly acquaintance over coffee, with no errand to finish. The tutor is someone easy to talk to and curious about the learner's day, plans and interests; the learner can bring up anything at all.";

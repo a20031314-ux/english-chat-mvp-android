@@ -3,6 +3,8 @@ import {
   learningLanguageName,
   type LearningLanguageCode,
 } from "../learningLanguages.ts";
+import { compareVersions } from "../appVersion.ts";
+import { REPERTOIRE_SINCE } from "./justTalk.ts";
 import {
   isLearnerNode,
   isTutorNode,
@@ -334,6 +336,42 @@ export function saidRecently(
     const said = words(text);
     return said !== "" && recent.some((line) => line.includes(` ${said} `));
   };
+}
+
+/**
+ * The scenes as a particular build can actually play them.
+ *
+ * A repertoire line travels as an id and is resolved against the bank compiled
+ * into the app, so offering one to a build that does not have it produces
+ * silence: nothing resolves, nothing is queued, and the microphone opens on a
+ * character that said nothing. That is not hypothetical — it is what 2.53 does
+ * with the Japanese lines added after it was cut.
+ *
+ * The bank header cannot answer this. It says the build understands ids at all,
+ * which 2.53 does; what matters is whether it holds *these* ids, and that is a
+ * question per language with a version for an answer (REPERTOIRE_SINCE).
+ *
+ * Stripping the repertoire rather than refusing the turn is the whole point:
+ * the character then writes its own lines, which is what it has always done in
+ * a language with no bank. An older build loses the saving and keeps the
+ * conversation, and gains both the day it updates.
+ *
+ * Applied to the whole list, not to one scene, because `recordedLines` gathers
+ * the pool from every scene sharing a voice — a scene filtered on its own would
+ * still have its ids offered back to it by its neighbour.
+ */
+export function playableBy(
+  scenarios: readonly RoleplayScenario[],
+  appVersion: string,
+): RoleplayScenario[] {
+  return scenarios.map((scenario) => {
+    if (!scenario.repertoire || scenario.repertoire.length === 0) return scenario;
+    const since = REPERTOIRE_SINCE[scenario.language];
+    // No row is the same as not yet shipped: a bank nobody has written down the
+    // release for is one no build can be assumed to hold.
+    const held = since !== undefined && compareVersions(appVersion, since) >= 0;
+    return held ? scenario : { ...scenario, repertoire: [] };
+  });
 }
 
 /**

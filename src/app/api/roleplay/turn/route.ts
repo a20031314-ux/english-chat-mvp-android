@@ -1,11 +1,12 @@
 import { NextRequest } from "next/server";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
-import { SCENARIOS, findScenario, sentencesFor } from "@/lib/roleplay/catalog";
+import { SCENARIOS, sentencesFor } from "@/lib/roleplay/catalog";
 import {
   ROLEPLAY_BANK_CLIENT_HEADER,
   ROLEPLAY_STREAM_CLIENT_HEADER,
   flattenForOldClients,
   leadFromPartial,
+  playableBy,
   parseDirection,
   readSpokenLines,
   recordedLines,
@@ -23,6 +24,7 @@ import { chargeRoleplayTurn, noteSentenceSaid } from "@/lib/server/entitlementSt
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
+import { requestAppVersion } from "@/lib/appVersion";
 import { getOpenAIClient } from "@/lib/server/openai";
 
 export const dynamic = "force-dynamic";
@@ -74,7 +76,13 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "Invalid JSON" }, { status: 400 });
   }
 
-  const scenario = findScenario(typeof body.scenarioId === "string" ? body.scenarioId : "");
+  // The scenes as this build can play them: a repertoire line is an id resolved
+  // against the bank inside the app, so a build released before those lines
+  // existed is offered none of them and its character writes its own, the way
+  // every language without a bank already works (director.ts).
+  const scenarios = playableBy(SCENARIOS, requestAppVersion(request.headers));
+  const wanted = typeof body.scenarioId === "string" ? body.scenarioId : "";
+  const scenario = scenarios.find((one) => one.id === wanted);
   if (!scenario) {
     return jsonWithCors(request, { error: "unknown scenario" }, { status: 400 });
   }
@@ -119,7 +127,7 @@ export async function POST(request: NextRequest) {
   };
 
   const bank = sentencesFor(scenario.language);
-  const recorded = recordedLines(scenario, SCENARIOS, bank);
+  const recorded = recordedLines(scenario, scenarios, bank);
 
   // Two clips only for a build that said it can play them. Everything on a
   // phone today was released before these lines existed and would queue
