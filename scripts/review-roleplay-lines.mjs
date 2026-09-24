@@ -24,6 +24,11 @@
 import { readFileSync } from "node:fs";
 import { SCENARIOS, SENTENCES, findScenario } from "../src/lib/roleplay/catalog.ts";
 import { sentenceIdsUsed } from "../src/lib/roleplay/script.ts";
+import { targetLanguageFocusHints } from "../src/lib/languageFocus.ts";
+import {
+  coerceLanguageCode,
+  learningLanguageName,
+} from "../src/lib/learningLanguages.ts";
 import {
   MAX_LINES_PER_REVIEW,
   draftReviewPrompt,
@@ -64,7 +69,10 @@ function gather() {
     const role = draft.tutorRole ?? "the person in this scene";
     return {
       setting: draft.setting ?? "A spoken conversation.",
-      targetLanguage: draft.language ?? "English",
+      language: coerceLanguageCode(draft.language ?? "en"),
+      // A draft can name the register it is written in; nothing else can know
+      // it, since the file is a bare list of lines with no scene around them.
+      sample: draft.register ?? "",
       lines: Object.entries(draft.sentences ?? {}).map(([id, sentence]) => ({
         id,
         text: sentence.text ?? "",
@@ -83,9 +91,14 @@ function gather() {
     process.exit(2);
   }
   const bank = SENTENCES[scenario.language] ?? {};
+  const start = scenario.nodes[scenario.start];
   return {
     setting: scenario.setting,
-    targetLanguage: scenario.language,
+    language: coerceLanguageCode(scenario.language),
+    // The scene's own opening line. Whatever register it is in is the register
+    // every other line of the scene has to be in, and for Japanese or Korean
+    // that is a decision made afresh on every sentence.
+    sample: (start && bank[start.say]?.text) || "",
     lines: sentenceIdsUsed(scenario)
       .filter((sentenceId) => bank[sentenceId])
       .map((sentenceId) => ({
@@ -99,7 +112,7 @@ function gather() {
   };
 }
 
-async function review(batch, setting, targetLanguage) {
+async function review(batch, setting, language, sample) {
   const response = await fetch("https://api.openai.com/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -114,8 +127,12 @@ async function review(batch, setting, targetLanguage) {
           content: draftReviewPrompt({
             lines: batch,
             setting,
-            targetLanguage,
+            targetLanguage: learningLanguageName(language),
             nativeLanguage: "Korean",
+            // What this language gets wrong, in its own terms. English is the
+            // language the list of failures was drawn up from and has no row.
+            ...(language === "en" ? {} : { focus: targetLanguageFocusHints(language) }),
+            ...(sample ? { sample } : {}),
           }),
         },
       ],
@@ -130,7 +147,7 @@ async function review(batch, setting, targetLanguage) {
   return parseDraftReview(body.choices?.[0]?.message?.content ?? "", batch);
 }
 
-const { lines, setting, targetLanguage } = gather();
+const { lines, setting, language, sample } = gather();
 if (lines.length === 0) {
   console.error("Nothing to read.");
   process.exit(2);
@@ -141,7 +158,7 @@ console.log(`${lines.length} line(s), read by ${MODEL}\n`);
 const verdicts = [];
 for (let at = 0; at < lines.length; at += MAX_LINES_PER_REVIEW) {
   const batch = lines.slice(at, at + MAX_LINES_PER_REVIEW);
-  verdicts.push(...(await review(batch, setting, targetLanguage)));
+  verdicts.push(...(await review(batch, setting, language, sample)));
 }
 
 const byId = new Map(lines.map((line) => [line.id, line]));

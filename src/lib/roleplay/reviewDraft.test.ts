@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { targetLanguageFocusHints } from "../languageFocus.ts";
 import {
   draftReviewPrompt,
   needsEyes,
@@ -89,4 +90,51 @@ test("a verdict for a line nobody asked about is ignored", () => {
 
 test("an unreadable answer reviews nothing rather than approving everything", () => {
   assert.deepEqual(parseDraftReview("not json", LINES), []);
+});
+
+test("the reviewer is told what this language in particular gets wrong", () => {
+  // The answer to the thing that looked unanswerable: a bank for a language
+  // nobody here reads needs a reader, and lib/languageFocus.ts has been one
+  // all along, inside the chat route where nothing else could see it.
+  const prompt = draftReviewPrompt({
+    lines: [{ id: "talk.nice", text: "いいね。", role: "friend" }],
+    setting: "A relaxed catch-up over coffee.",
+    targetLanguage: "Japanese",
+    nativeLanguage: "Korean",
+    focus: targetLanguageFocusHints("ja"),
+  });
+  assert.match(prompt, /polite vs plain/);
+  assert.match(prompt, /は\/が\/を/, "in its own terms, not English labels");
+  assert.match(prompt, /A line can be grammatical and still pick the wrong one/);
+});
+
+test("the register to match is given as a line, not as a rule", () => {
+  // "Write casual Japanese" is an instruction a drafter can follow four
+  // different ways across fifty lines. One line of the scene's own is the
+  // whole specification, and it is already written down per language.
+  const prompt = draftReviewPrompt({
+    lines: [{ id: "talk.nice", text: "いいですね。", role: "friend" }],
+    setting: "A relaxed catch-up over coffee.",
+    targetLanguage: "Japanese",
+    nativeLanguage: "Korean",
+    focus: targetLanguageFocusHints("ja"),
+    sample: "やあ！会えてうれしいよ。今日はどんな一日だった？",
+  });
+  assert.match(prompt, /やあ！会えてうれしいよ/);
+  assert.match(prompt, /7\. Does it speak the way this scene already speaks/);
+});
+
+test("a language with nothing of its own to say adds nothing to the list", () => {
+  // English is where this list of failures came from, so it has no row and
+  // wants none. An empty numbered item would be a rule the reviewer applies
+  // to every line and can never satisfy.
+  const prompt = draftReviewPrompt({
+    lines: [{ id: "talk.nice", text: "That sounds great.", role: "friend" }],
+    setting: "A relaxed catch-up over coffee.",
+    targetLanguage: "English",
+    nativeLanguage: "Korean",
+  });
+  assert.doesNotMatch(prompt, /What goes wrong in this language in particular/);
+  assert.doesNotMatch(prompt, /^6\./m);
+  assert.match(prompt, /5\. If it asks a question/, "the list it always had is intact");
 });

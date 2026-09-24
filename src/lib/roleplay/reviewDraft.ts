@@ -57,6 +57,21 @@ export function draftReviewPrompt(input: {
   setting: string;
   targetLanguage: string;
   nativeLanguage: string;
+  /**
+   * What this language in particular gets wrong, in its own terms
+   * (lib/languageFocus.ts). Absent for English, which has none written and
+   * needs none here: this list was drawn up from English drafts.
+   */
+  focus?: string;
+  /**
+   * A line the scene already speaks, as the register to match.
+   *
+   * The thing a reviewer cannot work out on its own. Japanese and Korean pick
+   * politeness on every sentence, and a bank is only usable if all of it picks
+   * the same one — so the question is not "is this polite enough" but "is this
+   * the same as that", and that wants an example rather than a rule.
+   */
+  sample?: string;
 }): string {
   const listed = input.lines
     .map(
@@ -79,7 +94,20 @@ Judge each line against this list, and nothing else:
 2. Is it one breath long? A line that has to be listened to twice is too long.
 3. Does the gloss say what the line says, the way a ${input.nativeLanguage} speaker would say it in that moment — not word for word? "to go" at a café is takeaway, not travelling. A missing gloss is fine; a wrong one is not.
 4. Does it teach something a learner should not copy: a phrasing that is regional, dated, stiff, or simply not what people say?
-5. If it asks a question, can the learner answer it with what they would plausibly know at this point?
+5. If it asks a question, can the learner answer it with what they would plausibly know at this point?${
+    input.focus
+      ? `
+6. What goes wrong in this language in particular:
+${input.focus}
+Judge the line against that too. A line can be grammatical and still pick the wrong one of these.`
+      : ""
+  }${
+    input.sample
+      ? `
+${input.focus ? "7" : "6"}. Does it speak the way this scene already speaks? Here is a line of its own, and the register it is in is the one every line has to be in: "${input.sample}"
+A line that is right on its own and in a different register from that one is wrong here.`
+      : ""
+  }
 
 Verdicts:
 - "ok" — nothing on the list is tripped. Say nothing else.

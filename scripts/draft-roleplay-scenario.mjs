@@ -11,12 +11,20 @@
  * that saved straight into src/ would quietly remove it.
  *
  * Run: node --experimental-strip-types scripts/draft-roleplay-scenario.mjs <situation-id> [language]
+ *      ... --print   (show the brief instead of asking for a draft)
  */
 import { readFileSync } from "node:fs";
 import { SITUATIONS, findSituation } from "../src/lib/roleplay/situations.ts";
 
 const MODEL = process.env.OPENAI_MODEL ?? "gpt-4o-mini";
+import { targetLanguageFocusHints } from "../src/lib/languageFocus.ts";
+import {
+  coerceLanguageCode,
+  learningLanguageName,
+} from "../src/lib/learningLanguages.ts";
+
 const [, , situationId, language = "en"] = process.argv;
+const targetName = learningLanguageName(coerceLanguageCode(language));
 
 if (!situationId) {
   console.error("Usage: draft-roleplay-scenario.mjs <situation-id> [language]\n");
@@ -55,7 +63,7 @@ function apiKey() {
  */
 const INSTRUCTIONS = `You are drafting a scripted roleplay for a language-learning app.
 
-The learner speaks ${language}. The tutor plays a role and the learner plays themselves.
+The learner is learning ${targetName} and speaks Korean. The tutor plays a role and the learner plays themselves.
 
 Return JSON only, shaped exactly like this:
 {
@@ -72,7 +80,7 @@ Rules, all of which are enforced by tests:
 - Tutor lines are fixed text. Their audio is generated once and shared, so nothing may vary per learner.
 - Write speech, not prose: short turns, contractions, what someone actually says at work.
 - Every learner node needs at least two accepted phrasings across its branches. One teaches recitation.
-- "goal" and "hint" are written in Korean; everything the tutor says is in ${language}.
+- "goal" and "hint" are written in Korean; everything the tutor says is in ${targetName}.
 - Include at least one branch that answers a side question and then rejoins the main line.
 - Give most learner nodes an "onMiss" pointing at a short scripted "sorry?" line that loops back.
   Leave "onMiss" off exactly where a live human tutor should take over instead.
@@ -86,7 +94,26 @@ The situation:
   What the learner is trying to do: ${situation.objective}
   Where this usually goes wrong: ${situation.likelyTrouble}
 
-Put a branch or a recovery where it usually goes wrong. That is the point of the draft.`;
+Put a branch or a recovery where it usually goes wrong. That is the point of the draft.
+${
+  coerceLanguageCode(language) === "en"
+    ? ""
+    : `
+What goes wrong in ${targetName} in particular, which these lines must not get wrong (lib/languageFocus.ts):
+${targetLanguageFocusHints(coerceLanguageCode(language))}
+
+Pick one register and hold it across every line. For some languages that is a
+decision made afresh on every sentence, and a scene whose lines disagree about
+it is worse than one written slightly too formally throughout.`
+}`;
+
+// What the model will be asked, without asking it. The brief now carries a
+// language's own failure list and a register instruction, and whether those
+// arrived intact is not something a draft's output makes obvious.
+if (process.argv.includes("--print")) {
+  console.log(INSTRUCTIONS);
+  process.exit(0);
+}
 
 const response = await fetch("https://api.openai.com/v1/chat/completions", {
   method: "POST",
