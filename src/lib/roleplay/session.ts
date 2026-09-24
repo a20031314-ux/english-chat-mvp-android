@@ -158,12 +158,67 @@ export function isMumble(heard: string): boolean {
  * turn to the director, who can still find the answer right — so this only has
  * to be good at the easy cases, and it is free and instant on those.
  */
+/**
+ * The shortest a phrase may be and still be looked for inside a whole turn.
+ *
+ * Below this it is not evidence: a two-character run turns up inside sentences
+ * that mean nothing like it, and a scene that ends because a syllable happened
+ * to appear is worse than one that has to be told twice.
+ */
+const RUN_MIN_CHARS = 2;
+
+/**
+ * Scripts that do not put spaces between words, where a turn is one word
+ * however much it says. Hangul is not among them: Korean spaces its words, and
+ * its phrases here are several.
+ */
+const WRITTEN_WITHOUT_SPACES =
+  /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Thai}]/u;
+
 export function phraseScore(phrase: string, heard: string): number {
   const wanted = normalize(phrase);
   if (wanted.length === 0) return 0;
   const said = new Set(normalize(heard));
   const hits = wanted.filter((word) => said.has(word)).length;
-  return hits / wanted.length;
+  const overlap = hits / wanted.length;
+
+  /**
+   * The same question asked without word boundaries, because three languages
+   * here do not have any.
+   *
+   * Counting shared words is a good measure of an English sentence and no
+   * measure at all of a Japanese one: there are no spaces, so the whole turn is
+   * one word and a phrase either is it exactly or scores nothing. Measured on
+   * what a learner would really say to leave — three tries a language, at the
+   * middle strictness — English and Spanish were recognised three times out of
+   * three, Japanese and Chinese once, and Korean not at all. Korean has spaces
+   * and fails differently: its phrases are two words, so "이제 가볼게" against
+   * "이제 가볼게요" is one word in two, and half is under the bar.
+   *
+   * Run together, all three come right: the phrase is looked for as a run of
+   * characters inside the turn, which is what "they said this, with something
+   * around it" actually looks like when there is nothing to split on.
+   *
+   * It can say yes where the words alone would not — a phrase quoted inside a
+   * sentence that means something else would match. Against a learner who
+   * cannot end the conversation at all in their language, that is the better
+   * failure, and the length floor keeps it from being a common one.
+   */
+  // A run is only evidence where words cannot be counted.
+  //
+  // A phrase of several words is safe to look for whole: "이제 가볼게" inside
+  // "이제 가볼게요" is that phrase and nothing else. A phrase of one word is
+  // safe only where the script does not separate words, because there it is the
+  // whole of what was said and there is no other way to find it — "またね"
+  // inside "じゃあまたね" is the phrase, while "go" inside "i am going" is a
+  // syllable. Which of those it is cannot be read off the turn: Japanese
+  // punctuation leaves "うん、またあとでね" looking like two words.
+  const mayRun = wanted.length > 1 || WRITTEN_WITHOUT_SPACES.test(phrase);
+  const needle = wanted.join("");
+  if (mayRun && needle.length >= RUN_MIN_CHARS && normalize(heard).join("").includes(needle)) {
+    return 1;
+  }
+  return overlap;
 }
 
 /** The best-scoring branch, and whether it clears the current strictness. */

@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { findScenario, sentencesFor } from "./catalog.ts";
-import { MIN_LEVEL } from "./difficulty.ts";
+import { MIN_LEVEL, settingsForLevel } from "./difficulty.ts";
 import type { Direction } from "./director.ts";
 import {
   afterSaying,
@@ -16,7 +16,7 @@ import {
   type SessionState,
   resumeListening,
 } from "./session.ts";
-import { isLearnerNode } from "./script.ts";
+import { isLearnerNode, type LearnerNode } from "./script.ts";
 
 const scenario = findScenario("cafe-order")!;
 const bank = sentencesFor("en");
@@ -505,4 +505,66 @@ test("a repertoire line is spoken even with no file shipped for it", () => {
   if (moved.instruction.do !== "say") return;
   assert.equal(moved.instruction.text, bank["talk.go-on"]!.text);
   assert.equal(moved.instruction.voice, talk.voice);
+});
+
+test("a goodbye is recognised in every language, not only the ones with spaces", () => {
+  // Counting shared words measures an English sentence and does not measure a
+  // Japanese one: there is nothing to split on, so the whole turn is one word
+  // and a phrase either is it exactly or scores nothing. Measured on what a
+  // learner would really say to leave, at the middle strictness, this used to
+  // be three out of three in English and Spanish, one in Japanese and Chinese,
+  // and none at all in Korean — which fails differently, its phrases being two
+  // words so that one politeness ending costs half the score.
+  const leaving: Record<string, string[]> = {
+    en: ["okay i have to go now", "well i gotta go", "alright see you later then"],
+    ko: ["아 이제 가볼게요", "그럼 다음에 봐요", "저 그만 가봐야겠어요"],
+    ja: ["じゃあまたね", "そろそろ行くね、またね", "うん、またあとでね"],
+    zh: ["好的再见", "那我该走了", "行，下次见"],
+    es: ["bueno me tengo que ir", "vale hasta luego", "nos vemos entonces"],
+    th: ["โอเค ไว้เจอกันใหม่นะ", "ต้องไปแล้วนะ", "แล้วเจอกันนะ"],
+  };
+  for (const [language, tries] of Object.entries(leaving)) {
+    const node = findScenario(`open-talk-${language}`)!.nodes.talk as LearnerNode;
+    for (const heard of tries) {
+      assert.ok(
+        judge(node, heard, settingsForLevel(3).matchStrictness, []),
+        `${language}: "${heard}" was not heard as leaving`,
+      );
+    }
+  }
+});
+
+test("an ordinary turn is still not mistaken for a goodbye", () => {
+  // What the run costs: a phrase is looked for inside a whole turn, so it can
+  // say yes where the words alone would not. The floor on its length is what
+  // keeps that rare, and this is the check that it is.
+  const ordinary: Record<string, string[]> = {
+    en: ["i went to the gym", "my sister is a nurse", "how about you"],
+    ko: ["어제 친구 만났어", "일이 좀 바빴어", "그 영화 재밌었어"],
+    ja: ["先週釜山に行ったよ", "仕事が終わったところ", "そこは楽しかった"],
+    zh: ["我上周去了釜山", "工作刚结束", "那里很好玩"],
+    th: ["เมื่อวานไปทะเลมา", "งานเพิ่งเสร็จ"],
+  };
+  for (const [language, tries] of Object.entries(ordinary)) {
+    const node = findScenario(`open-talk-${language}`)!.nodes.talk as LearnerNode;
+    for (const heard of tries) {
+      assert.equal(
+        judge(node, heard, settingsForLevel(3).matchStrictness, []),
+        null,
+        `${language}: "${heard}" was heard as leaving`,
+      );
+    }
+  }
+});
+
+test("one word is only looked for inside a turn that has no words to count", () => {
+  // Where a language has spaces, a single expected word is a word: "go" inside
+  // "i am going" is a syllable and not the thing. Where it has none, the turn
+  // is one word whatever it says, and looking inside it is the only way to
+  // find anything at all.
+  assert.equal(phraseScore("go", "i am going"), 0, "english: a syllable is not a word");
+  assert.equal(phraseScore("またね", "じゃあまたね"), 1, "japanese: there is nothing else to do");
+  assert.equal(phraseScore("再见", "好的再见"), 1);
+  // A phrase of several words carries enough of itself to be looked for.
+  assert.equal(phraseScore("i have to go", "okay i have to go now"), 1);
 });
