@@ -69,7 +69,7 @@ export const MIN_SUPPORTED_APP_VERSION = "2.48";
  * Cheap to move, because it only raises a banner. This is the lever to reach
  * for; MIN_SUPPORTED is the one to leave alone.
  */
-export const RECOMMENDED_APP_VERSION = "2.54";
+export const RECOMMENDED_APP_VERSION = "2.55";
 
 /** -1, 0 or 1. Missing parts count as zero, so "2.49" and "2.49.0" are equal. */
 export function compareVersions(a: string, b: string): number {
