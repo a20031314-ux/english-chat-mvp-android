@@ -3,6 +3,7 @@ import { NextRequest } from "next/server";
 import type OpenAI from "openai";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
+import { targetLanguageFocusHints } from "@/lib/languageFocus";
 import {
   getDailyUsed,
   incrementDailyUsed,
@@ -139,46 +140,6 @@ function englishCorrectionPolicy(
 ${explanationGuard}`;
 }
 
-/** Language-specific mistake families — still analyze in THAT language's own terms. */
-function targetLanguageFocusHints(targetLanguage: LearningLanguageCode): string {
-  switch (targetLanguage) {
-    case "ja":
-      return `Japanese focus (use Japanese terms, not English labels):
-- Particles (は/が/を/に/で/と/も…), verb/adjective conjugation, polite vs plain (です/ます vs 辞書形), word order, counters, transitive/intransitive pairs when wrong, unnatural calques from Korean/English.`;
-    case "ko":
-      return `Korean focus (use Korean terms):
-- Particles (은/는/이/가/을/를/에/에서…), endings/politeness (해요체/반말/합쇼체), conjugation, honorifics when required by context, spacing, unnatural calques.`;
-    case "zh":
-      return `Chinese focus (use Chinese terms):
-- Word order, 了/过/着, measure words, 的/地/得, aspect/result complements, coverbs (在/把/被), missing or wrong function words, unnatural calques.`;
-    case "es":
-    case "fr":
-    case "it":
-    case "pt":
-      return `Romance focus (use ${learningLanguageName(targetLanguage)} terms, not English labels):
-- Gender/number agreement, articles, verb conjugation/tense/mood (incl. subjunctive when required), clitics/pronouns, prepositions, ser/estar or language-specific copula pairs when relevant, false friends, unnatural calques.`;
-    case "ru":
-      return `Russian focus (use Russian terms):
-- Case endings, verb aspect (perfective/imperfective), agreement, prepositions + case, word order only when it breaks meaning, unnatural calques.`;
-    case "ar":
-      return `Arabic focus (use Arabic terms):
-- Root-and-pattern morphology, definite article, gender/number agreement, idafa, attached pronouns/clitics, verb form, case only when it is clearly wrong, MSA vs dialect mismatch when it breaks the intended register.`;
-    case "id":
-      return `Indonesian focus (use Indonesian terms):
-- Affixes (me-/ber-/ter-/di-/ke-an), reduplication, particles (lah/kah/pun), word order, unnatural calques. Do not invent tense endings.`;
-    case "vi":
-      return `Vietnamese focus (use Vietnamese terms):
-- Classifiers, aspect particles (đã/đang/sẽ), word order, pronouns/register, missing function words, unnatural calques. Do not split tones as spelling errors.`;
-    case "th":
-      return `Thai focus (use Thai terms):
-- Word boundaries, classifiers, polite particles (ครับ/ค่ะ), serial verbs, missing function words, unnatural calques. Do not split words into letters.`;
-    case "hi":
-      return `Hindi focus (use Hindi terms):
-- Postpositions, gender/number agreement, split verbs, honorifics, SOV word order, unnatural calques from English.`;
-    default:
-      return `Focus on real morphosyntax, agreement, function words, and patterns that natives would mark as wrong in ${learningLanguageName(targetLanguage)}.`;
-  }
-}
 
 /**
  * Detailed correction for non-English learning languages.
