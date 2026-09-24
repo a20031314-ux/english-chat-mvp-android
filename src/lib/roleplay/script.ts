@@ -173,7 +173,7 @@ function fnv1a32(value: string, seed: number): number {
   return hash >>> 0;
 }
 
-function contentHash(value: string): string {
+export function contentHash(value: string): string {
   const low = fnv1a32(value, 2166136261);
   const high = fnv1a32(value, 1099511628); // A different seed, so the halves differ.
   return low.toString(36) + high.toString(36);

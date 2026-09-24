@@ -20,7 +20,11 @@ import {
   ROLEPLAY_POINTS_CLIENT_HEADER,
   ROLEPLAY_SESSION_HEADER,
 } from "@/lib/billing/config";
-import { chargeRoleplayTurn, noteSentenceSaid } from "@/lib/server/entitlementStore";
+import {
+  chargeRoleplayTurn,
+  noteSentenceSaid,
+  noteSentenceWritten,
+} from "@/lib/server/entitlementStore";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -150,6 +154,12 @@ export async function POST(request: NextRequest) {
       void noteSentenceSaid(scenario.language, direction.say.id);
     } else {
       void meterRequest(request, "roleplayInventedLine");
+      // And kept, not only counted. Until now the app has never learned
+      // anything from what it actually says: a written line was tallied and
+      // thrown away, so the bank could only ever grow by somebody drafting one.
+      // Reading the pile is a later job and a larger one; a line not written
+      // down now is simply gone (entitlementStore.ts).
+      void noteSentenceWritten(scenario.language, direction.say.text);
     }
     if (direction.follow) {
       void meterRequest(request, "roleplaySplitTurn");

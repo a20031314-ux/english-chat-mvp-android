@@ -11,7 +11,18 @@
  * old key simply stops being read and expires on its own.
  */
 
-import { kvGetJson, kvGetNumber, kvGetNumbers, kvIncrBy, kvSetJson } from "./kv.ts";
+import {
+  kvGetJson,
+  kvGetNumber,
+  kvGetNumbers,
+  kvIncrBy,
+  kvScanKeys,
+  kvSetJson,
+} from "./kv.ts";
+// Relative, not "@/": a script under scripts/ imports this directly and Node
+// cannot resolve the alias there (see modelCalls.ts, which was split out over
+// exactly this).
+import { contentHash } from "../roleplay/script.ts";
 import {
   FREE_LIFETIME_ROLEPLAY_POINTS,
   ROLEPLAY_POINT_SECONDS,
@@ -434,6 +445,97 @@ export async function noteSentenceSaid(language: string, id: string): Promise<vo
   } catch {
     // Counting is not the product.
   }
+}
+
+/**
+ * Lines the character wrote itself, kept so that one day they can be read.
+ *
+ * The bank grows by drafting, and only by drafting: a line the model writes is
+ * counted and then thrown away, which means the app has never once learned
+ * anything from what it actually says. The "harvested" source in script.ts has
+ * always described this and nothing has ever written one.
+ *
+ * This is the cheap half of that, on purpose. Reading the pile — grouping lines
+ * that mean the same thing, deciding which have earned a place — wants
+ * clustering, a review pass, and enough traffic for a repeat to mean something,
+ * and none of that can be done with the few hundred near-unique sentences ten
+ * learners produce. It can all be done later, from what is kept here.
+ *
+ * Keeping cannot. A line not written down is gone, and the months before
+ * somebody gets round to the other half are exactly the months whose data would
+ * have been most worth having. So the halves ship apart, and this one first.
+ *
+ * Only the character's own lines. What the learner said is a different question
+ * with a different answer, and nothing here goes near it.
+ *
+ * Counted by exact text rather than appended to a list: incrementing is atomic
+ * where appending to a JSON array is a read, a change and a write that two
+ * turns can interleave. The count is nearly always one — the model rarely
+ * writes the same sentence twice — and the rare line that does repeat is
+ * exactly the one worth noticing, so the shape costs nothing and answers
+ * something.
+ */
+
+/** Longest line kept. A turn is one or two spoken sentences; this is generous. */
+const WRITTEN_MAX_CHARS = 300;
+
+/**
+ * How long a written line is kept. Long enough to look back over a season of
+ * use, short enough that the pile cannot grow without end while nobody reads
+ * it.
+ */
+const WRITTEN_TTL_SECONDS = 90 * 24 * 60 * 60;
+
+function writtenCountKey(language: string, hash: string) {
+  return `bank:written:${language}:${hash}`;
+}
+
+function writtenTextKey(language: string, hash: string) {
+  return `bank:written:text:${language}:${hash}`;
+}
+
+/**
+ * Note that the character wrote this line rather than reaching for one.
+ *
+ * Never throws and nothing waits on it: a lost line costs one row of a pile
+ * nobody is reading yet, and a learner mid-sentence costs more than that.
+ */
+export async function noteSentenceWritten(
+  language: string,
+  text: string,
+): Promise<void> {
+  const line = text.trim().slice(0, WRITTEN_MAX_CHARS);
+  if (!line) return;
+  try {
+    const hash = contentHash(line);
+    await kvIncrBy(writtenCountKey(language, hash), 1, WRITTEN_TTL_SECONDS);
+    await kvSetJson(
+      writtenTextKey(language, hash),
+      { text: line, at: Date.now() },
+      WRITTEN_TTL_SECONDS,
+    );
+  } catch {
+    // Keeping is not the product either.
+  }
+}
+
+/** Every line written in a language, with how often, newest information last. */
+export async function readWrittenLines(
+  language: string,
+): Promise<{ text: string; said: number; at: number }[]> {
+  const keys = await kvScanKeys(`bank:written:text:${language}:*`);
+  const out: { text: string; said: number; at: number }[] = [];
+  for (const key of keys) {
+    const hash = key.slice(`bank:written:text:${language}:`.length);
+    const row = await kvGetJson<{ text: string; at: number }>(key);
+    if (!row?.text) continue;
+    out.push({
+      text: row.text,
+      said: await kvGetNumber(writtenCountKey(language, hash)),
+      at: row.at ?? 0,
+    });
+  }
+  return out.sort((a, b) => b.said - a.said);
 }
 
 /** How often each of these has been said, and when it last was. */

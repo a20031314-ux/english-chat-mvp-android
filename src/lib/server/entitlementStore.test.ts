@@ -14,6 +14,8 @@ import {
   incrementDailyUsed,
   chargeRoleplayTurn,
   roleplayPointsLeft,
+  noteSentenceWritten,
+  readWrittenLines,
 } from "./entitlementStore.ts";
 import { SHARED_ANONYMOUS_ID } from "./identity.ts";
 import { FREE_LIFETIME_ROLEPLAY_POINTS } from "../billing/config.ts";
@@ -189,4 +191,32 @@ test("nobody in particular is never charged", async () => {
   // Someone with a name is still charged normally.
   const named = await chargeRoleplayTurn("rc:someone", false, "s1", t0);
   assert.equal(named.charged, 1);
+});
+
+test("a line the character wrote is kept, not only counted", async () => {
+  // The bank has only ever grown by somebody drafting a line; what the app
+  // actually says has been tallied and thrown away since the beginning. This
+  // is the cheap half of learning from it — reading the pile is a later job,
+  // and a line not written down now is simply gone.
+  await noteSentenceWritten("ja", "そのお祭りは東京のどのあたりであったの？");
+  await noteSentenceWritten("ja", "そのお祭りは東京のどのあたりであったの？");
+  await noteSentenceWritten("ja", "どんな人と行ったの？");
+
+  const kept = await readWrittenLines("ja");
+  assert.equal(kept.length, 2, "the same words twice are one line, said twice");
+  assert.equal(kept[0]!.said, 2, "and the repeated one sorts first");
+  assert.match(kept[0]!.text, /お祭り/);
+  assert.equal(kept[1]!.said, 1);
+});
+
+test("languages do not pool their lines", async () => {
+  await noteSentenceWritten("vi", "Bạn đã đi với ai?");
+  const vietnamese = await readWrittenLines("vi");
+  assert.equal(vietnamese.length, 1);
+  assert.ok(!vietnamese.some((line) => /お祭り/.test(line.text)));
+});
+
+test("an empty line is not a line", async () => {
+  await noteSentenceWritten("th", "   ");
+  assert.deepEqual(await readWrittenLines("th"), []);
 });

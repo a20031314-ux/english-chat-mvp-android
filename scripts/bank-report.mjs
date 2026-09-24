@@ -20,6 +20,7 @@
  */
 import { readFileSync } from "node:fs";
 import { kvConfigured, kvGetNumbers, kvScanKeys } from "../src/lib/server/kv.ts";
+import { readWrittenLines } from "../src/lib/server/entitlementStore.ts";
 import { SCENARIOS, SENTENCES } from "../src/lib/roleplay/catalog.ts";
 import { scenarioSentenceIds } from "../src/lib/roleplay/script.ts";
 
@@ -131,6 +132,30 @@ console.log(`  tts / roleplayTurn     ${turns > 0 ? (tts / turns).toFixed(2) : "
 console.log(`  syntheses per session  ${per(tts, sessions)}`);
 console.log(`  turns per session      ${per(turns, sessions)}`);
 console.log(`  conversations          ${sessions}`);
+
+// What the character wrote for itself, which is the half the bank has never
+// learned from. Shown rather than acted on: promoting one wants grouping lines
+// that mean the same thing and enough traffic for a repeat to mean something,
+// and this is here so the data exists when somebody gets to that.
+console.log("\n[4] Lines the character wrote itself");
+let anyWritten = false;
+for (const language of [...new Set(SCENARIOS.map((one) => one.language))]) {
+  const written = await readWrittenLines(language);
+  if (written.length === 0) continue;
+  anyWritten = true;
+  const repeated = written.filter((line) => line.said > 1);
+  const plays = written.reduce((sum, line) => sum + line.said, 0);
+  console.log(
+    `  ${language}  ${written.length} distinct, ${plays} said, ` +
+      `${repeated.length} said more than once`,
+  );
+  for (const line of written.slice(0, 5)) {
+    console.log(`    ${String(line.said).padStart(3)}  ${line.text.slice(0, 64)}`);
+  }
+}
+if (!anyWritten) {
+  console.log("  nothing kept yet — this begins with the next conversation");
+}
 
 console.log("\n[1] Hit rate by where the line came from");
 const bySource = new Map();
