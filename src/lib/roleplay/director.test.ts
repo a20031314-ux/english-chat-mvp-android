@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { SCENARIOS, findScenario, sentencesFor } from "./catalog.ts";
+import type { RoleplayScenario } from "./script.ts";
 import { REPERTOIRE_SINCE } from "./justTalk.ts";
 import {
   DIRECTED_TURN_LIMIT,
@@ -22,6 +23,25 @@ const cafe = findScenario("cafe-order")!;
 const open = findScenario("open-talk-en")!;
 const bank = sentencesFor("en");
 
+/**
+ * The open conversation as it is when the bank is offered to it.
+ *
+ * justTalk.ts does not offer it — measured, a quarter of the turns it led did
+ * not fit what was said — but everything that acts on a repertoire still works
+ * and is meant to keep working, because a scripted step is a place where one
+ * ready line really is the whole turn. So the machinery is tested against a
+ * scene that has one rather than against the flag's current answer.
+ */
+const withBank: RoleplayScenario = {
+  ...open,
+  repertoire: Object.keys(bank).filter((id) => id.startsWith("talk.")),
+};
+const bankedScenarios: RoleplayScenario[] = SCENARIOS.map((scenario) =>
+  scenario.openEnded && Object.keys(sentencesFor(scenario.language)).some((id) => id.startsWith("talk."))
+    ? { ...scenario, repertoire: Object.keys(sentencesFor(scenario.language)).filter((id) => id.startsWith("talk.")) }
+    : scenario,
+);
+
 function request(partial: Partial<DirectorRequest> = {}): DirectorRequest {
   return {
     scenarioId: cafe.id,
@@ -42,7 +62,10 @@ function request(partial: Partial<DirectorRequest> = {}): DirectorRequest {
 }
 
 function parse(raw: object, partial: Partial<DirectorRequest> = {}, scenario = cafe) {
-  const recorded = recordedLines(scenario, SCENARIOS, bank);
+  // The banked catalogue, because the pool a scene draws from is gathered from
+  // every scene sharing its voice: handing over a scenario with a repertoire is
+  // not enough if its neighbours in the list have none.
+  const recorded = recordedLines(scenario, bankedScenarios, bank);
   return parseDirection(JSON.stringify(raw), {
     scenario,
     bank,
@@ -280,7 +303,7 @@ test("an open conversation has nowhere to be sent home to", () => {
   const direction = parse(
     { say: { text: "Oh, nice!", translation: "" }, next: "free" },
     { nodeId: "talk", mode: "free", freeTurns: 20 },
-    open,
+    withBank,
   );
   assert.deepEqual(direction?.next, { step: "talk" });
   assert.equal(direction?.follow, undefined, "the opening line is not asked again");
@@ -615,14 +638,14 @@ test("a build released before a language's lines is offered none of them", () =>
   // id queued nothing at all and opened the microphone on a character that had
   // said nothing.
   const japanese = (version: string) =>
-    playableBy(SCENARIOS, version).find((one) => one.id === "open-talk-ja")!;
+    playableBy(bankedScenarios, version).find((one) => one.id === "open-talk-ja")!;
   assert.deepEqual(japanese("2.53").repertoire, [], "the build in production today");
   assert.equal(japanese("2.54").repertoire?.length, 53, "the build that will carry them");
 });
 
 test("a build that has a language's lines keeps them", () => {
   const english = (version: string) =>
-    playableBy(SCENARIOS, version).find((one) => one.id === "open-talk-en")!;
+    playableBy(bankedScenarios, version).find((one) => one.id === "open-talk-en")!;
   assert.equal(english("2.52").repertoire?.length, 53, "the release that shipped them");
   assert.equal(english("2.53").repertoire?.length, 53, "and everything after it");
   assert.deepEqual(english("2.51").repertoire, [], "but not the one before");
@@ -632,7 +655,7 @@ test("a build that will not say which one it is gets nothing", () => {
   // "unknown" is every install older than the header that reports a version,
   // and those are the oldest builds there are. Guessing generously about them
   // is guessing about the ones least able to cope.
-  const open = playableBy(SCENARIOS, "unknown").find((one) => one.id === "open-talk-en")!;
+  const open = playableBy(bankedScenarios, "unknown").find((one) => one.id === "open-talk-en")!;
   assert.deepEqual(open.repertoire, []);
 });
 
@@ -653,8 +676,8 @@ test("stripping the repertoire leaves the scene otherwise untouched", () => {
   // It is the saving that is withheld, never the conversation: the scene still
   // has its nodes, its voice and its way out, and the character writes its own
   // lines exactly as it does in the twelve languages with no bank at all.
-  const before = findScenario("open-talk-ja")!;
-  const after = playableBy(SCENARIOS, "2.53").find((one) => one.id === "open-talk-ja")!;
+  const before = bankedScenarios.find((one) => one.id === "open-talk-ja")!;
+  const after = playableBy(bankedScenarios, "2.53").find((one) => one.id === "open-talk-ja")!;
   assert.deepEqual(after.nodes, before.nodes);
   assert.equal(after.voice, before.voice);
   assert.equal(after.start, before.start);
@@ -665,7 +688,7 @@ test("the pool a scene draws from is filtered too, not only the scene", () => {
   // recordedLines gathers every scene sharing a voice, so a scene filtered on
   // its own would have its own ids handed back to it by its neighbour — and an
   // id that reaches recordedIds is an id parseDirection will accept.
-  const scenarios = playableBy(SCENARIOS, "2.53");
+  const scenarios = playableBy(bankedScenarios, "2.53");
   const japanese = scenarios.find((one) => one.id === "open-talk-ja")!;
   const pool = recordedLines(japanese, scenarios, sentencesFor("ja")).map((line) => line.id);
   assert.ok(!pool.some((id) => id.startsWith("talk.")), `leaked: ${pool.filter((id) => id.startsWith("talk."))}`);
@@ -700,10 +723,10 @@ test("a repertoire line is playable, not just writable", () => {
 
 function openBrief(history: DirectorRequest["history"]): string {
   return tutorSystemPrompt({
-    scenario: open,
+    scenario: withBank,
     bank,
-    recorded: recordedLines(open, SCENARIOS, bank),
-    request: request({ scenarioId: open.id, nodeId: "talk", history }),
+    recorded: recordedLines(withBank, bankedScenarios, bank),
+    request: request({ scenarioId: withBank.id, nodeId: "talk", history }),
   });
 }
 
@@ -793,7 +816,7 @@ test("a turn can be two ready lines: a reaction, then a question", () => {
   const both = parse(
     { open: "talk.nice", follow: "talk.there-what", say: "", assessment: "on_track", next: "free" },
     { nodeId: "talk" },
-    open,
+    withBank,
   );
   assert.deepEqual(both?.say, { id: "talk.nice" });
   assert.equal(both?.follow, "talk.there-what");
@@ -805,7 +828,7 @@ test("a ready question with no reaction in front of it is still a turn", () => {
   const alone = parse(
     { open: "", follow: "talk.there-what", say: "", assessment: "on_track", next: "free" },
     { nodeId: "talk" },
-    open,
+    withBank,
   );
   assert.deepEqual(alone?.say, { id: "talk.there-what" });
   assert.equal(alone?.follow, undefined);
@@ -824,7 +847,7 @@ test("a turn never says the same thing twice", () => {
       next: "free",
     },
     { nodeId: "talk" },
-    open,
+    withBank,
   );
   assert.deepEqual(twice?.say, { id: "talk.there-what" });
   assert.equal(twice?.follow, undefined);
@@ -838,7 +861,7 @@ test("a turn never says the same thing twice", () => {
       next: "free",
     },
     { nodeId: "talk" },
-    open,
+    withBank,
   );
   assert.equal(written?.follow, undefined);
 
@@ -851,7 +874,7 @@ test("a turn never says the same thing twice", () => {
       next: "free",
     },
     { nodeId: "talk" },
-    open,
+    withBank,
   );
   assert.equal(asked?.follow, undefined);
 });
@@ -970,7 +993,7 @@ test("a question is not a reaction, whatever the model calls it", () => {
   const wrongWayRound = parse(
     { open: "talk.there-what", follow: "talk.what-next", say: "", assessment: "on_track", next: "free" },
     { nodeId: "talk" },
-    open,
+    withBank,
   );
   assert.deepEqual(wrongWayRound?.say, { id: "talk.what-next" }, "the follow leads instead");
   assert.equal(wrongWayRound?.follow, undefined, "and nothing is said twice");
@@ -983,7 +1006,7 @@ test("a reaction that merely contains a question mark is still a reaction", () =
   const kept = parse(
     { open: "talk.go-on", follow: "talk.there-what", say: "", assessment: "on_track", next: "free" },
     { nodeId: "talk" },
-    open,
+    withBank,
   );
   assert.deepEqual(kept?.say, { id: "talk.go-on" });
   assert.equal(kept?.follow, "talk.there-what");
@@ -998,7 +1021,7 @@ test("a question that points back is not asked when they asked one", () => {
   const asked = parse(
     { open: "talk.same", follow: "talk.what-like", say: "", assessment: "on_track", next: "free" },
     { nodeId: "talk", heard: "i'm good, how about you?" },
-    open,
+    withBank,
   );
   assert.deepEqual(asked?.say, { id: "talk.same" }, "the character still answers");
   assert.equal(asked?.follow, undefined);
@@ -1006,7 +1029,7 @@ test("a question that points back is not asked when they asked one", () => {
   const told = parse(
     { open: "talk.same", follow: "talk.what-like", say: "", assessment: "on_track", next: "free" },
     { nodeId: "talk", heard: "i love baseball and soccer." },
-    open,
+    withBank,
   );
   assert.equal(told?.follow, "talk.what-like", "something to point at, so it points");
 });
@@ -1024,7 +1047,7 @@ test("a reaction is not the question half of a turn", () => {
       next: "free",
     },
     { nodeId: "talk", heard: "i study english" },
-    open,
+    withBank,
   );
   assert.deepEqual(asked?.say, { text: "Good! What do you study in English?", translation: "" });
   assert.equal(asked?.follow, undefined, "nothing rides behind a question");
@@ -1037,7 +1060,7 @@ test("the two halves of a turn each hold their own kind of line", () => {
   const proper = parse(
     { open: "talk.nice", follow: "talk.there-what", say: "", assessment: "on_track", next: "free" },
     { nodeId: "talk", heard: "i went to busan" },
-    open,
+    withBank,
   );
   assert.deepEqual(proper?.say, { id: "talk.nice" });
   assert.equal(proper?.follow, "talk.there-what");
@@ -1050,7 +1073,7 @@ test("a question mark is not always a question mark", () => {
   // Japanese on the day it shipped, without a word anywhere.
   const marks = ["?", "？", "؟"];
   for (const language of ["en", "ja"]) {
-    const scenario = findScenario(`open-talk-${language}`)!;
+    const scenario = bankedScenarios.find((one) => one.id === `open-talk-${language}`)!;
     const theirBank = sentencesFor(language);
     const questions = (scenario.repertoire ?? []).filter((id) =>
       marks.some((mark) => theirBank[id]!.text.trim().endsWith(mark)),
@@ -1061,7 +1084,7 @@ test("a question mark is not always a question mark", () => {
   const twoPart = parse(
     { open: "talk.same", follow: "talk.there-what", say: "", assessment: "on_track", next: "free" },
     { scenarioId: "open-talk-ja", nodeId: "talk", heard: "先週釜山に行ったよ", targetLanguage: "ja" },
-    findScenario("open-talk-ja")!,
+    bankedScenarios.find((one) => one.id === "open-talk-ja")!,
   );
   assert.equal(twoPart?.follow, "talk.there-what");
 });

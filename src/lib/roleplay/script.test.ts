@@ -316,3 +316,29 @@ test("a repertoire line ships as words, not as a file", () => {
     }
   }
 });
+
+test("an open conversation is not offered the bank's lines", () => {
+  // The product decision, kept where it can be seen rather than only in a
+  // constant. Measured twice with a model judging fit: the bank led sixteen
+  // turns and five did not answer what was said, against none of the eight the
+  // character wrote itself. Everything that acts on a repertoire still works —
+  // this is the offer being withdrawn, not the machinery (justTalk.ts).
+  for (const scenario of SCENARIOS) {
+    if (!scenario.openEnded) continue;
+    assert.deepEqual(
+      scenario.repertoire ?? [],
+      [],
+      `${scenario.id} is offering lines again; if that is meant, this test should say so`,
+    );
+  }
+});
+
+test("the lines themselves are still written down", () => {
+  // Withdrawn from the brief, not deleted. They were drafted, reviewed by a
+  // model that did not write them, and corrected by hand; a scripted step is
+  // where one ready line really is a whole turn, and they are waiting for it.
+  const english = Object.keys(sentencesFor("en")).filter((id) => id.startsWith("talk."));
+  const japanese = Object.keys(sentencesFor("ja")).filter((id) => id.startsWith("talk."));
+  assert.equal(english.length, 53);
+  assert.equal(japanese.length, 53);
+});

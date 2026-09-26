@@ -574,8 +574,14 @@ test("a line with no recording says so, rather than being found out by asking", 
   // transcript, and not one request for speech. The path they take asks for a
   // file that is not there and waits for it to fail; on Android it neither
   // loaded nor errored, and the watchdog moved the scene on in silence.
-  const scenario = findScenario("open-talk-en")!;
+  // The bank is not offered in an open conversation (justTalk.ts), and this is
+  // about what happens to a line that has no recording whenever one is played.
+  const offered = findScenario("open-talk-en")!;
   const bank = sentencesFor("en");
+  const scenario = {
+    ...offered,
+    repertoire: Object.keys(bank).filter((id) => id.startsWith("talk.")),
+  };
   let state = startSession(scenario);
   state = { ...state, pending: { heard: "i love baseball", attempts: 1, hesitationMs: 0 } };
   const moved = applyDirection(

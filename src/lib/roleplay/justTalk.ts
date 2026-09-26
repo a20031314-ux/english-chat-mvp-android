@@ -382,6 +382,37 @@ export const REPERTOIRE_SINCE: Partial<Record<LearningLanguageCode, string>> = {
   ja: "2.54",
 };
 
+/**
+ * Whether the character is offered the bank's lines in an open conversation.
+ *
+ * Off, on a measurement rather than a feeling. Twelve turns, twice, with a
+ * model that did not write them judging whether each reply answered what was
+ * said: the bank led sixteen turns and five did not fit, against none of the
+ * eight the character wrote for itself. A reply that does not fit teaches the
+ * wrong thing, which is a worse price than the one it was buying — five per
+ * cent of a minute and about a second of waiting.
+ *
+ * The failures were not bad lines. "That sounds great." opened eight turns in
+ * twelve; taking it and every other judging line out moved the problem rather
+ * than fixing it, and "Oh really? Tell me more." took over five turns in eight,
+ * answering "i went to busan last weekend" with "Where was that?" A line
+ * written in advance cannot know what has already been said, and the model
+ * reaches for one as a gesture rather than because it fits — shorten the list
+ * and it reaches for whatever is left.
+ *
+ * This is the second time the offer has been withdrawn. The first was when
+ * nothing picked them at all; they are picked now, which is the improvement
+ * that made this measurable, and they are picked wrongly a quarter of the time.
+ *
+ * What stays is everything except the offer. The lines are still written, still
+ * reviewed, still in the bank; the two-line turn, the cooldown, the version
+ * bridge and the warming all still work and all go quiet, because they read the
+ * scene's repertoire and it is empty. A scripted step is the place a single
+ * ready line really is the whole turn, and when those scenes are offered again
+ * this is the flag to turn back on.
+ */
+const BANK_OFFERED_IN_OPEN_TALK = false;
+
 /** The brief, which is the model's to read and so stays in one language. */
 const SETTING =
   "A relaxed catch-up with a friendly acquaintance over coffee, with no errand to finish. The tutor is someone easy to talk to and curious about the learner's day, plans and interests; the learner can bring up anything at all.";
@@ -429,7 +460,7 @@ export function justTalkScenarios(): RoleplayScenario[] {
     setting: SETTING,
     tutorRole: "friend",
     openEnded: true,
-    ...(TALK_LINES[entry.language]
+    ...(BANK_OFFERED_IN_OPEN_TALK && TALK_LINES[entry.language]
       ? { repertoire: Object.keys(TALK_LINES[entry.language]!) }
       : {}),
     start: "hi",
