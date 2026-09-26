@@ -130,76 +130,55 @@ export const TTS_USD_PER_MINUTE = 0.015;
 /**
  * A turn of call learning, measured rather than guessed.
  *
- * Taken on 2026-09-23 from six turns of a real open conversation against
- * gpt-4.1-mini, reading what the API itself reported rather than counting
- * characters: mean 1673 tokens in and 48 out. The figures before these were
- * 1060 and 120, and both had drifted, in opposite directions, so that the error
- * hid itself in the total.
+ * Taken on 2026-09-26 from six turns of a real open conversation against
+ * gpt-4.1-mini, reading what the API reported: mean 851 tokens in and 50 out.
  *
- * `input` went up because the bank is in the prompt. An open conversation is
- * offered the lines it may reach for, which is about 884 tokens of the 1673 —
- * bought deliberately, and it pays for itself several times over below.
- * `output` came down because a written line stopped carrying its translation:
- * that was half the answer and none of it was ever spoken, so it is fetched
- * when somebody taps the line instead.
+ * These have moved twice in a week and both moves were the same mistake — the
+ * file describing a turn that had stopped happening. It first said 1060 and
+ * 120, from before the bank existed. It then said 1673 and 48, measured with
+ * the bank's lines listed in the brief. The bank is no longer offered in an
+ * open conversation (justTalk.ts), so the list is gone from the prompt and the
+ * input is back under nine hundred.
  *
- * `turnSeconds` is a spoken exchange end to end: the character's line, the
- * learner's answer, and the moment in between.
+ * Which is the lesson worth leaving here: this is a snapshot of a prompt, and
+ * the prompt is edited more often than this file is. Anyone changing what the
+ * director is sent should expect to measure again, and a figure here that has
+ * not been touched in a month is a figure to distrust.
  */
 export const ROLEPLAY_TURN = {
-  input: 1673,
-  output: 48,
+  input: 851,
+  output: 50,
   turnSeconds: 15,
   tutorSpeakingSeconds: 5,
   learnerSpeakingSeconds: 6,
   /**
-   * The share of the character's lines that cost a synthesis.
+   * The share of the character's lines that cost a synthesis, which is now all
+   * of them.
    *
    * A line out of the bank is the same words every time, so the edge holds it
-   * and hands it back to everybody — and every one of them is warmed before a
-   * release (scripts/warm-roleplay-speech.mjs), so in production a bank line is
-   * a cache hit that never reaches the function at all. A line the model wrote
-   * is a string nobody has asked for before and is always paid for.
+   * and hands it back to everybody for nothing. With the bank withdrawn from
+   * open conversation there are no such lines: the character writes every one
+   * it says, and a written line is a string nobody has asked for before.
    *
-   * So this is one minus the bank's hit rate. Two readings of that: the ledger
-   * says 36.8% over 285 lines, and six turns measured after the anaphoric lines
-   * and the two-line turn landed came back at 69%. The ledger's is the older
-   * and worse of the two — most of it was recorded before either of those
-   * existed — and it is the one used here, because every price in this file is
-   * set against the expensive case on purpose.
+   * Kept as a number rather than folded away, because the scripted scenes play
+   * recorded lines and this is what falls when they are offered again.
    */
-  linesSynthesised: 0.63,
+  linesSynthesised: 1,
 } as const;
 
 /**
  * USD of model time in one minute of call learning.
  *
- * Three bills, not one: the character deciding what to say, the speech it is
- * said in, and the transcription of the answer. Speech is still the largest,
- * but only just — 43% against 41% for deciding, where it used to be 58%
- * against 28%. The two are close enough now that neither can be called the
- * number to check first without looking.
+ * Three bills: the character deciding what to say, the speech it is said in,
+ * and the transcription of the answer. Speech is most of it again — 63% against
+ * 21% for deciding — because every line is now made on the spot.
  *
- * The bank did that, from both ends at once. Most of what the character says is
- * a line that already exists, served from the edge for nothing, so only the
- * lines it writes itself are paid for; and the prompt grew by the list of lines
- * it may reach for.
- *
- * Those two very nearly cancel, which is worth saying plainly because an
- * earlier version of this comment did not. Measured against the real model on
- * the same turn, a language with a bank sends 1809 tokens and one without sends
- * 820; the first pays $0.00311 a minute to think and $0.00315 to speak, the
- * second $0.00161 and $0.00500. That is $0.00746 against $0.00781 — the bank is
- * about five per cent cheaper, not twice. The fall from $0.00866 to $0.00733
- * was mostly this file being corrected, not the bank being added.
- *
- * So the bank is not a cost measure and nothing here should be read as saying
- * it is. What it buys is measured elsewhere: a line already at the edge comes
- * back in about a fifth of a second instead of being synthesised, it holds the
- * scene's register where a model writing fresh drifts, and it is the only thing
- * a repetition cooldown can act on. At scale the edge would tell a different
- * story, since one warmed line serves everybody and a written one is paid for
- * every time it is said — but that is not today's arithmetic.
+ * It was briefly close to even, while the bank carried a third of the lines and
+ * its list sat in the prompt. That trade is off: the lines it chose did not fit
+ * what had been said often enough to be worth five per cent of a minute, and
+ * the whole of both sides went with the offer. A minute costs $0.00788 now
+ * against $0.00733 with the bank — the difference the measurement says is worth
+ * paying.
  */
 export function roleplayMinuteUsd(): number {
   const turns = 60 / ROLEPLAY_TURN.turnSeconds;
