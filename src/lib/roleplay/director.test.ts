@@ -988,3 +988,57 @@ test("a reaction that merely contains a question mark is still a reaction", () =
   assert.deepEqual(kept?.say, { id: "talk.go-on" });
   assert.equal(kept?.follow, "talk.there-what");
 });
+
+test("a question that points back is not asked when they asked one", () => {
+  // Reported from a phone: "i'm good, how about you?" answered with "Same
+  // here, actually." and then "What are they like?" — a "they" with nothing
+  // behind it. The reaction was right; only the follow was wrong, so only the
+  // follow goes. Their question is also still unanswered, which is its own
+  // reason not to put another one on top of it.
+  const asked = parse(
+    { open: "talk.same", follow: "talk.what-like", say: "", assessment: "on_track", next: "free" },
+    { nodeId: "talk", heard: "i'm good, how about you?" },
+    open,
+  );
+  assert.deepEqual(asked?.say, { id: "talk.same" }, "the character still answers");
+  assert.equal(asked?.follow, undefined);
+
+  const told = parse(
+    { open: "talk.same", follow: "talk.what-like", say: "", assessment: "on_track", next: "free" },
+    { nodeId: "talk", heard: "i love baseball and soccer." },
+    open,
+  );
+  assert.equal(told?.follow, "talk.what-like", "something to point at, so it points");
+});
+
+test("a reaction is not the question half of a turn", () => {
+  // Reported from a phone: the character asked "what do you study in English?"
+  // and then, before anything had been answered, added "Oh really? Tell me
+  // more." Two sentences in a row with nothing between them. The brief asks
+  // for the follow to move the conversation on; this is the rule for it.
+  const asked = parse(
+    {
+      say: "Good! What do you study in English?",
+      follow: "talk.go-on",
+      assessment: "on_track",
+      next: "free",
+    },
+    { nodeId: "talk", heard: "i study english" },
+    open,
+  );
+  assert.deepEqual(asked?.say, { text: "Good! What do you study in English?", translation: "" });
+  assert.equal(asked?.follow, undefined, "nothing rides behind a question");
+});
+
+test("the two halves of a turn each hold their own kind of line", () => {
+  // The bank divides cleanly — thirty-five lines end by asking, eighteen do
+  // not — and the slots divide the same way. This is the shape that is meant
+  // to survive both rules.
+  const proper = parse(
+    { open: "talk.nice", follow: "talk.there-what", say: "", assessment: "on_track", next: "free" },
+    { nodeId: "talk", heard: "i went to busan" },
+    open,
+  );
+  assert.deepEqual(proper?.say, { id: "talk.nice" });
+  assert.equal(proper?.follow, "talk.there-what");
+});

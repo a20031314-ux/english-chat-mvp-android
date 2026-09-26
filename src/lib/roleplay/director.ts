@@ -711,6 +711,23 @@ export function parseDirection(
    * than containing one: "Oh really? Tell me more." is a reaction and reads as
    * one, while anything that finishes by asking is the other half.
    */
+  /**
+   * Each half of a turn holds its own kind of line, and the bank divides
+   * cleanly into the two: thirty-five that end by asking and eighteen that do
+   * not.
+   *
+   * "open" is what the character says back to what it was just told, so it may
+   * not be a question — "what did you do today?" answered with "What did you do
+   * there?" was on a phone. "follow" is the question after it, so it may not be
+   * a reaction: the character asked "what do you study in English?" and then,
+   * before anything had been answered, added "Oh really? Tell me more." Two
+   * sentences in a row with nothing between them, which is how it reads.
+   *
+   * The brief asks for both and the model complies unevenly, so both are rules.
+   * Ending in a question mark is the test rather than containing one, because
+   * the most-used line in the bank is "Oh really? Tell me more." and it is a
+   * reaction.
+   */
   const asksSomething = (id: string) => (bank[id]?.text ?? "").trim().endsWith("?");
   const namedOpen = readyId(record.open);
   const openId = namedOpen && asksSomething(namedOpen) ? "" : namedOpen;
@@ -924,7 +941,27 @@ export function parseDirection(
         // to find time then." with "Yeah, I know that feeling." named after it.
         (asksAbout(opening, followText) || words(opening).includes(words(followText))),
     );
-  const chosenFollow = (repeats ? "" : followId) || follow;
+  /**
+   * A question that points back needs something to point at.
+   *
+   * The lines in the bank work because they refer rather than name — "what did
+   * you do there?" fits whatever place was just mentioned. When the learner
+   * asked a question instead of telling the character something, there is no
+   * referent, and the brief's claim that they "fit anything" is exactly what
+   * over-applies them: reported from a phone, "i'm good, how about you?"
+   * answered with "Same here, actually." and then "What are they like?" — a
+   * "they" with nothing behind it.
+   *
+   * The reaction was right and only the follow was wrong, so only the follow
+   * goes. Their question is also still unanswered, which is its own reason not
+   * to pile another one on top of it. The scene's own scripted question is
+   * untouched: that one names what it asks and is what keeps a step answerable.
+   */
+  const theyAsked = request.heard.trim().endsWith("?");
+  // A reaction in the question half is the other way this comes apart.
+  const reactedTwice = Boolean(followId) && !asksSomething(followId);
+  const chosenFollow =
+    (repeats || theyAsked || reactedTwice ? "" : followId) || follow;
 
   return {
     assessment,
