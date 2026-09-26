@@ -1042,3 +1042,26 @@ test("the two halves of a turn each hold their own kind of line", () => {
   assert.deepEqual(proper?.say, { id: "talk.nice" });
   assert.equal(proper?.follow, "talk.there-what");
 });
+
+test("a question mark is not always a question mark", () => {
+  // The rule that sorts the two halves reads the end of a line, and reading
+  // only the ASCII "?" sorted all thirty-five Japanese questions as reactions
+  // — which refuses every follow, and would have killed the two-line turn in
+  // Japanese on the day it shipped, without a word anywhere.
+  const marks = ["?", "？", "؟"];
+  for (const language of ["en", "ja"]) {
+    const scenario = findScenario(`open-talk-${language}`)!;
+    const theirBank = sentencesFor(language);
+    const questions = (scenario.repertoire ?? []).filter((id) =>
+      marks.some((mark) => theirBank[id]!.text.trim().endsWith(mark)),
+    );
+    assert.equal(questions.length, 35, `${language} does not split into the two halves`);
+  }
+  // And the split is what the rules act on, so a Japanese follow survives.
+  const twoPart = parse(
+    { open: "talk.same", follow: "talk.there-what", say: "", assessment: "on_track", next: "free" },
+    { scenarioId: "open-talk-ja", nodeId: "talk", heard: "先週釜山に行ったよ", targetLanguage: "ja" },
+    findScenario("open-talk-ja")!,
+  );
+  assert.equal(twoPart?.follow, "talk.there-what");
+});

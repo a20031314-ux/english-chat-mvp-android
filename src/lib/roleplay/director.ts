@@ -728,7 +728,18 @@ export function parseDirection(
    * the most-used line in the bank is "Oh really? Tell me more." and it is a
    * reaction.
    */
-  const asksSomething = (id: string) => (bank[id]?.text ?? "").trim().endsWith("?");
+  //
+  // Not every language ends a question with "?". Japanese and Chinese use the
+  // full-width ？ and Arabic the mirrored ؟, and reading only the ASCII one
+  // classified all fifty-three Japanese lines as reactions — which would have
+  // refused every follow and quietly killed the two-line turn in Japanese the
+  // day it shipped. Thai marks a question with a particle and no punctuation at
+  // all; it has no bank yet, and when it gets one this will not be able to tell.
+  const QUESTION_MARKS = ["?", "？", "؟"];
+  const asksSomething = (id: string) => {
+    const text = (bank[id]?.text ?? "").trim();
+    return QUESTION_MARKS.some((mark) => text.endsWith(mark));
+  };
   const namedOpen = readyId(record.open);
   const openId = namedOpen && asksSomething(namedOpen) ? "" : namedOpen;
   // Seen from the real model: the same id answered both halves, which plays
