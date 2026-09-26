@@ -15,7 +15,7 @@ import {
 import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
 import type { RoleplayScenario, SentenceBank } from "@/lib/roleplay/script";
 import {
-  stateToResume,
+  resumeFrom,
   titleFor,
   type SavedConversation,
 } from "@/lib/roleplay/saved";
@@ -254,10 +254,16 @@ export function RoleplayScreen({
     // where it can be spoken to: the queue and the turn in flight are the
     // middle of a moment that did not survive the screen going away.
     const carrying = resume && resume.scenarioId === scenarioId ? resume : null;
-    const fresh = carrying ? stateToResume(carrying.state) : startSession(scenario);
+    // A resumed conversation is brought up to its own transcript first: a line
+    // is written down when it starts being said and the state moves past it
+    // only when the audio ends, so a scene closed on its greeting comes back
+    // about to say it again, on top of a transcript that already has it
+    // (saved.ts).
+    const picked = carrying ? resumeFrom(carrying, scenario, bank, Date.now()) : null;
+    const fresh = picked ? picked.state : startSession(scenario);
     setState(fresh);
     setInstruction(currentInstruction(scenario, bank, fresh));
-    setSaid(carrying ? carrying.said : []);
+    setSaid(picked ? picked.said : []);
     setMemory(carrying ? carrying.memory : EMPTY_MEMORY);
     savedId.current =
       carrying?.id ??

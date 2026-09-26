@@ -7,6 +7,7 @@ import type { LearningLanguageCode } from "@/lib/learningLanguages";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 import {
   readSaved,
+  removeSaved,
   resumableFor,
   upsertSaved,
   writeSaved,
@@ -86,6 +87,17 @@ export function RoleplayTab({
   );
   const saved = written ?? stored;
 
+  const discard = useCallback(
+    (id: string) => {
+      setWritten((current) => {
+        const next = removeSaved(current ?? stored, id);
+        writeSaved(globalThis.localStorage, next);
+        return next;
+      });
+    },
+    [stored],
+  );
+
   const keep = useCallback(
     (conversation: SavedConversation) => {
       setWritten((current) => {
@@ -141,6 +153,19 @@ export function RoleplayTab({
               </span>
             </button>
           ) : null}
+          {/* The one the door is offering is the one the list leaves out, so
+              without this it is the single conversation that cannot be cleared
+              — and it is the likeliest to want clearing, being the one being
+              carried on. */}
+          {carryOn ? (
+            <button
+              type="button"
+              onClick={() => discard(carryOn.id)}
+              className="-mt-2 text-[11px] text-neutral-500 underline-offset-4 transition hover:text-neutral-300 hover:underline"
+            >
+              {ui.delete}
+            </button>
+          ) : null}
           <button
             type="button"
             onClick={() => open(only.id, null)}
@@ -190,11 +215,11 @@ export function RoleplayTab({
           <h3 className="text-[12px] font-medium text-neutral-400">{ui.roleplayPast}</h3>
           <ul className="mt-2 max-h-40 overflow-y-auto">
             {past.map((row) => (
-              <li key={row.id}>
+              <li key={row.id} className="flex items-center gap-2">
                 <button
                   type="button"
                   onClick={() => setReading(row)}
-                  className="w-full rounded-lg px-1 py-2 text-left transition hover:bg-white/5"
+                  className="min-w-0 flex-1 rounded-lg px-1 py-2 text-left transition hover:bg-white/5"
                 >
                   <span className="block truncate text-[13px] text-neutral-200">
                     {row.title}
@@ -202,6 +227,17 @@ export function RoleplayTab({
                   <span className="mt-0.5 block text-[11px] text-neutral-500">
                     {new Date(row.startedAt).toLocaleDateString()}
                   </span>
+                </button>
+                {/* No confirmation, which is what the chat tab's own list does.
+                    A practice conversation is not a thing to be asked twice
+                    about, and being unable to clear one is the state this was
+                    added to get out of. */}
+                <button
+                  type="button"
+                  onClick={() => discard(row.id)}
+                  className="shrink-0 rounded-md border border-white/15 px-2 py-1 text-[11px] text-neutral-400 transition hover:bg-white/10"
+                >
+                  {ui.delete}
                 </button>
               </li>
             ))}

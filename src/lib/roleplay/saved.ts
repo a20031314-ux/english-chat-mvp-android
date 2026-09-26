@@ -1,6 +1,7 @@
 import type { ConversationMemory } from "./memory.ts";
 import type { TranscriptLine } from "./review.ts";
-import type { SessionState } from "./session.ts";
+import { afterSaying, currentInstruction, type SessionState } from "./session.ts";
+import type { RoleplayScenario, SentenceBank } from "./script.ts";
 
 /**
  * Conversations kept, so that closing one is not the same as losing it.
@@ -168,6 +169,49 @@ export function resumableFor(
  */
 export function stateToResume(state: SessionState): SessionState {
   return { ...state, queue: [], pending: null, listeningSince: null };
+}
+
+/**
+ * Where a saved conversation picks up, transcript and state agreeing.
+ *
+ * They can disagree, and the disagreement is easy to create. A line goes into
+ * the transcript when it starts being said, because the learner is reading
+ * along; the state moves past it only when the audio finishes. Close in between
+ * — which is most of the two seconds a greeting takes — and the saved row holds
+ * a conversation whose transcript has the line and whose state has not said it.
+ *
+ * Resuming then said it again, on top of a transcript that already had it.
+ * Reported from a phone as three conversations opening as one: hello, hello,
+ * hello. Each had been opened and closed on the greeting, and each resume added
+ * another copy.
+ *
+ * So the transcript is believed and the state is brought up to it. `afterSaying`
+ * is the right tool for that rather than a nudge of the node: it also puts the
+ * line into `history`, which is what the character reads, and which was equally
+ * missing — the director could not see a greeting the learner had been shown.
+ *
+ * The cost is a line that was displayed but never heard, because it was closed
+ * before the sound began, is not heard on the way back either. Against hearing
+ * it twice that is the better half of the trade, and it is the half the learner
+ * has already read.
+ */
+export function resumeFrom(
+  saved: SavedConversation,
+  scenario: RoleplayScenario,
+  bank: SentenceBank,
+  now: number,
+): { state: SessionState; said: TranscriptLine[] } {
+  let state = stateToResume(saved.state);
+  const lastSpoken = [...saved.said].reverse().find((line) => line.who === "tutor");
+  if (!lastSpoken) return { state, said: saved.said };
+  // One step, not a loop: only the node the conversation is sitting on can be
+  // about to repeat itself, and a scene that said the same line twice in a row
+  // on purpose would be caught by the second condition anyway.
+  const about = currentInstruction(scenario, bank, state);
+  if (about.do === "say" && about.text === lastSpoken.text) {
+    state = afterSaying(scenario, bank, state, now).state;
+  }
+  return { state, said: saved.said };
 }
 
 export function readSaved(store: Storage | undefined | null): SavedConversation[] {

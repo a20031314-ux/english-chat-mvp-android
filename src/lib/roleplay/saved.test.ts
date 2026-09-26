@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { findScenario } from "./catalog.ts";
-import { startSession } from "./session.ts";
+import { findScenario, sentencesFor } from "./catalog.ts";
+import { afterSaying, currentInstruction, startSession } from "./session.ts";
 import type { SessionState } from "./session.ts";
 import type { TranscriptLine } from "./review.ts";
 import {
@@ -11,6 +11,7 @@ import {
   readSaved,
   removeSaved,
   resumableFor,
+  resumeFrom,
   stateToResume,
   titleFor,
   upsertSaved,
@@ -165,4 +166,59 @@ test("removing one leaves the rest", () => {
     removeSaved(list, "a").map((row) => row.id),
     ["b"],
   );
+});
+
+test("a conversation closed on its greeting does not greet again", () => {
+  // Reported from a phone: three conversations opened as one, hello, hello,
+  // hello. A line goes into the transcript when it starts being said and the
+  // state moves past it only when the audio ends, so closing during the
+  // greeting — most of the two seconds it takes — saves a row whose transcript
+  // has the line and whose state has not said it.
+  const scenario = open;
+  const bank = sentencesFor("en");
+  const greeting = currentInstruction(scenario, bank, startSession(scenario));
+  assert.equal(greeting.do, "say");
+  const said: TranscriptLine[] = [{ who: "tutor", text: greeting.text! }];
+
+  const { state, said: back } = resumeFrom(
+    conversation({ state: startSession(scenario), said }),
+    scenario,
+    bank,
+    1000,
+  );
+  const next = currentInstruction(scenario, bank, state);
+  assert.equal(next.do, "listen", "it is their turn, not the greeting again");
+  assert.deepEqual(back, said, "and the transcript is left alone");
+});
+
+test("the line it skips is put into what the character remembers", () => {
+  // The other half of the same disagreement: history is written by afterSaying
+  // too, so a greeting the learner was shown but the state never committed was
+  // invisible to the character. Catching the state up fixes both at once.
+  const scenario = open;
+  const bank = sentencesFor("en");
+  const greeting = currentInstruction(scenario, bank, startSession(scenario));
+  const { state } = resumeFrom(
+    conversation({ state: startSession(scenario), said: [{ who: "tutor", text: greeting.text! }] }),
+    scenario,
+    bank,
+    1000,
+  );
+  assert.equal(state.history.at(-1)?.text, greeting.text);
+});
+
+test("a conversation that got past the greeting resumes where it stood", () => {
+  // The common case must not be disturbed: nothing is skipped when the
+  // transcript and the state already agree.
+  const scenario = open;
+  const bank = sentencesFor("en");
+  let state = startSession(scenario);
+  state = afterSaying(scenario, bank, state, 0).state; // the greeting finished
+  const said: TranscriptLine[] = [
+    { who: "tutor", text: "Hey! Good to see you. How's your day going?" },
+    { who: "learner", text: "pretty good" },
+  ];
+  const resumed = resumeFrom(conversation({ state, said }), scenario, bank, 1000);
+  assert.equal(resumed.state.nodeId, state.nodeId);
+  assert.deepEqual(resumed.state.history, state.history, "nothing added twice");
 });
