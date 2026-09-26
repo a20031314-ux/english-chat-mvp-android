@@ -960,3 +960,31 @@ test("the row sits in the half of the brief that does not move", () => {
   assert.match(fixed, /What goes wrong in Japanese in particular/);
   assert.ok(b.startsWith(fixed), "and the fixed half really is the same");
 });
+
+test("a question is not a reaction, whatever the model calls it", () => {
+  // "open" is what the character says back and "follow" is the question after
+  // it. Seen on a phone: "what did you do today?" answered with "What did you
+  // do there?" — a question that points back at nothing, standing where an
+  // answer belonged. Asked for in the brief first, and the wording measurably
+  // made it worse, so it is a rule here instead.
+  const wrongWayRound = parse(
+    { open: "talk.there-what", follow: "talk.what-next", say: "", assessment: "on_track", next: "free" },
+    { nodeId: "talk" },
+    open,
+  );
+  assert.deepEqual(wrongWayRound?.say, { id: "talk.what-next" }, "the follow leads instead");
+  assert.equal(wrongWayRound?.follow, undefined, "and nothing is said twice");
+});
+
+test("a reaction that merely contains a question mark is still a reaction", () => {
+  // The test is what it ends with. "Oh really? Tell me more." reads as somebody
+  // reacting; a rule about containing a question mark would have thrown away
+  // the most-used line in the bank.
+  const kept = parse(
+    { open: "talk.go-on", follow: "talk.there-what", say: "", assessment: "on_track", next: "free" },
+    { nodeId: "talk" },
+    open,
+  );
+  assert.deepEqual(kept?.say, { id: "talk.go-on" });
+  assert.equal(kept?.follow, "talk.there-what");
+});

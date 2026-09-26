@@ -8,6 +8,7 @@ import { isTtsVoice } from "@/lib/roleplay/voices";
 import {
   spokenFormForTts,
   speechLangPrefix,
+  sceneSpeechInstructions,
   ttsSpeechInstructions,
 } from "@/lib/speech";
 
@@ -116,7 +117,21 @@ async function synthesize(
       response_format: "pcm",
       ...(useInstructions
         ? {
-            instructions: ttsSpeechInstructions(lang),
+            // A scene's own voice is a character speaking, and it has to
+            // match the lines recorded into the app beside it. Those were made
+            // with a character brief (scripts/build-roleplay-audio.mjs); this
+            // route's usual one is about pronunciation and language leakage,
+            // written for chat and video, and says nothing about who is
+            // talking. Same voice name, two different performances — reported
+            // from a phone as the tutor not sounding like one person.
+            //
+            // The role itself is not carried here. It would have to ride in the
+            // URL, and the URL is the cache key: every warmed line would miss
+            // and every build that does not send it would be inconsistent
+            // again. Role-neutral gets the delivery back without any of that.
+            instructions: isTtsVoice(rawVoice)
+              ? sceneSpeechInstructions(lang)
+              : ttsSpeechInstructions(lang),
             stream_format: "audio",
           }
         : {}),

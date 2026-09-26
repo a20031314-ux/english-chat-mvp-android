@@ -249,10 +249,26 @@ function recorded(
 ): QueuedLine | null {
   const sentence = bank[id];
   if (!sentence) return null;
+  /**
+   * Whether this line ships as a file at all.
+   *
+   * A repertoire line does not: scripts/build-roleplay-audio.mjs records
+   * `sentenceIdsUsed`, the scene's nodes and not its repertoire, because sixty
+   * kilobytes a line is what kept the bank small.
+   *
+   * Saying so here rather than finding out by asking for the file. On a phone
+   * that request neither loaded nor failed — the element raised no error, the
+   * play never rejected, and the eight-second watchdog moved the scene on in
+   * silence. Read off a real conversation: four bank lines in a row appear in
+   * the transcript and not one of them produced a request for speech.
+   */
+  const shipsAsFile = !scenario.repertoire?.includes(id);
   return {
     text: sentence.text,
     translation: sentence.translation,
-    audioPath: sentenceAudioPath(sentence.text, scenario.voice, scenario.language),
+    ...(shipsAsFile
+      ? { audioPath: sentenceAudioPath(sentence.text, scenario.voice, scenario.language) }
+      : {}),
   };
 }
 

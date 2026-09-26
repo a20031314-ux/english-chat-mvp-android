@@ -169,6 +169,29 @@ export function ttsSpeechInstructions(lang: string): string {
     .join(" ");
 }
 
+/**
+ * How a scene's own voice is asked to speak.
+ *
+ * The lines recorded into the app were made with a character brief — someone
+ * doing their job, talking to a person, not announcing — and a line the scene
+ * has to synthesise now sits directly beside them in the same conversation. If
+ * the two are briefed differently they come out as two people, which is what a
+ * learner hears: the same voice name performing twice.
+ *
+ * So this is the recorder's brief (scripts/build-roleplay-audio.mjs) with the
+ * language guards kept, because those are what stop a Portuguese line being
+ * read with English vowels and they are wanted either way. The role is left out
+ * rather than carried in the URL: the URL is the cache key, so a role would
+ * miss every warmed line and split by build.
+ */
+export function sceneSpeechInstructions(lang: string): string {
+  return [
+    "You are talking to someone in person, in a real conversation.",
+    "Natural, unhurried, friendly. Do not perform or announce; just talk.",
+    ttsSpeechInstructions(lang),
+  ].join(" ");
+}
+
 const LATIN_LETTER_NAMES: Record<string, Record<string, string>> = {
   es: {
     a: "a",

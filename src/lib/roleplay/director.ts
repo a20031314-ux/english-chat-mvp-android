@@ -697,7 +697,23 @@ export function parseDirection(
     const candidate = typeof value === "string" ? value.trim() : "";
     return candidate && recordedIds.has(candidate) ? candidate : "";
   };
-  const openId = readyId(record.open);
+  /**
+   * The reaction half of a turn, which may not be a question.
+   *
+   * "open" is what the character says back to what it was just told and
+   * "follow" is the question after it. The bank holds both kinds and the model
+   * sometimes takes one from the wrong half: seen on a phone, "what did you do
+   * today?" answered with "What did you do there?" — a question that points
+   * back at nothing, standing where an answer belonged.
+   *
+   * Asked for in words first, and the wording made it worse rather than better,
+   * so it is a rule here instead. Ending in a question mark is the test rather
+   * than containing one: "Oh really? Tell me more." is a reaction and reads as
+   * one, while anything that finishes by asking is the other half.
+   */
+  const asksSomething = (id: string) => (bank[id]?.text ?? "").trim().endsWith("?");
+  const namedOpen = readyId(record.open);
+  const openId = namedOpen && asksSomething(namedOpen) ? "" : namedOpen;
   // Seen from the real model: the same id answered both halves, which plays
   // "What did you do there? What did you do there?" A repeat is worse than a
   // shorter turn, so the second copy is dropped rather than spoken.

@@ -568,3 +568,40 @@ test("one word is only looked for inside a turn that has no words to count", () 
   // A phrase of several words carries enough of itself to be looked for.
   assert.equal(phraseScore("i have to go", "okay i have to go now"), 1);
 });
+
+test("a line with no recording says so, rather than being found out by asking", () => {
+  // Read off a real conversation on a phone: four bank lines in a row in the
+  // transcript, and not one request for speech. The path they take asks for a
+  // file that is not there and waits for it to fail; on Android it neither
+  // loaded nor errored, and the watchdog moved the scene on in silence.
+  const scenario = findScenario("open-talk-en")!;
+  const bank = sentencesFor("en");
+  let state = startSession(scenario);
+  state = { ...state, pending: { heard: "i love baseball", attempts: 1, hesitationMs: 0 } };
+  const moved = applyDirection(
+    scenario,
+    bank,
+    state,
+    {
+      assessment: "on_track",
+      say: { id: "talk.good-point" },
+      follow: "talk.what-like",
+      note: "",
+      next: { step: "talk" },
+    },
+    Date.now(),
+  );
+  for (const line of moved.state.queue) {
+    assert.equal(line.audioPath, undefined, `${line.text} still asks for a file`);
+  }
+});
+
+test("a line that really is recorded still plays from its file", () => {
+  // The other half: the greeting and the goodbye do ship, and going through
+  // speech for them would pay for audio that is already on the phone.
+  const scenario = findScenario("open-talk-en")!;
+  const bank = sentencesFor("en");
+  const greeting = currentInstruction(scenario, bank, startSession(scenario));
+  assert.equal(greeting.do, "say");
+  assert.ok(greeting.audioPath, "the greeting is one of the two lines a language records");
+});

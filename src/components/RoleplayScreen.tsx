@@ -354,7 +354,23 @@ export function RoleplayScreen({
      * warm-roleplay-speech.mjs warms them before a release so that nobody
      * does).
      */
+    /**
+     * Once, however many ways the file failed.
+     *
+     * A line the bank holds as words alone has an audioPath that resolves to
+     * nothing, and a missing file announces itself twice: the element fires
+     * `error` and `play()` rejects. Both used to reach here, and the second
+     * call's `stopTts` ended the first one's playback — whose promise then
+     * resolved, called `advance`, and moved the scene on before the second
+     * synthesis had arrived. The line passed in silence.
+     *
+     * Which is every repertoire line, since those are exactly the ones with no
+     * file, and until this week none had ever played on a phone.
+     */
+    let speaking = false;
     const speak = () => {
+      if (speaking) return;
+      speaking = true;
       watchdog = window.setTimeout(advance, GENERATED_AUDIO_MS);
       void playTts(
         instruction.text,
