@@ -115,7 +115,19 @@ function dropBoundaryEchoes(segments: SttSegment[]): SttSegment[] {
 const SENTENCE_END = /[.!?…]["']?$/;
 const HARD_PAUSE_SECONDS = 0.48;
 const WORDS_PER_SECOND = 3.2;
-  const START_LEAD_SECONDS = 0.18;
+/**
+ * Faster than anybody talks, which is how a collapsed stamp is recognised.
+ *
+ * A caption event whose start and end land a fifth of a second apart with ten
+ * words in it has lost its timing, and expanding it forward is right. The test
+ * for that used to be "shorter than a bit over half of what 3.2 words a second
+ * would take", which is a rate of 5.8 — inside what an ordinary quick speaker
+ * does. So on a fast video an accurately stamped line was read as collapsed and
+ * stretched to the slow reader's pace, holding the subtitle well past the
+ * speech and into the next pause. Nine words a second is past an auctioneer.
+ */
+const IMPOSSIBLE_WORDS_PER_SECOND = 9;
+const START_LEAD_SECONDS = 0.18;
 const MAX_PREV_TRIM_SECONDS = 0.4;
 const CUE_VERB =
   /\b(am|is|are|was|were|be|been|'s|'re|'m|do|does|did|have|has|had|'ve|will|would|can|could|should|need|needs|needed|go|goes|went|get|got|know|think|want|said|say|make|made|take|see|come|came|tell|told|leave|left|call|talk|keep|try|ask|show|give|feel|look)\b/i;
@@ -259,7 +271,7 @@ export function alignSttToSpeech(segments: SttSegment[]): SttSegment[] {
       }
     }
     end = Math.max(start + 0.3, end);
-    if (words >= 3 && end - start < expected * 0.55) {
+    if (words >= 3 && end - start < words / IMPOSSIBLE_WORDS_PER_SECOND) {
       const stretched = start + expected;
       const nextStart = segments[i + 1]?.startTime;
       // Stretching into the next stamp made cue 2 start mid-sentence on long videos.

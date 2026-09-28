@@ -4,10 +4,10 @@ import {
   assertVideoPrepAllowed,
   recordVideoPrepForRequest,
 } from "@/lib/server/videoPrepGate";
-import { asNumber, asRecord, asString } from "@/lib/videoSubtitle/parseModelJson";
+import { parseSttSegments } from "@/lib/videoSubtitle/parseSttSegments";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { prepareVideoTranscript } from "@/lib/videoSubtitle/pipeline";
-import type { SttSegment, SttSource } from "@/lib/videoSubtitle/types";
+import type { SttSource } from "@/lib/videoSubtitle/types";
 
 const STT_SOURCES: SttSource[] = [
   "whisper",
@@ -18,24 +18,6 @@ const STT_SOURCES: SttSource[] = [
 
 export const runtime = "nodejs";
 export const maxDuration = 180;
-
-function asSegment(value: unknown): SttSegment | null {
-  const row = asRecord(value);
-  if (!row) return null;
-  const id = asString(row.id);
-  const text = asString(row.text);
-  const startTime = asNumber(row.startTime);
-  const endTime = asNumber(row.endTime);
-  if (!id || !text || startTime == null || endTime == null) return null;
-  return {
-    id,
-    text,
-    startTime,
-    endTime,
-    confidence: asNumber(row.confidence) ?? undefined,
-    uncertain: row.uncertain === true,
-  };
-}
 
 export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
@@ -65,12 +47,7 @@ export async function POST(request: NextRequest) {
     typeof body.targetLanguage === "string" && body.targetLanguage
       ? body.targetLanguage
       : "en";
-  const segments = Array.isArray(body.segments)
-    ? body.segments
-        .map(asSegment)
-        .filter((row): row is SttSegment => row !== null)
-        .slice(0, 800)
-    : [];
+  const segments = parseSttSegments(body.segments, 800);
 
   if (segments.length === 0) {
     return jsonWithCors(request, { error: "NO_SPEECH" }, { status: 422 });

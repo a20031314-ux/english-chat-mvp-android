@@ -62,8 +62,9 @@ test("regularizeSttSegments splits on sentences and snaps overlaps", () => {
     [
       "Hello there.",
       "This is a second sentence.",
-      "And here is a third one.",
-      "overlap",
+      // The overlapping line is one lowercase word, which is a caption carrying
+      // on rather than a sentence of its own, so it joins the line before it.
+      "And here is a third one. overlap",
     ],
   );
   for (let i = 0; i < rows.length - 1; i += 1) {

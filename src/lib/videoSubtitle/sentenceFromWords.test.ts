@@ -268,3 +268,111 @@ test("flattenSttToTimedWords concatenates chunk words in list order", () => {
   assert.equal(span?.startMs, 1000);
   assert.ok((span?.endMs ?? 0) >= 2550);
 });
+
+test("a one-word aside is not a subtitle of its own", () => {
+  const spans = splitSentencesFromWords(
+    words([
+      ["Right.", 4.07, 4.46],
+      ["But", 4.5, 4.66],
+      ["it", 4.7, 4.82],
+      ["still", 4.86, 5.05],
+      ["shoots", 5.1, 5.4],
+      ["4K.", 5.45, 5.9],
+    ]),
+  );
+  assert.equal(spans.length, 1);
+  assert.match(spans[0]!.text, /^Right\. But it still shoots 4K\./);
+  assert.equal(spans[0]!.startMs, 4070);
+});
+
+test("a one-word aside at the end goes to the line before it", () => {
+  const spans = splitSentencesFromWords(
+    words([
+      ["That", 0, 0.2],
+      ["is", 0.25, 0.4],
+      ["the", 0.45, 0.6],
+      ["whole", 0.65, 0.9],
+      ["video.", 0.95, 1.4],
+      ["Thanks.", 1.5, 1.9],
+    ]),
+  );
+  assert.equal(spans.length, 1);
+  assert.match(spans[0]!.text, /video\. Thanks\.$/);
+});
+
+test("a short answer stays a line of its own between two other turns", () => {
+  // Merged forward it would be put in the other speaker's mouth. A one-word
+  // answer is the whole turn, which is the one case where it earns a cue.
+  const spans = splitSentencesFromWords(
+    words([
+      ["Did", 0, 0.2, "A"],
+      ["you", 0.25, 0.4, "A"],
+      ["like", 0.45, 0.6, "A"],
+      ["it?", 0.65, 0.9, "A"],
+      ["Yes.", 1.1, 1.5, "B"],
+      ["Good", 1.7, 1.9, "A"],
+      ["to", 1.95, 2.05, "A"],
+      ["hear", 2.1, 2.3, "A"],
+      ["that.", 2.35, 2.7, "A"],
+    ]),
+  );
+  assert.equal(spans.length, 3);
+  assert.equal(spans[1]!.text, "Yes.");
+});
+
+test("a period dropped mid-phrase does not cut the sentence", () => {
+  // What a speech model does to a fast talker: a full stop after a word that
+  // no open-ending rule catches, and then the sentence carries on lowercase.
+  const spans = splitSentencesFromWords(
+    words([
+      ["So", 0, 0.16],
+      ["the", 0.18, 0.3],
+      ["sensor", 0.34, 0.66],
+      ["is.", 0.7, 0.9],
+      ["actually", 0.94, 1.3],
+      ["smaller", 1.34, 1.7],
+      ["than", 1.74, 1.9],
+      ["you", 1.94, 2.06],
+      ["think.", 2.1, 2.5],
+    ]),
+  );
+  assert.equal(spans.length, 1);
+  assert.match(spans[0]!.text, /sensor is\. actually smaller/);
+});
+
+test("a real sentence boundary still cuts, capital and all", () => {
+  const spans = splitSentencesFromWords(
+    words([
+      ["The", 0, 0.16],
+      ["sensor", 0.2, 0.5],
+      ["is", 0.54, 0.66],
+      ["small.", 0.7, 1.0],
+      ["It", 1.1, 1.24],
+      ["still", 1.28, 1.5],
+      ["shoots", 1.54, 1.8],
+      ["4K.", 1.84, 2.2],
+    ]),
+  );
+  assert.deepEqual(
+    spans.map((span) => span.text),
+    ["The sensor is small.", "It still shoots 4K."],
+  );
+});
+
+test("captions that never capitalise are still cut at their full stops", () => {
+  // YouTube's automatic captions come lowercase; there is no capital to read,
+  // so the mid-phrase rule has to stay out of the way.
+  const spans = splitSentencesFromWords(
+    words([
+      ["the", 0, 0.16],
+      ["sensor", 0.2, 0.5],
+      ["is", 0.54, 0.66],
+      ["small.", 0.7, 1.0],
+      ["it", 1.1, 1.24],
+      ["still", 1.28, 1.5],
+      ["shoots", 1.54, 1.8],
+      ["4k.", 1.84, 2.2],
+    ]),
+  );
+  assert.equal(spans.length, 2);
+});

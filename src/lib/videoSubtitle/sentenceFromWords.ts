@@ -64,6 +64,112 @@ function isSpeakerMark(word: string): boolean {
   return SPEAKER_MARK.test(word.trim());
 }
 
+function firstLetter(text: string): string {
+  return text.match(/\p{L}/u)?.[0] ?? "";
+}
+
+function isLowercaseLetter(letter: string): boolean {
+  return Boolean(letter) && letter === letter.toLowerCase() && letter !== letter.toUpperCase();
+}
+
+function isUppercaseLetter(letter: string): boolean {
+  return Boolean(letter) && letter === letter.toUpperCase() && letter !== letter.toLowerCase();
+}
+
+/**
+ * The period was Whisper's, not the speaker's.
+ *
+ * Fast speech is where a speech model drops punctuation in the wrong place:
+ * "the sensor is. actually smaller than you think" gets a full stop after a
+ * word that no rule here calls open, and the sentence is cut in half. What
+ * gives it away is the word after it. A sentence the model believes in starts
+ * with a capital — it capitalises every sentence it writes — so a lowercase
+ * word after a full stop means the model did not believe in that stop either.
+ *
+ * Only asked of material that uses case at all, which the line's own opening
+ * word settles: YouTube's automatic captions arrive entirely lowercase and
+ * unpunctuated, and there this decides nothing.
+ */
+export function continuesPastPunctuation(current: string, nextWord: string): boolean {
+  if (isSpeakerMark(nextWord)) return false;
+  if (!isUppercaseLetter(firstLetter(current))) return false;
+  // "Never gonna give you up. up Never gonna..." — a chunk boundary repeating
+  // its last word looks exactly like a sentence carrying on, and gluing the two
+  // lines together is how the echo would survive: it is stripped after the cut,
+  // not before it.
+  if (normalizeSttToken(nextWord) === normalizeSttToken(lastToken(current))) {
+    return false;
+  }
+  return isLowercaseLetter(firstLetter(nextWord));
+}
+
+function tokenCount(text: string): number {
+  return text.split(/\s+/).filter(Boolean).length;
+}
+
+/** One word is not a subtitle. An unspaced CJK clause is one word and is. */
+function isLoneFragment(span: SentenceSpan): boolean {
+  if (tokenCount(span.text) !== 1) return false;
+  if (isSpeakerMark(span.text)) return false;
+  return countCjkLetters(span.text) < 8;
+}
+
+function joinable(
+  words: TimedWord[],
+  left: SentenceSpan,
+  right: SentenceSpan,
+): boolean {
+  const before = words[left.endIndex];
+  const after = words[right.startIndex];
+  if (!before || !after) return false;
+  if (isSpeakerMark(after.text)) return false;
+  return !(
+    before.speakerTag &&
+    after.speakerTag &&
+    before.speakerTag !== after.speakerTag
+  );
+}
+
+/**
+ * Give a one-word line to the line beside it.
+ *
+ * "Right." "Okay so." "I mean." — a quick speaker scatters these between
+ * sentences and a speech model ends each with a full stop, so every one of
+ * them became a cue of its own, on screen for four tenths of a second. There is
+ * nothing to read there and nothing to study, and it is what a learner notices
+ * first about a fast video.
+ *
+ * The fragment goes to the sentence that follows it, which is where it belongs
+ * in the talking: "Right. But it still shoots 4K sixty." One at the very end of
+ * the transcript has nothing after it and goes to the line before instead.
+ * Never across a change of speaker — there the short answer is the turn.
+ */
+export function absorbLoneFragments(
+  words: TimedWord[],
+  spans: SentenceSpan[],
+): SentenceSpan[] {
+  if (spans.length < 2) return spans;
+  const out: SentenceSpan[] = [];
+  for (const span of spans) {
+    const prev = out[out.length - 1];
+    if (prev && isLoneFragment(prev) && joinable(words, prev, span)) {
+      const merged = spanFromWordSlice(words, prev.startIndex, span.endIndex);
+      if (merged) {
+        out[out.length - 1] = merged;
+        continue;
+      }
+    }
+    out.push(span);
+  }
+  const last = out[out.length - 1];
+  const before = out[out.length - 2];
+  if (last && before && isLoneFragment(last) && joinable(words, before, last)) {
+    const merged = spanFromWordSlice(words, before.startIndex, last.endIndex);
+    if (merged) out.splice(out.length - 2, 2, merged);
+  }
+  return out;
+}
+
 /**
  * Punctuation and speaker changes only. Acoustic pauses are ignored so VAD
  * chunks cannot cut a sentence. Unpunctuated runs stay together for LLM.
@@ -105,7 +211,8 @@ export function splitWordsByPunctAndSpeaker(words: TimedWord[]): SentenceSpan[] 
       SENTENCE_PUNCT.test(word.text.trim()) &&
       !isAbbrevWord(word.text) &&
       !endsOpen(currentText) &&
-      !openNounPhrase(currentText)
+      !openNounPhrase(currentText) &&
+      !(next && continuesPastPunctuation(currentText, next.text))
     ) {
       cuts.push(i);
       start = i + 1;
@@ -234,13 +341,13 @@ export async function refineSpansWithLlm(
       if (mapped) out.push(mapped);
     }
   }
-  return out.length > 0 ? out : spans;
+  return absorbLoneFragments(words, out.length > 0 ? out : spans);
 }
 
 export function splitSentencesFromWords(
   words: TimedWord[],
 ): SentenceSpan[] {
-  return splitWordsByPunctAndSpeaker(words);
+  return absorbLoneFragments(words, splitWordsByPunctAndSpeaker(words));
 }
 
 export function sentenceSegmentsFromStt(segments: SttSegment[]): SttSegment[] {
