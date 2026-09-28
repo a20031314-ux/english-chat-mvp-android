@@ -10,6 +10,7 @@ export const APP_LOCALE_STORAGE_KEY = "appUiLocale";
 export const LOCALE_OPTIONS = uiLocaleOptions();
 
 const generatedRoleplayOverlay = {
+  roleplayGoal: "Say anything you like.",
   roleplayPause: "Pause",
   roleplayResume: "Carry on",
   roleplayPast: "Past conversations",
@@ -120,6 +121,7 @@ export const copy = {
     roleplayReviewLoading: "돌아보는 중…",
     roleplayReviewFailed: "지금은 회고를 만들지 못했어요. 잠시 후 다시 눌러보세요.",
     roleplayOutOfPoints: "무료로 쓸 수 있는 통화 학습 시간을 다 썼어요. 구독하면 이어서 할 수 있어요.",
+    roleplayGoal: "편하게 아무 얘기나 해 보세요.",
     roleplayPause: "중단",
     roleplayResume: "이어서 하기",
     roleplayPast: "지난 대화",
@@ -822,6 +824,7 @@ export const copy = {
     roleplayReviewLoading: "Looking back…",
     roleplayReviewFailed: "Couldn't put this together just now. Try the button again in a moment.",
     roleplayOutOfPoints: "That's the free call practice used up. A subscription carries on from here.",
+    roleplayGoal: "Say anything you like.",
     roleplayPause: "Pause",
     roleplayResume: "Carry on",
     roleplayPast: "Past conversations",
@@ -1521,6 +1524,7 @@ export const copy = {
     roleplayReviewLoading: "Repasando…",
     roleplayReviewFailed: "No se pudo preparar ahora mismo. Vuelve a pulsar en un momento.",
     roleplayOutOfPoints: "Has agotado la práctica de llamada gratuita. La suscripción continúa desde aquí.",
+    roleplayGoal: "Habla de lo que quieras.",
     roleplayPause: "Pausar",
     roleplayResume: "Continuar",
     roleplayPast: "Conversaciones anteriores",

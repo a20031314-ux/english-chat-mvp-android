@@ -46,6 +46,19 @@ type JustTalk = {
  * interface languages means carrying a gloss per pair, which is a larger change
  * than this one and is not pretended at here.
  */
+/**
+ * The language every gloss in this file is written in.
+ *
+ * Said out loud so that a screen can tell whether it is any use to the person
+ * reading it. A French speaker learning Japanese was being shown the Japanese
+ * greeting with a Korean line under it — free, hand-written, and unreadable.
+ *
+ * A learner who does not read this is better served by having no gloss at all,
+ * because a line without one is now asked about as soon as it has been said and
+ * comes back in their own language (RoleplayScreen).
+ */
+export const BANK_GLOSS_LANGUAGE = "ko";
+
 const HELLO_GLOSS = "안녕! 만나서 반가워. 오늘 하루 어때?";
 const BYE_GLOSS = "좋아, 얘기 즐거웠어. 다음에 또 봐!";
 
@@ -469,7 +482,10 @@ export function justTalkScenarios(): RoleplayScenario[] {
       talk: {
         type: "learner",
         id: "talk",
-        goal: "편하게 아무 얘기나 해 보세요.",
+        // Left empty: what a learner is asked to do here is interface text and
+        // belongs with the rest of it, where fourteen languages already live.
+        // Written in here it reached every learner in Korean (copy.ts).
+        goal: "",
         expect: [{ match: entry.leaving, go: "bye" }],
       },
       bye: { type: "tutor", id: "bye", say: JUST_TALK_BYE, next: null },

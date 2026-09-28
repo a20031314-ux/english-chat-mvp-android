@@ -94,7 +94,15 @@ test("every learner node offers more than one way to be right", () => {
         phrasings.length >= 2,
         `${scenario.id}/${node.id} accepts only ${phrasings.length}`,
       );
-      assert.ok(node.goal.length > 0, `${scenario.id}/${node.id} has no goal`);
+      // A scripted step says what it is asking for, and that is written with
+      // the scene. An open conversation asks for nothing, so its line on screen
+      // is interface text and lives with the rest of it: written into the scene
+      // it reached every learner in Korean, whatever they were learning.
+      if (scenario.openEnded) {
+        assert.equal(node.goal, "", `${scenario.id}/${node.id} carries its own goal`);
+      } else {
+        assert.ok(node.goal.length > 0, `${scenario.id}/${node.id} has no goal`);
+      }
       assert.ok(node.expect.length > 0, `${scenario.id}/${node.id} has no branch`);
     }
   }

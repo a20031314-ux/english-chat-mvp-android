@@ -14,6 +14,7 @@ import {
 } from "@/lib/learningLanguages";
 import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
 import type { RoleplayScenario, SentenceBank } from "@/lib/roleplay/script";
+import { BANK_GLOSS_LANGUAGE } from "@/lib/roleplay/justTalk";
 import {
   resumeFrom,
   titleFor,
@@ -314,9 +315,22 @@ export function RoleplayScreen({
   useEffect(() => {
     if (!scenario || !state || instruction?.do !== "say") return;
     let cancelled = false;
+    /**
+     * The gloss that ships with a recorded line, if it is any use to this
+     * learner.
+     *
+     * Every gloss written into the bank is Korean, which is free and checked
+     * and worth keeping for the people who read Korean. Anyone else was being
+     * shown it anyway: a French speaker learning Japanese got the Japanese
+     * greeting with a Korean line underneath. Dropping it is the whole fix,
+     * because a line with no gloss is asked about as soon as it has been said
+     * and comes back in the language they actually speak.
+     */
+    const gloss =
+      nativeLanguage === BANK_GLOSS_LANGUAGE ? instruction.translation : undefined;
     setSaid((current) => [
       ...current,
-      { who: "tutor", text: instruction.text, translation: instruction.translation },
+      { who: "tutor", text: instruction.text, translation: gloss },
     ]);
     // Nothing waits on this: it is the next line being fetched behind this one.
     warmNextLine(scenario, bank, state);
@@ -338,7 +352,7 @@ export function RoleplayScreen({
       // glosses and so every line after the greeting had none. Asking for it
       // is about three per cent of what a minute costs, which is not a reason
       // to make somebody press something to find out what they just heard.
-      if (!instruction.translation) translateLine(instruction.text);
+      if (!gloss) translateLine(instruction.text);
       const moved = afterSaying(scenario, bank, state, Date.now());
       setState(moved.state);
       setInstruction(moved.instruction);
@@ -773,8 +787,14 @@ export function RoleplayScreen({
       <footer className="shrink-0 border-t border-white/10 p-3 pb-[env(safe-area-inset-bottom)]">
         {instruction?.do === "listen" ? (
           <div className="flex flex-col gap-2">
-            {instruction.goal ? (
-              <p className="text-[13px] text-neutral-300">{instruction.goal}</p>
+            {/* A scripted step carries its own goal, written with the scene.
+                An open conversation has no task, so what it says is interface
+                text and comes from the copy, which has fourteen languages —
+                written into the scene it reached every learner in Korean. */}
+            {instruction.goal || scenario.openEnded ? (
+              <p className="text-[13px] text-neutral-300">
+                {instruction.goal || ui.roleplayGoal}
+              </p>
             ) : null}
             {instruction.hint ? (
               <p className="text-[12px] text-neutral-500">{instruction.hint}</p>
