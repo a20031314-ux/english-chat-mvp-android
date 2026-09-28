@@ -59,13 +59,34 @@ const RANGES: Record<Script, RegExp> = {
  * something. What it catches is an answer that is mostly not the language at
  * all, which is what an invented one looks like.
  */
+/**
+ * How much of a turn has to be the language before it is believed.
+ *
+ * A fifth, which is low on purpose: what this refuses is an answer with none of
+ * the language in it, because that is what an invented one looks like — half a
+ * second of room noise came back as a whole Japanese sentence, with not one
+ * Latin letter in it.
+ *
+ * It was a half, and a half does not mean "mostly not the language" however it
+ * reads. Measured on what a learner actually says: "How can I say 전기공학 in
+ * English?" is 83% Latin and went through, and the answer to it — "It's
+ * 전기공학." — is 43% and was thrown away whole. The app then heard silence and
+ * the character replied to somebody who had said nothing, one turn after
+ * answering the question that prompted it.
+ *
+ * Which is the worst turn to lose. Reaching for a word in your own language
+ * because you do not have it yet in the one you are learning is the moment the
+ * app exists for.
+ */
+const ENOUGH_OF_THE_LANGUAGE = 0.2;
+
 export function looksLikeLanguage(text: string, language: string): boolean {
   const script = SCRIPT_OF[language];
   if (!script) return true;
   const letters = [...text].filter((character) => /\p{L}/u.test(character));
   if (letters.length === 0) return true;
   const matching = letters.filter((character) => RANGES[script].test(character)).length;
-  return matching / letters.length >= 0.5;
+  return matching / letters.length >= ENOUGH_OF_THE_LANGUAGE;
 }
 
 /**

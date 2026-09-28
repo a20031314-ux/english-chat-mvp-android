@@ -385,11 +385,30 @@ export function RoleplayScreen({
     const speak = () => {
       if (speaking) return;
       speaking = true;
-      watchdog = window.setTimeout(advance, GENERATED_AUDIO_MS);
+      /**
+       * Two waits, because they are two different questions.
+       *
+       * The first is whether anything is coming: speech is fetched from a
+       * server that is usually quick and is sometimes not — measured against
+       * the deployed one, the same request took under a second four times and
+       * then nineteen, nine, and longer than five minutes. The second is how
+       * long a line takes to say, which is a few seconds.
+       *
+       * One timer had to cover both, so it was set to the longest line anyone
+       * might play and a conversation could sit still for half a minute with
+       * the words on screen and nothing happening. That is not slow, that reads
+       * as broken. Now a line that has not begun in eight seconds is given up
+       * on and the scene moves, and one that has begun is allowed to finish.
+       */
+      watchdog = window.setTimeout(advance, STALLED_AUDIO_MS);
       void playTts(
         instruction.text,
         learningLanguageSpeechTag(scenario.language),
         instruction.voice,
+        () => {
+          window.clearTimeout(watchdog);
+          watchdog = window.setTimeout(advance, GENERATED_AUDIO_MS);
+        },
       ).then(advance, advance);
     };
 

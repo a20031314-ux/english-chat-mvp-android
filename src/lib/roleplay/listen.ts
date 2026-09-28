@@ -1,3 +1,4 @@
+import { TURN_NOT_STARTED, hearFrame } from "./hearFrame.ts";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import {
@@ -130,31 +131,6 @@ async function transcribe(
  * would be buying the wrong thing.
  */
 
-/** Loud enough to be someone talking rather than a room being a room. */
-const SPEECH_RMS = 0.02;
-/** Below this a burst is a cough, a chair, a door — not a turn. */
-const MIN_SPEECH_MS = 300;
-/**
- * How long a pause has to last before the turn counts as finished.
- *
- * Long enough to survive the gap between words and a moment of thinking
- * mid-sentence; short enough that finishing does not feel like waiting. People
- * pause longer in a language they are learning, which is why this is not the
- * 500ms a native-speaker VAD would use.
- *
- * Was 1400, and came down after the first real conversation on a phone: from
- * the learner's last word there are three more waits before they hear anything
- * — hearing what was said, deciding what to answer, saying it out loud, about
- * six seconds in all — and this one is the only part of it that is a number
- * rather than a model. Half a second off the front of six is worth having, and
- * it is the cheapest half second available.
- *
- * It is a dial, and this is the direction with a cost: too short and someone
- * thinking mid-sentence gets cut off, which is worse than waiting. If turns
- * start being sent while people are still talking, this is the reason, and 1400
- * is where it was.
- */
-const TRAILING_SILENCE_MS = 900;
 /** Nobody's single turn runs this long. A stuck detector should still send. */
 const MAX_TURN_MS = 20000;
 /** How long to wait for a first word before giving up and calling it silence. */
@@ -172,6 +148,7 @@ function analysisContext(): AudioContext {
   void analysisCtx.resume().catch(() => undefined);
   return analysisCtx;
 }
+
 
 type VoiceWatch = { stop: () => void; speechStartedAt: () => number | null };
 
@@ -195,12 +172,7 @@ function watchForVoice(
 
   const samples = new Float32Array(analyser.fftSize);
   const startedAt = Date.now();
-  let speechSince: number | null = null;
-  let silenceSince: number | null = null;
-  let spoke = false;
-  // The start of the burst that turned out to be speech, not the moment it was
-  // confirmed as such: the learner began talking then.
-  let firstSpeechAt: number | null = null;
+  let turn = TURN_NOT_STARTED;
   let done = false;
 
   const finish = () => {
@@ -222,32 +194,22 @@ function watchForVoice(
     const level = Math.sqrt(sum / samples.length);
     const now = Date.now();
 
-    if (level >= SPEECH_RMS) {
-      silenceSince = null;
-      if (speechSince === null) speechSince = now;
-      if (!spoke && now - speechSince >= MIN_SPEECH_MS) {
-        spoke = true;
-        firstSpeechAt = speechSince;
-        on.speaking(true);
-      }
-    } else {
-      speechSince = null;
-      if (silenceSince === null) silenceSince = now;
-      // Only a pause after real speech ends a turn. Silence before it just
-      // means they have not started.
-      if (spoke && now - silenceSince >= TRAILING_SILENCE_MS) {
-        on.speaking(false);
-        finish();
-        return;
-      }
-    }
-
-    if (spoke && now - startedAt >= MAX_TURN_MS) {
+    const wasSpeaking = turn.spoke;
+    const heard = hearFrame(turn, level, now);
+    turn = heard.turn;
+    if (turn.spoke && !wasSpeaking) on.speaking(true);
+    if (heard.finished) {
       on.speaking(false);
       finish();
       return;
     }
-    if (!spoke && now - startedAt >= NO_SPEECH_MS) finish();
+
+    if (turn.spoke && now - startedAt >= MAX_TURN_MS) {
+      on.speaking(false);
+      finish();
+      return;
+    }
+    if (!turn.spoke && now - startedAt >= NO_SPEECH_MS) finish();
   }, 60);
 
   return {
@@ -261,7 +223,7 @@ function watchForVoice(
         // Already gone with the stream.
       }
     },
-    speechStartedAt: () => firstSpeechAt,
+    speechStartedAt: () => turn.firstSpeechAt,
   };
 }
 

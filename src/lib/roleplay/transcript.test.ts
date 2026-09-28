@@ -27,12 +27,6 @@ test("a borrowed word does not cost someone their turn", () => {
   assert.equal(looksLikeLanguage("Can I get a latte, 부탁해요?", "en"), true);
 });
 
-test("punctuation and numbers decide nothing either way", () => {
-  assert.equal(looksLikeLanguage("...", "en"), true, "no letters is not a wrong script");
-  assert.equal(looksLikeLanguage("4.50", "en"), true);
-  assert.equal(heardOrNothing("   ", "en"), "");
-});
-
 test("Japanese may be written in the Latin alphabet, and Chinese characters are its own", () => {
   // The kana check has to take Han too, or every kanji-heavy answer would be
   // read as a hallucination in a Japanese scene.
@@ -44,4 +38,37 @@ test("a language with no script written down is left alone", () => {
   // Better to pass a turn through than to refuse one over a table entry nobody
   // has filled in yet.
   assert.equal(looksLikeLanguage("anything at all", "xx"), true);
+});
+
+test("a learner reaching for a word in their own language is still talking", () => {
+  // Reported from a phone: "How can I say 전기공학 in English?" was heard
+  // perfectly and answered well, and the reply to that answer was thrown away.
+  // The app then saw silence, and the character replied to somebody who had
+  // said nothing — one turn after answering the question that prompted it.
+  //
+  // Which is the worst turn to lose. Reaching for a word you do not have yet
+  // in the language you are learning is the moment this app exists for.
+  for (const said of [
+    "How can I say 전기공학 in English?",
+    "It's 전기공학.",
+    "Ah, 전기공학이요.",
+    "전기공학 is my major.",
+    "I studied 전기공학 for four years at university.",
+  ]) {
+    assert.equal(heardOrNothing(said, "en"), said, `${said} was thrown away`);
+  }
+});
+
+test("an answer with none of the language in it is still refused", () => {
+  // What the check is for: a model handed half a second of room noise fills the
+  // gap with something it has heard often, and those come back with not one
+  // letter of the language being learned.
+  assert.equal(heardOrNothing("ご視聴ありがとうございました。", "en"), "");
+  assert.equal(heardOrNothing("字幕は自動生成されました", "en"), "");
+  assert.equal(heardOrNothing("Thank you for watching!", "ko"), "");
+});
+
+test("punctuation and numbers decide nothing", () => {
+  assert.ok(looksLikeLanguage("2026!", "en"));
+  assert.ok(looksLikeLanguage("…", "ko"));
 });

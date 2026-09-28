@@ -283,7 +283,11 @@ function waitForChunk(state: StreamState, index: number): Promise<void> {
   });
 }
 
-async function playPcmStream(state: StreamState, gen: number): Promise<void> {
+async function playPcmStream(
+  state: StreamState,
+  gen: number,
+  onStart?: () => void,
+): Promise<void> {
   const ctx = getAudioContext();
   await ctx.resume();
   let chunkIndex = 0;
@@ -301,7 +305,12 @@ async function playPcmStream(state: StreamState, gen: number): Promise<void> {
       if (even < 2) continue;
       const scheduled = schedulePcm(ctx, merged.subarray(0, even), nextStart);
       nextStart = scheduled.nextStart;
-      if (scheduled.source) lastSource = scheduled.source;
+      if (scheduled.source) {
+        // The first sound is out. Said once, because a caller waiting to hear
+        // whether anything is coming only needs telling the once.
+        if (!lastSource) onStart?.();
+        lastSource = scheduled.source;
+      }
     }
     if (state.error) throw state.error;
     if (state.done) break;
@@ -343,7 +352,24 @@ export function prefetchTts(text: string, lang: string, voice?: string) {
   pumpPrefetch();
 }
 
-export async function playTts(text: string, lang: string, voice?: string): Promise<void> {
+/**
+ * Say it, and say when it started saying it.
+ *
+ * `onStart` fires as the first sound is scheduled, which is the difference
+ * between a line that is slow and a line that is never coming. Speech is
+ * fetched from a server that is usually quick and is sometimes not: measured
+ * against the deployed one, the same request took under a second four times and
+ * then nineteen, nine, and longer than five minutes. The caller had one timer
+ * covering the fetch and the playing together, so it could only wait long
+ * enough for the slowest line it ever meant to play — half a minute of a
+ * conversation sitting still, which reads as broken rather than as slow.
+ */
+export async function playTts(
+  text: string,
+  lang: string,
+  voice?: string,
+  onStart?: () => void,
+): Promise<void> {
   const spoken = spokenFormForTts(text, lang);
   if (!spoken) return;
   stopTts();
@@ -352,5 +378,5 @@ export async function playTts(text: string, lang: string, voice?: string): Promi
   if (gen !== playGen) return;
   const key = cacheKey(lang, spoken, voice);
   const state = startNow(key, spoken, lang, voice);
-  await playPcmStream(state, gen);
+  await playPcmStream(state, gen, onStart);
 }
