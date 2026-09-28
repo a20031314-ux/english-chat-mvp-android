@@ -465,15 +465,6 @@ export async function listYouTubeCaptionTracks(
   return timedTextTracks(videoId, cookie);
 }
 
-/** True when the video has at least one non-ASR (uploader/official) caption track. */
-export async function hasOfficialYouTubeCaptions(
-  videoId: string,
-  cookie?: string,
-): Promise<boolean> {
-  const tracks = await listYouTubeCaptionTracks(videoId, cookie);
-  return tracks.some((track) => isManualCaptionTrack(track.kind));
-}
-
 function filterTracks(
   tracks: CaptionTrack[],
   options?: CaptionFetchOptions,

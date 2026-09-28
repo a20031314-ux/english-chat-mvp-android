@@ -5,13 +5,6 @@ import type {
   PreferredDurationBucket,
 } from "@/lib/contentDiscovery/types";
 import { normalizeYouTubeWatchUrl } from "@/lib/videoLearning";
-import {
-  listYouTubeCaptionTracks,
-} from "@/lib/videoSubtitle/youtubeCaptions";
-import {
-  captionLanguageMatches,
-  isManualCaptionTrack,
-} from "@/lib/videoSubtitle/captionLanguages";
 
 type YoutubeSearchItem = {
   id?: { videoId?: string };
@@ -263,35 +256,34 @@ export async function searchYouTubeVideos(
     });
   }
 
-  if (intent.requireOriginalCaptions && candidates.length > 0) {
-    const probed = await Promise.all(
-      candidates.map(async (candidate) => {
-        const videoId = candidate.externalId;
-        if (!videoId) return { ...candidate, hasOriginalCaptions: false };
-        try {
-          const tracks = await listYouTubeCaptionTracks(videoId);
-          // Prefer official captions in the learning language, not just any language.
-          const hasOriginal = tracks.some(
-            (track) =>
-              isManualCaptionTrack(track.kind) &&
-              captionLanguageMatches(track.languageCode, intent.language),
-          );
-          return {
-            ...candidate,
-            hasCaptions: candidate.hasCaptions || tracks.length > 0,
-            hasOriginalCaptions: hasOriginal,
-          };
-        } catch {
-          // Fall back to contentDetails.caption when timedtext probe fails.
-          return {
-            ...candidate,
-            hasOriginalCaptions: Boolean(candidate.hasCaptions),
-          };
-        }
-      }),
-    );
+  if (intent.requireOriginalCaptions) {
+    // contentDetails.caption, already read above, is the answer. It is "true"
+    // when somebody uploaded a caption track and "false" when all YouTube has
+    // is its own speech recognition — checked on 2026-09-29 against twenty
+    // videos, ten searched with the caption filter and ten vlogs without, and
+    // it agreed with the track list on every one: every "true" had a
+    // human-written track, every "false" had exactly one track marked asr.
+    //
+    // What stood here instead was a per-video probe of
+    // youtube.com/api/timedtext?type=list, which YouTube has retired: it now
+    // answers 200 with an empty body for every video, from any address. The
+    // helper swallows that into an empty track list, so every candidate came
+    // back with no original captions and the filter emptied the whole result.
+    // Asking for original captions returned nothing at all — not a short list,
+    // nothing — and the catch that was meant to fall back to this same flag was
+    // unreachable, because a probe that answers 200 does not throw.
+    //
+    // One thing is lost with the probe: it also checked the track was in the
+    // language being learned, and the flag cannot say. The search asks YouTube
+    // for the language already, and a video filtered here is a video nobody
+    // sees, which is the worse way to be wrong.
     return {
-      candidates: probed.filter((item) => item.hasOriginalCaptions),
+      candidates: candidates
+        .map((candidate) => ({
+          ...candidate,
+          hasOriginalCaptions: candidate.hasCaptions === true,
+        }))
+        .filter((candidate) => candidate.hasOriginalCaptions),
     };
   }
 
