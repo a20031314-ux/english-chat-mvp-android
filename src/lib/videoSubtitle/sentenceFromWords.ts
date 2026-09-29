@@ -237,40 +237,80 @@ export function tokenizeForWordMatch(text: string): string[] {
 }
 
 /**
- * Align LLM sentences to the original word list. Returns null on any
- * insert/delete so callers can fall back to punctuation cuts.
+ * How much of the speech the model may swallow before its answer is refused.
+ *
+ * The match exists to catch a model that rewrote the speech instead of marking
+ * it, and it used to demand the words back exactly. What the model actually
+ * does, asked to punctuate an automatic caption track, is tidy: it drops the
+ * "um" and the "uh" it was told to keep. Measured on a fifteen-minute talk cut
+ * into twenty-two pieces, that was the whole of the disagreement in four of
+ * them — one or two fillers each, never a rewritten phrase.
+ *
+ * Refusing over that is expensive, because the fallback is the unsplit span:
+ * one caption for the whole video. So a short run of dropped words is skipped
+ * past instead. Nothing is lost by skipping — a span is a pair of indices into
+ * the original words, and the subtitle is built from those, so a filler the
+ * model left out still shows up in whichever sentence it falls inside.
+ */
+const MAX_DROPPED_RUN = 2;
+const MAX_DROPPED_SHARE = 0.05;
+
+function nextTokenIndex(words: TimedWord[], from: number): number {
+  let cursor = from;
+  while (cursor < words.length && !normalizeMatchToken(words[cursor]!.text)) {
+    cursor += 1;
+  }
+  return cursor;
+}
+
+/**
+ * Align LLM sentences to the original word list. Returns null when the answer
+ * has drifted far enough to be a rewrite, so callers fall back to punctuation.
  */
 export function matchSentencesToWordIndices(
   words: TimedWord[],
   sentences: string[],
 ): Array<{ startIndex: number; endIndex: number }> | null {
-  const expected = words.map((word) => normalizeMatchToken(word.text)).filter(Boolean);
-  const got = sentences.flatMap(tokenizeForWordMatch);
-  if (expected.join(" ") !== got.join(" ")) return null;
+  const spoken = words.filter((word) => normalizeMatchToken(word.text)).length;
+  const dropBudget = Math.max(MAX_DROPPED_RUN, Math.floor(spoken * MAX_DROPPED_SHARE));
+  let dropped = 0;
 
   let cursor = 0;
   const spans: Array<{ startIndex: number; endIndex: number }> = [];
   for (const sentence of sentences) {
     const tokens = tokenizeForWordMatch(sentence);
     if (tokens.length === 0) continue;
-    while (cursor < words.length && !normalizeMatchToken(words[cursor]!.text)) {
-      cursor += 1;
-    }
+    cursor = nextTokenIndex(words, cursor);
     const startIndex = cursor;
     for (const token of tokens) {
-      while (cursor < words.length && !normalizeMatchToken(words[cursor]!.text)) {
-        cursor += 1;
+      let found = -1;
+      let skipped = 0;
+      let probe = nextTokenIndex(words, cursor);
+      while (probe < words.length && skipped <= MAX_DROPPED_RUN) {
+        if (normalizeMatchToken(words[probe]!.text) === token) {
+          found = probe;
+          break;
+        }
+        skipped += 1;
+        probe = nextTokenIndex(words, probe + 1);
       }
-      if (cursor >= words.length) return null;
-      if (normalizeMatchToken(words[cursor]!.text) !== token) return null;
-      cursor += 1;
+      if (found < 0) return null;
+      dropped += skipped;
+      if (dropped > dropBudget) return null;
+      cursor = found + 1;
     }
     spans.push({ startIndex, endIndex: cursor - 1 });
   }
-  while (cursor < words.length && !normalizeMatchToken(words[cursor]!.text)) {
-    cursor += 1;
+  if (spans.length === 0) return null;
+  // Words past the last sentence are the same kind of tidying, at the end of
+  // the answer instead of inside it. They join the sentence they follow.
+  if (cursor < words.length) {
+    const tail = words
+      .slice(cursor)
+      .filter((word) => normalizeMatchToken(word.text)).length;
+    if (dropped + tail > dropBudget) return null;
+    spans[spans.length - 1]!.endIndex = words.length - 1;
   }
-  if (cursor !== words.length) return null;
   return spans;
 }
 
@@ -309,6 +349,96 @@ export function needsLlmSentenceSplit(span: SentenceSpan): boolean {
 
 export type LlmSentenceSplitter = (text: string) => Promise<string | null>;
 
+/**
+ * How much speech goes to the model at once.
+ *
+ * YouTube's automatic captions carry no punctuation at all, so a whole video
+ * arrives as one span and used to be marked in one request. Measured on the
+ * longest video this app will prepare — fifteen minutes, 2,786 words of
+ * automatic captions — that request took 45 seconds and came back seventeen
+ * words short, which is a refusal, which is one caption for the whole video.
+ *
+ * The same transcript cut into pieces of about 150 words answered in 4.2
+ * seconds with the pieces running at once, and a piece the model spoils costs
+ * only its own stretch of the video. 150 words is roughly a minute of talking,
+ * which is enough of a run for the model to hear where the sentences end.
+ */
+const LLM_CHUNK_WORDS = 150;
+const LLM_CHUNK_PARALLEL = 6;
+
+/**
+ * Cut where the talking stops.
+ *
+ * A boundary has to fall somewhere, and the longest silence in the region is
+ * the likeliest place for a sentence to have ended. Only the seam is at risk:
+ * the model sees each side whole.
+ */
+export function chunkWordsForLlm(
+  words: TimedWord[],
+  target = LLM_CHUNK_WORDS,
+): Array<{ startIndex: number; endIndex: number }> {
+  const out: Array<{ startIndex: number; endIndex: number }> = [];
+  if (words.length === 0) return out;
+  let start = 0;
+  while (start < words.length) {
+    if (words.length - start <= target * 1.4) {
+      out.push({ startIndex: start, endIndex: words.length - 1 });
+      break;
+    }
+    const from = start + Math.floor(target * 0.7);
+    const to = Math.min(words.length - 2, start + Math.floor(target * 1.3));
+    let best = to;
+    let bestGap = -Infinity;
+    for (let i = from; i <= to; i += 1) {
+      const gap = (words[i + 1]?.startMs ?? 0) - (words[i]?.endMs ?? 0);
+      if (gap > bestGap) {
+        bestGap = gap;
+        best = i;
+      }
+    }
+    out.push({ startIndex: start, endIndex: best });
+    start = best + 1;
+  }
+  return out;
+}
+
+async function markedSpansForChunk(
+  words: TimedWord[],
+  chunk: { startIndex: number; endIndex: number },
+  split: LlmSentenceSplitter,
+): Promise<SentenceSpan[] | null> {
+  const slice = words.slice(chunk.startIndex, chunk.endIndex + 1);
+  let marked: string | null = null;
+  try {
+    marked = await split(textFromTimedWords(slice));
+  } catch {
+    marked = null;
+  }
+  const refined = marked ? applyLlmSentenceMarks(slice, marked) : null;
+  if (!refined) return null;
+  return refined
+    .map((part) =>
+      spanFromWordSlice(
+        words,
+        chunk.startIndex + part.startIndex,
+        chunk.startIndex + part.endIndex,
+      ),
+    )
+    .filter((span): span is SentenceSpan => Boolean(span));
+}
+
+async function inBatches<T, R>(
+  items: T[],
+  size: number,
+  run: (item: T) => Promise<R>,
+): Promise<R[]> {
+  const out: R[] = [];
+  for (let i = 0; i < items.length; i += size) {
+    out.push(...(await Promise.all(items.slice(i, i + size).map(run))));
+  }
+  return out;
+}
+
 export async function refineSpansWithLlm(
   words: TimedWord[],
   spans: SentenceSpan[],
@@ -320,26 +450,26 @@ export async function refineSpansWithLlm(
       out.push(span);
       continue;
     }
-    const slice = words.slice(span.startIndex, span.endIndex + 1);
-    let marked: string | null = null;
-    try {
-      marked = await split(textFromTimedWords(slice));
-    } catch {
-      marked = null;
-    }
-    const refined = marked ? applyLlmSentenceMarks(slice, marked) : null;
-    if (!refined) {
-      out.push(span);
-      continue;
-    }
-    for (const part of refined) {
-      const mapped = spanFromWordSlice(
-        words,
-        span.startIndex + part.startIndex,
-        span.startIndex + part.endIndex,
-      );
-      if (mapped) out.push(mapped);
-    }
+    const chunks = chunkWordsForLlm(
+      words.slice(span.startIndex, span.endIndex + 1),
+    ).map((chunk) => ({
+      startIndex: span.startIndex + chunk.startIndex,
+      endIndex: span.startIndex + chunk.endIndex,
+    }));
+    const results = await inBatches(chunks, LLM_CHUNK_PARALLEL, (chunk) =>
+      markedSpansForChunk(words, chunk, split),
+    );
+    results.forEach((refined, index) => {
+      const chunk = chunks[index]!;
+      if (refined && refined.length > 0) {
+        out.push(...refined);
+        return;
+      }
+      // The model spoiled this stretch. Keep it as one line rather than lose
+      // the ones around it, which is what a single request used to cost.
+      const whole = spanFromWordSlice(words, chunk.startIndex, chunk.endIndex);
+      if (whole) out.push(whole);
+    });
   }
   return absorbLoneFragments(words, out.length > 0 ? out : spans);
 }

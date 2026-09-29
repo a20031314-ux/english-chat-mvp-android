@@ -375,7 +375,7 @@ function collapseOverlappingCaptions(segments: SttSegment[]): SttSegment[] {
  */
 export function captionLinesForDisplay(segments: SttSegment[]): SttSegment[] {
   const kept = segments.filter((segment) =>
-    segment.text.replace(/s+/g, " ").trim(),
+    segment.text.replace(/\s+/g, " ").trim(),
   );
   return collapseOverlappingCaptions(kept)
     .filter((segment) => segment.endTime > segment.startTime + 0.08)

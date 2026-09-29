@@ -376,3 +376,97 @@ test("captions that never capitalise are still cut at their full stops", () => {
   );
   assert.equal(spans.length, 2);
 });
+
+test("a filler the model swallowed does not throw the whole answer away", () => {
+  // Asked to punctuate automatic captions, the model tidies: it drops the "um"
+  // it was told to keep. Refusing over that costs every sentence in the piece.
+  const rows = words([
+    ["very", 0, 0.3],
+    ["hard", 0.32, 0.6],
+    ["to", 0.62, 0.7],
+    ["make", 0.72, 1.0],
+    ["um", 1.1, 1.3],
+    ["each", 1.4, 1.7],
+    ["one", 1.72, 1.9],
+    ["of", 1.92, 2.0],
+    ["these", 2.02, 2.3],
+  ]);
+  const spans = applyLlmSentenceMarks(
+    rows,
+    "very hard to make ||| each one of these",
+  );
+  assert.ok(spans);
+  assert.equal(spans!.length, 2);
+  // The filler is still in the video, so it is still in one of the lines.
+  assert.equal(
+    spans!.map((span) => span.text).join(" ").includes("um"),
+    true,
+  );
+  assert.ok(spans![1]!.endIndex === rows.length - 1);
+});
+
+test("a rewritten answer is still refused", () => {
+  const rows = words([
+    ["the", 0, 0.2],
+    ["sensor", 0.22, 0.5],
+    ["is", 0.52, 0.6],
+    ["actually", 0.62, 1.0],
+    ["smaller", 1.02, 1.4],
+  ]);
+  assert.equal(
+    applyLlmSentenceMarks(rows, "the chip is in fact tinier than you think"),
+    null,
+  );
+});
+
+test("words left past the last sentence join the line before them", () => {
+  const rows = words([
+    ["one", 0, 0.2],
+    ["two", 0.22, 0.4],
+    ["three", 0.42, 0.6],
+    ["four", 0.62, 0.8],
+  ]);
+  const spans = applyLlmSentenceMarks(rows, "one two ||| three");
+  assert.ok(spans);
+  assert.equal(spans!.length, 2);
+  assert.equal(spans![1]!.endIndex, 3);
+  assert.match(spans![1]!.text, /three four/);
+});
+
+test("an unpunctuated transcript is marked in pieces, and one bad piece costs only itself", async () => {
+  const rows = words(
+    Array.from({ length: 420 }, (_, index) => [
+      `w${index}`,
+      index * 0.4,
+      index * 0.4 + 0.3,
+    ] as [string, number, number]),
+  );
+  const asked: string[] = [];
+  const spans = await refineSpansWithLlm(
+    rows,
+    splitSentencesFromWords(rows),
+    async (text) => {
+      asked.push(text);
+      // The second request comes back rewritten and has to be refused.
+      if (asked.length === 2) return "nothing like the words that went in";
+      const parts = text.split(/\s+/);
+      const half = Math.floor(parts.length / 2);
+      return `${parts.slice(0, half).join(" ")} ||| ${parts.slice(half).join(" ")}`;
+    },
+  );
+  assert.ok(asked.length >= 3, `expected several requests, got ${asked.length}`);
+  for (const text of asked) {
+    assert.ok(
+      text.split(/\s+/).length < 300,
+      "each request should be a piece, not the whole transcript",
+    );
+  }
+  // Every word is still covered exactly once, in order.
+  assert.equal(spans[0]!.startIndex, 0);
+  assert.equal(spans[spans.length - 1]!.endIndex, rows.length - 1);
+  for (let i = 1; i < spans.length; i += 1) {
+    assert.equal(spans[i]!.startIndex, spans[i - 1]!.endIndex + 1);
+  }
+  // The refused piece survives as one line instead of taking the rest with it.
+  assert.ok(spans.length > 2);
+});

@@ -9,19 +9,14 @@ import type { VideoSubtitle, VideoSubtitleAnalysis } from "@/lib/videoLearning";
 import { MOCK_VIDEO_ANALYSES } from "@/lib/videoLearningMock";
 import { getSceneContextAtTime } from "@/lib/videoSubtitle/getSceneContextAtTime";
 import { groupMeaningUnits } from "@/lib/videoSubtitle/groupMeaningUnits";
+import { displaySpineFromSentences } from "@/lib/videoSubtitle/displaySpine";
 import { distinctSpokenLine } from "@/lib/videoSubtitle/subtitleDraft";
+import { countLetters } from "@/lib/videoSubtitle/sttTokens";
 import type {
   NormalizedSegment,
   SttSegment,
   PreparedTranscript,
-  SubtitleSegment,
 } from "@/lib/videoSubtitle/types";
-import {
-  neighborsAround,
-  processingWindows,
-  segmentsInWindow,
-  type TimeWindow,
-} from "@/lib/videoSubtitle/windows";
 
 export class VideoSubtitleClientError extends Error {
   constructor(public code: string) {
@@ -45,35 +40,6 @@ async function readError(response: Response): Promise<string> {
     // ignore
   }
   return response.status === 503 ? "MISSING_OPENAI_KEY" : "STT_FAILED";
-}
-
-function toKoreanCue(segment: SubtitleSegment): VideoSubtitle {
-  const translation = segment.translation?.trim() || "";
-  const original = segment.original?.trim() || "";
-  const hasKorean = /[가-힣]/.test(translation);
-  return {
-    id: segment.id,
-    ...(segment.segmentIds?.length ? { segmentIds: segment.segmentIds } : {}),
-    startTime: segment.startTime,
-    endTime: segment.endTime,
-    original: segment.original,
-    translation,
-    rawOriginal: segment.rawOriginal,
-    meaning: segment.meaning,
-    literalMeaning: segment.literalMeaning ?? segment.meaning,
-    tone: segment.tone,
-    speakerStyle: segment.speakerStyle,
-    interpretationConfidence: segment.interpretationConfidence,
-    confidence: segment.confidence,
-    translationStatus: hasKorean ? "final" : "draft",
-    ...(segment.nativeUnderstanding
-      ? { nativeUnderstanding: segment.nativeUnderstanding }
-      : {}),
-    ...(segment.analysisTranslation
-      ? { analysisTranslation: segment.analysisTranslation }
-      : {}),
-    ...(segment.debug ? { debug: segment.debug } : {}),
-  };
 }
 
 /** English study cues follow the word-sliced sentence bounds from prepare. */
@@ -101,8 +67,23 @@ function normalizeGloss(text: string): string {
     .toLowerCase();
 }
 
-function hangulLen(text: string): number {
-  return [...text].filter((ch) => /[가-힣]/.test(ch)).length;
+/**
+ * How much reading a gloss carries.
+ *
+ * This counted Hangul syllables and nothing else, from when the only interface
+ * language was Korean: for a learner reading through French or Thai every
+ * gloss measured zero, so the rules below that compare a stub gloss against a
+ * full one could not fire at all. Letters of any script now, which for Korean
+ * is the same number it always was — one syllable is one letter — so what was
+ * tuned on Korean keeps its meaning.
+ *
+ * The thresholds themselves were chosen against Korean glosses and have not
+ * been measured anywhere else. A script that writes the same sentence in more
+ * letters will reach them sooner; that is worth measuring before trusting the
+ * merge to behave identically across the fourteen.
+ */
+function glossLetters(text: string): number {
+  return countLetters(text);
 }
 
 function englishWordCount(text: string): number {
@@ -110,9 +91,9 @@ function englishWordCount(text: string): number {
 }
 
 function mergeCuePair(left: VideoSubtitle, right: VideoSubtitle): VideoSubtitle {
-  const leftKo = hangulLen(left.translation);
-  const rightKo = hangulLen(right.translation);
-  const pickRight = rightKo > leftKo;
+  const leftGloss = glossLetters(left.translation);
+  const rightGloss = glossLetters(right.translation);
+  const pickRight = rightGloss > leftGloss;
   const translation =
     pickRight ? right.translation : left.translation || right.translation;
   const analysisTranslation = pickRight
@@ -175,8 +156,8 @@ function shouldJoinStudyCues(left: VideoSubtitle, right: VideoSubtitle): boolean
   if (gap > 1.5) return false;
   const leftEn = englishWordCount(left.original);
   const rightEn = englishWordCount(right.original);
-  const leftKo = hangulLen(left.translation);
-  const rightKo = hangulLen(right.translation);
+  const leftGloss = glossLetters(left.translation);
+  const rightGloss = glossLetters(right.translation);
   const a = normalizeGloss(left.translation);
   const b = normalizeGloss(right.translation);
   if (
@@ -197,10 +178,10 @@ function shouldJoinStudyCues(left: VideoSubtitle, right: VideoSubtitle): boolean
     ) ||
     (leftEn <= 5 && !/[.!?…]"?$/.test(left.original.trim()));
   if (leftOpen && rightEn <= 12) return true;
-  if (leftEn >= 8 && leftKo <= Math.max(3, leftEn * 0.45) && rightEn <= 7 && rightKo >= 10) {
+  if (leftEn >= 8 && leftGloss <= Math.max(3, leftEn * 0.45) && rightEn <= 7 && rightGloss >= 10) {
     return true;
   }
-  if (rightEn >= 8 && rightKo <= Math.max(3, rightEn * 0.45) && leftEn <= 7 && leftKo >= 10) {
+  if (rightEn >= 8 && rightGloss <= Math.max(3, rightEn * 0.45) && leftEn <= 7 && leftGloss >= 10) {
     return true;
   }
   return false;
@@ -344,23 +325,6 @@ export function regroupStudyCues(cues: VideoSubtitle[]): VideoSubtitle[] {
   return mergeCuesWithSameGloss(regrouped);
 }
 
-/**
- * The device's own caption lines, kept as the display spine. The server groups
- * them into sentence units for translation — good for the reading, far too
- * coarse to follow, since one unit can span ten seconds of speech.
- */
-function segmentsFromDeviceStt(segments: SttSegment[]): NormalizedSegment[] {
-  return segments.map((segment) => ({
-    id: segment.id,
-    startTime: segment.startTime,
-    endTime: segment.endTime,
-    rawText: segment.text,
-    normalizedText: segment.text,
-    confidence: segment.confidence,
-    uncertain: segment.uncertain,
-  }));
-}
-
 function cuesAsGlossSegments(cues: VideoSubtitle[]): NormalizedSegment[] {
   return cues.map((cue) => ({
     id: cue.id,
@@ -434,65 +398,6 @@ function applyGlossToCue(
       ? { analysisTranslation }
       : { analysisTranslation: undefined }),
   };
-}
-
-function overlapsWindow(cue: VideoSubtitle, window: TimeWindow): boolean {
-  return cue.startTime < window.end && cue.endTime > window.start;
-}
-
-/**
- * The English lines are the spine: one line per source segment, each with its
- * own timing. A window cue can cover several of them, because the pipeline
- * groups short fragments into one meaning unit, so the reading is given back to
- * every line it came from. Keying by cue id alone left the absorbed lines
- * untranslated and stretched one caption over several utterances.
- */
-function applyWindowCues(
-  lines: VideoSubtitle[],
-  incoming: VideoSubtitle[],
-): VideoSubtitle[] {
-  const bySegmentId = new Map<string, VideoSubtitle>();
-  for (const cue of incoming) {
-    for (const segmentId of cue.segmentIds ?? []) {
-      bySegmentId.set(`mu-${segmentId}`, cue);
-    }
-    bySegmentId.set(cue.id, cue);
-  }
-
-  // A unit's segment ids can reach past its own time range, so the clock wins:
-  // taking the id match first handed a line the reading of speech that had
-  // already gone by, and the captions ran ahead of the audio.
-  const covering = (line: VideoSubtitle) => {
-    const middle = (line.startTime + line.endTime) / 2;
-    return incoming.find(
-      (cue) => cue.startTime <= middle && middle < cue.endTime,
-    );
-  };
-
-  return lines.map((line) => {
-    const cue = covering(line) ?? bySegmentId.get(line.id);
-    if (!cue) return line;
-    return {
-      ...cue,
-      id: line.id,
-      segmentIds: cue.segmentIds,
-      startTime: line.startTime,
-      endTime: line.endTime,
-      original: line.original,
-      rawOriginal: line.rawOriginal ?? line.original,
-    };
-  });
-}
-
-function replaceWindowCues(
-  current: VideoSubtitle[],
-  window: TimeWindow,
-  incoming: VideoSubtitle[],
-): VideoSubtitle[] {
-  const kept = current.filter((cue) => !overlapsWindow(cue, window));
-  const inWindow = current.filter((cue) => overlapsWindow(cue, window));
-  const translated = applyWindowCues(inWindow, incoming);
-  return [...kept, ...translated].sort((a, b) => a.startTime - b.startTime);
 }
 
 export type SubtitleStatusStep =
@@ -623,10 +528,9 @@ export async function prepareEnglishWatch(
   options?.onStatus?.("cleanup");
   options?.onProgress?.({ percent: 100, step: "cleanup" });
 
-  const spine =
-    deviceSegments && deviceSegments.length > prepared.segments.length
-      ? segmentsFromDeviceStt(deviceSegments)
-      : prepared.segments;
+  const spine = deviceSegments
+    ? displaySpineFromSentences(prepared.segments, deviceSegments)
+    : prepared.segments;
   const englishCues =
     prepared.captionMode === "official-ui"
       ? officialUiCuesFromPrepared(prepared)
@@ -635,117 +539,6 @@ export async function prepareEnglishWatch(
     throw new VideoSubtitleClientError("NO_SPEECH");
   }
   return { prepared, englishCues };
-}
-
-/**
- * After first watch ends: build Korean meaning captions for study materials.
- */
-export async function generateKoreanStudyMaterials(
-  prepared: PreparedTranscript,
-  options?: {
-    locale?: string;
-    onProgress?: (progress: SubtitleProgress) => void;
-    onPartial?: (cues: VideoSubtitle[], done: boolean) => void;
-    signal?: AbortSignal;
-  },
-): Promise<VideoSubtitle[]> {
-  const locale = options?.locale ?? "ko";
-  let viewerContext = prepared.viewerContext;
-  let cues = englishCuesFromSegments(prepared.segments);
-
-  const windows =
-    prepared.processingWindows && prepared.processingWindows.length > 0
-      ? prepared.processingWindows
-      : processingWindows(
-          prepared.segments,
-          prepared.durationSeconds || 20,
-        );
-
-  const workWindows = windows.filter(
-    (window) => segmentsInWindow(prepared.segments, window).length > 0,
-  );
-  const total = Math.max(1, workWindows.length);
-  let completed = 0;
-
-  for (const window of workWindows) {
-    if (options?.signal?.aborted) {
-      throw new VideoSubtitleClientError("TIMEOUT");
-    }
-    const currentSegments = segmentsInWindow(prepared.segments, window);
-    if (currentSegments.length === 0) continue;
-
-    const startIndex = prepared.segments.findIndex(
-      (segment) => segment.id === currentSegments[0]!.id,
-    );
-    const endIndex = startIndex + currentSegments.length;
-    const { previous, next } = neighborsAround(
-      prepared.segments,
-      Math.max(0, startIndex),
-      endIndex,
-    );
-
-    let windowResponse: Response | null = null;
-    for (let attempt = 0; attempt < 2; attempt += 1) {
-      if (options?.signal?.aborted) {
-        throw new VideoSubtitleClientError("TIMEOUT");
-      }
-      try {
-        windowResponse = await fetch(apiUrl("/api/video-subtitles/window"), {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            locale,
-            context: prepared.context,
-            currentSegments,
-            previousSegments: previous,
-            nextSegments: next,
-            sceneContexts: prepared.sceneContexts,
-            viewerContext,
-          }),
-          signal: options?.signal,
-        });
-        if (windowResponse.ok) break;
-      } catch (error) {
-        console.error("[video-korean-window]", { attempt, window, error });
-        windowResponse = null;
-      }
-      if (attempt === 0) {
-        await new Promise((resolve) => setTimeout(resolve, 400));
-      }
-    }
-
-    if (windowResponse?.ok) {
-      const payload = (await windowResponse.json()) as {
-        cues?: SubtitleSegment[];
-        viewerContext?: PreparedTranscript["viewerContext"];
-      };
-      if (payload.viewerContext) {
-        viewerContext = payload.viewerContext;
-        prepared.viewerContext = payload.viewerContext;
-      }
-      const incoming = Array.isArray(payload.cues)
-        ? payload.cues.map(toKoreanCue).filter((cue) => cue.translationStatus === "final")
-        : [];
-      if (incoming.length > 0) {
-        cues = replaceWindowCues(cues, window, incoming);
-      }
-    }
-
-    completed += 1;
-    options?.onProgress?.({
-      percent: Math.min(99, Math.round((completed / total) * 100)),
-      step: "translate",
-      windowIndex: completed,
-      windowTotal: total,
-    });
-    options?.onPartial?.(cues, false);
-  }
-
-  options?.onProgress?.({ percent: 100, step: "cleanup" });
-  // Keep English lines that never got a Korean window so the list stays complete.
-  const merged = mergeCuesWithSameGloss(cues);
-  options?.onPartial?.(merged, true);
-  return merged;
 }
 
 /**
