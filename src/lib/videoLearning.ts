@@ -176,7 +176,9 @@ export function findActiveSubtitle(
           const text = cue.translation.trim();
           if (!text) return false;
           if (text === cue.original.trim()) return false;
-          return /[가-힣]/.test(text) || cue.translationStatus === "final";
+          // "Has Hangul in it" used to stand in for "has been glossed", which
+          // is what the status says, in whichever language the learner reads.
+          return cue.translationStatus === "final";
         });
   if (ready.length === 0) return null;
 

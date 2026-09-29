@@ -162,7 +162,15 @@ function isPlaceholderExplanation(text: string) {
   return /일시적인\s*오류/.test(text) || /temporary\s+error/i.test(text);
 }
 
-const FALLBACK_CORRECTION_EXPLANATION: Record<string, string> = {
+/**
+ * Shown when the model found a mistake but wrote no reason for it.
+ *
+ * Typed by Locale rather than by string, so the next interface language cannot
+ * be added without this line being written for it. It was nine of fourteen,
+ * and the five without one — Italian, Russian, Arabic, Thai, Hindi — fell
+ * through to the Korean sentence.
+ */
+const FALLBACK_CORRECTION_EXPLANATION: Record<Locale, string> = {
   ko: "이 부분을 이렇게 고치면 더 자연스러워요.",
   en: "This wording is clearer and more natural.",
   es: "Esta forma suena más clara y natural.",
@@ -170,14 +178,19 @@ const FALLBACK_CORRECTION_EXPLANATION: Record<string, string> = {
   zh: "这样改会更自然。",
   vi: "Cách diễn đạt này tự nhiên hơn.",
   fr: "Cette formulation est plus naturelle.",
+  it: "Questa formulazione suona più naturale.",
   pt: "Essa formulação fica mais natural.",
+  ru: "Так звучит естественнее.",
   id: "Susunan ini terdengar lebih natural.",
+  ar: "هذه الصيغة أكثر طبيعية.",
+  th: "สำนวนนี้ฟังดูเป็นธรรมชาติมากกว่า",
+  hi: "इस तरह कहना ज़्यादा स्वाभाविक लगता है।",
 };
 
 function normalizeCorrectionResult(
   originalMessage: string,
   correction: ChatModeApiResponse["correction"] | undefined,
-  locale: string,
+  locale: Locale,
 ): CorrectionResult {
   const aligned = alignCorrectionToGrammar(
     originalMessage,
@@ -196,8 +209,7 @@ function normalizeCorrectionResult(
     natural: aligned.natural,
     explanation:
       aligned.hasError && !explanation
-        ? (FALLBACK_CORRECTION_EXPLANATION[locale] ??
-          FALLBACK_CORRECTION_EXPLANATION.ko)
+        ? FALLBACK_CORRECTION_EXPLANATION[locale]
         : aligned.hasError
           ? explanation
           : "",
@@ -1312,15 +1324,15 @@ export function ChatWindow({
             ? {
                 expressionResult: {
                   expression: trimmed,
-                  example: "Please try again later.",
+                  example: ui.chatTempErrorExplanation,
                 },
               }
             : {
-                assistantMessage: "지금 처리에 문제가 있었어요.",
+                assistantMessage: ui.chatTempErrorReply,
                 correctionResult: {
                   corrected: trimmed,
                   natural: trimmed,
-                  explanation: "일시적인 오류입니다. 잠시 후 다시 시도해 주세요.",
+                  explanation: ui.chatTempErrorExplanation,
                   hasError: true,
                 },
               }),

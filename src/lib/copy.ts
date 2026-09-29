@@ -17,6 +17,20 @@ const generatedRoleplayOverlay = {
   roleplayPastEmpty: "Nothing here yet.",
 } as const;
 
+/**
+ * What a learner is told when a turn fails.
+ *
+ * Written out here because the eleven generated locales have no entry for it,
+ * and the alternative was what these strings used to be: Korean, hard-coded in
+ * the chat screen, shown to everyone whatever they were learning through.
+ * English for the eleven is not the finished answer, but it is the learner's
+ * own alphabet rather than somebody else's.
+ */
+const generatedChatOverlay = {
+  chatTempErrorReply: "Something went wrong just now.",
+  chatTempErrorExplanation: "A temporary error. Please try again in a moment.",
+} as const;
+
 const generatedBillingOverlay = {
   videoLearnQuotaReached:
     "You’ve used this month’s import points. Library and saved videos can still be replayed.",
@@ -760,6 +774,8 @@ export const copy = {
     noCorrectionNeeded: "수정할 필요가 없습니다.",
     correctionFeedbackCorrect: "👍 좋은 문장이에요! 아주 자연스러워요.",
     correctionFeedbackError: "💡 거의 다 됐어요. 작은 부분만 고쳐볼까요?",
+    chatTempErrorReply: "지금 처리에 문제가 있었어요.",
+    chatTempErrorExplanation: "일시적인 오류입니다. 잠시 후 다시 시도해 주세요.",
     sessionComplete: "오늘의 {targetLanguage} 훈련을 완료했어요 👍",
     startNewSession: "새 대화 시작",
     endSession: "세션 종료",
@@ -1461,6 +1477,8 @@ export const copy = {
     noCorrectionNeeded: "No changes needed.",
     correctionFeedbackCorrect: "👍 Great sentence! Very natural.",
     correctionFeedbackError: "💡 Good try! Just a small mistake.",
+    chatTempErrorReply: "Something went wrong just now.",
+    chatTempErrorExplanation: "A temporary error. Please try again in a moment.",
     sessionComplete: "Today's practice is complete 🎯",
     startNewSession: "Start New Session",
     endSession: "End Session",
@@ -2164,6 +2182,8 @@ export const copy = {
     noCorrectionNeeded: "No hace falta corregir.",
     correctionFeedbackCorrect: "👍 Great sentence! Very natural.",
     correctionFeedbackError: "💡 Good try! Just a small mistake.",
+    chatTempErrorReply: "Algo ha fallado ahora mismo.",
+    chatTempErrorExplanation: "Error temporal. Inténtalo de nuevo en un momento.",
     sessionComplete: "Completaste la practica de hoy 🎯",
     startNewSession: "Start New Session",
     endSession: "Finalizar sesion",
@@ -2196,17 +2216,17 @@ export const copy = {
       "No se pudo cargar el producto. Revisa Play Console y RevenueCat.",
     paywallCancelled: "Compra cancelada",
   },
-  ja: { ...generatedLocales.ja, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
-  zh: { ...generatedLocales.zh, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
-  vi: { ...generatedLocales.vi, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
-  fr: { ...generatedLocales.fr, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
-  it: { ...generatedLocales.it, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
-  pt: { ...generatedLocales.pt, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
-  ru: { ...generatedLocales.ru, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
-  id: { ...generatedLocales.id, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
-  ar: { ...generatedLocales.ar, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
-  th: { ...generatedLocales.th, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
-  hi: { ...generatedLocales.hi, ...generatedBillingOverlay, ...generatedRoleplayOverlay },
+  ja: { ...generatedLocales.ja, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
+  zh: { ...generatedLocales.zh, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
+  vi: { ...generatedLocales.vi, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
+  fr: { ...generatedLocales.fr, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
+  it: { ...generatedLocales.it, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
+  pt: { ...generatedLocales.pt, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
+  ru: { ...generatedLocales.ru, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
+  id: { ...generatedLocales.id, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
+  ar: { ...generatedLocales.ar, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
+  th: { ...generatedLocales.th, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
+  hi: { ...generatedLocales.hi, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
 } as const;
 
 export type Locale = keyof typeof copy;
