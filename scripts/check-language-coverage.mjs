@@ -21,6 +21,8 @@
  *
  * Run: npm run check:languages
  */
+import { readFileSync, readdirSync, statSync } from "node:fs";
+import { join } from "node:path";
 import { SCENARIOS, sentencesFor } from "../src/lib/roleplay/catalog.ts";
 import { BANK_GLOSS_LANGUAGE } from "../src/lib/roleplay/justTalk.ts";
 import { scenarioSentenceIds } from "../src/lib/roleplay/script.ts";
@@ -30,6 +32,7 @@ import { isTtsVoice } from "../src/lib/roleplay/voices.ts";
 import {
   SUPPORTED_LEARNING_LANGUAGES,
   learningLanguageName,
+  uiLocaleOptions,
 } from "../src/lib/learningLanguages.ts";
 
 const problems = [];
@@ -113,12 +116,179 @@ for (const { code } of SUPPORTED_LEARNING_LANGUAGES) {
   }
 }
 
+/**
+ * The other half of the same question: the language the app is read in.
+ *
+ * Above is about the language being taught. This is about the one the learner
+ * reads the app through, where the drift runs the other way — a string written
+ * by hand in Korean, or a table of translations that stops short of fourteen,
+ * and everyone outside it gets Korean. Both of those were live: the chat screen
+ * told every learner "지금 처리에 문제가 있었어요." when a turn failed, and the
+ * fallback correction explanation covered nine of the fourteen and sent the
+ * other five to the Korean one.
+ *
+ * Facts again, so the rules are narrow. A quoted string is checked; a comment
+ * or a regular expression is not, because Korean belongs in both — one explains
+ * and the other matches what the model wrote.
+ */
+const LOCALES = uiLocaleOptions().map((option) => option.key);
+
+/**
+ * Screens that are Korean on purpose. The web landing page, the web checkout
+ * notice and the page metadata are the Korean storefront; the /dev pages are
+ * for whoever is building this. None of them is inside the app a learner uses.
+ */
+const KOREAN_ON_PURPOSE = [
+  // Prompts, not screens: what the model is told, and the examples it is
+  // shown, are written in Korean and the route picks them by interface
+  // language. Everything a learner reads comes back from the model.
+  "src/app/api/",
+  "src/components/LandingPage.tsx",
+  "src/app/subscribe/",
+  "src/app/layout.tsx",
+  "src/app/dev/",
+];
+
+const HANGUL = /[가-힣]/;
+
+function sourceFiles(root) {
+  const out = [];
+  const walk = (dir) => {
+    for (const entry of readdirSync(dir)) {
+      const full = join(dir, entry);
+      if (statSync(full).isDirectory()) {
+        walk(full);
+        continue;
+      }
+      if (/\.tsx?$/.test(entry) && !/\.test\.tsx?$/.test(entry)) out.push(full);
+    }
+  };
+  walk(root);
+  return out;
+}
+
+/**
+ * Quoted spans only: comments and regular expressions never get here.
+ *
+ * Double quotes and backticks, not apostrophes — this repository writes its
+ * strings with the first two, and treating an apostrophe as a quote made every
+ * "learner's" in a comment open a string that swallowed the rest of the line.
+ */
+function stringLiterals(line) {
+  const out = [];
+  let quote = null;
+  let start = 0;
+  for (let i = 0; i < line.length; i += 1) {
+    const ch = line[i];
+    if (quote) {
+      if (ch === "\\") {
+        i += 1;
+        continue;
+      }
+      if (ch === quote) {
+        out.push(line.slice(start, i));
+        quote = null;
+      }
+      continue;
+    }
+    if (ch === '"' || ch === "`") {
+      quote = ch;
+      start = i + 1;
+    }
+    if (ch === "/" && line[i + 1] === "/") break;
+  }
+  return out;
+}
+
+const uiProblems = [];
+const uiNote = (where, what) => uiProblems.push({ where, what });
+
+// 1. A table of translations that stops short. The shape is a run of lines each
+//    naming a locale and a string, which is how every such table here is
+//    written; one missing locale is one interface language reading another's.
+for (const file of [...sourceFiles("src/components"), ...sourceFiles("src/app")]) {
+  const lines = readFileSync(file, "utf8").split(/\r?\n/);
+  const at = file.replace(/\\/g, "/");
+  let run = [];
+  let runStart = 0;
+  const closeRun = () => {
+    if (run.length >= 3) {
+      const missing = LOCALES.filter((code) => !run.includes(code));
+      if (missing.length > 0 && missing.length < LOCALES.length) {
+        uiNote(
+          `${at}:${runStart}`,
+          `a table keyed by interface language is missing ${missing.join(", ")}`,
+        );
+      }
+    }
+    run = [];
+  };
+  lines.forEach((line, index) => {
+    const match = line.match(/^\s*([a-z]{2})\s*:\s*["'`]/);
+    if (match && LOCALES.includes(match[1])) {
+      if (run.length === 0) runStart = index + 1;
+      run.push(match[1]);
+      return;
+    }
+    if (line.trim() === "" || line.trim().startsWith("//")) return;
+    closeRun();
+  });
+  closeRun();
+
+  // 2. Korean written into a screen every learner sees. A `ko:` line is one
+  //    entry of a table, and rule 1 is the one that judges those.
+  if (KOREAN_ON_PURPOSE.some((allowed) => at.includes(allowed))) continue;
+  lines.forEach((line, index) => {
+    if (!HANGUL.test(line)) return;
+    if (/^\s*ko\s*:/.test(line)) return;
+    const opener = line.trim();
+    if (opener.startsWith("//") || opener.startsWith("*") || opener.startsWith("/*")) {
+      return;
+    }
+    for (const literal of stringLiterals(line)) {
+      if (HANGUL.test(literal)) {
+        uiNote(`${at}:${index + 1}`, `Korean written into the screen: "${literal.slice(0, 40)}"`);
+        return;
+      }
+    }
+  });
+}
+
+// 3. The eleven generated locales, against each other. A key one of them lacks
+//    is a screen that falls back to whatever the caller does with undefined,
+//    and a Korean value in any of them is Korean reaching that language.
+{
+  const generated = JSON.parse(
+    readFileSync("src/lib/locales/generated.json", "utf8"),
+  );
+  const codes = Object.keys(generated);
+  const union = new Set(codes.flatMap((code) => Object.keys(generated[code])));
+  for (const code of codes) {
+    const missing = [...union].filter((key) => !(key in generated[code]));
+    if (missing.length > 0) {
+      uiNote(
+        `generated.json:${code}`,
+        `missing ${missing.length} key(s) the other locales have: ${missing.slice(0, 4).join(", ")}`,
+      );
+    }
+    for (const [key, value] of Object.entries(generated[code])) {
+      if (typeof value === "string" && HANGUL.test(value)) {
+        uiNote(`generated.json:${code}`, `${key} is still in Korean: "${value.slice(0, 40)}"`);
+      }
+    }
+  }
+}
+
 const languages = SUPPORTED_LEARNING_LANGUAGES.length;
-if (problems.length === 0) {
+if (problems.length === 0 && uiProblems.length === 0) {
   console.log(`${languages} languages, nothing to report.`);
   console.log("Checked: a scene, a voice the speech model takes, a name and lines");
   console.log("written in the language, a gloss readable by whoever is shown it,");
   console.log("a way out that listens in the right language, and a rubric of its own.");
+  console.log(
+    `Also ${LOCALES.length} interface languages: no Korean written into a screen,`,
+  );
+  console.log("no table of translations stopping short, no generated locale short a key.");
   process.exit(0);
 }
 
@@ -130,7 +300,15 @@ for (const [code, what] of byLanguage) {
   console.error(`${code} — ${learningLanguageName(code)}`);
   for (const one of what) console.error(`    ${one}`);
 }
-console.error(
-  `\n${problems.length} problem(s) across ${byLanguage.size} of ${languages} languages.`,
-);
+if (problems.length > 0) {
+  console.error(
+    `\n${problems.length} problem(s) across ${byLanguage.size} of ${languages} languages taught.`,
+  );
+}
+if (uiProblems.length > 0) {
+  console.error(`\nInterface language — ${uiProblems.length} problem(s):`);
+  for (const problem of uiProblems) {
+    console.error(`    ${problem.where}  ${problem.what}`);
+  }
+}
 process.exit(1);
