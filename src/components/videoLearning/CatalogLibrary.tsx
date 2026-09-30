@@ -14,7 +14,9 @@ function youtubeThumb(videoId: string) {
 export function CatalogLibrary({
   ui,
   clips,
-  trialVideoIds,
+  usedVideoIds,
+  freeVideoIds,
+  trialLimit,
   isPremium,
   onOpen,
   onLocked,
@@ -23,7 +25,18 @@ export function CatalogLibrary({
 }: {
   ui: UICopy;
   clips: LibraryClip[];
-  trialVideoIds: string[];
+  /** Library clips this learner has already opened. */
+  usedVideoIds: string[];
+  /**
+   * The clips a free learner may open, as the server names them.
+   *
+   * This used to be "the first three on screen", which is the rule the
+   * charging gate uses too — until the two are reading different lists, which
+   * is what happens while a build carries a month the deployment has moved
+   * past. They come from the list the gate will charge against now.
+   */
+  freeVideoIds: string[];
+  trialLimit: number;
   isPremium: boolean;
   onOpen: (url: string, durationSeconds: number) => void;
   onLocked: () => void;
@@ -53,15 +66,16 @@ export function CatalogLibrary({
         {isPremium
           ? ui.videoLearnLibrarySubtitlePremium
           : ui.videoLearnLibrarySubtitleFree
-              .replace("{used}", String(trialVideoIds.length))
-              .replace("{limit}", "3")}
+              .replace("{used}", String(usedVideoIds.length))
+              .replace("{limit}", String(trialLimit))}
       </p>
       <ul className="mt-3 space-y-2">
-        {clips.map((clip, index) => {
+        {clips.map((clip) => {
           const unlocked =
             isPremium ||
-            trialVideoIds.includes(clip.videoId) ||
-            (trialVideoIds.length < 3 && index < 3);
+            usedVideoIds.includes(clip.videoId) ||
+            (usedVideoIds.length < trialLimit &&
+              freeVideoIds.includes(clip.videoId));
           const preparing = clip.videoId === preparingVideoId;
           return (
             <li key={clip.videoId} className="relative">
@@ -91,7 +105,7 @@ export function CatalogLibrary({
                     <span className="absolute inset-0 flex items-center justify-center bg-slate-900/45 text-xs font-medium text-white">
                       {ui.videoLearnLibraryLocked}
                     </span>
-                  ) : !isPremium && index < 3 ? (
+                  ) : !isPremium && freeVideoIds.includes(clip.videoId) ? (
                     <span className="absolute left-1 top-1 rounded bg-slate-900/80 px-1.5 py-0.5 text-[10px] font-medium text-white">
                       {ui.videoLearnLibraryTrial}
                     </span>

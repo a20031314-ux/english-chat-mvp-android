@@ -31,7 +31,11 @@ import {
   recordCatalogTrial,
   recordImportCharge,
 } from "@/lib/billing/videoPrepQuota";
-import { currentLibraryPack } from "@/lib/videoLibrary/catalog";
+import {
+  bundledListing,
+  fetchLibraryListing,
+  type LibraryListing,
+} from "@/lib/videoLibrary/libraryService";
 import { useActiveSubtitle } from "@/hooks/useActiveSubtitle";
 import { parseYouTubeInput, type VideoSubtitle, cueHasUiLanguage, openingCuesHaveUiLanguage } from "@/lib/videoLearning";
 import { cuesLookUserEdited, mergeVideoCues, newCueIds, splitVideoCue } from "@/lib/videoCueEdit";
@@ -113,6 +117,24 @@ export function VideoLearningTab({
   const [quotaVersion, setQuotaVersion] = useState(0);
   const targetLanguage =
     learningLanguage?.targetLanguage ?? DEFAULT_LEARNING_LANGUAGE_CODE;
+  /**
+   * This month's clips. The build's own copy is the first answer, so the list
+   * is there on a train, and the deployment's copy replaces it when it
+   * arrives — that is what lets a new month ship without a release.
+   */
+  const [library, setLibrary] = useState<LibraryListing>(() =>
+    bundledListing(targetLanguage),
+  );
+  useEffect(() => {
+    const controller = new AbortController();
+    setLibrary(bundledListing(targetLanguage));
+    void fetchLibraryListing(targetLanguage, controller.signal).then(
+      (listing) => {
+        if (listing) setLibrary(listing);
+      },
+    );
+    return () => controller.abort();
+  }, [targetLanguage]);
   const playerRef = useRef<VideoPlayerHandle>(null);
   const loadSeq = useRef(0);
   const abortRef = useRef<AbortController | null>(null);
@@ -917,8 +939,10 @@ export function VideoLearningTab({
             library={
               <CatalogLibrary
                 ui={ui}
-                clips={currentLibraryPack(targetLanguage)?.clips ?? []}
-                trialVideoIds={getCatalogTrialVideoIds()}
+                clips={library.clips}
+                usedVideoIds={getCatalogTrialVideoIds()}
+                freeVideoIds={library.trialVideoIds}
+                trialLimit={FREE_CATALOG_TRIAL_COUNT}
                 isPremium={isPremium}
                 preparingVideoId={phase === "extracting" ? videoId : null}
                 progressPercent={progressPercent}
