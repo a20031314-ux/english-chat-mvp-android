@@ -53,8 +53,10 @@ export function speechRegisterHint(
 
 This video is a news programme. One register for the whole of it: 앵커, 리포트,
 인터뷰, 현장 발언 전부 격식체("했습니다", "말했습니다")로 씁니다. 인터뷰 대상이
-편하게 말해도 자막은 격식체입니다 — 방송 자막이 그렇게 합니다. 반말과 해요체는
-쓰지 마세요. 말의 세기나 농담은 어휘로 살리고, 말투를 낮춰서 살리지 마세요.`
+편하게 말해도 자막은 격식체입니다 — 방송 자막이 그렇게 합니다. 말의 세기나 농담은
+어휘로 살리고, 말투를 낮춰서 살리지 마세요.
+형태로 말하면: 모든 문장을 -습니다 / -입니다 / -합니다 / -습니까로 끝내세요.
+-어요, -에요, -예요, -네요, -죠, -거예요, 그리고 반말은 한 문장도 쓰지 마세요.`
       : `
 
 This video is a news programme. Keep ONE register across the whole of it —

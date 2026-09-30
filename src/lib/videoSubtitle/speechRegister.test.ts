@@ -37,7 +37,8 @@ test("a news programme keeps one register through its interviews", () => {
   );
   assert.match(hint, /news programme/);
   assert.match(hint, /인터뷰, 현장 발언 전부 격식체/);
-  assert.match(hint, /반말과 해요체는/);
+  assert.match(hint, /모든 문장을 -습니다/);
+  assert.match(hint, /반말은 한 문장도/);
   // The rule that lets a line go its own way is withdrawn here.
   assert.doesNotMatch(hint, /follow the line/);
 });
