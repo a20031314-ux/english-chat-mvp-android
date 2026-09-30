@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import {
   LearningBookPanel,
   readAppLocale,
@@ -52,17 +52,20 @@ export function LearningPage() {
     setLocale(readAppLocale());
   }, []);
 
-  useEffect(() => {
+  // Written when a language is chosen, never on every change of the state —
+  // that wrote the initial "ko" over the stored choice on every start.
+  const chooseLocale = useCallback((next: Locale) => {
+    setLocale(next);
     try {
-      localStorage.setItem(APP_LOCALE_STORAGE_KEY, locale);
+      localStorage.setItem(APP_LOCALE_STORAGE_KEY, next);
     } catch {
       // ignore
     }
-  }, [locale]);
+  }, []);
 
   return (
     <LearningLanguageProvider>
-      <LearningPageInner locale={locale} setLocale={setLocale} />
+      <LearningPageInner locale={locale} setLocale={chooseLocale} />
     </LearningLanguageProvider>
   );
 }

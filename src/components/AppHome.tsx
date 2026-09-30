@@ -258,21 +258,38 @@ function AppHomeInner({
 export function AppHome() {
   const [locale, setLocale] = useState<Locale>("ko");
 
+  // The stored choice cannot be read during the first render. This page is
+  // built ahead of time and shipped inside the APK, so the render that HTML
+  // came from knew nothing about this reader; starting anywhere but "ko" here
+  // would disagree with it and tear the hydration. It is read once the page
+  // is alive instead.
   useEffect(() => {
     setLocale(readAppLocale());
   }, []);
 
-  useEffect(() => {
+  /**
+   * Store the language when somebody picks one, and at no other moment.
+   *
+   * This used to be an effect that wrote `locale` whenever it changed, which
+   * sounds like the same thing and is not: on the very first commit it wrote
+   * the initial "ko" — and children run their effects before their parent, so
+   * ChatWindow's copy of that effect wrote "ko" before the read above had even
+   * run. The read then found the "ko" it had just written. Every start of the
+   * app overwrote the language the learner had chosen, which is why setting
+   * the app to Italian never survived closing it.
+   */
+  const chooseLocale = useCallback((next: Locale) => {
+    setLocale(next);
     try {
-      localStorage.setItem(APP_LOCALE_STORAGE_KEY, locale);
+      localStorage.setItem(APP_LOCALE_STORAGE_KEY, next);
     } catch {
       // ignore
     }
-  }, [locale]);
+  }, []);
 
   return (
     <LearningLanguageProvider>
-      <AppHomeInner locale={locale} setLocale={setLocale} />
+      <AppHomeInner locale={locale} setLocale={chooseLocale} />
     </LearningLanguageProvider>
   );
 }

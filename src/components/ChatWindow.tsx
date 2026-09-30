@@ -777,14 +777,6 @@ export function ChatWindow({
   }, [isPremium, isBillingReady, refreshEntitlement]);
 
   useEffect(() => {
-    try {
-      localStorage.setItem(APP_LOCALE_STORAGE_KEY, locale);
-    } catch {
-      // ignore
-    }
-  }, [locale]);
-
-  useEffect(() => {
     if (!bookToast) {
       return;
     }
