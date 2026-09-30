@@ -52,3 +52,53 @@ test("srv3 arrives as the lines the player would have shown", () => {
   assert.equal(parsed[1]!.text, "is now within reach.");
   assert.equal(parsed[1]!.startTime, 3);
 });
+
+test("a rolling caption line ends where the next one starts", () => {
+  // YouTube keeps line one on screen until line three pushes it off, so its
+  // own end stamp is two lines past the speech. Every word interpolated
+  // across that span lands late.
+  const body = `<?xml version="1.0"?><timedtext><body>
+    <p t="0" d="5100">Delivering personal superintelligence</p>
+    <p t="3000" d="4800">is now within reach.</p>
+    <p t="5100" d="5800">Soon, everyone is going to have an</p>
+  </body></timedtext>`;
+  const parsed = parseCaptionBody(body);
+  assert.equal(parsed[0]!.endTime, 3);
+  assert.equal(parsed[1]!.endTime, 5.1);
+  // The last line has nothing after it and keeps the span it was given.
+  assert.ok(Math.abs(parsed[2]!.endTime - 10.9) < 0.01);
+});
+
+test("lines that do not overlap are left exactly as they came", () => {
+  const body = `<?xml version="1.0"?><timedtext><body>
+    <p t="0" d="2000">Why is that?</p>
+    <p t="2500" d="3000">What is the difference?</p>
+  </body></timedtext>`;
+  const parsed = parseCaptionBody(body);
+  assert.equal(parsed[0]!.endTime, 2);
+  assert.equal(parsed[1]!.startTime, 2.5);
+});
+
+test("a line is never clamped shorter than a breath", () => {
+  const body = `<?xml version="1.0"?><timedtext><body>
+    <p t="1000" d="4000">One.</p>
+    <p t="1050" d="4000">Two.</p>
+  </body></timedtext>`;
+  const parsed = parseCaptionBody(body);
+  assert.ok(parsed[0]!.endTime >= 1.4);
+});
+
+test("json3 word stamps are never second-guessed", () => {
+  const body = JSON.stringify({
+    events: [
+      {
+        tStartMs: 0,
+        dDurationMs: 6000,
+        segs: [{ utf8: "one" }, { utf8: " two", tOffsetMs: 400 }],
+      },
+    ],
+  });
+  const parsed = parseCaptionBody(body);
+  assert.equal(parsed.length, 1);
+  assert.ok(parsed[0]!.words && parsed[0]!.words.length === 2);
+});

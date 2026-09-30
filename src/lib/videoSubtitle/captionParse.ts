@@ -260,15 +260,45 @@ export function parseSrv3(xml: string): SttSegment[] {
   return segments;
 }
 
+/** A line has to be on screen this long for the clamp to be worth making. */
+const MIN_SPOKEN_SECONDS = 0.4;
+
+/**
+ * How long the line was spoken, not how long it was on screen.
+ *
+ * Automatic captions roll: line one appears, line two appears under it, and
+ * line one only leaves when line three pushes it off. So its end stamp is two
+ * lines away from where the speaker finished saying it, and these formats give
+ * no per-word times to correct that \u2014 every word gets spread evenly across the
+ * display span instead. Measured against the same videos read as json3, which
+ * does carry real word stamps, that put the median word 0.88 seconds late,
+ * two thirds of them more than half a second late, and the worst four seconds
+ * out. Subtitles a second behind the voice is what it looks like.
+ *
+ * The next line starting is the honest end: the speaker had moved on to it.
+ * Only the end moves, only when the next line starts before it, and never
+ * closer than a breath to this line's own start. Formats that carry word
+ * stamps never reach here.
+ */
+export function clampToSpokenSpans(segments: SttSegment[]): SttSegment[] {
+  return segments.map((segment, index) => {
+    const next = segments[index + 1];
+    if (!next || segment.words?.length) return segment;
+    if (next.startTime >= segment.endTime) return segment;
+    const end = Math.max(segment.startTime + MIN_SPOKEN_SECONDS, next.startTime);
+    return end < segment.endTime ? { ...segment, endTime: end } : segment;
+  });
+}
+
 export function parseCaptionBody(body: string): SttSegment[] {
   const trimmed = body.replace(/^\uFEFF/, "").trim();
   if (!trimmed || trimmed === "{}") return [];
-  if (trimmed.includes("WEBVTT")) return parseVtt(trimmed);
+  if (trimmed.includes("WEBVTT")) return clampToSpokenSpans(parseVtt(trimmed));
   if (trimmed.includes("<transcript") || trimmed.includes("<text ")) {
-    return parseTimedTextXml(trimmed);
+    return clampToSpokenSpans(parseTimedTextXml(trimmed));
   }
   if (trimmed.includes("<p ") || trimmed.includes("<p>")) {
-    return parseSrv3(trimmed);
+    return clampToSpokenSpans(parseSrv3(trimmed));
   }
   try {
     return groupWords(wordsFromJson3(JSON.parse(trimmed)));
