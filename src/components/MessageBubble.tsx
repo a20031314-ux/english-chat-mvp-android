@@ -10,6 +10,8 @@ type MessageBubbleProps = {
   message: string;
   /** English line attached under a how-to-say user message */
   attachedEnglish?: string;
+  /** User line only: offer sentence analysis because it is in the learning language. */
+  analyzeUserLine?: boolean;
   /** Inline correction attached to a chat user message */
   correction?: { original: string; corrected: string } | null;
   /** Conversational reading in the UI language — not a second translation */
@@ -72,6 +74,7 @@ export function MessageBubble({
   role,
   message,
   attachedEnglish,
+  analyzeUserLine = false,
   correction,
   reading,
   pickMode = false,
@@ -91,13 +94,14 @@ export function MessageBubble({
     ? correctedLine
     : attachedEnglish?.trim() || message;
   const tone = isUser ? "default" : "onDark";
+  // The learner's own line gets the analysis bar only when it is in the
+  // language they are learning. Any letter used to be enough, so a line typed
+  // in the app's own language was offered up for analysis as if it were
+  // practice.
   const analyzeMain =
     !attachedEnglish?.trim() &&
     !showCorrection &&
-    (!isUser ||
-      /[A-Za-z\u0400-\u04FF\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]/.test(
-        message,
-      ));
+    (!isUser || analyzeUserLine);
 
   return (
     <div className={`flex w-full ${isUser ? "justify-end" : "justify-start"}`}>

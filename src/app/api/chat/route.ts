@@ -28,7 +28,11 @@ import {
   learningLanguageName,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
-import { commonLanguageInstructions, explanationLanguageGuard } from "@/lib/languageLearningAnalysis";
+import {
+  commonLanguageInstructions,
+  explanationInLearningLanguage,
+  explanationLanguageGuard,
+} from "@/lib/languageLearningAnalysis";
 
 type ChatCorrection = {
   corrected: string;
@@ -188,6 +192,7 @@ function buildChatSystem(
     explanationLanguageGuard({
       interfaceLanguage,
       fieldsDescription: "correction.explanation",
+      learningLanguage: targetLanguage,
     }) +
     (interfaceLanguage === "ko"
       ? `
@@ -331,6 +336,7 @@ Also include (same meaning, not an answer to their question):
 ${explanationLanguageGuard({
   interfaceLanguage: langs.interfaceLanguage,
   fieldsDescription: "analysis",
+  learningLanguage: langs.targetLanguage,
 })}
 
 {"expression":"...","simpler":"...","moreNative":"...","analysis":"..."}`;
@@ -352,6 +358,61 @@ const FALLBACK_EXPLANATION: Record<string, string> = {
   th: "แบบนี้ชัดเจนและเป็นธรรมชาติกว่า",
   hi: "यह वाक्य ज़्यादा साफ़ और स्वाभाविक है।",
 };
+
+/**
+ * Put a correction note back into the app's language when the model wrote it
+ * in the language being learned.
+ *
+ * The guard in the prompt says not to, and with the app in Korean or English
+ * that holds. With the app in Spanish, Japanese or Hindi and a learning
+ * language in another script, it did not: measured on 2026-10-05 across those
+ * pairs (scripts/check-language-pairs.mjs), eight of them answered the
+ * explanation in the learning language on every try — a Spanish reader
+ * learning Korean was told what they got wrong in Korean. So the note is
+ * checked after it comes back, and only a note that failed costs this call.
+ * If the restatement fails too, the note is dropped and the caller's generic
+ * fallback, which is in the right language, takes its place.
+ */
+async function restateExplanation(
+  openai: OpenAI,
+  explanation: string,
+  langs: ChatLanguages,
+): Promise<string> {
+  const uiName =
+    EXPLANATION_LANGUAGES[langs.interfaceLanguage] ?? EXPLANATION_LANGUAGES.ko;
+  const targetName = learningLanguageName(langs.targetLanguage);
+  try {
+    const completion = await openai.chat.completions.create({
+      model: chatModel(),
+      messages: [
+        {
+          role: "system",
+          content: `Restate this note about a ${targetName} mistake for a learner who reads ${uiName}. Same point, 1–2 short sentences, written entirely in ${uiName}. Keep ${targetName} words and forms as they are, inside quotes. Return only json: {"explanation":"..."}`,
+        },
+        { role: "user", content: explanation },
+      ],
+      response_format: { type: "json_object" },
+      temperature: 0.2,
+    });
+    const raw = completion.choices[0]?.message?.content;
+    const restated = raw
+      ? asText((JSON.parse(raw) as { explanation?: unknown }).explanation).trim()
+      : "";
+    if (
+      restated &&
+      !explanationInLearningLanguage(
+        restated,
+        langs.interfaceLanguage,
+        langs.targetLanguage,
+      )
+    ) {
+      return restated;
+    }
+  } catch (error) {
+    console.error("[chat-restate-explanation]", error);
+  }
+  return "";
+}
 
 async function replyToCorrected(
   openai: OpenAI,
@@ -464,6 +525,16 @@ async function runChat(
   const needsExplanation =
     Boolean(message.trim()) &&
     normCompare(corrected) !== normCompare(message);
+  if (
+    explanation.trim() &&
+    explanationInLearningLanguage(
+      explanation,
+      langs.interfaceLanguage,
+      langs.targetLanguage,
+    )
+  ) {
+    explanation = await restateExplanation(openai, explanation, langs);
+  }
   if (needsExplanation && !explanation.trim()) {
     explanation =
       FALLBACK_EXPLANATION[langs.interfaceLanguage] ?? FALLBACK_EXPLANATION.ko;

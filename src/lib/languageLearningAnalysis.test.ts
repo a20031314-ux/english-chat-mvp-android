@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { test } from "node:test";
 import {
   explanationLanguageGuard,
+  explanationInLearningLanguage,
   explanationLooksMixedLanguage,
 } from "./languageLearningAnalysis.ts";
 
@@ -41,4 +42,30 @@ test("explanationLooksMixedLanguage catches the sentence-analysis leaks", () => 
   const koreanWithKanji =
     "「する」는 동사입니다. 앞의 勉強는 '공부'라는 명사입니다.";
   assert.equal(explanationLooksMixedLanguage(koreanWithKanji, "ko", "ja"), false);
+});
+
+test("explanationInLearningLanguage catches a note written in the learning language", () => {
+  // Seen from the live chat route on 2026-10-05, app in Spanish learning Korean.
+  assert.equal(
+    explanationInLearningLanguage("'가요'는 현재형이고, 어제 갔다는 과거의 일이라서 '갔어요'로 바꿔야 해.", "es", "ko"),
+    true,
+  );
+  assert.equal(
+    explanationInLearningLanguage("استخدمت \"أذهب\" بدلاً من \"ذهبت\". تحتاج إلى استخدام الزمن الماضي", "ja", "ar"),
+    true,
+  );
+  // The same point, written properly, quoting the learning language.
+  assert.equal(
+    explanationInLearningLanguage("'가요' está en presente; como fue ayer, hay que usar el pasado '갔어요'.", "es", "ko"),
+    false,
+  );
+  assert.equal(
+    explanationInLearningLanguage("「行きます」は現在形なので、「行きました」にします。", "ko", "ja"),
+    true,
+  );
+  assert.equal(
+    explanationInLearningLanguage("'行きます'는 현재형이라서 어제 일에는 '行きました'를 써요.", "ko", "ja"),
+    false,
+  );
+  assert.equal(explanationInLearningLanguage("Use the past tense here.", "en", "en"), false);
 });

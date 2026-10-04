@@ -4,6 +4,7 @@
  * grammar only when needed; never pad with textbook dumps.
  */
 
+import { languageEvidence } from "./inputLanguage.ts";
 import {
   interfaceLanguageName,
   learningLanguageName,
@@ -182,6 +183,26 @@ export function explanationLooksMixedLanguage(
   if (kana >= 12 && kana > latin) return true;
   if (hangul >= 12 && hangul > latin) return true;
   return false;
+}
+
+/**
+ * True when a note meant for the learner is written in the language they
+ * are learning rather than the one they read the app in. Quoted forms are
+ * set aside first, since a note is supposed to quote the learning language;
+ * what is left is the prose, and it should be mostly the app's language.
+ */
+export function explanationInLearningLanguage(
+  text: string,
+  interfaceLanguage: string,
+  learningLanguage: string,
+): boolean {
+  if (languageBase(interfaceLanguage) === languageBase(learningLanguage)) return false;
+  const evidence = languageEvidence(
+    stripQuotedLearnerForms(text),
+    languageBase(learningLanguage),
+    languageBase(interfaceLanguage),
+  );
+  return evidence.learning > evidence.ui;
 }
 
 /** Clamp model output to shared limits. */

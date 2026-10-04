@@ -26,7 +26,10 @@ import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext"
 import { Capacitor } from "@capacitor/core";
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
 import { entitlementHeaders } from "@/lib/billing/billingService";
-import { resolveChatInputMode } from "@/lib/inputLanguage";
+import {
+  resolveChatInputMode,
+  writtenInLearningLanguage,
+} from "@/lib/inputLanguage";
 import {
   alignCorrectionToGrammar,
   substantiveNorm,
@@ -973,7 +976,7 @@ export function ChatWindow({
           data.assistantMessage?.trim() || "Yeah, go on.",
         spokenReply: data.spokenReply?.trim() || undefined,
         translatedMessage:
-          locale === "en"
+          locale === sessionLanguageCode
             ? undefined
             : data.spokenReply?.trim() || undefined,
         correctionResult,
@@ -1044,7 +1047,7 @@ export function ChatWindow({
           data.assistantMessage?.trim() || "Yeah, go on.",
         spokenReply: data.spokenReply?.trim() || undefined,
         translatedMessage:
-          locale === "en"
+          locale === sessionLanguageCode
             ? undefined
             : data.spokenReply?.trim() || undefined,
         correctionResult,
@@ -1252,7 +1255,7 @@ export function ChatWindow({
           assistantMessage,
           spokenReply: data.spokenReply?.trim() || undefined,
           translatedMessage:
-            locale === "en"
+            locale === sessionLanguageCode
               ? undefined
               : data.spokenReply?.trim() || undefined,
         },
@@ -1279,7 +1282,8 @@ export function ChatWindow({
         : resolveChatInputMode(trimmed, {
             chatEnabled: chatModeOn,
             askExpressionEnabled: askExpressionOn,
-            locale,
+            learningLanguage: sessionLanguageCode,
+            interfaceLanguage: locale,
           });
 
     if (isChatDailyLimitReached) {
@@ -1459,7 +1463,7 @@ export function ChatWindow({
           ) : null}
           {turns.map((turn) => {
             const assistantReading =
-              locale === "en"
+              locale === sessionLanguageCode
                 ? undefined
                 : turn.spokenReply?.trim() ||
                   turn.translatedMessage?.trim() ||
@@ -1485,6 +1489,14 @@ export function ChatWindow({
                     role="user"
                     message={turn.userMessage}
                     imageUrl={turn.attachmentUrl}
+                    analyzeUserLine={
+                      turn.mode === "chat" &&
+                      writtenInLearningLanguage(
+                        turn.userMessage,
+                        sessionLanguageCode,
+                        locale,
+                      )
+                    }
                     attachedEnglish={
                       turn.mode === "how_to_say"
                         ? turn.expressionResult?.expression
