@@ -88,7 +88,11 @@ export function conversationKoreanParallel(
   interfaceLanguage: string,
   targetLanguage = "en",
 ): string {
-  if (interfaceLanguage === "en") return "";
+  // Nothing to render only when the chat is already in the app's language.
+  // This was `interfaceLanguage === "en"`, which assumed an English app meant
+  // an English learner, and left everyone reading the app in English while
+  // learning anything else without a reading.
+  if (interfaceLanguage === targetLanguage) return "";
   const language = interfaceLanguageDisplayName(interfaceLanguage);
   const targetName = learningLanguageName(targetLanguage);
 

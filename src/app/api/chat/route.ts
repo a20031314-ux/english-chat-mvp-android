@@ -396,7 +396,9 @@ Return ONLY JSON: {"assistantMessage":"...","spokenReply":"..."}`,
   return {
     assistantMessage: asText(parsed.assistantMessage).trim(),
     spokenReply:
-      langs.interfaceLanguage === "en" ? "" : asText(parsed.spokenReply).trim(),
+      langs.interfaceLanguage === langs.targetLanguage
+        ? ""
+        : asText(parsed.spokenReply).trim(),
   };
 }
 
@@ -448,7 +450,7 @@ async function runChat(
   };
   const assistantMessage = asText(parsed.assistantMessage);
   const spokenReply =
-    langs.interfaceLanguage === "en"
+    langs.interfaceLanguage === langs.targetLanguage
       ? ""
       : asText(parsed.spokenReply) ||
         asText(parsed.assistantSpoken) ||
@@ -581,7 +583,9 @@ Return ONLY JSON:
   };
   const assistantMessage = asText(parsed.assistantMessage).trim();
   const spokenReply =
-    langs.interfaceLanguage === "en" ? "" : asText(parsed.spokenReply).trim();
+    langs.interfaceLanguage === langs.targetLanguage
+      ? ""
+      : asText(parsed.spokenReply).trim();
   if (!assistantMessage) {
     return starterPayload(pickStarter(recent), langs);
   }
