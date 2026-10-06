@@ -1,5 +1,5 @@
 import { meterRequest } from "@/lib/server/meterRequest";
-import { NextRequest } from "next/server";
+import { NextRequest, after } from "next/server";
 import type OpenAI from "openai";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
@@ -9,6 +9,8 @@ import {
   incrementDailyUsed,
 } from "@/lib/server/entitlementStore";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
+import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
+import { requestAppVersion } from "@/lib/appVersion";
 import { normalizeHowToSayExpression } from "@/lib/howToSay";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
@@ -802,6 +804,22 @@ export async function POST(request: NextRequest) {
       if (!isPremium) {
         await incrementDailyUsed(userId);
       }
+      // What they asked to be able to say, measured once the answer has gone
+      // (learnerMetrics.ts). A question in their own language, so no verdict.
+      after(() =>
+        recordLearnerTurn({
+          userId,
+          surface: "how_to_say",
+          language: langs.targetLanguage,
+          uiLanguage: langs.interfaceLanguage,
+          sessionId: null,
+          turnIndex: null,
+          text: message,
+          spoken: false,
+          appVersion: requestAppVersion(request.headers),
+          now: Date.now(),
+        }),
+      );
       return jsonWithCors(request, data);
     }
 
@@ -824,6 +842,25 @@ export async function POST(request: NextRequest) {
     if (!isPremium) {
       await incrementDailyUsed(userId);
     }
+    // The chat sends no conversation id and only its last few lines, so the
+    // turn's place in the conversation is not known here; the app knowing it
+    // is a client change. Length and whether the correction changed anything
+    // are, and they go once the answer has (learnerMetrics.ts).
+    after(() =>
+      recordLearnerTurn({
+        userId,
+        surface: "chat",
+        language: langs.targetLanguage,
+        uiLanguage: langs.interfaceLanguage,
+        sessionId: null,
+        turnIndex: null,
+        text: message,
+        spoken: false,
+        corrected: data.correction?.corrected ?? undefined,
+        appVersion: requestAppVersion(request.headers),
+        now: Date.now(),
+      }),
+    );
     return jsonWithCors(request, data);
   } catch (error) {
     console.error("[chat]", error);

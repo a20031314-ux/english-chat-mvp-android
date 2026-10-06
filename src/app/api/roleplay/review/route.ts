@@ -1,4 +1,4 @@
-import { NextRequest } from "next/server";
+import { NextRequest, after } from "next/server";
 import { coerceLanguageCode, interfaceLanguageName } from "@/lib/learningLanguages";
 import { findScenario } from "@/lib/roleplay/catalog";
 import { readSpokenLines } from "@/lib/roleplay/director";
@@ -7,6 +7,9 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { targetLanguageFocusHints } from "@/lib/languageFocus";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
+import { requestUserId } from "@/lib/server/premiumRequest";
+import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
+import { requestAppVersion } from "@/lib/appVersion";
 
 export const dynamic = "force-dynamic";
 
@@ -61,6 +64,28 @@ export async function POST(request: NextRequest) {
   }
 
   await meterRequest(request, "roleplayReview");
+
+  // The one turn whose silence the app sends today: the learner asked to look
+  // back at it, so its real response latency and tries come with the request.
+  // Recorded as its own row (surface "review") rather than patched into the
+  // turn's — the request names no session or index to find that row by.
+  after(() =>
+    recordLearnerTurn({
+      userId: requestUserId(request),
+      surface: "review",
+      language: scenario.language,
+      uiLanguage: typeof body.nativeLanguage === "string" ? body.nativeLanguage : null,
+      sessionId: null,
+      turnIndex: null,
+      text: turn.heard,
+      spoken: true,
+      responseLatencyMs: turn.hesitationMs,
+      attempts: turn.attempts,
+      scenarioId: scenario.id,
+      appVersion: requestAppVersion(request.headers),
+      now: Date.now(),
+    }),
+  );
 
   try {
     const model = reviewModel();

@@ -272,3 +272,76 @@ export async function kvGetNumbers(keys: string[], chunk = 200): Promise<number[
   }
   return values;
 }
+
+/**
+ * Append to a list, and keep it from outliving its purpose.
+ *
+ * For records that are written once and read in bulk later — a month of one
+ * person's turns, say — where a JSON document would be a read, a change and a
+ * write that two requests can interleave. RPUSH is one command and cannot lose
+ * a row to a race. The TTL is reset on every push, so a list lives for that
+ * long after its last row, which for a month-keyed list is the month plus it.
+ */
+export async function kvListPush(
+  key: string,
+  values: string[],
+  ttlSeconds: number,
+): Promise<void> {
+  if (values.length === 0) return;
+  if (!credentials()) {
+    warnOnce();
+    const current = JSON.parse(memoryRead(key) ?? "[]") as string[];
+    memoryWrite(key, JSON.stringify([...current, ...values]), ttlSeconds);
+    return;
+  }
+  await attempt(
+    `RPUSH ${key}`,
+    async () => {
+      await command(["RPUSH", key, ...values]);
+      await command(["EXPIRE", key, ttlSeconds]);
+    },
+    undefined,
+  );
+}
+
+/** A slice of a list, oldest first; -1 for "to the end", as Redis reads it. */
+export async function kvListRange(key: string, start = 0, stop = -1): Promise<string[]> {
+  if (!credentials()) {
+    warnOnce();
+    const all = JSON.parse(memoryRead(key) ?? "[]") as string[];
+    return all.slice(start, stop === -1 ? undefined : stop + 1);
+  }
+  return attempt(
+    `LRANGE ${key}`,
+    async () => {
+      const result = await command(["LRANGE", key, start, stop]);
+      return Array.isArray(result) ? result.map(String) : [];
+    },
+    [],
+  );
+}
+
+/** Keep only the last `keep` entries of a list. */
+export async function kvListTrim(key: string, keep: number): Promise<void> {
+  if (!credentials()) {
+    warnOnce();
+    const raw = memoryRead(key);
+    if (raw === null) return;
+    const all = JSON.parse(raw) as string[];
+    const row = memory().get(key);
+    memory().set(key, { value: JSON.stringify(all.slice(-keep)), expiresAt: row?.expiresAt ?? null });
+    return;
+  }
+  await attempt(`LTRIM ${key}`, async () => void (await command(["LTRIM", key, -keep, -1])), undefined);
+}
+
+/** Remove keys outright — for a deletion request, not for routine expiry. */
+export async function kvDelete(keys: string[]): Promise<void> {
+  if (keys.length === 0) return;
+  if (!credentials()) {
+    warnOnce();
+    for (const key of keys) memory().delete(key);
+    return;
+  }
+  await attempt(`DEL ${keys.length} keys`, async () => void (await command(["DEL", ...keys])), undefined);
+}

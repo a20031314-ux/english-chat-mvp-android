@@ -1,4 +1,4 @@
-import { NextRequest } from "next/server";
+import { NextRequest, after } from "next/server";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { SCENARIOS, sentencesFor } from "@/lib/roleplay/catalog";
 import {
@@ -25,7 +25,9 @@ import {
   noteSentenceSaid,
   noteSentenceWritten,
 } from "@/lib/server/entitlementStore";
-import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
+import { requestUserId, resolveRequestEntitlement } from "@/lib/server/premiumRequest";
+import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
+import { contentHash } from "@/lib/roleplay/script";
 import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { requestAppVersion } from "@/lib/appVersion";
@@ -133,6 +135,33 @@ export async function POST(request: NextRequest) {
   const bank = sentencesFor(scenario.language);
   const recorded = recordedLines(scenario, scenarios, bank);
 
+  // Measurements of the learner's turn, written once the answer has gone out
+  // so nothing here can slow or break it (learnerMetrics.ts). The direction is
+  // filled in when it is decided, by whichever of the two paths below decides
+  // it, and read only after the response — streamed or not — is finished.
+  const sessionId = request.headers.get(ROLEPLAY_SESSION_HEADER)?.trim().slice(0, 64) || null;
+  const turnIndex = turn.directedTurns;
+  const previousTutorLine = [...turn.history].reverse().find((line) => line.who === "tutor");
+  let decided: Direction | null = null;
+  after(() =>
+    recordLearnerTurn({
+      userId: requestUserId(request),
+      surface: "call",
+      language: turn.targetLanguage,
+      uiLanguage: turn.nativeLanguage,
+      sessionId,
+      turnIndex,
+      text: turn.heard,
+      spoken: true,
+      // No direction, no verdict; a direction without a rewrite is a sentence
+      // that needed none.
+      corrected: decided ? (decided.better ?? "") : undefined,
+      scenarioId: scenario.id,
+      appVersion: requestAppVersion(request.headers),
+      now: Date.now(),
+    }),
+  );
+
   // Two clips only for a build that said it can play them. Everything on a
   // phone today was released before these lines existed and would queue
   // nothing at all for them (director.ts).
@@ -149,6 +178,7 @@ export async function POST(request: NextRequest) {
    * an invented one is a string nobody has asked for before.
    */
   const noteDirection = (direction: Direction) => {
+    decided = direction;
     if ("id" in direction.say) {
       void meterRequest(request, "roleplayBankLine");
       void noteSentenceSaid(scenario.language, direction.say.id);
@@ -159,7 +189,14 @@ export async function POST(request: NextRequest) {
       // thrown away, so the bank could only ever grow by somebody drafting one.
       // Reading the pile is a later job and a larger one; a line not written
       // down now is simply gone (entitlementStore.ts).
-      void noteSentenceWritten(scenario.language, direction.say.text);
+      void noteSentenceWritten(scenario.language, direction.say.text, {
+        scenario_id: scenario.id,
+        node_id: nodeId,
+        mode: turn.mode,
+        level: turn.level,
+        prev_tutor_hash: previousTutorLine ? contentHash(previousTutorLine.text) : null,
+        prev_turn_ref: { session_id: sessionId, turn_index: turnIndex },
+      });
     }
     if (direction.follow) {
       void meterRequest(request, "roleplaySplitTurn");

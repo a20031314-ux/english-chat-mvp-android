@@ -18,6 +18,8 @@ import {
   kvIncrBy,
   kvScanKeys,
   kvSetJson,
+  kvListPush,
+  kvListTrim,
 } from "./kv.ts";
 // Relative, not "@/": a script under scripts/ imports this directly and Node
 // cannot resolve the alias there (see modelCalls.ts, which was split out over
@@ -529,6 +531,38 @@ function writtenTextKey(language: string, hash: string) {
 }
 
 /**
+ * Where each sighting of a written line came from.
+ *
+ * The count and text above say what the character said and how often; they
+ * cannot say when it could be said. Whether "That must have been tough" only
+ * ever follows someone describing a bad day is the question a bank needs
+ * answered before it offers a line, and it can only be answered from the
+ * situations recorded as it happened. Kept beside the existing keys rather
+ * than in them, so nothing that reads those changes.
+ *
+ * The learner's own words are not here: the turn they answered is named by
+ * its session and index (learnerMetrics.ts), and the tutor line before it by
+ * a hash. Same ninety days as the line itself, and the latest fifty sightings,
+ * which is more than any line has had.
+ */
+function writtenContextKey(language: string, hash: string) {
+  return `bank:written:ctx:${language}:${hash}`;
+}
+
+const WRITTEN_CONTEXTS_KEPT = 50;
+
+export type WrittenLineContext = {
+  scenario_id: string;
+  node_id: string;
+  mode: "script" | "free";
+  level: number;
+  /** contentHash of the character's previous line, or null at the start. */
+  prev_tutor_hash: string | null;
+  /** The learner turn this line answered, as learnerMetrics.ts records it. */
+  prev_turn_ref: { session_id: string | null; turn_index: number | null };
+};
+
+/**
  * Note that the character wrote this line rather than reaching for one.
  *
  * Never throws and nothing waits on it: a lost line costs one row of a pile
@@ -537,6 +571,7 @@ function writtenTextKey(language: string, hash: string) {
 export async function noteSentenceWritten(
   language: string,
   text: string,
+  context?: WrittenLineContext,
 ): Promise<void> {
   const line = text.trim().slice(0, WRITTEN_MAX_CHARS);
   if (!line) return;
@@ -548,6 +583,11 @@ export async function noteSentenceWritten(
       { text: line, at: Date.now() },
       WRITTEN_TTL_SECONDS,
     );
+    if (context) {
+      const key = writtenContextKey(language, hash);
+      await kvListPush(key, [JSON.stringify({ ...context, at: Date.now() })], WRITTEN_TTL_SECONDS);
+      await kvListTrim(key, WRITTEN_CONTEXTS_KEPT);
+    }
   } catch {
     // Keeping is not the product either.
   }

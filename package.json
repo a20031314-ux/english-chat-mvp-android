@@ -17,6 +17,7 @@
     "compare:translate": "node --experimental-strip-types scripts/compare-reconstruction-translate.mjs",
     "test:translate": "node --experimental-strip-types --test src/lib/reconstructionTranslate/pipeline.test.ts",
     "test:call": "node --experimental-strip-types --test src/lib/realtimeCallSession.test.ts src/lib/callLines.test.ts src/lib/roleplay/script.test.ts src/lib/roleplay/difficulty.test.ts src/lib/roleplay/hearFrame.test.ts src/lib/roleplay/session.test.ts src/lib/roleplay/correctionPrompt.test.ts src/lib/roleplay/director.test.ts src/lib/roleplay/memory.test.ts src/lib/roleplay/review.test.ts src/lib/roleplay/practice.test.ts src/lib/roleplay/transcript.test.ts src/lib/roleplay/reviewDraft.test.ts src/lib/roleplay/saved.test.ts",
+    "test:chat": "node --experimental-strip-types --test src/lib/inputLanguage.test.ts",
     "check:languages": "node --experimental-strip-types scripts/check-language-coverage.mjs",
     "check:conversation": "node --experimental-strip-types scripts/check-conversation-quality.mjs",
     "verify:library": "node --experimental-strip-types scripts/verify-video-library.mjs",
@@ -25,7 +26,8 @@
     "roleplay:review": "node --experimental-strip-types scripts/review-roleplay-lines.mjs",
     "roleplay:warm": "node --experimental-strip-types scripts/warm-roleplay-speech.mjs",
     "roleplay:bank": "node --experimental-strip-types scripts/bank-report.mjs",
-    "test:billing": "node --experimental-strip-types --test src/lib/appVersion.test.ts src/lib/billing/videoPrep.test.ts src/lib/billing/points.test.ts src/lib/billing/cost.test.ts src/lib/server/entitlementStore.test.ts src/lib/server/callHold.test.ts src/lib/server/creditPurchase.test.ts src/lib/server/kv.test.ts"
+    "test:billing": "node --experimental-strip-types --test src/lib/appVersion.test.ts src/lib/billing/videoPrep.test.ts src/lib/billing/points.test.ts src/lib/billing/cost.test.ts src/lib/server/entitlementStore.test.ts src/lib/server/callHold.test.ts src/lib/server/creditPurchase.test.ts src/lib/server/kv.test.ts src/lib/server/learnerMetrics.test.ts",
+    "learner:metrics": "node --experimental-strip-types scripts/learner-metrics.mjs"
   },
   "dependencies": {
     "@capacitor-community/text-to-speech": "^8.0.2",
