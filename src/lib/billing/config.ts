@@ -19,6 +19,16 @@ export const REVENUECAT_USER_HEADER = "x-rc-user";
 export const FREE_DAILY_CHAT_LIMIT = 10;
 
 /**
+ * Questions a learner may type about a selected part of a sentence, per day.
+ *
+ * Each is one model call on demand, so the limit is not about cost per
+ * question — that is small — but about keeping it a way to ask about the
+ * sentence in front of you rather than a free chatbot with extra steps.
+ */
+export const FREE_DAILY_ASK_LIMIT = 10;
+export const PREMIUM_DAILY_ASK_LIMIT = 100;
+
+/**
  * What Play actually bills for `premium_monthly`.
  *
  * Kept in step with the Play Console by hand, which is exactly how it went
