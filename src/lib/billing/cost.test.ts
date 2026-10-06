@@ -21,14 +21,28 @@ import {
   roleplayPointCostUsd,
 } from "./cost.ts";
 
-test("a point costs what a minute of call costs", () => {
-  // The call is the expensive thing a point can be spent on, so it is what the
-  // price is set against; video can only come in under it.
-  assert.equal(pointCostUsd(), callMinuteUsd());
+test("a point costs what the dearest thing it buys costs", () => {
+  // A point buys call learning or video preparation, and the price is set
+  // against whichever costs more, so the other can only come in under it.
+  assert.equal(
+    pointCostUsd(),
+    Math.max(roleplayPointCostUsd(), videoPointCostUsd({ transcribed: true })),
+  );
   // A sanity bracket, not a precise claim: if this ever moves by an order of
   // magnitude the derivation changed and every number below needs revisiting.
-  assert.ok(pointCostUsd() > 0.02, "a call minute is not nearly free");
-  assert.ok(pointCostUsd() < 0.2, "a call minute is not that expensive either");
+  assert.ok(pointCostUsd() > 0.01, "a point is not nearly free");
+  assert.ok(pointCostUsd() < 0.2, "a point is not that expensive either");
+});
+
+test("the retired realtime call is not what a point is priced against", () => {
+  // It was, for weeks after nothing in the app could open one any more, and
+  // every margin was understated by the difference. A minute of it costs half
+  // again what a point does now; if this ever reads equal, the old basis came
+  // back.
+  assert.ok(
+    pointCostUsd() < callMinuteUsd(),
+    "a point is priced as a realtime minute again; is the realtime call back?",
+  );
 });
 
 test("every bundle clears the margin floor", () => {
@@ -87,10 +101,10 @@ test("the monthly grant is never sold at a loss", () => {
 
 test("the grant is the thin part of the plan, and by how much", () => {
   // Recorded rather than asserted away: a subscriber who spends the whole grant
-  // on calls leaves about a fifth of their payment behind, and everything else
-  // they do that month — chat, analysis, glossing, speech — comes out of that.
-  // Bundle buyers leave half or better. This is the number to revisit first
-  // when real usage exists.
+  // on call learning leaves just under half of their payment behind (47.5% as
+  // of 2026-10-06), and everything else they do that month — chat, analysis,
+  // glossing, speech — comes out of that. Bundle buyers leave two thirds. This
+  // is the number to revisit first when real usage exists.
   const margin = grantMargin(
     PREMIUM_MONTHLY_PRICE_KRW,
     PREMIUM_MONTHLY_IMPORT_POINTS,
@@ -110,47 +124,50 @@ test("the grant is the thin part of the plan, and by how much", () => {
   );
 });
 
-test("the bundles sit just above the floor rather than comfortably above it", () => {
-  // What the bundles can actually be held to. The step up out of the
-  // subscription is the number worth caring about, but it is mostly decided by
-  // the subscription's own price — at 4,900원 the grant works out so cheap per
-  // point that no bundle price can be close to it. What is in the bundles' gift
-  // is not drifting upward, so that is what is guarded: each one within a tenth
-  // of the lowest price MIN_BUNDLE_MARGIN allows.
+test("the bundles stay a modest step up from the plan, not a wall", () => {
+  // A bundle is bought by a subscriber who ran out. At 1.7 times the grant
+  // rate (until 2026-10-06) that step read as "don't"; they are set around 1.2
+  // times it now. Guarded from drifting back up: no bundle more than twice the
+  // floor, and none more than 1.3 times what a point costs inside the plan.
   const floorKrw =
     (pointCostUsd() / (1 - MIN_BUNDLE_MARGIN) / (1 - STORE_FEE_SHARE)) *
     KRW_PER_USD.rate;
+  const grantRate = PREMIUM_MONTHLY_PRICE_KRW / PREMIUM_MONTHLY_IMPORT_POINTS;
   for (const bundle of POINT_BUNDLES) {
     const perPoint = bundle.priceKrw / bundle.points;
     assert.ok(
-      perPoint < floorKrw * 1.1,
+      perPoint < floorKrw * 2,
       `${bundle.productId} is ${(perPoint / floorKrw).toFixed(2)}x the floor`,
+    );
+    assert.ok(
+      perPoint <= grantRate * 1.3,
+      `${bundle.productId} is ${(perPoint / grantRate).toFixed(2)}x the grant rate`,
     );
   }
 });
 
-test("the floor is what stops the step getting smaller, not a lack of trying", () => {
-  // Worth stating because it is the answer to "why not price them lower": at
-  // MIN_BUNDLE_MARGIN exactly a point still costs well over the grant rate, so
-  // the remaining gap can only be closed by moving the subscription.
+test("the step up out of the plan is a price choice now, not the floor's", () => {
+  // It used to be the answer to "why not price bundles lower": at the floor a
+  // point still cost well over the grant rate. With the realtime call gone the
+  // floor sits close to the grant rate, so a bundle could be priced near what
+  // a point costs inside the plan. Whether to is a decision, not arithmetic.
   const grantRate = PREMIUM_MONTHLY_PRICE_KRW / PREMIUM_MONTHLY_IMPORT_POINTS;
   const floorKrw =
     (pointCostUsd() / (1 - MIN_BUNDLE_MARGIN) / (1 - STORE_FEE_SHARE)) *
     KRW_PER_USD.rate;
   assert.ok(
-    floorKrw > grantRate * 1.5,
-    "if the floor has dropped below 1.5x the grant, the bundles can come down with it",
+    floorKrw < grantRate * 1.5,
+    "the floor is back above 1.5x the grant; the bundles are held up by cost again",
   );
 });
 
-test("a call minute is the expensive way to spend a point", () => {
-  // Everything above rests on this ordering: the price is set against the call
-  // because the call costs more, so the video side can only come in cheaper
-  // than assumed. If a pipeline change ever flips it, every margin in this file
-  // is overstated and nothing else here would notice.
+test("call learning is the expensive way to spend a point", () => {
+  // Not load-bearing the way it used to be — pointCostUsd takes the dearer of
+  // the two, so a flip cannot overstate a margin any more. Kept because which
+  // side is dearer is what tells you where to cut cost first.
   assert.ok(
-    videoPointCostUsd({ transcribed: true }) < callMinuteUsd(),
-    "video has become the expensive side; the price is no longer conservative",
+    videoPointCostUsd({ transcribed: true }) < roleplayPointCostUsd(),
+    "video has become the dearer side; the cost to cut first has moved",
   );
 });
 
@@ -163,13 +180,11 @@ test("a video with captions costs less than one that has to be transcribed", () 
   );
 });
 
-test("call learning comes in under what a point is assumed to cost", () => {
-  // The whole price rests on this ordering. A point buys five minutes of call
-  // learning or one minute of realtime audio, and if the cheap side ever cost
-  // more than the expensive one, every margin in this file would be wrong and
-  // nothing else here would notice.
+test("call learning never costs more than a point is assumed to", () => {
+  // True by construction now that the point is priced against it, and kept as
+  // the line that fails if someone puts a fixed number back into pointCostUsd.
   assert.ok(
-    roleplayPointCostUsd() < pointCostUsd(),
+    roleplayPointCostUsd() <= pointCostUsd(),
     `five minutes of call learning costs ${roleplayPointCostUsd().toFixed(4)}, a point is assumed to cost ${pointCostUsd().toFixed(4)}`,
   );
 });

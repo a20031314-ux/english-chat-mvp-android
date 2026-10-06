@@ -42,15 +42,15 @@ export const VIDEO_IMPORT_POINT_SECONDS = 3 * 60;
 export const FREE_MONTHLY_IMPORT_POINTS = 0;
 
 /**
- * The monthly grant: 240 minutes of custom video prep, or 80 minutes of call,
- * or any mix — points buy both now.
+ * The monthly grant: 240 minutes of custom video prep, or 400 minutes of call
+ * learning, or any mix — points buy both.
  *
- * Knowingly generous for the price: eighty points spent on calls leave about a
- * fifth of the subscription behind, and everything else that month comes out of
- * that fifth. The margin the bundles hold to would want nearer fifty. Left at
- * eighty because cutting what subscribers already have is a product decision
- * that wants real usage behind it, and a test records the gap rather than
- * asserting it away.
+ * Eighty points spent entirely on call learning leave just under half of the
+ * subscription behind (47.5% against list prices, 2026-10-06), and everything
+ * else that month comes out of that half. The bundles hold to a half; this
+ * sits just under it, and a test records the gap rather than asserting it
+ * away. It read "about a fifth" until the cost model stopped pricing points as
+ * minutes of the retired realtime call (cost.ts, pointCostUsd).
  */
 export const PREMIUM_MONTHLY_IMPORT_POINTS = 80;
 
@@ -72,13 +72,11 @@ export const FREE_TRIAL_CALL_COUNT = 2;
 export const TRIAL_CALL_MAX_SECONDS = 3 * 60;
 
 /**
- * What one point buys of a call.
+ * What one point buys of the realtime call.
  *
- * A minute, chosen so the point keeps the meaning it already had elsewhere: a
- * point is roughly a nickel of model time either way, whether it goes on a
- * minute of realtime audio or on three minutes of video preparation. That let
- * calls join the same currency without redefining VIDEO_IMPORT_POINT_SECONDS
- * or restating what anyone's existing balance is worth.
+ * A minute. Only /api/realtime/call reads this, and nothing in the app opens
+ * that call any more — the call tab is call learning (ROLEPLAY_POINT_SECONDS).
+ * Kept so the route still charges correctly if anything old reaches it.
  */
 export const POINT_CALL_SECONDS = 60;
 
@@ -116,25 +114,23 @@ export const CALL_BLOCK_SECONDS_HEADER = "x-call-seconds";
 /**
  * What one point buys of call learning.
  *
- * Five minutes, against a minute of realtime audio for the same point. The
- * gap is the whole argument for the mode: the character is a text model and a
- * recorded or synthesised line, not an audio model listening in real time, and
- * measured against the prompt it actually sends this comes in under what a
- * point is assumed to cost (roleplayPointCostUsd in cost.ts).
+ * Five minutes, against a minute of the realtime call it replaced. The gap is
+ * the whole argument for the mode: the character is a text model and a
+ * synthesised line, not an audio model listening in real time. Five minutes of
+ * it is now the dearest thing a point buys, so it is what a point is priced
+ * against (pointCostUsd in cost.ts) — about $0.039, or 55원, as of 2026-10-06.
  *
- * This used to say the number bought less than it should because every tutor
- * line was synthesised. That stopped being true: the bank carries most of what
- * the character says now, those lines are warmed into the edge before a release
- * and cost nothing to serve, and measured on 2026-09-23 a minute comes in 15%
- * to 34% under what cost.ts had been assuming. Five minutes is therefore
- * comfortable rather than tight.
+ * Speech is most of that: every line the character says in an open
+ * conversation is synthesised on the spot, since the sentence bank was taken
+ * out of "Just talk" (justTalk.ts). For a while the bank carried a share of
+ * the lines and those came back from the edge for nothing; that is no longer
+ * true, and this comment said otherwise for a while after it stopped being.
  *
- * There is still room above it, and the same two things would make it: the
- * scripted scenes play recordings shipped inside the app, which are cheaper
- * again than a cached line, and a bank that carries a larger share of turns
- * leaves less to write and less to say out loud. Neither is a reason to move
- * this on its own — a number that buys more is easy to raise and unpleasant to
- * lower, so it wants real usage behind it rather than a better cost model.
+ * The room to buy more minutes is in the same place: the scripted scenes play
+ * recordings shipped inside the app, and a bank that carried turns again would
+ * leave less to say out loud. Neither is a reason to move this on its own — a
+ * number that buys more is easy to raise and unpleasant to lower, so it wants
+ * real usage behind it rather than a better cost model.
  */
 export const ROLEPLAY_POINT_SECONDS = 5 * 60;
 

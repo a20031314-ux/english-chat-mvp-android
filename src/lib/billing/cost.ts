@@ -45,7 +45,16 @@ export const AUDIO_TOKENS_PER_MINUTE = { input: 600, output: 1200 } as const;
  */
 export const TUTOR_SPEECH_SHARE = 0.5;
 
-/** USD of model time in one minute of tutor call. */
+/**
+ * USD of model time in one minute of the realtime call.
+ *
+ * Retired as a way to spend a point: the call tab is call learning now
+ * (RoleplayTab.tsx), and nothing in the app opens /api/realtime/call. Kept
+ * because that route still logs an estimate with it, and because this is what
+ * every point was priced against until 2026-10-06 — a minute here is half
+ * again what five minutes of call learning cost, so prices derived from it
+ * were set against a bill nobody was running up.
+ */
 export function callMinuteUsd(): number {
   const input =
     (AUDIO_TOKENS_PER_MINUTE.input * REALTIME_AUDIO_USD_PER_MTOK.input) / 1_000_000;
@@ -200,16 +209,23 @@ export function roleplayPointCostUsd(): number {
 }
 
 /**
- * What one point is assumed to cost to serve.
+ * What one point is assumed to cost to serve: the dearer of the two things a
+ * point can buy today.
  *
- * A point buys either a minute of call or three minutes of video, and the call
- * is the more expensive of the two even against video's worst path. Pricing
- * against the expensive side means the cheap side can only come in under what
- * was assumed — a test holds that ordering, because the whole price rests on it
- * and nothing else in here would notice if it flipped.
+ * Those are five minutes of call learning and three minutes of video
+ * preparation. Measured as of 2026-10-06 call learning is the dearer, $0.0394
+ * against $0.0320 for video on its worst path (no captions, so whisper first),
+ * and pricing against the expensive side means the other can only come in
+ * under what was assumed.
+ *
+ * This was a minute of the realtime call ($0.0606) until that call stopped
+ * being something a point could buy. The constant outlived the feature by
+ * weeks, and every margin below was understated by the difference: the
+ * bundles were thought to clear half and cleared two thirds, the monthly grant
+ * was thought to leave a fifth and left nearly half.
  */
 export function pointCostUsd(): number {
-  return callMinuteUsd();
+  return Math.max(roleplayPointCostUsd(), videoPointCostUsd({ transcribed: true }));
 }
 
 /**
@@ -250,25 +266,31 @@ export type PointBundle = {
 /**
  * Point bundles, cheaper per point as they get larger.
  *
- * Priced as near MIN_BUNDLE_MARGIN as clean won figures allow, because the
- * number that matters here is not the margin but the step up out of the
- * subscription. The grant works out at about 124원 a point and the floor sits
- * at about 200원, so someone who runs out mid-month pays roughly 1.7 times what
- * the same point cost them inside the plan.
+ * Who buys one is a subscriber who ran out — on the plan's 400 minutes, the
+ * learner talking for thirteen minutes every day. Until 2026-10-06 they were
+ * asked about 1.7 times what a point cost inside the plan (60 for 12,900원
+ * against 80 for 9,900원), which reads less as "a little more for running out"
+ * than as "don't". That was the floor's doing while a point was costed as a
+ * realtime-call minute; against what a point buys now the floor is about
+ * 130원 and the gap was only a choice.
  *
- * That gap cannot be closed much further from this side. At the floor exactly
- * it is still 1.61 times, and going under it would mean selling points at a
- * loss to make the cliff look gentler. Closing it properly means moving the
- * subscription — its price or its grant — which is a decision that wants real
- * usage behind it.
+ * So they are set around 1.2 times the grant rate (about 124원 a point), with
+ * the larger ones a little cheaper per point so that buying more is still the
+ * better deal: 150, 148, 145 and 140원 a point. Every one still clears
+ * MIN_BUNDLE_MARGIN, the largest by the least.
+ *
+ * Thirty points is new: a first top-up small enough not to be a decision.
+ * Its product id has to exist in the Play console, and it is only offered by
+ * builds that list it, since the app asks the store for these ids by name.
  *
  * The smallest bundle is the one to keep honest: someone who runs out reaches
  * for that one, not for five hundred points.
  */
 export const POINT_BUNDLES: readonly PointBundle[] = [
-  { productId: "points_60", points: 60, priceKrw: 12900 },
-  { productId: "points_200", points: 200, priceKrw: 41900 },
-  { productId: "points_500", points: 500, priceKrw: 99900 },
+  { productId: "points_30", points: 30, priceKrw: 4500 },
+  { productId: "points_60", points: 60, priceKrw: 8900 },
+  { productId: "points_200", points: 200, priceKrw: 28900 },
+  { productId: "points_500", points: 500, priceKrw: 69900 },
 ] as const;
 
 /** What is left of a bundle's price after the store and the model bill. */
