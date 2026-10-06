@@ -122,6 +122,40 @@ function roleplaySessionKey(userId: string, sessionId: string) {
  */
 const ROLEPLAY_SESSION_TTL_SECONDS = 6 * 60 * 60;
 
+/** The conversation this person had last, so the next one can settle it. */
+function roleplayLastSessionKey(userId: string) {
+  return `points:rplast:${userId}`;
+}
+
+/**
+ * Paid-for call time a conversation did not use, waiting for the next one.
+ *
+ * Month-scoped like the grant it mostly came out of, and read from the month
+ * of the turn rather than the wall clock so the rule is the same in a test as
+ * on the server. A free learner's carry lapses at the month's end too, which
+ * costs them at most the unused part of one block.
+ */
+function roleplayCarryKey(userId: string, now: number) {
+  const at = new Date(now);
+  return `points:rpcarry:${userId}:${at.getFullYear()}-${String(at.getMonth() + 1).padStart(2, "0")}`;
+}
+
+const ROLEPLAY_CARRY_TTL_SECONDS = 40 * 24 * 60 * 60;
+
+/**
+ * How long past its last turn a conversation is taken to have run.
+ *
+ * The server sees a conversation only when the director is asked for a line,
+ * and the call does not end there: the line is still to be spoken, and the
+ * learner may answer it before they hang up, which is speech the server pays
+ * to hear. Half a minute covers both. It is the only part of settling that
+ * the learner cannot see and the only part that favours the house.
+ */
+const ROLEPLAY_SETTLE_GRACE_MS = 30 * 1000;
+
+/** No one's unused time grows past this, whatever goes wrong with settling. */
+const ROLEPLAY_CARRY_MAX_MS = 30 * 60 * 1000;
+
 function callHoldKey(userId: string, holdId: string) {
   return `points:hold:${userId}:${holdId}`;
 }
@@ -554,7 +588,64 @@ export async function readSentenceTally(
   return out;
 }
 
-type RoleplaySession = { startedAt: number; charged: number };
+type RoleplaySession = {
+  startedAt: number;
+  /** Points this conversation has taken. */
+  charged: number;
+  /**
+   * Call time it has paid for, in milliseconds: its points' blocks plus any
+   * carry it drew. Absent on rows written before carry existed, where it is
+   * exactly the blocks.
+   */
+  paidMs?: number;
+  /** When the server last saw a turn of it, which is what settling reads. */
+  lastTurnAt?: number;
+};
+
+const BLOCK_MS = ROLEPLAY_POINT_SECONDS * 1000;
+
+function paidMsOf(session: RoleplaySession): number {
+  return session.paidMs ?? session.charged * BLOCK_MS;
+}
+
+/** Unused call time waiting for this person's next conversation, in milliseconds. */
+export async function roleplayCarryMs(userId: string, now: number): Promise<number> {
+  return Math.max(0, await kvGetNumber(roleplayCarryKey(userId, now)));
+}
+
+/**
+ * Close the books on the conversation before this one.
+ *
+ * What it paid for and did not use goes to the carry, and what it paid for is
+ * cut down to what it used. The second half is what keeps this honest when two
+ * conversations overlap, on a phone and a tablet say: if the earlier one goes
+ * on talking after it was settled, it has nothing left in hand and pays for
+ * its next minutes again, out of the carry first, instead of having its time
+ * both refunded and spent.
+ */
+async function settlePreviousRoleplaySession(
+  userId: string,
+  currentSessionId: string,
+  now: number,
+): Promise<void> {
+  const pointer = roleplayLastSessionKey(userId);
+  const previous = await kvGetJson<{ sessionId: string }>(pointer);
+  await kvSetJson(pointer, { sessionId: currentSessionId }, ROLEPLAY_SESSION_TTL_SECONDS);
+  if (!previous || previous.sessionId === currentSessionId) return;
+
+  const key = roleplaySessionKey(userId, previous.sessionId);
+  const session = await kvGetJson<RoleplaySession>(key);
+  if (!session) return;
+  const lastTurnAt = session.lastTurnAt ?? session.startedAt;
+  const usedMs = Math.max(0, lastTurnAt - session.startedAt) + ROLEPLAY_SETTLE_GRACE_MS;
+  const unusedMs = paidMsOf(session) - usedMs;
+  if (unusedMs <= 0) return;
+
+  await kvSetJson(key, { ...session, paidMs: usedMs } satisfies RoleplaySession, ROLEPLAY_SESSION_TTL_SECONDS);
+  const carry = await roleplayCarryMs(userId, now);
+  const add = Math.min(unusedMs, Math.max(0, ROLEPLAY_CARRY_MAX_MS - carry));
+  if (add > 0) await kvIncrBy(roleplayCarryKey(userId, now), add, ROLEPLAY_CARRY_TTL_SECONDS);
+}
 
 /** Points left for call learning: the free lifetime allowance, or the balance. */
 export async function roleplayPointsLeft(
@@ -582,6 +673,15 @@ export async function roleplayPointsLeft(
  * begin. A turn that cannot be paid for is refused, and the caller ends the
  * scene rather than leaving someone talking to a character that has stopped
  * answering.
+ *
+ * What a conversation bought and did not use is not lost. When the next one
+ * starts, the last one is settled against the last turn the server saw, the
+ * difference goes to a carry, and the new conversation spends the carry before
+ * it spends a point. So three-minute calls cost three minutes each, not five,
+ * while every minute is still paid for before it is used: a settlement that
+ * goes wrong, or never happens, leaves the learner where they were before this
+ * existed, paying for whole blocks, and never leaves the server serving time
+ * nobody bought.
  */
 export async function chargeRoleplayTurn(
   userId: string,
@@ -600,39 +700,63 @@ export async function chargeRoleplayTurn(
   }
 
   const key = roleplaySessionKey(userId, sessionId);
-  const session = (await kvGetJson<RoleplaySession>(key)) ?? {
-    startedAt: now,
-    charged: 0,
-  };
+  const stored = await kvGetJson<RoleplaySession>(key);
+  if (!stored) await settlePreviousRoleplaySession(userId, sessionId, now);
+  const session: RoleplaySession = stored ?? { startedAt: now, charged: 0, paidMs: 0 };
   const elapsed = Math.max(0, now - session.startedAt);
-  const due =
-    Math.floor(elapsed / (ROLEPLAY_POINT_SECONDS * 1000)) + 1;
-  const owed = due - session.charged;
+  let paidMs = paidMsOf(session);
+
+  // Time already paid for, by an earlier conversation that did not use it, is
+  // spent before a point is.
+  if (elapsed >= paidMs) {
+    const carry = await roleplayCarryMs(userId, now);
+    if (carry > 0) {
+      await kvIncrBy(roleplayCarryKey(userId, now), -carry, ROLEPLAY_CARRY_TTL_SECONDS);
+      paidMs += carry;
+    }
+  }
+
+  const owed = elapsed < paidMs ? 0 : Math.floor((elapsed - paidMs) / BLOCK_MS) + 1;
 
   if (owed <= 0) {
     // Nothing has fallen due since the last turn, which is most turns.
-    if (session.charged === 0) {
-      await kvSetJson(key, session, ROLEPLAY_SESSION_TTL_SECONDS);
-    }
+    await kvSetJson(
+      key,
+      { ...session, paidMs, lastTurnAt: now } satisfies RoleplaySession,
+      ROLEPLAY_SESSION_TTL_SECONDS,
+    );
     return { ok: true, charged: 0, left: await roleplayPointsLeft(userId, isPremium) };
   }
+
+  // A refused turn hands back the carry it drew, so running out of points does
+  // not also cost the minutes that were waiting.
+  const refuse = async (left: number) => {
+    const drawn = paidMs - paidMsOf(session);
+    if (drawn > 0) await kvIncrBy(roleplayCarryKey(userId, now), drawn, ROLEPLAY_CARRY_TTL_SECONDS);
+    return { ok: false, charged: 0, left };
+  };
 
   if (!isPremium) {
     const used = await kvGetNumber(roleplayTrialKey(userId));
     if (used + owed > FREE_LIFETIME_ROLEPLAY_POINTS) {
-      return { ok: false, charged: 0, left: Math.max(0, FREE_LIFETIME_ROLEPLAY_POINTS - used) };
+      return refuse(Math.max(0, FREE_LIFETIME_ROLEPLAY_POINTS - used));
     }
     await kvIncrBy(roleplayTrialKey(userId), owed);
   } else {
     const balance = await readPointBalance(userId, monthlyImportPoints(true));
     const spend = splitSpend(balance, owed);
-    if (!spend) return { ok: false, charged: 0, left: totalPoints(balance) };
+    if (!spend) return refuse(totalPoints(balance));
     await applySpend(userId, spend, 1);
   }
 
   await kvSetJson(
     key,
-    { startedAt: session.startedAt, charged: due } satisfies RoleplaySession,
+    {
+      startedAt: session.startedAt,
+      charged: session.charged + owed,
+      paidMs: paidMs + owed * BLOCK_MS,
+      lastTurnAt: now,
+    } satisfies RoleplaySession,
     ROLEPLAY_SESSION_TTL_SECONDS,
   );
   return { ok: true, charged: owed, left: await roleplayPointsLeft(userId, isPremium) };

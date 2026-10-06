@@ -13,6 +13,7 @@ import {
   incrementCallsStarted,
   incrementDailyUsed,
   chargeRoleplayTurn,
+  roleplayCarryMs,
   roleplayPointsLeft,
   noteSentenceWritten,
   readWrittenLines,
@@ -136,23 +137,103 @@ test("call learning is free for its allowance and then is not", async () => {
 });
 
 test("the free allowance does not come back with a new conversation", async () => {
+  // Each conversation runs its full five minutes, so nothing carries and every
+  // one buys a block. The allowance is for the life of the account.
   const free = FREE_LIFETIME_ROLEPLAY_POINTS;
   const t0 = 1_700_000_000_000;
   for (let conversation = 0; conversation < free; conversation += 1) {
-    const charge = await chargeRoleplayTurn("rp-lifetime", false, `s${conversation}`, t0);
+    const start = t0 + conversation * FIVE_MINUTES * 2;
+    const charge = await chargeRoleplayTurn("rp-lifetime", false, `s${conversation}`, start);
     assert.equal(charge.ok, true, `conversation ${conversation} should still be affordable`);
     assert.equal(charge.charged, 1, "a new conversation buys its first block");
+    await chargeRoleplayTurn("rp-lifetime", false, `s${conversation}`, start + FIVE_MINUTES - 1000);
   }
-  const after = await chargeRoleplayTurn("rp-lifetime", false, "one-too-many", t0);
+  const after = await chargeRoleplayTurn("rp-lifetime", false, "one-too-many", t0 + free * FIVE_MINUTES * 2);
   assert.equal(after.ok, false, "the allowance is for the life of the account");
 });
 
 test("a conversation is charged by its own clock, not by the last one's", async () => {
   const t0 = 1_700_000_000_000;
   await chargeRoleplayTurn("rp-clock", true, "one", t0);
-  // An hour later, a new conversation owes one block — not thirteen.
+  // An hour later, a new conversation owes at most one block, not thirteen.
+  // Here it owes none: the first one used half a minute of the five it
+  // bought, and the rest waited for this one.
   const later = await chargeRoleplayTurn("rp-clock", true, "two", t0 + 60 * 60 * 1000);
-  assert.equal(later.charged, 1);
+  assert.equal(later.ok, true);
+  assert.equal(later.charged, 0);
+});
+
+test("three-minute calls cost three minutes each, not five", async () => {
+  // The case this exists for. Ten calls of three minutes, hung up each time:
+  // under whole blocks that was ten points for thirty minutes. With the unused
+  // part of each block carried to the next call it is the time actually used,
+  // half a minute of grace per call included, rounded up once at the end.
+  const t0 = 1_700_000_000_000;
+  const THREE_MINUTES = 3 * 60 * 1000;
+  let points = 0;
+  for (let call = 0; call < 10; call += 1) {
+    const start = t0 + call * 60 * 60 * 1000;
+    for (let at = 0; at <= THREE_MINUTES; at += 15_000) {
+      const charge = await chargeRoleplayTurn("rp-short", true, `call-${call}`, start + at);
+      assert.equal(charge.ok, true);
+      points += charge.charged;
+    }
+  }
+  // Used: 10 x (3:00 + 0:30) = 35 minutes = 7 blocks.
+  assert.ok(points <= 8, `ten three-minute calls took ${points} points`);
+  assert.ok(points >= 7, `ten three-minute calls took only ${points} points; time went unpaid`);
+});
+
+test("every minute served was paid for before it was used", async () => {
+  // Carry only ever holds time some earlier block bought, so however the
+  // calls are cut, what was charged covers what was used.
+  const t0 = 1_700_000_000_000;
+  const lengths = [40_000, 7 * 60_000, 90_000, 4 * 60_000, 11 * 60_000, 20_000];
+  let points = 0;
+  let usedMs = 0;
+  for (const [call, length] of lengths.entries()) {
+    const start = t0 + call * 60 * 60 * 1000;
+    for (let at = 0; at <= length; at += 10_000) {
+      const charge = await chargeRoleplayTurn("rp-paid", true, `c${call}`, start + at);
+      assert.equal(charge.ok, true);
+      points += charge.charged;
+    }
+    usedMs += Math.floor(length / 10_000) * 10_000;
+  }
+  assert.ok(points * FIVE_MINUTES >= usedMs, `${points} points for ${usedMs / 60_000} minutes`);
+});
+
+test("a settled conversation that keeps going pays again rather than twice-refunded", async () => {
+  // Two conversations overlapping, on a phone and a tablet. Starting the
+  // second settles the first; if the first then goes on, it has nothing left
+  // in hand and its next minutes are paid for again.
+  const t0 = 1_700_000_000_000;
+  await chargeRoleplayTurn("rp-overlap", true, "phone", t0);
+  await chargeRoleplayTurn("rp-overlap", true, "phone", t0 + 60_000);
+  await chargeRoleplayTurn("rp-overlap", true, "tablet", t0 + 90_000);
+  // The tablet drew the phone's unused time. The phone, talking on, is now
+  // past what it kept and must buy more.
+  const phone = await chargeRoleplayTurn("rp-overlap", true, "phone", t0 + 120_000);
+  assert.equal(phone.charged, 1);
+});
+
+test("minutes carried from the last block are still usable once the points run out", async () => {
+  const free = FREE_LIFETIME_ROLEPLAY_POINTS;
+  const t0 = 1_700_000_000_000;
+  // Spend all but nothing: one long conversation that uses every block.
+  for (let block = 0; block < free; block += 1) {
+    await chargeRoleplayTurn("rp-broke", false, "long", t0 + block * FIVE_MINUTES);
+  }
+  // Leave it a minute into its last block, so four minutes go to the carry.
+  await chargeRoleplayTurn("rp-broke", false, "long", t0 + (free - 1) * FIVE_MINUTES + 30_000);
+  const next = t0 + free * FIVE_MINUTES + 60 * 60 * 1000;
+  const carried = await chargeRoleplayTurn("rp-broke", false, "after", next);
+  assert.equal(carried.ok, true, "the carried minutes are still there to use");
+  assert.equal(carried.charged, 0);
+  // Past them there is nothing left to pay with, and the conversation stops.
+  const refused = await chargeRoleplayTurn("rp-broke", false, "after", next + 10 * 60_000);
+  assert.equal(refused.ok, false);
+  assert.equal(await roleplayCarryMs("rp-broke", next), 0, "the carry was spent, not lost");
 });
 
 test("a subscriber spends the monthly grant rather than the free allowance", async () => {
