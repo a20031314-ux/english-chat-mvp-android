@@ -14,9 +14,12 @@ export const metadata: Metadata = {
  * one, and said nothing about the lines the character writes being kept. Each
  * claim here names a behaviour in the code — if the code moves, this moves.
  *
- * The section "Conversation content we keep" is what allows learner speech to
- * be kept as text. Nothing writes it yet (entitlementStore.ts keeps only the
- * character's lines); this is the notice that has to exist before anything does.
+ * The section "Conversation Content We Keep" is what allows learner speech to
+ * be kept. Two retentions, because they are two kinds of thing: the words
+ * themselves for twelve months, and measurements about a turn that carry no
+ * words (learnerMetrics.ts) for fourteen, so a month can be compared with the
+ * same month a year before. The words are written only when
+ * LEARNER_TEXT_STORE is on, and it is off.
  */
 
 const LAST_UPDATED_EN = "October 6, 2026";
@@ -53,10 +56,10 @@ const en: Section[] = [
       "To improve the quality of corrections, conversations, translations and voice, we may keep text records of conversations:",
       "• What the AI character or assistant said.",
       "• What you said or typed — as text only. For calls this is the transcript of your speech, never the audio recording.",
-      "• Information about the conversation that helps us understand it, such as the language, the line you were answering, how long you took to answer, how many tries a step took, and when it happened.",
+      "• Information about the conversation that helps us understand it, without the words themselves: the language, which line you were answering, how long you took to answer, how long your sentence was, how confident speech recognition was, how many tries a step took, whether your sentence needed correcting, and when it happened.",
       "These records are linked only to the anonymous app identifier, not to your name or contact details. We use them to measure and improve how the app teaches — for example, to find corrections that were wrong, replies that did not fit what you said, or sentences worth adding to the app's prepared lines. They may be reviewed by us, and may be processed by our AI provider for this purpose.",
       "Please avoid sharing sensitive personal information (such as contact details, ID numbers, health or financial information) in chats and calls.",
-      "We keep these records for up to 12 months, after which they are deleted. You can ask us to delete them or to stop keeping them at any time (see “Your Choices and Rights”).",
+      "We keep the text of what was said for up to 12 months. We keep the information about the conversation that does not contain your words for up to 14 months, so that the same season can be compared from one year to the next. After that, both are deleted. You can ask us to delete them or to stop keeping them at any time (see “Your Choices and Rights”).",
     ],
   },
   {
@@ -95,7 +98,8 @@ const en: Section[] = [
     body: [
       "• Audio from practice calls: not stored; discarded after transcription.",
       "• Chat messages, photos and other content sent for processing: not stored after the reply is produced, except as described in “Conversation Content We Keep”.",
-      "• Conversation records described in “Conversation Content We Keep”: up to 12 months.",
+      "• Text of conversations described in “Conversation Content We Keep”: up to 12 months.",
+      "• Information about conversations that does not contain your words (such as response time, length and recognition confidence): up to 14 months.",
       "• Daily and monthly usage counts: up to about 70 days. Free trial usage and purchased points: for as long as they are needed to provide what you were given or bought.",
       "• Server logs: for a limited period set by our hosting provider.",
       "• Information on your device: until you delete it.",
@@ -163,10 +167,10 @@ const ko: Section[] = [
       "교정·대화·번역·음성의 품질을 개선하기 위해 대화를 글자 형태로 보관할 수 있습니다.",
       "• AI 캐릭터 또는 도우미가 한 말",
       "• 이용자가 말하거나 입력한 내용(글자만 보관합니다. 통화의 경우 음성을 변환한 글자이며, 녹음 음성은 보관하지 않습니다)",
-      "• 대화를 이해하는 데 필요한 정보: 언어, 이용자가 답한 대사, 답하기까지 걸린 시간, 한 단계에서 시도한 횟수, 일시 등",
+      "• 대화를 이해하는 데 필요한 정보(발화 내용 자체는 포함하지 않음): 언어, 이용자가 답한 대사, 답하기까지 걸린 시간, 발화의 길이, 음성 인식의 신뢰도, 한 단계에서 시도한 횟수, 교정이 필요했는지 여부, 일시 등",
       "이 기록은 익명 앱 식별자에만 연결되며 이름이나 연락처와 연결되지 않습니다. 잘못된 교정, 이용자의 말과 맞지 않는 답변을 찾거나, 앱에 미리 준비해 둘 문장을 고르는 등 서비스가 가르치는 방식을 측정하고 개선하는 데 사용합니다. 이 목적을 위해 운영자가 열람하거나 AI 제공자가 처리할 수 있습니다.",
       "채팅과 통화에서 연락처, 주민등록번호 등 식별번호, 건강·금융 정보 같은 민감한 개인정보는 말하지 않도록 주의해 주세요.",
-      "이 기록은 최대 12개월간 보관한 뒤 삭제합니다. 언제든지 삭제나 보관 중단을 요청할 수 있습니다(“이용자의 선택과 권리” 참고).",
+      "발화 내용(글자)은 최대 12개월, 발화 내용이 포함되지 않은 대화 정보는 전년 같은 시기와 비교할 수 있도록 최대 14개월 보관한 뒤 삭제합니다. 언제든지 삭제나 보관 중단을 요청할 수 있습니다(“이용자의 선택과 권리” 참고).",
     ],
   },
   {
@@ -193,7 +197,7 @@ const ko: Section[] = [
       "서비스 운영을 위해 아래 업체에 정보 처리를 맡기며, 이 과정에서 정보가 국외로 이전됩니다. 이전은 이용자가 해당 기능을 사용할 때 네트워크를 통해 이루어집니다.",
       "• OpenAI (미국): 채팅·통화·영상 내용, 통화 음성(글자 변환용), 분석 요청 문장 / 답변·교정·설명 생성, 음성 인식, 음성 합성, 번역 / 처리 후 OpenAI 정책에 따라 남용 감시를 위해 제한된 기간 보관",
       "• Vercel (미국): 요청 내용과 서버 로그 / 앱 웹페이지와 서버 호스팅 / 호스팅 제공자가 정한 기간",
-      "• Upstash (Vercel을 통해 이용): 익명 앱 식별자, 이용 횟수, 포인트, “보관하는 대화 내용”의 기록 / 데이터 저장 / 이 방침의 보관 기간",
+      "• Upstash (Vercel을 통해 이용): 익명 앱 식별자, 이용 횟수, 포인트, “보관하는 대화 내용”의 기록과 대화 정보 / 데이터 저장 / 이 방침의 보관 기간",
       "• RevenueCat (미국): 익명 앱 식별자, 구독·구매 상태 / 결제 상태 확인 / 구독 관리에 필요한 기간",
       "• Google (미국): 구매 정보, 영상 ID, 검색어 / Google Play 결제, YouTube 영상 재생·자막·검색 / 각 서비스 정책에 따름",
       "• Brave Search (미국): 검색어 / 학습 콘텐츠 검색 / 각 서비스 정책에 따름",
@@ -206,7 +210,8 @@ const ko: Section[] = [
     body: [
       "• 통화 녹음 음성: 저장하지 않으며 글자 변환 후 폐기",
       "• 처리를 위해 보낸 채팅 메시지·사진 등: 답변을 만든 뒤 보관하지 않음(단, “보관하는 대화 내용”에 해당하는 기록은 제외)",
-      "• “보관하는 대화 내용”의 기록: 최대 12개월",
+      "• “보관하는 대화 내용”의 발화 내용(글자): 최대 12개월",
+      "• 발화 내용이 포함되지 않은 대화 정보(답하기까지 걸린 시간, 발화 길이, 인식 신뢰도 등): 최대 14개월",
       "• 일별·월별 이용 횟수: 약 70일 이내. 무료 체험 사용량과 구매한 포인트: 제공하거나 구매한 내용을 이행하는 데 필요한 기간",
       "• 서버 로그: 호스팅 제공자가 정한 제한된 기간",
       "• 기기에 저장된 정보: 이용자가 삭제할 때까지",
