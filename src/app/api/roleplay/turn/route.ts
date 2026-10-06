@@ -142,6 +142,14 @@ export async function POST(request: NextRequest) {
   const sessionId = request.headers.get(ROLEPLAY_SESSION_HEADER)?.trim().slice(0, 64) || null;
   const turnIndex = turn.directedTurns;
   const previousTutorLine = [...turn.history].reverse().find((line) => line.who === "tutor");
+  // Sent by builds from 2.61: what the app measured about this turn. Absent
+  // from older ones, which leaves the row's latency empty as before.
+  const signals =
+    body.learnerSignals && typeof body.learnerSignals === "object"
+      ? (body.learnerSignals as Record<string, unknown>)
+      : null;
+  const responseLatencyMs = signals && typeof signals.hesitationMs === "number" ? readCount(signals.hesitationMs) : null;
+  const attempts = signals && typeof signals.attempts === "number" ? readCount(signals.attempts) : null;
   let decided: Direction | null = null;
   after(() =>
     recordLearnerTurn({
@@ -156,6 +164,8 @@ export async function POST(request: NextRequest) {
       // No direction, no verdict; a direction without a rewrite is a sentence
       // that needed none.
       corrected: decided ? (decided.better ?? "") : undefined,
+      responseLatencyMs,
+      attempts,
       scenarioId: scenario.id,
       appVersion: requestAppVersion(request.headers),
       now: Date.now(),
