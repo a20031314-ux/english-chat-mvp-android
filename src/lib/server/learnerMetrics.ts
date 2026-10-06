@@ -53,7 +53,13 @@ const ASR_JOIN_TTL_SECONDS = 5 * 60;
 /** Within a call, the request before this one — what `server_turn_gap_ms` is measured from. */
 const LAST_TURN_TTL_SECONDS = 60 * 60;
 
-export type Surface = "call" | "chat" | "how_to_say" | "review";
+/**
+ * Where a turn came from. The call tab only, on purpose: what this is for is
+ * spoken turns, and the chat is not measured (2026-10-07). "chat" and
+ * "how_to_say" rows exist from the few hours before that was decided and are
+ * kept readable rather than rewritten.
+ */
+export type Surface = "call" | "review" | "chat" | "how_to_say";
 
 export type LearnerTurnMetric = {
   v: number;
