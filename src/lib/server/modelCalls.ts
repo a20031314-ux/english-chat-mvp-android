@@ -41,6 +41,9 @@ export const MODEL_CALLS_PER_REQUEST = {
   // had to be asked for again — counted on its own so the pair says how often.
   expressionAsk: 1,
   expressionAskRetry: 1,
+  // A study map drawn from a goal (curriculum/generate.ts). One call, larger
+  // than most — it writes the whole map at once.
+  curriculumGenerate: 1,
   vocabGloss: 1,
   learningSpans: 1,
   translate: 1,

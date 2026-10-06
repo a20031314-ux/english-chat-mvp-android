@@ -22,8 +22,8 @@ export const metadata: Metadata = {
  * LEARNER_TEXT_STORE is on, and it is off.
  */
 
-const LAST_UPDATED_EN = "October 6, 2026";
-const LAST_UPDATED_KO = "2026년 10월 6일";
+const LAST_UPDATED_EN = "October 8, 2026";
+const LAST_UPDATED_KO = "2026년 10월 8일";
 
 type Section = { title: string; body: string[] };
 
@@ -43,7 +43,8 @@ const en: Section[] = [
       "• Practice calls. When you start a call and allow microphone access, the app records each of your turns as a short audio clip on your device and sends it to our server, which has it transcribed into text. The transcript, together with the recent conversation, is used to write the character's reply, which is then turned into speech. We do not store the audio clips: each one is discarded once it has been transcribed. The microphone is used only while a call is open.",
       "• Video learning. Links or video IDs you open, and the video's captions or audio, so the app can prepare subtitles, translations and explanations. Video audio may be transcribed on your device or by our AI provider.",
       "• Searches you make when looking for videos or channels, which are sent to search providers to return results.",
-      "• Sentences or words you ask to have analysed, translated or looked up.",
+      "• Sentences or words you ask to have analysed, translated or looked up, and questions you type about them.",
+      "• Study maps. The goal you write and the level you choose are sent to our AI provider to draw a study map; the map, the goal and which topics you mark as started or done are kept on our server, linked to the anonymous app identifier, so the map is there when you come back.",
       "• Reports you send about AI-generated content, including any note you add.",
       "• An anonymous app identifier, created by our billing provider for your installation, and usage counts tied to it — for example how many chat messages you sent today, how many points or call minutes you have used, and which app version you are on. These are used for free limits, points and premium access.",
       "• Purchase and subscription status, handled through Google Play Billing and RevenueCat. We never receive your full payment card details.",
@@ -99,6 +100,7 @@ const en: Section[] = [
       "• Audio from practice calls: not stored; discarded after transcription.",
       "• Chat messages, photos and other content sent for processing: not stored after the reply is produced, except as described in “Conversation Content We Keep”.",
       "• Text of conversations described in “Conversation Content We Keep”: up to 12 months.",
+      "• Study maps (goal, map and progress): while you use them, and deleted about 13 months after the map was last opened or changed. A new goal replaces the map; the one it replaced is kept once so it can be restored.",
       "• Information about conversations that does not contain your words (such as response time, length and recognition confidence): up to 14 months.",
       "• Daily and monthly usage counts: up to about 70 days. Free trial usage and purchased points: for as long as they are needed to provide what you were given or bought.",
       "• Server logs: for a limited period set by our hosting provider.",
@@ -154,7 +156,8 @@ const ko: Section[] = [
       "• 말하기 통화: 통화를 시작하고 마이크 권한을 허용하면, 앱이 이용자의 발화를 턴마다 짧은 음성으로 기기에서 녹음해 서버로 보내고, 서버가 이를 글자로 변환합니다. 변환된 글자와 최근 대화는 캐릭터의 답변을 만드는 데 쓰이고, 답변은 음성으로 합성됩니다. 녹음된 음성은 저장하지 않으며 글자 변환 후 즉시 폐기합니다. 마이크는 통화가 열려 있는 동안에만 사용됩니다.",
       "• 영상 학습: 이용자가 연 영상 링크나 영상 ID, 영상의 자막 또는 음성. 자막·번역·설명을 만들기 위해 처리하며, 영상 음성은 기기에서 또는 AI 제공자를 통해 글자로 변환될 수 있습니다.",
       "• 영상이나 채널을 찾을 때 입력한 검색어: 결과를 받기 위해 검색 제공자에게 전송됩니다.",
-      "• 분석·번역·뜻 찾기를 요청한 문장이나 단어.",
+      "• 분석·번역·뜻 찾기를 요청한 문장이나 단어, 그리고 그에 대해 입력한 질문.",
+      "• 학습 지도: 이용자가 적은 학습 목표와 고른 수준은 학습 지도를 만들기 위해 AI 제공자에게 전송됩니다. 만들어진 지도, 목표, 시작하거나 완료로 표시한 주제는 다시 열었을 때 이어서 볼 수 있도록 익명 앱 식별자에 연결해 서버에 보관합니다.",
       "• AI 생성 내용에 대한 신고와, 신고 시 함께 적은 메모.",
       "• 익명 앱 식별자(결제 제공자가 설치마다 만드는 식별값)와 이에 연결된 이용 횟수: 예를 들어 오늘 보낸 채팅 수, 사용한 포인트와 통화 시간, 앱 버전. 무료 이용 한도, 포인트, 프리미엄 이용에 사용합니다.",
       "• 구독·구매 상태: Google Play 결제와 RevenueCat을 통해 처리되며, 카드 번호 등 결제 정보 전체는 받지 않습니다.",
@@ -211,6 +214,7 @@ const ko: Section[] = [
       "• 통화 녹음 음성: 저장하지 않으며 글자 변환 후 폐기",
       "• 처리를 위해 보낸 채팅 메시지·사진 등: 답변을 만든 뒤 보관하지 않음(단, “보관하는 대화 내용”에 해당하는 기록은 제외)",
       "• “보관하는 대화 내용”의 발화 내용(글자): 최대 12개월",
+      "• 학습 지도(목표, 지도, 진행 상황): 이용하는 동안 보관하며, 마지막으로 열거나 바꾼 때로부터 약 13개월 뒤 삭제. 새 목표를 만들면 지도가 바뀌고, 바뀌기 전 지도는 되돌릴 수 있도록 한 개만 보관",
       "• 발화 내용이 포함되지 않은 대화 정보(답하기까지 걸린 시간, 발화 길이, 인식 신뢰도 등): 최대 14개월",
       "• 일별·월별 이용 횟수: 약 70일 이내. 무료 체험 사용량과 구매한 포인트: 제공하거나 구매한 내용을 이행하는 데 필요한 기간",
       "• 서버 로그: 호스팅 제공자가 정한 제한된 기간",

@@ -1,5 +1,32 @@
 {
   "es": {
+    "map": {
+      "title": "Cómo usar el mapa",
+      "sections": [
+        {
+          "heading": "De tu objetivo al mapa",
+          "body": [
+            "Escribe lo que quieres lograr y elige tu nivel. El mapa se crea para ese objetivo.",
+            "El mapa tiene cuatro columnas: situaciones, expresiones y gramática, palabras, y sonidos y escucha. Cada una agrupa los temas que necesitas para tu meta."
+          ]
+        },
+        {
+          "heading": "Orden y conexiones",
+          "body": [
+            "‘{ui:mapOrderTitle}’ es el orden recomendado para estudiar. ‘{ui:mapContinue}’ abre el primer tema que no has terminado.",
+            "Toca un tema para ver a qué otros está conectado y por qué. Al cerrarlo, los temas relacionados siguen resaltados en el mapa."
+          ]
+        },
+        {
+          "heading": "Practica y marca",
+          "body": [
+            "En ‘{ui:mapPractice}’ dentro de cada tema, puedes ir directo a chat, llamada, video o tus palabras. En chat, la primera frase ya está escrita para ti.",
+            "Cuando sientas que lo dominas, toca ‘{ui:mapMarkDone}’. Tu progreso se actualiza arriba.",
+            "Si cambias de objetivo, ‘{ui:mapNewGoal}’ crea un nuevo mapa y ‘{ui:mapRestore}’ te devuelve al anterior. Cada idioma tiene su propio mapa."
+          ]
+        }
+      ]
+    },
     "chat": {
       "title": "Cómo usar Chat",
       "sections": [
@@ -7,29 +34,29 @@
           "heading": "Chatea en el idioma que aprendes",
           "body": [
             "Escribe en el idioma que estás aprendiendo y el tutor te responde como un amigo.",
-            "Si hay algún error, se marca en tu mensaje y justo debajo verás la frase corregida."
+            "Si hay algún error, se marca en tu mensaje y justo debajo ves la frase corregida."
           ]
         },
         {
           "heading": "{ui:askExpression}",
           "body": [
             "Escribe lo que quieres decir en tu idioma y verás cómo se dice en el idioma que aprendes.",
-            "Si usas chat y {ui:askExpression} juntos, la app detecta el idioma en que escribiste y responde en el correcto."
+            "Si usas chat y {ui:askExpression} juntos, la app detecta el idioma y responde como corresponde."
           ]
         },
         {
           "heading": "Significados y análisis de frases",
           "body": [
-            "Toca {ui:chatReading} debajo de la respuesta del tutor para verla en tu idioma.",
-            "Toca {ui:insightAnalyze} en una frase para ver sus expresiones y estructura. También puedes tocar palabras para guardarlas en tu vocabulario."
+            "Toca {ui:chatReading} bajo la respuesta del tutor para verla en tu idioma.",
+            "Toca {ui:insightAnalyze} en una frase para ver sus expresiones y estructura. También puedes guardar palabras en tu vocabulario tocándolas."
           ]
         },
         {
-          "heading": "Además",
+          "heading": "Más opciones",
           "body": [
             "¿No sabes qué decir? Toca {ui:chatStartCta} y el tutor empezará la conversación.",
             "Usa + para enviar una foto y hablar sobre ella.",
-            "En el menú arriba a la izquierda puedes ver tus chats anteriores o empezar uno nuevo.",
+            "El menú arriba a la izquierda te muestra tus chats anteriores y te permite iniciar uno nuevo.",
             "Las cuentas gratis pueden enviar 10 mensajes al día; Premium no tiene límite diario."
           ]
         }
@@ -49,7 +76,7 @@
         {
           "heading": "Revisa dónde te atascaste",
           "body": [
-            "En el turno donde te atascaste queda el botón {ui:roleplayWhyStuck}.",
+            "En los turnos donde te atoras, aparece el botón {ui:roleplayWhyStuck}.",
             "Te muestra por qué fue difícil y qué podrías haber dicho. Puedes practicarlo al instante con {ui:roleplayPracticeCta}."
           ]
         },
@@ -57,7 +84,7 @@
           "heading": "Pausa y continúa",
           "body": [
             "{ui:roleplayPause} guarda la conversación. La próxima vez, usa {ui:roleplayResume} en la pestaña de Llamadas para seguir.",
-            "Las conversaciones terminadas quedan en {ui:roleplayPast} para leerlas de nuevo."
+            "Las conversaciones terminadas quedan en {ui:roleplayPast} para que las leas de nuevo."
           ]
         },
         {
@@ -76,21 +103,21 @@
         {
           "heading": "{ui:videoLearnLibraryTitle}",
           "body": [
-            "Videos seleccionados cada mes, listos para estudiar. Las cuentas gratis pueden probar 3; Premium los desbloquea todos.",
+            "Videos seleccionados cada mes, listos para estudiar. Gratis puedes probar 3; Premium los desbloquea todos.",
             "{ui:discoverCta} te sugiere videos según tus intereses."
           ]
         },
         {
           "heading": "Trae tu propio video",
           "body": [
-            "Pega un enlace de YouTube y la app crea subtítulos y traducción. Es función Premium y usa un punto por cada tres minutos de video, hasta 15 minutos."
+            "Pega un enlace de YouTube y la app crea subtítulos y traducción. Es solo para Premium y usa un punto por cada tres minutos, hasta 15 minutos."
           ]
         },
         {
           "heading": "Estudia con subtítulos",
           "body": [
-            "Mientras ves el video, cada parte muestra subtítulos en el idioma que aprendes y su traducción. Toca una línea para escuchar solo esa parte de nuevo.",
-            "{ui:videoLearnRangeMode} para escuchar varias líneas juntas y unir o dividir partes. {ui:videoLearnResetAllCues} lo deja todo como al principio."
+            "Mientras ves el video, cada parte muestra subtítulos en el idioma que aprendes y su traducción. Toca una línea para escuchar solo esa parte.",
+            "{ui:videoLearnRangeMode} te deja escuchar varias líneas juntas y unir o separar partes. {ui:videoLearnResetAllCues} lo deja todo como al principio."
           ]
         },
         {
@@ -115,45 +142,72 @@
           "heading": "Apréndelas",
           "body": [
             "{ui:vocabHideGloss} oculta los significados; toca una palabra para comprobar si la sabes.",
-            "{ui:vocabShuffle} cambia el orden."
+            "{ui:vocabShuffle} cambia el orden de las palabras."
           ]
         }
       ]
     },
-    "_version": "2026-10-07"
+    "_version": "2026-10-08"
   },
   "ja": {
+    "map": {
+      "title": "マップの使い方",
+      "sections": [
+        {
+          "heading": "目標からマップへ",
+          "body": [
+            "やりたいことを書いてレベルを選ぶと、その目標に合った学習マップが作られます。",
+            "マップは「場面」「表現・文法」「単語」「発音・リスニング」の4つの列に分かれていて、目標に必要なトピックが入っています。"
+          ]
+        },
+        {
+          "heading": "順番とつながり",
+          "body": [
+            "「{ui:mapOrderTitle}」はおすすめの学習順です。「{ui:mapContinue}」を押すと、まだ終わっていない最初のトピックが開きます。",
+            "トピックをタップすると、どことどうつながっているかが分かります。閉じた後も、つながっているトピックはマップ上で光ります。"
+          ]
+        },
+        {
+          "heading": "練習と完了マーク",
+          "body": [
+            "トピック内の「{ui:mapPractice}」から、チャット・通話・動画・単語帳にすぐ進めます。チャットの場合は最初の一文が自動で入力されます。",
+            "できたと思ったら「{ui:mapMarkDone}」を押しましょう。上部の進捗に反映されます。",
+            "目標を変えたいときは「{ui:mapNewGoal}」で新しいマップを作成、「{ui:mapRestore}」で前のマップに戻せます。言語ごとにマップは保存されます。"
+          ]
+        }
+      ]
+    },
     "chat": {
       "title": "チャットの使い方",
       "sections": [
         {
-          "heading": "学習中の言語でチャット",
+          "heading": "学習言語でチャット",
           "body": [
-            "学んでいる言語で書くと、チューターが友達のように返事します。",
-            "間違いがあればメッセージに印がつき、すぐ下に正しい文が表示されます。"
+            "学んでいる言語で書くと、チューターが友達のように返事をしてくれます。",
+            "間違いがあると自分のメッセージに印がつき、正しい文がすぐ下に表示されます。"
           ]
         },
         {
           "heading": "{ui:askExpression}",
           "body": [
-            "言いたいことを自分の言語で書くと、学習中の言語でどう言うかがわかります。",
-            "チャットと{ui:askExpression}の両方をオンにすると、書いた言語を自動で判別して対応します。"
+            "言いたいことを自分の言語で書くと、学習言語での言い方が表示されます。",
+            "チャットと「{ui:askExpression}」の両方がオンだと、どちらの言語で書いたか自動で判断してくれます。"
           ]
         },
         {
-          "heading": "意味・文の分析",
+          "heading": "意味と文の分析",
           "body": [
-            "チューターの返事の下にある{ui:chatReading}をタップすると、自分の言語で意味が見られます。",
-            "{ui:insightAnalyze}をタップすると、その文の表現や構造を詳しく見られます。単語をタップして単語帳に保存もできます。"
+            "チューターの返信下の「{ui:chatReading}」を押すと、自分の言語で意味が見られます。",
+            "文の「{ui:insightAnalyze}」を押すと、表現や構造を詳しく見られます。単語をタップして単語帳に保存もできます。"
           ]
         },
         {
-          "heading": "そのほか",
+          "heading": "その他の機能",
           "body": [
-            "何を話せばいいか迷ったら{ui:chatStartCta}をタップ。チューターが始めてくれます。",
-            "+ボタンで写真を送って、それについて話せます。",
+            "何を書けばいいか迷ったら「{ui:chatStartCta}」を押すと、チューターが会話を始めてくれます。",
+            "+ボタンで写真を送って、それについて話すこともできます。",
             "左上のメニューから過去のチャットを見たり、新しいチャットを始めたりできます。",
-            "無料アカウントは1日10回まで送信可能。プレミアムは無制限です。"
+            "無料アカウントは1日10メッセージまで、プレミアムは無制限です。"
           ]
         }
       ]
@@ -162,33 +216,33 @@
       "title": "通話の使い方",
       "sections": [
         {
-          "heading": "声で会話する",
+          "heading": "声で話す",
           "body": [
-            "{ui:roleplayStart}をタップしてマイクを許可すると、キャラクターと話せます。",
-            "話し終えると自動で自分の番が終わり、キャラクターが返事します。",
-            "詰まってもキャラクターが次の発言で助けてくれるので、会話が途切れません。"
+            "「{ui:roleplayStart}」を押してマイクを許可すると、キャラクターと音声で会話できます。",
+            "話し終えると自動で自分のターンが終わり、キャラクターが返事します。",
+            "詰まっても、キャラクターが次の発言でサポートしてくれるので、会話が途切れません。"
           ]
         },
         {
-          "heading": "詰まった場面を見直す",
+          "heading": "詰まった場面を振り返る",
           "body": [
-            "詰まったターンには{ui:roleplayWhyStuck}ボタンが残ります。",
-            "なぜ難しかったか、どう言えばよかったかが表示され、すぐに{ui:roleplayPracticeCta}で練習できます。"
+            "詰まったターンには「{ui:roleplayWhyStuck}」ボタンが残ります。",
+            "なぜ難しかったか、どう言えばよかったかが表示され、「{ui:roleplayPracticeCta}」ですぐ練習できます。"
           ]
         },
         {
           "heading": "一時停止と再開",
           "body": [
-            "{ui:roleplayPause}で会話を保存。次回は通話タブの{ui:roleplayResume}で続きから再開できます。",
-            "終わった会話は{ui:roleplayPast}に残り、あとから読み返せます。"
+            "「{ui:roleplayPause}」で会話を保存できます。次回は通話タブの「{ui:roleplayResume}」で続きから始められます。",
+            "終わった会話は「{ui:roleplayPast}」で再度読むことができます。"
           ]
         },
         {
           "heading": "通話時間とポイント",
           "body": [
-            "1ポイントで5分の通話ができます。開始時に1ポイント、5分ごとにさらに1ポイント使います。",
+            "1ポイントで5分通話できます。開始時に1ポイント、以降5分ごとに1ポイント消費します。",
             "5分未満で終了した場合、残り時間は次の通話に繰り越されます。",
-            "最初に20ポイント（100分）無料。プレミアムは毎月80ポイントもらえ、動画インポートと共通です。"
+            "最初に20ポイント（100分）無料でもらえます。プレミアムは毎月80ポイント付与され、動画インポートと共通です。"
           ]
         }
       ]
@@ -199,27 +253,27 @@
         {
           "heading": "{ui:videoLearnLibraryTitle}",
           "body": [
-            "毎月選ばれた動画で学習できます。無料アカウントは3本まで体験、プレミアムはすべて利用可能です。",
-            "{ui:discoverCta}で興味に合った動画をおすすめします。"
+            "毎月選ばれた動画で、すぐに学習できます。無料は3本まで体験、プレミアムは全て利用可能です。",
+            "「{ui:discoverCta}」で興味に合った動画をおすすめします。"
           ]
         },
         {
-          "heading": "自分の動画を使う",
+          "heading": "自分の動画を追加",
           "body": [
-            "YouTubeリンクを貼ると字幕と翻訳を自動作成します。プレミアム機能で、3分ごとに1ポイント、最大15分まで使えます。"
+            "YouTubeリンクを貼ると、字幕と翻訳が自動で作られます。これはプレミアム機能で、3分ごとに1ポイント（最大15分）使います。"
           ]
         },
         {
           "heading": "字幕で学ぶ",
           "body": [
-            "動画再生中、学習中の言語の字幕と翻訳が表示されます。行をタップするとその部分だけ再生できます。",
-            "{ui:videoLearnRangeMode}で複数行をまとめて聞いたり、分割・結合も可能。{ui:videoLearnResetAllCues}で元に戻せます。"
+            "再生中、学習言語の字幕と翻訳が表示されます。行をタップするとその部分だけ再生できます。",
+            "{ui:videoLearnRangeMode}で複数行をまとめて聞いたり、分割・結合も可能です。{ui:videoLearnResetAllCues}で元に戻せます。"
           ]
         },
         {
-          "heading": "保存して再視聴",
+          "heading": "保存と再視聴",
           "body": [
-            "{ui:videoLearnSaveSession}で保存し、{ui:videoLearnSavedSessions}から再度見られます。保存した動画は何度見てもポイント消費なし。"
+            "{ui:videoLearnSaveSession}で保存し、{ui:videoLearnSavedSessions}から再度見られます。保存した動画は再視聴してもポイントは消費されません。"
           ]
         }
       ]
@@ -237,58 +291,85 @@
         {
           "heading": "覚える",
           "body": [
-            "{ui:vocabHideGloss}で意味を隠し、単語をタップして自分で答え合わせ。",
+            "{ui:vocabHideGloss}で意味を隠し、単語をタップして自分で確認できます。",
             "{ui:vocabShuffle}で順番をシャッフルできます。"
           ]
         }
       ]
     },
-    "_version": "2026-10-07"
+    "_version": "2026-10-08"
   },
   "zh": {
-    "chat": {
-      "title": "聊天功能使用指南",
+    "map": {
+      "title": "地图使用指南",
       "sections": [
         {
-          "heading": "用你正在学习的语言聊天",
+          "heading": "从目标到学习地图",
+          "body": [
+            "写下你想实现的目标，选择你的水平，系统会为你生成一张专属学习地图。",
+            "地图分为四栏：情境、表达与语法、词汇、发音与听力，每栏包含实现目标所需的主题。"
+          ]
+        },
+        {
+          "heading": "学习顺序与关联",
+          "body": [
+            "‘{ui:mapOrderTitle}’是推荐的学习顺序。点击‘{ui:mapContinue}’会打开你还没完成的第一个主题。",
+            "点击某个主题可以查看它与其他主题的关联和原因。关闭后，相关主题会在地图上高亮显示。"
+          ]
+        },
+        {
+          "heading": "练习与标记完成",
+          "body": [
+            "在主题下的‘{ui:mapPractice}’里，每项都能直接进入聊天、通话、视频或单词本。聊天会自动填入一句开场白。",
+            "觉得掌握了就点‘{ui:mapMarkDone}’，顶部进度会同步更新。",
+            "目标变了可以用‘{ui:mapNewGoal}’生成新地图，‘{ui:mapRestore}’可切回上一个。每种语言都有独立的学习地图。"
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "聊天功能指南",
+      "sections": [
+        {
+          "heading": "用目标语言聊天",
           "body": [
             "用你正在学习的语言输入内容，导师会像朋友一样回复你。",
-            "如果有不对的地方，会在你的消息中标记出来，并在下方显示正确的句子。"
+            "有错误会在你的消息中标出，下面会显示正确的句子。"
           ]
         },
         {
           "heading": "{ui:askExpression}",
           "body": [
-            "用你的母语写下想说的话，就能看到目标语言的表达方式。",
-            "同时开启聊天和{ui:askExpression}时，应用会自动识别你用的语言并做出相应处理。"
+            "用自己的语言写下想说的话，系统会告诉你目标语言的表达方式。",
+            "同时开启聊天和{ui:askExpression}时，系统会自动识别你用的语言并做相应处理。"
           ]
         },
         {
-          "heading": "释义和句子分析",
+          "heading": "查看释义与句子分析",
           "body": [
-            "点击导师回复下方的{ui:chatReading}，可以查看母语释义。",
-            "点击句子的{ui:insightAnalyze}，可以详细了解表达和结构。还可以点击单词保存到词汇本。"
+            "点击导师回复下方的{ui:chatReading}，可查看母语释义。",
+            "点击句子的{ui:insightAnalyze}，可详细了解表达和结构。还可以点单词保存到词汇本。"
           ]
         },
         {
-          "heading": "其他功能",
+          "heading": "更多功能",
           "body": [
-            "不知道说什么？点{ui:chatStartCta}，导师会主动开启对话。",
-            "点击+可以发送照片，一起聊照片内容。",
-            "左上角菜单可以查看历史聊天或开始新对话。",
+            "不知道说什么时，点{ui:chatStartCta}让导师先开场。",
+            "点击+可以发送照片，一起聊图片。",
+            "左上角菜单可查看历史聊天或开始新对话。",
             "免费用户每天可发10条消息，会员无限制。"
           ]
         }
       ]
     },
     "roleplay": {
-      "title": "通话功能使用指南",
+      "title": "通话功能指南",
       "sections": [
         {
           "heading": "开口说出来",
           "body": [
-            "点击{ui:roleplayStart}并允许麦克风，就能和角色语音对话。",
-            "你说完停下后，轮到角色回答。",
+            "点击{ui:roleplayStart}并允许麦克风，即可和角色语音对话。",
+            "你说完后自动轮到角色回复。",
             "遇到卡壳时，角色会用下一句引导你，聊天不会中断。"
           ]
         },
@@ -296,53 +377,53 @@
           "heading": "回顾卡住的地方",
           "body": [
             "卡住的回合会保留{ui:roleplayWhyStuck}按钮。",
-            "它会说明难点和可用表达，并可直接用{ui:roleplayPracticeCta}练习。"
+            "点开后会显示难点和可用表达，还能直接用{ui:roleplayPracticeCta}练习。"
           ]
         },
         {
           "heading": "暂停与继续",
           "body": [
-            "用{ui:roleplayPause}保存对话。下次在通话标签页用{ui:roleplayResume}继续。",
-            "已完成的对话会保存在{ui:roleplayPast}，可随时回看。"
+            "点击{ui:roleplayPause}保存对话。下次在通话标签页用{ui:roleplayResume}继续。",
+            "已结束的对话会保存在{ui:roleplayPast}，可随时回看。"
           ]
         },
         {
           "heading": "通话时长与积分",
           "body": [
-            "每1积分可通话5分钟。开始通话时扣1积分，之后每5分钟再扣1积分。",
-            "如果提前结束，剩余时间会保留到下次通话。",
-            "初始赠送20积分（100分钟）。会员每月有80积分，可与视频导入共享。"
+            "每5分钟通话消耗1积分。开始时扣1分，之后每5分钟再扣1分。",
+            "如果提前结束，剩余时间会累积到下次通话。",
+            "新用户可免费获得20积分（100分钟）。会员每月有80积分，与视频导入共用。"
           ]
         }
       ]
     },
     "video": {
-      "title": "视频功能使用指南",
+      "title": "视频功能指南",
       "sections": [
         {
           "heading": "{ui:videoLearnLibraryTitle}",
           "body": [
-            "每月精选视频，随时学习。免费用户可体验3个，会员全部解锁。",
+            "每月精选视频，随时可学。免费用户可体验3个，会员全部解锁。",
             "{ui:discoverCta}会推荐符合你兴趣的视频。"
           ]
         },
         {
           "heading": "导入你的视频",
           "body": [
-            "粘贴YouTube链接，应用会自动生成字幕和翻译。此为会员功能，每3分钟视频消耗1积分，最长15分钟。"
+            "粘贴YouTube链接，系统自动生成字幕和翻译。此功能为会员专享，每3分钟视频消耗1积分，最长15分钟。"
           ]
         },
         {
-          "heading": "配合字幕学习",
+          "heading": "用字幕学习",
           "body": [
-            "播放时，每段都有学习语言字幕和翻译。点击句子可单独重听该部分。",
-            "用{ui:videoLearnRangeMode}可连续播放多句，还能合并或拆分片段。{ui:videoLearnResetAllCues}可一键恢复原状。"
+            "播放时，每段会显示目标语言字幕和翻译。点击某句可单独重听。",
+            "用{ui:videoLearnRangeMode}可连听多句，也能合并或拆分片段。{ui:videoLearnResetAllCues}可一键恢复原状。"
           ]
         },
         {
-          "heading": "保存并回看",
+          "heading": "保存与回看",
           "body": [
-            "用{ui:videoLearnSaveSession}保存进度，在{ui:videoLearnSavedSessions}中再次查看。已保存视频重复观看不再消耗积分。"
+            "用{ui:videoLearnSaveSession}保存进度，在{ui:videoLearnSavedSessions}里随时回看。已保存视频重复观看不再扣积分。"
           ]
         }
       ]
@@ -351,90 +432,117 @@
       "title": "词汇本使用指南",
       "sections": [
         {
-          "heading": "查找与保存",
+          "heading": "查找与收藏",
           "body": [
-            "搜索单词或短语，查看释义并保存到词汇本。",
-            "在聊天中点击并保存的单词也会自动收录到这里。"
+            "搜索单词或短语可查看释义并收藏到词汇本。",
+            "在聊天中点击保存的单词也会自动收录到这里。"
           ]
         },
         {
           "heading": "学习词汇",
           "body": [
-            "用{ui:vocabHideGloss}隐藏释义，点击单词自测记忆。",
-            "用{ui:vocabShuffle}打乱顺序，灵活复习。"
+            "开启{ui:vocabHideGloss}后，释义会被隐藏，点击单词自测。",
+            "用{ui:vocabShuffle}可打乱顺序练习。"
           ]
         }
       ]
     },
-    "_version": "2026-10-07"
+    "_version": "2026-10-08"
   },
   "vi": {
+    "map": {
+      "title": "Cách dùng bản đồ",
+      "sections": [
+        {
+          "heading": "Từ mục tiêu đến bản đồ",
+          "body": [
+            "Viết điều bạn muốn làm được và chọn trình độ, bạn sẽ nhận được bản đồ học tập phù hợp với mục tiêu đó.",
+            "Bản đồ có bốn cột: tình huống, mẫu câu & ngữ pháp, từ vựng, phát âm & nghe – mỗi cột chứa các chủ đề bạn cần để đạt mục tiêu."
+          ]
+        },
+        {
+          "heading": "Thứ tự và liên kết",
+          "body": [
+            "‘{ui:mapOrderTitle}’ là thứ tự học gợi ý. ‘{ui:mapContinue}’ sẽ mở chủ đề đầu tiên bạn chưa hoàn thành.",
+            "Chạm vào một chủ đề để xem nó liên kết với những gì và lý do. Sau khi đóng lại, các chủ đề liên quan vẫn sáng trên bản đồ."
+          ]
+        },
+        {
+          "heading": "Luyện tập và đánh dấu hoàn thành",
+          "body": [
+            "Trong mỗi chủ đề, phần ‘{ui:mapPractice}’ cho phép bạn chuyển thẳng tới chat, gọi thoại, video hoặc từ vựng. Với chat, câu đầu tiên sẽ được điền sẵn.",
+            "Khi bạn cảm thấy đã nắm vững, hãy nhấn ‘{ui:mapMarkDone}’. Tiến độ sẽ được cập nhật phía trên.",
+            "Nếu mục tiêu thay đổi, ‘{ui:mapNewGoal}’ sẽ tạo bản đồ mới, còn ‘{ui:mapRestore}’ sẽ quay lại bản đồ trước đó. Mỗi ngôn ngữ bạn học đều có bản đồ riêng."
+          ]
+        }
+      ]
+    },
     "chat": {
       "title": "Cách dùng Chat",
       "sections": [
         {
-          "heading": "Trò chuyện bằng ngôn ngữ bạn học",
+          "heading": "Chat bằng ngôn ngữ bạn học",
           "body": [
-            "Viết bằng ngôn ngữ bạn đang học, gia sư sẽ trả lời như một người bạn.",
-            "Nếu có lỗi, phần sai sẽ được đánh dấu trong tin nhắn của bạn, và câu đúng sẽ hiện ngay bên dưới."
+            "Viết bằng ngôn ngữ bạn đang học, trợ lý sẽ trả lời như một người bạn.",
+            "Nếu có lỗi, phần sai sẽ được đánh dấu trong tin nhắn của bạn, và câu sửa sẽ hiển thị ngay bên dưới."
           ]
         },
         {
           "heading": "{ui:askExpression}",
           "body": [
             "Viết điều bạn muốn nói bằng tiếng mẹ đẻ, bạn sẽ thấy cách nói bằng ngôn ngữ đang học.",
-            "Khi bật cả chat và {ui:askExpression}, ứng dụng sẽ tự nhận biết bạn viết bằng ngôn ngữ nào và xử lý phù hợp."
+            "Khi bật cả chat và {ui:askExpression}, ứng dụng sẽ tự nhận diện ngôn ngữ bạn dùng và xử lý phù hợp."
           ]
         },
         {
           "heading": "Xem nghĩa và phân tích câu",
           "body": [
-            "Nhấn {ui:chatReading} dưới câu trả lời của gia sư để xem nghĩa bằng tiếng mẹ đẻ.",
-            "Nhấn {ui:insightAnalyze} trên câu để xem chi tiết về cách dùng và cấu trúc. Bạn cũng có thể nhấn vào từ để lưu vào từ vựng."
+            "Nhấn {ui:chatReading} dưới câu trả lời để xem nghĩa bằng tiếng mẹ đẻ.",
+            "Nhấn {ui:insightAnalyze} trên một câu để xem chi tiết về cấu trúc và cách dùng. Bạn cũng có thể chạm vào từ để lưu vào từ vựng."
           ]
         },
         {
-          "heading": "Thêm một số mẹo",
+          "heading": "Lưu ý khác",
           "body": [
-            "Không biết bắt đầu thế nào? Nhấn {ui:chatStartCta}, gia sư sẽ mở đầu cuộc trò chuyện.",
-            "Dùng nút + để gửi ảnh và nói về ảnh đó.",
-            "Menu góc trên bên trái giúp bạn xem lại các cuộc trò chuyện cũ hoặc bắt đầu cuộc mới.",
+            "Không biết bắt đầu thế nào? Nhấn {ui:chatStartCta} để trợ lý bắt đầu cuộc trò chuyện.",
+            "Dùng dấu + để gửi ảnh và trò chuyện về ảnh đó.",
+            "Menu góc trên bên trái cho phép xem lại các cuộc chat cũ hoặc bắt đầu chat mới.",
             "Tài khoản miễn phí gửi được 10 tin nhắn mỗi ngày; Premium không giới hạn."
           ]
         }
       ]
     },
     "roleplay": {
-      "title": "Cách dùng Cuộc gọi",
+      "title": "Cách dùng Gọi thoại",
       "sections": [
         {
           "heading": "Nói chuyện trực tiếp",
           "body": [
-            "Nhấn {ui:roleplayStart} và cho phép micro để nói chuyện với nhân vật.",
-            "Khi bạn ngừng nói, đến lượt nhân vật trả lời.",
-            "Nếu bạn bí, nhân vật sẽ gợi ý để bạn tiếp tục. Cuộc trò chuyện không bị gián đoạn."
+            "Nhấn {ui:roleplayStart} và cho phép truy cập micro để nói chuyện với nhân vật.",
+            "Khi bạn dừng nói, lượt của bạn kết thúc và nhân vật sẽ trả lời.",
+            "Nếu bạn bí, nhân vật sẽ gợi ý để bạn tiếp tục. Cuộc trò chuyện sẽ không bị ngắt quãng."
           ]
         },
         {
           "heading": "Xem lại chỗ bị bí",
           "body": [
-            "Lượt bạn bị bí sẽ có nút {ui:roleplayWhyStuck}.",
-            "Nhấn vào để xem lý do và gợi ý câu trả lời, bạn có thể luyện tập ngay với {ui:roleplayPracticeCta}."
+            "Những lượt bạn bị bí sẽ có nút {ui:roleplayWhyStuck}.",
+            "Nhấn vào để xem lý do khó và gợi ý câu trả lời, bạn có thể luyện tập ngay với {ui:roleplayPracticeCta}."
           ]
         },
         {
           "heading": "Tạm dừng và tiếp tục",
           "body": [
-            "{ui:roleplayPause} sẽ lưu lại cuộc trò chuyện. Lần sau, vào tab Cuộc gọi và nhấn {ui:roleplayResume} để tiếp tục.",
+            "{ui:roleplayPause} sẽ lưu lại cuộc trò chuyện. Lần sau, vào tab Gọi thoại và nhấn {ui:roleplayResume} để tiếp tục.",
             "Các cuộc gọi đã hoàn thành sẽ lưu ở {ui:roleplayPast} để bạn xem lại."
           ]
         },
         {
-          "heading": "Thời lượng và điểm cuộc gọi",
+          "heading": "Thời gian gọi và điểm",
           "body": [
-            "Mỗi điểm dùng được 5 phút gọi. Khi bắt đầu gọi sẽ trừ 1 điểm, sau mỗi 5 phút lại trừ thêm 1 điểm.",
-            "Nếu kết thúc trước 5 phút, thời gian còn lại sẽ cộng vào lần gọi sau.",
-            "Bạn nhận 20 điểm (100 phút) miễn phí khi bắt đầu. Premium tặng 80 điểm mỗi tháng, dùng chung với tính năng nhập video."
+            "Mỗi điểm đổi được 5 phút gọi. Khi bắt đầu cuộc gọi sẽ trừ 1 điểm, sau mỗi 5 phút lại trừ thêm 1 điểm.",
+            "Nếu kết thúc trước khi hết 5 phút, thời gian còn lại sẽ cộng vào cuộc gọi sau.",
+            "Bạn nhận 20 điểm (100 phút) miễn phí khi bắt đầu. Gói Premium tặng 80 điểm mỗi tháng, dùng chung với tính năng video."
           ]
         }
       ]
@@ -445,27 +553,27 @@
         {
           "heading": "{ui:videoLearnLibraryTitle}",
           "body": [
-            "Video được chọn mỗi tháng, sẵn sàng để học. Miễn phí xem thử 3 video, Premium mở toàn bộ.",
-            "{ui:discoverCta} sẽ gợi ý video phù hợp sở thích của bạn."
+            "Video được chọn sẵn mỗi tháng, sẵn sàng để học. Tài khoản miễn phí được thử 3 video; Premium mở toàn bộ.",
+            "{ui:discoverCta} sẽ gợi ý video phù hợp với sở thích của bạn."
           ]
         },
         {
-          "heading": "Tự thêm video của bạn",
+          "heading": "Thêm video của bạn",
           "body": [
-            "Dán link YouTube, ứng dụng sẽ tạo phụ đề và bản dịch. Tính năng này dành cho Premium, mỗi 3 phút video tốn 1 điểm, tối đa 15 phút."
+            "Dán link YouTube, ứng dụng sẽ tạo phụ đề và bản dịch. Đây là tính năng Premium, mỗi 3 phút video tốn 1 điểm, tối đa 15 phút."
           ]
         },
         {
-          "heading": "Học qua phụ đề",
+          "heading": "Học với phụ đề",
           "body": [
-            "Khi xem, từng đoạn sẽ hiện phụ đề ngôn ngữ bạn học và bản dịch. Nhấn vào dòng để nghe lại đoạn đó.",
-            "Dùng {ui:videoLearnRangeMode} để nghe nhiều dòng liên tiếp, gộp hoặc tách đoạn. {ui:videoLearnResetAllCues} để khôi phục như ban đầu."
+            "Khi xem video, từng đoạn sẽ hiện phụ đề bằng ngôn ngữ bạn học và bản dịch. Nhấn vào dòng để nghe lại đoạn đó.",
+            "Dùng {ui:videoLearnRangeMode} để nghe nhiều câu liên tiếp, gộp hoặc tách đoạn. {ui:videoLearnResetAllCues} để khôi phục lại như ban đầu."
           ]
         },
         {
-          "heading": "Lưu lại để xem tiếp",
+          "heading": "Lưu lại và xem tiếp",
           "body": [
-            "Nhấn {ui:videoLearnSaveSession} để lưu, tìm lại trong {ui:videoLearnSavedSessions}. Xem lại video đã lưu sẽ không tốn điểm."
+            "Nhấn {ui:videoLearnSaveSession} để lưu, lần sau vào {ui:videoLearnSavedSessions} để xem lại. Xem lại video đã lưu không tốn điểm."
           ]
         }
       ]
@@ -477,112 +585,139 @@
           "heading": "Tìm và lưu từ",
           "body": [
             "Tìm kiếm từ hoặc cụm từ để xem nghĩa và lưu lại.",
-            "Các từ bạn nhấn lưu trong Chat cũng sẽ xuất hiện ở đây."
+            "Các từ bạn lưu trong Chat cũng sẽ xuất hiện ở đây."
           ]
         },
         {
           "heading": "Ôn tập từ vựng",
           "body": [
-            "{ui:vocabHideGloss} sẽ che nghĩa, bạn nhấn vào từ để tự kiểm tra.",
-            "{ui:vocabShuffle} để đảo thứ tự các từ."
+            "Bật {ui:vocabHideGloss} để che nghĩa, chạm vào từ để tự kiểm tra.",
+            "Dùng {ui:vocabShuffle} để đảo thứ tự từ."
           ]
         }
       ]
     },
-    "_version": "2026-10-07"
+    "_version": "2026-10-08"
   },
   "fr": {
-    "chat": {
-      "title": "Comment utiliser Chat",
+    "map": {
+      "title": "Utiliser la carte",
       "sections": [
         {
-          "heading": "Discutez dans la langue que vous apprenez",
+          "heading": "De l’objectif à la carte",
           "body": [
-            "Écrivez dans la langue que vous apprenez, le tuteur vous répond comme un ami.",
-            "Si quelque chose ne va pas, c’est signalé dans votre message, et la phrase corrigée s’affiche juste en dessous."
+            "Écrivez ce que vous voulez savoir faire et choisissez votre niveau : une carte d’apprentissage adaptée à votre objectif s’affiche.",
+            "La carte a quatre colonnes — situations, expressions et grammaire, vocabulaire, sons et écoute — qui regroupent les thèmes nécessaires."
+          ]
+        },
+        {
+          "heading": "Ordre et liens",
+          "body": [
+            "‘{ui:mapOrderTitle}’ vous propose un ordre conseillé pour progresser. ‘{ui:mapContinue}’ ouvre le premier thème que vous n’avez pas terminé.",
+            "Touchez un thème pour voir ses liens et comprendre pourquoi ils existent. Après avoir fermé, les thèmes liés restent en surbrillance sur la carte."
+          ]
+        },
+        {
+          "heading": "S’exercer et valider",
+          "body": [
+            "Dans un thème, sous ‘{ui:mapPractice}’, chaque élément vous emmène directement vers le chat, un appel, une vidéo ou votre vocabulaire. Pour le chat, une première phrase est déjà écrite pour vous.",
+            "Quand vous pensez maîtriser un thème, touchez ‘{ui:mapMarkDone}’. Votre progression s’affiche en haut.",
+            "Si votre objectif change, ‘{ui:mapNewGoal}’ crée une nouvelle carte, et ‘{ui:mapRestore}’ vous ramène à la précédente. Chaque langue a sa propre carte."
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "Utiliser le Chat",
+      "sections": [
+        {
+          "heading": "Discuter dans la langue apprise",
+          "body": [
+            "Écrivez dans la langue que vous apprenez, le tuteur répond comme un ami.",
+            "Si quelque chose ne va pas, c’est signalé dans votre message, avec la correction juste en dessous."
           ]
         },
         {
           "heading": "{ui:askExpression}",
           "body": [
-            "Écrivez ce que vous voulez dire dans votre langue, et voyez comment le dire dans la langue que vous apprenez.",
-            "Si Chat et {ui:askExpression} sont activés, l’app détecte la langue utilisée et fait le bon choix."
+            "Écrivez ce que vous voulez dire dans votre langue, et vous voyez comment le dire dans la langue apprise.",
+            "Si le chat et {ui:askExpression} sont activés, l’app détecte la langue et choisit la bonne option."
           ]
         },
         {
           "heading": "Traductions et analyse de phrases",
           "body": [
-            "Touchez {ui:chatReading} sous la réponse du tuteur pour voir la traduction dans votre langue.",
-            "Touchez {ui:insightAnalyze} sur une phrase pour en savoir plus sur ses expressions et sa structure. Vous pouvez aussi toucher des mots pour les ajouter à votre vocabulaire."
+            "Touchez {ui:chatReading} sous la réponse du tuteur pour la voir dans votre langue.",
+            "Touchez {ui:insightAnalyze} sur une phrase pour en explorer les expressions et la structure. Vous pouvez aussi toucher un mot pour l’ajouter à votre vocabulaire."
           ]
         },
         {
           "heading": "Astuces",
           "body": [
-            "Vous ne savez pas quoi dire ? Touchez {ui:chatStartCta} et le tuteur commencera la conversation.",
+            "Vous ne savez pas quoi dire ? Touchez {ui:chatStartCta} et le tuteur lancera la conversation.",
             "Utilisez + pour envoyer une photo et en discuter.",
-            "Le menu en haut à gauche permet de retrouver vos anciennes discussions ou d’en commencer une nouvelle.",
+            "Le menu en haut à gauche permet de retrouver vos discussions ou d’en commencer une nouvelle.",
             "Les comptes gratuits peuvent envoyer 10 messages par jour ; Premium n’a pas de limite quotidienne."
           ]
         }
       ]
     },
     "roleplay": {
-      "title": "Comment utiliser les Appels",
+      "title": "Utiliser les Appels",
       "sections": [
         {
-          "heading": "Parlez à voix haute",
+          "heading": "Parler à voix haute",
           "body": [
             "Touchez {ui:roleplayStart} et autorisez le micro pour parler avec le personnage.",
             "Quand vous arrêtez de parler, c’est à son tour de répondre.",
-            "Si vous bloquez, le personnage vous aide à continuer. La conversation ne s’arrête jamais."
+            "Si vous bloquez, le personnage vous aide à continuer. La conversation ne s’arrête pas."
           ]
         },
         {
-          "heading": "Revenez sur les blocages",
+          "heading": "Revoir vos blocages",
           "body": [
-            "Quand vous êtes bloqué, un bouton {ui:roleplayWhyStuck} reste visible.",
-            "Il explique pourquoi c’était difficile et ce que vous auriez pu dire. Vous pouvez vous entraîner tout de suite avec {ui:roleplayPracticeCta}."
+            "Un tour où vous avez bloqué garde un bouton {ui:roleplayWhyStuck}.",
+            "Il explique la difficulté et propose ce que vous auriez pu dire. Vous pouvez l’exercer tout de suite avec {ui:roleplayPracticeCta}."
           ]
         },
         {
           "heading": "Mettre en pause et reprendre",
           "body": [
-            "{ui:roleplayPause} sauvegarde la conversation. La prochaine fois, {ui:roleplayResume} dans l’onglet Appels permet de reprendre.",
+            "{ui:roleplayPause} sauvegarde la conversation. Plus tard, {ui:roleplayResume} dans l’onglet Appels permet de reprendre.",
             "Les conversations terminées restent dans {ui:roleplayPast} pour les relire."
           ]
         },
         {
-          "heading": "Durée et points d’appel",
+          "heading": "Durée et points",
           "body": [
             "Un point donne cinq minutes d’appel. Un point est utilisé au début, puis un autre toutes les cinq minutes.",
-            "Si vous terminez avant la fin des cinq minutes, le temps restant est reporté sur le prochain appel.",
+            "Si l’appel s’arrête avant cinq minutes, le temps restant est reporté sur le prochain appel.",
             "Vous recevez 20 points (100 minutes) gratuits au départ. Premium offre 80 points par mois, partagés avec l’import vidéo."
           ]
         }
       ]
     },
     "video": {
-      "title": "Comment utiliser Vidéo",
+      "title": "Utiliser la Vidéo",
       "sections": [
         {
           "heading": "{ui:videoLearnLibraryTitle}",
           "body": [
             "Des vidéos sélectionnées chaque mois, prêtes à étudier. Les comptes gratuits peuvent en essayer 3 ; Premium donne accès à tout.",
-            "{ui:discoverCta} propose des vidéos selon vos centres d’intérêt."
+            "{ui:discoverCta} vous propose des vidéos selon vos centres d’intérêt."
           ]
         },
         {
-          "heading": "Importez vos propres vidéos",
+          "heading": "Importer votre propre vidéo",
           "body": [
             "Collez un lien YouTube et l’app crée les sous-titres et la traduction. Fonction Premium : un point pour trois minutes de vidéo, jusqu’à 15 minutes."
           ]
         },
         {
-          "heading": "Étudiez avec les sous-titres",
+          "heading": "Étudier avec les sous-titres",
           "body": [
-            "Pendant la lecture, chaque passage affiche les sous-titres dans la langue que vous apprenez, avec la traduction. Touchez une ligne pour réécouter ce passage.",
-            "{ui:videoLearnRangeMode} permet d’écouter plusieurs lignes ensemble, de fusionner ou séparer les parties. {ui:videoLearnResetAllCues} remet tout à zéro."
+            "Pendant la lecture, chaque passage affiche les sous-titres dans la langue apprise, avec la traduction. Touchez une ligne pour réécouter ce passage.",
+            "{ui:videoLearnRangeMode} permet d’écouter plusieurs lignes à la suite, de fusionner ou séparer les passages. {ui:videoLearnResetAllCues} remet tout à zéro."
           ]
         },
         {
@@ -594,93 +729,120 @@
       ]
     },
     "vocab": {
-      "title": "Comment utiliser le Vocabulaire",
+      "title": "Utiliser le Vocabulaire",
       "sections": [
         {
           "heading": "Chercher et enregistrer",
           "body": [
             "Cherchez un mot ou une expression pour voir sa signification et l’ajouter à votre vocabulaire.",
-            "Les mots que vous touchez et enregistrez dans Chat se retrouvent aussi ici."
+            "Les mots sauvegardés dans le Chat se retrouvent aussi ici."
           ]
         },
         {
-          "heading": "Apprenez-les",
+          "heading": "Apprendre",
           "body": [
-            "{ui:vocabHideGloss} masque les traductions, touchez un mot pour vérifier si vous avez trouvé.",
+            "{ui:vocabHideGloss} masque les significations, touchez un mot pour vérifier si vous avez bien retenu.",
             "{ui:vocabShuffle} mélange l’ordre des mots."
           ]
         }
       ]
     },
-    "_version": "2026-10-07"
+    "_version": "2026-10-08"
   },
   "it": {
+    "map": {
+      "title": "Come usare la mappa",
+      "sections": [
+        {
+          "heading": "Dal tuo obiettivo alla mappa",
+          "body": [
+            "Scrivi cosa vuoi saper fare e scegli il tuo livello: la mappa di studio viene creata su misura per te.",
+            "La mappa ha quattro colonne — situazioni, espressioni e grammatica, parole, suoni e ascolto — con tutti gli argomenti utili per il tuo obiettivo."
+          ]
+        },
+        {
+          "heading": "Ordine e collegamenti",
+          "body": [
+            "‘{ui:mapOrderTitle}’ ti suggerisce un buon ordine di studio. ‘{ui:mapContinue}’ apre il primo argomento che non hai ancora completato.",
+            "Tocca un argomento per vedere a cosa è collegato e perché. Dopo averlo chiuso, i collegamenti restano evidenziati sulla mappa."
+          ]
+        },
+        {
+          "heading": "Esercitati e segna come fatto",
+          "body": [
+            "In ogni argomento, sotto ‘{ui:mapPractice}’, puoi andare subito in chat, chiamata, video o ai tuoi vocaboli. In chat, la prima frase viene già inserita per te.",
+            "Quando ti senti sicuro, tocca ‘{ui:mapMarkDone}’. Il progresso in alto si aggiorna.",
+            "Se cambi obiettivo, ‘{ui:mapNewGoal}’ crea una nuova mappa, mentre ‘{ui:mapRestore}’ ti riporta a quella precedente. Ogni lingua ha la sua mappa personale."
+          ]
+        }
+      ]
+    },
     "chat": {
-      "title": "Come usare Chat",
+      "title": "Come usare la Chat",
       "sections": [
         {
           "heading": "Chatta nella lingua che stai imparando",
           "body": [
             "Scrivi nella lingua che vuoi imparare e il tutor ti risponde come farebbe un amico.",
-            "Se c’è qualcosa di sbagliato, viene segnalato nel tuo messaggio e sotto trovi la frase corretta."
+            "Se c’è qualcosa da correggere, viene segnalato nel tuo messaggio e subito sotto trovi la frase corretta."
           ]
         },
         {
           "heading": "{ui:askExpression}",
           "body": [
-            "Scrivi quello che vuoi dire nella tua lingua: vedrai come si dice nella lingua che stai imparando.",
-            "Se usi sia chat che {ui:askExpression}, l’app capisce in che lingua hai scritto e risponde di conseguenza."
+            "Scrivi cosa vuoi dire nella tua lingua e vedrai come si dice nella lingua che stai imparando.",
+            "Se usi sia la chat che {ui:askExpression}, l’app capisce in che lingua hai scritto e risponde di conseguenza."
           ]
         },
         {
           "heading": "Significati e analisi delle frasi",
           "body": [
-            "Tocca {ui:chatReading} sotto la risposta del tutor per vedere la traduzione.",
-            "Tocca {ui:insightAnalyze} su una frase per analizzarne struttura ed espressioni. Puoi anche toccare le parole per salvarle nel tuo vocabolario."
+            "Tocca {ui:chatReading} sotto la risposta del tutor per leggerla nella tua lingua.",
+            "Tocca {ui:insightAnalyze} su una frase per vedere spiegazioni su espressioni e struttura. Puoi anche toccare le parole per salvarle nel tuo vocabolario."
           ]
         },
         {
           "heading": "Altre funzioni",
           "body": [
             "Non sai cosa scrivere? Tocca {ui:chatStartCta} e il tutor inizierà la conversazione.",
-            "Usa + per inviare una foto e parlarne insieme.",
-            "Nel menu in alto a sinistra trovi le chat passate e puoi iniziarne una nuova.",
-            "Con l’account gratuito puoi inviare 10 messaggi al giorno; Premium non ha limiti."
+            "Con il + puoi inviare una foto e parlarne insieme.",
+            "Dal menu in alto a sinistra trovi le chat passate e puoi iniziarne una nuova.",
+            "Con l’account gratuito puoi inviare 10 messaggi al giorno; Premium non ha limiti giornalieri."
           ]
         }
       ]
     },
     "roleplay": {
-      "title": "Come usare Chiamate",
+      "title": "Come usare le Chiamate",
       "sections": [
         {
           "heading": "Parla ad alta voce",
           "body": [
             "Tocca {ui:roleplayStart} e consenti il microfono per parlare con il personaggio.",
             "Quando smetti di parlare, il tuo turno finisce e il personaggio risponde.",
-            "Se ti blocchi, il personaggio ti aiuta a proseguire con la risposta. La conversazione continua sempre."
+            "Se ti blocchi, il personaggio ti aiuta con la risposta successiva. La conversazione continua senza interruzioni."
           ]
         },
         {
-          "heading": "Rivedi dove ti sei bloccato",
+          "heading": "Rivedi i punti difficili",
           "body": [
-            "Se ti sei bloccato, quel turno avrà il pulsante {ui:roleplayWhyStuck}.",
-            "Ti mostra perché era difficile e cosa potevi dire; puoi esercitarti subito con {ui:roleplayPracticeCta}."
+            "Se ti sei bloccato in un turno, resta il pulsante {ui:roleplayWhyStuck}.",
+            "Ti mostra perché era difficile e cosa avresti potuto dire. Puoi esercitarti subito con {ui:roleplayPracticeCta}."
           ]
         },
         {
           "heading": "Metti in pausa e riprendi",
           "body": [
-            "{ui:roleplayPause} salva la conversazione. La prossima volta, usa {ui:roleplayResume} nella scheda Chiamate per riprendere.",
-            "Le conversazioni finite restano in {ui:roleplayPast} per rileggerle quando vuoi."
+            "{ui:roleplayPause} salva la conversazione. La prossima volta, {ui:roleplayResume} nella scheda Chiamate la riprende da dove eri rimasto.",
+            "Le conversazioni concluse restano in {ui:roleplayPast} per poterle rileggere."
           ]
         },
         {
-          "heading": "Durata e punti delle chiamate",
+          "heading": "Durata e punti chiamata",
           "body": [
-            "Un punto vale cinque minuti di chiamata. Si usa un punto all’inizio e uno ogni cinque minuti.",
-            "Se chiudi prima dei cinque minuti, il tempo rimasto si aggiunge alla prossima chiamata.",
-            "Ricevi 20 punti (100 minuti) gratis all’inizio. Premium dà 80 punti al mese, condivisi con i video importati."
+            "Un punto vale cinque minuti di chiamata. Un punto viene usato all’inizio e un altro ogni cinque minuti.",
+            "Se chiudi la chiamata prima dei cinque minuti, il tempo restante si somma alla prossima chiamata.",
+            "Ricevi 20 punti (100 minuti) gratis all’inizio. Con Premium hai 80 punti al mese, condivisi con i video importati."
           ]
         }
       ]
@@ -691,7 +853,7 @@
         {
           "heading": "{ui:videoLearnLibraryTitle}",
           "body": [
-            "Ogni mese trovi video scelti da studiare. Con l’account gratuito puoi provarne 3; Premium li sblocca tutti.",
+            "Ogni mese trovi video scelti da studiare subito. Con l’account gratuito puoi provarne 3; con Premium li hai tutti.",
             "{ui:discoverCta} ti suggerisce video in base ai tuoi interessi."
           ]
         },
@@ -704,40 +866,67 @@
         {
           "heading": "Studia con i sottotitoli",
           "body": [
-            "Durante la visione, ogni parte mostra i sottotitoli nella lingua che stai imparando e la traduzione. Tocca una riga per riascoltare solo quella.",
-            "{ui:videoLearnRangeMode} per ascoltare più righe insieme, unire o dividere le parti. {ui:videoLearnResetAllCues} ripristina tutto com’era."
+            "Durante la riproduzione, ogni parte mostra i sottotitoli nella lingua che stai imparando e la traduzione. Tocca una riga per riascoltare solo quella.",
+            "{ui:videoLearnRangeMode} per ascoltare più righe insieme e unire o dividere le parti. {ui:videoLearnResetAllCues} riporta tutto come prima."
           ]
         },
         {
           "heading": "Salva e riprendi",
           "body": [
-            "{ui:videoLearnSaveSession} per ritrovare il video sotto {ui:videoLearnSavedSessions}. Rivedere un video salvato non consuma punti."
+            "{ui:videoLearnSaveSession} per ritrovare il video sotto {ui:videoLearnSavedSessions}. Riguardare un video salvato non consuma punti."
           ]
         }
       ]
     },
     "vocab": {
-      "title": "Come usare Vocabolario",
+      "title": "Come usare il Vocabolario",
       "sections": [
         {
           "heading": "Cerca e salva",
           "body": [
             "Cerca una parola o una frase per vedere il significato e salvarla.",
-            "Anche le parole che salvi in Chat vengono raccolte qui."
+            "Le parole che tocchi e salvi in Chat vengono raccolte anche qui."
           ]
         },
         {
-          "heading": "Impara le parole",
+          "heading": "Imparale",
           "body": [
-            "{ui:vocabHideGloss} nasconde i significati: tocca una parola per controllare se la ricordi.",
+            "{ui:vocabHideGloss} nasconde i significati: tocca una parola per controllarti.",
             "{ui:vocabShuffle} mescola l’ordine delle parole."
           ]
         }
       ]
     },
-    "_version": "2026-10-07"
+    "_version": "2026-10-08"
   },
   "pt": {
+    "map": {
+      "title": "Como usar o mapa",
+      "sections": [
+        {
+          "heading": "Do objetivo ao mapa",
+          "body": [
+            "Escreva o que quer conseguir fazer e escolha seu nível. O app cria um mapa de estudo para esse objetivo.",
+            "O mapa tem quatro colunas — situações, expressões e gramática, palavras e sons/escuta — com os temas que você precisa."
+          ]
+        },
+        {
+          "heading": "Ordem e conexões",
+          "body": [
+            "‘{ui:mapOrderTitle}’ mostra uma boa ordem para estudar. ‘{ui:mapContinue}’ abre o primeiro tema que você ainda não terminou.",
+            "Toque em um tema para ver com o que ele se conecta e por quê. Depois de fechar, os temas conectados continuam destacados no mapa."
+          ]
+        },
+        {
+          "heading": "Pratique e marque",
+          "body": [
+            "Em ‘{ui:mapPractice}’ dentro de um tema, cada item leva direto para chat, chamada, vídeo ou palavras. No chat, a primeira frase já aparece para você.",
+            "Quando sentir que aprendeu, toque em ‘{ui:mapMarkDone}’. O progresso lá em cima acompanha.",
+            "Se seu objetivo mudar, ‘{ui:mapNewGoal}’ cria um novo mapa e ‘{ui:mapRestore}’ volta para o anterior. Cada idioma tem seu próprio mapa."
+          ]
+        }
+      ]
+    },
     "chat": {
       "title": "Como usar o Chat",
       "sections": [
@@ -745,41 +934,41 @@
           "heading": "Converse no idioma que está aprendendo",
           "body": [
             "Escreva na língua que está aprendendo e o tutor responde como um amigo.",
-            "Se tiver algum erro, ele aparece marcado na sua mensagem, com a frase corrigida logo abaixo."
+            "Se algo estiver errado, aparece marcado na sua mensagem, com a frase corrigida logo abaixo."
           ]
         },
         {
           "heading": "{ui:askExpression}",
           "body": [
             "Escreva o que quer dizer no seu idioma e veja como falar isso no idioma que está aprendendo.",
-            "Com o chat e o {ui:askExpression} ligados, o app detecta o idioma em que você escreveu e faz a coisa certa."
+            "Com chat e {ui:askExpression} ligados, o app entende em qual idioma você escreveu e faz o certo."
           ]
         },
         {
           "heading": "Significados e análise de frases",
           "body": [
-            "Toque em {ui:chatReading} na resposta do tutor para ver o significado no seu idioma.",
-            "Toque em {ui:insightAnalyze} em uma frase para ver detalhes das expressões e da estrutura. Você também pode tocar nas palavras para salvar no seu vocabulário."
+            "Toque em {ui:chatReading} na resposta do tutor para ver no seu idioma.",
+            "Toque em {ui:insightAnalyze} em uma frase para ver detalhes das expressões e estrutura. Você também pode tocar em palavras para salvar no seu vocabulário."
           ]
         },
         {
           "heading": "Outras dicas",
           "body": [
-            "Não sabe como começar? Toque em {ui:chatStartCta} e o tutor inicia a conversa.",
+            "Não sabe o que dizer? Toque em {ui:chatStartCta} e o tutor começa a conversa.",
             "Use o + para enviar uma foto e conversar sobre ela.",
-            "No menu no canto superior esquerdo, veja conversas antigas ou comece uma nova.",
-            "Contas grátis podem enviar até 10 mensagens por dia; no Premium não há limite diário."
+            "O menu no canto superior esquerdo mostra seus chats antigos e começa um novo.",
+            "Contas grátis podem enviar 10 mensagens por dia; Premium não tem limite diário."
           ]
         }
       ]
     },
     "roleplay": {
-      "title": "Como usar as Ligações",
+      "title": "Como usar Chamadas",
       "sections": [
         {
-          "heading": "Converse em voz alta",
+          "heading": "Fale em voz alta",
           "body": [
-            "Toque em {ui:roleplayStart} e permita o microfone para falar com o personagem.",
+            "Toque em {ui:roleplayStart} e permita o microfone para conversar com o personagem.",
             "Quando parar de falar, sua vez termina e o personagem responde.",
             "Se travar, o personagem te ajuda na próxima fala. A conversa continua."
           ]
@@ -787,60 +976,60 @@
         {
           "heading": "Veja onde travou",
           "body": [
-            "Quando você trava, aparece o botão {ui:roleplayWhyStuck}.",
+            "Quando travar em uma fala, fica um botão {ui:roleplayWhyStuck}.",
             "Ele mostra por que foi difícil e o que você poderia ter dito. Você pode praticar na hora com {ui:roleplayPracticeCta}."
           ]
         },
         {
-          "heading": "Pausar e continuar depois",
+          "heading": "Pausar e continuar",
           "body": [
-            "{ui:roleplayPause} salva a conversa. Depois, use {ui:roleplayResume} na aba Ligações para continuar.",
-            "Conversas finalizadas ficam em {ui:roleplayPast} para você reler quando quiser."
+            "{ui:roleplayPause} salva a conversa. Depois, use {ui:roleplayResume} na aba Chamadas para continuar.",
+            "Conversas finalizadas ficam em {ui:roleplayPast} para você rever."
           ]
         },
         {
-          "heading": "Tempo e pontos das ligações",
+          "heading": "Tempo e pontos",
           "body": [
-            "Cada ponto vale cinco minutos de ligação. Um ponto é usado ao iniciar, e mais um a cada cinco minutos.",
-            "Se a ligação terminar antes dos cinco minutos, o tempo restante fica para a próxima.",
-            "Você começa com 20 pontos (100 minutos) grátis. No Premium, recebe 80 pontos por mês, compartilhados com vídeos."
+            "Cada ponto vale cinco minutos de chamada. Um ponto é usado ao iniciar, e mais um a cada cinco minutos.",
+            "Se terminar antes dos cinco minutos, o tempo restante vai para a próxima chamada.",
+            "Você começa com 20 pontos (100 minutos) grátis. Premium dá 80 pontos por mês, compartilhados com vídeos."
           ]
         }
       ]
     },
     "video": {
-      "title": "Como usar Vídeos",
+      "title": "Como usar Vídeo",
       "sections": [
         {
           "heading": "{ui:videoLearnLibraryTitle}",
           "body": [
-            "Vídeos selecionados todo mês, prontos para estudar. Contas grátis podem experimentar 3; no Premium, todos ficam liberados.",
+            "Vídeos selecionados todo mês, prontos para estudar. Contas grátis podem testar 3; Premium libera todos.",
             "{ui:discoverCta} sugere vídeos de acordo com seus interesses."
           ]
         },
         {
           "heading": "Traga seu próprio vídeo",
           "body": [
-            "Cole um link do YouTube e o app gera legendas e tradução. É um recurso Premium e usa um ponto a cada três minutos de vídeo, até 15 minutos."
+            "Cole um link do YouTube e o app cria legendas e tradução. É um recurso Premium e usa um ponto a cada três minutos de vídeo, até 15 minutos."
           ]
         },
         {
           "heading": "Estude com legendas",
           "body": [
-            "Enquanto o vídeo toca, cada trecho mostra legendas no idioma que está aprendendo, com tradução. Toque em uma linha para ouvir só aquele trecho de novo.",
-            "{ui:videoLearnRangeMode} para ouvir vários trechos juntos, juntar ou separar partes. {ui:videoLearnResetAllCues} volta tudo ao original."
+            "Enquanto o vídeo toca, cada trecho mostra legendas no idioma que você está aprendendo, com tradução. Toque em uma linha para ouvir só aquele trecho de novo.",
+            "{ui:videoLearnRangeMode} para ouvir várias linhas juntas, juntar ou separar trechos. {ui:videoLearnResetAllCues} volta tudo ao normal."
           ]
         },
         {
           "heading": "Salve e volte depois",
           "body": [
-            "{ui:videoLearnSaveSession} para encontrar depois em {ui:videoLearnSavedSessions}. Assistir a um vídeo salvo de novo não gasta pontos."
+            "{ui:videoLearnSaveSession} para achar depois em {ui:videoLearnSavedSessions}. Assistir de novo um vídeo salvo não gasta pontos."
           ]
         }
       ]
     },
     "vocab": {
-      "title": "Como usar o Vocabulário",
+      "title": "Como usar Vocabulário",
       "sections": [
         {
           "heading": "Buscar e salvar",
@@ -852,46 +1041,73 @@
         {
           "heading": "Aprenda as palavras",
           "body": [
-            "{ui:vocabHideGloss} esconde os significados; toque na palavra para conferir se acertou.",
-            "{ui:vocabShuffle} embaralha a ordem das palavras."
+            "{ui:vocabHideGloss} esconde os significados. Toque na palavra para conferir.",
+            "{ui:vocabShuffle} embaralha a ordem."
           ]
         }
       ]
     },
-    "_version": "2026-10-07"
+    "_version": "2026-10-08"
   },
   "ru": {
+    "map": {
+      "title": "Как пользоваться картой",
+      "sections": [
+        {
+          "heading": "От цели к карте",
+          "body": [
+            "Опишите, что хотите уметь, выберите уровень — и получите карту для своей цели.",
+            "Карта делится на четыре колонки: ситуации, выражения и грамматика, слова, звуки и аудирование. В каждой — темы, нужные для вашей цели."
+          ]
+        },
+        {
+          "heading": "Порядок и связи",
+          "body": [
+            "‘{ui:mapOrderTitle}’ — рекомендуемый порядок изучения. ‘{ui:mapContinue}’ откроет первую незавершённую тему.",
+            "Нажмите на тему, чтобы увидеть, с чем она связана и почему. После закрытия связанные темы останутся подсвечены на карте."
+          ]
+        },
+        {
+          "heading": "Тренируйтесь и отмечайте",
+          "body": [
+            "В разделе ‘{ui:mapPractice}’ внутри темы можно сразу перейти к чату, звонку, видео или словам. Для чата первая фраза уже будет в поле ввода.",
+            "Когда освоили тему, жмите ‘{ui:mapMarkDone}’. Прогресс наверху обновится.",
+            "Если цель изменилась, ‘{ui:mapNewGoal}’ создаст новую карту, а ‘{ui:mapRestore}’ вернёт к предыдущей. Для каждого языка карта своя."
+          ]
+        }
+      ]
+    },
     "chat": {
       "title": "Как пользоваться Чатом",
       "sections": [
         {
           "heading": "Общайтесь на изучаемом языке",
           "body": [
-            "Пишите на языке, который учите — репетитор отвечает, как друг.",
-            "Если есть ошибка, она выделяется в вашем сообщении, а правильный вариант — сразу под ним."
+            "Пишите на изучаемом языке — тьютор отвечает, как друг.",
+            "Ошибки отмечаются в вашем сообщении, а исправленный вариант появляется сразу под ним."
           ]
         },
         {
           "heading": "{ui:askExpression}",
           "body": [
-            "Напишите, что хотите сказать, на своем языке — увидите, как это будет на изучаемом.",
-            "Если включены и чат, и {ui:askExpression}, приложение само определяет язык и делает нужное."
+            "Напишите, что хотите сказать, на своём языке — увидите, как это сказать на изучаемом.",
+            "Если включены и чат, и {ui:askExpression}, приложение само определит язык и выберет нужный режим."
           ]
         },
         {
-          "heading": "Перевод и разбор предложений",
+          "heading": "Переводы и разбор предложений",
           "body": [
-            "Нажмите {ui:chatReading} под ответом репетитора, чтобы увидеть перевод.",
-            "Нажмите {ui:insightAnalyze} на предложении — узнаете подробнее о выражениях и структуре. Слова можно сохранять в словарь."
+            "Нажмите {ui:chatReading} под ответом тьютора, чтобы увидеть перевод.",
+            "Кликните {ui:insightAnalyze} на предложении — узнаете подробнее о выражениях и структуре. Слова можно сохранять в словарь."
           ]
         },
         {
           "heading": "Дополнительно",
           "body": [
-            "Не знаете, с чего начать? Нажмите {ui:chatStartCta} — репетитор начнет разговор.",
-            "С помощью + можно отправить фото и обсудить его.",
-            "В меню слева — ваши прошлые чаты и кнопка для нового.",
-            "Бесплатно можно отправить 10 сообщений в день, у Premium нет лимита."
+            "Не знаете, с чего начать? Жмите {ui:chatStartCta} — тьютор начнёт разговор.",
+            "Через + можно отправить фото и обсудить его.",
+            "В меню слева вверху — ваши прошлые чаты и кнопка для нового.",
+            "Бесплатно — 10 сообщений в день, в Premium — без ограничений."
           ]
         }
       ]
@@ -902,31 +1118,31 @@
         {
           "heading": "Говорите вслух",
           "body": [
-            "Нажмите {ui:roleplayStart} и разрешите микрофон — разговаривайте с персонажем.",
-            "Когда вы замолчите, ход переходит персонажу, и он отвечает.",
-            "Если вы затруднились, персонаж подскажет в следующей реплике. Диалог продолжается."
+            "Нажмите {ui:roleplayStart} и разрешите доступ к микрофону — сможете говорить с персонажем.",
+            "Когда перестанете говорить, ход перейдёт персонажу, и он ответит.",
+            "Если затрудняетесь, персонаж подскажет, как продолжить. Диалог не прервётся."
           ]
         },
         {
           "heading": "Посмотрите, где было сложно",
           "body": [
-            "Если вы застряли, останется кнопка {ui:roleplayWhyStuck}.",
-            "Она покажет, что было сложно и как можно было ответить. Можно тут же потренироваться с {ui:roleplayPracticeCta}."
+            "В трудном месте появится кнопка {ui:roleplayWhyStuck}.",
+            "Она покажет, что было сложно и как можно было ответить. Можно сразу потренироваться с {ui:roleplayPracticeCta}."
           ]
         },
         {
           "heading": "Пауза и продолжение",
           "body": [
-            "{ui:roleplayPause} сохраняет разговор. В следующий раз продолжите с {ui:roleplayResume} во вкладке Звонки.",
-            "Завершённые разговоры можно перечитать в {ui:roleplayPast}."
+            "{ui:roleplayPause} сохраняет разговор. В следующий раз продолжайте с {ui:roleplayResume} во вкладке Звонки.",
+            "Завершённые разговоры хранятся в {ui:roleplayPast} — можно перечитать."
           ]
         },
         {
           "heading": "Время звонков и баллы",
           "body": [
-            "Один балл — это 5 минут звонка. Балл списывается при начале и затем каждые 5 минут.",
+            "Один балл — это пять минут звонка. Балл списывается при начале звонка и затем каждые пять минут.",
             "Если звонок закончился раньше, оставшееся время переносится на следующий.",
-            "В начале даётся 20 баллов (100 минут) бесплатно. В Premium — 80 баллов в месяц, общий счёт с видео."
+            "В начале даётся 20 баллов (100 минут) бесплатно. В Premium — 80 баллов в месяц, их можно тратить и на видео."
           ]
         }
       ]
@@ -937,27 +1153,27 @@
         {
           "heading": "{ui:videoLearnLibraryTitle}",
           "body": [
-            "Каждый месяц новые видео для изучения. Бесплатно доступны 3 видео, в Premium — все.",
-            "{ui:discoverCta} подбирает видео по вашим интересам."
+            "Каждый месяц — подборка видео для изучения. Бесплатно доступны 3 видео, в Premium — все.",
+            "{ui:discoverCta} подберёт видео по вашим интересам."
           ]
         },
         {
           "heading": "Добавьте своё видео",
           "body": [
-            "Вставьте ссылку на YouTube — приложение создаст субтитры и перевод. Это Premium-функция, тратится 1 балл за 3 минуты видео, максимум 15 минут."
+            "Вставьте ссылку на YouTube — приложение создаст субтитры и перевод. Это Premium-функция, расходует 1 балл за 3 минуты видео, максимум 15 минут."
           ]
         },
         {
-          "heading": "Учитесь по субтитрам",
+          "heading": "Учитесь с субтитрами",
           "body": [
             "Во время просмотра показываются субтитры на изучаемом языке и перевод. Нажмите на строку — услышите только этот фрагмент.",
-            "{ui:videoLearnRangeMode} — чтобы слушать несколько строк подряд, объединять или делить фрагменты. {ui:videoLearnResetAllCues} — вернуть всё как было."
+            "{ui:videoLearnRangeMode} — чтобы слушать несколько строк подряд, объединять или делить фрагменты. {ui:videoLearnResetAllCues} вернёт всё, как было."
           ]
         },
         {
           "heading": "Сохраняйте и возвращайтесь",
           "body": [
-            "{ui:videoLearnSaveSession} — чтобы найти видео потом в {ui:videoLearnSavedSessions}. Повторный просмотр сохранённого видео не тратит баллы."
+            "{ui:videoLearnSaveSession} — чтобы найти видео в {ui:videoLearnSavedSessions}. Повторный просмотр сохранённого видео не тратит баллы."
           ]
         }
       ]
@@ -968,53 +1184,80 @@
         {
           "heading": "Находите и сохраняйте",
           "body": [
-            "Ищите слово или фразу, смотрите значение и сохраняйте в словарь.",
-            "Слова, которые вы сохранили в Чате, тоже появляются здесь."
+            "Ищите слово или фразу, чтобы узнать значение и добавить в словарь.",
+            "Слова, сохранённые из Чата, тоже появляются здесь."
           ]
         },
         {
           "heading": "Учите слова",
           "body": [
             "{ui:vocabHideGloss} скрывает значения — проверьте себя, нажимая на слово.",
-            "{ui:vocabShuffle} меняет порядок слов."
+            "{ui:vocabShuffle} перемешивает порядок."
           ]
         }
       ]
     },
-    "_version": "2026-10-07"
+    "_version": "2026-10-08"
   },
   "id": {
+    "map": {
+      "title": "Cara Pakai Peta",
+      "sections": [
+        {
+          "heading": "Dari Tujuan ke Peta",
+          "body": [
+            "Tulis apa yang ingin kamu capai dan pilih levelmu, lalu peta belajar akan dibuat sesuai tujuan itu.",
+            "Peta punya empat kolom — situasi, ekspresi & tata bahasa, kosakata, serta suara & mendengarkan — masing-masing berisi topik yang dibutuhkan untuk tujuanmu."
+          ]
+        },
+        {
+          "heading": "Urutan dan Keterkaitan",
+          "body": [
+            "‘{ui:mapOrderTitle}’ adalah urutan belajar yang direkomendasikan. ‘{ui:mapContinue}’ akan membuka topik pertama yang belum kamu selesaikan.",
+            "Ketuk topik untuk melihat keterkaitannya dan alasannya. Setelah ditutup, topik yang terhubung tetap menyala di peta."
+          ]
+        },
+        {
+          "heading": "Latihan dan Tandai",
+          "body": [
+            "Di dalam topik, bagian ‘{ui:mapPractice}’ langsung membawamu ke chat, panggilan, video, atau kosakata. Untuk chat, kalimat awal sudah disiapkan di kolom pesan.",
+            "Jika merasa sudah paham, ketuk ‘{ui:mapMarkDone}’. Progres di bagian atas akan bertambah.",
+            "Jika tujuanmu berubah, ‘{ui:mapNewGoal}’ akan membuat peta baru, dan ‘{ui:mapRestore}’ mengembalikan ke peta sebelumnya. Setiap bahasa punya peta sendiri."
+          ]
+        }
+      ]
+    },
     "chat": {
       "title": "Cara Pakai Chat",
       "sections": [
         {
-          "heading": "Chat dengan bahasa yang kamu pelajari",
+          "heading": "Chat dengan Bahasa yang Dipelajari",
           "body": [
-            "Tulis pesan dalam bahasa yang sedang kamu pelajari, tutor akan membalas seperti teman.",
-            "Kalau ada yang kurang tepat, bagian yang salah akan ditandai dan kalimat yang benar muncul di bawahnya."
+            "Tulis dengan bahasa yang sedang kamu pelajari, tutor akan membalas seperti teman.",
+            "Jika ada yang kurang tepat, bagian yang salah akan ditandai di pesanmu, dan kalimat yang benar muncul di bawahnya."
           ]
         },
         {
           "heading": "{ui:askExpression}",
           "body": [
-            "Tulis yang ingin kamu ucapkan dengan bahasamu sendiri, nanti akan muncul cara mengatakannya dalam bahasa yang kamu pelajari.",
-            "Jika chat dan {ui:askExpression} sama-sama aktif, aplikasi otomatis tahu bahasa apa yang kamu pakai dan menyesuaikan."
+            "Tulis apa yang ingin kamu ucapkan dalam bahasamu sendiri, lalu akan muncul cara mengatakannya dalam bahasa yang kamu pelajari.",
+            "Jika chat dan {ui:askExpression} aktif bersamaan, aplikasi akan otomatis mengenali bahasa yang kamu pakai dan menyesuaikan."
           ]
         },
         {
-          "heading": "Arti & analisis kalimat",
+          "heading": "Arti dan Analisis Kalimat",
           "body": [
             "Ketuk {ui:chatReading} di bawah balasan tutor untuk melihat artinya dalam bahasamu.",
-            "Ketuk {ui:insightAnalyze} pada kalimat untuk melihat penjelasan ekspresi dan strukturnya. Kamu juga bisa ketuk kata untuk menyimpannya ke kosakata."
+            "Ketuk {ui:insightAnalyze} pada kalimat untuk melihat detail ekspresi dan strukturnya. Kamu juga bisa ketuk kata untuk menyimpannya ke kosakata."
           ]
         },
         {
           "heading": "Lainnya",
           "body": [
-            "Bingung mau mulai dari mana? Ketuk {ui:chatStartCta} dan tutor akan memulai obrolan.",
-            "Gunakan tombol + untuk kirim foto dan ngobrol soal foto itu.",
+            "Bingung mau mulai dari mana? Ketuk {ui:chatStartCta} dan tutor akan memulai percakapan.",
+            "Gunakan + untuk kirim foto dan ngobrol tentangnya.",
             "Menu di kiri atas berisi riwayat chat dan untuk mulai chat baru.",
-            "Akun gratis bisa kirim 10 pesan per hari, Premium tanpa batas."
+            "Akun gratis bisa kirim 10 pesan per hari; Premium tanpa batas harian."
           ]
         }
       ]
@@ -1023,33 +1266,33 @@
       "title": "Cara Pakai Panggilan",
       "sections": [
         {
-          "heading": "Berbicara langsung",
+          "heading": "Berbicara Langsung",
           "body": [
             "Ketuk {ui:roleplayStart} dan izinkan mikrofon untuk bicara dengan karakter.",
             "Saat kamu berhenti bicara, giliranmu selesai dan karakter akan menjawab.",
-            "Kalau kamu bingung, karakter akan membantu dengan respons berikutnya. Obrolan tetap berjalan."
+            "Kalau kamu bingung, karakter akan membantu dengan respon berikutnya. Percakapan tetap berjalan."
           ]
         },
         {
-          "heading": "Lihat kembali saat kamu macet",
+          "heading": "Lihat Lagi Saat Terjebak",
           "body": [
-            "Giliran yang membuatmu macet akan punya tombol {ui:roleplayWhyStuck}.",
-            "Tombol ini menunjukkan kenapa bagian itu sulit dan contoh kalimat yang bisa kamu pakai. Kamu bisa langsung latihan dengan {ui:roleplayPracticeCta}."
+            "Giliran saat kamu terjebak akan punya tombol {ui:roleplayWhyStuck}.",
+            "Tombol ini menunjukkan kenapa sulit dan contoh kalimat yang bisa kamu pakai, lalu kamu bisa langsung latihan dengan {ui:roleplayPracticeCta}."
           ]
         },
         {
-          "heading": "Jeda dan lanjutkan",
+          "heading": "Jeda dan Lanjutkan",
           "body": [
-            "{ui:roleplayPause} menyimpan percakapan. Lain kali, lanjutkan lagi lewat {ui:roleplayResume} di tab Panggilan.",
-            "Percakapan yang sudah selesai bisa dibaca ulang di {ui:roleplayPast}."
+            "{ui:roleplayPause} menyimpan percakapan. Lain kali, gunakan {ui:roleplayResume} di tab Panggilan untuk melanjutkan.",
+            "Percakapan yang sudah selesai ada di {ui:roleplayPast} untuk dibaca ulang."
           ]
         },
         {
-          "heading": "Waktu panggilan & poin",
+          "heading": "Waktu Panggilan dan Poin",
           "body": [
-            "Satu poin untuk lima menit panggilan. Satu poin terpakai saat mulai, dan satu lagi tiap lima menit berikutnya.",
-            "Kalau panggilan selesai sebelum lima menit, sisa waktunya bisa dipakai di panggilan berikutnya.",
-            "Kamu dapat 20 poin (100 menit) gratis di awal. Premium dapat 80 poin per bulan, dipakai juga untuk video."
+            "Satu poin untuk lima menit panggilan. Satu poin dipakai saat mulai, dan satu lagi tiap lima menit berikutnya.",
+            "Jika panggilan selesai sebelum lima menit, sisa waktunya bisa dipakai di panggilan berikutnya.",
+            "Kamu dapat 20 poin (100 menit) gratis di awal. Premium mendapat 80 poin per bulan, bisa dipakai juga untuk video."
           ]
         }
       ]
@@ -1060,27 +1303,27 @@
         {
           "heading": "{ui:videoLearnLibraryTitle}",
           "body": [
-            "Video pilihan tiap bulan, siap dipelajari. Akun gratis bisa coba 3 video, Premium bisa akses semua.",
+            "Video pilihan setiap bulan, siap untuk dipelajari. Akun gratis bisa coba 3 video; Premium bisa akses semua.",
             "{ui:discoverCta} akan merekomendasikan video sesuai minatmu."
           ]
         },
         {
-          "heading": "Bawa video sendiri",
+          "heading": "Bawa Video Sendiri",
           "body": [
-            "Tempel link YouTube, aplikasi akan buatkan subtitle dan terjemahan. Fitur ini khusus Premium dan memakai satu poin untuk tiap tiga menit video, maksimal 15 menit."
+            "Tempel link YouTube dan aplikasi akan membuatkan subtitle serta terjemahan. Fitur ini khusus Premium dan memakai satu poin untuk tiap tiga menit video, maksimal 15 menit."
           ]
         },
         {
-          "heading": "Belajar dengan subtitle",
+          "heading": "Belajar dengan Subtitle",
           "body": [
-            "Saat video diputar, tiap bagian tampil dengan subtitle bahasa yang kamu pelajari dan terjemahannya. Ketuk baris untuk memutar ulang bagian itu.",
-            "{ui:videoLearnRangeMode} untuk memutar beberapa baris sekaligus, juga bisa gabung atau pisah bagian. {ui:videoLearnResetAllCues} untuk mengembalikan ke awal."
+            "Saat video diputar, tiap bagian tampil dengan subtitle bahasa yang kamu pelajari dan terjemahannya. Ketuk baris untuk memutar ulang bagian itu saja.",
+            "{ui:videoLearnRangeMode} untuk mendengarkan beberapa baris sekaligus, serta menggabung atau memisahkan bagian. {ui:videoLearnResetAllCues} mengembalikan semuanya seperti semula."
           ]
         },
         {
-          "heading": "Simpan & lanjutkan",
+          "heading": "Simpan dan Lanjutkan",
           "body": [
-            "{ui:videoLearnSaveSession} untuk menyimpan sesi, bisa ditemukan lagi di {ui:videoLearnSavedSessions}. Menonton ulang video yang sudah disimpan tidak mengurangi poin."
+            "{ui:videoLearnSaveSession} untuk menyimpan sesi, lalu temukan lagi di {ui:videoLearnSavedSessions}. Menonton video yang sudah disimpan tidak mengurangi poin."
           ]
         }
       ]
@@ -1089,24 +1332,51 @@
       "title": "Cara Pakai Kosakata",
       "sections": [
         {
-          "heading": "Cari & simpan",
+          "heading": "Cari dan Simpan",
           "body": [
             "Cari kata atau frasa untuk melihat artinya dan simpan ke kosakata.",
             "Kata yang kamu ketuk dan simpan di Chat juga terkumpul di sini."
           ]
         },
         {
-          "heading": "Pelajari",
+          "heading": "Belajar Kosakata",
           "body": [
-            "{ui:vocabHideGloss} akan menutupi artinya, ketuk kata untuk cek jawabanmu.",
+            "{ui:vocabHideGloss} akan menutupi artinya, lalu ketuk kata untuk cek jawabanmu.",
             "{ui:vocabShuffle} untuk mengacak urutan kata."
           ]
         }
       ]
     },
-    "_version": "2026-10-07"
+    "_version": "2026-10-08"
   },
   "ar": {
+    "map": {
+      "title": "استخدام الخريطة",
+      "sections": [
+        {
+          "heading": "من الهدف إلى الخريطة",
+          "body": [
+            "اكتب ما تريد أن تتعلم فعله وحدد مستواك، وسيتم رسم خريطة دراسة تناسب هدفك.",
+            "الخريطة فيها أربع أعمدة: مواقف، تعبيرات وقواعد، كلمات، وأصوات واستماع. كل عمود فيه المواضيع التي تحتاجها لتحقيق هدفك."
+          ]
+        },
+        {
+          "heading": "الترتيب والروابط",
+          "body": [
+            "‘{ui:mapOrderTitle}’ هو ترتيب مقترح للدراسة. ‘{ui:mapContinue}’ يفتح أول موضوع لم تكمله بعد.",
+            "اضغط على أي موضوع لترى المواضيع المرتبطة به ولماذا. بعد الإغلاق، تبقى المواضيع المرتبطة مضيئة على الخريطة."
+          ]
+        },
+        {
+          "heading": "تدرّب وعلّم الإنجاز",
+          "body": [
+            "تحت ‘{ui:mapPractice}’ في كل موضوع، يمكنك الانتقال مباشرة للدردشة أو المكالمة أو الفيديو أو الكلمات. في الدردشة، يتم وضع أول جملة تلقائياً.",
+            "عندما تشعر أنك أتقنت الموضوع، اضغط ‘{ui:mapMarkDone}’. التقدم يظهر في الأعلى.",
+            "إذا تغير هدفك، ‘{ui:mapNewGoal}’ يرسم خريطة جديدة، و‘{ui:mapRestore}’ يعيدك للخريطة السابقة. كل لغة تتعلمها لها خريطتها الخاصة."
+          ]
+        }
+      ]
+    },
     "chat": {
       "title": "كيفية استخدام الدردشة",
       "sections": [
@@ -1121,23 +1391,23 @@
           "heading": "{ui:askExpression}",
           "body": [
             "اكتب ما تريد قوله بلغتك، وسترى كيف تقوله باللغة التي تتعلمها.",
-            "عند تفعيل الدردشة و{ui:askExpression} معًا، يحدد التطبيق اللغة تلقائيًا ويعرض النتيجة المناسبة."
+            "عند تفعيل الدردشة و{ui:askExpression} معاً، يكتشف التطبيق اللغة التي كتبت بها ويعالجها بالشكل المناسب."
           ]
         },
         {
           "heading": "المعاني وتحليل الجمل",
           "body": [
-            "اضغط على {ui:chatReading} أسفل رد المعلم لترى الترجمة بلغتك.",
-            "اضغط على {ui:insightAnalyze} لتحليل الجملة ومعرفة تفاصيلها. يمكنك أيضًا الضغط على الكلمات لحفظها في المفردات."
+            "اضغط {ui:chatReading} تحت رد المعلم لترى الترجمة بلغتك.",
+            "اضغط {ui:insightAnalyze} على أي جملة لتتعرف أكثر على تعبيراتها وبنيتها. يمكنك أيضاً الضغط على الكلمات لحفظها في المفردات."
           ]
         },
         {
-          "heading": "ملاحظات إضافية",
+          "heading": "ملاحظات أخرى",
           "body": [
-            "لا تعرف ماذا تقول؟ اضغط على {ui:chatStartCta} وسيبدأ المعلم الحديث.",
-            "استخدم + لإرسال صورة والتحدث عنها.",
+            "لا تعرف ماذا تقول؟ اضغط {ui:chatStartCta} وسيبدأ المعلم الحديث.",
+            "استخدم + لإرسال صورة والدردشة عنها.",
             "القائمة في أعلى اليسار تعرض محادثاتك السابقة وتتيح بدء محادثة جديدة.",
-            "الحساب المجاني يسمح بإرسال 10 رسائل يوميًا؛ الحساب المميز بلا حدود يومية."
+            "الحساب المجاني يسمح بإرسال 10 رسائل يومياً؛ الحساب المميز بلا حد يومي."
           ]
         }
       ]
@@ -1148,31 +1418,31 @@
         {
           "heading": "تحدث بصوتك",
           "body": [
-            "اضغط على {ui:roleplayStart} واسمح بالميكروفون لتتحدث مع الشخصية.",
+            "اضغط {ui:roleplayStart} واسمح للميكروفون لتتحدث مع الشخصية.",
             "عندما تتوقف عن الكلام، ينتهي دورك وترد الشخصية.",
-            "إذا توقفت أو واجهت صعوبة، ستساعدك الشخصية في الرد التالي ليستمر الحوار."
+            "إذا توقفت أو واجهت صعوبة، تساعدك الشخصية في الرد التالي. المحادثة تستمر دائماً."
           ]
         },
         {
           "heading": "راجع أماكن التعثر",
           "body": [
-            "عند تعثرك في دور ما، يظهر زر {ui:roleplayWhyStuck}.",
-            "يعرض لك سبب الصعوبة وما كان يمكنك قوله، ويمكنك التدرب عليه فورًا باستخدام {ui:roleplayPracticeCta}."
+            "أي دور تعثرت فيه يظهر عليه زر {ui:roleplayWhyStuck}.",
+            "يعرض لك سبب الصعوبة وما كان يمكنك قوله، ويمكنك التدرب عليه فوراً مع {ui:roleplayPracticeCta}."
           ]
         },
         {
           "heading": "إيقاف واستكمال المكالمة",
           "body": [
             "{ui:roleplayPause} يحفظ المحادثة. في المرة القادمة، استخدم {ui:roleplayResume} من تبويب المكالمات للمتابعة.",
-            "المحادثات المنتهية تبقى في {ui:roleplayPast} لتتمكن من قراءتها مجددًا."
+            "المكالمات المنتهية تبقى في {ui:roleplayPast} لتتمكن من قراءتها لاحقاً."
           ]
         },
         {
-          "heading": "مدة المكالمة والنقاط",
+          "heading": "وقت المكالمة والنقاط",
           "body": [
-            "كل نقطة تمنحك خمس دقائق مكالمات. تُخصم نقطة عند بدء المكالمة، ونقطة أخرى كل خمس دقائق.",
-            "إذا أنهيت المكالمة قبل انتهاء الخمس دقائق، ينتقل الوقت المتبقي للمكالمة التالية.",
-            "تحصل على 20 نقطة (100 دقيقة) مجانًا عند البدء. الحساب المميز يمنحك 80 نقطة شهريًا، تُستخدم أيضًا مع استيراد الفيديو."
+            "كل نقطة تمنحك خمس دقائق مكالمة. تُخصم نقطة عند بدء المكالمة، ونقطة أخرى كل خمس دقائق.",
+            "إذا أنهيت المكالمة قبل انتهاء الخمس دقائق، الوقت المتبقي ينتقل للمكالمة التالية.",
+            "تحصل على 20 نقطة (100 دقيقة) مجاناً عند البدء. الحساب المميز يمنحك 80 نقطة شهرياً، تُستخدم أيضاً مع الفيديو."
           ]
         }
       ]
@@ -1183,27 +1453,27 @@
         {
           "heading": "{ui:videoLearnLibraryTitle}",
           "body": [
-            "فيديوهات مختارة شهريًا جاهزة للدراسة. الحساب المجاني يتيح تجربة 3 فيديوهات؛ الحساب المميز يفتح جميعها.",
+            "فيديوهات مختارة كل شهر جاهزة للدراسة. الحساب المجاني يتيح تجربة 3 فيديوهات؛ الحساب المميز يفتح الجميع.",
             "{ui:discoverCta} يقترح فيديوهات تناسب اهتماماتك."
           ]
         },
         {
-          "heading": "استيراد فيديو خاص بك",
+          "heading": "أضف فيديو خاص بك",
           "body": [
-            "الصق رابط YouTube وسيقوم التطبيق بإنشاء الترجمة والنص المترجم. هذه ميزة للحساب المميز وتستهلك نقطة لكل ثلاث دقائق من الفيديو، حتى 15 دقيقة."
+            "الصق رابط يوتيوب وسيقوم التطبيق بإنشاء الترجمة والنص. هذه ميزة للحساب المميز وتستهلك نقطة لكل ثلاث دقائق من الفيديو، حتى 15 دقيقة."
           ]
         },
         {
           "heading": "الدراسة مع الترجمة",
           "body": [
-            "أثناء تشغيل الفيديو، تظهر الترجمة باللغة التي تتعلمها مع الترجمة بلغتك. اضغط على أي سطر لإعادة سماعه.",
-            "{ui:videoLearnRangeMode} لسماع عدة أسطر معًا ودمج أو تقسيم المقاطع. {ui:videoLearnResetAllCues} يعيد كل شيء كما كان."
+            "أثناء تشغيل الفيديو، تظهر الترجمة باللغة التي تتعلمها مع الترجمة. اضغط على أي سطر لسماع هذا الجزء فقط.",
+            "{ui:videoLearnRangeMode} لسماع عدة أسطر معاً، ويمكنك دمج أو تقسيم الأجزاء. {ui:videoLearnResetAllCues} يعيد كل شيء كما كان."
           ]
         },
         {
-          "heading": "الحفظ والعودة لاحقًا",
+          "heading": "الحفظ والعودة لاحقاً",
           "body": [
-            "{ui:videoLearnSaveSession} لحفظ الجلسة والعثور عليها لاحقًا في {ui:videoLearnSavedSessions}. مشاهدة الفيديو المحفوظ مرة أخرى لا تستهلك نقاطًا."
+            "{ui:videoLearnSaveSession} لحفظ الجلسة والعودة إليها من {ui:videoLearnSavedSessions}. مشاهدة فيديو محفوظ مرة أخرى لا تستهلك نقاط."
           ]
         }
       ]
@@ -1212,90 +1482,117 @@
       "title": "كيفية استخدام المفردات",
       "sections": [
         {
-          "heading": "البحث والحفظ",
+          "heading": "ابحث واحفظ",
           "body": [
-            "ابحث عن كلمة أو عبارة لمعرفة معناها وحفظها.",
-            "الكلمات التي تحفظها من الدردشة ستجدها هنا أيضًا."
+            "ابحث عن كلمة أو عبارة لترى معناها واحفظها.",
+            "الكلمات التي تحفظها في الدردشة تظهر هنا أيضاً."
           ]
         },
         {
-          "heading": "تعلم الكلمات",
+          "heading": "تعلّمها",
           "body": [
-            "{ui:vocabHideGloss} لإخفاء المعاني، ثم اضغط على الكلمة لتتأكد من حفظك.",
-            "{ui:vocabShuffle} لخلط ترتيب الكلمات."
+            "{ui:vocabHideGloss} يخفي المعنى، اضغط على الكلمة لتتأكد من نفسك.",
+            "{ui:vocabShuffle} يغيّر ترتيب الكلمات."
           ]
         }
       ]
     },
-    "_version": "2026-10-07"
+    "_version": "2026-10-08"
   },
   "th": {
+    "map": {
+      "title": "วิธีใช้แผนที่",
+      "sections": [
+        {
+          "heading": "จากเป้าหมายสู่แผนที่",
+          "body": [
+            "เขียนสิ่งที่อยากทำได้ แล้วเลือกระดับของคุณ ระบบจะสร้างแผนการเรียนให้ตามเป้าหมายนั้น",
+            "แผนที่แบ่งเป็น 4 คอลัมน์ — สถานการณ์, สำนวนและไวยากรณ์, คำศัพท์, และเสียงกับการฟัง — แต่ละคอลัมน์มีหัวข้อที่จำเป็นสำหรับเป้าหมายของคุณ"
+          ]
+        },
+        {
+          "heading": "ลำดับและการเชื่อมโยง",
+          "body": [
+            "‘{ui:mapOrderTitle}’ คือเส้นทางแนะนำให้เรียนตามลำดับนี้ ‘{ui:mapContinue}’ จะเปิดหัวข้อแรกที่คุณยังไม่จบ",
+            "แตะหัวข้อเพื่อดูว่ามีความเชื่อมโยงกับอะไรและเพราะอะไร หลังจากปิด หัวข้อที่เชื่อมกันจะยังสว่างอยู่บนแผนที่"
+          ]
+        },
+        {
+          "heading": "ฝึกและทำเครื่องหมาย",
+          "body": [
+            "ในแต่ละหัวข้อ กด ‘{ui:mapPractice}’ เพื่อไปฝึกในแชท, โทร, วิดีโอ หรือทบทวนคำศัพท์ได้ทันที สำหรับแชท ระบบจะเติมประโยคแรกไว้ให้",
+            "ถ้าคิดว่าทำได้แล้ว กด ‘{ui:mapMarkDone}’ ความคืบหน้าจะอัปเดตด้านบน",
+            "ถ้าเป้าหมายเปลี่ยน กด ‘{ui:mapNewGoal}’ เพื่อสร้างแผนที่ใหม่ หรือ ‘{ui:mapRestore}’ เพื่อกลับไปแผนที่ก่อนหน้านี้ แต่ละภาษาจะมีแผนที่ของตัวเอง"
+          ]
+        }
+      ]
+    },
     "chat": {
       "title": "วิธีใช้แชท",
       "sections": [
         {
-          "heading": "แชทด้วยภาษาที่คุณกำลังเรียน",
+          "heading": "แชทด้วยภาษาที่คุณเรียน",
           "body": [
-            "พิมพ์เป็นภาษาที่คุณเรียน แล้วติวเตอร์จะตอบเหมือนเพื่อนคุยกัน",
-            "ถ้ามีจุดที่ผิด จะมีเครื่องหมายในข้อความของคุณ พร้อมประโยคที่แก้ไขให้ดูด้านล่าง"
+            "พิมพ์เป็นภาษาที่คุณกำลังเรียน แล้วติวเตอร์จะตอบกลับเหมือนเพื่อน",
+            "ถ้ามีจุดผิด จะมีเครื่องหมายในข้อความของคุณ พร้อมประโยคที่แก้ไขให้ดูด้านล่าง"
           ]
         },
         {
           "heading": "{ui:askExpression}",
           "body": [
-            "พิมพ์สิ่งที่อยากพูดเป็นภาษาแม่ของคุณ แล้วจะเห็นวิธีพูดเป็นภาษาที่คุณเรียน",
-            "ถ้าเปิดทั้งแชทและ {ui:askExpression} แอปจะดูว่าคุณพิมพ์ภาษาไหน แล้วเลือกให้ถูกเอง"
+            "พิมพ์สิ่งที่อยากพูดเป็นภาษาของคุณเอง แล้วจะเห็นวิธีพูดเป็นภาษาที่คุณเรียน",
+            "ถ้าเปิดทั้งแชทและ {ui:askExpression} ระบบจะดูว่าคุณพิมพ์ภาษาไหนแล้วเลือกโหมดให้เอง"
           ]
         },
         {
           "heading": "ดูความหมายและวิเคราะห์ประโยค",
           "body": [
-            "แตะ {ui:chatReading} ใต้คำตอบของติวเตอร์เพื่อดูความหมายเป็นภาษาแม่ของคุณ",
-            "แตะ {ui:insightAnalyze} ที่ประโยคเพื่อดูรายละเอียดโครงสร้างและสำนวน แตะที่คำเพื่อบันทึกเข้าคลังศัพท์ได้ด้วย"
+            "แตะ {ui:chatReading} ใต้คำตอบของติวเตอร์เพื่อดูความหมายเป็นภาษาของคุณ",
+            "แตะ {ui:insightAnalyze} ที่ประโยคเพื่อดูรายละเอียดโครงสร้างและสำนวน แตะที่คำศัพท์เพื่อบันทึกเข้าคลังคำศัพท์ได้"
           ]
         },
         {
           "heading": "เพิ่มเติม",
           "body": [
-            "ไม่รู้จะเริ่มยังไง? แตะ {ui:chatStartCta} ให้ติวเตอร์เริ่มให้",
-            "ใช้ + เพื่อส่งรูปแล้วคุยเกี่ยวกับรูปได้",
+            "ไม่รู้จะเริ่มยังไง? กด {ui:chatStartCta} ให้ติวเตอร์เริ่มบทสนทนาให้",
+            "กด + เพื่อส่งรูปภาพแล้วคุยเกี่ยวกับรูปได้",
             "เมนูมุมซ้ายบนดูแชทเก่า หรือเริ่มแชทใหม่",
-            "บัญชีฟรีส่งข้อความได้ 10 ข้อความต่อวัน; พรีเมียมไม่จำกัด"
+            "บัญชีฟรีส่งข้อความได้ 10 ข้อความต่อวัน; Premium ส่งได้ไม่จำกัด"
           ]
         }
       ]
     },
     "roleplay": {
-      "title": "วิธีใช้คอล",
+      "title": "วิธีใช้โทรคุย",
       "sections": [
         {
           "heading": "พูดคุยด้วยเสียง",
           "body": [
-            "แตะ {ui:roleplayStart} แล้วอนุญาตไมโครโฟนเพื่อพูดคุยกับตัวละคร",
-            "หยุดพูดเมื่อไหร่ จะจบตาคุณแล้วตัวละครจะตอบกลับ",
-            "ถ้าติดขัด ตัวละครจะช่วยต่อบทสนทนาให้เอง คุยต่อได้เรื่อย ๆ"
+            "กด {ui:roleplayStart} แล้วอนุญาตไมโครโฟนเพื่อพูดคุยกับตัวละคร",
+            "เมื่อหยุดพูด ระบบจะจบตาคุณโดยอัตโนมัติ แล้วตัวละครจะตอบกลับ",
+            "ถ้าติดขัด ตัวละครจะช่วยต่อบทสนทนาให้ การสนทนาจะไม่หยุด"
           ]
         },
         {
           "heading": "ย้อนดูจุดที่ติดขัด",
           "body": [
-            "รอบที่คุณติดขัดจะมีปุ่ม {ui:roleplayWhyStuck} ให้กด",
-            "จะบอกว่าทำไมถึงยาก และมีตัวอย่างที่คุณพูดได้ พร้อมฝึกทันทีด้วย {ui:roleplayPracticeCta}"
+            "รอบที่คุณติดขัดจะมีปุ่ม {ui:roleplayWhyStuck}",
+            "กดเพื่อดูว่าทำไมถึงยาก และมีตัวอย่างประโยคที่ควรพูด พร้อมฝึกได้ทันทีด้วย {ui:roleplayPracticeCta}"
           ]
         },
         {
-          "heading": "หยุดแล้วกลับมาคุยต่อ",
+          "heading": "หยุดชั่วคราวและกลับมาต่อ",
           "body": [
-            "{ui:roleplayPause} จะบันทึกบทสนทนาไว้ ครั้งหน้ากลับมาที่แท็บคอลแล้ว {ui:roleplayResume} เพื่อคุยต่อ",
-            "คอลที่จบแล้วจะอยู่ใน {ui:roleplayPast} ให้กลับมาอ่านใหม่ได้"
+            "{ui:roleplayPause} จะบันทึกบทสนทนาไว้ ครั้งหน้ากลับมาต่อได้ที่แท็บโทรด้วย {ui:roleplayResume}",
+            "บทสนทนาที่จบแล้วจะเก็บไว้ใน {ui:roleplayPast} ให้กลับมาอ่านได้"
           ]
         },
         {
-          "heading": "เวลาและแต้มสำหรับคอล",
+          "heading": "เวลาโทรและแต้ม",
           "body": [
-            "แต้ม 1 แต้มใช้คุยได้ 5 นาที เริ่มคอลจะใช้ 1 แต้ม และทุก ๆ 5 นาทีจะใช้เพิ่มอีก 1 แต้ม",
-            "ถ้าคอลจบก่อน 5 นาที เวลาที่เหลือจะเก็บไว้ใช้รอบหน้า",
-            "เริ่มต้นรับฟรี 20 แต้ม (100 นาที) พรีเมียมได้ 80 แต้มต่อเดือน ใช้ร่วมกับวิดีโอนำเข้า"
+            "แต้ม 1 แต้มใช้โทรได้ 5 นาที เริ่มโทรจะใช้ 1 แต้ม และทุก 5 นาทีจะใช้เพิ่มอีก 1 แต้ม",
+            "ถ้าโทรจบก่อน 5 นาที เวลาที่เหลือจะเก็บไว้ใช้ในครั้งถัดไป",
+            "เริ่มต้นรับฟรี 20 แต้ม (100 นาที) Premium ได้ 80 แต้มต่อเดือน ใช้ร่วมกับการนำเข้าวิดีโอ"
           ]
         }
       ]
@@ -1306,173 +1603,200 @@
         {
           "heading": "{ui:videoLearnLibraryTitle}",
           "body": [
-            "วิดีโอคัดเลือกใหม่ทุกเดือน พร้อมให้เรียน บัญชีฟรีดูได้ 3 วิดีโอ; พรีเมียมดูได้ทั้งหมด",
+            "มีวิดีโอคัดสรรใหม่ทุกเดือนให้เรียนได้ทันที บัญชีฟรีดูได้ 3 วิดีโอ Premium ดูได้ทั้งหมด",
             "{ui:discoverCta} แนะนำวิดีโอที่ตรงกับความสนใจของคุณ"
           ]
         },
         {
           "heading": "นำเข้าวิดีโอของคุณเอง",
           "body": [
-            "วางลิงก์ YouTube แล้วแอปจะสร้างซับไตเติลและแปลให้ ฟีเจอร์นี้สำหรับพรีเมียม ใช้ 1 แต้มต่อวิดีโอ 3 นาที สูงสุด 15 นาที"
+            "วางลิงก์ YouTube แล้วแอปจะสร้างซับไตเติลและแปลให้ ฟีเจอร์นี้สำหรับ Premium ใช้ 1 แต้มต่อวิดีโอ 3 นาที สูงสุด 15 นาที"
           ]
         },
         {
           "heading": "เรียนรู้ผ่านซับไตเติล",
           "body": [
-            "ขณะเล่นวิดีโอ จะมีซับไตเติลภาษาที่คุณเรียนพร้อมแปล แตะที่บรรทัดเพื่อฟังเฉพาะส่วนนั้นซ้ำได้",
-            "{ui:videoLearnRangeMode} เพื่อฟังหลายบรรทัดต่อกัน และรวม/แยกช่วงได้ {ui:videoLearnResetAllCues} คืนค่าทุกอย่างเป็นเหมือนเดิม"
+            "ขณะเล่นวิดีโอ จะแสดงซับไตเติลภาษาที่เรียนพร้อมคำแปล แตะประโยคเพื่อฟังเฉพาะส่วนนั้นซ้ำได้",
+            "{ui:videoLearnRangeMode} เพื่อฟังหลายบรรทัดต่อเนื่อง และรวม/แยกช่วงได้ {ui:videoLearnResetAllCues} คืนค่าทุกอย่างเหมือนเดิม"
           ]
         },
         {
-          "heading": "บันทึกไว้แล้วกลับมาดูอีก",
+          "heading": "บันทึกและกลับมาดูอีก",
           "body": [
-            "{ui:videoLearnSaveSession} เพื่อบันทึกไว้ แล้วหาได้ที่ {ui:videoLearnSavedSessions} ดูวิดีโอที่บันทึกไว้ซ้ำอีกไม่เสียแต้ม"
+            "{ui:videoLearnSaveSession} เพื่อบันทึกไว้ แล้วหาได้ใน {ui:videoLearnSavedSessions} ดูวิดีโอที่บันทึกไว้ซ้ำไม่เสียแต้ม"
           ]
         }
       ]
     },
     "vocab": {
-      "title": "วิธีใช้คลังศัพท์",
+      "title": "วิธีใช้คลังคำศัพท์",
       "sections": [
         {
           "heading": "ค้นหาและบันทึก",
           "body": [
-            "ค้นหาคำหรือวลีเพื่อดูความหมายและบันทึกเข้าคลังศัพท์",
-            "คำที่แตะบันทึกในแชทจะถูกรวมไว้ที่นี่ด้วย"
+            "ค้นหาคำหรือวลีเพื่อดูความหมายและบันทึกไว้",
+            "คำศัพท์ที่แตะบันทึกในแชทจะถูกรวมไว้ที่นี่ด้วย"
           ]
         },
         {
-          "heading": "ฝึกจำศัพท์",
+          "heading": "ฝึกจำคำศัพท์",
           "body": [
-            "{ui:vocabHideGloss} จะซ่อนความหมายไว้ แตะคำเพื่อเช็กตัวเอง",
-            "{ui:vocabShuffle} สลับลำดับคำให้สุ่ม"
+            "{ui:vocabHideGloss} จะซ่อนความหมายไว้ แตะคำศัพท์เพื่อตรวจคำตอบของตัวเอง",
+            "{ui:vocabShuffle} สลับลำดับคำศัพท์ได้"
           ]
         }
       ]
     },
-    "_version": "2026-10-07"
+    "_version": "2026-10-08"
   },
   "hi": {
-    "chat": {
-      "title": "चैट का इस्तेमाल कैसे करें",
+    "map": {
+      "title": "मानचित्र का उपयोग करें",
       "sections": [
         {
-          "heading": "सीख रही भाषा में बात करें",
+          "heading": "लक्ष्य से मानचित्र तक",
           "body": [
-            "जिस भाषा को आप सीख रहे हैं, उसमें लिखें और ट्यूटर दोस्त की तरह जवाब देगा।",
-            "अगर कुछ गलत है, तो आपकी लाइन में दिखेगा और सही वाक्य नीचे मिलेगा।"
+            "आप क्या कर पाना चाहते हैं, यह लिखें और अपना स्तर चुनें। आपके लक्ष्य के लिए एक अध्ययन मानचित्र बन जाएगा।",
+            "मानचित्र में चार कॉलम होते हैं — परिस्थितियाँ, अभिव्यक्तियाँ और व्याकरण, शब्द, और ध्वनि व श्रवण — इनमें आपके लक्ष्य से जुड़े विषय होते हैं।"
+          ]
+        },
+        {
+          "heading": "क्रम और जोड़",
+          "body": [
+            "‘{ui:mapOrderTitle}’ पढ़ाई का अच्छा क्रम है। ‘{ui:mapContinue}’ दबाएँ, तो पहला अधूरा विषय खुलता है।",
+            "किसी विषय पर टैप करें, तो उससे जुड़े विषय और उनका कारण दिखेगा। बंद करने के बाद भी जुड़े विषय मानचित्र पर हाइलाइट रहते हैं।"
+          ]
+        },
+        {
+          "heading": "अभ्यास करें और पूरा चिह्नित करें",
+          "body": [
+            "किसी विषय के ‘{ui:mapPractice}’ में हर आइटम से आप सीधे चैट, कॉल, वीडियो या शब्दों पर जा सकते हैं। चैट के लिए पहली पंक्ति पहले से भर दी जाती है।",
+            "जब लगे कि आपने समझ लिया है, तो ‘{ui:mapMarkDone}’ दबाएँ। ऊपर प्रगति दिखती है।",
+            "अगर आपका लक्ष्य बदलता है, तो ‘{ui:mapNewGoal}’ से नया मानचित्र बनता है, और ‘{ui:mapRestore}’ से पिछला वाला वापस आ जाता है। हर भाषा का अपना मानचित्र रहता है।"
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "चैट का उपयोग कैसे करें",
+      "sections": [
+        {
+          "heading": "सीख रही भाषा में चैट करें",
+          "body": [
+            "जिस भाषा को आप सीख रहे हैं, उसमें लिखें — ट्यूटर दोस्त की तरह जवाब देगा।",
+            "अगर कुछ गलत है, तो आपकी पंक्ति में चिह्नित होगा और सही वाक्य नीचे दिखेगा।"
           ]
         },
         {
           "heading": "{ui:askExpression}",
           "body": [
-            "जो कहना है, अपनी भाषा में लिखें और आपको सीखी जा रही भाषा में उसका तरीका दिखेगा।",
-            "अगर चैट और {ui:askExpression} दोनों चालू हैं, तो ऐप खुद पहचान लेता है कि आपने किस भाषा में लिखा है और उसी हिसाब से दिखाता है।"
+            "जो कहना है, अपनी भाषा में लिखें — आपको सीखी जा रही भाषा में उसका तरीका मिलेगा।",
+            "अगर चैट और {ui:askExpression} दोनों ऑन हैं, तो ऐप खुद पहचान लेता है कि आपने किस भाषा में लिखा है और उसी हिसाब से जवाब देता है।"
           ]
         },
         {
-          "heading": "मतलब और वाक्य विश्लेषण",
+          "heading": "अर्थ और वाक्य विश्लेषण",
           "body": [
-            "ट्यूटर के जवाब के नीचे {ui:chatReading} टैप करें और अपनी भाषा में अर्थ देखें।",
-            "{ui:insightAnalyze} टैप करें किसी वाक्य पर, उसके भाव और रचना को समझने के लिए। शब्दों को टैप करके अपने शब्दकोश में भी जोड़ सकते हैं।"
+            "ट्यूटर के जवाब के नीचे {ui:chatReading} टैप करें — अपनी भाषा में अर्थ देखें।",
+            "किसी वाक्य पर {ui:insightAnalyze} टैप करें, तो उसकी अभिव्यक्तियाँ और संरचना विस्तार से देखें। शब्दों पर टैप कर उन्हें शब्दावली में जोड़ सकते हैं।"
           ]
         },
         {
-          "heading": "और भी",
+          "heading": "अन्य बातें",
           "body": [
-            "नहीं पता क्या लिखें? {ui:chatStartCta} टैप करें, ट्यूटर शुरू करेगा।",
+            "क्या लिखें समझ नहीं आ रहा? {ui:chatStartCta} दबाएँ — ट्यूटर शुरुआत करेगा।",
             "+ से फोटो भेजें और उस पर बात करें।",
-            "ऊपर बाएं मेन्यू में पुराने चैट्स देखें या नया शुरू करें।",
-            "फ्री अकाउंट्स रोज़ 10 मैसेज भेज सकते हैं; प्रीमियम में कोई सीमा नहीं।"
+            "ऊपर बाएँ मेन्यू में पुराने चैट देखें या नया शुरू करें।",
+            "फ्री अकाउंट में रोज़ 10 संदेश भेज सकते हैं; प्रीमियम में कोई सीमा नहीं।"
           ]
         }
       ]
     },
     "roleplay": {
-      "title": "कॉल्स का इस्तेमाल कैसे करें",
+      "title": "कॉल्स का उपयोग कैसे करें",
       "sections": [
         {
-          "heading": "बोलकर बात करें",
+          "heading": "बोलकर बातचीत करें",
           "body": [
-            "{ui:roleplayStart} टैप करें और माइक्रोफोन की अनुमति दें, फिर किरदार से बात करें।",
-            "जब आप बोलना रोकते हैं, आपकी बारी खत्म और किरदार जवाब देगा।",
-            "अगर अटक जाएं तो किरदार अगली लाइन में मदद करता है। बातचीत चलती रहती है।"
+            "{ui:roleplayStart} दबाएँ और माइक्रोफोन की अनुमति दें — अब किरदार से बोलकर बात करें।",
+            "जब आप बोलना बंद करेंगे, आपकी बारी खत्म और किरदार जवाब देगा।",
+            "अगर आप अटक जाएँ, तो किरदार अपनी अगली लाइन से मदद करता है। बातचीत चलती रहती है।"
           ]
         },
         {
-          "heading": "जहां अटके, उसे दोबारा देखें",
+          "heading": "जहाँ अटके, उसे देखें",
           "body": [
-            "जहां आप अटके थे, वहां {ui:roleplayWhyStuck} बटन दिखेगा।",
-            "यह बताएगा कि मुश्किल क्यों हुई और आप क्या कह सकते थे। {ui:roleplayPracticeCta} से तुरंत प्रैक्टिस करें।"
+            "जहाँ आप अटके, वहाँ {ui:roleplayWhyStuck} बटन दिखेगा।",
+            "यह बताएगा कि कहाँ मुश्किल हुई और आप क्या कह सकते थे। {ui:roleplayPracticeCta} से तुरंत अभ्यास करें।"
           ]
         },
         {
           "heading": "रोकें और फिर से शुरू करें",
           "body": [
-            "{ui:roleplayPause} से बातचीत सेव हो जाती है। अगली बार कॉल्स टैब में {ui:roleplayResume} से फिर शुरू करें।",
-            "खत्म हुई कॉल्स {ui:roleplayPast} में रहती हैं, दोबारा पढ़ सकते हैं।"
+            "{ui:roleplayPause} से बातचीत सेव हो जाती है। अगली बार कॉल्स टैब में {ui:roleplayResume} से वहीं से शुरू करें।",
+            "पूरी हुई बातचीत {ui:roleplayPast} में रहती है — कभी भी पढ़ सकते हैं।"
           ]
         },
         {
           "heading": "कॉल का समय और पॉइंट्स",
           "body": [
-            "एक पॉइंट में 5 मिनट कॉल कर सकते हैं। कॉल शुरू होते ही 1 पॉइंट कटता है, फिर हर 5 मिनट बाद एक और।",
-            "अगर कॉल 5 मिनट से पहले खत्म हो जाए, बचा समय अगली कॉल में जुड़ जाता है।",
-            "शुरुआत में 20 पॉइंट्स (100 मिनट) फ्री मिलते हैं। प्रीमियम में हर महीने 80 पॉइंट्स मिलते हैं, जो वीडियो इम्पोर्ट के साथ शेयर होते हैं।"
+            "एक पॉइंट में पाँच मिनट की कॉल मिलती है। कॉल शुरू होते ही एक पॉइंट कटता है, फिर हर पाँच मिनट बाद एक और।",
+            "अगर कॉल पाँच मिनट से पहले खत्म हो जाए, तो बचा समय अगली कॉल में जुड़ जाता है।",
+            "शुरुआत में 20 पॉइंट्स (100 मिनट) फ्री मिलते हैं। प्रीमियम में हर महीने 80 पॉइंट्स मिलते हैं, जो वीडियो इम्पोर्ट के साथ साझा होते हैं।"
           ]
         }
       ]
     },
     "video": {
-      "title": "वीडियो का इस्तेमाल कैसे करें",
+      "title": "वीडियो का उपयोग कैसे करें",
       "sections": [
         {
           "heading": "{ui:videoLearnLibraryTitle}",
           "body": [
-            "हर महीने चुने गए वीडियो पढ़ने के लिए तैयार हैं। फ्री अकाउंट्स 3 आज़मा सकते हैं; प्रीमियम में सब खुलते हैं।",
-            "{ui:discoverCta} आपकी पसंद के हिसाब से वीडियो सुझाता है।"
+            "हर महीने चुने गए वीडियो — पढ़ाई के लिए तैयार। फ्री अकाउंट में 3 आज़मा सकते हैं; प्रीमियम में सभी खुलते हैं।",
+            "{ui:discoverCta} आपकी पसंद के वीडियो सुझाता है।"
           ]
         },
         {
-          "heading": "अपना वीडियो लाएं",
+          "heading": "अपना वीडियो लाएँ",
           "body": [
-            "YouTube लिंक पेस्ट करें, ऐप सबटाइटल और ट्रांसलेशन बना देगा। यह प्रीमियम फीचर है और हर 3 मिनट वीडियो पर 1 पॉइंट लगता है, अधिकतम 15 मिनट तक।"
+            "YouTube लिंक पेस्ट करें — ऐप सबटाइटल और अनुवाद बना देगा। यह प्रीमियम फीचर है और हर तीन मिनट के वीडियो पर एक पॉइंट लगता है, अधिकतम 15 मिनट तक।"
           ]
         },
         {
           "heading": "सबटाइटल के साथ पढ़ें",
           "body": [
-            "वीडियो चलते समय हर हिस्से में सीखी जा रही भाषा के सबटाइटल और ट्रांसलेशन दिखेंगे। किसी लाइन को टैप करें, वही हिस्सा फिर से सुनें।",
-            "{ui:videoLearnRangeMode} से कई लाइनें साथ सुनें, हिस्से जोड़ें या बांटें। {ui:videoLearnResetAllCues} से सब पहले जैसा हो जाएगा।"
+            "वीडियो चलते समय हर हिस्से में सीखी जा रही भाषा के सबटाइटल और अनुवाद दिखते हैं। किसी लाइन पर टैप करें — वही हिस्सा फिर से सुनें।",
+            "{ui:videoLearnRangeMode} से कई लाइनें साथ सुनें, हिस्से जोड़ें या बाँटें। {ui:videoLearnResetAllCues} से सब कुछ पहले जैसा हो जाएगा।"
           ]
         },
         {
           "heading": "सेव करें और दोबारा देखें",
           "body": [
-            "{ui:videoLearnSaveSession} टैप करें, फिर {ui:videoLearnSavedSessions} में दोबारा पाएं। सेव किए वीडियो फिर देखने में पॉइंट्स नहीं लगते।"
+            "{ui:videoLearnSaveSession} दबाएँ — वीडियो {ui:videoLearnSavedSessions} में मिल जाएगा। सेव किए वीडियो दोबारा देखने पर पॉइंट्स नहीं कटते।"
           ]
         }
       ]
     },
     "vocab": {
-      "title": "शब्दकोश का इस्तेमाल कैसे करें",
+      "title": "शब्दावली का उपयोग कैसे करें",
       "sections": [
         {
           "heading": "खोजें और सेव करें",
           "body": [
-            "कोई शब्द या वाक्यांश खोजें, उसका मतलब देखें और सेव करें।",
-            "चैट में टैप कर सेव किए शब्द भी यहां मिलेंगे।"
+            "कोई शब्द या वाक्यांश खोजें, उसका अर्थ देखें और सेव करें।",
+            "चैट में टैप कर सेव किए शब्द भी यहाँ मिलेंगे।"
           ]
         },
         {
           "heading": "सीखें",
           "body": [
-            "{ui:vocabHideGloss} से अर्थ छुपाएं, फिर शब्द टैप कर खुद को जांचें।",
-            "{ui:vocabShuffle} से शब्दों का क्रम बदलें।"
+            "{ui:vocabHideGloss} से अर्थ छुपाएँ, फिर शब्द पर टैप कर खुद को जांचें।",
+            "{ui:vocabShuffle} से क्रम बदलें।"
           ]
         }
       ]
     },
-    "_version": "2026-10-07"
+    "_version": "2026-10-08"
   }
 }

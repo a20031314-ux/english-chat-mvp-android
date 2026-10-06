@@ -107,6 +107,9 @@ async function remove() {
     ...eventKeys,
     ...(await kvScanKeys(`lm:text:${user}:*`)),
     ...(await kvScanKeys(`lm:asr:${user}:*`)),
+    // Study maps: the goal they wrote and the map drawn from it, per language
+    // (curriculumStore.ts). Theirs as much as the turns are.
+    ...(await kvScanKeys(`curriculum:${user}:*`)),
     ...[...sessions].flatMap((id) => [`lm:session:${id}`, `lm:lastturn:${id}`]),
   ];
   for (const sessionKey of [...sessions].map((id) => `lm:session:${id}`)) {

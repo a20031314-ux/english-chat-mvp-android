@@ -17,9 +17,9 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-07";
+export const GUIDE_VERSION = "2026-10-08";
 
-export type GuideTabId = "chat" | "roleplay" | "video" | "vocab";
+export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab";
 
 export type GuideSection = { heading: string; body: string[] };
 
@@ -28,6 +28,33 @@ export type GuideTab = { title: string; sections: GuideSection[] };
 export type Guide = Record<GuideTabId, GuideTab>;
 
 export const GUIDE_KO: Guide = {
+  map: {
+    title: "지도 사용법",
+    sections: [
+      {
+        heading: "목표에서 지도로",
+        body: [
+          "할 수 있게 되고 싶은 것을 적고 지금 수준을 고르면, 그 목표에 맞춘 학습 지도를 그려줘요.",
+          "지도는 상황, 표현·문법, 어휘, 발음·듣기 네 칸으로 나뉘고, 칸마다 목표에 필요한 주제가 들어가요.",
+        ],
+      },
+      {
+        heading: "순서와 연결",
+        body: [
+          "‘{ui:mapOrderTitle}’은 공부하기 좋은 순서예요. ‘{ui:mapContinue}’을 누르면 아직 끝내지 않은 첫 주제가 열려요.",
+          "주제를 누르면 연결된 주제와 왜 연결되는지가 나와요. 닫은 뒤에도 지도에서 연결된 주제가 밝게 표시돼요.",
+        ],
+      },
+      {
+        heading: "연습하고 표시하기",
+        body: [
+          "주제 안의 ‘{ui:mapPractice}’ 항목을 누르면 채팅, 통화, 영상, 단어장으로 바로 넘어가요. 채팅은 첫 문장이 입력창에 채워져요.",
+          "다 했다 싶으면 ‘{ui:mapMarkDone}’을 누르세요. 위쪽 진행도에 반영돼요.",
+          "목표가 바뀌면 ‘{ui:mapNewGoal}’으로 새 지도를 그릴 수 있고, ‘{ui:mapRestore}’로 바로 전 지도로 돌아갈 수 있어요. 지도는 배우는 언어마다 따로 저장돼요.",
+        ],
+      },
+    ],
+  },
   chat: {
     title: "채팅 사용법",
     sections: [
@@ -151,6 +178,33 @@ export const GUIDE_KO: Guide = {
 };
 
 export const GUIDE_EN: Guide = {
+  map: {
+    title: "Using the map",
+    sections: [
+      {
+        heading: "From a goal to a map",
+        body: [
+          "Write what you want to be able to do and pick your level, and you get a study map drawn for that goal.",
+          "The map has four columns — situations, expressions and grammar, words, and sounds and listening — each holding the topics the goal needs.",
+        ],
+      },
+      {
+        heading: "Order and connections",
+        body: [
+          "‘{ui:mapOrderTitle}’ is a good order to study in. ‘{ui:mapContinue}’ opens the first topic you haven't finished.",
+          "Tap a topic to see what it connects to and why. After you close it, the connected topics stay lit on the map.",
+        ],
+      },
+      {
+        heading: "Practise and mark",
+        body: [
+          "Under ‘{ui:mapPractice}’ in a topic, each item takes you straight to chat, a call, a video or your words. For chat, a first line is put in the box for you.",
+          "When you feel you've got it, tap ‘{ui:mapMarkDone}’. The progress at the top follows.",
+          "If your goal changes, ‘{ui:mapNewGoal}’ draws a new map, and ‘{ui:mapRestore}’ takes you back to the one before. Each language you learn keeps its own map.",
+        ],
+      },
+    ],
+  },
   chat: {
     title: "How to use Chat",
     sections: [

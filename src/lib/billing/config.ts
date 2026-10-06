@@ -29,6 +29,16 @@ export const FREE_DAILY_ASK_LIMIT = 10;
 export const PREMIUM_DAILY_ASK_LIMIT = 100;
 
 /**
+ * Study maps a learner may have drawn, per day.
+ *
+ * One larger model call each, and a map is something you follow for weeks, so
+ * this is only a floor under somebody pressing "new goal" in a loop. Generous
+ * enough to rewrite a goal that came out wrong a couple of times.
+ */
+export const FREE_DAILY_MAP_LIMIT = 3;
+export const PREMIUM_DAILY_MAP_LIMIT = 10;
+
+/**
  * What Play actually bills for `premium_monthly`.
  *
  * Kept in step with the Play Console by hand, which is exactly how it went
