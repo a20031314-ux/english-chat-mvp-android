@@ -490,6 +490,9 @@ export function RoleplayScreen({
       nativeLanguage,
       isPremium,
       sessionId: conversationId.current,
+      signals: state.pending
+        ? { hesitationMs: state.pending.hesitationMs, attempts: state.pending.attempts }
+        : undefined,
       // Named before the rest of the answer exists, so the audio is on its way
       // while the note and the rewrite are still being written (listen.ts).
       onLead: (id) => {

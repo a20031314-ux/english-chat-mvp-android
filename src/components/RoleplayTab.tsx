@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useMemo, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
 import { RoleplayPast } from "@/components/RoleplayPast";
 import { RoleplayScreen } from "@/components/RoleplayScreen";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
@@ -14,6 +14,47 @@ import {
   type SavedConversation,
 } from "@/lib/roleplay/saved";
 import type { UICopy } from "@/lib/copy";
+import { usePremium } from "@/contexts/PremiumContext";
+import { apiUrl } from "@/lib/apiBase";
+import { entitlementHeaders } from "@/lib/billing/billingService";
+
+type CallTime = { pointsLeft: number; carrySeconds: number; pointSeconds: number };
+
+/**
+ * Told once, at the door, before the first call it applies to.
+ *
+ * The privacy policy says a significant change is announced in the app, and
+ * keeping measurements of each spoken turn (learnerMetrics.ts) is one. It says
+ * what is kept now — not the words — and links to the policy for the rest.
+ * Dismissed for good on this device; a browser that cannot store the choice
+ * shows it again, which is the safe side to fail on.
+ */
+const DATA_NOTICE_KEY = "callDataNoticeSeen.v1";
+const PRIVACY_URL = "https://english-chat-mvp.vercel.app/privacy";
+
+function readNoticeSeen(): boolean {
+  try {
+    return globalThis.localStorage?.getItem(DATA_NOTICE_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * What the door says about time left. Points are bought in five-minute
+ * blocks and a call that ends inside one carries the rest into the next, so
+ * the honest figure is both together; the carry is named on its own when
+ * there is a minute of it, because it is the part people would not expect.
+ */
+function callTimeLines(time: CallTime | null, ui: UICopy): { total: string; carry: string | null } | null {
+  if (!time) return null;
+  const totalMinutes = Math.floor((time.pointsLeft * time.pointSeconds + time.carrySeconds) / 60);
+  const carryMinutes = Math.floor(time.carrySeconds / 60);
+  return {
+    total: ui.roleplayTimeLeft.replace("{minutes}", String(totalMinutes)),
+    carry: carryMinutes >= 1 ? ui.roleplayCarryNote.replace("{minutes}", String(carryMinutes)) : null,
+  };
+}
 
 /**
  * The scenes available to practise, and the door into one.
@@ -67,6 +108,31 @@ export function RoleplayTab({
   const [reading, setReading] = useState<SavedConversation | null>(null);
   const [written, setWritten] = useState<SavedConversation[] | null>(null);
   const scenarios = scenariosForLanguage(targetLanguage);
+  const { isPremium } = usePremium();
+  const [callTime, setCallTime] = useState<CallTime | null>(null);
+
+  // Asked at the door, and again each time a call closes, since a call is what
+  // changes it. A server too old to answer leaves the line off.
+  useEffect(() => {
+    if (playing) return;
+    let cancelled = false;
+    void fetch(apiUrl("/api/entitlement"), { headers: entitlementHeaders(isPremium) })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data: { callPointsLeft?: unknown; callCarrySeconds?: unknown; callPointSeconds?: unknown } | null) => {
+        if (cancelled || !data) return;
+        if (typeof data.callPointsLeft !== "number" || typeof data.callPointSeconds !== "number") return;
+        setCallTime({
+          pointsLeft: data.callPointsLeft,
+          carrySeconds: typeof data.callCarrySeconds === "number" ? data.callCarrySeconds : 0,
+          pointSeconds: data.callPointSeconds,
+        });
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, [playing, isPremium]);
+  const timeLines = callTimeLines(callTime, ui);
 
   const only = scenarios.length === 1 ? scenarios[0] : null;
 
@@ -86,6 +152,16 @@ export function RoleplayTab({
     [onClient],
   );
   const saved = written ?? stored;
+  const [noticeDismissed, setNoticeDismissed] = useState(false);
+  const showNotice = onClient && !noticeDismissed && !readNoticeSeen();
+  const dismissNotice = () => {
+    try {
+      globalThis.localStorage?.setItem(DATA_NOTICE_KEY, "1");
+    } catch {
+      // Shown again next time, which is the safe side.
+    }
+    setNoticeDismissed(true);
+  };
 
   const discard = useCallback(
     (id: string) => {
@@ -138,6 +214,28 @@ export function RoleplayTab({
           <p className="text-[13px] leading-relaxed text-neutral-400">
             {ui.roleplayIntro}
           </p>
+          {showNotice ? (
+            <div className="w-full max-w-xs rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left text-[12px] leading-relaxed text-neutral-300">
+              <p>{ui.roleplayDataNotice}</p>
+              <div className="mt-2 flex items-center justify-between gap-3">
+                <a
+                  href={PRIVACY_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-neutral-400 underline underline-offset-4 hover:text-neutral-200"
+                >
+                  {ui.roleplayDataNoticeMore}
+                </a>
+                <button
+                  type="button"
+                  onClick={dismissNotice}
+                  className="rounded-lg bg-white/15 px-3 py-1.5 text-[12px] font-medium text-neutral-100 hover:bg-white/20"
+                >
+                  {ui.roleplayDataNoticeOk}
+                </button>
+              </div>
+            </div>
+          ) : null}
           {/* Carrying one on comes first when there is one to carry on: it is
               the thing they left in the middle, and starting over would throw
               it away without saying so. */}
@@ -177,6 +275,12 @@ export function RoleplayTab({
           >
             {ui.roleplayStart}
           </button>
+          {timeLines ? (
+            <p className="-mt-1 text-[12px] leading-relaxed text-neutral-500">
+              {timeLines.total}
+              {timeLines.carry ? <span className="block">{timeLines.carry}</span> : null}
+            </p>
+          ) : null}
         </div>
       ) : (
         <>

@@ -14,6 +14,7 @@ import { apiUrl } from "@/lib/apiBase";
 import {
   isLocalPlanDebugEnabled,
   entitlementHeaders,
+  fetchMonthlyPriceLabel,
   resetBillingConfigure,
 } from "@/lib/billing/billingService";
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
@@ -149,6 +150,19 @@ export function BillingScreen({
   const [notice, setNotice] = useState<string | null>(null);
   const [dailyUsed, setDailyUsed] = useState(0);
   const [dailyLimit, setDailyLimit] = useState(FREE_DAILY_CHAT_LIMIT);
+  const [priceLabel, setPriceLabel] = useState<string | null>(null);
+
+  // The price as the store shows it to this person, in their currency.
+  useEffect(() => {
+    if (!isOpen || !isBillingNative || isPremium) return;
+    let cancelled = false;
+    void fetchMonthlyPriceLabel().then((label) => {
+      if (!cancelled) setPriceLabel(label);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [isOpen, isBillingNative, isPremium]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -349,7 +363,9 @@ export function BillingScreen({
                 ? ui.billingPremiumLabel
                 : isPurchasing
                   ? ui.paywallPurchasing
-                  : ui.paywallCta}
+                  : priceLabel
+                    ? ui.paywallCtaPrice.replace("{price}", priceLabel)
+                    : ui.paywallCtaPlain}
             </button>
             {!isBillingNative ? (
               <p className="text-center text-xs text-slate-500">

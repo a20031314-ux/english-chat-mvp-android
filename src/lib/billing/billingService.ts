@@ -334,6 +334,29 @@ export async function fetchPremiumFromRevenueCat(): Promise<boolean> {
   }
 }
 
+/**
+ * What the subscription costs, in the buyer's own currency, as the store says it.
+ *
+ * The paywall used to carry the price in its copy — "₩9,900" in English and
+ * Spanish too, and "₩4,900" left behind in eleven generated locales — so a
+ * learner in the US read won on the button and dollars on Play's sheet. The
+ * store knows the price for this person's country; the button asks it.
+ * Null when the store cannot be asked (web, a timeout), and the button then
+ * names no price rather than an invented one.
+ */
+export async function fetchMonthlyPriceLabel(): Promise<string | null> {
+  try {
+    const target = await findMonthlyPurchaseTarget();
+    if (!target) return null;
+    if (target.kind === "package") return target.value.product.priceString || null;
+    if (target.kind === "product") return target.value.priceString || null;
+    const option = target.value;
+    return option.fullPricePhase?.price?.formatted || option.pricingPhases?.[0]?.price?.formatted || null;
+  } catch {
+    return null;
+  }
+}
+
 export async function findMonthlyPackage(): Promise<PurchasesPackage | null> {
   const target = await findMonthlyPurchaseTarget();
   return target?.kind === "package" ? target.value : null;

@@ -369,6 +369,14 @@ export async function fetchDirection(input: {
   /** Names this conversation, so the server can keep its clock between turns. */
   sessionId: string;
   /**
+   * What the app measured about the turn this answers: the silence before the
+   * learner began (from the moment it started listening) and how many goes
+   * the step has had. Kept by the server as measurements, never as words
+   * (learnerMetrics.ts); a field of its own so an older server simply does not
+   * read it.
+   */
+  signals?: { hesitationMs: number; attempts: number };
+  /**
    * The ready line the turn will open with, as soon as the server names it and
    * before the rest of the answer exists. There to be fetched, not played: the
    * line is spoken from the finished answer like any other.
@@ -394,6 +402,7 @@ export async function fetchDirection(input: {
     history: input.request.history.slice(-HISTORY_LINES),
     context: input.request.context ?? "",
     nativeLanguage: input.nativeLanguage,
+    ...(input.signals ? { learnerSignals: input.signals } : {}),
   });
 
   if (streamingWorks) {

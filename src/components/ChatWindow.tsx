@@ -678,8 +678,14 @@ export function ChatWindow({
   const inputRef = useRef<HTMLTextAreaElement>(null);
   const bottomRef = useRef<HTMLDivElement>(null);
 
+  // Both on by default, so what someone types decides what happens: a line in
+  // the language they are learning is practice, a line in their own language
+  // asks how to say it (inputLanguage.ts). With only chat on, an English
+  // reader learning Spanish who typed English had it sent to the tutor as
+  // practice and got Spanish back — the mode they needed was one they had to
+  // find a toggle for. Every place that starts a conversation resets to this.
   const [chatModeOn, setChatModeOn] = useState(true);
-  const [askExpressionOn, setAskExpressionOn] = useState(false);
+  const [askExpressionOn, setAskExpressionOn] = useState(true);
   const [turns, setTurns] = useState<ChatTurn[]>([]);
   const [input, setInput] = useState("");
   const [isSending, setIsSending] = useState(false);
@@ -860,7 +866,7 @@ export function ChatWindow({
     setSessionLanguageCode(targetLanguage);
     setInput("");
     setChatModeOn(true);
-    setAskExpressionOn(false);
+    setAskExpressionOn(true);
     setIsChatHistoryOpen(false);
 
     if (resumable) {
@@ -1141,7 +1147,7 @@ export function ChatWindow({
     setTurns([]);
     setInput("");
     setChatModeOn(true);
-    setAskExpressionOn(false);
+    setAskExpressionOn(true);
     setSessionEnded(false);
     setCurrentSessionId(makeSessionId());
     setCurrentSessionCreatedAt(Date.now());
@@ -1189,7 +1195,7 @@ export function ChatWindow({
     setSessionEnded(false);
     setTurns(fromSessionMessages(session.messages));
     setChatModeOn(true);
-    setAskExpressionOn(false);
+    setAskExpressionOn(true);
     setInput("");
     setIsChatHistoryOpen(false);
     requestAnimationFrame(() => inputRef.current?.focus());

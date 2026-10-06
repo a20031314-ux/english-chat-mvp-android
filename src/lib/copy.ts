@@ -1,4 +1,8 @@
 import generatedLocales from "@/lib/locales/generated.json";
+// Translations of what the eleven generated locales were showing in English,
+// applied last so a key missing here falls back to that English
+// (scripts/translate-ui-overlays.mjs).
+import overlayLocales from "@/lib/locales/overlays.json";
 import {
   type LearningLanguageCode,
   uiLocaleOptions,
@@ -15,6 +19,12 @@ const generatedRoleplayOverlay = {
   roleplayResume: "Carry on",
   roleplayPast: "Past conversations",
   roleplayPastEmpty: "Nothing here yet.",
+  roleplayTimeLeft: "About {minutes} min of calls left",
+  roleplayCarryNote: "{minutes} min left over from your last call carries into the next one",
+  roleplayDataNotice:
+    "To help with calls, we keep measurements of each turn — how long you took to answer, how long you spoke, how clearly it was heard — but not what you said.",
+  roleplayDataNoticeMore: "Privacy policy",
+  roleplayDataNoticeOk: "Got it",
 } as const;
 
 /**
@@ -29,6 +39,10 @@ const generatedRoleplayOverlay = {
 const generatedChatOverlay = {
   chatTempErrorReply: "Something went wrong just now.",
   chatTempErrorExplanation: "A temporary error. Please try again in a moment.",
+  guideOpen: "How to use",
+  guideClose: "Close",
+  guideLoading: "Loading…",
+  guideUnavailable: "The guide will be here once you're connected to the internet.",
 } as const;
 
 const generatedBillingOverlay = {
@@ -43,7 +57,8 @@ const generatedBillingOverlay = {
   studyDropHint:
     "Choose a file or drop it here.\nPDF, EPUB, and TXT are supported.",
   planPremium: "Premium · this month’s library + {limit} import points",
-  paywallCta: "Start for ₩9,900/month",
+  paywallCtaPrice: "Start Premium · {price}/month",
+  paywallCtaPlain: "Start Premium",
   paywallLimitBanner:
     "You've reached a free limit. Go Premium to keep learning from video.",
   paywallSubtitle:
@@ -100,7 +115,7 @@ const generatedBillingOverlay = {
   billingClose: "Close",
   headerImportPoints: "{remaining} pts",
   discoverImportPoints: "{n} pts",
-  chatReading: "Reading",
+  chatReading: "Translation",
 } as const;
 
 export const copy = {
@@ -140,6 +155,16 @@ export const copy = {
     roleplayResume: "이어서 하기",
     roleplayPast: "지난 대화",
     roleplayPastEmpty: "아직 지난 대화가 없어요.",
+    roleplayTimeLeft: "남은 통화 시간 약 {minutes}분",
+    roleplayCarryNote: "지난 통화에서 남은 {minutes}분이 다음 통화로 이어져요",
+    roleplayDataNotice:
+      "통화를 더 잘 돕기 위해, 말한 내용은 빼고 답하기까지 걸린 시간·말한 길이·인식 정확도 같은 정보를 저장해요.",
+    roleplayDataNoticeMore: "개인정보처리방침",
+    roleplayDataNoticeOk: "확인",
+    guideOpen: "사용법",
+    guideClose: "닫기",
+    guideLoading: "불러오는 중…",
+    guideUnavailable: "인터넷에 연결되면 사용법을 볼 수 있어요.",
     updateAvailable: "새 버전이 나왔어요",
     updateRequired: "업데이트가 필요해요. 지금 버전으로는 대화를 이어갈 수 없어요.",
     updateAction: "업데이트",
@@ -793,7 +818,8 @@ export const copy = {
     paywallBenefitsTitle: "프리미엄 혜택",
     paywallBenefits:
       "이번 달 학습 라이브러리 전체\n직접 가져오기 80포인트 (3분=1포인트)\n저장한 영상 다시 보기는 차감 없음\n하루 채팅 제한 해제",
-    paywallCta: "월 9,900원으로 시작하기",
+    paywallCtaPrice: "프리미엄 시작하기 · 월 {price}",
+    paywallCtaPlain: "프리미엄 시작하기",
     paywallRestore: "구매 복원",
     paywallLater: "나중에 하기",
     paywallNativeOnly: "앱에서 결제를 진행할 수 있어요",
@@ -845,6 +871,16 @@ export const copy = {
     roleplayResume: "Carry on",
     roleplayPast: "Past conversations",
     roleplayPastEmpty: "Nothing here yet.",
+    roleplayTimeLeft: "About {minutes} min of calls left",
+    roleplayCarryNote: "{minutes} min left over from your last call carries into the next one",
+    roleplayDataNotice:
+      "To help with calls, we keep measurements of each turn — how long you took to answer, how long you spoke, how clearly it was heard — but not what you said.",
+    roleplayDataNoticeMore: "Privacy policy",
+    roleplayDataNoticeOk: "Got it",
+    guideOpen: "How to use",
+    guideClose: "Close",
+    guideLoading: "Loading…",
+    guideUnavailable: "The guide will be here once you're connected to the internet.",
     updateAvailable: "A newer version is out",
     updateRequired: "This version can't keep going. Please update to carry on.",
     updateAction: "Update",
@@ -871,7 +907,7 @@ export const copy = {
     billingPremiumLabel: "Premium",
     billingClose: "Close",
     headerImportPoints: "{remaining} pts",
-    chatReading: "Reading",
+    chatReading: "Translation",
     translate: "Translate",
     listen: "Listen",
     insightAnalyze: "Analyze",
@@ -1495,7 +1531,8 @@ export const copy = {
     paywallBenefitsTitle: "Premium includes",
     paywallBenefits:
       "This month’s full study library\n80 import points for your own videos (3 min = 1 point)\nReplaying saved videos is free\nNo daily chat limit",
-    paywallCta: "Start for ₩9,900/month",
+    paywallCtaPrice: "Start Premium · {price}/month",
+    paywallCtaPlain: "Start Premium",
     paywallRestore: "Restore purchases",
     paywallLater: "Not now",
     paywallNativeOnly: "You can complete payment in the app",
@@ -1547,6 +1584,16 @@ export const copy = {
     roleplayResume: "Continuar",
     roleplayPast: "Conversaciones anteriores",
     roleplayPastEmpty: "Aquí todavía no hay nada.",
+    roleplayTimeLeft: "Te quedan unos {minutes} min de llamada",
+    roleplayCarryNote: "Los {minutes} min que sobraron de tu última llamada pasan a la siguiente",
+    roleplayDataNotice:
+      "Para ayudarte mejor en las llamadas, guardamos datos de cada turno —cuánto tardas en responder, cuánto hablas y lo bien que se te entiende—, pero no lo que dices.",
+    roleplayDataNoticeMore: "Política de privacidad",
+    roleplayDataNoticeOk: "Entendido",
+    guideOpen: "Cómo se usa",
+    guideClose: "Cerrar",
+    guideLoading: "Cargando…",
+    guideUnavailable: "La guía aparecerá cuando te conectes a internet.",
     updateAvailable: "Hay una versión nueva",
     updateRequired: "Esta versión ya no puede continuar. Actualiza para seguir.",
     updateAction: "Actualizar",
@@ -1573,7 +1620,7 @@ export const copy = {
     billingPremiumLabel: "Premium",
     billingClose: "Cerrar",
     headerImportPoints: "{remaining} pts",
-    chatReading: "Lectura",
+    chatReading: "Traducción",
     translate: "Traducir",
     listen: "Escuchar",
     insightAnalyze: "Analizar",
@@ -2200,7 +2247,8 @@ export const copy = {
     paywallBenefitsTitle: "Premium incluye",
     paywallBenefits:
       "Biblioteca de estudio de este mes\n80 puntos para importar tus vídeos (3 min = 1 punto)\nRepetir vídeos guardados es gratis\nSin límite diario de chat",
-    paywallCta: "Empezar por 9.900 ₩/mes",
+    paywallCtaPrice: "Empezar Premium · {price}/mes",
+    paywallCtaPlain: "Empezar Premium",
     paywallRestore: "Restaurar compras",
     paywallLater: "Ahora no",
     paywallNativeOnly: "Puedes pagar en la app",
@@ -2216,17 +2264,17 @@ export const copy = {
       "No se pudo cargar el producto. Revisa Play Console y RevenueCat.",
     paywallCancelled: "Compra cancelada",
   },
-  ja: { ...generatedLocales.ja, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
-  zh: { ...generatedLocales.zh, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
-  vi: { ...generatedLocales.vi, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
-  fr: { ...generatedLocales.fr, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
-  it: { ...generatedLocales.it, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
-  pt: { ...generatedLocales.pt, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
-  ru: { ...generatedLocales.ru, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
-  id: { ...generatedLocales.id, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
-  ar: { ...generatedLocales.ar, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
-  th: { ...generatedLocales.th, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
-  hi: { ...generatedLocales.hi, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay },
+  ja: { ...generatedLocales.ja, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.ja>>>).ja },
+  zh: { ...generatedLocales.zh, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.zh>>>).zh },
+  vi: { ...generatedLocales.vi, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.vi>>>).vi },
+  fr: { ...generatedLocales.fr, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.fr>>>).fr },
+  it: { ...generatedLocales.it, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.it>>>).it },
+  pt: { ...generatedLocales.pt, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.pt>>>).pt },
+  ru: { ...generatedLocales.ru, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.ru>>>).ru },
+  id: { ...generatedLocales.id, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.id>>>).id },
+  ar: { ...generatedLocales.ar, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.ar>>>).ar },
+  th: { ...generatedLocales.th, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.th>>>).th },
+  hi: { ...generatedLocales.hi, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.hi>>>).hi },
 } as const;
 
 export type Locale = keyof typeof copy;

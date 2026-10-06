@@ -21,10 +21,11 @@ import type { RoleplayScenario, SentenceBank } from "./script.ts";
  * What is deliberately *not* kept is the id the server charges against. Its
  * clock runs from when the conversation started, so resuming an hour later
  * under the same id would fall due for every five minutes in between and charge
- * for an hour nobody spent. A resumed conversation is a new id and a new clock:
- * one point at the start of each sitting, which makes putting it down and
- * picking it up cost slightly more rather than less, and so is not a way around
- * paying for it.
+ * for an hour nobody spent. A resumed conversation is a new id and a new clock.
+ * That used to mean one point at the start of each sitting, so putting a
+ * conversation down cost slightly more; since 2026-10-06 the unused part of the
+ * last sitting's block is carried into the next (entitlementStore.ts), so a
+ * sitting costs what it used, and resuming is still not a way around paying.
  *
  * Pure apart from the two functions that touch storage, which take it as an
  * argument so the rest can be tested without a browser.
