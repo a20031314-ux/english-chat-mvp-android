@@ -156,7 +156,10 @@
     "needsWhyStudied": "学習済み、まだ再登場していない",
     "needsWhyNew": "まだ使ったことのない構文",
     "needsExample": "例",
-    "needsPractiseChat": "チャットで使ってみる"
+    "needsPractiseChat": "チャットで使ってみる",
+    "quickAskMeaning": "ここではどういう意味？",
+    "quickAskForm": "なぜこの形なの？",
+    "quickAskAlternatives": "似た別の言い方は？"
   },
   "zh": {
     "billingClose": "关闭",
@@ -315,7 +318,10 @@
     "needsWhyStudied": "学过，还没再遇到",
     "needsWhyNew": "还没用过的结构",
     "needsExample": "例",
-    "needsPractiseChat": "去聊天里试试"
+    "needsPractiseChat": "去聊天里试试",
+    "quickAskMeaning": "这里是什么意思？",
+    "quickAskForm": "为什么是这个形式？",
+    "quickAskAlternatives": "还有别的说法吗？"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -476,7 +482,10 @@
     "needsWhyStudied": "Đã học, chưa gặp lại",
     "needsWhyNew": "Chưa dùng lần nào",
     "needsExample": "VD",
-    "needsPractiseChat": "Thử trong chat"
+    "needsPractiseChat": "Thử trong chat",
+    "quickAskMeaning": "Ở đây nghĩa là gì?",
+    "quickAskForm": "Sao lại dùng dạng này?",
+    "quickAskAlternatives": "Còn cách nói nào khác?"
   },
   "fr": {
     "billingClose": "Fermer",
@@ -642,7 +651,10 @@
     "needsWhyStudied": "Étudié, pas encore revu",
     "needsWhyNew": "Pas encore utilisé",
     "needsExample": "ex.",
-    "needsPractiseChat": "L’essayer dans le chat"
+    "needsPractiseChat": "L’essayer dans le chat",
+    "quickAskMeaning": "Ça veut dire quoi ici ?",
+    "quickAskForm": "Pourquoi cette forme ?",
+    "quickAskAlternatives": "D’autres façons de le dire ?"
   },
   "it": {
     "archive": "Report",
@@ -999,7 +1011,10 @@
     "needsWhyStudied": "Studiato, non è ancora ricomparso",
     "needsWhyNew": "Non ancora usato",
     "needsExample": "es.",
-    "needsPractiseChat": "Provalo in chat"
+    "needsPractiseChat": "Provalo in chat",
+    "quickAskMeaning": "Cosa significa qui?",
+    "quickAskForm": "Perché questa forma?",
+    "quickAskAlternatives": "Altri modi per dirlo?"
   },
   "pt": {
     "billingClose": "Fechar",
@@ -1168,7 +1183,10 @@
     "needsWhyStudied": "Estudado, ainda não apareceu de novo",
     "needsWhyNew": "Ainda não usado",
     "needsExample": "ex.",
-    "needsPractiseChat": "Testar no bate-papo"
+    "needsPractiseChat": "Testar no bate-papo",
+    "quickAskMeaning": "O que significa aqui?",
+    "quickAskForm": "Por que essa forma?",
+    "quickAskAlternatives": "Outras formas de dizer?"
   },
   "ru": {
     "archive": "Отчёты",
@@ -1523,7 +1541,10 @@
     "needsWhyStudied": "Изучено, пока не встречалось снова",
     "needsWhyNew": "Ещё не использовали",
     "needsExample": "напр.",
-    "needsPractiseChat": "Попробовать в чате"
+    "needsPractiseChat": "Попробовать в чате",
+    "quickAskMeaning": "Что это значит здесь?",
+    "quickAskForm": "Почему такая форма?",
+    "quickAskAlternatives": "Как ещё можно сказать?"
   },
   "id": {
     "billingClose": "Tutup",
@@ -1688,7 +1709,10 @@
     "needsWhyStudied": "Sudah dipelajari, belum muncul lagi",
     "needsWhyNew": "Belum pernah dipakai",
     "needsExample": "mis.",
-    "needsPractiseChat": "Coba di chat"
+    "needsPractiseChat": "Coba di chat",
+    "quickAskMeaning": "Artinya apa di sini?",
+    "quickAskForm": "Kenapa bentuknya begini?",
+    "quickAskAlternatives": "Cara lain mengatakannya?"
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -1847,7 +1871,10 @@
     "needsWhyStudied": "درستها ولم تظهر مجددًا بعد",
     "needsWhyNew": "لم تُستخدم بعد",
     "needsExample": "مثال",
-    "needsPractiseChat": "جرّبها في المحادثة"
+    "needsPractiseChat": "جرّبها في المحادثة",
+    "quickAskMeaning": "ماذا تعني هنا؟",
+    "quickAskForm": "لماذا هذه الصيغة؟",
+    "quickAskAlternatives": "طرق أخرى لقولها؟"
   },
   "th": {
     "billingClose": "ปิด",
@@ -2006,7 +2033,10 @@
     "needsWhyStudied": "เรียนแล้ว ยังไม่เจออีก",
     "needsWhyNew": "ยังไม่เคยใช้",
     "needsExample": "เช่น",
-    "needsPractiseChat": "ลองใช้ในแชท"
+    "needsPractiseChat": "ลองใช้ในแชท",
+    "quickAskMeaning": "ตรงนี้หมายความว่าอะไร",
+    "quickAskForm": "ทำไมใช้รูปนี้",
+    "quickAskAlternatives": "มีวิธีพูดแบบอื่นไหม"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -2165,6 +2195,9 @@
     "needsWhyStudied": "सीखा, अभी दोबारा नहीं आया",
     "needsWhyNew": "अभी इस्तेमाल नहीं किया",
     "needsExample": "जैसे",
-    "needsPractiseChat": "चैट में आज़माएँ"
+    "needsPractiseChat": "चैट में आज़माएँ",
+    "quickAskMeaning": "यहाँ इसका क्या मतलब है?",
+    "quickAskForm": "यह रूप क्यों?",
+    "quickAskAlternatives": "इसे कहने के और तरीके?"
   }
 }

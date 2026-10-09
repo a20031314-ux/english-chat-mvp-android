@@ -5,11 +5,9 @@ import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext"
 import type { Locale } from "@/lib/copy";
 import type {
   EnglishAnalysisTarget,
-  EnglishElementAnalysis,
   EnglishInputAnalysis,
 } from "@/lib/englishAnalysis";
 import { isSameAnalysisSpan } from "@/lib/englishAnalysis";
-import { analyzeEnglishElement } from "@/lib/englishAnalysisService";
 import {
   clickRangeForText,
   listClickableSpans,
@@ -35,9 +33,6 @@ export type EnglishAnalysisSession = {
   sentenceAnalysis: EnglishInputAnalysis | null;
   sentenceLoading: boolean;
   sentenceFailed: boolean;
-  elementAnalysis: EnglishElementAnalysis | null;
-  elementLoading: boolean;
-  elementFailed: boolean;
 };
 
 function resolveTab(target: EnglishAnalysisTarget): InspectTab {
@@ -64,11 +59,9 @@ export function useEnglishAnalysis(locale: Locale) {
   const sessionRef = useRef(session);
   sessionRef.current = session;
   const sentenceReqRef = useRef(0);
-  const elementReqRef = useRef(0);
 
   const close = useCallback(() => {
     sentenceReqRef.current += 1;
-    elementReqRef.current += 1;
     setSession(null);
   }, []);
 
@@ -161,62 +154,6 @@ export function useEnglishAnalysis(locale: Locale) {
     [locale, targetLanguage],
   );
 
-  const loadElement = useCallback(
-    async (target: EnglishAnalysisTarget, selectedText: string) => {
-      const req = elementReqRef.current + 1;
-      elementReqRef.current = req;
-      setSession((prev) =>
-        prev
-          ? {
-              ...prev,
-              elementAnalysis: null,
-              elementLoading: true,
-              elementFailed: false,
-            }
-          : prev,
-      );
-      try {
-        const elementAnalysis = await analyzeEnglishElement({
-          selectedText,
-          contextSentence: target.contextSentence,
-          locale,
-          interfaceLanguage: locale,
-          targetLanguage,
-          context: target.context,
-          sourceType: target.sourceType,
-          language: target.language,
-          learnerLevel: target.learnerLevel,
-          translation: target.translation,
-          analysisTranslation: target.analysisTranslation,
-        });
-        if (elementReqRef.current !== req) return;
-        setSession((prev) =>
-          prev
-            ? {
-                ...prev,
-                elementAnalysis,
-                elementLoading: false,
-                elementFailed: !elementAnalysis,
-              }
-            : prev,
-        );
-      } catch {
-        if (elementReqRef.current !== req) return;
-        setSession((prev) =>
-          prev
-            ? {
-                ...prev,
-                elementAnalysis: null,
-                elementLoading: false,
-                elementFailed: true,
-              }
-            : prev,
-        );
-      }
-    },
-    [locale, targetLanguage],
-  );
-
   const open = useCallback(
     (next: EnglishAnalysisTarget) => {
       const selectedText = next.selectedText.replace(/\s+/g, " ").trim();
@@ -279,7 +216,6 @@ export function useEnglishAnalysis(locale: Locale) {
 
       if (!sameSentence || !prev) {
         sentenceReqRef.current += 1;
-        elementReqRef.current += 1;
         const provided = target.translation?.replace(/\s+/g, " ").trim() || "";
         const needsTranslate = !provided && locale !== targetLanguage;
         setSession({
@@ -295,9 +231,6 @@ export function useEnglishAnalysis(locale: Locale) {
           ),
           sentenceLoading: needsTranslate,
           sentenceFailed: false,
-          elementAnalysis: null,
-          elementLoading: false,
-          elementFailed: false,
         });
         if (needsTranslate) void loadSentence(target);
         return;
@@ -311,13 +244,6 @@ export function useEnglishAnalysis(locale: Locale) {
         rangeActive,
         rangeStart: range.start,
         rangeEnd: range.end,
-        ...(partialRange
-          ? {
-              elementAnalysis: null,
-              elementLoading: false,
-              elementFailed: false,
-            }
-          : {}),
       });
 
       if (!prev.sentenceAnalysis && !prev.sentenceLoading) {
@@ -340,11 +266,6 @@ export function useEnglishAnalysis(locale: Locale) {
       to,
       targetLanguage,
     );
-    const rangeChanged =
-      !prev.rangeActive || prev.rangeStart !== from || prev.rangeEnd !== to;
-    if (rangeChanged) {
-      elementReqRef.current += 1;
-    }
     setSession({
       ...prev,
       tab: "sentence",
@@ -352,30 +273,8 @@ export function useEnglishAnalysis(locale: Locale) {
       rangeActive: true,
       rangeStart: from,
       rangeEnd: to,
-      ...(rangeChanged
-        ? {
-            elementAnalysis: null,
-            elementLoading: false,
-            elementFailed: false,
-          }
-        : {}),
     });
   }, [targetLanguage]);
-
-  const analyzeRange = useCallback(() => {
-    const prev = sessionRef.current;
-    if (!prev || !prev.rangeActive) return;
-    const selected = textForClickRange(
-      prev.target.contextSentence,
-      prev.rangeStart,
-      prev.rangeEnd,
-      targetLanguage,
-    );
-    if (!selected) return;
-    if (isSameAnalysisSpan(selected, prev.target.contextSentence)) return;
-    noteComprehension(targetLanguage, { kind: "analyze", text: selected });
-    void loadElement(prev.target, selected);
-  }, [loadElement, targetLanguage]);
 
   const setTab = useCallback(
     (tab: InspectTab) => {
@@ -394,7 +293,6 @@ export function useEnglishAnalysis(locale: Locale) {
     open,
     setTab,
     setRange,
-    analyzeRange,
     close,
   };
 }

@@ -92,7 +92,6 @@ export function EnglishAnalysisProvider({
             locale={locale}
             onTab={analysis.setTab}
             onRange={analysis.setRange}
-            onAnalyzeRange={analysis.analyzeRange}
             onClose={analysis.close}
           />
         ) : null}

@@ -15,6 +15,8 @@ export async function requestExpressionAsk(input: {
   sentence: string;
   selected: string;
   question: string;
+  /** A one-tap question; the server asks its own wording, `question` is the label shown. */
+  preset?: "meaning" | "form" | "alternatives";
   history?: AskTurn[];
   context?: string[];
   interfaceLanguage: string;
@@ -28,6 +30,7 @@ export async function requestExpressionAsk(input: {
         sentence: input.sentence,
         selected: input.selected,
         question: input.question,
+        ...(input.preset ? { preset: input.preset } : {}),
         interfaceLanguage: input.interfaceLanguage,
         targetLanguage: input.targetLanguage,
         ...(input.context?.length ? { context: input.context.slice(-4) } : {}),

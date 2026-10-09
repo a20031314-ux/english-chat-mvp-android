@@ -51,8 +51,17 @@ export function SentenceAskPanel({
       ? ui.askSentencePlaceholder
       : ui.askPlaceholder;
 
-  const send = async () => {
-    const asked = question.replace(/\s+/g, " ").trim();
+  type Preset = "meaning" | "form" | "alternatives";
+  const presets: Array<{ id: Preset; label: string }> = [
+    { id: "meaning", label: ui.quickAskMeaning },
+    { id: "form", label: ui.quickAskForm },
+    { id: "alternatives", label: ui.quickAskAlternatives },
+  ];
+
+  // A typed question, or a one-tap one (its label is what the thread shows;
+  // the server words the question itself and counts it on its own allowance).
+  const send = async (preset?: { id: Preset; label: string }) => {
+    const asked = preset ? preset.label : question.replace(/\s+/g, " ").trim();
     if (!asked || pending) return;
     setPending(asked);
     setError("");
@@ -60,6 +69,7 @@ export function SentenceAskPanel({
       sentence,
       selected,
       question: asked,
+      ...(preset ? { preset: preset.id } : {}),
       history: thread?.turns,
       context,
       interfaceLanguage: uiLanguage,
@@ -74,7 +84,7 @@ export function SentenceAskPanel({
       );
       return;
     }
-    setQuestion("");
+    if (!preset) setQuestion("");
     onNote(
       saveAskTurn(
         { sentence, language: targetLanguage, uiLanguage },
@@ -120,6 +130,22 @@ export function SentenceAskPanel({
         </ol>
         </div>
       ) : null}
+
+      {/* One tap for the questions almost everyone has — what the old fixed
+          analysis answered, now kept as part of the thread. */}
+      <div className="mb-2 flex flex-wrap gap-1.5">
+        {presets.map((preset) => (
+          <button
+            key={preset.id}
+            type="button"
+            disabled={Boolean(pending)}
+            onClick={() => void send(preset)}
+            className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-[13px] text-slate-200 hover:bg-white/10 disabled:opacity-40"
+          >
+            {preset.label}
+          </button>
+        ))}
+      </div>
 
       <form
         className="flex items-end gap-2"

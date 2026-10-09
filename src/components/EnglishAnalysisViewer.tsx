@@ -13,10 +13,6 @@ import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext"
 import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 import { isSameAnalysisSpan } from "@/lib/englishAnalysis";
 import { idiomUnitContaining } from "@/lib/expressionUnits";
-import {
-  analysisDimensionLabel,
-  orderedDimensionEntries,
-} from "@/lib/salience/dimensionLabels";
 import { SentenceAskPanel, SentenceAskThreads } from "@/components/SentenceAskPanel";
 import {
   clickRangeForText,
@@ -44,7 +40,6 @@ export function EnglishAnalysisViewer({
   locale,
   onTab,
   onRange,
-  onAnalyzeRange,
   onClose,
 }: {
   session: EnglishAnalysisSession;
@@ -52,7 +47,6 @@ export function EnglishAnalysisViewer({
   locale: string;
   onTab: (tab: InspectTab) => void;
   onRange: (start: number, end: number) => void;
-  onAnalyzeRange: () => void;
   onClose: () => void;
 }) {
   const vocab = useVocabPreviewOptional();
@@ -119,7 +113,6 @@ export function EnglishAnalysisViewer({
               ui={ui}
               locale={locale}
               onRange={onRange}
-              onAnalyzeRange={onAnalyzeRange}
             />
           )}
         </div>
@@ -133,13 +126,11 @@ function SentenceTab({
   ui,
   locale,
   onRange,
-  onAnalyzeRange,
 }: {
   session: EnglishAnalysisSession;
   ui: UICopy;
   locale: string;
   onRange: (start: number, end: number) => void;
-  onAnalyzeRange: () => void;
 }) {
   const analysisApi = useEnglishAnalysisOptional();
   const learningLanguage = useLearningLanguageOptional();
@@ -158,15 +149,9 @@ function SentenceTab({
   const nuance = session.sentenceAnalysis?.nuance;
   const [spanTick, setSpanTick] = useState(0);
   const words = listClickableSpans(sentence, targetLanguage);
-  const analysis = session.elementAnalysis;
   const selected = session.rangeActive ? session.focusText : "";
   const rangeIsSentence =
     Boolean(selected) && isSameAnalysisSpan(selected, sentence);
-  const showRangeAnalyze =
-    session.rangeActive &&
-    !rangeIsSentence &&
-    !analysis &&
-    !session.elementLoading;
 
   const drillIns = (session.sentenceAnalysis?.elements ?? []).filter(
     (element) => !isSameAnalysisSpan(element.text, sentence),
@@ -445,152 +430,6 @@ function SentenceTab({
             {selected}
           </p>
           <TTSButton text={selected} ariaLabel={ui.listen} />
-        </div>
-      ) : null}
-
-      {showRangeAnalyze ? (
-        <button
-          type="button"
-          onClick={onAnalyzeRange}
-          className="mt-3 w-full rounded-xl bg-[#e8e8e4] shadow-[0_0_14px_rgba(255,255,255,0.28)] px-3 py-2.5 text-sm font-medium text-neutral-900 hover:bg-[#f5f5f3]"
-        >
-          {ui.exploreSubmit}
-        </button>
-      ) : null}
-
-      {session.elementLoading ? (
-        <p className="mt-4 text-sm text-slate-300">{ui.insightLoading}</p>
-      ) : session.elementFailed ? (
-        <p className="mt-4 text-sm text-rose-300">{ui.insightFailed}</p>
-      ) : analysis ? (
-        <div className="mt-4 space-y-4 rounded-xl bg-white/5 px-3 py-3">
-          {analysis.meaningInContext ? (
-            <p className="text-sm font-medium leading-relaxed text-[#e4e4e0]">
-              {analysis.meaningInContext}
-            </p>
-          ) : null}
-          {analysis.reading ? (
-            <p className="text-sm leading-relaxed text-slate-400">
-              {analysis.reading}
-            </p>
-          ) : null}
-          {orderedDimensionEntries(analysis.dimensionResults).map((entry) => (
-            <section key={entry.dimension}>
-              <p className="text-[11px] font-semibold tracking-wide text-slate-500">
-                {analysisDimensionLabel(locale, entry.dimension)}
-              </p>
-              <p className="mt-1 text-sm leading-relaxed text-slate-100">
-                {entry.text}
-              </p>
-            </section>
-          ))}
-          {analysis.examples?.length ? (
-            <section>
-              <p className="text-[11px] font-semibold tracking-wide text-slate-500">
-                {ui.insightExamples}
-              </p>
-              <ul className="mt-1.5 space-y-2">
-                {analysis.examples.map((example) => (
-                  <li key={example.english}>
-                    <div className="flex items-start gap-2">
-                      <p className="min-w-0 flex-1 text-sm leading-relaxed text-slate-100">
-                        {example.english}
-                      </p>
-                      <TTSButton
-                        text={example.english}
-                        ariaLabel={ui.listen}
-                      />
-                    </div>
-                    {example.translation ? (
-                      <p className="mt-0.5 text-xs leading-relaxed text-slate-500">
-                        {example.translation}
-                      </p>
-                    ) : null}
-                  </li>
-                ))}
-              </ul>
-            </section>
-          ) : null}
-          {!analysis.dimensionResults &&
-            analysis.grammar?.map((note) => (
-            <section key={note.name}>
-              <p className="text-[11px] font-semibold tracking-wide text-slate-500">
-                {ui.insightPattern}
-              </p>
-              <p className="mt-1 text-sm font-medium text-slate-100">
-                {note.name}
-              </p>
-              {note.why ? (
-                <>
-                  <p className="mt-2 text-[11px] font-semibold tracking-wide text-slate-500">
-                    {ui.exploreWhy}
-                  </p>
-                  <p className="mt-1 text-sm leading-relaxed text-slate-100">
-                    {note.why}
-                  </p>
-                </>
-              ) : null}
-              <p className="mt-2 text-[11px] font-semibold tracking-wide text-slate-500">
-                {ui.exploreUsage}
-              </p>
-              <p className="mt-1 text-sm leading-relaxed text-slate-100">
-                {note.general}
-              </p>
-              <p className="mt-2 text-[11px] font-semibold tracking-wide text-slate-500">
-                {ui.exploreMeaningHere}
-              </p>
-              <p className="mt-1 text-sm leading-relaxed text-slate-100">
-                {note.inThisSentence}
-              </p>
-              {note.inner?.length ? (
-                <ul className="mt-3 space-y-2">
-                  {note.inner.map((piece) => (
-                    <li
-                      key={`${piece.text}-${piece.name}`}
-                      className="rounded-lg bg-[#121212] px-3 py-2"
-                    >
-                      <p className="text-sm font-medium text-slate-100">
-                        {piece.text}
-                      </p>
-                      <p className="mt-0.5 text-[11px] font-semibold tracking-wide text-slate-500">
-                        {piece.name}
-                      </p>
-                      <p className="mt-1 text-sm leading-relaxed text-slate-200">
-                        {piece.explanation}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
-              ) : null}
-              {note.examples?.length ? (
-                <div className="mt-3">
-                  <p className="text-[11px] font-semibold tracking-wide text-slate-500">
-                    {ui.insightExamples}
-                  </p>
-                  <ul className="mt-1.5 space-y-2">
-                    {note.examples.map((example) => (
-                      <li key={example.english}>
-                        <div className="flex items-start gap-2">
-                          <p className="min-w-0 flex-1 text-sm leading-relaxed text-slate-100">
-                            {example.english}
-                          </p>
-                          <TTSButton
-                            text={example.english}
-                            ariaLabel={ui.listen}
-                          />
-                        </div>
-                        {example.translation ? (
-                          <p className="mt-0.5 text-xs leading-relaxed text-slate-500">
-                            {example.translation}
-                          </p>
-                        ) : null}
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ) : null}
-            </section>
-          ))}
         </div>
       ) : null}
 
