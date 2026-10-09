@@ -18,6 +18,9 @@
 
     <style name="AppTheme.NoActionBarLaunch" parent="Theme.SplashScreen">
         <item name="android:background">@drawable/splash</item>
+        <!-- Android 12+ draws its own launch screen from the app icon; keep it
+             on the app's black rather than the system's light default. -->
+        <item name="windowSplashScreenBackground">#000000</item>
         <item name="postSplashScreenTheme">@style/AppTheme.NoActionBar</item>
     </style>
 </resources>
