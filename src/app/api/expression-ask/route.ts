@@ -1,4 +1,6 @@
-import { NextRequest } from "next/server";
+import { NextRequest, after } from "next/server";
+import { recordComprehensionEvents } from "@/lib/server/learnerProfileStore";
+import { ASK_ABOUTS, type AskAbout } from "@/lib/learner/comprehension";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -74,7 +76,9 @@ ${targetLanguageFocusHints(coerceLanguageCode(targetCode))}
 
 ${explanationLanguageGuard({ interfaceLanguage: uiCode, fieldsDescription: "answer", learningLanguage: targetCode })}
 
-Return only a json object: {"answer":"..."}`;
+Also say what the question was about, as one word: "meaning" (what it means), "grammar" (why this form or structure), "usage" (when or with whom to use it, how common), "nuance" (feel, tone, how it differs from a similar phrase), "pronunciation", or "other".
+
+Return only a json object: {"answer":"...","about":"meaning"}`;
 }
 
 export async function POST(request: NextRequest) {
@@ -137,9 +141,11 @@ export async function POST(request: NextRequest) {
       messages: extra ? [...messages, { role: "system" as const, content: extra }] : messages,
     });
     const raw = completion.choices[0]?.message?.content ?? "";
-    const parsed = JSON.parse(raw) as { answer?: unknown };
+    const parsed = JSON.parse(raw) as { answer?: unknown; about?: unknown };
+    if (ASK_ABOUTS.includes(parsed.about as AskAbout)) about = parsed.about as AskAbout;
     return typeof parsed.answer === "string" ? parsed.answer.trim() : "";
   };
+  let about: AskAbout = "other";
 
   try {
     let answer = await ask();
@@ -154,7 +160,13 @@ export async function POST(request: NextRequest) {
     if (!answer) {
       return jsonWithCors(request, { error: "NO_ANSWER" }, { status: 502 });
     }
-    return jsonWithCors(request, { answer });
+    // The span they asked about joins what they are learning to understand
+    // (learner/comprehension.ts) — the words of the span and what the question
+    // was about, not the question itself.
+    after(() =>
+      recordComprehensionEvents(userId, targetCode, [{ kind: "ask", text: selected, about }]),
+    );
+    return jsonWithCors(request, { answer, about });
   } catch (error) {
     console.error("[expression-ask]", error);
     return jsonWithCors(request, { error: "ASK_FAILED" }, { status: 502 });

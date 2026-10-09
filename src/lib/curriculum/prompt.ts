@@ -31,6 +31,10 @@ export type MapRequest = {
     learning: string[];
     nextBandConstructions: string[];
     plan: { focus: "weak" | "next" | "topic"; method: "chat" | "roleplay" | "video" | "mixed" };
+    /** Phrases from the tutor they now understand but have not used themselves. */
+    understoodNotUsed?: string[];
+    /** Phrases they looked up or asked about and have studied. */
+    studied?: string[];
   };
 };
 
@@ -60,6 +64,11 @@ ${list(learner.weak)}
 ${list(learner.learning.slice(0, 8))}
 - Next band, not yet mastered:
 ${list(learner.nextBandConstructions.slice(0, 8))}
+- Phrases from the tutor they now understand but have not used yet:
+${list((learner.understoodNotUsed ?? []).slice(0, 10))}
+- Phrases they stopped at and studied, not yet met again:
+${list((learner.studied ?? []).slice(0, 10))}
+Understanding a phrase is half of having it: give the understood ones a chance to be said — in chat starters, roleplay tasks or listenFor — and bring the studied ones back where they fit.
 ${FOCUS_RULE[learner.plan.focus]}
 ${METHOD_RULE[learner.plan.method]}
 Name the construction in the topic's title or summary when a topic is there for it, in plain words a learner understands.`;

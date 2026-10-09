@@ -4,6 +4,14 @@ import { isIdentified } from "./identity.ts";
 import { constructionsFor } from "../learner/constructions.ts";
 import { classifyMessage, classifyPrompt, readClassification } from "../learner/classify.ts";
 import {
+  applyEvent,
+  applyLearnerLine,
+  applyTutorLine,
+  parseComprehension,
+  type ComprehensionEvent,
+  type ComprehensionRecord,
+} from "../learner/comprehension.ts";
+import {
   applyTurn,
   parseProfile,
   withPlan,
@@ -24,6 +32,69 @@ const MODEL = () => process.env.OPENAI_LEARNER_MODEL?.trim() || "gpt-4.1-mini";
 
 function key(userId: string, language: string): string {
   return `learnerProfile:v1:${userId}:${language}`;
+}
+
+function comprehensionKey(userId: string, language: string): string {
+  return `learnerComprehension:v1:${userId}:${language}`;
+}
+
+export async function readComprehension(userId: string, language: string): Promise<ComprehensionRecord> {
+  return parseComprehension(await kvGetJson(comprehensionKey(userId, language)), language);
+}
+
+async function updateComprehension(
+  userId: string,
+  language: string,
+  change: (record: ComprehensionRecord) => ComprehensionRecord,
+): Promise<ComprehensionRecord> {
+  const before = await readComprehension(userId, language);
+  const after = change(before);
+  if (after !== before) await kvSetJson(comprehensionKey(userId, language), after, TTL_SECONDS);
+  return after;
+}
+
+/** Things the learner did with a tutor's line: looked up, analysed, asked, saved. */
+export async function recordComprehensionEvents(
+  userId: string,
+  language: string,
+  events: ComprehensionEvent[],
+): Promise<ComprehensionRecord | null> {
+  if (!isIdentified(userId) || events.length === 0) return null;
+  try {
+    return await updateComprehension(userId, language, (record) =>
+      events.reduce((r, event) => applyEvent(r, event), record),
+    );
+  } catch (error) {
+    console.error("[learner-comprehension] record failed", error);
+    return null;
+  }
+}
+
+/**
+ * A chat turn's two lines against what the learner has looked up: the tutor's
+ * reply counts as a quiet appearance of anything in it, and the learner's own
+ * sentence — when the correction kept the phrase — as use. Neither line is
+ * stored.
+ */
+export async function observeChatLines(input: {
+  userId: string;
+  language: string;
+  tutorLine: string;
+  learnerLine?: { sentence: string; corrected: string };
+}): Promise<void> {
+  if (!isIdentified(input.userId)) return;
+  try {
+    await updateComprehension(input.userId, input.language, (record) => {
+      if (Object.keys(record.items).length === 0) return record;
+      let next = record;
+      if (input.learnerLine) {
+        next = applyLearnerLine(next, input.learnerLine.sentence, input.learnerLine.corrected);
+      }
+      return input.tutorLine ? applyTutorLine(next, input.tutorLine) : next;
+    });
+  } catch (error) {
+    console.error("[learner-comprehension] observe failed", error);
+  }
 }
 
 export async function readLearnerProfile(userId: string, language: string): Promise<LearnerProfile> {

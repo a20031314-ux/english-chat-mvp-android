@@ -11,6 +11,15 @@ import {
   findConstruction,
 } from "@/lib/learner/constructions";
 import {
+  askTopics,
+  countByState,
+  emptyComprehension,
+  itemsIn,
+  parseComprehension,
+  type AskAbout,
+  type ComprehensionRecord,
+} from "@/lib/learner/comprehension";
+import {
   MIN_TURNS_FOR_LEVEL,
   PLAN_FOCUSES,
   PLAN_METHODS,
@@ -47,26 +56,34 @@ export function LearnerPanel({
   onRedraw?: () => void;
 }) {
   const [profile, setProfile] = useState<LearnerProfile | null>(null);
+  const [comprehension, setComprehension] = useState<ComprehensionRecord | null>(null);
   const [open, setOpen] = useState(false);
   const supported = constructionsFor(targetLanguage).length > 0;
 
   useEffect(() => {
-    if (!supported) return;
     let cancelled = false;
     void fetch(apiUrl(`/api/learner/profile?lang=${encodeURIComponent(targetLanguage)}`), {
       headers: entitlementHeaders(isPremium),
     })
       .then((response) => (response.ok ? response.json() : null))
-      .then((data: { profile?: unknown } | null) => {
-        if (!cancelled && data?.profile) setProfile(parseProfile(data.profile, targetLanguage));
+      .then((data: { profile?: unknown; comprehension?: unknown } | null) => {
+        if (cancelled || !data) return;
+        if (data.profile) setProfile(parseProfile(data.profile, targetLanguage));
+        setComprehension(
+          data.comprehension
+            ? parseComprehension(data.comprehension, targetLanguage)
+            : emptyComprehension(targetLanguage, 0),
+        );
       })
       .catch(() => undefined);
     return () => {
       cancelled = true;
     };
-  }, [supported, targetLanguage, isPremium]);
+  }, [targetLanguage, isPremium]);
 
-  if (!supported || !profile) return null;
+  const hasComprehension = Boolean(comprehension && Object.keys(comprehension.items).length);
+  if (!profile || (!supported && !hasComprehension)) return null;
+  const counts = comprehension ? countByState(comprehension) : null;
 
   const level = currentLevel(profile);
   const next = nextBand(profile);
@@ -94,8 +111,9 @@ export function LearnerPanel({
     }
   };
 
-  const headline =
-    level
+  const headline = !supported
+    ? ui.compTitle
+    : level
       ? ui.learnerLevelNow.replace("{level}", level)
       : profile.turns < MIN_TURNS_FOR_LEVEL
         ? ui.learnerMeasuring
@@ -128,7 +146,7 @@ export function LearnerPanel({
             {ui.learnerTitle}
           </span>
           <span className="mt-0.5 block text-[15px] font-semibold text-white">{headline}</span>
-          {nextRow ? (
+          {supported && nextRow ? (
             <span className="mt-0.5 block text-[12px] text-slate-400">
               {ui.learnerNextBand
                 .replace("{band}", nextRow.band)
@@ -137,12 +155,22 @@ export function LearnerPanel({
               {byStatus.weak.length ? ` · ${ui.learnerWeak} ${byStatus.weak.length}` : ""}
             </span>
           ) : null}
+          {hasComprehension && counts ? (
+            <span className="mt-0.5 block text-[12px] text-slate-400">
+              {ui.compSummary
+                .replace("{understood}", String(counts.understood + counts.used))
+                .replace("{studied}", String(counts.studied))
+                .replace("{stuck}", String(counts.stuck))}
+            </span>
+          ) : null}
         </span>
         <span className="shrink-0 text-[12px] text-slate-400">{open ? ui.learnerLess : ui.learnerMore}</span>
       </button>
 
       {open ? (
         <div className="mt-3 space-y-4">
+          {supported ? (
+          <>
           <ul className="space-y-1.5" aria-label={ui.learnerTitle}>
             {bands.map((row) => (
               <li key={row.band} className="flex items-center gap-2">
@@ -214,6 +242,12 @@ export function LearnerPanel({
           ) : null}
 
           {profile.turns === 0 ? <p className="text-[12px] text-slate-400">{ui.learnerEmpty}</p> : null}
+          </>
+          ) : null}
+
+          {hasComprehension && comprehension && counts ? (
+            <ComprehensionSection ui={ui} record={comprehension} counts={counts} />
+          ) : null}
 
           <div>
             <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.learnerPlanTitle}</p>
@@ -254,6 +288,72 @@ export function LearnerPanel({
         </div>
       ) : null}
     </section>
+  );
+}
+
+function ComprehensionSection({
+  ui,
+  record,
+  counts,
+}: {
+  ui: UICopy;
+  record: ComprehensionRecord;
+  counts: ReturnType<typeof countByState>;
+}) {
+  const aboutLabel: Record<AskAbout, string> = {
+    meaning: ui.aboutMeaning,
+    grammar: ui.aboutGrammar,
+    usage: ui.aboutUsage,
+    nuance: ui.aboutNuance,
+    pronunciation: ui.aboutPronunciation,
+    other: ui.aboutOther,
+  };
+  const groups: Array<{ title: string; items: string[]; tone: string }> = [
+    { title: ui.compUnderstoodList, items: itemsIn(record, "understood").map((i) => i.text), tone: "border-sky-300/40 text-sky-100" },
+    { title: ui.compStudiedList, items: itemsIn(record, "studied").map((i) => i.text), tone: "border-white/20 text-slate-200" },
+    { title: ui.compStuckList, items: itemsIn(record, "stuck", 12).map((i) => i.text), tone: "border-rose-300/40 text-rose-200" },
+    { title: ui.compUsedList, items: itemsIn(record, "used", 12).map((i) => i.text), tone: "border-emerald-400/40 text-emerald-200" },
+  ];
+  const topics = askTopics(record);
+  return (
+    <div className="space-y-3 border-t border-white/10 pt-3">
+      <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.compTitle}</p>
+      <div className="grid grid-cols-4 gap-1.5 text-center">
+        {(
+          [
+            ["stuck", ui.compStuck],
+            ["studied", ui.compStudied],
+            ["understood", ui.compUnderstood],
+            ["used", ui.compUsed],
+          ] as const
+        ).map(([state, label]) => (
+          <div key={state} className="rounded-lg bg-black/30 px-1 py-1.5">
+            <span className="block text-[15px] font-semibold text-slate-100">{counts[state]}</span>
+            <span className="block text-[10px] text-slate-500">{label}</span>
+          </div>
+        ))}
+      </div>
+      {groups.map((group) =>
+        group.items.length ? (
+          <div key={group.title}>
+            <p className="text-[11px] text-slate-500">{group.title}</p>
+            <div className="mt-1 flex flex-wrap gap-1.5">
+              {group.items.map((text) => (
+                <span key={text} className={`rounded-full border px-2 py-0.5 text-[12px] ${group.tone}`}>
+                  {text}
+                </span>
+              ))}
+            </div>
+          </div>
+        ) : null,
+      )}
+      {topics.length ? (
+        <p className="text-[12px] text-slate-400">
+          {ui.compAsks}: {topics.map(([about, n]) => `${aboutLabel[about]} ${n}`).join(" · ")}
+        </p>
+      ) : null}
+      <p className="text-[11px] leading-relaxed text-slate-500">{ui.compNote}</p>
+    </div>
   );
 }
 

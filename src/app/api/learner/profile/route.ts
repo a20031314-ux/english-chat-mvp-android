@@ -2,7 +2,11 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
-import { readLearnerProfile, saveLearnerPlan } from "@/lib/server/learnerProfileStore";
+import {
+  readComprehension,
+  readLearnerProfile,
+  saveLearnerPlan,
+} from "@/lib/server/learnerProfileStore";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import type { LearnerPlan } from "@/lib/learner/profile";
 
@@ -24,7 +28,11 @@ export async function GET(request: NextRequest) {
     return jsonWithCors(request, { error: "IDENTITY_REQUIRED" }, { status: 401 });
   }
   const language = coerceLanguageCode(request.nextUrl.searchParams.get("lang"));
-  return jsonWithCors(request, { profile: await readLearnerProfile(userId, language) });
+  const [profile, comprehension] = await Promise.all([
+    readLearnerProfile(userId, language),
+    readComprehension(userId, language),
+  ]);
+  return jsonWithCors(request, { profile, comprehension });
 }
 
 export async function POST(request: NextRequest) {

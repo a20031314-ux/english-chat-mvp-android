@@ -3,6 +3,7 @@
 import { useCallback, useMemo, useRef, useState, type ReactNode } from "react";
 import { VocabWordPanel } from "@/components/VocabWordPreview";
 import { VocabPreviewContext } from "@/contexts/VocabPreviewContext";
+import { noteComprehension } from "@/lib/learner/comprehensionClient";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { apiUrl } from "@/lib/apiBase";
 import type { Locale, UICopy } from "@/lib/copy";
@@ -159,6 +160,7 @@ export function VocabPreviewProvider({
       );
       persistVocabulary(updated);
       setEntries(updated);
+      noteComprehension(targetLanguage, { kind: "save", text: previewWord });
       showToast(ui.vocabPickSavedToast);
     } catch {
       showToast(ui.vocabPickFailed);

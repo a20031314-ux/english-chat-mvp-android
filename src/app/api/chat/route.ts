@@ -1,6 +1,6 @@
 import { meterRequest } from "@/lib/server/meterRequest";
 import { NextRequest, after } from "next/server";
-import { observeChatTurn } from "@/lib/server/learnerProfileStore";
+import { observeChatLines, observeChatTurn } from "@/lib/server/learnerProfileStore";
 import { writtenInLearningLanguage } from "@/lib/inputLanguage";
 import type OpenAI from "openai";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
@@ -830,10 +830,22 @@ export async function POST(request: NextRequest) {
     // its way (learner/profile.ts). Only a sentence written in the language
     // being learned is practice; a question asked in the learner's own
     // language is not read.
-    if (
-      message &&
-      writtenInLearningLanguage(message, langs.targetLanguage, langs.interfaceLanguage)
-    ) {
+    const practised =
+      Boolean(message) &&
+      writtenInLearningLanguage(message, langs.targetLanguage, langs.interfaceLanguage);
+    // And both lines are held against what they have looked up before: the
+    // reply as an appearance, their sentence as use (learner/comprehension.ts).
+    after(() =>
+      observeChatLines({
+        userId,
+        language: langs.targetLanguage,
+        tutorLine: data.assistantMessage ?? "",
+        ...(practised
+          ? { learnerLine: { sentence: message, corrected: data.correction?.corrected ?? "" } }
+          : {}),
+      }),
+    );
+    if (practised) {
       after(async () => {
         void meterRequest(request, "learnerObserve");
         await observeChatTurn({

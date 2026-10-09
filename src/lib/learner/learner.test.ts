@@ -158,3 +158,56 @@ test("the classifier's answer is read into outcomes, missed winning over used", 
   assert.deepEqual(readClassification("not json", ENGLISH_CONSTRUCTIONS), []);
   assert.match(classifyPrompt(ENGLISH_CONSTRUCTIONS), /so-such-that/);
 });
+
+test("a tutor phrase goes from stuck to understood to used", async () => {
+  const c = await import("./comprehension.ts");
+  let r = c.emptyComprehension("en", T0);
+  r = c.applyEvent(r, { kind: "lookup", text: "end up," }, T0);
+  assert.equal(r.items["end up"]?.state, "stuck");
+  r = c.applyEvent(r, { kind: "ask", text: "End up", about: "grammar" }, T0 + 1);
+  assert.equal(r.items["end up"]?.state, "studied");
+  assert.equal(r.items["end up"]?.about.grammar, 1);
+  r = c.applyTutorLine(r, "We ended up staying late.", T0 + 2);
+  assert.equal(r.items["end up"]?.state, "studied");
+  r = c.applyTutorLine(r, "Where did you end up going?", T0 + 3);
+  assert.equal(r.items["end up"]?.state, "understood");
+  // Writing it, and the correction keeping it, is use.
+  r = c.applyLearnerLine(r, "I end up go home", "I ended up going home.", T0 + 4);
+  assert.equal(r.items["end up"]?.state, "used");
+});
+
+test("looking an understood phrase up again sends it back, and resets the quiet count", async () => {
+  const c = await import("./comprehension.ts");
+  let r = c.applyEvent(c.emptyComprehension("en", T0), { kind: "lookup", text: "wait it out" }, T0);
+  r = c.applyTutorLine(r, "Just wait it out.", T0 + 1);
+  r = c.applyTutorLine(r, "I'd wait it out.", T0 + 2);
+  assert.equal(r.items["wait it out"]?.state, "understood");
+  r = c.applyEvent(r, { kind: "lookup", text: "wait it out" }, T0 + 3);
+  assert.equal(r.items["wait it out"]?.state, "stuck");
+  assert.equal(r.items["wait it out"]?.quiet, 0);
+});
+
+test("a phrase the correction removed is not counted as used; long spans are not items", async () => {
+  const c = await import("./comprehension.ts");
+  let r = c.applyEvent(c.emptyComprehension("en", T0), { kind: "save", text: "figure out" }, T0);
+  r = c.applyLearnerLine(r, "I figure out it", "I worked it out.", T0 + 1);
+  assert.equal(r.items["figure out"]?.state, "studied");
+  r = c.applyEvent(r, { kind: "analyze", text: "Did you end up going somewhere else or just waiting" }, T0 + 2);
+  assert.equal(Object.keys(r.items).length, 1);
+  r = c.applyEvent(r, { kind: "translate" }, T0 + 3);
+  assert.equal(r.translations, 1);
+});
+
+test("counts, topics and a stored record read back", async () => {
+  const c = await import("./comprehension.ts");
+  let r = c.emptyComprehension("en", T0);
+  r = c.applyEvent(r, { kind: "ask", text: "end up", about: "grammar" }, T0);
+  r = c.applyEvent(r, { kind: "ask", text: "wait it out", about: "nuance" }, T0 + 1);
+  r = c.applyEvent(r, { kind: "ask", text: "wait it out", about: "nuance" }, T0 + 2);
+  r = c.applyEvent(r, { kind: "lookup", text: "packed" }, T0 + 3);
+  assert.deepEqual(c.countByState(r), { stuck: 1, studied: 2, understood: 0, used: 0 });
+  assert.deepEqual(c.askTopics(r)[0], ["nuance", 2]);
+  assert.deepEqual(c.itemsIn(r, "studied").map((i) => i.text), ["wait it out", "end up"]);
+  assert.deepEqual(c.parseComprehension(JSON.parse(JSON.stringify(r)), "en"), r);
+  assert.equal(Object.keys(c.parseComprehension(r, "es").items).length, 0);
+});

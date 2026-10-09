@@ -21,6 +21,7 @@ import {
   saveSentenceTranslation,
 } from "@/lib/sentenceNotes";
 import { translateUtterance } from "@/lib/translateUtterance";
+import { noteComprehension } from "@/lib/learner/comprehensionClient";
 
 export type InspectTab = "sentence" | "word";
 
@@ -224,6 +225,10 @@ export function useEnglishAnalysis(locale: Locale) {
 
       const target = { ...next, selectedText, contextSentence };
       const tab = resolveTab(target);
+      // A word or phrase opened for its meaning is one they did not know.
+      if (tab === "word" && !isSameAnalysisSpan(selectedText, contextSentence)) {
+        noteComprehension(targetLanguage, { kind: "lookup", text: selectedText });
+      }
       const prev = sessionRef.current;
       const sameSentence =
         prev != null &&
@@ -368,6 +373,7 @@ export function useEnglishAnalysis(locale: Locale) {
     );
     if (!selected) return;
     if (isSameAnalysisSpan(selected, prev.target.contextSentence)) return;
+    noteComprehension(targetLanguage, { kind: "analyze", text: selected });
     void loadElement(prev.target, selected);
   }, [loadElement, targetLanguage]);
 
