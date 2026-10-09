@@ -31,6 +31,9 @@ export const MODEL_CALLS_PER_REQUEST = {
   chatReread: 1,
   // A "how do I say this" turn. One call, and the same model.
   howToSay: 1,
+  // The same expression opened as a card under a line written in the
+  // learner's own language — one call, no chat turn, not a counted chat.
+  howToSayCard: 1,
   // The opening line of a conversation nobody has spoken in yet.
   chatStart: 1,
   analysisInput: 5,

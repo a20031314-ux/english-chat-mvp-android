@@ -27,7 +27,6 @@ import { Capacitor } from "@capacitor/core";
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import {
-  resolveChatInputMode,
   writtenInLearningLanguage,
 } from "@/lib/inputLanguage";
 import {
@@ -46,6 +45,7 @@ import {
   type ConversationMode,
 } from "@/lib/conversationMode";
 import { onAppIntent } from "@/lib/appIntents";
+import { ExpressionPeek } from "@/components/ExpressionPeek";
 import { compressChatImage } from "@/lib/chatImage";
 import { formatCallDuration, type ChatCallEvent } from "@/lib/callSession";
 import {
@@ -76,6 +76,8 @@ type ChatTurn = {
   spokenReply?: string;
   /** From “use this expression” — continue chat without a grammar card */
   suppressCorrectionCard?: boolean;
+  /** Written in the learner's own language; how to say it is a card they open. */
+  ownLanguage?: boolean;
   attachmentUrl?: string;
   conversationMode?: ConversationMode;
   /**
@@ -453,6 +455,11 @@ function toSessionMessages(turns: ChatTurn[]): ChatMessage[] {
           spokenReply: turn.spokenReply || "",
           correctionResult: turn.correctionResult || null,
           ...(turn.callEvent ? { callEvent: turn.callEvent } : {}),
+          // A line in their own language keeps its expression card, opened or not.
+          ...(turn.ownLanguage ? { ownLanguage: true } : {}),
+          ...(turn.ownLanguage && turn.expressionResult
+            ? { expressionResult: turn.expressionResult }
+            : {}),
         }),
         createdAt: Date.now(),
       });
@@ -545,13 +552,19 @@ function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
       let spokenReply = "";
       let correctionResult: CorrectionResult | undefined;
       let callEvent: ChatCallEvent | undefined;
+      let ownLanguage = false;
+      let ownExpression: ExpressionResult | undefined;
       try {
         const parsed = JSON.parse(message.content) as {
           assistantMessage?: string;
           spokenReply?: string;
           correctionResult?: CorrectionResult;
           callEvent?: ChatCallEvent;
+          ownLanguage?: boolean;
+          expressionResult?: ExpressionResult;
         };
+        ownLanguage = parsed.ownLanguage === true;
+        ownExpression = parsed.expressionResult?.expression ? parsed.expressionResult : undefined;
         assistantMessage = parsed.assistantMessage || "";
         spokenReply = parsed.spokenReply || "";
         correctionResult = parsed.correctionResult;
@@ -592,6 +605,8 @@ function fromSessionMessages(messages: ChatMessage[]): ChatTurn[] {
         correctionResult,
         attachmentUrl: pendingUser.attachmentUrl,
         callEvent,
+        ...(ownLanguage ? { ownLanguage: true } : {}),
+        ...(ownExpression ? { expressionResult: ownExpression } : {}),
       });
       pendingUser = null;
     }
@@ -685,8 +700,6 @@ export function ChatWindow({
   // reader learning Spanish who typed English had it sent to the tutor as
   // practice and got Spanish back — the mode they needed was one they had to
   // find a toggle for. Every place that starts a conversation resets to this.
-  const [chatModeOn, setChatModeOn] = useState(true);
-  const [askExpressionOn, setAskExpressionOn] = useState(true);
   const [turns, setTurns] = useState<ChatTurn[]>([]);
   const [input, setInput] = useState("");
   // A study-map topic can hand over the first line to send.
@@ -868,8 +881,6 @@ export function ChatWindow({
     const resumable = findResumableSession(sessions, targetLanguage);
     setSessionLanguageCode(targetLanguage);
     setInput("");
-    setChatModeOn(true);
-    setAskExpressionOn(true);
     setIsChatHistoryOpen(false);
 
     if (resumable) {
@@ -923,7 +934,11 @@ export function ChatWindow({
     });
   }, [turns, currentSessionId]);
 
-  const sendChatMessage = async (message: string, imageDataUrl?: string) => {
+  const sendChatMessage = async (
+    message: string,
+    imageDataUrl?: string,
+    ownLanguage = false,
+  ) => {
     const url = apiUrl("/api/chat");
     const response = await fetch(url, {
       method: "POST",
@@ -939,6 +954,7 @@ export function ChatWindow({
         targetLanguage: sessionLanguageCode,
         conversationMode,
         ...(imageDataUrl ? { imageDataUrl } : {}),
+        ...(ownLanguage ? { ownLanguage: true } : {}),
         recent: turns
           .flatMap((turn) => {
             const lines: string[] = [];
@@ -991,13 +1007,18 @@ export function ChatWindow({
         correctionResult,
         attachmentUrl: imageDataUrl,
         conversationMode,
+        ...(ownLanguage ? { ownLanguage: true } : {}),
       },
     ]);
   };
 
-  const fetchExpressionResult = async (message: string) => {
-    const url = apiUrl("/api/chat");
-    const response = await fetch(url, {
+  /**
+   * How to say a line they wrote in their own language, fetched only when
+   * they open it — so the conversation never waits on it — and kept on the
+   * turn once fetched.
+   */
+  const openExpressionCard = async (turnId: string, message: string) => {
+    const response = await fetch(apiUrl("/api/chat"), {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -1006,64 +1027,31 @@ export function ChatWindow({
       body: JSON.stringify({
         message,
         mode: "how_to_say",
+        expressionOnly: true,
         locale,
         interfaceLanguage: locale,
         targetLanguage: sessionLanguageCode,
+        // Only what came before this line: the tutor's reply to it would turn
+        // "how do I say this" into "how do I answer that".
         recent: turns
-          .flatMap((turn) => {
-            const lines: string[] = [];
-            if (turn.mode === "how_to_say" && turn.expressionResult?.expression) {
-              lines.push(`me: ${turn.expressionResult.expression}`);
-            } else if (turn.userMessage.trim() && turn.mode === "chat") {
-              lines.push(`me: ${turn.userMessage.trim()}`);
-            }
-            if (turn.assistantMessage?.trim()) {
-              lines.push(`other: ${turn.assistantMessage.trim()}`);
-            }
-            return lines;
-          })
-          .slice(-8),
+          .slice(0, Math.max(0, turns.findIndex((turn) => turn.id === turnId)))
+          .flatMap((turn) => [
+            ...(turn.userMessage.trim() ? [`me: ${turn.userMessage.trim()}`] : []),
+            ...(turn.assistantMessage?.trim() ? [`other: ${turn.assistantMessage.trim()}`] : []),
+          ])
+          .slice(-6),
       }),
     });
-
-    if (!response.ok) {
-      if (response.status === 403) {
-        const errorBody = (await response.json().catch(() => ({}))) as {
-          error?: string;
-        };
-        if (errorBody.error === "DAILY_LIMIT_REACHED") {
-          throw new Error("DAILY_LIMIT_REACHED");
-        }
-      }
-      throw new Error("Failed to get expression response.");
-    }
-
+    if (!response.ok) throw new Error("card failed");
     const data = (await response.json()) as ExpressionApiResponse;
-    const expressionResult = normalizeHowToSayExpression(message, data);
-    const spokenEnglish = expressionResult.expression;
-    const correctionResult = data.correction
-      ? normalizeCorrectionResult(spokenEnglish, data.correction, locale)
-      : undefined;
-
-    setTurns((previous) => [
-      ...previous,
-      {
-        id: `${Date.now()}`,
-        mode: "how_to_say",
-        userMessage: message,
-        expressionResult,
-        assistantMessage:
-          data.assistantMessage?.trim() || "Yeah, go on.",
-        spokenReply: data.spokenReply?.trim() || undefined,
-        translatedMessage:
-          locale === sessionLanguageCode
-            ? undefined
-            : data.spokenReply?.trim() || undefined,
-        correctionResult,
-        suppressCorrectionCard: true,
-      },
-    ]);
+    if (!data.expression?.trim()) throw new Error("empty card");
+    setTurns((previous) =>
+      previous.map((turn) =>
+        turn.id === turnId ? { ...turn, expressionResult: data } : turn,
+      ),
+    );
   };
+
 
   const saveItemFromTurn = (item: SavedItem | null) => {
     if (!item) {
@@ -1077,14 +1065,6 @@ export function ChatWindow({
       persistSavedItems(updated);
       return updated;
     });
-  };
-
-  const allModesOn = chatModeOn && askExpressionOn;
-
-  const toggleAllModes = () => {
-    const next = !allModesOn;
-    setChatModeOn(next);
-    setAskExpressionOn(next);
   };
 
   const saveLearningCardFromTurn = (turn: ChatTurn) => {
@@ -1132,25 +1112,9 @@ export function ChatWindow({
     }
   };
 
-  const toggleChatMode = () => {
-    setChatModeOn((prev) => {
-      if (prev && !askExpressionOn) return true;
-      return !prev;
-    });
-  };
-
-  const toggleAskExpression = () => {
-    setAskExpressionOn((prev) => {
-      if (prev && !chatModeOn) return true;
-      return !prev;
-    });
-  };
-
   const startNewChat = () => {
     setTurns([]);
     setInput("");
-    setChatModeOn(true);
-    setAskExpressionOn(true);
     setSessionEnded(false);
     setCurrentSessionId(makeSessionId());
     setCurrentSessionCreatedAt(Date.now());
@@ -1197,8 +1161,6 @@ export function ChatWindow({
     }
     setSessionEnded(false);
     setTurns(fromSessionMessages(session.messages));
-    setChatModeOn(true);
-    setAskExpressionOn(true);
     setInput("");
     setIsChatHistoryOpen(false);
     requestAnimationFrame(() => inputRef.current?.focus());
@@ -1230,7 +1192,6 @@ export function ChatWindow({
 
   const handleAiStart = async () => {
     if (isSending || turns.length > 0) return;
-    setChatModeOn(true);
     setIsSending(true);
     try {
       const response = await fetch(apiUrl("/api/chat"), {
@@ -1285,15 +1246,14 @@ export function ChatWindow({
       return;
     }
 
-    const modeToUse =
-      photo && !trimmed
-        ? "chat"
-        : resolveChatInputMode(trimmed, {
-            chatEnabled: chatModeOn,
-            askExpressionEnabled: askExpressionOn,
-            learningLanguage: sessionLanguageCode,
-            interfaceLanguage: locale,
-          });
+    // One box for everything. A line in the language being learned is
+    // practice; a line in their own language is something they could not say
+    // yet — it goes to the conversation all the same, in one call, and how to
+    // say it waits under the line as a card they open when they want it.
+    const modeToUse: InputMode = "chat";
+    const ownLanguage =
+      Boolean(trimmed) &&
+      !writtenInLearningLanguage(trimmed, sessionLanguageCode, locale);
 
     if (isChatDailyLimitReached) {
       openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
@@ -1304,11 +1264,7 @@ export function ChatWindow({
     setConversationMode(nextMode);
     setIsSending(true);
     try {
-      if (modeToUse === "how_to_say") {
-        await fetchExpressionResult(trimmed);
-      } else {
-        await sendChatMessage(trimmed, photo || undefined);
-      }
+      await sendChatMessage(trimmed, photo || undefined, ownLanguage);
       await refreshEntitlement();
       setInput("");
       setPendingPhoto(null);
@@ -1325,22 +1281,13 @@ export function ChatWindow({
           mode: modeToUse,
           userMessage: trimmed,
           attachmentUrl: photo || undefined,
-          ...(modeToUse === "how_to_say"
-            ? {
-                expressionResult: {
-                  expression: trimmed,
-                  example: ui.chatTempErrorExplanation,
-                },
-              }
-            : {
-                assistantMessage: ui.chatTempErrorReply,
-                correctionResult: {
-                  corrected: trimmed,
-                  natural: trimmed,
-                  explanation: ui.chatTempErrorExplanation,
-                  hasError: true,
-                },
-              }),
+          assistantMessage: ui.chatTempErrorReply,
+          correctionResult: {
+            corrected: trimmed,
+            natural: trimmed,
+            explanation: ui.chatTempErrorExplanation,
+            hasError: true,
+          },
         },
       ]);
     } finally {
@@ -1531,6 +1478,18 @@ export function ChatWindow({
                   />
                 ) : null}
 
+                {turn.ownLanguage && turn.userMessage.trim() ? (
+                  <ExpressionPeek
+                    ui={ui}
+                    expression={turn.expressionResult}
+                    onOpen={() => openExpressionCard(turn.id, turn.userMessage)}
+                    onUse={(text) => {
+                      setInput(text);
+                      requestAnimationFrame(() => inputRef.current?.focus());
+                    }}
+                  />
+                ) : null}
+
                 {turn.mode === "chat" &&
                   turn.assistantMessage &&
                   !turn.correctionResult && (
@@ -1590,75 +1549,6 @@ export function ChatWindow({
           className="sticky bottom-0 z-20 border-t border-white/10 bg-[#0a0a0a]/92 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] backdrop-blur-md sm:p-4 sm:pb-4"
         >
           <>
-            <div className="mb-2 flex flex-wrap items-center gap-2">
-              <button
-                type="button"
-                onClick={toggleAllModes}
-                aria-label={`${ui.chatMode}, ${ui.askExpression}`}
-                aria-pressed={allModesOn}
-                title={`${ui.chatMode} · ${ui.askExpression}`}
-                className={`inline-flex h-8 w-8 items-center justify-center rounded-lg transition ${
-                  allModesOn
-                    ? "bg-[#e8e8e4] text-neutral-900"
-                    : "border border-white/15 bg-white/5 text-slate-300 hover:bg-white/10"
-                }`}
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  className="h-4 w-4"
-                  aria-hidden
-                >
-                  <path
-                    d="M4 7h16M4 12h16M4 17h16"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                  />
-                  <circle cx="9" cy="7" r="2" fill="currentColor" />
-                  <circle cx="15" cy="12" r="2" fill="currentColor" />
-                  <circle cx="11" cy="17" r="2" fill="currentColor" />
-                </svg>
-              </button>
-              <button
-                type="button"
-                onClick={toggleChatMode}
-                className={`rounded-lg px-3 py-1.5 text-sm transition ${
-                  chatModeOn
-                    ? "bg-[#e8e8e4] text-neutral-900"
-                    : "border border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
-                }`}
-                aria-pressed={chatModeOn}
-              >
-                {ui.chatMode}
-              </button>
-              <button
-                type="button"
-                onClick={toggleAskExpression}
-                className={`rounded-lg px-3 py-1.5 text-sm transition ${
-                  askExpressionOn
-                    ? "bg-[#e8e8e4] text-neutral-900"
-                    : "border border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
-                }`}
-                aria-pressed={askExpressionOn}
-              >
-                {ui.askExpression}
-              </button>
-              <span
-                className="ml-1 inline-flex items-center gap-2 text-[10px] text-slate-500"
-                aria-hidden
-              >
-                <span className="inline-flex items-center gap-1">
-                  <span className="inline-block h-2.5 w-2.5 rounded-[2px] bg-[#e8e8e4]" />
-                  {ui.toggleLegendOn}
-                </span>
-                <span className="inline-flex items-center gap-1">
-                  <span className="inline-block h-2.5 w-2.5 rounded-[2px] border border-white/15 bg-[#121212]" />
-                  {ui.toggleLegendOff}
-                </span>
-              </span>
-            </div>
-
             {pendingPhoto ? (
               <div className="mb-2 flex items-start gap-2">
                 <img
@@ -1698,6 +1588,8 @@ export function ChatWindow({
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
                 rows={2}
+                placeholder={ui.chatInputHint}
+                aria-label={ui.chatInputHint}
                 readOnly={isChatInputBlocked}
                 onFocus={() => {
                   if (isChatInputBlocked) {

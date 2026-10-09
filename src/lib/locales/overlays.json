@@ -159,7 +159,14 @@
     "needsPractiseChat": "チャットで使ってみる",
     "quickAskMeaning": "ここではどういう意味？",
     "quickAskForm": "なぜこの形なの？",
-    "quickAskAlternatives": "似た別の言い方は？"
+    "quickAskAlternatives": "似た別の言い方は？",
+    "chatShowExpression": "言い方を見る",
+    "chatExpressionTitle": "こう言います",
+    "chatExpressionLoading": "表現を探しています…",
+    "chatExpressionFailed": "表現を読み込めませんでした。もう一度押してください。",
+    "chatUseExpression": "この表現で言ってみる",
+    "chatOwnLanguageTip": "自分の言葉で書いても会話は続きます。言い方は「言い方を見る」で確認できます。",
+    "chatInputHint": "{targetLanguage}で書いてみましょう。詰まったら自分の言葉でも大丈夫"
   },
   "zh": {
     "billingClose": "关闭",
@@ -321,7 +328,14 @@
     "needsPractiseChat": "去聊天里试试",
     "quickAskMeaning": "这里是什么意思？",
     "quickAskForm": "为什么是这个形式？",
-    "quickAskAlternatives": "还有别的说法吗？"
+    "quickAskAlternatives": "还有别的说法吗？",
+    "chatShowExpression": "看看怎么说",
+    "chatExpressionTitle": "可以这样说",
+    "chatExpressionLoading": "正在查找表达…",
+    "chatExpressionFailed": "没能加载表达，请再点一次。",
+    "chatUseExpression": "用这个说法",
+    "chatOwnLanguageTip": "用自己的语言写，对话也会继续。点“看看怎么说”就能看到表达。",
+    "chatInputHint": "用{targetLanguage}写写看，卡住了用自己的语言也可以"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -485,7 +499,14 @@
     "needsPractiseChat": "Thử trong chat",
     "quickAskMeaning": "Ở đây nghĩa là gì?",
     "quickAskForm": "Sao lại dùng dạng này?",
-    "quickAskAlternatives": "Còn cách nói nào khác?"
+    "quickAskAlternatives": "Còn cách nói nào khác?",
+    "chatShowExpression": "Xem cách nói",
+    "chatExpressionTitle": "Nói thế này",
+    "chatExpressionLoading": "Đang tìm cách diễn đạt…",
+    "chatExpressionFailed": "Không tải được cách diễn đạt. Chạm lại nhé.",
+    "chatUseExpression": "Nói bằng câu này",
+    "chatOwnLanguageTip": "Viết bằng tiếng của bạn thì cuộc trò chuyện vẫn tiếp tục. Chạm “Xem cách nói” để xem cách diễn đạt.",
+    "chatInputHint": "Viết bằng {targetLanguage} — bí thì viết bằng tiếng của bạn cũng được"
   },
   "fr": {
     "billingClose": "Fermer",
@@ -654,7 +675,14 @@
     "needsPractiseChat": "L’essayer dans le chat",
     "quickAskMeaning": "Ça veut dire quoi ici ?",
     "quickAskForm": "Pourquoi cette forme ?",
-    "quickAskAlternatives": "D’autres façons de le dire ?"
+    "quickAskAlternatives": "D’autres façons de le dire ?",
+    "chatShowExpression": "Voir comment le dire",
+    "chatExpressionTitle": "Dis-le comme ça",
+    "chatExpressionLoading": "Recherche de l’expression…",
+    "chatExpressionFailed": "Impossible de charger l’expression. Touche à nouveau.",
+    "chatUseExpression": "Le dire comme ça",
+    "chatOwnLanguageTip": "Si tu écris dans ta langue, la conversation continue. Touche « Voir comment le dire » pour voir l’expression.",
+    "chatInputHint": "Écris en {targetLanguage}, ou dans ta langue si tu bloques"
   },
   "it": {
     "archive": "Report",
@@ -1014,7 +1042,14 @@
     "needsPractiseChat": "Provalo in chat",
     "quickAskMeaning": "Cosa significa qui?",
     "quickAskForm": "Perché questa forma?",
-    "quickAskAlternatives": "Altri modi per dirlo?"
+    "quickAskAlternatives": "Altri modi per dirlo?",
+    "chatShowExpression": "Vedi come si dice",
+    "chatExpressionTitle": "Dillo così",
+    "chatExpressionLoading": "Cerco l’espressione…",
+    "chatExpressionFailed": "Impossibile caricare l’espressione. Tocca di nuovo.",
+    "chatUseExpression": "Dillo così",
+    "chatOwnLanguageTip": "Se scrivi nella tua lingua la conversazione continua. Tocca «Vedi come si dice» per l’espressione.",
+    "chatInputHint": "Scrivi in {targetLanguage}, o nella tua lingua se ti blocchi"
   },
   "pt": {
     "billingClose": "Fechar",
@@ -1186,7 +1221,14 @@
     "needsPractiseChat": "Testar no bate-papo",
     "quickAskMeaning": "O que significa aqui?",
     "quickAskForm": "Por que essa forma?",
-    "quickAskAlternatives": "Outras formas de dizer?"
+    "quickAskAlternatives": "Outras formas de dizer?",
+    "chatShowExpression": "Ver como se diz",
+    "chatExpressionTitle": "Diga assim",
+    "chatExpressionLoading": "Procurando a expressão…",
+    "chatExpressionFailed": "Não foi possível carregar a expressão. Toque de novo.",
+    "chatUseExpression": "Dizer assim",
+    "chatOwnLanguageTip": "Se você escrever no seu idioma, a conversa continua. Toque em “Ver como se diz” para ver a expressão.",
+    "chatInputHint": "Escreva em {targetLanguage} — ou no seu idioma se travar"
   },
   "ru": {
     "archive": "Отчёты",
@@ -1544,7 +1586,14 @@
     "needsPractiseChat": "Попробовать в чате",
     "quickAskMeaning": "Что это значит здесь?",
     "quickAskForm": "Почему такая форма?",
-    "quickAskAlternatives": "Как ещё можно сказать?"
+    "quickAskAlternatives": "Как ещё можно сказать?",
+    "chatShowExpression": "Как это сказать",
+    "chatExpressionTitle": "Скажите так",
+    "chatExpressionLoading": "Ищем выражение…",
+    "chatExpressionFailed": "Не удалось загрузить выражение. Нажмите ещё раз.",
+    "chatUseExpression": "Сказать так",
+    "chatOwnLanguageTip": "Если пишете на своём языке, разговор продолжается. Нажмите «Как это сказать», чтобы увидеть выражение.",
+    "chatInputHint": "Пишите на языке {targetLanguage} — или на своём, если застряли"
   },
   "id": {
     "billingClose": "Tutup",
@@ -1712,7 +1761,14 @@
     "needsPractiseChat": "Coba di chat",
     "quickAskMeaning": "Artinya apa di sini?",
     "quickAskForm": "Kenapa bentuknya begini?",
-    "quickAskAlternatives": "Cara lain mengatakannya?"
+    "quickAskAlternatives": "Cara lain mengatakannya?",
+    "chatShowExpression": "Lihat cara mengatakannya",
+    "chatExpressionTitle": "Katakan begini",
+    "chatExpressionLoading": "Mencari ungkapan…",
+    "chatExpressionFailed": "Ungkapan gagal dimuat. Ketuk lagi.",
+    "chatUseExpression": "Ucapkan dengan ini",
+    "chatOwnLanguageTip": "Tulis dalam bahasamu pun percakapan tetap berlanjut. Ketuk “Lihat cara mengatakannya” untuk melihat ungkapannya.",
+    "chatInputHint": "Tulis dalam {targetLanguage} — atau bahasamu sendiri kalau buntu"
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -1874,7 +1930,14 @@
     "needsPractiseChat": "جرّبها في المحادثة",
     "quickAskMeaning": "ماذا تعني هنا؟",
     "quickAskForm": "لماذا هذه الصيغة؟",
-    "quickAskAlternatives": "طرق أخرى لقولها؟"
+    "quickAskAlternatives": "طرق أخرى لقولها؟",
+    "chatShowExpression": "اعرف كيف تقولها",
+    "chatExpressionTitle": "قلها هكذا",
+    "chatExpressionLoading": "جارٍ البحث عن التعبير…",
+    "chatExpressionFailed": "تعذّر تحميل التعبير. اضغط مرة أخرى.",
+    "chatUseExpression": "قلها بهذا التعبير",
+    "chatOwnLanguageTip": "إذا كتبت بلغتك تستمر المحادثة. اضغط «اعرف كيف تقولها» لرؤية التعبير.",
+    "chatInputHint": "اكتب بـ{targetLanguage}، أو بلغتك إذا تعثّرت"
   },
   "th": {
     "billingClose": "ปิด",
@@ -2036,7 +2099,14 @@
     "needsPractiseChat": "ลองใช้ในแชท",
     "quickAskMeaning": "ตรงนี้หมายความว่าอะไร",
     "quickAskForm": "ทำไมใช้รูปนี้",
-    "quickAskAlternatives": "มีวิธีพูดแบบอื่นไหม"
+    "quickAskAlternatives": "มีวิธีพูดแบบอื่นไหม",
+    "chatShowExpression": "ดูวิธีพูด",
+    "chatExpressionTitle": "พูดแบบนี้",
+    "chatExpressionLoading": "กำลังหาสำนวน…",
+    "chatExpressionFailed": "โหลดสำนวนไม่ได้ แตะอีกครั้ง",
+    "chatUseExpression": "พูดด้วยสำนวนนี้",
+    "chatOwnLanguageTip": "เขียนเป็นภาษาของคุณก็คุยต่อได้ แตะ “ดูวิธีพูด” เพื่อดูสำนวน",
+    "chatInputHint": "ลองเขียนเป็นภาษา{targetLanguage} ติดเมื่อไรเขียนเป็นภาษาของคุณก็ได้"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -2198,6 +2268,13 @@
     "needsPractiseChat": "चैट में आज़माएँ",
     "quickAskMeaning": "यहाँ इसका क्या मतलब है?",
     "quickAskForm": "यह रूप क्यों?",
-    "quickAskAlternatives": "इसे कहने के और तरीके?"
+    "quickAskAlternatives": "इसे कहने के और तरीके?",
+    "chatShowExpression": "कैसे कहें, देखें",
+    "chatExpressionTitle": "ऐसे कहें",
+    "chatExpressionLoading": "अभिव्यक्ति खोज रहे हैं…",
+    "chatExpressionFailed": "अभिव्यक्ति लोड नहीं हुई। फिर से टैप करें।",
+    "chatUseExpression": "इसी तरह कहें",
+    "chatOwnLanguageTip": "अपनी भाषा में लिखें, बातचीत चलती रहेगी। अभिव्यक्ति देखने के लिए “कैसे कहें, देखें” पर टैप करें।",
+    "chatInputHint": "{targetLanguage} में लिखें — अटकें तो अपनी भाषा में भी लिख सकते हैं"
   }
 }
