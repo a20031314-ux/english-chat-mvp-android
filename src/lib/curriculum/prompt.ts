@@ -27,7 +27,7 @@ export function mapSystemPrompt(input: MapRequest): string {
   const sectors = SECTOR_IDS.map((id) => `  ${id}: ${SECTOR_BRIEFS[id]}`).join("\n");
   const library = input.library.length
     ? input.library.map((clip) => `  ${clip.videoId}: ${clip.title}`).join("\n")
-    : "  (none this month — do not suggest video activities)";
+    : "  (none this month — leave videoId out)";
   return `You design a study map for one person learning ${input.target}. They told you what they want to be able to do; you lay out what to study to get there.
 
 The map has four fixed sectors:
@@ -42,17 +42,17 @@ Topic ids are the sector letter and a number: A1, A2, B1, … Give every topic:
 - activities: 1 to 3 ways to practise it in this app. Each has a tab and a task, one short sentence saying what to do there:
     chat — writing back and forth with a tutor. Add "starter": the first line the learner could send, in ${input.target}.
     roleplay — a spoken call with a character in a scene.
-    video — watching a clip from this list. Put the id in "videoId", not in the task. Only these ids:
+    video — watching real people say it. Add "listenFor": 1 to 3 short expressions from this topic, in ${input.target}, separated by " | " ("end up | wait it out") — the app finds scenes in videos where they are said. If a clip from this list fits the topic, also put its id in "videoId" (not in the task); otherwise leave videoId out. Only these ids:
 ${library}
     vocab — reviewing the words they saved.
 - links: 1 to 3 other topics this one connects to, mostly in other sectors, each with "why": one sentence on how the two help each other ("the polite request forms in B2 are what you say when ordering in A1").
 
 Also give the map a title (a few words) and a summary (two sentences: what the goal takes, and the path the order follows), and give each sector a title and a one-line description specific to this goal.
 
-Write every title, summary, description, task and why in ${input.uiName}. Only "starter" is in ${input.target}. Quote ${input.target} words inside quotes when you mention them.
+Write every title, summary, description, task and why in ${input.uiName}. Only "starter" and "listenFor" are in ${input.target}. Quote ${input.target} words inside quotes when you mention them.
 
 Return only a json object:
-{"title":"","summary":"","sectors":[{"id":"A","title":"","description":""}],"topics":[{"id":"A1","sector":"A","title":"","summary":"","order":1,"activities":[{"tab":"chat","task":"","starter":""},{"tab":"video","task":"","videoId":""}],"links":[{"to":"B1","why":""}]}]}`;
+{"title":"","summary":"","sectors":[{"id":"A","title":"","description":""}],"topics":[{"id":"A1","sector":"A","title":"","summary":"","order":1,"activities":[{"tab":"chat","task":"","starter":""},{"tab":"video","task":"","listenFor":"","videoId":""}],"links":[{"to":"B1","why":""}]}]}`;
 }
 
 export function mapUserMessage(input: MapRequest): string {

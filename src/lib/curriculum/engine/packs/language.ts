@@ -29,14 +29,17 @@ export const languagePack: Pack = {
       { kind: "roleplay", brief: "a spoken call with a character in a scene." },
       {
         kind: "video",
-        brief: "watching a clip from this month's library. Put the id in \"videoId\", not in the task.",
-        fields: [{ name: "videoId", type: "ref", refs: "library", brief: "the clip to watch." }],
+        brief: "watching real people say it: the app finds scenes in videos where the listenFor expressions are said, and a clip from this month's library when one fits. Put any id in \"videoId\", not in the task.",
+        fields: [
+          { name: "listenFor", type: "text", max: 120, brief: "1 to 3 short expressions from this topic, in the language being learned, separated by \" | \"." },
+          { name: "videoId", type: "ref", refs: "library", brief: "a clip from the library that fits, or leave it out." },
+        ],
       },
       { kind: "vocab", brief: "reviewing the words they saved." },
     ],
   },
   rules: (input) => [
     "Start with a situation they can use soon. Put pronunciation and listening topics next to the situations they serve, not at the end.",
-    `Only "starter" is written in ${input.subject ?? "the language being learned"}. Quote its words inside quotes when you mention them elsewhere.`,
+    `Only "starter" and "listenFor" are written in ${input.subject ?? "the language being learned"}. Quote its words inside quotes when you mention them elsewhere.`,
   ],
 };

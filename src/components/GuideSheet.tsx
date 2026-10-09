@@ -5,7 +5,7 @@ import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { apiUrl } from "@/lib/apiBase";
 import type { Locale, UICopy } from "@/lib/copy";
 
-type GuideTabId = "chat" | "roleplay" | "video" | "vocab";
+type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab";
 type GuideSection = { heading: string; body: string[] };
 type Guide = Partial<Record<GuideTabId, { title: string; sections: GuideSection[] }>>;
 

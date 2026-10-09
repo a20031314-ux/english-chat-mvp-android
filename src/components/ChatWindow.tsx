@@ -45,6 +45,7 @@ import {
   detectConversationMode,
   type ConversationMode,
 } from "@/lib/conversationMode";
+import { onAppIntent } from "@/lib/appIntents";
 import { compressChatImage } from "@/lib/chatImage";
 import { formatCallDuration, type ChatCallEvent } from "@/lib/callSession";
 import {
@@ -688,6 +689,8 @@ export function ChatWindow({
   const [askExpressionOn, setAskExpressionOn] = useState(true);
   const [turns, setTurns] = useState<ChatTurn[]>([]);
   const [input, setInput] = useState("");
+  // A study-map topic can hand over the first line to send.
+  useEffect(() => onAppIntent("chatDraft", ({ text }) => setInput(text)), []);
   const [isSending, setIsSending] = useState(false);
   const [savedItems, setSavedItems] = useState<SavedItem[]>([]);
   const [, setLearningCards] = useState<LearningCard[]>([]);

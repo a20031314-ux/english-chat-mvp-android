@@ -44,6 +44,7 @@ export function toStudyMap(
           const out: MapActivity = { tab: a.kind as ActivityTab, task: a.task };
           if (a.kind === "chat" && a.starter) out.starter = a.starter;
           if (a.kind === "video" && a.videoId) out.videoId = a.videoId;
+          if (a.kind === "video" && a.listenFor) out.listenFor = a.listenFor;
           return out;
         }),
       links: t.links.map((l) => ({ ...l })),
@@ -72,6 +73,7 @@ export function fromStudyMap(map: StudyMap): Curriculum {
         const out = { kind: a.tab, task: a.task } as CurriculumActivity;
         if (a.starter) out.starter = a.starter;
         if (a.videoId) out.videoId = a.videoId;
+        if (a.listenFor) out.listenFor = a.listenFor;
         return out;
       }),
       links: t.links.map((l) => ({ ...l })),

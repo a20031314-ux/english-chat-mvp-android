@@ -13,6 +13,7 @@ import {
 } from "@/components/videoLearning/VideoPlayer";
 import { CatalogLibrary } from "@/components/videoLearning/CatalogLibrary";
 import { VideoUrlInput } from "@/components/videoLearning/VideoUrlInput";
+import { onAppIntent } from "@/lib/appIntents";
 import { ContentDiscoveryPanel } from "@/components/contentDiscovery/ContentDiscoveryPanel";
 import { useBillingUi } from "@/components/BillingScreen";
 import { usePremium } from "@/contexts/PremiumContext";
@@ -873,6 +874,30 @@ export function VideoLearningTab({
       }
     })();
   };
+
+  // The study map can ask for a video at a scene: load it, and seek once
+  // it is watchable. The ref keeps the listener on the current loadVideo.
+  const loadVideoRef = useRef<((url?: string, duration?: number) => void) | null>(null);
+  const pendingSeekRef = useRef<number | null>(null);
+  useEffect(() => {
+    loadVideoRef.current = loadVideo;
+  });
+  useEffect(
+    () =>
+      onAppIntent("openVideo", ({ url, startSeconds, durationSeconds }) => {
+        pendingSeekRef.current = startSeconds ?? null;
+        loadVideoRef.current?.(url, durationSeconds);
+      }),
+    [],
+  );
+  useEffect(() => {
+    if (phase !== "watching" || pendingSeekRef.current == null) return;
+    const seconds = pendingSeekRef.current;
+    pendingSeekRef.current = null;
+    // The player mounts with the watching phase; give it a moment to be ready.
+    const timer = window.setTimeout(() => playerRef.current?.seekTo(seconds), 800);
+    return () => window.clearTimeout(timer);
+  }, [phase]);
 
   const durationHint = Math.max(
     durationSeconds,

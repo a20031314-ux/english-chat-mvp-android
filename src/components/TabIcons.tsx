@@ -5,9 +5,27 @@ type TabIconProps = {
   className?: string;
 };
 
-type TabId = "chat" | "roleplay" | "video" | "vocab";
+type TabId = "map" | "chat" | "roleplay" | "video" | "vocab";
 
 const iconBox = "h-6 w-6";
+
+export function MapTabIcon({ active, className = "" }: TabIconProps) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      className={`${iconBox} ${className}`}
+      aria-hidden
+    >
+      {/* Four sectors with a path through them: the study map, not a place map. */}
+      <rect x="3.5" y="4.5" width="7.5" height="6.5" rx="1.8" className={active ? "fill-[#e8e8e4]" : "fill-white/40"} />
+      <rect x="13" y="4.5" width="7.5" height="6.5" rx="1.8" className={active ? "fill-white/55" : "fill-white/20"} />
+      <rect x="3.5" y="13" width="7.5" height="6.5" rx="1.8" className={active ? "fill-white/55" : "fill-white/20"} />
+      <rect x="13" y="13" width="7.5" height="6.5" rx="1.8" className={active ? "fill-[#e8e8e4]" : "fill-white/40"} />
+      <path d="M7.25 7.75h9.5v8.5" stroke="white" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
 
 export function ChatTabIcon({ active, className = "" }: TabIconProps) {
   return (
@@ -104,6 +122,11 @@ export const TAB_ICON_META: Record<
     idleBg: string;
   }
 > = {
+  map: {
+    Icon: MapTabIcon,
+    activeBg: "bg-white/10 tb-glow-platinum",
+    idleBg: "hover:bg-white/5",
+  },
   chat: {
     Icon: ChatTabIcon,
     activeBg: "bg-white/10 tb-glow-platinum",
