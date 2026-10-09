@@ -59,6 +59,16 @@ live one.
   invented numbers (users, ratings). Play rejects or demotes these.
 - Arabic is right-to-left; keep each line a whole sentence so it reads correctly.
 
+## Screenshots
+
+Store screenshots are generated, not drawn: `store-shots/` drives the real app
+with fixed AI responses (fastlane/STORE_AUTOMATION.md, "스토어 스크린샷 자동 생성").
+When a release adds or changes a screen worth showing, edit
+`store-shots/scenes.mjs` and the `scenes` in `store-shots/content/<locale>.json`
+(headline ≤ 2 short lines, every fixture sentence natural in the learning
+language), run `npm run store:shots` against a running dev server, look at the
+images, and include them in the PR. Never hand-edit the PNGs.
+
 ## The PR
 
 - Title: `Store: release notes for <versionName> (<versionCode>)` or

@@ -1,0 +1,97 @@
+# Retake the store screenshots from the app on this commit and open a PR when
+# they changed. Runs on each version tag, or by hand.
+#
+# Nothing reaches Play from here: merging the PR is what uploads the images,
+# through "Play: upload listing". No API key is needed; every AI response in
+# the screenshots comes from store-shots/content/<locale>.json.
+name: "Store: screenshots"
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      locale:
+        description: "One locale (e.g. en-US), or empty for all in store-shots/content"
+        type: string
+        default: ""
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency: store-screenshots
+
+jobs:
+  shots:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Browser and fonts
+        run: |
+          npx playwright install --with-deps chromium
+          # Headlines and app text in every script the app teaches.
+          sudo apt-get install -y --no-install-recommends fonts-noto-core fonts-noto-cjk
+
+      - name: Start the app (app build, dev server)
+        run: |
+          CAPACITOR_STATIC=1 npx next dev -p 3100 > "$RUNNER_TEMP/next.log" 2>&1 &
+          for i in $(seq 1 60); do
+            curl -sf -o /dev/null http://localhost:3100/ && exit 0
+            sleep 2
+          done
+          cat "$RUNNER_TEMP/next.log"
+          exit 1
+
+      - name: Capture and compose
+        env:
+          ONLY_LOCALE: ${{ inputs.locale }}
+        run: |
+          if [ -n "$ONLY_LOCALE" ]; then
+            npm run store:shots -- --locale "$ONLY_LOCALE"
+          else
+            npm run store:shots
+          fi
+
+      - name: Keep failed screens for inspection
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: store-shots-failed
+          path: store-shots/out/
+          if-no-files-found: ignore
+
+      - name: Open PR if anything changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -z "$(git status --porcelain fastlane/metadata)" ]; then
+            echo "Screenshots are unchanged."
+            exit 0
+          fi
+          version=$(node -p "require('./package.json').version")
+          branch="store/screenshots-$version-$(date +%Y%m%d-%H%M)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add fastlane/metadata
+          git commit -m "Retake store screenshots for $version"
+          git push origin "$branch"
+          {
+            echo "Retaken from the app at $version by the \"Store: screenshots\" workflow."
+            echo
+            echo "Open **Files changed** to see each image. Merging uploads them to Play through \"Play: upload listing\"."
+            echo
+            git diff --name-only HEAD~1 HEAD | sed 's/^/- /'
+          } > "$RUNNER_TEMP/pr-body.md"
+          gh pr create --base main --head "$branch" \
+            --title "Store screenshots for $version" \
+            --body-file "$RUNNER_TEMP/pr-body.md"

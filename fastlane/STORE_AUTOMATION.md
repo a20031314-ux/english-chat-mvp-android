@@ -19,6 +19,7 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
 | Play: upload listing | `fastlane/metadata` 변경이 main에 병합될 때 | 설명 문구 업로드 (이미지는 바뀐 경우만) | 등록정보 (Play 심사 후 공개) |
 | Play: build to testing track | `v*` 태그 푸시 또는 수동 | 서명된 AAB 빌드 → 내부 테스트(또는 비공개) 트랙 | 테스트 트랙 |
 | Play: production | 수동 + **승인 필요** | 프로덕션 단계적 출시 / 비율 변경 / 중단 | 프로덕션 |
+| Store: screenshots | `v*` 태그 푸시 또는 수동 | 앱을 띄워 스크린샷을 다시 찍고, 바뀌었으면 PR | 없음 (병합하면 upload listing이 올림) |
 
 ## 처음 한 번 설정하기
 
@@ -79,6 +80,33 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
    실행하고 승인합니다.
 5. 크래시가 없으면 같은 워크플로를 `rollout`, `0.5` → `1`로 실행합니다.
    문제가 생기면 `halt`로 멈춥니다.
+
+## 스토어 스크린샷 자동 생성
+
+`store-shots/`가 실제 앱을 휴대폰 크기로 띄워 화면을 찍고, 헤드라인과 휴대폰
+프레임을 입혀 1080×1920 이미지로 만듭니다. AI 응답은 모두
+`store-shots/content/<언어>.json`에 적힌 고정 문장으로 대신하기 때문에 API 키도,
+비용도 들지 않고 매번 같은 대화가 찍힙니다. 버튼이나 화면 구성이 바뀌면 다음
+캡처에 그대로 반영됩니다.
+
+- **언제**: 버전 태그를 푸시할 때마다 자동으로, 또는 Actions에서 수동 실행
+- **결과**: `fastlane/metadata/android/<언어>/images/phoneScreenshots/NN-<장면>.png`
+  가 바뀌면 PR이 열립니다. PR의 Files changed에서 이미지를 보고 병합하면 Play에
+  올라갑니다.
+- **장면 추가**: `store-shots/scenes.mjs`에 장면을 추가하고, 각 언어 JSON의
+  `scenes`에 헤드라인과 대화 문장을 넣습니다.
+- **언어 추가**: `store-shots/content/en-US.json`을 복사해 `ko-KR.json` 같은
+  Play 언어 코드로 만들고 `uiLocale`(앱 언어), `targetLanguage`(배우는 언어),
+  문구를 바꿉니다.
+- **로컬 실행**: `CAPACITOR_STATIC=1 npx next dev -p 3100`을 띄운 뒤
+  `npm run store:shots` (`-- --locale en-US`, `-- --scene chat`으로 좁힐 수 있음)
+- 실패하면 그 순간의 화면이 `store-shots/out/failed/`에 남고, Actions에서는
+  `store-shots-failed` 아티팩트로 받을 수 있습니다.
+- Play는 `phoneScreenshots` 폴더의 이미지를 파일 이름 순서로 최대 8장
+  보여줍니다. 자동 생성 파일은 `01-`, `02-`로 시작하니, Play에서 받아온 기존
+  스크린샷과 섞이지 않게 필요 없는 파일은 PR에서 지워 주세요.
+- 저장소 **Settings → Actions → General**에서 "Allow GitHub Actions to create
+  and approve pull requests"가 켜져 있어야 PR이 열립니다.
 
 ## 자동화하지 않는 것 (Play Console에서 직접)
 - 심사 결과 확인과 거부 시 이의 제기 (결과는 Play Console 받은편지함과 메일로 옵니다)
