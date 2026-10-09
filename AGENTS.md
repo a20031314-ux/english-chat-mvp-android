@@ -62,3 +62,12 @@ feature is checked beyond that pair before it is called done.
    (e.g. ja), and a right-to-left interface (ar) with a third learning
    language (e.g. es). Set them through localStorage `appTargetLanguage` and
    `appUiLocale`. 다음 날 확인 lists each combination with pass or fail.
+
+# Store listing and Play releases
+
+Release notes and the Google Play listing live in `fastlane/metadata/android/`
+and are written with the `store-listing` skill (`.claude/skills/store-listing/`).
+Claude Code edits those files and opens a PR; GitHub Actions uploads to Play
+after a person merges, and production releases wait for a person's approval.
+Never run fastlane or touch signing files from here — `.claude/settings.json`
+denies it. How the pieces fit: `fastlane/STORE_AUTOMATION.md`.

@@ -1,0 +1,38 @@
+# Download the live Play listing into fastlane/metadata and open a PR with it.
+# Run this once before anything else, so the repository starts from what users
+# see today instead of overwriting it. Changes nothing on Play.
+name: "Play: pull listing"
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  pull:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/play-setup
+        with:
+          play-json: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+      - run: bundle exec fastlane android pull_listing
+      - name: Open PR
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if [ -z "$(git status --porcelain fastlane/metadata)" ]; then
+            echo "Listing in the repository already matches Play."
+            exit 0
+          fi
+          branch="store/pull-listing-$(date +%Y%m%d-%H%M)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add fastlane/metadata
+          git commit -m "Pull the live Play listing into fastlane/metadata"
+          git push origin "$branch"
+          gh pr create --title "Play listing: snapshot from the live store" \
+            --body "Downloaded by the \"Play: pull listing\" workflow. Nothing was changed on Play."

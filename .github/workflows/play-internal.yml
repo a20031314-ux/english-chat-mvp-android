@@ -1,0 +1,74 @@
+# Build a signed bundle and send it to a testing track.
+# Runs on a version tag (v2.62.0) or by hand. Bump versionCode in
+# android/app/build.gradle and the version in package.json first: Play refuses a
+# versionCode it has seen, and build-capacitor refuses mismatched versions.
+name: "Play: build to testing track"
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      track:
+        description: "Testing track"
+        type: choice
+        options: [internal, alpha]
+        default: internal
+
+concurrency: play
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: play
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+
+      - name: Release notes present for this versionCode
+        run: node scripts/check-store-metadata.mjs --version-code current
+
+      - run: npm ci
+      - name: Build web bundle and sync Android
+        env:
+          NEXT_PUBLIC_API_BASE: ${{ vars.NEXT_PUBLIC_API_BASE }}
+          NEXT_PUBLIC_REVENUECAT_ANDROID_API_KEY: ${{ secrets.NEXT_PUBLIC_REVENUECAT_ANDROID_API_KEY }}
+        run: npm run build:android
+
+      - name: Signing key
+        env:
+          KEYSTORE_BASE64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+          STORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          KEY_ALIAS: ${{ secrets.ANDROID_KEY_ALIAS }}
+          KEY_PASSWORD: ${{ secrets.ANDROID_KEY_PASSWORD }}
+        run: |
+          if [ -z "$KEYSTORE_BASE64" ]; then
+            echo "::error::ANDROID_KEYSTORE_BASE64 secret is not set. See fastlane/STORE_AUTOMATION.md."
+            exit 1
+          fi
+          echo "$KEYSTORE_BASE64" | base64 -d > "$RUNNER_TEMP/upload.jks"
+          {
+            echo "storeFile=$RUNNER_TEMP/upload.jks"
+            echo "storePassword=$STORE_PASSWORD"
+            echo "keyAlias=$KEY_ALIAS"
+            echo "keyPassword=$KEY_PASSWORD"
+          } > android/keystore.properties
+
+      - uses: ./.github/actions/play-setup
+        with:
+          play-json: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+      - run: bundle exec fastlane android internal
+        env:
+          PLAY_TRACK: ${{ inputs.track || 'internal' }}
+
+      - name: Remove signing files
+        if: always()
+        run: rm -f android/keystore.properties "$RUNNER_TEMP/upload.jks" "$RUNNER_TEMP/play-key.json"

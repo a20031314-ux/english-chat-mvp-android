@@ -1,0 +1,29 @@
+name: Play setup
+description: Ruby + fastlane, and the Play service account key written to a temp file.
+inputs:
+  play-json:
+    description: Contents of the Play service account JSON key
+    required: true
+runs:
+  using: composite
+  steps:
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: "3.3"
+    # No Gemfile.lock is committed yet; the first run resolves fastlane and the
+    # lock can be committed afterwards to pin it.
+    - name: Install fastlane
+      shell: bash
+      run: bundle install --jobs 4
+    - name: Write Play key
+      shell: bash
+      env:
+        PLAY_JSON: ${{ inputs.play-json }}
+      run: |
+        if [ -z "$PLAY_JSON" ]; then
+          echo "::error::PLAY_SERVICE_ACCOUNT_JSON secret is not set. See fastlane/STORE_AUTOMATION.md."
+          exit 1
+        fi
+        key="$RUNNER_TEMP/play-key.json"
+        printf '%s' "$PLAY_JSON" > "$key"
+        echo "PLAY_JSON_KEY_FILE=$key" >> "$GITHUB_ENV"

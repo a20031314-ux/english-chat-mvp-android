@@ -1,0 +1,29 @@
+# Character limits, missing languages and store-policy words, checked on the PR
+# so nothing over the limit reaches Play.
+name: "Store: check listing"
+
+on:
+  pull_request:
+    paths:
+      - "fastlane/metadata/**"
+      - "android/app/build.gradle"
+      - "scripts/check-store-metadata.mjs"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Check listing
+        run: |
+          # When the PR bumps versionCode, every language needs a release note for it.
+          if git diff --quiet origin/${{ github.base_ref }} -- android/app/build.gradle 2>/dev/null; then
+            node scripts/check-store-metadata.mjs
+          else
+            node scripts/check-store-metadata.mjs --version-code current
+          fi

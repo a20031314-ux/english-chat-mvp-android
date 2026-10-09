@@ -1,0 +1,6 @@
+# The package name is permanent (see capacitor.config.ts for why it still reads
+# like a placeholder). The service account key never lives in the repository:
+# CI writes it to a temp file from the PLAY_SERVICE_ACCOUNT_JSON secret and
+# points PLAY_JSON_KEY_FILE at it.
+package_name("com.yourname.englishchat")
+json_key_file(ENV["PLAY_JSON_KEY_FILE"])
