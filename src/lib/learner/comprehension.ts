@@ -1,4 +1,5 @@
 import { findExpression } from "../videoIndex/match.ts";
+import { segmentWords } from "../wordSegments.ts";
 
 /**
  * What a learner did not understand in what they were told, and how far they
@@ -76,14 +77,14 @@ export function itemKey(text: string): string {
   return text
     .toLowerCase()
     .replace(/[‘’]/g, "'")
-    .replace(/[^\p{L}\p{N}' ]+/gu, " ")
+    .replace(/[^\p{L}\p{M}\p{N}' ]+/gu, " ")
     .replace(/\s+/g, " ")
     .trim()
     .slice(0, MAX_TEXT);
 }
 
 function cleanText(text: string): string {
-  return text.replace(/\s+/g, " ").trim().replace(/^[^\p{L}\p{N}']+|[^\p{L}\p{N}']+$/gu, "").slice(0, MAX_TEXT);
+  return text.replace(/\s+/g, " ").trim().replace(/^[^\p{L}\p{M}\p{N}']+|[^\p{L}\p{M}\p{N}']+$/gu, "").slice(0, MAX_TEXT);
 }
 
 function prune(items: Record<string, ComprehensionItem>): Record<string, ComprehensionItem> {
@@ -105,7 +106,8 @@ export function applyEvent(
   const text = cleanText(event.text);
   const key = itemKey(text);
   // A whole long sentence is not an item to follow; a span of a few words is.
-  if (!key || key.split(" ").length > 6) return record;
+  // Counted in words, not spaces: a Japanese sentence has none.
+  if (!key || segmentWords(key, record.language).length > 6) return record;
   const before: ComprehensionItem = record.items[key] ?? {
     text,
     state: "stuck",

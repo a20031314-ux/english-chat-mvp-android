@@ -130,3 +130,12 @@ test("videos saying more of the wanted expressions rank first", () => {
   assert.deepEqual(ranked.map((match) => match.videoId), ["both1234567", "one12345678"]);
   assert.equal(ranked[1]?.hitCount, 3);
 });
+
+test("a phrase is found inside a Japanese, Chinese or Thai line", () => {
+  const line = (text: string) => [{ start: 1, end: 2, text }];
+  assert.equal(findExpression(line("結局ほかの店に行ったの？"), "ほかの店", "ja").length, 1);
+  assert.equal(findExpression(line("你最后去了别的地方吗？"), "别的地方", "zh").length, 1);
+  assert.equal(findExpression(line("สุดท้ายคุณไปที่อื่นไหม"), "ที่อื่น", "th").length, 1);
+  assert.equal(findExpression(line("결국 다른 데를 갔어?"), "다른 데", "ko").length, 1);
+  assert.equal(findExpression(line("¿Al final fuiste a otro sitio?"), "otro sitio", "es").length, 1);
+});

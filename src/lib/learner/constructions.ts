@@ -15,6 +15,8 @@
  * Plain module: the server, the screen and the tests read the same list.
  */
 
+import { translatedLabel } from "./constructionLabels.ts";
+
 export const BANDS = ["A1", "A2", "B1", "B2", "C1"] as const;
 export type Band = (typeof BANDS)[number];
 
@@ -85,5 +87,6 @@ export function findConstruction(id: string): Construction | undefined {
 }
 
 export function constructionLabel(construction: Construction, uiLanguage: string): string {
-  return uiLanguage === "ko" ? construction.ko : construction.en;
+  if (uiLanguage === "ko") return construction.ko;
+  return translatedLabel(construction.id, uiLanguage) ?? construction.en;
 }

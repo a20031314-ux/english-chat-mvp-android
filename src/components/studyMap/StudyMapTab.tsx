@@ -199,6 +199,8 @@ export function StudyMapTab({
         ) : map ? (
           <MapView
             ui={ui}
+            locale={locale}
+            onRedraw={() => setEditing(true)}
             map={map}
             record={record}
             lastOpenedId={lastOpenedId}
@@ -338,12 +340,16 @@ const STATUS_DOT: Record<TopicStatus, string> = {
 
 function MapView({
   ui,
+  locale,
+  onRedraw,
   map,
   record,
   lastOpenedId,
   onOpenTopic,
 }: {
   ui: UICopy;
+  locale: string;
+  onRedraw: () => void;
   map: StudyMap;
   record: MapRecord | null;
   lastOpenedId: string | null;
@@ -360,6 +366,20 @@ function MapView({
 
   return (
     <div className="mx-auto flex max-w-2xl flex-col gap-5">
+      {/* A map is written in the language the app was in when it was drawn.
+          Switched to another, its topics would read in the old one. */}
+      {map.uiLanguage && map.uiLanguage !== locale ? (
+        <div className="rounded-xl border border-amber-200/30 bg-amber-200/5 px-3 py-2.5">
+          <p className="text-[12px] leading-relaxed text-amber-100">{ui.mapOtherLanguage}</p>
+          <button
+            type="button"
+            onClick={onRedraw}
+            className="mt-1.5 text-[12px] font-medium text-amber-50 underline underline-offset-4"
+          >
+            {ui.mapRedrawHere}
+          </button>
+        </div>
+      ) : null}
       <section>
         <h2 className="text-lg font-semibold text-white">{map.title}</h2>
         <p className="mt-1 text-[12px] text-slate-500">{map.goal}</p>

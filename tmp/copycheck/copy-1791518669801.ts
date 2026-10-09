@@ -1,12 +1,12 @@
-import generatedLocales from "@/lib/locales/generated.json";
+import generatedLocales from "../../src/lib/locales/generated.json" with { type: "json" };
 // Translations of what the eleven generated locales were showing in English,
 // applied last so a key missing here falls back to that English
 // (scripts/translate-ui-overlays.mjs).
-import overlayLocales from "@/lib/locales/overlays.json";
+import overlayLocales from "../../src/lib/locales/overlays.json" with { type: "json" };
 import {
   type LearningLanguageCode,
   uiLocaleOptions,
-} from "@/lib/learningLanguages";
+} from "../../src/lib/learningLanguages.ts";
 
 export const APP_LOCALE_STORAGE_KEY = "appUiLocale";
 
@@ -120,8 +120,6 @@ const generatedBillingOverlay = {
 
 const generatedMapOverlay = {
   homeTabMap: "Map",
-  mapOtherLanguage: "This map was drawn with the app in another language, so it reads in that language.",
-  mapRedrawHere: "Redraw it in this language",
   learnerTitle: "Your sentences",
   compTitle: "Understanding your tutor",
   compSummary: "Understood {understood} · studied {studied} · stuck {stuck}",
@@ -706,8 +704,6 @@ export const copy = {
     exploreFailed: "분석을 불러오지 못했어요. 다시 시도해 주세요.",
     exploreTapHint: "궁금한 부분을 눌러보세요.",
     homeTabMap: "지도",
-    mapOtherLanguage: "이 지도는 다른 앱 언어로 그려져서 그 언어로 보여요.",
-    mapRedrawHere: "지금 언어로 다시 그리기",
     learnerTitle: "내 문장 수준",
     compTitle: "튜터 말 이해",
     compSummary: "이해 {understood} · 학습함 {studied} · 막힘 {stuck}",
@@ -1507,8 +1503,6 @@ export const copy = {
     exploreFailed: "Couldn’t load the analysis. Please try again.",
     exploreTapHint: "Tap a part you’re curious about.",
     homeTabMap: "Map",
-    mapOtherLanguage: "This map was drawn with the app in another language, so it reads in that language.",
-    mapRedrawHere: "Redraw it in this language",
     learnerTitle: "Your sentences",
     compTitle: "Understanding your tutor",
     compSummary: "Understood {understood} · studied {studied} · stuck {stuck}",
@@ -2305,8 +2299,6 @@ export const copy = {
     exploreFailed: "No se pudo cargar el análisis. Inténtalo de nuevo.",
     exploreTapHint: "Toca la parte que te interesa.",
     homeTabMap: "Mapa",
-    mapOtherLanguage: "Este mapa se dibujó con la app en otro idioma, así que se lee en ese idioma.",
-    mapRedrawHere: "Volver a dibujarlo en este idioma",
     learnerTitle: "Tus frases",
     compTitle: "Lo que entiendes del tutor",
     compSummary: "Entendidas {understood} · estudiadas {studied} · atascos {stuck}",

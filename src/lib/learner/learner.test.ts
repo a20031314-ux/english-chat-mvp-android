@@ -211,3 +211,43 @@ test("counts, topics and a stored record read back", async () => {
   assert.deepEqual(c.parseComprehension(JSON.parse(JSON.stringify(r)), "en"), r);
   assert.equal(Object.keys(c.parseComprehension(r, "es").items).length, 0);
 });
+
+test("phrases are followed in Japanese, Chinese, Thai, Hindi and Korean too", async () => {
+  const c = await import("./comprehension.ts");
+  const cases: Array<[string, string, string, string]> = [
+    ["ja", "結局", "結局ほかの店に行ったの？", "結局家に帰ったよ。"],
+    ["zh", "别的地方", "你最后去了别的地方吗？", "我们去了别的地方。"],
+    ["th", "ที่อื่น", "สุดท้ายคุณไปที่อื่นไหม", "เราไปที่อื่นกันเถอะ"],
+    ["hi", "कहीं और", "क्या तुम कहीं और गए?", "चलो कहीं और चलते हैं।"],
+    ["ko", "다른 데", "결국 다른 데를 갔어?", "우리 다른 데 가자."],
+  ];
+  for (const [language, phrase, line1, line2] of cases) {
+    let r = c.applyEvent(c.emptyComprehension(language, T0), { kind: "lookup", text: phrase }, T0);
+    assert.equal(r.items[c.itemKey(phrase)]?.text, phrase, `${language} kept whole`);
+    r = c.applyTutorLine(r, line1, T0 + 1);
+    r = c.applyTutorLine(r, line2, T0 + 2);
+    assert.equal(r.items[c.itemKey(phrase)]?.state, "understood", language);
+  }
+  // A whole Japanese sentence is not one "word" and is not an item.
+  const r = c.applyEvent(c.emptyComprehension("ja", T0), {
+    kind: "analyze",
+    text: "昨日はとても混んでいたので結局ほかの店に行きました",
+  }, T0);
+  assert.equal(Object.keys(r.items).length, 0);
+});
+
+test("every construction has a name in every interface language", async () => {
+  const { CONSTRUCTION_LABELS, LABEL_LANGUAGES } = await import("./constructionLabels.ts");
+  const { constructionLabel } = await import("./constructions.ts");
+  for (const c of ENGLISH_CONSTRUCTIONS) {
+    const row = CONSTRUCTION_LABELS[c.id];
+    assert.ok(row, c.id);
+    assert.equal(row.length, LABEL_LANGUAGES.length, c.id);
+    for (const label of row) assert.ok(label.trim(), c.id);
+  }
+  assert.deepEqual(Object.keys(CONSTRUCTION_LABELS).sort(), ENGLISH_CONSTRUCTIONS.map((c) => c.id).sort());
+  const wordForm = ENGLISH_CONSTRUCTIONS.find((c) => c.id === "word-form")!;
+  assert.equal(constructionLabel(wordForm, "ja"), "品詞の形（名詞・形容詞・副詞）");
+  assert.equal(constructionLabel(wordForm, "ko"), wordForm.ko);
+  assert.equal(constructionLabel(wordForm, "xx"), wordForm.en);
+});

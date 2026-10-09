@@ -1,12 +1,12 @@
-import generatedLocales from "@/lib/locales/generated.json";
+import generatedLocales from "../../src/lib/locales/generated.json" with { type: "json" };
 // Translations of what the eleven generated locales were showing in English,
 // applied last so a key missing here falls back to that English
 // (scripts/translate-ui-overlays.mjs).
-import overlayLocales from "@/lib/locales/overlays.json";
+import overlayLocales from "../../src/lib/locales/overlays.json" with { type: "json" };
 import {
   type LearningLanguageCode,
   uiLocaleOptions,
-} from "@/lib/learningLanguages";
+} from "../../src/lib/learningLanguages.ts";
 
 export const APP_LOCALE_STORAGE_KEY = "appUiLocale";
 

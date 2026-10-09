@@ -1,4 +1,5 @@
 import type { TranscriptLine, TranscriptRecord } from "./transcript.ts";
+import { segmentChunk } from "../wordSegments.ts";
 
 /**
  * Where in a video an expression is actually said.
@@ -105,13 +106,19 @@ const IRREGULAR: Record<string, string[]> = {
   pick: ["picks", "picked", "picking"],
 };
 
-/** Lowercased words with surrounding punctuation stripped; apostrophes kept. */
-export function wordsOf(text: string): string[] {
+/**
+ * Lowercased words with surrounding punctuation stripped; apostrophes kept.
+ * Japanese, Chinese and Thai are cut by the word segmenter (wordSegments.ts),
+ * so a phrase inside a line can be found in it at all.
+ */
+export function wordsOf(text: string, language?: string): string[] {
   return text
     .toLowerCase()
     .replace(/[‘’]/g, "'")
+    .replace(/[^\p{L}\p{M}\p{N}\s']/gu, " ")
     .split(/\s+/)
-    .map((word) => word.replace(/^[^\p{L}\p{N}']+|[^\p{L}\p{N}']+$/gu, ""))
+    .flatMap((chunk) => segmentChunk(chunk, language))
+    .map((word) => word.replace(/^[^\p{L}\p{M}\p{N}']+|[^\p{L}\p{M}\p{N}']+$/gu, ""))
     .filter(Boolean);
 }
 
@@ -145,11 +152,14 @@ export function formsOf(word: string): Set<string> {
 }
 
 type Step =
-  | { kind: "word"; forms: Set<string>; allowGapBefore: number }
+  | { kind: "word"; forms: Set<string>; allowGapBefore: number; prefix?: boolean }
   | { kind: "slot" };
 
-function compile(expression: string, english: boolean): Step[] {
-  const words = wordsOf(expression);
+function compile(expression: string, english: boolean, language: string): Step[] {
+  const words = wordsOf(expression, language);
+  // Korean attaches particles and endings to the word ("데" in "데를"), so a
+  // word of the expression matches the start of a word in the line.
+  const prefix = language.split("-")[0] === "ko";
   const steps: Step[] = words.map((word) =>
     english && PLACEHOLDERS.has(word)
       ? { kind: "slot" as const }
@@ -157,6 +167,7 @@ function compile(expression: string, english: boolean): Step[] {
           kind: "word" as const,
           forms: english ? formsOf(word) : new Set([word]),
           allowGapBefore: 0,
+          ...(prefix ? { prefix: true } : {}),
         },
   );
   // A verb + particle pair may be split by its object: "wait (it) out".
@@ -184,7 +195,11 @@ function matchAt(tokens: string[], steps: Step[], from: number): number | null {
     }
     const maxGap = stepIndex === 0 ? 0 : step.allowGapBefore;
     for (let gap = 0; gap <= maxGap && at + gap < tokens.length; gap += 1) {
-      if (step.forms.has(tokens[at + gap]!)) {
+      const token = tokens[at + gap]!;
+      if (
+        step.forms.has(token) ||
+        (step.prefix && [...step.forms].some((form) => token.startsWith(form)))
+      ) {
         const done = go(stepIndex + 1, at + gap + 1);
         if (done !== null) return done;
       }
@@ -200,11 +215,11 @@ export function findExpression(
   language = "en",
 ): ExpressionHit[] {
   const english = language.split("-")[0] === "en";
-  const steps = compile(expression, english);
+  const steps = compile(expression, english, language);
   if (steps.length === 0 || steps.every((step) => step.kind === "slot")) return [];
   const hits: ExpressionHit[] = [];
   lines.forEach((line, lineIndex) => {
-    const tokens = wordsOf(line.text);
+    const tokens = wordsOf(line.text, language);
     for (let from = 0; from < tokens.length; from += 1) {
       const end = matchAt(tokens, steps, from);
       if (end !== null) {

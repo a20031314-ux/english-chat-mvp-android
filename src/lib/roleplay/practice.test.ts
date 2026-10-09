@@ -124,20 +124,20 @@ test("a mark is a letter, not punctuation to be stripped", () => {
   );
 });
 
-test("a script with no spaces is one piece rather than several wrong ones", () => {
-  // Thai and Japanese write without spaces, so there is nothing here to split
-  // on and the whole line is compared as one. That is the honest answer: it
-  // says the line came out differently and does not pretend to know where.
-  // Locating it wants a segmenter, which is a larger thing than this.
-  for (const [target, heard] of [
-    ["ไว้เจอกันใหม่นะ", "ไว้เจอกันเก่านะ"],
-    ["そこで何したの", "そこで何時なの"],
-  ]) {
-    const out = compareToTarget(target, heard);
-    assert.equal(out.outcomes.length, 1);
-    assert.equal(out.outcomes[0]!.kind, "changed");
-    assert.equal(out.clean, false);
-  }
+test("a script with no spaces is cut into words, and the changed one located", () => {
+  // Thai and Japanese write without spaces. This used to compare the whole
+  // line as one piece, honestly but uselessly; the platform word segmenter
+  // (wordSegments.ts) now cuts it, so the word that came out wrong is named.
+  const thai = compareToTarget("ไว้เจอกันใหม่นะ", "ไว้เจอกันเก่านะ");
+  assert.deepEqual(
+    thai.outcomes.filter((o) => o.kind !== "kept"),
+    [{ kind: "changed", word: "ใหม่", heardAs: "เก่า" }],
+  );
+  assert.equal(thai.outcomes.length, 5);
+  const japanese = compareToTarget("そこで何したの", "そこで何時なの");
+  assert.equal(japanese.clean, false);
+  assert.deepEqual(japanese.outcomes[0], { kind: "kept", word: "そこで" });
+  assert.deepEqual(japanese.outcomes.at(-1), { kind: "kept", word: "の" });
 });
 
 test("languages that do use spaces are untouched by any of this", () => {
@@ -148,4 +148,11 @@ test("languages that do use spaces are untouched by any of this", () => {
     word: "please",
     heardAs: "peace",
   });
+});
+
+test("a Japanese line is compared word by word, not as one word", () => {
+  const { outcomes } = compareToTarget("結局ほかの店に行った", "結局ほかの駅に行った");
+  assert.ok(outcomes.length > 3);
+  assert.ok(outcomes.some((o) => o.kind === "changed" && o.word === "店" && o.heardAs === "駅"));
+  assert.ok(outcomes.filter((o) => o.kind === "kept").length >= 3);
 });
