@@ -1,0 +1,47 @@
+# Merging a listing change to main is the approval; this uploads it.
+# Play still reviews listing changes before they go live, and with Managed
+# publishing on in Play Console nothing goes live until you press publish there.
+name: "Play: upload listing"
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "fastlane/metadata/android/**/*.txt"
+      - "fastlane/metadata/android/**/images/**"
+  workflow_dispatch:
+    inputs:
+      upload_images:
+        description: "Also replace screenshots and graphics"
+        type: boolean
+        default: false
+
+concurrency: play
+
+jobs:
+  listing:
+    runs-on: ubuntu-latest
+    environment: play
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/check-store-metadata.mjs
+      - name: Did images change?
+        id: images
+        run: |
+          if [ "${{ inputs.upload_images }}" = "true" ] || \
+             git diff --name-only HEAD~1 HEAD | grep -q '^fastlane/metadata/android/.*/images/'; then
+            echo "upload=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "upload=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: ./.github/actions/play-setup
+        with:
+          play-json: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+      - run: bundle exec fastlane android listing
+        env:
+          UPLOAD_IMAGES: ${{ steps.images.outputs.upload }}

@@ -22,6 +22,7 @@
     "check:strings": "node --experimental-strip-types scripts/translate-ui-overlays.mjs --check",
     "check:browser-languages": "node scripts/browser-language-pass.mjs",
     "check:languages": "node --experimental-strip-types scripts/check-language-coverage.mjs",
+    "check:store": "node scripts/check-store-metadata.mjs",
     "check:conversation": "node --experimental-strip-types scripts/check-conversation-quality.mjs",
     "verify:library": "node --experimental-strip-types scripts/verify-video-library.mjs",
     "roleplay:audio": "node --experimental-strip-types scripts/build-roleplay-audio.mjs",

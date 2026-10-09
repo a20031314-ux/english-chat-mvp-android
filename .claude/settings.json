@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "deny": [
+      "Bash(fastlane:*)",
+      "Bash(bundle exec fastlane:*)",
+      "Bash(gh workflow run:*)",
+      "Read(android/keystore.properties)",
+      "Read(**/*.jks)",
+      "Read(**/*.keystore)",
+      "Read(**/play-key.json)",
+      "Edit(android/keystore.properties)",
+      "Edit(.github/workflows/play-production.yml)"
+    ]
+  }
+}

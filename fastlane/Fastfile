@@ -1,0 +1,99 @@
+# Google Play lanes. Each one is run by a GitHub Actions workflow, never by
+# Claude Code directly (.claude/settings.json denies fastlane). The split is the
+# point: Claude edits files and opens PRs, merging is the approval, and only CI
+# holds the Play key.
+#
+#   pull_listing   download the live listing into fastlane/metadata (read only)
+#   listing        upload texts + images from fastlane/metadata, no bundle
+#   internal       build a signed bundle and upload it to a testing track
+#   promote        move a tested release to production at a rollout fraction
+#   rollout        change the production rollout fraction, or halt it
+#
+# Full guide: fastlane/STORE_AUTOMATION.md
+
+default_platform(:android)
+
+METADATA_PATH = File.expand_path("metadata/android", __dir__)
+ANDROID_DIR = File.expand_path("../android", __dir__)
+
+def version_code
+  gradle = File.read(File.join(ANDROID_DIR, "app/build.gradle"))
+  code = gradle[/versionCode\s+(\d+)/, 1]
+  UI.user_error!("Could not read versionCode from android/app/build.gradle") unless code
+  code.to_i
+end
+
+platform :android do
+  desc "Download the live store listing into fastlane/metadata (changes nothing on Play)"
+  lane :pull_listing do
+    download_from_play_store(metadata_path: METADATA_PATH)
+  end
+
+  desc "Upload listing texts and images only. No bundle, no release."
+  lane :listing do
+    upload_to_play_store(
+      metadata_path: METADATA_PATH,
+      skip_upload_aab: true,
+      skip_upload_apk: true,
+      skip_upload_changelogs: true,
+      # Leave the existing screenshots alone unless a PR actually added images.
+      skip_upload_images: ENV["UPLOAD_IMAGES"] != "true",
+      skip_upload_screenshots: ENV["UPLOAD_IMAGES"] != "true",
+    )
+  end
+
+  desc "Build a signed bundle and upload it to a testing track (default: internal)"
+  lane :internal do |options|
+    track = options[:track] || ENV["PLAY_TRACK"] || "internal"
+    gradle(project_dir: ANDROID_DIR, task: "bundle", build_type: "Release")
+    upload_to_play_store(
+      track: track,
+      aab: lane_context[SharedValues::GRADLE_AAB_OUTPUT_PATH],
+      metadata_path: METADATA_PATH,
+      # Release notes for this versionCode come from changelogs/<versionCode>.txt.
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+      release_status: "completed",
+    )
+    UI.success("versionCode #{version_code} is on the #{track} track")
+  end
+
+  desc "Promote the current versionCode from a testing track to production"
+  lane :promote do |options|
+    from = options[:from] || ENV["PLAY_FROM_TRACK"] || "internal"
+    fraction = (options[:rollout] || ENV["PLAY_ROLLOUT"] || "0.1").to_f
+    UI.user_error!("rollout must be between 0 and 1") unless fraction > 0 && fraction <= 1
+    upload_to_play_store(
+      track: from,
+      track_promote_to: "production",
+      version_code: version_code,
+      rollout: fraction < 1 ? fraction.to_s : nil,
+      release_status: fraction < 1 ? "inProgress" : "completed",
+      metadata_path: METADATA_PATH,
+      skip_upload_aab: true,
+      skip_upload_apk: true,
+      skip_upload_metadata: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+    )
+  end
+
+  desc "Change the production rollout fraction (1 = everyone), or halt with halt:true"
+  lane :rollout do |options|
+    halt = (options[:halt] || ENV["PLAY_HALT"]).to_s == "true"
+    fraction = (options[:rollout] || ENV["PLAY_ROLLOUT"] || "1").to_f
+    upload_to_play_store(
+      track: "production",
+      version_code: version_code,
+      rollout: (!halt && fraction < 1) ? fraction.to_s : nil,
+      release_status: halt ? "halted" : (fraction < 1 ? "inProgress" : "completed"),
+      skip_upload_aab: true,
+      skip_upload_apk: true,
+      skip_upload_metadata: true,
+      skip_upload_changelogs: true,
+      skip_upload_images: true,
+      skip_upload_screenshots: true,
+    )
+  end
+end

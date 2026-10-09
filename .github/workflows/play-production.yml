@@ -1,0 +1,50 @@
+# Production is the one step that reaches every user, so it waits for a person.
+# The "play-production" environment should have you as a required reviewer
+# (Settings → Environments); GitHub then holds the job until you approve it.
+name: "Play: production"
+
+on:
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "promote = first production release of this versionCode; rollout = change its fraction; halt = stop it"
+        type: choice
+        options: [promote, rollout, halt]
+        default: promote
+      from_track:
+        description: "Track to promote from (promote only)"
+        type: choice
+        options: [internal, alpha]
+        default: internal
+      rollout:
+        description: "Share of users, 0.01–1 (1 = everyone)"
+        type: string
+        default: "0.1"
+
+concurrency: play
+
+jobs:
+  production:
+    runs-on: ubuntu-latest
+    environment: play-production
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/play-setup
+        with:
+          play-json: ${{ secrets.PLAY_SERVICE_ACCOUNT_JSON }}
+      - name: Promote
+        if: inputs.action == 'promote'
+        run: bundle exec fastlane android promote
+        env:
+          PLAY_FROM_TRACK: ${{ inputs.from_track }}
+          PLAY_ROLLOUT: ${{ inputs.rollout }}
+      - name: Change rollout
+        if: inputs.action == 'rollout'
+        run: bundle exec fastlane android rollout
+        env:
+          PLAY_ROLLOUT: ${{ inputs.rollout }}
+      - name: Halt
+        if: inputs.action == 'halt'
+        run: bundle exec fastlane android rollout
+        env:
+          PLAY_HALT: "true"
