@@ -27,12 +27,19 @@ export function RoleplayLine({
   ui,
   onReview,
   onTranslate,
+  onAnalyze,
 }: {
   line: TranscriptLine;
   ui: UICopy;
   onReview: (turn: StuckTurn) => void;
   /** Ask for the gloss of a line that has none. Absent where nothing can. */
   onTranslate?: (text: string) => void;
+  /**
+   * Open the line in the sentence sheet, where it can be taken apart and asked
+   * about. Only given where no microphone is open — a finished scene or one
+   * read back — so a question typed there can never land as a spoken turn.
+   */
+  onAnalyze?: (text: string) => void;
 }) {
   return (
     <li className={`mb-2 flex ${line.who === "learner" ? "justify-end" : "justify-start"}`}>
@@ -99,14 +106,27 @@ export function RoleplayLine({
         {/* Stays on the turn for the rest of the scene. Pressing it is a
             decision the learner can take later, when they are not in the
             middle of being asked to speak. */}
-        {line.stuck ? (
-          <button
-            type="button"
-            onClick={() => onReview(line.stuck!)}
-            className="mt-1.5 rounded-full border border-white/20 px-2.5 py-1 text-[11px] text-neutral-300 hover:bg-white/10"
-          >
-            {ui.roleplayWhyStuck}
-          </button>
+        {line.stuck || onAnalyze ? (
+          <div className="mt-1.5 flex flex-wrap gap-1.5">
+            {line.stuck ? (
+              <button
+                type="button"
+                onClick={() => onReview(line.stuck!)}
+                className="rounded-full border border-white/20 px-2.5 py-1 text-[11px] text-neutral-300 hover:bg-white/10"
+              >
+                {ui.roleplayWhyStuck}
+              </button>
+            ) : null}
+            {onAnalyze ? (
+              <button
+                type="button"
+                onClick={() => onAnalyze(line.text)}
+                className="rounded-full border border-white/20 px-2.5 py-1 text-[11px] text-neutral-300 hover:bg-white/10"
+              >
+                {ui.insightAnalyze}
+              </button>
+            ) : null}
+          </div>
         ) : null}
       </div>
     </li>
@@ -151,7 +171,7 @@ function Attempt({ outcomes, ui }: { outcomes: WordOutcome[]; ui: UICopy }) {
  * as the panel is up, and it has to stay shut: a line said in practice must not
  * arrive as the next turn of the conversation.
  */
-function SayItBack({
+export function SayItBack({
   target,
   ui,
   onListen,

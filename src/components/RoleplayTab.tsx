@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { RoleplayOwnLine } from "@/components/RoleplayOwnLine";
 import { RoleplayPast } from "@/components/RoleplayPast";
 import { RoleplayScreen } from "@/components/RoleplayScreen";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
@@ -281,6 +282,12 @@ export function RoleplayTab({
               {timeLines.carry ? <span className="block">{timeLines.carry}</span> : null}
             </p>
           ) : null}
+          <RoleplayOwnLine
+            targetLanguage={targetLanguage}
+            nativeLanguage={nativeLanguage}
+            isPremium={isPremium}
+            ui={ui}
+          />
         </div>
       ) : (
         <>
