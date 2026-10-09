@@ -40,7 +40,7 @@ export type MapRequest = {
 
 const FOCUS_RULE = {
   weak: "Their chosen focus is shoring up the weak constructions: give each of them a topic in the expressions-and-grammar sector (B), tied to a situation in A where it is needed, and make the chat starters call for them.",
-  next: "Their chosen focus is moving up a band: bring in the next band's constructions as B topics, each tied to a situation in A where it is natural, and keep weak ones only where they fit.",
+  next: "Their chosen focus is widening: bring in constructions they have not mastered yet as B topics, each tied to a situation in A where it is natural, and keep weak ones only where they fit.",
   topic: "Their chosen focus is the situations themselves: follow the goal's situations, and touch weak constructions only where a situation naturally needs them.",
 } as const;
 
@@ -56,13 +56,12 @@ function learnerSection(learner: MapRequest["learner"]): string {
   const list = (items: string[]) => (items.length ? items.map((item) => `  - ${item}`).join("\n") : "  (none yet)");
   return `
 
-What their own sentences in chat show so far (constructions they use, judged on their recent uses):
-- Level reached: ${learner.level ?? "not measured yet"}
+What their own sentences in chat show so far (constructions they use, judged on their recent uses; no level is claimed from this):
 - Weak — wrong in recent uses:
 ${list(learner.weak)}
 - Still settling:
 ${list(learner.learning.slice(0, 8))}
-- Next band, not yet mastered:
+- Not mastered yet, in the order courses usually bring them in:
 ${list(learner.nextBandConstructions.slice(0, 8))}
 - Phrases from the tutor they now understand but have not used yet:
 ${list((learner.understoodNotUsed ?? []).slice(0, 10))}

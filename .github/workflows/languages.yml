@@ -1,0 +1,34 @@
+# Every push is checked beyond English-in-Korean (AGENTS.md, "Language
+# combinations"): no screen string left in English in a generated locale, the
+# per-language facts check:languages knows, types, and the unit tests — which
+# include spaceless scripts (Japanese, Chinese, Thai) and non-English Latin.
+# No model is called and no key is needed, so this runs on every push.
+name: languages
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Strings in every interface language
+        run: npm run check:strings
+      - name: Language facts
+        run: npm run check:languages
+      - name: Types
+        run: npx tsc --noEmit -p .
+      - name: Unit tests
+        run: |
+          npm run test:chat
+          npm run test:call
+          npm run test:curriculum
+          npm run test:subtitle

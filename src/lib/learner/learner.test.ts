@@ -251,3 +251,34 @@ test("every construction has a name in every interface language", async () => {
   assert.equal(constructionLabel(wordForm, "ko"), wordForm.ko);
   assert.equal(constructionLabel(wordForm, "xx"), wordForm.en);
 });
+
+test("suggestions follow the data and the chosen focus, each with its evidence", async () => {
+  const { suggestNext, improvements } = await import("./suggest.ts");
+  const c = await import("./comprehension.ts");
+  let p = turns(emptyProfile("en", T0), [
+    ["present-perfect", false], ["present-perfect", false], ["present-perfect", true],
+    ["word-form", false], ["word-form", false], ["word-form", true], ["word-form", true], ["word-form", true],
+  ]);
+  let r = c.emptyComprehension("en", T0);
+  r = c.applyEvent(r, { kind: "lookup", text: "wait it out" }, T0);
+  r = c.applyEvent(r, { kind: "lookup", text: "wait it out" }, T0 + 1);
+  r = c.applyEvent(r, { kind: "lookup", text: "grab a bite" }, T0 + 2);
+  r = c.applyTutorLine(r, "Let's grab a bite.", T0 + 3);
+  r = c.applyTutorLine(r, "Wanna grab a bite?", T0 + 4);
+
+  const weakFirst = suggestNext(p, r);
+  assert.deepEqual(weakFirst[0], { kind: "construction", id: "present-perfect", reason: { type: "missed", misses: 2, uses: 3 } });
+  assert.deepEqual(weakFirst[1], { kind: "phrase", text: "wait it out", reason: { type: "stuck", lookups: 2 } });
+  assert.deepEqual(weakFirst[2], { kind: "phrase", text: "grab a bite", reason: { type: "unused" } });
+
+  p = withPlan(p, { focus: "topic" });
+  assert.equal(suggestNext(p, r)[0]?.kind, "phrase");
+  p = withPlan(p, { focus: "next" });
+  const widen = suggestNext(p, r);
+  assert.equal(widen[0]?.reason.type, "new");
+  assert.equal((widen[0] as { id: string }).id, "be-verb");
+
+  const better = improvements(p, r);
+  assert.deepEqual(better.constructions, ["word-form"]);
+  assert.deepEqual(better.phrases, ["grab a bite"]);
+});

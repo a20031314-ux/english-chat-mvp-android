@@ -2,42 +2,40 @@
 
 import { useEffect, useState } from "react";
 import { apiUrl } from "@/lib/apiBase";
+import { sendAppIntent } from "@/lib/appIntents";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
-import {
-  BANDS,
-  constructionLabel,
-  constructionsFor,
-  findConstruction,
-} from "@/lib/learner/constructions";
+import { constructionLabel, findConstruction } from "@/lib/learner/constructions";
 import {
   askTopics,
   countByState,
   emptyComprehension,
-  itemsIn,
   parseComprehension,
   type AskAbout,
   type ComprehensionRecord,
 } from "@/lib/learner/comprehension";
 import {
-  MIN_TURNS_FOR_LEVEL,
   PLAN_FOCUSES,
   PLAN_METHODS,
-  bandProgress,
   constructionsByStatus,
-  currentLevel,
-  nextBand,
-  overcome,
   parseProfile,
   type LearnerPlan,
   type LearnerProfile,
 } from "@/lib/learner/profile";
+import { improvements, suggestNext, type Suggestion } from "@/lib/learner/suggest";
+import { findScenes, type SceneMatch } from "@/lib/studyMapClient";
+import { normalizeYouTubeWatchUrl } from "@/lib/videoLearning";
 
 /**
- * Where the learner's sentences stand: the level reached so far, how each band
- * is filling, which constructions still go wrong and which have been overcome,
- * the weeks behind it — and the choice of how to go on, which the next map
- * drawn reads (curriculum/prompt.ts).
+ * What the learner's own data says they need, and what to study for it.
+ *
+ * No level is shown: a level needs a standard behind it, and a few grammar
+ * points read from chat are not one. What is shown is what the data does say —
+ * where sentences go wrong and which phrases from the tutor they stop at
+ * (with the evidence: "3 of the last 5"), what has stopped going wrong, the
+ * weeks behind it, and a short list of what to study next, each with a way
+ * to start on it now. The plan chosen here is what the next map is drawn for
+ * (curriculum/prompt.ts).
  *
  * Folded to one line on top of the map; the detail opens under it.
  */
@@ -58,7 +56,6 @@ export function LearnerPanel({
   const [profile, setProfile] = useState<LearnerProfile | null>(null);
   const [comprehension, setComprehension] = useState<ComprehensionRecord | null>(null);
   const [open, setOpen] = useState(false);
-  const supported = constructionsFor(targetLanguage).length > 0;
 
   useEffect(() => {
     let cancelled = false;
@@ -81,16 +78,15 @@ export function LearnerPanel({
     };
   }, [targetLanguage, isPremium]);
 
-  const hasComprehension = Boolean(comprehension && Object.keys(comprehension.items).length);
-  if (!profile || (!supported && !hasComprehension)) return null;
-  const counts = comprehension ? countByState(comprehension) : null;
+  if (!profile) return null;
 
-  const level = currentLevel(profile);
-  const next = nextBand(profile);
-  const bands = bandProgress(profile);
-  const nextRow = bands.find((row) => row.band === next);
   const byStatus = constructionsByStatus(profile);
-  const beaten = overcome(profile);
+  const counts = comprehension ? countByState(comprehension) : null;
+  const suggestions = suggestNext(profile, comprehension);
+  const better = improvements(profile, comprehension);
+  const needCount = byStatus.weak.length + (counts?.stuck ?? 0);
+  const betterCount = better.constructions.length + better.phrases.length;
+  const nothingYet = profile.turns === 0 && !(comprehension && Object.keys(comprehension.items).length);
   const label = (id: string) => {
     const c = findConstruction(id);
     return c ? constructionLabel(c, locale) : id;
@@ -111,16 +107,6 @@ export function LearnerPanel({
     }
   };
 
-  const headline = !supported
-    ? ui.compTitle
-    : level
-      ? ui.learnerLevelNow.replace("{level}", level)
-      : profile.turns < MIN_TURNS_FOR_LEVEL
-        ? ui.learnerMeasuring
-            .replace("{n}", String(profile.turns))
-            .replace("{min}", String(MIN_TURNS_FOR_LEVEL))
-        : ui.learnerLevelNow.replace("{level}", "—");
-
   const focusLabel = {
     weak: ui.learnerFocusWeak,
     next: ui.learnerFocusNext,
@@ -132,6 +118,15 @@ export function LearnerPanel({
     video: ui.learnerMethodVideo,
     mixed: ui.learnerMethodMixed,
   } as const;
+  const aboutLabel: Record<AskAbout, string> = {
+    meaning: ui.aboutMeaning,
+    grammar: ui.aboutGrammar,
+    usage: ui.aboutUsage,
+    nuance: ui.aboutNuance,
+    pronunciation: ui.aboutPronunciation,
+    other: ui.aboutOther,
+  };
+  const topics = comprehension ? askTopics(comprehension) : [];
 
   return (
     <section className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
@@ -143,24 +138,19 @@ export function LearnerPanel({
       >
         <span className="min-w-0 flex-1">
           <span className="block text-[11px] font-semibold tracking-wide text-slate-500">
-            {ui.learnerTitle}
+            {ui.needsTitle}
           </span>
-          <span className="mt-0.5 block text-[15px] font-semibold text-white">{headline}</span>
-          {supported && nextRow ? (
-            <span className="mt-0.5 block text-[12px] text-slate-400">
-              {ui.learnerNextBand
-                .replace("{band}", nextRow.band)
-                .replace("{mastered}", String(nextRow.mastered))
-                .replace("{total}", String(nextRow.total))}
-              {byStatus.weak.length ? ` · ${ui.learnerWeak} ${byStatus.weak.length}` : ""}
-            </span>
-          ) : null}
-          {hasComprehension && counts ? (
-            <span className="mt-0.5 block text-[12px] text-slate-400">
-              {ui.compSummary
-                .replace("{understood}", String(counts.understood + counts.used))
-                .replace("{studied}", String(counts.studied))
-                .replace("{stuck}", String(counts.stuck))}
+          <span className="mt-0.5 block text-[15px] font-semibold text-white">
+            {nothingYet
+              ? ui.needsNothingYet
+              : ui.needsSummary
+                  .replace("{need}", String(needCount))
+                  .replace("{better}", String(betterCount))}
+          </span>
+          {suggestions[0] ? (
+            <span className="mt-0.5 block truncate text-[12px] text-slate-400">
+              {ui.needsNextUp}:{" "}
+              {suggestions[0].kind === "construction" ? label(suggestions[0].id) : suggestions[0].text}
             </span>
           ) : null}
         </span>
@@ -169,30 +159,43 @@ export function LearnerPanel({
 
       {open ? (
         <div className="mt-3 space-y-4">
-          {supported ? (
-          <>
-          <ul className="space-y-1.5" aria-label={ui.learnerTitle}>
-            {bands.map((row) => (
-              <li key={row.band} className="flex items-center gap-2">
-                <span
-                  className={`w-7 shrink-0 text-[12px] font-semibold ${
-                    row.band === level ? "text-emerald-300" : row.band === next ? "text-amber-200" : "text-slate-500"
-                  }`}
-                >
-                  {row.band}
-                </span>
-                <span className="h-1.5 flex-1 overflow-hidden rounded-full bg-white/10">
-                  <span
-                    className={`block h-full rounded-full ${row.share >= 0.6 ? "bg-emerald-400" : "bg-amber-300/80"}`}
-                    style={{ width: `${row.share * 100}%` }}
-                  />
-                </span>
-                <span className="w-10 shrink-0 text-right text-[11px] text-slate-500">
-                  {row.mastered}/{row.total}
-                </span>
-              </li>
-            ))}
-          </ul>
+          {nothingYet ? <p className="text-[12px] text-slate-400">{ui.needsEmpty}</p> : null}
+
+          {suggestions.length ? (
+            <div>
+              <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.needsSuggestTitle}</p>
+              <ul className="mt-2 space-y-2">
+                {suggestions.map((suggestion) => (
+                  <li key={suggestion.kind === "construction" ? suggestion.id : suggestion.text}>
+                    <SuggestionCard
+                      ui={ui}
+                      suggestion={suggestion}
+                      title={suggestion.kind === "construction" ? label(suggestion.id) : suggestion.text}
+                      targetLanguage={targetLanguage}
+                    />
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ) : null}
+
+          {betterCount ? (
+            <div>
+              <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.needsBetterTitle}</p>
+              <div className="mt-1.5 flex flex-wrap gap-1.5">
+                {better.constructions.map((id) => (
+                  <span key={id} className="rounded-full border border-emerald-400/40 px-2 py-0.5 text-[12px] text-emerald-200">
+                    ✓ {label(id)}
+                  </span>
+                ))}
+                {better.phrases.map((text) => (
+                  <span key={text} className="rounded-full border border-sky-300/40 px-2 py-0.5 text-[12px] text-sky-100">
+                    ✓ {text}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ) : null}
 
           {profile.history.length > 1 ? (
             <div>
@@ -201,74 +204,31 @@ export function LearnerPanel({
                 {profile.history.slice(-8).map((row) => (
                   <li key={row.week} className="shrink-0 rounded-lg bg-black/30 px-2 py-1 text-center">
                     <span className="block text-[10px] text-slate-500">{row.week.slice(5)}</span>
-                    <span className="block text-[12px] font-semibold text-slate-100">{row.level ?? "—"}</span>
-                    <span className="block text-[10px] text-slate-500">✓{row.mastered}</span>
+                    <span className="block text-[12px] font-semibold text-emerald-200">✓{row.mastered}</span>
+                    <span className="block text-[11px] text-rose-200">!{row.weak}</span>
                   </li>
                 ))}
               </ol>
+              <p className="mt-1 text-[11px] text-slate-500">{ui.needsHistoryKey}</p>
             </div>
           ) : null}
 
-          {byStatus.weak.length ? (
-            <div>
-              <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.learnerWeak}</p>
-              <div className="mt-1.5 flex flex-wrap gap-1.5">
-                {byStatus.weak.map((id) => (
-                  <span key={id} className="rounded-full border border-rose-300/40 px-2 py-0.5 text-[12px] text-rose-200">
-                    {label(id)}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ) : null}
-
-          {beaten.length ? (
-            <div>
-              <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.learnerOvercome}</p>
-              <div className="mt-1.5 flex flex-wrap gap-1.5">
-                {beaten.map((id) => (
-                  <span key={id} className="rounded-full border border-emerald-400/40 px-2 py-0.5 text-[12px] text-emerald-200">
-                    ✓ {label(id)}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ) : null}
-
-          {byStatus.learning.length ? (
+          {topics.length ? (
             <p className="text-[12px] text-slate-400">
-              {ui.learnerLearning.replace("{n}", String(byStatus.learning.length))}
+              {ui.compAsks}: {topics.map(([about, n]) => `${aboutLabel[about]} ${n}`).join(" · ")}
             </p>
-          ) : null}
-
-          {profile.turns === 0 ? <p className="text-[12px] text-slate-400">{ui.learnerEmpty}</p> : null}
-          </>
-          ) : null}
-
-          {hasComprehension && comprehension && counts ? (
-            <ComprehensionSection ui={ui} record={comprehension} counts={counts} />
           ) : null}
 
           <div>
             <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.learnerPlanTitle}</p>
             <div className="mt-1.5 flex flex-wrap gap-1.5" role="radiogroup" aria-label={ui.learnerPlanTitle}>
               {PLAN_FOCUSES.map((focus) => (
-                <PlanChip
-                  key={focus}
-                  on={profile.plan.focus === focus}
-                  label={focusLabel[focus]}
-                  onClick={() => void savePlan({ focus })}
-                />
+                <PlanChip key={focus} on={profile.plan.focus === focus} label={focusLabel[focus]} onClick={() => void savePlan({ focus })} />
               ))}
             </div>
             <div className="mt-1.5 flex flex-wrap gap-1.5" role="radiogroup" aria-label={ui.learnerPlanTitle}>
               {PLAN_METHODS.map((method) => (
-                <PlanChip
-                  key={method}
-                  on={profile.plan.method === method}
-                  label={methodLabel[method]}
-                  onClick={() => void savePlan({ method })}
-                />
+                <PlanChip key={method} on={profile.plan.method === method} label={methodLabel[method]} onClick={() => void savePlan({ method })} />
               ))}
             </div>
             {onRedraw ? (
@@ -282,77 +242,103 @@ export function LearnerPanel({
             ) : null}
           </div>
 
-          <p className="text-[11px] leading-relaxed text-slate-500">
-            {ui.learnerNote.replace("{bands}", BANDS.join("·"))}
-          </p>
+          <p className="text-[11px] leading-relaxed text-slate-500">{ui.needsNote}</p>
         </div>
       ) : null}
     </section>
   );
 }
 
-function ComprehensionSection({
+function SuggestionCard({
   ui,
-  record,
-  counts,
+  suggestion,
+  title,
+  targetLanguage,
 }: {
   ui: UICopy;
-  record: ComprehensionRecord;
-  counts: ReturnType<typeof countByState>;
+  suggestion: Suggestion;
+  title: string;
+  targetLanguage: string;
 }) {
-  const aboutLabel: Record<AskAbout, string> = {
-    meaning: ui.aboutMeaning,
-    grammar: ui.aboutGrammar,
-    usage: ui.aboutUsage,
-    nuance: ui.aboutNuance,
-    pronunciation: ui.aboutPronunciation,
-    other: ui.aboutOther,
+  const [scenes, setScenes] = useState<SceneMatch[] | null>(null);
+  const [searching, setSearching] = useState(false);
+  const reason = suggestion.reason;
+  const why =
+    reason.type === "missed"
+      ? ui.needsWhyMissed.replace("{uses}", String(reason.uses)).replace("{misses}", String(reason.misses))
+      : reason.type === "stuck"
+        ? ui.needsWhyStuck.replace("{n}", String(reason.lookups))
+        : reason.type === "unused"
+          ? ui.needsWhyUnused
+          : reason.type === "studied"
+            ? ui.needsWhyStudied
+            : ui.needsWhyNew;
+  const example =
+    suggestion.kind === "construction" ? findConstruction(suggestion.id)?.hint : undefined;
+
+  const practise = () => {
+    sendAppIntent("openTab", { tab: "chat" });
+    if (suggestion.kind === "phrase") sendAppIntent("chatDraft", { text: suggestion.text });
   };
-  const groups: Array<{ title: string; items: string[]; tone: string }> = [
-    { title: ui.compUnderstoodList, items: itemsIn(record, "understood").map((i) => i.text), tone: "border-sky-300/40 text-sky-100" },
-    { title: ui.compStudiedList, items: itemsIn(record, "studied").map((i) => i.text), tone: "border-white/20 text-slate-200" },
-    { title: ui.compStuckList, items: itemsIn(record, "stuck", 12).map((i) => i.text), tone: "border-rose-300/40 text-rose-200" },
-    { title: ui.compUsedList, items: itemsIn(record, "used", 12).map((i) => i.text), tone: "border-emerald-400/40 text-emerald-200" },
-  ];
-  const topics = askTopics(record);
+
   return (
-    <div className="space-y-3 border-t border-white/10 pt-3">
-      <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.compTitle}</p>
-      <div className="grid grid-cols-4 gap-1.5 text-center">
-        {(
-          [
-            ["stuck", ui.compStuck],
-            ["studied", ui.compStudied],
-            ["understood", ui.compUnderstood],
-            ["used", ui.compUsed],
-          ] as const
-        ).map(([state, label]) => (
-          <div key={state} className="rounded-lg bg-black/30 px-1 py-1.5">
-            <span className="block text-[15px] font-semibold text-slate-100">{counts[state]}</span>
-            <span className="block text-[10px] text-slate-500">{label}</span>
-          </div>
-        ))}
+    <div className="rounded-lg border border-white/10 bg-black/20 p-2.5">
+      <p className="text-[13px] font-medium text-slate-100">{title}</p>
+      <p className="mt-0.5 text-[12px] text-slate-400">{why}</p>
+      {example ? <p className="mt-1 text-[12px] text-slate-300">{ui.needsExample}: {example}</p> : null}
+      <div className="mt-2 flex flex-wrap gap-1.5">
+        <button
+          type="button"
+          onClick={practise}
+          className="rounded-lg bg-white/15 px-2.5 py-1 text-[12px] text-slate-100 hover:bg-white/20"
+        >
+          {ui.needsPractiseChat}
+        </button>
+        {suggestion.kind === "phrase" ? (
+          <button
+            type="button"
+            disabled={searching}
+            onClick={async () => {
+              setSearching(true);
+              setScenes((await findScenes(targetLanguage, [suggestion.text])) ?? []);
+              setSearching(false);
+            }}
+            className="rounded-lg border border-white/15 px-2.5 py-1 text-[12px] text-slate-300 hover:bg-white/10 disabled:opacity-50"
+          >
+            {searching ? ui.mapScenesLoading : ui.mapFindScenes}
+          </button>
+        ) : null}
       </div>
-      {groups.map((group) =>
-        group.items.length ? (
-          <div key={group.title}>
-            <p className="text-[11px] text-slate-500">{group.title}</p>
-            <div className="mt-1 flex flex-wrap gap-1.5">
-              {group.items.map((text) => (
-                <span key={text} className={`rounded-full border px-2 py-0.5 text-[12px] ${group.tone}`}>
-                  {text}
-                </span>
-              ))}
-            </div>
-          </div>
-        ) : null,
-      )}
-      {topics.length ? (
-        <p className="text-[12px] text-slate-400">
-          {ui.compAsks}: {topics.map(([about, n]) => `${aboutLabel[about]} ${n}`).join(" · ")}
-        </p>
+      {scenes ? (
+        scenes.length ? (
+          <ul className="mt-2 space-y-1">
+            {scenes.flatMap((match) =>
+              match.found.flatMap((entry) =>
+                entry.hits.slice(0, 2).map((hit) => (
+                  <li key={`${match.videoId}-${hit.start}`}>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        sendAppIntent("openTab", { tab: "video" });
+                        sendAppIntent("openVideo", {
+                          url: normalizeYouTubeWatchUrl(match.videoId),
+                          startSeconds: Math.max(0, hit.start - 1),
+                          durationSeconds: match.durationSeconds,
+                        });
+                      }}
+                      className="w-full rounded-md px-1 py-1 text-left text-[12px] text-slate-300 hover:bg-white/10"
+                    >
+                      ▶ {Math.floor(hit.start / 60)}:{String(Math.floor(hit.start % 60)).padStart(2, "0")} · {hit.text}
+                    </button>
+                  </li>
+                )),
+              ),
+            )}
+          </ul>
+        ) : (
+          <p className="mt-2 text-[12px] text-slate-500">{ui.mapScenesEmpty}</p>
+        )
       ) : null}
-      <p className="text-[11px] leading-relaxed text-slate-500">{ui.compNote}</p>
     </div>
   );
 }
