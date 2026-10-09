@@ -16,6 +16,10 @@ import {
   textForClickRange,
 } from "@/lib/learningSpans";
 import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
+import {
+  loadSentenceNote,
+  saveSentenceTranslation,
+} from "@/lib/sentenceNotes";
 import { translateUtterance } from "@/lib/translateUtterance";
 
 export type InspectTab = "sentence" | "word";
@@ -89,6 +93,27 @@ export function useEnglishAnalysis(locale: Locale) {
 
       const req = sentenceReqRef.current + 1;
       sentenceReqRef.current = req;
+      const identity = {
+        sentence: target.contextSentence,
+        language: targetLanguage,
+        uiLanguage: locale,
+      };
+      // The same sentence opened again reads the translation it got the first
+      // time, rather than asking again and getting it worded another way.
+      const kept = loadSentenceNote(identity)?.translation;
+      if (kept) {
+        setSession((prev) =>
+          prev
+            ? {
+                ...prev,
+                sentenceAnalysis: seedSentenceAnalysis(target.contextSentence, kept),
+                sentenceLoading: false,
+                sentenceFailed: false,
+              }
+            : prev,
+        );
+        return;
+      }
       setSession((prev) =>
         prev
           ? { ...prev, sentenceLoading: true, sentenceFailed: false }
@@ -103,6 +128,7 @@ export function useEnglishAnalysis(locale: Locale) {
           sourceType: target.sourceType,
           context: target.context,
         });
+        if (translation) saveSentenceTranslation(identity, translation);
         if (sentenceReqRef.current !== req) return;
         setSession((prev) =>
           prev
