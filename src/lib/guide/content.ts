@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-08";
+export const GUIDE_VERSION = "2026-10-09";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab";
 
@@ -66,17 +66,17 @@ export const GUIDE_KO: Guide = {
         ],
       },
       {
-        heading: "{ui:askExpression}",
+        heading: "막히면 내 언어로",
         body: [
-          "하고 싶은 말을 내 언어로 쓰면, 배우는 언어로 어떻게 말하는지 알려줘요.",
-          "대화와 ‘{ui:askExpression}’를 둘 다 켜두면, 어떤 언어로 썼는지 보고 알아서 나눠서 처리해요.",
+          "배우는 언어로 말하기 어려운 건 내 언어로 써도 돼요. 대화는 그대로 이어지고, 보낸 메시지 하나로 세요.",
+          "내 문장 아래 ‘{ui:chatShowExpression}’을 누르면 배우는 언어로 어떻게 말하는지 볼 수 있고, ‘{ui:chatUseExpression}’로 바로 써볼 수 있어요.",
         ],
       },
       {
         heading: "뜻 보기와 문장 분석",
         body: [
           "튜터의 답 아래 ‘{ui:chatReading}’을 누르면 내 언어로 된 뜻을 볼 수 있어요.",
-          "문장의 ‘{ui:insightAnalyze}’을 누르면 표현과 구조를 자세히 설명해줘요. 단어를 눌러 단어장에 저장할 수도 있어요.",
+          "문장의 ‘{ui:insightAnalyze}’을 누르면 문장 시트가 열려요. 점을 끌어 부분을 고르고 ‘{ui:quickAskMeaning}’ 같은 질문을 누르거나 직접 물어보세요. 답은 그 부분에 남아서 다음에도 볼 수 있어요.",
         ],
       },
       {
@@ -216,17 +216,17 @@ export const GUIDE_EN: Guide = {
         ],
       },
       {
-        heading: "{ui:askExpression}",
+        heading: "Stuck? Use your own language",
         body: [
-          "Write what you want to say in your own language, and you'll see how to say it in the language you're learning.",
-          "With both chat and {ui:askExpression} switched on, the app sees which language you wrote in and does the right one.",
+          "If something is hard to say in the language you're learning, write it in your own. The conversation carries on, and it counts as one message like any other.",
+          "Tap {ui:chatShowExpression} under your message to see how to say it, then {ui:chatUseExpression} to try it straight away.",
         ],
       },
       {
         heading: "Meanings and sentence analysis",
         body: [
           "Tap {ui:chatReading} under the tutor's reply to see it in your own language.",
-          "Tap {ui:insightAnalyze} on a sentence for a closer look at its expressions and structure. You can also tap words to save them to your vocabulary.",
+          "Tap {ui:insightAnalyze} on a sentence to open it. Drag across the dots to pick a part, then tap a question like {ui:quickAskMeaning} or ask your own. The answer stays on that part for next time.",
         ],
       },
       {

@@ -38,17 +38,17 @@
           ]
         },
         {
-          "heading": "{ui:askExpression}",
+          "heading": "¿Te atascas? Usa tu idioma",
           "body": [
-            "Escribe lo que quieres decir en tu idioma y verás cómo se dice en el idioma que aprendes.",
-            "Si usas chat y {ui:askExpression} juntos, la app detecta el idioma y responde como corresponde."
+            "Si algo te cuesta decirlo en el idioma que aprendes, escríbelo en el tuyo. La conversación sigue y cuenta como un mensaje más.",
+            "Toca {ui:chatShowExpression} bajo tu mensaje para ver cómo se dice y {ui:chatUseExpression} para probarlo enseguida."
           ]
         },
         {
           "heading": "Significados y análisis de frases",
           "body": [
             "Toca {ui:chatReading} bajo la respuesta del tutor para verla en tu idioma.",
-            "Toca {ui:insightAnalyze} en una frase para ver sus expresiones y estructura. También puedes guardar palabras en tu vocabulario tocándolas."
+            "Toca {ui:insightAnalyze} en una frase para abrirla. Arrastra sobre los puntos para elegir una parte y toca una pregunta como {ui:quickAskMeaning} o haz la tuya. La respuesta queda guardada en esa parte."
           ]
         },
         {
@@ -147,7 +147,7 @@
         }
       ]
     },
-    "_version": "2026-10-08"
+    "_version": "2026-10-09"
   },
   "ja": {
     "map": {
@@ -188,17 +188,17 @@
           ]
         },
         {
-          "heading": "{ui:askExpression}",
+          "heading": "詰まったら自分の言葉で",
           "body": [
-            "言いたいことを自分の言語で書くと、学習言語での言い方が表示されます。",
-            "チャットと「{ui:askExpression}」の両方がオンだと、どちらの言語で書いたか自動で判断してくれます。"
+            "学んでいる言語で言いにくいことは、自分の言葉で書いても大丈夫。会話はそのまま続き、ほかのメッセージと同じく1通として数えます。",
+            "自分の文の下の「{ui:chatShowExpression}」を押すと言い方が見られ、「{ui:chatUseExpression}」ですぐ使ってみられます。"
           ]
         },
         {
           "heading": "意味と文の分析",
           "body": [
             "チューターの返信下の「{ui:chatReading}」を押すと、自分の言語で意味が見られます。",
-            "文の「{ui:insightAnalyze}」を押すと、表現や構造を詳しく見られます。単語をタップして単語帳に保存もできます。"
+            "文の「{ui:insightAnalyze}」を押すと文シートが開きます。点をなぞって部分を選び、「{ui:quickAskMeaning}」などの質問を押すか、自分で質問してください。答えはその部分に残り、あとで見返せます。"
           ]
         },
         {
@@ -297,7 +297,7 @@
         }
       ]
     },
-    "_version": "2026-10-08"
+    "_version": "2026-10-09"
   },
   "zh": {
     "map": {
@@ -338,17 +338,17 @@
           ]
         },
         {
-          "heading": "{ui:askExpression}",
+          "heading": "卡住了就用自己的语言",
           "body": [
-            "用自己的语言写下想说的话，系统会告诉你目标语言的表达方式。",
-            "同时开启聊天和{ui:askExpression}时，系统会自动识别你用的语言并做相应处理。"
+            "用所学语言说不出来的，可以用自己的语言写。对话照常继续，和其他消息一样算一条。",
+            "点你句子下面的“{ui:chatShowExpression}”就能看到怎么说，再点“{ui:chatUseExpression}”马上试试。"
           ]
         },
         {
           "heading": "查看释义与句子分析",
           "body": [
             "点击导师回复下方的{ui:chatReading}，可查看母语释义。",
-            "点击句子的{ui:insightAnalyze}，可详细了解表达和结构。还可以点单词保存到词汇本。"
+            "点句子上的“{ui:insightAnalyze}”打开句子面板。拖过圆点选出一部分，点“{ui:quickAskMeaning}”这类问题，或自己提问。回答会留在那一部分，之后还能再看。"
           ]
         },
         {
@@ -447,7 +447,7 @@
         }
       ]
     },
-    "_version": "2026-10-08"
+    "_version": "2026-10-09"
   },
   "vi": {
     "map": {
@@ -488,17 +488,17 @@
           ]
         },
         {
-          "heading": "{ui:askExpression}",
+          "heading": "Bí thì dùng tiếng của bạn",
           "body": [
-            "Viết điều bạn muốn nói bằng tiếng mẹ đẻ, bạn sẽ thấy cách nói bằng ngôn ngữ đang học.",
-            "Khi bật cả chat và {ui:askExpression}, ứng dụng sẽ tự nhận diện ngôn ngữ bạn dùng và xử lý phù hợp."
+            "Điều gì khó nói bằng ngôn ngữ đang học, bạn cứ viết bằng tiếng của mình. Cuộc trò chuyện vẫn tiếp tục và chỉ tính là một tin nhắn như mọi tin khác.",
+            "Chạm {ui:chatShowExpression} dưới tin nhắn để xem cách nói, rồi {ui:chatUseExpression} để thử ngay."
           ]
         },
         {
           "heading": "Xem nghĩa và phân tích câu",
           "body": [
             "Nhấn {ui:chatReading} dưới câu trả lời để xem nghĩa bằng tiếng mẹ đẻ.",
-            "Nhấn {ui:insightAnalyze} trên một câu để xem chi tiết về cấu trúc và cách dùng. Bạn cũng có thể chạm vào từ để lưu vào từ vựng."
+            "Chạm {ui:insightAnalyze} trên một câu để mở câu đó. Kéo qua các chấm để chọn một phần, rồi chạm câu hỏi như {ui:quickAskMeaning} hoặc tự hỏi. Câu trả lời được lưu lại ở phần đó."
           ]
         },
         {
@@ -597,7 +597,7 @@
         }
       ]
     },
-    "_version": "2026-10-08"
+    "_version": "2026-10-09"
   },
   "fr": {
     "map": {
@@ -638,17 +638,17 @@
           ]
         },
         {
-          "heading": "{ui:askExpression}",
+          "heading": "Tu bloques ? Écris dans ta langue",
           "body": [
-            "Écrivez ce que vous voulez dire dans votre langue, et vous voyez comment le dire dans la langue apprise.",
-            "Si le chat et {ui:askExpression} sont activés, l’app détecte la langue et choisit la bonne option."
+            "Si c’est difficile à dire dans la langue que tu apprends, écris-le dans la tienne. La conversation continue et ça compte comme un message comme les autres.",
+            "Touche {ui:chatShowExpression} sous ton message pour voir comment le dire, puis {ui:chatUseExpression} pour l’essayer tout de suite."
           ]
         },
         {
           "heading": "Traductions et analyse de phrases",
           "body": [
             "Touchez {ui:chatReading} sous la réponse du tuteur pour la voir dans votre langue.",
-            "Touchez {ui:insightAnalyze} sur une phrase pour en explorer les expressions et la structure. Vous pouvez aussi toucher un mot pour l’ajouter à votre vocabulaire."
+            "Touche {ui:insightAnalyze} sur une phrase pour l’ouvrir. Fais glisser sur les points pour choisir un passage, puis touche une question comme {ui:quickAskMeaning} ou pose la tienne. La réponse reste sur ce passage."
           ]
         },
         {
@@ -747,7 +747,7 @@
         }
       ]
     },
-    "_version": "2026-10-08"
+    "_version": "2026-10-09"
   },
   "it": {
     "map": {
@@ -788,17 +788,17 @@
           ]
         },
         {
-          "heading": "{ui:askExpression}",
+          "heading": "Ti blocchi? Usa la tua lingua",
           "body": [
-            "Scrivi cosa vuoi dire nella tua lingua e vedrai come si dice nella lingua che stai imparando.",
-            "Se usi sia la chat che {ui:askExpression}, l’app capisce in che lingua hai scritto e risponde di conseguenza."
+            "Se qualcosa è difficile da dire nella lingua che studi, scrivilo nella tua. La conversazione continua e conta come un messaggio qualsiasi.",
+            "Tocca {ui:chatShowExpression} sotto il tuo messaggio per vedere come si dice, poi {ui:chatUseExpression} per provarlo subito."
           ]
         },
         {
           "heading": "Significati e analisi delle frasi",
           "body": [
             "Tocca {ui:chatReading} sotto la risposta del tutor per leggerla nella tua lingua.",
-            "Tocca {ui:insightAnalyze} su una frase per vedere spiegazioni su espressioni e struttura. Puoi anche toccare le parole per salvarle nel tuo vocabolario."
+            "Tocca {ui:insightAnalyze} su una frase per aprirla. Trascina sui punti per scegliere una parte, poi tocca una domanda come {ui:quickAskMeaning} o fanne una tua. La risposta resta su quella parte."
           ]
         },
         {
@@ -897,7 +897,7 @@
         }
       ]
     },
-    "_version": "2026-10-08"
+    "_version": "2026-10-09"
   },
   "pt": {
     "map": {
@@ -938,17 +938,17 @@
           ]
         },
         {
-          "heading": "{ui:askExpression}",
+          "heading": "Travou? Use seu idioma",
           "body": [
-            "Escreva o que quer dizer no seu idioma e veja como falar isso no idioma que está aprendendo.",
-            "Com chat e {ui:askExpression} ligados, o app entende em qual idioma você escreveu e faz o certo."
+            "Se algo é difícil de dizer no idioma que você aprende, escreva no seu. A conversa continua e conta como uma mensagem qualquer.",
+            "Toque em {ui:chatShowExpression} sob sua mensagem para ver como se diz e em {ui:chatUseExpression} para testar na hora."
           ]
         },
         {
           "heading": "Significados e análise de frases",
           "body": [
             "Toque em {ui:chatReading} na resposta do tutor para ver no seu idioma.",
-            "Toque em {ui:insightAnalyze} em uma frase para ver detalhes das expressões e estrutura. Você também pode tocar em palavras para salvar no seu vocabulário."
+            "Toque em {ui:insightAnalyze} numa frase para abri-la. Arraste pelos pontos para escolher uma parte e toque numa pergunta como {ui:quickAskMeaning} ou faça a sua. A resposta fica guardada nessa parte."
           ]
         },
         {
@@ -1047,7 +1047,7 @@
         }
       ]
     },
-    "_version": "2026-10-08"
+    "_version": "2026-10-09"
   },
   "ru": {
     "map": {
@@ -1088,17 +1088,17 @@
           ]
         },
         {
-          "heading": "{ui:askExpression}",
+          "heading": "Застряли? Пишите на своём языке",
           "body": [
-            "Напишите, что хотите сказать, на своём языке — увидите, как это сказать на изучаемом.",
-            "Если включены и чат, и {ui:askExpression}, приложение само определит язык и выберет нужный режим."
+            "Если что-то трудно сказать на изучаемом языке, напишите это на своём. Разговор продолжится, а сообщение посчитается как обычное.",
+            "Нажмите {ui:chatShowExpression} под своим сообщением, чтобы увидеть, как это сказать, и {ui:chatUseExpression}, чтобы сразу попробовать."
           ]
         },
         {
           "heading": "Переводы и разбор предложений",
           "body": [
             "Нажмите {ui:chatReading} под ответом тьютора, чтобы увидеть перевод.",
-            "Кликните {ui:insightAnalyze} на предложении — узнаете подробнее о выражениях и структуре. Слова можно сохранять в словарь."
+            "Нажмите {ui:insightAnalyze} у предложения, чтобы открыть его. Проведите по точкам, чтобы выбрать часть, и нажмите вопрос вроде {ui:quickAskMeaning} или задайте свой. Ответ останется у этой части."
           ]
         },
         {
@@ -1197,7 +1197,7 @@
         }
       ]
     },
-    "_version": "2026-10-08"
+    "_version": "2026-10-09"
   },
   "id": {
     "map": {
@@ -1238,17 +1238,17 @@
           ]
         },
         {
-          "heading": "{ui:askExpression}",
+          "heading": "Buntu? Pakai bahasamu",
           "body": [
-            "Tulis apa yang ingin kamu ucapkan dalam bahasamu sendiri, lalu akan muncul cara mengatakannya dalam bahasa yang kamu pelajari.",
-            "Jika chat dan {ui:askExpression} aktif bersamaan, aplikasi akan otomatis mengenali bahasa yang kamu pakai dan menyesuaikan."
+            "Kalau sesuatu sulit diucapkan dalam bahasa yang kamu pelajari, tulis saja dalam bahasamu. Percakapan tetap berlanjut dan dihitung satu pesan seperti biasa.",
+            "Ketuk {ui:chatShowExpression} di bawah pesanmu untuk melihat cara mengatakannya, lalu {ui:chatUseExpression} untuk langsung mencoba."
           ]
         },
         {
           "heading": "Arti dan Analisis Kalimat",
           "body": [
             "Ketuk {ui:chatReading} di bawah balasan tutor untuk melihat artinya dalam bahasamu.",
-            "Ketuk {ui:insightAnalyze} pada kalimat untuk melihat detail ekspresi dan strukturnya. Kamu juga bisa ketuk kata untuk menyimpannya ke kosakata."
+            "Ketuk {ui:insightAnalyze} pada kalimat untuk membukanya. Geser di atas titik untuk memilih bagian, lalu ketuk pertanyaan seperti {ui:quickAskMeaning} atau tanyakan sendiri. Jawabannya tersimpan di bagian itu."
           ]
         },
         {
@@ -1347,7 +1347,7 @@
         }
       ]
     },
-    "_version": "2026-10-08"
+    "_version": "2026-10-09"
   },
   "ar": {
     "map": {
@@ -1388,17 +1388,17 @@
           ]
         },
         {
-          "heading": "{ui:askExpression}",
+          "heading": "تعثّرت؟ اكتب بلغتك",
           "body": [
-            "اكتب ما تريد قوله بلغتك، وسترى كيف تقوله باللغة التي تتعلمها.",
-            "عند تفعيل الدردشة و{ui:askExpression} معاً، يكتشف التطبيق اللغة التي كتبت بها ويعالجها بالشكل المناسب."
+            "إذا صعب عليك قول شيء باللغة التي تتعلمها فاكتبه بلغتك. تستمر المحادثة وتُحسب رسالة واحدة كغيرها.",
+            "اضغط {ui:chatShowExpression} تحت رسالتك لترى كيف تقولها، ثم {ui:chatUseExpression} لتجرّبها فورًا."
           ]
         },
         {
           "heading": "المعاني وتحليل الجمل",
           "body": [
             "اضغط {ui:chatReading} تحت رد المعلم لترى الترجمة بلغتك.",
-            "اضغط {ui:insightAnalyze} على أي جملة لتتعرف أكثر على تعبيراتها وبنيتها. يمكنك أيضاً الضغط على الكلمات لحفظها في المفردات."
+            "اضغط {ui:insightAnalyze} على جملة لفتحها. اسحب فوق النقاط لاختيار جزء، ثم اضغط سؤالًا مثل {ui:quickAskMeaning} أو اسأل بنفسك. تبقى الإجابة محفوظة على ذلك الجزء."
           ]
         },
         {
@@ -1497,7 +1497,7 @@
         }
       ]
     },
-    "_version": "2026-10-08"
+    "_version": "2026-10-09"
   },
   "th": {
     "map": {
@@ -1538,17 +1538,17 @@
           ]
         },
         {
-          "heading": "{ui:askExpression}",
+          "heading": "ติดเมื่อไรใช้ภาษาของคุณ",
           "body": [
-            "พิมพ์สิ่งที่อยากพูดเป็นภาษาของคุณเอง แล้วจะเห็นวิธีพูดเป็นภาษาที่คุณเรียน",
-            "ถ้าเปิดทั้งแชทและ {ui:askExpression} ระบบจะดูว่าคุณพิมพ์ภาษาไหนแล้วเลือกโหมดให้เอง"
+            "อะไรที่พูดเป็นภาษาที่เรียนยาก เขียนเป็นภาษาของคุณได้เลย บทสนทนายังดำเนินต่อ และนับเป็นหนึ่งข้อความเหมือนปกติ",
+            "แตะ {ui:chatShowExpression} ใต้ข้อความของคุณเพื่อดูวิธีพูด แล้วแตะ {ui:chatUseExpression} เพื่อลองใช้ทันที"
           ]
         },
         {
           "heading": "ดูความหมายและวิเคราะห์ประโยค",
           "body": [
             "แตะ {ui:chatReading} ใต้คำตอบของติวเตอร์เพื่อดูความหมายเป็นภาษาของคุณ",
-            "แตะ {ui:insightAnalyze} ที่ประโยคเพื่อดูรายละเอียดโครงสร้างและสำนวน แตะที่คำศัพท์เพื่อบันทึกเข้าคลังคำศัพท์ได้"
+            "แตะ {ui:insightAnalyze} ที่ประโยคเพื่อเปิด ลากผ่านจุดเพื่อเลือกส่วน แล้วแตะคำถามอย่าง {ui:quickAskMeaning} หรือถามเอง คำตอบจะถูกเก็บไว้ที่ส่วนนั้น"
           ]
         },
         {
@@ -1647,7 +1647,7 @@
         }
       ]
     },
-    "_version": "2026-10-08"
+    "_version": "2026-10-09"
   },
   "hi": {
     "map": {
@@ -1688,17 +1688,17 @@
           ]
         },
         {
-          "heading": "{ui:askExpression}",
+          "heading": "अटकें तो अपनी भाषा में",
           "body": [
-            "जो कहना है, अपनी भाषा में लिखें — आपको सीखी जा रही भाषा में उसका तरीका मिलेगा।",
-            "अगर चैट और {ui:askExpression} दोनों ऑन हैं, तो ऐप खुद पहचान लेता है कि आपने किस भाषा में लिखा है और उसी हिसाब से जवाब देता है।"
+            "सीखी जा रही भाषा में जो कहना मुश्किल हो, उसे अपनी भाषा में लिख दें। बातचीत चलती रहेगी और यह बाकी संदेशों की तरह एक ही गिना जाएगा।",
+            "अपने संदेश के नीचे {ui:chatShowExpression} पर टैप करके देखें कि कैसे कहें, फिर {ui:chatUseExpression} से तुरंत आज़माएँ।"
           ]
         },
         {
           "heading": "अर्थ और वाक्य विश्लेषण",
           "body": [
             "ट्यूटर के जवाब के नीचे {ui:chatReading} टैप करें — अपनी भाषा में अर्थ देखें।",
-            "किसी वाक्य पर {ui:insightAnalyze} टैप करें, तो उसकी अभिव्यक्तियाँ और संरचना विस्तार से देखें। शब्दों पर टैप कर उन्हें शब्दावली में जोड़ सकते हैं।"
+            "किसी वाक्य पर {ui:insightAnalyze} टैप करके उसे खोलें। बिंदुओं पर खींचकर कोई हिस्सा चुनें, फिर {ui:quickAskMeaning} जैसा सवाल टैप करें या खुद पूछें। जवाब उसी हिस्से पर सहेजा रहता है।"
           ]
         },
         {
@@ -1797,6 +1797,6 @@
         }
       ]
     },
-    "_version": "2026-10-08"
+    "_version": "2026-10-09"
   }
 }

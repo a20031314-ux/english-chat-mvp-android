@@ -1,10 +1,17 @@
-import { NextRequest } from "next/server";
+import { NextRequest, after } from "next/server";
+import { recordComprehensionEvents } from "@/lib/server/learnerProfileStore";
+import { ASK_ABOUTS, type AskAbout } from "@/lib/learner/comprehension";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { getDailyOpUsed } from "@/lib/server/entitlementStore";
-import { FREE_DAILY_ASK_LIMIT, PREMIUM_DAILY_ASK_LIMIT } from "@/lib/billing/config";
+import {
+  FREE_DAILY_ASK_LIMIT,
+  FREE_DAILY_QUICK_ASK_LIMIT,
+  PREMIUM_DAILY_ASK_LIMIT,
+  PREMIUM_DAILY_QUICK_ASK_LIMIT,
+} from "@/lib/billing/config";
 import { selectionFitsSentence } from "@/lib/expressionInsight";
 import {
   explanationInLearningLanguage,
@@ -40,6 +47,18 @@ const MAX_QUESTION_CHARS = 300;
 const MAX_SENTENCE_CHARS = 600;
 const MAX_HISTORY = 4;
 
+/**
+ * The one-tap questions that replaced the fixed analysis button. Asked in
+ * English to the model, answered in the learner's language like any question;
+ * the button's own label is what the thread shows.
+ */
+const PRESETS = {
+  meaning: "What does this part mean here, in this sentence? Give the meaning in context, not a dictionary list.",
+  form: "Why is it in this form here — the grammar or structure behind it? Show what would change with a different form.",
+  alternatives: "What are other natural ways to say this, and how do they differ in tone or use?",
+} as const;
+type Preset = keyof typeof PRESETS;
+
 export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
 }
@@ -74,7 +93,9 @@ ${targetLanguageFocusHints(coerceLanguageCode(targetCode))}
 
 ${explanationLanguageGuard({ interfaceLanguage: uiCode, fieldsDescription: "answer", learningLanguage: targetCode })}
 
-Return only a json object: {"answer":"..."}`;
+Also say what the question was about, as one word: "meaning" (what it means), "grammar" (why this form or structure), "usage" (when or with whom to use it, how common), "nuance" (feel, tone, how it differs from a similar phrase), "pronunciation", or "other".
+
+Return only a json object: {"answer":"...","about":"meaning"}`;
 }
 
 export async function POST(request: NextRequest) {
@@ -92,7 +113,8 @@ export async function POST(request: NextRequest) {
 
   const sentence = readText(body.sentence, MAX_SENTENCE_CHARS);
   const selected = readText(body.selected, MAX_SENTENCE_CHARS);
-  const question = readText(body.question, MAX_QUESTION_CHARS);
+  const preset = typeof body.preset === "string" && body.preset in PRESETS ? (body.preset as Preset) : null;
+  const question = preset ? PRESETS[preset] : readText(body.question, MAX_QUESTION_CHARS);
   if (!sentence || !selected || !question || !selectionFitsSentence(sentence, selected)) {
     return jsonWithCors(request, { error: "question required" }, { status: 400 });
   }
@@ -106,11 +128,18 @@ export async function POST(request: NextRequest) {
     : "ko";
 
   const { userId, isPremium } = await resolveRequestEntitlement(request);
-  const limit = isPremium ? PREMIUM_DAILY_ASK_LIMIT : FREE_DAILY_ASK_LIMIT;
-  if ((await getDailyOpUsed(userId, "expressionAsk")) >= limit) {
+  const op = preset ? "expressionAskQuick" : "expressionAsk";
+  const limit = preset
+    ? isPremium
+      ? PREMIUM_DAILY_QUICK_ASK_LIMIT
+      : FREE_DAILY_QUICK_ASK_LIMIT
+    : isPremium
+      ? PREMIUM_DAILY_ASK_LIMIT
+      : FREE_DAILY_ASK_LIMIT;
+  if ((await getDailyOpUsed(userId, op)) >= limit) {
     return jsonWithCors(request, { error: "ASK_LIMIT_REACHED", limit }, { status: 429 });
   }
-  await meterRequest(request, "expressionAsk");
+  await meterRequest(request, op);
 
   const target = learningLanguageName(targetCode);
   const uiName = INTERFACE_LANGUAGE_LABELS[uiCode] ?? "Korean";
@@ -137,9 +166,11 @@ export async function POST(request: NextRequest) {
       messages: extra ? [...messages, { role: "system" as const, content: extra }] : messages,
     });
     const raw = completion.choices[0]?.message?.content ?? "";
-    const parsed = JSON.parse(raw) as { answer?: unknown };
+    const parsed = JSON.parse(raw) as { answer?: unknown; about?: unknown };
+    if (ASK_ABOUTS.includes(parsed.about as AskAbout)) about = parsed.about as AskAbout;
     return typeof parsed.answer === "string" ? parsed.answer.trim() : "";
   };
+  let about: AskAbout = "other";
 
   try {
     let answer = await ask();
@@ -154,7 +185,13 @@ export async function POST(request: NextRequest) {
     if (!answer) {
       return jsonWithCors(request, { error: "NO_ANSWER" }, { status: 502 });
     }
-    return jsonWithCors(request, { answer });
+    // The span they asked about joins what they are learning to understand
+    // (learner/comprehension.ts) — the words of the span and what the question
+    // was about, not the question itself.
+    after(() =>
+      recordComprehensionEvents(userId, targetCode, [{ kind: "ask", text: selected, about }]),
+    );
+    return jsonWithCors(request, { answer, about });
   } catch (error) {
     console.error("[expression-ask]", error);
     return jsonWithCors(request, { error: "ASK_FAILED" }, { status: 502 });

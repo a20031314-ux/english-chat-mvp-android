@@ -1,3 +1,4 @@
+import { segmentChunk } from "../wordSegments.ts";
 /**
  * Saying the line again, and being told what came out instead.
  *
@@ -56,7 +57,10 @@ function words(text: string): string[] {
     .toLowerCase()
     .replace(/[^\p{L}\p{M}\p{N}\s']/gu, " ")
     .split(/\s+/)
-    .filter(Boolean);
+    .filter(Boolean)
+    // Japanese, Chinese and Thai have no spaces to split on: without this a
+    // whole sentence was one word, and one wrong word made all of it wrong.
+    .flatMap((chunk) => segmentChunk(chunk));
 }
 
 /** Longest common subsequence, as pairs of indexes that matched. */

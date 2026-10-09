@@ -11,6 +11,8 @@ import { TargetLanguageSelector } from "@/components/TargetLanguageSelector";
 import { VocabularyPanel } from "@/components/VocabularyPanel";
 import { UpdateNotice } from "@/components/UpdateNotice";
 import { RoleplayTab, hasRoleplay } from "@/components/RoleplayTab";
+import { StudyMapTab } from "@/components/studyMap/StudyMapTab";
+import { onAppIntent } from "@/lib/appIntents";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
 import { BillingUiProvider, BillingOpenButton } from "@/components/BillingScreen";
 import { GuideButton } from "@/components/GuideSheet";
@@ -23,9 +25,9 @@ import {
   learningLanguageTextDir,
 } from "@/lib/learningLanguages";
 
-export type AppTab = "chat" | "roleplay" | "video" | "vocab";
+export type AppTab = "map" | "chat" | "roleplay" | "video" | "vocab";
 
-const TABS: AppTab[] = ["chat", "roleplay", "video", "vocab"];
+const TABS: AppTab[] = ["map", "chat", "roleplay", "video", "vocab"];
 
 function isAppTab(value: string | null): value is AppTab {
   return TABS.includes(value as AppTab);
@@ -113,6 +115,9 @@ function AppHomeInner({
     [syncUrl],
   );
 
+  // The study map sends learners to the tab a topic is practised in.
+  useEffect(() => onAppIntent("openTab", ({ tab: next }) => openTab(next)), [openTab]);
+
   useEffect(() => {
     const onPopState = (event: PopStateEvent) => {
       const raw = (event.state as { talkbankScreen?: string } | null)
@@ -124,6 +129,7 @@ function AppHomeInner({
   }, []);
 
   const tabItems: { id: AppTab; label: string }[] = [
+    { id: "map", label: ui.homeTabMap },
     { id: "chat", label: ui.homeTabChat },
     ...(roleplayAvailable
       ? [{ id: "roleplay" as const, label: ui.homeTabCall }]
@@ -201,6 +207,15 @@ function AppHomeInner({
                     />
                   </div>
                 </div>
+              ) : null}
+
+              {shownTab === "map" ? (
+                <StudyMapTab
+                  key={targetLanguage}
+                  ui={ui}
+                  locale={locale}
+                  targetLanguage={targetLanguage}
+                />
               ) : null}
 
               {shownTab === "vocab" ? (

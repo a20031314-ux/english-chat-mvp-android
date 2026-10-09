@@ -27,6 +27,14 @@ export const FREE_DAILY_CHAT_LIMIT = 10;
  */
 export const FREE_DAILY_ASK_LIMIT = 10;
 export const PREMIUM_DAILY_ASK_LIMIT = 100;
+/**
+ * The one-tap questions in the sentence sheet (what does it mean here, why
+ * this form, what else could be said). They replaced the fixed analysis
+ * button, which had no daily limit, so they get a roomier one of their own
+ * rather than eating the typed questions'.
+ */
+export const FREE_DAILY_QUICK_ASK_LIMIT = 30;
+export const PREMIUM_DAILY_QUICK_ASK_LIMIT = 300;
 
 /**
  * Study maps a learner may have drawn, per day.

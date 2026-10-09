@@ -43,7 +43,23 @@ export type MapActivity = {
   starter?: string;
   /** For video: a clip from this month's library. */
   videoId?: string;
+  /**
+   * For video: the expressions to listen for, in the language being learned,
+   * separated by " | " ("end up | wait it out"). What the app searches kept
+   * video transcripts for (videoIndex/match.ts), so a topic can open the scene
+   * where they are said — not only a clip from the month's seven.
+   */
+  listenFor?: string;
 };
+
+/** The expressions a video activity asks to listen for, one per entry. */
+export function listenForPhrases(activity: Pick<MapActivity, "listenFor">): string[] {
+  return (activity.listenFor ?? "")
+    .split("|")
+    .map((phrase) => phrase.replace(/\s+/g, " ").trim())
+    .filter(Boolean)
+    .slice(0, 4);
+}
 
 export type MapLink = { to: string; why: string };
 
@@ -138,6 +154,8 @@ export function normalizeMap(
         if (library.has(videoId)) activity.videoId = videoId;
         else dropped.push(`${id}: video ${videoId} is not in the library`);
       }
+      const listenFor = text(a.listenFor, 120);
+      if (tab === "video" && listenFor) activity.listenFor = listenFor;
       // The id is for the app; the screen shows the clip's title. Models
       // repeat it in the sentence anyway ("watch nZP7pb_t4oA and…").
       for (const known of library) {

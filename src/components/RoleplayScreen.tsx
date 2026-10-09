@@ -7,6 +7,7 @@ import {
   RoleplayReviewPanel,
   type TranscriptLine,
 } from "@/components/RoleplayReview";
+import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { usePremium } from "@/contexts/PremiumContext";
 import {
   learningLanguageSpeechTag,
@@ -196,6 +197,7 @@ export function RoleplayScreen({
 }) {
   const { isPremium } = usePremium();
   const scenario = findScenario(scenarioId);
+  const analysis = useEnglishAnalysisOptional();
   const [state, setState] = useState<SessionState | null>(null);
   const [instruction, setInstruction] = useState<Instruction | null>(null);
   const [said, setSaid] = useState<Spoken[]>([]);
@@ -765,6 +767,18 @@ export function RoleplayScreen({
 
   if (!scenario) return null;
 
+  // Lines open in the sentence sheet once the scene is over and the
+  // microphone is shut for good; while it is going they stay as they are.
+  const sceneOver = Boolean(state?.finished || instruction?.do === "finish");
+  const analyzeLine = (text: string) =>
+    analysis?.open({
+      selectedText: text,
+      contextSentence: text,
+      sourceType: "conversation",
+      language: scenario.language,
+      intent: "sentence",
+    });
+
   return (
     <FullScreenLayer>
       <header className="flex shrink-0 items-center justify-between border-b border-white/10 px-4 py-3">
@@ -795,6 +809,7 @@ export function RoleplayScreen({
             ui={ui}
             onReview={openReview}
             onTranslate={translateLine}
+            onAnalyze={sceneOver ? analyzeLine : undefined}
           />
         ))}
         {directing || thinking ? (

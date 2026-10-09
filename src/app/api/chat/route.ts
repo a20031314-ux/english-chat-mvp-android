@@ -1,5 +1,7 @@
 import { meterRequest } from "@/lib/server/meterRequest";
-import { NextRequest } from "next/server";
+import { NextRequest, after } from "next/server";
+import { observeChatLines, observeChatTurn } from "@/lib/server/learnerProfileStore";
+import { writtenInLearningLanguage } from "@/lib/inputLanguage";
 import type OpenAI from "openai";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
@@ -68,6 +70,12 @@ type ChatLanguages = {
 type ChatTurnOptions = {
   conversationMode?: ConversationMode;
   imageDataUrl?: string;
+  /**
+   * They wrote this turn in their own language, not the one they are learning
+   * — they did not know how to say it. The conversation carries on; how to say
+   * it is a card they open themselves (how_to_say with expressionOnly).
+   */
+  ownLanguage?: boolean;
 };
 
 function resolveChatLanguages(body: {
@@ -210,6 +218,10 @@ function buildChatSystem(
 This turn is temporary tutor mode: they are stuck. You may briefly explain in ${explanationLanguage}, then go back to speaking ${targetName} as yourself. Do not stay in teacher voice after this turn. Correction still belongs in the correction JSON field, not as a lecture inside assistantMessage.`
       : `
 conversationMode is native. Talk like a person on a messenger. Do not teach, quiz, or explain grammar unless they asked for help.`;
+  const ownLanguageBlock = options.ownLanguage
+    ? `
+This turn they wrote in ${explanationLanguage}, their own language, because they did not know how to say it in ${targetName}. Understand it and reply in ${targetName} as yourself, carrying the conversation on — as a friend who speaks both would. Do not translate their message back to them and do not teach. Correction does not apply to this turn: set corrected and natural to their message unchanged and explanation to "".`
+    : "";
   const imageBlock = options.imageDataUrl
     ? `
 They attached a photo. Look at it and react the way a friend would in chat. Do not caption it like a vision demo unless they asked what is in the picture. If they also sent text, reply to the text and the photo together. Correction applies to their text only, not the image.`
@@ -220,6 +232,7 @@ They attached a photo. Look at it and react the way a friend would in chat. Do n
 
 You chat in English with the user. Correction is a separate job from talking.
 ${tutorBlock}
+${ownLanguageBlock}
 ${imageBlock}
 
 The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only).
@@ -242,6 +255,7 @@ ${identity}
 
 You chat in ${targetName} with the user. Correction is a separate, DETAILED job from talking — catch real ${targetName} mistakes carefully, the same way an English tutor would for English, but using ${targetName}'s own grammar.
 ${tutorBlock}
+${ownLanguageBlock}
 ${imageBlock}
 
 The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only).
@@ -672,6 +686,35 @@ function parseRecent(raw: unknown, limit = 8): string[] {
     .slice(-limit);
 }
 
+/** The expression alone — how to say what they wrote — with no chat turn after it. */
+async function runHowToSayCard(
+  openai: OpenAI,
+  message: string,
+  recent: string[],
+  langs: ChatLanguages,
+  isPremium: boolean,
+): Promise<Omit<ExpressionPayload, "assistantMessage" | "spokenReply" | "correction">> {
+  const completion = await openai.chat.completions.create({
+    model: chatModel(),
+    messages: [
+      { role: "system", content: buildHowToSaySystem(langs, isPremium) },
+      { role: "user", content: JSON.stringify({ wantToSay: message, recent }) },
+    ],
+    response_format: { type: "json_object" },
+    temperature: 0.75,
+  });
+  const raw = completion.choices[0]?.message?.content;
+  if (!raw) throw new Error("empty completion");
+  const expression = normalizeHowToSayExpression(message, JSON.parse(raw) as Partial<ExpressionPayload>);
+  return {
+    expression: expression.expression,
+    example: expression.example || "",
+    ...(isPremium && expression.simpler ? { simpler: expression.simpler } : {}),
+    ...(isPremium && expression.moreNative ? { moreNative: expression.moreNative } : {}),
+    ...(isPremium && expression.analysis ? { analysis: expression.analysis } : {}),
+  };
+}
+
 async function runHowToSay(
   openai: OpenAI,
   message: string,
@@ -733,6 +776,8 @@ export async function POST(request: NextRequest) {
     recent?: unknown;
     imageDataUrl?: unknown;
     conversationMode?: unknown;
+    ownLanguage?: unknown;
+    expressionOnly?: unknown;
   };
   try {
     body = await request.json();
@@ -781,6 +826,20 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "message required" }, { status: 400 });
   }
 
+  // An expression card opened under a line already sent is not a new chat:
+  // what is counted is what the learner sends, whatever language it is in.
+  const expressionOnly = mode === "how_to_say" && body.expressionOnly === true;
+  if (expressionOnly) {
+    try {
+      void meterRequest(request, "howToSayCard");
+      const card = await runHowToSayCard(openai, message, parseRecent(body.recent), langs, isPremium);
+      return jsonWithCors(request, card);
+    } catch (error) {
+      console.error("[chat-card]", error);
+      return jsonWithCors(request, { error: "CARD_FAILED" }, { status: 502 });
+    }
+  }
+
   if (
     (mode === "chat" || mode === "how_to_say") &&
     !isPremium &&
@@ -818,11 +877,43 @@ export async function POST(request: NextRequest) {
       {
         conversationMode,
         imageDataUrl,
+        ownLanguage: body.ownLanguage === true,
         onReread: () => void meterRequest(request, "chatReread"),
       },
     );
     if (!isPremium) {
       await incrementDailyUsed(userId);
+    }
+    // The sentence is read for the constructions in it once the reply is on
+    // its way (learner/profile.ts). Only a sentence written in the language
+    // being learned is practice; a question asked in the learner's own
+    // language is not read.
+    const practised =
+      Boolean(message) &&
+      writtenInLearningLanguage(message, langs.targetLanguage, langs.interfaceLanguage);
+    // And both lines are held against what they have looked up before: the
+    // reply as an appearance, their sentence as use (learner/comprehension.ts).
+    after(() =>
+      observeChatLines({
+        userId,
+        language: langs.targetLanguage,
+        tutorLine: data.assistantMessage ?? "",
+        ...(practised
+          ? { learnerLine: { sentence: message, corrected: data.correction?.corrected ?? "" } }
+          : {}),
+      }),
+    );
+    if (practised) {
+      after(async () => {
+        void meterRequest(request, "learnerObserve");
+        await observeChatTurn({
+          openai,
+          userId,
+          language: langs.targetLanguage,
+          sentence: message,
+          corrected: data.correction?.corrected ?? "",
+        });
+      });
     }
     return jsonWithCors(request, data);
   } catch (error) {

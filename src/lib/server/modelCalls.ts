@@ -31,6 +31,9 @@ export const MODEL_CALLS_PER_REQUEST = {
   chatReread: 1,
   // A "how do I say this" turn. One call, and the same model.
   howToSay: 1,
+  // The same expression opened as a card under a line written in the
+  // learner's own language — one call, no chat turn, not a counted chat.
+  howToSayCard: 1,
   // The opening line of a conversation nobody has spoken in yet.
   chatStart: 1,
   analysisInput: 5,
@@ -41,9 +44,14 @@ export const MODEL_CALLS_PER_REQUEST = {
   // had to be asked for again — counted on its own so the pair says how often.
   expressionAsk: 1,
   expressionAskRetry: 1,
+  // A one-tap question from the sentence sheet (meaning / form / alternatives).
+  expressionAskQuick: 1,
   // A study map drawn from a goal (curriculum/generate.ts). One call, larger
   // than most — it writes the whole map at once.
   curriculumGenerate: 1,
+  // One chat sentence read for the constructions in it (learner/classify.ts),
+  // after the reply has gone out. Small model, ids in and out.
+  learnerObserve: 1,
   vocabGloss: 1,
   learningSpans: 1,
   translate: 1,

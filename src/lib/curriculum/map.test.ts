@@ -91,3 +91,29 @@ test("connections read both ways, and continue picks the first unfinished", () =
   assert.equal(nextTopic(map, { A1: "done", B1: "doing" })?.id, "B1");
   assert.equal(nextTopic(map, Object.fromEntries(map.topics.map((t) => [t.id, "done" as const]))), null);
 });
+
+test("a video activity keeps what to listen for, split into phrases", async () => {
+  const { normalizeMap, listenForPhrases } = await import("./map.ts");
+  const topics = ["A1", "A2", "B1", "B2", "C1", "D1"].map((id, index) => ({
+    id,
+    sector: id[0],
+    title: `t${id}`,
+    order: index + 1,
+    activities:
+      id === "A1"
+        ? [
+            { tab: "video", task: "Watch how they say it", listenFor: " end up |  wait it out | " },
+            { tab: "chat", task: "Say it", listenFor: "ignored on chat" },
+          ]
+        : [{ tab: "vocab", task: "Review" }],
+    links: [],
+  }));
+  const result = normalizeMap(
+    { title: "m", sectors: ["A", "B", "C", "D"].map((id) => ({ id, title: id })), topics },
+    { id: "m1", language: "en", uiLanguage: "ko", goal: "g", level: "beginner", createdAt: "x", libraryVideoIds: [] },
+  );
+  const [video, chat] = result!.map.topics.find((t) => t.id === "A1")!.activities;
+  assert.deepEqual(listenForPhrases(video!), ["end up", "wait it out"]);
+  assert.equal(video!.videoId, undefined);
+  assert.equal(chat!.listenFor, undefined);
+});
