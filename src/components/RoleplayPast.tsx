@@ -2,6 +2,7 @@
 
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { RoleplayLine } from "@/components/RoleplayReview";
+import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import type { SavedConversation } from "@/lib/roleplay/saved";
 import type { UICopy } from "@/lib/copy";
 
@@ -27,6 +28,17 @@ export function RoleplayPast({
   ui: UICopy;
   onClose: () => void;
 }) {
+  const analysis = useEnglishAnalysisOptional();
+  const analyze = analysis
+    ? (text: string) =>
+        analysis.open({
+          selectedText: text,
+          contextSentence: text,
+          sourceType: "conversation",
+          language: saved.language,
+          intent: "sentence",
+        })
+    : undefined;
   return (
     <FullScreenLayer>
       <header className="flex shrink-0 items-center justify-between gap-3 border-b border-white/10 px-4 py-3">
@@ -55,6 +67,7 @@ export function RoleplayPast({
             line={line.stuck ? { ...line, stuck: undefined } : line}
             ui={ui}
             onReview={() => undefined}
+            onAnalyze={analyze}
           />
         ))}
       </ol>

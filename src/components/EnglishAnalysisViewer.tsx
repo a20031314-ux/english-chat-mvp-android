@@ -17,7 +17,9 @@ import {
   analysisDimensionLabel,
   orderedDimensionEntries,
 } from "@/lib/salience/dimensionLabels";
+import { SentenceAskPanel, SentenceAskThreads } from "@/components/SentenceAskPanel";
 import {
+  clickRangeForText,
   findLearningSpan,
   listClickableSpans,
   peekLearningSpans,
@@ -26,6 +28,13 @@ import {
 import { DEFAULT_LEARNING_LANGUAGE_CODE, learningLanguageTextDir } from "@/lib/learningLanguages";
 import { loadExpressionUnits } from "@/lib/requestExpressionUnits";
 import { loadLearningSpans } from "@/lib/requestLearningSpans";
+import {
+  deleteAskThread,
+  loadSentenceNote,
+  saveSentenceUnits,
+  sentenceNoteKey,
+  type SentenceNote,
+} from "@/lib/sentenceNotes";
 import { listWordSpans } from "@/lib/textTokens";
 import { isSentenceVocabUnit } from "@/lib/vocabulary";
 
@@ -164,6 +173,24 @@ function SentenceTab({
   );
   const useIdiomUnderline = targetLanguage === "en";
   const [unitTexts, setUnitTexts] = useState<string[]>([]);
+  const noteIdentity = {
+    sentence,
+    language: targetLanguage,
+    uiLanguage: locale,
+  };
+  // The note follows the sentence on screen: when the sheet moves to another
+  // sentence, that sentence's note is read in the same render.
+  const noteKey = sentenceNoteKey(sentence, targetLanguage, locale);
+  const [noteState, setNoteState] = useState<{
+    key: string;
+    note: SentenceNote | null;
+  }>(() => ({ key: noteKey, note: loadSentenceNote(noteIdentity) }));
+  if (noteState.key !== noteKey) {
+    setNoteState({ key: noteKey, note: loadSentenceNote(noteIdentity) });
+  }
+  const note = noteState.key === noteKey ? noteState.note : null;
+  const setNote = (next: SentenceNote | null) =>
+    setNoteState({ key: noteKey, note: next });
 
   useEffect(() => {
     if (targetLanguage === "en") return;
@@ -185,7 +212,17 @@ function SentenceTab({
     const extra = drillIns
       .map((element) => element.text.replace(/\s+/g, " ").trim())
       .filter((text) => listWordSpans(text).length >= 2);
-    void loadExpressionUnits(sentence, targetLanguage).then((units) => {
+    // Units found for this sentence before are read from its note; only a
+    // sentence seen for the first time asks the server.
+    const identity = { sentence, language: targetLanguage, uiLanguage: locale };
+    const kept = loadSentenceNote(identity)?.units;
+    const loading = kept?.length
+      ? Promise.resolve(kept)
+      : loadExpressionUnits(sentence, targetLanguage).then((units) => {
+          if (units.length) saveSentenceUnits(identity, units);
+          return units;
+        });
+    void loading.then((units) => {
       if (cancelled) return;
       const seen = new Set<string>();
       const merged: string[] = [];
@@ -200,7 +237,7 @@ function SentenceTab({
     return () => {
       cancelled = true;
     };
-  }, [sentence, targetLanguage, useIdiomUnderline, drillIns.map((element) => element.text).join("|")]);
+  }, [sentence, targetLanguage, locale, useIdiomUnderline, drillIns.map((element) => element.text).join("|")]);
 
   const openSpan = (
     text: string,
@@ -229,6 +266,8 @@ function SentenceTab({
     text: string;
     idiom: boolean;
     active: boolean;
+    first: number;
+    last: number;
   }> = [];
   let cursor = 0;
   let index = 0;
@@ -253,6 +292,8 @@ function SentenceTab({
         text: sentence.slice(idiom.start, idiom.end),
         idiom: true,
         active,
+        first: words.indexOf(covered[0] ?? word),
+        last: words.indexOf(covered[covered.length - 1] ?? word),
       });
       cursor = idiom.end;
       while (index < words.length && words[index]!.start < idiom.end) {
@@ -264,13 +305,38 @@ function SentenceTab({
       session.rangeActive &&
       index >= session.rangeStart &&
       index <= session.rangeEnd;
-    pieces.push({ gap, text: word.text, idiom: false, active });
+    pieces.push({ gap, text: word.text, idiom: false, active, first: index, last: index });
     cursor = word.end;
     index += 1;
   }
 
   void spanTick;
   const cachedSpans = peekLearningSpans(sentence, targetLanguage);
+
+  // Words someone asked about carry a mark, numbered in the order the
+  // questions were first asked; the number opens that thread again.
+  const threadMarks = (note?.threads ?? [])
+    .map((thread, threadIndex) => {
+      const whole = isSameAnalysisSpan(thread.selected, sentence);
+      const range = whole
+        ? null
+        : clickRangeForText(sentence, thread.selected, targetLanguage);
+      return range ? { number: threadIndex + 1, selected: thread.selected, ...range } : null;
+    })
+    .filter((mark): mark is { number: number; selected: string; start: number; end: number } => mark !== null);
+  const markOn = (piece: { first: number; last: number }) =>
+    threadMarks.some((mark) => piece.last >= mark.start && piece.first <= mark.end);
+  const marksEndingAt = (piece: { first: number; last: number }) =>
+    threadMarks.filter((mark) => mark.end >= piece.first && mark.end <= piece.last);
+  const openThread = (selectedWords: string) => {
+    if (isSameAnalysisSpan(selectedWords, sentence)) {
+      onRange(0, Math.max(0, words.length - 1));
+      return;
+    }
+    const range = clickRangeForText(sentence, selectedWords, targetLanguage);
+    if (range) onRange(range.start, range.end);
+  };
+  const askWords = selected && !rangeIsSentence ? selected : sentence;
 
   return (
     <>
@@ -298,11 +364,26 @@ function SentenceTab({
                   })
                 }
                 className={`cursor-pointer rounded-sm hover:bg-white/10 ${
-                  piece.idiom ? "underline decoration-white decoration-2 underline-offset-2" : ""
+                  piece.idiom
+                    ? "underline decoration-white decoration-2 underline-offset-2"
+                    : markOn(piece)
+                      ? "underline decoration-amber-200/80 decoration-dotted decoration-2 underline-offset-4"
+                      : ""
                 } ${piece.active ? "bg-white/25" : ""}`}
               >
                 {piece.text}
               </button>
+              {marksEndingAt(piece).map((mark) => (
+                <button
+                  key={`mark-${mark.number}`}
+                  type="button"
+                  onClick={() => openThread(mark.selected)}
+                  className="ml-0.5 align-super text-[10px] font-semibold text-amber-200/90 hover:text-amber-100"
+                  aria-label={`${ui.askNotesTitle} ${mark.number}`}
+                >
+                  {mark.number}
+                </button>
+              ))}
             </span>
             );
           })}
@@ -354,6 +435,9 @@ function SentenceTab({
         active={session.rangeActive}
         onRange={onRange}
       />
+      {!session.rangeActive && words.length > 1 ? (
+        <p className="mt-2 text-xs leading-relaxed text-slate-500">{ui.rangeHint}</p>
+      ) : null}
 
       {selected && !rangeIsSentence ? (
         <div className="mt-3 flex items-start gap-2">
@@ -509,6 +593,27 @@ function SentenceTab({
           ))}
         </div>
       ) : null}
+
+      <SentenceAskPanel
+        key={askWords}
+        ui={ui}
+        sentence={sentence}
+        selected={askWords}
+        wholeSentence={askWords === sentence}
+        note={note}
+        context={session.target.context}
+        uiLanguage={locale}
+        targetLanguage={targetLanguage}
+        onNote={setNote}
+        onDelete={(threadId) => setNote(deleteAskThread(noteIdentity, threadId))}
+      />
+      <SentenceAskThreads
+        ui={ui}
+        note={note}
+        current={askWords}
+        onOpen={openThread}
+        onDelete={(threadId) => setNote(deleteAskThread(noteIdentity, threadId))}
+      />
     </>
   );
 }
