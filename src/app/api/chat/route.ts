@@ -1,5 +1,7 @@
 import { meterRequest } from "@/lib/server/meterRequest";
-import { NextRequest } from "next/server";
+import { NextRequest, after } from "next/server";
+import { observeChatTurn } from "@/lib/server/learnerProfileStore";
+import { writtenInLearningLanguage } from "@/lib/inputLanguage";
 import type OpenAI from "openai";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
@@ -823,6 +825,25 @@ export async function POST(request: NextRequest) {
     );
     if (!isPremium) {
       await incrementDailyUsed(userId);
+    }
+    // The sentence is read for the constructions in it once the reply is on
+    // its way (learner/profile.ts). Only a sentence written in the language
+    // being learned is practice; a question asked in the learner's own
+    // language is not read.
+    if (
+      message &&
+      writtenInLearningLanguage(message, langs.targetLanguage, langs.interfaceLanguage)
+    ) {
+      after(async () => {
+        void meterRequest(request, "learnerObserve");
+        await observeChatTurn({
+          openai,
+          userId,
+          language: langs.targetLanguage,
+          sentence: message,
+          corrected: data.correction?.corrected ?? "",
+        });
+      });
     }
     return jsonWithCors(request, data);
   } catch (error) {

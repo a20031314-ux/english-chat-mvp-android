@@ -18,7 +18,7 @@
     "test:translate": "node --experimental-strip-types --test src/lib/reconstructionTranslate/pipeline.test.ts",
     "test:call": "node --experimental-strip-types --test src/lib/realtimeCallSession.test.ts src/lib/callLines.test.ts src/lib/roleplay/script.test.ts src/lib/roleplay/difficulty.test.ts src/lib/roleplay/hearFrame.test.ts src/lib/roleplay/session.test.ts src/lib/roleplay/correctionPrompt.test.ts src/lib/roleplay/director.test.ts src/lib/roleplay/memory.test.ts src/lib/roleplay/review.test.ts src/lib/roleplay/practice.test.ts src/lib/roleplay/transcript.test.ts src/lib/roleplay/reviewDraft.test.ts src/lib/roleplay/saved.test.ts",
     "test:chat": "node --experimental-strip-types --test src/lib/inputLanguage.test.ts",
-    "test:curriculum": "node --experimental-strip-types --test src/lib/curriculum/map.test.ts src/lib/curriculum/engine/engine.test.ts",
+    "test:curriculum": "node --experimental-strip-types --test src/lib/learner/learner.test.ts src/lib/curriculum/map.test.ts src/lib/curriculum/engine/engine.test.ts",
     "check:languages": "node --experimental-strip-types scripts/check-language-coverage.mjs",
     "check:conversation": "node --experimental-strip-types scripts/check-conversation-quality.mjs",
     "verify:library": "node --experimental-strip-types scripts/verify-video-library.mjs",

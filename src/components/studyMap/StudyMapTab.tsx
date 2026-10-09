@@ -25,6 +25,7 @@ import {
   type SceneMatch,
 } from "@/lib/studyMapClient";
 import { normalizeYouTubeWatchUrl } from "@/lib/videoLearning";
+import { LearnerPanel } from "@/components/studyMap/LearnerPanel";
 
 /**
  * 학습 지도: a learner's goal drawn as topics in four sectors, in an order,
@@ -168,11 +169,24 @@ export function StudyMapTab({
       </header>
 
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
+        {!loading ? (
+          <div className="mx-auto mb-4 max-w-2xl">
+            <LearnerPanel
+              ui={ui}
+              locale={locale}
+              targetLanguage={targetLanguage}
+              isPremium={isPremium}
+              onRedraw={map ? () => setEditing(true) : undefined}
+            />
+          </div>
+        ) : null}
         {loading ? (
           <p className="text-sm text-slate-400">{ui.mapLoading}</p>
         ) : showForm ? (
           <GoalForm
             ui={ui}
+            initialGoal={map?.goal ?? ""}
+            initialLevel={map?.level ?? "beginner"}
             drawing={drawing}
             error={error}
             limit={limit}
@@ -212,6 +226,8 @@ export function StudyMapTab({
 
 function GoalForm({
   ui,
+  initialGoal,
+  initialLevel,
   drawing,
   error,
   limit,
@@ -222,6 +238,8 @@ function GoalForm({
   onRestore,
 }: {
   ui: UICopy;
+  initialGoal: string;
+  initialLevel: Level;
   drawing: boolean;
   error: MapError | null;
   limit: number;
@@ -231,8 +249,8 @@ function GoalForm({
   onCancel: () => void;
   onRestore: () => void;
 }) {
-  const [goal, setGoal] = useState("");
-  const [level, setLevel] = useState<Level>("beginner");
+  const [goal, setGoal] = useState(initialGoal);
+  const [level, setLevel] = useState<Level>(initialLevel);
   const levelLabel: Record<Level, string> = {
     beginner: ui.mapLevelBeginner,
     intermediate: ui.mapLevelIntermediate,

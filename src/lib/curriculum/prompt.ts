@@ -21,7 +21,49 @@ export type MapRequest = {
   /** Name of the language the app is read in, in English (e.g. "Korean"). */
   uiName: string;
   library: { videoId: string; title: string }[];
+  /**
+   * What their chats say about their sentences, and how they want to go on
+   * (learner/profile.ts profileBrief). Absent for someone with no history.
+   */
+  learner?: {
+    level: string | null;
+    weak: string[];
+    learning: string[];
+    nextBandConstructions: string[];
+    plan: { focus: "weak" | "next" | "topic"; method: "chat" | "roleplay" | "video" | "mixed" };
+  };
 };
+
+const FOCUS_RULE = {
+  weak: "Their chosen focus is shoring up the weak constructions: give each of them a topic in the expressions-and-grammar sector (B), tied to a situation in A where it is needed, and make the chat starters call for them.",
+  next: "Their chosen focus is moving up a band: bring in the next band's constructions as B topics, each tied to a situation in A where it is natural, and keep weak ones only where they fit.",
+  topic: "Their chosen focus is the situations themselves: follow the goal's situations, and touch weak constructions only where a situation naturally needs them.",
+} as const;
+
+const METHOD_RULE = {
+  chat: "They prefer to practise in chat: make chat the first activity of most topics.",
+  roleplay: "They prefer to practise by speaking: make a roleplay call the first activity of most topics.",
+  video: "They prefer to learn from videos: give most topics a video activity with listenFor.",
+  mixed: "They like a mix: spread the activities across the tabs.",
+} as const;
+
+function learnerSection(learner: MapRequest["learner"]): string {
+  if (!learner) return "";
+  const list = (items: string[]) => (items.length ? items.map((item) => `  - ${item}`).join("\n") : "  (none yet)");
+  return `
+
+What their own sentences in chat show so far (constructions they use, judged on their recent uses):
+- Level reached: ${learner.level ?? "not measured yet"}
+- Weak — wrong in recent uses:
+${list(learner.weak)}
+- Still settling:
+${list(learner.learning.slice(0, 8))}
+- Next band, not yet mastered:
+${list(learner.nextBandConstructions.slice(0, 8))}
+${FOCUS_RULE[learner.plan.focus]}
+${METHOD_RULE[learner.plan.method]}
+Name the construction in the topic's title or summary when a topic is there for it, in plain words a learner understands.`;
+}
 
 export function mapSystemPrompt(input: MapRequest): string {
   const sectors = SECTOR_IDS.map((id) => `  ${id}: ${SECTOR_BRIEFS[id]}`).join("\n");
@@ -46,6 +88,8 @@ Topic ids are the sector letter and a number: A1, A2, B1, … Give every topic:
 ${library}
     vocab — reviewing the words they saved.
 - links: 1 to 3 other topics this one connects to, mostly in other sectors, each with "why": one sentence on how the two help each other ("the polite request forms in B2 are what you say when ordering in A1").
+
+${learnerSection(input.learner)}
 
 Also give the map a title (a few words) and a summary (two sentences: what the goal takes, and the path the order follows), and give each sector a title and a one-line description specific to this goal.
 

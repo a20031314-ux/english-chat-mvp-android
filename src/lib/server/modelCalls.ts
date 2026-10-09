@@ -44,6 +44,9 @@ export const MODEL_CALLS_PER_REQUEST = {
   // A study map drawn from a goal (curriculum/generate.ts). One call, larger
   // than most — it writes the whole map at once.
   curriculumGenerate: 1,
+  // One chat sentence read for the constructions in it (learner/classify.ts),
+  // after the reply has gone out. Small model, ids in and out.
+  learnerObserve: 1,
   vocabGloss: 1,
   learningSpans: 1,
   translate: 1,

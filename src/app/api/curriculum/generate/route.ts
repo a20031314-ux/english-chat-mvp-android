@@ -6,6 +6,8 @@ import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
 import { getDailyOpUsed } from "@/lib/server/entitlementStore";
 import { saveNewMap } from "@/lib/server/curriculumStore";
+import { readLearnerProfile } from "@/lib/server/learnerProfileStore";
+import { profileBrief } from "@/lib/learner/profile";
 import { FREE_DAILY_MAP_LIMIT, PREMIUM_DAILY_MAP_LIMIT } from "@/lib/billing/config";
 import { normalizeMap, type StudyMap } from "@/lib/curriculum/map";
 import { mapSystemPrompt, mapUserMessage } from "@/lib/curriculum/prompt";
@@ -75,12 +77,18 @@ export async function POST(request: NextRequest) {
 
   const pack = currentLibraryPack(targetCode);
   const library = (pack?.clips ?? []).map((clip) => ({ videoId: clip.videoId, title: clip.title }));
+  // What their chats have shown, and the plan they chose, shape the map.
+  // A learner with no history and the default plan adds nothing.
+  const profile = await readLearnerProfile(userId, targetCode);
+  const brief = profileBrief(profile);
+  const hasHistory = profile.turns > 0 || profile.updatedAt > 0;
   const input = {
     goal,
     level,
     target: learningLanguageName(targetCode),
     uiName: INTERFACE_LANGUAGE_LABELS[uiCode] ?? "Korean",
     library,
+    ...(hasHistory ? { learner: brief } : {}),
   };
 
   try {
