@@ -128,6 +128,12 @@ export type PrepareTranscriptOptions = {
   sttOverride?: SttSegment[];
   /** Where sttOverride came from. Without it every upload looked like Whisper. */
   sttOverrideSource?: SttSource;
+  /**
+   * sttOverride is already cut into sentences — it is a kept transcript
+   * (lib/server/videoTranscriptStore), not raw speech — so the model pass that
+   * cuts it is skipped.
+   */
+  sttOverrideRefined?: boolean;
   /** Longest video this plan may prepare (seconds). */
   maxDurationSeconds?: number;
   /** Remaining monthly new-prep seconds for this user. */
@@ -303,7 +309,9 @@ export async function prepareVideoTranscript(
     );
   }
 
-  stt = await refineSttSentencesWithLlm(stt);
+  if (!(options?.sttOverrideRefined && options.sttOverride?.length)) {
+    stt = await refineSttSentencesWithLlm(stt);
+  }
   logSentenceSplits(sttSource, stt);
   if (officialUi.length > 0) {
     officialUi = await refineSttSentencesWithLlm(officialUi);
@@ -389,6 +397,7 @@ export async function prepareVideoTranscript(
   return {
     videoId: parsed.videoId,
     videoUrl: parsed.url,
+    ...(source.title ? { title: source.title } : {}),
     durationSeconds,
     sttSource,
     captionMode,

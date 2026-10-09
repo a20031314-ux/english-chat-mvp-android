@@ -4,6 +4,7 @@ import {
   assertVideoPrepAllowed,
   recordVideoPrepForRequest,
 } from "@/lib/server/videoPrepGate";
+import { keepVideoTranscript } from "@/lib/server/videoTranscriptStore";
 import { parseSttSegments } from "@/lib/videoSubtitle/parseSttSegments";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { prepareVideoTranscript } from "@/lib/videoSubtitle/pipeline";
@@ -77,6 +78,7 @@ export async function POST(request: NextRequest) {
       },
     );
     await recordVideoPrepForRequest(request, prepared.durationSeconds, videoUrl);
+    await keepVideoTranscript(prepared, targetLanguage);
     return jsonWithCors(request, prepared);
   } catch (error) {
     if (error instanceof VideoPipelineError) {

@@ -5,6 +5,12 @@ import {
   assertVideoPrepAllowed,
   recordVideoPrepForRequest,
 } from "@/lib/server/videoPrepGate";
+import {
+  keepVideoTranscript,
+  readVideoTranscript,
+} from "@/lib/server/videoTranscriptStore";
+import { parseYouTubeInput } from "@/lib/videoLearning";
+import { transcriptAsSttSegments } from "@/lib/videoIndex/transcript";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { prepareVideoTranscript } from "@/lib/videoSubtitle/pipeline";
 
@@ -42,11 +48,25 @@ export async function POST(request: NextRequest) {
   const skipServerAudio = body.skipServerAudio === true;
   try {
     const limits = await assertVideoPrepAllowed(request, { videoUrl });
+    // A video somebody has already prepared starts from the words kept then:
+    // no captions to fetch, no audio to transcribe, and it opens on the web
+    // even though the server cannot reach YouTube's audio.
+    const parsedUrl = parseYouTubeInput(videoUrl);
+    const kept = parsedUrl.ok
+      ? await readVideoTranscript(targetLanguage, parsedUrl.videoId)
+      : null;
     const prepared = await prepareVideoTranscript(
       videoUrl,
       locale,
       targetLanguage,
       {
+        ...(kept
+          ? {
+              sttOverride: transcriptAsSttSegments(kept),
+              sttOverrideSource: kept.source,
+              sttOverrideRefined: true,
+            }
+          : {}),
         skipServerAudio: skipServerAudio,
         maxDurationSeconds: limits.maxDurationSeconds,
         remainingPrepSeconds:
@@ -56,6 +76,7 @@ export async function POST(request: NextRequest) {
       },
     );
     await recordVideoPrepForRequest(request, prepared.durationSeconds, videoUrl);
+    if (!kept) await keepVideoTranscript(prepared, targetLanguage);
     return jsonWithCors(request, prepared);
   } catch (error) {
     if (error instanceof VideoPipelineError) {
