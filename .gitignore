@@ -52,3 +52,7 @@ next-env.d.ts
 /scripts/_verify-*.json
 /public/verify-bundle.json
 /tmp/verify/
+
+# store screenshot raw captures (store-shots/capture.mjs); the composed images
+# go to fastlane/metadata and are committed
+/store-shots/out/

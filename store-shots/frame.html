@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<!--
+  One store screenshot: headline above, the captured app screen in a phone
+  frame below. 1080×1920, Play's recommended portrait size. compose() in
+  capture.mjs fills the {{…}} slots; keep the look in step with the store
+  canvas (dark ground, one accent per scene).
+-->
+<style>
+  html, body { margin: 0; }
+  body {
+    width: 1080px; height: 1920px; overflow: hidden;
+    background: #15161A; color: #FFFFFF;
+    font-family: {{font}};
+    display: flex; flex-direction: column; align-items: center;
+    box-sizing: border-box; padding-top: 104px;
+  }
+  .kicker { font-size: 30px; font-weight: 700; letter-spacing: 0.06em; color: {{accent}}; }
+  h1 {
+    margin: 24px 0 0; font-size: 84px; line-height: 1.16; font-weight: 900;
+    text-align: center; letter-spacing: -0.02em; white-space: pre-line;
+    max-width: 960px;
+  }
+  p { margin: 26px 0 0; font-size: 34px; color: #B7B8BF; text-align: center; max-width: 900px; }
+  /* The whole screen shows, tab bar included: 412×915 scaled to 584 wide. */
+  .phone {
+    margin-top: 60px; width: 584px;
+    border-radius: 64px; border: 16px solid #000;
+    outline: 2px solid #34353C; overflow: hidden; background: #000;
+  }
+  .phone img { display: block; width: 100%; }
+</style>
+</head>
+<body>
+  <div class="kicker">{{kicker}}</div>
+  <h1>{{title}}</h1>
+  <p>{{subtitle}}</p>
+  <div class="phone"><img src="{{screen}}" alt=""></div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+{
+  "uiLocale": "en",
+  "targetLanguage": "es",
+  "font": "'Noto Sans', 'Noto Sans CJK KR', sans-serif",
+  "scenes": {
+    "chat": {
+      "kicker": "PRACTICE SPANISH",
+      "title": "Say it your way.\nSee it in Spanish.",
+      "subtitle": "Chat with an AI friend, in your own words if you get stuck",
+      "turns": [
+        {
+          "user": "Muy bien, fui al cine con un amigo.",
+          "reply": "¡Qué bien! ¿Qué película viste?",
+          "replyTranslation": "Nice! Which movie did you see?"
+        },
+        {
+          "user": "An action movie. It was amazing!",
+          "howToSay": {
+            "expression": "Una película de acción. ¡Fue increíble!",
+            "simpler": "Una película de acción. ¡Me gustó mucho!"
+          },
+          "reply": "¡Me encantan! ¿Comiste palomitas?",
+          "replyTranslation": "I love those! Did you have popcorn?"
+        }
+      ]
+    },
+    "sentence": {
+      "kicker": "WORD BY WORD",
+      "title": "Tap any word.\nGet the why.",
+      "subtitle": "Ask what it means here, in plain English",
+      "user": "Hola, buenos días.",
+      "reply": "¡Hola! ¿Tienes planes para el sábado?",
+      "replyTranslation": "Hi! Any plans for Saturday?",
+      "sentence": "¿Tienes planes para el sábado?",
+      "sentenceTranslation": "Do you have plans for Saturday?",
+      "word": "para",
+      "question": "What does it mean here?",
+      "answer": "Here “para” points to when the plans are for: Saturday.\n\nUse “para” for a deadline or a purpose — “para el lunes” (by Monday), “para aprender” (in order to learn).\n\nExample: ¿Qué planes tienes para el verano? — What are your plans for the summer?"
+    }
+  }
+}

@@ -23,6 +23,7 @@
     "check:browser-languages": "node scripts/browser-language-pass.mjs",
     "check:languages": "node --experimental-strip-types scripts/check-language-coverage.mjs",
     "check:store": "node scripts/check-store-metadata.mjs",
+    "store:shots": "node store-shots/capture.mjs",
     "check:conversation": "node --experimental-strip-types scripts/check-conversation-quality.mjs",
     "verify:library": "node --experimental-strip-types scripts/verify-video-library.mjs",
     "roleplay:audio": "node --experimental-strip-types scripts/build-roleplay-audio.mjs",
@@ -51,6 +52,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.3",
+    "playwright": "~1.56.1",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
