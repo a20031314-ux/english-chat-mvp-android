@@ -180,6 +180,8 @@ export type YouTubeSource = {
 export type PreparedTranscript = {
   videoId: string;
   videoUrl: string;
+  /** The video's own title, when YouTube gave one. */
+  title?: string;
   durationSeconds: number;
   sttSource: SttSource;
   /** How on-screen learning captions / translations are sourced. */
