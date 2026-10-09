@@ -71,3 +71,20 @@ Claude Code edits those files and opens a PR; GitHub Actions uploads to Play
 after a person merges, and production releases wait for a person's approval.
 Never run fastlane or touch signing files from here — `.claude/settings.json`
 denies it. How the pieces fit: `fastlane/STORE_AUTOMATION.md`.
+
+# Hub: shared memory across chats
+
+Work is split across chats by role — feature work (`dev`), internal checks
+(`qa`), store and releases (`store`) — but they share one memory in `hub/`, so a
+new chat continues where the last one stopped. `hub/README.md` has the rules
+(in Korean, for the person reading it):
+
+- Start: `git pull`, read `hub/STATE.md` (CLAUDE.md imports it), the role file
+  in `hub/roles/` that matches the request, and lines addressed to that role
+  in `hub/inbox.md`. `/hub-dev`, `/hub-qa`, `/hub-store` do this explicitly.
+- A role edits only its own file. Requests to another role go to
+  `hub/inbox.md`; `hub/STATE.md` changes only for things that concern every
+  role (versions, standing decisions).
+- End: the commit that finishes the work also updates the role file and adds
+  one entry to `hub/log/YYYY-MM.md`. Keep the hub short; finished items leave
+  the open list and live only in the log.
