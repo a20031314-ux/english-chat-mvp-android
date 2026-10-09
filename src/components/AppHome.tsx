@@ -10,6 +10,7 @@ import { TAB_ICON_META } from "@/components/TabIcons";
 import { TargetLanguageSelector } from "@/components/TargetLanguageSelector";
 import { VocabularyPanel } from "@/components/VocabularyPanel";
 import { UpdateNotice } from "@/components/UpdateNotice";
+import { WhatsNewSheet } from "@/components/WhatsNewSheet";
 import { RoleplayTab, hasRoleplay } from "@/components/RoleplayTab";
 import { StudyMapTab } from "@/components/studyMap/StudyMapTab";
 import { onAppIntent } from "@/lib/appIntents";
@@ -160,6 +161,8 @@ function AppHomeInner({
             {/* Above everything, because it is about everything: this is the
                 only way anyone gets told their build has to be replaced. */}
             <UpdateNotice ui={ui} />
+            {/* Once, on the first launch after an update. */}
+            <WhatsNewSheet ui={ui} locale={locale} onOpenTab={openTab} />
             <div className="relative z-0 min-h-0 flex-1 overflow-hidden p-2 pb-0 sm:p-4 sm:pb-0">
               <div
                 className={

@@ -155,6 +155,15 @@ for (const { name } of MOVED_FOR_BUILD) {
 cpSync(outDir, wwwDir, { recursive: true });
 
 /**
+ * Served by the website, not carried by the app: the "what's new" pictures
+ * come in one set per interface language, and the app fetches only its own.
+ * Next copies everything in public/ into the export, so they are taken out.
+ */
+for (const served of ["whats-new"]) {
+  rmSync(path.join(wwwDir, served), { recursive: true, force: true });
+}
+
+/**
  * Which version this bundle is, written where the Android build can read it.
  *
  * Gradle takes versionName from build.gradle and packages whatever happens to

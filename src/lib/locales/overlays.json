@@ -166,7 +166,16 @@
     "chatExpressionFailed": "表現を読み込めませんでした。もう一度押してください。",
     "chatUseExpression": "この表現で言ってみる",
     "chatOwnLanguageTip": "自分の言葉で書いても会話は続きます。言い方は「言い方を見る」で確認できます。",
-    "chatInputHint": "{targetLanguage}で書いてみましょう。詰まったら自分の言葉でも大丈夫"
+    "chatInputHint": "{targetLanguage}で書いてみましょう。詰まったら自分の言葉でも大丈夫",
+    "whatsNewTitle": "新しくなったこと",
+    "whatsNewDone": "OK",
+    "whatsNewTry": "使ってみる",
+    "whatsNewMapTitle": "学習マップができました",
+    "whatsNewMapBody": "できるようになりたいことを書くと、場面・表現・語彙・発音の4つの列で、そこまでの道のりを描きます。会話するほど、足りないところと次に学ぶことを示します。",
+    "whatsNewChatTitle": "詰まったら自分の言葉で書いてOK",
+    "whatsNewChatBody": "チャットで詰まったら、自分の言葉で書いてください。チューターは学習中の言語で会話を続け、その行の下の「言い方を見る」でどう言えばいいかが分かります。",
+    "whatsNewAskTitle": "文の分析からすぐ質問",
+    "whatsNewAskBody": "文を開いて単語を選び、「ここではどういう意味？」「なぜこの形なの？」をタップしてみてください。自分で質問することもでき、質問した内容はその文に残ります。"
   },
   "zh": {
     "billingClose": "关闭",
@@ -335,7 +344,16 @@
     "chatExpressionFailed": "没能加载表达，请再点一次。",
     "chatUseExpression": "用这个说法",
     "chatOwnLanguageTip": "用自己的语言写，对话也会继续。点“看看怎么说”就能看到表达。",
-    "chatInputHint": "用{targetLanguage}写写看，卡住了用自己的语言也可以"
+    "chatInputHint": "用{targetLanguage}写写看，卡住了用自己的语言也可以",
+    "whatsNewTitle": "新功能",
+    "whatsNewDone": "知道了",
+    "whatsNewTry": "试一试",
+    "whatsNewMapTitle": "新增学习地图",
+    "whatsNewMapBody": "写下你想做到的事，应用会用情境、表达、词汇、发音四栏画出通往目标的路线。对话越多，越能指出你还欠缺什么、下一步该学什么。",
+    "whatsNewChatTitle": "卡住了就用母语写",
+    "whatsNewChatBody": "聊天时卡住了，就用你熟悉的语言写。导师会继续用你在学的语言对话，点那句下面的“看看怎么说”就能知道该怎么说。",
+    "whatsNewAskTitle": "在句子分析里直接提问",
+    "whatsNewAskBody": "打开一个句子，选几个词，点“这里是什么意思？”或“为什么是这个形式？”。也可以自己输入问题，问过的内容会留在这个句子上。"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -506,7 +524,16 @@
     "chatExpressionFailed": "Không tải được cách diễn đạt. Chạm lại nhé.",
     "chatUseExpression": "Nói bằng câu này",
     "chatOwnLanguageTip": "Viết bằng tiếng của bạn thì cuộc trò chuyện vẫn tiếp tục. Chạm “Xem cách nói” để xem cách diễn đạt.",
-    "chatInputHint": "Viết bằng {targetLanguage} — bí thì viết bằng tiếng của bạn cũng được"
+    "chatInputHint": "Viết bằng {targetLanguage} — bí thì viết bằng tiếng của bạn cũng được",
+    "whatsNewTitle": "Có gì mới",
+    "whatsNewDone": "Đã hiểu",
+    "whatsNewTry": "Thử ngay",
+    "whatsNewMapTitle": "Bản đồ học tập",
+    "whatsNewMapBody": "Viết điều bạn muốn làm được, ứng dụng sẽ vẽ con đường đến đó theo bốn cột: tình huống, cách diễn đạt, từ vựng và phát âm. Càng trò chuyện, ứng dụng càng chỉ ra bạn còn thiếu gì và nên học gì tiếp theo.",
+    "whatsNewChatTitle": "Bí thì cứ viết bằng ngôn ngữ của bạn",
+    "whatsNewChatBody": "Khi bí trong lúc chat, hãy viết bằng ngôn ngữ của bạn. Gia sư vẫn tiếp tục bằng ngôn ngữ bạn đang học, và nút “Xem cách nói” dưới dòng đó cho bạn biết nên nói thế nào.",
+    "whatsNewAskTitle": "Hỏi ngay trong phần phân tích câu",
+    "whatsNewAskBody": "Mở một câu, chọn vài từ rồi chạm “Ở đây nghĩa là gì?” hoặc “Sao lại dùng dạng này?”. Bạn cũng có thể tự đặt câu hỏi, và những gì đã hỏi sẽ được lưu lại với câu đó."
   },
   "fr": {
     "billingClose": "Fermer",
@@ -682,7 +709,16 @@
     "chatExpressionFailed": "Impossible de charger l’expression. Touche à nouveau.",
     "chatUseExpression": "Le dire comme ça",
     "chatOwnLanguageTip": "Si tu écris dans ta langue, la conversation continue. Touche « Voir comment le dire » pour voir l’expression.",
-    "chatInputHint": "Écris en {targetLanguage}, ou dans ta langue si tu bloques"
+    "chatInputHint": "Écris en {targetLanguage}, ou dans ta langue si tu bloques",
+    "whatsNewTitle": "Nouveautés",
+    "whatsNewDone": "Compris",
+    "whatsNewTry": "Essayer",
+    "whatsNewMapTitle": "Une carte d’apprentissage",
+    "whatsNewMapBody": "Écris ce que tu veux être capable de faire, et l’app trace le chemin en quatre colonnes : situations, expressions, vocabulaire et prononciation. Plus tu discutes, plus elle repère ce qui te manque et ce qu’il faut étudier ensuite.",
+    "whatsNewChatTitle": "Bloqué ? Écris dans ta langue",
+    "whatsNewChatBody": "Si tu bloques dans le chat, écris dans ta langue. Le tuteur continue dans la langue que tu apprends, et « Voir comment le dire » sous ta ligne te montre comment le dire.",
+    "whatsNewAskTitle": "Pose tes questions depuis l’analyse de phrase",
+    "whatsNewAskBody": "Ouvre une phrase, choisis quelques mots et touche « Ça veut dire quoi ici ? » ou « Pourquoi cette forme ? ». Tu peux aussi écrire ta propre question, et ce que tu as demandé reste attaché à la phrase."
   },
   "it": {
     "archive": "Report",
@@ -1049,7 +1085,16 @@
     "chatExpressionFailed": "Impossibile caricare l’espressione. Tocca di nuovo.",
     "chatUseExpression": "Dillo così",
     "chatOwnLanguageTip": "Se scrivi nella tua lingua la conversazione continua. Tocca «Vedi come si dice» per l’espressione.",
-    "chatInputHint": "Scrivi in {targetLanguage}, o nella tua lingua se ti blocchi"
+    "chatInputHint": "Scrivi in {targetLanguage}, o nella tua lingua se ti blocchi",
+    "whatsNewTitle": "Novità",
+    "whatsNewDone": "Ho capito",
+    "whatsNewTry": "Prova",
+    "whatsNewMapTitle": "Una mappa di studio",
+    "whatsNewMapBody": "Scrivi cosa vuoi riuscire a fare e l’app disegna la strada in quattro colonne: situazioni, espressioni, vocabolario e pronuncia. Più parli, più ti indica cosa ti manca e cosa studiare dopo.",
+    "whatsNewChatTitle": "Bloccato? Scrivi nella tua lingua",
+    "whatsNewChatBody": "Se ti blocchi in chat, scrivi nella tua lingua. Il tutor continua nella lingua che stai imparando e «Vedi come si dice» sotto la tua riga ti mostra come dirlo.",
+    "whatsNewAskTitle": "Chiedi direttamente dall’analisi della frase",
+    "whatsNewAskBody": "Apri una frase, scegli alcune parole e tocca «Cosa significa qui?» o «Perché questa forma?». Puoi anche scrivere una domanda tua, e ciò che hai chiesto resta salvato con quella frase."
   },
   "pt": {
     "billingClose": "Fechar",
@@ -1228,7 +1273,16 @@
     "chatExpressionFailed": "Não foi possível carregar a expressão. Toque de novo.",
     "chatUseExpression": "Dizer assim",
     "chatOwnLanguageTip": "Se você escrever no seu idioma, a conversa continua. Toque em “Ver como se diz” para ver a expressão.",
-    "chatInputHint": "Escreva em {targetLanguage} — ou no seu idioma se travar"
+    "chatInputHint": "Escreva em {targetLanguage} — ou no seu idioma se travar",
+    "whatsNewTitle": "Novidades",
+    "whatsNewDone": "Entendi",
+    "whatsNewTry": "Experimentar",
+    "whatsNewMapTitle": "Um mapa de estudo",
+    "whatsNewMapBody": "Escreva o que você quer conseguir fazer e o app desenha o caminho em quatro colunas: situações, expressões, vocabulário e pronúncia. Quanto mais você conversa, mais ele aponta o que ainda falta e o que estudar em seguida.",
+    "whatsNewChatTitle": "Travou? Escreva no seu idioma",
+    "whatsNewChatBody": "Se travar no chat, escreva no seu idioma. O tutor continua no idioma que você está aprendendo, e “Ver como se diz” abaixo da sua linha mostra como dizer.",
+    "whatsNewAskTitle": "Pergunte direto na análise da frase",
+    "whatsNewAskBody": "Abra uma frase, escolha algumas palavras e toque em “O que significa aqui?” ou “Por que essa forma?”. Você também pode escrever sua própria pergunta, e o que perguntou fica guardado naquela frase."
   },
   "ru": {
     "archive": "Отчёты",
@@ -1593,7 +1647,16 @@
     "chatExpressionFailed": "Не удалось загрузить выражение. Нажмите ещё раз.",
     "chatUseExpression": "Сказать так",
     "chatOwnLanguageTip": "Если пишете на своём языке, разговор продолжается. Нажмите «Как это сказать», чтобы увидеть выражение.",
-    "chatInputHint": "Пишите на языке {targetLanguage} — или на своём, если застряли"
+    "chatInputHint": "Пишите на языке {targetLanguage} — или на своём, если застряли",
+    "whatsNewTitle": "Что нового",
+    "whatsNewDone": "Понятно",
+    "whatsNewTry": "Попробовать",
+    "whatsNewMapTitle": "Карта обучения",
+    "whatsNewMapBody": "Напишите, чему хотите научиться, и приложение нарисует путь к цели в четырёх колонках: ситуации, выражения, лексика и произношение. Чем больше вы общаетесь, тем точнее оно показывает, чего не хватает и что изучать дальше.",
+    "whatsNewChatTitle": "Застряли? Пишите на своём языке",
+    "whatsNewChatBody": "Если застряли в чате, пишите на своём языке. Репетитор продолжит на изучаемом языке, а кнопка «Как это сказать» под вашей строкой покажет, как это сказать.",
+    "whatsNewAskTitle": "Вопросы прямо из разбора предложения",
+    "whatsNewAskBody": "Откройте предложение, выберите слова и нажмите «Что это значит здесь?» или «Почему такая форма?». Можно задать и свой вопрос — всё, что вы спросили, сохранится у этого предложения."
   },
   "id": {
     "billingClose": "Tutup",
@@ -1768,7 +1831,16 @@
     "chatExpressionFailed": "Ungkapan gagal dimuat. Ketuk lagi.",
     "chatUseExpression": "Ucapkan dengan ini",
     "chatOwnLanguageTip": "Tulis dalam bahasamu pun percakapan tetap berlanjut. Ketuk “Lihat cara mengatakannya” untuk melihat ungkapannya.",
-    "chatInputHint": "Tulis dalam {targetLanguage} — atau bahasamu sendiri kalau buntu"
+    "chatInputHint": "Tulis dalam {targetLanguage} — atau bahasamu sendiri kalau buntu",
+    "whatsNewTitle": "Yang baru",
+    "whatsNewDone": "Mengerti",
+    "whatsNewTry": "Coba",
+    "whatsNewMapTitle": "Peta belajar",
+    "whatsNewMapBody": "Tulis apa yang ingin bisa kamu lakukan, lalu aplikasi menggambar jalannya dalam empat kolom: situasi, ungkapan, kosakata, dan pelafalan. Makin sering kamu mengobrol, makin jelas aplikasi menunjukkan apa yang masih kurang dan apa yang perlu dipelajari berikutnya.",
+    "whatsNewChatTitle": "Buntu? Tulis dalam bahasamu sendiri",
+    "whatsNewChatBody": "Kalau buntu saat chat, tulis saja dalam bahasamu sendiri. Tutor tetap melanjutkan dalam bahasa yang kamu pelajari, dan “Lihat cara mengatakannya” di bawah baris itu menunjukkan cara mengatakannya.",
+    "whatsNewAskTitle": "Tanya langsung dari analisis kalimat",
+    "whatsNewAskBody": "Buka sebuah kalimat, pilih beberapa kata, lalu ketuk “Artinya apa di sini?” atau “Kenapa bentuknya begini?”. Kamu juga bisa menulis pertanyaan sendiri, dan yang kamu tanyakan tersimpan di kalimat itu."
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -1937,7 +2009,16 @@
     "chatExpressionFailed": "تعذّر تحميل التعبير. اضغط مرة أخرى.",
     "chatUseExpression": "قلها بهذا التعبير",
     "chatOwnLanguageTip": "إذا كتبت بلغتك تستمر المحادثة. اضغط «اعرف كيف تقولها» لرؤية التعبير.",
-    "chatInputHint": "اكتب بـ{targetLanguage}، أو بلغتك إذا تعثّرت"
+    "chatInputHint": "اكتب بـ{targetLanguage}، أو بلغتك إذا تعثّرت",
+    "whatsNewTitle": "ما الجديد",
+    "whatsNewDone": "فهمت",
+    "whatsNewTry": "جرّبه",
+    "whatsNewMapTitle": "خريطة للتعلّم",
+    "whatsNewMapBody": "اكتب ما تريد أن تصبح قادرًا على فعله، وسيرسم التطبيق الطريق إليه في أربعة أعمدة: المواقف والتعابير والمفردات والنطق. وكلما تحدثت أكثر، أشار بدقة أكبر إلى ما ينقصك وما تتعلمه بعد ذلك.",
+    "whatsNewChatTitle": "تعثّرت؟ اكتب بلغتك",
+    "whatsNewChatBody": "إذا تعثّرت في المحادثة فاكتب بلغتك. سيواصل المعلّم باللغة التي تتعلمها، وزر «اعرف كيف تقولها» تحت سطرك يريك كيف تقولها.",
+    "whatsNewAskTitle": "اسأل مباشرة من تحليل الجملة",
+    "whatsNewAskBody": "افتح جملة واختر بعض الكلمات ثم اضغط «ماذا تعني هنا؟» أو «لماذا هذه الصيغة؟». يمكنك أيضًا كتابة سؤالك الخاص، ويبقى ما سألت عنه محفوظًا مع تلك الجملة."
   },
   "th": {
     "billingClose": "ปิด",
@@ -2106,7 +2187,16 @@
     "chatExpressionFailed": "โหลดสำนวนไม่ได้ แตะอีกครั้ง",
     "chatUseExpression": "พูดด้วยสำนวนนี้",
     "chatOwnLanguageTip": "เขียนเป็นภาษาของคุณก็คุยต่อได้ แตะ “ดูวิธีพูด” เพื่อดูสำนวน",
-    "chatInputHint": "ลองเขียนเป็นภาษา{targetLanguage} ติดเมื่อไรเขียนเป็นภาษาของคุณก็ได้"
+    "chatInputHint": "ลองเขียนเป็นภาษา{targetLanguage} ติดเมื่อไรเขียนเป็นภาษาของคุณก็ได้",
+    "whatsNewTitle": "มีอะไรใหม่",
+    "whatsNewDone": "เข้าใจแล้ว",
+    "whatsNewTry": "ลองใช้",
+    "whatsNewMapTitle": "แผนที่การเรียน",
+    "whatsNewMapBody": "เขียนสิ่งที่อยากทำให้ได้ แล้วแอปจะวาดเส้นทางไปถึงตรงนั้นเป็นสี่คอลัมน์ ได้แก่ สถานการณ์ สำนวน คำศัพท์ และการออกเสียง ยิ่งคุยมาก แอปก็ยิ่งชี้ได้ว่ายังขาดอะไรและควรเรียนอะไรต่อ",
+    "whatsNewChatTitle": "ติดอยู่ใช่ไหม เขียนเป็นภาษาของคุณได้เลย",
+    "whatsNewChatBody": "ถ้าติดตอนแชต ให้เขียนเป็นภาษาของคุณ ติวเตอร์จะคุยต่อในภาษาที่คุณกำลังเรียน และปุ่ม “ดูวิธีพูด” ใต้บรรทัดนั้นจะบอกว่าควรพูดอย่างไร",
+    "whatsNewAskTitle": "ถามได้ทันทีจากการวิเคราะห์ประโยค",
+    "whatsNewAskBody": "เปิดประโยค เลือกคำ แล้วแตะ “ตรงนี้หมายความว่าอะไร” หรือ “ทำไมใช้รูปนี้” จะพิมพ์คำถามเองก็ได้ และสิ่งที่ถามไว้จะเก็บอยู่กับประโยคนั้น"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -2275,6 +2365,15 @@
     "chatExpressionFailed": "अभिव्यक्ति लोड नहीं हुई। फिर से टैप करें।",
     "chatUseExpression": "इसी तरह कहें",
     "chatOwnLanguageTip": "अपनी भाषा में लिखें, बातचीत चलती रहेगी। अभिव्यक्ति देखने के लिए “कैसे कहें, देखें” पर टैप करें।",
-    "chatInputHint": "{targetLanguage} में लिखें — अटकें तो अपनी भाषा में भी लिख सकते हैं"
+    "chatInputHint": "{targetLanguage} में लिखें — अटकें तो अपनी भाषा में भी लिख सकते हैं",
+    "whatsNewTitle": "नया क्या है",
+    "whatsNewDone": "समझ गया",
+    "whatsNewTry": "आज़माएँ",
+    "whatsNewMapTitle": "सीखने का नक्शा",
+    "whatsNewMapBody": "लिखिए कि आप क्या कर पाना चाहते हैं, और ऐप वहाँ तक का रास्ता चार कॉलम में बना देगा: स्थितियाँ, अभिव्यक्तियाँ, शब्दावली और उच्चारण। आप जितनी ज़्यादा बात करेंगे, वह उतना बेहतर बताएगा कि क्या कमी है और आगे क्या सीखना है।",
+    "whatsNewChatTitle": "अटक गए? अपनी भाषा में लिखिए",
+    "whatsNewChatBody": "चैट में अटक जाएँ तो अपनी भाषा में लिखिए। ट्यूटर आपकी सीखी जा रही भाषा में बातचीत जारी रखेगा, और आपकी पंक्ति के नीचे “कैसे कहें, देखें” बताएगा कि इसे कैसे कहना है।",
+    "whatsNewAskTitle": "वाक्य विश्लेषण से सीधे पूछिए",
+    "whatsNewAskBody": "कोई वाक्य खोलिए, कुछ शब्द चुनिए और “यहाँ इसका क्या मतलब है?” या “यह रूप क्यों?” पर टैप कीजिए। आप अपना सवाल भी लिख सकते हैं, और जो पूछा वह उसी वाक्य के साथ सहेजा रहता है।"
   }
 }
