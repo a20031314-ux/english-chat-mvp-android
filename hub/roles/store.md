@@ -27,6 +27,8 @@
 | 2.64 | 78 | 새로워진 점 안내(UI 언어별 캡처) | 2.64로 올림 (2026-10-09) |
 
 ## 열린 일
+- 등록정보 초안(영어·한국어, 2.64 기준 + 2.65 추가 두 줄): `hub/drafts/store-listing-2026-10-10.md`.
+  pull listing 뒤 `fastlane/metadata`로 옮기고 나머지 12개 언어 작성.
 - Play 자동화 처음 설정이 끝났는지 사용자 확인 필요: GitHub Secrets, `play`/`play-production`
   환경, "Play: pull listing" 실행. 지금 `fastlane/metadata/android/`에는 en-US 스크린샷만 있고
   다른 언어 등록정보·출시 노트는 아직 없다. pull listing 전에는 문구를 새로 쓰지 않는다.
