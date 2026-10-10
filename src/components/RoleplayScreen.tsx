@@ -16,6 +16,7 @@ import {
 import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
 import type { RoleplayScenario, SentenceBank } from "@/lib/roleplay/script";
 import { BANK_GLOSS_LANGUAGE } from "@/lib/roleplay/justTalk";
+import { soundsUnfinished } from "@/lib/roleplay/unfinished";
 import {
   resumeFrom,
   titleFor,
@@ -164,6 +165,9 @@ function markStuck(lines: Spoken[], turn: Omit<StuckTurn, "asked">): Spoken[] {
  */
 const STALLED_AUDIO_MS = 8000;
 
+/** How long to wait for the rest of a sentence the pause cut off. */
+const REST_OF_SENTENCE_MS = 3500;
+
 /**
  * The same, for a line synthesised on the spot. It streams, so it starts before
  * it has fully arrived, but the whole of it has to play before the turn passes.
@@ -211,6 +215,10 @@ export function RoleplayScreen({
   // a line being composed, because that is where the learner is looking and
   // what is actually happening.
   const [thinking, setThinking] = useState(false);
+  /** What they have said of a sentence the pause cut off, while the rest is awaited. */
+  const [pending, setPending] = useState("");
+  /** Lets a review or a close release the wait for the rest of a sentence. */
+  const releaseRestRef = useRef<() => void>(() => undefined);
   // The director is deciding what the character says. Shown as the character
   // about to speak, not as the app working.
   const [directing, setDirecting] = useState(false);
@@ -604,6 +612,7 @@ export function RoleplayScreen({
     (turn: StuckTurn) => {
       recorderRef.current?.cancel();
       recorderRef.current = null;
+      releaseRestRef.current();
       setRecording(false);
       setReviewing({ turn, review: null, failed: false });
       if (!scenario) return;
@@ -731,9 +740,69 @@ export function RoleplayScreen({
     const speechStartedAt = recorder.speechStartedAt();
     setRecording(false);
     setThinking(true);
-    const heard = await recorder.stop();
+    let heard = await recorder.stop();
     setThinking(false);
-    await answer(heard, endedAt, speechStartedAt);
+    let lastEnd = endedAt;
+
+    // Cut off mid-sentence by the pause that ends a turn: "…coffee and". Give
+    // them the rest of it before anyone answers, at most twice, and show what
+    // has been heard so far so they can see the turn is still theirs.
+    for (let more = 0; more < 2 && soundsUnfinished(heard, scenario?.language ?? "en"); more += 1) {
+      setPending(heard);
+      const rest = await listenForRest();
+      if (rest === null) {
+        // Closed or put down while waiting: this turn is no longer being sent.
+        setPending("");
+        return;
+      }
+      if (!rest.text) break;
+      heard = `${heard} ${rest.text}`.trim();
+      lastEnd = rest.endedAt;
+    }
+    setPending("");
+    await answer(heard, lastEnd, speechStartedAt);
+  };
+
+  /**
+   * The rest of a sentence the pause cut off. Its own short wait for a first
+   * word, so a turn that really was over goes after a moment, not after the
+   * twelve seconds a fresh turn allows. Empty text when nothing more was said;
+   * null when the microphone was taken away (review, close) meanwhile.
+   */
+  const listenForRest = async (): Promise<{ text: string; endedAt: number } | null> => {
+    if (!scenario) return { text: "", endedAt: Date.now() };
+    let settle: () => void = () => undefined;
+    const settledOnce = new Promise<void>((resolve) => {
+      settle = resolve;
+    });
+    releaseRestRef.current = () => settle();
+    let more: Awaited<ReturnType<typeof listenForTurn>>;
+    try {
+      more = await listenForTurn({
+        language: scenario.language,
+        isPremium,
+        noSpeechMs: REST_OF_SENTENCE_MS,
+        onSettled: () => settle(),
+      });
+    } catch {
+      return { text: "", endedAt: Date.now() };
+    }
+    recorderRef.current = more;
+    setRecording(true);
+    await settledOnce;
+    if (recorderRef.current !== more) return null;
+    recorderRef.current = null;
+    setRecording(false);
+    const endedAt = Date.now();
+    if (more.speechStartedAt() === null) {
+      // Nothing was said: no recording worth paying to transcribe.
+      more.cancel();
+      return { text: "", endedAt };
+    }
+    setThinking(true);
+    const text = await more.stop();
+    setThinking(false);
+    return { text, endedAt };
   };
 
   /**
@@ -761,6 +830,8 @@ export function RoleplayScreen({
   useEffect(() => {
     return () => {
       recorderRef.current?.cancel();
+      recorderRef.current = null;
+      releaseRestRef.current();
       audioRef.current?.pause();
     };
   }, []);
@@ -812,7 +883,14 @@ export function RoleplayScreen({
             onAnalyze={sceneOver ? analyzeLine : undefined}
           />
         ))}
-        {directing || thinking ? (
+        {pending ? (
+          <li className="mb-2 flex justify-end">
+            <div className="max-w-[80%] rounded-2xl border border-dashed border-white/20 px-3 py-2 text-[14px] leading-snug text-neutral-400">
+              {pending} …
+            </div>
+          </li>
+        ) : null}
+        {(directing || thinking) && !pending ? (
           <li className="mb-2 flex justify-start">
             <div className="rounded-2xl bg-[#141414] px-3 py-2 text-[14px] text-neutral-500">
               …

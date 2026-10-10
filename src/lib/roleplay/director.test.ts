@@ -1088,3 +1088,17 @@ test("a question mark is not always a question mark", () => {
   );
   assert.equal(twoPart?.follow, "talk.there-what");
 });
+
+test("a note with none of the target language in it is a translation, not a tip", async () => {
+  const { givesThemWords } = await import("./director.ts");
+  const enKo = { targetLanguage: "en", nativeLanguage: "ko" } as const;
+  // Seen from a phone: the Korean of the character's own line, under the learner's words.
+  assert.equal(givesThemWords("그리고 무엇이 또 있나요?", enKo), false);
+  assert.equal(givesThemWords('"a variety of" — 여러 가지라는 뜻이에요', enKo), true);
+  const jaKo = { targetLanguage: "ja", nativeLanguage: "ko" } as const;
+  assert.equal(givesThemWords("「いろいろ」라고 하면 돼요", jaKo), true);
+  assert.equal(givesThemWords("거기엔 또 뭐가 있어요?", jaKo), false);
+  // Same script on both sides: nothing to tell them apart by, so it stays.
+  assert.equal(givesThemWords("Puedes decir «y además»", { targetLanguage: "es", nativeLanguage: "fr" }), true);
+  assert.equal(givesThemWords("", enKo), false);
+});

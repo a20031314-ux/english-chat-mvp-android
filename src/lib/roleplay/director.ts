@@ -1,9 +1,11 @@
 import {
   interfaceLanguageName,
+  learningLanguageScript,
   learningLanguageName,
   type LearningLanguageCode,
 } from "../learningLanguages.ts";
 import { compareVersions } from "../appVersion.ts";
+import { languageEvidence } from "../inputLanguage.ts";
 import { targetLanguageFocusHints } from "../languageFocus.ts";
 import { REPERTOIRE_SINCE } from "./justTalk.ts";
 import {
@@ -202,6 +204,31 @@ export const ROLEPLAY_STREAM_CLIENT_HEADER = "x-roleplay-stream";
  * Null while either key is still being written, and null for an answer that
  * writes its own line. Both simply mean nothing is warmed early.
  */
+/**
+ * Whether a note hands the learner something to say.
+ *
+ * A note is the words they needed, explained in their own language — so it has
+ * some of the language they are learning in it. Seen from a phone: a sentence
+ * cut off at "…coffee and" came back with the character finishing it ("and
+ * what else do they have there?") and a note that was only the Korean of that
+ * line, shown under the learner's words as if it were about them. A note with
+ * no word of the target language in it is a translation of something, not a
+ * tip, and goes.
+ *
+ * Only checkable where the two languages are written differently; between two
+ * Latin-script languages a note is kept as it is.
+ */
+export function givesThemWords(
+  note: string,
+  request: Pick<DirectorRequest, "targetLanguage" | "nativeLanguage">,
+): boolean {
+  if (!note) return false;
+  if (learningLanguageScript(request.targetLanguage) === learningLanguageScript(request.nativeLanguage)) {
+    return true;
+  }
+  return languageEvidence(note, request.targetLanguage, request.nativeLanguage).learning > 0;
+}
+
 export function leadFromPartial(partial: string): string | null {
   // A JSON string value up to the quote that closes it, escapes and all. A
   // value still being written has no closing quote yet and must not be read as
@@ -470,7 +497,9 @@ ${steps
 How to answer them:
 - Judge what they meant, not their wording. Someone who says they will sit by the window has told you "for here".
 - If they answered, just not in the words you expected, take it and move on.
-- If they are stuck — silence, a fragment, the wrong words — help the way a real ${role} would: ask again more simply, or say the choices out loud. Put the phrase they could use in "note", explained in ${native}.
+- If they are stuck — silence, the wrong words — help the way a real ${role} would: ask again more simply, or say the choices out loud. Put the phrase they could use in "note", in ${target}, explained in ${native}.
+- A sentence that stops on a word like "and", "but", "because" or "the" was cut off while they were still thinking, not abandoned. Do not finish it for them. Answer what they did say and leave them room to go on ("And…?", "Go on"). That is on_track, not stuck.
+- "note" is never a translation of your own line. It is about their words: what they could say.
 - If they asked or said something else, answer it briefly, like a person would.
 - One or two short sentences. Teaching never goes in what you say out loud; it is written, not spoken, and there are two places for it that do not overlap. "note" is for a moment they could not get through: the words they needed, so they can go on. "better" is their sentence, put right. Use whichever fits; both are read, and both are shown under the words they are about — never said aloud.
 - "better" is their own last sentence written the way someone who grew up with ${target} would say it. It is shown under their words, not said aloud, and you never refer to it.
@@ -774,10 +803,11 @@ export function parseDirection(
 
   // The field's own name sometimes comes back inside it — "note: ..." — which
   // would be read under the line as if it were part of the tip.
-  const note =
+  const written =
     typeof record.note === "string"
       ? record.note.trim().replace(/^note\s*:\s*/i, "").slice(0, 300)
       : "";
+  const note = givesThemWords(written, request) ? written : "";
 
   // Learner steps in the order the scene walks them.
   const order = scriptSteps(scenario).map((step) => step.id);

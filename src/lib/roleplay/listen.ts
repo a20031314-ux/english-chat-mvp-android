@@ -155,6 +155,7 @@ type VoiceWatch = { stop: () => void; speechStartedAt: () => number | null };
 function watchForVoice(
   stream: MediaStream,
   on: { speaking: (yes: boolean) => void; settled: () => void },
+  noSpeechMs: number = NO_SPEECH_MS,
 ): VoiceWatch {
   let source: MediaStreamAudioSourceNode;
   let analyser: AnalyserNode;
@@ -209,7 +210,7 @@ function watchForVoice(
       finish();
       return;
     }
-    if (!turn.spoke && now - startedAt >= NO_SPEECH_MS) finish();
+    if (!turn.spoke && now - startedAt >= noSpeechMs) finish();
   }, 60);
 
   return {
@@ -234,6 +235,12 @@ export async function listenForTurn(input: {
   onSpeaking?: (speaking: boolean) => void;
   /** Their turn has plainly ended. The caller stops and sends. */
   onSettled?: () => void;
+  /**
+   * How long to wait for a first word. Shorter when this is the rest of a
+   * sentence they were cut off in (unfinished.ts): either it comes quickly or
+   * they had finished after all.
+   */
+  noSpeechMs?: number;
 }): Promise<Recorder> {
   const stream = await navigator.mediaDevices.getUserMedia({
     audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true },
@@ -249,7 +256,7 @@ export async function listenForTurn(input: {
   const watch = watchForVoice(stream, {
     speaking: (yes) => input.onSpeaking?.(yes),
     settled: () => input.onSettled?.(),
-  });
+  }, input.noSpeechMs);
 
   const release = () => {
     watch.stop();
