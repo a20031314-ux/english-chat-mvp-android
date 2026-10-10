@@ -146,7 +146,7 @@
 
 | 장면 | 보여줄 것 | 만드는 곳 |
 |---|---|---|
-| 지도 | 목표 문장 → 네 칸 지도, 진행률 | `scripts/capture-whats-new.mjs` (map) |
+| 지도 | 목표 문장 → 네 칸 지도, 진행률 | `scripts/capture-whats-new.mjs` (map), store-shots |
 | 미션 | 할 일 + 힌트1 + 거의 맞았어요(고친 문장) + 상대 답 | (2.65 안내 캡처에 추가 예정) |
 | 지도 진행 | 숙지/배운 것/알아야 할 것 3색 막대, 주제의 표현 목록, 복습하기 | (2.65 안내 캡처에 추가 예정) |
 | 채팅 표현 카드 | 편한 말로 쓴 줄 + "이렇게 말해요" 카드 + 튜터 답 | capture-whats-new (chat), store-shots |
@@ -154,7 +154,7 @@
 | 통화 | 대화 중 화면, 막힌 곳 돌아보기 | (기기 캡처 필요) |
 
 - 입력 예시는 UI 언어마다 그 언어로 쓴 자연스러운 문장 (`scripts/capture-whats-new.mjs`의 STUCK_LINE, GOAL).
-- 스토어 스크린샷은 `store-shots/`가 고정 응답으로 찍는다 (`fastlane/STORE_AUTOMATION.md`).
+- 스토어 스크린샷은 `store-shots/`가 고정 응답으로 찍는다 (`fastlane/STORE_AUTOMATION.md`). 지금 en·es·ja·ko·zh × 지도·채팅·빠른 질문.
 
 ## 문구 톤
 

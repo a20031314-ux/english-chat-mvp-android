@@ -24,6 +24,7 @@ import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
 import { SCENES, baseRoutes } from "./scenes.mjs";
+import { loadUiCopy } from "./uiCopy.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const root = path.join(here, "..");
@@ -65,6 +66,7 @@ if (!locales.length) {
 }
 
 const APP_VERSION = JSON.parse(readFileSync(path.join(root, "package.json"), "utf8")).version;
+const uiCopy = await loadUiCopy(root);
 const frameTemplate = readFileSync(path.join(here, "frame.html"), "utf8");
 const browser = await chromium.launch();
 let failures = 0;
@@ -72,6 +74,8 @@ let failures = 0;
 try {
   for (const locale of locales) {
     const content = JSON.parse(readFileSync(path.join(contentDir, `${locale}.json`), "utf8"));
+    const ui = uiCopy[content.uiLocale];
+    if (!ui) throw new Error(`${locale}: no interface strings for uiLocale "${content.uiLocale}"`);
     for (const scene of SCENES) {
       if (onlyScene && scene.id !== onlyScene) continue;
       const sceneContent = content.scenes?.[scene.id];
@@ -81,7 +85,7 @@ try {
       }
       const label = `${locale}/${scene.id}`;
       try {
-        const raw = await capture(content, scene, sceneContent);
+        const raw = await capture(content, scene, sceneContent, ui);
         mkdirSync(path.join(rawDir, locale), { recursive: true });
         writeFileSync(path.join(rawDir, locale, `${scene.id}.png`), raw);
 
@@ -102,7 +106,7 @@ try {
 }
 process.exit(failures ? 1 : 0);
 
-async function capture(content, scene, sceneContent) {
+async function capture(content, scene, sceneContent, ui) {
   const context = await browser.newContext(PHONE);
   await context.addInitScript(
     ({ uiLocale, targetLanguage, version }) => {
@@ -111,17 +115,28 @@ async function capture(content, scene, sceneContent) {
       // A store screenshot shows the app in use, not the "what's new" sheet a
       // first launch of a new version opens over it (src/lib/whatsNew.ts).
       localStorage.setItem("whatsNewSeenVersion", version);
+      // The one-time tip about writing in your own language would cover the chat.
+      localStorage.setItem("chatOwnLanguageTipSeen", "1");
     },
     { uiLocale: content.uiLocale, targetLanguage: content.targetLanguage, version: APP_VERSION },
   );
+  // On every page load, including a scene's own navigation, not just the first.
+  await context.addInitScript((css) => {
+    const add = () => {
+      const style = document.createElement("style");
+      style.textContent = css;
+      document.head.appendChild(style);
+    };
+    if (document.head) add();
+    else document.addEventListener("DOMContentLoaded", add);
+  }, STEADY_CSS);
   const page = await context.newPage();
   page.setDefaultTimeout(20000);
   try {
     await baseRoutes(page);
     await page.goto(`${baseUrl}/`, { waitUntil: "networkidle" });
-    await page.addStyleTag({ content: STEADY_CSS });
     try {
-      await scene.run(page, sceneContent);
+      await scene.run(page, sceneContent, { ui, baseUrl });
     } catch (error) {
       // Keep what the screen showed when the scene gave up, for whoever reads the log.
       mkdirSync(path.join(here, "out", "failed"), { recursive: true });

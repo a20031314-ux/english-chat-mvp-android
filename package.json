@@ -23,7 +23,7 @@
     "check:browser-languages": "node scripts/browser-language-pass.mjs",
     "check:languages": "node --experimental-strip-types scripts/check-language-coverage.mjs",
     "check:store": "node scripts/check-store-metadata.mjs",
-    "store:shots": "node store-shots/capture.mjs",
+    "store:shots": "node --experimental-strip-types store-shots/capture.mjs",
     "check:conversation": "node --experimental-strip-types scripts/check-conversation-quality.mjs",
     "verify:library": "node --experimental-strip-types scripts/verify-video-library.mjs",
     "roleplay:audio": "node --experimental-strip-types scripts/build-roleplay-audio.mjs",

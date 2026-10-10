@@ -1,0 +1,49 @@
+{
+  "uiLocale": "zh",
+  "targetLanguage": "en",
+  "font": "'Noto Sans CJK SC', 'Noto Sans', sans-serif",
+  "scenes": {
+    "map": {
+      "kicker": "学习地图",
+      "title": "写下目标，\n学习路线一目了然",
+      "subtitle": "场景、表达、词汇和发音，按学习顺序排列",
+      "fixture": "map-zh-CN.json"
+    },
+    "chat": {
+      "kicker": "英语会话练习",
+      "title": "说不出来？\n用中文写就行",
+      "subtitle": "卡住时用中文写，对话照样继续",
+      "turns": [
+        {
+          "user": "Hi! I just got back from work.",
+          "reply": "Welcome back! How was your day?",
+          "replyTranslation": "欢迎回来！今天过得怎么样？"
+        },
+        {
+          "user": "周末跟朋友约好了，结果被放鸽子了",
+          "howToSay": {
+            "expression": "My friend stood me up this weekend.",
+            "simpler": "My friend didn't show up this weekend."
+          },
+          "reply": "Oh no! Did they tell you why?",
+          "replyTranslation": "哎呀！他说为什么了吗？"
+        }
+      ]
+    },
+    "sentence": {
+      "kicker": "逐词理解",
+      "title": "选中不懂的部分，\n马上就问",
+      "subtitle": "用中文解释它在这里的意思",
+      "user": "I finally finished my project today.",
+      "reply": "Nice! Any fun plans for the weekend?",
+      "replyTranslation": "太好了！周末有什么好玩的计划吗？",
+      "sentence": "Any fun plans for the weekend?",
+      "sentenceTranslation": "周末有什么好玩的计划吗？",
+      "pick": [
+        3,
+        5
+      ],
+      "answer": "“for the weekend”意思是“周末的”，表示计划是为哪个时间安排的。\n\n常用“plans for + 时间”：plans for tonight（今晚的计划）、plans for the summer（夏天的计划）。\n\n例：What are your plans for the holidays? —— 假期有什么计划？"
+    }
+  }
+}
