@@ -64,6 +64,7 @@ if (!locales.length) {
   process.exit(1);
 }
 
+const APP_VERSION = JSON.parse(readFileSync(path.join(root, "package.json"), "utf8")).version;
 const frameTemplate = readFileSync(path.join(here, "frame.html"), "utf8");
 const browser = await chromium.launch();
 let failures = 0;
@@ -104,11 +105,14 @@ process.exit(failures ? 1 : 0);
 async function capture(content, scene, sceneContent) {
   const context = await browser.newContext(PHONE);
   await context.addInitScript(
-    ({ uiLocale, targetLanguage }) => {
+    ({ uiLocale, targetLanguage, version }) => {
       localStorage.setItem("appUiLocale", uiLocale);
       localStorage.setItem("appTargetLanguage", targetLanguage);
+      // A store screenshot shows the app in use, not the "what's new" sheet a
+      // first launch of a new version opens over it (src/lib/whatsNew.ts).
+      localStorage.setItem("whatsNewSeenVersion", version);
     },
-    { uiLocale: content.uiLocale, targetLanguage: content.targetLanguage },
+    { uiLocale: content.uiLocale, targetLanguage: content.targetLanguage, version: APP_VERSION },
   );
   const page = await context.newPage();
   page.setDefaultTimeout(20000);

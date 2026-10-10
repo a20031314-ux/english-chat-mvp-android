@@ -24,9 +24,12 @@ export async function baseRoutes(page) {
 async function send(page, text) {
   const box = page.locator("textarea").first();
   await box.fill(text);
-  const replied = page.waitForResponse((r) => r.url().includes("/api/chat"));
-  await page.getByRole("button", { name: "Send", exact: true }).click();
-  await replied;
+  // Wait and click together, so a click that fails is reported as that and not
+  // as an unhandled wait for a reply that was never asked for.
+  await Promise.all([
+    page.waitForResponse((r) => r.url().includes("/api/chat")),
+    page.getByRole("button", { name: "Send", exact: true }).click(),
+  ]);
   await page.waitForTimeout(800);
 }
 
