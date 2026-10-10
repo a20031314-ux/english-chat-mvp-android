@@ -82,3 +82,22 @@ test("progress counts done missions, and the topic is done when all are", () => 
   const again = applyCheck(state, "m1", "pass", 0);
   assert.equal(again.results.m1?.outcome, "corrected");
 });
+
+test("a second hint that is most of the answer is cut back to its start", () => {
+  const ja = normalizeMissions({ missions: Array.from({ length: 3 }, () => ({
+    task: "テーブルについて、みんなに今日のお礼を言いましょう",
+    hints: ["簡単なあいさつと感謝", "今日はお疲れ様でした。…"],
+    answer: "今日はお疲れ様でした。ご一緒できてうれしいです。",
+  })) });
+  const hint = ja![0]!.hints[1];
+  assert.ok(hint.endsWith("…"));
+  assert.ok(hint.length < 14, hint);
+  const en = normalizeMissions({ missions: Array.from({ length: 3 }, () => ({
+    task: "同僚を夕食に誘ってみましょう",
+    hints: ["丁寧な誘い方", "Would you like to have dinner together…"],
+    answer: "Would you like to have dinner together after the meeting?",
+  })) });
+  assert.equal(en![0]!.hints[1], "Would you like to have…");
+  const short = normalizeMissions(raw(3));
+  assert.equal(short![0]!.hints[1], "Nice to…");
+});

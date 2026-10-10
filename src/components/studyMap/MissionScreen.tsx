@@ -212,7 +212,7 @@ export function MissionScreen({
             <>
               <div className="rounded-2xl border border-white/15 bg-white/[0.04] p-4">
                 <p className="text-[11px] font-semibold tracking-wide text-slate-500">
-                  {ui.missionTask} {progress.done + 1}/{progress.total}
+                  {ui.missionTask} {(state?.missions.indexOf(current) ?? 0) + 1}/{progress.total}
                 </p>
                 <p className="mt-1 text-[15px] leading-relaxed text-slate-100">{current.task}</p>
               </div>

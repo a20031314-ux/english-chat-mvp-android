@@ -10,6 +10,7 @@ import { observeChatLines, observeChatTurn } from "@/lib/server/learnerProfileSt
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
 import { checkSystemPrompt, normalizeCheck } from "@/lib/curriculum/missions";
 import { targetLanguageFocusHints } from "@/lib/languageFocus";
+import { explanationInLearningLanguage } from "@/lib/languageLearningAnalysis";
 import {
   INTERFACE_LANGUAGE_LABELS,
   coerceLanguageCode,
@@ -77,30 +78,46 @@ export async function POST(request: NextRequest) {
 
   const target = learningLanguageName(language);
   const uiName = INTERFACE_LANGUAGE_LABELS[record.map.uiLanguage] ?? "Korean";
-  try {
+  const messages = [
+    {
+      role: "system" as const,
+      content: checkSystemPrompt({ target, uiName, focus: targetLanguageFocusHints(language) }),
+    },
+    {
+      role: "user" as const,
+      content: JSON.stringify({
+        situation: `${topic.title} — ${topic.summary}`,
+        task: mission.task,
+        exampleAnswer: mission.answer,
+        learnerAnswer: answer,
+      }),
+    },
+  ];
+  const ask = async (extra?: string) => {
     const completion = await openai.chat.completions.create({
       model: MODEL(),
       temperature: 0.2,
       max_tokens: 400,
       response_format: { type: "json_object" },
-      messages: [
-        {
-          role: "system",
-          content: checkSystemPrompt({ target, uiName, focus: targetLanguageFocusHints(language) }),
-        },
-        {
-          role: "user",
-          content: JSON.stringify({
-            situation: `${topic.title} — ${topic.summary}`,
-            task: mission.task,
-            exampleAnswer: mission.answer,
-            learnerAnswer: answer,
-          }),
-        },
-      ],
+      messages: extra ? [...messages, { role: "system" as const, content: extra }] : messages,
     });
-    const check = normalizeCheck(JSON.parse(completion.choices[0]?.message?.content ?? "{}"), answer);
+    return normalizeCheck(JSON.parse(completion.choices[0]?.message?.content ?? "{}"), answer);
+  };
+  try {
+    let check = await ask();
     if (!check) return jsonWithCors(request, { error: "CHECK_FAILED" }, { status: 502 });
+    // Seen with Japanese learners in a Korean app: the feedback came back in
+    // Japanese, praising them in the language they cannot yet read easily.
+    // Asked once more, plainly; if it still is, the line goes and the verdict
+    // and correction speak for themselves.
+    const uiCode = record.map.uiLanguage;
+    if (check.feedback && explanationInLearningLanguage(check.feedback, uiCode, language)) {
+      void meterRequest(request, "missionCheck");
+      const again = await ask(`Your "feedback" was written in ${target}. Write it in ${uiName}; keep everything else the same.`);
+      const feedback =
+        again?.feedback && !explanationInLearningLanguage(again.feedback, uiCode, language) ? again.feedback : "";
+      check = { ...check, feedback };
+    }
     if (!isPremium) await incrementDailyUsed(userId);
 
     const saved = await recordMissionCheck({

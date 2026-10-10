@@ -59,6 +59,21 @@ function revealsAnswer(task: string, answer: string): boolean {
   return a.length >= 4 && task.toLowerCase().includes(a);
 }
 
+/**
+ * The second hint is the start of a sentence, not most of it. Seen from the
+ * model: "今日はお疲れ様でした。…" for an answer whose first sentence that was.
+ * Cut back to about half of the answer.
+ */
+function startOf(hint: string, answer: string): string {
+  const bare = hint.replace(/[…\s.]+$/u, "");
+  if (bare.length <= answer.length * 0.55) return hint;
+  const room = Math.max(2, Math.floor(answer.length * 0.45));
+  const spaced = /\s/.test(bare);
+  let cut = bare.slice(0, room);
+  if (spaced && cut.includes(" ")) cut = cut.slice(0, cut.lastIndexOf(" "));
+  return `${cut.replace(/[、。,.!?！？\s]+$/u, "")}…`;
+}
+
 /** Keep the well-formed missions; null when too few survive to practise. */
 export function normalizeMissions(raw: unknown): Mission[] | null {
   const list = Array.isArray((raw as { missions?: unknown })?.missions)
@@ -72,7 +87,7 @@ export function normalizeMissions(raw: unknown): Mission[] | null {
     const hints = Array.isArray(row.hints) ? row.hints.map((h) => text(h, 160)) : [];
     if (!task || !answer || !hints[0] || !hints[1]) continue;
     if (revealsAnswer(task, answer)) continue;
-    missions.push({ id: `m${missions.length + 1}`, task, answer, hints: [hints[0], hints[1]] });
+    missions.push({ id: `m${missions.length + 1}`, task, answer, hints: [hints[0], startOf(hints[1], answer)] });
     if (missions.length === MISSIONS_PER_TOPIC.max) break;
   }
   return missions.length >= MISSIONS_PER_TOPIC.min ? missions : null;
@@ -87,7 +102,7 @@ Write ${MISSIONS_PER_TOPIC.min} to ${MISSIONS_PER_TOPIC.max} missions that walk 
 
 For each mission:
 - "task": what to do, in ${input.uiName}. Do not quote or translate the answer in it.
-- "hints": exactly two hints. The first, in ${input.uiName}: which idea or kind of expression to reach for, without the words. The second, in ${input.target}: the first few words of a good answer, ending with "…".
+- "hints": exactly two hints. The first, in ${input.uiName}: which idea or kind of expression to reach for, without the words. The second, in ${input.target}: only the first two to four words of a good answer, never a whole sentence, ending with "…".
 - "answer": one natural way to do it, in ${input.target}, as a person would say it.
 
 Return only a json object: {"missions":[{"task":"...","hints":["...","..."],"answer":"..."}]}`;
