@@ -190,6 +190,7 @@ export async function fetchMissions(input: {
       topic: {
         missions: data.missions as TopicMissions["missions"],
         results: (data.results as TopicMissions["results"]) ?? {},
+        ...(data.seen && typeof data.seen === "object" ? { seen: data.seen as TopicMissions["seen"] } : {}),
       },
     };
   } catch {
