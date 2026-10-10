@@ -88,3 +88,7 @@ new chat continues where the last one stopped. `hub/README.md` has the rules
 - End: the commit that finishes the work also updates the role file and adds
   one entry to `hub/log/YYYY-MM.md`. Keep the hub short; finished items leave
   the open list and live only in the log.
+- The hub page (https://claude.ai/artifact/S9UCzdZQ2Ck6VGDTKkSrEo) is a
+  snapshot of these files. A chat that changes the hub runs
+  `node scripts/hub-page.mjs` and republishes `tmp/hub/index.html` to that
+  URL with the Artifact tool — never as a new artifact.

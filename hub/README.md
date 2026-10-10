@@ -15,6 +15,13 @@ hub/
   log/YYYY-MM.md  채팅마다 끝날 때 남기는 인계 기록 (덧붙이기만)
 ```
 
+## 허브 화면
+
+허브를 한 화면으로 보는 웹 페이지: https://claude.ai/artifact/S9UCzdZQ2Ck6VGDTKkSrEo
+(본인만 열 수 있음). 허브 파일의 스냅샷이라, 허브를 고친 채팅이
+`node scripts/hub-page.mjs`로 `tmp/hub/index.html`을 다시 만들고 Artifact 도구로
+**위 주소(url)에** 다시 올립니다. 역할 칸의 "이 역할로 새 채팅"을 누르면 시작 명령이 복사됩니다.
+
 ## 쓰는 법
 
 - **새 채팅을 열 때:** 하고 싶은 일을 그냥 말하면 됩니다. 어느 역할인지

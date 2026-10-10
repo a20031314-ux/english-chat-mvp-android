@@ -1,0 +1,242 @@
+<title>languagebank 허브</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600&display=swap">
+<style>
+/* Layout: a release-desk board — version strip on top, three role lanes, then handoff log beside standing decisions. */
+:root {
+  --bg: #f4f6f9;
+  --surface: #ffffff;
+  --ink: #161a21;
+  --muted: #5b6474;
+  --line: #dde2ea;
+  --soft: #eef1f6;
+  --accent: #2c56c9;
+  --dev: #2c56c9;
+  --qa: #a8670f;
+  --store: #237a50;
+  --warn-bg: #fff4dc;
+  --warn-ink: #7a4b00;
+  --font-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1116; --surface: #161a21; --ink: #e5e9f0; --muted: #96a0b0; --line: #2a303b; --soft: #1d222b;
+    --accent: #85a2f2; --dev: #85a2f2; --qa: #e3a64c; --store: #62c491; --warn-bg: #3a2c12; --warn-ink: #f2cf8a;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0e1116; --surface: #161a21; --ink: #e5e9f0; --muted: #96a0b0; --line: #2a303b; --soft: #1d222b;
+  --accent: #85a2f2; --dev: #85a2f2; --qa: #e3a64c; --store: #62c491; --warn-bg: #3a2c12; --warn-ink: #f2cf8a;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 14px; line-height: 1.6; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-inline: 20px; padding-block: 28px 56px; display: grid; gap: 28px; }
+h1, h2, h3 { margin: 0; text-wrap: balance; font-weight: 600; }
+h1 { font-size: 22px; letter-spacing: -0.01em; }
+h2 { font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: var(--muted); }
+h3 { font-size: 16px; }
+code { font-family: var(--font-mono); font-size: 0.88em; background: var(--soft); padding: 1px 5px; border-radius: 4px; overflow-wrap: anywhere; }
+.mono { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+.muted { color: var(--muted); }
+
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 20px; }
+.stamp { font-size: 12px; color: var(--muted); }
+
+.versions { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+.version { background: var(--surface); padding: 12px 14px; display: grid; gap: 2px; min-width: 0; }
+.version .label { font-size: 12px; color: var(--muted); }
+.version .value { font-family: var(--font-mono); font-size: 15px; font-weight: 500; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.version .value.text { font-family: var(--font-body); font-size: 13.5px; font-weight: 500; }
+.version .where { font-size: 11px; color: var(--muted); overflow-wrap: anywhere; }
+
+.ask { background: var(--warn-bg); color: var(--warn-ink); border-radius: 10px; padding: 12px 16px; }
+.ask strong { display: block; font-size: 12px; letter-spacing: 0.04em; margin-bottom: 4px; }
+.ask ul { margin: 0; padding-left: 18px; }
+
+.lanes { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; align-items: start; }
+@media (max-width: 900px) { .lanes { grid-template-columns: 1fr; } }
+.lane { background: var(--surface); border: 1px solid var(--line); border-top: 3px solid var(--role); border-radius: 10px; padding: 16px; display: grid; gap: 14px; min-width: 0; }
+.lane-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap; }
+.role-tag { font-family: var(--font-mono); font-size: 11px; color: var(--role); border: 1px solid var(--role); border-radius: 999px; padding: 0 8px; }
+.lane-title { display: flex; align-items: center; gap: 8px; }
+.block { display: grid; gap: 6px; min-width: 0; }
+.block > .label { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: 0.03em; }
+.count { font-family: var(--font-mono); font-size: 11px; background: var(--soft); border-radius: 999px; padding: 0 7px; margin-left: 4px; color: var(--ink); }
+.handed { border-left: 2px solid var(--role); padding-left: 10px; }
+.handed .from { font-family: var(--font-mono); font-size: 11px; color: var(--muted); }
+.empty { color: var(--muted); font-size: 13px; }
+
+button.start { font: inherit; font-size: 13px; font-weight: 500; color: var(--surface); background: var(--role); border: 0; border-radius: 8px; padding: 6px 12px; cursor: pointer; }
+button.start:focus-visible, summary:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button.start[data-done="1"] { background: var(--muted); }
+.starter { font-family: var(--font-mono); font-size: 12px; width: 100%; border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; background: var(--soft); color: var(--ink); }
+
+details.about summary { cursor: pointer; font-size: 12px; color: var(--muted); }
+details.about[open] summary { margin-bottom: 8px; }
+
+.md ul { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+.md p { margin: 0; }
+.md > * + * { margin-top: 6px; }
+.table-scroll { overflow-x: auto; }
+.md table { border-collapse: collapse; font-size: 12.5px; width: 100%; }
+.md th, .md td { border-bottom: 1px solid var(--line); padding: 5px 8px 5px 0; text-align: left; vertical-align: top; }
+.md th { color: var(--muted); font-weight: 500; }
+.md td:first-child { font-family: var(--font-mono); font-variant-numeric: tabular-nums; white-space: nowrap; }
+
+.lower { display: grid; grid-template-columns: minmax(0, 1.7fr) minmax(0, 1fr); gap: 16px; align-items: start; }
+@media (max-width: 900px) { .lower { grid-template-columns: 1fr; } }
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 12px; min-width: 0; }
+.log { display: grid; gap: 0; }
+.entry { border-top: 1px solid var(--line); padding-block: 10px; }
+.entry:first-child { border-top: 0; padding-top: 0; }
+.entry summary { cursor: pointer; list-style: none; display: grid; grid-template-columns: auto auto 1fr; gap: 10px; align-items: baseline; }
+.entry summary::-webkit-details-marker { display: none; }
+.entry .date { font-family: var(--font-mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.entry .title { font-weight: 500; min-width: 0; }
+.entry .md { margin-top: 8px; padding-left: 2px; color: var(--ink); }
+@media (max-width: 520px) { .entry summary { grid-template-columns: auto 1fr; } .entry .title { grid-column: 1 / -1; } }
+.decisions ul { margin: 0; padding-left: 18px; display: grid; gap: 8px; }
+.how { font-size: 13px; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>languagebank 허브</h1>
+      <div class="muted">역할마다 채팅은 따로, 기억은 저장소의 <code>hub/</code> 하나</div>
+    </div>
+    <div class="stamp mono" id="stamp"></div>
+  </header>
+
+  <section aria-label="버전" class="versions" id="versions"></section>
+  <div class="ask" id="ask" hidden></div>
+
+  <section aria-label="역할" class="lanes" id="lanes"></section>
+
+  <div class="lower">
+    <section class="panel" aria-labelledby="log-h">
+      <h2 id="log-h">인계 기록</h2>
+      <div class="log" id="log"></div>
+    </section>
+    <section class="panel decisions" aria-labelledby="dec-h">
+      <h2 id="dec-h">계속 지키는 결정</h2>
+      <div id="decisions" class="md"></div>
+      <p class="how">이 페이지는 허브 파일의 스냅샷입니다. 허브를 고친 채팅이 <code>node scripts/hub-page.mjs</code>로 다시 만들어 같은 주소에 올립니다.</p>
+    </section>
+  </div>
+</div>
+
+<script>
+const HUB = /*HUB_DATA*/null;
+
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const inline = (s) => esc(s).replace(/`([^`]+)`/g, "<code>$1</code>").replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+
+/** Enough markdown for the hub: bullets with wrapped lines, tables, paragraphs, fenced blocks skipped. */
+function md(text) {
+  const lines = (text || "").split("\n");
+  const out = [];
+  let list = null, table = null, para = [], fence = false;
+  const flushPara = () => { if (para.length) { out.push(`<p>${inline(para.join(" "))}</p>`); para = []; } };
+  const flushList = () => { if (list) { out.push(`<ul>${list.map((i) => `<li>${inline(i)}</li>`).join("")}</ul>`); list = null; } };
+  const flushTable = () => {
+    if (!table) return;
+    const rows = table.filter((r) => !/^\|\s*-/.test(r)).map((r) => r.replace(/^\||\|$/g, "").split("|").map((c) => c.trim()));
+    const [head, ...body] = rows;
+    out.push(`<div class="table-scroll"><table><thead><tr>${head.map((c) => `<th>${inline(c)}</th>`).join("")}</tr></thead><tbody>${body.map((r) => `<tr>${r.map((c) => `<td>${inline(c)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`);
+    table = null;
+  };
+  for (const raw of lines) {
+    if (raw.startsWith("```")) { fence = !fence; continue; }
+    if (fence || raw.startsWith(">")) continue;
+    const line = raw.trimEnd();
+    if (line.startsWith("|")) { flushPara(); flushList(); (table ||= []).push(line); continue; }
+    flushTable();
+    if (/^- /.test(line)) { flushPara(); (list ||= []).push(line.slice(2)); continue; }
+    if (list && /^\s{2,}\S/.test(line)) { list[list.length - 1] += " " + line.trim(); continue; }
+    if (!line.trim()) { flushPara(); flushList(); continue; }
+    flushList();
+    para.push(line.trim());
+  }
+  flushPara(); flushList(); flushTable();
+  return out.join("");
+}
+
+const ROLE_COLOR = { dev: "var(--dev)", qa: "var(--qa)", store: "var(--store)" };
+const ROLE_NAME = Object.fromEntries(HUB.roles.map((r) => [r.id, r.title]));
+const ABOUT = ["맡는 일", "하지 않는 일", "시작할 때", "끝낼 때", "도구", "참고"];
+
+document.getElementById("stamp").textContent =
+  `허브 기준 ${HUB.commit || "—"} · 만든 시각 ${new Date(HUB.builtAt).toLocaleString("ko-KR", { dateStyle: "short", timeStyle: "short" })}`;
+
+// Versions: the STATE table, one tile per row.
+{
+  const rows = (HUB.state["버전"] || "").split("\n").filter((l) => l.startsWith("|") && !/^\|\s*-/.test(l)).slice(1)
+    .map((l) => l.replace(/^\||\|$/g, "").split("|").map((c) => c.trim()));
+  document.getElementById("versions").innerHTML = rows.map(([label, value, where]) => {
+    // "2.48 (올리면 …)" → the number as the value, the parenthesis as a note.
+    const m = value.match(/^([^()]+?)\s*\((.+)\)$/);
+    const main = m && /^\d/.test(m[1]) && !/^versionCode/.test(m[2]) ? m[1] : value;
+    const note = main === value ? "" : m[2];
+    const numeric = /^\d/.test(main);
+    return `<div class="version"><span class="label">${inline(label)}</span><span class="value${numeric ? "" : " text"}">${inline(main)}</span>${note ? `<span class="where">${inline(note)}</span>` : ""}${where && where !== "—" ? `<span class="where">${inline(where)}</span>` : ""}</div>`;
+  }).join("");
+}
+
+// Questions waiting for the person, only when there are any.
+{
+  const text = (HUB.state["사용자에게 물어볼 것"] || "").trim();
+  if (text && !/^-\s*\(없음\)$/.test(text)) {
+    const box = document.getElementById("ask");
+    box.innerHTML = `<strong>답이 필요한 것</strong><div class="md">${md(text)}</div>`;
+    box.hidden = false;
+  }
+}
+
+// Role lanes.
+document.getElementById("lanes").innerHTML = HUB.roles.map((role) => {
+  const handed = HUB.inbox.filter((i) => i.to === role.id);
+  const shown = Object.entries(role.sections).filter(([k, v]) => k !== "_" && !ABOUT.includes(k) && v);
+  const about = Object.entries(role.sections).filter(([k, v]) => ABOUT.includes(k) && v);
+  return `
+  <article class="lane" style="--role:${ROLE_COLOR[role.id] || "var(--accent)"}">
+    <div class="lane-head">
+      <div class="lane-title"><h3>${esc(role.title)}</h3><span class="role-tag">${esc(role.id)}</span></div>
+      <button type="button" class="start" data-cmd="${esc(role.command)}">이 역할로 새 채팅</button>
+    </div>
+    <input class="starter" id="starter-${esc(role.id)}" value="${esc(role.command)}" readonly aria-label="${esc(role.title)} 시작 명령">
+    <div class="block">
+      <span class="label">넘겨받은 일<span class="count">${handed.length}</span></span>
+      ${handed.length ? handed.map((i) => `<div class="handed"><div class="from">${esc(i.date)} · ${esc(ROLE_NAME[i.from] || i.from)}에서</div><div>${inline(i.text)}</div></div>`).join("") : `<div class="empty">없음</div>`}
+    </div>
+    ${shown.map(([k, v]) => `<div class="block"><span class="label">${esc(k)}</span><div class="md">${md(v)}</div></div>`).join("")}
+    ${about.length ? `<details class="about"><summary>이 역할이 맡는 일과 규칙</summary><div class="md">${about.map(([k, v]) => `<p><strong>${esc(k)}</strong></p>${md(v)}`).join("")}</div></details>` : ""}
+  </article>`;
+}).join("");
+
+document.querySelectorAll("button.start").forEach((btn) => {
+  btn.addEventListener("click", () => {
+    const cmd = btn.dataset.cmd;
+    const field = btn.closest(".lane").querySelector(".starter");
+    const done = () => { btn.textContent = "복사됨 · 새 채팅에 붙여넣기"; btn.dataset.done = "1"; setTimeout(() => { btn.textContent = "이 역할로 새 채팅"; btn.dataset.done = ""; }, 2500); };
+    const fallback = () => { field.focus(); field.select(); btn.textContent = "선택됨 · 복사해서 쓰세요"; };
+    try {
+      navigator.clipboard.writeText(cmd).then(done, fallback);
+    } catch { fallback(); }
+  });
+});
+
+// Handoff log, newest first; the latest two open.
+document.getElementById("log").innerHTML = HUB.logs.map((e, i) => `
+  <details class="entry" ${i < 2 ? "open" : ""}>
+    <summary><span class="date">${esc(e.date)}</span><span class="role-tag" style="--role:${ROLE_COLOR[e.role] || "var(--accent)"}">${esc(e.role)}</span><span class="title">${inline(e.title)}</span></summary>
+    <div class="md">${md(e.body)}</div>
+  </details>`).join("") || `<div class="empty">아직 기록이 없습니다.</div>`;
+
+document.getElementById("decisions").innerHTML = md(HUB.state["계속 지키는 결정"]);
+</script>
