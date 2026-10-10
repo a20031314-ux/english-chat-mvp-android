@@ -92,3 +92,12 @@ new chat continues where the last one stopped. `hub/README.md` has the rules
   snapshot of these files. A chat that changes the hub runs
   `node scripts/hub-page.mjs` and republishes `tmp/hub/index.html` to that
   URL with the Artifact tool — never as a new artifact.
+
+# Product doc
+
+`PRODUCT.md` (Korean) says what the app is: its core values, screens,
+features, limits, representative scenes and copy tone. Read it before
+building a feature, writing store text or release notes, or making
+screenshots, and work from it rather than from memory. A commit that changes
+a screen, a feature, a limit or the tone updates `PRODUCT.md` in the same
+commit. When it and the code disagree, the code is right and the doc is fixed.

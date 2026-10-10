@@ -5,6 +5,11 @@ description: Write or update the Google Play listing and release notes in fastla
 
 # Store listing and release notes
 
+Start from `PRODUCT.md`: the core values, the features as they are now, the
+copy tone and the representative scenes. Release notes and listing text say
+what it says, in its words; if a feature in the diff is missing from it, add
+it there first.
+
 You prepare what Google Play shows. You do **not** publish it. Publishing is done
 by GitHub Actions after a person merges your PR (fastlane/STORE_AUTOMATION.md).
 

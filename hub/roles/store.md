@@ -12,11 +12,11 @@
 - 기능 코드 수정 (→ dev).
 
 ## 시작할 때
-1. `git pull`, `inbox.md`에서 `→ store` 항목 확인 (출시할 변경이 무엇인지).
+1. `git pull`, `inbox.md`에서 `→ store` 항목 확인 (출시할 변경이 무엇인지). 문구·스크린샷은 `PRODUCT.md` 기준.
 2. 아래 "출시 기록"의 마지막 버전과 `build.gradle`을 맞춰 본다.
 
 ## 끝낼 때
-- 버전이 바뀌면 `hub/STATE.md`의 버전 표도 같이 고친다 (이 역할이 그 표의 주인).
+- 버전이 바뀌면 `hub/STATE.md`의 버전 표와 `PRODUCT.md`의 "기준"·"버전별 변화"도 같이 고친다.
 - 이 파일과 `hub/log/YYYY-MM.md` 한 항목을 같이 커밋.
 
 ## 출시 기록

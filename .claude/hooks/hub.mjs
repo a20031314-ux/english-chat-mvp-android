@@ -187,7 +187,7 @@ if (mode === "stop") {
         list +
         "\n\n끝내기 전에: hub/log/YYYY-MM.md에 한 항목(한 일 / 남긴 일 / 커밋), 해당 역할 파일의 열린 일 갱신, " +
         "다른 역할에 넘길 것은 hub/inbox.md에 한 줄. 그다음 커밋하고 푸시한 브랜치에 같이 올려라. " +
-        "형식은 hub/README.md와 hub/log 맨 위.",
+        "형식은 hub/README.md와 hub/log 맨 위. 화면·기능·한도가 바뀌었으면 PRODUCT.md도 같이 고쳐라.",
     }),
   );
   process.exit(0);

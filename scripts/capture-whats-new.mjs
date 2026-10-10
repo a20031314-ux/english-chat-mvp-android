@@ -19,6 +19,8 @@
  *
  * Needs www/ built (npm run build:capacitor), Playwright, and sharp.
  *
+ * What each picture should show: PRODUCT.md, "대표 장면".
+ *
  * Run: node --experimental-strip-types scripts/capture-whats-new.mjs 2.64 [--only ko,ar]
  *   PLAYWRIGHT_MODULE / CHROMIUM as for check:browser-languages.
  */

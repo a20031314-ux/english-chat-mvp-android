@@ -12,7 +12,7 @@
 
 ## 시작할 때
 1. `git pull`, `inbox.md`에서 `→ qa` 항목(무엇을 볼지) 확인.
-2. `npm run build:capacitor`로 지금 main을 빌드.
+2. `npm run build:capacitor`로 지금 main을 빌드. 무엇을 볼지는 `PRODUCT.md`의 기능·대표 장면 기준.
 
 ## 도구
 - 언어 조합 자동 점검: `npm run check:browser-languages`

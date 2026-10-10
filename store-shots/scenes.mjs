@@ -1,5 +1,6 @@
 /**
  * The screens that become store screenshots, driven in the real app.
+ * Which screens: PRODUCT.md, "대표 장면". Keep the two in step.
  *
  * Every AI response is answered from store-shots/content/<locale>.json through
  * Playwright's request interception, so a capture costs nothing, needs no API
