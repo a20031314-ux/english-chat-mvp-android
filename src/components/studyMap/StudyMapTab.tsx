@@ -25,6 +25,7 @@ import {
   type SceneMatch,
 } from "@/lib/studyMapClient";
 import { normalizeYouTubeWatchUrl } from "@/lib/videoLearning";
+import { MissionScreen } from "@/components/studyMap/MissionScreen";
 import { LearnerPanel } from "@/components/studyMap/LearnerPanel";
 
 /**
@@ -72,6 +73,7 @@ export function StudyMapTab({
   const [openTopicId, setOpenTopicId] = useState<string | null>(null);
   const [lastOpenedId, setLastOpenedId] = useState<string | null>(null);
   const [clips, setClips] = useState<Clip[]>([]);
+  const [missionTopicId, setMissionTopicId] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -143,7 +145,8 @@ export function StudyMapTab({
         status,
         isPremium,
       });
-      if (saved) setRecord((current) => ({ ...saved, hasPrevious: current?.hasPrevious }));
+      if (saved)
+        setRecord((current) => ({ ...saved, hasPrevious: current?.hasPrevious, missions: current?.missions }));
     },
     [map, targetLanguage, isPremium],
   );
@@ -220,8 +223,38 @@ export function StudyMapTab({
           onStatus={(status) => void setStatus(openTopicId, status)}
           onOpenTopic={openTopic}
           onClose={() => setOpenTopicId(null)}
+          missions={record?.missions?.[openTopicId]}
+          onPractise={() => {
+            setMissionTopicId(openTopicId);
+            setOpenTopicId(null);
+          }}
         />
       ) : null}
+
+      {map && missionTopicId ? (() => {
+        const topic = map.topics.find((entry) => entry.id === missionTopicId);
+        return topic ? (
+          <MissionScreen
+            ui={ui}
+            map={map}
+            topic={topic}
+            targetLanguage={targetLanguage}
+            isPremium={isPremium}
+            onProgress={(summary, status) =>
+              setRecord((current) =>
+                current
+                  ? {
+                      ...current,
+                      missions: { ...(current.missions ?? {}), [topic.id]: summary },
+                      status: status ? { ...current.status, [topic.id]: status } : current.status,
+                    }
+                  : current,
+              )
+            }
+            onClose={() => setMissionTopicId(null)}
+          />
+        ) : null;
+      })() : null}
     </div>
   );
 }
@@ -458,6 +491,11 @@ function MapView({
                     <span className="flex items-center gap-1.5 text-[11px] text-slate-500">
                       <span className={`h-1.5 w-1.5 rounded-full ${STATUS_DOT[status[topic.id] ?? "todo"]}`} />
                       {topic.id} · {topic.order}
+                      {record?.missions?.[topic.id]?.total ? (
+                        <span className="ml-auto tabular-nums text-slate-400">
+                          {record.missions[topic.id]!.done}/{record.missions[topic.id]!.total}
+                        </span>
+                      ) : null}
                     </span>
                     <span className="mt-1 block text-[13px] font-medium leading-snug text-slate-100">
                       {topic.title}
@@ -483,6 +521,8 @@ function TopicSheet({
   onStatus,
   onOpenTopic,
   onClose,
+  missions,
+  onPractise,
 }: {
   ui: UICopy;
   map: StudyMap;
@@ -493,6 +533,8 @@ function TopicSheet({
   onStatus: (status: TopicStatus) => void;
   onOpenTopic: (id: string) => void;
   onClose: () => void;
+  missions?: { done: number; total: number };
+  onPractise: () => void;
 }) {
   if (!topic) return null;
   const sector = map.sectors.find((entry) => entry.id === topic.sector);
@@ -558,6 +600,24 @@ function TopicSheet({
             </button>
           ))}
         </div>
+
+        {/* The way in that asks the learner to produce something: a task at a
+            time, checked, with the answer held back until they ask for it. */}
+        <button
+          type="button"
+          onClick={onPractise}
+          className="mt-4 w-full rounded-xl bg-[#e8e8e4] px-4 py-3 text-left text-neutral-900 hover:bg-white"
+        >
+          <span className="flex items-center justify-between gap-2">
+            <span className="text-[14px] font-semibold">{ui.missionStart}</span>
+            {missions && missions.total > 0 ? (
+              <span className="text-[12px] tabular-nums text-neutral-600">
+                {ui.missionProgress.replace("{done}", String(missions.done)).replace("{total}", String(missions.total))}
+              </span>
+            ) : null}
+          </span>
+          <span className="mt-0.5 block text-[12px] leading-relaxed text-neutral-600">{ui.missionStartHint}</span>
+        </button>
 
         <p className="mt-5 text-[11px] font-semibold tracking-wide text-slate-500">{ui.mapPractice}</p>
         <ul className="mt-2 space-y-2">

@@ -52,6 +52,10 @@ export const MODEL_CALLS_PER_REQUEST = {
   // One chat sentence read for the constructions in it (learner/classify.ts),
   // after the reply has gone out. Small model, ids in and out.
   learnerObserve: 1,
+  // A topic's missions, written once the first time it is practised.
+  curriculumMissions: 1,
+  // One mission answer checked: verdict, correction and the other person's reply.
+  missionCheck: 1,
   vocabGloss: 1,
   learningSpans: 1,
   translate: 1,

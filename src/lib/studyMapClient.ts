@@ -1,12 +1,15 @@
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { StudyMap, TopicStatus } from "@/lib/curriculum/map";
+import type { MissionCheck, MissionResult, TopicMissions } from "@/lib/curriculum/missions";
 
 /** What the curriculum routes answer with: the map and how far through it. */
 export type MapRecord = {
   map: StudyMap | null;
   status: Record<string, TopicStatus>;
   hasPrevious?: boolean;
+  /** Missions done per topic, for topics that have them. */
+  missions?: Record<string, { done: number; total: number }>;
 };
 
 export type MapError = "identity" | "limit" | "failed";
@@ -30,6 +33,9 @@ function asRecord(data: Record<string, unknown>): MapRecord {
     map: (data.map as StudyMap | null) ?? null,
     status: (data.status as Record<string, TopicStatus>) ?? {},
     ...(typeof data.hasPrevious === "boolean" ? { hasPrevious: data.hasPrevious } : {}),
+    ...(data.missions && typeof data.missions === "object"
+      ? { missions: data.missions as MapRecord["missions"] }
+      : {}),
   };
 }
 
@@ -144,5 +150,84 @@ export async function findScenes(
     return Array.isArray(data.matches) ? (data.matches as SceneMatch[]) : [];
   } catch {
     return null;
+  }
+}
+
+export type MissionError = "identity" | "limit" | "changed" | "failed";
+
+function missionErrorOf(response: Response): MissionError {
+  if (response.status === 401) return "identity";
+  if (response.status === 403 || response.status === 429) return "limit";
+  if (response.status === 409) return "changed";
+  return "failed";
+}
+
+/** A topic's missions, written on the first visit (api/curriculum/missions). */
+export async function fetchMissions(input: {
+  language: string;
+  mapId: string;
+  topicId: string;
+  isPremium: boolean;
+}): Promise<{ ok: true; topic: TopicMissions } | { ok: false; error: MissionError }> {
+  try {
+    const response = await fetch(apiUrl("/api/curriculum/missions"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...entitlementHeaders(input.isPremium) },
+      body: JSON.stringify({ language: input.language, mapId: input.mapId, topicId: input.topicId }),
+      signal: AbortSignal.timeout(60000),
+    });
+    if (!response.ok) return { ok: false, error: missionErrorOf(response) };
+    const data = await readJson(response);
+    if (!Array.isArray(data.missions)) return { ok: false, error: "failed" };
+    return {
+      ok: true,
+      topic: {
+        missions: data.missions as TopicMissions["missions"],
+        results: (data.results as TopicMissions["results"]) ?? {},
+      },
+    };
+  } catch {
+    return { ok: false, error: "failed" };
+  }
+}
+
+/** Check one answer. A try counts as a sent chat. */
+export async function checkMission(input: {
+  language: string;
+  mapId: string;
+  topicId: string;
+  missionId: string;
+  answer: string;
+  hints: number;
+  tries: number;
+  isPremium: boolean;
+}): Promise<
+  | {
+      ok: true;
+      check: MissionCheck;
+      results?: Record<string, MissionResult>;
+      status?: TopicStatus;
+    }
+  | { ok: false; error: MissionError }
+> {
+  try {
+    const { isPremium, ...body } = input;
+    const response = await fetch(apiUrl("/api/curriculum/mission-check"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+      body: JSON.stringify(body),
+      signal: AbortSignal.timeout(45000),
+    });
+    if (!response.ok) return { ok: false, error: missionErrorOf(response) };
+    const data = await readJson(response);
+    if (!data.check || typeof data.check !== "object") return { ok: false, error: "failed" };
+    return {
+      ok: true,
+      check: data.check as MissionCheck,
+      ...(data.results ? { results: data.results as Record<string, MissionResult> } : {}),
+      ...(typeof data.status === "string" ? { status: data.status as TopicStatus } : {}),
+    };
+  } catch {
+    return { ok: false, error: "failed" };
   }
 }

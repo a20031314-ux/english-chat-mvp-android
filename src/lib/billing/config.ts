@@ -47,6 +47,14 @@ export const FREE_DAILY_MAP_LIMIT = 3;
 export const PREMIUM_DAILY_MAP_LIMIT = 10;
 
 /**
+ * Topics turned into missions in a day. Each topic is written once and kept,
+ * so this only stops a loop; a learner working through a map opens a few.
+ * Checking a mission is a sent chat and counts against the chat limit.
+ */
+export const FREE_DAILY_MISSION_SET_LIMIT = 20;
+export const PREMIUM_DAILY_MISSION_SET_LIMIT = 100;
+
+/**
  * What Play actually bills for `premium_monthly`.
  *
  * Kept in step with the Play Console by hand, which is exactly how it went

@@ -1,5 +1,11 @@
 import { kvGetJson, kvSetJson } from "./kv.ts";
 import type { StudyMap, TopicStatus } from "../curriculum/map.ts";
+import {
+  applyCheck,
+  statusFromMissions,
+  type MissionVerdict,
+  type TopicMissions,
+} from "../curriculum/missions.ts";
 
 /**
  * Where a learner's study map and their progress through it are kept.
@@ -77,4 +83,69 @@ export async function setTopicStatus(
   record.updatedAt = new Date().toISOString();
   await kvSetJson(curriculumKey(userId, language), record, CURRICULUM_TTL_SECONDS);
   return record;
+}
+
+/**
+ * Missions, one set per topic, kept beside the map rather than in it: written
+ * a topic at a time, and checked answers land here while the map record is
+ * being marked by other screens. Keyed by map, so a new map starts clean and
+ * restoring an old one brings its missions back.
+ */
+function missionsKey(userId: string, language: string, mapId: string): string {
+  return `curriculum:${userId}:${language}:missions:${mapId}`;
+}
+
+export async function readMissions(
+  userId: string,
+  language: string,
+  mapId: string,
+): Promise<Record<string, TopicMissions>> {
+  return (await kvGetJson<Record<string, TopicMissions>>(missionsKey(userId, language, mapId))) ?? {};
+}
+
+export async function saveTopicMissions(
+  userId: string,
+  language: string,
+  mapId: string,
+  topicId: string,
+  topic: TopicMissions,
+): Promise<void> {
+  const all = await readMissions(userId, language, mapId);
+  all[topicId] = topic;
+  await kvSetJson(missionsKey(userId, language, mapId), all, CURRICULUM_TTL_SECONDS);
+}
+
+/**
+ * Record a checked answer and move the topic along: started on the first one
+ * done, finished when every mission is. A topic the learner marked done stays
+ * done.
+ */
+export async function recordMissionCheck(input: {
+  userId: string;
+  language: string;
+  mapId: string;
+  topicId: string;
+  missionId: string;
+  verdict: MissionVerdict;
+  hints: number;
+  tries: number;
+}): Promise<{ topic: TopicMissions; status: TopicStatus } | null> {
+  const all = await readMissions(input.userId, input.language, input.mapId);
+  const before = all[input.topicId];
+  if (!before) return null;
+  const topic = applyCheck(before, input.missionId, input.verdict, input.hints, input.tries);
+  if (topic !== before) {
+    all[input.topicId] = topic;
+    await kvSetJson(missionsKey(input.userId, input.language, input.mapId), all, CURRICULUM_TTL_SECONDS);
+  }
+  const record = await readCurriculum(input.userId, input.language);
+  let status: TopicStatus = record?.status[input.topicId] ?? "todo";
+  if (topic !== before && status !== "done") {
+    const next = statusFromMissions(topic);
+    if (next !== status) {
+      const saved = await setTopicStatus(input.userId, input.language, input.mapId, input.topicId, next);
+      if (saved) status = next;
+    }
+  }
+  return { topic, status };
 }
