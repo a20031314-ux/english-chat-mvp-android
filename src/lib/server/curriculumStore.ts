@@ -2,10 +2,15 @@ import { kvGetJson, kvSetJson } from "./kv.ts";
 import type { StudyMap, TopicStatus } from "../curriculum/map.ts";
 import {
   applyCheck,
+  applyUse,
+  dueMissions,
+  markSeen,
   statusFromMissions,
+  type Mission,
   type MissionVerdict,
   type TopicMissions,
 } from "../curriculum/missions.ts";
+import { findExpression } from "../videoIndex/match.ts";
 
 /**
  * Where a learner's study map and their progress through it are kept.
@@ -116,10 +121,29 @@ export async function saveTopicMissions(
 }
 
 /**
- * Record a checked answer and move the topic along: started on the first one
- * done, finished when every mission is. A topic the learner marked done stays
- * done.
+ * Move a topic's status along after its items changed: started once anything
+ * is done, finished when every item is mastered. Never moves a topic back —
+ * one the learner marked done stays done.
  */
+async function advanceStatus(
+  userId: string,
+  language: string,
+  mapId: string,
+  topicId: string,
+  topic: TopicMissions,
+): Promise<TopicStatus> {
+  const record = await readCurriculum(userId, language);
+  let status: TopicStatus = record?.status[topicId] ?? "todo";
+  if (status === "done") return status;
+  const next = statusFromMissions(topic);
+  const anything = Object.keys(topic.results).length > 0;
+  if (!anything || next === status) return status;
+  const saved = await setTopicStatus(userId, language, mapId, topicId, next);
+  if (saved) status = next;
+  return status;
+}
+
+/** Record a checked answer, from a mission or a review, and move the topic along. */
 export async function recordMissionCheck(input: {
   userId: string;
   language: string;
@@ -129,23 +153,97 @@ export async function recordMissionCheck(input: {
   verdict: MissionVerdict;
   hints: number;
   tries: number;
+  where?: "mission" | "review";
 }): Promise<{ topic: TopicMissions; status: TopicStatus } | null> {
   const all = await readMissions(input.userId, input.language, input.mapId);
   const before = all[input.topicId];
   if (!before) return null;
-  const topic = applyCheck(before, input.missionId, input.verdict, input.hints, input.tries);
+  const topic = applyCheck(before, input.missionId, input.verdict, input.hints, input.tries, Date.now(), input.where ?? "mission");
   if (topic !== before) {
     all[input.topicId] = topic;
     await kvSetJson(missionsKey(input.userId, input.language, input.mapId), all, CURRICULUM_TTL_SECONDS);
   }
-  const record = await readCurriculum(input.userId, input.language);
-  let status: TopicStatus = record?.status[input.topicId] ?? "todo";
-  if (topic !== before && status !== "done") {
-    const next = statusFromMissions(topic);
-    if (next !== status) {
-      const saved = await setTopicStatus(input.userId, input.language, input.mapId, input.topicId, next);
-      if (saved) status = next;
+  const status = await advanceStatus(input.userId, input.language, input.mapId, input.topicId, topic);
+  return { topic, status };
+}
+
+/** The example answer was opened. */
+export async function recordMissionSeen(input: {
+  userId: string;
+  language: string;
+  mapId: string;
+  topicId: string;
+  missionId: string;
+}): Promise<void> {
+  const all = await readMissions(input.userId, input.language, input.mapId);
+  const before = all[input.topicId];
+  if (!before) return;
+  const topic = markSeen(before, input.missionId);
+  if (topic === before) return;
+  all[input.topicId] = topic;
+  await kvSetJson(missionsKey(input.userId, input.language, input.mapId), all, CURRICULUM_TTL_SECONDS);
+}
+
+/** Learned items ready to be produced from memory, across the current map. */
+export async function readDueItems(
+  userId: string,
+  language: string,
+  limit = 10,
+): Promise<{ mapId: string; items: Array<{ topicId: string; topicTitle: string; mission: Mission }> } | null> {
+  const record = await readCurriculum(userId, language);
+  if (!record) return null;
+  const all = await readMissions(userId, language, record.map.id);
+  const items: Array<{ topicId: string; topicTitle: string; mission: Mission }> = [];
+  for (const topic of [...record.map.topics].sort((a, b) => a.order - b.order)) {
+    const missions = all[topic.id];
+    if (!missions) continue;
+    for (const mission of dueMissions(missions)) {
+      items.push({ topicId: topic.id, topicTitle: topic.title, mission });
+      if (items.length >= limit) return { mapId: record.map.id, items };
     }
   }
-  return { topic, status };
+  return { mapId: record.map.id, items };
+}
+
+/**
+ * A line they said in chat or a call, held against the phrases on their map.
+ * Said and kept by the correction: produced. Said but corrected away: a slip.
+ */
+export async function observeMapUse(input: {
+  userId: string;
+  language: string;
+  sentence: string;
+  corrected: string;
+  where: "chat" | "call";
+}): Promise<void> {
+  const sentence = input.sentence.trim();
+  if (!sentence) return;
+  try {
+    const record = await readCurriculum(input.userId, input.language);
+    if (!record) return;
+    const all = await readMissions(input.userId, input.language, record.map.id);
+    const said = [{ start: 0, end: 0, text: sentence }];
+    const kept = [{ start: 0, end: 0, text: input.corrected.trim() || sentence }];
+    const changedTopics: string[] = [];
+    for (const [topicId, before] of Object.entries(all)) {
+      let topic = before;
+      for (const mission of before.missions) {
+        if (!mission.expression) continue;
+        if (findExpression(said, mission.expression, input.language).length === 0) continue;
+        const correct = findExpression(kept, mission.expression, input.language).length > 0;
+        topic = applyUse(topic, mission.id, correct, input.where);
+      }
+      if (topic !== before) {
+        all[topicId] = topic;
+        changedTopics.push(topicId);
+      }
+    }
+    if (changedTopics.length === 0) return;
+    await kvSetJson(missionsKey(input.userId, input.language, record.map.id), all, CURRICULUM_TTL_SECONDS);
+    for (const topicId of changedTopics) {
+      await advanceStatus(input.userId, input.language, record.map.id, topicId, all[topicId]!);
+    }
+  } catch (error) {
+    console.error("[curriculum] map use failed", error);
+  }
 }

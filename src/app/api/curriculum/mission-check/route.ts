@@ -52,6 +52,9 @@ export async function POST(request: NextRequest) {
     typeof body.answer === "string" ? body.answer.replace(/\s+/g, " ").trim().slice(0, MAX_ANSWER_CHARS) : "";
   const hints = typeof body.hints === "number" ? body.hints : 0;
   const tries = typeof body.tries === "number" ? body.tries : 1;
+  // A review asks the same task again later; producing it then is what makes
+  // an item mastered (curriculum/missions.ts).
+  const where = body.mode === "review" ? "review" : "mission";
   if (!mapId || !topicId || !missionId || !answer) {
     return jsonWithCors(request, { error: "answer required" }, { status: 400 });
   }
@@ -129,6 +132,7 @@ export async function POST(request: NextRequest) {
       verdict: check.verdict,
       hints,
       tries,
+      where,
     });
 
     // The answer is a line they produced, read for what it shows about their

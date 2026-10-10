@@ -3,7 +3,7 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
 import { hasPreviousMap, readCurriculum, readMissions } from "@/lib/server/curriculumStore";
-import { missionProgress } from "@/lib/curriculum/missions";
+import { topicCounts } from "@/lib/curriculum/missions";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 
 export const dynamic = "force-dynamic";
@@ -30,7 +30,7 @@ export async function GET(request: NextRequest) {
   // How far each topic's missions have got, for the map's cards.
   const missions = record ? await readMissions(userId, language, record.map.id) : {};
   const summary = Object.fromEntries(
-    Object.entries(missions).map(([topicId, topic]) => [topicId, missionProgress(topic)]),
+    Object.entries(missions).map(([topicId, topic]) => [topicId, topicCounts(topic)]),
   );
   return jsonWithCors(request, {
     ...(record ?? { map: null, status: {} }),

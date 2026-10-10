@@ -2,6 +2,11 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   applyCheck,
+  applyUse,
+  dueMissions,
+  itemState,
+  markSeen,
+  topicCounts,
   missionProgress,
   nextMission,
   normalizeCheck,
@@ -65,22 +70,76 @@ test("a check is read strictly and a correction equal to the answer is dropped",
   assert.equal(miss?.reply, "");
 });
 
-test("progress counts done missions, and the topic is done when all are", () => {
+const H = 60 * 60 * 1000;
+
+test("done with help is learned; done unaided the first time is mastered", () => {
   let state: TopicMissions = { missions: normalizeMissions(raw(3))!, results: {} };
   assert.deepEqual(missionProgress(state), { done: 0, total: 3 });
-  state = applyCheck(state, "m1", "miss", 0);
-  assert.deepEqual(missionProgress(state), { done: 0, total: 3 });
-  state = applyCheck(state, "m1", "close", 1, 2);
-  state = applyCheck(state, "m2", "pass", 3);
+  state = applyCheck(state, "m1", "miss", 0, 1, 0);
+  assert.equal(itemState(state, "m1", 0).state, "toLearn");
+  state = applyCheck(state, "m1", "close", 1, 2, 0);
+  state = applyCheck(state, "m2", "pass", 2, 1, 0);
+  state = applyCheck(state, "m3", "pass", 0, 1, 0);
+  assert.equal(itemState(state, "m1", 0).state, "learned");
+  assert.equal(itemState(state, "m2", 0).state, "learned");
+  assert.equal(itemState(state, "m3", 0).state, "mastered");
+  assert.deepEqual(missionProgress(state), { done: 3, total: 3 });
   assert.equal(statusFromMissions(state), "doing");
-  assert.equal(nextMission(state)?.id, "m3");
-  assert.deepEqual(state.results.m1, { outcome: "corrected", hints: 1, tries: 2 });
-  state = applyCheck(state, "m3", "pass", 0);
-  assert.equal(statusFromMissions(state), "done");
   assert.equal(nextMission(state), null);
-  // A mission done once keeps its first result.
-  const again = applyCheck(state, "m1", "pass", 0);
-  assert.equal(again.results.m1?.outcome, "corrected");
+});
+
+test("a learned item is mastered by producing it unaided once some hours have passed", () => {
+  let state: TopicMissions = { missions: normalizeMissions(raw(3))!, results: {} };
+  state = applyCheck(state, "m1", "close", 0, 1, 0);
+  // Straight after the correction: practice, not proof.
+  state = applyCheck(state, "m1", "pass", 0, 2, 5 * 60 * 1000, "review");
+  assert.equal(itemState(state, "m1", 5 * 60 * 1000).state, "learned");
+  assert.equal(itemState(state, "m1", 6 * 60 * 1000).due, false);
+  const later = 5 * 60 * 1000 + 9 * H;
+  assert.equal(itemState(state, "m1", later).due, true);
+  assert.deepEqual(dueMissions(state, later).map((m) => m.id), ["m1"]);
+  // With a hint it does not count.
+  const hinted = applyCheck(state, "m1", "pass", 1, 1, later, "review");
+  assert.equal(itemState(hinted, "m1", later).state, "learned");
+  state = applyCheck(state, "m1", "pass", 0, 1, later, "review");
+  assert.equal(itemState(state, "m1", later).state, "mastered");
+  assert.equal(state.results.m1?.outputs?.at(-1)?.where, "review");
+});
+
+test("getting a mastered item wrong takes it back to learned", () => {
+  let state: TopicMissions = { missions: normalizeMissions(raw(3))!, results: {} };
+  state = applyCheck(state, "m1", "pass", 0, 1, 0);
+  state = applyCheck(state, "m1", "close", 0, 1, 10 * H, "review");
+  assert.equal(itemState(state, "m1", 10 * H).state, "learned");
+  assert.equal(state.results.m1?.slips, 1);
+});
+
+test("using the phrase in chat or a call counts as producing it", () => {
+  let state: TopicMissions = { missions: normalizeMissions(raw(3))!, results: {} };
+  // Never practised, used right: they can produce it.
+  state = applyUse(state, "m2", true, "chat", 0);
+  assert.equal(itemState(state, "m2", 0).state, "mastered");
+  state = applyCheck(state, "m1", "close", 1, 1, 0);
+  state = applyUse(state, "m1", true, "call", 1 * H);
+  assert.equal(itemState(state, "m1", 1 * H).state, "learned");
+  state = applyUse(state, "m1", true, "call", 10 * H);
+  assert.equal(itemState(state, "m1", 10 * H).state, "mastered");
+  state = applyUse(state, "m1", false, "chat", 11 * H);
+  assert.equal(itemState(state, "m1", 11 * H).state, "learned");
+});
+
+test("looking at the answer is a mark, not progress, and the topic is done when all are mastered", () => {
+  let state: TopicMissions = { missions: normalizeMissions(raw(3))!, results: {} };
+  state = markSeen(state, "m1");
+  const counts = topicCounts(state, 0);
+  assert.equal(counts.toLearn, 3);
+  assert.equal(counts.seen, 1);
+  for (const id of ["m1", "m2", "m3"]) state = applyCheck(state, id, "pass", 0, 1, 0);
+  assert.equal(statusFromMissions(state), "done");
+  assert.deepEqual(
+    { mastered: topicCounts(state, 0).mastered, seen: topicCounts(state, 0).seen },
+    { mastered: 3, seen: 0 },
+  );
 });
 
 test("a second hint that is most of the answer is cut back to its start", () => {

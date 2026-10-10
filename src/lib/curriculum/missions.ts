@@ -31,6 +31,12 @@ export type Mission = {
    * the start of a sentence in the language being learned.
    */
   hints: [string, string];
+  /**
+   * The phrase being practised, in the language being learned — the part any
+   * good answer contains. What chat and call lines are searched for, so using
+   * it there counts. Missing on missions written before it existed.
+   */
+  expression?: string;
 };
 
 export type MissionVerdict = "pass" | "close" | "miss";
@@ -42,11 +48,26 @@ export type MissionResult = {
   /** Hints opened before it was done, 0–3. Three means the answer was shown. */
   hints: number;
   tries: number;
+  /** When it was first done (ms). Missing on results kept before it was. */
+  learnedAt?: number;
+  /** Whether they can produce it unaided: see items.ts. */
+  mastered?: boolean;
+  masteredAt?: number;
+  /** The last time it was tried or used, for when a review is due. */
+  lastAt?: number;
+  /** Times it went from mastered back to learned. */
+  slips?: number;
+  /** Where it was produced unaided, most recent last, at most a few. */
+  outputs?: Array<{ at: number; where: OutputPlace }>;
 };
+
+export type OutputPlace = "mission" | "review" | "chat" | "call";
 
 export type TopicMissions = {
   missions: Mission[];
   results: Record<string, MissionResult>;
+  /** Missions whose example answer was looked at without being done. */
+  seen?: Record<string, true>;
 };
 
 function text(value: unknown, max: number): string {
@@ -87,7 +108,14 @@ export function normalizeMissions(raw: unknown): Mission[] | null {
     const hints = Array.isArray(row.hints) ? row.hints.map((h) => text(h, 160)) : [];
     if (!task || !answer || !hints[0] || !hints[1]) continue;
     if (revealsAnswer(task, answer)) continue;
-    missions.push({ id: `m${missions.length + 1}`, task, answer, hints: [hints[0], startOf(hints[1], answer)] });
+    const expression = text(row.expression, 80);
+    missions.push({
+      id: `m${missions.length + 1}`,
+      task,
+      answer,
+      hints: [hints[0], startOf(hints[1], answer)],
+      ...(expression && !revealsAnswer(task, expression) ? { expression } : {}),
+    });
     if (missions.length === MISSIONS_PER_TOPIC.max) break;
   }
   return missions.length >= MISSIONS_PER_TOPIC.min ? missions : null;
@@ -104,8 +132,9 @@ For each mission:
 - "task": what to do, in ${input.uiName}. Do not quote or translate the answer in it.
 - "hints": exactly two hints. The first, in ${input.uiName}: which idea or kind of expression to reach for, without the words. The second, in ${input.target}: only the first two to four words of a good answer, never a whole sentence, ending with "…".
 - "answer": one natural way to do it, in ${input.target}, as a person would say it.
+- "expression": the phrase this mission practises, in ${input.target}, two to six words, exactly as it appears in "answer" — the part any good answer would contain.
 
-Return only a json object: {"missions":[{"task":"...","hints":["...","..."],"answer":"..."}]}`;
+Return only a json object: {"missions":[{"task":"...","hints":["...","..."],"answer":"...","expression":"..."}]}`;
 }
 
 export function missionsUserMessage(input: {
@@ -164,43 +193,161 @@ export function normalizeCheck(raw: unknown, answer: string): MissionCheck | nul
   };
 }
 
-/** Record a checked try. A mission already done keeps its first result. */
+/**
+ * How long after the last try a mission can count as produced from memory.
+ * Long enough that the answer just shown, or the correction just read, is no
+ * longer on screen in their head; short enough that tonight can count for
+ * this morning. Retrying straight after a correction is practice, not proof.
+ */
+export const REVIEW_GAP_MS = 8 * 60 * 60 * 1000;
+const MAX_OUTPUTS = 5;
+
+function withOutput(result: MissionResult, where: OutputPlace, now: number): MissionResult["outputs"] {
+  return [...(result.outputs ?? []), { at: now, where }].slice(-MAX_OUTPUTS);
+}
+
+/** A mastered item that came out wrong goes back to learned. */
+function slipped(result: MissionResult, now: number): MissionResult {
+  return result.mastered
+    ? { ...result, mastered: false, masteredAt: undefined, slips: (result.slips ?? 0) + 1, lastAt: now }
+    : { ...result, lastAt: now };
+}
+
+/**
+ * Record a checked try, from a mission or a review.
+ *
+ * Mastered means they can produce it unaided: done with no hints and passed
+ * outright, either the very first time (they knew it already) or once some
+ * hours have passed since they last tried it. Done with hints, or corrected,
+ * is learned. Getting a mastered one wrong takes it back to learned.
+ */
 export function applyCheck(
   state: TopicMissions,
   missionId: string,
   verdict: MissionVerdict,
   hints: number,
   tries = 1,
+  now = Date.now(),
+  where: "mission" | "review" = "mission",
 ): TopicMissions {
   if (!state.missions.some((m) => m.id === missionId)) return state;
   const before = state.results[missionId];
-  if (before) return state;
-  if (verdict === "miss") return state;
-  return {
-    ...state,
-    results: {
-      ...state.results,
-      [missionId]: {
-        outcome: verdict === "pass" ? "pass" : "corrected",
-        hints: Math.max(0, Math.min(3, Math.round(hints))),
-        tries: Math.max(1, Math.min(20, Math.round(tries))),
-      },
-    },
+  const clean = verdict === "pass" && hints <= 0;
+  let after: MissionResult | undefined;
+
+  if (!before) {
+    if (verdict === "miss") return state;
+    after = {
+      outcome: verdict === "pass" ? "pass" : "corrected",
+      hints: Math.max(0, Math.min(3, Math.round(hints))),
+      tries: Math.max(1, Math.min(20, Math.round(tries))),
+      learnedAt: now,
+      lastAt: now,
+      ...(clean ? { mastered: true, masteredAt: now, outputs: [{ at: now, where }] } : {}),
+    };
+  } else if (clean) {
+    const fromMemory = now - (before.lastAt ?? 0) >= REVIEW_GAP_MS;
+    after = {
+      ...before,
+      lastAt: now,
+      outputs: withOutput(before, where, now),
+      ...(!before.mastered && fromMemory ? { mastered: true, masteredAt: now } : {}),
+    };
+  } else {
+    after = slipped(before, now);
+  }
+  return { ...state, results: { ...state.results, [missionId]: after } };
+}
+
+/**
+ * The phrase turned up in something they said in chat or a call. Used right,
+ * it is output they produced on their own — mastered, unless they only just
+ * practised it. Used wrong, a mastered one slips.
+ */
+export function applyUse(
+  state: TopicMissions,
+  missionId: string,
+  correct: boolean,
+  where: "chat" | "call",
+  now = Date.now(),
+): TopicMissions {
+  if (!state.missions.some((m) => m.id === missionId)) return state;
+  const before = state.results[missionId];
+  if (!correct) {
+    return before?.mastered
+      ? { ...state, results: { ...state.results, [missionId]: slipped(before, now) } }
+      : state;
+  }
+  const base: MissionResult = before ?? { outcome: "pass", hints: 0, tries: 1, learnedAt: now };
+  const fromMemory = !before || now - (before.lastAt ?? 0) >= REVIEW_GAP_MS;
+  const after: MissionResult = {
+    ...base,
+    lastAt: now,
+    outputs: withOutput(base, where, now),
+    ...(!base.mastered && fromMemory ? { mastered: true, masteredAt: now } : {}),
   };
+  return { ...state, results: { ...state.results, [missionId]: after } };
+}
+
+/** The example answer was looked at. Shown as a mark, never as progress. */
+export function markSeen(state: TopicMissions, missionId: string): TopicMissions {
+  if (!state.missions.some((m) => m.id === missionId) || state.seen?.[missionId]) return state;
+  return { ...state, seen: { ...(state.seen ?? {}), [missionId]: true } };
+}
+
+export type ItemState = "toLearn" | "learned" | "mastered";
+
+export function itemState(
+  state: TopicMissions,
+  missionId: string,
+  now = Date.now(),
+): { state: ItemState; seen: boolean; due: boolean } {
+  const result = state.results[missionId];
+  const seen = Boolean(state.seen?.[missionId]);
+  if (!result) return { state: "toLearn", seen, due: false };
+  if (result.mastered) return { state: "mastered", seen, due: false };
+  return { state: "learned", seen, due: now - (result.lastAt ?? 0) >= REVIEW_GAP_MS };
+}
+
+export type TopicCounts = {
+  total: number;
+  mastered: number;
+  learned: number;
+  toLearn: number;
+  seen: number;
+  due: number;
+  /** Done at least once, for the task screen's own counter. */
+  done: number;
+};
+
+export function topicCounts(state: TopicMissions | null | undefined, now = Date.now()): TopicCounts {
+  const counts: TopicCounts = { total: 0, mastered: 0, learned: 0, toLearn: 0, seen: 0, due: 0, done: 0 };
+  if (!state) return counts;
+  for (const mission of state.missions) {
+    const item = itemState(state, mission.id, now);
+    counts.total += 1;
+    counts[item.state] += 1;
+    if (item.state === "toLearn" && item.seen) counts.seen += 1;
+    if (item.due) counts.due += 1;
+    if (item.state !== "toLearn") counts.done += 1;
+  }
+  return counts;
 }
 
 export function missionProgress(state: TopicMissions | null | undefined): { done: number; total: number } {
-  if (!state) return { done: 0, total: 0 };
-  return {
-    done: state.missions.filter((m) => state.results[m.id]).length,
-    total: state.missions.length,
-  };
+  const counts = topicCounts(state);
+  return { done: counts.done, total: counts.total };
 }
 
-/** The topic's status as the missions leave it: started, or all done. */
+/** The topic as its items leave it: started once anything is done, done when all are mastered. */
 export function statusFromMissions(state: TopicMissions): "doing" | "done" {
-  const { done, total } = missionProgress(state);
-  return total > 0 && done === total ? "done" : "doing";
+  const counts = topicCounts(state);
+  return counts.total > 0 && counts.mastered === counts.total ? "done" : "doing";
+}
+
+/** Learned items ready to be produced from memory. */
+export function dueMissions(state: TopicMissions, now = Date.now()): Mission[] {
+  return state.missions.filter((m) => itemState(state, m.id, now).due);
 }
 
 /** The first mission not yet done, or null when all are. */

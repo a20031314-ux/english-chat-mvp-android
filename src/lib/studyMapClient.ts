@@ -1,15 +1,21 @@
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { StudyMap, TopicStatus } from "@/lib/curriculum/map";
-import type { MissionCheck, MissionResult, TopicMissions } from "@/lib/curriculum/missions";
+import type {
+  Mission,
+  MissionCheck,
+  MissionResult,
+  TopicCounts,
+  TopicMissions,
+} from "@/lib/curriculum/missions";
 
 /** What the curriculum routes answer with: the map and how far through it. */
 export type MapRecord = {
   map: StudyMap | null;
   status: Record<string, TopicStatus>;
   hasPrevious?: boolean;
-  /** Missions done per topic, for topics that have them. */
-  missions?: Record<string, { done: number; total: number }>;
+  /** Where each practised topic's phrases stand: mastered, learned, to learn. */
+  missions?: Record<string, TopicCounts>;
 };
 
 export type MapError = "identity" | "limit" | "failed";
@@ -201,6 +207,8 @@ export async function checkMission(input: {
   hints: number;
   tries: number;
   isPremium: boolean;
+  /** A review asks a learned item again; producing it then masters it. */
+  mode?: "mission" | "review";
 }): Promise<
   | {
       ok: true;
@@ -230,4 +238,42 @@ export async function checkMission(input: {
   } catch {
     return { ok: false, error: "failed" };
   }
+}
+
+export type DueItem = { topicId: string; topicTitle: string; mission: Mission };
+
+/** Learned phrases ready to be produced from memory (api/curriculum/review). */
+export async function fetchDueItems(
+  language: string,
+  isPremium: boolean,
+): Promise<{ mapId: string | null; items: DueItem[] } | null> {
+  try {
+    const response = await fetch(apiUrl(`/api/curriculum/review?lang=${encodeURIComponent(language)}`), {
+      headers: entitlementHeaders(isPremium),
+    });
+    if (!response.ok) return null;
+    const data = await readJson(response);
+    return {
+      mapId: typeof data.mapId === "string" ? data.mapId : null,
+      items: Array.isArray(data.items) ? (data.items as DueItem[]) : [],
+    };
+  } catch {
+    return null;
+  }
+}
+
+/** The example answer was opened: a mark beside the item, not progress. */
+export function markMissionSeen(input: {
+  language: string;
+  mapId: string;
+  topicId: string;
+  missionId: string;
+  isPremium: boolean;
+}): void {
+  const { isPremium, ...body } = input;
+  void fetch(apiUrl("/api/curriculum/mission-seen"), {
+    method: "POST",
+    headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+    body: JSON.stringify(body),
+  }).catch(() => undefined);
 }

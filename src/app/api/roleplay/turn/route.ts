@@ -27,6 +27,7 @@ import {
 } from "@/lib/server/entitlementStore";
 import { requestUserId, resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
+import { observeMapUse } from "@/lib/server/curriculumStore";
 import { contentHash } from "@/lib/roleplay/script";
 import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -169,6 +170,17 @@ export async function POST(request: NextRequest) {
       scenarioId: scenario.id,
       appVersion: requestAppVersion(request.headers),
       now: Date.now(),
+    }),
+  );
+  // A phrase on their study map, said in the call, is output they produced on
+  // their own; the director's rewrite says whether it survived.
+  after(() =>
+    observeMapUse({
+      userId: requestUserId(request),
+      language: turn.targetLanguage,
+      sentence: turn.heard,
+      corrected: decided ? (decided.better ?? "") : "",
+      where: "call",
     }),
   );
 

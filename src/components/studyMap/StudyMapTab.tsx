@@ -16,16 +16,20 @@ import {
 } from "@/lib/curriculum/map";
 import {
   drawStudyMap,
+  fetchDueItems,
   fetchStudyMap,
   findScenes,
   restorePreviousStudyMap,
   saveTopicStatus,
+  type DueItem,
   type MapError,
   type MapRecord,
   type SceneMatch,
 } from "@/lib/studyMapClient";
+import type { TopicCounts } from "@/lib/curriculum/missions";
 import { normalizeYouTubeWatchUrl } from "@/lib/videoLearning";
 import { MissionScreen } from "@/components/studyMap/MissionScreen";
+import { TopicItems, ItemBar } from "@/components/studyMap/TopicItems";
 import { LearnerPanel } from "@/components/studyMap/LearnerPanel";
 
 /**
@@ -74,6 +78,18 @@ export function StudyMapTab({
   const [lastOpenedId, setLastOpenedId] = useState<string | null>(null);
   const [clips, setClips] = useState<Clip[]>([]);
   const [missionTopicId, setMissionTopicId] = useState<string | null>(null);
+  const [reviewItems, setReviewItems] = useState<DueItem[] | null>(null);
+
+  // After practice or review the server has moved items along; read it again.
+  const reload = useCallback(async () => {
+    const result = await fetchStudyMap(targetLanguage, isPremium);
+    if (result.ok) setRecord(result.record);
+  }, [targetLanguage, isPremium]);
+
+  const startReview = useCallback(async () => {
+    const due = await fetchDueItems(targetLanguage, isPremium);
+    setReviewItems(due?.items ?? []);
+  }, [targetLanguage, isPremium]);
 
   useEffect(() => {
     let cancelled = false;
@@ -208,6 +224,7 @@ export function StudyMapTab({
             record={record}
             lastOpenedId={lastOpenedId}
             onOpenTopic={openTopic}
+            onReview={() => void startReview()}
           />
         ) : null}
       </div>
@@ -240,21 +257,27 @@ export function StudyMapTab({
             topic={topic}
             targetLanguage={targetLanguage}
             isPremium={isPremium}
-            onProgress={(summary, status) =>
-              setRecord((current) =>
-                current
-                  ? {
-                      ...current,
-                      missions: { ...(current.missions ?? {}), [topic.id]: summary },
-                      status: status ? { ...current.status, [topic.id]: status } : current.status,
-                    }
-                  : current,
-              )
-            }
-            onClose={() => setMissionTopicId(null)}
+            onClose={() => {
+              setMissionTopicId(null);
+              void reload();
+            }}
           />
         ) : null;
       })() : null}
+
+      {map && reviewItems ? (
+        <MissionScreen
+          ui={ui}
+          map={map}
+          review={reviewItems}
+          targetLanguage={targetLanguage}
+          isPremium={isPremium}
+          onClose={() => {
+            setReviewItems(null);
+            void reload();
+          }}
+        />
+      ) : null}
     </div>
   );
 }
@@ -379,6 +402,7 @@ function MapView({
   record,
   lastOpenedId,
   onOpenTopic,
+  onReview,
 }: {
   ui: UICopy;
   locale: string;
@@ -387,10 +411,22 @@ function MapView({
   record: MapRecord | null;
   lastOpenedId: string | null;
   onOpenTopic: (id: string) => void;
+  onReview: () => void;
 }) {
   const status = record?.status ?? {};
   const ordered = useMemo(() => [...map.topics].sort((a, b) => a.order - b.order), [map]);
   const done = map.topics.filter((topic) => status[topic.id] === "done").length;
+  // Where the map's phrases stand, from what the learner has produced.
+  const items = Object.values(record?.missions ?? {}).reduce(
+    (sum, c) => ({
+      mastered: sum.mastered + c.mastered,
+      learned: sum.learned + c.learned,
+      toLearn: sum.toLearn + c.toLearn,
+      due: sum.due + c.due,
+    }),
+    { mastered: 0, learned: 0, toLearn: 0, due: 0 },
+  );
+  const anyItems = items.mastered + items.learned + items.toLearn > 0;
   const next = nextTopic(map, status);
   // After a topic is closed, the ones it connects to stay lit.
   const lit = new Set(
@@ -430,6 +466,26 @@ function MapView({
             {ui.mapProgress.replace("{done}", String(done)).replace("{total}", String(map.topics.length))}
           </span>
         </div>
+        {anyItems ? (
+          <div className="mt-3 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2.5">
+            <ItemBar counts={items} />
+            <p className="mt-1.5 text-[12px] tabular-nums text-slate-300">
+              {ui.mapItemsSummary
+                .replace("{mastered}", String(items.mastered))
+                .replace("{learned}", String(items.learned))
+                .replace("{toLearn}", String(items.toLearn))}
+            </p>
+            {items.due > 0 ? (
+              <button
+                type="button"
+                onClick={onReview}
+                className="mt-2 rounded-lg border border-emerald-400/40 bg-emerald-400/10 px-3 py-1.5 text-[13px] font-medium text-emerald-100"
+              >
+                {ui.reviewStart.replace("{n}", String(items.due))}
+              </button>
+            ) : null}
+          </div>
+        ) : null}
         {next ? (
           <button
             type="button"
@@ -491,15 +547,15 @@ function MapView({
                     <span className="flex items-center gap-1.5 text-[11px] text-slate-500">
                       <span className={`h-1.5 w-1.5 rounded-full ${STATUS_DOT[status[topic.id] ?? "todo"]}`} />
                       {topic.id} · {topic.order}
-                      {record?.missions?.[topic.id]?.total ? (
-                        <span className="ml-auto tabular-nums text-slate-400">
-                          {record.missions[topic.id]!.done}/{record.missions[topic.id]!.total}
-                        </span>
-                      ) : null}
                     </span>
                     <span className="mt-1 block text-[13px] font-medium leading-snug text-slate-100">
                       {topic.title}
                     </span>
+                    {record?.missions?.[topic.id]?.total ? (
+                      <span className="mt-2 block">
+                        <ItemBar counts={record.missions[topic.id]!} />
+                      </span>
+                    ) : null}
                   </button>
                 </li>
               ))}
@@ -533,7 +589,7 @@ function TopicSheet({
   onStatus: (status: TopicStatus) => void;
   onOpenTopic: (id: string) => void;
   onClose: () => void;
-  missions?: { done: number; total: number };
+  missions?: TopicCounts;
   onPractise: () => void;
 }) {
   if (!topic) return null;
@@ -612,12 +668,21 @@ function TopicSheet({
             <span className="text-[14px] font-semibold">{ui.missionStart}</span>
             {missions && missions.total > 0 ? (
               <span className="text-[12px] tabular-nums text-neutral-600">
-                {ui.missionProgress.replace("{done}", String(missions.done)).replace("{total}", String(missions.total))}
+                {ui.missionProgress.replace("{done}", String(missions.mastered)).replace("{total}", String(missions.total))}
               </span>
             ) : null}
           </span>
           <span className="mt-0.5 block text-[12px] leading-relaxed text-neutral-600">{ui.missionStartHint}</span>
         </button>
+
+        {missions && missions.total > 0 ? (
+          <TopicItems
+            ui={ui}
+            mapId={map.id}
+            topicId={topic.id}
+            targetLanguage={targetLanguage}
+          />
+        ) : null}
 
         <p className="mt-5 text-[11px] font-semibold tracking-wide text-slate-500">{ui.mapPractice}</p>
         <ul className="mt-2 space-y-2">
