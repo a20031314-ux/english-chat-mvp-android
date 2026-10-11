@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { sayLine } from "@/components/RoleplayOwnLine";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import {
   RoleplayLine,
@@ -883,6 +884,11 @@ export function RoleplayScreen({
             onReview={openReview}
             onTranslate={translateLine}
             onAnalyze={sceneOver ? analyzeLine : undefined}
+            onSayAgain={
+              sceneOver
+                ? (target) => sayLine(target, { targetLanguage: scenario.language, nativeLanguage, isPremium })
+                : undefined
+            }
           />
         ))}
         {pending ? (

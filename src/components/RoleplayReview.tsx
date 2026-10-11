@@ -29,6 +29,7 @@ export function RoleplayLine({
   onReview,
   onTranslate,
   onAnalyze,
+  onSayAgain,
 }: {
   line: TranscriptLine;
   ui: UICopy;
@@ -41,7 +42,17 @@ export function RoleplayLine({
    * read back — so a question typed there can never land as a spoken turn.
    */
   onAnalyze?: (text: string) => void;
+  /**
+   * Say one of their own lines again and hear which words came through — the
+   * corrected one when there is a correction, since that is the one to learn.
+   * Only where no call microphone is open: a finished scene, or one read back.
+   */
+  onSayAgain?: (target: string) => Promise<{ heard: string; practice: Practice | null }>;
 }) {
+  const [sayingAgain, setSayingAgain] = useState(false);
+  const againRef = useRef<HTMLDivElement>(null);
+  const sayTarget = (line.meant || line.better || line.text).trim();
+  const canSayAgain = Boolean(onSayAgain && line.who === "learner" && sayTarget && sayTarget !== "…");
   return (
     <li className={`mb-2 flex ${line.who === "learner" ? "justify-end" : "justify-start"}`}>
       <div
@@ -126,8 +137,17 @@ export function RoleplayLine({
         {/* Stays on the turn for the rest of the scene. Pressing it is a
             decision the learner can take later, when they are not in the
             middle of being asked to speak. */}
-        {line.stuck || onAnalyze ? (
+        {line.stuck || onAnalyze || canSayAgain ? (
           <div className="mt-1.5 flex flex-wrap gap-1.5">
+            {canSayAgain && !sayingAgain ? (
+              <button
+                type="button"
+                onClick={() => setSayingAgain(true)}
+                className="rounded-full border border-white/20 px-2.5 py-1 text-[11px] text-neutral-300 hover:bg-white/10"
+              >
+                {ui.roleplaySayAgain}
+              </button>
+            ) : null}
             {line.stuck ? (
               <button
                 type="button"
@@ -146,6 +166,29 @@ export function RoleplayLine({
                 {ui.insightAnalyze}
               </button>
             ) : null}
+          </div>
+        ) : null}
+        {canSayAgain && sayingAgain ? (
+          <div ref={againRef} className="mt-2 rounded-xl bg-black/30 p-2.5 text-left">
+            <div className="flex items-start gap-2">
+              <p dir="auto" className="min-w-0 flex-1 text-[13px] leading-snug text-neutral-100">
+                {sayTarget}
+              </p>
+              <TTSButton text={sayTarget} className="shrink-0" />
+            </div>
+            <SayItBack
+              target={sayTarget}
+              ui={ui}
+              onListen={onSayAgain!}
+              onGrew={() => againRef.current?.scrollIntoView({ block: "nearest", behavior: "smooth" })}
+            />
+            <button
+              type="button"
+              onClick={() => setSayingAgain(false)}
+              className="mt-2 text-[11px] text-neutral-500 underline-offset-4 hover:text-neutral-300 hover:underline"
+            >
+              {ui.billingClose}
+            </button>
           </div>
         ) : null}
       </div>

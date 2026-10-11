@@ -379,7 +379,13 @@ export function RoleplayTab({
       ) : null}
 
       {reading ? (
-        <RoleplayPast saved={reading} ui={ui} onClose={() => setReading(null)} />
+        <RoleplayPast
+          saved={reading}
+          ui={ui}
+          onClose={() => setReading(null)}
+          nativeLanguage={nativeLanguage}
+          isPremium={isPremium}
+        />
       ) : null}
     </div>
   );

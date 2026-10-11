@@ -24,6 +24,33 @@ import type { Practice } from "@/lib/roleplay/practice";
  * At the door rather than inside a call: it opens its own microphone once per
  * attempt, and spends no call time.
  */
+/**
+ * One attempt at a line: open the microphone once, transcribe, and say which
+ * words came out as which. Shared by the door and by the learner's own lines
+ * in a call, where the line to say is what they said — or what it was put
+ * right to.
+ */
+export async function sayLine(
+  line: string,
+  input: { targetLanguage: LearningLanguageCode; nativeLanguage: LearningLanguageCode; isPremium: boolean },
+): Promise<{ heard: string; practice: Practice | null }> {
+  try {
+    const { heard } = await listenOnce({ language: input.targetLanguage, isPremium: input.isPremium });
+    if (!heard) return { heard: "", practice: null };
+    const practice = await fetchPractice({
+      scenarioId: justTalkId(input.targetLanguage),
+      target: line,
+      heard,
+      nativeLanguage: input.nativeLanguage,
+      isPremium: input.isPremium,
+    });
+    return { heard, practice };
+  } catch {
+    // No microphone, or it was refused: nothing came through.
+    return { heard: "", practice: null };
+  }
+}
+
 export function RoleplayOwnLine({
   targetLanguage,
   nativeLanguage,
@@ -39,23 +66,7 @@ export function RoleplayOwnLine({
   const [draft, setDraft] = useState("");
   const [target, setTarget] = useState("");
 
-  const listen = async (line: string): Promise<{ heard: string; practice: Practice | null }> => {
-    try {
-      const { heard } = await listenOnce({ language: targetLanguage, isPremium });
-      if (!heard) return { heard: "", practice: null };
-      const practice = await fetchPractice({
-        scenarioId: justTalkId(targetLanguage),
-        target: line,
-        heard,
-        nativeLanguage,
-        isPremium,
-      });
-      return { heard, practice };
-    } catch {
-      // No microphone, or it was refused: nothing came through.
-      return { heard: "", practice: null };
-    }
-  };
+  const listen = (line: string) => sayLine(line, { targetLanguage, nativeLanguage, isPremium });
 
   if (!open) {
     return (

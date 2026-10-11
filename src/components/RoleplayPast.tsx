@@ -5,6 +5,8 @@ import { RoleplayLine } from "@/components/RoleplayReview";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import type { SavedConversation } from "@/lib/roleplay/saved";
 import type { UICopy } from "@/lib/copy";
+import { sayLine } from "@/components/RoleplayOwnLine";
+import { coerceLanguageCode, type LearningLanguageCode } from "@/lib/learningLanguages";
 
 /**
  * A conversation that has already happened, read back.
@@ -23,11 +25,17 @@ export function RoleplayPast({
   saved,
   ui,
   onClose,
+  nativeLanguage,
+  isPremium,
 }: {
   saved: SavedConversation;
   ui: UICopy;
   onClose: () => void;
+  nativeLanguage: LearningLanguageCode;
+  isPremium: boolean;
 }) {
+  const sayAgain = (target: string) =>
+    sayLine(target, { targetLanguage: coerceLanguageCode(saved.language), nativeLanguage, isPremium });
   const analysis = useEnglishAnalysisOptional();
   const analyze = analysis
     ? (text: string) =>
@@ -68,6 +76,7 @@ export function RoleplayPast({
             ui={ui}
             onReview={() => undefined}
             onAnalyze={analyze}
+            onSayAgain={sayAgain}
           />
         ))}
       </ol>
