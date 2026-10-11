@@ -269,6 +269,11 @@ export function MissionScreen({
                 <p className="text-[11px] font-semibold tracking-wide text-slate-500">
                   {ui.missionTask} {position}/{progress.total}
                 </p>
+                {current.focus ? (
+                  <p className="mt-1 inline-block rounded-full border border-rose-300/40 bg-rose-300/10 px-2 py-0.5 text-[11px] text-rose-100">
+                    {ui.missionWeakLabel.replace("{focus}", current.focus)}
+                  </p>
+                ) : null}
                 <p className="mt-1 text-[15px] leading-relaxed text-slate-100">{current.task}</p>
               </div>
 

@@ -90,6 +90,9 @@ export function TopicItems({
               <span className="block text-[11px] text-slate-500">
                 {label[item.state]}
                 {item.seen && item.state === "toLearn" ? ` · ${ui.itemSeen}` : ""}
+                {mission.focus ? (
+                  <span className="ml-1.5 text-rose-200">{ui.missionWeakLabel.replace("{focus}", mission.focus)}</span>
+                ) : null}
               </span>
               {item.state === "toLearn" ? (
                 <span className="block text-[13px] leading-snug text-slate-300">{mission.task}</span>

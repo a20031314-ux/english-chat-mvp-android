@@ -213,7 +213,10 @@
     "itemSlipped": "「学習済み」に戻りました。次の復習でもう一度やってみましょう。",
     "topicItemsTitle": "このトピックの表現",
     "topicItemsHint": "ヒントなしで言えれば習得、助けを借りてできたら学習済みです。チャットや通話で使っても記録されます。",
-    "roleplayMeant": "こう言いたかったのでは？"
+    "roleplayMeant": "こう言いたかったのでは？",
+    "mapWeakChip": "よく間違える {n}",
+    "mapOrderAdaptive": "進み具合とよく間違えることに合わせて、順番が変わります。",
+    "missionWeakLabel": "よく間違えるところ · {focus}"
   },
   "zh": {
     "billingClose": "关闭",
@@ -429,7 +432,10 @@
     "itemSlipped": "回到了“学过”。下次复习时再试一次。",
     "topicItemsTitle": "这个主题的表达",
     "topicItemsHint": "不看提示能写出来就是掌握，借助帮助写出来是学过。在聊天或通话里用到也会记录。",
-    "roleplayMeant": "你是想这么说吗？"
+    "roleplayMeant": "你是想这么说吗？",
+    "mapWeakChip": "常错 {n}",
+    "mapOrderAdaptive": "顺序会根据进度和常犯的错误调整。",
+    "missionWeakLabel": "常错的地方 · {focus}"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -647,7 +653,10 @@
     "itemSlipped": "Quay lại ‘đã học’. Hãy thử lại ở lần ôn tới.",
     "topicItemsTitle": "Cách diễn đạt trong chủ đề này",
     "topicItemsHint": "Thành thạo là viết được mà không cần gợi ý; đã học là làm được nhờ trợ giúp. Dùng trong chat hay cuộc gọi cũng được tính.",
-    "roleplayMeant": "Có phải bạn muốn nói thế này?"
+    "roleplayMeant": "Có phải bạn muốn nói thế này?",
+    "mapWeakChip": "Hay sai {n}",
+    "mapOrderAdaptive": "Thứ tự thay đổi theo tiến độ và những lỗi bạn hay mắc.",
+    "missionWeakLabel": "Chỗ bạn hay sai · {focus}"
   },
   "fr": {
     "billingClose": "Fermer",
@@ -870,7 +879,10 @@
     "itemSlipped": "Retour à « appris ». Réessaie à la prochaine révision.",
     "topicItemsTitle": "Expressions de ce thème",
     "topicItemsHint": "Maîtrisé : tu le produis sans indice. Appris : tu l’as fait avec de l’aide. L’utiliser dans le chat ou un appel compte aussi.",
-    "roleplayMeant": "Tu voulais dire ça ?"
+    "roleplayMeant": "Tu voulais dire ça ?",
+    "mapWeakChip": "Point faible {n}",
+    "mapOrderAdaptive": "L’ordre s’adapte à ta progression et à tes erreurs fréquentes.",
+    "missionWeakLabel": "Erreur fréquente · {focus}"
   },
   "it": {
     "archive": "Report",
@@ -1285,7 +1297,10 @@
     "itemSlipped": "Di nuovo ‘imparato’. Riprova al prossimo ripasso.",
     "topicItemsTitle": "Espressioni di questo argomento",
     "topicItemsHint": "Padroneggiato: lo produci senza suggerimenti. Imparato: l’hai fatto con aiuto. Usarlo in chat o in chiamata conta anche.",
-    "roleplayMeant": "Volevi dire questo?"
+    "roleplayMeant": "Volevi dire questo?",
+    "mapWeakChip": "Punto debole {n}",
+    "mapOrderAdaptive": "L’ordine cambia in base ai progressi e agli errori che ripeti.",
+    "missionWeakLabel": "Errore frequente · {focus}"
   },
   "pt": {
     "billingClose": "Fechar",
@@ -1511,7 +1526,10 @@
     "itemSlipped": "Voltou para ‘aprendido’. Tente de novo na próxima revisão.",
     "topicItemsTitle": "Expressões deste tema",
     "topicItemsHint": "Dominado: você produz sem dicas. Aprendido: fez com ajuda. Usar no chat ou numa chamada também conta.",
-    "roleplayMeant": "Você quis dizer isto?"
+    "roleplayMeant": "Você quis dizer isto?",
+    "mapWeakChip": "Ponto fraco {n}",
+    "mapOrderAdaptive": "A ordem muda conforme seu progresso e os erros que você repete.",
+    "missionWeakLabel": "Erro frequente · {focus}"
   },
   "ru": {
     "archive": "Отчёты",
@@ -1924,7 +1942,10 @@
     "itemSlipped": "Снова «изучено». Попробуйте на следующем повторении.",
     "topicItemsTitle": "Выражения этой темы",
     "topicItemsHint": "Освоено — можете сказать без подсказок; изучено — сделали с помощью. Использование в чате или звонке тоже засчитывается.",
-    "roleplayMeant": "Вы это хотели сказать?"
+    "roleplayMeant": "Вы это хотели сказать?",
+    "mapWeakChip": "Частая ошибка {n}",
+    "mapOrderAdaptive": "Порядок меняется по мере прогресса и с учётом частых ошибок.",
+    "missionWeakLabel": "Частая ошибка · {focus}"
   },
   "id": {
     "billingClose": "Tutup",
@@ -2146,7 +2167,10 @@
     "itemSlipped": "Kembali ke ‘dipelajari’. Coba lagi di pengulangan berikutnya.",
     "topicItemsTitle": "Ungkapan di topik ini",
     "topicItemsHint": "Dikuasai: bisa kamu hasilkan tanpa petunjuk. Dipelajari: berhasil dengan bantuan. Memakainya di chat atau panggilan juga dihitung.",
-    "roleplayMeant": "Maksudmu begini?"
+    "roleplayMeant": "Maksudmu begini?",
+    "mapWeakChip": "Sering salah {n}",
+    "mapOrderAdaptive": "Urutan berubah sesuai kemajuan dan kesalahan yang sering kamu buat.",
+    "missionWeakLabel": "Sering salah · {focus}"
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -2362,7 +2386,10 @@
     "itemSlipped": "عاد إلى «تعلّمته». جرّبه مرة أخرى في المراجعة القادمة.",
     "topicItemsTitle": "تعابير هذا الموضوع",
     "topicItemsHint": "متقَن: تستطيع قوله دون تلميحات. تعلّمته: قلته بمساعدة. استخدامه في المحادثة أو المكالمة يُحسب أيضًا.",
-    "roleplayMeant": "هل كنت تقصد هذا؟"
+    "roleplayMeant": "هل كنت تقصد هذا؟",
+    "mapWeakChip": "خطأ متكرر {n}",
+    "mapOrderAdaptive": "يتغيّر الترتيب حسب تقدّمك والأخطاء التي تتكرر لديك.",
+    "missionWeakLabel": "خطأ متكرر · {focus}"
   },
   "th": {
     "billingClose": "ปิด",
@@ -2578,7 +2605,10 @@
     "itemSlipped": "กลับไปเป็น ‘เรียนแล้ว’ ลองใหม่ในการทบทวนครั้งหน้า",
     "topicItemsTitle": "สำนวนในหัวข้อนี้",
     "topicItemsHint": "คล่องแล้ว คือพูดได้เองโดยไม่ใช้คำใบ้ เรียนแล้ว คือทำได้โดยมีตัวช่วย ใช้ในแชตหรือการโทรก็ถูกนับด้วย",
-    "roleplayMeant": "ตั้งใจจะพูดแบบนี้ใช่ไหม"
+    "roleplayMeant": "ตั้งใจจะพูดแบบนี้ใช่ไหม",
+    "mapWeakChip": "ผิดบ่อย {n}",
+    "mapOrderAdaptive": "ลำดับจะเปลี่ยนตามความคืบหน้าและจุดที่คุณผิดบ่อย",
+    "missionWeakLabel": "จุดที่ผิดบ่อย · {focus}"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -2794,6 +2824,9 @@
     "itemSlipped": "फिर से ‘सीखा’ में। अगली बार दोहराते समय फिर कोशिश करें।",
     "topicItemsTitle": "इस विषय की अभिव्यक्तियाँ",
     "topicItemsHint": "पक्का यानी बिना संकेत कह सकते हैं; सीखा यानी मदद से किया। चैट या कॉल में इस्तेमाल भी गिना जाता है।",
-    "roleplayMeant": "क्या आप यह कहना चाहते थे?"
+    "roleplayMeant": "क्या आप यह कहना चाहते थे?",
+    "mapWeakChip": "बार-बार गलती {n}",
+    "mapOrderAdaptive": "क्रम आपकी प्रगति और बार-बार होने वाली गलतियों के हिसाब से बदलता है।",
+    "missionWeakLabel": "बार-बार गलती · {focus}"
   }
 }

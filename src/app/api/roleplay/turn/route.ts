@@ -30,6 +30,7 @@ import {
 import { requestUserId, resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
 import { observeMapUse } from "@/lib/server/curriculumStore";
+import { observeWeakPoints } from "@/lib/server/weakPointStore";
 import { contentHash } from "@/lib/roleplay/script";
 import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -176,15 +177,26 @@ export async function POST(request: NextRequest) {
   );
   // A phrase on their study map, said in the call, is output they produced on
   // their own; the director's rewrite says whether it survived.
-  after(() =>
-    observeMapUse({
+  // Then a mistake of a kind they keep making goes onto the map to learn
+  // (curriculum/weakPoints.ts) — after, since both write the map's items.
+  after(async () => {
+    const corrected = decided ? (decided.meant || decided.better || "") : "";
+    await observeMapUse({
       userId: requestUserId(request),
       language: turn.targetLanguage,
       sentence: turn.heard,
-      corrected: decided ? (decided.meant || decided.better || "") : "",
+      corrected,
       where: "call",
-    }),
-  );
+    });
+    await observeWeakPoints({
+      openai: getOpenAIClient(),
+      userId: requestUserId(request),
+      language: turn.targetLanguage,
+      sentence: turn.heard,
+      corrected,
+      meter: (op) => void meterRequest(request, op),
+    });
+  });
 
   // Two clips only for a build that said it can play them. Everything on a
   // phone today was released before these lines existed and would queue

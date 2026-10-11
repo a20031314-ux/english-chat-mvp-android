@@ -37,6 +37,14 @@ export type Mission = {
    * it there counts. Missing on missions written before it existed.
    */
   expression?: string;
+  /**
+   * Set on a mission added because the learner keeps getting the same thing
+   * wrong in chat or calls (weakPoints.ts): the pattern's key, and what it is
+   * in the interface language ("past tense after 'yesterday'"). Missing on
+   * missions written for the topic itself.
+   */
+  weak?: string;
+  focus?: string;
 };
 
 export type MissionVerdict = "pass" | "close" | "miss";
@@ -318,10 +326,12 @@ export type TopicCounts = {
   due: number;
   /** Done at least once, for the task screen's own counter. */
   done: number;
+  /** Added for a recurring mistake and not yet mastered. */
+  weak: number;
 };
 
 export function topicCounts(state: TopicMissions | null | undefined, now = Date.now()): TopicCounts {
-  const counts: TopicCounts = { total: 0, mastered: 0, learned: 0, toLearn: 0, seen: 0, due: 0, done: 0 };
+  const counts: TopicCounts = { total: 0, mastered: 0, learned: 0, toLearn: 0, seen: 0, due: 0, done: 0, weak: 0 };
   if (!state) return counts;
   for (const mission of state.missions) {
     const item = itemState(state, mission.id, now);
@@ -330,6 +340,7 @@ export function topicCounts(state: TopicMissions | null | undefined, now = Date.
     if (item.state === "toLearn" && item.seen) counts.seen += 1;
     if (item.due) counts.due += 1;
     if (item.state !== "toLearn") counts.done += 1;
+    if (mission.weak && item.state !== "mastered") counts.weak += 1;
   }
   return counts;
 }
@@ -350,7 +361,33 @@ export function dueMissions(state: TopicMissions, now = Date.now()): Mission[] {
   return state.missions.filter((m) => itemState(state, m.id, now).due);
 }
 
-/** The first mission not yet done, or null when all are. */
+/**
+ * The first mission not yet done, or null when all are. One added for a
+ * recurring mistake goes first: it is why the map sent them here.
+ */
 export function nextMission(state: TopicMissions): Mission | null {
-  return state.missions.find((m) => !state.results[m.id]) ?? null;
+  return (
+    state.missions.find((m) => m.weak && !state.results[m.id]) ??
+    state.missions.find((m) => !state.results[m.id]) ??
+    null
+  );
+}
+
+/** Whether the topic's own missions have been written, beside any added for mistakes. */
+export function hasTopicMissions(state: TopicMissions | null | undefined): boolean {
+  return Boolean(state?.missions.some((m) => !m.weak));
+}
+
+/**
+ * The topic's own missions written after missions for mistakes were already
+ * added to it: the topic's first, ids kept apart (m1… and w1…), and what was
+ * done on the added ones kept.
+ */
+export function withTopicMissions(state: TopicMissions | null | undefined, written: Mission[]): TopicMissions {
+  const added = (state?.missions ?? []).filter((m) => m.weak);
+  return {
+    missions: [...written.filter((m) => !m.weak), ...added],
+    results: state?.results ?? {},
+    ...(state?.seen ? { seen: state.seen } : {}),
+  };
 }

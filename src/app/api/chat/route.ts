@@ -2,6 +2,7 @@ import { meterRequest } from "@/lib/server/meterRequest";
 import { NextRequest, after } from "next/server";
 import { observeChatLines, observeChatTurn } from "@/lib/server/learnerProfileStore";
 import { observeMapUse } from "@/lib/server/curriculumStore";
+import { observeWeakPoints } from "@/lib/server/weakPointStore";
 import { writtenInLearningLanguage } from "@/lib/inputLanguage";
 import type OpenAI from "openai";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
@@ -907,15 +908,26 @@ export async function POST(request: NextRequest) {
     if (practised) {
       // A phrase on their study map, said here, is output they produced on
       // their own (curriculum/missions.ts).
-      after(() =>
-        observeMapUse({
+      // Then, one after the other since both write the map's items: a
+      // mistake of a kind they keep making goes onto the map to learn
+      // (curriculum/weakPoints.ts).
+      after(async () => {
+        await observeMapUse({
           userId,
           language: langs.targetLanguage,
           sentence: message,
           corrected: data.correction?.corrected ?? "",
           where: "chat",
-        }),
-      );
+        });
+        await observeWeakPoints({
+          openai,
+          userId,
+          language: langs.targetLanguage,
+          sentence: message,
+          corrected: data.correction?.corrected ?? "",
+          meter: (op) => void meterRequest(request, op),
+        });
+      });
       after(async () => {
         void meterRequest(request, "learnerObserve");
         await observeChatTurn({

@@ -8,7 +8,6 @@ import type { UICopy } from "@/lib/copy";
 import {
   connectionsOf,
   listenForPhrases,
-  nextTopic,
   type MapActivity,
   type MapTopic,
   type StudyMap,
@@ -27,6 +26,7 @@ import {
   type SceneMatch,
 } from "@/lib/studyMapClient";
 import type { TopicCounts } from "@/lib/curriculum/missions";
+import { recommendedNext, recommendedOrder } from "@/lib/curriculum/recommend";
 import { normalizeYouTubeWatchUrl } from "@/lib/videoLearning";
 import { MissionScreen } from "@/components/studyMap/MissionScreen";
 import { TopicItems, ItemBar } from "@/components/studyMap/TopicItems";
@@ -414,6 +414,16 @@ function MapView({
   onReview: () => void;
 }) {
   const status = record?.status ?? {};
+  // The order recommended now: what they keep getting wrong first, then what
+  // they started, then the drawn order (curriculum/recommend.ts).
+  const recommended = useMemo(
+    () => recommendedOrder(map, record?.status ?? {}, record?.missions ?? {}),
+    [map, record],
+  );
+  const placeOf = useMemo(
+    () => new Map(recommended.map((row) => [row.topic.id, row])),
+    [recommended],
+  );
   const ordered = useMemo(() => [...map.topics].sort((a, b) => a.order - b.order), [map]);
   const done = map.topics.filter((topic) => status[topic.id] === "done").length;
   // Where the map's phrases stand, from what the learner has produced.
@@ -427,7 +437,8 @@ function MapView({
     { mastered: 0, learned: 0, toLearn: 0, due: 0 },
   );
   const anyItems = items.mastered + items.learned + items.toLearn > 0;
-  const next = nextTopic(map, status);
+  const nextRow = recommendedNext(recommended);
+  const next = nextRow?.topic ?? null;
   // After a topic is closed, the ones it connects to stay lit.
   const lit = new Set(
     lastOpenedId ? connectionsOf(map, lastOpenedId).map((entry) => entry.topic.id) : [],
@@ -494,24 +505,35 @@ function MapView({
           >
             {ui.mapContinue}
             <span className="ml-2 font-normal text-neutral-600">
-              {next.order}. {next.title}
+              {nextRow?.place}. {next.title}
             </span>
+            {nextRow?.weak ? (
+              <span className="ml-2 rounded-full bg-rose-500/15 px-2 py-0.5 text-[11px] font-normal text-rose-700">
+                {ui.mapWeakChip.replace("{n}", String(nextRow.weak))}
+              </span>
+            ) : null}
           </button>
         ) : null}
       </section>
 
       <section>
         <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.mapOrderTitle}</p>
+        <p className="mt-0.5 text-[11px] text-slate-600">{ui.mapOrderAdaptive}</p>
         <ol className="mt-2 flex gap-1.5 overflow-x-auto pb-1">
-          {ordered.map((topic) => (
+          {recommended.map(({ topic, place, weak }) => (
             <li key={topic.id} className="shrink-0">
               <button
                 type="button"
                 onClick={() => onOpenTopic(topic.id)}
-                className="flex items-center gap-1.5 rounded-full border border-white/10 px-2.5 py-1 text-[12px] text-slate-300 hover:bg-white/10"
+                className={`flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[12px] text-slate-300 hover:bg-white/10 ${
+                  weak ? "border-rose-300/40" : "border-white/10"
+                }`}
               >
                 <span className={`h-1.5 w-1.5 rounded-full ${STATUS_DOT[status[topic.id] ?? "todo"]}`} />
-                {topic.order}. {topic.title}
+                {place}. {topic.title}
+                {weak ? (
+                  <span className="text-[11px] text-rose-200">{ui.mapWeakChip.replace("{n}", String(weak))}</span>
+                ) : null}
               </button>
             </li>
           ))}
@@ -546,8 +568,13 @@ function MapView({
                   >
                     <span className="flex items-center gap-1.5 text-[11px] text-slate-500">
                       <span className={`h-1.5 w-1.5 rounded-full ${STATUS_DOT[status[topic.id] ?? "todo"]}`} />
-                      {topic.id} · {topic.order}
+                      {topic.id} · {placeOf.get(topic.id)?.place ?? topic.order}
                     </span>
+                    {placeOf.get(topic.id)?.weak ? (
+                      <span className="mt-1 inline-block rounded-full bg-rose-300/10 px-1.5 py-0.5 text-[10px] text-rose-200">
+                        {ui.mapWeakChip.replace("{n}", String(placeOf.get(topic.id)!.weak))}
+                      </span>
+                    ) : null}
                     <span className="mt-1 block text-[13px] font-medium leading-snug text-slate-100">
                       {topic.title}
                     </span>
