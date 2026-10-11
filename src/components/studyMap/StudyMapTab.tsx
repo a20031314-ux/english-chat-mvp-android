@@ -568,7 +568,7 @@ function MapView({
                   >
                     <span className="flex items-center gap-1.5 text-[11px] text-slate-500">
                       <span className={`h-1.5 w-1.5 rounded-full ${STATUS_DOT[status[topic.id] ?? "todo"]}`} />
-                      {topic.id} · {placeOf.get(topic.id)?.place ?? topic.order}
+                      {placeOf.get(topic.id)?.place ?? topic.order}
                     </span>
                     {placeOf.get(topic.id)?.weak ? (
                       <span className="mt-1 inline-block rounded-full bg-rose-300/10 px-1.5 py-0.5 text-[10px] text-rose-200">
@@ -640,7 +640,7 @@ function TopicSheet({
         <div className="flex items-start gap-2">
           <div className="min-w-0 flex-1">
             <p className="text-[11px] text-slate-500">
-              {topic.id} · {sector?.title}
+              {sector?.title}
             </p>
             <h3 id="map-topic-title" className="mt-0.5 text-base font-semibold text-white">
               {topic.title}
@@ -695,7 +695,7 @@ function TopicSheet({
             <span className="text-[14px] font-semibold">{ui.missionStart}</span>
             {missions && missions.total > 0 ? (
               <span className="text-[12px] tabular-nums text-neutral-600">
-                {ui.missionProgress.replace("{done}", String(missions.mastered)).replace("{total}", String(missions.total))}
+                {ui.missionProgress.replace("{done}", String(missions.done)).replace("{total}", String(missions.total))}
               </span>
             ) : null}
           </span>
@@ -743,7 +743,7 @@ function TopicSheet({
                     className="w-full rounded-lg bg-white/5 px-3 py-2 text-left hover:bg-white/10"
                   >
                     <span className="text-[13px] font-medium text-slate-100">
-                      {other.id} · {other.title}
+                      {other.title}
                     </span>
                     <span className="mt-0.5 block text-[12px] leading-relaxed text-slate-400">{why}</span>
                   </button>

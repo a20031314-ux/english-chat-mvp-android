@@ -174,7 +174,7 @@ export function weakMissionPrompt(input: { target: string; uiName: string; level
 A mission is one thing to say in a situation, given as a task the way a teacher would — never as the sentence to say. The situation should come from the chosen topic, and doing the task well should need exactly the thing they get wrong.
 
 - "topicId": the id of the map topic it fits best. Prefer one that is not done.
-- "focus": what they keep getting wrong, in ${input.uiName}, a few words a learner understands ("past tense of irregular verbs").
+- "focus": what they keep getting wrong, written in ${input.uiName} — translate it; never copy the English name of the mistake you were given. A few words a learner understands.
 - "task": what to do, in ${input.uiName}. Do not quote or translate the answer.
 - "hints": exactly two. The first, in ${input.uiName}: what to watch for, without the words. The second, in ${input.target}: the first words of "answer" up to just before the part that has the form — never the form itself — ending with "…".
 - "answer": one natural way to do it, in ${input.target}, using the form correctly, that does exactly what the task says.
@@ -192,11 +192,36 @@ export function weakMissionMessage(input: {
 }
 
 /** One well-formed mission and the topic it goes on, or null. */
+/** Letters a label in this interface language must have some of; null for Latin-script ones. */
+const UI_LETTERS: Record<string, RegExp> = {
+  ko: /\p{Script=Hangul}/u,
+  ja: /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u,
+  zh: /\p{Script=Han}/u,
+  ru: /\p{Script=Cyrillic}/u,
+  ar: /\p{Script=Arabic}/u,
+  th: /\p{Script=Thai}/u,
+  hi: /\p{Script=Devanagari}/u,
+};
+
+/**
+ * Whether a label is in the interface language and not the English name of the
+ * mistake handed over. Seen from the model: "past tense of irregular verbs"
+ * under a Thai or Indonesian task.
+ */
+export function focusFits(focus: string, uiLanguage: string, mistakeName: string): boolean {
+  const bare = (t: string) => t.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
+  if (!focus) return false;
+  if (uiLanguage !== "en" && bare(mistakeName) && bare(focus).includes(bare(mistakeName))) return false;
+  const letters = UI_LETTERS[uiLanguage.split("-")[0]!];
+  return letters ? letters.test(focus) : true;
+}
+
 export function normalizeWeakMission(
   raw: unknown,
   topicIds: string[],
   key: string,
-): { topicId: string; mission: Omit<Mission, "id"> } | null {
+  label?: { uiLanguage: string; mistakeName: string },
+): { topicId: string; mission: Omit<Mission, "id">; focusFits: boolean } | null {
   const row = (raw ?? {}) as Record<string, unknown>;
   const topicId = clean(row.topicId, 4).toUpperCase();
   const task = clean(row.task, 200);
@@ -204,7 +229,8 @@ export function normalizeWeakMission(
   const focus = clean(row.focus, 60);
   const hints = Array.isArray(row.hints) ? row.hints.map((h) => clean(h, 160)) : [];
   const expression = clean(row.expression, 80);
-  if (!topicIds.includes(topicId) || !task || !answer || !focus || !hints[0] || !hints[1]) return null;
+  if (!topicIds.includes(topicId) || !task || !answer || !hints[0] || !hints[1]) return null;
+  const fits = label ? focusFits(focus, label.uiLanguage, label.mistakeName) : Boolean(focus);
   const bare = (s: string) => s.toLowerCase().replace(/[^\p{L}\p{M}\p{N}\s]/gu, "").trim();
   if (bare(answer).length >= 4 && bare(task).includes(bare(answer))) return null;
   return {
@@ -214,9 +240,11 @@ export function normalizeWeakMission(
       answer,
       hints: [hints[0], hints[1]],
       weak: key,
-      focus,
+      // A label in the wrong language is left off: the mark says enough.
+      ...(fits ? { focus } : {}),
       ...(expression && answer.includes(expression) ? { expression } : {}),
     },
+    focusFits: fits,
   };
 }
 
@@ -248,4 +276,9 @@ export function openWeakCount(all: Record<string, TopicMissions>): number {
     }
   }
   return open;
+}
+
+/** The mark on an item added for a mistake: with what it practises when that was written in the app's language. */
+export function weakLabel(template: string, focus: string | undefined): string {
+  return focus ? template.replace("{focus}", focus) : template.replace(/\s*·\s*\{focus\}/, "").replace("{focus}", "").trim();
 }

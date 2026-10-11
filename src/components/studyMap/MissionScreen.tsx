@@ -5,6 +5,7 @@ import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { TTSButton } from "@/components/TTSButton";
 import type { UICopy } from "@/lib/copy";
 import type { MapTopic, StudyMap } from "@/lib/curriculum/map";
+import { weakLabel } from "@/lib/curriculum/weakPoints";
 import {
   missionProgress,
   nextMission,
@@ -197,7 +198,7 @@ export function MissionScreen({
       <header className="flex shrink-0 items-center gap-3 border-b border-white/10 px-4 pb-3 pt-[calc(0.75rem+env(safe-area-inset-top,0px))]">
         <div className="min-w-0 flex-1">
           <p className="text-[11px] text-slate-500">
-            {reviewing ? reviewItem?.topicTitle ?? "" : topic?.id} ·{" "}
+            {reviewing ? `${reviewItem?.topicTitle ?? ""} · ` : ""}
             {progress.total ? fill(ui.missionProgress, progress) : ""}
           </p>
           <h2 className="truncate text-[15px] font-semibold text-white">{title}</h2>
@@ -270,9 +271,9 @@ export function MissionScreen({
                 <p className="text-[11px] font-semibold tracking-wide text-slate-500">
                   {ui.missionTask} {position}/{progress.total}
                 </p>
-                {current.focus ? (
+                {current.weak ? (
                   <p className="mt-1 inline-block rounded-full border border-rose-300/40 bg-rose-300/10 px-2 py-0.5 text-[11px] text-rose-100">
-                    {ui.missionWeakLabel.replace("{focus}", current.focus)}
+                    {weakLabel(ui.missionWeakLabel, current.focus)}
                   </p>
                 ) : null}
                 <p className="mt-1 text-[15px] leading-relaxed text-slate-100">{current.task}</p>

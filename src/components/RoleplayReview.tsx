@@ -68,12 +68,15 @@ export function RoleplayLine({
           <button
             type="button"
             onClick={() => onTranslate(line.text)}
-            className="text-left text-[14px] leading-snug decoration-dotted decoration-neutral-500 underline-offset-4 [text-decoration-line:underline]"
+            dir="auto"
+            className="text-start text-[14px] leading-snug decoration-dotted decoration-neutral-500 underline-offset-4 [text-decoration-line:underline]"
           >
             {line.text}
           </button>
         ) : (
-          <p className="text-[14px] leading-snug">{line.text}</p>
+          // What was said is in the language being learned: it keeps its own
+          // direction, so "Hi!" does not end up as "!Hi" under an Arabic app.
+          <p dir="auto" className="text-[14px] leading-snug">{line.text}</p>
         )}
         {line.translation ? (
           <p className="mt-1 text-[12px] text-neutral-500">{line.translation}</p>
@@ -92,7 +95,7 @@ export function RoleplayLine({
                   {ui.roleplayMeant}
                 </p>
                 <div className="mt-0.5 flex items-start gap-2">
-                  <p className="min-w-0 flex-1 text-[13px] leading-snug text-emerald-200">
+                  <p dir="auto" className="min-w-0 flex-1 text-[13px] leading-snug text-emerald-200">
                     {line.meant}
                   </p>
                   <TTSButton text={line.meant} className="shrink-0" />
@@ -104,7 +107,7 @@ export function RoleplayLine({
                 <p className="text-[10px] uppercase tracking-wide text-neutral-500">
                   {ui.roleplayBetter}
                 </p>
-                <p className="mt-0.5 text-[13px] leading-snug text-emerald-200">
+                <p dir="auto" className="mt-0.5 text-[13px] leading-snug text-emerald-200">
                   {line.better}
                 </p>
               </>

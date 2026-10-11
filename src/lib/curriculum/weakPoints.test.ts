@@ -169,3 +169,26 @@ test("recommended order: mistakes first, then what was started, then the drawn o
   assert.deepEqual(recommendedOrder(map, {}, {}).map((r) => r.topic.id), ["A1", "A2", "B1", "B2", "C1"]);
   assert.equal(recommendedNext(recommendedOrder(map, Object.fromEntries(map.topics.map((t) => [t.id, "done" as const])), {})), null);
 });
+
+test("the mark's label is in the app's language, not the English name handed over", async () => {
+  const { focusFits, weakLabel } = await import("./weakPoints.ts");
+  const name = "Past tense of irregular verbs";
+  assert.equal(focusFits("past tense of irregular verbs", "th", name), false);
+  assert.equal(focusFits("past tense of irregular verbs", "id", name), false, "Latin script, still English");
+  assert.equal(focusFits("bentuk lampau kata kerja tidak beraturan", "id", name), true);
+  assert.equal(focusFits("กริยาอดีตที่ไม่ปกติ", "th", name), true);
+  assert.equal(focusFits("불규칙 동사의 과거형", "ko", name), true);
+  assert.equal(focusFits("past tense of irregular verbs", "en", name), true);
+  assert.equal(focusFits("الفرق بين ser و estar", "ar", "ser vs estar"), true);
+  assert.equal(weakLabel("자주 틀리는 부분 · {focus}", "과거형"), "자주 틀리는 부분 · 과거형");
+  assert.equal(weakLabel("자주 틀리는 부분 · {focus}", undefined), "자주 틀리는 부분");
+  assert.equal(weakLabel("خطأ متكرر · {focus}", undefined), "خطأ متكرر");
+  const dropped = normalizeWeakMission(
+    { topicId: "A1", focus: "past tense of irregular verbs", task: "Ceritakan perjalananmu", hints: ["a", "b…"], answer: "Saya pergi ke Bali." },
+    ["A1"],
+    "past-tense",
+    { uiLanguage: "id", mistakeName: name },
+  );
+  assert.equal(dropped?.focusFits, false);
+  assert.equal(dropped?.mission.focus, undefined);
+});

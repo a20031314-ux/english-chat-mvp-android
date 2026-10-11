@@ -34,6 +34,15 @@ export type ReleaseNote = { version: string; items: WhatsNewItem[] };
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    version: "2.65",
+    items: [
+      { id: "mission", title: "whatsNewMissionTitle", body: "whatsNewMissionBody", shot: "mission", tab: "map" },
+      { id: "progress", title: "whatsNewProgressTitle", body: "whatsNewProgressBody", shot: "progress", tab: "map" },
+      { id: "weak", title: "whatsNewWeakTitle", body: "whatsNewWeakBody", shot: "weak", tab: "map" },
+      { id: "meant", title: "whatsNewMeantTitle", body: "whatsNewMeantBody", shot: "meant", tab: "roleplay" },
+    ],
+  },
+  {
     // 2.63 shipped these without anything to say so; 2.64 is the first build
     // that can, so it introduces them.
     version: "2.64",

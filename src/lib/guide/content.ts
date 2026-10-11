@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-09";
+export const GUIDE_VERSION = "2026-10-11";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab";
 
@@ -39,17 +39,27 @@ export const GUIDE_KO: Guide = {
         ],
       },
       {
-        heading: "순서와 연결",
+        heading: "할 일로 연습하기",
         body: [
-          "‘{ui:mapOrderTitle}’은 공부하기 좋은 순서예요. ‘{ui:mapContinue}’을 누르면 아직 끝내지 않은 첫 주제가 열려요.",
-          "주제를 누르면 연결된 주제와 왜 연결되는지가 나와요. 닫은 뒤에도 지도에서 연결된 주제가 밝게 표시돼요.",
+          "주제를 열고 ‘{ui:missionStart}’을 누르면 정답 대신 할 일을 줘요. 배우는 언어로 써 보면 확인하고, 틀린 곳은 고쳐 줘요.",
+          "막히면 ‘{ui:missionHint}’을 누르세요. 방향, 문장 첫머리, 예시 답 순서로 한 단계씩 나와요.",
+          "주제 안의 ‘{ui:mapPractice}’ 항목으로 채팅, 통화, 영상, 단어장에서 같은 주제를 이어서 연습할 수 있어요.",
         ],
       },
       {
-        heading: "연습하고 표시하기",
+        heading: "숙지·배운 것·알아야 할 것",
         body: [
-          "주제 안의 ‘{ui:mapPractice}’ 항목을 누르면 채팅, 통화, 영상, 단어장으로 바로 넘어가요. 채팅은 첫 문장이 입력창에 채워져요.",
-          "다 했다 싶으면 ‘{ui:mapMarkDone}’을 누르세요. 위쪽 진행도에 반영돼요.",
+          "힌트 없이 써낸 표현은 ‘{ui:itemsMastered}’, 힌트나 교정으로 해낸 건 ‘{ui:itemsLearned}’, 아직 안 한 건 ‘{ui:itemsToLearn}’이에요. 예시 답을 보기만 한 건 표시만 남아요.",
+          "배운 것은 시간이 지나면 지도 위쪽의 복습 버튼으로 다시 물어봐요. 채팅이나 통화에서 그 표현을 맞게 쓰면 숙지로 올라가요.",
+          "주제의 표현을 모두 숙지하면 주제가 자동으로 완료돼요. 직접 ‘{ui:mapMarkDone}’으로 표시해도 돼요.",
+        ],
+      },
+      {
+        heading: "순서와 자주 틀리는 것",
+        body: [
+          "‘{ui:mapOrderTitle}’은 진행에 따라 바뀌어요. 자주 틀리는 것이 든 주제, 하던 주제, 아직 안 한 주제 순이에요. ‘{ui:mapContinue}’은 그 첫 주제를 열어요.",
+          "채팅이나 통화에서 같은 종류의 실수를 두 번 하면, 그걸 연습하는 할 일이 맞는 주제에 들어가요.",
+          "주제를 누르면 연결된 주제와 왜 연결되는지가 나와요.",
           "목표가 바뀌면 ‘{ui:mapNewGoal}’으로 새 지도를 그릴 수 있고, ‘{ui:mapRestore}’로 바로 전 지도로 돌아갈 수 있어요. 지도는 배우는 언어마다 따로 저장돼요.",
         ],
       },
@@ -189,17 +199,27 @@ export const GUIDE_EN: Guide = {
         ],
       },
       {
-        heading: "Order and connections",
+        heading: "Practise with tasks",
         body: [
-          "‘{ui:mapOrderTitle}’ is a good order to study in. ‘{ui:mapContinue}’ opens the first topic you haven't finished.",
-          "Tap a topic to see what it connects to and why. After you close it, the connected topics stay lit on the map.",
+          "Open a topic and tap ‘{ui:missionStart}’: you get something to do, not the answer. Write it in the language you're learning and it's checked, with anything wrong put right.",
+          "Stuck? Tap ‘{ui:missionHint}’. You get a direction, then the start of a sentence, then an example answer, one step at a time.",
+          "Under ‘{ui:mapPractice}’ in a topic, you can carry the same topic on in chat, a call, a video or your words.",
         ],
       },
       {
-        heading: "Practise and mark",
+        heading: "Mastered, learned, to learn",
         body: [
-          "Under ‘{ui:mapPractice}’ in a topic, each item takes you straight to chat, a call, a video or your words. For chat, a first line is put in the box for you.",
-          "When you feel you've got it, tap ‘{ui:mapMarkDone}’. The progress at the top follows.",
+          "A phrase you produced without hints is ‘{ui:itemsMastered}’, one you managed with a hint or a correction is ‘{ui:itemsLearned}’, and one you haven't done yet is ‘{ui:itemsToLearn}’. Only looking at the example answer leaves a mark, nothing more.",
+          "After a while, learned phrases come back through the review button at the top of the map. Using one correctly in chat or a call masters it.",
+          "When every phrase in a topic is mastered, the topic is finished for you. You can also mark it ‘{ui:mapMarkDone}’ yourself.",
+        ],
+      },
+      {
+        heading: "Order and weak spots",
+        body: [
+          "‘{ui:mapOrderTitle}’ changes as you go: topics holding something you keep getting wrong first, then ones you've started, then the rest. ‘{ui:mapContinue}’ opens the first of them.",
+          "Make the same kind of mistake twice in chat or a call, and a task to practise it is added to the topic it fits.",
+          "Tap a topic to see what it connects to and why.",
           "If your goal changes, ‘{ui:mapNewGoal}’ draws a new map, and ‘{ui:mapRestore}’ takes you back to the one before. Each language you learn keeps its own map.",
         ],
       },

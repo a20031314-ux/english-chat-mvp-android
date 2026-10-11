@@ -107,42 +107,52 @@ export async function observeWeakPoints(input: {
     if (due && openWeakCount(all) < MAX_OPEN_WEAK) {
       input.meter?.("weakMission");
       const map = record.map;
-      const written = await input.openai.chat.completions.create({
-        model: MISSION_MODEL(),
-        temperature: 0.4,
-        max_tokens: 500,
-        response_format: { type: "json_object" },
-        messages: [
-          {
-            role: "system",
-            content: weakMissionPrompt({
-              target,
-              uiName: INTERFACE_LANGUAGE_LABELS[map.uiLanguage] ?? "Korean",
-              level: map.level,
-            }),
-          },
-          {
-            role: "user",
-            content: weakMissionMessage({
-              mistake: due.name,
-              goal: map.goal,
-              topics: map.topics.map((t) => ({
-                id: t.id,
-                title: t.title,
-                summary: t.summary,
-                done: record.status[t.id] === "done",
-              })),
-            }),
-          },
-        ],
-      });
-      let parsed: unknown = null;
-      try {
-        parsed = JSON.parse(written.choices[0]?.message?.content ?? "{}");
-      } catch {
-        parsed = null;
+      const uiName = INTERFACE_LANGUAGE_LABELS[map.uiLanguage] ?? "Korean";
+      const ask = async (extra: string) => {
+        const written = await input.openai!.chat.completions.create({
+          model: MISSION_MODEL(),
+          temperature: 0.4,
+          max_tokens: 500,
+          response_format: { type: "json_object" },
+          messages: [
+            {
+              role: "system",
+              content: weakMissionPrompt({ target, uiName, level: map.level }) + extra,
+            },
+            {
+              role: "user",
+              content: weakMissionMessage({
+                mistake: due.name,
+                goal: map.goal,
+                topics: map.topics.map((t) => ({
+                  id: t.id,
+                  title: t.title,
+                  summary: t.summary,
+                  done: record.status[t.id] === "done",
+                })),
+              }),
+            },
+          ],
+        });
+        let parsed: unknown = null;
+        try {
+          parsed = JSON.parse(written.choices[0]?.message?.content ?? "{}");
+        } catch {
+          parsed = null;
+        }
+        return normalizeWeakMission(parsed, map.topics.map((t) => t.id), due.key, {
+          uiLanguage: map.uiLanguage,
+          mistakeName: due.name,
+        });
+      };
+      let placed = await ask("");
+      // The label came back in English: once more, saying so.
+      if (placed && !placed.focusFits) {
+        const again = await ask(
+          `\n\nThe last answer wrote "focus" in English. Write "focus" in ${uiName}.`,
+        );
+        if (again) placed = again;
       }
-      const placed = normalizeWeakMission(parsed, map.topics.map((t) => t.id), due.key);
       if (placed) {
         // Read again: the map-use observer may have written in between.
         const fresh = (await readMissions(input.userId, input.language, mapId))[placed.topicId];
