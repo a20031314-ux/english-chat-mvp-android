@@ -102,6 +102,10 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
   있습니다. 맞춤 등록정보는 fastlane으로 올라가지 않으므로, 아래 폴더의 이미지를 Console에서 직접 올립니다.
   한국 `ko-KR`, 일본 `ja-JP`, 중국 `zh-CN`, 스페인 `es-ES`, 인도 `hi-IN`(힌디어 앱 화면, 영어 학습).
   이미지가 바뀌는 PR을 병합하면 맞춤 등록정보 쪽도 같이 바꿔야 합니다.
+- **디자인 스크린샷(맞춤 등록정보용)**: 처음 디자인 캔버스로 만든 9장(막힌 지점, 힌트, 영상 학습, 단어 설명,
+  언어 소개 등)을 한국·일본·중국·스페인·인도용으로 현지화한 세트. 실제 앱 캡처가 아니라 디자인 목업이라
+  `store-shots/canvas/`에서 따로 만듭니다: `node store-shots/canvas/render.mjs` → `store-shots/out/canvas/<국가>/`.
+  문구는 `store-shots/canvas/strings.mjs`. Play는 등록정보마다 스크린샷을 8장까지 받으니 앱 캡처 3장과 골라 씁니다.
 - **장면 추가**: `store-shots/scenes.mjs`에 장면을 추가하고, 각 언어 JSON의 `scenes`에 헤드라인과
   대화 문장을 넣습니다. 버튼은 앱의 실제 문구(`src/lib/copy.ts`)로 찾기 때문에 언어마다 따로
   고칠 필요가 없습니다.
