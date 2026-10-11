@@ -118,7 +118,9 @@ const GOAL = {
  */
 const REPEATED_MISTAKE = {
   en: ["Yesterday I go to the office early and eat breakfast there.", "Last weekend I meet my friends and we watch a movie."],
-  es: ["Ayer yo soy muy cansado después del trabajo.", "Mi hermana es enferma desde el lunes."],
+  // One kind of mistake only (ser for estar); "Ayer yo soy…" also changed the
+  // tense and was read as a different kind.
+  es: ["Hoy yo soy muy cansado después del trabajo.", "Mi hermana es enferma desde el lunes.", "Ahora yo soy muy contento con mi trabajo."],
 };
 
 /** A call already had, read back, with one sentence rebuilt into what was meant. */
@@ -290,7 +292,7 @@ const STEPS = {
     }
     // The map takes the mistake in after the reply has gone out.
     const chip = ui.mapWeakChip.split("{n}")[0].trim();
-    for (let i = 0; i < 12; i++) {
+    for (let i = 0; i < 24; i++) {
       await wait(5000);
       await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
       await wait(1500);
