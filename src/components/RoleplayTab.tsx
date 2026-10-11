@@ -211,7 +211,12 @@ export function RoleplayTab({
           not be shown. So while there is one thing to do, this is the door to
           it; the list comes back on its own when there is a choice to make. */}
       {only ? (
-        <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-5 px-6 text-center">
+        // Scrolls when it outgrows the screen. Centred in a box that could not
+        // scroll, an opened "say my own line" result pushed the door off both
+        // ends: the resume card cut at the top, the feedback at the bottom,
+        // and the list of past calls drawn over what was left.
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
+        <div className="flex min-h-full flex-col items-center justify-center gap-5 px-6 py-6 text-center">
           <p className="text-[13px] leading-relaxed text-neutral-400">
             {ui.roleplayIntro}
           </p>
@@ -288,6 +293,7 @@ export function RoleplayTab({
             isPremium={isPremium}
             ui={ui}
           />
+        </div>
         </div>
       ) : (
         <>
