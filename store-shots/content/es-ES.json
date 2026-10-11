@@ -1,0 +1,49 @@
+{
+  "uiLocale": "es",
+  "targetLanguage": "en",
+  "font": "'Noto Sans', sans-serif",
+  "scenes": {
+    "map": {
+      "kicker": "MAPA DE ESTUDIO",
+      "title": "Escribe tu objetivo.\nTe damos el mapa.",
+      "subtitle": "Situaciones, expresiones, palabras y sonidos, en el orden para aprenderlos",
+      "fixture": "map-es-ES.json"
+    },
+    "chat": {
+      "kicker": "PRACTICA INGLÉS",
+      "title": "¿Te atascas?\nEscríbelo en español.",
+      "subtitle": "La conversación sigue y la expresión en inglés aparece debajo",
+      "turns": [
+        {
+          "user": "Hi! I just got back from work.",
+          "reply": "Welcome back! How was your day?",
+          "replyTranslation": "¡Bienvenido! ¿Qué tal tu día?"
+        },
+        {
+          "user": "Tenía planes con un amigo el fin de semana, pero me dejó plantado",
+          "howToSay": {
+            "expression": "My friend stood me up this weekend.",
+            "simpler": "My friend didn't show up this weekend."
+          },
+          "reply": "Oh no! Did they tell you why?",
+          "replyTranslation": "¡Vaya! ¿Te dijo por qué?"
+        }
+      ]
+    },
+    "sentence": {
+      "kicker": "PALABRA POR PALABRA",
+      "title": "Toca una palabra.\nEntiende el porqué.",
+      "subtitle": "Pregunta qué significa aquí y te lo explica en español",
+      "user": "I finally finished my project today.",
+      "reply": "Nice! Any fun plans for the weekend?",
+      "replyTranslation": "¡Genial! ¿Algún plan divertido para el fin de semana?",
+      "sentence": "Any fun plans for the weekend?",
+      "sentenceTranslation": "¿Algún plan divertido para el fin de semana?",
+      "pick": [
+        3,
+        5
+      ],
+      "answer": "“for the weekend” significa «para el fin de semana»: indica para cuándo son los planes.\n\nSe usa mucho «plans for + momento»: plans for tonight (planes para esta noche), plans for the summer (planes para el verano).\n\nEjemplo: What are your plans for the holidays? — ¿Qué planes tienes para las vacaciones?"
+    }
+  }
+}

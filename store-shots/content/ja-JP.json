@@ -1,0 +1,49 @@
+{
+  "uiLocale": "ja",
+  "targetLanguage": "en",
+  "font": "'Noto Sans CJK JP', 'Noto Sans', sans-serif",
+  "scenes": {
+    "map": {
+      "kicker": "学習マップ",
+      "title": "目標を書くだけで\n学ぶ道すじが見える",
+      "subtitle": "場面・表現・単語・発音を、学ぶ順番に",
+      "fixture": "map-ja-JP.json"
+    },
+    "chat": {
+      "kicker": "英会話の練習",
+      "title": "詰まったら日本語で。\n英語の表現はすぐ下に",
+      "subtitle": "日本語で書いても、会話はそのまま続きます",
+      "turns": [
+        {
+          "user": "Hi! I just got back from work.",
+          "reply": "Welcome back! How was your day?",
+          "replyTranslation": "おかえり！今日はどうだった？"
+        },
+        {
+          "user": "週末に友達と約束してたのに、すっぽかされちゃった",
+          "howToSay": {
+            "expression": "My friend stood me up this weekend.",
+            "simpler": "My friend didn't show up this weekend."
+          },
+          "reply": "Oh no! Did they tell you why?",
+          "replyTranslation": "えー！理由は言ってた？"
+        }
+      ]
+    },
+    "sentence": {
+      "kicker": "一語ずつ",
+      "title": "気になる部分を選んで\nその場で質問",
+      "subtitle": "ここでの意味を日本語で説明します",
+      "user": "I finally finished my project today.",
+      "reply": "Nice! Any fun plans for the weekend?",
+      "replyTranslation": "よかったね！週末、何か楽しい予定ある？",
+      "sentence": "Any fun plans for the weekend?",
+      "sentenceTranslation": "週末、何か楽しい予定ある？",
+      "pick": [
+        3,
+        5
+      ],
+      "answer": "“for the weekend”は「週末の」という意味で、何のための予定かを表します。\n\n「plans for + 時」の形でよく使います：plans for tonight（今夜の予定）、plans for the summer（夏の予定）。\n\n例：What are your plans for the holidays? — 休みの予定は？"
+    }
+  }
+}
