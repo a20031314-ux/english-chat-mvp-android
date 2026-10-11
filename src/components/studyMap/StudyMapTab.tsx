@@ -508,7 +508,7 @@ function MapView({
               {nextRow?.place}. {next.title}
             </span>
             {nextRow?.weak ? (
-              <span className="ml-2 rounded-full bg-rose-500/15 px-2 py-0.5 text-[11px] font-normal text-rose-700">
+              <span className="ml-2 inline-block whitespace-nowrap rounded-full bg-rose-500/15 px-2 py-0.5 text-[11px] font-normal text-rose-700">
                 {ui.mapWeakChip.replace("{n}", String(nextRow.weak))}
               </span>
             ) : null}
@@ -532,7 +532,7 @@ function MapView({
                 <span className={`h-1.5 w-1.5 rounded-full ${STATUS_DOT[status[topic.id] ?? "todo"]}`} />
                 {place}. {topic.title}
                 {weak ? (
-                  <span className="text-[11px] text-rose-200">{ui.mapWeakChip.replace("{n}", String(weak))}</span>
+                  <span className="whitespace-nowrap text-[11px] text-rose-200">{ui.mapWeakChip.replace("{n}", String(weak))}</span>
                 ) : null}
               </button>
             </li>

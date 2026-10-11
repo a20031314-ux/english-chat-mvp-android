@@ -8,6 +8,7 @@ import type { MapTopic, StudyMap } from "@/lib/curriculum/map";
 import {
   missionProgress,
   nextMission,
+  practiceOrder,
   topicCounts,
   type Mission,
   type MissionCheck,
@@ -117,7 +118,7 @@ export function MissionScreen({
   const finished = reviewing ? reviewItem === null : state !== null && practiceCurrent === null;
   const position = reviewing
     ? reviewIndex + 1
-    : (state?.missions.findIndex((m) => m.id === current?.id) ?? 0) + 1;
+    : (state ? practiceOrder(state).findIndex((m) => m.id === current?.id) : 0) + 1;
 
   const submit = async () => {
     const text = draft.trim();

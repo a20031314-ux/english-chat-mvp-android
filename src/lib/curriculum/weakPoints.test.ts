@@ -15,6 +15,7 @@ import {
 import {
   hasTopicMissions,
   nextMission,
+  practiceOrder,
   topicCounts,
   withTopicMissions,
   type Mission,
@@ -121,6 +122,7 @@ test("added before the topic was opened, the topic's own missions still get writ
 test("the one added for a mistake is practised first and counted until mastered", () => {
   const { topic } = addWeakMission({ missions: [own("m1"), own("m2")], results: {} }, weak);
   assert.equal(nextMission(topic)?.id, "w1");
+  assert.deepEqual(practiceOrder(topic).map((m) => m.id), ["w1", "m1", "m2"]);
   assert.equal(topicCounts(topic).weak, 1);
   const mastered = { ...topic, results: { w1: { outcome: "pass" as const, hints: 0, tries: 1, mastered: true } } };
   assert.equal(topicCounts(mastered).weak, 0);

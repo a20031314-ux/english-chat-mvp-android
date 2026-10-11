@@ -366,11 +366,12 @@ export function dueMissions(state: TopicMissions, now = Date.now()): Mission[] {
  * recurring mistake goes first: it is why the map sent them here.
  */
 export function nextMission(state: TopicMissions): Mission | null {
-  return (
-    state.missions.find((m) => m.weak && !state.results[m.id]) ??
-    state.missions.find((m) => !state.results[m.id]) ??
-    null
-  );
+  return practiceOrder(state).find((m) => !state.results[m.id]) ?? null;
+}
+
+/** The order the task screen goes through, and numbers, a topic's missions in. */
+export function practiceOrder(state: TopicMissions): Mission[] {
+  return [...state.missions.filter((m) => m.weak), ...state.missions.filter((m) => !m.weak)];
 }
 
 /** Whether the topic's own missions have been written, beside any added for mistakes. */
