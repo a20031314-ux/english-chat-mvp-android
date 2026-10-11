@@ -1,0 +1,4 @@
+• Practica cada tema del mapa con tareas: recibes algo que hacer, no la respuesta, y se comprueba y corrige, con pistas paso a paso.
+• Las expresiones se marcan como dominadas, aprendidas o por aprender, y lo aprendido vuelve para repasar.
+• Los errores que repites se convierten en tareas del mapa, y el orden sugerido sigue tu progreso.
+• En las llamadas, una frase muy rota se muestra como lo que querías decir, y una pausa a mitad de frase ya no te corta.
