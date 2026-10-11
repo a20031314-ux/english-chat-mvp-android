@@ -85,6 +85,13 @@ const TRANSCRIPT: TranscriptLine[] = [
     text: "I very like this coffee",
     about: "'I very like' 대신 'I really like'라고 해요.",
   },
+  // Too broken to just put right: what they meant, rebuilt from the conversation.
+  {
+    who: "learner",
+    text: "I am go cafe yesterday and drink coffee much",
+    meant: "I went to a cafe yesterday and drank a lot of coffee.",
+  },
+  { who: "tutor", text: "Oh, you went to a cafe yesterday? Did you go with friends?" },
   { who: "learner", text: "Can I get a latte please" },
   { who: "tutor", text: "Sure. What size — small or large?", translation: "네. 사이즈는 스몰이요, 라지요?" },
   { who: "learner", text: "um... the, the big one?", stuck: SIZE_TURN },
