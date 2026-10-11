@@ -1,0 +1,49 @@
+{
+  "uiLocale": "ko",
+  "targetLanguage": "en",
+  "font": "'Noto Sans CJK KR', 'Noto Sans', sans-serif",
+  "scenes": {
+    "map": {
+      "kicker": "학습 지도",
+      "title": "목표만 쓰면\n공부할 길이 보여요",
+      "subtitle": "상황·표현·어휘·발음을 배울 순서대로",
+      "fixture": "map-ko-KR.json"
+    },
+    "chat": {
+      "kicker": "영어 회화 연습",
+      "title": "막히면 한국어로.\n영어 표현은 바로 아래",
+      "subtitle": "편한 말로 써도 대화는 계속 이어져요",
+      "turns": [
+        {
+          "user": "Hi! I just got back from work.",
+          "reply": "Welcome back! How was your day?",
+          "replyTranslation": "어서 와! 오늘 하루 어땠어?"
+        },
+        {
+          "user": "주말에 친구랑 약속 있었는데 바람맞았어",
+          "howToSay": {
+            "expression": "My friend stood me up this weekend.",
+            "simpler": "My friend didn't show up this weekend."
+          },
+          "reply": "Oh no! Did they tell you why?",
+          "replyTranslation": "아이고! 왜 그랬는지 말해줬어?"
+        }
+      ]
+    },
+    "sentence": {
+      "kicker": "단어 하나까지",
+      "title": "궁금한 부분을 골라\n바로 물어보세요",
+      "subtitle": "여기서 무슨 뜻인지 한국어로 알려줘요",
+      "user": "I finally finished my project today.",
+      "reply": "Nice! Any fun plans for the weekend?",
+      "replyTranslation": "잘됐다! 주말에 재밌는 계획 있어?",
+      "sentence": "Any fun plans for the weekend?",
+      "sentenceTranslation": "주말에 재밌는 계획 있어?",
+      "pick": [
+        3,
+        5
+      ],
+      "answer": "“for the weekend”는 ‘주말에 할’이라는 뜻으로, 계획이 언제를 위한 것인지 나타내요.\n\n“plans for + 때”로 자주 써요: plans for tonight(오늘 밤 계획), plans for the summer(여름 계획).\n\n예: What are your plans for the holidays? — 연휴에 무슨 계획 있어?"
+    }
+  }
+}

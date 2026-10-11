@@ -95,13 +95,27 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
 - **결과**: `fastlane/metadata/android/<언어>/images/phoneScreenshots/NN-<장면>.png`
   가 바뀌면 PR이 열립니다. PR의 Files changed에서 이미지를 보고 병합하면 Play에
   올라갑니다.
-- **장면 추가**: `store-shots/scenes.mjs`에 장면을 추가하고, 각 언어 JSON의
-  `scenes`에 헤드라인과 대화 문장을 넣습니다.
-- **언어 추가**: `store-shots/content/en-US.json`을 복사해 `ko-KR.json` 같은
-  Play 언어 코드로 만들고 `uiLocale`(앱 언어), `targetLanguage`(배우는 언어),
-  문구를 바꿉니다.
+- **지금 있는 것**: 영어·스페인어·일본어·한국어·중국어·힌디어 6개 언어 × 3장면(지도, 채팅 표현 카드,
+  문장 빠른 질문). 영어 사용자에게는 스페인어를 배우는 장면, 나머지는 영어를 배우는 장면을
+  각자의 앱 언어로 보여줍니다. 어떤 장면을 찍을지는 `PRODUCT.md` "대표 장면"을 따릅니다.
+- **국가별 맞춤 스토어 등록정보**: Play Console에 기본(영어) + 한국·중국·일본·스페인·인도 맞춤 등록정보가
+  있습니다. 맞춤 등록정보는 fastlane으로 올라가지 않으므로, 아래 폴더의 이미지를 Console에서 직접 올립니다.
+  한국 `ko-KR`, 일본 `ja-JP`, 중국 `zh-CN`, 스페인 `es-ES`, 인도 `hi-IN`(힌디어 앱 화면, 영어 학습).
+  이미지가 바뀌는 PR을 병합하면 맞춤 등록정보 쪽도 같이 바꿔야 합니다.
+- **디자인 스크린샷(맞춤 등록정보용)**: 처음 디자인 캔버스로 만든 9장(막힌 지점, 힌트, 영상 학습, 단어 설명,
+  언어 소개 등)을 한국·일본·중국·스페인·인도용으로 현지화한 세트. 실제 앱 캡처가 아니라 디자인 목업이라
+  `store-shots/canvas/`에서 따로 만듭니다: `node store-shots/canvas/render.mjs` → `store-shots/out/canvas/<국가>/`.
+  문구는 `store-shots/canvas/strings.mjs`. Play는 등록정보마다 스크린샷을 8장까지 받으니 앱 캡처 3장과 골라 씁니다.
+- **장면 추가**: `store-shots/scenes.mjs`에 장면을 추가하고, 각 언어 JSON의 `scenes`에 헤드라인과
+  대화 문장을 넣습니다. 버튼은 앱의 실제 문구(`src/lib/copy.ts`)로 찾기 때문에 언어마다 따로
+  고칠 필요가 없습니다.
+- **언어 추가**: `store-shots/content/ko-KR.json`을 복사해 Play 언어 코드로 이름을 짓고
+  `uiLocale`(앱 언어), `targetLanguage`(배우는 언어), 문구를 바꿉니다. 지도 장면은 그 언어로 그린
+  지도가 `store-shots/fixtures/map-<언어>.json`에 있어야 합니다. 운영 API로 한 번만 받아 저장하면
+  이후에는 비용 없이 같은 지도가 찍힙니다:
+  `curl -s -H "Content-Type: application/json" -H "x-rc-user: store-shots-<언어>" -d '{"goal":"…","level":"intermediate","targetLanguage":"en","interfaceLanguage":"ko"}' https://english-chat-mvp.vercel.app/api/curriculum/generate > store-shots/fixtures/map-ko-KR.json`
 - **로컬 실행**: `CAPACITOR_STATIC=1 npx next dev -p 3100`을 띄운 뒤
-  `npm run store:shots` (`-- --locale en-US`, `-- --scene chat`으로 좁힐 수 있음)
+  `npm run store:shots` (`-- --locale ko-KR`, `-- --scene map`으로 좁힐 수 있음)
 - 실패하면 그 순간의 화면이 `store-shots/out/failed/`에 남고, Actions에서는
   `store-shots-failed` 아티팩트로 받을 수 있습니다.
 - Play는 `phoneScreenshots` 폴더의 이미지를 파일 이름 순서로 최대 8장
