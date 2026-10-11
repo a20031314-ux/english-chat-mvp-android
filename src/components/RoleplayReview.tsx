@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { TTSButton } from "@/components/TTSButton";
 import { compareToTarget, type WordOutcome } from "@/lib/roleplay/practice";
 import type { Practice } from "@/lib/roleplay/practice";
 import type { Review, StuckTurn, TranscriptLine } from "@/lib/roleplay/review";
@@ -67,12 +68,15 @@ export function RoleplayLine({
           <button
             type="button"
             onClick={() => onTranslate(line.text)}
-            className="text-left text-[14px] leading-snug decoration-dotted decoration-neutral-500 underline-offset-4 [text-decoration-line:underline]"
+            dir="auto"
+            className="text-start text-[14px] leading-snug decoration-dotted decoration-neutral-500 underline-offset-4 [text-decoration-line:underline]"
           >
             {line.text}
           </button>
         ) : (
-          <p className="text-[14px] leading-snug">{line.text}</p>
+          // What was said is in the language being learned: it keeps its own
+          // direction, so "Hi!" does not end up as "!Hi" under an Arabic app.
+          <p dir="auto" className="text-[14px] leading-snug">{line.text}</p>
         )}
         {line.translation ? (
           <p className="mt-1 text-[12px] text-neutral-500">{line.translation}</p>
@@ -80,14 +84,30 @@ export function RoleplayLine({
         {/* Read in the seconds after they stop talking, while they wait to be
             answered — the one moment in a spoken turn when their eyes are free.
             Never said aloud; the character does not know it is here. */}
-        {line.better || line.about ? (
+        {line.better || line.meant || line.about ? (
           <div className="mt-1.5 border-t border-white/10 pt-1.5">
+            {/* What they were trying to say, when what came out was too
+                broken to just put right. Asked, not told: they know what they
+                meant, and it can be heard and said again. */}
+            {line.meant ? (
+              <>
+                <p className="text-[10px] uppercase tracking-wide text-neutral-500">
+                  {ui.roleplayMeant}
+                </p>
+                <div className="mt-0.5 flex items-start gap-2">
+                  <p dir="auto" className="min-w-0 flex-1 text-[13px] leading-snug text-emerald-200">
+                    {line.meant}
+                  </p>
+                  <TTSButton text={line.meant} className="shrink-0" />
+                </div>
+              </>
+            ) : null}
             {line.better ? (
               <>
                 <p className="text-[10px] uppercase tracking-wide text-neutral-500">
                   {ui.roleplayBetter}
                 </p>
-                <p className="mt-0.5 text-[13px] leading-snug text-emerald-200">
+                <p dir="auto" className="mt-0.5 text-[13px] leading-snug text-emerald-200">
                   {line.better}
                 </p>
               </>

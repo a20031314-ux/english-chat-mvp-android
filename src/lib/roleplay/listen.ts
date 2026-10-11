@@ -8,6 +8,7 @@ import {
 import {
   HISTORY_LINES,
   ROLEPLAY_BANK_CLIENT_HEADER,
+  ROLEPLAY_MEANT_CLIENT_HEADER,
   ROLEPLAY_STREAM_CLIENT_HEADER,
   type Direction,
   type DirectorRequest,
@@ -332,6 +333,9 @@ function shapeDirection(raw: unknown): Direction | null {
     ...(typeof body.better === "string" && body.better.trim()
       ? { better: body.better.trim() }
       : {}),
+    ...(typeof body.meant === "string" && body.meant.trim()
+      ? { meant: body.meant.trim() }
+      : {}),
     ...(typeof body.follow === "string" ? { follow: body.follow } : {}),
   };
 }
@@ -401,6 +405,8 @@ export async function fetchDirection(input: {
     // the server may answer with their ids and with a turn made of two of
     // them (director.ts).
     [ROLEPLAY_BANK_CLIENT_HEADER]: "1",
+    // Says this build shows what they meant under their line (director.ts).
+    [ROLEPLAY_MEANT_CLIENT_HEADER]: "1",
   };
   const body = JSON.stringify({
     ...input.request,

@@ -74,7 +74,13 @@ export async function POST(request: NextRequest) {
     // Says what kind of audio this is, which is most of what stops a model
     // handed half a second of sound from filling the gap with something it
     // has heard often. The language hint alone did not.
-    prompt: "One person speaking a single short turn in a casual spoken conversation.",
+    //
+    // And says it is a learner, written down as said. A recogniser tidies
+    // grammar on its way to text — "I go there yesterday" comes out "I went
+    // there yesterday" — and a mistake it fixes is one the tutor never sees,
+    // so it can neither correct it nor work out what was meant (director.ts).
+    prompt:
+      "A language learner speaking one short turn in a casual conversation. Write exactly what they say, mistakes included: wrong verb forms, missing words, words from another language. Do not correct it.",
   };
 
   try {

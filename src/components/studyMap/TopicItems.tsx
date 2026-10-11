@@ -5,6 +5,7 @@ import { usePremium } from "@/contexts/PremiumContext";
 import type { UICopy } from "@/lib/copy";
 import { itemState, type ItemState, type TopicMissions } from "@/lib/curriculum/missions";
 import { fetchMissions } from "@/lib/studyMapClient";
+import { weakLabel } from "@/lib/curriculum/weakPoints";
 import { learningLanguageTextDir } from "@/lib/learningLanguages";
 
 /**
@@ -90,6 +91,9 @@ export function TopicItems({
               <span className="block text-[11px] text-slate-500">
                 {label[item.state]}
                 {item.seen && item.state === "toLearn" ? ` · ${ui.itemSeen}` : ""}
+                {mission.weak ? (
+                  <span className="ml-1.5 text-rose-200">{weakLabel(ui.missionWeakLabel, mission.focus)}</span>
+                ) : null}
               </span>
               {item.state === "toLearn" ? (
                 <span className="block text-[13px] leading-snug text-slate-300">{mission.task}</span>

@@ -23,6 +23,7 @@
  *
  * Run: node --experimental-strip-types scripts/capture-whats-new.mjs 2.64 [--only ko,ar]
  *   PLAYWRIGHT_MODULE / CHROMIUM as for check:browser-languages.
+ *   CAPTURE_RUN=2 starts from fresh test users, when today's run left data behind.
  */
 import http from "node:http";
 import fs from "node:fs";
@@ -110,6 +111,47 @@ const GOAL = {
   th: "อยากคุยเล่นกับเพื่อนร่วมงานได้อย่างเป็นธรรมชาติตอนกินข้าวเย็นระหว่างไปทำงานต่างประเทศ",
   hi: "बिज़नेस ट्रिप पर डिनर के दौरान सहकर्मियों से सहज होकर बातचीत करना चाहता हूँ",
 };
+
+/**
+ * The same kind of mistake twice, in the language being learned (English, or
+ * Spanish for the English interface), so the map takes it in as a weak spot.
+ */
+const REPEATED_MISTAKE = {
+  en: ["Yesterday I go to the office early and eat breakfast there.", "Last weekend I meet my friends and we watch a movie."],
+  // One kind of mistake only (ser for estar); "Ayer yo soy…" also changed the
+  // tense and was read as a different kind.
+  es: ["Hoy yo soy muy cansado después del trabajo.", "Mi hermana es enferma desde el lunes.", "Ahora yo soy muy contento con mi trabajo."],
+};
+
+/** A call already had, read back, with one sentence rebuilt into what was meant. */
+const PAST_CALL = {
+  en: [
+    { who: "tutor", text: "Hi! How was your weekend?" },
+    { who: "learner", text: "I am go cafe yesterday and drink coffee much", meant: "I went to a cafe yesterday and drank a lot of coffee." },
+    { who: "tutor", text: "Oh, nice! Which cafe did you go to?" },
+    { who: "learner", text: "The new one near my office." },
+    { who: "tutor", text: "I've heard good things about it. Was it busy?" },
+    { who: "learner", text: "Yes, very busy. I wait long time", better: "Yes, it was very busy. I waited a long time." },
+    { who: "tutor", text: "That's the price of a good coffee!" },
+  ],
+  es: [
+    { who: "tutor", text: "¡Hola! ¿Qué tal tu fin de semana?" },
+    { who: "learner", text: "Ayer yo ir café y tomar mucho café", meant: "Ayer fui a una cafetería y tomé mucho café." },
+    { who: "tutor", text: "¡Qué bien! ¿A qué cafetería fuiste?" },
+    { who: "learner", text: "La nueva cerca de mi oficina." },
+    { who: "tutor", text: "Me han hablado bien de ella. ¿Había mucha gente?" },
+    { who: "learner", text: "Sí, mucha gente. Yo esperé mucho tiempo", better: "Sí, había mucha gente. Esperé mucho tiempo." },
+    { who: "tutor", text: "¡Es el precio de un buen café!" },
+  ],
+};
+
+/** An answer with one slip in it, so the check has something to correct. */
+function withSlip(answer) {
+  const swaps = [[/\bI am\b/, "I is"], [/\bis\b/, "are"], [/\bwent\b/, "go"], [/\bestá\b/, "es"], [/\bsoy\b/, "estoy"], [/\bfui\b/, "voy"]];
+  for (const [from, to] of swaps) if (from.test(answer)) return answer.replace(from, to);
+  const words = answer.split(" ");
+  return words.length > 3 ? [...words.slice(0, 1), ...words.slice(2)].join(" ") : answer;
+}
 
 const types = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".json": "application/json", ".txt": "text/plain", ".svg": "image/svg+xml", ".png": "image/png", ".ico": "image/x-icon", ".woff2": "font/woff2", ".webp": "image/webp", ".mp3": "audio/mpeg" };
 const server = http.createServer(async (req, res) => {
@@ -203,6 +245,81 @@ const STEPS = {
     }
     await wait(1200);
   },
+  async mission({ page, ui, locale, wait }) {
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    await wait(1500);
+    if (await page.getByRole("button", { name: ui.mapDraw }).count()) await STEPS.map({ page, ui, locale, wait });
+    await page.getByRole("button", { name: new RegExp(escape(ui.mapContinue)) }).first().click();
+    await wait(1000);
+    const missions = page.waitForResponse((r) => r.url().includes("/api/curriculum/missions"), { timeout: 90000 });
+    await page.getByRole("button", { name: new RegExp(escape(ui.missionStart)) }).first().click();
+    const data = await (await missions).json();
+    const order = [...data.missions.filter((m) => m.weak), ...data.missions.filter((m) => !m.weak)];
+    await wait(1200);
+    await page.getByRole("button", { name: exactly(ui.missionHint) }).click();
+    await wait(500);
+    await page.locator("textarea:visible").last().fill(withSlip(order[0].answer));
+    await page.getByRole("button", { name: exactly(ui.missionCheck) }).click();
+    const checking = ui.missionChecking.replace("…", "");
+    for (let i = 0; i < 45; i++) {
+      await wait(1000);
+      if (!(await page.locator("body").innerText()).includes(checking)) break;
+    }
+    await wait(1500);
+  },
+  async progress({ page, ui, wait }) {
+    // Continues from the mission: back on the map, the topic's phrases by state.
+    await page.getByRole("button", { name: ui.billingClose }).first().click();
+    // The map reloads its counts when the task screen closes.
+    await page.waitForResponse((r) => r.url().includes("/api/curriculum?"), { timeout: 30000 }).catch(() => undefined);
+    await wait(2000);
+    await page.getByRole("button", { name: new RegExp(escape(ui.mapContinue)) }).first().click();
+    for (let i = 0; i < 20 && !(await page.getByText(ui.topicItemsTitle).count()); i++) await wait(500);
+    await wait(1200);
+  },
+  async weak({ page, ui, wait, target }) {
+    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "networkidle" });
+    await wait(1200);
+    for (const line of REPEATED_MISTAKE[target]) {
+      const before = await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count();
+      await page.locator("textarea:visible").first().fill(line);
+      await page.getByRole("button", { name: exactly(ui.send) }).click();
+      for (let i = 0; i < 60; i++) {
+        await wait(500);
+        if ((await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count()) > before) break;
+      }
+      await wait(1500);
+    }
+    // The map takes the mistake in after the reply has gone out.
+    const chip = ui.mapWeakChip.split("{n}")[0].trim();
+    for (let i = 0; i < 24; i++) {
+      await wait(5000);
+      await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+      await wait(1500);
+      if ((await page.locator("body").innerText()).includes(chip)) break;
+    }
+    await page.getByText(ui.mapOrderTitle).first().scrollIntoViewIfNeeded();
+    await page.mouse.wheel(0, -260);
+    await wait(800);
+  },
+  async meant({ page, ui, wait, target }) {
+    const now = Date.now();
+    await page.evaluate(([said, language, at]) => {
+      const saved = [{
+        id: "whats-new-capture", scenarioId: "cafe-order", language,
+        title: said.find((l) => l.who === "learner").text, startedAt: at - 600000, updatedAt: at, finishedAt: at,
+        state: { scenarioId: "cafe-order", nodeId: "done", mode: "free", difficulty: {}, attempts: 0, hintShown: false,
+          listeningSince: null, visited: [], queue: [], pending: null, freeTurns: 0, directedTurns: 0, history: [],
+          closing: false, finished: true },
+        said, memory: { text: "", upTo: 0 },
+      }];
+      localStorage.setItem("roleplayConversations", JSON.stringify(saved));
+    }, [PAST_CALL[target], target, now]);
+    await page.goto(`${BASE}/?screen=roleplay`, { waitUntil: "networkidle" });
+    await wait(1500);
+    await page.getByRole("button", { name: new RegExp(escape(PAST_CALL[target][1].text)) }).first().click();
+    await wait(1500);
+  },
 };
 
 /** Without the header and the tab bar, which say nothing about the change. */
@@ -228,7 +345,7 @@ for (const locale of only ?? Object.keys(copy)) {
   const context = await browser.newContext({ viewport: { width: 412, height: 860 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
   const page = await context.newPage();
   await page.route("**/api/**", (route) =>
-    route.continue({ headers: { ...route.request().headers(), "x-rc-user": `whats-new-capture-${day}-${locale}` } }),
+    route.continue({ headers: { ...route.request().headers(), "x-rc-user": `whats-new-capture-${day}${process.env.CAPTURE_RUN ? `-${process.env.CAPTURE_RUN}` : ""}-${locale}` } }),
   );
   const wait = (ms) => page.waitForTimeout(ms);
   try {
@@ -239,10 +356,11 @@ for (const locale of only ?? Object.keys(copy)) {
       localStorage.setItem("chatOwnLanguageTipSeen", "1");
       localStorage.setItem("whatsNewSeenVersion", "999");
     }, [locale === "en" ? "es" : "en", locale]);
+    const target = locale === "en" ? "es" : "en";
     for (const item of note.items) {
       const step = STEPS[item.shot];
       if (!step) throw new Error(`no capture step for "${item.shot}"`);
-      await step({ page, ui, locale, wait });
+      await step({ page, ui, locale, wait, target });
       await save(await page.screenshot(), locale, item.shot);
       console.log(`${locale} ${item.shot}`);
     }

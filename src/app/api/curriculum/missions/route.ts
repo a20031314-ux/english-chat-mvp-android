@@ -12,6 +12,8 @@ import {
 } from "@/lib/billing/config";
 import { listenForPhrases } from "@/lib/curriculum/map";
 import {
+  hasTopicMissions,
+  withTopicMissions,
   missionsSystemPrompt,
   missionsUserMessage,
   normalizeMissions,
@@ -68,15 +70,21 @@ export async function POST(request: NextRequest) {
   const topic = record.map.topics.find((t) => t.id === topicId);
   if (!topic) return jsonWithCors(request, { error: "MAP_CHANGED" }, { status: 409 });
 
+  // A topic can hold a mission added for a recurring mistake before it was
+  // ever opened (weakPoints.ts); its own missions are still written then.
   const stored = (await readMissions(userId, language, mapId))[topicId];
-  if (stored) return jsonWithCors(request, stored);
+  if (stored && hasTopicMissions(stored)) return jsonWithCors(request, stored);
 
   const openai = getOpenAIClient();
+  // Whatever stops the topic's own missions being written, the ones already
+  // added for mistakes can still be practised.
   if (!openai) {
+    if (stored) return jsonWithCors(request, stored);
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
   const limit = isPremium ? PREMIUM_DAILY_MISSION_SET_LIMIT : FREE_DAILY_MISSION_SET_LIMIT;
   if ((await getDailyOpUsed(userId, "curriculumMissions")) >= limit) {
+    if (stored) return jsonWithCors(request, stored);
     return jsonWithCors(request, { error: "MISSION_LIMIT_REACHED", limit }, { status: 429 });
   }
   await meterRequest(request, "curriculumMissions");
@@ -113,13 +121,16 @@ export async function POST(request: NextRequest) {
     const missions = normalizeMissions(JSON.parse(completion.choices[0]?.message?.content ?? "{}"));
     if (!missions) {
       console.error("[missions] too few usable missions", { topic: topic.id });
+      if (stored) return jsonWithCors(request, stored);
       return jsonWithCors(request, { error: "MISSIONS_FAILED" }, { status: 502 });
     }
-    const fresh = { missions, results: {} };
+    const latest = (await readMissions(userId, language, mapId))[topicId];
+    const fresh = withTopicMissions(latest, missions);
     await saveTopicMissions(userId, language, mapId, topicId, fresh);
     return jsonWithCors(request, fresh);
   } catch (error) {
     console.error("[missions]", error);
+    if (stored) return jsonWithCors(request, stored);
     return jsonWithCors(request, { error: "MISSIONS_FAILED" }, { status: 502 });
   }
 }

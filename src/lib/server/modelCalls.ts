@@ -56,6 +56,11 @@ export const MODEL_CALLS_PER_REQUEST = {
   curriculumMissions: 1,
   // One mission answer checked: verdict, correction and the other person's reply.
   missionCheck: 1,
+  // A corrected chat or call line read for the kind of mistake it was
+  // (curriculum/weakPoints.ts), after the reply. Small model, keys in and out.
+  weakRead: 1,
+  // A mistake seen twice, written as one mission on the map. Rare by design.
+  weakMission: 1,
   vocabGloss: 1,
   learningSpans: 1,
   translate: 1,
