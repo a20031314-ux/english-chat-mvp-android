@@ -28,11 +28,6 @@ type YoutubeChannelItem = {
   };
 };
 
-type YoutubeSearchItem = {
-  id?: { channelId?: string };
-  snippet?: { title?: string };
-};
-
 function youtubeKey(): string | null {
   return process.env.YOUTUBE_API_KEY?.trim() || null;
 }
@@ -80,19 +75,6 @@ async function youtubeJson<T>(
   return (await response.json()) as T;
 }
 
-async function channelByHandle(
-  handle: string,
-): Promise<YoutubeChannelItem | null> {
-  const json = await youtubeJson<{ items?: YoutubeChannelItem[] }>(
-    "channels",
-    {
-      part: "snippet,contentDetails",
-      forHandle: handle.replace(/^@/, ""),
-    },
-  );
-  return json?.items?.[0] || null;
-}
-
 async function channelById(channelId: string): Promise<YoutubeChannelItem | null> {
   const json = await youtubeJson<{ items?: YoutubeChannelItem[] }>(
     "channels",
@@ -104,45 +86,32 @@ async function channelById(channelId: string): Promise<YoutubeChannelItem | null
   return json?.items?.[0] || null;
 }
 
-async function searchChannelId(name: string): Promise<string | null> {
-  const json = await youtubeJson<{ items?: YoutubeSearchItem[] }>("search", {
-    part: "snippet",
-    type: "channel",
-    maxResults: "1",
-    q: name,
-  });
-  return json?.items?.[0]?.id?.channelId?.trim() || null;
-}
-
+/**
+ * A recommended channel, by the id it was checked under. No fallback to its
+ * handle or a search by name: either can land on a stranger's channel, and a
+ * missing recommendation is better than a wrong one (recommendedChannels.ts).
+ */
 export async function resolveYoutubeChannel(
   seed: RecommendedChannelSeed,
 ): Promise<ResolvedYoutubeChannel | null> {
   const cacheKey = discoveryCacheKey({
     kind: "yt-channel",
-    v: 2,
-    handle: seed.handle,
-    name: seed.name,
+    v: 3,
+    channelId: seed.channelId,
   });
   const cached = discoveryCacheGet<ResolvedYoutubeChannel>(cacheKey);
   if (cached) return cached;
 
   try {
-    const byHandle = await channelByHandle(seed.handle);
-    const resolvedHandle = byHandle ? asResolved(seed, byHandle) : null;
-    if (resolvedHandle) {
-      discoveryCacheSet(cacheKey, resolvedHandle, 24 * 60 * 60 * 1000);
-      return resolvedHandle;
+    const item = await channelById(seed.channelId);
+    const resolved = item ? asResolved(seed, item) : null;
+    if (resolved) {
+      discoveryCacheSet(cacheKey, resolved, 24 * 60 * 60 * 1000);
+      return resolved;
     }
-
-    const foundId = await searchChannelId(seed.name);
-    const bySearch = foundId ? await channelById(foundId) : null;
-    const resolvedSearch = bySearch ? asResolved(seed, bySearch) : null;
-    if (resolvedSearch) {
-      discoveryCacheSet(cacheKey, resolvedSearch, 24 * 60 * 60 * 1000);
-      return resolvedSearch;
-    }
+    console.error("[youtube-channel] recommended channel not found", seed.id, seed.channelId);
   } catch (error) {
-    console.error("[youtube-channel]", seed.handle, error);
+    console.error("[youtube-channel]", seed.id, error);
   }
   return null;
 }
@@ -156,7 +125,7 @@ export async function resolveYoutubeChannelById(
   const cached = discoveryCacheGet<ResolvedYoutubeChannel>(cacheKey);
   if (cached) return cached;
   const item = await channelById(id);
-  const seed = { id, name: id, handle: id };
+  const seed = { id, name: id, handle: id, channelId: id };
   const resolved = item ? asResolved(seed, item) : null;
   if (resolved) {
     discoveryCacheSet(cacheKey, resolved, 24 * 60 * 60 * 1000);
