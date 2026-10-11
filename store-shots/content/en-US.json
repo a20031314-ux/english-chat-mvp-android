@@ -3,10 +3,16 @@
   "targetLanguage": "es",
   "font": "'Noto Sans', 'Noto Sans CJK KR', sans-serif",
   "scenes": {
+    "map": {
+      "kicker": "STUDY MAP",
+      "title": "Tell it your goal.\nGet a map.",
+      "subtitle": "Situations, phrases, words and sounds, in the order to learn them",
+      "fixture": "map-en-US.json"
+    },
     "chat": {
       "kicker": "PRACTICE SPANISH",
       "title": "Say it your way.\nSee it in Spanish.",
-      "subtitle": "Chat with an AI friend, in your own words if you get stuck",
+      "subtitle": "Stuck? Write in English. The chat keeps going.",
       "turns": [
         {
           "user": "Muy bien, fui al cine con un amigo.",
@@ -33,9 +39,11 @@
       "replyTranslation": "Hi! Any plans for Saturday?",
       "sentence": "¿Tienes planes para el sábado?",
       "sentenceTranslation": "Do you have plans for Saturday?",
-      "word": "para",
-      "question": "What does it mean here?",
-      "answer": "Here “para” points to when the plans are for: Saturday.\n\nUse “para” for a deadline or a purpose — “para el lunes” (by Monday), “para aprender” (in order to learn).\n\nExample: ¿Qué planes tienes para el verano? — What are your plans for the summer?"
+      "answer": "Here “para” points to when the plans are for: Saturday.\n\nUse “para” for a deadline or a purpose — “para el lunes” (by Monday), “para aprender” (in order to learn).\n\nExample: ¿Qué planes tienes para el verano? — What are your plans for the summer?",
+      "pick": [
+        2,
+        2
+      ]
     }
   }
 }
