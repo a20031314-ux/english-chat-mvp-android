@@ -38,3 +38,19 @@ export function FullScreenLayer({ children }: { children: ReactNode }) {
     document.body,
   );
 }
+
+/**
+ * The same escape for a sheet that brings its own backdrop: its children go to
+ * document.body as they are. A topic sheet drawn inside the map tab was sized
+ * against the screen (88vh) but placed against the tab, which is shorter, and
+ * lost its top under the header and its bottom under the tab bar.
+ */
+export function BodyLayer({ children }: { children: ReactNode }) {
+  const onClient = useSyncExternalStore(
+    subscribe,
+    () => true,
+    () => false,
+  );
+  if (!onClient) return null;
+  return createPortal(children, document.body);
+}

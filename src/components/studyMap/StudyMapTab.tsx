@@ -28,6 +28,7 @@ import {
 import type { TopicCounts } from "@/lib/curriculum/missions";
 import { recommendedNext, recommendedOrder } from "@/lib/curriculum/recommend";
 import { normalizeYouTubeWatchUrl } from "@/lib/videoLearning";
+import { BodyLayer } from "@/components/FullScreenLayer";
 import { MissionScreen } from "@/components/studyMap/MissionScreen";
 import { TopicItems, ItemBar } from "@/components/studyMap/TopicItems";
 import { LearnerPanel } from "@/components/studyMap/LearnerPanel";
@@ -504,11 +505,11 @@ function MapView({
             className="mt-3 w-full rounded-xl bg-[#e8e8e4] px-4 py-3 text-left text-sm font-medium text-neutral-900 hover:bg-[#f5f5f3]"
           >
             {ui.mapContinue}
-            <span className="ml-2 font-normal text-neutral-600">
+            <span className="ms-2 font-normal text-neutral-600">
               {nextRow?.place}. {next.title}
             </span>
             {nextRow?.weak ? (
-              <span className="ml-2 inline-block whitespace-nowrap rounded-full bg-rose-500/15 px-2 py-0.5 text-[11px] font-normal text-rose-700">
+              <span className="ms-2 inline-block whitespace-nowrap rounded-full bg-rose-500/15 px-2 py-0.5 text-[11px] font-normal text-rose-700">
                 {ui.mapWeakChip.replace("{n}", String(nextRow.weak))}
               </span>
             ) : null}
@@ -629,13 +630,14 @@ function TopicSheet({
   };
 
   return (
-    <div className="fixed inset-0 z-[80] flex flex-col justify-end bg-black/60 p-2 sm:items-center sm:justify-center">
+    <BodyLayer>
+    <div className="fixed inset-0 z-[80] flex flex-col justify-end bg-black/60 p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-[max(0.5rem,env(safe-area-inset-top))] sm:items-center sm:justify-center">
       <button type="button" className="absolute inset-0 cursor-default" aria-label={ui.billingClose} onClick={onClose} />
       <div
         role="dialog"
         aria-modal="true"
         aria-labelledby="map-topic-title"
-        className="relative z-10 max-h-[88vh] w-full max-w-md overflow-y-auto rounded-2xl border border-white/10 bg-[#0e0e0e] p-4"
+        className="relative z-10 max-h-full w-full max-w-md overflow-y-auto overscroll-contain rounded-2xl border border-white/10 bg-[#0e0e0e] p-4"
       >
         <div className="flex items-start gap-2">
           <div className="min-w-0 flex-1">
@@ -754,6 +756,7 @@ function TopicSheet({
         ) : null}
       </div>
     </div>
+    </BodyLayer>
   );
 }
 
@@ -792,7 +795,7 @@ function ActivityCard({
       <p className="text-[11px] font-semibold text-slate-500">{tabLabel[activity.tab]}</p>
       <p className="mt-1 text-[13px] leading-relaxed text-slate-200">{activity.task}</p>
       {activity.tab === "chat" && activity.starter ? (
-        <p className="mt-1.5 rounded-lg bg-black/30 px-2.5 py-1.5 text-[13px] text-slate-100">
+        <p dir="auto" className="mt-1.5 rounded-lg bg-black/30 px-2.5 py-1.5 text-start text-[13px] text-slate-100">
           {activity.starter}
         </p>
       ) : null}
