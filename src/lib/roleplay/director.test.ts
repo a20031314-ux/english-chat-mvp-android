@@ -1102,3 +1102,63 @@ test("a note with none of the target language in it is a translation, not a tip"
   assert.equal(givesThemWords("Puedes decir «y además»", { targetLanguage: "es", nativeLanguage: "fr" }), true);
   assert.equal(givesThemWords("", enKo), false);
 });
+
+test("a broken sentence comes back rebuilt as what they meant, never alongside a rewrite", () => {
+  const direction = parse(
+    {
+      assessment: "on_track",
+      say: { text: "Oh nice, which cafe?", translation: "" },
+      better: "I am going to a cafe yesterday.",
+      meant: "I went to a cafe yesterday.",
+      note: "과거형을 써요.",
+      next: "step:here-answer",
+    },
+    { heard: "I am go cafe yesterday" },
+  );
+  assert.equal(direction?.meant, "I went to a cafe yesterday.");
+  assert.equal(direction?.better, undefined);
+  assert.equal(direction?.note, "");
+});
+
+test("what they meant has to be in the language they are learning", () => {
+  // Half in Korean is exactly when it is needed; a "meant" that is all Korean is a translation of the idea.
+  const mixed = parse(
+    {
+      assessment: "on_track",
+      say: { text: "Sure, for how many?", translation: "" },
+      meant: "I'd like to book a table.",
+      next: "free",
+    },
+    { heard: "I want 예약 a table" },
+  );
+  assert.equal(mixed?.meant, "I'd like to book a table.");
+  const korean = parse(
+    {
+      assessment: "on_track",
+      say: { text: "Sure, for how many?", translation: "" },
+      meant: "테이블을 예약하고 싶어요.",
+      next: "free",
+    },
+    { heard: "I want 예약 a table" },
+  );
+  assert.equal(korean?.meant, undefined);
+  // Word for word what they said is not a rebuild.
+  const same = parse(
+    { assessment: "on_track", say: { text: "Great.", translation: "" }, meant: "i went there.", next: "free" },
+    { heard: "I went there" },
+  );
+  assert.equal(same?.meant, undefined);
+});
+
+test("a build that does not know 'meant' gets it as the rewrite", async () => {
+  const { meantForOldClients } = await import("./director.ts");
+  const old = meantForOldClients({
+    assessment: "on_track",
+    say: { text: "Oh nice." },
+    note: "",
+    meant: "I went to a cafe yesterday.",
+    next: { free: true },
+  });
+  assert.equal(old.better, "I went to a cafe yesterday.");
+  assert.equal("meant" in old, false);
+});

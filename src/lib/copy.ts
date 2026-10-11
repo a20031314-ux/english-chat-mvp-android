@@ -218,6 +218,10 @@ const generatedMapOverlay = {
   mapScenesFailed: "Couldn’t search for scenes. Please try again shortly.",
 } as const;
 
+const generatedMeantOverlay = {
+  roleplayMeant: "Is this what you meant?",
+} as const;
+
 const generatedItemOverlay = {
   itemsMastered: "Mastered",
   itemsLearned: "Learned",
@@ -313,6 +317,7 @@ export const copy = {
     roleplayStart: "대화 시작",
     roleplayWhyStuck: "왜 막혔는지 보기",
     roleplayBetter: "이렇게 말할 수 있어요",
+    roleplayMeant: "이렇게 말하려던 거죠?",
     roleplayReviewTitle: "막혔던 지점",
     roleplayReviewSay: "이렇게 말할 수 있었어요",
     roleplayPracticeCta: "따라 말해보기",
@@ -1186,6 +1191,7 @@ export const copy = {
     roleplayStart: "Start talking",
     roleplayWhyStuck: "See what stopped you",
     roleplayBetter: "You could say",
+    roleplayMeant: "Is this what you meant?",
     roleplayReviewTitle: "Where you got stuck",
     roleplayReviewSay: "You could have said",
     roleplayPracticeCta: "Say it back",
@@ -2056,6 +2062,7 @@ export const copy = {
     roleplayStart: "Empezar a hablar",
     roleplayWhyStuck: "Ver qué te frenó",
     roleplayBetter: "Podrías decir",
+    roleplayMeant: "¿Querías decir esto?",
     roleplayReviewTitle: "Dónde te atascaste",
     roleplayReviewSay: "Podrías haber dicho",
     roleplayPracticeCta: "Repítelo",
@@ -2907,17 +2914,17 @@ export const copy = {
       "No se pudo cargar el producto. Revisa Play Console y RevenueCat.",
     paywallCancelled: "Compra cancelada",
   },
-  ja: { ...generatedLocales.ja, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.ja>>>).ja },
-  zh: { ...generatedLocales.zh, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.zh>>>).zh },
-  vi: { ...generatedLocales.vi, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.vi>>>).vi },
-  fr: { ...generatedLocales.fr, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.fr>>>).fr },
-  it: { ...generatedLocales.it, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.it>>>).it },
-  pt: { ...generatedLocales.pt, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.pt>>>).pt },
-  ru: { ...generatedLocales.ru, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.ru>>>).ru },
-  id: { ...generatedLocales.id, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.id>>>).id },
-  ar: { ...generatedLocales.ar, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.ar>>>).ar },
-  th: { ...generatedLocales.th, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.th>>>).th },
-  hi: { ...generatedLocales.hi, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.hi>>>).hi },
+  ja: { ...generatedLocales.ja, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...generatedMeantOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.ja>>>).ja },
+  zh: { ...generatedLocales.zh, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...generatedMeantOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.zh>>>).zh },
+  vi: { ...generatedLocales.vi, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...generatedMeantOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.vi>>>).vi },
+  fr: { ...generatedLocales.fr, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...generatedMeantOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.fr>>>).fr },
+  it: { ...generatedLocales.it, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...generatedMeantOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.it>>>).it },
+  pt: { ...generatedLocales.pt, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...generatedMeantOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.pt>>>).pt },
+  ru: { ...generatedLocales.ru, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...generatedMeantOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.ru>>>).ru },
+  id: { ...generatedLocales.id, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...generatedMeantOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.id>>>).id },
+  ar: { ...generatedLocales.ar, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...generatedMeantOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.ar>>>).ar },
+  th: { ...generatedLocales.th, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...generatedMeantOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.th>>>).th },
+  hi: { ...generatedLocales.hi, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...generatedMeantOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.hi>>>).hi },
 } as const;
 
 export type Locale = keyof typeof copy;

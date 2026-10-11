@@ -151,6 +151,13 @@ export type Direction = {
    * under their own bubble. Empty unless there is something real to fix.
    */
   better?: string;
+  /**
+   * What they were trying to say, rebuilt — when their sentence was too broken,
+   * half in their own language, or used a word that says something else, so
+   * the meaning had to be worked out from the conversation. Shown under their
+   * bubble as "is this what you meant?". Never alongside `better`.
+   */
+  meant?: string;
   next: DirectionNext;
   /**
    * A recorded line to say straight after, when the conversation had to be
@@ -178,6 +185,20 @@ export type Direction = {
  * release that sends this, at which point `flattenForOldClients` goes with it.
  */
 export const ROLEPLAY_BANK_CLIENT_HEADER = "x-roleplay-bank";
+
+/**
+ * Sent by builds that show `meant` under the learner's line (2.65 on). Older
+ * builds only know `better`, so they are given the rebuilt sentence there
+ * rather than nothing (api/roleplay/turn).
+ */
+export const ROLEPLAY_MEANT_CLIENT_HEADER = "x-roleplay-meant";
+
+/** A direction for a build that does not know `meant`: the rebuilt sentence rides in `better`. */
+export function meantForOldClients(direction: Direction): Direction {
+  if (!direction.meant) return direction;
+  const { meant, ...rest } = direction;
+  return { ...rest, better: meant };
+}
 
 /**
  * Says the build reads the answer as it is written rather than all at once.
@@ -218,6 +239,18 @@ export const ROLEPLAY_STREAM_CLIENT_HEADER = "x-roleplay-stream";
  * Only checkable where the two languages are written differently; between two
  * Latin-script languages a note is kept as it is.
  */
+/** Whether a sentence is written in the language being learned, where that can be told. */
+export function inTargetLanguage(
+  text: string,
+  request: Pick<DirectorRequest, "targetLanguage" | "nativeLanguage">,
+): boolean {
+  if (learningLanguageScript(request.targetLanguage) === learningLanguageScript(request.nativeLanguage)) {
+    return true;
+  }
+  const evidence = languageEvidence(text, request.targetLanguage, request.nativeLanguage);
+  return evidence.learning > evidence.ui;
+}
+
 export function givesThemWords(
   note: string,
   request: Pick<DirectorRequest, "targetLanguage" | "nativeLanguage">,
@@ -503,9 +536,11 @@ How to answer them:
 - If they asked or said something else, answer it briefly, like a person would.
 - One or two short sentences. Teaching never goes in what you say out loud; it is written, not spoken, and there are two places for it that do not overlap. "note" is for a moment they could not get through: the words they needed, so they can go on. "better" is their sentence, put right. Use whichever fits; both are read, and both are shown under the words they are about — never said aloud.
 - "better" is their own last sentence written the way someone who grew up with ${target} would say it. It is shown under their words, not said aloud, and you never refer to it.
+- "meant" is for a sentence too broken to just put right: words in the wrong order or missing, a word from ${native} in the middle, a word that says something else ("I am go cafe yesterday", "I want 예약 a table"). Work out what they were trying to say from what they said and what you had just asked, and write that as a ${target} speaker would say it. Fill "better" or "meant", never both.
+- If you cannot tell what they meant, do not guess in "meant". Check with them in what you say, the way a person would — say back what you think they meant, as a question ("Oh, you went to a cafe yesterday?") — and leave "meant" empty.
 
 Reply as JSON only:
-{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence, in ${target}, or empty>", "assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
+{"open": "<a ready line's id, or empty>", "follow": "<a ready line's id, or empty>", "say": "<your line, in ${target}, or empty when open and follow already say it>", "note": "<in ${native}, or empty>", "better": "<their sentence, in ${target}, or empty>", "meant": "<what they were trying to say, in ${target}, or empty>", "assessment": "on_track" | "stuck" | "off_script" | "topic_change" | "closing", "next": ${scenario.openEnded ? `"free" | "end"` : `"step:<id>" | "free" | "end"`}}
 
 "better" is their last sentence, written as a ${target} speaker would have said it. Fill it whenever one would notice something — a verb in the wrong form, a word that is not the one for this, an order that reads wrong, a doubled subject, a missing word that changes the meaning. Keep their sentence and their meaning; do not write a different one.
 
@@ -699,6 +734,7 @@ export function parseDirection(
     translation?: unknown;
     note?: unknown;
     better?: unknown;
+    meant?: unknown;
     next?: unknown;
   };
 
@@ -961,10 +997,25 @@ export function parseDirection(
     typeof record.better === "string" ? record.better.trim().slice(0, 200) : "";
   // Said in both places, which the model does when it cannot decide: the
   // rewrite is the one shown under their own words, so the note goes.
-  const better =
+  const better0 =
     rewritten && request.heard.trim() && !sameWords(rewritten, request.heard)
       ? rewritten
       : "";
+  // What they meant, rebuilt. Held to the same tests as the rewrite, and to
+  // being in the language they are learning: a "meant" in their own language
+  // is a translation of the idea, not a sentence they can say (givesThemWords).
+  const rebuilt =
+    typeof record.meant === "string" ? record.meant.trim().slice(0, 200) : "";
+  const meant =
+    rebuilt &&
+    request.heard.trim() &&
+    !sameWords(rebuilt, request.heard) &&
+    inTargetLanguage(rebuilt, request)
+      ? rebuilt
+      : "";
+  // Both filled, which the prompt rules out: the rebuilt one is the one that
+  // says what they were after, so it wins.
+  const better = meant ? "" : better0;
 
   // The ready question the model asked for, unless the turn already asks it.
   // Naming the same line twice is caught above, but the same question can
@@ -1007,9 +1058,10 @@ export function parseDirection(
   return {
     assessment,
     say,
-    note: better ? "" : note,
+    note: better || meant ? "" : note,
     next,
     ...(better ? { better } : {}),
+    ...(meant ? { meant } : {}),
     ...(chosenFollow ? { follow: chosenFollow } : {}),
   };
 }

@@ -3,6 +3,8 @@ import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { SCENARIOS, sentencesFor } from "@/lib/roleplay/catalog";
 import {
   ROLEPLAY_BANK_CLIENT_HEADER,
+  ROLEPLAY_MEANT_CLIENT_HEADER,
+  meantForOldClients,
   ROLEPLAY_STREAM_CLIENT_HEADER,
   flattenForOldClients,
   leadFromPartial,
@@ -164,7 +166,7 @@ export async function POST(request: NextRequest) {
       spoken: true,
       // No direction, no verdict; a direction without a rewrite is a sentence
       // that needed none.
-      corrected: decided ? (decided.better ?? "") : undefined,
+      corrected: decided ? (decided.meant || decided.better || "") : undefined,
       responseLatencyMs,
       attempts,
       scenarioId: scenario.id,
@@ -179,7 +181,7 @@ export async function POST(request: NextRequest) {
       userId: requestUserId(request),
       language: turn.targetLanguage,
       sentence: turn.heard,
-      corrected: decided ? (decided.better ?? "") : "",
+      corrected: decided ? (decided.meant || decided.better || "") : "",
       where: "call",
     }),
   );
@@ -188,6 +190,8 @@ export async function POST(request: NextRequest) {
   // phone today was released before these lines existed and would queue
   // nothing at all for them (director.ts).
   const canPlayBank = request.headers.get(ROLEPLAY_BANK_CLIENT_HEADER) === "1";
+  const showsMeant = request.headers.get(ROLEPLAY_MEANT_CLIENT_HEADER) === "1";
+  const forThisBuild = (direction: Direction) => (showsMeant ? direction : meantForOldClients(direction));
   // And an answer in pieces only for a build that reads one (director.ts).
   const wantsStream =
     canPlayBank && request.headers.get(ROLEPLAY_STREAM_CLIENT_HEADER) === "1";
@@ -263,7 +267,7 @@ export async function POST(request: NextRequest) {
       noteDirection(direction);
       return jsonWithCors(
         request,
-        canPlayBank ? direction : flattenForOldClients(direction, bank),
+        canPlayBank ? forThisBuild(direction) : flattenForOldClients(forThisBuild(direction), bank),
       );
     }
 
@@ -310,7 +314,7 @@ export async function POST(request: NextRequest) {
             write({ error: "NO_DIRECTION" });
           } else {
             noteDirection(direction);
-            write({ direction });
+            write({ direction: forThisBuild(direction) });
           }
         } catch (error) {
           console.error("[roleplay/turn] mid-answer", error);

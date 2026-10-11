@@ -212,7 +212,8 @@
     "itemMasteredNow": "習得になりました",
     "itemSlipped": "「学習済み」に戻りました。次の復習でもう一度やってみましょう。",
     "topicItemsTitle": "このトピックの表現",
-    "topicItemsHint": "ヒントなしで言えれば習得、助けを借りてできたら学習済みです。チャットや通話で使っても記録されます。"
+    "topicItemsHint": "ヒントなしで言えれば習得、助けを借りてできたら学習済みです。チャットや通話で使っても記録されます。",
+    "roleplayMeant": "こう言いたかったのでは？"
   },
   "zh": {
     "billingClose": "关闭",
@@ -427,7 +428,8 @@
     "itemMasteredNow": "已掌握",
     "itemSlipped": "回到了“学过”。下次复习时再试一次。",
     "topicItemsTitle": "这个主题的表达",
-    "topicItemsHint": "不看提示能写出来就是掌握，借助帮助写出来是学过。在聊天或通话里用到也会记录。"
+    "topicItemsHint": "不看提示能写出来就是掌握，借助帮助写出来是学过。在聊天或通话里用到也会记录。",
+    "roleplayMeant": "你是想这么说吗？"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -644,7 +646,8 @@
     "itemMasteredNow": "Đã thành thạo",
     "itemSlipped": "Quay lại ‘đã học’. Hãy thử lại ở lần ôn tới.",
     "topicItemsTitle": "Cách diễn đạt trong chủ đề này",
-    "topicItemsHint": "Thành thạo là viết được mà không cần gợi ý; đã học là làm được nhờ trợ giúp. Dùng trong chat hay cuộc gọi cũng được tính."
+    "topicItemsHint": "Thành thạo là viết được mà không cần gợi ý; đã học là làm được nhờ trợ giúp. Dùng trong chat hay cuộc gọi cũng được tính.",
+    "roleplayMeant": "Có phải bạn muốn nói thế này?"
   },
   "fr": {
     "billingClose": "Fermer",
@@ -866,7 +869,8 @@
     "itemMasteredNow": "Maîtrisé",
     "itemSlipped": "Retour à « appris ». Réessaie à la prochaine révision.",
     "topicItemsTitle": "Expressions de ce thème",
-    "topicItemsHint": "Maîtrisé : tu le produis sans indice. Appris : tu l’as fait avec de l’aide. L’utiliser dans le chat ou un appel compte aussi."
+    "topicItemsHint": "Maîtrisé : tu le produis sans indice. Appris : tu l’as fait avec de l’aide. L’utiliser dans le chat ou un appel compte aussi.",
+    "roleplayMeant": "Tu voulais dire ça ?"
   },
   "it": {
     "archive": "Report",
@@ -1280,7 +1284,8 @@
     "itemMasteredNow": "Ora padroneggiato",
     "itemSlipped": "Di nuovo ‘imparato’. Riprova al prossimo ripasso.",
     "topicItemsTitle": "Espressioni di questo argomento",
-    "topicItemsHint": "Padroneggiato: lo produci senza suggerimenti. Imparato: l’hai fatto con aiuto. Usarlo in chat o in chiamata conta anche."
+    "topicItemsHint": "Padroneggiato: lo produci senza suggerimenti. Imparato: l’hai fatto con aiuto. Usarlo in chat o in chiamata conta anche.",
+    "roleplayMeant": "Volevi dire questo?"
   },
   "pt": {
     "billingClose": "Fechar",
@@ -1505,7 +1510,8 @@
     "itemMasteredNow": "Agora dominado",
     "itemSlipped": "Voltou para ‘aprendido’. Tente de novo na próxima revisão.",
     "topicItemsTitle": "Expressões deste tema",
-    "topicItemsHint": "Dominado: você produz sem dicas. Aprendido: fez com ajuda. Usar no chat ou numa chamada também conta."
+    "topicItemsHint": "Dominado: você produz sem dicas. Aprendido: fez com ajuda. Usar no chat ou numa chamada também conta.",
+    "roleplayMeant": "Você quis dizer isto?"
   },
   "ru": {
     "archive": "Отчёты",
@@ -1917,7 +1923,8 @@
     "itemMasteredNow": "Освоено",
     "itemSlipped": "Снова «изучено». Попробуйте на следующем повторении.",
     "topicItemsTitle": "Выражения этой темы",
-    "topicItemsHint": "Освоено — можете сказать без подсказок; изучено — сделали с помощью. Использование в чате или звонке тоже засчитывается."
+    "topicItemsHint": "Освоено — можете сказать без подсказок; изучено — сделали с помощью. Использование в чате или звонке тоже засчитывается.",
+    "roleplayMeant": "Вы это хотели сказать?"
   },
   "id": {
     "billingClose": "Tutup",
@@ -2138,7 +2145,8 @@
     "itemMasteredNow": "Sekarang dikuasai",
     "itemSlipped": "Kembali ke ‘dipelajari’. Coba lagi di pengulangan berikutnya.",
     "topicItemsTitle": "Ungkapan di topik ini",
-    "topicItemsHint": "Dikuasai: bisa kamu hasilkan tanpa petunjuk. Dipelajari: berhasil dengan bantuan. Memakainya di chat atau panggilan juga dihitung."
+    "topicItemsHint": "Dikuasai: bisa kamu hasilkan tanpa petunjuk. Dipelajari: berhasil dengan bantuan. Memakainya di chat atau panggilan juga dihitung.",
+    "roleplayMeant": "Maksudmu begini?"
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -2353,7 +2361,8 @@
     "itemMasteredNow": "صار متقَنًا",
     "itemSlipped": "عاد إلى «تعلّمته». جرّبه مرة أخرى في المراجعة القادمة.",
     "topicItemsTitle": "تعابير هذا الموضوع",
-    "topicItemsHint": "متقَن: تستطيع قوله دون تلميحات. تعلّمته: قلته بمساعدة. استخدامه في المحادثة أو المكالمة يُحسب أيضًا."
+    "topicItemsHint": "متقَن: تستطيع قوله دون تلميحات. تعلّمته: قلته بمساعدة. استخدامه في المحادثة أو المكالمة يُحسب أيضًا.",
+    "roleplayMeant": "هل كنت تقصد هذا؟"
   },
   "th": {
     "billingClose": "ปิด",
@@ -2568,7 +2577,8 @@
     "itemMasteredNow": "คล่องแล้ว",
     "itemSlipped": "กลับไปเป็น ‘เรียนแล้ว’ ลองใหม่ในการทบทวนครั้งหน้า",
     "topicItemsTitle": "สำนวนในหัวข้อนี้",
-    "topicItemsHint": "คล่องแล้ว คือพูดได้เองโดยไม่ใช้คำใบ้ เรียนแล้ว คือทำได้โดยมีตัวช่วย ใช้ในแชตหรือการโทรก็ถูกนับด้วย"
+    "topicItemsHint": "คล่องแล้ว คือพูดได้เองโดยไม่ใช้คำใบ้ เรียนแล้ว คือทำได้โดยมีตัวช่วย ใช้ในแชตหรือการโทรก็ถูกนับด้วย",
+    "roleplayMeant": "ตั้งใจจะพูดแบบนี้ใช่ไหม"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -2783,6 +2793,7 @@
     "itemMasteredNow": "अब पक्का",
     "itemSlipped": "फिर से ‘सीखा’ में। अगली बार दोहराते समय फिर कोशिश करें।",
     "topicItemsTitle": "इस विषय की अभिव्यक्तियाँ",
-    "topicItemsHint": "पक्का यानी बिना संकेत कह सकते हैं; सीखा यानी मदद से किया। चैट या कॉल में इस्तेमाल भी गिना जाता है।"
+    "topicItemsHint": "पक्का यानी बिना संकेत कह सकते हैं; सीखा यानी मदद से किया। चैट या कॉल में इस्तेमाल भी गिना जाता है।",
+    "roleplayMeant": "क्या आप यह कहना चाहते थे?"
   }
 }

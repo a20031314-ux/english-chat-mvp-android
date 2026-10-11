@@ -136,7 +136,7 @@ type Spoken = TranscriptLine;
  */
 function markAboutTheirLine(
   lines: Spoken[],
-  about: { better?: string; about?: string },
+  about: { better?: string; meant?: string; about?: string },
 ): Spoken[] {
   const index = lines.map((line) => line.who).lastIndexOf("learner");
   if (index < 0) return lines;
@@ -528,11 +528,13 @@ export function RoleplayScreen({
       // line when they were stuck, where it is help for getting through rather
       // than a word about something they managed to say.
       const better = direction?.better ?? "";
+      const meant = direction?.meant ?? "";
       const about = direction && direction.assessment !== "stuck" ? direction.note : "";
-      if (better || about) {
+      if (better || meant || about) {
         setSaid((current) =>
           markAboutTheirLine(current, {
             ...(better ? { better } : {}),
+            ...(meant ? { meant } : {}),
             ...(about ? { about } : {}),
           }),
         );

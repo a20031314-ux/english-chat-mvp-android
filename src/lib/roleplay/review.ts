@@ -34,6 +34,8 @@ export type TranscriptLine = {
   stuck?: StuckTurn;
   /** Their own sentence, said better. Shown under it, never spoken. */
   better?: string;
+  /** What they were trying to say, rebuilt from a broken sentence. Shown under it, never spoken. */
+  meant?: string;
   /** A word about that sentence, in their own language. Also never spoken. */
   about?: string;
 };
