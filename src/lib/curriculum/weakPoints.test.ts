@@ -52,7 +52,7 @@ test("a pattern placed on this map is not placed again; a new map takes it again
 
 test("the reader's answer: keys kept to their shape, names that quote the learner dropped, spaceless and Latin scripts alike", () => {
   const ja = readPatterns(
-    JSON.stringify({ mistakes: [{ key: "particle-wo-for-object", name: "Particle を for the object" }, { key: "Bad Key!", name: "x" }] }),
+    JSON.stringify({ mistakes: [{ key: "particle-wo-for-object", name: "Particle を for the object" }, { key: "Bad Key!", name: "" }] }),
     "コーヒーが飲みました",
   );
   assert.deepEqual(ja, [{ key: "particle-wo-for-object", name: "Particle を for the object" }]);
@@ -62,6 +62,15 @@ test("the reader's answer: keys kept to their shape, names that quote the learne
   );
   assert.deepEqual(es, [{ key: "ser-vs-estar", name: "ser vs estar" }]);
   assert.deepEqual(readPatterns("not json", "x"), []);
+  // The language's own letters in a key are dropped, not the whole mistake.
+  assert.deepEqual(
+    readPatterns(JSON.stringify({ mistakes: [{ key: "particle-を-for-object", name: "Particle を for the object" }] }), "水が飲みました"),
+    [{ key: "particle-for-object", name: "Particle を for the object" }],
+  );
+  assert.deepEqual(
+    readPatterns(JSON.stringify({ mistakes: [{ key: "ลักษณนาม", name: "Classifiers for counting" }] }), "ฉันมีแมวสองแมว"),
+    [{ key: "classifiers-for-counting", name: "Classifiers for counting" }],
+  );
   assert.match(patternPrompt({ target: "Thai", known: [{ key: "classifier", name: "Classifiers" }] }), /classifier — Classifiers/);
 });
 

@@ -53,6 +53,18 @@ export function parseWeakRecord(raw: unknown): WeakRecord {
 
 const KEY = /^[a-z0-9]+(?:-[a-z0-9]+){0,6}$/;
 
+function toKey(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .split("-")
+    .slice(0, 7)
+    .join("-")
+    .slice(0, 48)
+    .replace(/-+$/, "");
+}
+
 function clean(value: unknown, max: number): string {
   return typeof value === "string" ? value.replace(/\s+/g, " ").trim().slice(0, max) : "";
 }
@@ -94,8 +106,10 @@ export function readPatterns(raw: string, sentence: string): Array<{ key: string
   const out: Array<{ key: string; name: string }> = [];
   for (const item of list) {
     const row = (item ?? {}) as Record<string, unknown>;
-    const key = clean(row.key, 48).toLowerCase();
     const name = clean(row.name, 60);
+    // Keys come back with the language's own letters in them ("particle-を");
+    // kept to ASCII, from the name when nothing is left.
+    const key = toKey(clean(row.key, 80)) || toKey(name);
     if (!KEY.test(key) || !name || out.some((o) => o.key === key)) continue;
     // A name that carries a run of what they said is their words, not a kind.
     if (name.length >= 12 && said.includes(name.toLowerCase())) continue;
@@ -162,8 +176,8 @@ A mission is one thing to say in a situation, given as a task the way a teacher 
 - "topicId": the id of the map topic it fits best. Prefer one that is not done.
 - "focus": what they keep getting wrong, in ${input.uiName}, a few words a learner understands ("past tense of irregular verbs").
 - "task": what to do, in ${input.uiName}. Do not quote or translate the answer.
-- "hints": exactly two. The first, in ${input.uiName}: what to watch for, without the words. The second, in ${input.target}: the first two to four words of a good answer, ending with "…".
-- "answer": one natural way to do it, in ${input.target}, using the form correctly.
+- "hints": exactly two. The first, in ${input.uiName}: what to watch for, without the words. The second, in ${input.target}: the first words of "answer" up to just before the part that has the form — never the form itself — ending with "…".
+- "answer": one natural way to do it, in ${input.target}, using the form correctly, that does exactly what the task says.
 - "expression": the part of the answer that has the form, in ${input.target}, two to six words, exactly as it appears in "answer".
 
 Return only json: {"topicId":"...","focus":"...","task":"...","hints":["...","..."],"answer":"...","expression":"..."}`;
