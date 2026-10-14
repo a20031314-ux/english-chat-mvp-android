@@ -7,6 +7,8 @@ import { isIdentified } from "@/lib/server/identity";
 import { getDailyUsed, incrementDailyUsed } from "@/lib/server/entitlementStore";
 import { readCurriculum, readMissions, recordMissionCheck } from "@/lib/server/curriculumStore";
 import { observeChatLines, observeChatTurn } from "@/lib/server/learnerProfileStore";
+import { updateLedger } from "@/lib/server/ledgerStore";
+import { applyMissionResult } from "@/lib/learner/ledger";
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
 import { checkSystemPrompt, normalizeCheck } from "@/lib/curriculum/missions";
 import { targetLanguageFocusHints } from "@/lib/languageFocus";
@@ -134,6 +136,27 @@ export async function POST(request: NextRequest) {
       tries,
       where,
     });
+
+    // The task's phrase in the expression ledger, by the map's own verdict:
+    // mastered now is unaided, mastered before and not now is a slip, done
+    // any other way is help (learner/ledger.ts).
+    const expression = mission.expression;
+    if (saved && expression && check.verdict !== "miss") {
+      const was = missions?.results[missionId]?.mastered === true;
+      const now = saved.topic.results[missionId]?.mastered === true;
+      const outcome = now ? "unaided" : was ? "slip" : "helped";
+      after(() =>
+        updateLedger(userId, language, (ledger) =>
+          applyMissionResult(ledger, expression, outcome, where, { mapId, topicId, missionId }),
+        ),
+      );
+    } else if (saved && expression && missions?.results[missionId]?.mastered) {
+      after(() =>
+        updateLedger(userId, language, (ledger) =>
+          applyMissionResult(ledger, expression, "slip", where, { mapId, topicId, missionId }),
+        ),
+      );
+    }
 
     // The answer is a line they produced, read for what it shows about their
     // sentences, the same as a chat line (learner/profile.ts, comprehension.ts).

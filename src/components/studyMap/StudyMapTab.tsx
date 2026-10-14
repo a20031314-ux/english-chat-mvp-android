@@ -32,6 +32,7 @@ import { BodyLayer } from "@/components/FullScreenLayer";
 import { MissionScreen } from "@/components/studyMap/MissionScreen";
 import { TopicItems, ItemBar } from "@/components/studyMap/TopicItems";
 import { LearnerPanel } from "@/components/studyMap/LearnerPanel";
+import { LedgerPanel } from "@/components/studyMap/LedgerPanel";
 
 /**
  * 학습 지도: a learner's goal drawn as topics in four sectors, in an order,
@@ -191,6 +192,7 @@ export function StudyMapTab({
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         {!loading ? (
           <div className="mx-auto mb-4 max-w-2xl">
+            <LedgerPanel ui={ui} targetLanguage={targetLanguage} isPremium={isPremium} />
             <LearnerPanel
               ui={ui}
               locale={locale}

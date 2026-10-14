@@ -5,6 +5,8 @@ import { isIdentified } from "@/lib/server/identity";
 import { recordComprehensionEvents } from "@/lib/server/learnerProfileStore";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import type { ComprehensionEvent } from "@/lib/learner/comprehension";
+import { isLedgerTab, type LedgerTab } from "@/lib/learner/ledger";
+import { recordMeets, type MeetEvent } from "@/lib/server/ledgerStore";
 
 export const dynamic = "force-dynamic";
 
@@ -43,6 +45,22 @@ export async function POST(request: NextRequest) {
       return text.trim() ? [{ kind: kind as "lookup" | "analyze" | "save", text }] : [];
     });
   if (events.length === 0) return jsonWithCors(request, { ok: true, recorded: 0 });
-  const record = await recordComprehensionEvents(userId, coerceLanguageCode(body.language), events);
+  const language = coerceLanguageCode(body.language);
+  // The same taps go into the expression ledger, with the tab they came from
+  // (builds from 2.66 send it; older ones count as chat, where these began).
+  const meets: MeetEvent[] = (Array.isArray(body.events) ? body.events : [])
+    .slice(0, MAX_EVENTS)
+    .flatMap((raw): MeetEvent[] => {
+      const row = (raw ?? {}) as Record<string, unknown>;
+      const kind = row.kind;
+      if (kind !== "lookup" && kind !== "analyze" && kind !== "save") return [];
+      const text = typeof row.text === "string" ? row.text.slice(0, 120) : "";
+      const tab: LedgerTab = isLedgerTab(row.tab) ? row.tab : "chat";
+      return text.trim() ? [{ kind, text, tab }] : [];
+    });
+  const [record] = await Promise.all([
+    recordComprehensionEvents(userId, language, events),
+    meets.length ? recordMeets(userId, language, meets) : Promise.resolve(),
+  ]);
   return jsonWithCors(request, { ok: Boolean(record), recorded: events.length });
 }

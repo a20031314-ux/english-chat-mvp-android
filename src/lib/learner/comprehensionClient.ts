@@ -1,6 +1,7 @@
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { ComprehensionEvent } from "@/lib/learner/comprehension";
+import type { LedgerTab } from "@/lib/learner/ledger";
 
 /**
  * Tell the server what the learner just did with a line they read — looked a
@@ -9,7 +10,24 @@ import type { ComprehensionEvent } from "@/lib/learner/comprehension";
  * request; failures are dropped, since a missed tap costs one data point.
  */
 
-const pending = new Map<string, ComprehensionEvent[]>();
+type Sent = ComprehensionEvent & { tab?: LedgerTab };
+
+const pending = new Map<string, Sent[]>();
+
+/**
+ * Which tab the learner is on, for the ledger's "where was it met" — read from
+ * the address the app keeps in step with the tab bar (AppHome.syncUrl).
+ */
+export function currentLedgerTab(): LedgerTab {
+  try {
+    const screen = new URLSearchParams(window.location.search).get("screen");
+    if (screen === "roleplay") return "call";
+    if (screen === "video" || screen === "vocab" || screen === "map") return screen;
+  } catch {
+    // fall through
+  }
+  return "chat";
+}
 let timer: ReturnType<typeof setTimeout> | null = null;
 
 function flush() {
@@ -29,7 +47,7 @@ export function noteComprehension(language: string, event: ComprehensionEvent) {
   if (typeof window === "undefined") return;
   if (event.kind !== "translate" && !event.text.trim()) return;
   const list = pending.get(language) ?? [];
-  list.push(event);
+  list.push({ ...event, tab: currentLedgerTab() });
   pending.set(language, list.slice(-20));
   if (!timer) timer = setTimeout(flush, 1500);
 }

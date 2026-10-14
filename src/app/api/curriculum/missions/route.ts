@@ -1,4 +1,7 @@
-import { NextRequest } from "next/server";
+import { NextRequest, after } from "next/server";
+import { updateLedger } from "@/lib/server/ledgerStore";
+import { applyMeet } from "@/lib/learner/ledger";
+import type { Mission } from "@/lib/curriculum/missions";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -127,10 +130,26 @@ export async function POST(request: NextRequest) {
     const latest = (await readMissions(userId, language, mapId))[topicId];
     const fresh = withTopicMissions(latest, missions);
     await saveTopicMissions(userId, language, mapId, topicId, fresh);
+    // Each task's phrase is met — handed to them on the map (learner/ledger.ts).
+    after(() =>
+      recordMeetsForTasks(userId, language, mapId, topicId, missions),
+    );
     return jsonWithCors(request, fresh);
   } catch (error) {
     console.error("[missions]", error);
     if (stored) return jsonWithCors(request, stored);
     return jsonWithCors(request, { error: "MISSIONS_FAILED" }, { status: 502 });
   }
+}
+
+function recordMeetsForTasks(userId: string, language: string, mapId: string, topicId: string, missions: Mission[]) {
+  return updateLedger(userId, language, (ledger) =>
+    missions.reduce(
+      (l, m) =>
+        m.expression
+          ? applyMeet(l, m.expression, "task", { tab: "map" }, Date.now(), { mapId, topicId, missionId: m.id })
+          : l,
+      ledger,
+    ),
+  );
 }

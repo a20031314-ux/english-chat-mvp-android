@@ -4,6 +4,8 @@ import { isIdentified } from "./identity.ts";
 import { CURRICULUM_TTL_SECONDS, readCurriculum, readMissions, saveTopicMissions } from "./curriculumStore.ts";
 import type { MeteredOp } from "./modelCalls.ts";
 import { applyUse } from "../curriculum/missions.ts";
+import { updateLedger } from "./ledgerStore.ts";
+import { applyMeet } from "../learner/ledger.ts";
 import {
   MAX_OPEN_WEAK,
   addWeakMission,
@@ -158,6 +160,15 @@ export async function observeWeakPoints(input: {
         const fresh = (await readMissions(input.userId, input.language, mapId))[placed.topicId];
         const { topic, missionId } = addWeakMission(fresh, placed.mission);
         await saveTopicMissions(input.userId, input.language, mapId, placed.topicId, topic);
+        if (placed.mission.expression) {
+          await updateLedger(input.userId, input.language, (ledger) =>
+            applyMeet(ledger, placed.mission.expression!, "task", { tab: "map" }, now, {
+              mapId,
+              topicId: placed.topicId,
+              missionId,
+            }),
+          );
+        }
         weak = {
           ...weak,
           patterns: {

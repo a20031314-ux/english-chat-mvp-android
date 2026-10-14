@@ -3,6 +3,7 @@ import { NextRequest, after } from "next/server";
 import { observeChatLines, observeChatTurn } from "@/lib/server/learnerProfileStore";
 import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
+import { recordTurn } from "@/lib/server/ledgerStore";
 import { writtenInLearningLanguage } from "@/lib/inputLanguage";
 import type OpenAI from "openai";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
@@ -895,6 +896,19 @@ export async function POST(request: NextRequest) {
       writtenInLearningLanguage(message, langs.targetLanguage, langs.interfaceLanguage);
     // And both lines are held against what they have looked up before: the
     // reply as an appearance, their sentence as use (learner/comprehension.ts).
+    // And into the expression ledger: their sentence as output, the reply as
+    // something heard (learner/ledger.ts).
+    after(() =>
+      recordTurn({
+        userId,
+        language: langs.targetLanguage,
+        where: "chat",
+        tutorLine: data.assistantMessage ?? "",
+        ...(practised
+          ? { learner: { sentence: message, corrected: data.correction?.corrected ?? "" } }
+          : {}),
+      }),
+    );
     after(() =>
       observeChatLines({
         userId,

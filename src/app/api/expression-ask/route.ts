@@ -1,5 +1,7 @@
 import { NextRequest, after } from "next/server";
 import { recordComprehensionEvents } from "@/lib/server/learnerProfileStore";
+import { recordMeets } from "@/lib/server/ledgerStore";
+import { isLedgerTab } from "@/lib/learner/ledger";
 import { ASK_ABOUTS, type AskAbout } from "@/lib/learner/comprehension";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
@@ -190,6 +192,11 @@ export async function POST(request: NextRequest) {
     // was about, not the question itself.
     after(() =>
       recordComprehensionEvents(userId, targetCode, [{ kind: "ask", text: selected, about }]),
+    );
+    after(() =>
+      recordMeets(userId, targetCode, [
+        { kind: "ask", text: selected, tab: isLedgerTab(body.tab) ? body.tab : "chat" },
+      ]),
     );
     return jsonWithCors(request, { answer, about });
   } catch (error) {

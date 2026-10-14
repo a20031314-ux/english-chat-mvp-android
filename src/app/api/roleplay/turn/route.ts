@@ -31,6 +31,7 @@ import { requestUserId, resolveRequestEntitlement } from "@/lib/server/premiumRe
 import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
 import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
+import { recordTurn } from "@/lib/server/ledgerStore";
 import { contentHash } from "@/lib/roleplay/script";
 import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -187,6 +188,12 @@ export async function POST(request: NextRequest) {
       sentence: turn.heard,
       corrected,
       where: "call",
+    });
+    await recordTurn({
+      userId: requestUserId(request),
+      language: turn.targetLanguage,
+      where: "call",
+      learner: { sentence: turn.heard, corrected },
     });
     await observeWeakPoints({
       openai: getOpenAIClient(),
