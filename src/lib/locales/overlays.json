@@ -225,7 +225,8 @@
     "whatsNewWeakBody": "チャットや通話で同じ種類の間違いを2回すると、それを練習するタスクがマップに加わり、おすすめの順番の先頭に来ます。",
     "whatsNewMeantTitle": "通話で、言いたかったことを見つけます",
     "whatsNewMeantBody": "大きく崩れた文でも、会話の流れから言いたかったことを推測して「こう言いたかったのでは？」で見せ、聞かせてくれます。途中で少し止まっても、続きを話すまで待ちます。",
-    "roleplaySayAgain": "もう一度言ってみる"
+    "roleplaySayAgain": "もう一度言ってみる",
+    "roleplayTip": "ヒント"
   },
   "zh": {
     "billingClose": "关闭",
@@ -453,7 +454,8 @@
     "whatsNewWeakBody": "在聊天或通话中同一类错误犯两次，地图上就会出现练习它的任务，并排到推荐顺序的最前面。",
     "whatsNewMeantTitle": "通话会找出你想说的话",
     "whatsNewMeantBody": "句子错得很厉害时，也会根据对话推测你想说什么，用「你是想这么说吗？」显示并可以收听。说到一半停一下，也会等你说完。",
-    "roleplaySayAgain": "再说一遍"
+    "roleplaySayAgain": "再说一遍",
+    "roleplayTip": "提示"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -683,7 +685,8 @@
     "whatsNewWeakBody": "Mắc cùng một loại lỗi hai lần trong chat hoặc cuộc gọi, bản đồ sẽ có một nhiệm vụ để luyện nó, đứng đầu thứ tự gợi ý.",
     "whatsNewMeantTitle": "Cuộc gọi đoán ra điều bạn muốn nói",
     "whatsNewMeantBody": "Câu sai nhiều đến đâu, cuộc gọi cũng đoán theo mạch hội thoại điều bạn muốn nói và hiện ở “Có phải bạn muốn nói thế này?”, nghe được. Dừng giữa câu thì nó chờ bạn nói tiếp.",
-    "roleplaySayAgain": "Nói lại câu này"
+    "roleplaySayAgain": "Nói lại câu này",
+    "roleplayTip": "Gợi ý"
   },
   "fr": {
     "billingClose": "Fermer",
@@ -918,7 +921,8 @@
     "whatsNewWeakBody": "Fais deux fois le même type d’erreur dans le chat ou un appel, et une mission pour le travailler apparaît sur ta carte, en tête de l’ordre suggéré.",
     "whatsNewMeantTitle": "Les appels comprennent ce que tu voulais dire",
     "whatsNewMeantBody": "Même quand une phrase sort très cassée, l’appel devine d’après la conversation ce que tu voulais dire et l’affiche sous « Tu voulais dire ça ? », à écouter. Si tu t’arrêtes en pleine phrase, il attend la suite.",
-    "roleplaySayAgain": "Le redire"
+    "roleplaySayAgain": "Le redire",
+    "roleplayTip": "Astuce"
   },
   "it": {
     "archive": "Report",
@@ -1345,7 +1349,8 @@
     "whatsNewWeakBody": "Se fai due volte lo stesso tipo di errore in chat o in chiamata, sulla mappa compare un compito per esercitarlo, primo nell’ordine consigliato.",
     "whatsNewMeantTitle": "Le chiamate capiscono cosa volevi dire",
     "whatsNewMeantBody": "Anche quando una frase esce molto sbagliata, la chiamata intuisce dal discorso cosa volevi dire e lo mostra in «Volevi dire questo?», da ascoltare. Se ti fermi a metà frase, aspetta che continui.",
-    "roleplaySayAgain": "Ridillo"
+    "roleplaySayAgain": "Ridillo",
+    "roleplayTip": "Suggerimento"
   },
   "pt": {
     "billingClose": "Fechar",
@@ -1583,7 +1588,8 @@
     "whatsNewWeakBody": "Cometa o mesmo tipo de erro duas vezes no chat ou numa chamada e aparece no mapa uma tarefa para praticá-lo, no topo da ordem sugerida.",
     "whatsNewMeantTitle": "As chamadas entendem o que você quis dizer",
     "whatsNewMeantBody": "Mesmo quando a frase sai muito errada, a chamada deduz pela conversa o que você quis dizer e mostra em “Você quis dizer isto?”, para ouvir. Se você parar no meio da frase, ela espera o resto.",
-    "roleplaySayAgain": "Dizer de novo"
+    "roleplaySayAgain": "Dizer de novo",
+    "roleplayTip": "Dica"
   },
   "ru": {
     "archive": "Отчёты",
@@ -2008,7 +2014,8 @@
     "whatsNewWeakBody": "Ошибитесь одинаково дважды в чате или звонке — на карте появится задание, чтобы это отработать, первым в рекомендуемом порядке.",
     "whatsNewMeantTitle": "Звонок понимает, что вы хотели сказать",
     "whatsNewMeantBody": "Даже если фраза вышла совсем неправильной, по ходу разговора звонок поймёт, что вы имели в виду, и покажет это под «Вы это хотели сказать?» — можно послушать. Если вы замолчали посреди фразы, он подождёт продолжения.",
-    "roleplaySayAgain": "Сказать ещё раз"
+    "roleplaySayAgain": "Сказать ещё раз",
+    "roleplayTip": "Подсказка"
   },
   "id": {
     "billingClose": "Tutup",
@@ -2242,7 +2249,8 @@
     "whatsNewWeakBody": "Kalau kamu membuat jenis kesalahan yang sama dua kali di chat atau panggilan, muncul tugas untuk melatihnya di peta, paling depan dalam urutan saran.",
     "whatsNewMeantTitle": "Panggilan menebak maksudmu",
     "whatsNewMeantBody": "Walau kalimatnya sangat berantakan, panggilan menebak maksudmu dari alur obrolan dan menampilkannya di “Maksudmu begini?”, bisa didengarkan. Kalau kamu berhenti di tengah kalimat, ia menunggu lanjutannya.",
-    "roleplaySayAgain": "Ucapkan lagi"
+    "roleplaySayAgain": "Ucapkan lagi",
+    "roleplayTip": "Tips"
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -2470,7 +2478,8 @@
     "whatsNewWeakBody": "إذا ارتكبت النوع نفسه من الخطأ مرتين في الدردشة أو المكالمة، تظهر في خريطتك مهمة للتدرّب عليه، في أول الترتيب المقترح.",
     "whatsNewMeantTitle": "المكالمة تفهم ما كنت تقصده",
     "whatsNewMeantBody": "حتى إن خرجت الجملة مكسّرة كثيرًا، تستنتج المكالمة من سياق الحديث ما كنت تقصده وتعرضه تحت «هل كنت تقصد هذا؟» مع إمكانية الاستماع. وإن توقفت في منتصف الجملة، تنتظر حتى تُكملها.",
-    "roleplaySayAgain": "قلها مرة أخرى"
+    "roleplaySayAgain": "قلها مرة أخرى",
+    "roleplayTip": "تلميح"
   },
   "th": {
     "billingClose": "ปิด",
@@ -2698,7 +2707,8 @@
     "whatsNewWeakBody": "ถ้าผิดแบบเดียวกันสองครั้งในแชตหรือการโทร จะมีภารกิจสำหรับฝึกจุดนั้นเพิ่มในแผนที่ และขึ้นไปอยู่ลำดับแรกของลำดับที่แนะนำ",
     "whatsNewMeantTitle": "การโทรเดาสิ่งที่คุณตั้งใจจะพูด",
     "whatsNewMeantBody": "แม้ประโยคจะผิดมาก การโทรก็เดาจากบทสนทนาว่าคุณตั้งใจจะพูดอะไร แล้วแสดงใน “ตั้งใจจะพูดแบบนี้ใช่ไหม” พร้อมให้ฟัง ถ้าหยุดกลางประโยค ก็จะรอจนคุณพูดต่อ",
-    "roleplaySayAgain": "ลองพูดอีกครั้ง"
+    "roleplaySayAgain": "ลองพูดอีกครั้ง",
+    "roleplayTip": "คำแนะนำ"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -2926,6 +2936,7 @@
     "whatsNewWeakBody": "चैट या कॉल में एक ही तरह की गलती दो बार हो, तो उसका अभ्यास कराने वाला टास्क नक्शे में जुड़ जाता है और सुझाए गए क्रम में सबसे आगे आता है।",
     "whatsNewMeantTitle": "कॉल समझ लेती है आप क्या कहना चाहते थे",
     "whatsNewMeantBody": "वाक्य बहुत बिगड़ जाए तब भी कॉल बातचीत के संदर्भ से अंदाज़ा लगाकर “क्या आप यह कहना चाहते थे?” में दिखाती और सुनाती है। वाक्य के बीच रुकें, तो वह आपके आगे बोलने का इंतज़ार करती है।",
-    "roleplaySayAgain": "फिर से बोलें"
+    "roleplaySayAgain": "फिर से बोलें",
+    "roleplayTip": "सुझाव"
   }
 }

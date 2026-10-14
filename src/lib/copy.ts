@@ -220,6 +220,7 @@ const generatedMapOverlay = {
 
 const generatedMeantOverlay = {
   roleplayMeant: "Is this what you meant?",
+  roleplayTip: "Tip",
   roleplaySayAgain: "Say it again",
 } as const;
 
@@ -330,6 +331,7 @@ export const copy = {
     roleplayWhyStuck: "왜 막혔는지 보기",
     roleplayBetter: "이렇게 말할 수 있어요",
     roleplayMeant: "이렇게 말하려던 거죠?",
+    roleplayTip: "도움말",
     roleplaySayAgain: "다시 말해보기",
     roleplayReviewTitle: "막혔던 지점",
     roleplayReviewSay: "이렇게 말할 수 있었어요",
@@ -1216,6 +1218,7 @@ export const copy = {
     roleplayWhyStuck: "See what stopped you",
     roleplayBetter: "You could say",
     roleplayMeant: "Is this what you meant?",
+    roleplayTip: "Tip",
     roleplaySayAgain: "Say it again",
     roleplayReviewTitle: "Where you got stuck",
     roleplayReviewSay: "You could have said",
@@ -2099,6 +2102,7 @@ export const copy = {
     roleplayWhyStuck: "Ver qué te frenó",
     roleplayBetter: "Podrías decir",
     roleplayMeant: "¿Querías decir esto?",
+    roleplayTip: "Consejo",
     roleplaySayAgain: "Decirla otra vez",
     roleplayReviewTitle: "Dónde te atascaste",
     roleplayReviewSay: "Podrías haber dicho",

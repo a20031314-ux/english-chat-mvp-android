@@ -31,6 +31,8 @@ export type TranscriptLine = {
   who: "tutor" | "learner";
   text: string;
   translation?: string;
+  /** On the character's line: help for the moment they were stuck in. Never spoken. */
+  tip?: string;
   stuck?: StuckTurn;
   /** Their own sentence, said better. Shown under it, never spoken. */
   better?: string;

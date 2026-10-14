@@ -39,6 +39,12 @@ import {
 export type QueuedLine = {
   text: string;
   translation?: string;
+  /**
+   * Help for the moment they were stuck in, in their own language. Its own
+   * field: joined onto the translation it was drawn as one, in the
+   * translation's place, and the line's real meaning was never fetched.
+   */
+  tip?: string;
   audioPath?: string;
 };
 
@@ -48,6 +54,7 @@ export type Instruction =
       do: "say";
       text: string;
       translation?: string;
+      tip?: string;
       /**
        * Where the recorded audio for this line lives. Absent for a line the
        * director wrote just now, which the caller synthesises in `voice`.
@@ -550,11 +557,6 @@ export function submitSpeech(
   };
 }
 
-function withNote(translation: string | undefined, note: string): string | undefined {
-  if (!note) return translation || undefined;
-  return translation ? `${translation}  ·  ${note}` : note;
-}
-
 /**
  * Carry out what the director decided.
  *
@@ -582,7 +584,7 @@ export function applyDirection(
   // through a moment they were stuck in. Anything said about a sentence they
   // managed to say belongs under that sentence, which the caller attaches.
   const spokenNote = direction.assessment === "stuck" ? direction.note : "";
-  if (said) queue.push({ ...said, translation: withNote(said.translation, spokenNote) });
+  if (said) queue.push({ ...said, ...(spokenNote ? { tip: spokenNote } : {}) });
   const follow = direction.follow ? recorded(scenario, bank, direction.follow) : null;
   if (follow) queue.push(follow);
 

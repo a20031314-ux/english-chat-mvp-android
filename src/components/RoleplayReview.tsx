@@ -92,6 +92,14 @@ export function RoleplayLine({
         {line.translation ? (
           <p className="mt-1 text-[12px] text-neutral-500">{line.translation}</p>
         ) : null}
+        {/* Help for the moment they were stuck in: marked as help, so it is
+            not read as what the line means. */}
+        {line.tip ? (
+          <div className="mt-1.5 rounded-lg border border-amber-300/30 bg-amber-300/10 px-2 py-1.5">
+            <p className="text-[10px] font-medium text-amber-200">{ui.roleplayTip}</p>
+            <p className="mt-0.5 text-[12px] leading-snug text-amber-50">{line.tip}</p>
+          </div>
+        ) : null}
         {/* Read in the seconds after they stop talking, while they wait to be
             answered — the one moment in a spoken turn when their eyes are free.
             Never said aloud; the character does not know it is here. */}

@@ -51,7 +51,7 @@ export function RoleplayPast({
     <FullScreenLayer>
       <header className="flex shrink-0 items-center justify-between gap-3 border-b border-white/10 px-4 py-3">
         <div className="min-w-0">
-          <h2 className="truncate text-sm font-semibold text-white">{saved.title}</h2>
+          <h2 dir="auto" className="truncate text-start text-sm font-semibold text-white">{saved.title}</h2>
           <p className="text-[11px] text-neutral-500">
             {new Date(saved.startedAt).toLocaleString()}
           </p>

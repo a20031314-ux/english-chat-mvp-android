@@ -341,7 +341,12 @@ export function RoleplayScreen({
       nativeLanguage === BANK_GLOSS_LANGUAGE ? instruction.translation : undefined;
     setSaid((current) => [
       ...current,
-      { who: "tutor", text: instruction.text, translation: gloss },
+      {
+        who: "tutor",
+        text: instruction.text,
+        translation: gloss,
+        ...(instruction.tip ? { tip: instruction.tip } : {}),
+      },
     ]);
     // Nothing waits on this: it is the next line being fetched behind this one.
     warmNextLine(scenario, bank, state);

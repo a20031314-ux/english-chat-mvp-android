@@ -144,10 +144,10 @@ test("a written line the director picks is played from its recording", () => {
   if (moved.instruction.do !== "say") return;
   assert.equal(moved.instruction.text, bank["cafe.fix-here"]!.text);
   assert.match(moved.instruction.audioPath ?? "", /\.mp3$/);
-  assert.match(
-    moved.instruction.translation ?? "",
-    /For here \/ To go$/,
-    "the tip rides under the line",
+  assert.equal(moved.instruction.tip, "For here / To go", "the tip rides with the line");
+  assert.ok(
+    !(moved.instruction.translation ?? "").includes("For here / To go"),
+    "and not in place of its translation",
   );
   const heard = afterSaying(scenario, bank, moved.state, 4000);
   assert.equal(heard.instruction.do, "listen");
