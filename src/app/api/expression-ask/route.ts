@@ -190,14 +190,14 @@ export async function POST(request: NextRequest) {
     // The span they asked about joins what they are learning to understand
     // (learner/comprehension.ts) — the words of the span and what the question
     // was about, not the question itself.
-    after(() =>
-      recordComprehensionEvents(userId, targetCode, [{ kind: "ask", text: selected, about }]),
-    );
-    after(() =>
-      recordMeets(userId, targetCode, [
+    // The ledger before the comprehension record, for the reason the
+    // comprehension route gives.
+    after(async () => {
+      await recordMeets(userId, targetCode, [
         { kind: "ask", text: selected, tab: isLedgerTab(body.tab) ? body.tab : "chat" },
-      ]),
-    );
+      ]);
+      await recordComprehensionEvents(userId, targetCode, [{ kind: "ask", text: selected, about }]);
+    });
     return jsonWithCors(request, { answer, about });
   } catch (error) {
     console.error("[expression-ask]", error);

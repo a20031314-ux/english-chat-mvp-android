@@ -58,9 +58,10 @@ export async function POST(request: NextRequest) {
       const tab: LedgerTab = isLedgerTab(row.tab) ? row.tab : "chat";
       return text.trim() ? [{ kind, text, tab }] : [];
     });
-  const [record] = await Promise.all([
-    recordComprehensionEvents(userId, language, events),
-    meets.length ? recordMeets(userId, language, meets) : Promise.resolve(),
-  ]);
+  // The ledger first: the first time it is read it is built from the
+  // comprehension record, and written after that, it would take these taps
+  // in as old ones from the chat and lose the tab they came from.
+  if (meets.length) await recordMeets(userId, language, meets);
+  const record = await recordComprehensionEvents(userId, language, events);
   return jsonWithCors(request, { ok: Boolean(record), recorded: events.length });
 }
