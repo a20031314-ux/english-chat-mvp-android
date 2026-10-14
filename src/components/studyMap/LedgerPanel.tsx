@@ -147,7 +147,8 @@ function LedgerSheet({
     met: ui.ledgerMet,
   };
   const weeks = summary.weeks.slice(-12);
-  const peak = Math.max(1, ...weeks.map((w) => w.mastered + w.learned));
+  // A floor, so a first phrase is a small bar and not a full one.
+  const peak = Math.max(10, ...weeks.map((w) => w.mastered + w.learned));
   const sources = (Object.entries(summary.bySource) as Array<[LedgerTab, number]>)
     .filter(([, n]) => n > 0)
     .sort((a, b) => b[1] - a[1]);
@@ -199,16 +200,26 @@ function LedgerSheet({
           {weeks.length > 0 ? (
             <section className="mt-4">
               <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.ledgerWeeklyTitle}</p>
-              <div className="mt-2 flex h-24 items-end gap-1" aria-hidden>
+              <div className="mt-2 flex h-24 items-end gap-1 border-b border-white/10" aria-hidden>
                 {weeks.map((w) => (
-                  <div key={w.week} className="flex h-full flex-1 flex-col justify-end" title={w.week}>
+                  <div key={w.week} className="flex h-full max-w-8 flex-1 flex-col justify-end" title={w.week}>
                     <div className="w-full bg-amber-300/70" style={{ height: `${(w.learned / peak) * 100}%` }} />
                     <div className="w-full rounded-b-sm bg-emerald-400" style={{ height: `${(w.mastered / peak) * 100}%` }} />
                   </div>
                 ))}
               </div>
-              <p className="mt-1 text-[11px] tabular-nums text-slate-500">
-                {weeks[0]!.week} – {weeks[weeks.length - 1]!.week}
+              <p className="mt-1 flex items-center gap-3 text-[11px] text-slate-500">
+                <span className="flex items-center gap-1">
+                  <span className="h-2 w-2 rounded-sm bg-emerald-400" />
+                  {ui.itemsMastered}
+                </span>
+                <span className="flex items-center gap-1">
+                  <span className="h-2 w-2 rounded-sm bg-amber-300/70" />
+                  {ui.itemsLearned}
+                </span>
+                <span dir="ltr" className="ms-auto tabular-nums">
+                  {weeks[0]!.week} – {weeks[weeks.length - 1]!.week}
+                </span>
               </p>
             </section>
           ) : null}
@@ -270,7 +281,7 @@ function LedgerSheet({
                           ? ` · ${Math.floor(item.firstMet.t / 60)}:${String(item.firstMet.t % 60).padStart(2, "0")}`
                           : ""}
                         {item.understood ? ` · ${ui.ledgerUnderstood}` : ""}
-                        {item.onMap ? ` · ${ui.homeTabMap}` : ""}
+                        {item.onMap && item.firstMet.tab !== "map" ? ` · ${ui.homeTabMap}` : ""}
                       </span>
                     </span>
                   </li>
