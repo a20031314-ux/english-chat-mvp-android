@@ -226,7 +226,8 @@
     "whatsNewMeantTitle": "通話で、言いたかったことを見つけます",
     "whatsNewMeantBody": "大きく崩れた文でも、会話の流れから言いたかったことを推測して「こう言いたかったのでは？」で見せ、聞かせてくれます。途中で少し止まっても、続きを話すまで待ちます。",
     "roleplaySayAgain": "もう一度言ってみる",
-    "roleplayTip": "ヒント"
+    "roleplayTip": "ヒント",
+    "roleplayTranslations": "訳"
   },
   "zh": {
     "billingClose": "关闭",
@@ -455,7 +456,8 @@
     "whatsNewMeantTitle": "通话会找出你想说的话",
     "whatsNewMeantBody": "句子错得很厉害时，也会根据对话推测你想说什么，用「你是想这么说吗？」显示并可以收听。说到一半停一下，也会等你说完。",
     "roleplaySayAgain": "再说一遍",
-    "roleplayTip": "提示"
+    "roleplayTip": "提示",
+    "roleplayTranslations": "翻译"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -686,7 +688,8 @@
     "whatsNewMeantTitle": "Cuộc gọi đoán ra điều bạn muốn nói",
     "whatsNewMeantBody": "Câu sai nhiều đến đâu, cuộc gọi cũng đoán theo mạch hội thoại điều bạn muốn nói và hiện ở “Có phải bạn muốn nói thế này?”, nghe được. Dừng giữa câu thì nó chờ bạn nói tiếp.",
     "roleplaySayAgain": "Nói lại câu này",
-    "roleplayTip": "Gợi ý"
+    "roleplayTip": "Gợi ý",
+    "roleplayTranslations": "Bản dịch"
   },
   "fr": {
     "billingClose": "Fermer",
@@ -922,7 +925,8 @@
     "whatsNewMeantTitle": "Les appels comprennent ce que tu voulais dire",
     "whatsNewMeantBody": "Même quand une phrase sort très cassée, l’appel devine d’après la conversation ce que tu voulais dire et l’affiche sous « Tu voulais dire ça ? », à écouter. Si tu t’arrêtes en pleine phrase, il attend la suite.",
     "roleplaySayAgain": "Le redire",
-    "roleplayTip": "Astuce"
+    "roleplayTip": "Astuce",
+    "roleplayTranslations": "Traduction"
   },
   "it": {
     "archive": "Report",
@@ -1350,7 +1354,8 @@
     "whatsNewMeantTitle": "Le chiamate capiscono cosa volevi dire",
     "whatsNewMeantBody": "Anche quando una frase esce molto sbagliata, la chiamata intuisce dal discorso cosa volevi dire e lo mostra in «Volevi dire questo?», da ascoltare. Se ti fermi a metà frase, aspetta che continui.",
     "roleplaySayAgain": "Ridillo",
-    "roleplayTip": "Suggerimento"
+    "roleplayTip": "Suggerimento",
+    "roleplayTranslations": "Traduzione"
   },
   "pt": {
     "billingClose": "Fechar",
@@ -1589,7 +1594,8 @@
     "whatsNewMeantTitle": "As chamadas entendem o que você quis dizer",
     "whatsNewMeantBody": "Mesmo quando a frase sai muito errada, a chamada deduz pela conversa o que você quis dizer e mostra em “Você quis dizer isto?”, para ouvir. Se você parar no meio da frase, ela espera o resto.",
     "roleplaySayAgain": "Dizer de novo",
-    "roleplayTip": "Dica"
+    "roleplayTip": "Dica",
+    "roleplayTranslations": "Tradução"
   },
   "ru": {
     "archive": "Отчёты",
@@ -2015,7 +2021,8 @@
     "whatsNewMeantTitle": "Звонок понимает, что вы хотели сказать",
     "whatsNewMeantBody": "Даже если фраза вышла совсем неправильной, по ходу разговора звонок поймёт, что вы имели в виду, и покажет это под «Вы это хотели сказать?» — можно послушать. Если вы замолчали посреди фразы, он подождёт продолжения.",
     "roleplaySayAgain": "Сказать ещё раз",
-    "roleplayTip": "Подсказка"
+    "roleplayTip": "Подсказка",
+    "roleplayTranslations": "Перевод"
   },
   "id": {
     "billingClose": "Tutup",
@@ -2250,7 +2257,8 @@
     "whatsNewMeantTitle": "Panggilan menebak maksudmu",
     "whatsNewMeantBody": "Walau kalimatnya sangat berantakan, panggilan menebak maksudmu dari alur obrolan dan menampilkannya di “Maksudmu begini?”, bisa didengarkan. Kalau kamu berhenti di tengah kalimat, ia menunggu lanjutannya.",
     "roleplaySayAgain": "Ucapkan lagi",
-    "roleplayTip": "Tips"
+    "roleplayTip": "Tips",
+    "roleplayTranslations": "Terjemahan"
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -2479,7 +2487,8 @@
     "whatsNewMeantTitle": "المكالمة تفهم ما كنت تقصده",
     "whatsNewMeantBody": "حتى إن خرجت الجملة مكسّرة كثيرًا، تستنتج المكالمة من سياق الحديث ما كنت تقصده وتعرضه تحت «هل كنت تقصد هذا؟» مع إمكانية الاستماع. وإن توقفت في منتصف الجملة، تنتظر حتى تُكملها.",
     "roleplaySayAgain": "قلها مرة أخرى",
-    "roleplayTip": "تلميح"
+    "roleplayTip": "تلميح",
+    "roleplayTranslations": "الترجمة"
   },
   "th": {
     "billingClose": "ปิด",
@@ -2708,7 +2717,8 @@
     "whatsNewMeantTitle": "การโทรเดาสิ่งที่คุณตั้งใจจะพูด",
     "whatsNewMeantBody": "แม้ประโยคจะผิดมาก การโทรก็เดาจากบทสนทนาว่าคุณตั้งใจจะพูดอะไร แล้วแสดงใน “ตั้งใจจะพูดแบบนี้ใช่ไหม” พร้อมให้ฟัง ถ้าหยุดกลางประโยค ก็จะรอจนคุณพูดต่อ",
     "roleplaySayAgain": "ลองพูดอีกครั้ง",
-    "roleplayTip": "คำแนะนำ"
+    "roleplayTip": "คำแนะนำ",
+    "roleplayTranslations": "คำแปล"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -2937,6 +2947,7 @@
     "whatsNewMeantTitle": "कॉल समझ लेती है आप क्या कहना चाहते थे",
     "whatsNewMeantBody": "वाक्य बहुत बिगड़ जाए तब भी कॉल बातचीत के संदर्भ से अंदाज़ा लगाकर “क्या आप यह कहना चाहते थे?” में दिखाती और सुनाती है। वाक्य के बीच रुकें, तो वह आपके आगे बोलने का इंतज़ार करती है।",
     "roleplaySayAgain": "फिर से बोलें",
-    "roleplayTip": "सुझाव"
+    "roleplayTip": "सुझाव",
+    "roleplayTranslations": "अनुवाद"
   }
 }

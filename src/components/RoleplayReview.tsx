@@ -30,6 +30,7 @@ export function RoleplayLine({
   onTranslate,
   onAnalyze,
   onSayAgain,
+  showTranslation,
 }: {
   line: TranscriptLine;
   ui: UICopy;
@@ -48,7 +49,15 @@ export function RoleplayLine({
    * Only where no call microphone is open: a finished scene, or one read back.
    */
   onSayAgain?: (target: string) => Promise<{ heard: string; practice: Practice | null }>;
+  /**
+   * Whether the character's translations are on show. Off, a line keeps its
+   * translation folded until it is tapped — the learner listens first and
+   * reads only what they need. Absent means on, as read-back has always been.
+   */
+  showTranslation?: boolean;
 }) {
+  const [revealed, setRevealed] = useState(false);
+  const translationShown = showTranslation !== false || revealed;
   const [sayingAgain, setSayingAgain] = useState(false);
   const againRef = useRef<HTMLDivElement>(null);
   const sayTarget = (line.meant || line.better || line.text).trim();
@@ -75,10 +84,14 @@ export function RoleplayLine({
             translation. In English the bank's own glosses covered most lines
             and hid the problem. A dotted underline says there is more here
             without needing a word in fourteen languages to say it. */}
-        {line.who === "tutor" && !line.translation && onTranslate ? (
+        {line.who === "tutor" &&
+        ((!line.translation && onTranslate) || (line.translation && !translationShown)) ? (
           <button
             type="button"
-            onClick={() => onTranslate(line.text)}
+            onClick={() => {
+              setRevealed(true);
+              if (!line.translation) onTranslate?.(line.text);
+            }}
             dir="auto"
             className="text-start text-[14px] leading-snug decoration-dotted decoration-neutral-500 underline-offset-4 [text-decoration-line:underline]"
           >
@@ -89,7 +102,7 @@ export function RoleplayLine({
           // direction, so "Hi!" does not end up as "!Hi" under an Arabic app.
           <p dir="auto" className="text-[14px] leading-snug">{line.text}</p>
         )}
-        {line.translation ? (
+        {line.translation && translationShown ? (
           <p className="mt-1 text-[12px] text-neutral-500">{line.translation}</p>
         ) : null}
         {/* Help for the moment they were stuck in: marked as help, so it is

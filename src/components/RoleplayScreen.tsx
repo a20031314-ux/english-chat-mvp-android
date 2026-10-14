@@ -175,6 +175,8 @@ const REST_OF_SENTENCE_MS = 3500;
  */
 const GENERATED_AUDIO_MS = 30000;
 
+const SHOW_TRANSLATIONS_KEY = "roleplayShowTranslations";
+
 export function RoleplayScreen({
   scenarioId,
   nativeLanguage,
@@ -206,6 +208,26 @@ export function RoleplayScreen({
   const [state, setState] = useState<SessionState | null>(null);
   const [instruction, setInstruction] = useState<Instruction | null>(null);
   const [said, setSaid] = useState<Spoken[]>([]);
+  // The character's translations: folded by default, each one a tap away, or
+  // all on show — the learner's choice, kept for next time. Nothing waits on
+  // a translation either way; this is about what is on screen.
+  const [showTranslations, setShowTranslations] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem(SHOW_TRANSLATIONS_KEY) === "1";
+    } catch {
+      return false;
+    }
+  });
+  const toggleTranslations = () => {
+    setShowTranslations((on) => {
+      try {
+        localStorage.setItem(SHOW_TRANSLATIONS_KEY, on ? "0" : "1");
+      } catch {
+        // Not kept, still switched for this conversation.
+      }
+      return !on;
+    });
+  };
   const [recording, setRecording] = useState(false);
   // Bumped when the microphone decides a turn has ended. An effect does the
   // sending rather than the callback itself: the callback is created once, at
@@ -693,6 +715,15 @@ export function RoleplayScreen({
     [scenario, nativeLanguage],
   );
 
+  // With translations on show, a line the character wrote just now is
+  // translated as it appears — after it is said, so the voice never waits.
+  useEffect(() => {
+    if (!showTranslations) return;
+    for (const line of said) {
+      if (line.who === "tutor" && !line.translation && line.text.trim()) translateLine(line.text);
+    }
+  }, [showTranslations, said, translateLine]);
+
   const sayItBack = useCallback(
     async (target: string) => {
       if (!scenario) return { heard: "", practice: null };
@@ -869,6 +900,19 @@ export function RoleplayScreen({
             written down as it happens, so leaving here loses nothing and the
             door offers to carry on with it. Once it has ended there is nothing
             to come back to and the button says so. */}
+        <div className="flex items-center gap-2">
+        <button
+          type="button"
+          onClick={toggleTranslations}
+          aria-pressed={showTranslations}
+          className={`rounded-lg border px-3 py-1.5 text-[12px] transition ${
+            showTranslations
+              ? "border-white/40 bg-white/15 text-neutral-100"
+              : "border-white/15 text-neutral-400 hover:bg-white/10"
+          }`}
+        >
+          {ui.roleplayTranslations}
+        </button>
         <button
           type="button"
           onClick={onClose}
@@ -878,6 +922,7 @@ export function RoleplayScreen({
             ? ui.billingClose
             : ui.roleplayPause}
         </button>
+        </div>
       </header>
 
       <ol className="min-h-0 flex-1 overflow-y-auto p-3">
@@ -888,6 +933,7 @@ export function RoleplayScreen({
             ui={ui}
             onReview={openReview}
             onTranslate={translateLine}
+            showTranslation={showTranslations}
             onAnalyze={sceneOver ? analyzeLine : undefined}
             onSayAgain={
               sceneOver
