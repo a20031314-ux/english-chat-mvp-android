@@ -34,5 +34,5 @@ test("channel lists leave out Shorts and what is too long to prepare", async () 
   assert.equal(isStudyableUpload({ title: "寧々の覚悟 | NHK | #shorts", durationSeconds: 70 }), false);
   assert.equal(isStudyableUpload({ title: "ข่าวเช้า", durationSeconds: 3600 }), false);
   assert.equal(isStudyableUpload({ title: "Así funciona el cerebro", durationSeconds: 300 }), true);
-  assert.equal(isStudyableUpload({ title: "No length yet" }), true);
+  assert.equal(isStudyableUpload({ title: "【夜ニュースライブ】最新ニュース" }), false);
 });

@@ -11,6 +11,7 @@ export const MIN_CHANNEL_VIDEO_SECONDS = 60;
 export function isStudyableUpload(item: { title?: string; durationSeconds?: number }): boolean {
   if (/#shorts?\b/i.test(item.title ?? "")) return false;
   const seconds = item.durationSeconds;
-  if (seconds == null || !Number.isFinite(seconds)) return true;
+  // No length is a live or scheduled stream: hours long, or nothing yet.
+  if (seconds == null || !Number.isFinite(seconds)) return false;
   return seconds >= MIN_CHANNEL_VIDEO_SECONDS && seconds <= MAX_VIDEO_PREP_SECONDS;
 }

@@ -95,7 +95,7 @@ const CHANNELS: Record<LearningLanguageCode, RecommendedChannelSeed[]> = {
     { id: "workpoint", name: "Workpoint", handle: "workpointofficial", channelId: "UC3ZkCd7XtUREnjjt3cyY_gg" },
   ],
   hi: [
-    { id: "ndtv-india", name: "NDTV India", handle: "NDTVIndia", channelId: "UC9CYT9gSNLevX5ey2_6CK0Q" },
+    { id: "dw-hindi", name: "DW हिन्दी", handle: "dwhindi", channelId: "UCc7pPNFBvIhI4iV7m8plJuA" },
     { id: "lallantop", name: "The Lallantop", handle: "thelallantop", channelId: "UCx8Z14PpntdaxCt2hakbQLQ" },
     { id: "bbc-hindi", name: "BBC News हिंदी", handle: "bbchindi", channelId: "UCN7B-QD0Qgn2boVH5Q0pOWg" },
   ],
