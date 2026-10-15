@@ -192,7 +192,7 @@ export function StudyMapTab({
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         {!loading ? (
           <div className="mx-auto mb-4 max-w-2xl">
-            <LedgerPanel ui={ui} targetLanguage={targetLanguage} isPremium={isPremium} />
+            <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
             <LearnerPanel
               ui={ui}
               locale={locale}

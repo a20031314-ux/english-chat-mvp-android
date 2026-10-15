@@ -10,7 +10,20 @@ import type { LedgerTab } from "@/lib/learner/ledger";
  * request; failures are dropped, since a missed tap costs one data point.
  */
 
-type Sent = ComprehensionEvent & { tab?: LedgerTab };
+type Sent = ComprehensionEvent & { tab?: LedgerTab; videoId?: string; t?: number };
+
+/**
+ * The video scene on screen, kept by the video tab, so a phrase looked up
+ * there is filed under the scene it came from and can be gone back to.
+ */
+let videoPlace: { videoId: string; t?: number } | null = null;
+export function setLedgerVideoPlace(place: { videoId: string; t?: number } | null) {
+  videoPlace = place;
+}
+export function ledgerPlace(): { tab: LedgerTab; videoId?: string; t?: number } {
+  const tab = currentLedgerTab();
+  return tab === "video" && videoPlace ? { tab, ...videoPlace } : { tab };
+}
 
 const pending = new Map<string, Sent[]>();
 
@@ -47,7 +60,7 @@ export function noteComprehension(language: string, event: ComprehensionEvent) {
   if (typeof window === "undefined") return;
   if (event.kind !== "translate" && !event.text.trim()) return;
   const list = pending.get(language) ?? [];
-  list.push({ ...event, tab: currentLedgerTab() });
+  list.push({ ...event, ...ledgerPlace() });
   pending.set(language, list.slice(-20));
   if (!timer) timer = setTimeout(flush, 1500);
 }

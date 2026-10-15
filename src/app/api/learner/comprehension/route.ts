@@ -56,7 +56,9 @@ export async function POST(request: NextRequest) {
       if (kind !== "lookup" && kind !== "analyze" && kind !== "save") return [];
       const text = typeof row.text === "string" ? row.text.slice(0, 120) : "";
       const tab: LedgerTab = isLedgerTab(row.tab) ? row.tab : "chat";
-      return text.trim() ? [{ kind, text, tab }] : [];
+      const videoId = typeof row.videoId === "string" && /^[\w-]{6,20}$/.test(row.videoId) ? row.videoId : undefined;
+      const t = typeof row.t === "number" && Number.isFinite(row.t) ? row.t : undefined;
+      return text.trim() ? [{ kind, text, tab, ...(videoId ? { videoId } : {}), ...(t !== undefined ? { t } : {}) }] : [];
     });
   // The ledger first: the first time it is read it is built from the
   // comprehension record, and written after that, it would take these taps

@@ -194,7 +194,13 @@ export async function POST(request: NextRequest) {
     // comprehension route gives.
     after(async () => {
       await recordMeets(userId, targetCode, [
-        { kind: "ask", text: selected, tab: isLedgerTab(body.tab) ? body.tab : "chat" },
+        {
+          kind: "ask",
+          text: selected,
+          tab: isLedgerTab(body.tab) ? body.tab : "chat",
+          ...(typeof body.videoId === "string" && /^[\w-]{6,20}$/.test(body.videoId) ? { videoId: body.videoId } : {}),
+          ...(typeof body.t === "number" && Number.isFinite(body.t) ? { t: body.t } : {}),
+        },
       ]);
       await recordComprehensionEvents(userId, targetCode, [{ kind: "ask", text: selected, about }]);
     });

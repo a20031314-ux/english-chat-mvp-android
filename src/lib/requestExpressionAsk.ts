@@ -1,4 +1,4 @@
-import { currentLedgerTab } from "@/lib/learner/comprehensionClient";
+import { ledgerPlace } from "@/lib/learner/comprehensionClient";
 import { apiUrl } from "@/lib/apiBase";
 import type { AskTurn } from "@/lib/sentenceNotes";
 
@@ -33,7 +33,7 @@ export async function requestExpressionAsk(input: {
         question: input.question,
         ...(input.preset ? { preset: input.preset } : {}),
         interfaceLanguage: input.interfaceLanguage,
-        tab: currentLedgerTab(),
+        ...ledgerPlace(),
         targetLanguage: input.targetLanguage,
         ...(input.context?.length ? { context: input.context.slice(-4) } : {}),
         ...(input.history?.length

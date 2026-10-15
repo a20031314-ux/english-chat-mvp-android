@@ -2,6 +2,7 @@
 
 import { FormEvent, useEffect, useMemo, useState } from "react";
 import { CharacterGuidePanel } from "@/components/CharacterGuidePanel";
+import { WordLedgerLine } from "@/components/LedgerLinks";
 import { TTSButton } from "@/components/TTSButton";
 import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
 import { VocabSenseList } from "@/components/VocabSenseList";
@@ -351,6 +352,7 @@ export function VocabularyPanel({ locale, ui }: VocabularyPanelProps) {
                           />
                           <TTSButton text={entry.word} ariaLabel={ui.listen} />
                         </div>
+                        <WordLedgerLine ui={ui} locale={locale} word={entry.word} language={targetLanguage} />
                         {meaningHidden ? (
                           <button
                             type="button"

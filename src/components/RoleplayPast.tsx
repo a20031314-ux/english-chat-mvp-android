@@ -77,6 +77,7 @@ export function RoleplayPast({
             onReview={() => undefined}
             onAnalyze={analyze}
             onSayAgain={sayAgain}
+            ledgerLanguage={saved.language}
           />
         ))}
       </ol>

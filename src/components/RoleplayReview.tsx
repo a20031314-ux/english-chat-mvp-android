@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { TTSButton } from "@/components/TTSButton";
+import { LedgerLinks } from "@/components/LedgerLinks";
 import { compareToTarget, type WordOutcome } from "@/lib/roleplay/practice";
 import type { Practice } from "@/lib/roleplay/practice";
 import type { Review, StuckTurn, TranscriptLine } from "@/lib/roleplay/review";
@@ -31,6 +32,7 @@ export function RoleplayLine({
   onAnalyze,
   onSayAgain,
   showTranslation,
+  ledgerLanguage,
 }: {
   line: TranscriptLine;
   ui: UICopy;
@@ -55,6 +57,8 @@ export function RoleplayLine({
    * reads only what they need. Absent means on, as read-back has always been.
    */
   showTranslation?: boolean;
+  /** The language spoken, to connect the line to the ledger. Absent: no links. */
+  ledgerLanguage?: string;
 }) {
   const [revealed, setRevealed] = useState(false);
   const translationShown = showTranslation !== false || revealed;
@@ -188,6 +192,15 @@ export function RoleplayLine({
               </button>
             ) : null}
           </div>
+        ) : null}
+        {ledgerLanguage && line.text.trim() && line.text !== "…" ? (
+          <LedgerLinks
+            ui={ui}
+            kind={line.who === "learner" ? "mine" : "heard"}
+            here="call"
+            line={line.who === "learner" ? line.meant || line.better || line.text : line.text}
+            language={ledgerLanguage}
+          />
         ) : null}
         {canSayAgain && sayingAgain ? (
           <div ref={againRef} className="mt-2 rounded-xl bg-black/30 p-2.5 text-left">

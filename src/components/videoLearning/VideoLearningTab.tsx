@@ -57,6 +57,7 @@ import {
   type VideoStudySession,
 } from "@/lib/videoStudySessions";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
+import { setLedgerVideoPlace } from "@/lib/learner/comprehensionClient";
 import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
 
 type CueEditKind = "merge" | "split";
@@ -239,6 +240,13 @@ export function VideoLearningTab({
     (selectedId
       ? englishCues.find((row) => row.id === selectedId)
       : null) ?? cue;
+
+  // The scene on screen, for the expression ledger: a phrase looked up now
+  // is filed under this video and this moment (learner/ledger.ts).
+  useEffect(() => {
+    setLedgerVideoPlace(videoId ? { videoId, ...(displayCue ? { t: displayCue.startTime } : {}) } : null);
+  }, [videoId, displayCue]);
+  useEffect(() => () => setLedgerVideoPlace(null), []);
 
   useEffect(() => {
     setSavedSessions(

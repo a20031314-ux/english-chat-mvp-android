@@ -83,3 +83,15 @@ test("summary: counts, this week, retention, where learned things were first met
   assert.equal(later.retention, 0, "not used in the last 30 days");
   assert.equal(ledgerMatches(l, "¿Qué tal estás?").length, 1);
 });
+
+test("what a tutor brings back: learned, not just looked up, not mastered", async () => {
+  const { phrasesToRecycle, recyclePrompt } = await import("./ledger.ts");
+  let l = emptyLedger("en");
+  l = applyMeet(l, "wait it out", "save", { tab: "vocab" }, T0);
+  l = applyMeet(l, "end up", "lookup", { tab: "video" }, T0);
+  l = applyMeet(l, "take a seat", "save", { tab: "vocab" }, T0 + 3 * H);
+  assert.deepEqual(phrasesToRecycle(l, 3, T0 + 3 * H + 1), ["wait it out"], "met only is not brought back; saved a minute ago is too fresh");
+  assert.equal(recyclePrompt([]), "");
+  assert.match(recyclePrompt(["wait it out"]), /"wait it out"/);
+  assert.match(recyclePrompt(["wait it out"]), /never forced/);
+});

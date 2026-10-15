@@ -18,6 +18,8 @@ import {
 } from "@/lib/learningCards";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 import { noteUpdateLevel } from "@/lib/appUpdate";
+import { LedgerLinks } from "@/components/LedgerLinks";
+import { refreshLedgerSoon } from "@/lib/learner/ledgerClient";
 import { MessageBubble } from "./MessageBubble";
 import { ChatHistoryPanel } from "./ChatHistoryPanel";
 import { useBillingUi } from "./BillingScreen";
@@ -985,6 +987,9 @@ export function ChatWindow({
     }
 
     const data = (await response.json()) as ChatModeApiResponse;
+    // The server reads this turn into the ledger after replying; look again
+    // once it has, so a phrase just mastered says so.
+    refreshLedgerSoon(sessionLanguageCode);
     const correctionResult = normalizeCorrectionResult(
       message,
       data.correction,
@@ -1478,6 +1483,20 @@ export function ChatWindow({
                   />
                 ) : null}
 
+                {/* Phrases in their sentence met in another tab, or just
+                    mastered (hub/drafts/tab-connections.md). */}
+                {turn.mode === "chat" && !turn.ownLanguage && turn.userMessage.trim() ? (
+                  <div className="flex justify-end">
+                    <LedgerLinks
+                      ui={ui}
+                      kind="mine"
+                      here="chat"
+                      line={turn.correctionResult?.corrected?.trim() || turn.userMessage}
+                      language={sessionLanguageCode}
+                    />
+                  </div>
+                ) : null}
+
                 {turn.ownLanguage && turn.userMessage.trim() ? (
                   <ExpressionPeek
                     ui={ui}
@@ -1523,6 +1542,16 @@ export function ChatWindow({
                       }
                     />
                   )}
+
+                {turn.mode === "chat" && turn.assistantMessage ? (
+                  <LedgerLinks
+                    ui={ui}
+                    kind="heard"
+                    here="chat"
+                    line={turn.assistantMessage}
+                    language={sessionLanguageCode}
+                  />
+                ) : null}
 
                 {turn.mode === "how_to_say" && turn.assistantMessage ? (
                   <MessageBubble

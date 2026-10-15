@@ -341,3 +341,25 @@ export function parseLedger(value: unknown, language: string): Ledger | null {
 export function isLedgerTab(value: unknown): value is LedgerTab {
   return typeof value === "string" && (LEDGER_TABS as string[]).includes(value);
 }
+
+/**
+ * Learned, not yet mastered, met some time ago: what a tutor can bring back
+ * into a conversation so the learner hears it again and has a reason to use
+ * it (tab connections, the other direction). Most recently touched first.
+ */
+export function phrasesToRecycle(ledger: Ledger, limit = 3, now = Date.now()): string[] {
+  return Object.values(ledger.items)
+    .filter((item) => item.state === "learned" && now - item.helpAt >= 60 * 60 * 1000)
+    .sort((a, b) => b.lastAt - a.lastAt)
+    .slice(0, limit)
+    .map((item) => item.text);
+}
+
+/** The few lines a tutor is given about them. Empty when there is nothing to bring back. */
+export function recyclePrompt(phrases: string[]): string {
+  if (phrases.length === 0) return "";
+  return `Phrases this learner has been learning but cannot yet produce on their own: ${phrases
+    .map((p) => `"${p}"`)
+    .join(", ")}.
+When the conversation gives a natural opening, use one of them in your own line — at most one per turn, only where a speaker would really say it, never forced, never pointed out. If none fits, do not use any.`;
+}

@@ -239,7 +239,17 @@
     "ledgerSourcesTitle": "最初に出会った場所",
     "ledgerAll": "すべて",
     "ledgerUnderstood": "聞けばわかる",
-    "ledgerEmpty": "チャット・通話・動画で表現を調べたり使ったりすると、ここにたまります。"
+    "ledgerEmpty": "チャット・通話・動画で表現を調べたり使ったりすると、ここにたまります。",
+    "linkMetIn": "{place}で出会った表現",
+    "linkMasteredNow": "習得になりました",
+    "linkKnown": "知っている表現",
+    "linkFirstMet": "最初に出会った場所：{place}",
+    "linkGoBack": "もう一度見る",
+    "linkTry": "使ってみる",
+    "linkUsedIn": "{place}で使用 · {ago}",
+    "linkNotUsed": "まだ使っていません",
+    "linksToggle": "ほかのタブで出会った表現を表示",
+    "linkFindScenes": "出てくる場面"
   },
   "zh": {
     "billingClose": "关闭",
@@ -481,7 +491,17 @@
     "ledgerSourcesTitle": "最初在哪里遇到",
     "ledgerAll": "全部",
     "ledgerUnderstood": "听得懂",
-    "ledgerEmpty": "在聊天、通话和视频里查表达或用表达，它们就会汇集到这里。"
+    "ledgerEmpty": "在聊天、通话和视频里查表达或用表达，它们就会汇集到这里。",
+    "linkMetIn": "在{place}遇到过",
+    "linkMasteredNow": "已升为掌握",
+    "linkKnown": "认识的表达",
+    "linkFirstMet": "最初遇到：{place}",
+    "linkGoBack": "回去看看",
+    "linkTry": "试着用",
+    "linkUsedIn": "在{place}用过 · {ago}",
+    "linkNotUsed": "还没用过",
+    "linksToggle": "显示在其他标签页遇到的表达",
+    "linkFindScenes": "出现的场景"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -725,7 +745,17 @@
     "ledgerSourcesTitle": "Nơi gặp lần đầu",
     "ledgerAll": "Tất cả",
     "ledgerUnderstood": "Nghe là hiểu",
-    "ledgerEmpty": "Tra hoặc dùng cách nói trong chat, cuộc gọi và video, chúng sẽ được gom về đây."
+    "ledgerEmpty": "Tra hoặc dùng cách nói trong chat, cuộc gọi và video, chúng sẽ được gom về đây.",
+    "linkMetIn": "Đã gặp ở {place}",
+    "linkMasteredNow": "Đã thành thạo",
+    "linkKnown": "Bạn đã biết",
+    "linkFirstMet": "Gặp lần đầu: {place}",
+    "linkGoBack": "Xem lại",
+    "linkTry": "Thử dùng",
+    "linkUsedIn": "Đã dùng ở {place} · {ago}",
+    "linkNotUsed": "Chưa dùng",
+    "linksToggle": "Hiện cách nói đã gặp ở tab khác",
+    "linkFindScenes": "Tìm cảnh"
   },
   "fr": {
     "billingClose": "Fermer",
@@ -974,7 +1004,17 @@
     "ledgerSourcesTitle": "Où tu les as rencontrées",
     "ledgerAll": "Toutes",
     "ledgerUnderstood": "Je la comprends à l’oral",
-    "ledgerEmpty": "Cherche des expressions ou utilise-les dans le chat, les appels et les vidéos : elles s’ajoutent ici."
+    "ledgerEmpty": "Cherche des expressions ou utilise-les dans le chat, les appels et les vidéos : elles s’ajoutent ici.",
+    "linkMetIn": "Rencontrée dans {place}",
+    "linkMasteredNow": "Maîtrisée maintenant",
+    "linkKnown": "Tu la connais",
+    "linkFirstMet": "Première rencontre : {place}",
+    "linkGoBack": "Revoir",
+    "linkTry": "L’essayer",
+    "linkUsedIn": "Utilisée dans {place} · {ago}",
+    "linkNotUsed": "Pas encore utilisée",
+    "linksToggle": "Afficher les expressions vues dans d’autres onglets",
+    "linkFindScenes": "Trouver des scènes"
   },
   "it": {
     "archive": "Report",
@@ -1415,7 +1455,17 @@
     "ledgerSourcesTitle": "Dove le hai incontrate",
     "ledgerAll": "Tutte",
     "ledgerUnderstood": "La capisco quando la sento",
-    "ledgerEmpty": "Cerca espressioni o usale in chat, chiamate e video: si raccolgono qui."
+    "ledgerEmpty": "Cerca espressioni o usale in chat, chiamate e video: si raccolgono qui.",
+    "linkMetIn": "Incontrata in {place}",
+    "linkMasteredNow": "Ora padroneggiata",
+    "linkKnown": "La conosci",
+    "linkFirstMet": "Prima volta: {place}",
+    "linkGoBack": "Rivedi",
+    "linkTry": "Provala",
+    "linkUsedIn": "Usata in {place} · {ago}",
+    "linkNotUsed": "Non ancora usata",
+    "linksToggle": "Mostra espressioni viste in altre schede",
+    "linkFindScenes": "Trova scene"
   },
   "pt": {
     "billingClose": "Fechar",
@@ -1667,7 +1717,17 @@
     "ledgerSourcesTitle": "Onde você as viu primeiro",
     "ledgerAll": "Todas",
     "ledgerUnderstood": "Entendo quando ouço",
-    "ledgerEmpty": "Pesquise expressões ou use-as no chat, nas chamadas e nos vídeos, e elas se juntam aqui."
+    "ledgerEmpty": "Pesquise expressões ou use-as no chat, nas chamadas e nos vídeos, e elas se juntam aqui.",
+    "linkMetIn": "Vista em {place}",
+    "linkMasteredNow": "Agora dominada",
+    "linkKnown": "Você já conhece",
+    "linkFirstMet": "Vista primeiro em: {place}",
+    "linkGoBack": "Ver de novo",
+    "linkTry": "Experimentar",
+    "linkUsedIn": "Usada em {place} · {ago}",
+    "linkNotUsed": "Ainda não usada",
+    "linksToggle": "Mostrar expressões vistas em outras abas",
+    "linkFindScenes": "Encontrar cenas"
   },
   "ru": {
     "archive": "Отчёты",
@@ -2106,7 +2166,17 @@
     "ledgerSourcesTitle": "Где вы встретили их впервые",
     "ledgerAll": "Все",
     "ledgerUnderstood": "Понимаю на слух",
-    "ledgerEmpty": "Ищите выражения или используйте их в чате, звонках и видео — они соберутся здесь."
+    "ledgerEmpty": "Ищите выражения или используйте их в чате, звонках и видео — они соберутся здесь.",
+    "linkMetIn": "Встречено: {place}",
+    "linkMasteredNow": "Теперь освоено",
+    "linkKnown": "Вы это знаете",
+    "linkFirstMet": "Впервые: {place}",
+    "linkGoBack": "Вернуться",
+    "linkTry": "Попробовать",
+    "linkUsedIn": "Использовано: {place} · {ago}",
+    "linkNotUsed": "Ещё не использовано",
+    "linksToggle": "Показывать выражения из других вкладок",
+    "linkFindScenes": "Найти сцены"
   },
   "id": {
     "billingClose": "Tutup",
@@ -2354,7 +2424,17 @@
     "ledgerSourcesTitle": "Tempat pertama kali ditemui",
     "ledgerAll": "Semua",
     "ledgerUnderstood": "Paham saat mendengar",
-    "ledgerEmpty": "Cari atau pakai ungkapan di chat, panggilan, dan video, nanti terkumpul di sini."
+    "ledgerEmpty": "Cari atau pakai ungkapan di chat, panggilan, dan video, nanti terkumpul di sini.",
+    "linkMetIn": "Ditemui di {place}",
+    "linkMasteredNow": "Kini dikuasai",
+    "linkKnown": "Kamu sudah tahu",
+    "linkFirstMet": "Pertama ditemui: {place}",
+    "linkGoBack": "Lihat lagi",
+    "linkTry": "Coba pakai",
+    "linkUsedIn": "Dipakai di {place} · {ago}",
+    "linkNotUsed": "Belum dipakai",
+    "linksToggle": "Tampilkan ungkapan dari tab lain",
+    "linkFindScenes": "Cari adegan"
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -2596,7 +2676,17 @@
     "ledgerSourcesTitle": "أين صادفتها أول مرة",
     "ledgerAll": "الكل",
     "ledgerUnderstood": "أفهمه عندما أسمعه",
-    "ledgerEmpty": "ابحث عن التعابير أو استخدمها في الدردشة والمكالمات والفيديو، وستتجمع هنا."
+    "ledgerEmpty": "ابحث عن التعابير أو استخدمها في الدردشة والمكالمات والفيديو، وستتجمع هنا.",
+    "linkMetIn": "صادفته في {place}",
+    "linkMasteredNow": "أصبح متقَنًا",
+    "linkKnown": "تعرفه",
+    "linkFirstMet": "أول مرة: {place}",
+    "linkGoBack": "العودة إليه",
+    "linkTry": "جرّبه",
+    "linkUsedIn": "استخدمته في {place} · {ago}",
+    "linkNotUsed": "لم تستخدمه بعد",
+    "linksToggle": "إظهار التعابير التي صادفتها في تبويبات أخرى",
+    "linkFindScenes": "ابحث عن مشاهد"
   },
   "th": {
     "billingClose": "ปิด",
@@ -2838,7 +2928,17 @@
     "ledgerSourcesTitle": "เจอครั้งแรกที่ไหน",
     "ledgerAll": "ทั้งหมด",
     "ledgerUnderstood": "ฟังแล้วเข้าใจ",
-    "ledgerEmpty": "ลองค้นหรือใช้สำนวนในแชต การโทร และวิดีโอ แล้วจะมารวมกันที่นี่"
+    "ledgerEmpty": "ลองค้นหรือใช้สำนวนในแชต การโทร และวิดีโอ แล้วจะมารวมกันที่นี่",
+    "linkMetIn": "เจอใน {place}",
+    "linkMasteredNow": "คล่องแล้ว",
+    "linkKnown": "สำนวนที่รู้",
+    "linkFirstMet": "เจอครั้งแรก: {place}",
+    "linkGoBack": "กลับไปดู",
+    "linkTry": "ลองใช้",
+    "linkUsedIn": "ใช้ใน {place} · {ago}",
+    "linkNotUsed": "ยังไม่ได้ใช้",
+    "linksToggle": "แสดงสำนวนที่เจอในแท็บอื่น",
+    "linkFindScenes": "หาฉาก"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -3080,6 +3180,16 @@
     "ledgerSourcesTitle": "पहली बार कहाँ मिले",
     "ledgerAll": "सब",
     "ledgerUnderstood": "सुनकर समझ आता है",
-    "ledgerEmpty": "चैट, कॉल और वीडियो में वाक्यांश खोजें या इस्तेमाल करें, वे यहाँ जमा होंगे।"
+    "ledgerEmpty": "चैट, कॉल और वीडियो में वाक्यांश खोजें या इस्तेमाल करें, वे यहाँ जमा होंगे।",
+    "linkMetIn": "{place} में मिला",
+    "linkMasteredNow": "अब पक्का",
+    "linkKnown": "आप जानते हैं",
+    "linkFirstMet": "पहली बार: {place}",
+    "linkGoBack": "फिर देखें",
+    "linkTry": "इस्तेमाल करें",
+    "linkUsedIn": "{place} में इस्तेमाल · {ago}",
+    "linkNotUsed": "अभी इस्तेमाल नहीं किया",
+    "linksToggle": "दूसरे टैब में मिले वाक्यांश दिखाएँ",
+    "linkFindScenes": "दृश्य खोजें"
   }
 }

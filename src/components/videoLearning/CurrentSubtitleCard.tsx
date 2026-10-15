@@ -1,6 +1,8 @@
 "use client";
 
 import { AnalyzableEnglish } from "@/components/AnalyzableEnglish";
+import { LedgerLinks } from "@/components/LedgerLinks";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { SegmentPlayButton } from "@/components/videoLearning/SegmentPlayButton";
 import type { UICopy } from "@/lib/copy";
 import type { VideoSubtitle } from "@/lib/videoLearning";
@@ -21,6 +23,7 @@ export function CurrentSubtitleCard({
   onPlaySegment: () => void;
   onSaveSession: () => void;
 }) {
+  const ledgerLanguage = useLearningLanguageOptional()?.targetLanguage ?? "en";
   if (!cue) {
     return (
       <div className="px-4 py-5">
@@ -72,6 +75,7 @@ export function CurrentSubtitleCard({
                 playing ? "text-neutral-900" : "text-slate-100"
               }`}
             />
+            <LedgerLinks ui={ui} kind="heard" here="video" line={cue.original} language={ledgerLanguage} />
             {interpretation ? (
               <p
                 className={`mt-2 text-sm leading-snug ${

@@ -7,6 +7,8 @@ import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
 import type { LedgerState, LedgerSummary, LedgerTab, Place } from "@/lib/learner/ledger";
 import { loadVocabulary } from "@/lib/vocabulary";
+import { WordLedgerLine, placeLabel } from "@/components/LedgerLinks";
+import { goToFirstMet, setLinksShown, useLinksShown } from "@/lib/learner/ledgerClient";
 
 /**
  * 내 표현: what this learner has met, learned and can produce in the language
@@ -63,10 +65,12 @@ async function sendWordListOnce(language: string, isPremium: boolean): Promise<b
 
 export function LedgerPanel({
   ui,
+  locale,
   targetLanguage,
   isPremium,
 }: {
   ui: UICopy;
+  locale: string;
   targetLanguage: string;
   isPremium: boolean;
 }) {
@@ -118,21 +122,29 @@ export function LedgerPanel({
         ) : null}
         <span className="shrink-0 text-[12px] text-slate-400">{ui.learnerMore}</span>
       </button>
-      {open ? <LedgerSheet ui={ui} data={data} onClose={() => setOpen(false)} /> : null}
+      {open ? (
+        <LedgerSheet ui={ui} locale={locale} language={targetLanguage} data={data} onClose={() => setOpen(false)} />
+      ) : null}
     </>
   );
 }
 
 function LedgerSheet({
   ui,
+  locale,
+  language,
   data,
   onClose,
 }: {
   ui: UICopy;
+  locale: string;
+  language: string;
   data: { summary: LedgerSummary; items: Row[] };
   onClose: () => void;
 }) {
   const [filter, setFilter] = useState<LedgerState | "all">("all");
+  const [opened, setOpened] = useState<string | null>(null);
+  const linksOn = useLinksShown();
   const { summary, items } = data;
   const tabName: Record<LedgerTab, string> = {
     chat: ui.homeTabChat,
@@ -182,6 +194,15 @@ function LedgerSheet({
             </button>
           </div>
           <p className="mt-1 text-[12px] leading-relaxed text-slate-500">{ui.ledgerHint}</p>
+          <label className="mt-2 flex items-center justify-between gap-3 rounded-lg bg-white/[0.04] px-3 py-2 text-[12px] text-slate-300">
+            <span>{ui.linksToggle}</span>
+            <input
+              type="checkbox"
+              checked={linksOn}
+              onChange={(event) => setLinksShown(event.target.checked)}
+              className="h-4 w-4 accent-sky-400"
+            />
+          </label>
 
           <div className="mt-3 grid grid-cols-3 gap-2 text-center">
             {(["mastered", "learned", "met"] as LedgerState[]).map((state) => (
@@ -269,21 +290,43 @@ function LedgerSheet({
             ) : (
               <ul className="mt-2 space-y-1.5">
                 {shown.map((item) => (
-                  <li key={`${item.state}-${item.text}`} className="flex items-start gap-2 rounded-lg bg-white/[0.03] px-3 py-2">
-                    <span className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${DOT[item.state]}`} />
-                    <span className="min-w-0 flex-1">
-                      <span dir="auto" className="block text-start text-[13px] leading-snug text-slate-100">
-                        {item.text}
+                  <li key={`${item.state}-${item.text}`} className="rounded-lg bg-white/[0.03] px-3 py-2">
+                    <button
+                      type="button"
+                      onClick={() => setOpened(opened === item.text ? null : item.text)}
+                      aria-expanded={opened === item.text}
+                      className="flex w-full items-start gap-2 text-start"
+                    >
+                      <span className={`mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full ${DOT[item.state]}`} />
+                      <span className="min-w-0 flex-1">
+                        <span dir="auto" className="block text-start text-[13px] leading-snug text-slate-100">
+                          {item.text}
+                        </span>
+                        <span className="mt-0.5 block text-[11px] text-slate-500">
+                          {tabName[item.firstMet.tab] ?? ""}
+                          {item.firstMet.tab === "video" && typeof item.firstMet.t === "number"
+                            ? ` · ${Math.floor(item.firstMet.t / 60)}:${String(item.firstMet.t % 60).padStart(2, "0")}`
+                            : ""}
+                          {item.understood ? ` · ${ui.ledgerUnderstood}` : ""}
+                          {item.onMap && item.firstMet.tab !== "map" ? ` · ${ui.homeTabMap}` : ""}
+                        </span>
                       </span>
-                      <span className="mt-0.5 block text-[11px] text-slate-500">
-                        {tabName[item.firstMet.tab] ?? ""}
-                        {item.firstMet.tab === "video" && typeof item.firstMet.t === "number"
-                          ? ` · ${Math.floor(item.firstMet.t / 60)}:${String(item.firstMet.t % 60).padStart(2, "0")}`
-                          : ""}
-                        {item.understood ? ` · ${ui.ledgerUnderstood}` : ""}
-                        {item.onMap && item.firstMet.tab !== "map" ? ` · ${ui.homeTabMap}` : ""}
-                      </span>
-                    </span>
+                    </button>
+                    {opened === item.text ? (
+                      <div className="mt-1 ps-3.5">
+                        <WordLedgerLine ui={ui} locale={locale} word={item.text} language={language} onLeave={onClose} />
+                        <button
+                          type="button"
+                          onClick={() => {
+                            onClose();
+                            goToFirstMet(item.firstMet);
+                          }}
+                          className="mt-1.5 rounded-lg border border-white/15 px-2 py-0.5 text-[11px] text-slate-200 hover:bg-white/10"
+                        >
+                          {ui.linkGoBack} · {placeLabel(ui, item.firstMet)}
+                        </button>
+                      </div>
+                    ) : null}
                   </li>
                 ))}
               </ul>

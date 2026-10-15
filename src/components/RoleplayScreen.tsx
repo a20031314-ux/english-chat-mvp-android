@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import { sayLine } from "@/components/RoleplayOwnLine";
+import { refreshLedgerSoon } from "@/lib/learner/ledgerClient";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import {
   RoleplayLine,
@@ -623,6 +624,7 @@ export function RoleplayScreen({
     async (heard: string, endedAt: number, speechStartedAt: number | null) => {
       if (!scenario || !state) return;
       setSaid((current) => [...current, { who: "learner", text: heard || "…" }]);
+      if (heard) refreshLedgerSoon(scenario.language, 6000);
       const result = submitSpeech(scenario, bank, state, heard, endedAt, speechStartedAt);
       setState(result.state);
       setInstruction(result.instruction);
@@ -934,6 +936,7 @@ export function RoleplayScreen({
             onReview={openReview}
             onTranslate={translateLine}
             showTranslation={showTranslations}
+            ledgerLanguage={scenario.language}
             onAnalyze={sceneOver ? analyzeLine : undefined}
             onSayAgain={
               sceneOver

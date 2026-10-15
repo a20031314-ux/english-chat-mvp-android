@@ -33,6 +33,20 @@ export async function GET(request: NextRequest) {
   }
   const language = coerceLanguageCode(request.nextUrl.searchParams.get("lang"));
   const ledger = await readLedger(userId, language);
+  // For matching on the device (tab connections): the phrases and where they
+  // stand, nothing else, up to 600.
+  if (request.nextUrl.searchParams.get("compact") === "1") {
+    return jsonWithCors(request, {
+      language,
+      items: ledgerItems(ledger, undefined, 600).map((item) => ({
+        text: item.text,
+        state: item.state,
+        firstMet: item.firstMet,
+        ...(item.masteredAt ? { masteredAt: item.masteredAt } : {}),
+        lastOutput: item.outputs[item.outputs.length - 1] ?? null,
+      })),
+    });
+  }
   return jsonWithCors(request, {
     language,
     summary: summarize(ledger),
@@ -41,6 +55,7 @@ export async function GET(request: NextRequest) {
       state: item.state,
       firstMet: item.firstMet,
       lastOutput: item.outputs[item.outputs.length - 1] ?? null,
+      ...(item.masteredAt ? { masteredAt: item.masteredAt } : {}),
       understood: Boolean(item.understood),
       onMap: Boolean(item.map),
       lastAt: item.lastAt,

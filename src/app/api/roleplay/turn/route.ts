@@ -31,7 +31,9 @@ import { requestUserId, resolveRequestEntitlement } from "@/lib/server/premiumRe
 import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
 import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
-import { recordTurn } from "@/lib/server/ledgerStore";
+import { readLedger, recordTurn } from "@/lib/server/ledgerStore";
+import { isIdentified } from "@/lib/server/identity";
+import { phrasesToRecycle, recyclePrompt } from "@/lib/learner/ledger";
 import { contentHash } from "@/lib/roleplay/script";
 import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -249,6 +251,13 @@ export async function POST(request: NextRequest) {
     }
   };
 
+  // In a free conversation, learned phrases the character may bring back
+  // (hub/drafts/tab-connections.md). A scripted scene keeps to its script.
+  const recycle = scenario.openEnded && isIdentified(requestUserId(request))
+    ? await readLedger(requestUserId(request), turn.targetLanguage)
+        .then((ledger) => phrasesToRecycle(ledger))
+        .catch(() => [] as string[])
+    : [];
   const model = tutorModel();
   // Reasoning models spend hidden tokens before answering and take their cap
   // under another name. Minimal effort: this is one spoken line, and every
@@ -261,6 +270,7 @@ export async function POST(request: NextRequest) {
         role: "system" as const,
         content: tutorSystemPrompt({ scenario, bank, recorded, request: turn }),
       },
+      ...(recycle.length ? [{ role: "system" as const, content: recyclePrompt(recycle) }] : []),
       ...tutorMessages(turn),
     ],
     response_format: { type: "json_object" as const },
