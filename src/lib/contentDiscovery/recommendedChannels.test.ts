@@ -27,3 +27,12 @@ test("every recommended channel is pinned to a channel id, once", () => {
     }
   }
 });
+
+test("channel lists leave out Shorts and what is too long to prepare", async () => {
+  const { isStudyableUpload } = await import("./studyableUpload.ts");
+  assert.equal(isStudyableUpload({ title: "【大河ドラマ】第40回予告", durationSeconds: 16 }), false);
+  assert.equal(isStudyableUpload({ title: "寧々の覚悟 | NHK | #shorts", durationSeconds: 70 }), false);
+  assert.equal(isStudyableUpload({ title: "ข่าวเช้า", durationSeconds: 3600 }), false);
+  assert.equal(isStudyableUpload({ title: "Así funciona el cerebro", durationSeconds: 300 }), true);
+  assert.equal(isStudyableUpload({ title: "No length yet" }), true);
+});

@@ -51,7 +51,8 @@ async function playlistPage(
   const params = new URLSearchParams({
     part: "snippet,contentDetails",
     playlistId,
-    maxResults: "25",
+    // A page of 50: Shorts and over-long uploads are dropped after this.
+    maxResults: "50",
     key: apiKey,
   });
   if (pageToken) params.set("pageToken", pageToken);

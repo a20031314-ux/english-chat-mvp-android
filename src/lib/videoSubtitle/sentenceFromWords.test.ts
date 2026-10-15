@@ -470,3 +470,15 @@ test("an unpunctuated transcript is marked in pieces, and one bad piece costs on
   // The refused piece survives as one line instead of taking the rest with it.
   assert.ok(spans.length > 2);
 });
+
+test("speech the model cannot mark is cut at pauses, not kept as one block", async () => {
+  const { refineSpansWithLlm, splitSentencesFromWords } = await import("./sentenceFromWords.ts");
+  const { flattenSttToTimedWords } = await import("./timedWords.ts");
+  const thai = ["ทำไมการเลิกนิสัยไม่ดีถึงยากนัก", "สมองของเราเก่งเรื่องสร้างนิสัย", "แต่พอเกิดนิสัยแล้วก็เปลี่ยนยาก", "วันนี้เรามาดูเหตุผลกัน"];
+  const segments = Array.from({ length: 40 }, (_, i) => ({ id: `w${i}`, text: thai[i % 4]!, startTime: i * 5, endTime: i * 5 + 4.5 }));
+  const words = flattenSttToTimedWords(segments);
+  // The model marks inside a token, so nothing it returns can be matched.
+  const spans = await refineSpansWithLlm(words, splitSentencesFromWords(words), async (text) => text.replace(/การเลิก/g, "การ|||เลิก"));
+  assert.ok(spans.length >= 10, `got ${spans.length} lines`);
+  for (const span of spans) assert.ok(span.endMs - span.startMs <= 12500, span.text);
+});

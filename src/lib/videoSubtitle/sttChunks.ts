@@ -40,8 +40,21 @@ export function mergeSttChunks(
   return regularizeSttSegments(merged);
 }
 
+/**
+ * Whether a caption track covers the video well enough to stand in for
+ * listening to it.
+ *
+ * Counted in lines of speech, and a track read as json3 arrives as one segment
+ * holding every timed word: counted as one line, no json3 track could ever
+ * pass, so the device downloaded and transcribed the audio of every video that
+ * had perfectly good captions — and where that download failed, said the video
+ * had no speech. A segment carrying words counts a line per eight of them.
+ *
+ * A clip of 25 seconds or less asked for 20 seconds of speech across six
+ * lines, which a 16-second one cannot have; it now needs most of its length.
+ */
 export function speechCoversDuration(
-  segments: Array<{ startTime: number; endTime: number }>,
+  segments: Array<{ startTime: number; endTime: number; words?: unknown[] }>,
   durationSeconds: number,
 ): boolean {
   if (segments.length === 0) return false;
@@ -49,12 +62,16 @@ export function speechCoversDuration(
   const last = Math.max(...segments.map((segment) => segment.endTime));
   const first = Math.min(...segments.map((segment) => segment.startTime));
   const span = Math.max(0, last - first);
+  const lines = segments.reduce(
+    (count, segment) => count + Math.max(1, Math.ceil((segment.words?.length ?? 0) / 8)),
+    0,
+  );
   if (!(duration > 25)) {
-    return segments.length >= 6 && span >= 20;
+    return lines >= 3 && span >= Math.min(20, Math.max(0, duration) * 0.6);
   }
   const minSpan = Math.min(duration * 0.72, duration - 18);
   const minLines = Math.max(5, Math.floor(duration / 28));
-  return span >= minSpan && segments.length >= minLines;
+  return span >= minSpan && lines >= minLines;
 }
 
 function normalizeWord(value: string): string {

@@ -439,6 +439,40 @@ async function inBatches<T, R>(
   return out;
 }
 
+/** A line may run this long before it is cut at the next pause. */
+const PAUSE_CUT_AFTER_MS = 6000;
+/** And no longer than this, pause or not. */
+const PAUSE_CUT_HARD_MS = 12000;
+const PAUSE_MIN_GAP_MS = 250;
+
+/**
+ * Lines cut by timing alone, for speech the model could not mark.
+ *
+ * Without sentence marks the pauses are what is left: a line is closed at the
+ * first pause once it has run six seconds, and at twelve seconds regardless,
+ * so a learner reads lines that follow the talking instead of one block.
+ */
+export function spansAtPauses(
+  words: TimedWord[],
+  startIndex: number,
+  endIndex: number,
+): SentenceSpan[] {
+  const out: SentenceSpan[] = [];
+  let start = startIndex;
+  for (let i = startIndex; i <= endIndex; i += 1) {
+    const word = words[i]!;
+    const next = words[i + 1];
+    const ran = word.endMs - words[start]!.startMs;
+    const gap = next && i < endIndex ? next.startMs - word.endMs : Infinity;
+    if (i === endIndex || ran >= PAUSE_CUT_HARD_MS || (ran >= PAUSE_CUT_AFTER_MS && gap >= PAUSE_MIN_GAP_MS)) {
+      const span = spanFromWordSlice(words, start, i);
+      if (span) out.push(span);
+      start = i + 1;
+    }
+  }
+  return out;
+}
+
 export async function refineSpansWithLlm(
   words: TimedWord[],
   spans: SentenceSpan[],
@@ -465,10 +499,11 @@ export async function refineSpansWithLlm(
         out.push(...refined);
         return;
       }
-      // The model spoiled this stretch. Keep it as one line rather than lose
-      // the ones around it, which is what a single request used to cost.
-      const whole = spanFromWordSlice(words, chunk.startIndex, chunk.endIndex);
-      if (whole) out.push(whole);
+      // The model spoiled this stretch. Keep its words rather than lose the
+      // lines around it, cut where the talking pauses: kept whole, a stretch
+      // of Thai — no full stops to cut at, and long unspaced tokens the model
+      // marks inside of — was one four-minute caption.
+      out.push(...spansAtPauses(words, chunk.startIndex, chunk.endIndex));
     });
   }
   return absorbLoneFragments(words, out.length > 0 ? out : spans);

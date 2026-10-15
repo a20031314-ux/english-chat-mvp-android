@@ -41,7 +41,8 @@ export async function discoverContent(
   if (request.contentType === "video" && youtubeChannelId) {
     const cacheKey = discoveryCacheKey({
       kind: "yt-channel-uploads",
-      v: 2,
+      // 3: Shorts and over-long uploads dropped, 50 a page.
+      v: 3,
       targetLanguage: request.targetLanguage,
       youtubeChannelId,
       pageToken: request.pageToken || "",

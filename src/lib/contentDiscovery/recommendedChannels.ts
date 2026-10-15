@@ -16,6 +16,13 @@ export type RecommendedChannelSeed = {
   channelId: string;
 };
 
+/**
+ * Channels whose uploads can be studied here: speech in the language, mostly
+ * one to fifteen minutes. Checked 2026-10-15 by listing each channel's latest
+ * uploads; dropped then were NHK (Shorts and trailers), Aaj Tak and 澎湃新闻
+ * (mostly under a minute), 14F (no regular uploads), and 中田敦彦, 슈카월드 and
+ * вДудь (nearly everything past the fifteen-minute limit).
+ */
 const CHANNELS: Record<LearningLanguageCode, RecommendedChannelSeed[]> = {
   en: [
     { id: "bbc-news", name: "BBC News", handle: "BBCNews", channelId: "UC16niRr50-MSBwiO3YDb3RA" },
@@ -28,18 +35,20 @@ const CHANNELS: Record<LearningLanguageCode, RecommendedChannelSeed[]> = {
     { id: "jtbc-news", name: "JTBC 뉴스", handle: "jtbc_news", channelId: "UCsU-I-vHLiaMfV_ceaYz5rQ" },
     { id: "ytn", name: "YTN", handle: "YTN", channelId: "UChlgI3UHCOnwUGzWzbJ3H5w" },
     { id: "sbs-news", name: "SBS 뉴스", handle: "SBSNews8", channelId: "UCkinYTS9IHqOEwR1Sze2JTw" },
-    { id: "14f", name: "14F", handle: "14F", channelId: "UCYhfc_5u_UEkhcIy4XYpscA" },
-    { id: "syuka", name: "슈카월드", handle: "syukaworld", channelId: "UCsJ6RuBiTVWRX156FVbeaGg" },
+    { id: "kbs-news", name: "KBS News", handle: "newskbs", channelId: "UCcQTRi69dsVYHN3exePtZ1A" },
+    { id: "mbc-news", name: "MBCNEWS", handle: "MBCNEWS11", channelId: "UCF4Wxdo3inmxP-Y59wXDsFw" },
   ],
   ja: [
-    { id: "nhk", name: "NHK", handle: "NHK", channelId: "UCip8ve30-AoX2y2OtAAmqFA" },
-    { id: "tvtokyo-biz", name: "テレ東BIZ", handle: "tvtokyobiz", channelId: "UCkKVQ_GNjd8FbAuT6xDcWgg" },
-    { id: "nakata", name: "中田敦彦のYouTube大学", handle: "NKTofficial", channelId: "UCFo4kqllbcQ4nV83WCyraiw" },
+    { id: "ted-ed-ja", name: "好奇心を持ち続けよう — TED-Ed", handle: "TEDEdJapanese", channelId: "UCwFlWUGyXPHdsRAgmFxG_jw" },
+    { id: "tbs-news", name: "TBS NEWS DIG", handle: "tbsnewsdig", channelId: "UC6AG81pAkf6Lbi_1VC5NmPA" },
+    { id: "ntv-news", name: "日テレNEWS", handle: "ntv_news", channelId: "UCuTAXTexrhetbOe3zgskJBQ" },
     { id: "ann-news", name: "ANNニュース", handle: "ANNnewsCH", channelId: "UCGCZAYq5Xxojl_tSXcVJhiQ" },
+    { id: "tvtokyo-biz", name: "テレ東BIZ", handle: "tvtokyobiz", channelId: "UCkKVQ_GNjd8FbAuT6xDcWgg" },
   ],
   zh: [
     { id: "cctv-news", name: "央视新闻", handle: "cctv", channelId: "UCcLK3j-XWdGBnt5bR9NJHaQ" },
-    { id: "the-paper", name: "澎湃新闻", handle: "thepaper", channelId: "UCzdgh34HFyN8v2k3ZZA5uNA" },
+    { id: "bbc-chinese", name: "BBC News 中文", handle: "BBCNewsChinese", channelId: "UCb3TZ4SD_Ys3j4z0-8o6auA" },
+    { id: "dw-chinese", name: "DW 中文", handle: "dwchinese", channelId: "UC99XkAM3Y82ONvdpwUYmOZg" },
     { id: "guokr", name: "果壳", handle: "Guokr42", channelId: "UCUKNGDdsU63YxsKO7c7bzGA" },
   ],
   es: [
@@ -65,7 +74,7 @@ const CHANNELS: Record<LearningLanguageCode, RecommendedChannelSeed[]> = {
     { id: "bbc-brasil", name: "BBC News Brasil", handle: "BBCNewsBrasil", channelId: "UCthbIFAxbXTTQEC7EcQvP1Q" },
   ],
   ru: [
-    { id: "vdud", name: "вДудь", handle: "vdud", channelId: "UCMCgOm8GZkHp8zJ6l7_hIuA" },
+    { id: "bbc-russian", name: "BBC News - Русская служба", handle: "bbcnewsrussian", channelId: "UC8zQiuT0m1TELequJ5sp5zw" },
     { id: "tvrain", name: "Дождь", handle: "tvrain", channelId: "UCdubelOloxR3wzwJG9x8YqQ" },
     { id: "postnauka", name: "ПостНаука", handle: "postnauka", channelId: "UCSPd93is2UQsd_jZ6yHBfqQ" },
   ],
@@ -86,7 +95,8 @@ const CHANNELS: Record<LearningLanguageCode, RecommendedChannelSeed[]> = {
     { id: "workpoint", name: "Workpoint", handle: "workpointofficial", channelId: "UC3ZkCd7XtUREnjjt3cyY_gg" },
   ],
   hi: [
-    { id: "aaj-tak", name: "Aaj Tak", handle: "aajtak", channelId: "UCt4t-jeY85JegMlZ-E5UWtA" },
+    { id: "ndtv-india", name: "NDTV India", handle: "NDTVIndia", channelId: "UC9CYT9gSNLevX5ey2_6CK0Q" },
+    { id: "lallantop", name: "The Lallantop", handle: "thelallantop", channelId: "UCx8Z14PpntdaxCt2hakbQLQ" },
     { id: "bbc-hindi", name: "BBC News हिंदी", handle: "bbchindi", channelId: "UCN7B-QD0Qgn2boVH5Q0pOWg" },
   ],
 };

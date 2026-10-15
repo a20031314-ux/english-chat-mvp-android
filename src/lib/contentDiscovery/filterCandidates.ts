@@ -2,6 +2,7 @@ import type {
   ContentCandidate,
   ContentSearchIntent,
 } from "@/lib/contentDiscovery/types";
+import { isStudyableUpload } from "@/lib/contentDiscovery/studyableUpload";
 import {
   discoveryTextLooksWrongLanguage,
   youtubeLanguageMatchesTarget,
@@ -57,7 +58,11 @@ export function filterCandidates(
   return out;
 }
 
-/** Channel uploads: keep playlist order. Do not apply category duration/caption/topic filters. */
+/**
+ * Channel uploads: keep playlist order. Do not apply category caption/topic
+ * filters, but drop what cannot be studied: Shorts and anything past the
+ * length a video can be prepared at.
+ */
 export function filterChannelUploads(
   candidates: ContentCandidate[],
 ): ContentCandidate[] {
@@ -69,6 +74,7 @@ export function filterChannelUploads(
     seen.add(key);
     if (item.type !== "video") continue;
     if (!item.title?.trim() || !item.url?.trim()) continue;
+    if (!isStudyableUpload(item)) continue;
     out.push(item);
     if (out.length >= 50) break;
   }

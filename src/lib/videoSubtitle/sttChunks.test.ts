@@ -321,3 +321,21 @@ test("speechCoversDuration rejects a 5-minute video with three early lines", () 
     true,
   );
 });
+
+test("speechCoversDuration counts the words of a json3 track, not its one segment", () => {
+  // A json3 caption track is one segment holding every timed word.
+  const words = Array.from({ length: 280 }, (_, i) => ({ word: i % 2 ? "の" : "習慣", start: 7 + i, end: 7.8 + i }));
+  assert.equal(speechCoversDuration([{ startTime: 7, endTime: 287, words }], 300), true);
+  // A sixteen-second clip with speech through most of it.
+  assert.equal(
+    speechCoversDuration(
+      [
+        { startTime: 1, endTime: 5 },
+        { startTime: 5.5, endTime: 9 },
+        { startTime: 9.5, endTime: 14 },
+      ],
+      16,
+    ),
+    true,
+  );
+});
