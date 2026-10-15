@@ -34,14 +34,11 @@ export function ExpressionPeek({
   ui,
   expression,
   onOpen,
-  onUse,
 }: {
   ui: UICopy;
   /** Already fetched for this line, if it was opened before. */
   expression?: HowToSayExpression;
   onOpen: () => Promise<void>;
-  /** Put the expression in the input, to say it in the conversation. */
-  onUse: (text: string) => void;
 }) {
   const [open, setOpen] = useState(Boolean(expression));
   const [loading, setLoading] = useState(false);
@@ -118,13 +115,6 @@ export function ExpressionPeek({
                   {expression.moreNative ? <li>· {expression.moreNative}</li> : null}
                 </ul>
               ) : null}
-              <button
-                type="button"
-                onClick={() => onUse(expression.expression)}
-                className="mt-2 rounded-lg bg-[#e8e8e4] px-3 py-1.5 text-[13px] font-medium text-neutral-900 hover:bg-[#f5f5f3]"
-              >
-                {ui.chatUseExpression}
-              </button>
             </>
           )}
         </div>

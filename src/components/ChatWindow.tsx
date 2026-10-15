@@ -1502,10 +1502,6 @@ export function ChatWindow({
                     ui={ui}
                     expression={turn.expressionResult}
                     onOpen={() => openExpressionCard(turn.id, turn.userMessage)}
-                    onUse={(text) => {
-                      setInput(text);
-                      requestAnimationFrame(() => inputRef.current?.focus());
-                    }}
                   />
                 ) : null}
 

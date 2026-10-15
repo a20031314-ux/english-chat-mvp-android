@@ -1,7 +1,10 @@
 "use client";
 
 import { useState } from "react";
+import { TTSButton } from "@/components/TTSButton";
+import { splitAnswerForSpeech } from "@/lib/answerSpeech";
 import type { UICopy } from "@/lib/copy";
+import { learningLanguageSpeechTag } from "@/lib/learningLanguages";
 import { requestExpressionAsk } from "@/lib/requestExpressionAsk";
 import {
   saveAskTurn,
@@ -115,7 +118,12 @@ export function SentenceAskPanel({
                 {turn.question}
               </p>
               <p className="mt-1 whitespace-pre-line text-sm leading-relaxed text-[#e4e4e0]">
-                {turn.answer}
+                <AnswerText
+                  answer={turn.answer}
+                  targetLanguage={targetLanguage}
+                  uiLanguage={uiLanguage}
+                  listenLabel={ui.listen}
+                />
               </p>
             </li>
           ))}
@@ -179,6 +187,44 @@ export function SentenceAskPanel({
       </form>
       {error ? <p className="mt-2 text-sm text-rose-300">{error}</p> : null}
     </section>
+  );
+}
+
+/**
+ * An answer with a speaker after each example quoted in the learning
+ * language (lib/answerSpeech), so the examples can be heard like the
+ * sentence they explain.
+ */
+function AnswerText({
+  answer,
+  targetLanguage,
+  uiLanguage,
+  listenLabel,
+}: {
+  answer: string;
+  targetLanguage: string;
+  uiLanguage: string;
+  listenLabel: string;
+}) {
+  const lang = learningLanguageSpeechTag(targetLanguage);
+  return (
+    <>
+      {splitAnswerForSpeech(answer, targetLanguage, uiLanguage).map((part, index) =>
+        part.speak ? (
+          <span key={index}>
+            {part.text}
+            <TTSButton
+              text={part.speak}
+              lang={lang}
+              ariaLabel={listenLabel}
+              className="mx-1 inline-block px-1.5 py-0 align-baseline text-xs leading-5"
+            />
+          </span>
+        ) : (
+          <span key={index}>{part.text}</span>
+        ),
+      )}
+    </>
   );
 }
 

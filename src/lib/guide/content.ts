@@ -79,7 +79,7 @@ export const GUIDE_KO: Guide = {
         heading: "막히면 내 언어로",
         body: [
           "배우는 언어로 말하기 어려운 건 내 언어로 써도 돼요. 대화는 그대로 이어지고, 보낸 메시지 하나로 세요.",
-          "내 문장 아래 ‘{ui:chatShowExpression}’을 누르면 배우는 언어로 어떻게 말하는지 볼 수 있고, ‘{ui:chatUseExpression}’로 바로 써볼 수 있어요.",
+          "내 문장 아래 ‘{ui:chatShowExpression}’을 누르면 배우는 언어로 어떻게 말하는지 보고 들어볼 수 있어요.",
         ],
       },
       {
@@ -239,7 +239,7 @@ export const GUIDE_EN: Guide = {
         heading: "Stuck? Use your own language",
         body: [
           "If something is hard to say in the language you're learning, write it in your own. The conversation carries on, and it counts as one message like any other.",
-          "Tap {ui:chatShowExpression} under your message to see how to say it, then {ui:chatUseExpression} to try it straight away.",
+          "Tap {ui:chatShowExpression} under your message to see and hear how to say it.",
         ],
       },
       {
