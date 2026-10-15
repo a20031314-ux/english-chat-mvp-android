@@ -154,6 +154,8 @@ function LinkCard({ ui, item, onClose }: { ui: UICopy; item: CompactItem; onClos
 export function agoLabel(locale: string, at: number, now = Date.now()): string {
   const minutes = Math.round((at - now) / 60000);
   const fmt = new Intl.RelativeTimeFormat(locale, { numeric: "auto" });
+  // Under a minute is "now" — as zero minutes some languages say "this minute".
+  if (Math.abs(minutes) < 1) return fmt.format(0, "second");
   if (Math.abs(minutes) < 60) return fmt.format(minutes, "minute");
   const hours = Math.round(minutes / 60);
   if (Math.abs(hours) < 24) return fmt.format(hours, "hour");
