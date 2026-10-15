@@ -12,7 +12,7 @@
 | 서버 | main에 push하면 Vercel이 바로 배포 | — |
 | 업데이트 권장 배너 기준 | 2.64 | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
-| 다음 앱 버전 | 2.66 (versionCode 80) — main에 올림, 빌드·업로드 대기 (출시 노트 PR) | — |
+| 다음 앱 버전 | 2.66 (versionCode 80) — main에 올림, 빌드·업로드 대기 (출시 노트 PR #7) | — |
 
 ## 역할
 
