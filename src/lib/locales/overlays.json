@@ -250,7 +250,18 @@
     "linkNotUsed": "まだ使っていません",
     "linksToggle": "ほかのタブで出会った表現を表示",
     "linkFindScenes": "出てくる場面",
-    "linkSeen": "見たことのある表現"
+    "linkSeen": "見たことのある表現",
+    "markKnown": "わかる",
+    "markUnknown": "わからない",
+    "markToMap": "マップに入れる",
+    "markAdding": "追加中…",
+    "markedToMap": "マップの「{topic}」に入れました。",
+    "markOpenMap": "マップで見る",
+    "markNoMap": "先にマップを作ると、ここから入れられます。",
+    "markFailed": "入れられませんでした。もう一度押してください。",
+    "markHint": "印をつけると「わたしの表現」に残ります。マップに入れると、練習するタスクができます。",
+    "mapPickedChip": "自分で選んだ {n}",
+    "missionPickedLabel": "自分で選んだ · {focus}"
   },
   "zh": {
     "billingClose": "关闭",
@@ -503,7 +514,18 @@
     "linkNotUsed": "还没用过",
     "linksToggle": "显示在其他标签页遇到的表达",
     "linkFindScenes": "出现的场景",
-    "linkSeen": "见过的表达"
+    "linkSeen": "见过的表达",
+    "markKnown": "我会",
+    "markUnknown": "我不会",
+    "markToMap": "加到地图",
+    "markAdding": "正在添加…",
+    "markedToMap": "已加到地图的「{topic}」。",
+    "markOpenMap": "在地图中查看",
+    "markNoMap": "先画好地图，就能从这里添加。",
+    "markFailed": "没能添加，请再点一次。",
+    "markHint": "标记会保存在「我的表达」里。加到地图后会多一个练习任务。",
+    "mapPickedChip": "我选的 {n}",
+    "missionPickedLabel": "我选的 · {focus}"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -758,7 +780,18 @@
     "linkNotUsed": "Chưa dùng",
     "linksToggle": "Hiện cách nói đã gặp ở tab khác",
     "linkFindScenes": "Tìm cảnh",
-    "linkSeen": "Đã từng thấy"
+    "linkSeen": "Đã từng thấy",
+    "markKnown": "Tôi biết",
+    "markUnknown": "Tôi chưa biết",
+    "markToMap": "Thêm vào bản đồ",
+    "markAdding": "Đang thêm…",
+    "markedToMap": "Đã thêm vào “{topic}” trên bản đồ.",
+    "markOpenMap": "Xem bản đồ",
+    "markNoMap": "Hãy vẽ bản đồ trước, rồi bạn có thể thêm từ đây.",
+    "markFailed": "Chưa thêm được. Chạm để thử lại.",
+    "markHint": "Đánh dấu sẽ được lưu ở Cách nói của tôi. Thêm vào bản đồ sẽ tạo một nhiệm vụ để luyện.",
+    "mapPickedChip": "Tôi chọn {n}",
+    "missionPickedLabel": "Tôi chọn · {focus}"
   },
   "fr": {
     "billingClose": "Fermer",
@@ -1018,7 +1051,18 @@
     "linkNotUsed": "Pas encore utilisée",
     "linksToggle": "Afficher les expressions vues dans d’autres onglets",
     "linkFindScenes": "Trouver des scènes",
-    "linkSeen": "Déjà vue"
+    "linkSeen": "Déjà vue",
+    "markKnown": "Je connais",
+    "markUnknown": "Je ne connais pas",
+    "markToMap": "Ajouter à ma carte",
+    "markAdding": "Ajout…",
+    "markedToMap": "Ajoutée à « {topic} » sur ta carte.",
+    "markOpenMap": "Voir la carte",
+    "markNoMap": "Dessine d’abord ta carte, tu pourras ensuite ajouter d’ici.",
+    "markFailed": "Impossible d’ajouter. Touche pour réessayer.",
+    "markHint": "Tes marques restent dans Mes expressions. L’ajouter à la carte crée une mission pour la travailler.",
+    "mapPickedChip": "Mes choix {n}",
+    "missionPickedLabel": "Mon choix · {focus}"
   },
   "it": {
     "archive": "Report",
@@ -1470,7 +1514,18 @@
     "linkNotUsed": "Non ancora usata",
     "linksToggle": "Mostra espressioni viste in altre schede",
     "linkFindScenes": "Trova scene",
-    "linkSeen": "Già vista"
+    "linkSeen": "Già vista",
+    "markKnown": "La so",
+    "markUnknown": "Non la so",
+    "markToMap": "Aggiungi alla mappa",
+    "markAdding": "Aggiungo…",
+    "markedToMap": "Aggiunta a «{topic}» sulla mappa.",
+    "markOpenMap": "Vedi la mappa",
+    "markNoMap": "Disegna prima la mappa, poi potrai aggiungere da qui.",
+    "markFailed": "Non è stato possibile aggiungerla. Tocca per riprovare.",
+    "markHint": "I tuoi segni restano in Le mie espressioni. Aggiungerla alla mappa crea un compito per esercitarla.",
+    "mapPickedChip": "Scelte da me {n}",
+    "missionPickedLabel": "Scelta da me · {focus}"
   },
   "pt": {
     "billingClose": "Fechar",
@@ -1733,7 +1788,18 @@
     "linkNotUsed": "Ainda não usada",
     "linksToggle": "Mostrar expressões vistas em outras abas",
     "linkFindScenes": "Encontrar cenas",
-    "linkSeen": "Já vista"
+    "linkSeen": "Já vista",
+    "markKnown": "Eu sei",
+    "markUnknown": "Não sei",
+    "markToMap": "Pôr no meu mapa",
+    "markAdding": "Adicionando…",
+    "markedToMap": "Adicionada a “{topic}” no seu mapa.",
+    "markOpenMap": "Ver o mapa",
+    "markNoMap": "Desenhe seu mapa primeiro e depois você pode adicionar daqui.",
+    "markFailed": "Não foi possível adicionar. Toque para tentar de novo.",
+    "markHint": "Suas marcações ficam em Minhas expressões. Pôr no mapa cria uma tarefa para praticá-la.",
+    "mapPickedChip": "Escolhidas por mim {n}",
+    "missionPickedLabel": "Escolhida por mim · {focus}"
   },
   "ru": {
     "archive": "Отчёты",
@@ -2183,7 +2249,18 @@
     "linkNotUsed": "Ещё не использовано",
     "linksToggle": "Показывать выражения из других вкладок",
     "linkFindScenes": "Найти сцены",
-    "linkSeen": "Уже встречалось"
+    "linkSeen": "Уже встречалось",
+    "markKnown": "Знаю",
+    "markUnknown": "Не знаю",
+    "markToMap": "Добавить на карту",
+    "markAdding": "Добавляю…",
+    "markedToMap": "Добавлено в «{topic}» на карте.",
+    "markOpenMap": "Открыть карту",
+    "markNoMap": "Сначала нарисуйте карту — потом можно добавлять отсюда.",
+    "markFailed": "Не получилось добавить. Нажмите ещё раз.",
+    "markHint": "Отметки сохраняются в «Моих выражениях». Если добавить на карту, появится задание для практики.",
+    "mapPickedChip": "Мой выбор {n}",
+    "missionPickedLabel": "Мой выбор · {focus}"
   },
   "id": {
     "billingClose": "Tutup",
@@ -2442,7 +2519,18 @@
     "linkNotUsed": "Belum dipakai",
     "linksToggle": "Tampilkan ungkapan dari tab lain",
     "linkFindScenes": "Cari adegan",
-    "linkSeen": "Pernah dilihat"
+    "linkSeen": "Pernah dilihat",
+    "markKnown": "Aku tahu",
+    "markUnknown": "Aku belum tahu",
+    "markToMap": "Masukkan ke peta",
+    "markAdding": "Menambahkan…",
+    "markedToMap": "Ditambahkan ke “{topic}” di petamu.",
+    "markOpenMap": "Lihat peta",
+    "markNoMap": "Buat petamu dulu, lalu kamu bisa menambahkan dari sini.",
+    "markFailed": "Gagal menambahkan. Ketuk untuk coba lagi.",
+    "markHint": "Tandamu tersimpan di Ungkapanku. Memasukkannya ke peta akan menambah tugas untuk melatihnya.",
+    "mapPickedChip": "Pilihanku {n}",
+    "missionPickedLabel": "Pilihanku · {focus}"
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -2695,7 +2783,18 @@
     "linkNotUsed": "لم تستخدمه بعد",
     "linksToggle": "إظهار التعابير التي صادفتها في تبويبات أخرى",
     "linkFindScenes": "ابحث عن مشاهد",
-    "linkSeen": "رأيته من قبل"
+    "linkSeen": "رأيته من قبل",
+    "markKnown": "أعرفه",
+    "markUnknown": "لا أعرفه",
+    "markToMap": "أضفه إلى خريطتي",
+    "markAdding": "جارٍ الإضافة…",
+    "markedToMap": "أُضيف إلى «{topic}» في خريطتك.",
+    "markOpenMap": "عرض الخريطة",
+    "markNoMap": "ارسم خريطتك أولًا، ثم يمكنك الإضافة من هنا.",
+    "markFailed": "تعذّرت الإضافة. اضغط للمحاولة مجددًا.",
+    "markHint": "تبقى علاماتك في «تعابيري». إضافته إلى الخريطة تنشئ مهمة للتدرّب عليه.",
+    "mapPickedChip": "اخترته بنفسي {n}",
+    "missionPickedLabel": "اخترته بنفسي · {focus}"
   },
   "th": {
     "billingClose": "ปิด",
@@ -2948,7 +3047,18 @@
     "linkNotUsed": "ยังไม่ได้ใช้",
     "linksToggle": "แสดงสำนวนที่เจอในแท็บอื่น",
     "linkFindScenes": "หาฉาก",
-    "linkSeen": "เคยเห็นแล้ว"
+    "linkSeen": "เคยเห็นแล้ว",
+    "markKnown": "รู้แล้ว",
+    "markUnknown": "ยังไม่รู้",
+    "markToMap": "ใส่ในแผนที่",
+    "markAdding": "กำลังเพิ่ม…",
+    "markedToMap": "เพิ่มใน “{topic}” บนแผนที่แล้ว",
+    "markOpenMap": "ดูแผนที่",
+    "markNoMap": "วาดแผนที่ก่อน แล้วจะเพิ่มจากตรงนี้ได้",
+    "markFailed": "เพิ่มไม่สำเร็จ แตะเพื่อลองอีกครั้ง",
+    "markHint": "สิ่งที่ทำเครื่องหมายจะอยู่ในสำนวนของฉัน ถ้าใส่ในแผนที่จะได้ภารกิจไว้ฝึก",
+    "mapPickedChip": "ที่ฉันเลือก {n}",
+    "missionPickedLabel": "ที่ฉันเลือก · {focus}"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -3201,6 +3311,17 @@
     "linkNotUsed": "अभी इस्तेमाल नहीं किया",
     "linksToggle": "दूसरे टैब में मिले वाक्यांश दिखाएँ",
     "linkFindScenes": "दृश्य खोजें",
-    "linkSeen": "पहले देखा है"
+    "linkSeen": "पहले देखा है",
+    "markKnown": "मुझे आता है",
+    "markUnknown": "मुझे नहीं आता",
+    "markToMap": "मेरे नक्शे में डालें",
+    "markAdding": "जोड़ रहे हैं…",
+    "markedToMap": "नक्शे में “{topic}” में जोड़ दिया।",
+    "markOpenMap": "नक्शा देखें",
+    "markNoMap": "पहले अपना नक्शा बनाएँ, फिर यहाँ से जोड़ सकते हैं।",
+    "markFailed": "नहीं जोड़ पाए। फिर से दबाएँ।",
+    "markHint": "आपके निशान मेरे वाक्यांश में रहते हैं। नक्शे में डालने पर इसका अभ्यास करने वाला टास्क बनता है।",
+    "mapPickedChip": "मेरी पसंद {n}",
+    "missionPickedLabel": "मेरी पसंद · {focus}"
   }
 }

@@ -192,3 +192,20 @@ test("the mark's label is in the app's language, not the English name handed ove
   assert.equal(dropped?.focusFits, false);
   assert.equal(dropped?.mission.focus, undefined);
 });
+
+test("a pick goes first, counts as a pick and not as a weak spot, and puts its topic first", async () => {
+  const { pickMissionPrompt } = await import("./weakPoints.ts");
+  const pick = { task: "tp", answer: "ap", hints: ["h", "s…"] as [string, string], weak: "pick:wait it out", focus: "기다리기", picked: true };
+  const base = addWeakMission({ missions: [own("m1"), own("m2")], results: {} }, weak).topic;
+  const { topic } = addWeakMission(base, pick);
+  assert.deepEqual(practiceOrder(topic).map((m) => m.id), ["w2", "w1", "m1", "m2"]);
+  assert.equal(topicCounts(topic).picked, 1);
+  assert.equal(topicCounts(topic).weak, 1, "the pick is not counted as a mistake");
+  assert.equal(openWeakCount({ A: topic }), 1);
+  assert.equal(hasTopicMissions({ missions: [{ ...pick, id: "w1" }], results: {} }), false);
+  const map = mapOf(["A1", "B1", "C1"]);
+  const order = recommendedOrder(map, {}, { B1: { mastered: 0, learned: 0, toLearn: 1, weak: 1 }, C1: { mastered: 0, learned: 0, toLearn: 1, picked: 1 } });
+  assert.deepEqual(order.map((r) => r.topic.id), ["C1", "B1", "A1"]);
+  assert.equal(order[0]!.reason, "picked");
+  assert.match(pickMissionPrompt({ target: "Thai", uiName: "Korean", level: "beginner" }), /picked something/);
+});

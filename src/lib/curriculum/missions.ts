@@ -45,6 +45,12 @@ export type Mission = {
    */
   weak?: string;
   focus?: string;
+  /**
+   * Set on a mission the learner put on the map themselves, from a sentence
+   * they were looking at ("put it on my map"). Practised first, like a weak
+   * spot, and marked as their own choice.
+   */
+  picked?: boolean;
 };
 
 export type MissionVerdict = "pass" | "close" | "miss";
@@ -328,10 +334,12 @@ export type TopicCounts = {
   done: number;
   /** Added for a recurring mistake and not yet mastered. */
   weak: number;
+  /** Put on the map by the learner and not yet mastered. */
+  picked: number;
 };
 
 export function topicCounts(state: TopicMissions | null | undefined, now = Date.now()): TopicCounts {
-  const counts: TopicCounts = { total: 0, mastered: 0, learned: 0, toLearn: 0, seen: 0, due: 0, done: 0, weak: 0 };
+  const counts: TopicCounts = { total: 0, mastered: 0, learned: 0, toLearn: 0, seen: 0, due: 0, done: 0, weak: 0, picked: 0 };
   if (!state) return counts;
   for (const mission of state.missions) {
     const item = itemState(state, mission.id, now);
@@ -340,7 +348,8 @@ export function topicCounts(state: TopicMissions | null | undefined, now = Date.
     if (item.state === "toLearn" && item.seen) counts.seen += 1;
     if (item.due) counts.due += 1;
     if (item.state !== "toLearn") counts.done += 1;
-    if (mission.weak && item.state !== "mastered") counts.weak += 1;
+    if (mission.weak && !mission.picked && item.state !== "mastered") counts.weak += 1;
+    if (mission.picked && item.state !== "mastered") counts.picked += 1;
   }
   return counts;
 }
@@ -371,12 +380,17 @@ export function nextMission(state: TopicMissions): Mission | null {
 
 /** The order the task screen goes through, and numbers, a topic's missions in. */
 export function practiceOrder(state: TopicMissions): Mission[] {
-  return [...state.missions.filter((m) => m.weak), ...state.missions.filter((m) => !m.weak)];
+  // Their own picks first, then weak spots, then the topic's own missions.
+  return [
+    ...state.missions.filter((m) => m.picked),
+    ...state.missions.filter((m) => m.weak && !m.picked),
+    ...state.missions.filter((m) => !m.weak && !m.picked),
+  ];
 }
 
 /** Whether the topic's own missions have been written, beside any added for mistakes. */
 export function hasTopicMissions(state: TopicMissions | null | undefined): boolean {
-  return Boolean(state?.missions.some((m) => !m.weak));
+  return Boolean(state?.missions.some((m) => !m.weak && !m.picked));
 }
 
 /**
@@ -385,9 +399,9 @@ export function hasTopicMissions(state: TopicMissions | null | undefined): boole
  * done on the added ones kept.
  */
 export function withTopicMissions(state: TopicMissions | null | undefined, written: Mission[]): TopicMissions {
-  const added = (state?.missions ?? []).filter((m) => m.weak);
+  const added = (state?.missions ?? []).filter((m) => m.weak || m.picked);
   return {
-    missions: [...written.filter((m) => !m.weak), ...added],
+    missions: [...written.filter((m) => !m.weak && !m.picked), ...added],
     results: state?.results ?? {},
     ...(state?.seen ? { seen: state.seen } : {}),
   };

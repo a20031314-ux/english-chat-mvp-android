@@ -2,8 +2,8 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
-import { readLedger, recordMeets, type MeetEvent } from "@/lib/server/ledgerStore";
-import { isLedgerTab, ledgerItems, summarize } from "@/lib/learner/ledger";
+import { readLedger, recordMeets, updateLedger, type MeetEvent } from "@/lib/server/ledgerStore";
+import { applyMark, isLedgerTab, ledgerItems, summarize, type LedgerTab } from "@/lib/learner/ledger";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 
 export const dynamic = "force-dynamic";
@@ -43,6 +43,7 @@ export async function GET(request: NextRequest) {
         state: item.state,
         firstMet: item.firstMet,
         ...(item.masteredAt ? { masteredAt: item.masteredAt } : {}),
+        ...(item.mark ? { mark: item.mark } : {}),
         lastOutput: item.outputs[item.outputs.length - 1] ?? null,
       })),
     });
@@ -56,6 +57,7 @@ export async function GET(request: NextRequest) {
       firstMet: item.firstMet,
       lastOutput: item.outputs[item.outputs.length - 1] ?? null,
       ...(item.masteredAt ? { masteredAt: item.masteredAt } : {}),
+      ...(item.mark ? { mark: item.mark } : {}),
       understood: Boolean(item.understood),
       onMap: Boolean(item.map),
       lastAt: item.lastAt,
@@ -82,6 +84,21 @@ export async function POST(request: NextRequest) {
       if (row.kind !== "save" || !text.trim() || !isLedgerTab(row.tab)) return [];
       return [{ kind: "save", text, tab: row.tab }];
     });
-  if (meets.length) await recordMeets(userId, coerceLanguageCode(body.language), meets);
-  return jsonWithCors(request, { ok: true, recorded: meets.length });
+  // Marks from the sentence sheet: "I know this" / "I don't know this".
+  const marks = (Array.isArray(body.marks) ? body.marks : [])
+    .slice(0, 10)
+    .flatMap((raw): Array<{ text: string; mark: "known" | "unknown"; tab: LedgerTab }> => {
+      const row = (raw ?? {}) as Record<string, unknown>;
+      const text = typeof row.text === "string" ? row.text.slice(0, 120) : "";
+      if ((row.mark !== "known" && row.mark !== "unknown") || !text.trim()) return [];
+      return [{ text, mark: row.mark, tab: isLedgerTab(row.tab) ? row.tab : "chat" }];
+    });
+  const language = coerceLanguageCode(body.language);
+  if (meets.length) await recordMeets(userId, language, meets);
+  if (marks.length) {
+    await updateLedger(userId, language, (ledger) =>
+      marks.reduce((l, m) => applyMark(l, m.text, m.mark, { tab: m.tab }), ledger),
+    );
+  }
+  return jsonWithCors(request, { ok: true, recorded: meets.length + marks.length });
 }

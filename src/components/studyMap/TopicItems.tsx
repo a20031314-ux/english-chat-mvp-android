@@ -92,7 +92,7 @@ export function TopicItems({
                 {label[item.state]}
                 {item.seen && item.state === "toLearn" ? ` · ${ui.itemSeen}` : ""}
                 {mission.weak ? (
-                  <span className="ms-1.5 text-rose-200">{weakLabel(ui.missionWeakLabel, mission.focus)}</span>
+                  <span className="ms-1.5 text-rose-200">{weakLabel(mission.picked ? ui.missionPickedLabel : ui.missionWeakLabel, mission.focus)}</span>
                 ) : null}
               </span>
               {item.state === "toLearn" ? (

@@ -15,7 +15,7 @@
 import type { MapTopic, StudyMap, TopicStatus } from "./map.ts";
 import type { TopicCounts } from "./missions.ts";
 
-export type RecommendReason = "weak" | "continue" | "next" | "done";
+export type RecommendReason = "picked" | "weak" | "continue" | "next" | "done";
 
 export type Recommended = {
   topic: MapTopic;
@@ -24,11 +24,13 @@ export type Recommended = {
   reason: RecommendReason;
   /** Items added for recurring mistakes and not mastered yet. */
   weak: number;
+  /** Items the learner put on the map and not mastered yet. */
+  picked: number;
 };
 
-type Counts = Pick<TopicCounts, "mastered" | "learned" | "toLearn"> & { weak?: number };
+type Counts = Pick<TopicCounts, "mastered" | "learned" | "toLearn"> & { weak?: number; picked?: number };
 
-const RANK: Record<RecommendReason, number> = { weak: 0, continue: 1, next: 2, done: 3 };
+const RANK: Record<RecommendReason, number> = { picked: 0, weak: 1, continue: 2, next: 3, done: 4 };
 
 export function recommendedOrder(
   map: StudyMap,
@@ -38,19 +40,22 @@ export function recommendedOrder(
   const rows = map.topics.map((topic) => {
     const c = counts[topic.id];
     const weak = c?.weak ?? 0;
+    const picked = c?.picked ?? 0;
     const state = status[topic.id] ?? "todo";
     const open = c ? c.learned + c.toLearn > 0 : true;
     let reason: RecommendReason;
-    if (weak > 0) reason = "weak";
+    if (picked > 0) reason = "picked";
+    else if (weak > 0) reason = "weak";
     else if (state === "done" || (c && !open && c.mastered > 0)) reason = "done";
     else if (state === "doing") reason = "continue";
     else reason = "next";
-    return { topic, reason, weak };
+    return { topic, reason, weak, picked };
   });
   rows.sort(
     (a, b) =>
       RANK[a.reason] - RANK[b.reason] ||
       (a.reason === "weak" ? b.weak - a.weak : 0) ||
+      (a.reason === "picked" ? b.picked - a.picked : 0) ||
       a.topic.order - b.topic.order,
   );
   return rows.map((row, index) => ({ ...row, place: index + 1 }));

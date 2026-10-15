@@ -74,6 +74,12 @@ export type LedgerItem = {
   /** Heard often enough without being looked up again. */
   understood?: boolean;
   map?: { mapId: string; topicId: string; missionId: string };
+  /**
+   * What the learner said about it themselves, from the sentence sheet.
+   * Recorded, never taken as mastery: "known" sends its map task back, and
+   * mastery still comes only from producing it.
+   */
+  mark?: "known" | "unknown";
   firstAt: number;
   lastAt: number;
 };
@@ -362,4 +368,19 @@ export function recyclePrompt(phrases: string[]): string {
     .map((p) => `"${p}"`)
     .join(", ")}.
 When the conversation gives a natural opening, use one of them in your own line — at most one per turn, only where a speaker would really say it, never forced, never pointed out. If none fits, do not use any.`;
+}
+
+/** The learner marked a phrase as known or not known. Met, at least; the state is not raised. */
+export function applyMark(
+  ledger: Ledger,
+  text: string,
+  mark: "known" | "unknown",
+  where: Omit<Place, "at">,
+  now = Date.now(),
+): Ledger {
+  const met = applyMeet(ledger, text, mark === "unknown" ? "lookup" : "task", where, now);
+  const key = ledgerKey(cleanText(text));
+  const item = met.items[key];
+  if (!item) return met;
+  return { ...met, items: { ...met.items, [key]: { ...item, mark } } };
 }

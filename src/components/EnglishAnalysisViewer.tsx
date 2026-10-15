@@ -14,6 +14,7 @@ import { useVocabPreviewOptional } from "@/contexts/VocabPreviewContext";
 import { isSameAnalysisSpan } from "@/lib/englishAnalysis";
 import { idiomUnitContaining } from "@/lib/expressionUnits";
 import { SentenceAskPanel, SentenceAskThreads } from "@/components/SentenceAskPanel";
+import { MarkForMap } from "@/components/MarkForMap";
 import {
   clickRangeForText,
   findLearningSpan,
@@ -29,6 +30,7 @@ import {
   loadSentenceNote,
   saveSentenceUnits,
   sentenceNoteKey,
+  threadForWords,
   type SentenceNote,
 } from "@/lib/sentenceNotes";
 import { listWordSpans } from "@/lib/textTokens";
@@ -445,6 +447,17 @@ function SentenceTab({
         targetLanguage={targetLanguage}
         onNote={setNote}
         onDelete={(threadId) => setNote(deleteAskThread(noteIdentity, threadId))}
+      />
+      <MarkForMap
+        key={`mark-${askWords}`}
+        ui={ui}
+        text={askWords}
+        sentence={sentence}
+        language={targetLanguage}
+        asked={(() => {
+          const last = threadForWords(note, askWords)?.turns.at(-1);
+          return last ? { question: last.question, answer: last.answer } : undefined;
+        })()}
       />
       <SentenceAskThreads
         ui={ui}

@@ -54,6 +54,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   learnerObserve: 1,
   // A topic's missions, written once the first time it is practised.
   curriculumMissions: 1,
+  // A phrase the learner put on their map from the sentence sheet, written as a task.
+  learnerPick: 1,
   // One mission answer checked: verdict, correction and the other person's reply.
   missionCheck: 1,
   // A corrected chat or call line read for the kind of mistake it was

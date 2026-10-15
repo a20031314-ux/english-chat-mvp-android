@@ -510,6 +510,11 @@ function MapView({
             <span className="ms-2 font-normal text-neutral-600">
               {nextRow?.place}. {next.title}
             </span>
+            {nextRow?.picked ? (
+              <span className="ms-2 inline-block whitespace-nowrap rounded-full bg-violet-500/15 px-2 py-0.5 text-[11px] font-normal text-violet-700">
+                {ui.mapPickedChip.replace("{n}", String(nextRow.picked))}
+              </span>
+            ) : null}
             {nextRow?.weak ? (
               <span className="ms-2 inline-block whitespace-nowrap rounded-full bg-rose-500/15 px-2 py-0.5 text-[11px] font-normal text-rose-700">
                 {ui.mapWeakChip.replace("{n}", String(nextRow.weak))}
@@ -523,17 +528,20 @@ function MapView({
         <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.mapOrderTitle}</p>
         <p className="mt-0.5 text-[11px] text-slate-600">{ui.mapOrderAdaptive}</p>
         <ol className="mt-2 flex gap-1.5 overflow-x-auto pb-1">
-          {recommended.map(({ topic, place, weak }) => (
+          {recommended.map(({ topic, place, weak, picked }) => (
             <li key={topic.id} className="shrink-0">
               <button
                 type="button"
                 onClick={() => onOpenTopic(topic.id)}
                 className={`flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[12px] text-slate-300 hover:bg-white/10 ${
-                  weak ? "border-rose-300/40" : "border-white/10"
+                  picked ? "border-violet-300/40" : weak ? "border-rose-300/40" : "border-white/10"
                 }`}
               >
                 <span className={`h-1.5 w-1.5 rounded-full ${STATUS_DOT[status[topic.id] ?? "todo"]}`} />
                 {place}. {topic.title}
+                {picked ? (
+                  <span className="whitespace-nowrap text-[11px] text-violet-200">{ui.mapPickedChip.replace("{n}", String(picked))}</span>
+                ) : null}
                 {weak ? (
                   <span className="whitespace-nowrap text-[11px] text-rose-200">{ui.mapWeakChip.replace("{n}", String(weak))}</span>
                 ) : null}
@@ -573,6 +581,11 @@ function MapView({
                       <span className={`h-1.5 w-1.5 rounded-full ${STATUS_DOT[status[topic.id] ?? "todo"]}`} />
                       {placeOf.get(topic.id)?.place ?? topic.order}
                     </span>
+                    {placeOf.get(topic.id)?.picked ? (
+                      <span className="me-1 mt-1 inline-block rounded-full bg-violet-300/10 px-1.5 py-0.5 text-[10px] text-violet-200">
+                        {ui.mapPickedChip.replace("{n}", String(placeOf.get(topic.id)!.picked))}
+                      </span>
+                    ) : null}
                     {placeOf.get(topic.id)?.weak ? (
                       <span className="mt-1 inline-block rounded-full bg-rose-300/10 px-1.5 py-0.5 text-[10px] text-rose-200">
                         {ui.mapWeakChip.replace("{n}", String(placeOf.get(topic.id)!.weak))}
