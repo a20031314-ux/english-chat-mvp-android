@@ -249,7 +249,8 @@
     "linkUsedIn": "{place}で使用 · {ago}",
     "linkNotUsed": "まだ使っていません",
     "linksToggle": "ほかのタブで出会った表現を表示",
-    "linkFindScenes": "出てくる場面"
+    "linkFindScenes": "出てくる場面",
+    "linkSeen": "見たことのある表現"
   },
   "zh": {
     "billingClose": "关闭",
@@ -501,7 +502,8 @@
     "linkUsedIn": "在{place}用过 · {ago}",
     "linkNotUsed": "还没用过",
     "linksToggle": "显示在其他标签页遇到的表达",
-    "linkFindScenes": "出现的场景"
+    "linkFindScenes": "出现的场景",
+    "linkSeen": "见过的表达"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -755,7 +757,8 @@
     "linkUsedIn": "Đã dùng ở {place} · {ago}",
     "linkNotUsed": "Chưa dùng",
     "linksToggle": "Hiện cách nói đã gặp ở tab khác",
-    "linkFindScenes": "Tìm cảnh"
+    "linkFindScenes": "Tìm cảnh",
+    "linkSeen": "Đã từng thấy"
   },
   "fr": {
     "billingClose": "Fermer",
@@ -1014,7 +1017,8 @@
     "linkUsedIn": "Utilisée dans {place} · {ago}",
     "linkNotUsed": "Pas encore utilisée",
     "linksToggle": "Afficher les expressions vues dans d’autres onglets",
-    "linkFindScenes": "Trouver des scènes"
+    "linkFindScenes": "Trouver des scènes",
+    "linkSeen": "Déjà vue"
   },
   "it": {
     "archive": "Report",
@@ -1465,7 +1469,8 @@
     "linkUsedIn": "Usata in {place} · {ago}",
     "linkNotUsed": "Non ancora usata",
     "linksToggle": "Mostra espressioni viste in altre schede",
-    "linkFindScenes": "Trova scene"
+    "linkFindScenes": "Trova scene",
+    "linkSeen": "Già vista"
   },
   "pt": {
     "billingClose": "Fechar",
@@ -1727,7 +1732,8 @@
     "linkUsedIn": "Usada em {place} · {ago}",
     "linkNotUsed": "Ainda não usada",
     "linksToggle": "Mostrar expressões vistas em outras abas",
-    "linkFindScenes": "Encontrar cenas"
+    "linkFindScenes": "Encontrar cenas",
+    "linkSeen": "Já vista"
   },
   "ru": {
     "archive": "Отчёты",
@@ -2176,7 +2182,8 @@
     "linkUsedIn": "Использовано: {place} · {ago}",
     "linkNotUsed": "Ещё не использовано",
     "linksToggle": "Показывать выражения из других вкладок",
-    "linkFindScenes": "Найти сцены"
+    "linkFindScenes": "Найти сцены",
+    "linkSeen": "Уже встречалось"
   },
   "id": {
     "billingClose": "Tutup",
@@ -2434,7 +2441,8 @@
     "linkUsedIn": "Dipakai di {place} · {ago}",
     "linkNotUsed": "Belum dipakai",
     "linksToggle": "Tampilkan ungkapan dari tab lain",
-    "linkFindScenes": "Cari adegan"
+    "linkFindScenes": "Cari adegan",
+    "linkSeen": "Pernah dilihat"
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -2686,7 +2694,8 @@
     "linkUsedIn": "استخدمته في {place} · {ago}",
     "linkNotUsed": "لم تستخدمه بعد",
     "linksToggle": "إظهار التعابير التي صادفتها في تبويبات أخرى",
-    "linkFindScenes": "ابحث عن مشاهد"
+    "linkFindScenes": "ابحث عن مشاهد",
+    "linkSeen": "رأيته من قبل"
   },
   "th": {
     "billingClose": "ปิด",
@@ -2938,7 +2947,8 @@
     "linkUsedIn": "ใช้ใน {place} · {ago}",
     "linkNotUsed": "ยังไม่ได้ใช้",
     "linksToggle": "แสดงสำนวนที่เจอในแท็บอื่น",
-    "linkFindScenes": "หาฉาก"
+    "linkFindScenes": "หาฉาก",
+    "linkSeen": "เคยเห็นแล้ว"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -3190,6 +3200,7 @@
     "linkUsedIn": "{place} में इस्तेमाल · {ago}",
     "linkNotUsed": "अभी इस्तेमाल नहीं किया",
     "linksToggle": "दूसरे टैब में मिले वाक्यांश दिखाएँ",
-    "linkFindScenes": "दृश्य खोजें"
+    "linkFindScenes": "दृश्य खोजें",
+    "linkSeen": "पहले देखा है"
   }
 }

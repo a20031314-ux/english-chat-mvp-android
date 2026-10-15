@@ -86,11 +86,17 @@ export function LedgerLinks({
       <div className="flex flex-wrap gap-1.5">
         {chips.map((item) => {
           const justMastered = kind === "mine" && item.masteredAt && now - item.masteredAt < JUST_NOW_MS;
+          // Heard or read: "you know this" only once it is learned or
+          // mastered; only looked up, it is "seen before" — a second chance
+          // to notice it, not a claim that it is known.
+          const seenOnly = kind === "heard" && item.state === "met";
           const label = justMastered
             ? ui.linkMasteredNow
             : kind === "mine"
               ? ui.linkMetIn.replace("{place}", placeLabel(ui, item.firstMet))
-              : ui.linkKnown;
+              : seenOnly
+                ? ui.linkSeen
+                : ui.linkKnown;
           return (
             <button
               key={item.text}
@@ -99,7 +105,9 @@ export function LedgerLinks({
               className={`flex max-w-full items-center gap-1.5 rounded-full border px-2.5 py-1 text-[11px] ${
                 justMastered
                   ? "border-emerald-400/40 bg-emerald-950/80 text-emerald-100"
-                  : "border-sky-300/30 bg-sky-950/80 text-sky-100"
+                  : seenOnly
+                    ? "border-white/20 bg-neutral-900/90 text-slate-300"
+                    : "border-sky-300/30 bg-sky-950/80 text-sky-100"
               }`}
             >
               <span className={`h-1.5 w-1.5 shrink-0 rounded-full ${DOT[item.state]}`} />
