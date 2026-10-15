@@ -1,0 +1,4 @@
+• “Minhas expressões”, no topo do mapa, mostra o que encontraste em vídeos, chat, chamadas e na lista de palavras, e quanto já usas sozinho.
+• As abas ligam-se: uma expressão vista num vídeo é assinalada no chat, e o tutor volta a usar o que aprendeste.
+• Na análise de frase, marca uma expressão com “Eu sei” ou “Não sei” e põe-na no mapa como tarefa.
+• Chamadas: as traduções ficam recolhidas até tocares numa linha, a ajuda aparece à parte e podes voltar a dizer as tuas frases.

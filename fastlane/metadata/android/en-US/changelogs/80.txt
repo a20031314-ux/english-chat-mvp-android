@@ -1,0 +1,4 @@
+• “My phrases” on the map shows every phrase you met in videos, chat, calls and your word list, and how many you now use on your own.
+• The tabs connect: a phrase met in a video is marked when you use it in chat, and the tutor brings back what you learned.
+• In sentence analysis, mark a phrase “I know this” or “I don’t know this” and put it on your map as a task.
+• Calls: translations stay folded until you tap a line, help shows apart, and you can say your own lines again after the call.
