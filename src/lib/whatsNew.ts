@@ -34,6 +34,15 @@ export type ReleaseNote = { version: string; items: WhatsNewItem[] };
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    version: "2.66",
+    items: [
+      { id: "ledger", title: "whatsNewLedgerTitle", body: "whatsNewLedgerBody", shot: "ledger", tab: "map" },
+      { id: "links", title: "whatsNewLinksTitle", body: "whatsNewLinksBody", shot: "links", tab: "chat" },
+      { id: "pick", title: "whatsNewPickTitle", body: "whatsNewPickBody", shot: "pick", tab: "chat" },
+      { id: "calltools", title: "whatsNewCallToolsTitle", body: "whatsNewCallToolsBody", shot: "calltools", tab: "roleplay" },
+    ],
+  },
+  {
     version: "2.65",
     items: [
       { id: "mission", title: "whatsNewMissionTitle", body: "whatsNewMissionBody", shot: "mission", tab: "map" },

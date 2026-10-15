@@ -261,7 +261,15 @@
     "markFailed": "入れられませんでした。もう一度押してください。",
     "markHint": "印をつけると「わたしの表現」に残ります。マップに入れると、練習するタスクができます。",
     "mapPickedChip": "自分で選んだ {n}",
-    "missionPickedLabel": "自分で選んだ · {focus}"
+    "missionPickedLabel": "自分で選んだ · {focus}",
+    "whatsNewLedgerTitle": "ためてきた表現が見えます",
+    "whatsNewLedgerBody": "マップ上の「わたしの表現」に、動画・チャット・通話・単語帳で出会った表現が集まり、そのうち覚えたものと自分で使えるようになったものが週ごとにどれだけ増えたかを見られます。",
+    "whatsNewLinksTitle": "タブ同士がつながります",
+    "whatsNewLinksBody": "動画で調べた表現をチャットで使うと、自分の文の下にどこで出会ったかが表示され、タップするとその場面に戻れます。チューターも覚えた表現を会話でまた使ってくれます。",
+    "whatsNewPickTitle": "マップに入れるものを自分で選べます",
+    "whatsNewPickBody": "文章分析で表現を選んで「わかる」「わからない」を付け、質問したあと「マップに入れる」を押すと、合うトピックの最初のタスクになります。",
+    "whatsNewCallToolsTitle": "通話を振り返れます",
+    "whatsNewCallToolsBody": "キャラクターのセリフの訳はたたんであり、行をタップすると見えます。詰まったときのヒントは別に表示され、通話後は自分の文を「もう一度言ってみる」で言い直せます。"
   },
   "zh": {
     "billingClose": "关闭",
@@ -525,7 +533,15 @@
     "markFailed": "没能添加，请再点一次。",
     "markHint": "标记会保存在「我的表达」里。加到地图后会多一个练习任务。",
     "mapPickedChip": "我选的 {n}",
-    "missionPickedLabel": "我选的 · {focus}"
+    "missionPickedLabel": "我选的 · {focus}",
+    "whatsNewLedgerTitle": "看见你积累的表达",
+    "whatsNewLedgerBody": "地图顶部的“我的表达”汇集你在视频、聊天、通话和生词本里遇到的表达，并按周显示学会的和能自己用出来的增加了多少。",
+    "whatsNewLinksTitle": "各个标签页连起来了",
+    "whatsNewLinksBody": "在聊天里用上在视频中查过的表达，你的句子下面会显示在哪里遇到它，点一下就能回到那个场景。导师也会在对话里再用你学过的表达。",
+    "whatsNewPickTitle": "自己选择放进地图的内容",
+    "whatsNewPickBody": "在句子分析里选中一个表达，标记“我会”或“我不会”；提问之后点“加到地图”，它就成为对应主题的第一个任务。",
+    "whatsNewCallToolsTitle": "通话可以回头再看",
+    "whatsNewCallToolsBody": "角色台词的翻译默认收起，点一下那一行才显示。卡住时的提示单独显示，通话结束后还能用“再说一遍”重说你自己的句子。"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -791,7 +807,15 @@
     "markFailed": "Chưa thêm được. Chạm để thử lại.",
     "markHint": "Đánh dấu sẽ được lưu ở Cách nói của tôi. Thêm vào bản đồ sẽ tạo một nhiệm vụ để luyện.",
     "mapPickedChip": "Tôi chọn {n}",
-    "missionPickedLabel": "Tôi chọn · {focus}"
+    "missionPickedLabel": "Tôi chọn · {focus}",
+    "whatsNewLedgerTitle": "Xem những cách nói bạn đã tích lũy",
+    "whatsNewLedgerBody": "“Cách nói của tôi” ở đầu bản đồ gom mọi cách nói bạn gặp trong video, trò chuyện, cuộc gọi và sổ từ, và cho thấy theo từng tuần bạn đã học thêm bao nhiêu và tự dùng được bao nhiêu.",
+    "whatsNewLinksTitle": "Các tab giờ đã nối với nhau",
+    "whatsNewLinksBody": "Khi dùng trong trò chuyện một cách nói bạn đã tra trong video, câu của bạn sẽ ghi bạn gặp nó ở đâu — chạm để quay lại cảnh đó. Gia sư cũng dùng lại những cách nói bạn đã học.",
+    "whatsNewPickTitle": "Tự chọn điều đưa vào bản đồ",
+    "whatsNewPickBody": "Trong phân tích câu, chọn một cách nói và đánh dấu “Tôi biết” hoặc “Tôi chưa biết”. Sau khi hỏi, chạm “Thêm vào bản đồ” để nó thành việc đầu tiên của chủ đề phù hợp.",
+    "whatsNewCallToolsTitle": "Xem lại cuộc gọi",
+    "whatsNewCallToolsBody": "Bản dịch lời nhân vật được gập lại cho đến khi bạn chạm vào dòng đó. Gợi ý lúc bạn bị bí hiện riêng, và sau cuộc gọi bạn có thể nói lại bất kỳ câu nào của mình."
   },
   "fr": {
     "billingClose": "Fermer",
@@ -1062,7 +1086,15 @@
     "markFailed": "Impossible d’ajouter. Touche pour réessayer.",
     "markHint": "Tes marques restent dans Mes expressions. L’ajouter à la carte crée une mission pour la travailler.",
     "mapPickedChip": "Mes choix {n}",
-    "missionPickedLabel": "Mon choix · {focus}"
+    "missionPickedLabel": "Mon choix · {focus}",
+    "whatsNewLedgerTitle": "Voyez les expressions que vous avez accumulées",
+    "whatsNewLedgerBody": "« Mes expressions », en haut de la carte, rassemble ce que vous avez croisé dans les vidéos, le chat, les appels et votre liste de mots, et montre semaine après semaine combien vous en avez appris et savez utiliser seul.",
+    "whatsNewLinksTitle": "Les onglets se parlent",
+    "whatsNewLinksBody": "Utilisez dans le chat une expression cherchée dans une vidéo : votre phrase indique où vous l'avez croisée, touchez pour revenir à cette scène. Le tuteur réutilise aussi ce que vous avez appris.",
+    "whatsNewPickTitle": "Choisissez ce qui va sur votre carte",
+    "whatsNewPickBody": "Dans l'analyse de phrase, sélectionnez une expression et marquez « Je connais » ou « Je ne connais pas ». Après votre question, touchez « Ajouter à ma carte » : elle devient la première tâche du thème qui lui correspond.",
+    "whatsNewCallToolsTitle": "Des appels à revoir",
+    "whatsNewCallToolsBody": "Les traductions du personnage restent repliées jusqu'à ce que vous touchiez une ligne. L'aide reçue quand vous étiez bloqué s'affiche à part, et après l'appel vous pouvez redire n'importe laquelle de vos phrases."
   },
   "it": {
     "archive": "Report",
@@ -1525,7 +1557,15 @@
     "markFailed": "Non è stato possibile aggiungerla. Tocca per riprovare.",
     "markHint": "I tuoi segni restano in Le mie espressioni. Aggiungerla alla mappa crea un compito per esercitarla.",
     "mapPickedChip": "Scelte da me {n}",
-    "missionPickedLabel": "Scelta da me · {focus}"
+    "missionPickedLabel": "Scelta da me · {focus}",
+    "whatsNewLedgerTitle": "Guarda le espressioni che hai accumulato",
+    "whatsNewLedgerBody": "«Le mie espressioni», in cima alla mappa, raccoglie quelle incontrate in video, chat, chiamate e nella lista di parole, e mostra settimana per settimana quante ne hai imparate e sai usare da solo.",
+    "whatsNewLinksTitle": "Le schede ora sono collegate",
+    "whatsNewLinksBody": "Se in chat usi un'espressione cercata in un video, la tua frase dice dove l'hai incontrata: toccala per tornare a quella scena. Anche il tutor riprende le espressioni che hai imparato.",
+    "whatsNewPickTitle": "Scegli tu cosa va sulla mappa",
+    "whatsNewPickBody": "Nell'analisi della frase scegli un'espressione e segnala con «La so» o «Non la so». Dopo la domanda tocca «Aggiungi alla mappa» e diventa il primo compito dell'argomento giusto.",
+    "whatsNewCallToolsTitle": "Chiamate da ripassare",
+    "whatsNewCallToolsBody": "Le traduzioni del personaggio restano chiuse finché non tocchi una riga. L'aiuto per quando eri bloccato appare a parte, e dopo la chiamata puoi ridire qualsiasi tua frase."
   },
   "pt": {
     "billingClose": "Fechar",
@@ -1799,7 +1839,15 @@
     "markFailed": "Não foi possível adicionar. Toque para tentar de novo.",
     "markHint": "Suas marcações ficam em Minhas expressões. Pôr no mapa cria uma tarefa para praticá-la.",
     "mapPickedChip": "Escolhidas por mim {n}",
-    "missionPickedLabel": "Escolhida por mim · {focus}"
+    "missionPickedLabel": "Escolhida por mim · {focus}",
+    "whatsNewLedgerTitle": "Veja as expressões que você acumulou",
+    "whatsNewLedgerBody": "“Minhas expressões”, no topo do mapa, reúne o que você encontrou em vídeos, chat, ligações e na lista de palavras, e mostra semana a semana quanto você aprendeu e já consegue usar sozinho.",
+    "whatsNewLinksTitle": "As abas agora se conectam",
+    "whatsNewLinksBody": "Use no chat uma expressão que você pesquisou num vídeo e sua frase mostra onde você a encontrou — toque para voltar àquela cena. O tutor também volta a usar o que você aprendeu.",
+    "whatsNewPickTitle": "Escolha o que vai para o mapa",
+    "whatsNewPickBody": "Na análise de frase, escolha uma expressão e marque “Eu sei” ou “Não sei”. Depois de perguntar, toque em “Pôr no meu mapa” e ela vira a primeira tarefa do tema certo.",
+    "whatsNewCallToolsTitle": "Ligações para rever",
+    "whatsNewCallToolsBody": "As traduções do personagem ficam recolhidas até você tocar numa linha. A ajuda de quando você travou aparece separada, e depois da ligação você pode dizer de novo qualquer frase sua."
   },
   "ru": {
     "archive": "Отчёты",
@@ -2260,7 +2308,15 @@
     "markFailed": "Не получилось добавить. Нажмите ещё раз.",
     "markHint": "Отметки сохраняются в «Моих выражениях». Если добавить на карту, появится задание для практики.",
     "mapPickedChip": "Мой выбор {n}",
-    "missionPickedLabel": "Мой выбор · {focus}"
+    "missionPickedLabel": "Мой выбор · {focus}",
+    "whatsNewLedgerTitle": "Видно, сколько выражений вы накопили",
+    "whatsNewLedgerBody": "«Мои выражения» вверху карты собирают всё, что вы встретили в видео, чате, звонках и словаре, и по неделям показывают, сколько вы выучили и уже можете использовать сами.",
+    "whatsNewLinksTitle": "Вкладки теперь связаны",
+    "whatsNewLinksBody": "Если в чате вы используете выражение, найденное в видео, под фразой видно, где вы его встретили, — нажмите, чтобы вернуться к той сцене. Репетитор тоже снова использует выученные выражения.",
+    "whatsNewPickTitle": "Сами выбирайте, что попадёт на карту",
+    "whatsNewPickBody": "В разборе предложения выберите выражение и отметьте «Знаю» или «Не знаю». После вопроса нажмите «Добавить на карту» — оно станет первым заданием подходящей темы.",
+    "whatsNewCallToolsTitle": "Звонки можно пересмотреть",
+    "whatsNewCallToolsBody": "Переводы реплик персонажа свёрнуты, пока вы не нажмёте на строку. Подсказка на случай, когда вы застряли, показана отдельно, а после звонка любую свою фразу можно сказать ещё раз."
   },
   "id": {
     "billingClose": "Tutup",
@@ -2530,7 +2586,15 @@
     "markFailed": "Gagal menambahkan. Ketuk untuk coba lagi.",
     "markHint": "Tandamu tersimpan di Ungkapanku. Memasukkannya ke peta akan menambah tugas untuk melatihnya.",
     "mapPickedChip": "Pilihanku {n}",
-    "missionPickedLabel": "Pilihanku · {focus}"
+    "missionPickedLabel": "Pilihanku · {focus}",
+    "whatsNewLedgerTitle": "Lihat ungkapan yang sudah kamu kumpulkan",
+    "whatsNewLedgerBody": "“Ungkapanku” di atas peta mengumpulkan ungkapan yang kamu temui di video, obrolan, panggilan, dan daftar kata, dan menunjukkan tiap minggu berapa yang sudah kamu pelajari dan bisa kamu pakai sendiri.",
+    "whatsNewLinksTitle": "Tab sekarang saling terhubung",
+    "whatsNewLinksBody": "Pakai di obrolan ungkapan yang kamu cari di video, maka kalimatmu menunjukkan di mana kamu menemuinya — ketuk untuk kembali ke adegan itu. Tutor juga memakai lagi ungkapan yang sudah kamu pelajari.",
+    "whatsNewPickTitle": "Pilih sendiri yang masuk ke peta",
+    "whatsNewPickBody": "Di analisis kalimat, pilih ungkapan dan tandai “Aku tahu” atau “Aku belum tahu”. Setelah bertanya, ketuk “Masukkan ke peta” dan itu jadi tugas pertama di topik yang cocok.",
+    "whatsNewCallToolsTitle": "Panggilan yang bisa diulas lagi",
+    "whatsNewCallToolsBody": "Terjemahan ucapan karakter terlipat sampai kamu mengetuk barisnya. Bantuan saat kamu macet tampil terpisah, dan setelah panggilan kamu bisa mengucapkan lagi kalimatmu sendiri."
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -2794,7 +2858,15 @@
     "markFailed": "تعذّرت الإضافة. اضغط للمحاولة مجددًا.",
     "markHint": "تبقى علاماتك في «تعابيري». إضافته إلى الخريطة تنشئ مهمة للتدرّب عليه.",
     "mapPickedChip": "اخترته بنفسي {n}",
-    "missionPickedLabel": "اخترته بنفسي · {focus}"
+    "missionPickedLabel": "اخترته بنفسي · {focus}",
+    "whatsNewLedgerTitle": "شاهد التعابير التي جمعتها",
+    "whatsNewLedgerBody": "«تعابيري» أعلى الخريطة تجمع ما صادفته في الفيديوهات والدردشة والمكالمات وقائمة كلماتك، وتعرض أسبوعًا بأسبوع كم تعلّمت منها وكم صرت تستخدمه وحدك.",
+    "whatsNewLinksTitle": "صارت التبويبات مترابطة",
+    "whatsNewLinksBody": "إذا استخدمت في الدردشة تعبيرًا بحثت عنه في فيديو، تذكر جملتك أين صادفته، واضغط للعودة إلى ذلك المشهد. ويعيد المعلّم أيضًا استخدام ما تعلّمته.",
+    "whatsNewPickTitle": "اختر بنفسك ما يدخل خريطتك",
+    "whatsNewPickBody": "في تحليل الجملة اختر تعبيرًا وضع عليه «أعرفه» أو «لا أعرفه». بعد السؤال اضغط «أضفه إلى خريطتي» فيصبح أول مهمة في الموضوع المناسب.",
+    "whatsNewCallToolsTitle": "مكالمات يمكنك مراجعتها",
+    "whatsNewCallToolsBody": "تبقى ترجمات كلام الشخصية مطوية حتى تضغط على السطر. وتظهر المساعدة التي تلقيتها حين تعثّرت منفصلة، وبعد المكالمة يمكنك أن تقول أيًّا من جملك مرة أخرى."
   },
   "th": {
     "billingClose": "ปิด",
@@ -3058,7 +3130,15 @@
     "markFailed": "เพิ่มไม่สำเร็จ แตะเพื่อลองอีกครั้ง",
     "markHint": "สิ่งที่ทำเครื่องหมายจะอยู่ในสำนวนของฉัน ถ้าใส่ในแผนที่จะได้ภารกิจไว้ฝึก",
     "mapPickedChip": "ที่ฉันเลือก {n}",
-    "missionPickedLabel": "ที่ฉันเลือก · {focus}"
+    "missionPickedLabel": "ที่ฉันเลือก · {focus}",
+    "whatsNewLedgerTitle": "เห็นสำนวนที่คุณสะสมมา",
+    "whatsNewLedgerBody": "“สำนวนของฉัน” ด้านบนแผนที่รวบรวมสำนวนที่คุณเจอในวิดีโอ แชต การโทร และสมุดคำศัพท์ และแสดงทุกสัปดาห์ว่าคุณเรียนเพิ่มและใช้เองได้เพิ่มขึ้นเท่าไร",
+    "whatsNewLinksTitle": "แท็บต่างๆ เชื่อมกันแล้ว",
+    "whatsNewLinksBody": "ถ้าใช้สำนวนที่เคยค้นในวิดีโอระหว่างแชต ใต้ประโยคของคุณจะบอกว่าเจอที่ไหน แตะเพื่อกลับไปฉากนั้น ติวเตอร์ก็จะหยิบสำนวนที่คุณเรียนแล้วมาใช้ในบทสนทนาอีก",
+    "whatsNewPickTitle": "เลือกเองว่าจะใส่อะไรในแผนที่",
+    "whatsNewPickBody": "ในการวิเคราะห์ประโยค เลือกสำนวนแล้วทำเครื่องหมาย “รู้แล้ว” หรือ “ยังไม่รู้” หลังถามแล้ว แตะ “ใส่ในแผนที่” มันจะกลายเป็นงานแรกของหัวข้อที่เหมาะ",
+    "whatsNewCallToolsTitle": "ย้อนดูการโทรได้",
+    "whatsNewCallToolsBody": "คำแปลบทพูดของตัวละครจะพับไว้จนกว่าคุณแตะบรรทัดนั้น คำแนะนำตอนติดจะแสดงแยกต่างหาก และหลังวางสายคุณลองพูดประโยคของตัวเองอีกครั้งได้"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -3322,6 +3402,14 @@
     "markFailed": "नहीं जोड़ पाए। फिर से दबाएँ।",
     "markHint": "आपके निशान मेरे वाक्यांश में रहते हैं। नक्शे में डालने पर इसका अभ्यास करने वाला टास्क बनता है।",
     "mapPickedChip": "मेरी पसंद {n}",
-    "missionPickedLabel": "मेरी पसंद · {focus}"
+    "missionPickedLabel": "मेरी पसंद · {focus}",
+    "whatsNewLedgerTitle": "देखें आपने कितने वाक्यांश जोड़े",
+    "whatsNewLedgerBody": "नक्शे के ऊपर “मेरे वाक्यांश” में वीडियो, चैट, कॉल और शब्द-सूची में मिले वाक्यांश इकट्ठा होते हैं, और हर हफ़्ते दिखता है कि आपने कितने सीखे और कितने खुद इस्तेमाल कर सकते हैं।",
+    "whatsNewLinksTitle": "टैब अब आपस में जुड़े हैं",
+    "whatsNewLinksBody": "वीडियो में खोजा वाक्यांश चैट में इस्तेमाल करें, तो आपके वाक्य के नीचे दिखेगा कि वह कहाँ मिला था — टैप करके उस दृश्य पर लौटें। ट्यूटर भी सीखे हुए वाक्यांश फिर से इस्तेमाल करता है।",
+    "whatsNewPickTitle": "नक्शे में क्या जाए, खुद चुनें",
+    "whatsNewPickBody": "वाक्य विश्लेषण में कोई वाक्यांश चुनें और “मुझे आता है” या “मुझे नहीं आता” लगाएँ। सवाल पूछने के बाद “मेरे नक्शे में डालें” दबाएँ, वह सही विषय का पहला काम बन जाएगा।",
+    "whatsNewCallToolsTitle": "कॉल को फिर से देखें",
+    "whatsNewCallToolsBody": "किरदार की बातों का अनुवाद मुड़ा रहता है, पंक्ति पर टैप करने पर दिखता है। अटकने पर मिली मदद अलग दिखती है, और कॉल के बाद आप अपना कोई भी वाक्य फिर से बोल सकते हैं।"
   }
 }

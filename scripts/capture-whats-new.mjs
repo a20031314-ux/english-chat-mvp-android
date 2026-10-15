@@ -24,6 +24,8 @@
  * Run: node --experimental-strip-types scripts/capture-whats-new.mjs 2.64 [--only ko,ar]
  *   PLAYWRIGHT_MODULE / CHROMIUM as for check:browser-languages.
  *   CAPTURE_RUN=2 starts from fresh test users, when today's run left data behind.
+ *   CAPTURE_USER=<prefix> reuses earlier test users (<prefix>-<locale>), for
+ *   pictures that need a history: a map, phrases in the ledger.
  */
 import http from "node:http";
 import fs from "node:fs";
@@ -145,6 +147,28 @@ const PAST_CALL = {
   ],
 };
 
+/**
+ * Phrases the ledger already holds before a picture of "My phrases" is taken,
+ * and where each was met, so the sheet shows more than one source.
+ */
+const LEDGER_SEED = {
+  en: [["catch up", "video"], ["on the same page", "vocab"], ["make it up to you", "chat"], ["no worries", "roleplay"], ["stood me up", "video"]],
+  es: [["ponerse al día", "video"], ["estar en la misma onda", "vocab"], ["no pasa nada", "roleplay"], ["me dejó plantado", "video"]],
+};
+
+/** A line using a phrase met in a video, so the chat says where it came from. */
+const LINK_LINE = {
+  en: "My friend stood me up again last night, so I had dinner alone.",
+  es: "Mi amigo me dejó plantado otra vez anoche y cené solo.",
+};
+
+/** "Try saying:", for the help shown when a learner was stuck in a call. */
+const TIP_LEAD = {
+  ko: "이렇게 말해 보세요:", en: "Try saying:", es: "Prueba a decir:", ja: "こう言ってみましょう:", zh: "可以这样说：",
+  vi: "Thử nói:", fr: "Essayez de dire :", it: "Prova a dire:", pt: "Tente dizer:", ru: "Попробуйте сказать:",
+  id: "Coba katakan:", ar: "جرّب أن تقول:", th: "ลองพูดว่า:", hi: "ऐसे बोलकर देखें:",
+};
+
 /** An answer with one slip in it, so the check has something to correct. */
 function withSlip(answer) {
   const swaps = [[/\bI am\b/, "I is"], [/\bis\b/, "are"], [/\bwent\b/, "go"], [/\bestá\b/, "es"], [/\bsoy\b/, "estoy"], [/\bfui\b/, "voy"]];
@@ -197,6 +221,59 @@ const exactly = (text) => new RegExp(`^${escape(text)}$`);
  * release that needs a new picture adds a step here.
  */
 const STEPS = {
+  async ledger({ page, ui, locale, wait, target }) {
+    await page.evaluate(async ([language, seed]) => {
+      await fetch("/api/learner/ledger", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ language, meets: seed.map(([text, tab]) => ({ kind: "save", text, tab })) }),
+      });
+    }, [target, LEDGER_SEED[target]]);
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    await wait(1500);
+    // The pick picture needs a map to put the phrase on.
+    if (await page.getByRole("button", { name: ui.mapDraw }).count()) await STEPS.map({ page, ui, locale, wait });
+    await page.getByRole("button", { name: new RegExp(escape(ui.ledgerTitle)) }).first().click();
+    await wait(2500);
+  },
+  async links({ page, ui, wait, target }) {
+    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "networkidle" });
+    await wait(2000);
+    const before = await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count();
+    await page.locator("textarea:visible").first().fill(LINK_LINE[target]);
+    await page.getByRole("button", { name: exactly(ui.send) }).click();
+    for (let i = 0; i < 60; i++) {
+      await wait(500);
+      if ((await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count()) > before) break;
+    }
+    await wait(2500);
+    const link = ui.linkMetIn.split("{place}")[1]?.trim() || ui.linkMetIn.split("{place}")[0].trim();
+    await page.getByText(link).last().scrollIntoViewIfNeeded().catch(() => undefined);
+    await wait(600);
+  },
+  async pick({ page, ui, wait }) {
+    // Continues from the links step: a phrase from the tutor's reply.
+    await STEPS.ask({ page, ui, wait });
+    await page.getByRole("button", { name: exactly(ui.markUnknown) }).first().click();
+    await wait(800);
+    await page.getByRole("button", { name: exactly(ui.markToMap) }).first().click();
+    const done = ui.markedToMap.split("{topic}")[0].trim();
+    for (let i = 0; i < 60; i++) {
+      await wait(1000);
+      if (done && (await page.locator("[role=dialog]").innerText()).includes(done)) break;
+    }
+    await page.getByRole("button", { name: exactly(ui.markOpenMap) }).first().scrollIntoViewIfNeeded().catch(() => undefined);
+    await wait(800);
+  },
+  async calltools({ page, ui, locale, wait, target }) {
+    const said = PAST_CALL[target].map((line, i) =>
+      // The help offered when they stalled before "I waited…", not the correction.
+      i === 5 ? { ...line, tip: `${TIP_LEAD[locale]} “${line.better.split(". ").pop()}”` } : line,
+    );
+    await STEPS.meant({ page, ui, wait, target, said });
+    await page.getByRole("button", { name: exactly(ui.roleplaySayAgain) }).first().scrollIntoViewIfNeeded();
+    await wait(800);
+  },
   async chat({ page, ui, locale, wait }) {
     await page.goto(`${BASE}/?screen=chat`, { waitUntil: "networkidle" });
     await wait(1200);
@@ -302,7 +379,7 @@ const STEPS = {
     await page.mouse.wheel(0, -260);
     await wait(800);
   },
-  async meant({ page, ui, wait, target }) {
+  async meant({ page, ui, wait, target, said: lines }) {
     const now = Date.now();
     await page.evaluate(([said, language, at]) => {
       const saved = [{
@@ -314,9 +391,10 @@ const STEPS = {
         said, memory: { text: "", upTo: 0 },
       }];
       localStorage.setItem("roleplayConversations", JSON.stringify(saved));
-    }, [PAST_CALL[target], target, now]);
-    await page.goto(`${BASE}/?screen=roleplay`, { waitUntil: "networkidle" });
-    await wait(1500);
+    }, [lines ?? PAST_CALL[target], target, now]);
+    // The call tab can keep a request open, so "networkidle" may never come.
+    await page.goto(`${BASE}/?screen=roleplay`, { waitUntil: "domcontentloaded" });
+    await wait(4000);
     await page.getByRole("button", { name: new RegExp(escape(PAST_CALL[target][1].text)) }).first().click();
     await wait(1500);
   },
@@ -345,7 +423,7 @@ for (const locale of only ?? Object.keys(copy)) {
   const context = await browser.newContext({ viewport: { width: 412, height: 860 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
   const page = await context.newPage();
   await page.route("**/api/**", (route) =>
-    route.continue({ headers: { ...route.request().headers(), "x-rc-user": `whats-new-capture-${day}${process.env.CAPTURE_RUN ? `-${process.env.CAPTURE_RUN}` : ""}-${locale}` } }),
+    route.continue({ headers: { ...route.request().headers(), "x-rc-user": `${process.env.CAPTURE_USER || `whats-new-capture-${day}${process.env.CAPTURE_RUN ? `-${process.env.CAPTURE_RUN}` : ""}`}-${locale}` } }),
   );
   const wait = (ms) => page.waitForTimeout(ms);
   try {
