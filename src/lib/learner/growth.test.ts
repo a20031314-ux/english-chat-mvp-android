@@ -8,6 +8,7 @@ import {
   emptyGrowth,
   growthView,
   pickNext,
+  nearlySame,
   stageOf,
   turnPoints,
 } from "./growth.ts";
@@ -99,4 +100,12 @@ test("grow next: the lowest stage among measured elements, ticked gaps first, ke
   assert.equal(pron.measured, false, "nothing to count yet: never picked");
   assert.equal(pickNext(view.elements, null, { day: "2026-10-16", id: "natural" }, "2026-10-16"), "natural", "kept for the day");
   assert.equal(pickNext(view.elements, null, { day: "2026-10-15", id: "natural" }, "2026-10-16"), "speaking", "a new day, a new pick");
+});
+
+test("naturalness forgives a small change of taste, not a real rewrite, in spaced and spaceless scripts", () => {
+  assert.ok(nearlySame("今日はいい天気ですね。", "今日はいい天気だね。"), "polite and casual ending");
+  assert.ok(nearlySame("I'm going to the store.", "I'm going to the store!"), "punctuation only");
+  assert.ok(nearlySame("Voy a la tienda mañana", "Mañana voy a la tienda") === false, "word order rewritten");
+  assert.ok(!nearlySame("I went there yesterday.", "I headed over there yesterday."), "a different phrasing");
+  assert.ok(nearlySame("我想喝咖啡", "我想喝杯咖啡"), "one character added to five");
 });

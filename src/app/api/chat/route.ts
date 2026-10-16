@@ -6,6 +6,7 @@ import { observeWeakPoints } from "@/lib/server/weakPointStore";
 import { recordTurn } from "@/lib/server/ledgerStore";
 import { forgetLearnerBrief, readLearnerBrief } from "@/lib/server/learnerBrief";
 import { recordGrowthTurn } from "@/lib/server/growthStore";
+import { nearlySame } from "@/lib/learner/growth";
 import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
 import { requestAppVersion } from "@/lib/appVersion";
 import {
@@ -966,7 +967,7 @@ export async function POST(request: NextRequest) {
           turn: {
             surface: "chat",
             corrected: corrected ? !same(corrected, message) : null,
-            alreadyNatural: !natural || same(natural, message),
+            alreadyNatural: !natural || nearlySame(natural, message),
           },
         });
       });

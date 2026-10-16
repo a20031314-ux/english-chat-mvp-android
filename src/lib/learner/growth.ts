@@ -10,7 +10,8 @@
  *   listening     a phrase now understood when heard (twice, not looked up)
  *   accuracy      a line in the language being learned that needed no correction
  *   speaking      a call turn begun at the first go, within four seconds
- *   natural       a line that needed neither a correction nor a more natural version
+ *   natural       a line that needed no correction, and whose "more natural" version,
+ *                 if any, was only a small change of taste (nearlySame)
  *   pronunciation a line said again with every word heard right (no data yet)
  *
  * Counts only ever rise: slipping back or taking a break never shrinks an
@@ -131,6 +132,35 @@ export type TurnGrowth = {
 };
 
 export const QUICK_START_MS = 4000;
+/** A suggested "more natural" line this close to theirs is a matter of taste, not a fix. */
+export const NEARLY_NATURAL = 0.2;
+
+function bare(text: string): string[] {
+  return [...text.toLocaleLowerCase().replace(/[\s\p{P}\p{S}]+/gu, "")];
+}
+
+/**
+ * Whether two lines differ by no more than a small share of their length,
+ * after case, spaces and punctuation are set aside: "今日はいい天気ですね" and
+ * "今日はいい天気だね" are one register apart, not a better and a worse line.
+ * Character edits, so scripts without spaces are measured the same way.
+ */
+export function nearlySame(a: string, b: string, share = NEARLY_NATURAL): boolean {
+  const x = bare(a).slice(0, 200);
+  const y = bare(b).slice(0, 200);
+  if (x.join("") === y.join("")) return true;
+  const longest = Math.max(x.length, y.length);
+  if (longest === 0) return true;
+  let previous = Array.from({ length: y.length + 1 }, (_, i) => i);
+  for (let i = 1; i <= x.length; i += 1) {
+    const current = [i];
+    for (let j = 1; j <= y.length; j += 1) {
+      current[j] = Math.min(previous[j]! + 1, current[j - 1]! + 1, previous[j - 1]! + (x[i - 1] === y[j - 1] ? 0 : 1));
+    }
+    previous = current;
+  }
+  return previous[y.length]! / longest <= share;
+}
 
 export function turnPoints(turn: TurnGrowth): Partial<Record<ElementId, number>> {
   const out: Partial<Record<ElementId, number>> = {};
