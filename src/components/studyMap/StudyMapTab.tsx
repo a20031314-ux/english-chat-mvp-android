@@ -221,6 +221,7 @@ export function StudyMapTab({
                 targetLanguage={targetLanguage}
                 canCall={scenariosForLanguage(targetLanguage).length > 0}
                 onOpenTopic={openTopic}
+                refreshKey={map?.id ?? null}
               />
             </div>
             <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />

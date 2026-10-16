@@ -117,6 +117,7 @@ export function NextStepCard({
   canCall,
   onStart,
   onOpenTopic,
+  refreshKey,
 }: {
   ui: UICopy;
   locale: string;
@@ -126,6 +127,8 @@ export function NextStepCard({
   /** Start here instead of sending a request to another tab. */
   onStart?: (request: PracticeRequest) => void;
   onOpenTopic?: (topicId: string) => void;
+  /** Changes when what the steps are made from changes (a new map), so they are read again. */
+  refreshKey?: string | null;
 }) {
   const [data, setData] = useState<Loaded | null>(() => cache.get(targetLanguage)?.data ?? null);
   const [passes, setPasses] = useState<Record<string, number>>(() =>
@@ -141,7 +144,7 @@ export function NextStepCard({
     return () => {
       cancelled = true;
     };
-  }, [targetLanguage]);
+  }, [targetLanguage, refreshKey]);
 
   const steps = useMemo(
     () =>
