@@ -415,10 +415,10 @@ const STEPS = {
     await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
     await wait(1500);
     // The map starts from ticks (learner/selfCheck.ts): two gaps, a focus, a use.
-    await page.getByRole("button", { name: ui.selfGapSpeaking }).click();
-    await page.getByRole("button", { name: ui.selfGapListening }).click();
-    await page.getByRole("button", { name: ui.selfFocusSpeaking }).click();
-    await page.getByRole("button", { name: ui.selfUseTravel }).click();
+    await page.getByRole("button", { name: exactly(ui.selfGapSpeaking) }).click();
+    await page.getByRole("button", { name: exactly(ui.selfGapListening) }).click();
+    await page.getByRole("button", { name: exactly(ui.selfFocusSpeaking) }).click();
+    await page.getByRole("button", { name: exactly(ui.selfUseTravel) }).click();
     await page.getByRole("button", { name: ui.mapDraw }).scrollIntoViewIfNeeded();
     await wait(600);
   },
@@ -513,8 +513,8 @@ const STEPS = {
   async map({ page, ui, locale, wait }) {
     await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
     await wait(1500);
-    await page.getByRole("button", { name: ui.selfGapSpeaking }).click();
-    await page.getByRole("button", { name: ui.selfFocusSpeaking }).click();
+    await page.getByRole("button", { name: exactly(ui.selfGapSpeaking) }).click();
+    await page.getByRole("button", { name: exactly(ui.selfFocusSpeaking) }).click();
     await page.locator("textarea:visible").first().fill(GOAL[locale]);
     await page.getByRole("button", { name: ui.mapDraw }).click();
     const drawing = ui.mapDrawing.split("…")[0];
