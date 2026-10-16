@@ -177,23 +177,39 @@ export const GUIDE_KO: Guide = {
           "매달 고른 영상으로 바로 공부할 수 있어요. 무료로 3편까지 체험할 수 있고, 프리미엄은 전체를 볼 수 있어요.",
           "‘{ui:discoverCta}’를 누르면 관심사에 맞는 영상을 추천받을 수 있어요.",
         ],
+        shot: "video-library",
+      },
+      {
+        heading: "자막은 배우는 언어로만",
+        body: [
+          "자막은 배우는 언어로만 나와요. 먼저 귀로 듣고 읽어 보세요. 문장을 누르면 그 구간만 다시 들을 수 있어요.",
+        ],
+        shot: "video-study",
+      },
+      {
+        heading: "번역은 문장 왼쪽 막대로",
+        body: [
+          "막히면 문장 왼쪽의 막대를 누르세요. 영상 내용과 앞뒤 대사를 보고 이 장면에 맞게 번역해 줘요.",
+        ],
+        shot: "video-bar",
+      },
+      {
+        heading: "궁금한 부분 물어보기",
+        body: [
+          "점을 끌어 단어나 표현을 고른 뒤 ‘{ui:quickAskMeaning}’ 같은 질문을 누르거나 직접 물어보세요. 답도 이 장면에 맞춰 해 줘요.",
+        ],
+        shot: "video-ask",
       },
       {
         heading: "내 영상 가져오기",
         body: [
-          "YouTube 링크를 붙여넣으면 자막과 번역을 만들어줘요. 프리미엄 기능이고, 영상 3분에 1포인트가 들어요. 15분까지 가능해요.",
+          "YouTube 링크를 붙여넣으면 배우는 언어 자막을 만들어 줘요. 프리미엄 기능이고, 영상 3분에 1포인트가 들어요. 15분까지 가능해요.",
         ],
       },
       {
-        heading: "자막으로 공부하기",
+        heading: "구간 묶기·쪼개기와 저장",
         body: [
-          "재생하면 구간마다 배우는 언어 자막과 번역이 나와요. 문장을 누르면 그 구간만 다시 들을 수 있어요.",
           "‘{ui:videoLearnRangeMode}’로 여러 문장을 이어 듣고, 구간을 합치거나 쪼갤 수 있어요. ‘{ui:videoLearnResetAllCues}’로 언제든 되돌릴 수 있어요.",
-        ],
-      },
-      {
-        heading: "저장하고 다시 보기",
-        body: [
           "‘{ui:videoLearnSaveSession}’을 누르면 ‘{ui:videoLearnSavedSessions}’에서 다시 볼 수 있어요. 저장한 영상은 다시 볼 때 포인트가 들지 않아요.",
         ],
       },
@@ -361,23 +377,39 @@ export const GUIDE_EN: Guide = {
           "Videos picked each month, ready to study. Free accounts can try 3; Premium opens them all.",
           "{ui:discoverCta} suggests videos that match your interests.",
         ],
+        shot: "video-library",
+      },
+      {
+        heading: "Subtitles in the language you're learning",
+        body: [
+          "Subtitles show only the language you're learning, so you listen and read first. Tap a line to hear just that part again.",
+        ],
+        shot: "video-study",
+      },
+      {
+        heading: "The bar beside a line translates it",
+        body: [
+          "Stuck? Tap the bar to the left of the line. The translation fits this scene, because it reads what the video is about and the lines around it.",
+        ],
+        shot: "video-bar",
+      },
+      {
+        heading: "Ask about any part",
+        body: [
+          "Drag across the dots to pick a word or phrase, then tap a question like {ui:quickAskMeaning} or type your own. The answer fits this scene too.",
+        ],
+        shot: "video-ask",
       },
       {
         heading: "Bring your own video",
         body: [
-          "Paste a YouTube link and the app makes subtitles and a translation. This is a Premium feature and uses one point per three minutes of video, up to 15 minutes.",
+          "Paste a YouTube link and the app makes subtitles in the language you're learning. This is a Premium feature and uses one point per three minutes of video, up to 15 minutes.",
         ],
       },
       {
-        heading: "Study with subtitles",
+        heading: "Group, split and save",
         body: [
-          "As the video plays, each part shows subtitles in the language you're learning, with a translation. Tap a line to hear just that part again.",
           "{ui:videoLearnRangeMode} to hear lines together, and merge or split parts. {ui:videoLearnResetAllCues} puts everything back the way it was.",
-        ],
-      },
-      {
-        heading: "Save and come back",
-        body: [
           "{ui:videoLearnSaveSession} to find it again under {ui:videoLearnSavedSessions}. Watching a saved video again doesn't use points.",
         ],
       },

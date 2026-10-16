@@ -195,6 +195,8 @@
   채팅은 첫 단계 "오늘 해볼 것으로 시작"을 단계마다 UI 언어별 스크린샷 + 한두 줄로(2.67부터 그림, `public/guide/<locale>/`,
   `node --experimental-strip-types scripts/capture-whats-new.mjs guide`로 다시 찍음). 2.67 앱은 `/api/guide?my=1`로 묻고,
   그 전 빌드는 예전 지도·채팅 안내(`src/lib/guide/before-my.json`)를 받는다.
+  영상 학습은 4단계 그림(이달의 영상 → 학습 언어 자막만 → 문장 바로 번역 → 부분 골라 묻기) + 글만 두 칸(내 영상 가져오기, 구간 묶기·저장),
+  그림은 `capture-whats-new.mjs guide-video`(저장된 공부 세션으로 열고 플레이어 자리는 영상 썸네일). 2.67 전 빌드는 예전 영상 안내(`src/lib/guide/videoBefore267.json`).
 - **의견 보내기(말풍선):** 어느 화면에서든 글 + 지금 화면 캡처(뺄 수 있음) 또는 사진. 하루 15건까지. 매일 아침 묶어서 의견함 페이지에
   급한 것 · 많이 나온 것 · 특수한 것으로 올리고, 운영자가 반영/보류/안 함을 고른다 (`src/components/FeedbackButton.tsx`, `hub/feedback/README.md`).
 

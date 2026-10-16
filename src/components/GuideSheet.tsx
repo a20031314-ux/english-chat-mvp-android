@@ -79,6 +79,8 @@ export function GuideButton({
   useEffect(() => {
     if (!open) return;
     let cancelled = false;
+    // `my=1` says this build is 2.67 or later: the My tab, and video lines
+    // translated behind the sentence bar (api/guide).
     void fetch(apiUrl(`/api/guide?lang=${encodeURIComponent(locale)}&my=1`))
       .then((response) => (response.ok ? response.json() : null))
       .then((data: { tabs?: Guide } | null) => {

@@ -77,8 +77,14 @@ const { copy, RELEASE_NOTES } = await loadModules();
  * (src/lib/guide/content.ts, sections with a `shot`) into public/guide/<locale>/.
  * Run it with CAPTURE_RUN set to something new: the first picture is the empty
  * goal form, which only a learner without a map sees.
+ *
+ * `guide-video` takes the video tab's how-to pictures into the same folder.
+ * The video is opened from a saved study session rather than prepared, so it
+ * works where YouTube cannot be reached; the player, which would show
+ * YouTube's "unavailable" there, is covered with the video's thumbnail.
  */
-const GUIDE = VERSION === "guide";
+const GUIDE_VIDEO = VERSION === "guide-video";
+const GUIDE = VERSION === "guide" || GUIDE_VIDEO;
 const GUIDE_ITEMS = [
   { shot: "goal" },
   { shot: "next" },
@@ -88,11 +94,46 @@ const GUIDE_ITEMS = [
   { shot: "goalopen" },
   { shot: "chatnext" },
 ];
-const note = GUIDE ? { version: "guide", items: GUIDE_ITEMS } : RELEASE_NOTES.find((entry) => entry.version === VERSION);
+const GUIDE_VIDEO_ITEMS = [
+  { shot: "video-library" },
+  { shot: "video-study" },
+  { shot: "video-bar" },
+  { shot: "video-ask" },
+];
+const note = GUIDE_VIDEO
+  ? { version: "guide", items: GUIDE_VIDEO_ITEMS }
+  : GUIDE ? { version: "guide", items: GUIDE_ITEMS } : RELEASE_NOTES.find((entry) => entry.version === VERSION);
 if (!note) {
   console.error(`No release note for ${VERSION} in src/lib/whatsNew.ts.`);
   process.exit(2);
 }
+
+/**
+ * A saved study session for the video pictures: a clip from this month's
+ * library and lines that fit it, in the language being learned.
+ */
+const VIDEO_SESSION = {
+  en: {
+    videoId: "e7S8jWh6AEs",
+    summary: "A short animated lesson on the paradox of value: why water, which we need to live, costs so little while diamonds cost so much.",
+    lines: [
+      "Why is water so cheap when we can't live without it?",
+      "And why do diamonds cost a fortune when we don't really need them?",
+      "Economists call this puzzle the paradox of value.",
+      "The answer has to do with how much of something we already have.",
+    ],
+  },
+  es: {
+    videoId: "GLkkwbsPWEA",
+    summary: "Una lección animada sobre por qué cuesta tanto dejar un mal hábito y cómo el cerebro aprende las rutinas.",
+    lines: [
+      "¿Alguna vez has intentado dejar de morderte las uñas?",
+      "Miles de millones de personas luchan contra ese hábito.",
+      "El problema es que el cerebro aprende las rutinas sin que nos demos cuenta.",
+      "Por eso, romperlas exige algo más que fuerza de voluntad.",
+    ],
+  },
+};
 
 /** Something a learner might really write when stuck, in each interface language. */
 const STUCK_LINE = {
@@ -306,6 +347,69 @@ const STEPS = {
     await page.getByRole("button", { name: ui.nextByChat }).first().click();
     for (let i = 0; i < 40 && !(await page.getByText(ui.practiceNow).count()); i++) await wait(500);
     await wait(5000);
+  },
+  async "video-library"({ page, ui, wait }) {
+    await page.goto(`${BASE}/?screen=video`, { waitUntil: "networkidle" });
+    await wait(2500);
+    await page.getByText(ui.videoLearnLibraryTitle).first().scrollIntoViewIfNeeded();
+    await page.mouse.wheel(0, 120);
+    await wait(1500);
+  },
+  async "video-study"({ page, wait, target }) {
+    const session = VIDEO_SESSION[target];
+    await page.evaluate(([language, seed]) => {
+      const now = Date.now();
+      const cues = seed.lines.map((original, i) => ({ id: `guide-${i}`, startTime: 3 + i * 4, endTime: 7 + i * 4, original }));
+      localStorage.setItem("videoStudySessions", JSON.stringify([{
+        id: "guide-capture", videoId: seed.videoId, videoUrl: `https://www.youtube.com/watch?v=${seed.videoId}`,
+        situationSummary: seed.summary, durationSeconds: 7 + seed.lines.length * 4, cues, baselineCues: cues,
+        languageCode: language, createdAt: now, updatedAt: now,
+      }]));
+    }, [target, session]);
+    await page.goto(`${BASE}/?screen=video`, { waitUntil: "networkidle" });
+    await wait(2000);
+    await page.getByText(session.lines[0]).first().click();
+    for (let i = 0; i < 30 && !(await page.locator("ul li [role=button]").count()); i++) await wait(500);
+    await wait(1500);
+    // Pick the second line so the card above shows a subtitle, as during playback.
+    await page.locator("ul li [role=button]").nth(1).click();
+    await wait(800);
+    await page.evaluate((videoId) => {
+      for (const frame of document.querySelectorAll("iframe")) {
+        const still = document.createElement("img");
+        still.src = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+        still.style.cssText = "width:100%;height:100%;object-fit:cover;display:block";
+        frame.replaceWith(still);
+      }
+    }, session.videoId);
+    await wait(1500);
+  },
+  async "video-bar"({ page, wait }) {
+    // Continues from video-study: the bar beside the subtitle on the card.
+    const translated = page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 30000 }).catch(() => undefined);
+    await page.locator("button.w-1").first().click();
+    await translated;
+    await wait(2000);
+  },
+  async "video-ask"({ page, ui, wait }) {
+    // Continues from video-bar: the sheet is open on the subtitle.
+    const slider = page.locator("[role=dialog] [role=slider]").first();
+    const box = await slider.boundingBox();
+    const count = await slider.locator("> span").count();
+    const x = (i) => box.x + (box.width * (i + 0.5)) / count;
+    const y = box.y + box.height / 2;
+    await page.mouse.move(x(Math.max(0, count - 3)), y);
+    await page.mouse.down();
+    await page.mouse.move(x(count - 1), y, { steps: 5 });
+    await page.mouse.up();
+    await wait(700);
+    await page.getByRole("button", { name: ui.quickAskMeaning }).click();
+    const loading = ui.askLoading.replace("…", "");
+    for (let i = 0; i < 40; i++) {
+      await wait(1000);
+      if (!(await page.locator("[role=dialog]").last().innerText()).includes(loading)) break;
+    }
+    await wait(1000);
   },
   async goal({ page, ui, locale, wait }) {
     await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });

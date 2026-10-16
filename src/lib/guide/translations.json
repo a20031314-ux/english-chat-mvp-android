@@ -139,24 +139,40 @@
           "body": [
             "Videos seleccionados cada mes, listos para estudiar. Gratis puedes probar 3; Premium los desbloquea todos.",
             "{ui:discoverCta} te sugiere videos según tus intereses."
+          ],
+          "shot": "video-library"
+        },
+        {
+          "heading": "Subtítulos solo en el idioma que aprendes",
+          "body": [
+            "Los subtítulos salen solo en el idioma que aprendes: primero escucha y lee. Toca una línea para volver a oír solo esa parte."
+          ],
+          "shot": "video-study"
+        },
+        {
+          "heading": "La barra junto a la línea la traduce",
+          "body": [
+            "¿Te atascas? Toca la barra a la izquierda de la línea. La traducción encaja con la escena, porque tiene en cuenta de qué va el vídeo y las líneas de alrededor."
+          ],
+          "shot": "video-bar"
+        },
+        {
+          "heading": "Pregunta por cualquier parte",
+          "body": [
+            "Arrastra sobre los puntos para elegir una palabra o expresión y toca una pregunta como «{ui:quickAskMeaning}» o escribe la tuya. La respuesta también encaja con la escena."
+          ],
+          "shot": "video-ask"
+        },
+        {
+          "heading": "Trae tu propio vídeo",
+          "body": [
+            "Pega un enlace de YouTube y la app crea subtítulos en el idioma que aprendes. Es una función Premium y usa 1 punto por cada 3 minutos de vídeo, hasta 15 minutos."
           ]
         },
         {
-          "heading": "Trae tu propio video",
+          "heading": "Agrupar, dividir y guardar",
           "body": [
-            "Pega un enlace de YouTube y la app crea subtítulos y traducción. Es solo para Premium y usa un punto por cada tres minutos, hasta 15 minutos."
-          ]
-        },
-        {
-          "heading": "Estudia con subtítulos",
-          "body": [
-            "Mientras ves el video, cada parte muestra subtítulos en el idioma que aprendes y su traducción. Toca una línea para escuchar solo esa parte.",
-            "{ui:videoLearnRangeMode} te deja escuchar varias líneas juntas y unir o separar partes. {ui:videoLearnResetAllCues} lo deja todo como al principio."
-          ]
-        },
-        {
-          "heading": "Guarda y vuelve",
-          "body": [
+            "{ui:videoLearnRangeMode} te deja escuchar varias líneas juntas y unir o separar partes. {ui:videoLearnResetAllCues} lo deja todo como al principio.",
             "{ui:videoLearnSaveSession} para encontrarlo luego en {ui:videoLearnSavedSessions}. Volver a ver un video guardado no gasta puntos."
           ]
         }
@@ -181,7 +197,7 @@
         }
       ]
     },
-    "_version": "2026-10-09"
+    "_version": "2026-10-16b"
   },
   "ja": {
     "map": {
@@ -323,24 +339,40 @@
           "body": [
             "毎月選ばれた動画で、すぐに学習できます。無料は3本まで体験、プレミアムは全て利用可能です。",
             "「{ui:discoverCta}」で興味に合った動画をおすすめします。"
-          ]
+          ],
+          "shot": "video-library"
+        },
+        {
+          "heading": "字幕は学習言語だけ",
+          "body": [
+            "字幕は学習言語だけで表示されます。まず耳で聞いて読んでみましょう。行をタップするとその部分だけもう一度聞けます。"
+          ],
+          "shot": "video-study"
+        },
+        {
+          "heading": "翻訳は行の左のバーで",
+          "body": [
+            "わからないときは、行の左にあるバーをタップ。動画の内容と前後のセリフを踏まえて、この場面に合った訳を出します。"
+          ],
+          "shot": "video-bar"
+        },
+        {
+          "heading": "気になるところを質問",
+          "body": [
+            "点をドラッグして単語や表現を選び、「{ui:quickAskMeaning}」などの質問をタップするか、自分で聞いてみましょう。答えもこの場面に合わせてくれます。"
+          ],
+          "shot": "video-ask"
         },
         {
           "heading": "自分の動画を追加",
           "body": [
-            "YouTubeリンクを貼ると、字幕と翻訳が自動で作られます。これはプレミアム機能で、3分ごとに1ポイント（最大15分）使います。"
+            "YouTubeリンクを貼ると、学習言語の字幕を作ります。プレミアム機能で、動画3分ごとに1ポイント（最大15分）使います。"
           ]
         },
         {
-          "heading": "字幕で学ぶ",
+          "heading": "まとめ・分割と保存",
           "body": [
-            "再生中、学習言語の字幕と翻訳が表示されます。行をタップするとその部分だけ再生できます。",
-            "{ui:videoLearnRangeMode}で複数行をまとめて聞いたり、分割・結合も可能です。{ui:videoLearnResetAllCues}で元に戻せます。"
-          ]
-        },
-        {
-          "heading": "保存と再視聴",
-          "body": [
+            "{ui:videoLearnRangeMode}で複数行をまとめて聞いたり、分割・結合も可能です。{ui:videoLearnResetAllCues}で元に戻せます。",
             "{ui:videoLearnSaveSession}で保存し、{ui:videoLearnSavedSessions}から再度見られます。保存した動画は再視聴してもポイントは消費されません。"
           ]
         }
@@ -365,7 +397,7 @@
         }
       ]
     },
-    "_version": "2026-10-09"
+    "_version": "2026-10-16b"
   },
   "zh": {
     "map": {
@@ -507,24 +539,40 @@
           "body": [
             "每月精选视频，随时可学。免费用户可体验3个，会员全部解锁。",
             "{ui:discoverCta}会推荐符合你兴趣的视频。"
+          ],
+          "shot": "video-library"
+        },
+        {
+          "heading": "字幕只显示学习语言",
+          "body": [
+            "字幕只显示你在学的语言，先听、再读。点一行就能只重听那一段。"
+          ],
+          "shot": "video-study"
+        },
+        {
+          "heading": "点句子左边的竖条看翻译",
+          "body": [
+            "卡住了就点句子左边的竖条。翻译会结合视频内容和前后台词，贴合这个场景。"
+          ],
+          "shot": "video-bar"
+        },
+        {
+          "heading": "哪里不懂就问",
+          "body": [
+            "拖动圆点选出单词或表达，再点“{ui:quickAskMeaning}”这样的问题，或者自己提问。回答同样贴合这个场景。"
+          ],
+          "shot": "video-ask"
+        },
+        {
+          "heading": "导入自己的视频",
+          "body": [
+            "粘贴 YouTube 链接，App 会生成学习语言的字幕。这是高级版功能，每 3 分钟视频用 1 点，最长 15 分钟。"
           ]
         },
         {
-          "heading": "导入你的视频",
+          "heading": "合并、拆分和保存",
           "body": [
-            "粘贴YouTube链接，系统自动生成字幕和翻译。此功能为会员专享，每3分钟视频消耗1积分，最长15分钟。"
-          ]
-        },
-        {
-          "heading": "用字幕学习",
-          "body": [
-            "播放时，每段会显示目标语言字幕和翻译。点击某句可单独重听。",
-            "用{ui:videoLearnRangeMode}可连听多句，也能合并或拆分片段。{ui:videoLearnResetAllCues}可一键恢复原状。"
-          ]
-        },
-        {
-          "heading": "保存与回看",
-          "body": [
+            "用{ui:videoLearnRangeMode}可连听多句，也能合并或拆分片段。{ui:videoLearnResetAllCues}可一键恢复原状。",
             "用{ui:videoLearnSaveSession}保存进度，在{ui:videoLearnSavedSessions}里随时回看。已保存视频重复观看不再扣积分。"
           ]
         }
@@ -549,7 +597,7 @@
         }
       ]
     },
-    "_version": "2026-10-09"
+    "_version": "2026-10-16b"
   },
   "vi": {
     "map": {
@@ -691,24 +739,40 @@
           "body": [
             "Video được chọn sẵn mỗi tháng, sẵn sàng để học. Tài khoản miễn phí được thử 3 video; Premium mở toàn bộ.",
             "{ui:discoverCta} sẽ gợi ý video phù hợp với sở thích của bạn."
-          ]
+          ],
+          "shot": "video-library"
+        },
+        {
+          "heading": "Phụ đề chỉ bằng ngôn ngữ bạn học",
+          "body": [
+            "Phụ đề chỉ hiện ngôn ngữ bạn đang học: hãy nghe và đọc trước. Chạm vào một dòng để nghe lại riêng đoạn đó."
+          ],
+          "shot": "video-study"
+        },
+        {
+          "heading": "Thanh bên trái dòng để xem bản dịch",
+          "body": [
+            "Bí thì chạm vào thanh bên trái dòng. Bản dịch hợp với cảnh này vì dựa vào nội dung video và các câu trước sau."
+          ],
+          "shot": "video-bar"
+        },
+        {
+          "heading": "Hỏi về bất kỳ phần nào",
+          "body": [
+            "Kéo qua các chấm để chọn từ hoặc cụm từ, rồi chạm vào câu hỏi như “{ui:quickAskMeaning}” hoặc tự hỏi. Câu trả lời cũng hợp với cảnh này."
+          ],
+          "shot": "video-ask"
         },
         {
           "heading": "Thêm video của bạn",
           "body": [
-            "Dán link YouTube, ứng dụng sẽ tạo phụ đề và bản dịch. Đây là tính năng Premium, mỗi 3 phút video tốn 1 điểm, tối đa 15 phút."
+            "Dán liên kết YouTube, ứng dụng sẽ tạo phụ đề bằng ngôn ngữ bạn học. Đây là tính năng Premium, dùng 1 điểm cho mỗi 3 phút video, tối đa 15 phút."
           ]
         },
         {
-          "heading": "Học với phụ đề",
+          "heading": "Gộp, tách và lưu",
           "body": [
-            "Khi xem video, từng đoạn sẽ hiện phụ đề bằng ngôn ngữ bạn học và bản dịch. Nhấn vào dòng để nghe lại đoạn đó.",
-            "Dùng {ui:videoLearnRangeMode} để nghe nhiều câu liên tiếp, gộp hoặc tách đoạn. {ui:videoLearnResetAllCues} để khôi phục lại như ban đầu."
-          ]
-        },
-        {
-          "heading": "Lưu lại và xem tiếp",
-          "body": [
+            "Dùng {ui:videoLearnRangeMode} để nghe nhiều câu liên tiếp, gộp hoặc tách đoạn. {ui:videoLearnResetAllCues} để khôi phục lại như ban đầu.",
             "Nhấn {ui:videoLearnSaveSession} để lưu, lần sau vào {ui:videoLearnSavedSessions} để xem lại. Xem lại video đã lưu không tốn điểm."
           ]
         }
@@ -733,7 +797,7 @@
         }
       ]
     },
-    "_version": "2026-10-09"
+    "_version": "2026-10-16b"
   },
   "fr": {
     "map": {
@@ -875,24 +939,40 @@
           "body": [
             "Des vidéos sélectionnées chaque mois, prêtes à étudier. Les comptes gratuits peuvent en essayer 3 ; Premium donne accès à tout.",
             "{ui:discoverCta} vous propose des vidéos selon vos centres d’intérêt."
+          ],
+          "shot": "video-library"
+        },
+        {
+          "heading": "Sous-titres dans la langue apprise uniquement",
+          "body": [
+            "Les sous-titres s'affichent seulement dans la langue que vous apprenez : écoutez et lisez d'abord. Touchez une ligne pour réécouter juste ce passage."
+          ],
+          "shot": "video-study"
+        },
+        {
+          "heading": "La barre à gauche de la ligne la traduit",
+          "body": [
+            "Bloqué ? Touchez la barre à gauche de la ligne. La traduction colle à la scène, car elle tient compte du sujet de la vidéo et des répliques autour."
+          ],
+          "shot": "video-bar"
+        },
+        {
+          "heading": "Posez une question sur n'importe quel passage",
+          "body": [
+            "Faites glisser sur les points pour choisir un mot ou une expression, puis touchez une question comme « {ui:quickAskMeaning} » ou écrivez la vôtre. La réponse colle aussi à la scène."
+          ],
+          "shot": "video-ask"
+        },
+        {
+          "heading": "Ajouter votre vidéo",
+          "body": [
+            "Collez un lien YouTube et l'appli crée des sous-titres dans la langue que vous apprenez. C'est une fonction Premium : 1 point par tranche de 3 minutes de vidéo, jusqu'à 15 minutes."
           ]
         },
         {
-          "heading": "Importer votre propre vidéo",
+          "heading": "Regrouper, couper et enregistrer",
           "body": [
-            "Collez un lien YouTube et l’app crée les sous-titres et la traduction. Fonction Premium : un point pour trois minutes de vidéo, jusqu’à 15 minutes."
-          ]
-        },
-        {
-          "heading": "Étudier avec les sous-titres",
-          "body": [
-            "Pendant la lecture, chaque passage affiche les sous-titres dans la langue apprise, avec la traduction. Touchez une ligne pour réécouter ce passage.",
-            "{ui:videoLearnRangeMode} permet d’écouter plusieurs lignes à la suite, de fusionner ou séparer les passages. {ui:videoLearnResetAllCues} remet tout à zéro."
-          ]
-        },
-        {
-          "heading": "Sauvegarder et revenir",
-          "body": [
+            "{ui:videoLearnRangeMode} permet d’écouter plusieurs lignes à la suite, de fusionner ou séparer les passages. {ui:videoLearnResetAllCues} remet tout à zéro.",
             "{ui:videoLearnSaveSession} pour retrouver la vidéo dans {ui:videoLearnSavedSessions}. Revoir une vidéo sauvegardée n’utilise pas de points."
           ]
         }
@@ -917,7 +997,7 @@
         }
       ]
     },
-    "_version": "2026-10-09"
+    "_version": "2026-10-16b"
   },
   "it": {
     "map": {
@@ -1059,24 +1139,40 @@
           "body": [
             "Ogni mese trovi video scelti da studiare subito. Con l’account gratuito puoi provarne 3; con Premium li hai tutti.",
             "{ui:discoverCta} ti suggerisce video in base ai tuoi interessi."
+          ],
+          "shot": "video-library"
+        },
+        {
+          "heading": "Sottotitoli solo nella lingua che studi",
+          "body": [
+            "I sottotitoli compaiono solo nella lingua che stai imparando: prima ascolta e leggi. Tocca una riga per riascoltare solo quel pezzo."
+          ],
+          "shot": "video-study"
+        },
+        {
+          "heading": "La barra accanto alla riga la traduce",
+          "body": [
+            "Bloccato? Tocca la barra a sinistra della riga. La traduzione è adatta alla scena, perché tiene conto del tema del video e delle battute intorno."
+          ],
+          "shot": "video-bar"
+        },
+        {
+          "heading": "Chiedi di qualsiasi parte",
+          "body": [
+            "Trascina sui puntini per scegliere una parola o un'espressione, poi tocca una domanda come «{ui:quickAskMeaning}» o scrivi la tua. Anche la risposta è adatta alla scena."
+          ],
+          "shot": "video-ask"
+        },
+        {
+          "heading": "Porta il tuo video",
+          "body": [
+            "Incolla un link di YouTube e l'app crea i sottotitoli nella lingua che studi. È una funzione Premium e usa 1 punto ogni 3 minuti di video, fino a 15 minuti."
           ]
         },
         {
-          "heading": "Porta i tuoi video",
+          "heading": "Raggruppa, dividi e salva",
           "body": [
-            "Incolla un link YouTube e l’app crea sottotitoli e traduzione. È una funzione Premium e usa un punto ogni tre minuti di video, fino a 15 minuti."
-          ]
-        },
-        {
-          "heading": "Studia con i sottotitoli",
-          "body": [
-            "Durante la riproduzione, ogni parte mostra i sottotitoli nella lingua che stai imparando e la traduzione. Tocca una riga per riascoltare solo quella.",
-            "{ui:videoLearnRangeMode} per ascoltare più righe insieme e unire o dividere le parti. {ui:videoLearnResetAllCues} riporta tutto come prima."
-          ]
-        },
-        {
-          "heading": "Salva e riprendi",
-          "body": [
+            "{ui:videoLearnRangeMode} per ascoltare più righe insieme e unire o dividere le parti. {ui:videoLearnResetAllCues} riporta tutto come prima.",
             "{ui:videoLearnSaveSession} per ritrovare il video sotto {ui:videoLearnSavedSessions}. Riguardare un video salvato non consuma punti."
           ]
         }
@@ -1101,7 +1197,7 @@
         }
       ]
     },
-    "_version": "2026-10-09"
+    "_version": "2026-10-16b"
   },
   "pt": {
     "map": {
@@ -1243,24 +1339,40 @@
           "body": [
             "Vídeos selecionados todo mês, prontos para estudar. Contas grátis podem testar 3; Premium libera todos.",
             "{ui:discoverCta} sugere vídeos de acordo com seus interesses."
+          ],
+          "shot": "video-library"
+        },
+        {
+          "heading": "Legendas só no idioma que você aprende",
+          "body": [
+            "As legendas aparecem só no idioma que você está aprendendo: primeiro ouça e leia. Toque numa linha para ouvir só aquele trecho de novo."
+          ],
+          "shot": "video-study"
+        },
+        {
+          "heading": "A barra ao lado da linha traduz",
+          "body": [
+            "Travou? Toque na barra à esquerda da linha. A tradução combina com a cena, porque considera o assunto do vídeo e as falas ao redor."
+          ],
+          "shot": "video-bar"
+        },
+        {
+          "heading": "Pergunte sobre qualquer parte",
+          "body": [
+            "Arraste pelos pontos para escolher uma palavra ou expressão e toque numa pergunta como “{ui:quickAskMeaning}” ou escreva a sua. A resposta também combina com a cena."
+          ],
+          "shot": "video-ask"
+        },
+        {
+          "heading": "Traga seu vídeo",
+          "body": [
+            "Cole um link do YouTube e o app cria legendas no idioma que você aprende. É um recurso Premium e usa 1 ponto a cada 3 minutos de vídeo, até 15 minutos."
           ]
         },
         {
-          "heading": "Traga seu próprio vídeo",
+          "heading": "Agrupar, dividir e salvar",
           "body": [
-            "Cole um link do YouTube e o app cria legendas e tradução. É um recurso Premium e usa um ponto a cada três minutos de vídeo, até 15 minutos."
-          ]
-        },
-        {
-          "heading": "Estude com legendas",
-          "body": [
-            "Enquanto o vídeo toca, cada trecho mostra legendas no idioma que você está aprendendo, com tradução. Toque em uma linha para ouvir só aquele trecho de novo.",
-            "{ui:videoLearnRangeMode} para ouvir várias linhas juntas, juntar ou separar trechos. {ui:videoLearnResetAllCues} volta tudo ao normal."
-          ]
-        },
-        {
-          "heading": "Salve e volte depois",
-          "body": [
+            "{ui:videoLearnRangeMode} para ouvir várias linhas juntas, juntar ou separar trechos. {ui:videoLearnResetAllCues} volta tudo ao normal.",
             "{ui:videoLearnSaveSession} para achar depois em {ui:videoLearnSavedSessions}. Assistir de novo um vídeo salvo não gasta pontos."
           ]
         }
@@ -1285,7 +1397,7 @@
         }
       ]
     },
-    "_version": "2026-10-09"
+    "_version": "2026-10-16b"
   },
   "ru": {
     "map": {
@@ -1427,24 +1539,40 @@
           "body": [
             "Каждый месяц — подборка видео для изучения. Бесплатно доступны 3 видео, в Premium — все.",
             "{ui:discoverCta} подберёт видео по вашим интересам."
+          ],
+          "shot": "video-library"
+        },
+        {
+          "heading": "Субтитры только на изучаемом языке",
+          "body": [
+            "Субтитры показываются только на языке, который вы учите: сначала слушайте и читайте. Нажмите на строку, чтобы снова послушать только этот отрывок."
+          ],
+          "shot": "video-study"
+        },
+        {
+          "heading": "Полоска слева от строки — перевод",
+          "body": [
+            "Не понятно? Нажмите на полоску слева от строки. Перевод подходит к сцене: он учитывает, о чём видео, и соседние реплики."
+          ],
+          "shot": "video-bar"
+        },
+        {
+          "heading": "Спросите о любой части",
+          "body": [
+            "Проведите по точкам, чтобы выбрать слово или выражение, и нажмите вопрос вроде «{ui:quickAskMeaning}» или задайте свой. Ответ тоже учитывает сцену."
+          ],
+          "shot": "video-ask"
+        },
+        {
+          "heading": "Своё видео",
+          "body": [
+            "Вставьте ссылку на YouTube — приложение сделает субтитры на изучаемом языке. Это функция Premium: 1 балл за каждые 3 минуты видео, до 15 минут."
           ]
         },
         {
-          "heading": "Добавьте своё видео",
+          "heading": "Объединить, разделить и сохранить",
           "body": [
-            "Вставьте ссылку на YouTube — приложение создаст субтитры и перевод. Это Premium-функция, расходует 1 балл за 3 минуты видео, максимум 15 минут."
-          ]
-        },
-        {
-          "heading": "Учитесь с субтитрами",
-          "body": [
-            "Во время просмотра показываются субтитры на изучаемом языке и перевод. Нажмите на строку — услышите только этот фрагмент.",
-            "{ui:videoLearnRangeMode} — чтобы слушать несколько строк подряд, объединять или делить фрагменты. {ui:videoLearnResetAllCues} вернёт всё, как было."
-          ]
-        },
-        {
-          "heading": "Сохраняйте и возвращайтесь",
-          "body": [
+            "{ui:videoLearnRangeMode} — чтобы слушать несколько строк подряд, объединять или делить фрагменты. {ui:videoLearnResetAllCues} вернёт всё, как было.",
             "{ui:videoLearnSaveSession} — чтобы найти видео в {ui:videoLearnSavedSessions}. Повторный просмотр сохранённого видео не тратит баллы."
           ]
         }
@@ -1469,7 +1597,7 @@
         }
       ]
     },
-    "_version": "2026-10-09"
+    "_version": "2026-10-16b"
   },
   "id": {
     "map": {
@@ -1611,24 +1739,40 @@
           "body": [
             "Video pilihan setiap bulan, siap untuk dipelajari. Akun gratis bisa coba 3 video; Premium bisa akses semua.",
             "{ui:discoverCta} akan merekomendasikan video sesuai minatmu."
+          ],
+          "shot": "video-library"
+        },
+        {
+          "heading": "Subtitle hanya dalam bahasa yang dipelajari",
+          "body": [
+            "Subtitle hanya muncul dalam bahasa yang kamu pelajari: dengarkan dan baca dulu. Ketuk satu baris untuk mendengar bagian itu saja lagi."
+          ],
+          "shot": "video-study"
+        },
+        {
+          "heading": "Bilah di samping baris untuk terjemahan",
+          "body": [
+            "Bingung? Ketuk bilah di kiri baris. Terjemahannya pas dengan adegan ini karena memperhatikan isi video dan dialog di sekitarnya."
+          ],
+          "shot": "video-bar"
+        },
+        {
+          "heading": "Tanya bagian mana saja",
+          "body": [
+            "Geser di atas titik-titik untuk memilih kata atau ungkapan, lalu ketuk pertanyaan seperti “{ui:quickAskMeaning}” atau tulis sendiri. Jawabannya juga pas dengan adegan ini."
+          ],
+          "shot": "video-ask"
+        },
+        {
+          "heading": "Tambahkan videomu",
+          "body": [
+            "Tempel tautan YouTube, aplikasi akan membuat subtitle dalam bahasa yang kamu pelajari. Ini fitur Premium dan memakai 1 poin per 3 menit video, hingga 15 menit."
           ]
         },
         {
-          "heading": "Bawa Video Sendiri",
+          "heading": "Gabungkan, pisahkan, dan simpan",
           "body": [
-            "Tempel link YouTube dan aplikasi akan membuatkan subtitle serta terjemahan. Fitur ini khusus Premium dan memakai satu poin untuk tiap tiga menit video, maksimal 15 menit."
-          ]
-        },
-        {
-          "heading": "Belajar dengan Subtitle",
-          "body": [
-            "Saat video diputar, tiap bagian tampil dengan subtitle bahasa yang kamu pelajari dan terjemahannya. Ketuk baris untuk memutar ulang bagian itu saja.",
-            "{ui:videoLearnRangeMode} untuk mendengarkan beberapa baris sekaligus, serta menggabung atau memisahkan bagian. {ui:videoLearnResetAllCues} mengembalikan semuanya seperti semula."
-          ]
-        },
-        {
-          "heading": "Simpan dan Lanjutkan",
-          "body": [
+            "{ui:videoLearnRangeMode} untuk mendengarkan beberapa baris sekaligus, serta menggabung atau memisahkan bagian. {ui:videoLearnResetAllCues} mengembalikan semuanya seperti semula.",
             "{ui:videoLearnSaveSession} untuk menyimpan sesi, lalu temukan lagi di {ui:videoLearnSavedSessions}. Menonton video yang sudah disimpan tidak mengurangi poin."
           ]
         }
@@ -1653,7 +1797,7 @@
         }
       ]
     },
-    "_version": "2026-10-09"
+    "_version": "2026-10-16b"
   },
   "ar": {
     "map": {
@@ -1795,24 +1939,40 @@
           "body": [
             "فيديوهات مختارة كل شهر جاهزة للدراسة. الحساب المجاني يتيح تجربة 3 فيديوهات؛ الحساب المميز يفتح الجميع.",
             "{ui:discoverCta} يقترح فيديوهات تناسب اهتماماتك."
+          ],
+          "shot": "video-library"
+        },
+        {
+          "heading": "الترجمة النصية بلغة التعلم فقط",
+          "body": [
+            "تظهر الترجمة النصية بلغة التعلم فقط: استمع واقرأ أولًا. اضغط على سطر لتسمع ذلك الجزء وحده مرة أخرى."
+          ],
+          "shot": "video-study"
+        },
+        {
+          "heading": "الشريط بجانب السطر يترجمه",
+          "body": [
+            "هل توقفت؟ اضغط على الشريط بجانب السطر. تأتي الترجمة مناسبة لهذا المشهد لأنها تراعي موضوع الفيديو والأسطر المحيطة."
+          ],
+          "shot": "video-bar"
+        },
+        {
+          "heading": "اسأل عن أي جزء",
+          "body": [
+            "اسحب فوق النقاط لاختيار كلمة أو تعبير، ثم اضغط على سؤال مثل «{ui:quickAskMeaning}» أو اكتب سؤالك. الإجابة أيضًا مناسبة لهذا المشهد."
+          ],
+          "shot": "video-ask"
+        },
+        {
+          "heading": "أضف الفيديو الخاص بك",
+          "body": [
+            "الصق رابط YouTube وسينشئ التطبيق ترجمة نصية بلغة التعلم. هذه ميزة Premium وتستخدم نقطة واحدة لكل 3 دقائق من الفيديو، حتى 15 دقيقة."
           ]
         },
         {
-          "heading": "أضف فيديو خاص بك",
+          "heading": "الدمج والتقسيم والحفظ",
           "body": [
-            "الصق رابط يوتيوب وسيقوم التطبيق بإنشاء الترجمة والنص. هذه ميزة للحساب المميز وتستهلك نقطة لكل ثلاث دقائق من الفيديو، حتى 15 دقيقة."
-          ]
-        },
-        {
-          "heading": "الدراسة مع الترجمة",
-          "body": [
-            "أثناء تشغيل الفيديو، تظهر الترجمة باللغة التي تتعلمها مع الترجمة. اضغط على أي سطر لسماع هذا الجزء فقط.",
-            "{ui:videoLearnRangeMode} لسماع عدة أسطر معاً، ويمكنك دمج أو تقسيم الأجزاء. {ui:videoLearnResetAllCues} يعيد كل شيء كما كان."
-          ]
-        },
-        {
-          "heading": "الحفظ والعودة لاحقاً",
-          "body": [
+            "{ui:videoLearnRangeMode} لسماع عدة أسطر معاً، ويمكنك دمج أو تقسيم الأجزاء. {ui:videoLearnResetAllCues} يعيد كل شيء كما كان.",
             "{ui:videoLearnSaveSession} لحفظ الجلسة والعودة إليها من {ui:videoLearnSavedSessions}. مشاهدة فيديو محفوظ مرة أخرى لا تستهلك نقاط."
           ]
         }
@@ -1837,7 +1997,7 @@
         }
       ]
     },
-    "_version": "2026-10-09"
+    "_version": "2026-10-16b"
   },
   "th": {
     "map": {
@@ -1979,24 +2139,40 @@
           "body": [
             "มีวิดีโอคัดสรรใหม่ทุกเดือนให้เรียนได้ทันที บัญชีฟรีดูได้ 3 วิดีโอ Premium ดูได้ทั้งหมด",
             "{ui:discoverCta} แนะนำวิดีโอที่ตรงกับความสนใจของคุณ"
+          ],
+          "shot": "video-library"
+        },
+        {
+          "heading": "ซับไตเติลเป็นภาษาที่เรียนอย่างเดียว",
+          "body": [
+            "ซับไตเติลจะแสดงเฉพาะภาษาที่กำลังเรียน ลองฟังและอ่านก่อน แตะบรรทัดเพื่อฟังเฉพาะช่วงนั้นอีกครั้ง"
+          ],
+          "shot": "video-study"
+        },
+        {
+          "heading": "แถบข้างบรรทัดช่วยแปล",
+          "body": [
+            "ถ้าติด แตะแถบด้านข้างของบรรทัด คำแปลจะเข้ากับฉากนี้ เพราะดูจากเนื้อหาวิดีโอและบทพูดก่อนหลัง"
+          ],
+          "shot": "video-bar"
+        },
+        {
+          "heading": "ถามได้ทุกส่วน",
+          "body": [
+            "ลากผ่านจุดเพื่อเลือกคำหรือสำนวน แล้วแตะคำถามอย่าง “{ui:quickAskMeaning}” หรือพิมพ์ถามเอง คำตอบก็จะเข้ากับฉากนี้เช่นกัน"
+          ],
+          "shot": "video-ask"
+        },
+        {
+          "heading": "เพิ่มวิดีโอของคุณ",
+          "body": [
+            "วางลิงก์ YouTube แล้วแอปจะสร้างซับไตเติลเป็นภาษาที่เรียน เป็นฟีเจอร์ Premium ใช้ 1 พอยต์ต่อวิดีโอทุก 3 นาที สูงสุด 15 นาที"
           ]
         },
         {
-          "heading": "นำเข้าวิดีโอของคุณเอง",
+          "heading": "รวม แยก และบันทึก",
           "body": [
-            "วางลิงก์ YouTube แล้วแอปจะสร้างซับไตเติลและแปลให้ ฟีเจอร์นี้สำหรับ Premium ใช้ 1 แต้มต่อวิดีโอ 3 นาที สูงสุด 15 นาที"
-          ]
-        },
-        {
-          "heading": "เรียนรู้ผ่านซับไตเติล",
-          "body": [
-            "ขณะเล่นวิดีโอ จะแสดงซับไตเติลภาษาที่เรียนพร้อมคำแปล แตะประโยคเพื่อฟังเฉพาะส่วนนั้นซ้ำได้",
-            "{ui:videoLearnRangeMode} เพื่อฟังหลายบรรทัดต่อเนื่อง และรวม/แยกช่วงได้ {ui:videoLearnResetAllCues} คืนค่าทุกอย่างเหมือนเดิม"
-          ]
-        },
-        {
-          "heading": "บันทึกและกลับมาดูอีก",
-          "body": [
+            "{ui:videoLearnRangeMode} เพื่อฟังหลายบรรทัดต่อเนื่อง และรวม/แยกช่วงได้ {ui:videoLearnResetAllCues} คืนค่าทุกอย่างเหมือนเดิม",
             "{ui:videoLearnSaveSession} เพื่อบันทึกไว้ แล้วหาได้ใน {ui:videoLearnSavedSessions} ดูวิดีโอที่บันทึกไว้ซ้ำไม่เสียแต้ม"
           ]
         }
@@ -2021,7 +2197,7 @@
         }
       ]
     },
-    "_version": "2026-10-09"
+    "_version": "2026-10-16b"
   },
   "hi": {
     "map": {
@@ -2163,24 +2339,40 @@
           "body": [
             "हर महीने चुने गए वीडियो — पढ़ाई के लिए तैयार। फ्री अकाउंट में 3 आज़मा सकते हैं; प्रीमियम में सभी खुलते हैं।",
             "{ui:discoverCta} आपकी पसंद के वीडियो सुझाता है।"
+          ],
+          "shot": "video-library"
+        },
+        {
+          "heading": "सबटाइटल सिर्फ़ सीखी जा रही भाषा में",
+          "body": [
+            "सबटाइटल सिर्फ़ उसी भाषा में दिखते हैं जो आप सीख रहे हैं: पहले सुनें और पढ़ें। किसी लाइन पर टैप करें तो सिर्फ़ वही हिस्सा फिर से सुनाई देगा।"
+          ],
+          "shot": "video-study"
+        },
+        {
+          "heading": "लाइन के बगल की पट्टी से अनुवाद",
+          "body": [
+            "अटक गए? लाइन के बगल वाली पट्टी पर टैप करें। अनुवाद इस सीन के हिसाब से होता है, क्योंकि वह वीडियो का विषय और आस-पास की लाइनें देखता है।"
+          ],
+          "shot": "video-bar"
+        },
+        {
+          "heading": "किसी भी हिस्से के बारे में पूछें",
+          "body": [
+            "बिंदुओं पर खींचकर कोई शब्द या एक्सप्रेशन चुनें, फिर “{ui:quickAskMeaning}” जैसे सवाल पर टैप करें या खुद पूछें। जवाब भी इस सीन के हिसाब से मिलता है।"
+          ],
+          "shot": "video-ask"
+        },
+        {
+          "heading": "अपना वीडियो जोड़ें",
+          "body": [
+            "YouTube लिंक पेस्ट करें, ऐप सीखी जा रही भाषा में सबटाइटल बना देगा। यह Premium फ़ीचर है और हर 3 मिनट के वीडियो पर 1 पॉइंट लगता है, 15 मिनट तक।"
           ]
         },
         {
-          "heading": "अपना वीडियो लाएँ",
+          "heading": "जोड़ें, बाँटें और सेव करें",
           "body": [
-            "YouTube लिंक पेस्ट करें — ऐप सबटाइटल और अनुवाद बना देगा। यह प्रीमियम फीचर है और हर तीन मिनट के वीडियो पर एक पॉइंट लगता है, अधिकतम 15 मिनट तक।"
-          ]
-        },
-        {
-          "heading": "सबटाइटल के साथ पढ़ें",
-          "body": [
-            "वीडियो चलते समय हर हिस्से में सीखी जा रही भाषा के सबटाइटल और अनुवाद दिखते हैं। किसी लाइन पर टैप करें — वही हिस्सा फिर से सुनें।",
-            "{ui:videoLearnRangeMode} से कई लाइनें साथ सुनें, हिस्से जोड़ें या बाँटें। {ui:videoLearnResetAllCues} से सब कुछ पहले जैसा हो जाएगा।"
-          ]
-        },
-        {
-          "heading": "सेव करें और दोबारा देखें",
-          "body": [
+            "{ui:videoLearnRangeMode} से कई लाइनें साथ सुनें, हिस्से जोड़ें या बाँटें। {ui:videoLearnResetAllCues} से सब कुछ पहले जैसा हो जाएगा।",
             "{ui:videoLearnSaveSession} दबाएँ — वीडियो {ui:videoLearnSavedSessions} में मिल जाएगा। सेव किए वीडियो दोबारा देखने पर पॉइंट्स नहीं कटते।"
           ]
         }
@@ -2205,6 +2397,6 @@
         }
       ]
     },
-    "_version": "2026-10-09"
+    "_version": "2026-10-16b"
   }
 }
