@@ -20,6 +20,7 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
 | Play: build to testing track | `v*` 태그 푸시 또는 수동 | 서명된 AAB 빌드 → 내부 테스트(또는 비공개) 트랙 | 테스트 트랙 |
 | Play: production | 수동 + **승인 필요** | 프로덕션 단계적 출시 / 비율 변경 / 중단 | 프로덕션 |
 | Store: screenshots | `v*` 태그 푸시 또는 수동 | 앱을 띄워 스크린샷을 다시 찍고, 바뀌었으면 PR | 없음 (병합하면 upload listing이 올림) |
+| Store: screenshot preview | 화면 코드(`src/`, `api` 제외)·`store-shots/`가 main에 바뀔 때, 또는 수동 | 앱을 돌려 다시 찍고 등록정보별 폴더 + 전후 비교로 묶어 아티팩트로 보관. 커밋하지 않음 | 없음 |
 
 ## 처음 한 번 설정하기
 
@@ -91,7 +92,12 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
 비용도 들지 않고 매번 같은 대화가 찍힙니다. 버튼이나 화면 구성이 바뀌면 다음
 캡처에 그대로 반영됩니다.
 
-- **언제**: 버전 태그를 푸시할 때마다 자동으로, 또는 Actions에서 수동 실행
+- **화면이 바뀔 때마다 (업로드 없이)**: "Store: screenshot preview"가 main에 화면 코드가 바뀔 때마다 돌아,
+  앱 캡처 + 디자인 세트를 `store-shots/package.mjs`로 등록정보별 폴더(`0_default-english`, `1_korea` … `5_india`,
+  올릴 순서대로 1~8번)에 묶고, 지난 실행과 비교해 바뀐 화면의 전/후 이미지(`compare/`)와 목록(`CHANGES.md`,
+  실행 요약에도 표시)을 만듭니다. Actions → 실행 → Artifacts → `store-screenshots`에서 zip으로 받습니다(90일 보관).
+  커밋도 Play 업로드도 하지 않습니다. 폴더 이름이 영어인 건 Windows에서 한글 zip 이름이 깨지기 때문.
+- **언제 (PR)**: 버전 태그를 푸시할 때마다 자동으로, 또는 Actions에서 수동 실행
 - **결과**: `fastlane/metadata/android/<언어>/images/phoneScreenshots/NN-<장면>.png`
   가 바뀌면 PR이 열립니다. PR의 Files changed에서 이미지를 보고 병합하면 Play에
   올라갑니다.

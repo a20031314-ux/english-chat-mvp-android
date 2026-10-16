@@ -186,7 +186,7 @@
 | 통화 | 대화 중 화면, 막힌 곳 돌아보기 | (기기 캡처 필요) |
 
 - 입력 예시는 UI 언어마다 그 언어로 쓴 자연스러운 문장 (`scripts/capture-whats-new.mjs`의 STUCK_LINE, GOAL).
-- 스토어 스크린샷은 `store-shots/`가 고정 응답으로 찍는다 (`fastlane/STORE_AUTOMATION.md`). 지금 en·es·ja·ko·zh × 지도·채팅·빠른 질문.
+- 스토어 스크린샷은 `store-shots/`가 고정 응답으로 찍는다 (`fastlane/STORE_AUTOMATION.md`). 지금 en·es·ja·ko·zh·hi × 지도·채팅·빠른 질문. 화면 코드가 main에 바뀔 때마다 "Store: screenshot preview"가 다시 찍어 아티팩트로 남긴다(업로드 없음).
 
 ## 문구 톤
 

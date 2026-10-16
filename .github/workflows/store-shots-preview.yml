@@ -1,0 +1,103 @@
+# Retake the store screenshots whenever the app's screens may have changed,
+# and keep them as a download — nothing is committed and nothing reaches Play.
+#
+# Each run plays the store scenes in the real app (store-shots/capture.mjs,
+# fixed AI responses, no API key), renders the designed canvas set
+# (store-shots/canvas/), and packs both per listing with store-shots/package.mjs:
+# 0_default-english, 1_korea … 5_india, eight images each in upload order,
+# plus before | after pictures of whatever changed since the last run.
+#
+# Where to find it: Actions → "Store: screenshot preview" → the run →
+# Artifacts → store-screenshots (kept 90 days). The run summary lists what
+# changed. Uploading to Play stays a person's job (fastlane/STORE_AUTOMATION.md).
+name: "Store: screenshot preview"
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "!src/app/api/**"
+      - "public/**"
+      - "store-shots/**"
+      - ".github/workflows/store-shots-preview.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+# A newer push makes an older run's pictures stale; keep only the newest.
+concurrency:
+  group: store-shots-preview
+  cancel-in-progress: true
+
+jobs:
+  shots:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: Browser and fonts
+        run: |
+          npx playwright install --with-deps chromium
+          # Headlines and app text in every script the listings use.
+          sudo apt-get install -y --no-install-recommends fonts-noto-core fonts-noto-cjk
+
+      - name: Last run's pictures, to compare against
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          id=$(gh run list -R "$GITHUB_REPOSITORY" --workflow store-shots-preview.yml --status success -L 1 --json databaseId -q '.[0].databaseId')
+          if [ -n "$id" ] && gh run download "$id" -R "$GITHUB_REPOSITORY" -n store-screenshots -D "$RUNNER_TEMP/previous"; then
+            echo "PREVIOUS=$RUNNER_TEMP/previous" >> "$GITHUB_ENV"
+          else
+            echo "No earlier run to compare with; comparing with the images in git."
+          fi
+
+      - name: Start the app (app build, dev server)
+        run: |
+          CAPACITOR_STATIC=1 npx next dev -p 3100 > "$RUNNER_TEMP/next.log" 2>&1 &
+          for i in $(seq 1 60); do
+            curl -sf -o /dev/null http://localhost:3100/ && exit 0
+            sleep 2
+          done
+          cat "$RUNNER_TEMP/next.log"
+          exit 1
+
+      - name: Play the scenes in the app
+        run: npm run store:shots
+
+      - name: Designed set
+        run: node store-shots/canvas/render.mjs
+
+      - name: Pack per listing and compare
+        run: |
+          if [ -n "$PREVIOUS" ]; then
+            node store-shots/package.mjs --previous "$PREVIOUS"
+          else
+            node store-shots/package.mjs
+          fi
+          cat store-shots/out/upload/CHANGES.md >> "$GITHUB_STEP_SUMMARY"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: store-screenshots
+          path: store-shots/out/upload/
+          retention-days: 90
+
+      # A scene that cannot find its button fails on purpose (scenes.mjs);
+      # keep what it saw so the broken step can be looked at.
+      - name: Keep failed screens for inspection
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: store-shots-failed
+          path: store-shots/out/
+          if-no-files-found: ignore
