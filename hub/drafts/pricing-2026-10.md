@@ -61,3 +61,19 @@
 - 서버(바로 반영): 요금별 권한(RevenueCat entitlement/상품 ID → 요금), 하루 자유 통화 상한 계산(사용자 하루, 넘으면 구매 포인트 차감), 채팅 한도, `billing/config.ts`·`cost.ts`의 마진 검사.
 - 앱(빌드): 결제 화면 세 요금, 통화 첫 화면 "오늘 남은 N분", 14개 언어 문구, PRODUCT.md "무료 · 프리미엄 · 포인트" 표, 사용법.
 - 사람(store): Play Console에 구독 상품 셋(3,900 / 5,500 / 7,900원), RevenueCat 연결. 상품이 생기기 전엔 결제 화면에서 숨김.
+
+## 구현 (2026-10-16)
+
+- 요금표 한 곳: `src/lib/billing/plans.ts` (`termsFor`, 상품 id `lite_monthly`·`plus_monthly`·`premium_monthly`). 세 상품 모두 RevenueCat `premium` 권한을 열고,
+  서버는 권한의 `product_identifier`로 요금을 안다(모르는 상품 = 프리미엄). 앱은 `x-client-premium`에 요금 이름을 보냄(옛 빌드 "1" = 프리미엄).
+- 하루 자유 통화: 턴마다 앞 턴과의 간격(최대 1분, 첫 턴 15초)만큼 차감, 학습자 자정(`x-tz-offset`, 없으면 한국)에 리셋. 다 쓰면 기존 5분 블록 포인트 차감, 포인트 없으면 통화 끝(402, `todayLeftMs`).
+- 채팅 하루 10 / 30 / 50 (프리미엄은 전환 전 제한 없음 → 전환 뒤 100). 영상: 라이브러리 전체는 프리미엄만, 라이트·플러스는 체험 3편 + 구매 포인트로 가져오기.
+- 추가 팩: `/api/pack/today?n=2`(앞 팩이 끝나야), id `날짜.2`·`날짜.3`, 앞 팩과 다른 중심·질문.
+- 프리미엄 전환: `PREMIUM_DAILY_PLAN_FROM = "YYYY-MM-DD"`(UTC 날짜). 그날부터 15분·100번·추가 팩 2번, 그 달은 80포인트 유지, 다음 달부터 0.
+- 결제 화면(2.67): 스토어 current 오퍼링에 있는 요금만 카드로(가격은 스토어 표기). 요금 사이 변경은 `storeProductChangeInfo`로 Play 구독 교체.
+
+### 사람이 할 일 (순서)
+1. Play Console → 구독 만들기: `lite_monthly` 월 3,900원, `plus_monthly` 월 5,500원 (기본 요금제 하나씩, 자동 갱신).
+2. RevenueCat → Products에 두 상품 추가 → Entitlements `premium`에 붙이기 → Offerings current에 패키지 두 개 추가(식별자 자유, 예: `lite`, `plus`). 기존 `$rc_monthly`(premium_monthly)는 그대로.
+3. 2.67 빌드 출시(결제 화면이 세 요금을 보여 줌). 옛 빌드는 프리미엄만 보임.
+4. 2.67이 대부분에게 깔린 뒤 `premium_monthly` 가격을 8,900원으로(기존 구독자 가격 변경 방식은 Play의 "기존 가격 유지/변경" 중 선택) → 같은 날 Claude에게 "8,900원 전환 켜 줘".

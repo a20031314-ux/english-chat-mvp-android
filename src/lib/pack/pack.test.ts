@@ -231,3 +231,16 @@ test("a pack turn speaks the reaction in fixed words and then the pack's questio
   assert.deepEqual(answered.direction.say, { text: "Me? I love tea. And you?" });
   assert.equal(answered.asked, null);
 });
+
+test("an extra pack is named by its day and number, and only by those", async () => {
+  const { isPackDay, packIdFor, packDayOf } = await import("./pack.ts");
+  assert.equal(packIdFor("2026-10-16", 1), "2026-10-16");
+  assert.equal(packIdFor("2026-10-16", 3), "2026-10-16.3");
+  assert.deepEqual(packDayOf("2026-10-16.2"), { day: "2026-10-16", n: 2 });
+  assert.deepEqual(packDayOf("2026-10-16"), { day: "2026-10-16", n: 1 });
+  assert.equal(isPackDay("2026-10-16.2"), true);
+  assert.equal(isPackDay("2026-10-16.1"), false);
+  assert.equal(isPackDay("2026-10-16.10"), false);
+  const { parsePracticeGoal } = await import("../learner/practice.ts");
+  assert.equal(parsePracticeGoal({ pack: "2026-10-16.2" })?.pack, "2026-10-16.2");
+});

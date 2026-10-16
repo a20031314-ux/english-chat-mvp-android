@@ -312,7 +312,21 @@ export async function listenForTurn(input: {
  * conversation that has to end. Returned rather than thrown so the caller
  * decides what the scene does about it.
  */
-export type OutOfPoints = { outOfPoints: true };
+export type OutOfPoints = {
+  outOfPoints: true;
+  /** On a plan with daily free talk (billing/plans.ts): today's ran out, and tomorrow's comes back. */
+  daily?: boolean;
+};
+
+/** What a refused turn says: whether it was a day's free talk that ran out. */
+async function outOfPointsFrom(response: Response): Promise<OutOfPoints> {
+  try {
+    const body = (await response.json()) as { todayLeftMs?: unknown };
+    return { outOfPoints: true, daily: typeof body.todayLeftMs === "number" };
+  } catch {
+    return { outOfPoints: true };
+  }
+}
 
 export function isOutOfPoints(value: unknown): value is OutOfPoints {
   return typeof value === "object" && value !== null && "outOfPoints" in value;
@@ -443,7 +457,7 @@ export async function fetchDirection(input: {
         headers: { ...headers, [ROLEPLAY_STREAM_CLIENT_HEADER]: "1" },
         body,
       });
-      if (response.status === 402) return { outOfPoints: true };
+      if (response.status === 402) return outOfPointsFrom(response);
       if (!response.ok) {
         console.error("[roleplay] direction failed with", response.status);
         return null;
@@ -463,7 +477,7 @@ export async function fetchDirection(input: {
       headers,
       body,
     });
-    if (response.status === 402) return { outOfPoints: true };
+    if (response.status === 402) return outOfPointsFrom(response);
     if (!response.ok) {
       console.error("[roleplay] direction failed with", response.status);
       return null;

@@ -49,6 +49,18 @@ export function PackCard({
   if (!pack) return null;
   const names = elementNames(ui);
   const done = pack.status === "done";
+  // A plan with extra packs (billing/plans.ts) offers the next once this one is over.
+  const n = pack.n ?? 1;
+  const total = pack.packsToday ?? 1;
+  const another = done && n < total;
+  const startAnother = async () => {
+    // The next pack opens once this one is closed on the server.
+    if (!retro) await finishPack(targetLanguage, pack.day, isPremium);
+    const next = await fetchPackToday(targetLanguage, isPremium, n + 1);
+    if (!next) return;
+    setPack(next);
+    setRetro(next.retro ?? null);
+  };
   const start = () =>
     onStart({ tab: "roleplay", goal: pack.practice, title: ui.packTitle, packAnswered: pack.answered });
 
@@ -78,19 +90,30 @@ export function PackCard({
       ) : null}
       {done ? (
         <div className="mt-3 flex items-center justify-between gap-2">
-          <p className="text-[12px] text-emerald-200">{ui.packDoneToday}</p>
-          <button
-            type="button"
-            onClick={() => {
-              setShowRetro(true);
-              // Every question answered but never closed (the call was put
-              // down on its last line): closing it here is what makes the retro.
-              if (!retro) void finishPack(targetLanguage, pack.day, isPremium).then(setRetro);
-            }}
-            className="rounded-lg bg-white/10 px-3 py-1.5 text-[12px] text-slate-100 hover:bg-white/15"
-          >
-            {ui.packSeeRetro}
-          </button>
+          <p className="text-[12px] text-emerald-200">{another ? null : ui.packDoneToday}</p>
+          <div className="flex items-center gap-2">
+            {another ? (
+              <button
+                type="button"
+                onClick={() => void startAnother()}
+                className="rounded-lg bg-emerald-400/20 px-3 py-1.5 text-[12px] text-emerald-100 hover:bg-emerald-400/30"
+              >
+                {ui.packOneMore.replace("{n}", String(n + 1)).replace("{total}", String(total))}
+              </button>
+            ) : null}
+            <button
+              type="button"
+              onClick={() => {
+                setShowRetro(true);
+                // Every question answered but never closed (the call was put
+                // down on its last line): closing it here is what makes the retro.
+                if (!retro) void finishPack(targetLanguage, pack.day, isPremium).then(setRetro);
+              }}
+              className="rounded-lg bg-white/10 px-3 py-1.5 text-[12px] text-slate-100 hover:bg-white/15"
+            >
+              {ui.packSeeRetro}
+            </button>
+          </div>
         </div>
       ) : (
         <button

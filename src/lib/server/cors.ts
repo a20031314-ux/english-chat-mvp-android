@@ -21,7 +21,7 @@ const ALLOWED_ORIGIN_PREFIXES = [
 // fetch from https://localhost and is held to all of this. An omission here now
 // breaks that call on a phone rather than staying invisible.
 const ALLOWED_HEADERS =
-  "Content-Type, x-client-premium, x-rc-user, x-learning-language, x-call-blocks, x-app-version, x-roleplay-points, x-roleplay-session, x-roleplay-bank, x-roleplay-stream, x-roleplay-meant, x-roleplay-react";
+  "Content-Type, x-client-premium, x-rc-user, x-learning-language, x-call-blocks, x-app-version, x-roleplay-points, x-roleplay-session, x-roleplay-bank, x-roleplay-stream, x-roleplay-meant, x-roleplay-react, x-tz-offset";
 
 /**
  * The call route answers with SDP and says what it charged in headers, which a

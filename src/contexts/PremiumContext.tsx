@@ -16,6 +16,7 @@ import {
   isBillingNativePlatform,
   purchaseMonthlyPremium,
   readCachedPremium,
+  readCachedTier,
   restorePremiumPurchases,
   writeCachedPremium,
   type BillingReadyResult,
@@ -23,14 +24,21 @@ import {
   type PurchaseFlowResult,
   type RestoreFlowResult,
 } from "@/lib/billing/billingService";
+import type { PlanTier } from "@/lib/billing/plans";
 
 type PremiumContextValue = {
+  /** Any paid plan. */
   isPremium: boolean;
+  /** Which plan (billing/plans.ts); "free" when none. */
+  tier: PlanTier;
   isBillingNative: boolean;
   isBillingReady: boolean;
   ensureBillingReady: (onStep?: BillingStepListener) => Promise<BillingReadyResult>;
   refreshPremium: () => Promise<boolean>;
-  purchasePremium: (onStep?: BillingStepListener) => Promise<PurchaseFlowResult>;
+  purchasePremium: (
+    onStep?: BillingStepListener,
+    tier?: Exclude<PlanTier, "free">,
+  ) => Promise<PurchaseFlowResult>;
   restorePurchases: () => Promise<RestoreFlowResult>;
   setPremiumForUi: (value: boolean) => void;
 };
@@ -39,6 +47,14 @@ const PremiumContext = createContext<PremiumContextValue | null>(null);
 
 export function PremiumProvider({ children }: { children: ReactNode }) {
   const [isPremium, setIsPremium] = useState(false);
+  // The plan is cached beside the premium flag and read with it; a purchase
+  // bumps the version so a change of plan is read again.
+  const [tierVersion, setTierVersion] = useState(0);
+  const tier = useMemo<PlanTier>(
+    () => (isPremium ? readCachedTier() : "free"),
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- tierVersion is the signal to read again
+    [isPremium, tierVersion],
+  );
   const [isBillingNative, setIsBillingNative] = useState(false);
   const [isBillingReady, setIsBillingReady] = useState(false);
 
@@ -46,6 +62,7 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
     try {
       const active = await fetchPremiumFromRevenueCat();
       setIsPremium(active);
+      setTierVersion((n) => n + 1);
       writeCachedPremium(active);
       return active;
     } catch (error) {
@@ -90,13 +107,17 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  const purchasePremium = useCallback(async (onStep?: BillingStepListener) => {
-    const result = await purchaseMonthlyPremium(onStep);
-    if (result.status === "success") {
-      setIsPremium(true);
-    }
-    return result;
-  }, []);
+  const purchasePremium = useCallback(
+    async (onStep?: BillingStepListener, wanted: Exclude<PlanTier, "free"> = "premium") => {
+      const result = await purchaseMonthlyPremium(onStep, wanted);
+      if (result.status === "success") {
+        setIsPremium(true);
+        setTierVersion((n) => n + 1);
+      }
+      return result;
+    },
+    [],
+  );
 
   const restorePurchases = useCallback(async () => {
     const result = await restorePremiumPurchases();
@@ -117,6 +138,7 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
   const value = useMemo(
     () => ({
       isPremium,
+      tier,
       isBillingNative,
       isBillingReady,
       ensureBillingReady,
@@ -127,6 +149,7 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
     }),
     [
       isPremium,
+      tier,
       isBillingNative,
       isBillingReady,
       ensureBillingReady,

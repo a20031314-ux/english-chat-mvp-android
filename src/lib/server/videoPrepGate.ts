@@ -2,7 +2,6 @@ import type { NextRequest } from "next/server";
 import {
   evaluateVideoAccess,
   maxVideoPrepSeconds,
-  monthlyImportPoints,
   remainingImportSeconds,
 } from "@/lib/billing/videoPrep";
 import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
@@ -31,13 +30,14 @@ function requestLanguage(request: NextRequest): LearningLanguageCode {
 }
 
 export async function videoPrepLimitsForRequest(request: NextRequest) {
-  const { isPremium, userId } = await resolveRequestEntitlement(request);
+  const { isPremium, userId, terms } = await resolveRequestEntitlement(request);
   const usedPoints = await getMonthlyImportPointsUsed(userId);
   // Only a subscriber can import, so only a subscriber's purchases count here.
   const purchasedPoints = isPremium ? await getPurchasedPoints(userId) : 0;
   return {
     isPremium,
     userId,
+    terms,
     usedPoints,
     purchasedPoints,
     billedVideoIds: await getBilledImportVideoIds(userId),
@@ -46,10 +46,11 @@ export async function videoPrepLimitsForRequest(request: NextRequest) {
       usedPoints,
       isPremium,
       purchasedPoints,
+      terms.monthlyGrantPoints,
     ),
     maxDurationSeconds: maxVideoPrepSeconds(isPremium),
     language: requestLanguage(request),
-    importPointsLimit: monthlyImportPoints(isPremium),
+    importPointsLimit: terms.monthlyGrantPoints,
   };
 }
 
@@ -77,6 +78,8 @@ export async function assertVideoPrepAllowed(
     purchasedPoints: limits.purchasedPoints,
     billedVideoIds: limits.billedVideoIds,
     trialVideoIds: limits.trialVideoIds,
+    libraryOpen: limits.terms.libraryOpen,
+    grant: limits.terms.monthlyGrantPoints,
   });
   if (!decision.ok) {
     throw new VideoPipelineError(errorCodeForReason(decision.reason));
@@ -96,7 +99,7 @@ export async function recordVideoPrepForRequest(
     videoUrl,
   });
   if (checked.decision.kind === "library") {
-    if (!checked.isPremium && videoId) {
+    if (!checked.terms.libraryOpen && videoId) {
       await addCatalogTrialVideo(checked.userId, videoId);
     }
     return checked.usedPoints;
@@ -105,6 +108,7 @@ export async function recordVideoPrepForRequest(
     checked.userId,
     checked.decision.billablePoints,
     videoId,
+    checked.terms.monthlyGrantPoints,
   );
   // The balance moved between checking and charging (a call spent it).
   if (!spend) throw new VideoPipelineError("VIDEO_QUOTA");

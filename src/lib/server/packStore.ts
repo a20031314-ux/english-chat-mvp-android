@@ -18,7 +18,7 @@ import { readGrowth } from "./growthStore.ts";
 import { ledgerKey, phrasesToRecycle } from "../learner/ledger.ts";
 import { RECUR_COUNT, RECUR_WINDOW_MS } from "../curriculum/weakPoints.ts";
 import type { GapId } from "../learner/selfCheck.ts";
-import { AVOID_DAYS, chooseFocus, composePack, type GrowthElement, type Pack } from "../pack/pack.ts";
+import { AVOID_DAYS, chooseFocus, composePack, packDayOf, packIdFor, type GrowthElement, type Pack } from "../pack/pack.ts";
 
 const PACK_TTL_SECONDS = 4 * 24 * 60 * 60;
 
@@ -28,7 +28,7 @@ function packKey(userId: string, language: string, day: string): string {
 
 /** The days before `day`, newest first. */
 export function daysBefore(day: string, count: number): string[] {
-  const base = Date.parse(`${day}T00:00:00Z`);
+  const base = Date.parse(`${day.slice(0, 10)}T00:00:00Z`);
   return Array.from({ length: count }, (_, i) =>
     new Date(base - (i + 1) * 24 * 60 * 60 * 1000).toISOString().slice(0, 10),
   );
@@ -56,7 +56,12 @@ export async function ensurePack(userId: string, language: string, day: string, 
     readSelfCheck(userId, language),
     readTurnStats(userId, language, now),
     readGrowth(userId, language, null, now).catch(() => null),
-    ...daysBefore(day, AVOID_DAYS).map((d) => readPack(userId, language, d)),
+    // An extra pack also steers clear of the ones already played today.
+    ...(() => {
+      const { day: date, n } = packDayOf(day);
+      const today = Array.from({ length: n - 1 }, (_, i) => packIdFor(date, i + 1));
+      return [...today, ...daysBefore(date, AVOID_DAYS)];
+    })().map((d) => readPack(userId, language, d)),
   ]);
   const earlier = (recent as Array<Pack | null>).filter((p): p is Pack => p !== null);
   const recurring = Object.values(weak.patterns)

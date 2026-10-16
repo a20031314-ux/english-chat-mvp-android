@@ -22,7 +22,14 @@ import { usePremium } from "@/contexts/PremiumContext";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 
-type CallTime = { pointsLeft: number; carrySeconds: number; pointSeconds: number };
+type CallTime = {
+  pointsLeft: number;
+  carrySeconds: number;
+  pointSeconds: number;
+  /** Today's free talk on a plan with daily minutes (billing/plans.ts); null on one without. */
+  todayLeftSeconds: number | null;
+  dailyMinutes: number | null;
+};
 
 /**
  * Told once, at the door, before the first call it applies to.
@@ -50,12 +57,23 @@ function readNoticeSeen(): boolean {
  * the honest figure is both together; the carry is named on its own when
  * there is a minute of it, because it is the part people would not expect.
  */
-function callTimeLines(time: CallTime | null, ui: UICopy): { total: string; carry: string | null } | null {
+function callTimeLines(
+  time: CallTime | null,
+  ui: UICopy,
+): { today: string | null; total: string | null; carry: string | null } | null {
   if (!time) return null;
   const totalMinutes = Math.floor((time.pointsLeft * time.pointSeconds + time.carrySeconds) / 60);
   const carryMinutes = Math.floor(time.carrySeconds / 60);
+  // A plan with daily minutes leads with today's, which is what a day's call
+  // spends first; the points behind it are named only when there are some.
+  const daily = time.todayLeftSeconds !== null && time.dailyMinutes !== null;
   return {
-    total: ui.roleplayTimeLeft.replace("{minutes}", String(totalMinutes)),
+    today: daily
+      ? ui.roleplayTodayLeft
+          .replace("{minutes}", String(Math.ceil((time.todayLeftSeconds ?? 0) / 60)))
+          .replace("{daily}", String(time.dailyMinutes))
+      : null,
+    total: !daily || totalMinutes > 0 ? ui.roleplayTimeLeft.replace("{minutes}", String(totalMinutes)) : null,
     carry: carryMinutes >= 1 ? ui.roleplayCarryNote.replace("{minutes}", String(carryMinutes)) : null,
   };
 }
@@ -130,13 +148,24 @@ export function RoleplayTab({
     let cancelled = false;
     void fetch(apiUrl("/api/entitlement"), { headers: entitlementHeaders(isPremium) })
       .then((response) => (response.ok ? response.json() : null))
-      .then((data: { callPointsLeft?: unknown; callCarrySeconds?: unknown; callPointSeconds?: unknown } | null) => {
+      .then(
+        (
+          data: {
+            callPointsLeft?: unknown;
+            callCarrySeconds?: unknown;
+            callPointSeconds?: unknown;
+            callTodayLeftSeconds?: unknown;
+            callDailyMinutes?: unknown;
+          } | null,
+        ) => {
         if (cancelled || !data) return;
         if (typeof data.callPointsLeft !== "number" || typeof data.callPointSeconds !== "number") return;
         setCallTime({
           pointsLeft: data.callPointsLeft,
           carrySeconds: typeof data.callCarrySeconds === "number" ? data.callCarrySeconds : 0,
           pointSeconds: data.callPointSeconds,
+          todayLeftSeconds: typeof data.callTodayLeftSeconds === "number" ? data.callTodayLeftSeconds : null,
+          dailyMinutes: typeof data.callDailyMinutes === "number" ? data.callDailyMinutes : null,
         });
       })
       .catch(() => undefined);
@@ -339,7 +368,8 @@ export function RoleplayTab({
           </button>
           {timeLines ? (
             <p className="-mt-1 text-[12px] leading-relaxed text-neutral-500">
-              {timeLines.total}
+              {timeLines.today ? <span className="block text-neutral-300">{timeLines.today}</span> : null}
+              {timeLines.total ? <span className="block">{timeLines.total}</span> : null}
               {timeLines.carry ? <span className="block">{timeLines.carry}</span> : null}
             </p>
           ) : null}

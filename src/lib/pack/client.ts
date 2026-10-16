@@ -10,7 +10,11 @@ import type { Retro } from "./pack";
 
 export type PackToday = {
   available: true;
+  /** The pack's id: the day, or the day and ".2"/".3" for an extra pack. */
   day: string;
+  /** Which of today's packs this is, and how many the plan gives (servers from 2026-10-16). */
+  n?: number;
+  packsToday?: number;
   centre: GapId;
   side: GapId;
   questions: number;
@@ -28,10 +32,10 @@ export function localDay(now = new Date()): string {
   return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
 }
 
-export async function fetchPackToday(language: string, isPremium: boolean): Promise<PackToday | null> {
+export async function fetchPackToday(language: string, isPremium: boolean, n?: number): Promise<PackToday | null> {
   try {
     const response = await fetch(
-      apiUrl(`/api/pack/today?lang=${encodeURIComponent(language)}&day=${localDay()}`),
+      apiUrl(`/api/pack/today?lang=${encodeURIComponent(language)}&day=${localDay()}${n && n > 1 ? `&n=${n}` : ""}`),
       { headers: entitlementHeaders(isPremium) },
     );
     if (!response.ok) return null;

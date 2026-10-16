@@ -47,7 +47,7 @@ export function parsePracticeGoal(value: unknown): PracticeGoal | null {
   const raw = value as Record<string, unknown>;
   const situation = clean(raw.situation, 160);
   const mistake = clean(raw.mistake, 80);
-  const pack = typeof raw.pack === "string" && /^\d{4}-\d{2}-\d{2}$/.test(raw.pack) ? raw.pack : "";
+  const pack = typeof raw.pack === "string" && /^\d{4}-\d{2}-\d{2}(?:\.[2-9])?$/.test(raw.pack) ? raw.pack : "";
   const seen = new Set<string>();
   const phrases = (Array.isArray(raw.phrases) ? raw.phrases : [])
     .map((phrase) => clean(phrase, 60))

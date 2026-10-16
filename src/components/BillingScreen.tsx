@@ -14,10 +14,12 @@ import { apiUrl } from "@/lib/apiBase";
 import {
   isLocalPlanDebugEnabled,
   entitlementHeaders,
-  fetchMonthlyPriceLabel,
+  fetchPlanOffers,
   resetBillingConfigure,
+  type PlanOffer,
 } from "@/lib/billing/billingService";
-import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
+import { FREE_CATALOG_TRIAL_COUNT, FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
+import { PAID_TIERS, termsFor, type PlanTier } from "@/lib/billing/plans";
 import { monthlyImportPoints } from "@/lib/billing/videoPrep";
 import { PointsIcon } from "@/components/PointsIcon";
 import { PointStore } from "@/components/PointStore";
@@ -35,6 +37,43 @@ type BillingUiValue = {
 
 const BillingUiContext = createContext<BillingUiValue | null>(null);
 
+/** A plan's name in the interface language. */
+export function planName(tier: PlanTier, ui: UICopy): string {
+  if (tier === "lite") return ui.planLiteName;
+  if (tier === "plus") return ui.planPlusName;
+  if (tier === "premium") return ui.billingPremiumLabel;
+  return ui.billingFreeLabel;
+}
+
+type PlanSummary = {
+  dailyCallMinutes: number | null;
+  dailyChat: number | null;
+  libraryOpen: boolean;
+  extraPacks: number;
+  monthlyGrantPoints: number;
+};
+
+/** What a plan gives, one short line each, from the server's terms. */
+function planLines(terms: PlanSummary, ui: UICopy): string[] {
+  const lines: string[] = [];
+  if (terms.dailyCallMinutes !== null) {
+    lines.push(ui.planLineCall.replace("{minutes}", String(terms.dailyCallMinutes)));
+  }
+  if (terms.monthlyGrantPoints > 0) {
+    lines.push(ui.planLinePoints.replace("{points}", String(terms.monthlyGrantPoints)));
+  }
+  lines.push(
+    terms.dailyChat === null ? ui.planLineChatUnlimited : ui.planLineChat.replace("{n}", String(terms.dailyChat)),
+  );
+  lines.push(
+    terms.libraryOpen
+      ? ui.planLineLibrary
+      : ui.planLineLibraryTrial.replace("{n}", String(FREE_CATALOG_TRIAL_COUNT)),
+  );
+  if (terms.extraPacks > 0) lines.push(ui.planLineExtraPacks.replace("{n}", String(terms.extraPacks)));
+  return lines;
+}
+
 export function useBillingUi() {
   const value = useContext(BillingUiContext);
   if (!value) {
@@ -45,7 +84,7 @@ export function useBillingUi() {
 
 export function BillingOpenButton({ ui }: { ui: UICopy }) {
   const { openBilling } = useBillingUi();
-  const { isPremium } = usePremium();
+  const { isPremium, tier } = usePremium();
   return (
     <div className="ml-auto flex items-center gap-2">
       <HeaderImportPoints ui={ui} onOpen={openBilling} />
@@ -54,7 +93,7 @@ export function BillingOpenButton({ ui }: { ui: UICopy }) {
         onClick={openBilling}
         className="rounded-full border border-white/15 bg-white/5 px-2.5 py-1 text-[11px] font-medium text-slate-100 hover:bg-white/10"
       >
-        {isPremium ? ui.billingPremiumLabel : ui.billingOpen}
+        {isPremium ? planName(tier, ui) : ui.billingOpen}
       </button>
     </div>
   );
@@ -67,7 +106,7 @@ function HeaderImportPoints({
   ui: UICopy;
   onOpen: () => void;
 }) {
-  const { isPremium } = usePremium();
+  const { isPremium, tier } = usePremium();
   const [used, setUsed] = useState(0);
 
   useEffect(() => {
@@ -81,7 +120,9 @@ function HeaderImportPoints({
     };
   }, []);
 
-  const remaining = Math.max(0, monthlyImportPoints(isPremium) - used);
+  // Only premium's old terms grant points each month (billing/plans.ts).
+  const grant = tier === "premium" ? termsFor("premium").monthlyGrantPoints : monthlyImportPoints(false);
+  const remaining = Math.max(0, (isPremium ? grant : 0) - used);
   return (
     <button
       type="button"
@@ -138,6 +179,7 @@ export function BillingScreen({
 }) {
   const {
     isPremium,
+    tier,
     isBillingNative,
     ensureBillingReady,
     purchasePremium,
@@ -150,19 +192,28 @@ export function BillingScreen({
   const [notice, setNotice] = useState<string | null>(null);
   const [dailyUsed, setDailyUsed] = useState(0);
   const [dailyLimit, setDailyLimit] = useState(FREE_DAILY_CHAT_LIMIT);
-  const [priceLabel, setPriceLabel] = useState<string | null>(null);
+  const [offers, setOffers] = useState<PlanOffer[] | null>(null);
+  const [plans, setPlans] = useState<Partial<Record<PlanTier, PlanSummary>>>({});
+  const [todayLeftSeconds, setTodayLeftSeconds] = useState<number | null>(null);
+  const [buying, setBuying] = useState<PlanTier | null>(null);
 
-  // The price as the store shows it to this person, in their currency.
+  // The plans the store sells, priced as it shows them to this person. Off the
+  // phone there is no store; every plan is listed so the screen can be seen,
+  // and buying says it happens in the app.
   useEffect(() => {
-    if (!isOpen || !isBillingNative || isPremium) return;
+    if (!isOpen) return;
     let cancelled = false;
-    void fetchMonthlyPriceLabel().then((label) => {
-      if (!cancelled) setPriceLabel(label);
+    if (!isBillingNative) {
+      setOffers(PAID_TIERS.map((one) => ({ tier: one, priceLabel: null })));
+      return;
+    }
+    void fetchPlanOffers().then((found) => {
+      if (!cancelled) setOffers(found);
     });
     return () => {
       cancelled = true;
     };
-  }, [isOpen, isBillingNative, isPremium]);
+  }, [isOpen, isBillingNative]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -177,9 +228,13 @@ export function BillingScreen({
         const data = (await response.json()) as {
           dailyUsed?: number;
           dailyLimit?: number | null;
+          callTodayLeftSeconds?: number | null;
+          plans?: Partial<Record<PlanTier, PlanSummary>>;
         };
         if (typeof data.dailyUsed === "number") setDailyUsed(data.dailyUsed);
         if (typeof data.dailyLimit === "number") setDailyLimit(data.dailyLimit);
+        setTodayLeftSeconds(typeof data.callTodayLeftSeconds === "number" ? data.callTodayLeftSeconds : null);
+        if (data.plans && typeof data.plans === "object") setPlans(data.plans);
       } catch {
         // keep defaults
       }
@@ -191,13 +246,18 @@ export function BillingScreen({
 
   if (!isOpen) return null;
 
-  const benefits = ui.paywallBenefits.split("\n");
   const busy = isPurchasing || isRestoring;
-  const statusText = isPremium
-    ? ui.planPremium.replace("{limit}", "80")
-    : ui.planFree
-        .replace("{used}", String(dailyUsed))
-        .replace("{limit}", String(dailyLimit));
+  const termsOf = (one: PlanTier): PlanSummary => plans[one] ?? termsFor(one);
+  const current = termsOf(tier);
+  const statusText = !isPremium
+    ? ui.planFree.replace("{used}", String(dailyUsed)).replace("{limit}", String(dailyLimit))
+    : todayLeftSeconds !== null && current.dailyChat !== null
+      ? ui.planStatusDaily
+          .replace("{plan}", planName(tier, ui))
+          .replace("{left}", String(Math.ceil(todayLeftSeconds / 60)))
+          .replace("{used}", String(dailyUsed))
+          .replace("{limit}", String(current.dailyChat))
+      : ui.planPremium.replace("{limit}", String(current.monthlyGrantPoints));
 
   const purchaseErrorMessage = (message?: string) => {
     if (!message) return ui.paywallPurchaseFailed;
@@ -206,12 +266,13 @@ export function BillingScreen({
     return ui.paywallPurchaseFailed;
   };
 
-  const handlePurchase = async () => {
+  const handlePurchase = async (wanted: Exclude<PlanTier, "free">) => {
     if (!isBillingNative) {
       setNotice(ui.paywallNativeOnly);
       return;
     }
     setIsPurchasing(true);
+    setBuying(wanted);
     setNotice(null);
     try {
       let billing = await ensureBillingReady();
@@ -223,7 +284,7 @@ export function BillingScreen({
         setNotice(ui.paywallPurchaseFailed);
         return;
       }
-      const result = await purchasePremium();
+      const result = await purchasePremium(undefined, wanted);
       if (result.status === "success") {
         setNotice(ui.paywallActivatedToast);
         void refreshPremium();
@@ -236,6 +297,7 @@ export function BillingScreen({
       setNotice(purchaseErrorMessage(result.message));
     } finally {
       setIsPurchasing(false);
+      setBuying(null);
     }
   };
 
@@ -295,7 +357,7 @@ export function BillingScreen({
         >
           <div className="rounded-2xl border border-white/10 bg-[#121212] px-4 py-4">
             <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">
-              {isPremium ? ui.billingPremiumLabel : ui.billingFreeLabel}
+              {planName(tier, ui)}
             </p>
             <p className="mt-1 text-sm leading-relaxed text-slate-200">
               {statusText}
@@ -306,24 +368,52 @@ export function BillingScreen({
             {ui.paywallTitle}
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-slate-300">
-            {ui.paywallSubtitle}
+            {ui.planSubtitle}
           </p>
 
-          <div className="mt-4 rounded-xl bg-white/5 px-3 py-3">
-            <p className="text-xs font-semibold text-slate-100">
-              {ui.paywallBenefitsTitle}
-            </p>
-            <ul className="mt-2 space-y-1.5 text-sm text-slate-300">
-              {benefits.map((line) => (
-                <li key={line} className="flex gap-2">
-                  <span className="text-slate-400" aria-hidden>
-                    ·
-                  </span>
-                  <span>{line.replace(/^[-•]\s*/, "")}</span>
-                </li>
-              ))}
-            </ul>
+          {/* Cheapest first, the plan in use marked. A plan the store does not
+              sell yet is not listed (billingService.fetchPlanOffers). */}
+          <div className="mt-4 flex flex-col gap-3">
+            {(offers ?? []).map((offer) => {
+              const mine = isPremium && tier === offer.tier;
+              const name = planName(offer.tier, ui);
+              return (
+                <div
+                  key={offer.tier}
+                  className={`rounded-2xl border px-4 py-3 ${
+                    mine ? "border-emerald-400/40 bg-emerald-400/[0.06]" : "border-white/10 bg-white/5"
+                  }`}
+                >
+                  <p className="text-sm font-semibold text-white">{name}</p>
+                  <ul className="mt-1.5 space-y-1 text-[13px] text-slate-300">
+                    {planLines(termsOf(offer.tier), ui).map((line) => (
+                      <li key={line} className="flex gap-2">
+                        <span className="text-slate-500" aria-hidden>
+                          ·
+                        </span>
+                        <span>{line}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  <button
+                    type="button"
+                    disabled={busy || mine}
+                    onClick={() => void handlePurchase(offer.tier)}
+                    className="mt-3 w-full rounded-xl bg-[#e8e8e4] px-4 py-2.5 text-sm font-medium text-neutral-900 transition hover:bg-[#f5f5f3] disabled:cursor-not-allowed disabled:opacity-50"
+                  >
+                    {mine
+                      ? ui.planCurrent
+                      : buying === offer.tier
+                        ? ui.paywallPurchasing
+                        : offer.priceLabel
+                          ? ui.planChoosePrice.replace("{plan}", name).replace("{price}", offer.priceLabel)
+                          : ui.planChoose.replace("{plan}", name)}
+                  </button>
+                </div>
+              );
+            })}
           </div>
+          <p className="mt-3 text-[12px] leading-relaxed text-slate-500">{ui.planFootnote}</p>
 
           {isLocalPlanDebugEnabled() ? (
             <div className="mt-4 flex overflow-hidden rounded-full border border-white/10 text-[11px] font-medium">
@@ -353,20 +443,6 @@ export function BillingScreen({
           ) : null}
 
           <div className="mt-5 flex flex-col gap-2">
-            <button
-              type="button"
-              disabled={busy || isPremium}
-              onClick={() => void handlePurchase()}
-              className="w-full rounded-xl bg-[#e8e8e4] px-4 py-3 text-sm font-medium text-neutral-900 shadow-[0_0_16px_rgba(255,255,255,0.28)] transition hover:bg-[#f5f5f3] disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none"
-            >
-              {isPremium
-                ? ui.billingPremiumLabel
-                : isPurchasing
-                  ? ui.paywallPurchasing
-                  : priceLabel
-                    ? ui.paywallCtaPrice.replace("{price}", priceLabel)
-                    : ui.paywallCtaPlain}
-            </button>
             {!isBillingNative ? (
               <p className="text-center text-xs text-slate-500">
                 {ui.paywallNativeOnly}

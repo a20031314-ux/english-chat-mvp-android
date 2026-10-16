@@ -322,3 +322,62 @@ test("a video import both pots cannot cover charges nothing", async () => {
   assert.equal(await getPurchasedPoints("import-buy-b"), 2);
   assert.deepEqual(await getBilledImportVideoIds("import-buy-b"), []);
 });
+
+// ── Daily free talk (billing/plans.ts) ──────────────────────────────────────
+
+import { termsFor } from "../billing/plans.ts";
+import { addPurchasedPoints as buyPoints } from "./entitlementStore.ts";
+import { dailyCallLeftMs } from "./entitlementStore.ts";
+
+const LITE = termsFor("lite", Date.parse("2026-10-16T00:00:00Z"), null);
+const MIN = 60_000;
+
+test("a lite subscriber talks seven minutes a day free, then pays with bought points", async () => {
+  const user = "rc:daily-lite";
+  const t0 = Date.parse("2026-10-16T01:00:00Z");
+  // Seven minutes of turns half a minute apart.
+  let at = t0;
+  let charge = await chargeRoleplayTurn(user, LITE, "d1", at, 540);
+  assert.equal(charge.ok, true);
+  assert.equal(charge.charged, 0);
+  while ((charge.todayLeftMs ?? 0) > 0) {
+    at += 30_000;
+    charge = await chargeRoleplayTurn(user, LITE, "d1", at, 540);
+    assert.equal(charge.ok, true);
+    assert.equal(charge.charged, 0);
+  }
+  // Seven minutes of talk, give or take the first turn's share.
+  assert.ok(at - t0 >= 6.5 * MIN && at - t0 <= 7 * MIN, String(at - t0));
+
+  // Out of minutes and no points: the next turn is refused.
+  const refused = await chargeRoleplayTurn(user, LITE, "d1", at + 30_000, 540);
+  assert.equal(refused.ok, false);
+  assert.equal(refused.todayLeftMs, 0);
+
+  // With points bought, it goes on and costs a block.
+  await buyPoints(user, 3);
+  const paid = await chargeRoleplayTurn(user, LITE, "d1", at + 40_000, 540);
+  assert.equal(paid.ok, true);
+  assert.equal(paid.charged, 1);
+  assert.equal(paid.left, 2);
+});
+
+test("a pause counts at most a minute, and tomorrow starts full", async () => {
+  const user = "rc:daily-pause";
+  const t0 = Date.parse("2026-10-16T01:00:00Z");
+  await chargeRoleplayTurn(user, LITE, "p1", t0, 540);
+  const afterPause = await chargeRoleplayTurn(user, LITE, "p1", t0 + 20 * MIN, 540);
+  assert.equal(afterPause.ok, true);
+  assert.equal(afterPause.todayLeftMs, 7 * MIN - 15_000 - MIN);
+
+  const tomorrow = Date.parse("2026-10-17T01:00:00Z");
+  assert.equal(await dailyCallLeftMs(user, LITE, "2026-10-17"), 7 * MIN);
+  const fresh = await chargeRoleplayTurn(user, LITE, "p2", tomorrow, 540);
+  assert.equal(fresh.todayLeftMs, 7 * MIN - 15_000);
+});
+
+test("lite has no monthly points; premium before its switch keeps 80", async () => {
+  assert.equal(await roleplayPointsLeft("rc:lite-none", LITE), 0);
+  assert.equal(await roleplayPointsLeft("rc:prem-80", termsFor("premium", Date.now(), null)), 80);
+  assert.equal(await dailyCallLeftMs("rc:prem-80", termsFor("premium", Date.now(), null), "2026-10-16"), null);
+});

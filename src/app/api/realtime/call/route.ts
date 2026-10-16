@@ -10,7 +10,6 @@ import {
   FREE_TRIAL_CALL_COUNT,
   REVENUECAT_USER_HEADER,
 } from "@/lib/billing/config";
-import { monthlyImportPoints } from "@/lib/billing/videoPrep";
 import {
   getCallsStarted,
   incrementCallsStarted,
@@ -82,7 +81,7 @@ export async function POST(request: NextRequest) {
   // Realtime audio is the most expensive thing this app can start, and once
   // the handshake below succeeds it runs phone-to-OpenAI with no session left
   // for us to end. Refusing to open it is the whole of the enforcement.
-  const { userId, isPremium } = await resolveRequestEntitlement(request);
+  const { userId, isPremium, terms } = await resolveRequestEntitlement(request);
 
   // Builds before 2.41 sent no entitlement headers on this route at all, so a
   // subscriber calling from one is indistinguishable from a trial user and
@@ -108,7 +107,7 @@ export async function POST(request: NextRequest) {
 
   let hold: { holdId: string; points: number; seconds: number } | null = null;
   if (honoursBlocks && isPremium) {
-    hold = await openCallHold(userId, monthlyImportPoints(isPremium));
+    hold = await openCallHold(userId, terms.monthlyGrantPoints);
     if (!hold) {
       return jsonWithCors(request, { error: "NO_POINTS" }, { status: 402 });
     }

@@ -44,10 +44,12 @@ export function importPointsAvailable(
   usedPoints: number,
   isPremium: boolean,
   purchasedPoints = 0,
+  /** This month's grant on the learner's plan (plans.ts); only the old premium terms have one. */
+  grant = monthlyImportPoints(true),
 ) {
   if (!isPremium) return 0;
   return (
-    Math.max(0, monthlyImportPoints(true) - Math.max(0, usedPoints)) +
+    Math.max(0, grant - Math.max(0, usedPoints)) +
     Math.max(0, Math.floor(purchasedPoints))
   );
 }
@@ -56,9 +58,10 @@ export function remainingImportSeconds(
   usedPoints: number,
   isPremium: boolean,
   purchasedPoints = 0,
+  grant = monthlyImportPoints(true),
 ) {
   return (
-    importPointsAvailable(usedPoints, isPremium, purchasedPoints) *
+    importPointsAvailable(usedPoints, isPremium, purchasedPoints, grant) *
     VIDEO_IMPORT_POINT_SECONDS
   );
 }
@@ -87,6 +90,10 @@ export function evaluateVideoAccess(input: {
   purchasedPoints?: number;
   billedVideoIds: string[];
   trialVideoIds: string[];
+  /** Every library video, not just the trial. Defaults to any paid plan, as before there were three. */
+  libraryOpen?: boolean;
+  /** This month's granted points on the plan. Defaults to premium's. */
+  grant?: number;
 }): VideoAccessDecision {
   const perVideo = maxVideoPrepSeconds(input.isPremium);
   const duration = Math.max(0, Math.ceil(input.durationSeconds ?? 0));
@@ -95,7 +102,7 @@ export function evaluateVideoAccess(input: {
   }
 
   if (isLibraryVideoId(input.videoId)) {
-    if (input.isPremium) {
+    if (input.libraryOpen ?? input.isPremium) {
       return { ok: true, kind: "library", billablePoints: 0 };
     }
     if (input.trialVideoIds.includes(input.videoId)) {
@@ -122,6 +129,7 @@ export function evaluateVideoAccess(input: {
     input.usedPoints,
     true,
     input.purchasedPoints ?? 0,
+    input.grant ?? monthlyImportPoints(true),
   );
   if (remaining <= 0) {
     return { ok: false, reason: "quota", maxSeconds: perVideo };

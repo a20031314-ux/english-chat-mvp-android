@@ -67,7 +67,11 @@ export type PackTurn = {
 };
 
 export type Pack = {
-  /** The learner's local day, YYYY-MM-DD: one pack per language per day. */
+  /**
+   * The learner's local day, YYYY-MM-DD: one pack per language per day. An
+   * extra pack the same day (plans.ts, 8,900 won) adds ".2" or ".3", and the
+   * same id names it everywhere a day does.
+   */
   day: string;
   language: string;
   centre: GapId;
@@ -440,8 +444,22 @@ export function readAsk(raw: string, options: Candidate[]): Candidate | null {
   return options.find((option) => option.slot === n) ?? null;
 }
 
+/** A pack id: the day, or the day and which of its extra packs. */
+export const PACK_ID_PATTERN = /^\d{4}-\d{2}-\d{2}(?:\.[2-9])?$/;
+
 export function isPackDay(value: unknown): value is string {
-  return typeof value === "string" && /^\d{4}-\d{2}-\d{2}$/.test(value);
+  return typeof value === "string" && PACK_ID_PATTERN.test(value);
+}
+
+/** The id of a day's nth pack; the first is the day itself. */
+export function packIdFor(day: string, n: number): string {
+  return n <= 1 ? day : `${day}.${n}`;
+}
+
+/** The day a pack id belongs to, and which of that day's packs it is. */
+export function packDayOf(id: string): { day: string; n: number } {
+  const [day, n] = id.split(".");
+  return { day: day!, n: n ? Number(n) : 1 };
 }
 
 /** What the pack card shows, and the practice goal the call is opened with. */

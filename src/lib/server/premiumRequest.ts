@@ -5,14 +5,19 @@ import {
   REVENUECAT_USER_HEADER,
 } from "@/lib/billing/config";
 import {
-  isPremiumInRevenueCat,
+  planInRevenueCat,
   revenueCatConfigured,
 } from "@/lib/server/revenueCat";
+import { isPlanTier, termsFor, type PlanTerms, type PlanTier } from "@/lib/billing/plans";
 
 export type RequestEntitlement = {
   /** Whose counters this request spends. */
   userId: string;
+  /** Any paid plan. What every feature that is simply "paid or not" reads. */
   isPremium: boolean;
+  /** Which plan, for what differs between them: daily minutes, chat limits, the library. */
+  tier: PlanTier;
+  terms: PlanTerms;
   /** True only when RevenueCat confirmed it, rather than the client claiming it. */
   verified: boolean;
 };
@@ -27,8 +32,20 @@ function requireVerified(): boolean {
   return process.env.REQUIRE_VERIFIED_PREMIUM?.trim() === "true";
 }
 
-function claimsPremium(request: NextRequest): boolean {
-  return request.headers.get(PREMIUM_CLIENT_HEADER) === "1";
+/**
+ * The plan the client says it is on. Builds before there were three plans send
+ * "1", and the only plan there was then is premium; later builds send the
+ * plan's name.
+ */
+function claimedTier(request: NextRequest): PlanTier {
+  if (requireVerified()) return "free";
+  const value = request.headers.get(PREMIUM_CLIENT_HEADER)?.trim();
+  if (value === "1") return "premium";
+  return isPlanTier(value) ? value : "free";
+}
+
+function withTier(userId: string, tier: PlanTier, verified: boolean): RequestEntitlement {
+  return { userId, isPremium: tier !== "free", tier, terms: termsFor(tier), verified };
 }
 
 export function revenueCatUserId(request: NextRequest): string | null {
@@ -69,22 +86,12 @@ export async function resolveRequestEntitlement(
   const appUserId = revenueCatUserId(request);
 
   if (appUserId && revenueCatConfigured()) {
-    const active = await isPremiumInRevenueCat(appUserId);
-    if (active !== null) {
-      return { userId: `rc:${appUserId}`, isPremium: active, verified: true };
-    }
+    const plan = await planInRevenueCat(appUserId);
+    if (plan !== null) return withTier(`rc:${appUserId}`, plan, true);
     // RevenueCat could not be reached. Keep the id for counting, but fall
     // through to the claim rather than locking a subscriber out mid-outage.
-    return {
-      userId: `rc:${appUserId}`,
-      isPremium: requireVerified() ? false : claimsPremium(request),
-      verified: false,
-    };
+    return withTier(`rc:${appUserId}`, claimedTier(request), false);
   }
 
-  return {
-    userId: appUserId ? `rc:${appUserId}` : cookieUserId(request),
-    isPremium: requireVerified() ? false : claimsPremium(request),
-    verified: false,
-  };
+  return withTier(appUserId ? `rc:${appUserId}` : cookieUserId(request), claimedTier(request), false);
 }

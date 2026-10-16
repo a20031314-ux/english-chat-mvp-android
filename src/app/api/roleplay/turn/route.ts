@@ -33,6 +33,7 @@ import {
   noteSentenceWritten,
 } from "@/lib/server/entitlementStore";
 import { requestUserId, resolveRequestEntitlement } from "@/lib/server/premiumRequest";
+import { parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
 import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
@@ -130,10 +131,20 @@ export async function POST(request: NextRequest) {
   if (!playingPack && request.headers.get(ROLEPLAY_POINTS_CLIENT_HEADER) === "1") {
     const sessionId = request.headers.get(ROLEPLAY_SESSION_HEADER)?.trim().slice(0, 64);
     if (sessionId) {
-      const { isPremium, userId } = await resolveRequestEntitlement(request);
-      const charge = await chargeRoleplayTurn(userId, isPremium, sessionId, Date.now());
+      const { terms, userId } = await resolveRequestEntitlement(request);
+      const charge = await chargeRoleplayTurn(
+        userId,
+        terms,
+        sessionId,
+        Date.now(),
+        parseOffset(request.headers.get(TZ_OFFSET_HEADER)),
+      );
       if (!charge.ok) {
-        return jsonWithCors(request, { error: "NO_POINTS", left: charge.left }, { status: 402 });
+        return jsonWithCors(
+          request,
+          { error: "NO_POINTS", left: charge.left, todayLeftMs: charge.todayLeftMs },
+          { status: 402 },
+        );
       }
     }
   }

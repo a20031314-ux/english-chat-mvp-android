@@ -12,7 +12,7 @@
  * the key is provisioned.
  */
 
-import { PREMIUM_ENTITLEMENT_ID } from "@/lib/billing/config";
+import { planFromSubscriber, type PlanTier } from "@/lib/billing/plans";
 import { kvGetJson, kvSetJson } from "@/lib/server/kv";
 
 /** Long enough to keep a busy session off the API, short enough that a
@@ -32,7 +32,7 @@ export function revenueCatConfigured(): boolean {
 
 type SubscriberResponse = {
   subscriber?: {
-    entitlements?: Record<string, { expires_date?: string | null }>;
+    entitlements?: Record<string, { expires_date?: string | null; product_identifier?: string | null }>;
     /**
      * One-time purchases, keyed by store product id, each an array of the times
      * that product was bought. Subscriptions live in `entitlements`; consumables
@@ -53,31 +53,19 @@ export type NonSubscriptionPurchase = {
   productId: string;
 };
 
-function entitlementIsActive(body: SubscriberResponse): boolean {
-  const entitlement = body.subscriber?.entitlements?.[PREMIUM_ENTITLEMENT_ID];
-  if (!entitlement) return false;
-  // A null expiry is a lifetime grant; anything else has to still be ahead of us.
-  if (entitlement.expires_date === null) return true;
-  if (!entitlement.expires_date) return false;
-  const expiresAt = Date.parse(entitlement.expires_date);
-  return Number.isFinite(expiresAt) && expiresAt > Date.now();
-}
-
 /**
- * True or false when RevenueCat answered, null when we could not find out —
- * no key configured, or the API was unreachable. Null is deliberately not
- * "false": an outage on their side should not log every paying subscriber out
- * of what they bought.
+ * The plan RevenueCat has on record, or null when we could not find out — no
+ * key configured, or the API was unreachable. Null is deliberately not "free":
+ * an outage on their side should not log every paying subscriber out of what
+ * they bought.
  */
-export async function isPremiumInRevenueCat(
-  appUserId: string,
-): Promise<boolean | null> {
+export async function planInRevenueCat(appUserId: string): Promise<PlanTier | null> {
   const key = secretKey();
   if (!key || !appUserId) return null;
 
-  const cacheKey = `rc:premium:${appUserId}`;
-  const cached = await kvGetJson<boolean>(cacheKey);
-  if (typeof cached === "boolean") return cached;
+  const cacheKey = `rc:plan:${appUserId}`;
+  const cached = await kvGetJson<PlanTier>(cacheKey);
+  if (cached === "free" || cached === "lite" || cached === "plus" || cached === "premium") return cached;
 
   try {
     const response = await fetch(
@@ -89,21 +77,29 @@ export async function isPremiumInRevenueCat(
     );
     // An id RevenueCat has never seen is a real answer: nothing was bought.
     if (response.status === 404) {
-      await kvSetJson(cacheKey, false, CACHE_TTL_SECONDS);
-      return false;
+      await kvSetJson(cacheKey, "free", CACHE_TTL_SECONDS);
+      return "free";
     }
     if (!response.ok) {
       console.error("[revenuecat] lookup failed with", response.status);
       return null;
     }
     const body = (await response.json()) as SubscriberResponse;
-    const active = entitlementIsActive(body);
-    await kvSetJson(cacheKey, active, CACHE_TTL_SECONDS);
-    return active;
+    const plan = planFromSubscriber(body);
+    await kvSetJson(cacheKey, plan, CACHE_TTL_SECONDS);
+    return plan;
   } catch (error) {
     console.error("[revenuecat] lookup threw", error);
     return null;
   }
+}
+
+/** True or false when RevenueCat answered, null when we could not find out. */
+export async function isPremiumInRevenueCat(
+  appUserId: string,
+): Promise<boolean | null> {
+  const plan = await planInRevenueCat(appUserId);
+  return plan === null ? null : plan !== "free";
 }
 
 

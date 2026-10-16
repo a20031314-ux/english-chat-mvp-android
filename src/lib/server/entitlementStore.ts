@@ -40,6 +40,7 @@ import {
   type PointSpend,
 } from "../billing/points.ts";
 import { monthlyImportPoints } from "../billing/videoPrep.ts";
+import { localDay, termsFor, type PlanTerms } from "../billing/plans.ts";
 import { isIdentified } from "./identity.ts";
 
 /** Long enough that a day's counter outlives the day in every timezone. */
@@ -251,8 +252,9 @@ export async function chargeImportPoints(
   userId: string,
   points: number,
   videoId?: string,
+  grant: number = monthlyImportPoints(true),
 ): Promise<PointSpend | null> {
-  const balance = await readPointBalance(userId, monthlyImportPoints(true));
+  const balance = await readPointBalance(userId, grant);
   const spend = splitSpend(balance, points);
   if (!spend) return null;
   const current = await readVideoPrep(userId);
@@ -722,17 +724,48 @@ async function settlePreviousRoleplaySession(
   if (add > 0) await kvIncrBy(roleplayCarryKey(userId, now), add, ROLEPLAY_CARRY_TTL_SECONDS);
 }
 
+/** Older callers pass whether the person has paid; paid then meant premium. */
+function planTerms(plan: boolean | PlanTerms): PlanTerms {
+  return typeof plan === "boolean" ? termsFor(plan ? "premium" : "free") : plan;
+}
+
 /** Points left for call learning: the free lifetime allowance, or the balance. */
 export async function roleplayPointsLeft(
   userId: string,
-  isPremium: boolean,
+  plan: boolean | PlanTerms,
 ): Promise<number> {
-  if (!isPremium) {
+  const terms = planTerms(plan);
+  if (terms.tier === "free") {
     const used = await kvGetNumber(roleplayTrialKey(userId));
     return Math.max(0, FREE_LIFETIME_ROLEPLAY_POINTS - used);
   }
-  const balance = await readPointBalance(userId, monthlyImportPoints(true));
+  const balance = await readPointBalance(userId, terms.monthlyGrantPoints);
   return totalPoints(balance);
+}
+
+/**
+ * Free-talk time a plan gives each day (plans.ts), counted as talk rather than
+ * as the clock: each turn adds the time since the one before it, but never more
+ * than a minute, so a call left open while the learner looks something up does
+ * not eat the day. The first turn of a conversation counts a little, so a run
+ * of one-line conversations is not free either.
+ */
+export const DAILY_CALL_STEP_CAP_MS = 60_000;
+export const DAILY_CALL_FIRST_STEP_MS = 15_000;
+
+function dailyCallKey(userId: string, day: string) {
+  return `rp:daily:${userId}:${day}`;
+}
+
+/** Milliseconds of today's free talk left, or null on a plan without one. */
+export async function dailyCallLeftMs(
+  userId: string,
+  plan: PlanTerms,
+  day: string,
+): Promise<number | null> {
+  if (!plan.dailyCallMinutes) return null;
+  const used = Math.max(0, await kvGetNumber(dailyCallKey(userId, day)));
+  return Math.max(0, plan.dailyCallMinutes * 60_000 - used);
 }
 
 /**
@@ -760,10 +793,13 @@ export async function roleplayPointsLeft(
  */
 export async function chargeRoleplayTurn(
   userId: string,
-  isPremium: boolean,
+  plan: boolean | PlanTerms,
   sessionId: string,
   now: number,
-): Promise<{ ok: boolean; charged: number; left: number }> {
+  /** Minutes the learner's clock is ahead of UTC, so their day resets at their midnight. */
+  offsetMinutes: number | null = null,
+): Promise<{ ok: boolean; charged: number; left: number; todayLeftMs: number | null }> {
+  const terms = planTerms(plan);
   // Nobody in particular is asking, so there is nobody to charge. Every caller
   // without a RevenueCat id shares one name, and an allowance keyed to it is a
   // single allowance for every such install at once — the first conversation
@@ -771,7 +807,7 @@ export async function chargeRoleplayTurn(
   // debug build did within three sessions. Served rather than refused: the
   // failure to identify someone is ours, not theirs.
   if (!isIdentified(userId)) {
-    return { ok: true, charged: 0, left: FREE_LIFETIME_ROLEPLAY_POINTS };
+    return { ok: true, charged: 0, left: FREE_LIFETIME_ROLEPLAY_POINTS, todayLeftMs: null };
   }
 
   const key = roleplaySessionKey(userId, sessionId);
@@ -780,6 +816,30 @@ export async function chargeRoleplayTurn(
   const session: RoleplaySession = stored ?? { startedAt: now, charged: 0, paidMs: 0 };
   const elapsed = Math.max(0, now - session.startedAt);
   let paidMs = paidMsOf(session);
+
+  // Today's free talk comes before anything bought: it is gone at midnight,
+  // and points and carry are not. Time this conversation has already paid for
+  // is used first, so the day is not spent on minutes that were bought.
+  const day = localDay(now, offsetMinutes);
+  const todayLeft = await dailyCallLeftMs(userId, terms, day);
+  if (todayLeft !== null && todayLeft > 0 && elapsed >= paidMs) {
+    const sinceLast = stored ? now - (stored.lastTurnAt ?? stored.startedAt) : DAILY_CALL_FIRST_STEP_MS;
+    const step = Math.min(DAILY_CALL_STEP_CAP_MS, Math.max(0, sinceLast));
+    const used = await kvIncrBy(dailyCallKey(userId, day), step, 2 * 24 * 60 * 60);
+    // Covered up to now, so when the day runs out the next turn pays from
+    // here, not for the whole conversation behind it.
+    await kvSetJson(
+      key,
+      { ...session, paidMs: Math.max(paidMs, elapsed), lastTurnAt: now } satisfies RoleplaySession,
+      ROLEPLAY_SESSION_TTL_SECONDS,
+    );
+    return {
+      ok: true,
+      charged: 0,
+      left: await roleplayPointsLeft(userId, terms),
+      todayLeftMs: Math.max(0, (terms.dailyCallMinutes ?? 0) * 60_000 - used),
+    };
+  }
 
   // Time already paid for, by an earlier conversation that did not use it, is
   // spent before a point is.
@@ -800,7 +860,7 @@ export async function chargeRoleplayTurn(
       { ...session, paidMs, lastTurnAt: now } satisfies RoleplaySession,
       ROLEPLAY_SESSION_TTL_SECONDS,
     );
-    return { ok: true, charged: 0, left: await roleplayPointsLeft(userId, isPremium) };
+    return { ok: true, charged: 0, left: await roleplayPointsLeft(userId, terms), todayLeftMs: todayLeft };
   }
 
   // A refused turn hands back the carry it drew, so running out of points does
@@ -808,17 +868,17 @@ export async function chargeRoleplayTurn(
   const refuse = async (left: number) => {
     const drawn = paidMs - paidMsOf(session);
     if (drawn > 0) await kvIncrBy(roleplayCarryKey(userId, now), drawn, ROLEPLAY_CARRY_TTL_SECONDS);
-    return { ok: false, charged: 0, left };
+    return { ok: false, charged: 0, left, todayLeftMs: todayLeft };
   };
 
-  if (!isPremium) {
+  if (terms.tier === "free") {
     const used = await kvGetNumber(roleplayTrialKey(userId));
     if (used + owed > FREE_LIFETIME_ROLEPLAY_POINTS) {
       return refuse(Math.max(0, FREE_LIFETIME_ROLEPLAY_POINTS - used));
     }
     await kvIncrBy(roleplayTrialKey(userId), owed);
   } else {
-    const balance = await readPointBalance(userId, monthlyImportPoints(true));
+    const balance = await readPointBalance(userId, terms.monthlyGrantPoints);
     const spend = splitSpend(balance, owed);
     if (!spend) return refuse(totalPoints(balance));
     await applySpend(userId, spend, 1);
@@ -834,7 +894,7 @@ export async function chargeRoleplayTurn(
     } satisfies RoleplaySession,
     ROLEPLAY_SESSION_TTL_SECONDS,
   );
-  return { ok: true, charged: owed, left: await roleplayPointsLeft(userId, isPremium) };
+  return { ok: true, charged: owed, left: await roleplayPointsLeft(userId, terms), todayLeftMs: todayLeft };
 }
 
 function creditedPurchaseKey(userId: string, transactionId: string) {

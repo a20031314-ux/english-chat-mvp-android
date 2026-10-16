@@ -102,7 +102,10 @@ export function VideoLearningTab({
   active?: boolean;
 }) {
   const learningLanguage = useLearningLanguageOptional();
-  const { isPremium } = usePremium();
+  const { isPremium, tier } = usePremium();
+  // Every library video is premium's (billing/plans.ts); 3,900 and 5,500 won
+  // keep the trial, and import with points they bought.
+  const libraryOpen = tier === "premium";
   const { openBilling } = useBillingUi();
   const [quotaVersion, setQuotaVersion] = useState(0);
   const targetLanguage =
@@ -571,6 +574,8 @@ export function VideoLearningTab({
       usedPoints: getImportPointsUsed(),
       billedVideoIds: getBilledImportVideoIds(),
       trialVideoIds: getCatalogTrialVideoIds(),
+      libraryOpen,
+      grant: libraryOpen ? monthlyImportPoints(true) : 0,
     });
     // This device cannot see points bought separately, which imports may
     // spend once the month's grant is gone. A subscriber who looks out of
@@ -655,7 +660,7 @@ export function VideoLearningTab({
         if (seq !== loadSeq.current) return;
         preparedRef.current = prepared;
         if (decision.kind === "library") {
-          if (!isPremium) recordCatalogTrial(parsed.videoId);
+          if (!libraryOpen) recordCatalogTrial(parsed.videoId);
         } else if (decision.billablePoints > 0) {
           recordImportCharge(parsed.videoId, decision.billablePoints);
         }
@@ -700,7 +705,7 @@ export function VideoLearningTab({
           (code === "VIDEO_QUOTA" ||
             code === "IMPORT_LOCKED" ||
             code === "CATALOG_LOCKED") &&
-          !isPremium
+          (!isPremium || (code === "CATALOG_LOCKED" && !libraryOpen))
         ) {
           openBilling();
         }
@@ -775,7 +780,7 @@ export function VideoLearningTab({
             value={draftUrl}
             error={urlError}
             hint={
-              isPremium
+              libraryOpen
                 ? ui.videoLearnQuotaHint
                     .replace("{used}", String(getImportPointsUsed()))
                     .replace(
@@ -801,7 +806,7 @@ export function VideoLearningTab({
                 usedVideoIds={getCatalogTrialVideoIds()}
                 freeVideoIds={library.trialVideoIds}
                 trialLimit={FREE_CATALOG_TRIAL_COUNT}
-                isPremium={isPremium}
+                isPremium={libraryOpen}
                 preparingVideoId={phase === "extracting" ? videoId : null}
                 progressPercent={progressPercent}
                 onOpen={(url, durationSeconds) => loadVideo(url, durationSeconds)}

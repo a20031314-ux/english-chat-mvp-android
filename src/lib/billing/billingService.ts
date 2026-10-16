@@ -17,6 +17,13 @@ import {
   PREMIUM_MONTHLY_PRODUCT_ID,
   REVENUECAT_USER_HEADER,
 } from "./config";
+import {
+  PLAN_PRODUCT_IDS,
+  TZ_OFFSET_HEADER,
+  isPlanTier,
+  tierForProduct,
+  type PlanTier,
+} from "./plans";
 
 export type BillingInitResult = {
   isPremium: boolean;
@@ -144,6 +151,41 @@ export function isPremiumFromCustomerInfo(customerInfo: CustomerInfo): boolean {
   return customerInfo.entitlements.active[PREMIUM_ENTITLEMENT_ID] !== undefined;
 }
 
+const PLAN_TIER_STORAGE_KEY = "ec_plan_tier";
+
+/**
+ * Which of the three plans the active entitlement came from (plans.ts). Every
+ * plan unlocks the same entitlement; the product behind it tells them apart,
+ * and one this build does not know is premium, the only plan there used to be.
+ */
+export function tierFromCustomerInfo(customerInfo: CustomerInfo): PlanTier {
+  const active = customerInfo.entitlements.active[PREMIUM_ENTITLEMENT_ID];
+  if (!active) return "free";
+  return tierForProduct(active.productIdentifier) ?? "premium";
+}
+
+/** The plan last seen, for the screens and for the header the server reads when RevenueCat is unreachable. */
+export function readCachedTier(): PlanTier {
+  if (!readCachedPremium()) return "free";
+  try {
+    const stored = typeof window === "undefined" ? null : window.localStorage.getItem(PLAN_TIER_STORAGE_KEY);
+    return isPlanTier(stored) && stored !== "free" ? stored : "premium";
+  } catch {
+    return "premium";
+  }
+}
+
+function rememberCustomerInfo(customerInfo: CustomerInfo): boolean {
+  const isPremium = isPremiumFromCustomerInfo(customerInfo);
+  writeCachedPremium(isPremium);
+  try {
+    window.localStorage.setItem(PLAN_TIER_STORAGE_KEY, tierFromCustomerInfo(customerInfo));
+  } catch {
+    // ignore
+  }
+  return isPremium;
+}
+
 function getRevenueCatApiKey(): string | null {
   if (typeof window === "undefined") {
     return null;
@@ -196,7 +238,14 @@ export function revenueCatUserId(): string | null {
 /** Headers that tell the API who is asking. Safe to call before billing is ready. */
 export function entitlementHeaders(isPremium?: boolean): Record<string, string> {
   const headers: Record<string, string> = {};
-  if (isPremium) headers[PREMIUM_CLIENT_HEADER] = "1";
+  // The plan's name rather than "1", so a server that cannot reach RevenueCat
+  // still gives 3,900 won what 3,900 won buys.
+  if (isPremium) {
+    const tier = readCachedTier();
+    headers[PREMIUM_CLIENT_HEADER] = tier === "free" ? "premium" : tier;
+  }
+  // So daily allowances reset at the learner's midnight, not the server's.
+  if (typeof Date !== "undefined") headers[TZ_OFFSET_HEADER] = String(-new Date().getTimezoneOffset());
   if (cachedAppUserId) headers[REVENUECAT_USER_HEADER] = cachedAppUserId;
   // Every caller that talks to the API comes through here, so the build says
   // which one it is exactly once rather than at each fetch.
@@ -325,9 +374,7 @@ export async function fetchPremiumFromRevenueCat(): Promise<boolean> {
       plugin.getCustomerInfo(),
       BILLING_FETCH_TIMEOUT_MS,
     );
-    const isPremium = isPremiumFromCustomerInfo(customerInfo);
-    writeCachedPremium(isPremium);
-    return isPremium;
+    return rememberCustomerInfo(customerInfo);
   } catch (error) {
     console.error("[billing] getCustomerInfo failed", error);
     return readCachedPremium();
@@ -447,6 +494,64 @@ async function findMonthlyPurchaseTarget(
   }
 }
 
+export type PlanOffer = {
+  tier: Exclude<PlanTier, "free">;
+  /** The store's own formatted price for this person's country. */
+  priceLabel: string | null;
+};
+
+/** The package that sells a plan in the current offering, matched on the product id without its base plan. */
+function packageForTier(packages: PurchasesPackage[], tier: Exclude<PlanTier, "free">): PurchasesPackage | null {
+  const wanted = PLAN_PRODUCT_IDS[tier];
+  return (
+    packages.find(
+      (pkg) => pkg.product.identifier.split(":")[0] === wanted || pkg.identifier === wanted,
+    ) ?? null
+  );
+}
+
+/**
+ * The plans this store sells, cheapest first, as the store prices them.
+ *
+ * A plan whose product is not in the current offering is left out rather than
+ * shown at a price made up here — before the 3,900 and 5,500 won products are
+ * created in Play and attached in RevenueCat, the screen shows premium alone,
+ * the way it always has.
+ */
+export async function fetchPlanOffers(): Promise<PlanOffer[]> {
+  if (!isBillingNativePlatform()) return [];
+  if (!(await ensureConfigured())) return [];
+  const plugin = getPurchasesPlugin();
+  if (!plugin) return [];
+  try {
+    const offerings = await withBillingTimeout("getOfferings", plugin.getOfferings(), BILLING_FETCH_TIMEOUT_MS);
+    const packages = offerings.current?.availablePackages ?? [];
+    const offers: PlanOffer[] = [];
+    for (const tier of ["lite", "plus"] as const) {
+      const pkg = packageForTier(packages, tier);
+      if (pkg) offers.push({ tier, priceLabel: pkg.product.priceString || null });
+    }
+    offers.push({ tier: "premium", priceLabel: await fetchMonthlyPriceLabel() });
+    return offers;
+  } catch (error) {
+    console.error("[billing] fetchPlanOffers failed", error);
+    return [{ tier: "premium", priceLabel: await fetchMonthlyPriceLabel() }];
+  }
+}
+
+/** The plan this install is subscribed to in the store right now, as Play's product id, for a change of plan. */
+async function currentPlanProduct(): Promise<string | null> {
+  const plugin = getPurchasesPlugin();
+  if (!plugin) return null;
+  try {
+    const { customerInfo } = await withBillingTimeout("getCustomerInfo", plugin.getCustomerInfo(), BILLING_FETCH_TIMEOUT_MS);
+    const active = customerInfo.entitlements.active[PREMIUM_ENTITLEMENT_ID];
+    return active?.productIdentifier ? active.productIdentifier.split(":")[0]! : null;
+  } catch {
+    return null;
+  }
+}
+
 function isPurchaseCancelledError(error: unknown): boolean {
   if (!error || typeof error !== "object") {
     return false;
@@ -460,15 +565,42 @@ function isPurchaseCancelledError(error: unknown): boolean {
 
 export async function purchaseMonthlyPremium(
   onStep?: BillingStepListener,
+  tier: Exclude<PlanTier, "free"> = "premium",
 ): Promise<PurchaseFlowResult> {
   if (!isBillingNativePlatform()) {
     return { status: "error", message: "NOT_NATIVE" };
   }
 
-  const purchaseTarget = await findMonthlyPurchaseTarget(onStep);
+  // Premium keeps the lookup it has always had, offering fallbacks and all; a
+  // newer plan is bought only through its own package.
+  let purchaseTarget: PurchaseTarget | null = null;
+  if (tier === "premium") {
+    purchaseTarget = await findMonthlyPurchaseTarget(onStep);
+  } else if (await ensureConfigured()) {
+    const plugin = getPurchasesPlugin();
+    try {
+      const offerings = plugin
+        ? await withBillingTimeout("getOfferings", plugin.getOfferings(), BILLING_FETCH_TIMEOUT_MS)
+        : null;
+      const pkg = packageForTier(offerings?.current?.availablePackages ?? [], tier);
+      if (pkg) purchaseTarget = { kind: "package", value: pkg };
+    } catch (error) {
+      console.error("[billing] getOfferings failed", error);
+    }
+  }
   if (!purchaseTarget) {
     return { status: "error", message: "NO_PACKAGE" };
   }
+
+  // Moving between plans replaces the subscription in Play rather than adding
+  // a second one beside it, which would bill both.
+  const oldProduct = await currentPlanProduct();
+  const wantedProduct = PLAN_PRODUCT_IDS[tier];
+  if (oldProduct === wantedProduct) {
+    return { status: "success", isPremium: true };
+  }
+  // Only a plan of ours can be replaced; a promotional grant has no Play subscription behind it.
+  const changeInfo = oldProduct && tierForProduct(oldProduct) ? { storeProductChangeInfo: { oldProductIdentifier: oldProduct } } : {};
 
   try {
     reportStep(onStep, "OPENING_PLAY_DIALOG");
@@ -483,6 +615,7 @@ export async function purchaseMonthlyPremium(
         "purchasePackage",
         plugin.purchasePackage({
           aPackage: purchaseTarget.value,
+          ...changeInfo,
         }),
         BILLING_PURCHASE_TIMEOUT_MS,
       );
@@ -492,6 +625,7 @@ export async function purchaseMonthlyPremium(
         "purchaseSubscriptionOption",
         plugin.purchaseSubscriptionOption({
           subscriptionOption: purchaseTarget.value,
+          ...changeInfo,
         }),
         BILLING_PURCHASE_TIMEOUT_MS,
       );
@@ -506,8 +640,7 @@ export async function purchaseMonthlyPremium(
       );
       customerInfo = result.customerInfo;
     }
-    const isPremium = isPremiumFromCustomerInfo(customerInfo);
-    writeCachedPremium(isPremium);
+    const isPremium = rememberCustomerInfo(customerInfo);
     if (isPremium) {
       return { status: "success", isPremium: true };
     }
@@ -546,8 +679,7 @@ export async function restorePremiumPurchases(): Promise<RestoreFlowResult> {
       plugin.restorePurchases(),
       BILLING_FETCH_TIMEOUT_MS,
     );
-    const isPremium = isPremiumFromCustomerInfo(customerInfo);
-    writeCachedPremium(isPremium);
+    const isPremium = rememberCustomerInfo(customerInfo);
     if (isPremium) {
       return { status: "restored", isPremium: true };
     }

@@ -740,8 +740,9 @@ export function ChatWindow({
   const partner = chatPartnerForLanguage(sessionLanguageCode);
 
   const dailyLimit = entitlement.dailyLimit ?? SESSION_MESSAGE_LIMIT;
+  // Every plan but premium's old terms has a daily number (billing/plans.ts).
   const isChatDailyLimitReached =
-    !isPremium && entitlement.dailyUsed >= dailyLimit;
+    (!isPremium || entitlement.dailyLimit !== null) && entitlement.dailyUsed >= dailyLimit;
   const isChatInputBlocked = isChatDailyLimitReached;
 
   const openPaywall = useCallback((_reason?: string) => {
@@ -911,10 +912,12 @@ export function ChatWindow({
   }, [targetLanguage]);
 
   useEffect(() => {
-    if (isChatDailyLimitReached) {
+    // A subscriber who has used the day's chats is told so in the chat, not
+    // sent to a plan screen they have already paid on.
+    if (isChatDailyLimitReached && !isPremium) {
       openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
     }
-  }, [isChatDailyLimitReached, openPaywall]);
+  }, [isChatDailyLimitReached, isPremium, openPaywall]);
 
   useEffect(() => {
     if (!sessionMenuOpen) return;
@@ -1462,7 +1465,11 @@ export function ChatWindow({
         <div className="flex-1 space-y-2 overflow-y-auto p-2.5 sm:space-y-4 sm:p-4">
           {isChatDailyLimitReached ? (
             <div className="rounded-xl border border-amber-400/30 bg-amber-500/10 px-3 py-3 text-sm text-amber-100">
-              <p className="leading-relaxed">{ui.paywallLimitBanner}</p>
+              <p className="leading-relaxed">
+                {isPremium
+                  ? ui.chatDailyUsedUp.replace("{limit}", String(dailyLimit))
+                  : ui.paywallLimitBanner}
+              </p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {turns.length > 0 ? (
                   <button

@@ -302,7 +302,8 @@ export function RoleplayScreen({
   const conversationId = useRef("");
   // Set when a turn could not be paid for. The scene ends on it rather than
   // going quiet, which is what a dropped turn looks like and is not this.
-  const [outOfPoints, setOutOfPoints] = useState(false);
+  // "daily" when a plan's free talk for today is what ran out (billing/plans.ts).
+  const [outOfPoints, setOutOfPoints] = useState<false | "points" | "daily">(false);
   // Bumped per session, so a fold that comes back after the scene changed is
   // dropped rather than applied to the wrong conversation.
   const sessionRef = useRef(0);
@@ -587,7 +588,7 @@ export function RoleplayScreen({
       // Out of points is not a failed turn: the scene closes and says so,
       // instead of standing there not answering.
       if (isOutOfPoints(answer)) {
-        setOutOfPoints(true);
+        setOutOfPoints(answer.daily ? "daily" : "points");
         setInstruction({ do: "finish" });
         return;
       }
@@ -1044,7 +1045,7 @@ export function RoleplayScreen({
 
         {instruction?.do === "finish" && outOfPoints ? (
           <p className="mb-2 text-[13px] leading-relaxed text-neutral-300">
-            {ui.roleplayOutOfPoints}
+            {outOfPoints === "daily" ? ui.roleplayOutOfToday : ui.roleplayOutOfPoints}
           </p>
         ) : null}
 

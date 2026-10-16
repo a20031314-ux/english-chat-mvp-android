@@ -18,7 +18,6 @@ import {
 import { writtenInLearningLanguage } from "@/lib/inputLanguage";
 import type OpenAI from "openai";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
-import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
 import { targetLanguageFocusHints } from "@/lib/languageFocus";
 import {
   getDailyUsed,
@@ -797,7 +796,9 @@ export async function OPTIONS(request: NextRequest) {
 export async function POST(request: NextRequest) {
   const openai = getOpenAIClient();
 
-  const { userId, isPremium } = await resolveRequestEntitlement(request);
+  const { userId, isPremium, terms } = await resolveRequestEntitlement(request);
+  // Messages a day on this plan (billing/plans.ts); null for none.
+  const chatLimit = terms.dailyChat;
 
   let body: {
     message?: string;
@@ -879,8 +880,8 @@ export async function POST(request: NextRequest) {
 
   if (
     (mode === "chat" || mode === "how_to_say") &&
-    !isPremium &&
-    (await getDailyUsed(userId)) >= FREE_DAILY_CHAT_LIMIT
+    chatLimit !== null &&
+    (await getDailyUsed(userId)) >= chatLimit
   ) {
     return jsonWithCors(request, { error: "DAILY_LIMIT_REACHED" }, { status: 403 });
   }
@@ -895,9 +896,7 @@ export async function POST(request: NextRequest) {
         langs,
         isPremium,
       );
-      if (!isPremium) {
-        await incrementDailyUsed(userId);
-      }
+      await incrementDailyUsed(userId);
       return jsonWithCors(request, data);
     }
 
@@ -924,9 +923,7 @@ export async function POST(request: NextRequest) {
         onReread: () => void meterRequest(request, "chatReread"),
       },
     );
-    if (!isPremium) {
-      await incrementDailyUsed(userId);
-    }
+    await incrementDailyUsed(userId);
     // The sentence is read for the constructions in it once the reply is on
     // its way (learner/profile.ts). Only a sentence written in the language
     // being learned is practice; a question asked in the learner's own
