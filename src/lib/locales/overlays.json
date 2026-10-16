@@ -332,7 +332,7 @@
     "nextGapPronunciation": "声に出して話してみよう",
     "nextGapNatural": "もっと自然に話してみよう",
     "nextGapWhy": "最初に選んだ苦手なところです",
-    "homeTabProfile": "プロフィール",
+    "homeTabProfile": "マイ",
     "profileGoalTitle": "目標と練習",
     "profileGoalHint": "目標から作ったテーマとタスク練習"
   },
@@ -1008,7 +1008,7 @@
     "nextGapPronunciation": "Nói thành tiếng",
     "nextGapNatural": "Nói tự nhiên hơn",
     "nextGapWhy": "Điều bạn nói là mình thấy khó",
-    "homeTabProfile": "Hồ sơ",
+    "homeTabProfile": "Của tôi",
     "profileGoalTitle": "Mục tiêu và luyện tập",
     "profileGoalHint": "Các chủ đề từ mục tiêu, kèm nhiệm vụ để luyện"
   },
@@ -1352,7 +1352,7 @@
     "nextGapPronunciation": "Dis-le à voix haute",
     "nextGapNatural": "Parle de façon plus naturelle",
     "nextGapWhy": "Quelque chose que tu trouves difficile, d'après toi",
-    "homeTabProfile": "Profil",
+    "homeTabProfile": "Moi",
     "profileGoalTitle": "Objectif et pratique",
     "profileGoalHint": "Les thèmes tirés de ton objectif, avec des tâches"
   },
@@ -1888,7 +1888,7 @@
     "nextGapPronunciation": "Dillo ad alta voce",
     "nextGapNatural": "Rendilo più naturale",
     "nextGapWhy": "Qualcosa che hai detto di trovare difficile",
-    "homeTabProfile": "Profilo",
+    "homeTabProfile": "Io",
     "profileGoalTitle": "Obiettivo e pratica",
     "profileGoalHint": "I temi del tuo obiettivo, con compiti per esercitarti"
   },
@@ -2235,7 +2235,7 @@
     "nextGapPronunciation": "Diga em voz alta",
     "nextGapNatural": "Fale de um jeito mais natural",
     "nextGapWhy": "Algo que você disse que acha difícil",
-    "homeTabProfile": "Perfil",
+    "homeTabProfile": "Meu espaço",
     "profileGoalTitle": "Objetivo e prática",
     "profileGoalHint": "Temas do seu objetivo, com tarefas para praticar"
   },
@@ -2769,7 +2769,7 @@
     "nextGapPronunciation": "Скажите вслух",
     "nextGapNatural": "Говорите естественнее",
     "nextGapWhy": "То, что вы назвали трудным",
-    "homeTabProfile": "Профиль",
+    "homeTabProfile": "Моё",
     "profileGoalTitle": "Цель и практика",
     "profileGoalHint": "Темы по вашей цели и задания для практики"
   },
@@ -3112,7 +3112,7 @@
     "nextGapPronunciation": "Ucapkan dengan suara",
     "nextGapNatural": "Buat terdengar lebih alami",
     "nextGapWhy": "Hal yang kamu bilang sulit",
-    "homeTabProfile": "Profil",
+    "homeTabProfile": "Saya",
     "profileGoalTitle": "Tujuan dan latihan",
     "profileGoalHint": "Topik dari tujuanmu, dengan tugas untuk dilatih"
   },
@@ -3449,7 +3449,7 @@
     "nextGapPronunciation": "قلها بصوت عالٍ",
     "nextGapNatural": "اجعل كلامك أكثر طبيعية",
     "nextGapWhy": "شيء قلت إنه صعب عليك",
-    "homeTabProfile": "ملفي",
+    "homeTabProfile": "أنا",
     "profileGoalTitle": "الهدف والتدريب",
     "profileGoalHint": "مواضيع من هدفك مع مهام للتدريب"
   },
@@ -3786,7 +3786,7 @@
     "nextGapPronunciation": "พูดออกเสียง",
     "nextGapNatural": "พูดให้เป็นธรรมชาติขึ้น",
     "nextGapWhy": "จุดที่คุณบอกว่ายาก",
-    "homeTabProfile": "โปรไฟล์",
+    "homeTabProfile": "ของฉัน",
     "profileGoalTitle": "เป้าหมายและการฝึก",
     "profileGoalHint": "หัวข้อจากเป้าหมายของคุณ พร้อมงานให้ฝึก"
   },
@@ -4123,7 +4123,7 @@
     "nextGapPronunciation": "ज़ोर से बोलकर देखें",
     "nextGapNatural": "और स्वाभाविक बोलें",
     "nextGapWhy": "आपने बताया था कि यह कठिन लगता है",
-    "homeTabProfile": "प्रोफ़ाइल",
+    "homeTabProfile": "मेरा",
     "profileGoalTitle": "लक्ष्य और अभ्यास",
     "profileGoalHint": "आपके लक्ष्य से बने विषय और अभ्यास के टास्क"
   }
