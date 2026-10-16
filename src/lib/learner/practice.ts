@@ -70,23 +70,26 @@ export function parsePracticeGoal(value: unknown): PracticeGoal | null {
  */
 export function practicePrompt(goal: PracticeGoal, targetName: string): string {
   const lines: string[] = [
-    `This conversation has something for the learner to practise. Keep talking as yourself, naturally — never announce it, quiz, or drill.`,
+    `This conversation has something for the learner to practise. Keep talking naturally — never announce it, quiz, or drill.`,
   ];
   if (goal.situation) {
     lines.push(
-      `Situation (described in the learner's own language): ${goal.situation}. Have the conversation in that situation: take the part the other person in it would play, and keep it going there. If the situation needs setting up, do it in your own first words, in ${targetName}.`,
+      `Situation (described in the learner's own language): ${goal.situation}. Have the conversation inside it, as the person the learner would really be talking to there: for ordering, asking or buying, the member of staff serving them; for small talk, someone they would meet there; for catching up, a friend. Speak as that person, in ${targetName}; never describe the scene from outside.`,
     );
   }
   if (goal.phrases?.length) {
     lines.push(
-      `Phrases the learner is trying to use themselves: ${goal.phrases.map((p) => `"${p}"`).join(", ")}. Make openings where saying them would be natural — ask the question one of them answers. Do not say them first yourself and do not hint at them.`,
+      `Phrases the learner is trying to use themselves: ${goal.phrases.map((p) => `"${p}"`).join(", ")}. Make openings where saying them would be natural — ask the question one of them answers. Do not say them, or anything that contains them, yourself, and do not hint at them.`,
     );
   }
   if (goal.mistake) {
     lines.push(
-      `A mistake they keep making: ${goal.mistake}. Steer towards moments that call for getting this right (for a tense, ask about the time it belongs to). Correction stays where it always is, not in your line.`,
+      `A mistake they keep making: ${goal.mistake}. Steer towards moments that call for getting this right (for a tense, ask about the time it belongs to).`,
     );
   }
+  lines.push(
+    `None of this changes the correction: correct only what they actually wrote, keep its meaning, and never add the phrases or words from the situation that they did not use.`,
+  );
   return lines.join("\n");
 }
 

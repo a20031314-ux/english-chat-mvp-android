@@ -157,6 +157,8 @@ test("the tutor is told the situation, the phrases and the mistake, and to open 
   assert.match(prompt, /카페에서 주문하기/);
   assert.match(prompt, /コーヒーをください/);
   assert.match(prompt, /particle を/);
+  assert.match(prompt, /member of staff/);
+  assert.match(prompt, /never add the phrases/, "the goal never leaks into the correction");
   assert.match(practiceOpeningPrompt(goal, "Japanese"), /You speak first/);
   assert.doesNotMatch(practicePrompt({ phrases: ["x y"] }, "English"), /Situation/);
 });
