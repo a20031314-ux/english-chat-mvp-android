@@ -3,9 +3,10 @@ import { NextRequest, after } from "next/server";
 import { observeChatLines, observeChatTurn } from "@/lib/server/learnerProfileStore";
 import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
-import { readLedger, recordTurn } from "@/lib/server/ledgerStore";
-import { isIdentified } from "@/lib/server/identity";
-import { phrasesToRecycle, recyclePrompt } from "@/lib/learner/ledger";
+import { recordTurn } from "@/lib/server/ledgerStore";
+import { readLearnerBrief } from "@/lib/server/learnerBrief";
+import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
+import { requestAppVersion } from "@/lib/appVersion";
 import {
   parsePracticeGoal,
   practiceOpeningPrompt,
@@ -87,8 +88,11 @@ type ChatTurnOptions = {
    * it is a card they open themselves (how_to_say with expressionOnly).
    */
   ownLanguage?: boolean;
-  /** Learned phrases to bring back into the conversation (learner/ledger.ts recyclePrompt). */
-  recycle?: string[];
+  /**
+   * What their own recent practice shows, for the tutor (learner/brief.ts):
+   * mistakes that recur, phrases to bring back, whether to ease off or stretch.
+   */
+  brief?: string;
   /** What this conversation was started to practise (learner/practice.ts). */
   practice?: PracticeGoal | null;
 };
@@ -519,9 +523,7 @@ async function runChat(
     model: chatModel(),
     messages: [
       { role: "system", content: buildChatSystem(langs, options) },
-      ...(options.recycle?.length
-        ? [{ role: "system" as const, content: recyclePrompt(options.recycle) }]
-        : []),
+      ...(options.brief ? [{ role: "system" as const, content: options.brief }] : []),
       ...(options.practice
         ? [
             {
@@ -901,12 +903,10 @@ export async function POST(request: NextRequest) {
     // happens, so the two together say how often a correction is large enough
     // to need the reply written twice.
     void meterRequest(request, "chat");
-    // Learned phrases the tutor may bring back (hub/drafts/tab-connections.md).
-    const recycle = isIdentified(userId)
-      ? await readLedger(userId, langs.targetLanguage)
-          .then((ledger) => phrasesToRecycle(ledger))
-          .catch(() => [])
-      : [];
+    // What their own practice shows — mistakes that recur, learned phrases to
+    // bring back, whether to ease off or stretch (learner/brief.ts). Built from
+    // what is kept and cached for minutes; empty when there is nothing yet.
+    const brief = (await readLearnerBrief(userId, langs.targetLanguage)).prompt;
     const data = await runChat(
       openai,
       message,
@@ -916,7 +916,7 @@ export async function POST(request: NextRequest) {
         conversationMode,
         imageDataUrl,
         ownLanguage: body.ownLanguage === true,
-        recycle,
+        brief,
         practice,
         onReread: () => void meterRequest(request, "chatReread"),
       },
@@ -935,6 +935,25 @@ export async function POST(request: NextRequest) {
     // reply as an appearance, their sentence as use (learner/comprehension.ts).
     // And into the expression ledger: their sentence as output, the reply as
     // something heard (learner/ledger.ts).
+    // How the turn went, without the words (learnerMetrics.ts): whether it
+    // needed correcting is what the learner brief reads for chat.
+    if (practised) {
+      after(() =>
+        recordLearnerTurn({
+          userId,
+          surface: "chat",
+          language: langs.targetLanguage,
+          uiLanguage: langs.interfaceLanguage,
+          sessionId: null,
+          turnIndex: null,
+          text: message,
+          spoken: false,
+          corrected: data.correction?.corrected ?? "",
+          appVersion: requestAppVersion(request.headers),
+          now: Date.now(),
+        }),
+      );
+    }
     after(() =>
       recordTurn({
         userId,

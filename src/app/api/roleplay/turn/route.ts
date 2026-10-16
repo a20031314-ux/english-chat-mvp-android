@@ -31,9 +31,8 @@ import { requestUserId, resolveRequestEntitlement } from "@/lib/server/premiumRe
 import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
 import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
-import { readLedger, recordTurn } from "@/lib/server/ledgerStore";
-import { isIdentified } from "@/lib/server/identity";
-import { phrasesToRecycle, recyclePrompt } from "@/lib/learner/ledger";
+import { recordTurn } from "@/lib/server/ledgerStore";
+import { readLearnerBrief } from "@/lib/server/learnerBrief";
 import { parsePracticeGoal, practicePrompt } from "@/lib/learner/practice";
 import { contentHash } from "@/lib/roleplay/script";
 import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
@@ -252,13 +251,13 @@ export async function POST(request: NextRequest) {
     }
   };
 
-  // In a free conversation, learned phrases the character may bring back
-  // (hub/drafts/tab-connections.md). A scripted scene keeps to its script.
-  const recycle = scenario.openEnded && isIdentified(requestUserId(request))
-    ? await readLedger(requestUserId(request), turn.targetLanguage)
-        .then((ledger) => phrasesToRecycle(ledger))
-        .catch(() => [] as string[])
-    : [];
+  // In a free conversation, what their own practice shows — mistakes that
+  // recur, learned phrases to bring back, whether to ease off or stretch
+  // (learner/brief.ts). Cached for minutes, so a call does not rebuild it on
+  // every turn. A scripted scene keeps to its script.
+  const brief = scenario.openEnded
+    ? (await readLearnerBrief(requestUserId(request), turn.targetLanguage)).prompt
+    : "";
   // What an open conversation was started to practise — a situation from the
   // learner's goal, phrases to use, a mistake to get right (learner/practice.ts).
   // A scripted scene already has its situation and keeps to it.
@@ -275,7 +274,7 @@ export async function POST(request: NextRequest) {
         role: "system" as const,
         content: tutorSystemPrompt({ scenario, bank, recorded, request: turn }),
       },
-      ...(recycle.length ? [{ role: "system" as const, content: recyclePrompt(recycle) }] : []),
+      ...(brief ? [{ role: "system" as const, content: brief }] : []),
       ...(practice
         ? [{ role: "system" as const, content: practicePrompt(practice, learningLanguageName(turn.targetLanguage)) }]
         : []),
