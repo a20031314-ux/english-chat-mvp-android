@@ -25,25 +25,32 @@
           "shot": "growth"
         },
         {
-          "heading": "4. Toca para ver más",
+          "heading": "4. Verlo como gráfico",
+          "body": [
+            "Toca «{ui:myViewGraph}» para ver las últimas dos semanas de cada parte en barras. La vista que elijas se queda para la próxima vez."
+          ],
+          "shot": "graph"
+        },
+        {
+          "heading": "5. Toca para ver más",
           "body": [
             "Toca una parte para ver cómo crece, las últimas dos semanas y las expresiones que la hicieron crecer; «{ui:myGrowIt}» empieza a practicar."
           ],
           "shot": "element"
         },
         {
-          "heading": "5. Pregunta",
+          "heading": "6. Pregunta",
           "body": [
             "Pregunta algo como «{ui:myAskQuick1}» y te responde con tu registro. Cada pregunta cuenta como un chat."
           ],
           "shot": "myask"
         },
         {
-          "heading": "6. Objetivo y práctica",
+          "heading": "7. Verlo como mapa",
           "body": [
-            "Abre «{ui:profileGoalTitle}» para ver los temas de tu objetivo; en un tema, «{ui:missionStart}»."
+            "Toca «{ui:myViewMap}» para ver los temas de tu objetivo; en un tema, «{ui:missionStart}»."
           ],
-          "shot": "goalopen"
+          "shot": "mapview"
         },
         {
           "heading": "Además",
@@ -272,25 +279,32 @@
           "shot": "growth"
         },
         {
-          "heading": "4. タップして見る",
+          "heading": "4. グラフで見る",
+          "body": [
+            "「{ui:myViewGraph}」を押すと、部分ごとの最近2週間が棒で見えます。選んだ表示は次回もそのままです。"
+          ],
+          "shot": "graph"
+        },
+        {
+          "heading": "5. タップして見る",
           "body": [
             "部分を押すと、育ち方・最近2週間・育てた表現が見え、「{ui:myGrowIt}」ですぐ練習できます。"
           ],
           "shot": "element"
         },
         {
-          "heading": "5. 聞いてみる",
+          "heading": "6. 聞いてみる",
           "body": [
             "「{ui:myAskQuick1}」のように聞くと、自分の記録から答えます。質問1回はチャット1回です。"
           ],
           "shot": "myask"
         },
         {
-          "heading": "6. 目標と練習",
+          "heading": "7. マップで見る",
           "body": [
-            "「{ui:profileGoalTitle}」を開くと目標から作ったテーマがあり、テーマで「{ui:missionStart}」。"
+            "「{ui:myViewMap}」を押すと目標から作ったテーマが見え、テーマで「{ui:missionStart}」。"
           ],
-          "shot": "goalopen"
+          "shot": "mapview"
         },
         {
           "heading": "そのほか",
@@ -519,25 +533,32 @@
           "shot": "growth"
         },
         {
-          "heading": "4. 点开查看",
+          "heading": "4. 用图表看",
+          "body": [
+            "点“{ui:myViewGraph}”，每个部分最近两周以柱状显示。选好的方式下次也保持。"
+          ],
+          "shot": "graph"
+        },
+        {
+          "heading": "5. 点开查看",
           "body": [
             "点开一个部分，可以看到成长方式、最近两周和让它成长的表达，用“{ui:myGrowIt}”马上练习。"
           ],
           "shot": "element"
         },
         {
-          "heading": "5. 提问",
+          "heading": "6. 提问",
           "body": [
             "像“{ui:myAskQuick1}”这样提问，会根据你的记录回答。每个问题算一次聊天。"
           ],
           "shot": "myask"
         },
         {
-          "heading": "6. 目标与练习",
+          "heading": "7. 用地图看",
           "body": [
-            "展开“{ui:profileGoalTitle}”能看到根据目标生成的主题，在主题里点“{ui:missionStart}”。"
+            "点“{ui:myViewMap}”能看到根据目标生成的主题，在主题里点“{ui:missionStart}”。"
           ],
-          "shot": "goalopen"
+          "shot": "mapview"
         },
         {
           "heading": "其他",
@@ -766,25 +787,32 @@
           "shot": "growth"
         },
         {
-          "heading": "4. Chạm để xem",
+          "heading": "4. Xem dạng biểu đồ",
+          "body": [
+            "Chạm “{ui:myViewGraph}” để xem hai tuần qua của từng phần dưới dạng cột. Cách xem bạn chọn sẽ được giữ cho lần sau."
+          ],
+          "shot": "graph"
+        },
+        {
+          "heading": "5. Chạm để xem",
           "body": [
             "Chạm vào một phần để xem cách nó lớn, hai tuần qua và các cách nói giúp nó lớn; “{ui:myGrowIt}” để luyện ngay."
           ],
           "shot": "element"
         },
         {
-          "heading": "5. Hỏi",
+          "heading": "6. Hỏi",
           "body": [
             "Hỏi kiểu “{ui:myAskQuick1}”, câu trả lời dựa trên ghi chép của bạn. Mỗi câu hỏi tính là một lượt chat."
           ],
           "shot": "myask"
         },
         {
-          "heading": "6. Mục tiêu và luyện tập",
+          "heading": "7. Xem dạng bản đồ",
           "body": [
-            "Mở “{ui:profileGoalTitle}” để xem các chủ đề từ mục tiêu; trong chủ đề, chạm “{ui:missionStart}”."
+            "Chạm “{ui:myViewMap}” để xem các chủ đề từ mục tiêu; trong chủ đề, chạm “{ui:missionStart}”."
           ],
-          "shot": "goalopen"
+          "shot": "mapview"
         },
         {
           "heading": "Ngoài ra",
@@ -1013,25 +1041,32 @@
           "shot": "growth"
         },
         {
-          "heading": "4. Touche pour voir",
+          "heading": "4. Voir en graphique",
+          "body": [
+            "Touche « {ui:myViewGraph} » pour voir les deux dernières semaines de chaque partie en barres. L'affichage choisi est gardé pour la prochaine fois."
+          ],
+          "shot": "graph"
+        },
+        {
+          "heading": "5. Touche pour voir",
           "body": [
             "Touche une partie pour voir comment elle grandit, les deux dernières semaines et les expressions qui l'ont fait grandir ; « {ui:myGrowIt} » lance la pratique."
           ],
           "shot": "element"
         },
         {
-          "heading": "5. Pose une question",
+          "heading": "6. Pose une question",
           "body": [
             "Pose une question comme « {ui:myAskQuick1} » : la réponse vient de ton historique. Chaque question compte comme une discussion."
           ],
           "shot": "myask"
         },
         {
-          "heading": "6. Objectif et pratique",
+          "heading": "7. Voir en carte",
           "body": [
-            "Ouvre « {ui:profileGoalTitle} » pour les thèmes tirés de ton objectif ; dans un thème, « {ui:missionStart} »."
+            "Touche « {ui:myViewMap} » pour les thèmes tirés de ton objectif ; dans un thème, « {ui:missionStart} »."
           ],
-          "shot": "goalopen"
+          "shot": "mapview"
         },
         {
           "heading": "Aussi",
@@ -1260,25 +1295,32 @@
           "shot": "growth"
         },
         {
-          "heading": "4. Tocca per vedere",
+          "heading": "4. Vederlo come grafico",
+          "body": [
+            "Tocca «{ui:myViewGraph}» per vedere le ultime due settimane di ogni parte a barre. La vista scelta resta per la prossima volta."
+          ],
+          "shot": "graph"
+        },
+        {
+          "heading": "5. Tocca per vedere",
           "body": [
             "Tocca una parte per vedere come cresce, le ultime due settimane e le espressioni che l'hanno fatta crescere; «{ui:myGrowIt}» avvia la pratica."
           ],
           "shot": "element"
         },
         {
-          "heading": "5. Chiedi",
+          "heading": "6. Chiedi",
           "body": [
             "Chiedi qualcosa come «{ui:myAskQuick1}» e la risposta arriva dal tuo storico. Ogni domanda conta come una chat."
           ],
           "shot": "myask"
         },
         {
-          "heading": "6. Obiettivo e pratica",
+          "heading": "7. Vederlo come mappa",
           "body": [
-            "Apri «{ui:profileGoalTitle}» per i temi del tuo obiettivo; in un tema, «{ui:missionStart}»."
+            "Tocca «{ui:myViewMap}» per i temi del tuo obiettivo; in un tema, «{ui:missionStart}»."
           ],
-          "shot": "goalopen"
+          "shot": "mapview"
         },
         {
           "heading": "Inoltre",
@@ -1507,25 +1549,32 @@
           "shot": "growth"
         },
         {
-          "heading": "4. Toque para ver",
+          "heading": "4. Ver como gráfico",
+          "body": [
+            "Toque “{ui:myViewGraph}” para ver as últimas duas semanas de cada parte em barras. A visualização escolhida fica para a próxima vez."
+          ],
+          "shot": "graph"
+        },
+        {
+          "heading": "5. Toque para ver",
           "body": [
             "Toque numa parte para ver como cresce, as últimas duas semanas e as expressões que a fizeram crescer; “{ui:myGrowIt}” começa a praticar."
           ],
           "shot": "element"
         },
         {
-          "heading": "5. Pergunte",
+          "heading": "6. Pergunte",
           "body": [
             "Pergunte algo como “{ui:myAskQuick1}” e a resposta vem do seu histórico. Cada pergunta conta como uma conversa."
           ],
           "shot": "myask"
         },
         {
-          "heading": "6. Objetivo e prática",
+          "heading": "7. Ver como mapa",
           "body": [
-            "Abra “{ui:profileGoalTitle}” para ver os temas do seu objetivo; num tema, “{ui:missionStart}”."
+            "Toque “{ui:myViewMap}” para ver os temas do seu objetivo; num tema, “{ui:missionStart}”."
           ],
-          "shot": "goalopen"
+          "shot": "mapview"
         },
         {
           "heading": "Além disso",
@@ -1754,25 +1803,32 @@
           "shot": "growth"
         },
         {
-          "heading": "4. Нажмите, чтобы посмотреть",
+          "heading": "4. Посмотреть графиком",
+          "body": [
+            "Нажмите «{ui:myViewGraph}» — последние две недели каждой части в виде столбиков. Выбранный вид сохранится."
+          ],
+          "shot": "graph"
+        },
+        {
+          "heading": "5. Нажмите, чтобы посмотреть",
           "body": [
             "Нажмите на часть: как она растёт, последние две недели и выражения, которые помогли; «{ui:myGrowIt}» запускает практику."
           ],
           "shot": "element"
         },
         {
-          "heading": "5. Спросите",
+          "heading": "6. Спросите",
           "body": [
             "Спросите, например, «{ui:myAskQuick1}» — ответ по вашим записям. Каждый вопрос считается одним сообщением в чате."
           ],
           "shot": "myask"
         },
         {
-          "heading": "6. Цель и практика",
+          "heading": "7. Посмотреть картой",
           "body": [
-            "Откройте «{ui:profileGoalTitle}» — там темы по вашей цели; в теме нажмите «{ui:missionStart}»."
+            "Нажмите «{ui:myViewMap}» — темы по вашей цели; в теме нажмите «{ui:missionStart}»."
           ],
-          "shot": "goalopen"
+          "shot": "mapview"
         },
         {
           "heading": "Ещё",
@@ -2001,25 +2057,32 @@
           "shot": "growth"
         },
         {
-          "heading": "4. Ketuk untuk melihat",
+          "heading": "4. Lihat sebagai grafik",
+          "body": [
+            "Ketuk “{ui:myViewGraph}” untuk melihat dua minggu terakhir tiap bagian dalam batang. Tampilan yang kamu pilih tetap untuk lain kali."
+          ],
+          "shot": "graph"
+        },
+        {
+          "heading": "5. Ketuk untuk melihat",
           "body": [
             "Ketuk satu bagian untuk melihat cara tumbuhnya, dua minggu terakhir, dan ungkapan yang menumbuhkannya; “{ui:myGrowIt}” untuk langsung berlatih."
           ],
           "shot": "element"
         },
         {
-          "heading": "5. Bertanya",
+          "heading": "6. Bertanya",
           "body": [
             "Tanyakan misalnya “{ui:myAskQuick1}”, jawabannya dari catatanmu. Setiap pertanyaan dihitung satu chat."
           ],
           "shot": "myask"
         },
         {
-          "heading": "6. Tujuan dan latihan",
+          "heading": "7. Lihat sebagai peta",
           "body": [
-            "Buka “{ui:profileGoalTitle}” untuk topik dari tujuanmu; di topik, ketuk “{ui:missionStart}”."
+            "Ketuk “{ui:myViewMap}” untuk topik dari tujuanmu; di topik, ketuk “{ui:missionStart}”."
           ],
-          "shot": "goalopen"
+          "shot": "mapview"
         },
         {
           "heading": "Lainnya",
@@ -2248,25 +2311,32 @@
           "shot": "growth"
         },
         {
-          "heading": "4. اضغط لترى",
+          "heading": "4. اعرضه كرسم بياني",
+          "body": [
+            "اضغط «{ui:myViewGraph}» لترى آخر أسبوعين لكل جزء على شكل أعمدة. تبقى طريقة العرض التي تختارها للمرة القادمة."
+          ],
+          "shot": "graph"
+        },
+        {
+          "heading": "5. اضغط لترى",
           "body": [
             "اضغط على جزء لترى كيف ينمو وآخر أسبوعين والتعابير التي أنمته؛ «{ui:myGrowIt}» يبدأ التدريب."
           ],
           "shot": "element"
         },
         {
-          "heading": "5. اسأل",
+          "heading": "6. اسأل",
           "body": [
             "اسأل مثلًا «{ui:myAskQuick1}» فتأتيك الإجابة من سجلّك. كل سؤال يُحتسب محادثة واحدة."
           ],
           "shot": "myask"
         },
         {
-          "heading": "6. الهدف والتدريب",
+          "heading": "7. اعرضه كخريطة",
           "body": [
-            "افتح «{ui:profileGoalTitle}» لترى المواضيع المرسومة من هدفك؛ وفي الموضوع اضغط «{ui:missionStart}»."
+            "اضغط «{ui:myViewMap}» لترى المواضيع المرسومة من هدفك؛ وفي الموضوع اضغط «{ui:missionStart}»."
           ],
-          "shot": "goalopen"
+          "shot": "mapview"
         },
         {
           "heading": "أيضًا",
@@ -2495,25 +2565,32 @@
           "shot": "growth"
         },
         {
-          "heading": "4. แตะเพื่อดู",
+          "heading": "4. ดูเป็นกราฟ",
+          "body": [
+            "แตะ “{ui:myViewGraph}” เพื่อดูสองสัปดาห์ล่าสุดของแต่ละส่วนเป็นแท่ง มุมมองที่เลือกจะคงไว้ครั้งหน้า"
+          ],
+          "shot": "graph"
+        },
+        {
+          "heading": "5. แตะเพื่อดู",
           "body": [
             "แตะส่วนหนึ่งเพื่อดูวิธีเติบโต สองสัปดาห์ล่าสุด และสำนวนที่ช่วยให้เติบโต แล้วฝึกทันทีด้วย “{ui:myGrowIt}”"
           ],
           "shot": "element"
         },
         {
-          "heading": "5. ถาม",
+          "heading": "6. ถาม",
           "body": [
             "ถามเช่น “{ui:myAskQuick1}” แล้วจะตอบจากบันทึกของคุณ ถาม 1 ครั้งนับเป็นแชท 1 ครั้ง"
           ],
           "shot": "myask"
         },
         {
-          "heading": "6. เป้าหมายและการฝึก",
+          "heading": "7. ดูเป็นแผนที่",
           "body": [
-            "เปิด “{ui:profileGoalTitle}” เพื่อดูหัวข้อจากเป้าหมาย ในหัวข้อแตะ “{ui:missionStart}”"
+            "แตะ “{ui:myViewMap}” เพื่อดูหัวข้อจากเป้าหมาย ในหัวข้อแตะ “{ui:missionStart}”"
           ],
-          "shot": "goalopen"
+          "shot": "mapview"
         },
         {
           "heading": "อื่นๆ",
@@ -2742,25 +2819,32 @@
           "shot": "growth"
         },
         {
-          "heading": "4. छूकर देखें",
+          "heading": "4. ग्राफ़ में देखें",
+          "body": [
+            "“{ui:myViewGraph}” दबाएँ, हर हिस्से के पिछले दो हफ़्ते बार में दिखेंगे। चुना हुआ तरीका अगली बार भी रहेगा।"
+          ],
+          "shot": "graph"
+        },
+        {
+          "heading": "5. छूकर देखें",
           "body": [
             "किसी हिस्से को छुएँ: वह कैसे बढ़ता है, पिछले दो हफ़्ते और जिन अभिव्यक्तियों से बढ़ा; “{ui:myGrowIt}” से तुरंत अभ्यास।"
           ],
           "shot": "element"
         },
         {
-          "heading": "5. पूछें",
+          "heading": "6. पूछें",
           "body": [
             "“{ui:myAskQuick1}” जैसा पूछें, जवाब आपके रिकॉर्ड से आएगा। हर सवाल एक चैट गिना जाता है।"
           ],
           "shot": "myask"
         },
         {
-          "heading": "6. लक्ष्य और अभ्यास",
+          "heading": "7. नक्शे में देखें",
           "body": [
-            "“{ui:profileGoalTitle}” खोलें, वहाँ आपके लक्ष्य से बने विषय हैं; विषय में “{ui:missionStart}”।"
+            "“{ui:myViewMap}” दबाएँ, लक्ष्य से बने विषय दिखेंगे; विषय में “{ui:missionStart}”।"
           ],
-          "shot": "goalopen"
+          "shot": "mapview"
         },
         {
           "heading": "और",

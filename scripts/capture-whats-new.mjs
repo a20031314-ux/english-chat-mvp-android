@@ -95,9 +95,10 @@ const GUIDE_ITEMS = [
   { shot: "goal" },
   { shot: "next" },
   { shot: "growth" },
+  { shot: "graph" },
   { shot: "element" },
   { shot: "myask" },
-  { shot: "goalopen" },
+  { shot: "mapview" },
   { shot: "chatnext" },
 ];
 const GUIDE_VIDEO_ITEMS = [
@@ -447,7 +448,7 @@ const STEPS = {
     await wait(800);
   },
   async element({ page, ui, wait }) {
-    await page.locator(`[role=button][aria-label^="${ui.myElAccuracy}"]`).first().click();
+    await page.locator(`[aria-label^="${ui.myElAccuracy}"]`).first().click();
     await wait(1500);
   },
   async myask({ page, ui, wait }) {
@@ -461,13 +462,19 @@ const STEPS = {
     await page.mouse.wheel(0, 120);
     await wait(800);
   },
-  async goalopen({ page, ui, wait }) {
-    const toggle = page.getByRole("button", { name: new RegExp(escape(ui.profileGoalTitle)) }).first();
-    await toggle.scrollIntoViewIfNeeded();
+  async graph({ page, ui, wait }) {
+    await page.getByRole("button", { name: exactly(ui.myViewGraph) }).first().click();
+    await wait(1200);
+    await page.locator(`section[aria-label="${ui.myNetworkTitle}"]`).first().evaluate((el) => el.scrollIntoView({ block: "start" }));
+    await page.mouse.wheel(0, -90);
+    await wait(800);
+  },
+  async mapview({ page, ui, wait }) {
+    const toggle = page.getByRole("button", { name: exactly(ui.myViewMap) }).first();
     await toggle.click();
-    await wait(1500);
-    await toggle.evaluate((el) => el.scrollIntoView({ block: "start" }));
-    await page.mouse.wheel(0, -40);
+    await wait(1800);
+    await page.locator(`section[aria-label="${ui.myNetworkTitle}"]`).first().evaluate((el) => el.scrollIntoView({ block: "start" }));
+    await page.mouse.wheel(0, -90);
     await wait(800);
   },
   async chatnext({ page, ui, wait }) {

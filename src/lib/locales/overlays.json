@@ -414,7 +414,13 @@
     "planChoose": "{plan}を始める",
     "planStatusDaily": "{plan} · 今日の無料通話 残り{left}分 · チャット {used}/{limit}",
     "packOneMore": "もう1パック（{n}/{total}）",
-    "chatDailyUsedUp": "今日のチャット{limit}回を使い切りました。明日また補充されます。"
+    "chatDailyUsedUp": "今日のチャット{limit}回を使い切りました。明日また補充されます。",
+    "myViewLabel": "表示",
+    "myViewNet": "ネット",
+    "myViewGraph": "グラフ",
+    "myViewMap": "マップ",
+    "myGraphHint": "棒が高いほど、その日よく育ちました",
+    "myViewMapEmpty": "上でチェックしてマップを描くと、目標のテーマがここに出ます。"
   },
   "zh": {
     "billingClose": "关闭",
@@ -831,7 +837,13 @@
     "planChoose": "开始{plan}",
     "planStatusDaily": "{plan} · 今天免费通话还剩{left}分钟 · 聊天 {used}/{limit}",
     "packOneMore": "再来一个练习包（{n}/{total}）",
-    "chatDailyUsedUp": "今天的{limit}次聊天已用完。明天会重新补满。"
+    "chatDailyUsedUp": "今天的{limit}次聊天已用完。明天会重新补满。",
+    "myViewLabel": "查看方式",
+    "myViewNet": "网",
+    "myViewGraph": "图表",
+    "myViewMap": "地图",
+    "myGraphHint": "柱子越高，那天长得越多",
+    "myViewMapEmpty": "在上面勾选并画出地图后，目标的主题会出现在这里。"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -1250,7 +1262,13 @@
     "planChoose": "Bắt đầu {plan}",
     "planStatusDaily": "{plan} · hôm nay còn {left} phút gọi miễn phí · chat {used}/{limit}",
     "packOneMore": "Thêm một gói ({n}/{total})",
-    "chatDailyUsedUp": "Bạn đã dùng hết {limit} lượt chat hôm nay. Ngày mai sẽ được nạp lại."
+    "chatDailyUsedUp": "Bạn đã dùng hết {limit} lượt chat hôm nay. Ngày mai sẽ được nạp lại.",
+    "myViewLabel": "Cách xem",
+    "myViewNet": "Mạng",
+    "myViewGraph": "Biểu đồ",
+    "myViewMap": "Bản đồ",
+    "myGraphHint": "Cột càng cao, hôm đó càng lớn nhiều",
+    "myViewMapEmpty": "Đánh dấu ở trên và vẽ bản đồ, các chủ đề của mục tiêu sẽ hiện ở đây."
   },
   "fr": {
     "billingClose": "Fermer",
@@ -1674,7 +1692,13 @@
     "planChoose": "Commencer {plan}",
     "planStatusDaily": "{plan} · encore {left} min d’appels gratuits aujourd’hui · chat {used}/{limit}",
     "packOneMore": "Encore un pack ({n}/{total})",
-    "chatDailyUsedUp": "Vous avez utilisé les {limit} messages de chat du jour. Ils se rechargent demain."
+    "chatDailyUsedUp": "Vous avez utilisé les {limit} messages de chat du jour. Ils se rechargent demain.",
+    "myViewLabel": "Affichage",
+    "myViewNet": "Réseau",
+    "myViewGraph": "Graphique",
+    "myViewMap": "Carte",
+    "myGraphHint": "Plus la barre est haute, plus ça a grandi ce jour-là",
+    "myViewMapEmpty": "Coche au-dessus et dessine ta carte : les thèmes de ton objectif apparaîtront ici."
   },
   "it": {
     "archive": "Report",
@@ -2290,7 +2314,13 @@
     "planChoose": "Inizia {plan}",
     "planStatusDaily": "{plan} · oggi ti restano {left} min di chiamate gratuite · chat {used}/{limit}",
     "packOneMore": "Un altro pacchetto ({n}/{total})",
-    "chatDailyUsedUp": "Hai usato le {limit} chat di oggi. Si ricaricano domani."
+    "chatDailyUsedUp": "Hai usato le {limit} chat di oggi. Si ricaricano domani.",
+    "myViewLabel": "Vista",
+    "myViewNet": "Rete",
+    "myViewGraph": "Grafico",
+    "myViewMap": "Mappa",
+    "myGraphHint": "Più alta è la barra, più è cresciuto quel giorno",
+    "myViewMapEmpty": "Spunta qui sopra e disegna la mappa: i temi del tuo obiettivo appariranno qui."
   },
   "pt": {
     "billingClose": "Fechar",
@@ -2717,7 +2747,13 @@
     "planChoose": "Começar {plan}",
     "planStatusDaily": "{plan} · restam {left} min de chamadas grátis hoje · chats {used}/{limit}",
     "packOneMore": "Mais um pacote ({n}/{total})",
-    "chatDailyUsedUp": "Você usou os {limit} chats de hoje. Eles recarregam amanhã."
+    "chatDailyUsedUp": "Você usou os {limit} chats de hoje. Eles recarregam amanhã.",
+    "myViewLabel": "Visualização",
+    "myViewNet": "Rede",
+    "myViewGraph": "Gráfico",
+    "myViewMap": "Mapa",
+    "myGraphHint": "Quanto mais alta a barra, mais cresceu naquele dia",
+    "myViewMapEmpty": "Marque acima e desenhe seu mapa; os temas do seu objetivo aparecerão aqui."
   },
   "ru": {
     "archive": "Отчёты",
@@ -3331,7 +3367,13 @@
     "planChoose": "Начать {plan}",
     "planStatusDaily": "{plan} · сегодня осталось {left} мин бесплатных звонков · чат {used}/{limit}",
     "packOneMore": "Ещё один набор ({n}/{total})",
-    "chatDailyUsedUp": "Вы использовали {limit} сообщений в чате на сегодня. Завтра они пополнятся."
+    "chatDailyUsedUp": "Вы использовали {limit} сообщений в чате на сегодня. Завтра они пополнятся.",
+    "myViewLabel": "Вид",
+    "myViewNet": "Сеть",
+    "myViewGraph": "График",
+    "myViewMap": "Карта",
+    "myGraphHint": "Чем выше столбик, тем больше выросло в тот день",
+    "myViewMapEmpty": "Отметьте выше и нарисуйте карту — здесь появятся темы вашей цели."
   },
   "id": {
     "billingClose": "Tutup",
@@ -3754,7 +3796,13 @@
     "planChoose": "Mulai {plan}",
     "planStatusDaily": "{plan} · sisa {left} menit panggilan gratis hari ini · chat {used}/{limit}",
     "packOneMore": "Satu paket lagi ({n}/{total})",
-    "chatDailyUsedUp": "Kamu sudah memakai {limit} chat hari ini. Besok terisi lagi."
+    "chatDailyUsedUp": "Kamu sudah memakai {limit} chat hari ini. Besok terisi lagi.",
+    "myViewLabel": "Tampilan",
+    "myViewNet": "Jaring",
+    "myViewGraph": "Grafik",
+    "myViewMap": "Peta",
+    "myGraphHint": "Makin tinggi batangnya, makin banyak tumbuh hari itu",
+    "myViewMapEmpty": "Centang di atas lalu gambar peta; topik dari tujuanmu akan muncul di sini."
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -4171,7 +4219,13 @@
     "planChoose": "ابدأ {plan}",
     "planStatusDaily": "{plan} · تبقّى {left} دقيقة من المكالمات المجانية اليوم · الدردشة {used}/{limit}",
     "packOneMore": "باقة أخرى ({n}/{total})",
-    "chatDailyUsedUp": "استخدمت رسائل الدردشة الـ{limit} لليوم. يُعاد شحنها غدًا."
+    "chatDailyUsedUp": "استخدمت رسائل الدردشة الـ{limit} لليوم. يُعاد شحنها غدًا.",
+    "myViewLabel": "طريقة العرض",
+    "myViewNet": "شبكة",
+    "myViewGraph": "رسم بياني",
+    "myViewMap": "خريطة",
+    "myGraphHint": "كلما ارتفع العمود زاد النمو في ذلك اليوم",
+    "myViewMapEmpty": "اختر في الأعلى وارسم خريطتك، وستظهر مواضيع هدفك هنا."
   },
   "th": {
     "billingClose": "ปิด",
@@ -4588,7 +4642,13 @@
     "planChoose": "เริ่ม {plan}",
     "planStatusDaily": "{plan} · วันนี้เหลือเวลาคุยฟรี {left} นาที · แชต {used}/{limit}",
     "packOneMore": "อีกหนึ่งแพ็ก ({n}/{total})",
-    "chatDailyUsedUp": "ใช้แชต {limit} ครั้งของวันนี้หมดแล้ว พรุ่งนี้จะเติมให้ใหม่"
+    "chatDailyUsedUp": "ใช้แชต {limit} ครั้งของวันนี้หมดแล้ว พรุ่งนี้จะเติมให้ใหม่",
+    "myViewLabel": "มุมมอง",
+    "myViewNet": "เครือข่าย",
+    "myViewGraph": "กราฟ",
+    "myViewMap": "แผนที่",
+    "myGraphHint": "แท่งยิ่งสูง วันนั้นยิ่งเติบโตมาก",
+    "myViewMapEmpty": "เลือกด้านบนแล้ววาดแผนที่ หัวข้อของเป้าหมายจะมาอยู่ที่นี่"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -5005,6 +5065,12 @@
     "planChoose": "{plan} शुरू करें",
     "planStatusDaily": "{plan} · आज {left} मिनट मुफ़्त कॉल बची है · चैट {used}/{limit}",
     "packOneMore": "एक और पैक ({n}/{total})",
-    "chatDailyUsedUp": "आज की {limit} चैट इस्तेमाल हो गईं। कल फिर भर जाएँगी।"
+    "chatDailyUsedUp": "आज की {limit} चैट इस्तेमाल हो गईं। कल फिर भर जाएँगी।",
+    "myViewLabel": "देखने का तरीका",
+    "myViewNet": "जाल",
+    "myViewGraph": "ग्राफ़",
+    "myViewMap": "नक्शा",
+    "myGraphHint": "बार जितना ऊँचा, उस दिन उतना ज़्यादा बढ़ा",
+    "myViewMapEmpty": "ऊपर चुनें और नक्शा बनाएँ, आपके लक्ष्य के विषय यहाँ दिखेंगे।"
   }
 }

@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-16c";
+export const GUIDE_VERSION = "2026-10-17";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab";
 
@@ -43,52 +43,59 @@ export const GUIDE_KO: Guide = {
       {
         heading: "1. 체크로 시작",
         body: [
-          "부족한 부분과 위주로 할 것을 고르고 ‘{ui:mapDraw}’. 수준은 묻지 않아요."
+          "부족한 부분과 위주로 할 것을 고르고 ‘{ui:mapDraw}’. 수준은 묻지 않아요.",
         ],
-        shot: "goal"
+        shot: "goal",
       },
       {
         heading: "2. 오늘 해볼 것",
         body: [
-          "쌓인 기록으로 지금 할 것 하나를 권해요. ‘{ui:nextByChat}’이나 ‘{ui:nextByCall}’을 누르면 그 상황으로 대화가 바로 시작돼요."
+          "쌓인 기록으로 지금 할 것 하나를 권해요. ‘{ui:nextByChat}’이나 ‘{ui:nextByCall}’을 누르면 그 상황으로 대화가 바로 시작돼요.",
         ],
-        shot: "next"
+        shot: "next",
       },
       {
         heading: "3. 자라는 중",
         body: [
-          "여섯 부분이 쓸수록 커지고 줄지 않아요. 테두리 친 곳이 ‘{ui:myNext}’이에요."
+          "여섯 부분이 쓸수록 커지고 줄지 않아요. 테두리 친 곳이 ‘{ui:myNext}’이에요.",
         ],
-        shot: "growth"
+        shot: "growth",
       },
       {
-        heading: "4. 눌러서 보기",
+        heading: "4. 그래프로 보기",
         body: [
-          "부분을 누르면 자라는 방법·최근 2주·키운 표현이 보이고, ‘{ui:myGrowIt}’로 바로 연습해요."
+          "‘{ui:myViewGraph}’을 누르면 부분마다 최근 2주가 막대로 보여요. 고른 보기는 다음에도 그대로예요.",
         ],
-        shot: "element"
+        shot: "graph",
       },
       {
-        heading: "5. 직접 묻기",
+        heading: "5. 눌러서 보기",
         body: [
-          "‘{ui:myAskQuick1}’처럼 물으면 내 기록으로 답해요. 질문 1번은 채팅 1회예요."
+          "부분을 누르면 자라는 방법·최근 2주·키운 표현이 보이고, ‘{ui:myGrowIt}’로 바로 연습해요.",
         ],
-        shot: "myask"
+        shot: "element",
       },
       {
-        heading: "6. 목표와 연습",
+        heading: "6. 직접 묻기",
         body: [
-          "‘{ui:profileGoalTitle}’을 펼치면 목표로 그린 주제가 있고, 주제에서 ‘{ui:missionStart}’로 연습해요."
+          "‘{ui:myAskQuick1}’처럼 물으면 내 기록으로 답해요. 질문 1번은 채팅 1회예요.",
         ],
-        shot: "goalopen"
+        shot: "myask",
+      },
+      {
+        heading: "7. 지도로 보기",
+        body: [
+          "‘{ui:myViewMap}’을 누르면 목표로 그린 주제가 보이고, 주제에서 ‘{ui:missionStart}’로 연습해요.",
+        ],
+        shot: "mapview",
       },
       {
         heading: "그 밖에",
         body: [
-          "‘{ui:ledgerTitle}’에 모든 탭에서 만난 표현이 쌓여요. 목표가 바뀌면 ‘{ui:mapNewGoal}’. 배우는 언어마다 따로예요."
-        ]
-      }
-    ]
+          "‘{ui:ledgerTitle}’에 모든 탭에서 만난 표현이 쌓여요. 목표가 바뀌면 ‘{ui:mapNewGoal}’. 배우는 언어마다 따로예요.",
+        ],
+      },
+    ],
   },
   chat: {
     title: "채팅 사용법",
@@ -290,52 +297,59 @@ export const GUIDE_EN: Guide = {
       {
         heading: "1. Start by ticking",
         body: [
-          "Tick where you fall short and what to focus on, then ‘{ui:mapDraw}’. There's no level to pick."
+          "Tick where you fall short and what to focus on, then ‘{ui:mapDraw}’. There's no level to pick.",
         ],
-        shot: "goal"
+        shot: "goal",
       },
       {
         heading: "2. Try this",
         body: [
-          "One thing to do now, from your own record. ‘{ui:nextByChat}’ or ‘{ui:nextByCall}’ starts that conversation straight away."
+          "One thing to do now, from your own record. ‘{ui:nextByChat}’ or ‘{ui:nextByCall}’ starts that conversation straight away.",
         ],
-        shot: "next"
+        shot: "next",
       },
       {
         heading: "3. Growing",
         body: [
-          "Six parts grow as you use the language and never shrink. The ringed one is ‘{ui:myNext}’."
+          "Six parts grow as you use the language and never shrink. The ringed one is ‘{ui:myNext}’.",
         ],
-        shot: "growth"
+        shot: "growth",
       },
       {
-        heading: "4. Tap to look closer",
+        heading: "4. See it as a graph",
         body: [
-          "Tap a part for how it grows, the last two weeks and the phrases that grew it; ‘{ui:myGrowIt}’ starts practising."
+          "Tap ‘{ui:myViewGraph}’ to see each part's last two weeks as bars. The view you pick stays next time.",
         ],
-        shot: "element"
+        shot: "graph",
       },
       {
-        heading: "5. Ask",
+        heading: "5. Tap to look closer",
         body: [
-          "Ask something like ‘{ui:myAskQuick1}’ and it answers from your record. One question is one chat."
+          "Tap a part for how it grows, the last two weeks and the phrases that grew it; ‘{ui:myGrowIt}’ starts practising.",
         ],
-        shot: "myask"
+        shot: "element",
       },
       {
-        heading: "6. Goal and practice",
+        heading: "6. Ask",
         body: [
-          "Open ‘{ui:profileGoalTitle}’ for the topics drawn from your goal; in a topic, ‘{ui:missionStart}’."
+          "Ask something like ‘{ui:myAskQuick1}’ and it answers from your record. One question is one chat.",
         ],
-        shot: "goalopen"
+        shot: "myask",
+      },
+      {
+        heading: "7. See it as a map",
+        body: [
+          "Tap ‘{ui:myViewMap}’ for the topics drawn from your goal; in a topic, ‘{ui:missionStart}’.",
+        ],
+        shot: "mapview",
       },
       {
         heading: "Also",
         body: [
-          "‘{ui:ledgerTitle}’ gathers phrases from every tab. New goal? ‘{ui:mapNewGoal}’. Each learning language has its own."
-        ]
-      }
-    ]
+          "‘{ui:ledgerTitle}’ gathers phrases from every tab. New goal? ‘{ui:mapNewGoal}’. Each learning language has its own.",
+        ],
+      },
+    ],
   },
   chat: {
     title: "How to use Chat",

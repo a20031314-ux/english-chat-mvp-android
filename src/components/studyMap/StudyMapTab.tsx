@@ -63,7 +63,6 @@ function statusOf(record: MapRecord | null, topicId: string): TopicStatus {
   return record?.status[topicId] ?? "todo";
 }
 
-const GOAL_OPEN_KEY = "profileGoalOpen";
 
 export function StudyMapTab({
   ui,
@@ -123,26 +122,6 @@ export function StudyMapTab({
 
   const map = record?.map ?? null;
   const showForm = !loading && (editing || !map);
-
-  // The goal's map is folded away under the profile; whether it was left open
-  // is remembered on this device.
-  const [goalOpen, setGoalOpen] = useState<boolean>(() => {
-    try {
-      return localStorage.getItem(GOAL_OPEN_KEY) === "1";
-    } catch {
-      return false;
-    }
-  });
-  const toggleGoal = () => {
-    setGoalOpen((open) => {
-      try {
-        localStorage.setItem(GOAL_OPEN_KEY, open ? "0" : "1");
-      } catch {
-        // Folded again next time; nothing lost.
-      }
-      return !open;
-    });
-  };
 
   const draw = async (goal: string, selfCheck: SelfCheckAnswer | null) => {
     setDrawing(true);
@@ -276,35 +255,28 @@ export function StudyMapTab({
                 refreshKey={map.id}
               />
             </div>
-            <GrowthNetwork ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} refreshKey={map.id} />
-            <div className="mt-3">
-              <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
-            </div>
-            <section className="mt-3 rounded-2xl border border-white/10">
-              <button
-                type="button"
-                aria-expanded={goalOpen}
-                onClick={() => toggleGoal()}
-                className="flex w-full items-center gap-3 px-4 py-3 text-start hover:bg-white/[0.03]"
-              >
-                <span className="min-w-0 flex-1">
-                  <span className="block text-[11px] font-semibold tracking-wide text-slate-400">{ui.profileGoalTitle}</span>
-                  <span className="mt-0.5 block truncate text-[14px] font-medium text-slate-100">{map.title}</span>
-                  <span className="mt-0.5 block text-[12px] text-slate-500">{ui.profileGoalHint}</span>
-                </span>
-                <span aria-hidden className={`shrink-0 text-slate-400 transition ${goalOpen ? "rotate-180" : ""}`}>
-                  ▾
-                </span>
-              </button>
-              {goalOpen ? (
-                <div className="border-t border-white/10 px-3 pb-4 pt-3">
-                  <LearnerPanel
-                    ui={ui}
-                    locale={locale}
-                    targetLanguage={targetLanguage}
-                    isPremium={isPremium}
-                    onRedraw={() => setEditing(true)}
-                  />
+            <GrowthNetwork
+              ui={ui}
+              locale={locale}
+              targetLanguage={targetLanguage}
+              isPremium={isPremium}
+              refreshKey={map.id}
+              mapSlot={
+                <>
+                  <div className="px-1">
+                    <p className="text-[11px] font-semibold tracking-wide text-slate-400">{ui.profileGoalTitle}</p>
+                    <p className="mt-0.5 truncate text-[14px] font-medium text-slate-100">{map.title}</p>
+                    <p className="mt-0.5 text-[12px] text-slate-500">{ui.profileGoalHint}</p>
+                  </div>
+                  <div className="mt-3">
+                    <LearnerPanel
+                      ui={ui}
+                      locale={locale}
+                      targetLanguage={targetLanguage}
+                      isPremium={isPremium}
+                      onRedraw={() => setEditing(true)}
+                    />
+                  </div>
                   <div className="mt-3">
                     <MapView
                       ui={ui}
@@ -317,9 +289,12 @@ export function StudyMapTab({
                       onReview={() => void startReview()}
                     />
                   </div>
-                </div>
-              ) : null}
-            </section>
+                </>
+              }
+            />
+            <div className="mt-3">
+              <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
+            </div>
           </div>
         ) : null}
       </div>

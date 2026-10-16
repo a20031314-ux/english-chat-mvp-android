@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { sendAppIntent } from "@/lib/appIntents";
@@ -88,12 +88,26 @@ function growTitle(id: ElementId, ui: UICopy): string {
   }[id];
 }
 
+/** How the learner chose to look at their record; remembered on this device. */
+export type MyViewMode = "net" | "graph" | "map";
+const VIEW_KEY = "myViewMode";
+
+function readViewMode(): MyViewMode {
+  try {
+    const saved = localStorage.getItem(VIEW_KEY);
+    return saved === "graph" || saved === "map" ? saved : "net";
+  } catch {
+    return "net";
+  }
+}
+
 export function GrowthNetwork({
   ui,
   locale,
   targetLanguage,
   isPremium,
   refreshKey,
+  mapSlot,
 }: {
   ui: UICopy;
   /** The interface language, which answers to questions are written in. */
@@ -101,8 +115,19 @@ export function GrowthNetwork({
   targetLanguage: string;
   isPremium: boolean;
   refreshKey?: string | null;
+  /** The goal's topics, shown when the learner looks at their record as a map; none before a map is drawn. */
+  mapSlot?: ReactNode;
 }) {
   const [view, setView] = useState<GrowthView | null>(null);
+  const [mode, setModeState] = useState<MyViewMode>(readViewMode);
+  const setMode = (next: MyViewMode) => {
+    setModeState(next);
+    try {
+      localStorage.setItem(VIEW_KEY, next);
+    } catch {
+      // Back to the web next time; nothing lost.
+    }
+  };
   const [open, setOpen] = useState<ElementId | null>(null);
 
   useEffect(() => {
@@ -128,10 +153,40 @@ export function GrowthNetwork({
 
   return (
     <section aria-label={ui.myNetworkTitle} className="mt-3 rounded-2xl border border-white/10 px-3 pb-3 pt-3">
-      <div className="flex items-baseline justify-between gap-2 px-1">
+      <div className="flex items-center justify-between gap-2 px-1">
         <p className="text-[11px] font-semibold tracking-wide text-slate-400">{ui.myNetworkTitle}</p>
-        <p className="text-[11px] text-slate-500">{total > 0 ? ui.myNetworkHint : ui.myStart}</p>
+        <div role="group" aria-label={ui.myViewLabel} className="flex shrink-0 rounded-full border border-white/10 p-0.5">
+          {(
+            [
+              ["net", ui.myViewNet],
+              ["graph", ui.myViewGraph],
+              ["map", ui.myViewMap],
+            ] as const
+          ).map(([id, label]) => (
+            <button
+              key={id}
+              type="button"
+              aria-pressed={mode === id}
+              onClick={() => setMode(id)}
+              className={`rounded-full px-2.5 py-1 text-[11px] font-medium transition ${
+                mode === id ? "bg-white/90 text-slate-900" : "text-slate-400 hover:text-slate-200"
+              }`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
       </div>
+      {mode !== "map" ? (
+        <p className="mt-1 px-1 text-[11px] text-slate-500">
+          {total === 0 ? ui.myStart : mode === "graph" ? ui.myGraphHint : ui.myNetworkHint}
+        </p>
+      ) : null}
+      {mode === "graph" ? (
+        <GrowthGraph ui={ui} view={view} onOpen={setOpen} />
+      ) : mode === "map" ? (
+        <div className="mt-2">{mapSlot ?? <p className="px-1 py-6 text-center text-[12px] text-slate-400">{ui.myViewMapEmpty}</p>}</div>
+      ) : (
       <svg viewBox={`0 0 ${W} ${H}`} className="mt-1 w-full" role="group" aria-label={ui.myNetworkTitle}>
         {view.elements.map((e) => (
           <line
@@ -209,6 +264,7 @@ export function GrowthNetwork({
           );
         })}
       </svg>
+      )}
       <AskBox ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
       {opened ? (
         <ElementSheet
@@ -220,6 +276,54 @@ export function GrowthNetwork({
         />
       ) : null}
     </section>
+  );
+}
+
+/**
+ * The same record as rows: each element's last fourteen days as bars, all on
+ * one scale so a busy element and a quiet one can be told apart at a glance.
+ */
+function GrowthGraph({ ui, view, onOpen }: { ui: UICopy; view: GrowthView; onOpen: (id: ElementId) => void }) {
+  const names = elementNames(ui);
+  const top = Math.max(1, ...view.elements.flatMap((e) => e.daily));
+  return (
+    <div className="mt-2 space-y-1">
+      {view.elements.map((e) => {
+        const isNext = view.next === e.id;
+        const fact = factLine(e, ui);
+        return (
+          <button
+            key={e.id}
+            type="button"
+            onClick={() => onOpen(e.id)}
+            aria-label={`${names[e.id]}${fact ? ` · ${fact}` : ""}${isNext ? ` · ${ui.myNext}` : ""}`}
+            className={`flex w-full items-center gap-3 rounded-xl px-2 py-2 text-start hover:bg-white/[0.04] ${
+              isNext ? "ring-1 ring-rose-300/50" : ""
+            } ${e.resting ? "opacity-45" : ""}`}
+          >
+            <span className="w-24 shrink-0">
+              <span className="block truncate text-[12.5px] font-medium text-slate-100">{names[e.id]}</span>
+              <span className={`block truncate text-[10.5px] ${isNext ? "text-rose-300" : "text-slate-400"}`}>
+                {isNext ? ui.myNext : fact || (e.measured ? "" : ui.myNoData)}
+              </span>
+            </span>
+            <span aria-hidden className="flex h-8 min-w-0 flex-1 items-end gap-[3px]">
+              {e.daily.map((n, i) => (
+                <span
+                  key={i}
+                  className={`flex-1 rounded-sm ${n > 0 ? "bg-emerald-400/80" : "bg-white/[0.06]"}`}
+                  style={{ height: n > 0 ? `${Math.max(18, (n / top) * 100)}%` : "18%" }}
+                />
+              ))}
+            </span>
+            <span className="w-10 shrink-0 text-end text-[11px] text-emerald-300">{e.week > 0 ? `+${e.week}` : ""}</span>
+          </button>
+        );
+      })}
+      <p className="flex justify-between px-2 pt-1 text-[10px] text-slate-500">
+        <span>{ui.myDaily}</span>
+      </p>
+    </div>
   );
 }
 
