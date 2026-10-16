@@ -4,6 +4,9 @@ import {
   addCatalogTrialVideo,
   addMonthlyCallSeconds,
   addMonthlyImportPoints,
+  chargeImportPoints,
+  getPurchasedPoints,
+  addPurchasedPoints,
   getBilledImportVideoIds,
   getCatalogTrialVideoIds,
   getCallsStarted,
@@ -300,4 +303,22 @@ test("languages do not pool their lines", async () => {
 test("an empty line is not a line", async () => {
   await noteSentenceWritten("th", "   ");
   assert.deepEqual(await readWrittenLines("th"), []);
+});
+
+test("video imports spend the monthly grant first, then purchased points", async () => {
+  await addMonthlyImportPoints("import-buy-a", 78);
+  await addPurchasedPoints("import-buy-a", 10);
+  const spend = await chargeImportPoints("import-buy-a", 5, "video-buy");
+  assert.deepEqual(spend, { fromGranted: 2, fromPurchased: 3 });
+  assert.equal(await getMonthlyImportPointsUsed("import-buy-a"), 80);
+  assert.equal(await getPurchasedPoints("import-buy-a"), 7);
+  assert.deepEqual(await getBilledImportVideoIds("import-buy-a"), ["video-buy"]);
+});
+
+test("a video import both pots cannot cover charges nothing", async () => {
+  await addMonthlyImportPoints("import-buy-b", 80);
+  await addPurchasedPoints("import-buy-b", 2);
+  assert.equal(await chargeImportPoints("import-buy-b", 3, "video-x"), null);
+  assert.equal(await getPurchasedPoints("import-buy-b"), 2);
+  assert.deepEqual(await getBilledImportVideoIds("import-buy-b"), []);
 });

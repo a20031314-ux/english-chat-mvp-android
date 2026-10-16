@@ -10,10 +10,11 @@ import type { LearningLanguageCode } from "@/lib/learningLanguages";
 import { parseYouTubeInput } from "@/lib/videoLearning";
 import {
   addCatalogTrialVideo,
-  addMonthlyImportPoints,
+  chargeImportPoints,
   getBilledImportVideoIds,
   getCatalogTrialVideoIds,
   getMonthlyImportPointsUsed,
+  getPurchasedPoints,
 } from "@/lib/server/entitlementStore";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import {
@@ -32,13 +33,20 @@ function requestLanguage(request: NextRequest): LearningLanguageCode {
 export async function videoPrepLimitsForRequest(request: NextRequest) {
   const { isPremium, userId } = await resolveRequestEntitlement(request);
   const usedPoints = await getMonthlyImportPointsUsed(userId);
+  // Only a subscriber can import, so only a subscriber's purchases count here.
+  const purchasedPoints = isPremium ? await getPurchasedPoints(userId) : 0;
   return {
     isPremium,
     userId,
     usedPoints,
+    purchasedPoints,
     billedVideoIds: await getBilledImportVideoIds(userId),
     trialVideoIds: await getCatalogTrialVideoIds(userId),
-    remainingPrepSeconds: remainingImportSeconds(usedPoints, isPremium),
+    remainingPrepSeconds: remainingImportSeconds(
+      usedPoints,
+      isPremium,
+      purchasedPoints,
+    ),
     maxDurationSeconds: maxVideoPrepSeconds(isPremium),
     language: requestLanguage(request),
     importPointsLimit: monthlyImportPoints(isPremium),
@@ -66,6 +74,7 @@ export async function assertVideoPrepAllowed(
     language: limits.language,
     durationSeconds: options?.durationSeconds,
     usedPoints: limits.usedPoints,
+    purchasedPoints: limits.purchasedPoints,
     billedVideoIds: limits.billedVideoIds,
     trialVideoIds: limits.trialVideoIds,
   });
@@ -92,9 +101,12 @@ export async function recordVideoPrepForRequest(
     }
     return checked.usedPoints;
   }
-  return await addMonthlyImportPoints(
+  const spend = await chargeImportPoints(
     checked.userId,
     checked.decision.billablePoints,
     videoId,
   );
+  // The balance moved between checking and charging (a call spent it).
+  if (!spend) throw new VideoPipelineError("VIDEO_QUOTA");
+  return checked.usedPoints + spend.fromGranted;
 }

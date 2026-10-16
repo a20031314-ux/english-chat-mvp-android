@@ -169,3 +169,38 @@ test("monthly import points block another custom video", () => {
   assert.equal(decision.ok, false);
   if (!decision.ok) assert.equal(decision.reason, "quota");
 });
+
+test("premium imports can use purchased points once the grant is spent", () => {
+  const base = {
+    isPremium: true,
+    videoId: "abcdefghijk",
+    language: "en" as const,
+    durationSeconds: 9 * 60,
+    usedPoints: monthlyImportPoints(true),
+    billedVideoIds: [],
+    trialVideoIds: [],
+  };
+  const without = evaluateVideoAccess(base);
+  assert.equal(without.ok, false);
+  if (!without.ok) assert.equal(without.reason, "quota");
+  const withBought = evaluateVideoAccess({ ...base, purchasedPoints: 3 });
+  assert.equal(withBought.ok, true);
+  if (withBought.ok) assert.equal(withBought.billablePoints, 3);
+  const tooFew = evaluateVideoAccess({ ...base, purchasedPoints: 2 });
+  assert.equal(tooFew.ok, false);
+});
+
+test("free users cannot import even with purchased points", () => {
+  const decision = evaluateVideoAccess({
+    isPremium: false,
+    videoId: "abcdefghijk",
+    language: "en",
+    durationSeconds: 60,
+    usedPoints: 0,
+    purchasedPoints: 50,
+    billedVideoIds: [],
+    trialVideoIds: [],
+  });
+  assert.equal(decision.ok, false);
+  if (!decision.ok) assert.equal(decision.reason, "import_locked");
+});

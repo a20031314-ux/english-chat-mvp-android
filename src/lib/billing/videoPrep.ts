@@ -34,9 +34,33 @@ export function importPointsForDuration(durationSeconds: number) {
   return Math.ceil(duration / VIDEO_IMPORT_POINT_SECONDS);
 }
 
-export function remainingImportSeconds(usedPoints: number, isPremium: boolean) {
-  const remaining = Math.max(0, monthlyImportPoints(isPremium) - usedPoints);
-  return remaining * VIDEO_IMPORT_POINT_SECONDS;
+/**
+ * Points an import may spend: what is left of this month's grant, plus points
+ * bought separately. Purchased points buy video as well as calls — the call
+ * already spends them, and a subscriber who paid for points and was told the
+ * video quota had run out was being refused something they had paid for.
+ */
+export function importPointsAvailable(
+  usedPoints: number,
+  isPremium: boolean,
+  purchasedPoints = 0,
+) {
+  if (!isPremium) return 0;
+  return (
+    Math.max(0, monthlyImportPoints(true) - Math.max(0, usedPoints)) +
+    Math.max(0, Math.floor(purchasedPoints))
+  );
+}
+
+export function remainingImportSeconds(
+  usedPoints: number,
+  isPremium: boolean,
+  purchasedPoints = 0,
+) {
+  return (
+    importPointsAvailable(usedPoints, isPremium, purchasedPoints) *
+    VIDEO_IMPORT_POINT_SECONDS
+  );
 }
 
 export type VideoAccessReason =
@@ -59,6 +83,8 @@ export function evaluateVideoAccess(input: {
   language: LearningLanguageCode;
   durationSeconds?: number | null;
   usedPoints: number;
+  /** Points bought separately; spent after the monthly grant. */
+  purchasedPoints?: number;
   billedVideoIds: string[];
   trialVideoIds: string[];
 }): VideoAccessDecision {
@@ -92,9 +118,10 @@ export function evaluateVideoAccess(input: {
     return { ok: true, kind: "import", billablePoints: 0 };
   }
 
-  const remaining = Math.max(
-    0,
-    monthlyImportPoints(true) - Math.max(0, input.usedPoints),
+  const remaining = importPointsAvailable(
+    input.usedPoints,
+    true,
+    input.purchasedPoints ?? 0,
   );
   if (remaining <= 0) {
     return { ok: false, reason: "quota", maxSeconds: perVideo };

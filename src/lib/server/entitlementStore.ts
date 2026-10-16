@@ -238,6 +238,41 @@ export async function addMonthlyImportPoints(
   return next.usedPoints;
 }
 
+/**
+ * Charge a video import, granted points first and then purchased ones.
+ *
+ * The same split the call uses (splitSpend), so a subscriber who has spent the
+ * month's grant can still import with points they bought. Returns null and
+ * charges nothing when both pots together cannot cover it. The video is
+ * remembered as billed either way it is paid, so reopening it this month is
+ * free.
+ */
+export async function chargeImportPoints(
+  userId: string,
+  points: number,
+  videoId?: string,
+): Promise<PointSpend | null> {
+  const balance = await readPointBalance(userId, monthlyImportPoints(true));
+  const spend = splitSpend(balance, points);
+  if (!spend) return null;
+  const current = await readVideoPrep(userId);
+  await kvSetJson(
+    videoPrepKey(userId),
+    {
+      usedPoints: current.usedPoints + spend.fromGranted,
+      billedVideoIds:
+        videoId && !current.billedVideoIds.includes(videoId)
+          ? [...current.billedVideoIds, videoId]
+          : current.billedVideoIds,
+    } satisfies VideoPrepRecord,
+    MONTHLY_TTL_SECONDS,
+  );
+  if (spend.fromPurchased > 0) {
+    await kvIncrBy(purchasedPointsKey(userId), -spend.fromPurchased);
+  }
+  return spend;
+}
+
 /** @deprecated Seconds view of import points, kept for the entitlement route. */
 export async function getMonthlyVideoPrepUsed(
   userId: string,

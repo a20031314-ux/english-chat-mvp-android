@@ -20,6 +20,7 @@ import { usePremium } from "@/contexts/PremiumContext";
 import type { Locale, UICopy } from "@/lib/copy";
 import {
   evaluateVideoAccess,
+  importPointsForDuration,
   maxVideoPrepSeconds,
   monthlyImportPoints,
   videoPrepMinutes,
@@ -746,7 +747,7 @@ export function VideoLearningTab({
       return;
     }
 
-    const decision = evaluateVideoAccess({
+    const localDecision = evaluateVideoAccess({
       isPremium,
       videoId: parsed.videoId,
       language: targetLanguage,
@@ -755,6 +756,18 @@ export function VideoLearningTab({
       billedVideoIds: getBilledImportVideoIds(),
       trialVideoIds: getCatalogTrialVideoIds(),
     });
+    // This device cannot see points bought separately, which imports may
+    // spend once the month's grant is gone. A subscriber who looks out of
+    // quota here is therefore sent on, and the server — which knows both
+    // pots — refuses with VIDEO_QUOTA if they really are out.
+    const decision: typeof localDecision =
+      !localDecision.ok && localDecision.reason === "quota" && isPremium
+        ? {
+            ok: true,
+            kind: "import",
+            billablePoints: importPointsForDuration(durationSeconds ?? 0),
+          }
+        : localDecision;
     if (!decision.ok) {
       if (decision.reason === "too_long") {
         setUrlError(
