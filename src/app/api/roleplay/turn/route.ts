@@ -1,5 +1,5 @@
 import { NextRequest, after } from "next/server";
-import { coerceLanguageCode } from "@/lib/learningLanguages";
+import { coerceLanguageCode, learningLanguageName } from "@/lib/learningLanguages";
 import { SCENARIOS, sentencesFor } from "@/lib/roleplay/catalog";
 import {
   ROLEPLAY_BANK_CLIENT_HEADER,
@@ -34,6 +34,7 @@ import { observeWeakPoints } from "@/lib/server/weakPointStore";
 import { readLedger, recordTurn } from "@/lib/server/ledgerStore";
 import { isIdentified } from "@/lib/server/identity";
 import { phrasesToRecycle, recyclePrompt } from "@/lib/learner/ledger";
+import { parsePracticeGoal, practicePrompt } from "@/lib/learner/practice";
 import { contentHash } from "@/lib/roleplay/script";
 import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -258,6 +259,10 @@ export async function POST(request: NextRequest) {
         .then((ledger) => phrasesToRecycle(ledger))
         .catch(() => [] as string[])
     : [];
+  // What an open conversation was started to practise — a situation from the
+  // learner's goal, phrases to use, a mistake to get right (learner/practice.ts).
+  // A scripted scene already has its situation and keeps to it.
+  const practice = scenario.openEnded ? parsePracticeGoal(body.practice) : null;
   const model = tutorModel();
   // Reasoning models spend hidden tokens before answering and take their cap
   // under another name. Minimal effort: this is one spoken line, and every
@@ -271,6 +276,9 @@ export async function POST(request: NextRequest) {
         content: tutorSystemPrompt({ scenario, bank, recorded, request: turn }),
       },
       ...(recycle.length ? [{ role: "system" as const, content: recyclePrompt(recycle) }] : []),
+      ...(practice
+        ? [{ role: "system" as const, content: practicePrompt(practice, learningLanguageName(turn.targetLanguage)) }]
+        : []),
       ...tutorMessages(turn),
     ],
     response_format: { type: "json_object" as const },

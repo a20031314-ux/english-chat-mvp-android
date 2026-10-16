@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { sayLine } from "@/components/RoleplayOwnLine";
 import { refreshLedgerSoon } from "@/lib/learner/ledgerClient";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
@@ -59,6 +59,8 @@ import {
 import { playTts, prefetchTts, stopTts } from "@/lib/ttsPlayer";
 import { translateUtterance } from "@/lib/translateUtterance";
 import type { UICopy } from "@/lib/copy";
+import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
+import { saidPhrase } from "@/lib/learner/practice";
 
 /**
  * Fetch a line the scene is about to say, before it has to be said.
@@ -185,6 +187,7 @@ export function RoleplayScreen({
   onClose,
   resume,
   onSaved,
+  practice: practiceRequest,
 }: {
   scenarioId: string;
   /** What the learner speaks, so the director's notes are written in it. */
@@ -202,6 +205,12 @@ export function RoleplayScreen({
    * it down is the caller's business; this only says what there is to write.
    */
   onSaved?: (saved: SavedConversation) => void;
+  /**
+   * What this conversation was started to practise, from "try this" or the
+   * map: sent with every turn so the character keeps to it, and shown above
+   * the conversation with each phrase ticked once said (learner/practice.ts).
+   */
+  practice?: PracticeRequest | null;
 }) {
   const { isPremium } = usePremium();
   const scenario = findScenario(scenarioId);
@@ -209,6 +218,18 @@ export function RoleplayScreen({
   const [state, setState] = useState<SessionState | null>(null);
   const [instruction, setInstruction] = useState<Instruction | null>(null);
   const [said, setSaid] = useState<Spoken[]>([]);
+  const [practiceStopped, setPracticeStopped] = useState(false);
+  const practice = practiceStopped ? null : (practiceRequest ?? null);
+  const practiceSaid = useMemo(() => {
+    const done = new Set<string>();
+    if (!scenario) return done;
+    for (const phrase of practice?.goal.phrases ?? []) {
+      if (said.some((line) => line.who === "learner" && saidPhrase(line.text, phrase, scenario.language))) {
+        done.add(phrase);
+      }
+    }
+    return done;
+  }, [practice, said, scenario]);
   // The character's translations: folded by default, each one a tap away, or
   // all on show — the learner's choice, kept for next time. Nothing waits on
   // a translation either way; this is about what is on screen.
@@ -528,6 +549,7 @@ export function RoleplayScreen({
       },
       nativeLanguage,
       isPremium,
+      practice: practice?.goal ?? null,
       sessionId: conversationId.current,
       signals: state.pending
         ? { hesitationMs: state.pending.hesitationMs, attempts: state.pending.attempts }
@@ -927,6 +949,17 @@ export function RoleplayScreen({
         </div>
       </header>
 
+      {practice ? (
+        <div className="shrink-0 border-b border-white/10 px-3 py-2">
+          <PracticeBanner
+            ui={ui}
+            request={practice}
+            said={practiceSaid}
+            targetLanguage={scenario.language}
+            onStop={() => setPracticeStopped(true)}
+          />
+        </div>
+      ) : null}
       <ol className="min-h-0 flex-1 overflow-y-auto p-3">
         {said.map((line, index) => (
           <RoleplayLine

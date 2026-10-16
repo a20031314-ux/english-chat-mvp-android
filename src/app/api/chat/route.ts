@@ -6,6 +6,12 @@ import { observeWeakPoints } from "@/lib/server/weakPointStore";
 import { readLedger, recordTurn } from "@/lib/server/ledgerStore";
 import { isIdentified } from "@/lib/server/identity";
 import { phrasesToRecycle, recyclePrompt } from "@/lib/learner/ledger";
+import {
+  parsePracticeGoal,
+  practiceOpeningPrompt,
+  practicePrompt,
+  type PracticeGoal,
+} from "@/lib/learner/practice";
 import { writtenInLearningLanguage } from "@/lib/inputLanguage";
 import type OpenAI from "openai";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
@@ -83,6 +89,8 @@ type ChatTurnOptions = {
   ownLanguage?: boolean;
   /** Learned phrases to bring back into the conversation (learner/ledger.ts recyclePrompt). */
   recycle?: string[];
+  /** What this conversation was started to practise (learner/practice.ts). */
+  practice?: PracticeGoal | null;
 };
 
 function resolveChatLanguages(body: {
@@ -514,6 +522,14 @@ async function runChat(
       ...(options.recycle?.length
         ? [{ role: "system" as const, content: recyclePrompt(options.recycle) }]
         : []),
+      ...(options.practice
+        ? [
+            {
+              role: "system" as const,
+              content: practicePrompt(options.practice, learningLanguageName(langs.targetLanguage)),
+            },
+          ]
+        : []),
       {
         role: "user",
         content: userContent,
@@ -634,6 +650,7 @@ async function runStart(
   openai: OpenAI,
   recent: string[],
   langs: ChatLanguages,
+  practice: PracticeGoal | null = null,
 ): Promise<{ assistantMessage: string; spokenReply: string }> {
   const targetName = learningLanguageName(langs.targetLanguage);
   const spokenRule = conversationKoreanParallel(
@@ -655,7 +672,7 @@ ${spokenRule}
 Write 1–2 spoken ${targetName} lines as assistantMessage. Sound like texting a friend, not greeting a class.
 A question is fine if it feels natural — not required, and not a study prompt.
 Vary the topic. Do not reuse questions from RECENT.
-
+${practice ? `\n${practiceOpeningPrompt(practice, targetName)}\nThis comes before "vary the topic": the situation decides what you open with.\n` : ""}
 Return ONLY JSON:
 {"assistantMessage":"...","spokenReply":"..."}`,
       },
@@ -788,6 +805,7 @@ export async function POST(request: NextRequest) {
     conversationMode?: unknown;
     ownLanguage?: unknown;
     expressionOnly?: unknown;
+    practice?: unknown;
   };
   try {
     body = await request.json();
@@ -803,6 +821,10 @@ export async function POST(request: NextRequest) {
         ? "start"
         : "chat";
 
+  // A conversation started from "try this" or the map: what it is for
+  // (learner/practice.ts). Opening it costs nothing, like any opening line.
+  const practice = parsePracticeGoal(body.practice);
+
   if (mode === "start") {
     const recent = parseRecent(body.recent);
     if (!openai) {
@@ -810,7 +832,7 @@ export async function POST(request: NextRequest) {
     }
     try {
       void meterRequest(request, "chatStart");
-      const data = await runStart(openai, recent, langs);
+      const data = await runStart(openai, recent, langs, practice);
       return jsonWithCors(request, data);
     } catch (error) {
       console.error("[chat-start]", error);
@@ -895,6 +917,7 @@ export async function POST(request: NextRequest) {
         imageDataUrl,
         ownLanguage: body.ownLanguage === true,
         recycle,
+        practice,
         onReread: () => void meterRequest(request, "chatReread"),
       },
     );

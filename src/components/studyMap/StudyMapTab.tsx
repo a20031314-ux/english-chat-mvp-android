@@ -2,7 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { usePremium } from "@/contexts/PremiumContext";
-import { sendAppIntent } from "@/lib/appIntents";
+import { onAppIntent, sendAppIntent, takeAppIntent } from "@/lib/appIntents";
 import { apiUrl } from "@/lib/apiBase";
 import type { UICopy } from "@/lib/copy";
 import {
@@ -33,6 +33,8 @@ import { MissionScreen } from "@/components/studyMap/MissionScreen";
 import { TopicItems, ItemBar } from "@/components/studyMap/TopicItems";
 import { LearnerPanel } from "@/components/studyMap/LearnerPanel";
 import { LedgerPanel } from "@/components/studyMap/LedgerPanel";
+import { NextStepCard } from "@/components/NextStepCard";
+import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 
 /**
  * 학습 지도: a learner's goal drawn as topics in four sectors, in an order,
@@ -169,9 +171,29 @@ export function StudyMapTab({
     [map, targetLanguage, isPremium],
   );
 
+  // "Try this" in another tab can send a learner to a topic's tasks. This tab
+  // mounts only when shown, so that request arrives first: hold it until the
+  // map has loaded, then open the topic (appIntents.ts).
+  const [askedTopic, setAskedTopic] = useState<string | null>(() => takeAppIntent("openTopic")?.topicId ?? null);
   const openTopic = (topicId: string) => {
     setOpenTopicId(topicId);
     setLastOpenedId(topicId);
+    setAskedTopic(null);
+  };
+
+  useEffect(
+    () =>
+      onAppIntent("openTopic", ({ topicId }) => {
+        takeAppIntent("openTopic");
+        setAskedTopic(topicId);
+      }),
+    [],
+  );
+  const sheetTopicId =
+    openTopicId ?? (askedTopic && map?.topics.some((topic) => topic.id === askedTopic) ? askedTopic : null);
+  const closeSheet = () => {
+    setOpenTopicId(null);
+    setAskedTopic(null);
   };
 
   return (
@@ -192,6 +214,15 @@ export function StudyMapTab({
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         {!loading ? (
           <div className="mx-auto mb-4 max-w-2xl">
+            <div className="mb-3">
+              <NextStepCard
+                ui={ui}
+                locale={locale}
+                targetLanguage={targetLanguage}
+                canCall={scenariosForLanguage(targetLanguage).length > 0}
+                onOpenTopic={openTopic}
+              />
+            </div>
             <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
             <LearnerPanel
               ui={ui}
@@ -232,21 +263,21 @@ export function StudyMapTab({
         ) : null}
       </div>
 
-      {map && openTopicId ? (
+      {map && sheetTopicId ? (
         <TopicSheet
           ui={ui}
           map={map}
-          topic={map.topics.find((topic) => topic.id === openTopicId) ?? null}
-          status={statusOf(record, openTopicId)}
+          topic={map.topics.find((topic) => topic.id === sheetTopicId) ?? null}
+          status={statusOf(record, sheetTopicId)}
           clips={clips}
           targetLanguage={targetLanguage}
-          onStatus={(status) => void setStatus(openTopicId, status)}
+          onStatus={(status) => void setStatus(sheetTopicId, status)}
           onOpenTopic={openTopic}
-          onClose={() => setOpenTopicId(null)}
-          missions={record?.missions?.[openTopicId]}
+          onClose={closeSheet}
+          missions={record?.missions?.[sheetTopicId]}
           onPractise={() => {
-            setMissionTopicId(openTopicId);
-            setOpenTopicId(null);
+            setMissionTopicId(sheetTopicId);
+            closeSheet();
           }}
         />
       ) : null}
@@ -734,6 +765,7 @@ function TopicSheet({
             <li key={`${activity.tab}-${index}`}>
               <ActivityCard
                 ui={ui}
+                topic={topic}
                 activity={activity}
                 clips={clips}
                 targetLanguage={targetLanguage}
@@ -777,12 +809,14 @@ function TopicSheet({
 
 function ActivityCard({
   ui,
+  topic,
   activity,
   clips,
   targetLanguage,
   onGo,
 }: {
   ui: UICopy;
+  topic: MapTopic;
   activity: MapActivity;
   clips: Clip[];
   targetLanguage: string;
@@ -795,10 +829,16 @@ function ActivityCard({
     vocab: ui.homeTabVocab,
   };
 
+  // Chat and calls start a conversation that already knows the topic: the
+  // tutor speaks first in it (learner/practice.ts). The word list has nothing
+  // to start, so it only opens.
   const go = () => {
-    if (activity.tab === "chat") {
-      sendAppIntent("openTab", { tab: "chat" });
-      if (activity.starter) sendAppIntent("chatDraft", { text: activity.starter });
+    if (activity.tab === "chat" || activity.tab === "roleplay") {
+      sendAppIntent("practice", {
+        tab: activity.tab,
+        goal: { situation: `${topic.title}. ${activity.task}` },
+        title: topic.title,
+      });
     } else {
       sendAppIntent("openTab", { tab: activity.tab });
     }

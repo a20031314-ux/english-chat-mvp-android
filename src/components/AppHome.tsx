@@ -119,6 +119,10 @@ function AppHomeInner({
 
   // The study map sends learners to the tab a topic is practised in.
   useEffect(() => onAppIntent("openTab", ({ tab: next }) => openTab(next)), [openTab]);
+  // A conversation to practise something goes to the tab it is held in; the
+  // tab starts it (appIntents.ts). A map topic opens on the map.
+  useEffect(() => onAppIntent("practice", ({ tab: next }) => openTab(next)), [openTab]);
+  useEffect(() => onAppIntent("openTopic", () => openTab("map")), [openTab]);
 
   useEffect(() => {
     const onPopState = (event: PopStateEvent) => {
@@ -208,6 +212,7 @@ function AppHomeInner({
                           ? locale
                           : DEFAULT_LEARNING_LANGUAGE_CODE
                       }
+                      locale={locale}
                       ui={ui}
                     />
                   </div>

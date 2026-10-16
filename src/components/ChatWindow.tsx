@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useCallback, useEffect, useRef, useState } from "react";
+import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   ARCHIVE_STORAGE_KEY,
   ChatMessage,
@@ -46,7 +46,10 @@ import {
   detectConversationMode,
   type ConversationMode,
 } from "@/lib/conversationMode";
-import { onAppIntent } from "@/lib/appIntents";
+import { onAppIntent, sendAppIntent, takeAppIntent } from "@/lib/appIntents";
+import { NextStepCard, PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
+import { saidPhrase } from "@/lib/learner/practice";
+import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 import { ExpressionPeek } from "@/components/ExpressionPeek";
 import { compressChatImage } from "@/lib/chatImage";
 import { formatCallDuration, type ChatCallEvent } from "@/lib/callSession";
@@ -707,6 +710,10 @@ export function ChatWindow({
   // A study-map topic can hand over the first line to send.
   useEffect(() => onAppIntent("chatDraft", ({ text }) => setInput(text)), []);
   const [isSending, setIsSending] = useState(false);
+  // What this conversation was started to practise, from "try this" or the
+  // map (learner/practice.ts). Sent with every turn so the tutor keeps to it;
+  // dropped when the conversation ends or the learner stops it.
+  const [practice, setPractice] = useState<PracticeRequest | null>(null);
   const [savedItems, setSavedItems] = useState<SavedItem[]>([]);
   const [, setLearningCards] = useState<LearningCard[]>([]);
   const [conversationSessions, setConversationSessions] = useState<ConversationSession[]>(
@@ -957,6 +964,7 @@ export function ChatWindow({
         conversationMode,
         ...(imageDataUrl ? { imageDataUrl } : {}),
         ...(ownLanguage ? { ownLanguage: true } : {}),
+        ...(practice ? { practice: practice.goal } : {}),
         recent: turns
           .flatMap((turn) => {
             const lines: string[] = [];
@@ -1118,6 +1126,7 @@ export function ChatWindow({
   };
 
   const startNewChat = () => {
+    setPractice(null);
     setTurns([]);
     setInput("");
     setSessionEnded(false);
@@ -1195,8 +1204,15 @@ export function ChatWindow({
     startNewChat();
   };
 
-  const handleAiStart = async () => {
-    if (isSending || turns.length > 0) return;
+  const handleAiStart = () => openConversation(null);
+
+  /**
+   * The tutor speaks first. With a practice goal it opens in the situation and
+   * makes room for the phrases; either way an opening line is not a message
+   * the learner sent, so it is not counted.
+   */
+  const openConversation = async (request: PracticeRequest | null, replacing = false) => {
+    if (isSending || (!replacing && turns.length > 0)) return;
     setIsSending(true);
     try {
       const response = await fetch(apiUrl("/api/chat"), {
@@ -1209,8 +1225,9 @@ export function ChatWindow({
           mode: "start",
           locale,
           interfaceLanguage: locale,
-          targetLanguage: sessionLanguageCode,
+          targetLanguage: replacing ? targetLanguage : sessionLanguageCode,
           recent: [],
+          ...(request ? { practice: request.goal } : {}),
         }),
       });
       if (!response.ok) {
@@ -1222,6 +1239,7 @@ export function ChatWindow({
       };
       const assistantMessage =
         data.assistantMessage?.trim() || "Hey — you been up to anything?";
+      if (request) setPractice(request);
       setTurns([
         {
           id: `${Date.now()}`,
@@ -1242,6 +1260,49 @@ export function ChatWindow({
       setIsSending(false);
     }
   };
+
+  /**
+   * A conversation to practise something, asked for by "try this" or the map.
+   * Whatever was on screen is kept in the history first, as ending a session
+   * keeps it, and the new one starts with the tutor's opening line.
+   */
+  const startPractice = async (request: PracticeRequest) => {
+    if (isSending) return;
+    if (turns.length > 0) {
+      saveConversationSession({
+        id: currentSessionId,
+        title: sessionTitleFromTurns(turns),
+        createdAt: currentSessionCreatedAt,
+        endedAt: Date.now(),
+        messageCount: turns.length,
+        messages: toSessionMessages(turns),
+        languageCode: sessionLanguageCode,
+      });
+      setConversationSessions(loadConversationSessions());
+    }
+    startNewChat();
+    await openConversation(request, true);
+  };
+  const startPracticeRef = useRef(startPractice);
+  startPracticeRef.current = startPractice;
+  useEffect(
+    () =>
+      onAppIntent("practice", (request) => {
+        if (request.tab !== "chat") return;
+        takeAppIntent("practice", (detail) => detail.tab === "chat");
+        void startPracticeRef.current(request);
+      }),
+    [],
+  );
+  const practiceSaid = useMemo(() => {
+    const said = new Set<string>();
+    for (const phrase of practice?.goal.phrases ?? []) {
+      if (turns.some((turn) => turn.userMessage && saidPhrase(turn.userMessage, phrase, sessionLanguageCode))) {
+        said.add(phrase);
+      }
+    }
+    return said;
+  }, [practice, turns, sessionLanguageCode]);
 
   const handleSend = async (event: FormEvent) => {
     event.preventDefault();
@@ -1421,6 +1482,26 @@ export function ChatWindow({
                 </button>
               </div>
             </div>
+          ) : null}
+          {practice ? (
+            <PracticeBanner
+              ui={ui}
+              request={practice}
+              said={practiceSaid}
+              targetLanguage={sessionLanguageCode}
+              onStop={() => setPractice(null)}
+            />
+          ) : turns.length === 0 && !isSending ? (
+            <NextStepCard
+              ui={ui}
+              locale={locale}
+              targetLanguage={targetLanguage}
+              canCall={scenariosForLanguage(targetLanguage).length > 0}
+              onStart={(request) => {
+                if (request.tab === "chat") void startPractice(request);
+                else sendAppIntent("practice", request);
+              }}
+            />
           ) : null}
           {turns.map((turn) => {
             const assistantReading =

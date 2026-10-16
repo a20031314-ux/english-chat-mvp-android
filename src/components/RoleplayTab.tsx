@@ -4,6 +4,8 @@ import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from 
 import { RoleplayOwnLine } from "@/components/RoleplayOwnLine";
 import { RoleplayPast } from "@/components/RoleplayPast";
 import { RoleplayScreen } from "@/components/RoleplayScreen";
+import { NextStepCard, type PracticeRequest } from "@/components/NextStepCard";
+import { onAppIntent, sendAppIntent, takeAppIntent } from "@/lib/appIntents";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 import {
@@ -98,13 +100,21 @@ const subscribe = () => () => {};
 export function RoleplayTab({
   targetLanguage,
   nativeLanguage,
+  locale,
   ui,
 }: {
   targetLanguage: LearningLanguageCode;
+  /** The interface language, which the map's own words may or may not be in. */
+  locale: string;
   nativeLanguage: LearningLanguageCode;
   ui: UICopy;
 }) {
-  const [playing, setPlaying] = useState<string | null>(null);
+  // A conversation asked for from another tab ("try this", the map) before
+  // this tab was mounted: taken once, on arrival, and opened straight away.
+  const [arrived] = useState(() => takeAppIntent("practice", (detail) => detail.tab === "roleplay"));
+  const [playing, setPlaying] = useState<string | null>(() =>
+    arrived ? (scenariosForLanguage(targetLanguage).find((scenario) => scenario.openEnded)?.id ?? null) : null,
+  );
   const [resuming, setResuming] = useState<SavedConversation | null>(null);
   const [reading, setReading] = useState<SavedConversation | null>(null);
   const [written, setWritten] = useState<SavedConversation[] | null>(null);
@@ -186,10 +196,36 @@ export function RoleplayTab({
     [stored],
   );
 
+  const [practice, setPractice] = useState<PracticeRequest | null>(arrived);
   const open = (scenarioId: string, carryOn: SavedConversation | null) => {
+    setPractice(null);
     setResuming(carryOn);
     setPlaying(scenarioId);
   };
+
+  // A conversation started to practise something ("try this", the map): a new
+  // open conversation, already in the situation (learner/practice.ts).
+  const openTalk = scenarios.find((scenario) => scenario.openEnded)?.id ?? null;
+  const startPractice = (request: PracticeRequest) => {
+    if (!openTalk) return;
+    setPractice(request);
+    setResuming(null);
+    setPlaying(openTalk);
+  };
+  // Asked for while this tab is already showing.
+  useEffect(
+    () =>
+      onAppIntent("practice", (request) => {
+        if (request.tab !== "roleplay") return;
+        takeAppIntent("practice", (detail) => detail.tab === "roleplay");
+        const talk = scenariosForLanguage(targetLanguage).find((scenario) => scenario.openEnded)?.id;
+        if (!talk) return;
+        setPractice(request);
+        setResuming(null);
+        setPlaying(talk);
+      }),
+    [targetLanguage],
+  );
 
   const carryOn = only ? resumableFor(saved, only.id) : null;
   // Everything except what the door is already offering to carry on with.
@@ -217,6 +253,20 @@ export function RoleplayTab({
         // and the list of past calls drawn over what was left.
         <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
         <div className="flex min-h-full flex-col items-center justify-center gap-5 px-6 py-6 text-center">
+          {!playing ? (
+            <div className="w-full max-w-sm">
+              <NextStepCard
+                ui={ui}
+                locale={locale}
+                targetLanguage={targetLanguage}
+                canCall={Boolean(openTalk)}
+                onStart={(request) => {
+                  if (request.tab === "roleplay") startPractice(request);
+                  else sendAppIntent("practice", request);
+                }}
+              />
+            </div>
+          ) : null}
           <p className="text-[13px] leading-relaxed text-neutral-400">
             {ui.roleplayIntro}
           </p>
@@ -371,9 +421,11 @@ export function RoleplayTab({
           ui={ui}
           resume={resuming}
           onSaved={keep}
+          practice={practice}
           onClose={() => {
             setPlaying(null);
             setResuming(null);
+            setPractice(null);
           }}
         />
       ) : null}
