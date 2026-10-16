@@ -12,6 +12,9 @@ import { profileBrief } from "@/lib/learner/profile";
 import { FREE_DAILY_MAP_LIMIT, PREMIUM_DAILY_MAP_LIMIT } from "@/lib/billing/config";
 import { normalizeMap, type StudyMap } from "@/lib/curriculum/map";
 import { mapSystemPrompt, mapUserMessage } from "@/lib/curriculum/prompt";
+import { parseSelfCheck, pitchFor, selfCheckMapRules } from "@/lib/learner/selfCheck";
+import { saveSelfCheck } from "@/lib/server/selfCheckStore";
+import { forgetLearnerBrief } from "@/lib/server/learnerBrief";
 import { currentLibraryPack } from "@/lib/videoLibrary/catalog";
 import {
   INTERFACE_LANGUAGE_LABELS,
@@ -59,7 +62,15 @@ export async function POST(request: NextRequest) {
   if (goal.length < 2) {
     return jsonWithCors(request, { error: "goal required" }, { status: 400 });
   }
-  const level = LEVELS.includes(body.level as StudyMap["level"]) ? (body.level as StudyMap["level"]) : "beginner";
+  // Ticked instead of written (learner/selfCheck.ts): no level is asked for,
+  // and the map is pitched from the answers. A level sent by an older build
+  // is still honoured.
+  const selfCheck = parseSelfCheck(body.selfCheck, Date.now());
+  const level = LEVELS.includes(body.level as StudyMap["level"])
+    ? (body.level as StudyMap["level"])
+    : selfCheck
+      ? pitchFor(selfCheck)
+      : "beginner";
   const targetCode = coerceLanguageCode(body.targetLanguage);
   const uiCode =
     typeof body.interfaceLanguage === "string" && INTERFACE_LANGUAGE_LABELS[body.interfaceLanguage]
@@ -75,6 +86,10 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "MAP_LIMIT_REACHED", limit }, { status: 429 });
   }
   await meterRequest(request, "curriculumGenerate");
+  if (selfCheck) {
+    await saveSelfCheck(userId, targetCode, selfCheck).catch(() => undefined);
+    await forgetLearnerBrief(userId, targetCode);
+  }
 
   const pack = currentLibraryPack(targetCode);
   const library = (pack?.clips ?? []).map((clip) => ({ videoId: clip.videoId, title: clip.title }));
@@ -98,6 +113,7 @@ export async function POST(request: NextRequest) {
     uiName: INTERFACE_LANGUAGE_LABELS[uiCode] ?? "Korean",
     library,
     ...(hasHistory ? { learner: brief } : {}),
+    ...(selfCheck ? { selfCheck: selfCheckMapRules(selfCheck) } : {}),
   };
 
   try {

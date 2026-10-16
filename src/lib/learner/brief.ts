@@ -19,11 +19,14 @@
 
 import { phrasesToRecycle, type Ledger } from "./ledger.ts";
 import { RECUR_COUNT, RECUR_WINDOW_MS, type WeakRecord } from "../curriculum/weakPoints.ts";
+import { GAP_TUTOR_RULE, type GapId, type SelfCheck } from "./selfCheck.ts";
 
 const DAY = 24 * 60 * 60 * 1000;
 export const BRIEF_WINDOW_MS = 14 * DAY;
 /** Fewer recent turns than this and how they went is not read at all. */
 export const MIN_TURNS = 8;
+/** Until this many recent turns, what they said about themselves still speaks. */
+export const SELF_UNTIL_TURNS = 20;
 
 /** What a recent turn measured, as learnerMetrics keeps it. */
 export type TurnSample = {
@@ -50,7 +53,8 @@ export type BriefNote =
   | { kind: "mistakes"; names: string[] }
   | { kind: "recycle"; phrases: string[] }
   | { kind: "easier"; because: Array<"corrections" | "pauses" | "retries"> }
-  | { kind: "harder" };
+  | { kind: "harder" }
+  | { kind: "self"; gaps: GapId[] };
 
 export type LearnerBrief = {
   notes: BriefNote[];
@@ -88,6 +92,8 @@ export function buildBrief(input: {
   ledger: Ledger;
   weak: WeakRecord;
   stats: TurnStats;
+  /** What they said about themselves when they started (learner/selfCheck.ts). */
+  selfCheck?: SelfCheck | null;
   now: number;
   /** Kinds of note the learner switched off (the screen comes later). */
   off?: ReadonlyArray<BriefNote["kind"]>;
@@ -121,6 +127,10 @@ export function buildBrief(input: {
     else if (!because.length && easy && !off.has("harder")) notes.push({ kind: "harder" });
   }
 
+  // Early on, what they said is all there is; once the turns speak, they do.
+  const gaps = input.selfCheck?.gaps.slice(0, 2) ?? [];
+  if (gaps.length && stats.turns < SELF_UNTIL_TURNS && !off.has("self")) notes.push({ kind: "self", gaps });
+
   return { notes, prompt: briefPrompt(notes) };
 }
 
@@ -150,6 +160,9 @@ export function briefPrompt(notes: BriefNote[]): string {
         lines.push(
           "- Lately they have been doing well. Stretch them a little: a less common word now and then, and open questions that take more than a few words to answer.",
         );
+        break;
+      case "self":
+        lines.push(`- In their own words when they started, ${note.gaps.map((gap) => GAP_TUTOR_RULE[gap]).join("; and ")}.`);
         break;
     }
   }

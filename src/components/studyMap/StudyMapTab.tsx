@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState } from "react";
 import { usePremium } from "@/contexts/PremiumContext";
 import { onAppIntent, sendAppIntent, takeAppIntent } from "@/lib/appIntents";
 import { apiUrl } from "@/lib/apiBase";
+import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
 import {
   connectionsOf,
@@ -34,6 +35,7 @@ import { TopicItems, ItemBar } from "@/components/studyMap/TopicItems";
 import { LearnerPanel } from "@/components/studyMap/LearnerPanel";
 import { LedgerPanel } from "@/components/studyMap/LedgerPanel";
 import { NextStepCard } from "@/components/NextStepCard";
+import { FOCUS_IDS, GAP_IDS, USE_IDS, type FocusId, type GapId, type UseId } from "@/lib/learner/selfCheck";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 
 /**
@@ -48,8 +50,6 @@ import { scenariosForLanguage } from "@/lib/roleplay/catalog";
  * are actually said (api/video-index/find).
  */
 
-type Level = StudyMap["level"];
-const LEVELS: Level[] = ["beginner", "intermediate", "advanced"];
 
 type Clip = { videoId: string; title: string; durationSeconds?: number };
 
@@ -121,12 +121,12 @@ export function StudyMapTab({
   const map = record?.map ?? null;
   const showForm = !loading && (editing || !map);
 
-  const draw = async (goal: string, level: Level) => {
+  const draw = async (goal: string, selfCheck: SelfCheckAnswer | null) => {
     setDrawing(true);
     setError(null);
     const result = await drawStudyMap({
       goal,
-      level,
+      ...(selfCheck ? { selfCheck } : {}),
       targetLanguage,
       interfaceLanguage: locale,
       isPremium,
@@ -238,8 +238,8 @@ export function StudyMapTab({
         ) : showForm ? (
           <GoalForm
             ui={ui}
-            initialGoal={map?.goal ?? ""}
-            initialLevel={map?.level ?? "beginner"}
+            targetLanguage={targetLanguage}
+            isPremium={isPremium}
             drawing={drawing}
             error={error}
             limit={limit}
@@ -316,10 +316,18 @@ export function StudyMapTab({
   );
 }
 
+type SelfCheckAnswer = { gaps: GapId[]; focus: FocusId[]; use?: UseId };
+
+/**
+ * How a map starts: three questions answered by ticking, not a goal to write
+ * and a level to pick (learner/selfCheck.ts). Where they feel they fall short,
+ * what they want to work on most, and — if they like — where they will use it.
+ * Writing a goal is still there, underneath, for whoever wants to.
+ */
 function GoalForm({
   ui,
-  initialGoal,
-  initialLevel,
+  targetLanguage,
+  isPremium,
   drawing,
   error,
   limit,
@@ -330,69 +338,137 @@ function GoalForm({
   onRestore,
 }: {
   ui: UICopy;
-  initialGoal: string;
-  initialLevel: Level;
+  targetLanguage: string;
+  isPremium: boolean;
   drawing: boolean;
   error: MapError | null;
   limit: number;
   canCancel: boolean;
   hasPrevious: boolean;
-  onDraw: (goal: string, level: Level) => void;
+  onDraw: (goal: string, selfCheck: SelfCheckAnswer | null) => void;
   onCancel: () => void;
   onRestore: () => void;
 }) {
-  const [goal, setGoal] = useState(initialGoal);
-  const [level, setLevel] = useState<Level>(initialLevel);
-  const levelLabel: Record<Level, string> = {
-    beginner: ui.mapLevelBeginner,
-    intermediate: ui.mapLevelIntermediate,
-    advanced: ui.mapLevelAdvanced,
+  const [gaps, setGaps] = useState<GapId[]>([]);
+  const [focus, setFocus] = useState<FocusId[]>([]);
+  const [use, setUse] = useState<UseId | null>(null);
+  const [goal, setGoal] = useState("");
+
+  // What they ticked last time, shown again when they start a new map.
+  useEffect(() => {
+    let cancelled = false;
+    void fetch(apiUrl(`/api/learner/self-check?lang=${encodeURIComponent(targetLanguage)}`), {
+      headers: entitlementHeaders(isPremium),
+    })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data: { selfCheck?: SelfCheckAnswer | null } | null) => {
+        const check = data?.selfCheck;
+        if (cancelled || !check) return;
+        setGaps(check.gaps ?? []);
+        setFocus(check.focus ?? []);
+        setUse(check.use ?? null);
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, [targetLanguage, isPremium]);
+
+  const gapLabel: Record<GapId, string> = {
+    speaking: ui.selfGapSpeaking,
+    accuracy: ui.selfGapAccuracy,
+    words: ui.selfGapWords,
+    listening: ui.selfGapListening,
+    pronunciation: ui.selfGapPronunciation,
+    natural: ui.selfGapNatural,
   };
+  const focusLabel: Record<FocusId, string> = {
+    speaking: ui.selfFocusSpeaking,
+    listening: ui.selfFocusListening,
+    writing: ui.selfFocusWriting,
+    words: ui.selfFocusWords,
+  };
+  const useLabel: Record<UseId, string> = {
+    daily: ui.selfUseDaily,
+    travel: ui.selfUseTravel,
+    work: ui.selfUseWork,
+    video: ui.selfUseVideo,
+  };
+
+  const written = goal.replace(/\s+/g, " ").trim();
+  const ticked = gaps.length > 0 || focus.length > 0 || use !== null;
+  const ready = !drawing && (ticked || written.length >= 2);
+  // With nothing written, the map's goal line is what they ticked, in their language.
+  const composed = [...(use ? [useLabel[use]] : []), ...gaps.map((g) => gapLabel[g]), ...focus.map((f) => focusLabel[f])]
+    .join(" · ")
+    .slice(0, 300);
+
+  const toggle = <T extends string>(list: T[], value: T, max = Infinity): T[] =>
+    list.includes(value) ? list.filter((entry) => entry !== value) : [...list, value].slice(-max);
+
+  const chip = (selected: boolean) =>
+    `rounded-full border px-3 py-1.5 text-[13px] transition ${
+      selected ? "border-white/50 bg-white/15 text-white" : "border-white/10 text-slate-300 hover:bg-white/5"
+    }`;
 
   return (
     <form
-      className="mx-auto flex max-w-md flex-col gap-4"
+      className="mx-auto flex max-w-md flex-col gap-5"
       onSubmit={(event) => {
         event.preventDefault();
-        const cleaned = goal.replace(/\s+/g, " ").trim();
-        if (cleaned.length >= 2 && !drawing) onDraw(cleaned, level);
+        if (!ready) return;
+        onDraw(written.length >= 2 ? written : composed, ticked ? { gaps, focus, ...(use ? { use } : {}) } : null);
       }}
     >
-      <div>
-        <p className="text-[15px] font-semibold text-slate-100">{ui.mapGoalTitle}</p>
-        <p className="mt-1 text-[12px] leading-relaxed text-slate-500">{ui.mapGoalHint}</p>
-      </div>
-      <textarea
-        value={goal}
-        onChange={(event) => setGoal(event.target.value.slice(0, 300))}
-        rows={3}
-        placeholder={ui.mapGoalPlaceholder}
-        aria-label={ui.mapGoalTitle}
-        disabled={drawing}
-        className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-[14px] leading-relaxed text-slate-100 placeholder:text-slate-500 focus:border-white/30 focus:outline-none"
-      />
-      <div className="flex gap-2" role="radiogroup" aria-label={ui.mapLevelLabel}>
-        {LEVELS.map((value) => (
-          <button
-            key={value}
-            type="button"
-            role="radio"
-            aria-checked={level === value}
-            onClick={() => setLevel(value)}
-            disabled={drawing}
-            className={`flex-1 rounded-xl border px-3 py-2 text-[13px] ${
-              level === value
-                ? "border-white/40 bg-white/15 text-white"
-                : "border-white/10 text-slate-400 hover:bg-white/5"
-            }`}
-          >
-            {levelLabel[value]}
-          </button>
-        ))}
-      </div>
+      <fieldset className="flex flex-col gap-2" disabled={drawing}>
+        <legend className="text-[15px] font-semibold text-slate-100">{ui.selfGapsTitle}</legend>
+        <p className="text-[12px] text-slate-500">{ui.selfGapsHint}</p>
+        <div className="mt-1 flex flex-wrap gap-2">
+          {GAP_IDS.map((id) => (
+            <button key={id} type="button" aria-pressed={gaps.includes(id)} onClick={() => setGaps(toggle(gaps, id))} className={chip(gaps.includes(id))}>
+              {gapLabel[id]}
+            </button>
+          ))}
+        </div>
+      </fieldset>
+
+      <fieldset className="flex flex-col gap-2" disabled={drawing}>
+        <legend className="text-[15px] font-semibold text-slate-100">{ui.selfFocusTitle}</legend>
+        <div className="mt-1 flex flex-wrap gap-2">
+          {FOCUS_IDS.map((id) => (
+            <button key={id} type="button" aria-pressed={focus.includes(id)} onClick={() => setFocus(toggle(focus, id, 2))} className={chip(focus.includes(id))}>
+              {focusLabel[id]}
+            </button>
+          ))}
+        </div>
+      </fieldset>
+
+      <fieldset className="flex flex-col gap-2" disabled={drawing}>
+        <legend className="text-[14px] font-medium text-slate-200">{ui.selfUseTitle}</legend>
+        <div className="mt-1 flex flex-wrap gap-2">
+          {USE_IDS.map((id) => (
+            <button key={id} type="button" aria-pressed={use === id} onClick={() => setUse(use === id ? null : id)} className={chip(use === id)}>
+              {useLabel[id]}
+            </button>
+          ))}
+        </div>
+      </fieldset>
+
+      <label className="flex flex-col gap-1.5">
+        <span className="text-[12px] text-slate-400">{ui.selfOwnGoal}</span>
+        <textarea
+          value={goal}
+          onChange={(event) => setGoal(event.target.value.slice(0, 300))}
+          rows={2}
+          placeholder={ui.mapGoalPlaceholder}
+          disabled={drawing}
+          className="w-full resize-none rounded-xl border border-white/10 bg-white/5 px-3 py-2.5 text-[14px] leading-relaxed text-slate-100 placeholder:text-slate-500 focus:border-white/30 focus:outline-none"
+        />
+      </label>
+
       <button
         type="submit"
-        disabled={drawing || goal.trim().length < 2}
+        disabled={!ready}
         className="rounded-xl bg-[#e8e8e4] px-4 py-3 text-sm font-medium text-neutral-900 hover:bg-[#f5f5f3] disabled:opacity-40"
       >
         {drawing ? ui.mapDrawing : ui.mapDraw}

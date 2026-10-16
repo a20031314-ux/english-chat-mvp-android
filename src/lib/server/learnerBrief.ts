@@ -12,6 +12,7 @@ import { isIdentified } from "./identity.ts";
 import { readLedger } from "./ledgerStore.ts";
 import { readWeakRecord } from "./weakPointStore.ts";
 import { eventsKey, type LearnerTurnMetric } from "./learnerMetrics.ts";
+import { readSelfCheck } from "./selfCheckStore.ts";
 import {
   BRIEF_WINDOW_MS,
   buildBrief,
@@ -60,12 +61,13 @@ export async function readLearnerBrief(userId: string, language: string, now = D
   try {
     const cached = await kvGetJson<LearnerBrief>(briefKey(userId, language));
     if (cached && Array.isArray(cached.notes) && typeof cached.prompt === "string") return cached;
-    const [ledger, weak, samples] = await Promise.all([
+    const [ledger, weak, samples, selfCheck] = await Promise.all([
       readLedger(userId, language, now),
       readWeakRecord(userId, language),
       recentSamples(userId, now),
+      readSelfCheck(userId, language),
     ]);
-    const brief = buildBrief({ ledger, weak, stats: turnStats(samples, language, now), now });
+    const brief = buildBrief({ ledger, weak, stats: turnStats(samples, language, now), selfCheck, now });
     await kvSetJson(
       briefKey(userId, language),
       brief,

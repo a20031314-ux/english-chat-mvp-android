@@ -68,7 +68,8 @@ export async function fetchStudyMap(
 
 export async function drawStudyMap(input: {
   goal: string;
-  level: StudyMap["level"];
+  /** What they ticked about themselves (learner/selfCheck.ts); the server pitches the map from it. */
+  selfCheck?: { gaps: string[]; focus: string[]; use?: string };
   targetLanguage: string;
   interfaceLanguage: string;
   isPremium: boolean;
@@ -79,7 +80,7 @@ export async function drawStudyMap(input: {
       headers: { "Content-Type": "application/json", ...entitlementHeaders(input.isPremium) },
       body: JSON.stringify({
         goal: input.goal,
-        level: input.level,
+        ...(input.selfCheck ? { selfCheck: input.selfCheck } : {}),
         targetLanguage: input.targetLanguage,
         interfaceLanguage: input.interfaceLanguage,
       }),

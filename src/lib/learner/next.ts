@@ -22,6 +22,7 @@
 
 import type { Ledger } from "./ledger.ts";
 import type { PracticeGoal } from "./practice.ts";
+import type { GapId, SelfCheck } from "./selfCheck.ts";
 import { MAX_PRACTICE_PHRASES } from "./practice.ts";
 import type { StudyMap, TopicStatus } from "../curriculum/map.ts";
 import type { TopicMissions } from "../curriculum/missions.ts";
@@ -34,7 +35,7 @@ export const UNUSED_AFTER_MS = 7 * DAY;
 const FRESH_HELP_MS = DAY;
 const MAX_STEPS = 6;
 
-export type NextKind = "mistake" | "phrase" | "situation" | "mission" | "free";
+export type NextKind = "mistake" | "phrase" | "gap" | "situation" | "mission" | "free";
 export type NextTab = "chat" | "roleplay" | "map";
 
 export type NextStep = {
@@ -59,6 +60,8 @@ export type NextStep = {
   topicTitle?: string;
   done?: number;
   total?: number;
+  /** For a gap step: which of the gaps they ticked when they started. */
+  gap?: GapId;
 };
 
 export type NextInput = {
@@ -68,6 +71,8 @@ export type NextInput = {
   status: Record<string, TopicStatus>;
   /** Missions of the current map, by topic. */
   missions: Record<string, TopicMissions>;
+  /** What they said about themselves when they started, if they did. */
+  selfCheck?: SelfCheck | null;
   now: number;
 };
 
@@ -159,6 +164,32 @@ function phraseSteps(input: NextInput): NextStep[] {
   ];
 }
 
+/**
+ * What they said they find hard, as a conversation built for it. Comes after
+ * what their own turns show (mistakes, phrases) and before the map's
+ * situations: early on it is all there is to go on; later it is one more
+ * option among measured ones.
+ */
+const GAP_STEP: Record<GapId, { tab: "chat" | "roleplay"; situation: string }> = {
+  speaking: { tab: "roleplay", situation: "Quick, light back-and-forth: short questions they can answer in a few words, at an easy pace" },
+  accuracy: { tab: "chat", situation: "Telling you about something they did recently, in full sentences, taking their time" },
+  words: { tab: "chat", situation: "Talking about their interests, where you bring in one useful new word or phrase at a time" },
+  listening: { tab: "roleplay", situation: "Listening to you describe something in a few short sentences and reacting to it" },
+  pronunciation: { tab: "roleplay", situation: "A relaxed chat where they say things out loud, with words they find hard to pronounce" },
+  natural: { tab: "chat", situation: "Everyday small talk, said the way people really say it" },
+};
+
+function gapSteps(input: NextInput): NextStep[] {
+  const gaps = input.selfCheck?.gaps ?? [];
+  return gaps.slice(0, 2).map((gap) => ({
+    key: `gap:${gap}`,
+    kind: "gap" as const,
+    tab: GAP_STEP[gap].tab,
+    goal: { situation: GAP_STEP[gap].situation },
+    gap,
+  }));
+}
+
 /** Situations from the goal, the one being worked on first, then in the map's order. */
 function situationSteps(input: NextInput): NextStep[] {
   const map = input.map;
@@ -218,6 +249,7 @@ export function nextSteps(input: NextInput): NextStep[] {
   const steps = [
     ...mistakeSteps(input),
     ...phraseSteps(input),
+    ...gapSteps(input),
     ...situationSteps(input),
     ...missionSteps(input),
   ];

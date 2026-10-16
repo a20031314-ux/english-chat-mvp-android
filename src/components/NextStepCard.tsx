@@ -78,6 +78,17 @@ export function stepTexts(step: NextStep, ui: UICopy, labelOk: boolean): { title
         title: ui.nextPhrase.replace("{phrase}", quote(step.phrase ?? "")),
         why: step.used ? ui.nextPhraseWhy.replace("{n}", String(step.days ?? 7)) : ui.nextPhraseNew,
       };
+    case "gap": {
+      const titles = {
+        speaking: ui.nextGapSpeaking,
+        accuracy: ui.nextGapAccuracy,
+        words: ui.nextGapWords,
+        listening: ui.nextGapListening,
+        pronunciation: ui.nextGapPronunciation,
+        natural: ui.nextGapNatural,
+      } as const;
+      return { title: step.gap ? titles[step.gap] : ui.nextFree, why: ui.nextGapWhy };
+    }
     case "situation":
       return {
         title:

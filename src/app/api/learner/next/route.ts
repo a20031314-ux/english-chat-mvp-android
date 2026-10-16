@@ -5,6 +5,7 @@ import { isIdentified } from "@/lib/server/identity";
 import { readLedger } from "@/lib/server/ledgerStore";
 import { readWeakRecord } from "@/lib/server/weakPointStore";
 import { readCurriculum, readMissions } from "@/lib/server/curriculumStore";
+import { readSelfCheck } from "@/lib/server/selfCheckStore";
 import { nextSteps } from "@/lib/learner/next";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 
@@ -31,10 +32,11 @@ export async function GET(request: NextRequest) {
     return jsonWithCors(request, { error: "IDENTITY_REQUIRED" }, { status: 401 });
   }
   const language = coerceLanguageCode(request.nextUrl.searchParams.get("lang"));
-  const [ledger, weak, curriculum] = await Promise.all([
+  const [ledger, weak, curriculum, selfCheck] = await Promise.all([
     readLedger(userId, language),
     readWeakRecord(userId, language),
     readCurriculum(userId, language),
+    readSelfCheck(userId, language),
   ]);
   const map = curriculum?.map ?? null;
   const missions = map ? await readMissions(userId, language, map.id) : {};
@@ -44,6 +46,7 @@ export async function GET(request: NextRequest) {
     map,
     status: curriculum?.status ?? {},
     missions,
+    selfCheck,
     now: Date.now(),
   });
   return jsonWithCors(request, {

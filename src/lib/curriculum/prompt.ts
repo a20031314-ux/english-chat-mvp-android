@@ -15,6 +15,11 @@ import { SECTOR_BRIEFS, SECTOR_IDS, type StudyMap } from "./map.ts";
 
 export type MapRequest = {
   goal: string;
+  /**
+   * What they said about themselves (learner/selfCheck.ts selfCheckMapRules),
+   * already written as rules. When present it replaces the chosen plan.
+   */
+  selfCheck?: string;
   level: StudyMap["level"];
   /** Name of the language being learned, in English (e.g. "Spanish"). */
   target: string;
@@ -51,7 +56,7 @@ const METHOD_RULE = {
   mixed: "They like a mix: spread the activities across the tabs.",
 } as const;
 
-function learnerSection(learner: MapRequest["learner"]): string {
+function learnerSection(learner: MapRequest["learner"], selfCheck?: string): string {
   if (!learner) return "";
   const list = (items: string[]) => (items.length ? items.map((item) => `  - ${item}`).join("\n") : "  (none yet)");
   return `
@@ -68,8 +73,7 @@ ${list((learner.understoodNotUsed ?? []).slice(0, 10))}
 - Phrases they stopped at and studied, not yet met again:
 ${list((learner.studied ?? []).slice(0, 10))}
 Understanding a phrase is half of having it: give the understood ones a chance to be said — in chat starters, roleplay tasks or listenFor — and bring the studied ones back where they fit.
-${FOCUS_RULE[learner.plan.focus]}
-${METHOD_RULE[learner.plan.method]}
+${selfCheck ? "" : `${FOCUS_RULE[learner.plan.focus]}\n${METHOD_RULE[learner.plan.method]}`}
 Name the construction in the topic's title or summary when a topic is there for it, in plain words a learner understands.`;
 }
 
@@ -97,7 +101,8 @@ ${library}
     vocab — reviewing the words they saved.
 - links: 1 to 3 other topics this one connects to, mostly in other sectors, each with "why": one sentence on how the two help each other ("the polite request forms in B2 are what you say when ordering in A1").
 
-${learnerSection(input.learner)}
+${learnerSection(input.learner, input.selfCheck)}
+${input.selfCheck ? `\n${input.selfCheck}\n` : ""}
 
 Also give the map a title (a few words) and a summary (two sentences: what the goal takes, and the path the order follows), and give each sector a title and a one-line description specific to this goal.
 
@@ -110,3 +115,6 @@ Return only a json object:
 export function mapUserMessage(input: MapRequest): string {
   return JSON.stringify({ goal: input.goal, level: input.level });
 }
+
+/** For tests: whether the chosen plan's lines are left out when a self-check speaks instead. */
+export const PLAN_RULES = { FOCUS_RULE, METHOD_RULE };
