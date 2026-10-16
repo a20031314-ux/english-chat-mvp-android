@@ -76,7 +76,8 @@ try {
   // A snapshot without a commit stamp is still a snapshot.
 }
 
-const data = { state, roles, inbox, logs, commit, builtAt: new Date().toISOString() };
+const rules = sections(read("RULES.md"));
+const data = { state, rules, roles, inbox, logs, commit, builtAt: new Date().toISOString() };
 const template = fs.readFileSync(path.join(ROOT, "scripts", "hub-page.template.html"), "utf8");
 const html = template.replace("/*HUB_DATA*/null", JSON.stringify(data).replace(/</g, "\\u003c"));
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
