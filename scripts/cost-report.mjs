@@ -95,7 +95,10 @@ export function parseOpKey(key) {
 function pct(values, p) {
   if (values.length === 0) return 0;
   const sorted = [...values].sort((a, b) => a - b);
-  return sorted[Math.round((p / 100) * (sorted.length - 1))];
+  const at = (p / 100) * (sorted.length - 1);
+  const low = Math.floor(at);
+  // Between two values, the point between them: a median of two days is their middle.
+  return sorted[low] + (sorted[Math.min(low + 1, sorted.length - 1)] - sorted[low]) * (at - low);
 }
 
 /** The report from rows of { op, userId, day, count }. Pure, so it can be checked without KV. */
@@ -135,7 +138,7 @@ export function summarize(rows, options = {}) {
     perUserWindowKrw: { median: krw(pct([...users.values()], 50)), p90: krw(pct([...users.values()], 90)), max: krw(Math.max(0, ...users.values())) },
     callMinutesPerDay: { days: callDays.length, median: +pct(callDays, 50).toFixed(1), p90: +pct(callDays, 90).toFixed(1), max: +Math.max(0, ...callDays).toFixed(1) },
     callDaysOver: { "7": over(7), "10": over(10), "15": over(15) },
-    chatPerDay: { days: chats.length, median: pct(chats, 50), p90: pct(chats, 90), max: Math.max(0, ...chats) },
+    chatPerDay: { days: chats.length, median: Math.round(pct(chats, 50)), p90: Math.round(pct(chats, 90)), max: Math.max(0, ...chats) },
   };
 }
 
