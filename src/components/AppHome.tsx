@@ -17,6 +17,7 @@ import { onAppIntent } from "@/lib/appIntents";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
 import { BillingUiProvider, BillingOpenButton } from "@/components/BillingScreen";
 import { GuideButton } from "@/components/GuideSheet";
+import { FeedbackButton } from "@/components/FeedbackButton";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
 import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
@@ -157,6 +158,7 @@ function AppHomeInner({
               />
               <BillingOpenButton ui={ui} />
               <GuideButton ui={ui} locale={locale} tab={shownTab} tabs={tabItems} />
+              <FeedbackButton ui={ui} locale={locale} tab={shownTab} />
             </div>
             {/* Above everything, because it is about everything: this is the
                 only way anyone gets told their build has to be replaced. */}

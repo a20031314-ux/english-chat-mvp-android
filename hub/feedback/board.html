@@ -1,0 +1,289 @@
+<title>languagebank 의견함</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a triage queue — summary strip, filter row, then lanes (urgent, common, one-off) of feedback cards with a decision bar each. */
+:root {
+  --bg: #f6f6f3;
+  --surface: #ffffff;
+  --ink: #1d1f1c;
+  --muted: #64685f;
+  --line: #dddfd7;
+  --accent: #2f5d50;
+  --accent-soft: #e3ece8;
+  --urgent: #b23a2b;
+  --urgent-soft: #f6e4e1;
+  --hold: #8a6a12;
+  --hold-soft: #f4ecd6;
+  --reject: #6b6f68;
+  --reject-soft: #ebece8;
+  --font-body: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #131512; --surface: #1b1e1a; --ink: #e8eae3; --muted: #9ea398; --line: #2e322c;
+    --accent: #8cc3b0; --accent-soft: #223029; --urgent: #ef8a7b; --urgent-soft: #3a211d;
+    --hold: #e2c069; --hold-soft: #352d16; --reject: #a6aaa2; --reject-soft: #272a26; color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #131512; --surface: #1b1e1a; --ink: #e8eae3; --muted: #9ea398; --line: #2e322c;
+  --accent: #8cc3b0; --accent-soft: #223029; --urgent: #ef8a7b; --urgent-soft: #3a211d;
+  --hold: #e2c069; --hold-soft: #352d16; --reject: #a6aaa2; --reject-soft: #272a26; color-scheme: dark;
+}
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 14px; line-height: 1.55;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 20px 48px;
+}
+.wrap { max-width: 860px; margin: 0 auto; display: grid; gap: 20px; }
+header h1 { font-size: 22px; font-weight: 600; margin: 0; text-wrap: balance; }
+header p { margin: 4px 0 0; color: var(--muted); max-width: 62ch; }
+.strip { display: flex; flex-wrap: wrap; gap: 8px 20px; font-family: var(--font-mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.strip b { color: var(--ink); font-weight: 500; font-size: 15px; margin-right: 4px; }
+.filters { display: flex; flex-wrap: wrap; gap: 6px; }
+.filters button {
+  font: inherit; font-size: 13px; border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+  border-radius: 999px; padding: 4px 12px; cursor: pointer;
+}
+.filters button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+.filters button:focus-visible, .decide button:focus-visible, textarea:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.lane { display: grid; gap: 10px; }
+.lane h2 { font-size: 12px; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; margin: 8px 0 0; }
+.lane h2 small { font-weight: 400; letter-spacing: 0; margin-left: 6px; }
+.card {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px;
+  display: grid; gap: 10px; min-width: 0;
+}
+.card.urgent { border-left: 3px solid var(--urgent); }
+.card .top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.card h3 { margin: 0; font-size: 15px; font-weight: 600; flex: 1 1 260px; min-width: 0; text-wrap: balance; }
+.count { font-family: var(--font-mono); font-size: 12px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.chips { display: flex; flex-wrap: wrap; gap: 4px; }
+.chip { font-size: 11px; border-radius: 4px; padding: 1px 6px; background: var(--bg); border: 1px solid var(--line); color: var(--muted); }
+.state { font-size: 11px; font-weight: 600; border-radius: 4px; padding: 2px 7px; }
+.state.apply { background: var(--accent-soft); color: var(--accent); }
+.state.hold { background: var(--hold-soft); color: var(--hold); }
+.state.reject { background: var(--reject-soft); color: var(--reject); }
+.state.done { background: var(--accent); color: var(--surface); }
+.state.urgent { background: var(--urgent-soft); color: var(--urgent); }
+.summary { margin: 0; max-width: 70ch; }
+.quotes { margin: 0; padding: 0; list-style: none; display: grid; gap: 4px; }
+.quotes li { font-size: 13px; color: var(--muted); border-left: 2px solid var(--line); padding-left: 8px; overflow-wrap: anywhere; }
+.quotes li span { font-family: var(--font-mono); font-size: 11px; margin-left: 6px; }
+.shots { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 2px; }
+.shots a { flex: 0 0 auto; }
+.shots img { height: 140px; width: auto; border-radius: 6px; border: 1px solid var(--line); display: block; }
+.proposal { background: var(--bg); border-radius: 8px; padding: 10px 12px; display: grid; gap: 4px; }
+.proposal .label { font-size: 11px; letter-spacing: 0.06em; color: var(--muted); font-weight: 600; }
+.proposal p { margin: 0; }
+.decide { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.decide button {
+  font: inherit; font-size: 13px; border-radius: 6px; padding: 5px 12px; cursor: pointer;
+  border: 1px solid var(--line); background: var(--surface); color: var(--ink);
+}
+.decide button[data-v="apply"][aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.decide button[data-v="hold"][aria-pressed="true"] { background: var(--hold-soft); border-color: var(--hold); color: var(--hold); }
+.decide button[data-v="reject"][aria-pressed="true"] { background: var(--reject-soft); border-color: var(--reject); color: var(--reject); }
+.decide button:disabled { opacity: 0.55; cursor: default; }
+textarea {
+  font: inherit; font-size: 13px; width: 100%; box-sizing: border-box; resize: vertical; min-height: 38px;
+  border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); padding: 6px 8px;
+}
+.meta { font-size: 12px; color: var(--muted); }
+.meta a { color: var(--accent); }
+.empty { background: var(--surface); border: 1px dashed var(--line); border-radius: 10px; padding: 24px 16px; color: var(--muted); }
+.empty b { color: var(--ink); }
+.note { font-size: 12px; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) { .card { transition: border-color .2s; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>languagebank 의견함</h1>
+    <p>앱 안 "의견 보내기"로 들어온 글과 화면을 매일 아침 묶어서 올려요. 카드마다 반영 · 보류 · 안 함을 고르면, 다음 정리 때 "반영"만 고쳐서 PR로 올려요.</p>
+  </header>
+  <div class="strip" id="strip" aria-live="polite"></div>
+  <div class="filters" role="group" aria-label="보기" id="filters"></div>
+  <div id="board"></div>
+  <p class="note" id="readonly" hidden>보기 전용이에요. 결정은 이 페이지 주인만 바꿀 수 있어요.</p>
+</div>
+
+<script>
+const LANES = [
+  { kind: "urgent", title: "급한 것", hint: "결제·앱 멈춤·데이터 손실처럼 한 번이라도 바로 봐야 하는 것" },
+  { kind: "common", title: "많이 나온 의견", hint: "여러 사람이 같은 걸 말한 것, 사람 수 순" },
+  { kind: "special", title: "특수한 의견", hint: "한두 번뿐이지만 따로 볼 만한 것" },
+];
+const FILTERS = [
+  { id: "open", label: "결정 대기", test: (c) => !c.decision && c.status !== "done" },
+  { id: "apply", label: "반영 예정", test: (c) => c.decision === "apply" && c.status !== "done" },
+  { id: "hold", label: "보류", test: (c) => c.decision === "hold" },
+  { id: "reject", label: "안 함", test: (c) => c.decision === "reject" },
+  { id: "done", label: "반영 끝", test: (c) => c.status === "done" },
+  { id: "all", label: "전체", test: () => true },
+];
+const DECISION_LABEL = { apply: "반영", hold: "보류", reject: "안 함" };
+const TAB_LABEL = { map: "지도", chat: "채팅", roleplay: "통화", video: "영상", vocab: "단어장", other: "기타" };
+
+let filter = "open";
+try { filter = localStorage.getItem("feedbackBoardFilter") || "open"; } catch {}
+let clusters = [];
+let db = null;
+let canWrite = false;
+let loaded = false;
+
+const el = (tag, attrs = {}, ...children) => {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === "class") node.className = v;
+    else if (k.startsWith("on")) node.addEventListener(k.slice(2), v);
+    else if (v !== undefined && v !== null && v !== false) node.setAttribute(k, v === true ? "" : v);
+  }
+  for (const child of children.flat()) {
+    if (child === null || child === undefined || child === false) continue;
+    node.append(child instanceof Node ? child : document.createTextNode(String(child)));
+  }
+  return node;
+};
+
+function day(ms) {
+  if (!ms) return "";
+  const d = new Date(ms);
+  return `${d.getMonth() + 1}/${d.getDate()}`;
+}
+
+function renderStrip() {
+  const strip = document.getElementById("strip");
+  strip.replaceChildren();
+  if (!loaded) { strip.append("불러오는 중…"); return; }
+  const count = (f) => clusters.filter(FILTERS.find((x) => x.id === f).test).length;
+  const total = clusters.reduce((n, c) => n + (Number(c.count) || 0), 0);
+  const updated = Math.max(0, ...clusters.map((c) => Number(c.updatedAt) || 0));
+  const items = [
+    [count("open"), "결정 대기"],
+    [clusters.filter((c) => c.kind === "urgent" && !c.decision && c.status !== "done").length, "급한 것"],
+    [count("apply"), "반영 예정"],
+    [total, "받은 의견"],
+  ];
+  for (const [n, label] of items) strip.append(el("span", {}, el("b", {}, n), label));
+  if (updated) strip.append(el("span", {}, `마지막 정리 ${day(updated)}`));
+}
+
+function renderFilters() {
+  const box = document.getElementById("filters");
+  box.replaceChildren(...FILTERS.map((f) => el("button", {
+    type: "button", "aria-pressed": String(filter === f.id),
+    onclick: () => { filter = f.id; try { localStorage.setItem("feedbackBoardFilter", f.id); } catch {} render(); },
+  }, f.label)));
+}
+
+async function decide(id, patch) {
+  if (!db || !canWrite) return;
+  try {
+    await db.collection("clusters").doc(id).update({ ...patch, decidedAt: Date.now() });
+  } catch (error) {
+    const card = document.querySelector(`[data-id="${CSS.escape(id)}"] .meta`);
+    if (card) card.textContent = "저장하지 못했어요. 다시 눌러 주세요.";
+  }
+}
+
+function card(c) {
+  const stateChip = c.status === "done"
+    ? el("span", { class: "state done" }, "반영 끝")
+    : c.decision ? el("span", { class: `state ${c.decision}` }, DECISION_LABEL[c.decision])
+    : c.kind === "urgent" ? el("span", { class: "state urgent" }, "급함") : null;
+  const chips = [
+    ...(c.tabs || []).map((t) => TAB_LABEL[t] || t),
+    ...(c.langs || []),
+    ...(c.versions || []).map((v) => `v${v}`),
+  ];
+  const memo = el("textarea", {
+    id: `memo-${c.id}`, rows: 1, placeholder: "메모 (선택) — 어떻게 반영할지, 왜 안 할지",
+    disabled: !canWrite,
+    onchange: (e) => decide(c.id, { decisionNote: e.target.value.trim() }),
+  });
+  memo.value = c.decisionNote || "";
+  const buttons = ["apply", "hold", "reject"].map((v) => el("button", {
+    type: "button", "data-v": v, "aria-pressed": String(c.decision === v),
+    disabled: !canWrite || c.status === "done",
+    onclick: () => decide(c.id, { decision: c.decision === v ? "" : v }),
+  }, DECISION_LABEL[v]));
+  const metaParts = [];
+  if (c.firstAt) metaParts.push(`처음 ${day(c.firstAt)} · 최근 ${day(c.lastAt)}`);
+  const meta = el("div", { class: "meta" }, metaParts.join(" "));
+  if (c.pr) meta.append(" · ", el("a", { href: c.pr, target: "_blank", rel: "noopener" }, "PR 보기"));
+  if (c.statusNote) meta.append(` · ${c.statusNote}`);
+  return el("article", { class: `card${c.kind === "urgent" ? " urgent" : ""}`, "data-id": c.id },
+    el("div", { class: "top" },
+      el("h3", {}, c.title || "(제목 없음)"),
+      el("span", { class: "count" }, `${c.count || 0}건 · ${c.people || 0}명`),
+      stateChip),
+    chips.length ? el("div", { class: "chips" }, chips.map((t) => el("span", { class: "chip" }, t))) : null,
+    c.summary ? el("p", { class: "summary" }, c.summary) : null,
+    (c.examples || []).length ? el("ul", { class: "quotes" }, (c.examples || []).slice(0, 4).map((x) =>
+      el("li", {}, x.note || "(글 없이 화면만)", el("span", {}, day(x.at))))) : null,
+    (c.shots || []).length ? el("div", { class: "shots" }, (c.shots || []).slice(0, 6).map((id) =>
+      el("a", { href: `/_blob/${id}`, target: "_blank", rel: "noopener" }, el("img", { src: `/_blob/${id}`, alt: "보낸 화면", loading: "lazy" })))) : null,
+    c.proposal ? el("div", { class: "proposal" }, el("span", { class: "label" }, "고친다면"), el("p", {}, c.proposal)) : null,
+    el("div", { class: "decide" }, buttons),
+    memo,
+    meta);
+}
+
+function render() {
+  renderStrip();
+  renderFilters();
+  const board = document.getElementById("board");
+  board.replaceChildren();
+  if (!loaded) return;
+  if (clusters.length === 0) {
+    board.append(el("div", { class: "empty" },
+      el("b", {}, "아직 정리된 의견이 없어요."), " 앱에서 누군가 \"의견 보내기\"를 누르면, 다음 날 아침 정리 때 비슷한 것끼리 묶여 여기 카드로 올라와요."));
+    return;
+  }
+  const test = FILTERS.find((f) => f.id === filter)?.test ?? (() => true);
+  const shown = clusters.filter(test);
+  if (shown.length === 0) {
+    board.append(el("div", { class: "empty" }, `"${FILTERS.find((f) => f.id === filter).label}"에 해당하는 카드가 없어요.`));
+    return;
+  }
+  for (const lane of LANES) {
+    const rows = shown.filter((c) => (c.kind || "special") === lane.kind)
+      .sort((a, b) => (b.people || 0) - (a.people || 0) || (b.count || 0) - (a.count || 0) || (b.lastAt || 0) - (a.lastAt || 0));
+    if (!rows.length) continue;
+    board.append(el("section", { class: "lane" },
+      el("h2", {}, lane.title, el("small", {}, lane.hint)),
+      rows.map(card)));
+  }
+}
+
+render();
+
+(async () => {
+  const [dbNs, userNs] = await Promise.all([
+    window.claude?.use?.("db") ?? null,
+    window.claude?.use?.("user") ?? null,
+  ]);
+  db = dbNs;
+  canWrite = userNs ? (userNs.can("data.write") ?? userNs.canEdit()) : false;
+  document.getElementById("readonly").hidden = canWrite || !db;
+  if (!db) {
+    loaded = true;
+    document.getElementById("board").replaceChildren(el("div", { class: "empty" }, "의견 데이터를 불러올 수 없어요. claude.ai에 로그인한 상태에서 열어 주세요."));
+    renderStrip();
+    return;
+  }
+  db.collection("clusters").onSnapshot((snap) => {
+    clusters = snap.docs.map((d) => ({ id: d.id, ...d.data() }));
+    loaded = true;
+    const focused = document.activeElement?.tagName === "TEXTAREA" ? document.activeElement.id : null;
+    render();
+    if (focused) document.getElementById(focused)?.focus();
+  }, () => {
+    loaded = true;
+    document.getElementById("board").replaceChildren(el("div", { class: "empty" }, "불러오지 못했어요. 새로고침해 주세요."));
+  });
+})();
+</script>
