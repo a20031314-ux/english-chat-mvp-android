@@ -39,6 +39,8 @@
   (`src/lib/whatsNew.ts`, `scripts/capture-whats-new.mjs`).
 - 앱 ID `com.yourname.englishchat`는 바꿀 수 없다 (Play에 묶여 있음).
 - Play 출시·서명은 사람이 한다. Claude는 파일과 PR까지 (`fastlane/STORE_AUTOMATION.md`).
+- 요금 개편 결정(2026-10-16, `hub/drafts/pricing-2026-10.md`, 구현 전): 유료 3,900 / 5,500 / 7,900원 = 오늘의 팩 + 매일 자유 통화 7 / 10 / 15분,
+  넘으면 구매 포인트(하루 리셋, 이월 없음). 7,900원이 지금 9,900원을 대신. 채팅 한도·영상 위치·기존 구독자 처리는 정할 것.
 
 ## 사용자에게 물어볼 것
 
