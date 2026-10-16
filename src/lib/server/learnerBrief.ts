@@ -56,6 +56,11 @@ async function recentSamples(userId: string, now: number): Promise<TurnSample[]>
   return rows.map(toSample).filter((sample): sample is TurnSample => sample !== null);
 }
 
+/** The last two weeks of turn measurements in one language, as the brief reads them. */
+export async function readTurnStats(userId: string, language: string, now = Date.now()) {
+  return turnStats(await recentSamples(userId, now), language, now);
+}
+
 export async function readLearnerBrief(userId: string, language: string, now = Date.now()): Promise<LearnerBrief> {
   if (!isIdentified(userId)) return EMPTY;
   try {

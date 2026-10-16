@@ -20,6 +20,9 @@ import {
 } from "@/lib/roleplay/director";
 import { MAX_CONTEXT_CHARS } from "@/lib/roleplay/memory";
 import { withBankReaction } from "@/lib/roleplay/reactions";
+import { readPack, writePack } from "@/lib/server/packStore";
+import { advance, candidates, packPrompt, readAsk, type Candidate, type Pack } from "@/lib/pack/pack";
+import { shapePackDirection } from "@/lib/pack/turn";
 import {
   ROLEPLAY_POINTS_CLIENT_HEADER,
   ROLEPLAY_SESSION_HEADER,
@@ -36,7 +39,7 @@ import { observeWeakPoints } from "@/lib/server/weakPointStore";
 import { recordTurn } from "@/lib/server/ledgerStore";
 import { readLearnerBrief } from "@/lib/server/learnerBrief";
 import { recordGrowthTurn } from "@/lib/server/growthStore";
-import { parsePracticeGoal, practicePrompt } from "@/lib/learner/practice";
+import { parsePracticeGoal, practicePrompt, saidPhrase } from "@/lib/learner/practice";
 import { contentHash } from "@/lib/roleplay/script";
 import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -107,10 +110,22 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "unknown step" }, { status: 400 });
   }
 
+  // What an open conversation was started to practise — a situation from the
+  // learner's goal, phrases to use, a mistake to get right (learner/practice.ts).
+  // A scripted scene already has its situation and keeps to it.
+  const practice = scenario.openEnded ? parsePracticeGoal(body.practice) : null;
+  // Today's daily pack, when this conversation plays one (pack/pack.ts). It is
+  // free — one a day — so its turns are not charged; a pack already finished,
+  // or one this user does not have, is an ordinary conversation.
+  const pack: Pack | null = practice?.pack
+    ? await readPack(requestUserId(request), coerceLanguageCode(scenario.language), practice.pack)
+    : null;
+  const playingPack = pack && !pack.finishedAt ? pack : null;
+
   // Charged as the conversation runs, and only for a build that can be told it
   // has run out: an older one reads a refused turn as a failed one, drops it,
   // and leaves the learner talking to a scene that has gone quiet.
-  if (request.headers.get(ROLEPLAY_POINTS_CLIENT_HEADER) === "1") {
+  if (!playingPack && request.headers.get(ROLEPLAY_POINTS_CLIENT_HEADER) === "1") {
     const sessionId = request.headers.get(ROLEPLAY_SESSION_HEADER)?.trim().slice(0, 64);
     if (sessionId) {
       const { isPremium, userId } = await resolveRequestEntitlement(request);
@@ -181,6 +196,37 @@ export async function POST(request: NextRequest) {
       now: Date.now(),
     }),
   );
+  // A pack turn, recorded as numbers and the names of phrases said, and the
+  // pack moved past the question the tutor picked (pack/pack.ts). Read again
+  // here rather than reusing the copy from the start of the request, so two
+  // quick turns do not write over each other.
+  if (playingPack) {
+    after(async () => {
+      try {
+        const fresh = await readPack(requestUserId(request), playingPack.language, playingPack.day);
+        if (!fresh || fresh.finishedAt) return;
+        const corrected = decided ? Boolean(decided.meant || decided.better) : null;
+        const moved = advance(
+          fresh,
+          {
+            at: Date.now(),
+            latencyMs: responseLatencyMs,
+            attempts,
+            corrected,
+            stuck: decided?.assessment === "stuck",
+            used: fresh.phrases
+              .map((p) => p.text)
+              .filter((phrase) => saidPhrase(turn.heard, phrase, turn.targetLanguage)),
+          },
+          packChoice,
+        );
+        await writePack(requestUserId(request), moved);
+      } catch (error) {
+        console.error("[roleplay/turn] pack", error);
+      }
+    });
+  }
+
   // A phrase on their study map, said in the call, is output they produced on
   // their own; the director's rewrite says whether it survived.
   // Then a mistake of a kind they keep making goes onto the map to learn
@@ -290,10 +336,11 @@ export async function POST(request: NextRequest) {
   const brief = scenario.openEnded
     ? (await readLearnerBrief(requestUserId(request), turn.targetLanguage)).prompt
     : "";
-  // What an open conversation was started to practise — a situation from the
-  // learner's goal, phrases to use, a mistake to get right (learner/practice.ts).
-  // A scripted scene already has its situation and keeps to it.
-  const practice = scenario.openEnded ? parsePracticeGoal(body.practice) : null;
+  // A pack turn: the tutor reacts and picks the pack's next question rather
+  // than asking its own, so the practice brief's "ask the question a phrase
+  // answers" would pull the other way and is left out (pack.ts packPrompt).
+  const packOptions: Candidate[] = playingPack ? candidates(playingPack) : [];
+  let packChoice: Candidate | null = null;
   const model = tutorModel();
   // Reasoning models spend hidden tokens before answering and take their cap
   // under another name. Minimal effort: this is one spoken line, and every
@@ -307,9 +354,11 @@ export async function POST(request: NextRequest) {
         content: tutorSystemPrompt({ scenario, bank, recorded, request: turn }),
       },
       ...(brief ? [{ role: "system" as const, content: brief }] : []),
-      ...(practice
-        ? [{ role: "system" as const, content: practicePrompt(practice, learningLanguageName(turn.targetLanguage)) }]
-        : []),
+      ...(playingPack
+        ? [{ role: "system" as const, content: packPrompt(playingPack, packOptions) }]
+        : practice
+          ? [{ role: "system" as const, content: practicePrompt(practice, learningLanguageName(turn.targetLanguage)) }]
+          : []),
       ...tutorMessages(turn),
     ],
     response_format: { type: "json_object" as const },
@@ -324,18 +373,37 @@ export async function POST(request: NextRequest) {
       recordedIds: new Set(recorded.map((line) => line.id)),
       request: turn,
     });
+  /**
+   * The answer as spoken, for a pack turn: the tutor's reaction and the pack
+   * question it picked (pack/turn.ts). Called after noteDirection, so what is
+   * kept of the tutor's line is what it wrote.
+   */
+  const playPack = (direction: Direction, text: string): Direction => {
+    if (!playingPack) return direction;
+    packChoice = readAsk(text, packOptions);
+    return shapePackDirection(direction, packChoice, {
+      complete: packOptions.length === 0,
+      language: scenario.language,
+      nativeLanguage: turn.nativeLanguage,
+      bank,
+      canSplit: playsReaction,
+      nodeId,
+    });
+  };
 
   try {
     if (!wantsStream) {
       const completion = await client.chat.completions.create(ask);
-      const direction = parse(completion.choices[0]?.message?.content ?? "");
+      const content = completion.choices[0]?.message?.content ?? "";
+      const direction = parse(content);
       if (!direction) {
         return jsonWithCors(request, { error: "NO_DIRECTION" }, { status: 502 });
       }
       noteDirection(direction);
+      const spoken = playPack(direction, content);
       return jsonWithCors(
         request,
-        canPlayBank ? forThisBuild(direction) : flattenForOldClients(forThisBuild(direction), bank),
+        canPlayBank ? forThisBuild(spoken) : flattenForOldClients(forThisBuild(spoken), bank),
       );
     }
 
@@ -382,7 +450,7 @@ export async function POST(request: NextRequest) {
             write({ error: "NO_DIRECTION" });
           } else {
             noteDirection(direction);
-            write({ direction: forThisBuild(direction) });
+            write({ direction: forThisBuild(playPack(direction, text)) });
           }
         } catch (error) {
           console.error("[roleplay/turn] mid-answer", error);
