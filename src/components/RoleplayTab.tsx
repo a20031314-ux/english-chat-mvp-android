@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from 
 import { RoleplayOwnLine } from "@/components/RoleplayOwnLine";
 import { RoleplayPast } from "@/components/RoleplayPast";
 import { RoleplayScreen } from "@/components/RoleplayScreen";
+import { PackCard } from "@/components/PackCard";
 import { NextStepCard, type PracticeRequest } from "@/components/NextStepCard";
 import { onAppIntent, sendAppIntent, takeAppIntent } from "@/lib/appIntents";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
@@ -253,6 +254,11 @@ export function RoleplayTab({
         // and the list of past calls drawn over what was left.
         <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain">
         <div className="flex min-h-full flex-col items-center justify-center gap-5 px-6 py-6 text-center">
+          {!playing && openTalk ? (
+            <div className="w-full max-w-sm">
+              <PackCard ui={ui} targetLanguage={targetLanguage} onStart={startPractice} refreshKey={playing} />
+            </div>
+          ) : null}
           {!playing ? (
             <div className="w-full max-w-sm">
               <NextStepCard

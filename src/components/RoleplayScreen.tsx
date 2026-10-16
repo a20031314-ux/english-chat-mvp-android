@@ -60,6 +60,10 @@ import { playTts, prefetchTts, stopTts } from "@/lib/ttsPlayer";
 import { translateUtterance } from "@/lib/translateUtterance";
 import type { UICopy } from "@/lib/copy";
 import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
+import { PackRetroSheet } from "@/components/PackCard";
+import { finishPack } from "@/lib/pack/client";
+import type { Retro } from "@/lib/pack/pack";
+import { PACK_ITEMS } from "@/lib/pack/pack";
 import { saidPhrase } from "@/lib/learner/practice";
 
 /**
@@ -222,6 +226,10 @@ export function RoleplayScreen({
   const [said, setSaid] = useState<Spoken[]>([]);
   const [practiceStopped, setPracticeStopped] = useState(false);
   const practice = practiceStopped ? null : (practiceRequest ?? null);
+  // Today's pack, when this conversation plays one (pack/pack.ts). Stopping
+  // the practice band does not stop the pack: the server still runs it.
+  const packDay = practiceRequest?.goal.pack ?? null;
+  const [packRetro, setPackRetro] = useState<{ retro: Retro | null; open: boolean } | null>(null);
   const practiceSaid = useMemo(() => {
     const done = new Set<string>();
     if (!scenario) return done;
@@ -367,6 +375,17 @@ export function RoleplayScreen({
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [said, state, memory]);
+
+  // The pack's end: the retro and what was added to My, once per conversation.
+  useEffect(() => {
+    if (!packDay || !scenario || packRetro) return;
+    if (!(state?.finished || instruction?.do === "finish")) return;
+    setPackRetro({ retro: null, open: true });
+    void finishPack(scenario.language, packDay, isPremium).then((retro) =>
+      setPackRetro((current) => ({ retro, open: current?.open ?? true })),
+    );
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state?.finished, instruction?.do, packDay]);
 
   /** Play the current line, then hand control back to the state machine. */
   useEffect(() => {
@@ -955,7 +974,16 @@ export function RoleplayScreen({
         <div className="shrink-0 border-b border-white/10 px-3 py-2">
           <PracticeBanner
             ui={ui}
-            request={practice}
+            request={
+              packDay
+                ? {
+                    ...practice,
+                    title: ui.packProgress
+                      .replace("{n}", String(Math.min(PACK_ITEMS, (practice.packAnswered ?? 0) + Math.max(0, said.filter((line) => line.who === "learner").length - 1))))
+                      .replace("{total}", String(PACK_ITEMS)),
+                  }
+                : practice
+            }
             said={practiceSaid}
             targetLanguage={scenario.language}
             onStop={() => setPracticeStopped(true)}
@@ -1020,6 +1048,16 @@ export function RoleplayScreen({
           </p>
         ) : null}
 
+        {instruction?.do === "finish" && packRetro ? (
+          <button
+            type="button"
+            onClick={() => setPackRetro((current) => (current ? { ...current, open: true } : current))}
+            className="mb-2 w-full rounded-xl border border-emerald-400/30 bg-emerald-400/10 px-4 py-3 text-sm text-emerald-100"
+          >
+            {ui.packSeeRetro}
+          </button>
+        ) : null}
+
         {instruction?.do === "finish" ? (
           <button
             type="button"
@@ -1030,6 +1068,15 @@ export function RoleplayScreen({
           </button>
         ) : null}
       </footer>
+
+      {packRetro?.open ? (
+        <PackRetroSheet
+          ui={ui}
+          retro={packRetro.retro}
+          targetLanguage={scenario.language}
+          onClose={() => setPackRetro((current) => (current ? { ...current, open: false } : current))}
+        />
+      ) : null}
 
       {reviewing ? (
         <RoleplayReviewPanel

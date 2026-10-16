@@ -29,6 +29,8 @@ export type AppIntents = {
     title?: string;
     /** The mistake as the learner's map names it, in the interface language. */
     mistakeLabel?: string;
+    /** For today's pack: questions already answered in an earlier call, so its count carries on. */
+    packAnswered?: number;
   };
   /** Open a topic of the study map, for its tasks. */
   openTopic: { topicId: string };
