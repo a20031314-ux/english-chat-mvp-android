@@ -1162,3 +1162,14 @@ test("a build that does not know 'meant' gets it as the rewrite", async () => {
   assert.equal(old.better, "I went to a cafe yesterday.");
   assert.equal("meant" in old, false);
 });
+
+test("a rewrite of another line is not shown under this one", async () => {
+  const { rewritesThis } = await import("./director.ts");
+  assert.equal(rewritesThis("Last weekend I went to the beach with my friends.", "Last weekend I go to the beach with my friends."), true);
+  assert.equal(rewritesThis("Last weekend I went to the beach with my friends.", "The food was the best part."), false);
+  // Japanese, without spaces, measured the same way.
+  assert.equal(rewritesThis("先週末は友達と海に行った。", "先週末は友達と海に行く。"), true);
+  assert.equal(rewritesThis("先週末は友達と海に行った。", "食べ物が一番よかった。"), false);
+  // Spanish, a Latin script other than English.
+  assert.equal(rewritesThis("Ayer fui a la playa con mis amigos.", "Ayer voy a la playa con mis amigos."), true);
+});

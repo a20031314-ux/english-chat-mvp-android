@@ -218,7 +218,10 @@ test("a pack turn speaks the reaction in fixed words and then the pack's questio
   assert.equal(none, null, "a stuck turn does not move the pack");
   assert.deepEqual(stuck.say, { text: "Take your time. Try 'I went…'" });
   // The last answer closes the conversation.
-  assert.deepEqual(shapePackDirection(said("Great talking!"), null, { ...input, complete: true }).direction.next, { end: true });
+  const last = shapePackDirection(said("Wow, Japan! What will you see there?"), null, { ...input, complete: true }).direction;
+  assert.deepEqual(last.next, { end: true });
+  assert.deepEqual(last.react, { text: "Wow, Japan!" });
+  assert.equal("text" in last.say && last.say.text, bank["open.bye"]!.text, "the recorded goodbye, not a new question");
   // No pick and nothing asked: the planned question follows, and counts as asked.
   const fallback = shapePackDirection(said("Cold water can be refreshing!"), null, { ...input, planned: chosen });
   assert.deepEqual(fallback.direction.say, { text: "How was it?", translation: "어땠어요?" });

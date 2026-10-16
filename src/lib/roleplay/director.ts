@@ -667,6 +667,35 @@ function words(text: string): string {
 }
 
 /** The same sentence once punctuation and case are set aside. */
+/**
+ * Whether a rewrite is of this line at all.
+ *
+ * Seen on production: a correct "The food was the best part." came back with
+ * the previous line's correction ("Last weekend I went to the beach…") as its
+ * rewrite, and it would have been shown under the wrong sentence. A real
+ * rewrite keeps most of what was said; one that shares almost nothing with it
+ * is about something else. Compared by pairs of letters, so scripts without
+ * spaces are measured the same way as the rest.
+ */
+export function rewritesThis(rewrite: string, heard: string): boolean {
+  const pairs = (text: string) => {
+    const letters = Array.from(text.toLowerCase().replace(/[^\p{L}\p{M}\p{N}]/gu, ""));
+    const out = new Map<string, number>();
+    for (let i = 0; i < letters.length - 1; i += 1) {
+      const pair = letters[i]! + letters[i + 1]!;
+      out.set(pair, (out.get(pair) ?? 0) + 1);
+    }
+    return out;
+  };
+  const a = pairs(rewrite);
+  const b = pairs(heard);
+  const total = [...a.values()].reduce((n, v) => n + v, 0) + [...b.values()].reduce((n, v) => n + v, 0);
+  if (total === 0) return true;
+  let shared = 0;
+  for (const [pair, count] of a) shared += Math.min(count, b.get(pair) ?? 0);
+  return (2 * shared) / total >= 0.3;
+}
+
 function sameWords(a: string, b: string): boolean {
   return words(a) === words(b);
 }
@@ -1010,7 +1039,10 @@ export function parseDirection(
   // Said in both places, which the model does when it cannot decide: the
   // rewrite is the one shown under their own words, so the note goes.
   const better0 =
-    rewritten && request.heard.trim() && !sameWords(rewritten, request.heard)
+    rewritten &&
+    request.heard.trim() &&
+    !sameWords(rewritten, request.heard) &&
+    rewritesThis(rewritten, request.heard)
       ? rewritten
       : "";
   // What they meant, rebuilt. Held to the same tests as the rewrite, and to

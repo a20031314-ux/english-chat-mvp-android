@@ -17,7 +17,7 @@
 
 import type { Direction } from "../roleplay/director.ts";
 import { findReaction } from "../roleplay/reactions.ts";
-import { BANK_GLOSS_LANGUAGE } from "../roleplay/justTalk.ts";
+import { BANK_GLOSS_LANGUAGE, JUST_TALK_BYE } from "../roleplay/justTalk.ts";
 import type { SentenceBank } from "../roleplay/script.ts";
 import type { Candidate } from "./pack.ts";
 
@@ -53,9 +53,20 @@ export function shapePackDirection(
   const as = (shaped: Direction, asked: Candidate | null = null) => ({ direction: shaped, asked });
   let chosen = picked;
   if (input.complete) {
-    // The last answer: the tutor closes. Not while they are stuck, where the
-    // help is still the turn.
-    return as(direction.assessment === "stuck" ? direction : { ...direction, next: { end: true } });
+    // The last answer: a reaction, then the scene's own recorded goodbye. Not
+    // the tutor's closing words — seen on production, it closed with a new
+    // question ("What will you see there?") nobody could answer. Not while
+    // they are stuck, where the help is still the turn.
+    if (direction.assessment === "stuck") return as(direction);
+    const bye = input.bank[JUST_TALK_BYE];
+    const said = "text" in direction.say ? reactionOnly(direction.say.text) : "";
+    if (!bye) return as({ ...direction, ...(said ? { say: { text: said } } : {}), next: { end: true } });
+    const gloss = input.nativeLanguage === BANK_GLOSS_LANGUAGE ? bye.translation : undefined;
+    const goodbye = { text: bye.text, ...(gloss ? { translation: gloss } : {}) };
+    if (input.canSplit) {
+      return as({ ...direction, say: goodbye, ...(said ? { react: { text: said } } : {}), next: { end: true } });
+    }
+    return as({ ...direction, say: { text: said ? `${said} ${bye.text}` : bye.text }, next: { end: true } });
   }
   if (direction.assessment === "stuck" || direction.assessment === "closing") return as(direction);
   // The tutor's own question, written into its line: asked, and the pack moves past it.
