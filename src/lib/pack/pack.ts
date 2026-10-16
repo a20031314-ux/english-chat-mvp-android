@@ -418,7 +418,7 @@ export function packPrompt(pack: Pack, options: Candidate[]): string {
     "Today's guided practice: after your reaction, the app itself asks the learner the next question. Your choices for it:",
     ...listed,
     `Pick the one that fits best after what they just said — 1 unless it no longer makes sense (for example they already answered it). Put its number in "ask".`,
-    'In "say", write only a short reaction to what they said (a few words, no question), or leave it empty.',
+    'In "say", write only a short reaction to what they said — two to five words, no question — such as "Oh, nice!", "That sounds fun!", "Oh no, that sounds rough.", "Ah, that makes sense." or "I see." (in the language of the conversation), or leave it empty.',
     options.some((o) => o.free)
       ? 'If you pick the choice that is a question of your own, write your short reaction and that question together in "say".'
       : "",

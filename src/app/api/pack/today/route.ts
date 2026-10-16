@@ -47,6 +47,8 @@ export async function GET(request: NextRequest) {
   return jsonWithCors(request, {
     language,
     available: true,
+    // Bumped when what a pack turn does changes, so a check can tell the deploy is live.
+    rules: 2,
     ...summary,
     ...(pack.finishedAt ? { retro: retro(pack, await phraseStates(userId, pack), await growthNow(userId, language)) } : {}),
   });

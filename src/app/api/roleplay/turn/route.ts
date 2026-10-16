@@ -380,15 +380,18 @@ export async function POST(request: NextRequest) {
    */
   const playPack = (direction: Direction, text: string): Direction => {
     if (!playingPack) return direction;
-    packChoice = readAsk(text, packOptions);
-    return shapePackDirection(direction, packChoice, {
+    const { direction: shaped, asked } = shapePackDirection(direction, readAsk(text, packOptions), {
       complete: packOptions.length === 0,
       language: scenario.language,
       nativeLanguage: turn.nativeLanguage,
       bank,
       canSplit: playsReaction,
       nodeId,
+      planned: packOptions[0] ?? null,
     });
+    // The question that will be asked is the one the pack moves past.
+    packChoice = asked;
+    return shaped;
   };
 
   try {

@@ -206,15 +206,25 @@ test("the reaction keeps only what comes before the tutor's own question", () =>
 test("a pack turn speaks the reaction in fixed words and then the pack's question", () => {
   const chosen = { slot: 1, index: 1, text: "How was it?", translation: "어땠어요?" };
   const input = { complete: false, language: "en", nativeLanguage: "ko", bank, canSplit: true, nodeId: "talk" };
-  const shaped = shapePackDirection(said("Oh, that sounds fun! Who went with you?"), chosen, input);
+  const { direction: shaped, asked } = shapePackDirection(said("Oh, that sounds fun! Who went with you?"), chosen, input);
+  assert.equal(asked, chosen);
   assert.deepEqual(shaped.react, { text: "That sounds fun!", translation: "재밌었겠네요!" });
   assert.deepEqual(shaped.say, { text: "How was it?", translation: "어땠어요?" });
   // A build that cannot play a reaction on its own gets both in one line.
-  const joined = shapePackDirection(said("Nice."), chosen, { ...input, canSplit: false });
+  const { direction: joined } = shapePackDirection(said("Nice."), chosen, { ...input, canSplit: false });
   assert.deepEqual(joined.say, { text: "Nice. How was it?" });
   // Stuck: the help is the turn.
-  const stuck = shapePackDirection(said("Take your time. Try 'I went…'", "stuck"), chosen, input);
+  const { direction: stuck, asked: none } = shapePackDirection(said("Take your time. Try 'I went…'", "stuck"), chosen, input);
+  assert.equal(none, null, "a stuck turn does not move the pack");
   assert.deepEqual(stuck.say, { text: "Take your time. Try 'I went…'" });
   // The last answer closes the conversation.
-  assert.deepEqual(shapePackDirection(said("Great talking!"), null, { ...input, complete: true }).next, { end: true });
+  assert.deepEqual(shapePackDirection(said("Great talking!"), null, { ...input, complete: true }).direction.next, { end: true });
+  // No pick and nothing asked: the planned question follows, and counts as asked.
+  const fallback = shapePackDirection(said("Cold water can be refreshing!"), null, { ...input, planned: chosen });
+  assert.deepEqual(fallback.direction.say, { text: "How was it?", translation: "어땠어요?" });
+  assert.equal(fallback.asked, chosen);
+  // No pick because the tutor answered a question of theirs with one of its own: left alone.
+  const answered = shapePackDirection(said("Me? I love tea. And you?"), null, { ...input, planned: chosen });
+  assert.deepEqual(answered.direction.say, { text: "Me? I love tea. And you?" });
+  assert.equal(answered.asked, null);
 });

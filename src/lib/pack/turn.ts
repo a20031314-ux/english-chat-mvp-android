@@ -36,7 +36,7 @@ export function reactionOnly(text: string): string {
 
 export function shapePackDirection(
   direction: Direction,
-  chosen: Candidate | null,
+  picked: Candidate | null,
   input: {
     /** Every question asked: this answer ends the pack. */
     complete: boolean;
@@ -46,18 +46,29 @@ export function shapePackDirection(
     canSplit: boolean;
     /** The learner step the conversation stays on while the pack runs. */
     nodeId: string;
+    /** The question planned next, asked when the tutor picked none and asked nothing. */
+    planned?: Candidate | null;
   },
-): Direction {
+): { direction: Direction; asked: Candidate | null } {
+  const as = (shaped: Direction, asked: Candidate | null = null) => ({ direction: shaped, asked });
+  let chosen = picked;
   if (input.complete) {
     // The last answer: the tutor closes. Not while they are stuck, where the
     // help is still the turn.
-    return direction.assessment === "stuck" ? direction : { ...direction, next: { end: true } };
+    return as(direction.assessment === "stuck" ? direction : { ...direction, next: { end: true } });
   }
-  if (!chosen || chosen.free || direction.assessment === "stuck" || direction.assessment === "closing") {
-    return direction;
+  if (direction.assessment === "stuck" || direction.assessment === "closing") return as(direction);
+  // The tutor's own question, written into its line: asked, and the pack moves past it.
+  if (chosen?.free) return as(direction, chosen);
+  const written0 = "text" in direction.say ? direction.say.text : "";
+  if (!chosen) {
+    // No pick. Fine when the tutor asked or answered something itself; when it
+    // only reacted, the learner would be left with nothing to answer, so the
+    // planned question follows (seen on the first production run).
+    if (QUESTION_END.test(written0.trim()) || !input.planned || input.planned.free) return as(direction);
+    chosen = input.planned;
   }
-  const written = "text" in direction.say ? direction.say.text : "";
-  const raw = reactionOnly(written);
+  const raw = reactionOnly(written0);
   const found = raw ? findReaction(raw, input.language, input.bank) : null;
   const gloss = input.nativeLanguage === BANK_GLOSS_LANGUAGE;
   const reaction = found && !found.rest
@@ -69,16 +80,7 @@ export function shapePackDirection(
   // A question was picked, so the conversation goes on whatever else came back.
   const next = "end" in direction.next ? { step: input.nodeId } : direction.next;
   if (input.canSplit) {
-    return {
-      ...direction,
-      say: question,
-      ...(reaction ? { react: reaction } : {}),
-      next,
-    };
+    return as({ ...direction, say: question, ...(reaction ? { react: reaction } : {}), next }, chosen);
   }
-  return {
-    ...direction,
-    say: { text: reaction ? `${reaction.text} ${question.text}` : question.text },
-    next,
-  };
+  return as({ ...direction, say: { text: reaction ? `${reaction.text} ${question.text}` : question.text }, next }, chosen);
 }
