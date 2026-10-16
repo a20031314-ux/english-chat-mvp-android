@@ -260,7 +260,7 @@ function AskBox({
       const response = await fetch(apiUrl("/api/learner/ask"), {
         method: "POST",
         headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
-        body: JSON.stringify({ language: targetLanguage, interfaceLanguage: locale, question: q }),
+        body: JSON.stringify({ language: targetLanguage, interfaceLanguage: locale, question: q, names: elementNames(ui) }),
       });
       if (response.status === 403) {
         setError(ui.myAskLimit);

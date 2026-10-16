@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { askData, askSystemPrompt, parseAnswer } from "./ask.ts";
+import { askData, askSystemPrompt, parseAnswer, parseNames } from "./ask.ts";
 import { emptyGrowth, growthView } from "./growth.ts";
 import { emptyLedger } from "./ledger.ts";
 
@@ -32,4 +32,10 @@ test("the model is told to answer from the data, in the interface language, with
   assert.equal(data.elements.length, 6);
   assert.equal(data.stuckInCallsLast14Days, 3);
   assert.deepEqual(data.phrasesFromStuckMoments, ["おすすめは何ですか"]);
+});
+
+test("the learner's own names for the elements go to the model, and odd ones are dropped", () => {
+  assert.deepEqual(parseNames({ accuracy: "정확도", level: "B2", speaking: "  말 이어가기 " }), { speaking: "말 이어가기", accuracy: "정확도" });
+  assert.match(askSystemPrompt({ uiName: "Korean", targetName: "English" }), /never by its id/);
+  assert.match(askSystemPrompt({ uiName: "Korean", targetName: "English" }), /never as "points"/);
 });

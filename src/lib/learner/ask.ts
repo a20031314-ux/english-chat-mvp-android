@@ -28,6 +28,8 @@ const ELEMENT_NAMES: Record<ElementId, string> = {
 
 export type AskData = {
   growth: GrowthView;
+  /** What the learner's screen calls each element, in their language. */
+  names?: Partial<Record<ElementId, string>>;
   /** Kinds of mistake that recur, with how many times in the last two weeks. */
   mistakes: Array<{ name: string; times: number }>;
   /** Moments they got stuck in calls, last fourteen days. */
@@ -42,6 +44,7 @@ export function askData(data: AskData): string {
   return JSON.stringify({
     elements: data.growth.elements.map((e) => ({
       id: e.id,
+      calledOnTheirScreen: data.names?.[e.id] || null,
       what: ELEMENT_NAMES[e.id],
       points: e.points,
       stage: e.stage,
@@ -66,7 +69,8 @@ export function askSystemPrompt(input: { uiName: string; targetName: string }): 
   return `You answer a learner's question about their own progress in ${input.targetName}, inside a language app. You are given their data as JSON; answer from it and nothing else.
 
 - Write in ${input.uiName}, 2 to 4 short sentences, warm and plain. ${input.targetName} phrases may be quoted as they are.
-- Use the numbers you have ("accuracy grew by 5 this week", "3 stuck moments in calls"). Never invent a number, a phrase or an event the data does not show.
+- Call each element by "calledOnTheirScreen" when it is given — never by its id or English name.
+- Use the numbers you have, said as what was counted ("5 more lines needed no correction this week", "3 stuck moments in calls") — never as "points". Never invent a number, a phrase or an event the data does not show.
 - Elements only grow; a resting one has had nothing added for two weeks. Do not describe anything as getting worse.
 - Never give a level, a score out of anything, a grade, or a comparison with other people.
 - If the data is too thin to answer, say so and suggest having a few conversations first.
@@ -86,4 +90,15 @@ export function parseAnswer(raw: string): { answer: string; grow: ElementId | nu
   } catch {
     return null;
   }
+}
+
+/** Element names from a request, cut to size; unknown ids are dropped. */
+export function parseNames(value: unknown): Partial<Record<ElementId, string>> {
+  if (!value || typeof value !== "object") return {};
+  const out: Partial<Record<ElementId, string>> = {};
+  for (const id of ELEMENT_IDS) {
+    const name = (value as Record<string, unknown>)[id];
+    if (typeof name === "string" && name.trim()) out[id] = name.replace(/\s+/g, " ").trim().slice(0, 40);
+  }
+  return out;
 }

@@ -12,7 +12,7 @@ import { readSelfCheck } from "@/lib/server/selfCheckStore";
 import { readLearnerBrief } from "@/lib/server/learnerBrief";
 import { recentStuckPhrases } from "@/lib/learner/growth";
 import { RECUR_WINDOW_MS } from "@/lib/curriculum/weakPoints";
-import { MAX_QUESTION_CHARS, askData, askSystemPrompt, parseAnswer } from "@/lib/learner/ask";
+import { MAX_QUESTION_CHARS, askData, askSystemPrompt, parseAnswer, parseNames } from "@/lib/learner/ask";
 import {
   coerceLanguageCode,
   INTERFACE_LANGUAGE_LABELS,
@@ -91,6 +91,7 @@ export async function POST(request: NextRequest) {
             data: JSON.parse(
               askData({
                 growth,
+                names: parseNames(body.names),
                 mistakes,
                 stuckLast14,
                 stuckPhrases: recentStuckPhrases(record, now, 5, 14 * DAY),
