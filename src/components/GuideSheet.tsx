@@ -55,7 +55,7 @@ function GuideShot({ locale, shot }: { locale: string; shot: string }) {
       alt=""
       loading="lazy"
       onError={() => setSource(source === "own" ? "en" : "none")}
-      className="mt-2 w-full max-w-sm rounded-xl border border-white/10"
+      className="mt-2 max-h-[48vh] w-auto max-w-full rounded-xl border border-white/10"
     />
   );
 }
@@ -160,12 +160,12 @@ export function GuideButton({
                     <h3 className="text-[14px] font-semibold text-neutral-100">
                       {fillLabels(section.heading, ui)}
                     </h3>
-                    {section.shot ? <GuideShot locale={locale} shot={section.shot} /> : null}
                     <div className="mt-1.5 flex flex-col gap-1.5 text-[13px] leading-relaxed text-neutral-300">
                       {section.body.map((paragraph) => (
                         <p key={paragraph}>{fillLabels(paragraph, ui)}</p>
                       ))}
                     </div>
+                    {section.shot ? <GuideShot locale={locale} shot={section.shot} /> : null}
                   </section>
                 ))}
               </div>
