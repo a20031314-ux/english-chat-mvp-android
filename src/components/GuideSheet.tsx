@@ -36,7 +36,7 @@ function readCached(locale: string): Guide | null {
 
 function fillLabels(text: string, ui: UICopy): string {
   const labels = ui as unknown as Record<string, unknown>;
-  return text.replace(/\{ui:([a-zA-Z]+)\}/g, (_, key: string) =>
+  return text.replace(/\{ui:([a-zA-Z0-9]+)\}/g, (_, key: string) =>
     typeof labels[key] === "string" ? (labels[key] as string) : "",
   );
 }
