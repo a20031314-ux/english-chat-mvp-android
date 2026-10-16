@@ -35,6 +35,7 @@ import { TopicItems, ItemBar } from "@/components/studyMap/TopicItems";
 import { LearnerPanel } from "@/components/studyMap/LearnerPanel";
 import { LedgerPanel } from "@/components/studyMap/LedgerPanel";
 import { NextStepCard } from "@/components/NextStepCard";
+import { GrowthNetwork } from "@/components/studyMap/GrowthNetwork";
 import { FOCUS_IDS, GAP_IDS, USE_IDS, type FocusId, type GapId, type UseId } from "@/lib/learner/selfCheck";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 
@@ -256,7 +257,10 @@ export function StudyMapTab({
             />
             {!map ? (
               <div className="mx-auto mt-6 max-w-md">
-                <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
+                <GrowthNetwork ui={ui} targetLanguage={targetLanguage} isPremium={isPremium} />
+                <div className="mt-3">
+                  <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
+                </div>
               </div>
             ) : null}
           </>
@@ -272,7 +276,10 @@ export function StudyMapTab({
                 refreshKey={map.id}
               />
             </div>
-            <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
+            <GrowthNetwork ui={ui} targetLanguage={targetLanguage} isPremium={isPremium} refreshKey={map.id} />
+            <div className="mt-3">
+              <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
+            </div>
             <section className="mt-3 rounded-2xl border border-white/10">
               <button
                 type="button"

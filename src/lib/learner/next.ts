@@ -73,6 +73,8 @@ export type NextInput = {
   missions: Record<string, TopicMissions>;
   /** What they said about themselves when they started, if they did. */
   selfCheck?: SelfCheck | null;
+  /** The My tab's "grow this next" (growth.ts), which leads the gap steps. */
+  growNext?: GapId | null;
   now: number;
 };
 
@@ -170,7 +172,7 @@ function phraseSteps(input: NextInput): NextStep[] {
  * situations: early on it is all there is to go on; later it is one more
  * option among measured ones.
  */
-const GAP_STEP: Record<GapId, { tab: "chat" | "roleplay"; situation: string }> = {
+export const GAP_STEP: Record<GapId, { tab: "chat" | "roleplay"; situation: string }> = {
   speaking: { tab: "roleplay", situation: "Quick, light back-and-forth: short questions they can answer in a few words, at an easy pace" },
   accuracy: { tab: "chat", situation: "Telling you about something they did recently, in full sentences, taking their time" },
   words: { tab: "chat", situation: "Talking about their interests, where you bring in one useful new word or phrase at a time" },
@@ -180,7 +182,7 @@ const GAP_STEP: Record<GapId, { tab: "chat" | "roleplay"; situation: string }> =
 };
 
 function gapSteps(input: NextInput): NextStep[] {
-  const gaps = input.selfCheck?.gaps ?? [];
+  const gaps = [...new Set([...(input.growNext ? [input.growNext] : []), ...(input.selfCheck?.gaps ?? [])])];
   return gaps.slice(0, 2).map((gap) => ({
     key: `gap:${gap}`,
     kind: "gap" as const,

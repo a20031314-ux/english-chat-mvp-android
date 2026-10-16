@@ -35,6 +35,7 @@ import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
 import { recordTurn } from "@/lib/server/ledgerStore";
 import { readLearnerBrief } from "@/lib/server/learnerBrief";
+import { recordGrowthTurn } from "@/lib/server/growthStore";
 import { parsePracticeGoal, practicePrompt } from "@/lib/learner/practice";
 import { contentHash } from "@/lib/roleplay/script";
 import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
@@ -193,6 +194,16 @@ export async function POST(request: NextRequest) {
       corrected,
       where: "call",
     });
+    // The My tab's elements (learner/growth.ts): a line the character did not
+    // rewrite grows accuracy and naturalness, a quick first-go start grows the
+    // flow of speech.
+    if (decided && turn.heard) {
+      await recordGrowthTurn({
+        userId: requestUserId(request),
+        language: turn.targetLanguage,
+        turn: { surface: "call", corrected: Boolean(corrected), alreadyNatural: !corrected, attempts, latencyMs: responseLatencyMs },
+      });
+    }
     await recordTurn({
       userId: requestUserId(request),
       language: turn.targetLanguage,

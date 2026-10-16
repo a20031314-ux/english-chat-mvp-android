@@ -5,6 +5,7 @@ import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
 import { recordTurn } from "@/lib/server/ledgerStore";
 import { forgetLearnerBrief, readLearnerBrief } from "@/lib/server/learnerBrief";
+import { recordGrowthTurn } from "@/lib/server/growthStore";
 import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
 import { requestAppVersion } from "@/lib/appVersion";
 import {
@@ -953,6 +954,21 @@ export async function POST(request: NextRequest) {
           now: Date.now(),
         });
         await forgetLearnerBrief(userId, langs.targetLanguage);
+        // The My tab's elements (learner/growth.ts): a line needing no
+        // correction grows accuracy, and one already as natural as it gets
+        // grows naturalness too.
+        const same = (a: string, b: string) => a.replace(/\s+/g, " ").trim().toLowerCase() === b.replace(/\s+/g, " ").trim().toLowerCase();
+        const corrected = data.correction?.corrected ?? "";
+        const natural = data.correction?.natural ?? "";
+        await recordGrowthTurn({
+          userId,
+          language: langs.targetLanguage,
+          turn: {
+            surface: "chat",
+            corrected: corrected ? !same(corrected, message) : null,
+            alreadyNatural: !natural || same(natural, message),
+          },
+        });
       });
     }
     after(() =>

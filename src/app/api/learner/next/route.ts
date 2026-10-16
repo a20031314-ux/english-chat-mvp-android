@@ -6,6 +6,7 @@ import { readLedger } from "@/lib/server/ledgerStore";
 import { readWeakRecord } from "@/lib/server/weakPointStore";
 import { readCurriculum, readMissions } from "@/lib/server/curriculumStore";
 import { readSelfCheck } from "@/lib/server/selfCheckStore";
+import { readGrowth } from "@/lib/server/growthStore";
 import { nextSteps } from "@/lib/learner/next";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 
@@ -38,6 +39,7 @@ export async function GET(request: NextRequest) {
     readCurriculum(userId, language),
     readSelfCheck(userId, language),
   ]);
+  const growth = await readGrowth(userId, language, null).catch(() => null);
   const map = curriculum?.map ?? null;
   const missions = map ? await readMissions(userId, language, map.id) : {};
   const steps = nextSteps({
@@ -47,6 +49,7 @@ export async function GET(request: NextRequest) {
     status: curriculum?.status ?? {},
     missions,
     selfCheck,
+    growNext: growth?.next ?? null,
     now: Date.now(),
   });
   return jsonWithCors(request, {
