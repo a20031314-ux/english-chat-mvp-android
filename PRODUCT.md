@@ -191,8 +191,10 @@
 ### 앱 공통
 - **새로워진 점:** 업데이트 후 첫 실행에 한 번, UI 언어별 캡처와 함께 (`src/lib/whatsNew.ts`).
 - **업데이트 배너:** 서버의 `RECOMMENDED_APP_VERSION`보다 낮으면 배너, `MIN_SUPPORTED`보다 낮으면 막힘.
-- **사용법(?):** 탭별 안내, 14개 언어 (`src/lib/guide/`). 지도는 단계마다 UI 언어별 스크린샷 + 한두 줄(2.67부터 그림, `public/guide/<locale>/`,
-  `node --experimental-strip-types scripts/capture-whats-new.mjs guide`로 다시 찍음).
+- **사용법(?):** 탭별 안내, 14개 언어 (`src/lib/guide/`). My는 6단계(체크로 시작 → 오늘 해볼 것 → 자라는 중 → 눌러서 보기 → 직접 묻기 → 목표와 연습),
+  채팅은 첫 단계 "오늘 해볼 것으로 시작"을 단계마다 UI 언어별 스크린샷 + 한두 줄로(2.67부터 그림, `public/guide/<locale>/`,
+  `node --experimental-strip-types scripts/capture-whats-new.mjs guide`로 다시 찍음). 2.67 앱은 `/api/guide?my=1`로 묻고,
+  그 전 빌드는 예전 지도·채팅 안내(`src/lib/guide/before-my.json`)를 받는다.
 - **의견 보내기(말풍선):** 어느 화면에서든 글 + 지금 화면 캡처(뺄 수 있음) 또는 사진. 하루 15건까지. 매일 아침 묶어서 의견함 페이지에
   급한 것 · 많이 나온 것 · 특수한 것으로 올리고, 운영자가 반영/보류/안 함을 고른다 (`src/components/FeedbackButton.tsx`, `hub/feedback/README.md`).
 

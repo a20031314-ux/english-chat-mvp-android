@@ -79,7 +79,7 @@ export function GuideButton({
   useEffect(() => {
     if (!open) return;
     let cancelled = false;
-    void fetch(apiUrl(`/api/guide?lang=${encodeURIComponent(locale)}`))
+    void fetch(apiUrl(`/api/guide?lang=${encodeURIComponent(locale)}&my=1`))
       .then((response) => (response.ok ? response.json() : null))
       .then((data: { tabs?: Guide } | null) => {
         if (cancelled) return;

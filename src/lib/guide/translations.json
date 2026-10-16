@@ -1,54 +1,54 @@
 {
   "es": {
     "map": {
-      "title": "Cómo usar el mapa",
+      "title": "Cómo usar Mi espacio",
       "sections": [
         {
-          "heading": "1. Escribe un objetivo",
+          "heading": "1. Empieza marcando",
           "body": [
-            "Escribe lo que quieres lograr, elige tu nivel y toca ‘{ui:mapDraw}’."
+            "Marca en qué te falta y en qué quieres centrarte, y toca «{ui:mapDraw}». No hay nivel que elegir."
           ],
           "shot": "goal"
         },
         {
-          "heading": "2. Lee el mapa",
+          "heading": "2. Prueba esto",
           "body": [
-            "Los temas están en cuatro columnas: situaciones, expresiones, vocabulario y pronunciación. Sigue ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ abre el primer tema."
+            "Una cosa para hacer ahora, según tu propio registro. «{ui:nextByChat}» o «{ui:nextByCall}» empieza esa conversación al momento."
           ],
-          "shot": "map"
+          "shot": "next"
         },
         {
-          "heading": "3. Practica con tareas",
+          "heading": "3. Creciendo",
           "body": [
-            "En un tema, toca ‘{ui:missionStart}’. Escribe y se revisa y corrige. ¿Te atascas? ‘{ui:missionHint}’."
+            "Seis partes crecen a medida que usas el idioma y nunca se encogen. La que tiene un aro es «{ui:myNext}»."
           ],
-          "shot": "mission"
+          "shot": "growth"
         },
         {
-          "heading": "4. Tres estados",
+          "heading": "4. Toca para ver más",
           "body": [
-            "Sin pistas es ‘{ui:itemsMastered}’, con ayuda es ‘{ui:itemsLearned}’, pendiente es ‘{ui:itemsToLearn}’. Lo aprendido vuelve para repasar."
+            "Toca una parte para ver cómo crece, las últimas dos semanas y las expresiones que la hicieron crecer; «{ui:myGrowIt}» empieza a practicar."
           ],
-          "shot": "progress"
+          "shot": "element"
         },
         {
-          "heading": "5. Mis expresiones",
+          "heading": "5. Pregunta",
           "body": [
-            "‘{ui:ledgerTitle}’, arriba, reúne las expresiones de todas las pestañas y muestra cuánto crecen cada semana."
+            "Pregunta algo como «{ui:myAskQuick1}» y te responde con tu registro. Cada pregunta cuenta como un chat."
           ],
-          "shot": "ledger"
+          "shot": "myask"
         },
         {
-          "heading": "6. Añade cosas al mapa",
+          "heading": "6. Objetivo y práctica",
           "body": [
-            "En el análisis de frases, elige una expresión y toca ‘{ui:markToMap}’: será la primera tarea del tema que le corresponde. Los errores que repites entran solos."
+            "Abre «{ui:profileGoalTitle}» para ver los temas de tu objetivo; en un tema, «{ui:missionStart}»."
           ],
-          "shot": "pick"
+          "shot": "goalopen"
         },
         {
           "heading": "Además",
           "body": [
-            "¿Nuevo objetivo? ‘{ui:mapNewGoal}’. El mapa anterior vuelve con ‘{ui:mapRestore}’. Cada idioma tiene su propio mapa."
+            "«{ui:ledgerTitle}» reúne expresiones de todas las pestañas. ¿Nuevo objetivo? «{ui:mapNewGoal}». Cada idioma tiene lo suyo."
           ]
         }
       ]
@@ -56,6 +56,14 @@
     "chat": {
       "title": "Cómo usar Chat",
       "sections": [
+        {
+          "heading": "Empieza con Prueba esto",
+          "body": [
+            "En un chat vacío, toca «{ui:nextByChat}» en «{ui:nextTitle}» y el tutor empieza en esa situación. Esa primera línea no cuenta.",
+            "Las expresiones de la franja «{ui:practiceNow}» se marcan con ✓ cuando las usas."
+          ],
+          "shot": "chatnext"
+        },
         {
           "heading": "Chatea en el idioma que aprendes",
           "body": [
@@ -177,54 +185,54 @@
   },
   "ja": {
     "map": {
-      "title": "マップの使い方",
+      "title": "マイの使い方",
       "sections": [
         {
-          "heading": "1. 目標を書く",
+          "heading": "1. チェックで始める",
           "body": [
-            "できるようになりたいことを書き、レベルを選んで「{ui:mapDraw}」。"
+            "足りないところと中心にしたいことを選んで「{ui:mapDraw}」。レベルは聞きません。"
           ],
           "shot": "goal"
         },
         {
-          "heading": "2. マップを見る",
+          "heading": "2. やってみよう",
           "body": [
-            "トピックは場面・表現・単語・発音の4列に並びます。「{ui:mapOrderTitle}」の順に進め、「{ui:mapContinue}」で最初のトピックが開きます。"
+            "たまった記録から、今やることを一つすすめます。「{ui:nextByChat}」か「{ui:nextByCall}」を押すと、その場面ですぐ会話が始まります。"
           ],
-          "shot": "map"
+          "shot": "next"
         },
         {
-          "heading": "3. タスクで練習",
+          "heading": "3. 成長中",
           "body": [
-            "トピックで「{ui:missionStart}」。書くとチェックと添削。詰まったら「{ui:missionHint}」。"
+            "6つの部分は使うほど大きくなり、小さくはなりません。輪がついているのが「{ui:myNext}」です。"
           ],
-          "shot": "mission"
+          "shot": "growth"
         },
         {
-          "heading": "4. 3つの状態",
+          "heading": "4. タップして見る",
           "body": [
-            "ヒントなしでできたら「{ui:itemsMastered}」、助けを借りたら「{ui:itemsLearned}」、まだなら「{ui:itemsToLearn}」。学習済みは復習で戻ってきます。"
+            "部分を押すと、育ち方・最近2週間・育てた表現が見え、「{ui:myGrowIt}」ですぐ練習できます。"
           ],
-          "shot": "progress"
+          "shot": "element"
         },
         {
-          "heading": "5. わたしの表現",
+          "heading": "5. 聞いてみる",
           "body": [
-            "上部の「{ui:ledgerTitle}」に全タブで出会った表現がたまり、週ごとの伸びが見えます。"
+            "「{ui:myAskQuick1}」のように聞くと、自分の記録から答えます。質問1回はチャット1回です。"
           ],
-          "shot": "ledger"
+          "shot": "myask"
         },
         {
-          "heading": "6. マップに自分で入れる",
+          "heading": "6. 目標と練習",
           "body": [
-            "文章分析で表現を選んで「{ui:markToMap}」。合うトピックの最初のタスクになります。よく間違えることは自動で入ります。"
+            "「{ui:profileGoalTitle}」を開くと目標から作ったテーマがあり、テーマで「{ui:missionStart}」。"
           ],
-          "shot": "pick"
+          "shot": "goalopen"
         },
         {
           "heading": "そのほか",
           "body": [
-            "目標が変わったら「{ui:mapNewGoal}」、直前のマップは「{ui:mapRestore}」。マップは学習言語ごとに別です。"
+            "「{ui:ledgerTitle}」に全タブで出会った表現がたまります。目標が変わったら「{ui:mapNewGoal}」。学習言語ごとに別です。"
           ]
         }
       ]
@@ -232,6 +240,14 @@
     "chat": {
       "title": "チャットの使い方",
       "sections": [
+        {
+          "heading": "「やってみよう」から始める",
+          "body": [
+            "空のチャットで「{ui:nextTitle}」の「{ui:nextByChat}」を押すと、チューターがその場面で先に話しかけます。最初の1行は回数に入りません。",
+            "上の「{ui:practiceNow}」の帯にある表現は、使うと✓がつきます。"
+          ],
+          "shot": "chatnext"
+        },
         {
           "heading": "学習言語でチャット",
           "body": [
@@ -353,54 +369,54 @@
   },
   "zh": {
     "map": {
-      "title": "地图使用方法",
+      "title": "“我的”使用方法",
       "sections": [
         {
-          "heading": "1. 写下目标",
+          "heading": "1. 勾选开始",
           "body": [
-            "写下你想做到的事，选择水平，点「{ui:mapDraw}」。"
+            "勾选不足之处和想重点练的，然后点“{ui:mapDraw}”。不会问你的水平。"
           ],
           "shot": "goal"
         },
         {
-          "heading": "2. 看地图",
+          "heading": "2. 试试这个",
           "body": [
-            "主题分在情境、表达、词汇、发音四列。按「{ui:mapOrderTitle}」的顺序学，「{ui:mapContinue}」会打开第一个主题。"
+            "根据你的记录推荐现在做的一件事。点“{ui:nextByChat}”或“{ui:nextByCall}”，会直接在那个场景里开始对话。"
           ],
-          "shot": "map"
+          "shot": "next"
         },
         {
-          "heading": "3. 用任务练习",
+          "heading": "3. 成长中",
           "body": [
-            "在主题里点「{ui:missionStart}」。写出来就会检查并纠正。卡住了点「{ui:missionHint}」。"
+            "六个部分越用越大，不会变小。带圈的是“{ui:myNext}”。"
           ],
-          "shot": "mission"
+          "shot": "growth"
         },
         {
-          "heading": "4. 三种状态",
+          "heading": "4. 点开查看",
           "body": [
-            "没用提示完成的是「{ui:itemsMastered}」，借助帮助完成的是「{ui:itemsLearned}」，还没做的是「{ui:itemsToLearn}」。学过的会回来复习。"
+            "点开一个部分，可以看到成长方式、最近两周和让它成长的表达，用“{ui:myGrowIt}”马上练习。"
           ],
-          "shot": "progress"
+          "shot": "element"
         },
         {
-          "heading": "5. 我的表达",
+          "heading": "5. 提问",
           "body": [
-            "顶部的「{ui:ledgerTitle}」汇集各个标签页遇到的表达，并显示每周增长多少。"
+            "像“{ui:myAskQuick1}”这样提问，会根据你的记录回答。每个问题算一次聊天。"
           ],
-          "shot": "ledger"
+          "shot": "myask"
         },
         {
-          "heading": "6. 自己加到地图",
+          "heading": "6. 目标与练习",
           "body": [
-            "在句子分析里选中表达，点「{ui:markToMap}」，它会成为对应主题的第一个任务。常犯的错误会自动加入。"
+            "展开“{ui:profileGoalTitle}”能看到根据目标生成的主题，在主题里点“{ui:missionStart}”。"
           ],
-          "shot": "pick"
+          "shot": "goalopen"
         },
         {
           "heading": "其他",
           "body": [
-            "目标变了就点「{ui:mapNewGoal}」，上一张地图用「{ui:mapRestore}」找回。每种学习语言各有一张地图。"
+            "“{ui:ledgerTitle}”汇集了各个标签页遇到的表达。目标变了就点“{ui:mapNewGoal}”。每种学习语言各自独立。"
           ]
         }
       ]
@@ -408,6 +424,14 @@
     "chat": {
       "title": "聊天功能指南",
       "sections": [
+        {
+          "heading": "从“试试这个”开始",
+          "body": [
+            "在空白聊天里点“{ui:nextTitle}”下的“{ui:nextByChat}”，导师会先在那个场景里开口。第一句不计次数。",
+            "上方“{ui:practiceNow}”条里的表达，用过就会打✓。"
+          ],
+          "shot": "chatnext"
+        },
         {
           "heading": "用目标语言聊天",
           "body": [
@@ -529,54 +553,54 @@
   },
   "vi": {
     "map": {
-      "title": "Cách dùng bản đồ",
+      "title": "Cách dùng Của tôi",
       "sections": [
         {
-          "heading": "1. Viết mục tiêu",
+          "heading": "1. Bắt đầu bằng cách đánh dấu",
           "body": [
-            "Viết điều bạn muốn làm được, chọn trình độ rồi chạm ‘{ui:mapDraw}’."
+            "Đánh dấu phần còn thiếu và điều muốn tập trung, rồi chạm “{ui:mapDraw}”. Không cần chọn trình độ."
           ],
           "shot": "goal"
         },
         {
-          "heading": "2. Xem bản đồ",
+          "heading": "2. Thử cái này",
           "body": [
-            "Chủ đề nằm trong bốn cột: tình huống, cách nói, từ vựng, phát âm. Làm theo ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ mở chủ đề đầu tiên."
+            "Gợi ý một việc nên làm ngay, dựa trên ghi chép của bạn. “{ui:nextByChat}” hoặc “{ui:nextByCall}” bắt đầu cuộc trò chuyện đó ngay."
           ],
-          "shot": "map"
+          "shot": "next"
         },
         {
-          "heading": "3. Luyện bằng việc cần làm",
+          "heading": "3. Đang lớn",
           "body": [
-            "Trong chủ đề, chạm ‘{ui:missionStart}’. Viết ra là được kiểm tra và sửa. Bí thì chạm ‘{ui:missionHint}’."
+            "Sáu phần lớn dần khi bạn dùng và không bao giờ nhỏ lại. Phần có vòng tròn là “{ui:myNext}”."
           ],
-          "shot": "mission"
+          "shot": "growth"
         },
         {
-          "heading": "4. Ba trạng thái",
+          "heading": "4. Chạm để xem",
           "body": [
-            "Làm được không cần gợi ý là ‘{ui:itemsMastered}’, có trợ giúp là ‘{ui:itemsLearned}’, chưa làm là ‘{ui:itemsToLearn}’. Cái đã học sẽ quay lại để ôn."
+            "Chạm vào một phần để xem cách nó lớn, hai tuần qua và các cách nói giúp nó lớn; “{ui:myGrowIt}” để luyện ngay."
           ],
-          "shot": "progress"
+          "shot": "element"
         },
         {
-          "heading": "5. Cách nói của tôi",
+          "heading": "5. Hỏi",
           "body": [
-            "‘{ui:ledgerTitle}’ ở trên cùng gom cách nói bạn gặp ở mọi tab và cho thấy mỗi tuần tăng bao nhiêu."
+            "Hỏi kiểu “{ui:myAskQuick1}”, câu trả lời dựa trên ghi chép của bạn. Mỗi câu hỏi tính là một lượt chat."
           ],
-          "shot": "ledger"
+          "shot": "myask"
         },
         {
-          "heading": "6. Tự thêm vào bản đồ",
+          "heading": "6. Mục tiêu và luyện tập",
           "body": [
-            "Trong phân tích câu, chọn cách nói rồi chạm ‘{ui:markToMap}’: nó thành việc đầu tiên của chủ đề phù hợp. Lỗi hay lặp lại sẽ tự được thêm."
+            "Mở “{ui:profileGoalTitle}” để xem các chủ đề từ mục tiêu; trong chủ đề, chạm “{ui:missionStart}”."
           ],
-          "shot": "pick"
+          "shot": "goalopen"
         },
         {
-          "heading": "Khác",
+          "heading": "Ngoài ra",
           "body": [
-            "Đổi mục tiêu thì chạm ‘{ui:mapNewGoal}’, bản đồ trước đó lấy lại bằng ‘{ui:mapRestore}’. Mỗi ngôn ngữ học có bản đồ riêng."
+            "“{ui:ledgerTitle}” gom cách nói từ mọi tab. Đổi mục tiêu? “{ui:mapNewGoal}”. Mỗi ngôn ngữ học có phần riêng."
           ]
         }
       ]
@@ -584,6 +608,14 @@
     "chat": {
       "title": "Cách dùng Chat",
       "sections": [
+        {
+          "heading": "Bắt đầu từ Thử cái này",
+          "body": [
+            "Trong cuộc chat trống, chạm “{ui:nextByChat}” ở “{ui:nextTitle}”, gia sư sẽ mở lời trong tình huống đó. Câu đầu tiên không bị tính lượt.",
+            "Các cách nói trên dải “{ui:practiceNow}” được đánh ✓ khi bạn dùng."
+          ],
+          "shot": "chatnext"
+        },
         {
           "heading": "Chat bằng ngôn ngữ bạn học",
           "body": [
@@ -705,54 +737,54 @@
   },
   "fr": {
     "map": {
-      "title": "Utiliser la carte",
+      "title": "Utiliser Moi",
       "sections": [
         {
-          "heading": "1. Écrire un objectif",
+          "heading": "1. Commence par cocher",
           "body": [
-            "Écrivez ce que vous voulez savoir faire, choisissez votre niveau et touchez « {ui:mapDraw} »."
+            "Coche ce qui te manque et ce sur quoi te concentrer, puis « {ui:mapDraw} ». Pas de niveau à choisir."
           ],
           "shot": "goal"
         },
         {
-          "heading": "2. Lire la carte",
+          "heading": "2. À essayer",
           "body": [
-            "Les thèmes sont répartis en quatre colonnes : situations, expressions, vocabulaire, prononciation. Suivez « {ui:mapOrderTitle} » ; « {ui:mapContinue} » ouvre le premier thème."
+            "Une chose à faire maintenant, d'après ton propre historique. « {ui:nextByChat} » ou « {ui:nextByCall} » lance cette conversation tout de suite."
           ],
-          "shot": "map"
+          "shot": "next"
         },
         {
-          "heading": "3. S’entraîner avec des tâches",
+          "heading": "3. En croissance",
           "body": [
-            "Dans un thème, touchez « {ui:missionStart} ». Écrivez : c’est vérifié et corrigé. Bloqué ? « {ui:missionHint} »."
+            "Six parties grandissent quand tu pratiques et ne rapetissent jamais. Celle entourée est « {ui:myNext} »."
           ],
-          "shot": "mission"
+          "shot": "growth"
         },
         {
-          "heading": "4. Trois états",
+          "heading": "4. Touche pour voir",
           "body": [
-            "Sans indice : « {ui:itemsMastered} », avec de l’aide : « {ui:itemsLearned} », pas encore : « {ui:itemsToLearn} ». Ce qui est appris revient en révision."
+            "Touche une partie pour voir comment elle grandit, les deux dernières semaines et les expressions qui l'ont fait grandir ; « {ui:myGrowIt} » lance la pratique."
           ],
-          "shot": "progress"
+          "shot": "element"
         },
         {
-          "heading": "5. Mes expressions",
+          "heading": "5. Pose une question",
           "body": [
-            "« {ui:ledgerTitle} », en haut, rassemble les expressions de tous les onglets et montre leur progression chaque semaine."
+            "Pose une question comme « {ui:myAskQuick1} » : la réponse vient de ton historique. Chaque question compte comme une discussion."
           ],
-          "shot": "ledger"
+          "shot": "myask"
         },
         {
-          "heading": "6. Ajouter à la carte",
+          "heading": "6. Objectif et pratique",
           "body": [
-            "Dans l’analyse de phrase, choisissez une expression et touchez « {ui:markToMap} » : elle devient la première tâche du thème qui lui correspond. Les erreurs répétées y entrent seules."
+            "Ouvre « {ui:profileGoalTitle} » pour les thèmes tirés de ton objectif ; dans un thème, « {ui:missionStart} »."
           ],
-          "shot": "pick"
+          "shot": "goalopen"
         },
         {
           "heading": "Aussi",
           "body": [
-            "Nouvel objectif ? « {ui:mapNewGoal} ». La carte précédente revient avec « {ui:mapRestore} ». Chaque langue a sa propre carte."
+            "« {ui:ledgerTitle} » rassemble les expressions de tous les onglets. Nouvel objectif ? « {ui:mapNewGoal} ». Chaque langue a les siens."
           ]
         }
       ]
@@ -760,6 +792,14 @@
     "chat": {
       "title": "Utiliser le Chat",
       "sections": [
+        {
+          "heading": "Commencer par À essayer",
+          "body": [
+            "Dans une discussion vide, touche « {ui:nextByChat} » sous « {ui:nextTitle} » : le tuteur commence dans cette situation. Cette première ligne ne compte pas.",
+            "Les expressions du bandeau « {ui:practiceNow} » reçoivent un ✓ quand tu les utilises."
+          ],
+          "shot": "chatnext"
+        },
         {
           "heading": "Discuter dans la langue apprise",
           "body": [
@@ -881,54 +921,54 @@
   },
   "it": {
     "map": {
-      "title": "Come usare la mappa",
+      "title": "Come usare Io",
       "sections": [
         {
-          "heading": "1. Scrivi un obiettivo",
+          "heading": "1. Inizia spuntando",
           "body": [
-            "Scrivi cosa vuoi saper fare, scegli il livello e tocca ‘{ui:mapDraw}’."
+            "Spunta dove sei carente e su cosa concentrarti, poi «{ui:mapDraw}». Nessun livello da scegliere."
           ],
           "shot": "goal"
         },
         {
-          "heading": "2. Leggi la mappa",
+          "heading": "2. Prova questo",
           "body": [
-            "Gli argomenti sono in quattro colonne: situazioni, espressioni, vocabolario, pronuncia. Segui ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ apre il primo argomento."
+            "Una cosa da fare ora, dal tuo storico. «{ui:nextByChat}» o «{ui:nextByCall}» avvia subito quella conversazione."
           ],
-          "shot": "map"
+          "shot": "next"
         },
         {
-          "heading": "3. Esercitati con i compiti",
+          "heading": "3. In crescita",
           "body": [
-            "In un argomento tocca ‘{ui:missionStart}’. Scrivi e viene controllato e corretto. Bloccato? ‘{ui:missionHint}’."
+            "Sei parti crescono man mano che usi la lingua e non si rimpiccioliscono mai. Quella cerchiata è «{ui:myNext}»."
           ],
-          "shot": "mission"
+          "shot": "growth"
         },
         {
-          "heading": "4. Tre stati",
+          "heading": "4. Tocca per vedere",
           "body": [
-            "Senza suggerimenti è ‘{ui:itemsMastered}’, con aiuto è ‘{ui:itemsLearned}’, da fare è ‘{ui:itemsToLearn}’. Ciò che hai imparato torna per il ripasso."
+            "Tocca una parte per vedere come cresce, le ultime due settimane e le espressioni che l'hanno fatta crescere; «{ui:myGrowIt}» avvia la pratica."
           ],
-          "shot": "progress"
+          "shot": "element"
         },
         {
-          "heading": "5. Le mie espressioni",
+          "heading": "5. Chiedi",
           "body": [
-            "‘{ui:ledgerTitle}’, in alto, raccoglie le espressioni di tutte le schede e mostra quanto crescono ogni settimana."
+            "Chiedi qualcosa come «{ui:myAskQuick1}» e la risposta arriva dal tuo storico. Ogni domanda conta come una chat."
           ],
-          "shot": "ledger"
+          "shot": "myask"
         },
         {
-          "heading": "6. Aggiungi alla mappa",
+          "heading": "6. Obiettivo e pratica",
           "body": [
-            "Nell’analisi della frase scegli un’espressione e tocca ‘{ui:markToMap}’: diventa il primo compito dell’argomento giusto. Gli errori ripetuti entrano da soli."
+            "Apri «{ui:profileGoalTitle}» per i temi del tuo obiettivo; in un tema, «{ui:missionStart}»."
           ],
-          "shot": "pick"
+          "shot": "goalopen"
         },
         {
-          "heading": "Altro",
+          "heading": "Inoltre",
           "body": [
-            "Nuovo obiettivo? ‘{ui:mapNewGoal}’. La mappa precedente torna con ‘{ui:mapRestore}’. Ogni lingua ha la sua mappa."
+            "«{ui:ledgerTitle}» raccoglie le espressioni di tutte le schede. Nuovo obiettivo? «{ui:mapNewGoal}». Ogni lingua ha i suoi."
           ]
         }
       ]
@@ -936,6 +976,14 @@
     "chat": {
       "title": "Come usare la Chat",
       "sections": [
+        {
+          "heading": "Inizia da Prova questo",
+          "body": [
+            "In una chat vuota tocca «{ui:nextByChat}» sotto «{ui:nextTitle}» e il tutor inizia in quella situazione. La prima riga non conta.",
+            "Le espressioni nella striscia «{ui:practiceNow}» prendono una ✓ quando le usi."
+          ],
+          "shot": "chatnext"
+        },
         {
           "heading": "Chatta nella lingua che stai imparando",
           "body": [
@@ -1057,54 +1105,54 @@
   },
   "pt": {
     "map": {
-      "title": "Como usar o mapa",
+      "title": "Como usar Meu espaço",
       "sections": [
         {
-          "heading": "1. Escreva um objetivo",
+          "heading": "1. Comece marcando",
           "body": [
-            "Escreva o que quer conseguir fazer, escolha o nível e toque em ‘{ui:mapDraw}’."
+            "Marque onde falta algo e no que focar, depois toque “{ui:mapDraw}”. Não precisa escolher nível."
           ],
           "shot": "goal"
         },
         {
-          "heading": "2. Leia o mapa",
+          "heading": "2. Experimente isto",
           "body": [
-            "Os temas ficam em quatro colunas: situações, expressões, vocabulário, pronúncia. Siga ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ abre o primeiro tema."
+            "Uma coisa para fazer agora, com base no seu histórico. “{ui:nextByChat}” ou “{ui:nextByCall}” começa essa conversa na hora."
           ],
-          "shot": "map"
+          "shot": "next"
         },
         {
-          "heading": "3. Pratique com tarefas",
+          "heading": "3. Crescendo",
           "body": [
-            "Num tema, toque em ‘{ui:missionStart}’. Escreva e é verificado e corrigido. Travou? ‘{ui:missionHint}’."
+            "Seis partes crescem conforme você usa o idioma e nunca diminuem. A que tem um anel é “{ui:myNext}”."
           ],
-          "shot": "mission"
+          "shot": "growth"
         },
         {
-          "heading": "4. Três estados",
+          "heading": "4. Toque para ver",
           "body": [
-            "Sem dicas é ‘{ui:itemsMastered}’, com ajuda é ‘{ui:itemsLearned}’, ainda não é ‘{ui:itemsToLearn}’. O que aprendeu volta para revisão."
+            "Toque numa parte para ver como cresce, as últimas duas semanas e as expressões que a fizeram crescer; “{ui:myGrowIt}” começa a praticar."
           ],
-          "shot": "progress"
+          "shot": "element"
         },
         {
-          "heading": "5. Minhas expressões",
+          "heading": "5. Pergunte",
           "body": [
-            "‘{ui:ledgerTitle}’, no topo, junta as expressões de todas as abas e mostra quanto crescem por semana."
+            "Pergunte algo como “{ui:myAskQuick1}” e a resposta vem do seu histórico. Cada pergunta conta como uma conversa."
           ],
-          "shot": "ledger"
+          "shot": "myask"
         },
         {
-          "heading": "6. Pôr no mapa",
+          "heading": "6. Objetivo e prática",
           "body": [
-            "Na análise de frase, escolha uma expressão e toque em ‘{ui:markToMap}’: vira a primeira tarefa do tema certo. Erros repetidos entram sozinhos."
+            "Abra “{ui:profileGoalTitle}” para ver os temas do seu objetivo; num tema, “{ui:missionStart}”."
           ],
-          "shot": "pick"
+          "shot": "goalopen"
         },
         {
-          "heading": "Mais",
+          "heading": "Além disso",
           "body": [
-            "Novo objetivo? ‘{ui:mapNewGoal}’. O mapa anterior volta com ‘{ui:mapRestore}’. Cada idioma tem o seu mapa."
+            "“{ui:ledgerTitle}” reúne expressões de todas as abas. Novo objetivo? “{ui:mapNewGoal}”. Cada idioma tem o seu."
           ]
         }
       ]
@@ -1112,6 +1160,14 @@
     "chat": {
       "title": "Como usar o Chat",
       "sections": [
+        {
+          "heading": "Comece por Experimente isto",
+          "body": [
+            "Num chat vazio, toque “{ui:nextByChat}” em “{ui:nextTitle}” e o tutor começa naquela situação. Essa primeira linha não conta.",
+            "As expressões na faixa “{ui:practiceNow}” ganham um ✓ quando você as usa."
+          ],
+          "shot": "chatnext"
+        },
         {
           "heading": "Converse no idioma que está aprendendo",
           "body": [
@@ -1233,54 +1289,54 @@
   },
   "ru": {
     "map": {
-      "title": "Как пользоваться картой",
+      "title": "Как пользоваться разделом «Моё»",
       "sections": [
         {
-          "heading": "1. Напишите цель",
+          "heading": "1. Начните с отметок",
           "body": [
-            "Напишите, что хотите уметь, выберите уровень и нажмите «{ui:mapDraw}»."
+            "Отметьте, чего не хватает и на чём сосредоточиться, затем «{ui:mapDraw}». Уровень выбирать не нужно."
           ],
           "shot": "goal"
         },
         {
-          "heading": "2. Карта",
+          "heading": "2. Попробуйте",
           "body": [
-            "Темы разложены по четырём столбцам: ситуации, выражения, лексика, произношение. Идите по «{ui:mapOrderTitle}»; «{ui:mapContinue}» открывает первую тему."
+            "Одно дело на сейчас — по вашим записям. «{ui:nextByChat}» или «{ui:nextByCall}» сразу начинает этот разговор."
           ],
-          "shot": "map"
+          "shot": "next"
         },
         {
-          "heading": "3. Задания",
+          "heading": "3. Растёт",
           "body": [
-            "В теме нажмите «{ui:missionStart}». Напишите — ответ проверят и исправят. Застряли? «{ui:missionHint}»."
+            "Шесть частей растут по мере практики и никогда не уменьшаются. Обведённая — «{ui:myNext}»."
           ],
-          "shot": "mission"
+          "shot": "growth"
         },
         {
-          "heading": "4. Три состояния",
+          "heading": "4. Нажмите, чтобы посмотреть",
           "body": [
-            "Без подсказок — «{ui:itemsMastered}», с помощью — «{ui:itemsLearned}», ещё нет — «{ui:itemsToLearn}». Выученное возвращается на повторение."
+            "Нажмите на часть: как она растёт, последние две недели и выражения, которые помогли; «{ui:myGrowIt}» запускает практику."
           ],
-          "shot": "progress"
+          "shot": "element"
         },
         {
-          "heading": "5. Мои выражения",
+          "heading": "5. Спросите",
           "body": [
-            "«{ui:ledgerTitle}» вверху собирает выражения со всех вкладок и показывает рост по неделям."
+            "Спросите, например, «{ui:myAskQuick1}» — ответ по вашим записям. Каждый вопрос считается одним сообщением в чате."
           ],
-          "shot": "ledger"
+          "shot": "myask"
         },
         {
-          "heading": "6. Добавить на карту",
+          "heading": "6. Цель и практика",
           "body": [
-            "В разборе предложения выберите выражение и нажмите «{ui:markToMap}»: оно станет первым заданием подходящей темы. Повторяющиеся ошибки попадают туда сами."
+            "Откройте «{ui:profileGoalTitle}» — там темы по вашей цели; в теме нажмите «{ui:missionStart}»."
           ],
-          "shot": "pick"
+          "shot": "goalopen"
         },
         {
           "heading": "Ещё",
           "body": [
-            "Новая цель — «{ui:mapNewGoal}». Прежняя карта возвращается через «{ui:mapRestore}». У каждого языка своя карта."
+            "«{ui:ledgerTitle}» собирает выражения со всех вкладок. Новая цель? «{ui:mapNewGoal}». У каждого языка своё."
           ]
         }
       ]
@@ -1288,6 +1344,14 @@
     "chat": {
       "title": "Как пользоваться Чатом",
       "sections": [
+        {
+          "heading": "Начните с «Попробуйте»",
+          "body": [
+            "В пустом чате нажмите «{ui:nextByChat}» в «{ui:nextTitle}» — репетитор начнёт в этой ситуации. Первая реплика не считается.",
+            "Выражения на полосе «{ui:practiceNow}» получают ✓, когда вы их используете."
+          ],
+          "shot": "chatnext"
+        },
         {
           "heading": "Общайтесь на изучаемом языке",
           "body": [
@@ -1409,54 +1473,54 @@
   },
   "id": {
     "map": {
-      "title": "Cara memakai peta",
+      "title": "Cara memakai Saya",
       "sections": [
         {
-          "heading": "1. Tulis tujuan",
+          "heading": "1. Mulai dengan mencentang",
           "body": [
-            "Tulis apa yang ingin kamu bisa, pilih level, lalu ketuk ‘{ui:mapDraw}’."
+            "Centang bagian yang masih kurang dan yang ingin difokuskan, lalu “{ui:mapDraw}”. Tidak perlu memilih level."
           ],
           "shot": "goal"
         },
         {
-          "heading": "2. Baca peta",
+          "heading": "2. Coba ini",
           "body": [
-            "Topik ada di empat kolom: situasi, ungkapan, kosakata, pelafalan. Ikuti ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ membuka topik pertama."
+            "Satu hal untuk dilakukan sekarang, dari catatanmu sendiri. “{ui:nextByChat}” atau “{ui:nextByCall}” langsung memulai percakapan itu."
           ],
-          "shot": "map"
+          "shot": "next"
         },
         {
-          "heading": "3. Latihan dengan tugas",
+          "heading": "3. Sedang tumbuh",
           "body": [
-            "Di topik, ketuk ‘{ui:missionStart}’. Tulis, lalu diperiksa dan dibetulkan. Buntu? ‘{ui:missionHint}’."
+            "Enam bagian tumbuh saat kamu memakai bahasanya dan tidak pernah mengecil. Yang dilingkari adalah “{ui:myNext}”."
           ],
-          "shot": "mission"
+          "shot": "growth"
         },
         {
-          "heading": "4. Tiga status",
+          "heading": "4. Ketuk untuk melihat",
           "body": [
-            "Tanpa petunjuk = ‘{ui:itemsMastered}’, dengan bantuan = ‘{ui:itemsLearned}’, belum = ‘{ui:itemsToLearn}’. Yang sudah dipelajari muncul lagi untuk diulang."
+            "Ketuk satu bagian untuk melihat cara tumbuhnya, dua minggu terakhir, dan ungkapan yang menumbuhkannya; “{ui:myGrowIt}” untuk langsung berlatih."
           ],
-          "shot": "progress"
+          "shot": "element"
         },
         {
-          "heading": "5. Ungkapanku",
+          "heading": "5. Bertanya",
           "body": [
-            "‘{ui:ledgerTitle}’ di atas mengumpulkan ungkapan dari semua tab dan menunjukkan pertambahannya tiap minggu."
+            "Tanyakan misalnya “{ui:myAskQuick1}”, jawabannya dari catatanmu. Setiap pertanyaan dihitung satu chat."
           ],
-          "shot": "ledger"
+          "shot": "myask"
         },
         {
-          "heading": "6. Masukkan ke peta",
+          "heading": "6. Tujuan dan latihan",
           "body": [
-            "Di analisis kalimat, pilih ungkapan lalu ketuk ‘{ui:markToMap}’: jadi tugas pertama di topik yang cocok. Kesalahan yang berulang masuk sendiri."
+            "Buka “{ui:profileGoalTitle}” untuk topik dari tujuanmu; di topik, ketuk “{ui:missionStart}”."
           ],
-          "shot": "pick"
+          "shot": "goalopen"
         },
         {
           "heading": "Lainnya",
           "body": [
-            "Tujuan baru? ‘{ui:mapNewGoal}’. Peta sebelumnya kembali dengan ‘{ui:mapRestore}’. Tiap bahasa punya peta sendiri."
+            "“{ui:ledgerTitle}” mengumpulkan ungkapan dari semua tab. Ganti tujuan? “{ui:mapNewGoal}”. Tiap bahasa punya sendiri."
           ]
         }
       ]
@@ -1464,6 +1528,14 @@
     "chat": {
       "title": "Cara Pakai Chat",
       "sections": [
+        {
+          "heading": "Mulai dari Coba ini",
+          "body": [
+            "Di chat kosong, ketuk “{ui:nextByChat}” di “{ui:nextTitle}”, tutor akan membuka percakapan dalam situasi itu. Baris pertama tidak dihitung.",
+            "Ungkapan di pita “{ui:practiceNow}” diberi ✓ setelah kamu memakainya."
+          ],
+          "shot": "chatnext"
+        },
         {
           "heading": "Chat dengan Bahasa yang Dipelajari",
           "body": [
@@ -1585,54 +1657,54 @@
   },
   "ar": {
     "map": {
-      "title": "طريقة استخدام الخريطة",
+      "title": "كيف تستخدم «أنا»",
       "sections": [
         {
-          "heading": "1. اكتب هدفًا",
+          "heading": "1. ابدأ بالاختيار",
           "body": [
-            "اكتب ما تريد أن تستطيع فعله، واختر مستواك، ثم اضغط «{ui:mapDraw}»."
+            "اختر أين تشعر بالنقص وعلى ماذا تريد التركيز، ثم «{ui:mapDraw}». لا حاجة لاختيار مستوى."
           ],
           "shot": "goal"
         },
         {
-          "heading": "2. اقرأ الخريطة",
+          "heading": "2. جرّب هذا",
           "body": [
-            "المواضيع موزعة على أربعة أعمدة: المواقف والتعابير والمفردات والنطق. اتبع «{ui:mapOrderTitle}»، و«{ui:mapContinue}» يفتح أول موضوع."
+            "شيء واحد تفعله الآن، من سجلّك أنت. «{ui:nextByChat}» أو «{ui:nextByCall}» يبدأ تلك المحادثة فورًا."
           ],
-          "shot": "map"
+          "shot": "next"
         },
         {
-          "heading": "3. تدرّب بالمهام",
+          "heading": "3. ينمو",
           "body": [
-            "داخل الموضوع اضغط «{ui:missionStart}». اكتب فيُراجَع ويُصحَّح. علقت؟ «{ui:missionHint}»."
+            "ستة أجزاء تكبر كلما استخدمت اللغة ولا تصغر أبدًا. الجزء المحاط بدائرة هو «{ui:myNext}»."
           ],
-          "shot": "mission"
+          "shot": "growth"
         },
         {
-          "heading": "4. ثلاث حالات",
+          "heading": "4. اضغط لترى",
           "body": [
-            "ما أنجزته دون تلميح «{ui:itemsMastered}»، وبمساعدة «{ui:itemsLearned}»، وما لم تبدأه «{ui:itemsToLearn}». ما تعلمته يعود للمراجعة."
+            "اضغط على جزء لترى كيف ينمو وآخر أسبوعين والتعابير التي أنمته؛ «{ui:myGrowIt}» يبدأ التدريب."
           ],
-          "shot": "progress"
+          "shot": "element"
         },
         {
-          "heading": "5. تعابيري",
+          "heading": "5. اسأل",
           "body": [
-            "«{ui:ledgerTitle}» في الأعلى تجمع التعابير من كل التبويبات وتُظهر كم تزيد كل أسبوع."
+            "اسأل مثلًا «{ui:myAskQuick1}» فتأتيك الإجابة من سجلّك. كل سؤال يُحتسب محادثة واحدة."
           ],
-          "shot": "ledger"
+          "shot": "myask"
         },
         {
-          "heading": "6. أضف إلى خريطتك",
+          "heading": "6. الهدف والتدريب",
           "body": [
-            "في تحليل الجملة اختر تعبيرًا واضغط «{ui:markToMap}»، فيصبح أول مهمة في الموضوع المناسب. الأخطاء المتكررة تدخل وحدها."
+            "افتح «{ui:profileGoalTitle}» لترى المواضيع المرسومة من هدفك؛ وفي الموضوع اضغط «{ui:missionStart}»."
           ],
-          "shot": "pick"
+          "shot": "goalopen"
         },
         {
           "heading": "أيضًا",
           "body": [
-            "هدف جديد؟ «{ui:mapNewGoal}». الخريطة السابقة تعود بـ«{ui:mapRestore}». لكل لغة خريطتها."
+            "«{ui:ledgerTitle}» يجمع التعابير من كل التبويبات. هدف جديد؟ «{ui:mapNewGoal}». لكل لغة ما يخصّها."
           ]
         }
       ]
@@ -1640,6 +1712,14 @@
     "chat": {
       "title": "كيفية استخدام الدردشة",
       "sections": [
+        {
+          "heading": "ابدأ من «جرّب هذا»",
+          "body": [
+            "في محادثة فارغة، اضغط «{ui:nextByChat}» تحت «{ui:nextTitle}» فيبدأ المعلّم في ذلك الموقف. السطر الأول لا يُحتسب.",
+            "التعابير في شريط «{ui:practiceNow}» تحصل على ✓ عندما تستخدمها."
+          ],
+          "shot": "chatnext"
+        },
         {
           "heading": "الدردشة باللغة التي تتعلمها",
           "body": [
@@ -1761,54 +1841,54 @@
   },
   "th": {
     "map": {
-      "title": "วิธีใช้แผนที่",
+      "title": "วิธีใช้ ของฉัน",
       "sections": [
         {
-          "heading": "1. เขียนเป้าหมาย",
+          "heading": "1. เริ่มด้วยการเลือก",
           "body": [
-            "เขียนสิ่งที่อยากทำได้ เลือกระดับ แล้วแตะ ‘{ui:mapDraw}’"
+            "เลือกจุดที่ยังขาดและสิ่งที่อยากเน้น แล้วแตะ “{ui:mapDraw}” ไม่ต้องเลือกระดับ"
           ],
           "shot": "goal"
         },
         {
-          "heading": "2. ดูแผนที่",
+          "heading": "2. ลองทำสิ่งนี้",
           "body": [
-            "หัวข้ออยู่ในสี่คอลัมน์: สถานการณ์ สำนวน คำศัพท์ การออกเสียง ทำตาม ‘{ui:mapOrderTitle}’ ส่วน ‘{ui:mapContinue}’ จะเปิดหัวข้อแรก"
+            "แนะนำสิ่งที่ควรทำตอนนี้หนึ่งอย่างจากบันทึกของคุณ แตะ “{ui:nextByChat}” หรือ “{ui:nextByCall}” เพื่อเริ่มคุยในสถานการณ์นั้นทันที"
           ],
-          "shot": "map"
+          "shot": "next"
         },
         {
-          "heading": "3. ฝึกด้วยงาน",
+          "heading": "3. กำลังเติบโต",
           "body": [
-            "ในหัวข้อ แตะ ‘{ui:missionStart}’ เขียนแล้วจะถูกตรวจและแก้ให้ ติดอยู่ก็แตะ ‘{ui:missionHint}’"
+            "หกส่วนจะใหญ่ขึ้นเมื่อคุณใช้ภาษาและไม่มีวันเล็กลง ส่วนที่มีวงล้อมคือ “{ui:myNext}”"
           ],
-          "shot": "mission"
+          "shot": "growth"
         },
         {
-          "heading": "4. สามสถานะ",
+          "heading": "4. แตะเพื่อดู",
           "body": [
-            "ทำได้โดยไม่ใช้คำใบ้คือ ‘{ui:itemsMastered}’ ได้รับความช่วยเหลือคือ ‘{ui:itemsLearned}’ ยังไม่ทำคือ ‘{ui:itemsToLearn}’ สิ่งที่เรียนแล้วจะกลับมาให้ทบทวน"
+            "แตะส่วนหนึ่งเพื่อดูวิธีเติบโต สองสัปดาห์ล่าสุด และสำนวนที่ช่วยให้เติบโต แล้วฝึกทันทีด้วย “{ui:myGrowIt}”"
           ],
-          "shot": "progress"
+          "shot": "element"
         },
         {
-          "heading": "5. สำนวนของฉัน",
+          "heading": "5. ถาม",
           "body": [
-            "‘{ui:ledgerTitle}’ ด้านบนรวมสำนวนจากทุกแท็บ และแสดงว่าเพิ่มขึ้นเท่าไรในแต่ละสัปดาห์"
+            "ถามเช่น “{ui:myAskQuick1}” แล้วจะตอบจากบันทึกของคุณ ถาม 1 ครั้งนับเป็นแชท 1 ครั้ง"
           ],
-          "shot": "ledger"
+          "shot": "myask"
         },
         {
-          "heading": "6. ใส่ในแผนที่เอง",
+          "heading": "6. เป้าหมายและการฝึก",
           "body": [
-            "ในการวิเคราะห์ประโยค เลือกสำนวนแล้วแตะ ‘{ui:markToMap}’ จะกลายเป็นงานแรกของหัวข้อที่เหมาะ ข้อผิดพลาดที่ทำซ้ำจะถูกใส่ให้เอง"
+            "เปิด “{ui:profileGoalTitle}” เพื่อดูหัวข้อจากเป้าหมาย ในหัวข้อแตะ “{ui:missionStart}”"
           ],
-          "shot": "pick"
+          "shot": "goalopen"
         },
         {
           "heading": "อื่นๆ",
           "body": [
-            "เปลี่ยนเป้าหมาย แตะ ‘{ui:mapNewGoal}’ แผนที่ก่อนหน้ากลับมาด้วย ‘{ui:mapRestore}’ แต่ละภาษามีแผนที่ของตัวเอง"
+            "“{ui:ledgerTitle}” รวบรวมสำนวนจากทุกแท็บ เปลี่ยนเป้าหมาย? “{ui:mapNewGoal}” แต่ละภาษาแยกกัน"
           ]
         }
       ]
@@ -1816,6 +1896,14 @@
     "chat": {
       "title": "วิธีใช้แชท",
       "sections": [
+        {
+          "heading": "เริ่มจาก ลองทำสิ่งนี้",
+          "body": [
+            "ในแชทว่าง แตะ “{ui:nextByChat}” ใต้ “{ui:nextTitle}” ติวเตอร์จะเริ่มพูดในสถานการณ์นั้นก่อน บรรทัดแรกไม่นับครั้ง",
+            "สำนวนในแถบ “{ui:practiceNow}” จะมี ✓ เมื่อคุณใช้แล้ว"
+          ],
+          "shot": "chatnext"
+        },
         {
           "heading": "แชทด้วยภาษาที่คุณเรียน",
           "body": [
@@ -1937,54 +2025,54 @@
   },
   "hi": {
     "map": {
-      "title": "नक्शा कैसे इस्तेमाल करें",
+      "title": "“मेरा” कैसे इस्तेमाल करें",
       "sections": [
         {
-          "heading": "1. लक्ष्य लिखें",
+          "heading": "1. चुनकर शुरू करें",
           "body": [
-            "जो कर पाना चाहते हैं वह लिखें, स्तर चुनें और ‘{ui:mapDraw}’ दबाएँ।"
+            "जहाँ कमी लगती है और जिस पर ध्यान देना है, वह चुनें, फिर “{ui:mapDraw}”। स्तर चुनने की ज़रूरत नहीं।"
           ],
           "shot": "goal"
         },
         {
-          "heading": "2. नक्शा देखें",
+          "heading": "2. यह आज़माएँ",
           "body": [
-            "विषय चार कॉलम में हैं: स्थितियाँ, अभिव्यक्तियाँ, शब्दावली, उच्चारण। ‘{ui:mapOrderTitle}’ के क्रम में चलें; ‘{ui:mapContinue}’ पहला विषय खोलता है।"
+            "आपके अपने रिकॉर्ड से, अभी करने लायक एक काम। “{ui:nextByChat}” या “{ui:nextByCall}” से वह बातचीत तुरंत शुरू होती है।"
           ],
-          "shot": "map"
+          "shot": "next"
         },
         {
-          "heading": "3. कामों से अभ्यास",
+          "heading": "3. बढ़ रहा है",
           "body": [
-            "विषय में ‘{ui:missionStart}’ दबाएँ। लिखें, फिर जाँच और सुधार मिलेगा। अटकें तो ‘{ui:missionHint}’।"
+            "छह हिस्से भाषा इस्तेमाल करने के साथ बढ़ते हैं और कभी छोटे नहीं होते। घेरे वाला हिस्सा “{ui:myNext}” है।"
           ],
-          "shot": "mission"
+          "shot": "growth"
         },
         {
-          "heading": "4. तीन स्थितियाँ",
+          "heading": "4. छूकर देखें",
           "body": [
-            "बिना संकेत = ‘{ui:itemsMastered}’, मदद से = ‘{ui:itemsLearned}’, अभी नहीं = ‘{ui:itemsToLearn}’। सीखे हुए दोहराने के लिए फिर आते हैं।"
+            "किसी हिस्से को छुएँ: वह कैसे बढ़ता है, पिछले दो हफ़्ते और जिन अभिव्यक्तियों से बढ़ा; “{ui:myGrowIt}” से तुरंत अभ्यास।"
           ],
-          "shot": "progress"
+          "shot": "element"
         },
         {
-          "heading": "5. मेरे वाक्यांश",
+          "heading": "5. पूछें",
           "body": [
-            "ऊपर ‘{ui:ledgerTitle}’ में हर टैब से मिले वाक्यांश जमा होते हैं और हर हफ़्ते की बढ़त दिखती है।"
+            "“{ui:myAskQuick1}” जैसा पूछें, जवाब आपके रिकॉर्ड से आएगा। हर सवाल एक चैट गिना जाता है।"
           ],
-          "shot": "ledger"
+          "shot": "myask"
         },
         {
-          "heading": "6. नक्शे में खुद डालें",
+          "heading": "6. लक्ष्य और अभ्यास",
           "body": [
-            "वाक्य विश्लेषण में वाक्यांश चुनें और ‘{ui:markToMap}’ दबाएँ: वह सही विषय का पहला काम बन जाता है। बार-बार होने वाली गलतियाँ अपने-आप जुड़ती हैं।"
+            "“{ui:profileGoalTitle}” खोलें, वहाँ आपके लक्ष्य से बने विषय हैं; विषय में “{ui:missionStart}”।"
           ],
-          "shot": "pick"
+          "shot": "goalopen"
         },
         {
           "heading": "और",
           "body": [
-            "नया लक्ष्य? ‘{ui:mapNewGoal}’। पिछला नक्शा ‘{ui:mapRestore}’ से लौटता है। हर भाषा का अपना नक्शा है।"
+            "“{ui:ledgerTitle}” में हर टैब की अभिव्यक्तियाँ जमा होती हैं। नया लक्ष्य? “{ui:mapNewGoal}”। हर भाषा का अपना अलग है।"
           ]
         }
       ]
@@ -1992,6 +2080,14 @@
     "chat": {
       "title": "चैट का उपयोग कैसे करें",
       "sections": [
+        {
+          "heading": "“यह आज़माएँ” से शुरू करें",
+          "body": [
+            "खाली चैट में “{ui:nextTitle}” के नीचे “{ui:nextByChat}” दबाएँ, ट्यूटर उसी स्थिति में बात शुरू करेगा। पहली पंक्ति गिनी नहीं जाती।",
+            "ऊपर “{ui:practiceNow}” पट्टी की अभिव्यक्तियों पर इस्तेमाल करते ही ✓ लग जाता है।"
+          ],
+          "shot": "chatnext"
+        },
         {
           "heading": "सीख रही भाषा में चैट करें",
           "body": [

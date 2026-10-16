@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-16";
+export const GUIDE_VERSION = "2026-10-16b";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab";
 
@@ -38,54 +38,54 @@ export type Guide = Record<GuideTabId, GuideTab>;
 
 export const GUIDE_KO: Guide = {
   map: {
-    title: "지도 사용법",
+    title: "My 사용법",
     sections: [
       {
-        heading: "1. 목표 적기",
+        heading: "1. 체크로 시작",
         body: [
-          "되고 싶은 모습을 적고 수준을 고른 뒤 ‘{ui:mapDraw}’."
+          "부족한 부분과 위주로 할 것을 고르고 ‘{ui:mapDraw}’. 수준은 묻지 않아요."
         ],
         shot: "goal"
       },
       {
-        heading: "2. 지도 보기",
+        heading: "2. 오늘 해볼 것",
         body: [
-          "네 칸(상황·표현·어휘·발음)에 주제가 들어가요. ‘{ui:mapOrderTitle}’ 순서대로 하면 되고, ‘{ui:mapContinue}’은 첫 주제를 열어요."
+          "쌓인 기록으로 지금 할 것 하나를 권해요. ‘{ui:nextByChat}’이나 ‘{ui:nextByCall}’을 누르면 그 상황으로 대화가 바로 시작돼요."
         ],
-        shot: "map"
+        shot: "next"
       },
       {
-        heading: "3. 할 일로 연습",
+        heading: "3. 자라는 중",
         body: [
-          "주제에서 ‘{ui:missionStart}’. 써 보면 확인하고 고쳐 줘요. 막히면 ‘{ui:missionHint}’."
+          "여섯 부분이 쓸수록 커지고 줄지 않아요. 테두리 친 곳이 ‘{ui:myNext}’이에요."
         ],
-        shot: "mission"
+        shot: "growth"
       },
       {
-        heading: "4. 세 가지 상태",
+        heading: "4. 눌러서 보기",
         body: [
-          "힌트 없이 해낸 건 ‘{ui:itemsMastered}’, 도움받은 건 ‘{ui:itemsLearned}’, 아직은 ‘{ui:itemsToLearn}’. 배운 건 복습으로 다시 나와요."
+          "부분을 누르면 자라는 방법·최근 2주·키운 표현이 보이고, ‘{ui:myGrowIt}’로 바로 연습해요."
         ],
-        shot: "progress"
+        shot: "element"
       },
       {
-        heading: "5. 내 표현",
+        heading: "5. 직접 묻기",
         body: [
-          "맨 위 ‘{ui:ledgerTitle}’에 모든 탭에서 만난 표현이 쌓이고, 주마다 얼마나 늘었는지 보여요."
+          "‘{ui:myAskQuick1}’처럼 물으면 내 기록으로 답해요. 질문 1번은 채팅 1회예요."
         ],
-        shot: "ledger"
+        shot: "myask"
       },
       {
-        heading: "6. 지도에 직접 넣기",
+        heading: "6. 목표와 연습",
         body: [
-          "문장분석에서 표현을 고르고 ‘{ui:markToMap}’. 맞는 주제의 첫 할 일이 돼요. 자주 틀리는 것도 저절로 들어가요."
+          "‘{ui:profileGoalTitle}’을 펼치면 목표로 그린 주제가 있고, 주제에서 ‘{ui:missionStart}’로 연습해요."
         ],
-        shot: "pick"
+        shot: "goalopen"
       },
       {
         heading: "그 밖에",
         body: [
-          "목표가 바뀌면 ‘{ui:mapNewGoal}’, 바로 전 지도는 ‘{ui:mapRestore}’. 지도는 배우는 언어마다 따로예요."
+          "‘{ui:ledgerTitle}’에 모든 탭에서 만난 표현이 쌓여요. 목표가 바뀌면 ‘{ui:mapNewGoal}’. 배우는 언어마다 따로예요."
         ]
       }
     ]
@@ -93,6 +93,14 @@ export const GUIDE_KO: Guide = {
   chat: {
     title: "채팅 사용법",
     sections: [
+      {
+        heading: "오늘 해볼 것으로 시작",
+        body: [
+          "빈 대화의 ‘{ui:nextTitle}’에서 ‘{ui:nextByChat}’을 누르면 튜터가 그 상황으로 먼저 말을 걸어요. 첫 줄은 횟수에 안 들어가요.",
+          "위 ‘{ui:practiceNow}’ 띠의 표현은 쓰면 ✓가 붙어요.",
+        ],
+        shot: "chatnext",
+      },
       {
         heading: "배우는 언어로 대화하기",
         body: [
@@ -214,54 +222,54 @@ export const GUIDE_KO: Guide = {
 
 export const GUIDE_EN: Guide = {
   map: {
-    title: "Using the map",
+    title: "Using My",
     sections: [
       {
-        heading: "1. Write a goal",
+        heading: "1. Start by ticking",
         body: [
-          "Write what you want to be able to do, pick your level, and tap ‘{ui:mapDraw}’."
+          "Tick where you fall short and what to focus on, then ‘{ui:mapDraw}’. There's no level to pick."
         ],
         shot: "goal"
       },
       {
-        heading: "2. Read the map",
+        heading: "2. Try this",
         body: [
-          "Topics sit in four columns: situations, expressions, vocabulary, pronunciation. Follow ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ opens the first topic."
+          "One thing to do now, from your own record. ‘{ui:nextByChat}’ or ‘{ui:nextByCall}’ starts that conversation straight away."
         ],
-        shot: "map"
+        shot: "next"
       },
       {
-        heading: "3. Practise with tasks",
+        heading: "3. Growing",
         body: [
-          "In a topic, tap ‘{ui:missionStart}’. Write it and it’s checked and corrected. Stuck? ‘{ui:missionHint}’."
+          "Six parts grow as you use the language and never shrink. The ringed one is ‘{ui:myNext}’."
         ],
-        shot: "mission"
+        shot: "growth"
       },
       {
-        heading: "4. Three states",
+        heading: "4. Tap to look closer",
         body: [
-          "Done without hints is ‘{ui:itemsMastered}’, done with help is ‘{ui:itemsLearned}’, not yet is ‘{ui:itemsToLearn}’. Learned ones come back for review."
+          "Tap a part for how it grows, the last two weeks and the phrases that grew it; ‘{ui:myGrowIt}’ starts practising."
         ],
-        shot: "progress"
+        shot: "element"
       },
       {
-        heading: "5. My phrases",
+        heading: "5. Ask",
         body: [
-          "‘{ui:ledgerTitle}’ at the top gathers phrases from every tab and shows how they grow each week."
+          "Ask something like ‘{ui:myAskQuick1}’ and it answers from your record. One question is one chat."
         ],
-        shot: "ledger"
+        shot: "myask"
       },
       {
-        heading: "6. Put things on your map",
+        heading: "6. Goal and practice",
         body: [
-          "In sentence analysis, pick a phrase and tap ‘{ui:markToMap}’: it becomes the first task of the topic it fits. Mistakes you repeat go in by themselves."
+          "Open ‘{ui:profileGoalTitle}’ for the topics drawn from your goal; in a topic, ‘{ui:missionStart}’."
         ],
-        shot: "pick"
+        shot: "goalopen"
       },
       {
         heading: "Also",
         body: [
-          "New goal? ‘{ui:mapNewGoal}’. The previous map is one tap away with ‘{ui:mapRestore}’. Each learning language has its own map."
+          "‘{ui:ledgerTitle}’ gathers phrases from every tab. New goal? ‘{ui:mapNewGoal}’. Each learning language has its own."
         ]
       }
     ]
@@ -269,6 +277,14 @@ export const GUIDE_EN: Guide = {
   chat: {
     title: "How to use Chat",
     sections: [
+      {
+        heading: "Start from Try this",
+        body: [
+          "In an empty chat, tap ‘{ui:nextByChat}’ under ‘{ui:nextTitle}’ and the tutor opens in that situation. That first line isn't counted.",
+          "Phrases on the ‘{ui:practiceNow}’ strip get a ✓ once you use them.",
+        ],
+        shot: "chatnext",
+      },
       {
         heading: "Chat in the language you're learning",
         body: [

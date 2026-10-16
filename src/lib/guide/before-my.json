@@ -1,0 +1,1262 @@
+{
+  "ko": {
+    "map": {
+      "title": "지도 사용법",
+      "sections": [
+        {
+          "heading": "1. 목표 적기",
+          "body": [
+            "되고 싶은 모습을 적고 수준을 고른 뒤 ‘{ui:mapDraw}’."
+          ],
+          "shot": "goal"
+        },
+        {
+          "heading": "2. 지도 보기",
+          "body": [
+            "네 칸(상황·표현·어휘·발음)에 주제가 들어가요. ‘{ui:mapOrderTitle}’ 순서대로 하면 되고, ‘{ui:mapContinue}’은 첫 주제를 열어요."
+          ],
+          "shot": "map"
+        },
+        {
+          "heading": "3. 할 일로 연습",
+          "body": [
+            "주제에서 ‘{ui:missionStart}’. 써 보면 확인하고 고쳐 줘요. 막히면 ‘{ui:missionHint}’."
+          ],
+          "shot": "mission"
+        },
+        {
+          "heading": "4. 세 가지 상태",
+          "body": [
+            "힌트 없이 해낸 건 ‘{ui:itemsMastered}’, 도움받은 건 ‘{ui:itemsLearned}’, 아직은 ‘{ui:itemsToLearn}’. 배운 건 복습으로 다시 나와요."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. 내 표현",
+          "body": [
+            "맨 위 ‘{ui:ledgerTitle}’에 모든 탭에서 만난 표현이 쌓이고, 주마다 얼마나 늘었는지 보여요."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. 지도에 직접 넣기",
+          "body": [
+            "문장분석에서 표현을 고르고 ‘{ui:markToMap}’. 맞는 주제의 첫 할 일이 돼요. 자주 틀리는 것도 저절로 들어가요."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "그 밖에",
+          "body": [
+            "목표가 바뀌면 ‘{ui:mapNewGoal}’, 바로 전 지도는 ‘{ui:mapRestore}’. 지도는 배우는 언어마다 따로예요."
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "채팅 사용법",
+      "sections": [
+        {
+          "heading": "배우는 언어로 대화하기",
+          "body": [
+            "배우는 언어로 문장을 쓰면 튜터가 친구처럼 답해요.",
+            "틀린 부분이 있으면 내 문장에 표시가 생기고, 바로 아래에 고친 문장이 나와요."
+          ]
+        },
+        {
+          "heading": "막히면 내 언어로",
+          "body": [
+            "배우는 언어로 말하기 어려운 건 내 언어로 써도 돼요. 대화는 그대로 이어지고, 보낸 메시지 하나로 세요.",
+            "내 문장 아래 ‘{ui:chatShowExpression}’을 누르면 배우는 언어로 어떻게 말하는지 볼 수 있고, ‘{ui:chatUseExpression}’로 바로 써볼 수 있어요."
+          ]
+        },
+        {
+          "heading": "뜻 보기와 문장 분석",
+          "body": [
+            "튜터의 답 아래 ‘{ui:chatReading}’을 누르면 내 언어로 된 뜻을 볼 수 있어요.",
+            "문장의 ‘{ui:insightAnalyze}’을 누르면 문장 시트가 열려요. 점을 끌어 부분을 고르고 ‘{ui:quickAskMeaning}’ 같은 질문을 누르거나 직접 물어보세요. 답은 그 부분에 남아서 다음에도 볼 수 있어요."
+          ]
+        },
+        {
+          "heading": "그 밖에",
+          "body": [
+            "무슨 말을 할지 모르겠으면 ‘{ui:chatStartCta}’를 누르세요. 튜터가 대화를 시작해요.",
+            "+ 버튼으로 사진을 보내면 사진을 보며 대화할 수 있어요.",
+            "왼쪽 위 메뉴에서 지난 대화를 보거나 새 대화를 시작할 수 있어요.",
+            "무료로는 하루 10번까지 보낼 수 있고, 프리미엄은 제한이 없어요."
+          ]
+        }
+      ]
+    }
+  },
+  "en": {
+    "map": {
+      "title": "Using the map",
+      "sections": [
+        {
+          "heading": "1. Write a goal",
+          "body": [
+            "Write what you want to be able to do, pick your level, and tap ‘{ui:mapDraw}’."
+          ],
+          "shot": "goal"
+        },
+        {
+          "heading": "2. Read the map",
+          "body": [
+            "Topics sit in four columns: situations, expressions, vocabulary, pronunciation. Follow ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ opens the first topic."
+          ],
+          "shot": "map"
+        },
+        {
+          "heading": "3. Practise with tasks",
+          "body": [
+            "In a topic, tap ‘{ui:missionStart}’. Write it and it’s checked and corrected. Stuck? ‘{ui:missionHint}’."
+          ],
+          "shot": "mission"
+        },
+        {
+          "heading": "4. Three states",
+          "body": [
+            "Done without hints is ‘{ui:itemsMastered}’, done with help is ‘{ui:itemsLearned}’, not yet is ‘{ui:itemsToLearn}’. Learned ones come back for review."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. My phrases",
+          "body": [
+            "‘{ui:ledgerTitle}’ at the top gathers phrases from every tab and shows how they grow each week."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Put things on your map",
+          "body": [
+            "In sentence analysis, pick a phrase and tap ‘{ui:markToMap}’: it becomes the first task of the topic it fits. Mistakes you repeat go in by themselves."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Also",
+          "body": [
+            "New goal? ‘{ui:mapNewGoal}’. The previous map is one tap away with ‘{ui:mapRestore}’. Each learning language has its own map."
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "How to use Chat",
+      "sections": [
+        {
+          "heading": "Chat in the language you're learning",
+          "body": [
+            "Write in the language you're learning and the tutor answers like a friend would.",
+            "If something is off, it's marked in your message, with the corrected sentence right below."
+          ]
+        },
+        {
+          "heading": "Stuck? Use your own language",
+          "body": [
+            "If something is hard to say in the language you're learning, write it in your own. The conversation carries on, and it counts as one message like any other.",
+            "Tap {ui:chatShowExpression} under your message to see how to say it, then {ui:chatUseExpression} to try it straight away."
+          ]
+        },
+        {
+          "heading": "Meanings and sentence analysis",
+          "body": [
+            "Tap {ui:chatReading} under the tutor's reply to see it in your own language.",
+            "Tap {ui:insightAnalyze} on a sentence to open it. Drag across the dots to pick a part, then tap a question like {ui:quickAskMeaning} or ask your own. The answer stays on that part for next time."
+          ]
+        },
+        {
+          "heading": "Also",
+          "body": [
+            "Not sure what to say? Tap {ui:chatStartCta} and the tutor will begin.",
+            "Use + to send a photo and talk about it.",
+            "The menu at the top left has your past chats and starts a new one.",
+            "Free accounts can send 10 messages a day; Premium has no daily limit."
+          ]
+        }
+      ]
+    }
+  },
+  "es": {
+    "map": {
+      "title": "Cómo usar el mapa",
+      "sections": [
+        {
+          "heading": "1. Escribe un objetivo",
+          "body": [
+            "Escribe lo que quieres lograr, elige tu nivel y toca ‘{ui:mapDraw}’."
+          ],
+          "shot": "goal"
+        },
+        {
+          "heading": "2. Lee el mapa",
+          "body": [
+            "Los temas están en cuatro columnas: situaciones, expresiones, vocabulario y pronunciación. Sigue ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ abre el primer tema."
+          ],
+          "shot": "map"
+        },
+        {
+          "heading": "3. Practica con tareas",
+          "body": [
+            "En un tema, toca ‘{ui:missionStart}’. Escribe y se revisa y corrige. ¿Te atascas? ‘{ui:missionHint}’."
+          ],
+          "shot": "mission"
+        },
+        {
+          "heading": "4. Tres estados",
+          "body": [
+            "Sin pistas es ‘{ui:itemsMastered}’, con ayuda es ‘{ui:itemsLearned}’, pendiente es ‘{ui:itemsToLearn}’. Lo aprendido vuelve para repasar."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. Mis expresiones",
+          "body": [
+            "‘{ui:ledgerTitle}’, arriba, reúne las expresiones de todas las pestañas y muestra cuánto crecen cada semana."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Añade cosas al mapa",
+          "body": [
+            "En el análisis de frases, elige una expresión y toca ‘{ui:markToMap}’: será la primera tarea del tema que le corresponde. Los errores que repites entran solos."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Además",
+          "body": [
+            "¿Nuevo objetivo? ‘{ui:mapNewGoal}’. El mapa anterior vuelve con ‘{ui:mapRestore}’. Cada idioma tiene su propio mapa."
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "Cómo usar Chat",
+      "sections": [
+        {
+          "heading": "Chatea en el idioma que aprendes",
+          "body": [
+            "Escribe en el idioma que estás aprendiendo y el tutor te responde como un amigo.",
+            "Si hay algún error, se marca en tu mensaje y justo debajo ves la frase corregida."
+          ]
+        },
+        {
+          "heading": "¿Te atascas? Usa tu idioma",
+          "body": [
+            "Si algo te cuesta decirlo en el idioma que aprendes, escríbelo en el tuyo. La conversación sigue y cuenta como un mensaje más.",
+            "Toca {ui:chatShowExpression} bajo tu mensaje para ver cómo se dice y {ui:chatUseExpression} para probarlo enseguida."
+          ]
+        },
+        {
+          "heading": "Significados y análisis de frases",
+          "body": [
+            "Toca {ui:chatReading} bajo la respuesta del tutor para verla en tu idioma.",
+            "Toca {ui:insightAnalyze} en una frase para abrirla. Arrastra sobre los puntos para elegir una parte y toca una pregunta como {ui:quickAskMeaning} o haz la tuya. La respuesta queda guardada en esa parte."
+          ]
+        },
+        {
+          "heading": "Más opciones",
+          "body": [
+            "¿No sabes qué decir? Toca {ui:chatStartCta} y el tutor empezará la conversación.",
+            "Usa + para enviar una foto y hablar sobre ella.",
+            "El menú arriba a la izquierda te muestra tus chats anteriores y te permite iniciar uno nuevo.",
+            "Las cuentas gratis pueden enviar 10 mensajes al día; Premium no tiene límite diario."
+          ]
+        }
+      ]
+    }
+  },
+  "ja": {
+    "map": {
+      "title": "マップの使い方",
+      "sections": [
+        {
+          "heading": "1. 目標を書く",
+          "body": [
+            "できるようになりたいことを書き、レベルを選んで「{ui:mapDraw}」。"
+          ],
+          "shot": "goal"
+        },
+        {
+          "heading": "2. マップを見る",
+          "body": [
+            "トピックは場面・表現・単語・発音の4列に並びます。「{ui:mapOrderTitle}」の順に進め、「{ui:mapContinue}」で最初のトピックが開きます。"
+          ],
+          "shot": "map"
+        },
+        {
+          "heading": "3. タスクで練習",
+          "body": [
+            "トピックで「{ui:missionStart}」。書くとチェックと添削。詰まったら「{ui:missionHint}」。"
+          ],
+          "shot": "mission"
+        },
+        {
+          "heading": "4. 3つの状態",
+          "body": [
+            "ヒントなしでできたら「{ui:itemsMastered}」、助けを借りたら「{ui:itemsLearned}」、まだなら「{ui:itemsToLearn}」。学習済みは復習で戻ってきます。"
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. わたしの表現",
+          "body": [
+            "上部の「{ui:ledgerTitle}」に全タブで出会った表現がたまり、週ごとの伸びが見えます。"
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. マップに自分で入れる",
+          "body": [
+            "文章分析で表現を選んで「{ui:markToMap}」。合うトピックの最初のタスクになります。よく間違えることは自動で入ります。"
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "そのほか",
+          "body": [
+            "目標が変わったら「{ui:mapNewGoal}」、直前のマップは「{ui:mapRestore}」。マップは学習言語ごとに別です。"
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "チャットの使い方",
+      "sections": [
+        {
+          "heading": "学習言語でチャット",
+          "body": [
+            "学んでいる言語で書くと、チューターが友達のように返事をしてくれます。",
+            "間違いがあると自分のメッセージに印がつき、正しい文がすぐ下に表示されます。"
+          ]
+        },
+        {
+          "heading": "詰まったら自分の言葉で",
+          "body": [
+            "学んでいる言語で言いにくいことは、自分の言葉で書いても大丈夫。会話はそのまま続き、ほかのメッセージと同じく1通として数えます。",
+            "自分の文の下の「{ui:chatShowExpression}」を押すと言い方が見られ、「{ui:chatUseExpression}」ですぐ使ってみられます。"
+          ]
+        },
+        {
+          "heading": "意味と文の分析",
+          "body": [
+            "チューターの返信下の「{ui:chatReading}」を押すと、自分の言語で意味が見られます。",
+            "文の「{ui:insightAnalyze}」を押すと文シートが開きます。点をなぞって部分を選び、「{ui:quickAskMeaning}」などの質問を押すか、自分で質問してください。答えはその部分に残り、あとで見返せます。"
+          ]
+        },
+        {
+          "heading": "その他の機能",
+          "body": [
+            "何を書けばいいか迷ったら「{ui:chatStartCta}」を押すと、チューターが会話を始めてくれます。",
+            "+ボタンで写真を送って、それについて話すこともできます。",
+            "左上のメニューから過去のチャットを見たり、新しいチャットを始めたりできます。",
+            "無料アカウントは1日10メッセージまで、プレミアムは無制限です。"
+          ]
+        }
+      ]
+    }
+  },
+  "zh": {
+    "map": {
+      "title": "地图使用方法",
+      "sections": [
+        {
+          "heading": "1. 写下目标",
+          "body": [
+            "写下你想做到的事，选择水平，点「{ui:mapDraw}」。"
+          ],
+          "shot": "goal"
+        },
+        {
+          "heading": "2. 看地图",
+          "body": [
+            "主题分在情境、表达、词汇、发音四列。按「{ui:mapOrderTitle}」的顺序学，「{ui:mapContinue}」会打开第一个主题。"
+          ],
+          "shot": "map"
+        },
+        {
+          "heading": "3. 用任务练习",
+          "body": [
+            "在主题里点「{ui:missionStart}」。写出来就会检查并纠正。卡住了点「{ui:missionHint}」。"
+          ],
+          "shot": "mission"
+        },
+        {
+          "heading": "4. 三种状态",
+          "body": [
+            "没用提示完成的是「{ui:itemsMastered}」，借助帮助完成的是「{ui:itemsLearned}」，还没做的是「{ui:itemsToLearn}」。学过的会回来复习。"
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. 我的表达",
+          "body": [
+            "顶部的「{ui:ledgerTitle}」汇集各个标签页遇到的表达，并显示每周增长多少。"
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. 自己加到地图",
+          "body": [
+            "在句子分析里选中表达，点「{ui:markToMap}」，它会成为对应主题的第一个任务。常犯的错误会自动加入。"
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "其他",
+          "body": [
+            "目标变了就点「{ui:mapNewGoal}」，上一张地图用「{ui:mapRestore}」找回。每种学习语言各有一张地图。"
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "聊天功能指南",
+      "sections": [
+        {
+          "heading": "用目标语言聊天",
+          "body": [
+            "用你正在学习的语言输入内容，导师会像朋友一样回复你。",
+            "有错误会在你的消息中标出，下面会显示正确的句子。"
+          ]
+        },
+        {
+          "heading": "卡住了就用自己的语言",
+          "body": [
+            "用所学语言说不出来的，可以用自己的语言写。对话照常继续，和其他消息一样算一条。",
+            "点你句子下面的“{ui:chatShowExpression}”就能看到怎么说，再点“{ui:chatUseExpression}”马上试试。"
+          ]
+        },
+        {
+          "heading": "查看释义与句子分析",
+          "body": [
+            "点击导师回复下方的{ui:chatReading}，可查看母语释义。",
+            "点句子上的“{ui:insightAnalyze}”打开句子面板。拖过圆点选出一部分，点“{ui:quickAskMeaning}”这类问题，或自己提问。回答会留在那一部分，之后还能再看。"
+          ]
+        },
+        {
+          "heading": "更多功能",
+          "body": [
+            "不知道说什么时，点{ui:chatStartCta}让导师先开场。",
+            "点击+可以发送照片，一起聊图片。",
+            "左上角菜单可查看历史聊天或开始新对话。",
+            "免费用户每天可发10条消息，会员无限制。"
+          ]
+        }
+      ]
+    }
+  },
+  "vi": {
+    "map": {
+      "title": "Cách dùng bản đồ",
+      "sections": [
+        {
+          "heading": "1. Viết mục tiêu",
+          "body": [
+            "Viết điều bạn muốn làm được, chọn trình độ rồi chạm ‘{ui:mapDraw}’."
+          ],
+          "shot": "goal"
+        },
+        {
+          "heading": "2. Xem bản đồ",
+          "body": [
+            "Chủ đề nằm trong bốn cột: tình huống, cách nói, từ vựng, phát âm. Làm theo ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ mở chủ đề đầu tiên."
+          ],
+          "shot": "map"
+        },
+        {
+          "heading": "3. Luyện bằng việc cần làm",
+          "body": [
+            "Trong chủ đề, chạm ‘{ui:missionStart}’. Viết ra là được kiểm tra và sửa. Bí thì chạm ‘{ui:missionHint}’."
+          ],
+          "shot": "mission"
+        },
+        {
+          "heading": "4. Ba trạng thái",
+          "body": [
+            "Làm được không cần gợi ý là ‘{ui:itemsMastered}’, có trợ giúp là ‘{ui:itemsLearned}’, chưa làm là ‘{ui:itemsToLearn}’. Cái đã học sẽ quay lại để ôn."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. Cách nói của tôi",
+          "body": [
+            "‘{ui:ledgerTitle}’ ở trên cùng gom cách nói bạn gặp ở mọi tab và cho thấy mỗi tuần tăng bao nhiêu."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Tự thêm vào bản đồ",
+          "body": [
+            "Trong phân tích câu, chọn cách nói rồi chạm ‘{ui:markToMap}’: nó thành việc đầu tiên của chủ đề phù hợp. Lỗi hay lặp lại sẽ tự được thêm."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Khác",
+          "body": [
+            "Đổi mục tiêu thì chạm ‘{ui:mapNewGoal}’, bản đồ trước đó lấy lại bằng ‘{ui:mapRestore}’. Mỗi ngôn ngữ học có bản đồ riêng."
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "Cách dùng Chat",
+      "sections": [
+        {
+          "heading": "Chat bằng ngôn ngữ bạn học",
+          "body": [
+            "Viết bằng ngôn ngữ bạn đang học, trợ lý sẽ trả lời như một người bạn.",
+            "Nếu có lỗi, phần sai sẽ được đánh dấu trong tin nhắn của bạn, và câu sửa sẽ hiển thị ngay bên dưới."
+          ]
+        },
+        {
+          "heading": "Bí thì dùng tiếng của bạn",
+          "body": [
+            "Điều gì khó nói bằng ngôn ngữ đang học, bạn cứ viết bằng tiếng của mình. Cuộc trò chuyện vẫn tiếp tục và chỉ tính là một tin nhắn như mọi tin khác.",
+            "Chạm {ui:chatShowExpression} dưới tin nhắn để xem cách nói, rồi {ui:chatUseExpression} để thử ngay."
+          ]
+        },
+        {
+          "heading": "Xem nghĩa và phân tích câu",
+          "body": [
+            "Nhấn {ui:chatReading} dưới câu trả lời để xem nghĩa bằng tiếng mẹ đẻ.",
+            "Chạm {ui:insightAnalyze} trên một câu để mở câu đó. Kéo qua các chấm để chọn một phần, rồi chạm câu hỏi như {ui:quickAskMeaning} hoặc tự hỏi. Câu trả lời được lưu lại ở phần đó."
+          ]
+        },
+        {
+          "heading": "Lưu ý khác",
+          "body": [
+            "Không biết bắt đầu thế nào? Nhấn {ui:chatStartCta} để trợ lý bắt đầu cuộc trò chuyện.",
+            "Dùng dấu + để gửi ảnh và trò chuyện về ảnh đó.",
+            "Menu góc trên bên trái cho phép xem lại các cuộc chat cũ hoặc bắt đầu chat mới.",
+            "Tài khoản miễn phí gửi được 10 tin nhắn mỗi ngày; Premium không giới hạn."
+          ]
+        }
+      ]
+    }
+  },
+  "fr": {
+    "map": {
+      "title": "Utiliser la carte",
+      "sections": [
+        {
+          "heading": "1. Écrire un objectif",
+          "body": [
+            "Écrivez ce que vous voulez savoir faire, choisissez votre niveau et touchez « {ui:mapDraw} »."
+          ],
+          "shot": "goal"
+        },
+        {
+          "heading": "2. Lire la carte",
+          "body": [
+            "Les thèmes sont répartis en quatre colonnes : situations, expressions, vocabulaire, prononciation. Suivez « {ui:mapOrderTitle} » ; « {ui:mapContinue} » ouvre le premier thème."
+          ],
+          "shot": "map"
+        },
+        {
+          "heading": "3. S’entraîner avec des tâches",
+          "body": [
+            "Dans un thème, touchez « {ui:missionStart} ». Écrivez : c’est vérifié et corrigé. Bloqué ? « {ui:missionHint} »."
+          ],
+          "shot": "mission"
+        },
+        {
+          "heading": "4. Trois états",
+          "body": [
+            "Sans indice : « {ui:itemsMastered} », avec de l’aide : « {ui:itemsLearned} », pas encore : « {ui:itemsToLearn} ». Ce qui est appris revient en révision."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. Mes expressions",
+          "body": [
+            "« {ui:ledgerTitle} », en haut, rassemble les expressions de tous les onglets et montre leur progression chaque semaine."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Ajouter à la carte",
+          "body": [
+            "Dans l’analyse de phrase, choisissez une expression et touchez « {ui:markToMap} » : elle devient la première tâche du thème qui lui correspond. Les erreurs répétées y entrent seules."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Aussi",
+          "body": [
+            "Nouvel objectif ? « {ui:mapNewGoal} ». La carte précédente revient avec « {ui:mapRestore} ». Chaque langue a sa propre carte."
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "Utiliser le Chat",
+      "sections": [
+        {
+          "heading": "Discuter dans la langue apprise",
+          "body": [
+            "Écrivez dans la langue que vous apprenez, le tuteur répond comme un ami.",
+            "Si quelque chose ne va pas, c’est signalé dans votre message, avec la correction juste en dessous."
+          ]
+        },
+        {
+          "heading": "Tu bloques ? Écris dans ta langue",
+          "body": [
+            "Si c’est difficile à dire dans la langue que tu apprends, écris-le dans la tienne. La conversation continue et ça compte comme un message comme les autres.",
+            "Touche {ui:chatShowExpression} sous ton message pour voir comment le dire, puis {ui:chatUseExpression} pour l’essayer tout de suite."
+          ]
+        },
+        {
+          "heading": "Traductions et analyse de phrases",
+          "body": [
+            "Touchez {ui:chatReading} sous la réponse du tuteur pour la voir dans votre langue.",
+            "Touche {ui:insightAnalyze} sur une phrase pour l’ouvrir. Fais glisser sur les points pour choisir un passage, puis touche une question comme {ui:quickAskMeaning} ou pose la tienne. La réponse reste sur ce passage."
+          ]
+        },
+        {
+          "heading": "Astuces",
+          "body": [
+            "Vous ne savez pas quoi dire ? Touchez {ui:chatStartCta} et le tuteur lancera la conversation.",
+            "Utilisez + pour envoyer une photo et en discuter.",
+            "Le menu en haut à gauche permet de retrouver vos discussions ou d’en commencer une nouvelle.",
+            "Les comptes gratuits peuvent envoyer 10 messages par jour ; Premium n’a pas de limite quotidienne."
+          ]
+        }
+      ]
+    }
+  },
+  "it": {
+    "map": {
+      "title": "Come usare la mappa",
+      "sections": [
+        {
+          "heading": "1. Scrivi un obiettivo",
+          "body": [
+            "Scrivi cosa vuoi saper fare, scegli il livello e tocca ‘{ui:mapDraw}’."
+          ],
+          "shot": "goal"
+        },
+        {
+          "heading": "2. Leggi la mappa",
+          "body": [
+            "Gli argomenti sono in quattro colonne: situazioni, espressioni, vocabolario, pronuncia. Segui ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ apre il primo argomento."
+          ],
+          "shot": "map"
+        },
+        {
+          "heading": "3. Esercitati con i compiti",
+          "body": [
+            "In un argomento tocca ‘{ui:missionStart}’. Scrivi e viene controllato e corretto. Bloccato? ‘{ui:missionHint}’."
+          ],
+          "shot": "mission"
+        },
+        {
+          "heading": "4. Tre stati",
+          "body": [
+            "Senza suggerimenti è ‘{ui:itemsMastered}’, con aiuto è ‘{ui:itemsLearned}’, da fare è ‘{ui:itemsToLearn}’. Ciò che hai imparato torna per il ripasso."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. Le mie espressioni",
+          "body": [
+            "‘{ui:ledgerTitle}’, in alto, raccoglie le espressioni di tutte le schede e mostra quanto crescono ogni settimana."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Aggiungi alla mappa",
+          "body": [
+            "Nell’analisi della frase scegli un’espressione e tocca ‘{ui:markToMap}’: diventa il primo compito dell’argomento giusto. Gli errori ripetuti entrano da soli."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Altro",
+          "body": [
+            "Nuovo obiettivo? ‘{ui:mapNewGoal}’. La mappa precedente torna con ‘{ui:mapRestore}’. Ogni lingua ha la sua mappa."
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "Come usare la Chat",
+      "sections": [
+        {
+          "heading": "Chatta nella lingua che stai imparando",
+          "body": [
+            "Scrivi nella lingua che vuoi imparare e il tutor ti risponde come farebbe un amico.",
+            "Se c’è qualcosa da correggere, viene segnalato nel tuo messaggio e subito sotto trovi la frase corretta."
+          ]
+        },
+        {
+          "heading": "Ti blocchi? Usa la tua lingua",
+          "body": [
+            "Se qualcosa è difficile da dire nella lingua che studi, scrivilo nella tua. La conversazione continua e conta come un messaggio qualsiasi.",
+            "Tocca {ui:chatShowExpression} sotto il tuo messaggio per vedere come si dice, poi {ui:chatUseExpression} per provarlo subito."
+          ]
+        },
+        {
+          "heading": "Significati e analisi delle frasi",
+          "body": [
+            "Tocca {ui:chatReading} sotto la risposta del tutor per leggerla nella tua lingua.",
+            "Tocca {ui:insightAnalyze} su una frase per aprirla. Trascina sui punti per scegliere una parte, poi tocca una domanda come {ui:quickAskMeaning} o fanne una tua. La risposta resta su quella parte."
+          ]
+        },
+        {
+          "heading": "Altre funzioni",
+          "body": [
+            "Non sai cosa scrivere? Tocca {ui:chatStartCta} e il tutor inizierà la conversazione.",
+            "Con il + puoi inviare una foto e parlarne insieme.",
+            "Dal menu in alto a sinistra trovi le chat passate e puoi iniziarne una nuova.",
+            "Con l’account gratuito puoi inviare 10 messaggi al giorno; Premium non ha limiti giornalieri."
+          ]
+        }
+      ]
+    }
+  },
+  "pt": {
+    "map": {
+      "title": "Como usar o mapa",
+      "sections": [
+        {
+          "heading": "1. Escreva um objetivo",
+          "body": [
+            "Escreva o que quer conseguir fazer, escolha o nível e toque em ‘{ui:mapDraw}’."
+          ],
+          "shot": "goal"
+        },
+        {
+          "heading": "2. Leia o mapa",
+          "body": [
+            "Os temas ficam em quatro colunas: situações, expressões, vocabulário, pronúncia. Siga ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ abre o primeiro tema."
+          ],
+          "shot": "map"
+        },
+        {
+          "heading": "3. Pratique com tarefas",
+          "body": [
+            "Num tema, toque em ‘{ui:missionStart}’. Escreva e é verificado e corrigido. Travou? ‘{ui:missionHint}’."
+          ],
+          "shot": "mission"
+        },
+        {
+          "heading": "4. Três estados",
+          "body": [
+            "Sem dicas é ‘{ui:itemsMastered}’, com ajuda é ‘{ui:itemsLearned}’, ainda não é ‘{ui:itemsToLearn}’. O que aprendeu volta para revisão."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. Minhas expressões",
+          "body": [
+            "‘{ui:ledgerTitle}’, no topo, junta as expressões de todas as abas e mostra quanto crescem por semana."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Pôr no mapa",
+          "body": [
+            "Na análise de frase, escolha uma expressão e toque em ‘{ui:markToMap}’: vira a primeira tarefa do tema certo. Erros repetidos entram sozinhos."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Mais",
+          "body": [
+            "Novo objetivo? ‘{ui:mapNewGoal}’. O mapa anterior volta com ‘{ui:mapRestore}’. Cada idioma tem o seu mapa."
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "Como usar o Chat",
+      "sections": [
+        {
+          "heading": "Converse no idioma que está aprendendo",
+          "body": [
+            "Escreva na língua que está aprendendo e o tutor responde como um amigo.",
+            "Se algo estiver errado, aparece marcado na sua mensagem, com a frase corrigida logo abaixo."
+          ]
+        },
+        {
+          "heading": "Travou? Use seu idioma",
+          "body": [
+            "Se algo é difícil de dizer no idioma que você aprende, escreva no seu. A conversa continua e conta como uma mensagem qualquer.",
+            "Toque em {ui:chatShowExpression} sob sua mensagem para ver como se diz e em {ui:chatUseExpression} para testar na hora."
+          ]
+        },
+        {
+          "heading": "Significados e análise de frases",
+          "body": [
+            "Toque em {ui:chatReading} na resposta do tutor para ver no seu idioma.",
+            "Toque em {ui:insightAnalyze} numa frase para abri-la. Arraste pelos pontos para escolher uma parte e toque numa pergunta como {ui:quickAskMeaning} ou faça a sua. A resposta fica guardada nessa parte."
+          ]
+        },
+        {
+          "heading": "Outras dicas",
+          "body": [
+            "Não sabe o que dizer? Toque em {ui:chatStartCta} e o tutor começa a conversa.",
+            "Use o + para enviar uma foto e conversar sobre ela.",
+            "O menu no canto superior esquerdo mostra seus chats antigos e começa um novo.",
+            "Contas grátis podem enviar 10 mensagens por dia; Premium não tem limite diário."
+          ]
+        }
+      ]
+    }
+  },
+  "ru": {
+    "map": {
+      "title": "Как пользоваться картой",
+      "sections": [
+        {
+          "heading": "1. Напишите цель",
+          "body": [
+            "Напишите, что хотите уметь, выберите уровень и нажмите «{ui:mapDraw}»."
+          ],
+          "shot": "goal"
+        },
+        {
+          "heading": "2. Карта",
+          "body": [
+            "Темы разложены по четырём столбцам: ситуации, выражения, лексика, произношение. Идите по «{ui:mapOrderTitle}»; «{ui:mapContinue}» открывает первую тему."
+          ],
+          "shot": "map"
+        },
+        {
+          "heading": "3. Задания",
+          "body": [
+            "В теме нажмите «{ui:missionStart}». Напишите — ответ проверят и исправят. Застряли? «{ui:missionHint}»."
+          ],
+          "shot": "mission"
+        },
+        {
+          "heading": "4. Три состояния",
+          "body": [
+            "Без подсказок — «{ui:itemsMastered}», с помощью — «{ui:itemsLearned}», ещё нет — «{ui:itemsToLearn}». Выученное возвращается на повторение."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. Мои выражения",
+          "body": [
+            "«{ui:ledgerTitle}» вверху собирает выражения со всех вкладок и показывает рост по неделям."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Добавить на карту",
+          "body": [
+            "В разборе предложения выберите выражение и нажмите «{ui:markToMap}»: оно станет первым заданием подходящей темы. Повторяющиеся ошибки попадают туда сами."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Ещё",
+          "body": [
+            "Новая цель — «{ui:mapNewGoal}». Прежняя карта возвращается через «{ui:mapRestore}». У каждого языка своя карта."
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "Как пользоваться Чатом",
+      "sections": [
+        {
+          "heading": "Общайтесь на изучаемом языке",
+          "body": [
+            "Пишите на изучаемом языке — тьютор отвечает, как друг.",
+            "Ошибки отмечаются в вашем сообщении, а исправленный вариант появляется сразу под ним."
+          ]
+        },
+        {
+          "heading": "Застряли? Пишите на своём языке",
+          "body": [
+            "Если что-то трудно сказать на изучаемом языке, напишите это на своём. Разговор продолжится, а сообщение посчитается как обычное.",
+            "Нажмите {ui:chatShowExpression} под своим сообщением, чтобы увидеть, как это сказать, и {ui:chatUseExpression}, чтобы сразу попробовать."
+          ]
+        },
+        {
+          "heading": "Переводы и разбор предложений",
+          "body": [
+            "Нажмите {ui:chatReading} под ответом тьютора, чтобы увидеть перевод.",
+            "Нажмите {ui:insightAnalyze} у предложения, чтобы открыть его. Проведите по точкам, чтобы выбрать часть, и нажмите вопрос вроде {ui:quickAskMeaning} или задайте свой. Ответ останется у этой части."
+          ]
+        },
+        {
+          "heading": "Дополнительно",
+          "body": [
+            "Не знаете, с чего начать? Жмите {ui:chatStartCta} — тьютор начнёт разговор.",
+            "Через + можно отправить фото и обсудить его.",
+            "В меню слева вверху — ваши прошлые чаты и кнопка для нового.",
+            "Бесплатно — 10 сообщений в день, в Premium — без ограничений."
+          ]
+        }
+      ]
+    }
+  },
+  "id": {
+    "map": {
+      "title": "Cara memakai peta",
+      "sections": [
+        {
+          "heading": "1. Tulis tujuan",
+          "body": [
+            "Tulis apa yang ingin kamu bisa, pilih level, lalu ketuk ‘{ui:mapDraw}’."
+          ],
+          "shot": "goal"
+        },
+        {
+          "heading": "2. Baca peta",
+          "body": [
+            "Topik ada di empat kolom: situasi, ungkapan, kosakata, pelafalan. Ikuti ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ membuka topik pertama."
+          ],
+          "shot": "map"
+        },
+        {
+          "heading": "3. Latihan dengan tugas",
+          "body": [
+            "Di topik, ketuk ‘{ui:missionStart}’. Tulis, lalu diperiksa dan dibetulkan. Buntu? ‘{ui:missionHint}’."
+          ],
+          "shot": "mission"
+        },
+        {
+          "heading": "4. Tiga status",
+          "body": [
+            "Tanpa petunjuk = ‘{ui:itemsMastered}’, dengan bantuan = ‘{ui:itemsLearned}’, belum = ‘{ui:itemsToLearn}’. Yang sudah dipelajari muncul lagi untuk diulang."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. Ungkapanku",
+          "body": [
+            "‘{ui:ledgerTitle}’ di atas mengumpulkan ungkapan dari semua tab dan menunjukkan pertambahannya tiap minggu."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Masukkan ke peta",
+          "body": [
+            "Di analisis kalimat, pilih ungkapan lalu ketuk ‘{ui:markToMap}’: jadi tugas pertama di topik yang cocok. Kesalahan yang berulang masuk sendiri."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Lainnya",
+          "body": [
+            "Tujuan baru? ‘{ui:mapNewGoal}’. Peta sebelumnya kembali dengan ‘{ui:mapRestore}’. Tiap bahasa punya peta sendiri."
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "Cara Pakai Chat",
+      "sections": [
+        {
+          "heading": "Chat dengan Bahasa yang Dipelajari",
+          "body": [
+            "Tulis dengan bahasa yang sedang kamu pelajari, tutor akan membalas seperti teman.",
+            "Jika ada yang kurang tepat, bagian yang salah akan ditandai di pesanmu, dan kalimat yang benar muncul di bawahnya."
+          ]
+        },
+        {
+          "heading": "Buntu? Pakai bahasamu",
+          "body": [
+            "Kalau sesuatu sulit diucapkan dalam bahasa yang kamu pelajari, tulis saja dalam bahasamu. Percakapan tetap berlanjut dan dihitung satu pesan seperti biasa.",
+            "Ketuk {ui:chatShowExpression} di bawah pesanmu untuk melihat cara mengatakannya, lalu {ui:chatUseExpression} untuk langsung mencoba."
+          ]
+        },
+        {
+          "heading": "Arti dan Analisis Kalimat",
+          "body": [
+            "Ketuk {ui:chatReading} di bawah balasan tutor untuk melihat artinya dalam bahasamu.",
+            "Ketuk {ui:insightAnalyze} pada kalimat untuk membukanya. Geser di atas titik untuk memilih bagian, lalu ketuk pertanyaan seperti {ui:quickAskMeaning} atau tanyakan sendiri. Jawabannya tersimpan di bagian itu."
+          ]
+        },
+        {
+          "heading": "Lainnya",
+          "body": [
+            "Bingung mau mulai dari mana? Ketuk {ui:chatStartCta} dan tutor akan memulai percakapan.",
+            "Gunakan + untuk kirim foto dan ngobrol tentangnya.",
+            "Menu di kiri atas berisi riwayat chat dan untuk mulai chat baru.",
+            "Akun gratis bisa kirim 10 pesan per hari; Premium tanpa batas harian."
+          ]
+        }
+      ]
+    }
+  },
+  "ar": {
+    "map": {
+      "title": "طريقة استخدام الخريطة",
+      "sections": [
+        {
+          "heading": "1. اكتب هدفًا",
+          "body": [
+            "اكتب ما تريد أن تستطيع فعله، واختر مستواك، ثم اضغط «{ui:mapDraw}»."
+          ],
+          "shot": "goal"
+        },
+        {
+          "heading": "2. اقرأ الخريطة",
+          "body": [
+            "المواضيع موزعة على أربعة أعمدة: المواقف والتعابير والمفردات والنطق. اتبع «{ui:mapOrderTitle}»، و«{ui:mapContinue}» يفتح أول موضوع."
+          ],
+          "shot": "map"
+        },
+        {
+          "heading": "3. تدرّب بالمهام",
+          "body": [
+            "داخل الموضوع اضغط «{ui:missionStart}». اكتب فيُراجَع ويُصحَّح. علقت؟ «{ui:missionHint}»."
+          ],
+          "shot": "mission"
+        },
+        {
+          "heading": "4. ثلاث حالات",
+          "body": [
+            "ما أنجزته دون تلميح «{ui:itemsMastered}»، وبمساعدة «{ui:itemsLearned}»، وما لم تبدأه «{ui:itemsToLearn}». ما تعلمته يعود للمراجعة."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. تعابيري",
+          "body": [
+            "«{ui:ledgerTitle}» في الأعلى تجمع التعابير من كل التبويبات وتُظهر كم تزيد كل أسبوع."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. أضف إلى خريطتك",
+          "body": [
+            "في تحليل الجملة اختر تعبيرًا واضغط «{ui:markToMap}»، فيصبح أول مهمة في الموضوع المناسب. الأخطاء المتكررة تدخل وحدها."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "أيضًا",
+          "body": [
+            "هدف جديد؟ «{ui:mapNewGoal}». الخريطة السابقة تعود بـ«{ui:mapRestore}». لكل لغة خريطتها."
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "كيفية استخدام الدردشة",
+      "sections": [
+        {
+          "heading": "الدردشة باللغة التي تتعلمها",
+          "body": [
+            "اكتب باللغة التي تتعلمها وسيجيبك المعلم كما يفعل صديق.",
+            "إذا كان هناك خطأ، سيتم تمييزه في رسالتك مع التصحيح أسفلها مباشرة."
+          ]
+        },
+        {
+          "heading": "تعثّرت؟ اكتب بلغتك",
+          "body": [
+            "إذا صعب عليك قول شيء باللغة التي تتعلمها فاكتبه بلغتك. تستمر المحادثة وتُحسب رسالة واحدة كغيرها.",
+            "اضغط {ui:chatShowExpression} تحت رسالتك لترى كيف تقولها، ثم {ui:chatUseExpression} لتجرّبها فورًا."
+          ]
+        },
+        {
+          "heading": "المعاني وتحليل الجمل",
+          "body": [
+            "اضغط {ui:chatReading} تحت رد المعلم لترى الترجمة بلغتك.",
+            "اضغط {ui:insightAnalyze} على جملة لفتحها. اسحب فوق النقاط لاختيار جزء، ثم اضغط سؤالًا مثل {ui:quickAskMeaning} أو اسأل بنفسك. تبقى الإجابة محفوظة على ذلك الجزء."
+          ]
+        },
+        {
+          "heading": "ملاحظات أخرى",
+          "body": [
+            "لا تعرف ماذا تقول؟ اضغط {ui:chatStartCta} وسيبدأ المعلم الحديث.",
+            "استخدم + لإرسال صورة والدردشة عنها.",
+            "القائمة في أعلى اليسار تعرض محادثاتك السابقة وتتيح بدء محادثة جديدة.",
+            "الحساب المجاني يسمح بإرسال 10 رسائل يومياً؛ الحساب المميز بلا حد يومي."
+          ]
+        }
+      ]
+    }
+  },
+  "th": {
+    "map": {
+      "title": "วิธีใช้แผนที่",
+      "sections": [
+        {
+          "heading": "1. เขียนเป้าหมาย",
+          "body": [
+            "เขียนสิ่งที่อยากทำได้ เลือกระดับ แล้วแตะ ‘{ui:mapDraw}’"
+          ],
+          "shot": "goal"
+        },
+        {
+          "heading": "2. ดูแผนที่",
+          "body": [
+            "หัวข้ออยู่ในสี่คอลัมน์: สถานการณ์ สำนวน คำศัพท์ การออกเสียง ทำตาม ‘{ui:mapOrderTitle}’ ส่วน ‘{ui:mapContinue}’ จะเปิดหัวข้อแรก"
+          ],
+          "shot": "map"
+        },
+        {
+          "heading": "3. ฝึกด้วยงาน",
+          "body": [
+            "ในหัวข้อ แตะ ‘{ui:missionStart}’ เขียนแล้วจะถูกตรวจและแก้ให้ ติดอยู่ก็แตะ ‘{ui:missionHint}’"
+          ],
+          "shot": "mission"
+        },
+        {
+          "heading": "4. สามสถานะ",
+          "body": [
+            "ทำได้โดยไม่ใช้คำใบ้คือ ‘{ui:itemsMastered}’ ได้รับความช่วยเหลือคือ ‘{ui:itemsLearned}’ ยังไม่ทำคือ ‘{ui:itemsToLearn}’ สิ่งที่เรียนแล้วจะกลับมาให้ทบทวน"
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. สำนวนของฉัน",
+          "body": [
+            "‘{ui:ledgerTitle}’ ด้านบนรวมสำนวนจากทุกแท็บ และแสดงว่าเพิ่มขึ้นเท่าไรในแต่ละสัปดาห์"
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. ใส่ในแผนที่เอง",
+          "body": [
+            "ในการวิเคราะห์ประโยค เลือกสำนวนแล้วแตะ ‘{ui:markToMap}’ จะกลายเป็นงานแรกของหัวข้อที่เหมาะ ข้อผิดพลาดที่ทำซ้ำจะถูกใส่ให้เอง"
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "อื่นๆ",
+          "body": [
+            "เปลี่ยนเป้าหมาย แตะ ‘{ui:mapNewGoal}’ แผนที่ก่อนหน้ากลับมาด้วย ‘{ui:mapRestore}’ แต่ละภาษามีแผนที่ของตัวเอง"
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "วิธีใช้แชท",
+      "sections": [
+        {
+          "heading": "แชทด้วยภาษาที่คุณเรียน",
+          "body": [
+            "พิมพ์เป็นภาษาที่คุณกำลังเรียน แล้วติวเตอร์จะตอบกลับเหมือนเพื่อน",
+            "ถ้ามีจุดผิด จะมีเครื่องหมายในข้อความของคุณ พร้อมประโยคที่แก้ไขให้ดูด้านล่าง"
+          ]
+        },
+        {
+          "heading": "ติดเมื่อไรใช้ภาษาของคุณ",
+          "body": [
+            "อะไรที่พูดเป็นภาษาที่เรียนยาก เขียนเป็นภาษาของคุณได้เลย บทสนทนายังดำเนินต่อ และนับเป็นหนึ่งข้อความเหมือนปกติ",
+            "แตะ {ui:chatShowExpression} ใต้ข้อความของคุณเพื่อดูวิธีพูด แล้วแตะ {ui:chatUseExpression} เพื่อลองใช้ทันที"
+          ]
+        },
+        {
+          "heading": "ดูความหมายและวิเคราะห์ประโยค",
+          "body": [
+            "แตะ {ui:chatReading} ใต้คำตอบของติวเตอร์เพื่อดูความหมายเป็นภาษาของคุณ",
+            "แตะ {ui:insightAnalyze} ที่ประโยคเพื่อเปิด ลากผ่านจุดเพื่อเลือกส่วน แล้วแตะคำถามอย่าง {ui:quickAskMeaning} หรือถามเอง คำตอบจะถูกเก็บไว้ที่ส่วนนั้น"
+          ]
+        },
+        {
+          "heading": "เพิ่มเติม",
+          "body": [
+            "ไม่รู้จะเริ่มยังไง? กด {ui:chatStartCta} ให้ติวเตอร์เริ่มบทสนทนาให้",
+            "กด + เพื่อส่งรูปภาพแล้วคุยเกี่ยวกับรูปได้",
+            "เมนูมุมซ้ายบนดูแชทเก่า หรือเริ่มแชทใหม่",
+            "บัญชีฟรีส่งข้อความได้ 10 ข้อความต่อวัน; Premium ส่งได้ไม่จำกัด"
+          ]
+        }
+      ]
+    }
+  },
+  "hi": {
+    "map": {
+      "title": "नक्शा कैसे इस्तेमाल करें",
+      "sections": [
+        {
+          "heading": "1. लक्ष्य लिखें",
+          "body": [
+            "जो कर पाना चाहते हैं वह लिखें, स्तर चुनें और ‘{ui:mapDraw}’ दबाएँ।"
+          ],
+          "shot": "goal"
+        },
+        {
+          "heading": "2. नक्शा देखें",
+          "body": [
+            "विषय चार कॉलम में हैं: स्थितियाँ, अभिव्यक्तियाँ, शब्दावली, उच्चारण। ‘{ui:mapOrderTitle}’ के क्रम में चलें; ‘{ui:mapContinue}’ पहला विषय खोलता है।"
+          ],
+          "shot": "map"
+        },
+        {
+          "heading": "3. कामों से अभ्यास",
+          "body": [
+            "विषय में ‘{ui:missionStart}’ दबाएँ। लिखें, फिर जाँच और सुधार मिलेगा। अटकें तो ‘{ui:missionHint}’।"
+          ],
+          "shot": "mission"
+        },
+        {
+          "heading": "4. तीन स्थितियाँ",
+          "body": [
+            "बिना संकेत = ‘{ui:itemsMastered}’, मदद से = ‘{ui:itemsLearned}’, अभी नहीं = ‘{ui:itemsToLearn}’। सीखे हुए दोहराने के लिए फिर आते हैं।"
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. मेरे वाक्यांश",
+          "body": [
+            "ऊपर ‘{ui:ledgerTitle}’ में हर टैब से मिले वाक्यांश जमा होते हैं और हर हफ़्ते की बढ़त दिखती है।"
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. नक्शे में खुद डालें",
+          "body": [
+            "वाक्य विश्लेषण में वाक्यांश चुनें और ‘{ui:markToMap}’ दबाएँ: वह सही विषय का पहला काम बन जाता है। बार-बार होने वाली गलतियाँ अपने-आप जुड़ती हैं।"
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "और",
+          "body": [
+            "नया लक्ष्य? ‘{ui:mapNewGoal}’। पिछला नक्शा ‘{ui:mapRestore}’ से लौटता है। हर भाषा का अपना नक्शा है।"
+          ]
+        }
+      ]
+    },
+    "chat": {
+      "title": "चैट का उपयोग कैसे करें",
+      "sections": [
+        {
+          "heading": "सीख रही भाषा में चैट करें",
+          "body": [
+            "जिस भाषा को आप सीख रहे हैं, उसमें लिखें — ट्यूटर दोस्त की तरह जवाब देगा।",
+            "अगर कुछ गलत है, तो आपकी पंक्ति में चिह्नित होगा और सही वाक्य नीचे दिखेगा।"
+          ]
+        },
+        {
+          "heading": "अटकें तो अपनी भाषा में",
+          "body": [
+            "सीखी जा रही भाषा में जो कहना मुश्किल हो, उसे अपनी भाषा में लिख दें। बातचीत चलती रहेगी और यह बाकी संदेशों की तरह एक ही गिना जाएगा।",
+            "अपने संदेश के नीचे {ui:chatShowExpression} पर टैप करके देखें कि कैसे कहें, फिर {ui:chatUseExpression} से तुरंत आज़माएँ।"
+          ]
+        },
+        {
+          "heading": "अर्थ और वाक्य विश्लेषण",
+          "body": [
+            "ट्यूटर के जवाब के नीचे {ui:chatReading} टैप करें — अपनी भाषा में अर्थ देखें।",
+            "किसी वाक्य पर {ui:insightAnalyze} टैप करके उसे खोलें। बिंदुओं पर खींचकर कोई हिस्सा चुनें, फिर {ui:quickAskMeaning} जैसा सवाल टैप करें या खुद पूछें। जवाब उसी हिस्से पर सहेजा रहता है।"
+          ]
+        },
+        {
+          "heading": "अन्य बातें",
+          "body": [
+            "क्या लिखें समझ नहीं आ रहा? {ui:chatStartCta} दबाएँ — ट्यूटर शुरुआत करेगा।",
+            "+ से फोटो भेजें और उस पर बात करें।",
+            "ऊपर बाएँ मेन्यू में पुराने चैट देखें या नया शुरू करें।",
+            "फ्री अकाउंट में रोज़ 10 संदेश भेज सकते हैं; प्रीमियम में कोई सीमा नहीं।"
+          ]
+        }
+      ]
+    }
+  }
+}

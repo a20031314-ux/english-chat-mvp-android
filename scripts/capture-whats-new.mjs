@@ -81,12 +81,12 @@ const { copy, RELEASE_NOTES } = await loadModules();
 const GUIDE = VERSION === "guide";
 const GUIDE_ITEMS = [
   { shot: "goal" },
-  { shot: "map" },
-  { shot: "mission" },
-  { shot: "progress" },
-  { shot: "ledger" },
-  { shot: "chat", save: false },
-  { shot: "pick" },
+  { shot: "next" },
+  { shot: "growth" },
+  { shot: "element" },
+  { shot: "myask" },
+  { shot: "goalopen" },
+  { shot: "chatnext" },
 ];
 const note = GUIDE ? { version: "guide", items: GUIDE_ITEMS } : RELEASE_NOTES.find((entry) => entry.version === VERSION);
 if (!note) {
@@ -178,6 +178,12 @@ const LINK_LINE = {
   es: "Mi amigo me dejó plantado otra vez anoche y cené solo.",
 };
 
+/** Lines with nothing to correct, so the My tab's network has grown a little. */
+const CLEAN_LINES = {
+  en: ["I usually walk to work when the weather is nice.", "We had dinner at a small Italian place last night.", "Could you send me the file before the meeting?"],
+  es: ["Normalmente voy andando al trabajo cuando hace buen tiempo.", "Anoche cenamos en un restaurante italiano pequeño.", "¿Me puedes mandar el archivo antes de la reunión?"],
+};
+
 /** "Try saying:", for the help shown when a learner was stuck in a call. */
 const TIP_LEAD = {
   ko: "이렇게 말해 보세요:", en: "Try saying:", es: "Prueba a decir:", ja: "こう言ってみましょう:", zh: "可以这样说：",
@@ -237,6 +243,70 @@ const exactly = (text) => new RegExp(`^${escape(text)}$`);
  * release that needs a new picture adds a step here.
  */
 const STEPS = {
+  async next({ page, ui, locale, wait }) {
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    await wait(1500);
+    if (await page.getByRole("button", { name: ui.mapDraw }).count()) await STEPS.map({ page, ui, locale, wait });
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    for (let i = 0; i < 30 && !(await page.getByRole("button", { name: ui.nextByChat }).count()); i++) await wait(500);
+    await wait(1200);
+  },
+  async growth({ page, ui, wait, target }) {
+    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "networkidle" });
+    await wait(1500);
+    for (const line of CLEAN_LINES[target]) {
+      const before = await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count();
+      await page.locator("textarea:visible").first().fill(line);
+      await page.getByRole("button", { name: exactly(ui.send) }).click();
+      for (let i = 0; i < 60; i++) {
+        await wait(500);
+        if ((await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count()) > before) break;
+      }
+      await wait(1500);
+    }
+    // Growth is written after the reply has gone out.
+    await wait(4000);
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    await wait(2500);
+    await page.locator(`section[aria-label="${ui.myNetworkTitle}"]`).first().evaluate((el) => el.scrollIntoView({ block: "start" }));
+    await page.mouse.wheel(0, -90);
+    await wait(800);
+  },
+  async element({ page, ui, wait }) {
+    await page.locator(`[role=button][aria-label^="${ui.myElAccuracy}"]`).first().click();
+    await wait(1500);
+  },
+  async myask({ page, ui, wait }) {
+    await page.locator("[role=dialog]").getByRole("button", { name: ui.billingClose }).first().click();
+    await wait(600);
+    await page.getByRole("button", { name: exactly(ui.myAskQuick1) }).first().click();
+    await wait(1000);
+    for (let i = 0; i < 45 && (await page.getByText(ui.myAskThinking).count()); i++) await wait(1000);
+    await wait(800);
+    await page.getByRole("button", { name: new RegExp(escape(ui.myGrowIt)) }).first().scrollIntoViewIfNeeded().catch(() => undefined);
+    await page.mouse.wheel(0, 120);
+    await wait(800);
+  },
+  async goalopen({ page, ui, wait }) {
+    const toggle = page.getByRole("button", { name: new RegExp(escape(ui.profileGoalTitle)) }).first();
+    await toggle.scrollIntoViewIfNeeded();
+    await toggle.click();
+    await wait(1500);
+    await toggle.evaluate((el) => el.scrollIntoView({ block: "start" }));
+    await page.mouse.wheel(0, -40);
+    await wait(800);
+  },
+  async chatnext({ page, ui, wait }) {
+    // A fresh conversation, so the card shows.
+    await page.evaluate(() => {
+      for (const key of ["conversationSessions", "activeConversationSessionId", "activeConversationSessionIds"]) localStorage.removeItem(key);
+    });
+    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "networkidle" });
+    for (let i = 0; i < 30 && !(await page.getByRole("button", { name: ui.nextByChat }).count()); i++) await wait(500);
+    await page.getByRole("button", { name: ui.nextByChat }).first().click();
+    for (let i = 0; i < 40 && !(await page.getByText(ui.practiceNow).count()); i++) await wait(500);
+    await wait(5000);
+  },
   async goal({ page, ui, locale, wait }) {
     await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
     await wait(1500);
