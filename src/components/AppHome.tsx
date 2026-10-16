@@ -135,7 +135,8 @@ function AppHomeInner({
   }, []);
 
   const tabItems: { id: AppTab; label: string }[] = [
-    { id: "map", label: ui.homeTabMap },
+    // Still "map" inside (links, intents, screenshots); a profile on screen.
+    { id: "map", label: ui.homeTabProfile },
     { id: "chat", label: ui.homeTabChat },
     ...(roleplayAvailable
       ? [{ id: "roleplay" as const, label: ui.homeTabCall }]

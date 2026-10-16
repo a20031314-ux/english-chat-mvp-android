@@ -62,6 +62,8 @@ function statusOf(record: MapRecord | null, topicId: string): TopicStatus {
   return record?.status[topicId] ?? "todo";
 }
 
+const GOAL_OPEN_KEY = "profileGoalOpen";
+
 export function StudyMapTab({
   ui,
   locale,
@@ -120,6 +122,26 @@ export function StudyMapTab({
 
   const map = record?.map ?? null;
   const showForm = !loading && (editing || !map);
+
+  // The goal's map is folded away under the profile; whether it was left open
+  // is remembered on this device.
+  const [goalOpen, setGoalOpen] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem(GOAL_OPEN_KEY) === "1";
+    } catch {
+      return false;
+    }
+  });
+  const toggleGoal = () => {
+    setGoalOpen((open) => {
+      try {
+        localStorage.setItem(GOAL_OPEN_KEY, open ? "0" : "1");
+      } catch {
+        // Folded again next time; nothing lost.
+      }
+      return !open;
+    });
+  };
 
   const draw = async (goal: string, selfCheck: SelfCheckAnswer | null) => {
     setDrawing(true);
@@ -199,7 +221,7 @@ export function StudyMapTab({
   return (
     <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
-        <h1 className="text-base font-semibold text-white">{ui.homeTabMap}</h1>
+        <h1 className="text-base font-semibold text-white">{ui.homeTabProfile}</h1>
         {map && !editing ? (
           <button
             type="button"
@@ -211,9 +233,35 @@ export function StudyMapTab({
         ) : null}
       </header>
 
+      {/* A profile, not a map: what to try next, what has piled up, and the
+          goal's map folded underneath for whoever wants it. A learner with no
+          map starts from the ticks, with nothing empty above them. */}
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
-        {!loading ? (
-          <div className="mx-auto mb-4 max-w-2xl">
+        {loading ? (
+          <p className="text-sm text-slate-400">{ui.mapLoading}</p>
+        ) : showForm ? (
+          <>
+            <GoalForm
+              ui={ui}
+              targetLanguage={targetLanguage}
+              isPremium={isPremium}
+              drawing={drawing}
+              error={error}
+              limit={limit}
+              canCancel={Boolean(map)}
+              hasPrevious={Boolean(record?.hasPrevious)}
+              onDraw={draw}
+              onCancel={() => setEditing(false)}
+              onRestore={restore}
+            />
+            {!map ? (
+              <div className="mx-auto mt-6 max-w-md">
+                <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
+              </div>
+            ) : null}
+          </>
+        ) : map ? (
+          <div className="mx-auto max-w-2xl">
             <div className="mb-3">
               <NextStepCard
                 ui={ui}
@@ -221,46 +269,51 @@ export function StudyMapTab({
                 targetLanguage={targetLanguage}
                 canCall={scenariosForLanguage(targetLanguage).length > 0}
                 onOpenTopic={openTopic}
-                refreshKey={map?.id ?? null}
+                refreshKey={map.id}
               />
             </div>
             <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
-            <LearnerPanel
-              ui={ui}
-              locale={locale}
-              targetLanguage={targetLanguage}
-              isPremium={isPremium}
-              onRedraw={map ? () => setEditing(true) : undefined}
-            />
+            <section className="mt-3 rounded-2xl border border-white/10">
+              <button
+                type="button"
+                aria-expanded={goalOpen}
+                onClick={() => toggleGoal()}
+                className="flex w-full items-center gap-3 px-4 py-3 text-start hover:bg-white/[0.03]"
+              >
+                <span className="min-w-0 flex-1">
+                  <span className="block text-[11px] font-semibold tracking-wide text-slate-400">{ui.profileGoalTitle}</span>
+                  <span className="mt-0.5 block truncate text-[14px] font-medium text-slate-100">{map.title}</span>
+                  <span className="mt-0.5 block text-[12px] text-slate-500">{ui.profileGoalHint}</span>
+                </span>
+                <span aria-hidden className={`shrink-0 text-slate-400 transition ${goalOpen ? "rotate-180" : ""}`}>
+                  ▾
+                </span>
+              </button>
+              {goalOpen ? (
+                <div className="border-t border-white/10 px-3 pb-4 pt-3">
+                  <LearnerPanel
+                    ui={ui}
+                    locale={locale}
+                    targetLanguage={targetLanguage}
+                    isPremium={isPremium}
+                    onRedraw={() => setEditing(true)}
+                  />
+                  <div className="mt-3">
+                    <MapView
+                      ui={ui}
+                      locale={locale}
+                      onRedraw={() => setEditing(true)}
+                      map={map}
+                      record={record}
+                      lastOpenedId={lastOpenedId}
+                      onOpenTopic={openTopic}
+                      onReview={() => void startReview()}
+                    />
+                  </div>
+                </div>
+              ) : null}
+            </section>
           </div>
-        ) : null}
-        {loading ? (
-          <p className="text-sm text-slate-400">{ui.mapLoading}</p>
-        ) : showForm ? (
-          <GoalForm
-            ui={ui}
-            targetLanguage={targetLanguage}
-            isPremium={isPremium}
-            drawing={drawing}
-            error={error}
-            limit={limit}
-            canCancel={Boolean(map)}
-            hasPrevious={Boolean(record?.hasPrevious)}
-            onDraw={draw}
-            onCancel={() => setEditing(false)}
-            onRestore={restore}
-          />
-        ) : map ? (
-          <MapView
-            ui={ui}
-            locale={locale}
-            onRedraw={() => setEditing(true)}
-            map={map}
-            record={record}
-            lastOpenedId={lastOpenedId}
-            onOpenTopic={openTopic}
-            onReview={() => void startReview()}
-          />
         ) : null}
       </div>
 

@@ -331,7 +331,10 @@
     "nextGapListening": "聞き取りの練習",
     "nextGapPronunciation": "声に出して話してみよう",
     "nextGapNatural": "もっと自然に話してみよう",
-    "nextGapWhy": "最初に選んだ苦手なところです"
+    "nextGapWhy": "最初に選んだ苦手なところです",
+    "homeTabProfile": "プロフィール",
+    "profileGoalTitle": "目標と練習",
+    "profileGoalHint": "目標から作ったテーマとタスク練習"
   },
   "zh": {
     "billingClose": "关闭",
@@ -665,7 +668,10 @@
     "nextGapListening": "练习听懂对方",
     "nextGapPronunciation": "大声说出来",
     "nextGapNatural": "说得更自然",
-    "nextGapWhy": "这是你一开始选的薄弱处"
+    "nextGapWhy": "这是你一开始选的薄弱处",
+    "homeTabProfile": "我的",
+    "profileGoalTitle": "目标与练习",
+    "profileGoalHint": "根据目标生成的主题和任务练习"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -1001,7 +1007,10 @@
     "nextGapListening": "Luyện nghe hiểu",
     "nextGapPronunciation": "Nói thành tiếng",
     "nextGapNatural": "Nói tự nhiên hơn",
-    "nextGapWhy": "Điều bạn nói là mình thấy khó"
+    "nextGapWhy": "Điều bạn nói là mình thấy khó",
+    "homeTabProfile": "Hồ sơ",
+    "profileGoalTitle": "Mục tiêu và luyện tập",
+    "profileGoalHint": "Các chủ đề từ mục tiêu, kèm nhiệm vụ để luyện"
   },
   "fr": {
     "billingClose": "Fermer",
@@ -1342,7 +1351,10 @@
     "nextGapListening": "Entraîne-toi à comprendre ce que tu entends",
     "nextGapPronunciation": "Dis-le à voix haute",
     "nextGapNatural": "Parle de façon plus naturelle",
-    "nextGapWhy": "Quelque chose que tu trouves difficile, d'après toi"
+    "nextGapWhy": "Quelque chose que tu trouves difficile, d'après toi",
+    "homeTabProfile": "Profil",
+    "profileGoalTitle": "Objectif et pratique",
+    "profileGoalHint": "Les thèmes tirés de ton objectif, avec des tâches"
   },
   "it": {
     "archive": "Report",
@@ -1875,7 +1887,10 @@
     "nextGapListening": "Esercitati a capire ciò che senti",
     "nextGapPronunciation": "Dillo ad alta voce",
     "nextGapNatural": "Rendilo più naturale",
-    "nextGapWhy": "Qualcosa che hai detto di trovare difficile"
+    "nextGapWhy": "Qualcosa che hai detto di trovare difficile",
+    "homeTabProfile": "Profilo",
+    "profileGoalTitle": "Obiettivo e pratica",
+    "profileGoalHint": "I temi del tuo obiettivo, con compiti per esercitarti"
   },
   "pt": {
     "billingClose": "Fechar",
@@ -2219,7 +2234,10 @@
     "nextGapListening": "Pratique entender o que ouve",
     "nextGapPronunciation": "Diga em voz alta",
     "nextGapNatural": "Fale de um jeito mais natural",
-    "nextGapWhy": "Algo que você disse que acha difícil"
+    "nextGapWhy": "Algo que você disse que acha difícil",
+    "homeTabProfile": "Perfil",
+    "profileGoalTitle": "Objetivo e prática",
+    "profileGoalHint": "Temas do seu objetivo, com tarefas para praticar"
   },
   "ru": {
     "archive": "Отчёты",
@@ -2750,7 +2768,10 @@
     "nextGapListening": "Тренируйте понимание на слух",
     "nextGapPronunciation": "Скажите вслух",
     "nextGapNatural": "Говорите естественнее",
-    "nextGapWhy": "То, что вы назвали трудным"
+    "nextGapWhy": "То, что вы назвали трудным",
+    "homeTabProfile": "Профиль",
+    "profileGoalTitle": "Цель и практика",
+    "profileGoalHint": "Темы по вашей цели и задания для практики"
   },
   "id": {
     "billingClose": "Tutup",
@@ -3090,7 +3111,10 @@
     "nextGapListening": "Latih mendengarkan",
     "nextGapPronunciation": "Ucapkan dengan suara",
     "nextGapNatural": "Buat terdengar lebih alami",
-    "nextGapWhy": "Hal yang kamu bilang sulit"
+    "nextGapWhy": "Hal yang kamu bilang sulit",
+    "homeTabProfile": "Profil",
+    "profileGoalTitle": "Tujuan dan latihan",
+    "profileGoalHint": "Topik dari tujuanmu, dengan tugas untuk dilatih"
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -3424,7 +3448,10 @@
     "nextGapListening": "تدرّب على فهم ما تسمعه",
     "nextGapPronunciation": "قلها بصوت عالٍ",
     "nextGapNatural": "اجعل كلامك أكثر طبيعية",
-    "nextGapWhy": "شيء قلت إنه صعب عليك"
+    "nextGapWhy": "شيء قلت إنه صعب عليك",
+    "homeTabProfile": "ملفي",
+    "profileGoalTitle": "الهدف والتدريب",
+    "profileGoalHint": "مواضيع من هدفك مع مهام للتدريب"
   },
   "th": {
     "billingClose": "ปิด",
@@ -3758,7 +3785,10 @@
     "nextGapListening": "ฝึกฟังให้เข้าใจ",
     "nextGapPronunciation": "พูดออกเสียง",
     "nextGapNatural": "พูดให้เป็นธรรมชาติขึ้น",
-    "nextGapWhy": "จุดที่คุณบอกว่ายาก"
+    "nextGapWhy": "จุดที่คุณบอกว่ายาก",
+    "homeTabProfile": "โปรไฟล์",
+    "profileGoalTitle": "เป้าหมายและการฝึก",
+    "profileGoalHint": "หัวข้อจากเป้าหมายของคุณ พร้อมงานให้ฝึก"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -4092,6 +4122,9 @@
     "nextGapListening": "सुनकर समझने का अभ्यास",
     "nextGapPronunciation": "ज़ोर से बोलकर देखें",
     "nextGapNatural": "और स्वाभाविक बोलें",
-    "nextGapWhy": "आपने बताया था कि यह कठिन लगता है"
+    "nextGapWhy": "आपने बताया था कि यह कठिन लगता है",
+    "homeTabProfile": "प्रोफ़ाइल",
+    "profileGoalTitle": "लक्ष्य और अभ्यास",
+    "profileGoalHint": "आपके लक्ष्य से बने विषय और अभ्यास के टास्क"
   }
 }
