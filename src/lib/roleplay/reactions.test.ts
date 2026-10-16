@@ -69,11 +69,21 @@ test("questions and lines that only start alike are left as written", () => {
   assert.equal(findReaction("いいですね。何を食べたんですか？", "ja", ja), null);
 });
 
-test("a language with no reactions passes through, Spanish included", () => {
-  assert.equal(findReaction("¡Qué bien! ¿Qué comiste?", "es", es), null);
-  const { direction, swapped } = withBankReaction(written("¡Qué bien! ¿Qué comiste?"), openTalk("es", es));
+test("a language with no reactions passes through, French included", () => {
+  const fr = sentencesFor("fr");
+  assert.equal(findReaction("Super ! Qu'est-ce que tu as mangé ?", "fr", fr), null);
+  const { direction, swapped } = withBankReaction(written("Super ! Qu'est-ce que tu as mangé ?"), openTalk("fr", fr));
   assert.equal(swapped, false);
-  assert.deepEqual(direction.say, { text: "¡Qué bien! ¿Qué comiste?" });
+  assert.deepEqual(direction.say, { text: "Super ! Qu'est-ce que tu as mangé ?" });
+});
+
+test("a reaction of the table's own works where there is no bank at all", () => {
+  const found = findReaction("¡Qué bien! ¿Qué lugares visitaron en Sevilla?", "es", es);
+  assert.equal(found?.text, "¡Qué bien!");
+  assert.equal(found?.rest, "¿Qué lugares visitaron en Sevilla?");
+  const english = findReaction("Wow, that’s awesome! How did it feel when you passed?", "en", en);
+  assert.equal(english?.text, "That's awesome!");
+  assert.equal(english?.rest, "How did it feel when you passed?");
 });
 
 test("a build that plays reactions gets the reaction split off", () => {
