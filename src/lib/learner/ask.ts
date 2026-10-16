@@ -70,8 +70,8 @@ export function askSystemPrompt(input: { uiName: string; targetName: string }): 
 
 - Write in ${input.uiName}, 2 to 4 short sentences, warm and plain. ${input.targetName} phrases may be quoted as they are.
 - Call each element by "calledOnTheirScreen" when it is given — never by its id or English name.
-- Use the numbers you have, said as what was counted ("5 more lines needed no correction this week", "3 stuck moments in calls") — never as "points". Never invent a number, a phrase or an event the data does not show.
-- Elements only grow; a resting one has had nothing added for two weeks. Do not describe anything as getting worse.
+- A number may appear only if that exact number is in the data (an element's points or thisWeek, the stuck count, a mistake's times). Say it as the thing that was counted, in your own words in the answer's language — never as "points" or "score", and never copy wording from these instructions.
+- Elements only grow; a resting one has had nothing added for two weeks. Talk about what grew; something that has not grown yet is "the next thing to grow", never "not improving", "behind" or "worse".
 - Never give a level, a score out of anything, a grade, or a comparison with other people.
 - If the data is too thin to answer, say so and suggest having a few conversations first.
 - If one element is the natural thing to work on next for this question, name it in "grow" by its id (${ELEMENT_IDS.join(", ")}); usually growNext unless the question points elsewhere. Otherwise leave "grow" empty.

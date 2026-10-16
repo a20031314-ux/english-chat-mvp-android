@@ -38,4 +38,5 @@ test("the learner's own names for the elements go to the model, and odd ones are
   assert.deepEqual(parseNames({ accuracy: "정확도", level: "B2", speaking: "  말 이어가기 " }), { speaking: "말 이어가기", accuracy: "정확도" });
   assert.match(askSystemPrompt({ uiName: "Korean", targetName: "English" }), /never by its id/);
   assert.match(askSystemPrompt({ uiName: "Korean", targetName: "English" }), /never as "points"/);
+  assert.doesNotMatch(askSystemPrompt({ uiName: "Korean", targetName: "English" }), /needed no correction this week/, "no example sentence to copy");
 });
