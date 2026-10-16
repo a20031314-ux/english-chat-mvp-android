@@ -387,6 +387,7 @@ const generatedItemOverlay = {
   myAskLimit: "You've used today's chats. Ask again tomorrow.",
   myAskFailed: "Couldn't answer just now. Try again in a moment.",
   myAskCost: "Each question counts as one chat.",
+  myAskThin: "There's not much to go on yet. Have a few conversations and I'll show you what has grown.",
 } as const;
 
 const generatedMissionOverlay = {
@@ -645,6 +646,7 @@ export const copy = {
     myAskLimit: "오늘 채팅 횟수를 다 썼어요. 내일 다시 물어봐 주세요.",
     myAskFailed: "지금은 답하지 못했어요. 잠시 뒤 다시 물어봐 주세요.",
     myAskCost: "질문 1번은 채팅 1회로 세요.",
+    myAskThin: "아직 쌓인 기록이 적어요. 대화를 몇 번 하면 뭐가 늘었는지 보여드릴게요.",
     missionPickedLabel: "내가 고른 것 · {focus}",
     roleplaySayAgain: "다시 말해보기",
     roleplayReviewTitle: "막혔던 지점",
@@ -1700,6 +1702,7 @@ export const copy = {
     myAskLimit: "You've used today's chats. Ask again tomorrow.",
     myAskFailed: "Couldn't answer just now. Try again in a moment.",
     myAskCost: "Each question counts as one chat.",
+    myAskThin: "There's not much to go on yet. Have a few conversations and I'll show you what has grown.",
     missionPickedLabel: "My pick · {focus}",
     roleplaySayAgain: "Say it again",
     roleplayReviewTitle: "Where you got stuck",
@@ -2752,6 +2755,7 @@ export const copy = {
     myAskLimit: "Ya usaste los chats de hoy. Pregunta de nuevo mañana.",
     myAskFailed: "No pude responder ahora. Inténtalo en un momento.",
     myAskCost: "Cada pregunta cuenta como un chat.",
+    myAskThin: "Aún hay poco registro. Ten unas cuantas conversaciones y te mostraré qué ha crecido.",
     missionPickedLabel: "Elegida por mí · {focus}",
     roleplaySayAgain: "Decirla otra vez",
     roleplayReviewTitle: "Dónde te atascaste",

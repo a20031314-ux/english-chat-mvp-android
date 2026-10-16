@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { askData, askSystemPrompt, parseAnswer, parseNames } from "./ask.ts";
+import { askData, askSystemPrompt, parseAnswer, parseNames, tooThinToAnswer } from "./ask.ts";
 import { emptyGrowth, growthView } from "./growth.ts";
 import { emptyLedger } from "./ledger.ts";
 
@@ -17,7 +17,7 @@ test("the answer is read with at most one element to grow, and an unknown one is
 test("the model is told to answer from the data, in the interface language, with no level", () => {
   const prompt = askSystemPrompt({ uiName: "Korean", targetName: "Japanese" });
   assert.match(prompt, /Write in Korean/);
-  assert.match(prompt, /Never invent a number/);
+  assert.match(prompt, /A number may appear only if that exact number is in the data/);
   assert.match(prompt, /Never give a level/);
   const data = JSON.parse(
     askData({
@@ -39,4 +39,11 @@ test("the learner's own names for the elements go to the model, and odd ones are
   assert.match(askSystemPrompt({ uiName: "Korean", targetName: "English" }), /never by its id/);
   assert.match(askSystemPrompt({ uiName: "Korean", targetName: "English" }), /never as "points"/);
   assert.doesNotMatch(askSystemPrompt({ uiName: "Korean", targetName: "English" }), /needed no correction this week/, "no example sentence to copy");
+});
+
+test("with almost nothing grown there is nothing to answer, and the model is not asked", () => {
+  const empty = growthView({ record: emptyGrowth(), ledger: emptyLedger("en", 0), now: Date.UTC(2026, 9, 16) });
+  assert.equal(tooThinToAnswer(empty), true);
+  const grown = { ...empty, elements: empty.elements.map((e) => (e.id === "accuracy" ? { ...e, points: 4 } : e)) };
+  assert.equal(tooThinToAnswer(grown), false);
 });

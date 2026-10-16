@@ -12,7 +12,7 @@ import { readSelfCheck } from "@/lib/server/selfCheckStore";
 import { readLearnerBrief } from "@/lib/server/learnerBrief";
 import { recentStuckPhrases } from "@/lib/learner/growth";
 import { RECUR_WINDOW_MS } from "@/lib/curriculum/weakPoints";
-import { MAX_QUESTION_CHARS, askData, askSystemPrompt, parseAnswer, parseNames } from "@/lib/learner/ask";
+import { MAX_QUESTION_CHARS, askData, askSystemPrompt, parseAnswer, parseNames, tooThinToAnswer } from "@/lib/learner/ask";
 import {
   coerceLanguageCode,
   INTERFACE_LANGUAGE_LABELS,
@@ -63,6 +63,11 @@ export async function POST(request: NextRequest) {
     readSelfCheck(userId, language),
     readLearnerBrief(userId, language, now),
   ]);
+  // Nothing has grown yet: there is nothing true to say, so no model is asked
+  // and nothing is counted; the screen says so in its own words.
+  if (tooThinToAnswer(growth)) {
+    return jsonWithCors(request, { thin: true, grow: growth.next });
+  }
   const mistakes = Object.values(weak.patterns)
     .map((p) => ({ name: p.name, times: p.misses.filter((at) => now - at <= RECUR_WINDOW_MS).length }))
     .filter((m) => m.times > 0)

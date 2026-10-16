@@ -394,7 +394,8 @@
     "myAskThinking": "記録を見ています…",
     "myAskLimit": "今日のチャット回数を使い切りました。明日また聞いてください。",
     "myAskFailed": "今は答えられませんでした。少ししてからもう一度聞いてください。",
-    "myAskCost": "質問1回はチャット1回として数えます。"
+    "myAskCost": "質問1回はチャット1回として数えます。",
+    "myAskThin": "まだ記録が少ないです。何回か会話すると、何が伸びたかお見せします。"
   },
   "zh": {
     "billingClose": "关闭",
@@ -791,7 +792,8 @@
     "myAskThinking": "正在查看你的记录…",
     "myAskLimit": "今天的聊天次数已用完，明天再问吧。",
     "myAskFailed": "现在没能回答，请稍后再问。",
-    "myAskCost": "每个问题算一次聊天。"
+    "myAskCost": "每个问题算一次聊天。",
+    "myAskThin": "记录还不多。多聊几次，我就能告诉你哪里进步了。"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -1190,7 +1192,8 @@
     "myAskThinking": "Đang xem ghi chép của bạn…",
     "myAskLimit": "Bạn đã dùng hết lượt chat hôm nay. Hãy hỏi lại vào ngày mai.",
     "myAskFailed": "Chưa trả lời được lúc này. Thử lại sau chút nhé.",
-    "myAskCost": "Mỗi câu hỏi tính là một lượt chat."
+    "myAskCost": "Mỗi câu hỏi tính là một lượt chat.",
+    "myAskThin": "Chưa có nhiều ghi chép. Trò chuyện vài lần, mình sẽ cho bạn thấy phần nào đã lớn."
   },
   "fr": {
     "billingClose": "Fermer",
@@ -1594,7 +1597,8 @@
     "myAskThinking": "Je regarde ton historique…",
     "myAskLimit": "Tu as utilisé tes discussions du jour. Redemande demain.",
     "myAskFailed": "Je n'ai pas pu répondre. Réessaie dans un instant.",
-    "myAskCost": "Chaque question compte comme une discussion."
+    "myAskCost": "Chaque question compte comme une discussion.",
+    "myAskThin": "Il n'y a pas encore grand-chose. Fais quelques conversations et je te montrerai ce qui a grandi."
   },
   "it": {
     "archive": "Report",
@@ -2190,7 +2194,8 @@
     "myAskThinking": "Sto guardando il tuo storico…",
     "myAskLimit": "Hai usato le chat di oggi. Chiedi di nuovo domani.",
     "myAskFailed": "Non sono riuscito a rispondere. Riprova tra poco.",
-    "myAskCost": "Ogni domanda conta come una chat."
+    "myAskCost": "Ogni domanda conta come una chat.",
+    "myAskThin": "C'è ancora poco da guardare. Fai qualche conversazione e ti mostrerò cosa è cresciuto."
   },
   "pt": {
     "billingClose": "Fechar",
@@ -2597,7 +2602,8 @@
     "myAskThinking": "Olhando seu histórico…",
     "myAskLimit": "Você já usou as conversas de hoje. Pergunte de novo amanhã.",
     "myAskFailed": "Não consegui responder agora. Tente de novo daqui a pouco.",
-    "myAskCost": "Cada pergunta conta como uma conversa."
+    "myAskCost": "Cada pergunta conta como uma conversa.",
+    "myAskThin": "Ainda há pouco registro. Converse algumas vezes e eu mostro o que cresceu."
   },
   "ru": {
     "archive": "Отчёты",
@@ -3191,7 +3197,8 @@
     "myAskThinking": "Смотрю ваши записи…",
     "myAskLimit": "Чаты на сегодня закончились. Спросите завтра.",
     "myAskFailed": "Сейчас не получилось ответить. Попробуйте чуть позже.",
-    "myAskCost": "Каждый вопрос считается одним сообщением в чате."
+    "myAskCost": "Каждый вопрос считается одним сообщением в чате.",
+    "myAskThin": "Пока записей мало. Поговорите несколько раз, и я покажу, что выросло."
   },
   "id": {
     "billingClose": "Tutup",
@@ -3594,7 +3601,8 @@
     "myAskThinking": "Sedang melihat catatanmu…",
     "myAskLimit": "Kuota chat hari ini sudah habis. Tanya lagi besok.",
     "myAskFailed": "Belum bisa menjawab sekarang. Coba lagi sebentar lagi.",
-    "myAskCost": "Setiap pertanyaan dihitung satu chat."
+    "myAskCost": "Setiap pertanyaan dihitung satu chat.",
+    "myAskThin": "Catatannya masih sedikit. Ngobrol beberapa kali, nanti kutunjukkan apa yang sudah tumbuh."
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -3991,7 +3999,8 @@
     "myAskThinking": "أنظر في سجلّك…",
     "myAskLimit": "استخدمت محادثات اليوم. اسأل مجددًا غدًا.",
     "myAskFailed": "تعذّرت الإجابة الآن. حاول بعد قليل.",
-    "myAskCost": "كل سؤال يُحتسب محادثة واحدة."
+    "myAskCost": "كل سؤال يُحتسب محادثة واحدة.",
+    "myAskThin": "لا يوجد سجل كافٍ بعد. أجرِ بضع محادثات وسأريك ما الذي نما."
   },
   "th": {
     "billingClose": "ปิด",
@@ -4388,7 +4397,8 @@
     "myAskThinking": "กำลังดูบันทึกของคุณ…",
     "myAskLimit": "ใช้แชทของวันนี้หมดแล้ว ถามใหม่พรุ่งนี้นะ",
     "myAskFailed": "ตอนนี้ยังตอบไม่ได้ ลองใหม่อีกสักครู่",
-    "myAskCost": "ถาม 1 ครั้งนับเป็นแชท 1 ครั้ง"
+    "myAskCost": "ถาม 1 ครั้งนับเป็นแชท 1 ครั้ง",
+    "myAskThin": "ยังมีบันทึกไม่มาก ลองคุยสักสองสามครั้ง แล้วจะบอกว่าอะไรเติบโตขึ้น"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -4785,6 +4795,7 @@
     "myAskThinking": "आपका रिकॉर्ड देख रहे हैं…",
     "myAskLimit": "आज की चैट खत्म हो गईं। कल फिर पूछें।",
     "myAskFailed": "अभी जवाब नहीं दे पाए। थोड़ी देर बाद फिर पूछें।",
-    "myAskCost": "हर सवाल एक चैट गिना जाता है।"
+    "myAskCost": "हर सवाल एक चैट गिना जाता है।",
+    "myAskThin": "अभी रिकॉर्ड कम है। कुछ बार बातचीत करें, फिर मैं बताऊँगा कि क्या बढ़ा।"
   }
 }

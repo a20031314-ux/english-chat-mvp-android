@@ -266,7 +266,16 @@ function AskBox({
         setError(ui.myAskLimit);
         return;
       }
-      const data = (await response.json().catch(() => null)) as { answer?: string; grow?: ElementId | null } | null;
+      const data = (await response.json().catch(() => null)) as {
+        answer?: string;
+        grow?: ElementId | null;
+        thin?: boolean;
+      } | null;
+      if (response.ok && data?.thin) {
+        setReply({ answer: ui.myAskThin, grow: data.grow ?? null });
+        setQuestion("");
+        return;
+      }
       if (!response.ok || !data?.answer) {
         setError(ui.myAskFailed);
         return;

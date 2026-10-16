@@ -71,6 +71,7 @@ export function askSystemPrompt(input: { uiName: string; targetName: string }): 
 - Write in ${input.uiName}, 2 to 4 short sentences, warm and plain. ${input.targetName} phrases may be quoted as they are.
 - Call each element by "calledOnTheirScreen" when it is given — never by its id or English name.
 - A number may appear only if that exact number is in the data (an element's points or thisWeek, the stuck count, a mistake's times). Say it as the thing that was counted, in your own words in the answer's language — never as "points" or "score", and never copy wording from these instructions.
+- An element with 0 points has not started growing: never say it grew or is growing.
 - Elements only grow; a resting one has had nothing added for two weeks. Talk about what grew; something that has not grown yet is "the next thing to grow", never "not improving", "behind" or "worse".
 - Never give a level, a score out of anything, a grade, or a comparison with other people.
 - If the data is too thin to answer, say so and suggest having a few conversations first.
@@ -101,4 +102,11 @@ export function parseNames(value: unknown): Partial<Record<ElementId, string>> {
     if (typeof name === "string" && name.trim()) out[id] = name.replace(/\s+/g, " ").trim().slice(0, 40);
   }
   return out;
+}
+
+/** Fewer than this many points in all, and there is nothing to say yet: no model is asked. */
+export const MIN_POINTS_TO_ANSWER = 3;
+
+export function tooThinToAnswer(growth: GrowthView): boolean {
+  return growth.elements.reduce((sum, e) => sum + e.points, 0) < MIN_POINTS_TO_ANSWER;
 }
