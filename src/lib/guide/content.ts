@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-16b";
+export const GUIDE_VERSION = "2026-10-16c";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab";
 
@@ -107,6 +107,7 @@ export const GUIDE_KO: Guide = {
           "배우는 언어로 문장을 쓰면 튜터가 친구처럼 답해요.",
           "틀린 부분이 있으면 내 문장에 표시가 생기고, 바로 아래에 고친 문장이 나와요.",
         ],
+        shot: "chat-correct",
       },
       {
         heading: "막히면 내 언어로",
@@ -114,20 +115,49 @@ export const GUIDE_KO: Guide = {
           "배우는 언어로 말하기 어려운 건 내 언어로 써도 돼요. 대화는 그대로 이어지고, 보낸 메시지 하나로 세요.",
           "내 문장 아래 ‘{ui:chatShowExpression}’을 누르면 배우는 언어로 어떻게 말하는지 볼 수 있고, ‘{ui:chatUseExpression}’로 바로 써볼 수 있어요.",
         ],
+        shot: "chat-expression",
       },
       {
-        heading: "뜻 보기와 문장 분석",
+        heading: "뜻 보기와 듣기",
         body: [
           "튜터의 답 아래 ‘{ui:chatReading}’을 누르면 내 언어로 된 뜻을 볼 수 있어요.",
-          "문장의 ‘{ui:insightAnalyze}’을 누르면 문장 시트가 열려요. 점을 끌어 부분을 고르고 ‘{ui:quickAskMeaning}’ 같은 질문을 누르거나 직접 물어보세요. 답은 그 부분에 남아서 다음에도 볼 수 있어요.",
+          "스피커 버튼을 누르면 그 문장을 소리로 들을 수 있어요.",
         ],
+        shot: "chat-reading",
+      },
+      {
+        heading: "문장 분석과 질문",
+        body: [
+          "문장 왼쪽의 막대를 누르면 문장 시트가 열려요. 점을 끌어 부분을 고르고 ‘{ui:quickAskMeaning}’ 같은 질문을 누르거나 직접 물어보세요. 답은 그 부분에 남아서 다음에도 볼 수 있어요.",
+        ],
+        shot: "chat-ask",
+      },
+      {
+        heading: "단어를 눌러 단어장에",
+        body: [
+          "문장 시트에서 단어나 밑줄 친 표현을 누르면 뜻과 예문이 나와요. ‘{ui:vocabPreviewSave}’을 누르면 단어장에 들어가요.",
+        ],
+        shot: "chat-word",
+      },
+      {
+        heading: "메뉴",
+        body: [
+          "왼쪽 위 ⋮ 메뉴에서 ‘{ui:chatHistoryTitle}’을 보거나 ‘{ui:endSession}’으로 지금 대화를 끝낼 수 있어요. 이상한 답은 ‘{ui:reportTitle}’으로 알려 주세요.",
+        ],
+        shot: "chat-menu",
+      },
+      {
+        heading: "지난 대화 이어 하기",
+        body: [
+          "지난 대화를 골라 다시 읽고, ‘{ui:chatHistoryContinue}’로 이어서 할 수 있어요.",
+        ],
+        shot: "chat-history",
       },
       {
         heading: "그 밖에",
         body: [
           "무슨 말을 할지 모르겠으면 ‘{ui:chatStartCta}’를 누르세요. 튜터가 대화를 시작해요.",
           "+ 버튼으로 사진을 보내면 사진을 보며 대화할 수 있어요.",
-          "왼쪽 위 메뉴에서 지난 대화를 보거나 새 대화를 시작할 수 있어요.",
           "무료로는 하루 10번까지 보낼 수 있고, 프리미엄은 제한이 없어요.",
         ],
       },
@@ -221,16 +251,33 @@ export const GUIDE_KO: Guide = {
       {
         heading: "찾고 저장하기",
         body: [
-          "단어나 표현을 검색하면 뜻을 보고 단어장에 저장할 수 있어요.",
+          "내 언어로 단어나 표현을 검색하면 배우는 언어의 표현이 뜻·예문과 함께 나와요. ‘{ui:vocabSave}’을 누르면 단어장에 들어가요.",
           "채팅에서 눌러 저장한 단어도 여기에 모여요.",
         ],
+        shot: "vocab-search",
+      },
+      {
+        heading: "저장한 단어",
+        body: [
+          "단어마다 지금 상태와 마지막으로 쓴 곳이 보여요. ‘{ui:linkTry}’로 채팅에서 바로 써 보고, ‘{ui:linkFindScenes}’으로 영상에서 그 표현이 나오는 장면을 찾을 수 있어요.",
+          "스피커로 발음을 듣고, 필요 없어진 단어는 지울 수 있어요.",
+        ],
+        shot: "vocab-saved",
       },
       {
         heading: "외우기",
         body: [
-          "‘{ui:vocabHideGloss}’을 켜면 뜻이 가려져요. 단어를 눌러 뜻을 확인하며 외워보세요.",
+          "‘{ui:vocabHideGloss}’을 켜면 뜻이 가려져요. ‘{ui:vocabRevealGloss}’를 눌러 확인하며 외워 보세요.",
           "‘{ui:vocabShuffle}’로 순서를 섞을 수 있어요.",
         ],
+        shot: "vocab-hide",
+      },
+      {
+        heading: "글자 익히기",
+        body: [
+          "일본어·중국어처럼 글자가 다른 언어를 배우면 ‘{ui:vocabTabCharacters}’ 탭이 생겨요. 글자를 누르면 발음과 쓰임을 바로 볼 수 있어요.",
+        ],
+        shot: "vocab-characters",
       },
     ],
   },
@@ -307,6 +354,7 @@ export const GUIDE_EN: Guide = {
           "Write in the language you're learning and the tutor answers like a friend would.",
           "If something is off, it's marked in your message, with the corrected sentence right below.",
         ],
+        shot: "chat-correct",
       },
       {
         heading: "Stuck? Use your own language",
@@ -314,20 +362,49 @@ export const GUIDE_EN: Guide = {
           "If something is hard to say in the language you're learning, write it in your own. The conversation carries on, and it counts as one message like any other.",
           "Tap {ui:chatShowExpression} under your message to see how to say it, then {ui:chatUseExpression} to try it straight away.",
         ],
+        shot: "chat-expression",
       },
       {
-        heading: "Meanings and sentence analysis",
+        heading: "See the meaning, hear it",
         body: [
           "Tap {ui:chatReading} under the tutor's reply to see it in your own language.",
-          "Tap {ui:insightAnalyze} on a sentence to open it. Drag across the dots to pick a part, then tap a question like {ui:quickAskMeaning} or ask your own. The answer stays on that part for next time.",
+          "Tap the speaker to hear the line read aloud.",
         ],
+        shot: "chat-reading",
+      },
+      {
+        heading: "Look into a sentence and ask",
+        body: [
+          "Tap the bar to the left of a sentence to open it. Drag across the dots to pick a part, then tap a question like {ui:quickAskMeaning} or ask your own. The answer stays on that part for next time.",
+        ],
+        shot: "chat-ask",
+      },
+      {
+        heading: "Tap a word to save it",
+        body: [
+          "In the sentence sheet, tap a word or an underlined phrase to see its meanings and examples. {ui:vocabPreviewSave} puts it in your vocabulary.",
+        ],
+        shot: "chat-word",
+      },
+      {
+        heading: "The menu",
+        body: [
+          "The ⋮ menu at the top left opens {ui:chatHistoryTitle} and has {ui:endSession} to finish this chat. If a reply looks wrong, tell us with {ui:reportTitle}.",
+        ],
+        shot: "chat-menu",
+      },
+      {
+        heading: "Pick up a past chat",
+        body: [
+          "Open a past chat to read it again, and {ui:chatHistoryContinue} to carry on where you stopped.",
+        ],
+        shot: "chat-history",
       },
       {
         heading: "Also",
         body: [
           "Not sure what to say? Tap {ui:chatStartCta} and the tutor will begin.",
           "Use + to send a photo and talk about it.",
-          "The menu at the top left has your past chats and starts a new one.",
           "Free accounts can send 10 messages a day; Premium has no daily limit.",
         ],
       },
@@ -421,16 +498,33 @@ export const GUIDE_EN: Guide = {
       {
         heading: "Find and save",
         body: [
-          "Search for a word or phrase to see what it means and save it.",
+          "Search in your own language and you get the words for it in the language you're learning, with meanings and examples. {ui:vocabSave} adds one to your list.",
           "Words you tap and save in Chat collect here too.",
         ],
+        shot: "vocab-search",
+      },
+      {
+        heading: "Your saved words",
+        body: [
+          "Each word shows where it stands and where you last used it. {ui:linkTry} starts a chat to use it, and {ui:linkFindScenes} finds the scenes in videos where it comes up.",
+          "Tap the speaker to hear it, and delete words you no longer need.",
+        ],
+        shot: "vocab-saved",
       },
       {
         heading: "Learn them",
         body: [
-          "{ui:vocabHideGloss} covers them up, then tap a word to check yourself.",
+          "{ui:vocabHideGloss} covers the meanings. Tap {ui:vocabRevealGloss} to check yourself.",
           "{ui:vocabShuffle} mixes up the order.",
         ],
+        shot: "vocab-hide",
+      },
+      {
+        heading: "Learn the script",
+        body: [
+          "If the language you're learning uses another script, like Japanese or Chinese, a {ui:vocabTabCharacters} tab appears. Tap a character to see how it sounds and how it's used.",
+        ],
+        shot: "vocab-characters",
       },
     ],
   },

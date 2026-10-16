@@ -84,7 +84,13 @@ const { copy, RELEASE_NOTES } = await loadModules();
  * YouTube's "unavailable" there, is covered with the video's thumbnail.
  */
 const GUIDE_VIDEO = VERSION === "guide-video";
-const GUIDE = VERSION === "guide" || GUIDE_VIDEO;
+// `guide-chat` and `guide-vocab`: the chat and vocabulary tabs' how-to, every
+// detail a learner can reach (a corrected line, the expression card, meaning,
+// the sentence sheet, saving a word, the menu, history; search, saved words,
+// hidden meanings, the characters tab). Each language spends two chat lines.
+const GUIDE_CHAT = VERSION === "guide-chat";
+const GUIDE_VOCAB = VERSION === "guide-vocab";
+const GUIDE = VERSION === "guide" || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB;
 const GUIDE_ITEMS = [
   { shot: "goal" },
   { shot: "next" },
@@ -100,7 +106,26 @@ const GUIDE_VIDEO_ITEMS = [
   { shot: "video-bar" },
   { shot: "video-ask" },
 ];
-const note = GUIDE_VIDEO
+const GUIDE_CHAT_ITEMS = [
+  { shot: "chat-correct" },
+  { shot: "chat-expression" },
+  { shot: "chat-reading" },
+  { shot: "chat-ask" },
+  { shot: "chat-word" },
+  { shot: "chat-menu" },
+  { shot: "chat-history" },
+];
+const GUIDE_VOCAB_ITEMS = [
+  { shot: "vocab-search" },
+  { shot: "vocab-saved" },
+  { shot: "vocab-hide" },
+  { shot: "vocab-characters" },
+];
+const note = GUIDE_CHAT
+  ? { version: "guide", items: GUIDE_CHAT_ITEMS }
+  : GUIDE_VOCAB
+  ? { version: "guide", items: GUIDE_VOCAB_ITEMS }
+  : GUIDE_VIDEO
   ? { version: "guide", items: GUIDE_VIDEO_ITEMS }
   : GUIDE ? { version: "guide", items: GUIDE_ITEMS } : RELEASE_NOTES.find((entry) => entry.version === VERSION);
 if (!note) {
@@ -133,6 +158,18 @@ const VIDEO_SESSION = {
       "Por eso, romperlas exige algo más que fuerza de voluntad.",
     ],
   },
+};
+
+/** A line with one everyday mistake, in the language being learned. */
+const SLIPPED_LINE = {
+  en: "Yesterday I go to the beach with my friends and we swim a lot.",
+  es: "Ayer yo voy a la playa con mis amigos y nadamos mucho.",
+};
+
+/** "give up", typed in each interface language: the vocabulary search goes from your language. */
+const VOCAB_QUERY = {
+  ko: "포기하다", en: "give up", es: "rendirse", ja: "諦める", zh: "放弃", vi: "từ bỏ", fr: "abandonner",
+  it: "rinunciare", pt: "desistir", ru: "сдаваться", id: "menyerah", ar: "يستسلم", th: "ยอมแพ้", hi: "हार मानना",
 };
 
 /** Something a learner might really write when stuck, in each interface language. */
@@ -284,6 +321,102 @@ const exactly = (text) => new RegExp(`^${escape(text)}$`);
  * release that needs a new picture adds a step here.
  */
 const STEPS = {
+  async "chat-correct"({ page, ui, wait, target }) {
+    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "networkidle" });
+    await wait(1500);
+    const before = await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count();
+    await page.locator("textarea:visible").first().fill(SLIPPED_LINE[target]);
+    await page.getByRole("button", { name: exactly(ui.send) }).click();
+    for (let i = 0; i < 60; i++) {
+      await wait(500);
+      if ((await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count()) > before + 1) break;
+    }
+    await wait(2500);
+  },
+  async "chat-expression"({ page, ui, locale, wait }) {
+    // Continues the same conversation: a line in the learner's own language.
+    await page.locator("textarea:visible").first().fill(STUCK_LINE[locale]);
+    await page.getByRole("button", { name: exactly(ui.send) }).click();
+    const show = page.getByRole("button", { name: exactly(ui.chatShowExpression) });
+    for (let i = 0; i < 60 && !(await show.count()); i++) await wait(500);
+    await wait(1500);
+    await show.last().click();
+    const use = page.getByRole("button", { name: exactly(ui.chatUseExpression) });
+    for (let i = 0; i < 40 && !(await use.count()); i++) await wait(1000);
+    await wait(800);
+  },
+  async "chat-reading"({ page, ui, wait }) {
+    const reading = page.getByRole("button", { name: exactly(ui.chatReading) });
+    const translated = page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 30000 }).catch(() => undefined);
+    await reading.last().click();
+    await translated;
+    await wait(2000);
+  },
+  async "chat-ask"({ page, ui, wait }) {
+    await STEPS.ask({ page, ui, wait });
+  },
+  async "chat-word"({ page, ui, wait }) {
+    // Continues in the sentence sheet: one word of the sentence, its card and Save.
+    // The longest word of the sentence, which is the likeliest to be worth a card.
+    const words = page.locator("[role=dialog] p button");
+    const texts = await words.allInnerTexts();
+    let best = 0;
+    texts.forEach((text, i) => {
+      if (text.trim().length > texts[best].trim().length) best = i;
+    });
+    if (texts.length) await words.nth(best).click();
+    const loading = ui.vocabPreviewLoading.replace("…", "");
+    for (let i = 0; i < 40; i++) {
+      await wait(700);
+      if (!(await page.locator("[role=dialog]").last().innerText()).includes(loading)) break;
+    }
+    await wait(1200);
+  },
+  async "chat-menu"({ page, ui, wait }) {
+    // The chat can keep a request open, so "networkidle" may never come.
+    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
+    await wait(4000);
+    await page.getByRole("button", { name: exactly(ui.sessionMenu) }).first().click();
+    await wait(800);
+  },
+  async "chat-history"({ page, ui, wait }) {
+    await page.getByRole("button", { name: exactly(ui.chatHistoryTitle) }).first().click();
+    await wait(1500);
+  },
+  async "vocab-search"({ page, ui, locale, wait }) {
+    await page.goto(`${BASE}/?screen=vocab`, { waitUntil: "networkidle" });
+    await wait(1500);
+    await page.locator("input[type=search]").first().fill(VOCAB_QUERY[locale]);
+    await page.getByRole("button", { name: exactly(ui.vocabSearchCta) }).click();
+    for (let i = 0; i < 40 && !(await page.getByText(ui.vocabResultsTitle).count()); i++) await wait(500);
+    await wait(1500);
+  },
+  async "vocab-saved"({ page, ui, wait }) {
+    // Save the first two results, close the search and look at the list.
+    const saves = page.getByRole("button", { name: exactly(ui.vocabSave) });
+    const n = Math.min(2, await saves.count());
+    for (let i = 0; i < n; i++) {
+      await page.getByRole("button", { name: exactly(ui.vocabSave) }).first().click();
+      await wait(1200);
+    }
+    await page.getByRole("button", { name: exactly(ui.vocabPreviewClose) }).first().click();
+    await wait(2500);
+    await page.getByText(ui.vocabSavedTitle).first().scrollIntoViewIfNeeded();
+    await wait(800);
+  },
+  async "vocab-hide"({ page, ui, wait }) {
+    await page.getByRole("button", { name: exactly(ui.vocabHideGloss) }).first().click();
+    await wait(1000);
+  },
+  async "vocab-characters"({ page, ui, locale, wait }) {
+    // The characters tab appears when the learning language is written in
+    // another script: Japanese, or Korean for the Japanese interface.
+    await page.evaluate((t) => localStorage.setItem("appTargetLanguage", t), locale === "ja" ? "ko" : "ja");
+    await page.goto(`${BASE}/?screen=vocab`, { waitUntil: "networkidle" });
+    await wait(1500);
+    await page.getByRole("button", { name: exactly(ui.vocabTabCharacters) }).first().click();
+    await wait(2000);
+  },
   async next({ page, ui, locale, wait }) {
     await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
     await wait(1500);

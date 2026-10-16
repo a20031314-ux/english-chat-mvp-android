@@ -69,28 +69,58 @@
           "body": [
             "Escribe en el idioma que estás aprendiendo y el tutor te responde como un amigo.",
             "Si hay algún error, se marca en tu mensaje y justo debajo ves la frase corregida."
-          ]
+          ],
+          "shot": "chat-correct"
         },
         {
           "heading": "¿Te atascas? Usa tu idioma",
           "body": [
             "Si algo te cuesta decirlo en el idioma que aprendes, escríbelo en el tuyo. La conversación sigue y cuenta como un mensaje más.",
             "Toca {ui:chatShowExpression} bajo tu mensaje para ver cómo se dice y {ui:chatUseExpression} para probarlo enseguida."
-          ]
+          ],
+          "shot": "chat-expression"
         },
         {
-          "heading": "Significados y análisis de frases",
+          "heading": "Ver el significado y escucharlo",
           "body": [
             "Toca {ui:chatReading} bajo la respuesta del tutor para verla en tu idioma.",
-            "Toca {ui:insightAnalyze} en una frase para abrirla. Arrastra sobre los puntos para elegir una parte y toca una pregunta como {ui:quickAskMeaning} o haz la tuya. La respuesta queda guardada en esa parte."
-          ]
+            "Toca el altavoz para oír la frase en voz alta."
+          ],
+          "shot": "chat-reading"
+        },
+        {
+          "heading": "Analiza una frase y pregunta",
+          "body": [
+            "Toca la barra a la izquierda de una frase para abrirla. Arrastra sobre los puntos para elegir una parte y toca una pregunta como «{ui:quickAskMeaning}» o escribe la tuya. La respuesta se queda en esa parte para la próxima vez."
+          ],
+          "shot": "chat-ask"
+        },
+        {
+          "heading": "Toca una palabra para guardarla",
+          "body": [
+            "En la hoja de la frase, toca una palabra o una expresión subrayada para ver sus significados y ejemplos. «{ui:vocabPreviewSave}» la añade a tu vocabulario."
+          ],
+          "shot": "chat-word"
+        },
+        {
+          "heading": "El menú",
+          "body": [
+            "El menú ⋮ de arriba a la izquierda abre «{ui:chatHistoryTitle}» y tiene «{ui:endSession}» para terminar este chat. Si una respuesta parece rara, avísanos con «{ui:reportTitle}»."
+          ],
+          "shot": "chat-menu"
+        },
+        {
+          "heading": "Retoma un chat anterior",
+          "body": [
+            "Abre un chat anterior para volver a leerlo y toca «{ui:chatHistoryContinue}» para seguir donde lo dejaste."
+          ],
+          "shot": "chat-history"
         },
         {
           "heading": "Más opciones",
           "body": [
             "¿No sabes qué decir? Toca {ui:chatStartCta} y el tutor empezará la conversación.",
             "Usa + para enviar una foto y hablar sobre ella.",
-            "El menú arriba a la izquierda te muestra tus chats anteriores y te permite iniciar uno nuevo.",
             "Las cuentas gratis pueden enviar 10 mensajes al día; Premium no tiene límite diario."
           ]
         }
@@ -184,20 +214,37 @@
         {
           "heading": "Busca y guarda",
           "body": [
-            "Busca una palabra o frase para ver su significado y guardarla.",
+            "Busca en tu idioma y verás cómo se dice en el idioma que aprendes, con significados y ejemplos. «{ui:vocabSave}» lo añade a tu lista.",
             "Las palabras que guardas en Chat también aparecen aquí."
-          ]
+          ],
+          "shot": "vocab-search"
+        },
+        {
+          "heading": "Tus palabras guardadas",
+          "body": [
+            "Cada palabra muestra cómo vas con ella y dónde la usaste por última vez. «{ui:linkTry}» abre un chat para usarla y «{ui:linkFindScenes}» busca las escenas de vídeos donde aparece.",
+            "Toca el altavoz para oírla y borra las palabras que ya no necesites."
+          ],
+          "shot": "vocab-saved"
         },
         {
           "heading": "Apréndelas",
           "body": [
-            "{ui:vocabHideGloss} oculta los significados; toca una palabra para comprobar si la sabes.",
+            "«{ui:vocabHideGloss}» tapa los significados. Toca «{ui:vocabRevealGloss}» para comprobar si te acuerdas.",
             "{ui:vocabShuffle} cambia el orden de las palabras."
-          ]
+          ],
+          "shot": "vocab-hide"
+        },
+        {
+          "heading": "Aprende la escritura",
+          "body": [
+            "Si el idioma que aprendes usa otra escritura, como el japonés o el chino, aparece la pestaña «{ui:vocabTabCharacters}». Toca un carácter para ver cómo suena y cómo se usa."
+          ],
+          "shot": "vocab-characters"
         }
       ]
     },
-    "_version": "2026-10-16b"
+    "_version": "2026-10-16c"
   },
   "ja": {
     "map": {
@@ -269,28 +316,58 @@
           "body": [
             "学んでいる言語で書くと、チューターが友達のように返事をしてくれます。",
             "間違いがあると自分のメッセージに印がつき、正しい文がすぐ下に表示されます。"
-          ]
+          ],
+          "shot": "chat-correct"
         },
         {
           "heading": "詰まったら自分の言葉で",
           "body": [
             "学んでいる言語で言いにくいことは、自分の言葉で書いても大丈夫。会話はそのまま続き、ほかのメッセージと同じく1通として数えます。",
             "自分の文の下の「{ui:chatShowExpression}」を押すと言い方が見られ、「{ui:chatUseExpression}」ですぐ使ってみられます。"
-          ]
+          ],
+          "shot": "chat-expression"
         },
         {
-          "heading": "意味と文の分析",
+          "heading": "意味を見る・聞く",
           "body": [
             "チューターの返信下の「{ui:chatReading}」を押すと、自分の言語で意味が見られます。",
-            "文の「{ui:insightAnalyze}」を押すと文シートが開きます。点をなぞって部分を選び、「{ui:quickAskMeaning}」などの質問を押すか、自分で質問してください。答えはその部分に残り、あとで見返せます。"
-          ]
+            "スピーカーを押すと、その文を音声で聞けます。"
+          ],
+          "shot": "chat-reading"
+        },
+        {
+          "heading": "文を分析して質問する",
+          "body": [
+            "文の左にあるバーを押すと文シートが開きます。点をなぞって部分を選び、「{ui:quickAskMeaning}」などの質問を押すか、自分で質問してください。答えはその部分に残り、あとで見返せます。"
+          ],
+          "shot": "chat-ask"
+        },
+        {
+          "heading": "単語を押して単語帳へ",
+          "body": [
+            "文シートで単語や下線の表現を押すと、意味と例文が出ます。「{ui:vocabPreviewSave}」を押すと単語帳に入ります。"
+          ],
+          "shot": "chat-word"
+        },
+        {
+          "heading": "メニュー",
+          "body": [
+            "左上の⋮メニューから「{ui:chatHistoryTitle}」を見たり、「{ui:endSession}」で今の会話を終えたりできます。おかしな返信は「{ui:reportTitle}」で知らせてください。"
+          ],
+          "shot": "chat-menu"
+        },
+        {
+          "heading": "前の会話の続き",
+          "body": [
+            "前の会話を選んで読み返し、「{ui:chatHistoryContinue}」で続きから話せます。"
+          ],
+          "shot": "chat-history"
         },
         {
           "heading": "その他の機能",
           "body": [
             "何を書けばいいか迷ったら「{ui:chatStartCta}」を押すと、チューターが会話を始めてくれます。",
             "+ボタンで写真を送って、それについて話すこともできます。",
-            "左上のメニューから過去のチャットを見たり、新しいチャットを始めたりできます。",
             "無料アカウントは1日10メッセージまで、プレミアムは無制限です。"
           ]
         }
@@ -384,20 +461,37 @@
         {
           "heading": "探して保存",
           "body": [
-            "単語やフレーズを検索して意味を調べ、保存できます。",
+            "自分の言語で単語や表現を検索すると、学習言語での言い方が意味・例文と一緒に出ます。「{ui:vocabSave}」を押すと単語帳に入ります。",
             "チャットでタップして保存した単語もここに集まります。"
-          ]
+          ],
+          "shot": "vocab-search"
+        },
+        {
+          "heading": "保存した単語",
+          "body": [
+            "単語ごとに今の状態と最後に使った場所が表示されます。「{ui:linkTry}」でチャットですぐ使ってみて、「{ui:linkFindScenes}」で動画のその表現が出てくる場面を探せます。",
+            "スピーカーで発音を聞き、いらなくなった単語は削除できます。"
+          ],
+          "shot": "vocab-saved"
         },
         {
           "heading": "覚える",
           "body": [
-            "{ui:vocabHideGloss}で意味を隠し、単語をタップして自分で確認できます。",
+            "「{ui:vocabHideGloss}」をオンにすると意味が隠れます。「{ui:vocabRevealGloss}」を押して確かめながら覚えましょう。",
             "{ui:vocabShuffle}で順番をシャッフルできます。"
-          ]
+          ],
+          "shot": "vocab-hide"
+        },
+        {
+          "heading": "文字を覚える",
+          "body": [
+            "韓国語や中国語のように文字が違う言語を学ぶと、「{ui:vocabTabCharacters}」タブが出ます。文字を押すと発音と使い方がすぐ見られます。"
+          ],
+          "shot": "vocab-characters"
         }
       ]
     },
-    "_version": "2026-10-16b"
+    "_version": "2026-10-16c"
   },
   "zh": {
     "map": {
@@ -469,28 +563,58 @@
           "body": [
             "用你正在学习的语言输入内容，导师会像朋友一样回复你。",
             "有错误会在你的消息中标出，下面会显示正确的句子。"
-          ]
+          ],
+          "shot": "chat-correct"
         },
         {
           "heading": "卡住了就用自己的语言",
           "body": [
             "用所学语言说不出来的，可以用自己的语言写。对话照常继续，和其他消息一样算一条。",
             "点你句子下面的“{ui:chatShowExpression}”就能看到怎么说，再点“{ui:chatUseExpression}”马上试试。"
-          ]
+          ],
+          "shot": "chat-expression"
         },
         {
-          "heading": "查看释义与句子分析",
+          "heading": "看意思、听发音",
           "body": [
             "点击导师回复下方的{ui:chatReading}，可查看母语释义。",
-            "点句子上的“{ui:insightAnalyze}”打开句子面板。拖过圆点选出一部分，点“{ui:quickAskMeaning}”这类问题，或自己提问。回答会留在那一部分，之后还能再看。"
-          ]
+            "点喇叭就能听这句话的读音。"
+          ],
+          "shot": "chat-reading"
+        },
+        {
+          "heading": "分析句子并提问",
+          "body": [
+            "点句子左边的竖条打开句子面板。拖动圆点选出一部分，再点“{ui:quickAskMeaning}”这样的问题，或者自己提问。回答会留在那一部分，下次还能看。"
+          ],
+          "shot": "chat-ask"
+        },
+        {
+          "heading": "点单词存进单词本",
+          "body": [
+            "在句子面板里点一个词或带下划线的表达，就能看到意思和例句。点“{ui:vocabPreviewSave}”即可存进单词本。"
+          ],
+          "shot": "chat-word"
+        },
+        {
+          "heading": "菜单",
+          "body": [
+            "左上角的⋮菜单可以打开“{ui:chatHistoryTitle}”，也可以用“{ui:endSession}”结束当前对话。回复不对劲时，请用“{ui:reportTitle}”告诉我们。"
+          ],
+          "shot": "chat-menu"
+        },
+        {
+          "heading": "接着之前的对话",
+          "body": [
+            "打开之前的对话重新阅读，点“{ui:chatHistoryContinue}”就能接着聊。"
+          ],
+          "shot": "chat-history"
         },
         {
           "heading": "更多功能",
           "body": [
             "不知道说什么时，点{ui:chatStartCta}让导师先开场。",
             "点击+可以发送照片，一起聊图片。",
-            "左上角菜单可查看历史聊天或开始新对话。",
             "免费用户每天可发10条消息，会员无限制。"
           ]
         }
@@ -584,20 +708,37 @@
         {
           "heading": "查找与收藏",
           "body": [
-            "搜索单词或短语可查看释义并收藏到词汇本。",
+            "用你的语言搜索单词或表达，就能看到学习语言里的说法，附带意思和例句。点“{ui:vocabSave}”存进单词本。",
             "在聊天中点击保存的单词也会自动收录到这里。"
-          ]
+          ],
+          "shot": "vocab-search"
+        },
+        {
+          "heading": "已保存的单词",
+          "body": [
+            "每个单词都会显示目前的状态和上次用在哪里。点“{ui:linkTry}”马上在聊天里用一用，点“{ui:linkFindScenes}”找出视频里出现这个表达的场景。",
+            "点喇叭听发音，不需要的单词可以删除。"
+          ],
+          "shot": "vocab-saved"
         },
         {
           "heading": "学习词汇",
           "body": [
-            "开启{ui:vocabHideGloss}后，释义会被隐藏，点击单词自测。",
+            "打开“{ui:vocabHideGloss}”后意思会被遮住。点“{ui:vocabRevealGloss}”确认，边看边记。",
             "用{ui:vocabShuffle}可打乱顺序练习。"
-          ]
+          ],
+          "shot": "vocab-hide"
+        },
+        {
+          "heading": "认识文字",
+          "body": [
+            "学习日语这类文字不同的语言时，会出现“{ui:vocabTabCharacters}”标签。点一个字就能看到读音和用法。"
+          ],
+          "shot": "vocab-characters"
         }
       ]
     },
-    "_version": "2026-10-16b"
+    "_version": "2026-10-16c"
   },
   "vi": {
     "map": {
@@ -669,28 +810,58 @@
           "body": [
             "Viết bằng ngôn ngữ bạn đang học, trợ lý sẽ trả lời như một người bạn.",
             "Nếu có lỗi, phần sai sẽ được đánh dấu trong tin nhắn của bạn, và câu sửa sẽ hiển thị ngay bên dưới."
-          ]
+          ],
+          "shot": "chat-correct"
         },
         {
           "heading": "Bí thì dùng tiếng của bạn",
           "body": [
             "Điều gì khó nói bằng ngôn ngữ đang học, bạn cứ viết bằng tiếng của mình. Cuộc trò chuyện vẫn tiếp tục và chỉ tính là một tin nhắn như mọi tin khác.",
             "Chạm {ui:chatShowExpression} dưới tin nhắn để xem cách nói, rồi {ui:chatUseExpression} để thử ngay."
-          ]
+          ],
+          "shot": "chat-expression"
         },
         {
-          "heading": "Xem nghĩa và phân tích câu",
+          "heading": "Xem nghĩa và nghe",
           "body": [
             "Nhấn {ui:chatReading} dưới câu trả lời để xem nghĩa bằng tiếng mẹ đẻ.",
-            "Chạm {ui:insightAnalyze} trên một câu để mở câu đó. Kéo qua các chấm để chọn một phần, rồi chạm câu hỏi như {ui:quickAskMeaning} hoặc tự hỏi. Câu trả lời được lưu lại ở phần đó."
-          ]
+            "Chạm vào loa để nghe câu đó được đọc lên."
+          ],
+          "shot": "chat-reading"
+        },
+        {
+          "heading": "Phân tích câu và hỏi",
+          "body": [
+            "Chạm vào thanh bên trái câu để mở bảng câu. Kéo qua các chấm để chọn một phần, rồi chạm vào câu hỏi như “{ui:quickAskMeaning}” hoặc tự hỏi. Câu trả lời được giữ ở phần đó cho lần sau."
+          ],
+          "shot": "chat-ask"
+        },
+        {
+          "heading": "Chạm vào từ để lưu",
+          "body": [
+            "Trong bảng câu, chạm vào một từ hoặc cụm từ được gạch chân để xem nghĩa và ví dụ. “{ui:vocabPreviewSave}” sẽ thêm vào sổ từ."
+          ],
+          "shot": "chat-word"
+        },
+        {
+          "heading": "Menu",
+          "body": [
+            "Menu ⋮ ở góc trên bên trái mở “{ui:chatHistoryTitle}” và có “{ui:endSession}” để kết thúc cuộc trò chuyện này. Nếu câu trả lời có vẻ sai, hãy báo bằng “{ui:reportTitle}”."
+          ],
+          "shot": "chat-menu"
+        },
+        {
+          "heading": "Tiếp tục cuộc trò chuyện cũ",
+          "body": [
+            "Mở một cuộc trò chuyện cũ để đọc lại, và chạm “{ui:chatHistoryContinue}” để nói tiếp."
+          ],
+          "shot": "chat-history"
         },
         {
           "heading": "Lưu ý khác",
           "body": [
             "Không biết bắt đầu thế nào? Nhấn {ui:chatStartCta} để trợ lý bắt đầu cuộc trò chuyện.",
             "Dùng dấu + để gửi ảnh và trò chuyện về ảnh đó.",
-            "Menu góc trên bên trái cho phép xem lại các cuộc chat cũ hoặc bắt đầu chat mới.",
             "Tài khoản miễn phí gửi được 10 tin nhắn mỗi ngày; Premium không giới hạn."
           ]
         }
@@ -784,20 +955,37 @@
         {
           "heading": "Tìm và lưu từ",
           "body": [
-            "Tìm kiếm từ hoặc cụm từ để xem nghĩa và lưu lại.",
+            "Tìm bằng ngôn ngữ của bạn, bạn sẽ thấy cách nói trong ngôn ngữ đang học, kèm nghĩa và ví dụ. “{ui:vocabSave}” sẽ thêm vào danh sách.",
             "Các từ bạn lưu trong Chat cũng sẽ xuất hiện ở đây."
-          ]
+          ],
+          "shot": "vocab-search"
+        },
+        {
+          "heading": "Từ đã lưu",
+          "body": [
+            "Mỗi từ cho biết bạn đang ở mức nào với nó và lần cuối dùng ở đâu. “{ui:linkTry}” mở trò chuyện để dùng ngay, “{ui:linkFindScenes}” tìm cảnh trong video có biểu đạt đó.",
+            "Chạm vào loa để nghe phát âm, và xóa những từ không cần nữa."
+          ],
+          "shot": "vocab-saved"
         },
         {
           "heading": "Ôn tập từ vựng",
           "body": [
-            "Bật {ui:vocabHideGloss} để che nghĩa, chạm vào từ để tự kiểm tra.",
+            "“{ui:vocabHideGloss}” sẽ che nghĩa đi. Chạm “{ui:vocabRevealGloss}” để tự kiểm tra.",
             "Dùng {ui:vocabShuffle} để đảo thứ tự từ."
-          ]
+          ],
+          "shot": "vocab-hide"
+        },
+        {
+          "heading": "Học chữ viết",
+          "body": [
+            "Nếu ngôn ngữ bạn học dùng chữ viết khác, như tiếng Nhật hay tiếng Trung, sẽ có thẻ “{ui:vocabTabCharacters}”. Chạm vào một chữ để xem cách đọc và cách dùng."
+          ],
+          "shot": "vocab-characters"
         }
       ]
     },
-    "_version": "2026-10-16b"
+    "_version": "2026-10-16c"
   },
   "fr": {
     "map": {
@@ -869,28 +1057,58 @@
           "body": [
             "Écrivez dans la langue que vous apprenez, le tuteur répond comme un ami.",
             "Si quelque chose ne va pas, c’est signalé dans votre message, avec la correction juste en dessous."
-          ]
+          ],
+          "shot": "chat-correct"
         },
         {
           "heading": "Tu bloques ? Écris dans ta langue",
           "body": [
             "Si c’est difficile à dire dans la langue que tu apprends, écris-le dans la tienne. La conversation continue et ça compte comme un message comme les autres.",
             "Touche {ui:chatShowExpression} sous ton message pour voir comment le dire, puis {ui:chatUseExpression} pour l’essayer tout de suite."
-          ]
+          ],
+          "shot": "chat-expression"
         },
         {
-          "heading": "Traductions et analyse de phrases",
+          "heading": "Voir le sens, l'écouter",
           "body": [
             "Touchez {ui:chatReading} sous la réponse du tuteur pour la voir dans votre langue.",
-            "Touche {ui:insightAnalyze} sur une phrase pour l’ouvrir. Fais glisser sur les points pour choisir un passage, puis touche une question comme {ui:quickAskMeaning} ou pose la tienne. La réponse reste sur ce passage."
-          ]
+            "Touchez le haut-parleur pour entendre la phrase lue à voix haute."
+          ],
+          "shot": "chat-reading"
+        },
+        {
+          "heading": "Décortiquer une phrase et poser une question",
+          "body": [
+            "Touchez la barre à gauche d'une phrase pour l'ouvrir. Faites glisser sur les points pour choisir un passage, puis touchez une question comme « {ui:quickAskMeaning} » ou posez la vôtre. La réponse reste sur ce passage pour la prochaine fois."
+          ],
+          "shot": "chat-ask"
+        },
+        {
+          "heading": "Touchez un mot pour l'enregistrer",
+          "body": [
+            "Dans la fiche de la phrase, touchez un mot ou une expression soulignée pour voir ses sens et des exemples. « {ui:vocabPreviewSave} » l'ajoute à votre vocabulaire."
+          ],
+          "shot": "chat-word"
+        },
+        {
+          "heading": "Le menu",
+          "body": [
+            "Le menu ⋮ en haut à gauche ouvre « {ui:chatHistoryTitle} » et propose « {ui:endSession} » pour terminer cette conversation. Si une réponse semble bizarre, signalez-la avec « {ui:reportTitle} »."
+          ],
+          "shot": "chat-menu"
+        },
+        {
+          "heading": "Reprendre une conversation",
+          "body": [
+            "Ouvrez une ancienne conversation pour la relire, puis touchez « {ui:chatHistoryContinue} » pour reprendre là où vous en étiez."
+          ],
+          "shot": "chat-history"
         },
         {
           "heading": "Astuces",
           "body": [
             "Vous ne savez pas quoi dire ? Touchez {ui:chatStartCta} et le tuteur lancera la conversation.",
             "Utilisez + pour envoyer une photo et en discuter.",
-            "Le menu en haut à gauche permet de retrouver vos discussions ou d’en commencer une nouvelle.",
             "Les comptes gratuits peuvent envoyer 10 messages par jour ; Premium n’a pas de limite quotidienne."
           ]
         }
@@ -984,20 +1202,37 @@
         {
           "heading": "Chercher et enregistrer",
           "body": [
-            "Cherchez un mot ou une expression pour voir sa signification et l’ajouter à votre vocabulaire.",
+            "Cherchez dans votre langue et vous verrez comment on le dit dans la langue que vous apprenez, avec les sens et des exemples. « {ui:vocabSave} » l'ajoute à votre liste.",
             "Les mots sauvegardés dans le Chat se retrouvent aussi ici."
-          ]
+          ],
+          "shot": "vocab-search"
+        },
+        {
+          "heading": "Vos mots enregistrés",
+          "body": [
+            "Chaque mot indique où vous en êtes et où vous l'avez utilisé pour la dernière fois. « {ui:linkTry} » ouvre une conversation pour l'utiliser, et « {ui:linkFindScenes} » trouve les scènes de vidéos où il apparaît.",
+            "Touchez le haut-parleur pour l'écouter, et supprimez les mots dont vous n'avez plus besoin."
+          ],
+          "shot": "vocab-saved"
         },
         {
           "heading": "Apprendre",
           "body": [
-            "{ui:vocabHideGloss} masque les significations, touchez un mot pour vérifier si vous avez bien retenu.",
+            "« {ui:vocabHideGloss} » cache les sens. Touchez « {ui:vocabRevealGloss} » pour vérifier.",
             "{ui:vocabShuffle} mélange l’ordre des mots."
-          ]
+          ],
+          "shot": "vocab-hide"
+        },
+        {
+          "heading": "Apprendre l'écriture",
+          "body": [
+            "Si la langue que vous apprenez s'écrit autrement, comme le japonais ou le chinois, un onglet « {ui:vocabTabCharacters} » apparaît. Touchez un caractère pour voir sa prononciation et son usage."
+          ],
+          "shot": "vocab-characters"
         }
       ]
     },
-    "_version": "2026-10-16b"
+    "_version": "2026-10-16c"
   },
   "it": {
     "map": {
@@ -1069,28 +1304,58 @@
           "body": [
             "Scrivi nella lingua che vuoi imparare e il tutor ti risponde come farebbe un amico.",
             "Se c’è qualcosa da correggere, viene segnalato nel tuo messaggio e subito sotto trovi la frase corretta."
-          ]
+          ],
+          "shot": "chat-correct"
         },
         {
           "heading": "Ti blocchi? Usa la tua lingua",
           "body": [
             "Se qualcosa è difficile da dire nella lingua che studi, scrivilo nella tua. La conversazione continua e conta come un messaggio qualsiasi.",
             "Tocca {ui:chatShowExpression} sotto il tuo messaggio per vedere come si dice, poi {ui:chatUseExpression} per provarlo subito."
-          ]
+          ],
+          "shot": "chat-expression"
         },
         {
-          "heading": "Significati e analisi delle frasi",
+          "heading": "Vedi il significato e ascolta",
           "body": [
             "Tocca {ui:chatReading} sotto la risposta del tutor per leggerla nella tua lingua.",
-            "Tocca {ui:insightAnalyze} su una frase per aprirla. Trascina sui punti per scegliere una parte, poi tocca una domanda come {ui:quickAskMeaning} o fanne una tua. La risposta resta su quella parte."
-          ]
+            "Tocca l'altoparlante per sentire la frase letta ad alta voce."
+          ],
+          "shot": "chat-reading"
+        },
+        {
+          "heading": "Analizza una frase e chiedi",
+          "body": [
+            "Tocca la barra a sinistra di una frase per aprirla. Trascina sui puntini per scegliere una parte, poi tocca una domanda come «{ui:quickAskMeaning}» o scrivi la tua. La risposta resta su quella parte per la prossima volta."
+          ],
+          "shot": "chat-ask"
+        },
+        {
+          "heading": "Tocca una parola per salvarla",
+          "body": [
+            "Nella scheda della frase, tocca una parola o un'espressione sottolineata per vedere significati ed esempi. «{ui:vocabPreviewSave}» la aggiunge al tuo vocabolario."
+          ],
+          "shot": "chat-word"
+        },
+        {
+          "heading": "Il menu",
+          "body": [
+            "Il menu ⋮ in alto a sinistra apre «{ui:chatHistoryTitle}» e ha «{ui:endSession}» per chiudere questa chat. Se una risposta sembra strana, segnalala con «{ui:reportTitle}»."
+          ],
+          "shot": "chat-menu"
+        },
+        {
+          "heading": "Riprendi una chat",
+          "body": [
+            "Apri una chat passata per rileggerla e tocca «{ui:chatHistoryContinue}» per riprendere da dove eri rimasto."
+          ],
+          "shot": "chat-history"
         },
         {
           "heading": "Altre funzioni",
           "body": [
             "Non sai cosa scrivere? Tocca {ui:chatStartCta} e il tutor inizierà la conversazione.",
             "Con il + puoi inviare una foto e parlarne insieme.",
-            "Dal menu in alto a sinistra trovi le chat passate e puoi iniziarne una nuova.",
             "Con l’account gratuito puoi inviare 10 messaggi al giorno; Premium non ha limiti giornalieri."
           ]
         }
@@ -1184,20 +1449,37 @@
         {
           "heading": "Cerca e salva",
           "body": [
-            "Cerca una parola o una frase per vedere il significato e salvarla.",
+            "Cerca nella tua lingua e vedrai come si dice nella lingua che studi, con significati ed esempi. «{ui:vocabSave}» lo aggiunge alla tua lista.",
             "Le parole che tocchi e salvi in Chat vengono raccolte anche qui."
-          ]
+          ],
+          "shot": "vocab-search"
+        },
+        {
+          "heading": "Le parole salvate",
+          "body": [
+            "Ogni parola mostra a che punto sei e dove l'hai usata l'ultima volta. «{ui:linkTry}» apre una chat per usarla e «{ui:linkFindScenes}» trova le scene dei video in cui compare.",
+            "Tocca l'altoparlante per ascoltarla ed elimina le parole che non ti servono più."
+          ],
+          "shot": "vocab-saved"
         },
         {
           "heading": "Imparale",
           "body": [
-            "{ui:vocabHideGloss} nasconde i significati: tocca una parola per controllarti.",
+            "«{ui:vocabHideGloss}» copre i significati. Tocca «{ui:vocabRevealGloss}» per verificare.",
             "{ui:vocabShuffle} mescola l’ordine delle parole."
-          ]
+          ],
+          "shot": "vocab-hide"
+        },
+        {
+          "heading": "Impara la scrittura",
+          "body": [
+            "Se la lingua che studi usa un'altra scrittura, come il giapponese o il cinese, compare la scheda «{ui:vocabTabCharacters}». Tocca un carattere per vedere come si pronuncia e come si usa."
+          ],
+          "shot": "vocab-characters"
         }
       ]
     },
-    "_version": "2026-10-16b"
+    "_version": "2026-10-16c"
   },
   "pt": {
     "map": {
@@ -1269,28 +1551,58 @@
           "body": [
             "Escreva na língua que está aprendendo e o tutor responde como um amigo.",
             "Se algo estiver errado, aparece marcado na sua mensagem, com a frase corrigida logo abaixo."
-          ]
+          ],
+          "shot": "chat-correct"
         },
         {
           "heading": "Travou? Use seu idioma",
           "body": [
             "Se algo é difícil de dizer no idioma que você aprende, escreva no seu. A conversa continua e conta como uma mensagem qualquer.",
             "Toque em {ui:chatShowExpression} sob sua mensagem para ver como se diz e em {ui:chatUseExpression} para testar na hora."
-          ]
+          ],
+          "shot": "chat-expression"
         },
         {
-          "heading": "Significados e análise de frases",
+          "heading": "Veja o significado e ouça",
           "body": [
             "Toque em {ui:chatReading} na resposta do tutor para ver no seu idioma.",
-            "Toque em {ui:insightAnalyze} numa frase para abri-la. Arraste pelos pontos para escolher uma parte e toque numa pergunta como {ui:quickAskMeaning} ou faça a sua. A resposta fica guardada nessa parte."
-          ]
+            "Toque no alto-falante para ouvir a frase em voz alta."
+          ],
+          "shot": "chat-reading"
+        },
+        {
+          "heading": "Analise uma frase e pergunte",
+          "body": [
+            "Toque na barra à esquerda de uma frase para abri-la. Arraste pelos pontos para escolher uma parte e toque numa pergunta como “{ui:quickAskMeaning}” ou escreva a sua. A resposta fica naquela parte para a próxima vez."
+          ],
+          "shot": "chat-ask"
+        },
+        {
+          "heading": "Toque numa palavra para salvar",
+          "body": [
+            "Na ficha da frase, toque numa palavra ou expressão sublinhada para ver significados e exemplos. “{ui:vocabPreviewSave}” a adiciona ao seu vocabulário."
+          ],
+          "shot": "chat-word"
+        },
+        {
+          "heading": "O menu",
+          "body": [
+            "O menu ⋮ no canto superior esquerdo abre “{ui:chatHistoryTitle}” e tem “{ui:endSession}” para encerrar esta conversa. Se uma resposta parecer estranha, avise com “{ui:reportTitle}”."
+          ],
+          "shot": "chat-menu"
+        },
+        {
+          "heading": "Retome uma conversa",
+          "body": [
+            "Abra uma conversa anterior para reler e toque em “{ui:chatHistoryContinue}” para continuar de onde parou."
+          ],
+          "shot": "chat-history"
         },
         {
           "heading": "Outras dicas",
           "body": [
             "Não sabe o que dizer? Toque em {ui:chatStartCta} e o tutor começa a conversa.",
             "Use o + para enviar uma foto e conversar sobre ela.",
-            "O menu no canto superior esquerdo mostra seus chats antigos e começa um novo.",
             "Contas grátis podem enviar 10 mensagens por dia; Premium não tem limite diário."
           ]
         }
@@ -1384,20 +1696,37 @@
         {
           "heading": "Buscar e salvar",
           "body": [
-            "Procure uma palavra ou expressão para ver o significado e salvar.",
+            "Pesquise no seu idioma e veja como se diz no idioma que você aprende, com significados e exemplos. “{ui:vocabSave}” adiciona à sua lista.",
             "Palavras que você toca e salva no Chat também aparecem aqui."
-          ]
+          ],
+          "shot": "vocab-search"
+        },
+        {
+          "heading": "Suas palavras salvas",
+          "body": [
+            "Cada palavra mostra em que pé você está com ela e onde a usou por último. “{ui:linkTry}” abre uma conversa para usá-la, e “{ui:linkFindScenes}” encontra as cenas de vídeos em que ela aparece.",
+            "Toque no alto-falante para ouvir e apague as palavras de que não precisa mais."
+          ],
+          "shot": "vocab-saved"
         },
         {
           "heading": "Aprenda as palavras",
           "body": [
-            "{ui:vocabHideGloss} esconde os significados. Toque na palavra para conferir.",
+            "“{ui:vocabHideGloss}” esconde os significados. Toque em “{ui:vocabRevealGloss}” para conferir.",
             "{ui:vocabShuffle} embaralha a ordem."
-          ]
+          ],
+          "shot": "vocab-hide"
+        },
+        {
+          "heading": "Aprenda a escrita",
+          "body": [
+            "Se o idioma que você aprende usa outra escrita, como o japonês ou o chinês, aparece a aba “{ui:vocabTabCharacters}”. Toque num caractere para ver como se pronuncia e como se usa."
+          ],
+          "shot": "vocab-characters"
         }
       ]
     },
-    "_version": "2026-10-16b"
+    "_version": "2026-10-16c"
   },
   "ru": {
     "map": {
@@ -1469,28 +1798,58 @@
           "body": [
             "Пишите на изучаемом языке — тьютор отвечает, как друг.",
             "Ошибки отмечаются в вашем сообщении, а исправленный вариант появляется сразу под ним."
-          ]
+          ],
+          "shot": "chat-correct"
         },
         {
           "heading": "Застряли? Пишите на своём языке",
           "body": [
             "Если что-то трудно сказать на изучаемом языке, напишите это на своём. Разговор продолжится, а сообщение посчитается как обычное.",
             "Нажмите {ui:chatShowExpression} под своим сообщением, чтобы увидеть, как это сказать, и {ui:chatUseExpression}, чтобы сразу попробовать."
-          ]
+          ],
+          "shot": "chat-expression"
         },
         {
-          "heading": "Переводы и разбор предложений",
+          "heading": "Смотрите перевод и слушайте",
           "body": [
             "Нажмите {ui:chatReading} под ответом тьютора, чтобы увидеть перевод.",
-            "Нажмите {ui:insightAnalyze} у предложения, чтобы открыть его. Проведите по точкам, чтобы выбрать часть, и нажмите вопрос вроде {ui:quickAskMeaning} или задайте свой. Ответ останется у этой части."
-          ]
+            "Нажмите на динамик, чтобы услышать фразу вслух."
+          ],
+          "shot": "chat-reading"
+        },
+        {
+          "heading": "Разбор фразы и вопросы",
+          "body": [
+            "Нажмите на полоску слева от фразы, чтобы открыть её. Проведите по точкам, чтобы выбрать часть, и нажмите вопрос вроде «{ui:quickAskMeaning}» или задайте свой. Ответ останется у этой части на следующий раз."
+          ],
+          "shot": "chat-ask"
+        },
+        {
+          "heading": "Сохраняйте слова одним нажатием",
+          "body": [
+            "В карточке фразы нажмите на слово или подчёркнутое выражение — появятся значения и примеры. «{ui:vocabPreviewSave}» добавит его в словарь."
+          ],
+          "shot": "chat-word"
+        },
+        {
+          "heading": "Меню",
+          "body": [
+            "Меню ⋮ слева вверху открывает «{ui:chatHistoryTitle}», а «{ui:endSession}» завершает этот разговор. Если ответ выглядит странно, сообщите через «{ui:reportTitle}»."
+          ],
+          "shot": "chat-menu"
+        },
+        {
+          "heading": "Продолжить прошлый чат",
+          "body": [
+            "Откройте прошлый чат, чтобы перечитать его, и нажмите «{ui:chatHistoryContinue}», чтобы продолжить с того места."
+          ],
+          "shot": "chat-history"
         },
         {
           "heading": "Дополнительно",
           "body": [
             "Не знаете, с чего начать? Жмите {ui:chatStartCta} — тьютор начнёт разговор.",
             "Через + можно отправить фото и обсудить его.",
-            "В меню слева вверху — ваши прошлые чаты и кнопка для нового.",
             "Бесплатно — 10 сообщений в день, в Premium — без ограничений."
           ]
         }
@@ -1584,20 +1943,37 @@
         {
           "heading": "Находите и сохраняйте",
           "body": [
-            "Ищите слово или фразу, чтобы узнать значение и добавить в словарь.",
+            "Ищите на своём языке — и увидите, как это сказать на изучаемом, со значениями и примерами. «{ui:vocabSave}» добавит слово в список.",
             "Слова, сохранённые из Чата, тоже появляются здесь."
-          ]
+          ],
+          "shot": "vocab-search"
+        },
+        {
+          "heading": "Сохранённые слова",
+          "body": [
+            "У каждого слова видно, на каком вы с ним этапе и где использовали его в последний раз. «{ui:linkTry}» открывает чат, чтобы сразу его применить, а «{ui:linkFindScenes}» находит сцены в видео, где оно звучит.",
+            "Нажмите на динамик, чтобы послушать, и удаляйте слова, которые больше не нужны."
+          ],
+          "shot": "vocab-saved"
         },
         {
           "heading": "Учите слова",
           "body": [
-            "{ui:vocabHideGloss} скрывает значения — проверьте себя, нажимая на слово.",
+            "«{ui:vocabHideGloss}» закрывает значения. Нажмите «{ui:vocabRevealGloss}», чтобы проверить себя.",
             "{ui:vocabShuffle} перемешивает порядок."
-          ]
+          ],
+          "shot": "vocab-hide"
+        },
+        {
+          "heading": "Учите письменность",
+          "body": [
+            "Если изучаемый язык пишется другим письмом, как японский или китайский, появляется вкладка «{ui:vocabTabCharacters}». Нажмите на знак, чтобы узнать, как он читается и используется."
+          ],
+          "shot": "vocab-characters"
         }
       ]
     },
-    "_version": "2026-10-16b"
+    "_version": "2026-10-16c"
   },
   "id": {
     "map": {
@@ -1669,28 +2045,58 @@
           "body": [
             "Tulis dengan bahasa yang sedang kamu pelajari, tutor akan membalas seperti teman.",
             "Jika ada yang kurang tepat, bagian yang salah akan ditandai di pesanmu, dan kalimat yang benar muncul di bawahnya."
-          ]
+          ],
+          "shot": "chat-correct"
         },
         {
           "heading": "Buntu? Pakai bahasamu",
           "body": [
             "Kalau sesuatu sulit diucapkan dalam bahasa yang kamu pelajari, tulis saja dalam bahasamu. Percakapan tetap berlanjut dan dihitung satu pesan seperti biasa.",
             "Ketuk {ui:chatShowExpression} di bawah pesanmu untuk melihat cara mengatakannya, lalu {ui:chatUseExpression} untuk langsung mencoba."
-          ]
+          ],
+          "shot": "chat-expression"
         },
         {
-          "heading": "Arti dan Analisis Kalimat",
+          "heading": "Lihat arti dan dengarkan",
           "body": [
             "Ketuk {ui:chatReading} di bawah balasan tutor untuk melihat artinya dalam bahasamu.",
-            "Ketuk {ui:insightAnalyze} pada kalimat untuk membukanya. Geser di atas titik untuk memilih bagian, lalu ketuk pertanyaan seperti {ui:quickAskMeaning} atau tanyakan sendiri. Jawabannya tersimpan di bagian itu."
-          ]
+            "Ketuk ikon speaker untuk mendengar kalimat itu dibacakan."
+          ],
+          "shot": "chat-reading"
+        },
+        {
+          "heading": "Bedah kalimat dan bertanya",
+          "body": [
+            "Ketuk bilah di kiri kalimat untuk membukanya. Geser di atas titik-titik untuk memilih bagian, lalu ketuk pertanyaan seperti “{ui:quickAskMeaning}” atau tulis sendiri. Jawabannya tetap di bagian itu untuk lain kali."
+          ],
+          "shot": "chat-ask"
+        },
+        {
+          "heading": "Ketuk kata untuk menyimpan",
+          "body": [
+            "Di lembar kalimat, ketuk kata atau ungkapan bergaris bawah untuk melihat arti dan contohnya. “{ui:vocabPreviewSave}” memasukkannya ke kosakata."
+          ],
+          "shot": "chat-word"
+        },
+        {
+          "heading": "Menu",
+          "body": [
+            "Menu ⋮ di kiri atas membuka “{ui:chatHistoryTitle}” dan punya “{ui:endSession}” untuk mengakhiri obrolan ini. Kalau balasan terasa aneh, laporkan lewat “{ui:reportTitle}”."
+          ],
+          "shot": "chat-menu"
+        },
+        {
+          "heading": "Lanjutkan obrolan lama",
+          "body": [
+            "Buka obrolan lama untuk membacanya lagi, lalu ketuk “{ui:chatHistoryContinue}” untuk melanjutkan."
+          ],
+          "shot": "chat-history"
         },
         {
           "heading": "Lainnya",
           "body": [
             "Bingung mau mulai dari mana? Ketuk {ui:chatStartCta} dan tutor akan memulai percakapan.",
             "Gunakan + untuk kirim foto dan ngobrol tentangnya.",
-            "Menu di kiri atas berisi riwayat chat dan untuk mulai chat baru.",
             "Akun gratis bisa kirim 10 pesan per hari; Premium tanpa batas harian."
           ]
         }
@@ -1784,20 +2190,37 @@
         {
           "heading": "Cari dan Simpan",
           "body": [
-            "Cari kata atau frasa untuk melihat artinya dan simpan ke kosakata.",
+            "Cari dengan bahasamu sendiri, lalu lihat cara mengatakannya dalam bahasa yang kamu pelajari, lengkap dengan arti dan contoh. “{ui:vocabSave}” menambahkannya ke daftarmu.",
             "Kata yang kamu ketuk dan simpan di Chat juga terkumpul di sini."
-          ]
+          ],
+          "shot": "vocab-search"
+        },
+        {
+          "heading": "Kata yang disimpan",
+          "body": [
+            "Setiap kata menunjukkan sejauh mana kamu menguasainya dan terakhir kali dipakai di mana. “{ui:linkTry}” membuka obrolan untuk langsung memakainya, dan “{ui:linkFindScenes}” mencari adegan video tempat kata itu muncul.",
+            "Ketuk speaker untuk mendengarnya, dan hapus kata yang tidak diperlukan lagi."
+          ],
+          "shot": "vocab-saved"
         },
         {
           "heading": "Belajar Kosakata",
           "body": [
-            "{ui:vocabHideGloss} akan menutupi artinya, lalu ketuk kata untuk cek jawabanmu.",
+            "“{ui:vocabHideGloss}” menutupi artinya. Ketuk “{ui:vocabRevealGloss}” untuk mengecek diri sendiri.",
             "{ui:vocabShuffle} untuk mengacak urutan kata."
-          ]
+          ],
+          "shot": "vocab-hide"
+        },
+        {
+          "heading": "Pelajari aksaranya",
+          "body": [
+            "Kalau bahasa yang kamu pelajari memakai aksara lain, seperti bahasa Jepang atau Mandarin, muncul tab “{ui:vocabTabCharacters}”. Ketuk satu huruf untuk melihat cara baca dan pemakaiannya."
+          ],
+          "shot": "vocab-characters"
         }
       ]
     },
-    "_version": "2026-10-16b"
+    "_version": "2026-10-16c"
   },
   "ar": {
     "map": {
@@ -1869,28 +2292,58 @@
           "body": [
             "اكتب باللغة التي تتعلمها وسيجيبك المعلم كما يفعل صديق.",
             "إذا كان هناك خطأ، سيتم تمييزه في رسالتك مع التصحيح أسفلها مباشرة."
-          ]
+          ],
+          "shot": "chat-correct"
         },
         {
           "heading": "تعثّرت؟ اكتب بلغتك",
           "body": [
             "إذا صعب عليك قول شيء باللغة التي تتعلمها فاكتبه بلغتك. تستمر المحادثة وتُحسب رسالة واحدة كغيرها.",
             "اضغط {ui:chatShowExpression} تحت رسالتك لترى كيف تقولها، ثم {ui:chatUseExpression} لتجرّبها فورًا."
-          ]
+          ],
+          "shot": "chat-expression"
         },
         {
-          "heading": "المعاني وتحليل الجمل",
+          "heading": "اعرف المعنى واستمع",
           "body": [
             "اضغط {ui:chatReading} تحت رد المعلم لترى الترجمة بلغتك.",
-            "اضغط {ui:insightAnalyze} على جملة لفتحها. اسحب فوق النقاط لاختيار جزء، ثم اضغط سؤالًا مثل {ui:quickAskMeaning} أو اسأل بنفسك. تبقى الإجابة محفوظة على ذلك الجزء."
-          ]
+            "اضغط على السمّاعة لتسمع الجملة بصوت عالٍ."
+          ],
+          "shot": "chat-reading"
+        },
+        {
+          "heading": "حلّل الجملة واسأل",
+          "body": [
+            "اضغط على الشريط بجانب الجملة لفتحها. اسحب فوق النقاط لاختيار جزء، ثم اضغط على سؤال مثل «{ui:quickAskMeaning}» أو اكتب سؤالك. تبقى الإجابة على ذلك الجزء للمرة القادمة."
+          ],
+          "shot": "chat-ask"
+        },
+        {
+          "heading": "اضغط على كلمة لحفظها",
+          "body": [
+            "في ورقة الجملة، اضغط على كلمة أو تعبير تحته خط لترى المعاني والأمثلة. يضيفها «{ui:vocabPreviewSave}» إلى مفرداتك."
+          ],
+          "shot": "chat-word"
+        },
+        {
+          "heading": "القائمة",
+          "body": [
+            "قائمة ⋮ في الأعلى تفتح «{ui:chatHistoryTitle}» وفيها «{ui:endSession}» لإنهاء هذه المحادثة. إذا بدا رد غريبًا، أخبرنا عبر «{ui:reportTitle}»."
+          ],
+          "shot": "chat-menu"
+        },
+        {
+          "heading": "أكمل محادثة سابقة",
+          "body": [
+            "افتح محادثة سابقة لتقرأها من جديد، واضغط «{ui:chatHistoryContinue}» لتكمل من حيث توقفت."
+          ],
+          "shot": "chat-history"
         },
         {
           "heading": "ملاحظات أخرى",
           "body": [
             "لا تعرف ماذا تقول؟ اضغط {ui:chatStartCta} وسيبدأ المعلم الحديث.",
             "استخدم + لإرسال صورة والدردشة عنها.",
-            "القائمة في أعلى اليسار تعرض محادثاتك السابقة وتتيح بدء محادثة جديدة.",
             "الحساب المجاني يسمح بإرسال 10 رسائل يومياً؛ الحساب المميز بلا حد يومي."
           ]
         }
@@ -1984,20 +2437,37 @@
         {
           "heading": "ابحث واحفظ",
           "body": [
-            "ابحث عن كلمة أو عبارة لترى معناها واحفظها.",
+            "ابحث بلغتك لترى كيف يُقال ذلك بلغة التعلم، مع المعاني والأمثلة. يضيفه «{ui:vocabSave}» إلى قائمتك.",
             "الكلمات التي تحفظها في الدردشة تظهر هنا أيضاً."
-          ]
+          ],
+          "shot": "vocab-search"
+        },
+        {
+          "heading": "كلماتك المحفوظة",
+          "body": [
+            "تُظهر كل كلمة أين وصلت معها وأين استخدمتها آخر مرة. يفتح «{ui:linkTry}» محادثة لتستخدمها فورًا، ويجد «{ui:linkFindScenes}» مشاهد الفيديو التي تظهر فيها.",
+            "اضغط على السمّاعة لتسمعها، واحذف الكلمات التي لم تعد تحتاجها."
+          ],
+          "shot": "vocab-saved"
         },
         {
           "heading": "تعلّمها",
           "body": [
-            "{ui:vocabHideGloss} يخفي المعنى، اضغط على الكلمة لتتأكد من نفسك.",
+            "يخفي «{ui:vocabHideGloss}» المعاني. اضغط «{ui:vocabRevealGloss}» لتختبر نفسك.",
             "{ui:vocabShuffle} يغيّر ترتيب الكلمات."
-          ]
+          ],
+          "shot": "vocab-hide"
+        },
+        {
+          "heading": "تعلّم الكتابة",
+          "body": [
+            "إذا كانت لغة التعلم تُكتب بحروف أخرى، مثل اليابانية أو الصينية، يظهر تبويب «{ui:vocabTabCharacters}». اضغط على حرف لترى نطقه واستخدامه."
+          ],
+          "shot": "vocab-characters"
         }
       ]
     },
-    "_version": "2026-10-16b"
+    "_version": "2026-10-16c"
   },
   "th": {
     "map": {
@@ -2069,28 +2539,58 @@
           "body": [
             "พิมพ์เป็นภาษาที่คุณกำลังเรียน แล้วติวเตอร์จะตอบกลับเหมือนเพื่อน",
             "ถ้ามีจุดผิด จะมีเครื่องหมายในข้อความของคุณ พร้อมประโยคที่แก้ไขให้ดูด้านล่าง"
-          ]
+          ],
+          "shot": "chat-correct"
         },
         {
           "heading": "ติดเมื่อไรใช้ภาษาของคุณ",
           "body": [
             "อะไรที่พูดเป็นภาษาที่เรียนยาก เขียนเป็นภาษาของคุณได้เลย บทสนทนายังดำเนินต่อ และนับเป็นหนึ่งข้อความเหมือนปกติ",
             "แตะ {ui:chatShowExpression} ใต้ข้อความของคุณเพื่อดูวิธีพูด แล้วแตะ {ui:chatUseExpression} เพื่อลองใช้ทันที"
-          ]
+          ],
+          "shot": "chat-expression"
         },
         {
-          "heading": "ดูความหมายและวิเคราะห์ประโยค",
+          "heading": "ดูความหมายและฟัง",
           "body": [
             "แตะ {ui:chatReading} ใต้คำตอบของติวเตอร์เพื่อดูความหมายเป็นภาษาของคุณ",
-            "แตะ {ui:insightAnalyze} ที่ประโยคเพื่อเปิด ลากผ่านจุดเพื่อเลือกส่วน แล้วแตะคำถามอย่าง {ui:quickAskMeaning} หรือถามเอง คำตอบจะถูกเก็บไว้ที่ส่วนนั้น"
-          ]
+            "แตะลำโพงเพื่อฟังประโยคนั้นออกเสียง"
+          ],
+          "shot": "chat-reading"
+        },
+        {
+          "heading": "แยกประโยคและถามคำถาม",
+          "body": [
+            "แตะแถบด้านข้างของประโยคเพื่อเปิด ลากผ่านจุดเพื่อเลือกบางส่วน แล้วแตะคำถามอย่าง “{ui:quickAskMeaning}” หรือพิมพ์ถามเอง คำตอบจะอยู่กับส่วนนั้นให้ดูครั้งหน้า"
+          ],
+          "shot": "chat-ask"
+        },
+        {
+          "heading": "แตะคำเพื่อบันทึก",
+          "body": [
+            "ในแผ่นประโยค แตะคำหรือสำนวนที่ขีดเส้นใต้เพื่อดูความหมายและตัวอย่าง แตะ “{ui:vocabPreviewSave}” เพื่อเพิ่มลงคลังคำศัพท์"
+          ],
+          "shot": "chat-word"
+        },
+        {
+          "heading": "เมนู",
+          "body": [
+            "เมนู ⋮ มุมบนเปิด “{ui:chatHistoryTitle}” และมี “{ui:endSession}” สำหรับจบการคุยนี้ ถ้าคำตอบดูแปลก แจ้งเราได้ที่ “{ui:reportTitle}”"
+          ],
+          "shot": "chat-menu"
+        },
+        {
+          "heading": "คุยต่อจากเดิม",
+          "body": [
+            "เปิดแชตเก่าเพื่ออ่านอีกครั้ง แล้วแตะ “{ui:chatHistoryContinue}” เพื่อคุยต่อจากที่ค้างไว้"
+          ],
+          "shot": "chat-history"
         },
         {
           "heading": "เพิ่มเติม",
           "body": [
             "ไม่รู้จะเริ่มยังไง? กด {ui:chatStartCta} ให้ติวเตอร์เริ่มบทสนทนาให้",
             "กด + เพื่อส่งรูปภาพแล้วคุยเกี่ยวกับรูปได้",
-            "เมนูมุมซ้ายบนดูแชทเก่า หรือเริ่มแชทใหม่",
             "บัญชีฟรีส่งข้อความได้ 10 ข้อความต่อวัน; Premium ส่งได้ไม่จำกัด"
           ]
         }
@@ -2184,20 +2684,37 @@
         {
           "heading": "ค้นหาและบันทึก",
           "body": [
-            "ค้นหาคำหรือวลีเพื่อดูความหมายและบันทึกไว้",
+            "ค้นด้วยภาษาของคุณ แล้วจะเห็นวิธีพูดในภาษาที่เรียน พร้อมความหมายและตัวอย่าง แตะ “{ui:vocabSave}” เพื่อเพิ่มลงรายการ",
             "คำศัพท์ที่แตะบันทึกในแชทจะถูกรวมไว้ที่นี่ด้วย"
-          ]
+          ],
+          "shot": "vocab-search"
+        },
+        {
+          "heading": "คำที่บันทึกไว้",
+          "body": [
+            "แต่ละคำจะบอกว่าคุณอยู่ระดับไหนกับคำนั้นและใช้ครั้งล่าสุดที่ไหน แตะ “{ui:linkTry}” เพื่อเปิดแชตแล้วใช้ทันที และ “{ui:linkFindScenes}” เพื่อหาฉากในวิดีโอที่มีคำนั้น",
+            "แตะลำโพงเพื่อฟังเสียง และลบคำที่ไม่ต้องการแล้วได้"
+          ],
+          "shot": "vocab-saved"
         },
         {
           "heading": "ฝึกจำคำศัพท์",
           "body": [
-            "{ui:vocabHideGloss} จะซ่อนความหมายไว้ แตะคำศัพท์เพื่อตรวจคำตอบของตัวเอง",
+            "“{ui:vocabHideGloss}” จะปิดความหมายไว้ แตะ “{ui:vocabRevealGloss}” เพื่อทดสอบตัวเอง",
             "{ui:vocabShuffle} สลับลำดับคำศัพท์ได้"
-          ]
+          ],
+          "shot": "vocab-hide"
+        },
+        {
+          "heading": "เรียนตัวอักษร",
+          "body": [
+            "ถ้าภาษาที่เรียนใช้ตัวอักษรต่างออกไป เช่น ญี่ปุ่นหรือจีน จะมีแท็บ “{ui:vocabTabCharacters}” แตะตัวอักษรเพื่อดูการออกเสียงและการใช้"
+          ],
+          "shot": "vocab-characters"
         }
       ]
     },
-    "_version": "2026-10-16b"
+    "_version": "2026-10-16c"
   },
   "hi": {
     "map": {
@@ -2269,28 +2786,58 @@
           "body": [
             "जिस भाषा को आप सीख रहे हैं, उसमें लिखें — ट्यूटर दोस्त की तरह जवाब देगा।",
             "अगर कुछ गलत है, तो आपकी पंक्ति में चिह्नित होगा और सही वाक्य नीचे दिखेगा।"
-          ]
+          ],
+          "shot": "chat-correct"
         },
         {
           "heading": "अटकें तो अपनी भाषा में",
           "body": [
             "सीखी जा रही भाषा में जो कहना मुश्किल हो, उसे अपनी भाषा में लिख दें। बातचीत चलती रहेगी और यह बाकी संदेशों की तरह एक ही गिना जाएगा।",
             "अपने संदेश के नीचे {ui:chatShowExpression} पर टैप करके देखें कि कैसे कहें, फिर {ui:chatUseExpression} से तुरंत आज़माएँ।"
-          ]
+          ],
+          "shot": "chat-expression"
         },
         {
-          "heading": "अर्थ और वाक्य विश्लेषण",
+          "heading": "मतलब देखें, सुनें",
           "body": [
             "ट्यूटर के जवाब के नीचे {ui:chatReading} टैप करें — अपनी भाषा में अर्थ देखें।",
-            "किसी वाक्य पर {ui:insightAnalyze} टैप करके उसे खोलें। बिंदुओं पर खींचकर कोई हिस्सा चुनें, फिर {ui:quickAskMeaning} जैसा सवाल टैप करें या खुद पूछें। जवाब उसी हिस्से पर सहेजा रहता है।"
-          ]
+            "स्पीकर पर टैप करें तो वह वाक्य बोलकर सुनाई देगा।"
+          ],
+          "shot": "chat-reading"
+        },
+        {
+          "heading": "वाक्य समझें और पूछें",
+          "body": [
+            "वाक्य के बगल वाली पट्टी पर टैप करें तो वाक्य शीट खुलेगी। बिंदुओं पर खींचकर कोई हिस्सा चुनें, फिर “{ui:quickAskMeaning}” जैसे सवाल पर टैप करें या खुद पूछें। जवाब उसी हिस्से पर रहता है ताकि अगली बार भी दिखे।"
+          ],
+          "shot": "chat-ask"
+        },
+        {
+          "heading": "शब्द टैप करके सेव करें",
+          "body": [
+            "वाक्य शीट में किसी शब्द या रेखांकित एक्सप्रेशन पर टैप करें तो मतलब और उदाहरण दिखेंगे। “{ui:vocabPreviewSave}” से वह आपकी शब्दावली में जुड़ जाएगा।"
+          ],
+          "shot": "chat-word"
+        },
+        {
+          "heading": "मेनू",
+          "body": [
+            "ऊपर ⋮ मेनू से “{ui:chatHistoryTitle}” खोलें या “{ui:endSession}” से यह बातचीत खत्म करें। कोई जवाब अजीब लगे तो “{ui:reportTitle}” से बताएं।"
+          ],
+          "shot": "chat-menu"
+        },
+        {
+          "heading": "पुरानी बातचीत आगे बढ़ाएँ",
+          "body": [
+            "पुरानी बातचीत खोलकर फिर से पढ़ें और “{ui:chatHistoryContinue}” से वहीं से आगे बात करें।"
+          ],
+          "shot": "chat-history"
         },
         {
           "heading": "अन्य बातें",
           "body": [
             "क्या लिखें समझ नहीं आ रहा? {ui:chatStartCta} दबाएँ — ट्यूटर शुरुआत करेगा।",
             "+ से फोटो भेजें और उस पर बात करें।",
-            "ऊपर बाएँ मेन्यू में पुराने चैट देखें या नया शुरू करें।",
             "फ्री अकाउंट में रोज़ 10 संदेश भेज सकते हैं; प्रीमियम में कोई सीमा नहीं।"
           ]
         }
@@ -2384,19 +2931,36 @@
         {
           "heading": "खोजें और सेव करें",
           "body": [
-            "कोई शब्द या वाक्यांश खोजें, उसका अर्थ देखें और सेव करें।",
+            "अपनी भाषा में खोजें, तो सीखी जा रही भाषा में उसे कैसे कहते हैं, मतलब और उदाहरणों के साथ दिखेगा। “{ui:vocabSave}” से वह आपकी सूची में जुड़ जाएगा।",
             "चैट में टैप कर सेव किए शब्द भी यहाँ मिलेंगे।"
-          ]
+          ],
+          "shot": "vocab-search"
+        },
+        {
+          "heading": "सेव किए गए शब्द",
+          "body": [
+            "हर शब्द के साथ दिखता है कि आप उसमें कहाँ तक पहुँचे हैं और आखिरी बार उसे कहाँ इस्तेमाल किया। “{ui:linkTry}” से चैट खोलकर तुरंत इस्तेमाल करें, और “{ui:linkFindScenes}” से वीडियो में वे सीन ढूँढें जहाँ वह आता है।",
+            "स्पीकर पर टैप करके उच्चारण सुनें, और जिन शब्दों की ज़रूरत नहीं उन्हें हटा दें।"
+          ],
+          "shot": "vocab-saved"
         },
         {
           "heading": "सीखें",
           "body": [
-            "{ui:vocabHideGloss} से अर्थ छुपाएँ, फिर शब्द पर टैप कर खुद को जांचें।",
+            "“{ui:vocabHideGloss}” से मतलब छिप जाते हैं। खुद को जाँचने के लिए “{ui:vocabRevealGloss}” पर टैप करें।",
             "{ui:vocabShuffle} से क्रम बदलें।"
-          ]
+          ],
+          "shot": "vocab-hide"
+        },
+        {
+          "heading": "लिपि सीखें",
+          "body": [
+            "अगर सीखी जा रही भाषा अलग लिपि में लिखी जाती है, जैसे जापानी या चीनी, तो “{ui:vocabTabCharacters}” टैब दिखेगा। किसी अक्षर पर टैप करें तो उसका उच्चारण और इस्तेमाल दिखेगा।"
+          ],
+          "shot": "vocab-characters"
         }
       ]
     },
-    "_version": "2026-10-16b"
+    "_version": "2026-10-16c"
   }
 }
