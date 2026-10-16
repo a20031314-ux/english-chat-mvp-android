@@ -72,7 +72,23 @@ async function loadModules() {
 }
 
 const { copy, RELEASE_NOTES } = await loadModules();
-const note = RELEASE_NOTES.find((entry) => entry.version === VERSION);
+/**
+ * `guide` instead of a version takes the pictures for the map's how-to
+ * (src/lib/guide/content.ts, sections with a `shot`) into public/guide/<locale>/.
+ * Run it with CAPTURE_RUN set to something new: the first picture is the empty
+ * goal form, which only a learner without a map sees.
+ */
+const GUIDE = VERSION === "guide";
+const GUIDE_ITEMS = [
+  { shot: "goal" },
+  { shot: "map" },
+  { shot: "mission" },
+  { shot: "progress" },
+  { shot: "ledger" },
+  { shot: "chat", save: false },
+  { shot: "pick" },
+];
+const note = GUIDE ? { version: "guide", items: GUIDE_ITEMS } : RELEASE_NOTES.find((entry) => entry.version === VERSION);
 if (!note) {
   console.error(`No release note for ${VERSION} in src/lib/whatsNew.ts.`);
   process.exit(2);
@@ -221,6 +237,14 @@ const exactly = (text) => new RegExp(`^${escape(text)}$`);
  * release that needs a new picture adds a step here.
  */
 const STEPS = {
+  async goal({ page, ui, locale, wait }) {
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    await wait(1500);
+    await page.locator("textarea:visible").first().fill(GOAL[locale]);
+    await page.getByRole("radio", { name: ui.mapLevelIntermediate }).click();
+    await page.getByRole("button", { name: ui.mapDraw }).scrollIntoViewIfNeeded();
+    await wait(600);
+  },
   async ledger({ page, ui, locale, wait, target }) {
     await page.evaluate(async ([language, seed]) => {
       await fetch("/api/learner/ledger", {
@@ -402,7 +426,9 @@ const STEPS = {
 
 /** Without the header and the tab bar, which say nothing about the change. */
 async function save(png, locale, shot) {
-  const dir = path.join(ROOT, "public", "whats-new", VERSION, locale);
+  const dir = GUIDE
+    ? path.join(ROOT, "public", "guide", locale)
+    : path.join(ROOT, "public", "whats-new", VERSION, locale);
   fs.mkdirSync(dir, { recursive: true });
   const image = sharp(png);
   const { width, height } = await image.metadata();
@@ -435,14 +461,19 @@ for (const locale of only ?? Object.keys(copy)) {
       localStorage.setItem("whatsNewSeenVersion", "999");
     }, [locale === "en" ? "es" : "en", locale]);
     const target = locale === "en" ? "es" : "en";
+    // CAPTURE_SHOTS=chat,pick retakes only those, for a language whose run stopped partway.
+    const onlyShots = process.env.CAPTURE_SHOTS?.split(",");
     for (const item of note.items) {
+      if (onlyShots && !onlyShots.includes(item.shot)) continue;
       const step = STEPS[item.shot];
       if (!step) throw new Error(`no capture step for "${item.shot}"`);
       await step({ page, ui, locale, wait, target });
+      if (item.save === false) continue;
       await save(await page.screenshot(), locale, item.shot);
       console.log(`${locale} ${item.shot}`);
     }
   } catch (error) {
+    await page.screenshot({ path: path.join(ROOT, "tmp", `capture-failed-${locale}.png`) }).catch(() => undefined);
     failed += 1;
     console.log(`${locale} FAILED: ${String(error).slice(0, 300)}`);
   }

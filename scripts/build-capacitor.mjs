@@ -159,7 +159,7 @@ cpSync(outDir, wwwDir, { recursive: true });
  * come in one set per interface language, and the app fetches only its own.
  * Next copies everything in public/ into the export, so they are taken out.
  */
-for (const served of ["whats-new"]) {
+for (const served of ["whats-new", "guide"]) {
   rmSync(path.join(wwwDir, served), { recursive: true, force: true });
 }
 

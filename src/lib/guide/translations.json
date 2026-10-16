@@ -4,35 +4,51 @@
       "title": "Cómo usar el mapa",
       "sections": [
         {
-          "heading": "De un objetivo a un mapa",
+          "heading": "1. Escribe un objetivo",
           "body": [
-            "Escribe lo que quieres llegar a hacer y elige tu nivel, y se dibuja un mapa de estudio para ese objetivo.",
-            "El mapa tiene cuatro columnas —situaciones, expresiones y gramática, vocabulario, y pronunciación y escucha—, cada una con los temas que el objetivo necesita."
-          ]
+            "Escribe lo que quieres lograr, elige tu nivel y toca ‘{ui:mapDraw}’."
+          ],
+          "shot": "goal"
         },
         {
-          "heading": "Practicar con tareas",
+          "heading": "2. Lee el mapa",
           "body": [
-            "Abre un tema y toca «{ui:missionStart}»: recibes algo que hacer, no la respuesta. Escríbelo en el idioma que aprendes y se comprueba, corrigiendo lo que esté mal.",
-            "¿Atascado? Toca «{ui:missionHint}». Recibes una orientación, luego el comienzo de una frase y luego una respuesta de ejemplo, paso a paso.",
-            "En «{ui:mapPractice}» dentro de un tema puedes seguir con el mismo tema en el chat, una llamada, un vídeo o tus palabras."
-          ]
+            "Los temas están en cuatro columnas: situaciones, expresiones, vocabulario y pronunciación. Sigue ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ abre el primer tema."
+          ],
+          "shot": "map"
         },
         {
-          "heading": "Dominado, aprendido, por aprender",
+          "heading": "3. Practica con tareas",
           "body": [
-            "Lo que produces sin pistas es «{ui:itemsMastered}»; lo que logras con una pista o una corrección, «{ui:itemsLearned}»; lo que aún no has hecho, «{ui:itemsToLearn}». Solo mirar la respuesta de ejemplo deja una marca, nada más.",
-            "Pasado un tiempo, lo aprendido vuelve con el botón de repaso de la parte superior del mapa. Usarlo bien en el chat o en una llamada lo domina.",
-            "Cuando dominas todas las expresiones de un tema, el tema se completa solo. También puedes marcarlo tú con «{ui:mapMarkDone}»."
-          ]
+            "En un tema, toca ‘{ui:missionStart}’. Escribe y se revisa y corrige. ¿Te atascas? ‘{ui:missionHint}’."
+          ],
+          "shot": "mission"
         },
         {
-          "heading": "Orden y puntos débiles",
+          "heading": "4. Tres estados",
           "body": [
-            "«{ui:mapOrderTitle}» cambia según avanzas: primero los temas con algo que sueles fallar, luego los que empezaste y después el resto. «{ui:mapContinue}» abre el primero.",
-            "Si cometes dos veces el mismo tipo de error en el chat o en una llamada, se añade una tarea para practicarlo al tema que encaja.",
-            "Toca un tema para ver con qué se conecta y por qué.",
-            "Si cambia tu objetivo, «{ui:mapNewGoal}» dibuja un mapa nuevo y «{ui:mapRestore}» vuelve al anterior. Cada idioma que aprendes guarda su propio mapa."
+            "Sin pistas es ‘{ui:itemsMastered}’, con ayuda es ‘{ui:itemsLearned}’, pendiente es ‘{ui:itemsToLearn}’. Lo aprendido vuelve para repasar."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. Mis expresiones",
+          "body": [
+            "‘{ui:ledgerTitle}’, arriba, reúne las expresiones de todas las pestañas y muestra cuánto crecen cada semana."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Añade cosas al mapa",
+          "body": [
+            "En el análisis de frases, elige una expresión y toca ‘{ui:markToMap}’: será la primera tarea del tema que le corresponde. Los errores que repites entran solos."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Además",
+          "body": [
+            "¿Nuevo objetivo? ‘{ui:mapNewGoal}’. El mapa anterior vuelve con ‘{ui:mapRestore}’. Cada idioma tiene su propio mapa."
           ]
         }
       ]
@@ -164,35 +180,51 @@
       "title": "マップの使い方",
       "sections": [
         {
-          "heading": "目標からマップへ",
+          "heading": "1. 目標を書く",
           "body": [
-            "やりたいことを書いてレベルを選ぶと、その目標に合った学習マップが作られます。",
-            "マップは「場面」「表現・文法」「単語」「発音・リスニング」の4つの列に分かれていて、目標に必要なトピックが入っています。"
-          ]
+            "できるようになりたいことを書き、レベルを選んで「{ui:mapDraw}」。"
+          ],
+          "shot": "goal"
         },
         {
-          "heading": "タスクで練習する",
+          "heading": "2. マップを見る",
           "body": [
-            "トピックを開いて「{ui:missionStart}」を押すと、答えではなく、やることが出ます。学んでいる言語で書くとチェックされ、間違いは直してくれます。",
-            "詰まったら「{ui:missionHint}」を押しましょう。方向、文の書き出し、答えの例の順に一段ずつ出ます。",
-            "トピック内の「{ui:mapPractice}」から、チャット・通話・動画・単語帳で同じトピックを続けて練習できます。"
-          ]
+            "トピックは場面・表現・単語・発音の4列に並びます。「{ui:mapOrderTitle}」の順に進め、「{ui:mapContinue}」で最初のトピックが開きます。"
+          ],
+          "shot": "map"
         },
         {
-          "heading": "習得・学習済み・これから",
+          "heading": "3. タスクで練習",
           "body": [
-            "ヒントなしで書けた表現は「{ui:itemsMastered}」、ヒントや添削でできたものは「{ui:itemsLearned}」、まだのものは「{ui:itemsToLearn}」です。答えの例を見ただけのものは印が付くだけです。",
-            "学習済みの表現は、時間がたつとマップ上部の復習ボタンでもう一度聞かれます。チャットや通話で正しく使うと習得になります。",
-            "トピックの表現をすべて習得すると、トピックは自動で完了します。自分で「{ui:mapMarkDone}」を押しても構いません。"
-          ]
+            "トピックで「{ui:missionStart}」。書くとチェックと添削。詰まったら「{ui:missionHint}」。"
+          ],
+          "shot": "mission"
         },
         {
-          "heading": "順番とよく間違えること",
+          "heading": "4. 3つの状態",
           "body": [
-            "「{ui:mapOrderTitle}」は進み具合で変わります。よく間違えることを含むトピック、途中のトピック、まだのトピックの順です。「{ui:mapContinue}」はその先頭を開きます。",
-            "チャットや通話で同じ種類の間違いを2回すると、それを練習するタスクが合うトピックに加わります。",
-            "トピックをタップすると、どことどうつながっているかが分かります。",
-            "目標を変えたいときは「{ui:mapNewGoal}」で新しいマップを作成、「{ui:mapRestore}」で前のマップに戻せます。言語ごとにマップは保存されます。"
+            "ヒントなしでできたら「{ui:itemsMastered}」、助けを借りたら「{ui:itemsLearned}」、まだなら「{ui:itemsToLearn}」。学習済みは復習で戻ってきます。"
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. わたしの表現",
+          "body": [
+            "上部の「{ui:ledgerTitle}」に全タブで出会った表現がたまり、週ごとの伸びが見えます。"
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. マップに自分で入れる",
+          "body": [
+            "文章分析で表現を選んで「{ui:markToMap}」。合うトピックの最初のタスクになります。よく間違えることは自動で入ります。"
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "そのほか",
+          "body": [
+            "目標が変わったら「{ui:mapNewGoal}」、直前のマップは「{ui:mapRestore}」。マップは学習言語ごとに別です。"
           ]
         }
       ]
@@ -324,35 +356,51 @@
       "title": "地图使用方法",
       "sections": [
         {
-          "heading": "从目标到地图",
+          "heading": "1. 写下目标",
           "body": [
-            "写下你想做到的事并选择水平，就会为这个目标画出一张学习地图。",
-            "地图分为情境、表达与语法、词汇、发音与听力四栏，每栏放着目标需要的主题。"
-          ]
+            "写下你想做到的事，选择水平，点「{ui:mapDraw}」。"
+          ],
+          "shot": "goal"
         },
         {
-          "heading": "用任务来练习",
+          "heading": "2. 看地图",
           "body": [
-            "打开一个主题，点「{ui:missionStart}」，给你的是要做的事，而不是答案。用正在学的语言写出来，就会检查并改正错误。",
-            "卡住了就点「{ui:missionHint}」。会按方向、句子开头、示例答案的顺序一步步出现。",
-            "在主题里的「{ui:mapPractice}」中，可以接着在聊天、通话、视频或单词本里练习同一个主题。"
-          ]
+            "主题分在情境、表达、词汇、发音四列。按「{ui:mapOrderTitle}」的顺序学，「{ui:mapContinue}」会打开第一个主题。"
+          ],
+          "shot": "map"
         },
         {
-          "heading": "已掌握 · 学过 · 待学习",
+          "heading": "3. 用任务练习",
           "body": [
-            "不看提示写出的表达是「{ui:itemsMastered}」，靠提示或纠正完成的是「{ui:itemsLearned}」，还没做的是「{ui:itemsToLearn}」。只看过示例答案的只会留下标记。",
-            "过一段时间，学过的表达会通过地图上方的复习按钮再问一次。在聊天或通话中用对了，就会升为已掌握。",
-            "一个主题的表达全部掌握后，主题会自动完成。也可以自己点「{ui:mapMarkDone}」。"
-          ]
+            "在主题里点「{ui:missionStart}」。写出来就会检查并纠正。卡住了点「{ui:missionHint}」。"
+          ],
+          "shot": "mission"
         },
         {
-          "heading": "顺序与常错的地方",
+          "heading": "4. 三种状态",
           "body": [
-            "「{ui:mapOrderTitle}」会随进度变化：先是含有常错内容的主题，然后是做到一半的，最后是还没开始的。「{ui:mapContinue}」会打开排在第一的主题。",
-            "在聊天或通话中同一类错误犯两次，练习它的任务就会加到合适的主题里。",
-            "点主题可以看到它和哪些主题相连、为什么相连。",
-            "目标变了可以用「{ui:mapNewGoal}」画新地图，用「{ui:mapRestore}」回到上一张。每种学习语言各自保存地图。"
+            "没用提示完成的是「{ui:itemsMastered}」，借助帮助完成的是「{ui:itemsLearned}」，还没做的是「{ui:itemsToLearn}」。学过的会回来复习。"
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. 我的表达",
+          "body": [
+            "顶部的「{ui:ledgerTitle}」汇集各个标签页遇到的表达，并显示每周增长多少。"
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. 自己加到地图",
+          "body": [
+            "在句子分析里选中表达，点「{ui:markToMap}」，它会成为对应主题的第一个任务。常犯的错误会自动加入。"
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "其他",
+          "body": [
+            "目标变了就点「{ui:mapNewGoal}」，上一张地图用「{ui:mapRestore}」找回。每种学习语言各有一张地图。"
           ]
         }
       ]
@@ -484,35 +532,51 @@
       "title": "Cách dùng bản đồ",
       "sections": [
         {
-          "heading": "Từ mục tiêu đến bản đồ",
+          "heading": "1. Viết mục tiêu",
           "body": [
-            "Viết điều bạn muốn làm được và chọn trình độ, ứng dụng sẽ vẽ bản đồ học tập cho mục tiêu đó.",
-            "Bản đồ có bốn cột — tình huống, cách diễn đạt và ngữ pháp, từ vựng, phát âm và nghe — mỗi cột chứa các chủ đề mục tiêu cần."
-          ]
+            "Viết điều bạn muốn làm được, chọn trình độ rồi chạm ‘{ui:mapDraw}’."
+          ],
+          "shot": "goal"
         },
         {
-          "heading": "Luyện tập với nhiệm vụ",
+          "heading": "2. Xem bản đồ",
           "body": [
-            "Mở một chủ đề và chạm “{ui:missionStart}”: bạn nhận việc cần làm, không phải đáp án. Viết bằng ngôn ngữ đang học là được kiểm tra và sửa chỗ sai.",
-            "Bí thì chạm “{ui:missionHint}”. Lần lượt có hướng gợi ý, phần đầu câu, rồi câu trả lời mẫu.",
-            "Trong “{ui:mapPractice}” của chủ đề, bạn có thể luyện tiếp chủ đề đó trong chat, cuộc gọi, video hoặc sổ từ."
-          ]
+            "Chủ đề nằm trong bốn cột: tình huống, cách nói, từ vựng, phát âm. Làm theo ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ mở chủ đề đầu tiên."
+          ],
+          "shot": "map"
         },
         {
-          "heading": "Thành thạo · Đã học · Cần học",
+          "heading": "3. Luyện bằng việc cần làm",
           "body": [
-            "Cách nói bạn viết được không cần gợi ý là “{ui:itemsMastered}”, làm được nhờ gợi ý hay sửa lỗi là “{ui:itemsLearned}”, chưa làm là “{ui:itemsToLearn}”. Chỉ xem câu trả lời mẫu thì chỉ để lại dấu.",
-            "Sau một thời gian, phần đã học sẽ được hỏi lại qua nút ôn tập ở đầu bản đồ. Dùng đúng trong chat hoặc cuộc gọi là thành thạo.",
-            "Khi thành thạo mọi cách nói của chủ đề, chủ đề tự hoàn thành. Bạn cũng có thể tự chạm “{ui:mapMarkDone}”."
-          ]
+            "Trong chủ đề, chạm ‘{ui:missionStart}’. Viết ra là được kiểm tra và sửa. Bí thì chạm ‘{ui:missionHint}’."
+          ],
+          "shot": "mission"
         },
         {
-          "heading": "Thứ tự và lỗi hay mắc",
+          "heading": "4. Ba trạng thái",
           "body": [
-            "“{ui:mapOrderTitle}” thay đổi theo tiến độ: chủ đề có lỗi bạn hay mắc trước, rồi chủ đề đang làm, rồi phần còn lại. “{ui:mapContinue}” mở chủ đề đầu tiên.",
-            "Mắc cùng một loại lỗi hai lần trong chat hoặc cuộc gọi, một nhiệm vụ để luyện nó sẽ được thêm vào chủ đề phù hợp.",
-            "Chạm vào chủ đề để xem nó nối với chủ đề nào và vì sao.",
-            "Khi đổi mục tiêu, “{ui:mapNewGoal}” vẽ bản đồ mới và “{ui:mapRestore}” quay lại bản đồ trước. Mỗi ngôn ngữ bạn học có bản đồ riêng."
+            "Làm được không cần gợi ý là ‘{ui:itemsMastered}’, có trợ giúp là ‘{ui:itemsLearned}’, chưa làm là ‘{ui:itemsToLearn}’. Cái đã học sẽ quay lại để ôn."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. Cách nói của tôi",
+          "body": [
+            "‘{ui:ledgerTitle}’ ở trên cùng gom cách nói bạn gặp ở mọi tab và cho thấy mỗi tuần tăng bao nhiêu."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Tự thêm vào bản đồ",
+          "body": [
+            "Trong phân tích câu, chọn cách nói rồi chạm ‘{ui:markToMap}’: nó thành việc đầu tiên của chủ đề phù hợp. Lỗi hay lặp lại sẽ tự được thêm."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Khác",
+          "body": [
+            "Đổi mục tiêu thì chạm ‘{ui:mapNewGoal}’, bản đồ trước đó lấy lại bằng ‘{ui:mapRestore}’. Mỗi ngôn ngữ học có bản đồ riêng."
           ]
         }
       ]
@@ -644,35 +708,51 @@
       "title": "Utiliser la carte",
       "sections": [
         {
-          "heading": "D’un objectif à une carte",
+          "heading": "1. Écrire un objectif",
           "body": [
-            "Écris ce que tu veux savoir faire et choisis ton niveau : une carte d’apprentissage est dessinée pour cet objectif.",
-            "La carte a quatre colonnes — situations, expressions et grammaire, vocabulaire, prononciation et écoute — avec les thèmes dont l’objectif a besoin."
-          ]
+            "Écrivez ce que vous voulez savoir faire, choisissez votre niveau et touchez « {ui:mapDraw} »."
+          ],
+          "shot": "goal"
         },
         {
-          "heading": "S’entraîner avec des missions",
+          "heading": "2. Lire la carte",
           "body": [
-            "Ouvre un thème et touche « {ui:missionStart} » : tu reçois quelque chose à faire, pas la réponse. Écris-le dans la langue que tu apprends : c’est vérifié et les erreurs sont corrigées.",
-            "Tu bloques ? Touche « {ui:missionHint} ». Tu obtiens une piste, puis le début d’une phrase, puis une réponse d’exemple, une étape à la fois.",
-            "Sous « {ui:mapPractice} » dans un thème, tu peux continuer le même thème dans le chat, un appel, une vidéo ou tes mots."
-          ]
+            "Les thèmes sont répartis en quatre colonnes : situations, expressions, vocabulaire, prononciation. Suivez « {ui:mapOrderTitle} » ; « {ui:mapContinue} » ouvre le premier thème."
+          ],
+          "shot": "map"
         },
         {
-          "heading": "Maîtrisé, appris, à apprendre",
+          "heading": "3. S’entraîner avec des tâches",
           "body": [
-            "Ce que tu produis sans indice est « {ui:itemsMastered} », ce que tu réussis avec un indice ou une correction est « {ui:itemsLearned} », et ce que tu n’as pas encore fait est « {ui:itemsToLearn} ». Regarder seulement la réponse d’exemple laisse juste une marque.",
-            "Au bout d’un moment, ce qui est appris revient par le bouton de révision en haut de la carte. Bien l’utiliser dans le chat ou un appel le fait passer à maîtrisé.",
-            "Quand toutes les expressions d’un thème sont maîtrisées, le thème se termine tout seul. Tu peux aussi toucher « {ui:mapMarkDone} » toi-même."
-          ]
+            "Dans un thème, touchez « {ui:missionStart} ». Écrivez : c’est vérifié et corrigé. Bloqué ? « {ui:missionHint} »."
+          ],
+          "shot": "mission"
         },
         {
-          "heading": "Ordre et points faibles",
+          "heading": "4. Trois états",
           "body": [
-            "« {ui:mapOrderTitle} » change avec ta progression : d’abord les thèmes avec une erreur fréquente, puis ceux commencés, puis le reste. « {ui:mapContinue} » ouvre le premier.",
-            "Fais deux fois le même type d’erreur dans le chat ou un appel, et une mission pour la travailler est ajoutée au thème qui convient.",
-            "Touche un thème pour voir à quoi il est relié et pourquoi.",
-            "Si ton objectif change, « {ui:mapNewGoal} » dessine une nouvelle carte et « {ui:mapRestore} » revient à la précédente. Chaque langue apprise garde sa carte."
+            "Sans indice : « {ui:itemsMastered} », avec de l’aide : « {ui:itemsLearned} », pas encore : « {ui:itemsToLearn} ». Ce qui est appris revient en révision."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. Mes expressions",
+          "body": [
+            "« {ui:ledgerTitle} », en haut, rassemble les expressions de tous les onglets et montre leur progression chaque semaine."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Ajouter à la carte",
+          "body": [
+            "Dans l’analyse de phrase, choisissez une expression et touchez « {ui:markToMap} » : elle devient la première tâche du thème qui lui correspond. Les erreurs répétées y entrent seules."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Aussi",
+          "body": [
+            "Nouvel objectif ? « {ui:mapNewGoal} ». La carte précédente revient avec « {ui:mapRestore} ». Chaque langue a sa propre carte."
           ]
         }
       ]
@@ -804,35 +884,51 @@
       "title": "Come usare la mappa",
       "sections": [
         {
-          "heading": "Da un obiettivo a una mappa",
+          "heading": "1. Scrivi un obiettivo",
           "body": [
-            "Scrivi cosa vuoi saper fare e scegli il tuo livello: viene disegnata una mappa di studio per quell’obiettivo.",
-            "La mappa ha quattro colonne — situazioni, espressioni e grammatica, lessico, pronuncia e ascolto — con i temi che servono all’obiettivo."
-          ]
+            "Scrivi cosa vuoi saper fare, scegli il livello e tocca ‘{ui:mapDraw}’."
+          ],
+          "shot": "goal"
         },
         {
-          "heading": "Esercitarsi con i compiti",
+          "heading": "2. Leggi la mappa",
           "body": [
-            "Apri un tema e tocca «{ui:missionStart}»: ricevi qualcosa da fare, non la risposta. Scrivilo nella lingua che studi: viene controllato e gli errori corretti.",
-            "Bloccato? Tocca «{ui:missionHint}». Arrivano una direzione, poi l’inizio di una frase, poi una risposta di esempio, un passo alla volta.",
-            "In «{ui:mapPractice}» dentro un tema puoi continuare lo stesso tema in chat, in chiamata, con un video o con le tue parole."
-          ]
+            "Gli argomenti sono in quattro colonne: situazioni, espressioni, vocabolario, pronuncia. Segui ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ apre il primo argomento."
+          ],
+          "shot": "map"
         },
         {
-          "heading": "Padroneggiato, imparato, da imparare",
+          "heading": "3. Esercitati con i compiti",
           "body": [
-            "Ciò che produci senza indizi è «{ui:itemsMastered}», ciò che fai con un indizio o una correzione è «{ui:itemsLearned}», ciò che non hai ancora fatto è «{ui:itemsToLearn}». Guardare solo la risposta di esempio lascia solo un segno.",
-            "Dopo un po’, l’imparato torna con il pulsante di ripasso in cima alla mappa. Usarlo bene in chat o in chiamata lo rende padroneggiato.",
-            "Quando padroneggi tutte le espressioni di un tema, il tema si completa da solo. Puoi anche toccare «{ui:mapMarkDone}» tu stesso."
-          ]
+            "In un argomento tocca ‘{ui:missionStart}’. Scrivi e viene controllato e corretto. Bloccato? ‘{ui:missionHint}’."
+          ],
+          "shot": "mission"
         },
         {
-          "heading": "Ordine e punti deboli",
+          "heading": "4. Tre stati",
           "body": [
-            "«{ui:mapOrderTitle}» cambia mentre procedi: prima i temi con un errore ricorrente, poi quelli iniziati, poi il resto. «{ui:mapContinue}» apre il primo.",
-            "Se fai due volte lo stesso tipo di errore in chat o in chiamata, un compito per esercitarlo viene aggiunto al tema adatto.",
-            "Tocca un tema per vedere a cosa è collegato e perché.",
-            "Se cambia l’obiettivo, «{ui:mapNewGoal}» disegna una nuova mappa e «{ui:mapRestore}» torna alla precedente. Ogni lingua che studi ha la sua mappa."
+            "Senza suggerimenti è ‘{ui:itemsMastered}’, con aiuto è ‘{ui:itemsLearned}’, da fare è ‘{ui:itemsToLearn}’. Ciò che hai imparato torna per il ripasso."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. Le mie espressioni",
+          "body": [
+            "‘{ui:ledgerTitle}’, in alto, raccoglie le espressioni di tutte le schede e mostra quanto crescono ogni settimana."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Aggiungi alla mappa",
+          "body": [
+            "Nell’analisi della frase scegli un’espressione e tocca ‘{ui:markToMap}’: diventa il primo compito dell’argomento giusto. Gli errori ripetuti entrano da soli."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Altro",
+          "body": [
+            "Nuovo obiettivo? ‘{ui:mapNewGoal}’. La mappa precedente torna con ‘{ui:mapRestore}’. Ogni lingua ha la sua mappa."
           ]
         }
       ]
@@ -964,35 +1060,51 @@
       "title": "Como usar o mapa",
       "sections": [
         {
-          "heading": "De um objetivo a um mapa",
+          "heading": "1. Escreva um objetivo",
           "body": [
-            "Escreva o que você quer conseguir fazer e escolha seu nível: um mapa de estudo é desenhado para esse objetivo.",
-            "O mapa tem quatro colunas — situações, expressões e gramática, vocabulário, pronúncia e escuta — com os temas que o objetivo precisa."
-          ]
+            "Escreva o que quer conseguir fazer, escolha o nível e toque em ‘{ui:mapDraw}’."
+          ],
+          "shot": "goal"
         },
         {
-          "heading": "Praticar com tarefas",
+          "heading": "2. Leia o mapa",
           "body": [
-            "Abra um tema e toque em “{ui:missionStart}”: você recebe algo para fazer, não a resposta. Escreva no idioma que está aprendendo e é verificado, com os erros corrigidos.",
-            "Travou? Toque em “{ui:missionHint}”. Vem uma direção, depois o começo de uma frase, depois uma resposta de exemplo, passo a passo.",
-            "Em “{ui:mapPractice}” dentro de um tema, você pode continuar o mesmo tema no chat, numa chamada, num vídeo ou nas suas palavras."
-          ]
+            "Os temas ficam em quatro colunas: situações, expressões, vocabulário, pronúncia. Siga ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ abre o primeiro tema."
+          ],
+          "shot": "map"
         },
         {
-          "heading": "Dominado, aprendido, a aprender",
+          "heading": "3. Pratique com tarefas",
           "body": [
-            "O que você produz sem dicas é “{ui:itemsMastered}”, o que consegue com uma dica ou correção é “{ui:itemsLearned}”, e o que ainda não fez é “{ui:itemsToLearn}”. Só olhar a resposta de exemplo deixa apenas uma marca.",
-            "Depois de um tempo, o aprendido volta pelo botão de revisão no topo do mapa. Usar certo no chat ou numa chamada o torna dominado.",
-            "Quando todas as expressões de um tema estão dominadas, o tema se conclui sozinho. Você também pode tocar em “{ui:mapMarkDone}”."
-          ]
+            "Num tema, toque em ‘{ui:missionStart}’. Escreva e é verificado e corrigido. Travou? ‘{ui:missionHint}’."
+          ],
+          "shot": "mission"
         },
         {
-          "heading": "Ordem e pontos fracos",
+          "heading": "4. Três estados",
           "body": [
-            "“{ui:mapOrderTitle}” muda conforme você avança: primeiro os temas com algo que você sempre erra, depois os que começou, depois o resto. “{ui:mapContinue}” abre o primeiro.",
-            "Cometa o mesmo tipo de erro duas vezes no chat ou numa chamada e uma tarefa para praticá-lo é adicionada ao tema certo.",
-            "Toque num tema para ver a que ele se liga e por quê.",
-            "Se seu objetivo mudar, “{ui:mapNewGoal}” desenha um novo mapa e “{ui:mapRestore}” volta ao anterior. Cada idioma que você aprende tem seu próprio mapa."
+            "Sem dicas é ‘{ui:itemsMastered}’, com ajuda é ‘{ui:itemsLearned}’, ainda não é ‘{ui:itemsToLearn}’. O que aprendeu volta para revisão."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. Minhas expressões",
+          "body": [
+            "‘{ui:ledgerTitle}’, no topo, junta as expressões de todas as abas e mostra quanto crescem por semana."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Pôr no mapa",
+          "body": [
+            "Na análise de frase, escolha uma expressão e toque em ‘{ui:markToMap}’: vira a primeira tarefa do tema certo. Erros repetidos entram sozinhos."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Mais",
+          "body": [
+            "Novo objetivo? ‘{ui:mapNewGoal}’. O mapa anterior volta com ‘{ui:mapRestore}’. Cada idioma tem o seu mapa."
           ]
         }
       ]
@@ -1124,35 +1236,51 @@
       "title": "Как пользоваться картой",
       "sections": [
         {
-          "heading": "От цели к карте",
+          "heading": "1. Напишите цель",
           "body": [
-            "Напишите, что хотите уметь, и выберите уровень — для этой цели будет нарисована карта обучения.",
-            "На карте четыре колонки — ситуации, выражения и грамматика, лексика, произношение и аудирование — в каждой темы, нужные для цели."
-          ]
+            "Напишите, что хотите уметь, выберите уровень и нажмите «{ui:mapDraw}»."
+          ],
+          "shot": "goal"
         },
         {
-          "heading": "Практика с заданиями",
+          "heading": "2. Карта",
           "body": [
-            "Откройте тему и нажмите «{ui:missionStart}»: вы получите задачу, а не ответ. Напишите на изучаемом языке — проверим и исправим ошибки.",
-            "Застряли? Нажмите «{ui:missionHint}». Сначала направление, потом начало фразы, потом пример ответа — по шагам.",
-            "В разделе «{ui:mapPractice}» темы можно продолжить ту же тему в чате, звонке, видео или словаре."
-          ]
+            "Темы разложены по четырём столбцам: ситуации, выражения, лексика, произношение. Идите по «{ui:mapOrderTitle}»; «{ui:mapContinue}» открывает первую тему."
+          ],
+          "shot": "map"
         },
         {
-          "heading": "Освоено, изучено, предстоит",
+          "heading": "3. Задания",
           "body": [
-            "То, что вы написали без подсказок, — «{ui:itemsMastered}», что получилось с подсказкой или исправлением — «{ui:itemsLearned}», что ещё не делали — «{ui:itemsToLearn}». Если вы только посмотрели пример ответа, остаётся лишь отметка.",
-            "Через некоторое время изученное вернётся через кнопку повторения вверху карты. Верное использование в чате или звонке делает его освоенным.",
-            "Когда все выражения темы освоены, тема завершается сама. Можно и самому нажать «{ui:mapMarkDone}»."
-          ]
+            "В теме нажмите «{ui:missionStart}». Напишите — ответ проверят и исправят. Застряли? «{ui:missionHint}»."
+          ],
+          "shot": "mission"
         },
         {
-          "heading": "Порядок и частые ошибки",
+          "heading": "4. Три состояния",
           "body": [
-            "«{ui:mapOrderTitle}» меняется по ходу: сначала темы с частыми ошибками, затем начатые, затем остальные. «{ui:mapContinue}» открывает первую.",
-            "Если дважды сделать одинаковую ошибку в чате или звонке, задание на её отработку добавится в подходящую тему.",
-            "Нажмите на тему, чтобы увидеть, с чем она связана и почему.",
-            "Если цель изменилась, «{ui:mapNewGoal}» нарисует новую карту, а «{ui:mapRestore}» вернёт прежнюю. Для каждого изучаемого языка своя карта."
+            "Без подсказок — «{ui:itemsMastered}», с помощью — «{ui:itemsLearned}», ещё нет — «{ui:itemsToLearn}». Выученное возвращается на повторение."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. Мои выражения",
+          "body": [
+            "«{ui:ledgerTitle}» вверху собирает выражения со всех вкладок и показывает рост по неделям."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Добавить на карту",
+          "body": [
+            "В разборе предложения выберите выражение и нажмите «{ui:markToMap}»: оно станет первым заданием подходящей темы. Повторяющиеся ошибки попадают туда сами."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Ещё",
+          "body": [
+            "Новая цель — «{ui:mapNewGoal}». Прежняя карта возвращается через «{ui:mapRestore}». У каждого языка своя карта."
           ]
         }
       ]
@@ -1284,35 +1412,51 @@
       "title": "Cara memakai peta",
       "sections": [
         {
-          "heading": "Dari tujuan ke peta",
+          "heading": "1. Tulis tujuan",
           "body": [
-            "Tulis apa yang ingin kamu bisa lakukan dan pilih levelmu, lalu peta belajar untuk tujuan itu digambar.",
-            "Peta punya empat kolom — situasi, ungkapan dan tata bahasa, kosakata, pelafalan dan mendengar — masing-masing berisi topik yang dibutuhkan tujuan."
-          ]
+            "Tulis apa yang ingin kamu bisa, pilih level, lalu ketuk ‘{ui:mapDraw}’."
+          ],
+          "shot": "goal"
         },
         {
-          "heading": "Latihan dengan tugas",
+          "heading": "2. Baca peta",
           "body": [
-            "Buka topik dan ketuk “{ui:missionStart}”: kamu dapat hal yang harus dilakukan, bukan jawabannya. Tulis dalam bahasa yang kamu pelajari, lalu dicek dan yang salah dikoreksi.",
-            "Buntu? Ketuk “{ui:missionHint}”. Muncul arah, lalu awal kalimat, lalu contoh jawaban, selangkah demi selangkah.",
-            "Di “{ui:mapPractice}” dalam topik, kamu bisa melanjutkan topik yang sama di chat, panggilan, video, atau kosakatamu."
-          ]
+            "Topik ada di empat kolom: situasi, ungkapan, kosakata, pelafalan. Ikuti ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ membuka topik pertama."
+          ],
+          "shot": "map"
         },
         {
-          "heading": "Dikuasai, dipelajari, perlu dipelajari",
+          "heading": "3. Latihan dengan tugas",
           "body": [
-            "Ungkapan yang kamu tulis tanpa petunjuk berarti “{ui:itemsMastered}”, yang berhasil dengan petunjuk atau koreksi “{ui:itemsLearned}”, dan yang belum dikerjakan “{ui:itemsToLearn}”. Hanya melihat contoh jawaban cuma meninggalkan tanda.",
-            "Setelah beberapa waktu, yang dipelajari ditanyakan lagi lewat tombol ulangi di atas peta. Memakainya dengan benar di chat atau panggilan membuatnya dikuasai.",
-            "Kalau semua ungkapan dalam topik sudah dikuasai, topik selesai otomatis. Kamu juga bisa mengetuk “{ui:mapMarkDone}” sendiri."
-          ]
+            "Di topik, ketuk ‘{ui:missionStart}’. Tulis, lalu diperiksa dan dibetulkan. Buntu? ‘{ui:missionHint}’."
+          ],
+          "shot": "mission"
         },
         {
-          "heading": "Urutan dan kesalahan yang sering",
+          "heading": "4. Tiga status",
           "body": [
-            "“{ui:mapOrderTitle}” berubah sesuai kemajuanmu: topik berisi kesalahan yang sering kamu buat dulu, lalu yang sedang dikerjakan, lalu sisanya. “{ui:mapContinue}” membuka yang pertama.",
-            "Kalau kamu membuat jenis kesalahan yang sama dua kali di chat atau panggilan, tugas untuk melatihnya ditambahkan ke topik yang cocok.",
-            "Ketuk topik untuk melihat hubungannya dan alasannya.",
-            "Kalau tujuanmu berubah, “{ui:mapNewGoal}” menggambar peta baru dan “{ui:mapRestore}” kembali ke peta sebelumnya. Tiap bahasa yang kamu pelajari punya peta sendiri."
+            "Tanpa petunjuk = ‘{ui:itemsMastered}’, dengan bantuan = ‘{ui:itemsLearned}’, belum = ‘{ui:itemsToLearn}’. Yang sudah dipelajari muncul lagi untuk diulang."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. Ungkapanku",
+          "body": [
+            "‘{ui:ledgerTitle}’ di atas mengumpulkan ungkapan dari semua tab dan menunjukkan pertambahannya tiap minggu."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. Masukkan ke peta",
+          "body": [
+            "Di analisis kalimat, pilih ungkapan lalu ketuk ‘{ui:markToMap}’: jadi tugas pertama di topik yang cocok. Kesalahan yang berulang masuk sendiri."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "Lainnya",
+          "body": [
+            "Tujuan baru? ‘{ui:mapNewGoal}’. Peta sebelumnya kembali dengan ‘{ui:mapRestore}’. Tiap bahasa punya peta sendiri."
           ]
         }
       ]
@@ -1444,35 +1588,51 @@
       "title": "طريقة استخدام الخريطة",
       "sections": [
         {
-          "heading": "من الهدف إلى الخريطة",
+          "heading": "1. اكتب هدفًا",
           "body": [
-            "اكتب ما تريد أن تتمكن من فعله واختر مستواك، فتُرسم لك خريطة تعلّم لهذا الهدف.",
-            "للخريطة أربعة أعمدة: المواقف، والتعابير والقواعد، والمفردات، والنطق والاستماع، وفي كل منها المواضيع التي يحتاجها الهدف."
-          ]
+            "اكتب ما تريد أن تستطيع فعله، واختر مستواك، ثم اضغط «{ui:mapDraw}»."
+          ],
+          "shot": "goal"
         },
         {
-          "heading": "التدرّب بالمهام",
+          "heading": "2. اقرأ الخريطة",
           "body": [
-            "افتح موضوعًا واضغط «{ui:missionStart}»: تحصل على ما عليك فعله لا على الإجابة. اكتبه باللغة التي تتعلمها فيُراجَع ويُصحَّح ما فيه من أخطاء.",
-            "تعثّرت؟ اضغط «{ui:missionHint}». تظهر وجهة، ثم بداية جملة، ثم إجابة نموذجية، خطوة بخطوة.",
-            "من «{ui:mapPractice}» داخل الموضوع يمكنك متابعة الموضوع نفسه في الدردشة أو المكالمة أو الفيديو أو مفرداتك."
-          ]
+            "المواضيع موزعة على أربعة أعمدة: المواقف والتعابير والمفردات والنطق. اتبع «{ui:mapOrderTitle}»، و«{ui:mapContinue}» يفتح أول موضوع."
+          ],
+          "shot": "map"
         },
         {
-          "heading": "متقَن، تعلّمته، لتتعلّمه",
+          "heading": "3. تدرّب بالمهام",
           "body": [
-            "ما كتبته دون تلميح هو «{ui:itemsMastered}»، وما أنجزته بتلميح أو تصحيح هو «{ui:itemsLearned}»، وما لم تفعله بعد هو «{ui:itemsToLearn}». الاكتفاء بالنظر إلى الإجابة النموذجية يترك علامة فقط.",
-            "بعد فترة يعود ما تعلّمته عبر زر المراجعة أعلى الخريطة. واستخدامه صحيحًا في الدردشة أو المكالمة يجعله متقَنًا.",
-            "عندما تتقن كل تعابير الموضوع يكتمل الموضوع تلقائيًا. ويمكنك أيضًا الضغط على «{ui:mapMarkDone}» بنفسك."
-          ]
+            "داخل الموضوع اضغط «{ui:missionStart}». اكتب فيُراجَع ويُصحَّح. علقت؟ «{ui:missionHint}»."
+          ],
+          "shot": "mission"
         },
         {
-          "heading": "الترتيب والأخطاء المتكررة",
+          "heading": "4. ثلاث حالات",
           "body": [
-            "يتغيّر «{ui:mapOrderTitle}» مع تقدّمك: أولًا المواضيع التي فيها خطأ متكرر، ثم التي بدأتها، ثم الباقي. و«{ui:mapContinue}» يفتح أولها.",
-            "إذا ارتكبت النوع نفسه من الخطأ مرتين في الدردشة أو المكالمة، تُضاف مهمة للتدرّب عليه إلى الموضوع المناسب.",
-            "اضغط على موضوع لترى بماذا يرتبط ولماذا.",
-            "إذا تغيّر هدفك، يرسم «{ui:mapNewGoal}» خريطة جديدة، ويعيدك «{ui:mapRestore}» إلى السابقة. لكل لغة تتعلمها خريطتها."
+            "ما أنجزته دون تلميح «{ui:itemsMastered}»، وبمساعدة «{ui:itemsLearned}»، وما لم تبدأه «{ui:itemsToLearn}». ما تعلمته يعود للمراجعة."
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. تعابيري",
+          "body": [
+            "«{ui:ledgerTitle}» في الأعلى تجمع التعابير من كل التبويبات وتُظهر كم تزيد كل أسبوع."
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. أضف إلى خريطتك",
+          "body": [
+            "في تحليل الجملة اختر تعبيرًا واضغط «{ui:markToMap}»، فيصبح أول مهمة في الموضوع المناسب. الأخطاء المتكررة تدخل وحدها."
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "أيضًا",
+          "body": [
+            "هدف جديد؟ «{ui:mapNewGoal}». الخريطة السابقة تعود بـ«{ui:mapRestore}». لكل لغة خريطتها."
           ]
         }
       ]
@@ -1604,35 +1764,51 @@
       "title": "วิธีใช้แผนที่",
       "sections": [
         {
-          "heading": "จากเป้าหมายสู่แผนที่",
+          "heading": "1. เขียนเป้าหมาย",
           "body": [
-            "เขียนสิ่งที่อยากทำได้แล้วเลือกระดับ ระบบจะวาดแผนที่การเรียนสำหรับเป้าหมายนั้น",
-            "แผนที่มีสี่คอลัมน์ ได้แก่ สถานการณ์ สำนวนและไวยากรณ์ คำศัพท์ การออกเสียงและการฟัง แต่ละคอลัมน์มีหัวข้อที่เป้าหมายต้องใช้"
-          ]
+            "เขียนสิ่งที่อยากทำได้ เลือกระดับ แล้วแตะ ‘{ui:mapDraw}’"
+          ],
+          "shot": "goal"
         },
         {
-          "heading": "ฝึกด้วยภารกิจ",
+          "heading": "2. ดูแผนที่",
           "body": [
-            "เปิดหัวข้อแล้วแตะ “{ui:missionStart}” จะได้สิ่งที่ต้องทำ ไม่ใช่คำตอบ เขียนเป็นภาษาที่กำลังเรียนแล้วระบบจะตรวจและแก้จุดที่ผิด",
-            "ติดอยู่ใช่ไหม แตะ “{ui:missionHint}” จะได้แนวทาง ต่อด้วยต้นประโยค แล้วจึงเป็นคำตอบตัวอย่าง ทีละขั้น",
-            "ใน “{ui:mapPractice}” ของหัวข้อ คุณฝึกหัวข้อเดียวกันต่อได้ในแชต การโทร วิดีโอ หรือคลังคำศัพท์"
-          ]
+            "หัวข้ออยู่ในสี่คอลัมน์: สถานการณ์ สำนวน คำศัพท์ การออกเสียง ทำตาม ‘{ui:mapOrderTitle}’ ส่วน ‘{ui:mapContinue}’ จะเปิดหัวข้อแรก"
+          ],
+          "shot": "map"
         },
         {
-          "heading": "คล่องแล้ว · เรียนแล้ว · ต้องเรียน",
+          "heading": "3. ฝึกด้วยงาน",
           "body": [
-            "สำนวนที่เขียนได้โดยไม่ใช้คำใบ้คือ “{ui:itemsMastered}” ที่ทำได้ด้วยคำใบ้หรือการแก้คือ “{ui:itemsLearned}” และที่ยังไม่ได้ทำคือ “{ui:itemsToLearn}” ถ้าแค่ดูคำตอบตัวอย่างจะมีแค่เครื่องหมายไว้",
-            "ผ่านไปสักพัก สิ่งที่เรียนแล้วจะกลับมาถามผ่านปุ่มทบทวนด้านบนแผนที่ ถ้าใช้ถูกในแชตหรือการโทรก็จะเป็นคล่องแล้ว",
-            "เมื่อคล่องทุกสำนวนในหัวข้อ หัวข้อจะเสร็จเอง หรือจะแตะ “{ui:mapMarkDone}” เองก็ได้"
-          ]
+            "ในหัวข้อ แตะ ‘{ui:missionStart}’ เขียนแล้วจะถูกตรวจและแก้ให้ ติดอยู่ก็แตะ ‘{ui:missionHint}’"
+          ],
+          "shot": "mission"
         },
         {
-          "heading": "ลำดับและจุดที่ผิดบ่อย",
+          "heading": "4. สามสถานะ",
           "body": [
-            "“{ui:mapOrderTitle}” จะเปลี่ยนตามความคืบหน้า หัวข้อที่มีจุดผิดบ่อยมาก่อน ตามด้วยหัวข้อที่ทำค้างไว้ แล้วจึงที่เหลือ “{ui:mapContinue}” จะเปิดหัวข้อแรก",
-            "ถ้าผิดแบบเดียวกันสองครั้งในแชตหรือการโทร จะมีภารกิจสำหรับฝึกจุดนั้นเพิ่มในหัวข้อที่เหมาะ",
-            "แตะหัวข้อเพื่อดูว่าเชื่อมกับหัวข้อไหนและเพราะอะไร",
-            "ถ้าเป้าหมายเปลี่ยน “{ui:mapNewGoal}” จะวาดแผนที่ใหม่ และ “{ui:mapRestore}” จะพากลับไปแผนที่ก่อนหน้า แต่ละภาษาที่เรียนมีแผนที่ของตัวเอง"
+            "ทำได้โดยไม่ใช้คำใบ้คือ ‘{ui:itemsMastered}’ ได้รับความช่วยเหลือคือ ‘{ui:itemsLearned}’ ยังไม่ทำคือ ‘{ui:itemsToLearn}’ สิ่งที่เรียนแล้วจะกลับมาให้ทบทวน"
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. สำนวนของฉัน",
+          "body": [
+            "‘{ui:ledgerTitle}’ ด้านบนรวมสำนวนจากทุกแท็บ และแสดงว่าเพิ่มขึ้นเท่าไรในแต่ละสัปดาห์"
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. ใส่ในแผนที่เอง",
+          "body": [
+            "ในการวิเคราะห์ประโยค เลือกสำนวนแล้วแตะ ‘{ui:markToMap}’ จะกลายเป็นงานแรกของหัวข้อที่เหมาะ ข้อผิดพลาดที่ทำซ้ำจะถูกใส่ให้เอง"
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "อื่นๆ",
+          "body": [
+            "เปลี่ยนเป้าหมาย แตะ ‘{ui:mapNewGoal}’ แผนที่ก่อนหน้ากลับมาด้วย ‘{ui:mapRestore}’ แต่ละภาษามีแผนที่ของตัวเอง"
           ]
         }
       ]
@@ -1764,35 +1940,51 @@
       "title": "नक्शा कैसे इस्तेमाल करें",
       "sections": [
         {
-          "heading": "लक्ष्य से नक्शे तक",
+          "heading": "1. लक्ष्य लिखें",
           "body": [
-            "जो करना सीखना चाहते हैं वह लिखें और अपना स्तर चुनें, उस लक्ष्य के लिए सीखने का नक्शा बन जाएगा।",
-            "नक्शे में चार कॉलम हैं — स्थितियाँ, अभिव्यक्ति और व्याकरण, शब्दावली, उच्चारण और सुनना — हर एक में लक्ष्य के लिए ज़रूरी विषय हैं।"
-          ]
+            "जो कर पाना चाहते हैं वह लिखें, स्तर चुनें और ‘{ui:mapDraw}’ दबाएँ।"
+          ],
+          "shot": "goal"
         },
         {
-          "heading": "टास्क से अभ्यास",
+          "heading": "2. नक्शा देखें",
           "body": [
-            "कोई विषय खोलें और “{ui:missionStart}” दबाएँ: आपको जवाब नहीं, करने का काम मिलता है। सीख रही भाषा में लिखें, जाँच होगी और गलतियाँ सुधारी जाएँगी।",
-            "अटक गए? “{ui:missionHint}” दबाएँ। पहले दिशा, फिर वाक्य की शुरुआत, फिर उदाहरण जवाब — एक-एक कदम।",
-            "विषय के “{ui:mapPractice}” से आप वही विषय चैट, कॉल, वीडियो या अपने शब्दों में आगे जारी रख सकते हैं।"
-          ]
+            "विषय चार कॉलम में हैं: स्थितियाँ, अभिव्यक्तियाँ, शब्दावली, उच्चारण। ‘{ui:mapOrderTitle}’ के क्रम में चलें; ‘{ui:mapContinue}’ पहला विषय खोलता है।"
+          ],
+          "shot": "map"
         },
         {
-          "heading": "पक्का, सीखा, सीखना है",
+          "heading": "3. कामों से अभ्यास",
           "body": [
-            "बिना संकेत के लिखा वाक्यांश “{ui:itemsMastered}” है, संकेत या सुधार से बना “{ui:itemsLearned}” है, और जो अभी नहीं किया वह “{ui:itemsToLearn}” है। सिर्फ़ उदाहरण जवाब देखने पर बस निशान लगता है।",
-            "कुछ समय बाद, सीखा हुआ नक्शे के ऊपर दोहराने वाले बटन से फिर पूछा जाता है। चैट या कॉल में सही इस्तेमाल करने पर वह पक्का हो जाता है।",
-            "किसी विषय के सारे वाक्यांश पक्के होने पर विषय अपने आप पूरा हो जाता है। आप खुद भी “{ui:mapMarkDone}” दबा सकते हैं।"
-          ]
+            "विषय में ‘{ui:missionStart}’ दबाएँ। लिखें, फिर जाँच और सुधार मिलेगा। अटकें तो ‘{ui:missionHint}’।"
+          ],
+          "shot": "mission"
         },
         {
-          "heading": "क्रम और बार-बार की गलतियाँ",
+          "heading": "4. तीन स्थितियाँ",
           "body": [
-            "“{ui:mapOrderTitle}” आपकी प्रगति के साथ बदलता है: पहले बार-बार की गलती वाले विषय, फिर अधूरे, फिर बाकी। “{ui:mapContinue}” पहला विषय खोलता है।",
-            "चैट या कॉल में एक ही तरह की गलती दो बार हो, तो उसका अभ्यास कराने वाला टास्क सही विषय में जुड़ जाता है।",
-            "विषय दबाकर देखें कि वह किससे और क्यों जुड़ा है।",
-            "लक्ष्य बदले तो “{ui:mapNewGoal}” नया नक्शा बनाता है, और “{ui:mapRestore}” पिछले पर लौटाता है। हर सीखी जाने वाली भाषा का अपना नक्शा होता है।"
+            "बिना संकेत = ‘{ui:itemsMastered}’, मदद से = ‘{ui:itemsLearned}’, अभी नहीं = ‘{ui:itemsToLearn}’। सीखे हुए दोहराने के लिए फिर आते हैं।"
+          ],
+          "shot": "progress"
+        },
+        {
+          "heading": "5. मेरे वाक्यांश",
+          "body": [
+            "ऊपर ‘{ui:ledgerTitle}’ में हर टैब से मिले वाक्यांश जमा होते हैं और हर हफ़्ते की बढ़त दिखती है।"
+          ],
+          "shot": "ledger"
+        },
+        {
+          "heading": "6. नक्शे में खुद डालें",
+          "body": [
+            "वाक्य विश्लेषण में वाक्यांश चुनें और ‘{ui:markToMap}’ दबाएँ: वह सही विषय का पहला काम बन जाता है। बार-बार होने वाली गलतियाँ अपने-आप जुड़ती हैं।"
+          ],
+          "shot": "pick"
+        },
+        {
+          "heading": "और",
+          "body": [
+            "नया लक्ष्य? ‘{ui:mapNewGoal}’। पिछला नक्शा ‘{ui:mapRestore}’ से लौटता है। हर भाषा का अपना नक्शा है।"
           ]
         }
       ]

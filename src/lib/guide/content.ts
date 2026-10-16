@@ -17,11 +17,20 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-11";
+export const GUIDE_VERSION = "2026-10-16";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab";
 
-export type GuideSection = { heading: string; body: string[] };
+export type GuideSection = {
+  heading: string;
+  body: string[];
+  /**
+   * A picture of this step, taken in each interface language:
+   * /guide/<locale>/<shot>.webp (scripts/capture-whats-new.mjs guide).
+   * Builds before 2.67 ignore it and show the text alone.
+   */
+  shot?: string;
+};
 
 export type GuideTab = { title: string; sections: GuideSection[] };
 
@@ -32,38 +41,54 @@ export const GUIDE_KO: Guide = {
     title: "지도 사용법",
     sections: [
       {
-        heading: "목표에서 지도로",
+        heading: "1. 목표 적기",
         body: [
-          "할 수 있게 되고 싶은 것을 적고 지금 수준을 고르면, 그 목표에 맞춘 학습 지도를 그려줘요.",
-          "지도는 상황, 표현·문법, 어휘, 발음·듣기 네 칸으로 나뉘고, 칸마다 목표에 필요한 주제가 들어가요.",
+          "되고 싶은 모습을 적고 수준을 고른 뒤 ‘{ui:mapDraw}’."
         ],
+        shot: "goal"
       },
       {
-        heading: "할 일로 연습하기",
+        heading: "2. 지도 보기",
         body: [
-          "주제를 열고 ‘{ui:missionStart}’을 누르면 정답 대신 할 일을 줘요. 배우는 언어로 써 보면 확인하고, 틀린 곳은 고쳐 줘요.",
-          "막히면 ‘{ui:missionHint}’을 누르세요. 방향, 문장 첫머리, 예시 답 순서로 한 단계씩 나와요.",
-          "주제 안의 ‘{ui:mapPractice}’ 항목으로 채팅, 통화, 영상, 단어장에서 같은 주제를 이어서 연습할 수 있어요.",
+          "네 칸(상황·표현·어휘·발음)에 주제가 들어가요. ‘{ui:mapOrderTitle}’ 순서대로 하면 되고, ‘{ui:mapContinue}’은 첫 주제를 열어요."
         ],
+        shot: "map"
       },
       {
-        heading: "숙지·배운 것·알아야 할 것",
+        heading: "3. 할 일로 연습",
         body: [
-          "힌트 없이 써낸 표현은 ‘{ui:itemsMastered}’, 힌트나 교정으로 해낸 건 ‘{ui:itemsLearned}’, 아직 안 한 건 ‘{ui:itemsToLearn}’이에요. 예시 답을 보기만 한 건 표시만 남아요.",
-          "배운 것은 시간이 지나면 지도 위쪽의 복습 버튼으로 다시 물어봐요. 채팅이나 통화에서 그 표현을 맞게 쓰면 숙지로 올라가요.",
-          "주제의 표현을 모두 숙지하면 주제가 자동으로 완료돼요. 직접 ‘{ui:mapMarkDone}’으로 표시해도 돼요.",
+          "주제에서 ‘{ui:missionStart}’. 써 보면 확인하고 고쳐 줘요. 막히면 ‘{ui:missionHint}’."
         ],
+        shot: "mission"
       },
       {
-        heading: "순서와 자주 틀리는 것",
+        heading: "4. 세 가지 상태",
         body: [
-          "‘{ui:mapOrderTitle}’은 진행에 따라 바뀌어요. 자주 틀리는 것이 든 주제, 하던 주제, 아직 안 한 주제 순이에요. ‘{ui:mapContinue}’은 그 첫 주제를 열어요.",
-          "채팅이나 통화에서 같은 종류의 실수를 두 번 하면, 그걸 연습하는 할 일이 맞는 주제에 들어가요.",
-          "주제를 누르면 연결된 주제와 왜 연결되는지가 나와요.",
-          "목표가 바뀌면 ‘{ui:mapNewGoal}’으로 새 지도를 그릴 수 있고, ‘{ui:mapRestore}’로 바로 전 지도로 돌아갈 수 있어요. 지도는 배우는 언어마다 따로 저장돼요.",
+          "힌트 없이 해낸 건 ‘{ui:itemsMastered}’, 도움받은 건 ‘{ui:itemsLearned}’, 아직은 ‘{ui:itemsToLearn}’. 배운 건 복습으로 다시 나와요."
         ],
+        shot: "progress"
       },
-    ],
+      {
+        heading: "5. 내 표현",
+        body: [
+          "맨 위 ‘{ui:ledgerTitle}’에 모든 탭에서 만난 표현이 쌓이고, 주마다 얼마나 늘었는지 보여요."
+        ],
+        shot: "ledger"
+      },
+      {
+        heading: "6. 지도에 직접 넣기",
+        body: [
+          "문장분석에서 표현을 고르고 ‘{ui:markToMap}’. 맞는 주제의 첫 할 일이 돼요. 자주 틀리는 것도 저절로 들어가요."
+        ],
+        shot: "pick"
+      },
+      {
+        heading: "그 밖에",
+        body: [
+          "목표가 바뀌면 ‘{ui:mapNewGoal}’, 바로 전 지도는 ‘{ui:mapRestore}’. 지도는 배우는 언어마다 따로예요."
+        ]
+      }
+    ]
   },
   chat: {
     title: "채팅 사용법",
@@ -192,38 +217,54 @@ export const GUIDE_EN: Guide = {
     title: "Using the map",
     sections: [
       {
-        heading: "From a goal to a map",
+        heading: "1. Write a goal",
         body: [
-          "Write what you want to be able to do and pick your level, and you get a study map drawn for that goal.",
-          "The map has four columns — situations, expressions and grammar, words, and sounds and listening — each holding the topics the goal needs.",
+          "Write what you want to be able to do, pick your level, and tap ‘{ui:mapDraw}’."
         ],
+        shot: "goal"
       },
       {
-        heading: "Practise with tasks",
+        heading: "2. Read the map",
         body: [
-          "Open a topic and tap ‘{ui:missionStart}’: you get something to do, not the answer. Write it in the language you're learning and it's checked, with anything wrong put right.",
-          "Stuck? Tap ‘{ui:missionHint}’. You get a direction, then the start of a sentence, then an example answer, one step at a time.",
-          "Under ‘{ui:mapPractice}’ in a topic, you can carry the same topic on in chat, a call, a video or your words.",
+          "Topics sit in four columns: situations, expressions, vocabulary, pronunciation. Follow ‘{ui:mapOrderTitle}’; ‘{ui:mapContinue}’ opens the first topic."
         ],
+        shot: "map"
       },
       {
-        heading: "Mastered, learned, to learn",
+        heading: "3. Practise with tasks",
         body: [
-          "A phrase you produced without hints is ‘{ui:itemsMastered}’, one you managed with a hint or a correction is ‘{ui:itemsLearned}’, and one you haven't done yet is ‘{ui:itemsToLearn}’. Only looking at the example answer leaves a mark, nothing more.",
-          "After a while, learned phrases come back through the review button at the top of the map. Using one correctly in chat or a call masters it.",
-          "When every phrase in a topic is mastered, the topic is finished for you. You can also mark it ‘{ui:mapMarkDone}’ yourself.",
+          "In a topic, tap ‘{ui:missionStart}’. Write it and it’s checked and corrected. Stuck? ‘{ui:missionHint}’."
         ],
+        shot: "mission"
       },
       {
-        heading: "Order and weak spots",
+        heading: "4. Three states",
         body: [
-          "‘{ui:mapOrderTitle}’ changes as you go: topics holding something you keep getting wrong first, then ones you've started, then the rest. ‘{ui:mapContinue}’ opens the first of them.",
-          "Make the same kind of mistake twice in chat or a call, and a task to practise it is added to the topic it fits.",
-          "Tap a topic to see what it connects to and why.",
-          "If your goal changes, ‘{ui:mapNewGoal}’ draws a new map, and ‘{ui:mapRestore}’ takes you back to the one before. Each language you learn keeps its own map.",
+          "Done without hints is ‘{ui:itemsMastered}’, done with help is ‘{ui:itemsLearned}’, not yet is ‘{ui:itemsToLearn}’. Learned ones come back for review."
         ],
+        shot: "progress"
       },
-    ],
+      {
+        heading: "5. My phrases",
+        body: [
+          "‘{ui:ledgerTitle}’ at the top gathers phrases from every tab and shows how they grow each week."
+        ],
+        shot: "ledger"
+      },
+      {
+        heading: "6. Put things on your map",
+        body: [
+          "In sentence analysis, pick a phrase and tap ‘{ui:markToMap}’: it becomes the first task of the topic it fits. Mistakes you repeat go in by themselves."
+        ],
+        shot: "pick"
+      },
+      {
+        heading: "Also",
+        body: [
+          "New goal? ‘{ui:mapNewGoal}’. The previous map is one tap away with ‘{ui:mapRestore}’. Each learning language has its own map."
+        ]
+      }
+    ]
   },
   chat: {
     title: "How to use Chat",

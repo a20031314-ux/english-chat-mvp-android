@@ -6,7 +6,7 @@ import { apiUrl } from "@/lib/apiBase";
 import type { Locale, UICopy } from "@/lib/copy";
 
 type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab";
-type GuideSection = { heading: string; body: string[] };
+type GuideSection = { heading: string; body: string[]; shot?: string };
 type Guide = Partial<Record<GuideTabId, { title: string; sections: GuideSection[] }>>;
 
 /**
@@ -38,6 +38,25 @@ function fillLabels(text: string, ui: UICopy): string {
   const labels = ui as unknown as Record<string, unknown>;
   return text.replace(/\{ui:([a-zA-Z]+)\}/g, (_, key: string) =>
     typeof labels[key] === "string" ? (labels[key] as string) : "",
+  );
+}
+
+/**
+ * The picture of one step, in this person's interface language, or the English
+ * one while theirs has not been taken; left out if neither loads.
+ */
+function GuideShot({ locale, shot }: { locale: string; shot: string }) {
+  const [source, setSource] = useState<"own" | "en" | "none">(locale === "en" ? "en" : "own");
+  if (source === "none") return null;
+  return (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={apiUrl(`/guide/${source === "own" ? locale : "en"}/${shot}.webp`)}
+      alt=""
+      loading="lazy"
+      onError={() => setSource(source === "own" ? "en" : "none")}
+      className="mt-2 w-full max-w-sm rounded-xl border border-white/10"
+    />
   );
 }
 
@@ -141,6 +160,7 @@ export function GuideButton({
                     <h3 className="text-[14px] font-semibold text-neutral-100">
                       {fillLabels(section.heading, ui)}
                     </h3>
+                    {section.shot ? <GuideShot locale={locale} shot={section.shot} /> : null}
                     <div className="mt-1.5 flex flex-col gap-1.5 text-[13px] leading-relaxed text-neutral-300">
                       {section.body.map((paragraph) => (
                         <p key={paragraph}>{fillLabels(paragraph, ui)}</p>

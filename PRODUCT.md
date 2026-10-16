@@ -140,7 +140,8 @@
 ### 앱 공통
 - **새로워진 점:** 업데이트 후 첫 실행에 한 번, UI 언어별 캡처와 함께 (`src/lib/whatsNew.ts`).
 - **업데이트 배너:** 서버의 `RECOMMENDED_APP_VERSION`보다 낮으면 배너, `MIN_SUPPORTED`보다 낮으면 막힘.
-- **사용법(?):** 탭별 안내, 14개 언어 (`src/lib/guide/`).
+- **사용법(?):** 탭별 안내, 14개 언어 (`src/lib/guide/`). 지도는 단계마다 UI 언어별 스크린샷 + 한두 줄(2.67부터 그림, `public/guide/<locale>/`,
+  `node --experimental-strip-types scripts/capture-whats-new.mjs guide`로 다시 찍음).
 - **의견 보내기(말풍선):** 어느 화면에서든 글 + 지금 화면 캡처(뺄 수 있음) 또는 사진. 하루 15건까지. 매일 아침 묶어서 의견함 페이지에
   급한 것 · 많이 나온 것 · 특수한 것으로 올리고, 운영자가 반영/보류/안 함을 고른다 (`src/components/FeedbackButton.tsx`, `hub/feedback/README.md`).
 
