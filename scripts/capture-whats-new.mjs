@@ -293,8 +293,8 @@ const STEPS = {
     await wait(1200);
   },
   async growth({ page, ui, wait, target }) {
-    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "networkidle" });
-    await wait(1500);
+    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
+    await wait(4000);
     for (const line of CLEAN_LINES[target]) {
       const before = await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count();
       await page.locator("textarea:visible").first().fill(line);
@@ -307,8 +307,8 @@ const STEPS = {
     }
     // Growth is written after the reply has gone out.
     await wait(4000);
-    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
-    await wait(2500);
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "domcontentloaded" });
+    await wait(5000);
     await page.locator(`section[aria-label="${ui.myNetworkTitle}"]`).first().evaluate((el) => el.scrollIntoView({ block: "start" }));
     await page.mouse.wheel(0, -90);
     await wait(800);
@@ -342,7 +342,8 @@ const STEPS = {
     await page.evaluate(() => {
       for (const key of ["conversationSessions", "activeConversationSessionId", "activeConversationSessionIds"]) localStorage.removeItem(key);
     });
-    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "networkidle" });
+    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
+    await wait(3000);
     for (let i = 0; i < 30 && !(await page.getByRole("button", { name: ui.nextByChat }).count()); i++) await wait(500);
     await page.getByRole("button", { name: ui.nextByChat }).first().click();
     for (let i = 0; i < 40 && !(await page.getByText(ui.practiceNow).count()); i++) await wait(500);
