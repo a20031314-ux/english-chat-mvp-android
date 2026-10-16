@@ -58,6 +58,27 @@ test("the centre follows what the turns show, then what they said", () => {
   );
 });
 
+test("with a My network, its 'grow this next' is the centre and the next least grown is beside it", () => {
+  const focus = chooseFocus({
+    growth: {
+      next: "listening",
+      elements: [
+        { id: "speaking", points: 40, stage: 3, measured: true },
+        { id: "accuracy", points: 12, stage: 2, measured: true },
+        { id: "words", points: 20, stage: 3, measured: true },
+        { id: "listening", points: 2, stage: 1, measured: true },
+        { id: "natural", points: 30, stage: 3, measured: true },
+        { id: "pronunciation", points: 0, stage: 1, measured: false },
+      ],
+    },
+    stats: { turns: 20, correctionRate: 0.9, medianLatencyMs: 9000, retryRate: 0.5 },
+    selfCheck: null,
+    recentCentres: ["listening", "listening"],
+    hasRecurringMistake: true,
+  });
+  assert.deepEqual(focus, { centre: "listening", side: "accuracy" });
+});
+
 test("a centre is not used three days running", () => {
   const focus = chooseFocus({
     stats: noStats,
@@ -139,7 +160,13 @@ test("the tutor's pick is read by number, and nothing else counts", () => {
 });
 
 test("the retro says what the turns show, and only what changed", () => {
-  let pack = compose({ phrases: [{ text: "end up", state: "learned" }] });
+  let pack = compose({
+    phrases: [{ text: "end up", state: "learned" }],
+    growth: [
+      { id: "speaking", points: 10, stage: 2, measured: true },
+      { id: "accuracy", points: 10, stage: 2, measured: true },
+    ],
+  });
   const step = (latencyMs: number, corrected: boolean, used: string[] = []) => {
     const options = candidates(pack);
     pack = advance(pack, { at: NOW + pack.turns.length * 30000, latencyMs, attempts: 1, corrected, stuck: false, used }, options[0] ?? null);
@@ -148,15 +175,20 @@ test("the retro says what the turns show, and only what changed", () => {
   step(2000, false); // quick, clean
   step(6000, true); // slow, corrected
   step(1500, false, ["end up"]);
-  const done = retro(pack, { "end up": "mastered" });
+  const done = retro(pack, { "end up": "mastered" }, [
+    { id: "speaking", points: 14, stage: 3, measured: true },
+    { id: "accuracy", points: 10, stage: 2, measured: true },
+  ]);
   assert.equal(done.answered, 3);
   assert.deepEqual(done.quick, { done: 2, of: 3 });
   assert.deepEqual(done.clean, { done: 2, of: 3 });
   assert.deepEqual(done.phrases, [{ text: "end up", used: true, mastered: true }]);
   assert.ok(done.changed.some((c) => c.kind === "mastered" && c.phrase === "end up"));
-  // Nothing moved in the ledger: nothing is claimed.
+  assert.deepEqual(done.changed[0], { kind: "grew", element: "speaking", points: 4, stageUp: true });
+  assert.ok(!done.changed.some((c) => c.kind === "grew" && c.element === "accuracy"), "no points, no line");
+  // Nothing moved in the record: nothing is claimed.
   const unchanged = retro(pack, { "end up": "learned" });
-  assert.ok(!unchanged.changed.some((c) => c.kind === "mastered"));
+  assert.deepEqual(unchanged.changed, []);
   assert.equal(packDone(pack), false);
 });
 

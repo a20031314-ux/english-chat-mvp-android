@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
-import { phraseStates, readPack, writePack } from "@/lib/server/packStore";
+import { growthNow, phraseStates, readPack, writePack } from "@/lib/server/packStore";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { isPackDay, retro } from "@/lib/pack/pack";
 
@@ -37,5 +37,5 @@ export async function POST(request: NextRequest) {
   if (!pack) return jsonWithCors(request, { error: "NO_PACK" }, { status: 404 });
   const finished = pack.finishedAt ? pack : { ...pack, finishedAt: Date.now() };
   if (!pack.finishedAt) await writePack(userId, finished);
-  return jsonWithCors(request, { retro: retro(finished, await phraseStates(userId, finished)) });
+  return jsonWithCors(request, { retro: retro(finished, await phraseStates(userId, finished), await growthNow(userId, language)) });
 }

@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
-import { ensurePack, phraseStates } from "@/lib/server/packStore";
+import { ensurePack, growthNow, phraseStates } from "@/lib/server/packStore";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { isPackDay, packSummary, retro } from "@/lib/pack/pack";
 import { packBankFor } from "@/lib/pack/questions";
@@ -48,6 +48,6 @@ export async function GET(request: NextRequest) {
     language,
     available: true,
     ...summary,
-    ...(pack.finishedAt ? { retro: retro(pack, await phraseStates(userId, pack)) } : {}),
+    ...(pack.finishedAt ? { retro: retro(pack, await phraseStates(userId, pack), await growthNow(userId, language)) } : {}),
   });
 }

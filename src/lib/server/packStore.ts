@@ -14,10 +14,11 @@ import { readLedger } from "./ledgerStore.ts";
 import { readWeakRecord } from "./weakPointStore.ts";
 import { readSelfCheck } from "./selfCheckStore.ts";
 import { readTurnStats } from "./learnerBrief.ts";
+import { readGrowth } from "./growthStore.ts";
 import { ledgerKey, phrasesToRecycle } from "../learner/ledger.ts";
 import { RECUR_COUNT, RECUR_WINDOW_MS } from "../curriculum/weakPoints.ts";
 import type { GapId } from "../learner/selfCheck.ts";
-import { AVOID_DAYS, chooseFocus, composePack, type Pack } from "../pack/pack.ts";
+import { AVOID_DAYS, chooseFocus, composePack, type GrowthElement, type Pack } from "../pack/pack.ts";
 
 const PACK_TTL_SECONDS = 4 * 24 * 60 * 60;
 
@@ -49,11 +50,12 @@ export async function ensurePack(userId: string, language: string, day: string, 
   const existing = await readPack(userId, language, day);
   if (existing) return existing;
 
-  const [ledger, weak, selfCheck, stats, ...recent] = await Promise.all([
+  const [ledger, weak, selfCheck, stats, growth, ...recent] = await Promise.all([
     readLedger(userId, language, now),
     readWeakRecord(userId, language),
     readSelfCheck(userId, language),
     readTurnStats(userId, language, now),
+    readGrowth(userId, language, null, now).catch(() => null),
     ...daysBefore(day, AVOID_DAYS).map((d) => readPack(userId, language, d)),
   ]);
   const earlier = (recent as Array<Pack | null>).filter((p): p is Pack => p !== null);
@@ -61,7 +63,9 @@ export async function ensurePack(userId: string, language: string, day: string, 
     .map((pattern) => ({ name: pattern.name.trim(), recent: pattern.misses.filter((at) => now - at <= RECUR_WINDOW_MS).length }))
     .filter((row) => row.name && row.recent >= RECUR_COUNT)
     .sort((a, b) => b.recent - a.recent);
+  const elements = growthElements(growth);
   const { centre, side } = chooseFocus({
+    growth: growth ? { next: growth.next, elements } : null,
     stats,
     selfCheck,
     recentCentres: earlier.map((p) => p.centre as GapId),
@@ -80,12 +84,22 @@ export async function ensurePack(userId: string, language: string, day: string, 
     ...(selfCheck?.use ? { use: selfCheck.use } : {}),
     phrases,
     ...(recurring[0] ? { mistake: recurring[0].name } : {}),
+    growth: elements,
     avoid: earlier.flatMap((p) => p.items.filter((item, i) => item.block === i).map((item) => item.id)),
     now,
   });
   if (!pack) return null;
   await writePack(userId, pack);
   return pack;
+}
+
+function growthElements(view: Awaited<ReturnType<typeof readGrowth>> | null): GrowthElement[] {
+  return (view?.elements ?? []).map((e) => ({ id: e.id, points: e.points, stage: e.stage, measured: e.measured }));
+}
+
+/** The My network's elements now, as the pack's retro compares them. */
+export async function growthNow(userId: string, language: string): Promise<GrowthElement[]> {
+  return growthElements(await readGrowth(userId, language, null).catch(() => null));
 }
 
 /** Ledger states of the pack's phrases now, keyed by the phrase in lower case. */

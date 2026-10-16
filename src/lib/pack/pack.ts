@@ -80,11 +80,22 @@ export type Pack = {
   phrases: { text: string; before: string }[];
   /** A recurring mistake to get right, in English, as the weak-point record names it. */
   mistake?: string;
+  /** The My network's elements when the pack was made, so its end can say what grew. */
+  growthBefore?: Partial<Record<GapId, { points: number; stage: number }>>;
   createdAt: number;
   finishedAt?: number;
 };
 
+/** An element of the My network as the pack reads it (learner/growth.ts). */
+export type GrowthElement = { id: GapId; points: number; stage: number; measured: boolean };
+
 export type FocusInput = {
+  /**
+   * The My network, when there is one: its "grow this next" is today's
+   * centre, and the gap beside it is the next least grown — the same rule the
+   * learner sees on the My tab, so the pack fills what the network shows.
+   */
+  growth?: { next: GapId | null; elements: GrowthElement[] } | null;
   stats: TurnStats;
   selfCheck: SelfCheck | null;
   /** Centres of the last few packs, newest first. */
@@ -110,6 +121,15 @@ function playable(gap: GapId): GapId {
  */
 export function chooseFocus(input: FocusInput): { centre: GapId; side: GapId } {
   const { stats } = input;
+  if (input.growth?.next) {
+    const centre = playable(input.growth.next);
+    const ticked = input.selfCheck?.gaps ?? [];
+    const rank = (id: GapId) => (ticked.includes(id) ? ticked.indexOf(id) : ticked.length + ORDER.indexOf(id));
+    const side = [...input.growth.elements]
+      .filter((e) => e.measured && playable(e.id) !== centre)
+      .sort((a, b) => a.stage - b.stage || rank(a.id) - rank(b.id))[0];
+    return { centre, side: side ? playable(side.id) : centre === "natural" ? "words" : "natural" };
+  }
   const measured: GapId[] = [];
   if (stats.medianLatencyMs !== null && stats.medianLatencyMs >= STRUGGLE.latencyMs) measured.push("speaking");
   if (stats.retryRate !== null && stats.retryRate >= STRUGGLE.retryRate) measured.push("speaking");
@@ -161,6 +181,7 @@ export type ComposeInput = {
   mistake?: string;
   /** Opener ids from the last few days' packs. */
   avoid: string[];
+  growth?: GrowthElement[];
   now: number;
 };
 
@@ -254,6 +275,9 @@ export function composePack(input: ComposeInput): Pack | null {
     turns: [],
     phrases: input.phrases.slice(0, 3).map((p) => ({ text: p.text, before: p.state })),
     ...(input.mistake ? { mistake: input.mistake } : {}),
+    ...(input.growth?.length
+      ? { growthBefore: Object.fromEntries(input.growth.map((e) => [e.id, { points: e.points, stage: e.stage }])) }
+      : {}),
     createdAt: input.now,
   };
 }
@@ -313,12 +337,16 @@ export type Retro = {
   stuck: number;
   phrases: { text: string; used: boolean; mastered: boolean }[];
   mistake: { name: string; clean: number; of: number } | null;
-  /** What changed in their record, for "added to My". Facts only. */
+  /**
+   * What changed in their record, for "added to My". Facts only: elements of
+   * the My network that gained points since the pack was made (and whether
+   * they moved up a stage), and phrases the ledger now counts as mastered.
+   * Points earned elsewhere the same day are in it too — it is the record that
+   * is reported, not a claim about this conversation alone.
+   */
   changed: Array<
+    | { kind: "grew"; element: GapId; points: number; stageUp: boolean }
     | { kind: "mastered"; phrase: string }
-    | { kind: "quick"; count: number }
-    | { kind: "clean"; count: number }
-    | { kind: "mistake"; name: string; count: number }
   >;
   centre: GapId;
   side: GapId;
@@ -329,7 +357,7 @@ export type Retro = {
  * is inferred that the numbers do not show: a phrase counts as mastered only
  * if the ledger moved it there since the pack was made.
  */
-export function retro(pack: Pack, ledgerStates: Record<string, string>): Retro {
+export function retro(pack: Pack, ledgerStates: Record<string, string>, growthNow: GrowthElement[] = []): Retro {
   const answers = pack.turns.filter((t) => t.index >= 0);
   const quickTurns = answers.filter((t) => t.gap === "speaking");
   const quickDone = quickTurns.filter(
@@ -349,11 +377,15 @@ export function retro(pack: Pack, ledgerStates: Record<string, string>): Retro {
   const times = pack.turns.map((t) => t.at);
   const minutes = times.length >= 2 ? Math.max(1, Math.round((Math.max(...times) - Math.min(...times)) / 60000)) : 0;
   const changed: Retro["changed"] = [];
+  for (const element of growthNow) {
+    const before = pack.growthBefore?.[element.id];
+    if (!before) continue;
+    const points = element.points - before.points;
+    if (points > 0) changed.push({ kind: "grew", element: element.id, points, stageUp: element.stage > before.stage });
+  }
+  changed.sort((a, b) => (a.kind === "grew" && b.kind === "grew" ? b.points - a.points : 0));
   for (const phrase of phrases) if (phrase.mastered) changed.push({ kind: "mastered", phrase: phrase.text });
-  if (quickDone > 0) changed.push({ kind: "quick", count: quickDone });
-  if (cleanDone > 0) changed.push({ kind: "clean", count: cleanDone });
   const mistakeClean = accuracyTurns.filter((t) => t.corrected === false).length;
-  if (pack.mistake && mistakeClean > 0) changed.push({ kind: "mistake", name: pack.mistake, count: mistakeClean });
   return {
     answered: new Set(answers.map((t) => t.index)).size,
     planned: pack.items.length,
