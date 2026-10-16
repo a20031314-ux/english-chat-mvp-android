@@ -109,3 +109,29 @@ test("naturalness forgives a small change of taste, not a real rewrite, in space
   assert.ok(!nearlySame("I went there yesterday.", "I headed over there yesterday."), "a different phrasing");
   assert.ok(nearlySame("我想喝咖啡", "我想喝杯咖啡"), "one character added to five");
 });
+
+test("pronunciation is measured from the first go at saying a line again, and grows when every word comes out right", async () => {
+  const { applyPronunciation } = await import("./growth.ts");
+  let record = emptyGrowth();
+  let view = growthView({ record, ledger: emptyLedger("en", T0), now: T0 });
+  assert.equal(view.elements.find((e) => e.id === "pronunciation")!.measured, false);
+  record = applyPronunciation(record, false, T0, 540);
+  view = growthView({ record, ledger: emptyLedger("en", T0), now: T0, offset: 540 });
+  const pron = view.elements.find((e) => e.id === "pronunciation")!;
+  assert.equal(pron.measured, true, "one try is enough to be measured");
+  assert.equal(pron.points, 0);
+  record = applyPronunciation(record, true, T0, 540);
+  assert.equal(growthView({ record, ledger: emptyLedger("en", T0), now: T0, offset: 540 }).elements.find((e) => e.id === "pronunciation")!.points, 1);
+});
+
+test("a stuck moment is counted by day, and its phrases become the flow element's leaves, newest first", async () => {
+  const { applyStuck, recentStuckPhrases } = await import("./growth.ts");
+  let record = applyStuck(emptyGrowth(), ["I like to do"], T0 - 2 * DAY, 540);
+  record = applyStuck(record, ["What do you recommend"], T0, 540);
+  record = applyStuck(record, [], T0, 540);
+  assert.equal(record.stuck!.days["2026-10-16"], 2);
+  assert.deepEqual(recentStuckPhrases(record, T0), ["What do you recommend", "I like to do"]);
+  assert.deepEqual(recentStuckPhrases(record, T0 + 6 * DAY), ["What do you recommend"], "a week on, the older one has left the tutor's list");
+  const view = growthView({ record, ledger: emptyLedger("en", T0), now: T0 + 30 * DAY, offset: 540 });
+  assert.deepEqual(view.elements.find((e) => e.id === "speaking")!.leaves, ["What do you recommend", "I like to do"], "leaves keep them all");
+});

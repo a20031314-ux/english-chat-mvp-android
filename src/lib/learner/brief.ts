@@ -94,6 +94,8 @@ export function buildBrief(input: {
   stats: TurnStats;
   /** What they said about themselves when they started (learner/selfCheck.ts). */
   selfCheck?: SelfCheck | null;
+  /** Phrases handed to them when they got stuck in a call lately (growth.ts), brought back first. */
+  stuckPhrases?: string[];
   now: number;
   /** Kinds of note the learner switched off (the screen comes later). */
   off?: ReadonlyArray<BriefNote["kind"]>;
@@ -110,7 +112,7 @@ export function buildBrief(input: {
     .map((row) => row.name.trim());
   if (mistakes.length && !off.has("mistakes")) notes.push({ kind: "mistakes", names: mistakes });
 
-  const recycle = phrasesToRecycle(input.ledger, 3, now);
+  const recycle = [...new Set([...(input.stuckPhrases ?? []), ...phrasesToRecycle(input.ledger, 3, now)])].slice(0, 3);
   if (recycle.length && !off.has("recycle")) notes.push({ kind: "recycle", phrases: recycle });
 
   if (stats.turns >= MIN_TURNS) {

@@ -15,6 +15,8 @@ import { eventsKey, type LearnerTurnMetric } from "./learnerMetrics.ts";
 import {
   absorbLedger,
   addPoints,
+  applyPronunciation,
+  applyStuck,
   applyTurn,
   emptyGrowth,
   growthView,
@@ -59,6 +61,34 @@ export async function recordGrowthTurn(input: {
   } catch (error) {
     console.error("[growth]", error);
   }
+}
+
+/** One go at saying a line again (roleplay/practice): an attempt, and a point when every word came out right. */
+export async function recordPronunciation(input: { userId: string; language: string; clean: boolean; now?: number }): Promise<void> {
+  if (!isIdentified(input.userId)) return;
+  try {
+    const record = await read(input.userId, input.language);
+    await write(input.userId, input.language, applyPronunciation(record, input.clean, input.now ?? Date.now(), record.offset ?? 0));
+  } catch (error) {
+    console.error("[growth]", error);
+  }
+}
+
+/** A moment they got stuck in a call, with the phrases its help handed them (learner/stuck.ts). */
+export async function recordStuck(input: { userId: string; language: string; phrases: string[]; now?: number }): Promise<void> {
+  if (!isIdentified(input.userId)) return;
+  try {
+    const record = await read(input.userId, input.language);
+    await write(input.userId, input.language, applyStuck(record, input.phrases, input.now ?? Date.now(), record.offset ?? 0));
+  } catch (error) {
+    console.error("[growth]", error);
+  }
+}
+
+/** The stored record as it is, for readers that need more than the view (the tutor's brief). */
+export async function readGrowthRecord(userId: string, language: string): Promise<GrowthRecord> {
+  if (!isIdentified(userId)) return emptyGrowth();
+  return read(userId, language);
 }
 
 /** Turns measured before counters existed, counted once (accuracy and quick starts; naturalness was never kept). */

@@ -36,9 +36,11 @@ import { requestUserId, resolveRequestEntitlement } from "@/lib/server/premiumRe
 import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
 import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
-import { recordTurn } from "@/lib/server/ledgerStore";
+import { recordMeets, recordTurn } from "@/lib/server/ledgerStore";
 import { readLearnerBrief } from "@/lib/server/learnerBrief";
-import { recordGrowthTurn } from "@/lib/server/growthStore";
+import { recordGrowthTurn, recordStuck } from "@/lib/server/growthStore";
+import { quotedPhrases } from "@/lib/learner/stuck";
+import { writtenInLearningLanguage } from "@/lib/inputLanguage";
 import { parsePracticeGoal, practicePrompt, saidPhrase } from "@/lib/learner/practice";
 import { contentHash } from "@/lib/roleplay/script";
 import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
@@ -240,6 +242,22 @@ export async function POST(request: NextRequest) {
       corrected,
       where: "call",
     });
+    // Stuck, and handed words to go on with: those words are what it taught
+    // (learner/stuck.ts) — met in the ledger, kept as the flow element's leaves,
+    // and brought back first by the tutor.
+    if (decided?.assessment === "stuck") {
+      const phrases = quotedPhrases(decided.note ?? "").filter((phrase) =>
+        writtenInLearningLanguage(phrase, turn.targetLanguage, turn.nativeLanguage),
+      );
+      await recordStuck({ userId: requestUserId(request), language: turn.targetLanguage, phrases });
+      if (phrases.length) {
+        await recordMeets(
+          requestUserId(request),
+          turn.targetLanguage,
+          phrases.map((text) => ({ kind: "ask" as const, text, tab: "call" as const })),
+        );
+      }
+    }
     // The My tab's elements (learner/growth.ts): a line the character did not
     // rewrite grows accuracy and naturalness, a quick first-go start grows the
     // flow of speech.

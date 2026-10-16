@@ -45,8 +45,46 @@ export const STAGE_THRESHOLDS: Record<ElementId, readonly [number, number, numbe
   pronunciation: [3, 10, 25, 50, 100],
 };
 
-/** Elements with something to count today. Pronunciation waits for the app to send it. */
+/** Elements with something to count from the start. Pronunciation counts once a line has been said again. */
 export const MEASURED: ReadonlySet<ElementId> = new Set(["words", "listening", "accuracy", "speaking", "natural"]);
+
+function isMeasured(record: GrowthRecord, id: ElementId): boolean {
+  return MEASURED.has(id) || (record.tries?.[id] ?? 0) > 0;
+}
+
+/** One go at saying a line again: an attempt, and a point when every word came out right. */
+export function applyPronunciation(record: GrowthRecord, clean: boolean, at: number, offset = 0): GrowthRecord {
+  const tried: GrowthRecord = {
+    ...record,
+    tries: { ...record.tries, pronunciation: (record.tries?.pronunciation ?? 0) + 1 },
+  };
+  return clean ? addPoints(tried, "pronunciation", 1, at, offset) : tried;
+}
+
+const MAX_STUCK_PHRASES = 50;
+
+/** A moment they got stuck in a call, and the phrases its help handed them. */
+export function applyStuck(record: GrowthRecord, phrases: string[], at: number, offset = 0): GrowthRecord {
+  const day = dayOf(at, offset);
+  const days = trimDays({ ...(record.stuck?.days ?? {}), [day]: (record.stuck?.days?.[day] ?? 0) + 1 }, at, offset);
+  const kept = { ...(record.stuck?.phrases ?? {}) };
+  for (const text of phrases) kept[text.toLocaleLowerCase()] = { text, at };
+  const trimmed = Object.fromEntries(
+    Object.entries(kept)
+      .sort((a, b) => b[1].at - a[1].at)
+      .slice(0, MAX_STUCK_PHRASES),
+  );
+  return { ...record, stuck: { days, phrases: trimmed } };
+}
+
+/** Phrases a stuck moment handed them lately, newest first: what the tutor brings back first. */
+export function recentStuckPhrases(record: GrowthRecord, now: number, limit = 3, withinMs = 7 * DAY): string[] {
+  return Object.values(record.stuck?.phrases ?? {})
+    .filter((entry) => now - entry.at <= withinMs)
+    .sort((a, b) => b.at - a.at)
+    .slice(0, limit)
+    .map((entry) => entry.text);
+}
 
 export type GrowthRecord = {
   v: 1;
@@ -68,6 +106,10 @@ export type GrowthRecord = {
    * theirs, not the server's; until the app has said, days are UTC.
    */
   offset?: number;
+  /** Attempts per element, where an attempt can fail (pronunciation): any at all means it is measured. */
+  tries?: Partial<Record<ElementId, number>>;
+  /** Moments they got stuck in a call, per day, and the phrases those moments handed them. */
+  stuck?: { days: Record<string, number>; phrases: Record<string, { text: string; at: number }> };
 };
 
 export function emptyGrowth(): GrowthRecord {
@@ -87,6 +129,8 @@ export function parseGrowth(raw: unknown): GrowthRecord {
     ...(row.next ? { next: row.next } : {}),
     ...(row.backfilled ? { backfilled: true } : {}),
     ...(typeof row.offset === "number" ? { offset: row.offset } : {}),
+    ...(row.tries ? { tries: row.tries } : {}),
+    ...(row.stuck ? { stuck: row.stuck } : {}),
   };
 }
 
@@ -301,7 +345,7 @@ export function growthView(input: {
       id,
       points,
       stage: stageOf(id, points),
-      measured: MEASURED.has(id),
+      measured: isMeasured(record, id),
       resting: points > 0 && last > 0 && now - last >= RESTING_AFTER_MS,
       week: sumDays(record.days[id], weekFrom),
       daily,
@@ -310,7 +354,9 @@ export function growthView(input: {
           ? recentLeaves(record.everMastered, ledger)
           : id === "listening"
             ? recentLeaves(record.everUnderstood, ledger)
-            : [],
+            : id === "speaking"
+              ? recentStuckPhrases(record, now, MAX_LEAVES, Infinity)
+              : [],
     };
   });
   return { elements, next: pickNext(elements, input.selfCheck, record.next, dayOf(now, offset)) };

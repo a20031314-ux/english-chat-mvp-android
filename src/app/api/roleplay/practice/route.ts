@@ -1,4 +1,6 @@
-import { NextRequest } from "next/server";
+import { NextRequest, after } from "next/server";
+import { recordPronunciation } from "@/lib/server/growthStore";
+import { requestUserId } from "@/lib/server/premiumRequest";
 import { coerceLanguageCode, interfaceLanguageName } from "@/lib/learningLanguages";
 import { findScenario } from "@/lib/roleplay/catalog";
 import { compareToTarget, parsePractice, practicePrompt } from "@/lib/roleplay/practice";
@@ -57,6 +59,13 @@ export async function POST(request: NextRequest) {
   await meterRequest(request, "roleplayPractice");
 
   const comparison = compareToTarget(target, heard);
+  // Saying a line again is what grows pronunciation (learner/growth.ts): an
+  // attempt when something was heard, a point when every word came out right.
+  if (heard) {
+    after(() =>
+      recordPronunciation({ userId: requestUserId(request), language: scenario.language, clean: comparison.clean }),
+    );
+  }
   try {
     const model = practiceModel();
     const reasoning = /^(gpt-5|o\d)/.test(model);

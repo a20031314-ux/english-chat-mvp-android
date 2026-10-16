@@ -362,7 +362,7 @@
     "myHowAccuracy": "学習中の言語で書いた・話した文が添削なしで通るたびに育ちます。",
     "myHowWords": "表現を助けなしで初めて使うたびに育ちます。",
     "myHowListening": "チューターの言葉に出た表現を調べ直さずにわかるたびに育ちます。",
-    "myHowPronunciation": "「{button}」ですべての単語が正しく聞き取られるたびに育ちます（もうすぐ開始）。",
+    "myHowPronunciation": "「{button}」ですべての単語が正しく聞き取られるたびに育ちます。",
     "myHowNatural": "添削も、より自然な言い方も必要ない文ごとに育ちます。"
   },
   "zh": {
@@ -728,7 +728,7 @@
     "myHowAccuracy": "每次用所学语言写或说的句子无需修改，就会成长。",
     "myHowWords": "每次第一次不靠帮助用出一个表达，就会成长。",
     "myHowListening": "每次不再查就听懂导师话里的表达，就会成长。",
-    "myHowPronunciation": "每次在「{button}」中所有单词都被正确听出，就会成长（即将开始）。",
+    "myHowPronunciation": "每次在「{button}」中所有单词都被正确听出，就会成长。",
     "myHowNatural": "每句既不用修改也不需要更自然说法的句子，都会让它成长。"
   },
   "vi": {
@@ -1096,7 +1096,7 @@
     "myHowAccuracy": "Lớn lên mỗi lần câu bạn viết hoặc nói không cần sửa.",
     "myHowWords": "Lớn lên mỗi lần bạn lần đầu tự dùng một cách nói mà không cần trợ giúp.",
     "myHowListening": "Lớn lên mỗi lần bạn hiểu một cách nói của gia sư mà không phải tra lại.",
-    "myHowPronunciation": "Lớn lên mỗi lần mọi từ đều được nghe đúng trong “{button}” (sắp có).",
+    "myHowPronunciation": "Lớn lên mỗi lần mọi từ đều được nghe đúng trong “{button}”.",
     "myHowNatural": "Lớn lên với mỗi câu không cần sửa cũng không cần cách nói tự nhiên hơn."
   },
   "fr": {
@@ -1469,7 +1469,7 @@
     "myHowAccuracy": "Grandit chaque fois qu'une phrase écrite ou dite n'a pas besoin de correction.",
     "myHowWords": "Grandit chaque fois que tu utilises une expression seul pour la première fois.",
     "myHowListening": "Grandit chaque fois que tu comprends une expression du tuteur sans la rechercher.",
-    "myHowPronunciation": "Grandit chaque fois que tous les mots sont bien entendus dans « {button} » (bientôt).",
+    "myHowPronunciation": "Grandit chaque fois que tous les mots sont bien entendus dans « {button} ».",
     "myHowNatural": "Grandit avec chaque phrase qui n'a besoin ni de correction ni d'une version plus naturelle."
   },
   "it": {
@@ -2034,7 +2034,7 @@
     "myHowAccuracy": "Cresce ogni volta che una frase scritta o detta non ha bisogno di correzioni.",
     "myHowWords": "Cresce ogni volta che usi un'espressione da solo per la prima volta.",
     "myHowListening": "Cresce ogni volta che capisci un'espressione del tutor senza cercarla di nuovo.",
-    "myHowPronunciation": "Cresce ogni volta che tutte le parole si sentono bene in «{button}» (a breve).",
+    "myHowPronunciation": "Cresce ogni volta che tutte le parole si sentono bene in «{button}».",
     "myHowNatural": "Cresce con ogni frase che non richiede né correzioni né una versione più naturale."
   },
   "pt": {
@@ -2410,7 +2410,7 @@
     "myHowAccuracy": "Cresce cada vez que uma frase escrita ou falada não precisa de correção.",
     "myHowWords": "Cresce cada vez que você usa uma expressão sem ajuda pela primeira vez.",
     "myHowListening": "Cresce cada vez que você entende uma expressão do tutor sem pesquisar de novo.",
-    "myHowPronunciation": "Cresce cada vez que todas as palavras são ouvidas certo em “{button}” (em breve).",
+    "myHowPronunciation": "Cresce cada vez que todas as palavras são ouvidas certo em “{button}”.",
     "myHowNatural": "Cresce a cada frase que não precisa de correção nem de uma versão mais natural."
   },
   "ru": {
@@ -2973,7 +2973,7 @@
     "myHowAccuracy": "Растёт каждый раз, когда написанная или сказанная фраза не требует исправлений.",
     "myHowWords": "Растёт каждый раз, когда вы впервые используете выражение без помощи.",
     "myHowListening": "Растёт каждый раз, когда вы понимаете выражение репетитора, не ища его снова.",
-    "myHowPronunciation": "Растёт каждый раз, когда в «{button}» все слова распознаны верно (скоро).",
+    "myHowPronunciation": "Растёт каждый раз, когда в «{button}» все слова распознаны верно.",
     "myHowNatural": "Растёт с каждой фразой, которой не нужны ни исправление, ни более естественный вариант."
   },
   "id": {
@@ -3345,7 +3345,7 @@
     "myHowAccuracy": "Tumbuh setiap kali kalimat yang kamu tulis atau ucapkan tidak perlu dikoreksi.",
     "myHowWords": "Tumbuh setiap kali kamu pertama kali memakai ungkapan tanpa bantuan.",
     "myHowListening": "Tumbuh setiap kali kamu paham ungkapan dari tutor tanpa mencarinya lagi.",
-    "myHowPronunciation": "Tumbuh setiap kali semua kata terdengar benar di “{button}” (segera hadir).",
+    "myHowPronunciation": "Tumbuh setiap kali semua kata terdengar benar di “{button}”.",
     "myHowNatural": "Tumbuh dengan setiap kalimat yang tidak perlu koreksi maupun versi yang lebih alami."
   },
   "ar": {
@@ -3711,7 +3711,7 @@
     "myHowAccuracy": "ينمو كلما مرّت جملة كتبتها أو قلتها دون تصحيح.",
     "myHowWords": "ينمو كلما استخدمت تعبيرًا دون مساعدة لأول مرة.",
     "myHowListening": "ينمو كلما فهمت تعبيرًا من المعلّم دون البحث عنه مجددًا.",
-    "myHowPronunciation": "ينمو كلما سُمعت كل الكلمات صحيحة في «{button}» (قريبًا).",
+    "myHowPronunciation": "ينمو كلما سُمعت كل الكلمات صحيحة في «{button}».",
     "myHowNatural": "ينمو مع كل جملة لا تحتاج تصحيحًا ولا صيغة أكثر طبيعية."
   },
   "th": {
@@ -4077,7 +4077,7 @@
     "myHowAccuracy": "เติบโตทุกครั้งที่ประโยคที่เขียนหรือพูดผ่านโดยไม่ต้องแก้",
     "myHowWords": "เติบโตทุกครั้งที่ใช้สำนวนได้เองโดยไม่ต้องช่วยเป็นครั้งแรก",
     "myHowListening": "เติบโตทุกครั้งที่ฟังเข้าใจสำนวนของติวเตอร์โดยไม่ต้องค้นซ้ำ",
-    "myHowPronunciation": "เติบโตทุกครั้งที่ทุกคำถูกได้ยินถูกต้องใน “{button}” (เร็วๆ นี้)",
+    "myHowPronunciation": "เติบโตทุกครั้งที่ทุกคำถูกได้ยินถูกต้องใน “{button}”",
     "myHowNatural": "เติบโตกับทุกประโยคที่ไม่ต้องแก้และไม่ต้องใช้สำนวนที่เป็นธรรมชาติกว่า"
   },
   "hi": {
@@ -4443,7 +4443,7 @@
     "myHowAccuracy": "हर बार बढ़ता है जब आपका लिखा या बोला वाक्य बिना सुधार के पास होता है।",
     "myHowWords": "हर बार बढ़ता है जब आप पहली बार बिना मदद कोई अभिव्यक्ति इस्तेमाल करते हैं।",
     "myHowListening": "हर बार बढ़ता है जब आप ट्यूटर की कोई अभिव्यक्ति बिना दोबारा खोजे समझते हैं।",
-    "myHowPronunciation": "हर बार बढ़ता है जब “{button}” में हर शब्द सही सुनाई देता है (जल्द)।",
+    "myHowPronunciation": "हर बार बढ़ता है जब “{button}” में हर शब्द सही सुनाई देता है।",
     "myHowNatural": "हर उस वाक्य से बढ़ता है जिसे न सुधार चाहिए, न ज़्यादा स्वाभाविक रूप।"
   }
 }
