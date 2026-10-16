@@ -611,3 +611,30 @@ test("a line that really is recorded still plays from its file", () => {
   assert.equal(greeting.do, "say");
   assert.ok(greeting.audioPath, "the greeting is one of the two lines a language records");
 });
+
+test("a reaction in the bank's words is said first, and the tip stays with the rest", () => {
+  const waiting = submitSpeech(scenario, bank, atHereOrToGo(), "um... I don't know", 2000).state;
+  const moved = applyDirection(
+    scenario,
+    bank,
+    waiting,
+    direction({
+      assessment: "stuck",
+      react: { text: "Take your time." },
+      say: { text: "For here, or to go?" },
+      note: "For here / To go",
+      next: { step: "here-answer" },
+    }),
+    3000,
+  );
+  assert.equal(moved.instruction.do, "say");
+  if (moved.instruction.do !== "say") return;
+  assert.equal(moved.instruction.text, "Take your time.");
+  assert.equal(moved.instruction.audioPath, undefined, "synthesised, from the shared cache");
+  assert.equal(moved.instruction.tip, undefined);
+  const next = afterSaying(scenario, bank, moved.state, 4000);
+  assert.equal(next.instruction.do, "say");
+  if (next.instruction.do !== "say") return;
+  assert.equal(next.instruction.text, "For here, or to go?");
+  assert.equal(next.instruction.tip, "For here / To go");
+});

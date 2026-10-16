@@ -584,6 +584,15 @@ export function applyDirection(
   // through a moment they were stuck in. Anything said about a sentence they
   // managed to say belongs under that sentence, which the caller attaches.
   const spokenNote = direction.assessment === "stuck" ? direction.note : "";
+  // A reaction in the bank's words goes first, as a line of its own, so that
+  // it plays from the shared speech cache while the rest is still on its way
+  // (reactions.ts). The tip belongs to the line that carries the turn.
+  if (direction.react) {
+    queue.push({
+      text: direction.react.text,
+      ...(direction.react.translation ? { translation: direction.react.translation } : {}),
+    });
+  }
   if (said) queue.push({ ...said, ...(spokenNote ? { tip: spokenNote } : {}) });
   const follow = direction.follow ? recorded(scenario, bank, direction.follow) : null;
   if (follow) queue.push(follow);

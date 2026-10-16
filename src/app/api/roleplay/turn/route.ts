@@ -4,6 +4,7 @@ import { SCENARIOS, sentencesFor } from "@/lib/roleplay/catalog";
 import {
   ROLEPLAY_BANK_CLIENT_HEADER,
   ROLEPLAY_MEANT_CLIENT_HEADER,
+  ROLEPLAY_REACT_CLIENT_HEADER,
   meantForOldClients,
   ROLEPLAY_STREAM_CLIENT_HEADER,
   flattenForOldClients,
@@ -18,6 +19,7 @@ import {
   type DirectorRequest,
 } from "@/lib/roleplay/director";
 import { MAX_CONTEXT_CHARS } from "@/lib/roleplay/memory";
+import { withBankReaction } from "@/lib/roleplay/reactions";
 import {
   ROLEPLAY_POINTS_CLIENT_HEADER,
   ROLEPLAY_SESSION_HEADER,
@@ -212,7 +214,26 @@ export async function POST(request: NextRequest) {
   // nothing at all for them (director.ts).
   const canPlayBank = request.headers.get(ROLEPLAY_BANK_CLIENT_HEADER) === "1";
   const showsMeant = request.headers.get(ROLEPLAY_MEANT_CLIENT_HEADER) === "1";
-  const forThisBuild = (direction: Direction) => (showsMeant ? direction : meantForOldClients(direction));
+  const playsReaction = request.headers.get(ROLEPLAY_REACT_CLIENT_HEADER) === "1";
+  /**
+   * The answer as this build should hear it. Its opening reaction, when the
+   * bank holds it, is spoken in the bank's words so the shared speech cache
+   * plays it instead of a new synthesis (reactions.ts). Decided after
+   * noteDirection, so what is kept of the line is what the character wrote —
+   * the record the reaction table grows from.
+   */
+  const forThisBuild = (direction: Direction) => {
+    const shaped = showsMeant ? direction : meantForOldClients(direction);
+    const { direction: spoken, swapped } = withBankReaction(shaped, {
+      language: scenario.language,
+      nativeLanguage: turn.nativeLanguage,
+      bank,
+      openEnded: Boolean(scenario.openEnded),
+      canSplit: playsReaction,
+    });
+    if (swapped) void meterRequest(request, "roleplayReactionLine");
+    return spoken;
+  };
   // And an answer in pieces only for a build that reads one (director.ts).
   const wantsStream =
     canPlayBank && request.headers.get(ROLEPLAY_STREAM_CLIENT_HEADER) === "1";

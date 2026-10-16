@@ -113,6 +113,11 @@ export const MODEL_CALLS_PER_REQUEST = {
   // it had ever happened. Its ratio to roleplayTurn is how often the bank
   // carries a whole turn rather than half of one.
   roleplaySplitTurn: 0,
+  // A turn whose opening reaction was spoken in the bank's words rather than
+  // synthesised as written (roleplay/reactions.ts). Its ratio to
+  // roleplayInventedLine is how much of what the character writes the
+  // reaction table answers for.
+  roleplayReactionLine: 0,
   // The first director call of a conversation, so per-session figures have a
   // denominator. Stateless: it is the turn that reports no directed turns yet.
   roleplaySession: 0,

@@ -10,6 +10,7 @@ import {
   HISTORY_LINES,
   ROLEPLAY_BANK_CLIENT_HEADER,
   ROLEPLAY_MEANT_CLIENT_HEADER,
+  ROLEPLAY_REACT_CLIENT_HEADER,
   ROLEPLAY_STREAM_CLIENT_HEADER,
   type Direction,
   type DirectorRequest,
@@ -338,6 +339,16 @@ function shapeDirection(raw: unknown): Direction | null {
       ? { meant: body.meant.trim() }
       : {}),
     ...(typeof body.follow === "string" ? { follow: body.follow } : {}),
+    ...(body.react && typeof body.react.text === "string" && body.react.text.trim()
+      ? {
+          react: {
+            text: body.react.text.trim(),
+            ...(typeof body.react.translation === "string" && body.react.translation
+              ? { translation: body.react.translation }
+              : {}),
+          },
+        }
+      : {}),
   };
 }
 
@@ -410,6 +421,9 @@ export async function fetchDirection(input: {
     [ROLEPLAY_BANK_CLIENT_HEADER]: "1",
     // Says this build shows what they meant under their line (director.ts).
     [ROLEPLAY_MEANT_CLIENT_HEADER]: "1",
+    // Says this build plays a reaction as its own line ahead of the rest of the
+    // turn, so the server may send it in the bank's words (reactions.ts).
+    [ROLEPLAY_REACT_CLIENT_HEADER]: "1",
   };
   const body = JSON.stringify({
     ...input.request,

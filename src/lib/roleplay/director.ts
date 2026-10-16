@@ -164,6 +164,12 @@ export type Direction = {
    * brought home and the director's own line did not ask the question.
    */
   follow?: string;
+  /**
+   * A reaction to say before `say`, in the bank's own words, so that it plays
+   * from the shared speech cache instead of being synthesised (reactions.ts).
+   * Only for a build that sent ROLEPLAY_REACT_CLIENT_HEADER.
+   */
+  react?: { text: string; translation?: string };
 };
 
 /**
@@ -192,6 +198,12 @@ export const ROLEPLAY_BANK_CLIENT_HEADER = "x-roleplay-bank";
  * rather than nothing (api/roleplay/turn).
  */
 export const ROLEPLAY_MEANT_CLIENT_HEADER = "x-roleplay-meant";
+
+/**
+ * Sent by builds that play `react` as a line of its own before `say` (2.67 on).
+ * Older builds are given the character's line whole (reactions.ts).
+ */
+export const ROLEPLAY_REACT_CLIENT_HEADER = "x-roleplay-react";
 
 /** A direction for a build that does not know `meant`: the rebuilt sentence rides in `better`. */
 export function meantForOldClients(direction: Direction): Direction {

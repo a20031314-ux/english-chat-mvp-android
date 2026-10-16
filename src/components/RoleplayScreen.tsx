@@ -89,14 +89,16 @@ function warmLine(scenario: RoleplayScenario, bank: SentenceBank, text: string):
  * takes a second or so to say and nothing used that second, which is exactly
  * long enough to have fetched the other one.
  */
-function warmNextLine(
-  scenario: RoleplayScenario,
-  bank: SentenceBank,
-  state: SessionState,
-): void {
+function warmNextLine(scenario: RoleplayScenario, state: SessionState): void {
   // The line being said now is queue[0]; afterSaying drops it when it ends.
   const next = state.queue[1];
-  if (next) warmLine(scenario, bank, next.text);
+  // Any line with no file is synthesised, and that includes the written line
+  // behind a reaction (reactions.ts), which takes longest to arrive: start it
+  // while the reaction, usually already in the cache, is being said. A line
+  // that ships as a file has nothing to fetch.
+  if (next && !next.audioPath) {
+    prefetchTts(next.text, learningLanguageSpeechTag(scenario.language), scenario.voice);
+  }
 }
 
 /**
@@ -393,7 +395,7 @@ export function RoleplayScreen({
       },
     ]);
     // Nothing waits on this: it is the next line being fetched behind this one.
-    warmNextLine(scenario, bank, state);
+    warmNextLine(scenario, state);
     let advanced = false;
     let watchdog = 0;
     const advance = () => {
