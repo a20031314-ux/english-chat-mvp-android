@@ -47,6 +47,8 @@ type AnalyzableEnglishProps = {
   translation?: string;
   /** 1-pass first reading for analysis (not the on-screen caption). */
   analysisTranslation?: string;
+  /** The video a subtitle line belongs to (see EnglishAnalysisTarget.videoId). */
+  videoId?: string;
   /** Inside a sentence sheet: pick words/phrases only, no sentence rail. */
   elementsOnly?: boolean;
   /**
@@ -140,6 +142,7 @@ export function AnalyzableEnglish({
   language,
   translation: attachedTranslation,
   analysisTranslation: attachedAnalysisTranslation,
+  videoId,
   elementsOnly = false,
   sentenceRail = true,
   diff,
@@ -174,6 +177,7 @@ export function AnalyzableEnglish({
         ...(reuseAttached && reusedAnalysis
           ? { analysisTranslation: reusedAnalysis }
           : {}),
+        ...(videoId ? { videoId } : {}),
         ...(span?.inner?.length ? { innerUnits: span.inner } : {}),
         ...(span?.kind === "expression" || span?.kind === "grammar_unit"
           ? { allowVocabSave: true }
@@ -189,6 +193,7 @@ export function AnalyzableEnglish({
       sentence,
       sourceType,
       targetLanguage,
+      videoId,
     ],
   );
   const handleAnalyze =

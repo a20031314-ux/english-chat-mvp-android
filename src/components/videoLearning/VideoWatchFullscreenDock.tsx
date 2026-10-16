@@ -43,12 +43,12 @@ export function VideoWatchFullscreenDock({
   }, [onExit]);
 
   const original = activeCue?.original?.trim() || "";
-  const translation = activeCue?.translation?.trim() || "";
 
   return (
     <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 flex flex-col justify-end pb-[max(0.5rem,env(safe-area-inset-bottom))]">
       {/* Transparent caption layer — text only */}
-      {(original || translation) && (
+      {/* Learning language only; the translation is behind the sentence bar. */}
+      {original && (
         <div className="mx-auto mb-2 max-w-[min(92vw,40rem)] px-3 text-center">
           {original ? (
             <p
@@ -59,17 +59,6 @@ export function VideoWatchFullscreenDock({
               }}
             >
               {original}
-            </p>
-          ) : null}
-          {translation ? (
-            <p
-              className="mt-1 text-[13px] leading-snug text-white/90 sm:text-sm"
-              style={{
-                textShadow:
-                  "0 1px 2px rgba(0,0,0,0.8), 0 0 8px rgba(0,0,0,0.5)",
-              }}
-            >
-              {translation}
             </p>
           ) : null}
         </div>

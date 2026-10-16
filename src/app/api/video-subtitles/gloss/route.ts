@@ -3,6 +3,11 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { glossEnglishLines } from "@/lib/videoSubtitle/glossEnglishLines";
+import {
+  glossBatchKey,
+  keepGlossBatch,
+  readGlossBatch,
+} from "@/lib/server/subtitleGlossStore";
 import { asNumber, asRecord, asString } from "@/lib/videoSubtitle/parseModelJson";
 import type {
   NormalizedSegment,
@@ -67,7 +72,6 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
-  void meterRequest(request, "videoGloss");
   let body: {
     locale?: unknown;
     interfaceLanguage?: unknown;
@@ -92,15 +96,51 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "INVALID_GLOSS" }, { status: 400 });
   }
 
+  const locale = asString(body.locale) || "ko";
+  const interfaceLanguage = asString(body.interfaceLanguage) || locale;
+  const targetLanguage = asString(body.targetLanguage) || "en";
+  // Builds before 2.67 translate every line of a video as it opens. The next
+  // viewer of the same video sends the same slices of the same transcript, so
+  // a slice translated once is answered from what was kept
+  // (server/subtitleGlossStore.ts) instead of costing two model calls again.
+  const batchKey = glossBatchKey({
+    targetLanguage,
+    interfaceLanguage,
+    lines: segments.map((segment) => segment.normalizedText),
+  });
+
   try {
+    const kept = await readGlossBatch(batchKey);
+    if (kept && kept.length === segments.length) {
+      void meterRequest(request, "videoGlossKept");
+      return jsonWithCors(request, {
+        items: segments.map((segment, index) => ({
+          id: `mu-${segment.id}`,
+          ...kept[index]!,
+        })),
+      });
+    }
+    void meterRequest(request, "videoGloss");
     const items = await glossEnglishLines({
-      locale: asString(body.locale) || "ko",
-      interfaceLanguage:
-        asString(body.interfaceLanguage) || asString(body.locale) || "ko",
-      targetLanguage: asString(body.targetLanguage) || "en",
+      locale,
+      interfaceLanguage,
+      targetLanguage,
       context,
       segments,
     });
+    const byId = new Map(items.map((item) => [item.id, item] as const));
+    void keepGlossBatch(
+      batchKey,
+      segments.map((segment) => {
+        const item = byId.get(`mu-${segment.id}`);
+        return {
+          interpretation: item?.interpretation ?? "",
+          ...(item?.analysisTranslation
+            ? { analysisTranslation: item.analysisTranslation }
+            : {}),
+        };
+      }),
+    );
     return jsonWithCors(request, { items });
   } catch (error) {
     if (error instanceof VideoPipelineError) {

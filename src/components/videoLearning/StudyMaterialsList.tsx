@@ -184,6 +184,8 @@ function BundleRangeGauge({
 export function EnglishSentenceList({
   ui,
   cues,
+  videoId,
+  contextFor,
   activeId,
   playingId,
   playingIds,
@@ -202,6 +204,9 @@ export function EnglishSentenceList({
 }: {
   ui: UICopy;
   cues: VideoSubtitle[];
+  videoId?: string | null;
+  /** The video's summary and neighbouring lines, for the sentence sheet. */
+  contextFor?: (cue: VideoSubtitle) => string[];
   activeId: string | null;
   playingId: string | null;
   playingIds: string[];
@@ -604,6 +609,8 @@ export function EnglishSentenceList({
                       sourceType="subtitle"
                       translation={interpretation || undefined}
                       analysisTranslation={cue.analysisTranslation}
+                      context={contextFor?.(cue)}
+                      videoId={videoId ?? undefined}
                       tone={
                         highlighted || (inRange && bundlePicking)
                           ? "default"
@@ -615,17 +622,6 @@ export function EnglishSentenceList({
                           : "text-slate-100"
                       }`}
                     />
-                    {interpretation ? (
-                      <p
-                        className={`mt-1.5 text-[13px] leading-snug ${
-                            highlighted || (inRange && bundlePicking)
-                            ? "text-neutral-700"
-                            : "text-slate-300"
-                        }`}
-                      >
-                        {interpretation}
-                      </p>
-                    ) : null}
                   </div>
                 )}
               </div>

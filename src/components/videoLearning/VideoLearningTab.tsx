@@ -39,11 +39,9 @@ import {
   type LibraryListing,
 } from "@/lib/videoLibrary/libraryService";
 import { useActiveSubtitle } from "@/hooks/useActiveSubtitle";
-import { parseYouTubeInput, type VideoSubtitle, cueHasUiLanguage, openingCuesHaveUiLanguage } from "@/lib/videoLearning";
+import { parseYouTubeInput, type VideoSubtitle } from "@/lib/videoLearning";
 import { cuesLookUserEdited, mergeVideoCues, newCueIds, splitVideoCue } from "@/lib/videoCueEdit";
 import {
-  generateLineInterpretations,
-  glossStudyCues,
   prepareEnglishWatch,
   regroupStudyCues,
   VideoSubtitleClientError,
@@ -90,17 +88,6 @@ function resolveSegmentEndFor(
     );
   }
   return Math.min(end, item.startTime + maxSpan);
-}
-
-function shouldHoldForGloss(cues: VideoSubtitle[], time: number): boolean {
-  const upcoming = cues.find(
-    (cue) =>
-      cue.original.trim().length > 0 &&
-      cue.endTime > time + 0.05 &&
-      !cueHasUiLanguage(cue),
-  );
-  if (!upcoming) return false;
-  return upcoming.startTime <= time + 0.45;
 }
 
 type Phase = "input" | "extracting" | "watching";
@@ -170,14 +157,9 @@ export function VideoLearningTab({
   const [editHistoryLen, setEditHistoryLen] = useState(0);
   const [lastEditKind, setLastEditKind] = useState<CueEditKind | null>(null);
   const [canRestoreOriginal, setCanRestoreOriginal] = useState(false);
-  const [waitingGloss, setWaitingGloss] = useState(false);
   /** After merge/split, ignore bulk interpretation overwrites. */
   const cuesDirtyRef = useRef(false);
   const englishCuesRef = useRef<VideoSubtitle[]>([]);
-  const glossInFlightRef = useRef(false);
-  const pausedForGlossRef = useRef(false);
-  const pendingPlayIdRef = useRef<string | null>(null);
-  const currentTimeRef = useRef(0);
   const playingIdRef = useRef<string | null>(null);
   englishCuesRef.current = englishCues;
   playingIdRef.current = playingId;
@@ -220,11 +202,7 @@ export function VideoLearningTab({
     setPlayingIds([]);
     setRangeIds([]);
     setWatchFullscreen(false);
-    setWaitingGloss(false);
     setToast(null);
-    glossInFlightRef.current = false;
-    pausedForGlossRef.current = false;
-    pendingPlayIdRef.current = null;
   }, [replaceBaseline]);
 
   const languageRef = useRef(targetLanguage);
@@ -292,149 +270,58 @@ export function VideoLearningTab({
     [videoId, videoUrl, durationSeconds, situationSummary, targetLanguage],
   );
 
-  const startInterpretation = useCallback(
+  // Subtitles open in the learning language only. A line's translation comes
+  // when the learner taps its bar (the sentence sheet translates it then, with
+  // the video's summary and the lines around it as context), instead of every
+  // line being translated up front whether anyone reads it or not — which was
+  // most of what a video cost, and held playback while it ran.
+  const openWatch = useCallback(
     (
       prepared: PreparedTranscript,
-      seq: number,
-      signal: AbortSignal,
       videoMeta: { videoId: string; videoUrl: string },
-      initialCues: VideoSubtitle[],
+      cues: VideoSubtitle[],
     ) => {
       const summary = prepared.context.summary?.trim() || "";
-      if (summary) setSituationSummary(summary);
-      glossInFlightRef.current = true;
-      let openedWatch = false;
-
-      const openWatch = (partial: VideoSubtitle[]) => {
-        if (openedWatch || seq !== loadSeq.current) return;
-        openedWatch = true;
-        setEnglishCues(partial);
-        setProgressPercent(100);
-        setPhase("watching");
-        upsertVideoStudySession({
-          videoId: videoMeta.videoId,
-          videoUrl: videoMeta.videoUrl,
-          situationSummary: summary || undefined,
-          durationSeconds: prepared.durationSeconds,
-          cues: partial,
-          baselineCues:
-            baselineCuesRef.current.length > 0
-              ? baselineCuesRef.current
-              : partial,
-          languageCode: targetLanguage,
-        });
-        setSessionsVersion((value) => value + 1);
-        setToast(ui.videoLearnSessionSavedToast);
-      };
-
-      const resumeIfReady = (partial: VideoSubtitle[]) => {
-        const pendingId = pendingPlayIdRef.current;
-        if (pendingId) {
-          const pending = partial.find((cue) => cue.id === pendingId);
-          if (pending && cueHasUiLanguage(pending)) {
-            pendingPlayIdRef.current = null;
-            setWaitingGloss(false);
-            const index = partial.findIndex((cue) => cue.id === pending.id);
-            const end = resolveSegmentEndFor(pending, index, partial);
-            setPlayingId(pending.id);
-            setPlayingIds([pending.id]);
-            setCurrentTime(pending.startTime);
-            playerRef.current?.playSegment(pending.startTime, end);
-          }
-        }
-        if (pausedForGlossRef.current && !shouldHoldForGloss(partial, currentTimeRef.current)) {
-          pausedForGlossRef.current = false;
-          setWaitingGloss(false);
-          playerRef.current?.play();
-        }
-      };
-
-      void generateLineInterpretations(prepared, {
-        locale,
-        interfaceLanguage: locale,
-        targetLanguage,
-        cues: initialCues,
-        signal,
-        onProgress: (progress) => {
-          if (seq !== loadSeq.current) return;
-          setStepIndex(
-            { speech: 0, context: 1, translate: 2, cleanup: 3 }[progress.step],
-          );
-          setProgressPercent(55 + Math.round(progress.percent * 0.4));
-        },
-        onPartial: (partial, done) => {
-          if (seq !== loadSeq.current) return;
-          if (cuesDirtyRef.current) {
-            if (done) glossInFlightRef.current = false;
-            return;
-          }
-          setEnglishCues(partial);
-          if (editHistoryRef.current.length === 0) {
-            baselineCuesRef.current = cloneCues(partial);
-          }
-          if (!openedWatch && (openingCuesHaveUiLanguage(partial) || done)) {
-            openWatch(partial);
-          }
-          resumeIfReady(partial);
-          if (done) {
-            glossInFlightRef.current = false;
-            if (!openedWatch) openWatch(partial);
-            upsertVideoStudySession({
-              videoId: videoMeta.videoId,
-              videoUrl: videoMeta.videoUrl,
-              situationSummary: summary || undefined,
-              durationSeconds: prepared.durationSeconds,
-              cues: partial,
-              baselineCues:
-                baselineCuesRef.current.length > 0
-                  ? baselineCuesRef.current
-                  : partial,
-              languageCode: targetLanguage,
-            });
-            setSessionsVersion((value) => value + 1);
-          }
-        },
-      }).catch((error) => {
-        if (seq !== loadSeq.current || signal.aborted) return;
-        glossInFlightRef.current = false;
-        setWaitingGloss(false);
-        if (!openedWatch) openWatch(englishCuesRef.current);
-        if (
-          error instanceof VideoSubtitleClientError &&
-          error.code === "TIMEOUT"
-        ) {
-          return;
-        }
+      setSituationSummary(summary);
+      setEnglishCues(cues);
+      setProgressPercent(100);
+      setPhase("watching");
+      upsertVideoStudySession({
+        videoId: videoMeta.videoId,
+        videoUrl: videoMeta.videoUrl,
+        situationSummary: summary || undefined,
+        durationSeconds: prepared.durationSeconds,
+        cues,
+        baselineCues:
+          baselineCuesRef.current.length > 0 ? baselineCuesRef.current : cues,
+        languageCode: targetLanguage,
       });
+      setSessionsVersion((value) => value + 1);
+      setToast(ui.videoLearnSessionSavedToast);
     },
-    [locale, targetLanguage, ui.videoLearnSessionSavedToast],
+    [targetLanguage, ui.videoLearnSessionSavedToast],
+  );
+
+  // What the sentence sheet reads alongside a tapped line: what the video is
+  // about and the lines either side, so its translation and any question about
+  // the line are answered for this scene rather than for the words alone.
+  const cueContext = useCallback(
+    (item: VideoSubtitle): string[] => {
+      const index = englishCues.findIndex((row) => row.id === item.id);
+      const previous = index > 0 ? englishCues[index - 1]?.original.trim() : "";
+      const next = index >= 0 ? englishCues[index + 1]?.original.trim() : "";
+      const summary = situationSummary.trim();
+      return [
+        ...(summary ? [`Video: ${summary}`] : []),
+        ...(previous ? [`Previous line: ${previous}`] : []),
+        ...(next ? [`Next line: ${next}`] : []),
+      ];
+    },
+    [englishCues, situationSummary],
   );
 
   const onTimeUpdate = useCallback((seconds: number) => {
-    currentTimeRef.current = seconds;
     setCurrentTime(seconds);
-    if (playingIdRef.current) return;
-    if (!glossInFlightRef.current) {
-      if (pausedForGlossRef.current) {
-        pausedForGlossRef.current = false;
-        setWaitingGloss(false);
-        playerRef.current?.play();
-      }
-      return;
-    }
-    if (shouldHoldForGloss(englishCuesRef.current, seconds)) {
-      if (!pausedForGlossRef.current) {
-        pausedForGlossRef.current = true;
-        setWaitingGloss(true);
-        playerRef.current?.pause();
-      }
-      return;
-    }
-    if (pausedForGlossRef.current) {
-      pausedForGlossRef.current = false;
-      setWaitingGloss(false);
-      playerRef.current?.play();
-    }
   }, []);
 
   const onSegmentEnded = useCallback(() => {
@@ -454,16 +341,8 @@ export function VideoLearningTab({
         playerRef.current?.pause();
         setPlayingId(null);
         setPlayingIds([]);
-        pendingPlayIdRef.current = null;
         return;
       }
-      if (glossInFlightRef.current && !cueHasUiLanguage(item)) {
-        pendingPlayIdRef.current = item.id;
-        setSelectedId(item.id);
-        setWaitingGloss(true);
-        return;
-      }
-      pendingPlayIdRef.current = null;
       const index = englishCues.findIndex((row) => row.id === item.id);
       const end = resolveSegmentEnd(item, index, 24);
 
@@ -538,71 +417,12 @@ export function VideoLearningTab({
       persistSession(next);
       setToast(ui.videoLearnCuesEditedToast);
 
-      if (createdIds.length > 0) {
-        const seq = loadSeq.current;
-        const context =
-          preparedRef.current?.context ??
-          ({
-            topic: situationSummary || "video",
-            domain: "general",
-            summary: situationSummary || "",
-            speakerStyle: "spoken",
-            terminology: [],
-          } as PreparedTranscript["context"]);
-        void glossStudyCues(next, createdIds, {
-          locale,
-          interfaceLanguage: locale,
-          targetLanguage,
-          context,
-        })
-          .then((glossed) => {
-            if (seq !== loadSeq.current) return;
-            const filled = createdIds.filter((id) =>
-              glossed.some(
-                (cue) => cue.id === id && cue.translation.trim().length > 0,
-              ),
-            );
-            if (filled.length === 0) {
-              console.error("[video-edit-gloss] no translations matched", {
-                createdIds,
-              });
-              return;
-            }
-            setEnglishCues((current) => {
-              const byId = new Map(
-                glossed
-                  .filter((cue) => createdIds.includes(cue.id))
-                  .map((cue) => [cue.id, cue] as const),
-              );
-              const merged = current.map((cue) => {
-                const updated = byId.get(cue.id);
-                if (!updated?.translation.trim()) return cue;
-                return {
-                  ...cue,
-                  translation: updated.translation,
-                  meaning: updated.meaning,
-                  literalMeaning: updated.literalMeaning,
-                  translationStatus: updated.translationStatus,
-                };
-              });
-              persistSession(merged);
-              return merged;
-            });
-          })
-          .catch((error) => {
-            console.error("[video-edit-gloss]", error);
-          });
-      }
-
       return next;
     },
     [
       clearRange,
       englishCues,
-      locale,
       persistSession,
-      situationSummary,
-      targetLanguage,
       ui.videoLearnCuesEditedToast,
     ],
   );
@@ -712,10 +532,6 @@ export function VideoLearningTab({
     setPlayingIds([]);
     setRangeIds([]);
     setWatchFullscreen(false);
-    setWaitingGloss(false);
-    glossInFlightRef.current = false;
-    pausedForGlossRef.current = false;
-    pendingPlayIdRef.current = null;
     setProgressPercent(100);
     setPhase("watching");
   };
@@ -844,17 +660,13 @@ export function VideoLearningTab({
           recordImportCharge(parsed.videoId, decision.billablePoints);
         }
         setQuotaVersion((value) => value + 1);
-        const summary = prepared.context.summary?.trim() || "";
-        setEnglishCues(cues);
         replaceBaseline(cues);
-        setSituationSummary(summary);
         setDurationSeconds(prepared.durationSeconds);
-        setStepIndex(2);
-        setProgressPercent(55);
-        startInterpretation(prepared, seq, abort.signal, {
-          videoId: parsed.videoId,
-          videoUrl: parsed.url,
-        }, cues);
+        openWatch(
+          prepared,
+          { videoId: parsed.videoId, videoUrl: parsed.url },
+          cues,
+        );
       } catch (error) {
         // Only a newer load may leave this alone — it owns the screen now.
         // Anything else has to put the screen back, including a request that
@@ -1047,11 +859,6 @@ export function VideoLearningTab({
                 onTimeUpdate={onTimeUpdate}
                 onSegmentEnd={onSegmentEnded}
               />
-              {waitingGloss ? (
-                <p className="absolute bottom-12 left-2 right-2 z-10 rounded-lg bg-black/70 px-2.5 py-1.5 text-center text-[11px] text-white">
-                  {ui.videoLearnWaitingGloss}
-                </p>
-              ) : null}
               {!watchFullscreen ? (
                 <button
                   type="button"
@@ -1087,6 +894,8 @@ export function VideoLearningTab({
               <CurrentSubtitleCard
                 ui={ui}
                 cue={displayCue}
+                videoId={videoId}
+                context={displayCue ? cueContext(displayCue) : undefined}
                 playing={Boolean(displayCue && playingId === displayCue.id)}
                 sessionSaved={sessionSaved}
                 onPlaySegment={() => {
@@ -1098,6 +907,8 @@ export function VideoLearningTab({
               <EnglishSentenceList
                 ui={ui}
                 cues={englishCues}
+                videoId={videoId}
+                contextFor={cueContext}
                 activeId={selectedId ?? cue?.id ?? null}
                 playingId={playingId}
                 playingIds={playingIds}

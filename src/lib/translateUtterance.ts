@@ -9,6 +9,8 @@ export async function translateUtterance(input: {
   targetLanguage?: string;
   sourceType?: TranslationSourceType;
   context?: string[];
+  /** A video subtitle line: lets the server reuse a kept translation. */
+  videoId?: string;
 }): Promise<string | null> {
   const text = input.text.replace(/\s+/g, " ").trim();
   if (!text) return null;
@@ -25,6 +27,7 @@ export async function translateUtterance(input: {
       ...(input.targetLanguage ? { targetLanguage: input.targetLanguage } : {}),
       ...(input.sourceType ? { sourceType: input.sourceType } : {}),
       ...(input.context?.length ? { context: input.context } : {}),
+      ...(input.videoId ? { videoId: input.videoId } : {}),
     }),
     signal: AbortSignal.timeout(25000),
   });

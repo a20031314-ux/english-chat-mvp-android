@@ -121,6 +121,7 @@ export function useEnglishAnalysis(locale: Locale) {
           targetLanguage,
           sourceType: target.sourceType,
           context: target.context,
+          ...(target.videoId ? { videoId: target.videoId } : {}),
         });
         if (translation) saveSentenceTranslation(identity, translation);
         if (sentenceReqRef.current !== req) return;

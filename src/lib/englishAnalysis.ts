@@ -137,6 +137,11 @@ export type EnglishAnalysisTarget = {
    * May differ from `translation` (the on-screen / 2-pass line).
    */
   analysisTranslation?: string;
+  /**
+   * The video a subtitle line belongs to. Lets the server keep the line's
+   * translation for the next viewer of the same video (subtitleGlossStore).
+   */
+  videoId?: string;
   /** Non-English nested pieces (characters / inner words). English never sets this. */
   innerUnits?: Array<{
     text: string;

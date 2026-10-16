@@ -5,6 +5,12 @@ import { meterRequest } from "@/lib/server/meterRequest";
 import { spokenTranslateSystem } from "@/lib/spokenTranslate";
 import { asTranslationSourceType } from "@/lib/naturalTranslation";
 import { coerceLanguageCode, isInterfaceLanguage } from "@/lib/learningLanguages";
+import {
+  isVideoId,
+  keepVideoLine,
+  readVideoLine,
+  videoLineKey,
+} from "@/lib/server/subtitleGlossStore";
 
 export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
@@ -16,8 +22,6 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
 
-  await meterRequest(request, "translate");
-
   let body: {
     text?: string;
     locale?: string;
@@ -25,6 +29,7 @@ export async function POST(request: NextRequest) {
     targetLanguage?: string;
     context?: unknown;
     sourceType?: unknown;
+    videoId?: unknown;
   };
   try {
     body = await request.json();
@@ -55,6 +60,29 @@ export async function POST(request: NextRequest) {
         .filter(Boolean)
         .slice(-6)
     : [];
+
+  // A subtitle line tapped in the video tab comes with its video's id. The
+  // same line of the same video reads the same for the next learner in the
+  // same language pair, so it is translated once and kept
+  // (server/subtitleGlossStore.ts) rather than paid for by every viewer.
+  const lineKey =
+    sourceType === "subtitle" && isVideoId(body.videoId)
+      ? videoLineKey({
+          targetLanguage,
+          interfaceLanguage,
+          videoId: body.videoId,
+          text,
+        })
+      : null;
+  if (lineKey) {
+    const kept = await readVideoLine(lineKey);
+    if (kept) {
+      void meterRequest(request, "translateKept");
+      return jsonWithCors(request, { translated: kept });
+    }
+  }
+
+  await meterRequest(request, "translate");
 
   try {
     const completion = await client.chat.completions.create({
@@ -92,6 +120,7 @@ export async function POST(request: NextRequest) {
         ? parsed.translated.trim()
         : text;
 
+    if (lineKey && translated !== text) void keepVideoLine(lineKey, translated);
     return jsonWithCors(request, { translated });
   } catch (error) {
     console.error("[translate]", error);

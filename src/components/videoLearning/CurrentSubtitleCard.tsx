@@ -11,6 +11,8 @@ import { formatSubtitleTime } from "@/lib/videoLearning";
 export function CurrentSubtitleCard({
   ui,
   cue,
+  videoId,
+  context,
   playing,
   sessionSaved,
   onPlaySegment,
@@ -18,6 +20,9 @@ export function CurrentSubtitleCard({
 }: {
   ui: UICopy;
   cue: VideoSubtitle | null;
+  videoId?: string | null;
+  /** The video's summary and neighbouring lines, for the sentence sheet. */
+  context?: string[];
   playing: boolean;
   sessionSaved: boolean;
   onPlaySegment: () => void;
@@ -44,6 +49,9 @@ export function CurrentSubtitleCard({
     );
   }
 
+  // Not shown under the line: subtitles are the learning language only, and
+  // the translation is in the sheet the bar opens. A translation a saved
+  // session already carries is handed to that sheet so it costs nothing.
   const interpretation = cue.translation.trim();
 
   return (
@@ -70,21 +78,14 @@ export function CurrentSubtitleCard({
               sourceType="subtitle"
               translation={interpretation || undefined}
               analysisTranslation={cue.analysisTranslation}
+              context={context}
+              videoId={videoId ?? undefined}
               tone={playing ? "default" : "onDark"}
               className={`text-[1.05rem] font-semibold leading-snug ${
                 playing ? "text-neutral-900" : "text-slate-100"
               }`}
             />
             <LedgerLinks ui={ui} kind="heard" here="video" line={cue.original} language={ledgerLanguage} />
-            {interpretation ? (
-              <p
-                className={`mt-2 text-sm leading-snug ${
-                  playing ? "text-neutral-700" : "text-slate-300"
-                }`}
-              >
-                {interpretation}
-              </p>
-            ) : null}
           </div>
           <SegmentPlayButton
             ariaLabel={ui.listen}
