@@ -33,6 +33,9 @@
 - 버전은 저장소에서만 올린다: `package.json` + `android/app/build.gradle`(versionCode·versionName) + `package-lock.json` 맨 위 두 줄. PC에서 build.gradle을 고치게 하지 않는다.
 - 버전을 자를 때: `src/lib/whatsNew.ts` 항목 + 14개 언어 문구 + `scripts/capture-whats-new.mjs <버전>` 캡처(`CAPTURE_USER`로 데이터 있는 테스트 사용자),
   출시 노트 `fastlane/metadata/android/*/changelogs/<versionCode>.txt`(store-listing 스킬, 500자) PR, PRODUCT.md "기준"·"버전별 변화", STATE 버전 표.
+- **버전을 자를 때마다 사용법(?)도 새로:** 그 버전에서 바뀐 기능마다 사용법 글(`src/lib/guide/`, 14개 언어)을 지금 화면에 맞게 다시 쓰고
+  `capture-whats-new.mjs guide`(새 `CAPTURE_RUN`)로 단계 그림을 UI 언어별로 다시 찍어 같은 PR/커밋에 넣는다. 옛 빌드가 다른 화면을 쓰면
+  예전 글을 스냅숏으로 남기고 새 앱만 새 글을 받게 한다(예: `/api/guide?my=1`, `before-my.json`). 새로워진 점 캡처와 같이 확인한다(사용자 결정 2026-10-16).
 - PC 빌드 안내는 이 순서: `git checkout -- android/app/build.gradle` → `git pull` → `npm install` → `npm run build:android` → `type android\app\src\main\assets\public\build-version.txt`가 새 버전인지 → Android Studio Sync → Signed Bundle.
 - 업데이트 배너 `RECOMMENDED_APP_VERSION`은 그 버전이 Play에서 받을 수 있을 때만 올린다(사용자에게 확인).
 - Play 업로드·서명·fastlane은 사람이 한다.
