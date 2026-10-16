@@ -4,7 +4,7 @@ import { observeChatLines, observeChatTurn } from "@/lib/server/learnerProfileSt
 import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
 import { recordTurn } from "@/lib/server/ledgerStore";
-import { readLearnerBrief } from "@/lib/server/learnerBrief";
+import { forgetLearnerBrief, readLearnerBrief } from "@/lib/server/learnerBrief";
 import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
 import { requestAppVersion } from "@/lib/appVersion";
 import {
@@ -938,8 +938,8 @@ export async function POST(request: NextRequest) {
     // How the turn went, without the words (learnerMetrics.ts): whether it
     // needed correcting is what the learner brief reads for chat.
     if (practised) {
-      after(() =>
-        recordLearnerTurn({
+      after(async () => {
+        await recordLearnerTurn({
           userId,
           surface: "chat",
           language: langs.targetLanguage,
@@ -951,8 +951,9 @@ export async function POST(request: NextRequest) {
           corrected: data.correction?.corrected ?? "",
           appVersion: requestAppVersion(request.headers),
           now: Date.now(),
-        }),
-      );
+        });
+        await forgetLearnerBrief(userId, langs.targetLanguage);
+      });
     }
     after(() =>
       recordTurn({

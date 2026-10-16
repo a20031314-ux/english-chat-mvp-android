@@ -7,7 +7,7 @@
  * Every read swallows its own failure: a brief that cannot be built is an
  * empty one, and the conversation carries on as it did before briefs existed.
  */
-import { kvGetJson, kvListRange, kvSetJson } from "./kv.ts";
+import { kvDelete, kvGetJson, kvListRange, kvSetJson } from "./kv.ts";
 import { isIdentified } from "./identity.ts";
 import { readLedger } from "./ledgerStore.ts";
 import { readWeakRecord } from "./weakPointStore.ts";
@@ -21,6 +21,8 @@ import {
 } from "../learner/brief.ts";
 
 const BRIEF_TTL_SECONDS = 10 * 60;
+/** An empty brief is kept only briefly: the next turn may be the one that fills it. */
+const EMPTY_BRIEF_TTL_SECONDS = 60;
 /** The newest rows of a month are the ones that can fall inside the window. */
 const ROWS_PER_MONTH = 1500;
 const EMPTY: LearnerBrief = { notes: [], prompt: "" };
@@ -64,10 +66,28 @@ export async function readLearnerBrief(userId: string, language: string, now = D
       recentSamples(userId, now),
     ]);
     const brief = buildBrief({ ledger, weak, stats: turnStats(samples, language, now), now });
-    await kvSetJson(briefKey(userId, language), brief, BRIEF_TTL_SECONDS);
+    await kvSetJson(
+      briefKey(userId, language),
+      brief,
+      brief.notes.length ? BRIEF_TTL_SECONDS : EMPTY_BRIEF_TTL_SECONDS,
+    );
     return brief;
   } catch (error) {
     console.error("[learner-brief]", error);
     return EMPTY;
+  }
+}
+
+/**
+ * Drop the kept brief once a turn has been recorded, so the next chat turn is
+ * told what this one added. Calls do not do this: there the cache is what keeps
+ * a turn from waiting on the reads, and a brief minutes old is good enough.
+ */
+export async function forgetLearnerBrief(userId: string, language: string): Promise<void> {
+  if (!isIdentified(userId)) return;
+  try {
+    await kvDelete([briefKey(userId, language)]);
+  } catch {
+    // Expires on its own.
   }
 }
