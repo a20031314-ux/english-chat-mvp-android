@@ -14,6 +14,7 @@ import {
   isFeedbackTab,
 } from "@/lib/feedback";
 import { useLearningLanguage } from "@/contexts/LearningLanguageContext";
+import { BodyLayer } from "@/components/FullScreenLayer";
 
 /**
  * 의견 보내기: from any screen, a note and a picture of the screen they were
@@ -160,6 +161,9 @@ export function FeedbackButton({ ui, locale, tab }: { ui: UICopy; locale: string
           <path d="M7 8.5h6M7 11h4" strokeLinecap="round" />
         </svg>
       </button>
+      {/* On the body: the top bar blurs what is behind it, which makes it the
+          frame for anything fixed inside it, and the sheet was cut to its height. */}
+      <BodyLayer>
       {status === "sent" ? (
         <div
           role="status"
@@ -266,6 +270,7 @@ export function FeedbackButton({ ui, locale, tab }: { ui: UICopy; locale: string
           </div>
         </div>
       ) : null}
+      </BodyLayer>
     </>
   );
 }
