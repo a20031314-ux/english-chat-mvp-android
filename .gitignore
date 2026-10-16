@@ -57,3 +57,6 @@ next-env.d.ts
 # go to fastlane/metadata and are committed
 /store-shots/out/
 /tmp/hub/
+
+# In-app feedback pulled for sorting: learners' screens, never committed.
+/tmp/feedback/
