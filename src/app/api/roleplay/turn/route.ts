@@ -44,7 +44,7 @@ import { writtenInLearningLanguage } from "@/lib/inputLanguage";
 import { parsePracticeGoal, practicePrompt, saidPhrase } from "@/lib/learner/practice";
 import { contentHash } from "@/lib/roleplay/script";
 import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
-import { meterRequest } from "@/lib/server/meterRequest";
+import { meterRequest, recordTokens } from "@/lib/server/meterRequest";
 import { requestAppVersion } from "@/lib/appVersion";
 import { getOpenAIClient } from "@/lib/server/openai";
 
@@ -415,6 +415,7 @@ export async function POST(request: NextRequest) {
   try {
     if (!wantsStream) {
       const completion = await client.chat.completions.create(ask);
+      void recordTokens("roleplayTurn", completion.usage);
       const content = completion.choices[0]?.message?.content ?? "";
       const direction = parse(content);
       if (!direction) {
@@ -443,7 +444,12 @@ export async function POST(request: NextRequest) {
      * failure part way through the answer arrives in the body, where the app
      * reads it as the dropped turn it is.
      */
-    const completion = await client.chat.completions.create({ ...ask, stream: true });
+    const completion = await client.chat.completions.create({
+      ...ask,
+      stream: true,
+      // The last piece then carries what the call used (recordTokens).
+      stream_options: { include_usage: true },
+    });
     const encoder = new TextEncoder();
     const body = new ReadableStream<Uint8Array>({
       async start(controller) {
@@ -453,6 +459,7 @@ export async function POST(request: NextRequest) {
         let led = false;
         try {
           for await (const part of completion) {
+            if (part.usage) void recordTokens("roleplayTurn", part.usage);
             const piece = part.choices[0]?.delta?.content ?? "";
             if (!piece) continue;
             text += piece;

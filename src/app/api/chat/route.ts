@@ -1,4 +1,4 @@
-import { meterRequest } from "@/lib/server/meterRequest";
+import { meterRequest, recordTokens } from "@/lib/server/meterRequest";
 import { NextRequest, after } from "next/server";
 import { observeChatLines, observeChatTurn } from "@/lib/server/learnerProfileStore";
 import { observeMapUse } from "@/lib/server/curriculumStore";
@@ -542,6 +542,7 @@ async function runChat(
     response_format: { type: "json_object" },
     temperature: 0.9,
   });
+  void recordTokens("chat", completion.usage);
 
   const raw = completion.choices[0]?.message?.content;
   if (!raw) {

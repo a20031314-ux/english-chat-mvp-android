@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { meterRequest } from "@/lib/server/meterRequest";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
@@ -97,6 +98,7 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { units: fallback });
   }
 
+  void meterRequest(request, "expressionUnits");
   try {
     const completion = await openai.chat.completions.create({
       model: chatModel(),

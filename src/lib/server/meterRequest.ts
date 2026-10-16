@@ -6,6 +6,7 @@ import {
 } from "./modelCalls.ts";
 import { incrementDailyOpUsed } from "@/lib/server/entitlementStore";
 import { requestUserId } from "@/lib/server/premiumRequest";
+import { kvIncrBy } from "@/lib/server/kv";
 
 /**
  * Counts one use of a route that spends model time.
@@ -45,3 +46,33 @@ export async function meterRequest(
 }
 
 export { MODEL_CALLS_PER_REQUEST, type MeteredOp };
+
+const TOKEN_TTL_SECONDS = 45 * 24 * 60 * 60;
+
+/**
+ * The tokens a model call actually used, summed per op and day.
+ *
+ * The cost report priced a call turn from one measurement of its prompt
+ * (cost.ts ROLEPLAY_TURN) and a chat line from a guess, while the prompts kept
+ * growing — the learner brief, the practice goal, the pack all ride on every
+ * turn. Summing what the API reports lets scripts/cost-report.mjs use the
+ * real average instead. Not per user: one total per op per day is enough to
+ * price a call, and says nothing about anyone.
+ */
+export async function recordTokens(
+  op: MeteredOp,
+  usage: { prompt_tokens?: number | null; completion_tokens?: number | null } | null | undefined,
+): Promise<void> {
+  if (!usage || typeof usage.prompt_tokens !== "number") return;
+  try {
+    const day = new Date().toISOString().slice(0, 10);
+    await Promise.all([
+      kvIncrBy(`usage:tok:${op}:${day}:in`, usage.prompt_tokens, TOKEN_TTL_SECONDS),
+      kvIncrBy(`usage:tok:${op}:${day}:out`, usage.completion_tokens ?? 0, TOKEN_TTL_SECONDS),
+      kvIncrBy(`usage:tok:${op}:${day}:n`, 1, TOKEN_TTL_SECONDS),
+    ]);
+  } catch (error) {
+    console.error("[meter] tokens not recorded", op, error);
+  }
+}
+

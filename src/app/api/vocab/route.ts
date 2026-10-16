@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { meterRequest } from "@/lib/server/meterRequest";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { naturalTranslationPrinciples } from "@/lib/naturalTranslation";
@@ -69,6 +70,7 @@ export async function POST(request: NextRequest) {
   const interfaceName = interfaceLanguageDisplayName(interfaceLanguage);
   const englishOnlyHeadwords = targetLanguage === "en";
 
+  void meterRequest(request, "vocabSearch");
   try {
     const completion = await client.chat.completions.create({
       model: chatModel(),

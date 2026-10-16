@@ -53,15 +53,38 @@ export const ASSUMED = {
   reviewUsd: 0.002,
 };
 
-const miniCallUsd =
-  (ASSUMED.miniCallTokens.input * MINI_USD_PER_MTOK.input + ASSUMED.miniCallTokens.output * MINI_USD_PER_MTOK.output) /
-  1_000_000;
+/** USD per 1M tokens of the models features call by default (openai.com pricing, as cost.ts cites). */
+const MODEL_USD_PER_MTOK = {
+  mini: MINI_USD_PER_MTOK, // gpt-4o-mini, chatModel()
+  "4.1-mini": TUTOR_USD_PER_MTOK,
+  "4.1": { input: 2, output: 8 },
+};
 
-/** USD for one metered request of an op. */
-export function opUsd(op) {
+/** Features that call something other than the app's default model, and which. */
+export const OP_MODEL = {
+  roleplayTurn: "4.1-mini",
+  roleplayPractice: "4.1-mini",
+  expressionAsk: "4.1-mini",
+  expressionAskQuick: "4.1-mini",
+  expressionAskRetry: "4.1-mini",
+  missionCheck: "4.1-mini",
+  learnerPick: "4.1",
+};
+
+/** Tokens per call when the server has not measured an op yet. */
+function defaultTokens(op) {
+  return op === "roleplayTurn" ? { input: ROLEPLAY_TURN.input, output: ROLEPLAY_TURN.output } : ASSUMED.miniCallTokens;
+}
+
+function callUsd(op, measured) {
+  const price = MODEL_USD_PER_MTOK[OP_MODEL[op] ?? "mini"];
+  const tokens = measured?.[op] ?? defaultTokens(op);
+  return (tokens.input * price.input + tokens.output * price.output) / 1_000_000;
+}
+
+/** USD for one metered request of an op; `measured` is average tokens per call by op, where recorded. */
+export function opUsd(op, measured) {
   switch (op) {
-    case "roleplayTurn":
-      return (ROLEPLAY_TURN.input * TUTOR_USD_PER_MTOK.input + ROLEPLAY_TURN.output * TUTOR_USD_PER_MTOK.output) / 1_000_000;
     case "roleplayListen":
       return (ASSUMED.listenSeconds / 60) * CALL_TRANSCRIBE_USD_PER_MINUTE;
     case "tts":
@@ -74,7 +97,7 @@ export function opUsd(op) {
     case "videoWindow":
       return (MODEL_CALLS_PER_REQUEST[op] ?? 1) * subtitlePassUsd();
     default:
-      return (MODEL_CALLS_PER_REQUEST[op] ?? 1) * miniCallUsd;
+      return (MODEL_CALLS_PER_REQUEST[op] ?? 1) * callUsd(op, measured);
   }
 }
 
@@ -110,7 +133,7 @@ export function summarize(rows, options = {}) {
   let total = 0;
   for (const row of rows) {
     if (row.count <= 0 || TEST_USER.test(row.userId)) continue;
-    const usd = opUsd(row.op) * row.count;
+    const usd = opUsd(row.op, options.tokens) * row.count;
     total += usd;
     byArea[AREA(row.op)] += usd;
     byOp.set(row.op, (byOp.get(row.op) ?? 0) + usd);
@@ -142,7 +165,7 @@ export function summarize(rows, options = {}) {
   };
 }
 
-function print(report, days, scale) {
+function print(report, days, scale, tokens = {}) {
   const won = (n) => `${n.toLocaleString("ko-KR")}원`;
   console.log(`최근 ${days}일, 실제 사용자 ${report.users}명, 사용한 날 ${report.userDays}개 (테스트 사용자 제외)`);
   console.log(scale !== 1 ? `청구서에 맞춰 ${scale.toFixed(2)}배로 보정함` : "추정 단가 그대로 (--bill 로 청구서 금액을 주면 보정)");
@@ -155,7 +178,10 @@ function print(report, days, scale) {
   console.log(`하루 통화가 7분 넘은 날 ${report.callDaysOver["7"]}% · 10분 ${report.callDaysOver["10"]}% · 15분 ${report.callDaysOver["15"]}%`);
   const h = report.chatPerDay;
   console.log(`채팅한 날 ${h.days}개: 하루 채팅 보통 ${h.median}번 · 상위 10% ${h.p90}번 · 최대 ${h.max}번`);
-  console.log(`\n가정: 모델 호출 1번 = gpt-4o-mini ${ASSUMED.miniCallTokens.input}/${ASSUMED.miniCallTokens.output} 토큰, TTS 1번 = ${ASSUMED.ttsSeconds}초, 통화 턴 = ${ROLEPLAY_TURN.turnSeconds}초, 1달러 ${KRW_PER_USD.rate}원, 수수료 ${STORE_FEE_SHARE * 100}%`);
+  const measured = Object.entries(tokens).map(([op, t]) => `${op} ${t.input}/${t.output} (${t.n}번)`);
+  if (measured.length) console.log(`\n실제 잰 토큰(호출당 입력/출력): ${measured.join(", ")}`);
+  console.log(`\n가정: 기능별 모델 = 기본 gpt-4o-mini, ${Object.entries(OP_MODEL).map(([op, m]) => `${op} ${m}`).join(", ")}`);
+  console.log(`가정: 모델 호출 1번 = gpt-4o-mini ${ASSUMED.miniCallTokens.input}/${ASSUMED.miniCallTokens.output} 토큰, TTS 1번 = ${ASSUMED.ttsSeconds}초, 통화 턴 = ${ROLEPLAY_TURN.turnSeconds}초, 1달러 ${KRW_PER_USD.rate}원, 수수료 ${STORE_FEE_SHARE * 100}%`);
 }
 
 async function main() {
@@ -207,10 +233,28 @@ async function main() {
   });
   const counts = await kvGetNumbers(keys);
   const rows = keys.map((key, i) => ({ ...parseOpKey(key), count: counts[i] ?? 0 }));
-  const estimated = summarize(rows);
+  // Tokens the server measured (meterRequest.ts recordTokens): used for an op
+  // once there are enough calls to average.
+  const tokenKeys = (await kvScanKeys("usage:tok:*")).filter((key) => {
+    const parts = key.split(":");
+    return parts.length === 5 && parts[3] >= since;
+  });
+  const tokenCounts = await kvGetNumbers(tokenKeys);
+  const sums = {};
+  tokenKeys.forEach((key, i) => {
+    const [, , op, , kind] = key.split(":");
+    sums[op] ??= { in: 0, out: 0, n: 0 };
+    sums[op][kind] += tokenCounts[i] ?? 0;
+  });
+  const tokens = Object.fromEntries(
+    Object.entries(sums)
+      .filter(([, t]) => t.n >= 20)
+      .map(([op, t]) => [op, { input: Math.round(t.in / t.n), output: Math.round(t.out / t.n), n: t.n }]),
+  );
+  const estimated = summarize(rows, { tokens });
   const bill = flag("--bill", 0);
   const scale = bill > 0 && estimated.totalKrw > 0 ? (bill * KRW_PER_USD.rate) / estimated.totalKrw : 1;
-  print(scale === 1 ? estimated : summarize(rows, { scale }), days, scale);
+  print(scale === 1 ? estimated : summarize(rows, { scale, tokens }), days, scale, tokens);
 }
 
 await main();

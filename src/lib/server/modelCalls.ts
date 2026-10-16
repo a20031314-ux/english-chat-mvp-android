@@ -131,6 +131,11 @@ export const MODEL_CALLS_PER_REQUEST = {
   // The first director call of a conversation, so per-session figures have a
   // denominator. Stateless: it is the turn that reports no directed turns yet.
   roleplaySession: 0,
+  // Splitting a sentence into expression units for the sentence sheet, and a
+  // vocabulary search. Both called the model without being counted, so the
+  // cost report could not see them.
+  expressionUnits: 1,
+  vocabSearch: 1,
 } as const;
 
 export type MeteredOp = keyof typeof MODEL_CALLS_PER_REQUEST;
