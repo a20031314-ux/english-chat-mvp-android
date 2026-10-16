@@ -386,7 +386,15 @@
     "packMastered": "習得",
     "packNothing": "今日の練習は記録されました。円の大きさはまだそのままです。",
     "packTomorrow": "明日のパックはこの記録から始まります。",
-    "packMyLink": "マイで見る"
+    "packMyLink": "マイで見る",
+    "myAskPlaceholder": "自分の学習について聞いてみよう",
+    "myAskSend": "聞く",
+    "myAskQuick1": "最近なにが伸びた？",
+    "myAskQuick2": "もっと何をすればいい？",
+    "myAskThinking": "記録を見ています…",
+    "myAskLimit": "今日のチャット回数を使い切りました。明日また聞いてください。",
+    "myAskFailed": "今は答えられませんでした。少ししてからもう一度聞いてください。",
+    "myAskCost": "質問1回はチャット1回として数えます。"
   },
   "zh": {
     "billingClose": "关闭",
@@ -775,7 +783,15 @@
     "packMastered": "已掌握",
     "packNothing": "今天的练习已记录，圆圈的大小暂时不变。",
     "packTomorrow": "明天的练习包会从这些记录开始。",
-    "packMyLink": "在“我的”中查看"
+    "packMyLink": "在“我的”中查看",
+    "myAskPlaceholder": "问问自己的学习情况",
+    "myAskSend": "提问",
+    "myAskQuick1": "最近哪里进步了？",
+    "myAskQuick2": "我该多练什么？",
+    "myAskThinking": "正在查看你的记录…",
+    "myAskLimit": "今天的聊天次数已用完，明天再问吧。",
+    "myAskFailed": "现在没能回答，请稍后再问。",
+    "myAskCost": "每个问题算一次聊天。"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -1166,7 +1182,15 @@
     "packMastered": "đã thành thạo",
     "packNothing": "Buổi luyện hôm nay đã được ghi lại; các vòng tròn tạm thời vẫn giữ nguyên kích thước.",
     "packTomorrow": "Gói ngày mai bắt đầu từ những con số này.",
-    "packMyLink": "Xem ở Của tôi"
+    "packMyLink": "Xem ở Của tôi",
+    "myAskPlaceholder": "Hỏi về tiến bộ của bạn",
+    "myAskSend": "Hỏi",
+    "myAskQuick1": "Dạo này mình tiến bộ ở đâu?",
+    "myAskQuick2": "Mình nên luyện thêm gì?",
+    "myAskThinking": "Đang xem ghi chép của bạn…",
+    "myAskLimit": "Bạn đã dùng hết lượt chat hôm nay. Hãy hỏi lại vào ngày mai.",
+    "myAskFailed": "Chưa trả lời được lúc này. Thử lại sau chút nhé.",
+    "myAskCost": "Mỗi câu hỏi tính là một lượt chat."
   },
   "fr": {
     "billingClose": "Fermer",
@@ -1562,7 +1586,15 @@
     "packMastered": "maîtrisée",
     "packNothing": "La pratique d’aujourd’hui est comptée ; les cercles gardent leur taille pour l’instant.",
     "packTomorrow": "Le pack de demain part de ces chiffres.",
-    "packMyLink": "Voir Moi"
+    "packMyLink": "Voir Moi",
+    "myAskPlaceholder": "Pose une question sur tes progrès",
+    "myAskSend": "Demander",
+    "myAskQuick1": "Qu'est-ce qui s'est amélioré ?",
+    "myAskQuick2": "Que devrais-je faire davantage ?",
+    "myAskThinking": "Je regarde ton historique…",
+    "myAskLimit": "Tu as utilisé tes discussions du jour. Redemande demain.",
+    "myAskFailed": "Je n'ai pas pu répondre. Réessaie dans un instant.",
+    "myAskCost": "Chaque question compte comme une discussion."
   },
   "it": {
     "archive": "Report",
@@ -2150,7 +2182,15 @@
     "packMastered": "ora padroneggiata",
     "packNothing": "La pratica di oggi è registrata; per ora i cerchi restano della stessa misura.",
     "packTomorrow": "Il pacchetto di domani parte da questi numeri.",
-    "packMyLink": "Vedi in Io"
+    "packMyLink": "Vedi in Io",
+    "myAskPlaceholder": "Chiedi dei tuoi progressi",
+    "myAskSend": "Chiedi",
+    "myAskQuick1": "Cosa è migliorato ultimamente?",
+    "myAskQuick2": "Cosa dovrei fare di più?",
+    "myAskThinking": "Sto guardando il tuo storico…",
+    "myAskLimit": "Hai usato le chat di oggi. Chiedi di nuovo domani.",
+    "myAskFailed": "Non sono riuscito a rispondere. Riprova tra poco.",
+    "myAskCost": "Ogni domanda conta come una chat."
   },
   "pt": {
     "billingClose": "Fechar",
@@ -2549,7 +2589,15 @@
     "packMastered": "agora dominada",
     "packNothing": "A prática de hoje foi contada; os círculos continuam do mesmo tamanho por enquanto.",
     "packTomorrow": "O pacote de amanhã começa destes números.",
-    "packMyLink": "Ver em Meu espaço"
+    "packMyLink": "Ver em Meu espaço",
+    "myAskPlaceholder": "Pergunte sobre seu progresso",
+    "myAskSend": "Perguntar",
+    "myAskQuick1": "O que melhorou ultimamente?",
+    "myAskQuick2": "O que devo praticar mais?",
+    "myAskThinking": "Olhando seu histórico…",
+    "myAskLimit": "Você já usou as conversas de hoje. Pergunte de novo amanhã.",
+    "myAskFailed": "Não consegui responder agora. Tente de novo daqui a pouco.",
+    "myAskCost": "Cada pergunta conta como uma conversa."
   },
   "ru": {
     "archive": "Отчёты",
@@ -3135,7 +3183,15 @@
     "packMastered": "теперь освоено",
     "packNothing": "Сегодняшняя практика учтена; круги пока того же размера.",
     "packTomorrow": "Завтрашний набор начнётся с этих цифр.",
-    "packMyLink": "Открыть «Моё»"
+    "packMyLink": "Открыть «Моё»",
+    "myAskPlaceholder": "Спросите о своём прогрессе",
+    "myAskSend": "Спросить",
+    "myAskQuick1": "Что стало лучше в последнее время?",
+    "myAskQuick2": "Что мне стоит делать больше?",
+    "myAskThinking": "Смотрю ваши записи…",
+    "myAskLimit": "Чаты на сегодня закончились. Спросите завтра.",
+    "myAskFailed": "Сейчас не получилось ответить. Попробуйте чуть позже.",
+    "myAskCost": "Каждый вопрос считается одним сообщением в чате."
   },
   "id": {
     "billingClose": "Tutup",
@@ -3530,7 +3586,15 @@
     "packMastered": "sudah dikuasai",
     "packNothing": "Latihan hari ini tercatat; ukuran lingkaran masih sama untuk sekarang.",
     "packTomorrow": "Paket besok dimulai dari angka-angka ini.",
-    "packMyLink": "Lihat di Saya"
+    "packMyLink": "Lihat di Saya",
+    "myAskPlaceholder": "Tanyakan perkembanganmu",
+    "myAskSend": "Tanya",
+    "myAskQuick1": "Apa yang membaik akhir-akhir ini?",
+    "myAskQuick2": "Apa yang sebaiknya lebih sering kulatih?",
+    "myAskThinking": "Sedang melihat catatanmu…",
+    "myAskLimit": "Kuota chat hari ini sudah habis. Tanya lagi besok.",
+    "myAskFailed": "Belum bisa menjawab sekarang. Coba lagi sebentar lagi.",
+    "myAskCost": "Setiap pertanyaan dihitung satu chat."
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -3919,7 +3983,15 @@
     "packMastered": "أصبحت متقنة",
     "packNothing": "تم احتساب تدريب اليوم؛ تبقى الدوائر بالحجم نفسه حاليًا.",
     "packTomorrow": "باقة الغد تبدأ من هذه الأرقام.",
-    "packMyLink": "اعرض في أنا"
+    "packMyLink": "اعرض في أنا",
+    "myAskPlaceholder": "اسأل عن تقدّمك",
+    "myAskSend": "اسأل",
+    "myAskQuick1": "ما الذي تحسّن مؤخرًا؟",
+    "myAskQuick2": "ما الذي يجب أن أتدرّب عليه أكثر؟",
+    "myAskThinking": "أنظر في سجلّك…",
+    "myAskLimit": "استخدمت محادثات اليوم. اسأل مجددًا غدًا.",
+    "myAskFailed": "تعذّرت الإجابة الآن. حاول بعد قليل.",
+    "myAskCost": "كل سؤال يُحتسب محادثة واحدة."
   },
   "th": {
     "billingClose": "ปิด",
@@ -4308,7 +4380,15 @@
     "packMastered": "คล่องแล้ว",
     "packNothing": "การฝึกวันนี้ถูกนับแล้ว ตอนนี้วงกลมยังขนาดเท่าเดิม",
     "packTomorrow": "แพ็กพรุ่งนี้จะเริ่มจากตัวเลขเหล่านี้",
-    "packMyLink": "ดูในของฉัน"
+    "packMyLink": "ดูในของฉัน",
+    "myAskPlaceholder": "ถามเรื่องความก้าวหน้าของคุณ",
+    "myAskSend": "ถาม",
+    "myAskQuick1": "ช่วงนี้อะไรดีขึ้นบ้าง?",
+    "myAskQuick2": "ควรฝึกอะไรเพิ่ม?",
+    "myAskThinking": "กำลังดูบันทึกของคุณ…",
+    "myAskLimit": "ใช้แชทของวันนี้หมดแล้ว ถามใหม่พรุ่งนี้นะ",
+    "myAskFailed": "ตอนนี้ยังตอบไม่ได้ ลองใหม่อีกสักครู่",
+    "myAskCost": "ถาม 1 ครั้งนับเป็นแชท 1 ครั้ง"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -4697,6 +4777,14 @@
     "packMastered": "अब आ गया",
     "packNothing": "आज का अभ्यास गिना गया; गोलों का आकार अभी वही है।",
     "packTomorrow": "कल का पैक इन आँकड़ों से शुरू होगा।",
-    "packMyLink": "मेरा में देखें"
+    "packMyLink": "मेरा में देखें",
+    "myAskPlaceholder": "अपनी प्रगति के बारे में पूछें",
+    "myAskSend": "पूछें",
+    "myAskQuick1": "हाल में क्या बेहतर हुआ?",
+    "myAskQuick2": "मुझे और क्या ज़्यादा करना चाहिए?",
+    "myAskThinking": "आपका रिकॉर्ड देख रहे हैं…",
+    "myAskLimit": "आज की चैट खत्म हो गईं। कल फिर पूछें।",
+    "myAskFailed": "अभी जवाब नहीं दे पाए। थोड़ी देर बाद फिर पूछें।",
+    "myAskCost": "हर सवाल एक चैट गिना जाता है।"
   }
 }

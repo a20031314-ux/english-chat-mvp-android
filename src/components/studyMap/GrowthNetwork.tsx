@@ -90,11 +90,14 @@ function growTitle(id: ElementId, ui: UICopy): string {
 
 export function GrowthNetwork({
   ui,
+  locale,
   targetLanguage,
   isPremium,
   refreshKey,
 }: {
   ui: UICopy;
+  /** The interface language, which answers to questions are written in. */
+  locale: string;
   targetLanguage: string;
   isPremium: boolean;
   refreshKey?: string | null;
@@ -206,6 +209,7 @@ export function GrowthNetwork({
           );
         })}
       </svg>
+      <AskBox ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
       {opened ? (
         <ElementSheet
           ui={ui}
@@ -216,6 +220,122 @@ export function GrowthNetwork({
         />
       ) : null}
     </section>
+  );
+}
+
+/** Start the conversation that grows an element, as "try this" would. */
+function growElement(id: ElementId, ui: UICopy) {
+  const step = GAP_STEP[id];
+  sendAppIntent("practice", { tab: step.tab, goal: { situation: step.situation }, title: growTitle(id, ui) });
+}
+
+/**
+ * Asking about one's own progress, answered from the same data the network is
+ * drawn from (learner/ask.ts). One question is one chat message; the answer may
+ * name an element to grow, which becomes a button.
+ */
+function AskBox({
+  ui,
+  locale,
+  targetLanguage,
+  isPremium,
+}: {
+  ui: UICopy;
+  locale: string;
+  targetLanguage: string;
+  isPremium: boolean;
+}) {
+  const [question, setQuestion] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [reply, setReply] = useState<{ answer: string; grow: ElementId | null } | null>(null);
+  const [error, setError] = useState<string | null>(null);
+
+  const ask = async (text: string) => {
+    const q = text.replace(/\s+/g, " ").trim();
+    if (q.length < 2 || busy) return;
+    setBusy(true);
+    setError(null);
+    setReply(null);
+    try {
+      const response = await fetch(apiUrl("/api/learner/ask"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+        body: JSON.stringify({ language: targetLanguage, interfaceLanguage: locale, question: q }),
+      });
+      if (response.status === 403) {
+        setError(ui.myAskLimit);
+        return;
+      }
+      const data = (await response.json().catch(() => null)) as { answer?: string; grow?: ElementId | null } | null;
+      if (!response.ok || !data?.answer) {
+        setError(ui.myAskFailed);
+        return;
+      }
+      setReply({ answer: data.answer, grow: data.grow ?? null });
+      setQuestion("");
+    } catch {
+      setError(ui.myAskFailed);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  return (
+    <div className="mt-2 px-1">
+      <div className="flex flex-wrap gap-1.5">
+        {[ui.myAskQuick1, ui.myAskQuick2].map((quick) => (
+          <button
+            key={quick}
+            type="button"
+            disabled={busy}
+            onClick={() => void ask(quick)}
+            className="rounded-full border border-white/15 px-2.5 py-1 text-[12px] text-slate-300 hover:bg-white/10 disabled:opacity-50"
+          >
+            {quick}
+          </button>
+        ))}
+      </div>
+      <form
+        className="mt-2 flex items-center gap-2"
+        onSubmit={(event) => {
+          event.preventDefault();
+          void ask(question);
+        }}
+      >
+        <input
+          value={question}
+          onChange={(event) => setQuestion(event.target.value.slice(0, 300))}
+          placeholder={ui.myAskPlaceholder}
+          aria-label={ui.myAskPlaceholder}
+          disabled={busy}
+          className="min-w-0 flex-1 rounded-xl border border-white/10 bg-white/5 px-3 py-2 text-[13px] text-slate-100 placeholder:text-slate-500 focus:border-white/30 focus:outline-none"
+        />
+        <button
+          type="submit"
+          disabled={busy || question.trim().length < 2}
+          className="shrink-0 rounded-xl bg-white/15 px-3 py-2 text-[12px] font-medium text-slate-100 hover:bg-white/20 disabled:opacity-40"
+        >
+          {ui.myAskSend}
+        </button>
+      </form>
+      <p className="mt-1 text-[11px] text-slate-500">{ui.myAskCost}</p>
+      {busy ? <p className="mt-2 text-[12px] text-slate-400">{ui.myAskThinking}</p> : null}
+      {error ? <p className="mt-2 text-[12px] text-rose-300">{error}</p> : null}
+      {reply ? (
+        <div className="mt-2 rounded-xl bg-white/[0.05] px-3 py-2.5">
+          <p className="whitespace-pre-line text-[13px] leading-relaxed text-slate-100">{reply.answer}</p>
+          {reply.grow ? (
+            <button
+              type="button"
+              onClick={() => growElement(reply.grow!, ui)}
+              className="mt-2 rounded-lg bg-[#e8e8e4] px-3 py-1.5 text-[12px] font-semibold text-neutral-900 hover:bg-white"
+            >
+              {ui.myGrowIt} · {elementNames(ui)[reply.grow]}
+            </button>
+          ) : null}
+        </div>
+      ) : null}
+    </div>
   );
 }
 
@@ -236,8 +356,7 @@ function ElementSheet({
   const fact = factLine(element, ui);
   const peak = Math.max(1, ...element.daily);
   const grow = () => {
-    const step = GAP_STEP[element.id];
-    sendAppIntent("practice", { tab: step.tab, goal: { situation: step.situation }, title: growTitle(element.id, ui) });
+    growElement(element.id, ui);
     onClose();
   };
   return (

@@ -36,6 +36,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   howToSayCard: 1,
   // The opening line of a conversation nobody has spoken in yet.
   chatStart: 1,
+  // A question about their own progress, answered from what is kept (learner/ask).
+  learnerAsk: 1,
   analysisInput: 5,
   analysisElement: 1,
   expressionInsight: 1,

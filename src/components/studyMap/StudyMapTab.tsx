@@ -257,7 +257,7 @@ export function StudyMapTab({
             />
             {!map ? (
               <div className="mx-auto mt-6 max-w-md">
-                <GrowthNetwork ui={ui} targetLanguage={targetLanguage} isPremium={isPremium} />
+                <GrowthNetwork ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
                 <div className="mt-3">
                   <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
                 </div>
@@ -276,7 +276,7 @@ export function StudyMapTab({
                 refreshKey={map.id}
               />
             </div>
-            <GrowthNetwork ui={ui} targetLanguage={targetLanguage} isPremium={isPremium} refreshKey={map.id} />
+            <GrowthNetwork ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} refreshKey={map.id} />
             <div className="mt-3">
               <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
             </div>
