@@ -73,7 +73,7 @@
 - 결제 화면(2.67): 스토어 current 오퍼링에 있는 요금만 카드로(가격은 스토어 표기). 요금 사이 변경은 `storeProductChangeInfo`로 Play 구독 교체.
 
 ### 사람이 할 일 (순서)
-1. Play Console → 구독 만들기: `lite_monthly` 월 3,900원, `plus_monthly` 월 5,500원 (기본 요금제 하나씩, 자동 갱신).
+1. Play Console → 구독 만들기: `lite_monthly` 월 3,900원, `plus_monthly` 월 5,500원 (기본 요금제 하나씩, 자동 갱신). — **2026-10-17 완료**
 2. RevenueCat → Products에 두 상품 추가 → Entitlements `premium`에 붙이기 → Offerings current에 패키지 두 개 추가(식별자 자유, 예: `lite`, `plus`). 기존 `$rc_monthly`(premium_monthly)는 그대로.
 3. 2.67 빌드 출시(결제 화면이 세 요금을 보여 줌). 옛 빌드는 프리미엄만 보임.
 4. 2.67이 대부분에게 깔린 뒤 `premium_monthly` 가격을 8,900원으로(기존 구독자 가격 변경 방식은 Play의 "기존 가격 유지/변경" 중 선택) → 같은 날 Claude에게 "8,900원 전환 켜 줘".
