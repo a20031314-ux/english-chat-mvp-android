@@ -32,6 +32,8 @@ export type RoomMember = {
   nickname: string;
   role: RoomRole;
   muted: boolean;
+  /** 듣는 사람이 말하기 자리를 청함(손들기). 자리에 오르면 내려간다. */
+  hand: boolean;
   joinedAt: number;
   lastSeen: number;
 };
@@ -47,8 +49,13 @@ export type RoomMeta = {
 
 export type RoomSummary = RoomMeta & { speakers: number; listeners: number };
 
+/** 말을 받아쓴 줄, 또는 손으로 쓴 댓글. */
+export type LineKind = "speech" | "text";
+
 export type RoomLine = {
   seq: number;
+  /** 없으면 speech(처음 시험판 줄). */
+  kind?: LineKind;
   peerId: string;
   nickname: string;
   text: string;
@@ -109,6 +116,19 @@ export function isSignalKind(value: unknown): value is SignalKind {
  */
 export function shouldInitiate(self: string, other: string): boolean {
   return self < other;
+}
+
+/**
+ * 손들기 없이 바로 말하기 자리에 앉을 수 있나. 방장이거나, 방장이 지금 방에
+ * 없을 때(방장이 나가도 방이 멈추지 않게).
+ */
+export function canSeatFreely(peerId: string, hostPeerId: string, live: RoomMember[]): boolean {
+  return peerId === hostPeerId || !live.some((member) => member.peerId === hostPeerId);
+}
+
+/** 손든 사람, 먼저 든 순서(들어온 순서로 대신). */
+export function raisedHands(live: RoomMember[]): RoomMember[] {
+  return live.filter((member) => member.role === "listener" && member.hand).sort((a, b) => a.joinedAt - b.joinedAt);
 }
 
 /** 살아 있는 사람만. 소식이 끊긴 사람은 화면에서도 연결에서도 뺀다. */

@@ -6,6 +6,8 @@ import { roomCopy, type RoomCopy } from "@/lib/rooms/copy";
 import {
   RoomApiError,
   createRoom,
+  grantRole,
+  howToSay,
   joinRoom,
   leaveRoom,
   listRooms,
@@ -28,10 +30,12 @@ import {
   MAX_ROOM_NAME_CHARS,
   MAX_SPEAKERS,
   byPerson,
+  canSeatFreely,
   contextBefore,
   liveMembers,
   mergeLines,
   overlapsPrevious,
+  raisedHands,
   timeline,
   type RoomLine,
   type RoomMember,
@@ -39,6 +43,7 @@ import {
   type RoomRole,
   type RoomSummary,
 } from "@/lib/rooms/protocol";
+import type { HowToSayExpression } from "@/lib/howToSay";
 import { learningLanguageName, isLearningLanguageCode } from "@/lib/learningLanguages";
 
 /**
@@ -321,7 +326,17 @@ function colorFor(peerId: string): string {
   return PEER_COLORS[hash % PEER_COLORS.length];
 }
 
-type Notice = "" | "micDenied" | "joinedAsListener" | "roomGone" | "full" | "error";
+type Notice =
+  | ""
+  | "micDenied"
+  | "joinedAsListener"
+  | "roomGone"
+  | "full"
+  | "error"
+  | "handUp"
+  | "seatsFull"
+  | "promoted"
+  | "demoted";
 
 function RoomView({
   t,
@@ -344,7 +359,8 @@ function RoomView({
 }) {
   const [members, setMembers] = useState<RoomMember[]>([]);
   const [lines, setLines] = useState<RoomLine[]>([]);
-  const [role, setRole] = useState<RoomRole>(wantRole);
+  const [role, setRole] = useState<RoomRole>("listener");
+  const [hand, setHand] = useState(false);
   const [muted, setMuted] = useState(false);
   const [speaking, setSpeaking] = useState(false);
   const [pending, setPending] = useState(0);
@@ -353,7 +369,8 @@ function RoomView({
   const [view, setView] = useState<"timeline" | "people">("timeline");
   const [joined, setJoined] = useState(false);
 
-  const roleRef = useRef<RoomRole>(wantRole);
+  const roleRef = useRef<RoomRole>("listener");
+  const handRef = useRef(false);
   const mutedRef = useRef(false);
   const offsetRef = useRef(0);
   const sinceRef = useRef(0);
@@ -362,11 +379,19 @@ function RoomView({
   const captureRef = useRef<SpeechCapture | null>(null);
   const aliveRef = useRef(true);
 
+  const isHost = peerId === room.hostPeerId;
+  const free = canSeatFreely(peerId, room.hostPeerId, members);
+
   useEffect(() => {
     mutedRef.current = muted;
     const track = streamRef.current?.getAudioTracks()[0];
     if (track) track.enabled = !muted;
   }, [muted]);
+
+  const raise = useCallback((next: boolean) => {
+    handRef.current = next;
+    setHand(next);
+  }, []);
 
   const stopMic = useCallback(() => {
     captureRef.current?.stop();
@@ -377,27 +402,31 @@ function RoomView({
     setSpeaking(false);
   }, []);
 
+  const addMine = useCallback((line: RoomLine) => setLines((have) => mergeLines(have, [line])), []);
+
   const onUtterance = useCallback(
     async (blob: Blob, mimeType: string, startedAt: number, endedAt: number) => {
       setPending((count) => count + 1);
       try {
         const text = await transcribeUtterance(blob, mimeType);
         if (!text || !aliveRef.current) return;
-        const line = await postLine({
-          roomId: room.id,
-          peerId,
-          text,
-          startedAt: startedAt + offsetRef.current,
-          endedAt: endedAt + offsetRef.current,
-        });
-        setLines((have) => mergeLines(have, [line]));
+        addMine(
+          await postLine({
+            roomId: room.id,
+            peerId,
+            kind: "speech",
+            text,
+            startedAt: startedAt + offsetRef.current,
+            endedAt: endedAt + offsetRef.current,
+          }),
+        );
       } catch (error) {
         console.warn("[rooms] line failed", error);
       } finally {
         setPending((count) => Math.max(0, count - 1));
       }
     },
-    [peerId, room.id],
+    [addMine, peerId, room.id],
   );
 
   const startMic = useCallback(async (): Promise<boolean> => {
@@ -427,21 +456,44 @@ function RoomView({
     }
   }, [onUtterance]);
 
-  const changeRole = useCallback(
-    async (next: RoomRole) => {
+  /** 서버가 정한 자리를 따른다(방장의 결정, 자리 부족). 마이크도 같이. */
+  const adoptRole = useCallback(
+    async (next: RoomRole, why: Notice) => {
+      if (next === roleRef.current) return;
+      roleRef.current = next;
+      setRole(next);
       if (next === "speaker") {
-        const ok = await startMic();
-        if (!ok) {
+        raise(false);
+        if (!(await startMic())) {
+          roleRef.current = "listener";
+          setRole("listener");
           setNotice("micDenied");
           return;
         }
       } else {
         stopMic();
       }
-      roleRef.current = next;
-      setRole(next);
+      if (why) setNotice(why);
     },
-    [startMic, stopMic],
+    [raise, startMic, stopMic],
+  );
+
+  /** 내가 바꾸기: 앉기(방장·방장 없을 때) / 내려오기. 손님의 앉기는 손들기로. */
+  const askRole = useCallback(
+    async (next: RoomRole) => {
+      if (next === "listener") {
+        await adoptRole("listener", "");
+        return;
+      }
+      // 서버가 다음 물음에서 허락하면 adoptRole로 이어진다. 마이크 권한은 미리.
+      if (!(await startMic())) {
+        setNotice("micDenied");
+        return;
+      }
+      roleRef.current = "speaker";
+      setRole("speaker");
+    },
+    [adoptRole, startMic],
   );
 
   // 들어가기 → 연결 준비 → 묻기 반복. 나가면 모두 정리.
@@ -471,6 +523,7 @@ function RoomView({
           since: sinceRef.current,
           muted: mutedRef.current,
           role: roleRef.current,
+          hand: handRef.current,
         });
         if (!aliveRef.current) return;
         const receivedAt = Date.now();
@@ -478,12 +531,9 @@ function RoomView({
         const live = liveMembers(result.members, result.now);
         setMembers(live);
         const me = live.find((member) => member.peerId === peerId);
-        if (me && me.role !== roleRef.current && roleRef.current === "speaker") {
-          // 서버가 자리를 못 줬다(가득 참).
-          stopMic();
-          roleRef.current = me.role;
-          setRole(me.role);
-          setNotice("joinedAsListener");
+        if (me && me.role !== roleRef.current) {
+          // 방장이 올리거나 내렸다(또는 앉으려 했는데 자리가 없었다). 마이크도 같이.
+          await adoptRole(me.role, me.role === "speaker" ? "promoted" : "demoted");
         }
         mesh.sync(live.map((member) => member.peerId));
         for (const signal of result.signals) await mesh.handle(signal);
@@ -505,17 +555,10 @@ function RoomView({
         const result = await joinRoom({ roomId: room.id, peerId, nickname: nickname.trim(), role: wantRole });
         if (!aliveRef.current) return;
         offsetRef.current = result.now - Date.now();
-        roleRef.current = result.member.role;
-        setRole(result.member.role);
-        if (wantRole === "speaker" && result.member.role === "listener") setNotice("joinedAsListener");
-        if (result.member.role === "speaker") {
-          const ok = await startMic();
-          if (!ok) {
-            roleRef.current = "listener";
-            setRole("listener");
-            setNotice("micDenied");
-          }
-        }
+        raise(result.member.hand);
+        if (result.member.role === "speaker") await adoptRole("speaker", "");
+        else if (result.member.hand) setNotice("handUp");
+        else if (wantRole === "speaker") setNotice("joinedAsListener");
         setJoined(true);
         void tick();
       } catch (error) {
@@ -539,8 +582,18 @@ function RoomView({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [room.id, peerId]);
 
+  const grant = async (target: string, next: RoomRole) => {
+    try {
+      await grantRole(room.id, peerId, target, next);
+    } catch (error) {
+      if (error instanceof RoomApiError && error.code === "SEATS_FULL") setNotice("seatsFull");
+      else setNotice("error");
+    }
+  };
+
   const speakers = members.filter((member) => member.role === "speaker");
   const listenerCount = members.length - speakers.length;
+  const hands = raisedHands(members);
 
   return (
     <>
@@ -569,10 +622,11 @@ function RoomView({
                   self && speaking ? "border-emerald-400 text-white" : "border-white/15 text-slate-200"
                 }`}
               >
-                <span aria-hidden>{member.role === "listener" ? "👂" : member.muted ? "🔇" : "🎙"}</span>
+                <span aria-hidden>{member.role === "listener" ? (member.hand ? "✋" : "👂") : member.muted ? "🔇" : "🎙"}</span>
                 <span className={colorFor(member.peerId)} dir="auto">
                   {member.nickname}
                 </span>
+                {member.peerId === room.hostPeerId ? <span className="text-amber-300">· {t.host}</span> : null}
                 {self ? <span className="text-slate-500">({t.you})</span> : null}
                 {!self && state ? (
                   <span
@@ -582,10 +636,34 @@ function RoomView({
                     }`}
                   />
                 ) : null}
+                {isHost && !self && member.role === "speaker" ? (
+                  <button type="button" onClick={() => void grant(member.peerId, "listener")} className="ms-1 rounded bg-white/10 px-1.5 text-[11px] text-slate-200">
+                    {t.demote}
+                  </button>
+                ) : null}
               </li>
             );
           })}
         </ul>
+        {isHost && hands.length > 0 ? (
+          <div className="mt-2 rounded-lg border border-amber-300/30 bg-amber-300/5 px-2 py-1.5">
+            <p className="mb-1 text-[11px] text-amber-200">✋ {t.hands}</p>
+            <ul className="flex flex-wrap gap-1.5">
+              {hands.map((member) => (
+                <li key={member.peerId} className="flex items-center gap-1 text-xs text-slate-100">
+                  <span dir="auto">{member.nickname}</span>
+                  <button
+                    type="button"
+                    onClick={() => void grant(member.peerId, "speaker")}
+                    className="rounded bg-amber-300/90 px-1.5 py-0.5 text-[11px] font-medium text-black"
+                  >
+                    {t.promote}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ) : null}
         <div className="mt-2 flex gap-1 rounded-lg bg-white/5 p-0.5 text-xs">
           {(["timeline", "people"] as const).map((option) => (
             <button
@@ -601,45 +679,208 @@ function RoomView({
       </header>
 
       {notice ? (
-        <p className="shrink-0 bg-amber-400/10 px-4 py-2 text-sm text-amber-200">{t[notice]}</p>
+        <button
+          type="button"
+          onClick={() => setNotice("")}
+          className="shrink-0 bg-amber-400/10 px-4 py-2 text-start text-sm text-amber-200"
+          dir="auto"
+        >
+          {t[notice]}
+        </button>
       ) : null}
 
-      <Lines
-        t={t}
-        lines={lines}
-        view={view}
-        selfId={peerId}
-        locale={locale}
-        targetLanguage={targetLanguage}
-      />
+      <Lines t={t} lines={lines} view={view} selfId={peerId} locale={locale} targetLanguage={targetLanguage} />
 
-      <footer className="shrink-0 space-y-2 border-t border-white/10 px-4 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] pt-3">
-        <p className="text-xs text-slate-500">
+      <footer className="shrink-0 space-y-2 border-t border-white/10 px-4 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] pt-2">
+        <Composer
+          t={t}
+          disabled={!joined}
+          locale={locale}
+          targetLanguage={targetLanguage}
+          recent={() => timeline(lines).slice(-6).map((line) => `${line.nickname}: ${line.text}`)}
+          onSend={async (text) => {
+            addMine(
+              await postLine({
+                roomId: room.id,
+                peerId,
+                kind: "text",
+                text,
+                startedAt: Date.now() + offsetRef.current,
+                endedAt: Date.now() + offsetRef.current,
+              }),
+            );
+          }}
+        />
+        <p className="text-xs text-slate-500" dir="auto">
           {!joined ? t.connecting : role === "listener" ? t.listenerHint : pending > 0 ? t.transcribing : t.listening}
           {role === "speaker" ? ` · ${t.earphones}` : ""}
         </p>
         <div className="flex gap-2">
           {role === "speaker" ? (
+            <>
+              <button
+                type="button"
+                onClick={() => setMuted((value) => !value)}
+                className={`flex-1 rounded-xl px-3 py-2.5 text-sm font-medium ${
+                  muted ? "bg-rose-500/80 text-white" : speaking ? "bg-emerald-400 text-black" : "bg-white/90 text-black"
+                }`}
+              >
+                {muted ? t.unmute : t.mute}
+              </button>
+              <button
+                type="button"
+                onClick={() => void askRole("listener")}
+                className="flex-1 rounded-xl border border-white/20 px-3 py-2.5 text-sm text-slate-200"
+              >
+                {t.toListener}
+              </button>
+            </>
+          ) : free ? (
             <button
               type="button"
-              onClick={() => setMuted((value) => !value)}
-              className={`flex-1 rounded-xl px-3 py-2.5 text-sm font-medium ${
-                muted ? "bg-rose-500/80 text-white" : speaking ? "bg-emerald-400 text-black" : "bg-white/90 text-black"
-              }`}
+              onClick={() => void askRole("speaker")}
+              className="flex-1 rounded-xl bg-white/90 px-3 py-2.5 text-sm font-medium text-black"
             >
-              {muted ? t.unmute : t.mute}
+              {t.toSpeaker}
             </button>
-          ) : null}
-          <button
-            type="button"
-            onClick={() => void changeRole(role === "speaker" ? "listener" : "speaker")}
-            className="flex-1 rounded-xl border border-white/20 px-3 py-2.5 text-sm text-slate-200"
-          >
-            {role === "speaker" ? t.toListener : t.toSpeaker}
-          </button>
+          ) : (
+            <button
+              type="button"
+              onClick={() => {
+                raise(!hand);
+                if (!hand) setNotice("handUp");
+              }}
+              className={`flex-1 rounded-xl px-3 py-2.5 text-sm font-medium ${hand ? "border border-amber-300/60 text-amber-200" : "bg-amber-300/90 text-black"}`}
+            >
+              {hand ? t.lowerHand : `✋ ${t.raiseHand}`}
+            </button>
+          )}
         </div>
       </footer>
     </>
+  );
+}
+
+/**
+ * 댓글. 말하기 자리가 없어도, 말이 안 나와도 끼는 통로(헬로우톡의 댓글).
+ * 편한 말로 쓰고 "학습 언어로"를 누르면 채팅의 표현 보기와 같은 문장이 나오고,
+ * 그대로 보내거나 고쳐서 보낸다. 말하기 자리에 있으면 소리 내어 말해 봐도 된다.
+ */
+function Composer({
+  t,
+  disabled,
+  locale,
+  targetLanguage,
+  recent,
+  onSend,
+}: {
+  t: RoomCopy;
+  disabled: boolean;
+  locale: string;
+  targetLanguage: string;
+  recent: () => string[];
+  onSend: (text: string) => Promise<void>;
+}) {
+  const [text, setText] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [suggestion, setSuggestion] = useState<HowToSayExpression | null>(null);
+  const [state, setState] = useState<"" | "loading" | "failed">("");
+  const input = useRef<HTMLInputElement>(null);
+
+  const send = async (value: string) => {
+    const line = value.trim();
+    if (!line || busy) return;
+    setBusy(true);
+    try {
+      await onSend(line);
+      setText("");
+      setSuggestion(null);
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const suggest = async () => {
+    const line = text.trim();
+    if (!line) return;
+    setState("loading");
+    setSuggestion(null);
+    try {
+      const found = await howToSay({ message: line, recent: recent(), locale, targetLanguage });
+      setSuggestion(found);
+      setState(found ? "" : "failed");
+    } catch {
+      setState("failed");
+    }
+  };
+
+  return (
+    <div className="space-y-1.5">
+      {state === "loading" ? <p className="text-xs text-slate-400">{t.howToSayLoading}</p> : null}
+      {state === "failed" ? <p className="text-xs text-rose-300">{t.howToSayFailed}</p> : null}
+      {suggestion ? (
+        <div className="rounded-xl border border-emerald-300/30 bg-emerald-300/5 p-2.5">
+          <p className="text-[15px] text-white" dir="auto">
+            {suggestion.expression}
+          </p>
+          {suggestion.simpler ? (
+            <p className="mt-0.5 text-xs text-slate-300" dir="auto">
+              {t.simpler}: {suggestion.simpler}
+            </p>
+          ) : null}
+          <p className="mt-1 text-[11px] text-slate-500">{t.sayIt}</p>
+          <div className="mt-1.5 flex gap-2">
+            <button
+              type="button"
+              disabled={busy}
+              onClick={() => void send(suggestion.expression)}
+              className="flex-1 rounded-lg bg-emerald-400/90 px-2 py-1.5 text-xs font-medium text-black disabled:opacity-50"
+            >
+              {t.sendThis}
+            </button>
+            <button
+              type="button"
+              onClick={() => {
+                setText(suggestion.expression);
+                setSuggestion(null);
+                requestAnimationFrame(() => input.current?.focus());
+              }}
+              className="flex-1 rounded-lg border border-white/20 px-2 py-1.5 text-xs text-slate-200"
+            >
+              {t.editThis}
+            </button>
+          </div>
+        </div>
+      ) : null}
+      <div className="flex gap-1.5">
+        <input
+          ref={input}
+          value={text}
+          disabled={disabled}
+          onChange={(event) => setText(event.target.value)}
+          onKeyDown={(event) => event.key === "Enter" && !event.nativeEvent.isComposing && void send(text)}
+          placeholder={t.commentPlaceholder}
+          dir="auto"
+          className="min-w-0 flex-1 rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-sm text-white outline-none focus:border-white/40"
+        />
+        <button
+          type="button"
+          disabled={disabled || !text.trim() || state === "loading"}
+          onClick={() => void suggest()}
+          className="shrink-0 rounded-xl border border-emerald-300/40 px-2.5 text-xs text-emerald-200 disabled:opacity-40"
+        >
+          {t.howToSay}
+        </button>
+        <button
+          type="button"
+          disabled={disabled || !text.trim() || busy}
+          onClick={() => void send(text)}
+          className="shrink-0 rounded-xl bg-white/90 px-3 text-sm font-medium text-black disabled:opacity-40"
+        >
+          {t.send}
+        </button>
+      </div>
+    </div>
   );
 }
 
@@ -695,20 +936,24 @@ function Lines({
   const row = (line: RoomLine, showName: boolean, overlap: boolean) => {
     const translation = open[line.seq];
     const isOpen = line.seq in open;
+    const typed = line.kind === "text";
     return (
       <li key={line.seq}>
         <button
           type="button"
           onClick={() => void toggle(line)}
-          className={`w-full rounded-xl px-3 py-2 text-start ${line.peerId === selfId ? "bg-white/[0.07]" : "bg-white/[0.03]"} hover:bg-white/10`}
+          className={`w-full rounded-xl px-3 py-2 text-start ${
+            typed ? "border border-dashed border-white/15" : ""
+          } ${line.peerId === selfId ? "bg-white/[0.07]" : "bg-white/[0.03]"} hover:bg-white/10`}
         >
-          {showName ? (
+          {showName || typed ? (
             <span className={`me-2 text-xs font-medium ${colorFor(line.peerId)}`} dir="auto">
-              {line.nickname}
+              {showName ? line.nickname : null}
+              {typed ? <span className="ms-1 text-[10px] text-slate-500">💬 {t.comment}</span> : null}
               {overlap ? <span className="ms-1 text-[10px] text-slate-500">· {t.overlap}</span> : null}
             </span>
           ) : null}
-          <span className="block text-[15px] leading-snug text-white" dir="auto">
+          <span className={`block leading-snug text-white ${typed ? "text-sm" : "text-[15px]"}`} dir="auto">
             {line.text}
           </span>
           {isOpen ? (
@@ -729,7 +974,9 @@ function Lines({
     <div ref={scroller} className="min-h-0 flex-1 overflow-y-auto px-3 py-3">
       <p className="mb-2 px-1 text-[11px] text-slate-500">{t.tapToTranslate}</p>
       {view === "timeline" ? (
-        <ul className="space-y-1.5">{ordered.map((line, index) => row(line, true, overlapsPrevious(ordered, index)))}</ul>
+        <ul className="space-y-1.5">
+          {ordered.map((line, index) => row(line, true, line.kind !== "text" && overlapsPrevious(ordered, index)))}
+        </ul>
       ) : (
         <div className="space-y-4">
           {groups.map((group) => (

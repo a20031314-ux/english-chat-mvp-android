@@ -11,6 +11,8 @@ import {
   overlapsPrevious,
   shouldInitiate,
   timeline,
+  canSeatFreely,
+  raisedHands,
   type RoomLine,
   type RoomMember,
 } from "./protocol.ts";
@@ -92,9 +94,21 @@ test("소식이 끊긴 사람은 뺀다", () => {
     nickname: peerId,
     role: "speaker",
     muted: false,
+    hand: false,
     joinedAt: 0,
     lastSeen,
   });
   const live = liveMembers([member("a", 100_000), member("b", 80_000)], 100_500);
   assert.deepEqual(live.map((row) => row.peerId), ["a"]);
+});
+
+test("바로 앉기: 방장이거나 방장이 없을 때만, 손든 순서", () => {
+  const m = (peerId: string, role: "speaker" | "listener", hand: boolean, joinedAt: number): RoomMember => ({
+    peerId, nickname: peerId, role, muted: false, hand, joinedAt, lastSeen: 1,
+  });
+  const live = [m("host", "speaker", false, 1), m("b", "listener", true, 3), m("c", "listener", true, 2), m("d", "listener", false, 4)];
+  assert.equal(canSeatFreely("host", "host", live), true);
+  assert.equal(canSeatFreely("b", "host", live), false);
+  assert.equal(canSeatFreely("b", "host", live.slice(1)), true);
+  assert.deepEqual(raisedHands(live).map((row) => row.peerId), ["c", "b"]);
 });

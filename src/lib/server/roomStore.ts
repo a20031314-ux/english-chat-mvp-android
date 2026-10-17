@@ -14,6 +14,7 @@ import {
   MAX_MEMBERS,
   MAX_SPEAKERS,
   ROOM_TTL_SECONDS,
+  canSeatFreely,
   liveMembers,
   newRoomId,
   type PollResponse,
@@ -31,6 +32,7 @@ import {
   kvListRange,
   kvListTake,
   kvListTrim,
+  kvDelete,
   kvSetJson,
 } from "./kv.ts";
 
@@ -45,6 +47,9 @@ const memberKey = (id: string, peer: string) => `room:m:${id}:${peer}`;
 const signalKey = (id: string, peer: string) => `room:sig:${id}:${peer}`;
 const linesKey = (id: string) => `room:lines:${id}`;
 const seqKey = (id: string) => `room:seq:${id}`;
+/** 방장이 누군가를 올리거나 내린 결정. 그 사람의 다음 물음이 가져간다. */
+const grantKey = (id: string, peer: string) => `room:grant:${id}:${peer}`;
+const GRANT_TTL_SECONDS = 60;
 
 /**
  * 시험 입장 코드. Vercel 환경 변수 ROOM_INVITE_CODES(쉼표로 여러 개)가 있으면
@@ -119,7 +124,9 @@ export type JoinResult =
   | { ok: false; error: "NO_ROOM" | "ROOM_FULL" };
 
 /**
- * 들어가기. 말하기 자리가 차 있으면 듣는 사람으로 들어간다(거절하지 않음).
+ * 들어가기. 방장(또는 방장이 없는 방)은 바로 말하기 자리에, 다른 사람은 듣는
+ * 사람으로 들어가 손을 든다 — 방장이 올려 줘야 말한다(헬로우톡의 손들기).
+ * 자리가 차 있어도 듣는 사람으로는 들어간다.
  */
 export async function joinRoom(input: {
   id: string;
@@ -132,13 +139,16 @@ export async function joinRoom(input: {
   const members = (await readMembers(input.id)).filter((member) => member.peerId !== input.peerId);
   if (members.length >= MAX_MEMBERS) return { ok: false, error: "ROOM_FULL" };
   const speakers = members.filter((member) => member.role === "speaker").length;
-  const role: RoomRole = input.wantRole === "speaker" && speakers < MAX_SPEAKERS ? "speaker" : "listener";
+  const free = canSeatFreely(input.peerId, meta.hostPeerId, members);
+  const seated = input.wantRole === "speaker" && free && speakers < MAX_SPEAKERS;
+  const role: RoomRole = seated ? "speaker" : "listener";
   const now = Date.now();
   const member: RoomMember = {
     peerId: input.peerId,
     nickname: input.nickname,
     role,
     muted: false,
+    hand: input.wantRole === "speaker" && !seated,
     joinedAt: now,
     lastSeen: now,
   };
@@ -147,6 +157,25 @@ export async function joinRoom(input: {
   await kvListTrim(peersKey(input.id), MAX_MEMBERS * 4);
   await kvSetJson(metaKey(input.id), meta, ROOM_TTL_SECONDS);
   return { ok: true, member, meta };
+}
+
+/** 방장만: 손든 사람을 올리거나, 말하는 사람을 내린다. */
+export async function grantRole(input: {
+  id: string;
+  hostPeerId: string;
+  target: string;
+  role: RoomRole;
+}): Promise<"ok" | "NOT_HOST" | "NO_TARGET" | "SEATS_FULL"> {
+  const meta = await readMeta(input.id);
+  if (!meta || meta.hostPeerId !== input.hostPeerId) return "NOT_HOST";
+  const members = await readMembers(input.id);
+  if (!members.some((member) => member.peerId === input.target)) return "NO_TARGET";
+  if (input.role === "speaker") {
+    const speakers = members.filter((member) => member.role === "speaker").length;
+    if (speakers >= MAX_SPEAKERS) return "SEATS_FULL";
+  }
+  await kvSetJson(grantKey(input.id, input.target), input.role, GRANT_TTL_SECONDS);
+  return "ok";
 }
 
 /**
@@ -159,6 +188,7 @@ export async function poll(input: {
   since: number;
   muted?: boolean;
   role?: RoomRole;
+  hand?: boolean;
 }): Promise<PollResponse | null> {
   const meta = await readMeta(input.id);
   if (!meta) return null;
@@ -166,26 +196,32 @@ export async function poll(input: {
   if (!mine) return null;
   const now = Date.now();
   let role = mine.role;
-  if (input.role && input.role !== mine.role) {
-    // 듣다가 말하기 자리로 올라가기 / 내려오기.
-    if (input.role === "listener") role = "listener";
-    else {
-      const speakers = (await readMembers(input.id)).filter(
-        (member) => member.role === "speaker" && member.peerId !== input.peerId,
-      ).length;
-      if (speakers < MAX_SPEAKERS) role = "speaker";
-    }
+  const live = await readMembers(input.id);
+  const others = live.filter((member) => member.peerId !== input.peerId);
+  const seatsLeft = others.filter((member) => member.role === "speaker").length < MAX_SPEAKERS;
+  const granted = await kvGetJson<RoomRole>(grantKey(input.id, input.peerId));
+  if (granted) {
+    // 방장의 결정이 앱이 바라는 것보다 먼저. 한 번 쓰고 지운다.
+    await kvDelete([grantKey(input.id, input.peerId)]);
+    if (granted === "listener") role = "listener";
+    else if (seatsLeft) role = "speaker";
+  } else if (input.role === "listener") {
+    role = "listener";
+  } else if (input.role === "speaker" && mine.role !== "speaker") {
+    // 손들기 없이 앉기는 방장이거나 방장이 없을 때만.
+    if (seatsLeft && canSeatFreely(input.peerId, meta.hostPeerId, others)) role = "speaker";
   }
   const updated: RoomMember = {
     ...mine,
     role,
     muted: typeof input.muted === "boolean" ? input.muted : mine.muted,
+    hand: role === "speaker" ? false : typeof input.hand === "boolean" ? input.hand : mine.hand,
     lastSeen: now,
   };
   await kvSetJson(memberKey(input.id, input.peerId), updated, MEMBER_TTL_SECONDS);
 
-  const [members, rawSignals, rawLines] = await Promise.all([
-    readMembers(input.id),
+  const members = [...others, updated].sort((a, b) => a.joinedAt - b.joinedAt);
+  const [rawSignals, rawLines] = await Promise.all([
     kvListTake(signalKey(input.id, input.peerId)),
     kvListRange(linesKey(input.id), -MAX_LINES_KEPT, -1),
   ]);

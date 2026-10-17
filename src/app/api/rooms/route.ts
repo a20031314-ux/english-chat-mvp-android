@@ -3,6 +3,7 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
   addLine,
   createRoom,
+  grantRole,
   isInviteCode,
   isMember,
   joinRoom,
@@ -91,6 +92,7 @@ export async function POST(request: NextRequest) {
       since,
       muted: typeof body.muted === "boolean" ? body.muted : undefined,
       role: body.role === "listener" || body.role === "speaker" ? body.role : undefined,
+      hand: typeof body.hand === "boolean" ? body.hand : undefined,
     });
     if (!result) return bad(request, "NOT_IN_ROOM", 404);
     return jsonWithCors(request, result);
@@ -112,14 +114,23 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { ok: true });
   }
 
+  if (action === "grant") {
+    if (!isPeerId(body.target) || (body.role !== "speaker" && body.role !== "listener")) return bad(request, "BAD_GRANT");
+    const result = await grantRole({ id: roomId, hostPeerId: peerId, target: body.target, role: body.role });
+    return result === "ok" ? jsonWithCors(request, { ok: true }) : bad(request, result, result === "NOT_HOST" ? 403 : 409);
+  }
+
   if (action === "line") {
-    if (me.role !== "speaker") return bad(request, "NOT_SPEAKER", 403);
+    // 받아쓴 말은 말하기 자리에서만, 손으로 쓴 댓글은 누구나(듣는 사람도).
+    const kind = body.kind === "text" ? "text" : "speech";
+    if (kind === "speech" && me.role !== "speaker") return bad(request, "NOT_SPEAKER", 403);
     const text = cleanText(body.text, MAX_LINE_CHARS);
     if (!text) return bad(request, "NO_TEXT");
     const now = Date.now();
     const startedAt = clampTime(body.startedAt, now);
     const endedAt = Math.max(startedAt, clampTime(body.endedAt, now));
     const line = await addLine(roomId, {
+      kind,
       peerId,
       nickname: me.nickname,
       text,

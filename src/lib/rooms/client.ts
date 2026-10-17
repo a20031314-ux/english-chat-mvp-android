@@ -2,7 +2,8 @@
 
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
-import type { PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, RoomSummary, SignalKind } from "./protocol";
+import type { LineKind, PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, RoomSummary, SignalKind } from "./protocol";
+import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 
 /** 방(시험 기능)의 기기 저장값. 모두 이 기기에만 있다. */
 const CODE_KEY = "roomsInviteCode";
@@ -101,6 +102,7 @@ export async function pollRoom(input: {
   since: number;
   muted: boolean;
   role: RoomRole;
+  hand: boolean;
 }): Promise<PollResponse> {
   return call("poll", input);
 }
@@ -109,9 +111,15 @@ export async function sendSignal(roomId: string, peerId: string, to: string, kin
   await call("signal", { roomId, peerId, to, kind, data });
 }
 
+/** 방장만: 손든 사람 올리기 / 말하는 사람 내리기. */
+export async function grantRole(roomId: string, peerId: string, target: string, role: RoomRole): Promise<void> {
+  await call("grant", { roomId, peerId, target, role });
+}
+
 export async function postLine(input: {
   roomId: string;
   peerId: string;
+  kind: LineKind;
   text: string;
   startedAt: number;
   endedAt: number;
@@ -172,4 +180,33 @@ export async function translateLine(input: {
   if (!response.ok) throw new Error(`translate ${response.status}`);
   const body = (await response.json()) as { translated?: unknown };
   return typeof body.translated === "string" ? body.translated : "";
+}
+
+/**
+ * 편한 말로 쓴 댓글을 학습 언어로 — 채팅의 "표현 보기"와 같은 길(how_to_say,
+ * expressionOnly). 채팅 횟수로 세지 않는다. 방의 앞 줄들을 맥락으로 보낸다.
+ */
+export async function howToSay(input: {
+  message: string;
+  recent: string[];
+  locale: string;
+  targetLanguage: string;
+}): Promise<HowToSayExpression | null> {
+  const response = await fetch(apiUrl("/api/chat"), {
+    method: "POST",
+    headers: { "Content-Type": "application/json", ...entitlementHeaders() },
+    body: JSON.stringify({
+      message: input.message,
+      mode: "how_to_say",
+      expressionOnly: true,
+      locale: input.locale,
+      interfaceLanguage: input.locale,
+      targetLanguage: input.targetLanguage,
+      recent: input.recent.slice(-6),
+    }),
+  });
+  if (!response.ok) throw new Error(`how_to_say ${response.status}`);
+  const data = (await response.json()) as HowToSayExpression;
+  if (!data.expression?.trim()) return null;
+  return normalizeHowToSayExpression(input.message, data);
 }
