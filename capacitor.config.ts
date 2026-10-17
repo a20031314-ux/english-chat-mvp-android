@@ -31,6 +31,16 @@ const config: CapacitorConfig = {
     CapacitorHttp: {
       enabled: true,
     },
+    // Google 로그인만 쓴다. facebook을 켜 두면 Facebook SDK와 광고 ID 권한이
+    // 번들에 들어가 Play의 "광고 ID 안 씀" 신고와 어긋난다(플러그인 README).
+    SocialLogin: {
+      providers: {
+        google: true,
+        facebook: false,
+        apple: false,
+        twitter: false,
+      },
+    },
   },
   ...(devServerUrl
     ? {

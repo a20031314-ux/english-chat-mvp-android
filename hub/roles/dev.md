@@ -21,6 +21,14 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **로그인·프로필 (2026-10-18):** 사용자 결정 = Google + 이메일 코드, **선택 로그인**, 프로필은 닉네임·사진·자기소개. 서버(바로 반영, 설정 전엔 꺼져 있음): `/api/account/*`
+  (config·email/start·email/verify·google·me·profile·delete·purge), `server/accountStore.ts`(KV `account:v1:*`), `authToken.ts`(HMAC 토큰, `x-auth-token`), `requestUserId`가 토큰의 `dataUserId`를 우선
+  (처음 로그인한 기기의 `rc:…` — 기록 이전 없음), 계정 삭제 → 매주 크론이 기록 지움(`accountPurge.ts`, `vercel.json`), 처리방침(en/ko) 갱신. 앱(다음 빌드): My 맨 위 계정 카드·로그인/편집 시트(`components/account/`),
+  Google은 `@capgo/capacitor-social-login`(facebook·apple 끔, `capacitor.config.ts`) → **네이티브 플러그인이라 `npm install` + `cap sync` 필요**, 로그인 시 RevenueCat `logIn(계정 id)`, 로그아웃 시 `logOut`. 문구 43개 × 14개 언어.
+  **사람이 할 일(설정 전엔 카드가 안 보임):** ①Google Cloud: OAuth 동의 화면 + "웹 애플리케이션" 클라이언트 ID → Vercel `GOOGLE_WEB_CLIENT_ID`, "Android" 클라이언트 ID를 패키지 `com.yourname.englishchat` + SHA-1마다
+  (Play 앱 서명 키·업로드 키·디버그 키) ②Resend 가입·도메인 인증 → `RESEND_API_KEY`, `AUTH_EMAIL_FROM` ③Vercel `CRON_SECRET`(긴 임의 값) ④Play 데이터 보안 양식(계정·이메일·이름·사진, 삭제 방법).
+  남은 것: 기기 확인(Google 실제 로그인, 두 기기 이어짐, RevenueCat 구독 따라감), 두 번째 기기의 로그인 전 기록 합치기(안 함 — 필요하면 결정), 웹에서 Google 로그인(지금은 앱만),
+  로그아웃 후 첫 화면 안내, 말하는 방 입장을 로그인 사용자로 한정할지(지금은 입장 코드).
 - **말하는 방 시험판 (2026-10-18, `hub/drafts/voice-room-workspace.md`):** 사용자 요청 "간단하게 만들어 보기, 로그인 한정". 서버(바로 반영) `/api/rooms`(입장 코드 필수,
   목록·만들기·들어가기·묻기 1.5초·신호·자막 줄·나가기), `server/roomStore.ts`(KV, 방 6시간·사람 30초·신호함), 받아쓰기 `room:true`(학습자 기록 안 남김, 미터 `roomListen`).
   앱(다음 빌드): "?" 길게 누르기 → 입장 코드(기본 `LB2026`, Vercel `ROOM_INVITE_CODES`로 바꿈) → 방, 상단 🎙 버튼, WebRTC 메시(STUN만), 발화 감지(1.2초 조용하면 한 줄) → 받아쓰기 → 자막,

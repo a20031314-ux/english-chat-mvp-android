@@ -1,3 +1,9 @@
 {
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':(exclude)hub' ':(exclude).claude' ':(exclude)AGENTS.md' ':(exclude)CLAUDE.md'"
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':(exclude)hub' ':(exclude).claude' ':(exclude)AGENTS.md' ':(exclude)CLAUDE.md'",
+  "crons": [
+    {
+      "path": "/api/account/purge",
+      "schedule": "17 18 * * 0"
+    }
+  ]
 }

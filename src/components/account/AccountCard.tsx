@@ -1,0 +1,553 @@
+"use client";
+
+import { useEffect, useRef, useState, useSyncExternalStore } from "react";
+import type { UICopy } from "@/lib/copy";
+import { BodyLayer } from "@/components/FullScreenLayer";
+import { readCachedAccount, readAuthToken, subscribeSession } from "@/lib/account/session";
+import {
+  AccountRequestError,
+  deleteAccount,
+  fetchAuthConfig,
+  googleLogin,
+  logout,
+  refreshAccount,
+  saveProfile,
+  startEmailLogin,
+  verifyEmailLogin,
+  type AccountError,
+} from "@/lib/account/client";
+import {
+  BIO_MAX,
+  EMAIL_CODE_LENGTH,
+  NICKNAME_MAX,
+  PHOTO_MAX_BYTES,
+  cleanBio,
+  cleanNickname,
+  normalizeEmail,
+  visibleLength,
+  type AuthConfig,
+  type PublicAccount,
+} from "@/lib/account/shared";
+
+/**
+ * 프로필 탭 맨 위의 계정 카드.
+ *
+ * 로그인하지 않았으면 왜 로그인하면 좋은지 한 줄과 버튼, 했으면 사진·닉네임·
+ * 자기소개. 누르면 시트: 로그인(Google / 이메일 코드) 또는 프로필 편집.
+ * 로그인은 선택이다 — 하지 않아도 앱은 지금처럼 쓴다.
+ */
+
+function useAccount(): PublicAccount | null {
+  return useSyncExternalStore(subscribeSession, readCachedAccount, () => null);
+}
+
+function errorText(ui: UICopy, code: AccountError | null): string | null {
+  switch (code) {
+    case null:
+    case "GOOGLE_CANCELLED":
+      return null;
+    case "INVALID_EMAIL":
+      return ui.accountErrorEmail;
+    case "RATE_LIMITED":
+    case "TOO_MANY_TRIES":
+      return ui.accountErrorRate;
+    case "SEND_FAILED":
+      return ui.accountErrorSend;
+    case "WRONG_CODE":
+      return ui.accountErrorCode;
+    case "CODE_EXPIRED":
+      return ui.accountErrorExpired;
+    case "GOOGLE_FAILED":
+      return ui.accountErrorGoogle;
+    case "PHOTO_INVALID":
+      return ui.accountErrorPhoto;
+    default:
+      return ui.accountErrorNetwork;
+  }
+}
+
+function codeOf(error: unknown): AccountError {
+  return error instanceof AccountRequestError ? error.code : "NETWORK";
+}
+
+function Avatar({ account, size }: { account: PublicAccount | null; size: number }) {
+  const photo = account?.profile.photo;
+  const letter = Array.from(account?.profile.nickname || account?.email || "?")[0]?.toUpperCase() ?? "?";
+  return photo ? (
+    // eslint-disable-next-line @next/next/no-img-element
+    <img
+      src={photo}
+      alt=""
+      width={size}
+      height={size}
+      className="shrink-0 rounded-full border border-white/15 object-cover"
+      style={{ width: size, height: size }}
+    />
+  ) : (
+    <span
+      aria-hidden
+      className="flex shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] font-semibold text-slate-200"
+      style={{ width: size, height: size, fontSize: size * 0.4 }}
+    >
+      {account ? letter : (
+        <svg viewBox="0 0 20 20" width={size * 0.5} height={size * 0.5} fill="none" stroke="currentColor" strokeWidth="1.5">
+          <circle cx="10" cy="7" r="3.2" />
+          <path d="M3.5 17c1.2-3 3.7-4.5 6.5-4.5s5.3 1.5 6.5 4.5" strokeLinecap="round" />
+        </svg>
+      )}
+    </span>
+  );
+}
+
+export function AccountCard({ ui, locale }: { ui: UICopy; locale: string }) {
+  const account = useAccount();
+  const [open, setOpen] = useState(false);
+  const [config, setConfig] = useState<AuthConfig | null>(null);
+
+  useEffect(() => {
+    void fetchAuthConfig().then(setConfig);
+    if (readAuthToken()) void refreshAccount();
+  }, []);
+
+  const canSignIn = Boolean(config && (config.googleClientId || config.email));
+  // 로그인 방식이 하나도 켜지지 않았으면(서버 설정 전) 카드를 숨긴다.
+  if (!account && !canSignIn) return null;
+
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen(true)}
+        className="flex w-full items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-3.5 py-3 text-start hover:bg-white/[0.06]"
+      >
+        <Avatar account={account} size={44} />
+        <span className="min-w-0 flex-1">
+          {account ? (
+            <>
+              <span dir="auto" className="block truncate text-[15px] font-semibold text-white">
+                {account.profile.nickname || ui.accountNoNickname}
+              </span>
+              <span dir="auto" className="mt-0.5 line-clamp-2 block whitespace-pre-line text-[12px] leading-relaxed text-slate-400">
+                {account.profile.bio || ui.accountNoBio}
+              </span>
+            </>
+          ) : (
+            <>
+              <span className="block text-[14px] font-semibold text-white">{ui.accountSignInTitle}</span>
+              <span className="mt-0.5 block text-[12px] leading-relaxed text-slate-400">{ui.accountSignInBody}</span>
+            </>
+          )}
+        </span>
+        <span className="shrink-0 rounded-lg border border-white/15 px-2.5 py-1.5 text-[12px] text-slate-200">
+          {account ? ui.accountEdit : ui.accountSignIn}
+        </span>
+      </button>
+      {open ? (
+        <BodyLayer>
+          <div
+            className="fixed inset-0 z-[85] flex items-end justify-center bg-black/60 p-3 sm:items-center"
+            onClick={() => setOpen(false)}
+          >
+            <div
+              role="dialog"
+              aria-modal="true"
+              aria-label={account ? ui.accountProfileTitle : ui.accountLoginTitle}
+              className="flex max-h-[88%] w-full max-w-md flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#121212] shadow-2xl"
+              onClick={(event) => event.stopPropagation()}
+            >
+              {account ? (
+                <ProfileEditor ui={ui} account={account} onClose={() => setOpen(false)} />
+              ) : (
+                <LoginPanel ui={ui} locale={locale} config={config} onClose={() => setOpen(false)} />
+              )}
+            </div>
+          </div>
+        </BodyLayer>
+      ) : null}
+    </>
+  );
+}
+
+function SheetHeader({ title, onClose, closeLabel, action }: {
+  title: string;
+  onClose: () => void;
+  closeLabel: string;
+  action?: React.ReactNode;
+}) {
+  return (
+    <div className="flex shrink-0 items-center gap-2 border-b border-white/10 px-3 py-2">
+      <button
+        type="button"
+        onClick={onClose}
+        className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-slate-200 hover:bg-white/10"
+      >
+        {closeLabel}
+      </button>
+      <h2 className="min-w-0 flex-1 truncate text-center text-sm font-semibold text-white">{title}</h2>
+      {action ?? <span className="w-[3.25rem]" />}
+    </div>
+  );
+}
+
+const inputClass =
+  "w-full rounded-lg border border-white/15 bg-[#0a0a0a] px-3 py-2.5 text-[14px] text-slate-100 outline-none placeholder:text-slate-600 focus:border-white/30";
+const primaryClass =
+  "w-full rounded-lg bg-[#e8e8e4] px-3 py-2.5 text-[14px] font-medium text-neutral-900 hover:bg-white disabled:opacity-50";
+
+function LoginPanel({ ui, locale, config, onClose }: {
+  ui: UICopy;
+  locale: string;
+  config: AuthConfig | null;
+  onClose: () => void;
+}) {
+  const [email, setEmail] = useState("");
+  const [sentTo, setSentTo] = useState<string | null>(null);
+  const [code, setCode] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState<AccountError | null>(null);
+  const codeRef = useRef<HTMLInputElement>(null);
+
+  const run = async (task: () => Promise<void>) => {
+    setBusy(true);
+    setError(null);
+    try {
+      await task();
+    } catch (caught) {
+      setError(codeOf(caught));
+      setBusy(false);
+    }
+  };
+
+  const send = (address: string) =>
+    run(async () => {
+      const clean = normalizeEmail(address);
+      if (!clean) throw new AccountRequestError("INVALID_EMAIL");
+      await startEmailLogin(clean, locale);
+      setSentTo(clean);
+      setCode("");
+      setBusy(false);
+      setTimeout(() => codeRef.current?.focus(), 50);
+    });
+
+  const message = errorText(ui, error);
+  const nothing = config && !config.googleClientId && !config.email;
+
+  return (
+    <>
+      <SheetHeader title={ui.accountLoginTitle} onClose={onClose} closeLabel={ui.accountClose} />
+      <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
+        <p className="text-[12px] leading-relaxed text-slate-400">{ui.accountLoginHint}</p>
+        {nothing ? <p className="mt-4 text-[13px] text-amber-200">{ui.accountUnavailable}</p> : null}
+
+        {config?.googleClientId && !sentTo ? (
+          <button
+            type="button"
+            disabled={busy}
+            onClick={() => void run(() => googleLogin(config.googleClientId!))}
+            className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg border border-white/20 bg-white px-3 py-2.5 text-[14px] font-medium text-neutral-900 disabled:opacity-50"
+          >
+            <svg viewBox="0 0 18 18" width="18" height="18" aria-hidden>
+              <path fill="#4285F4" d="M17.6 9.2c0-.6-.1-1.2-.2-1.7H9v3.3h4.8a4.1 4.1 0 0 1-1.8 2.7v2.2h2.9c1.7-1.6 2.7-3.9 2.7-6.5Z" />
+              <path fill="#34A853" d="M9 18c2.4 0 4.5-.8 6-2.2l-2.9-2.2c-.8.5-1.8.9-3.1.9-2.4 0-4.4-1.6-5.1-3.8H.9v2.3A9 9 0 0 0 9 18Z" />
+              <path fill="#FBBC05" d="M3.9 10.7a5.4 5.4 0 0 1 0-3.4V5H.9a9 9 0 0 0 0 8l3-2.3Z" />
+              <path fill="#EA4335" d="M9 3.6c1.3 0 2.5.5 3.5 1.4L15 2.4A9 9 0 0 0 .9 5l3 2.3C4.6 5.2 6.6 3.6 9 3.6Z" />
+            </svg>
+            {ui.accountGoogle}
+          </button>
+        ) : null}
+
+        {config?.googleClientId && config.email && !sentTo ? (
+          <div className="my-4 flex items-center gap-3 text-[11px] text-slate-500">
+            <span className="h-px flex-1 bg-white/10" />
+            {ui.accountOr}
+            <span className="h-px flex-1 bg-white/10" />
+          </div>
+        ) : null}
+
+        {config?.email && !sentTo ? (
+          <form
+            className={config.googleClientId ? "" : "mt-4"}
+            onSubmit={(event) => {
+              event.preventDefault();
+              void send(email);
+            }}
+          >
+            <input
+              type="email"
+              inputMode="email"
+              autoComplete="email"
+              dir="ltr"
+              value={email}
+              onChange={(event) => setEmail(event.target.value)}
+              placeholder={ui.accountEmailPlaceholder}
+              className={inputClass}
+            />
+            <button type="submit" disabled={busy || !email.trim()} className={`${primaryClass} mt-2`}>
+              {busy ? ui.accountWorking : ui.accountEmailSend}
+            </button>
+          </form>
+        ) : null}
+
+        {sentTo ? (
+          <form
+            className="mt-4"
+            onSubmit={(event) => {
+              event.preventDefault();
+              void run(() => verifyEmailLogin(sentTo, code));
+            }}
+          >
+            <p className="text-[13px] leading-relaxed text-slate-200">
+              {ui.accountCodeSent.split("{email}")[0]}
+              <bdi dir="ltr" className="font-medium text-white">{sentTo}</bdi>
+              {ui.accountCodeSent.split("{email}")[1] ?? ""}
+            </p>
+            <input
+              ref={codeRef}
+              inputMode="numeric"
+              autoComplete="one-time-code"
+              dir="ltr"
+              maxLength={EMAIL_CODE_LENGTH}
+              value={code}
+              onChange={(event) => setCode(event.target.value.replace(/\D/g, ""))}
+              placeholder={ui.accountCodePlaceholder}
+              className={`${inputClass} mt-3 text-center text-[18px] tracking-[0.4em]`}
+            />
+            <button type="submit" disabled={busy || code.length !== EMAIL_CODE_LENGTH} className={`${primaryClass} mt-2`}>
+              {busy ? ui.accountWorking : ui.accountCodeConfirm}
+            </button>
+            <div className="mt-3 flex justify-between text-[12px]">
+              <button type="button" disabled={busy} onClick={() => setSentTo(null)} className="text-slate-400 underline underline-offset-4">
+                {ui.accountChangeEmail}
+              </button>
+              <button type="button" disabled={busy} onClick={() => void send(sentTo)} className="text-slate-400 underline underline-offset-4">
+                {ui.accountCodeResend}
+              </button>
+            </div>
+          </form>
+        ) : null}
+
+        {message ? <p className="mt-3 text-[12px] text-rose-300">{message}</p> : null}
+      </div>
+    </>
+  );
+}
+
+/** 256px 정사각형 JPEG로 줄인다 — 가운데를 잘라서. */
+async function shrinkPhoto(file: File): Promise<string | null> {
+  const url = URL.createObjectURL(file);
+  try {
+    const image = await new Promise<HTMLImageElement>((resolve, reject) => {
+      const element = new Image();
+      element.onload = () => resolve(element);
+      element.onerror = reject;
+      element.src = url;
+    });
+    const side = Math.min(image.naturalWidth, image.naturalHeight);
+    if (!side) return null;
+    const canvas = document.createElement("canvas");
+    canvas.width = 256;
+    canvas.height = 256;
+    const context = canvas.getContext("2d");
+    if (!context) return null;
+    context.drawImage(
+      image,
+      (image.naturalWidth - side) / 2,
+      (image.naturalHeight - side) / 2,
+      side,
+      side,
+      0,
+      0,
+      256,
+      256,
+    );
+    for (const quality of [0.85, 0.7, 0.55, 0.4]) {
+      const out = canvas.toDataURL("image/jpeg", quality);
+      if (Math.floor(((out.length - out.indexOf(",") - 1) * 3) / 4) <= PHOTO_MAX_BYTES) return out;
+    }
+    return null;
+  } catch {
+    return null;
+  } finally {
+    URL.revokeObjectURL(url);
+  }
+}
+
+function ProfileEditor({ ui, account, onClose }: { ui: UICopy; account: PublicAccount; onClose: () => void }) {
+  const [nickname, setNickname] = useState(account.profile.nickname);
+  const [bio, setBio] = useState(account.profile.bio);
+  // undefined = 그대로, null = 빼기, 글자 = 새 사진
+  const [photo, setPhoto] = useState<string | null | undefined>(undefined);
+  const [busy, setBusy] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const [error, setError] = useState<AccountError | null>(null);
+  const [confirm, setConfirm] = useState<"logout" | "delete" | null>(null);
+  const fileRef = useRef<HTMLInputElement>(null);
+
+  const shownPhoto = photo === undefined ? account.profile.photo : photo;
+  const preview: PublicAccount = { ...account, profile: { ...account.profile, nickname, photo: shownPhoto } };
+  const changed =
+    photo !== undefined || cleanNickname(nickname) !== account.profile.nickname || cleanBio(bio) !== account.profile.bio;
+
+  const save = async () => {
+    setBusy(true);
+    setError(null);
+    try {
+      await saveProfile({ nickname, bio, ...(photo === undefined ? {} : { photo }) });
+      setPhoto(undefined);
+      setSaved(true);
+      setTimeout(() => setSaved(false), 2000);
+    } catch (caught) {
+      setError(codeOf(caught));
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const finish = async (what: "logout" | "delete") => {
+    setBusy(true);
+    setError(null);
+    try {
+      if (what === "logout") await logout();
+      else await deleteAccount();
+    } catch (caught) {
+      setError(codeOf(caught));
+      setBusy(false);
+    }
+  };
+
+  const signedIn = account.email ?? (account.google ? "Google" : "");
+  const message = errorText(ui, error);
+
+  return (
+    <>
+      <SheetHeader
+        title={ui.accountProfileTitle}
+        onClose={onClose}
+        closeLabel={ui.accountClose}
+        action={
+          <button
+            type="button"
+            onClick={() => void save()}
+            disabled={busy || !changed}
+            className="rounded-lg bg-[#e8e8e4] px-3 py-1.5 text-xs font-medium text-neutral-900 hover:bg-white disabled:opacity-50"
+          >
+            {saved ? ui.accountSaved : ui.accountSave}
+          </button>
+        }
+      />
+      <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
+        <div className="flex items-center gap-4">
+          <Avatar account={preview} size={72} />
+          <div className="flex flex-col items-start gap-2">
+            <button
+              type="button"
+              onClick={() => fileRef.current?.click()}
+              className="rounded-full border border-white/15 px-3 py-1 text-[12px] text-slate-200 hover:bg-white/10"
+            >
+              {ui.accountPhotoChange}
+            </button>
+            {shownPhoto ? (
+              <button
+                type="button"
+                onClick={() => setPhoto(null)}
+                className="rounded-full border border-white/15 px-3 py-1 text-[12px] text-slate-400 hover:bg-white/10"
+              >
+                {ui.accountPhotoRemove}
+              </button>
+            ) : null}
+            <input
+              ref={fileRef}
+              type="file"
+              accept="image/*"
+              className="hidden"
+              onChange={async (event) => {
+                const file = event.target.files?.[0];
+                event.target.value = "";
+                if (!file) return;
+                const shrunk = await shrinkPhoto(file);
+                if (shrunk) setPhoto(shrunk);
+                else setError("PHOTO_INVALID");
+              }}
+            />
+          </div>
+        </div>
+
+        <label className="mt-5 block">
+          <span className="flex justify-between text-[12px] text-slate-400">
+            {ui.accountNickname}
+            <span dir="ltr" className="tabular-nums text-slate-600">{visibleLength(nickname)}/{NICKNAME_MAX}</span>
+          </span>
+          <input
+            dir="auto"
+            value={nickname}
+            onChange={(event) => setNickname(event.target.value)}
+            className={`${inputClass} mt-1.5`}
+          />
+        </label>
+
+        <label className="mt-4 block">
+          <span className="flex justify-between text-[12px] text-slate-400">
+            {ui.accountBio}
+            <span dir="ltr" className="tabular-nums text-slate-600">{visibleLength(bio)}/{BIO_MAX}</span>
+          </span>
+          <textarea
+            dir="auto"
+            rows={4}
+            value={bio}
+            onChange={(event) => setBio(event.target.value)}
+            placeholder={ui.accountBioPlaceholder}
+            className={`${inputClass} mt-1.5 resize-none leading-relaxed`}
+          />
+        </label>
+
+        {message ? <p className="mt-3 text-[12px] text-rose-300">{message}</p> : null}
+
+        <div className="mt-6 border-t border-white/10 pt-4">
+          {signedIn ? (
+            <p className="text-[12px] text-slate-500">
+              {ui.accountSignedInAs.split("{email}")[0]}
+              <bdi dir="ltr">{signedIn}</bdi>
+              {ui.accountSignedInAs.split("{email}")[1] ?? ""}
+            </p>
+          ) : null}
+          {confirm ? (
+            <div className="mt-3 rounded-xl border border-white/10 bg-white/[0.03] p-3">
+              <p className="text-[13px] leading-relaxed text-slate-200">
+                {confirm === "logout" ? ui.accountLogoutConfirm : ui.accountDeleteConfirm}
+              </p>
+              <div className="mt-3 flex gap-2">
+                <button
+                  type="button"
+                  disabled={busy}
+                  onClick={() => setConfirm(null)}
+                  className="flex-1 rounded-lg border border-white/15 px-3 py-2 text-[13px] text-slate-200"
+                >
+                  {ui.accountCancel}
+                </button>
+                <button
+                  type="button"
+                  disabled={busy}
+                  onClick={() => void finish(confirm)}
+                  className={`flex-1 rounded-lg px-3 py-2 text-[13px] font-medium ${
+                    confirm === "delete" ? "bg-rose-500/90 text-white" : "bg-[#e8e8e4] text-neutral-900"
+                  } disabled:opacity-50`}
+                >
+                  {busy ? ui.accountWorking : confirm === "delete" ? ui.accountDeleteYes : ui.accountLogout}
+                </button>
+              </div>
+            </div>
+          ) : (
+            <div className="mt-3 flex gap-4 text-[13px]">
+              <button type="button" onClick={() => setConfirm("logout")} className="text-slate-300 underline underline-offset-4">
+                {ui.accountLogout}
+              </button>
+              <button type="button" onClick={() => setConfirm("delete")} className="text-rose-300/80 underline underline-offset-4">
+                {ui.accountDelete}
+              </button>
+            </div>
+          )}
+        </div>
+      </div>
+    </>
+  );
+}

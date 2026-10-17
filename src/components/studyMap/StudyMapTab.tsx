@@ -38,6 +38,7 @@ import { NextStepCard } from "@/components/NextStepCard";
 import { GrowthNetwork } from "@/components/studyMap/GrowthNetwork";
 import { FOCUS_IDS, GAP_IDS, USE_IDS, type FocusId, type GapId, type UseId } from "@/lib/learner/selfCheck";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
+import { AccountCard } from "@/components/account/AccountCard";
 
 /**
  * 학습 지도: a learner's goal drawn as topics in four sectors, in an order,
@@ -217,6 +218,9 @@ export function StudyMapTab({
           goal's map folded underneath for whoever wants it. A learner with no
           map starts from the ticks, with nothing empty above them. */}
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
+        <div className="mx-auto mb-4 max-w-2xl">
+          <AccountCard ui={ui} locale={locale} />
+        </div>
         {loading ? (
           <p className="text-sm text-slate-400">{ui.mapLoading}</p>
         ) : showForm ? (

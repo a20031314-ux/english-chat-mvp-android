@@ -22,8 +22,8 @@ export const metadata: Metadata = {
  * LEARNER_TEXT_STORE is on, and it is off.
  */
 
-const LAST_UPDATED_EN = "October 8, 2026";
-const LAST_UPDATED_KO = "2026년 10월 8일";
+const LAST_UPDATED_EN = "October 18, 2026";
+const LAST_UPDATED_KO = "2026년 10월 18일";
 
 type Section = { title: string; body: string[] };
 
@@ -47,6 +47,7 @@ const en: Section[] = [
       "• Study maps. The goal you write and the level you choose are sent to our AI provider to draw a study map; the map, the goal and which topics you mark as started or done are kept on our server, linked to the anonymous app identifier, so the map is there when you come back.",
       "• Reports you send about AI-generated content, including any note you add.",
       "• An anonymous app identifier, created by our billing provider for your installation, and usage counts tied to it — for example how many chat messages you sent today, how many points or call minutes you have used, and which app version you are on. These are used for free limits, points and premium access.",
+      "• An account, only if you choose to sign in (signing in is optional). With Google sign-in we receive your Google account ID, email address and name from Google; with email sign-in, your email address, to which we send a one-time code. You may add a nickname, a profile photo and a short self-introduction. Once you sign in, the records above that were linked to this installation's anonymous app identifier are linked to your account instead, so they follow you to another device.",
       "• Purchase and subscription status, handled through Google Play Billing and RevenueCat. We never receive your full payment card details.",
       "• Basic technical information needed to run the service securely, such as IP address, device and platform type, and request times, recorded in server logs.",
     ],
@@ -88,7 +89,8 @@ const en: Section[] = [
       "• OpenAI (United States) — generating replies, corrections and explanations; transcribing speech; generating speech; translation.",
       "• Vercel (United States) — hosting the app's web pages and server, including server logs.",
       "• Upstash (via Vercel) — storing usage counts, points and the conversation records described above.",
-      "• RevenueCat (United States) — subscription and purchase status.",
+      "• RevenueCat (United States) — subscription and purchase status (and your account ID, if you sign in, so a subscription follows your account).",
+      "• Resend (United States) — sending the one-time sign-in code to your email address.",
       "• Google — Google Play Billing for purchases; YouTube and Google APIs for playing videos, reading captions and searching videos and channels.",
       "• Brave Search — web search when finding learning content.",
       "Under its API terms, OpenAI does not use data sent through its API to train its models by default, and may keep it for a limited period to monitor for abuse.",
@@ -104,13 +106,14 @@ const en: Section[] = [
       "• Information about conversations that does not contain your words (such as response time, length and recognition confidence): up to 14 months.",
       "• Daily and monthly usage counts: up to about 70 days. Free trial usage and purchased points: for as long as they are needed to provide what you were given or bought.",
       "• Server logs: for a limited period set by our hosting provider.",
+      "• Account (email address, Google account ID, nickname, photo and self-introduction): until you delete the account. When you delete it in the app (Profile → Edit → Delete account), the account and profile are deleted at once and the learning records linked to it within 30 days.",
       "• Information on your device: until you delete it.",
     ],
   },
   {
     title: "Your Choices and Rights",
     body: [
-      "You can ask us to access, correct or delete information about you, or to stop keeping conversation records, by emailing us. Because languagebank has no accounts, we may ask for details that help us find your records, such as a purchase receipt or when you used the app.",
+      "You can ask us to access, correct or delete information about you, or to stop keeping conversation records, by emailing us. If you have not signed in, we may ask for details that help us find your records, such as a purchase receipt or when you used the app. If you have signed in, you can also delete your account and its records yourself in the app.",
       "You can stop using the microphone at any time by ending the call or turning off microphone permission in your device settings.",
       "Depending on where you live, you may have further rights under local law, including the right to object to processing and to complain to a data protection authority.",
     ],
@@ -160,6 +163,7 @@ const ko: Section[] = [
       "• 학습 지도: 이용자가 적은 학습 목표와 고른 수준은 학습 지도를 만들기 위해 AI 제공자에게 전송됩니다. 만들어진 지도, 목표, 시작하거나 완료로 표시한 주제는 다시 열었을 때 이어서 볼 수 있도록 익명 앱 식별자에 연결해 서버에 보관합니다.",
       "• AI 생성 내용에 대한 신고와, 신고 시 함께 적은 메모.",
       "• 익명 앱 식별자(결제 제공자가 설치마다 만드는 식별값)와 이에 연결된 이용 횟수: 예를 들어 오늘 보낸 채팅 수, 사용한 포인트와 통화 시간, 앱 버전. 무료 이용 한도, 포인트, 프리미엄 이용에 사용합니다.",
+      "• 계정(로그인을 선택한 경우에만, 로그인은 선택 사항): Google 로그인은 Google로부터 Google 계정 ID, 이메일 주소, 이름을 받고, 이메일 로그인은 일회용 코드를 보낼 이메일 주소를 받습니다. 이용자가 닉네임, 프로필 사진, 자기소개를 추가할 수 있습니다. 로그인하면 이 설치의 익명 앱 식별자에 연결돼 있던 위 기록이 계정에 연결되어 다른 기기에서도 이어집니다.",
       "• 구독·구매 상태: Google Play 결제와 RevenueCat을 통해 처리되며, 카드 번호 등 결제 정보 전체는 받지 않습니다.",
       "• 서비스를 안전하게 운영하는 데 필요한 기본 기술 정보: IP 주소, 기기·플랫폼 종류, 요청 시각 등이 서버 로그에 기록됩니다.",
     ],
@@ -201,7 +205,8 @@ const ko: Section[] = [
       "• OpenAI (미국): 채팅·통화·영상 내용, 통화 음성(글자 변환용), 분석 요청 문장 / 답변·교정·설명 생성, 음성 인식, 음성 합성, 번역 / 처리 후 OpenAI 정책에 따라 남용 감시를 위해 제한된 기간 보관",
       "• Vercel (미국): 요청 내용과 서버 로그 / 앱 웹페이지와 서버 호스팅 / 호스팅 제공자가 정한 기간",
       "• Upstash (Vercel을 통해 이용): 익명 앱 식별자, 이용 횟수, 포인트, “보관하는 대화 내용”의 기록과 대화 정보 / 데이터 저장 / 이 방침의 보관 기간",
-      "• RevenueCat (미국): 익명 앱 식별자, 구독·구매 상태 / 결제 상태 확인 / 구독 관리에 필요한 기간",
+      "• RevenueCat (미국): 익명 앱 식별자(로그인한 경우 계정 ID), 구독·구매 상태 / 결제 상태 확인, 구독을 계정에 연결 / 구독 관리에 필요한 기간",
+      "• Resend (미국): 이메일 주소 / 로그인 일회용 코드 메일 발송 / 발송에 필요한 기간",
       "• Google (미국): 구매 정보, 영상 ID, 검색어 / Google Play 결제, YouTube 영상 재생·자막·검색 / 각 서비스 정책에 따름",
       "• Brave Search (미국): 검색어 / 학습 콘텐츠 검색 / 각 서비스 정책에 따름",
       "OpenAI는 API 약관에 따라 API로 전송된 데이터를 기본적으로 모델 학습에 사용하지 않습니다.",
@@ -218,13 +223,14 @@ const ko: Section[] = [
       "• 발화 내용이 포함되지 않은 대화 정보(답하기까지 걸린 시간, 발화 길이, 인식 신뢰도 등): 최대 14개월",
       "• 일별·월별 이용 횟수: 약 70일 이내. 무료 체험 사용량과 구매한 포인트: 제공하거나 구매한 내용을 이행하는 데 필요한 기간",
       "• 서버 로그: 호스팅 제공자가 정한 제한된 기간",
+      "• 계정(이메일 주소, Google 계정 ID, 닉네임, 사진, 자기소개): 계정을 삭제할 때까지. 앱에서 삭제하면(프로필 → 편집 → 계정 삭제) 계정과 프로필은 바로, 계정에 연결된 학습 기록은 30일 안에 삭제",
       "• 기기에 저장된 정보: 이용자가 삭제할 때까지",
     ],
   },
   {
     title: "이용자의 선택과 권리",
     body: [
-      "이메일로 자신의 정보에 대한 열람, 정정, 삭제, 처리 정지(대화 기록 보관 중단 포함)를 요청할 수 있습니다. 서비스에 계정이 없으므로, 기록을 찾기 위해 구매 영수증이나 이용 시점 같은 정보를 요청할 수 있습니다.",
+      "이메일로 자신의 정보에 대한 열람, 정정, 삭제, 처리 정지(대화 기록 보관 중단 포함)를 요청할 수 있습니다. 로그인하지 않은 경우 기록을 찾기 위해 구매 영수증이나 이용 시점 같은 정보를 요청할 수 있습니다. 로그인한 경우 앱에서 직접 계정과 기록을 삭제할 수도 있습니다.",
       "통화를 끝내거나 기기 설정에서 마이크 권한을 끄면 언제든지 마이크 사용을 멈출 수 있습니다.",
       "개인정보 침해에 관한 상담이나 신고는 개인정보침해신고센터(privacy.kisa.or.kr, 국번없이 118) 등에 할 수 있습니다.",
     ],

@@ -8,6 +8,8 @@ import {
   type SubscriptionOption,
 } from "@revenuecat/purchases-capacitor";
 import { apiUrl } from "@/lib/apiBase";
+import { readAuthToken } from "@/lib/account/session";
+import { AUTH_TOKEN_HEADER } from "@/lib/account/shared";
 import { APP_VERSION_HEADER, appVersion } from "@/lib/appVersion";
 import { POINT_BUNDLES } from "@/lib/billing/cost";
 import {
@@ -247,6 +249,9 @@ export function entitlementHeaders(isPremium?: boolean): Record<string, string> 
   // So daily allowances reset at the learner's midnight, not the server's.
   if (typeof Date !== "undefined") headers[TZ_OFFSET_HEADER] = String(-new Date().getTimezoneOffset());
   if (cachedAppUserId) headers[REVENUECAT_USER_HEADER] = cachedAppUserId;
+  // 로그인했으면 서버가 계정에 묶인 기록으로 센다(server/premiumRequest.ts).
+  const authToken = readAuthToken();
+  if (authToken) headers[AUTH_TOKEN_HEADER] = authToken;
   // Every caller that talks to the API comes through here, so the build says
   // which one it is exactly once rather than at each fetch.
   const version = appVersion();
@@ -309,6 +314,45 @@ async function ensureConfigured(onStep?: BillingStepListener): Promise<boolean> 
     console.error("[billing] configure failed", error);
     configurePromise = null;
     return false;
+  }
+}
+
+/**
+ * 로그인하면 RevenueCat도 계정 id로 로그인한다. 이 기기의 익명 사용자가 산 구독·
+ * 포인트는 RevenueCat이 계정으로 옮기고, 다른 기기에서 같은 계정으로 로그인하면
+ * 같은 구독이 보인다. 실패해도 로그인 자체는 그대로 둔다(익명 id로 계속 셈).
+ */
+export async function linkBillingAccount(accountId: string): Promise<void> {
+  if (!(await ensureConfigured())) return;
+  const plugin = getPurchasesPlugin();
+  if (!plugin) return;
+  try {
+    const { customerInfo } = await withBillingTimeout(
+      "logIn",
+      plugin.logIn({ appUserID: accountId }),
+      BILLING_CONFIGURE_TIMEOUT_MS,
+    );
+    rememberCustomerInfo(customerInfo);
+    const { appUserID } = await plugin.getAppUserID();
+    cachedAppUserId = appUserID?.trim() || cachedAppUserId;
+  } catch (error) {
+    console.warn("[billing] RevenueCat logIn failed", error);
+  }
+}
+
+/** 로그아웃·계정 삭제 뒤: RevenueCat을 새 익명 사용자로. 다시 로그인하면 구독이 돌아온다. */
+export async function unlinkBillingAccount(): Promise<void> {
+  if (!(await ensureConfigured())) return;
+  const plugin = getPurchasesPlugin();
+  if (!plugin) return;
+  try {
+    const { customerInfo } = await withBillingTimeout("logOut", plugin.logOut(), BILLING_CONFIGURE_TIMEOUT_MS);
+    rememberCustomerInfo(customerInfo);
+    const { appUserID } = await plugin.getAppUserID();
+    cachedAppUserId = appUserID?.trim() || null;
+  } catch (error) {
+    // 이미 익명이면 RevenueCat이 오류를 낸다 — 그대로 두면 된다.
+    console.warn("[billing] RevenueCat logOut failed", error);
   }
 }
 

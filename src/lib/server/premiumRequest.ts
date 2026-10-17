@@ -1,4 +1,6 @@
 import { SHARED_ANONYMOUS_ID } from "./identity.ts";
+import { verifyAuthToken, type AuthClaims } from "./authToken.ts";
+import { AUTH_TOKEN_HEADER } from "@/lib/account/shared";
 import type { NextRequest } from "next/server";
 import {
   PREMIUM_CLIENT_HEADER,
@@ -55,6 +57,15 @@ export function revenueCatUserId(request: NextRequest): string | null {
   return value;
 }
 
+/**
+ * 로그인한 사람이면 그 계정의 기록이 묶인 id. 기기마다 RevenueCat id가 달라도
+ * 같은 계정이면 같은 기록을 읽게 하는 자리 — 사용량·지도·표현 장부가 전부
+ * 이 id로 키를 잡는다(server/accountStore.ts가 첫 로그인 때 정함).
+ */
+export function requestAuth(request: NextRequest): AuthClaims | null {
+  return verifyAuthToken(request.headers.get(AUTH_TOKEN_HEADER)?.trim());
+}
+
 /** Falls back to a client-set cookie, which is only as stable as the install. */
 function cookieUserId(request: NextRequest): string {
   return request.cookies.get("ec_uid")?.value ?? SHARED_ANONYMOUS_ID;
@@ -69,6 +80,8 @@ function cookieUserId(request: NextRequest): string {
  * front of every word lookup to learn something the counter never reads.
  */
 export function requestUserId(request: NextRequest): string {
+  const auth = requestAuth(request);
+  if (auth) return auth.dataUserId;
   const appUserId = revenueCatUserId(request);
   return appUserId ? `rc:${appUserId}` : cookieUserId(request);
 }
@@ -84,14 +97,17 @@ export async function resolveRequestEntitlement(
   request: NextRequest,
 ): Promise<RequestEntitlement> {
   const appUserId = revenueCatUserId(request);
+  // 구독은 RevenueCat id로 묻고(로그인하면 앱이 계정 id로 RevenueCat에 로그인함),
+  // 기록은 계정에 묶인 id로 센다.
+  const userId = requestUserId(request);
 
   if (appUserId && revenueCatConfigured()) {
     const plan = await planInRevenueCat(appUserId);
-    if (plan !== null) return withTier(`rc:${appUserId}`, plan, true);
+    if (plan !== null) return withTier(userId, plan, true);
     // RevenueCat could not be reached. Keep the id for counting, but fall
     // through to the claim rather than locking a subscriber out mid-outage.
-    return withTier(`rc:${appUserId}`, claimedTier(request), false);
+    return withTier(userId, claimedTier(request), false);
   }
 
-  return withTier(appUserId ? `rc:${appUserId}` : cookieUserId(request), claimedTier(request), false);
+  return withTier(userId, claimedTier(request), false);
 }

@@ -2,6 +2,7 @@
 
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
+import { readCachedAccount } from "@/lib/account/session";
 import type { LineKind, PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, RoomSummary, SignalKind } from "./protocol";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 
@@ -32,7 +33,8 @@ export function roomsUnlocked(): boolean {
 
 export function readNickname(): string {
   try {
-    return localStorage.getItem(NICK_KEY) ?? "";
+    // 방에서 정한 이름이 없으면 프로필 닉네임으로.
+    return localStorage.getItem(NICK_KEY) ?? readCachedAccount()?.profile.nickname ?? "";
   } catch {
     return "";
   }
