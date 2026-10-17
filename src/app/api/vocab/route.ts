@@ -7,8 +7,8 @@ import {
   coerceLanguageCode,
   isInterfaceLanguage,
   learningLanguageName,
-  learningLanguageScript,
 } from "@/lib/learningLanguages";
+import { inLearningScript } from "@/lib/vocabScript";
 import { interfaceLanguageDisplayName } from "@/lib/languageLearningAnalysis";
 import { assembleVocabLookup, normalizeVocabHeadword } from "@/lib/vocabulary";
 
@@ -28,34 +28,6 @@ function normalizeResults(raw: unknown): VocabLookupLike[] {
     out.push(assembled);
   }
   return out.slice(0, 8);
-}
-
-const SCRIPT_LETTERS: Record<string, RegExp> = {
-  latin: /\p{Script=Latin}/u,
-  hangul: /\p{Script=Hangul}/u,
-  japanese: /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u,
-  hanzi: /\p{Script=Han}/u,
-  cyrillic: /\p{Script=Cyrillic}/u,
-  arabic: /\p{Script=Arabic}/u,
-  thai: /\p{Script=Thai}/u,
-  devanagari: /\p{Script=Devanagari}/u,
-};
-
-/**
- * A headword has to be written in the learning language's script. Searching
- * "累" while learning Indonesian with the app in Chinese came back as "累"
- * itself every time (sim-users 2026-10-18): the model read the query as the
- * word to explain. Such results are dropped, and if nothing is left the
- * lookup is asked once more with the query's language spelled out.
- */
-function inLearningScript(word: string, targetLanguage: string): boolean {
-  const letters = SCRIPT_LETTERS[learningLanguageScript(targetLanguage)];
-  if (!letters) return true;
-  // Another script anywhere in the headword means it is not the learning language's.
-  const others = Object.entries(SCRIPT_LETTERS)
-    .filter(([name]) => name !== learningLanguageScript(targetLanguage) && !(learningLanguageScript(targetLanguage) === "japanese" && name === "hanzi"))
-    .some(([, re]) => re.test(word));
-  return letters.test(word) && !others;
 }
 
 export async function OPTIONS(request: NextRequest) {
