@@ -122,7 +122,49 @@ const GUIDE_VOCAB_ITEMS = [
   { shot: "vocab-hide" },
   { shot: "vocab-characters" },
 ];
-const note = GUIDE_CHAT
+// `store-my` and `store-tabs`: full-screen pictures of every tab's details for
+// the Play listing, saved uncropped as PNG to tmp/store-raw/<locale>/ and framed
+// with headlines by store-shots/compose-tabs.mjs. Two runs because a free test
+// user has ten chat lines a day: store-my (My, map, missions, weak spots,
+// growth; eight lines) and store-tabs (chat details, links, pick, call, video,
+// vocabulary; three lines). Run each with its own CAPTURE_RUN.
+const STORE_MY = VERSION === "store-my";
+const STORE_TABS = VERSION === "store-tabs";
+const STORE = STORE_MY || STORE_TABS;
+const STORE_MY_ITEMS = [
+  // The map, missions and weak spots sit in My's map view; growth in the network
+  // view. The mission step draws the map when there is none yet.
+  { shot: "view-map", save: false },
+  { shot: "mission" },
+  { shot: "progress" },
+  { shot: "ledger" },
+  { shot: "weak" },
+  { shot: "view-net", save: false },
+  { shot: "growth" },
+  { shot: "element" },
+  { shot: "myask" },
+  { shot: "mapview" },
+];
+const STORE_TABS_ITEMS = [
+  { shot: "chat-correct" },
+  { shot: "chat-expression" },
+  { shot: "chat-ask" },
+  { shot: "chat-word" },
+  { shot: "ledger", save: false },
+  { shot: "links" },
+  { shot: "pick" },
+  { shot: "meant" },
+  { shot: "calltools" },
+  { shot: "video-study" },
+  { shot: "video-bar", save: false },
+  { shot: "video-ask" },
+  { shot: "vocab-search" },
+];
+const note = STORE_MY
+  ? { version: "store", items: STORE_MY_ITEMS }
+  : STORE_TABS
+  ? { version: "store", items: STORE_TABS_ITEMS }
+  : GUIDE_CHAT
   ? { version: "guide", items: GUIDE_CHAT_ITEMS }
   : GUIDE_VOCAB
   ? { version: "guide", items: GUIDE_VOCAB_ITEMS }
@@ -322,6 +364,12 @@ const exactly = (text) => new RegExp(`^${escape(text)}$`);
  * release that needs a new picture adds a step here.
  */
 const STEPS = {
+  async "view-map"({ page }) {
+    await page.evaluate(() => localStorage.setItem("myViewMode", "map"));
+  },
+  async "view-net"({ page }) {
+    await page.evaluate(() => localStorage.setItem("myViewMode", "net"));
+  },
   async "chat-correct"({ page, ui, wait, target }) {
     await page.goto(`${BASE}/?screen=chat`, { waitUntil: "networkidle" });
     await wait(1500);
@@ -527,9 +575,14 @@ const STEPS = {
   },
   async "video-bar"({ page, wait }) {
     // Continues from video-study: the bar beside the subtitle on the card.
-    const translated = page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 30000 }).catch(() => undefined);
-    await page.locator("button.w-1").first().click();
-    await translated;
+    // The first bar on the page is not always the card's; try each until the sheet opens.
+    const bars = page.locator("button.w-1");
+    const n = await bars.count();
+    for (let i = 0; i < n && !(await page.locator("[role=dialog] [role=slider]").count()); i++) {
+      await bars.nth(i).click({ force: true }).catch(() => undefined);
+      for (let t = 0; t < 10 && !(await page.locator("[role=dialog] [role=slider]").count()); t++) await wait(500);
+    }
+    await page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 15000 }).catch(() => undefined);
     await wait(2000);
   },
   async "video-ask"({ page, ui, wait }) {
@@ -745,6 +798,13 @@ const STEPS = {
 
 /** Without the header and the tab bar, which say nothing about the change. */
 async function save(png, locale, shot) {
+  if (STORE) {
+    // The whole screen, tab bar included: the store frame shows the app as it is.
+    const dir = path.join(ROOT, "tmp", "store-raw", locale);
+    fs.mkdirSync(dir, { recursive: true });
+    fs.writeFileSync(path.join(dir, `${shot}.png`), png);
+    return;
+  }
   const dir = GUIDE
     ? path.join(ROOT, "public", "guide", locale)
     : path.join(ROOT, "public", "whats-new", VERSION, locale);
@@ -765,7 +825,8 @@ const day = new Date().toISOString().slice(0, 10).replace(/-/g, "");
 let failed = 0;
 for (const locale of only ?? Object.keys(copy)) {
   const ui = copy[locale];
-  const context = await browser.newContext({ viewport: { width: 412, height: 860 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
+  // The store frame expects a 20:9 phone (store-shots/frame.html).
+  const context = await browser.newContext({ viewport: { width: 412, height: STORE ? 915 : 860 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
   const page = await context.newPage();
   await page.route("**/api/**", (route) =>
     route.continue({ headers: { ...route.request().headers(), "x-rc-user": `${process.env.CAPTURE_USER || `whats-new-capture-${day}${process.env.CAPTURE_RUN ? `-${process.env.CAPTURE_RUN}` : ""}`}-${locale}` } }),

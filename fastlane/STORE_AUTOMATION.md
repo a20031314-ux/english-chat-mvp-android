@@ -92,6 +92,11 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
 비용도 들지 않고 매번 같은 대화가 찍힙니다. 버튼이나 화면 구성이 바뀌면 다음
 캡처에 그대로 반영됩니다.
 
+- **탭별 세부 기능 세트 (실제 운영 서버로)**: My(자라는 중·요소·직접 묻기·지도)·지도(할 일·세 상태·자주 틀림)·내 표현·채팅(교정·표현 카드·빠른 질문·단어·탭 연결·지도에 넣기)·
+  통화(되살리기·다시 말해보기)·영상(구간·질문)·단어장 19장면 × 6개 등록정보. 고정 응답이 아니라 운영 API로 실제 입력을 돌린다(언어당 채팅 11번·지도 2장 정도 비용).
+  `npm run build:capacitor` 뒤 `CAPTURE_RUN=<새 이름> node --experimental-strip-types scripts/capture-whats-new.mjs store-my --only en,ko,ja,zh,es,hi`와 같은 명령의 `store-tabs`
+  (무료 테스트 사용자 하루 채팅 10번이라 둘로 나눔) → `tmp/store-raw/` → `node store-shots/tabs/compose.mjs` → `store-shots/out/tabs/<등록정보>/upload-8`(올릴 8장)·`all`(19장).
+  헤드라인은 `store-shots/tabs/strings.mjs`, 긴 제목은 두 줄에 맞게 글자를 줄인다.
 - **화면이 바뀔 때마다 (업로드 없이)**: "Store: screenshot preview"가 main에 화면 코드가 바뀔 때마다 돌아,
   앱 캡처 + 디자인 세트를 `store-shots/package.mjs`로 등록정보별 폴더(`0_default-english`, `1_korea` … `5_india`,
   올릴 순서대로 1~8번)에 묶고, 지난 실행과 비교해 바뀐 화면의 전/후 이미지(`compare/`)와 목록(`CHANGES.md`,
