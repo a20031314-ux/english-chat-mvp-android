@@ -40,11 +40,22 @@ export type Opener = PackLine & {
 };
 
 export type PackBank = {
+  /**
+   * Said before the first of a run of quick questions, so "Coffee or tea?"
+   * after "How's your day going?" is heard as a game starting rather than a
+   * reply that missed what was said (seen on a phone, 2026-10-18).
+   */
+  quickLead: PackLine;
   openers: Opener[];
   follows: Record<Exclude<Frame, "quick">, PackLine[]>;
 };
 
 const EN: PackBank = {
+  quickLead: {
+    id: "lead.quick",
+    text: "Okay, a few quick ones — just say the first thing that comes to mind.",
+    translation: "좋아요, 빠른 질문 몇 개요. 처음 떠오르는 대로 말해 봐요.",
+  },
   openers: [
     // Words do not come out quickly: answered in a word or two.
     { id: "q.coffee", gap: "speaking", frame: "quick", text: "Coffee or tea?", translation: "커피예요, 차예요?" },
@@ -117,6 +128,11 @@ const EN: PackBank = {
 };
 
 const JA: PackBank = {
+  quickLead: {
+    id: "lead.quick",
+    text: "じゃあ、ぱっと答える質問をいくつか。最初に浮かんだことを言ってみて。",
+    translation: "그럼 바로 답하는 질문 몇 개. 처음 떠오른 걸 말해 봐.",
+  },
   openers: [
     { id: "q.coffee", gap: "speaking", frame: "quick", text: "コーヒー派？紅茶派？", translation: "커피파? 홍차파?" },
     { id: "q.morning", gap: "speaking", frame: "quick", text: "朝型？夜型？", translation: "아침형? 저녁형?" },

@@ -228,6 +228,40 @@ export function phraseScore(phrase: string, heard: string): number {
   return overlap;
 }
 
+/**
+ * Like phraseScore, all or nothing, for a phrasing whose words must come in
+ * order and close together (Branch.inOrder). A few words may sit between them
+ * ("I really have to go"), but a turn that only shares the words scores 0.
+ * Where words are not separated, or the phrase is one word, the run and the
+ * exact word that phraseScore looks for are already in order.
+ */
+export function orderedPhraseScore(phrase: string, heard: string): number {
+  const wanted = normalize(phrase);
+  if (wanted.length <= 1 || WRITTEN_WITHOUT_SPACES.test(phrase)) {
+    return phraseScore(phrase, heard) >= 1 ? 1 : 0;
+  }
+  const words = normalize(heard);
+  if (words.join(" ").includes(wanted.join(" "))) return 1;
+  // Korean puts its endings on the word: "가볼게" is in "가볼게요".
+  const same = (word: string, want: string) =>
+    word === want || (/\p{Script=Hangul}/u.test(want) && word.startsWith(want));
+  const slack = 2;
+  for (let start = 0; start < words.length; start += 1) {
+    if (!same(words[start]!, wanted[0]!)) continue;
+    let at = start;
+    let found = 1;
+    for (let i = start + 1; i < words.length && found < wanted.length; i += 1) {
+      if (i - start >= wanted.length + slack) break;
+      if (same(words[i]!, wanted[found]!)) {
+        found += 1;
+        at = i;
+      }
+    }
+    if (found === wanted.length && at - start < wanted.length + slack) return 1;
+  }
+  return 0;
+}
+
 /** The best-scoring branch, and whether it clears the current strictness. */
 export function judge(
   node: LearnerNode,
@@ -241,7 +275,7 @@ export function judge(
   // already answered is not offered again, or it could be asked forever.
   for (const branch of liveBranches(node, visited)) {
     for (const phrase of branch.match) {
-      const score = phraseScore(phrase, heard);
+      const score = branch.inOrder ? orderedPhraseScore(phrase, heard) : phraseScore(phrase, heard);
       if (!best || score > best.score) best = { go: branch.go, score };
     }
   }

@@ -244,3 +244,27 @@ test("an extra pack is named by its day and number, and only by those", async ()
   const { parsePracticeGoal } = await import("../learner/practice.ts");
   assert.equal(parsePracticeGoal({ pack: "2026-10-16.2" })?.pack, "2026-10-16.2");
 });
+
+test("a run of quick questions starts with a line that says so, in its language, and only the first", async () => {
+  for (const language of ["en", "ja"]) {
+    const pack = compose({ language, centre: "speaking" });
+    assert.equal(pack.items[0]!.frame, "quick");
+    const first = candidates(pack);
+    assert.equal(first[0]!.lead?.text, packBankFor(language)!.quickLead.text);
+    const second = candidates({ ...pack, cursor: 1 });
+    assert.equal(second[0]!.lead, undefined);
+  }
+  // A pack that does not open on quick questions has no lead-in.
+  const past = compose({ centre: "accuracy", side: "words" });
+  assert.equal(candidates(past)[0]!.lead, undefined);
+  // Spoken before the question it leads into.
+  const pack = compose({ language: "en", centre: "speaking" });
+  const [pick] = candidates(pack);
+  const { direction } = shapePackDirection(
+    { assessment: "on_track", say: { text: "I'm doing well, thanks!" }, note: "", next: { free: true } } as never,
+    pick!,
+    { complete: false, language: "en", nativeLanguage: "ko", bank: {}, canSplit: true, nodeId: "talk" },
+  );
+  assert.ok("text" in direction.say && direction.say.text.startsWith("Okay, a few quick ones"));
+  assert.ok("text" in direction.say && direction.say.text.endsWith(pick!.text));
+});

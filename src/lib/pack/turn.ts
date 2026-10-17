@@ -87,7 +87,10 @@ export function shapePackDirection(
     : raw
       ? { text: raw }
       : null;
-  const question = { text: chosen.text, ...(gloss ? { translation: chosen.translation } : {}) };
+  const question = {
+    text: chosen.lead ? `${chosen.lead.text} ${chosen.text}` : chosen.text,
+    ...(gloss ? { translation: chosen.lead ? `${chosen.lead.translation} ${chosen.translation}` : chosen.translation } : {}),
+  };
   // A question was picked, so the conversation goes on whatever else came back.
   const next = "end" in direction.next ? { step: input.nodeId } : direction.next;
   if (input.canSplit) {

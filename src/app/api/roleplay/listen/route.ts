@@ -80,7 +80,7 @@ export async function POST(request: NextRequest) {
     // there yesterday" — and a mistake it fixes is one the tutor never sees,
     // so it can neither correct it nor work out what was meant (director.ts).
     prompt:
-      "A language learner speaking one short turn in a casual conversation. Write exactly what they say, mistakes included: wrong verb forms, missing words, words from another language. Do not correct it.",
+      "A language learner speaking one short turn in a casual conversation. Write exactly what they say, mistakes included: wrong verb forms, missing words, words from another language. Do not correct it. If nobody speaks, or there is only noise, write nothing.",
   };
 
   try {

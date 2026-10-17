@@ -486,7 +486,7 @@ export function justTalkScenarios(): RoleplayScenario[] {
         // belongs with the rest of it, where fourteen languages already live.
         // Written in here it reached every learner in Korean (copy.ts).
         goal: "",
-        expect: [{ match: entry.leaving, go: "bye" }],
+        expect: [{ match: entry.leaving, go: "bye", inOrder: true }],
       },
       bye: { type: "tutor", id: "bye", say: JUST_TALK_BYE, next: null },
     },

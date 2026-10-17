@@ -638,3 +638,20 @@ test("a reaction in the bank's words is said first, and the tip stays with the r
   assert.equal(next.instruction.text, "For here, or to go?");
   assert.equal(next.instruction.tip, "For here / To go");
 });
+
+test("leaving counts only with its words in order: a sentence that shares them does not end the talk", async () => {
+  const { orderedPhraseScore } = await import("./session.ts");
+  // Seen on a phone: this ended a daily pack at its first question.
+  assert.equal(orderedPhraseScore("i have to go", "I have go to the store yesterday."), 0);
+  assert.equal(orderedPhraseScore("i have to go", "Sorry, I have to go now."), 1);
+  assert.equal(orderedPhraseScore("i have to go", "I really have to go."), 1);
+  assert.equal(orderedPhraseScore("goodbye", "Goodbye!"), 1);
+  assert.equal(orderedPhraseScore("goodbye", "I said good bye to him"), 0);
+  // Spanish, Korean endings, and a script without spaces.
+  assert.equal(orderedPhraseScore("me tengo que ir", "Bueno, me tengo que ir ya."), 1);
+  assert.equal(orderedPhraseScore("me tengo que ir", "Que tengo me ir"), 0);
+  assert.equal(orderedPhraseScore("이제 가볼게", "이제 가볼게요"), 1);
+  assert.equal(orderedPhraseScore("이제 가볼게", "나 이제 진짜 가볼게요"), 1);
+  assert.equal(orderedPhraseScore("そろそろ行くね", "じゃあ、そろそろ行くね"), 1);
+  assert.equal(orderedPhraseScore("我该走了", "我该走了，再见"), 1);
+});

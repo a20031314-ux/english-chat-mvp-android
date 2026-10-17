@@ -60,6 +60,13 @@ export type Branch = {
   /** Phrasings that count. Matching is the pipeline's business. */
   match: string[];
   go: string;
+  /**
+   * Count a phrasing only when its words come in its order, close together —
+   * not when they merely all turn up somewhere in the turn. For a branch that
+   * ends the conversation: "I have go to the store" holds every word of "I
+   * have to go", and once ended a scene on that (seen on a phone, 2026-10-18).
+   */
+  inOrder?: boolean;
 };
 
 export type LearnerNode = {

@@ -286,7 +286,15 @@ export function composePack(input: ComposeInput): Pack | null {
   };
 }
 
-export type Candidate = { slot: number; index: number; text: string; translation: string; free?: string };
+export type Candidate = {
+  slot: number;
+  index: number;
+  text: string;
+  translation: string;
+  free?: string;
+  /** Said just before the question: the lead-in to a run of quick ones (questions.ts quickLead). */
+  lead?: { text: string; translation: string };
+};
 
 /**
  * What the tutor may ask next, best first: the planned question, another
@@ -297,8 +305,18 @@ export function candidates(pack: Pack): Candidate[] {
   const item = pack.items[pack.cursor];
   if (!item) return [];
   const out: Candidate[] = [];
-  const add = (index: number, text: string, translation: string, free?: string) =>
-    out.push({ slot: out.length + 1, index, text, translation, ...(free ? { free } : {}) });
+  const quickLead = packBankFor(pack.language)?.quickLead;
+  // The first of a run of quick questions comes with the line that says a run is starting.
+  const leadFor = (index: number) => {
+    const at = pack.items[index];
+    if (!at || !quickLead || at.frame !== "quick" || at.block !== index) return null;
+    const run = pack.items.filter((other) => other.block === at.block).length;
+    return run > 1 ? { text: quickLead.text, translation: quickLead.translation } : null;
+  };
+  const add = (index: number, text: string, translation: string, free?: string) => {
+    const lead = leadFor(index);
+    out.push({ slot: out.length + 1, index, text, translation, ...(free ? { free } : {}), ...(lead ? { lead } : {}) });
+  };
   add(pack.cursor, item.text, item.translation, item.id === "free" ? item.invite : undefined);
   if (item.alt) add(pack.cursor, item.alt.text, item.alt.translation);
   const nextBlock = pack.items.findIndex((other, i) => i > pack.cursor && other.block !== item.block);

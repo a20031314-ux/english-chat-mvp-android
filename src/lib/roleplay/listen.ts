@@ -153,7 +153,12 @@ function analysisContext(): AudioContext {
 }
 
 
-type VoiceWatch = { stop: () => void; speechStartedAt: () => number | null };
+type VoiceWatch = {
+  stop: () => void;
+  speechStartedAt: () => number | null;
+  /** The whole wait for a first word passed with nothing loud enough to be one. */
+  heardNothing: () => boolean;
+};
 
 function watchForVoice(
   stream: MediaStream,
@@ -171,13 +176,14 @@ function watchForVoice(
   } catch {
     // No analysis available — the caller still has its own control, and a turn
     // that cannot be detected is better than a turn that cannot be spoken.
-    return { stop: () => undefined, speechStartedAt: () => null };
+    return { stop: () => undefined, speechStartedAt: () => null, heardNothing: () => false };
   }
 
   const samples = new Float32Array(analyser.fftSize);
   const startedAt = Date.now();
   let turn = TURN_NOT_STARTED;
   let done = false;
+  let silent = false;
 
   const finish = () => {
     if (done) return;
@@ -213,7 +219,10 @@ function watchForVoice(
       finish();
       return;
     }
-    if (!turn.spoke && now - startedAt >= noSpeechMs) finish();
+    if (!turn.spoke && now - startedAt >= noSpeechMs) {
+      silent = true;
+      finish();
+    }
   }, 60);
 
   return {
@@ -228,6 +237,7 @@ function watchForVoice(
       }
     },
     speechStartedAt: () => turn.firstSpeechAt,
+    heardNothing: () => silent,
   };
 }
 
@@ -277,6 +287,16 @@ export async function listenForTurn(input: {
             // Nothing worth sending: an empty answer reads as a miss, which is
             // what a turn nobody spoke in should be.
             if (blob.size < MIN_AUDIO_BYTES) {
+              resolve("");
+              return;
+            }
+            // Twelve seconds of nothing is not sent to be written down: a
+            // transcriber handed silence writes a sentence anyway, and told to
+            // keep learners' mistakes it wrote one with a mistake in it ("I
+            // have go to the store yesterday"), which went out as their turn.
+            // Only when the wait ran out — a turn they ended themselves is
+            // still sent, in case the meter missed a quiet voice.
+            if (watch.heardNothing()) {
               resolve("");
               return;
             }
