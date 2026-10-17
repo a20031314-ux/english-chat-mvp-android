@@ -7,6 +7,7 @@ import {
   coerceLanguageCode,
   isInterfaceLanguage,
   learningLanguageName,
+  learningLanguageScript,
 } from "@/lib/learningLanguages";
 import { interfaceLanguageDisplayName } from "@/lib/languageLearningAnalysis";
 import { assembleVocabLookup, normalizeVocabHeadword } from "@/lib/vocabulary";
@@ -27,6 +28,34 @@ function normalizeResults(raw: unknown): VocabLookupLike[] {
     out.push(assembled);
   }
   return out.slice(0, 8);
+}
+
+const SCRIPT_LETTERS: Record<string, RegExp> = {
+  latin: /\p{Script=Latin}/u,
+  hangul: /\p{Script=Hangul}/u,
+  japanese: /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u,
+  hanzi: /\p{Script=Han}/u,
+  cyrillic: /\p{Script=Cyrillic}/u,
+  arabic: /\p{Script=Arabic}/u,
+  thai: /\p{Script=Thai}/u,
+  devanagari: /\p{Script=Devanagari}/u,
+};
+
+/**
+ * A headword has to be written in the learning language's script. Searching
+ * "累" while learning Indonesian with the app in Chinese came back as "累"
+ * itself every time (sim-users 2026-10-18): the model read the query as the
+ * word to explain. Such results are dropped, and if nothing is left the
+ * lookup is asked once more with the query's language spelled out.
+ */
+function inLearningScript(word: string, targetLanguage: string): boolean {
+  const letters = SCRIPT_LETTERS[learningLanguageScript(targetLanguage)];
+  if (!letters) return true;
+  // Another script anywhere in the headword means it is not the learning language's.
+  const others = Object.entries(SCRIPT_LETTERS)
+    .filter(([name]) => name !== learningLanguageScript(targetLanguage) && !(learningLanguageScript(targetLanguage) === "japanese" && name === "hanzi"))
+    .some(([, re]) => re.test(word));
+  return letters.test(word) && !others;
 }
 
 export async function OPTIONS(request: NextRequest) {
@@ -71,7 +100,7 @@ export async function POST(request: NextRequest) {
   const englishOnlyHeadwords = targetLanguage === "en";
 
   void meterRequest(request, "vocabSearch");
-  try {
+  const lookup = async (retry: boolean) => {
     const completion = await client.chat.completions.create({
       model: chatModel(),
       messages: [
@@ -97,6 +126,9 @@ ${naturalTranslationPrinciples({
   sourceType: "unknown",
 })}
 
+- Never return their search text itself as a word unless it is also an ordinary ${targetName} word.${retry ? `
+- Their search is written in ${interfaceName}. Translate its meaning into ${targetName}; every word must be written in ${targetName}.` : ""}
+
 Respond with ONLY compact JSON:
 {"results":[{"word":"...","senses":[{"gloss":"...","partOfSpeech":"..."}],"example":"..."}]}`,
         },
@@ -105,14 +137,20 @@ Respond with ONLY compact JSON:
       response_format: { type: "json_object" },
       temperature: 0.3,
     });
-
     const raw = completion.choices[0]?.message?.content;
-    if (!raw) {
+    if (!raw) return null;
+    return normalizeResults(JSON.parse(raw) as unknown).filter((item) => inLearningScript(item.word, targetLanguage));
+  };
+  try {
+    let results = await lookup(false);
+    if (results === null) {
       return jsonWithCors(request, { error: "Empty model response" }, { status: 502 });
     }
-
-    const parsed = JSON.parse(raw) as unknown;
-    return jsonWithCors(request, { results: normalizeResults(parsed) });
+    if (results.length === 0) {
+      void meterRequest(request, "vocabSearch");
+      results = (await lookup(true)) ?? [];
+    }
+    return jsonWithCors(request, { results });
   } catch (error) {
     console.error("[vocab]", error);
     return jsonWithCors(request, { error: "VOCAB_LOOKUP_FAILED" }, { status: 500 });

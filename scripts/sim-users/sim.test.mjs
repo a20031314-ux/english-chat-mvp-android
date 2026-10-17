@@ -112,3 +112,46 @@ test("검출: 태국어 튜터가 มึง/วะ를 쓰면 오류", () => {
   const polite = detectTurn({ persona: th, turn: { kind: "own", text: "x" }, response: ok({ assistantMessage: "คำไหนเหรอคะ? บอกได้เลยนะ" }) });
   assert.ok(!polite.some((i) => i.kind === "rude_reply"));
 });
+
+// ── 기능 묶음 ──
+import { checkHttp, checkText, checkShape } from "./detect.mjs";
+import { SUITES, suiteById } from "./suites/index.mjs";
+import { elementNames } from "./suites/ask.mjs";
+
+test("묶음: id가 겹치지 않고 채팅이 맨 앞, 모두 run·every가 있다", () => {
+  const ids = SUITES.map((s) => s.id);
+  assert.equal(new Set(ids).size, ids.length);
+  assert.equal(ids[0], "chat");
+  for (const s of SUITES) {
+    assert.equal(typeof s.run, "function", s.id);
+    assert.ok(Number.isInteger(s.every) && s.every >= 1, s.id);
+  }
+  assert.equal(suiteById("map").id, "map");
+  assert.equal(suiteById("nope"), null);
+});
+
+test("공통 검사: 학습 언어·앱 언어 자리, 빈 값, 내부 글자", () => {
+  const p = { target: "th", ui: "es" };
+  assert.deepEqual(checkText("x", p, "ไปตลาดแล้วเจออะไรบ้าง?", { lang: "target" }), []);
+  assert.ok(checkText("x", p, "¿Qué compraste?", { lang: "target" }).some((i) => i.kind === "x_wrong_language"));
+  assert.deepEqual(checkText("x", p, "Saluda a alguien que acabas de conocer.", { lang: "ui" }), []);
+  assert.ok(checkText("x", p, "สวัสดีครับ", { lang: "ui" }).some((i) => i.kind === "x_wrong_language"));
+  assert.ok(checkText("x", p, "", { required: true })[0].kind === "x_empty");
+  assert.ok(checkText("x", p, "hola {ui:mapDraw}", {}).some((i) => i.kind === "x_leak"));
+});
+
+test("공통 검사: HTTP와 응답 형태", () => {
+  assert.deepEqual(checkHttp("x", { status: 200, ms: 100 }), []);
+  assert.equal(checkHttp("x", { status: 502, ms: 100, body: { error: "NO_DIRECTION" } })[0].kind, "x_http");
+  assert.equal(checkHttp("x", { status: 403, ms: 100, body: { error: "DAILY_LIMIT_REACHED" } })[0].severity, "info");
+  assert.equal(checkHttp("x", { status: 200, ms: 50_000 }, { slowWarnMs: 45_000, slowErrorMs: 85_000 })[0].severity, "warn");
+  assert.deepEqual(checkShape("x", { map: { id: "a", topics: [1] } }, ["map.id", "map.topics"]), []);
+  assert.ok(checkShape("x", { map: { topics: [] } }, ["map.id", "map.topics"])[0].note.includes("map.id"));
+});
+
+test("직접 묻기: 앱이 보내는 요소 이름을 14개 언어 모두 읽는다", () => {
+  for (const l of LANGUAGES) {
+    const names = elementNames(l);
+    assert.equal(Object.keys(names).length, 6, l);
+  }
+});

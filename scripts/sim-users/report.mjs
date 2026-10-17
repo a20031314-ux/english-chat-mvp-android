@@ -17,7 +17,19 @@ const KIND_LABEL = {
 };
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-const label = (kind) => KIND_LABEL[kind] ?? (kind.startsWith("judge_") ? `평가: ${kind.slice(6)}` : kind);
+const PREFIX_LABEL = { map: "지도", next: "오늘 해볼 것", ask: "직접 묻기", sheet: "분석·번역", call: "통화", rooms: "방", pack: "팩" };
+const SUFFIX_LABEL = {
+  network: "요청 실패", http: "HTTP 오류", slow: "느림", empty: "빈 값", leak: "내부 글자 노출", level_shown: "수준 표시",
+  wrong_language: "언어 틀림", mixed_script: "문자 섞임", shape: "응답 형태", limit: "한도", crash: "점검 코드 오류",
+  logic: "동작 이상", repeat: "같은 말 반복", english_name: "영어 이름 섞임",
+};
+const label = (kind) => {
+  if (KIND_LABEL[kind]) return KIND_LABEL[kind];
+  if (kind.startsWith("judge_")) return `평가: ${kind.slice(6)}`;
+  const m = kind.match(/^([a-z]+)_(.+)$/);
+  if (m && SUFFIX_LABEL[m[2]]) return `${PREFIX_LABEL[m[1]] ?? m[1]}: ${SUFFIX_LABEL[m[2]]}`;
+  return kind;
+};
 
 export function renderReport({ meta, records }) {
   const issues = records.flatMap((r) => r.issues.map((i) => ({ ...i, pid: r.persona.id, target: r.persona.target, ui: r.persona.ui })));
@@ -186,8 +198,8 @@ function badge(severity) {
 }
 
 const SUITE_LABEL = {
-  chat: "채팅·표현 카드", map: "지도·미션", next: "오늘 해볼 것·요약", ask: "직접 묻기·자라는 중", sheet: "번역·문장분석",
-  pack: "오늘의 팩·통화 턴", rooms: "말하는 방",
+  chat: "채팅·표현 카드", map: "지도·미션", next: "오늘 해볼 것·요약·자라는 중", ask: "직접 묻기", sheet: "번역·문장분석·단어장",
+  pack: "통화 턴·오늘의 팩", rooms: "말하는 방",
 };
 
 function suiteTable(records) {
