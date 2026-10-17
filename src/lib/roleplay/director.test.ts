@@ -1101,6 +1101,10 @@ test("a note with none of the target language in it is a translation, not a tip"
   // Same script on both sides: nothing to tell them apart by, so it stays.
   assert.equal(givesThemWords("Puedes decir «y además»", { targetLanguage: "es", nativeLanguage: "fr" }), true);
   assert.equal(givesThemWords("", enKo), false);
+  // A tip all in the learning language, under an app in another script, is not one they can read.
+  const esRu = { targetLanguage: "es", nativeLanguage: "ru" } as const;
+  assert.equal(givesThemWords("Puedes decir 'La película era sobre un problema muy grande' si quieres explicar más", esRu), false);
+  assert.equal(givesThemWords("Можно сказать «el problema es muy grande» — problema мужского рода", esRu), true);
 });
 
 test("a broken sentence comes back rebuilt as what they meant, never alongside a rewrite", () => {

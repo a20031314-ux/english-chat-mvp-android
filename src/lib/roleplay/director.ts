@@ -6,6 +6,7 @@ import {
 } from "../learningLanguages.ts";
 import { compareVersions } from "../appVersion.ts";
 import { languageEvidence } from "../inputLanguage.ts";
+import { explanationInLearningLanguage } from "../languageLearningAnalysis.ts";
 import { targetLanguageFocusHints } from "../languageFocus.ts";
 import { REPERTOIRE_SINCE } from "./justTalk.ts";
 import {
@@ -271,7 +272,11 @@ export function givesThemWords(
   if (learningLanguageScript(request.targetLanguage) === learningLanguageScript(request.nativeLanguage)) {
     return true;
   }
-  return languageEvidence(note, request.targetLanguage, request.nativeLanguage).learning > 0;
+  if (languageEvidence(note, request.targetLanguage, request.nativeLanguage).learning === 0) return false;
+  // And it is explained in their own language. A tip written wholly in the language
+  // being learned ("Puedes decir …" under a Russian app — sim-users 2026-10-18) is
+  // one they may not be able to read; better no tip than that one.
+  return !explanationInLearningLanguage(note, request.nativeLanguage, request.targetLanguage);
 }
 
 export function leadFromPartial(partial: string): string | null {

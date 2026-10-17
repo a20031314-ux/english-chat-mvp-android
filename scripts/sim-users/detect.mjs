@@ -54,6 +54,22 @@ const PROMPT_LEAK_RE = /(system prompt|my instructions|as an ai(?: language)? mo
 
 const KO_PARTICLE = /^(?:이|가|을|를|은|는|의|으?로(?:는|도|만)?|와|과|도|에(?:서|는|도)?|랑|이랑|처럼|보다|만|까지|부터|이?라고|이?라는|이?나|이?다|예요|이에요|요|하고|이?며|와는|과는|를요|은요|는요)$/u;
 
+/**
+ * 언어를 가릴 때 빼고 보는 것: 인용, 괄호 속 풀이(편한 말로 뜻을 붙이라고 지시함),
+ * 비라틴 학습 언어 글 속의 로마자 고유명사("我叫Marco").
+ */
+export function languageBody(text, target) {
+  let body = stripQuoted(text).replace(/\([^)]*\)|（[^）]*）/gu, " ");
+  if (learningLanguageScript(target) !== "latin") body = body.replace(/\b\p{Lu}[\p{Ll}]+\b/gu, " ");
+  return body;
+}
+
+/** 같은 라틴 문자끼리(es↔pt 등)는 짧은 글로 가릴 수 없다 — 네 낱말 이상일 때만. */
+export function longEnoughToTell(text, target, ui) {
+  if (learningLanguageScript(target) !== "latin" || learningLanguageScript(ui) !== "latin") return true;
+  return String(text).trim().split(/\s+/).filter(Boolean).length >= 4;
+}
+
 export function stripQuoted(text) {
   return String(text ?? "").replace(/(?<!\p{L})'[^']*'(?!\p{L})|"[^"]*"|‘[^’]*’|“[^”]*”|「[^」]*」|『[^』]*』|«[^»]*»/gu, " ");
 }
@@ -125,8 +141,8 @@ export function detectTurn({ persona, turn, response, previousReplies = [] }) {
   // 튜터 답은 학습 언어로 (앱 언어로 물어도 학습 언어로 이어간다 — STATE.md 결정).
   if (target !== ui) {
     // 따옴표 안(사용자 말 인용, 낱말 풀이)은 빼고 본다.
-    const ev = languageEvidence(stripQuoted(reply), target, ui);
-    if (ev.ui > ev.learning) out.push(issue("error", "reply_wrong_language", `답이 앱 언어(${ui})로 옴`, { sample: reply.slice(0, 80) }));
+    const ev = languageEvidence(languageBody(reply, target), target, ui);
+    if (longEnoughToTell(reply, target, ui) && ev.ui > ev.learning) out.push(issue("error", "reply_wrong_language", `답이 앱 언어(${ui})로 옴`, { sample: reply.slice(0, 80) }));
   }
   if (!hasScript(reply, target)) out.push(issue("error", "reply_wrong_language", `답에 ${target} 문자가 없음`, { sample: reply.slice(0, 80) }));
 
@@ -262,12 +278,12 @@ export function checkText(prefix, persona, text, { lang = null, label = "", requ
   if (lang === "target") {
     if (!hasScript(value, target)) out.push(issue("error", `${prefix}_wrong_language`, `${label}에 ${target} 문자가 없음`, { sample: value.slice(0, 80) }));
     else if (target !== ui) {
-      const ev = languageEvidence(stripQuoted(value), target, ui);
-      if (ev.ui > ev.learning) out.push(issue("error", `${prefix}_wrong_language`, `${label}이 앱 언어(${ui})로 옴`, { sample: value.slice(0, 80) }));
+      const ev = languageEvidence(languageBody(value, target), target, ui);
+      if (longEnoughToTell(value, target, ui) && ev.ui > ev.learning) out.push(issue("error", `${prefix}_wrong_language`, `${label}이 앱 언어(${ui})로 옴`, { sample: value.slice(0, 80) }));
     }
   } else if (lang === "ui" && target !== ui) {
     if (!hasScript(value, ui)) out.push(issue("error", `${prefix}_wrong_language`, `${label}에 앱 언어(${ui}) 문자가 없음`, { sample: value.slice(0, 80) }));
-    else if (explanationInLearningLanguage(value, ui, target)) out.push(issue("warn", `${prefix}_wrong_language`, `${label}이 앱 언어(${ui})가 아니라 학습 언어 위주`, { sample: value.slice(0, 80) }));
+    else if (longEnoughToTell(value, target, ui) && explanationInLearningLanguage(stripQuoted(value), ui, target)) out.push(issue("warn", `${prefix}_wrong_language`, `${label}이 앱 언어(${ui})가 아니라 학습 언어 위주`, { sample: value.slice(0, 80) }));
     const fused = fusedScriptTokens(value);
     if (fused.length > 0) out.push(issue("warn", `${prefix}_mixed_script`, `${label}에 문자가 뒤섞인 낱말: ${fused.slice(0, 3).join(", ")}`, { sample: value.slice(0, 80) }));
   }

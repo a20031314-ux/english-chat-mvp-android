@@ -155,3 +155,17 @@ test("직접 묻기: 앱이 보내는 요소 이름을 14개 언어 모두 읽�
     assert.equal(Object.keys(names).length, 6, l);
   }
 });
+
+test("언어 가리기: 괄호 풀이·로마자 이름·짧은 라틴 글은 오탐하지 않는다", () => {
+  const zhIt = { target: "zh", ui: "it" };
+  assert.deepEqual(checkText("x", zhIt, "我叫Marco。", { lang: "target" }), []);
+  const viFr = { target: "vi", ui: "fr" };
+  assert.deepEqual(checkText("x", viFr, "Chào anh", { lang: "target" }), []);
+  const arVi = { id: "t", target: "ar", ui: "vi", temperament: "steady" };
+  const own = detectTurn({ persona: arVi, turn: { kind: "own", text: "Từ đó nghĩa là gì?" }, response: { status: 200, ms: 1000, body: { assistantMessage: 'كلمة "كتاب" تعني الكتاب. (cái từ "كتاب" nghĩa là sách trong tiếng Ả Rập)' } } });
+  assert.ok(!own.some((i) => i.kind === "reply_wrong_language"));
+  // 진짜로 앱 언어로만 온 답은 여전히 잡는다
+  const idJa = { id: "t", target: "id", ui: "ja", temperament: "steady" };
+  const bad = detectTurn({ persona: idJa, turn: { kind: "own", text: "今の単語ってどういう意味？" }, response: { status: 200, ms: 1000, body: { assistantMessage: "単語の意味？それは「エネルギー」って意味だよ。何か他に知りたいことある？" } } });
+  assert.ok(bad.some((i) => i.kind === "reply_wrong_language"));
+});

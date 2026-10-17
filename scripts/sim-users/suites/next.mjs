@@ -42,7 +42,8 @@ export default {
     step({ title: "학습자 요약", status: brief.status, ms: brief.ms, outputs: [{ label: "줄", text: (brief.body?.notes ?? []).map((n) => n.kind).join(", ") || "(없음)" }], issues: bIssues });
 
     // 자라는 중 — 고칠 데 없이 맞게 쓴 줄이 있었으면 정확도가 0보다 커야(틀린 줄만으로는 안 큼)
-    const norm = (t) => String(t ?? "").toLowerCase().replace(/[\p{P}\p{S}\s]+/gu, "");
+    // 서버(chat/route.ts)와 같은 기준: 대소문자·띄어쓰기만 무시, 문장부호를 고치면 고친 것
+    const norm = (t) => String(t ?? "").replace(/\s+/g, " ").trim().toLowerCase();
     const practised = (shared.chatLines ?? []).filter((l) => l.corrected && norm(l.corrected) === norm(l.text)).length;
     let growth = null;
     let gIssues = [];

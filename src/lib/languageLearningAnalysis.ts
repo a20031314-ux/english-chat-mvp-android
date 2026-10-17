@@ -130,6 +130,9 @@ function stripQuotedLearnerForms(text: string): string {
   return text
     .replace(/[「『][^」』]{0,80}[」』]/g, " ")
     .replace(/["“”][^"“”]{0,80}["“”]/g, " ")
+    // Guillemets and low-high quotes, as Russian, French and German tips quote.
+    .replace(/[«‹][^»›]{0,80}[»›]/g, " ")
+    .replace(/„[^“”]{0,80}[“”]/g, " ")
     .replace(/['‘’][^'‘’]{0,80}['‘’]/g, " ")
     .replace(/`[^`]{0,80}`/g, " ")
     .replace(/\*\*[^*]{0,80}\*\*/g, " ");

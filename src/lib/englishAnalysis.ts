@@ -10,6 +10,7 @@ import type { SentenceSpanAnalysis } from "@/lib/salience/sentenceSpanPrompt";
 import type { AnalysisDimension } from "@/lib/salience/types";
 import { listWordSpans } from "@/lib/textTokens";
 import { speechLooksWrongLanguage } from "@/lib/videoSubtitle/languageMatch";
+import { exampleMixesInterfaceLanguage } from "@/lib/exampleLanguage";
 
 export const ENGLISH_ANALYSIS_LANGUAGES = ANALYSIS_LANGUAGES;
 
@@ -244,6 +245,7 @@ function asExamples(
   value: unknown,
   max = 2,
   targetLanguage?: string,
+  interfaceLanguage?: string,
 ): EnglishAnalysisExample[] {
   if (!Array.isArray(value)) return [];
   const out: EnglishAnalysisExample[] = [];
@@ -253,6 +255,7 @@ function asExamples(
     const english = asExampleSource(o);
     if (!english) continue;
     if (exampleSentenceMismatchesTarget(english, targetLanguage)) continue;
+    if (exampleMixesInterfaceLanguage(english, targetLanguage, interfaceLanguage)) continue;
     const translation = asLine(o.translation);
     const note = asLine(o.note);
     out.push({
@@ -367,6 +370,7 @@ export function mapSentenceSpanToEnglishElement(
     })),
     2,
     targetLanguage,
+    interfaceLanguage,
   );
   const dimensionResults = Object.keys(analysis.dimensionResults).length
     ? analysis.dimensionResults

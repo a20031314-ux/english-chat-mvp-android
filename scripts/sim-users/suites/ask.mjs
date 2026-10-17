@@ -24,7 +24,8 @@ function elementNames(locale) {
 }
 
 const ELEMENTS = ["speaking", "accuracy", "words", "listening", "pronunciation", "natural"];
-const ENGLISH_NAMES = /\b(speaking|accuracy|words|listening|pronunciation|naturalness|natural)\b/i;
+// "natural"·"words"는 포르투갈어·스페인어 등에서도 쓰는 낱말이라 뺀다.
+const ENGLISH_NAMES = /\b(speaking|accuracy|listening|pronunciation|naturalness)\b/i;
 
 export { elementNames };
 

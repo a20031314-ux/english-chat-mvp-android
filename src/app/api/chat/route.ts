@@ -25,6 +25,7 @@ import {
 } from "@/lib/server/entitlementStore";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { normalizeHowToSayExpression } from "@/lib/howToSay";
+import { inLearningScript } from "@/lib/vocabScript";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
   conversationKoreanParallel,
@@ -726,18 +727,33 @@ async function runHowToSayCard(
   langs: ChatLanguages,
   isPremium: boolean,
 ): Promise<Omit<ExpressionPayload, "assistantMessage" | "spokenReply" | "correction">> {
-  const completion = await openai.chat.completions.create({
-    model: chatModel(),
-    messages: [
-      { role: "system", content: buildHowToSaySystem(langs, isPremium) },
-      { role: "user", content: JSON.stringify({ wantToSay: message, recent }) },
-    ],
-    response_format: { type: "json_object" },
-    temperature: 0.75,
-  });
-  const raw = completion.choices[0]?.message?.content;
-  if (!raw) throw new Error("empty completion");
-  const expression = normalizeHowToSayExpression(message, JSON.parse(raw) as Partial<ExpressionPayload>);
+  const ask = async (insist: boolean) => {
+    const completion = await openai.chat.completions.create({
+      model: chatModel(),
+      messages: [
+        {
+          role: "system",
+          content:
+            buildHowToSaySystem(langs, isPremium) +
+            (insist
+              ? `\n\nThe expression and example must be written in ${learningLanguageName(langs.targetLanguage)} — not in the language they wrote in, and not in any other language.`
+              : ""),
+        },
+        { role: "user", content: JSON.stringify({ wantToSay: message, recent }) },
+      ],
+      response_format: { type: "json_object" },
+      temperature: 0.75,
+    });
+    const raw = completion.choices[0]?.message?.content;
+    if (!raw) throw new Error("empty completion");
+    return normalizeHowToSayExpression(message, JSON.parse(raw) as Partial<ExpressionPayload>);
+  };
+  // A card for Thai came back in Chinese once in a run of 196 learners (sim-users
+  // 2026-10-18): asked once more, saying which language, before it is shown.
+  let expression = await ask(false);
+  if (expression.expression && !inLearningScript(expression.expression, langs.targetLanguage)) {
+    expression = await ask(true);
+  }
   return {
     expression: expression.expression,
     example: expression.example || "",
