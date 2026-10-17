@@ -33,7 +33,9 @@
     "roleplay:bank": "node --experimental-strip-types scripts/bank-report.mjs",
     "test:rooms": "node --experimental-strip-types --test src/lib/rooms/protocol.test.ts src/lib/server/roomStore.test.ts",
     "test:billing": "node --experimental-strip-types --test src/lib/billing/plans.test.ts src/lib/appVersion.test.ts src/lib/billing/videoPrep.test.ts src/lib/billing/points.test.ts src/lib/billing/cost.test.ts src/lib/server/entitlementStore.test.ts src/lib/server/callHold.test.ts src/lib/server/creditPurchase.test.ts src/lib/server/kv.test.ts src/lib/server/learnerMetrics.test.ts src/lib/server/subtitleGlossStore.test.ts",
-    "learner:metrics": "node --experimental-strip-types scripts/learner-metrics.mjs"
+    "learner:metrics": "node --experimental-strip-types scripts/learner-metrics.mjs",
+    "sim:users": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/sim-users/run.mjs",
+    "test:sim": "node --experimental-strip-types --test scripts/sim-users/sim.test.mjs"
   },
   "dependencies": {
     "@capacitor-community/text-to-speech": "^8.0.2",
