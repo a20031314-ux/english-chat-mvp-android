@@ -92,7 +92,7 @@ export function explanationLanguageGuard(options: {
   const notLearningLine =
     learningName &&
     learningName.toLowerCase() !== interfaceName.toLowerCase()
-      ? `\n- Do not write the explanation in ${learningName}. Quote ${learningName} forms only.`
+      ? `\n- Do not write the explanation in ${learningName}. Quote ${learningName} forms only, each inside quotes; grammar terms (tense, particle names), connecting words and sentence endings are always in ${interfaceName}, never glued onto ${learningName} characters.`
       : "";
 
   if (options.interfaceLanguage === "ko") {

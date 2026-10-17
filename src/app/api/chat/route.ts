@@ -240,7 +240,8 @@ This turn is temporary tutor mode: they are stuck. You may briefly explain in ${
 conversationMode is native. Talk like a person on a messenger. Do not teach, quiz, or explain grammar unless they asked for help.`;
   const ownLanguageBlock = options.ownLanguage
     ? `
-This turn they wrote in ${explanationLanguage}, their own language, because they did not know how to say it in ${targetName}. Understand it and reply in ${targetName} as yourself, carrying the conversation on — as a friend who speaks both would. Do not translate their message back to them and do not teach. Correction does not apply to this turn: set corrected and natural to their message unchanged and explanation to "".`
+This turn they wrote in ${explanationLanguage}, their own language, because they did not know how to say it in ${targetName}. Understand it and reply in ${targetName} as yourself, carrying the conversation on — as a friend who speaks both would. Do not translate their message back to them and do not teach. Correction does not apply to this turn: set corrected and natural to their message unchanged and explanation to "".
+If it is a question to you — most often what a word or phrase YOU just used means (look at your last "other:" line in recent) — answer that question: name the word from your last line and explain it simply in ${targetName}, adding its meaning in ${explanationLanguage} in parentheses right after the word. Never answer by translating their question itself ("that word means 'what does that word mean'"), and never switch to English or any third language. If you cannot tell which word, ask which one, in ${targetName}.`
     : "";
   const imageBlock = options.imageDataUrl
     ? `
