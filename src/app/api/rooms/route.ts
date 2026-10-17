@@ -24,6 +24,9 @@ import {
   isSignalKind,
 } from "@/lib/rooms/protocol";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
+import { requestAuth } from "@/lib/server/premiumRequest";
+import { readAccount } from "@/lib/server/accountStore";
+import { blockedEitherWay, noteHelped, noteHosted, readBlocked, readFollowing } from "@/lib/server/socialStore";
 
 export const dynamic = "force-dynamic";
 
@@ -34,6 +37,9 @@ export const dynamic = "force-dynamic";
  *
  * 모든 요청에 입장 코드가 붙어야 한다. 앱 안의 숨은 입구로만 들어오는
  * 시험이라, 코드를 모르는 요청은 방이 있다는 것도 모르게 한다.
+ *
+ * 방을 만들거나 들어가려면 로그인해야 한다(2026-10-18). 이름·사진은 프로필에서
+ * 오고, 팔로우·차단·내보내기가 계정을 기준으로 걸린다(api/social).
  */
 export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
@@ -52,11 +58,29 @@ export async function POST(request: NextRequest) {
   if (!isInviteCode(body.code)) return bad(request, "BAD_CODE", 403);
 
   const action = body.action;
+  const auth = requestAuth(request);
   if (action === "unlock") return jsonWithCors(request, { ok: true });
-  if (action === "list") return jsonWithCors(request, { rooms: await listRooms() });
+  if (action === "list") {
+    const rooms = await listRooms();
+    if (!auth) return jsonWithCors(request, { rooms });
+    // 팔로우한 방장의 방은 위로, 서로 차단한 방장의 방은 안 보이게.
+    const [following, blocked] = await Promise.all([readFollowing(auth.accountId), readBlocked(auth.accountId)]);
+    const shown = rooms
+      .filter((room) => !room.hostAccountId || !blocked.includes(room.hostAccountId))
+      .map((room) => ({ ...room, followed: Boolean(room.hostAccountId && following.includes(room.hostAccountId)) }));
+    shown.sort((a, b) => Number(b.followed) - Number(a.followed));
+    return jsonWithCors(request, { rooms: shown });
+  }
 
   if (!isPeerId(body.peerId)) return bad(request, "BAD_PEER");
   const peerId = body.peerId;
+
+  // 만들기·들어가기는 로그인한 사람만. 이름은 프로필 닉네임(없으면 아이디).
+  const account = auth && (action === "create" || action === "join") ? await readAccount(auth.accountId) : null;
+  if ((action === "create" || action === "join") && !account) return bad(request, "SIGNED_OUT", 401);
+  const profileName = account
+    ? cleanText(account.profile.nickname || account.username || "", MAX_NICKNAME_CHARS)
+    : "";
 
   if (action === "create") {
     const name = cleanText(body.name, MAX_ROOM_NAME_CHARS);
@@ -64,7 +88,14 @@ export async function POST(request: NextRequest) {
     const languages = Array.isArray(body.languages)
       ? body.languages.filter((code): code is string => typeof code === "string" && isLearningLanguageCode(code))
       : [];
-    const meta = await createRoom({ name, languages, hostPeerId: peerId });
+    const meta = await createRoom({
+      name,
+      languages,
+      hostPeerId: peerId,
+      hostAccountId: account?.id ?? null,
+      hostNickname: profileName,
+    });
+    if (account) await noteHosted(account.id);
     return jsonWithCors(request, { room: meta });
   }
 
@@ -72,15 +103,26 @@ export async function POST(request: NextRequest) {
   const roomId = body.roomId;
 
   if (action === "join") {
-    const nickname = cleanText(body.nickname, MAX_NICKNAME_CHARS);
+    const nickname = profileName || cleanText(body.nickname, MAX_NICKNAME_CHARS);
     if (!nickname) return bad(request, "NO_NICKNAME");
+    const meta = await readMeta(roomId);
+    if (meta?.hostAccountId && account && (await blockedEitherWay(meta.hostAccountId, account.id))) {
+      return bad(request, "BANNED", 403);
+    }
+    const langs = Array.isArray(body.langs)
+      ? body.langs.filter((code): code is string => typeof code === "string" && isLearningLanguageCode(code))
+      : [];
     const result = await joinRoom({
       id: roomId,
       peerId,
       nickname,
       wantRole: body.role === "listener" ? "listener" : "speaker",
+      accountId: account?.id ?? null,
+      langs,
     });
-    if (!result.ok) return bad(request, result.error, result.error === "NO_ROOM" ? 404 : 409);
+    if (!result.ok) {
+      return bad(request, result.error, result.error === "NO_ROOM" ? 404 : result.error === "BANNED" ? 403 : 409);
+    }
     return jsonWithCors(request, { member: result.member, room: result.meta, now: Date.now() });
   }
 
@@ -94,6 +136,7 @@ export async function POST(request: NextRequest) {
       role: body.role === "listener" || body.role === "speaker" ? body.role : undefined,
       hand: typeof body.hand === "boolean" ? body.hand : undefined,
     });
+    if (result === "KICKED") return bad(request, "KICKED", 403);
     if (!result) return bad(request, "NOT_IN_ROOM", 404);
     return jsonWithCors(request, result);
   }
@@ -115,9 +158,13 @@ export async function POST(request: NextRequest) {
   }
 
   if (action === "grant") {
-    if (!isPeerId(body.target) || (body.role !== "speaker" && body.role !== "listener")) return bad(request, "BAD_GRANT");
-    const result = await grantRole({ id: roomId, hostPeerId: peerId, target: body.target, role: body.role });
-    return result === "ok" ? jsonWithCors(request, { ok: true }) : bad(request, result, result === "NOT_HOST" ? 403 : 409);
+    const role = body.role;
+    if (!isPeerId(body.target) || (role !== "speaker" && role !== "listener" && role !== "out")) return bad(request, "BAD_GRANT");
+    const result = await grantRole({ id: roomId, hostPeerId: peerId, target: body.target, role });
+    if (result !== "ok") return bad(request, result, result === "NOT_HOST" ? 403 : 409);
+    // 손든 사람을 올려 준 횟수 — 방장(튜터)이 도운 만큼의 첫 지표.
+    if (role === "speaker" && me.accountId) await noteHelped(me.accountId);
+    return jsonWithCors(request, { ok: true });
   }
 
   if (action === "line") {
@@ -132,6 +179,7 @@ export async function POST(request: NextRequest) {
     const line = await addLine(roomId, {
       kind,
       peerId,
+      accountId: me.accountId ?? null,
       nickname: me.nickname,
       text,
       startedAt,

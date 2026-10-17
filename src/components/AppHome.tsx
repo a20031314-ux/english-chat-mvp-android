@@ -227,6 +227,7 @@ function AppHomeInner({
             <UpdateNotice ui={ui} />
             {roomsOpen ? (
               <RoomsScreen
+                ui={ui}
                 locale={locale}
                 targetLanguage={targetLanguage}
                 onClose={() => {

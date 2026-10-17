@@ -22,6 +22,7 @@ import {
   type RoomMember,
   type RoomMeta,
   type RoomRole,
+  type RoomFace,
   type RoomSignal,
   type RoomSummary,
 } from "../rooms/protocol.ts";
@@ -50,6 +51,11 @@ const seqKey = (id: string) => `room:seq:${id}`;
 /** 방장이 누군가를 올리거나 내린 결정. 그 사람의 다음 물음이 가져간다. */
 const grantKey = (id: string, peer: string) => `room:grant:${id}:${peer}`;
 const GRANT_TTL_SECONDS = 60;
+/** 방장이 내보낸 계정. 그 방에는 다시 못 들어온다. */
+const banKey = (id: string) => `room:ban:${id}`;
+
+/** 방장의 결정: 올리기, 내리기, 내보내기. */
+export type Grant = RoomRole | "out";
 
 /**
  * 시험 입장 코드. Vercel 환경 변수 ROOM_INVITE_CODES(쉼표로 여러 개)가 있으면
@@ -83,6 +89,8 @@ export async function createRoom(input: {
   name: string;
   languages: string[];
   hostPeerId: string;
+  hostAccountId?: string | null;
+  hostNickname?: string;
 }): Promise<RoomMeta> {
   let id = newRoomId();
   // 겹칠 일은 거의 없지만, 살아 있는 방을 덮어쓰지는 않게.
@@ -92,6 +100,8 @@ export async function createRoom(input: {
     name: input.name,
     languages: input.languages.slice(0, 2),
     hostPeerId: input.hostPeerId,
+    hostAccountId: input.hostAccountId ?? null,
+    hostNickname: input.hostNickname ?? "",
     createdAt: Date.now(),
   };
   await kvSetJson(metaKey(id), meta, ROOM_TTL_SECONDS);
@@ -109,10 +119,18 @@ export async function listRooms(): Promise<RoomSummary[]> {
       if (!meta) return null;
       const members = await readMembers(id);
       if (members.length === 0 && Date.now() - meta.createdAt > 60_000) return null;
+      const ordered = [...members].sort(
+        (a, b) => Number(b.peerId === meta.hostPeerId) - Number(a.peerId === meta.hostPeerId) || a.joinedAt - b.joinedAt,
+      );
+      const faces: RoomFace[] = ordered.slice(0, 5).map((member) => ({
+        accountId: member.accountId ?? null,
+        nickname: member.nickname,
+      }));
       return {
         ...meta,
         speakers: members.filter((member) => member.role === "speaker").length,
         listeners: members.filter((member) => member.role === "listener").length,
+        faces,
       } satisfies RoomSummary;
     }),
   );
@@ -121,7 +139,7 @@ export async function listRooms(): Promise<RoomSummary[]> {
 
 export type JoinResult =
   | { ok: true; member: RoomMember; meta: RoomMeta }
-  | { ok: false; error: "NO_ROOM" | "ROOM_FULL" };
+  | { ok: false; error: "NO_ROOM" | "ROOM_FULL" | "BANNED" };
 
 /**
  * 들어가기. 방장(또는 방장이 없는 방)은 바로 말하기 자리에, 다른 사람은 듣는
@@ -133,9 +151,17 @@ export async function joinRoom(input: {
   peerId: string;
   nickname: string;
   wantRole: RoomRole;
+  accountId?: string | null;
+  langs?: string[];
 }): Promise<JoinResult> {
   const meta = await readMeta(input.id);
   if (!meta) return { ok: false, error: "NO_ROOM" };
+  if (input.accountId) {
+    const banned = (await kvGetJson<string[]>(banKey(input.id))) ?? [];
+    if (banned.includes(input.accountId)) return { ok: false, error: "BANNED" };
+    // 방장이 앱을 다시 열고 왔다: 새 이름표를 방장으로.
+    if (meta.hostAccountId && meta.hostAccountId === input.accountId) meta.hostPeerId = input.peerId;
+  }
   const members = (await readMembers(input.id)).filter((member) => member.peerId !== input.peerId);
   if (members.length >= MAX_MEMBERS) return { ok: false, error: "ROOM_FULL" };
   const speakers = members.filter((member) => member.role === "speaker").length;
@@ -149,6 +175,8 @@ export async function joinRoom(input: {
     role,
     muted: false,
     hand: input.wantRole === "speaker" && !seated,
+    accountId: input.accountId ?? null,
+    langs: (input.langs ?? []).slice(0, 2),
     joinedAt: now,
     lastSeen: now,
   };
@@ -159,17 +187,25 @@ export async function joinRoom(input: {
   return { ok: true, member, meta };
 }
 
-/** 방장만: 손든 사람을 올리거나, 말하는 사람을 내린다. */
+/** 방장만: 손든 사람을 올리거나, 말하는 사람을 내리거나, 내보낸다. */
 export async function grantRole(input: {
   id: string;
   hostPeerId: string;
   target: string;
-  role: RoomRole;
+  role: Grant;
 }): Promise<"ok" | "NOT_HOST" | "NO_TARGET" | "SEATS_FULL"> {
   const meta = await readMeta(input.id);
   if (!meta || meta.hostPeerId !== input.hostPeerId) return "NOT_HOST";
   const members = await readMembers(input.id);
-  if (!members.some((member) => member.peerId === input.target)) return "NO_TARGET";
+  const target = members.find((member) => member.peerId === input.target);
+  if (!target || target.peerId === meta.hostPeerId) return "NO_TARGET";
+  if (input.role === "out" && target.accountId) {
+    // 방장만 쓰는 목록이라 읽고-고치고-쓰기가 엉키지 않는다.
+    const banned = (await kvGetJson<string[]>(banKey(input.id))) ?? [];
+    if (!banned.includes(target.accountId)) {
+      await kvSetJson(banKey(input.id), [...banned, target.accountId].slice(-200), ROOM_TTL_SECONDS);
+    }
+  }
   if (input.role === "speaker") {
     const speakers = members.filter((member) => member.role === "speaker").length;
     if (speakers >= MAX_SPEAKERS) return "SEATS_FULL";
@@ -189,7 +225,7 @@ export async function poll(input: {
   muted?: boolean;
   role?: RoomRole;
   hand?: boolean;
-}): Promise<PollResponse | null> {
+}): Promise<PollResponse | null | "KICKED"> {
   const meta = await readMeta(input.id);
   if (!meta) return null;
   const mine = await kvGetJson<RoomMember>(memberKey(input.id, input.peerId));
@@ -199,10 +235,14 @@ export async function poll(input: {
   const live = await readMembers(input.id);
   const others = live.filter((member) => member.peerId !== input.peerId);
   const seatsLeft = others.filter((member) => member.role === "speaker").length < MAX_SPEAKERS;
-  const granted = await kvGetJson<RoomRole>(grantKey(input.id, input.peerId));
+  const granted = await kvGetJson<Grant>(grantKey(input.id, input.peerId));
   if (granted) {
     // 방장의 결정이 앱이 바라는 것보다 먼저. 한 번 쓰고 지운다.
     await kvDelete([grantKey(input.id, input.peerId)]);
+    if (granted === "out") {
+      await kvSetJson(memberKey(input.id, input.peerId), { ...mine, lastSeen: 0 }, 5);
+      return "KICKED";
+    }
     if (granted === "listener") role = "listener";
     else if (seatsLeft) role = "speaker";
   } else if (input.role === "listener") {

@@ -28,7 +28,8 @@ test("방 만들기 → 들어가기 → 신호와 자막 → 나가기", async 
   assert.equal(b.member.hand, true);
   // 손님이 스스로 자리에 오르려 해도 안 된다.
   const self = await poll({ id: room.id, peerId: "peer_guest001", since: 0, role: "speaker", hand: true });
-  assert.equal(self?.members.find((m) => m.peerId === "peer_guest001")?.role, "listener");
+  assert.ok(self && self !== "KICKED");
+  assert.equal(self.members.find((m) => m.peerId === "peer_guest001")?.role, "listener");
   // 방장만 올릴 수 있다.
   assert.equal(await grantRole({ id: room.id, hostPeerId: "peer_guest001", target: "peer_guest001", role: "speaker" }), "NOT_HOST");
   assert.equal(await grantRole({ id: room.id, hostPeerId: "peer_host0001", target: "peer_guest001", role: "speaker" }), "ok");
@@ -88,4 +89,22 @@ test("방장이 없는 방은 바로 앉고, 자리가 차면 듣는 사람으�
 test("없는 방", async () => {
   const result = await joinRoom({ id: "zzzzzz", peerId: "peer_nobody01", nickname: "x", wantRole: "speaker" });
   assert.deepEqual(result, { ok: false, error: "NO_ROOM" });
+});
+
+test("방장 계정으로 다시 들어오면 방장, 내보낸 계정은 못 들어온다", async () => {
+  const host = "lb_" + "1".repeat(24);
+  const guest = "lb_" + "2".repeat(24);
+  const room = await createRoom({ name: "계정 방", languages: ["ja"], hostPeerId: "peer_oldhost1", hostAccountId: host, hostNickname: "민지" });
+  const back = await joinRoom({ id: room.id, peerId: "peer_newhost1", nickname: "민지", wantRole: "speaker", accountId: host, langs: ["ja", "ko"] });
+  assert.ok(back.ok && back.member.role === "speaker" && back.meta.hostPeerId === "peer_newhost1");
+  assert.deepEqual(back.ok && back.member.langs, ["ja", "ko"]);
+  const g = await joinRoom({ id: room.id, peerId: "peer_guest002", nickname: "Omar", wantRole: "speaker", accountId: guest });
+  assert.ok(g.ok && g.member.role === "listener");
+  assert.equal(await grantRole({ id: room.id, hostPeerId: "peer_newhost1", target: "peer_guest002", role: "out" }), "ok");
+  assert.equal(await poll({ id: room.id, peerId: "peer_guest002", since: 0 }), "KICKED");
+  const again = await joinRoom({ id: room.id, peerId: "peer_guest003", nickname: "Omar", wantRole: "listener", accountId: guest });
+  assert.deepEqual(again, { ok: false, error: "BANNED" });
+  const list = await listRooms();
+  const row = list.find((r) => r.id === room.id);
+  assert.equal(row?.faces[0]?.accountId, host);
 });

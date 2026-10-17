@@ -23,18 +23,56 @@ type Peer = {
   audio: HTMLAudioElement;
   pendingIce: RTCIceCandidateInit[];
   remoteSet: boolean;
+  /** 상대 소리 크기를 재는 것(자리 격자의 "말하는 중" 테두리). */
+  meter: { source: MediaStreamAudioSourceNode; analyser: AnalyserNode; speaking: boolean } | null;
 };
+
+/** 이보다 크면 말하는 중으로 본다. 내 마이크 쪽(speech.ts)과 비슷한 값. */
+const SPEAKING_RMS = 0.02;
 
 export class RoomMesh {
   private peers = new Map<string, Peer>();
   private localTrack: MediaStreamTrack | null = null;
   private closed = false;
+  private ctx: AudioContext | null = null;
+  private meterTimer = 0;
+  private samples = new Float32Array(512);
 
   constructor(
     private readonly selfId: string,
     private readonly send: (to: string, kind: SignalKind, data: string) => void,
     private readonly onState: (peerId: string, state: PeerState | null) => void,
+    private readonly onSpeaking?: (peerId: string, speaking: boolean) => void,
   ) {}
+
+  private watch(peerId: string, peer: Peer, stream: MediaStream): void {
+    if (!this.onSpeaking || peer.meter) return;
+    try {
+      this.ctx ??= new AudioContext();
+      const source = this.ctx.createMediaStreamSource(stream);
+      const analyser = this.ctx.createAnalyser();
+      analyser.fftSize = 512;
+      source.connect(analyser);
+      peer.meter = { source, analyser, speaking: false };
+    } catch {
+      return;
+    }
+    if (this.meterTimer) return;
+    this.meterTimer = window.setInterval(() => {
+      if (this.ctx?.state === "suspended") void this.ctx.resume().catch(() => {});
+      for (const [id, row] of this.peers) {
+        if (!row.meter) continue;
+        row.meter.analyser.getFloatTimeDomainData(this.samples);
+        let sum = 0;
+        for (const value of this.samples) sum += value * value;
+        const speaking = Math.sqrt(sum / this.samples.length) > SPEAKING_RMS;
+        if (speaking !== row.meter.speaking) {
+          row.meter.speaking = speaking;
+          this.onSpeaking?.(id, speaking);
+        }
+      }
+    }, 150);
+  }
 
   /** 말하기 자리면 내 마이크 트랙, 듣기만이면 null. 모든 연결에 바로 반영. */
   setLocalTrack(track: MediaStreamTrack | null): void {
@@ -100,6 +138,8 @@ export class RoomMesh {
   close(): void {
     this.closed = true;
     for (const id of [...this.peers.keys()]) this.drop(id);
+    window.clearInterval(this.meterTimer);
+    void this.ctx?.close().catch(() => {});
   }
 
   private async offer(peerId: string): Promise<void> {
@@ -119,7 +159,7 @@ export class RoomMesh {
     audio.dataset.roomPeer = peerId;
     audio.style.display = "none";
     document.body.appendChild(audio);
-    const peer: Peer = { pc, audio, pendingIce: [], remoteSet: false };
+    const peer: Peer = { pc, audio, pendingIce: [], remoteSet: false, meter: null };
     this.peers.set(peerId, peer);
     this.onState(peerId, "connecting");
 
@@ -127,8 +167,10 @@ export class RoomMesh {
       if (event.candidate) this.send(peerId, "ice", JSON.stringify(event.candidate.toJSON()));
     };
     pc.ontrack = (event) => {
-      audio.srcObject = event.streams[0] ?? new MediaStream([event.track]);
+      const stream = event.streams[0] ?? new MediaStream([event.track]);
+      audio.srcObject = stream;
       void audio.play().catch(() => {});
+      this.watch(peerId, peer, stream);
     };
     pc.onconnectionstatechange = () => {
       if (this.peers.get(peerId)?.pc !== pc) return;
@@ -155,6 +197,8 @@ export class RoomMesh {
     this.peers.delete(peerId);
     if (sayBye && !this.closed) this.send(peerId, "bye", "");
     peer.pc.close();
+    peer.meter?.source.disconnect();
+    if (peer.meter?.speaking) this.onSpeaking?.(peerId, false);
     peer.audio.srcObject = null;
     peer.audio.remove();
     this.onState(peerId, null);

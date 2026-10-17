@@ -34,6 +34,10 @@ export type RoomMember = {
   muted: boolean;
   /** 듣는 사람이 말하기 자리를 청함(손들기). 자리에 오르면 내려간다. */
   hand: boolean;
+  /** 로그인 계정(공개 id). 프로필·팔로우·차단은 이걸로. 예전 줄엔 없다. */
+  accountId?: string | null;
+  /** [배우는 언어, 앱 언어] — 프로필 카드의 언어 조합 표시. */
+  langs?: string[];
   joinedAt: number;
   lastSeen: number;
 };
@@ -44,10 +48,22 @@ export type RoomMeta = {
   /** 이 방에서 주로 쓰는 언어 두 개(언어 교환). 표시용. */
   languages: string[];
   hostPeerId: string;
+  /** 방장 계정. 방장이 앱을 다시 열어 새 이름표로 와도 방장으로 알아본다. */
+  hostAccountId?: string | null;
+  hostNickname?: string;
   createdAt: number;
 };
 
-export type RoomSummary = RoomMeta & { speakers: number; listeners: number };
+export type RoomFace = { accountId: string | null; nickname: string };
+
+export type RoomSummary = RoomMeta & {
+  speakers: number;
+  listeners: number;
+  /** 목록 카드에 띄울 얼굴(방장 먼저, 최대 5). */
+  faces: RoomFace[];
+  /** 내가 팔로우하는 방장의 방. 목록 맨 위로. */
+  followed?: boolean;
+};
 
 /** 말을 받아쓴 줄, 또는 손으로 쓴 댓글. */
 export type LineKind = "speech" | "text";
@@ -57,6 +73,8 @@ export type RoomLine = {
   /** 없으면 speech(처음 시험판 줄). */
   kind?: LineKind;
   peerId: string;
+  /** 말한 사람의 계정 — 차단한 사람의 줄을 가리는 데 쓴다. */
+  accountId?: string | null;
   nickname: string;
   text: string;
   /** 서버 시계 기준으로 말을 시작한 때(ms). 순서는 이것으로 정한다. */

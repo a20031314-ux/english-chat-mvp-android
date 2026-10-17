@@ -4,6 +4,7 @@ import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { readCachedAccount } from "@/lib/account/session";
 import type { LineKind, PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, RoomSummary, SignalKind } from "./protocol";
+import type { PublicProfile } from "./social";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 
 /** 방(시험 기능)의 기기 저장값. 모두 이 기기에만 있다. */
@@ -94,6 +95,8 @@ export async function joinRoom(input: {
   peerId: string;
   nickname: string;
   role: RoomRole;
+  /** [배우는 언어, 앱 언어]. */
+  langs: string[];
 }): Promise<{ member: RoomMember; room: RoomMeta; now: number }> {
   return call("join", input);
 }
@@ -114,7 +117,7 @@ export async function sendSignal(roomId: string, peerId: string, to: string, kin
 }
 
 /** 방장만: 손든 사람 올리기 / 말하는 사람 내리기. */
-export async function grantRole(roomId: string, peerId: string, target: string, role: RoomRole): Promise<void> {
+export async function grantRole(roomId: string, peerId: string, target: string, role: RoomRole | "out"): Promise<void> {
   await call("grant", { roomId, peerId, target, role });
 }
 
@@ -211,4 +214,51 @@ export async function howToSay(input: {
   const data = (await response.json()) as HowToSayExpression;
   if (!data.expression?.trim()) return null;
   return normalizeHowToSayExpression(input.message, data);
+}
+
+/* ---- 사람 사이(api/social) ---- */
+
+async function social<T>(action: string, payload: Record<string, unknown>): Promise<T> {
+  const response = await fetch(apiUrl("/api/social"), {
+    method: "POST",
+    headers: { "Content-Type": "application/json", ...entitlementHeaders() },
+    body: JSON.stringify({ action, ...payload }),
+  });
+  const body = (await response.json().catch(() => ({}))) as { error?: string } & T;
+  if (!response.ok) throw new RoomApiError(body.error ?? "FAILED", response.status);
+  return body;
+}
+
+const profiles = new Map<string, Promise<PublicProfile | null>>();
+
+/** 공개 프로필. 사진이 커서 한 번 받으면 이 실행 동안 들고 있는다. */
+export function fetchProfile(id: string, fresh = false): Promise<PublicProfile | null> {
+  if (fresh || !profiles.has(id)) {
+    profiles.set(
+      id,
+      social<{ profile: PublicProfile }>("profile", { target: id })
+        .then((body) => body.profile)
+        .catch(() => {
+          profiles.delete(id);
+          return null;
+        }),
+    );
+  }
+  return profiles.get(id)!;
+}
+
+export async function setFollow(target: string, on: boolean): Promise<void> {
+  await social(on ? "follow" : "unfollow", { target });
+}
+
+export async function setBlock(target: string, on: boolean): Promise<void> {
+  await social(on ? "block" : "unblock", { target });
+}
+
+export async function reportPerson(input: { target: string; reason: string; roomId: string; lines: string[] }): Promise<void> {
+  await social("report", input);
+}
+
+export async function myRelations(): Promise<{ following: string[]; blocked: string[] }> {
+  return social("mine", {});
 }
