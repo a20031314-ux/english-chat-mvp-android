@@ -71,7 +71,7 @@ function norm(text) {
  */
 export function fusedScriptTokens(text) {
   const out = [];
-  for (const token of String(text ?? "").split(/[\s"'“”‘’「」『』()（）\[\]<>《》.,!?;:，。、！？：；]+/u)) {
+  for (const token of String(text ?? "").split(/[\s"'“”‘’「」『』()（）\[\]<>《》«».,!?;:，。、！？：；،؛]+/u)) {
     if (!token) continue;
     const found = Object.entries(SCRIPT_RE)
       .filter(([name]) => name !== "latin" && name !== "hanzi")

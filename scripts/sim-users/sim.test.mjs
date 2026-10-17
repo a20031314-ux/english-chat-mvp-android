@@ -65,6 +65,8 @@ test("검출: 설명에 문자가 뒤섞인 낱말 (未来형)", () => {
   assert.deepEqual(fusedScriptTokens("be동사는 영어에서 흔해요"), []);
   assert.deepEqual(fusedScriptTokens("「を」가 아니라 に를 써요"), []);
   assert.deepEqual(fusedScriptTokens("ภาษาไทย ไม่มีช่องว่าง"), []);
+  assert.deepEqual(fusedScriptTokens("استخدمت «मै» بدلاً من «मैं» و«जाउंगा»"), []);
+  assert.deepEqual(fusedScriptTokens("необходим助詞 «に»"), ["необходим助詞"]);
 });
 
 test("검출: 정상 답에는 문제 없음, 같은 답 반복·내부 글자·느림은 잡는다", () => {
