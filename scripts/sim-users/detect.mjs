@@ -225,3 +225,62 @@ export function detectStart({ persona, response }) {
 }
 
 export const SEVERITY_WEIGHT = { error: 3, warn: 1, info: 0 };
+
+// ── 묶음(suite) 공통 검사 ─────────────────────────────────────────────
+
+/**
+ * HTTP 결과만 본다. ok면 [] — 막힌 게 예상된 경우(하루 한도 등)는 info.
+ * expected: 이 묶음에서 정상으로 보는 상태 코드(기본 200).
+ */
+export function checkHttp(prefix, response, { expected = [200], slowWarnMs = SLOW_WARN_MS, slowErrorMs = SLOW_ERROR_MS, infoErrors = ["DAILY_LIMIT_REACHED"] } = {}) {
+  const { status, ms, body, error, path } = response;
+  if (error) return [issue("error", `${prefix}_network`, `${path ?? ""} 요청 실패: ${String(error).slice(0, 100)}`)];
+  if (!expected.includes(status)) {
+    const code = body?.error ?? body?.code ?? "";
+    if (infoErrors.includes(code)) return [issue("info", `${prefix}_limit`, `${path ?? ""} ${status} ${code}`)];
+    return [issue("error", `${prefix}_http`, `${path ?? ""} HTTP ${status} ${JSON.stringify(body ?? {}).slice(0, 120)}`)];
+  }
+  if (ms >= slowErrorMs) return [issue("error", `${prefix}_slow`, `${path ?? ""} ${(ms / 1000).toFixed(1)}초`)];
+  if (ms >= slowWarnMs) return [issue("warn", `${prefix}_slow`, `${path ?? ""} ${(ms / 1000).toFixed(1)}초`)];
+  return [];
+}
+
+/**
+ * 화면에 보일 글 하나가 맞는 언어인지, 내부 글자가 새지 않는지, 수준을 드러내지 않는지.
+ * lang: "target"(학습 언어) | "ui"(앱 언어) | null(언어는 안 봄)
+ */
+export function checkText(prefix, persona, text, { lang = null, label = "", required = false } = {}) {
+  const out = [];
+  const value = typeof text === "string" ? text.trim() : "";
+  if (!value) {
+    if (required) out.push(issue("error", `${prefix}_empty`, `${label} 비어 있음`));
+    return out;
+  }
+  for (const [re, leak] of LEAK_PATTERNS) if (re.test(value)) out.push(issue("error", `${prefix}_leak`, `${label}에 ${leak}`, { sample: value.slice(0, 80) }));
+  if (LEVEL_RE.test(value)) out.push(issue("warn", `${prefix}_level_shown`, `${label}에 학습 수준 표시`, { sample: value.slice(0, 80) }));
+  const { target, ui } = persona;
+  if (lang === "target") {
+    if (!hasScript(value, target)) out.push(issue("error", `${prefix}_wrong_language`, `${label}에 ${target} 문자가 없음`, { sample: value.slice(0, 80) }));
+    else if (target !== ui) {
+      const ev = languageEvidence(stripQuoted(value), target, ui);
+      if (ev.ui > ev.learning) out.push(issue("error", `${prefix}_wrong_language`, `${label}이 앱 언어(${ui})로 옴`, { sample: value.slice(0, 80) }));
+    }
+  } else if (lang === "ui" && target !== ui) {
+    if (!hasScript(value, ui)) out.push(issue("error", `${prefix}_wrong_language`, `${label}에 앱 언어(${ui}) 문자가 없음`, { sample: value.slice(0, 80) }));
+    else if (explanationInLearningLanguage(value, ui, target)) out.push(issue("warn", `${prefix}_wrong_language`, `${label}이 앱 언어(${ui})가 아니라 학습 언어 위주`, { sample: value.slice(0, 80) }));
+    const fused = fusedScriptTokens(value);
+    if (fused.length > 0) out.push(issue("warn", `${prefix}_mixed_script`, `${label}에 문자가 뒤섞인 낱말: ${fused.slice(0, 3).join(", ")}`, { sample: value.slice(0, 80) }));
+  }
+  return out;
+}
+
+/** 필드가 있어야 하는데 없을 때. */
+export function checkShape(prefix, body, fields, label = "응답") {
+  const missing = fields.filter((f) => {
+    const v = f.split(".").reduce((o, k) => (o == null ? undefined : o[k]), body);
+    return v === undefined || v === null || (Array.isArray(v) && v.length === 0) || v === "";
+  });
+  return missing.length ? [issue("error", `${prefix}_shape`, `${label}에 ${missing.join(", ")} 없음`)] : [];
+}
+
+export { issue };

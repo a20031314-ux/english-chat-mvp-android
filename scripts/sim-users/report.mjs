@@ -23,7 +23,8 @@ export function renderReport({ meta, records }) {
   const issues = records.flatMap((r) => r.issues.map((i) => ({ ...i, pid: r.persona.id, target: r.persona.target, ui: r.persona.ui })));
   const errors = issues.filter((i) => i.severity === "error").length;
   const warns = issues.filter((i) => i.severity === "warn").length;
-  const turns = records.reduce((s, r) => s + r.transcript.filter((t) => t.turn > 0).length, 0);
+  const turns = records.reduce((s, r) => s + r.transcript.filter((t) => (t.suite ?? "chat") === "chat" && t.turn > 0).length, 0);
+  const steps2 = records.reduce((s, r) => s + r.transcript.filter((t) => t.suite && t.suite !== "chat").length, 0);
   const latencies = records.flatMap((r) => r.transcript.map((t) => t.ms).filter((ms) => ms > 0)).sort((a, b) => a - b);
   const p = (q) => (latencies.length ? (latencies[Math.min(latencies.length - 1, Math.floor(latencies.length * q))] / 1000).toFixed(1) : "-");
   const clean = records.filter((r) => !r.issues.some((i) => i.severity !== "info")).length;
@@ -91,11 +92,11 @@ export function renderReport({ meta, records }) {
 
   // 대화
   const flagged = records.filter((r) => r.issues.some((i) => i.severity !== "info")).sort((a, b) => b.score - a.score);
-  const replay = (r) => `npm run sim:users -- --seed ${meta.seed} --users ${meta.users} --turns ${meta.turns}${meta.only?.length ? ` --only ${meta.only.map((o) => `${o.target}:${o.ui}`).join(",")}` : ""} --persona ${r.persona.id}`;
+  const replay = (r) => `npm run sim:users -- --seed ${meta.seed} --users ${meta.users} --turns ${meta.turns}${meta.suites ? ` --suite ${meta.suites.join(",")}` : ""}${meta.only?.length ? ` --only ${meta.only.map((o) => `${o.target}:${o.ui}`).join(",")}` : ""} --persona ${r.persona.id}`;
   const convo = flagged.map((r) => `<details class="convo" data-combo="${r.persona.target}:${r.persona.ui}" data-kinds="${esc([...new Set(r.issues.map((i) => i.kind))].join(" "))}">
 <summary><b>${r.persona.id}</b> ${esc(r.description)} <span class="counts">${badge("error")} ${r.issues.filter((i) => i.severity === "error").length} ${badge("warn")} ${r.issues.filter((i) => i.severity === "warn").length}</span></summary>
 <p class="replay"><code>${esc(replay(r))}</code> · 사용자 <code>${esc(r.userId)}</code></p>
-${r.transcript.map((t) => `<div class="turn">
+${r.transcript.map((t) => (t.suite && t.suite !== "chat") ? renderStep(t) : `<div class="turn">
 <div class="me"><span class="who">${t.turn === 0 ? "시작" : `#${t.turn} ${t.kind === "own" ? "앱 언어로" : t.kind === "misbehavior" ? "이상 행동" : "학습자"}`}</span> <span dir="auto">${esc(t.text)}</span></div>
 ${t.reply ? `<div class="bot"><span class="who">튜터 · ${(t.ms / 1000).toFixed(1)}초 · ${t.status}</span> <span dir="auto">${esc(t.reply)}</span></div>` : `<div class="bot"><span class="who">응답 없음 · ${t.status}</span></div>`}
 ${t.corrected ? `<div class="fix"><span class="who">고친 문장</span> <span dir="auto">${esc(t.corrected)}</span>${t.explanation ? `<br><span class="who">설명</span> <span dir="auto">${esc(t.explanation)}</span>` : ""}</div>` : ""}
@@ -137,7 +138,8 @@ table.list tr[data-kind]{cursor:pointer}table.list tr.sel{background:var(--seq-0
 <div class="tiles">
 <div class="tile"><b>${records.length}</b><span>가상 사용자</span></div>
 <div class="tile"><b>${new Set(records.map((r) => `${r.persona.target}:${r.persona.ui}`)).size}<small>/196</small></b><span>학습 조합</span></div>
-<div class="tile"><b>${turns}</b><span>보낸 턴</span></div>
+<div class="tile"><b>${turns}</b><span>채팅 턴</span></div>
+${steps2 ? `<div class="tile"><b>${steps2}</b><span>기능 점검 단계</span></div>` : ""}
 <div class="tile"><b style="color:var(--crit)">${errors}</b><span>오류</span></div>
 <div class="tile"><b style="color:var(--warn)">${warns}</b><span>경고</span></div>
 <div class="tile"><b>${clean}</b><span>문제없이 끝난 사람</span></div>
@@ -147,6 +149,7 @@ table.list tr[data-kind]{cursor:pointer}table.list tr.sel{background:var(--seq-0
 <div class="scroll">${heat}</div>
 <div class="legend">칸 숫자 = 오류<small>/경고</small>, ✓ = 문제 없음, · = 이번에 안 돌림. 색 = 점수(오류 3 + 경고 1)
 <i style="background:var(--seq-0)"></i>0 <i style="background:var(--seq-1)"></i><i style="background:var(--seq-2)"></i><i style="background:var(--seq-3)"></i><i style="background:var(--seq-4)"></i>${maxScore}</div>
+${suiteTable(records)}
 <h2>문제 종류</h2>
 ${kindRows ? `<table class="list"><thead><tr><th>등급</th><th>종류</th><th class="num">건수</th><th class="num">조합 수</th><th>예</th></tr></thead><tbody>${kindRows}</tbody></table>` : "<p>문제 없음</p>"}
 <h2>페르소나 속성별</h2>
@@ -180,4 +183,43 @@ ${kindRows ? `<table class="list"><thead><tr><th>등급</th><th>종류</th><th c
 
 function badge(severity) {
   return severity === "error" ? `<span class="badge error">▲ 오류</span>` : severity === "warn" ? `<span class="badge warn">● 경고</span>` : `<span class="badge">참고</span>`;
+}
+
+const SUITE_LABEL = {
+  chat: "채팅·표현 카드", map: "지도·미션", next: "오늘 해볼 것·요약", ask: "직접 묻기·자라는 중", sheet: "번역·문장분석",
+  pack: "오늘의 팩·통화 턴", rooms: "말하는 방",
+};
+
+function suiteTable(records) {
+  const rows = new Map();
+  for (const r of records) {
+    for (const id of r.suites ?? ["chat"]) {
+      const row = rows.get(id) ?? { id, people: 0, steps: 0, errors: 0, warns: 0, ms: [] };
+      row.people += 1;
+      const mine = r.transcript.filter((t) => (t.suite ?? "chat") === id);
+      row.steps += mine.length;
+      for (const t of mine) if (t.ms > 0) row.ms.push(t.ms);
+      row.errors += r.issues.filter((i) => (i.suite ?? "chat") === id && i.severity === "error").length;
+      row.warns += r.issues.filter((i) => (i.suite ?? "chat") === id && i.severity === "warn").length;
+      rows.set(id, row);
+    }
+  }
+  if (rows.size <= 1 && rows.has("chat")) return "";
+  const body = [...rows.values()].map((row) => {
+    const sorted = row.ms.sort((a, b) => a - b);
+    const mid = sorted.length ? (sorted[sorted.length >> 1] / 1000).toFixed(1) : "-";
+    return `<tr><td>${esc(SUITE_LABEL[row.id] ?? row.id)}</td><td class="num">${row.people}</td><td class="num">${row.steps}</td><td class="num">${mid}s</td><td class="num">${row.errors ? `<b style="color:var(--crit)">${row.errors}</b>` : 0}</td><td class="num">${row.warns}</td></tr>`;
+  }).join("");
+  return `<h2>기능 묶음별</h2><table class="list"><thead><tr><th>묶음</th><th class="num">사람</th><th class="num">단계</th><th class="num">응답 중간값</th><th class="num">오류</th><th class="num">경고</th></tr></thead><tbody>${body}</tbody></table>`;
+}
+
+/** 채팅 밖 묶음의 한 단계: 무엇을 했고(제목·입력), 무엇이 돌아왔나(보이는 글들). */
+function renderStep(t) {
+  const outs = (t.outputs ?? []).filter((o) => o && o.text);
+  return `<div class="turn">
+<div class="me"><span class="who">${esc(SUITE_LABEL[t.suite] ?? t.suite)} · ${esc(t.title ?? "")}</span>${t.input ? ` <span dir="auto">${esc(t.input)}</span>` : ""}</div>
+<div class="bot"><span class="who">${t.status !== undefined ? `${t.status} · ${((t.ms ?? 0) / 1000).toFixed(1)}초` : ""}</span></div>
+${outs.map((o) => `<div class="fix"><span class="who">${esc(o.label)}</span> <span dir="auto">${esc(String(o.text).slice(0, 400))}</span></div>`).join("")}
+${(t.issues ?? []).filter((i) => i.severity !== "info").map((i) => `<div class="iss">${badge(i.severity)} ${esc(label(i.kind))} — ${esc(i.note)}${i.sample ? ` <span class="who">${esc(i.sample)}</span>` : ""}</div>`).join("")}
+</div>`;
 }
