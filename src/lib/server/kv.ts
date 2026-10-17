@@ -160,6 +160,21 @@ export async function kvSetJson(
 }
 
 /**
+ * 비어 있을 때만 쓴다(SET NX). 썼으면 true. 아이디처럼 둘이 동시에 가지면 안 되는 이름에.
+ * 저장소에 닿지 못하면 false — 쓰지 못한 것을 썼다고 하지 않는다.
+ */
+export async function kvSetJsonIfAbsent(key: string, value: unknown): Promise<boolean> {
+  const raw = JSON.stringify(value);
+  if (!credentials()) {
+    warnOnce();
+    if (memoryRead(key) !== null) return false;
+    memoryWrite(key, raw);
+    return true;
+  }
+  return attempt(`SETNX ${key}`, async () => (await command(["SET", key, raw, "NX"])) === "OK", false);
+}
+
+/**
  * Adds to a counter and returns the new total. The expiry is refreshed on every
  * call, which is harmless because every counter key already names its own day
  * or month — the key stops being written to before the window is over.

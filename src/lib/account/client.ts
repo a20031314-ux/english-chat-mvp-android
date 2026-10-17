@@ -26,6 +26,10 @@ export type AccountError =
   | "GOOGLE_CANCELLED"
   | "GOOGLE_FAILED"
   | "PHOTO_INVALID"
+  | "USERNAME_INVALID"
+  | "USERNAME_TAKEN"
+  | "PASSWORD_WEAK"
+  | "WRONG_PASSWORD"
   | "SIGNED_OUT"
   | "NETWORK";
 
@@ -51,7 +55,10 @@ async function call<T>(path: string, init?: { method?: string; body?: unknown })
     const code = data.error;
     if (code === "ACCOUNT_GONE" || code === "SIGNED_OUT") throw new AccountRequestError("SIGNED_OUT");
     if (code === "GOOGLE_INVALID" || code === "GOOGLE_DISABLED") throw new AccountRequestError("GOOGLE_FAILED");
-    const known: AccountError[] = ["INVALID_EMAIL", "RATE_LIMITED", "SEND_FAILED", "WRONG_CODE", "CODE_EXPIRED", "TOO_MANY_TRIES", "PHOTO_INVALID"];
+    const known: AccountError[] = [
+      "INVALID_EMAIL", "RATE_LIMITED", "SEND_FAILED", "WRONG_CODE", "CODE_EXPIRED", "TOO_MANY_TRIES", "PHOTO_INVALID",
+      "USERNAME_INVALID", "USERNAME_TAKEN", "PASSWORD_WEAK", "WRONG_PASSWORD",
+    ];
     throw new AccountRequestError(known.includes(code as AccountError) ? (code as AccountError) : "NETWORK");
   }
   return data;
@@ -65,10 +72,11 @@ export function fetchAuthConfig(): Promise<AuthConfig> {
     .then((config) => ({
       googleClientId: Capacitor.isNativePlatform() ? config.googleClientId : null,
       email: config.email,
+      password: config.password === true,
     }))
     .catch(() => {
       configPromise = null;
-      return { googleClientId: null, email: false };
+      return { googleClientId: null, email: false, password: false };
     });
   return configPromise;
 }
@@ -85,6 +93,18 @@ export async function startEmailLogin(email: string, locale: string): Promise<vo
 
 export async function verifyEmailLogin(email: string, code: string): Promise<void> {
   await finishLogin(await call<LoginResult>("/api/account/email/verify", { body: { email, code } }));
+}
+
+export async function passwordSignup(username: string, password: string): Promise<void> {
+  await finishLogin(await call<LoginResult>("/api/account/password/signup", { body: { username, password } }));
+}
+
+export async function passwordLogin(username: string, password: string): Promise<void> {
+  await finishLogin(await call<LoginResult>("/api/account/password/login", { body: { username, password } }));
+}
+
+export async function changePassword(current: string, next: string): Promise<void> {
+  await call("/api/account/password/change", { body: { current, next } });
 }
 
 let googleReady: Promise<void> | null = null;

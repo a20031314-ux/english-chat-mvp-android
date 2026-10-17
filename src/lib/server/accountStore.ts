@@ -1,5 +1,5 @@
-import { createHash, randomBytes, randomInt, timingSafeEqual } from "node:crypto";
-import { kvDelete, kvGetJson, kvIncrBy, kvListPush, kvSetJson } from "./kv.ts";
+import { createHash, randomBytes, randomInt, scrypt, timingSafeEqual } from "node:crypto";
+import { kvDelete, kvGetJson, kvGetNumber, kvIncrBy, kvListPush, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
 import { isIdentified } from "./identity.ts";
 import {
   EMAIL_CODE_LENGTH,
@@ -14,6 +14,8 @@ import {
  *   account:v1:<id>            계정 한 줄 (아래 AccountRecord)
  *   account:v1:email:<email>   이메일 → 계정 id
  *   account:v1:google:<sub>    Google 사용자 → 계정 id
+ *   account:v1:user:<아이디>   아이디 → 계정 id (SET NX로 먼저 잡은 사람이 가짐)
+ *   account:v1:fail:<아이디>   비밀번호 틀린 횟수, 1시간
  *   account:v1:photo:<id>      프로필 사진 data URL (따로 두어 계정 읽기를 가볍게)
  *   account:v1:code:<email>    이메일 코드(해시·시도 수), 10분
  *   account:v1:send:<email>    코드 보낸 횟수, 1시간
@@ -33,6 +35,9 @@ export type AccountRecord = {
   dataUserId: string;
   email: string | null;
   googleSub: string | null;
+  /** 아이디·비밀번호 계정. 예전 줄에는 없을 수 있다(undefined = null). */
+  username?: string | null;
+  passwordHash?: string | null;
   profile: { nickname: string; bio: string; hasPhoto: boolean; updatedAt: string };
 };
 
@@ -40,6 +45,8 @@ const accountKey = (id: string) => `account:v1:${id}`;
 const emailKey = (email: string) => `account:v1:email:${email}`;
 const googleKey = (sub: string) => `account:v1:google:${sub}`;
 const photoKey = (id: string) => `account:v1:photo:${id}`;
+const userKey = (name: string) => `account:v1:user:${name}`;
+const failKey = (name: string) => `account:v1:fail:${name}`;
 const codeKey = (email: string) => `account:v1:code:${email}`;
 const sendKey = (email: string) => `account:v1:send:${email}`;
 
@@ -68,6 +75,7 @@ export async function toPublic(record: AccountRecord): Promise<PublicAccount> {
     createdAt: record.createdAt,
     email: record.email,
     google: record.googleSub !== null,
+    username: record.username ?? null,
     profile: {
       nickname: record.profile.nickname,
       bio: record.profile.bio,
@@ -176,6 +184,7 @@ export async function deleteAccount(record: AccountRecord): Promise<void> {
   const keys = [accountKey(record.id), photoKey(record.id)];
   if (record.email) keys.push(emailKey(record.email), codeKey(record.email), sendKey(record.email));
   if (record.googleSub) keys.push(googleKey(record.googleSub));
+  if (record.username) keys.push(userKey(record.username), failKey(record.username));
   await kvDelete(keys);
   await kvListPush(PURGE_QUEUE_KEY, [record.dataUserId], 400 * 24 * 60 * 60);
 }
@@ -220,6 +229,102 @@ export async function checkEmailCode(email: string, code: string): Promise<CodeC
   }
   await kvSetJson(codeKey(email), { ...row, attempts }, EMAIL_CODE_TTL_SECONDS);
   return "wrong";
+}
+
+// ── 아이디·비밀번호 ──────────────────────────────────────────
+
+const SCRYPT = { N: 16384, r: 8, p: 1, keylen: 32 };
+/** 한 아이디에 한 시간 동안 틀릴 수 있는 횟수. */
+export const PASSWORD_FAILS_PER_HOUR = 10;
+
+function derive(password: string, salt: Buffer, N: number, r: number, p: number, keylen: number): Promise<Buffer> {
+  return new Promise((resolve, reject) =>
+    scrypt(password.normalize("NFC"), salt, keylen, { N, r, p, maxmem: 64 * 1024 * 1024 }, (error, key) =>
+      error ? reject(error) : resolve(key),
+    ),
+  );
+}
+
+/** "scrypt$N$r$p$소금$해시" — 원문은 어디에도 남기지 않는다. */
+export async function hashPassword(password: string): Promise<string> {
+  const salt = randomBytes(16);
+  const { N, r, p, keylen } = SCRYPT;
+  const key = await derive(password, salt, N, r, p, keylen);
+  return ["scrypt", N, r, p, salt.toString("base64url"), key.toString("base64url")].join("$");
+}
+
+export async function verifyPassword(password: string, stored: string): Promise<boolean> {
+  const [kind, N, r, p, salt, hash] = stored.split("$");
+  if (kind !== "scrypt" || !salt || !hash) return false;
+  const expected = Buffer.from(hash, "base64url");
+  const key = await derive(password, Buffer.from(salt, "base64url"), Number(N), Number(r), Number(p), expected.length);
+  return key.length === expected.length && timingSafeEqual(key, expected);
+}
+
+/** 아무 계정에도 없는 아이디로 물어도 같은 시간이 들게 쓰는 가짜 해시. */
+let decoyHash: Promise<string> | null = null;
+
+export type SignupResult = { account: AccountRecord } | { error: "USERNAME_TAKEN" | "STORE_FAILED" };
+
+/** 새 아이디·비밀번호 계정. 이 기기의 기록이 계정 기록이 된다. */
+export async function createPasswordAccount(
+  username: string,
+  password: string,
+  currentUserId: string,
+  now: Date = new Date(),
+): Promise<SignupResult> {
+  const accountId = newAccountId();
+  if (!(await kvSetJsonIfAbsent(userKey(username), accountId))) {
+    // 이미 있거나 저장소에 못 닿음 — 둘을 가려 말한다.
+    return (await kvGetJson<string>(userKey(username))) ? { error: "USERNAME_TAKEN" } : { error: "STORE_FAILED" };
+  }
+  const record: AccountRecord = {
+    id: accountId,
+    createdAt: now.toISOString(),
+    dataUserId: isIdentified(currentUserId) ? currentUserId : `acct:${accountId}`,
+    email: null,
+    googleSub: null,
+    username,
+    passwordHash: await hashPassword(password),
+    profile: { nickname: "", bio: "", hasPhoto: false, updatedAt: now.toISOString() },
+  };
+  await kvSetJson(accountKey(accountId), record);
+  return { account: record };
+}
+
+export type PasswordLogin = { account: AccountRecord } | { error: "WRONG_PASSWORD" | "TOO_MANY_TRIES" };
+
+/** 아이디가 없든 비밀번호가 틀리든 같은 답(WRONG_PASSWORD) — 있는 아이디를 알려 주지 않는다. */
+export async function loginWithPassword(username: string, password: string): Promise<PasswordLogin> {
+  const fails = await kvGetNumber(failKey(username));
+  if (fails >= PASSWORD_FAILS_PER_HOUR) return { error: "TOO_MANY_TRIES" };
+  const id = await kvGetJson<string>(userKey(username));
+  const account = id ? await readAccount(id) : null;
+  let ok = false;
+  if (account?.passwordHash) ok = await verifyPassword(password, account.passwordHash);
+  else await verifyPassword(password, await (decoyHash ??= hashPassword("decoy-password")));
+  if (!ok || !account) {
+    await kvIncrBy(failKey(username), 1, 60 * 60);
+    return { error: "WRONG_PASSWORD" };
+  }
+  await kvDelete([failKey(username)]);
+  return { account };
+}
+
+export async function changePassword(
+  record: AccountRecord,
+  current: string,
+  next: string,
+): Promise<"ok" | "WRONG_PASSWORD" | "TOO_MANY_TRIES"> {
+  if (!record.username || !record.passwordHash) return "WRONG_PASSWORD";
+  const fails = await kvGetNumber(failKey(record.username));
+  if (fails >= PASSWORD_FAILS_PER_HOUR) return "TOO_MANY_TRIES";
+  if (!(await verifyPassword(current, record.passwordHash))) {
+    await kvIncrBy(failKey(record.username), 1, 60 * 60);
+    return "WRONG_PASSWORD";
+  }
+  await kvSetJson(accountKey(record.id), { ...record, passwordHash: await hashPassword(next) });
+  return "ok";
 }
 
 export type { AccountProfile };

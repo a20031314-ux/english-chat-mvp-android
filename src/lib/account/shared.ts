@@ -18,6 +18,24 @@ export const PHOTO_MAX_BYTES = 120_000;
 export const EMAIL_CODE_LENGTH = 6;
 export const EMAIL_CODE_TTL_SECONDS = 10 * 60;
 
+/** 아이디: 영문 소문자·숫자·_·. 로 4~20자, 첫 글자는 영문·숫자. 대문자로 써도 소문자로 저장. */
+export const USERNAME_MIN = 4;
+export const USERNAME_MAX = 20;
+export const PASSWORD_MIN = 8;
+/** scrypt에 넣는 길이 한도 — 아주 긴 입력으로 서버를 붙잡지 못하게. */
+export const PASSWORD_MAX = 128;
+
+export function normalizeUsername(value: unknown): string | null {
+  if (typeof value !== "string") return null;
+  const name = value.trim().toLowerCase();
+  if (name.length < USERNAME_MIN || name.length > USERNAME_MAX) return null;
+  return /^[a-z0-9][a-z0-9_.]*$/.test(name) ? name : null;
+}
+
+export function isPasswordOk(value: unknown): value is string {
+  return typeof value === "string" && value.length >= PASSWORD_MIN && value.length <= PASSWORD_MAX;
+}
+
 export type AccountProfile = {
   nickname: string;
   bio: string;
@@ -31,6 +49,8 @@ export type PublicAccount = {
   createdAt: string;
   email: string | null;
   google: boolean;
+  /** 아이디·비밀번호로 로그인하는 계정이면 그 아이디. */
+  username: string | null;
   profile: AccountProfile;
 };
 
@@ -41,6 +61,8 @@ export type AuthConfig = {
   googleClientId: string | null;
   /** 메일 발송이 설정됐는지. 아니면 이메일 로그인을 숨긴다. */
   email: boolean;
+  /** 아이디·비밀번호 로그인. 외부 설정이 필요 없어 서버가 켜져 있으면 늘 true. */
+  password: boolean;
 };
 
 /** 글자 수는 화면에 보이는 글자(자소 묶음)로 센다 — 이모지·한글 조합이 한 글자. */

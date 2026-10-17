@@ -8,8 +8,11 @@ import {
   AccountRequestError,
   deleteAccount,
   fetchAuthConfig,
+  changePassword,
   googleLogin,
   logout,
+  passwordLogin,
+  passwordSignup,
   refreshAccount,
   saveProfile,
   startEmailLogin,
@@ -20,7 +23,12 @@ import {
   BIO_MAX,
   EMAIL_CODE_LENGTH,
   NICKNAME_MAX,
+  PASSWORD_MAX,
+  PASSWORD_MIN,
   PHOTO_MAX_BYTES,
+  USERNAME_MAX,
+  isPasswordOk,
+  normalizeUsername,
   cleanBio,
   cleanNickname,
   normalizeEmail,
@@ -61,6 +69,14 @@ function errorText(ui: UICopy, code: AccountError | null): string | null {
       return ui.accountErrorGoogle;
     case "PHOTO_INVALID":
       return ui.accountErrorPhoto;
+    case "USERNAME_INVALID":
+      return ui.accountErrorUsername;
+    case "USERNAME_TAKEN":
+      return ui.accountErrorTaken;
+    case "PASSWORD_WEAK":
+      return ui.accountErrorPasswordWeak;
+    case "WRONG_PASSWORD":
+      return ui.accountErrorPassword;
     default:
       return ui.accountErrorNetwork;
   }
@@ -72,7 +88,7 @@ function codeOf(error: unknown): AccountError {
 
 function Avatar({ account, size }: { account: PublicAccount | null; size: number }) {
   const photo = account?.profile.photo;
-  const letter = Array.from(account?.profile.nickname || account?.email || "?")[0]?.toUpperCase() ?? "?";
+  const letter = Array.from(account?.profile.nickname || account?.username || account?.email || "?")[0]?.toUpperCase() ?? "?";
   return photo ? (
     // eslint-disable-next-line @next/next/no-img-element
     <img
@@ -109,7 +125,7 @@ export function AccountCard({ ui, locale }: { ui: UICopy; locale: string }) {
     if (readAuthToken()) void refreshAccount();
   }, []);
 
-  const canSignIn = Boolean(config && (config.googleClientId || config.email));
+  const canSignIn = Boolean(config && (config.password || config.googleClientId || config.email));
   // 로그인 방식이 하나도 켜지지 않았으면(서버 설정 전) 카드를 숨긴다.
   if (!account && !canSignIn) return null;
 
@@ -200,6 +216,9 @@ function LoginPanel({ ui, locale, config, onClose }: {
   config: AuthConfig | null;
   onClose: () => void;
 }) {
+  const [mode, setMode] = useState<"login" | "signup">("login");
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [sentTo, setSentTo] = useState<string | null>(null);
   const [code, setCode] = useState("");
@@ -230,7 +249,20 @@ function LoginPanel({ ui, locale, config, onClose }: {
     });
 
   const message = errorText(ui, error);
-  const nothing = config && !config.googleClientId && !config.email;
+  const nothing = config && !config.password && !config.googleClientId && !config.email;
+  const others = Boolean(config?.googleClientId || config?.email);
+
+  const submitPassword = () =>
+    run(async () => {
+      const name = normalizeUsername(username);
+      if (!name) throw new AccountRequestError("USERNAME_INVALID");
+      if (mode === "signup") {
+        if (!isPasswordOk(password)) throw new AccountRequestError("PASSWORD_WEAK");
+        await passwordSignup(name, password);
+      } else {
+        await passwordLogin(name, password);
+      }
+    });
 
   return (
     <>
@@ -239,12 +271,79 @@ function LoginPanel({ ui, locale, config, onClose }: {
         <p className="text-[12px] leading-relaxed text-slate-400">{ui.accountLoginHint}</p>
         {nothing ? <p className="mt-4 text-[13px] text-amber-200">{ui.accountUnavailable}</p> : null}
 
+        {config?.password && !sentTo ? (
+          <form
+            className="mt-4"
+            onSubmit={(event) => {
+              event.preventDefault();
+              void submitPassword();
+            }}
+          >
+            <label className="block text-[12px] text-slate-400">
+              {ui.accountUsername}
+              <input
+                autoComplete="username"
+                autoCapitalize="none"
+                spellCheck={false}
+                dir="ltr"
+                maxLength={USERNAME_MAX}
+                value={username}
+                onChange={(event) => setUsername(event.target.value)}
+                className={`${inputClass} mt-1`}
+              />
+            </label>
+            {mode === "signup" ? <p className="mt-1 text-[11px] text-slate-500">{ui.accountUsernameHint}</p> : null}
+            <label className="mt-3 block text-[12px] text-slate-400">
+              {ui.accountPassword}
+              <input
+                type="password"
+                autoComplete={mode === "signup" ? "new-password" : "current-password"}
+                dir="ltr"
+                maxLength={PASSWORD_MAX}
+                value={password}
+                onChange={(event) => setPassword(event.target.value)}
+                className={`${inputClass} mt-1`}
+              />
+            </label>
+            {mode === "signup" ? (
+              <p className="mt-1 text-[11px] text-slate-500">{ui.accountPasswordHint.replace("{n}", String(PASSWORD_MIN))}</p>
+            ) : null}
+            {mode === "signup" ? (
+              <p className="mt-3 rounded-lg border border-amber-200/30 bg-amber-200/5 px-3 py-2 text-[12px] leading-relaxed text-amber-100">
+                {ui.accountSignupWarn}
+              </p>
+            ) : null}
+            <button type="submit" disabled={busy || !username.trim() || !password} className={`${primaryClass} mt-3`}>
+              {busy ? ui.accountWorking : mode === "signup" ? ui.accountSignupSubmit : ui.accountSignIn}
+            </button>
+            <button
+              type="button"
+              disabled={busy}
+              onClick={() => {
+                setMode(mode === "login" ? "signup" : "login");
+                setError(null);
+              }}
+              className="mt-3 w-full text-center text-[13px] text-slate-300 underline underline-offset-4"
+            >
+              {mode === "login" ? ui.accountToSignup : ui.accountToLogin}
+            </button>
+          </form>
+        ) : null}
+
+        {config?.password && others && !sentTo ? (
+          <div className="my-4 flex items-center gap-3 text-[11px] text-slate-500">
+            <span className="h-px flex-1 bg-white/10" />
+            {ui.accountOr}
+            <span className="h-px flex-1 bg-white/10" />
+          </div>
+        ) : null}
+
         {config?.googleClientId && !sentTo ? (
           <button
             type="button"
             disabled={busy}
             onClick={() => void run(() => googleLogin(config.googleClientId!))}
-            className="mt-4 flex w-full items-center justify-center gap-2 rounded-lg border border-white/20 bg-white px-3 py-2.5 text-[14px] font-medium text-neutral-900 disabled:opacity-50"
+            className={`${config.password ? "" : "mt-4 "}flex w-full items-center justify-center gap-2 rounded-lg border border-white/20 bg-white px-3 py-2.5 text-[14px] font-medium text-neutral-900 disabled:opacity-50`}
           >
             <svg viewBox="0 0 18 18" width="18" height="18" aria-hidden>
               <path fill="#4285F4" d="M17.6 9.2c0-.6-.1-1.2-.2-1.7H9v3.3h4.8a4.1 4.1 0 0 1-1.8 2.7v2.2h2.9c1.7-1.6 2.7-3.9 2.7-6.5Z" />
@@ -266,7 +365,7 @@ function LoginPanel({ ui, locale, config, onClose }: {
 
         {config?.email && !sentTo ? (
           <form
-            className={config.googleClientId ? "" : "mt-4"}
+            className={config.googleClientId || config.password ? "" : "mt-4"}
             onSubmit={(event) => {
               event.preventDefault();
               void send(email);
@@ -415,7 +514,7 @@ function ProfileEditor({ ui, account, onClose }: { ui: UICopy; account: PublicAc
     }
   };
 
-  const signedIn = account.email ?? (account.google ? "Google" : "");
+  const signedIn = account.username ?? account.email ?? (account.google ? "Google" : "");
   const message = errorText(ui, error);
 
   return (
@@ -502,6 +601,8 @@ function ProfileEditor({ ui, account, onClose }: { ui: UICopy; account: PublicAc
 
         {message ? <p className="mt-3 text-[12px] text-rose-300">{message}</p> : null}
 
+        {account.username ? <PasswordChange ui={ui} /> : null}
+
         <div className="mt-6 border-t border-white/10 pt-4">
           {signedIn ? (
             <p className="text-[12px] text-slate-500">
@@ -549,5 +650,98 @@ function ProfileEditor({ ui, account, onClose }: { ui: UICopy; account: PublicAc
         </div>
       </div>
     </>
+  );
+}
+
+function PasswordChange({ ui }: { ui: UICopy }) {
+  const [open, setOpen] = useState(false);
+  const [current, setCurrent] = useState("");
+  const [next, setNext] = useState("");
+  const [busy, setBusy] = useState(false);
+  const [done, setDone] = useState(false);
+  const [error, setError] = useState<AccountError | null>(null);
+
+  if (!open) {
+    return (
+      <button
+        type="button"
+        onClick={() => {
+          setOpen(true);
+          setDone(false);
+        }}
+        className="mt-5 text-[13px] text-slate-300 underline underline-offset-4"
+      >
+        {done ? ui.accountPasswordChanged : ui.accountChangePassword}
+      </button>
+    );
+  }
+
+  const submit = async () => {
+    setBusy(true);
+    setError(null);
+    try {
+      if (!isPasswordOk(next)) throw new AccountRequestError("PASSWORD_WEAK");
+      await changePassword(current, next);
+      setCurrent("");
+      setNext("");
+      setDone(true);
+      setOpen(false);
+    } catch (caught) {
+      setError(codeOf(caught));
+    } finally {
+      setBusy(false);
+    }
+  };
+
+  const message = errorText(ui, error);
+  return (
+    <form
+      className="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-3"
+      onSubmit={(event) => {
+        event.preventDefault();
+        void submit();
+      }}
+    >
+      <p className="text-[13px] font-medium text-slate-200">{ui.accountChangePassword}</p>
+      <label className="mt-2 block text-[12px] text-slate-400">
+        {ui.accountCurrentPassword}
+        <input
+          type="password"
+          autoComplete="current-password"
+          dir="ltr"
+          maxLength={PASSWORD_MAX}
+          value={current}
+          onChange={(event) => setCurrent(event.target.value)}
+          className={`${inputClass} mt-1`}
+        />
+      </label>
+      <label className="mt-2 block text-[12px] text-slate-400">
+        {ui.accountNewPassword}
+        <input
+          type="password"
+          autoComplete="new-password"
+          dir="ltr"
+          maxLength={PASSWORD_MAX}
+          value={next}
+          onChange={(event) => setNext(event.target.value)}
+          className={`${inputClass} mt-1`}
+        />
+      </label>
+      <p className="mt-1 text-[11px] text-slate-500">{ui.accountPasswordHint.replace("{n}", String(PASSWORD_MIN))}</p>
+      {message ? <p className="mt-2 text-[12px] text-rose-300">{message}</p> : null}
+      <div className="mt-3 flex gap-2">
+        <button
+          type="button"
+          disabled={busy}
+          onClick={() => setOpen(false)}
+          className="flex-1 rounded-lg border border-white/15 px-3 py-2 text-[13px] text-slate-200"
+        >
+          {ui.accountCancel}
+        </button>
+        <button type="submit" disabled={busy || !current || !next} className="flex-1 rounded-lg bg-[#e8e8e4] px-3 py-2 text-[13px] font-medium text-neutral-900 disabled:opacity-50">
+          {busy ? ui.accountWorking : ui.accountSave}
+        </button>
+      </div>
+    </form>
   );
 }

@@ -179,3 +179,56 @@ test("지운 계정 기록 지우기: 그 id 조각이 든 키만", async () => 
   assert.deepEqual(await kvGetJson("ledger:v1:rc:gone10:ja"), { a: 2 });
   assert.equal((await kvListRange(store.PURGE_QUEUE_KEY)).length, 0);
 });
+
+test("아이디 규칙: 소문자로 맞추고, 4~20자, 영문·숫자·_ .", () => {
+  assert.equal(shared.normalizeUsername(" Minji_01 "), "minji_01");
+  assert.equal(shared.normalizeUsername("abc"), null);
+  assert.equal(shared.normalizeUsername("a".repeat(21)), null);
+  assert.equal(shared.normalizeUsername("_minji"), null);
+  assert.equal(shared.normalizeUsername("민지민지"), null);
+  assert.equal(shared.normalizeUsername("josé"), null);
+  assert.ok(shared.isPasswordOk("12345678"));
+  assert.ok(!shared.isPasswordOk("1234567"));
+  assert.ok(!shared.isPasswordOk("x".repeat(129)));
+});
+
+test("비밀번호 해시: 원문이 남지 않고, 맞는 것만 통과, 한국어·태국어 비밀번호도", async () => {
+  const hash = await store.hashPassword("비밀번호ขอบคุณ1");
+  assert.ok(!hash.includes("비밀번호"));
+  assert.ok(hash.startsWith("scrypt$"));
+  assert.ok(await store.verifyPassword("비밀번호ขอบคุณ1", hash));
+  assert.ok(!(await store.verifyPassword("비밀번호ขอบคุณ2", hash)));
+  assert.notEqual(await store.hashPassword("same-pass"), await store.hashPassword("same-pass"));
+});
+
+test("아이디 가입·로그인: 중복 막고, 없는 아이디와 틀린 비밀번호는 같은 답, 10번 틀리면 막힘", async () => {
+  const made = await store.createPasswordAccount("minji_01", "correct-horse", "rc:pw-device");
+  assert.ok("account" in made);
+  if (!("account" in made)) return;
+  assert.equal(made.account.dataUserId, "rc:pw-device");
+  assert.equal((await store.toPublic(made.account)).username, "minji_01");
+  assert.ok(!JSON.stringify(await store.toPublic(made.account)).includes("scrypt"));
+
+  assert.deepEqual(await store.createPasswordAccount("minji_01", "another-pass", "rc:other"), { error: "USERNAME_TAKEN" });
+
+  const ok = await store.loginWithPassword("minji_01", "correct-horse");
+  assert.ok("account" in ok && ok.account.id === made.account.id);
+  assert.deepEqual(await store.loginWithPassword("minji_01", "wrong-pass"), { error: "WRONG_PASSWORD" });
+  assert.deepEqual(await store.loginWithPassword("nobody_here", "correct-horse"), { error: "WRONG_PASSWORD" });
+
+  for (let i = 1; i < store.PASSWORD_FAILS_PER_HOUR; i += 1) await store.loginWithPassword("minji_01", "wrong-pass");
+  assert.deepEqual(await store.loginWithPassword("minji_01", "correct-horse"), { error: "TOO_MANY_TRIES" });
+});
+
+test("비밀번호 바꾸기와 계정 삭제 뒤 아이디를 다시 쓸 수 있음", async () => {
+  const made = await store.createPasswordAccount("yuki.k", "first-pass", "rc:pw2");
+  if (!("account" in made)) throw new Error("가입 실패");
+  assert.equal(await store.changePassword(made.account, "wrong", "second-pass"), "WRONG_PASSWORD");
+  assert.equal(await store.changePassword(made.account, "first-pass", "second-pass"), "ok");
+  const after = await store.loginWithPassword("yuki.k", "second-pass");
+  assert.ok("account" in after);
+  if (!("account" in after)) return;
+  await store.deleteAccount(after.account);
+  assert.deepEqual(await store.loginWithPassword("yuki.k", "second-pass"), { error: "WRONG_PASSWORD" });
+  assert.ok("account" in (await store.createPasswordAccount("yuki.k", "third-pass", "rc:pw3")));
+});
