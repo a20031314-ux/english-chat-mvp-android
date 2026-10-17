@@ -57,7 +57,11 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "NO_AUDIO" }, { status: 413 });
   }
 
-  void meterRequest(request, "roleplayListen");
+  // A speaker in a person-to-person room (api/rooms) uses the same fast path,
+  // but is not necessarily speaking the language they learn — a language
+  // exchange swaps — so nothing is noted about them as a learner.
+  const forRoom = body.room === true;
+  void meterRequest(request, forRoom ? "roomListen" : "roleplayListen");
 
   const mimeType = typeof body.mimeType === "string" ? body.mimeType : "audio/webm";
   const filename = typeof body.filename === "string" ? body.filename : "turn.webm";
@@ -116,7 +120,7 @@ export async function POST(request: NextRequest) {
     // transcription of it (roleplay/transcript.ts).
     const text = heardOrNothing(raw, language);
     const userId = requestUserId(request);
-    after(() => noteRecognition(userId, text, confidence));
+    if (!forRoom) after(() => noteRecognition(userId, text, confidence));
     return jsonWithCors(request, { text });
   } catch (error) {
     console.error("[roleplay/listen]", error);

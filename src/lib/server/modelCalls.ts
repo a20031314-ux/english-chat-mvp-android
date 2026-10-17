@@ -90,6 +90,9 @@ export const MODEL_CALLS_PER_REQUEST = {
   // scene costs one transcription per learner turn and nothing else — which is
   // the claim the whole mode rests on, and therefore the one worth counting.
   roleplayListen: 1,
+  // A spoken line in a person-to-person room (test feature): one
+  // transcription per utterance, by whoever spoke it.
+  roomListen: 1,
   // A correction the scenario did not have written. Rarer than listening by
   // design — most misses at a turn are the same miss and were recorded — so a
   // count that climbs towards the listen count means the scripts are missing

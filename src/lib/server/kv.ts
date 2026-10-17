@@ -335,6 +335,32 @@ export async function kvListTrim(key: string, keep: number): Promise<void> {
   await attempt(`LTRIM ${key}`, async () => void (await command(["LTRIM", key, -keep, -1])), undefined);
 }
 
+/**
+ * Read a list and remove exactly what was read — a mailbox.
+ *
+ * LRANGE then DEL would lose a row pushed between the two. Trimming off only
+ * the count that was read leaves anything that arrived meanwhile for next time.
+ */
+export async function kvListTake(key: string): Promise<string[]> {
+  if (!credentials()) {
+    warnOnce();
+    const raw = memoryRead(key);
+    if (raw === null) return [];
+    memory().delete(key);
+    return JSON.parse(raw) as string[];
+  }
+  return attempt(
+    `TAKE ${key}`,
+    async () => {
+      const result = await command(["LRANGE", key, 0, -1]);
+      const rows = Array.isArray(result) ? result.map(String) : [];
+      if (rows.length > 0) await command(["LTRIM", key, rows.length, -1]);
+      return rows;
+    },
+    [],
+  );
+}
+
 /** Remove keys outright — for a deletion request, not for routine expiry. */
 export async function kvDelete(keys: string[]): Promise<void> {
   if (keys.length === 0) return;

@@ -1,0 +1,235 @@
+/**
+ * 사용자끼리 말하는 방(시험 기능)의 서버 쪽 기억. 모두 짧게 산다.
+ *
+ * 키는 한 사람이 한 키만 쓰도록 나눴다. 사람 정보(room:m)는 그 사람의
+ * 앱만 쓰고, 신호함(room:sig)과 자막(room:lines)은 RPUSH라서, 여러 사람이
+ * 동시에 써도 서로 덮어쓰지 않는다(kv.ts kvListPush 설명).
+ *
+ * 자막 줄은 방이 살아 있는 동안만 서버에 있다(최대 6시간). 학습자 문장을
+ * 서버에 남기지 않는다는 원칙의 예외라서, 시험 기능을 넘어서기 전에 동의와
+ * 보관 방식을 정해야 한다(hub/drafts/voice-room-workspace.md).
+ */
+import {
+  MAX_LINES_KEPT,
+  MAX_MEMBERS,
+  MAX_SPEAKERS,
+  ROOM_TTL_SECONDS,
+  liveMembers,
+  newRoomId,
+  type PollResponse,
+  type RoomLine,
+  type RoomMember,
+  type RoomMeta,
+  type RoomRole,
+  type RoomSignal,
+  type RoomSummary,
+} from "../rooms/protocol.ts";
+import {
+  kvGetJson,
+  kvIncrBy,
+  kvListPush,
+  kvListRange,
+  kvListTake,
+  kvListTrim,
+  kvSetJson,
+} from "./kv.ts";
+
+const MEMBER_TTL_SECONDS = 30;
+const SIGNAL_TTL_SECONDS = 120;
+const INDEX_KEY = "room:index";
+const INDEX_KEEP = 60;
+
+const metaKey = (id: string) => `room:meta:${id}`;
+const peersKey = (id: string) => `room:peers:${id}`;
+const memberKey = (id: string, peer: string) => `room:m:${id}:${peer}`;
+const signalKey = (id: string, peer: string) => `room:sig:${id}:${peer}`;
+const linesKey = (id: string) => `room:lines:${id}`;
+const seqKey = (id: string) => `room:seq:${id}`;
+
+/**
+ * 시험 입장 코드. Vercel 환경 변수 ROOM_INVITE_CODES(쉼표로 여러 개)가 있으면
+ * 그것, 없으면 기본 코드 하나. 시험 기능을 아는 사람만 들어오게 하는 문일 뿐
+ * 보안 장치는 아니다.
+ */
+export function inviteCodes(): string[] {
+  const raw = process.env.ROOM_INVITE_CODES?.trim();
+  const codes = (raw ? raw.split(",") : ["LB2026"]).map((code) => code.trim().toUpperCase()).filter(Boolean);
+  return codes;
+}
+
+export function isInviteCode(value: unknown): boolean {
+  return typeof value === "string" && inviteCodes().includes(value.trim().toUpperCase());
+}
+
+export async function readMeta(id: string): Promise<RoomMeta | null> {
+  return kvGetJson<RoomMeta>(metaKey(id));
+}
+
+async function readMembers(id: string): Promise<RoomMember[]> {
+  const peers = [...new Set(await kvListRange(peersKey(id)))];
+  const rows = await Promise.all(peers.map((peer) => kvGetJson<RoomMember>(memberKey(id, peer))));
+  return liveMembers(
+    rows.filter((row): row is RoomMember => row !== null),
+    Date.now(),
+  );
+}
+
+export async function createRoom(input: {
+  name: string;
+  languages: string[];
+  hostPeerId: string;
+}): Promise<RoomMeta> {
+  let id = newRoomId();
+  // 겹칠 일은 거의 없지만, 살아 있는 방을 덮어쓰지는 않게.
+  for (let tries = 0; tries < 3 && (await readMeta(id)); tries += 1) id = newRoomId();
+  const meta: RoomMeta = {
+    id,
+    name: input.name,
+    languages: input.languages.slice(0, 2),
+    hostPeerId: input.hostPeerId,
+    createdAt: Date.now(),
+  };
+  await kvSetJson(metaKey(id), meta, ROOM_TTL_SECONDS);
+  await kvListPush(INDEX_KEY, [id], ROOM_TTL_SECONDS);
+  await kvListTrim(INDEX_KEY, INDEX_KEEP);
+  return meta;
+}
+
+/** 열린 방 목록. 아무도 없는 방은 뺀다. 새 방이 위. */
+export async function listRooms(): Promise<RoomSummary[]> {
+  const ids = [...new Set(await kvListRange(INDEX_KEY))].reverse().slice(0, 30);
+  const rows = await Promise.all(
+    ids.map(async (id) => {
+      const meta = await readMeta(id);
+      if (!meta) return null;
+      const members = await readMembers(id);
+      if (members.length === 0 && Date.now() - meta.createdAt > 60_000) return null;
+      return {
+        ...meta,
+        speakers: members.filter((member) => member.role === "speaker").length,
+        listeners: members.filter((member) => member.role === "listener").length,
+      } satisfies RoomSummary;
+    }),
+  );
+  return rows.filter((row): row is RoomSummary => row !== null);
+}
+
+export type JoinResult =
+  | { ok: true; member: RoomMember; meta: RoomMeta }
+  | { ok: false; error: "NO_ROOM" | "ROOM_FULL" };
+
+/**
+ * 들어가기. 말하기 자리가 차 있으면 듣는 사람으로 들어간다(거절하지 않음).
+ */
+export async function joinRoom(input: {
+  id: string;
+  peerId: string;
+  nickname: string;
+  wantRole: RoomRole;
+}): Promise<JoinResult> {
+  const meta = await readMeta(input.id);
+  if (!meta) return { ok: false, error: "NO_ROOM" };
+  const members = (await readMembers(input.id)).filter((member) => member.peerId !== input.peerId);
+  if (members.length >= MAX_MEMBERS) return { ok: false, error: "ROOM_FULL" };
+  const speakers = members.filter((member) => member.role === "speaker").length;
+  const role: RoomRole = input.wantRole === "speaker" && speakers < MAX_SPEAKERS ? "speaker" : "listener";
+  const now = Date.now();
+  const member: RoomMember = {
+    peerId: input.peerId,
+    nickname: input.nickname,
+    role,
+    muted: false,
+    joinedAt: now,
+    lastSeen: now,
+  };
+  await kvSetJson(memberKey(input.id, input.peerId), member, MEMBER_TTL_SECONDS);
+  await kvListPush(peersKey(input.id), [input.peerId], ROOM_TTL_SECONDS);
+  await kvListTrim(peersKey(input.id), MAX_MEMBERS * 4);
+  await kvSetJson(metaKey(input.id), meta, ROOM_TTL_SECONDS);
+  return { ok: true, member, meta };
+}
+
+/**
+ * 앱이 약 1.5초마다 부르는 한 번의 물음: 나 아직 있음 + 내 앞으로 온 신호 +
+ * 새 자막 줄 + 지금 있는 사람들.
+ */
+export async function poll(input: {
+  id: string;
+  peerId: string;
+  since: number;
+  muted?: boolean;
+  role?: RoomRole;
+}): Promise<PollResponse | null> {
+  const meta = await readMeta(input.id);
+  if (!meta) return null;
+  const mine = await kvGetJson<RoomMember>(memberKey(input.id, input.peerId));
+  if (!mine) return null;
+  const now = Date.now();
+  let role = mine.role;
+  if (input.role && input.role !== mine.role) {
+    // 듣다가 말하기 자리로 올라가기 / 내려오기.
+    if (input.role === "listener") role = "listener";
+    else {
+      const speakers = (await readMembers(input.id)).filter(
+        (member) => member.role === "speaker" && member.peerId !== input.peerId,
+      ).length;
+      if (speakers < MAX_SPEAKERS) role = "speaker";
+    }
+  }
+  const updated: RoomMember = {
+    ...mine,
+    role,
+    muted: typeof input.muted === "boolean" ? input.muted : mine.muted,
+    lastSeen: now,
+  };
+  await kvSetJson(memberKey(input.id, input.peerId), updated, MEMBER_TTL_SECONDS);
+
+  const [members, rawSignals, rawLines] = await Promise.all([
+    readMembers(input.id),
+    kvListTake(signalKey(input.id, input.peerId)),
+    kvListRange(linesKey(input.id), -MAX_LINES_KEPT, -1),
+  ]);
+  const signals = parseRows<RoomSignal>(rawSignals);
+  const lines = parseRows<RoomLine>(rawLines).filter((line) => line.seq > input.since);
+  return { now, room: meta, members, signals, lines };
+}
+
+export async function sendSignal(id: string, signal: RoomSignal): Promise<void> {
+  await kvListPush(signalKey(id, signal.to), [JSON.stringify(signal)], SIGNAL_TTL_SECONDS);
+}
+
+export async function addLine(
+  id: string,
+  line: Omit<RoomLine, "seq">,
+): Promise<RoomLine> {
+  const seq = await kvIncrBy(seqKey(id), 1, ROOM_TTL_SECONDS);
+  const row: RoomLine = { ...line, seq };
+  await kvListPush(linesKey(id), [JSON.stringify(row)], ROOM_TTL_SECONDS);
+  await kvListTrim(linesKey(id), MAX_LINES_KEPT);
+  return row;
+}
+
+/** 나가기: 사람 정보를 바로 지워 다른 사람 화면에서 곧 빠지게. */
+export async function leaveRoom(id: string, peerId: string): Promise<void> {
+  const mine = await kvGetJson<RoomMember>(memberKey(id, peerId));
+  if (!mine) return;
+  // 지우는 대신 이미 지난 lastSeen으로 덮는다(짧은 TTL로 곧 사라짐).
+  await kvSetJson(memberKey(id, peerId), { ...mine, lastSeen: 0 }, 5);
+}
+
+export async function isMember(id: string, peerId: string): Promise<RoomMember | null> {
+  const mine = await kvGetJson<RoomMember>(memberKey(id, peerId));
+  return mine && mine.lastSeen > 0 ? mine : null;
+}
+
+function parseRows<T>(rows: string[]): T[] {
+  const out: T[] = [];
+  for (const row of rows) {
+    try {
+      out.push(JSON.parse(row) as T);
+    } catch {
+      // 깨진 줄은 건너뛴다.
+    }
+  }
+  return out;
+}

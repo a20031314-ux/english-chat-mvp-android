@@ -86,6 +86,7 @@ function callUsd(op, measured) {
 export function opUsd(op, measured) {
   switch (op) {
     case "roleplayListen":
+    case "roomListen":
       return (ASSUMED.listenSeconds / 60) * CALL_TRANSCRIBE_USD_PER_MINUTE;
     case "tts":
       // Counted inside the function, so a line served from the edge cache is
