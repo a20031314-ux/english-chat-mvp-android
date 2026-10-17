@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { FullScreenLayer } from "@/components/FullScreenLayer";
+import { BodyLayer } from "@/components/FullScreenLayer";
 import { roomCopy, type RoomCopy } from "@/lib/rooms/copy";
 import {
   RoomApiError,
@@ -64,7 +64,9 @@ export function RoomsScreen({
   const [nickname, setNickname] = useState(() => readNickname());
 
   return (
-    <FullScreenLayer>
+    // 다른 전체 화면(새로워진 점 등, z-70)보다 위: 방은 사용자가 직접 연 화면이다.
+    <BodyLayer>
+      <div className="fixed inset-0 z-[80] flex flex-col bg-[#050505]">
       <div className="mx-auto flex h-[100dvh] w-full max-w-2xl flex-col pt-[env(safe-area-inset-top)]">
         {!code ? (
           <Shell title={t.title} onClose={onClose} t={t}>
@@ -103,7 +105,8 @@ export function RoomsScreen({
           </Shell>
         )}
       </div>
-    </FullScreenLayer>
+      </div>
+    </BodyLayer>
   );
 }
 
