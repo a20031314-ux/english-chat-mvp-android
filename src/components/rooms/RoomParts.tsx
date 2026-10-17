@@ -14,7 +14,7 @@ import {
 import { byPerson, contextBefore, overlapsPrevious, timeline, type RoomLine, type RoomMember } from "@/lib/rooms/protocol";
 import type { PublicProfile } from "@/lib/rooms/social";
 import type { HowToSayExpression } from "@/lib/howToSay";
-import { learningLanguageName, isLearningLanguageCode } from "@/lib/learningLanguages";
+import { isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
 
 /*
  * 말하는 방에서 여러 화면이 함께 쓰는 조각: 얼굴(프로필 사진), 프로필 시트,
@@ -107,8 +107,9 @@ export function Face({
   );
 }
 
-export function languagePair(codes: string[] | undefined): string {
-  return (codes ?? []).filter(isLearningLanguageCode).map((code) => learningLanguageName(code)).join(" ↔ ");
+/** 언어 조합을 앱 언어로(일본어 ↔ 한국어). */
+export function languagePair(codes: string[] | undefined, locale: string): string {
+  return (codes ?? []).filter(isLearningLanguageCode).map((code) => learningLanguageUiLabel(code, locale)).join(" ↔ ");
 }
 
 /**
@@ -117,6 +118,7 @@ export function languagePair(codes: string[] | undefined): string {
  */
 export function ProfileSheet({
   t,
+  locale,
   member,
   accountId,
   nickname,
@@ -128,6 +130,7 @@ export function ProfileSheet({
   onBlockedChange,
 }: {
   t: RoomCopy;
+  locale: string;
   member: RoomMember | null;
   accountId: string | null;
   nickname: string;
@@ -202,7 +205,7 @@ export function ProfileSheet({
               </p>
               {member?.langs?.length ? (
                 <p className="text-xs text-slate-400">
-                  {t.languagesOf}: {languagePair(member.langs)}
+                  {t.languagesOf}: {languagePair(member.langs, locale)}
                 </p>
               ) : null}
               {profile ? (

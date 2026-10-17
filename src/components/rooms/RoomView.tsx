@@ -353,7 +353,7 @@ export function RoomView({
               {room.name}
             </h1>
             <p className="text-xs text-slate-400">
-              {languagePair(room.languages)}
+              {languagePair(room.languages, locale)}
               {room.languages.length ? " · " : ""}
               {t.speakers} {speakers.length}/{MAX_SPEAKERS} · {t.listeners} {listeners.length}
             </p>
@@ -553,6 +553,7 @@ export function RoomView({
       {sheet ? (
         <ProfileSheet
           t={t}
+          locale={locale}
           member={sheetMember}
           accountId={sheet.accountId}
           nickname={sheet.nickname}

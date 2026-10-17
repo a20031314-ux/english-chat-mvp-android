@@ -218,7 +218,7 @@ function Lobby({
           <p className="truncate text-[15px] font-semibold text-white" dir="auto">
             {me.nickname}
           </p>
-          <p className="text-[11px] text-slate-400">{languagePair([targetLanguage, locale])}</p>
+          <p className="text-[11px] text-slate-400">{languagePair([targetLanguage, locale], locale)}</p>
         </div>
         <button
           type="button"
@@ -266,7 +266,7 @@ function Lobby({
                 <button type="button" onClick={() => onJoin(room, "speaker")} className="block w-full text-start">
                   <div className="flex flex-wrap items-center gap-1.5">
                     {room.languages.length ? (
-                      <span className="rounded-md bg-black/40 px-1.5 py-0.5 text-[11px] text-slate-200">{languagePair(room.languages)}</span>
+                      <span className="rounded-md bg-black/40 px-1.5 py-0.5 text-[11px] text-slate-200">{languagePair(room.languages, locale)}</span>
                     ) : null}
                     {room.followed ? (
                       <span className="rounded-md bg-violet-500/30 px-1.5 py-0.5 text-[11px] text-violet-100">✓ {t.followedRoom}</span>
