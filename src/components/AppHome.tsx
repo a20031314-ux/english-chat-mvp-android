@@ -115,6 +115,8 @@ function AppHomeInner({
       const params = new URLSearchParams(window.location.search);
       const fromQuery = params.get("screen") ?? params.get("tab");
       const initial = resolveTab(fromQuery);
+      // 예전 단어장 탭 링크: My로 와서 노트의 단어장을 연다.
+      if (fromQuery === "vocab") sendAppIntent("openNotes", { section: "words" });
       setTab(initial);
       window.history.replaceState(
         { talkbankScreen: initial } satisfies HistoryState,
