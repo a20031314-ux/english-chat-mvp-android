@@ -349,7 +349,7 @@ export const GUIDE_KO: Guide = {
         "heading": "사람·메시지·통화",
         "body": [
           "‘사람과 학습’의 ‘My’ 탭에서 최근에 온 학습자를 보고, 사진을 누르면 프로필이 열려요. 팔로우하거나 메시지를 보내면 상대가 답한 뒤 대화 안에서 📞로 통화해요. 통화 자막은 기록으로 남아요.",
-          "‘My’ 위 ‘➕ 친구 초대’로 카카오톡 등에 링크를 보내요. 앱이 없는 친구도 설치하고 열면 바로 서로 팔로우돼요. 방 위 ➕는 그 방으로 초대해요.",
+          "‘My’ 위 ‘➕ 친구 초대’로 카카오톡 등에 링크를 보내요. 받은 사람은 앱을 깔고 로그인해 이름만 정하면 바로 들어와요. 방 위 ➕는 그 방으로 초대해요.",
           "차단·신고도 프로필에서 해요."
         ],
         "shot": "r69-people"
@@ -678,7 +678,7 @@ export const GUIDE_EN: Guide = {
         "heading": "People, messages and calls",
         "body": [
           "In “Learn with people”, the My tab shows learners who were here lately; tap a photo for their profile. Follow or message them, and once they reply, call from the conversation with 📞. A call’s captions stay as a record.",
-          "In My, “➕ Invite friends” sends a link through any messenger. Friends without the app follow each other with you as soon as they install and open it. ➕ in a room invites to that room.",
+          "In My, “➕ Invite friends” sends a link through any messenger. Whoever opens it installs the app, signs in, picks a name and they're in. ➕ in a room invites to that room.",
           "Blocking and reporting are on the profile too."
         ],
         "shot": "r69-people"

@@ -4,6 +4,8 @@ import { useEffect, useState, useSyncExternalStore } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { AccountCard } from "@/components/account/AccountCard";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
+import { saveProfile } from "@/lib/account/client";
+import { cleanNickname, NICKNAME_MAX } from "@/lib/account/shared";
 import type { UICopy } from "@/lib/copy";
 import { fillInvite, inviteCopy } from "@/lib/invite/copy";
 import { acceptInvite, clearSavedInvite, lookupInvite, onInviteLink, takeInvite } from "@/lib/invite/client";
@@ -12,15 +14,16 @@ import { requestDm, requestRoom } from "@/lib/rooms/openDm";
 
 /**
  * 초대 링크로 앱을 열었을 때(설치 직후 첫 실행 포함) 한 번 뜨는 시트.
- * "○○님이 초대했어요" → 로그인 안 했으면 계정 카드, 했으면 팔로우하고 메시지 / 방 들어가기 / 나중에.
- * 받아들이면 서로 팔로우(서버 /api/invite accept). 내 링크면 아무것도 띄우지 않는다.
+ * "○○님이 초대했어요" → 로그인 안 했으면 계정 카드 → 이름이 없으면 이름 정하기 → 방 들어가기(방 초대) 또는 사람 보기 / 메시지 / 나중에.
+ * 팔로우는 하지 않는다(링크를 여러 사람에게 뿌려도 되게, 사용자 결정 2026-10-19). 서버는 누가 데려왔는지만 센다. 내 링크면 안 뜸.
  */
-export function InviteWelcome({ ui, locale, onOpenMessages }: { ui: UICopy; locale: string; onOpenMessages: () => void }) {
+export function InviteWelcome({ ui, locale, onOpenTab }: { ui: UICopy; locale: string; onOpenTab: (tab: "people" | "messages") => void }) {
   const t = inviteCopy(locale);
   const account = useSyncExternalStore(subscribeSession, readCachedAccount, () => null);
   const [invite, setInvite] = useState<PendingInvite | null>(null);
   const [info, setInfo] = useState<InviteLookup | null>(null);
   const [busy, setBusy] = useState(false);
+  const [nameDraft, setNameDraft] = useState("");
 
   useEffect(() => {
     let alive = true;
@@ -68,12 +71,24 @@ export function InviteWelcome({ ui, locale, onOpenMessages }: { ui: UICopy; loca
     setInfo(null);
   };
 
-  const accept = async (then: () => void) => {
+  const needsName = Boolean(account && !account.profile.nickname);
+  const nameOk = !needsName || cleanNickname(nameDraft).length > 0;
+
+  /** 이름이 없으면 먼저 저장, 데려온 사람 기록(팔로우 없음), 그다음 방·사람·대화로. */
+  const go = async (then: () => void) => {
     setBusy(true);
+    try {
+      if (needsName && account) {
+        await saveProfile({ nickname: nameDraft, bio: account.profile.bio, hidden: account.profile.hidden === true });
+      }
+    } catch {
+      setBusy(false);
+      return;
+    }
     try {
       await acceptInvite(invite.code);
     } catch {
-      // 팔로우가 안 돼도(차단 등) 대화·방은 열어 본다 — 서버가 다시 막는다.
+      // 기록이 안 돼도 들어가는 데는 상관없다.
     }
     setBusy(false);
     close();
@@ -113,23 +128,40 @@ export function InviteWelcome({ ui, locale, onOpenMessages }: { ui: UICopy; loca
 
           {account ? (
             <div className="mt-4 flex flex-col gap-2">
-              {info.room ? (
-                <button type="button" disabled={busy} onClick={() => void accept(() => requestRoom(info.room!.id))} className="tb-btn w-full rounded-lg px-4 py-2.5 text-sm font-semibold">
-                  {t.joinRoom}
-                </button>
+              {/* 이름이 없으면 여기서 정하고 바로 들어간다(방·사람 목록에 이름 없는 사람은 안 보임). */}
+              {needsName ? (
+                <label className="mb-1 block">
+                  <span className="text-sm text-slate-300">{t.nameStep}</span>
+                  <input
+                    value={nameDraft}
+                    onChange={(event) => setNameDraft(event.target.value)}
+                    placeholder={t.namePlaceholder}
+                    maxLength={NICKNAME_MAX * 2}
+                    dir="auto"
+                    className="mt-2 w-full rounded-lg border border-line bg-surface-sunk px-3 py-2.5 text-body text-ink outline-none focus:border-white/30"
+                  />
+                </label>
               ) : null}
               <button
                 type="button"
-                disabled={busy}
+                disabled={busy || !nameOk}
+                onClick={() => void go(() => (info.room ? requestRoom(info.room.id) : onOpenTab("people")))}
+                className="tb-btn w-full rounded-lg px-4 py-2.5 text-sm font-semibold disabled:opacity-50"
+              >
+                {info.room ? t.joinRoom : needsName ? t.enter : t.browse}
+              </button>
+              <button
+                type="button"
+                disabled={busy || !nameOk}
                 onClick={() =>
-                  void accept(() => {
-                    onOpenMessages();
+                  void go(() => {
+                    onOpenTab("messages");
                     requestDm(info.inviter.id);
                   })
                 }
-                className={info.room ? "w-full rounded-lg border border-line px-4 py-2.5 text-sm text-ink hover:bg-white/5" : "tb-btn w-full rounded-lg px-4 py-2.5 text-sm font-semibold"}
+                className="w-full rounded-lg border border-line px-4 py-2.5 text-sm text-ink hover:bg-white/5 disabled:opacity-50"
               >
-                {t.followAndMessage}
+                {t.message}
               </button>
               <button type="button" onClick={close} className="w-full rounded-lg px-4 py-2 text-sm text-slate-400 hover:bg-white/5">
                 {t.later}

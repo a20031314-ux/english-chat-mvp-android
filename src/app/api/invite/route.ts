@@ -2,7 +2,6 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
 import { readAccount, readPhoto } from "@/lib/server/accountStore";
-import { blockedEitherWay, follow } from "@/lib/server/socialStore";
 import { readMeta, liveCount } from "@/lib/server/roomStore";
 import { readPresence } from "@/lib/server/presenceStore";
 import { inviteCodeFor, inviterOf, isInviteLinkCode, noteJoined } from "@/lib/server/inviteLinkStore";
@@ -15,7 +14,7 @@ export const dynamic = "force-dynamic";
  * 친구 초대 링크.
  *   mine              (로그인) → { code }
  *   lookup {c, room?} (누구나) → InviteLookup — 초대 웹 페이지와 앱의 환영 시트가 쓴다
- *   accept {c}        (로그인) → 서로 팔로우, 처음 데려온 사람 기록 → { inviterId }
+ *   accept {c}        (로그인) → 처음 데려온 사람 기록(팔로우 없음) → { inviterId }
  * 방 초대는 공개 방만(1:1·단체방 통화는 보이지 않음).
  */
 export async function OPTIONS(request: NextRequest) {
@@ -74,9 +73,7 @@ export async function POST(request: NextRequest) {
   if (body.action === "accept") {
     if (!me) return bad(request, "SIGNED_OUT", 401);
     if (me === inviter.id) return jsonWithCors(request, { inviterId: inviter.id, self: true });
-    if (await blockedEitherWay(me, inviter.id)) return bad(request, "BLOCKED", 409);
-    await follow(me, inviter.id);
-    await follow(inviter.id, me);
+    // 팔로우는 하지 않는다(사용자 결정 2026-10-19: 링크는 여러 사람에게 뿌려도 되게). 누가 데려왔는지만 센다.
     await noteJoined(inviter.id, me);
     return jsonWithCors(request, { inviterId: inviter.id });
   }

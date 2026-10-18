@@ -10,7 +10,6 @@ test("초대 문구: 14개 언어 모두 키가 비지 않고, 자리 표시가 
     for (const key of INVITE_COPY_KEYS) assert.ok(t[key]?.trim(), `${locale} ${key}`);
     assert.ok(t.welcomeTitle.includes("{name}"), locale);
     assert.ok(t.pageTitle.includes("{name}"), locale);
-    assert.ok(t.welcomeLogin.includes("{name}"), locale);
     assert.ok(t.shareRoomText.includes("{room}"), locale);
     assert.ok(t.pageRoom.includes("{room}") && t.pageRoom.includes("{n}"), locale);
   }

@@ -335,7 +335,7 @@ function AppHomeInner({
                 <RoomsScreen ui={ui} locale={locale} targetLanguage={targetLanguage} visible={shownTab === "rooms"} />
               ) : null}
               {/* 초대 링크로 열었을 때 한 번(설치 직후 첫 실행 포함). */}
-              {socialOn ? <InviteWelcome ui={ui} locale={locale} onOpenMessages={() => openTab("messages")} /> : null}
+              {socialOn ? <InviteWelcome ui={ui} locale={locale} onOpenTab={openTab} /> : null}
             </div>
 
             {miniRoom ? (
