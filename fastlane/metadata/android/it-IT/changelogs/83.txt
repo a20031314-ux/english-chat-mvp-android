@@ -1,4 +1,5 @@
-• Un interruttore in alto passa tra “Con l’IA” e “Con le persone” (Persone, Stanze, Messaggi).
-• In una stanza, tocca una riga per chiedere “Che significa?” o “Chiedi in privato”. La domanda è già nella lingua che studi.
-• Scegli come vedere la stanza (Conversazione, Per persona, Vista chat, Vista chiamata) e usa “Cerca per lingua” per stanze come inglese ↔ coreano.
-• Passa il ruolo di host, o metti in pausa e “Riapri”.
+• In alto, “Con le persone”: schede Io, Stanze e Messaggi. Invita amici con un link, anche se non hanno ancora l’app.
+• Gruppi fino a 20 con chiamate di gruppo; i sottotitoli restano come registro.
+• 🌐 Chiacchiera libera: nessuna lingua fissa, i sottotitoli di ognuno nella sua lingua.
+• Tocca una riga per chiedere “Cosa vuol dire?” o in privato. Sottotitoli e chat sono separati; scegli Parla, Ascolta, Solo chat o Solo voce.
+• Passa la stanza a un nuovo host, o mettila in pausa e riaprila.

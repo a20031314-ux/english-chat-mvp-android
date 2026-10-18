@@ -1,4 +1,5 @@
-• Công tắc phía trên chuyển giữa “Học với AI” và “Học với mọi người” (Mọi người, Phòng nói, Tin nhắn).
-• Trong phòng, chạm vào dòng để hỏi “Nghĩa là gì?” hoặc “Hỏi riêng”. Câu hỏi được viết sẵn bằng ngôn ngữ bạn học.
-• Chọn cách xem phòng (Hội thoại, Theo người, Ưu tiên chat, Ưu tiên gọi) và dùng “Tìm theo ngôn ngữ” để tìm phòng như tiếng Anh ↔ tiếng Hàn.
-• Nhường chủ phòng, hoặc tạm dừng rồi “Mở lại”.
+• Ở trên, “Học với mọi người”: thẻ Của tôi, Phòng nói và Tin nhắn. Mời bạn bè bằng link, kể cả khi họ chưa có app.
+• Nhóm chat tới 20 người và gọi nhóm; phụ đề được lưu làm nhật ký.
+• 🌐 Trò chuyện tự do: không cố định ngôn ngữ, phụ đề mỗi người bằng ngôn ngữ của họ.
+• Chạm một dòng để hỏi “Nghĩa là gì?” hoặc hỏi riêng. Phụ đề và chat tách riêng; chọn Nói, Nghe, Chỉ chat hoặc Chỉ giọng nói.
+• Nhường chủ phòng, hoặc tạm dừng rồi mở lại.

@@ -1,4 +1,5 @@
-• Tombol di atas berpindah antara “Belajar dengan AI” dan “Belajar dengan orang” (Orang, Ruang, Pesan).
-• Di ruang, ketuk baris untuk bertanya “Artinya apa?” atau “Tanya diam-diam”. Pertanyaan ditulis dalam bahasa yang kamu pelajari.
-• Pilih cara melihat ruang (Percakapan, Per orang, Fokus chat, Fokus panggilan) dan “Cari per bahasa” untuk ruang seperti Inggris ↔ Korea.
-• Serahkan host, atau jeda ruang lalu “Buka lagi”.
+• Di atas, “Belajar dengan orang”: tab Saya, Ruang, dan Pesan. Undang teman lewat tautan, bahkan sebelum punya aplikasinya.
+• Grup hingga 20 orang dengan panggilan grup; teks tersimpan sebagai catatan.
+• 🌐 Obrolan bebas: tanpa bahasa tetap, teks tiap orang dalam bahasanya sendiri.
+• Ketuk satu baris untuk bertanya “Apa artinya?” atau secara pribadi. Teks dan chat terpisah; pilih Bicara, Dengar, Chat saja, atau Suara saja.
+• Serahkan ruang ke host baru, atau jeda lalu buka lagi.

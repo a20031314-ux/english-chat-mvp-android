@@ -1,4 +1,5 @@
-• Um interruptor em cima alterna entre “Com a IA” e “Com pessoas” (Pessoas, Salas, Mensagens).
-• Numa sala, toque numa linha para perguntar “O que significa?” ou “Perguntar em privado”. A pergunta vem na língua que aprende.
-• Escolha como ver a sala (Conversa, Por pessoa, Vista conversa, Vista chamada) e use “Procurar por língua” para salas como inglês ↔ coreano.
-• Passe o anfitrião, ou pause a sala e “Reabrir” depois.
+• Em cima, “Com pessoas”: separadores Meu espaço, Salas e Mensagens. Convide amigos com um link, mesmo sem a app.
+• Grupos até 20 com chamadas de grupo; as legendas ficam como registo.
+• 🌐 Conversa livre: sem línguas fixas, as legendas de cada um na sua língua.
+• Toque numa linha para perguntar “O que significa?” ou em privado. Legendas e conversa ficam separadas; escolha Falar, Ouvir, Só conversa ou Só voz.
+• Passe a sala a outro anfitrião, ou faça pausa e reabra-a.
