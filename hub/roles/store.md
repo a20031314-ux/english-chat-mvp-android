@@ -4,6 +4,8 @@
 - 버전 올리기 (`package.json` version ↔ `build.gradle` versionCode/versionName).
 - 출시 노트와 등록정보 14개 언어 — `store-listing` 스킬, `fastlane/metadata/android/`.
 - 스토어 스크린샷 — `store-shots/` (고정 AI 응답으로 실제 앱을 찍음).
+  사용자 결정(2026-10-18): 스크린샷 한 장에 기능 하나일 필요는 없다. 한 탭의 여러 기능을 한 장에 묶어도 된다
+  (예: 채팅 = 교정 + 표현 카드 + 빠른 질문). Play 8장 한도 안에서 탭을 더 넓게 보여주는 쪽을 우선.
 - 앱 안 업데이트 배너 기준 `RECOMMENDED_APP_VERSION` — Play에 실제로 공개된 뒤에만 올린다.
 - 사용자가 PC에서 빌드할 때 막히면 돕는다 (`npm run build:android` → Sync → Signed Bundle).
 
