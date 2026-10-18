@@ -1,0 +1,4 @@
+• Công tắc phía trên chuyển giữa “Học với AI” và “Học với mọi người” (Mọi người, Phòng nói, Tin nhắn).
+• Trong phòng, chạm vào dòng để hỏi “Nghĩa là gì?” hoặc “Hỏi riêng”. Câu hỏi được viết sẵn bằng ngôn ngữ bạn học.
+• Chọn cách xem phòng (Hội thoại, Theo người, Ưu tiên chat, Ưu tiên gọi) và dùng “Tìm theo ngôn ngữ” để tìm phòng như tiếng Anh ↔ tiếng Hàn.
+• Nhường chủ phòng, hoặc tạm dừng rồi “Mở lại”.

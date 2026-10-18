@@ -1,0 +1,4 @@
+• Un interruttore in alto passa tra “Con l’IA” e “Con le persone” (Persone, Stanze, Messaggi).
+• In una stanza, tocca una riga per chiedere “Che significa?” o “Chiedi in privato”. La domanda è già nella lingua che studi.
+• Scegli come vedere la stanza (Conversazione, Per persona, Vista chat, Vista chiamata) e usa “Cerca per lingua” per stanze come inglese ↔ coreano.
+• Passa il ruolo di host, o metti in pausa e “Riapri”.

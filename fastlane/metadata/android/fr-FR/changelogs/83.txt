@@ -1,0 +1,4 @@
+• Un interrupteur en haut passe de « Avec l’IA » à « Avec des gens » (Personnes, Salons, Messages).
+• Dans un salon, touchez une ligne pour demander « Ça veut dire quoi ? » ou « Demander en privé ». La question est écrite dans la langue apprise.
+• Choisissez l’affichage (Conversation, Par personne, Vue discussion, Vue appel) et « Chercher par langue » pour des salons comme anglais ↔ coréen.
+• Cédez l’animation, ou mettez en pause puis « Rouvrir ».

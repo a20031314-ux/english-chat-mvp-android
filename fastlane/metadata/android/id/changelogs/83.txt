@@ -1,0 +1,4 @@
+• Tombol di atas berpindah antara “Belajar dengan AI” dan “Belajar dengan orang” (Orang, Ruang, Pesan).
+• Di ruang, ketuk baris untuk bertanya “Artinya apa?” atau “Tanya diam-diam”. Pertanyaan ditulis dalam bahasa yang kamu pelajari.
+• Pilih cara melihat ruang (Percakapan, Per orang, Fokus chat, Fokus panggilan) dan “Cari per bahasa” untuk ruang seperti Inggris ↔ Korea.
+• Serahkan host, atau jeda ruang lalu “Buka lagi”.

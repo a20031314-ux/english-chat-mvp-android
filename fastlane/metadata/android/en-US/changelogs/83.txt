@@ -1,0 +1,4 @@
+• A switch at the top moves between “Learn with AI” and “Learn with people” (People, Rooms, Messages).
+• In a room, tap a line to ask “What does it mean?” or “Ask privately”. The question is filled in in the language you’re learning.
+• Choose how you see a room (Conversation, By person, Chat view, Call view) and use “Find by language” to find rooms like English ↔ Korean.
+• Hand the room to a new host, or pause it and “Reopen” it later.

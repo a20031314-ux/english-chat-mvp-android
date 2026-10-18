@@ -1,0 +1,4 @@
+• Un interruptor arriba cambia entre “Con la IA” y “Con personas” (Personas, Salas, Mensajes).
+• En una sala, toca una línea para preguntar “¿Qué significa?” o “Preguntar en privado”. La pregunta sale en el idioma que aprendes.
+• Elige cómo ver la sala (Conversación, Por persona, Vista chat, Vista llamada) y usa “Buscar por idioma” para salas como inglés ↔ coreano.
+• Cede el anfitrión, o pausa la sala y “Reabrir” después.
