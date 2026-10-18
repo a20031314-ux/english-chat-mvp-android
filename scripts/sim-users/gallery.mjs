@@ -24,7 +24,9 @@ const GROUPS = [
   { name: "My · 지도", ids: ["selfcheck", "map", "mission", "today", "growth", "element", "myask", "ledger"] },
   { name: "통화 · 영상", ids: ["call-home", "video-library"] },
   { name: "프로필", ids: ["account", "account-edit"] },
+  { name: "노트", ids: ["notes", "notes-words"] },
   { name: "말하는 방", ids: ["rooms-list", "room-inside", "room-comment", "room-profile"] },
+  { name: "사람 · 메시지", ids: ["people", "people-profile", "invite-welcome", "messages", "dm-thread", "group-thread"] },
   { name: "도움말 · 의견", ids: ["guide", "feedback"] },
 ];
 const LANG = { en: "영어", ko: "한국어", ja: "일본어", zh: "중국어", es: "스페인어", fr: "프랑스어", it: "이탈리아어", pt: "포르투갈어", ru: "러시아어", ar: "아랍어", id: "인도네시아어", vi: "베트남어", th: "태국어", hi: "힌디어" };

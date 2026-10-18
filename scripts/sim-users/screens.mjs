@@ -422,7 +422,8 @@ const SCENES = [
     id: "rooms-list",
     label: "말하는 방 — 열린 방 목록",
     async run({ page, wait, rc, state }) {
-      await page.goto(`${BASE}/?screen=chat&rooms=1`, { waitUntil: "domcontentloaded" });
+      // 2.68부터 하단 "Room" 탭.
+      await page.goto(`${BASE}/?screen=rooms`, { waitUntil: "domcontentloaded" });
       await wait(4000);
       await page.getByRole("button", { name: exactly(rc.refresh) }).first().click().catch(() => undefined);
       await wait(2000);
@@ -458,7 +459,155 @@ const SCENES = [
       await wait(2500);
     },
   },
+  {
+    id: "notes",
+    label: "My — 노트(장·주제 목차에 모인 표현·단어)",
+    async run({ page, ui, wait }) {
+      await page.goto(`${BASE}/?screen=map`, { waitUntil: "domcontentloaded" });
+      await wait(5000);
+      await page.getByText(ui.notesTitle, { exact: true }).first().scrollIntoViewIfNeeded();
+      await page.mouse.wheel(0, -120);
+      await wait(2500);
+    },
+  },
+  {
+    id: "notes-words",
+    label: "My — 노트 안 단어장",
+    async run({ page, ui, wait }) {
+      await page.locator("section").filter({ hasText: ui.notesTitle }).getByRole("button", { name: new RegExp(`^${escape(ui.homeTabVocab)}`) }).first().click();
+      await wait(2000);
+    },
+  },
+  {
+    id: "people",
+    label: "사람 — 최근 접속한 사람 (개인정보 때문에 테스트 계정만 보이게 거름)",
+    async run({ page, wait, state }) {
+      await prepareSocial(state);
+      // 실제 사용자의 이름·사진이 화면에 찍히지 않게: 사람 목록 응답을 이 실행의 테스트 계정 카드로 바꾼다.
+      await page.route("**/api/social", async (route) => {
+        const body = route.request().postDataJSON?.() ?? {};
+        if (body.action !== "people") return route.continue({ headers: { ...route.request().headers(), "x-rc-user": state.uid } });
+        await route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ people: state.peopleCards }) });
+      });
+      await page.goto(`${BASE}/?screen=people`, { waitUntil: "domcontentloaded" });
+      await wait(5000);
+    },
+  },
+  {
+    id: "people-profile",
+    label: "사람 — 프로필(팔로우·메시지)",
+    async run({ page, wait, state }) {
+      await page.getByText(state.hostNickname, { exact: true }).first().click();
+      await wait(3000);
+      await page.unroute("**/api/social").catch(() => undefined);
+    },
+  },
+  {
+    id: "invite-welcome",
+    label: "친구 초대 링크로 앱을 열면",
+    async run({ page, wait, state }) {
+      await prepareSocial(state);
+      await page.goto(`${BASE}/?invite=${state.hostInvite}${state.roomId ? `&room=${state.roomId}` : ""}`, { waitUntil: "domcontentloaded" });
+      await wait(5000);
+    },
+  },
+  {
+    id: "messages",
+    label: "메시지 — 단체방·1:1 목록(받은 초대 포함)",
+    async run({ page, wait, state }) {
+      await prepareSocial(state);
+      // 앞 장면의 초대 환영 시트를 닫는다(앱은 받은 초대를 저장해 두고 다시 띄움).
+      await page.evaluate(() => localStorage.removeItem("invite:pending:v1"));
+      await page.goto(`${BASE}/?screen=messages`, { waitUntil: "domcontentloaded" });
+      await wait(6000);
+    },
+  },
+  {
+    id: "dm-thread",
+    label: "메시지 — 1:1 대화(집어 묻기·통화 기록)",
+    async run({ page, wait, state }) {
+      await page.getByText(state.hostNickname, { exact: true }).first().click();
+      await wait(5000);
+    },
+  },
+  {
+    id: "group-thread",
+    label: "메시지 — 단체방 대화(집어 묻기)",
+    async run({ page, wait, state }) {
+      await page.goto(`${BASE}/?screen=messages`, { waitUntil: "domcontentloaded" });
+      await wait(5000);
+      await page.getByText(state.groupName, { exact: true }).first().click();
+      await wait(5000);
+    },
+  },
 ];
+
+/**
+ * 사람 사이 장면에 쓸 기록: 방장(B)·친구(C)와 1:1 대화(집어 묻기·통화 기록), 단체방 둘(참여한 것·받은 초대),
+ * 사람 목록 카드, 방장의 초대 코드. 모두 이 실행의 숨김 테스트 계정끼리.
+ */
+async function prepareSocial(state) {
+  if (state.socialReady) return;
+  state.socialReady = true;
+  const { me, host, friend, target, locale } = state;
+  const lines = (bank.learner[target] ?? []).filter((l) => l.ok).map((l) => l.text);
+  const say = (i) => lines[i % Math.max(1, lines.length)] ?? "hello";
+  const dm = (who, action, extra) => api(who.uid, "/api/dm", { code: ROOM_CODE, action, ...extra }, who.token);
+  const groups = (who, action, extra) => api(who.uid, "/api/groups", { code: ROOM_CODE, action, ...extra }, who.token);
+  const room = (who, action, extra) => api(who.uid, "/api/rooms", { code: ROOM_CODE, action, ...extra }, who.token);
+
+  // 1:1: 방장이 먼저, 내가 답(대화 열림), 내가 방장 말을 집어 묻기, 방장이 답, 짧은 통화 기록.
+  const first = await dm(host, "send", { target: me.account.id, text: say(0) });
+  await dm(me, "send", { target: host.account.id, text: say(1) });
+  const threadId = first.body?.thread?.id;
+  const hostSeq = first.body?.message?.seq;
+  await dm(me, "send", { target: host.account.id, text: bank.askMeaning[target], quoteSeq: hostSeq, ask: true });
+  await dm(host, "send", { target: me.account.id, text: say(2) });
+  if (threadId) {
+    const mePeer = `simme${shortId(me.uid)}`;
+    const hostPeer = `simhd${shortId(host.uid)}`;
+    const callRes = await dm(me, "call", { threadId, peerId: mePeer });
+    const callRoom = callRes.body?.room?.id;
+    if (callRoom) {
+      await room(me, "join", { peerId: mePeer, roomId: callRoom });
+      await room(host, "join", { peerId: hostPeer, roomId: callRoom });
+      await room(host, "line", { peerId: hostPeer, roomId: callRoom, kind: "speech", text: say(3), lang: target });
+      await room(me, "line", { peerId: mePeer, roomId: callRoom, kind: "speech", text: say(4), lang: target });
+      await room(me, "leave", { peerId: mePeer, roomId: callRoom });
+      await room(host, "leave", { peerId: hostPeer, roomId: callRoom });
+      await dm(me, "endCall", { roomId: callRoom });
+    }
+  }
+  // 친구가 보낸 요청 하나(목록에 "메시지 요청").
+  await dm(friend, "send", { target: me.account.id, text: say(5) });
+
+  // 단체방: 내가 만들고 둘 다 참여, 대화 몇 줄 + 집어 묻기.
+  state.groupName = `[test] ${target}↔${locale} study`;
+  const made = await groups(me, "create", { name: state.groupName, languages: [target, locale], invite: [host.account.id, friend.account.id] });
+  const groupId = made.body?.group?.id;
+  state.groupIds = [];
+  if (groupId) {
+    state.groupIds.push(groupId);
+    await groups(host, "answer", { groupId, accept: true });
+    await groups(friend, "answer", { groupId, accept: true });
+    const hostLine = await groups(host, "send", { groupId, text: say(6) });
+    await groups(friend, "send", { groupId, text: say(7) });
+    await groups(me, "send", { groupId, text: bank.askMeaning[target], quoteSeq: hostLine.body?.message?.seq, ask: true });
+    await groups(host, "send", { groupId, text: say(8) });
+  }
+  // 친구가 만든 단체방의 받은 초대(목록에 "참여").
+  const invited = await groups(friend, "create", { name: `[test] ${target} club`, languages: [target], invite: [me.account.id] });
+  if (invited.body?.group?.id) state.groupIds.push(invited.body.group.id);
+
+  // 사람 목록 카드: 이 실행의 테스트 계정만.
+  const now = Date.now();
+  state.peopleCards = [
+    { id: host.account.id, nickname: state.hostNickname, bio: bank.askGrowth[target], hasPhoto: true, ui: target, learn: locale, lastSeen: now - 60_000, isFollowing: false },
+    { id: friend.account.id, nickname: state.friendNickname, bio: bank.mapGoal[locale], hasPhoto: true, ui: locale, learn: target, lastSeen: now - 3 * 3600_000, isFollowing: true },
+  ];
+  await api(me.uid, "/api/social", { action: "follow", target: friend.account.id }, me.token);
+  state.hostInvite = (await api(host.uid, "/api/invite", { action: "mine" }, host.token)).body?.code ?? "";
+}
 
 function keepAlive(host, roomId, peerId) {
   const tick = () => api(host.uid, "/api/rooms", { code: ROOM_CODE, action: "poll", peerId, roomId, since: 0 }, host.token).catch(() => undefined);
@@ -487,12 +636,18 @@ for (const combo of COMBOS) {
     // 로그인한 학습자(A)와 방장(B)
     const me = await signup(uid, "a");
     people.push(me);
-    await api(uid, "/api/account/profile", { nickname: bank.nickname[locale], bio: bank.mapGoal[locale], photo: PHOTO }, me.token);
+    // 모든 테스트 계정은 숨김 — 실제 사용자의 "사람" 목록에 뜨지 않게.
+    await api(uid, "/api/account/profile", { nickname: bank.nickname[locale], bio: bank.mapGoal[locale], photo: PHOTO, hidden: true }, me.token);
     const host = await signup(`${uid}-host`, "h");
     people.push(host);
     const hostNickname = `${bank.nickname[target]}✦`;
-    await api(host.uid, "/api/account/profile", { nickname: hostNickname, bio: bank.askGrowth[target], photo: PHOTO }, host.token);
+    await api(host.uid, "/api/account/profile", { nickname: hostNickname, bio: bank.askGrowth[target], photo: PHOTO, hidden: true }, host.token);
     state.hostNickname = hostNickname;
+    const friend = await signup(`${uid}-friend`, "f");
+    people.push(friend);
+    state.friendNickname = `${bank.nickname[locale]}·${bank.nickname[target]}`.slice(0, 20);
+    await api(friend.uid, "/api/account/profile", { nickname: state.friendNickname, bio: bank.mapGoal[locale], photo: PHOTO, hidden: true }, friend.token);
+    Object.assign(state, { uid, target, locale, me: { ...me }, host: { ...host }, friend: { ...friend } });
     state.roomName = `[test] ${target}↔${locale} ${shortId(uid)}`;
     const account = (await api(uid, "/api/account/me", undefined, me.token)).body?.account;
 
@@ -539,6 +694,10 @@ for (const combo of COMBOS) {
   } finally {
     stopHost();
     if (state.roomId && people[1]) await api(people[1].uid, "/api/rooms", { code: ROOM_CODE, action: "leave", peerId: `simhost${shortId(uid)}`, roomId: state.roomId }, people[1].token).catch(() => undefined);
+    // 단체방은 모두 떠나고(빈 단체방은 30일 뒤 사라짐) 계정을 지운다.
+    for (const groupId of state.groupIds ?? []) {
+      for (const person of people) await api(person.uid, "/api/groups", { code: ROOM_CODE, action: "leave", groupId }, person.token).catch(() => undefined);
+    }
     for (const person of people) await api(person.uid, "/api/account/delete", {}, person.token).catch(() => undefined);
     await context.close();
   }
