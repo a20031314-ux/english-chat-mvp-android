@@ -19,6 +19,7 @@ import { GuideButton } from "@/components/GuideSheet";
 import { FeedbackButton } from "@/components/FeedbackButton";
 import { RoomsScreen } from "@/components/rooms/RoomsScreen";
 import { PeopleTab } from "@/components/rooms/PeopleTab";
+import { InviteWelcome } from "@/components/invite/InviteWelcome";
 import { MessagesTab } from "@/components/rooms/MessagesTab";
 import { useInbox } from "@/components/rooms/RoomDm";
 import { useGroups } from "@/components/rooms/RoomGroups";
@@ -333,6 +334,8 @@ function AppHomeInner({
               {socialOn ? (
                 <RoomsScreen ui={ui} locale={locale} targetLanguage={targetLanguage} visible={shownTab === "rooms"} />
               ) : null}
+              {/* 초대 링크로 열었을 때 한 번(설치 직후 첫 실행 포함). */}
+              {socialOn ? <InviteWelcome ui={ui} locale={locale} onOpenMessages={() => openTab("messages")} /> : null}
             </div>
 
             {miniRoom ? (

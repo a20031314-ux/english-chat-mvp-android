@@ -8,8 +8,10 @@ public class MainActivity extends BridgeActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         registerPlugin(WebReaderPlugin.class);
+        registerPlugin(InviteLinkPlugin.class);
         super.onCreate(savedInstanceState);
         handleCapturedText(getIntent());
+        InviteLinkPlugin.deliverLink(getIntent());
     }
 
     @Override
@@ -17,6 +19,7 @@ public class MainActivity extends BridgeActivity {
         super.onNewIntent(intent);
         setIntent(intent);
         handleCapturedText(intent);
+        InviteLinkPlugin.deliverLink(intent);
     }
 
     private void handleCapturedText(Intent intent) {

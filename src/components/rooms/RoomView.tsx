@@ -1,5 +1,6 @@
 "use client";
 
+import { InviteButton } from "@/components/invite/InviteButton";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { RoomCopy } from "@/lib/rooms/copy";
 import {
@@ -487,6 +488,10 @@ export function RoomView({
             </p>
           </div>
           <div className="flex shrink-0 items-center gap-2">
+            {/* 공개 방만: 앱이 없는 친구도 링크로 이 방에(lib/invite). */}
+            {!room.private && !("groupId" in room && room.groupId) ? (
+              <InviteButton locale={locale} room={{ id: room.id, name: room.name }} compact />
+            ) : null}
             {!room.private && members.some((member) => member.peerId !== peerId && member.accountId) ? (
               <button
                 type="button"

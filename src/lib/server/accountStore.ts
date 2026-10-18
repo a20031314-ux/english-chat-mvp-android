@@ -1,6 +1,7 @@
 import { createHash, randomBytes, randomInt, scrypt, timingSafeEqual } from "node:crypto";
 import { kvDelete, kvGetJson, kvGetJsonMany, kvGetNumber, kvIncrBy, kvListPush, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
 import { forgetPresence } from "./presenceStore.ts";
+import { forgetInvites } from "./inviteLinkStore.ts";
 import { isIdentified } from "./identity.ts";
 import {
   EMAIL_CODE_LENGTH,
@@ -196,6 +197,7 @@ export async function deleteAccount(record: AccountRecord): Promise<void> {
   if (record.username) keys.push(userKey(record.username), failKey(record.username));
   await kvDelete(keys);
   await forgetPresence(record.id);
+  await forgetInvites(record.id);
   await kvListPush(PURGE_QUEUE_KEY, [record.dataUserId], 400 * 24 * 60 * 60);
 }
 

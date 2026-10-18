@@ -40,3 +40,15 @@ export function onGroupRequest(listener: Listener): () => void {
   groupListeners.add(listener);
   return () => groupListeners.delete(listener);
 }
+
+/** 초대 링크로 받은 방 초대 → RoomsScreen이 그 방을 연다(듣는 사람으로, 손 들고 올라가기). */
+const roomListeners = new Set<Listener>();
+
+export function requestRoom(roomId: string): void {
+  for (const listener of roomListeners) listener(roomId);
+}
+
+export function onRoomRequest(listener: Listener): () => void {
+  roomListeners.add(listener);
+  return () => roomListeners.delete(listener);
+}
