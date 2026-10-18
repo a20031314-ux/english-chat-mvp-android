@@ -9,6 +9,8 @@
  * 메시지는 상대가 읽어야 하므로 서버에 둔다 — 마지막 메시지로부터 30일.
  */
 
+import type { LineQuote } from "./quote.ts";
+
 /** 받는 사람이 답하기 전, 처음 보낸 사람이 보낼 수 있는 줄 수. */
 export const DM_PENDING_LIMIT = 3;
 export const DM_MAX_CHARS = 1000;
@@ -44,6 +46,10 @@ export type DmMessage = {
   roomId?: string;
   /** callLog일 때 줄들(말한 사람의 계정 id로 누가 했는지). */
   lines?: { from: string | null; nickname: string; text: string }[];
+  /** 집은 메시지(또는 통화 기록의 한 줄). 서버가 채움(rooms/quote.ts). */
+  quote?: LineQuote;
+  /** "이거 무슨 뜻이에요?" 질문. */
+  ask?: boolean;
 };
 
 /** 목록에 보여 줄 한 줄: 상대·마지막 말·안 읽은 수, 요청인지. */

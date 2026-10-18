@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { clipQuote, type LineQuote } from "@/lib/rooms/quote";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
   addLine,
@@ -12,6 +13,7 @@ import {
   listRooms,
   poll,
   readMeta,
+  readLines,
   sendSignal,
 } from "@/lib/server/roomStore";
 import {
@@ -190,6 +192,13 @@ export async function POST(request: NextRequest) {
     const now = Date.now();
     const startedAt = clampTime(body.startedAt, now);
     const endedAt = Math.max(startedAt, clampTime(body.endedAt, now));
+    // 남의 줄을 집은 댓글(묻기·답하기): 앱은 번호만, 인용 글은 서버가 방 기록에서 채운다.
+    let quote: LineQuote | undefined;
+    if (kind === "text" && typeof body.quoteSeq === "number") {
+      const found = (await readLines(roomId)).find((row) => row.seq === body.quoteSeq);
+      if (!found) return bad(request, "NO_QUOTE", 404);
+      quote = { seq: found.seq, nickname: found.nickname, text: clipQuote(found.text), peerId: found.peerId, accountId: found.accountId ?? null };
+    }
     const line = await addLine(roomId, {
       kind,
       peerId,
@@ -198,6 +207,7 @@ export async function POST(request: NextRequest) {
       text,
       startedAt,
       endedAt,
+      ...(quote ? { quote, ask: body.ask === true } : {}),
     });
     return jsonWithCors(request, { line });
   }

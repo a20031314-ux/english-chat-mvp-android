@@ -21,6 +21,7 @@ import {
   type DmThread,
   type SendDecision,
 } from "../rooms/dm.ts";
+import { clipQuote, type LineQuote } from "../rooms/quote.ts";
 import { kvGetJson, kvIncrBy, kvListPush, kvListRange, kvListTrim, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
 
 const threadKey = (id: string) => `dm:v1:t:${id}`;
@@ -64,6 +65,8 @@ export async function send(input: {
   text: string;
   roomId?: string;
   lines?: DmMessage["lines"];
+  quote?: DmMessage["quote"];
+  ask?: boolean;
 }): Promise<SendResult> {
   const id = threadIdFor(input.from, input.to);
   const existing = await readThread(id);
@@ -89,6 +92,7 @@ export async function send(input: {
     at: now,
     ...(input.roomId ? { roomId: input.roomId } : {}),
     ...(input.lines ? { lines: input.lines } : {}),
+    ...(input.quote ? { quote: input.quote, ask: input.ask === true } : {}),
   };
   const members = [input.from, input.to].sort() as [string, string];
   const thread: DmThread = existing
@@ -163,4 +167,19 @@ export async function inbox(me: string): Promise<DmSummary[]> {
 /** 통화 기록은 방 하나에 한 번만(둘 다 끊어도). 처음 부른 쪽이 true. */
 export async function claimCallLog(roomId: string): Promise<boolean> {
   return kvSetJsonIfAbsent(logKey(roomId), 1, DM_TTL_SECONDS);
+}
+
+/**
+ * 집을 수 있는 줄 찾기: 글 메시지, 또는 통화 기록의 한 줄(index). 인용 글은 여기서 채운다.
+ */
+export async function findQuote(threadId: string, seq: number, index?: number): Promise<LineQuote | null> {
+  const found = (await readMessages(threadId)).find((message) => message.seq === seq);
+  if (!found) return null;
+  if (found.kind === "text") return { seq, nickname: "", text: clipQuote(found.text), accountId: found.from };
+  if (found.kind === "callLog" && typeof index === "number") {
+    const line = found.lines?.[index];
+    if (!line) return null;
+    return { seq, index, nickname: line.nickname, text: clipQuote(line.text), accountId: line.from };
+  }
+  return null;
 }

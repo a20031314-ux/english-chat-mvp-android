@@ -1,3 +1,5 @@
+import type { LineQuote } from "./quote.ts";
+
 /**
  * 사용자끼리 말하는 방(시험 기능)의 공통 약속.
  *
@@ -88,6 +90,10 @@ export type RoomLine = {
   startedAt: number;
   /** 말이 끝난 때. 겹침 표시에 쓴다. */
   endedAt: number;
+  /** 댓글이 집은 남의 줄(서버가 채움, rooms/quote.ts). */
+  quote?: LineQuote;
+  /** "이거 무슨 뜻이에요?" 질문이면 true(인용한 줄 옆에 ❓ 수). */
+  ask?: boolean;
 };
 
 export type SignalKind = "offer" | "answer" | "ice" | "bye";

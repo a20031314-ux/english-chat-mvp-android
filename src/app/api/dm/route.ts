@@ -3,7 +3,7 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
 import { readAccount } from "@/lib/server/accountStore";
 import { blockedEitherWay, isAccountId } from "@/lib/server/socialStore";
-import { claimCallLog, decline, inbox, markRead, readMessages, readThread, send } from "@/lib/server/dmStore";
+import { claimCallLog, decline, findQuote, inbox, markRead, readMessages, readThread, send } from "@/lib/server/dmStore";
 import { createRoom, isInviteCode, liveCount, readLines, readMeta } from "@/lib/server/roomStore";
 import { DM_MAX_CHARS, isThreadId, otherOf, threadIdFor } from "@/lib/rooms/dm";
 import { cleanText, isPeerId, isRoomId } from "@/lib/rooms/protocol";
@@ -57,7 +57,12 @@ export async function POST(request: NextRequest) {
     if (blocked) return bad(request, "BLOCKED", 403);
     const text = cleanText(body.text, DM_MAX_CHARS);
     if (!text) return bad(request, "NO_TEXT");
-    const result = await send({ from: me, to: target, kind: "text", text });
+    let quote = undefined;
+    if (typeof body.quoteSeq === "number") {
+      quote = await findQuote(id, body.quoteSeq, typeof body.quoteIndex === "number" ? body.quoteIndex : undefined);
+      if (!quote) return bad(request, "NO_QUOTE", 404);
+    }
+    const result = await send({ from: me, to: target, kind: "text", text, ...(quote ? { quote, ask: body.ask === true } : {}) });
     if (!result.ok) return bad(request, result.error, 409);
     return jsonWithCors(request, { thread: result.thread, message: result.message });
   }

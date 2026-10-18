@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { DM_PENDING_LIMIT, threadIdFor } from "../rooms/dm.ts";
-import { claimCallLog, decline, inbox, markRead, readMessages, send } from "./dmStore.ts";
+import { claimCallLog, decline, findQuote, inbox, markRead, readMessages, send } from "./dmStore.ts";
 
 // KV 접속 정보 없이 메모리로(kv.ts).
 delete process.env.KV_REST_API_URL;
@@ -51,4 +51,27 @@ test("받은 요청을 거절하면 보낸 사람은 못 보내고, 받은 쪽 �
 test("통화 기록은 방 하나에 한 번", async () => {
   assert.equal(await claimCallLog("room01"), true);
   assert.equal(await claimCallLog("room01"), false);
+});
+
+test("집기: 글 메시지와 통화 기록의 한 줄만 인용, 인용 글은 저장된 말에서", async () => {
+  const D = "lb_" + "d".repeat(24);
+  const E = "lb_" + "e".repeat(24);
+  const first = await send({ from: D, to: E, kind: "text", text: "¿Quedamos mañana a las seis?" });
+  assert.ok(first.ok);
+  await send({ from: E, to: D, kind: "text", text: "はい！" });
+  const id = threadIdFor(D, E);
+  const quote = await findQuote(id, first.message.seq);
+  assert.deepEqual(quote, { seq: first.message.seq, nickname: "", text: "¿Quedamos mañana a las seis?", accountId: D });
+  const asked = await send({ from: E, to: D, kind: "text", text: "これ、どういう意味ですか？", quote: quote!, ask: true });
+  assert.ok(asked.ok && asked.message.ask === true && asked.message.quote?.accountId === D);
+
+  const log = await send({ from: D, to: E, kind: "callLog", text: "2", roomId: "abcdef", lines: [
+    { from: D, nickname: "Lucía", text: "Me da igual" },
+    { from: E, nickname: "Yuki", text: "じゃあ六時で" },
+  ] });
+  assert.ok(log.ok);
+  assert.deepEqual(await findQuote(id, log.message.seq, 0), { seq: log.message.seq, index: 0, nickname: "Lucía", text: "Me da igual", accountId: D });
+  assert.equal(await findQuote(id, log.message.seq), null);
+  assert.equal(await findQuote(id, log.message.seq, 5), null);
+  assert.equal(await findQuote(id, 9999), null);
 });

@@ -138,6 +138,9 @@ export async function postLine(input: {
   text: string;
   startedAt: number;
   endedAt: number;
+  /** 집은 남의 줄 번호(묻기·답하기). 인용 글은 서버가 채운다. */
+  quoteSeq?: number;
+  ask?: boolean;
 }): Promise<RoomLine> {
   return (await call<{ line: RoomLine }>("line", input)).line;
 }
@@ -311,8 +314,12 @@ export function dmPoll(threadId: string, since: number): Promise<{ thread: DmThr
   return dm("poll", { threadId, since });
 }
 
-export function dmSend(target: string, text: string): Promise<{ thread: DmThread; message: DmMessage }> {
-  return dm("send", { target, text });
+export function dmSend(
+  target: string,
+  text: string,
+  quote?: { seq: number; index?: number; ask: boolean },
+): Promise<{ thread: DmThread; message: DmMessage }> {
+  return dm("send", quote ? { target, text, quoteSeq: quote.seq, quoteIndex: quote.index, ask: quote.ask } : { target, text });
 }
 
 export function dmDecline(threadId: string): Promise<{ ok: true }> {

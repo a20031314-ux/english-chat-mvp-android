@@ -14,6 +14,7 @@ import {
 import { byPerson, contextBefore, overlapsPrevious, timeline, type RoomLine, type RoomMember } from "@/lib/rooms/protocol";
 import type { PublicProfile } from "@/lib/rooms/social";
 import type { HowToSayExpression } from "@/lib/howToSay";
+import { questionCount } from "@/lib/rooms/quote";
 import { isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
 
 /*
@@ -339,6 +340,9 @@ export function Composer({
   recent,
   onSend,
   placeholder,
+  quote,
+  onClearQuote,
+  initialText,
 }: {
   t: RoomCopy;
   placeholder?: string;
@@ -347,8 +351,12 @@ export function Composer({
   targetLanguage: string;
   recent: () => string[];
   onSend: (text: string) => Promise<void>;
+  /** 집은 남의 말(묻기·답하기). 부르는 쪽은 인용이 바뀔 때 key를 바꿔 initialText를 새로 채운다. */
+  quote?: { nickname: string; text: string; ask: boolean } | null;
+  onClearQuote?: () => void;
+  initialText?: string;
 }) {
-  const [text, setText] = useState("");
+  const [text, setText] = useState(initialText ?? "");
   const [busy, setBusy] = useState(false);
   const [suggestion, setSuggestion] = useState<HowToSayExpression | null>(null);
   const [state, setState] = useState<"" | "loading" | "failed">("");
@@ -385,6 +393,22 @@ export function Composer({
 
   return (
     <div className="space-y-1.5">
+      {quote ? (
+        <div className="flex items-start gap-2 rounded-xl border-s-2 border-amber-300/70 bg-amber-300/5 px-2.5 py-1.5">
+          <div className="min-w-0 flex-1">
+            <p className="truncate text-[11px] text-amber-200" dir="auto">
+              ↪ {quote.nickname}
+            </p>
+            <p className="line-clamp-2 text-xs text-slate-300" dir="auto">
+              {quote.text}
+            </p>
+            {quote.ask ? <p className="mt-0.5 text-[10px] text-slate-500">{t.askHint}</p> : null}
+          </div>
+          <button type="button" onClick={onClearQuote} aria-label={t.quoteCancel} className="shrink-0 rounded px-1.5 text-sm text-slate-400 hover:bg-white/10">
+            ×
+          </button>
+        </div>
+      ) : null}
       {state === "loading" ? <p className="text-xs text-slate-400">{t.howToSayLoading}</p> : null}
       {state === "failed" ? <p className="text-xs text-rose-300">{t.howToSayFailed}</p> : null}
       {suggestion ? (
@@ -424,6 +448,7 @@ export function Composer({
       <div className="flex gap-1.5">
         <input
           ref={input}
+          autoFocus={Boolean(quote)}
           value={text}
           disabled={disabled}
           onChange={(event) => setText(event.target.value)}
@@ -462,6 +487,7 @@ export function Lines({
   targetLanguage,
   blocked,
   onPerson,
+  onQuote,
 }: {
   t: RoomCopy;
   lines: RoomLine[];
@@ -473,6 +499,8 @@ export function Lines({
   blocked: string[];
   /** 이름(사진)을 누르면 그 사람 프로필. */
   onPerson: (peerId: string, accountId: string | null) => void;
+  /** 남의 줄을 집어 묻기(ask) 또는 답하기. 없으면 버튼을 안 보인다. */
+  onQuote?: (line: RoomLine, ask: boolean) => void;
 }) {
   const [open, setOpen] = useState<Record<number, string | null>>({});
   const scroller = useRef<HTMLDivElement>(null);
@@ -519,6 +547,10 @@ export function Lines({
     const translation = open[line.seq];
     const isOpen = line.seq in open;
     const typed = line.kind === "text";
+    const others = line.peerId !== selfId;
+    // 누가 내 말을 물었으면 그 질문 줄을 눈에 띄게.
+    const askedMe = Boolean(line.ask && line.quote?.peerId === selfId && others);
+    const asked = questionCount(lines, line.seq);
     return (
       <li key={line.seq} className="flex items-start gap-2">
         {showName ? (
@@ -531,29 +563,60 @@ export function Lines({
             <Face accountId={line.accountId ?? null} name={line.nickname} size={28} />
           </button>
         ) : null}
-        <button
-          type="button"
-          onClick={() => void toggle(line)}
-          className={`min-w-0 flex-1 rounded-xl px-3 py-2 text-start ${
-            typed ? "border border-dashed border-white/15" : ""
-          } ${line.peerId === selfId ? "bg-white/[0.07]" : "bg-white/[0.03]"} hover:bg-white/10`}
-        >
-          {showName || typed ? (
-            <span className={`me-2 text-xs font-medium ${colorFor(line.peerId)}`} dir="auto">
-              {showName ? line.nickname : null}
-              {typed ? <span className="ms-1 text-[10px] text-slate-500">💬 {t.comment}</span> : null}
-              {overlap ? <span className="ms-1 text-[10px] text-slate-500">· {t.overlap}</span> : null}
+        <div className="min-w-0 flex-1">
+          <button
+            type="button"
+            onClick={() => void toggle(line)}
+            className={`w-full rounded-xl px-3 py-2 text-start ${
+              askedMe ? "border border-amber-300/60" : typed ? "border border-dashed border-white/15" : ""
+            } ${line.peerId === selfId ? "bg-white/[0.07]" : "bg-white/[0.03]"} hover:bg-white/10`}
+          >
+            {showName || typed || asked > 0 ? (
+              <span className={`me-2 text-xs font-medium ${colorFor(line.peerId)}`} dir="auto">
+                {showName ? line.nickname : null}
+                {typed ? <span className="ms-1 text-[10px] text-slate-500">💬 {t.comment}</span> : null}
+                {overlap ? <span className="ms-1 text-[10px] text-slate-500">· {t.overlap}</span> : null}
+                {asked > 0 ? <span className="ms-1 text-[10px] text-amber-300">❓ {asked}</span> : null}
+              </span>
+            ) : null}
+            {askedMe ? (
+              <span className="block text-[11px] text-amber-200" dir="auto">
+                {t.askedYou.replace("{name}", line.nickname)}
+              </span>
+            ) : null}
+            {line.quote ? (
+              <span className="my-1 block border-s-2 border-white/25 ps-2 text-xs text-slate-400" dir="auto">
+                ↪ {line.quote.nickname}: {line.quote.text}
+              </span>
+            ) : null}
+            <span className={`block leading-snug text-white ${typed ? "text-sm" : "text-[15px]"}`} dir="auto">
+              {line.text}
             </span>
+            {isOpen ? (
+              <span className="mt-1 block text-sm text-slate-300" dir="auto">
+                {translation ?? t.translating}
+              </span>
+            ) : null}
+          </button>
+          {isOpen && others && onQuote ? (
+            <div className="mt-1 flex gap-1.5 ps-1">
+              <button
+                type="button"
+                onClick={() => onQuote(line, true)}
+                className="rounded-lg border border-amber-300/40 px-2 py-0.5 text-xs text-amber-200 hover:bg-amber-300/10"
+              >
+                ❓ {t.askMeaning}
+              </button>
+              <button
+                type="button"
+                onClick={() => onQuote(line, false)}
+                className="rounded-lg border border-white/15 px-2 py-0.5 text-xs text-slate-300 hover:bg-white/10"
+              >
+                ↩ {t.replyTo}
+              </button>
+            </div>
           ) : null}
-          <span className={`block leading-snug text-white ${typed ? "text-sm" : "text-[15px]"}`} dir="auto">
-            {line.text}
-          </span>
-          {isOpen ? (
-            <span className="mt-1 block text-sm text-slate-300" dir="auto">
-              {translation ?? t.translating}
-            </span>
-          ) : null}
-        </button>
+        </div>
       </li>
     );
   };

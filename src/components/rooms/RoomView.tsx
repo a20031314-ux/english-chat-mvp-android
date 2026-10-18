@@ -27,6 +27,7 @@ import {
   type RoomMeta,
   type RoomRole,
 } from "@/lib/rooms/protocol";
+import { askPhrase } from "@/lib/rooms/quote";
 import { Composer, Face, Lines, ProfileSheet, languagePair } from "./RoomParts";
 
 /**
@@ -113,6 +114,8 @@ export function RoomView({
 
   const isHost = peerId === room.hostPeerId;
   // 방장이 다시 들어오면 서버가 방장 자리를 새 peerId로 옮긴다 — 버튼 이름(방 닫기)을 맞추려고 들어갈 때 받은 값으로.
+  // 집은 남의 줄 — 댓글창 위에 인용으로 붙는다(묻기면 학습 언어 질문이 미리 채워짐).
+  const [quoting, setQuoting] = useState<{ line: RoomLine; ask: boolean } | null>(null);
   const [closesOnLeave, setClosesOnLeave] = useState(isHost && !room.private);
   const free = Boolean(room.private) || canSeatFreely(peerId, room.hostPeerId, members);
 
@@ -512,10 +515,15 @@ export function RoomView({
         targetLanguage={targetLanguage}
         blocked={blocked}
         onPerson={openPerson}
+        onQuote={(line, ask) => setQuoting({ line, ask })}
       />
 
       <footer className="shrink-0 space-y-2 border-t border-white/10 px-4 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] pt-2">
         <Composer
+          key={quoting ? `q${quoting.line.seq}${quoting.ask ? "a" : "r"}` : "plain"}
+          quote={quoting ? { nickname: quoting.line.nickname, text: quoting.line.text, ask: quoting.ask } : null}
+          onClearQuote={() => setQuoting(null)}
+          initialText={quoting?.ask ? askPhrase(targetLanguage) : ""}
           t={t}
           disabled={!joined}
           locale={locale}
@@ -530,8 +538,10 @@ export function RoomView({
                 text,
                 startedAt: Date.now() + offsetRef.current,
                 endedAt: Date.now() + offsetRef.current,
+                ...(quoting ? { quoteSeq: quoting.line.seq, ask: quoting.ask } : {}),
               }),
             );
+            setQuoting(null);
           }}
         />
         <p className="text-xs text-slate-500" dir="auto">
