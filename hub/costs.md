@@ -81,6 +81,7 @@
 | notesPlace | 0.7원 | 1 | gpt-4o-mini 2000/300 토큰 | 가정 |
 | roleplayContext | 0.7원 | 1 | gpt-4o-mini 2000/300 토큰 | 가정 |
 | roleplayCorrect | 0.7원 | 1 | gpt-4o-mini 2000/300 토큰 | 가정 |
+| roomHint | 0.7원 | 1 | gpt-4o-mini 2000/300 토큰 | 가정 |
 | translate | 0.7원 | 1 | gpt-4o-mini 2000/300 토큰 | 가정 |
 | videoAnalyze | 0.7원 | 1 | gpt-4o-mini 2000/300 토큰 | 가정 |
 | vocabGloss | 0.7원 | 1 | gpt-4o-mini 2000/300 토큰 | 가정 |
@@ -117,7 +118,7 @@
 - 모델 단가: https://developers.openai.com/api/docs/pricing (2026-09-04 확인). 1달러 1400원(2026-09-04).
 - 음성 합성 분당 $0.015 — 통화 비용의 대부분, `cost.ts`에서 가장 약한 숫자.
 - 잰 적 없는 모델 호출 한 번 = 2000/300 토큰. 실측 보고서는 서버가 잰 토큰(`usage:tok:*`)이 20번 넘게 쌓인 기능부터 그 값을 씁니다.
-- 가정으로 값을 매기는 기능 37개: chat, chatReread, howToSay, howToSayCard, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, learnerObserve, curriculumMissions, learnerPick, notesPlace, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, expressionUnits, vocabSearch, contentDiscovery.
+- 가정으로 값을 매기는 기능 38개: chat, chatReread, howToSay, howToSayCard, roomHint, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, learnerObserve, curriculumMissions, learnerPick, notesPlace, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, expressionUnits, vocabSearch, contentDiscovery.
 
 ## 새 기능을 넣을 때
 
