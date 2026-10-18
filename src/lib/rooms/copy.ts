@@ -1,16 +1,12 @@
+import { ROOM_COPY_LOCALES } from "./copy.locales.ts";
+
 /**
- * 방(시험 기능) 화면 문구. 숨은 입구로만 들어오는 시험이라 지금은 한국어와
- * 영어만 둔다 — 한국어 앱은 한국어, 나머지는 영어. 시험을 넘어 정식 화면이
- * 되면 copy.ts와 overlays.json(14개 언어)으로 옮긴다(hub/RULES.md 1번).
+ * 말하는 방·메시지 화면 문구. 한국어·영어는 여기, 나머지 12개 언어는 copy.locales.ts.
+ * 이 화면 문구는 copy.ts(UICopy)와 따로 둔다 — 탭 이름·새로워진 점만 copy.ts에.
+ * 새 키는 14개 언어 모두에 넣는다(copy.test.ts가 확인, hub/RULES.md 1번).
  */
 const ko = {
-  title: "말하는 방 (시험)",
-  close: "닫기",
-  codeTitle: "시험 기능 입장 코드",
-  codeHint: "받은 코드를 넣으면 이 기기에서 방을 쓸 수 있어요.",
-  codePlaceholder: "입장 코드",
-  codeSubmit: "확인",
-  codeWrong: "코드가 맞지 않아요.",
+  title: "말하는 방",
   nickname: "방에서 쓸 이름",
   rooms: "열린 방",
   noRooms: "열린 방이 없어요. 하나 만들어 보세요.",
@@ -18,8 +14,6 @@ const ko = {
   newRoom: "새 방",
   roomName: "방 이름 (예: 日本語 ↔ 한국어)",
   create: "만들기",
-  joinSpeak: "말하며 들어가기",
-  joinListen: "듣기만",
   speakers: "말하기",
   listeners: "듣기",
   leave: "나가기",
@@ -47,7 +41,6 @@ const ko = {
   joinedAsListener: "말하기 자리가 차서 듣기로 들어갔어요.",
   error: "문제가 생겼어요. 잠시 뒤 다시 해 주세요.",
   earphones: "이어폰을 쓰면 상대 목소리가 내 자막에 섞이지 않아요.",
-  host: "방장",
   raiseHand: "손들기",
   lowerHand: "손 내리기",
   handUp: "손을 들었어요. 방장이 올려 주면 말할 수 있어요. 그동안 댓글로 참여해 보세요.",
@@ -68,7 +61,6 @@ const ko = {
   sayIt: "말하기 자리에 있으면 소리 내어 말해 보세요.",
   comment: "댓글",
   loginNeeded: "방에 들어가려면 로그인이 필요해요. 사진과 닉네임이 방에서 보여요.",
-  me: "내 프로필",
   followedRoom: "팔로우 중",
   follow: "팔로우",
   following: "팔로잉",
@@ -126,13 +118,7 @@ const ko = {
 type RoomCopy = typeof ko;
 
 const en: RoomCopy = {
-  title: "Talk rooms (test)",
-  close: "Close",
-  codeTitle: "Test invite code",
-  codeHint: "Enter the code you were given to use rooms on this device.",
-  codePlaceholder: "Invite code",
-  codeSubmit: "OK",
-  codeWrong: "That code doesn't match.",
+  title: "Talk rooms",
   nickname: "Your name in rooms",
   rooms: "Open rooms",
   noRooms: "No open rooms. Start one.",
@@ -140,8 +126,6 @@ const en: RoomCopy = {
   newRoom: "New room",
   roomName: "Room name (e.g. 日本語 ↔ English)",
   create: "Create",
-  joinSpeak: "Join and talk",
-  joinListen: "Just listen",
   speakers: "talking",
   listeners: "listening",
   leave: "Leave",
@@ -169,7 +153,6 @@ const en: RoomCopy = {
   joinedAsListener: "The talking seats were full, so you joined as a listener.",
   error: "Something went wrong. Try again in a moment.",
   earphones: "Use earphones so others' voices don't end up in your captions.",
-  host: "host",
   raiseHand: "Raise hand",
   lowerHand: "Lower hand",
   handUp: "Hand raised. You can talk once the host brings you up. Join in with comments meanwhile.",
@@ -190,7 +173,6 @@ const en: RoomCopy = {
   sayIt: "On a talking seat? Try saying it out loud.",
   comment: "comment",
   loginNeeded: "Sign in to join rooms. Your photo and nickname show in the room.",
-  me: "My profile",
   followedRoom: "Following",
   follow: "Follow",
   following: "Following",
@@ -245,8 +227,13 @@ const en: RoomCopy = {
   retention: "Messages are kept for 30 days after the last one.",
 };
 
+/** 앱 언어의 문구. 빠진 키는 영어로(copy.test.ts가 빠짐을 막는다). */
 export function roomCopy(locale: string): RoomCopy {
-  return locale === "ko" ? ko : en;
+  if (locale === "ko") return ko;
+  const local = ROOM_COPY_LOCALES[locale];
+  return local ? ({ ...en, ...local } as RoomCopy) : en;
 }
+
+export const ROOM_COPY_KEYS = Object.keys(en) as (keyof RoomCopy)[];
 
 export type { RoomCopy };

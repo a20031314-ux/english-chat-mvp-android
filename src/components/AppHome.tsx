@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
 import { ChatWindow } from "@/components/ChatWindow";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { readAppLocale } from "@/components/LearningBookPanel";
@@ -19,7 +19,6 @@ import { BillingUiProvider, BillingOpenButton } from "@/components/BillingScreen
 import { GuideButton } from "@/components/GuideSheet";
 import { FeedbackButton } from "@/components/FeedbackButton";
 import { RoomsScreen } from "@/components/rooms/RoomsScreen";
-import { roomsUnlocked } from "@/lib/rooms/client";
 import { socialFeaturesEnabled } from "@/lib/platform";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
@@ -33,9 +32,9 @@ import {
 /** 방 입장 코드는 이 기기의 저장값이라 바뀌었다고 알려 주는 곳이 없다. */
 const noSubscribe = () => () => {};
 
-export type AppTab = "map" | "chat" | "roleplay" | "video" | "vocab";
+export type AppTab = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms";
 
-const TABS: AppTab[] = ["map", "chat", "roleplay", "video", "vocab"];
+const TABS: AppTab[] = ["map", "chat", "roleplay", "video", "vocab", "rooms"];
 
 function isAppTab(value: string | null): value is AppTab {
   return TABS.includes(value as AppTab);
@@ -74,36 +73,11 @@ function AppHomeInner({
   // ?screen=roleplay on a language that has none — and correcting that in an
   // effect would render the empty tab once before replacing it.
   const shownTab: AppTab =
-    tab === "roleplay" && !roleplayAvailable ? "chat" : tab;
+    (tab === "roleplay" && !roleplayAvailable) || (tab === "rooms" && !socialFeaturesEnabled()) ? "chat" : tab;
 
-  // 말하는 방(시험 기능): 숨은 입구. "?"를 길게 누르면 입장 코드 화면이 열리고,
-  // 코드를 넣은 기기에는 상단에 방 버튼이 생긴다. 웹 확인용으로 ?rooms=1도.
-  // iOS 1차 출시엔 방·메시지를 통째로 끈다(`lib/platform.ts`): 입구·🎙 버튼·?rooms=1 모두.
+  // 말하는 방: 하단 탭(2.68부터 모두에게). iOS 1차 출시엔 방·메시지를 통째로 끈다
+  // (`lib/platform.ts`) — 그때는 탭도 ?screen=rooms도 채팅으로.
   const socialOn = useSyncExternalStore(noSubscribe, socialFeaturesEnabled, () => false);
-  const [roomsOpen, setRoomsOpen] = useState(() => {
-    // 서버(미리 만든 HTML)에선 window가 없어 false. 열린 화면도 처음 그릴 때는
-    // 아무것도 안 그리므로(FullScreenLayer) 하이드레이션이 어긋나지 않는다.
-    if (typeof window === "undefined") return false;
-    if (!socialFeaturesEnabled()) return false;
-    try {
-      return new URLSearchParams(window.location.search).get("rooms") === "1";
-    } catch {
-      return false;
-    }
-  });
-  const [, setRoomsSeen] = useState(0);
-  const roomsShown = useSyncExternalStore(noSubscribe, roomsUnlocked, () => false);
-  const longPress = useRef<{ timer: number; fired: boolean }>({ timer: 0, fired: false });
-  const startLongPress = () => {
-    if (!socialOn) return;
-    window.clearTimeout(longPress.current.timer);
-    longPress.current.fired = false;
-    longPress.current.timer = window.setTimeout(() => {
-      longPress.current.fired = true;
-      setRoomsOpen(true);
-    }, 900);
-  };
-  const endLongPress = () => window.clearTimeout(longPress.current.timer);
 
   useEffect(() => {
     document.documentElement.lang = locale;
@@ -178,6 +152,7 @@ function AppHomeInner({
       : []),
     { id: "video", label: ui.homeTabVideo },
     { id: "vocab", label: ui.homeTabVocab },
+    ...(socialOn ? [{ id: "rooms" as const, label: ui.homeTabRooms }] : []),
   ];
 
   return (
@@ -197,51 +172,12 @@ function AppHomeInner({
                 label={ui.uiLanguageLabel}
               />
               <BillingOpenButton ui={ui} />
-              <span
-                className="contents"
-                onPointerDown={startLongPress}
-                onPointerUp={endLongPress}
-                onPointerLeave={endLongPress}
-                onPointerCancel={endLongPress}
-                onContextMenu={(event) => event.preventDefault()}
-                onClickCapture={(event) => {
-                  // 길게 눌러 방을 열었으면 사용법은 열지 않는다.
-                  if (longPress.current.fired) {
-                    longPress.current.fired = false;
-                    event.stopPropagation();
-                    event.preventDefault();
-                  }
-                }}
-              >
-                <GuideButton ui={ui} locale={locale} tab={shownTab} tabs={tabItems} />
-              </span>
-              {socialOn && roomsShown ? (
-                <button
-                  type="button"
-                  onClick={() => setRoomsOpen(true)}
-                  aria-label="Rooms"
-                  className="rounded-lg border border-white/15 px-2 py-1 text-xs text-slate-200"
-                >
-                  🎙
-                </button>
-              ) : null}
+              <GuideButton ui={ui} locale={locale} tab={shownTab} tabs={tabItems} />
               <FeedbackButton ui={ui} locale={locale} tab={shownTab} />
             </div>
             {/* Above everything, because it is about everything: this is the
                 only way anyone gets told their build has to be replaced. */}
             <UpdateNotice ui={ui} locale={locale} />
-            {socialOn && roomsOpen ? (
-              <RoomsScreen
-                ui={ui}
-                locale={locale}
-                targetLanguage={targetLanguage}
-                onClose={() => {
-                  setRoomsOpen(false);
-                  // 코드를 막 넣었으면 상단 방 버튼이 생기도록 다시 그린다.
-                  setRoomsSeen((n) => n + 1);
-                }}
-              />
-            ) : null}
             {/* Once, on the first launch after an update. */}
             <WhatsNewSheet ui={ui} locale={locale} onOpenTab={openTab} />
             <div className="relative z-0 min-h-0 flex-1 overflow-hidden p-2 pb-0 sm:p-4 sm:pb-0">
@@ -313,6 +249,12 @@ function AppHomeInner({
                   <div className="min-h-0 flex-1 overflow-hidden">
                     <VocabularyPanel locale={locale} ui={ui} />
                   </div>
+                </div>
+              ) : null}
+
+              {shownTab === "rooms" ? (
+                <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
+                  <RoomsScreen ui={ui} locale={locale} targetLanguage={targetLanguage} />
                 </div>
               ) : null}
             </div>

@@ -11,9 +11,13 @@ test("입장 코드: 환경 변수가 없으면 기본 코드, 대소문자 무�
   delete process.env.ROOM_INVITE_CODES;
   assert.equal(isInviteCode("lb2026"), true);
   assert.equal(isInviteCode("nope"), false);
+  // 코드 없이 오는 2.68 탭은 통과(환경 변수가 없을 때).
+  assert.equal(isInviteCode(undefined), true);
+  assert.equal(isInviteCode(""), true);
   process.env.ROOM_INVITE_CODES = "alpha, beta";
   assert.equal(isInviteCode("BETA"), true);
   assert.equal(isInviteCode("LB2026"), false);
+  assert.equal(isInviteCode(undefined), false);
   delete process.env.ROOM_INVITE_CODES;
 });
 

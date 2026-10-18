@@ -72,6 +72,8 @@ async function loadModules() {
 }
 
 const { copy, RELEASE_NOTES } = await loadModules();
+// 말하는 방 화면 문구(copy.ts와 따로, src/lib/rooms/copy.ts) — 단계에서 버튼 이름을 찾는 데.
+const { roomCopy: roomCopyFor } = await import(`file://${path.join(ROOT, "src/lib/rooms/copy.ts").replace(/\\/g, "/")}`);
 /**
  * `guide` instead of a version takes the pictures for the map's how-to
  * (src/lib/guide/content.ts, sections with a `shot`) into public/guide/<locale>/.
@@ -363,7 +365,127 @@ const exactly = (text) => new RegExp(`^${escape(text)}$`);
  * How to reach each picture. Keyed by the `shot` names release notes use; a
  * release that needs a new picture adds a step here.
  */
+
+/**
+ * 말하는 방·메시지·계정 장면(2.68). 사람끼리 하는 기능이라 실제 사람을 부를 수 없어
+ * /api/rooms·/api/social·/api/dm·/api/account/me를 고정 응답으로 바꿔 찍는다
+ * (번역·표현만 운영 API). 얼굴은 사진 대신 색 원(실제 사람 얼굴이 아님).
+ */
+const FACE = (a, b) =>
+  "data:image/svg+xml;utf8," +
+  encodeURIComponent(
+    `<svg xmlns="http://www.w3.org/2000/svg" width="96" height="96"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="${a}"/><stop offset="1" stop-color="${b}"/></linearGradient></defs><rect width="96" height="96" fill="url(#g)"/></svg>`,
+  );
+const PEOPLE = {
+  me: { id: "lb_" + "1".repeat(24), nickname: "Minji", photo: FACE("#7c3aed", "#f59e0b") },
+  yuki: { id: "lb_" + "2".repeat(24), nickname: "Yuki", photo: FACE("#0ea5e9", "#22c55e") },
+  omar: { id: "lb_" + "3".repeat(24), nickname: "Omar", photo: FACE("#f43f5e", "#fb923c") },
+  lucia: { id: "lb_" + "4".repeat(24), nickname: "Lucía", photo: FACE("#14b8a6", "#6366f1") },
+};
+const ROOM_LINES = {
+  en: [
+    ["yuki", "I went to Kyoto last weekend. The temples were beautiful."],
+    ["lucia", "Nice! Did you try any local food?"],
+    ["yuki", "Yes, I had matcha ice cream. It was so good."],
+    ["omar", "I want to go to Japan someday.", "text"],
+  ],
+  es: [
+    ["yuki", "El fin de semana pasado fui a Kioto. Los templos eran preciosos."],
+    ["lucia", "¡Qué bien! ¿Probaste la comida local?"],
+    ["yuki", "Sí, tomé helado de matcha. Estaba buenísimo."],
+    ["omar", "Algún día quiero ir a Japón.", "text"],
+  ],
+};
+const DM_LINES = {
+  en: { hi: "Hi! Thanks for the chat in the room.", reply: "It was fun! Do you want to practice again tomorrow?" },
+  es: { hi: "¡Hola! Gracias por la charla en la sala.", reply: "¡Fue divertido! ¿Practicamos otra vez mañana?" },
+};
+function socialMocks(page, target, ui) {
+  const now = Date.now();
+  const roomName = target === "es" ? "Español ↔ 日本語" : "English ↔ 日本語";
+  const room = { id: "capt01", name: roomName, languages: [target, "ja"], hostPeerId: "p_yukiyukiyuki", hostAccountId: PEOPLE.yuki.id, hostNickname: "Yuki", createdAt: now - 600_000 };
+  const member = (key, peerId, role, extra = {}) => ({ peerId, nickname: PEOPLE[key].nickname, role, muted: false, hand: false, accountId: PEOPLE[key].id, langs: [target, "ja"], joinedAt: now - 500_000, lastSeen: now, ...extra });
+  const peers = { yuki: "p_yukiyukiyuki", lucia: "p_lucialucialu", omar: "p_omaromaromar" };
+  const lines = ROOM_LINES[target].map(([who, text, kind], index) => ({
+    seq: index + 1, kind: kind ?? "speech", peerId: peers[who], accountId: PEOPLE[who].id, nickname: PEOPLE[who].nickname, text,
+    startedAt: now - 90_000 + index * 15_000, endedAt: now - 85_000 + index * 15_000,
+  }));
+  const account = { id: PEOPLE.me.id, createdAt: "2026-10-01T00:00:00.000Z", email: null, google: false, username: "minji", profile: { nickname: "Minji", bio: "🇰🇷 → 🇯🇵 ✈️ ☕", photo: PEOPLE.me.photo } };
+  const thread = { id: [PEOPLE.me.id, PEOPLE.yuki.id].sort().join("__"), members: [PEOPLE.me.id, PEOPLE.yuki.id].sort(), starter: PEOPLE.yuki.id, status: "open", createdAt: now - 7_200_000, lastAt: now - 60_000, lastText: DM_LINES[target].reply, lastFrom: PEOPLE.yuki.id, lastSeq: 4 };
+  const messages = [
+    { seq: 1, from: PEOPLE.yuki.id, kind: "text", text: DM_LINES[target].hi, at: now - 7_200_000 },
+    { seq: 2, from: PEOPLE.yuki.id, kind: "call", text: "", roomId: "capt02", at: now - 7_000_000 },
+    { seq: 3, from: PEOPLE.me.id, kind: "callLog", text: "3", roomId: "capt02", at: now - 6_400_000, lines: lines.slice(0, 3).map((line) => ({ from: line.accountId, nickname: line.nickname, text: line.text })) },
+    { seq: 4, from: PEOPLE.yuki.id, kind: "text", text: DM_LINES[target].reply, at: now - 60_000 },
+  ];
+  const profile = (key) => ({ id: PEOPLE[key].id, nickname: PEOPLE[key].nickname, bio: "", photo: PEOPLE[key].photo, since: "2026-09", followers: 12, following: 8, hosted: 5, helped: 9, isMe: key === "me", isFollowing: false, blockedByMe: false });
+  const json = (route, body) => route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(body) });
+  return Promise.all([
+    page.route("**/api/rooms", (route) => {
+      const body = JSON.parse(route.request().postData() || "{}");
+      const members = [member("yuki", peers.yuki, "speaker"), member("lucia", peers.lucia, "speaker"), member("omar", peers.omar, "listener", { hand: true }), member("me", body.peerId || "p_meeeeeeeeeee", "listener")];
+      if (body.action === "list") return json(route, { rooms: [{ ...room, speakers: 2, listeners: 2, faces: members.map((m) => ({ accountId: m.accountId, nickname: m.nickname })), followed: true }] });
+      if (body.action === "join") return json(route, { member: members[3], room, now: Date.now() });
+      if (body.action === "poll") return json(route, { now: Date.now(), room, members, signals: [], lines: body.since ? [] : lines });
+      if (body.action === "peek") return json(route, { room });
+      return json(route, { ok: true });
+    }),
+    page.route("**/api/social", (route) => {
+      const body = JSON.parse(route.request().postData() || "{}");
+      if (body.action === "mine") return json(route, { following: [], blocked: [] });
+      if (body.action === "profile") {
+        const key = Object.keys(PEOPLE).find((k) => PEOPLE[k].id === body.target) ?? "yuki";
+        return json(route, { profile: profile(key) });
+      }
+      return json(route, { ok: true });
+    }),
+    page.route("**/api/dm", (route) => {
+      const body = JSON.parse(route.request().postData() || "{}");
+      if (body.action === "inbox") return json(route, { threads: [{ thread, other: PEOPLE.yuki.id, unread: 1, request: false }] });
+      if (body.action === "open") return json(route, { thread, messages, blocked: false });
+      if (body.action === "poll") return json(route, { thread, messages: [] });
+      return json(route, { ok: true });
+    }),
+    page.route("**/api/account/me", (route) => json(route, { account })),
+    page.evaluate((acct) => {
+      localStorage.setItem("ec_auth_token", "capture-token");
+      localStorage.setItem("ec_account", JSON.stringify(acct));
+    }, account),
+  ]);
+}
+
 const STEPS = {
+  async rooms({ page, ui, locale, wait, target }) {
+    await socialMocks(page, target, ui);
+    await page.goto(`${BASE}/?screen=rooms`, { waitUntil: "networkidle" });
+    await wait(2000);
+    await page.getByRole("button", { name: exactly(roomCopyFor(locale).justListen) }).first().click();
+    await wait(3500);
+    // 둘째 줄(질문)을 눌러 앱 언어 번역을 띄운다(운영 /api/translate).
+    const line = page.locator('div[class*="z-[80]"] li > button.min-w-0').nth(1);
+    const translated = page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 30000 }).catch(() => undefined);
+    await line.click();
+    await translated;
+    await wait(1200);
+  },
+  async dm({ page, locale, wait }) {
+    const t = roomCopyFor(locale);
+    // 자리의 방장 얼굴 → 프로필 시트 → 메시지 → 대화(고정 응답).
+    await page.locator('div[class*="z-[80]"] header ul li button').first().click();
+    await wait(1500);
+    await page.locator('div[class*="z-[90]"]').getByRole("button", { name: new RegExp(escape(t.message)) }).click();
+    await wait(2500);
+    await page.locator('div[class*="z-[95]"] button', { hasText: t.callEnded }).click();
+    await wait(600);
+    const translated = page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 30000 }).catch(() => undefined);
+    await page.locator('div[class*="z-[95]"] div.max-w-\\[80\\%\\] > button').last().click();
+    await translated;
+    await wait(1200);
+  },
+  async account({ page, wait }) {
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    await wait(2500);
+  },
   async "view-map"({ page }) {
     await page.evaluate(() => localStorage.setItem("myViewMode", "map"));
   },

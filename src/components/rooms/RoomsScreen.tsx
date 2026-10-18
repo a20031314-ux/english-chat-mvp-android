@@ -13,9 +13,6 @@ import {
   listRooms,
   peekRoom,
   newPeerId,
-  readInviteCode,
-  unlock,
-  writeInviteCode,
 } from "@/lib/rooms/client";
 import { MAX_ROOM_NAME_CHARS, MAX_SPEAKERS, type RoomMeta, type RoomRole, type RoomSummary } from "@/lib/rooms/protocol";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
@@ -34,15 +31,12 @@ export function RoomsScreen({
   ui,
   locale,
   targetLanguage,
-  onClose,
 }: {
   ui: UICopy;
   locale: string;
   targetLanguage: string;
-  onClose: () => void;
 }) {
   const t = roomCopy(locale);
-  const [code, setCode] = useState(() => readInviteCode());
   const [peerId] = useState(() => newPeerId());
   const [inRoom, setInRoom] = useState<{ room: RoomSummary | RoomMeta; role: RoomRole; title?: string; back?: string } | null>(null);
   /** 열려 있는 1:1 대화의 상대 계정. 방 위에도 뜬다. */
@@ -59,60 +53,59 @@ export function RoomsScreen({
   };
 
   return (
-    // 다른 전체 화면(새로워진 점 등, z-70)보다 위: 방은 사용자가 직접 연 화면이다.
-    <BodyLayer>
-      <div className="fixed inset-0 z-[80] flex flex-col bg-[#050505]">
-        <div className="mx-auto flex h-[100dvh] w-full max-w-2xl flex-col pt-[env(safe-area-inset-top)]">
-          {!code ? (
-            <Shell title={t.title} onClose={onClose} t={t}>
-              <Gate t={t} onUnlocked={(next) => setCode(next)} />
-            </Shell>
-          ) : inRoom && account ? (
-            <RoomView
-              key={inRoom.room.id}
-              t={t}
-              room={inRoom.room}
-              wantRole={inRoom.role}
-              peerId={peerId}
-              nickname={nickname}
-              locale={locale}
-              targetLanguage={targetLanguage}
-              title={inRoom.title}
-              onLeave={() => {
-                const back = inRoom.back;
-                setInRoom(null);
-                if (back) setDmWith(back);
-              }}
-              onLeft={inRoom.room.private ? () => void dmEndCall(inRoom.room.id).catch(() => {}) : undefined}
-              onMessage={setDmWith}
-            />
-          ) : (
-            <Shell title={t.title} onClose={onClose} t={t}>
-              {account ? (
-                <Lobby
-                  t={t}
-                  peerId={peerId}
-                  me={{ id: account.id, nickname, photo: account.profile.photo }}
-                  targetLanguage={targetLanguage}
-                  locale={locale}
-                  onJoin={(room, role) => setInRoom({ room, role })}
-                  onMessage={setDmWith}
-                  onBadCode={() => {
-                    writeInviteCode("");
-                    setCode("");
-                  }}
-                />
-              ) : (
-                <div className="space-y-3">
-                  <p className="text-sm text-slate-300">{t.loginNeeded}</p>
-                  {/* My 탭의 계정 카드 그대로 — 누르면 로그인 시트(이 화면 위, z-85). */}
-                  <AccountCard ui={ui} locale={locale} />
-                </div>
-              )}
-            </Shell>
-          )}
-        </div>
+    <>
+      {/* 로비(방 목록·메시지)는 탭 안에. */}
+      <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
+        <h1 className="text-base font-semibold text-white">{t.title}</h1>
+      </header>
+      <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
+        {account ? (
+          <Lobby
+            t={t}
+            peerId={peerId}
+            me={{ id: account.id, nickname, photo: account.profile.photo }}
+            targetLanguage={targetLanguage}
+            locale={locale}
+            onJoin={(room, role) => setInRoom({ room, role })}
+            onMessage={setDmWith}
+          />
+        ) : (
+          <div className="space-y-3">
+            <p className="text-sm text-slate-300">{t.loginNeeded}</p>
+            {/* My 탭의 계정 카드 그대로 — 누르면 로그인 시트(z-85). */}
+            <AccountCard ui={ui} locale={locale} />
+          </div>
+        )}
       </div>
+
+      {/* 방 안은 화면 전체(탭 바 위, 새로워진 점 z-70보다 위). */}
+      {inRoom && account ? (
+        <BodyLayer>
+          <div className="fixed inset-0 z-[80] flex flex-col bg-[#050505]">
+            <div className="mx-auto flex h-[100dvh] w-full max-w-2xl flex-col pt-[env(safe-area-inset-top)]">
+              <RoomView
+                key={inRoom.room.id}
+                t={t}
+                room={inRoom.room}
+                wantRole={inRoom.role}
+                peerId={peerId}
+                nickname={nickname}
+                locale={locale}
+                targetLanguage={targetLanguage}
+                title={inRoom.title}
+                onLeave={() => {
+                  const back = inRoom.back;
+                  setInRoom(null);
+                  if (back) setDmWith(back);
+                }}
+                onLeft={inRoom.room.private ? () => void dmEndCall(inRoom.room.id).catch(() => {}) : undefined}
+                onMessage={setDmWith}
+              />
+            </div>
+          </div>
+        </BodyLayer>
+      ) : null}
+
       {dmWith && account ? (
         <DmThreadView
           key={dmWith}
@@ -126,69 +119,9 @@ export function RoomsScreen({
           onJoinCall={(room, title) => void joinCall(room, title)}
         />
       ) : null}
-    </BodyLayer>
-  );
-}
-
-function Shell({ title, onClose, t, children }: { title: string; onClose: () => void; t: RoomCopy; children: React.ReactNode }) {
-  return (
-    <>
-      <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
-        <h1 className="text-base font-semibold text-white">{title}</h1>
-        <button type="button" onClick={onClose} className="rounded-lg px-3 py-1.5 text-sm text-slate-300 hover:bg-white/10">
-          {t.close}
-        </button>
-      </header>
-      <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">{children}</div>
     </>
   );
 }
-
-function Gate({ t, onUnlocked }: { t: RoomCopy; onUnlocked: (code: string) => void }) {
-  const [value, setValue] = useState("");
-  const [wrong, setWrong] = useState(false);
-  const [busy, setBusy] = useState(false);
-  const submit = async () => {
-    const code = value.trim();
-    if (!code || busy) return;
-    setBusy(true);
-    const ok = await unlock(code);
-    setBusy(false);
-    if (!ok) {
-      setWrong(true);
-      return;
-    }
-    writeInviteCode(code);
-    onUnlocked(code);
-  };
-  return (
-    <div className="mx-auto mt-8 max-w-sm space-y-3">
-      <h2 className="text-lg font-semibold text-white">{t.codeTitle}</h2>
-      <p className="text-sm text-slate-400">{t.codeHint}</p>
-      <input
-        value={value}
-        onChange={(event) => {
-          setValue(event.target.value);
-          setWrong(false);
-        }}
-        onKeyDown={(event) => event.key === "Enter" && void submit()}
-        placeholder={t.codePlaceholder}
-        autoCapitalize="characters"
-        className="w-full rounded-xl border border-white/15 bg-white/5 px-3 py-2.5 text-white outline-none focus:border-white/40"
-      />
-      {wrong ? <p className="text-sm text-rose-300">{t.codeWrong}</p> : null}
-      <button
-        type="button"
-        onClick={() => void submit()}
-        disabled={busy}
-        className="w-full rounded-xl bg-white/90 px-3 py-2.5 font-medium text-black disabled:opacity-50"
-      >
-        {t.codeSubmit}
-      </button>
-    </div>
-  );
-}
-
 
 function Lobby({
   t,
@@ -197,7 +130,6 @@ function Lobby({
   targetLanguage,
   locale,
   onJoin,
-  onBadCode,
   onMessage,
 }: {
   t: RoomCopy;
@@ -206,7 +138,6 @@ function Lobby({
   targetLanguage: string;
   locale: string;
   onJoin: (room: RoomSummary | RoomMeta, role: RoomRole) => void;
-  onBadCode: () => void;
   onMessage: (accountId: string) => void;
 }) {
   const [tab, setTab] = useState<"rooms" | "messages">("rooms");
@@ -222,10 +153,9 @@ function Lobby({
       setRooms(await listRooms());
       setError("");
     } catch (failure) {
-      if (failure instanceof RoomApiError && failure.code === "BAD_CODE") onBadCode();
-      else setError(t.error);
+      setError(failure instanceof RoomApiError ? t.error : t.error);
     }
-  }, [onBadCode, t.error]);
+  }, [t.error]);
 
   useEffect(() => {
     void refresh();

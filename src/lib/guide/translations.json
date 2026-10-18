@@ -251,7 +251,34 @@
         }
       ]
     },
-    "_version": "2026-10-16c"
+    "_version": "2026-10-16c",
+    "rooms": {
+      "title": "Cómo usar las salas",
+      "sections": [
+        {
+          "heading": "Entrar a una sala",
+          "body": [
+            "Toca una sala para entrar. Si no eres el anfitrión, entras con la mano levantada y hablas cuando te suba. Con \"Solo escuchar\" escuchas en silencio.",
+            "Lo que dice cada persona queda en subtítulos. Toca una línea para traducirla a tu idioma teniendo en cuenta lo anterior."
+          ],
+          "shot": "rooms-room"
+        },
+        {
+          "heading": "Cuando no te salen las palabras",
+          "body": [
+            "Escribe en tu idioma abajo y toca \"En el idioma que aprendo\" para obtener una frase. Envíala como comentario o dila en voz alta desde un asiento para hablar."
+          ]
+        },
+        {
+          "heading": "Perfiles, mensajes y llamadas",
+          "body": [
+            "Toca una foto para abrir el perfil. Sigue o envía un mensaje; cuando te respondan, llama con 📞 desde la conversación. Al terminar, los subtítulos quedan guardados.",
+            "También puedes bloquear y denunciar desde el perfil. El anfitrión puede subir, bajar o expulsar a la gente."
+          ],
+          "shot": "rooms-dm"
+        }
+      ]
+    }
   },
   "ja": {
     "map": {
@@ -505,7 +532,34 @@
         }
       ]
     },
-    "_version": "2026-10-16c"
+    "_version": "2026-10-16c",
+    "rooms": {
+      "title": "トークルームの使い方",
+      "sections": [
+        {
+          "heading": "ルームに入る",
+          "body": [
+            "ロビーでルームをタップすると入れます。ホスト以外は手を挙げた状態で入り、ホストが上げてくれると話せます。「聞くだけ」で静かに聞くこともできます。",
+            "話した内容は人ごとに字幕で残ります。行をタップすると、前の会話をふまえて自分の言語に翻訳されます。"
+          ],
+          "shot": "rooms-room"
+        },
+        {
+          "heading": "言葉が出ないとき",
+          "body": [
+            "下の欄に自分の言語で書いて「学習言語で」を押すと文を作ってくれます。そのままコメントで送るか、話す席で声に出して言ってみましょう。"
+          ]
+        },
+        {
+          "heading": "プロフィール・メッセージ・通話",
+          "body": [
+            "写真をタップするとプロフィールが開きます。フォローやメッセージを送り、相手が返信したら会話の中の📞で通話できます。通話が終わると字幕が記録として残ります。",
+            "ブロックや報告もプロフィールから。ホストは人を上げる・下ろす・退出させることができます。"
+          ],
+          "shot": "rooms-dm"
+        }
+      ]
+    }
   },
   "zh": {
     "map": {
@@ -759,7 +813,34 @@
         }
       ]
     },
-    "_version": "2026-10-16c"
+    "_version": "2026-10-16c",
+    "rooms": {
+      "title": "语音房使用方法",
+      "sections": [
+        {
+          "heading": "进入房间",
+          "body": [
+            "在大厅点一个房间就能进入。不是房主的话，会举着手进入，房主让你上麦后就能说话。也可以选“只听”安静收听。",
+            "每个人说的话都会按人留成字幕。点一行，会结合前面的对话翻译成你的语言。"
+          ],
+          "shot": "rooms-room"
+        },
+        {
+          "heading": "说不出口时",
+          "body": [
+            "在下方用你习惯的语言写，点“用学习的语言”就会帮你组好句子。可以直接作为评论发送，或在麦上大声说出来。"
+          ]
+        },
+        {
+          "heading": "个人资料、消息和通话",
+          "body": [
+            "点照片打开个人资料。可以关注或发消息，对方回复后，在对话里点📞就能通话。通话结束后，字幕会作为记录保留。",
+            "拉黑和举报也在个人资料里。房主可以让人上麦、下麦或移出房间。"
+          ],
+          "shot": "rooms-dm"
+        }
+      ]
+    }
   },
   "vi": {
     "map": {
@@ -1013,7 +1094,34 @@
         }
       ]
     },
-    "_version": "2026-10-16c"
+    "_version": "2026-10-16c",
+    "rooms": {
+      "title": "Cách dùng phòng nói",
+      "sections": [
+        {
+          "heading": "Vào phòng",
+          "body": [
+            "Chạm vào một phòng để vào. Nếu không phải chủ phòng, bạn vào với tay đang giơ và nói được khi chủ phòng mời lên. Chọn \"Chỉ nghe\" để nghe yên lặng.",
+            "Lời của từng người được lưu thành phụ đề. Chạm vào một dòng để dịch sang ngôn ngữ của bạn theo ngữ cảnh phía trước."
+          ],
+          "shot": "rooms-room"
+        },
+        {
+          "heading": "Khi chưa nói được",
+          "body": [
+            "Viết bằng ngôn ngữ của bạn ở ô bên dưới và chạm \"Bằng ngôn ngữ đang học\" để có câu. Gửi thành bình luận hoặc nói to khi đang ở ghế nói."
+          ]
+        },
+        {
+          "heading": "Hồ sơ, tin nhắn và cuộc gọi",
+          "body": [
+            "Chạm vào ảnh để mở hồ sơ. Theo dõi hoặc gửi tin nhắn; khi họ trả lời, gọi bằng 📞 ngay trong cuộc trò chuyện. Khi gọi xong, phụ đề được lưu lại.",
+            "Chặn và báo cáo cũng ở hồ sơ. Chủ phòng có thể mời lên, mời xuống hoặc mời ra."
+          ],
+          "shot": "rooms-dm"
+        }
+      ]
+    }
   },
   "fr": {
     "map": {
@@ -1267,7 +1375,34 @@
         }
       ]
     },
-    "_version": "2026-10-16c"
+    "_version": "2026-10-16c",
+    "rooms": {
+      "title": "Utiliser les salons",
+      "sections": [
+        {
+          "heading": "Entrer dans un salon",
+          "body": [
+            "Touchez un salon pour y entrer. Si vous n’êtes pas l’hôte, vous entrez main levée et parlez quand l’hôte vous fait monter. « Juste écouter » permet d’écouter en silence.",
+            "Ce que dit chacun s’affiche en sous-titres. Touchez une ligne pour la traduire dans votre langue, en tenant compte de ce qui précède."
+          ],
+          "shot": "rooms-room"
+        },
+        {
+          "heading": "Quand les mots ne viennent pas",
+          "body": [
+            "Écrivez dans votre langue en bas et touchez « Dans la langue que j’apprends » pour obtenir une phrase. Envoyez-la en commentaire ou dites-la à voix haute depuis une place pour parler."
+          ]
+        },
+        {
+          "heading": "Profils, messages et appels",
+          "body": [
+            "Touchez une photo pour ouvrir le profil. Suivez ou écrivez ; quand la personne répond, appelez avec 📞 dans la conversation. À la fin, les sous-titres restent en mémoire.",
+            "Bloquer et signaler se font aussi depuis le profil. L’hôte peut faire monter, descendre ou exclure."
+          ],
+          "shot": "rooms-dm"
+        }
+      ]
+    }
   },
   "it": {
     "map": {
@@ -1521,7 +1656,34 @@
         }
       ]
     },
-    "_version": "2026-10-16c"
+    "_version": "2026-10-16c",
+    "rooms": {
+      "title": "Come usare le stanze",
+      "sections": [
+        {
+          "heading": "Entrare in una stanza",
+          "body": [
+            "Tocca una stanza per entrare. Se non sei l’host entri con la mano alzata e parli quando l’host ti fa salire. Con «Ascolta soltanto» ascolti in silenzio.",
+            "Ciò che dice ognuno resta come sottotitolo. Tocca una riga per tradurla nella tua lingua tenendo conto di ciò che viene prima."
+          ],
+          "shot": "rooms-room"
+        },
+        {
+          "heading": "Quando le parole non vengono",
+          "body": [
+            "Scrivi nella tua lingua qui sotto e tocca «Nella lingua che studio» per avere una frase. Mandala come commento o dilla ad alta voce da un posto per parlare."
+          ]
+        },
+        {
+          "heading": "Profili, messaggi e chiamate",
+          "body": [
+            "Tocca una foto per aprire il profilo. Segui o manda un messaggio; quando risponde, chiama con 📞 dalla conversazione. Alla fine i sottotitoli restano salvati.",
+            "Dal profilo puoi anche bloccare e segnalare. L’host può far salire, scendere o uscire le persone."
+          ],
+          "shot": "rooms-dm"
+        }
+      ]
+    }
   },
   "pt": {
     "map": {
@@ -1775,7 +1937,34 @@
         }
       ]
     },
-    "_version": "2026-10-16c"
+    "_version": "2026-10-16c",
+    "rooms": {
+      "title": "Como usar as salas",
+      "sections": [
+        {
+          "heading": "Entrar numa sala",
+          "body": [
+            "Toque numa sala para entrar. Se você não é o anfitrião, entra com a mão levantada e fala quando ele te chamar. Com \"Só ouvir\" você escuta em silêncio.",
+            "O que cada pessoa diz fica em legendas. Toque numa linha para traduzir para o seu idioma, levando em conta a conversa anterior."
+          ],
+          "shot": "rooms-room"
+        },
+        {
+          "heading": "Quando as palavras não saem",
+          "body": [
+            "Escreva no seu idioma embaixo e toque \"No idioma que aprendo\" para receber uma frase. Envie como comentário ou diga em voz alta de um lugar para falar."
+          ]
+        },
+        {
+          "heading": "Perfis, mensagens e ligações",
+          "body": [
+            "Toque numa foto para abrir o perfil. Siga ou mande mensagem; quando responderem, ligue com 📞 na conversa. Ao terminar, as legendas ficam salvas.",
+            "Bloquear e denunciar também fica no perfil. O anfitrião pode chamar, tirar ou remover pessoas."
+          ],
+          "shot": "rooms-dm"
+        }
+      ]
+    }
   },
   "ru": {
     "map": {
@@ -2029,7 +2218,34 @@
         }
       ]
     },
-    "_version": "2026-10-16c"
+    "_version": "2026-10-16c",
+    "rooms": {
+      "title": "Как пользоваться комнатами",
+      "sections": [
+        {
+          "heading": "Войти в комнату",
+          "body": [
+            "Нажмите на комнату, чтобы войти. Если вы не ведущий, вы входите с поднятой рукой и говорите, когда ведущий пригласит. «Только слушать» — чтобы просто слушать.",
+            "Сказанное каждым остаётся субтитрами. Нажмите на строку, чтобы перевести её на ваш язык с учётом предыдущего разговора."
+          ],
+          "shot": "rooms-room"
+        },
+        {
+          "heading": "Если слова не идут",
+          "body": [
+            "Напишите внизу на своём языке и нажмите «На изучаемом языке» — получите готовую фразу. Отправьте её комментарием или скажите вслух с места для разговора."
+          ]
+        },
+        {
+          "heading": "Профили, сообщения и звонки",
+          "body": [
+            "Нажмите на фото, чтобы открыть профиль. Подпишитесь или напишите; когда ответят, звоните через 📞 прямо в переписке. После звонка субтитры сохраняются.",
+            "Блокировка и жалоба — тоже в профиле. Ведущий может приглашать, снимать и удалять участников."
+          ],
+          "shot": "rooms-dm"
+        }
+      ]
+    }
   },
   "id": {
     "map": {
@@ -2283,7 +2499,34 @@
         }
       ]
     },
-    "_version": "2026-10-16c"
+    "_version": "2026-10-16c",
+    "rooms": {
+      "title": "Cara memakai ruang",
+      "sections": [
+        {
+          "heading": "Masuk ruang",
+          "body": [
+            "Ketuk ruang untuk masuk. Kalau bukan tuan rumah, kamu masuk dengan tangan terangkat dan bisa bicara setelah dinaikkan. \"Dengar saja\" untuk mendengar diam-diam.",
+            "Ucapan tiap orang tersimpan sebagai teks. Ketuk satu baris untuk menerjemahkannya ke bahasamu sesuai percakapan sebelumnya."
+          ],
+          "shot": "rooms-room"
+        },
+        {
+          "heading": "Kalau kata-kata belum keluar",
+          "body": [
+            "Tulis dengan bahasamu di kotak bawah lalu ketuk \"Dalam bahasa yang kupelajari\" untuk mendapat kalimat. Kirim sebagai komentar, atau ucapkan dari kursi bicara."
+          ]
+        },
+        {
+          "heading": "Profil, pesan, dan panggilan",
+          "body": [
+            "Ketuk foto untuk membuka profil. Ikuti atau kirim pesan; setelah dibalas, telepon dengan 📞 di percakapan. Setelah selesai, teksnya tersimpan.",
+            "Blokir dan lapor juga dari profil. Tuan rumah bisa menaikkan, menurunkan, atau mengeluarkan orang."
+          ],
+          "shot": "rooms-dm"
+        }
+      ]
+    }
   },
   "ar": {
     "map": {
@@ -2537,7 +2780,34 @@
         }
       ]
     },
-    "_version": "2026-10-16c"
+    "_version": "2026-10-16c",
+    "rooms": {
+      "title": "طريقة استخدام الغرف",
+      "sections": [
+        {
+          "heading": "الدخول إلى غرفة",
+          "body": [
+            "اضغط على غرفة للدخول. إن لم تكن المضيف تدخل رافعًا يدك وتتحدث عندما يرفعك المضيف. ويمكنك \"الاستماع فقط\" بهدوء.",
+            "يبقى كلام كل شخص نصًّا على الشاشة. اضغط على سطر لترجمته إلى لغتك مع مراعاة ما قبله."
+          ],
+          "shot": "rooms-room"
+        },
+        {
+          "heading": "عندما لا تسعفك الكلمات",
+          "body": [
+            "اكتب بلغتك في الخانة بالأسفل واضغط \"باللغة التي أتعلمها\" لتحصل على جملة. أرسلها تعليقًا أو قلها بصوت عالٍ من مقعد الحديث."
+          ]
+        },
+        {
+          "heading": "الملفات الشخصية والرسائل والمكالمات",
+          "body": [
+            "اضغط على صورة لفتح الملف الشخصي. تابِع أو أرسل رسالة، وبعد أن يردّ اتصل عبر 📞 من المحادثة. وعند الانتهاء يبقى النص سجلًّا.",
+            "الحظر والإبلاغ من الملف الشخصي أيضًا. ويمكن للمضيف رفع الأشخاص أو إنزالهم أو إخراجهم."
+          ],
+          "shot": "rooms-dm"
+        }
+      ]
+    }
   },
   "th": {
     "map": {
@@ -2791,7 +3061,34 @@
         }
       ]
     },
-    "_version": "2026-10-16c"
+    "_version": "2026-10-16c",
+    "rooms": {
+      "title": "วิธีใช้ห้องคุย",
+      "sections": [
+        {
+          "heading": "เข้าห้อง",
+          "body": [
+            "แตะห้องเพื่อเข้า ถ้าไม่ใช่เจ้าของห้องจะเข้าแบบยกมือไว้ และพูดได้เมื่อเจ้าของห้องเชิญขึ้น เลือก \"ฟังอย่างเดียว\" เพื่อฟังเงียบ ๆ ได้",
+            "คำพูดของแต่ละคนจะขึ้นเป็นคำบรรยาย แตะบรรทัดเพื่อแปลเป็นภาษาของคุณโดยดูบทสนทนาก่อนหน้า"
+          ],
+          "shot": "rooms-room"
+        },
+        {
+          "heading": "เมื่อพูดไม่ออก",
+          "body": [
+            "เขียนเป็นภาษาของคุณในช่องด้านล่างแล้วแตะ \"เป็นภาษาที่เรียน\" เพื่อรับประโยค ส่งเป็นคอมเมนต์ หรือพูดออกเสียงจากที่นั่งพูด"
+          ]
+        },
+        {
+          "heading": "โปรไฟล์ ข้อความ และการโทร",
+          "body": [
+            "แตะรูปเพื่อเปิดโปรไฟล์ ติดตามหรือส่งข้อความ เมื่ออีกฝ่ายตอบแล้วโทรด้วย 📞 ในแชตได้เลย วางสายแล้วคำบรรยายจะเก็บไว้เป็นบันทึก",
+            "บล็อกและรายงานได้จากโปรไฟล์ เจ้าของห้องเชิญขึ้น เชิญลง หรือเชิญออกได้"
+          ],
+          "shot": "rooms-dm"
+        }
+      ]
+    }
   },
   "hi": {
     "map": {
@@ -3045,6 +3342,33 @@
         }
       ]
     },
-    "_version": "2026-10-16c"
+    "_version": "2026-10-16c",
+    "rooms": {
+      "title": "रूम कैसे इस्तेमाल करें",
+      "sections": [
+        {
+          "heading": "रूम में आएँ",
+          "body": [
+            "लॉबी में किसी रूम पर टैप करें। होस्ट न हों तो आप हाथ उठाकर आते हैं और होस्ट ऊपर लाएँ तो बोल सकते हैं। \"सिर्फ़ सुनें\" से चुपचाप सुन सकते हैं।",
+            "हर व्यक्ति की बात कैप्शन में जमा होती है। पंक्ति पर टैप करें तो पिछली बातचीत देखकर आपकी भाषा में अनुवाद होगा।"
+          ],
+          "shot": "rooms-room"
+        },
+        {
+          "heading": "जब शब्द न सूझें",
+          "body": [
+            "नीचे अपनी भाषा में लिखें और \"सीख रही भाषा में\" दबाएँ, वाक्य बन जाएगा। उसे कमेंट में भेजें या बोलने की सीट से ज़ोर से बोलें।"
+          ]
+        },
+        {
+          "heading": "प्रोफ़ाइल, मैसेज और कॉल",
+          "body": [
+            "फ़ोटो पर टैप करके प्रोफ़ाइल खोलें। फ़ॉलो करें या मैसेज भेजें; जवाब आने पर बातचीत में 📞 से कॉल करें। कॉल खत्म होने पर कैप्शन रिकॉर्ड में रहते हैं।",
+            "ब्लॉक और रिपोर्ट भी प्रोफ़ाइल से। होस्ट लोगों को ऊपर ला, नीचे भेज या बाहर कर सकते हैं।"
+          ],
+          "shot": "rooms-dm"
+        }
+      ]
+    }
   }
 }

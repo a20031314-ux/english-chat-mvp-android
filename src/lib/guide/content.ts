@@ -17,9 +17,9 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-17";
+export const GUIDE_VERSION = "2026-10-18";
 
-export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab";
+export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms";
 
 export type GuideSection = {
   heading: string;
@@ -288,6 +288,33 @@ export const GUIDE_KO: Guide = {
       },
     ],
   },
+  rooms: {
+    "title": "말하는 방 사용법",
+    "sections": [
+      {
+        "heading": "방에 들어가기",
+        "body": [
+          "로비에서 방을 누르면 들어가요. 방장이 아니면 손을 든 채 들어가고, 방장이 올려 주면 말할 수 있어요. \"듣기만\"으로 조용히 들을 수도 있어요.",
+          "말한 내용은 사람마다 자막으로 쌓여요. 줄을 누르면 앞 대화를 보고 내 언어로 번역해요."
+        ],
+        "shot": "rooms-room"
+      },
+      {
+        "heading": "말이 막힐 때",
+        "body": [
+          "아래 칸에 편한 말로 쓰고 \"학습 언어로\"를 누르면 문장을 만들어 줘요. 그대로 댓글로 보내거나, 말하기 자리에서 소리 내어 말해 보세요."
+        ]
+      },
+      {
+        "heading": "프로필·메시지·통화",
+        "body": [
+          "사진을 누르면 프로필이 열려요. 팔로우하거나 메시지를 보내면, 상대가 답한 뒤 대화 안에서 📞로 통화할 수 있어요. 통화가 끝나면 자막이 기록으로 남아요.",
+          "차단·신고도 프로필에서 해요. 방장은 사람을 올리기·내리기·내보내기할 수 있어요."
+        ],
+        "shot": "rooms-dm"
+      }
+    ]
+  },
 };
 
 export const GUIDE_EN: Guide = {
@@ -541,5 +568,32 @@ export const GUIDE_EN: Guide = {
         shot: "vocab-characters",
       },
     ],
+  },
+  rooms: {
+    "title": "How to use Rooms",
+    "sections": [
+      {
+        "heading": "Join a room",
+        "body": [
+          "Tap a room in the lobby to go in. Unless you are the host, you join with your hand raised and can talk once the host brings you up. \"Just listen\" lets you listen quietly.",
+          "What each person says builds up as captions. Tap a line to translate it into your language, with the conversation before it in mind."
+        ],
+        "shot": "rooms-room"
+      },
+      {
+        "heading": "When the words won’t come",
+        "body": [
+          "Write in your own language in the box below and tap \"In my target language\" to get a sentence. Send it as a comment, or say it out loud from a talking seat."
+        ]
+      },
+      {
+        "heading": "Profiles, messages and calls",
+        "body": [
+          "Tap a photo to open a profile. Follow or send a message; once they reply, call with 📞 right in the conversation. When the call ends, its captions stay as a record.",
+          "Block and report from the profile too. The host can bring people up, move them down or remove them."
+        ],
+        "shot": "rooms-dm"
+      }
+    ]
   },
 };

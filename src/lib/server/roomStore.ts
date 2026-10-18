@@ -68,7 +68,14 @@ export function inviteCodes(): string[] {
   return codes;
 }
 
+/**
+ * 2.68부터 방은 탭으로 모두에게 열려 코드 없이 온다. Vercel에 ROOM_INVITE_CODES를
+ * 넣으면 다시 코드를 아는 사람만(시험으로 되돌릴 때). 코드를 보내는 2.67 이하
+ * 시험판의 기본 코드도 그대로 통한다.
+ */
 export function isInviteCode(value: unknown): boolean {
+  const required = Boolean(process.env.ROOM_INVITE_CODES?.trim());
+  if (!required && (value === undefined || value === null || value === "")) return true;
   return typeof value === "string" && inviteCodes().includes(value.trim().toUpperCase());
 }
 

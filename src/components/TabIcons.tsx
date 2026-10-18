@@ -5,7 +5,7 @@ type TabIconProps = {
   className?: string;
 };
 
-type TabId = "map" | "chat" | "roleplay" | "video" | "vocab";
+type TabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms";
 
 const iconBox = "h-6 w-6";
 
@@ -114,6 +114,20 @@ export function VocabTabIcon({ active, className = "" }: TabIconProps) {
   );
 }
 
+export function RoomsTabIcon({ active, className = "" }: TabIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={`${iconBox} ${className}`} aria-hidden>
+      {/* A microphone between two people: a room where people talk to each other. */}
+      <circle cx="5.2" cy="9" r="2.1" className={active ? "fill-white/55" : "fill-white/20"} />
+      <circle cx="18.8" cy="9" r="2.1" className={active ? "fill-white/55" : "fill-white/20"} />
+      <path d="M2.4 16.6c.5-2 1.6-3.1 2.8-3.1s2.3 1.1 2.8 3.1" className={active ? "fill-white/55" : "fill-white/20"} />
+      <path d="M16 16.6c.5-2 1.6-3.1 2.8-3.1s2.3 1.1 2.8 3.1" className={active ? "fill-white/55" : "fill-white/20"} />
+      <rect x="9.6" y="4" width="4.8" height="9" rx="2.4" className={active ? "fill-[#e8e8e4]" : "fill-white/40"} />
+      <path d="M8.2 11.2a3.8 3.8 0 0 0 7.6 0M12 15v4.2M9.6 19.4h4.8" stroke="white" strokeWidth="1.4" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export const TAB_ICON_META: Record<
   TabId,
   {
@@ -144,6 +158,11 @@ export const TAB_ICON_META: Record<
   },
   vocab: {
     Icon: VocabTabIcon,
+    activeBg: "bg-white/10 tb-glow-platinum",
+    idleBg: "hover:bg-white/5",
+  },
+  rooms: {
+    Icon: RoomsTabIcon,
     activeBg: "bg-white/10 tb-glow-platinum",
     idleBg: "hover:bg-white/5",
   },

@@ -482,7 +482,14 @@
     "accountPasswordChanged": "パスワードを変更しました。",
     "updateSeeChanges": "変更点を見る",
     "updateSheetTitle": "アップデートでこう変わります",
-    "updateLater": "あとで"
+    "updateLater": "あとで",
+    "homeTabRooms": "トークルーム",
+    "whatsNewRoomsTitle": "トークルームができました",
+    "whatsNewRoomsBody": "みんなと声で話せます。話した内容は人ごとに字幕で残り、行をタップすると自分の言語に翻訳されます。言葉が出ないときはコメントで参加できます。",
+    "whatsNewDmTitle": "プロフィールからメッセージと通話",
+    "whatsNewDmBody": "写真をタップするとプロフィールが開きます。フォローしたりメッセージを送ったりして、会話の中からそのまま通話できます。通話が終わると字幕が記録として残ります。",
+    "whatsNewAccountTitle": "ログインとプロフィール",
+    "whatsNewAccountBody": "IDでログインすると、機種を変えても記録とサブスクリプションが引き継がれます。写真・ニックネーム・自己紹介はルームとメッセージに表示されます。"
   },
   "zh": {
     "billingClose": "关闭",
@@ -967,7 +974,14 @@
     "accountPasswordChanged": "密码已修改。",
     "updateSeeChanges": "查看更新内容",
     "updateSheetTitle": "更新后会有这些变化",
-    "updateLater": "以后再说"
+    "updateLater": "以后再说",
+    "homeTabRooms": "语音房",
+    "whatsNewRoomsTitle": "语音房上线了",
+    "whatsNewRoomsBody": "和大家用声音聊天。每个人说的话都会按人留成字幕，点一行就能翻译成你的语言。说不出口时，可以用评论参与。",
+    "whatsNewDmTitle": "从个人资料发消息、打电话",
+    "whatsNewDmBody": "点头像打开个人资料。可以关注、发消息，并在对话里直接通话。通话结束后，字幕会作为记录保留。",
+    "whatsNewAccountTitle": "登录和个人资料",
+    "whatsNewAccountBody": "用账号登录后，换手机也能接着用学习记录和订阅。你的照片、昵称和自我介绍会显示在语音房和消息里。"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -1454,7 +1468,14 @@
     "accountPasswordChanged": "Đã đổi mật khẩu.",
     "updateSeeChanges": "Xem điểm mới",
     "updateSheetTitle": "Cập nhật sẽ mang lại những thay đổi này",
-    "updateLater": "Để sau"
+    "updateLater": "Để sau",
+    "homeTabRooms": "Phòng nói",
+    "whatsNewRoomsTitle": "Đã có phòng nói chuyện",
+    "whatsNewRoomsBody": "Nói chuyện bằng giọng với mọi người. Lời của từng người được lưu thành phụ đề, chạm vào một dòng để dịch sang ngôn ngữ của bạn. Nếu chưa nói được, hãy tham gia bằng bình luận.",
+    "whatsNewDmTitle": "Nhắn tin và gọi từ hồ sơ",
+    "whatsNewDmBody": "Chạm vào ảnh để mở hồ sơ. Theo dõi, gửi tin nhắn và gọi ngay trong cuộc trò chuyện. Khi cuộc gọi kết thúc, phụ đề được lưu lại.",
+    "whatsNewAccountTitle": "Đăng nhập và hồ sơ của bạn",
+    "whatsNewAccountBody": "Đăng nhập bằng tên người dùng để giữ tiến độ và gói đăng ký khi đổi điện thoại. Ảnh, biệt danh và giới thiệu của bạn hiện trong phòng và tin nhắn."
   },
   "fr": {
     "billingClose": "Fermer",
@@ -1946,7 +1967,14 @@
     "accountPasswordChanged": "Mot de passe modifié.",
     "updateSeeChanges": "Voir les nouveautés",
     "updateSheetTitle": "Ce que vous apporte la mise à jour",
-    "updateLater": "Plus tard"
+    "updateLater": "Plus tard",
+    "homeTabRooms": "Salons",
+    "whatsNewRoomsTitle": "Les salons vocaux arrivent",
+    "whatsNewRoomsBody": "Parlez avec d’autres à voix haute. Ce que dit chacun s’affiche en sous-titres, et un appui sur une ligne la traduit dans votre langue. Si les mots ne viennent pas, participez par un commentaire.",
+    "whatsNewDmTitle": "Messages et appels depuis le profil",
+    "whatsNewDmBody": "Touchez une photo pour ouvrir le profil. Suivez, envoyez un message et appelez directement depuis la conversation. À la fin de l’appel, ses sous-titres restent en mémoire.",
+    "whatsNewAccountTitle": "Connexion et profil",
+    "whatsNewAccountBody": "Connectez-vous avec un identifiant : votre progression et votre abonnement vous suivent sur un autre téléphone. Votre photo, pseudo et présentation apparaissent dans les salons et les messages."
   },
   "it": {
     "archive": "Report",
@@ -2630,7 +2658,14 @@
     "accountPasswordChanged": "Password cambiata.",
     "updateSeeChanges": "Scopri le novità",
     "updateSheetTitle": "Cosa cambia con l’aggiornamento",
-    "updateLater": "Più tardi"
+    "updateLater": "Più tardi",
+    "homeTabRooms": "Stanze",
+    "whatsNewRoomsTitle": "Arrivano le stanze per parlare",
+    "whatsNewRoomsBody": "Parla a voce con altre persone. Ciò che dice ognuno resta come sottotitolo, e toccando una riga la traduci nella tua lingua. Se le parole non vengono, partecipa con un commento.",
+    "whatsNewDmTitle": "Messaggi e chiamate dal profilo",
+    "whatsNewDmBody": "Tocca una foto per aprire il profilo. Segui, manda un messaggio e chiama direttamente dalla conversazione. Alla fine della chiamata i sottotitoli restano salvati.",
+    "whatsNewAccountTitle": "Accesso e profilo",
+    "whatsNewAccountBody": "Accedi con un nome utente: progressi e abbonamento ti seguono su un altro telefono. Foto, nickname e presentazione si vedono nelle stanze e nei messaggi."
   },
   "pt": {
     "billingClose": "Fechar",
@@ -3125,7 +3160,14 @@
     "accountPasswordChanged": "Senha alterada.",
     "updateSeeChanges": "Ver novidades",
     "updateSheetTitle": "O que muda com a atualização",
-    "updateLater": "Depois"
+    "updateLater": "Depois",
+    "homeTabRooms": "Salas",
+    "whatsNewRoomsTitle": "Chegaram as salas de conversa",
+    "whatsNewRoomsBody": "Converse com outras pessoas por voz. O que cada um diz fica em legendas, e tocar numa linha traduz para o seu idioma. Se as palavras não saírem, participe com um comentário.",
+    "whatsNewDmTitle": "Mensagens e ligações pelo perfil",
+    "whatsNewDmBody": "Toque numa foto para abrir o perfil. Siga, envie uma mensagem e ligue direto da conversa. Quando a ligação termina, as legendas ficam salvas.",
+    "whatsNewAccountTitle": "Login e seu perfil",
+    "whatsNewAccountBody": "Entre com um nome de usuário e seu progresso e assinatura vão junto para outro celular. Sua foto, apelido e apresentação aparecem nas salas e mensagens."
   },
   "ru": {
     "archive": "Отчёты",
@@ -3807,7 +3849,14 @@
     "accountPasswordChanged": "Пароль изменён.",
     "updateSeeChanges": "Что нового",
     "updateSheetTitle": "Что изменится после обновления",
-    "updateLater": "Позже"
+    "updateLater": "Позже",
+    "homeTabRooms": "Комнаты",
+    "whatsNewRoomsTitle": "Появились голосовые комнаты",
+    "whatsNewRoomsBody": "Говорите с людьми голосом. Сказанное каждым остаётся субтитрами, а нажатие на строку переводит её на ваш язык. Если слова не идут — участвуйте комментарием.",
+    "whatsNewDmTitle": "Сообщения и звонки из профиля",
+    "whatsNewDmBody": "Нажмите на фото, чтобы открыть профиль. Подпишитесь, напишите сообщение и позвоните прямо из переписки. После звонка его субтитры сохраняются.",
+    "whatsNewAccountTitle": "Вход и ваш профиль",
+    "whatsNewAccountBody": "Войдите по логину — прогресс и подписка перейдут на новый телефон. Ваше фото, никнейм и описание видны в комнатах и сообщениях."
   },
   "id": {
     "billingClose": "Tutup",
@@ -4298,7 +4347,14 @@
     "accountPasswordChanged": "Kata sandi sudah diganti.",
     "updateSeeChanges": "Lihat yang baru",
     "updateSheetTitle": "Yang berubah setelah pembaruan",
-    "updateLater": "Nanti"
+    "updateLater": "Nanti",
+    "homeTabRooms": "Ruang",
+    "whatsNewRoomsTitle": "Ruang ngobrol sudah hadir",
+    "whatsNewRoomsBody": "Ngobrol dengan orang lain lewat suara. Ucapan tiap orang tersimpan sebagai teks, dan ketuk satu baris untuk menerjemahkannya ke bahasamu. Kalau kata-kata belum keluar, ikut lewat komentar.",
+    "whatsNewDmTitle": "Pesan dan panggilan dari profil",
+    "whatsNewDmBody": "Ketuk foto untuk membuka profil. Ikuti, kirim pesan, dan langsung telepon dari percakapan. Setelah panggilan selesai, teksnya tersimpan sebagai catatan.",
+    "whatsNewAccountTitle": "Masuk dan profilmu",
+    "whatsNewAccountBody": "Masuk dengan nama pengguna agar kemajuan dan langgananmu ikut pindah ke HP lain. Foto, nama panggilan, dan perkenalanmu tampil di ruang dan pesan."
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -4783,7 +4839,14 @@
     "accountPasswordChanged": "تم تغيير كلمة المرور.",
     "updateSeeChanges": "عرض الجديد",
     "updateSheetTitle": "هذا ما سيتغيّر بعد التحديث",
-    "updateLater": "لاحقًا"
+    "updateLater": "لاحقًا",
+    "homeTabRooms": "الغرف",
+    "whatsNewRoomsTitle": "وصلت غرف المحادثة",
+    "whatsNewRoomsBody": "تحدّث مع الآخرين بصوتك. يبقى كلام كل شخص ترجمةً نصية على الشاشة، واضغط على سطر لترجمته إلى لغتك. وإن لم تسعفك الكلمات فشارك بتعليق.",
+    "whatsNewDmTitle": "رسائل ومكالمات من الملف الشخصي",
+    "whatsNewDmBody": "اضغط على صورة لفتح الملف الشخصي. تابِع وأرسل رسالة واتصل مباشرة من المحادثة. وعند انتهاء المكالمة يبقى نصّها سجلًّا.",
+    "whatsNewAccountTitle": "تسجيل الدخول وملفك الشخصي",
+    "whatsNewAccountBody": "سجّل الدخول باسم مستخدم ليتبعك تقدّمك واشتراكك إلى هاتف آخر. تظهر صورتك واسمك المستعار ونبذتك في الغرف والرسائل."
   },
   "th": {
     "billingClose": "ปิด",
@@ -5268,7 +5331,14 @@
     "accountPasswordChanged": "เปลี่ยนรหัสผ่านแล้ว",
     "updateSeeChanges": "ดูสิ่งที่เปลี่ยนไป",
     "updateSheetTitle": "อัปเดตแล้วจะเปลี่ยนแบบนี้",
-    "updateLater": "ไว้ทีหลัง"
+    "updateLater": "ไว้ทีหลัง",
+    "homeTabRooms": "ห้องคุย",
+    "whatsNewRoomsTitle": "มีห้องคุยแล้ว",
+    "whatsNewRoomsBody": "คุยกับคนอื่นด้วยเสียง คำพูดของแต่ละคนจะขึ้นเป็นคำบรรยาย แตะบรรทัดเพื่อแปลเป็นภาษาของคุณ ถ้ายังพูดไม่ออก ร่วมด้วยการคอมเมนต์ได้",
+    "whatsNewDmTitle": "ส่งข้อความและโทรจากโปรไฟล์",
+    "whatsNewDmBody": "แตะรูปเพื่อเปิดโปรไฟล์ ติดตาม ส่งข้อความ และโทรได้เลยจากในแชต เมื่อวางสาย คำบรรยายจะเก็บไว้เป็นบันทึก",
+    "whatsNewAccountTitle": "เข้าสู่ระบบและโปรไฟล์ของคุณ",
+    "whatsNewAccountBody": "เข้าสู่ระบบด้วยชื่อผู้ใช้ แล้วความคืบหน้าและการสมัครสมาชิกจะตามไปเครื่องใหม่ รูป ชื่อเล่น และคำแนะนำตัวจะแสดงในห้องและข้อความ"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -5753,6 +5823,13 @@
     "accountPasswordChanged": "पासवर्ड बदल गया।",
     "updateSeeChanges": "नया क्या है देखें",
     "updateSheetTitle": "अपडेट से ये बदलाव आएँगे",
-    "updateLater": "बाद में"
+    "updateLater": "बाद में",
+    "homeTabRooms": "रूम",
+    "whatsNewRoomsTitle": "बातचीत के रूम आ गए",
+    "whatsNewRoomsBody": "लोगों से आवाज़ में बात करें। हर व्यक्ति की बात कैप्शन में जमा होती है, और किसी पंक्ति पर टैप करने से वह आपकी भाषा में अनुवादित हो जाती है। शब्द न सूझें तो कमेंट से जुड़ें।",
+    "whatsNewDmTitle": "प्रोफ़ाइल से मैसेज और कॉल",
+    "whatsNewDmBody": "फ़ोटो पर टैप करके प्रोफ़ाइल खोलें। फ़ॉलो करें, मैसेज भेजें और बातचीत से ही सीधे कॉल करें। कॉल खत्म होने पर उसके कैप्शन रिकॉर्ड के रूप में रहते हैं।",
+    "whatsNewAccountTitle": "लॉग इन और आपकी प्रोफ़ाइल",
+    "whatsNewAccountBody": "यूज़रनेम से लॉग इन करें, तो फ़ोन बदलने पर भी आपकी प्रगति और सब्सक्रिप्शन साथ रहेंगे। आपकी फ़ोटो, निकनेम और परिचय रूम और मैसेज में दिखते हैं।"
   }
 }
