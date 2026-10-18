@@ -64,3 +64,5 @@ tmp/feature/
 # 스토어 탭별 캡처의 원본 화면 (scripts/capture-whats-new.mjs store-my/store-tabs → store-shots/tabs/compose.mjs)
 /tmp/store-raw/
 /tmp/sim-users/
+# 홍보 영상 녹화·편집 결과(store-shots/promo/)
+/tmp/promo/
