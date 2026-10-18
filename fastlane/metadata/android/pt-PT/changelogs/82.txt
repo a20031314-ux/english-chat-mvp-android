@@ -1,0 +1,4 @@
+• Novo separador Salas: fala por voz com outros estudantes. O que cada um diz fica em legendas; toca numa linha para a traduzir ou participa com um comentário.
+• Toca numa foto para abrir o perfil: segue, envia uma mensagem e liga a partir da conversa. Inicia sessão para usar salas e mensagens.
+• Pacote de hoje: uma conversa curta por dia com uma revisão no fim, e uma sugestão do que experimentar hoje.
+• Envia a tua opinião pela barra de cima; o guia (?) mostra agora cada passo com imagens.

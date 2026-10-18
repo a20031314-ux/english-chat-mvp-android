@@ -1,0 +1,4 @@
+• Nueva pestaña Salas: habla por voz con otros estudiantes. Lo que dice cada uno queda en subtítulos; toca una línea para traducirla o participa con un comentario.
+• Toca una foto para abrir el perfil: sigue, envía un mensaje y llama desde la conversación. Inicia sesión para usar salas y mensajes.
+• Paquete de hoy: una conversación corta al día con un repaso al final, y una sugerencia de qué probar hoy.
+• Envía tu opinión desde la barra superior; la guía (?) ahora muestra cada paso con imágenes.
