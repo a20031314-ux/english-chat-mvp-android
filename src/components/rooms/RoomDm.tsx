@@ -17,6 +17,7 @@ import {
 import { DM_PENDING_LIMIT, type DmMessage, type DmSummary, type DmThread } from "@/lib/rooms/dm";
 import type { RoomMeta } from "@/lib/rooms/protocol";
 import { askPhrase, questionCount } from "@/lib/rooms/quote";
+import type { RoomNote } from "@/lib/rooms/layout";
 import { Composer, Face, useProfile } from "./RoomParts";
 
 /*
@@ -103,8 +104,11 @@ export function DmThreadView({
   targetLanguage,
   onClose,
   onJoinCall,
+  note,
 }: {
   t: RoomCopy;
+  /** 쪽지로 열렸으면 방 줄 인용(입력창 위에 붙고 학습 언어 질문이 채워짐). */
+  note?: RoomNote | null;
   me: string;
   other: string;
   peerId: string;
@@ -183,7 +187,9 @@ export function DmThreadView({
       .map((message) => `${message.from === me ? "me" : name}: ${message.text}`);
 
   // 집은 말(상대 메시지나 통화 기록의 한 줄) — 입력창 위에 인용으로 붙는다.
-  const [quoting, setQuoting] = useState<{ seq: number; index?: number; nickname: string; text: string; ask: boolean } | null>(null);
+  const [quoting, setQuoting] = useState<{ seq: number; index?: number; nickname: string; text: string; ask: boolean; roomId?: string } | null>(
+    note ? { seq: note.seq, nickname: note.nickname, text: note.text, ask: true, roomId: note.roomId } : null,
+  );
   const quoteName = (accountId: string | null | undefined, fallback: string) => (accountId === me ? t.you : fallback || name);
 
   const startCall = async () => {
@@ -289,7 +295,7 @@ export function DmThreadView({
               recent={() => messages.filter((message) => message.kind === "text").slice(-6).map((message) => `${message.from === me ? "me" : name}: ${message.text}`)}
               onSend={async (text) => {
                 try {
-                  const body = await dmSend(other, text, quoting ? { seq: quoting.seq, index: quoting.index, ask: quoting.ask } : undefined);
+                  const body = await dmSend(other, text, quoting ? { seq: quoting.seq, index: quoting.index, ask: quoting.ask, roomId: quoting.roomId } : undefined);
                   setThread(body.thread);
                   add([body.message]);
                   setQuoting(null);
@@ -430,6 +436,7 @@ function Bubble({
         >
           {message.quote ? (
             <span className="mb-1 block border-s-2 border-white/30 ps-2 text-xs text-slate-300/80">
+              {message.quote.roomId ? <span className="block text-meta text-sky-200">🎙 {t.fromRoom}</span> : null}
               ↪ {quoteName(message.quote.accountId, message.quote.nickname)}: {message.quote.text}
             </span>
           ) : null}

@@ -27,6 +27,7 @@ test("질문 수는 묻기(ask)만, 같은 줄(통화 기록이면 같은 index)
     { quote: { seq: 3, nickname: "Yuki", text: "まじで" }, ask: true },
     { quote: { seq: 3, nickname: "Yuki", text: "まじで" }, ask: false },
     { quote: { seq: 3, index: 1, nickname: "Yuki", text: "やばい" }, ask: true },
+    { quote: { seq: 3, nickname: "Yuki", text: "部屋の言葉", roomId: "abcdef" }, ask: true },
     {},
   ];
   assert.equal(questionCount(rows, 3), 1);

@@ -320,9 +320,12 @@ export function dmPoll(threadId: string, since: number): Promise<{ thread: DmThr
 export function dmSend(
   target: string,
   text: string,
-  quote?: { seq: number; index?: number; ask: boolean },
+  quote?: { seq: number; index?: number; ask: boolean; roomId?: string },
 ): Promise<{ thread: DmThread; message: DmMessage }> {
-  return dm("send", quote ? { target, text, quoteSeq: quote.seq, quoteIndex: quote.index, ask: quote.ask } : { target, text });
+  if (!quote) return dm("send", { target, text });
+  // roomId가 있으면 쪽지: 방 자막 줄을 집은 것(서버가 방 기록에서 채움).
+  if (quote.roomId) return dm("send", { target, text, roomQuote: { roomId: quote.roomId, seq: quote.seq }, ask: quote.ask });
+  return dm("send", { target, text, quoteSeq: quote.seq, quoteIndex: quote.index, ask: quote.ask });
 }
 
 export function dmDecline(threadId: string): Promise<{ ok: true }> {

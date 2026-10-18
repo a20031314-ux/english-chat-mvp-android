@@ -29,6 +29,8 @@ import {
 } from "@/lib/rooms/protocol";
 import { askPhrase } from "@/lib/rooms/quote";
 import { Composer, Face, Lines, ProfileSheet, languagePair } from "./RoomParts";
+import { useInbox } from "./RoomDm";
+import { CALL_LAYOUT_LINES, ROOM_LAYOUTS, pendingNotes, readRoomLayout, saveRoomLayout, type RoomLayout, type RoomNote } from "@/lib/rooms/layout";
 
 /**
  * 방 안. 위는 말하기 자리 8개(사진, 말하는 중이면 초록 테두리)와 듣는 사람 줄,
@@ -78,7 +80,8 @@ export function RoomView({
   /** 서버에서 나간 것이 확인된 뒤(1:1 통화의 기록 남기기). */
   onLeft?: () => void;
   /** 프로필 시트의 "메시지". */
-  onMessage?: (accountId: string) => void;
+  /** note가 있으면 쪽지: 그 방 줄을 인용해 대화를 연다. */
+  onMessage?: (accountId: string, note?: RoomNote) => void;
   /** 방에 있는 채로 화면만 접기(연결·마이크는 그대로, RoomsScreen이 아래 막대를 띄움). */
   onMinimize?: () => void;
 }) {
@@ -95,7 +98,17 @@ export function RoomView({
   const [pending, setPending] = useState(0);
   const [peerStates, setPeerStates] = useState<Record<string, PeerState>>({});
   const [notice, setNotice] = useState<Notice>("");
-  const [view, setView] = useState<"timeline" | "people">("timeline");
+  // 보는 방식(사람마다, 이 기기에 기억). 줄·질문·쪽지는 모두 같은 방 기록을 쓴다.
+  const [layout, setLayoutState] = useState<RoomLayout>(() => readRoomLayout());
+  const setLayout = (next: RoomLayout) => {
+    setLayoutState(next);
+    saveRoomLayout(next);
+  };
+  const view = layout === "people" ? "people" : "timeline";
+  const [composerOpen, setComposerOpen] = useState(false);
+  // 같은 방 사람이 보낸 안 읽은 쪽지·메시지 → 위에 알림(누르면 대화).
+  const inbox = useInbox(true, 6_000);
+  const [seenNotes, setSeenNotes] = useState<string[]>([]);
   const [joined, setJoined] = useState(false);
   /** 다른 사람이 말하는 중(소리 크기). 자리 격자의 테두리. */
   const [talking, setTalking] = useState<Record<string, boolean>>({});
@@ -363,6 +376,8 @@ export function RoomView({
     const nickname = member?.nickname ?? lines.find((line) => line.peerId === target)?.nickname ?? "";
     setSheet({ peerId: target, accountId: member?.accountId ?? accountId, nickname });
   };
+  const memberAccounts = members.map((member) => member.accountId).filter((id): id is string => Boolean(id));
+  const notes = pendingNotes(inbox.threads, memberAccounts, seenNotes);
   const isSpeaking = (member: RoomMember) =>
     member.peerId === peerId ? speaking : Boolean(talking[member.peerId]) && !member.muted;
 
@@ -397,8 +412,24 @@ export function RoomView({
           </div>
         </div>
 
-        {/* 말하기 자리: 방장 먼저, 8자리 격자(헬로우톡처럼). 누르면 프로필. */}
-        <ul className="mt-3 grid grid-cols-4 gap-x-2 gap-y-2">
+        {/* 채팅 위주: 자리 격자 대신 말하는 사람 얼굴 한 줄. */}
+        {layout === "chat" ? (
+          <div className="mt-2 flex items-center gap-1.5 overflow-x-auto pb-1">
+            {speakers.map((member) => (
+              <button
+                key={member.peerId}
+                type="button"
+                onClick={() => openPerson(member.peerId, member.accountId ?? null)}
+                aria-label={member.nickname}
+                className="shrink-0"
+              >
+                <Face accountId={member.accountId ?? null} name={member.nickname} size={30} speaking={isSpeaking(member)} />
+              </button>
+            ))}
+          </div>
+        ) : null}
+        {/* 말하기 자리: 방장 먼저, 8자리 격자(헬로우톡처럼). 누르면 프로필. 통화 위주면 크게. */}
+        <ul className={`mt-3 grid grid-cols-4 gap-x-2 ${layout === "call" ? "gap-y-4" : "gap-y-2"} ${layout === "chat" ? "hidden" : ""}`}>
           {Array.from({ length: MAX_SPEAKERS }, (_, index) => speakers[index] ?? null).map((member, index) =>
             member ? (
               <li key={member.peerId}>
@@ -408,7 +439,7 @@ export function RoomView({
                   className="flex w-full flex-col items-center gap-1"
                 >
                   <span className="relative">
-                    <Face accountId={member.accountId ?? null} name={member.nickname} size={52} speaking={isSpeaking(member)} />
+                    <Face accountId={member.accountId ?? null} name={member.nickname} size={layout === "call" ? 64 : 52} speaking={isSpeaking(member)} />
                     {member.muted ? (
                       <span className="absolute -bottom-0.5 -end-0.5 rounded-full bg-black/80 px-1 text-[11px]" aria-hidden>
                         🔇
@@ -426,7 +457,11 @@ export function RoomView({
               </li>
             ) : (
               <li key={`empty-${index}`} className="flex flex-col items-center gap-1">
-                <span className="flex h-[52px] w-[52px] items-center justify-center rounded-full border border-dashed border-white/15 text-lg text-slate-600">
+                <span
+                  className={`flex items-center justify-center rounded-full border border-dashed border-white/15 text-lg text-slate-600 ${
+                    layout === "call" ? "h-16 w-16" : "h-[52px] w-[52px]"
+                  }`}
+                >
                   +
                 </span>
                 <span className="text-[11px] text-slate-600">{t.emptySeat}</span>
@@ -482,14 +517,15 @@ export function RoomView({
         ) : null}
 
         <div className="mt-2 flex gap-1 rounded-lg bg-white/5 p-0.5 text-xs">
-          {(["timeline", "people"] as const).map((option) => (
+          {ROOM_LAYOUTS.map((option) => (
             <button
               key={option}
               type="button"
-              onClick={() => setView(option)}
-              className={`flex-1 rounded-md px-2 py-1 ${view === option ? "bg-white/15 text-white" : "text-slate-400"}`}
+              aria-pressed={layout === option}
+              onClick={() => setLayout(option)}
+              className={`flex-1 truncate rounded-md px-1.5 py-1 ${layout === option ? "bg-white/15 text-white" : "text-slate-400"}`}
             >
-              {option === "timeline" ? t.viewTimeline : t.viewPeople}
+              {option === "group" ? t.viewTimeline : option === "people" ? t.viewPeople : option === "chat" ? t.layoutChat : t.layoutCall}
             </button>
           ))}
         </div>
@@ -506,9 +542,32 @@ export function RoomView({
         </button>
       ) : null}
 
+      {notes.length ? (
+        <button
+          type="button"
+          onClick={() => {
+            const note = notes[0];
+            setSeenNotes((have) => [...have, `${note.thread.id}:${note.thread.lastSeq}`]);
+            onMessage?.(note.other);
+          }}
+          className="shrink-0 bg-sky-400/10 px-4 py-2 text-start text-sm text-sky-100"
+          dir="auto"
+        >
+          ✉ {t.noteFrom.replace("{name}", members.find((member) => member.accountId === notes[0].other)?.nickname ?? "")}
+        </button>
+      ) : null}
+
       <Lines
+        big={layout === "chat"}
+        onNote={
+          onMessage
+            ? (line) => {
+                if (line.accountId) onMessage(line.accountId, { roomId: room.id, seq: line.seq, nickname: line.nickname, text: line.text });
+              }
+            : undefined
+        }
         t={t}
-        lines={lines}
+        lines={layout === "call" ? timeline(lines).slice(-CALL_LAYOUT_LINES) : lines}
         view={view}
         selfId={peerId}
         locale={locale}
@@ -519,6 +578,15 @@ export function RoomView({
       />
 
       <footer className="shrink-0 space-y-2 border-t border-white/10 px-4 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] pt-2">
+        {layout === "call" && !composerOpen && !quoting ? (
+          <button
+            type="button"
+            onClick={() => setComposerOpen(true)}
+            className="w-full rounded-xl border border-white/15 px-3 py-2 text-start text-sm text-slate-400"
+          >
+            💬 {t.writeComment}
+          </button>
+        ) : (
         <Composer
           key={quoting ? `q${quoting.line.seq}${quoting.ask ? "a" : "r"}` : "plain"}
           quote={quoting ? { nickname: quoting.line.nickname, text: quoting.line.text, ask: quoting.ask } : null}
@@ -544,6 +612,7 @@ export function RoomView({
             setQuoting(null);
           }}
         />
+        )}
         <p className="text-xs text-slate-500" dir="auto">
           {!joined ? t.connecting : role === "listener" ? t.listenerHint : pending > 0 ? t.transcribing : t.listening}
           {role === "speaker" ? ` · ${t.earphones}` : ""}

@@ -18,6 +18,7 @@ import { MAX_ROOM_NAME_CHARS, MAX_SPEAKERS, type RoomMeta, type RoomRole, type R
 import { SUPPORTED_LEARNING_LANGUAGES, isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
 import { ROOM_FILTER_STORAGE_KEY, filterLanguages, parseRoomFilter, type RoomFilter } from "@/lib/rooms/roomFilter";
 import { setMiniRoom } from "@/lib/rooms/miniRoom";
+import type { RoomNote } from "@/lib/rooms/layout";
 import { Face, languagePair } from "./RoomParts";
 import { RoomView } from "./RoomView";
 import { DmThreadView } from "./RoomDm";
@@ -50,6 +51,8 @@ export function RoomsScreen({
   const [inRoom, setInRoom] = useState<{ room: RoomSummary | RoomMeta; role: RoomRole; title?: string; back?: string } | null>(null);
   /** 열려 있는 1:1 대화의 상대 계정. 방 위에도 뜬다. */
   const [dmWith, setDmWith] = useState<string | null>(null);
+  /** 방 줄을 집어 연 대화(쪽지)면 그 인용 — 대화 입력창 위에 붙는다. */
+  const [dmNote, setDmNote] = useState<RoomNote | null>(null);
   /** 방 화면을 접고 다른 화면을 보는 중. 방에는 그대로 있다. */
   const [minimized, setMinimized] = useState(false);
   const account = useSyncExternalStore(subscribeSession, readCachedAccount, () => null);
@@ -128,7 +131,10 @@ export function RoomsScreen({
                 }}
                 onMinimize={() => setMinimized(true)}
                 onLeft={inRoom.room.private ? () => void dmEndCall(inRoom.room.id).catch(() => {}) : undefined}
-                onMessage={setDmWith}
+                onMessage={(accountId, note) => {
+                  setDmNote(note ?? null);
+                  setDmWith(accountId);
+                }}
               />
             </div>
           </div>
@@ -137,14 +143,18 @@ export function RoomsScreen({
 
       {dmWith && account ? (
         <DmThreadView
-          key={dmWith}
+          key={`${dmWith}:${dmNote?.seq ?? ""}`}
+          note={dmNote}
           t={t}
           me={account.id}
           other={dmWith}
           peerId={peerId}
           locale={locale}
           targetLanguage={targetLanguage}
-          onClose={() => setDmWith(null)}
+          onClose={() => {
+            setDmWith(null);
+            setDmNote(null);
+          }}
           onJoinCall={(room, title) => void joinCall(room, title)}
         />
       ) : null}

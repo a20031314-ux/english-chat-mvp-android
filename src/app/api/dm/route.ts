@@ -5,6 +5,7 @@ import { readAccount } from "@/lib/server/accountStore";
 import { blockedEitherWay, isAccountId } from "@/lib/server/socialStore";
 import { claimCallLog, decline, findQuote, inbox, markRead, readMessages, readThread, send } from "@/lib/server/dmStore";
 import { createRoom, isInviteCode, liveCount, readLines, readMeta } from "@/lib/server/roomStore";
+import { clipQuote } from "@/lib/rooms/quote";
 import { DM_MAX_CHARS, isThreadId, otherOf, threadIdFor } from "@/lib/rooms/dm";
 import { cleanText, isPeerId, isRoomId } from "@/lib/rooms/protocol";
 
@@ -58,7 +59,20 @@ export async function POST(request: NextRequest) {
     const text = cleanText(body.text, DM_MAX_CHARS);
     if (!text) return bad(request, "NO_TEXT");
     let quote = undefined;
-    if (typeof body.quoteSeq === "number") {
+    const roomQuote = body.roomQuote as { roomId?: unknown; seq?: unknown } | undefined;
+    if (roomQuote && isRoomId(roomQuote.roomId) && typeof roomQuote.seq === "number") {
+      // 쪽지: 말하는 방의 줄을 집어 둘만 묻기. 인용 글은 방 기록에서.
+      const found = (await readLines(roomQuote.roomId)).find((row) => row.seq === roomQuote.seq);
+      if (!found) return bad(request, "NO_QUOTE", 404);
+      quote = {
+        seq: found.seq,
+        nickname: found.nickname,
+        text: clipQuote(found.text),
+        peerId: found.peerId,
+        accountId: found.accountId ?? null,
+        roomId: roomQuote.roomId,
+      };
+    } else if (typeof body.quoteSeq === "number") {
       quote = await findQuote(id, body.quoteSeq, typeof body.quoteIndex === "number" ? body.quoteIndex : undefined);
       if (!quote) return bad(request, "NO_QUOTE", 404);
     }

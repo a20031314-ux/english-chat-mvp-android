@@ -488,6 +488,8 @@ export function Lines({
   blocked,
   onPerson,
   onQuote,
+  onNote,
+  big,
 }: {
   t: RoomCopy;
   lines: RoomLine[];
@@ -501,6 +503,10 @@ export function Lines({
   onPerson: (peerId: string, accountId: string | null) => void;
   /** 남의 줄을 집어 묻기(ask) 또는 답하기. 없으면 버튼을 안 보인다. */
   onQuote?: (line: RoomLine, ask: boolean) => void;
+  /** 쪽지로 묻기(그 줄을 말한 사람에게 1:1). 계정이 있는 줄에만. */
+  onNote?: (line: RoomLine) => void;
+  /** 채팅 위주 보기: 글자를 크게. */
+  big?: boolean;
 }) {
   const [open, setOpen] = useState<Record<number, string | null>>({});
   const scroller = useRef<HTMLDivElement>(null);
@@ -589,7 +595,7 @@ export function Lines({
                 ↪ {line.quote.nickname}: {line.quote.text}
               </span>
             ) : null}
-            <span className={`block leading-snug text-white ${typed ? "text-sm" : "text-[15px]"}`} dir="auto">
+            <span className={`block leading-snug text-white ${big ? "text-title" : typed ? "text-sm" : "text-chat"}`} dir="auto">
               {line.text}
             </span>
             {isOpen ? (
@@ -614,6 +620,15 @@ export function Lines({
               >
                 ↩ {t.replyTo}
               </button>
+              {onNote && line.accountId ? (
+                <button
+                  type="button"
+                  onClick={() => onNote(line)}
+                  className="rounded-lg border border-sky-300/40 px-2 py-0.5 text-xs text-sky-200 hover:bg-sky-300/10"
+                >
+                  ✉ {t.noteAsk}
+                </button>
+              ) : null}
             </div>
           ) : null}
         </div>

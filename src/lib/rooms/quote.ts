@@ -22,6 +22,8 @@ export type LineQuote = {
   peerId?: string;
   /** 말한 사람의 계정(메시지·방 모두, 없을 수 있음). */
   accountId?: string | null;
+  /** 쪽지: 말하는 방의 줄을 집어 1:1 메시지로 물었을 때 그 방(seq는 방 자막 줄 번호). */
+  roomId?: string;
 };
 
 const ASK_PHRASES: Record<LearningLanguageCode, string> = {
@@ -62,5 +64,6 @@ export function clipQuote(text: string, max = QUOTE_MAX_CHARS): string {
 
 /** 이 줄을 집어 물은 질문 수(줄 옆 "❓ n" 표시). */
 export function questionCount<T extends { quote?: LineQuote; ask?: boolean }>(rows: T[], seq: number, index?: number): number {
-  return rows.filter((row) => row.ask && row.quote?.seq === seq && (row.quote.index ?? -1) === (index ?? -1)).length;
+  // 쪽지(roomId)의 seq는 방 자막 번호라 여기 줄 번호와 섞지 않는다.
+  return rows.filter((row) => row.ask && !row.quote?.roomId && row.quote?.seq === seq && (row.quote.index ?? -1) === (index ?? -1)).length;
 }
