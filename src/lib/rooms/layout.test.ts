@@ -17,3 +17,12 @@ test("쪽지 알림: 이 방에 있는 사람의 안 읽은 대화만, 닫은 �
   // 같은 대화에 새 쪽지가 오면(번호가 바뀌면) 다시 뜬다.
   assert.equal(pendingNotes([row("lb_yuki", 1, "t1", 5)], ["lb_yuki"], ["t1:4"]).length, 1);
 });
+
+test("힌트 살짝만: 첫 낱말, 띄어쓰기 없는 말은 첫 두 글자", async () => {
+  const { peekHint } = await import("./layout.ts");
+  assert.equal(peekHint("I'm 22 years old."), "I'm …");
+  assert.equal(peekHint("Tengo veintidós años."), "Tengo …");
+  assert.equal(peekHint("ฉันอายุยี่สิบสองปี", "th"), "ฉัน …");
+  assert.equal(peekHint("私は二十二歳です。", "ja").endsWith(" …"), true);
+  assert.notEqual(peekHint("私は二十二歳です。", "ja"), "私は二十二歳です。 …");
+});

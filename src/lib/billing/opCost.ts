@@ -68,6 +68,7 @@ export const OP_COST: Record<string, OpCost> = {
   chatReread: mini(),
   howToSay: mini(),
   howToSayCard: mini(),
+  roomHint: mini(),
   chatStart: mini(),
   learnerAsk: mini(),
   analysisInput: mini(),

@@ -34,6 +34,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   // The same expression opened as a card under a line written in the
   // learner's own language — one call, no chat turn, not a counted chat.
   howToSayCard: 1,
+  // 말하는 방에서 편한 말로 한 줄 → 본인에게만 "이렇게 말해 보세요"(카드와 같은 길).
+  roomHint: 1,
   // The opening line of a conversation nobody has spoken in yet.
   chatStart: 1,
   // A question about their own progress, answered from what is kept (learner/ask).

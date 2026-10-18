@@ -97,3 +97,16 @@ test("자유 대화방 줄의 언어: 글자로 가를 수 있을 때만", async
   assert.equal(whichLanguage("ok 네네", ["en", "ko"]), null);
   assert.equal(whichLanguage("123 !!", ["ja", "ko"]), null);
 });
+
+test("말하는 방 힌트: 편한 말이 든 줄만(글자가 다른 두 언어일 때)", async () => {
+  const { leansOnOwnLanguage } = await import("./transcript.ts");
+  assert.equal(leansOnOwnLanguage("어.. 스물둘..", "en", "ko"), true);
+  assert.equal(leansOnOwnLanguage("I'm 스물둘", "en", "ko"), true);
+  assert.equal(leansOnOwnLanguage("I'm twenty-two.", "en", "ko"), false);
+  assert.equal(leansOnOwnLanguage("えっと、にじゅうに", "es", "ja"), true);
+  assert.equal(leansOnOwnLanguage("ฉันอายุยี่สิบสอง", "en", "th"), true);
+  // 스페인어를 배우는 영어 사용자: 같은 글자라 판단하지 않는다.
+  assert.equal(leansOnOwnLanguage("I am twenty two", "es", "en"), false);
+  // 일본어를 배우는 중국어 사용자: 한자만으로는 못 가른다.
+  assert.equal(leansOnOwnLanguage("二十二", "ja", "zh"), false);
+});

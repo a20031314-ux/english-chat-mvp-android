@@ -135,3 +135,21 @@ export function whichLanguage(text: string, languages: readonly string[]): strin
   });
   return matching.length === 1 ? matching[0] : null;
 }
+
+/**
+ * Whether a room line leans on the speaker's own language: their own
+ * language's script makes up a real share of it ("어.. 스물둘..", "I'm 스물둘").
+ * Only answerable when the two languages are written differently — Spanish and
+ * English share letters, so nothing is claimed and no hint is offered.
+ */
+export function leansOnOwnLanguage(text: string, learning: string, own: string): boolean {
+  const learningScript = SCRIPT_OF[learning];
+  const ownScript = SCRIPT_OF[own];
+  if (!learningScript || !ownScript || learningScript === ownScript) return false;
+  // 일본어(가나+한자)를 배우는 중국어 사용자: 한자만으로는 가를 수 없다.
+  if ((learningScript === "kana" && ownScript === "han") || (learningScript === "han" && ownScript === "kana")) return false;
+  const letters = [...text].filter((character) => /\p{L}/u.test(character));
+  if (letters.length === 0) return false;
+  const own_ = letters.filter((character) => RANGES[ownScript].test(character)).length;
+  return own_ / letters.length >= ENOUGH_OF_THE_LANGUAGE;
+}

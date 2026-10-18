@@ -16,6 +16,7 @@ import {
   postLine,
   sendSignal,
   transcribeUtterance,
+  howToSay,
 } from "@/lib/rooms/client";
 import { RoomMesh, type PeerState } from "@/lib/rooms/mesh";
 import { startSpeechCapture, type SpeechCapture } from "@/lib/rooms/speech";
@@ -33,11 +34,11 @@ import {
 } from "@/lib/rooms/protocol";
 import { askPhrase } from "@/lib/rooms/quote";
 import { cleanLanguages } from "@/lib/rooms/roomFilter";
-import { whichLanguage } from "@/lib/roleplay/transcript";
+import { leansOnOwnLanguage, whichLanguage } from "@/lib/roleplay/transcript";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { Composer, Face, Lines, ProfileSheet, languagePair } from "./RoomParts";
 import { useInbox } from "./RoomDm";
-import { CALL_LAYOUT_LINES, ROOM_LAYOUTS, pendingNotes, readRoomLayout, saveRoomLayout, type RoomLayout, type RoomNote } from "@/lib/rooms/layout";
+import { CALL_LAYOUT_LINES, ROOM_HINT_MODES, ROOM_LAYOUTS, pendingNotes, readRoomHintMode, readRoomLayout, saveRoomHintMode, saveRoomLayout, type RoomHintMode, type RoomLayout, type RoomNote } from "@/lib/rooms/layout";
 
 /**
  * 방 안. 위는 말하기 자리 8개(사진, 말하는 중이면 초록 테두리)와 듣는 사람 줄,
@@ -99,6 +100,19 @@ export function RoomView({
   }, [onLeft]);
   const [members, setMembers] = useState<RoomMember[]>([]);
   const [lines, setLines] = useState<RoomLine[]>([]);
+  const linesRef = useRef<RoomLine[]>([]);
+  useEffect(() => {
+    linesRef.current = lines;
+  }, [lines]);
+  // 💡 힌트(본인만): 내 줄 번호 → 배우는 언어 문장. 화면에만 두고 저장하지 않는다.
+  const [hints, setHints] = useState<Record<number, string>>({});
+  const [hintMode, setHintModeState] = useState<RoomHintMode>(() => readRoomHintMode());
+  const hintModeRef = useRef(hintMode);
+  const setHintMode = (mode: RoomHintMode) => {
+    hintModeRef.current = mode;
+    setHintModeState(mode);
+    saveRoomHintMode(mode);
+  };
   const [role, setRole] = useState<RoomRole>("listener");
   const [hand, setHand] = useState(false);
   const [muted, setMuted] = useState(false);
@@ -185,24 +199,36 @@ export function RoomView({
         const text = await transcribeUtterance(blob, mimeType, languages);
         if (!text || !aliveRef.current) return;
         const lang = room.free ? whichLanguage(text, languages) : null;
-        addMine(
-          await postLine({
-            roomId: room.id,
-            peerId,
-            kind: "speech",
-            text,
-            startedAt: startedAt + offsetRef.current,
-            endedAt: endedAt + offsetRef.current,
-            ...(lang ? { lang } : {}),
-          }),
-        );
+        const mine = await postLine({
+          roomId: room.id,
+          peerId,
+          kind: "speech",
+          text,
+          startedAt: startedAt + offsetRef.current,
+          endedAt: endedAt + offsetRef.current,
+          ...(lang ? { lang } : {}),
+        });
+        addMine(mine);
+        // 편한 말이 든 줄이면 나에게만 "이렇게 말해 보세요"(앞 대화를 맥락으로). 실패·상한이면 조용히 없음.
+        if (hintModeRef.current !== "off" && leansOnOwnLanguage(text, targetLanguage, locale)) {
+          const recent = timeline(linesRef.current)
+            .filter((row) => row.seq !== mine.seq)
+            .slice(-6)
+            .map((row) => `${row.nickname}: ${row.text}`);
+          void howToSay({ message: text, recent, locale, targetLanguage, purpose: "roomHint" }).then(
+            (found) => {
+              if (found && aliveRef.current) setHints((have) => ({ ...have, [mine.seq]: found.expression }));
+            },
+            () => {},
+          );
+        }
       } catch (error) {
         console.warn("[rooms] line failed", error);
       } finally {
         setPending((count) => Math.max(0, count - 1));
       }
     },
-    [addMine, peerId, room.id, room.languages, room.free, speakerLanguages],
+    [addMine, peerId, room.id, room.languages, room.free, speakerLanguages, targetLanguage, locale],
   );
 
   const startMic = useCallback(async (): Promise<boolean> => {
@@ -699,6 +725,17 @@ export function RoomView({
             t={t}
             allLines={lines}
             lines={layout === "call" ? spoken.slice(-CALL_LAYOUT_LINES) : spoken}
+            hints={hints}
+            hintMode={hintMode}
+            onHintClose={(seq) => setHints((have) => withoutHint(have, seq))}
+            onHintSend={async (seq, text) => {
+              setHints((have) => withoutHint(have, seq));
+              try {
+                addMine(await postLine({ roomId: room.id, peerId, kind: "text", text, startedAt: Date.now() + offsetRef.current, endedAt: Date.now() + offsetRef.current }));
+              } catch {
+                // 못 보냈으면 그만(힌트는 다시 말해 보면 된다).
+              }
+            }}
             view={view}
             selfId={peerId}
             locale={locale}
@@ -757,6 +794,22 @@ export function RoomView({
           ))}
         </div>
         {textOnly ? <p className="text-meta text-slate-500">{t.chatOnlyHint}</p> : null}
+        {role === "speaker" ? (
+          <label className="flex items-center gap-1.5 text-meta text-slate-400">
+            💡 {t.hintMode}
+            <select
+              value={hintMode}
+              onChange={(event) => setHintMode(event.target.value as RoomHintMode)}
+              className="rounded-lg border border-white/15 bg-surface px-1.5 py-0.5 text-meta text-slate-200"
+            >
+              {ROOM_HINT_MODES.map((mode) => (
+                <option key={mode} value={mode}>
+                  {mode === "show" ? t.hintShow : mode === "peek" ? t.hintPeek : t.hintOff}
+                </option>
+              ))}
+            </select>
+          </label>
+        ) : null}
         {hideChat && !quoting ? null : layout === "call" && !composerOpen && !quoting ? (
           <button
             type="button"
@@ -935,4 +988,10 @@ export function RoomView({
       ) : null}
     </>
   );
+}
+
+function withoutHint(hints: Record<number, string>, seq: number): Record<number, string> {
+  const next = { ...hints };
+  delete next[seq];
+  return next;
 }

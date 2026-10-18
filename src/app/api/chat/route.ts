@@ -1,4 +1,5 @@
 import { meterRequest, recordTokens } from "@/lib/server/meterRequest";
+import { takeRoomHint } from "@/lib/server/roomHint";
 import { NextRequest, after } from "next/server";
 import { observeChatLines, observeChatTurn } from "@/lib/server/learnerProfileStore";
 import { observeMapUse } from "@/lib/server/curriculumStore";
@@ -828,6 +829,7 @@ export async function POST(request: NextRequest) {
     conversationMode?: unknown;
     ownLanguage?: unknown;
     expressionOnly?: unknown;
+    purpose?: unknown;
     practice?: unknown;
   };
   try {
@@ -885,8 +887,13 @@ export async function POST(request: NextRequest) {
   // what is counted is what the learner sends, whatever language it is in.
   const expressionOnly = mode === "how_to_say" && body.expressionOnly === true;
   if (expressionOnly) {
+    // 말하는 방 힌트(본인만 보는 "이렇게 말해 보세요"): 같은 카드지만 따로 세고 하루 상한.
+    const roomHint = body.purpose === "roomHint";
+    if (roomHint && !(await takeRoomHint(userId))) {
+      return jsonWithCors(request, { error: "HINT_LIMIT" }, { status: 429 });
+    }
     try {
-      void meterRequest(request, "howToSayCard");
+      void meterRequest(request, roomHint ? "roomHint" : "howToSayCard");
       const card = await runHowToSayCard(openai, message, parseRecent(body.recent), langs, isPremium);
       return jsonWithCors(request, card);
     } catch (error) {

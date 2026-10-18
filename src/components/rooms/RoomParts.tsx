@@ -15,6 +15,7 @@ import { byPerson, contextBefore, overlapsPrevious, timeline, type RoomLine, typ
 import type { PublicProfile } from "@/lib/rooms/social";
 import type { HowToSayExpression } from "@/lib/howToSay";
 import { questionCount } from "@/lib/rooms/quote";
+import { peekHint, type RoomHintMode } from "@/lib/rooms/layout";
 import { isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
 
 /*
@@ -516,9 +517,18 @@ export function Lines({
   big,
   allLines,
   emptyText,
+  hints,
+  hintMode,
+  onHintSend,
+  onHintClose,
 }: {
   t: RoomCopy;
   lines: RoomLine[];
+  /** 내 줄 번호 → 본인에게만 보이는 "이렇게 말해 보세요"(배우는 언어 문장). */
+  hints?: Record<number, string>;
+  hintMode?: RoomHintMode;
+  onHintSend?: (seq: number, text: string) => void;
+  onHintClose?: (seq: number) => void;
   /** 자막·채팅을 나눠 그릴 때 방의 모든 줄(질문 수·번역 맥락은 둘을 합쳐서 본다). */
   allLines?: RoomLine[];
   /** 줄이 없을 때 문구(채팅 칸은 "아직 댓글이 없어요"). */
@@ -638,6 +648,16 @@ export function Lines({
               </span>
             ) : null}
           </button>
+          {line.peerId === selfId && hints?.[line.seq] && hintMode !== "off" ? (
+            <HintCard
+              t={t}
+              text={hints[line.seq]}
+              language={targetLanguage}
+              peek={hintMode === "peek"}
+              onSend={onHintSend ? () => onHintSend(line.seq, hints[line.seq]) : undefined}
+              onClose={() => onHintClose?.(line.seq)}
+            />
+          ) : null}
           {isOpen && others && onQuote ? (
             <div className="mt-1 flex gap-1.5 ps-1">
               <button
@@ -694,6 +714,35 @@ export function Lines({
           ))}
         </div>
       )}
+    </div>
+  );
+}
+
+/** 본인에게만: 편한 말로 한 줄 아래 "💡 이렇게 말해 보세요". 살짝만이면 첫 낱말, 누르면 전체. */
+function HintCard({ t, text, language, peek, onSend, onClose }: { t: RoomCopy; text: string; language: string; peek: boolean; onSend?: () => void; onClose: () => void }) {
+  const [shown, setShown] = useState(!peek);
+  return (
+    <div className="mt-1 rounded-xl border border-emerald-300/30 bg-emerald-300/5 px-2.5 py-1.5">
+      <div className="flex items-center gap-2">
+        <p className="min-w-0 flex-1 text-meta text-emerald-200">💡 {t.hintTry}</p>
+        <button type="button" onClick={onClose} aria-label={t.hintClose} className="shrink-0 rounded-lg px-1.5 text-sm text-slate-400 hover:bg-white/10">
+          ×
+        </button>
+      </div>
+      {shown ? (
+        <p className="text-chat text-white" dir="auto">
+          {text}
+        </p>
+      ) : (
+        <button type="button" onClick={() => setShown(true)} className="block text-start text-chat text-white" dir="auto">
+          {peekHint(text, language)} <span className="text-meta text-emerald-200">· {t.hintReveal}</span>
+        </button>
+      )}
+      {shown && onSend ? (
+        <button type="button" onClick={onSend} className="mt-1 rounded-lg border border-emerald-300/40 px-2 py-0.5 text-xs text-emerald-100 hover:bg-emerald-300/10">
+          {t.sendThis}
+        </button>
+      ) : null}
     </div>
   );
 }

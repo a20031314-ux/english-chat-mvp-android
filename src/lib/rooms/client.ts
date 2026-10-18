@@ -242,6 +242,8 @@ export async function howToSay(input: {
   recent: string[];
   locale: string;
   targetLanguage: string;
+  /** "roomHint": 말하는 방에서 본인에게만 주는 힌트(따로 세고 하루 상한, 서버). */
+  purpose?: "roomHint";
 }): Promise<HowToSayExpression | null> {
   const response = await fetch(apiUrl("/api/chat"), {
     method: "POST",
@@ -254,6 +256,7 @@ export async function howToSay(input: {
       interfaceLanguage: input.locale,
       targetLanguage: input.targetLanguage,
       recent: input.recent.slice(-6),
+      ...(input.purpose ? { purpose: input.purpose } : {}),
     }),
   });
   if (!response.ok) throw new Error(`how_to_say ${response.status}`);
