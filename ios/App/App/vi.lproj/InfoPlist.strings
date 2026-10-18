@@ -1,0 +1,4 @@
+/* scripts/ios-project.mjs가 만듦 — 직접 고치지 말 것 */
+"NSMicrophoneUsageDescription" = "Cần micro để ghi lại và sửa những gì bạn nói trong cuộc gọi luyện nói.";
+"NSCameraUsageDescription" = "Cần camera để chụp ảnh cho hồ sơ hoặc cho góp ý bạn gửi.";
+"NSPhotoLibraryUsageDescription" = "Cần quyền truy cập ảnh để chọn ảnh cho hồ sơ hoặc cho góp ý bạn gửi.";

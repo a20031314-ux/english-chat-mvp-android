@@ -21,6 +21,8 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **iOS 분기 (2026-10-18):** `src/lib/platform.ts` — iOS에서 끈 것: 말하는 방·메시지(`NEXT_PUBLIC_IOS_SOCIAL`), Google 로그인, 기기 YouTube 오디오 받기, 텍스트 넘겨받기. 스토어 문구·링크도 여기.
+  새 기능이 사용자끼리 주고받거나 Play 전용이면 여기에 한 줄 더하고 iOS에서 어떻게 할지 정한다. 기기 확인 전(맥 없음).
 - **비용 구조 자동 계산 (2026-10-18):** `hub/costs.md`를 push마다 다시 계산(`.github/workflows/cost.yml` → `scripts/plan-cost.mjs`). 기능별 단가는 `src/lib/billing/opCost.ts` 한 곳(실측 보고서 `cost-report.mjs`도 같은 표),
   op에 단가가 없으면 `opCost.test.ts`, 모델 쓰는 경로가 `meterRequest`를 안 부르면 `scripts/cost-coverage.mjs`가 CI에서 실패. 처음 돌려 보니 영상 찾기(`contentDiscovery`)·자막 준비(prepare-from-stt)가 기록 안 되던 것 → 고침(서버 바로 반영).
   남은 것: 채팅 한도까지 넣은 최악 비용이 모든 유료 요금에서 손해로 나옴(채팅 한 통 2원은 가정) — 2.67 출시 1주 뒤 `cost-report.mjs`로 채팅 실측 토큰 확인 → 사용자와 한도 재검토.

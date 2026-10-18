@@ -1,0 +1,4 @@
+/* scripts/ios-project.mjs가 만듦 — 직접 고치지 말 것 */
+"NSMicrophoneUsageDescription" = "会話練習の通話で話した内容を書き起こして直すために、マイクを使います。";
+"NSCameraUsageDescription" = "プロフィール写真やフィードバック用の写真を撮るために、カメラを使います。";
+"NSPhotoLibraryUsageDescription" = "プロフィールやフィードバックに使う写真を選ぶために、写真へのアクセスが必要です。";

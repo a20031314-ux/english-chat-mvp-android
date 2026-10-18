@@ -1,0 +1,4 @@
+/* scripts/ios-project.mjs가 만듦 — 직접 고치지 말 것 */
+"NSMicrophoneUsageDescription" = "需要使用麦克风，才能在口语练习通话中转写并纠正你说的话。";
+"NSCameraUsageDescription" = "需要使用相机，才能为个人资料或反馈拍照。";
+"NSPhotoLibraryUsageDescription" = "需要访问照片，才能为个人资料或反馈选择图片。";

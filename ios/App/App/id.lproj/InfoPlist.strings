@@ -1,0 +1,4 @@
+/* scripts/ios-project.mjs가 만듦 — 직접 고치지 말 것 */
+"NSMicrophoneUsageDescription" = "Mikrofon diperlukan untuk mentranskripsi dan mengoreksi ucapanmu saat panggilan latihan bicara.";
+"NSCameraUsageDescription" = "Kamera diperlukan untuk memotret foto profil atau foto untuk masukan yang kamu kirim.";
+"NSPhotoLibraryUsageDescription" = "Akses foto diperlukan untuk memilih gambar untuk profil atau masukan yang kamu kirim.";

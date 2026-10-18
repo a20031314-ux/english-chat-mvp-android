@@ -20,6 +20,7 @@ import { GuideButton } from "@/components/GuideSheet";
 import { FeedbackButton } from "@/components/FeedbackButton";
 import { RoomsScreen } from "@/components/rooms/RoomsScreen";
 import { roomsUnlocked } from "@/lib/rooms/client";
+import { socialFeaturesEnabled } from "@/lib/platform";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
 import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
@@ -77,10 +78,13 @@ function AppHomeInner({
 
   // 말하는 방(시험 기능): 숨은 입구. "?"를 길게 누르면 입장 코드 화면이 열리고,
   // 코드를 넣은 기기에는 상단에 방 버튼이 생긴다. 웹 확인용으로 ?rooms=1도.
+  // iOS 1차 출시엔 방·메시지를 통째로 끈다(`lib/platform.ts`): 입구·🎙 버튼·?rooms=1 모두.
+  const socialOn = useSyncExternalStore(noSubscribe, socialFeaturesEnabled, () => false);
   const [roomsOpen, setRoomsOpen] = useState(() => {
     // 서버(미리 만든 HTML)에선 window가 없어 false. 열린 화면도 처음 그릴 때는
     // 아무것도 안 그리므로(FullScreenLayer) 하이드레이션이 어긋나지 않는다.
     if (typeof window === "undefined") return false;
+    if (!socialFeaturesEnabled()) return false;
     try {
       return new URLSearchParams(window.location.search).get("rooms") === "1";
     } catch {
@@ -91,6 +95,7 @@ function AppHomeInner({
   const roomsShown = useSyncExternalStore(noSubscribe, roomsUnlocked, () => false);
   const longPress = useRef<{ timer: number; fired: boolean }>({ timer: 0, fired: false });
   const startLongPress = () => {
+    if (!socialOn) return;
     window.clearTimeout(longPress.current.timer);
     longPress.current.fired = false;
     longPress.current.timer = window.setTimeout(() => {
@@ -210,7 +215,7 @@ function AppHomeInner({
               >
                 <GuideButton ui={ui} locale={locale} tab={shownTab} tabs={tabItems} />
               </span>
-              {roomsShown ? (
+              {socialOn && roomsShown ? (
                 <button
                   type="button"
                   onClick={() => setRoomsOpen(true)}
@@ -225,7 +230,7 @@ function AppHomeInner({
             {/* Above everything, because it is about everything: this is the
                 only way anyone gets told their build has to be replaced. */}
             <UpdateNotice ui={ui} />
-            {roomsOpen ? (
+            {socialOn && roomsOpen ? (
               <RoomsScreen
                 ui={ui}
                 locale={locale}

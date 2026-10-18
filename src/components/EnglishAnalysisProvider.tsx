@@ -11,6 +11,7 @@ import { analysisTargetFromSelectedText } from "@/lib/genericWebReader";
 import { DEFAULT_LEARNING_LANGUAGE_CODE } from "@/lib/learningLanguages";
 import type { Locale, UICopy } from "@/lib/copy";
 import { WebReader } from "@/plugins/webReader";
+import { isIosApp } from "@/lib/platform";
 
 export function EnglishAnalysisProvider({
   locale,
@@ -36,6 +37,9 @@ export function EnglishAnalysisProvider({
   );
 
   useEffect(() => {
+    // 다른 앱에서 고른 글을 넘겨받는 길(PROCESS_TEXT·공유)은 안드로이드에만 있다.
+    // iOS엔 이 네이티브 플러그인이 없어 부르면 오류만 남는다.
+    if (isIosApp()) return;
     let cancelled = false;
     let handle: { remove: () => Promise<void> } | null = null;
 

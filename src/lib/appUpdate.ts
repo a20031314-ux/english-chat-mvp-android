@@ -1,4 +1,5 @@
-import { APP_UPDATE_HEADER, PLAY_LISTING_URL, type UpdateLevel } from "@/lib/appVersion";
+import { APP_UPDATE_HEADER, type UpdateLevel } from "@/lib/appVersion";
+import { storeListingUrl } from "@/lib/platform";
 
 /**
  * Whether this build has been left behind, as the server sees it.
@@ -54,7 +55,8 @@ export function watchUpdateLevel(listener: (level: UpdateLevel) => void): () => 
  */
 export function openStoreListing() {
   try {
-    window.open(PLAY_LISTING_URL, "_blank");
+    // 안드로이드는 Play, iOS는 App Store 등록 페이지(`lib/platform.ts`).
+    window.open(storeListingUrl(), "_blank");
   } catch {
     // A WebView that refuses to open a window leaves the banner standing, which
     // still says what needs doing.

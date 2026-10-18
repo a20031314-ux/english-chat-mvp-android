@@ -34,6 +34,8 @@
 
 ## 버전·출시
 - 버전은 저장소에서만 올린다: `package.json` + `android/app/build.gradle`(versionCode·versionName) + `package-lock.json` 맨 위 두 줄. PC에서 build.gradle을 고치게 하지 않는다.
+  iOS는 따로 올리지 않는다: `npm run build:ios`(`scripts/ios-project.mjs`)가 build.gradle 값을 MARKETING_VERSION·CURRENT_PROJECT_VERSION에 넣는다.
+- 플랫폼마다 다르게 할 것(iOS에서 끄는 기능, 스토어 이름·주소)은 `src/lib/platform.ts`에만 둔다. 화면 곳곳에 `getPlatform()`을 흩지 않는다.
 - 버전을 자를 때: `src/lib/whatsNew.ts` 항목 + 14개 언어 문구 + `scripts/capture-whats-new.mjs <버전>` 캡처(`CAPTURE_USER`로 데이터 있는 테스트 사용자),
   출시 노트 `fastlane/metadata/android/*/changelogs/<versionCode>.txt`(store-listing 스킬, 500자) PR, PRODUCT.md "기준"·"버전별 변화", STATE 버전 표.
 - **버전을 자를 때마다 사용법(?)도 새로:** 그 버전에서 바뀐 기능마다 사용법 글(`src/lib/guide/`, 14개 언어)을 지금 화면에 맞게 다시 쓰고

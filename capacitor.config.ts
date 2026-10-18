@@ -27,6 +27,11 @@ const config: CapacitorConfig = {
   android: {
     allowMixedContent: false,
   },
+  // iOS(1차, `hub/drafts/ios-launch.md`): 웹뷰는 안전 영역 안에만(AppDelegate.swift
+  // SafeAreaHostViewController), 불러오는 동안 비치는 바탕은 앱과 같은 검정.
+  ios: {
+    backgroundColor: "#000000",
+  },
   plugins: {
     CapacitorHttp: {
       enabled: true,

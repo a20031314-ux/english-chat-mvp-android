@@ -5,6 +5,7 @@ import {
   YOUTUBE_ANDROID_UA,
 } from "@/lib/videoSubtitle/http";
 import { nativeGetBytes } from "@/lib/videoSubtitle/nativeHttp";
+import { deviceMediaDownloadAllowed } from "@/lib/platform";
 
 export const MAX_AUDIO_BYTES = 24 * 1024 * 1024;
 const RANGE_CHUNK_BYTES = 384 * 1024;
@@ -301,6 +302,9 @@ export async function downloadYouTubeAudioBytes(input: {
   maxSeconds?: number;
   progress?: DownloadAudioProgress;
 }): Promise<DownloadedAudioBytes | null> {
+  // iOS 앱은 YouTube 미디어를 기기에서 내려받지 않는다(애플 심사 5.2.3, `lib/platform.ts`).
+  // null이면 부르는 쪽은 자막 경로로 가거나 "음성을 못 가져옴" 안내를 띄운다.
+  if (!deviceMediaDownloadAllowed()) return null;
   const maxSeconds = input.maxSeconds ?? 600;
   const maxBytes = targetBytesForSeconds(maxSeconds);
   const userAgent = input.mediaUserAgent || YOUTUBE_ANDROID_UA;

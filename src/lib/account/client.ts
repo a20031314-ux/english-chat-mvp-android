@@ -1,4 +1,5 @@
 import { Capacitor } from "@capacitor/core";
+import { googleLoginAvailable } from "@/lib/platform";
 import { apiUrl } from "@/lib/apiBase";
 import {
   entitlementHeaders,
@@ -66,11 +67,14 @@ async function call<T>(path: string, init?: { method?: string; body?: unknown })
 
 let configPromise: Promise<AuthConfig> | null = null;
 
-/** 서버가 켜 둔 로그인 방식. Google은 앱(안드로이드)에서만 띄운다. */
+/**
+ * 서버가 켜 둔 로그인 방식. Google은 안드로이드 앱에서만 띄운다 — iOS는 Google을
+ * 띄우면 Apple 로그인도 요구되므로 1차엔 아이디·비밀번호·이메일만(`lib/platform.ts`).
+ */
 export function fetchAuthConfig(): Promise<AuthConfig> {
   configPromise ??= call<AuthConfig>("/api/account/config")
     .then((config) => ({
-      googleClientId: Capacitor.isNativePlatform() ? config.googleClientId : null,
+      googleClientId: googleLoginAvailable() ? config.googleClientId : null,
       email: config.email,
       password: config.password === true,
     }))

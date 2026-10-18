@@ -30,6 +30,8 @@
 | 2.67 | 81 | My 탭(자라는 요소 망·직접 묻기·보는 방식), 오늘 해볼 것·오늘의 팩, 체크로 시작하는 지도, 영상 자막은 학습 언어만·번역은 문장 바, 요금 셋(라이트·플러스), 의견 보내기, 통화 맞장구 나눔, 사용법 그림 | — (Play 공개 뒤) |
 
 ## 열린 일
+- **iOS 1차 (2026-10-18, `hub/drafts/ios-launch.md`):** 코드 준비 끝(`ios/`, 방·메시지·Google 로그인 없음). 사람이 할 일 8단계(애플 계정 → 빌드 방법 → 번들 ID → App Store 상품을
+  안드로이드와 같은 id로 → RevenueCat iOS 키 → App Store 주소 → 심사 자료 → TestFlight). 빌드 방법이 정해지면 iOS 출시 노트·등록정보(`fastlane/metadata/ios/`)도 이 역할.
 - 등록정보 초안(영어·한국어, 2.64 기준 + 2.65 추가 두 줄): `hub/drafts/store-listing-2026-10-10.md`.
   pull listing 뒤 `fastlane/metadata`로 옮기고 나머지 12개 언어 작성.
 - Play 자동화 처음 설정이 끝났는지 사용자 확인 필요: GitHub Secrets, `play`/`play-production`

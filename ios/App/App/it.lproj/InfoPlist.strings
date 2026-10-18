@@ -1,0 +1,4 @@
+/* scripts/ios-project.mjs가 만듦 — 직접 고치지 말 것 */
+"NSMicrophoneUsageDescription" = "Il microfono serve a trascrivere e correggere ciò che dici nelle chiamate di pratica orale.";
+"NSCameraUsageDescription" = "La fotocamera serve a scattare una foto per il profilo o per un feedback che invii.";
+"NSPhotoLibraryUsageDescription" = "L’accesso alle foto serve a scegliere un’immagine per il profilo o per un feedback che invii.";

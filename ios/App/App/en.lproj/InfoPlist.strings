@@ -1,0 +1,4 @@
+/* scripts/ios-project.mjs가 만듦 — 직접 고치지 말 것 */
+"NSMicrophoneUsageDescription" = "The microphone lets the app transcribe and correct what you say in speaking-practice calls.";
+"NSCameraUsageDescription" = "The camera lets you take a photo for your profile or for feedback you send.";
+"NSPhotoLibraryUsageDescription" = "Photo access lets you choose a picture for your profile or for feedback you send.";

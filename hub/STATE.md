@@ -14,6 +14,7 @@
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
 | 다음 앱 버전 | 2.67 (versionCode 81) — 저장소에 올림(2026-10-17), 빌드·Play 업로드 대기 | — |
+| iOS | 준비 중 — `ios/` 프로젝트 있음(2026-10-18), 말하는 방·메시지·Google 로그인 없는 1차. 맥/클라우드 빌드·App Store Connect 대기 | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할
 
@@ -45,5 +46,5 @@
 
 ## 사용자에게 물어볼 것
 
-- iOS 출시(`hub/drafts/ios-launch.md`): 1차에 말하는 방·메시지를 뺄지(추천), 맥 직접/클라우드 빌드, 음성 인프라(TURN만/SFU).
+- iOS(`hub/drafts/ios-launch.md` "사람이 할 일"): 맥으로 빌드할지 클라우드(GitHub Actions)로 할지, 번들 ID를 안드로이드와 같은 `com.yourname.englishchat`로 둘지(App Store에 한 번 올리면 못 바꿈).
 - 비용 표(`hub/costs.md`, 자동 계산)에서 채팅 한도까지 매일 다 쓰면 유료 요금 모두 손해(라이트 −1,243원 ~ 8,900원 −4,727원/월). 채팅 한 통 2원은 가정이라, 2.67 출시 1주 뒤 실측 토큰으로 확인하고 한도를 다시 볼지.

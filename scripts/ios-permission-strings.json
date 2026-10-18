@@ -1,0 +1,73 @@
+{
+  "_comment": "iOS 권한 안내 문구(InfoPlist.strings). 14개 UI 언어. 고친 뒤 `node scripts/ios-permission-strings.mjs`로 ios/App/App/<언어>.lproj에 다시 씀.",
+  "ko": {
+    "NSMicrophoneUsageDescription": "말하기 연습 통화에서 내 말을 받아쓰고 고쳐 주려면 마이크가 필요해요.",
+    "NSCameraUsageDescription": "프로필 사진이나 의견 보내기에 사진을 찍으려면 카메라가 필요해요.",
+    "NSPhotoLibraryUsageDescription": "프로필 사진이나 의견 보내기에 넣을 사진을 고르려면 사진 접근이 필요해요."
+  },
+  "en": {
+    "NSMicrophoneUsageDescription": "The microphone lets the app transcribe and correct what you say in speaking-practice calls.",
+    "NSCameraUsageDescription": "The camera lets you take a photo for your profile or for feedback you send.",
+    "NSPhotoLibraryUsageDescription": "Photo access lets you choose a picture for your profile or for feedback you send."
+  },
+  "es": {
+    "NSMicrophoneUsageDescription": "El micrófono permite transcribir y corregir lo que dices en las llamadas de práctica oral.",
+    "NSCameraUsageDescription": "La cámara te permite hacer una foto para tu perfil o para los comentarios que envíes.",
+    "NSPhotoLibraryUsageDescription": "El acceso a tus fotos te permite elegir una imagen para tu perfil o para los comentarios que envíes."
+  },
+  "ja": {
+    "NSMicrophoneUsageDescription": "会話練習の通話で話した内容を書き起こして直すために、マイクを使います。",
+    "NSCameraUsageDescription": "プロフィール写真やフィードバック用の写真を撮るために、カメラを使います。",
+    "NSPhotoLibraryUsageDescription": "プロフィールやフィードバックに使う写真を選ぶために、写真へのアクセスが必要です。"
+  },
+  "zh-Hans": {
+    "NSMicrophoneUsageDescription": "需要使用麦克风，才能在口语练习通话中转写并纠正你说的话。",
+    "NSCameraUsageDescription": "需要使用相机，才能为个人资料或反馈拍照。",
+    "NSPhotoLibraryUsageDescription": "需要访问照片，才能为个人资料或反馈选择图片。"
+  },
+  "vi": {
+    "NSMicrophoneUsageDescription": "Cần micro để ghi lại và sửa những gì bạn nói trong cuộc gọi luyện nói.",
+    "NSCameraUsageDescription": "Cần camera để chụp ảnh cho hồ sơ hoặc cho góp ý bạn gửi.",
+    "NSPhotoLibraryUsageDescription": "Cần quyền truy cập ảnh để chọn ảnh cho hồ sơ hoặc cho góp ý bạn gửi."
+  },
+  "fr": {
+    "NSMicrophoneUsageDescription": "Le micro permet de transcrire et de corriger ce que vous dites pendant les appels d’entraînement à l’oral.",
+    "NSCameraUsageDescription": "L’appareil photo permet de prendre une photo pour votre profil ou pour un avis que vous envoyez.",
+    "NSPhotoLibraryUsageDescription": "L’accès aux photos permet de choisir une image pour votre profil ou pour un avis que vous envoyez."
+  },
+  "it": {
+    "NSMicrophoneUsageDescription": "Il microfono serve a trascrivere e correggere ciò che dici nelle chiamate di pratica orale.",
+    "NSCameraUsageDescription": "La fotocamera serve a scattare una foto per il profilo o per un feedback che invii.",
+    "NSPhotoLibraryUsageDescription": "L’accesso alle foto serve a scegliere un’immagine per il profilo o per un feedback che invii."
+  },
+  "pt": {
+    "NSMicrophoneUsageDescription": "O microfone permite transcrever e corrigir o que você diz nas chamadas de prática de conversação.",
+    "NSCameraUsageDescription": "A câmera permite tirar uma foto para o seu perfil ou para um feedback que você enviar.",
+    "NSPhotoLibraryUsageDescription": "O acesso às fotos permite escolher uma imagem para o seu perfil ou para um feedback que você enviar."
+  },
+  "ru": {
+    "NSMicrophoneUsageDescription": "Микрофон нужен, чтобы записывать и исправлять то, что вы говорите во время разговорной практики.",
+    "NSCameraUsageDescription": "Камера нужна, чтобы сделать фото для профиля или для отзыва.",
+    "NSPhotoLibraryUsageDescription": "Доступ к фото нужен, чтобы выбрать изображение для профиля или для отзыва."
+  },
+  "id": {
+    "NSMicrophoneUsageDescription": "Mikrofon diperlukan untuk mentranskripsi dan mengoreksi ucapanmu saat panggilan latihan bicara.",
+    "NSCameraUsageDescription": "Kamera diperlukan untuk memotret foto profil atau foto untuk masukan yang kamu kirim.",
+    "NSPhotoLibraryUsageDescription": "Akses foto diperlukan untuk memilih gambar untuk profil atau masukan yang kamu kirim."
+  },
+  "ar": {
+    "NSMicrophoneUsageDescription": "يحتاج التطبيق إلى الميكروفون لكتابة ما تقوله وتصحيحه أثناء مكالمات التدرّب على المحادثة.",
+    "NSCameraUsageDescription": "يحتاج التطبيق إلى الكاميرا لالتقاط صورة لملفك الشخصي أو للملاحظات التي ترسلها.",
+    "NSPhotoLibraryUsageDescription": "يحتاج التطبيق إلى الوصول إلى الصور لاختيار صورة لملفك الشخصي أو للملاحظات التي ترسلها."
+  },
+  "th": {
+    "NSMicrophoneUsageDescription": "ต้องใช้ไมโครโฟนเพื่อถอดความและแก้ไขสิ่งที่คุณพูดระหว่างการโทรฝึกพูด",
+    "NSCameraUsageDescription": "ต้องใช้กล้องเพื่อถ่ายรูปโปรไฟล์หรือรูปสำหรับความคิดเห็นที่คุณส่ง",
+    "NSPhotoLibraryUsageDescription": "ต้องเข้าถึงรูปภาพเพื่อเลือกรูปสำหรับโปรไฟล์หรือความคิดเห็นที่คุณส่ง"
+  },
+  "hi": {
+    "NSMicrophoneUsageDescription": "बोलने के अभ्यास वाली कॉल में आपकी बात लिखने और सुधारने के लिए माइक्रोफ़ोन चाहिए।",
+    "NSCameraUsageDescription": "प्रोफ़ाइल या भेजी जाने वाली राय के लिए फ़ोटो लेने हेतु कैमरा चाहिए।",
+    "NSPhotoLibraryUsageDescription": "प्रोफ़ाइल या भेजी जाने वाली राय के लिए तस्वीर चुनने हेतु फ़ोटो की अनुमति चाहिए।"
+  }
+}
