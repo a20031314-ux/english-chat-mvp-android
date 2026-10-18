@@ -58,6 +58,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   curriculumMissions: 1,
   // A phrase the learner put on their map from the sentence sheet, written as a task.
   learnerPick: 1,
+  // 노트: 처음 보는 표현·단어·문장 묶음을 고정 목차의 주제로(/api/notes/place). 학습 언어별 공유 캐시라 대부분은 안 부름.
+  notesPlace: 1,
   // One mission answer checked: verdict, correction and the other person's reply.
   missionCheck: 1,
   // A corrected chat or call line read for the kind of mistake it was

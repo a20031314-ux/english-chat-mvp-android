@@ -58,3 +58,8 @@ export async function recentPeople(
     presence: seen.at(index) ?? { at: row.score, learn: null, ui: null },
   }));
 }
+
+/** 한 사람의 마지막 사용 시각·언어. */
+export async function readPresence(id: string): Promise<Presence | null> {
+  return kvGetJson<Presence>(seenKey(id));
+}

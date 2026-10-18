@@ -84,3 +84,16 @@ test("방(언어 둘): 둘 중 하나의 글자면 믿고, 아니면 버린다",
   assert.equal(heardInAny("anything", []), "anything");
   assert.equal(heardInAny("  ", ["en"]), "");
 });
+
+test("자유 대화방 줄의 언어: 글자로 가를 수 있을 때만", async () => {
+  const { whichLanguage } = await import("./transcript.ts");
+  assert.equal(whichLanguage("こんにちは、元気？", ["ja", "ko"]), "ja");
+  assert.equal(whichLanguage("안녕하세요 반가워요", ["ja", "ko"]), "ko");
+  assert.equal(whichLanguage("สวัสดีครับ", ["th", "en"]), "th");
+  assert.equal(whichLanguage("مرحبا كيف حالك", ["es", "ar"]), "ar");
+  // 같은 글자를 쓰는 두 언어(스페인어·영어)는 가르지 않는다.
+  assert.equal(whichLanguage("¿Qué tal? Muy bien", ["es", "en"]), null);
+  // 반반 섞이면 정하지 않는다. 글자가 없으면 없음.
+  assert.equal(whichLanguage("ok 네네", ["en", "ko"]), null);
+  assert.equal(whichLanguage("123 !!", ["ja", "ko"]), null);
+});

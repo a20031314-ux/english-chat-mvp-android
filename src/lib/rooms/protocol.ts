@@ -40,6 +40,8 @@ export type RoomMember = {
   accountId?: string | null;
   /** [배우는 언어, 앱 언어] — 프로필 카드의 언어 조합 표시. */
   langs?: string[];
+  /** 💬 채팅만: 소리를 잇지 않는다(다른 사람의 앱도 이 사람과 음성 연결을 하지 않는다). */
+  textOnly?: boolean;
   joinedAt: number;
   lastSeen: number;
 };
@@ -47,8 +49,13 @@ export type RoomMember = {
 export type RoomMeta = {
   id: string;
   name: string;
-  /** 이 방에서 주로 쓰는 언어 두 개(언어 교환). 표시용. */
+  /** 이 방에서 주로 쓰는 언어 두 개(언어 교환). 표시용. 자유 대화방은 비어 있다. */
   languages: string[];
+  /**
+   * 🌐 자유 대화: 방 언어를 정하지 않는다. 자막은 말하는 사람마다 그 사람의 두 언어
+   * (배우는 언어·앱 언어)로 받아쓰고, 언어 찾기에서는 어떤 언어로 찾든 함께 나온다.
+   */
+  free?: boolean;
   hostPeerId: string;
   /** 방장 계정. 방장이 앱을 다시 열어 새 이름표로 와도 방장으로 알아본다. */
   hostAccountId?: string | null;
@@ -58,6 +65,8 @@ export type RoomMeta = {
   allowed?: string[];
   /** 이 통화를 연 1:1 대화(api/dm). */
   threadId?: string;
+  /** 단체방 통화면 그 단체방(rooms/group.ts) — 끝나면 기록을 그 방에 남긴다. */
+  groupId?: string;
   createdAt: number;
 };
 
@@ -94,6 +103,8 @@ export type RoomLine = {
   quote?: LineQuote;
   /** "이거 무슨 뜻이에요?" 질문이면 true(인용한 줄 옆에 ❓ 수). */
   ask?: boolean;
+  /** 받아쓴 말이 어느 언어인지(글자로 가를 수 있을 때만, 자유 대화방에서 줄 옆에 표시). */
+  lang?: string;
 };
 
 export type SignalKind = "offer" | "answer" | "ice" | "bye";

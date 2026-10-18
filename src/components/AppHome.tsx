@@ -8,20 +8,21 @@ import { EnglishAnalysisProvider } from "@/components/EnglishAnalysisProvider";
 import { ExpressionInsightProvider } from "@/components/ExpressionInsightProvider";
 import { TAB_ICON_META } from "@/components/TabIcons";
 import { TargetLanguageSelector } from "@/components/TargetLanguageSelector";
-import { VocabularyPanel } from "@/components/VocabularyPanel";
 import { UpdateNotice } from "@/components/UpdateNotice";
 import { WhatsNewSheet } from "@/components/WhatsNewSheet";
 import { RoleplayTab, hasRoleplay } from "@/components/RoleplayTab";
 import { StudyMapTab } from "@/components/studyMap/StudyMapTab";
-import { onAppIntent } from "@/lib/appIntents";
+import { onAppIntent, sendAppIntent } from "@/lib/appIntents";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
 import { BillingUiProvider, BillingOpenButton } from "@/components/BillingScreen";
 import { GuideButton } from "@/components/GuideSheet";
 import { FeedbackButton } from "@/components/FeedbackButton";
 import { RoomsScreen } from "@/components/rooms/RoomsScreen";
 import { PeopleTab } from "@/components/rooms/PeopleTab";
+import { InviteWelcome } from "@/components/invite/InviteWelcome";
 import { MessagesTab } from "@/components/rooms/MessagesTab";
 import { useInbox } from "@/components/rooms/RoomDm";
+import { useGroups } from "@/components/rooms/RoomGroups";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { readMiniRoom, subscribeMiniRoom } from "@/lib/rooms/miniRoom";
 import { socialFeaturesEnabled } from "@/lib/platform";
@@ -62,6 +63,8 @@ function resolveTab(raw: string | null | undefined): AppTab {
   if (raw === "read" || raw === "web" || raw === "reader") return "chat";
   if (raw === "study" || raw === "materials" || raw === "library") return "chat";
   if (raw === "watch" || raw === "youtube") return "video";
+  // 단어장 탭은 My의 노트로 들어갔다(2026-10-19).
+  if (raw === "vocab") return "map";
   if (isAppTab(raw)) return raw;
   return "chat";
 }
@@ -96,6 +99,9 @@ function AppHomeInner({
   const signedIn = useSyncExternalStore(subscribeSession, () => readCachedAccount() !== null, () => false);
   // 메시지 목록과 안 읽음 수: 메시지 탭을 보는 동안은 8초, 아니면 30초마다(로그인했을 때만).
   const inbox = useInbox(socialOn && signedIn, shownTab === "messages" ? 8_000 : 30_000);
+  // 단체방(받은 초대·안 읽음 포함)도 같은 배지에.
+  const groups = useGroups(socialOn && signedIn, shownTab === "messages" ? 8_000 : 30_000);
+  const messagesUnread = inbox.unread + groups.unread;
   const group = groupOf(shownTab);
   // 묶음마다 마지막으로 본 탭. 스위치를 누르면 그리로.
   const [lastInGroup, setLastInGroup] = useState<Record<TabGroup, AppTab>>({ ai: "chat", people: "people" });
@@ -110,6 +116,8 @@ function AppHomeInner({
       const params = new URLSearchParams(window.location.search);
       const fromQuery = params.get("screen") ?? params.get("tab");
       const initial = resolveTab(fromQuery);
+      // 예전 단어장 탭 링크: My로 와서 노트의 단어장을 연다.
+      if (fromQuery === "vocab") sendAppIntent("openNotes", { section: "words" });
       setTab(initial);
       window.history.replaceState(
         { talkbankScreen: initial } satisfies HistoryState,
@@ -140,7 +148,10 @@ function AppHomeInner({
   }, []);
 
   const openTab = useCallback(
-    (next: AppTab) => {
+    (requested: AppTab) => {
+      // 단어장은 탭이 아니라 My 노트 안에 있다: My로 가서 단어장을 연다.
+      const next: AppTab = requested === "vocab" ? "map" : requested;
+      if (requested === "vocab") sendAppIntent("openNotes", { section: "words" });
       setTab(next);
       setLastInGroup((last) => ({ ...last, [groupOf(next)]: next }));
       syncUrl(next);
@@ -173,7 +184,6 @@ function AppHomeInner({
       ? [{ id: "roleplay" as const, label: ui.homeTabCall }]
       : []),
     { id: "video", label: ui.homeTabVideo },
-    { id: "vocab", label: ui.homeTabVocab },
   ];
   const peopleTabItems: { id: AppTab; label: string }[] = [
     { id: "people", label: ui.homeTabPeople },
@@ -185,6 +195,8 @@ function AppHomeInner({
   const guideTab = group === "people" ? "rooms" : shownTab;
   const guideTabs = [
     ...aiTabItems,
+    // 단어장은 탭에서 빠졌지만(노트 안) 사용법은 그대로 둔다.
+    { id: "vocab" as const, label: ui.homeTabVocab },
     ...(socialOn ? [{ id: "rooms" as const, label: ui.homeTabRooms }] : []),
   ] as { id: Exclude<AppTab, "people" | "messages">; label: string }[];
 
@@ -241,7 +253,7 @@ function AppHomeInner({
                         }`}
                       >
                         {option === "ai" ? ui.modeAi : ui.modePeople}
-                        {option === "people" && !on && inbox.unread > 0 ? (
+                        {option === "people" && !on && messagesUnread > 0 ? (
                           <span className="absolute end-3 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-violet-400" aria-hidden />
                         ) : null}
                       </button>
@@ -309,21 +321,9 @@ function AppHomeInner({
                 />
               ) : null}
 
-              {shownTab === "vocab" ? (
-                <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
-                  <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
-                    <h1 className="text-base font-semibold text-white">
-                      {ui.homeTabVocab}
-                    </h1>
-                  </header>
-                  <div className="min-h-0 flex-1 overflow-hidden">
-                    <VocabularyPanel locale={locale} ui={ui} />
-                  </div>
-                </div>
-              ) : null}
 
               {shownTab === "messages" && socialOn ? (
-                <MessagesTab ui={ui} locale={locale} threads={inbox.threads} />
+                <MessagesTab ui={ui} locale={locale} targetLanguage={targetLanguage} threads={inbox.threads} groups={groups.groups} onGroupsChanged={groups.refresh} />
               ) : null}
 
               {shownTab === "people" && socialOn ? (
@@ -334,6 +334,8 @@ function AppHomeInner({
               {socialOn ? (
                 <RoomsScreen ui={ui} locale={locale} targetLanguage={targetLanguage} visible={shownTab === "rooms"} />
               ) : null}
+              {/* 초대 링크로 열었을 때 한 번(설치 직후 첫 실행 포함). */}
+              {socialOn ? <InviteWelcome ui={ui} locale={locale} onOpenMessages={() => openTab("messages")} /> : null}
             </div>
 
             {miniRoom ? (
@@ -385,9 +387,9 @@ function AppHomeInner({
                       >
                         {item.label}
                       </span>
-                      {item.id === "messages" && inbox.unread > 0 ? (
+                      {item.id === "messages" && messagesUnread > 0 ? (
                         <span className="absolute end-[22%] top-1 min-w-[1.1rem] rounded-full bg-violet-500 px-1 text-center text-[10px] font-semibold leading-4 text-white">
-                          {Math.min(inbox.unread, 99)}
+                          {Math.min(messagesUnread, 99)}
                         </span>
                       ) : null}
                     </button>

@@ -23,6 +23,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
+            <!-- 친구 초대 링크: languagebank://invite?c=… (초대 웹 페이지의 "앱에서 열기") -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="languagebank" android:host="invite" />
+            </intent-filter>
+
             <intent-filter android:label="@string/process_text_analyze">
                 <action android:name="android.intent.action.SEND" />
                 <category android:name="android.intent.category.DEFAULT" />

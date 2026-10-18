@@ -6,6 +6,7 @@ import { readCachedAccount } from "@/lib/account/session";
 import type { LineKind, PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, RoomSummary, SignalKind } from "./protocol";
 import type { PersonCard, PublicProfile } from "./social";
 import type { DmMessage, DmSummary, DmThread } from "./dm";
+import type { Group, GroupCall, GroupMessage, GroupSummary } from "./group";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 
 /** 방(시험 기능)의 기기 저장값. 모두 이 기기에만 있다. */
@@ -88,8 +89,9 @@ export async function listRooms(languages: string[] = []): Promise<RoomSummary[]
   return (await call<{ rooms: RoomSummary[] }>("list", languages.length ? { langs: languages } : {})).rooms;
 }
 
-export async function createRoom(peerId: string, name: string, languages: string[]): Promise<RoomMeta> {
-  return (await call<{ room: RoomMeta }>("create", { peerId, name, languages })).room;
+/** `free`: 🌐 자유 대화(방 언어 없음, 자막은 말하는 사람마다 그 사람의 언어로). */
+export async function createRoom(peerId: string, name: string, languages: string[], free = false): Promise<RoomMeta> {
+  return (await call<{ room: RoomMeta }>("create", { peerId, name, languages, ...(free ? { free: true } : {}) })).room;
 }
 
 export async function joinRoom(input: {
@@ -110,6 +112,8 @@ export async function pollRoom(input: {
   muted: boolean;
   role: RoomRole;
   hand: boolean;
+  /** 💬 채팅만(소리 안 이음). */
+  textOnly?: boolean;
 }): Promise<PollResponse> {
   return call("poll", input);
 }
@@ -142,6 +146,8 @@ export async function postLine(input: {
   /** 집은 남의 줄 번호(묻기·답하기). 인용 글은 서버가 채운다. */
   quoteSeq?: number;
   ask?: boolean;
+  /** 받아쓴 말의 언어(자유 대화방에서 줄 옆에 표시). */
+  lang?: string;
 }): Promise<RoomLine> {
   return (await call<{ line: RoomLine }>("line", input)).line;
 }
@@ -156,7 +162,7 @@ export async function pauseRoom(roomId: string, peerId: string): Promise<void> {
   await call("pause", { roomId, peerId });
 }
 
-export type ParkedRoom = { id: string; name: string; languages: string[]; parkedAt: number };
+export type ParkedRoom = { id: string; name: string; languages: string[]; free?: boolean; parkedAt: number };
 
 export async function listParkedRooms(): Promise<ParkedRoom[]> {
   return (await call<{ rooms: ParkedRoom[] }>("parked", {})).rooms;
@@ -194,7 +200,7 @@ export async function transcribeUtterance(blob: Blob, mimeType: string, language
       filename: mimeType.includes("mp4") ? "line.mp4" : "line.webm",
       mimeType: mimeType || "audio/webm",
       room: true,
-      // 방의 언어(보통 둘) — 이 밖의 글자로 나온 자막은 지어낸 것으로 본다(서버).
+      // 방의 언어(보통 둘), 자유 대화방이면 말하는 사람의 두 언어 — 이 밖의 글자로 나온 자막은 지어낸 것으로 본다(서버).
       languages,
     }),
   });
@@ -359,4 +365,67 @@ export function dmCall(threadId: string, peerId: string): Promise<{ room: RoomMe
 
 export function dmEndCall(roomId: string): Promise<{ logged: boolean }> {
   return dm("endCall", { roomId });
+}
+
+/* ── 단체방(워크스페이스 1단계, rooms/group.ts) ───────────────────────── */
+
+async function groups<T>(action: string, payload: Record<string, unknown>): Promise<T> {
+  const response = await fetch(apiUrl("/api/groups"), {
+    method: "POST",
+    headers: { "Content-Type": "application/json", ...entitlementHeaders() },
+    body: JSON.stringify({ action, code: readInviteCode(), ...payload }),
+  });
+  const body = (await response.json().catch(() => ({}))) as { error?: string } & T;
+  if (!response.ok) throw new RoomApiError(body.error ?? "FAILED", response.status);
+  return body;
+}
+
+export function groupMine(): Promise<{ groups: GroupSummary[] }> {
+  return groups("mine", {});
+}
+
+export function groupCreate(name: string, languages: string[], invite: string[]): Promise<{ group: Group }> {
+  return groups("create", { name, languages, invite });
+}
+
+export function groupOpen(groupId: string): Promise<{ group: Group; messages: GroupMessage[]; call?: GroupCall }> {
+  return groups("open", { groupId });
+}
+
+export function groupPoll(groupId: string, since: number): Promise<{ group: Group; messages: GroupMessage[]; call?: GroupCall }> {
+  return groups("poll", { groupId, since });
+}
+
+/** 📞 단체방 통화: 열려 있으면 그 방, 없으면 새 비공개 방. */
+export function groupCall(groupId: string, peerId: string): Promise<{ room: RoomMeta }> {
+  return groups("call", { groupId, peerId });
+}
+
+/** 통화에서 나갈 때: 모두 나갔으면 서버가 자막을 기록으로 남긴다. */
+export function groupEndCall(groupId: string, roomId: string): Promise<{ logged: boolean }> {
+  return groups("endCall", { groupId, roomId });
+}
+
+export function groupSend(groupId: string, text: string, quote?: { seq: number; ask: boolean }): Promise<{ group: Group; message: GroupMessage }> {
+  return groups("send", quote ? { groupId, text, quoteSeq: quote.seq, ask: quote.ask } : { groupId, text });
+}
+
+export function groupInvite(groupId: string, target: string): Promise<{ ok: true }> {
+  return groups("invite", { groupId, target });
+}
+
+export function groupAnswer(groupId: string, accept: boolean): Promise<{ group: Group }> {
+  return groups("answer", { groupId, accept });
+}
+
+export function groupLeave(groupId: string): Promise<{ ok: true }> {
+  return groups("leave", { groupId });
+}
+
+export function groupKick(groupId: string, target: string): Promise<{ ok: true }> {
+  return groups("kick", { groupId, target });
+}
+
+export function groupTransfer(groupId: string, target: string): Promise<{ ok: true }> {
+  return groups("transfer", { groupId, target });
 }

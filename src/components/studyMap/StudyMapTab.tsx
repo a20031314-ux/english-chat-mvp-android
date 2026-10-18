@@ -34,6 +34,7 @@ import { MissionScreen } from "@/components/studyMap/MissionScreen";
 import { TopicItems, ItemBar } from "@/components/studyMap/TopicItems";
 import { LearnerPanel } from "@/components/studyMap/LearnerPanel";
 import { LedgerPanel } from "@/components/studyMap/LedgerPanel";
+import { NotesPanel } from "@/components/notes/NotesPanel";
 import { NextStepCard } from "@/components/NextStepCard";
 import { GrowthNetwork } from "@/components/studyMap/GrowthNetwork";
 import { FOCUS_IDS, GAP_IDS, USE_IDS, type FocusId, type GapId, type UseId } from "@/lib/learner/selfCheck";
@@ -244,6 +245,9 @@ export function StudyMapTab({
                 <div className="mt-3">
                   <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
                 </div>
+                <div className="mt-3">
+                  <NotesPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
+                </div>
               </div>
             ) : null}
           </>
@@ -298,6 +302,9 @@ export function StudyMapTab({
             />
             <div className="mt-3">
               <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
+            </div>
+            <div className="mt-3">
+              <NotesPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
             </div>
           </div>
         ) : null}

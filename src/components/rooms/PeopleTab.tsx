@@ -7,6 +7,7 @@ import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { roomCopy } from "@/lib/rooms/copy";
 import { requestDm } from "@/lib/rooms/openDm";
 import { PeopleList } from "./RoomPeople";
+import { InviteButton } from "@/components/invite/InviteButton";
 
 /**
  * 하단 "사람" 탭: 최근에 앱을 쓴 사람들의 프로필 목록(RoomPeople.tsx).
@@ -20,6 +21,8 @@ export function PeopleTab({ ui, locale, targetLanguage }: { ui: UICopy; locale: 
     <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
         <h1 className="text-base font-semibold text-white">{ui.homeTabPeople}</h1>
+        {/* 앱이 없는 친구도: 링크 → Play → 첫 실행에 서로 팔로우(lib/invite). */}
+        {account ? <InviteButton locale={locale} /> : null}
       </header>
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         {account ? (

@@ -215,3 +215,29 @@ test("잠시 닫기 → 다시 열기: 같은 번호·이름·언어·내보낸 
   const banned = await joinRoom({ id: room.id, peerId: "peer_park0004", nickname: "Somchai", wantRole: "listener", accountId: "acct_park_bad" });
   assert.deepEqual(banned, { ok: false, error: "BANNED" });
 });
+
+test("💬 채팅만: 듣는 자리에서만 켜지고, 말하기 자리면 꺼진다", async () => {
+  const room = await createRoom({ name: "Tiếng Việt ↔ 한국어", languages: ["vi", "ko"], hostPeerId: "peer_text0001" });
+  await joinRoom({ id: room.id, peerId: "peer_text0001", nickname: "Minh", wantRole: "speaker" });
+  await joinRoom({ id: room.id, peerId: "peer_text0002", nickname: "지수", wantRole: "listener" });
+  const listener = await poll({ id: room.id, peerId: "peer_text0002", since: 0, textOnly: true });
+  assert.ok(listener && listener !== "KICKED");
+  assert.equal(listener.members.find((m) => m.peerId === "peer_text0002")?.textOnly, true);
+  const host = await poll({ id: room.id, peerId: "peer_text0001", since: 0, textOnly: true });
+  assert.ok(host && host !== "KICKED");
+  assert.equal(host.members.find((m) => m.peerId === "peer_text0001")?.textOnly, false);
+});
+
+test("자유 대화방: 방 언어 없이, 어떤 언어로 찾든 나오고, 잠시 닫았다 열어도 자유", async () => {
+  const room = await createRoom({ name: "🌐 아무 말", languages: ["ja", "ko"], free: true, hostPeerId: "peer_free0001", hostAccountId: "acct_free_host" });
+  assert.equal(room.free, true);
+  assert.deepEqual(room.languages, []);
+  await joinRoom({ id: room.id, peerId: "peer_free0001", nickname: "민지", wantRole: "speaker", accountId: "acct_free_host" });
+  assert.ok((await listRooms(null, ["th"])).some((r) => r.id === room.id));
+  assert.ok((await listRooms(null, ["es", "ar"])).some((r) => r.id === room.id));
+  assert.equal(await pauseRoom({ id: room.id, hostPeerId: "peer_free0001" }), "ok");
+  const again = await reopenRoom({ accountId: "acct_free_host", id: room.id, hostPeerId: "peer_free0002", hostNickname: "민지" });
+  assert.equal(again?.free, true);
+  const line = await addLine(room.id, { kind: "speech", peerId: "peer_free0002", nickname: "민지", text: "こんにちは", startedAt: 1, endedAt: 2, lang: "ja" });
+  assert.equal(line.lang, "ja");
+});

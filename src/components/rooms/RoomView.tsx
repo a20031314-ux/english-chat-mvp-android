@@ -1,10 +1,12 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { InviteButton } from "@/components/invite/InviteButton";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { RoomCopy } from "@/lib/rooms/copy";
 import {
   RoomApiError,
   grantRole,
+  groupCreate,
   pauseRoom,
   transferHost,
   joinRoom,
@@ -30,6 +32,8 @@ import {
   type RoomRole,
 } from "@/lib/rooms/protocol";
 import { askPhrase } from "@/lib/rooms/quote";
+import { cleanLanguages } from "@/lib/rooms/roomFilter";
+import { whichLanguage } from "@/lib/roleplay/transcript";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { Composer, Face, Lines, ProfileSheet, languagePair } from "./RoomParts";
 import { useInbox } from "./RoomDm";
@@ -120,6 +124,12 @@ export function RoomView({
   const [sheet, setSheet] = useState<{ peerId: string; accountId: string | null; nickname: string } | null>(null);
 
   const roleRef = useRef<RoomRole>("listener");
+  // 참여 방식(사람마다): 💬 채팅만 = 소리를 잇지 않음, 🔇 보이스만 = 채팅 칸을 숨김.
+  const [textOnly, setTextOnly] = useState(false);
+  const textOnlyRef = useRef(false);
+  const [hideChat, setHideChat] = useState(false);
+  const [seenAsk, setSeenAsk] = useState(0);
+  const [toast, setToast] = useState("");
   const handRef = useRef(false);
   const mutedRef = useRef(false);
   const offsetRef = useRef(0);
@@ -161,13 +171,20 @@ export function RoomView({
   }, []);
 
   const addMine = useCallback((line: RoomLine) => setLines((have) => mergeLines(have, [line])), []);
+  const speakerLanguages = useMemo(
+    () => cleanLanguages([targetLanguage, locale]),
+    [targetLanguage, locale],
+  );
 
   const onUtterance = useCallback(
     async (blob: Blob, mimeType: string, startedAt: number, endedAt: number) => {
       setPending((count) => count + 1);
       try {
-        const text = await transcribeUtterance(blob, mimeType, room.languages);
+        // 자유 대화방은 방 언어가 없어서 말하는 나의 두 언어(배우는 언어·앱 언어)로 받아쓴다.
+        const languages = room.free ? speakerLanguages : room.languages;
+        const text = await transcribeUtterance(blob, mimeType, languages);
         if (!text || !aliveRef.current) return;
+        const lang = room.free ? whichLanguage(text, languages) : null;
         addMine(
           await postLine({
             roomId: room.id,
@@ -176,6 +193,7 @@ export function RoomView({
             text,
             startedAt: startedAt + offsetRef.current,
             endedAt: endedAt + offsetRef.current,
+            ...(lang ? { lang } : {}),
           }),
         );
       } catch (error) {
@@ -184,7 +202,7 @@ export function RoomView({
         setPending((count) => Math.max(0, count - 1));
       }
     },
-    [addMine, peerId, room.id, room.languages],
+    [addMine, peerId, room.id, room.languages, room.free, speakerLanguages],
   );
 
   const startMic = useCallback(async (): Promise<boolean> => {
@@ -283,6 +301,7 @@ export function RoomView({
           muted: mutedRef.current,
           role: roleRef.current,
           hand: handRef.current,
+          textOnly: textOnlyRef.current,
         });
         if (!aliveRef.current) return;
         const receivedAt = Date.now();
@@ -300,8 +319,9 @@ export function RoomView({
           // 방장이 올리거나 내렸다(또는 앉으려 했는데 자리가 없었다). 마이크도 같이.
           await adoptRole(me.role, me.role === "speaker" ? "promoted" : "demoted");
         }
-        mesh.sync(live.map((member) => member.peerId));
-        for (const signal of result.signals) await mesh.handle(signal);
+        // 💬 채팅만이면 아무와도 소리를 잇지 않고, 다른 사람의 채팅만 사람과도 잇지 않는다.
+        mesh.sync(textOnlyRef.current ? [] : live.filter((member) => !member.textOnly).map((member) => member.peerId));
+        for (const signal of result.signals) if (!textOnlyRef.current) await mesh.handle(signal);
         if (result.lines.length) {
           sinceRef.current = Math.max(sinceRef.current, ...result.lines.map((line) => line.seq));
           setLines((have) => mergeLines(have, result.lines));
@@ -413,6 +433,41 @@ export function RoomView({
     }
   };
   const nextHosts = members.filter((member) => member.peerId !== peerId && member.role === "speaker" && member.accountId);
+  // 자막(받아쓴 말)과 채팅(쓴 댓글)을 나눈다 — 예전 앱의 줄에는 kind가 없을 수 있다(그러면 말).
+  const spoken = timeline(lines).filter((line) => line.kind !== "text");
+  const typed = timeline(lines).filter((line) => line.kind === "text");
+  const noteFor = onMessage
+    ? (line: RoomLine) => {
+        if (line.accountId) onMessage(line.accountId, { roomId: room.id, seq: line.seq, nickname: line.nickname, text: line.text });
+      }
+    : undefined;
+  // 참여 방식 고르기. 방장은 말하기 자리에서 내려가지 않는다(듣기·채팅만은 막음).
+  const participation = textOnly ? "chat" : hideChat ? "voice" : role === "speaker" ? "speak" : "listen";
+  const choose = async (next: "speak" | "listen" | "chat" | "voice") => {
+    textOnlyRef.current = next === "chat";
+    setTextOnly(next === "chat");
+    setHideChat(next === "voice");
+    if (next === "speak" && role !== "speaker") {
+      if (free) await askRole("speaker");
+      else {
+        raise(true);
+        setNotice("handUp");
+      }
+    }
+    if ((next === "listen" || next === "chat") && role === "speaker" && !isHostNow) await askRole("listener");
+  };
+  // 🔇 보이스만일 때 누가 내 말을 물으면 위에 알린다(채팅 칸이 숨어 있으니).
+  const askedMe = lines.filter((line) => line.ask && line.quote?.peerId === peerId && line.peerId !== peerId && line.seq > seenAsk).at(-1);
+  // 이 방 사람들과 단체방(워크스페이스 4단계): 계정 있는 사람을 모두 초대.
+  const makeGroup = async () => {
+    const invite = [...new Set(members.filter((member) => member.peerId !== peerId && member.accountId).map((member) => member.accountId!))];
+    try {
+      await groupCreate(room.name.replace(/^📞\s*/, ""), room.languages, invite);
+      setToast(t.groupMade.replace("{n}", String(invite.length)));
+    } catch {
+      setNotice("error");
+    }
+  };
   const memberAccounts = members.map((member) => member.accountId).filter((id): id is string => Boolean(id));
   const notes = pendingNotes(inbox.threads, memberAccounts, seenNotes);
   const isSpeaking = (member: RoomMember) =>
@@ -427,12 +482,27 @@ export function RoomView({
               {title ?? room.name}
             </h1>
             <p className="text-xs text-slate-400">
-              {languagePair(room.languages, locale)}
-              {room.languages.length ? " · " : ""}
+              {room.free ? `🌐 ${t.freeTalk}` : languagePair(room.languages, locale)}
+              {room.free || room.languages.length ? " · " : ""}
               {t.speakers} {speakers.length}/{MAX_SPEAKERS} · {t.listeners} {listeners.length}
             </p>
           </div>
           <div className="flex shrink-0 items-center gap-2">
+            {/* 공개 방만: 앱이 없는 친구도 링크로 이 방에(lib/invite). */}
+            {!room.private && !("groupId" in room && room.groupId) ? (
+              <InviteButton locale={locale} room={{ id: room.id, name: room.name }} compact />
+            ) : null}
+            {!room.private && members.some((member) => member.peerId !== peerId && member.accountId) ? (
+              <button
+                type="button"
+                onClick={() => void makeGroup()}
+                aria-label={t.makeGroup}
+                title={t.makeGroup}
+                className="rounded-lg border border-white/20 px-2.5 py-1.5 text-sm text-slate-200"
+              >
+                👥
+              </button>
+            ) : null}
             {onMinimize ? (
               <button
                 type="button"
@@ -530,6 +600,10 @@ export function RoomView({
                   <span className="absolute -top-1 -end-1 text-[11px]" aria-hidden>
                     ✋
                   </span>
+                ) : member.textOnly ? (
+                  <span className="absolute -bottom-1 -end-1 text-meta" aria-hidden>
+                    💬
+                  </span>
                 ) : null}
               </button>
             ))}
@@ -583,6 +657,24 @@ export function RoomView({
         </button>
       ) : null}
 
+      {toast ? (
+        <button type="button" onClick={() => setToast("")} className="shrink-0 bg-violet-400/10 px-4 py-2 text-start text-sm text-violet-100" dir="auto">
+          👥 {toast}
+        </button>
+      ) : null}
+      {hideChat && askedMe ? (
+        <button
+          type="button"
+          onClick={() => {
+            setSeenAsk(askedMe.seq);
+            setHideChat(false);
+          }}
+          className="shrink-0 bg-amber-400/10 px-4 py-2 text-start text-sm text-amber-100"
+          dir="auto"
+        >
+          ❓ {t.askedYou.replace("{name}", askedMe.nickname)} · 💬 {t.chatTitle}
+        </button>
+      ) : null}
       {notes.length ? (
         <button
           type="button"
@@ -598,28 +690,74 @@ export function RoomView({
         </button>
       ) : null}
 
-      <Lines
-        big={layout === "chat"}
-        onNote={
-          onMessage
-            ? (line) => {
-                if (line.accountId) onMessage(line.accountId, { roomId: room.id, seq: line.seq, nickname: line.nickname, text: line.text });
-              }
-            : undefined
-        }
-        t={t}
-        lines={layout === "call" ? timeline(lines).slice(-CALL_LAYOUT_LINES) : lines}
-        view={view}
-        selfId={peerId}
-        locale={locale}
-        targetLanguage={targetLanguage}
-        blocked={blocked}
-        onPerson={openPerson}
-        onQuote={(line, ask) => setQuoting({ line, ask })}
-      />
+      {/* 자막(말한 것)과 채팅(쓴 것)을 나눠 그린다. 질문 수·번역 맥락은 둘을 합쳐서. */}
+      <div className="flex min-h-0 flex-1 flex-col">
+        <section className={`flex min-h-0 flex-col ${layout === "chat" ? "flex-[1]" : layout === "call" ? "shrink-0" : "flex-[3]"}`}>
+          <p className="shrink-0 px-4 pt-2 text-meta font-medium text-slate-400">🎙 {t.captionsTitle}</p>
+          <Lines
+            onNote={noteFor}
+            t={t}
+            allLines={lines}
+            lines={layout === "call" ? spoken.slice(-CALL_LAYOUT_LINES) : spoken}
+            view={view}
+            selfId={peerId}
+            locale={locale}
+            targetLanguage={targetLanguage}
+            blocked={blocked}
+            onPerson={openPerson}
+            onQuote={(line, ask) => setQuoting({ line, ask })}
+          />
+        </section>
+        {(!hideChat && (layout !== "call" || composerOpen)) || quoting ? (
+          <section className={`flex min-h-0 flex-col border-t border-white/10 ${layout === "chat" ? "flex-[2]" : "flex-[2]"}`}>
+            <p className="shrink-0 px-4 pt-2 text-meta font-medium text-slate-400">
+              💬 {t.chatTitle}
+              {typed.length ? ` ${typed.length}` : ""}
+            </p>
+            <Lines
+              big={layout === "chat"}
+              onNote={noteFor}
+              t={t}
+              allLines={lines}
+              lines={typed}
+              emptyText={t.noComments}
+              view="timeline"
+              selfId={peerId}
+              locale={locale}
+              targetLanguage={targetLanguage}
+              blocked={blocked}
+              onPerson={openPerson}
+              onQuote={(line, ask) => setQuoting({ line, ask })}
+            />
+          </section>
+        ) : null}
+      </div>
 
       <footer className="shrink-0 space-y-2 border-t border-white/10 px-4 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] pt-2">
-        {layout === "call" && !composerOpen && !quoting ? (
+        {/* 참여 방식: 🎙 말하기 / 👂 듣기 / 💬 채팅만(소리 안 이음) / 🔇 보이스만(채팅 숨김). */}
+        <div className="flex gap-1 rounded-lg bg-white/5 p-0.5 text-xs">
+          {(
+            [
+              ["speak", "🎙", t.joinSpeak],
+              ["listen", "👂", t.joinListen],
+              ["chat", "💬", t.joinChat],
+              ["voice", "🔇", t.joinVoice],
+            ] as const
+          ).map(([mode, icon, label]) => (
+            <button
+              key={mode}
+              type="button"
+              aria-pressed={participation === mode}
+              disabled={!joined || (isHostNow && (mode === "listen" || mode === "chat"))}
+              onClick={() => void choose(mode)}
+              className={`flex-1 truncate rounded-lg px-1 py-1 disabled:opacity-40 ${participation === mode ? "bg-white/15 text-white" : "text-slate-400"}`}
+            >
+              {icon} {label}
+            </button>
+          ))}
+        </div>
+        {textOnly ? <p className="text-meta text-slate-500">{t.chatOnlyHint}</p> : null}
+        {hideChat && !quoting ? null : layout === "call" && !composerOpen && !quoting ? (
           <button
             type="button"
             onClick={() => setComposerOpen(true)}

@@ -24,3 +24,9 @@ test("저장한 값 읽기: 깨진 값·모르는 코드는 전체로", () => {
   assert.deepEqual(parseRoomFilter(JSON.stringify({ kind: "pick", a: "en", b: "xx" })), { kind: "pick", a: "en", b: null });
   assert.deepEqual(parseRoomFilter(JSON.stringify({ kind: "mine" })), { kind: "mine" });
 });
+
+test("자유 대화방은 어떤 언어로 찾든 나온다", () => {
+  assert.equal(roomMatches([], ["ja", "ko"], true), true);
+  assert.equal(roomMatches([], ["th"], true), true);
+  assert.equal(roomMatches([], ["ja"]), false);
+});
