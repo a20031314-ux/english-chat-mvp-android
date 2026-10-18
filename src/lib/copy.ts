@@ -552,6 +552,7 @@ const generatedWhatsNewOverlay = {
   whatsNewAccountTitle: "Sign in and your profile",
   whatsNewAccountBody: "Sign in with a username and your progress and subscription follow you to a new phone. Your photo, nickname and intro show in rooms and messages.",
   homeTabRooms: "Rooms",
+  homeTabPeople: "People",
 } as const;
 
 const generatedAskOverlay = {
@@ -1003,6 +1004,7 @@ export const copy = {
     homeTabSaved: "표현",
     homeTabVocab: "단어장",
     homeTabRooms: "말하는 방",
+    homeTabPeople: "사람",
     whatsNewRoomsTitle: "말하는 방이 생겼어요",
     whatsNewRoomsBody: "사람들과 목소리로 이야기해요. 말한 내용이 사람마다 자막으로 쌓이고, 줄을 누르면 내 언어로 번역돼요. 말이 막히면 댓글로 참여하세요.",
     whatsNewDmTitle: "프로필에서 메시지와 통화",
@@ -2154,6 +2156,7 @@ export const copy = {
     homeTabSaved: "Saved",
     homeTabVocab: "Vocab",
     homeTabRooms: "Rooms",
+    homeTabPeople: "People",
     whatsNewRoomsTitle: "Talk rooms are here",
     whatsNewRoomsBody: "Talk with people by voice. What each person says builds up as captions, and tapping a line translates it into your language. If the words won’t come, join in with a comment.",
     whatsNewDmTitle: "Messages and calls from profiles",
@@ -3302,6 +3305,7 @@ export const copy = {
     homeTabSaved: "Guardado",
     homeTabVocab: "Vocabulario",
     homeTabRooms: "Salas",
+    homeTabPeople: "Personas",
     whatsNewRoomsTitle: "Llegan las salas para hablar",
     whatsNewRoomsBody: "Habla con otras personas por voz. Lo que dice cada uno queda en subtítulos, y al tocar una línea se traduce a tu idioma. Si no te salen las palabras, participa con un comentario.",
     whatsNewDmTitle: "Mensajes y llamadas desde el perfil",

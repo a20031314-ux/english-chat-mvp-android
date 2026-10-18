@@ -5,7 +5,7 @@ type TabIconProps = {
   className?: string;
 };
 
-type TabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms";
+type TabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people";
 
 const iconBox = "h-6 w-6";
 
@@ -128,6 +128,19 @@ export function RoomsTabIcon({ active, className = "" }: TabIconProps) {
   );
 }
 
+export function PeopleTabIcon({ active, className = "" }: TabIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={`${iconBox} ${className}`} aria-hidden>
+      {/* Two profile cards stacked: a list of people to meet. */}
+      <rect x="3" y="4" width="18" height="7" rx="2" className={active ? "fill-white/25" : "fill-white/10"} stroke="white" strokeOpacity={active ? 0.9 : 0.5} strokeWidth="1.3" />
+      <rect x="3" y="13" width="18" height="7" rx="2" className={active ? "fill-white/25" : "fill-white/10"} stroke="white" strokeOpacity={active ? 0.9 : 0.5} strokeWidth="1.3" />
+      <circle cx="7" cy="7.5" r="1.7" className={active ? "fill-[#e8e8e4]" : "fill-white/45"} />
+      <circle cx="7" cy="16.5" r="1.7" className={active ? "fill-[#e8e8e4]" : "fill-white/45"} />
+      <path d="M10.5 7.5h7M10.5 16.5h5" stroke="white" strokeOpacity={active ? 0.9 : 0.5} strokeWidth="1.3" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 export const TAB_ICON_META: Record<
   TabId,
   {
@@ -163,6 +176,11 @@ export const TAB_ICON_META: Record<
   },
   rooms: {
     Icon: RoomsTabIcon,
+    activeBg: "bg-white/10 tb-glow-platinum",
+    idleBg: "hover:bg-white/5",
+  },
+  people: {
+    Icon: PeopleTabIcon,
     activeBg: "bg-white/10 tb-glow-platinum",
     idleBg: "hover:bg-white/5",
   },

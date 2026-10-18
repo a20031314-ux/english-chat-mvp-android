@@ -20,7 +20,7 @@ import { setMiniRoom } from "@/lib/rooms/miniRoom";
 import { Face, languagePair } from "./RoomParts";
 import { RoomView } from "./RoomView";
 import { DmList, DmThreadView, useInbox } from "./RoomDm";
-import { PeopleList } from "./RoomPeople";
+import { onDmRequest } from "@/lib/rooms/openDm";
 
 /**
  * 사용자끼리 말하는 방 (시험 기능, 숨은 입구).
@@ -60,6 +60,8 @@ export function RoomsScreen({
     setMiniRoom(miniTitle === null ? null : { title: miniTitle, back: t.miniBack, open: () => setMinimized(false) });
   }, [miniTitle, t.miniBack]);
   useEffect(() => () => setMiniRoom(null), []);
+  // 사람 탭의 "메시지" → 여기서 대화를 연다(방 위에도 뜬다).
+  useEffect(() => onDmRequest(setDmWith), []);
 
   // 대화의 📞·받기 → 둘만의 방. 끝나면 그 대화로 돌아간다.
   const joinCall = async (room: RoomMeta | string, title: string) => {
@@ -167,7 +169,7 @@ function Lobby({
   onJoin: (room: RoomSummary | RoomMeta, role: RoomRole) => void;
   onMessage: (accountId: string) => void;
 }) {
-  const [tab, setTab] = useState<"rooms" | "people" | "messages">("rooms");
+  const [tab, setTab] = useState<"rooms" | "messages">("rooms");
   const inbox = useInbox(true);
   const [rooms, setRooms] = useState<RoomSummary[] | null>(null);
   const [name, setName] = useState("");
@@ -225,7 +227,7 @@ function Lobby({
       </div>
 
       <div className="flex gap-1 rounded-xl bg-white/5 p-1 text-sm">
-        {(["rooms", "people", "messages"] as const).map((option) => (
+        {(["rooms", "messages"] as const).map((option) => (
           <button
             key={option}
             type="button"
@@ -235,7 +237,7 @@ function Lobby({
             }}
             className={`flex flex-1 items-center justify-center gap-1.5 rounded-lg px-2 py-1.5 ${tab === option ? "bg-white/15 font-medium text-white" : "text-slate-400"}`}
           >
-            {option === "rooms" ? `🎙 ${t.tabRooms}` : option === "people" ? `👥 ${t.tabPeople}` : `💬 ${t.tabMessages}`}
+            {option === "rooms" ? `🎙 ${t.tabRooms}` : `💬 ${t.tabMessages}`}
             {option === "messages" && inbox.unread > 0 ? (
               <span className="rounded-full bg-violet-500 px-1.5 text-[11px] font-semibold text-white">{inbox.unread}</span>
             ) : null}
@@ -244,7 +246,6 @@ function Lobby({
       </div>
 
       {tab === "messages" ? <DmList t={t} threads={inbox.threads} onOpen={onMessage} /> : null}
-      {tab === "people" ? <PeopleList t={t} locale={locale} targetLanguage={targetLanguage} onMessage={onMessage} /> : null}
 
       {tab === "rooms" && creating ? (
         <section className="space-y-2 rounded-2xl border border-violet-400/30 p-3">

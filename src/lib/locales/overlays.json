@@ -490,7 +490,8 @@
     "whatsNewDmBody": "写真をタップするとプロフィールが開きます。フォローしたりメッセージを送ったりして、会話の中からそのまま通話できます。通話が終わると字幕が記録として残ります。",
     "whatsNewAccountTitle": "ログインとプロフィール",
     "whatsNewAccountBody": "IDでログインすると、機種を変えても記録とサブスクリプションが引き継がれます。写真・ニックネーム・自己紹介はルームとメッセージに表示されます。",
-    "accountHideFromPeople": "「人」の一覧に自分のプロフィールを出さない"
+    "accountHideFromPeople": "「人」の一覧に自分のプロフィールを出さない",
+    "homeTabPeople": "人"
   },
   "zh": {
     "billingClose": "关闭",
@@ -983,7 +984,8 @@
     "whatsNewDmBody": "点头像打开个人资料。可以关注、发消息，并在对话里直接通话。通话结束后，字幕会作为记录保留。",
     "whatsNewAccountTitle": "登录和个人资料",
     "whatsNewAccountBody": "用账号登录后，换手机也能接着用学习记录和订阅。你的照片、昵称和自我介绍会显示在语音房和消息里。",
-    "accountHideFromPeople": "不在“用户”列表中显示我的资料"
+    "accountHideFromPeople": "不在“用户”列表中显示我的资料",
+    "homeTabPeople": "用户"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -1478,7 +1480,8 @@
     "whatsNewDmBody": "Chạm vào ảnh để mở hồ sơ. Theo dõi, gửi tin nhắn và gọi ngay trong cuộc trò chuyện. Khi cuộc gọi kết thúc, phụ đề được lưu lại.",
     "whatsNewAccountTitle": "Đăng nhập và hồ sơ của bạn",
     "whatsNewAccountBody": "Đăng nhập bằng tên người dùng để giữ tiến độ và gói đăng ký khi đổi điện thoại. Ảnh, biệt danh và giới thiệu của bạn hiện trong phòng và tin nhắn.",
-    "accountHideFromPeople": "Ẩn hồ sơ của tôi khỏi danh sách Mọi người"
+    "accountHideFromPeople": "Ẩn hồ sơ của tôi khỏi danh sách Mọi người",
+    "homeTabPeople": "Mọi người"
   },
   "fr": {
     "billingClose": "Fermer",
@@ -1978,7 +1981,8 @@
     "whatsNewDmBody": "Touchez une photo pour ouvrir le profil. Suivez, envoyez un message et appelez directement depuis la conversation. À la fin de l’appel, ses sous-titres restent en mémoire.",
     "whatsNewAccountTitle": "Connexion et profil",
     "whatsNewAccountBody": "Connectez-vous avec un identifiant : votre progression et votre abonnement vous suivent sur un autre téléphone. Votre photo, pseudo et présentation apparaissent dans les salons et les messages.",
-    "accountHideFromPeople": "Masquer mon profil dans la liste Personnes"
+    "accountHideFromPeople": "Masquer mon profil dans la liste Personnes",
+    "homeTabPeople": "Personnes"
   },
   "it": {
     "archive": "Report",
@@ -2670,7 +2674,8 @@
     "whatsNewDmBody": "Tocca una foto per aprire il profilo. Segui, manda un messaggio e chiama direttamente dalla conversazione. Alla fine della chiamata i sottotitoli restano salvati.",
     "whatsNewAccountTitle": "Accesso e profilo",
     "whatsNewAccountBody": "Accedi con un nome utente: progressi e abbonamento ti seguono su un altro telefono. Foto, nickname e presentazione si vedono nelle stanze e nei messaggi.",
-    "accountHideFromPeople": "Nascondi il mio profilo dall’elenco Persone"
+    "accountHideFromPeople": "Nascondi il mio profilo dall’elenco Persone",
+    "homeTabPeople": "Persone"
   },
   "pt": {
     "billingClose": "Fechar",
@@ -3173,7 +3178,8 @@
     "whatsNewDmBody": "Toque numa foto para abrir o perfil. Siga, envie uma mensagem e ligue direto da conversa. Quando a ligação termina, as legendas ficam salvas.",
     "whatsNewAccountTitle": "Login e seu perfil",
     "whatsNewAccountBody": "Entre com um nome de usuário e seu progresso e assinatura vão junto para outro celular. Sua foto, apelido e apresentação aparecem nas salas e mensagens.",
-    "accountHideFromPeople": "Ocultar meu perfil da lista Pessoas"
+    "accountHideFromPeople": "Ocultar meu perfil da lista Pessoas",
+    "homeTabPeople": "Pessoas"
   },
   "ru": {
     "archive": "Отчёты",
@@ -3863,7 +3869,8 @@
     "whatsNewDmBody": "Нажмите на фото, чтобы открыть профиль. Подпишитесь, напишите сообщение и позвоните прямо из переписки. После звонка его субтитры сохраняются.",
     "whatsNewAccountTitle": "Вход и ваш профиль",
     "whatsNewAccountBody": "Войдите по логину — прогресс и подписка перейдут на новый телефон. Ваше фото, никнейм и описание видны в комнатах и сообщениях.",
-    "accountHideFromPeople": "Не показывать мой профиль в списке «Люди»"
+    "accountHideFromPeople": "Не показывать мой профиль в списке «Люди»",
+    "homeTabPeople": "Люди"
   },
   "id": {
     "billingClose": "Tutup",
@@ -4362,7 +4369,8 @@
     "whatsNewDmBody": "Ketuk foto untuk membuka profil. Ikuti, kirim pesan, dan langsung telepon dari percakapan. Setelah panggilan selesai, teksnya tersimpan sebagai catatan.",
     "whatsNewAccountTitle": "Masuk dan profilmu",
     "whatsNewAccountBody": "Masuk dengan nama pengguna agar kemajuan dan langgananmu ikut pindah ke HP lain. Foto, nama panggilan, dan perkenalanmu tampil di ruang dan pesan.",
-    "accountHideFromPeople": "Sembunyikan profilku dari daftar Orang"
+    "accountHideFromPeople": "Sembunyikan profilku dari daftar Orang",
+    "homeTabPeople": "Orang"
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -4855,7 +4863,8 @@
     "whatsNewDmBody": "اضغط على صورة لفتح الملف الشخصي. تابِع وأرسل رسالة واتصل مباشرة من المحادثة. وعند انتهاء المكالمة يبقى نصّها سجلًّا.",
     "whatsNewAccountTitle": "تسجيل الدخول وملفك الشخصي",
     "whatsNewAccountBody": "سجّل الدخول باسم مستخدم ليتبعك تقدّمك واشتراكك إلى هاتف آخر. تظهر صورتك واسمك المستعار ونبذتك في الغرف والرسائل.",
-    "accountHideFromPeople": "إخفاء ملفي من قائمة الأشخاص"
+    "accountHideFromPeople": "إخفاء ملفي من قائمة الأشخاص",
+    "homeTabPeople": "أشخاص"
   },
   "th": {
     "billingClose": "ปิด",
@@ -5348,7 +5357,8 @@
     "whatsNewDmBody": "แตะรูปเพื่อเปิดโปรไฟล์ ติดตาม ส่งข้อความ และโทรได้เลยจากในแชต เมื่อวางสาย คำบรรยายจะเก็บไว้เป็นบันทึก",
     "whatsNewAccountTitle": "เข้าสู่ระบบและโปรไฟล์ของคุณ",
     "whatsNewAccountBody": "เข้าสู่ระบบด้วยชื่อผู้ใช้ แล้วความคืบหน้าและการสมัครสมาชิกจะตามไปเครื่องใหม่ รูป ชื่อเล่น และคำแนะนำตัวจะแสดงในห้องและข้อความ",
-    "accountHideFromPeople": "ไม่แสดงโปรไฟล์ของฉันในรายการผู้คน"
+    "accountHideFromPeople": "ไม่แสดงโปรไฟล์ของฉันในรายการผู้คน",
+    "homeTabPeople": "ผู้คน"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -5841,6 +5851,7 @@
     "whatsNewDmBody": "फ़ोटो पर टैप करके प्रोफ़ाइल खोलें। फ़ॉलो करें, मैसेज भेजें और बातचीत से ही सीधे कॉल करें। कॉल खत्म होने पर उसके कैप्शन रिकॉर्ड के रूप में रहते हैं।",
     "whatsNewAccountTitle": "लॉग इन और आपकी प्रोफ़ाइल",
     "whatsNewAccountBody": "यूज़रनेम से लॉग इन करें, तो फ़ोन बदलने पर भी आपकी प्रगति और सब्सक्रिप्शन साथ रहेंगे। आपकी फ़ोटो, निकनेम और परिचय रूम और मैसेज में दिखते हैं।",
-    "accountHideFromPeople": "लोग सूची में मेरी प्रोफ़ाइल न दिखाएँ"
+    "accountHideFromPeople": "लोग सूची में मेरी प्रोफ़ाइल न दिखाएँ",
+    "homeTabPeople": "लोग"
   }
 }

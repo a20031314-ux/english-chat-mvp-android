@@ -19,6 +19,7 @@ import { BillingUiProvider, BillingOpenButton } from "@/components/BillingScreen
 import { GuideButton } from "@/components/GuideSheet";
 import { FeedbackButton } from "@/components/FeedbackButton";
 import { RoomsScreen } from "@/components/rooms/RoomsScreen";
+import { PeopleTab } from "@/components/rooms/PeopleTab";
 import { readMiniRoom, subscribeMiniRoom } from "@/lib/rooms/miniRoom";
 import { socialFeaturesEnabled } from "@/lib/platform";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
@@ -33,9 +34,9 @@ import {
 /** 방 입장 코드는 이 기기의 저장값이라 바뀌었다고 알려 주는 곳이 없다. */
 const noSubscribe = () => () => {};
 
-export type AppTab = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms";
+export type AppTab = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people";
 
-const TABS: AppTab[] = ["map", "chat", "roleplay", "video", "vocab", "rooms"];
+const TABS: AppTab[] = ["map", "chat", "roleplay", "video", "vocab", "rooms", "people"];
 
 function isAppTab(value: string | null): value is AppTab {
   return TABS.includes(value as AppTab);
@@ -74,7 +75,7 @@ function AppHomeInner({
   // ?screen=roleplay on a language that has none — and correcting that in an
   // effect would render the empty tab once before replacing it.
   const shownTab: AppTab =
-    (tab === "roleplay" && !roleplayAvailable) || (tab === "rooms" && !socialFeaturesEnabled()) ? "chat" : tab;
+    (tab === "roleplay" && !roleplayAvailable) || ((tab === "rooms" || tab === "people") && !socialFeaturesEnabled()) ? "chat" : tab;
 
   // 말하는 방: 하단 탭(2.68부터 모두에게). iOS 1차 출시엔 방·메시지를 통째로 끈다
   // (`lib/platform.ts`) — 그때는 탭도 ?screen=rooms도 채팅으로.
@@ -154,7 +155,12 @@ function AppHomeInner({
       : []),
     { id: "video", label: ui.homeTabVideo },
     { id: "vocab", label: ui.homeTabVocab },
-    ...(socialOn ? [{ id: "rooms" as const, label: ui.homeTabRooms }] : []),
+    ...(socialOn
+      ? [
+          { id: "rooms" as const, label: ui.homeTabRooms },
+          { id: "people" as const, label: ui.homeTabPeople },
+        ]
+      : []),
   ];
 
   return (
@@ -174,7 +180,13 @@ function AppHomeInner({
                 label={ui.uiLanguageLabel}
               />
               <BillingOpenButton ui={ui} />
-              <GuideButton ui={ui} locale={locale} tab={shownTab} tabs={tabItems} />
+              {/* 사람 탭은 말하는 방의 일부라 사용법도 말하는 방 것을 연다. */}
+              <GuideButton
+                ui={ui}
+                locale={locale}
+                tab={shownTab === "people" ? "rooms" : shownTab}
+                tabs={tabItems.filter((item): item is { id: Exclude<AppTab, "people">; label: string } => item.id !== "people")}
+              />
               <FeedbackButton ui={ui} locale={locale} tab={shownTab} />
             </div>
             {/* Above everything, because it is about everything: this is the
@@ -252,6 +264,10 @@ function AppHomeInner({
                     <VocabularyPanel locale={locale} ui={ui} />
                   </div>
                 </div>
+              ) : null}
+
+              {shownTab === "people" && socialOn ? (
+                <PeopleTab ui={ui} locale={locale} targetLanguage={targetLanguage} />
               ) : null}
 
               {/* 다른 탭에서도 떠 있어야 접어 둔 방이 끊기지 않는다(로비는 이 탭일 때만 그린다). */}
