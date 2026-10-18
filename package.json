@@ -49,6 +49,7 @@
     "@capacitor/cli": "^8.3.0",
     "@capacitor/core": "^8.3.0",
     "@capacitor/ios": "^8.3.0",
+    "@capawesome/capacitor-app-update": "^8.1.1",
     "@capgo/capacitor-social-login": "^8.7.0",
     "@revenuecat/purchases-capacitor": "^13.1.1",
     "html-to-image": "^1.11.13",

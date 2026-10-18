@@ -21,6 +21,10 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **업데이트 배너 자동 + 바뀐 점 캡처 (2026-10-18):** 앱(2.67 빌드부터): Play 인앱 업데이트 확인(`@capawesome/capacitor-app-update`, **새 네이티브 플러그인 → PC에서 `npm install` + `cap sync`**)으로
+  출시마다 저절로 배너, 버전마다 한 번 "업데이트하면 이렇게 바뀌어요" 시트(새로워진 점 글·캡처, 앱 언어), 업데이트는 Play 앱 안 업데이트 화면. 서버(바로 반영): `/api/whats-new?from=&code=&ui=`.
+  `RELEASE_NOTES`에 `code`(versionCode) 필수(테스트가 build.gradle과 맞춤). 2.66 사용자는 옛 배너라 2.67 공개 뒤 `RECOMMENDED_APP_VERSION`을 한 번 올려야 함(store).
+  남은 것: 실제 기기에서 Play 확인(내부 테스트 트랙에 다음 빌드가 있어야 보임), 2.67 `RELEASE_NOTES` 항목(code 81) — 없으면 2.68 출시 때 2.67 사용자는 바뀐 점 없이 배너만.
 - **iOS 분기 (2026-10-18):** `src/lib/platform.ts` — iOS에서 끈 것: 말하는 방·메시지(`NEXT_PUBLIC_IOS_SOCIAL`), Google 로그인, 기기 YouTube 오디오 받기, 텍스트 넘겨받기. 스토어 문구·링크도 여기.
   새 기능이 사용자끼리 주고받거나 Play 전용이면 여기에 한 줄 더하고 iOS에서 어떻게 할지 정한다. 기기 확인 전(맥 없음).
 - **비용 구조 자동 계산 (2026-10-18):** `hub/costs.md`를 push마다 다시 계산(`.github/workflows/cost.yml` → `scripts/plan-cost.mjs`). 기능별 단가는 `src/lib/billing/opCost.ts` 한 곳(실측 보고서 `cost-report.mjs`도 같은 표),

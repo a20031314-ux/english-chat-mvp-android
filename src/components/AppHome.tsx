@@ -229,7 +229,7 @@ function AppHomeInner({
             </div>
             {/* Above everything, because it is about everything: this is the
                 only way anyone gets told their build has to be replaced. */}
-            <UpdateNotice ui={ui} />
+            <UpdateNotice ui={ui} locale={locale} />
             {socialOn && roomsOpen ? (
               <RoomsScreen
                 ui={ui}

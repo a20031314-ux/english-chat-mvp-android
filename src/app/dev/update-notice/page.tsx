@@ -14,17 +14,23 @@
  */
 
 import { useState } from "react";
+import type { StoreUpdate } from "@/lib/appUpdate";
 import { UpdateNotice } from "@/components/UpdateNotice";
 import { noteUpdateLevel } from "@/lib/appUpdate";
-import { copy } from "@/lib/copy";
+import { copy, isLocale, type Locale } from "@/lib/copy";
 
 /** Stands in for a response carrying the header the server sets. */
 function saying(level: string) {
   return { headers: { get: (name: string) => (name === "x-app-update" ? level : null) } };
 }
 
+/** Play가 "versionCode 80(2.66)이 있어요"라고 답한 것처럼, 2.65 앱에서. */
+const PLAY_SAYS: StoreUpdate = { available: true, code: 80, immediate: false };
+
 export default function UpdateNoticePreview() {
   const [shown, setShown] = useState(0);
+  const [play, setPlay] = useState(false);
+  const [locale, setLocale] = useState<Locale>("ko");
   return (
     <main className="min-h-screen bg-[#050505] p-4 text-neutral-200">
       <h1 className="text-sm font-semibold text-white">/dev/update-notice</h1>
@@ -47,8 +53,35 @@ export default function UpdateNoticePreview() {
           </button>
         ))}
       </div>
+      <div className="mt-2 flex flex-wrap gap-2">
+        <button
+          type="button"
+          onClick={() => {
+            setPlay(true);
+            setShown((n) => n + 1);
+          }}
+          className="rounded-lg border border-white/15 px-3 py-1.5 text-[12px] hover:bg-white/10"
+        >
+          Play: 2.66(80) 있음, 앱 2.65
+        </button>
+        <select
+          value={locale}
+          onChange={(event) => isLocale(event.target.value) && setLocale(event.target.value)}
+          className="rounded-lg border border-white/15 bg-transparent px-2 text-[12px]"
+        >
+          {Object.keys(copy).map((code) => (
+            <option key={code} value={code}>{code}</option>
+          ))}
+        </select>
+      </div>
       <div className="mt-4 max-w-md overflow-hidden rounded-2xl border border-white/10">
-        <UpdateNotice key={shown} ui={copy.ko} />
+        <UpdateNotice
+          key={`${shown}-${locale}`}
+          ui={copy[locale]}
+          locale={locale}
+          preview={play ? PLAY_SAYS : undefined}
+          from={play ? "2.65" : undefined}
+        />
       </div>
     </main>
   );

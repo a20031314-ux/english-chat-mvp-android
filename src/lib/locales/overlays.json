@@ -479,7 +479,10 @@
     "accountChangePassword": "パスワードを変更",
     "accountCurrentPassword": "現在のパスワード",
     "accountNewPassword": "新しいパスワード",
-    "accountPasswordChanged": "パスワードを変更しました。"
+    "accountPasswordChanged": "パスワードを変更しました。",
+    "updateSeeChanges": "変更点を見る",
+    "updateSheetTitle": "アップデートでこう変わります",
+    "updateLater": "あとで"
   },
   "zh": {
     "billingClose": "关闭",
@@ -961,7 +964,10 @@
     "accountChangePassword": "修改密码",
     "accountCurrentPassword": "当前密码",
     "accountNewPassword": "新密码",
-    "accountPasswordChanged": "密码已修改。"
+    "accountPasswordChanged": "密码已修改。",
+    "updateSeeChanges": "查看更新内容",
+    "updateSheetTitle": "更新后会有这些变化",
+    "updateLater": "以后再说"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -1445,7 +1451,10 @@
     "accountChangePassword": "Đổi mật khẩu",
     "accountCurrentPassword": "Mật khẩu hiện tại",
     "accountNewPassword": "Mật khẩu mới",
-    "accountPasswordChanged": "Đã đổi mật khẩu."
+    "accountPasswordChanged": "Đã đổi mật khẩu.",
+    "updateSeeChanges": "Xem điểm mới",
+    "updateSheetTitle": "Cập nhật sẽ mang lại những thay đổi này",
+    "updateLater": "Để sau"
   },
   "fr": {
     "billingClose": "Fermer",
@@ -1934,7 +1943,10 @@
     "accountChangePassword": "Changer le mot de passe",
     "accountCurrentPassword": "Mot de passe actuel",
     "accountNewPassword": "Nouveau mot de passe",
-    "accountPasswordChanged": "Mot de passe modifié."
+    "accountPasswordChanged": "Mot de passe modifié.",
+    "updateSeeChanges": "Voir les nouveautés",
+    "updateSheetTitle": "Ce que vous apporte la mise à jour",
+    "updateLater": "Plus tard"
   },
   "it": {
     "archive": "Report",
@@ -2615,7 +2627,10 @@
     "accountChangePassword": "Cambia password",
     "accountCurrentPassword": "Password attuale",
     "accountNewPassword": "Nuova password",
-    "accountPasswordChanged": "Password cambiata."
+    "accountPasswordChanged": "Password cambiata.",
+    "updateSeeChanges": "Scopri le novità",
+    "updateSheetTitle": "Cosa cambia con l’aggiornamento",
+    "updateLater": "Più tardi"
   },
   "pt": {
     "billingClose": "Fechar",
@@ -3107,7 +3122,10 @@
     "accountChangePassword": "Trocar senha",
     "accountCurrentPassword": "Senha atual",
     "accountNewPassword": "Nova senha",
-    "accountPasswordChanged": "Senha alterada."
+    "accountPasswordChanged": "Senha alterada.",
+    "updateSeeChanges": "Ver novidades",
+    "updateSheetTitle": "O que muda com a atualização",
+    "updateLater": "Depois"
   },
   "ru": {
     "archive": "Отчёты",
@@ -3786,7 +3804,10 @@
     "accountChangePassword": "Сменить пароль",
     "accountCurrentPassword": "Текущий пароль",
     "accountNewPassword": "Новый пароль",
-    "accountPasswordChanged": "Пароль изменён."
+    "accountPasswordChanged": "Пароль изменён.",
+    "updateSeeChanges": "Что нового",
+    "updateSheetTitle": "Что изменится после обновления",
+    "updateLater": "Позже"
   },
   "id": {
     "billingClose": "Tutup",
@@ -4274,7 +4295,10 @@
     "accountChangePassword": "Ganti kata sandi",
     "accountCurrentPassword": "Kata sandi saat ini",
     "accountNewPassword": "Kata sandi baru",
-    "accountPasswordChanged": "Kata sandi sudah diganti."
+    "accountPasswordChanged": "Kata sandi sudah diganti.",
+    "updateSeeChanges": "Lihat yang baru",
+    "updateSheetTitle": "Yang berubah setelah pembaruan",
+    "updateLater": "Nanti"
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -4756,7 +4780,10 @@
     "accountChangePassword": "تغيير كلمة المرور",
     "accountCurrentPassword": "كلمة المرور الحالية",
     "accountNewPassword": "كلمة المرور الجديدة",
-    "accountPasswordChanged": "تم تغيير كلمة المرور."
+    "accountPasswordChanged": "تم تغيير كلمة المرور.",
+    "updateSeeChanges": "عرض الجديد",
+    "updateSheetTitle": "هذا ما سيتغيّر بعد التحديث",
+    "updateLater": "لاحقًا"
   },
   "th": {
     "billingClose": "ปิด",
@@ -5238,7 +5265,10 @@
     "accountChangePassword": "เปลี่ยนรหัสผ่าน",
     "accountCurrentPassword": "รหัสผ่านปัจจุบัน",
     "accountNewPassword": "รหัสผ่านใหม่",
-    "accountPasswordChanged": "เปลี่ยนรหัสผ่านแล้ว"
+    "accountPasswordChanged": "เปลี่ยนรหัสผ่านแล้ว",
+    "updateSeeChanges": "ดูสิ่งที่เปลี่ยนไป",
+    "updateSheetTitle": "อัปเดตแล้วจะเปลี่ยนแบบนี้",
+    "updateLater": "ไว้ทีหลัง"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -5720,6 +5750,9 @@
     "accountChangePassword": "पासवर्ड बदलें",
     "accountCurrentPassword": "मौजूदा पासवर्ड",
     "accountNewPassword": "नया पासवर्ड",
-    "accountPasswordChanged": "पासवर्ड बदल गया।"
+    "accountPasswordChanged": "पासवर्ड बदल गया।",
+    "updateSeeChanges": "नया क्या है देखें",
+    "updateSheetTitle": "अपडेट से ये बदलाव आएँगे",
+    "updateLater": "बाद में"
   }
 }

@@ -30,11 +30,17 @@ export type WhatsNewItem = {
   tab: WhatsNewTab;
 };
 
-export type ReleaseNote = { version: string; items: WhatsNewItem[] };
+export type ReleaseNote = {
+  version: string;
+  /** Play versionCode (android/app/build.gradle). Play's update check reports only this, so the banner maps it back to a version. */
+  code: number;
+  items: WhatsNewItem[];
+};
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
     version: "2.66",
+    code: 80,
     items: [
       { id: "ledger", title: "whatsNewLedgerTitle", body: "whatsNewLedgerBody", shot: "ledger", tab: "map" },
       { id: "links", title: "whatsNewLinksTitle", body: "whatsNewLinksBody", shot: "links", tab: "chat" },
@@ -44,6 +50,7 @@ export const RELEASE_NOTES: ReleaseNote[] = [
   },
   {
     version: "2.65",
+    code: 79,
     items: [
       { id: "mission", title: "whatsNewMissionTitle", body: "whatsNewMissionBody", shot: "mission", tab: "map" },
       { id: "progress", title: "whatsNewProgressTitle", body: "whatsNewProgressBody", shot: "progress", tab: "map" },
@@ -55,6 +62,7 @@ export const RELEASE_NOTES: ReleaseNote[] = [
     // 2.63 shipped these without anything to say so; 2.64 is the first build
     // that can, so it introduces them.
     version: "2.64",
+    code: 78,
     items: [
       { id: "map", title: "whatsNewMapTitle", body: "whatsNewMapBody", shot: "map", tab: "map" },
       { id: "chat", title: "whatsNewChatTitle", body: "whatsNewChatBody", shot: "chat", tab: "chat" },
@@ -125,4 +133,35 @@ export function noteVersionOf(item: WhatsNewItem, notes: ReleaseNote[] = RELEASE
 /** Where a picture lives on the server. */
 export function shotPath(version: string, locale: string, shot: string): string {
   return `/whats-new/${version}/${locale}/${shot}.webp`;
+}
+
+/** The release a Play versionCode belongs to, if it has notes. */
+export function versionForCode(code: number, notes: ReleaseNote[] = RELEASE_NOTES): string | null {
+  return notes.find((note) => note.code === code)?.version ?? null;
+}
+
+/**
+ * What a build that is still on `current` would get by updating to `target`:
+ * every release after the one it has, up to and including the one on offer,
+ * newest first. This is what the update banner shows — the same notes and
+ * pictures the "what's new" sheet shows after the update, but read before it.
+ */
+export function notesBetween(
+  current: string,
+  target: string,
+  notes: ReleaseNote[] = RELEASE_NOTES,
+): ReleaseNote[] {
+  if (!target) return [];
+  return notes
+    .filter(
+      (note) =>
+        (!current || compareVersions(note.version, current) > 0) &&
+        compareVersions(note.version, target) <= 0,
+    )
+    .sort((a, b) => compareVersions(b.version, a.version));
+}
+
+/** The newest release that has notes. */
+export function latestNotedVersion(notes: ReleaseNote[] = RELEASE_NOTES): string {
+  return [...notes].sort((a, b) => compareVersions(b.version, a.version))[0]?.version ?? "";
 }
