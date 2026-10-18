@@ -10,6 +10,14 @@ function Step($text) { Write-Host ""; Write-Host "== $text" -ForegroundColor Cya
 function Fail($text) { Write-Host ""; Write-Host "멈춤: $text" -ForegroundColor Red; exit 1 }
 
 Step "1/5 PC에서 저절로 바뀌는 파일 되돌리기 (build.gradle, package-lock.json)"
+# 빌드를 중간에 멈추면(Ctrl+C) src/app/api·dev가 src/_capacitor_build_backup_*에 옮겨진 채 남는다 — 저장소 상태로 되살린다.
+$leftover = Get-ChildItem src -Directory -Filter "_capacitor_build_backup_*" -ErrorAction SilentlyContinue
+if ($leftover) {
+  Write-Host "지난 빌드가 중간에 멈춘 흔적을 정리합니다: $($leftover.Name -join ', ')"
+  $leftover | Remove-Item -Recurse -Force
+  git checkout -- src/app tsconfig.json
+  if ($LASTEXITCODE -ne 0) { Fail "src/app 되살리기 실패" }
+}
 git checkout -- android/app/build.gradle package-lock.json
 if ($LASTEXITCODE -ne 0) { Fail "git checkout 실패" }
 $dirty = git status --porcelain --untracked-files=no

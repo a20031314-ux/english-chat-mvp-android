@@ -122,6 +122,16 @@ function restoreTsconfig() {
   writeFileSync(tsconfigPath, tsconfigRaw);
 }
 
+// Ctrl+C kills this process before `finally` runs, which used to leave src/app/api
+// moved aside and the PC repo looking like every route was deleted (2026-10-18).
+for (const signal of ["SIGINT", "SIGTERM", "SIGBREAK"]) {
+  process.on(signal, () => {
+    restoreTsconfig();
+    restoreMoved();
+    process.exit(130);
+  });
+}
+
 let buildFailed = false;
 try {
   execSync("npx next build", {
