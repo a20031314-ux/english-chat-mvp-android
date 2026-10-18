@@ -39,7 +39,8 @@
     "account:purge": "node --experimental-strip-types scripts/account-purge.mjs",
     "learner:metrics": "node --experimental-strip-types scripts/learner-metrics.mjs",
     "sim:users": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/sim-users/run.mjs",
-    "test:sim": "node --experimental-strip-types --test scripts/sim-users/sim.test.mjs"
+    "test:sim": "node --experimental-strip-types --test scripts/sim-users/sim.test.mjs",
+    "sim:screens": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/sim-users/screens.mjs"
   },
   "dependencies": {
     "@capacitor-community/text-to-speech": "^8.0.2",
