@@ -112,3 +112,41 @@ test("방장 계정으로 다시 들어오면 방장, 내보낸 계정은 못 �
   const row = list.find((r) => r.id === room.id);
   assert.equal(row?.faces[0]?.accountId, host);
 });
+
+test("방장 혼자 나가도 방장에게는 방이 목록에 남고, 다른 사람에게는 안 보인다", async () => {
+  const room = await createRoom({ name: "English ↔ 한국어", languages: ["en", "ko"], hostPeerId: "peer_alone001", hostAccountId: "acct_host_alone" });
+  await joinRoom({ id: room.id, peerId: "peer_alone001", nickname: "민지", wantRole: "speaker", accountId: "acct_host_alone" });
+  await leaveRoom(room.id, "peer_alone001");
+  // 만든 지 1분이 지난 것처럼.
+  const realNow = Date.now;
+  Date.now = () => realNow() + 120_000;
+  try {
+    const forHost = await listRooms("acct_host_alone");
+    const forOther = await listRooms("acct_someone_else");
+    assert.equal(forHost.find((r) => r.id === room.id)?.mine, true);
+    assert.equal(forOther.some((r) => r.id === room.id), false);
+    assert.equal((await listRooms()).some((r) => r.id === room.id), false);
+  } finally {
+    Date.now = realNow;
+  }
+  // 방장 계정으로 다시 들어오면 새 이름표로 방장, 바로 말하기 자리.
+  const back = await joinRoom({ id: room.id, peerId: "peer_alone002", nickname: "민지", wantRole: "speaker", accountId: "acct_host_alone" });
+  assert.ok(back.ok);
+  assert.equal(back.member.role, "speaker");
+  assert.equal(back.meta.hostPeerId, "peer_alone002");
+});
+
+test("방장은 듣는 자리로 내려가지 않는다", async () => {
+  const room = await createRoom({ name: "Español ↔ 日本語", languages: ["es", "ja"], hostPeerId: "peer_hostdown1" });
+  await joinRoom({ id: room.id, peerId: "peer_hostdown1", nickname: "Lucía", wantRole: "speaker" });
+  await joinRoom({ id: room.id, peerId: "peer_guestdn01", nickname: "Yuki", wantRole: "listener" });
+  const host = await poll({ id: room.id, peerId: "peer_hostdown1", since: 0, role: "listener" });
+  assert.ok(host && host !== "KICKED");
+  assert.equal(host.members.find((m) => m.peerId === "peer_hostdown1")?.role, "speaker");
+  // 손님은 그대로 내려갈 수 있다.
+  await grantRole({ id: room.id, hostPeerId: "peer_hostdown1", target: "peer_guestdn01", role: "speaker" });
+  await poll({ id: room.id, peerId: "peer_guestdn01", since: 0 });
+  const guest = await poll({ id: room.id, peerId: "peer_guestdn01", since: 0, role: "listener" });
+  assert.ok(guest && guest !== "KICKED");
+  assert.equal(guest.members.find((m) => m.peerId === "peer_guestdn01")?.role, "listener");
+});

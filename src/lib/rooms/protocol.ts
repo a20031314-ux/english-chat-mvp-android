@@ -68,6 +68,8 @@ export type RoomSummary = RoomMeta & {
   faces: RoomFace[];
   /** 내가 팔로우하는 방장의 방. 목록 맨 위로. */
   followed?: boolean;
+  /** 내가 방장인 방. 아무도 없어도 나에게는 보이고 맨 위로. */
+  mine?: boolean;
 };
 
 /** 말을 받아쓴 줄, 또는 손으로 쓴 댓글. */

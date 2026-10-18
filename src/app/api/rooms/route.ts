@@ -61,14 +61,14 @@ export async function POST(request: NextRequest) {
   const auth = requestAuth(request);
   if (action === "unlock") return jsonWithCors(request, { ok: true });
   if (action === "list") {
-    const rooms = await listRooms();
+    const rooms = await listRooms(auth?.accountId ?? null);
     if (!auth) return jsonWithCors(request, { rooms });
     // 팔로우한 방장의 방은 위로, 서로 차단한 방장의 방은 안 보이게.
     const [following, blocked] = await Promise.all([readFollowing(auth.accountId), readBlocked(auth.accountId)]);
     const shown = rooms
       .filter((room) => !room.hostAccountId || !blocked.includes(room.hostAccountId))
       .map((room) => ({ ...room, followed: Boolean(room.hostAccountId && following.includes(room.hostAccountId)) }));
-    shown.sort((a, b) => Number(b.followed) - Number(a.followed));
+    shown.sort((a, b) => Number(Boolean(b.mine)) - Number(Boolean(a.mine)) || Number(b.followed) - Number(a.followed));
     return jsonWithCors(request, { rooms: shown });
   }
 

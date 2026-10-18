@@ -532,13 +532,16 @@ export function RoomView({
               >
                 {muted ? t.unmute : t.mute}
               </button>
-              <button
-                type="button"
-                onClick={() => void askRole("listener")}
-                className="flex-1 rounded-xl border border-white/20 px-3 py-2.5 text-sm text-slate-200"
-              >
-                {t.toListener}
-              </button>
+              {/* 방장은 내려가지 않는다(서버도 막음). 조용히 하려면 마이크 끄기. */}
+              {isHostNow ? null : (
+                <button
+                  type="button"
+                  onClick={() => void askRole("listener")}
+                  className="flex-1 rounded-xl border border-white/20 px-3 py-2.5 text-sm text-slate-200"
+                >
+                  {t.toListener}
+                </button>
+              )}
             </>
           ) : free ? (
             <button

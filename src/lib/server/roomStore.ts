@@ -123,15 +123,20 @@ export async function createRoom(input: {
   return meta;
 }
 
-/** 열린 방 목록. 아무도 없는 방은 뺀다. 새 방이 위. */
-export async function listRooms(): Promise<RoomSummary[]> {
+/**
+ * 열린 방 목록. 아무도 없는 방은 빼되, 보는 사람이 그 방의 방장이면 남긴다 —
+ * 방장이 잠깐 나갔다 와도 자기 방으로 돌아갈 수 있게(방은 서버에 ROOM_TTL 동안 있다).
+ * 내 방은 `mine`으로 표시. 새 방이 위.
+ */
+export async function listRooms(viewerAccountId?: string | null): Promise<RoomSummary[]> {
   const ids = [...new Set(await kvListRange(INDEX_KEY))].reverse().slice(0, 30);
   const rows = await Promise.all(
     ids.map(async (id) => {
       const meta = await readMeta(id);
       if (!meta) return null;
       const members = await readMembers(id);
-      if (members.length === 0 && Date.now() - meta.createdAt > 60_000) return null;
+      const mine = Boolean(viewerAccountId && meta.hostAccountId === viewerAccountId);
+      if (members.length === 0 && Date.now() - meta.createdAt > 60_000 && !mine) return null;
       const ordered = [...members].sort(
         (a, b) => Number(b.peerId === meta.hostPeerId) - Number(a.peerId === meta.hostPeerId) || a.joinedAt - b.joinedAt,
       );
@@ -139,12 +144,14 @@ export async function listRooms(): Promise<RoomSummary[]> {
         accountId: member.accountId ?? null,
         nickname: member.nickname,
       }));
-      return {
+      const row: RoomSummary = {
         ...meta,
         speakers: members.filter((member) => member.role === "speaker").length,
         listeners: members.filter((member) => member.role === "listener").length,
         faces,
-      } satisfies RoomSummary;
+      };
+      if (mine) row.mine = true;
+      return row;
     }),
   );
   return rows.filter((row): row is RoomSummary => row !== null);
@@ -261,7 +268,8 @@ export async function poll(input: {
     }
     if (granted === "listener") role = "listener";
     else if (seatsLeft) role = "speaker";
-  } else if (input.role === "listener") {
+  } else if (input.role === "listener" && input.peerId !== meta.hostPeerId) {
+    // 방장은 말하기 자리에서 내려가지 않는다(조용히 하려면 마이크 끄기).
     role = "listener";
   } else if (input.role === "speaker" && mine.role !== "speaker") {
     // 손들기 없이 앉기는 방장이거나 방장이 없을 때만.
