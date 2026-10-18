@@ -215,3 +215,15 @@ test("잠시 닫기 → 다시 열기: 같은 번호·이름·언어·내보낸 
   const banned = await joinRoom({ id: room.id, peerId: "peer_park0004", nickname: "Somchai", wantRole: "listener", accountId: "acct_park_bad" });
   assert.deepEqual(banned, { ok: false, error: "BANNED" });
 });
+
+test("💬 채팅만: 듣는 자리에서만 켜지고, 말하기 자리면 꺼진다", async () => {
+  const room = await createRoom({ name: "Tiếng Việt ↔ 한국어", languages: ["vi", "ko"], hostPeerId: "peer_text0001" });
+  await joinRoom({ id: room.id, peerId: "peer_text0001", nickname: "Minh", wantRole: "speaker" });
+  await joinRoom({ id: room.id, peerId: "peer_text0002", nickname: "지수", wantRole: "listener" });
+  const listener = await poll({ id: room.id, peerId: "peer_text0002", since: 0, textOnly: true });
+  assert.ok(listener && listener !== "KICKED");
+  assert.equal(listener.members.find((m) => m.peerId === "peer_text0002")?.textOnly, true);
+  const host = await poll({ id: room.id, peerId: "peer_text0001", since: 0, textOnly: true });
+  assert.ok(host && host !== "KICKED");
+  assert.equal(host.members.find((m) => m.peerId === "peer_text0001")?.textOnly, false);
+});

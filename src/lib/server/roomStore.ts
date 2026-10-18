@@ -256,6 +256,7 @@ export async function poll(input: {
   muted?: boolean;
   role?: RoomRole;
   hand?: boolean;
+  textOnly?: boolean;
 }): Promise<PollResponse | null | "KICKED"> {
   const meta = await readMeta(input.id);
   if (!meta) return null;
@@ -288,6 +289,7 @@ export async function poll(input: {
     role,
     muted: typeof input.muted === "boolean" ? input.muted : mine.muted,
     hand: role === "speaker" ? false : typeof input.hand === "boolean" ? input.hand : mine.hand,
+    ...(typeof input.textOnly === "boolean" ? { textOnly: input.textOnly && role !== "speaker" } : {}),
     lastSeen: now,
   };
   await kvSetJson(memberKey(input.id, input.peerId), updated, MEMBER_TTL_SECONDS);

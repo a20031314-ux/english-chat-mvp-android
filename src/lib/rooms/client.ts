@@ -111,6 +111,8 @@ export async function pollRoom(input: {
   muted: boolean;
   role: RoomRole;
   hand: boolean;
+  /** 💬 채팅만(소리 안 이음). */
+  textOnly?: boolean;
 }): Promise<PollResponse> {
   return call("poll", input);
 }

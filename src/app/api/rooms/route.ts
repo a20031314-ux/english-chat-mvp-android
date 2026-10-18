@@ -162,6 +162,7 @@ export async function POST(request: NextRequest) {
       muted: typeof body.muted === "boolean" ? body.muted : undefined,
       role: body.role === "listener" || body.role === "speaker" ? body.role : undefined,
       hand: typeof body.hand === "boolean" ? body.hand : undefined,
+      textOnly: typeof body.textOnly === "boolean" ? body.textOnly : undefined,
     });
     if (result === "KICKED") return bad(request, "KICKED", 403);
     if (!result) return bad(request, "NOT_IN_ROOM", 404);

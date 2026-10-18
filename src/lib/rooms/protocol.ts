@@ -40,6 +40,8 @@ export type RoomMember = {
   accountId?: string | null;
   /** [배우는 언어, 앱 언어] — 프로필 카드의 언어 조합 표시. */
   langs?: string[];
+  /** 💬 채팅만: 소리를 잇지 않는다(다른 사람의 앱도 이 사람과 음성 연결을 하지 않는다). */
+  textOnly?: boolean;
   joinedAt: number;
   lastSeen: number;
 };
