@@ -3,7 +3,7 @@
 > 모든 채팅이 시작할 때 자동으로 읽는 한 장입니다. 역할별 자세한 내용은
 > `hub/roles/`, 역할 사이에 넘긴 일은 `hub/inbox.md`, 지난 기록은 `hub/log/`.
 > 새 채팅이면 `hub/HANDOFF.md`(직전 채팅의 인계 노트)부터. 자동 실행이 남긴 보고·결정 대기는 `hub/reports.md`.
-> 허브 쓰는 법: `hub/README.md`. 마지막 갱신: 2026-10-18.
+> 허브 쓰는 법: `hub/README.md`. 마지막 갱신: 2026-10-19.
 
 ## 버전
 
@@ -13,7 +13,7 @@
 | 서버 | main에 push하면 Vercel이 바로 배포 | — |
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
-| 다음 앱 버전 | 2.68 (versionCode 82) — 저장소에 올림(2026-10-18), 빌드·Play 업로드 대기. 2.67(81)은 내부 테스트만 | — |
+| 다음 앱 버전 | 2.69 (versionCode 83) — 저장소에 올림(2026-10-19), 빌드·Play 업로드 대기. 2.68(82)은 Play 내부 테스트에 올림, 2.67(81)은 내부 테스트만 | — |
 | iOS | 준비 중 — `ios/` 프로젝트 있음(2026-10-18), 말하는 방·메시지·Google 로그인 없는 1차. 클라우드 빌드(Actions "iOS: build to TestFlight") 준비, 사람 설정 대기 | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할

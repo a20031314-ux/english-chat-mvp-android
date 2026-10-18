@@ -494,7 +494,15 @@
     "homeTabPeople": "人",
     "homeTabMessages": "メッセージ",
     "modeAi": "AIと学ぶ",
-    "modePeople": "人と学ぶ"
+    "modePeople": "人と学ぶ",
+    "whatsNewPeopleTitle": "「人と学ぶ」のタブ",
+    "whatsNewPeopleBody": "上のスイッチを「人と学ぶ」にすると、人・トークルーム・メッセージのタブが出ます。「人」では最近来た学習者を見て、フォローやメッセージができます。",
+    "whatsNewQuoteTitle": "言葉を選んで質問",
+    "whatsNewQuoteBody": "行をタップすると、翻訳の下に「どういう意味？」と「こっそり質問」があります。質問は学習中の言語で入り、話した人に知らせます。",
+    "whatsNewLayoutsTitle": "ルームの見え方を自分で選ぶ",
+    "whatsNewLayoutsBody": "「人ごと」「チャット中心」「通話中心」に切り替えられます。一覧では「言語で探す」で英語 ↔ 韓国語のようなルームだけを探せます。",
+    "whatsNewHostTitle": "ホストを渡す・一時停止",
+    "whatsNewHostBody": "退出するとき「ホストを渡す」でルームを続けたり、一時停止してロビーの「再開」で同じルームを開き直せます。"
   },
   "zh": {
     "billingClose": "关闭",
@@ -991,7 +999,15 @@
     "homeTabPeople": "用户",
     "homeTabMessages": "消息",
     "modeAi": "和 AI 学",
-    "modePeople": "和人一起学"
+    "modePeople": "和人一起学",
+    "whatsNewPeopleTitle": "“和人一起学”标签组",
+    "whatsNewPeopleBody": "把顶部开关切到“和人一起学”，就会出现用户、语音房、消息标签。在“用户”里看到最近来过的学习者，可以关注或发消息。",
+    "whatsNewQuoteTitle": "选一句话来提问",
+    "whatsNewQuoteBody": "点一行，在翻译下方选“什么意思？”或“私下问”。问题会用你在学的语言写好，并通知说这句话的人。",
+    "whatsNewLayoutsTitle": "房间怎么看由你选",
+    "whatsNewLayoutsBody": "试试“按人看”“聊天为主”“通话为主”。在列表里用“按语言找”，只看英语 ↔ 韩语这样的房间。",
+    "whatsNewHostTitle": "转让房主与暂停",
+    "whatsNewHostBody": "离开时用“转让房主”让房间继续，或者先暂停，之后在大厅点“重新开启”打开同一个房间。"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -1490,7 +1506,15 @@
     "homeTabPeople": "Mọi người",
     "homeTabMessages": "Tin nhắn",
     "modeAi": "Học với AI",
-    "modePeople": "Học với mọi người"
+    "modePeople": "Học với mọi người",
+    "whatsNewPeopleTitle": "Nhóm thẻ “Học với mọi người”",
+    "whatsNewPeopleBody": "Gạt công tắc phía trên sang “Học với mọi người” để thấy các thẻ Mọi người, Phòng nói và Tin nhắn. Ở Mọi người, xem người học vừa ghé và theo dõi hoặc nhắn tin.",
+    "whatsNewQuoteTitle": "Chọn một câu để hỏi",
+    "whatsNewQuoteBody": "Chạm vào dòng, dưới bản dịch chọn “Nghĩa là gì?” hoặc “Hỏi riêng”. Câu hỏi được viết sẵn bằng ngôn ngữ bạn học và người nói sẽ được báo.",
+    "whatsNewLayoutsTitle": "Tự chọn cách xem phòng",
+    "whatsNewLayoutsBody": "Thử “Theo người”, “Ưu tiên chat” hoặc “Ưu tiên gọi”. Trong danh sách, “Tìm theo ngôn ngữ” chỉ hiện phòng như tiếng Anh ↔ tiếng Hàn.",
+    "whatsNewHostTitle": "Nhường chủ phòng hoặc tạm dừng",
+    "whatsNewHostBody": "Khi rời đi, “Nhường chủ phòng” để phòng tiếp tục, hoặc tạm dừng rồi bấm “Mở lại” ở sảnh để mở lại đúng phòng đó."
   },
   "fr": {
     "billingClose": "Fermer",
@@ -1994,7 +2018,15 @@
     "homeTabPeople": "Personnes",
     "homeTabMessages": "Messages",
     "modeAi": "Avec l’IA",
-    "modePeople": "Avec des gens"
+    "modePeople": "Avec des gens",
+    "whatsNewPeopleTitle": "Les onglets « Avec des gens »",
+    "whatsNewPeopleBody": "Mettez l’interrupteur du haut sur « Avec des gens » pour les onglets Personnes, Salons et Messages. Dans Personnes, voyez qui est passé récemment et suivez-le ou écrivez-lui.",
+    "whatsNewQuoteTitle": "Choisissez une phrase et posez la question",
+    "whatsNewQuoteBody": "Touchez une ligne puis, sous la traduction, « Ça veut dire quoi ? » ou « Demander en privé ». La question est écrite dans la langue que vous apprenez, et la personne est prévenue.",
+    "whatsNewLayoutsTitle": "Le salon comme vous voulez",
+    "whatsNewLayoutsBody": "Essayez « Par personne », « Vue discussion » ou « Vue appel ». Dans la liste, « Chercher par langue » n’affiche que des salons comme anglais ↔ coréen.",
+    "whatsNewHostTitle": "Céder ou mettre en pause",
+    "whatsNewHostBody": "En partant, « Céder l’animation » garde le salon ouvert, ou mettez-le en pause puis « Rouvrir » depuis l’accueil pour retrouver le même salon."
   },
   "it": {
     "archive": "Report",
@@ -2690,7 +2722,15 @@
     "homeTabPeople": "Persone",
     "homeTabMessages": "Messaggi",
     "modeAi": "Con l’IA",
-    "modePeople": "Con le persone"
+    "modePeople": "Con le persone",
+    "whatsNewPeopleTitle": "Le schede “Con le persone”",
+    "whatsNewPeopleBody": "Sposta l’interruttore in alto su “Con le persone” per le schede Persone, Stanze e Messaggi. In Persone vedi chi è passato di recente e puoi seguirlo o scrivergli.",
+    "whatsNewQuoteTitle": "Scegli una frase e chiedi",
+    "whatsNewQuoteBody": "Tocca una riga e, sotto la traduzione, scegli “Che significa?” o “Chiedi in privato”. La domanda è già scritta nella lingua che studi e chi l’ha detto riceve un avviso.",
+    "whatsNewLayoutsTitle": "La stanza come preferisci",
+    "whatsNewLayoutsBody": "Prova “Per persona”, “Vista chat” o “Vista chiamata”. Nell’elenco, “Cerca per lingua” mostra solo stanze come inglese ↔ coreano.",
+    "whatsNewHostTitle": "Passa il ruolo o metti in pausa",
+    "whatsNewHostBody": "Quando esci, “Passa il ruolo di host” fa continuare la stanza, oppure mettila in pausa e usa “Riapri” per riaprire la stessa stanza."
   },
   "pt": {
     "billingClose": "Fechar",
@@ -3197,7 +3237,15 @@
     "homeTabPeople": "Pessoas",
     "homeTabMessages": "Mensagens",
     "modeAi": "Com a IA",
-    "modePeople": "Com pessoas"
+    "modePeople": "Com pessoas",
+    "whatsNewPeopleTitle": "Separadores “Com pessoas”",
+    "whatsNewPeopleBody": "Mude o interruptor de cima para “Com pessoas” para ver Pessoas, Salas e Mensagens. Em Pessoas, veja quem esteve cá há pouco e siga ou envie mensagem.",
+    "whatsNewQuoteTitle": "Escolha uma frase e pergunte",
+    "whatsNewQuoteBody": "Toque numa linha e, por baixo da tradução, escolha “O que significa?” ou “Perguntar em privado”. A pergunta vem na língua que está a aprender e quem a disse é avisado.",
+    "whatsNewLayoutsTitle": "Veja a sala à sua maneira",
+    "whatsNewLayoutsBody": "Experimente “Por pessoa”, “Vista conversa” ou “Vista chamada”. Na lista, “Procurar por língua” mostra só salas como inglês ↔ coreano.",
+    "whatsNewHostTitle": "Passar anfitrião ou pausar",
+    "whatsNewHostBody": "Ao sair, “Passar anfitrião” mantém a sala, ou pause-a e use “Reabrir” no início para abrir a mesma sala outra vez."
   },
   "ru": {
     "archive": "Отчёты",
@@ -3891,7 +3939,15 @@
     "homeTabPeople": "Люди",
     "homeTabMessages": "Сообщения",
     "modeAi": "С ИИ",
-    "modePeople": "С людьми"
+    "modePeople": "С людьми",
+    "whatsNewPeopleTitle": "Вкладки «С людьми»",
+    "whatsNewPeopleBody": "Переключите верхний переключатель на «С людьми», чтобы открыть вкладки Люди, Комнаты и Сообщения. В «Люди» видно, кто заходил недавно, — подпишитесь или напишите.",
+    "whatsNewQuoteTitle": "Выберите фразу и спросите",
+    "whatsNewQuoteBody": "Нажмите на строку и под переводом выберите «Что это значит?» или «Спросить лично». Вопрос уже написан на изучаемом языке, а автору придёт уведомление.",
+    "whatsNewLayoutsTitle": "Комната так, как удобно",
+    "whatsNewLayoutsBody": "Попробуйте «По людям», «Чат» или «Звонок». В списке «Найти по языку» покажет только комнаты вроде английский ↔ корейский.",
+    "whatsNewHostTitle": "Передать роль хоста или приостановить",
+    "whatsNewHostBody": "Уходя, «Передать роль хоста» оставит комнату открытой, или приостановите её и нажмите «Открыть снова», чтобы вернуть ту же комнату."
   },
   "id": {
     "billingClose": "Tutup",
@@ -4394,7 +4450,15 @@
     "homeTabPeople": "Orang",
     "homeTabMessages": "Pesan",
     "modeAi": "Belajar dengan AI",
-    "modePeople": "Belajar dengan orang"
+    "modePeople": "Belajar dengan orang",
+    "whatsNewPeopleTitle": "Grup tab “Belajar dengan orang”",
+    "whatsNewPeopleBody": "Geser tombol di atas ke “Belajar dengan orang” untuk tab Orang, Ruang, dan Pesan. Di Orang, lihat pelajar yang baru mampir lalu ikuti atau kirimi pesan.",
+    "whatsNewQuoteTitle": "Pilih kalimat lalu tanya",
+    "whatsNewQuoteBody": "Ketuk baris, lalu di bawah terjemahan pilih “Artinya apa?” atau “Tanya diam-diam”. Pertanyaan sudah ditulis dalam bahasa yang kamu pelajari dan yang bicara diberi tahu.",
+    "whatsNewLayoutsTitle": "Atur cara melihat ruang",
+    "whatsNewLayoutsBody": "Coba “Per orang”, “Fokus chat”, atau “Fokus panggilan”. Di daftar, “Cari per bahasa” hanya menampilkan ruang seperti Inggris ↔ Korea.",
+    "whatsNewHostTitle": "Serahkan host atau jeda",
+    "whatsNewHostBody": "Saat keluar, “Jadikan host” membuat ruang tetap jalan, atau jeda lalu ketuk “Buka lagi” di lobi untuk membuka ruang yang sama."
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -4891,7 +4955,15 @@
     "homeTabPeople": "أشخاص",
     "homeTabMessages": "الرسائل",
     "modeAi": "التعلّم مع الذكاء الاصطناعي",
-    "modePeople": "التعلّم مع الناس"
+    "modePeople": "التعلّم مع الناس",
+    "whatsNewPeopleTitle": "مجموعة «التعلّم مع الناس»",
+    "whatsNewPeopleBody": "حوّل المفتاح في الأعلى إلى «التعلّم مع الناس» لتظهر تبويبات أشخاص والغرف والرسائل. في «أشخاص» ترى من زار مؤخرًا وتتابعه أو تراسله.",
+    "whatsNewQuoteTitle": "اختر جملة واسأل عنها",
+    "whatsNewQuoteBody": "اضغط على سطر، وتحت الترجمة اختر «ماذا يعني؟» أو «اسأل بشكل خاص». يُكتب السؤال باللغة التي تتعلمها ويصل تنبيه لصاحب الكلام.",
+    "whatsNewLayoutsTitle": "اعرض الغرفة كما تحب",
+    "whatsNewLayoutsBody": "جرّب «حسب الشخص» أو «عرض الدردشة» أو «عرض المكالمة». وفي القائمة يعرض «البحث حسب اللغة» غرفًا مثل الإنجليزية ↔ الكورية فقط.",
+    "whatsNewHostTitle": "تسليم الاستضافة أو الإيقاف المؤقت",
+    "whatsNewHostBody": "عند المغادرة، «تسليم الاستضافة» يُبقي الغرفة مستمرة، أو أوقفها مؤقتًا ثم اضغط «إعادة الفتح» لتفتح الغرفة نفسها."
   },
   "th": {
     "billingClose": "ปิด",
@@ -5388,7 +5460,15 @@
     "homeTabPeople": "ผู้คน",
     "homeTabMessages": "ข้อความ",
     "modeAi": "เรียนกับ AI",
-    "modePeople": "เรียนกับผู้คน"
+    "modePeople": "เรียนกับผู้คน",
+    "whatsNewPeopleTitle": "แท็บกลุ่ม “เรียนกับผู้คน”",
+    "whatsNewPeopleBody": "เลื่อนสวิตช์ด้านบนเป็น “เรียนกับผู้คน” จะเห็นแท็บผู้คน ห้องคุย และข้อความ ในแท็บผู้คนดูผู้เรียนที่เพิ่งเข้ามา แล้วติดตามหรือส่งข้อความได้",
+    "whatsNewQuoteTitle": "เลือกประโยคแล้วถาม",
+    "whatsNewQuoteBody": "แตะบรรทัด ใต้คำแปลเลือก “แปลว่าอะไร?” หรือ “ถามเป็นการส่วนตัว” คำถามจะเขียนเป็นภาษาที่คุณเรียนไว้ให้ และคนพูดจะได้รับแจ้ง",
+    "whatsNewLayoutsTitle": "เลือกวิธีดูห้องเอง",
+    "whatsNewLayoutsBody": "ลอง “แยกตามคน” “เน้นแชต” หรือ “เน้นโทร” ในรายการใช้ “หาตามภาษา” เพื่อดูเฉพาะห้องอย่างอังกฤษ ↔ เกาหลี",
+    "whatsNewHostTitle": "ส่งต่อโฮสต์หรือพักห้อง",
+    "whatsNewHostBody": "ตอนออกใช้ “ให้เป็นโฮสต์” ให้ห้องไปต่อได้ หรือพักห้องไว้แล้วกด “เปิดอีกครั้ง” ที่ล็อบบี้เพื่อเปิดห้องเดิม"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -5885,6 +5965,14 @@
     "homeTabPeople": "लोग",
     "homeTabMessages": "मैसेज",
     "modeAi": "AI के साथ सीखें",
-    "modePeople": "लोगों के साथ सीखें"
+    "modePeople": "लोगों के साथ सीखें",
+    "whatsNewPeopleTitle": "“लोगों के साथ सीखें” टैब",
+    "whatsNewPeopleBody": "ऊपर का स्विच “लोगों के साथ सीखें” पर करें तो लोग, रूम और मैसेज टैब दिखेंगे। “लोग” में हाल में आए सीखने वालों को देखें, फ़ॉलो करें या मैसेज भेजें।",
+    "whatsNewQuoteTitle": "कोई पंक्ति चुनकर पूछें",
+    "whatsNewQuoteBody": "पंक्ति पर टैप करें और अनुवाद के नीचे “इसका मतलब?” या “अकेले में पूछें” चुनें। सवाल आपकी सीखी जा रही भाषा में भरा होता है और बोलने वाले को सूचना जाती है।",
+    "whatsNewLayoutsTitle": "रूम अपने तरीके से देखें",
+    "whatsNewLayoutsBody": "“व्यक्ति के अनुसार”, “चैट व्यू” या “कॉल व्यू” आज़माएँ। सूची में “भाषा से खोजें” सिर्फ़ अंग्रेज़ी ↔ कोरियाई जैसे रूम दिखाता है।",
+    "whatsNewHostTitle": "होस्ट सौंपें या रूम रोकें",
+    "whatsNewHostBody": "निकलते समय “होस्ट बनाएँ” से रूम चलता रहे, या कुछ देर बंद करें और लॉबी में “फिर खोलें” से वही रूम दोबारा खोलें।"
   }
 }

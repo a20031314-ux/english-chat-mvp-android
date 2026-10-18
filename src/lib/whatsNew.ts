@@ -18,7 +18,7 @@
 import type { UICopy } from "./copy.ts";
 import { compareVersions } from "./appVersion.ts";
 
-export type WhatsNewTab = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms";
+export type WhatsNewTab = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people";
 
 export type WhatsNewItem = {
   id: string;
@@ -38,6 +38,16 @@ export type ReleaseNote = {
 };
 
 export const RELEASE_NOTES: ReleaseNote[] = [
+  {
+    version: "2.69",
+    code: 83,
+    items: [
+      { id: "people", title: "whatsNewPeopleTitle", body: "whatsNewPeopleBody", shot: "people", tab: "people" },
+      { id: "quote", title: "whatsNewQuoteTitle", body: "whatsNewQuoteBody", shot: "quote", tab: "rooms" },
+      { id: "layouts", title: "whatsNewLayoutsTitle", body: "whatsNewLayoutsBody", shot: "layouts", tab: "rooms" },
+      { id: "host", title: "whatsNewHostTitle", body: "whatsNewHostBody", shot: "host", tab: "rooms" },
+    ],
+  },
   {
     // 2.67(81)은 내부 테스트에서만 돌았다. 2.66에서 바로 오는 사람에게 2.67 항목이
     // 아직 없어서(dev 열린 일), 이 묶음이 2.68의 새 탭·메시지·로그인을 알린다.

@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-18b";
+export const GUIDE_VERSION = "2026-10-19";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms";
 
@@ -310,24 +310,45 @@ export const GUIDE_KO: Guide = {
     "title": "말하는 방 사용법",
     "sections": [
       {
-        "heading": "방에 들어가기",
+        "heading": "방 찾고 들어가기",
         "body": [
-          "로비에서 방을 누르면 들어가요. 방장이 아니면 손을 든 채 들어가고, 방장이 올려 주면 말할 수 있어요. \"듣기만\"으로 조용히 들을 수도 있어요.",
+          "목록 위 ‘전체’·‘내 조합’·‘언어로 찾기’로 언어 조합을 골라요. 방을 누르면 손을 든 채 들어가고, 방장이 올려 주면 말해요. ‘듣기만’으로 조용히 들을 수도 있어요.",
           "말한 내용은 사람마다 자막으로 쌓여요. 줄을 누르면 앞 대화를 보고 내 언어로 번역해요."
         ],
         "shot": "rooms-room"
       },
       {
+        "heading": "줄을 집어서 묻기",
+        "body": [
+          "줄을 누르면 번역 아래 ‘무슨 뜻이에요?’·‘답하기’·‘쪽지로 묻기’가 나와요. 질문은 내가 배우는 언어로 채워지고, 말한 사람에게 알림이 가요. 쪽지는 둘만 보는 메시지로 가요."
+        ],
+        "shot": "rooms-quote"
+      },
+      {
         "heading": "말이 막힐 때",
         "body": [
-          "아래 칸에 편한 말로 쓰고 \"학습 언어로\"를 누르면 문장을 만들어 줘요. 그대로 댓글로 보내거나, 말하기 자리에서 소리 내어 말해 보세요."
+          "아래 칸에 편한 말로 쓰고 ‘학습 언어로’를 누르면 문장을 만들어 줘요. 그대로 댓글로 보내거나, 말하기 자리에서 소리 내어 말해 보세요."
         ]
       },
       {
-        "heading": "프로필·메시지·통화",
+        "heading": "보는 방식 고르기",
         "body": [
-          "사진을 누르면 프로필이 열려요. 팔로우하거나 메시지를 보내면, 상대가 답한 뒤 대화 안에서 📞로 통화할 수 있어요. 통화가 끝나면 자막이 기록으로 남아요.",
-          "차단·신고도 프로필에서 해요. 방장은 사람을 올리기·내리기·내보내기할 수 있어요."
+          "방 위에서 ‘대화 보기’·‘사람별 보기’·‘채팅 위주’·‘통화 위주’를 골라요. 보는 것만 바뀌고 자막·질문은 모두 같아요."
+        ],
+        "shot": "rooms-layouts"
+      },
+      {
+        "heading": "방장이라면",
+        "body": [
+          "손든 사람은 ‘올리기’, 프로필에서 ‘내리기’·‘내보내기’·‘방장 넘기기’. ‘방 닫기’를 누르면 ‘방장 넘기고 나가기’·‘잠시 닫기’·‘방 닫기’ 중에 골라요. 잠시 닫은 방은 목록 위 ‘다시 열기’로 같은 방을 열어요."
+        ],
+        "shot": "rooms-host"
+      },
+      {
+        "heading": "사람·메시지·통화",
+        "body": [
+          "‘사람과 학습’의 ‘사람’ 탭에서 최근에 온 학습자를 보고, 사진을 누르면 프로필이 열려요. 팔로우하거나 메시지를 보내면 상대가 답한 뒤 대화 안에서 📞로 통화해요. 통화 자막은 기록으로 남아요.",
+          "차단·신고도 프로필에서 해요."
         ],
         "shot": "rooms-dm"
       }
@@ -609,24 +630,45 @@ export const GUIDE_EN: Guide = {
     "title": "How to use Rooms",
     "sections": [
       {
-        "heading": "Join a room",
+        "heading": "Find a room and join",
         "body": [
-          "Tap a room in the lobby to go in. Unless you are the host, you join with your hand raised and can talk once the host brings you up. \"Just listen\" lets you listen quietly.",
-          "What each person says builds up as captions. Tap a line to translate it into your language, with the conversation before it in mind."
+          "Above the list, pick a language pair with “All”, “My languages” or “Find by language”. Tap a room to join with your hand raised; the host brings you up to talk. “Just listen” lets you listen quietly.",
+          "What each person says builds up as captions. Tap a line to translate it, with the conversation before it in mind."
         ],
         "shot": "rooms-room"
       },
       {
+        "heading": "Pick a line and ask",
+        "body": [
+          "Tap a line and, under the translation, choose “What does it mean?”, “Reply” or “Ask privately”. The question is filled in in the language you’re learning and the speaker is told. A private question goes as a message only the two of you see."
+        ],
+        "shot": "rooms-quote"
+      },
+      {
         "heading": "When the words won’t come",
         "body": [
-          "Write in your own language in the box below and tap \"In my target language\" to get a sentence. Send it as a comment, or say it out loud from a talking seat."
+          "Write in your own language in the box below and tap “In my target language” to get a sentence. Send it as a comment, or say it out loud from a talking seat."
         ]
       },
       {
-        "heading": "Profiles, messages and calls",
+        "heading": "Choose how you see the room",
         "body": [
-          "Tap a photo to open a profile. Follow or send a message; once they reply, call with 📞 right in the conversation. When the call ends, its captions stay as a record.",
-          "Block and report from the profile too. The host can bring people up, move them down or remove them."
+          "At the top, choose “Conversation”, “By person”, “Chat view” or “Call view”. Only the view changes; the captions and questions are the same for everyone."
+        ],
+        "shot": "rooms-layouts"
+      },
+      {
+        "heading": "If you’re the host",
+        "body": [
+          "“Bring up” someone with a raised hand; from a profile, “Move down”, “Remove” or “Make host”. “Close room” lets you choose “Hand over and leave”, pause, or close. A paused room comes back with “Reopen” above the list."
+        ],
+        "shot": "rooms-host"
+      },
+      {
+        "heading": "People, messages and calls",
+        "body": [
+          "In “Learn with people”, the People tab shows learners who were here lately; tap a photo for their profile. Follow or message them, and once they reply, call from the conversation with 📞. A call’s captions stay as a record.",
+          "Blocking and reporting are on the profile too."
         ],
         "shot": "rooms-dm"
       }

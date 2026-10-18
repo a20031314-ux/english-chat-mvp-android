@@ -74,6 +74,7 @@ async function loadModules() {
 const { copy, RELEASE_NOTES } = await loadModules();
 // 말하는 방 화면 문구(copy.ts와 따로, src/lib/rooms/copy.ts) — 단계에서 버튼 이름을 찾는 데.
 const { roomCopy: roomCopyFor } = await import(`file://${path.join(ROOT, "src/lib/rooms/copy.ts").replace(/\\/g, "/")}`);
+const { askPhrase } = await import(`file://${path.join(ROOT, "src/lib/rooms/quote.ts").replace(/\\/g, "/")}`);
 /**
  * `guide` instead of a version takes the pictures for the map's how-to
  * (src/lib/guide/content.ts, sections with a `shot`) into public/guide/<locale>/.
@@ -431,14 +432,23 @@ const DM_LINES = {
 };
 function socialMocks(page, target, ui) {
   const now = Date.now();
+  // 2.69 host 장면: 내가 방장이 된 것처럼(물을 때마다 읽음).
+  page.__social = page.__social ?? { hostMe: false };
   const roomName = target === "es" ? "Español ↔ 日本語" : "English ↔ 日本語";
-  const room = { id: "capt01", name: roomName, languages: [target, "ja"], hostPeerId: "p_yukiyukiyuki", hostAccountId: PEOPLE.yuki.id, hostNickname: "Yuki", createdAt: now - 600_000 };
+  const baseRoom = { id: "capt01", name: roomName, languages: [target, "ja"], hostPeerId: "p_yukiyukiyuki", hostAccountId: PEOPLE.yuki.id, hostNickname: "Yuki", createdAt: now - 600_000 };
   const member = (key, peerId, role, extra = {}) => ({ peerId, nickname: PEOPLE[key].nickname, role, muted: false, hand: false, accountId: PEOPLE[key].id, langs: [target, "ja"], joinedAt: now - 500_000, lastSeen: Date.now(), ...extra }); // 응답 때마다 지금: 오래되면 앱이 나간 사람으로 지운다
   const peers = { yuki: "p_yukiyukiyuki", lucia: "p_lucialucialu", omar: "p_omaromaromar" };
   const lines = ROOM_LINES[target].map(([who, text, kind], index) => ({
     seq: index + 1, kind: kind ?? "speech", peerId: peers[who], accountId: PEOPLE[who].id, nickname: PEOPLE[who].nickname, text,
     startedAt: now - 90_000 + index * 15_000, endedAt: now - 85_000 + index * 15_000,
   }));
+  // 2.69: Omar가 Yuki의 첫 줄을 집어 물은 질문(줄 옆 ❓ 1).
+  const first = lines[0];
+  lines.push({
+    seq: lines.length + 1, kind: "text", peerId: peers.omar, accountId: PEOPLE.omar.id, nickname: "Omar", text: askPhrase(target),
+    startedAt: now - 20_000, endedAt: now - 20_000, ask: true,
+    quote: { seq: first.seq, nickname: first.nickname, text: first.text, peerId: first.peerId, accountId: first.accountId },
+  });
   const account = { id: PEOPLE.me.id, createdAt: "2026-10-01T00:00:00.000Z", email: null, google: false, username: "minji", profile: { nickname: "Minji", bio: "🇰🇷 → 🇯🇵 ✈️ ☕", photo: PEOPLE.me.photo } };
   const thread = { id: [PEOPLE.me.id, PEOPLE.yuki.id].sort().join("__"), members: [PEOPLE.me.id, PEOPLE.yuki.id].sort(), starter: PEOPLE.yuki.id, status: "open", createdAt: now - 7_200_000, lastAt: now - 60_000, lastText: DM_LINES[target].reply, lastFrom: PEOPLE.yuki.id, lastSeq: 4 };
   const messages = [
@@ -452,16 +462,30 @@ function socialMocks(page, target, ui) {
   return Promise.all([
     page.route("**/api/rooms", (route) => {
       const body = JSON.parse(route.request().postData() || "{}");
-      const members = [member("yuki", peers.yuki, "speaker"), member("lucia", peers.lucia, "speaker"), member("omar", peers.omar, "listener", { hand: true }), member("me", body.peerId || "p_meeeeeeeeeee", "listener")];
+      const hostMe = page.__social.hostMe;
+      const mePeer = body.peerId || "p_meeeeeeeeeee";
+      const members = [member("yuki", peers.yuki, "speaker"), member("lucia", peers.lucia, "speaker"), member("omar", peers.omar, "listener", { hand: true }), member("me", mePeer, hostMe ? "speaker" : "listener")];
+      const room = hostMe ? { ...baseRoom, hostPeerId: mePeer, hostAccountId: PEOPLE.me.id, hostNickname: "Minji" } : baseRoom;
       if (body.action === "list") return json(route, { rooms: [{ ...room, speakers: 2, listeners: 2, faces: members.map((m) => ({ accountId: m.accountId, nickname: m.nickname })), followed: true }] });
       if (body.action === "join") return json(route, { member: members[3], room, now: Date.now() });
       if (body.action === "poll") return json(route, { now: Date.now(), room, members, signals: [], lines: body.since ? [] : lines });
       if (body.action === "peek") return json(route, { room });
+      if (body.action === "parked") return json(route, { rooms: [] });
       return json(route, { ok: true });
     }),
     page.route("**/api/social", (route) => {
       const body = JSON.parse(route.request().postData() || "{}");
       if (body.action === "mine") return json(route, { following: [], blocked: [] });
+      if (body.action === "people") {
+        const seen = (minutes) => Date.now() - minutes * 60_000;
+        return json(route, {
+          people: [
+            { id: PEOPLE.yuki.id, nickname: "Yuki", bio: "🇯🇵 → 🌏 ☕ 🎧", hasPhoto: true, ui: "ja", learn: target, lastSeen: seen(1), isFollowing: true },
+            { id: PEOPLE.lucia.id, nickname: "Lucía", bio: "🇪🇸 → 🇯🇵 🍣 📚", hasPhoto: true, ui: "es", learn: "ja", lastSeen: seen(40), isFollowing: false },
+            { id: PEOPLE.omar.id, nickname: "Omar", bio: "🇪🇬 → 🌍 ⚽", hasPhoto: true, ui: "ar", learn: target, lastSeen: seen(60 * 26), isFollowing: false },
+          ],
+        });
+      }
       if (body.action === "profile") {
         const key = Object.keys(PEOPLE).find((k) => PEOPLE[k].id === body.target) ?? "yuki";
         return json(route, { profile: profile(key) });
@@ -491,7 +515,7 @@ const STEPS = {
     await page.getByRole("button", { name: exactly(roomCopyFor(locale).justListen) }).first().click();
     await wait(3500);
     // 둘째 줄(질문)을 눌러 앱 언어 번역을 띄운다(운영 /api/translate).
-    const line = page.locator('div[class*="z-[80]"] li > button.min-w-0').nth(1);
+    const line = page.locator('div[class*="z-[80]"] li > div > button.w-full').nth(1);
     const translated = page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 30000 }).catch(() => undefined);
     await line.click();
     await translated;
@@ -523,6 +547,45 @@ const STEPS = {
     await page.locator('div[class*="z-[95]"] div.max-w-\\[80\\%\\] > button').last().click();
     await translated;
     await wait(1200);
+  },
+  async people({ page, ui, wait, target }) {
+    // 2.69: 화면 위 스위치 "사람과 학습" → 사람 탭(고정 응답).
+    await socialMocks(page, target, ui);
+    await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
+    await wait(2500);
+  },
+  async quote({ page, locale, wait }) {
+    // 방에 들어가 Yuki의 첫 줄을 눌러 번역 + "무슨 뜻이에요?·답하기·쪽지로 묻기", 아래에 Omar의 질문.
+    const t = roomCopyFor(locale);
+    await page.goto(`${BASE}/?screen=rooms`, { waitUntil: "networkidle" });
+    await wait(2000);
+    await page.getByRole("button", { name: exactly(t.justListen) }).first().click();
+    await wait(3500);
+    const translated = page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 30000 }).catch(() => undefined);
+    await page.locator('div[class*="z-[80]"] li > div > button.w-full').first().click();
+    await translated;
+    await wait(1200);
+  },
+  async layouts({ page, locale, wait }) {
+    await page.locator('div[class*="z-[80]"] header').getByRole("button", { name: exactly(roomCopyFor(locale).layoutCall) }).click();
+    await wait(1500);
+  },
+  async host({ page, locale, wait }) {
+    // 내가 방장인 것처럼 바꾸고(고정 응답), 대화 보기로 돌아와 "방 닫기" → 고르기 시트.
+    const t = roomCopyFor(locale);
+    // 찍는 브라우저엔 마이크가 없다: 말하기 자리로 바뀔 때 조용한 가짜 마이크를 준다(안내가 안 뜨게).
+    await page.evaluate(() => {
+      navigator.mediaDevices.getUserMedia = async () => new AudioContext().createMediaStreamDestination().stream;
+    });
+    page.__social.hostMe = true;
+    await page.locator('div[class*="z-[80]"] header').getByRole("button", { name: exactly(t.viewTimeline) }).click();
+    const close = page.locator('div[class*="z-[80]"] header').getByRole("button", { name: exactly(t.closeRoom) });
+    for (let i = 0; i < 20 && !(await close.count()); i++) await wait(500);
+    // 찍는 브라우저엔 마이크가 없어 뜨는 안내는 눌러서 닫는다(실제 폰과 무관).
+    const micNotice = page.getByText(t.micDenied);
+    if (await micNotice.count()) await micNotice.first().click();
+    await close.click();
+    await wait(1000);
   },
   async account({ page, wait }) {
     await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
