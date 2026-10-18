@@ -21,6 +21,7 @@ import { RoomsScreen } from "@/components/rooms/RoomsScreen";
 import { PeopleTab } from "@/components/rooms/PeopleTab";
 import { MessagesTab } from "@/components/rooms/MessagesTab";
 import { useInbox } from "@/components/rooms/RoomDm";
+import { useGroups } from "@/components/rooms/RoomGroups";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { readMiniRoom, subscribeMiniRoom } from "@/lib/rooms/miniRoom";
 import { socialFeaturesEnabled } from "@/lib/platform";
@@ -97,6 +98,9 @@ function AppHomeInner({
   const signedIn = useSyncExternalStore(subscribeSession, () => readCachedAccount() !== null, () => false);
   // 메시지 목록과 안 읽음 수: 메시지 탭을 보는 동안은 8초, 아니면 30초마다(로그인했을 때만).
   const inbox = useInbox(socialOn && signedIn, shownTab === "messages" ? 8_000 : 30_000);
+  // 단체방(받은 초대·안 읽음 포함)도 같은 배지에.
+  const groups = useGroups(socialOn && signedIn, shownTab === "messages" ? 8_000 : 30_000);
+  const messagesUnread = inbox.unread + groups.unread;
   const group = groupOf(shownTab);
   // 묶음마다 마지막으로 본 탭. 스위치를 누르면 그리로.
   const [lastInGroup, setLastInGroup] = useState<Record<TabGroup, AppTab>>({ ai: "chat", people: "people" });
@@ -246,7 +250,7 @@ function AppHomeInner({
                         }`}
                       >
                         {option === "ai" ? ui.modeAi : ui.modePeople}
-                        {option === "people" && !on && inbox.unread > 0 ? (
+                        {option === "people" && !on && messagesUnread > 0 ? (
                           <span className="absolute end-3 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-violet-400" aria-hidden />
                         ) : null}
                       </button>
@@ -316,7 +320,7 @@ function AppHomeInner({
 
 
               {shownTab === "messages" && socialOn ? (
-                <MessagesTab ui={ui} locale={locale} threads={inbox.threads} />
+                <MessagesTab ui={ui} locale={locale} targetLanguage={targetLanguage} threads={inbox.threads} groups={groups.groups} onGroupsChanged={groups.refresh} />
               ) : null}
 
               {shownTab === "people" && socialOn ? (
@@ -378,9 +382,9 @@ function AppHomeInner({
                       >
                         {item.label}
                       </span>
-                      {item.id === "messages" && inbox.unread > 0 ? (
+                      {item.id === "messages" && messagesUnread > 0 ? (
                         <span className="absolute end-[22%] top-1 min-w-[1.1rem] rounded-full bg-violet-500 px-1 text-center text-[10px] font-semibold leading-4 text-white">
-                          {Math.min(inbox.unread, 99)}
+                          {Math.min(messagesUnread, 99)}
                         </span>
                       ) : null}
                     </button>
