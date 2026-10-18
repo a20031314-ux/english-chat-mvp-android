@@ -2,6 +2,7 @@ import { createHash, randomBytes, randomInt, scrypt, timingSafeEqual } from "nod
 import { kvDelete, kvGetJson, kvGetJsonMany, kvGetNumber, kvIncrBy, kvListPush, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
 import { forgetPresence } from "./presenceStore.ts";
 import { forgetInvites } from "./inviteLinkStore.ts";
+import { forgetBoard } from "./boardStore.ts";
 import { isIdentified } from "./identity.ts";
 import {
   EMAIL_CODE_LENGTH,
@@ -198,6 +199,7 @@ export async function deleteAccount(record: AccountRecord): Promise<void> {
   await kvDelete(keys);
   await forgetPresence(record.id);
   await forgetInvites(record.id);
+  await forgetBoard(record.id);
   await kvListPush(PURGE_QUEUE_KEY, [record.dataUserId], 400 * 24 * 60 * 60);
 }
 

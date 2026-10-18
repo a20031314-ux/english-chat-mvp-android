@@ -7,6 +7,7 @@ import type { LineKind, PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, 
 import type { PersonCard, PublicProfile } from "./social";
 import type { DmMessage, DmSummary, DmThread } from "./dm";
 import type { Group, GroupCall, GroupMessage, GroupSummary } from "./group";
+import type { BoardAuthor, BoardComment, BoardPost } from "./board";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 
 /** 방(시험 기능)의 기기 저장값. 모두 이 기기에만 있다. */
@@ -431,4 +432,42 @@ export function groupKick(groupId: string, target: string): Promise<{ ok: true }
 
 export function groupTransfer(groupId: string, target: string): Promise<{ ok: true }> {
   return groups("transfer", { groupId, target });
+}
+
+// ── 게시판(rooms/board.ts, /api/board) ─────────────────────────
+
+async function board<T>(action: string, payload: Record<string, unknown>): Promise<T> {
+  const response = await fetch(apiUrl("/api/board"), {
+    method: "POST",
+    headers: { "Content-Type": "application/json", ...entitlementHeaders() },
+    body: JSON.stringify({ action, ...payload }),
+  });
+  const body = (await response.json().catch(() => ({}))) as { error?: string } & T;
+  if (!response.ok) throw new RoomApiError(body.error ?? "FAILED", response.status);
+  return body;
+}
+
+export function boardList(input: { language?: string; offset?: number }): Promise<{ posts: BoardPost[]; authors: BoardAuthor[]; next: number }> {
+  return board("list", input);
+}
+export function boardOpen(postId: string): Promise<{ post: BoardPost; comments: BoardComment[]; authors: BoardAuthor[] }> {
+  return board("open", { postId });
+}
+export function boardWrite(language: string, text: string): Promise<{ post: BoardPost }> {
+  return board("post", { language, text });
+}
+export function boardEdit(postId: string, text: string): Promise<{ post: BoardPost }> {
+  return board("edit", { postId, text });
+}
+export function boardDelete(postId: string): Promise<{ ok: true }> {
+  return board("delete", { postId });
+}
+export function boardComment(postId: string, text: string): Promise<{ comment: BoardComment }> {
+  return board("comment", { postId, text });
+}
+export function boardEditComment(postId: string, commentId: string, text: string): Promise<{ comment: BoardComment }> {
+  return board("editComment", { postId, commentId, text });
+}
+export function boardDeleteComment(postId: string, commentId: string): Promise<{ ok: true }> {
+  return board("deleteComment", { postId, commentId });
 }
