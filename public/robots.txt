@@ -1,5 +1,7 @@
 # The app is the product; this deployment exists to serve its API. There is
-# nothing here worth indexing except the privacy policy the store listing links.
+# nothing here worth indexing except the privacy policy the store listing links,
+# and app-ads.txt, which AdMob reads from the developer website's root.
 User-agent: *
 Allow: /privacy
+Allow: /app-ads.txt
 Disallow: /
