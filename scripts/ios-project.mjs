@@ -9,6 +9,8 @@
  *    ios/App/App/<언어>.lproj/InfoPlist.strings, Info.plist엔 영어 기본값,
  *    Xcode 프로젝트에 InfoPlist.strings 묶음과 언어 등록.
  * 3. Info.plist 고정 값: 암호화 신고(표준 HTTPS만 → false).
+ * 4. 번들 ID: 환경 변수 IOS_BUNDLE_ID가 있으면 그 값(GitHub 저장소 변수), 없으면
+ *    capacitor.config.ts의 appId. App Store에 한 번 올리면 못 바꾸므로 사람이 정한다.
  */
 import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from "node:fs";
@@ -76,6 +78,16 @@ writeFileSync(plistPath, plist);
 let pbx = readFileSync(pbxPath, "utf8");
 const id = (seed) => createHash("md5").update(`languagebank-ios:${seed}`).digest("hex").slice(0, 24).toUpperCase();
 
+// 4. 번들 ID
+const bundleId = process.env.IOS_BUNDLE_ID?.trim();
+if (bundleId) {
+  if (!/^[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)+$/.test(bundleId)) {
+    console.error(`IOS_BUNDLE_ID 형식이 이상합니다: ${bundleId}`);
+    process.exit(1);
+  }
+  pbx = pbx.replace(/PRODUCT_BUNDLE_IDENTIFIER = [^;]+;/g, `PRODUCT_BUNDLE_IDENTIFIER = ${bundleId};`);
+}
+
 // 1. 버전
 pbx = pbx.replace(/MARKETING_VERSION = [^;]+;/g, `MARKETING_VERSION = ${versionName};`);
 pbx = pbx.replace(/CURRENT_PROJECT_VERSION = [^;]+;/g, `CURRENT_PROJECT_VERSION = ${versionCode};`);
@@ -131,4 +143,5 @@ pbx = pbx.replace(/knownRegions = \(([\s\S]*?)\);/, (_match, inner) => {
 });
 
 writeFileSync(pbxPath, pbx);
-console.log(`iOS 프로젝트 맞춤: 버전 ${versionName} (${versionCode}), 권한 문구 ${languages.length}개 언어.`);
+const shownBundle = pbx.match(/PRODUCT_BUNDLE_IDENTIFIER = ([^;]+);/)?.[1] ?? "?";
+console.log(`iOS 프로젝트 맞춤: 버전 ${versionName} (${versionCode}), 번들 ID ${shownBundle}, 권한 문구 ${languages.length}개 언어.`);

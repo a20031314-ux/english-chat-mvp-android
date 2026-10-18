@@ -16,19 +16,41 @@
   브라우저에서 iOS 흉내(CapacitorCustomPlatform)로 ja/ko·en/ja·es/ar — 입장 코드를 넣어도 🎙 없음, 웹(안드로이드와 같은 길)은 🎙 → 방 열림.
   **맥·Xcode 빌드와 실제 아이폰은 못 해 봄.**
 
-## 사람이 할 일 (순서대로)
+## 클라우드 빌드 설정 (사람이, 한 번 — 2026-10-18 아이폰·개발자 계정 있음)
 
-1. Apple Developer Program 가입(연 $99).
-2. 빌드 방법 정하기: 사용자 PC가 Windows라 맥이 없으면 **GitHub Actions macOS + fastlane**(Claude가 워크플로를 만들 수 있음) 또는 Codemagic 같은 클라우드 빌드.
-3. 번들 ID 정하기: 지금 `com.yourname.englishchat`(안드로이드와 같음). App Store에 한 번 올리면 못 바꾼다.
-4. App Store Connect: 앱 만들기 → 구독 그룹에 **`lite_monthly`·`plus_monthly`·`premium_monthly`**, 소모품 **`points_30`·`points_60`·`points_200`·`points_500`** —
-   서버가 상품 id로 요금을 가르므로(`billing/plans.ts`) **안드로이드와 같은 id**로. 원화 가격 단계(3,900·5,500·8,900원 등)가 있는지 확인.
-5. RevenueCat: iOS 앱 추가, App Store 상품을 `premium` 권한·current 오퍼링에, Vercel `NEXT_PUBLIC_REVENUECAT_IOS_API_KEY` → 다시 빌드.
-6. 앱이 생기면 Vercel `NEXT_PUBLIC_APP_STORE_URL`(https://apps.apple.com/app/id…) → 다시 빌드.
-7. 심사 준비: 개인정보 라벨(계정·이메일·이름·사진, 마이크 음성은 받아쓰기에만), 연령 등급, 지원 URL·처리방침(https://english-chat-mvp.vercel.app/privacy), 심사용 데모 계정(아이디·비밀번호).
-8. 기기 확인(아래 "기기에서 볼 것") → TestFlight → 제출.
+빌드는 GitHub Actions의 맥이 한다(`.github/workflows/ios-testflight.yml`, 사람이 눌러야만 돈다). 맥·인증서 파일 필요 없음 —
+App Store Connect API 키로 Xcode가 서명을 스스로 만들고(클라우드 서명) 바로 TestFlight에 올린다.
 
-## 기기에서 볼 것 (맥이 생긴 뒤)
+1. **번들 ID 정하기**(못 바꿈): 그대로 `com.yourname.englishchat`(안드로이드·RevenueCat과 같음) 또는 새 이름.
+2. **App ID 등록**: developer.apple.com → Certificates, IDs & Profiles → Identifiers → ＋ → App IDs → App →
+   Bundle ID "Explicit"에 1번 값. 기능은 기본값(In-App Purchase 포함)만.
+3. **앱 만들기**: App Store Connect → 앱 → ＋ 새로운 앱 → iOS, 이름 `languagebank`, 기본 언어, 번들 ID(2번), SKU(아무 글자, 예 `languagebank-ios`).
+4. **API 키**: App Store Connect → 사용자 및 액세스 → 통합 → App Store Connect API → 팀 키 ＋ → 이름 `github-ios`, 역할 **관리자**
+   (클라우드 서명 인증서를 만들려면 필요). `.p8` 파일은 **한 번만** 받을 수 있음. 같은 화면의 **키 ID**와 **발급자 ID**도 적어 둠.
+5. **팀 ID**: developer.apple.com → Account → Membership details의 Team ID(10자리).
+6. **GitHub에 넣기**: 저장소 Settings → Environments → New environment `ios` →
+   - Secrets: `ASC_KEY_ID`(키 ID), `ASC_ISSUER_ID`(발급자 ID), `ASC_KEY_P8`(.p8 파일을 메모장으로 열어 **내용 전체**를 붙여 넣기)
+   - Variables: `APPLE_TEAM_ID`(팀 ID), `IOS_BUNDLE_ID`(1번 값)
+   - 나중에(결제 붙일 때): Secret `NEXT_PUBLIC_REVENUECAT_IOS_API_KEY`, Variable `NEXT_PUBLIC_APP_STORE_URL`
+7. **빌드**: GitHub → Actions → "iOS: build to TestFlight" → Run workflow. 20~30분 뒤 App Store Connect가 처리(10~30분).
+   처음엔 "수출 규정 준수" 질문이 뜰 수 있음 — 앱에 이미 "표준 암호화만" 신고가 들어 있어 보통 안 뜸.
+8. **아이폰에 설치**: App Store Connect → 앱 → TestFlight → 내부 테스트 → 그룹 만들고 본인(개발자 계정 이메일) 추가 →
+   아이폰에 TestFlight 앱 설치 → 초대 수락 → 설치.
+
+빌드 번호는 `versionCode.실행번호`(예 82.3)라 같은 버전을 여러 번 올려도 된다. 실패하면 Actions 실행 화면의 빨간 단계를 그대로 알려 주면 됨.
+
+## 출시까지 남은 사람 일 (TestFlight 확인 뒤)
+
+1. App Store Connect → 비즈니스: **유료 앱 계약**·세금·은행(인앱 결제에 필요), 소규모 사업자 프로그램 신청(수수료 15%).
+2. 인앱 상품: 구독 그룹 하나에 **`lite_monthly`·`plus_monthly`·`premium_monthly`**, 소모품 **`points_30`·`points_60`·`points_200`·`points_500`** —
+   서버가 상품 id로 요금을 가르므로(`billing/plans.ts`) **안드로이드와 같은 id**. 같은 그룹이어야 요금 바꾸기가 이중 결제가 안 됨. 원화 가격 단계 확인.
+3. RevenueCat: iOS 앱 추가(App Store Connect 앱 내 구입 키), App Store 상품을 `premium` 권한·current 오퍼링에 → iOS 키를 6번 Secret에 → 다시 빌드.
+4. 앱 주소(https://apps.apple.com/app/id…)를 6번 Variable에 → 다시 빌드.
+5. 심사 자료: 개인정보 라벨(계정·이메일·이름·사진, 마이크 음성은 받아쓰기에만), 연령 등급, 지원 URL·처리방침(https://english-chat-mvp.vercel.app/privacy),
+   심사용 데모 계정(아이디·비밀번호), iPhone 스크린샷(store-shots로 만들 수 있음).
+6. 제출.
+
+## 기기에서 볼 것 (TestFlight로 설치한 뒤)
 
 - 첫 화면이 노치 아래에서 시작하고 아래 탭이 홈 표시줄 위에 있는지, 키보드가 입력창을 가리지 않는지.
 - 통화: 마이크 권한 창이 앱 언어로 뜨는지, 받아쓰기(아이폰은 mp4로 녹음)·튜터 목소리(TTS)가 되는지.

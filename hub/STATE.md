@@ -14,7 +14,7 @@
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
 | 다음 앱 버전 | 2.68 (versionCode 82) — 저장소에 올림(2026-10-18), 빌드·Play 업로드 대기. 2.67(81)은 내부 테스트만 | — |
-| iOS | 준비 중 — `ios/` 프로젝트 있음(2026-10-18), 말하는 방·메시지·Google 로그인 없는 1차. 맥/클라우드 빌드·App Store Connect 대기 | `npm run build:ios`, `hub/drafts/ios-launch.md` |
+| iOS | 준비 중 — `ios/` 프로젝트 있음(2026-10-18), 말하는 방·메시지·Google 로그인 없는 1차. 클라우드 빌드(Actions "iOS: build to TestFlight") 준비, 사람 설정 대기 | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할
 
@@ -46,7 +46,7 @@
 
 ## 사용자에게 물어볼 것
 
-- iOS(`hub/drafts/ios-launch.md` "사람이 할 일"): 빌드는 **클라우드(GitHub Actions)로 결정**(2026-10-18). 남은 것: 번들 ID를 안드로이드와 같은 `com.yourname.englishchat`로 둘지(App Store에 한 번 올리면 못 바꿈),
+- iOS(`hub/drafts/ios-launch.md` "사람이 할 일"): 빌드는 **클라우드(GitHub Actions)로 결정**(2026-10-18), 작업 흐름 있음 — 설정 8단계 대기. 남은 것: 번들 ID를 안드로이드와 같은 `com.yourname.englishchat`로 둘지(App Store에 한 번 올리면 못 바꿈),
   다른 스토어에서 구독 중인 사람의 구매를 막을지(안드로이드 구독자가 아이폰에서 다른 요금을 사면 이중 결제).
 - 비용 표(`hub/costs.md`, 자동 계산)에서 채팅 한도까지 매일 다 쓰면 유료 요금 모두 손해(라이트 −1,243원 ~ 8,900원 −4,727원/월). 채팅 한 통 2원은 가정이라, 2.67 출시 1주 뒤 실측 토큰으로 확인하고 한도를 다시 볼지.
   광고는 무료 사용자에게만 붙어(구독자 광고 없음) 유료 손해와는 별개 — 광고를 넣으면 `plan-cost.mjs`에 무료의 광고 수익·광고로 풀어준 원가를 더해 다시 계산(사용자 2026-10-18).

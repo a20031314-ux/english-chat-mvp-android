@@ -1,0 +1,128 @@
+# iOS 앱을 클라우드 맥에서 빌드해 TestFlight로 올린다. 사람이 Actions에서 눌러야만 돈다.
+# 맥 없이 돌리는 방법: App Store Connect API 키로 Xcode가 서명 인증서·프로필을 스스로 만들고
+# (클라우드 서명), 내보내기 단계가 바로 App Store Connect에 올린다. 인증서 파일을 저장소에 두지 않는다.
+#
+# 준비(한 번, 사람이): hub/drafts/ios-launch.md "클라우드 빌드 설정".
+#   environment "ios" — secrets: ASC_KEY_ID, ASC_ISSUER_ID, ASC_KEY_P8, NEXT_PUBLIC_REVENUECAT_IOS_API_KEY(나중)
+#                       vars:    APPLE_TEAM_ID, IOS_BUNDLE_ID, NEXT_PUBLIC_APP_STORE_URL(나중)
+# 버전은 build.gradle을 따라가고(scripts/ios-project.mjs), 같은 버전을 여러 번 올릴 수 있게
+# 빌드 번호는 "versionCode.실행번호"(예: 82.3).
+name: "iOS: build to TestFlight"
+
+on:
+  workflow_dispatch:
+
+concurrency: ios
+
+jobs:
+  build:
+    runs-on: macos-26
+    environment: ios
+    timeout-minutes: 60
+    env:
+      KEY_PATH: ${{ github.workspace }}/../asc/AuthKey.p8
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 설정 값 확인
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+          APPLE_TEAM_ID: ${{ vars.APPLE_TEAM_ID }}
+          IOS_BUNDLE_ID: ${{ vars.IOS_BUNDLE_ID }}
+        run: |
+          missing=""
+          for name in ASC_KEY_ID ASC_ISSUER_ID ASC_KEY_P8 APPLE_TEAM_ID IOS_BUNDLE_ID; do
+            if [ -z "${!name}" ]; then missing="$missing $name"; fi
+          done
+          if [ -n "$missing" ]; then
+            echo "::error::environment 'ios'에 없는 값:$missing — hub/drafts/ios-launch.md \"클라우드 빌드 설정\" 참고"
+            exit 1
+          fi
+          xcodebuild -version
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+
+      - name: 웹 번들 만들고 iOS 프로젝트에 넣기
+        env:
+          NEXT_PUBLIC_API_BASE: ${{ vars.NEXT_PUBLIC_API_BASE }}
+          NEXT_PUBLIC_REVENUECAT_IOS_API_KEY: ${{ secrets.NEXT_PUBLIC_REVENUECAT_IOS_API_KEY }}
+          NEXT_PUBLIC_APP_STORE_URL: ${{ vars.NEXT_PUBLIC_APP_STORE_URL }}
+          IOS_BUNDLE_ID: ${{ vars.IOS_BUNDLE_ID }}
+        run: npm run build:ios
+
+      - name: App Store Connect 키
+        env:
+          ASC_KEY_P8: ${{ secrets.ASC_KEY_P8 }}
+        run: |
+          mkdir -p "$(dirname "$KEY_PATH")"
+          printf '%s\n' "$ASC_KEY_P8" > "$KEY_PATH"
+          chmod 600 "$KEY_PATH"
+
+      - name: 빌드 번호
+        run: |
+          code=$(sed -n 's/.*versionCode \([0-9]*\).*/\1/p' android/app/build.gradle | head -1)
+          echo "BUILD_NUMBER=${code}.${GITHUB_RUN_NUMBER}" >> "$GITHUB_ENV"
+
+      - name: 아카이브 (서명 포함)
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          APPLE_TEAM_ID: ${{ vars.APPLE_TEAM_ID }}
+        run: |
+          xcodebuild archive \
+            -project ios/App/App.xcodeproj \
+            -scheme App \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -archivePath "$RUNNER_TEMP/App.xcarchive" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$KEY_PATH" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID" \
+            DEVELOPMENT_TEAM="$APPLE_TEAM_ID" \
+            CODE_SIGN_STYLE=Automatic \
+            CURRENT_PROJECT_VERSION="$BUILD_NUMBER"
+
+      - name: 내보내고 App Store Connect에 올리기
+        env:
+          ASC_KEY_ID: ${{ secrets.ASC_KEY_ID }}
+          ASC_ISSUER_ID: ${{ secrets.ASC_ISSUER_ID }}
+          APPLE_TEAM_ID: ${{ vars.APPLE_TEAM_ID }}
+        run: |
+          cat > "$RUNNER_TEMP/ExportOptions.plist" <<PLIST
+          <?xml version="1.0" encoding="UTF-8"?>
+          <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+          <plist version="1.0">
+          <dict>
+            <key>method</key><string>app-store-connect</string>
+            <key>destination</key><string>upload</string>
+            <key>teamID</key><string>${APPLE_TEAM_ID}</string>
+            <key>signingStyle</key><string>automatic</string>
+            <key>manageAppVersionAndBuildNumber</key><false/>
+            <key>uploadSymbols</key><true/>
+          </dict>
+          </plist>
+          PLIST
+          xcodebuild -exportArchive \
+            -archivePath "$RUNNER_TEMP/App.xcarchive" \
+            -exportOptionsPlist "$RUNNER_TEMP/ExportOptions.plist" \
+            -exportPath "$RUNNER_TEMP/export" \
+            -allowProvisioningUpdates \
+            -authenticationKeyPath "$KEY_PATH" \
+            -authenticationKeyID "$ASC_KEY_ID" \
+            -authenticationKeyIssuerID "$ASC_ISSUER_ID"
+          {
+            echo "### TestFlight에 올림"
+            echo "- 버전 $(sed -n 's/.*versionName "\(.*\)".*/\1/p' android/app/build.gradle | head -1), 빌드 $BUILD_NUMBER"
+            echo "- App Store Connect가 처리하는 데 10~30분. 끝나면 아이폰 TestFlight 앱에 뜸."
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: 키 지우기
+        if: always()
+        run: rm -rf "$(dirname "$KEY_PATH")" "$RUNNER_TEMP/ExportOptions.plist"
