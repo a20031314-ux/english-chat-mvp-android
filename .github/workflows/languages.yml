@@ -24,6 +24,8 @@ jobs:
         run: npm run check:strings
       - name: Language facts
         run: npm run check:languages
+      - name: Design tokens (hub/DESIGN.md)
+        run: npm run check:design
       - name: Types
         run: npx tsc --noEmit -p .
       - name: Unit tests

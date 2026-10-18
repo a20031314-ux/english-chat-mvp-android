@@ -21,6 +21,9 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **화면 규칙 (2026-10-18):** `hub/DESIGN.md` + `globals.css` `@theme` 토큰(값은 기존 그대로) + `npm run check:design`(CI, 기준선보다 늘면 실패). 표현 세 상태 색은 `bg-status-*`로 모음.
+  남은 것(급하지 않음, 그 화면을 고칠 때): 글자 크기 직접 쓴 곳 498(지도 탭·계정 카드·통화 복습 순), 통화 화면들의 neutral 회색 → slate, `#121212` 등 hex → `bg-surface`.
+  `StudyMapTab.tsx` 661줄 칩 글자가 `text-violet-700`(검정 바탕에 거의 안 보임) — 고칠지 사용자 확인.
 - **사람 목록 (2026-10-18):** 사용자 요청(헬로우톡 "파트너 찾기" 스크린샷) "접속자의 프로필이 쭉 뜨게, 보고 팔로우하거나 채팅을 열 수 있게". 서버(바로 반영):
   `server/presenceStore.ts`(ZSET `social:v1:active` + `social:v1:seen:<계정>` 언어·시각, 쓰기 1분에 한 번), `/api/social` `ping`·`people`(14일, 60명, 나·서로 차단·숨김·이름 없음 제외),
   `kv.ts` ZADD/ZREM/ZREVRANGE/MGET, 계정 삭제 때 지움, 프로필 `hidden`. 앱(다음 빌드): **하단 탭을 두 묶음으로**(같은 날 사용자 결정: 위쪽 스위치 [AI와 학습 | 사람과 학습], 사람 쪽은 사람·말하는 방·메시지) — **하단 탭 "사람"**(`PeopleTab.tsx`, 같은 날 사용자 요청으로 로비 안에서 따로 꺼냄, 메시지는 `openDm.ts`로 대화 화면), 목록 `RoomPeople.tsx`, 거르기 3개, 카드에서 팔로우·메시지, 누르면 프로필 시트,

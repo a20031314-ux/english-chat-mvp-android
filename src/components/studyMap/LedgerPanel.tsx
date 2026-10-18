@@ -30,8 +30,8 @@ type Row = {
 };
 
 const DOT: Record<LedgerState, string> = {
-  mastered: "bg-emerald-400",
-  learned: "bg-amber-300",
+  mastered: "bg-status-mastered",
+  learned: "bg-status-learned",
   met: "bg-white/25",
 };
 

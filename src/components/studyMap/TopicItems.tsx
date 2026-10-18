@@ -18,8 +18,8 @@ import { learningLanguageTextDir } from "@/lib/learningLanguages";
  */
 
 const SEGMENTS: Array<{ key: "mastered" | "learned" | "toLearn"; className: string }> = [
-  { key: "mastered", className: "bg-emerald-400" },
-  { key: "learned", className: "bg-amber-300" },
+  { key: "mastered", className: "bg-status-mastered" },
+  { key: "learned", className: "bg-status-learned" },
   { key: "toLearn", className: "bg-white/15" },
 ];
 
@@ -71,8 +71,8 @@ export function TopicItems({
     toLearn: ui.itemsToLearn,
   };
   const dot: Record<ItemState, string> = {
-    mastered: "bg-emerald-400",
-    learned: "bg-amber-300",
+    mastered: "bg-status-mastered",
+    learned: "bg-status-learned",
     toLearn: "bg-white/25",
   };
   const rows = topic.missions

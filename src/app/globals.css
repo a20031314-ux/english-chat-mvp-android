@@ -19,6 +19,45 @@
     "Courier New", monospace;
 }
 
+/*
+ * 디자인 토큰 — 규칙과 쓰는 법은 hub/DESIGN.md. 값은 화면이 이미 쓰던 값 그대로라
+ * 토큰으로 바꿔도 모습은 달라지지 않는다. 새 값이 필요하면 여기에 먼저 더하고
+ * hub/DESIGN.md 표에 한 줄 적는다. `npm run check:design`이 직접 쓴 값이 늘지 않게 막는다.
+ */
+@theme {
+  /* 바탕 (검정 위에 층) */
+  --color-canvas: #000000;
+  --color-surface: #121212;
+  --color-surface-sunk: #0a0a0a;
+  --color-surface-raised: #161616;
+  --color-line: rgba(255, 255, 255, 0.12);
+
+  /* 글자·주요 버튼 */
+  --color-ink: #f4f4f2;
+  --color-platinum: #e8e8e4;
+  --color-platinum-hover: #f5f5f3;
+
+  /* 의미색 */
+  --color-good: oklch(76.5% 0.177 163.223); /* emerald-400 */
+  --color-warn: oklch(87.9% 0.169 91.605); /* amber-300 */
+  --color-bad: oklch(71.2% 0.194 13.428); /* rose-400 */
+  --color-info: oklch(82.8% 0.111 230.318); /* sky-300 */
+
+  /* 표현의 세 상태 (PRODUCT.md "표현의 세 상태") */
+  --color-status-mastered: oklch(76.5% 0.177 163.223); /* emerald-400 */
+  --color-status-learned: oklch(87.9% 0.169 91.605); /* amber-300 */
+  --color-status-pending: rgba(255, 255, 255, 0.25);
+
+  /* 글자 크기 — 줄 높이는 정하지 않음(text-[12px]처럼 물려받음) */
+  --text-meta: 11px; /* 시각·개수·작은 표시 */
+  --text-caption: 12px; /* 보조 설명, 칩 */
+  --text-note: 13px; /* 카드 안 본문 */
+  --text-body: 14px; /* 기본 본문 */
+  --text-chat: 15px; /* 채팅·학습 문장 */
+  --text-title: 18px; /* 시트·섹션 제목 */
+  --text-heading: 20px; /* 화면 제목 */
+}
+
 html,
 body {
   background: #000000;
