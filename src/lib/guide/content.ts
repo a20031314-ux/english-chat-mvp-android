@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-19";
+export const GUIDE_VERSION = "2026-10-19b";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms";
 
@@ -313,16 +313,24 @@ export const GUIDE_KO: Guide = {
         "heading": "방 찾고 들어가기",
         "body": [
           "목록 위 ‘전체’·‘내 조합’·‘언어로 찾기’로 언어 조합을 골라요. 방을 누르면 손을 든 채 들어가고, 방장이 올려 주면 말해요. ‘듣기만’으로 조용히 들을 수도 있어요.",
-          "말한 내용은 사람마다 자막으로 쌓여요. 줄을 누르면 앞 대화를 보고 내 언어로 번역해요."
+          "말한 내용은 사람마다 자막으로 쌓여요. 줄을 누르면 앞 대화를 보고 내 언어로 번역해요.",
+          "새 방을 만들 때 ‘자유 대화’를 고르면 언어를 정하지 않아요. 자막은 말하는 사람마다 그 사람의 언어로 적히고, ‘언어로 찾기’에서 어떤 언어로도 나와요."
         ],
-        "shot": "rooms-room"
+        "shot": "r69-free"
+      },
+      {
+        "heading": "참여 방식·보는 방식",
+        "body": [
+          "방 위에서 ‘대화 보기’·‘채팅 위주’·‘통화 위주’ 등을 골라요. 자막과 채팅은 칸이 나뉘고, 아래에서 ‘말하기’·‘듣기’·‘채팅만’·‘보이스만’으로 참여 방식을 골라요."
+        ],
+        "shot": "r69-layouts"
       },
       {
         "heading": "줄을 집어서 묻기",
         "body": [
           "줄을 누르면 번역 아래 ‘무슨 뜻이에요?’·‘답하기’·‘쪽지로 묻기’가 나와요. 질문은 내가 배우는 언어로 채워지고, 말한 사람에게 알림이 가요. 쪽지는 둘만 보는 메시지로 가요."
         ],
-        "shot": "rooms-quote"
+        "shot": "r69-quote"
       },
       {
         "heading": "말이 막힐 때",
@@ -331,26 +339,27 @@ export const GUIDE_KO: Guide = {
         ]
       },
       {
-        "heading": "보는 방식 고르기",
-        "body": [
-          "방 위에서 ‘대화 보기’·‘사람별 보기’·‘채팅 위주’·‘통화 위주’를 골라요. 보는 것만 바뀌고 자막·질문은 모두 같아요."
-        ],
-        "shot": "rooms-layouts"
-      },
-      {
         "heading": "방장이라면",
         "body": [
           "손든 사람은 ‘올리기’, 프로필에서 ‘내리기’·‘내보내기’·‘방장 넘기기’. ‘방 닫기’를 누르면 ‘방장 넘기고 나가기’·‘잠시 닫기’·‘방 닫기’ 중에 골라요. 잠시 닫은 방은 목록 위 ‘다시 열기’로 같은 방을 열어요."
         ],
-        "shot": "rooms-host"
+        "shot": "r69-host"
       },
       {
         "heading": "사람·메시지·통화",
         "body": [
-          "‘사람과 학습’의 ‘사람’ 탭에서 최근에 온 학습자를 보고, 사진을 누르면 프로필이 열려요. 팔로우하거나 메시지를 보내면 상대가 답한 뒤 대화 안에서 📞로 통화해요. 통화 자막은 기록으로 남아요.",
+          "‘사람과 학습’의 ‘My’ 탭에서 최근에 온 학습자를 보고, 사진을 누르면 프로필이 열려요. 팔로우하거나 메시지를 보내면 상대가 답한 뒤 대화 안에서 📞로 통화해요. 통화 자막은 기록으로 남아요.",
+          "‘My’ 위 ‘➕ 친구 초대’로 카카오톡 등에 링크를 보내요. 앱이 없는 친구도 설치하고 열면 바로 서로 팔로우돼요. 방 위 ➕는 그 방으로 초대해요.",
           "차단·신고도 프로필에서 해요."
         ],
-        "shot": "rooms-dm"
+        "shot": "r69-people"
+      },
+      {
+        "heading": "단체방과 단체 통화",
+        "body": [
+          "‘메시지’의 ‘+ 단체방’으로 팔로우한 사람을 초대해요(최대 20명). 대화 위 📞로 같이 통화하고, 끝나면 자막이 통화 기록으로 남아요."
+        ],
+        "shot": "r69-groups"
       }
     ]
   },
@@ -633,16 +642,24 @@ export const GUIDE_EN: Guide = {
         "heading": "Find a room and join",
         "body": [
           "Above the list, pick a language pair with “All”, “My languages” or “Find by language”. Tap a room to join with your hand raised; the host brings you up to talk. “Just listen” lets you listen quietly.",
-          "What each person says builds up as captions. Tap a line to translate it, with the conversation before it in mind."
+          "What each person says builds up as captions. Tap a line to translate it, with the conversation before it in mind.",
+          "Choose “Free talk” when you start a room and no languages are fixed. Each person’s captions are written in their own languages, and the room shows up in “Find by language” for any language."
         ],
-        "shot": "rooms-room"
+        "shot": "r69-free"
+      },
+      {
+        "heading": "Join and view your way",
+        "body": [
+          "At the top, choose “Conversation”, “Chat view”, “Call view” and more. Captions and chat sit in separate boxes, and below you join with “Speak”, “Listen”, “Chat only” or “Voice only”."
+        ],
+        "shot": "r69-layouts"
       },
       {
         "heading": "Pick a line and ask",
         "body": [
           "Tap a line and, under the translation, choose “What does it mean?”, “Reply” or “Ask privately”. The question is filled in in the language you’re learning and the speaker is told. A private question goes as a message only the two of you see."
         ],
-        "shot": "rooms-quote"
+        "shot": "r69-quote"
       },
       {
         "heading": "When the words won’t come",
@@ -651,26 +668,27 @@ export const GUIDE_EN: Guide = {
         ]
       },
       {
-        "heading": "Choose how you see the room",
-        "body": [
-          "At the top, choose “Conversation”, “By person”, “Chat view” or “Call view”. Only the view changes; the captions and questions are the same for everyone."
-        ],
-        "shot": "rooms-layouts"
-      },
-      {
         "heading": "If you’re the host",
         "body": [
           "“Bring up” someone with a raised hand; from a profile, “Move down”, “Remove” or “Make host”. “Close room” lets you choose “Hand over and leave”, pause, or close. A paused room comes back with “Reopen” above the list."
         ],
-        "shot": "rooms-host"
+        "shot": "r69-host"
       },
       {
         "heading": "People, messages and calls",
         "body": [
-          "In “Learn with people”, the People tab shows learners who were here lately; tap a photo for their profile. Follow or message them, and once they reply, call from the conversation with 📞. A call’s captions stay as a record.",
+          "In “Learn with people”, the My tab shows learners who were here lately; tap a photo for their profile. Follow or message them, and once they reply, call from the conversation with 📞. A call’s captions stay as a record.",
+          "In My, “➕ Invite friends” sends a link through any messenger. Friends without the app follow each other with you as soon as they install and open it. ➕ in a room invites to that room.",
           "Blocking and reporting are on the profile too."
         ],
-        "shot": "rooms-dm"
+        "shot": "r69-people"
+      },
+      {
+        "heading": "Group chats and group calls",
+        "body": [
+          "In Messages, “+ Group” invites people you follow (up to 20). Call together with 📞 above the chat; afterwards the captions stay as a call record."
+        ],
+        "shot": "r69-groups"
       }
     ]
   },

@@ -74,6 +74,7 @@ async function loadModules() {
 const { copy, RELEASE_NOTES } = await loadModules();
 // 말하는 방 화면 문구(copy.ts와 따로, src/lib/rooms/copy.ts) — 단계에서 버튼 이름을 찾는 데.
 const { roomCopy: roomCopyFor } = await import(`file://${path.join(ROOT, "src/lib/rooms/copy.ts").replace(/\\/g, "/")}`);
+const { inviteCopy: inviteCopyFor } = await import(`file://${path.join(ROOT, "src/lib/invite/copy.ts").replace(/\\/g, "/")}`);
 const { askPhrase } = await import(`file://${path.join(ROOT, "src/lib/rooms/quote.ts").replace(/\\/g, "/")}`);
 /**
  * `guide` instead of a version takes the pictures for the map's how-to
@@ -426,6 +427,11 @@ const ROOM_LINES = {
     ["omar", "Algún día quiero ir a Japón.", "text"],
   ],
 };
+// 2.69 단체방 장면: 이름과 글(학습 언어).
+const GROUP_LINES = {
+  en: { name: "Study buddies ☕", a: "Who wants to practice tonight?", b: "Me! After dinner works for me.", c: "Let’s call at 9." },
+  es: { name: "Compañeros ☕", a: "¿Quién quiere practicar esta noche?", b: "¡Yo! Después de cenar me va bien.", c: "Llamamos a las nueve." },
+};
 const DM_LINES = {
   en: { hi: "Hi! Thanks for the chat in the room.", reply: "It was fun! Do you want to practice again tomorrow?" },
   es: { hi: "¡Hola! Gracias por la charla en la sala.", reply: "¡Fue divertido! ¿Practicamos otra vez mañana?" },
@@ -466,7 +472,10 @@ function socialMocks(page, target, ui) {
       const mePeer = body.peerId || "p_meeeeeeeeeee";
       const members = [member("yuki", peers.yuki, "speaker"), member("lucia", peers.lucia, "speaker"), member("omar", peers.omar, "listener", { hand: true }), member("me", mePeer, hostMe ? "speaker" : "listener")];
       const room = hostMe ? { ...baseRoom, hostPeerId: mePeer, hostAccountId: PEOPLE.me.id, hostNickname: "Minji" } : baseRoom;
-      if (body.action === "list") return json(route, { rooms: [{ ...room, speakers: 2, listeners: 2, faces: members.map((m) => ({ accountId: m.accountId, nickname: m.nickname })), followed: true }] });
+      const faces = members.map((m) => ({ accountId: m.accountId, nickname: m.nickname }));
+      // 2.69 자유 대화 장면: 목록 맨 위에 🌐 방 하나.
+      const free = { id: "capt03", name: target === "es" ? "🌍 Charla de los viernes" : "🌍 Friday chat", languages: [], free: true, hostPeerId: peers.lucia, hostAccountId: PEOPLE.lucia.id, hostNickname: "Lucía", createdAt: now - 300_000, speakers: 3, listeners: 1, faces: [faces[1], faces[0], faces[2]] };
+      if (body.action === "list") return json(route, { rooms: [...(page.__social.free ? [free] : []), { ...room, speakers: 2, listeners: 2, faces, followed: true }] });
       if (body.action === "join") return json(route, { member: members[3], room, now: Date.now() });
       if (body.action === "poll") return json(route, { now: Date.now(), room, members, signals: [], lines: body.since ? [] : lines });
       if (body.action === "peek") return json(route, { room });
@@ -497,6 +506,29 @@ function socialMocks(page, target, ui) {
       if (body.action === "inbox") return json(route, { threads: [{ thread, other: PEOPLE.yuki.id, unread: 1, request: false }] });
       if (body.action === "open") return json(route, { thread, messages, blocked: false });
       if (body.action === "poll") return json(route, { thread, messages: [] });
+      return json(route, { ok: true });
+    }),
+    page.route("**/api/groups", (route) => {
+      const body = JSON.parse(route.request().postData() || "{}");
+      const g = GROUP_LINES[target];
+      const group = { id: "g_capturegrp", name: g.name, languages: [target, "ja"], owner: PEOPLE.me.id, members: [PEOPLE.me.id, PEOPLE.yuki.id, PEOPLE.lucia.id, PEOPLE.omar.id], invited: [], callRoomId: "capt04", createdAt: now - 86_400_000, lastAt: now - 60_000, lastText: g.c, lastFrom: PEOPLE.lucia.id, lastSeq: 6 };
+      const messages = [
+        { seq: 1, from: PEOPLE.yuki.id, kind: "text", text: g.a, at: now - 3_600_000 },
+        { seq: 2, from: PEOPLE.omar.id, kind: "text", text: g.b, at: now - 3_500_000 },
+        { seq: 3, from: PEOPLE.lucia.id, kind: "text", text: askPhrase(target), at: now - 3_400_000, ask: true, quote: { seq: 2, nickname: "", text: g.b, accountId: PEOPLE.omar.id } },
+        { seq: 4, from: PEOPLE.lucia.id, kind: "text", text: g.c, at: now - 120_000 },
+        { seq: 5, from: PEOPLE.yuki.id, kind: "system", text: "call", roomId: "capt04", at: now - 60_000 },
+      ];
+      if (body.action === "mine") return json(route, { groups: [{ group, unread: 2, invite: false }] });
+      if (body.action === "open") return json(route, { group, messages, call: { roomId: "capt04", live: 2 } });
+      if (body.action === "poll") return json(route, { group, messages: [], call: { roomId: "capt04", live: 2 } });
+      return json(route, { ok: true });
+    }),
+    page.route("**/api/invite", (route) => {
+      const body = JSON.parse(route.request().postData() || "{}");
+      if (body.action === "lookup")
+        return json(route, { inviter: { id: PEOPLE.yuki.id, nickname: "Yuki", bio: "🇯🇵 → 🌏 ☕ 🎧", photo: PEOPLE.yuki.photo, learn: target, ui: "ja" }, room: null, isMe: false });
+      if (body.action === "mine") return json(route, { code: "capture01" });
       return json(route, { ok: true });
     }),
     page.route("**/api/account/me", (route) => json(route, { account })),
@@ -554,9 +586,36 @@ const STEPS = {
     await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
     await wait(2500);
   },
+  async invite({ page, wait }) {
+    // 초대 링크로 연 것처럼(?invite=) — "Yuki님이 초대했어요" 시트(고정 응답).
+    await page.goto(`${BASE}/?screen=people&invite=capture01`, { waitUntil: "networkidle" });
+    await wait(3000);
+  },
+  async groups({ page, locale, wait, target }) {
+    // 메시지 탭 → 단체방 하나 → 대화(묻기 줄·통화 중 띠).
+    await page.evaluate(() => localStorage.removeItem("invite:pending:v1"));
+    await page.goto(`${BASE}/?screen=messages`, { waitUntil: "networkidle" });
+    await wait(2500);
+    const close = page.getByRole("button", { name: exactly(inviteCopyFor(locale).later) });
+    if (await close.count()) await close.first().click();
+    await page.locator("li button", { hasText: GROUP_LINES[target].name }).first().click();
+    await wait(3000);
+  },
+  async freetalk({ page, locale, wait }) {
+    // 목록 맨 위 🌐 자유 대화방 + 새 방 만들기에서 "🌐 자유 대화"를 고른 모습.
+    const t = roomCopyFor(locale);
+    page.__social.free = true;
+    await page.goto(`${BASE}/?screen=rooms`, { waitUntil: "networkidle" });
+    await wait(2000);
+    await page.getByRole("button", { name: new RegExp(`${escape(t.newRoom)}$`) }).first().click();
+    await page.getByPlaceholder(t.roomName).fill(t.freeTalk);
+    await page.getByRole("button", { name: exactly(`🌐 ${t.freeTalk}`) }).first().click();
+    await wait(1500);
+  },
   async quote({ page, locale, wait }) {
     // 방에 들어가 Yuki의 첫 줄을 눌러 번역 + "무슨 뜻이에요?·답하기·쪽지로 묻기", 아래에 Omar의 질문.
     const t = roomCopyFor(locale);
+    page.__social.free = false;
     await page.goto(`${BASE}/?screen=rooms`, { waitUntil: "networkidle" });
     await wait(2000);
     await page.getByRole("button", { name: exactly(t.justListen) }).first().click();
@@ -567,7 +626,8 @@ const STEPS = {
     await wait(1200);
   },
   async layouts({ page, locale, wait }) {
-    await page.locator('div[class*="z-[80]"] header').getByRole("button", { name: exactly(roomCopyFor(locale).layoutCall) }).click();
+    // 2.69(다시 자름): 채팅 위주 — 자막 칸·채팅 칸과 아래 참여 방식이 같이 보인다.
+    await page.locator('div[class*="z-[80]"] header').getByRole("button", { name: exactly(roomCopyFor(locale).layoutChat) }).click();
     await wait(1500);
   },
   async host({ page, locale, wait }) {

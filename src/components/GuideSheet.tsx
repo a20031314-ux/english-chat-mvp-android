@@ -80,8 +80,9 @@ export function GuideButton({
     if (!open) return;
     let cancelled = false;
     // `my=1` says this build is 2.67 or later: the My tab, and video lines
-    // translated behind the sentence bar (api/guide).
-    void fetch(apiUrl(`/api/guide?lang=${encodeURIComponent(locale)}&my=1`))
+    // translated behind the sentence bar (api/guide). `rooms=269`: the My·Room tabs,
+    // group chats, free talk and join modes — older builds keep the Room guide they had.
+    void fetch(apiUrl(`/api/guide?lang=${encodeURIComponent(locale)}&my=1&rooms=269`))
       .then((response) => (response.ok ? response.json() : null))
       .then((data: { tabs?: Guide } | null) => {
         if (cancelled) return;

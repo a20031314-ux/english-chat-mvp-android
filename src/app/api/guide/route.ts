@@ -5,6 +5,7 @@ import translations from "@/lib/guide/translations.json";
 import beforeMy from "@/lib/guide/before-my.json";
 import videoBefore267 from "@/lib/guide/videoBefore267.json";
 import roleplayBefore267 from "@/lib/guide/roleplayBefore267.json";
+import roomsBefore269 from "@/lib/guide/roomsBefore269.json";
 
 export const runtime = "nodejs";
 
@@ -22,8 +23,13 @@ export async function OPTIONS(request: NextRequest) {
 export async function GET(request: NextRequest) {
   const asked = request.nextUrl.searchParams.get("lang")?.trim().toLowerCase() ?? "";
   const translated = (translations as Partial<Record<string, Guide>>)[asked];
-  const tabs = asked === "ko" ? GUIDE_KO : asked === "en" ? GUIDE_EN : (translated ?? GUIDE_EN);
+  const current = asked === "ko" ? GUIDE_KO : asked === "en" ? GUIDE_EN : (translated ?? GUIDE_EN);
   const language = asked === "ko" || asked === "en" || translated ? asked : "en";
+  // 2.68 이하는 탭이 "사람·말하는 방"이고 단체방·자유 대화·참여 방식이 없다: `rooms=269`를
+  // 보내지 않으면 그 빌드가 보던 말하는 방 안내(스냅숏)를 준다.
+  const oldRooms =
+    request.nextUrl.searchParams.get("rooms") !== "269" ? (roomsBefore269 as Partial<Record<string, Guide["rooms"]>>)[language] : undefined;
+  const tabs = oldRooms ? { ...current, rooms: oldRooms } : current;
   // Builds before 2.67 still have the map screen, not My, and translate every
   // video line under its subtitle instead of behind the sentence bar: they
   // ask without `my=1` and get the map, chat and video pages they can see.
