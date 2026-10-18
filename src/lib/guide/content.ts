@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-19c";
+export const GUIDE_VERSION = "2026-10-19e";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms";
 
@@ -88,6 +88,13 @@ export const GUIDE_KO: Guide = {
           "‘{ui:myViewMap}’을 누르면 목표로 그린 주제가 보이고, 주제에서 ‘{ui:missionStart}’로 연습해요.",
         ],
         shot: "mapview",
+      },
+      {
+        heading: "8. 노트",
+        body: [
+          "‘{ui:notesTitle}’에 내 표현·단어·문장분석에서 물은 것이 8개 장 주제별로 모여요. 장을 누르면 주제마다 ‘{ui:notesPractice}’, 위 검색칸으로 찾고, ‘{ui:homeTabVocab}’ 줄을 누르면 단어장이 열려요.",
+        ],
+        shot: "notes",
       },
       {
         heading: "그 밖에",
@@ -362,6 +369,13 @@ export const GUIDE_KO: Guide = {
           "‘메시지’의 ‘+ 단체방’으로 팔로우한 사람을 초대해요(최대 20명). 대화 위 📞로 같이 통화하고, 끝나면 자막이 통화 기록으로 남아요."
         ],
         "shot": "r69-groups"
+      },
+      {
+        "heading": "게시판",
+        "body": [
+          "‘My’ 위 ‘게시판’에서 배우는 언어로 글을 올리고 댓글을 달아요. 고치고 지우는 건 쓴 사람만 할 수 있어요. 글 아래 ‘내 언어로 보기’로 번역하고, 이름을 누르면 팔로우·메시지·신고."
+        ],
+        "shot": "r69-board"
       }
     ]
   },
@@ -419,6 +433,13 @@ export const GUIDE_EN: Guide = {
           "Tap ‘{ui:myViewMap}’ for the topics drawn from your goal; in a topic, ‘{ui:missionStart}’.",
         ],
         shot: "mapview",
+      },
+      {
+        heading: "8. Notes",
+        body: [
+          "‘{ui:notesTitle}’ gathers your phrases, words and the questions you asked in sentence analysis into 8 chapters of topics. Open a chapter for ‘{ui:notesPractice}’, search from the box at the top, and tap ‘{ui:homeTabVocab}’ for the word list.",
+        ],
+        shot: "notes",
       },
       {
         heading: "Also",
@@ -693,6 +714,13 @@ export const GUIDE_EN: Guide = {
           "In Messages, “+ Group” invites people you follow (up to 20). Call together with 📞 above the chat; afterwards the captions stay as a call record."
         ],
         "shot": "r69-groups"
+      },
+      {
+        "heading": "Board",
+        "body": [
+          "Above “My”, open “Board” to post in the language you’re learning and comment. Only the writer can edit or delete. “See in my language” translates a post; tap a name to follow, message or report."
+        ],
+        "shot": "r69-board"
       }
     ]
   },

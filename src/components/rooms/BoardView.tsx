@@ -453,9 +453,12 @@ function PostSheet({
             <p dir="auto" className="mt-3 whitespace-pre-wrap text-chat leading-relaxed text-ink">
               {post.text}
             </p>
-            <button type="button" onClick={() => void translate(post.id, post.text)} className="mt-2 text-caption text-info">
-              {t.boardTranslate}
-            </button>
+            {/* 앱 언어로 쓴 글을 같은 언어로 번역하면 말투만 바뀌어 나온다 — 그때는 버튼을 숨긴다. */}
+            {post.language !== locale ? (
+              <button type="button" onClick={() => void translate(post.id, post.text)} className="mt-2 text-caption text-info">
+                {t.boardTranslate}
+              </button>
+            ) : null}
             {translated[post.id] ? <p className="mt-1 whitespace-pre-wrap text-note text-slate-300">{translated[post.id]}</p> : null}
 
             <p className="mt-5 text-meta font-semibold tracking-wide text-slate-500">

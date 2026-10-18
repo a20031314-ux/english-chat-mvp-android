@@ -442,6 +442,34 @@ const DM_LINES = {
   en: { hi: "Hi! Thanks for the chat in the room.", reply: "It was fun! Do you want to practice again tomorrow?" },
   es: { hi: "¡Hola! Gracias por la charla en la sala.", reply: "¡Fue divertido! ¿Practicamos otra vez mañana?" },
 };
+// 2.69 노트 장면: 쌓인 표현(장부, 고정 응답)·단어장 한 개·문장분석 질문 하나, 자리는 미리 정해 둠(서버 안 부름).
+const NOTES_DATA = {
+  en: {
+    phrases: [["Could I get the bill?", "mastered", "out.shops"], ["Where is the nearest station?", "learned", "out.transport"], ["Sorry I'm late", "learned", "help.sorry"],
+      ["I went hiking last weekend", "met", "past.yesterday"], ["What do you do for work?", "mastered", "people.job"], ["I'm looking forward to it", "met", "future.plans"],
+      ["Can I try this on?", "met", "out.shops"], ["I usually get up at seven", "learned", "day.routine"]],
+    word: ["commute", "day.routine"], ask: { sentence: "I usually commute by train.", selected: "commute", topic: "day.routine" },
+  },
+  es: {
+    phrases: [["¿Me trae la cuenta?", "mastered", "out.shops"], ["¿Dónde está la estación?", "learned", "out.transport"], ["Perdón por llegar tarde", "learned", "help.sorry"],
+      ["Ayer fui a la playa", "met", "past.yesterday"], ["¿A qué te dedicas?", "mastered", "people.job"], ["Tengo muchas ganas", "met", "future.plans"],
+      ["¿Me lo puedo probar?", "met", "out.shops"], ["Normalmente me levanto a las siete", "learned", "day.routine"]],
+    word: ["madrugar", "day.routine"], ask: { sentence: "Mañana tengo que madrugar.", selected: "madrugar", topic: "day.routine" },
+  },
+};
+// 2.69 게시판 장면: 학습 언어로 쓴 글 셋(고정 응답).
+const BOARD_POSTS = {
+  en: [
+    ["yuki", "I ordered coffee in English for the first time today! The barista understood me 😊", 4],
+    ["lucia", "Question: is it “on the weekend” or “at the weekend”? I hear both.", 7],
+    ["omar", "Looking for someone to practise small talk with on Saturdays. I'm a beginner but I try every day.", 2],
+  ],
+  es: [
+    ["yuki", "¡Hoy pedí un café en español por primera vez! El camarero me entendió 😊", 4],
+    ["lucia", "Pregunta: ¿se dice «pedí» o «pidí»? Siempre lo confundo.", 7],
+    ["omar", "Busco a alguien para practicar los sábados. Soy principiante pero practico cada día.", 2],
+  ],
+};
 function socialMocks(page, target, ui) {
   const now = Date.now();
   // 2.69 host 장면: 내가 방장이 된 것처럼(물을 때마다 읽음).
@@ -588,6 +616,49 @@ const STEPS = {
     await page.locator('div[class*="z-[95]"] div.max-w-\\[80\\%\\] > button').last().click();
     await translated;
     await wait(1200);
+  },
+  async notes({ page, wait, target }) {
+    const data = NOTES_DATA[target];
+    const now = Date.now();
+    const key = (text) => text.normalize("NFKC").replace(/\s+/g, " ").trim().toLowerCase().slice(0, 160);
+    const places = Object.fromEntries([...data.phrases.map(([text, , topic]) => [key(text), topic]), [key(data.word[0]), data.word[1]], [key(data.ask.selected), data.ask.topic]]);
+    await page.evaluate(([data, target, places, now]) => {
+      localStorage.setItem(`notesPlace:v1:${target}`, JSON.stringify(places));
+      localStorage.setItem("vocabularyEntries", JSON.stringify([{ id: "capture-word", word: data.word[0], gloss: "—", languageCode: target, createdAt: now }]));
+      localStorage.setItem(`ledgerWordListSent:v1:${target}`, "1");
+      localStorage.setItem("notesViewMode", "\"outline\"");
+    }, [data, target, places, now]);
+    const ui = await page.evaluate(() => localStorage.getItem("appUiLocale"));
+    await page.evaluate(([data, target, ui, now]) => {
+      const sentence = data.ask.sentence;
+      localStorage.setItem("sentenceNotes.v1", JSON.stringify({ [`${target}>${ui}:${sentence}`]: { sentence, language: target, uiLanguage: ui,
+        threads: [{ id: "t1", selected: data.ask.selected, turns: [{ question: "?", answer: "—", at: now }] }], updatedAt: now } }));
+    }, [data, target, ui, now]);
+    await page.route("**/api/learner/ledger?*compact=1*", (route) =>
+      route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ items: data.phrases.map(([text, state]) => ({ text, state, firstMet: { tab: "chat", at: now }, lastOutput: null })) }) }),
+    );
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    await wait(2500);
+    await page.locator("section", { has: page.locator('input[type="search"]') }).first().evaluate((el) => el.scrollIntoView({ block: "start" }));
+    await page.mouse.wheel(0, -40);
+    await wait(800);
+  },
+  async board({ page, ui, wait, target }) {
+    await socialMocks(page, target, ui);
+    const now = Date.now();
+    const posts = BOARD_POSTS[target].map(([who, text, comments], index) => ({ id: `b_capture${index}`, author: PEOPLE[who].id, language: target, text, at: now - (index + 1) * 2_400_000, comments }));
+    await page.route("**/api/board", (route) => {
+      const body = JSON.parse(route.request().postData() || "{}");
+      const authors = Object.values(PEOPLE).map((p) => ({ id: p.id, nickname: p.nickname }));
+      if (body.action === "list") return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ posts, authors, next: posts.length }) });
+      return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ ok: true }) });
+    });
+    await page.evaluate(() => {
+      localStorage.setItem("peopleViewMode", "board");
+      localStorage.setItem("boardFilter", "all");
+    });
+    await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
+    await wait(2500);
   },
   async people({ page, ui, wait, target }) {
     // 2.69: 화면 위 스위치 "사람과 학습" → 사람 탭(고정 응답).

@@ -50,6 +50,8 @@ export const RELEASE_NOTES: ReleaseNote[] = [
       { id: "layouts", title: "whatsNewLayoutsTitle", body: "whatsNewLayoutsBody", shot: "layouts", tab: "rooms" },
       { id: "hint", title: "whatsNewHintTitle", body: "whatsNewHintBody", shot: "hint", tab: "rooms" },
       { id: "host", title: "whatsNewHostTitle", body: "whatsNewHostBody", shot: "host", tab: "rooms" },
+      { id: "notes", title: "whatsNewNotesTitle", body: "whatsNewNotesBody", shot: "notes", tab: "map" },
+      { id: "board", title: "whatsNewBoardTitle", body: "whatsNewBoardBody", shot: "board", tab: "people" },
     ],
   },
   {

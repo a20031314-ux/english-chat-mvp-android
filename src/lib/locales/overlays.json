@@ -523,7 +523,11 @@
     "notesWords": "単語",
     "notesQuestions": "質問",
     "notesViewOutline": "目次",
-    "notesViewAll": "すべて"
+    "notesViewAll": "すべて",
+    "whatsNewNotesTitle": "📒 マイにノート",
+    "whatsNewNotesBody": "「マイ」の「ノート」に、表現・単語・文の分析で聞いたことが8章のテーマごとに集まります。検索でき、テーマごとに「このテーマで練習」。単語帳はノートの「単語」に移りました。",
+    "whatsNewBoardTitle": "📝 掲示板",
+    "whatsNewBoardBody": "「人と学ぶ」→「マイ」→「掲示板」で、学んでいる言語で投稿し、コメントできます。編集・削除は書いた人だけ。「自分の言語で見る」で翻訳。"
   },
   "zh": {
     "billingClose": "关闭",
@@ -1049,7 +1053,11 @@
     "notesWords": "单词",
     "notesQuestions": "问题",
     "notesViewOutline": "目录",
-    "notesViewAll": "全部"
+    "notesViewAll": "全部",
+    "whatsNewNotesTitle": "📒 “我的”里的笔记",
+    "whatsNewNotesBody": "“我的”下方的“笔记”把你的表达、单词和句子分析里问过的问题按 8 章主题汇总。可以搜索，每个主题都能“练习这个主题”。单词本现在在笔记里的“单词”。",
+    "whatsNewBoardTitle": "📝 论坛",
+    "whatsNewBoardBody": "在“和人一起学”→“我的”→“论坛”里，用你在学的语言发帖、评论。只有作者能编辑或删除，“用我的语言看”可翻译。"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -1577,7 +1585,11 @@
     "notesWords": "Từ vựng",
     "notesQuestions": "Câu hỏi",
     "notesViewOutline": "Mục lục",
-    "notesViewAll": "Tất cả"
+    "notesViewAll": "Tất cả",
+    "whatsNewNotesTitle": "📒 Ghi chú trong Của tôi",
+    "whatsNewNotesBody": "Trong “Của tôi”, “Ghi chú” gom cụm từ, từ vựng và câu hỏi bạn đã hỏi khi phân tích câu thành 8 chương theo chủ đề. Tìm kiếm được, mỗi chủ đề có “Luyện chủ đề này”. Sổ từ giờ nằm trong Ghi chú ở mục “Từ”.",
+    "whatsNewBoardTitle": "📝 Bảng tin",
+    "whatsNewBoardBody": "Ở “Học với mọi người” → “Của tôi” → “Bảng tin”, đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết mới sửa hoặc xóa được; “Xem bằng ngôn ngữ của tôi” để dịch."
   },
   "fr": {
     "billingClose": "Fermer",
@@ -2110,7 +2122,11 @@
     "notesWords": "Mots",
     "notesQuestions": "Questions",
     "notesViewOutline": "Sommaire",
-    "notesViewAll": "Tout"
+    "notesViewAll": "Tout",
+    "whatsNewNotesTitle": "📒 Des notes dans Moi",
+    "whatsNewNotesBody": "Dans « Moi », « Notes » regroupe vos expressions, vos mots et les questions posées en analyse de phrase, en 8 chapitres par thème. Cherchez-y, et « S'entraîner sur ce thème » pour chacun. Le vocabulaire est maintenant dans Notes, sous « Vocabulaire ».",
+    "whatsNewBoardTitle": "📝 Forum",
+    "whatsNewBoardBody": "Dans « Avec des gens » → « Moi » → « Forum », publiez dans la langue que vous apprenez et commentez. Seul l'auteur peut modifier ou supprimer ; « Voir dans ma langue » traduit."
   },
   "it": {
     "archive": "Report",
@@ -2835,7 +2851,11 @@
     "notesWords": "Parole",
     "notesQuestions": "Domande",
     "notesViewOutline": "Indice",
-    "notesViewAll": "Tutto"
+    "notesViewAll": "Tutto",
+    "whatsNewNotesTitle": "📒 Note in Io",
+    "whatsNewNotesBody": "In “Io”, “Note” raccoglie le tue espressioni, le parole e le domande fatte nell'analisi della frase in 8 capitoli per argomento. Cercale e usa “Esercitati su questo argomento”. Il vocabolario ora è dentro Note, in “Vocabolario”.",
+    "whatsNewBoardTitle": "📝 Bacheca",
+    "whatsNewBoardBody": "In “Con le persone” → “Io” → “Bacheca”, pubblica nella lingua che impari e commenta. Solo chi scrive può modificare o eliminare; “Vedi nella mia lingua” traduce."
   },
   "pt": {
     "billingClose": "Fechar",
@@ -3371,7 +3391,11 @@
     "notesWords": "Palavras",
     "notesQuestions": "Perguntas",
     "notesViewOutline": "Sumário",
-    "notesViewAll": "Tudo"
+    "notesViewAll": "Tudo",
+    "whatsNewNotesTitle": "📒 Notas em Meu espaço",
+    "whatsNewNotesBody": "Em “Meu espaço”, “Notas” reúne suas expressões, palavras e as perguntas da análise de frases em 8 capítulos por tema. Pesquise e use “Praticar este tema”. O vocabulário agora fica dentro de Notas, em “Vocabulário”.",
+    "whatsNewBoardTitle": "📝 Mural",
+    "whatsNewBoardBody": "Em “Com pessoas” → “Meu espaço” → “Mural”, publique no idioma que você aprende e comente. Só quem escreveu pode editar ou excluir; “Ver no meu idioma” traduz."
   },
   "ru": {
     "archive": "Отчёты",
@@ -4094,7 +4118,11 @@
     "notesWords": "Слова",
     "notesQuestions": "Вопросы",
     "notesViewOutline": "Оглавление",
-    "notesViewAll": "Всё"
+    "notesViewAll": "Всё",
+    "whatsNewNotesTitle": "📒 Заметки в «Моё»",
+    "whatsNewNotesBody": "В «Моё» раздел «Заметки» собирает ваши выражения, слова и вопросы из разбора предложений в 8 глав по темам. Ищите по ним и жмите «Тренировать эту тему». Словарь теперь внутри «Заметок», в «Словарь».",
+    "whatsNewBoardTitle": "📝 Доска",
+    "whatsNewBoardBody": "В «С людьми» → «Моё» → «Доска» публикуйте на изучаемом языке и комментируйте. Изменять и удалять может только автор; «Показать на моём языке» переводит."
   },
   "id": {
     "billingClose": "Tutup",
@@ -4626,7 +4654,11 @@
     "notesWords": "Kata",
     "notesQuestions": "Pertanyaan",
     "notesViewOutline": "Daftar isi",
-    "notesViewAll": "Semua"
+    "notesViewAll": "Semua",
+    "whatsNewNotesTitle": "📒 Catatan di Saya",
+    "whatsNewNotesBody": "Di “Saya”, “Catatan” mengumpulkan ungkapan, kata, dan pertanyaan dari analisis kalimat ke 8 bab per topik. Bisa dicari, dan tiap topik punya “Latih topik ini”. Kosakata sekarang ada di dalam Catatan, di “Kosakata”.",
+    "whatsNewBoardTitle": "📝 Papan",
+    "whatsNewBoardBody": "Di “Belajar dengan orang” → “Saya” → “Papan”, kirim tulisan dalam bahasa yang kamu pelajari dan beri komentar. Hanya penulis yang bisa mengubah atau menghapus; “Lihat dalam bahasaku” menerjemahkan."
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -5152,7 +5184,11 @@
     "notesWords": "الكلمات",
     "notesQuestions": "الأسئلة",
     "notesViewOutline": "المحتويات",
-    "notesViewAll": "الكل"
+    "notesViewAll": "الكل",
+    "whatsNewNotesTitle": "📒 الملاحظات في «أنا»",
+    "whatsNewNotesBody": "في «أنا» تجمع «الملاحظات» عباراتك وكلماتك والأسئلة التي طرحتها في تحليل الجمل في 8 فصول حسب الموضوع. ابحث فيها، ولكل موضوع «تدرّب على هذا الموضوع». المفردات صارت داخل الملاحظات في «مفردات».",
+    "whatsNewBoardTitle": "📝 اللوحة",
+    "whatsNewBoardBody": "في «التعلّم مع الناس» ← «أنا» ← «اللوحة» انشر باللغة التي تتعلمها وعلّق على منشورات غيرك. الكاتب وحده يعدّل أو يحذف، و«اعرض بلغتي» يترجم."
   },
   "th": {
     "billingClose": "ปิด",
@@ -5678,7 +5714,11 @@
     "notesWords": "คำศัพท์",
     "notesQuestions": "คำถาม",
     "notesViewOutline": "สารบัญ",
-    "notesViewAll": "ทั้งหมด"
+    "notesViewAll": "ทั้งหมด",
+    "whatsNewNotesTitle": "📒 โน้ตใน ของฉัน",
+    "whatsNewNotesBody": "ใน “ของฉัน” ส่วน “โน้ต” รวมสำนวน คำศัพท์ และคำถามจากการวิเคราะห์ประโยคไว้ 8 บทตามหัวข้อ ค้นหาได้ และแต่ละหัวข้อมี “ฝึกหัวข้อนี้” สมุดคำศัพท์ย้ายไปอยู่ในโน้ตที่ “คำศัพท์” แล้ว",
+    "whatsNewBoardTitle": "📝 กระดาน",
+    "whatsNewBoardBody": "ที่ “เรียนกับผู้คน” → “ของฉัน” → “กระดาน” โพสต์เป็นภาษาที่เรียนและแสดงความคิดเห็นได้ แก้ไขหรือลบได้เฉพาะคนเขียน “ดูเป็นภาษาของฉัน” ช่วยแปล"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -6204,6 +6244,10 @@
     "notesWords": "शब्द",
     "notesQuestions": "सवाल",
     "notesViewOutline": "विषय-सूची",
-    "notesViewAll": "सभी"
+    "notesViewAll": "सभी",
+    "whatsNewNotesTitle": "📒 मेरा में नोट्स",
+    "whatsNewNotesBody": "“मेरा” में “नोट्स” आपकी अभिव्यक्तियाँ, शब्द और वाक्य-विश्लेषण में पूछे सवाल 8 अध्यायों में विषय के हिसाब से जोड़ते हैं। खोजें, और हर विषय पर “इस विषय का अभ्यास करें”। शब्दावली अब नोट्स के अंदर “शब्द” में है।",
+    "whatsNewBoardTitle": "📝 बोर्ड",
+    "whatsNewBoardBody": "“लोगों के साथ सीखें” → “मेरा” → “बोर्ड” में सीखी जा रही भाषा में पोस्ट करें और टिप्पणी करें। सिर्फ़ लिखने वाला बदल या हटा सकता है; “मेरी भाषा में देखें” अनुवाद करता है।"
   }
 }

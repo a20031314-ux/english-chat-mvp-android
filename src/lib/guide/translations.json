@@ -53,6 +53,13 @@
           "shot": "mapview"
         },
         {
+          "heading": "8. Notas",
+          "body": [
+            "‘{ui:notesTitle}’ reúne tus expresiones, palabras y preguntas del análisis de frases en 8 capítulos por tema. Abre un capítulo para ‘{ui:notesPractice}’, busca arriba y toca ‘{ui:homeTabVocab}’ para ver tu vocabulario."
+          ],
+          "shot": "notes"
+        },
+        {
           "heading": "Además",
           "body": [
             "«{ui:ledgerTitle}» reúne expresiones de todas las pestañas. ¿Nuevo objetivo? «{ui:mapNewGoal}». Cada idioma tiene lo suyo."
@@ -326,6 +333,13 @@
             "En Mensajes, “+ Grupo” invita a quienes sigues (hasta 20). Llamad juntos con 📞 encima del chat; al terminar, los subtítulos quedan como registro."
           ],
           "shot": "r69-groups"
+        },
+        {
+          "heading": "Tablón",
+          "body": [
+            "Encima de “Mi espacio”, abre “Tablón” para publicar en el idioma que aprendes y comentar. Solo quien escribe puede editar o borrar. “Ver en mi idioma” traduce; toca un nombre para seguir, escribir o denunciar."
+          ],
+          "shot": "r69-board"
         }
       ]
     }
@@ -382,6 +396,13 @@
             "「{ui:myViewMap}」を押すと目標から作ったテーマが見え、テーマで「{ui:missionStart}」。"
           ],
           "shot": "mapview"
+        },
+        {
+          "heading": "8. ノート",
+          "body": [
+            "「{ui:notesTitle}」に表現・単語・文の分析で聞いたことが8章のテーマごとに集まります。章を開くとテーマごとに「{ui:notesPractice}」、上の検索欄で探せて、「{ui:homeTabVocab}」で単語帳が開きます。"
+          ],
+          "shot": "notes"
         },
         {
           "heading": "そのほか",
@@ -657,6 +678,13 @@
             "「メッセージ」の「+ グループ」でフォローした人を招待します（最大20人）。会話の上の📞でいっしょに通話でき、終わると字幕が通話の記録に残ります。"
           ],
           "shot": "r69-groups"
+        },
+        {
+          "heading": "掲示板",
+          "body": [
+            "「マイ」の上の「掲示板」で、学んでいる言語で投稿・コメントできます。編集・削除は書いた人だけ。「自分の言語で見る」で翻訳、名前を押すとフォロー・メッセージ・通報。"
+          ],
+          "shot": "r69-board"
         }
       ]
     }
@@ -713,6 +741,13 @@
             "点“{ui:myViewMap}”能看到根据目标生成的主题，在主题里点“{ui:missionStart}”。"
           ],
           "shot": "mapview"
+        },
+        {
+          "heading": "8. 笔记",
+          "body": [
+            "“{ui:notesTitle}”把你的表达、单词和句子分析里问过的问题按 8 章主题汇总。打开一章，每个主题都有“{ui:notesPractice}”；用上方搜索框查找，点“{ui:homeTabVocab}”打开单词本。"
+          ],
+          "shot": "notes"
         },
         {
           "heading": "其他",
@@ -988,6 +1023,13 @@
             "在“消息”里点“+ 群聊”邀请你关注的人（最多20人）。点对话上方的📞一起通话，结束后字幕会作为通话记录保留。"
           ],
           "shot": "r69-groups"
+        },
+        {
+          "heading": "论坛",
+          "body": [
+            "在“我的”上方打开“论坛”，用在学的语言发帖、评论。只有作者能编辑或删除。“用我的语言看”可翻译，点名字可关注、发消息或举报。"
+          ],
+          "shot": "r69-board"
         }
       ]
     }
@@ -1044,6 +1086,13 @@
             "Chạm “{ui:myViewMap}” để xem các chủ đề từ mục tiêu; trong chủ đề, chạm “{ui:missionStart}”."
           ],
           "shot": "mapview"
+        },
+        {
+          "heading": "8. Ghi chú",
+          "body": [
+            "“{ui:notesTitle}” gom cụm từ, từ vựng và câu hỏi khi phân tích câu thành 8 chương theo chủ đề. Mở một chương để “{ui:notesPractice}”, tìm ở ô phía trên, chạm “{ui:homeTabVocab}” để mở sổ từ."
+          ],
+          "shot": "notes"
         },
         {
           "heading": "Ngoài ra",
@@ -1319,6 +1368,13 @@
             "Trong Tin nhắn, “+ Nhóm” mời những người bạn theo dõi (tối đa 20). Gọi cùng nhau bằng 📞 phía trên cuộc trò chuyện; xong thì phụ đề được lưu làm nhật ký cuộc gọi."
           ],
           "shot": "r69-groups"
+        },
+        {
+          "heading": "Bảng tin",
+          "body": [
+            "Phía trên “Của tôi”, mở “Bảng tin” để đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết mới sửa hoặc xóa được. “Xem bằng ngôn ngữ của tôi” để dịch; chạm vào tên để theo dõi, nhắn tin hoặc báo cáo."
+          ],
+          "shot": "r69-board"
         }
       ]
     }
@@ -1375,6 +1431,13 @@
             "Touche « {ui:myViewMap} » pour les thèmes tirés de ton objectif ; dans un thème, « {ui:missionStart} »."
           ],
           "shot": "mapview"
+        },
+        {
+          "heading": "8. Notes",
+          "body": [
+            "« {ui:notesTitle} » regroupe vos expressions, mots et questions d'analyse de phrase en 8 chapitres par thème. Ouvrez un chapitre pour « {ui:notesPractice} », cherchez en haut, et touchez « {ui:homeTabVocab} » pour la liste de mots."
+          ],
+          "shot": "notes"
         },
         {
           "heading": "Aussi",
@@ -1650,6 +1713,13 @@
             "Dans Messages, « + Groupe » invite les personnes que vous suivez (20 au plus). Appelez ensemble avec 📞 au-dessus de la discussion ; ensuite, les sous-titres restent comme compte rendu."
           ],
           "shot": "r69-groups"
+        },
+        {
+          "heading": "Forum",
+          "body": [
+            "Au-dessus de « Moi », ouvrez « Forum » pour publier dans la langue apprise et commenter. Seul l'auteur peut modifier ou supprimer. « Voir dans ma langue » traduit ; touchez un nom pour suivre, écrire ou signaler."
+          ],
+          "shot": "r69-board"
         }
       ]
     }
@@ -1706,6 +1776,13 @@
             "Tocca «{ui:myViewMap}» per i temi del tuo obiettivo; in un tema, «{ui:missionStart}»."
           ],
           "shot": "mapview"
+        },
+        {
+          "heading": "8. Note",
+          "body": [
+            "“{ui:notesTitle}” raccoglie espressioni, parole e domande dell'analisi della frase in 8 capitoli per argomento. Apri un capitolo per “{ui:notesPractice}”, cerca dalla casella in alto e tocca “{ui:homeTabVocab}” per le parole."
+          ],
+          "shot": "notes"
         },
         {
           "heading": "Inoltre",
@@ -1981,6 +2058,13 @@
             "In Messaggi, “+ Gruppo” invita chi segui (fino a 20). Chiamate insieme con 📞 sopra la chat; alla fine i sottotitoli restano come registro."
           ],
           "shot": "r69-groups"
+        },
+        {
+          "heading": "Bacheca",
+          "body": [
+            "Sopra “Io”, apri “Bacheca” per pubblicare nella lingua che impari e commentare. Solo chi scrive può modificare o eliminare. “Vedi nella mia lingua” traduce; tocca un nome per seguire, scrivere o segnalare."
+          ],
+          "shot": "r69-board"
         }
       ]
     }
@@ -2037,6 +2121,13 @@
             "Toque “{ui:myViewMap}” para ver os temas do seu objetivo; num tema, “{ui:missionStart}”."
           ],
           "shot": "mapview"
+        },
+        {
+          "heading": "8. Notas",
+          "body": [
+            "“{ui:notesTitle}” reúne expressões, palavras e perguntas da análise de frases em 8 capítulos por tema. Abra um capítulo para “{ui:notesPractice}”, pesquise no topo e toque em “{ui:homeTabVocab}” para ver as palavras."
+          ],
+          "shot": "notes"
         },
         {
           "heading": "Além disso",
@@ -2312,6 +2403,13 @@
             "Em Mensagens, “+ Grupo” convida quem segue (até 20). Liguem juntos com 📞 acima da conversa; no fim, as legendas ficam como registo."
           ],
           "shot": "r69-groups"
+        },
+        {
+          "heading": "Mural",
+          "body": [
+            "Acima de “Meu espaço”, abra “Mural” para publicar no idioma que você aprende e comentar. Só quem escreveu pode editar ou excluir. “Ver no meu idioma” traduz; toque num nome para seguir, mandar mensagem ou denunciar."
+          ],
+          "shot": "r69-board"
         }
       ]
     }
@@ -2368,6 +2466,13 @@
             "Нажмите «{ui:myViewMap}» — темы по вашей цели; в теме нажмите «{ui:missionStart}»."
           ],
           "shot": "mapview"
+        },
+        {
+          "heading": "8. Заметки",
+          "body": [
+            "«{ui:notesTitle}» собирают ваши выражения, слова и вопросы из разбора предложений в 8 глав по темам. Откройте главу — у каждой темы есть «{ui:notesPractice}»; ищите в поле сверху, а «{ui:homeTabVocab}» откроет словарь."
+          ],
+          "shot": "notes"
         },
         {
           "heading": "Ещё",
@@ -2643,6 +2748,13 @@
             "В «Сообщениях» кнопка «+ Группа» приглашает тех, на кого вы подписаны (до 20). Звоните вместе через 📞 над чатом; после звонка субтитры остаются записью."
           ],
           "shot": "r69-groups"
+        },
+        {
+          "heading": "Доска",
+          "body": [
+            "Над «Моё» откройте «Доска», чтобы публиковать на изучаемом языке и комментировать. Изменять и удалять может только автор. «Показать на моём языке» переводит; нажмите на имя, чтобы подписаться, написать или пожаловаться."
+          ],
+          "shot": "r69-board"
         }
       ]
     }
@@ -2699,6 +2811,13 @@
             "Ketuk “{ui:myViewMap}” untuk topik dari tujuanmu; di topik, ketuk “{ui:missionStart}”."
           ],
           "shot": "mapview"
+        },
+        {
+          "heading": "8. Catatan",
+          "body": [
+            "“{ui:notesTitle}” mengumpulkan ungkapan, kata, dan pertanyaan analisis kalimat ke 8 bab per topik. Buka bab untuk “{ui:notesPractice}”, cari dari kotak di atas, dan ketuk “{ui:homeTabVocab}” untuk daftar kata."
+          ],
+          "shot": "notes"
         },
         {
           "heading": "Lainnya",
@@ -2974,6 +3093,13 @@
             "Di Pesan, “+ Grup” mengundang orang yang kamu ikuti (maks. 20). Telepon bersama dengan 📞 di atas obrolan; setelahnya teks tersimpan sebagai catatan panggilan."
           ],
           "shot": "r69-groups"
+        },
+        {
+          "heading": "Papan",
+          "body": [
+            "Di atas “Saya”, buka “Papan” untuk menulis dalam bahasa yang dipelajari dan berkomentar. Hanya penulis yang bisa mengubah atau menghapus. “Lihat dalam bahasaku” menerjemahkan; ketuk nama untuk mengikuti, mengirim pesan, atau melapor."
+          ],
+          "shot": "r69-board"
         }
       ]
     }
@@ -3030,6 +3156,13 @@
             "اضغط «{ui:myViewMap}» لترى المواضيع المرسومة من هدفك؛ وفي الموضوع اضغط «{ui:missionStart}»."
           ],
           "shot": "mapview"
+        },
+        {
+          "heading": "8. الملاحظات",
+          "body": [
+            "تجمع «{ui:notesTitle}» عباراتك وكلماتك وأسئلة تحليل الجمل في 8 فصول حسب الموضوع. افتح فصلًا لتجد «{ui:notesPractice}» لكل موضوع، وابحث من الخانة في الأعلى، واضغط «{ui:homeTabVocab}» لقائمة الكلمات."
+          ],
+          "shot": "notes"
         },
         {
           "heading": "أيضًا",
@@ -3305,6 +3438,13 @@
             "في «الرسائل» يدعو «+ مجموعة» من تتابعهم (حتى 20). اتصلوا معًا بـ📞 فوق المحادثة، وبعدها تبقى الترجمة النصية سجلًا للمكالمة."
           ],
           "shot": "r69-groups"
+        },
+        {
+          "heading": "اللوحة",
+          "body": [
+            "فوق «أنا» افتح «اللوحة» لتنشر باللغة التي تتعلمها وتعلّق. الكاتب وحده يعدّل أو يحذف. «اعرض بلغتي» يترجم المنشور، واضغط الاسم للمتابعة أو المراسلة أو الإبلاغ."
+          ],
+          "shot": "r69-board"
         }
       ]
     }
@@ -3361,6 +3501,13 @@
             "แตะ “{ui:myViewMap}” เพื่อดูหัวข้อจากเป้าหมาย ในหัวข้อแตะ “{ui:missionStart}”"
           ],
           "shot": "mapview"
+        },
+        {
+          "heading": "8. โน้ต",
+          "body": [
+            "“{ui:notesTitle}” รวมสำนวน คำศัพท์ และคำถามจากการวิเคราะห์ประโยคไว้ 8 บทตามหัวข้อ เปิดบทเพื่อ “{ui:notesPractice}” ค้นหาจากช่องด้านบน และแตะ “{ui:homeTabVocab}” เพื่อเปิดคำศัพท์"
+          ],
+          "shot": "notes"
         },
         {
           "heading": "อื่นๆ",
@@ -3636,6 +3783,13 @@
             "ในข้อความ กด “+ กลุ่ม” เพื่อชวนคนที่คุณติดตาม (สูงสุด 20 คน) โทรด้วยกันด้วย 📞 เหนือแชต จบแล้วซับจะเก็บไว้เป็นบันทึกการโทร"
           ],
           "shot": "r69-groups"
+        },
+        {
+          "heading": "กระดาน",
+          "body": [
+            "เหนือ “ของฉัน” เปิด “กระดาน” เพื่อโพสต์เป็นภาษาที่เรียนและแสดงความคิดเห็น แก้ไขหรือลบได้เฉพาะคนเขียน “ดูเป็นภาษาของฉัน” ช่วยแปล แตะชื่อเพื่อติดตาม ส่งข้อความ หรือรายงาน"
+          ],
+          "shot": "r69-board"
         }
       ]
     }
@@ -3692,6 +3846,13 @@
             "“{ui:myViewMap}” दबाएँ, लक्ष्य से बने विषय दिखेंगे; विषय में “{ui:missionStart}”।"
           ],
           "shot": "mapview"
+        },
+        {
+          "heading": "8. नोट्स",
+          "body": [
+            "“{ui:notesTitle}” आपकी अभिव्यक्तियाँ, शब्द और वाक्य-विश्लेषण के सवाल 8 अध्यायों में विषय के हिसाब से जोड़ते हैं। अध्याय खोलें और हर विषय पर “{ui:notesPractice}”, ऊपर के बॉक्स से खोजें, और शब्दों के लिए “{ui:homeTabVocab}” दबाएँ।"
+          ],
+          "shot": "notes"
         },
         {
           "heading": "और",
@@ -3967,6 +4128,13 @@
             "मैसेज में “+ ग्रुप” से उन लोगों को बुलाएँ जिन्हें आप फ़ॉलो करते हैं (20 तक)। चैट के ऊपर 📞 से साथ कॉल करें; बाद में सबटाइटल कॉल रिकॉर्ड के रूप में रहते हैं।"
           ],
           "shot": "r69-groups"
+        },
+        {
+          "heading": "बोर्ड",
+          "body": [
+            "“मेरा” के ऊपर “बोर्ड” खोलें और सीखी जा रही भाषा में पोस्ट व टिप्पणी करें। सिर्फ़ लिखने वाला बदल या हटा सकता है। “मेरी भाषा में देखें” अनुवाद करता है; नाम दबाकर फ़ॉलो, मैसेज या रिपोर्ट करें।"
+          ],
+          "shot": "r69-board"
         }
       ]
     }

@@ -6,6 +6,7 @@ import beforeMy from "@/lib/guide/before-my.json";
 import videoBefore267 from "@/lib/guide/videoBefore267.json";
 import roleplayBefore267 from "@/lib/guide/roleplayBefore267.json";
 import roomsBefore269 from "@/lib/guide/roomsBefore269.json";
+import mapBefore269 from "@/lib/guide/mapBefore269.json";
 
 export const runtime = "nodejs";
 
@@ -29,7 +30,10 @@ export async function GET(request: NextRequest) {
   // 보내지 않으면 그 빌드가 보던 말하는 방 안내(스냅숏)를 준다.
   const oldRooms =
     request.nextUrl.searchParams.get("rooms") !== "269" ? (roomsBefore269 as Partial<Record<string, Guide["rooms"]>>)[language] : undefined;
-  const tabs = oldRooms ? { ...current, rooms: oldRooms } : current;
+  // 노트(My 안)도 2.69부터: 그 전 빌드에는 노트 단계가 없는 My 안내(스냅숏).
+  const oldMap =
+    request.nextUrl.searchParams.get("rooms") !== "269" ? (mapBefore269 as Partial<Record<string, Guide["map"]>>)[language] : undefined;
+  const tabs = { ...current, ...(oldRooms ? { rooms: oldRooms } : {}), ...(oldMap ? { map: oldMap } : {}) };
   // Builds before 2.67 still have the map screen, not My, and translate every
   // video line under its subtitle instead of behind the sentence bar: they
   // ask without `my=1` and get the map, chat and video pages they can see.
