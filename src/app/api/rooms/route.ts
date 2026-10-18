@@ -102,6 +102,13 @@ export async function POST(request: NextRequest) {
   if (!isRoomId(body.roomId)) return bad(request, "BAD_ROOM");
   const roomId = body.roomId;
 
+  // 들어가기 전에 방 모양만(1:1 통화 받기). 비공개 방은 그 두 사람에게만.
+  if (action === "peek") {
+    const meta = await readMeta(roomId);
+    if (!meta || (meta.private && !(auth && (meta.allowed ?? []).includes(auth.accountId)))) return bad(request, "NO_ROOM", 404);
+    return jsonWithCors(request, { room: meta });
+  }
+
   if (action === "join") {
     const nickname = profileName || cleanText(body.nickname, MAX_NICKNAME_CHARS);
     if (!nickname) return bad(request, "NO_NICKNAME");

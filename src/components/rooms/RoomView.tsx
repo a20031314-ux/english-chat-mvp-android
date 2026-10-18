@@ -59,6 +59,9 @@ export function RoomView({
   locale,
   targetLanguage,
   onLeave,
+  title,
+  onLeft,
+  onMessage,
 }: {
   t: RoomCopy;
   room: RoomMeta;
@@ -68,7 +71,17 @@ export function RoomView({
   locale: string;
   targetLanguage: string;
   onLeave: () => void;
+  /** 1:1 통화면 상대 이름 등, 방 이름 대신 보일 제목. */
+  title?: string;
+  /** 서버에서 나간 것이 확인된 뒤(1:1 통화의 기록 남기기). */
+  onLeft?: () => void;
+  /** 프로필 시트의 "메시지". */
+  onMessage?: (accountId: string) => void;
 }) {
+  const onLeftRef = useRef(onLeft);
+  useEffect(() => {
+    onLeftRef.current = onLeft;
+  }, [onLeft]);
   const [members, setMembers] = useState<RoomMember[]>([]);
   const [lines, setLines] = useState<RoomLine[]>([]);
   const [role, setRole] = useState<RoomRole>("listener");
@@ -96,7 +109,7 @@ export function RoomView({
   const aliveRef = useRef(true);
 
   const isHost = peerId === room.hostPeerId;
-  const free = canSeatFreely(peerId, room.hostPeerId, members);
+  const free = Boolean(room.private) || canSeatFreely(peerId, room.hostPeerId, members);
 
   useEffect(() => {
     mutedRef.current = muted;
@@ -296,7 +309,7 @@ export function RoomView({
       }
     })();
 
-    const onHide = () => leaveRoom(room.id, peerId);
+    const onHide = () => void leaveRoom(room.id, peerId);
     window.addEventListener("pagehide", onHide);
     return () => {
       aliveRef.current = false;
@@ -305,7 +318,7 @@ export function RoomView({
       mesh.close();
       meshRef.current = null;
       stopMic();
-      leaveRoom(room.id, peerId);
+      void leaveRoom(room.id, peerId).then(() => onLeftRef.current?.());
     };
     // 방 하나에 한 번. 이름·역할은 들어갈 때 값만 쓴다.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -350,7 +363,7 @@ export function RoomView({
         <div className="flex items-center justify-between gap-2">
           <div className="min-w-0">
             <h1 className="truncate text-base font-semibold text-white" dir="auto">
-              {room.name}
+              {title ?? room.name}
             </h1>
             <p className="text-xs text-slate-400">
               {languagePair(room.languages, locale)}
@@ -566,6 +579,7 @@ export function RoomView({
             setSheet(null);
           }}
           onBlockedChange={loadBlocked}
+          onMessage={onMessage}
         />
       ) : null}
     </>

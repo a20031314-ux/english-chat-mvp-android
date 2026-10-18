@@ -51,6 +51,11 @@ export type RoomMeta = {
   /** 방장 계정. 방장이 앱을 다시 열어 새 이름표로 와도 방장으로 알아본다. */
   hostAccountId?: string | null;
   hostNickname?: string;
+  /** 1:1 메시지에서 연 통화 방: 목록에 안 나오고, 두 계정만 들어오며, 둘 다 바로 말한다. */
+  private?: boolean;
+  allowed?: string[];
+  /** 이 통화를 연 1:1 대화(api/dm). */
+  threadId?: string;
   createdAt: number;
 };
 

@@ -91,6 +91,9 @@ export async function createRoom(input: {
   hostPeerId: string;
   hostAccountId?: string | null;
   hostNickname?: string;
+  private?: boolean;
+  allowed?: string[];
+  threadId?: string;
 }): Promise<RoomMeta> {
   let id = newRoomId();
   // 겹칠 일은 거의 없지만, 살아 있는 방을 덮어쓰지는 않게.
@@ -102,11 +105,14 @@ export async function createRoom(input: {
     hostPeerId: input.hostPeerId,
     hostAccountId: input.hostAccountId ?? null,
     hostNickname: input.hostNickname ?? "",
+    ...(input.private ? { private: true, allowed: input.allowed ?? [], threadId: input.threadId } : {}),
     createdAt: Date.now(),
   };
   await kvSetJson(metaKey(id), meta, ROOM_TTL_SECONDS);
-  await kvListPush(INDEX_KEY, [id], ROOM_TTL_SECONDS);
-  await kvListTrim(INDEX_KEY, INDEX_KEEP);
+  if (!meta.private) {
+    await kvListPush(INDEX_KEY, [id], ROOM_TTL_SECONDS);
+    await kvListTrim(INDEX_KEY, INDEX_KEEP);
+  }
   return meta;
 }
 
@@ -156,6 +162,9 @@ export async function joinRoom(input: {
 }): Promise<JoinResult> {
   const meta = await readMeta(input.id);
   if (!meta) return { ok: false, error: "NO_ROOM" };
+  if (meta.private && (!input.accountId || !(meta.allowed ?? []).includes(input.accountId))) {
+    return { ok: false, error: "BANNED" };
+  }
   if (input.accountId) {
     const banned = (await kvGetJson<string[]>(banKey(input.id))) ?? [];
     if (banned.includes(input.accountId)) return { ok: false, error: "BANNED" };
@@ -165,7 +174,7 @@ export async function joinRoom(input: {
   const members = (await readMembers(input.id)).filter((member) => member.peerId !== input.peerId);
   if (members.length >= MAX_MEMBERS) return { ok: false, error: "ROOM_FULL" };
   const speakers = members.filter((member) => member.role === "speaker").length;
-  const free = canSeatFreely(input.peerId, meta.hostPeerId, members);
+  const free = meta.private || canSeatFreely(input.peerId, meta.hostPeerId, members);
   const seated = input.wantRole === "speaker" && free && speakers < MAX_SPEAKERS;
   const role: RoomRole = seated ? "speaker" : "listener";
   const now = Date.now();
@@ -249,7 +258,7 @@ export async function poll(input: {
     role = "listener";
   } else if (input.role === "speaker" && mine.role !== "speaker") {
     // 손들기 없이 앉기는 방장이거나 방장이 없을 때만.
-    if (seatsLeft && canSeatFreely(input.peerId, meta.hostPeerId, others)) role = "speaker";
+    if (seatsLeft && (meta.private || canSeatFreely(input.peerId, meta.hostPeerId, others))) role = "speaker";
   }
   const updated: RoomMember = {
     ...mine,
@@ -308,4 +317,14 @@ function parseRows<T>(rows: string[]): T[] {
     }
   }
   return out;
+}
+
+/** 방의 자막 줄 전부(통화가 끝난 뒤 1:1 대화에 기록으로 남길 때). */
+export async function readLines(id: string): Promise<RoomLine[]> {
+  return parseRows<RoomLine>(await kvListRange(linesKey(id), -MAX_LINES_KEPT, -1));
+}
+
+/** 방에 지금 있는 사람 수. */
+export async function liveCount(id: string): Promise<number> {
+  return (await readMembers(id)).length;
 }

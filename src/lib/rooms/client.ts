@@ -5,6 +5,7 @@ import { entitlementHeaders } from "@/lib/billing/billingService";
 import { readCachedAccount } from "@/lib/account/session";
 import type { LineKind, PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, RoomSummary, SignalKind } from "./protocol";
 import type { PublicProfile } from "./social";
+import type { DmMessage, DmSummary, DmThread } from "./dm";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 
 /** 방(시험 기능)의 기기 저장값. 모두 이 기기에만 있다. */
@@ -116,6 +117,15 @@ export async function sendSignal(roomId: string, peerId: string, to: string, kin
   await call("signal", { roomId, peerId, to, kind, data });
 }
 
+/** 들어가기 전에 방 모양(1:1 통화 받기). 없으면 null. */
+export async function peekRoom(roomId: string, peerId: string): Promise<RoomMeta | null> {
+  try {
+    return (await call<{ room: RoomMeta }>("peek", { roomId, peerId })).room;
+  } catch {
+    return null;
+  }
+}
+
 /** 방장만: 손든 사람 올리기 / 말하는 사람 내리기. */
 export async function grantRole(roomId: string, peerId: string, target: string, role: RoomRole | "out"): Promise<void> {
   await call("grant", { roomId, peerId, target, role });
@@ -132,9 +142,12 @@ export async function postLine(input: {
   return (await call<{ line: RoomLine }>("line", input)).line;
 }
 
-export function leaveRoom(roomId: string, peerId: string): void {
-  // 화면을 닫는 순간이라 응답을 기다리지 않는다.
-  void call("leave", { roomId, peerId }).catch(() => {});
+export function leaveRoom(roomId: string, peerId: string): Promise<void> {
+  // 화면을 닫는 순간이라 부르는 쪽은 보통 기다리지 않는다(1:1 통화만 기다린 뒤 기록을 남긴다).
+  return call("leave", { roomId, peerId }).then(
+    () => undefined,
+    () => undefined,
+  );
 }
 
 async function toBase64(blob: Blob): Promise<string> {
@@ -261,4 +274,45 @@ export async function reportPerson(input: { target: string; reason: string; room
 
 export async function myRelations(): Promise<{ following: string[]; blocked: string[] }> {
   return social("mine", {});
+}
+
+/* ---- 1:1 메시지(api/dm) ---- */
+
+async function dm<T>(action: string, payload: Record<string, unknown>): Promise<T> {
+  const response = await fetch(apiUrl("/api/dm"), {
+    method: "POST",
+    headers: { "Content-Type": "application/json", ...entitlementHeaders() },
+    body: JSON.stringify({ action, code: readInviteCode(), ...payload }),
+  });
+  const body = (await response.json().catch(() => ({}))) as { error?: string } & T;
+  if (!response.ok) throw new RoomApiError(body.error ?? "FAILED", response.status);
+  return body;
+}
+
+export function dmInbox(): Promise<{ threads: DmSummary[] }> {
+  return dm("inbox", {});
+}
+
+export function dmOpen(target: string): Promise<{ thread: DmThread | null; messages: DmMessage[]; blocked: boolean }> {
+  return dm("open", { target });
+}
+
+export function dmPoll(threadId: string, since: number): Promise<{ thread: DmThread; messages: DmMessage[] }> {
+  return dm("poll", { threadId, since });
+}
+
+export function dmSend(target: string, text: string): Promise<{ thread: DmThread; message: DmMessage }> {
+  return dm("send", { target, text });
+}
+
+export function dmDecline(threadId: string): Promise<{ ok: true }> {
+  return dm("decline", { threadId });
+}
+
+export function dmCall(threadId: string, peerId: string): Promise<{ room: RoomMeta; message: DmMessage }> {
+  return dm("call", { threadId, peerId });
+}
+
+export function dmEndCall(roomId: string): Promise<{ logged: boolean }> {
+  return dm("endCall", { roomId });
 }

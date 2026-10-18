@@ -128,6 +128,7 @@ export function ProfileSheet({
   onClose,
   onGrant,
   onBlockedChange,
+  onMessage,
 }: {
   t: RoomCopy;
   locale: string;
@@ -141,6 +142,8 @@ export function ProfileSheet({
   onClose: () => void;
   onGrant: (role: "speaker" | "listener" | "out") => void;
   onBlockedChange: () => void;
+  /** 있으면 "메시지" 버튼(1:1 대화 열기). */
+  onMessage?: (accountId: string) => void;
 }) {
   const profile = useProfile(accountId);
   const [busy, setBusy] = useState(false);
@@ -274,6 +277,16 @@ export function ProfileSheet({
             </div>
           ) : null}
 
+          {profile && !profile.isMe && !profile.blockedByMe && onMessage && accountId ? (
+            <button
+              type="button"
+              onClick={() => onMessage(accountId)}
+              className="mt-2 w-full rounded-xl border border-violet-400/50 px-3 py-2 text-sm font-medium text-violet-100"
+            >
+              💬 {t.message}
+            </button>
+          ) : null}
+
           {reporting ? (
             <div className="mt-2 space-y-1.5 rounded-xl border border-rose-400/30 p-2">
               <p className="text-xs text-rose-200">{t.reportTitle}</p>
@@ -325,8 +338,10 @@ export function Composer({
   targetLanguage,
   recent,
   onSend,
+  placeholder,
 }: {
   t: RoomCopy;
+  placeholder?: string;
   disabled: boolean;
   locale: string;
   targetLanguage: string;
@@ -347,6 +362,8 @@ export function Composer({
       await onSend(line);
       setText("");
       setSuggestion(null);
+    } catch {
+      // 못 보냈으면 글을 그대로 둔다(알림은 부르는 쪽).
     } finally {
       setBusy(false);
     }
@@ -411,7 +428,7 @@ export function Composer({
           disabled={disabled}
           onChange={(event) => setText(event.target.value)}
           onKeyDown={(event) => event.key === "Enter" && !event.nativeEvent.isComposing && void send(text)}
-          placeholder={t.commentPlaceholder}
+          placeholder={placeholder ?? t.commentPlaceholder}
           dir="auto"
           className="min-w-0 flex-1 rounded-xl border border-white/15 bg-white/5 px-3 py-2 text-sm text-white outline-none focus:border-white/40"
         />

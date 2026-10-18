@@ -9,7 +9,9 @@ import { roomCopy, type RoomCopy } from "@/lib/rooms/copy";
 import {
   RoomApiError,
   createRoom,
+  dmEndCall,
   listRooms,
+  peekRoom,
   newPeerId,
   readInviteCode,
   unlock,
@@ -19,6 +21,7 @@ import { MAX_ROOM_NAME_CHARS, MAX_SPEAKERS, type RoomMeta, type RoomRole, type R
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
 import { Face, languagePair } from "./RoomParts";
 import { RoomView } from "./RoomView";
+import { DmList, DmThreadView, useInbox } from "./RoomDm";
 
 /**
  * 사용자끼리 말하는 방 (시험 기능, 숨은 입구).
@@ -41,9 +44,19 @@ export function RoomsScreen({
   const t = roomCopy(locale);
   const [code, setCode] = useState(() => readInviteCode());
   const [peerId] = useState(() => newPeerId());
-  const [inRoom, setInRoom] = useState<{ room: RoomSummary | RoomMeta; role: RoomRole } | null>(null);
+  const [inRoom, setInRoom] = useState<{ room: RoomSummary | RoomMeta; role: RoomRole; title?: string; back?: string } | null>(null);
+  /** 열려 있는 1:1 대화의 상대 계정. 방 위에도 뜬다. */
+  const [dmWith, setDmWith] = useState<string | null>(null);
   const account = useSyncExternalStore(subscribeSession, readCachedAccount, () => null);
   const nickname = account?.profile.nickname || account?.username || "";
+
+  // 대화의 📞·받기 → 둘만의 방. 끝나면 그 대화로 돌아간다.
+  const joinCall = async (room: RoomMeta | string, title: string) => {
+    const meta = typeof room === "string" ? await peekRoom(room, peerId) : room;
+    if (!meta) return;
+    setInRoom({ room: meta, role: "speaker", title: `📞 ${title}`, back: dmWith ?? undefined });
+    setDmWith(null);
+  };
 
   return (
     // 다른 전체 화면(새로워진 점 등, z-70)보다 위: 방은 사용자가 직접 연 화면이다.
@@ -64,7 +77,14 @@ export function RoomsScreen({
               nickname={nickname}
               locale={locale}
               targetLanguage={targetLanguage}
-              onLeave={() => setInRoom(null)}
+              title={inRoom.title}
+              onLeave={() => {
+                const back = inRoom.back;
+                setInRoom(null);
+                if (back) setDmWith(back);
+              }}
+              onLeft={inRoom.room.private ? () => void dmEndCall(inRoom.room.id).catch(() => {}) : undefined}
+              onMessage={setDmWith}
             />
           ) : (
             <Shell title={t.title} onClose={onClose} t={t}>
@@ -76,6 +96,7 @@ export function RoomsScreen({
                   targetLanguage={targetLanguage}
                   locale={locale}
                   onJoin={(room, role) => setInRoom({ room, role })}
+                  onMessage={setDmWith}
                   onBadCode={() => {
                     writeInviteCode("");
                     setCode("");
@@ -92,6 +113,19 @@ export function RoomsScreen({
           )}
         </div>
       </div>
+      {dmWith && account ? (
+        <DmThreadView
+          key={dmWith}
+          t={t}
+          me={account.id}
+          other={dmWith}
+          peerId={peerId}
+          locale={locale}
+          targetLanguage={targetLanguage}
+          onClose={() => setDmWith(null)}
+          onJoinCall={(room, title) => void joinCall(room, title)}
+        />
+      ) : null}
     </BodyLayer>
   );
 }
@@ -164,6 +198,7 @@ function Lobby({
   locale,
   onJoin,
   onBadCode,
+  onMessage,
 }: {
   t: RoomCopy;
   peerId: string;
@@ -172,7 +207,10 @@ function Lobby({
   locale: string;
   onJoin: (room: RoomSummary | RoomMeta, role: RoomRole) => void;
   onBadCode: () => void;
+  onMessage: (accountId: string) => void;
 }) {
+  const [tab, setTab] = useState<"rooms" | "messages">("rooms");
+  const inbox = useInbox(true);
   const [rooms, setRooms] = useState<RoomSummary[] | null>(null);
   const [name, setName] = useState("");
   const [creating, setCreating] = useState(false);
@@ -229,7 +267,28 @@ function Lobby({
         </button>
       </div>
 
-      {creating ? (
+      <div className="flex gap-1 rounded-xl bg-white/5 p-1 text-sm">
+        {(["rooms", "messages"] as const).map((option) => (
+          <button
+            key={option}
+            type="button"
+            onClick={() => {
+              setTab(option);
+              if (option === "messages") inbox.refresh();
+            }}
+            className={`flex flex-1 items-center justify-center gap-1.5 rounded-lg px-2 py-1.5 ${tab === option ? "bg-white/15 font-medium text-white" : "text-slate-400"}`}
+          >
+            {option === "rooms" ? `🎙 ${t.tabRooms}` : `💬 ${t.tabMessages}`}
+            {option === "messages" && inbox.unread > 0 ? (
+              <span className="rounded-full bg-violet-500 px-1.5 text-[11px] font-semibold text-white">{inbox.unread}</span>
+            ) : null}
+          </button>
+        ))}
+      </div>
+
+      {tab === "messages" ? <DmList t={t} threads={inbox.threads} onOpen={onMessage} /> : null}
+
+      {tab === "rooms" && creating ? (
         <section className="space-y-2 rounded-2xl border border-violet-400/30 p-3">
           <input
             value={name}
@@ -250,6 +309,7 @@ function Lobby({
         </section>
       ) : null}
 
+      {tab === "rooms" ? (
       <section className="space-y-2">
         <div className="flex items-center justify-between">
           <h2 className="text-sm font-semibold text-slate-300">{t.rooms}</h2>
@@ -307,6 +367,7 @@ function Lobby({
           ))}
         </ul>
       </section>
+      ) : null}
     </div>
   );
 }
