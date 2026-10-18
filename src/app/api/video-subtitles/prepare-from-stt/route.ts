@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { meterRequest } from "@/lib/server/meterRequest";
 import {
   assertVideoPrepAllowed,
   recordVideoPrepForRequest,
@@ -25,6 +26,8 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 export async function POST(request: NextRequest) {
+  // prepare와 같은 준비 과정(pipeline.ts)이라 같은 이름으로 센다.
+  void meterRequest(request, "videoPrepare");
   let body: {
     videoUrl?: unknown;
     locale?: unknown;

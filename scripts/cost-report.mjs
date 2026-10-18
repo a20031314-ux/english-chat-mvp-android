@@ -24,20 +24,13 @@
  *   node --experimental-strip-types scripts/cost-report.mjs --selftest
  */
 import { readFileSync } from "node:fs";
-import { MODEL_CALLS_PER_REQUEST } from "../src/lib/server/modelCalls.ts";
 import {
-  CALL_TRANSCRIBE_USD_PER_MINUTE,
   KRW_PER_USD,
-  MINI_USD_PER_MTOK,
   ROLEPLAY_TURN,
   STORE_FEE_SHARE,
-  TTS_USD_PER_MINUTE,
-  SUBTITLE_PASS_TOKENS,
-  TUTOR_USD_PER_MTOK,
 } from "../src/lib/billing/cost.ts";
-
-const subtitlePassUsd = () =>
-  (SUBTITLE_PASS_TOKENS.input * MINI_USD_PER_MTOK.input + SUBTITLE_PASS_TOKENS.output * MINI_USD_PER_MTOK.output) / 1_000_000;
+// 기능별 단가는 한 곳(opCost.ts)에서 — 요금별 비용 표(plan-cost.mjs)와 같은 값.
+import { DEFAULT_CALL_TOKENS, OP_COST, assumedOps, opUsd } from "../src/lib/billing/opCost.ts";
 
 const args = process.argv.slice(2);
 const flag = (name, fallback) => {
@@ -45,62 +38,7 @@ const flag = (name, fallback) => {
   return at >= 0 && args[at + 1] !== undefined ? Number(args[at + 1]) : fallback;
 };
 
-/** Assumptions for ops cost.ts does not price, printed with the report. */
-export const ASSUMED = {
-  miniCallTokens: { input: 2000, output: 300 },
-  ttsSeconds: 6,
-  listenSeconds: ROLEPLAY_TURN.learnerSpeakingSeconds,
-  reviewUsd: 0.002,
-};
-
-/** USD per 1M tokens of the models features call by default (openai.com pricing, as cost.ts cites). */
-const MODEL_USD_PER_MTOK = {
-  mini: MINI_USD_PER_MTOK, // gpt-4o-mini, chatModel()
-  "4.1-mini": TUTOR_USD_PER_MTOK,
-  "4.1": { input: 2, output: 8 },
-};
-
-/** Features that call something other than the app's default model, and which. */
-export const OP_MODEL = {
-  roleplayTurn: "4.1-mini",
-  roleplayPractice: "4.1-mini",
-  expressionAsk: "4.1-mini",
-  expressionAskQuick: "4.1-mini",
-  expressionAskRetry: "4.1-mini",
-  missionCheck: "4.1-mini",
-  learnerPick: "4.1",
-};
-
-/** Tokens per call when the server has not measured an op yet. */
-function defaultTokens(op) {
-  return op === "roleplayTurn" ? { input: ROLEPLAY_TURN.input, output: ROLEPLAY_TURN.output } : ASSUMED.miniCallTokens;
-}
-
-function callUsd(op, measured) {
-  const price = MODEL_USD_PER_MTOK[OP_MODEL[op] ?? "mini"];
-  const tokens = measured?.[op] ?? defaultTokens(op);
-  return (tokens.input * price.input + tokens.output * price.output) / 1_000_000;
-}
-
-/** USD for one metered request of an op; `measured` is average tokens per call by op, where recorded. */
-export function opUsd(op, measured) {
-  switch (op) {
-    case "roleplayListen":
-    case "roomListen":
-      return (ASSUMED.listenSeconds / 60) * CALL_TRANSCRIBE_USD_PER_MINUTE;
-    case "tts":
-      // Counted inside the function, so a line served from the edge cache is
-      // not here: each one is a synthesis.
-      return (ASSUMED.ttsSeconds / 60) * TTS_USD_PER_MINUTE;
-    case "roleplayReview":
-      return ASSUMED.reviewUsd;
-    case "videoPrepare":
-    case "videoWindow":
-      return (MODEL_CALLS_PER_REQUEST[op] ?? 1) * subtitlePassUsd();
-    default:
-      return (MODEL_CALLS_PER_REQUEST[op] ?? 1) * callUsd(op, measured);
-  }
-}
+export { opUsd };
 
 const AREA = (op) =>
   op.startsWith("roleplay") || op === "tts" ? "call" : op.startsWith("video") ? "video" : op.startsWith("chat") || op === "howToSay" || op === "howToSayCard" ? "chat" : "other";
@@ -181,8 +119,10 @@ function print(report, days, scale, tokens = {}) {
   console.log(`채팅한 날 ${h.days}개: 하루 채팅 보통 ${h.median}번 · 상위 10% ${h.p90}번 · 최대 ${h.max}번`);
   const measured = Object.entries(tokens).map(([op, t]) => `${op} ${t.input}/${t.output} (${t.n}번)`);
   if (measured.length) console.log(`\n실제 잰 토큰(호출당 입력/출력): ${measured.join(", ")}`);
-  console.log(`\n가정: 기능별 모델 = 기본 gpt-4o-mini, ${Object.entries(OP_MODEL).map(([op, m]) => `${op} ${m}`).join(", ")}`);
-  console.log(`가정: 모델 호출 1번 = gpt-4o-mini ${ASSUMED.miniCallTokens.input}/${ASSUMED.miniCallTokens.output} 토큰, TTS 1번 = ${ASSUMED.ttsSeconds}초, 통화 턴 = ${ROLEPLAY_TURN.turnSeconds}초, 1달러 ${KRW_PER_USD.rate}원, 수수료 ${STORE_FEE_SHARE * 100}%`);
+  const models = Object.entries(OP_COST).filter(([, c]) => c.kind === "model" && c.model !== "mini").map(([op, c]) => `${op} ${c.model}`);
+  console.log(`\n단가표: src/lib/billing/opCost.ts. 기능별 모델 = 기본 gpt-4o-mini, ${models.join(", ")}`);
+  console.log(`가정: 모델 호출 1번 = ${DEFAULT_CALL_TOKENS.input}/${DEFAULT_CALL_TOKENS.output} 토큰(잰 값이 없을 때), 통화 턴 = ${ROLEPLAY_TURN.turnSeconds}초, 1달러 ${KRW_PER_USD.rate}원, 수수료 ${STORE_FEE_SHARE * 100}%`);
+  console.log(`가정으로 값을 매기는 기능: ${assumedOps().filter((op) => !tokens[op]).join(", ")}`);
 }
 
 async function main() {

@@ -139,6 +139,10 @@ export const MODEL_CALLS_PER_REQUEST = {
   // cost report could not see them.
   expressionUnits: 1,
   vocabSearch: 1,
+  // Finding a video or reading by topic: the search intent, the query in the
+  // learning language, and the ranking of candidates — up to three calls.
+  // Uncounted until 2026-10-18 (scripts/cost-coverage.mjs found it).
+  contentDiscovery: 3,
 } as const;
 
 export type MeteredOp = keyof typeof MODEL_CALLS_PER_REQUEST;

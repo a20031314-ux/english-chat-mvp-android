@@ -21,6 +21,10 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **비용 구조 자동 계산 (2026-10-18):** `hub/costs.md`를 push마다 다시 계산(`.github/workflows/cost.yml` → `scripts/plan-cost.mjs`). 기능별 단가는 `src/lib/billing/opCost.ts` 한 곳(실측 보고서 `cost-report.mjs`도 같은 표),
+  op에 단가가 없으면 `opCost.test.ts`, 모델 쓰는 경로가 `meterRequest`를 안 부르면 `scripts/cost-coverage.mjs`가 CI에서 실패. 처음 돌려 보니 영상 찾기(`contentDiscovery`)·자막 준비(prepare-from-stt)가 기록 안 되던 것 → 고침(서버 바로 반영).
+  남은 것: 채팅 한도까지 넣은 최악 비용이 모든 유료 요금에서 손해로 나옴(채팅 한 통 2원은 가정) — 2.67 출시 1주 뒤 `cost-report.mjs`로 채팅 실측 토큰 확인 → 사용자와 한도 재검토.
+  `plan-cost.mjs` `HEAVY_DAY`(상위 10% 사용량)는 실측을 다시 돌리면 같이 고친다. 사용자 선택 3번(주 1회 실측 리포트 예약 작업, KV 키를 GitHub 비밀값으로)은 보류.
 - **로그인·프로필 (2026-10-18):** 사용자 결정 = **아이디·비밀번호가 기본(설정 없이 바로 켜짐, 2차 결정)** + Google + 이메일 코드, **선택 로그인**, 프로필은 닉네임·사진·자기소개. 서버(바로 반영, 설정 전엔 꺼져 있음): `/api/account/*`
   (config·email/start·email/verify·google·me·profile·delete·purge), `server/accountStore.ts`(KV `account:v1:*`), `authToken.ts`(HMAC 토큰, `x-auth-token`), `requestUserId`가 토큰의 `dataUserId`를 우선
   (처음 로그인한 기기의 `rc:…` — 기록 이전 없음), 계정 삭제 → 매주 크론이 기록 지움(`accountPurge.ts`, `vercel.json`), 처리방침(en/ko) 갱신. 앱(다음 빌드): My 맨 위 계정 카드·로그인/편집 시트(`components/account/`),

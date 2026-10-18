@@ -8,6 +8,7 @@ import type {
 import { asLearnerLevel } from "@/lib/languageAnalysisPrompt";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { meterRequest } from "@/lib/server/meterRequest";
 
 function asContentType(value: unknown): ContentDiscoveryType | null {
   return value === "video" || value === "reading" ? value : null;
@@ -86,6 +87,8 @@ export async function POST(request: NextRequest) {
     );
   }
 
+  // 검색 의도 읽기·검색어 번역·후보 순위, 모델 호출 최대 세 번 (opCost.ts contentDiscovery).
+  void meterRequest(request, "contentDiscovery");
   try {
     const result = await discoverContent({
       targetLanguage: coerceLanguageCode(body.targetLanguage),
