@@ -514,9 +514,15 @@ export function Lines({
   onQuote,
   onNote,
   big,
+  allLines,
+  emptyText,
 }: {
   t: RoomCopy;
   lines: RoomLine[];
+  /** 자막·채팅을 나눠 그릴 때 방의 모든 줄(질문 수·번역 맥락은 둘을 합쳐서 본다). */
+  allLines?: RoomLine[];
+  /** 줄이 없을 때 문구(채팅 칸은 "아직 댓글이 없어요"). */
+  emptyText?: string;
   view: "timeline" | "people";
   selfId: string;
   locale: string;
@@ -556,7 +562,7 @@ export function Lines({
     try {
       const translated = await translateLine({
         text: line.text,
-        context: contextBefore(lines, line.seq),
+        context: contextBefore(allLines ?? lines, line.seq),
         locale,
         targetLanguage,
       });
@@ -580,7 +586,7 @@ export function Lines({
     const others = line.peerId !== selfId;
     // 누가 내 말을 물었으면 그 질문 줄을 눈에 띄게.
     const askedMe = Boolean(line.ask && line.quote?.peerId === selfId && others);
-    const asked = questionCount(lines, line.seq);
+    const asked = questionCount(allLines ?? lines, line.seq);
     return (
       <li key={line.seq} className="flex items-start gap-2">
         {showName ? (
@@ -661,7 +667,7 @@ export function Lines({
   };
 
   if (lines.length === 0) {
-    return <p className="min-h-0 flex-1 px-4 py-6 text-sm text-slate-500">{t.noLines}</p>;
+    return <p className="min-h-0 flex-1 px-4 py-4 text-sm text-slate-500">{emptyText ?? t.noLines}</p>;
   }
 
   return (

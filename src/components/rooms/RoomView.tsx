@@ -413,6 +413,14 @@ export function RoomView({
     }
   };
   const nextHosts = members.filter((member) => member.peerId !== peerId && member.role === "speaker" && member.accountId);
+  // 자막(받아쓴 말)과 채팅(쓴 댓글)을 나눈다 — 예전 앱의 줄에는 kind가 없을 수 있다(그러면 말).
+  const spoken = timeline(lines).filter((line) => line.kind !== "text");
+  const typed = timeline(lines).filter((line) => line.kind === "text");
+  const noteFor = onMessage
+    ? (line: RoomLine) => {
+        if (line.accountId) onMessage(line.accountId, { roomId: room.id, seq: line.seq, nickname: line.nickname, text: line.text });
+      }
+    : undefined;
   const memberAccounts = members.map((member) => member.accountId).filter((id): id is string => Boolean(id));
   const notes = pendingNotes(inbox.threads, memberAccounts, seenNotes);
   const isSpeaking = (member: RoomMember) =>
@@ -598,25 +606,48 @@ export function RoomView({
         </button>
       ) : null}
 
-      <Lines
-        big={layout === "chat"}
-        onNote={
-          onMessage
-            ? (line) => {
-                if (line.accountId) onMessage(line.accountId, { roomId: room.id, seq: line.seq, nickname: line.nickname, text: line.text });
-              }
-            : undefined
-        }
-        t={t}
-        lines={layout === "call" ? timeline(lines).slice(-CALL_LAYOUT_LINES) : lines}
-        view={view}
-        selfId={peerId}
-        locale={locale}
-        targetLanguage={targetLanguage}
-        blocked={blocked}
-        onPerson={openPerson}
-        onQuote={(line, ask) => setQuoting({ line, ask })}
-      />
+      {/* 자막(말한 것)과 채팅(쓴 것)을 나눠 그린다. 질문 수·번역 맥락은 둘을 합쳐서. */}
+      <div className="flex min-h-0 flex-1 flex-col">
+        <section className={`flex min-h-0 flex-col ${layout === "chat" ? "flex-[1]" : layout === "call" ? "shrink-0" : "flex-[3]"}`}>
+          <p className="shrink-0 px-4 pt-2 text-meta font-medium text-slate-400">🎙 {t.captionsTitle}</p>
+          <Lines
+            onNote={noteFor}
+            t={t}
+            allLines={lines}
+            lines={layout === "call" ? spoken.slice(-CALL_LAYOUT_LINES) : spoken}
+            view={view}
+            selfId={peerId}
+            locale={locale}
+            targetLanguage={targetLanguage}
+            blocked={blocked}
+            onPerson={openPerson}
+            onQuote={(line, ask) => setQuoting({ line, ask })}
+          />
+        </section>
+        {layout !== "call" || composerOpen || quoting ? (
+          <section className={`flex min-h-0 flex-col border-t border-white/10 ${layout === "chat" ? "flex-[2]" : "flex-[2]"}`}>
+            <p className="shrink-0 px-4 pt-2 text-meta font-medium text-slate-400">
+              💬 {t.chatTitle}
+              {typed.length ? ` ${typed.length}` : ""}
+            </p>
+            <Lines
+              big={layout === "chat"}
+              onNote={noteFor}
+              t={t}
+              allLines={lines}
+              lines={typed}
+              emptyText={t.noComments}
+              view="timeline"
+              selfId={peerId}
+              locale={locale}
+              targetLanguage={targetLanguage}
+              blocked={blocked}
+              onPerson={openPerson}
+              onQuote={(line, ask) => setQuoting({ line, ask })}
+            />
+          </section>
+        ) : null}
+      </div>
 
       <footer className="shrink-0 space-y-2 border-t border-white/10 px-4 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] pt-2">
         {layout === "call" && !composerOpen && !quoting ? (
