@@ -20,7 +20,7 @@ import { ROOM_FILTER_STORAGE_KEY, filterLanguages, parseRoomFilter, type RoomFil
 import { setMiniRoom } from "@/lib/rooms/miniRoom";
 import { Face, languagePair } from "./RoomParts";
 import { RoomView } from "./RoomView";
-import { DmList, DmThreadView, useInbox } from "./RoomDm";
+import { DmThreadView } from "./RoomDm";
 import { onDmRequest } from "@/lib/rooms/openDm";
 
 /**
@@ -93,7 +93,6 @@ export function RoomsScreen({
               setMinimized(false);
               setInRoom({ room, role });
             }}
-            onMessage={setDmWith}
           />
         ) : (
           <div className="space-y-3">
@@ -160,7 +159,6 @@ function Lobby({
   targetLanguage,
   locale,
   onJoin,
-  onMessage,
 }: {
   t: RoomCopy;
   peerId: string;
@@ -168,10 +166,9 @@ function Lobby({
   targetLanguage: string;
   locale: string;
   onJoin: (room: RoomSummary | RoomMeta, role: RoomRole) => void;
-  onMessage: (accountId: string) => void;
 }) {
-  const [tab, setTab] = useState<"rooms" | "messages">("rooms");
-  const inbox = useInbox(true);
+  // 메시지는 하단 탭 "메시지"로 따로(사람과 학습, MessagesTab.tsx). 로비는 방만.
+  const tab = "rooms" as const;
   const [rooms, setRooms] = useState<RoomSummary[] | null>(null);
   const [name, setName] = useState("");
   const [creating, setCreating] = useState(false);
@@ -246,26 +243,6 @@ function Lobby({
         </button>
       </div>
 
-      <div className="flex gap-1 rounded-xl bg-white/5 p-1 text-sm">
-        {(["rooms", "messages"] as const).map((option) => (
-          <button
-            key={option}
-            type="button"
-            onClick={() => {
-              setTab(option);
-              if (option === "messages") inbox.refresh();
-            }}
-            className={`flex flex-1 items-center justify-center gap-1.5 rounded-lg px-2 py-1.5 ${tab === option ? "bg-white/15 font-medium text-white" : "text-slate-400"}`}
-          >
-            {option === "rooms" ? `🎙 ${t.tabRooms}` : `💬 ${t.tabMessages}`}
-            {option === "messages" && inbox.unread > 0 ? (
-              <span className="rounded-full bg-violet-500 px-1.5 text-[11px] font-semibold text-white">{inbox.unread}</span>
-            ) : null}
-          </button>
-        ))}
-      </div>
-
-      {tab === "messages" ? <DmList t={t} threads={inbox.threads} onOpen={onMessage} /> : null}
 
       {tab === "rooms" && creating ? (
         <section className="space-y-2 rounded-2xl border border-violet-400/30 p-3">

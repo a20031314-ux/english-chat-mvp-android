@@ -27,7 +27,7 @@ import { Composer, Face, useProfile } from "./RoomParts";
  * 📞은 둘만의 통화 방을 열고, 끝나면 그 통화의 자막이 대화에 "통화 기록"으로 남는다.
  */
 
-export function useInbox(enabled: boolean): { threads: DmSummary[]; unread: number; refresh: () => void } {
+export function useInbox(enabled: boolean, everyMs = 8_000): { threads: DmSummary[]; unread: number; refresh: () => void } {
   const [threads, setThreads] = useState<DmSummary[]>([]);
   const refresh = useCallback(() => {
     void dmInbox()
@@ -37,9 +37,9 @@ export function useInbox(enabled: boolean): { threads: DmSummary[]; unread: numb
   useEffect(() => {
     if (!enabled) return;
     refresh();
-    const timer = window.setInterval(refresh, 8_000);
+    const timer = window.setInterval(refresh, everyMs);
     return () => window.clearInterval(timer);
-  }, [enabled, refresh]);
+  }, [enabled, refresh, everyMs]);
   const unread = threads.reduce((sum, row) => sum + (row.unread > 0 ? 1 : 0), 0);
   return { threads, unread, refresh };
 }

@@ -5,7 +5,7 @@ type TabIconProps = {
   className?: string;
 };
 
-type TabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people";
+type TabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people" | "messages";
 
 const iconBox = "h-6 w-6";
 
@@ -141,6 +141,16 @@ export function PeopleTabIcon({ active, className = "" }: TabIconProps) {
   );
 }
 
+export function MessagesTabIcon({ active, className = "" }: TabIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={`${iconBox} ${className}`} aria-hidden>
+      {/* Two speech bubbles: a conversation between two people. */}
+      <path d="M3.5 5.5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H9l-3 2.5v-2.5h-.5a2 2 0 0 1-2-2z" className={active ? "fill-white/25" : "fill-white/10"} stroke="white" strokeOpacity={active ? 0.9 : 0.5} strokeWidth="1.3" strokeLinejoin="round" />
+      <path d="M18 9h.5a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2H18v2.5L15 18h-4a2 2 0 0 1-2-2v-1" className={active ? "fill-[#e8e8e4]/30" : "fill-white/5"} stroke="white" strokeOpacity={active ? 0.9 : 0.5} strokeWidth="1.3" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export const TAB_ICON_META: Record<
   TabId,
   {
@@ -176,6 +186,11 @@ export const TAB_ICON_META: Record<
   },
   rooms: {
     Icon: RoomsTabIcon,
+    activeBg: "bg-white/10 tb-glow-platinum",
+    idleBg: "hover:bg-white/5",
+  },
+  messages: {
+    Icon: MessagesTabIcon,
     activeBg: "bg-white/10 tb-glow-platinum",
     idleBg: "hover:bg-white/5",
   },
