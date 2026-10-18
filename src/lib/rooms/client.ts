@@ -164,7 +164,7 @@ async function toBase64(blob: Blob): Promise<string> {
 }
 
 /** 내 마이크 한 덩어리를 받아쓴다. 통화 학습과 같은 빠른 길(room 표시). */
-export async function transcribeUtterance(blob: Blob, mimeType: string): Promise<string> {
+export async function transcribeUtterance(blob: Blob, mimeType: string, languages: string[] = []): Promise<string> {
   const response = await fetch(apiUrl("/api/roleplay/listen"), {
     method: "POST",
     headers: { "Content-Type": "application/json", ...entitlementHeaders() },
@@ -173,6 +173,8 @@ export async function transcribeUtterance(blob: Blob, mimeType: string): Promise
       filename: mimeType.includes("mp4") ? "line.mp4" : "line.webm",
       mimeType: mimeType || "audio/webm",
       room: true,
+      // 방의 언어(보통 둘) — 이 밖의 글자로 나온 자막은 지어낸 것으로 본다(서버).
+      languages,
     }),
   });
   if (!response.ok) return "";

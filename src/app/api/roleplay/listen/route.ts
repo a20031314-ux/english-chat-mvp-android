@@ -2,7 +2,9 @@ import { NextRequest, after } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
-import { heardOrNothing } from "@/lib/roleplay/transcript";
+import { heardInAny, heardOrNothing } from "@/lib/roleplay/transcript";
+import { cleanLanguages } from "@/lib/rooms/roomFilter";
+import { learningLanguageName } from "@/lib/learningLanguages";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { confidenceFromLogprobs, noteRecognition } from "@/lib/server/learnerMetrics";
 import { toFile } from "openai";
@@ -71,10 +73,17 @@ export async function POST(request: NextRequest) {
       ? body.language.trim().toLowerCase().split(/[-_]/)[0]
       : "";
 
+  // A room says which languages are spoken in it (two, usually). One is a hint;
+  // two are named in the prompt instead, and the answer must be in one of them.
+  const roomLanguages = forRoom ? cleanLanguages(body.languages) : [];
+  const hint = roomLanguages.length === 1 ? roomLanguages[0] : language;
+  const spoken =
+    roomLanguages.length > 1 ? ` They speak ${roomLanguages.map((code) => learningLanguageName(code)).join(" or ")}.` : "";
+
   const asked = {
     model: turnTranscribeModel(),
     temperature: 0,
-    ...(language.length === 2 ? { language } : {}),
+    ...(hint.length === 2 ? { language: hint } : {}),
     // Says what kind of audio this is, which is most of what stops a model
     // handed half a second of sound from filling the gap with something it
     // has heard often. The language hint alone did not.
@@ -84,7 +93,8 @@ export async function POST(request: NextRequest) {
     // there yesterday" — and a mistake it fixes is one the tutor never sees,
     // so it can neither correct it nor work out what was meant (director.ts).
     prompt:
-      "A language learner speaking one short turn in a casual conversation. Write exactly what they say, mistakes included: wrong verb forms, missing words, words from another language. Do not correct it. If nobody speaks, or there is only noise, write nothing.",
+      "A language learner speaking one short turn in a casual conversation. Write exactly what they say, mistakes included: wrong verb forms, missing words, words from another language. Do not correct it. If nobody speaks, or there is only noise, write nothing." +
+      spoken,
   };
 
   try {
@@ -118,7 +128,20 @@ export async function POST(request: NextRequest) {
     // Checked on the way back as well, because neither the hint nor the prompt
     // is a guarantee: a reply in a script this language does not use was not a
     // transcription of it (roleplay/transcript.ts).
-    const text = heardOrNothing(raw, language);
+    let text = roomLanguages.length > 1 ? heardInAny(raw, roomLanguages) : heardOrNothing(raw, hint);
+    if (!text && raw.trim() && roomLanguages.length > 1) {
+      // Written in neither of the room's scripts: invented. Asked once more with
+      // the room's first language (the one it is about) as the hint.
+      const again = String(
+        await client.audio.transcriptions.create({
+          ...asked,
+          language: roomLanguages[0],
+          file: await toFile(bytes, filename, { type: mimeType }),
+          response_format: "text",
+        }),
+      );
+      text = heardOrNothing(again, roomLanguages[0]);
+    }
     const userId = requestUserId(request);
     if (!forRoom) after(() => noteRecognition(userId, text, confidence));
     return jsonWithCors(request, { text });

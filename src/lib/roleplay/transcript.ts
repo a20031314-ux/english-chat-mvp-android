@@ -100,3 +100,20 @@ export function heardOrNothing(text: string, language: string): string {
   const said = text.trim();
   return said && looksLikeLanguage(said, language) ? said : "";
 }
+
+/**
+ * A person-to-person room speaks two languages, either of which is what a
+ * speaker may be saying, so it cannot be given one language hint — a hint of
+ * English on a Korean sentence comes back translated, not transcribed. Without
+ * one, a short "hi, hi" came back as Japanese in an English and Korean room.
+ *
+ * What came back is believed when it is written in a script one of the room's
+ * languages uses; otherwise it was invented, and the caller asks again with the
+ * room's first language as the hint. With no languages, anything goes.
+ */
+export function heardInAny(text: string, languages: readonly string[]): string {
+  const said = text.trim();
+  if (!said) return "";
+  if (languages.length === 0) return said;
+  return languages.some((language) => looksLikeLanguage(said, language)) ? said : "";
+}

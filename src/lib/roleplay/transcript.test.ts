@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { heardOrNothing, looksLikeLanguage } from "./transcript.ts";
+import { heardInAny, heardOrNothing, looksLikeLanguage } from "./transcript.ts";
 
 test("the invented Japanese over an English turn is thrown away", () => {
   // Reported from a real turn: the learner said "hi" to an English scene and
@@ -71,4 +71,16 @@ test("an answer with none of the language in it is still refused", () => {
 test("punctuation and numbers decide nothing", () => {
   assert.ok(looksLikeLanguage("2026!", "en"));
   assert.ok(looksLikeLanguage("…", "ko"));
+});
+
+test("방(언어 둘): 둘 중 하나의 글자면 믿고, 아니면 버린다", () => {
+  assert.equal(heardInAny("ハイハイ", ["en", "ko"]), "");
+  assert.equal(heardInAny("Hi hi!", ["en", "ko"]), "Hi hi!");
+  assert.equal(heardInAny("안녕하세요", ["en", "ko"]), "안녕하세요");
+  assert.equal(heardInAny("はい、そうです", ["ja", "es"]), "はい、そうです");
+  assert.equal(heardInAny("Sí, claro", ["ja", "es"]), "Sí, claro");
+  assert.equal(heardInAny("สวัสดีครับ", ["th", "ko"]), "สวัสดีครับ");
+  assert.equal(heardInAny("Привет", ["th", "ko"]), "");
+  assert.equal(heardInAny("anything", []), "anything");
+  assert.equal(heardInAny("  ", ["en"]), "");
 });

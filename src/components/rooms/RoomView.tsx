@@ -145,7 +145,7 @@ export function RoomView({
     async (blob: Blob, mimeType: string, startedAt: number, endedAt: number) => {
       setPending((count) => count + 1);
       try {
-        const text = await transcribeUtterance(blob, mimeType);
+        const text = await transcribeUtterance(blob, mimeType, room.languages);
         if (!text || !aliveRef.current) return;
         addMine(
           await postLine({
@@ -163,7 +163,7 @@ export function RoomView({
         setPending((count) => Math.max(0, count - 1));
       }
     },
-    [addMine, peerId, room.id],
+    [addMine, peerId, room.id, room.languages],
   );
 
   const startMic = useCallback(async (): Promise<boolean> => {
