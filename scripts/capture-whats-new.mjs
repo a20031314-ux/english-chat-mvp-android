@@ -170,14 +170,26 @@ const STORE_TABS_ITEMS = [
   { shot: "pick" },
   { shot: "meant" },
   { shot: "calltools" },
+  // 오늘의 팩 통화(가짜 마이크: CAPTURE_MIC_WAV).
+  { shot: "call-ownline" },
+  // 오늘의 팩은 영어·일본어 학습만 있다(pack/questions.ts) — 영어 앱(스페인어 학습)은 팩이 없어 거기서 멈춘다.
+  { shot: "call-pack" },
+  { shot: "call-talk" },
   { shot: "video-study" },
   { shot: "video-bar", save: false },
   { shot: "video-ask" },
   { shot: "vocab-search" },
-  // 2.68 말하는 방·메시지·로그인(방·메시지는 고정 응답, 번역만 운영). 방 고정 응답이 /api를 가로채니 맨 끝에.
-  { shot: "rooms" },
+  // 사람과 학습(2.68~2.69): 사람·초대·단체방·Room(자유 대화·줄 번역·채팅 위주·작게 접기·💡 힌트·방장).
+  // 방·메시지는 고정 응답, 번역·힌트만 운영. 고정 응답이 /api를 가로채니 맨 끝에. 힌트는 CAPTURE_MIC_WAV가 필요.
+  { shot: "people" },
+  { shot: "invite" },
+  { shot: "groups" },
+  { shot: "freetalk" },
+  { shot: "quote" },
+  { shot: "layouts" },
   { shot: "rooms-mini" },
-  { shot: "dm" },
+  { shot: "hint" },
+  { shot: "host" },
   { shot: "account" },
 ];
 const note = STORE_MY
@@ -614,7 +626,11 @@ const STEPS = {
     // 방을 작게 접고 채팅 탭으로: 탭 바 위에 방 막대가 떠 있어야 한다(연결은 그대로).
     await page.locator('div[class*="z-[80]"] header').getByRole("button", { name: exactly(roomCopyFor(locale).minimize) }).click();
     await wait(800);
-    await page.getByRole("button", { name: exactly(ui.homeTabChat) }).last().click();
+    // 2.69: 하단이 "사람과 학습" 묶음이면 위 스위치로 "AI와 학습"에 가서 채팅 탭(막대가 따라온다).
+    const chatTab = page.getByRole("button", { name: exactly(ui.homeTabChat) });
+    if (!(await chatTab.count()) && ui.modeAi) await page.getByText(ui.modeAi, { exact: true }).first().click();
+    await wait(800);
+    await chatTab.last().click();
     await wait(2500);
   },
   async dm({ page, locale, wait }) {
@@ -852,10 +868,11 @@ const STEPS = {
     await wait(1500);
   },
   async "vocab-search"({ page, ui, locale, wait }) {
-    await page.goto(`${BASE}/?screen=vocab`, { waitUntil: "networkidle" });
-    await wait(1500);
-    await page.locator("input[type=search]").first().fill(VOCAB_QUERY[locale]);
-    await page.getByRole("button", { name: exactly(ui.vocabSearchCta) }).click();
+    // 2.69부터 단어장은 My 노트 안: 옛 링크(?screen=vocab)가 노트의 단어장 시트를 연다(sim-users/screens.mjs와 같게).
+    await page.goto(`${BASE}/?screen=vocab`, { waitUntil: "domcontentloaded" });
+    await wait(4000);
+    await page.locator("input:visible").last().fill(VOCAB_QUERY[locale]);
+    await page.getByRole("button", { name: exactly(ui.vocabSearchCta) }).last().click();
     for (let i = 0; i < 40 && !(await page.getByText(ui.vocabResultsTitle).count()); i++) await wait(500);
     await wait(1500);
   },

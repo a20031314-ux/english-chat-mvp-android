@@ -92,6 +92,11 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
 비용도 들지 않고 매번 같은 대화가 찍힙니다. 버튼이나 화면 구성이 바뀌면 다음
 캡처에 그대로 반영됩니다.
 
+- **스토어 8장 (지금 올리는 세트, 2.69~)**: 한 장에 탭의 핵심 기능 하나(큰 화면) + 세부 기능 둘(확대 카드) + 더 있는 기능 칩(사용자 결정 2026-10-18).
+  지도·채팅·문장분석·My 성장·통화·영상·Room·사람과 학습 8장 × 6개 등록정보. 아래 탭별 캡처(`store-my`·`store-tabs`)를 찍은 뒤
+  `node store-shots/combo/compose.mjs` → `store-shots/out/combo/<등록정보>/1~8-*.png`(폴더째 올리면 됨). 장면·자르는 위치·문구는 `store-shots/combo/strings.mjs`.
+  `store-tabs`는 가짜 마이크용 말소리 wav가 필요(`CAPTURE_MIC_WAV`, 💡 힌트·팩 통화) — `/api/tts`가 주는 원시 PCM(24kHz s16le)을 ffmpeg로 wav로.
+  오늘의 팩은 영어·일본어 학습만 있어 영어 앱(스페인어 학습) 통화 장은 내 문장 말해보기로(`OVERRIDES`).
 - **탭별 세부 기능 세트 (실제 운영 서버로)**: My(자라는 중·요소·직접 묻기·지도)·지도(할 일·세 상태·자주 틀림)·내 표현·채팅(교정·표현 카드·빠른 질문·단어·탭 연결·지도에 넣기)·
   통화(되살리기·다시 말해보기)·영상(구간·질문)·단어장·말하는 방·1:1 메시지·내 계정 22장면 × 6개 등록정보. 고정 응답이 아니라 운영 API로 실제 입력을 돌린다(언어당 채팅 11번·지도 2장 정도 비용).
   `npm run build:capacitor` 뒤 `CAPTURE_RUN=<새 이름> node --experimental-strip-types scripts/capture-whats-new.mjs store-my --only en,ko,ja,zh,es,hi`와 같은 명령의 `store-tabs`
