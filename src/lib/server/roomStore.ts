@@ -105,6 +105,8 @@ export async function createRoom(input: {
   groupId?: string;
   /** 잠시 닫은 방을 다시 열 때: 같은 방 번호. */
   id?: string;
+  /** 🌐 자유 대화(방 언어 없음). */
+  free?: boolean;
 }): Promise<RoomMeta> {
   let id = input.id ?? newRoomId();
   // 겹칠 일은 거의 없지만, 살아 있는 방을 덮어쓰지는 않게.
@@ -112,7 +114,8 @@ export async function createRoom(input: {
   const meta: RoomMeta = {
     id,
     name: input.name,
-    languages: input.languages.slice(0, 2),
+    languages: input.free ? [] : input.languages.slice(0, 2),
+    ...(input.free ? { free: true } : {}),
     hostPeerId: input.hostPeerId,
     hostAccountId: input.hostAccountId ?? null,
     hostNickname: input.hostNickname ?? "",
@@ -141,7 +144,7 @@ export async function listRooms(viewerAccountId?: string | null, languages: stri
     ids.map(async (id) => {
       const meta = await readMeta(id);
       if (!meta) return null;
-      if (!roomMatches(meta.languages, languages)) return null;
+      if (!roomMatches(meta.languages, languages, meta.free === true)) return null;
       const members = await readMembers(id);
       const mine = Boolean(viewerAccountId && meta.hostAccountId === viewerAccountId);
       if (members.length === 0 && Date.now() - meta.createdAt > 60_000) return null;
@@ -389,7 +392,7 @@ export async function transferHost(input: {
  * 잠시 닫은 방(방장 계정마다, 30일): 다시 열 때 같은 번호·이름·언어·내보낸 사람 목록.
  * 자막 줄은 남기지 않는다 — 학습자 문장은 방이 열린 동안(최대 6시간)만.
  */
-export type ParkedRoom = { id: string; name: string; languages: string[]; banned: string[]; parkedAt: number };
+export type ParkedRoom = { id: string; name: string; languages: string[]; free?: boolean; banned: string[]; parkedAt: number };
 
 const PARKED_TTL_SECONDS = 30 * 24 * 60 * 60;
 const PARKED_KEEP = 5;
@@ -405,7 +408,7 @@ export async function pauseRoom(input: { id: string; hostPeerId: string }): Prom
   const meta = await readMeta(input.id);
   if (!meta || meta.private || meta.hostPeerId !== input.hostPeerId || !meta.hostAccountId) return "NOT_HOST";
   const banned = (await kvGetJson<string[]>(banKey(input.id))) ?? [];
-  const parked: ParkedRoom = { id: meta.id, name: meta.name, languages: meta.languages, banned, parkedAt: Date.now() };
+  const parked: ParkedRoom = { id: meta.id, name: meta.name, languages: meta.languages, ...(meta.free ? { free: true } : {}), banned, parkedAt: Date.now() };
   const rest = (await listParked(meta.hostAccountId)).filter((row) => row.id !== meta.id);
   await kvSetJson(parkedKey(meta.hostAccountId), [parked, ...rest].slice(0, PARKED_KEEP), PARKED_TTL_SECONDS);
   await closeRoom(meta.id);
@@ -428,6 +431,7 @@ export async function reopenRoom(input: {
     id: parked.id,
     name: parked.name,
     languages: parked.languages,
+    free: parked.free === true,
     hostPeerId: input.hostPeerId,
     hostAccountId: input.accountId,
     hostNickname: input.hostNickname,

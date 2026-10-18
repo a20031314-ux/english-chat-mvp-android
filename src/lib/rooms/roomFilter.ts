@@ -25,7 +25,9 @@ export function cleanLanguages(values: unknown): string[] {
   return out.slice(0, 2);
 }
 
-export function roomMatches(roomLanguages: readonly string[] | undefined, wanted: readonly string[]): boolean {
+/** 자유 대화방(`free`)은 언어를 정하지 않아 어떤 언어로 찾든 함께 나온다. */
+export function roomMatches(roomLanguages: readonly string[] | undefined, wanted: readonly string[], free = false): boolean {
+  if (free) return true;
   return wanted.every((code) => (roomLanguages ?? []).includes(code));
 }
 

@@ -210,6 +210,8 @@ function Lobby({
   const [rooms, setRooms] = useState<RoomSummary[] | null>(null);
   const [name, setName] = useState("");
   const [creating, setCreating] = useState(false);
+  // 새 방의 언어: 내 조합(보통) 또는 🌐 자유 대화(방 언어 없음).
+  const [freeTalk, setFreeTalk] = useState(false);
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
   // 언어 조합으로 거르기 — 이 기기에서 마지막에 고른 것을 기억(없거나 못 읽으면 전체).
@@ -255,7 +257,7 @@ function Lobby({
     setBusy(true);
     try {
       const languages = [targetLanguage, locale].filter((code, index, all) => isLearningLanguageCode(code) && all.indexOf(code) === index);
-      const room = await createRoom(peerId, name.trim(), languages);
+      const room = await createRoom(peerId, name.trim(), freeTalk ? [] : languages, freeTalk);
       onJoin(room, "speaker");
     } catch {
       setError(t.error);
@@ -295,6 +297,28 @@ function Lobby({
             dir="auto"
             className="w-full rounded-xl border border-white/15 bg-white/5 px-3 py-2.5 text-white outline-none focus:border-white/40"
           />
+          <div className="space-y-1.5">
+            <p className="text-meta text-slate-400">{t.roomLanguages}</p>
+            <div className="flex flex-wrap gap-1.5 text-xs">
+              {(
+                [
+                  [false, languagePair([targetLanguage, locale], locale)],
+                  [true, `🌐 ${t.freeTalk}`],
+                ] as const
+              ).map(([free, label]) => (
+                <button
+                  key={String(free)}
+                  type="button"
+                  aria-pressed={freeTalk === free}
+                  onClick={() => setFreeTalk(free)}
+                  className={`rounded-full border px-2.5 py-1 ${freeTalk === free ? "border-violet-300/60 bg-violet-500/25 text-white" : "border-white/15 text-slate-300"}`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+            {freeTalk ? <p className="text-meta text-slate-400">{t.freeTalkHint}</p> : null}
+          </div>
           <button
             type="button"
             disabled={!name.trim() || busy}
@@ -323,7 +347,7 @@ function Lobby({
                   <p className="truncate text-sm text-white" dir="auto">
                     {room.name}
                   </p>
-                  <p className="text-meta text-slate-500">{languagePair(room.languages, locale)}</p>
+                  <p className="text-meta text-slate-500">{room.free ? `🌐 ${t.freeTalk}` : languagePair(room.languages, locale)}</p>
                 </div>
                 <button
                   type="button"
@@ -391,8 +415,10 @@ function Lobby({
               <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-violet-500/[0.12] to-white/[0.02] p-3">
                 <button type="button" onClick={() => onJoin(room, "speaker")} className="block w-full text-start">
                   <div className="flex flex-wrap items-center gap-1.5">
-                    {room.languages.length ? (
-                      <span className="rounded-md bg-black/40 px-1.5 py-0.5 text-[11px] text-slate-200">{languagePair(room.languages, locale)}</span>
+                    {room.free ? (
+                      <span className="rounded-lg bg-sky-500/25 px-1.5 py-0.5 text-meta text-sky-100">🌐 {t.freeTalk}</span>
+                    ) : room.languages.length ? (
+                      <span className="rounded-lg bg-black/40 px-1.5 py-0.5 text-meta text-slate-200">{languagePair(room.languages, locale)}</span>
                     ) : null}
                     {room.followed ? (
                       <span className="rounded-md bg-violet-500/30 px-1.5 py-0.5 text-[11px] text-violet-100">✓ {t.followedRoom}</span>

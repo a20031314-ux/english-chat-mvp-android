@@ -49,8 +49,13 @@ export type RoomMember = {
 export type RoomMeta = {
   id: string;
   name: string;
-  /** 이 방에서 주로 쓰는 언어 두 개(언어 교환). 표시용. */
+  /** 이 방에서 주로 쓰는 언어 두 개(언어 교환). 표시용. 자유 대화방은 비어 있다. */
   languages: string[];
+  /**
+   * 🌐 자유 대화: 방 언어를 정하지 않는다. 자막은 말하는 사람마다 그 사람의 두 언어
+   * (배우는 언어·앱 언어)로 받아쓰고, 언어 찾기에서는 어떤 언어로 찾든 함께 나온다.
+   */
+  free?: boolean;
   hostPeerId: string;
   /** 방장 계정. 방장이 앱을 다시 열어 새 이름표로 와도 방장으로 알아본다. */
   hostAccountId?: string | null;
@@ -98,6 +103,8 @@ export type RoomLine = {
   quote?: LineQuote;
   /** "이거 무슨 뜻이에요?" 질문이면 true(인용한 줄 옆에 ❓ 수). */
   ask?: boolean;
+  /** 받아쓴 말이 어느 언어인지(글자로 가를 수 있을 때만, 자유 대화방에서 줄 옆에 표시). */
+  lang?: string;
 };
 
 export type SignalKind = "offer" | "answer" | "ice" | "bye";

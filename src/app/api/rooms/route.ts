@@ -106,6 +106,7 @@ export async function POST(request: NextRequest) {
     const meta = await createRoom({
       name,
       languages,
+      free: body.free === true,
       hostPeerId: peerId,
       hostAccountId: account?.id ?? null,
       hostNickname: profileName,
@@ -237,6 +238,8 @@ export async function POST(request: NextRequest) {
       startedAt,
       endedAt,
       ...(quote ? { quote, ask: body.ask === true } : {}),
+      // 받아쓴 말의 언어(앱이 글자로 가른 것). 모르는 코드는 버린다.
+      ...(kind === "speech" && typeof body.lang === "string" && isLearningLanguageCode(body.lang) ? { lang: body.lang } : {}),
     });
     return jsonWithCors(request, { line });
   }

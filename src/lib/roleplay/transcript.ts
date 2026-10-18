@@ -117,3 +117,21 @@ export function heardInAny(text: string, languages: readonly string[]): string {
   if (languages.length === 0) return said;
   return languages.some((language) => looksLikeLanguage(said, language)) ? said : "";
 }
+
+/**
+ * Which of a speaker's languages a line is in, when the script says so: the one
+ * language whose script it is written in. Two candidates that share a script
+ * (Spanish and English) cannot be told apart this way, so nothing is claimed.
+ * Used to label lines in a free-talk room, where nobody fixed the language.
+ */
+export function whichLanguage(text: string, languages: readonly string[]): string | null {
+  const letters = [...text].filter((character) => /\p{L}/u.test(character));
+  if (letters.length === 0) return null;
+  const scripts = [...new Set(languages.map((language) => SCRIPT_OF[language]).filter(Boolean))];
+  if (scripts.length < languages.length) return null;
+  const matching = languages.filter((language) => {
+    const share = letters.filter((character) => RANGES[SCRIPT_OF[language]].test(character)).length / letters.length;
+    return share > 0.5;
+  });
+  return matching.length === 1 ? matching[0] : null;
+}

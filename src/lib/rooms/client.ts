@@ -89,8 +89,9 @@ export async function listRooms(languages: string[] = []): Promise<RoomSummary[]
   return (await call<{ rooms: RoomSummary[] }>("list", languages.length ? { langs: languages } : {})).rooms;
 }
 
-export async function createRoom(peerId: string, name: string, languages: string[]): Promise<RoomMeta> {
-  return (await call<{ room: RoomMeta }>("create", { peerId, name, languages })).room;
+/** `free`: 🌐 자유 대화(방 언어 없음, 자막은 말하는 사람마다 그 사람의 언어로). */
+export async function createRoom(peerId: string, name: string, languages: string[], free = false): Promise<RoomMeta> {
+  return (await call<{ room: RoomMeta }>("create", { peerId, name, languages, ...(free ? { free: true } : {}) })).room;
 }
 
 export async function joinRoom(input: {
@@ -145,6 +146,8 @@ export async function postLine(input: {
   /** 집은 남의 줄 번호(묻기·답하기). 인용 글은 서버가 채운다. */
   quoteSeq?: number;
   ask?: boolean;
+  /** 받아쓴 말의 언어(자유 대화방에서 줄 옆에 표시). */
+  lang?: string;
 }): Promise<RoomLine> {
   return (await call<{ line: RoomLine }>("line", input)).line;
 }
@@ -159,7 +162,7 @@ export async function pauseRoom(roomId: string, peerId: string): Promise<void> {
   await call("pause", { roomId, peerId });
 }
 
-export type ParkedRoom = { id: string; name: string; languages: string[]; parkedAt: number };
+export type ParkedRoom = { id: string; name: string; languages: string[]; free?: boolean; parkedAt: number };
 
 export async function listParkedRooms(): Promise<ParkedRoom[]> {
   return (await call<{ rooms: ParkedRoom[] }>("parked", {})).rooms;
@@ -197,7 +200,7 @@ export async function transcribeUtterance(blob: Blob, mimeType: string, language
       filename: mimeType.includes("mp4") ? "line.mp4" : "line.webm",
       mimeType: mimeType || "audio/webm",
       room: true,
-      // 방의 언어(보통 둘) — 이 밖의 글자로 나온 자막은 지어낸 것으로 본다(서버).
+      // 방의 언어(보통 둘), 자유 대화방이면 말하는 사람의 두 언어 — 이 밖의 글자로 나온 자막은 지어낸 것으로 본다(서버).
       languages,
     }),
   });

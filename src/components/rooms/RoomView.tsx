@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { RoomCopy } from "@/lib/rooms/copy";
 import {
   RoomApiError,
@@ -31,6 +31,8 @@ import {
   type RoomRole,
 } from "@/lib/rooms/protocol";
 import { askPhrase } from "@/lib/rooms/quote";
+import { cleanLanguages } from "@/lib/rooms/roomFilter";
+import { whichLanguage } from "@/lib/roleplay/transcript";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { Composer, Face, Lines, ProfileSheet, languagePair } from "./RoomParts";
 import { useInbox } from "./RoomDm";
@@ -168,13 +170,20 @@ export function RoomView({
   }, []);
 
   const addMine = useCallback((line: RoomLine) => setLines((have) => mergeLines(have, [line])), []);
+  const speakerLanguages = useMemo(
+    () => cleanLanguages([targetLanguage, locale]),
+    [targetLanguage, locale],
+  );
 
   const onUtterance = useCallback(
     async (blob: Blob, mimeType: string, startedAt: number, endedAt: number) => {
       setPending((count) => count + 1);
       try {
-        const text = await transcribeUtterance(blob, mimeType, room.languages);
+        // 자유 대화방은 방 언어가 없어서 말하는 나의 두 언어(배우는 언어·앱 언어)로 받아쓴다.
+        const languages = room.free ? speakerLanguages : room.languages;
+        const text = await transcribeUtterance(blob, mimeType, languages);
         if (!text || !aliveRef.current) return;
+        const lang = room.free ? whichLanguage(text, languages) : null;
         addMine(
           await postLine({
             roomId: room.id,
@@ -183,6 +192,7 @@ export function RoomView({
             text,
             startedAt: startedAt + offsetRef.current,
             endedAt: endedAt + offsetRef.current,
+            ...(lang ? { lang } : {}),
           }),
         );
       } catch (error) {
@@ -191,7 +201,7 @@ export function RoomView({
         setPending((count) => Math.max(0, count - 1));
       }
     },
-    [addMine, peerId, room.id, room.languages],
+    [addMine, peerId, room.id, room.languages, room.free, speakerLanguages],
   );
 
   const startMic = useCallback(async (): Promise<boolean> => {
@@ -471,8 +481,8 @@ export function RoomView({
               {title ?? room.name}
             </h1>
             <p className="text-xs text-slate-400">
-              {languagePair(room.languages, locale)}
-              {room.languages.length ? " · " : ""}
+              {room.free ? `🌐 ${t.freeTalk}` : languagePair(room.languages, locale)}
+              {room.free || room.languages.length ? " · " : ""}
               {t.speakers} {speakers.length}/{MAX_SPEAKERS} · {t.listeners} {listeners.length}
             </p>
           </div>

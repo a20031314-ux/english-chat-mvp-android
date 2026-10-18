@@ -607,9 +607,13 @@ export function Lines({
               askedMe ? "border border-amber-300/60" : typed ? "border border-dashed border-white/15" : ""
             } ${line.peerId === selfId ? "bg-white/[0.07]" : "bg-white/[0.03]"} hover:bg-white/10`}
           >
-            {showName || typed || asked > 0 ? (
+            {showName || typed || asked > 0 || line.lang ? (
               <span className={`me-2 text-xs font-medium ${colorFor(line.peerId)}`} dir="auto">
                 {showName ? line.nickname : null}
+                {/* 자유 대화방: 이 줄이 어느 언어인지(글자로 가를 수 있을 때만). */}
+                {line.lang && isLearningLanguageCode(line.lang) ? (
+                  <span className="ms-1 rounded-full bg-white/10 px-1.5 text-meta font-normal text-slate-300">{learningLanguageUiLabel(line.lang, locale)}</span>
+                ) : null}
                 {typed ? <span className="ms-1 text-[10px] text-slate-500">💬 {t.comment}</span> : null}
                 {overlap ? <span className="ms-1 text-[10px] text-slate-500">· {t.overlap}</span> : null}
                 {asked > 0 ? <span className="ms-1 text-[10px] text-amber-300">❓ {asked}</span> : null}
