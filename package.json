@@ -7,6 +7,7 @@
     "build": "next build",
     "build:capacitor": "node scripts/build-capacitor.mjs",
     "build:android": "npm run build:capacitor && npx cap sync android",
+    "pc:build": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/pc-build.ps1",
     "build:ios": "npm run build:capacitor && node scripts/ios-project.mjs && npx cap sync ios",
     "install:android": "node scripts/install-android.mjs",
     "build:web": "next build",

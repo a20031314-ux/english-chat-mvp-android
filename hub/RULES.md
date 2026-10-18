@@ -41,7 +41,8 @@
 - **버전을 자를 때마다 사용법(?)도 새로:** 그 버전에서 바뀐 기능마다 사용법 글(`src/lib/guide/`, 14개 언어)을 지금 화면에 맞게 다시 쓰고
   `capture-whats-new.mjs guide`(새 `CAPTURE_RUN`)로 단계 그림을 UI 언어별로 다시 찍어 같은 PR/커밋에 넣는다. 옛 빌드가 다른 화면을 쓰면
   예전 글을 스냅숏으로 남기고 새 앱만 새 글을 받게 한다(예: `/api/guide?my=1`, `before-my.json`). 새로워진 점 캡처와 같이 확인한다(사용자 결정 2026-10-16).
-- PC 빌드 안내는 이 순서: `git checkout -- android/app/build.gradle` → `git pull` → `npm install` → `npm run build:android` → `type android\app\src\main\assets\public\build-version.txt`가 새 버전인지 → Android Studio Sync → Signed Bundle.
+- PC 빌드 안내는 한 줄: `npm run pc:build`(`scripts/pc-build.ps1` — build.gradle·package-lock 되돌리기 → `git pull --ff-only` → `npm ci` → `build:android` → 버전 확인 → Android Studio 열기) → Sync → Signed Bundle.
+  처음 한 번(스크립트가 PC에 없을 때)만: `git checkout -- android/app/build.gradle package-lock.json; git pull` 후 `npm run pc:build`. `npm install`을 쓰면 PC에서 lock 파일이 바뀌어 다음 pull이 막힌다(2026-10-18 겪음).
 - 업데이트 배너: 2.67부터는 폰이 Play에 직접 물어 출시마다 저절로 뜬다. `RECOMMENDED_APP_VERSION`은 2.66 이하 옛 빌드용 — 그 버전이 Play에서 받을 수 있을 때만 올린다(사용자에게 확인).
 - Play 업로드·서명·fastlane은 사람이 한다.
 
