@@ -65,7 +65,7 @@
 - **요금 개편 (2026-10-16, `hub/drafts/pricing-2026-10.md` "구현"):** 만듦. 서버(바로 반영): `src/lib/billing/plans.ts` 요금표·`tierForProduct`, RevenueCat 권한의 상품으로 요금 판정,
   하루 자유 통화(`chargeRoleplayTurn`, 턴 간격 최대 1분·첫 턴 15초, 학습자 자정 `x-tz-offset`), 채팅 한도 요금별, 영상 라이브러리 전체는 프리미엄만, 추가 팩(`?n=`, id `날짜.2`).
   앱(2.67): 결제 화면 요금 카드(스토어에 있는 상품만, 요금 변경은 Play 구독 교체), 통화 첫 화면 "오늘 무료 통화 N분", 하루 시간 소진 안내, 유료 채팅 한도 안내, 팩 "한 팩 더".
-  **지금 프리미엄은 그대로(9,900원·80포인트).** Play에서 8,900원으로 바꾸는 날 `PREMIUM_DAILY_PLAN_FROM`에 날짜를 넣고 push.
+  **지금 프리미엄은 그대로(9,900원·80포인트).** 전환 때 사용법 통화 "통화 시간" 글(14개 언어, `guide/content.ts`·`translations.json`)도 15분으로. Play에서 8,900원으로 바꾸는 날 `PREMIUM_DAILY_PLAN_FROM`에 날짜를 넣고 push.
   남은 것: 사람이 Play·RevenueCat 상품(store inbox), 2.67 자를 때 사용법(?) 요금 문장(`src/lib/guide/content.ts` 131·164·166·177·206줄 + translations.json) 새로 + 새로워진 점,
   헤더 포인트 칩은 기기 기록으로 80에서 빼서 보여 줌(전환 뒤 프리미엄은 0이 맞음 — 전환 때 서버 값으로), 빠른·직접 질문·지도 한도는 유료 셋 다 프리미엄과 같음(정하지 않음).
 - **영상 학습 가격·로직 점검 (2026-10-16):** ①구매 포인트를 영상 가져오기에도 씀 — **고침**(서버 `chargeImportPoints`: 월 지급분 먼저, 그다음 구매분, 통화와 같은 splitSpend.

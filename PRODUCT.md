@@ -214,6 +214,8 @@
   채팅은 첫 단계 "오늘 해볼 것으로 시작"을 단계마다 UI 언어별 스크린샷 + 한두 줄로(2.67부터 그림, `public/guide/<locale>/`,
   `node --experimental-strip-types scripts/capture-whats-new.mjs guide`로 다시 찍음). 2.67 앱은 `/api/guide?my=1`로 묻고,
   그 전 빌드는 예전 지도·채팅 안내(`src/lib/guide/before-my.json`)를 받는다.
+  통화는 4단계 그림(오늘의 팩 → 팩 통화 중 → 끝난 대화 돌아보기·다시 말해보기 → 내 문장 말해보기) + 글만인 멈춤·통화 시간(요금별),
+  `capture-whats-new.mjs guide-call`(영어 UI는 일본어 학습). 그 전 빌드는 예전 통화 글(`roleplayBefore267.json`).
   영상 학습은 4단계 그림(이달의 영상 → 학습 언어 자막만 → 문장 바로 번역 → 부분 골라 묻기) + 글만 두 칸(내 영상 가져오기, 구간 묶기·저장),
   그림은 `capture-whats-new.mjs guide-video`(저장된 공부 세션으로 열고 플레이어 자리는 영상 썸네일). 2.67 전 빌드는 예전 영상 안내(`src/lib/guide/videoBefore267.json`).
   채팅은 8단계 그림(오늘 해볼 것 → 고친 문장 → 표현 보기 → 해석·듣기 → 문장 시트 질문 → 단어 저장 → ⋮ 메뉴 → 지난 대화) + 그 밖에(먼저 말하기·사진·하루 횟수),

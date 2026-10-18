@@ -137,33 +137,51 @@
       "title": "Cómo usar Llamadas",
       "sections": [
         {
-          "heading": "Habla en voz alta",
+          "heading": "{ui:packTitle}",
+          "shot": "call-pack",
           "body": [
-            "Toca {ui:roleplayStart} y permite el micrófono para hablar con el personaje.",
-            "Cuando dejas de hablar, termina tu turno y el personaje responde.",
-            "Si te atoras, el personaje te ayuda con lo que dice después. La conversación sigue."
+            "Es la tarjeta de arriba en la pestaña Llamadas. Elige lo que tu registro dice que conviene mejorar y arma una conversación de unos siete minutos.",
+            "Es gratis una vez al día y no gasta tiempo de llamada. Toca {ui:packStart} para empezar."
           ]
         },
         {
-          "heading": "Revisa dónde te atascaste",
+          "heading": "Habla en voz alta",
+          "shot": "call-talk",
           "body": [
-            "En los turnos donde te atoras, aparece el botón {ui:roleplayWhyStuck}.",
-            "Te muestra por qué fue difícil y qué podrías haber dicho. Puedes practicarlo al instante con {ui:roleplayPracticeCta}."
+            "El tutor habla primero. Cuando dejas de hablar, tu turno termina solo.",
+            "En el paquete, la franja de arriba muestra en qué pregunta vas, y al terminar {ui:packSeeRetro} muestra qué mejoró hoy.",
+            "Para hablar de lo que quieras, toca {ui:roleplayStart}."
+          ]
+        },
+        {
+          "heading": "Revisa una llamada terminada",
+          "shot": "call-review",
+          "body": [
+            "Las llamadas terminadas quedan en {ui:roleplayPast}. Debajo de tus frases verás la frase corregida y lo que querías decir.",
+            "{ui:roleplaySayAgain} te reproduce esa frase para que la repitas y muestra qué palabras se oyeron distinto.",
+            "En los turnos donde te atascaste queda el botón {ui:roleplayWhyStuck}."
+          ]
+        },
+        {
+          "heading": "{ui:roleplayOwnLineOpen}",
+          "shot": "call-ownline",
+          "body": [
+            "Escribe una frase que quieras practicar y toca {ui:roleplayOwnLineUse}: escúchala y luego dila.",
+            "Te muestra qué palabras se oyeron distinto. No gasta tiempo de llamada."
           ]
         },
         {
           "heading": "Pausa y continúa",
           "body": [
-            "{ui:roleplayPause} guarda la conversación. La próxima vez, usa {ui:roleplayResume} en la pestaña de Llamadas para seguir.",
-            "Las conversaciones terminadas quedan en {ui:roleplayPast} para que las leas de nuevo."
+            "{ui:roleplayPause} guarda la conversación. La próxima vez, {ui:roleplayResume} en la pestaña Llamadas la retoma."
           ]
         },
         {
-          "heading": "Tiempo y puntos de llamada",
+          "heading": "Tiempo de llamada",
           "body": [
-            "Un punto te da cinco minutos de llamada. Se usa un punto al empezar y otro cada cinco minutos.",
-            "Si terminas antes de los cinco minutos, el tiempo restante se suma a tu próxima llamada.",
-            "Recibes 20 puntos (100 minutos) gratis al empezar. Premium te da 80 puntos al mes, compartidos con los videos."
+            "El plan gratis te da 20 puntos (100 minutos) para empezar. Un punto son cinco minutos.",
+            "Lite da 7 minutos de llamada gratis cada día y Plus 10; después, sigues con puntos. Premium da 80 puntos al mes.",
+            "La pestaña Llamadas muestra el tiempo que te queda hoy. El paquete de hoy no gasta tiempo en ningún plan."
           ]
         }
       ]
@@ -418,33 +436,51 @@
       "title": "通話の使い方",
       "sections": [
         {
+          "heading": "{ui:packTitle}",
+          "shot": "call-pack",
+          "body": [
+            "通話タブのいちばん上のカードです。記録からいま伸ばしたいところを選んで、7分ほどの会話を作ります。",
+            "1日1回無料で、通話時間を使いません。{ui:packStart}を押すと始まります。"
+          ]
+        },
+        {
           "heading": "声で話す",
+          "shot": "call-talk",
           "body": [
-            "「{ui:roleplayStart}」を押してマイクを許可すると、キャラクターと音声で会話できます。",
-            "話し終えると自動で自分のターンが終わり、キャラクターが返事します。",
-            "詰まっても、キャラクターが次の発言でサポートしてくれるので、会話が途切れません。"
+            "チューターが先に話します。話し終えると自動で自分の番が終わります。",
+            "パックでは上の帯に何問目かが出て、終わったら{ui:packSeeRetro}で今日伸びたところを見られます。",
+            "テーマなしで話したいときは{ui:roleplayStart}を押します。"
           ]
         },
         {
-          "heading": "詰まった場面を振り返る",
+          "heading": "終わった通話を振り返る",
+          "shot": "call-review",
           "body": [
-            "詰まったターンには「{ui:roleplayWhyStuck}」ボタンが残ります。",
-            "なぜ難しかったか、どう言えばよかったかが表示され、「{ui:roleplayPracticeCta}」ですぐ練習できます。"
+            "終わった通話は{ui:roleplayPast}に残ります。自分の文の下に、直した文と言いたかったことが出ます。",
+            "{ui:roleplaySayAgain}を押すとその文を聞いて言い直せて、違って聞こえた単語を教えてくれます。",
+            "詰まった番には{ui:roleplayWhyStuck}ボタンが残ります。"
           ]
         },
         {
-          "heading": "一時停止と再開",
+          "heading": "{ui:roleplayOwnLineOpen}",
+          "shot": "call-ownline",
           "body": [
-            "「{ui:roleplayPause}」で会話を保存できます。次回は通話タブの「{ui:roleplayResume}」で続きから始められます。",
-            "終わった会話は「{ui:roleplayPast}」で再度読むことができます。"
+            "練習したい文を入れて{ui:roleplayOwnLineUse}を押すと、聞いてから言ってみられます。",
+            "違って聞こえた単語を教えてくれます。通話時間は使いません。"
           ]
         },
         {
-          "heading": "通話時間とポイント",
+          "heading": "止めて続きから",
           "body": [
-            "1ポイントで5分通話できます。開始時に1ポイント、以降5分ごとに1ポイント消費します。",
-            "5分未満で終了した場合、残り時間は次の通話に繰り越されます。",
-            "最初に20ポイント（100分）無料でもらえます。プレミアムは毎月80ポイント付与され、動画インポートと共通です。"
+            "{ui:roleplayPause}を押すと会話が保存されます。次は通話タブの{ui:roleplayResume}で続けられます。"
+          ]
+        },
+        {
+          "heading": "通話時間",
+          "body": [
+            "無料プランは最初に20ポイント（100分）あります。1ポイントで5分です。",
+            "ライトは毎日7分、プラスは10分の無料通話があり、使い切ったらポイントで続けます。プレミアムは毎月80ポイントです。",
+            "通話タブに今日の残り時間が出ます。今日のパックはどのプランでも時間を使いません。"
           ]
         }
       ]
@@ -696,36 +732,54 @@
       ]
     },
     "roleplay": {
-      "title": "通话功能指南",
+      "title": "通话使用方法",
       "sections": [
         {
-          "heading": "开口说出来",
+          "heading": "{ui:packTitle}",
+          "shot": "call-pack",
           "body": [
-            "点击{ui:roleplayStart}并允许麦克风，即可和角色语音对话。",
-            "你说完后自动轮到角色回复。",
-            "遇到卡壳时，角色会用下一句引导你，聊天不会中断。"
+            "通话页最上面的卡片。它根据你的记录挑出现在最该加强的地方，做成大约七分钟的对话。",
+            "每天免费一次，不占通话时间。点 {ui:packStart} 开始。"
           ]
         },
         {
-          "heading": "回顾卡住的地方",
+          "heading": "开口说",
+          "shot": "call-talk",
           "body": [
-            "卡住的回合会保留{ui:roleplayWhyStuck}按钮。",
-            "点开后会显示难点和可用表达，还能直接用{ui:roleplayPracticeCta}练习。"
+            "导师先说话。你停下来，你这一轮就自动结束。",
+            "练习包里，上方的条显示正在第几题，结束后用 {ui:packSeeRetro} 看看今天哪里进步了。",
+            "想随便聊，点 {ui:roleplayStart}。"
           ]
         },
         {
-          "heading": "暂停与继续",
+          "heading": "回顾结束的通话",
+          "shot": "call-review",
           "body": [
-            "点击{ui:roleplayPause}保存对话。下次在通话标签页用{ui:roleplayResume}继续。",
-            "已结束的对话会保存在{ui:roleplayPast}，可随时回看。"
+            "结束的通话保存在 {ui:roleplayPast}。你说的每句下面会显示改好的句子和你原本想说的意思。",
+            "点 {ui:roleplaySayAgain} 会播放那句话让你跟着说，并告诉你哪些词听起来不一样。",
+            "卡住的那一轮会留下 {ui:roleplayWhyStuck} 按钮。"
           ]
         },
         {
-          "heading": "通话时长与积分",
+          "heading": "{ui:roleplayOwnLineOpen}",
+          "shot": "call-ownline",
           "body": [
-            "每5分钟通话消耗1积分。开始时扣1分，之后每5分钟再扣1分。",
-            "如果提前结束，剩余时间会累积到下次通话。",
-            "新用户可免费获得20积分（100分钟）。会员每月有80积分，与视频导入共用。"
+            "输入想练的句子，点 {ui:roleplayOwnLineUse}，先听再跟着说。",
+            "会告诉你哪些词听起来不一样。不占通话时间。"
+          ]
+        },
+        {
+          "heading": "暂停后继续",
+          "body": [
+            "点 {ui:roleplayPause} 会保存对话。下次在通话页点 {ui:roleplayResume} 接着聊。"
+          ]
+        },
+        {
+          "heading": "通话时间",
+          "body": [
+            "免费版一开始有 20 积分（100 分钟），1 积分是 5 分钟。",
+            "轻享版每天有 7 分钟免费通话，进阶版 10 分钟，用完后用积分继续。高级版每月 80 积分。",
+            "通话页会显示今天剩下的时间。今日练习包在任何方案下都不占时间。"
           ]
         }
       ]
@@ -977,36 +1031,54 @@
       ]
     },
     "roleplay": {
-      "title": "Cách dùng Gọi thoại",
+      "title": "Cách dùng Gọi",
       "sections": [
         {
-          "heading": "Nói chuyện trực tiếp",
+          "heading": "{ui:packTitle}",
+          "shot": "call-pack",
           "body": [
-            "Nhấn {ui:roleplayStart} và cho phép truy cập micro để nói chuyện với nhân vật.",
-            "Khi bạn dừng nói, lượt của bạn kết thúc và nhân vật sẽ trả lời.",
-            "Nếu bạn bí, nhân vật sẽ gợi ý để bạn tiếp tục. Cuộc trò chuyện sẽ không bị ngắt quãng."
+            "Thẻ trên cùng ở tab Gọi. Nó chọn phần ghi chép của bạn cho thấy cần luyện nhất và tạo một cuộc trò chuyện khoảng bảy phút.",
+            "Miễn phí mỗi ngày một lần và không tốn thời gian gọi. Chạm {ui:packStart} để bắt đầu."
           ]
         },
         {
-          "heading": "Xem lại chỗ bị bí",
+          "heading": "Nói thành tiếng",
+          "shot": "call-talk",
           "body": [
-            "Những lượt bạn bị bí sẽ có nút {ui:roleplayWhyStuck}.",
-            "Nhấn vào để xem lý do khó và gợi ý câu trả lời, bạn có thể luyện tập ngay với {ui:roleplayPracticeCta}."
+            "Gia sư nói trước. Khi bạn ngừng nói, lượt của bạn tự kết thúc.",
+            "Trong gói, dải phía trên cho biết bạn đang ở câu hỏi thứ mấy, và khi xong {ui:packSeeRetro} cho thấy hôm nay bạn tiến bộ ở đâu.",
+            "Muốn nói chuyện tự do, chạm {ui:roleplayStart}."
+          ]
+        },
+        {
+          "heading": "Xem lại cuộc gọi đã xong",
+          "shot": "call-review",
+          "body": [
+            "Cuộc gọi đã xong nằm trong {ui:roleplayPast}. Dưới câu của bạn có câu đã sửa và điều bạn định nói.",
+            "{ui:roleplaySayAgain} phát câu đó để bạn nói theo và cho biết từ nào nghe khác đi.",
+            "Lượt bạn bị bí sẽ có nút {ui:roleplayWhyStuck}."
+          ]
+        },
+        {
+          "heading": "{ui:roleplayOwnLineOpen}",
+          "shot": "call-ownline",
+          "body": [
+            "Nhập câu bạn muốn luyện rồi chạm {ui:roleplayOwnLineUse}: nghe trước, rồi nói theo.",
+            "Nó cho biết từ nào nghe khác đi. Không tốn thời gian gọi."
           ]
         },
         {
           "heading": "Tạm dừng và tiếp tục",
           "body": [
-            "{ui:roleplayPause} sẽ lưu lại cuộc trò chuyện. Lần sau, vào tab Gọi thoại và nhấn {ui:roleplayResume} để tiếp tục.",
-            "Các cuộc gọi đã hoàn thành sẽ lưu ở {ui:roleplayPast} để bạn xem lại."
+            "{ui:roleplayPause} lưu cuộc trò chuyện. Lần sau, {ui:roleplayResume} ở tab Gọi để nói tiếp."
           ]
         },
         {
-          "heading": "Thời gian gọi và điểm",
+          "heading": "Thời gian gọi",
           "body": [
-            "Mỗi điểm đổi được 5 phút gọi. Khi bắt đầu cuộc gọi sẽ trừ 1 điểm, sau mỗi 5 phút lại trừ thêm 1 điểm.",
-            "Nếu kết thúc trước khi hết 5 phút, thời gian còn lại sẽ cộng vào cuộc gọi sau.",
-            "Bạn nhận 20 điểm (100 phút) miễn phí khi bắt đầu. Gói Premium tặng 80 điểm mỗi tháng, dùng chung với tính năng video."
+            "Gói miễn phí cho bạn 20 điểm (100 phút) lúc đầu. Một điểm là năm phút.",
+            "Lite có 7 phút gọi miễn phí mỗi ngày, Plus có 10 phút; hết thì tiếp tục bằng điểm. Premium nhận 80 điểm mỗi tháng.",
+            "Tab Gọi hiển thị thời gian còn lại hôm nay. Gói hôm nay không tốn thời gian ở mọi gói cước."
           ]
         }
       ]
@@ -1258,36 +1330,54 @@
       ]
     },
     "roleplay": {
-      "title": "Utiliser les Appels",
+      "title": "Comment utiliser Appels",
       "sections": [
         {
+          "heading": "{ui:packTitle}",
+          "shot": "call-pack",
+          "body": [
+            "La carte en haut de l’onglet Appels. Elle choisit ce que votre historique conseille de travailler et en fait une conversation d’environ sept minutes.",
+            "Gratuit une fois par jour, sans temps d’appel. Touchez {ui:packStart} pour commencer."
+          ]
+        },
+        {
           "heading": "Parler à voix haute",
+          "shot": "call-talk",
           "body": [
-            "Touchez {ui:roleplayStart} et autorisez le micro pour parler avec le personnage.",
-            "Quand vous arrêtez de parler, c’est à son tour de répondre.",
-            "Si vous bloquez, le personnage vous aide à continuer. La conversation ne s’arrête pas."
+            "Le tuteur parle en premier. Quand vous vous arrêtez de parler, votre tour se termine tout seul.",
+            "Dans le pack, le bandeau du haut indique la question en cours, et à la fin {ui:packSeeRetro} montre ce qui a progressé aujourd’hui.",
+            "Pour parler librement, touchez {ui:roleplayStart}."
           ]
         },
         {
-          "heading": "Revoir vos blocages",
+          "heading": "Revoir un appel terminé",
+          "shot": "call-review",
           "body": [
-            "Un tour où vous avez bloqué garde un bouton {ui:roleplayWhyStuck}.",
-            "Il explique la difficulté et propose ce que vous auriez pu dire. Vous pouvez l’exercer tout de suite avec {ui:roleplayPracticeCta}."
+            "Les appels terminés restent dans {ui:roleplayPast}. Sous vos phrases, vous voyez la phrase corrigée et ce que vous vouliez dire.",
+            "{ui:roleplaySayAgain} vous fait écouter la phrase pour la répéter et indique les mots entendus autrement.",
+            "Un tour où vous avez bloqué garde un bouton {ui:roleplayWhyStuck}."
           ]
         },
         {
-          "heading": "Mettre en pause et reprendre",
+          "heading": "{ui:roleplayOwnLineOpen}",
+          "shot": "call-ownline",
           "body": [
-            "{ui:roleplayPause} sauvegarde la conversation. Plus tard, {ui:roleplayResume} dans l’onglet Appels permet de reprendre.",
-            "Les conversations terminées restent dans {ui:roleplayPast} pour les relire."
+            "Tapez une phrase à travailler et touchez {ui:roleplayOwnLineUse} : écoutez-la, puis dites-la.",
+            "Vous voyez les mots entendus autrement. Aucun temps d’appel utilisé."
           ]
         },
         {
-          "heading": "Durée et points",
+          "heading": "Faire une pause et reprendre",
           "body": [
-            "Un point donne cinq minutes d’appel. Un point est utilisé au début, puis un autre toutes les cinq minutes.",
-            "Si l’appel s’arrête avant cinq minutes, le temps restant est reporté sur le prochain appel.",
-            "Vous recevez 20 points (100 minutes) gratuits au départ. Premium offre 80 points par mois, partagés avec l’import vidéo."
+            "{ui:roleplayPause} enregistre la conversation. La prochaine fois, {ui:roleplayResume} dans l’onglet Appels la reprend."
+          ]
+        },
+        {
+          "heading": "Temps d’appel",
+          "body": [
+            "La formule gratuite donne 20 points (100 minutes) au départ. Un point vaut cinq minutes.",
+            "Lite offre 7 minutes d’appels gratuits par jour et Plus 10 ; ensuite, les points prennent le relais. Premium donne 80 points par mois.",
+            "L’onglet Appels affiche le temps restant aujourd’hui. Le pack du jour n’utilise pas de temps, quelle que soit la formule."
           ]
         }
       ]
@@ -1539,36 +1629,54 @@
       ]
     },
     "roleplay": {
-      "title": "Come usare le Chiamate",
+      "title": "Come usare Chiamate",
       "sections": [
         {
-          "heading": "Parla ad alta voce",
+          "heading": "{ui:packTitle}",
+          "shot": "call-pack",
           "body": [
-            "Tocca {ui:roleplayStart} e consenti il microfono per parlare con il personaggio.",
-            "Quando smetti di parlare, il tuo turno finisce e il personaggio risponde.",
-            "Se ti blocchi, il personaggio ti aiuta con la risposta successiva. La conversazione continua senza interruzioni."
+            "È la scheda in cima alla scheda Chiamate. Sceglie ciò che il tuo storico dice di allenare ora e ne fa una conversazione di circa sette minuti.",
+            "È gratis una volta al giorno e non usa tempo di chiamata. Tocca {ui:packStart} per iniziare."
           ]
         },
         {
-          "heading": "Rivedi i punti difficili",
+          "heading": "Parla ad alta voce",
+          "shot": "call-talk",
           "body": [
-            "Se ti sei bloccato in un turno, resta il pulsante {ui:roleplayWhyStuck}.",
-            "Ti mostra perché era difficile e cosa avresti potuto dire. Puoi esercitarti subito con {ui:roleplayPracticeCta}."
+            "Il tutor parla per primo. Quando smetti di parlare, il tuo turno finisce da solo.",
+            "Nel pacchetto, la fascia in alto mostra a che domanda sei, e alla fine {ui:packSeeRetro} mostra cosa è cresciuto oggi.",
+            "Per parlare liberamente, tocca {ui:roleplayStart}."
+          ]
+        },
+        {
+          "heading": "Rivedi una chiamata finita",
+          "shot": "call-review",
+          "body": [
+            "Le chiamate finite restano in {ui:roleplayPast}. Sotto le tue frasi vedi la frase corretta e ciò che volevi dire.",
+            "{ui:roleplaySayAgain} ti fa ascoltare la frase da ripetere e mostra quali parole sono arrivate diverse.",
+            "Un turno in cui ti sei bloccato conserva il pulsante {ui:roleplayWhyStuck}."
+          ]
+        },
+        {
+          "heading": "{ui:roleplayOwnLineOpen}",
+          "shot": "call-ownline",
+          "body": [
+            "Scrivi una frase da allenare e tocca {ui:roleplayOwnLineUse}: ascoltala, poi dilla.",
+            "Ti mostra quali parole sono arrivate diverse. Non usa tempo di chiamata."
           ]
         },
         {
           "heading": "Metti in pausa e riprendi",
           "body": [
-            "{ui:roleplayPause} salva la conversazione. La prossima volta, {ui:roleplayResume} nella scheda Chiamate la riprende da dove eri rimasto.",
-            "Le conversazioni concluse restano in {ui:roleplayPast} per poterle rileggere."
+            "{ui:roleplayPause} salva la conversazione. La prossima volta, {ui:roleplayResume} nella scheda Chiamate la riprende."
           ]
         },
         {
-          "heading": "Durata e punti chiamata",
+          "heading": "Tempo di chiamata",
           "body": [
-            "Un punto vale cinque minuti di chiamata. Un punto viene usato all’inizio e un altro ogni cinque minuti.",
-            "Se chiudi la chiamata prima dei cinque minuti, il tempo restante si somma alla prossima chiamata.",
-            "Ricevi 20 punti (100 minuti) gratis all’inizio. Con Premium hai 80 punti al mese, condivisi con i video importati."
+            "Il piano gratuito dà 20 punti (100 minuti) per iniziare. Un punto vale cinque minuti.",
+            "Lite dà 7 minuti di chiamate gratis al giorno e Plus 10; poi continui con i punti. Premium dà 80 punti al mese.",
+            "La scheda Chiamate mostra il tempo rimasto oggi. Il pacchetto di oggi non usa tempo con nessun piano."
           ]
         }
       ]
@@ -1823,33 +1931,51 @@
       "title": "Como usar Chamadas",
       "sections": [
         {
+          "heading": "{ui:packTitle}",
+          "shot": "call-pack",
+          "body": [
+            "É o cartão no topo da aba Chamadas. Ele escolhe o que o seu histórico mostra que vale treinar agora e monta uma conversa de uns sete minutos.",
+            "É grátis uma vez por dia e não usa tempo de chamada. Toque em {ui:packStart} para começar."
+          ]
+        },
+        {
           "heading": "Fale em voz alta",
+          "shot": "call-talk",
           "body": [
-            "Toque em {ui:roleplayStart} e permita o microfone para conversar com o personagem.",
-            "Quando parar de falar, sua vez termina e o personagem responde.",
-            "Se travar, o personagem te ajuda na próxima fala. A conversa continua."
+            "O tutor fala primeiro. Quando você para de falar, sua vez termina sozinha.",
+            "No pacote, a faixa de cima mostra em que pergunta você está, e no fim {ui:packSeeRetro} mostra o que cresceu hoje.",
+            "Para falar sobre qualquer coisa, toque em {ui:roleplayStart}."
           ]
         },
         {
-          "heading": "Veja onde travou",
+          "heading": "Reveja uma chamada encerrada",
+          "shot": "call-review",
           "body": [
-            "Quando travar em uma fala, fica um botão {ui:roleplayWhyStuck}.",
-            "Ele mostra por que foi difícil e o que você poderia ter dito. Você pode praticar na hora com {ui:roleplayPracticeCta}."
+            "As chamadas encerradas ficam em {ui:roleplayPast}. Sob as suas frases aparecem a frase corrigida e o que você queria dizer.",
+            "{ui:roleplaySayAgain} toca a frase para você repetir e mostra quais palavras soaram diferente.",
+            "Uma vez em que você travou fica com o botão {ui:roleplayWhyStuck}."
           ]
         },
         {
-          "heading": "Pausar e continuar",
+          "heading": "{ui:roleplayOwnLineOpen}",
+          "shot": "call-ownline",
           "body": [
-            "{ui:roleplayPause} salva a conversa. Depois, use {ui:roleplayResume} na aba Chamadas para continuar.",
-            "Conversas finalizadas ficam em {ui:roleplayPast} para você rever."
+            "Digite uma frase que quer treinar e toque em {ui:roleplayOwnLineUse}: ouça e depois fale.",
+            "Mostra quais palavras soaram diferente. Não usa tempo de chamada."
           ]
         },
         {
-          "heading": "Tempo e pontos",
+          "heading": "Pause e continue",
           "body": [
-            "Cada ponto vale cinco minutos de chamada. Um ponto é usado ao iniciar, e mais um a cada cinco minutos.",
-            "Se terminar antes dos cinco minutos, o tempo restante vai para a próxima chamada.",
-            "Você começa com 20 pontos (100 minutos) grátis. Premium dá 80 pontos por mês, compartilhados com vídeos."
+            "{ui:roleplayPause} salva a conversa. Da próxima vez, {ui:roleplayResume} na aba Chamadas retoma."
+          ]
+        },
+        {
+          "heading": "Tempo de chamada",
+          "body": [
+            "O plano grátis dá 20 pontos (100 minutos) para começar. Um ponto são cinco minutos.",
+            "Lite dá 7 minutos de chamada grátis por dia e Plus 10; depois, você continua com pontos. Premium dá 80 pontos por mês.",
+            "A aba Chamadas mostra o tempo que resta hoje. O pacote de hoje não usa tempo em nenhum plano."
           ]
         }
       ]
@@ -2101,36 +2227,54 @@
       ]
     },
     "roleplay": {
-      "title": "Как пользоваться Звонками",
+      "title": "Как пользоваться звонками",
       "sections": [
         {
-          "heading": "Говорите вслух",
+          "heading": "{ui:packTitle}",
+          "shot": "call-pack",
           "body": [
-            "Нажмите {ui:roleplayStart} и разрешите доступ к микрофону — сможете говорить с персонажем.",
-            "Когда перестанете говорить, ход перейдёт персонажу, и он ответит.",
-            "Если затрудняетесь, персонаж подскажет, как продолжить. Диалог не прервётся."
+            "Карточка вверху вкладки «Звонки». Она выбирает то, что по вашей истории стоит подтянуть сейчас, и делает из этого разговор минут на семь.",
+            "Бесплатно раз в день и без расхода времени звонков. Нажмите {ui:packStart}, чтобы начать."
           ]
         },
         {
-          "heading": "Посмотрите, где было сложно",
+          "heading": "Говорите вслух",
+          "shot": "call-talk",
           "body": [
-            "В трудном месте появится кнопка {ui:roleplayWhyStuck}.",
-            "Она покажет, что было сложно и как можно было ответить. Можно сразу потренироваться с {ui:roleplayPracticeCta}."
+            "Первым говорит репетитор. Когда вы замолкаете, ваш ход заканчивается сам.",
+            "В наборе полоса вверху показывает, на каком вы вопросе, а в конце {ui:packSeeRetro} показывает, что выросло сегодня.",
+            "Чтобы поговорить о чём угодно, нажмите {ui:roleplayStart}."
+          ]
+        },
+        {
+          "heading": "Разбор законченного звонка",
+          "shot": "call-review",
+          "body": [
+            "Законченные звонки остаются в {ui:roleplayPast}. Под вашими фразами видно исправленный вариант и то, что вы хотели сказать.",
+            "{ui:roleplaySayAgain} проигрывает фразу, чтобы вы её повторили, и показывает, какие слова прозвучали иначе.",
+            "Там, где вы застряли, остаётся кнопка {ui:roleplayWhyStuck}."
+          ]
+        },
+        {
+          "heading": "{ui:roleplayOwnLineOpen}",
+          "shot": "call-ownline",
+          "body": [
+            "Введите фразу для тренировки и нажмите {ui:roleplayOwnLineUse}: послушайте, затем скажите её.",
+            "Покажет, какие слова прозвучали иначе. Время звонков не тратится."
           ]
         },
         {
           "heading": "Пауза и продолжение",
           "body": [
-            "{ui:roleplayPause} сохраняет разговор. В следующий раз продолжайте с {ui:roleplayResume} во вкладке Звонки.",
-            "Завершённые разговоры хранятся в {ui:roleplayPast} — можно перечитать."
+            "{ui:roleplayPause} сохраняет разговор. В следующий раз {ui:roleplayResume} во вкладке «Звонки» продолжит его."
           ]
         },
         {
-          "heading": "Время звонков и баллы",
+          "heading": "Время звонков",
           "body": [
-            "Один балл — это пять минут звонка. Балл списывается при начале звонка и затем каждые пять минут.",
-            "Если звонок закончился раньше, оставшееся время переносится на следующий.",
-            "В начале даётся 20 баллов (100 минут) бесплатно. В Premium — 80 баллов в месяц, их можно тратить и на видео."
+            "Бесплатный тариф даёт для начала 20 баллов (100 минут). Один балл — пять минут.",
+            "Lite даёт 7 минут бесплатных звонков в день, Plus — 10; дальше можно продолжать за баллы. Premium даёт 80 баллов в месяц.",
+            "Во вкладке «Звонки» видно, сколько времени осталось сегодня. Набор на сегодня не тратит время ни на одном тарифе."
           ]
         }
       ]
@@ -2382,36 +2526,54 @@
       ]
     },
     "roleplay": {
-      "title": "Cara Pakai Panggilan",
+      "title": "Cara memakai Panggilan",
       "sections": [
         {
-          "heading": "Berbicara Langsung",
+          "heading": "{ui:packTitle}",
+          "shot": "call-pack",
           "body": [
-            "Ketuk {ui:roleplayStart} dan izinkan mikrofon untuk bicara dengan karakter.",
-            "Saat kamu berhenti bicara, giliranmu selesai dan karakter akan menjawab.",
-            "Kalau kamu bingung, karakter akan membantu dengan respon berikutnya. Percakapan tetap berjalan."
+            "Kartu paling atas di tab Panggilan. Ia memilih bagian yang menurut catatanmu paling perlu dilatih dan membuat percakapan sekitar tujuh menit.",
+            "Gratis sekali sehari dan tidak memakai waktu panggilan. Ketuk {ui:packStart} untuk mulai."
           ]
         },
         {
-          "heading": "Lihat Lagi Saat Terjebak",
+          "heading": "Bicara langsung",
+          "shot": "call-talk",
           "body": [
-            "Giliran saat kamu terjebak akan punya tombol {ui:roleplayWhyStuck}.",
-            "Tombol ini menunjukkan kenapa sulit dan contoh kalimat yang bisa kamu pakai, lalu kamu bisa langsung latihan dengan {ui:roleplayPracticeCta}."
+            "Tutor bicara lebih dulu. Saat kamu berhenti bicara, giliranmu selesai sendiri.",
+            "Di paket, pita di atas menunjukkan kamu di pertanyaan ke berapa, dan setelah selesai {ui:packSeeRetro} menunjukkan apa yang berkembang hari ini.",
+            "Untuk ngobrol bebas, ketuk {ui:roleplayStart}."
           ]
         },
         {
-          "heading": "Jeda dan Lanjutkan",
+          "heading": "Tinjau panggilan yang selesai",
+          "shot": "call-review",
           "body": [
-            "{ui:roleplayPause} menyimpan percakapan. Lain kali, gunakan {ui:roleplayResume} di tab Panggilan untuk melanjutkan.",
-            "Percakapan yang sudah selesai ada di {ui:roleplayPast} untuk dibaca ulang."
+            "Panggilan yang selesai tersimpan di {ui:roleplayPast}. Di bawah kalimatmu ada kalimat yang sudah diperbaiki dan maksud yang ingin kamu sampaikan.",
+            "{ui:roleplaySayAgain} memutar kalimat itu untuk kamu ulangi dan menunjukkan kata mana yang terdengar berbeda.",
+            "Giliran saat kamu buntu menyimpan tombol {ui:roleplayWhyStuck}."
           ]
         },
         {
-          "heading": "Waktu Panggilan dan Poin",
+          "heading": "{ui:roleplayOwnLineOpen}",
+          "shot": "call-ownline",
           "body": [
-            "Satu poin untuk lima menit panggilan. Satu poin dipakai saat mulai, dan satu lagi tiap lima menit berikutnya.",
-            "Jika panggilan selesai sebelum lima menit, sisa waktunya bisa dipakai di panggilan berikutnya.",
-            "Kamu dapat 20 poin (100 menit) gratis di awal. Premium mendapat 80 poin per bulan, bisa dipakai juga untuk video."
+            "Ketik kalimat yang ingin dilatih lalu ketuk {ui:roleplayOwnLineUse}: dengarkan, lalu ucapkan.",
+            "Ia menunjukkan kata mana yang terdengar berbeda. Tidak memakai waktu panggilan."
+          ]
+        },
+        {
+          "heading": "Jeda dan lanjutkan",
+          "body": [
+            "{ui:roleplayPause} menyimpan percakapan. Lain kali, {ui:roleplayResume} di tab Panggilan melanjutkannya."
+          ]
+        },
+        {
+          "heading": "Waktu panggilan",
+          "body": [
+            "Paket gratis memberi 20 poin (100 menit) di awal. Satu poin lima menit.",
+            "Lite memberi 7 menit panggilan gratis tiap hari dan Plus 10; setelah habis, lanjut dengan poin. Premium memberi 80 poin per bulan.",
+            "Tab Panggilan menunjukkan sisa waktu hari ini. Paket hari ini tidak memakai waktu di paket langganan mana pun."
           ]
         }
       ]
@@ -2663,36 +2825,54 @@
       ]
     },
     "roleplay": {
-      "title": "كيفية استخدام المكالمات",
+      "title": "طريقة استخدام المكالمات",
       "sections": [
         {
-          "heading": "تحدث بصوتك",
+          "heading": "{ui:packTitle}",
+          "shot": "call-pack",
           "body": [
-            "اضغط {ui:roleplayStart} واسمح للميكروفون لتتحدث مع الشخصية.",
-            "عندما تتوقف عن الكلام، ينتهي دورك وترد الشخصية.",
-            "إذا توقفت أو واجهت صعوبة، تساعدك الشخصية في الرد التالي. المحادثة تستمر دائماً."
+            "البطاقة في أعلى تبويب المكالمات. تختار ما يقول سجلّك إنه الأحوج إلى التقوية الآن، وتصنع منه محادثة مدتها نحو سبع دقائق.",
+            "مجانية مرة في اليوم ولا تستهلك وقت المكالمات. اضغط {ui:packStart} للبدء."
           ]
         },
         {
-          "heading": "راجع أماكن التعثر",
+          "heading": "تحدّث بصوتك",
+          "shot": "call-talk",
           "body": [
-            "أي دور تعثرت فيه يظهر عليه زر {ui:roleplayWhyStuck}.",
-            "يعرض لك سبب الصعوبة وما كان يمكنك قوله، ويمكنك التدرب عليه فوراً مع {ui:roleplayPracticeCta}."
+            "يتحدث المعلّم أولًا. عندما تتوقف عن الكلام ينتهي دورك تلقائيًا.",
+            "في الباقة يُظهر الشريط في الأعلى رقم السؤال الذي وصلت إليه، وعند الانتهاء يُريك {ui:packSeeRetro} ما تحسّن اليوم.",
+            "للحديث في أي موضوع، اضغط {ui:roleplayStart}."
           ]
         },
         {
-          "heading": "إيقاف واستكمال المكالمة",
+          "heading": "راجع مكالمة منتهية",
+          "shot": "call-review",
           "body": [
-            "{ui:roleplayPause} يحفظ المحادثة. في المرة القادمة، استخدم {ui:roleplayResume} من تبويب المكالمات للمتابعة.",
-            "المكالمات المنتهية تبقى في {ui:roleplayPast} لتتمكن من قراءتها لاحقاً."
+            "تبقى المكالمات المنتهية في {ui:roleplayPast}. تحت جملك ترى الجملة المصحّحة وما كنت تقصد قوله.",
+            "يُشغّل {ui:roleplaySayAgain} الجملة لتعيدها، ويُريك الكلمات التي سُمعت بشكل مختلف.",
+            "يبقى زر {ui:roleplayWhyStuck} عند الدور الذي تعثّرت فيه."
           ]
         },
         {
-          "heading": "وقت المكالمة والنقاط",
+          "heading": "{ui:roleplayOwnLineOpen}",
+          "shot": "call-ownline",
           "body": [
-            "كل نقطة تمنحك خمس دقائق مكالمة. تُخصم نقطة عند بدء المكالمة، ونقطة أخرى كل خمس دقائق.",
-            "إذا أنهيت المكالمة قبل انتهاء الخمس دقائق، الوقت المتبقي ينتقل للمكالمة التالية.",
-            "تحصل على 20 نقطة (100 دقيقة) مجاناً عند البدء. الحساب المميز يمنحك 80 نقطة شهرياً، تُستخدم أيضاً مع الفيديو."
+            "اكتب جملة تريد التدرّب عليها واضغط {ui:roleplayOwnLineUse}: استمع إليها ثم قلها.",
+            "يُريك الكلمات التي سُمعت بشكل مختلف. لا يستهلك وقت المكالمات."
+          ]
+        },
+        {
+          "heading": "توقّف ثم تابع",
+          "body": [
+            "يحفظ {ui:roleplayPause} المحادثة. في المرة القادمة يتابعها {ui:roleplayResume} في تبويب المكالمات."
+          ]
+        },
+        {
+          "heading": "وقت المكالمات",
+          "body": [
+            "تمنحك الخطة المجانية 20 نقطة (100 دقيقة) في البداية. النقطة خمس دقائق.",
+            "تمنح لايت 7 دقائق مكالمات مجانية يوميًا وبلس 10، وبعدها تتابع بالنقاط. يمنح الاشتراك المميز 80 نقطة شهريًا.",
+            "يُظهر تبويب المكالمات الوقت المتبقي اليوم. لا تستهلك باقة اليوم وقتًا في أي خطة."
           ]
         }
       ]
@@ -2944,36 +3124,54 @@
       ]
     },
     "roleplay": {
-      "title": "วิธีใช้โทรคุย",
+      "title": "วิธีใช้การโทร",
       "sections": [
         {
-          "heading": "พูดคุยด้วยเสียง",
+          "heading": "{ui:packTitle}",
+          "shot": "call-pack",
           "body": [
-            "กด {ui:roleplayStart} แล้วอนุญาตไมโครโฟนเพื่อพูดคุยกับตัวละคร",
-            "เมื่อหยุดพูด ระบบจะจบตาคุณโดยอัตโนมัติ แล้วตัวละครจะตอบกลับ",
-            "ถ้าติดขัด ตัวละครจะช่วยต่อบทสนทนาให้ การสนทนาจะไม่หยุด"
+            "การ์ดบนสุดของแท็บโทร มันเลือกจุดที่บันทึกของคุณบอกว่าควรฝึกตอนนี้ แล้วทำเป็นบทสนทนาราวเจ็ดนาที",
+            "ฟรีวันละครั้งและไม่ใช้เวลาโทร แตะ {ui:packStart} เพื่อเริ่ม"
           ]
         },
         {
-          "heading": "ย้อนดูจุดที่ติดขัด",
+          "heading": "พูดออกเสียง",
+          "shot": "call-talk",
           "body": [
-            "รอบที่คุณติดขัดจะมีปุ่ม {ui:roleplayWhyStuck}",
-            "กดเพื่อดูว่าทำไมถึงยาก และมีตัวอย่างประโยคที่ควรพูด พร้อมฝึกได้ทันทีด้วย {ui:roleplayPracticeCta}"
+            "ติวเตอร์พูดก่อน เมื่อคุณหยุดพูด ตาของคุณจะจบเอง",
+            "ในแพ็ก แถบด้านบนบอกว่าอยู่คำถามที่เท่าไร และเมื่อจบ {ui:packSeeRetro} จะบอกว่าวันนี้อะไรดีขึ้น",
+            "ถ้าอยากคุยเรื่องอะไรก็ได้ แตะ {ui:roleplayStart}"
           ]
         },
         {
-          "heading": "หยุดชั่วคราวและกลับมาต่อ",
+          "heading": "ทบทวนการโทรที่จบแล้ว",
+          "shot": "call-review",
           "body": [
-            "{ui:roleplayPause} จะบันทึกบทสนทนาไว้ ครั้งหน้ากลับมาต่อได้ที่แท็บโทรด้วย {ui:roleplayResume}",
-            "บทสนทนาที่จบแล้วจะเก็บไว้ใน {ui:roleplayPast} ให้กลับมาอ่านได้"
+            "การโทรที่จบแล้วอยู่ใน {ui:roleplayPast} ใต้ประโยคของคุณจะเห็นประโยคที่แก้แล้วและสิ่งที่คุณตั้งใจจะพูด",
+            "{ui:roleplaySayAgain} จะเล่าประโยคนั้นให้คุณพูดตาม และบอกว่าคำไหนได้ยินต่างไป",
+            "ตาที่คุณติดจะมีปุ่ม {ui:roleplayWhyStuck} อยู่"
           ]
         },
         {
-          "heading": "เวลาโทรและแต้ม",
+          "heading": "{ui:roleplayOwnLineOpen}",
+          "shot": "call-ownline",
           "body": [
-            "แต้ม 1 แต้มใช้โทรได้ 5 นาที เริ่มโทรจะใช้ 1 แต้ม และทุก 5 นาทีจะใช้เพิ่มอีก 1 แต้ม",
-            "ถ้าโทรจบก่อน 5 นาที เวลาที่เหลือจะเก็บไว้ใช้ในครั้งถัดไป",
-            "เริ่มต้นรับฟรี 20 แต้ม (100 นาที) Premium ได้ 80 แต้มต่อเดือน ใช้ร่วมกับการนำเข้าวิดีโอ"
+            "พิมพ์ประโยคที่อยากฝึกแล้วแตะ {ui:roleplayOwnLineUse} ฟังก่อนแล้วพูดตาม",
+            "จะบอกว่าคำไหนได้ยินต่างไป ไม่ใช้เวลาโทร"
+          ]
+        },
+        {
+          "heading": "หยุดแล้วทำต่อ",
+          "body": [
+            "{ui:roleplayPause} จะบันทึกบทสนทนา ครั้งหน้าแตะ {ui:roleplayResume} ในแท็บโทรเพื่อคุยต่อ"
+          ]
+        },
+        {
+          "heading": "เวลาโทร",
+          "body": [
+            "แพ็กเกจฟรีให้ 20 พอยต์ (100 นาที) ตอนเริ่ม หนึ่งพอยต์คือห้านาที",
+            "Lite มีเวลาโทรฟรีวันละ 7 นาที Plus วันละ 10 นาที ใช้หมดแล้วคุยต่อด้วยพอยต์ Premium ได้ 80 พอยต์ต่อเดือน",
+            "แท็บโทรจะแสดงเวลาที่เหลือของวันนี้ แพ็กวันนี้ไม่ใช้เวลาในทุกแพ็กเกจ"
           ]
         }
       ]
@@ -3225,36 +3423,54 @@
       ]
     },
     "roleplay": {
-      "title": "कॉल्स का उपयोग कैसे करें",
+      "title": "कॉल्स कैसे इस्तेमाल करें",
       "sections": [
         {
-          "heading": "बोलकर बातचीत करें",
+          "heading": "{ui:packTitle}",
+          "shot": "call-pack",
           "body": [
-            "{ui:roleplayStart} दबाएँ और माइक्रोफोन की अनुमति दें — अब किरदार से बोलकर बात करें।",
-            "जब आप बोलना बंद करेंगे, आपकी बारी खत्म और किरदार जवाब देगा।",
-            "अगर आप अटक जाएँ, तो किरदार अपनी अगली लाइन से मदद करता है। बातचीत चलती रहती है।"
+            "कॉल्स टैब में सबसे ऊपर वाला कार्ड। यह आपके रिकॉर्ड से वह हिस्सा चुनता है जिसे अभी सबसे ज़्यादा बढ़ाना है, और उससे लगभग सात मिनट की बातचीत बनाता है।",
+            "दिन में एक बार मुफ़्त, कॉल का समय नहीं लगता। शुरू करने के लिए {ui:packStart} दबाएँ।"
           ]
         },
         {
-          "heading": "जहाँ अटके, उसे देखें",
+          "heading": "बोलकर बात करें",
+          "shot": "call-talk",
           "body": [
-            "जहाँ आप अटके, वहाँ {ui:roleplayWhyStuck} बटन दिखेगा।",
-            "यह बताएगा कि कहाँ मुश्किल हुई और आप क्या कह सकते थे। {ui:roleplayPracticeCta} से तुरंत अभ्यास करें।"
+            "ट्यूटर पहले बोलता है। आप बोलना रोकते हैं तो आपकी बारी अपने-आप खत्म हो जाती है।",
+            "पैक में ऊपर की पट्टी बताती है कि आप कौन-से सवाल पर हैं, और खत्म होने पर {ui:packSeeRetro} दिखाता है कि आज क्या बढ़ा।",
+            "किसी भी बारे में बात करनी हो तो {ui:roleplayStart} दबाएँ।"
           ]
         },
         {
-          "heading": "रोकें और फिर से शुरू करें",
+          "heading": "खत्म हुई कॉल दोबारा देखें",
+          "shot": "call-review",
           "body": [
-            "{ui:roleplayPause} से बातचीत सेव हो जाती है। अगली बार कॉल्स टैब में {ui:roleplayResume} से वहीं से शुरू करें।",
-            "पूरी हुई बातचीत {ui:roleplayPast} में रहती है — कभी भी पढ़ सकते हैं।"
+            "खत्म हुई कॉल्स {ui:roleplayPast} में रहती हैं। आपकी पंक्तियों के नीचे सुधरा हुआ वाक्य और आप जो कहना चाहते थे, दिखता है।",
+            "{ui:roleplaySayAgain} वह वाक्य सुनाता है ताकि आप दोहराएँ, और बताता है कि कौन-से शब्द अलग सुनाई दिए।",
+            "जहाँ आप अटके थे, वहाँ {ui:roleplayWhyStuck} बटन रहता है।"
           ]
         },
         {
-          "heading": "कॉल का समय और पॉइंट्स",
+          "heading": "{ui:roleplayOwnLineOpen}",
+          "shot": "call-ownline",
           "body": [
-            "एक पॉइंट में पाँच मिनट की कॉल मिलती है। कॉल शुरू होते ही एक पॉइंट कटता है, फिर हर पाँच मिनट बाद एक और।",
-            "अगर कॉल पाँच मिनट से पहले खत्म हो जाए, तो बचा समय अगली कॉल में जुड़ जाता है।",
-            "शुरुआत में 20 पॉइंट्स (100 मिनट) फ्री मिलते हैं। प्रीमियम में हर महीने 80 पॉइंट्स मिलते हैं, जो वीडियो इम्पोर्ट के साथ साझा होते हैं।"
+            "जिस वाक्य का अभ्यास करना है उसे लिखें और {ui:roleplayOwnLineUse} दबाएँ: पहले सुनें, फिर बोलें।",
+            "यह बताता है कि कौन-से शब्द अलग सुनाई दिए। कॉल का समय नहीं लगता।"
+          ]
+        },
+        {
+          "heading": "रोकें और फिर जारी रखें",
+          "body": [
+            "{ui:roleplayPause} बातचीत सहेज लेता है। अगली बार कॉल्स टैब में {ui:roleplayResume} से जारी रखें।"
+          ]
+        },
+        {
+          "heading": "कॉल का समय",
+          "body": [
+            "मुफ़्त प्लान शुरू में 20 पॉइंट (100 मिनट) देता है। एक पॉइंट पाँच मिनट का है।",
+            "लाइट रोज़ 7 मिनट और प्लस 10 मिनट मुफ़्त कॉल देता है; उसके बाद पॉइंट्स से जारी रखें। प्रीमियम हर महीने 80 पॉइंट देता है।",
+            "कॉल्स टैब में आज का बचा समय दिखता है। आज का पैक किसी भी प्लान में समय नहीं लेता।"
           ]
         }
       ]

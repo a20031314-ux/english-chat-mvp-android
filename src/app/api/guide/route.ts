@@ -4,6 +4,7 @@ import { GUIDE_EN, GUIDE_KO, GUIDE_VERSION, type Guide } from "@/lib/guide/conte
 import translations from "@/lib/guide/translations.json";
 import beforeMy from "@/lib/guide/before-my.json";
 import videoBefore267 from "@/lib/guide/videoBefore267.json";
+import roleplayBefore267 from "@/lib/guide/roleplayBefore267.json";
 
 export const runtime = "nodejs";
 
@@ -29,11 +30,13 @@ export async function GET(request: NextRequest) {
   if (request.nextUrl.searchParams.get("my") !== "1") {
     const old = (beforeMy as Partial<Record<string, Pick<Guide, "map" | "chat">>>)[language];
     const video = (videoBefore267 as Partial<Record<string, Guide["video"]>>)[language];
-    if (old || video) {
+    // Nor do they have today's pack, the plans or the pictures of either.
+    const roleplay = (roleplayBefore267 as Partial<Record<string, Guide["roleplay"]>>)[language];
+    if (old || video || roleplay) {
       return jsonWithCors(request, {
         version: GUIDE_VERSION,
         language,
-        tabs: { ...tabs, ...(old ?? {}), ...(video ? { video } : {}) },
+        tabs: { ...tabs, ...(old ?? {}), ...(video ? { video } : {}), ...(roleplay ? { roleplay } : {}) },
       });
     }
   }

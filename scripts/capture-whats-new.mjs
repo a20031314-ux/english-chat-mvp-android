@@ -92,7 +92,11 @@ const GUIDE_VIDEO = VERSION === "guide-video";
 // hidden meanings, the characters tab). Each language spends two chat lines.
 const GUIDE_CHAT = VERSION === "guide-chat";
 const GUIDE_VOCAB = VERSION === "guide-vocab";
-const GUIDE = VERSION === "guide" || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB;
+// `guide-call`: the call tab's how-to — today's pack on the door, the pack
+// call under way, a finished call read back, saying a sentence of your own.
+// The English interface learns Japanese here, the only other pack language.
+const GUIDE_CALL = VERSION === "guide-call";
+const GUIDE = VERSION === "guide" || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL;
 const GUIDE_ITEMS = [
   { shot: "goal" },
   { shot: "next" },
@@ -117,6 +121,12 @@ const GUIDE_CHAT_ITEMS = [
   { shot: "chat-word" },
   { shot: "chat-menu" },
   { shot: "chat-history" },
+];
+const GUIDE_CALL_ITEMS = [
+  { shot: "call-pack" },
+  { shot: "call-talk" },
+  { shot: "call-review" },
+  { shot: "call-ownline" },
 ];
 const GUIDE_VOCAB_ITEMS = [
   { shot: "vocab-search" },
@@ -175,6 +185,8 @@ const note = STORE_MY
   ? { version: "guide", items: GUIDE_CHAT_ITEMS }
   : GUIDE_VOCAB
   ? { version: "guide", items: GUIDE_VOCAB_ITEMS }
+  : GUIDE_CALL
+  ? { version: "guide", items: GUIDE_CALL_ITEMS }
   : GUIDE_VIDEO
   ? { version: "guide", items: GUIDE_VIDEO_ITEMS }
   : GUIDE ? { version: "guide", items: GUIDE_ITEMS } : RELEASE_NOTES.find((entry) => entry.version === VERSION);
@@ -271,6 +283,15 @@ const REPEATED_MISTAKE = {
 
 /** A call already had, read back, with one sentence rebuilt into what was meant. */
 const PAST_CALL = {
+  ja: [
+    { who: "tutor", text: "やあ！週末はどうだった？" },
+    { who: "learner", text: "昨日カフェ行くとコーヒーたくさん飲むした", meant: "昨日カフェに行って、コーヒーをたくさん飲んだ。" },
+    { who: "tutor", text: "いいね！どのカフェに行ったの？" },
+    { who: "learner", text: "会社の近くの新しいところ。" },
+    { who: "tutor", text: "そこ、評判いいよね。混んでた？" },
+    { who: "learner", text: "はい、とても混む。長い待った", better: "うん、すごく混んでた。長く待ったよ。" },
+    { who: "tutor", text: "おいしいコーヒーのためならしかたないね！" },
+  ],
   en: [
     { who: "tutor", text: "Hi! How was your weekend?" },
     { who: "learner", text: "I am go cafe yesterday and drink coffee much", meant: "I went to a cafe yesterday and drank a lot of coffee." },
@@ -313,6 +334,9 @@ const CLEAN_LINES = {
 };
 
 /** "Try saying:", for the help shown when a learner was stuck in a call. */
+/** A sentence typed into "say a sentence of your own", in the language learned. */
+const OWN_LINE = { en: "Could you say that one more time, please?", ja: "もう一度言ってもらえますか？", es: "¿Me lo puedes repetir, por favor?" };
+
 const TIP_LEAD = {
   ko: "이렇게 말해 보세요:", en: "Try saying:", es: "Prueba a decir:", ja: "こう言ってみましょう:", zh: "可以这样说：",
   vi: "Thử nói:", fr: "Essayez de dire :", it: "Prova a dire:", pt: "Tente dizer:", ru: "Попробуйте сказать:",
@@ -800,6 +824,37 @@ const STEPS = {
     await page.getByRole("button", { name: exactly(ui.markOpenMap) }).first().scrollIntoViewIfNeeded().catch(() => undefined);
     await wait(800);
   },
+  async "call-pack"({ page, ui, wait }) {
+    // The call tab can keep a request open, so "networkidle" may never come.
+    await page.goto(`${BASE}/?screen=roleplay`, { waitUntil: "domcontentloaded" });
+    const card = page.getByText(exactly(ui.packTitle)).first();
+    for (let i = 0; i < 40 && !(await card.count()); i++) await wait(500);
+    if (!(await card.count())) throw new Error("no pack card");
+    await wait(1500);
+  },
+  async "call-talk"({ page, ui, wait }) {
+    // Continues from the door: the pack call, its band and the tutor's first line.
+    await page.getByRole("button", { name: new RegExp(`^${escape(ui.packStart)}|^${escape(ui.packContinue.split("(")[0].trim())}`) }).first().click();
+    const band = page.getByText(new RegExp(escape(ui.packProgress.split("{n}")[0].trim()))).first();
+    for (let i = 0; i < 40 && !(await band.count()); i++) await wait(500);
+    // The first line on screen; taken before the fake microphone's tone is heard as a turn.
+    await wait(6000);
+  },
+  async "call-review"({ page, ui, locale, wait, target }) {
+    await STEPS.calltools({ page, ui, locale, wait, target });
+  },
+  async "call-ownline"({ page, ui, wait, target }) {
+    await page.goto(`${BASE}/?screen=roleplay`, { waitUntil: "domcontentloaded" });
+    const open = page.getByRole("button", { name: exactly(ui.roleplayOwnLineOpen) });
+    for (let i = 0; i < 40 && !(await open.count()); i++) await wait(500);
+    await open.first().click();
+    await wait(800);
+    const field = page.getByPlaceholder(ui.roleplayOwnLinePlaceholder);
+    await field.fill(OWN_LINE[target] ?? OWN_LINE.en);
+    await field.scrollIntoViewIfNeeded();
+    await page.mouse.wheel(0, 200);
+    await wait(800);
+  },
   async calltools({ page, ui, locale, wait, target }) {
     const said = PAST_CALL[target].map((line, i) =>
       // The help offered when they stalled before "I waited…", not the correction.
@@ -961,13 +1016,17 @@ async function save(png, locale, shot) {
     .toFile(path.join(dir, `${shot}.webp`));
 }
 
-const browser = await chromium.launch(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {});
+const browser = await chromium.launch({
+  ...(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {}),
+  // The call opens the microphone; a fake one answers the permission prompt.
+  ...(GUIDE_CALL ? { args: ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream", "--autoplay-policy=no-user-gesture-required"] } : {}),
+});
 const day = new Date().toISOString().slice(0, 10).replace(/-/g, "");
 let failed = 0;
 for (const locale of only ?? Object.keys(copy)) {
   const ui = copy[locale];
   // The store frame expects a 20:9 phone (store-shots/frame.html).
-  const context = await browser.newContext({ viewport: { width: 412, height: STORE ? 915 : 860 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
+  const context = await browser.newContext({ viewport: { width: 412, height: STORE ? 915 : 860 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, ...(GUIDE_CALL ? { permissions: ["microphone"] } : {}) });
   const page = await context.newPage();
   await page.route("**/api/**", (route) =>
     route.continue({ headers: { ...route.request().headers(), "x-rc-user": `${process.env.CAPTURE_USER || `whats-new-capture-${day}${process.env.CAPTURE_RUN ? `-${process.env.CAPTURE_RUN}` : ""}`}-${locale}` } }),
@@ -980,8 +1039,9 @@ for (const locale of only ?? Object.keys(copy)) {
       localStorage.setItem("appUiLocale", uiLocale);
       localStorage.setItem("chatOwnLanguageTipSeen", "1");
       localStorage.setItem("whatsNewSeenVersion", "999");
-    }, [locale === "en" ? "es" : "en", locale]);
-    const target = locale === "en" ? "es" : "en";
+      localStorage.setItem("callDataNoticeSeen.v1", "1");
+    }, [locale === "en" ? (GUIDE_CALL ? "ja" : "es") : "en", locale]);
+    const target = locale === "en" ? (GUIDE_CALL ? "ja" : "es") : "en";
     // CAPTURE_SHOTS=chat,pick retakes only those, for a language whose run stopped partway.
     const onlyShots = process.env.CAPTURE_SHOTS?.split(",");
     for (const item of note.items) {

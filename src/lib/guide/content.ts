@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-18";
+export const GUIDE_VERSION = "2026-10-18b";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms";
 
@@ -174,33 +174,51 @@ export const GUIDE_KO: Guide = {
     title: "통화 사용법",
     sections: [
       {
-        heading: "말로 대화하기",
+        heading: "{ui:packTitle}",
         body: [
-          "‘{ui:roleplayStart}’을 누르고 마이크를 허용하면 캐릭터와 말로 대화해요.",
-          "말을 멈추면 자동으로 내 차례가 끝나고 캐릭터가 답해요.",
-          "막히면 캐릭터가 다음 말로 도와줘요. 대화는 끊기지 않아요.",
+          "통화 탭 맨 위 카드예요. 내 기록에서 지금 가장 키울 곳을 골라 약 7분짜리 대화를 만들어요.",
+          "하루 한 번 무료이고 통화 시간을 쓰지 않아요. ‘{ui:packStart}’을 누르면 시작해요.",
         ],
+        shot: "call-pack",
       },
       {
-        heading: "막혔던 곳 돌아보기",
+        heading: "말로 대화하기",
         body: [
-          "막혔던 차례에는 ‘{ui:roleplayWhyStuck}’ 버튼이 남아요.",
-          "누르면 왜 어려웠는지와 이렇게 말할 수 있었다는 표현을 보여주고, ‘{ui:roleplayPracticeCta}’로 바로 연습할 수 있어요.",
+          "튜터가 먼저 말하고, 내가 말을 멈추면 자동으로 내 차례가 끝나요.",
+          "팩에서는 위 띠에 몇 번째 질문인지 보이고, 끝나면 ‘{ui:packSeeRetro}’로 오늘 무엇이 늘었는지 봐요.",
+          "주제 없이 말하고 싶으면 ‘{ui:roleplayStart}’를 눌러요.",
         ],
+        shot: "call-talk",
+      },
+      {
+        heading: "끝난 대화 돌아보기",
+        body: [
+          "끝난 대화는 ‘{ui:roleplayPast}’에 남아요. 내 줄 아래에 고친 문장과 원래 하려던 말이 보여요.",
+          "‘{ui:roleplaySayAgain}’를 누르면 그 문장을 듣고 따라 말해, 다르게 들린 단어를 알려줘요.",
+          "막혔던 차례에는 ‘{ui:roleplayWhyStuck}’ 버튼이 남아요.",
+        ],
+        shot: "call-review",
+      },
+      {
+        heading: "{ui:roleplayOwnLineOpen}",
+        body: [
+          "연습하고 싶은 문장을 넣고 ‘{ui:roleplayOwnLineUse}’을 누르면, 들어본 뒤 따라 말할 수 있어요.",
+          "어느 단어가 다르게 들렸는지 알려줘요. 통화 시간은 쓰지 않아요.",
+        ],
+        shot: "call-ownline",
       },
       {
         heading: "멈추고 이어서 하기",
         body: [
-          "‘{ui:roleplayPause}’을 누르면 대화가 저장돼요. 다음에 통화 탭에서 ‘{ui:roleplayResume}’로 계속할 수 있어요.",
-          "끝난 대화는 ‘{ui:roleplayPast}’에서 다시 읽을 수 있어요.",
+          "‘{ui:roleplayPause}’을 누르면 대화가 저장돼요. 다음에 통화 탭에서 ‘{ui:roleplayResume}’로 계속해요.",
         ],
       },
       {
-        heading: "통화 시간과 포인트",
+        heading: "통화 시간",
         body: [
-          "통화는 5분에 1포인트예요. 통화를 시작할 때 1포인트가 쓰이고, 5분이 지날 때마다 1포인트씩 더 쓰여요.",
-          "5분을 다 쓰지 않고 끝내도 남은 시간은 다음 통화로 이어져요.",
-          "처음에 무료로 20포인트(100분)를 드려요. 프리미엄은 매달 80포인트를 받고, 영상 가져오기와 함께 써요.",
+          "무료는 처음에 20포인트(100분)를 드려요. 5분에 1포인트예요.",
+          "라이트는 매일 자유 통화 7분, 플러스는 10분이 있고, 다 쓰면 포인트로 이어서 해요. 프리미엄은 매달 80포인트를 받아요.",
+          "통화 첫 화면에 오늘 남은 시간이 보여요. 오늘의 팩은 어느 요금이든 시간을 쓰지 않아요.",
         ],
       },
     ],
@@ -455,33 +473,51 @@ export const GUIDE_EN: Guide = {
     title: "How to use Calls",
     sections: [
       {
-        heading: "Talk out loud",
+        heading: "{ui:packTitle}",
         body: [
-          "Tap {ui:roleplayStart} and allow the microphone to talk with the character.",
-          "When you stop speaking, your turn ends and the character answers.",
-          "If you get stuck, the character helps you along in what it says next. The conversation keeps going.",
+          "The card at the top of the Calls tab. It picks what your record says to grow next and makes a conversation of about seven minutes from it.",
+          "It's free once a day and uses no call time. Tap {ui:packStart} to begin.",
         ],
+        shot: "call-pack",
       },
       {
-        heading: "Look back at where you got stuck",
+        heading: "Talk out loud",
         body: [
-          "A turn where you got stuck keeps a {ui:roleplayWhyStuck} button.",
-          "It shows why it was hard and what you could have said, and you can practise it straight away with {ui:roleplayPracticeCta}.",
+          "The tutor speaks first. When you stop speaking, your turn ends by itself.",
+          "In a pack, the band at the top shows which question you're on, and when it ends {ui:packSeeRetro} shows what grew today.",
+          "To talk about anything, tap {ui:roleplayStart}.",
         ],
+        shot: "call-talk",
+      },
+      {
+        heading: "Look back at a finished call",
+        body: [
+          "Finished calls stay in {ui:roleplayPast}. Under your lines you'll see the corrected sentence and what you meant to say.",
+          "{ui:roleplaySayAgain} plays that sentence for you to repeat, and shows which words came through differently.",
+          "A turn where you got stuck keeps a {ui:roleplayWhyStuck} button.",
+        ],
+        shot: "call-review",
+      },
+      {
+        heading: "{ui:roleplayOwnLineOpen}",
+        body: [
+          "Type a sentence you want to practise and tap {ui:roleplayOwnLineUse}: listen to it, then say it.",
+          "It shows which words came through differently. It uses no call time.",
+        ],
+        shot: "call-ownline",
       },
       {
         heading: "Pause and carry on",
         body: [
           "{ui:roleplayPause} saves the conversation. Next time, {ui:roleplayResume} in the Calls tab picks it up again.",
-          "Finished conversations stay in {ui:roleplayPast} to read again.",
         ],
       },
       {
-        heading: "Call time and points",
+        heading: "Call time",
         body: [
-          "A point buys five minutes of calls. One point is used when a call starts, and another every five minutes after.",
-          "If a call ends before its five minutes are up, the time left carries into your next call.",
-          "You get 20 points (100 minutes) free to start. Premium gives 80 points a month, shared with video imports.",
+          "Free gives you 20 points (100 minutes) to start. A point is five minutes.",
+          "Lite gives 7 minutes of free calls every day and Plus 10; after that, points carry you on. Premium gives 80 points a month.",
+          "The Calls tab shows today's time left. Today's pack uses no time on any plan.",
         ],
       },
     ],
