@@ -45,6 +45,7 @@ export const RELEASE_NOTES: ReleaseNote[] = [
       { id: "people", title: "whatsNewPeopleTitle", body: "whatsNewPeopleBody", shot: "people", tab: "people" },
       { id: "invite", title: "whatsNewInviteTitle", body: "whatsNewInviteBody", shot: "invite", tab: "people" },
       { id: "groups", title: "whatsNewGroupsTitle", body: "whatsNewGroupsBody", shot: "groups", tab: "messages" },
+      { id: "team", title: "whatsNewTeamTitle", body: "whatsNewTeamBody", shot: "team", tab: "messages" },
       { id: "freetalk", title: "whatsNewFreeTalkTitle", body: "whatsNewFreeTalkBody", shot: "freetalk", tab: "rooms" },
       { id: "quote", title: "whatsNewQuoteTitle", body: "whatsNewQuoteBody", shot: "quote", tab: "rooms" },
       { id: "layouts", title: "whatsNewLayoutsTitle", body: "whatsNewLayoutsBody", shot: "layouts", tab: "rooms" },

@@ -527,7 +527,9 @@
     "whatsNewNotesTitle": "📒 マイにノート",
     "whatsNewNotesBody": "「マイ」の「ノート」に、表現・単語・文の分析で聞いたことが8章のテーマごとに集まります。検索でき、テーマごとに「このテーマで練習」。単語帳はノートの「単語」に移りました。",
     "whatsNewBoardTitle": "📝 掲示板",
-    "whatsNewBoardBody": "「人と学ぶ」→「マイ」→「掲示板」で、学んでいる言語で投稿し、コメントできます。編集・削除は書いた人だけ。「自分の言語で見る」で翻訳。"
+    "whatsNewBoardBody": "「人と学ぶ」→「マイ」→「掲示板」で、学んでいる言語で投稿し、コメントできます。編集・削除は書いた人だけ。「自分の言語で見る」で翻訳。",
+    "whatsNewTeamTitle": "🤝 メイト・チーム",
+    "whatsNewTeamBody": "プロフィールから「🤝 メイト申請」、グループは「チームにする」。「ワークスペース」に今週の目標・定例会・いっしょにした日、聞いた表現と通話の記録がたまります。"
   },
   "zh": {
     "billingClose": "关闭",
@@ -1057,7 +1059,9 @@
     "whatsNewNotesTitle": "📒 “我的”里的笔记",
     "whatsNewNotesBody": "“我的”下方的“笔记”把你的表达、单词和句子分析里问过的问题按 8 章主题汇总。可以搜索，每个主题都能“练习这个主题”。单词本现在在笔记里的“单词”。",
     "whatsNewBoardTitle": "📝 论坛",
-    "whatsNewBoardBody": "在“和人一起学”→“我的”→“论坛”里，用你在学的语言发帖、评论。只有作者能编辑或删除，“用我的语言看”可翻译。"
+    "whatsNewBoardBody": "在“和人一起学”→“我的”→“论坛”里，用你在学的语言发帖、评论。只有作者能编辑或删除，“用我的语言看”可翻译。",
+    "whatsNewTeamTitle": "🤝 学习伙伴和小组",
+    "whatsNewTeamBody": "在个人资料里点“🤝 申请成为伙伴”，群聊可以“设为小组”。“工作区”里有本周目标、固定聚会、一起学习的天数，问过的表达和通话记录也会一直留着。"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -1589,7 +1593,9 @@
     "whatsNewNotesTitle": "📒 Ghi chú trong Của tôi",
     "whatsNewNotesBody": "Trong “Của tôi”, “Ghi chú” gom cụm từ, từ vựng và câu hỏi bạn đã hỏi khi phân tích câu thành 8 chương theo chủ đề. Tìm kiếm được, mỗi chủ đề có “Luyện chủ đề này”. Sổ từ giờ nằm trong Ghi chú ở mục “Từ”.",
     "whatsNewBoardTitle": "📝 Bảng tin",
-    "whatsNewBoardBody": "Ở “Học với mọi người” → “Của tôi” → “Bảng tin”, đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết mới sửa hoặc xóa được; “Xem bằng ngôn ngữ của tôi” để dịch."
+    "whatsNewBoardBody": "Ở “Học với mọi người” → “Của tôi” → “Bảng tin”, đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết mới sửa hoặc xóa được; “Xem bằng ngôn ngữ của tôi” để dịch.",
+    "whatsNewTeamTitle": "🤝 Bạn học & nhóm",
+    "whatsNewTeamBody": "Từ hồ sơ chọn “🤝 Mời làm bạn học”, nhóm chat thì “Biến thành nhóm”. “Không gian” lưu mục tiêu tuần, buổi gặp định kỳ, số ngày học cùng, cùng các cụm từ đã hỏi và bản ghi cuộc gọi."
   },
   "fr": {
     "billingClose": "Fermer",
@@ -2126,7 +2132,9 @@
     "whatsNewNotesTitle": "📒 Des notes dans Moi",
     "whatsNewNotesBody": "Dans « Moi », « Notes » regroupe vos expressions, vos mots et les questions posées en analyse de phrase, en 8 chapitres par thème. Cherchez-y, et « S'entraîner sur ce thème » pour chacun. Le vocabulaire est maintenant dans Notes, sous « Vocabulaire ».",
     "whatsNewBoardTitle": "📝 Forum",
-    "whatsNewBoardBody": "Dans « Avec des gens » → « Moi » → « Forum », publiez dans la langue que vous apprenez et commentez. Seul l'auteur peut modifier ou supprimer ; « Voir dans ma langue » traduit."
+    "whatsNewBoardBody": "Dans « Avec des gens » → « Moi » → « Forum », publiez dans la langue que vous apprenez et commentez. Seul l'auteur peut modifier ou supprimer ; « Voir dans ma langue » traduit.",
+    "whatsNewTeamTitle": "🤝 Partenaires et équipes",
+    "whatsNewTeamBody": "« 🤝 Proposer d’être partenaires » depuis un profil, ou « En faire une équipe » pour un groupe. L’« Espace » garde l’objectif de la semaine, le rendez-vous fixe, les jours ensemble, les expressions et les appels."
   },
   "it": {
     "archive": "Report",
@@ -2855,7 +2863,9 @@
     "whatsNewNotesTitle": "📒 Note in Io",
     "whatsNewNotesBody": "In “Io”, “Note” raccoglie le tue espressioni, le parole e le domande fatte nell'analisi della frase in 8 capitoli per argomento. Cercale e usa “Esercitati su questo argomento”. Il vocabolario ora è dentro Note, in “Vocabolario”.",
     "whatsNewBoardTitle": "📝 Bacheca",
-    "whatsNewBoardBody": "In “Con le persone” → “Io” → “Bacheca”, pubblica nella lingua che impari e commenta. Solo chi scrive può modificare o eliminare; “Vedi nella mia lingua” traduce."
+    "whatsNewBoardBody": "In “Con le persone” → “Io” → “Bacheca”, pubblica nella lingua che impari e commenta. Solo chi scrive può modificare o eliminare; “Vedi nella mia lingua” traduce.",
+    "whatsNewTeamTitle": "🤝 Compagni e squadre",
+    "whatsNewTeamBody": "“🤝 Proponi di essere compagni” da un profilo, o “Rendila una squadra” in un gruppo. Lo “Spazio” tiene l’obiettivo della settimana, l’incontro fisso, i giorni insieme, le espressioni e le chiamate."
   },
   "pt": {
     "billingClose": "Fechar",
@@ -3395,7 +3405,9 @@
     "whatsNewNotesTitle": "📒 Notas em Meu espaço",
     "whatsNewNotesBody": "Em “Meu espaço”, “Notas” reúne suas expressões, palavras e as perguntas da análise de frases em 8 capítulos por tema. Pesquise e use “Praticar este tema”. O vocabulário agora fica dentro de Notas, em “Vocabulário”.",
     "whatsNewBoardTitle": "📝 Mural",
-    "whatsNewBoardBody": "Em “Com pessoas” → “Meu espaço” → “Mural”, publique no idioma que você aprende e comente. Só quem escreveu pode editar ou excluir; “Ver no meu idioma” traduz."
+    "whatsNewBoardBody": "Em “Com pessoas” → “Meu espaço” → “Mural”, publique no idioma que você aprende e comente. Só quem escreveu pode editar ou excluir; “Ver no meu idioma” traduz.",
+    "whatsNewTeamTitle": "🤝 Parceiros e equipes",
+    "whatsNewTeamBody": "“🤝 Propor ser parceiros” no perfil, ou “Transformar em equipe” num grupo. O “Espaço” guarda a meta da semana, o encontro fixo, os dias juntos e as expressões e chamadas de vocês."
   },
   "ru": {
     "archive": "Отчёты",
@@ -4122,7 +4134,9 @@
     "whatsNewNotesTitle": "📒 Заметки в «Моё»",
     "whatsNewNotesBody": "В «Моё» раздел «Заметки» собирает ваши выражения, слова и вопросы из разбора предложений в 8 глав по темам. Ищите по ним и жмите «Тренировать эту тему». Словарь теперь внутри «Заметок», в «Словарь».",
     "whatsNewBoardTitle": "📝 Доска",
-    "whatsNewBoardBody": "В «С людьми» → «Моё» → «Доска» публикуйте на изучаемом языке и комментируйте. Изменять и удалять может только автор; «Показать на моём языке» переводит."
+    "whatsNewBoardBody": "В «С людьми» → «Моё» → «Доска» публикуйте на изучаемом языке и комментируйте. Изменять и удалять может только автор; «Показать на моём языке» переводит.",
+    "whatsNewTeamTitle": "🤝 Напарники и команды",
+    "whatsNewTeamBody": "«🤝 Предложить стать напарниками» в профиле или «Сделать командой» в группе. В «Пространстве» — цель недели, регулярная встреча, дни вместе, а ещё выражения и записи звонков."
   },
   "id": {
     "billingClose": "Tutup",
@@ -4658,7 +4672,9 @@
     "whatsNewNotesTitle": "📒 Catatan di Saya",
     "whatsNewNotesBody": "Di “Saya”, “Catatan” mengumpulkan ungkapan, kata, dan pertanyaan dari analisis kalimat ke 8 bab per topik. Bisa dicari, dan tiap topik punya “Latih topik ini”. Kosakata sekarang ada di dalam Catatan, di “Kosakata”.",
     "whatsNewBoardTitle": "📝 Papan",
-    "whatsNewBoardBody": "Di “Belajar dengan orang” → “Saya” → “Papan”, kirim tulisan dalam bahasa yang kamu pelajari dan beri komentar. Hanya penulis yang bisa mengubah atau menghapus; “Lihat dalam bahasaku” menerjemahkan."
+    "whatsNewBoardBody": "Di “Belajar dengan orang” → “Saya” → “Papan”, kirim tulisan dalam bahasa yang kamu pelajari dan beri komentar. Hanya penulis yang bisa mengubah atau menghapus; “Lihat dalam bahasaku” menerjemahkan.",
+    "whatsNewTeamTitle": "🤝 Teman belajar & tim",
+    "whatsNewTeamBody": "“🤝 Ajak jadi teman belajar” dari profil, atau “Jadikan tim” untuk grup. “Ruang kerja” menyimpan target minggu ini, jadwal rutin, hari belajar bersama, serta ungkapan dan rekaman panggilan."
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -5188,7 +5204,9 @@
     "whatsNewNotesTitle": "📒 الملاحظات في «أنا»",
     "whatsNewNotesBody": "في «أنا» تجمع «الملاحظات» عباراتك وكلماتك والأسئلة التي طرحتها في تحليل الجمل في 8 فصول حسب الموضوع. ابحث فيها، ولكل موضوع «تدرّب على هذا الموضوع». المفردات صارت داخل الملاحظات في «مفردات».",
     "whatsNewBoardTitle": "📝 اللوحة",
-    "whatsNewBoardBody": "في «التعلّم مع الناس» ← «أنا» ← «اللوحة» انشر باللغة التي تتعلمها وعلّق على منشورات غيرك. الكاتب وحده يعدّل أو يحذف، و«اعرض بلغتي» يترجم."
+    "whatsNewBoardBody": "في «التعلّم مع الناس» ← «أنا» ← «اللوحة» انشر باللغة التي تتعلمها وعلّق على منشورات غيرك. الكاتب وحده يعدّل أو يحذف، و«اعرض بلغتي» يترجم.",
+    "whatsNewTeamTitle": "🤝 الرفاق والفرق",
+    "whatsNewTeamBody": "«🤝 اطلب أن تكونا رفيقين» من الملف الشخصي، أو «اجعلها فريقًا» للمجموعة. تحفظ «مساحة العمل» هدف الأسبوع واللقاء الدوري وأيام الدراسة معًا والعبارات وسجلات المكالمات."
   },
   "th": {
     "billingClose": "ปิด",
@@ -5718,7 +5736,9 @@
     "whatsNewNotesTitle": "📒 โน้ตใน ของฉัน",
     "whatsNewNotesBody": "ใน “ของฉัน” ส่วน “โน้ต” รวมสำนวน คำศัพท์ และคำถามจากการวิเคราะห์ประโยคไว้ 8 บทตามหัวข้อ ค้นหาได้ และแต่ละหัวข้อมี “ฝึกหัวข้อนี้” สมุดคำศัพท์ย้ายไปอยู่ในโน้ตที่ “คำศัพท์” แล้ว",
     "whatsNewBoardTitle": "📝 กระดาน",
-    "whatsNewBoardBody": "ที่ “เรียนกับผู้คน” → “ของฉัน” → “กระดาน” โพสต์เป็นภาษาที่เรียนและแสดงความคิดเห็นได้ แก้ไขหรือลบได้เฉพาะคนเขียน “ดูเป็นภาษาของฉัน” ช่วยแปล"
+    "whatsNewBoardBody": "ที่ “เรียนกับผู้คน” → “ของฉัน” → “กระดาน” โพสต์เป็นภาษาที่เรียนและแสดงความคิดเห็นได้ แก้ไขหรือลบได้เฉพาะคนเขียน “ดูเป็นภาษาของฉัน” ช่วยแปล",
+    "whatsNewTeamTitle": "🤝 เพื่อนเรียนและทีม",
+    "whatsNewTeamBody": "กด “🤝 ขอเป็นเพื่อนเรียน” จากโปรไฟล์ หรือ “ตั้งเป็นทีม” ในกลุ่ม “พื้นที่ทำงาน” เก็บเป้าหมายสัปดาห์นี้ นัดประจำ วันที่เรียนด้วยกัน สำนวนที่ถามและบันทึกการโทร"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -6248,6 +6268,8 @@
     "whatsNewNotesTitle": "📒 मेरा में नोट्स",
     "whatsNewNotesBody": "“मेरा” में “नोट्स” आपकी अभिव्यक्तियाँ, शब्द और वाक्य-विश्लेषण में पूछे सवाल 8 अध्यायों में विषय के हिसाब से जोड़ते हैं। खोजें, और हर विषय पर “इस विषय का अभ्यास करें”। शब्दावली अब नोट्स के अंदर “शब्द” में है।",
     "whatsNewBoardTitle": "📝 बोर्ड",
-    "whatsNewBoardBody": "“लोगों के साथ सीखें” → “मेरा” → “बोर्ड” में सीखी जा रही भाषा में पोस्ट करें और टिप्पणी करें। सिर्फ़ लिखने वाला बदल या हटा सकता है; “मेरी भाषा में देखें” अनुवाद करता है।"
+    "whatsNewBoardBody": "“लोगों के साथ सीखें” → “मेरा” → “बोर्ड” में सीखी जा रही भाषा में पोस्ट करें और टिप्पणी करें। सिर्फ़ लिखने वाला बदल या हटा सकता है; “मेरी भाषा में देखें” अनुवाद करता है।",
+    "whatsNewTeamTitle": "🤝 साथी और टीमें",
+    "whatsNewTeamBody": "प्रोफ़ाइल से “🤝 साथी बनने का अनुरोध”, या ग्रुप के लिए “टीम बनाएँ”। “वर्कस्पेस” में इस हफ़्ते का लक्ष्य, नियमित मीटिंग, साथ पढ़े दिन, पूछे गए शब्द और कॉल रिकॉर्ड रहते हैं।"
   }
 }

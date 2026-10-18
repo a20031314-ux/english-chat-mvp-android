@@ -74,6 +74,7 @@ async function loadModules() {
 const { copy, RELEASE_NOTES } = await loadModules();
 // 말하는 방 화면 문구(copy.ts와 따로, src/lib/rooms/copy.ts) — 단계에서 버튼 이름을 찾는 데.
 const { roomCopy: roomCopyFor } = await import(`file://${path.join(ROOT, "src/lib/rooms/copy.ts").replace(/\\/g, "/")}`);
+const { teamCopy: teamCopyFor } = await import(`file://${path.join(ROOT, "src/lib/rooms/teamCopy.ts").replace(/\\/g, "/")}`);
 const { inviteCopy: inviteCopyFor } = await import(`file://${path.join(ROOT, "src/lib/invite/copy.ts").replace(/\\/g, "/")}`);
 const { askPhrase } = await import(`file://${path.join(ROOT, "src/lib/rooms/quote.ts").replace(/\\/g, "/")}`);
 /**
@@ -470,6 +471,11 @@ const BOARD_POSTS = {
     ["omar", "Busco a alguien para practicar los sábados. Soy principiante pero practico cada día.", 2],
   ],
 };
+// 2.69 러닝메이트·팀 장면: 단체방을 팀으로 올린 워크스페이스(고정 응답) — 목표·정기 모임·같이 한 날·쌓인 것.
+const TEAM_SPACE = {
+  en: { goal: "Each of us tells one story from the weekend", phrase: "It was a piece of cake.", share: ["catch up", "to talk after not seeing each other"], call: ["How was your weekend?", "I went hiking with my sister.", "Nice! Where did you go?"] },
+  es: { goal: "Cada uno cuenta una historia del fin de semana", phrase: "Fue pan comido.", share: ["ponerse al día", "hablar después de no verse"], call: ["¿Qué tal tu fin de semana?", "Fui de excursión con mi hermana.", "¡Qué bien! ¿Adónde fuisteis?"] },
+};
 function socialMocks(page, target, ui) {
   const now = Date.now();
   // 2.69 host 장면: 내가 방장이 된 것처럼(물을 때마다 읽음).
@@ -556,6 +562,20 @@ function socialMocks(page, target, ui) {
         { seq: 4, from: PEOPLE.lucia.id, kind: "text", text: g.c, at: now - 120_000 },
         { seq: 5, from: PEOPLE.yuki.id, kind: "system", text: "call", roomId: "capt04", at: now - 60_000 },
       ];
+      if (page.__social.team) {
+        const day = 86_400_000;
+        group.team = { kind: "team", since: now - 20 * day, goal: TEAM_SPACE[target].goal, goalBy: PEOPLE.yuki.id, schedule: { days: [2, 4], time: "21:00", tz: "Asia/Seoul" } };
+        if (body.action === "space") {
+          const ts = TEAM_SPACE[target];
+          const days = [0, 1, 2, 3, 5, 6].map((n) => new Date(now - n * day).toISOString().slice(0, 10));
+          const items = [
+            { id: "s1", kind: "share", at: now - 3_600_000, by: PEOPLE.lucia.id, text: ts.share[0], note: ts.share[1] },
+            { id: "s2", kind: "phrase", at: now - 2 * day, by: PEOPLE.me.id, from: PEOPLE.yuki.id, text: ts.phrase },
+            { id: "s3", kind: "session", at: now - 3 * day, by: PEOPLE.yuki.id, text: "3", lines: ts.call.map((text, i) => ({ from: [PEOPLE.yuki.id, PEOPLE.omar.id, PEOPLE.lucia.id][i], nickname: ["Yuki", "Omar", "Lucía"][i], text })) },
+          ];
+          return json(route, { group, space: { items, days } });
+        }
+      }
       if (body.action === "mine") return json(route, { groups: [{ group, unread: 2, invite: false }] });
       if (body.action === "open") return json(route, { group, messages, call: { roomId: "capt04", live: 2 } });
       if (body.action === "poll") return json(route, { group, messages: [], call: { roomId: "capt04", live: 2 } });
@@ -680,6 +700,20 @@ const STEPS = {
     if (await close.count()) await close.first().click();
     await page.locator("li button", { hasText: GROUP_LINES[target].name }).first().click();
     await wait(3000);
+  },
+  async team({ page, ui, locale, wait, target }) {
+    // 메시지 탭 → 팀으로 올린 단체방 → "워크스페이스"(고정 응답).
+    if (!page.__social) await socialMocks(page, target, ui);
+    page.__social.team = true;
+    await page.evaluate(() => localStorage.removeItem("invite:pending:v1"));
+    await page.goto(`${BASE}/?screen=messages`, { waitUntil: "networkidle" });
+    await wait(2500);
+    const close = page.getByRole("button", { name: exactly(inviteCopyFor(locale).later) });
+    if (await close.count()) await close.first().click();
+    await page.locator("li button", { hasText: GROUP_LINES[target].name }).first().click();
+    await wait(2500);
+    await page.getByRole("tab", { name: exactly(teamCopyFor(locale).tabSpace) }).click();
+    await wait(2500);
   },
   async hint({ page, ui, locale, wait, target }) {
     // 내가 방장(말하기 자리)으로 들어가 가짜 마이크로 한 마디 → 받아쓰기는 편한 말 조각(고정) → 💡 힌트.
