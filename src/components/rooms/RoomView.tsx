@@ -112,6 +112,8 @@ export function RoomView({
   const aliveRef = useRef(true);
 
   const isHost = peerId === room.hostPeerId;
+  // 방장이 다시 들어오면 서버가 방장 자리를 새 peerId로 옮긴다 — 버튼 이름(방 닫기)을 맞추려고 들어갈 때 받은 값으로.
+  const [closesOnLeave, setClosesOnLeave] = useState(isHost && !room.private);
   const free = Boolean(room.private) || canSeatFreely(peerId, room.hostPeerId, members);
 
   useEffect(() => {
@@ -296,6 +298,7 @@ export function RoomView({
         });
         if (!aliveRef.current) return;
         offsetRef.current = result.now - Date.now();
+        setClosesOnLeave(!result.room.private && result.room.hostPeerId === peerId);
         raise(result.member.hand);
         if (result.member.role === "speaker") await adoptRole("speaker", "");
         else if (result.member.hand) setNotice("handUp");
@@ -385,7 +388,8 @@ export function RoomView({
               </button>
             ) : null}
             <button type="button" onClick={onLeave} className="rounded-lg bg-rose-500/80 px-3 py-1.5 text-sm font-medium text-white">
-              {t.leave}
+              {/* 방장이 나가면 서버가 방을 닫는다(1:1 통화 방은 아님). */}
+              {closesOnLeave ? t.closeRoom : t.leave}
             </button>
           </div>
         </div>

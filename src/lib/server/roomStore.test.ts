@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { MAX_SPEAKERS } from "../rooms/protocol.ts";
-import { addLine, createRoom, grantRole, isInviteCode, joinRoom, leaveRoom, listRooms, poll, sendSignal } from "./roomStore.ts";
+import { addLine, closeRoom, createRoom, grantRole, isInviteCode, joinRoom, leaveRoom, listRooms, poll, sendSignal } from "./roomStore.ts";
 
 // KV 접속 정보 없이 메모리로 돈다(kv.ts). 운영 저장소에 닿지 않는다.
 delete process.env.KV_REST_API_URL;
@@ -113,7 +113,7 @@ test("방장 계정으로 다시 들어오면 방장, 내보낸 계정은 못 �
   assert.equal(row?.faces[0]?.accountId, host);
 });
 
-test("방장 혼자 나가도 방장에게는 방이 목록에 남고, 다른 사람에게는 안 보인다", async () => {
+test("아무도 없는 방은 방장에게도 목록에서 빠지지만, 방장이 다시 들어오면 방장 자리", async () => {
   const room = await createRoom({ name: "English ↔ 한국어", languages: ["en", "ko"], hostPeerId: "peer_alone001", hostAccountId: "acct_host_alone" });
   await joinRoom({ id: room.id, peerId: "peer_alone001", nickname: "민지", wantRole: "speaker", accountId: "acct_host_alone" });
   await leaveRoom(room.id, "peer_alone001");
@@ -123,7 +123,7 @@ test("방장 혼자 나가도 방장에게는 방이 목록에 남고, 다른 �
   try {
     const forHost = await listRooms("acct_host_alone");
     const forOther = await listRooms("acct_someone_else");
-    assert.equal(forHost.find((r) => r.id === room.id)?.mine, true);
+    assert.equal(forHost.some((r) => r.id === room.id), false);
     assert.equal(forOther.some((r) => r.id === room.id), false);
     assert.equal((await listRooms()).some((r) => r.id === room.id), false);
   } finally {
@@ -149,4 +149,17 @@ test("방장은 듣는 자리로 내려가지 않는다", async () => {
   const guest = await poll({ id: room.id, peerId: "peer_guestdn01", since: 0, role: "listener" });
   assert.ok(guest && guest !== "KICKED");
   assert.equal(guest.members.find((m) => m.peerId === "peer_guestdn01")?.role, "listener");
+});
+
+test("방 닫기: 남은 사람의 물음은 없음(앱은 '방이 닫혔어요'), 목록·들어가기에서도 사라진다", async () => {
+  const room = await createRoom({ name: "日本語 ↔ Español", languages: ["ja", "es"], hostPeerId: "peer_close001", hostAccountId: "acct_host_close" });
+  await joinRoom({ id: room.id, peerId: "peer_close001", nickname: "Yuki", wantRole: "speaker", accountId: "acct_host_close" });
+  await joinRoom({ id: room.id, peerId: "peer_close002", nickname: "Lucía", wantRole: "listener", accountId: "acct_guest_close" });
+  assert.ok((await listRooms()).some((r) => r.id === room.id));
+  await leaveRoom(room.id, "peer_close001");
+  await closeRoom(room.id);
+  assert.equal(await poll({ id: room.id, peerId: "peer_close002", since: 0 }), null);
+  assert.equal((await listRooms()).some((r) => r.id === room.id), false);
+  const late = await joinRoom({ id: room.id, peerId: "peer_close003", nickname: "Omar", wantRole: "listener" });
+  assert.deepEqual(late, { ok: false, error: "NO_ROOM" });
 });

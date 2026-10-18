@@ -124,9 +124,8 @@ export async function createRoom(input: {
 }
 
 /**
- * 열린 방 목록. 아무도 없는 방은 빼되, 보는 사람이 그 방의 방장이면 남긴다 —
- * 방장이 잠깐 나갔다 와도 자기 방으로 돌아갈 수 있게(방은 서버에 ROOM_TTL 동안 있다).
- * 내 방은 `mine`으로 표시. 새 방이 위.
+ * 열린 방 목록. 아무도 없는 방(만든 지 1분 지난)은 뺀다 — 방장의 것이어도(2026-10-18,
+ * 나가도 방이 남는다는 의견). 방장이 나가면 방은 닫힌다(`closeRoom`). 내 방은 `mine`으로 표시. 새 방이 위.
  */
 export async function listRooms(viewerAccountId?: string | null): Promise<RoomSummary[]> {
   const ids = [...new Set(await kvListRange(INDEX_KEY))].reverse().slice(0, 30);
@@ -136,7 +135,7 @@ export async function listRooms(viewerAccountId?: string | null): Promise<RoomSu
       if (!meta) return null;
       const members = await readMembers(id);
       const mine = Boolean(viewerAccountId && meta.hostAccountId === viewerAccountId);
-      if (members.length === 0 && Date.now() - meta.createdAt > 60_000 && !mine) return null;
+      if (members.length === 0 && Date.now() - meta.createdAt > 60_000) return null;
       const ordered = [...members].sort(
         (a, b) => Number(b.peerId === meta.hostPeerId) - Number(a.peerId === meta.hostPeerId) || a.joinedAt - b.joinedAt,
       );
@@ -315,6 +314,14 @@ export async function leaveRoom(id: string, peerId: string): Promise<void> {
   if (!mine) return;
   // 지우는 대신 이미 지난 lastSeen으로 덮는다(짧은 TTL로 곧 사라짐).
   await kvSetJson(memberKey(id, peerId), { ...mine, lastSeen: 0 }, 5);
+}
+
+/**
+ * 방 닫기: 방장이 나가면 부른다. 정보를 지우면 남은 사람의 다음 물음이 404 →
+ * 앱이 "방이 닫혔어요"를 띄우고, 목록·들어가기에서도 사라진다. 자막 줄은 TTL로 사라진다.
+ */
+export async function closeRoom(id: string): Promise<void> {
+  await kvDelete([metaKey(id)]);
 }
 
 export async function isMember(id: string, peerId: string): Promise<RoomMember | null> {

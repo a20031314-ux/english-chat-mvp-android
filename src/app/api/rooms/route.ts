@@ -8,6 +8,7 @@ import {
   isMember,
   joinRoom,
   leaveRoom,
+  closeRoom,
   listRooms,
   poll,
   readMeta,
@@ -150,6 +151,12 @@ export async function POST(request: NextRequest) {
 
   if (action === "leave") {
     await leaveRoom(roomId, peerId);
+    // 방장이 나가면 방을 닫는다(1:1 통화 방은 둘 다 나간 뒤 기록을 남겨야 해서 그대로).
+    const meta = await readMeta(roomId);
+    if (meta && !meta.private && meta.hostPeerId === peerId) {
+      await closeRoom(roomId);
+      return jsonWithCors(request, { ok: true, closed: true });
+    }
     return jsonWithCors(request, { ok: true });
   }
 
