@@ -9,6 +9,7 @@
  * 서버에 남기지 않는다는 원칙의 예외라서, 시험 기능을 넘어서기 전에 동의와
  * 보관 방식을 정해야 한다(hub/drafts/voice-room-workspace.md).
  */
+import { roomMatches } from "../rooms/roomFilter.ts";
 import {
   MAX_LINES_KEPT,
   MAX_MEMBERS,
@@ -127,12 +128,15 @@ export async function createRoom(input: {
  * 열린 방 목록. 아무도 없는 방(만든 지 1분 지난)은 뺀다 — 방장의 것이어도(2026-10-18,
  * 나가도 방이 남는다는 의견). 방장이 나가면 방은 닫힌다(`closeRoom`). 내 방은 `mine`으로 표시. 새 방이 위.
  */
-export async function listRooms(viewerAccountId?: string | null): Promise<RoomSummary[]> {
-  const ids = [...new Set(await kvListRange(INDEX_KEY))].reverse().slice(0, 30);
+export async function listRooms(viewerAccountId?: string | null, languages: string[] = []): Promise<RoomSummary[]> {
+  // 언어로 거를 때는 색인 전체(최대 INDEX_KEEP)에서 찾고, 보여 주는 건 30개까지.
+  const all = [...new Set(await kvListRange(INDEX_KEY))].reverse();
+  const ids = languages.length ? all : all.slice(0, 30);
   const rows = await Promise.all(
     ids.map(async (id) => {
       const meta = await readMeta(id);
       if (!meta) return null;
+      if (!roomMatches(meta.languages, languages)) return null;
       const members = await readMembers(id);
       const mine = Boolean(viewerAccountId && meta.hostAccountId === viewerAccountId);
       if (members.length === 0 && Date.now() - meta.createdAt > 60_000) return null;
@@ -153,7 +157,7 @@ export async function listRooms(viewerAccountId?: string | null): Promise<RoomSu
       return row;
     }),
   );
-  return rows.filter((row): row is RoomSummary => row !== null);
+  return rows.filter((row): row is RoomSummary => row !== null).slice(0, 30);
 }
 
 export type JoinResult =

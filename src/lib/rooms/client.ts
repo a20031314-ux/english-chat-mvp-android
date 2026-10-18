@@ -83,8 +83,9 @@ export async function unlock(code: string): Promise<boolean> {
   }
 }
 
-export async function listRooms(): Promise<RoomSummary[]> {
-  return (await call<{ rooms: RoomSummary[] }>("list", {})).rooms;
+/** 방 목록. languages를 주면 그 언어가 모두 들어간 방만(순서 상관없음, rooms/roomFilter.ts). */
+export async function listRooms(languages: string[] = []): Promise<RoomSummary[]> {
+  return (await call<{ rooms: RoomSummary[] }>("list", languages.length ? { langs: languages } : {})).rooms;
 }
 
 export async function createRoom(peerId: string, name: string, languages: string[]): Promise<RoomMeta> {

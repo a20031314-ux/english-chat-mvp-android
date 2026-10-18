@@ -15,7 +15,8 @@ import {
   newPeerId,
 } from "@/lib/rooms/client";
 import { MAX_ROOM_NAME_CHARS, MAX_SPEAKERS, type RoomMeta, type RoomRole, type RoomSummary } from "@/lib/rooms/protocol";
-import { isLearningLanguageCode } from "@/lib/learningLanguages";
+import { SUPPORTED_LEARNING_LANGUAGES, isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
+import { ROOM_FILTER_STORAGE_KEY, filterLanguages, parseRoomFilter, type RoomFilter } from "@/lib/rooms/roomFilter";
 import { setMiniRoom } from "@/lib/rooms/miniRoom";
 import { Face, languagePair } from "./RoomParts";
 import { RoomView } from "./RoomView";
@@ -176,15 +177,34 @@ function Lobby({
   const [creating, setCreating] = useState(false);
   const [error, setError] = useState("");
   const [busy, setBusy] = useState(false);
+  // 언어 조합으로 거르기 — 이 기기에서 마지막에 고른 것을 기억(없거나 못 읽으면 전체).
+  const [filter, setFilterState] = useState<RoomFilter>(() => {
+    try {
+      return parseRoomFilter(window.localStorage.getItem(ROOM_FILTER_STORAGE_KEY));
+    } catch {
+      return { kind: "all" };
+    }
+  });
+  const setFilter = (next: RoomFilter) => {
+    setFilterState(next);
+    setRooms(null);
+    try {
+      window.localStorage.setItem(ROOM_FILTER_STORAGE_KEY, JSON.stringify(next));
+    } catch {
+      // 기억 못 해도 이번에는 거른다.
+    }
+  };
+  const wanted = filterLanguages(filter, targetLanguage, locale);
+  const wantedKey = wanted.join(",");
 
   const refresh = useCallback(async () => {
     try {
-      setRooms(await listRooms());
+      setRooms(await listRooms(wantedKey ? wantedKey.split(",") : []));
       setError("");
     } catch (failure) {
       setError(failure instanceof RoomApiError ? t.error : t.error);
     }
-  }, [t.error]);
+  }, [t.error, wantedKey]);
 
   useEffect(() => {
     void refresh();
@@ -276,8 +296,49 @@ function Lobby({
             {t.refresh}
           </button>
         </div>
+        <div className="flex flex-wrap gap-1.5 text-xs">
+          {(
+            [
+              ["all", t.filterAll],
+              ["mine", `${t.filterMine} · ${languagePair([targetLanguage, locale], locale)}`],
+              ["pick", `🔍 ${t.filterPick}`],
+            ] as const
+          ).map(([kind, label]) => (
+            <button
+              key={kind}
+              type="button"
+              aria-pressed={filter.kind === kind}
+              onClick={() => setFilter(kind === "pick" ? { kind, a: filter.kind === "pick" ? filter.a : null, b: filter.kind === "pick" ? filter.b : null } : { kind })}
+              className={`rounded-full border px-2.5 py-1 ${filter.kind === kind ? "border-violet-300/60 bg-violet-500/25 text-white" : "border-white/15 text-slate-300"}`}
+            >
+              {label}
+            </button>
+          ))}
+        </div>
+        {filter.kind === "pick" ? (
+          <div className="flex items-center gap-1.5">
+            {(["a", "b"] as const).map((slot, index) => (
+              <div key={slot} className="contents">
+                {index === 1 ? <span className="text-slate-500">↔</span> : null}
+                <select
+                  value={filter[slot] ?? ""}
+                  aria-label={`${t.filterPick} ${index + 1}`}
+                  onChange={(event) => setFilter({ ...filter, [slot]: event.target.value || null })}
+                  className="min-w-0 flex-1 rounded-xl border border-white/15 bg-[#111] px-2 py-2 text-sm text-white"
+                >
+                  <option value="">{t.anyLanguage}</option>
+                  {SUPPORTED_LEARNING_LANGUAGES.map((language) => (
+                    <option key={language.code} value={language.code}>
+                      {learningLanguageUiLabel(language.code, locale)}
+                    </option>
+                  ))}
+                </select>
+              </div>
+            ))}
+          </div>
+        ) : null}
         {error ? <p className="text-sm text-rose-300">{error}</p> : null}
-        {rooms && rooms.length === 0 ? <p className="text-sm text-slate-500">{t.noRooms}</p> : null}
+        {rooms && rooms.length === 0 ? <p className="text-sm text-slate-500">{wanted.length ? t.noRoomsFilter : t.noRooms}</p> : null}
         <ul className="space-y-2.5">
           {(rooms ?? []).map((room) => (
             <li key={room.id}>

@@ -1,5 +1,6 @@
 import { NextRequest } from "next/server";
 import { clipQuote, type LineQuote } from "@/lib/rooms/quote";
+import { cleanLanguages } from "@/lib/rooms/roomFilter";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
   addLine,
@@ -64,7 +65,7 @@ export async function POST(request: NextRequest) {
   const auth = requestAuth(request);
   if (action === "unlock") return jsonWithCors(request, { ok: true });
   if (action === "list") {
-    const rooms = await listRooms(auth?.accountId ?? null);
+    const rooms = await listRooms(auth?.accountId ?? null, cleanLanguages(body.langs));
     if (!auth) return jsonWithCors(request, { rooms });
     // 팔로우한 방장의 방은 위로, 서로 차단한 방장의 방은 안 보이게.
     const [following, blocked] = await Promise.all([readFollowing(auth.accountId), readBlocked(auth.accountId)]);

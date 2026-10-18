@@ -163,3 +163,16 @@ test("방 닫기: 남은 사람의 물음은 없음(앱은 '방이 닫혔어요'
   const late = await joinRoom({ id: room.id, peerId: "peer_close003", nickname: "Omar", wantRole: "listener" });
   assert.deepEqual(late, { ok: false, error: "NO_ROOM" });
 });
+
+test("목록을 언어 조합으로: 순서 상관없이, 하나만 주면 그 언어가 든 방", async () => {
+  const enKo = await createRoom({ name: "English ↔ 한국어 filter", languages: ["ko", "en"], hostPeerId: "peer_filter01" });
+  const jaKo = await createRoom({ name: "日本語 ↔ 한국어 filter", languages: ["ja", "ko"], hostPeerId: "peer_filter02" });
+  await joinRoom({ id: enKo.id, peerId: "peer_filter01", nickname: "Ann", wantRole: "speaker" });
+  await joinRoom({ id: jaKo.id, peerId: "peer_filter02", nickname: "Yuki", wantRole: "speaker" });
+  const ids = async (langs: string[]) => (await listRooms(null, langs)).map((room) => room.id);
+  assert.ok((await ids(["en", "ko"])).includes(enKo.id));
+  assert.ok(!(await ids(["en", "ko"])).includes(jaKo.id));
+  const ko = await ids(["ko"]);
+  assert.ok(ko.includes(enKo.id) && ko.includes(jaKo.id));
+  assert.equal((await ids(["th"])).includes(enKo.id), false);
+});
