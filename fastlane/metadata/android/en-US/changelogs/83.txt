@@ -1,5 +1,6 @@
-• “Learn with people” at the top: My, Room and Messages tabs. Invite friends with a link, even before they have the app.
-• Group chats for up to 20, with group calls. The captions stay as a call record.
-• 🌐 Free talk rooms: no fixed languages; each person’s captions are in their own language.
-• Tap a line to ask “What does it mean?” or ask privately. Captions and chat are separate, and you pick Speak, Listen, Chat only or Voice only.
-• Hand a room to a new host, or pause it and reopen it.
+• “Learn with people”: My, Room and Messages tabs. Invite friends with a link, even before they have the app.
+• Group chats (up to 20) with group calls; captions stay as a record.
+• 🌐 Free talk rooms: each person’s captions in their own language.
+• Tap a line to ask “What does it mean?”. Captions and chat are separate; join to Speak, Listen, Chat only or Voice only.
+• 💡 Slip into your own language and only you see how to say it.
+• Hand a room to a new host, or pause and reopen it.

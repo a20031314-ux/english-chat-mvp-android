@@ -1,5 +1,6 @@
-• Em cima, “Com pessoas”: separadores Meu espaço, Salas e Mensagens. Convide amigos com um link, mesmo sem a app.
-• Grupos até 20 com chamadas de grupo; as legendas ficam como registo.
-• 🌐 Conversa livre: sem línguas fixas, as legendas de cada um na sua língua.
-• Toque numa linha para perguntar “O que significa?” ou em privado. Legendas e conversa ficam separadas; escolha Falar, Ouvir, Só conversa ou Só voz.
-• Passe a sala a outro anfitrião, ou faça pausa e reabra-a.
+• “Com pessoas”: separadores Meu espaço, Salas e Mensagens. Convide amigos com um link, mesmo sem a app.
+• Grupos até 20 com chamadas; as legendas ficam como registo.
+• 🌐 Conversa livre: as legendas de cada um na sua língua.
+• Toque numa linha para perguntar “O que significa?”. Legendas e conversa separadas; escolha Falar, Ouvir, Só conversa ou Só voz.
+• 💡 Escapou-lhe a sua língua? Só você vê como dizer.
+• Passe a sala a outro anfitrião, ou faça pausa e reabra.

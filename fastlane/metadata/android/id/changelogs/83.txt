@@ -1,5 +1,6 @@
-• Di atas, “Belajar dengan orang”: tab Saya, Ruang, dan Pesan. Undang teman lewat tautan, bahkan sebelum punya aplikasinya.
-• Grup hingga 20 orang dengan panggilan grup; teks tersimpan sebagai catatan.
-• 🌐 Obrolan bebas: tanpa bahasa tetap, teks tiap orang dalam bahasanya sendiri.
-• Ketuk satu baris untuk bertanya “Apa artinya?” atau secara pribadi. Teks dan chat terpisah; pilih Bicara, Dengar, Chat saja, atau Suara saja.
+• “Belajar dengan orang”: tab Saya, Ruang, dan Pesan. Undang teman lewat tautan, meski belum punya aplikasinya.
+• Grup hingga 20 orang dengan panggilan; teks tersimpan sebagai catatan.
+• 🌐 Obrolan bebas: teks tiap orang dalam bahasanya.
+• Ketuk baris untuk bertanya “Apa artinya?”. Teks dan chat terpisah; pilih Bicara, Dengar, Chat saja, atau Suara saja.
+• 💡 Terucap bahasamu sendiri? Hanya kamu yang lihat cara mengatakannya.
 • Serahkan ruang ke host baru, atau jeda lalu buka lagi.
