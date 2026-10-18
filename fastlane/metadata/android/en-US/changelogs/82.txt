@@ -1,0 +1,4 @@
+• New Rooms tab: talk with other learners by voice. What each person says shows as captions, tap a line to translate it, or join in with a comment.
+• Tap a photo to open a profile: follow, send a message, and call from the conversation. Sign in to use rooms and messages.
+• Today's pack: a short daily call with a look back at the end, plus a suggestion of what to try today.
+• Send feedback from the top bar, and the guide (?) now shows each step in pictures.
