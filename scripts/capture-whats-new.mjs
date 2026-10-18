@@ -161,6 +161,10 @@ const STORE_TABS_ITEMS = [
   { shot: "video-bar", save: false },
   { shot: "video-ask" },
   { shot: "vocab-search" },
+  // 2.68 말하는 방·메시지·로그인(방·메시지는 고정 응답, 번역만 운영). 방 고정 응답이 /api를 가로채니 맨 끝에.
+  { shot: "rooms" },
+  { shot: "dm" },
+  { shot: "account" },
 ];
 const note = STORE_MY
   ? { version: "store", items: STORE_MY_ITEMS }
@@ -404,7 +408,7 @@ function socialMocks(page, target, ui) {
   const now = Date.now();
   const roomName = target === "es" ? "Español ↔ 日本語" : "English ↔ 日本語";
   const room = { id: "capt01", name: roomName, languages: [target, "ja"], hostPeerId: "p_yukiyukiyuki", hostAccountId: PEOPLE.yuki.id, hostNickname: "Yuki", createdAt: now - 600_000 };
-  const member = (key, peerId, role, extra = {}) => ({ peerId, nickname: PEOPLE[key].nickname, role, muted: false, hand: false, accountId: PEOPLE[key].id, langs: [target, "ja"], joinedAt: now - 500_000, lastSeen: now, ...extra });
+  const member = (key, peerId, role, extra = {}) => ({ peerId, nickname: PEOPLE[key].nickname, role, muted: false, hand: false, accountId: PEOPLE[key].id, langs: [target, "ja"], joinedAt: now - 500_000, lastSeen: Date.now(), ...extra }); // 응답 때마다 지금: 오래되면 앱이 나간 사람으로 지운다
   const peers = { yuki: "p_yukiyukiyuki", lucia: "p_lucialucialu", omar: "p_omaromaromar" };
   const lines = ROOM_LINES[target].map(([who, text, kind], index) => ({
     seq: index + 1, kind: kind ?? "speech", peerId: peers[who], accountId: PEOPLE[who].id, nickname: PEOPLE[who].nickname, text,
@@ -864,7 +868,8 @@ const STEPS = {
   },
   async progress({ page, ui, wait }) {
     // Continues from the mission: back on the map, the topic's phrases by state.
-    await page.getByRole("button", { name: ui.billingClose }).first().click();
+    // 정확히 "닫기"만: 이름에 같은 낱말이 든 다른 버튼(스페인어 Cerrar…)을 누르지 않게.
+    await page.getByRole("button", { name: exactly(ui.billingClose) }).first().click();
     // The map reloads its counts when the task screen closes.
     await page.waitForResponse((r) => r.url().includes("/api/curriculum?"), { timeout: 30000 }).catch(() => undefined);
     await wait(2000);

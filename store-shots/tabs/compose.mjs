@@ -21,7 +21,7 @@ const out = path.join(here, "..", "out", "tabs");
 const frame = readFileSync(path.join(here, "..", "frame.html"), "utf8");
 const ACCENTS = ["#FF8A6B", "#7CC4FF", "#C6F25A", "#FFD15C"];
 /** 올릴 8장: 첫 장은 기능을 넓게, 탭마다 하나 이상. */
-const UPLOAD_8 = ["mapview", "chat-expression", "chat-ask", "growth", "mission", "meant", "video-study", "ledger"];
+const UPLOAD_8 = ["mapview", "chat-expression", "chat-ask", "rooms", "growth", "mission", "meant", "video-study"];
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
 
 rmSync(out, { recursive: true, force: true });

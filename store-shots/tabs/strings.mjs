@@ -7,6 +7,7 @@ export const SCENES = [
   "growth", "element", "myask", "mapview", "mission", "progress", "weak", "ledger",
   "chat-correct", "chat-expression", "chat-ask", "chat-word", "links", "pick",
   "meant", "calltools", "video-study", "video-ask", "vocab-search",
+  "rooms", "dm", "account",
 ];
 
 /** 맞춤 등록정보 폴더와 앱 UI 언어. */
@@ -40,6 +41,9 @@ export const HEADS = {
     "video-study": ["영상 학습", "진짜 영상을\n한 문장씩 나눠서", "구간을 누르면 그 부분만 다시 재생"],
     "video-ask": ["영상 학습 · 질문", "자막 속 표현도\n바로 물어보세요", "장면 속에서 무슨 뜻인지 알려줘요"],
     "vocab-search": ["단어장", "한국어로 찾고\n영어로 모아요", "저장한 표현은 내 표현에 쌓여요"],
+    rooms: ["말하는 방", "같은 언어 배우는 사람들과\n목소리로 대화해요", "말하는 대로 자막, 누르면 내 언어로"],
+    dm: ["1:1 메시지", "방에서 만난 사람과\n메시지·통화까지", "모르는 문장은 눌러서 번역"],
+    account: ["내 계정", "로그인하면\n어느 기기에서나 이어서", "프로필로 방에서 나를 소개해요"],
   },
   en: {
     growth: ["MY PROGRESS", "Talk more,\nwatch it grow", "Flow, accuracy, range: six branches that only grow"],
@@ -61,6 +65,9 @@ export const HEADS = {
     "video-study": ["VIDEO STUDY", "Real videos,\nsplit into sentences", "Tap a line to replay just that part"],
     "video-ask": ["VIDEO STUDY", "Ask about any line\nin the subtitles", "What it means in that scene"],
     "vocab-search": ["WORD BANK", "Search in English,\ncollect in Spanish", "Saved words add up in My phrases"],
+    rooms: ["SPEAKING ROOMS", "Talk out loud with\nfellow learners", "Live captions as you speak, tap to translate"],
+    dm: ["MESSAGES", "Met someone in a room?\nMessage or call.", "Tap any line to translate it"],
+    account: ["YOUR ACCOUNT", "Sign in and pick up\non any device", "A profile to introduce yourself in rooms"],
   },
   ja: {
     growth: ["My · 成長", "話すほど\n力が育つ", "会話の続け方・正確さ・表現の幅、6つの枝で積み上がる"],
@@ -82,6 +89,9 @@ export const HEADS = {
     "video-study": ["動画学習", "本物の動画を\n一文ずつに分けて", "区間をタップすると、その部分だけ再生"],
     "video-ask": ["動画学習 · 質問", "字幕の表現も\nすぐ質問できる", "その場面での意味を教えてくれる"],
     "vocab-search": ["単語帳", "日本語で探して\n英語で集める", "保存した表現はマイ表現に貯まる"],
+    rooms: ["話す部屋", "同じ言語を学ぶ人と\n声で話そう", "話した言葉は字幕に、タップで日本語に"],
+    dm: ["1対1メッセージ", "部屋で出会った人と\nメッセージも通話も", "わからない文はタップで翻訳"],
+    account: ["マイアカウント", "ログインすれば\nどの端末でも続きから", "プロフィールで部屋の自己紹介"],
   },
   zh: {
     growth: ["My · 成长", "越聊越多\n能力越长越大", "接话、准确度、表达广度，六个分支只增不减"],
@@ -103,6 +113,9 @@ export const HEADS = {
     "video-study": ["视频学习", "真实视频\n按句子自动切分", "点一下片段，只重播那一部分"],
     "video-ask": ["视频学习 · 提问", "字幕里的表达\n也能马上问", "告诉你在这个场景里的意思"],
     "vocab-search": ["单词本", "用中文搜索\n用英语收集", "收藏的表达会汇总到我的表达"],
+    rooms: ["口语房间", "和一起学语言的人\n开口聊天", "说话实时字幕，点一下翻成中文"],
+    dm: ["私信", "房间里认识的人\n还能私信和通话", "看不懂的句子点一下就翻译"],
+    account: ["我的账号", "登录后\n换设备也能接着学", "用个人资料在房间里介绍自己"],
   },
   es: {
     growth: ["MI PROGRESO", "Cuanto más hablas,\nmás creces", "Fluidez, precisión, variedad: seis ramas que solo crecen"],
@@ -124,6 +137,9 @@ export const HEADS = {
     "video-study": ["VÍDEOS", "Vídeos reales,\nfrase a frase", "Toca una línea para repetir solo esa parte"],
     "video-ask": ["VÍDEOS", "Pregunta por cualquier\nfrase del subtítulo", "Qué significa en esa escena"],
     "vocab-search": ["VOCABULARIO", "Busca en español,\nguarda en inglés", "Lo guardado se suma a Mis expresiones"],
+    rooms: ["SALAS PARA HABLAR", "Habla en voz alta\ncon otros estudiantes", "Subtítulos al hablar, toca para traducir"],
+    dm: ["MENSAJES", "¿Conociste a alguien?\nEscríbele o llámale.", "Toca una frase para traducirla"],
+    account: ["TU CUENTA", "Inicia sesión y sigue\nen cualquier dispositivo", "Un perfil para presentarte en las salas"],
   },
   hi: {
     growth: ["My · प्रगति", "जितनी बात करें,\nउतना आगे बढ़ें", "बातचीत, सटीकता, शब्द-भंडार: छह शाखाएँ जो बढ़ती ही हैं"],
@@ -145,5 +161,8 @@ export const HEADS = {
     "video-study": ["वीडियो से सीखें", "असली वीडियो,\nवाक्य-दर-वाक्य", "लाइन पर टैप करें, बस वही हिस्सा चलेगा"],
     "video-ask": ["वीडियो · सवाल", "सबटाइटल की किसी भी\nलाइन के बारे में पूछें", "उस दृश्य में इसका मतलब"],
     "vocab-search": ["शब्दकोश", "हिंदी में खोजें,\nअंग्रेज़ी में जोड़ें", "सेव किए शब्द मेरे वाक्यांश में जुड़ते हैं"],
+    rooms: ["बोलने के कमरे", "साथ सीखने वालों से\nबोलकर बात करें", "बोलते ही सबटाइटल, टैप करें तो हिंदी में"],
+    dm: ["संदेश", "कमरे में मिले लोगों से\nसंदेश और कॉल", "कोई भी लाइन टैप करें, अनुवाद मिलेगा"],
+    account: ["मेरा खाता", "लॉग इन करें,\nकिसी भी डिवाइस पर जारी रखें", "प्रोफ़ाइल से कमरों में अपना परिचय दें"],
   },
 };
