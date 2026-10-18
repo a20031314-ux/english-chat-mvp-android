@@ -9,7 +9,7 @@ Set-Location (Split-Path $PSScriptRoot -Parent)
 function Step($text) { Write-Host ""; Write-Host "== $text" -ForegroundColor Cyan }
 function Fail($text) { Write-Host ""; Write-Host "멈춤: $text" -ForegroundColor Red; exit 1 }
 
-Step "1/5 PC에서 저절로 바뀌는 파일 되돌리기 (build.gradle, package-lock.json)"
+Step "1/5 PC에서 저절로 바뀌는 파일 되돌리기 (build.gradle, package-lock.json, cap sync가 다시 쓰는 파일)"
 # 빌드를 중간에 멈추면(Ctrl+C) src/app/api·dev가 src/_capacitor_build_backup_*에 옮겨진 채 남는다 — 저장소 상태로 되살린다.
 $leftover = Get-ChildItem src -Directory -Filter "_capacitor_build_backup_*" -ErrorAction SilentlyContinue
 if ($leftover) {
@@ -18,7 +18,12 @@ if ($leftover) {
   git checkout -- src/app tsconfig.json
   if ($LASTEXITCODE -ne 0) { Fail "src/app 되살리기 실패" }
 }
-git checkout -- android/app/build.gradle package-lock.json
+# cap sync(build:android)가 다시 만드는 파일 — PC 경로·플러그인 설정이 들어가 매번 바뀐다. 되돌려도 4단계에서 다시 만들어진다.
+$generated = @(
+  'android/app/build.gradle', 'package-lock.json',
+  'android/app/capacitor.build.gradle', 'android/capacitor.settings.gradle', 'android/gradle.properties'
+) | Where-Object { git ls-files -- $_ }
+git checkout -- $generated
 if ($LASTEXITCODE -ne 0) { Fail "git checkout 실패" }
 $dirty = git status --porcelain --untracked-files=no
 if ($dirty) {
