@@ -170,6 +170,8 @@ export function DmThreadView({
     if (node) node.scrollTop = node.scrollHeight;
   }, [messages.length]);
 
+  // 기록이 남은 통화는 끝난 것 — "받기"를 숨긴다.
+  const endedRooms = new Set(messages.filter((message) => message.kind === "callLog" && message.roomId).map((message) => message.roomId!));
   const isRequestToMe = thread?.status === "pending" && thread.starter !== me;
   const pendingMine = thread?.status === "pending" && thread.starter === me;
   const mineSent = messages.filter((message) => message.from === me && message.kind === "text").length;
@@ -235,6 +237,7 @@ export function DmThreadView({
                 locale={locale}
                 targetLanguage={targetLanguage}
                 context={contextFor(message.seq)}
+                ended={Boolean(message.roomId && endedRooms.has(message.roomId))}
                 onJoinCall={(roomId) => onJoinCall(roomId, name)}
               />
             ))}
@@ -298,9 +301,11 @@ function Bubble({
   locale,
   targetLanguage,
   context,
+  ended,
   onJoinCall,
 }: {
   t: RoomCopy;
+  ended: boolean;
   message: DmMessage;
   mine: boolean;
   me: string;
@@ -341,7 +346,7 @@ function Bubble({
         <div className="flex items-center gap-2 rounded-2xl border border-emerald-400/30 bg-emerald-400/5 px-3 py-2 text-sm text-emerald-100">
           <span>📞 {mine ? t.callStarted : t.callIncoming}</span>
           <span className="text-[11px] text-slate-500">{time}</span>
-          {message.roomId ? (
+          {message.roomId && !ended ? (
             <button
               type="button"
               onClick={() => onJoinCall(message.roomId!)}
