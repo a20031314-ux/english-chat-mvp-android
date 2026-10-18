@@ -169,3 +169,7 @@ test("언어 가리기: 괄호 풀이·로마자 이름·짧은 라틴 글은 �
   const bad = detectTurn({ persona: idJa, turn: { kind: "own", text: "今の単語ってどういう意味？" }, response: { status: 200, ms: 1000, body: { assistantMessage: "単語の意味？それは「エネルギー」って意味だよ。何か他に知りたいことある？" } } });
   assert.ok(bad.some((i) => i.kind === "reply_wrong_language"));
 });
+
+test("사람 사이 묶음이 모두 등록돼 있다", () => {
+  for (const id of ["rooms", "roomsplus", "dm", "groups", "people", "notes"]) assert.ok(suiteById(id), id);
+});

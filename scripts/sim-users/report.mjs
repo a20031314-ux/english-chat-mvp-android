@@ -17,7 +17,7 @@ const KIND_LABEL = {
 };
 
 const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c]);
-const PREFIX_LABEL = { map: "지도", next: "오늘 해볼 것", ask: "직접 묻기", sheet: "분석·번역", call: "통화", rooms: "방", pack: "팩" };
+const PREFIX_LABEL = { map: "지도", next: "오늘 해볼 것", ask: "직접 묻기", sheet: "분석·번역", call: "통화", rooms: "방", pack: "팩", dm: "메시지", group: "단체방", people: "사람", notes: "노트" };
 const SUFFIX_LABEL = {
   network: "요청 실패", http: "HTTP 오류", slow: "느림", empty: "빈 값", leak: "내부 글자 노출", level_shown: "수준 표시",
   wrong_language: "언어 틀림", mixed_script: "문자 섞임", shape: "응답 형태", limit: "한도", crash: "점검 코드 오류",
@@ -199,7 +199,8 @@ function badge(severity) {
 
 const SUITE_LABEL = {
   chat: "채팅·표현 카드", map: "지도·미션", next: "오늘 해볼 것·요약·자라는 중", ask: "직접 묻기", sheet: "번역·문장분석·단어장",
-  pack: "통화 턴·오늘의 팩", rooms: "말하는 방·프로필",
+  pack: "통화 턴·오늘의 팩", rooms: "말하는 방·프로필", roomsplus: "말하는 방 새 기능", dm: "1:1 메시지", groups: "단체방",
+  people: "사람·친구 초대", notes: "노트·업데이트 안내",
 };
 
 function suiteTable(records) {

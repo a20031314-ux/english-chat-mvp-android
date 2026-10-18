@@ -42,6 +42,8 @@ export default {
       if (res.status === 200 && !res.body?.token) issues.push(issue("error", "rooms_shape", "가입했는데 토큰이 없음"));
       step({ title: `임시 계정 가입 ${tag.toUpperCase()}`, input: username, status: res.status, ms: res.ms, issues });
       if (!res.body?.token) return null;
+      // 테스트 계정은 숨김 — 실제 사용자의 "사람" 목록에 뜨지 않게.
+      await call(uid, "/api/account/profile", { body: { nickname: `sim-${tag}`, bio: "", hidden: true }, headers: { "x-auth-token": res.body.token } });
       const person = {
         tag,
         uid,
@@ -64,7 +66,7 @@ export default {
       // ── 프로필 ──
       const nickname = bank.nickname[persona.ui];
       const bio = bank.mapGoal[persona.ui];
-      const saved = await as(A, "/api/account/profile", { body: { nickname, bio, photo: PHOTO } });
+      const saved = await as(A, "/api/account/profile", { body: { nickname, bio, photo: PHOTO, hidden: true } });
       const sIssues = checkHttp(P, saved);
       step({ title: "프로필 저장 (A)", input: `${nickname} · ${bio}`, status: saved.status, ms: saved.ms, issues: sIssues });
 
@@ -184,7 +186,10 @@ export default {
         step({ title: "신고 입력 검사 (빈 사유·자기 신고)", status: empty.status, ms: empty.ms, outputs: [{ label: "응답", text: `${empty.body?.error} · ${self.body?.error}` }], issues: rpIssues });
       } finally {
         const left = await room(A, "leave", { roomId });
-        step({ title: "A 나가기", status: left.status, ms: left.ms, issues: checkHttp(P, left) });
+        // 2026-10-18부터 방장이 나가면 방이 닫힌다.
+        const lIssues = checkHttp(P, left);
+        if (left.status === 200 && !left.body?.closed) lIssues.push(issue("error", "rooms_logic", "방장이 나갔는데 방이 닫히지 않음"));
+        step({ title: "A 나가기 (방 닫힘)", status: left.status, ms: left.ms, issues: lIssues });
       }
     } finally {
       for (const person of people) {
