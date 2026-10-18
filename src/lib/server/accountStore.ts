@@ -1,5 +1,6 @@
 import { createHash, randomBytes, randomInt, scrypt, timingSafeEqual } from "node:crypto";
-import { kvDelete, kvGetJson, kvGetNumber, kvIncrBy, kvListPush, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
+import { kvDelete, kvGetJson, kvGetJsonMany, kvGetNumber, kvIncrBy, kvListPush, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
+import { forgetPresence } from "./presenceStore.ts";
 import { isIdentified } from "./identity.ts";
 import {
   EMAIL_CODE_LENGTH,
@@ -38,7 +39,8 @@ export type AccountRecord = {
   /** 아이디·비밀번호 계정. 예전 줄에는 없을 수 있다(undefined = null). */
   username?: string | null;
   passwordHash?: string | null;
-  profile: { nickname: string; bio: string; hasPhoto: boolean; updatedAt: string };
+  /** hidden: 사람 목록에서 숨김(없으면 보임). */
+  profile: { nickname: string; bio: string; hasPhoto: boolean; updatedAt: string; hidden?: boolean };
 };
 
 const accountKey = (id: string) => `account:v1:${id}`;
@@ -64,6 +66,11 @@ export async function readAccount(id: string): Promise<AccountRecord | null> {
   return kvGetJson<AccountRecord>(accountKey(id));
 }
 
+/** 여러 계정을 한 번에(사람 목록). 없는 것은 null. */
+export async function readAccounts(ids: string[]): Promise<(AccountRecord | null)[]> {
+  return kvGetJsonMany<AccountRecord>(ids.map(accountKey));
+}
+
 export async function readPhoto(id: string): Promise<string | null> {
   const row = await kvGetJson<{ photo: string }>(photoKey(id));
   return row?.photo ?? null;
@@ -80,6 +87,7 @@ export async function toPublic(record: AccountRecord): Promise<PublicAccount> {
       nickname: record.profile.nickname,
       bio: record.profile.bio,
       photo: record.profile.hasPhoto ? await readPhoto(record.id) : null,
+      hidden: record.profile.hidden === true,
     },
   };
 }
@@ -154,7 +162,7 @@ function defaultNickname(name: string | null): string {
 
 export async function saveProfile(
   record: AccountRecord,
-  next: { nickname: string; bio: string; photo?: string | null },
+  next: { nickname: string; bio: string; photo?: string | null; hidden?: boolean },
   now: Date = new Date(),
 ): Promise<AccountRecord> {
   const updated: AccountRecord = {
@@ -164,6 +172,7 @@ export async function saveProfile(
       bio: next.bio,
       hasPhoto: next.photo === undefined ? record.profile.hasPhoto : next.photo !== null,
       updatedAt: now.toISOString(),
+      hidden: next.hidden === undefined ? record.profile.hidden === true : next.hidden,
     },
   };
   if (next.photo === null) await kvDelete([photoKey(record.id)]);
@@ -186,6 +195,7 @@ export async function deleteAccount(record: AccountRecord): Promise<void> {
   if (record.googleSub) keys.push(googleKey(record.googleSub));
   if (record.username) keys.push(userKey(record.username), failKey(record.username));
   await kvDelete(keys);
+  await forgetPresence(record.id);
   await kvListPush(PURGE_QUEUE_KEY, [record.dataUserId], 400 * 24 * 60 * 60);
 }
 

@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
   const found = await accountFromRequest(request);
   if ("response" in found) return found.response;
 
-  const body = await readJsonBody<{ nickname?: unknown; bio?: unknown; photo?: unknown }>(request);
+  const body = await readJsonBody<{ nickname?: unknown; bio?: unknown; photo?: unknown; hidden?: unknown }>(request);
   if (!body) return jsonWithCors(request, { error: "BAD_REQUEST" }, { status: 400 });
 
   let photo: string | null | undefined;
@@ -35,6 +35,7 @@ export async function POST(request: NextRequest) {
     nickname: cleanNickname(body.nickname),
     bio: cleanBio(body.bio),
     photo,
+    hidden: typeof body.hidden === "boolean" ? body.hidden : undefined,
   });
   return jsonWithCors(request, { account: await toPublic(updated) });
 }

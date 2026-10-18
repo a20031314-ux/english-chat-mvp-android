@@ -20,6 +20,7 @@ import { setMiniRoom } from "@/lib/rooms/miniRoom";
 import { Face, languagePair } from "./RoomParts";
 import { RoomView } from "./RoomView";
 import { DmList, DmThreadView, useInbox } from "./RoomDm";
+import { PeopleList } from "./RoomPeople";
 
 /**
  * 사용자끼리 말하는 방 (시험 기능, 숨은 입구).
@@ -166,7 +167,7 @@ function Lobby({
   onJoin: (room: RoomSummary | RoomMeta, role: RoomRole) => void;
   onMessage: (accountId: string) => void;
 }) {
-  const [tab, setTab] = useState<"rooms" | "messages">("rooms");
+  const [tab, setTab] = useState<"rooms" | "people" | "messages">("rooms");
   const inbox = useInbox(true);
   const [rooms, setRooms] = useState<RoomSummary[] | null>(null);
   const [name, setName] = useState("");
@@ -224,7 +225,7 @@ function Lobby({
       </div>
 
       <div className="flex gap-1 rounded-xl bg-white/5 p-1 text-sm">
-        {(["rooms", "messages"] as const).map((option) => (
+        {(["rooms", "people", "messages"] as const).map((option) => (
           <button
             key={option}
             type="button"
@@ -234,7 +235,7 @@ function Lobby({
             }}
             className={`flex flex-1 items-center justify-center gap-1.5 rounded-lg px-2 py-1.5 ${tab === option ? "bg-white/15 font-medium text-white" : "text-slate-400"}`}
           >
-            {option === "rooms" ? `🎙 ${t.tabRooms}` : `💬 ${t.tabMessages}`}
+            {option === "rooms" ? `🎙 ${t.tabRooms}` : option === "people" ? `👥 ${t.tabPeople}` : `💬 ${t.tabMessages}`}
             {option === "messages" && inbox.unread > 0 ? (
               <span className="rounded-full bg-violet-500 px-1.5 text-[11px] font-semibold text-white">{inbox.unread}</span>
             ) : null}
@@ -243,6 +244,7 @@ function Lobby({
       </div>
 
       {tab === "messages" ? <DmList t={t} threads={inbox.threads} onOpen={onMessage} /> : null}
+      {tab === "people" ? <PeopleList t={t} locale={locale} targetLanguage={targetLanguage} onMessage={onMessage} /> : null}
 
       {tab === "rooms" && creating ? (
         <section className="space-y-2 rounded-2xl border border-violet-400/30 p-3">

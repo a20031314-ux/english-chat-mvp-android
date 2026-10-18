@@ -12,7 +12,7 @@
  * 목록은 그 주인만 쓰므로 읽고-고치고-쓰기가 다른 사람과 엉키지 않는다.
  * 팔로워는 여러 사람이 동시에 바꾸므로 목록 대신 카운터와 관계 줄로 센다.
  */
-import { kvDelete, kvGetJson, kvGetNumber, kvIncrBy, kvListPush, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
+import { kvDelete, kvGetJson, kvGetJsonMany, kvGetNumber, kvIncrBy, kvListPush, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
 
 const MAX_FOLLOWING = 500;
 const MAX_BLOCKED = 500;
@@ -36,6 +36,11 @@ export async function readFollowing(id: string): Promise<string[]> {
 
 export async function readBlocked(id: string): Promise<string[]> {
   return (await kvGetJson<string[]>(blockKey(id))) ?? [];
+}
+
+/** 여러 사람의 차단 목록을 한 번에(사람 목록에서 나를 차단한 사람 빼기). */
+export async function readBlockedMany(ids: string[]): Promise<string[][]> {
+  return (await kvGetJsonMany<string[]>(ids.map(blockKey))).map((list) => list ?? []);
 }
 
 /** a가 b를 차단했거나 b가 a를 차단했으면 true. */

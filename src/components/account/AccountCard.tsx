@@ -3,6 +3,9 @@
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { UICopy } from "@/lib/copy";
 import { BodyLayer } from "@/components/FullScreenLayer";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
+import { pingPresence } from "@/lib/rooms/client";
+import { socialFeaturesEnabled } from "@/lib/platform";
 import { readCachedAccount, readAuthToken, subscribeSession } from "@/lib/account/session";
 import {
   AccountRequestError,
@@ -124,6 +127,13 @@ export function AccountCard({ ui, locale }: { ui: UICopy; locale: string }) {
     void fetchAuthConfig().then(setConfig);
     if (readAuthToken()) void refreshAccount();
   }, []);
+
+  // 로그인한 채로 앱을 열면 "최근에 쓴 사람"으로(말하는 방 → 사람 목록). 실패해도 조용히.
+  const learning = useLearningLanguageOptional()?.targetLanguage;
+  const signedIn = Boolean(account);
+  useEffect(() => {
+    if (signedIn && learning && socialFeaturesEnabled()) pingPresence({ learn: learning, ui: locale });
+  }, [signedIn, learning, locale]);
 
   const canSignIn = Boolean(config && (config.password || config.googleClientId || config.email));
   // 로그인 방식이 하나도 켜지지 않았으면(서버 설정 전) 카드를 숨긴다.
@@ -474,6 +484,7 @@ async function shrinkPhoto(file: File): Promise<string | null> {
 function ProfileEditor({ ui, account, onClose }: { ui: UICopy; account: PublicAccount; onClose: () => void }) {
   const [nickname, setNickname] = useState(account.profile.nickname);
   const [bio, setBio] = useState(account.profile.bio);
+  const [hidden, setHidden] = useState(account.profile.hidden === true);
   // undefined = 그대로, null = 빼기, 글자 = 새 사진
   const [photo, setPhoto] = useState<string | null | undefined>(undefined);
   const [busy, setBusy] = useState(false);
@@ -485,13 +496,16 @@ function ProfileEditor({ ui, account, onClose }: { ui: UICopy; account: PublicAc
   const shownPhoto = photo === undefined ? account.profile.photo : photo;
   const preview: PublicAccount = { ...account, profile: { ...account.profile, nickname, photo: shownPhoto } };
   const changed =
-    photo !== undefined || cleanNickname(nickname) !== account.profile.nickname || cleanBio(bio) !== account.profile.bio;
+    photo !== undefined ||
+    cleanNickname(nickname) !== account.profile.nickname ||
+    cleanBio(bio) !== account.profile.bio ||
+    hidden !== (account.profile.hidden === true);
 
   const save = async () => {
     setBusy(true);
     setError(null);
     try {
-      await saveProfile({ nickname, bio, ...(photo === undefined ? {} : { photo }) });
+      await saveProfile({ nickname, bio, hidden, ...(photo === undefined ? {} : { photo }) });
       setPhoto(undefined);
       setSaved(true);
       setTimeout(() => setSaved(false), 2000);
@@ -598,6 +612,13 @@ function ProfileEditor({ ui, account, onClose }: { ui: UICopy; account: PublicAc
             className={`${inputClass} mt-1.5 resize-none leading-relaxed`}
           />
         </label>
+
+        {socialFeaturesEnabled() ? (
+          <label className="mt-4 flex items-center gap-2 text-[13px] text-slate-300">
+            <input type="checkbox" checked={hidden} onChange={(event) => setHidden(event.target.checked)} className="accent-white" />
+            {ui.accountHideFromPeople}
+          </label>
+        ) : null}
 
         {message ? <p className="mt-3 text-[12px] text-rose-300">{message}</p> : null}
 

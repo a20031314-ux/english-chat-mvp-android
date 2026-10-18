@@ -4,7 +4,7 @@ import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { readCachedAccount } from "@/lib/account/session";
 import type { LineKind, PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, RoomSummary, SignalKind } from "./protocol";
-import type { PublicProfile } from "./social";
+import type { PersonCard, PublicProfile } from "./social";
 import type { DmMessage, DmSummary, DmThread } from "./dm";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 
@@ -270,6 +270,16 @@ export async function setBlock(target: string, on: boolean): Promise<void> {
 
 export async function reportPerson(input: { target: string; reason: string; roomId: string; lines: string[] }): Promise<void> {
   await social("report", input);
+}
+
+/** 사람 목록(최근에 앱을 쓴 사람). 부르는 것 자체가 "나도 지금 쓰는 중" 신호. */
+export async function listPeople(langs: { learn: string; ui: string }): Promise<PersonCard[]> {
+  return (await social<{ people: PersonCard[] }>("people", langs)).people;
+}
+
+/** 앱을 쓰는 중 — 사람 목록에서 "접속 중"으로 보이게. 실패해도 조용히. */
+export function pingPresence(langs: { learn: string; ui: string }): void {
+  void social("ping", langs).catch(() => {});
 }
 
 export async function myRelations(): Promise<{ following: string[]; blocked: string[] }> {

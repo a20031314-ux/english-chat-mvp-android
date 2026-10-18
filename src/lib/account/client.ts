@@ -155,6 +155,7 @@ export async function saveProfile(next: {
   nickname: string;
   bio: string;
   photo?: string | null;
+  hidden?: boolean;
 }): Promise<PublicAccount> {
   const { account } = await call<{ account: PublicAccount }>("/api/account/profile", { body: next });
   saveAccount(account);

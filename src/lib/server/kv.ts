@@ -388,3 +388,78 @@ export async function kvDelete(keys: string[]): Promise<void> {
   }
   await attempt(`DEL ${keys.length} keys`, async () => void (await command(["DEL", ...keys])), undefined);
 }
+
+/* ---- 정렬된 모음(ZSET): 최근 활동 순 목록처럼 점수로 줄 세우는 것 ---- */
+
+function memoryZset(key: string): Record<string, number> {
+  return JSON.parse(memoryRead(key) ?? "{}") as Record<string, number>;
+}
+
+/** 점수와 함께 넣는다(있으면 점수만 바꿈). */
+export async function kvZAdd(key: string, score: number, member: string): Promise<void> {
+  if (!credentials()) {
+    warnOnce();
+    memoryWrite(key, JSON.stringify({ ...memoryZset(key), [member]: score }));
+    return;
+  }
+  await attempt(`ZADD ${key}`, async () => void (await command(["ZADD", key, score, member])), undefined);
+}
+
+export async function kvZRem(key: string, member: string): Promise<void> {
+  if (!credentials()) {
+    warnOnce();
+    const set = memoryZset(key);
+    delete set[member];
+    memoryWrite(key, JSON.stringify(set));
+    return;
+  }
+  await attempt(`ZREM ${key}`, async () => void (await command(["ZREM", key, member])), undefined);
+}
+
+/** 점수 큰 것부터 [start, stop] 범위, 점수와 함께. */
+export async function kvZRevRange(key: string, start: number, stop: number): Promise<{ member: string; score: number }[]> {
+  if (!credentials()) {
+    warnOnce();
+    return Object.entries(memoryZset(key))
+      .sort((a, b) => b[1] - a[1])
+      .slice(start, stop < 0 ? undefined : stop + 1)
+      .map(([member, score]) => ({ member, score }));
+  }
+  return attempt(
+    `ZREVRANGE ${key}`,
+    async () => {
+      const result = await command(["ZREVRANGE", key, start, stop, "WITHSCORES"]);
+      const flat = Array.isArray(result) ? result.map(String) : [];
+      const rows: { member: string; score: number }[] = [];
+      for (let i = 0; i + 1 < flat.length; i += 2) rows.push({ member: flat.at(i)!, score: Number(flat.at(i + 1)) });
+      return rows;
+    },
+    [],
+  );
+}
+
+/** 여러 JSON 값을 한 번에(MGET). 없는 키는 null. */
+export async function kvGetJsonMany<T>(keys: string[]): Promise<(T | null)[]> {
+  if (keys.length === 0) return [];
+  const parse = (raw: unknown): T | null => {
+    if (typeof raw !== "string") return null;
+    try {
+      return JSON.parse(raw) as T;
+    } catch {
+      return null;
+    }
+  };
+  if (!credentials()) {
+    warnOnce();
+    return keys.map((key) => parse(memoryRead(key)));
+  }
+  return attempt(
+    `MGET ${keys.length} keys`,
+    async () => {
+      const result = await command(["MGET", ...keys]);
+      return Array.isArray(result) ? result.map(parse) : keys.map(() => null);
+    },
+    keys.map(() => null),
+  );
+}
+

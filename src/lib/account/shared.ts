@@ -41,6 +41,8 @@ export type AccountProfile = {
   bio: string;
   /** data:image/jpeg;base64,… 또는 없음. */
   photo: string | null;
+  /** 사람 목록(말하는 방 → 사람)에서 나를 숨김. 기본은 보임. */
+  hidden: boolean;
 };
 
 /** 앱에 보여 주는 계정. 내부 id·데이터 id는 내보내지 않는다. */

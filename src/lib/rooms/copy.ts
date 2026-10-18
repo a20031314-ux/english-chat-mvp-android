@@ -116,6 +116,15 @@ const ko = {
   back: "뒤로",
   you3: "나",
   retention: "메시지는 마지막 대화로부터 30일 동안 보관돼요.",
+  tabPeople: "사람",
+  peopleHint: "최근 2주 안에 앱을 쓴 사람이에요. 누르면 프로필을 볼 수 있어요.",
+  peopleAll: "전체",
+  peoplePartners: "내 언어를 배우는 사람",
+  peopleSame: "같은 언어를 배우는 사람",
+  peopleEmpty: "아직 여기에 보일 사람이 없어요.",
+  onlineNow: "접속 중",
+  activeToday: "오늘 접속",
+  activeDaysAgo: "{n}일 전 접속",
 };
 
 type RoomCopy = typeof ko;
@@ -230,6 +239,15 @@ const en: RoomCopy = {
   back: "Back",
   you3: "You",
   retention: "Messages are kept for 30 days after the last one.",
+  tabPeople: "People",
+  peopleHint: "People who used the app in the last 2 weeks. Tap someone to see their profile.",
+  peopleAll: "All",
+  peoplePartners: "Learning my language",
+  peopleSame: "Learning the same language",
+  peopleEmpty: "No one to show here yet.",
+  onlineNow: "Online",
+  activeToday: "Active today",
+  activeDaysAgo: "Active {n}d ago",
 };
 
 /** 앱 언어의 문구. 빠진 키는 영어로(copy.test.ts가 빠짐을 막는다). */
