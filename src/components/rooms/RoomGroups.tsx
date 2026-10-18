@@ -10,6 +10,7 @@ import {
   groupInvite,
   groupKick,
   groupLeave,
+  groupMakeTeam,
   groupMine,
   groupOpen,
   groupPoll,
@@ -23,6 +24,8 @@ import { requestGroupCall } from "@/lib/rooms/openDm";
 import { askPhrase, questionCount } from "@/lib/rooms/quote";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
 import { Composer, Face, languagePair, useProfile } from "./RoomParts";
+import { teamCopy, type TeamCopy } from "@/lib/rooms/teamCopy";
+import { TeamSpace } from "./TeamSpace";
 
 /**
  * 단체방(워크스페이스 1단계): 메시지 탭의 목록·만들기와 대화 화면.
@@ -57,8 +60,20 @@ function Name({ id }: { id: string }) {
   return <>{profile?.nickname || "…"}</>;
 }
 
+/** 러닝메이트는 이름 대신 상대 이름, 팀·단체방은 방 이름. */
+export function GroupTitle({ group, me }: { group: Group; me: string }) {
+  const other = group.team?.kind === "mate" ? [...group.members, ...group.invited].find((id) => id !== me) ?? null : null;
+  const profile = useProfile(other);
+  return <>{other ? profile?.nickname || "…" : group.name}</>;
+}
+
+export function groupIcon(group: Group): string {
+  return group.team ? "🤝" : "👥";
+}
+
 export function GroupList({
   t,
+  me,
   locale,
   groups,
   onOpen,
@@ -66,6 +81,7 @@ export function GroupList({
   onChanged,
 }: {
   t: RoomCopy;
+  me: string;
   locale: string;
   groups: GroupSummary[];
   onOpen: (groupId: string) => void;
@@ -73,6 +89,7 @@ export function GroupList({
   onChanged: () => void;
 }) {
   const [busy, setBusy] = useState("");
+  const tt = teamCopy(locale);
   const answer = async (groupId: string, accept: boolean) => {
     setBusy(groupId);
     try {
@@ -99,14 +116,15 @@ export function GroupList({
           <li key={group.id}>
             <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-3 py-2.5">
               <button type="button" disabled={invite} onClick={() => onOpen(group.id)} className="flex min-w-0 flex-1 items-center gap-3 text-start">
-                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-violet-500/25 text-lg">👥</span>
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-violet-500/25 text-lg">{groupIcon(group)}</span>
                 <span className="min-w-0 flex-1">
                   <span className="block truncate text-chat font-semibold text-white" dir="auto">
-                    {group.name}
+                    <GroupTitle group={group} me={me} />
+                    {group.team ? <span className="ms-1.5 rounded-lg bg-violet-500/25 px-1.5 text-meta font-normal text-violet-100">{group.team.kind === "mate" ? tt.mate : tt.team}</span> : null}
                   </span>
                   <span className="block truncate text-note text-slate-400" dir="auto">
                     {invite ? (
-                      <span className="text-amber-200">✉️ {t.groupInviteFrom}</span>
+                      <span className="text-amber-200">{group.team?.kind === "mate" ? tt.mateInvite : `✉️ ${t.groupInviteFrom}`}</span>
                     ) : (
                       <>
                         {languagePair(group.languages, locale)}
@@ -126,7 +144,7 @@ export function GroupList({
                     onClick={() => void answer(group.id, true)}
                     className="rounded-lg bg-violet-500 px-2.5 py-1 text-xs font-medium text-white disabled:opacity-40"
                   >
-                    {t.groupJoin}
+                    {group.team?.kind === "mate" ? tt.accept : t.groupJoin}
                   </button>
                   <button
                     type="button"
@@ -269,7 +287,8 @@ export function GroupCreateSheet({
   );
 }
 
-function systemText(t: RoomCopy, message: GroupMessage, name: string): string {
+function systemText(t: RoomCopy, message: GroupMessage, name: string, tt?: TeamCopy): string {
+  if (message.text === "team" && tt) return `🤝 ${tt.teamMade}`;
   const template =
     message.text === "join"
       ? t.sysJoin
@@ -283,11 +302,11 @@ function systemText(t: RoomCopy, message: GroupMessage, name: string): string {
   return template.replace("{name}", name);
 }
 
-function SystemLine({ t, message, liveCall, onJoin }: { t: RoomCopy; message: GroupMessage; liveCall: boolean; onJoin: () => void }) {
+function SystemLine({ t, tt, message, liveCall, onJoin }: { t: RoomCopy; tt: TeamCopy; message: GroupMessage; liveCall: boolean; onJoin: () => void }) {
   const profile = useProfile(message.from);
   return (
-    <p className={`text-center text-meta ${message.text === "call" ? "text-emerald-200" : "text-slate-500"}`} dir="auto">
-      {systemText(t, message, profile?.nickname || "…")}
+    <p className={`text-center text-meta ${message.text === "call" ? "text-emerald-200" : message.text === "team" ? "text-violet-200" : "text-slate-500"}`} dir="auto">
+      {systemText(t, message, profile?.nickname || "…", tt)}
       {liveCall ? (
         <button type="button" onClick={onJoin} className="ms-2 rounded-lg bg-emerald-500 px-2 py-0.5 text-meta font-medium text-black">
           {t.callRejoin}
@@ -465,6 +484,7 @@ function GroupBubble({
 
 function MembersSheet({
   t,
+  tt,
   me,
   group,
   onClose,
@@ -472,6 +492,7 @@ function MembersSheet({
   onLeft,
 }: {
   t: RoomCopy;
+  tt: TeamCopy;
   me: string;
   group: Group;
   onClose: () => void;
@@ -557,6 +578,19 @@ function MembersSheet({
               + {t.groupInviteMore}
             </button>
           )}
+          {owner && !group.team ? (
+            <div className="space-y-1 rounded-xl border border-violet-300/30 p-2.5">
+              <button
+                type="button"
+                onClick={() => void act(() => groupMakeTeam(group.id))}
+                className="w-full rounded-lg bg-violet-500 px-3 py-2 text-sm font-medium text-white"
+              >
+                🤝 {tt.makeTeam}
+              </button>
+              <p className="text-caption text-slate-400">{tt.makeTeamHint}</p>
+            </div>
+          ) : null}
+          {group.team ? <p className="text-meta text-slate-500">{tt.retention}</p> : null}
           {notice ? <p className="text-xs text-rose-300">{notice}</p> : null}
           <button
             type="button"
@@ -596,6 +630,9 @@ export function GroupThreadView({
   // 내보내졌거나(removed) 방이 없어졌으면(gone) 입력을 막고 안내.
   const [gone, setGone] = useState<"" | "removed" | "gone">("");
   const [call, setCall] = useState<GroupCall>(null);
+  // 팀·메이트면 대화 / 워크스페이스 전환.
+  const [pane, setPane] = useState<"chat" | "space">("chat");
+  const tt = teamCopy(locale);
   const since = useRef(0);
   const scroller = useRef<HTMLDivElement>(null);
 
@@ -652,7 +689,7 @@ export function GroupThreadView({
   // 📞: 말하는 방 화면(RoomsScreen)이 통화 방을 연다. 대화는 닫았다가 통화가 끝나면 다시 열린다.
   const startCall = () => {
     if (!group || gone) return;
-    requestGroupCall(group.id, group.name);
+    requestGroupCall(group.id, group.name || tt.mate);
     onClose();
   };
   const contextFor = (seq: number) => texts.filter((row) => row.seq < seq).slice(-4).map((row) => row.text);
@@ -665,12 +702,15 @@ export function GroupThreadView({
             <button type="button" onClick={onClose} className="rounded-lg px-2 py-1 text-sm text-slate-300 hover:bg-white/10">
               ← {t.back}
             </button>
-            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-violet-500/25">👥</span>
+            <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-violet-500/25">{group ? groupIcon(group) : "👥"}</span>
             <div className="min-w-0 flex-1">
               <p className="truncate text-chat font-semibold text-white" dir="auto">
-                {group?.name ?? ""}
+                {group ? <GroupTitle group={group} me={me} /> : ""}
               </p>
-              <p className="truncate text-meta text-slate-400">{group ? languagePair(group.languages, locale) : ""}</p>
+              <p className="truncate text-meta text-slate-400">
+                {group?.team ? `${group.team.kind === "mate" ? tt.mate : tt.team}${group.languages.length ? " · " : ""}` : ""}
+                {group ? languagePair(group.languages, locale) : ""}
+              </p>
             </div>
             <button
               type="button"
@@ -693,6 +733,32 @@ export function GroupThreadView({
             </button>
           </header>
 
+          {group?.team && !gone ? (
+            <div className="flex shrink-0 gap-1 border-b border-white/10 px-3 py-1.5" role="tablist">
+              {(
+                [
+                  ["chat", tt.tabChat],
+                  ["space", tt.tabSpace],
+                ] as const
+              ).map(([id, label]) => (
+                <button
+                  key={id}
+                  type="button"
+                  role="tab"
+                  aria-selected={pane === id}
+                  onClick={() => setPane(id)}
+                  className={`flex-1 rounded-lg px-3 py-1.5 text-sm ${pane === id ? "bg-white/15 font-semibold text-ink" : "text-slate-400"}`}
+                >
+                  {label}
+                </button>
+              ))}
+            </div>
+          ) : null}
+
+          {group?.team && pane === "space" && !gone ? (
+            <TeamSpace tt={tt} me={me} group={group} locale={locale} targetLanguage={targetLanguage} onGroup={setGroup} onGather={startCall} />
+          ) : (
+          <>
           {gone ? (
             <p className="shrink-0 bg-amber-400/10 px-4 py-2 text-sm text-amber-200" dir="auto">
               {gone === "removed" ? t.groupRemoved : t.groupGone}
@@ -709,6 +775,7 @@ export function GroupThreadView({
                 <SystemLine
                   key={message.seq}
                   t={t}
+                  tt={tt}
                   message={message}
                   liveCall={message.text === "call" && Boolean(call && call.live > 0 && call.roomId === message.roomId) && !gone}
                   onJoin={startCall}
@@ -751,11 +818,14 @@ export function GroupThreadView({
               }}
             />
           </footer>
+          </>
+          )}
         </div>
       </div>
       {members && group ? (
         <MembersSheet
           t={t}
+          tt={tt}
           me={me}
           group={group}
           onClose={() => setMembers(false)}

@@ -7,25 +7,39 @@
  *   grp:v1:box:<계정>       내가 낀(초대 포함) 방 id 목록(RPUSH, 읽을 때 정리)
  *   grp:v1:read:<계정>:<방> 내가 읽은 마지막 줄 번호
  *
- * 모두 마지막 활동으로부터 30일이면 사라진다.
+ * 모두 마지막 활동으로부터 30일이면 사라진다. 팀·러닝메이트(Group.team)는 400일, 그리고
+ *   grp:v1:ws:<방>          워크스페이스에 쌓인 것(SpaceItem, RPUSH, 최대 SPACE_MAX_ITEMS)
+ *   grp:v1:days:<방>        같이 한 날("YYYY-MM-DD" 목록)
+ * 나가거나 내보내지면 그 사람이 남긴 것은 워크스페이스에서 지운다(withoutMember).
  */
 import {
   GROUP_MAX_KEPT,
   GROUP_TTL_SECONDS,
+  SPACE_MAX_ITEMS,
+  TEAM_TTL_SECONDS,
   canInvite,
+  dayOf,
+  groupTtl,
   newGroupId,
+  withoutMember,
   type Group,
   type GroupMessage,
   type GroupSummary,
+  type SpaceItem,
+  type TeamInfo,
+  type TeamSpace,
 } from "../rooms/group.ts";
 import { clipQuote, type LineQuote } from "../rooms/quote.ts";
-import { kvGetJson, kvIncrBy, kvListPush, kvListRange, kvListTrim, kvSetJson } from "./kv.ts";
+import { kvDelete, kvGetJson, kvIncrBy, kvListPush, kvListRange, kvListTrim, kvSetJson } from "./kv.ts";
 
 const groupKey = (id: string) => `grp:v1:g:${id}`;
 const msgsKey = (id: string) => `grp:v1:m:${id}`;
 const seqKey = (id: string) => `grp:v1:seq:${id}`;
 const boxKey = (account: string) => `grp:v1:box:${account}`;
 const readKey = (account: string, id: string) => `grp:v1:read:${account}:${id}`;
+const spaceKey = (id: string) => `grp:v1:ws:${id}`;
+const daysKey = (id: string) => `grp:v1:days:${id}`;
+const DAYS_KEEP = 400;
 const BOX_KEEP = 100;
 
 export async function readGroup(id: string): Promise<Group | null> {
@@ -33,14 +47,15 @@ export async function readGroup(id: string): Promise<Group | null> {
 }
 
 async function saveGroup(group: Group): Promise<void> {
-  await kvSetJson(groupKey(group.id), group, GROUP_TTL_SECONDS);
+  await kvSetJson(groupKey(group.id), group, groupTtl(group));
 }
 
 /** 줄 없이 방 정보만 고칠 때(통화 번호 지우기 등). */
 export const saveGroupMeta = saveGroup;
 
-async function addToBox(account: string, id: string): Promise<void> {
-  await kvListPush(boxKey(account), [id], GROUP_TTL_SECONDS);
+async function addToBox(account: string, id: string, ttl: number = GROUP_TTL_SECONDS): Promise<void> {
+  // 같은 목록에 팀과 단체방이 섞이므로, 팀이 하나라도 들어가면 목록은 팀만큼 오래 둔다.
+  await kvListPush(boxKey(account), [id], ttl);
   await kvListTrim(boxKey(account), BOX_KEEP);
 }
 
@@ -61,10 +76,12 @@ export async function readGroupMessages(id: string, since = 0): Promise<GroupMes
 }
 
 async function push(group: Group, message: Omit<GroupMessage, "seq" | "at">): Promise<{ group: Group; message: GroupMessage }> {
-  const seq = await kvIncrBy(seqKey(group.id), 1, GROUP_TTL_SECONDS);
+  const ttl = groupTtl(group);
+  const seq = await kvIncrBy(seqKey(group.id), 1, ttl);
   const now = Date.now();
   const row: GroupMessage = { ...message, seq, at: now };
-  await kvListPush(msgsKey(group.id), [JSON.stringify(row)], GROUP_TTL_SECONDS);
+  await kvListPush(msgsKey(group.id), [JSON.stringify(row)], ttl);
+  if (group.team && (row.kind === "text" || row.kind === "callLog")) await noteDay(group.id, now);
   await kvListTrim(msgsKey(group.id), GROUP_MAX_KEPT);
   const next: Group = {
     ...group,
@@ -124,6 +141,7 @@ export async function answerInvite(account: string, id: string, accept: boolean)
     return next;
   }
   const joined = { ...group, invited, members: [...group.members, account] };
+  if (group.team) await addToBox(account, id, TEAM_TTL_SECONDS);
   return (await push(joined, { from: account, kind: "system", text: "join" })).group;
 }
 
@@ -134,6 +152,7 @@ export async function leaveGroup(account: string, id: string): Promise<boolean> 
   const members = group.members.filter((row) => row !== account);
   const owner = group.owner === account ? (members[0] ?? group.owner) : group.owner;
   const next = { ...group, members, owner };
+  if (group.team) await forgetInSpace(group, account);
   if (members.length === 0) {
     await saveGroup(next);
     return true;
@@ -154,6 +173,7 @@ export async function kickFromGroup(by: string, id: string, target: string): Pro
     return "ok";
   }
   if (!group.members.includes(target)) return "NO_TARGET";
+  if (group.team) await forgetInSpace(group, target);
   await push(
     { ...group, members: group.members.filter((row) => row !== target), kicked: [...(group.kicked ?? []).filter((row) => row !== target), target].slice(-200) },
     { from: target, kind: "system", text: "kick" },
@@ -189,11 +209,16 @@ export async function sendToGroup(input: {
     quote = { seq: found.seq, nickname: "", text: clipQuote(found.text), accountId: found.from };
   }
   const result = await push(group, { from: input.from, kind: "text", text: input.text, ...(quote ? { quote, ask: input.ask === true } : {}) });
+  // 팀에서 "무슨 뜻이에요?"로 물은 줄은 워크스페이스 표현으로 남는다.
+  if (group.team && quote && input.ask === true) {
+    await addSpaceItem(group, { kind: "phrase", by: input.from, text: quote.text, from: quote.accountId ?? null });
+  }
   return { ok: true, ...result };
 }
 
 export async function markGroupRead(account: string, id: string, seq: number): Promise<void> {
-  await kvSetJson(readKey(account, id), seq, GROUP_TTL_SECONDS);
+  const group = await readGroup(id);
+  await kvSetJson(readKey(account, id), seq, group ? groupTtl(group) : GROUP_TTL_SECONDS);
 }
 
 /** 내 단체방과 받은 초대(초대가 위, 그다음 최근 순). */
@@ -222,4 +247,142 @@ export async function noteGroupCall(group: Group, from: string, roomId: string):
 /** 통화가 끝난 뒤 자막 기록을 한 번 남긴다(누가 남길지는 호출하는 쪽이 SET NX로 정한다). */
 export async function logGroupCall(group: Group, from: string, roomId: string, lines: NonNullable<GroupMessage["lines"]>): Promise<void> {
   await push(group, { from, kind: "callLog", text: `${lines.length}`, roomId, lines });
+  if (group.team) await addSpaceItem(group, { kind: "session", by: from, text: `${lines.length}`, lines });
+}
+
+// ── 팀·러닝메이트 ───────────────────────────────────────────
+
+async function noteDay(id: string, at: number): Promise<void> {
+  const day = dayOf(at);
+  const days = (await kvGetJson<string[]>(daysKey(id))) ?? [];
+  if (days.at(-1) === day) return;
+  await kvSetJson(daysKey(id), [...days.filter((row) => row !== day), day].slice(-DAYS_KEEP), TEAM_TTL_SECONDS);
+}
+
+function parseItems(rows: string[]): SpaceItem[] {
+  const out: SpaceItem[] = [];
+  for (const row of rows) {
+    try {
+      out.push(JSON.parse(row) as SpaceItem);
+    } catch {
+      // 깨진 줄은 건너뛴다.
+    }
+  }
+  return out;
+}
+
+async function readItems(id: string): Promise<SpaceItem[]> {
+  return parseItems(await kvListRange(spaceKey(id), -SPACE_MAX_ITEMS, -1));
+}
+
+async function writeItems(id: string, items: SpaceItem[]): Promise<void> {
+  await kvDelete([spaceKey(id)]);
+  if (items.length) await kvListPush(spaceKey(id), items.slice(-SPACE_MAX_ITEMS).map((item) => JSON.stringify(item)), TEAM_TTL_SECONDS);
+}
+
+export async function addSpaceItem(group: Group, item: Omit<SpaceItem, "id" | "at">): Promise<SpaceItem> {
+  const row: SpaceItem = { ...item, id: `s${Date.now().toString(36)}${Math.floor(Math.random() * 1e6).toString(36)}`, at: Date.now() };
+  await kvListPush(spaceKey(group.id), [JSON.stringify(row)], TEAM_TTL_SECONDS);
+  await kvListTrim(spaceKey(group.id), SPACE_MAX_ITEMS);
+  await noteDay(group.id, row.at);
+  return row;
+}
+
+/** 내가 공유한 것만 지울 수 있다. */
+export async function removeSpaceItem(group: Group, by: string, itemId: string): Promise<boolean> {
+  const items = await readItems(group.id);
+  const target = items.find((item) => item.id === itemId);
+  if (!target || target.by !== by || target.kind === "session") return false;
+  await writeItems(group.id, items.filter((item) => item.id !== itemId));
+  return true;
+}
+
+async function forgetInSpace(group: Group, account: string): Promise<void> {
+  const items = await readItems(group.id);
+  const kept = withoutMember(items, account);
+  if (kept.length !== items.length || kept.some((item, index) => item !== items[index])) await writeItems(group.id, kept);
+}
+
+export async function readSpace(id: string): Promise<TeamSpace> {
+  const [items, days] = await Promise.all([readItems(id), kvGetJson<string[]>(daysKey(id))]);
+  return { items: items.reverse(), days: days ?? [] };
+}
+
+/** 단체방을 팀으로(방장만). 이후 키는 400일, 모두의 목록도 그만큼. */
+export async function makeTeam(by: string, id: string): Promise<Group | "NO_GROUP" | "NOT_OWNER" | "ALREADY"> {
+  const group = await readGroup(id);
+  if (!group) return "NO_GROUP";
+  if (group.owner !== by) return "NOT_OWNER";
+  if (group.team) return "ALREADY";
+  const next: Group = { ...group, team: { kind: "team", since: Date.now() } };
+  await Promise.all([...next.members, ...next.invited].map((account) => addToBox(account, id, TEAM_TTL_SECONDS)));
+  return (await push(next, { from: by, kind: "system", text: "team" })).group;
+}
+
+/** 팀 정보 고치기(목표·정기 모임) — 팀에 있는 사람이면 누구나. */
+export async function updateTeam(by: string, id: string, patch: Partial<Pick<TeamInfo, "goal" | "schedule">>): Promise<Group | null> {
+  const group = await readGroup(id);
+  if (!group?.team || !group.members.includes(by)) return null;
+  const team: TeamInfo = {
+    ...group.team,
+    ...(patch.goal !== undefined ? { goal: patch.goal, goalBy: by } : {}),
+    ...(patch.schedule !== undefined ? { schedule: patch.schedule } : {}),
+  };
+  const next = { ...group, team };
+  await saveGroup(next);
+  return next;
+}
+
+/**
+ * 러닝메이트 신청: 두 사람 사이 메이트는 하나.
+ *  - 상대가 이미 나에게 신청했으면 그걸 수락(→ "joined")
+ *  - 내가 이미 신청했거나 이미 메이트면 그대로(→ "pending" | "mates")
+ *  - 아니면 새로 만들고 상대를 초대(→ "pending")
+ */
+export async function requestMate(me: string, target: string, languages: string[]): Promise<{ group: Group; state: "pending" | "joined" | "mates" }> {
+  const ids = [...new Set(await kvListRange(boxKey(me)))];
+  for (const id of ids) {
+    const group = await readGroup(id);
+    if (group?.team?.kind !== "mate") continue;
+    const people = [...group.members, ...group.invited];
+    if (!people.includes(me) || !people.includes(target)) continue;
+    if (group.members.includes(me) && group.members.includes(target)) return { group, state: "mates" };
+    if (group.invited.includes(me)) {
+      const joined = await answerInvite(me, id, true);
+      if (joined) return { group: joined, state: "joined" };
+    }
+    if (group.members.includes(me) && group.invited.includes(target)) return { group, state: "pending" };
+    if (group.members.includes(me) && !group.members.includes(target)) {
+      await inviteToGroup(me, id, target);
+      return { group: (await readGroup(id)) ?? group, state: "pending" };
+    }
+  }
+  const now = Date.now();
+  let id = newGroupId();
+  for (let tries = 0; tries < 3 && (await readGroup(id)); tries += 1) id = newGroupId();
+  const group: Group = {
+    id,
+    name: "",
+    languages: languages.slice(0, 2),
+    owner: me,
+    members: [me],
+    invited: [target],
+    createdAt: now,
+    lastAt: now,
+    lastText: "",
+    lastFrom: me,
+    lastSeq: 0,
+    team: { kind: "mate", since: now },
+  };
+  await saveGroup(group);
+  await Promise.all([me, target].map((account) => addToBox(account, id, TEAM_TTL_SECONDS)));
+  return { group, state: "pending" };
+}
+
+/** 계정을 지울 때: 모든 단체방·팀에서 나가고(팀이면 내 것을 지움), 받은 초대는 거절. */
+export async function leaveAllGroups(account: string): Promise<void> {
+  for (const summary of await myGroups(account)) {
+    if (summary.invite) await answerInvite(account, summary.group.id, false);
+    else await leaveGroup(account, summary.group.id);
+  }
 }

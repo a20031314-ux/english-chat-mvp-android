@@ -6,7 +6,7 @@ import { readCachedAccount } from "@/lib/account/session";
 import type { LineKind, PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, RoomSummary, SignalKind } from "./protocol";
 import type { PersonCard, PublicProfile } from "./social";
 import type { DmMessage, DmSummary, DmThread } from "./dm";
-import type { Group, GroupCall, GroupMessage, GroupSummary } from "./group";
+import type { Group, GroupCall, GroupMessage, GroupSummary, SpaceItem, TeamSchedule, TeamSpace } from "./group";
 import type { BoardAuthor, BoardComment, BoardPost } from "./board";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 
@@ -470,4 +470,34 @@ export function boardEditComment(postId: string, commentId: string, text: string
 }
 export function boardDeleteComment(postId: string, commentId: string): Promise<{ ok: true }> {
   return board("deleteComment", { postId, commentId });
+}
+
+/* ── 팀·러닝메이트 (hub/drafts/team-workspace.md) ───────────────────────── */
+
+export function mateRequest(target: string, languages: string[]): Promise<{ group: Group; state: "pending" | "joined" | "mates" }> {
+  return groups("mate", { target, languages });
+}
+
+export function groupMakeTeam(groupId: string): Promise<{ group: Group }> {
+  return groups("team", { groupId });
+}
+
+export function teamSpace(groupId: string): Promise<{ group: Group; space: TeamSpace }> {
+  return groups("space", { groupId });
+}
+
+export function teamGoal(groupId: string, goal: string): Promise<{ group: Group }> {
+  return groups("goal", { groupId, goal });
+}
+
+export function teamSchedule(groupId: string, schedule: TeamSchedule | null): Promise<{ group: Group }> {
+  return groups("schedule", { groupId, schedule });
+}
+
+export function teamShare(groupId: string, text: string, note: string): Promise<{ item: SpaceItem }> {
+  return groups("share", { groupId, text, note });
+}
+
+export function teamUnshare(groupId: string, itemId: string): Promise<{ ok: true }> {
+  return groups("unshare", { groupId, itemId });
 }

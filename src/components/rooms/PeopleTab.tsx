@@ -1,5 +1,8 @@
 "use client";
 
+import { GroupTitle, groupIcon } from "./RoomGroups";
+import { teamCopy } from "@/lib/rooms/teamCopy";
+import type { GroupSummary } from "@/lib/rooms/group";
 import { useState, useSyncExternalStore } from "react";
 import type { UICopy } from "@/lib/copy";
 import { AccountCard } from "@/components/account/AccountCard";
@@ -27,7 +30,21 @@ function readView(): PeopleView {
   }
 }
 
-export function PeopleTab({ ui, locale, targetLanguage }: { ui: UICopy; locale: string; targetLanguage: string }) {
+export function PeopleTab({
+  ui,
+  locale,
+  targetLanguage,
+  teams = [],
+  onOpenGroup,
+}: {
+  ui: UICopy;
+  locale: string;
+  targetLanguage: string;
+  /** 내 러닝메이트·팀(AppHome의 단체방 목록에서). 누르면 메시지 탭에서 그 워크스페이스. */
+  teams?: GroupSummary[];
+  onOpenGroup?: (groupId: string) => void;
+}) {
+  const tt = teamCopy(locale);
   const t = roomCopy(locale);
   const account = useSyncExternalStore(subscribeSession, readCachedAccount, () => null);
   const [view, setView] = useState<PeopleView>(readView);
@@ -43,12 +60,33 @@ export function PeopleTab({ ui, locale, targetLanguage }: { ui: UICopy; locale: 
     <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
         <h1 className="text-base font-semibold text-white">{ui.homeTabPeople}</h1>
-        {/* 앱이 없는 친구도: 링크 → Play → 첫 실행에 서로 팔로우(lib/invite). */}
+        {/* 앱이 없는 친구도: 링크 → Play → 로그인·이름 정하고 입장(lib/invite, 팔로우 없음). */}
         {account ? <InviteButton locale={locale} /> : null}
       </header>
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         {account ? (
           <>
+            {teams.length && onOpenGroup ? (
+              <section className="mb-4">
+                <h2 className="mb-2 text-sm font-semibold text-slate-300">🤝 {tt.myTeams}</h2>
+                <div className="flex gap-2 overflow-x-auto pb-1">
+                  {teams.map(({ group, unread }) => (
+                    <button
+                      key={group.id}
+                      type="button"
+                      onClick={() => onOpenGroup(group.id)}
+                      className="flex shrink-0 items-center gap-2 rounded-xl border border-violet-300/30 bg-violet-500/10 px-3 py-2 text-start"
+                    >
+                      <span aria-hidden>{groupIcon(group)}</span>
+                      <span className="max-w-[9rem] truncate text-note text-ink" dir="auto">
+                        <GroupTitle group={group} me={account.id} />
+                      </span>
+                      {unread > 0 ? <span className="rounded-full bg-violet-500 px-1.5 text-meta text-white">{Math.min(unread, 99)}</span> : null}
+                    </button>
+                  ))}
+                </div>
+              </section>
+            ) : null}
             <div className="mb-3 flex gap-1" role="group">
               {(["people", "board"] as const).map((mode) => (
                 <button

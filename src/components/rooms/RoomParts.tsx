@@ -1,5 +1,6 @@
 "use client";
 
+import { MateButton } from "./MateAsk";
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import type { RoomCopy } from "@/lib/rooms/copy";
@@ -292,6 +293,9 @@ export function ProfileSheet({
               💬 {t.message}
             </button>
           ) : null}
+
+          {/* 러닝메이트 신청(팔로우 다음 단계 — 둘만의 워크스페이스). */}
+          {profile && !profile.isMe && !profile.blockedByMe && accountId ? <MateButton accountId={accountId} locale={locale} /> : null}
 
           {reporting ? (
             <div className="mt-2 space-y-1.5 rounded-xl border border-rose-400/30 p-2">

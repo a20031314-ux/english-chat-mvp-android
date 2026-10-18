@@ -31,13 +31,24 @@ export function onGroupCallRequest(listener: CallListener): () => void {
 }
 
 const groupListeners = new Set<Listener>();
+/** 메시지 탭이 아직 안 열려 있을 때(다른 탭에서 팀·메이트를 누름) — 열리면 그때 연다. */
+let pendingGroup: string | null = null;
 
 export function requestGroup(groupId: string): void {
+  if (groupListeners.size === 0) {
+    pendingGroup = groupId;
+    return;
+  }
   for (const listener of groupListeners) listener(groupId);
 }
 
 export function onGroupRequest(listener: Listener): () => void {
   groupListeners.add(listener);
+  if (pendingGroup) {
+    const id = pendingGroup;
+    pendingGroup = null;
+    queueMicrotask(() => listener(id));
+  }
   return () => groupListeners.delete(listener);
 }
 

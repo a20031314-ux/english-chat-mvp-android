@@ -20,6 +20,7 @@ import { FeedbackButton } from "@/components/FeedbackButton";
 import { RoomsScreen } from "@/components/rooms/RoomsScreen";
 import { PeopleTab } from "@/components/rooms/PeopleTab";
 import { InviteWelcome } from "@/components/invite/InviteWelcome";
+import { requestGroup } from "@/lib/rooms/openDm";
 import { MessagesTab } from "@/components/rooms/MessagesTab";
 import { useInbox } from "@/components/rooms/RoomDm";
 import { useGroups } from "@/components/rooms/RoomGroups";
@@ -327,7 +328,16 @@ function AppHomeInner({
               ) : null}
 
               {shownTab === "people" && socialOn ? (
-                <PeopleTab ui={ui} locale={locale} targetLanguage={targetLanguage} />
+                <PeopleTab
+                  ui={ui}
+                  locale={locale}
+                  targetLanguage={targetLanguage}
+                  teams={groups.groups.filter((row) => row.group.team && !row.invite)}
+                  onOpenGroup={(groupId) => {
+                    openTab("messages");
+                    requestGroup(groupId);
+                  }}
+                />
               ) : null}
 
               {/* 다른 탭에서도 떠 있어야 접어 둔 방이 끊기지 않는다(로비는 이 탭일 때만 그린다). */}

@@ -1,5 +1,6 @@
 "use client";
 
+import { MateAskSheet } from "./MateAsk";
 import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { AccountCard } from "@/components/account/AccountCard";
@@ -60,6 +61,9 @@ export function RoomsScreen({
   const [dmNote, setDmNote] = useState<RoomNote | null>(null);
   /** 방 화면을 접고 다른 화면을 보는 중. 방에는 그대로 있다. */
   const [minimized, setMinimized] = useState(false);
+  /** 막 끝난 1:1 통화의 상대 — 메이트 신청을 묻는다. */
+  const [mateAsk, setMateAsk] = useState<string | null>(null);
+  const closeMateAsk = useCallback(() => setMateAsk(null), []);
   const account = useSyncExternalStore(subscribeSession, readCachedAccount, () => null);
   const nickname = account?.profile.nickname || account?.username || "";
 
@@ -159,7 +163,11 @@ export function RoomsScreen({
                   const backGroup = inRoom.backGroup;
                   setMinimized(false);
                   setInRoom(null);
-                  if (back) setDmWith(back);
+                  if (back) {
+                    setDmWith(back);
+                    // 1:1 통화가 끝나면 "공부 잘 됐나요? → 메이트 신청"을 한 번(MateAsk.tsx가 이미 메이트·최근에 물었으면 건너뜀).
+                    setMateAsk(back);
+                  }
                   if (backGroup) requestGroup(backGroup);
                 }}
                 onMinimize={() => setMinimized(true)}
@@ -198,6 +206,7 @@ export function RoomsScreen({
           onJoinCall={(room, title) => void joinCall(room, title)}
         />
       ) : null}
+      {account && mateAsk ? <MateAskSheet accountId={mateAsk} me={account.id} locale={locale} onClose={closeMateAsk} /> : null}
     </>
   );
 }

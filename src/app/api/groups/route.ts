@@ -8,8 +8,14 @@ import {
   createGroup,
   inviteToGroup,
   kickFromGroup,
+  addSpaceItem,
   leaveGroup,
   logGroupCall,
+  makeTeam,
+  readSpace,
+  removeSpaceItem,
+  requestMate,
+  updateTeam,
   noteGroupCall,
   saveGroupMeta,
   markGroupRead,
@@ -22,7 +28,7 @@ import {
 import { allowInRoom, createRoom, isInviteCode, liveCount, readLines, readMeta } from "@/lib/server/roomStore";
 import { kvSetJsonIfAbsent } from "@/lib/server/kv";
 import { DM_MAX_CHARS } from "@/lib/rooms/dm";
-import { GROUP_MAX_MEMBERS, GROUP_MAX_NAME_CHARS, isGroupId } from "@/lib/rooms/group";
+import { GROUP_MAX_MEMBERS, GROUP_MAX_NAME_CHARS, SPACE_NOTE_MAX_CHARS, SPACE_TEXT_MAX_CHARS, TEAM_GOAL_MAX_CHARS, cleanSchedule, isGroupId } from "@/lib/rooms/group";
 import { cleanText, isPeerId, isRoomId } from "@/lib/rooms/protocol";
 import { cleanLanguages } from "@/lib/rooms/roomFilter";
 
@@ -39,6 +45,12 @@ export const dynamic = "force-dynamic";
  *   invite { groupId, target }            → 방에 있는 사람이면 누구나
  *   answer { groupId, accept }            → 받은 초대에 참여/거절
  *   leave { groupId } · kick/transfer { groupId, target } (방장만)
+ * 팀·러닝메이트(hub/drafts/team-workspace.md):
+ *   mate { target, languages }            → { group, state }  두 사람 사이 메이트는 하나(상대 신청이 있으면 수락)
+ *   team { groupId }                      → 단체방을 팀으로(방장만)
+ *   space { groupId }                     → { group, space }  쌓인 것·같이 한 날
+ *   goal { groupId, goal } · schedule { groupId, schedule|null } → 팀에 있는 사람 누구나
+ *   share { groupId, text, note? } · unshare { groupId, itemId }(내 것만)
  */
 export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
@@ -84,6 +96,12 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { group });
   }
 
+  if (action === "mate") {
+    const target = await inviteable(me, body.target);
+    if (!target) return bad(request, "BAD_TARGET");
+    return jsonWithCors(request, await requestMate(me, target, cleanLanguages(body.languages)));
+  }
+
   if (!isGroupId(body.groupId)) return bad(request, "BAD_GROUP");
   const group = await readGroup(body.groupId);
   // 방장이 내보낸 사람: 앱이 "내보내졌어요"를 띄우게 따로 알린다.
@@ -117,7 +135,7 @@ export async function POST(request: NextRequest) {
     if (open) return jsonWithCors(request, { room: open });
     const account = await readAccount(me);
     const room = await createRoom({
-      name: `📞 ${group.name}`,
+      name: `📞 ${group.name || "🤝"}`,
       languages: group.languages,
       hostPeerId: body.peerId,
       hostAccountId: me,
@@ -168,6 +186,36 @@ export async function POST(request: NextRequest) {
     if (!result.ok) return bad(request, result.error, result.error === "NO_QUOTE" ? 404 : 403);
     await markGroupRead(me, group.id, result.message.seq);
     return jsonWithCors(request, { group: result.group, message: result.message });
+  }
+
+  if (action === "team") {
+    const result = await makeTeam(me, group.id);
+    return typeof result === "object" ? jsonWithCors(request, { group: result }) : bad(request, result, result === "NOT_OWNER" ? 403 : 409);
+  }
+
+  if (action === "space" || action === "goal" || action === "schedule" || action === "share" || action === "unshare") {
+    if (!group.team) return bad(request, "NOT_TEAM", 409);
+    if (action === "goal" || action === "schedule") {
+      const patch =
+        action === "goal"
+          ? { goal: cleanText(body.goal, TEAM_GOAL_MAX_CHARS) }
+          : { schedule: body.schedule === null ? null : cleanSchedule(body.schedule) };
+      if (action === "schedule" && body.schedule !== null && !patch.schedule) return bad(request, "BAD_SCHEDULE");
+      const next = await updateTeam(me, group.id, patch);
+      return next ? jsonWithCors(request, { group: next }) : bad(request, "NOT_MEMBER", 403);
+    }
+    if (action === "share") {
+      const text = cleanText(body.text, SPACE_TEXT_MAX_CHARS);
+      if (!text) return bad(request, "NO_TEXT");
+      const note = cleanText(body.note, SPACE_NOTE_MAX_CHARS);
+      const item = await addSpaceItem(group, { kind: "share", by: me, text, ...(note ? { note } : {}) });
+      return jsonWithCors(request, { item });
+    }
+    if (action === "unshare") {
+      const ok = typeof body.itemId === "string" && (await removeSpaceItem(group, me, body.itemId));
+      return ok ? jsonWithCors(request, { ok: true }) : bad(request, "NOT_YOURS", 403);
+    }
+    return jsonWithCors(request, { group, space: await readSpace(group.id) });
   }
 
   if (action === "invite") {

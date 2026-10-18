@@ -1,6 +1,7 @@
 import { createHash, randomBytes, randomInt, scrypt, timingSafeEqual } from "node:crypto";
 import { kvDelete, kvGetJson, kvGetJsonMany, kvGetNumber, kvIncrBy, kvListPush, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
 import { forgetPresence } from "./presenceStore.ts";
+import { leaveAllGroups } from "./groupStore.ts";
 import { forgetInvites } from "./inviteLinkStore.ts";
 import { forgetBoard } from "./boardStore.ts";
 import { isIdentified } from "./identity.ts";
@@ -198,6 +199,8 @@ export async function deleteAccount(record: AccountRecord): Promise<void> {
   if (record.username) keys.push(userKey(record.username), failKey(record.username));
   await kvDelete(keys);
   await forgetPresence(record.id);
+  // 팀 워크스페이스에 남긴 것도 같이 지운다(팀은 400일 남으므로).
+  await leaveAllGroups(record.id);
   await forgetInvites(record.id);
   await forgetBoard(record.id);
   await kvListPush(PURGE_QUEUE_KEY, [record.dataUserId], 400 * 24 * 60 * 60);

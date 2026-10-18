@@ -46,7 +46,7 @@ export function MessagesTab({
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         {account ? (
           <div className="space-y-5">
-            <GroupList t={t} locale={locale} groups={groups} onOpen={setOpenGroup} onCreate={() => setCreating(true)} onChanged={onGroupsChanged} />
+            <GroupList t={t} me={account.id} locale={locale} groups={groups} onOpen={setOpenGroup} onCreate={() => setCreating(true)} onChanged={onGroupsChanged} />
             <DmList t={t} threads={threads} onOpen={requestDm} />
           </div>
         ) : (
