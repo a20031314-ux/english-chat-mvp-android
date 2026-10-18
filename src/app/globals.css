@@ -60,3 +60,15 @@ body {
 .tb-glow-platinum {
   box-shadow: 0 0 16px rgba(255, 255, 255, 0.28);
 }
+
+/*
+ * Video full screen. The tab it lives in is a z-0 stacking context, so its
+ * fixed layer can never rise above the app bar (z-60) or the tab bar, and the
+ * "smaller" button ended up under the app bar where it could not be tapped.
+ * Moving the player out to document.body would reload the YouTube frame and
+ * restart the video, so the bars step aside instead (VideoLearningTab sets
+ * this while full screen).
+ */
+body[data-video-fullscreen="1"] [data-app-chrome] {
+  display: none;
+}

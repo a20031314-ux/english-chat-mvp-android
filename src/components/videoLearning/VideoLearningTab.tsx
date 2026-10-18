@@ -153,6 +153,17 @@ export function VideoLearningTab({
   const [playingIds, setPlayingIds] = useState<string[]>([]);
   const [rangeIds, setRangeIds] = useState<string[]>([]);
   const [watchFullscreen, setWatchFullscreen] = useState(false);
+
+  // While full screen, the app bar and the tab bar step aside (globals.css).
+  // The phone's back button is not used to leave it: popping a history entry
+  // makes Next re-render the page and the open video is lost.
+  useEffect(() => {
+    if (!watchFullscreen) return;
+    document.body.dataset.videoFullscreen = "1";
+    return () => {
+      delete document.body.dataset.videoFullscreen;
+    };
+  }, [watchFullscreen]);
   const preparedRef = useRef<PreparedTranscript | null>(null);
   /** Original cues before any merge/split (refreshed while untouched). */
   const baselineCuesRef = useRef<VideoSubtitle[]>([]);
@@ -877,7 +888,7 @@ export function VideoLearningTab({
                   <button
                     type="button"
                     onClick={() => setWatchFullscreen(false)}
-                    className="absolute right-3 top-3 z-30 rounded-lg bg-black/40 px-2.5 py-1.5 text-xs font-medium text-white backdrop-blur-[2px] hover:bg-black/55"
+                    className="absolute end-3 top-[calc(env(safe-area-inset-top,0px)+0.75rem)] z-30 rounded-lg bg-black/60 px-3 py-2 text-sm font-medium text-white backdrop-blur-[2px] hover:bg-black/75"
                   >
                     {ui.videoLearnFullscreenExit}
                   </button>

@@ -166,7 +166,7 @@ function AppHomeInner({
             dir={learningLanguageTextDir(locale)}
             lang={locale}
           >
-            <div className="relative z-[60] flex shrink-0 flex-wrap items-center gap-2 overflow-visible border-b border-white/10 bg-[#050505]/80 px-3 py-1.5 backdrop-blur-md sm:px-4">
+            <div data-app-chrome className="relative z-[60] flex shrink-0 flex-wrap items-center gap-2 overflow-visible border-b border-white/10 bg-[#050505]/80 px-3 py-1.5 backdrop-blur-md sm:px-4">
               <TargetLanguageSelector label={ui.learningLanguageLabel} />
               <LanguageSelector
                 locale={locale}
@@ -281,6 +281,7 @@ function AppHomeInner({
             ) : null}
 
             <nav
+              data-app-chrome
               className="shrink-0 border-t border-white/10 bg-[#050505]/95 px-1 pb-[env(safe-area-inset-bottom)] pt-1 backdrop-blur-md"
               aria-label="Main"
             >
