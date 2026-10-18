@@ -199,7 +199,7 @@ function badge(severity) {
 
 const SUITE_LABEL = {
   chat: "채팅·표현 카드", map: "지도·미션", next: "오늘 해볼 것·요약·자라는 중", ask: "직접 묻기", sheet: "번역·문장분석·단어장",
-  pack: "통화 턴·오늘의 팩", rooms: "말하는 방",
+  pack: "통화 턴·오늘의 팩", rooms: "말하는 방·프로필",
 };
 
 function suiteTable(records) {
