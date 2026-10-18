@@ -1,6 +1,6 @@
-• “Con le persone”: schede Io, Stanze e Messaggi. Invita amici con un link, anche senza l’app.
+• “Con le persone”: schede Io, Stanze e Messaggi. Invita gli amici con un link.
+• Bacheca: pubblica nella lingua che impari e commenta. Solo chi scrive modifica o elimina.
 • Gruppi fino a 20 con chiamate; i sottotitoli restano come registro.
-• 🌐 Chiacchiera libera: i sottotitoli di ognuno nella sua lingua.
-• Tocca una riga per chiedere “Cosa vuol dire?”. Sottotitoli e chat separati; scegli Parla, Ascolta, Solo chat o Solo voce.
-• 💡 Ti scappa la tua lingua? Solo tu vedi come dirlo.
-• Passa la stanza a un nuovo host, o mettila in pausa e riaprila.
+• 🌐 Stanze di chiacchiera libera. Tocca una riga per chiedere cosa significa.
+• 💡 Se ti scappa la tua lingua, solo tu vedi come dirlo.
+• Note in Io: espressioni, parole e domande per argomento. Il vocabolario ora è lì.

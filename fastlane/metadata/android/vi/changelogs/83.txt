@@ -1,6 +1,6 @@
-• “Học với mọi người”: thẻ Của tôi, Phòng nói, Tin nhắn. Mời bạn bè bằng link, kể cả khi chưa có app.
-• Nhóm tới 20 người và gọi nhóm; phụ đề được lưu làm nhật ký.
-• 🌐 Trò chuyện tự do: phụ đề mỗi người bằng ngôn ngữ của họ.
-• Chạm một dòng để hỏi “Nghĩa là gì?”. Phụ đề và chat tách riêng; chọn Nói, Nghe, Chỉ chat hoặc Chỉ giọng nói.
-• 💡 Lỡ nói tiếng mẹ đẻ? Chỉ bạn thấy cách nói.
-• Nhường chủ phòng, hoặc tạm dừng rồi mở lại.
+• “Học với mọi người”: tab Của tôi, Phòng nói và Tin nhắn. Mời bạn bè bằng đường link.
+• Bảng tin: đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết được sửa hoặc xóa.
+• Nhóm tới 20 người có gọi nhóm; phụ đề được lưu lại.
+• 🌐 Phòng trò chuyện tự do. Chạm một dòng để hỏi nghĩa.
+• 💡 Lỡ nói tiếng mẹ đẻ, chỉ bạn thấy cách nói.
+• Ghi chú trong Của tôi: cụm từ, từ và câu hỏi theo chủ đề. Sổ từ nay nằm ở đó.

@@ -1,6 +1,6 @@
-• “Learn with people”: My, Room and Messages tabs. Invite friends with a link, even before they have the app.
+• “Learn with people”: My, Room and Messages tabs. Invite friends with a link.
+• Board: post in the language you’re learning and comment. Only the writer can edit or delete.
 • Group chats (up to 20) with group calls; captions stay as a record.
-• 🌐 Free talk rooms: each person’s captions in their own language.
-• Tap a line to ask “What does it mean?”. Captions and chat are separate; join to Speak, Listen, Chat only or Voice only.
+• 🌐 Free talk rooms. Tap a line to ask “What does it mean?”.
 • 💡 Slip into your own language and only you see how to say it.
-• Hand a room to a new host, or pause and reopen it.
+• Notes in My: your phrases, words and questions by topic. The word list now lives there.

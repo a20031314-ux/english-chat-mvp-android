@@ -1,6 +1,6 @@
-• “Con personas”: pestañas Mi espacio, Salas y Mensajes. Invita a amigos con un enlace, aunque no tengan la app.
-• Grupos de hasta 20 con llamadas; los subtítulos quedan como registro.
-• 🌐 Charla libre: los subtítulos de cada uno, en su idioma.
-• Toca una línea para preguntar “¿Qué significa?”. Subtítulos y chat van aparte; elige Hablar, Escuchar, Solo chat o Solo voz.
+• “Aprender con personas”: pestañas Mi espacio, Salas y Mensajes. Invita con un enlace.
+• Tablón: publica en el idioma que aprendes y comenta. Solo quien escribe edita o borra.
+• Grupos de hasta 20 con llamadas; los subtítulos quedan guardados.
+• 🌐 Salas de charla libre. Toca una línea para preguntar qué significa.
 • 💡 Si se te escapa tu idioma, solo tú ves cómo decirlo.
-• Cede el anfitrión, o pausa la sala y “Reabrir”.
+• Notas en Mi espacio: tus expresiones, palabras y preguntas por tema. El vocabulario está ahí.
