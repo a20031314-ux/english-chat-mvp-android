@@ -222,12 +222,14 @@ const SCENES = [
   },
   {
     id: "vocab-search",
-    label: "단어장 — 내 언어로 검색",
+    label: "단어장(노트 안) — 내 언어로 검색",
     async run({ page, ui, wait, locale }) {
+      // 2.69부터 단어장은 My 노트 안: 옛 링크(?screen=vocab)가 노트의 단어장 시트를 연다.
       await page.goto(`${BASE}/?screen=vocab`, { waitUntil: "domcontentloaded" });
-      await wait(2500);
-      await page.locator("input[type=search]").first().fill(bank.vocabWord[locale]);
-      await page.getByRole("button", { name: exactly(ui.vocabSearchCta) }).click();
+      await wait(4000);
+      const box = page.locator("input:visible").last();
+      await box.fill(bank.vocabWord[locale]);
+      await page.getByRole("button", { name: exactly(ui.vocabSearchCta) }).last().click();
       for (let i = 0; i < 40 && !(await page.getByText(ui.vocabResultsTitle).count()); i++) await wait(500);
       await wait(1500);
     },
