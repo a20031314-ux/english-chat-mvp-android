@@ -102,10 +102,12 @@ export async function createRoom(input: {
   private?: boolean;
   allowed?: string[];
   threadId?: string;
+  /** 잠시 닫은 방을 다시 열 때: 같은 방 번호. */
+  id?: string;
 }): Promise<RoomMeta> {
-  let id = newRoomId();
+  let id = input.id ?? newRoomId();
   // 겹칠 일은 거의 없지만, 살아 있는 방을 덮어쓰지는 않게.
-  for (let tries = 0; tries < 3 && (await readMeta(id)); tries += 1) id = newRoomId();
+  for (let tries = 0; !input.id && tries < 3 && (await readMeta(id)); tries += 1) id = newRoomId();
   const meta: RoomMeta = {
     id,
     name: input.name,
@@ -325,7 +327,8 @@ export async function leaveRoom(id: string, peerId: string): Promise<void> {
  * 앱이 "방이 닫혔어요"를 띄우고, 목록·들어가기에서도 사라진다. 자막 줄은 TTL로 사라진다.
  */
 export async function closeRoom(id: string): Promise<void> {
-  await kvDelete([metaKey(id)]);
+  // 자막 줄도 같이 지운다 — 닫힌 방(잠시 닫은 방 포함)의 학습자 문장을 남기지 않게.
+  await kvDelete([metaKey(id), linesKey(id), seqKey(id), banKey(id)]);
 }
 
 export async function isMember(id: string, peerId: string): Promise<RoomMember | null> {
@@ -353,4 +356,78 @@ export async function readLines(id: string): Promise<RoomLine[]> {
 /** 방에 지금 있는 사람 수. */
 export async function liveCount(id: string): Promise<number> {
   return (await readMembers(id)).length;
+}
+
+/**
+ * 방장 넘기기: 지금 방장만, 말하기 자리에 있는(계정 있는) 사람에게. 받은 사람의 다음
+ * 물음부터 방 정보의 방장이 그 사람이라 앱이 "방장이 됐어요"를 띄운다.
+ */
+export async function transferHost(input: {
+  id: string;
+  hostPeerId: string;
+  target: string;
+}): Promise<"ok" | "NOT_HOST" | "NO_TARGET" | "NOT_SPEAKER"> {
+  const meta = await readMeta(input.id);
+  if (!meta || meta.private || meta.hostPeerId !== input.hostPeerId) return "NOT_HOST";
+  const target = (await readMembers(input.id)).find((member) => member.peerId === input.target);
+  if (!target || target.peerId === input.hostPeerId || !target.accountId) return "NO_TARGET";
+  if (target.role !== "speaker") return "NOT_SPEAKER";
+  await kvSetJson(
+    metaKey(input.id),
+    { ...meta, hostPeerId: target.peerId, hostAccountId: target.accountId, hostNickname: target.nickname },
+    ROOM_TTL_SECONDS,
+  );
+  return "ok";
+}
+
+/**
+ * 잠시 닫은 방(방장 계정마다, 30일): 다시 열 때 같은 번호·이름·언어·내보낸 사람 목록.
+ * 자막 줄은 남기지 않는다 — 학습자 문장은 방이 열린 동안(최대 6시간)만.
+ */
+export type ParkedRoom = { id: string; name: string; languages: string[]; banned: string[]; parkedAt: number };
+
+const PARKED_TTL_SECONDS = 30 * 24 * 60 * 60;
+const PARKED_KEEP = 5;
+const parkedKey = (accountId: string) => `room:parked:${accountId}`;
+
+export async function listParked(accountId: string): Promise<ParkedRoom[]> {
+  const rows = (await kvGetJson<ParkedRoom[]>(parkedKey(accountId))) ?? [];
+  return rows.filter((row) => Date.now() - row.parkedAt < PARKED_TTL_SECONDS * 1000);
+}
+
+/** 잠시 닫기: 방장만. 방은 닫히고(남은 사람은 "방이 닫혔어요") 설정만 방장 계정에 보관. */
+export async function pauseRoom(input: { id: string; hostPeerId: string }): Promise<"ok" | "NOT_HOST"> {
+  const meta = await readMeta(input.id);
+  if (!meta || meta.private || meta.hostPeerId !== input.hostPeerId || !meta.hostAccountId) return "NOT_HOST";
+  const banned = (await kvGetJson<string[]>(banKey(input.id))) ?? [];
+  const parked: ParkedRoom = { id: meta.id, name: meta.name, languages: meta.languages, banned, parkedAt: Date.now() };
+  const rest = (await listParked(meta.hostAccountId)).filter((row) => row.id !== meta.id);
+  await kvSetJson(parkedKey(meta.hostAccountId), [parked, ...rest].slice(0, PARKED_KEEP), PARKED_TTL_SECONDS);
+  await closeRoom(meta.id);
+  return "ok";
+}
+
+/** 다시 열기: 보관한 방을 같은 번호로. 이미 열려 있으면 그 방 그대로. */
+export async function reopenRoom(input: {
+  accountId: string;
+  id: string;
+  hostPeerId: string;
+  hostNickname: string;
+}): Promise<RoomMeta | null> {
+  const open = await readMeta(input.id);
+  if (open) return open.hostAccountId === input.accountId ? open : null;
+  const all = await listParked(input.accountId);
+  const parked = all.find((row) => row.id === input.id);
+  if (!parked) return null;
+  const meta = await createRoom({
+    id: parked.id,
+    name: parked.name,
+    languages: parked.languages,
+    hostPeerId: input.hostPeerId,
+    hostAccountId: input.accountId,
+    hostNickname: input.hostNickname,
+  });
+  if (parked.banned.length) await kvSetJson(banKey(meta.id), parked.banned, ROOM_TTL_SECONDS);
+  await kvSetJson(parkedKey(input.accountId), all.filter((row) => row.id !== input.id), PARKED_TTL_SECONDS);
+  return meta;
 }

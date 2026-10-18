@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { MAX_SPEAKERS } from "../rooms/protocol.ts";
-import { addLine, closeRoom, createRoom, grantRole, isInviteCode, joinRoom, leaveRoom, listRooms, poll, sendSignal } from "./roomStore.ts";
+import { addLine, closeRoom, createRoom, listParked, pauseRoom, readLines, readMeta, reopenRoom, transferHost, grantRole, isInviteCode, joinRoom, leaveRoom, listRooms, poll, sendSignal } from "./roomStore.ts";
 
 // KV 접속 정보 없이 메모리로 돈다(kv.ts). 운영 저장소에 닿지 않는다.
 delete process.env.KV_REST_API_URL;
@@ -175,4 +175,43 @@ test("목록을 언어 조합으로: 순서 상관없이, 하나만 주면 그 �
   const ko = await ids(["ko"]);
   assert.ok(ko.includes(enKo.id) && ko.includes(jaKo.id));
   assert.equal((await ids(["th"])).includes(enKo.id), false);
+});
+
+test("방장 넘기기: 방장만, 말하기 자리의 계정 있는 사람에게", async () => {
+  const room = await createRoom({ name: "Español ↔ 日本語", languages: ["es", "ja"], hostPeerId: "peer_xfer0001", hostAccountId: "acct_xfer_host" });
+  await joinRoom({ id: room.id, peerId: "peer_xfer0001", nickname: "Lucía", wantRole: "speaker", accountId: "acct_xfer_host" });
+  await joinRoom({ id: room.id, peerId: "peer_xfer0002", nickname: "Yuki", wantRole: "listener", accountId: "acct_xfer_yuki" });
+  assert.equal(await transferHost({ id: room.id, hostPeerId: "peer_xfer0002", target: "peer_xfer0001" }), "NOT_HOST");
+  assert.equal(await transferHost({ id: room.id, hostPeerId: "peer_xfer0001", target: "peer_xfer0002" }), "NOT_SPEAKER");
+  await grantRole({ id: room.id, hostPeerId: "peer_xfer0001", target: "peer_xfer0002", role: "speaker" });
+  await poll({ id: room.id, peerId: "peer_xfer0002", since: 0 });
+  assert.equal(await transferHost({ id: room.id, hostPeerId: "peer_xfer0001", target: "peer_xfer0002" }), "ok");
+  const meta = await readMeta(room.id);
+  assert.equal(meta?.hostPeerId, "peer_xfer0002");
+  assert.equal(meta?.hostAccountId, "acct_xfer_yuki");
+  // 옛 방장이 나가도 방은 그대로(방 닫기는 지금 방장만).
+  await leaveRoom(room.id, "peer_xfer0001");
+  assert.ok(await readMeta(room.id));
+});
+
+test("잠시 닫기 → 다시 열기: 같은 번호·이름·언어·내보낸 사람, 자막은 안 남김", async () => {
+  const room = await createRoom({ name: "ภาษาไทย ↔ 한국어", languages: ["th", "ko"], hostPeerId: "peer_park0001", hostAccountId: "acct_park_host" });
+  await joinRoom({ id: room.id, peerId: "peer_park0001", nickname: "민지", wantRole: "speaker", accountId: "acct_park_host" });
+  await joinRoom({ id: room.id, peerId: "peer_park0002", nickname: "Somchai", wantRole: "listener", accountId: "acct_park_bad" });
+  await grantRole({ id: room.id, hostPeerId: "peer_park0001", target: "peer_park0002", role: "out" });
+  await addLine(room.id, { kind: "text", peerId: "peer_park0001", nickname: "민지", text: "สวัสดีค่ะ", startedAt: 1, endedAt: 2 });
+  assert.equal(await pauseRoom({ id: room.id, hostPeerId: "peer_park0002" }), "NOT_HOST");
+  assert.equal(await pauseRoom({ id: room.id, hostPeerId: "peer_park0001" }), "ok");
+  assert.equal(await readMeta(room.id), null);
+  assert.equal((await listRooms()).some((r) => r.id === room.id), false);
+  const parked = await listParked("acct_park_host");
+  assert.deepEqual(parked.map((row) => [row.id, row.name, row.languages, row.banned]), [[room.id, "ภาษาไทย ↔ 한국어", ["th", "ko"], ["acct_park_bad"]]]);
+  assert.equal(await reopenRoom({ accountId: "acct_someone", id: room.id, hostPeerId: "peer_park0009", hostNickname: "x" }), null);
+  const again = await reopenRoom({ accountId: "acct_park_host", id: room.id, hostPeerId: "peer_park0003", hostNickname: "민지" });
+  assert.equal(again?.id, room.id);
+  assert.equal(again?.hostPeerId, "peer_park0003");
+  assert.deepEqual(await listParked("acct_park_host"), []);
+  assert.deepEqual(await readLines(room.id), []);
+  const banned = await joinRoom({ id: room.id, peerId: "peer_park0004", nickname: "Somchai", wantRole: "listener", accountId: "acct_park_bad" });
+  assert.deepEqual(banned, { ok: false, error: "BANNED" });
 });

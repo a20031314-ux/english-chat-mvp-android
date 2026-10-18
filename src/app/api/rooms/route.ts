@@ -11,6 +11,10 @@ import {
   joinRoom,
   leaveRoom,
   closeRoom,
+  listParked,
+  pauseRoom,
+  reopenRoom,
+  transferHost,
   listRooms,
   poll,
   readMeta,
@@ -76,12 +80,19 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { rooms: shown });
   }
 
+  // 내가 잠시 닫아 둔 방(로비 "내 방 · 다시 열기").
+  if (action === "parked") {
+    if (!auth) return bad(request, "SIGNED_OUT", 401);
+    return jsonWithCors(request, { rooms: (await listParked(auth.accountId)).map((row) => ({ id: row.id, name: row.name, languages: row.languages, parkedAt: row.parkedAt })) });
+  }
+
   if (!isPeerId(body.peerId)) return bad(request, "BAD_PEER");
   const peerId = body.peerId;
 
   // 만들기·들어가기는 로그인한 사람만. 이름은 프로필 닉네임(없으면 아이디).
-  const account = auth && (action === "create" || action === "join") ? await readAccount(auth.accountId) : null;
-  if ((action === "create" || action === "join") && !account) return bad(request, "SIGNED_OUT", 401);
+  const needsAccount = action === "create" || action === "join" || action === "reopen";
+  const account = auth && needsAccount ? await readAccount(auth.accountId) : null;
+  if (needsAccount && !account) return bad(request, "SIGNED_OUT", 401);
   const profileName = account
     ? cleanText(account.profile.nickname || account.username || "", MAX_NICKNAME_CHARS)
     : "";
@@ -105,6 +116,11 @@ export async function POST(request: NextRequest) {
 
   if (!isRoomId(body.roomId)) return bad(request, "BAD_ROOM");
   const roomId = body.roomId;
+
+  if (action === "reopen") {
+    const meta = await reopenRoom({ accountId: account!.id, id: roomId, hostPeerId: peerId, hostNickname: profileName });
+    return meta ? jsonWithCors(request, { room: meta }) : bad(request, "NO_ROOM", 404);
+  }
 
   // 들어가기 전에 방 모양만(1:1 통화 받기). 비공개 방은 그 두 사람에게만.
   if (action === "peek") {
@@ -182,6 +198,17 @@ export async function POST(request: NextRequest) {
     // 손든 사람을 올려 준 횟수 — 방장(튜터)이 도운 만큼의 첫 지표.
     if (role === "speaker" && me.accountId) await noteHelped(me.accountId);
     return jsonWithCors(request, { ok: true });
+  }
+
+  if (action === "transfer") {
+    if (!isPeerId(body.target)) return bad(request, "BAD_TARGET");
+    const result = await transferHost({ id: roomId, hostPeerId: peerId, target: body.target });
+    return result === "ok" ? jsonWithCors(request, { ok: true }) : bad(request, result, result === "NOT_HOST" ? 403 : 409);
+  }
+
+  if (action === "pause") {
+    const result = await pauseRoom({ id: roomId, hostPeerId: peerId });
+    return result === "ok" ? jsonWithCors(request, { ok: true }) : bad(request, result, 403);
   }
 
   if (action === "line") {

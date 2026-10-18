@@ -5,6 +5,8 @@ import type { RoomCopy } from "@/lib/rooms/copy";
 import {
   RoomApiError,
   grantRole,
+  pauseRoom,
+  transferHost,
   joinRoom,
   leaveRoom,
   myRelations,
@@ -28,6 +30,7 @@ import {
   type RoomRole,
 } from "@/lib/rooms/protocol";
 import { askPhrase } from "@/lib/rooms/quote";
+import { BodyLayer } from "@/components/FullScreenLayer";
 import { Composer, Face, Lines, ProfileSheet, languagePair } from "./RoomParts";
 import { useInbox } from "./RoomDm";
 import { CALL_LAYOUT_LINES, ROOM_LAYOUTS, pendingNotes, readRoomLayout, saveRoomLayout, type RoomLayout, type RoomNote } from "@/lib/rooms/layout";
@@ -51,7 +54,8 @@ type Notice =
   | "demoted"
   | "kicked"
   | "banned"
-  | "loginNeeded";
+  | "loginNeeded"
+  | "becameHost";
 
 export function RoomView({
   t,
@@ -126,11 +130,15 @@ export function RoomView({
   const aliveRef = useRef(true);
 
   const isHost = peerId === room.hostPeerId;
+  // 지금 방장(넘기기·다시 들어오기로 바뀐다 — 들어갈 때와 물을 때마다 서버 값으로).
+  const [hostPeerId, setHostPeerId] = useState(room.hostPeerId);
+  const hostRef = useRef(room.hostPeerId);
+  const [leaving, setLeaving] = useState<"" | "choose" | "pick">("");
   // 방장이 다시 들어오면 서버가 방장 자리를 새 peerId로 옮긴다 — 버튼 이름(방 닫기)을 맞추려고 들어갈 때 받은 값으로.
   // 집은 남의 줄 — 댓글창 위에 인용으로 붙는다(묻기면 학습 언어 질문이 미리 채워짐).
   const [quoting, setQuoting] = useState<{ line: RoomLine; ask: boolean } | null>(null);
-  const [closesOnLeave, setClosesOnLeave] = useState(isHost && !room.private);
-  const free = Boolean(room.private) || canSeatFreely(peerId, room.hostPeerId, members);
+  const free = Boolean(room.private) || canSeatFreely(peerId, hostPeerId, members);
+  const closesOnLeave = !room.private && hostPeerId === peerId;
 
   useEffect(() => {
     mutedRef.current = muted;
@@ -281,6 +289,12 @@ export function RoomView({
         offsetRef.current = result.now - (sentAt + receivedAt) / 2;
         const live = liveMembers(result.members, result.now);
         setMembers(live);
+        if (result.room.hostPeerId !== hostRef.current) {
+          // 방장이 바뀌었다(넘겨받음). 내가 받았으면 알려 준다.
+          if (result.room.hostPeerId === peerId) setNotice("becameHost");
+          hostRef.current = result.room.hostPeerId;
+          setHostPeerId(result.room.hostPeerId);
+        }
         const me = live.find((member) => member.peerId === peerId);
         if (me && me.role !== roleRef.current) {
           // 방장이 올리거나 내렸다(또는 앉으려 했는데 자리가 없었다). 마이크도 같이.
@@ -314,7 +328,8 @@ export function RoomView({
         });
         if (!aliveRef.current) return;
         offsetRef.current = result.now - Date.now();
-        setClosesOnLeave(!result.room.private && result.room.hostPeerId === peerId);
+        hostRef.current = result.room.hostPeerId;
+        setHostPeerId(result.room.hostPeerId);
         raise(result.member.hand);
         if (result.member.role === "speaker") await adoptRole("speaker", "");
         else if (result.member.hand) setNotice("handUp");
@@ -363,11 +378,11 @@ export function RoomView({
     }
   };
 
-  const hostPeer = members.find((member) => member.peerId === room.hostPeerId) ?? null;
-  const isHostNow = peerId === room.hostPeerId || (hostPeer === null && isHost);
+  const hostPeer = members.find((member) => member.peerId === hostPeerId) ?? null;
+  const isHostNow = peerId === hostPeerId || (hostPeer === null && isHost && hostPeerId === room.hostPeerId);
   const speakers = members
     .filter((member) => member.role === "speaker")
-    .sort((a, b) => Number(b.peerId === room.hostPeerId) - Number(a.peerId === room.hostPeerId) || a.joinedAt - b.joinedAt);
+    .sort((a, b) => Number(b.peerId === hostPeerId) - Number(a.peerId === hostPeerId) || a.joinedAt - b.joinedAt);
   const listeners = members.filter((member) => member.role === "listener");
   const hands = raisedHands(members);
   const sheetMember = sheet ? members.find((member) => member.peerId === sheet.peerId) ?? null : null;
@@ -376,6 +391,28 @@ export function RoomView({
     const nickname = member?.nickname ?? lines.find((line) => line.peerId === target)?.nickname ?? "";
     setSheet({ peerId: target, accountId: member?.accountId ?? accountId, nickname });
   };
+  // 방장 넘기기(프로필 시트) / 넘기고 나가기(나가기 시트).
+  const handOver = async (target: string, thenLeave: boolean) => {
+    try {
+      await transferHost(room.id, peerId, target);
+      hostRef.current = target;
+      setHostPeerId(target);
+      setLeaving("");
+      if (thenLeave) onLeave();
+    } catch {
+      setNotice("error");
+    }
+  };
+  const pauseAndLeave = async () => {
+    try {
+      await pauseRoom(room.id, peerId);
+      setLeaving("");
+      onLeave();
+    } catch {
+      setNotice("error");
+    }
+  };
+  const nextHosts = members.filter((member) => member.peerId !== peerId && member.role === "speaker" && member.accountId);
   const memberAccounts = members.map((member) => member.accountId).filter((id): id is string => Boolean(id));
   const notes = pendingNotes(inbox.threads, memberAccounts, seenNotes);
   const isSpeaking = (member: RoomMember) =>
@@ -405,7 +442,11 @@ export function RoomView({
                 {t.minimize}
               </button>
             ) : null}
-            <button type="button" onClick={onLeave} className="rounded-lg bg-rose-500/80 px-3 py-1.5 text-sm font-medium text-white">
+            <button
+              type="button"
+              onClick={() => (closesOnLeave ? setLeaving("choose") : onLeave())}
+              className="rounded-lg bg-rose-500/80 px-3 py-1.5 text-sm font-medium text-white"
+            >
               {/* 방장이 나가면 서버가 방을 닫는다(1:1 통화 방은 아님). */}
               {closesOnLeave ? t.closeRoom : t.leave}
             </button>
@@ -450,7 +491,7 @@ export function RoomView({
                     ) : null}
                   </span>
                   <span className="flex max-w-full items-center gap-0.5 truncate text-[11px] text-slate-200" dir="auto">
-                    {member.peerId === room.hostPeerId ? <span aria-hidden>👑</span> : null}
+                    {member.peerId === hostPeerId ? <span aria-hidden>👑</span> : null}
                     <span className="truncate">{member.peerId === peerId ? t.you2 : member.nickname}</span>
                   </span>
                 </button>
@@ -663,6 +704,69 @@ export function RoomView({
         </div>
       </footer>
 
+      {leaving ? (
+        <BodyLayer>
+          <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60" onClick={() => setLeaving("")}>
+            <div
+              className="w-full max-w-md space-y-2 rounded-t-2xl border border-white/10 bg-surface p-4 pb-[calc(env(safe-area-inset-bottom)+1rem)]"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <p className="text-sm font-semibold text-white">{leaving === "pick" ? t.pickNewHost : t.leaveTitle}</p>
+              {leaving === "pick" ? (
+                <ul className="space-y-1.5">
+                  {nextHosts.map((member) => (
+                    <li key={member.peerId}>
+                      <button
+                        type="button"
+                        onClick={() => void handOver(member.peerId, true)}
+                        className="flex w-full items-center gap-2 rounded-xl border border-white/10 px-3 py-2 text-start text-sm text-white hover:bg-white/5"
+                      >
+                        <Face accountId={member.accountId ?? null} name={member.nickname} size={30} />
+                        <span className="min-w-0 flex-1 truncate" dir="auto">
+                          👑 {member.nickname}
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <>
+                  {nextHosts.length ? (
+                    <button
+                      type="button"
+                      onClick={() => setLeaving("pick")}
+                      className="w-full rounded-xl bg-amber-300/90 px-3 py-2.5 text-sm font-medium text-black"
+                    >
+                      👑 {t.leaveTransfer}
+                    </button>
+                  ) : null}
+                  <button
+                    type="button"
+                    onClick={() => void pauseAndLeave()}
+                    className="w-full rounded-xl border border-white/20 px-3 py-2.5 text-sm text-slate-100"
+                  >
+                    ⏸ {t.leavePause}
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setLeaving("");
+                      onLeave();
+                    }}
+                    className="w-full rounded-xl bg-rose-500/80 px-3 py-2.5 text-sm font-medium text-white"
+                  >
+                    {t.closeRoom}
+                  </button>
+                </>
+              )}
+              <button type="button" onClick={() => setLeaving("")} className="w-full rounded-xl px-3 py-2 text-sm text-slate-400">
+                {t.cancel}
+              </button>
+            </div>
+          </div>
+        </BodyLayer>
+      ) : null}
+
       {sheet ? (
         <ProfileSheet
           t={t}
@@ -670,7 +774,16 @@ export function RoomView({
           member={sheetMember}
           accountId={sheet.accountId}
           nickname={sheet.nickname}
-          isHostView={isHostNow && sheet.peerId !== peerId && sheet.peerId !== room.hostPeerId && sheetMember !== null}
+          isHostView={isHostNow && sheet.peerId !== peerId && sheet.peerId !== hostPeerId && sheetMember !== null}
+          onTransfer={
+            isHostNow && !room.private && sheetMember?.role === "speaker" && sheetMember.accountId && sheet.peerId !== peerId
+              ? () => {
+                  const target = sheet.peerId;
+                  setSheet(null);
+                  void handOver(target, false);
+                }
+              : undefined
+          }
           roomId={room.id}
           recentLines={lines.filter((line) => line.peerId === sheet.peerId).slice(-5).map((line) => line.text)}
           onClose={() => setSheet(null)}

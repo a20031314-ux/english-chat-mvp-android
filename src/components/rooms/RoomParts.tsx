@@ -128,6 +128,7 @@ export function ProfileSheet({
   recentLines,
   onClose,
   onGrant,
+  onTransfer,
   onBlockedChange,
   onMessage,
 }: {
@@ -142,12 +143,15 @@ export function ProfileSheet({
   recentLines: string[];
   onClose: () => void;
   onGrant: (role: "speaker" | "listener" | "out") => void;
+  /** 방장 넘기기(내가 방장이고 그 사람이 말하기 자리에 있을 때만). 한 번 더 눌러 확인. */
+  onTransfer?: () => void;
   onBlockedChange: () => void;
   /** 있으면 "메시지" 버튼(1:1 대화 열기). */
   onMessage?: (accountId: string) => void;
 }) {
   const profile = useProfile(accountId);
   const [busy, setBusy] = useState(false);
+  const [confirmTransfer, setConfirmTransfer] = useState(false);
   const [reporting, setReporting] = useState(false);
   const [notice, setNotice] = useState("");
   const name = profile?.nickname || nickname;
@@ -320,6 +324,26 @@ export function ProfileSheet({
                 {t.kick}
               </button>
             </div>
+          ) : null}
+          {onTransfer ? (
+            confirmTransfer ? (
+              <button
+                type="button"
+                onClick={onTransfer}
+                className="mt-2 w-full rounded-xl bg-amber-300/90 px-3 py-2 text-sm font-medium text-black"
+                dir="auto"
+              >
+                👑 {t.transferConfirm.replace("{name}", name)}
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={() => setConfirmTransfer(true)}
+                className="mt-2 w-full rounded-xl border border-amber-300/40 px-3 py-2 text-sm text-amber-200"
+              >
+                👑 {t.transferHost}
+              </button>
+            )
           ) : null}
         </div>
       </div>

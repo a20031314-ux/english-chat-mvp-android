@@ -11,6 +11,9 @@ import {
   createRoom,
   dmEndCall,
   listRooms,
+  listParkedRooms,
+  reopenRoom,
+  type ParkedRoom,
   peekRoom,
   newPeerId,
 } from "@/lib/rooms/client";
@@ -204,7 +207,10 @@ function Lobby({
   const wanted = filterLanguages(filter, targetLanguage, locale);
   const wantedKey = wanted.join(",");
 
+  // 내가 잠시 닫아 둔 방(다시 열기). 못 읽으면 그냥 안 보인다.
+  const [parked, setParked] = useState<ParkedRoom[]>([]);
   const refresh = useCallback(async () => {
+    void listParkedRooms().then(setParked, () => {});
     try {
       setRooms(await listRooms(wantedKey ? wantedKey.split(",") : []));
       setError("");
@@ -283,6 +289,34 @@ function Lobby({
             {t.refresh}
           </button>
         </div>
+        {parked.length ? (
+          <div className="space-y-1.5 rounded-2xl border border-white/10 bg-white/[0.02] p-2.5">
+            <p className="text-xs text-slate-400">⏸ {t.parkedRooms}</p>
+            {parked.map((room) => (
+              <div key={room.id} className="flex items-center gap-2">
+                <div className="min-w-0 flex-1">
+                  <p className="truncate text-sm text-white" dir="auto">
+                    {room.name}
+                  </p>
+                  <p className="text-meta text-slate-500">{languagePair(room.languages, locale)}</p>
+                </div>
+                <button
+                  type="button"
+                  disabled={busy}
+                  onClick={() => {
+                    setBusy(true);
+                    void reopenRoom(room.id, peerId)
+                      .then((meta) => onJoin(meta, "speaker"), () => setError(t.error))
+                      .finally(() => setBusy(false));
+                  }}
+                  className="shrink-0 rounded-lg bg-violet-500 px-3 py-1.5 text-xs font-medium text-white disabled:opacity-40"
+                >
+                  ▶ {t.reopenRoom}
+                </button>
+              </div>
+            ))}
+          </div>
+        ) : null}
         <div className="flex flex-wrap gap-1.5 text-xs">
           {(
             [
@@ -311,7 +345,7 @@ function Lobby({
                   value={filter[slot] ?? ""}
                   aria-label={`${t.filterPick} ${index + 1}`}
                   onChange={(event) => setFilter({ ...filter, [slot]: event.target.value || null })}
-                  className="min-w-0 flex-1 rounded-xl border border-white/15 bg-[#111] px-2 py-2 text-sm text-white"
+                  className="min-w-0 flex-1 rounded-xl border border-white/15 bg-surface px-2 py-2 text-sm text-white"
                 >
                   <option value="">{t.anyLanguage}</option>
                   {SUPPORTED_LEARNING_LANGUAGES.map((language) => (

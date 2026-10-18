@@ -146,6 +146,27 @@ export async function postLine(input: {
   return (await call<{ line: RoomLine }>("line", input)).line;
 }
 
+/** 방장만: 말하기 자리의 사람에게 방장 넘기기. */
+export async function transferHost(roomId: string, peerId: string, target: string): Promise<void> {
+  await call("transfer", { roomId, peerId, target });
+}
+
+/** 방장만: 잠시 닫기(설정만 방장 계정에 30일, 자막은 지움). */
+export async function pauseRoom(roomId: string, peerId: string): Promise<void> {
+  await call("pause", { roomId, peerId });
+}
+
+export type ParkedRoom = { id: string; name: string; languages: string[]; parkedAt: number };
+
+export async function listParkedRooms(): Promise<ParkedRoom[]> {
+  return (await call<{ rooms: ParkedRoom[] }>("parked", {})).rooms;
+}
+
+/** 잠시 닫은 내 방을 같은 번호로 다시 열기. */
+export async function reopenRoom(roomId: string, peerId: string): Promise<RoomMeta> {
+  return (await call<{ room: RoomMeta }>("reopen", { roomId, peerId })).room;
+}
+
 export function leaveRoom(roomId: string, peerId: string): Promise<void> {
   // 화면을 닫는 순간이라 부르는 쪽은 보통 기다리지 않는다(1:1 통화만 기다린 뒤 기록을 남긴다).
   return call("leave", { roomId, peerId }).then(
