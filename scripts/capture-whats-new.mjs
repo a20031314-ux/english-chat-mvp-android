@@ -163,6 +163,7 @@ const STORE_TABS_ITEMS = [
   { shot: "vocab-search" },
   // 2.68 말하는 방·메시지·로그인(방·메시지는 고정 응답, 번역만 운영). 방 고정 응답이 /api를 가로채니 맨 끝에.
   { shot: "rooms" },
+  { shot: "rooms-mini" },
   { shot: "dm" },
   { shot: "account" },
 ];
@@ -472,8 +473,21 @@ const STEPS = {
     await translated;
     await wait(1200);
   },
+  async "rooms-mini"({ page, ui, locale, wait }) {
+    // 방을 작게 접고 채팅 탭으로: 탭 바 위에 방 막대가 떠 있어야 한다(연결은 그대로).
+    await page.locator('div[class*="z-[80]"] header').getByRole("button", { name: exactly(roomCopyFor(locale).minimize) }).click();
+    await wait(800);
+    await page.getByRole("button", { name: exactly(ui.homeTabChat) }).last().click();
+    await wait(2500);
+  },
   async dm({ page, locale, wait }) {
     const t = roomCopyFor(locale);
+    // 접어 둔 방이면 막대를 눌러 다시 연다.
+    const bar = page.locator("button", { hasText: t.miniBack });
+    if (await bar.count()) {
+      await bar.first().click();
+      await wait(1200);
+    }
     // 자리의 방장 얼굴 → 프로필 시트 → 메시지 → 대화(고정 응답).
     await page.locator('div[class*="z-[80]"] header ul li button').first().click();
     await wait(1500);

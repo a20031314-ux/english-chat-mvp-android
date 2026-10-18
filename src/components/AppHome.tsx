@@ -19,6 +19,7 @@ import { BillingUiProvider, BillingOpenButton } from "@/components/BillingScreen
 import { GuideButton } from "@/components/GuideSheet";
 import { FeedbackButton } from "@/components/FeedbackButton";
 import { RoomsScreen } from "@/components/rooms/RoomsScreen";
+import { readMiniRoom, subscribeMiniRoom } from "@/lib/rooms/miniRoom";
 import { socialFeaturesEnabled } from "@/lib/platform";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
@@ -78,6 +79,7 @@ function AppHomeInner({
   // 말하는 방: 하단 탭(2.68부터 모두에게). iOS 1차 출시엔 방·메시지를 통째로 끈다
   // (`lib/platform.ts`) — 그때는 탭도 ?screen=rooms도 채팅으로.
   const socialOn = useSyncExternalStore(noSubscribe, socialFeaturesEnabled, () => false);
+  const miniRoom = useSyncExternalStore(subscribeMiniRoom, readMiniRoom, () => null);
 
   useEffect(() => {
     document.documentElement.lang = locale;
@@ -252,12 +254,31 @@ function AppHomeInner({
                 </div>
               ) : null}
 
-              {shownTab === "rooms" ? (
-                <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
-                  <RoomsScreen ui={ui} locale={locale} targetLanguage={targetLanguage} />
-                </div>
+              {/* 다른 탭에서도 떠 있어야 접어 둔 방이 끊기지 않는다(로비는 이 탭일 때만 그린다). */}
+              {socialOn ? (
+                <RoomsScreen ui={ui} locale={locale} targetLanguage={targetLanguage} visible={shownTab === "rooms"} />
               ) : null}
             </div>
+
+            {miniRoom ? (
+              <div className="shrink-0 px-3 pb-1.5 pt-1">
+                {/* 접어 둔 말하는 방: 누르면 방으로(연결·마이크는 그대로였다). */}
+                <button
+                  type="button"
+                  onClick={miniRoom.open}
+                  className="mx-auto flex w-full max-w-2xl items-center gap-2 rounded-2xl border border-emerald-400/40 bg-[#0c1a14] px-4 py-2.5 text-start"
+                >
+                  <span className="relative flex h-2.5 w-2.5 shrink-0">
+                    <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
+                    <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-emerald-400" />
+                  </span>
+                  <span className="min-w-0 flex-1 truncate text-sm font-medium text-white" dir="auto">
+                    🎙 {miniRoom.title}
+                  </span>
+                  <span className="shrink-0 text-xs text-emerald-200">{miniRoom.back}</span>
+                </button>
+              </div>
+            ) : null}
 
             <nav
               className="shrink-0 border-t border-white/10 bg-[#050505]/95 px-1 pb-[env(safe-area-inset-bottom)] pt-1 backdrop-blur-md"

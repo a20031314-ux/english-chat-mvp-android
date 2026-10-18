@@ -62,6 +62,7 @@ export function RoomView({
   title,
   onLeft,
   onMessage,
+  onMinimize,
 }: {
   t: RoomCopy;
   room: RoomMeta;
@@ -77,6 +78,8 @@ export function RoomView({
   onLeft?: () => void;
   /** 프로필 시트의 "메시지". */
   onMessage?: (accountId: string) => void;
+  /** 방에 있는 채로 화면만 접기(연결·마이크는 그대로, RoomsScreen이 아래 막대를 띄움). */
+  onMinimize?: () => void;
 }) {
   const onLeftRef = useRef(onLeft);
   useEffect(() => {
@@ -371,9 +374,20 @@ export function RoomView({
               {t.speakers} {speakers.length}/{MAX_SPEAKERS} · {t.listeners} {listeners.length}
             </p>
           </div>
-          <button type="button" onClick={onLeave} className="shrink-0 rounded-lg bg-rose-500/80 px-3 py-1.5 text-sm font-medium text-white">
-            {t.leave}
-          </button>
+          <div className="flex shrink-0 items-center gap-2">
+            {onMinimize ? (
+              <button
+                type="button"
+                onClick={onMinimize}
+                className="rounded-lg border border-white/20 px-3 py-1.5 text-sm text-slate-200"
+              >
+                {t.minimize}
+              </button>
+            ) : null}
+            <button type="button" onClick={onLeave} className="rounded-lg bg-rose-500/80 px-3 py-1.5 text-sm font-medium text-white">
+              {t.leave}
+            </button>
+          </div>
         </div>
 
         {/* 말하기 자리: 방장 먼저, 8자리 격자(헬로우톡처럼). 누르면 프로필. */}

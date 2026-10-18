@@ -17,6 +17,9 @@ const ko = {
   speakers: "말하기",
   listeners: "듣기",
   leave: "나가기",
+  /** 방에 있는 채로 다른 탭으로: 방 화면을 접고 아래 막대로. */
+  minimize: "작게",
+  miniBack: "눌러서 방으로",
   viewTimeline: "대화 보기",
   viewPeople: "사람별 보기",
   mute: "마이크 끄기",
@@ -129,6 +132,8 @@ const en: RoomCopy = {
   speakers: "talking",
   listeners: "listening",
   leave: "Leave",
+  minimize: "Minimize",
+  miniBack: "Tap to return",
   viewTimeline: "Conversation",
   viewPeople: "By person",
   mute: "Mic off",

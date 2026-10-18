@@ -16,6 +16,7 @@ import {
 } from "@/lib/rooms/client";
 import { MAX_ROOM_NAME_CHARS, MAX_SPEAKERS, type RoomMeta, type RoomRole, type RoomSummary } from "@/lib/rooms/protocol";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
+import { setMiniRoom } from "@/lib/rooms/miniRoom";
 import { Face, languagePair } from "./RoomParts";
 import { RoomView } from "./RoomView";
 import { DmList, DmThreadView, useInbox } from "./RoomDm";
@@ -31,30 +32,48 @@ export function RoomsScreen({
   ui,
   locale,
   targetLanguage,
+  visible = true,
 }: {
   ui: UICopy;
   locale: string;
   targetLanguage: string;
+  /**
+   * 말하는 방 탭이 보이는지. 다른 탭에서도 이 화면은 떠 있어서(AppHome) 접어 둔 방의
+   * 연결·마이크가 끊기지 않는다. 안 보일 때는 로비 없이 방(접혔으면 아래 막대)만.
+   */
+  visible?: boolean;
 }) {
   const t = roomCopy(locale);
   const [peerId] = useState(() => newPeerId());
   const [inRoom, setInRoom] = useState<{ room: RoomSummary | RoomMeta; role: RoomRole; title?: string; back?: string } | null>(null);
   /** 열려 있는 1:1 대화의 상대 계정. 방 위에도 뜬다. */
   const [dmWith, setDmWith] = useState<string | null>(null);
+  /** 방 화면을 접고 다른 화면을 보는 중. 방에는 그대로 있다. */
+  const [minimized, setMinimized] = useState(false);
   const account = useSyncExternalStore(subscribeSession, readCachedAccount, () => null);
   const nickname = account?.profile.nickname || account?.username || "";
+
+  // 접어 둔 방은 AppHome이 탭 바 위 막대로 그린다(lib/rooms/miniRoom.ts).
+  const miniTitle = inRoom && account && minimized ? inRoom.title ?? inRoom.room.name : null;
+  useEffect(() => {
+    setMiniRoom(miniTitle === null ? null : { title: miniTitle, back: t.miniBack, open: () => setMinimized(false) });
+  }, [miniTitle, t.miniBack]);
+  useEffect(() => () => setMiniRoom(null), []);
 
   // 대화의 📞·받기 → 둘만의 방. 끝나면 그 대화로 돌아간다.
   const joinCall = async (room: RoomMeta | string, title: string) => {
     const meta = typeof room === "string" ? await peekRoom(room, peerId) : room;
     if (!meta) return;
+    setMinimized(false);
     setInRoom({ room: meta, role: "speaker", title: `📞 ${title}`, back: dmWith ?? undefined });
     setDmWith(null);
   };
 
   return (
     <>
-      {/* 로비(방 목록·메시지)는 탭 안에. */}
+      {/* 로비(방 목록·메시지)는 탭 안에, 말하는 방 탭일 때만. */}
+      {visible ? (
+      <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
         <h1 className="text-base font-semibold text-white">{t.title}</h1>
       </header>
@@ -66,7 +85,10 @@ export function RoomsScreen({
             me={{ id: account.id, nickname, photo: account.profile.photo }}
             targetLanguage={targetLanguage}
             locale={locale}
-            onJoin={(room, role) => setInRoom({ room, role })}
+            onJoin={(room, role) => {
+              setMinimized(false);
+              setInRoom({ room, role });
+            }}
             onMessage={setDmWith}
           />
         ) : (
@@ -77,11 +99,13 @@ export function RoomsScreen({
           </div>
         )}
       </div>
+      </div>
+      ) : null}
 
-      {/* 방 안은 화면 전체(탭 바 위, 새로워진 점 z-70보다 위). */}
+      {/* 방 안은 화면 전체(탭 바 위, 새로워진 점 z-70보다 위). 접으면 숨기기만 하고 그대로 둔다. */}
       {inRoom && account ? (
         <BodyLayer>
-          <div className="fixed inset-0 z-[80] flex flex-col bg-[#050505]">
+          <div className={`fixed inset-0 z-[80] flex-col bg-[#050505] ${minimized ? "hidden" : "flex"}`} aria-hidden={minimized}>
             <div className="mx-auto flex h-[100dvh] w-full max-w-2xl flex-col pt-[env(safe-area-inset-top)]">
               <RoomView
                 key={inRoom.room.id}
@@ -95,9 +119,11 @@ export function RoomsScreen({
                 title={inRoom.title}
                 onLeave={() => {
                   const back = inRoom.back;
+                  setMinimized(false);
                   setInRoom(null);
                   if (back) setDmWith(back);
                 }}
+                onMinimize={() => setMinimized(true)}
                 onLeft={inRoom.room.private ? () => void dmEndCall(inRoom.room.id).catch(() => {}) : undefined}
                 onMessage={setDmWith}
               />
