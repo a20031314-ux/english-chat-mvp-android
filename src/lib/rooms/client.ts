@@ -6,7 +6,7 @@ import { readCachedAccount } from "@/lib/account/session";
 import type { LineKind, PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, RoomSummary, SignalKind } from "./protocol";
 import type { PersonCard, PublicProfile } from "./social";
 import type { DmMessage, DmSummary, DmThread } from "./dm";
-import type { Group, GroupMessage, GroupSummary } from "./group";
+import type { Group, GroupCall, GroupMessage, GroupSummary } from "./group";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 
 /** 방(시험 기능)의 기기 저장값. 모두 이 기기에만 있다. */
@@ -383,12 +383,22 @@ export function groupCreate(name: string, languages: string[], invite: string[])
   return groups("create", { name, languages, invite });
 }
 
-export function groupOpen(groupId: string): Promise<{ group: Group; messages: GroupMessage[] }> {
+export function groupOpen(groupId: string): Promise<{ group: Group; messages: GroupMessage[]; call?: GroupCall }> {
   return groups("open", { groupId });
 }
 
-export function groupPoll(groupId: string, since: number): Promise<{ group: Group; messages: GroupMessage[] }> {
+export function groupPoll(groupId: string, since: number): Promise<{ group: Group; messages: GroupMessage[]; call?: GroupCall }> {
   return groups("poll", { groupId, since });
+}
+
+/** 📞 단체방 통화: 열려 있으면 그 방, 없으면 새 비공개 방. */
+export function groupCall(groupId: string, peerId: string): Promise<{ room: RoomMeta }> {
+  return groups("call", { groupId, peerId });
+}
+
+/** 통화에서 나갈 때: 모두 나갔으면 서버가 자막을 기록으로 남긴다. */
+export function groupEndCall(groupId: string, roomId: string): Promise<{ logged: boolean }> {
+  return groups("endCall", { groupId, roomId });
 }
 
 export function groupSend(groupId: string, text: string, quote?: { seq: number; ask: boolean }): Promise<{ group: Group; message: GroupMessage }> {

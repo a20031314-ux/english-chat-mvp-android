@@ -7,6 +7,8 @@ import {
   inviteToGroup,
   kickFromGroup,
   leaveGroup,
+  logGroupCall,
+  noteGroupCall,
   markGroupRead,
   myGroups,
   readGroup,
@@ -77,4 +79,21 @@ test("정원·방장: 20명까지, 방장만 내보내기·넘기기, 방장이 
   assert.equal(left?.owner, MINJI);
   assert.deepEqual(left?.members, [MINJI]);
   assert.equal(await inviteToGroup(OMAR, small.id, LUCIA), "NOT_MEMBER");
+});
+
+test("내보낸 사람은 kicked에 남고, 다시 초대하면 빠진다. 통화 시작·기록 줄", async () => {
+  const group = await createGroup({ owner: MINJI, name: "Русский ↔ 日本語", languages: ["ru", "ja"], invite: [OMAR] });
+  await answerInvite(OMAR, group.id, true);
+  await kickFromGroup(MINJI, group.id, OMAR);
+  assert.deepEqual((await readGroup(group.id))?.kicked, [OMAR]);
+  await inviteToGroup(MINJI, group.id, OMAR);
+  assert.deepEqual((await readGroup(group.id))?.kicked, []);
+
+  const withCall = await noteGroupCall((await readGroup(group.id))!, MINJI, "abcdef");
+  assert.equal(withCall.callRoomId, "abcdef");
+  await logGroupCall({ ...withCall, callRoomId: undefined }, MINJI, "abcdef", [{ from: MINJI, nickname: "민지", text: "Привет!" }]);
+  const rows = await readGroupMessages(group.id);
+  const tail = rows.slice(-2).map((row) => [row.kind, row.text, row.roomId]);
+  assert.deepEqual(tail, [["system", "call", "abcdef"], ["callLog", "1", "abcdef"]]);
+  assert.equal((await readGroup(group.id))?.callRoomId, undefined);
 });

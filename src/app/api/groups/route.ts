@@ -9,6 +9,9 @@ import {
   inviteToGroup,
   kickFromGroup,
   leaveGroup,
+  logGroupCall,
+  noteGroupCall,
+  saveGroupMeta,
   markGroupRead,
   myGroups,
   readGroup,
@@ -16,10 +19,11 @@ import {
   sendToGroup,
   transferGroup,
 } from "@/lib/server/groupStore";
-import { isInviteCode } from "@/lib/server/roomStore";
+import { allowInRoom, createRoom, isInviteCode, liveCount, readLines, readMeta } from "@/lib/server/roomStore";
+import { kvSetJsonIfAbsent } from "@/lib/server/kv";
 import { DM_MAX_CHARS } from "@/lib/rooms/dm";
 import { GROUP_MAX_MEMBERS, GROUP_MAX_NAME_CHARS, isGroupId } from "@/lib/rooms/group";
-import { cleanText } from "@/lib/rooms/protocol";
+import { cleanText, isPeerId, isRoomId } from "@/lib/rooms/protocol";
 import { cleanLanguages } from "@/lib/rooms/roomFilter";
 
 export const dynamic = "force-dynamic";
@@ -41,6 +45,13 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 const bad = (request: NextRequest, error: string, status = 400) => jsonWithCors(request, { error }, { status });
+
+/** 단체방 통화가 열려 있으면 들어와 있는 사람 수. */
+async function callStatus(roomId: string | undefined): Promise<{ roomId: string; live: number } | null> {
+  if (!roomId) return null;
+  const meta = await readMeta(roomId);
+  return meta ? { roomId, live: await liveCount(roomId) } : null;
+}
 
 async function inviteable(me: string, target: unknown): Promise<string | null> {
   if (!isAccountId(target) || target === me) return null;
@@ -75,6 +86,10 @@ export async function POST(request: NextRequest) {
 
   if (!isGroupId(body.groupId)) return bad(request, "BAD_GROUP");
   const group = await readGroup(body.groupId);
+  // 방장이 내보낸 사람: 앱이 "내보내졌어요"를 띄우게 따로 알린다.
+  if (group && (group.kicked ?? []).includes(me) && !group.members.includes(me) && !group.invited.includes(me)) {
+    return bad(request, "REMOVED", 403);
+  }
   if (!group || !(group.members.includes(me) || group.invited.includes(me))) return bad(request, "NO_GROUP", 404);
 
   if (action === "answer") {
@@ -90,9 +105,55 @@ export async function POST(request: NextRequest) {
 
   if (action === "open" || action === "poll") {
     const since = action === "poll" && typeof body.since === "number" && Number.isFinite(body.since) ? body.since : 0;
-    const messages = await readGroupMessages(group.id, since);
+    const [messages, call] = await Promise.all([readGroupMessages(group.id, since), callStatus(group.callRoomId)]);
     if (group.lastSeq) await markGroupRead(me, group.id, group.lastSeq);
-    return jsonWithCors(request, { group, messages });
+    return jsonWithCors(request, { group, messages, call });
+  }
+
+  // 📞 단체방 통화: 열려 있으면 그 방(나도 들어갈 수 있게), 없으면 새 비공개 방 + "통화 시작" 줄.
+  if (action === "call") {
+    if (!isPeerId(body.peerId)) return bad(request, "BAD_PEER");
+    const open = group.callRoomId ? await allowInRoom(group.callRoomId, me) : null;
+    if (open) return jsonWithCors(request, { room: open });
+    const account = await readAccount(me);
+    const room = await createRoom({
+      name: `📞 ${group.name}`,
+      languages: group.languages,
+      hostPeerId: body.peerId,
+      hostAccountId: me,
+      hostNickname: cleanText(account?.profile.nickname || account?.username || "", 20),
+      private: true,
+      allowed: [...group.members],
+      groupId: group.id,
+    });
+    await noteGroupCall(group, me, room.id);
+    return jsonWithCors(request, { room });
+  }
+
+  // 통화에서 나갈 때: 모두 나갔으면 자막을 기록으로 한 번 남기고, 다음 📞은 새 방으로.
+  if (action === "endCall") {
+    if (!isRoomId(body.roomId)) return bad(request, "BAD_ROOM");
+    const meta = await readMeta(body.roomId);
+    if (!meta?.private || meta.groupId !== group.id) return bad(request, "BAD_ROOM");
+    if ((await liveCount(meta.id)) > 0) return jsonWithCors(request, { logged: false });
+    const lines = await readLines(meta.id);
+    if (!(await kvSetJsonIfAbsent(`grp:v1:log:${meta.id}`, 1, 7 * 24 * 60 * 60))) return jsonWithCors(request, { logged: false });
+    const fresh = (await readGroup(group.id)) ?? group;
+    const rest = { ...fresh, callRoomId: fresh.callRoomId === meta.id ? undefined : fresh.callRoomId };
+    if (lines.length === 0) {
+      await saveGroupMeta(rest);
+      return jsonWithCors(request, { logged: false });
+    }
+    await logGroupCall(
+      rest,
+      me,
+      meta.id,
+      lines
+        .sort((a, b) => a.startedAt - b.startedAt || a.seq - b.seq)
+        .slice(-120)
+        .map((line) => ({ from: line.accountId ?? null, nickname: line.nickname, text: line.text })),
+    );
+    return jsonWithCors(request, { logged: true });
   }
 
   if (action === "send") {

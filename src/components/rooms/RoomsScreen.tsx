@@ -10,6 +10,8 @@ import {
   RoomApiError,
   createRoom,
   dmEndCall,
+  groupCall,
+  groupEndCall,
   listRooms,
   listParkedRooms,
   reopenRoom,
@@ -25,7 +27,7 @@ import type { RoomNote } from "@/lib/rooms/layout";
 import { Face, languagePair } from "./RoomParts";
 import { RoomView } from "./RoomView";
 import { DmThreadView } from "./RoomDm";
-import { onDmRequest } from "@/lib/rooms/openDm";
+import { onDmRequest, onGroupCallRequest, requestGroup } from "@/lib/rooms/openDm";
 
 /**
  * 사용자끼리 말하는 방 (시험 기능, 숨은 입구).
@@ -51,7 +53,7 @@ export function RoomsScreen({
 }) {
   const t = roomCopy(locale);
   const [peerId] = useState(() => newPeerId());
-  const [inRoom, setInRoom] = useState<{ room: RoomSummary | RoomMeta; role: RoomRole; title?: string; back?: string } | null>(null);
+  const [inRoom, setInRoom] = useState<{ room: RoomSummary | RoomMeta; role: RoomRole; title?: string; back?: string; backGroup?: string } | null>(null);
   /** 열려 있는 1:1 대화의 상대 계정. 방 위에도 뜬다. */
   const [dmWith, setDmWith] = useState<string | null>(null);
   /** 방 줄을 집어 연 대화(쪽지)면 그 인용 — 대화 입력창 위에 붙는다. */
@@ -69,6 +71,20 @@ export function RoomsScreen({
   useEffect(() => () => setMiniRoom(null), []);
   // 사람 탭의 "메시지" → 여기서 대화를 연다(방 위에도 뜬다).
   useEffect(() => onDmRequest(setDmWith), []);
+  // 단체방의 📞 → 그 단체방 사람만 들어오는 통화 방. 나오면 그 단체방 대화로.
+  useEffect(
+    () =>
+      onGroupCallRequest((groupId, title) => {
+        void groupCall(groupId, peerId).then(
+          ({ room }) => {
+            setMinimized(false);
+            setInRoom({ room, role: "speaker", title: `📞 ${title}`, backGroup: groupId });
+          },
+          () => {},
+        );
+      }),
+    [peerId],
+  );
 
   // 대화의 📞·받기 → 둘만의 방. 끝나면 그 대화로 돌아간다.
   const joinCall = async (room: RoomMeta | string, title: string) => {
@@ -128,12 +144,21 @@ export function RoomsScreen({
                 title={inRoom.title}
                 onLeave={() => {
                   const back = inRoom.back;
+                  const backGroup = inRoom.backGroup;
                   setMinimized(false);
                   setInRoom(null);
                   if (back) setDmWith(back);
+                  if (backGroup) requestGroup(backGroup);
                 }}
                 onMinimize={() => setMinimized(true)}
-                onLeft={inRoom.room.private ? () => void dmEndCall(inRoom.room.id).catch(() => {}) : undefined}
+                onLeft={
+                  inRoom.room.private
+                    ? () => {
+                        const { id, groupId } = inRoom.room;
+                        void (groupId ? groupEndCall(groupId, id) : dmEndCall(id)).catch(() => {});
+                      }
+                    : undefined
+                }
                 onMessage={(accountId, note) => {
                   setDmNote(note ?? null);
                   setDmWith(accountId);

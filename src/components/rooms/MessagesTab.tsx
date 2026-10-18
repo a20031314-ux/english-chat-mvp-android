@@ -1,11 +1,11 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import type { UICopy } from "@/lib/copy";
 import { AccountCard } from "@/components/account/AccountCard";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { roomCopy } from "@/lib/rooms/copy";
-import { requestDm } from "@/lib/rooms/openDm";
+import { onGroupRequest, requestDm } from "@/lib/rooms/openDm";
 import type { DmSummary } from "@/lib/rooms/dm";
 import type { GroupSummary } from "@/lib/rooms/group";
 import { DmList } from "./RoomDm";
@@ -36,6 +36,8 @@ export function MessagesTab({
   // 단체방: 만들기 시트와 열린 대화.
   const [creating, setCreating] = useState(false);
   const [openGroup, setOpenGroup] = useState<string | null>(null);
+  // 단체방 통화에서 나오면 그 단체방으로 돌아온다(RoomsScreen → requestGroup).
+  useEffect(() => onGroupRequest(setOpenGroup), []);
   return (
     <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">

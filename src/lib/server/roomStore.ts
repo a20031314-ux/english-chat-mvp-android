@@ -102,6 +102,7 @@ export async function createRoom(input: {
   private?: boolean;
   allowed?: string[];
   threadId?: string;
+  groupId?: string;
   /** 잠시 닫은 방을 다시 열 때: 같은 방 번호. */
   id?: string;
 }): Promise<RoomMeta> {
@@ -115,7 +116,9 @@ export async function createRoom(input: {
     hostPeerId: input.hostPeerId,
     hostAccountId: input.hostAccountId ?? null,
     hostNickname: input.hostNickname ?? "",
-    ...(input.private ? { private: true, allowed: input.allowed ?? [], threadId: input.threadId } : {}),
+    ...(input.private
+      ? { private: true, allowed: input.allowed ?? [], ...(input.threadId ? { threadId: input.threadId } : {}), ...(input.groupId ? { groupId: input.groupId } : {}) }
+      : {}),
     createdAt: Date.now(),
   };
   await kvSetJson(metaKey(id), meta, ROOM_TTL_SECONDS);
@@ -430,4 +433,14 @@ export async function reopenRoom(input: {
   if (parked.banned.length) await kvSetJson(banKey(meta.id), parked.banned, ROOM_TTL_SECONDS);
   await kvSetJson(parkedKey(input.accountId), all.filter((row) => row.id !== input.id), PARKED_TTL_SECONDS);
   return meta;
+}
+
+/** 비공개 방(단체방 통화)에 나중에 들어온 단체방 사람도 들어올 수 있게. */
+export async function allowInRoom(id: string, accountId: string): Promise<RoomMeta | null> {
+  const meta = await readMeta(id);
+  if (!meta || !meta.private) return null;
+  if ((meta.allowed ?? []).includes(accountId)) return meta;
+  const next = { ...meta, allowed: [...(meta.allowed ?? []), accountId] };
+  await kvSetJson(metaKey(id), next, ROOM_TTL_SECONDS);
+  return next;
 }

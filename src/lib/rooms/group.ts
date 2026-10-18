@@ -23,6 +23,10 @@ export type Group = {
   members: string[];
   /** 초대했지만 아직 답하지 않은 계정. */
   invited: string[];
+  /** 방장이 내보낸 계정 — 그 사람의 앱은 "내보내졌어요"를 띄운다(다시 초대하면 빠짐). */
+  kicked?: string[];
+  /** 지금(또는 마지막으로) 연 단체방 통화(비공개 말하는 방). */
+  callRoomId?: string;
   createdAt: number;
   lastAt: number;
   lastText: string;
@@ -30,8 +34,14 @@ export type Group = {
   lastSeq: number;
 };
 
-/** 단체방 줄: 글(text) 또는 알림(system — text가 "join" | "leave" | "kick" | "host", from이 그 사람). */
-export type GroupMessage = Omit<DmMessage, "kind"> & { kind: "text" | "system" };
+/**
+ * 단체방 줄: 글(text), 알림(system — text가 "join" | "leave" | "kick" | "host" | "call", from이 그 사람,
+ * "call"이면 roomId), 끝난 통화의 자막 기록(callLog — lines).
+ */
+export type GroupMessage = Omit<DmMessage, "kind"> & { kind: "text" | "system" | "callLog" };
+
+/** 단체방 통화 상태(열기·묻기 응답에 같이): 지금 들어와 있는 사람 수. */
+export type GroupCall = { roomId: string; live: number } | null;
 
 export type GroupSummary = {
   group: Group;

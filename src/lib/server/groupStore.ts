@@ -36,6 +36,9 @@ async function saveGroup(group: Group): Promise<void> {
   await kvSetJson(groupKey(group.id), group, GROUP_TTL_SECONDS);
 }
 
+/** 줄 없이 방 정보만 고칠 때(통화 번호 지우기 등). */
+export const saveGroupMeta = saveGroup;
+
 async function addToBox(account: string, id: string): Promise<void> {
   await kvListPush(boxKey(account), [id], GROUP_TTL_SECONDS);
   await kvListTrim(boxKey(account), BOX_KEEP);
@@ -105,7 +108,7 @@ export async function inviteToGroup(by: string, id: string, target: string): Pro
   if (!group.members.includes(by)) return "NOT_MEMBER";
   const can = canInvite(group, target);
   if (can !== "ok") return can;
-  await saveGroup({ ...group, invited: [...group.invited, target] });
+  await saveGroup({ ...group, invited: [...group.invited, target], kicked: (group.kicked ?? []).filter((row) => row !== target) });
   await addToBox(target, id);
   return "ok";
 }
@@ -151,7 +154,10 @@ export async function kickFromGroup(by: string, id: string, target: string): Pro
     return "ok";
   }
   if (!group.members.includes(target)) return "NO_TARGET";
-  await push({ ...group, members: group.members.filter((row) => row !== target) }, { from: target, kind: "system", text: "kick" });
+  await push(
+    { ...group, members: group.members.filter((row) => row !== target), kicked: [...(group.kicked ?? []).filter((row) => row !== target), target].slice(-200) },
+    { from: target, kind: "system", text: "kick" },
+  );
   return "ok";
 }
 
@@ -206,4 +212,14 @@ export async function myGroups(account: string): Promise<GroupSummary[]> {
   return rows
     .filter((row): row is GroupSummary => row !== null)
     .sort((a, b) => Number(b.invite) - Number(a.invite) || b.group.lastAt - a.group.lastAt);
+}
+
+/** 통화를 연 사람이 남기는 "통화 시작" 알림 줄과 방 번호. */
+export async function noteGroupCall(group: Group, from: string, roomId: string): Promise<Group> {
+  return (await push({ ...group, callRoomId: roomId }, { from, kind: "system", text: "call", roomId })).group;
+}
+
+/** 통화가 끝난 뒤 자막 기록을 한 번 남긴다(누가 남길지는 호출하는 쪽이 SET NX로 정한다). */
+export async function logGroupCall(group: Group, from: string, roomId: string, lines: NonNullable<GroupMessage["lines"]>): Promise<void> {
+  await push(group, { from, kind: "callLog", text: `${lines.length}`, roomId, lines });
 }

@@ -18,7 +18,8 @@ import {
   myRelations,
   translateLine,
 } from "@/lib/rooms/client";
-import { GROUP_MAX_MEMBERS, GROUP_MAX_NAME_CHARS, type Group, type GroupMessage, type GroupSummary } from "@/lib/rooms/group";
+import { GROUP_MAX_MEMBERS, GROUP_MAX_NAME_CHARS, type Group, type GroupCall, type GroupMessage, type GroupSummary } from "@/lib/rooms/group";
+import { requestGroupCall } from "@/lib/rooms/openDm";
 import { askPhrase, questionCount } from "@/lib/rooms/quote";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
 import { Composer, Face, languagePair, useProfile } from "./RoomParts";
@@ -43,6 +44,12 @@ export function useGroups(enabled: boolean, everyMs = 8_000): { groups: GroupSum
   }, [enabled, refresh, everyMs]);
   const unread = groups.reduce((sum, row) => sum + (row.invite || row.unread > 0 ? 1 : 0), 0);
   return { groups, unread, refresh };
+}
+
+/** 사진이 없을 때 첫 글자가 보이게 이름도 같이(빈 이름이면 "?"). */
+function PersonFace({ id, size }: { id: string; size: number }) {
+  const profile = useProfile(id);
+  return <Face accountId={id} name={profile?.nickname || ""} size={size} />;
 }
 
 function Name({ id }: { id: string }) {
@@ -174,7 +181,7 @@ function FollowingPicker({
               picked.includes(id) ? "border-violet-300/60 bg-violet-500/20 text-white" : "border-white/10 text-slate-200"
             }`}
           >
-            <Face accountId={id} name="" size={28} />
+            <PersonFace id={id} size={28} />
             <span className="min-w-0 flex-1 truncate" dir="auto">
               <Name id={id} />
             </span>
@@ -263,16 +270,98 @@ export function GroupCreateSheet({
 }
 
 function systemText(t: RoomCopy, message: GroupMessage, name: string): string {
-  const template = message.text === "join" ? t.sysJoin : message.text === "leave" ? t.sysLeave : message.text === "kick" ? t.sysKick : t.sysHost;
+  const template =
+    message.text === "join"
+      ? t.sysJoin
+      : message.text === "leave"
+        ? t.sysLeave
+        : message.text === "kick"
+          ? t.sysKick
+          : message.text === "call"
+            ? `📞 ${t.sysCall}`
+            : t.sysHost;
   return template.replace("{name}", name);
 }
 
-function SystemLine({ t, message }: { t: RoomCopy; message: GroupMessage }) {
+function SystemLine({ t, message, liveCall, onJoin }: { t: RoomCopy; message: GroupMessage; liveCall: boolean; onJoin: () => void }) {
   const profile = useProfile(message.from);
   return (
-    <p className="text-center text-meta text-slate-500" dir="auto">
+    <p className={`text-center text-meta ${message.text === "call" ? "text-emerald-200" : "text-slate-500"}`} dir="auto">
       {systemText(t, message, profile?.nickname || "…")}
+      {liveCall ? (
+        <button type="button" onClick={onJoin} className="ms-2 rounded-lg bg-emerald-500 px-2 py-0.5 text-meta font-medium text-black">
+          {t.callRejoin}
+        </button>
+      ) : null}
     </p>
+  );
+}
+
+/** 끝난 통화의 자막 기록: 접어 두고, 펼치면 줄마다 눌러 번역. */
+function CallLogLine({
+  t,
+  me,
+  message,
+  locale,
+  targetLanguage,
+}: {
+  t: RoomCopy;
+  me: string;
+  message: GroupMessage;
+  locale: string;
+  targetLanguage: string;
+}) {
+  const [open, setOpen] = useState(false);
+  const [translated, setTranslated] = useState<Record<number, string>>({});
+  const lines = message.lines ?? [];
+  const time = new Date(message.at).toLocaleTimeString(locale, { hour: "2-digit", minute: "2-digit" });
+  return (
+    <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-2.5">
+      <button type="button" onClick={() => setOpen((value) => !value)} className="flex w-full items-center gap-2 text-start text-sm text-slate-200">
+        <span>🗒 {t.callEnded}</span>
+        <span className="text-meta text-slate-500">
+          {lines.length} {t.callLines} · {time}
+        </span>
+        <span className="ms-auto text-xs text-slate-500">{open ? "▲" : "▼"}</span>
+      </button>
+      {open ? (
+        <ul className="mt-2 space-y-1.5">
+          {lines.map((line, index) => (
+            <li key={index}>
+              <button
+                type="button"
+                onClick={() => {
+                  if (index in translated) return;
+                  setTranslated((have) => ({ ...have, [index]: t.translating }));
+                  void translateLine({
+                    text: line.text,
+                    context: lines.slice(Math.max(0, index - 4), index).map((row) => `${row.nickname}: ${row.text}`),
+                    locale,
+                    targetLanguage,
+                  }).then(
+                    (value) => setTranslated((have) => ({ ...have, [index]: value || t.translateFailed })),
+                    () => setTranslated((have) => ({ ...have, [index]: t.translateFailed })),
+                  );
+                }}
+                className="w-full rounded-lg px-2 py-1 text-start hover:bg-white/5"
+              >
+                <span className={`me-1 text-meta ${line.from === me ? "text-violet-300" : "text-sky-300"}`} dir="auto">
+                  {line.nickname}
+                </span>
+                <span className="text-sm text-slate-100" dir="auto">
+                  {line.text}
+                </span>
+                {index in translated ? (
+                  <span className="mt-0.5 block text-xs text-slate-400" dir="auto">
+                    {translated[index]}
+                  </span>
+                ) : null}
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : null}
+    </div>
   );
 }
 
@@ -414,7 +503,7 @@ function MembersSheet({
           <ul className="space-y-1.5">
             {group.members.map((id) => (
               <li key={id} className="flex items-center gap-2">
-                <Face accountId={id} name="" size={30} />
+                <PersonFace id={id} size={30} />
                 <span className="min-w-0 flex-1 truncate text-sm text-white" dir="auto">
                   {id === group.owner ? "👑 " : ""}
                   {id === me ? t.you : <Name id={id} />}
@@ -433,7 +522,7 @@ function MembersSheet({
             ))}
             {group.invited.map((id) => (
               <li key={id} className="flex items-center gap-2 opacity-60">
-                <Face accountId={id} name="" size={30} />
+                <PersonFace id={id} size={30} />
                 <span className="min-w-0 flex-1 truncate text-sm text-slate-300" dir="auto">
                   <Name id={id} /> · ✉️
                 </span>
@@ -504,7 +593,9 @@ export function GroupThreadView({
   const [messages, setMessages] = useState<GroupMessage[]>([]);
   const [members, setMembers] = useState(false);
   const [quoting, setQuoting] = useState<{ seq: number; nickname: string; text: string; ask: boolean } | null>(null);
-  const [gone, setGone] = useState(false);
+  // 내보내졌거나(removed) 방이 없어졌으면(gone) 입력을 막고 안내.
+  const [gone, setGone] = useState<"" | "removed" | "gone">("");
+  const [call, setCall] = useState<GroupCall>(null);
   const since = useRef(0);
   const scroller = useRef<HTMLDivElement>(null);
 
@@ -523,7 +614,7 @@ export function GroupThreadView({
         setGroup(body.group);
         add(body.messages);
       },
-      () => setGone(true),
+      (error) => setGone(error instanceof RoomApiError && error.code === "REMOVED" ? "removed" : "gone"),
     );
   }, [groupId, add]);
 
@@ -532,21 +623,14 @@ export function GroupThreadView({
     let timer = 0;
     const tick = async () => {
       try {
-        if (since.current === 0) {
-          const body = await groupOpen(groupId);
-          if (!alive) return;
-          setGroup(body.group);
-          add(body.messages);
-        } else {
-          const body = await groupPoll(groupId, since.current);
-          if (!alive) return;
-          setGroup(body.group);
-          add(body.messages);
-        }
-        // 내보내졌거나 나갔으면 닫는다.
+        const body = since.current === 0 ? await groupOpen(groupId) : await groupPoll(groupId, since.current);
+        if (!alive) return;
+        setGroup(body.group);
+        setCall(body.call ?? null);
+        add(body.messages);
       } catch (error) {
         if (error instanceof RoomApiError && (error.status === 403 || error.status === 404)) {
-          if (alive) setGone(true);
+          if (alive) setGone(error.code === "REMOVED" ? "removed" : "gone");
           return;
         }
       }
@@ -565,6 +649,12 @@ export function GroupThreadView({
   }, [messages.length]);
 
   const texts = useMemo(() => messages.filter((row) => row.kind === "text"), [messages]);
+  // 📞: 말하는 방 화면(RoomsScreen)이 통화 방을 연다. 대화는 닫았다가 통화가 끝나면 다시 열린다.
+  const startCall = () => {
+    if (!group || gone) return;
+    requestGroupCall(group.id, group.name);
+    onClose();
+  };
   const contextFor = (seq: number) => texts.filter((row) => row.seq < seq).slice(-4).map((row) => row.text);
 
   return (
@@ -584,6 +674,17 @@ export function GroupThreadView({
             </div>
             <button
               type="button"
+              disabled={!group || Boolean(gone)}
+              onClick={startCall}
+              aria-label={t.call}
+              className={`shrink-0 rounded-xl px-3 py-1.5 text-sm font-medium disabled:opacity-40 ${
+                call && call.live > 0 ? "bg-emerald-500 text-black" : "border border-white/15 text-slate-200"
+              }`}
+            >
+              📞
+            </button>
+            <button
+              type="button"
               disabled={!group}
               onClick={() => setMembers(true)}
               className="shrink-0 rounded-xl border border-white/15 px-3 py-1.5 text-sm text-slate-200"
@@ -592,12 +693,28 @@ export function GroupThreadView({
             </button>
           </header>
 
-          {gone ? <p className="shrink-0 bg-amber-400/10 px-4 py-2 text-sm text-amber-200">{t.error}</p> : null}
+          {gone ? (
+            <p className="shrink-0 bg-amber-400/10 px-4 py-2 text-sm text-amber-200" dir="auto">
+              {gone === "removed" ? t.groupRemoved : t.groupGone}
+            </p>
+          ) : call && call.live > 0 ? (
+            <button type="button" onClick={startCall} className="shrink-0 bg-emerald-400/10 px-4 py-2 text-start text-sm text-emerald-100">
+              🎙 {t.groupCallLive.replace("{n}", String(call.live))} · {t.callRejoin}
+            </button>
+          ) : null}
 
           <div ref={scroller} className="min-h-0 flex-1 space-y-2 overflow-y-auto px-3 py-3">
             {messages.map((message) =>
               message.kind === "system" ? (
-                <SystemLine key={message.seq} t={t} message={message} />
+                <SystemLine
+                  key={message.seq}
+                  t={t}
+                  message={message}
+                  liveCall={message.text === "call" && Boolean(call && call.live > 0 && call.roomId === message.roomId) && !gone}
+                  onJoin={startCall}
+                />
+              ) : message.kind === "callLog" ? (
+                <CallLogLine key={message.seq} t={t} me={me} message={message} locale={locale} targetLanguage={targetLanguage} />
               ) : (
                 <GroupBubble
                   key={message.seq}
@@ -622,7 +739,7 @@ export function GroupThreadView({
               initialText={quoting?.ask ? askPhrase(targetLanguage) : ""}
               t={t}
               placeholder={t.messagePlaceholder}
-              disabled={!group || gone}
+              disabled={!group || Boolean(gone)}
               locale={locale}
               targetLanguage={targetLanguage}
               recent={() => texts.slice(-6).map((row) => row.text)}

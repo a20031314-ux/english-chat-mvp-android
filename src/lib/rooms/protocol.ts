@@ -58,6 +58,8 @@ export type RoomMeta = {
   allowed?: string[];
   /** 이 통화를 연 1:1 대화(api/dm). */
   threadId?: string;
+  /** 단체방 통화면 그 단체방(rooms/group.ts) — 끝나면 기록을 그 방에 남긴다. */
+  groupId?: string;
   createdAt: number;
 };
 

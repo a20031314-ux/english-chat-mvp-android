@@ -13,3 +13,30 @@ export function onDmRequest(listener: Listener): () => void {
   listeners.add(listener);
   return () => listeners.delete(listener);
 }
+
+/**
+ * 단체방(메시지 탭)에서 📞 → RoomsScreen이 통화 방을 연다(그 화면이 peerId를 가지고 있다).
+ * 통화에서 나오면 RoomsScreen이 requestGroup으로 그 단체방 대화를 다시 연다.
+ */
+type CallListener = (groupId: string, title: string) => void;
+const callListeners = new Set<CallListener>();
+
+export function requestGroupCall(groupId: string, title: string): void {
+  for (const listener of callListeners) listener(groupId, title);
+}
+
+export function onGroupCallRequest(listener: CallListener): () => void {
+  callListeners.add(listener);
+  return () => callListeners.delete(listener);
+}
+
+const groupListeners = new Set<Listener>();
+
+export function requestGroup(groupId: string): void {
+  for (const listener of groupListeners) listener(groupId);
+}
+
+export function onGroupRequest(listener: Listener): () => void {
+  groupListeners.add(listener);
+  return () => groupListeners.delete(listener);
+}
