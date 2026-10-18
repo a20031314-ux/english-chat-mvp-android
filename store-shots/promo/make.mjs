@@ -1,48 +1,101 @@
-// 실사용 녹화(record.mjs) → 세로 쇼츠(1080×1920, 약 15초).
-// 장면을 events.json 시각으로 자르고, 기다리는 구간은 빠르게, 카드는 확대, 자막·튜터 목소리·끝 화면을 입힌다.
-// 결과: tmp/promo/<locale>/promo-<locale>.mp4
+// 실사용 녹화 → 세로 쇼츠(1080×1920, 15~20초).
+// 장면을 events.json 시각으로 자르고, 기다리는 구간은 빠르게, 카드는 확대, 자막·목소리·끝 화면을 입힌다.
 //
-// Run: node store-shots/promo/make.mjs ko
+// 이야기(STORIES):
+//   chat   — 편한 말로 쓰기 → 표현 카드 (녹화: store-shots/promo/record.mjs <locale> → tmp/promo/<locale>/)
+//   people — 사람·Room·줄 번역·💡 힌트·단체방, 사용자끼리 주고받기
+//            (녹화: CAPTURE_MIC_WAV=… node --experimental-strip-types scripts/capture-whats-new.mjs promo-people --only <locale>
+//             → tmp/promo/people/<locale>/)
+// 결과: 그 폴더의 promo-<이야기>-<locale>.mp4
+//
+// Run: node store-shots/promo/make.mjs people ko   (이야기를 빼면 chat)
 import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { chromium } from "playwright";
 
-const locale = process.argv[2] || "ko";
+const args = process.argv.slice(2);
+const story = args.length > 1 ? args[0] : "chat";
+const locale = args.length > 1 ? args[1] : args[0] || "ko";
 const ROOT = process.cwd();
-const DIR = path.join(ROOT, "tmp", "promo", locale);
+const DIR = story === "chat" ? path.join(ROOT, "tmp", "promo", locale) : path.join(ROOT, "tmp", "promo", story, locale);
 const API = process.env.API_BASE || "https://english-chat-mvp.vercel.app";
 const ev = JSON.parse(fs.readFileSync(path.join(DIR, "events.json"), "utf8"));
 const target = locale === "en" ? "es" : "en";
 
-/** 자막(장면마다), 끝 화면 문구. 학습 언어 이름은 그 앱 언어로. */
+/** 자막(장면 키마다)과 끝 화면 문구, 이야기마다. */
 const COPY = {
-  ko: {
-    font: "'Noto Sans CJK KR', sans-serif",
-    hook: "영어로 말하다\n막혔다면?",
-    type: "그냥 한국어로\n쓰세요",
-    reply: "튜터는 영어로\n대화를 이어가요",
-    card: "하고 싶던 말은\n영어로 바로 아래",
-    use: "그 표현으로\n바로 말해보기",
-    endTitle: "막히면 편한 말로,\n표현은 바로 영어로",
-    endSub: "AI 친구와 대화하며 배우는 언어 앱",
-    store: "Google Play에서 만나요",
+  chat: {
+    ko: {
+      hook: "영어로 말하다\n막혔다면?",
+      type: "그냥 한국어로\n쓰세요",
+      reply: "튜터는 영어로\n대화를 이어가요",
+      card: "하고 싶던 말은\n영어로 바로 아래",
+      use: "그 표현으로\n바로 말해보기",
+      endTitle: "막히면 편한 말로,\n표현은 바로 영어로",
+      endSub: "AI 친구와 대화하며 배우는 언어 앱",
+    },
+  },
+  people: {
+    ko: {
+      p1: "같은 언어 배우는\n사람들을 만나요",
+      p2: "방에 들어가\n목소리로 함께",
+      p3: "말하는 대로\n자막이 올라와요",
+      p4: "모르는 말은\n눌러서 한국어로",
+      p5: "막혀서 한국어로\n웅얼거려도",
+      p6: "💡 할 말을\n영어로 알려줘요",
+      p7: "보내면 다 같이 보는\n영어 자막으로",
+      p8: "끝나도 단체방에서\n계속 이어가요",
+      endTitle: "혼자 말고,\n같이 말하며 배워요",
+      endSub: "같은 언어를 배우는 사람들과 목소리로",
+    },
   },
 };
-const C = COPY[locale];
-if (!C) throw new Error(`no promo copy for ${locale}`);
+const FONT = { ko: "'Noto Sans CJK KR', sans-serif", ja: "'Noto Sans CJK JP', sans-serif", zh: "'Noto Sans CJK SC', sans-serif", hi: "'Noto Sans Devanagari', 'Noto Sans', sans-serif" };
+const STORE_LINE = { ko: "Google Play에서 만나요", en: "Get it on Google Play" };
+const C = { font: FONT[locale] ?? "'Noto Sans', sans-serif", store: STORE_LINE[locale] ?? STORE_LINE.en, ...(COPY[story]?.[locale] ?? {}) };
+if (!COPY[story]?.[locale]) throw new Error(`no promo copy for ${story}/${locale}`);
+
+/**
+ * 장면 자르기(원본 시각): [시작, 끝, 속도, 자막 키, 확대]. 확대 = { by, x, y }(창 위치 비율),
+ * voice = 목소리로 읽을 글자, voiceIn = 확대 장면 시작 뒤 몇 초에.
+ */
+const STORIES = {
+  chat: () => ({
+    segs: [
+      [Math.max(0, ev.typeStart - 1.8), ev.typeStart + 0.1, 1, "hook"],
+      [ev.typeStart + 0.1, ev.sent + 0.3, 1, "type"],
+      [ev.sent + 0.3, ev.reply - 0.2, 3, "type"],
+      [ev.reply - 0.2, ev.cardTap + 0.1, 1, "reply"],
+      [ev.cardTap + 0.1, ev.card, 2.5, "reply"],
+      // 카드(오른쪽 정렬 말풍선, 화면 위쪽 1/3): 오른쪽 끝이 잘리지 않게 창을 오른쪽으로.
+      [ev.card, ev.use - 0.1, 1, "card", { by: 0.25, x: 0.9, y: 0.2 }],
+      [ev.use - 0.1, ev.end - 0.4, 1, "use"],
+    ],
+    voice: ev.expression,
+    voiceIn: 0.5,
+  }),
+  people: () => ({
+    segs: [
+      [Math.max(0, ev.people - 0.4), ev.follow + 0.8, 1, "p1"],
+      [ev.follow + 0.8, ev.join + 0.4, 1.8, "p2"],
+      [ev.join + 0.4, ev.lines + 1.4, 1.7, "p3"],
+      [ev.lines + 1.4, ev.translated + 1.3, 1.2, "p4"],
+      // 힌트를 기다리는 시간은 운영 응답에 따라 달라서, 늘 약 2.2초로 줄인다.
+      [ev.question - 0.1, ev.hint - 0.3, Math.max(1.4, (ev.hint - 0.2 - ev.question) / 2.2), "p5"],
+      // 💡 힌트 카드(자막 칸, 화면 가운데쯤).
+      [ev.hint - 0.3, ev.sent - 0.1, 1, "p6", { by: 0.2, x: 0.5, y: 0.42 }],
+      [ev.sent - 0.1, ev.sent + 1.9, 1, "p7"],
+      [ev.group - 0.3, ev.group + 2.2, 1, "p8"],
+    ],
+    voice: ev.hintText,
+    voiceIn: 0.6,
+  }),
+};
+const plan = STORIES[story]();
 
 // ── 1. 장면 자르기(원본 시각) ──
-// [시작, 끝, 속도, 자막 키, 확대]
-const segs = [
-  [Math.max(0, ev.typeStart - 1.8), ev.typeStart + 0.1, 1, "hook"],
-  [ev.typeStart + 0.1, ev.sent + 0.3, 1, "type"],
-  [ev.sent + 0.3, ev.reply - 0.2, 3, "type"],
-  [ev.reply - 0.2, ev.cardTap + 0.1, 1, "reply"],
-  [ev.cardTap + 0.1, ev.card, 2.5, "reply"],
-  [ev.card, ev.use - 0.1, 1, "card", true],
-  [ev.use - 0.1, ev.end - 0.4, 1, "use"],
-];
+const segs = plan.segs;
 const END_CARD = 2.6;
 let out = 0;
 const timeline = segs.map(([a, b, speed, cap, zoom]) => {
@@ -73,8 +126,10 @@ await png(path.join(DIR, "bg.png"), "", { transparent: false });
 await png(path.join(DIR, "frame.png"), `
   <div style="position:absolute;left:${PHONE.x - 14}px;top:${PHONE.y - 14}px;width:${PHONE.w}px;height:${PHONE.h}px;
     border:14px solid #000;border-radius:${R}px;box-shadow:0 0 0 2px #34353C, 0 40px 120px rgba(0,0,0,.6), 0 0 0 9999px #15161A"></div>`);
-const accent = { hook: "#FF8A6B", type: "#7CC4FF", reply: "#7CC4FF", card: "#C6F25A", use: "#FFD15C" };
-for (const key of ["hook", "type", "reply", "card", "use"]) {
+const capKeys = [...new Set(segs.map((x) => x[3]))];
+const PALETTE = ["#FF8A6B", "#7CC4FF", "#C6F25A", "#FFD15C"];
+const accent = Object.fromEntries(capKeys.map((k, i) => [k, PALETTE[i % PALETTE.length]]));
+for (const key of capKeys) {
   await png(path.join(DIR, `cap-${key}.png`), `
     <div style="position:absolute;top:96px;left:0;right:0;text-align:center">
       <div style="display:inline-block;width:56px;height:8px;border-radius:4px;background:${accent[key]};margin-bottom:26px"></div>
@@ -92,11 +147,11 @@ await png(path.join(DIR, "end.png"), `
   </div>`, { transparent: false });
 await browser.close();
 
-// ── 3. 튜터 목소리: 카드의 표현을 앱 TTS로(운영 /api/tts, 24kHz 원시 PCM) ──
+// ── 3. 목소리: 카드·힌트의 문장을 앱 TTS로(운영 /api/tts, 24kHz 원시 PCM) ──
 let voice = null;
-if (ev.expression) {
+if (plan.voice) {
   // curl: 작업 공간 프록시에서 Node fetch가 끊길 때가 있다.
-  const url = `${API}/api/tts?text=${encodeURIComponent(ev.expression)}&lang=${target === "en" ? "en-US" : "es-ES"}`;
+  const url = `${API}/api/tts?text=${encodeURIComponent(plan.voice)}&lang=${target === "en" ? "en-US" : "es-ES"}`;
   try {
     execFileSync("curl", ["-sSf", "-o", path.join(DIR, "voice.pcm"), "-H", `x-rc-user: promo-voice-${locale}`, url]);
     execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", path.join(DIR, "voice.pcm"), path.join(DIR, "voice.wav")]);
@@ -110,13 +165,14 @@ if (ev.expression) {
 const parts = timeline.map((s, i) => {
   let f = `[0:v]trim=start=${s.a.toFixed(3)}:end=${s.b.toFixed(3)},setpts=(PTS-STARTPTS)/${s.speed}`;
   if (s.zoom) {
-    // 카드(화면 위쪽 1/3, 오른쪽 정렬 말풍선) 쪽으로 0.5초 동안 1.25배 확대 — 카드 오른쪽 끝이 잘리지 않게 창을 오른쪽으로.
-    f += `,scale=w='824*(1+0.25*min(1,t/0.5))':h=-2:eval=frame,crop=824:1830:x='(in_w-824)*0.9':y='(in_h-1830)*0.2'`;
+    // 0.5초 동안 by배만큼 확대, 창은 zoom.x·zoom.y 비율 위치.
+    const z = s.zoom;
+    f += `,scale=w='824*(1+${z.by}*min(1,t/0.5))':h=-2:eval=frame,crop=824:1830:x='(in_w-824)*${z.x}':y='(in_h-1830)*${z.y}'`;
   }
   return `${f},fps=25,setsar=1[p${i}]`;
 });
 const concat = `${timeline.map((_, i) => `[p${i}]`).join("")}concat=n=${timeline.length}:v=1:a=0[phone]`;
-const capInputs = ["hook", "type", "reply", "card", "use"];
+const capInputs = capKeys;
 const inputs = ["-i", path.join(DIR, "raw.mp4"), "-loop", "1", "-t", String(total), "-i", path.join(DIR, "bg.png"),
   "-loop", "1", "-t", String(total), "-i", path.join(DIR, "frame.png"),
   ...capInputs.flatMap((k) => ["-loop", "1", "-t", String(total), "-i", path.join(DIR, `cap-${k}.png`)]),
@@ -138,12 +194,12 @@ capInputs.forEach((k, i) => {
 });
 chain += `;[${endIdx}:v]setpts=PTS-STARTPTS+${phoneDur.toFixed(3)}/TB[endv];[${last}][endv]overlay=0:0:enable='gte(t,${phoneDur.toFixed(3)})'[v]`;
 const phoneScale = `[phone]scale=${PHONE.w}:${PHONE.h},tpad=stop_mode=clone:stop_duration=${END_CARD}[phonev]`;
-const cardAt = timeline.find((s) => s.zoom).at + 0.5;
+const cardAt = timeline.find((s) => s.zoom).at + plan.voiceIn;
 const audio = voice
   ? `;[${endIdx + 1}:a]adelay=${Math.round(cardAt * 1000)}|${Math.round(cardAt * 1000)},apad,atrim=0:${total.toFixed(3)}[a]`
   : "";
 const filter = [...parts, concat, phoneScale, chain].join(";") + audio;
-const file = path.join(DIR, `promo-${locale}.mp4`);
+const file = path.join(DIR, `promo-${story}-${locale}.mp4`);
 execFileSync("ffmpeg", ["-loglevel", "error", "-y", ...inputs, "-filter_complex", filter, "-map", "[v]",
   ...(voice ? ["-map", "[a]", "-c:a", "aac", "-b:a", "160k"] : []),
   "-t", total.toFixed(3), "-r", "30", "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-pix_fmt", "yuv420p", "-movflags", "+faststart", file]);

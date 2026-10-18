@@ -192,7 +192,13 @@ const STORE_TABS_ITEMS = [
   { shot: "host" },
   { shot: "account" },
 ];
-const note = STORE_MY
+// `promo-people`: 홍보 쇼츠용 녹화(사용자끼리 주고받는 장면). 사진 대신 Chrome 화면 전송으로 2배 해상도 영상을 남긴다
+// → tmp/promo/people/<locale>/raw.mp4 + events.json, 편집은 store-shots/promo/make.mjs people <locale>.
+// 상대(Yuki·Lucía·Omar)는 고정 응답이고 말은 한 줄씩 올라온다. 번역·💡 힌트는 운영. CAPTURE_MIC_WAV가 필요.
+const PROMO = VERSION === "promo-people";
+const note = PROMO
+  ? { version: "promo", items: [{ shot: "promo-people", save: false }] }
+  : STORE_MY
   ? { version: "store", items: STORE_MY_ITEMS }
   : STORE_TABS
   ? { version: "store", items: STORE_TABS_ITEMS }
@@ -496,13 +502,17 @@ function socialMocks(page, target, ui) {
   const baseRoom = { id: "capt01", name: roomName, languages: [target, "ja"], hostPeerId: "p_yukiyukiyuki", hostAccountId: PEOPLE.yuki.id, hostNickname: "Yuki", createdAt: now - 600_000 };
   const member = (key, peerId, role, extra = {}) => ({ peerId, nickname: PEOPLE[key].nickname, role, muted: false, hand: false, accountId: PEOPLE[key].id, langs: [target, "ja"], joinedAt: now - 500_000, lastSeen: Date.now(), ...extra }); // 응답 때마다 지금: 오래되면 앱이 나간 사람으로 지운다
   const peers = { yuki: "p_yukiyukiyuki", lucia: "p_lucialucialu", omar: "p_omaromaromar" };
-  const lines = [...ROOM_LINES[target], ...(page.__social.hint ? [["yuki", HINT_QUESTION[target]]] : [])].map(([who, text, kind], index) => ({
+  // 홍보 녹화(live): Yuki·Lucía가 말하고 Yuki가 묻는 세 줄만, page.__social.shown만큼 한 줄씩 보인다.
+  const source = page.__social.live
+    ? [ROOM_LINES[target][0], ROOM_LINES[target][1], ["yuki", HINT_QUESTION[target]]]
+    : [...ROOM_LINES[target], ...(page.__social.hint ? [["yuki", HINT_QUESTION[target]]] : [])];
+  const lines = source.map(([who, text, kind], index) => ({
     seq: index + 1, kind: kind ?? "speech", peerId: peers[who], accountId: PEOPLE[who].id, nickname: PEOPLE[who].nickname, text,
     startedAt: now - 90_000 + index * 15_000, endedAt: now - 85_000 + index * 15_000,
   }));
   // 2.69: Omar가 Yuki의 첫 줄을 집어 물은 질문(줄 옆 ❓ 1).
   const first = lines[0];
-  lines.push({
+  if (!page.__social.live) lines.push({
     seq: lines.length + 1, kind: "text", peerId: peers.omar, accountId: PEOPLE.omar.id, nickname: "Omar", text: askPhrase(target),
     startedAt: now - 20_000, endedAt: now - 20_000, ask: true,
     quote: { seq: first.seq, nickname: first.nickname, text: first.text, peerId: first.peerId, accountId: first.accountId },
@@ -529,6 +539,13 @@ function socialMocks(page, target, ui) {
       const free = { id: "capt03", name: target === "es" ? "🌍 Charla de los viernes" : "🌍 Friday chat", languages: [], free: true, hostPeerId: peers.lucia, hostAccountId: PEOPLE.lucia.id, hostNickname: "Lucía", createdAt: now - 300_000, speakers: 3, listeners: 1, faces: [faces[1], faces[0], faces[2]] };
       if (body.action === "list") return json(route, { rooms: [...(page.__social.free ? [free] : []), { ...room, speakers: 2, listeners: 2, faces, followed: true }] });
       if (body.action === "join") return json(route, { member: members[3], room, now: Date.now() });
+      if (body.action === "poll" && page.__social.live) {
+        const at = page.__social.revealedAt ?? {};
+        const shown = lines
+          .filter((l) => l.seq <= (page.__social.shown ?? 0) && l.seq > (body.since ?? 0))
+          .map((l) => ({ ...l, startedAt: at[l.seq] - 2500, endedAt: at[l.seq] }));
+        return json(route, { now: Date.now(), room, members, signals: [], lines: shown });
+      }
       if (body.action === "poll") return json(route, { now: Date.now(), room, members, signals: [], lines: body.since ? [] : lines });
       if (body.action === "peek") return json(route, { room });
       if (body.action === "line")
@@ -562,7 +579,12 @@ function socialMocks(page, target, ui) {
       if (body.action === "poll") return json(route, { thread, messages: [] });
       return json(route, { ok: true });
     }),
-    page.route("**/api/roleplay/listen", (route) => json(route, { text: page.__social.hintText ?? "" })),
+    page.route("**/api/roleplay/listen", (route) => {
+      const text = page.__social.hintText ?? "";
+      // 홍보 녹화: 한 번만 받아쓰고 끝(가짜 마이크가 반복해 말해도 줄이 하나).
+      if (page.__social.live) page.__social.hintText = "";
+      return json(route, { text });
+    }),
     page.route("**/api/groups", (route) => {
       const body = JSON.parse(route.request().postData() || "{}");
       const g = GROUP_LINES[target];
@@ -608,7 +630,84 @@ function socialMocks(page, target, ui) {
   ]);
 }
 
+/** 누른 곳에 손가락 원을 남기며 누른다(홍보 녹화). */
+async function tapAt(page, locator) {
+  await locator.scrollIntoViewIfNeeded().catch(() => undefined);
+  const box = await locator.boundingBox();
+  await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
+}
+
 const STEPS = {
+  async "promo-people"({ page, ui, locale, wait, target, mark }) {
+    const t = roomCopyFor(locale);
+    // 고정 응답이 만들어지기 전에 정해야 세 줄(질문 포함)로 짜인다.
+    page.__social = { hostMe: true, hint: true, live: true, shown: 0, revealedAt: {}, hintText: "" };
+    await socialMocks(page, target, ui);
+    const reveal = (n) => {
+      page.__social.shown = n;
+      page.__social.revealedAt[n] = Date.now();
+    };
+    // 1. 사람: 같은 언어를 배우는 사람들 → Lucía 팔로우.
+    await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
+    await wait(1500);
+    const later = page.getByRole("button", { name: exactly(inviteCopyFor(locale).later) });
+    if (await later.count()) await later.first().click();
+    await wait(800);
+    mark("people");
+    await wait(1600);
+    await tapAt(page, page.getByRole("button", { name: new RegExp(`${escape(t.follow)}$`) }).first());
+    mark("follow");
+    await wait(1400);
+    // 2. Room 탭 → 방 카드 → 말하기로 들어가기.
+    await tapAt(page, page.getByRole("button", { name: exactly(ui.homeTabRooms) }).last());
+    await wait(1600);
+    mark("rooms");
+    await wait(900);
+    await tapAt(page, page.locator("li", { hasText: target === "es" ? "Español ↔ 日本語" : "English ↔ 日本語" }).first().locator("button").first());
+    mark("join");
+    await wait(2600);
+    // 3. 상대가 말하는 대로 자막이 한 줄씩.
+    reveal(1);
+    await wait(2300);
+    reveal(2);
+    mark("lines");
+    await wait(2000);
+    // 4. 모르는 줄을 눌러 내 언어로(운영 /api/translate).
+    const line = page.locator('div[class*="z-[80]"] li > div > button.w-full').nth(1);
+    const translated = page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 30000 }).catch(() => undefined);
+    await tapAt(page, line);
+    await translated;
+    mark("translated");
+    await wait(2000);
+    // 5. 나에게 묻는다 → 나는 편한 말로 웅얼 → 💡 힌트(운영).
+    reveal(3);
+    mark("question");
+    await wait(1800);
+    page.__social.hintText = HINT_FRAGMENT[locale];
+    const card = page.getByText(t.hintTry);
+    for (let i = 0; i < 60 && !(await card.count()); i++) await wait(500);
+    if (!(await card.count())) throw new Error("no hint card");
+    mark("hint");
+    // 힌트 문장(편집에서 목소리로 읽어 준다): 카드에서 "이렇게 말해 보세요" 다음 줄.
+    mark("hintText", await card.first().evaluate((el) => {
+      const box = el.closest("div")?.parentElement ?? el.parentElement;
+      return box.innerText.split("\n").map((x) => x.trim()).filter((x) => x && !x.includes("💡"))[1] ?? "";
+    }).catch(() => ""));
+    await wait(2600);
+    // 6. 이걸로 보내기 → 내 말이 학습 언어 자막으로.
+    await tapAt(page, page.getByRole("button", { name: exactly(t.sendThis) }).last());
+    mark("sent");
+    await wait(2400);
+    // 7. 방이 끝나도: 단체방에서 계속.
+    await tapAt(page, page.locator('div[class*="z-[80]"] header').getByRole("button", { name: exactly(t.minimize) }));
+    await wait(700);
+    await tapAt(page, page.getByRole("button", { name: exactly(ui.homeTabMessages) }).last());
+    await wait(1500);
+    await tapAt(page, page.locator("li button", { hasText: GROUP_LINES[target].name }).first());
+    mark("group");
+    await wait(3000);
+    mark("end");
+  },
   async rooms({ page, ui, locale, wait, target }) {
     await socialMocks(page, target, ui);
     await page.goto(`${BASE}/?screen=rooms`, { waitUntil: "networkidle" });
@@ -1264,6 +1363,20 @@ const STEPS = {
   },
 };
 
+/** 홍보 녹화 마무리: 바뀔 때만 온 프레임을 다음 프레임까지 보여 주는 25fps 영상으로, 장면 시각은 영상 기준 초로. */
+async function finishPromo(dir, frames, events) {
+  const { execFileSync } = await import("node:child_process");
+  const start = frames[0].at;
+  const end = events.end ?? frames.at(-1).at + 1;
+  const list = frames.map((f, i) => `file '${f.file}'\nduration ${Math.max(0.01, (i + 1 < frames.length ? frames[i + 1].at : end) - f.at).toFixed(3)}`).join("\n");
+  fs.writeFileSync(path.join(dir, "frames.txt"), `${list}\nfile '${frames.at(-1).file}'\n`);
+  execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", path.join(dir, "frames.txt"),
+    "-vf", "fps=25,scale=824:1830:flags=lanczos,format=yuv420p", "-c:v", "libx264", "-crf", "16", path.join(dir, "raw.mp4")]);
+  for (const key of Object.keys(events)) if (typeof events[key] === "number") events[key] = +(events[key] - start).toFixed(3);
+  fs.rmSync(path.join(dir, "frames"), { recursive: true, force: true });
+  fs.writeFileSync(path.join(dir, "events.json"), JSON.stringify(events, null, 2));
+}
+
 /** Without the header and the tab bar, which say nothing about the change. */
 async function save(png, locale, shot) {
   if (STORE) {
@@ -1306,6 +1419,33 @@ for (const locale of only ?? Object.keys(copy)) {
     route.continue({ headers: { ...route.request().headers(), "x-rc-user": `${process.env.CAPTURE_USER || `whats-new-capture-${day}${process.env.CAPTURE_RUN ? `-${process.env.CAPTURE_RUN}` : ""}`}-${locale}` } }),
   );
   const wait = (ms) => page.waitForTimeout(ms);
+  // 홍보 녹화: 누른 곳 표시 + Chrome 화면 전송 프레임 + 장면 시각.
+  const events = {};
+  // 시각은 숫자, 글자(예: 힌트 문장)는 두 번째 값으로.
+  const mark = (name, value) => (events[name] = value === undefined ? Date.now() / 1000 : value);
+  const frames = [];
+  let cdp = null;
+  const promoDir = path.join(ROOT, "tmp", "promo", "people", locale);
+  if (PROMO) {
+    fs.rmSync(promoDir, { recursive: true, force: true });
+    fs.mkdirSync(path.join(promoDir, "frames"), { recursive: true });
+    await context.addInitScript(() => {
+      addEventListener("pointerdown", (e) => {
+        const dot = document.createElement("div");
+        dot.style.cssText = `position:fixed;left:${e.clientX - 22}px;top:${e.clientY - 22}px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.35);border:2px solid rgba(255,255,255,.8);z-index:99999;pointer-events:none;transition:transform .45s ease-out,opacity .45s ease-out`;
+        document.body.appendChild(dot);
+        requestAnimationFrame(() => { dot.style.transform = "scale(1.8)"; dot.style.opacity = "0"; });
+        setTimeout(() => dot.remove(), 600);
+      }, true);
+    });
+    cdp = await context.newCDPSession(page);
+    cdp.on("Page.screencastFrame", async ({ data, metadata, sessionId }) => {
+      const file = path.join(promoDir, "frames", `${String(frames.length).padStart(5, "0")}.jpg`);
+      fs.writeFileSync(file, Buffer.from(data, "base64"));
+      frames.push({ file, at: metadata.timestamp });
+      await cdp.send("Page.screencastFrameAck", { sessionId }).catch(() => {});
+    });
+  }
   try {
     await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
     await page.evaluate(([target, uiLocale]) => {
@@ -1322,7 +1462,13 @@ for (const locale of only ?? Object.keys(copy)) {
       if (onlyShots && !onlyShots.includes(item.shot)) continue;
       const step = STEPS[item.shot];
       if (!step) throw new Error(`no capture step for "${item.shot}"`);
-      await step({ page, ui, locale, wait, target });
+      if (PROMO && cdp) await cdp.send("Page.startScreencast", { format: "jpeg", quality: 92, maxWidth: 824, maxHeight: 1830, everyNthFrame: 1 });
+      await step({ page, ui, locale, wait, target, mark });
+      if (PROMO && cdp) {
+        await cdp.send("Page.stopScreencast").catch(() => {});
+        await finishPromo(promoDir, frames, events);
+        console.log(`${locale} promo → ${path.relative(ROOT, promoDir)}/raw.mp4`);
+      }
       if (item.save === false) continue;
       await save(await page.screenshot(), locale, item.shot);
       console.log(`${locale} ${item.shot}`);

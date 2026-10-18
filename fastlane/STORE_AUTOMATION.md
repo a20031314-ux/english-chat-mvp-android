@@ -95,6 +95,9 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
 - **홍보 쇼츠 (실사용 녹화)**: `store-shots/promo/` — 실제 앱을 운영 서버로 돌리며 Chrome 화면 전송으로 2배 해상도 녹화(`record.mjs <언어>`, 운영 채팅 1번),
   장면 시각대로 자르고 기다림은 빠르게·카드 확대·자막·튜터 목소리(`/api/tts`)·끝 화면(`make.mjs <언어>`) → `tmp/promo/<언어>/promo-<언어>.mp4`(세로 1080×1920, 약 15초).
   1편: 편한 말로 쓰기 → 튜터가 학습 언어로 → 표현 카드 → 이 표현으로 말해보기. 자막은 `make.mjs` COPY(지금 ko).
+  2편(사용자끼리): 사람 탭 팔로우 → Room 들어가기 → 상대 말이 한 줄씩 자막 → 줄 번역 → 질문에 편한 말로 웅얼 → 💡 힌트(목소리) → 보내기 → 단체방.
+  녹화는 캡처 스크립트의 고정 응답을 그대로 쓴다: `CAPTURE_MIC_WAV=… node --experimental-strip-types scripts/capture-whats-new.mjs promo-people --only ko`
+  → `node store-shots/promo/make.mjs people ko` → `tmp/promo/people/ko/promo-people-ko.mp4`. 상대 사람·글은 고정 응답, 번역·힌트는 운영.
 - **스토어 8장 (지금 올리는 세트, 2.69~)**: 한 장에 탭의 핵심 기능 하나(큰 화면) + 세부 기능 둘(확대 카드) + 더 있는 기능 칩(사용자 결정 2026-10-18).
   지도·채팅·문장분석·My 성장·통화·영상·Room·사람과 학습 8장 × 6개 등록정보. 아래 탭별 캡처(`store-my`·`store-tabs`)를 찍은 뒤
   `node store-shots/combo/compose.mjs` → `store-shots/out/combo/<등록정보>/1~8-*.png`(폴더째 올리면 됨). 장면·자르는 위치·문구는 `store-shots/combo/strings.mjs`.
