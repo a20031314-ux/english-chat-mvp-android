@@ -34,6 +34,8 @@ export type AppIntents = {
   };
   /** Open a topic of the study map, for its tasks. */
   openTopic: { topicId: string };
+  /** 노트(My)의 한 부분을 연다 — 단어장 탭이 노트로 들어온 뒤 "단어장으로" 가던 곳. */
+  openNotes: { section: "words" };
 };
 
 const PREFIX = "talkbank:";

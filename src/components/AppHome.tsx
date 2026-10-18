@@ -8,12 +8,11 @@ import { EnglishAnalysisProvider } from "@/components/EnglishAnalysisProvider";
 import { ExpressionInsightProvider } from "@/components/ExpressionInsightProvider";
 import { TAB_ICON_META } from "@/components/TabIcons";
 import { TargetLanguageSelector } from "@/components/TargetLanguageSelector";
-import { VocabularyPanel } from "@/components/VocabularyPanel";
 import { UpdateNotice } from "@/components/UpdateNotice";
 import { WhatsNewSheet } from "@/components/WhatsNewSheet";
 import { RoleplayTab, hasRoleplay } from "@/components/RoleplayTab";
 import { StudyMapTab } from "@/components/studyMap/StudyMapTab";
-import { onAppIntent } from "@/lib/appIntents";
+import { onAppIntent, sendAppIntent } from "@/lib/appIntents";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
 import { BillingUiProvider, BillingOpenButton } from "@/components/BillingScreen";
 import { GuideButton } from "@/components/GuideSheet";
@@ -62,6 +61,8 @@ function resolveTab(raw: string | null | undefined): AppTab {
   if (raw === "read" || raw === "web" || raw === "reader") return "chat";
   if (raw === "study" || raw === "materials" || raw === "library") return "chat";
   if (raw === "watch" || raw === "youtube") return "video";
+  // 단어장 탭은 My의 노트로 들어갔다(2026-10-19).
+  if (raw === "vocab") return "map";
   if (isAppTab(raw)) return raw;
   return "chat";
 }
@@ -140,7 +141,10 @@ function AppHomeInner({
   }, []);
 
   const openTab = useCallback(
-    (next: AppTab) => {
+    (requested: AppTab) => {
+      // 단어장은 탭이 아니라 My 노트 안에 있다: My로 가서 단어장을 연다.
+      const next: AppTab = requested === "vocab" ? "map" : requested;
+      if (requested === "vocab") sendAppIntent("openNotes", { section: "words" });
       setTab(next);
       setLastInGroup((last) => ({ ...last, [groupOf(next)]: next }));
       syncUrl(next);
@@ -173,7 +177,6 @@ function AppHomeInner({
       ? [{ id: "roleplay" as const, label: ui.homeTabCall }]
       : []),
     { id: "video", label: ui.homeTabVideo },
-    { id: "vocab", label: ui.homeTabVocab },
   ];
   const peopleTabItems: { id: AppTab; label: string }[] = [
     { id: "people", label: ui.homeTabPeople },
@@ -185,6 +188,8 @@ function AppHomeInner({
   const guideTab = group === "people" ? "rooms" : shownTab;
   const guideTabs = [
     ...aiTabItems,
+    // 단어장은 탭에서 빠졌지만(노트 안) 사용법은 그대로 둔다.
+    { id: "vocab" as const, label: ui.homeTabVocab },
     ...(socialOn ? [{ id: "rooms" as const, label: ui.homeTabRooms }] : []),
   ] as { id: Exclude<AppTab, "people" | "messages">; label: string }[];
 
@@ -309,18 +314,6 @@ function AppHomeInner({
                 />
               ) : null}
 
-              {shownTab === "vocab" ? (
-                <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
-                  <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
-                    <h1 className="text-base font-semibold text-white">
-                      {ui.homeTabVocab}
-                    </h1>
-                  </header>
-                  <div className="min-h-0 flex-1 overflow-hidden">
-                    <VocabularyPanel locale={locale} ui={ui} />
-                  </div>
-                </div>
-              ) : null}
 
               {shownTab === "messages" && socialOn ? (
                 <MessagesTab ui={ui} locale={locale} threads={inbox.threads} />

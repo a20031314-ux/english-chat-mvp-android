@@ -80,6 +80,7 @@ export const OP_COST: Record<string, OpCost> = {
   learnerObserve: mini(),
   curriculumMissions: mini(),
   learnerPick: { kind: "model", model: "4.1", basis: "assumed" },
+  notesPlace: mini(),
   missionCheck: tutor,
   weakRead: mini(),
   weakMission: mini(),
