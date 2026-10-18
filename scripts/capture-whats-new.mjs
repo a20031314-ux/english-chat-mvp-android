@@ -195,9 +195,11 @@ const STORE_TABS_ITEMS = [
 // `promo-people`: 홍보 쇼츠용 녹화(사용자끼리 주고받는 장면). 사진 대신 Chrome 화면 전송으로 2배 해상도 영상을 남긴다
 // → tmp/promo/people/<locale>/raw.mp4 + events.json, 편집은 store-shots/promo/make.mjs people <locale>.
 // 상대(Yuki·Lucía·Omar)는 고정 응답이고 말은 한 줄씩 올라온다. 번역·💡 힌트는 운영. CAPTURE_MIC_WAV가 필요.
-const PROMO = VERSION === "promo-people";
+// `promo-room`: Room 하나만(입장 → 실시간 자막 → 줄 번역 → 💡 힌트 → 보내기), 15초 쇼츠용.
+const PROMO = VERSION === "promo-people" || VERSION === "promo-room";
+const PROMO_NAME = VERSION.replace(/^promo-/, "");
 const note = PROMO
-  ? { version: "promo", items: [{ shot: "promo-people", save: false }] }
+  ? { version: "promo", items: [{ shot: VERSION, save: false }] }
   : STORE_MY
   ? { version: "store", items: STORE_MY_ITEMS }
   : STORE_TABS
@@ -574,7 +576,8 @@ function socialMocks(page, target, ui) {
     }),
     page.route("**/api/dm", (route) => {
       const body = JSON.parse(route.request().postData() || "{}");
-      if (body.action === "inbox") return json(route, { threads: [{ thread, other: PEOPLE.yuki.id, unread: 1, request: false }] });
+      // 홍보 녹화(Room만): 쪽지 알림 띠가 방 화면을 가리지 않게 받은 쪽지 없음.
+      if (body.action === "inbox") return json(route, { threads: page.__social.roomOnly ? [] : [{ thread, other: PEOPLE.yuki.id, unread: 1, request: false }] });
       if (body.action === "open") return json(route, { thread, messages, blocked: false });
       if (body.action === "poll") return json(route, { thread, messages: [] });
       return json(route, { ok: true });
@@ -638,6 +641,53 @@ async function tapAt(page, locator) {
 }
 
 const STEPS = {
+  async "promo-room"({ page, ui, locale, wait, target, mark }) {
+    const t = roomCopyFor(locale);
+    page.__social = { hostMe: true, hint: true, live: true, roomOnly: true, shown: 0, revealedAt: {}, hintText: "" };
+    await socialMocks(page, target, ui);
+    const reveal = (n) => {
+      page.__social.shown = n;
+      page.__social.revealedAt[n] = Date.now();
+    };
+    await page.goto(`${BASE}/?screen=rooms`, { waitUntil: "networkidle" });
+    await wait(1500);
+    const later = page.getByRole("button", { name: exactly(inviteCopyFor(locale).later) });
+    if (await later.count()) await later.first().click();
+    await wait(700);
+    mark("rooms");
+    await wait(700);
+    await tapAt(page, page.locator("li", { hasText: target === "es" ? "Español ↔ 日本語" : "English ↔ 日本語" }).first().locator("button").first());
+    mark("join");
+    await wait(2200);
+    reveal(1);
+    await wait(2000);
+    reveal(2);
+    mark("lines");
+    await wait(1800);
+    const line = page.locator('div[class*="z-[80]"] li > div > button.w-full').nth(1);
+    const translated = page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 30000 }).catch(() => undefined);
+    await tapAt(page, line);
+    await translated;
+    mark("translated");
+    await wait(1800);
+    reveal(3);
+    mark("question");
+    await wait(1600);
+    page.__social.hintText = HINT_FRAGMENT[locale];
+    const card = page.getByText(t.hintTry);
+    for (let i = 0; i < 60 && !(await card.count()); i++) await wait(500);
+    if (!(await card.count())) throw new Error("no hint card");
+    mark("hint");
+    mark("hintText", await card.first().evaluate((el) => {
+      const box = el.closest("div")?.parentElement ?? el.parentElement;
+      return box.innerText.split("\n").map((x) => x.trim()).filter((x) => x && !x.includes("💡"))[1] ?? "";
+    }).catch(() => ""));
+    await wait(2600);
+    await tapAt(page, page.getByRole("button", { name: exactly(t.sendThis) }).last());
+    mark("sent");
+    await wait(2400);
+    mark("end");
+  },
   async "promo-people"({ page, ui, locale, wait, target, mark }) {
     const t = roomCopyFor(locale);
     // 고정 응답이 만들어지기 전에 정해야 세 줄(질문 포함)로 짜인다.
@@ -1425,7 +1475,7 @@ for (const locale of only ?? Object.keys(copy)) {
   const mark = (name, value) => (events[name] = value === undefined ? Date.now() / 1000 : value);
   const frames = [];
   let cdp = null;
-  const promoDir = path.join(ROOT, "tmp", "promo", "people", locale);
+  const promoDir = path.join(ROOT, "tmp", "promo", PROMO_NAME, locale);
   if (PROMO) {
     fs.rmSync(promoDir, { recursive: true, force: true });
     fs.mkdirSync(path.join(promoDir, "frames"), { recursive: true });

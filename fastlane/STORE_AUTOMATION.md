@@ -98,6 +98,8 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
   2편(사용자끼리): 사람 탭 팔로우 → Room 들어가기 → 상대 말이 한 줄씩 자막 → 줄 번역 → 질문에 편한 말로 웅얼 → 💡 힌트(목소리) → 보내기 → 단체방.
   녹화는 캡처 스크립트의 고정 응답을 그대로 쓴다: `CAPTURE_MIC_WAV=… node --experimental-strip-types scripts/capture-whats-new.mjs promo-people --only ko`
   → `node store-shots/promo/make.mjs people ko` → `tmp/promo/people/ko/promo-people-ko.mp4`. 상대 사람·글은 고정 응답, 번역·힌트는 운영.
+  **기본 형식(2026-10-19 사용자 결정): 한 편에 기능 하나, 15초 안팎, 영어판 먼저 → 다른 언어로.** Room 편: `promo-room`(입장 → 실시간 자막 → 줄 번역 → 💡 힌트 → 보내기)
+  `--only en,ko,ja,zh,es,hi` → `node store-shots/promo/make.mjs room <언어>` → `tmp/promo/room/<언어>/promo-room-<언어>.mp4`(자막 6개 언어는 make.mjs `COPY.room`).
 - **스토어 8장 (지금 올리는 세트, 2.69~)**: 한 장에 탭의 핵심 기능 하나(큰 화면) + 세부 기능 둘(확대 카드) + 더 있는 기능 칩(사용자 결정 2026-10-18).
   지도·채팅·문장분석·My 성장·통화·영상·Room·사람과 학습 8장 × 6개 등록정보. 아래 탭별 캡처(`store-my`·`store-tabs`)를 찍은 뒤
   `node store-shots/combo/compose.mjs` → `store-shots/out/combo/<등록정보>/1~8-*.png`(폴더째 올리면 됨). 장면·자르는 위치·문구는 `store-shots/combo/strings.mjs`.

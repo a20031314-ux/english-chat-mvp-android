@@ -51,8 +51,34 @@ const COPY = {
     },
   },
 };
+COPY.room = {
+  en: {
+    r1: "Real learners.\nReal voices.", r2: "Live captions\nas they speak", r3: "Tap any line\nto translate", r4: "Stuck? Say it\nyour own way",
+    r5: "💡 Get the line\nin Spanish", r6: "Send it.\nEveryone sees it.", endTitle: "Speak with people\nlearning like you", endSub: "Voice rooms with live captions",
+  },
+  ko: {
+    r1: "진짜 학습자들과\n목소리로", r2: "말하는 대로\n자막이 떠요", r3: "모르는 줄은\n눌러서 한국어로", r4: "막히면\n한국어로 말해도",
+    r5: "💡 할 말을\n영어로 알려줘요", r6: "보내면\n모두가 봐요", endTitle: "같은 언어 배우는 사람들과\n말하며 배워요", endSub: "자막이 뜨는 음성 대화방",
+  },
+  ja: {
+    r1: "本物の学習者と\n声で話す", r2: "話した言葉が\nすぐ字幕に", r3: "わからない行は\nタップで日本語に", r4: "詰まったら\n日本語で言っても",
+    r5: "💡 言いたいことを\n英語で教えてくれる", r6: "送れば\nみんなに届く", endTitle: "同じ言語を学ぶ人と\n話して学ぼう", endSub: "字幕が出るボイスルーム",
+  },
+  zh: {
+    r1: "和真实的学习者\n开口聊", r2: "说话实时\n出字幕", r3: "看不懂的句子\n点一下翻成中文", r4: "卡住了\n说中文也行",
+    r5: "💡 告诉你\n英语怎么说", r6: "发出去\n大家都能看到", endTitle: "和一起学语言的人\n边说边学", endSub: "带实时字幕的语音房",
+  },
+  es: {
+    r1: "Estudiantes reales,\nvoces reales", r2: "Subtítulos\nmientras hablan", r3: "Toca una frase\npara traducirla", r4: "¿Te atascas?\nDilo en español",
+    r5: "💡 Te da la frase\nen inglés", r6: "Envíala.\nTodos la ven.", endTitle: "Habla con gente\nque aprende como tú", endSub: "Salas de voz con subtítulos",
+  },
+  hi: {
+    r1: "असली सीखने वाले,\nअसली आवाज़ें", r2: "बोलते ही\nसबटाइटल", r3: "कोई भी लाइन टैप करें,\nहिंदी में देखें", r4: "अटक गए?\nहिंदी में बोलें",
+    r5: "💡 अंग्रेज़ी में\nवाक्य मिलेगा", r6: "भेजें,\nसब देखेंगे", endTitle: "साथ सीखने वालों से\nबोलकर सीखें", endSub: "सबटाइटल वाले वॉइस रूम",
+  },
+};
 const FONT = { ko: "'Noto Sans CJK KR', sans-serif", ja: "'Noto Sans CJK JP', sans-serif", zh: "'Noto Sans CJK SC', sans-serif", hi: "'Noto Sans Devanagari', 'Noto Sans', sans-serif" };
-const STORE_LINE = { ko: "Google Play에서 만나요", en: "Get it on Google Play" };
+const STORE_LINE = { ko: "Google Play에서 만나요", en: "Get it on Google Play", ja: "Google Playで配信中", zh: "在 Google Play 下载", es: "Disponible en Google Play", hi: "Google Play पर पाएँ" };
 const C = { font: FONT[locale] ?? "'Noto Sans', sans-serif", store: STORE_LINE[locale] ?? STORE_LINE.en, ...(COPY[story]?.[locale] ?? {}) };
 if (!COPY[story]?.[locale]) throw new Error(`no promo copy for ${story}/${locale}`);
 
@@ -92,11 +118,24 @@ const STORIES = {
     voiceIn: 0.6,
   }),
 };
+STORIES.room = () => ({
+  segs: [
+    [Math.max(0, ev.rooms - 1.2), ev.join + 0.5, 1, "r1"],
+    [ev.join + 0.3, ev.lines + 1.2, 1.8, "r2"],
+    [ev.lines + 1.2, ev.translated + 1.2, 1.2, "r3"],
+    // 힌트를 기다리는 시간은 운영 응답에 따라 달라서, 늘 약 2초로 줄인다.
+    [ev.question - 0.1, ev.hint - 0.3, Math.max(1.3, (ev.hint - 0.2 - ev.question) / 2.0), "r4"],
+    [ev.hint - 0.3, ev.sent - 0.1, 1, "r5", { by: 0.2, x: 0.5, y: 0.42 }],
+    [ev.sent - 0.1, ev.sent + 1.8, 1, "r6"],
+  ],
+  voice: ev.hintText,
+  voiceIn: 0.6,
+});
 const plan = STORIES[story]();
 
 // ── 1. 장면 자르기(원본 시각) ──
 const segs = plan.segs;
-const END_CARD = 2.6;
+const END_CARD = story === "room" ? 2.2 : 2.6;
 let out = 0;
 const timeline = segs.map(([a, b, speed, cap, zoom]) => {
   const dur = (b - a) / speed;
