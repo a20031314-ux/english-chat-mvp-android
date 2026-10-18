@@ -2,7 +2,7 @@
  * 사람·친구 초대 묶음 — 임시 계정 둘(A 초대한 사람, B 링크로 온 사람).
  *
  *   내 초대 코드 → 로그인 없이 링크 열기(초대한 사람 이름·사진, 공개 방이면 방) → 없는 코드는 막힘
- *   → B가 받기 = 서로 팔로우 → 내 코드로 받기는 self → 비공개(1:1 통화) 방은 링크에 안 나옴
+ *   → B가 받기 = 데려온 사람만 기록(팔로우 없음) → 내 코드로 받기는 self → 비공개(1:1 통화) 방은 링크에 안 나옴
  *   → 사람 목록: 숨김 계정·나 자신은 안 나옴
  *
  * 테스트 계정은 숨김이라 실제 사용자의 사람 목록에 뜨지 않는다. 모델 호출 없음. 14명 중 1명.
@@ -53,19 +53,19 @@ export default {
       step({ title: "로그인 없이 초대 링크 열기", status: lookup.status, ms: lookup.ms, outputs: [{ label: "보이는 것", text: `${lookup.body?.inviter?.nickname ?? "-"} · 방 ${lookup.body?.room?.name ?? "없음"}` }, { label: "없는 코드", text: `${badCode.status} ${badCode.body?.error ?? ""}` }], issues: lIssues });
       if (roomId) await acc.room(A, "leave", { roomId });
 
-      // ── 받기 = 서로 팔로우 ──
+      // ── 받기 = 데려온 사람만 기록(팔로우 없음, 2026-10-19 바뀜) ──
       const accepted = await acc.as(B, "/api/invite", { body: { action: "accept", c: code } });
       const aIssues = checkHttp(P, accepted);
       const bSeesA = await acc.social(B, "profile", { target: A.id });
       const aSeesB = await acc.social(A, "profile", { target: B.id });
       if (accepted.status === 200) {
         if (accepted.body?.inviterId !== A.id) aIssues.push(issue("error", "people_logic", "받기 결과의 초대한 사람이 다름"));
-        if (!bSeesA.body?.profile?.isFollowing) aIssues.push(issue("error", "people_logic", "초대를 받았는데 B가 A를 팔로우하지 않음"));
-        if (!aSeesB.body?.profile?.isFollowing) aIssues.push(issue("error", "people_logic", "초대를 받았는데 A가 B를 팔로우하지 않음"));
+        if (bSeesA.body?.profile?.isFollowing) aIssues.push(issue("error", "people_logic", "초대를 받았는데 B가 A를 저절로 팔로우함(팔로우 없어야)"));
+        if (aSeesB.body?.profile?.isFollowing) aIssues.push(issue("error", "people_logic", "초대를 받았는데 A가 B를 저절로 팔로우함(팔로우 없어야)"));
       }
       const self = await acc.as(A, "/api/invite", { body: { action: "accept", c: code } });
       if (self.body?.self !== true) aIssues.push(issue("error", "people_logic", `내 코드로 받기가 self가 아님: ${JSON.stringify(self.body)}`));
-      step({ title: "B가 초대 받기 → 서로 팔로우", status: accepted.status, ms: accepted.ms, outputs: [{ label: "팔로우", text: `B→A ${bSeesA.body?.profile?.isFollowing ? "예" : "아니오"} · A→B ${aSeesB.body?.profile?.isFollowing ? "예" : "아니오"}` }], issues: aIssues });
+      step({ title: "B가 초대 받기 (팔로우 없음)", status: accepted.status, ms: accepted.ms, outputs: [{ label: "팔로우", text: `B→A ${bSeesA.body?.profile?.isFollowing ? "예" : "아니오"} · A→B ${aSeesB.body?.profile?.isFollowing ? "예" : "아니오"}` }], issues: aIssues });
 
       // ── 비공개 방은 링크에 안 나옴 ──
       await acc.dm(A, "send", { target: B.id, text: "hi" });

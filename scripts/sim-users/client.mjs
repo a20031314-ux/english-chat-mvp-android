@@ -5,8 +5,9 @@
 export function makeClient({ api, maxRequests = 3000, timeoutMs = 40_000, appVersion = "sim-users" }) {
   const state = { count: 0, byPath: new Map() };
 
-  async function call(userId, path, { method = "POST", body, query, headers = {}, timeout = timeoutMs } = {}) {
-    if (state.count >= maxRequests) return { status: 0, ms: 0, path, error: "MAX_REQUESTS 도달 — 보내지 않음" };
+  // force: 정리 요청(임시 계정·테스트 글 지우기)은 상한을 넘어도 보낸다 — 지우지 못하고 남는 것을 막는다.
+  async function call(userId, path, { method = "POST", body, query, headers = {}, timeout = timeoutMs, force = false } = {}) {
+    if (!force && state.count >= maxRequests) return { status: 0, ms: 0, path, error: "MAX_REQUESTS 도달 — 보내지 않음" };
     state.count += 1;
     const base = path.split("?")[0];
     state.byPath.set(base, (state.byPath.get(base) ?? 0) + 1);

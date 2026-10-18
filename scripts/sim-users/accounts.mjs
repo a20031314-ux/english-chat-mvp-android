@@ -59,7 +59,7 @@ export function makeAccounts({ call, userId, step, prefix, persona }) {
 
   async function cleanup() {
     for (const person of people) {
-      const removed = await as(person, "/api/account/delete", { body: {} });
+      const removed = await as(person, "/api/account/delete", { body: {}, force: true });
       step({ title: `임시 계정 삭제 ${person.tag.toUpperCase()}`, status: removed.status, ms: removed.ms, issues: checkHttp(prefix, removed) });
     }
   }
@@ -70,5 +70,7 @@ export function makeAccounts({ call, userId, step, prefix, persona }) {
 /** 응답 오류 코드가 기대와 같은지(막혀야 하는 동작). */
 export function expectError(prefix, res, code, what) {
   if (res.body?.error === code) return [];
+  // 보내지 못한 요청(상한·네트워크)은 막힘 검사로 치지 않는다.
+  if (res.error) return [issue("error", `${prefix}_network`, `${what}: 요청 실패 ${String(res.error).slice(0, 80)}`)];
   return [issue("error", `${prefix}_logic`, `${what}: ${code}이어야 하는데 ${res.status} ${res.body?.error ?? "통과"}`)];
 }
