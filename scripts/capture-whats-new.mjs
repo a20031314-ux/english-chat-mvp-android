@@ -427,6 +427,12 @@ const ROOM_LINES = {
     ["omar", "Algún día quiero ir a Japón.", "text"],
   ],
 };
+// 2.69 힌트 장면: 상대가 나이를 묻고, 나는 편한 말로 "어.. 스물둘.."(받아쓰기는 고정 응답, 힌트는 운영 /api/chat).
+const HINT_QUESTION = { en: "How old are you?", es: "¿Cuántos años tienes?" };
+const HINT_FRAGMENT = {
+  ko: "어.. 스물둘..", en: "uh... I'm twenty-two", es: "eh… veintidós", ja: "えっと…にじゅうに", zh: "呃…二十二", vi: "ờ… hai mươi hai", fr: "euh… vingt-deux",
+  it: "ehm… ventidue", pt: "é… vinte e dois", ru: "э-э… двадцать два", id: "eh… dua puluh dua", ar: "اممم… اثنان وعشرون", th: "อืม... ยี่สิบสอง", hi: "उम्म… बाईस",
+};
 // 2.69 단체방 장면: 이름과 글(학습 언어).
 const GROUP_LINES = {
   en: { name: "Study buddies ☕", a: "Who wants to practice tonight?", b: "Me! After dinner works for me.", c: "Let’s call at 9." },
@@ -444,7 +450,7 @@ function socialMocks(page, target, ui) {
   const baseRoom = { id: "capt01", name: roomName, languages: [target, "ja"], hostPeerId: "p_yukiyukiyuki", hostAccountId: PEOPLE.yuki.id, hostNickname: "Yuki", createdAt: now - 600_000 };
   const member = (key, peerId, role, extra = {}) => ({ peerId, nickname: PEOPLE[key].nickname, role, muted: false, hand: false, accountId: PEOPLE[key].id, langs: [target, "ja"], joinedAt: now - 500_000, lastSeen: Date.now(), ...extra }); // 응답 때마다 지금: 오래되면 앱이 나간 사람으로 지운다
   const peers = { yuki: "p_yukiyukiyuki", lucia: "p_lucialucialu", omar: "p_omaromaromar" };
-  const lines = ROOM_LINES[target].map(([who, text, kind], index) => ({
+  const lines = [...ROOM_LINES[target], ...(page.__social.hint ? [["yuki", HINT_QUESTION[target]]] : [])].map(([who, text, kind], index) => ({
     seq: index + 1, kind: kind ?? "speech", peerId: peers[who], accountId: PEOPLE[who].id, nickname: PEOPLE[who].nickname, text,
     startedAt: now - 90_000 + index * 15_000, endedAt: now - 85_000 + index * 15_000,
   }));
@@ -470,7 +476,7 @@ function socialMocks(page, target, ui) {
       const body = JSON.parse(route.request().postData() || "{}");
       const hostMe = page.__social.hostMe;
       const mePeer = body.peerId || "p_meeeeeeeeeee";
-      const members = [member("yuki", peers.yuki, "speaker"), member("lucia", peers.lucia, "speaker"), member("omar", peers.omar, "listener", { hand: true }), member("me", mePeer, hostMe ? "speaker" : "listener")];
+      const members = [member("yuki", peers.yuki, "speaker"), member("lucia", peers.lucia, "speaker"), member("omar", peers.omar, "listener", { hand: !page.__social.hint }), member("me", mePeer, hostMe ? "speaker" : "listener")];
       const room = hostMe ? { ...baseRoom, hostPeerId: mePeer, hostAccountId: PEOPLE.me.id, hostNickname: "Minji" } : baseRoom;
       const faces = members.map((m) => ({ accountId: m.accountId, nickname: m.nickname }));
       // 2.69 자유 대화 장면: 목록 맨 위에 🌐 방 하나.
@@ -479,6 +485,8 @@ function socialMocks(page, target, ui) {
       if (body.action === "join") return json(route, { member: members[3], room, now: Date.now() });
       if (body.action === "poll") return json(route, { now: Date.now(), room, members, signals: [], lines: body.since ? [] : lines });
       if (body.action === "peek") return json(route, { room });
+      if (body.action === "line")
+        return json(route, { line: { seq: 90 + Math.floor(Math.random() * 9), kind: body.kind, peerId: mePeer, accountId: PEOPLE.me.id, nickname: "Minji", text: body.text, startedAt: body.startedAt, endedAt: body.endedAt } });
       if (body.action === "parked") return json(route, { rooms: [] });
       return json(route, { ok: true });
     }),
@@ -508,6 +516,7 @@ function socialMocks(page, target, ui) {
       if (body.action === "poll") return json(route, { thread, messages: [] });
       return json(route, { ok: true });
     }),
+    page.route("**/api/roleplay/listen", (route) => json(route, { text: page.__social.hintText ?? "" })),
     page.route("**/api/groups", (route) => {
       const body = JSON.parse(route.request().postData() || "{}");
       const g = GROUP_LINES[target];
@@ -601,6 +610,23 @@ const STEPS = {
     await page.locator("li button", { hasText: GROUP_LINES[target].name }).first().click();
     await wait(3000);
   },
+  async hint({ page, ui, locale, wait, target }) {
+    // 내가 방장(말하기 자리)으로 들어가 가짜 마이크로 한 마디 → 받아쓰기는 편한 말 조각(고정) → 💡 힌트.
+    // 가짜 마이크 녹음은 CAPTURE_MIC_WAV(말소리가 든 wav).
+    const t = roomCopyFor(locale);
+    if (!page.__social) await socialMocks(page, target, ui);
+    page.__social.hostMe = true;
+    page.__social.hint = true;
+    page.__social.hintText = HINT_FRAGMENT[locale];
+    await page.goto(`${BASE}/?screen=rooms`, { waitUntil: "networkidle" });
+    await wait(2000);
+    await page.locator("li", { hasText: target === "es" ? "Español ↔ 日本語" : "English ↔ 日本語" }).first().locator("button").first().click();
+    const card = page.getByText(t.hintTry);
+    for (let i = 0; i < 60 && !(await card.count()); i++) await wait(1000);
+    if (!(await card.count())) throw new Error("no hint card");
+    page.__social.hintText = "";
+    await wait(1500);
+  },
   async freetalk({ page, locale, wait }) {
     // 목록 맨 위 🌐 자유 대화방 + 새 방 만들기에서 "🌐 자유 대화"를 고른 모습.
     const t = roomCopyFor(locale);
@@ -639,6 +665,7 @@ const STEPS = {
     });
     page.__social.hostMe = true;
     await page.locator('div[class*="z-[80]"] header').getByRole("button", { name: exactly(t.viewTimeline) }).click();
+    page.__social.hint = false;
     const close = page.locator('div[class*="z-[80]"] header').getByRole("button", { name: exactly(t.closeRoom) });
     for (let i = 0; i < 20 && !(await close.count()); i++) await wait(500);
     // 찍는 브라우저엔 마이크가 없어 뜨는 안내는 눌러서 닫는다(실제 폰과 무관).
@@ -1142,14 +1169,16 @@ async function save(png, locale, shot) {
 const browser = await chromium.launch({
   ...(process.env.CHROMIUM ? { executablePath: process.env.CHROMIUM } : {}),
   // The call opens the microphone; a fake one answers the permission prompt.
-  ...(GUIDE_CALL ? { args: ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream", "--autoplay-policy=no-user-gesture-required"] } : {}),
+  ...(GUIDE_CALL || process.env.CAPTURE_MIC_WAV
+    ? { args: ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream", "--autoplay-policy=no-user-gesture-required", ...(process.env.CAPTURE_MIC_WAV ? [`--use-file-for-fake-audio-capture=${process.env.CAPTURE_MIC_WAV}`] : [])] }
+    : {}),
 });
 const day = new Date().toISOString().slice(0, 10).replace(/-/g, "");
 let failed = 0;
 for (const locale of only ?? Object.keys(copy)) {
   const ui = copy[locale];
   // The store frame expects a 20:9 phone (store-shots/frame.html).
-  const context = await browser.newContext({ viewport: { width: 412, height: STORE ? 915 : 860 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, ...(GUIDE_CALL ? { permissions: ["microphone"] } : {}) });
+  const context = await browser.newContext({ viewport: { width: 412, height: STORE ? 915 : 860 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, ...(GUIDE_CALL || process.env.CAPTURE_MIC_WAV ? { permissions: ["microphone"] } : {}) });
   const page = await context.newPage();
   await page.route("**/api/**", (route) =>
     route.continue({ headers: { ...route.request().headers(), "x-rc-user": `${process.env.CAPTURE_USER || `whats-new-capture-${day}${process.env.CAPTURE_RUN ? `-${process.env.CAPTURE_RUN}` : ""}`}-${locale}` } }),

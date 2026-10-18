@@ -137,19 +137,52 @@ export function whichLanguage(text: string, languages: readonly string[]): strin
 }
 
 /**
- * Whether a room line leans on the speaker's own language: their own
- * language's script makes up a real share of it ("어.. 스물둘..", "I'm 스물둘").
- * Only answerable when the two languages are written differently — Spanish and
- * English share letters, so nothing is claimed and no hint is offered.
+ * Small, very common words (and hesitation sounds) of the Latin-script
+ * languages — enough to tell "euh… vingt-deux" from English when both are
+ * written in the same letters. Not a language detector: it only has to notice a
+ * line that is mostly someone's own language.
+ */
+const COMMON_WORDS: Record<string, readonly string[]> = {
+  en: ["the", "a", "i", "you", "is", "are", "and", "to", "of", "it", "in", "my", "what", "how", "yes", "no", "that", "this", "was", "do", "have", "me", "we", "uh", "um", "i'm", "it's"],
+  es: ["el", "la", "los", "las", "de", "que", "y", "es", "en", "un", "una", "yo", "tú", "sí", "mi", "por", "para", "con", "pero", "muy", "qué", "cómo", "tengo", "soy", "estoy", "eh", "bueno", "pues"],
+  fr: ["le", "la", "les", "de", "des", "et", "est", "je", "tu", "un", "une", "pas", "oui", "non", "mon", "ma", "c'est", "que", "qui", "pour", "avec", "mais", "très", "euh", "alors", "j'ai", "suis", "ben"],
+  it: ["il", "la", "lo", "gli", "di", "che", "e", "è", "un", "una", "io", "tu", "non", "sì", "mio", "per", "con", "ma", "molto", "sono", "ho", "ehm", "allora", "cosa", "boh"],
+  pt: ["o", "a", "os", "as", "de", "que", "e", "é", "um", "uma", "eu", "você", "não", "sim", "meu", "para", "com", "mas", "muito", "sou", "tenho", "estou", "então", "né", "tipo"],
+  id: ["aku", "saya", "kamu", "yang", "dan", "di", "ke", "ini", "itu", "tidak", "ya", "ada", "apa", "dengan", "untuk", "sudah", "mau", "eh", "nggak", "gak", "puluh"],
+  vi: ["tôi", "bạn", "là", "và", "của", "có", "không", "này", "đó", "một", "được", "ờ", "à", "thì", "mà", "rồi", "đi", "năm", "mươi"],
+};
+
+function commonShare(words: string[], language: string): number {
+  const list = COMMON_WORDS[language];
+  if (!list || words.length === 0) return 0;
+  return words.filter((word) => list.includes(word)).length / words.length;
+}
+
+/**
+ * Whether a room line leans on the speaker's own language ("어.. 스물둘..",
+ * "I'm 스물둘", "euh… vingt-deux"), so a hint in the language they learn helps.
+ * Written differently: a real share of the own language's script. Written in
+ * the same letters: more of the own language's common words than of the one
+ * being learned. Japanese and Chinese share Han characters, so that pair is
+ * left alone.
  */
 export function leansOnOwnLanguage(text: string, learning: string, own: string): boolean {
+  if (learning === own) return false;
   const learningScript = SCRIPT_OF[learning];
   const ownScript = SCRIPT_OF[own];
-  if (!learningScript || !ownScript || learningScript === ownScript) return false;
-  // 일본어(가나+한자)를 배우는 중국어 사용자: 한자만으로는 가를 수 없다.
+  if (!learningScript || !ownScript) return false;
   if ((learningScript === "kana" && ownScript === "han") || (learningScript === "han" && ownScript === "kana")) return false;
+  if (learningScript === ownScript) {
+    const words = text
+      .toLowerCase()
+      .replace(/[’]/g, "'")
+      .split(/[^\p{L}\p{M}']+/u)
+      .filter(Boolean);
+    const mine = commonShare(words, own);
+    return mine >= 0.25 && mine > commonShare(words, learning);
+  }
   const letters = [...text].filter((character) => /\p{L}/u.test(character));
   if (letters.length === 0) return false;
-  const own_ = letters.filter((character) => RANGES[ownScript].test(character)).length;
-  return own_ / letters.length >= ENOUGH_OF_THE_LANGUAGE;
+  const ownLetters = letters.filter((character) => RANGES[ownScript].test(character)).length;
+  return ownLetters / letters.length >= ENOUGH_OF_THE_LANGUAGE;
 }

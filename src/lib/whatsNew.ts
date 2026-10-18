@@ -48,6 +48,7 @@ export const RELEASE_NOTES: ReleaseNote[] = [
       { id: "freetalk", title: "whatsNewFreeTalkTitle", body: "whatsNewFreeTalkBody", shot: "freetalk", tab: "rooms" },
       { id: "quote", title: "whatsNewQuoteTitle", body: "whatsNewQuoteBody", shot: "quote", tab: "rooms" },
       { id: "layouts", title: "whatsNewLayoutsTitle", body: "whatsNewLayoutsBody", shot: "layouts", tab: "rooms" },
+      { id: "hint", title: "whatsNewHintTitle", body: "whatsNewHintBody", shot: "hint", tab: "rooms" },
       { id: "host", title: "whatsNewHostTitle", body: "whatsNewHostBody", shot: "host", tab: "rooms" },
     ],
   },

@@ -105,8 +105,13 @@ test("말하는 방 힌트: 편한 말이 든 줄만(글자가 다른 두 언어
   assert.equal(leansOnOwnLanguage("I'm twenty-two.", "en", "ko"), false);
   assert.equal(leansOnOwnLanguage("えっと、にじゅうに", "es", "ja"), true);
   assert.equal(leansOnOwnLanguage("ฉันอายุยี่สิบสอง", "en", "th"), true);
-  // 스페인어를 배우는 영어 사용자: 같은 글자라 판단하지 않는다.
-  assert.equal(leansOnOwnLanguage("I am twenty two", "es", "en"), false);
+  // 같은 글자(라틴)끼리는 흔한 낱말로: 프랑스어로 말한 영어 학습자, 영어로 말한 스페인어 학습자.
+  assert.equal(leansOnOwnLanguage("euh… vingt-deux", "en", "fr"), true);
+  assert.equal(leansOnOwnLanguage("Je suis allé à la plage", "en", "fr"), true);
+  assert.equal(leansOnOwnLanguage("uh... I'm twenty-two", "es", "en"), true);
+  assert.equal(leansOnOwnLanguage("ờ… hai mươi hai", "en", "vi"), true);
+  assert.equal(leansOnOwnLanguage("Tengo veintidós años", "es", "en"), false);
+  assert.equal(leansOnOwnLanguage("I went to the beach last weekend.", "en", "fr"), false);
   // 일본어를 배우는 중국어 사용자: 한자만으로는 못 가른다.
   assert.equal(leansOnOwnLanguage("二十二", "ja", "zh"), false);
 });

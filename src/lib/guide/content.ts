@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-19b";
+export const GUIDE_VERSION = "2026-10-19c";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms";
 
@@ -335,8 +335,10 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "말이 막힐 때",
         "body": [
-          "아래 칸에 편한 말로 쓰고 ‘학습 언어로’를 누르면 문장을 만들어 줘요. 그대로 댓글로 보내거나, 말하기 자리에서 소리 내어 말해 보세요."
-        ]
+          "아래 칸에 편한 말로 쓰고 ‘학습 언어로’를 누르면 문장을 만들어 줘요. 그대로 댓글로 보내거나, 말하기 자리에서 소리 내어 말해 보세요.",
+          "말하는 중에 편한 말이 나오면(‘어.. 스물둘..’) 그 줄 아래 나에게만 ‘이렇게 말해 보세요’가 떠요. 다른 사람에게는 안 보여요. 아래 ‘힌트’에서 ‘바로 보기’·‘살짝만’·‘끄기’를 골라요."
+        ],
+        "shot": "r69-hint"
       },
       {
         "heading": "방장이라면",
@@ -664,8 +666,10 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "When the words won’t come",
         "body": [
-          "Write in your own language in the box below and tap “In my target language” to get a sentence. Send it as a comment, or say it out loud from a talking seat."
-        ]
+          "Write in your own language in the box below and tap “In my target language” to get a sentence. Send it as a comment, or say it out loud from a talking seat.",
+          "If your own language slips out while you talk, only you see “Try saying it like this” under that line; nobody else does. Under “Hints”, choose “Show”, “Just a peek” or “Off”."
+        ],
+        "shot": "r69-hint"
       },
       {
         "heading": "If you’re the host",

@@ -553,11 +553,13 @@ export function Lines({
   const ordered = useMemo(() => timeline(lines), [lines]);
   const groups = useMemo(() => byPerson(lines), [lines]);
 
+  // 💡 힌트가 오면 그 카드까지 보이게(내 마지막 줄 아래라 맨 아래로).
+  const hintCount = Object.keys(hints ?? {}).length;
   useEffect(() => {
     if (view !== "timeline") return;
     const node = scroller.current;
     if (node) node.scrollTop = node.scrollHeight;
-  }, [ordered.length, view]);
+  }, [ordered.length, view, hintCount]);
 
   const toggle = async (line: RoomLine) => {
     if (line.seq in open) {
