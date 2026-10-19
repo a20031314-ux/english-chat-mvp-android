@@ -19,7 +19,7 @@ import { fillGuideLabels, loadGuide, readCachedGuide, type GuideData } from "@/l
 
 /** 화면 → 처음 펼칠 묶음. */
 const SCREEN_CHAPTER: Record<string, string> = {
-  talk: "ai-chat",
+  talk: "messages",
   chat: "ai-chat",
   roleplay: "ai-call",
   messages: "messages",

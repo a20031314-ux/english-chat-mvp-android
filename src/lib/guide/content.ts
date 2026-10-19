@@ -17,9 +17,9 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-20a";
+export const GUIDE_VERSION = "2026-10-20b";
 
-export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms";
+export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
 export type GuideSection = {
   heading: string;
@@ -60,10 +60,13 @@ export const GUIDE_SECTION_IDS: Record<GuideTabId, string[]> = {
     "room.host",
     "people.find",
     "people.invite",
+    "people.rewards",
     "messages.dm",
     "messages.groups",
     "people.board",
   ],
+  // 2.70 하단 탭(대화 목록): 따로 둔 키라 이 키를 모르는 옛 빌드의 채팅 안내에는 섞이지 않는다.
+  talk: ["talk.list"],
 };
 
 /**
@@ -77,9 +80,10 @@ export type GuideChapterSpec = { id: string; title: string; go: GuideGo; section
 export const GUIDE_CHAPTERS: GuideChapterSpec[] = [
   { id: "ai-chat", title: "{ui:talkAiTutor}", go: "chat", sections: GUIDE_SECTION_IDS.chat },
   { id: "ai-call", title: "{ui:talkAiCall}", go: "roleplay", sections: GUIDE_SECTION_IDS.roleplay },
-  { id: "messages", title: "{ui:homeTabMessages}", go: "talk", sections: ["messages.dm", "messages.groups"] },
+  // 대화 목록(AI 튜터 + 사람): 사람 기능이 꺼진 빌드(iOS 1차)엔 목록이 없어 이 묶음째 안 보인다.
+  { id: "messages", title: "{ui:homeTabTalk}", go: "talk", sections: ["talk.list", "messages.dm", "messages.groups"] },
   { id: "video", title: "{ui:homeTabVideo}", go: "video", sections: GUIDE_SECTION_IDS.video },
-  { id: "people", title: "{ui:homeTabPeople}", go: "people", sections: ["people.find", "people.invite", "people.board"] },
+  { id: "people", title: "{ui:homeTabPeople}", go: "people", sections: ["people.find", "people.invite", "people.rewards", "people.board"] },
   { id: "rooms", title: "{ui:homeTabRooms}", go: "rooms", sections: ["room.find", "room.layouts", "room.quote", "room.stuck", "room.host"] },
   { id: "my", title: "{ui:homeTabProfile}", go: "map", sections: GUIDE_SECTION_IDS.map.filter((id) => id !== "my.notes") },
   { id: "notes", title: "{ui:notesTitle}", go: "notes", sections: ["my.notes", ...GUIDE_SECTION_IDS.vocab] },
@@ -446,6 +450,14 @@ export const GUIDE_KO: Guide = {
         ]
       },
       {
+        "heading": "친구 초대 보상",
+        "body": [
+          "초대한 친구가 일주일 안에 이틀 이상 쓰면 나와 친구 모두 포인트를 받아요.",
+          "데려온 친구가 늘면 플러스·프리미엄 기간도 받아요. 정확한 숫자는 카드에 보여요."
+        ],
+        "shot": "invite-rewards"
+      },
+      {
         "heading": "메시지와 통화",
         "body": [
           "첫 메시지는 요청으로 가고, 상대가 답하면 대화가 열려요. 대화 위 📞로 통화하고, 통화 자막은 기록으로 남아요."
@@ -464,6 +476,19 @@ export const GUIDE_KO: Guide = {
           "배우는 언어로 글을 올리고 댓글을 달아요. 고치고 지우는 건 쓴 사람만 할 수 있어요. 글 아래 ‘내 언어로 보기’로 번역하고, 이름을 누르면 팔로우·메시지·신고."
         ],
         "shot": "r69-board"
+      }
+    ]
+  },
+  talk: {
+    "title": "대화 사용법",
+    "sections": [
+      {
+        "heading": "대화 목록",
+        "body": [
+          "맨 위가 AI 튜터예요. 줄을 누르면 채팅, 📞를 누르면 통화로 연습해요.",
+          "그 아래에 단체방과 1:1 메시지가 이어지고, 안 읽은 메시지 수도 같이 보여요."
+        ],
+        "shot": "talk-list"
       }
     ]
   },
@@ -803,6 +828,14 @@ export const GUIDE_EN: Guide = {
         ]
       },
       {
+        "heading": "Invite rewards",
+        "body": [
+          "When a friend you invite uses the app on two days within a week, you both get points.",
+          "Bring more friends and you also get Plus or Premium time. The card shows the exact numbers."
+        ],
+        "shot": "invite-rewards"
+      },
+      {
         "heading": "Messages and calls",
         "body": [
           "Your first message goes as a request; once they reply, the conversation opens. Call with 📞 above the conversation; the call's captions stay as a record."
@@ -821,6 +854,19 @@ export const GUIDE_EN: Guide = {
           "Post in the language you’re learning and comment. Only the writer can edit or delete. “See in my language” translates a post; tap a name to follow, message or report."
         ],
         "shot": "r69-board"
+      }
+    ]
+  },
+  talk: {
+    "title": "How to use Chats",
+    "sections": [
+      {
+        "heading": "Your chats",
+        "body": [
+          "The AI tutor is always at the top. Tap the row to chat, or 📞 to practise by call.",
+          "Group chats and one-to-one messages follow below, with how many are unread."
+        ],
+        "shot": "talk-list"
       }
     ]
   },

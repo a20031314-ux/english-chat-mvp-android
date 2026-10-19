@@ -333,6 +333,14 @@
           ]
         },
         {
+          "heading": "Premios por invitar",
+          "body": [
+            "Si un amigo que invitas usa la app dos días en una semana, los dos recibís puntos.",
+            "Con más amigos también ganas tiempo de Plus o Premium. La tarjeta muestra las cifras exactas."
+          ],
+          "shot": "invite-rewards"
+        },
+        {
           "heading": "Mensajes y llamadas",
           "body": [
             "Tu primer mensaje llega como solicitud; cuando responda, se abre la conversación. Llama con 📞 encima de la conversación; los subtítulos de la llamada quedan guardados."
@@ -351,6 +359,19 @@
             "Publica en el idioma que aprendes y comenta. Solo quien escribe puede editar o borrar. “Ver en mi idioma” traduce; toca un nombre para seguir, escribir o denunciar."
           ],
           "shot": "r69-board"
+        }
+      ]
+    },
+    "talk": {
+      "title": "Tus chats",
+      "sections": [
+        {
+          "heading": "Tus chats",
+          "body": [
+            "El tutor IA siempre está arriba. Toca la fila para chatear o 📞 para practicar con una llamada.",
+            "Debajo siguen los grupos y los mensajes uno a uno, con cuántos no has leído."
+          ],
+          "shot": "talk-list"
         }
       ]
     }
@@ -689,6 +710,14 @@
           ]
         },
         {
+          "heading": "友だち招待の特典",
+          "body": [
+            "招待した友だちが1週間のうち2日以上使うと、あなたも友だちもポイントをもらえます。",
+            "招待した友だちが増えるとプラス・プレミアムの期間ももらえます。くわしい数はカードに出ます。"
+          ],
+          "shot": "invite-rewards"
+        },
+        {
           "heading": "メッセージと通話",
           "body": [
             "最初のメッセージはリクエストとして届き、返信があると会話が開きます。会話の上の📞で通話でき、通話の字幕は記録に残ります。"
@@ -707,6 +736,19 @@
             "学んでいる言語で投稿・コメントできます。編集・削除は書いた人だけ。「自分の言語で見る」で翻訳、名前を押すとフォロー・メッセージ・通報。"
           ],
           "shot": "r69-board"
+        }
+      ]
+    },
+    "talk": {
+      "title": "会話リスト",
+      "sections": [
+        {
+          "heading": "会話リスト",
+          "body": [
+            "いちばん上はAIチューターです。行をタップするとチャット、📞で通話の練習ができます。",
+            "その下にグループと1対1のメッセージが並び、未読の数も出ます。"
+          ],
+          "shot": "talk-list"
         }
       ]
     }
@@ -1045,6 +1087,14 @@
           ]
         },
         {
+          "heading": "邀请好友奖励",
+          "body": [
+            "你邀请的朋友在一周内用满两天，你们俩都能得到积分。",
+            "带来的朋友越多，还能获得 Plus 或 Premium 时长。具体数字见卡片。"
+          ],
+          "shot": "invite-rewards"
+        },
+        {
           "heading": "消息和通话",
           "body": [
             "第一条消息会作为请求发出，对方回复后对话就会打开。点对话上方的📞通话，通话字幕会作为记录保留。"
@@ -1063,6 +1113,19 @@
             "用在学的语言发帖、评论。只有作者能编辑或删除。“用我的语言看”可翻译，点名字可关注、发消息或举报。"
           ],
           "shot": "r69-board"
+        }
+      ]
+    },
+    "talk": {
+      "title": "对话列表",
+      "sections": [
+        {
+          "heading": "对话列表",
+          "body": [
+            "最上面是 AI 导师。点这一行开始聊天，点 📞 用通话练习。",
+            "下面是群聊和一对一消息，还会显示未读数量。"
+          ],
+          "shot": "talk-list"
         }
       ]
     }
@@ -1401,6 +1464,14 @@
           ]
         },
         {
+          "heading": "Thưởng mời bạn",
+          "body": [
+            "Khi người bạn bạn mời dùng app hai ngày trong một tuần, cả hai đều nhận điểm.",
+            "Mời thêm bạn thì còn nhận thêm thời gian Plus hoặc Premium. Con số cụ thể có trên thẻ."
+          ],
+          "shot": "invite-rewards"
+        },
+        {
           "heading": "Tin nhắn và cuộc gọi",
           "body": [
             "Tin nhắn đầu tiên được gửi dưới dạng lời mời; khi họ trả lời, cuộc trò chuyện sẽ mở. Gọi bằng 📞 phía trên cuộc trò chuyện; phụ đề cuộc gọi được lưu lại."
@@ -1419,6 +1490,19 @@
             "Đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết mới sửa hoặc xóa được. “Xem bằng ngôn ngữ của tôi” để dịch; chạm vào tên để theo dõi, nhắn tin hoặc báo cáo."
           ],
           "shot": "r69-board"
+        }
+      ]
+    },
+    "talk": {
+      "title": "Danh sách trò chuyện",
+      "sections": [
+        {
+          "heading": "Danh sách trò chuyện",
+          "body": [
+            "Gia sư AI luôn ở trên cùng. Chạm vào dòng để chat, hoặc 📞 để luyện qua cuộc gọi.",
+            "Bên dưới là nhóm chat và tin nhắn 1:1, kèm số tin chưa đọc."
+          ],
+          "shot": "talk-list"
         }
       ]
     }
@@ -1757,6 +1841,14 @@
           ]
         },
         {
+          "heading": "Récompenses d’invitation",
+          "body": [
+            "Quand un ami invité utilise l’appli deux jours dans la semaine, vous recevez tous les deux des points.",
+            "Avec plus d’amis, vous gagnez aussi du temps Plus ou Premium. La carte indique les chiffres exacts."
+          ],
+          "shot": "invite-rewards"
+        },
+        {
           "heading": "Messages et appels",
           "body": [
             "Votre premier message part comme une demande ; après sa réponse, la conversation s’ouvre. Appelez avec 📞 au-dessus de la conversation ; les sous-titres de l’appel restent en mémoire."
@@ -1775,6 +1867,19 @@
             "Publiez dans la langue apprise et commentez. Seul l'auteur peut modifier ou supprimer. « Voir dans ma langue » traduit ; touchez un nom pour suivre, écrire ou signaler."
           ],
           "shot": "r69-board"
+        }
+      ]
+    },
+    "talk": {
+      "title": "Vos discussions",
+      "sections": [
+        {
+          "heading": "Vos discussions",
+          "body": [
+            "Le tuteur IA est toujours en haut. Touchez la ligne pour discuter, ou 📞 pour vous entraîner par appel.",
+            "En dessous viennent les groupes et les messages privés, avec le nombre de non-lus."
+          ],
+          "shot": "talk-list"
         }
       ]
     }
@@ -2113,6 +2218,14 @@
           ]
         },
         {
+          "heading": "Premi per gli inviti",
+          "body": [
+            "Se un amico invitato usa l’app due giorni in una settimana, ricevete punti entrambi.",
+            "Con più amici ottieni anche tempo Plus o Premium. La scheda mostra i numeri esatti."
+          ],
+          "shot": "invite-rewards"
+        },
+        {
           "heading": "Messaggi e chiamate",
           "body": [
             "Il primo messaggio arriva come richiesta; quando risponde, la conversazione si apre. Chiama con 📞 sopra la conversazione; i sottotitoli della chiamata restano salvati."
@@ -2131,6 +2244,19 @@
             "Pubblica nella lingua che impari e commenta. Solo chi scrive può modificare o eliminare. “Vedi nella mia lingua” traduce; tocca un nome per seguire, scrivere o segnalare."
           ],
           "shot": "r69-board"
+        }
+      ]
+    },
+    "talk": {
+      "title": "Le tue chat",
+      "sections": [
+        {
+          "heading": "Le tue chat",
+          "body": [
+            "Il tutor IA è sempre in cima. Tocca la riga per chattare o 📞 per esercitarti con una chiamata.",
+            "Sotto ci sono i gruppi e i messaggi uno a uno, con quanti non hai letto."
+          ],
+          "shot": "talk-list"
         }
       ]
     }
@@ -2469,6 +2595,14 @@
           ]
         },
         {
+          "heading": "Recompensas por convite",
+          "body": [
+            "Quando um amigo convidado usa o app dois dias em uma semana, vocês dois ganham pontos.",
+            "Com mais amigos, você também ganha tempo de Plus ou Premium. O cartão mostra os números exatos."
+          ],
+          "shot": "invite-rewards"
+        },
+        {
           "heading": "Mensagens e chamadas",
           "body": [
             "A primeira mensagem vai como pedido; depois da resposta, a conversa abre. Ligue com 📞 acima da conversa; as legendas da chamada ficam guardadas."
@@ -2487,6 +2621,19 @@
             "Publique no idioma que você aprende e comente. Só quem escreveu pode editar ou excluir. “Ver no meu idioma” traduz; toque num nome para seguir, mandar mensagem ou denunciar."
           ],
           "shot": "r69-board"
+        }
+      ]
+    },
+    "talk": {
+      "title": "Suas conversas",
+      "sections": [
+        {
+          "heading": "Suas conversas",
+          "body": [
+            "O tutor de IA fica sempre no topo. Toque na linha para conversar ou em 📞 para praticar por chamada.",
+            "Abaixo vêm os grupos e as mensagens individuais, com quantas não foram lidas."
+          ],
+          "shot": "talk-list"
         }
       ]
     }
@@ -2825,6 +2972,14 @@
           ]
         },
         {
+          "heading": "Награды за приглашения",
+          "body": [
+            "Если приглашённый друг пользуется приложением два дня за неделю, вы оба получаете баллы.",
+            "Чем больше друзей, тем больше времени Plus или Premium. Точные цифры — на карточке."
+          ],
+          "shot": "invite-rewards"
+        },
+        {
           "heading": "Сообщения и звонки",
           "body": [
             "Первое сообщение уходит как запрос; после ответа переписка открывается. Звоните через 📞 над перепиской; субтитры звонка сохраняются."
@@ -2843,6 +2998,19 @@
             "Публикуйте на изучаемом языке и комментируйте. Изменять и удалять может только автор. «Показать на моём языке» переводит; нажмите на имя, чтобы подписаться, написать или пожаловаться."
           ],
           "shot": "r69-board"
+        }
+      ]
+    },
+    "talk": {
+      "title": "Ваши чаты",
+      "sections": [
+        {
+          "heading": "Ваши чаты",
+          "body": [
+            "ИИ-репетитор всегда вверху. Нажмите на строку, чтобы переписываться, или на 📞, чтобы тренироваться голосом.",
+            "Ниже — группы и личные сообщения с числом непрочитанных."
+          ],
+          "shot": "talk-list"
         }
       ]
     }
@@ -3181,6 +3349,14 @@
           ]
         },
         {
+          "heading": "Hadiah undangan",
+          "body": [
+            "Jika teman yang kamu undang memakai aplikasi dua hari dalam seminggu, kalian berdua dapat poin.",
+            "Makin banyak teman, kamu juga dapat waktu Plus atau Premium. Angka pastinya ada di kartu."
+          ],
+          "shot": "invite-rewards"
+        },
+        {
           "heading": "Pesan dan panggilan",
           "body": [
             "Pesan pertama terkirim sebagai permintaan; setelah dibalas, percakapan terbuka. Telepon dengan 📞 di atas percakapan; teks panggilan tersimpan."
@@ -3199,6 +3375,19 @@
             "Tulis dalam bahasa yang dipelajari dan berkomentar. Hanya penulis yang bisa mengubah atau menghapus. “Lihat dalam bahasaku” menerjemahkan; ketuk nama untuk mengikuti, mengirim pesan, atau melapor."
           ],
           "shot": "r69-board"
+        }
+      ]
+    },
+    "talk": {
+      "title": "Daftar obrolan",
+      "sections": [
+        {
+          "heading": "Daftar obrolan",
+          "body": [
+            "Tutor AI selalu di paling atas. Ketuk barisnya untuk chat, atau 📞 untuk latihan lewat telepon.",
+            "Di bawahnya ada grup dan pesan pribadi, beserta jumlah yang belum dibaca."
+          ],
+          "shot": "talk-list"
         }
       ]
     }
@@ -3537,6 +3726,14 @@
           ]
         },
         {
+          "heading": "مكافآت الدعوة",
+          "body": [
+            "إذا استخدم الصديق الذي دعوته التطبيق يومين خلال أسبوع، تحصلان كلاكما على نقاط.",
+            "كلما زاد عدد الأصدقاء حصلت أيضًا على مدة Plus أو Premium. الأرقام الدقيقة على البطاقة."
+          ],
+          "shot": "invite-rewards"
+        },
+        {
           "heading": "الرسائل والمكالمات",
           "body": [
             "تصل رسالتك الأولى كطلب، وبعد الرد تُفتح المحادثة. اتصل بـ📞 فوق المحادثة، وتبقى ترجمة المكالمة سجلًا."
@@ -3555,6 +3752,19 @@
             "انشر باللغة التي تتعلمها وعلّق. الكاتب وحده يعدّل أو يحذف. «اعرض بلغتي» يترجم المنشور، واضغط الاسم للمتابعة أو المراسلة أو الإبلاغ."
           ],
           "shot": "r69-board"
+        }
+      ]
+    },
+    "talk": {
+      "title": "محادثاتك",
+      "sections": [
+        {
+          "heading": "محادثاتك",
+          "body": [
+            "المعلّم الذكي دائمًا في الأعلى. اضغط السطر للمحادثة، أو 📞 للتدرّب بمكالمة.",
+            "تحته المجموعات والرسائل الفردية، مع عدد غير المقروء."
+          ],
+          "shot": "talk-list"
         }
       ]
     }
@@ -3893,6 +4103,14 @@
           ]
         },
         {
+          "heading": "รางวัลชวนเพื่อน",
+          "body": [
+            "ถ้าเพื่อนที่คุณชวนใช้แอปสองวันภายในหนึ่งสัปดาห์ คุณและเพื่อนจะได้แต้มทั้งคู่",
+            "ชวนเพื่อนได้มากขึ้นยังได้เวลา Plus หรือ Premium ด้วย ตัวเลขที่แน่นอนดูได้ในการ์ด"
+          ],
+          "shot": "invite-rewards"
+        },
+        {
           "heading": "ข้อความและการโทร",
           "body": [
             "ข้อความแรกจะส่งเป็นคำขอ เมื่ออีกฝ่ายตอบ แชตจะเปิด โทรด้วย 📞 เหนือแชต ซับของการโทรจะเก็บไว้"
@@ -3911,6 +4129,19 @@
             "โพสต์เป็นภาษาที่เรียนและแสดงความคิดเห็น แก้ไขหรือลบได้เฉพาะคนเขียน “ดูเป็นภาษาของฉัน” ช่วยแปล แตะชื่อเพื่อติดตาม ส่งข้อความ หรือรายงาน"
           ],
           "shot": "r69-board"
+        }
+      ]
+    },
+    "talk": {
+      "title": "รายการแชต",
+      "sections": [
+        {
+          "heading": "รายการแชต",
+          "body": [
+            "ติวเตอร์ AI อยู่บนสุดเสมอ แตะแถวเพื่อแชต หรือแตะ 📞 เพื่อฝึกด้วยการโทร",
+            "ด้านล่างเป็นกลุ่มแชตและข้อความส่วนตัว พร้อมจำนวนที่ยังไม่ได้อ่าน"
+          ],
+          "shot": "talk-list"
         }
       ]
     }
@@ -4249,6 +4480,14 @@
           ]
         },
         {
+          "heading": "दोस्तों को बुलाने का इनाम",
+          "body": [
+            "आपका बुलाया दोस्त एक हफ़्ते में दो दिन ऐप इस्तेमाल करे, तो आप दोनों को पॉइंट मिलते हैं।",
+            "ज़्यादा दोस्त लाने पर Plus या Premium का समय भी मिलता है। सही संख्या कार्ड पर दिखती है।"
+          ],
+          "shot": "invite-rewards"
+        },
+        {
           "heading": "मैसेज और कॉल",
           "body": [
             "पहला मैसेज अनुरोध के रूप में जाता है; जवाब आने पर बातचीत खुल जाती है। बातचीत के ऊपर 📞 से कॉल करें; कॉल के सबटाइटल रिकॉर्ड में रहते हैं।"
@@ -4267,6 +4506,19 @@
             "सीखी जा रही भाषा में पोस्ट व टिप्पणी करें। सिर्फ़ लिखने वाला बदल या हटा सकता है। “मेरी भाषा में देखें” अनुवाद करता है; नाम दबाकर फ़ॉलो, मैसेज या रिपोर्ट करें।"
           ],
           "shot": "r69-board"
+        }
+      ]
+    },
+    "talk": {
+      "title": "आपकी बातचीत",
+      "sections": [
+        {
+          "heading": "आपकी बातचीत",
+          "body": [
+            "सबसे ऊपर हमेशा AI ट्यूटर है। पंक्ति पर टैप करके चैट करें, या 📞 से कॉल पर अभ्यास करें।",
+            "नीचे ग्रुप और एक-से-एक मैसेज हैं, साथ में बिना पढ़े संदेशों की गिनती।"
+          ],
+          "shot": "talk-list"
         }
       ]
     }

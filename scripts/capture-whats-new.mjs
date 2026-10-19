@@ -107,6 +107,9 @@ const GUIDE_SOCIAL_ITEMS = [
   { shot: "r69-board", step: "board" },
   { shot: "r69-groups", step: "groups" },
   { shot: "r69-free", step: "freetalk" },
+  // 2.70: 대화 목록(맨 위 AI 튜터)과 친구 초대 보상 카드.
+  { shot: "talk-list" },
+  { shot: "invite-rewards" },
 ];
 const GUIDE = VERSION === "guide" || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
 const GUIDE_ITEMS = [
@@ -915,6 +918,23 @@ const STEPS = {
     await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
     await wait(2500);
   },
+  async "talk-list"({ page, ui, locale, wait, target }) {
+    // 대화 탭: 맨 위 AI 튜터 줄, 아래 단체방·1:1(고정 응답).
+    await socialMocks(page, target, ui);
+    page.__social.roomOnly = false;
+    await page.evaluate(() => localStorage.removeItem("invite:pending:v1"));
+    await page.goto(`${BASE}/?screen=talk`, { waitUntil: "networkidle" });
+    await wait(2500);
+    const close = page.getByRole("button", { name: exactly(inviteCopyFor(locale).later) });
+    if (await close.count()) await close.first().click();
+    await wait(800);
+  },
+  async "invite-rewards"({ page, ui, wait, target }) {
+    // 사람 탭 맨 위 친구 초대 보상 카드(고정 응답 status).
+    await socialMocks(page, target, ui);
+    await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
+    await wait(2500);
+  },
   async people({ page, ui, wait, target }) {
     // 2.69: 화면 위 스위치 "사람과 학습" → 사람 탭(고정 응답).
     await socialMocks(page, target, ui);
@@ -1542,6 +1562,8 @@ const SPOTS = {
   "call-review": ({ page, ui }) => exactLabel(page, ui.roleplaySayAgain),
   "call-ownline": ({ page, ui }) => exactLabel(page, ui.roleplayOwnLineUse),
   "r69-free": ({ page, locale }) => exactLabel(page, `🌐 ${roomCopyFor(locale).freeTalk}`),
+  "talk-list": ({ page, ui }) => page.getByRole("button", { name: new RegExp(escape(ui.talkAiTutor)) }),
+  "invite-rewards": ({ page, locale }) => page.getByText(`🎁 ${inviteCopyFor(locale).rewardTitle}`, { exact: true }).locator(".."),
 };
 
 async function drawSpot(page, item, ui, locale) {

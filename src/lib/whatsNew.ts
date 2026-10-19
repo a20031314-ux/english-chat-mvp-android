@@ -44,19 +44,24 @@ export type ReleaseNote = {
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    // 2.70(84): 2.69(83)는 Play에 올리지 않았다 — 2.68에서 오는 사람은 이 두 묶음을 같이 본다.
+    version: "2.70",
+    code: 84,
+    items: [
+      { id: "talk", title: "whatsNewTalkTitle", body: "whatsNewTalkBody", shot: "talk-list", tab: "talk", guide: "talk.list" },
+      { id: "rewards", title: "whatsNewRewardsTitle", body: "whatsNewRewardsBody", shot: "invite-rewards", tab: "people", guide: "people.rewards" },
+    ],
+  },
+  {
     version: "2.69",
     code: 83,
     items: [
+      // 2.70에 합쳐 나가며 덜어냄(2026-10-20): 방장·보는 방식·묻기·자유 대화·팀은 사용법(Room·대화)에만.
       // 2.69부터 설명은 사용법 칸에서(`guide`). 묶음 이름·가는 길을 글에 쓰지 않는다(hub/DESIGN.md "안내 글").
       { id: "people", title: "whatsNewPeopleTitle", body: "whatsNewPeopleBody", shot: "people", tab: "people", guide: "people.find" },
       { id: "invite", title: "whatsNewInviteTitle", body: "whatsNewInviteBody", shot: "invite", tab: "people", guide: "people.invite" },
       { id: "groups", title: "whatsNewGroupsTitle", body: "whatsNewGroupsBody", shot: "groups", tab: "talk", guide: "messages.groups" },
-      { id: "team", title: "whatsNewTeamTitle", body: "whatsNewTeamBody", shot: "team", tab: "talk" },
-      { id: "freetalk", title: "whatsNewFreeTalkTitle", body: "whatsNewFreeTalkBody", shot: "freetalk", tab: "rooms", guide: "room.find" },
-      { id: "quote", title: "whatsNewQuoteTitle", body: "whatsNewQuoteBody", shot: "quote", tab: "rooms", guide: "room.quote" },
-      { id: "layouts", title: "whatsNewLayoutsTitle", body: "whatsNewLayoutsBody", shot: "layouts", tab: "rooms", guide: "room.layouts" },
       { id: "hint", title: "whatsNewHintTitle", body: "whatsNewHintBody", shot: "hint", tab: "rooms", guide: "room.stuck" },
-      { id: "host", title: "whatsNewHostTitle", body: "whatsNewHostBody", shot: "host", tab: "rooms", guide: "room.host" },
       { id: "notes", title: "whatsNewNotesTitle", body: "whatsNewNotesBody", shot: "notes", tab: "map", guide: "my.notes" },
       { id: "board", title: "whatsNewBoardTitle", body: "whatsNewBoardBody", shot: "board", tab: "people", guide: "people.board" },
     ],

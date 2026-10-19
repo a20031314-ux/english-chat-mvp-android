@@ -54,7 +54,7 @@ function guideText(locale: string, id: string, ui: UICopy): { heading: string; b
   if (!section) return null;
   const labels = ui as unknown as Record<string, unknown>;
   const fill = (text: string) => text.replace(/\{ui:([a-zA-Z0-9]+)\}/g, (_, key: string) => (typeof labels[key] === "string" ? (labels[key] as string) : ""));
-  return { heading: fill(section.heading), body: section.body.map(fill).join(" "), shot: section.shot };
+  return { heading: fill(section.heading).replace(/^\d+\.\s*/, ""), body: section.body.map(fill).join(" "), shot: section.shot };
 }
 
 export async function GET(request: NextRequest) {

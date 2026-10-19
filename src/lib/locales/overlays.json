@@ -537,7 +537,11 @@
     "talkAiCall": "AIチューターと通話",
     "guideGoThere": "この画面へ",
     "guideNew": "新着",
-    "guideMore": "くわしく"
+    "guideMore": "くわしく",
+    "whatsNewTalkTitle": "会話リスト",
+    "whatsNewTalkBody": "いちばん上はAIチューターです。行をタップするとチャット、📞で通話の練習ができます。 その下にグループと1対1のメッセージが並び、未読の数も出ます。",
+    "whatsNewRewardsTitle": "友だち招待の特典",
+    "whatsNewRewardsBody": "招待した友だちが1週間のうち2日以上使うと、あなたも友だちもポイントをもらえます。 招待した友だちが増えるとプラス・プレミアムの期間ももらえます。くわしい数はカードに出ます。"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1077,7 +1081,11 @@
     "talkAiCall": "和 AI 导师通话",
     "guideGoThere": "去这个画面",
     "guideNew": "新",
-    "guideMore": "详细"
+    "guideMore": "详细",
+    "whatsNewTalkTitle": "对话列表",
+    "whatsNewTalkBody": "最上面是 AI 导师。点这一行开始聊天，点 📞 用通话练习。 下面是群聊和一对一消息，还会显示未读数量。",
+    "whatsNewRewardsTitle": "邀请好友奖励",
+    "whatsNewRewardsBody": "你邀请的朋友在一周内用满两天，你们俩都能得到积分。 带来的朋友越多，还能获得 Plus 或 Premium 时长。具体数字见卡片。"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1619,7 +1627,11 @@
     "talkAiCall": "Gọi gia sư AI",
     "guideGoThere": "Đến màn hình này",
     "guideNew": "Mới",
-    "guideMore": "Xem thêm"
+    "guideMore": "Xem thêm",
+    "whatsNewTalkTitle": "Danh sách trò chuyện",
+    "whatsNewTalkBody": "Gia sư AI luôn ở trên cùng. Chạm vào dòng để chat, hoặc 📞 để luyện qua cuộc gọi. Bên dưới là nhóm chat và tin nhắn 1:1, kèm số tin chưa đọc.",
+    "whatsNewRewardsTitle": "Thưởng mời bạn",
+    "whatsNewRewardsBody": "Khi người bạn bạn mời dùng app hai ngày trong một tuần, cả hai đều nhận điểm. Mời thêm bạn thì còn nhận thêm thời gian Plus hoặc Premium. Con số cụ thể có trên thẻ."
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2166,7 +2178,11 @@
     "talkAiCall": "Appeler le tuteur IA",
     "guideGoThere": "Y aller",
     "guideNew": "Nouveau",
-    "guideMore": "En savoir plus"
+    "guideMore": "En savoir plus",
+    "whatsNewTalkTitle": "Vos discussions",
+    "whatsNewTalkBody": "Le tuteur IA est toujours en haut. Touchez la ligne pour discuter, ou 📞 pour vous entraîner par appel. En dessous viennent les groupes et les messages privés, avec le nombre de non-lus.",
+    "whatsNewRewardsTitle": "Récompenses d’invitation",
+    "whatsNewRewardsBody": "Quand un ami invité utilise l’appli deux jours dans la semaine, vous recevez tous les deux des points. Avec plus d’amis, vous gagnez aussi du temps Plus ou Premium. La carte indique les chiffres exacts."
   },
   "it": {
     "archive": "Report",
@@ -2904,7 +2920,11 @@
     "talkAiCall": "Chiama il tutor IA",
     "guideGoThere": "Vai lì",
     "guideNew": "Nuovo",
-    "guideMore": "Di più"
+    "guideMore": "Di più",
+    "whatsNewTalkTitle": "Le tue chat",
+    "whatsNewTalkBody": "Il tutor IA è sempre in cima. Tocca la riga per chattare o 📞 per esercitarti con una chiamata. Sotto ci sono i gruppi e i messaggi uno a uno, con quanti non hai letto.",
+    "whatsNewRewardsTitle": "Premi per gli inviti",
+    "whatsNewRewardsBody": "Se un amico invitato usa l’app due giorni in una settimana, ricevete punti entrambi. Con più amici ottieni anche tempo Plus o Premium. La scheda mostra i numeri esatti."
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3454,7 +3474,11 @@
     "talkAiCall": "Ligar para o tutor de IA",
     "guideGoThere": "Ir para lá",
     "guideNew": "Novo",
-    "guideMore": "Saiba mais"
+    "guideMore": "Saiba mais",
+    "whatsNewTalkTitle": "Suas conversas",
+    "whatsNewTalkBody": "O tutor de IA fica sempre no topo. Toque na linha para conversar ou em 📞 para praticar por chamada. Abaixo vêm os grupos e as mensagens individuais, com quantas não foram lidas.",
+    "whatsNewRewardsTitle": "Recompensas por convite",
+    "whatsNewRewardsBody": "Quando um amigo convidado usa o app dois dias em uma semana, vocês dois ganham pontos. Com mais amigos, você também ganha tempo de Plus ou Premium. O cartão mostra os números exatos."
   },
   "ru": {
     "archive": "Отчёты",
@@ -4190,7 +4214,11 @@
     "talkAiCall": "Позвонить ИИ-репетитору",
     "guideGoThere": "Перейти",
     "guideNew": "Новое",
-    "guideMore": "Подробнее"
+    "guideMore": "Подробнее",
+    "whatsNewTalkTitle": "Ваши чаты",
+    "whatsNewTalkBody": "ИИ-репетитор всегда вверху. Нажмите на строку, чтобы переписываться, или на 📞, чтобы тренироваться голосом. Ниже — группы и личные сообщения с числом непрочитанных.",
+    "whatsNewRewardsTitle": "Награды за приглашения",
+    "whatsNewRewardsBody": "Если приглашённый друг пользуется приложением два дня за неделю, вы оба получаете баллы. Чем больше друзей, тем больше времени Plus или Premium. Точные цифры — на карточке."
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -4736,7 +4764,11 @@
     "talkAiCall": "Telepon tutor AI",
     "guideGoThere": "Buka layar ini",
     "guideNew": "Baru",
-    "guideMore": "Selengkapnya"
+    "guideMore": "Selengkapnya",
+    "whatsNewTalkTitle": "Daftar obrolan",
+    "whatsNewTalkBody": "Tutor AI selalu di paling atas. Ketuk barisnya untuk chat, atau 📞 untuk latihan lewat telepon. Di bawahnya ada grup dan pesan pribadi, beserta jumlah yang belum dibaca.",
+    "whatsNewRewardsTitle": "Hadiah undangan",
+    "whatsNewRewardsBody": "Jika teman yang kamu undang memakai aplikasi dua hari dalam seminggu, kalian berdua dapat poin. Makin banyak teman, kamu juga dapat waktu Plus atau Premium. Angka pastinya ada di kartu."
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5276,7 +5308,11 @@
     "talkAiCall": "اتصل بالمعلّم الذكي",
     "guideGoThere": "اذهب إلى هذه الشاشة",
     "guideNew": "جديد",
-    "guideMore": "المزيد"
+    "guideMore": "المزيد",
+    "whatsNewTalkTitle": "محادثاتك",
+    "whatsNewTalkBody": "المعلّم الذكي دائمًا في الأعلى. اضغط السطر للمحادثة، أو 📞 للتدرّب بمكالمة. تحته المجموعات والرسائل الفردية، مع عدد غير المقروء.",
+    "whatsNewRewardsTitle": "مكافآت الدعوة",
+    "whatsNewRewardsBody": "إذا استخدم الصديق الذي دعوته التطبيق يومين خلال أسبوع، تحصلان كلاكما على نقاط. كلما زاد عدد الأصدقاء حصلت أيضًا على مدة Plus أو Premium. الأرقام الدقيقة على البطاقة."
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -5816,7 +5852,11 @@
     "talkAiCall": "โทรหาติวเตอร์ AI",
     "guideGoThere": "ไปที่หน้านี้",
     "guideNew": "ใหม่",
-    "guideMore": "ดูเพิ่ม"
+    "guideMore": "ดูเพิ่ม",
+    "whatsNewTalkTitle": "รายการแชต",
+    "whatsNewTalkBody": "ติวเตอร์ AI อยู่บนสุดเสมอ แตะแถวเพื่อแชต หรือแตะ 📞 เพื่อฝึกด้วยการโทร ด้านล่างเป็นกลุ่มแชตและข้อความส่วนตัว พร้อมจำนวนที่ยังไม่ได้อ่าน",
+    "whatsNewRewardsTitle": "รางวัลชวนเพื่อน",
+    "whatsNewRewardsBody": "ถ้าเพื่อนที่คุณชวนใช้แอปสองวันภายในหนึ่งสัปดาห์ คุณและเพื่อนจะได้แต้มทั้งคู่ ชวนเพื่อนได้มากขึ้นยังได้เวลา Plus หรือ Premium ด้วย ตัวเลขที่แน่นอนดูได้ในการ์ด"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -6356,6 +6396,10 @@
     "talkAiCall": "AI ट्यूटर को कॉल करें",
     "guideGoThere": "इस स्क्रीन पर जाएँ",
     "guideNew": "नया",
-    "guideMore": "और देखें"
+    "guideMore": "और देखें",
+    "whatsNewTalkTitle": "आपकी बातचीत",
+    "whatsNewTalkBody": "सबसे ऊपर हमेशा AI ट्यूटर है। पंक्ति पर टैप करके चैट करें, या 📞 से कॉल पर अभ्यास करें। नीचे ग्रुप और एक-से-एक मैसेज हैं, साथ में बिना पढ़े संदेशों की गिनती।",
+    "whatsNewRewardsTitle": "दोस्तों को बुलाने का इनाम",
+    "whatsNewRewardsBody": "आपका बुलाया दोस्त एक हफ़्ते में दो दिन ऐप इस्तेमाल करे, तो आप दोनों को पॉइंट मिलते हैं। ज़्यादा दोस्त लाने पर Plus या Premium का समय भी मिलता है। सही संख्या कार्ड पर दिखती है।"
   }
 }

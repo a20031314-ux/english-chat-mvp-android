@@ -106,7 +106,8 @@ export function WhatsNewSheet({
   };
   const titleOf = (item: WhatsNewItem): string => {
     const found = item.guide ? findGuideSection(guide, item.guide) : null;
-    return found ? fillGuideLabels(found.section.heading, ui) : String(ui[item.title]);
+    // 사용법 칸 제목의 단계 번호("8. 노트")는 새로워진 점에선 뺀다.
+    return found ? fillGuideLabels(found.section.heading, ui).replace(/^\d+\.\s*/, "") : String(ui[item.title]);
   };
   const bodyOf = (item: WhatsNewItem): string[] => {
     const found = item.guide ? findGuideSection(guide, item.guide) : null;

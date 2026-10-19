@@ -74,6 +74,18 @@ export const SCENES = [
         hasPrevious: false,
       };
       await page.route(/\/api\/curriculum(\?|$)/, (route) => route.fulfill({ json: progress }));
+      // "자라는 중" 카드가 있어야 그 안의 지도 보기가 그려진다(기록 없는 개발 서버엔 카드가 없다).
+      const ELEMENTS = ["speaking", "accuracy", "words", "listening", "pronunciation", "natural"];
+      const growth = {
+        next: "accuracy",
+        elements: ELEMENTS.map((id, i) => ({
+          id, points: [9, 6, 12, 4, 0, 3][i], stage: [2, 1, 2, 1, 0, 1][i], measured: id !== "pronunciation", resting: false,
+          week: [3, 2, 4, 1, 0, 1][i], daily: Array.from({ length: 14 }, (_, d) => (d % 3 === i % 3 ? 1 : 0)), leaves: [],
+        })),
+      };
+      await page.route(/\/api\/learner\/growth/, (route) => route.fulfill({ json: growth }));
+      // 2.69부터 My의 지도는 "자라는 중"의 지도 보기 안(myViewMode).
+      await page.evaluate(() => localStorage.setItem("myViewMode", "map"));
       await page.goto(`${baseUrl}/?screen=map`, { waitUntil: "networkidle" });
       await page.getByText(record.map.title, { exact: true }).first().waitFor();
       await page.getByRole("button", { name: exactly(ui.mapNewGoal) }).waitFor();
@@ -82,7 +94,7 @@ export const SCENES = [
   {
     id: "chat",
     order: 2,
-    async run(page, scene, { ui }) {
+    async run(page, scene, { ui, baseUrl }) {
       let chatIndex = 0;
       await page.route("**/api/chat", async (route) => {
         const body = route.request().postDataJSON() ?? {};
@@ -101,6 +113,8 @@ export const SCENES = [
         return route.fulfill({ json: { translated: turn?.replyTranslation ?? "" } });
       });
 
+      // 2.70부터 첫 화면은 대화 목록: AI 튜터 채팅으로 바로 연다.
+      await page.goto(`${baseUrl}/?screen=chat`, { waitUntil: "networkidle" });
       for (const turn of scene.turns) await send(page, ui, turn.user);
       if (scene.turns.some((t) => t.howToSay)) {
         await page.getByRole("button", { name: exactly(ui.chatShowExpression) }).last().click();
@@ -111,7 +125,7 @@ export const SCENES = [
   {
     id: "sentence",
     order: 3,
-    async run(page, scene, { ui }) {
+    async run(page, scene, { ui, baseUrl }) {
       await page.route("**/api/chat", (route) =>
         route.fulfill({
           json: { assistantMessage: scene.reply, spokenReply: scene.replyTranslation, correction: NO_CORRECTION },
@@ -120,6 +134,7 @@ export const SCENES = [
       await page.route("**/api/translate", (route) => route.fulfill({ json: { translated: scene.sentenceTranslation } }));
       await page.route("**/api/expression-ask", (route) => route.fulfill({ json: { answer: scene.answer } }));
 
+      await page.goto(`${baseUrl}/?screen=chat`, { waitUntil: "networkidle" });
       await send(page, ui, scene.user);
       await sentenceRail(page, scene.sentence).click({ force: true });
       await page.getByText(scene.sentenceTranslation).waitFor();
