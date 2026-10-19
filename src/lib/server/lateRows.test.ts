@@ -40,3 +40,16 @@ test("단체방: 둘이 동시에 초대를 받아도 둘 다 들어가고, 동�
   const texts = (await store.readGroupMessages(group.id)).filter((m) => m.kind === "text");
   assert.equal(texts.length, 9);
 });
+
+test("말하는 방: 여럿이 동시에 들어와도 정원(MAX_MEMBERS)을 넘지 않는다", async () => {
+  const rooms = await import("./roomStore.ts");
+  const { MAX_MEMBERS } = await import("../rooms/protocol.ts");
+  const meta = await rooms.createRoom({ name: "[test] full", languages: ["en", "ko"], hostPeerId: "hostpeer01" });
+  await rooms.joinRoom({ id: meta.id, peerId: "hostpeer01", nickname: "host", wantRole: "speaker" });
+  const results = await Promise.all(
+    Array.from({ length: 30 }, (_, i) => rooms.joinRoom({ id: meta.id, peerId: `peer${String(i).padStart(6, "0")}`, nickname: `p${i}`, wantRole: "listener" })),
+  );
+  const ok = results.filter((r) => r.ok).length;
+  assert.equal(ok + 1, MAX_MEMBERS, "방장 + 들어온 사람 = 정원");
+  assert.equal(await rooms.liveCount(meta.id), MAX_MEMBERS);
+});

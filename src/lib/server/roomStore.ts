@@ -221,6 +221,16 @@ export async function joinRoom(input: {
   await kvSetJson(memberKey(input.id, input.peerId), member, MEMBER_TTL_SECONDS);
   await kvListPush(peersKey(input.id), [input.peerId], ROOM_TTL_SECONDS);
   await kvListTrim(peersKey(input.id), MAX_MEMBERS * 4);
+  // 여럿이 같은 순간에 들어오면 모두 "15명"을 보고 통과해 17명이 될 수 있다(부하 점검 2026-10-20).
+  // 쓴 뒤 다시 세어, 들어온 순서로 정원 밖이면 나만 물러난다.
+  const after = await readMembers(input.id);
+  if (after.length > MAX_MEMBERS) {
+    const order = [...after].sort((a, b) => a.joinedAt - b.joinedAt || a.peerId.localeCompare(b.peerId));
+    if (order.findIndex((row) => row.peerId === input.peerId) >= MAX_MEMBERS) {
+      await kvSetJson(memberKey(input.id, input.peerId), { ...member, lastSeen: 0 }, 5);
+      return { ok: false, error: "ROOM_FULL" };
+    }
+  }
   await kvSetJson(metaKey(input.id), meta, ROOM_TTL_SECONDS);
   return { ok: true, member, meta };
 }
