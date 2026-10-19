@@ -89,3 +89,30 @@ test("when they started talking is remembered, not when it was confirmed", () =>
   assert.ok(said.turn.spoke);
   assert.equal(said.turn.firstSpeechAt, 660, "the first loud frame, not the confirming one");
 });
+
+// 아이폰 원음 마이크(2026-10-20): 방 소리가 들쭉날쭉 깔려 있어도 말이 끝나면 턴이 곧 끝나야 한다.
+test("iOS raw microphone: a noisy room still ends the turn soon after the last word", async () => {
+  const { makeLevelScaler, hearFrame: frame, TURN_NOT_STARTED: start } = await import("./hearFrame.ts");
+  const scaler = makeLevelScaler(true);
+  let turn = start;
+  let endedAt: number | null = null;
+  const noise = (i: number) => 0.002 + ((i * 7919) % 13) / 13 * 0.01; // 0.002~0.012, 가장 조용한 순간만 보면 기준이 너무 낮음
+  for (let t = 0; t <= 8000; t += 60) {
+    const speaking = t >= 1000 && t < 3000;
+    const raw = speaking ? 0.03 + ((t / 60) % 3) * 0.01 : noise(t / 60);
+    const heard = frame(turn, scaler.scale(raw, t), t);
+    turn = heard.turn;
+    if (heard.finished) {
+      endedAt = t;
+      break;
+    }
+  }
+  assert.ok(turn.spoke, "speech was heard");
+  assert.ok(endedAt !== null && endedAt < 3000 + 2000, `ended at ${endedAt}`);
+});
+
+test("Android levels are untouched by the scaler", async () => {
+  const { makeLevelScaler } = await import("./hearFrame.ts");
+  const scaler = makeLevelScaler(false);
+  assert.equal(scaler.scale(0.013, 100), 0.013);
+});

@@ -90,6 +90,11 @@ function getAudioContext(): AudioContext {
   return audioCtx;
 }
 
+/** 진단용: 튜터 목소리를 내는 오디오 컨텍스트 상태. */
+export function ttsContextState(): string {
+  return (audioCtx?.state as string | undefined) ?? "none";
+}
+
 /** resume()이 끝나지 않는 경우(iOS 방해 상태)에도 재생을 붙잡아 두지 않는다. */
 function resumeBriefly(ctx: AudioContext): Promise<void> {
   return Promise.race([
@@ -338,11 +343,21 @@ async function playPcmStream(
   if (gen !== playGen || !lastSource) return;
 
   await new Promise<void>((resolve) => {
+    // 이 줄을 시작한 컨텍스트로 잰다. getAudioContext()는 방해 상태면 새 컨텍스트(시간 0)를 돌려줘
+    // 줄이 끝난 줄 모르고 기다리게 된다. 컨텍스트가 1.5초 넘게 멈춰 있으면 이 줄은 포기한다.
+    let stuckSince = 0;
     const finish = () => {
-      if (gen !== playGen || getAudioContext().currentTime >= nextStart - 0.01) {
+      if (gen !== playGen || ctx.currentTime >= nextStart - 0.01) {
         resolve();
         return;
       }
+      if (ctx.state !== "running") {
+        stuckSince ||= Date.now();
+        if (Date.now() - stuckSince > 1500) {
+          resolve();
+          return;
+        }
+      } else stuckSince = 0;
       window.setTimeout(finish, 40);
     };
     lastSource.addEventListener("ended", () => resolve(), { once: true });

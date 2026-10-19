@@ -34,6 +34,7 @@ import {
   isOutOfPoints,
   listenForTurn,
   listenOnce,
+  reportTutorDiag,
   type Recorder,
 } from "@/lib/roleplay/listen";
 import {
@@ -58,7 +59,7 @@ import {
   type Instruction,
   type SessionState,
 } from "@/lib/roleplay/session";
-import { playTts, prefetchTts, stopTts } from "@/lib/ttsPlayer";
+import { playTts, prefetchTts, stopTts, ttsContextState } from "@/lib/ttsPlayer";
 import { translateUtterance } from "@/lib/translateUtterance";
 import type { UICopy } from "@/lib/copy";
 import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
@@ -436,9 +437,20 @@ export function RoleplayScreen({
     warmNextLine(scenario, state);
     let advanced = false;
     let watchdog = 0;
-    const advance = () => {
+    // 진단(iOS TestFlight): 이 줄이 파일로/합성으로 나왔는지, 소리가 시작됐는지, 무엇으로 끝났는지.
+    const lineStartedAt = Date.now();
+    let lineSource: "file" | "tts" = instruction.audioPath ? "file" : "tts";
+    let lineStarted = false;
+    const advance = (why?: unknown) => {
       if (cancelled || advanced) return;
       advanced = true;
+      reportTutorDiag({
+        source: lineSource,
+        ctx: ttsContextState(),
+        started: lineStarted,
+        end: typeof why === "string" ? why : why instanceof Error ? `err:${why.name}` : "done",
+        ms: Date.now() - lineStartedAt,
+      });
       window.clearTimeout(watchdog);
       // Now that it has been said, ask what it meant.
       //
@@ -500,16 +512,18 @@ export function RoleplayScreen({
        * as broken. Now a line that has not begun in eight seconds is given up
        * on and the scene moves, and one that has begun is allowed to finish.
        */
-      watchdog = window.setTimeout(advance, STALLED_AUDIO_MS);
+      lineSource = "tts";
+      watchdog = window.setTimeout(() => advance("stall"), STALLED_AUDIO_MS);
       void playTts(
         instruction.text,
         learningLanguageSpeechTag(scenario.language),
         instruction.voice,
         () => {
+          lineStarted = true;
           window.clearTimeout(watchdog);
-          watchdog = window.setTimeout(advance, GENERATED_AUDIO_MS);
+          watchdog = window.setTimeout(() => advance("long"), GENERATED_AUDIO_MS);
         },
-      ).then(advance, advance);
+      ).then(() => advance("ended"), advance);
     };
 
     if (!instruction.audioPath) {
@@ -531,18 +545,21 @@ export function RoleplayScreen({
      * no way forward. The text has already been shown by this point, so going
      * on without the voice is a worse lesson but not a dead one.
      */
-    watchdog = window.setTimeout(advance, STALLED_AUDIO_MS);
+    watchdog = window.setTimeout(() => advance("stall"), STALLED_AUDIO_MS);
+    audio.addEventListener("playing", () => {
+      lineStarted = true;
+    }, { once: true });
     audio.addEventListener(
       "loadedmetadata",
       () => {
         if (!Number.isFinite(audio.duration)) return;
         window.clearTimeout(watchdog);
         // Its own length plus a moment, once that length is actually known.
-        watchdog = window.setTimeout(advance, audio.duration * 1000 + 2000);
+        watchdog = window.setTimeout(() => advance("long"), audio.duration * 1000 + 2000);
       },
       { once: true },
     );
-    audio.addEventListener("ended", advance, { once: true });
+    audio.addEventListener("ended", () => advance("ended"), { once: true });
     // A file that is not there is a sentence the bank holds as words alone, not
     // a broken line: it is spoken instead of skipped. The failure is local and
     // immediate — the recordings ship inside the app — so this costs nothing

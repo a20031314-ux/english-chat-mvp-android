@@ -1,5 +1,5 @@
 import type { PracticeGoal } from "@/lib/learner/practice";
-import { TURN_NOT_STARTED, hearFrame } from "./hearFrame.ts";
+import { TURN_NOT_STARTED, hearFrame, makeLevelScaler } from "./hearFrame.ts";
 import { isIosApp, turnDiagnosticsEnabled } from "@/lib/platform";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
@@ -63,6 +63,9 @@ export type TurnDiag = {
   chunks: number;
   bytes: number;
   peak: number;
+  threshold: number;
+  /** 말 시작부터 턴이 끝났다고 본 때까지(ms), 말을 못 들었으면 -1. */
+  turnMs: number;
   spoke: boolean;
   heardNothing: boolean;
   track: string;
@@ -81,6 +84,27 @@ function reportDiag(diag: TurnDiag) {
   if (lastDiag?.audioUrl && lastDiag.audioUrl !== diag.audioUrl) URL.revokeObjectURL(lastDiag.audioUrl);
   lastDiag = diag;
   for (const listener of diagListeners) listener(diag);
+}
+
+/** 튜터 한 줄이 어떻게 재생되고 끝났는지(진단 상자용). */
+export type TutorDiag = {
+  source: "file" | "tts";
+  ctx: string;
+  started: boolean;
+  end: string;
+  ms: number;
+};
+let lastTutor: TutorDiag | null = null;
+const tutorListeners = new Set<(diag: TutorDiag) => void>();
+export function onTutorDiag(listener: (diag: TutorDiag) => void): () => void {
+  tutorListeners.add(listener);
+  if (lastTutor) listener(lastTutor);
+  return () => void tutorListeners.delete(listener);
+}
+export function reportTutorDiag(diag: TutorDiag) {
+  if (!turnDiagnosticsEnabled()) return;
+  lastTutor = diag;
+  for (const listener of tutorListeners) listener(diag);
 }
 
 /** Below this, the recording is a click or a breath rather than an answer. */
@@ -193,31 +217,6 @@ function analysisContext(): AudioContext {
   return analysisCtx;
 }
 
-/**
- * How loud this microphone is, for deciding what counts as speech.
- *
- * The speech level in hearFrame.ts (0.02) was set on Android phones. iPhones run
- * the microphone through Apple's voice processing (echo cancellation, noise
- * suppression), which hands the page a much quieter signal: quiet syllables fell
- * under the line, a turn was cut after "I have a", and a whole answer could read
- * as silence. On iOS the line follows the room instead — a few times the quiet
- * heard in the first moments, never above Android's.
- */
-const IOS_MIN_SPEECH_RMS = 0.004;
-const CALIBRATION_MS = 400;
-
-function makeLevelScaler(ios: boolean): (level: number, sinceStart: number) => number {
-  if (!ios) return (level) => level;
-  let floor = Infinity;
-  return (level, sinceStart) => {
-    if (sinceStart < CALIBRATION_MS && level > 0) floor = Math.min(floor, level);
-    const quiet = Number.isFinite(floor) ? floor : IOS_MIN_SPEECH_RMS / 4;
-    const threshold = Math.min(0.02, Math.max(IOS_MIN_SPEECH_RMS, quiet * 4));
-    return level * (0.02 / threshold);
-  };
-}
-
-
 type VoiceWatch = {
   stop: () => void;
   speechStartedAt: () => number | null;
@@ -225,6 +224,8 @@ type VoiceWatch = {
   heardNothing: () => boolean;
   /** Loudest raw level the analyser heard (진단용). */
   peak: () => number;
+  /** 말로 보는 기준 소리 크기(진단용). */
+  threshold: () => number;
 };
 
 function watchForVoice(
@@ -251,12 +252,12 @@ function watchForVoice(
     // No analysis available — the caller still has its own control, and a turn
     // that cannot be detected is better than a turn that cannot be spoken.
     dropCopy();
-    return { stop: () => undefined, speechStartedAt: () => null, heardNothing: () => false, peak: () => -1 };
+    return { stop: () => undefined, speechStartedAt: () => null, heardNothing: () => false, peak: () => -1, threshold: () => -1 };
   }
 
   const samples = new Float32Array(analyser.fftSize);
   const startedAt = Date.now();
-  const scale = makeLevelScaler(isIosApp());
+  const scaler = makeLevelScaler(isIosApp());
   let turn = TURN_NOT_STARTED;
   let done = false;
   let silent = false;
@@ -285,7 +286,7 @@ function watchForVoice(
     const raw = Math.sqrt(sum / samples.length);
     if (raw > 0) anySignal = true;
     if (raw > peak) peak = raw;
-    const level = scale(raw, now - startedAt);
+    const level = scaler.scale(raw, now - startedAt);
 
     const wasSpeaking = turn.spoke;
     const heard = hearFrame(turn, level, now);
@@ -326,6 +327,7 @@ function watchForVoice(
     speechStartedAt: () => turn.firstSpeechAt,
     heardNothing: () => silent,
     peak: () => peak,
+    threshold: () => scaler.threshold(),
   };
 }
 
@@ -390,6 +392,8 @@ export async function listenForTurn(input: {
               chunks: chunks.length,
               bytes: blob.size,
               peak: watch.peak(),
+              threshold: watch.threshold(),
+              turnMs: watch.speechStartedAt() === null ? -1 : Date.now() - (watch.speechStartedAt() as number),
               spoke: watch.speechStartedAt() !== null,
               heardNothing: watch.heardNothing(),
               track,

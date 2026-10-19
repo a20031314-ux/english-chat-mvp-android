@@ -131,3 +131,50 @@ export function hearFrame(
     finished: was.spoke && quietFor >= TRAILING_SILENCE_MS,
   };
 }
+
+/*
+ * How loud this microphone is, for deciding what counts as speech.
+ *
+ * The speech level above (0.02) was set on Android phones. On iOS the line
+ * follows the room instead — never above Android's.
+ */
+const IOS_MIN_SPEECH_RMS = 0.004;
+const CALIBRATION_MS = 400;
+/** 말한 뒤에는 그 턴에서 가장 큰 소리의 이 비율 아래를 쉼으로 본다(아이폰 원음은 방 소리가 그대로 남음). */
+const IOS_PAUSE_OF_PEAK = 0.12;
+
+export type LevelScaler = {
+  scale: (level: number, sinceStart: number) => number;
+  threshold: () => number;
+};
+
+/**
+ * 아이폰(2026-10-20 원음 녹음으로 바꾼 뒤): 자동 음량·잡음 억제를 끈 마이크는 방 소리가 늘 깔려 있어,
+ * 처음 0.4초의 가장 조용한 순간을 기준으로 잡으면 말이 끝난 뒤의 방 소리도 "말"로 읽혀 턴이 20초 끝까지
+ * 끝나지 않았다("인식이 늦다"). 기준은 처음 0.4초의 중간값으로, 말이 시작된 뒤에는 그 턴의 가장 큰 소리에
+ * 비해 충분히 작으면 쉼으로 본다.
+ */
+export function makeLevelScaler(ios: boolean): LevelScaler {
+  if (!ios) return { scale: (level) => level, threshold: () => 0.02 };
+  const calibration: number[] = [];
+  let threshold = IOS_MIN_SPEECH_RMS;
+  let peak = 0;
+  const update = () => {
+    if (calibration.length === 0) return;
+    const sorted = [...calibration].sort((a, b) => a - b);
+    const floor = sorted[Math.floor(sorted.length / 2)];
+    threshold = Math.min(0.02, Math.max(IOS_MIN_SPEECH_RMS, floor * 3));
+  };
+  return {
+    scale: (level, sinceStart) => {
+      if (sinceStart < CALIBRATION_MS && level > 0) {
+        calibration.push(level);
+        update();
+      }
+      if (level >= threshold && level > peak) peak = level;
+      if (peak > 0 && level < peak * IOS_PAUSE_OF_PEAK) return 0;
+      return level * (0.02 / threshold);
+    },
+    threshold: () => threshold,
+  };
+}

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { onTurnDiag, type TurnDiag } from "@/lib/roleplay/listen";
+import { onTurnDiag, onTutorDiag, type TurnDiag, type TutorDiag } from "@/lib/roleplay/listen";
 
 /**
  * 통화 화면 구석의 진단 상자(TestFlight 전용, platform.ts `turnDiagnosticsEnabled`).
@@ -10,11 +10,13 @@ import { onTurnDiag, type TurnDiag } from "@/lib/roleplay/listen";
  */
 export function TurnDiagBox() {
   const [diag, setDiag] = useState<TurnDiag | null>(null);
+  const [tutor, setTutor] = useState<TutorDiag | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   useEffect(() => onTurnDiag(setDiag), []);
-  if (!diag) return null;
+  useEffect(() => onTutorDiag(setTutor), []);
+  if (!diag && !tutor) return null;
   const play = () => {
-    if (!diag.audioUrl) return;
+    if (!diag?.audioUrl) return;
     audioRef.current?.pause();
     const audio = new Audio(diag.audioUrl);
     audioRef.current = audio;
@@ -26,14 +28,24 @@ export function TurnDiagBox() {
       className="pointer-events-auto fixed bottom-24 start-2 z-50 flex items-center gap-2 rounded-lg bg-black/80 px-2 py-1 font-mono text-meta leading-tight text-slate-300"
     >
       <span>
-        {diag.mime.replace("audio/", "")} · {diag.chunks}ch · {Math.round(diag.bytes / 1024)}KB
-        <br />
-        peak {diag.peak.toFixed(3)} · {diag.spoke ? "spoke" : "no-speech"}
-        {diag.heardNothing ? " · silent" : ""} · trk {diag.track}
-        <br />
-        http {diag.status} · text {diag.textLength}
+        {tutor ? (
+          <>
+            tutor {tutor.source} · ctx {tutor.ctx} · {tutor.started ? "sound" : "no-sound"} · {tutor.end} · {(tutor.ms / 1000).toFixed(1)}s
+            <br />
+          </>
+        ) : null}
+        {diag ? (
+          <>
+            {diag.mime.replace("audio/", "")} · {diag.chunks}ch · {Math.round(diag.bytes / 1024)}KB
+            <br />
+            peak {diag.peak.toFixed(3)} · thr {diag.threshold.toFixed(3)} · {diag.spoke ? "spoke" : "no-speech"}
+            {diag.heardNothing ? " · silent" : ""} · turn {(diag.turnMs / 1000).toFixed(1)}s
+            <br />
+            trk {diag.track} · http {diag.status} · text {diag.textLength}
+          </>
+        ) : null}
       </span>
-      {diag.audioUrl ? (
+      {diag?.audioUrl ? (
         <button type="button" onClick={play} className="rounded-lg bg-white/15 px-2 py-1 text-xs text-white">
           ▶
         </button>
