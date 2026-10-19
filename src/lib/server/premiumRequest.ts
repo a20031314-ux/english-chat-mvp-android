@@ -10,7 +10,8 @@ import {
   planInRevenueCat,
   revenueCatConfigured,
 } from "@/lib/server/revenueCat";
-import { isPlanTier, termsFor, type PlanTerms, type PlanTier } from "@/lib/billing/plans";
+import { bestTier, isPlanTier, termsFor, type PlanTerms, type PlanTier } from "@/lib/billing/plans";
+import { readInvitePass } from "./inviteRewardStore.ts";
 
 export type RequestEntitlement = {
   /** Whose counters this request spends. */
@@ -101,13 +102,18 @@ export async function resolveRequestEntitlement(
   // 기록은 계정에 묶인 id로 센다.
   const userId = requestUserId(request);
 
+  // 친구 초대 단계 보상(플러스 7일·프리미엄 30일)은 RevenueCat 밖에서 연 요금 — 산 요금과 높은 쪽.
+  const accountId = requestAuth(request)?.accountId ?? null;
+  const pass = accountId ? await readInvitePass(accountId).catch(() => null) : null;
+  const withPass = (tier: PlanTier) => (pass ? bestTier([tier, pass.tier]) : tier);
+
   if (appUserId && revenueCatConfigured()) {
     const plan = await planInRevenueCat(appUserId);
-    if (plan !== null) return withTier(userId, plan, true);
+    if (plan !== null) return withTier(userId, withPass(plan), true);
     // RevenueCat could not be reached. Keep the id for counting, but fall
     // through to the claim rather than locking a subscriber out mid-outage.
-    return withTier(userId, claimedTier(request), false);
+    return withTier(userId, withPass(claimedTier(request)), false);
   }
 
-  return withTier(userId, claimedTier(request), false);
+  return withTier(userId, withPass(claimedTier(request)), false);
 }

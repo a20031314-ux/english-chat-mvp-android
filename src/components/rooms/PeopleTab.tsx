@@ -1,5 +1,6 @@
 "use client";
 
+import { InviteRewardsCard } from "@/components/invite/InviteRewards";
 import { GroupTitle, groupIcon } from "./RoomGroups";
 import { teamCopy } from "@/lib/rooms/teamCopy";
 import type { GroupSummary } from "@/lib/rooms/group";
@@ -66,6 +67,7 @@ export function PeopleTab({
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         {account ? (
           <>
+            <InviteRewardsCard ui={ui} locale={locale} />
             {teams.length && onOpenGroup ? (
               <section className="mb-4">
                 <h2 className="mb-2 text-sm font-semibold text-slate-300">🤝 {tt.myTeams}</h2>

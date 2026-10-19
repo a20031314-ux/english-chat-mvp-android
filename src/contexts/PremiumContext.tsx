@@ -7,6 +7,7 @@ import {
   useEffect,
   useMemo,
   useState,
+  useSyncExternalStore,
   type ReactNode,
 } from "react";
 import {
@@ -24,7 +25,8 @@ import {
   type PurchaseFlowResult,
   type RestoreFlowResult,
 } from "@/lib/billing/billingService";
-import type { PlanTier } from "@/lib/billing/plans";
+import { bestTier, type PlanTier } from "@/lib/billing/plans";
+import { readInvitePass, subscribeInvitePass } from "@/lib/invite/client";
 
 type PremiumContextValue = {
   /** Any paid plan. */
@@ -50,11 +52,14 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
   // The plan is cached beside the premium flag and read with it; a purchase
   // bumps the version so a change of plan is read again.
   const [tierVersion, setTierVersion] = useState(0);
-  const tier = useMemo<PlanTier>(
+  const paidTier = useMemo<PlanTier>(
     () => (isPremium ? readCachedTier() : "free"),
     // eslint-disable-next-line react-hooks/exhaustive-deps -- tierVersion is the signal to read again
     [isPremium, tierVersion],
   );
+  // 친구 초대 단계 보상으로 열린 요금(lib/invite/rewards.ts) — 산 요금과 높은 쪽. 서버도 같은 규칙으로 따로 확인한다.
+  const invitePass = useSyncExternalStore(subscribeInvitePass, readInvitePass, () => null);
+  const tier = invitePass ? bestTier([paidTier, invitePass.tier]) : paidTier;
   const [isBillingNative, setIsBillingNative] = useState(false);
   const [isBillingReady, setIsBillingReady] = useState(false);
 
@@ -137,7 +142,7 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
 
   const value = useMemo(
     () => ({
-      isPremium,
+      isPremium: isPremium || tier !== "free",
       tier,
       isBillingNative,
       isBillingReady,

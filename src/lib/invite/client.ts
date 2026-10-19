@@ -6,6 +6,8 @@ import { entitlementHeaders } from "@/lib/billing/billingService";
 import { InviteLink } from "@/plugins/inviteLink";
 import { fillInvite, inviteCopy } from "./copy";
 import { inviteWebUrl, parseInviteParams, type InviteLookup, type PendingInvite } from "./shared";
+import type { InviteStatus } from "./rewards";
+import type { PlanTier } from "@/lib/billing/plans";
 
 /**
  * 앱 쪽 초대: 내 초대 링크 공유, 받은 초대 읽기·받아들이기.
@@ -133,4 +135,58 @@ export function onInviteLink(listener: (invite: PendingInvite) => void): () => v
   return () => {
     void handle.then((h) => h.remove());
   };
+}
+
+// ── 초대 보상(invite/rewards.ts) ─────────────────────────────
+
+const PASS_KEY = "ec_invite_pass";
+type Pass = { tier: PlanTier; until: number };
+const passListeners = new Set<() => void>();
+let passCache: Pass | null | undefined;
+
+function readPassStored(): Pass | null {
+  try {
+    const raw = localStorage.getItem(PASS_KEY);
+    const value = raw ? (JSON.parse(raw) as Pass) : null;
+    return value && typeof value.until === "number" && value.until > Date.now() ? value : null;
+  } catch {
+    return null;
+  }
+}
+
+/** 단계 보상으로 열린 요금(플러스 7일·프리미엄 30일). 서버도 따로 확인하므로 화면용. */
+export function readInvitePass(): Pass | null {
+  if (typeof window === "undefined") return null;
+  if (passCache === undefined) passCache = readPassStored();
+  if (passCache && passCache.until <= Date.now()) passCache = null;
+  return passCache;
+}
+
+function writePass(pass: Pass | null): void {
+  const before = readInvitePass();
+  passCache = pass;
+  try {
+    if (pass) localStorage.setItem(PASS_KEY, JSON.stringify(pass));
+    else localStorage.removeItem(PASS_KEY);
+  } catch {
+    // 이번 실행에서만.
+  }
+  if (before?.tier !== pass?.tier || before?.until !== pass?.until) for (const listener of passListeners) listener();
+}
+
+export function subscribeInvitePass(listener: () => void): () => void {
+  passListeners.add(listener);
+  return () => passListeners.delete(listener);
+}
+
+/** 내 초대 현황. news면 쌓인 소식을 받아 가고 서버에서 지운다. 열린 요금도 같이 기억. */
+export async function inviteStatus(news = false): Promise<InviteStatus> {
+  const status = await call<InviteStatus>({ action: "status", news });
+  writePass(status.pass);
+  return status;
+}
+
+/** 로그아웃·계정 삭제 때. */
+export function clearInvitePass(): void {
+  writePass(null);
 }

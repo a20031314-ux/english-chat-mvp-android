@@ -1,5 +1,6 @@
 import { randomInt } from "node:crypto";
 import { kvDelete, kvGetJson, kvIncrBy, kvGetNumber, kvSetJsonIfAbsent } from "./kv.ts";
+import { newJoinRecord } from "../invite/rewards.ts";
 
 /**
  * 친구 초대 링크(앱 밖 사람을 앱으로). 말하는 방의 "입장 코드"(roomStore inviteCodes)와는 다른 것.
@@ -49,10 +50,13 @@ export async function inviterOf(code: string): Promise<string | null> {
   return isInviteLinkCode(code) ? kvGetJson<string>(codeKey(code)) : null;
 }
 
-/** 초대받은 사람이 링크로 들어왔다. 처음 한 번만 세고, 처음이면 true. */
-export async function noteJoined(inviter: string, invitee: string): Promise<boolean> {
+/**
+ * 초대받은 사람이 링크로 들어왔다. 처음 한 번만 세고, 처음이면 true.
+ * 기록은 보상 규칙(invite/rewards.ts)의 JoinRecord — 가입한 지 48시간 안의 계정만 보상 대상.
+ */
+export async function noteJoined(inviter: string, invitee: string, inviteeCreatedAt: string | number | null = null, now: number = Date.now()): Promise<boolean> {
   if (inviter === invitee) return false;
-  if (!(await kvSetJsonIfAbsent(joinedKey(invitee), inviter))) return false;
+  if (!(await kvSetJsonIfAbsent(joinedKey(invitee), newJoinRecord(inviter, inviteeCreatedAt, now), 400 * 24 * 60 * 60))) return false;
   await kvIncrBy(countKey(inviter), 1);
   return true;
 }
@@ -64,5 +68,15 @@ export async function invitedCount(accountId: string): Promise<number> {
 /** 계정을 지울 때: 내 코드(링크가 더는 열리지 않음)·누가 나를 데려왔는지·데려온 수. */
 export async function forgetInvites(accountId: string): Promise<void> {
   const code = await kvGetJson<string>(byKey(accountId));
-  await kvDelete([byKey(accountId), joinedKey(accountId), countKey(accountId), ...(code ? [codeKey(code)] : [])]);
+  await kvDelete([
+    byKey(accountId),
+    joinedKey(accountId),
+    countKey(accountId),
+    ...(code ? [codeKey(code)] : []),
+    // 보상 기록(inviteRewardStore) — 거기서 이 파일을 거꾸로 부르지 않게 키 이름만 같이 둔다.
+    `invite:v1:friends:${accountId}`,
+    `invite:v1:points:${accountId}`,
+    `invite:v1:pass:${accountId}`,
+    `invite:v1:news:${accountId}`,
+  ]);
 }

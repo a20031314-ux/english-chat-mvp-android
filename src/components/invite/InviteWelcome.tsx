@@ -125,6 +125,7 @@ export function InviteWelcome({ ui, locale, onOpenTab }: { ui: UICopy; locale: s
               {info.inviter.bio}
             </p>
           ) : null}
+          {info.reward ? <p className="mt-2 rounded-lg bg-good/10 px-2.5 py-1.5 text-note text-good">🎁 {fillInvite(t.welcomeReward, { p: info.reward })}</p> : null}
 
           {account ? (
             <div className="mt-4 flex flex-col gap-2">

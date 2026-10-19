@@ -7,6 +7,7 @@ import {
   unlinkBillingAccount,
 } from "@/lib/billing/billingService";
 import { clearSession, readAuthToken, saveAccount, saveSession } from "./session";
+import { clearInvitePass } from "@/lib/invite/client";
 import type { AuthConfig, LoginResult, PublicAccount } from "./shared";
 
 /**
@@ -145,6 +146,7 @@ export async function refreshAccount(): Promise<PublicAccount | null> {
   } catch (error) {
     if (error instanceof AccountRequestError && error.code === "SIGNED_OUT") {
       clearSession();
+      clearInvitePass();
       await unlinkBillingAccount();
     }
     return null;
@@ -164,6 +166,7 @@ export async function saveProfile(next: {
 
 async function signOutHere(): Promise<void> {
   clearSession();
+  clearInvitePass();
   await unlinkBillingAccount();
   if (Capacitor.isNativePlatform()) {
     try {

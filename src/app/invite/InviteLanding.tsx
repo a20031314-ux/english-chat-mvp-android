@@ -92,6 +92,7 @@ export function InviteLanding() {
           <div className="mt-4 h-16 animate-pulse rounded-xl bg-surface-sunk" />
         )}
 
+        {info?.reward ? <p className="mt-4 rounded-xl bg-good/10 px-3 py-2 text-note text-good">🎁 {fillInvite(t.welcomeReward, { p: info.reward })}</p> : null}
         <p className="mt-5 text-sm text-slate-400">{t.pageLead}</p>
 
         <div className="mt-5 flex flex-col gap-2">

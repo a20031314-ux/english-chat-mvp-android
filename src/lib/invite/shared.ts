@@ -17,6 +17,8 @@ export type InviteLookup = {
   };
   room: { id: string; name: string; languages: string[]; people: number } | null;
   isMe: boolean;
+  /** 이 링크로 들어와 이틀 쓰면 받을 포인트(초대 보상, invite/rewards.ts). 옛 서버엔 없음. */
+  reward?: number;
 };
 
 export type PendingInvite = { code: string; room: string | null };

@@ -20,6 +20,7 @@ import { FeedbackButton } from "@/components/FeedbackButton";
 import { RoomsScreen } from "@/components/rooms/RoomsScreen";
 import { PeopleTab } from "@/components/rooms/PeopleTab";
 import { InviteWelcome } from "@/components/invite/InviteWelcome";
+import { InviteNewsSheet } from "@/components/invite/InviteRewards";
 import { requestGroup } from "@/lib/rooms/openDm";
 import { MessagesTab } from "@/components/rooms/MessagesTab";
 import { AiTutorRow } from "@/components/AiTutorRow";
@@ -357,6 +358,8 @@ function AppHomeInner({
               ) : null}
               {/* 초대 링크로 열었을 때 한 번(설치 직후 첫 실행 포함). */}
               {socialOn ? <InviteWelcome ui={ui} locale={locale} onOpenTab={openTab} /> : null}
+              {/* 친구 초대 보상 소식(지급·단계 보상)을 앱을 열 때 한 번. 이때 서버가 사용한 날도 센다. */}
+              {socialOn && signedIn ? <InviteNewsSheet ui={ui} locale={locale} /> : null}
             </div>
 
             {miniRoom ? (
