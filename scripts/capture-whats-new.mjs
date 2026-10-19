@@ -849,10 +849,18 @@ const STEPS = {
     await page.locator('div[class*="z-[80]"] header').getByRole("button", { name: exactly(roomCopyFor(locale).minimize) }).click();
     await wait(800);
     // 2.69: 하단이 "사람과 학습" 묶음이면 위 스위치로 "AI와 학습"에 가서 채팅 탭(막대가 따라온다).
-    const chatTab = page.getByRole("button", { name: exactly(ui.homeTabChat) });
-    if (!(await chatTab.count()) && ui.modeAi) await page.getByText(ui.modeAi, { exact: true }).first().click();
-    await wait(800);
-    await chatTab.last().click();
+    // 2.69 하단 탭(대화 · 영상 · 사람 · Room · My): 대화 탭 맨 위 AI 튜터 줄을 누르면 채팅(막대가 따라온다).
+    const talkTab = page.getByRole("button", { name: exactly(ui.homeTabTalk ?? "") });
+    if (ui.homeTabTalk && (await talkTab.count())) {
+      await talkTab.last().click();
+      await wait(1000);
+      await page.getByRole("button", { name: new RegExp(ui.talkAiTutor.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")) }).first().click();
+    } else {
+      const chatTab = page.getByRole("button", { name: exactly(ui.homeTabChat) });
+      if (!(await chatTab.count()) && ui.modeAi) await page.getByText(ui.modeAi, { exact: true }).first().click();
+      await wait(800);
+      await chatTab.last().click();
+    }
     await wait(2500);
   },
   async dm({ page, locale, wait }) {
