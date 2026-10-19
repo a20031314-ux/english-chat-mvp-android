@@ -178,7 +178,14 @@ async function runOverlap({ persona, userId, call, bank, step }) {
     const made = await acc.groups(A, "create", { name: `[test] overlap ${persona.target}↔${persona.ui} ${persona.id}`, languages: [persona.target, persona.ui], invite: [B.id, C.id] });
     const groupId = made.body?.group?.id;
     if (!groupId) { step({ suite: "tiers", tier: "overlap", title: "단체방 만들기", status: made.status, issues: checkHttp(P, made) }); return; }
-    await Promise.all([acc.groups(B, "answer", { groupId, accept: true }), acc.groups(C, "answer", { groupId, accept: true })]);
+    // 둘이 동시에 초대 참여 — 응답도 남긴다(실패한 참여를 줄 '사라짐'과 가르려고).
+    const answers = await Promise.all([acc.groups(B, "answer", { groupId, accept: true }), acc.groups(C, "answer", { groupId, accept: true })]);
+    const joinIssues = answers.flatMap((r) => checkHttp(P, r));
+    const opened = await acc.groups(A, "open", { groupId });
+    const members = opened.body?.group?.members ?? [];
+    for (const [who, person] of [["B", B], ["C", C]]) {
+      if (!members.includes(person.id)) joinIssues.push(issue("error", "overlap_join", `${who}가 참여했는데 사람 목록에 없음(참여 응답 ${answers[who === "B" ? 0 : 1].status})`));
+    }
 
     const first = await acc.groups(A, "send", { groupId, text: `A0 ${L.ok[0]}` });
     const firstSeq = first.body?.message?.seq;
@@ -196,7 +203,7 @@ async function runOverlap({ persona, userId, call, bank, step }) {
     jobs.push(acc.groups(B, "send", { groupId, text: askText, quoteSeq: firstSeq, ask: true }));
     const results = await Promise.all(jobs);
     const ms = Date.now() - started;
-    const issues = results.flatMap((r) => checkHttp(P, r));
+    const issues = [...joinIssues, ...results.flatMap((r) => checkHttp(P, r))];
     // 보내기 자체가 실패한 줄(앞단 막힘 등)은 '사라짐'으로 치지 않는다 — 그건 위 HTTP 오류로 따로 남는다.
     const expected = [...sent, askText].filter((_, i) => results[i]?.status === 200);
     const askSent = results.at(-1)?.status === 200;

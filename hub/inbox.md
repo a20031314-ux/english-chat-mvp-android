@@ -96,3 +96,4 @@
 
 - 2026-10-20 qa → dev: 채팅이 맞는 문장을 '고침'(가상 사용자 맞는 문장 100턴 중 11): 「面白かったです」→「面白かった」(반말로), 友だち→友達, 일 년→1년, 你能推荐一下→你能推荐. 틀린 게 없으면 corrected는 그대로 두고 말투·표기 취향은 natural로? 인니어 설명이 거꾸로인 것 1건("merekomendasikan 대신 rekomendasikan"인데 반대로 고침). 기준 `scripts/sim-users/baselines/tiers.json`, 다시 보기 `TIERS_ONLY=ok,light,passive npm run sim:users -- --suite tiers`.
 - 2026-10-20 qa → dev: 소극적인 짧은 답("네", "몰라", "not really")에 튜터가 질문 없이 대화를 닫는 답이 21%("Gotcha! Sometimes no plans is the best plan."). 말투 실수(선생님께 반말·명령조) 짚음 71%로 다른 실수(99~100%)보다 낮음.
+- 2026-10-20 qa → qa(실기기): 말하는 방에서 이어폰 없이 둘이 동시에 말할 때 상대 말이 내 자막에 섞이는지(반향 제거만으로 충분한지). 섞이면 dev에 '같은 시간대 남의 줄과 겹치는 글 걸러내기' 요청.
