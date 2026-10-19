@@ -23,7 +23,7 @@
 ## 열린 일
 - **사용법 창 하나 + 새로워진 점이 칸을 가리킴 (2026-10-20, 서버 바로 반영 / 창·자세히 버튼은 앱 다음 빌드):** 사용자 제안 "기능 설명을 한곳에, 탭에서는 그리로 가는 버튼만". 칸 id(`GUIDE_SECTION_IDS`)·기능별 묶음(`GUIDE_CHAPTERS`, `/api/guide?chapters=1`), `GuideSheet` 묶음 보기·"이 화면으로 가기"·"새로", 새로워진 점 `guide` → 칸의 제목·글 + "자세히"(`openGuide`), `/api/whats-new`도 칸 글.
   경로 문장 6개를 14개 언어로 새로 씀(통화 탭 2, 사람·메시지·통화 → 사람 찾기·친구 초대·메시지와 통화, 단체방, 게시판 — Claude가 씀, 원어민 확인 권장). 테스트 `guide/chapters.test.ts`(칸 수·묶음·노트 id·경로 문구 금지).
-  남은 것: **사용법 그림·새로워진 점 캡처(2.69)가 옛 하단 탭을 찍음** — `capture-whats-new.mjs guide`와 `2.69` 다시(새 칸 people.invite·messages.dm은 그림 없음). 2.66 노트 "지도 탭 맨 위" 같은 옛 버전 글은 그대로(그 버전에서 오는 사람만 봄).
+  그림(2026-10-20): 14개 언어 다시 찍음(테두리·끌기 영상), 새로워진 점은 칸 그림을 같이 씀. 남은 것: 방 안 화면 그림(옛 것, 테두리 없음), 친구 초대·메시지와 통화 칸 그림 없음. 2.66 노트 "지도 탭 맨 위" 같은 옛 버전 글은 그대로(그 버전에서 오는 사람만 봄).
 - **의견 반영 소식 (2026-10-20, 서버 바로 반영·시트는 앱 다음 빌드):** 사용자 요청 "반영되면 보낸 사람에게 스크린샷과 함께, 같은 의견은 한 번에, 사진은 전·후 두 장".
   서버 `/api/feedback/fixed`(의견 읽기 키) → `server/feedbackFixStore.ts`(카드 하나 → 묶인 해시마다 소식, 카드·사람마다 한 번, 공유 익명 id 제외), `/api/feedback/news`(앱을 열 때, 계정 id·기기 id 둘 다로 찾고 지움).
   앱 `FeedbackFixedSheet.tsx`(전·후 그림, 옛 빌드면 "업데이트하면" 한 번 → 업데이트 뒤 다시), 문구 `lib/feedbackFixCopy.ts` 14개 언어(Claude가 씀). 그림 `scripts/capture-feedback-fix.mjs` → `public/feedback-fix/`(앱 묶음에서 뺌), 보내기 `scripts/feedback-notify.mjs`.

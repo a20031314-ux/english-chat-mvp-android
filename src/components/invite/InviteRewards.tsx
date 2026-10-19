@@ -38,7 +38,8 @@ export function InviteRewardsCard({ ui, locale }: { ui: UICopy; locale: string }
     };
   }, []);
 
-  if (!status) return null;
+  // 서버 답의 모양이 다르면(옛 서버·오류) 카드만 빼고 화면은 그대로 — 2026-10-20 캡처에서 화면 전체가 깨졌다.
+  if (!status?.reward) return null;
   const next = nextMilestone(status.friends);
   const progress = next ? Math.min(1, status.friends / next.friends) : 1;
   return (

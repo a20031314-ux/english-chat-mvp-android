@@ -639,6 +639,8 @@ function socialMocks(page, target, ui) {
       if (body.action === "lookup")
         return json(route, { inviter: { id: PEOPLE.yuki.id, nickname: "Yuki", bio: "🇯🇵 → 🌏 ☕ 🎧", photo: PEOPLE.yuki.photo, learn: target, ui: "ja" }, room: null, isMe: false });
       if (body.action === "mine") return json(route, { code: "capture01" });
+      // 친구 초대 보상 카드(InviteRewards): 모양이 다르면 화면 전체가 깨진다.
+      if (body.action === "status") return json(route, { friends: 0, points: 0, earlyLeft: 100, reward: { inviter: 50, invitee: 30, early: true }, pass: null, news: [] });
       return json(route, { ok: true });
     }),
     page.route("**/api/account/me", (route) => json(route, { account })),
@@ -1629,6 +1631,8 @@ for (const locale of only ?? Object.keys(copy)) {
     route.continue({ headers: { ...route.request().headers(), "x-rc-user": `${process.env.CAPTURE_USER || `whats-new-capture-${day}${process.env.CAPTURE_RUN ? `-${process.env.CAPTURE_RUN}` : ""}`}-${locale}` } }),
   );
   const wait = (ms) => page.waitForTimeout(ms);
+  // 화면이 깨지면(오류 페이지) 그대로 찍히니 원인을 남긴다.
+  page.on("pageerror", (error) => console.log(`  [${locale} 페이지 오류] ${String(error).slice(0, 400)}`));
   // 홍보 녹화: 누른 곳 표시 + Chrome 화면 전송 프레임 + 장면 시각.
   const events = {};
   // 시각은 숫자, 글자(예: 힌트 문장)는 두 번째 값으로.
