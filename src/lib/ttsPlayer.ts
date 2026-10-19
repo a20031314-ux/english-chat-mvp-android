@@ -74,17 +74,35 @@ function remainderBytes(bytes: Uint8Array, start: number): Uint8Array<ArrayBuffe
 }
 
 function getAudioContext(): AudioContext {
+  // iOS: 통화에서 마이크가 열렸다 닫히면 오디오 세션이 바뀌면서 이 컨텍스트가 "interrupted"(또는 closed)로
+  // 남는다. 그 위에서 resume()은 방해가 끝날 때까지 돌아오지 않아 튜터 목소리가 가끔 안 들렸다
+  // (TestFlight 2.69, 2026-10-20). 그런 컨텍스트는 버리고 새로 만든다.
+  const state = audioCtx?.state as string | undefined;
+  if (audioCtx && (state === "closed" || state === "interrupted")) {
+    stopSources();
+    void audioCtx.close().catch(() => undefined);
+    audioCtx = null;
+    unlocked = false;
+  }
   if (!audioCtx) {
     audioCtx = new AudioContext();
   }
   return audioCtx;
 }
 
+/** resume()이 끝나지 않는 경우(iOS 방해 상태)에도 재생을 붙잡아 두지 않는다. */
+function resumeBriefly(ctx: AudioContext): Promise<void> {
+  return Promise.race([
+    ctx.resume().catch(() => undefined),
+    new Promise<void>((resolve) => window.setTimeout(resolve, 600)),
+  ]);
+}
+
 async function unlockAudio() {
   if (typeof window === "undefined") return;
   const ctx = getAudioContext();
   if (ctx.state === "suspended") {
-    await ctx.resume();
+    await resumeBriefly(ctx);
   }
   if (unlocked) return;
   const buffer = ctx.createBuffer(1, 1, ctx.sampleRate);
@@ -289,7 +307,7 @@ async function playPcmStream(
   onStart?: () => void,
 ): Promise<void> {
   const ctx = getAudioContext();
-  await ctx.resume();
+  await resumeBriefly(ctx);
   let chunkIndex = 0;
   let leftover: Uint8Array<ArrayBuffer> = new Uint8Array(0);
   let nextStart = ctx.currentTime;

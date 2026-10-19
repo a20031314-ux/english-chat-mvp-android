@@ -343,8 +343,14 @@ export async function listenForTurn(input: {
    */
   noSpeechMs?: number;
 }): Promise<Recorder> {
+  // iOS: 에코 제거를 켜면 애플 음성 처리(VoiceProcessingIO)를 거쳐 녹음이 기계음처럼 지직거렸다
+  // (TestFlight 2.69 진단 상자 ▶로 들어 봄, 2026-10-20). 마이크는 튜터가 말을 마친 뒤 턴마다 열리니
+  // 지울 메아리가 없다 — iOS에서는 끄고 원음을 받는다. 안드로이드는 그대로.
+  const raw = isIosApp();
   const stream = await navigator.mediaDevices.getUserMedia({
-    audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true },
+    audio: raw
+      ? { echoCancellation: false, noiseSuppression: false, autoGainControl: false }
+      : { echoCancellation: true, noiseSuppression: true, autoGainControl: true },
   });
   const mimeType = preferredMimeType();
   const diagnose = turnDiagnosticsEnabled();
