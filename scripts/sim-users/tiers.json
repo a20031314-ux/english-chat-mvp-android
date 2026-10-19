@@ -1,0 +1,206 @@
+{
+  "_about": "1차 세분화(문장 종류 8칸)용 문장 은행. ok=틀린 데 없는 문장, light=실수 하나(tags), heavy=실수 여럿·단어 나열, mixed=학습 언어 문장 속 {market}/{coffee}/{friend} 자리에 그 사람의 편한 말 낱말을 끼움(concepts), passive=소극적인 짧은 답. 손으로 쓴 시드라 원어민 검수 전 — 'ok를 고침'은 사람이 한 번 본다.",
+  "concepts": {
+    "market": { "en": "market", "ko": "시장", "ja": "市場", "zh": "市场", "es": "mercado", "fr": "marché", "it": "mercato", "pt": "mercado", "ru": "рынок", "ar": "السوق", "id": "pasar", "vi": "chợ", "th": "ตลาด", "hi": "बाज़ार" },
+    "coffee": { "en": "coffee", "ko": "커피", "ja": "コーヒー", "zh": "咖啡", "es": "café", "fr": "café", "it": "caffè", "pt": "café", "ru": "кофе", "ar": "قهوة", "id": "kopi", "vi": "cà phê", "th": "กาแฟ", "hi": "कॉफ़ी" },
+    "friend": { "en": "friend", "ko": "친구", "ja": "友だち", "zh": "朋友", "es": "amigo", "fr": "ami", "it": "amico", "pt": "amigo", "ru": "друг", "ar": "صديقي", "id": "teman", "vi": "bạn", "th": "เพื่อน", "hi": "दोस्त" }
+  },
+  "lang": {
+    "en": {
+      "ok": ["I usually walk to work when the weather is nice.", "We watched a movie together last night.", "Could you recommend a good place to eat around here?", "My sister is learning to play the guitar.", "I have been living in this city for three years.", "If I had more time, I would travel more."],
+      "light": [
+        { "text": "Yesterday I go to the park with my dog.", "tags": ["tense"] },
+        { "text": "She don't like spicy food.", "tags": ["agreement"] },
+        { "text": "I am interesting in learning languages.", "tags": ["vocab"] },
+        { "text": "We arrived to the station late.", "tags": ["particle"] },
+        { "text": "I like very much this song.", "tags": ["word_order"] },
+        { "text": "I recieved your message this morning.", "tags": ["spelling"] }
+      ],
+      "heavy": ["yesterday i go store buy many thing but money not enough", "He have went to school since two year ago and he like it very", "me want eat food now where good restaurant", "When I was child my mother always cook for we dinner"],
+      "mixed": ["I went to the {market} yesterday and bought apples.", "Do you want to get some {coffee} later?", "My {friend} is coming to visit this weekend."],
+      "passive": ["yes", "ok", "I don't know", "hmm", "not really", "maybe"]
+    },
+    "ko": {
+      "ok": ["저는 주말마다 친구들이랑 등산을 가요.", "어제 본 영화가 생각보다 재미있었어요.", "이 근처에 맛있는 식당 좀 추천해 주실 수 있어요?", "요즘 회사 일이 많아서 좀 피곤해요.", "한국에 온 지 벌써 일 년이 됐어요.", "시간이 있으면 같이 커피 마셔요."],
+      "light": [
+        { "text": "어제 친구를 만나요.", "tags": ["tense"] },
+        { "text": "저는 사과을 좋아해요.", "tags": ["particle"] },
+        { "text": "선생님, 내일 시간 있어?", "tags": ["register"] },
+        { "text": "도서관에서 책이 읽었어요.", "tags": ["particle"] },
+        { "text": "날씨가 너무 덥어요.", "tags": ["spelling"] },
+        { "text": "저는 매일 아침에 운동을 해요 했어요.", "tags": ["agreement"] }
+      ],
+      "heavy": ["어제 나 시장 가다 사과 사다 많이", "저 한국어 공부 하다 어렵다 너무 그래서 포기 하고 싶다요", "선생님 너 내일 학교 오다 나 기다리다", "친구 같이 영화 보다 재밌어 어제요"],
+      "mixed": ["어제 {market}에 가서 사과를 샀어요.", "이따가 {coffee} 한잔할래요?", "이번 주말에 {friend}가 놀러 와요."],
+      "passive": ["네", "응", "몰라요", "음…", "그냥요", "아마도요"]
+    },
+    "ja": {
+      "ok": ["週末はよく友だちと山に登ります。", "昨日見た映画は思ったより面白かったです。", "この近くでおいしいお店を教えてもらえますか。", "最近仕事が忙しくて少し疲れています。", "日本に来てからもう一年になります。", "時間があったら一緒にコーヒーを飲みましょう。"],
+      "light": [
+        { "text": "昨日、友だちと映画を見ます。", "tags": ["tense"] },
+        { "text": "私はりんごが食べたいでした。", "tags": ["agreement"] },
+        { "text": "駅を行きます。", "tags": ["particle"] },
+        { "text": "先生、明日来る？", "tags": ["register"] },
+        { "text": "きのうはとてもさむいかったです。", "tags": ["agreement"] },
+        { "text": "わたしは まいにち べんきょを します。", "tags": ["spelling"] }
+      ],
+      "heavy": ["きのう 私 店 行く 買う たくさん", "日本語 むずかしい です 私 勉強 する した でも わからない", "先生 あなた 明日 来る 私 待つ", "友だち と 映画 見る おもしろい だった です"],
+      "mixed": ["昨日{market}に行ってりんごを買いました。", "あとで{coffee}を飲みませんか。", "今週末{friend}が遊びに来ます。"],
+      "passive": ["はい", "うん", "わかりません", "うーん", "べつに", "たぶん"]
+    },
+    "zh": {
+      "ok": ["我周末常常和朋友去爬山。", "昨天看的电影比我想的有意思。", "你能推荐一下附近好吃的餐厅吗？", "最近工作很忙，我有点累。", "我来中国已经一年了。", "有空的话我们一起喝咖啡吧。"],
+      "light": [
+        { "text": "我昨天去了商店买东西了明天。", "tags": ["tense"] },
+        { "text": "我有三个书。", "tags": ["vocab"] },
+        { "text": "我很喜欢吃辣的菜很。", "tags": ["word_order"] },
+        { "text": "他在北京住了两年了在。", "tags": ["word_order"] },
+        { "text": "老师，你明天来不来啊？快说。", "tags": ["register"] },
+        { "text": "我门明天一起去吧。", "tags": ["spelling"] }
+      ],
+      "heavy": ["我 昨天 去 商店 买 很多 东西 但是 钱 不 够了 了", "他 学 中文 两 年 前 从 很 喜欢 的", "我 要 吃 饭 现在 哪里 好 餐厅 有", "小时候 我 妈妈 总是 给 我们 做饭 晚饭 了 是"],
+      "mixed": ["我昨天去{market}买了苹果。", "等一下要不要喝{coffee}？", "这个周末我的{friend}要来玩。"],
+      "passive": ["嗯", "好", "不知道", "还行", "没什么", "可能吧"]
+    },
+    "es": {
+      "ok": ["Normalmente voy al trabajo caminando cuando hace buen tiempo.", "Anoche vimos una película juntos.", "¿Me puedes recomendar un buen sitio para comer por aquí?", "Mi hermana está aprendiendo a tocar la guitarra.", "Llevo tres años viviendo en esta ciudad.", "Si tuviera más tiempo, viajaría más."],
+      "light": [
+        { "text": "Ayer voy al parque con mi perro.", "tags": ["tense"] },
+        { "text": "La casa es muy bonito.", "tags": ["agreement"] },
+        { "text": "Estoy muy aburrido de esperar, soy cansado.", "tags": ["vocab"] },
+        { "text": "Pienso de ir a la playa mañana.", "tags": ["particle"] },
+        { "text": "Oye profe, dame la respuesta ya.", "tags": ["register"] },
+        { "text": "Mañana boy a la escuela temprano.", "tags": ["spelling"] }
+      ],
+      "heavy": ["ayer yo ir tienda comprar mucho cosa pero dinero no suficiente", "Ella tener veinte año y estudiar en universidad desde dos año", "yo querer comer ahora donde bueno restaurante", "Cuando yo era niño mi madre siempre cocinar para nosotros la cena ayer"],
+      "mixed": ["Ayer fui al {market} y compré manzanas.", "¿Quieres tomar un {coffee} más tarde?", "Mi {friend} viene a visitarme este fin de semana."],
+      "passive": ["sí", "vale", "no sé", "mmm", "no mucho", "quizás"]
+    },
+    "fr": {
+      "ok": ["D'habitude, je vais au travail à pied quand il fait beau.", "Hier soir, nous avons regardé un film ensemble.", "Tu peux me conseiller un bon restaurant dans le coin ?", "Ma sœur apprend à jouer de la guitare.", "J'habite dans cette ville depuis trois ans.", "Si j'avais plus de temps, je voyagerais plus."],
+      "light": [
+        { "text": "Hier, je vais au parc avec mon chien.", "tags": ["tense"] },
+        { "text": "La maison est très beau.", "tags": ["agreement"] },
+        { "text": "Je suis allé à la Paris l'été dernier.", "tags": ["particle"] },
+        { "text": "J'ai mangé déjà le gâteau.", "tags": ["word_order"] },
+        { "text": "Salut prof, donne-moi la réponse vite.", "tags": ["register"] },
+        { "text": "Je suis très fatiqué aujourd'hui.", "tags": ["spelling"] }
+      ],
+      "heavy": ["hier moi aller magasin acheter beaucoup chose mais argent pas assez", "Elle avoir vingt an et elle étudier à université depuis deux an", "moi vouloir manger maintenant où bon restaurant", "Quand je suis enfant ma mère toujours cuisiner pour nous le dîner"],
+      "mixed": ["Hier, je suis allé au {market} et j'ai acheté des pommes.", "Tu veux prendre un {coffee} plus tard ?", "Mon {friend} vient me voir ce week-end."],
+      "passive": ["oui", "d'accord", "je sais pas", "bof", "pas vraiment", "peut-être"]
+    },
+    "it": {
+      "ok": ["Di solito vado al lavoro a piedi quando fa bel tempo.", "Ieri sera abbiamo visto un film insieme.", "Mi consigli un buon posto per mangiare qui vicino?", "Mia sorella sta imparando a suonare la chitarra.", "Vivo in questa città da tre anni.", "Se avessi più tempo, viaggerei di più."],
+      "light": [
+        { "text": "Ieri vado al parco con il mio cane.", "tags": ["tense"] },
+        { "text": "La casa è molto bello.", "tags": ["agreement"] },
+        { "text": "Ho andato al mare la settimana scorsa.", "tags": ["agreement"] },
+        { "text": "Penso di andare in la spiaggia domani.", "tags": ["particle"] },
+        { "text": "Oh prof, dammi la risposta subito.", "tags": ["register"] },
+        { "text": "Domani vado a scuola presto la matina.", "tags": ["spelling"] }
+      ],
+      "heavy": ["ieri io andare negozio comprare tanto cosa ma soldi non basta", "Lei avere venti anno e studiare in università da due anno", "io volere mangiare adesso dove buono ristorante", "Quando io sono bambino mia madre sempre cucinare per noi la cena"],
+      "mixed": ["Ieri sono andato al {market} e ho comprato delle mele.", "Ti va di prendere un {coffee} più tardi?", "Il mio {friend} viene a trovarmi questo fine settimana."],
+      "passive": ["sì", "ok", "non lo so", "mah", "non proprio", "forse"]
+    },
+    "pt": {
+      "ok": ["Normalmente vou a pé para o trabalho quando o tempo está bom.", "Ontem à noite assistimos a um filme juntos.", "Você pode me recomendar um bom lugar para comer aqui perto?", "Minha irmã está aprendendo a tocar violão.", "Moro nesta cidade há três anos.", "Se eu tivesse mais tempo, viajaria mais."],
+      "light": [
+        { "text": "Ontem eu vou ao parque com meu cachorro.", "tags": ["tense"] },
+        { "text": "A casa é muito bonito.", "tags": ["agreement"] },
+        { "text": "Eu gosto muito de assistir filmes em a noite.", "tags": ["particle"] },
+        { "text": "Eu tenho vinte anos de idade velho.", "tags": ["vocab"] },
+        { "text": "Ô professor, me dá a resposta logo.", "tags": ["register"] },
+        { "text": "Amanhã eu vou na escola sedo.", "tags": ["spelling"] }
+      ],
+      "heavy": ["ontem eu ir loja comprar muito coisa mas dinheiro não chega", "Ela ter vinte ano e estudar na universidade desde dois ano", "eu querer comer agora onde bom restaurante", "Quando eu sou criança minha mãe sempre cozinhar para nós o jantar"],
+      "mixed": ["Ontem fui ao {market} e comprei maçãs.", "Quer tomar um {coffee} mais tarde?", "Meu {friend} vem me visitar neste fim de semana."],
+      "passive": ["sim", "tá", "não sei", "hum", "não muito", "talvez"]
+    },
+    "ru": {
+      "ok": ["Обычно я хожу на работу пешком, когда хорошая погода.", "Вчера вечером мы вместе смотрели фильм.", "Можешь посоветовать хорошее место, где поесть рядом?", "Моя сестра учится играть на гитаре.", "Я живу в этом городе уже три года.", "Если бы у меня было больше времени, я бы больше путешествовал."],
+      "light": [
+        { "text": "Вчера я иду в парк с собакой.", "tags": ["tense"] },
+        { "text": "Это очень красивый машина.", "tags": ["agreement"] },
+        { "text": "Я живу в Москва.", "tags": ["particle"] },
+        { "text": "Я люблю очень эту песню.", "tags": ["word_order"] },
+        { "text": "Учитель, ты завтра придёшь? Давай быстрее.", "tags": ["register"] },
+        { "text": "Я очень устал сегодня, хачу спать.", "tags": ["spelling"] }
+      ],
+      "heavy": ["вчера я идти магазин купить много вещь но деньги нет хватать", "Она иметь двадцать год и учиться университет два год", "я хотеть есть сейчас где хороший ресторан", "Когда я быть ребёнок моя мама всегда готовить для мы ужин"],
+      "mixed": ["Вчера я ходил на {market} и купил яблоки.", "Хочешь потом выпить {coffee}?", "На этих выходных ко мне приедет мой {friend}."],
+      "passive": ["да", "ок", "не знаю", "хм", "не очень", "может быть"]
+    },
+    "ar": {
+      "ok": ["عادةً أمشي إلى العمل عندما يكون الجو جميلًا.", "شاهدنا فيلمًا معًا مساء أمس.", "هل يمكنك أن تنصحني بمطعم جيد قريب من هنا؟", "أختي تتعلم العزف على الغيتار.", "أعيش في هذه المدينة منذ ثلاث سنوات.", "لو كان عندي وقت أكثر لسافرت أكثر."],
+      "light": [
+        { "text": "أمس أذهب إلى الحديقة مع كلبي.", "tags": ["tense"] },
+        { "text": "هذه كتاب جميل.", "tags": ["agreement"] },
+        { "text": "البيت كبيرة جدًا.", "tags": ["agreement"] },
+        { "text": "ذهبت في المدرسة صباحًا.", "tags": ["particle"] },
+        { "text": "يا أستاذ، أعطني الجواب بسرعة الآن.", "tags": ["register"] },
+        { "text": "انا تعبان كثير اليوم واريد انام", "tags": ["spelling"] }
+      ],
+      "heavy": ["أمس أنا يذهب سوق يشتري كثير شيء لكن فلوس لا يكفي", "هي عندها عشرين سنة وهو يدرس في جامعة من سنتين", "أنا يريد يأكل الآن أين مطعم جيد", "عندما أنا طفل أمي دائمًا يطبخ لنا العشاء أمس"],
+      "mixed": ["ذهبت أمس إلى {market} واشتريت تفاحًا.", "هل تريد أن نشرب {coffee} لاحقًا؟", "سيزورني {friend} في نهاية هذا الأسبوع."],
+      "passive": ["نعم", "طيب", "لا أعرف", "همم", "ليس كثيرًا", "ربما"]
+    },
+    "id": {
+      "ok": ["Biasanya saya jalan kaki ke kantor kalau cuacanya bagus.", "Tadi malam kami menonton film bersama.", "Bisa rekomendasikan tempat makan yang enak di sekitar sini?", "Kakak perempuan saya sedang belajar main gitar.", "Saya sudah tinggal di kota ini selama tiga tahun.", "Kalau saya punya lebih banyak waktu, saya akan lebih sering jalan-jalan."],
+      "light": [
+        { "text": "Besok saya sudah pergi ke pasar.", "tags": ["tense"] },
+        { "text": "Saya punya dua buku-buku.", "tags": ["agreement"] },
+        { "text": "Saya pergi di sekolah setiap hari.", "tags": ["particle"] },
+        { "text": "Ini adalah rumah besar saya yang.", "tags": ["word_order"] },
+        { "text": "Pak guru, kamu besok datang gak? Cepet jawab.", "tags": ["register"] },
+        { "text": "Saya sangat lelah hari ini, saya mau tidor.", "tags": ["spelling"] }
+      ],
+      "heavy": ["kemarin saya pergi toko beli banyak barang-barang tapi uang tidak cukup sudah", "Dia punya umur dua puluh dan belajar di universitas sejak dua tahun lalu sudah", "saya mau makan sekarang dimana enak restoran", "Waktu saya kecil ibu saya selalu masak untuk kami makan malam besok"],
+      "mixed": ["Kemarin saya pergi ke {market} dan beli apel.", "Mau minum {coffee} nanti?", "{friend} saya mau datang akhir pekan ini."],
+      "passive": ["iya", "oke", "nggak tahu", "hmm", "nggak juga", "mungkin"]
+    },
+    "vi": {
+      "ok": ["Tôi thường đi bộ đi làm khi trời đẹp.", "Tối qua chúng tôi đã xem phim cùng nhau.", "Bạn có thể giới thiệu một quán ăn ngon gần đây không?", "Chị gái tôi đang học chơi đàn ghi-ta.", "Tôi đã sống ở thành phố này được ba năm rồi.", "Nếu có nhiều thời gian hơn, tôi sẽ đi du lịch nhiều hơn."],
+      "light": [
+        { "text": "Ngày mai tôi đã đi chợ.", "tags": ["tense"] },
+        { "text": "Tôi có hai quyển những sách.", "tags": ["agreement"] },
+        { "text": "Tôi đi đến ở trường mỗi ngày.", "tags": ["particle"] },
+        { "text": "Đây là nhà của tôi to.", "tags": ["word_order"] },
+        { "text": "Thầy ơi, mày mai có đến không? Nói nhanh lên.", "tags": ["register"] },
+        { "text": "Hôm nay tôi rất mêt, tôi muốn ngủ.", "tags": ["spelling"] }
+      ],
+      "heavy": ["hôm qua tôi đi cửa hàng mua nhiều đồ nhưng tiền không đủ đã sẽ", "Cô ấy có hai mươi tuổi và học ở đại học từ hai năm trước rồi đã", "tôi muốn ăn bây giờ ở đâu ngon nhà hàng", "Khi tôi nhỏ mẹ tôi luôn nấu cho chúng tôi bữa tối ngày mai"],
+      "mixed": ["Hôm qua tôi đi {market} và mua táo.", "Lát nữa bạn có muốn uống {coffee} không?", "Cuối tuần này {friend} của tôi sẽ đến chơi."],
+      "passive": ["vâng", "ừ", "không biết", "ừm", "không hẳn", "có lẽ"]
+    },
+    "th": {
+      "ok": ["ปกติฉันเดินไปทำงานถ้าอากาศดี", "เมื่อคืนเราดูหนังด้วยกัน", "ช่วยแนะนำร้านอาหารอร่อยแถวนี้หน่อยได้ไหม", "พี่สาวของฉันกำลังเรียนเล่นกีตาร์", "ฉันอยู่เมืองนี้มาสามปีแล้ว", "ถ้ามีเวลามากกว่านี้ ฉันจะเที่ยวบ่อยขึ้น"],
+      "light": [
+        { "text": "พรุ่งนี้ฉันไปตลาดแล้วเมื่อวาน", "tags": ["tense"] },
+        { "text": "ฉันมีสามหนังสือ", "tags": ["agreement"] },
+        { "text": "ฉันไปที่ใน โรงเรียนทุกวัน", "tags": ["particle"] },
+        { "text": "นี่คือบ้านใหญ่ของฉันที่", "tags": ["word_order"] },
+        { "text": "อาจารย์ มึงพรุ่งนี้มาไหม ตอบเร็วๆ", "tags": ["register"] },
+        { "text": "วันนี้ฉันเหนือยมาก อยากนอน", "tags": ["spelling"] }
+      ],
+      "heavy": ["เมื่อวาน ฉัน ไป ร้าน ซื้อ ของ เยอะ แต่ เงิน ไม่ พอ จะ แล้ว", "เธอ มี อายุ ยี่สิบ และ เรียน มหาวิทยาลัย ตั้งแต่ สอง ปี จะ", "ฉัน อยาก กิน ตอนนี้ ที่ไหน อร่อย ร้าน", "ตอน ฉัน เด็ก แม่ ฉัน ทำ อาหาร เย็น ให้ เรา พรุ่งนี้ เสมอ"],
+      "mixed": ["เมื่อวานฉันไป{market}แล้วซื้อแอปเปิล", "เดี๋ยวไปกิน{coffee}กันไหม", "สุดสัปดาห์นี้{friend}ของฉันจะมาเที่ยว"],
+      "passive": ["ค่ะ", "โอเค", "ไม่รู้", "อืม", "ก็ไม่เชิง", "อาจจะ"]
+    },
+    "hi": {
+      "ok": ["मौसम अच्छा हो तो मैं आमतौर पर पैदल ऑफ़िस जाता हूँ।", "कल रात हमने साथ में फ़िल्म देखी।", "क्या आप यहाँ पास में खाने की कोई अच्छी जगह बता सकते हैं?", "मेरी बहन गिटार बजाना सीख रही है।", "मैं इस शहर में तीन साल से रह रहा हूँ।", "अगर मेरे पास ज़्यादा समय होता, तो मैं ज़्यादा घूमता।"],
+      "light": [
+        { "text": "कल मैं बाज़ार जाता हूँ।", "tags": ["tense"] },
+        { "text": "मेरी भाई डॉक्टर है।", "tags": ["agreement"] },
+        { "text": "मैं स्कूल में जाता हूँ हर दिन।", "tags": ["particle"] },
+        { "text": "मैंने खाया खाना अभी।", "tags": ["word_order"] },
+        { "text": "सर, तू कल आएगा? जल्दी बता।", "tags": ["register"] },
+        { "text": "आज मैं बहुत थका हुवा हूँ।", "tags": ["spelling"] }
+      ],
+      "heavy": ["कल मैं दुकान जाना बहुत चीज़ खरीदना पर पैसा नहीं काफ़ी", "वह बीस साल है और यूनिवर्सिटी पढ़ता दो साल से थी", "मैं खाना चाहना अभी कहाँ अच्छा रेस्टोरेंट", "जब मैं बच्चा था मेरी माँ हमेशा हमको खाना बनाता कल"],
+      "mixed": ["कल मैं {market} गया और सेब खरीदे।", "बाद में {coffee} पीने चलोगे?", "इस वीकेंड मेरा {friend} मिलने आ रहा है।"],
+      "passive": ["हाँ", "ठीक है", "पता नहीं", "हम्म", "ज़्यादा नहीं", "शायद"]
+    }
+  }
+}

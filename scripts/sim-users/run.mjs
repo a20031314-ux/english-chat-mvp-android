@@ -39,6 +39,10 @@ const pkgVersion = JSON.parse(readFileSync("package.json", "utf8")).version;
 const API = (value("api", process.env.API_BASE) || "https://english-chat-mvp.vercel.app").replace(/\/$/, "");
 const USERS = Math.max(1, Number(value("users", 196)));
 const TURNS = Math.min(8, Math.max(1, Number(value("turns", 6))));
+// 프록시를 거쳐야 하는 작업 공간(클라우드)에서 node fetch는 프록시를 쓰지 않고 바로 나가 Vercel 앞단에 막힐 수 있다(2026-10-19 겪음).
+if ((process.env.HTTPS_PROXY || process.env.https_proxy) && process.env.NODE_USE_ENV_PROXY !== "1") {
+  console.log("⚠ HTTPS_PROXY가 있는데 NODE_USE_ENV_PROXY=1이 아니에요 — 요청이 프록시를 안 거쳐요. NODE_USE_ENV_PROXY=1 npm run sim:users …");
+}
 const CONCURRENCY = Math.max(1, Number(value("concurrency", 8)));
 const SEED = Number(value("seed", 7));
 const MAX_REQUESTS = Number(value("max-requests", 3000));
@@ -230,7 +234,7 @@ async function main() {
   const meta = {
     runId: RUN_ID, api: API, appVersion: APP_VERSION, users: built.personas.length, ran: personas.length, turns: TURNS, seed: SEED, only: ONLY,
     suites: SUITE_IDS, full: FULL, judge: opts.judge && Boolean(openaiKey()), llmPersona: opts.llmPersona && Boolean(openaiKey()),
-    requests: client.state.count, byPath: Object.fromEntries(client.state.byPath), seconds: Math.round((Date.now() - started) / 1000),
+    requests: client.state.count, edgeBlocks: client.state.edgeBlocks ?? 0, byPath: Object.fromEntries(client.state.byPath), seconds: Math.round((Date.now() - started) / 1000),
     startedAt: new Date(started).toISOString(),
   };
   mkdirSync(OUT, { recursive: true });

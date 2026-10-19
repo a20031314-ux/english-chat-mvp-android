@@ -6,7 +6,18 @@ export function makeClient({ api, maxRequests = 3000, timeoutMs = 40_000, appVer
   const state = { count: 0, byPath: new Map() };
 
   // force: 정리 요청(임시 계정·테스트 글 지우기)은 상한을 넘어도 보낸다 — 지우지 못하고 남는 것을 막는다.
-  async function call(userId, path, { method = "POST", body, query, headers = {}, timeout = timeoutMs, force = false } = {}) {
+  async function call(userId, path, opts = {}) {
+    // Vercel 앞단 보호가 몰아 보낸 요청을 잠깐 막으면(403 Forbidden, 앱의 답이 아님) 쉬었다 다시 — 앱 오류로 세지 않는다.
+    for (const wait of [3_000, 10_000, 30_000]) {
+      const res = await once(userId, path, opts);
+      if (!isEdgeBlock(res)) return res;
+      state.edgeBlocks = (state.edgeBlocks ?? 0) + 1;
+      await new Promise((resolve) => setTimeout(resolve, wait));
+    }
+    return once(userId, path, opts);
+  }
+
+  async function once(userId, path, { method = "POST", body, query, headers = {}, timeout = timeoutMs, force = false } = {}) {
     if (!force && state.count >= maxRequests) return { status: 0, ms: 0, path, error: "MAX_REQUESTS 도달 — 보내지 않음" };
     state.count += 1;
     const base = path.split("?")[0];
@@ -40,4 +51,10 @@ export function makeClient({ api, maxRequests = 3000, timeoutMs = 40_000, appVer
   }
 
   return { call, state };
+}
+
+/** 앱 서버가 아니라 Vercel 앞단이 막은 응답: {"error":{"code":"403","message":"Forbidden","id":"iad1::…"}} */
+export function isEdgeBlock(res) {
+  const e = res?.body?.error;
+  return res?.status === 403 && e && typeof e === "object" && e.message === "Forbidden" && typeof e.id === "string" && e.id.includes("::");
 }
