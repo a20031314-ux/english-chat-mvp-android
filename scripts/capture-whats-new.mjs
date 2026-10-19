@@ -646,6 +646,7 @@ async function tapAt(page, locator) {
 
 const STEPS = {
   async "promo-room"({ page, ui, locale, wait, target, mark }) {
+    // 목소리를 입히는 쇼츠: 줄마다 시각과 글자를 남기고, 말이 끝날 만큼 기다린다(make.mjs room이 TTS로 입힌다).
     const t = roomCopyFor(locale);
     page.__social = { hostMe: true, hint: true, live: true, roomOnly: true, shown: 0, revealedAt: {}, hintText: "" };
     await socialMocks(page, target, ui);
@@ -653,6 +654,10 @@ const STEPS = {
       page.__social.shown = n;
       page.__social.revealedAt[n] = Date.now();
     };
+    mark("line1Text", ROOM_LINES[target][0][1]);
+    mark("line2Text", ROOM_LINES[target][1][1]);
+    mark("questionText", HINT_QUESTION[target]);
+    mark("mumbleText", HINT_FRAGMENT[locale]);
     await page.goto(`${BASE}/?screen=rooms`, { waitUntil: "networkidle" });
     await wait(1500);
     const later = page.getByRole("button", { name: exactly(inviteCopyFor(locale).later) });
@@ -662,22 +667,25 @@ const STEPS = {
     await wait(700);
     await tapAt(page, page.locator("li", { hasText: target === "es" ? "Español ↔ 日本語" : "English ↔ 日本語" }).first().locator("button").first());
     mark("join");
-    await wait(2200);
-    reveal(1);
     await wait(2000);
+    reveal(1);
+    mark("line1");
+    await wait(6000);
     reveal(2);
-    mark("lines");
-    await wait(1800);
+    mark("line2");
+    await wait(4300);
     const line = page.locator('div[class*="z-[80]"] li > div > button.w-full').nth(1);
     const translated = page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 30000 }).catch(() => undefined);
+    mark("tap");
     await tapAt(page, line);
     await translated;
     mark("translated");
     await wait(1800);
     reveal(3);
     mark("question");
-    await wait(1600);
+    await wait(2200);
     page.__social.hintText = HINT_FRAGMENT[locale];
+    mark("mumble");
     const card = page.getByText(t.hintTry);
     for (let i = 0; i < 60 && !(await card.count()); i++) await wait(500);
     if (!(await card.count())) throw new Error("no hint card");
@@ -686,7 +694,7 @@ const STEPS = {
       const box = el.closest("div")?.parentElement ?? el.parentElement;
       return box.innerText.split("\n").map((x) => x.trim()).filter((x) => x && !x.includes("💡"))[1] ?? "";
     }).catch(() => ""));
-    await wait(2600);
+    await wait(3200);
     await tapAt(page, page.getByRole("button", { name: exactly(t.sendThis) }).last());
     mark("sent");
     await wait(2400);

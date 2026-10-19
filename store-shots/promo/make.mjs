@@ -18,7 +18,9 @@ const args = process.argv.slice(2);
 const story = args.length > 1 ? args[0] : "chat";
 const locale = args.length > 1 ? args[1] : args[0] || "ko";
 const ROOT = process.cwd();
-const DIR = story === "chat" ? path.join(ROOT, "tmp", "promo", locale) : path.join(ROOT, "tmp", "promo", story, locale);
+// talk = room 녹화에 목소리(줄마다 다른 사람)를 입힌 판.
+const SRC = story === "talk" ? "room" : story;
+const DIR = story === "chat" ? path.join(ROOT, "tmp", "promo", locale) : path.join(ROOT, "tmp", "promo", SRC, locale);
 const API = process.env.API_BASE || "https://english-chat-mvp.vercel.app";
 const ev = JSON.parse(fs.readFileSync(path.join(DIR, "events.json"), "utf8"));
 const target = locale === "en" ? "es" : "en";
@@ -87,6 +89,7 @@ COPY.invite = {
 };
 const FONT = { ko: "'Noto Sans CJK KR', sans-serif", ja: "'Noto Sans CJK JP', sans-serif", zh: "'Noto Sans CJK SC', sans-serif", hi: "'Noto Sans Devanagari', 'Noto Sans', sans-serif" };
 const STORE_LINE = { ko: "Google Play에서 만나요", en: "Get it on Google Play", ja: "Google Playで配信中", zh: "在 Google Play 下载", es: "Disponible en Google Play", hi: "Google Play पर पाएँ" };
+COPY.talk = COPY.room;
 const C = { font: FONT[locale] ?? "'Noto Sans', sans-serif", store: STORE_LINE[locale] ?? STORE_LINE.en, ...(COPY[story]?.[locale] ?? {}) };
 if (!COPY[story]?.[locale]) throw new Error(`no promo copy for ${story}/${locale}`);
 
@@ -150,6 +153,36 @@ STORIES.invite = () => ({
     [ev.space + 2.0, ev.end - 0.2, 1.2, "i5"],
   ],
 });
+// 목소리 대화판: 줄이 뜰 때 그 사람 목소리로 읽고(Yuki·Lucía는 학습 언어, 나는 막혀서 편한 말로 웅얼 → 💡 문장을 학습 언어로),
+// 세부 기능(자막 줄·번역·힌트 카드·보낸 댓글)은 확대해서 보여준다. 말이 나오는 구간은 1배속.
+// 확대 창: 자막 칸은 화면 위 1/3 아래쪽, 글줄은 왼쪽 정렬이라 창을 왼쪽에 붙인다.
+const UI_LANG = { ko: "ko-KR", ja: "ja-JP", zh: "zh-CN", es: "es-ES", hi: "hi-IN", en: "en-US" };
+const TARGET_LANG = target === "en" ? "en-US" : "es-ES";
+STORIES.talk = () => {
+  // 자막 칸(화면 위에서 43~61%)과 채팅 칸(62~75%)을 띄워 키운다.
+  const CAPS = { pop: [0.432, 0.61] };
+  const CHAT = { pop: [0.615, 0.75] };
+  return {
+    segs: [
+      [Math.max(0, ev.rooms - 1.2), ev.join + 0.4, 1.3, "r1"],
+      [ev.join + 0.4, ev.line1 - 0.1, 2, "r1"],
+      [ev.line1 - 0.1, ev.tap - 0.2, 1, "r2", CAPS],
+      [ev.tap - 0.2, ev.translated + 1.6, 1.3, "r3", CAPS],
+      [ev.question - 0.2, ev.mumble + 0.1, 1, "r4", CAPS],
+      // 힌트는 운영 응답을 기다리므로 약 2.6초로 줄인다(웅얼거림 목소리는 이 구간 처음부터 제 속도로).
+      [ev.mumble + 0.1, ev.hint - 0.5, Math.max(1, (ev.hint - 0.6 - ev.mumble) / 2.6), "r4", CAPS],
+      [ev.hint - 0.5, ev.sent - 0.1, 1, "r5", CAPS],
+      [ev.sent - 0.1, ev.sent + 2.0, 1, "r6", CHAT],
+    ],
+    voices: [
+      { text: ev.line1Text, lang: TARGET_LANG, voice: "nova", src: ev.line1 + 0.25 },
+      { text: ev.line2Text, lang: TARGET_LANG, voice: "shimmer", src: ev.line2 + 0.2 },
+      { text: ev.questionText, lang: TARGET_LANG, voice: "nova", src: ev.question + 0.2 },
+      { text: ev.mumbleText, lang: UI_LANG[locale] ?? "en-US", voice: "ash", src: ev.mumble + 0.15 },
+      { text: ev.hintText, lang: TARGET_LANG, voice: "ash", src: ev.hint + 0.6 },
+    ],
+  };
+};
 const plan = STORIES[story]();
 
 // ── 1. 장면 자르기(원본 시각) ──
@@ -207,6 +240,26 @@ await browser.close();
 
 // ── 3. 목소리: 카드·힌트의 문장을 앱 TTS로(운영 /api/tts, 24kHz 원시 PCM) ──
 let voice = null;
+// 여러 목소리: [{ wav, at(결과 영상 초) }]
+const voiceTracks = [];
+const outAt = (src) => {
+  const row = timeline.find((s) => src >= s.a && src < s.b) ?? timeline.find((s) => s.a >= src);
+  return row ? row.at + Math.max(0, src - row.a) / row.speed : 0;
+};
+for (const [i, v] of (plan.voices ?? []).entries()) {
+  if (!v.text) continue;
+  const url = `${API}/api/tts?text=${encodeURIComponent(v.text)}&lang=${v.lang}&voice=${v.voice}`;
+  const pcm = path.join(DIR, `voice-${i}.pcm`);
+  const wav = path.join(DIR, `voice-${i}.wav`);
+  try {
+    execFileSync("curl", ["-sSf", "-o", pcm, "-H", `x-rc-user: promo-voice-${locale}`, url]);
+    execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", pcm, "-af", "silenceremove=start_periods=1:start_threshold=-40dB,areverse,silenceremove=start_periods=1:start_threshold=-40dB,areverse", wav]);
+    const len = Number(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", wav]).toString());
+    voiceTracks.push({ wav, at: outAt(v.src), len, text: v.text });
+  } catch {
+    console.log(`목소리 ${i} 실패: ${v.text}`);
+  }
+}
 if (plan.voice) {
   // curl: 작업 공간 프록시에서 Node fetch가 끊길 때가 있다.
   const url = `${API}/api/tts?text=${encodeURIComponent(plan.voice)}&lang=${target === "en" ? "en-US" : "es-ES"}`;
@@ -220,12 +273,14 @@ if (plan.voice) {
 }
 
 // ── 4. ffmpeg: 장면 → 이어 붙이기 → 확대 → 프레임·자막·끝 화면·목소리 ──
+const sameZoom = (a, b) => !a?.zoom?.pop && a?.zoom && b?.zoom && JSON.stringify(a.zoom) === JSON.stringify(b.zoom);
 const parts = timeline.map((s, i) => {
   let f = `[0:v]trim=start=${s.a.toFixed(3)}:end=${s.b.toFixed(3)},setpts=(PTS-STARTPTS)/${s.speed}`;
-  if (s.zoom) {
+  if (s.zoom && !s.zoom.pop) {
     // 0.5초 동안 by배만큼 확대, 창은 zoom.x·zoom.y 비율 위치.
     const z = s.zoom;
-    f += `,scale=w='824*(1+${z.by}*min(1,t/0.5))':h=-2:eval=frame,crop=824:1830:x='(in_w-824)*${z.x}':y='(in_h-1830)*${z.y}'`;
+    // 들어갈 때 0.5초 확대, 장면 끝 0.4초에 다시 원래대로.
+    f += `,scale=w='trunc(824*(1+${z.by}*max(0,min(${sameZoom(timeline[i - 1], s) ? "1" : "min(1,t/0.5)"},${sameZoom(s, timeline[i + 1]) ? "1" : `(${s.dur.toFixed(3)}-t)/0.4`})))/2)*2':h=-2:eval=frame,crop=824:1830:x='(in_w-824)*${z.x}':y='(in_h-1830)*${z.y}'`;
   }
   return `${f},fps=25,setsar=1[p${i}]`;
 });
@@ -236,6 +291,11 @@ const inputs = ["-i", path.join(DIR, "raw.mp4"), "-loop", "1", "-t", String(tota
   ...capInputs.flatMap((k) => ["-loop", "1", "-t", String(total), "-i", path.join(DIR, `cap-${k}.png`)]),
   "-loop", "1", "-t", String(END_CARD), "-i", path.join(DIR, "end.png")];
 if (voice) inputs.push("-i", voice);
+for (const v of voiceTracks) inputs.push("-i", v.wav);
+// 확대 창(pop): 휴대폰 위에 그 부분만 화면 가로 가까이 키워 띄운다 — 글줄이 가로를 다 써서 화면째 확대하면 잘린다.
+const pops = timeline.filter((s) => s.zoom?.pop);
+const popFirst = inputs.filter((x) => x === "-i").length;
+for (const _ of pops) inputs.push("-i", path.join(DIR, "raw.mp4"));
 const endIdx = 3 + capInputs.length;
 const between = (a, b) => `between(t,${a.toFixed(3)},${b.toFixed(3)})`;
 const capWindows = Object.fromEntries(capInputs.map((k) => {
@@ -250,16 +310,36 @@ capInputs.forEach((k, i) => {
   chain += `;[${last}][${3 + i}:v]overlay=0:0:enable='${between(w[0], w[1])}'[c${i}]`;
   last = `c${i}`;
 });
+pops.forEach((s, i) => {
+  const [y0, y1] = s.zoom.pop;
+  const h = Math.round(((y1 - y0) * 1830) / 2) * 2;
+  const W = 1000;
+  const top = Math.round(PHONE.y + ((y0 + y1) / 2) * PHONE.h - ((h * W) / 824 + 16) / 2);
+  chain += `;[${popFirst + i}:v]trim=start=${s.a.toFixed(3)}:end=${s.b.toFixed(3)},setpts=(PTS-STARTPTS)/${s.speed},crop=824:${h}:0:${Math.round(y0 * 1830)},scale=${W}:-2,pad=iw+16:ih+16:8:8:color=0x7CC4FF,format=rgba,fade=in:st=0:d=0.3:alpha=1,fps=25,setpts=PTS+${s.at.toFixed(3)}/TB[pop${i}]`;
+  chain += `;[${last}][pop${i}]overlay=x=${(1080 - W - 16) / 2}:y=${top}:eof_action=pass:enable='${between(s.at, s.at + s.dur)}'[q${i}]`;
+  last = `q${i}`;
+});
 chain += `;[${endIdx}:v]setpts=PTS-STARTPTS+${phoneDur.toFixed(3)}/TB[endv];[${last}][endv]overlay=0:0:enable='gte(t,${phoneDur.toFixed(3)})'[v]`;
 const phoneScale = `[phone]scale=${PHONE.w}:${PHONE.h},tpad=stop_mode=clone:stop_duration=${END_CARD}[phonev]`;
 const cardAt = (timeline.find((s) => s.zoom)?.at ?? 0) + (plan.voiceIn ?? 0);
 const audio = voice
   ? `;[${endIdx + 1}:a]adelay=${Math.round(cardAt * 1000)}|${Math.round(cardAt * 1000)},apad,atrim=0:${total.toFixed(3)}[a]`
   : "";
-const filter = [...parts, concat, phoneScale, chain].join(";") + audio;
+let mix = "";
+if (voiceTracks.length) {
+  const first = endIdx + 1 + (voice ? 1 : 0);
+  const labels = voiceTracks.map((v, i) => {
+    const ms = Math.round(v.at * 1000);
+    mix += `;[${first + i}:a]adelay=${ms}|${ms},apad=whole_dur=${total.toFixed(3)}[v${i}]`;
+    return `[v${i}]`;
+  });
+  mix += `;${labels.join("")}amix=inputs=${labels.length}:normalize=0:duration=longest,atrim=0:${total.toFixed(3)}[a]`;
+}
+const filter = [...parts, concat, phoneScale, chain].join(";") + audio + mix;
 const file = path.join(DIR, `promo-${story}-${locale}.mp4`);
 execFileSync("ffmpeg", ["-loglevel", "error", "-y", ...inputs, "-filter_complex", filter, "-map", "[v]",
-  ...(voice ? ["-map", "[a]", "-c:a", "aac", "-b:a", "160k"] : []),
+  ...(voice || voiceTracks.length ? ["-map", "[a]", "-c:a", "aac", "-b:a", "160k"] : []),
   "-t", total.toFixed(3), "-r", "30", "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-pix_fmt", "yuv420p", "-movflags", "+faststart", file]);
 console.log(`${file}  ${total.toFixed(1)}초`);
+for (const v of voiceTracks) console.log(`목소리 ${v.at.toFixed(1)}s +${v.len.toFixed(1)}s  ${v.text}`);
 console.log(timeline.map((s) => `${s.cap.padEnd(6)} ${s.at.toFixed(1)}–${(s.at + s.dur).toFixed(1)}s x${s.speed}${s.zoom ? " 확대" : ""}`).join("\n"));
