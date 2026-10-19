@@ -44,6 +44,7 @@
   기준 `scripts/sim-users/baselines/tiers.json`. **답 평가는 Claude가**(2026-10-20, 모델 키·서버 변경 없음): `judge-export.mjs <실행>` → 묶음마다 에이전트가 `judge/RUBRIC.md`대로 verdicts → 큰 문제만 다른 에이전트가 `confirm.verdicts.json` → `tiers-report.mjs`가 합침. 다음: 벗어난 칸만 2·3·4차.
   **이 작업 공간(클라우드)에서는 `NODE_USE_ENV_PROXY=1`을 붙인다** — 없으면 node가 프록시 없이 바로 나가 Vercel 앞단에 막힘(403 Forbidden, 2026-10-19). 실제 앱과는 무관.
   **부하 점검**(2026-10-20): `load.mjs room|rooms|model`(자동 멈춤: 오류율 10%·앞단 막힘·p95 10초, 임시 계정 숨김·삭제), `load-voice.mjs --people N`(실제 앱 브라우저, 가짜 마이크, 연결 수·받은 소리). 결과 `hub/drafts/load-2026-10-20.md`. 저장소 무료 한도 때문에 1000명은 요금제 확인 뒤.
+  **예약 실행**(2026-10-20, 사용자 요청 — 사용자가 적은 지금 자주): "가상 사용자 기능 점검" 6시간마다(모델 거의 없음) · "가상 사용자 채팅 점검" 하루 2번(채팅·8칸 98명 + Claude 평가 표본, 회당 $3~5) · "가상 사용자 화면 점검" 하루 1번. 달라진 것만 `hub/reports.md`, 큰 문제·Upstash 한도 초과 의심은 폰 알림. 남은 계정은 `cleanup.mjs`. 사용자가 늘면 빈도를 줄인다.
   **새 서버 기능을 만들면 `suites/`에 묶음을 하나 더한다.** 시드 문장 `bank.json`은 원어민 검수 전. 테스트 `npm run test:sim`.
 
 ## 끝낼 때
