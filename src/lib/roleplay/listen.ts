@@ -1,5 +1,6 @@
 import type { PracticeGoal } from "@/lib/learner/practice";
 import { TURN_NOT_STARTED, hearFrame } from "./hearFrame.ts";
+import { isIosApp } from "@/lib/platform";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import {
@@ -147,9 +148,42 @@ const NO_SPEECH_MS = 12000;
 let analysisCtx: AudioContext | null = null;
 
 function analysisContext(): AudioContext {
+  // iOS puts a context into "interrupted" (or closes it) when the audio session
+  // switches between the tutor's voice and the microphone. An analyser on such a
+  // context reads nothing but zeros, every turn then looks silent and is sent as
+  // "…". A fresh one runs: Capacitor lets media start without a tap.
+  const state = analysisCtx?.state as string | undefined;
+  if (analysisCtx && (state === "closed" || state === "interrupted")) {
+    void analysisCtx.close().catch(() => undefined);
+    analysisCtx = null;
+  }
   if (!analysisCtx) analysisCtx = new AudioContext();
   void analysisCtx.resume().catch(() => undefined);
   return analysisCtx;
+}
+
+/**
+ * How loud this microphone is, for deciding what counts as speech.
+ *
+ * The speech level in hearFrame.ts (0.02) was set on Android phones. iPhones run
+ * the microphone through Apple's voice processing (echo cancellation, noise
+ * suppression), which hands the page a much quieter signal: quiet syllables fell
+ * under the line, a turn was cut after "I have a", and a whole answer could read
+ * as silence. On iOS the line follows the room instead — a few times the quiet
+ * heard in the first moments, never above Android's.
+ */
+const IOS_MIN_SPEECH_RMS = 0.004;
+const CALIBRATION_MS = 400;
+
+function makeLevelScaler(ios: boolean): (level: number, sinceStart: number) => number {
+  if (!ios) return (level) => level;
+  let floor = Infinity;
+  return (level, sinceStart) => {
+    if (sinceStart < CALIBRATION_MS && level > 0) floor = Math.min(floor, level);
+    const quiet = Number.isFinite(floor) ? floor : IOS_MIN_SPEECH_RMS / 4;
+    const threshold = Math.min(0.02, Math.max(IOS_MIN_SPEECH_RMS, quiet * 4));
+    return level * (0.02 / threshold);
+  };
 }
 
 
@@ -181,9 +215,12 @@ function watchForVoice(
 
   const samples = new Float32Array(analyser.fftSize);
   const startedAt = Date.now();
+  const scale = makeLevelScaler(isIosApp());
   let turn = TURN_NOT_STARTED;
   let done = false;
   let silent = false;
+  /** Any frame with sound in it at all. A real microphone is never exactly 0. */
+  let anySignal = false;
 
   const finish = () => {
     if (done) return;
@@ -201,8 +238,10 @@ function watchForVoice(
     analyser.getFloatTimeDomainData(samples);
     let sum = 0;
     for (const sample of samples) sum += sample * sample;
-    const level = Math.sqrt(sum / samples.length);
     const now = Date.now();
+    const raw = Math.sqrt(sum / samples.length);
+    if (raw > 0) anySignal = true;
+    const level = scale(raw, now - startedAt);
 
     const wasSpeaking = turn.spoke;
     const heard = hearFrame(turn, level, now);
@@ -220,7 +259,10 @@ function watchForVoice(
       return;
     }
     if (!turn.spoke && now - startedAt >= noSpeechMs) {
-      silent = true;
+      // Silence only counts when the analyser was actually hearing the room.
+      // All zeros means it was deaf (see analysisContext), and the recording
+      // itself may well hold an answer — send it rather than throw it away.
+      silent = anySignal;
       finish();
     }
   }, 60);

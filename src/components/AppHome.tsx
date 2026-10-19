@@ -32,7 +32,7 @@ import { useInbox } from "@/components/rooms/RoomDm";
 import { useGroups } from "@/components/rooms/RoomGroups";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { readMiniRoom, subscribeMiniRoom } from "@/lib/rooms/miniRoom";
-import { socialFeaturesEnabled } from "@/lib/platform";
+import { isIosApp, socialFeaturesEnabled } from "@/lib/platform";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
 import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
@@ -119,6 +119,14 @@ function AppHomeInner({
   // 하단에서 켜져 보일 칸: 채팅·통화는 대화 안의 화면.
   const bottomTab: AppTab = socialOn && TALK_SCREENS.includes(shownTab) ? "talk" : shownTab;
   const insideTalk = socialOn && (shownTab === "chat" || shownTab === "roleplay");
+
+  useEffect(() => {
+    // iOS: 화면은 1배로 고정 — 글자가 16px보다 작은 입력칸을 누르면 WebKit이 확대하고
+    // 돌아오지 않는다. 안드로이드는 손대지 않는다.
+    if (!isIosApp()) return;
+    const meta = document.querySelector('meta[name="viewport"]');
+    meta?.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no");
+  }, []);
 
   useEffect(() => {
     document.documentElement.lang = locale;

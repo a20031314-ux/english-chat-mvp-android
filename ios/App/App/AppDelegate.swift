@@ -52,6 +52,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 /// 상태 표시줄 아래에서 시작하도록 짜여 있어(env(safe-area-inset-*)를 거의 안 씀),
 /// 웹뷰를 화면 전체에 깔면 맨 위 줄이 노치에 가려진다. 바깥 여백은 앱 배경과 같은 검정.
 /// Main.storyboard의 첫 화면이 이 클래스다.
+///
+/// 크기는 Auto Layout이 아니라 viewDidLayoutSubviews에서 직접 정한다. 처음 판(2026-10-18)은
+/// 제약으로 붙였는데, 웹뷰가 크기 없이 먼저 페이지를 그린 뒤 줄어들면서 화면이 10%쯤
+/// 확대된 채로 남아 오른쪽·아래가 잘렸다(아이폰 13 mini, 2026-10-20 TestFlight 83.2).
+/// 그래서 처음부터 안전 영역 크기로 만들고, 확대는 1배로 묶는다.
 class SafeAreaHostViewController: UIViewController {
     private let bridgeController = CAPBridgeViewController()
 
@@ -61,16 +66,28 @@ class SafeAreaHostViewController: UIViewController {
         addChild(bridgeController)
         let webArea: UIView = bridgeController.view
         webArea.backgroundColor = .black
-        webArea.translatesAutoresizingMaskIntoConstraints = false
+        webArea.frame = view.bounds.inset(by: view.safeAreaInsets)
+        webArea.autoresizingMask = []
         view.addSubview(webArea)
-        let guide = view.safeAreaLayoutGuide
-        NSLayoutConstraint.activate([
-            webArea.topAnchor.constraint(equalTo: guide.topAnchor),
-            webArea.bottomAnchor.constraint(equalTo: guide.bottomAnchor),
-            webArea.leadingAnchor.constraint(equalTo: guide.leadingAnchor),
-            webArea.trailingAnchor.constraint(equalTo: guide.trailingAnchor),
-        ])
         bridgeController.didMove(toParent: self)
+        lockZoom()
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let target = view.bounds.inset(by: view.safeAreaInsets)
+        if bridgeController.view.frame != target {
+            bridgeController.view.frame = target
+        }
+        lockZoom()
+    }
+
+    private func lockZoom() {
+        guard let scrollView = bridgeController.webView?.scrollView else { return }
+        scrollView.contentInsetAdjustmentBehavior = .never
+        scrollView.minimumZoomScale = 1
+        scrollView.maximumZoomScale = 1
+        if scrollView.zoomScale != 1 { scrollView.setZoomScale(1, animated: false) }
     }
 
     override var preferredStatusBarStyle: UIStatusBarStyle { .lightContent }
