@@ -25,7 +25,9 @@
 6. **사용법·안내는 그림 먼저:** 설명은 단계별 스크린샷(UI 언어별) + 한두 줄. 긴 글로 설명하지 않는다(사용자 결정 2026-10-16).
    화면이 바뀌면 `capture-whats-new.mjs guide`로 사용법 그림도 다시 찍는다.
 7. **PRODUCT.md:** 화면·기능·한도·저장하는 것이 바뀌면 같은 커밋에서 고친다.
-8. **비용:** 모델을 부르는 서버 경로는 `meterRequest(request, "<op>")`, op는 `modelCalls.ts`(호출 횟수)와 `billing/opCost.ts`(단가)에 — 빠지면 CI `cost`가 실패.
+8. **저장 데이터:** 서버에 새 키 묶음을 만들면 `scripts/data-map.json`에 기능·누구 것·계정 지울 때 한 줄(없으면 CI `data-map` 실패), 지도는 `hub/data-map.md`에 저절로.
+   점검(가상 사용자)은 `simcheck-` id만 쓰고 끝날 때 지운다(`sim-users/forget.mjs`).
+9. **비용:** 모델을 부르는 서버 경로는 `meterRequest(request, "<op>")`, op는 `modelCalls.ts`(호출 횟수)와 `billing/opCost.ts`(단가)에 — 빠지면 CI `cost`가 실패.
    요금 한도에 걸리는 기능(채팅 한 통에 따라붙는 호출 등)은 `opCost.ts` `CHAT_MESSAGE_OPS`·`PACK`에도. 결과는 push 뒤 `hub/costs.md`에 저절로.
 
 ## 커밋·푸시할 때 (브라우저 확인, AGENTS.md)

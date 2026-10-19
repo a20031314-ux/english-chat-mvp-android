@@ -38,6 +38,10 @@
 - **손익 계산 블록** `npm run sim:economics [-- --write]`(`scripts/sim-users/economics.mjs`, 2026-10-20): 행동 유형 6개(가볍게·꾸준히·열심히·한도 꽉·말하는 방 위주·3일 쓰고 떠남)를
   요금 5개(무료+광고·라이트·플러스·프리미엄 지금/전환 후)로 한 달 돌려 원가·수입·손익분기(본전 사용률·필요 광고 단가·본전 전환율·고정비 메울 가입자 수·민감도)를 `hub/economics.md`에.
   한도·단가·광고 규칙은 코드(plans·opCost·ads.ts, `ADS_*` 환경 변수)에서, 행동·비율·채움률·전환율·부가세는 `economics.json`(가정). 옵션 `--ecpm low|mid|high --conv --chat-won --vat --fill --fixed --ads-*`. 네트워크 없음.
+- **점검 데이터 정리**(2026-10-20): run·screens·load·load-voice는 끝날 때 `/api/simcheck/forget`으로 자기 실행(`simcheck-<실행>-*`) 키를 지운다(`--keep-data`면 남김).
+  손으로: `node scripts/sim-users/forget.mjs <실행>- [--dry-run]` · 전부 `--all`(다른 점검이 돌지 않을 때). 하루 40번까지. 10-20에 쌓여 있던 14,057개 지움.
+- **데이터 지도** `hub/data-map.md`(`scripts/data-map.mjs`, 설명은 `scripts/data-map.json`, CI `data-map`): 서버가 저장하는 키 묶음·보관·계정 지울 때. 허브 페이지 "앱 구조" 칸.
+  운영 저장소 정리 `node --experimental-strip-types scripts/data-sweep.mjs [--delete-test] [--delete-orphans 묶음,…]`(PC, KV 키) — 코드에 없는 키는 보고만, 사용자 확인 뒤 지움.
   **기능 화면 찍기** `npm run sim:screens -- [--combos ja:ko,en:ja,es:ar,en:ko] [--scenes …]`(www 필요): 33장면(채팅·문장분석·단어장(노트 안)·지도·미션·오늘 해볼 것·자라는 중·직접 묻기·
   내 표현·통화·영상·사용법·의견·프로필·편집·방 목록·방 안·댓글·방장 프로필·노트·노트 단어장·사람·사람 프로필·초대 링크 환영·메시지·1:1·단체방)을 실제 입력으로 찍고,
   `node scripts/sim-users/gallery.mjs <폴더> [--suites <묶음 실행>]`로 그림을 담은 한 장 갤러리. 메시지 장면은 숨김 계정 3개(나·방장·친구)로 대화·통화 기록·단체방을 만들고 끝에 지움.

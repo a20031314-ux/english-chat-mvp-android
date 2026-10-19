@@ -1,0 +1,75 @@
+# 데이터 지도 (자동 생성)
+
+> **손으로 고치지 마세요.** `node scripts/data-map.mjs`가 서버 코드(`src/lib/server`·`src/app/api`)의 키 문자열과 저장 호출에서 만들고,
+> 키 묶음마다의 설명만 `scripts/data-map.json`에서 가져옵니다. 설명 없는 새 키가 생기거나 코드에서 키가 사라지면 CI(`data-map`)가 실패합니다.
+> 운영 저장소를 이 지도와 맞춰 보고 정리하는 것은 `scripts/data-sweep.mjs`(KV 키 필요, PC). 점검 데이터는 점검이 끝날 때 저절로 지워집니다(`/api/simcheck/forget`).
+
+## 저장하는 것
+
+| 기능 | 키 | 누구 것 | 보관 | 계정 지울 때 | 무엇 | 코드 |
+|---|---|---|---|---|---|---|
+| 게시판 | `board:v1` | 모두 함께 | 2시간 · 2일 · 3650일 · 영구 | 지움 | 글·댓글·글쓴이별 하루/시간 횟수 | `boardStore.ts` |
+| 계정 | `account:v1` | 계정 | 10분 · 1시간 · 400일 · 영구 | 지움 | 계정 줄·아이디/이메일/Google 연결·사진·이메일 코드·로그인 실패 수, 지울 학습 id 목록(purge) | `accountStore.ts` |
+| 광고 | `ads:tx` | 운영 | 7일 | 해당 없음 | 보상형 광고 거래 번호(같은 보상 두 번 막기) | `entitlementStore.ts` |
+| 광고 | `usage:adreward` | 학습자 한 명 | 3일 | 지움(주 1회 정리) | 오늘 본 보상형 광고 수 | `entitlementStore.ts` |
+| 구독 | `rc:plan` | 학습자 한 명 | 5분 | 해당 없음 | RevenueCat 요금 확인 캐시(5분) | `revenueCat.ts` |
+| 내 표현 | `learnerLedger:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 표현 장부(쓴 표현·횟수, 언어별) | `ledgerStore.ts` |
+| 노트 | `notePlace:v1` | 모두 함께 | 영구 | 해당 없음 | 노트 자리 찾기 결과(언어별 공유, 재사용) | `api/notes/place/route.ts` |
+| 단체방·팀 | `grp:v1` | 방·대화 | 400일 · 5초 · 7일 · 계산(group ? groupTtl(group) : GROU) · 계산(groupTtl(group)) · 계산(ttl) | 지움(나가기) | 단체방·팀·초대·줄·잠금 | `api/groups/route.ts` `groupStore.ts` |
+| 말하는 방 | `room:ban` | 방·대화 | 6시간 | 해당 없음 | 방에서 내보낸 사람 | `roomStore.ts` |
+| 말하는 방 | `room:grant` | 방·대화 | 1분 | 해당 없음 | 말하기 자리 올리기 신호 | `roomStore.ts` |
+| 말하는 방 | `room:index` | 방·대화 | 6시간 | 해당 없음 | 열린 방 목록 | `roomStore.ts` |
+| 말하는 방 | `room:lines` | 방·대화 | 6시간 | 해당 없음 | 방 자막 줄(최근 300) | `roomStore.ts` |
+| 말하는 방 | `room:m` | 방·대화 | 30초 · 5초 | 해당 없음 | 방에 있는 사람(30초마다 갱신) | `roomStore.ts` |
+| 말하는 방 | `room:meta` | 방·대화 | 6시간 | 해당 없음 | 방 정보 | `roomStore.ts` |
+| 말하는 방 | `room:parked` | 방·대화 | 30일 | 해당 없음 | 잠시 닫은 방(다시 열기용) | `roomStore.ts` |
+| 말하는 방 | `room:peers` | 방·대화 | 6시간 | 해당 없음 | 방 연결 목록 | `roomStore.ts` |
+| 말하는 방 | `room:seq` | 방·대화 | 6시간 | 해당 없음 | 줄 차례 번호 | `roomStore.ts` |
+| 말하는 방 | `room:sig` | 방·대화 | 2분 | 해당 없음 | 소리 연결 신호 | `roomStore.ts` |
+| 말하는 방 | `roomhint:v1` | 학습자 한 명 | 2일 | 해당 없음 | 💡 힌트 하루 횟수 | `roomHint.ts` |
+| 메시지(1:1) | `dm:v1` | 방·대화 | 30일 | 남음(30일 뒤 만료) | 1:1 대화·요청·차례 번호 | `dmStore.ts` |
+| 비용 | `usage:op` | 학습자 한 명 | 45일 | 지움(주 1회 정리) | 기능별 사용 횟수(비용 보고, 일별) | `entitlementStore.ts` |
+| 비용 | `usage:tok` | 운영 | 45일 | 해당 없음 | 기능별 잰 토큰(일별, 사람 없음) | `meterRequest.ts` |
+| 사람·팔로우 | `social:v1` | 계정 | 60일 · 90일 · 영구 | 지움(일부: 접속 기록) | 팔로우·차단·관계·신고·접속·도운 수 | `presenceStore.ts` `socialStore.ts` |
+| 영상 | `usage:trial` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 영상 체험 쓴 것 | `entitlementStore.ts` |
+| 영상 | `usage:video` | 학습자 한 명 | 70일 | 지움(주 1회 정리) | 영상 준비 사용(월별) | `entitlementStore.ts` |
+| 영상 | `videoLine:v1` | 모두 함께 | ?(코드에서 못 읽음) | 해당 없음 | 자막 줄 풀이(영상·언어별 공유) | `subtitleGlossStore.ts` |
+| 영상 | `videoTranscript:v1` | 모두 함께 | 400일 | 해당 없음 | 영상 자막(언어별 공유) | `videoTranscriptStore.ts` |
+| 영상 | `videoTranscripts:v1` | 모두 함께 | 400일 | 해당 없음 | 자막 있는 영상 목록 | `videoTranscriptStore.ts` |
+| 오늘의 팩 | `pack:v1` | 학습자 한 명 | 4일 | 남음(4일 뒤 만료) | 오늘의 팩 진행 | `packStore.ts` |
+| 의견 보내기 | `feedback:v1` | 운영 | 120일 · 2일 · 90일 | 남음(90일) | 사용자가 보낸 의견·그림·반영 카드 | `feedbackFixStore.ts` `feedbackStore.ts` |
+| 자라는 중 | `growth:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 표현별 자라는 기록(언어별) | `growthStore.ts` |
+| 자라는 중 | `selfcheck:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 스스로 확인 기록(언어별) | `selfCheckStore.ts` |
+| 자유 통화 | `rp:daily` | 학습자 한 명 | 2일 | 해당 없음 | 오늘 쓴 자유 통화 분 | `entitlementStore.ts` |
+| 자유 통화 | `usage:calls` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 통화 횟수(평생) | `entitlementStore.ts` |
+| 자유 통화 | `usage:callsec` | 학습자 한 명 | 70일 | 지움(주 1회 정리) | 통화 초(월별) | `entitlementStore.ts` |
+| 자유 통화 | `usage:rptrial` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 처음 20포인트 체험 쓴 양 | `entitlementStore.ts` |
+| 점검 | `simforget:v1` | 점검 | 2일 | 해당 없음 | 점검 데이터 지우기 하루 횟수 | `simData.ts` |
+| 지도·미션 | `curriculum:` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 학습 지도·이전 지도·미션·약점(언어별) | `curriculumStore.ts` `weakPointStore.ts` |
+| 채팅 | `brief:v1` | 학습자 한 명 | 계산(brief.notes.length ? BRIEF_TTL) | 지움(주 1회 정리) | 튜터에게 주는 학습자 요약(짧게 캐시) | `learnerBrief.ts` |
+| 채팅 | `usage:chat` | 학습자 한 명 | 3일 | 해당 없음 | 오늘 보낸 채팅 수 | `entitlementStore.ts` |
+| 친구 초대 | `invite:v1` | 계정 | 400일 · 40일 · 60일 · 영구 | 지움 | 초대 코드·받은 사람·보상·월 횟수 | `inviteLinkStore.ts` `inviteRewardStore.ts` |
+| 통화·오늘의 팩(문장 은행) | `bank:last` | 모두 함께 | 70일 | 해당 없음 | 은행 문장이 마지막으로 쓰인 날(언어별) | `entitlementStore.ts` |
+| 통화·오늘의 팩(문장 은행) | `bank:said` | 모두 함께 | 영구 | 해당 없음 | 은행 문장이 쓰인 횟수(언어별, 평생) | `entitlementStore.ts` |
+| 통화·오늘의 팩(문장 은행) | `bank:written` | 모두 함께 | 90일 | 해당 없음 | 모델이 새로 쓴 대사 모음(나중에 은행 후보) | `entitlementStore.ts` |
+| 포인트 | `points:bought` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 산 포인트 | `entitlementStore.ts` |
+| 포인트 | `points:credited` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 이미 넣은 구매 거래(두 번 막기) | `entitlementStore.ts` |
+| 포인트 | `points:hold` | 학습자 한 명 | 6시간 | 해당 없음 | 통화 중 잡아 둔 포인트 | `entitlementStore.ts` |
+| 포인트 | `points:rpcarry` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 통화 남은 초 이월(월별) | `entitlementStore.ts` |
+| 포인트 | `points:rplast` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 마지막 통화 차감 | `entitlementStore.ts` |
+| 포인트 | `points:rpsession` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 통화 세션별 차감 | `entitlementStore.ts` |
+| 학습 지표 | `lm:asr` | 학습자 한 명 | 5분 | 지움(주 1회 정리) | 받아쓰기 확신도를 턴과 잇는 잠깐의 기록 | `learnerMetrics.ts` |
+| 학습 지표 | `lm:events` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 턴마다 잰 값(말 없이, 월별) | `learnerMetrics.ts` |
+| 학습 지표 | `lm:lastturn` | 학습자 한 명 | 1시간 | 해당 없음 | 세션의 마지막 턴 시각 | `learnerMetrics.ts` |
+| 학습 지표 | `lm:optout` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 지표 기록 거부 | `learnerMetrics.ts` |
+| 학습 지표 | `lm:session` | 학습자 한 명 | 400일 | 해당 없음 | 세션 요약 | `learnerMetrics.ts` |
+| 학습 지표 | `lm:text` | 학습자 한 명 | 365일 | 지움(주 1회 정리) | 문장 원문 — LEARNER_TEXT_STORE=on일 때만(지금 꺼짐) | `learnerMetrics.ts` |
+| 학습자 프로필 | `learnerComprehension:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 이해한 표현 기록(언어별) | `learnerProfileStore.ts` |
+| 학습자 프로필 | `learnerProfile:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 실수 경향·턴 결과(언어별) | `learnerProfileStore.ts` |
+
+## 읽는 법
+
+- **누구 것**: 학습자 한 명(익명 id `rc:…` 또는 계정의 학습 id) · 계정 · 모두 함께(언어별 공유 통계) · 방·대화 · 운영 · 점검.
+- **보관**: 저장 호출에 적힌 만료. `영구`는 만료 없이 남는다는 뜻 — 지울 길(계정 삭제·정리)이 있는지 확인할 곳.
+- **계정 지울 때**: 지움(바로) / 지움(주 1회 정리 — `/api/account/purge` 예약 실행이 학습 id의 키를 훑어 지움) / 남음(기한 뒤 만료) / 해당 없음.
+- 점검 데이터는 키 이름에 `simcheck-`가 든 것(가상 사용자). 실제 사용자 id에는 이 글자가 없다.

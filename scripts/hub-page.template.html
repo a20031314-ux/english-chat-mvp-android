@@ -101,6 +101,20 @@ details.about[open] summary { margin-bottom: 8px; }
 @media (max-width: 520px) { .entry summary { grid-template-columns: auto 1fr; } .entry .title { grid-column: 1 / -1; } }
 .decisions ul { margin: 0; padding-left: 18px; display: grid; gap: 8px; }
 .how { font-size: 13px; color: var(--muted); }
+.structure { margin: 0 0 18px; }
+.map-tools { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 10px; }
+.map-tools button { font: inherit; font-size: 12.5px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
+.map-tools button[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+.map-view { margin-left: auto; display: inline-flex; gap: 6px; }
+.map-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 10px; }
+.map-card { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; background: var(--surface); min-width: 0; }
+.map-top { display: flex; justify-content: space-between; gap: 8px; align-items: baseline; }
+.map-key { font-family: var(--font-mono); font-size: 13px; font-weight: 500; overflow-wrap: anywhere; }
+.map-feature { font-size: 12px; color: var(--muted); text-align: right; }
+.map-what { margin: 6px 0; font-size: 13px; }
+.map-card dl { display: grid; grid-template-columns: auto 1fr; gap: 2px 10px; margin: 0; font-size: 12px; }
+.map-card dt { color: var(--muted); }
+.map-card dd { margin: 0; overflow-wrap: anywhere; }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
 </style>
 
@@ -117,6 +131,13 @@ details.about[open] summary { margin-bottom: 8px; }
   <div class="ask" id="ask" hidden></div>
 
   <section aria-label="역할" class="lanes" id="lanes"></section>
+
+  <section class="panel structure" aria-labelledby="map-h" id="structure" hidden>
+    <h2 id="map-h">앱 구조 · 저장하는 데이터 <small>(hub/data-map.md, 코드에서 자동)</small></h2>
+    <div class="map-tools" role="group" aria-label="누구 것으로 거르기" id="map-filter"></div>
+    <div id="map" class="md"></div>
+    <p class="how">키 묶음마다 기능·누구 것·보관 기간·계정을 지울 때 어떻게 되는지. 새 키에 설명이 없으면 CI가 실패하고, 점검 데이터(<code>simcheck-</code>)는 점검이 끝날 때 지워집니다.</p>
+  </section>
 
   <div class="lower">
     <section class="panel" aria-labelledby="log-h">
@@ -239,6 +260,37 @@ document.getElementById("log").innerHTML = HUB.logs.map((e, i) => `
     <summary><span class="date">${esc(e.date)}</span><span class="role-tag" style="--role:${ROLE_COLOR[e.role] || "var(--accent)"}">${esc(e.role)}</span><span class="title">${inline(e.title)}</span></summary>
     <div class="md">${md(e.body)}</div>
   </details>`).join("") || `<div class="empty">아직 기록이 없습니다.</div>`;
+
+// 앱 구조: 데이터 지도. "누구 것"으로 거르고, 보는 방식(카드·표)을 고른다.
+if (HUB.dataMap) {
+  const lines = HUB.dataMap.split("\n").filter((l) => l.startsWith("|"));
+  const [head, sep, ...rows] = lines;
+  const cells = (row) => row.replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
+  const scopeOf = (row) => cells(row)[2] ?? "";
+  const scopes = ["전체", ...new Set(rows.map(scopeOf))];
+  let pick = "전체";
+  let view = "card";
+  try { view = localStorage.getItem("hubMapView") || "card"; } catch {}
+  const card = (row) => {
+    const [feature, key, scope, ttl, onDelete, what, code] = cells(row);
+    return `<div class="map-card"><div class="map-top"><span class="map-key">${inline(key)}</span><span class="map-feature">${inline(feature)}</span></div>
+      <div class="map-what">${inline(what)}</div>
+      <dl><dt>누구 것</dt><dd>${inline(scope)}</dd><dt>보관</dt><dd>${inline(ttl)}</dd><dt>계정 지울 때</dt><dd>${inline(onDelete)}</dd><dt>코드</dt><dd>${inline(code)}</dd></dl></div>`;
+  };
+  const draw = () => {
+    const shown = rows.filter((r) => pick === "전체" || scopeOf(r) === pick);
+    document.getElementById("map").innerHTML = view === "table" ? md([head, sep, ...shown].join("\n")) : `<div class="map-cards">${shown.map(card).join("")}</div>`;
+    document.querySelectorAll("#map-filter button[data-scope]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.scope === pick)));
+    document.querySelectorAll("#map-filter button[data-view]").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === view)));
+  };
+  document.getElementById("map-filter").innerHTML =
+    scopes.map((s) => `<button type="button" data-scope="${esc(s)}">${esc(s)} ${s === "전체" ? rows.length : rows.filter((r) => scopeOf(r) === s).length}</button>`).join("") +
+    `<span class="map-view"><button type="button" data-view="card">카드</button><button type="button" data-view="table">표</button></span>`;
+  document.querySelectorAll("#map-filter button[data-scope]").forEach((b) => b.addEventListener("click", () => { pick = b.dataset.scope; draw(); }));
+  document.querySelectorAll("#map-filter button[data-view]").forEach((b) => b.addEventListener("click", () => { view = b.dataset.view; try { localStorage.setItem("hubMapView", view); } catch {} draw(); }));
+  draw();
+  document.getElementById("structure").hidden = false;
+}
 
 document.getElementById("decisions").innerHTML = md(HUB.state["계속 지키는 결정"]);
 document.getElementById("rules").innerHTML = Object.entries(HUB.rules || {})

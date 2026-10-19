@@ -77,7 +77,14 @@ try {
 }
 
 const rules = sections(read("RULES.md"));
-const data = { state, rules, roles, inbox, logs, commit, builtAt: new Date().toISOString() };
+// 앱 구조 탭: 자동 생성된 데이터 지도(scripts/data-map.mjs)의 표.
+let dataMap = "";
+try {
+  dataMap = sections(read("data-map.md"))["저장하는 것"] ?? "";
+} catch {
+  // 지도가 아직 없으면 탭을 비워 둔다.
+}
+const data = { state, rules, roles, inbox, logs, dataMap, commit, builtAt: new Date().toISOString() };
 const template = fs.readFileSync(path.join(ROOT, "scripts", "hub-page.template.html"), "utf8");
 const html = template.replace("/*HUB_DATA*/null", JSON.stringify(data).replace(/</g, "\\u003c"));
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
