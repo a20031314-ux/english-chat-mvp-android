@@ -45,7 +45,7 @@ if ((process.env.HTTPS_PROXY || process.env.https_proxy) && process.env.NODE_USE
 }
 const CONCURRENCY = Math.max(1, Number(value("concurrency", 8)));
 const SEED = Number(value("seed", 7));
-const MAX_REQUESTS = Number(value("max-requests", 3000));
+const MAX_REQUESTS = Number(value("max-requests", 8000));
 const APP_VERSION = value("app-version", pkgVersion);
 const ONLY = value("only", "")
   .split(",")

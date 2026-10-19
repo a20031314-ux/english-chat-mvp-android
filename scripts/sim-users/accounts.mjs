@@ -24,7 +24,8 @@ export function makeAccounts({ call, userId, step, prefix, persona }) {
   const people = [];
 
   async function signup(tag, { nickname, bio = "" } = {}) {
-    const uid = `${userId}-${tag}`;
+    // 묶음마다 다른 이름(한 사람이 여러 묶음을 돌 때, 앞 묶음 계정 삭제가 실패해도 겹치지 않게).
+    const uid = `${userId}-${prefix}-${tag}`;
     const username = `simchk${shortId(uid)}${tag}`.slice(0, 20);
     const res = await call(uid, "/api/account/password/signup", { body: { username, password: `sim-${shortId(username)}-pw!` } });
     const issues = checkHttp(prefix, res);
