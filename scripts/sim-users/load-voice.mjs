@@ -15,6 +15,7 @@ import fs from "node:fs";
 import http from "node:http";
 import path from "node:path";
 import { shortId, ROOM_CODE } from "./accounts.mjs";
+import { forgetAtEnd } from "./forget.mjs";
 
 const args = process.argv.slice(2);
 const num = (name, fallback) => { const i = args.indexOf(`--${name}`); return i >= 0 ? Number(args[i + 1]) : fallback; };
@@ -175,6 +176,7 @@ try {
   await browser?.close().catch(() => undefined);
   server.close();
   for (const p of people) await api(p.uid, "/api/account/delete", {}, p.token).catch(() => undefined);
+  await forgetAtEnd(API, RUN);
   fs.writeFileSync(path.join(OUT, "voice.json"), JSON.stringify(result, null, 1));
   console.log(JSON.stringify({ ...result, timeline: result.timeline?.map((r) => ({ at: r.at, connected: r.perBrowser.map((s) => s?.states?.connected ?? 0), total: r.perBrowser.map((s) => s?.total ?? 0) })) }, null, 1));
 }

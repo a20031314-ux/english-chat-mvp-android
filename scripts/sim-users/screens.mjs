@@ -13,6 +13,7 @@
  * 학습 언어 문장은 bank.json(가상 사용자와 같은 시드).
  */
 import http from "node:http";
+import { forgetAtEnd } from "./forget.mjs";
 import fs from "node:fs";
 import path from "node:path";
 
@@ -706,6 +707,7 @@ for (const combo of COMBOS) {
 }
 await browser.close();
 server.close();
+await forgetAtEnd(API, RUN_ID);
 
 // ── 갤러리 ──
 const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);

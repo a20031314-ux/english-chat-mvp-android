@@ -13,6 +13,7 @@
 import { mkdirSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { makeClient, isEdgeBlock } from "./client.mjs";
+import { forgetAtEnd } from "./forget.mjs";
 import { shortId, ROOM_CODE } from "./accounts.mjs";
 
 const args = process.argv.slice(2);
@@ -188,6 +189,7 @@ async function main() {
     extra.error = String(error);
   } finally {
     await cleanup();
+    await forgetAtEnd(API, RUN);
   }
   const result = summarize(extra);
   writeFileSync(join(OUT, "load.json"), JSON.stringify(result, null, 1));

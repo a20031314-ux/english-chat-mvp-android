@@ -20,6 +20,7 @@
  *
  * 결과: tmp/sim-users/<실행>/results.json, report.html
  */
+import { forgetAtEnd } from "./forget.mjs";
 import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 import { buildPersonas, describePersona, loadBank, planTurns } from "./personas.mjs";
 import { detectCard, detectStart, detectTurn, SEVERITY_WEIGHT } from "./detect.mjs";
@@ -241,6 +242,7 @@ async function main() {
   writeFileSync(`${OUT}/results.json`, `${JSON.stringify({ meta, records }, null, 2)}\n`);
   writeFileSync(`${OUT}/report.html`, renderReport({ meta, records }));
   summarize(records, meta, OUT);
+  await forgetAtEnd(API, RUN_ID);
 }
 
 main().catch((error) => {
