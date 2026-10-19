@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { GUIDE_CHAPTERS, GUIDE_EN, GUIDE_KO, GUIDE_SECTION_IDS, guideChapters, guideSection, type Guide, type GuideTabId } from "./content.ts";
+import { GUIDE_CHAPTERS, GUIDE_CLIPS, GUIDE_EN, GUIDE_KO, GUIDE_SECTION_IDS, guideChapters, guideSection, type Guide, type GuideTabId } from "./content.ts";
 import { RELEASE_NOTES, newGuideSections } from "../whatsNew.ts";
 
 const translations = JSON.parse(readFileSync(new URL("./translations.json", import.meta.url), "utf8")) as Record<string, Guide>;
@@ -33,6 +33,16 @@ test("모든 묶음의 칸이 모든 언어에 있다", () => {
 test("모든 칸이 어느 묶음엔가 들어 있다", () => {
   const inChapters = new Set(GUIDE_CHAPTERS.flatMap((chapter) => chapter.sections));
   for (const id of TABS.flatMap((tab) => GUIDE_SECTION_IDS[tab])) assert.ok(inChapters.has(id), id);
+});
+
+test("영상이 붙는 칸은 있고, 칸을 꺼낼 때 붙는다", () => {
+  for (const [id, clip] of Object.entries(GUIDE_CLIPS)) {
+    const section = guideSection(GUIDE_KO, id);
+    assert.ok(section, id);
+    assert.equal(section.clip, clip);
+    assert.ok(section.shot, `${id}: 영상을 못 받으면 보여 줄 그림`);
+  }
+  assert.equal(guideSection(GUIDE_KO, "chat.next")?.clip, undefined);
 });
 
 test("새로워진 점이 가리키는 칸이 있다", () => {

@@ -47,14 +47,14 @@ function targetVersion(params: URLSearchParams): string | null {
 }
 
 /** 노트가 사용법 칸을 가리키면 그 칸의 글(같은 설명을 두 번 쓰지 않게, 2026-10-20). */
-function guideText(locale: string, id: string, ui: UICopy): { heading: string; body: string } | null {
+function guideText(locale: string, id: string, ui: UICopy): { heading: string; body: string; shot?: string } | null {
   const translated = (translations as unknown as Partial<Record<string, Guide>>)[locale];
   const guide = locale === "ko" ? GUIDE_KO : locale === "en" ? GUIDE_EN : (translated ?? GUIDE_EN);
   const section = guideSection(guide, id) ?? guideSection(GUIDE_EN, id);
   if (!section) return null;
   const labels = ui as unknown as Record<string, unknown>;
   const fill = (text: string) => text.replace(/\{ui:([a-zA-Z0-9]+)\}/g, (_, key: string) => (typeof labels[key] === "string" ? (labels[key] as string) : ""));
-  return { heading: fill(section.heading), body: section.body.map(fill).join(" ") };
+  return { heading: fill(section.heading), body: section.body.map(fill).join(" "), shot: section.shot };
 }
 
 export async function GET(request: NextRequest) {
@@ -74,8 +74,8 @@ export async function GET(request: NextRequest) {
           id: item.id,
           title: fromGuide?.heading ?? String(ui[item.title] ?? copy.en[item.title]),
           body: fromGuide?.body ?? String(ui[item.body] ?? copy.en[item.body]),
-          image: shotPath(note.version, locale, item.shot),
-          imageFallback: shotPath(note.version, "en", item.shot),
+          image: fromGuide?.shot ? `/guide/${locale}/${fromGuide.shot}.webp` : shotPath(note.version, locale, item.shot),
+          imageFallback: fromGuide?.shot ? `/guide/en/${fromGuide.shot}.webp` : shotPath(note.version, "en", item.shot),
           };
         }),
       }))

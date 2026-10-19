@@ -30,6 +30,11 @@ export type GuideSection = {
    * Builds before 2.67 ignore it and show the text alone.
    */
   shot?: string;
+  /**
+   * 끌기처럼 그림으로는 안 보이는 동작의 짧은 영상: /guide/<locale>/<clip>.mp4(같은 캡처 스크립트).
+   * 글마다 쓰지 않고 GUIDE_CLIPS에서 칸 id로 붙인다. 영상이 없으면 그림(shot)을 보여 준다.
+   */
+  clip?: string;
 };
 
 export type GuideTab = { title: string; sections: GuideSection[] };
@@ -82,12 +87,18 @@ export const GUIDE_CHAPTERS: GuideChapterSpec[] = [
 
 export type GuideChapter = { id: string; title: string; go: GuideGo; sections: (GuideSection & { id: string })[] };
 
+/** 영상이 있는 칸(2026-10-20): 점을 끌어 부분을 고르는 두 곳. */
+export const GUIDE_CLIPS: Record<string, string> = {
+  "chat.analyse": "chat-ask",
+  "video.ask": "video-ask",
+};
+
 /** 한 언어의 글에서 칸 하나(없으면 null). */
 export function guideSection(guide: Guide, id: string): (GuideSection & { id: string }) | null {
   for (const tab of Object.keys(GUIDE_SECTION_IDS) as GuideTabId[]) {
     const at = GUIDE_SECTION_IDS[tab].indexOf(id);
     const section = at >= 0 ? guide[tab]?.sections[at] : undefined;
-    if (section) return { ...section, id };
+    if (section) return { ...section, id, ...(GUIDE_CLIPS[id] ? { clip: GUIDE_CLIPS[id] } : {}) };
   }
   return null;
 }

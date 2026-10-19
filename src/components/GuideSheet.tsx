@@ -49,6 +49,27 @@ function GuideShot({ locale, shot }: { locale: string; shot: string }) {
   );
 }
 
+/** 짧은 영상(소리 없음, 반복). 못 받으면 그림으로. */
+function GuideClip({ locale, clip, shot }: { locale: string; clip: string; shot?: string }) {
+  const [source, setSource] = useState<"own" | "en" | "none">(locale === "en" ? "en" : "own");
+  if (source === "none") return shot ? <GuideShot locale={locale} shot={shot} /> : null;
+  const folder = source === "own" ? locale : "en";
+  return (
+    <video
+      key={folder}
+      src={apiUrl(`/guide/${folder}/${clip}.mp4`)}
+      poster={shot ? apiUrl(`/guide/${folder}/${shot}.webp`) : undefined}
+      autoPlay
+      muted
+      loop
+      playsInline
+      preload="metadata"
+      onError={() => setSource(source === "own" ? "en" : "none")}
+      className="mt-2 max-h-[48vh] w-auto max-w-full rounded-xl border border-line"
+    />
+  );
+}
+
 function SectionView({
   section,
   ui,
@@ -75,7 +96,11 @@ function SectionView({
           <p key={paragraph}>{fillGuideLabels(paragraph, ui)}</p>
         ))}
       </div>
-      {section.shot ? <GuideShot locale={locale} shot={section.shot} /> : null}
+      {section.clip ? (
+        <GuideClip locale={locale} clip={section.clip} shot={section.shot} />
+      ) : section.shot ? (
+        <GuideShot locale={locale} shot={section.shot} />
+      ) : null}
     </section>
   );
 }

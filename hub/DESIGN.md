@@ -78,6 +78,9 @@
 - **글에 가는 길을 쓰지 않는다:** "'사람과 학습' → 'My' → '게시판'", "통화 탭에서" 같은 탭 경로 금지(`guide/chapters.test.ts`가 막음). 그 화면으로는 묶음의 "이 화면으로 가기" 버튼이 데려간다. 버튼 이름은 `{ui:키}`.
 - **탭 구조가 바뀌면:** 글은 그대로, `GUIDE_CHAPTERS`에서 칸을 옮기고 `go`만 바꾼다. 화면마다 열릴 묶음은 `GuideSheet.tsx` `SCREEN_CHAPTER`.
 - 새 기능 = 새 칸(heading·body·shot, 14개 언어) + id + 묶음에 넣기. 출시 땐 `RELEASE_NOTES` 항목에 그 id.
+- **그림(2026-10-20 사용자 요청 "더 낫다면"):** 칸의 글이 가리키는 버튼에 노란 테두리(`capture-whats-new.mjs` `SPOTS`), **그림 안에 글은 넣지 않는다**(600px에서 안 읽히고, 14개 언어로 설명을 두 번 쓰게 됨).
+  끌기처럼 정지 그림으로 안 보이는 동작만 짧은 영상(`GUIDE_CLIPS`, 5초 안팎·100KB 아래 mp4, 소리 없음·반복, 그림이 포스터). 새로워진 점은 칸의 그림을 같이 쓴다.
+  모드: `guide`(My) · `guide-chat` · `guide-video` · `guide-vocab` · `guide-call` · `guide-social`(사람·게시판·단체방·방 목록), 언어마다 `--only`, 테스트 사용자 `CAPTURE_RUN`.
 
 ## 부품 (새로 만들기 전에 있는 것부터)
 

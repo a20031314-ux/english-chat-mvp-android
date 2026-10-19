@@ -48,11 +48,13 @@ function markSeen() {
  * A picture taken in the learner's interface language, falling back to the
  * English set, and to no picture at all when offline.
  */
-function Shot({ item, locale, alt }: { item: WhatsNewItem; locale: Locale; alt: string }) {
+function Shot({ item, locale, alt, guideShot }: { item: WhatsNewItem; locale: Locale; alt: string; guideShot?: string }) {
   const version = noteVersionOf(item);
   const [source, setSource] = useState<"own" | "en" | "none">("own");
   if (source === "none") return null;
-  const src = apiUrl(shotPath(version, source === "own" ? locale : "en", item.shot));
+  // 사용법 칸을 가리키는 노트는 그 칸의 그림(같은 그림을 두 번 찍지 않게, 2026-10-20).
+  const folder = source === "own" ? locale : "en";
+  const src = apiUrl(guideShot ? `/guide/${folder}/${guideShot}.webp` : shotPath(version, folder, item.shot));
   return (
     // eslint-disable-next-line @next/next/no-img-element -- remote, per-locale, and the app is a static export
     <img
@@ -126,7 +128,12 @@ export function WhatsNewSheet({
                   <p key={paragraph}>{paragraph}</p>
                 ))}
               </div>
-              <Shot item={item} locale={locale} alt={String(ui[item.title])} />
+              <Shot
+                item={item}
+                locale={locale}
+                alt={titleOf(item)}
+                guideShot={item.guide ? findGuideSection(guide, item.guide)?.section.shot : undefined}
+              />
               <div className="mt-3 flex flex-wrap gap-2">
                 <button
                   type="button"

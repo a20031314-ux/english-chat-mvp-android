@@ -99,7 +99,16 @@ const GUIDE_VOCAB = VERSION === "guide-vocab";
 // call under way, a finished call read back, saying a sentence of your own.
 // The English interface learns Japanese here, the only other pack language.
 const GUIDE_CALL = VERSION === "guide-call";
-const GUIDE = VERSION === "guide" || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL;
+// `guide-social`: 사람·게시판·단체방·방 목록 사용법 그림(예전엔 2.69 새로워진 점 캡처를 r69-*로 복사했다).
+// 하단 탭이 대화·영상·사람·Room·My로 바뀐 뒤(2026-10-20) 새로 찍는다. 방 안 화면(묻기·보는 방식·힌트·방장)은 전체 화면이라 그대로.
+const GUIDE_SOCIAL = VERSION === "guide-social";
+const GUIDE_SOCIAL_ITEMS = [
+  { shot: "r69-people", step: "people" },
+  { shot: "r69-board", step: "board" },
+  { shot: "r69-groups", step: "groups" },
+  { shot: "r69-free", step: "freetalk" },
+];
+const GUIDE = VERSION === "guide" || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
 const GUIDE_ITEMS = [
   { shot: "goal" },
   { shot: "next" },
@@ -114,13 +123,14 @@ const GUIDE_VIDEO_ITEMS = [
   { shot: "video-library" },
   { shot: "video-study" },
   { shot: "video-bar" },
-  { shot: "video-ask" },
+  // 끌어서 고르는 동작은 짧은 영상으로도(public/guide/<locale>/video-ask.mp4, 2026-10-20).
+  { shot: "video-ask", clip: true },
 ];
 const GUIDE_CHAT_ITEMS = [
   { shot: "chat-correct" },
   { shot: "chat-expression" },
   { shot: "chat-reading" },
-  { shot: "chat-ask" },
+  { shot: "chat-ask", clip: true },
   { shot: "chat-word" },
   { shot: "chat-menu" },
   { shot: "chat-history" },
@@ -213,6 +223,8 @@ const note = PROMO
   ? { version: "guide", items: GUIDE_CALL_ITEMS }
   : GUIDE_VIDEO
   ? { version: "guide", items: GUIDE_VIDEO_ITEMS }
+  : GUIDE_SOCIAL
+  ? { version: "guide", items: GUIDE_SOCIAL_ITEMS }
   : GUIDE ? { version: "guide", items: GUIDE_ITEMS } : RELEASE_NOTES.find((entry) => entry.version === VERSION);
 if (!note) {
   console.error(`No release note for ${VERSION} in src/lib/whatsNew.ts.`);
@@ -1041,8 +1053,8 @@ const STEPS = {
     await translated;
     await wait(2000);
   },
-  async "chat-ask"({ page, ui, wait }) {
-    await STEPS.ask({ page, ui, wait });
+  async "chat-ask"({ page, ui, wait, mark }) {
+    await STEPS.ask({ page, ui, wait, mark });
   },
   async "chat-word"({ page, ui, wait }) {
     // Continues in the sentence sheet: one word of the sentence, its card and Save.
@@ -1226,18 +1238,21 @@ const STEPS = {
     await page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 15000 }).catch(() => undefined);
     await wait(2000);
   },
-  async "video-ask"({ page, ui, wait }) {
+  async "video-ask"({ page, ui, wait, mark = () => {} }) {
     // Continues from video-bar: the sheet is open on the subtitle.
     const slider = page.locator("[role=dialog] [role=slider]").first();
     const box = await slider.boundingBox();
     const count = await slider.locator("> span").count();
     const x = (i) => box.x + (box.width * (i + 0.5)) / count;
     const y = box.y + box.height / 2;
+    mark("clipStart");
     await page.mouse.move(x(Math.max(0, count - 3)), y);
+    await wait(400);
     await page.mouse.down();
-    await page.mouse.move(x(count - 1), y, { steps: 5 });
+    await page.mouse.move(x(count - 1), y, { steps: 12 });
+    await wait(300);
     await page.mouse.up();
-    await wait(700);
+    await wait(900);
     await page.getByRole("button", { name: ui.quickAskMeaning }).click();
     const loading = ui.askLoading.replace("…", "");
     for (let i = 0; i < 40; i++) {
@@ -1245,6 +1260,7 @@ const STEPS = {
       if (!(await page.locator("[role=dialog]").last().innerText()).includes(loading)) break;
     }
     await wait(1000);
+    mark("clipEnd");
   },
   async goal({ page, ui, locale, wait }) {
     await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
@@ -1354,7 +1370,7 @@ const STEPS = {
     for (let i = 0; i < 40 && !(await use.count()); i++) await wait(1000);
     await wait(600);
   },
-  async ask({ page, ui, wait }) {
+  async ask({ page, ui, wait, mark = () => {} }) {
     // Continues from the chat step: the tutor's reply is the sentence asked about.
     await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).last().click();
     await wait(4500);
@@ -1363,11 +1379,14 @@ const STEPS = {
     const count = await page.locator("[role=slider] > span").count();
     const x = (i) => box.x + (box.width * (i + 0.5)) / count;
     const y = box.y + box.height / 2;
+    mark("clipStart");
     await page.mouse.move(x(Math.max(0, count - 3)), y);
+    await wait(400);
     await page.mouse.down();
-    await page.mouse.move(x(count - 1), y, { steps: 5 });
+    await page.mouse.move(x(count - 1), y, { steps: 12 });
+    await wait(300);
     await page.mouse.up();
-    await wait(700);
+    await wait(900);
     await page.getByRole("button", { name: ui.quickAskMeaning }).click();
     const loading = ui.askLoading.replace("…", "");
     for (let i = 0; i < 40; i++) {
@@ -1375,6 +1394,7 @@ const STEPS = {
       if (!(await page.locator("[role=dialog]").innerText()).includes(loading)) break;
     }
     await wait(800);
+    mark("clipEnd");
   },
   async map({ page, ui, locale, wait }) {
     await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
@@ -1483,6 +1503,84 @@ async function finishPromo(dir, frames, events) {
   fs.writeFileSync(path.join(dir, "events.json"), JSON.stringify(events, null, 2));
 }
 
+/**
+ * 사용법 그림에 "여기를 누르세요" 테두리(2026-10-20). 글은 그림 옆(사용법 칸)에만 쓰고 그림 안에는 넣지 않는다 —
+ * 14개 언어로 같은 설명을 또 쓰지 않게, 600px로 줄였을 때 읽히지 않는 글자를 만들지 않게.
+ * 단계가 끝난 화면에서 그 칸의 글이 가리키는 버튼을 찾는다. 못 찾으면 테두리 없이 찍는다.
+ */
+const exactLabel = (page, name) => page.getByRole("button", { name: exactly(name) });
+const SPOTS = {
+  goal: ({ page, ui }) => page.getByRole("button", { name: ui.mapDraw }),
+  next: ({ page, ui }) => page.getByRole("button", { name: ui.nextByChat }),
+  growth: ({ page, ui }) => page.getByText(ui.myNext, { exact: true }),
+  graph: ({ page, ui }) => exactLabel(page, ui.myViewGraph),
+  element: ({ page, ui }) => page.locator("[role=dialog]").getByRole("button", { name: new RegExp(escape(ui.myGrowIt)) }),
+  myask: ({ page, ui }) => page.getByRole("button", { name: new RegExp(escape(ui.myGrowIt)) }),
+  mapview: ({ page, ui }) => exactLabel(page, ui.myViewMap),
+  chatnext: ({ page, ui }) => page.getByText(ui.practiceNow, { exact: true }),
+  "chat-expression": ({ page, ui }) => exactLabel(page, ui.chatUseExpression).last(),
+  "chat-reading": ({ page, ui }) => exactLabel(page, ui.chatReading).last(),
+  "chat-ask": ({ page }) => page.locator("[role=dialog] [role=slider]"),
+  "chat-word": ({ page, ui }) => page.locator("[role=dialog]").last().getByRole("button", { name: exactly(ui.vocabSave) }).last(),
+  "chat-menu": ({ page, ui }) => exactLabel(page, ui.chatHistoryTitle),
+  "vocab-search": ({ page, ui }) => exactLabel(page, ui.vocabSearchCta).last(),
+  "vocab-saved": ({ page, ui }) => page.getByText(ui.vocabSavedTitle),
+  "vocab-hide": ({ page, ui }) => exactLabel(page, ui.vocabHideGloss),
+  "vocab-characters": ({ page, ui }) => exactLabel(page, ui.vocabTabCharacters),
+  "video-library": ({ page, ui }) => page.getByText(ui.videoLearnLibraryTitle),
+  "video-ask": ({ page }) => page.locator("[role=dialog] [role=slider]"),
+  "call-pack": ({ page, ui }) => page.getByRole("button", { name: new RegExp(`^${escape(ui.packStart)}|^${escape(ui.packContinue.split("(")[0].trim())}`) }),
+  "call-talk": ({ page, ui }) => page.getByText(new RegExp(escape(ui.packProgress.split("{n}")[0].trim()))),
+  "call-review": ({ page, ui }) => exactLabel(page, ui.roleplaySayAgain),
+  "call-ownline": ({ page, ui }) => exactLabel(page, ui.roleplayOwnLineUse),
+  "r69-free": ({ page, locale }) => exactLabel(page, `🌐 ${roomCopyFor(locale).freeTalk}`),
+};
+
+async function drawSpot(page, item, ui, locale) {
+  const make = SPOTS[item.shot];
+  if (!GUIDE || !make) return false;
+  const target = make({ page, ui, locale }).first();
+  if (!(await target.count().catch(() => 0)) || !(await target.isVisible().catch(() => false))) {
+    console.log(`  (테두리 없음: ${item.shot})`);
+    return false;
+  }
+  await target.scrollIntoViewIfNeeded().catch(() => undefined);
+  const box = await target.boundingBox();
+  if (!box) return false;
+  await page.evaluate((b) => {
+    const ring = document.createElement("div");
+    ring.id = "__capture_spot";
+    const pad = 5;
+    ring.style.cssText = `position:fixed;left:${b.x - pad}px;top:${b.y - pad}px;width:${b.width + pad * 2}px;height:${b.height + pad * 2}px;` +
+      "border:3px solid #fbbf24;border-radius:12px;box-shadow:0 0 0 5px rgba(251,191,36,.28);z-index:2147483647;pointer-events:none";
+    document.body.appendChild(ring);
+  }, box);
+  return true;
+}
+async function clearSpot(page) {
+  await page.evaluate(() => document.getElementById("__capture_spot")?.remove()).catch(() => undefined);
+}
+
+/** 끌기 같은 동작은 짧은 영상으로(사용법 칸 `clip`). 프레임 → 600px mp4, 그림과 같게 위아래를 자른다. */
+async function saveClip(all, locale, shot, events) {
+  const from = typeof events.clipStart === "number" ? events.clipStart - 0.3 : -Infinity;
+  const to = typeof events.clipEnd === "number" ? events.clipEnd + 1.5 : Infinity;
+  const frames = all.filter((f) => f.at >= from && f.at <= to);
+  if (frames.length < 5) return;
+  const { execFileSync } = await import("node:child_process");
+  const dir = path.join(ROOT, "public", "guide", locale);
+  const work = path.join(ROOT, "tmp", "clip", locale, shot);
+  fs.mkdirSync(work, { recursive: true });
+  const end = frames.at(-1).at + 1.2;
+  const list = frames.map((f, i) => `file '${f.file}'\nduration ${Math.max(0.01, (i + 1 < frames.length ? frames[i + 1].at : end) - f.at).toFixed(3)}`).join("\n");
+  fs.writeFileSync(path.join(work, "frames.txt"), `${list}\nfile '${frames.at(-1).file}'\n`);
+  execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-f", "concat", "-safe", "0", "-i", path.join(work, "frames.txt"),
+    "-vf", "fps=15,crop=iw:ih*0.838:0:ih*0.092,scale=600:-2:flags=lanczos,format=yuv420p",
+    "-an", "-c:v", "libx264", "-preset", "slow", "-crf", "30", "-movflags", "+faststart", path.join(dir, `${shot}.mp4`)]);
+  fs.rmSync(work, { recursive: true, force: true });
+  fs.rmSync(path.join(ROOT, "tmp", "clip", locale, "frames"), { recursive: true, force: true });
+}
+
 /** Without the header and the tab bar, which say nothing about the change. */
 async function save(png, locale, shot) {
   if (STORE) {
@@ -1532,9 +1630,11 @@ for (const locale of only ?? Object.keys(copy)) {
   const frames = [];
   let cdp = null;
   const promoDir = path.join(ROOT, "tmp", "promo", PROMO_NAME, locale);
-  if (PROMO) {
-    fs.rmSync(promoDir, { recursive: true, force: true });
-    fs.mkdirSync(path.join(promoDir, "frames"), { recursive: true });
+  if (PROMO || GUIDE) {
+    if (PROMO) {
+      fs.rmSync(promoDir, { recursive: true, force: true });
+      fs.mkdirSync(path.join(promoDir, "frames"), { recursive: true });
+    }
     await context.addInitScript(() => {
       addEventListener("pointerdown", (e) => {
         const dot = document.createElement("div");
@@ -1543,10 +1643,21 @@ for (const locale of only ?? Object.keys(copy)) {
         requestAnimationFrame(() => { dot.style.transform = "scale(1.8)"; dot.style.opacity = "0"; });
         setTimeout(() => dot.remove(), 600);
       }, true);
+      // 끄는 동안 손가락 자리(사용법 영상).
+      addEventListener("pointermove", (e) => {
+        if (!e.buttons) return;
+        const dot = document.createElement("div");
+        dot.style.cssText = `position:fixed;left:${e.clientX - 14}px;top:${e.clientY - 14}px;width:28px;height:28px;border-radius:50%;background:rgba(255,255,255,.3);border:2px solid rgba(255,255,255,.75);z-index:99999;pointer-events:none;transition:opacity .4s ease-out`;
+        document.body.appendChild(dot);
+        requestAnimationFrame(() => { dot.style.opacity = "0"; });
+        setTimeout(() => dot.remove(), 450);
+      }, true);
     });
     cdp = await context.newCDPSession(page);
     cdp.on("Page.screencastFrame", async ({ data, metadata, sessionId }) => {
-      const file = path.join(promoDir, "frames", `${String(frames.length).padStart(5, "0")}.jpg`);
+      const frameDir = PROMO ? path.join(promoDir, "frames") : path.join(ROOT, "tmp", "clip", locale, "frames");
+      fs.mkdirSync(frameDir, { recursive: true });
+      const file = path.join(frameDir, `${String(frames.length).padStart(5, "0")}.jpg`);
       fs.writeFileSync(file, Buffer.from(data, "base64"));
       frames.push({ file, at: metadata.timestamp });
       await cdp.send("Page.screencastFrameAck", { sessionId }).catch(() => {});
@@ -1566,17 +1677,31 @@ for (const locale of only ?? Object.keys(copy)) {
     const onlyShots = process.env.CAPTURE_SHOTS?.split(",");
     for (const item of note.items) {
       if (onlyShots && !onlyShots.includes(item.shot)) continue;
-      const step = STEPS[item.shot];
+      const step = STEPS[item.step ?? item.shot];
       if (!step) throw new Error(`no capture step for "${item.shot}"`);
-      if (PROMO && cdp) await cdp.send("Page.startScreencast", { format: "jpeg", quality: 92, maxWidth: 824, maxHeight: 1830, everyNthFrame: 1 });
+      const recording = (PROMO || (GUIDE && item.clip)) && cdp;
+      if (recording) {
+        frames.length = 0;
+        await cdp.send("Page.startScreencast", { format: "jpeg", quality: 85, maxWidth: 824, maxHeight: 1830, everyNthFrame: 1 });
+      }
       await step({ page, ui, locale, wait, target, mark });
+      if (GUIDE && item.clip && cdp) {
+        await wait(1200);
+        await cdp.send("Page.stopScreencast").catch(() => {});
+        await saveClip(frames, locale, item.shot, events);
+        delete events.clipStart;
+        delete events.clipEnd;
+        console.log(`${locale} ${item.shot} (영상 ${frames.length}프레임)`);
+      }
       if (PROMO && cdp) {
         await cdp.send("Page.stopScreencast").catch(() => {});
         await finishPromo(promoDir, frames, events);
         console.log(`${locale} promo → ${path.relative(ROOT, promoDir)}/raw.mp4`);
       }
       if (item.save === false) continue;
+      const spotted = await drawSpot(page, item, ui, locale);
       await save(await page.screenshot(), locale, item.shot);
+      if (spotted) await clearSpot(page);
       console.log(`${locale} ${item.shot}`);
     }
   } catch (error) {
