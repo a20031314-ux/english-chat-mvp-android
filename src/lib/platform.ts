@@ -56,6 +56,14 @@ export function turnDiagnosticsEnabled(): boolean {
   return isIosApp() && process.env.NEXT_PUBLIC_IOS_DIAG?.trim() === "1";
 }
 
+/**
+ * 광고(AdMob, `lib/ads.ts`). 안드로이드 앱에서만 — iOS는 추적 동의(ATT)·App Store 신고가 따로라 1차에서 뺐고
+ * 플러그인도 iOS 빌드에 넣지 않는다(capacitor.config.ts). 웹에는 AdMob이 없다.
+ */
+export function adsAvailable(): boolean {
+  return appPlatform() === "android";
+}
+
 /** 앱 바깥(스토어)으로 보내는 업데이트 링크. */
 const PLAY_LISTING = "https://play.google.com/store/apps/details?id=com.yourname.englishchat";
 

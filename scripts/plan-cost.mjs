@@ -30,6 +30,7 @@ import {
 } from "../src/lib/billing/cost.ts";
 import { FREE_LIFETIME_ROLEPLAY_POINTS } from "../src/lib/billing/config.ts";
 import { termsFor } from "../src/lib/billing/plans.ts";
+import { AD_REVENUE_USD, DEFAULT_ADS_SETTINGS } from "../src/lib/billing/ads.ts";
 import { MODEL_CALLS_PER_REQUEST } from "../src/lib/server/modelCalls.ts";
 import {
   CHAT_MESSAGE_OPS,
@@ -152,6 +153,29 @@ export function render() {
   push(
     "",
     `무료는 처음 한 번 ${FREE_LIFETIME_ROLEPLAY_POINTS}포인트(통화 ${FREE_LIFETIME_ROLEPLAY_POINTS * 5}분, 약 ${won(krw(FREE_LIFETIME_ROLEPLAY_POINTS * pointCostUsd()))})를 따로 씁니다. 이달의 영상(라이브러리)은 자막이 미리 만들어져 있어 비용에 넣지 않았습니다.`,
+    "",
+    "## 광고 (무료·안드로이드만)",
+    "",
+    `\`src/lib/billing/ads.ts\` 처음 값 기준. 운영 값은 Vercel \`ADS_*\` 환경 변수가 바꿀 수 있습니다. 광고 수익은 ${AD_REVENUE_USD.source}.`,
+    "",
+    "| 무엇 | 원가 | 광고 수익(낮음~높음) | 남는 돈(낮음~높음) |",
+    "|---|---|---|---|",
+    ...(() => {
+      const s = DEFAULT_ADS_SETTINGS;
+      const rewardCost = krw(s.rewardChats * chatMessageUsd());
+      const rw = AD_REVENUE_USD.rewarded;
+      const it = AD_REVENUE_USD.interstitial;
+      const chatsPerInterstitial = s.interstitialAfterChats;
+      const intCost = krw(chatsPerInterstitial * chatMessageUsd());
+      const fullBonusMonth = krw(s.rewardedDailyMax * s.rewardChats * chatMessageUsd() * DAYS);
+      return [
+        `| 보상형 1회 = 채팅 ${s.rewardChats}번 | ${won1(rewardCost)} | ${won1(krw(rw.low))} ~ ${won1(krw(rw.high))} | ${won1(krw(rw.low) - rewardCost)} ~ ${won1(krw(rw.high) - rewardCost)} |`,
+        `| 전면 1회(채팅 ${chatsPerInterstitial}번마다 기준, 무료 기본 채팅을 메움) | ${won1(intCost)} | ${won1(krw(it.low))} ~ ${won1(krw(it.high))} | ${won1(krw(it.low) - intCost)} ~ ${won1(krw(it.high) - intCost)} |`,
+        `| 보상형 하루 ${s.rewardedDailyMax}번을 매일(한 달) | ${won(fullBonusMonth)} | ${won(krw(rw.low) * s.rewardedDailyMax * DAYS)} ~ ${won(krw(rw.high) * s.rewardedDailyMax * DAYS)} | ${won(krw(rw.low) * s.rewardedDailyMax * DAYS - fullBonusMonth)} ~ ${won(krw(rw.high) * s.rewardedDailyMax * DAYS - fullBonusMonth)} |`,
+      ];
+    })(),
+    "",
+    "보상형으로 늘어난 채팅은 광고가 메우는 만큼만 줍니다. 무료 + 광고 최대치는 라이트 채팅 한도보다 작게(`ads.test.ts`가 지킴). 구독자는 광고가 없어 위 유료 손익과 별개입니다.",
     "",
     "## 단위 비용",
     "",

@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { maybeShowInterstitial, warmUpAds } from "@/lib/ads";
 import { ChatWindow } from "@/components/ChatWindow";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { readAppLocale } from "@/components/LearningBookPanel";
@@ -118,6 +119,18 @@ function AppHomeInner({
   const messagesUnread = inbox.unread + groups.unread;
   // 하단에서 켜져 보일 칸: 채팅·통화는 대화 안의 화면.
   const bottomTab: AppTab = socialOn && TALK_SCREENS.includes(shownTab) ? "talk" : shownTab;
+
+  // 광고(lib/ads.ts, 무료·안드로이드만): 첫 화면이 뜬 뒤 조용히 준비만 하고(열자마자 띄우지 않음),
+  // 채팅을 몇 번 주고받은 뒤 채팅 화면을 떠날 때를 자연스러운 끝으로 본다.
+  useEffect(() => {
+    const timer = window.setTimeout(() => void warmUpAds(), 8_000);
+    return () => window.clearTimeout(timer);
+  }, []);
+  const previousTab = useRef(shownTab);
+  useEffect(() => {
+    if (previousTab.current === "chat" && shownTab !== "chat") void maybeShowInterstitial("chatLeave");
+    previousTab.current = shownTab;
+  }, [shownTab]);
   const insideTalk = socialOn && (shownTab === "chat" || shownTab === "roleplay");
 
   useEffect(() => {

@@ -18,6 +18,7 @@ import {
   kvIncrBy,
   kvScanKeys,
   kvSetJson,
+  kvSetJsonIfAbsent,
   kvListPush,
   kvListTrim,
 } from "./kv.ts";
@@ -169,6 +170,34 @@ function callHoldKey(userId: string, holdId: string) {
  * spent, which is the safe direction.
  */
 const HOLD_TTL_SECONDS = 6 * 60 * 60;
+
+/** 오늘(채팅 한도와 같은 날) 본 보상형 광고 수. */
+function adRewardKey(userId: string) {
+  return `usage:adreward:${userId}:${dayKey()}`;
+}
+
+export async function getAdRewardsToday(userId: string): Promise<number> {
+  return kvGetNumber(adRewardKey(userId));
+}
+
+export type AdRewardResult = "granted" | "duplicate" | "capped" | "anonymous";
+
+/**
+ * AdMob이 서명해 보낸 보상 한 건을 오늘 몫에 더한다(billing/ads.ts).
+ * 같은 transaction_id는 한 번만(AdMob은 응답이 늦으면 다시 보낸다), 하루 상한을 넘으면 세지 않는다.
+ */
+export async function grantAdReward(
+  userId: string,
+  transactionId: string,
+  dailyMax: number,
+): Promise<AdRewardResult> {
+  if (!isIdentified(userId)) return "anonymous";
+  const fresh = await kvSetJsonIfAbsent(`ads:tx:${transactionId}`, { u: userId }, 7 * 24 * 60 * 60);
+  if (!fresh) return "duplicate";
+  if ((await kvGetNumber(adRewardKey(userId))) >= dailyMax) return "capped";
+  await kvIncrBy(adRewardKey(userId), 1, DAILY_TTL_SECONDS);
+  return "granted";
+}
 
 export async function getDailyUsed(userId: string): Promise<number> {
   return kvGetNumber(dailyChatKey(userId));

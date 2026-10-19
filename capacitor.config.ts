@@ -1,4 +1,21 @@
 import type { CapacitorConfig } from "@capacitor/cli";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+
+/**
+ * iOS에 넣지 않을 플러그인. 광고(AdMob)는 안드로이드만 — iOS는 추적 동의(ATT)·App Store 신고가 따로라
+ * 1차에서 뺐다(hub/drafts/ads-rewarded.md). 넣어 두면 Info.plist에 AdMob 앱 ID가 없어 SDK가 앱을 멈출 수 있다.
+ * includePlugins는 허용 목록이라, 의존성 전체에서 이것만 빼서 만든다(새 플러그인은 저절로 iOS에도 들어감).
+ */
+const ANDROID_ONLY_PLUGINS = ["@capacitor-community/admob"];
+const iosPlugins = (() => {
+  try {
+    const pkg = JSON.parse(readFileSync(join(process.cwd(), "package.json"), "utf8")) as { dependencies?: Record<string, string> };
+    return Object.keys(pkg.dependencies ?? {}).filter((name) => !ANDROID_ONLY_PLUGINS.includes(name));
+  } catch {
+    return undefined;
+  }
+})();
 
 /**
  * Production Play Store builds should load bundled assets from `www/` inside the
@@ -31,6 +48,7 @@ const config: CapacitorConfig = {
   // SafeAreaHostViewController), 불러오는 동안 비치는 바탕은 앱과 같은 검정.
   ios: {
     backgroundColor: "#000000",
+    ...(iosPlugins ? { includePlugins: iosPlugins } : {}),
   },
   plugins: {
     CapacitorHttp: {

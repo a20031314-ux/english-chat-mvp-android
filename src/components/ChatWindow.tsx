@@ -28,6 +28,7 @@ import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext"
 import { Capacitor } from "@capacitor/core";
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
 import { entitlementHeaders } from "@/lib/billing/billingService";
+import { maybeShowInterstitial, noteChatSent, rewardOffer, showRewardedForChats, waitForChatBonus, type RewardOffer } from "@/lib/ads";
 import {
   writtenInLearningLanguage,
 } from "@/lib/inputLanguage";
@@ -745,6 +746,28 @@ export function ChatWindow({
     (!isPremium || entitlement.dailyLimit !== null) && entitlement.dailyUsed >= dailyLimit;
   const isChatInputBlocked = isChatDailyLimitReached;
 
+  // 무료 한도에 닿았을 때 "광고 보고 채팅 더"(lib/ads.ts — 안드로이드·무료만, 보상은 서버가 확인).
+  const [adOffer, setAdOffer] = useState<RewardOffer | null>(null);
+  const [adState, setAdState] = useState<"idle" | "waiting" | "done" | "failed">("idle");
+  useEffect(() => {
+    if (!isChatDailyLimitReached || isPremium) {
+      setAdOffer(null);
+      return;
+    }
+    let cancelled = false;
+    void rewardOffer().then((offer) => {
+      if (!cancelled) setAdOffer(offer);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [isChatDailyLimitReached, isPremium]);
+  useEffect(() => {
+    if (adState !== "done" && adState !== "failed") return;
+    const timer = window.setTimeout(() => setAdState("idle"), 5000);
+    return () => window.clearTimeout(timer);
+  }, [adState]);
+
   const openPaywall = useCallback((_reason?: string) => {
     billing.openBilling();
   }, [billing]);
@@ -778,6 +801,27 @@ export function ChatWindow({
       // keep current entitlement as fallback
     }
   }, [isPremium]);
+
+  const [adGranted, setAdGranted] = useState(0);
+  const watchAdForChats = async () => {
+    if (adState === "waiting" || !adOffer) return;
+    setAdState("waiting");
+    const before = entitlement.dailyLimit;
+    const result = await showRewardedForChats();
+    if (result !== "shown") {
+      setAdState("failed");
+      return;
+    }
+    // 보상은 AdMob → 서버로 몇 초 뒤 도착한다. 중간에 닫았으면 늘지 않고 조용히 돌아온다.
+    const limit = await waitForChatBonus(before);
+    await refreshEntitlement();
+    if (limit === null) {
+      setAdState("idle");
+      return;
+    }
+    setAdGranted(before === null ? adOffer.chats : limit - before);
+    setAdState("done");
+  };
 
   useEffect(() => {
     setSavedItems(loadSavedItems());
@@ -1184,6 +1228,8 @@ export function ChatWindow({
   };
 
   const endCurrentSession = () => {
+    // 대화를 끝내는 자리도 자연스러운 끝(채팅 몇 번 뒤에만, lib/ads.ts).
+    void maybeShowInterstitial("chatLeave");
     if (turns.length === 0) {
       startNewChat();
       return;
@@ -1334,6 +1380,7 @@ export function ChatWindow({
     setIsSending(true);
     try {
       await sendChatMessage(trimmed, photo || undefined, ownLanguage);
+      noteChatSent();
       await refreshEntitlement();
       setInput("");
       setPendingPhoto(null);
@@ -1480,6 +1527,18 @@ export function ChatWindow({
                     {ui.endSession}
                   </button>
                 ) : null}
+                {!isPremium && adOffer ? (
+                  <button
+                    type="button"
+                    disabled={adState === "waiting"}
+                    onClick={() => void watchAdForChats()}
+                    className="rounded-lg border border-amber-300/40 bg-amber-400/15 px-3 py-1.5 text-xs font-medium text-amber-100 hover:bg-amber-400/25 disabled:opacity-60"
+                  >
+                    {adState === "waiting"
+                      ? ui.adRewardWaiting
+                      : ui.adRewardCta.replace("{n}", String(adOffer.chats)).replace("{left}", String(adOffer.left))}
+                  </button>
+                ) : null}
                 <button
                   type="button"
                   onClick={() => openPaywall("PAYWALL_OPEN_LIMIT_REACHED")}
@@ -1489,6 +1548,12 @@ export function ChatWindow({
                 </button>
               </div>
             </div>
+          ) : null}
+          {adState === "failed" && isChatDailyLimitReached ? (
+            <p className="px-1 text-xs text-amber-200">{ui.adRewardFailed}</p>
+          ) : null}
+          {adState === "done" && !isChatDailyLimitReached ? (
+            <p className="px-1 text-xs text-emerald-300">{ui.adRewardDone.replace("{n}", String(adGranted))}</p>
           ) : null}
           {practice ? (
             <PracticeBanner

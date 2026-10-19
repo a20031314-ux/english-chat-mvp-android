@@ -1,3 +1,4 @@
+import { chatBonusToday } from "@/lib/server/adChat";
 import { NextRequest, after } from "next/server";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
@@ -76,7 +77,7 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "MAP_CHANGED" }, { status: 409 });
   }
 
-  if (!isPremium && (await getDailyUsed(userId)) >= FREE_DAILY_CHAT_LIMIT) {
+  if (!isPremium && (await getDailyUsed(userId)) >= FREE_DAILY_CHAT_LIMIT + (await chatBonusToday(userId, "free"))) {
     return jsonWithCors(request, { error: "DAILY_LIMIT_REACHED" }, { status: 403 });
   }
   void meterRequest(request, "missionCheck");

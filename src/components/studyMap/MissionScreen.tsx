@@ -1,5 +1,6 @@
 "use client";
 
+import { maybeShowInterstitial } from "@/lib/ads";
 import { useEffect, useRef, useState } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { TTSButton } from "@/components/TTSButton";
@@ -153,6 +154,8 @@ export function MissionScreen({
   };
 
   const goNext = () => {
+    // 미션 하나를 마치고 넘어가는 자리: 무료 사용자에게 전면 광고를 띄울 수 있는 자연스러운 끝(lib/ads.ts).
+    if (doneNow) void maybeShowInterstitial("missionDone");
     setAttempts([]);
     setHints(0);
     setCheckError(null);

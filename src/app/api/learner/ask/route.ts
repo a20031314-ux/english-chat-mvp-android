@@ -1,3 +1,4 @@
+import { chatBonusToday } from "@/lib/server/adChat";
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { isIdentified } from "@/lib/server/identity";
@@ -51,7 +52,7 @@ export async function POST(request: NextRequest) {
 
   const { userId, isPremium } = await resolveRequestEntitlement(request);
   if (!isIdentified(userId)) return jsonWithCors(request, { error: "IDENTITY_REQUIRED" }, { status: 401 });
-  if (!isPremium && (await getDailyUsed(userId)) >= FREE_DAILY_CHAT_LIMIT) {
+  if (!isPremium && (await getDailyUsed(userId)) >= FREE_DAILY_CHAT_LIMIT + (await chatBonusToday(userId, "free"))) {
     return jsonWithCors(request, { error: "DAILY_LIMIT_REACHED" }, { status: 403 });
   }
 

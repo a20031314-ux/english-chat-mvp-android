@@ -1,3 +1,4 @@
+import { chatBonusToday } from "@/lib/server/adChat";
 import { NextRequest } from "next/server";
 import {
   FREE_CATALOG_TRIAL_COUNT,
@@ -28,6 +29,8 @@ export async function OPTIONS(request: NextRequest) {
 export async function GET(request: NextRequest) {
   const { userId, isPremium, verified, tier, terms } = await resolveRequestEntitlement(request);
   const dailyUsed = await getDailyUsed(userId);
+  // 보상형 광고로 오늘 늘어난 채팅(무료만, billing/ads.ts). 옛 빌드도 한도 숫자로 그대로 받는다.
+  const adChatBonus = await chatBonusToday(userId, tier);
   const identified = isIdentified(userId);
   const todayLeftMs = identified
     ? await dailyCallLeftMs(
@@ -43,7 +46,8 @@ export async function GET(request: NextRequest) {
     // Which plan (billing/plans.ts), and what it gives.
     tier,
     dailyUsed,
-    dailyLimit: terms.dailyChat,
+    dailyLimit: terms.dailyChat === null ? null : terms.dailyChat + adChatBonus,
+    adChatBonus,
     // Free talk a day on this plan, and what is left of today's. Null on a plan
     // without daily minutes (free, and premium before its switch).
     callDailyMinutes: terms.dailyCallMinutes,

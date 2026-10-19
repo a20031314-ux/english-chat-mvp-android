@@ -33,6 +33,15 @@ function secret(): string | null {
   return null;
 }
 
+/**
+ * 다른 용도의 서명 키(예: 광고 보상 표 "adReward"). 로그인 토큰과 같은 키를 쓰면 한쪽 토큰이
+ * 다른 쪽에서 통하므로, 용도 이름을 섞어 따로 만든다.
+ */
+export function purposeSecret(purpose: string): string | null {
+  const key = secret();
+  return key ? createHmac("sha256", key).update(`purpose:${purpose}`).digest("hex") : null;
+}
+
 export function authConfigured(): boolean {
   return secret() !== null;
 }

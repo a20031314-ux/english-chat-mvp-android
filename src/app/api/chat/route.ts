@@ -1,3 +1,4 @@
+import { chatBonusToday } from "@/lib/server/adChat";
 import { meterRequest, recordTokens } from "@/lib/server/meterRequest";
 import { takeRoomHint } from "@/lib/server/roomHint";
 import { NextRequest, after } from "next/server";
@@ -814,7 +815,7 @@ export async function OPTIONS(request: NextRequest) {
 export async function POST(request: NextRequest) {
   const openai = getOpenAIClient();
 
-  const { userId, isPremium, terms } = await resolveRequestEntitlement(request);
+  const { userId, isPremium, tier, terms } = await resolveRequestEntitlement(request);
   // Messages a day on this plan (billing/plans.ts); null for none.
   const chatLimit = terms.dailyChat;
 
@@ -905,7 +906,7 @@ export async function POST(request: NextRequest) {
   if (
     (mode === "chat" || mode === "how_to_say") &&
     chatLimit !== null &&
-    (await getDailyUsed(userId)) >= chatLimit
+    (await getDailyUsed(userId)) >= chatLimit + (await chatBonusToday(userId, tier))
   ) {
     return jsonWithCors(request, { error: "DAILY_LIMIT_REACHED" }, { status: 403 });
   }

@@ -64,6 +64,7 @@ import type { UICopy } from "@/lib/copy";
 import { PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
 import { PackRetroSheet } from "@/components/PackCard";
 import { finishPack } from "@/lib/pack/client";
+import { maybeShowInterstitial } from "@/lib/ads";
 import type { Retro } from "@/lib/pack/pack";
 import { PACK_ITEMS } from "@/lib/pack/pack";
 import { saidPhrase } from "@/lib/learner/practice";
@@ -378,6 +379,21 @@ export function RoleplayScreen({
     });
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [said, state, memory]);
+
+  // 통화(또는 오늘의 팩)가 끝까지 끝났을 때 한 번: 무료 사용자에게 전면 광고를 띄울 수 있는
+  // 자연스러운 끝(lib/ads.ts). 작별 인사가 끝난 뒤로 조금 미룬다. 중간에 끊고 나간 통화에는 띄우지 않는다.
+  const adShownForCall = useRef(false);
+  useEffect(() => {
+    if (!scenario) return;
+    if (!(state?.finished || instruction?.do === "finish")) {
+      adShownForCall.current = false; // 새 통화
+      return;
+    }
+    if (adShownForCall.current) return;
+    adShownForCall.current = true;
+    window.setTimeout(() => void maybeShowInterstitial(packDay ? "packEnd" : "callEnd"), 1500);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [state?.finished, instruction?.do]);
 
   // The pack's end: the retro and what was added to My, once per conversation.
   useEffect(() => {

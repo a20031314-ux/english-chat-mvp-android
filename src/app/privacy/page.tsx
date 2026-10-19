@@ -22,8 +22,8 @@ export const metadata: Metadata = {
  * LEARNER_TEXT_STORE is on, and it is off.
  */
 
-const LAST_UPDATED_EN = "October 19, 2026";
-const LAST_UPDATED_KO = "2026년 10월 19일";
+const LAST_UPDATED_EN = "October 20, 2026";
+const LAST_UPDATED_KO = "2026년 10월 20일";
 
 type Section = { title: string; body: string[] };
 
@@ -81,7 +81,7 @@ const en: Section[] = [
       "• To keep the service secure, prevent abuse and fix problems.",
       "• To measure and improve the quality of the app, as described in “Conversation Content We Keep”.",
       "• To respond to your requests.",
-      "We do not sell personal information, and we do not use your information for advertising.",
+      "We do not sell personal information. If you use the Android app without a subscription, it shows ads through Google AdMob (see “Advertising” below). Subscribers see no ads. We do not use your conversations, your learning records or your account details for advertising.",
     ],
   },
   {
@@ -95,7 +95,17 @@ const en: Section[] = [
       "• Resend (United States) — sending the one-time sign-in code to your email address.",
       "• Google — Google Play Billing for purchases; YouTube and Google APIs for playing videos, reading captions and searching videos and channels.",
       "• Brave Search — web search when finding learning content.",
+      "• Google AdMob (United States) — showing ads in the Android app to people without a subscription (see “Advertising”).",
       "Under its API terms, OpenAI does not use data sent through its API to train its models by default, and may keep it for a limited period to monitor for abuse.",
+    ],
+  },
+  {
+    title: "Advertising",
+    body: [
+      "The Android app shows ads to people without a subscription: a full-screen ad at the natural end of an activity (for example when a call or a mission ends), and an optional ad you can choose to watch for more chats. Subscribers see no ads, and the iOS app and the web show none.",
+      "Ads are provided by Google AdMob. To show and measure ads, the Google Mobile Ads SDK on your device may collect your device's advertising ID, IP address, device and app information, and how you interact with ads, under Google's policies (https://policies.google.com/technologies/ads). We do not send AdMob your conversations, learning records, email or account details.",
+      "When you watch an ad for more chats, AdMob tells our server that the ad was completed, together with a code our server issued for your app so the chats go to the right person. We keep only a count of those rewards per day.",
+      "Where the law requires consent (for example in the European Economic Area and the United Kingdom), the app asks before personalised ads are shown. You can reset or turn off your advertising ID in your device settings (Settings → Google → Ads, or Settings → Privacy → Ads).",
     ],
   },
   {
@@ -199,7 +209,7 @@ const ko: Section[] = [
       "• 서비스 보안 유지, 부정 이용 방지, 오류 수정",
       "• “보관하는 대화 내용”에 적은 서비스 품질 측정과 개선",
       "• 이용자 문의 대응",
-      "개인정보를 판매하지 않으며, 광고에 사용하지 않습니다.",
+      "개인정보를 판매하지 않습니다. 구독하지 않고 안드로이드 앱을 쓰면 Google AdMob을 통해 광고가 표시됩니다(아래 “광고” 참고). 구독자에게는 광고가 표시되지 않습니다. 대화 내용, 학습 기록, 계정 정보는 광고에 사용하지 않습니다.",
     ],
   },
   {
@@ -213,8 +223,18 @@ const ko: Section[] = [
       "• Resend (미국): 이메일 주소 / 로그인 일회용 코드 메일 발송 / 발송에 필요한 기간",
       "• Google (미국): 구매 정보, 영상 ID, 검색어 / Google Play 결제, YouTube 영상 재생·자막·검색 / 각 서비스 정책에 따름",
       "• Brave Search (미국): 검색어 / 학습 콘텐츠 검색 / 각 서비스 정책에 따름",
+      "• Google AdMob (미국): 광고 ID, IP 주소, 기기·앱 정보, 광고 반응 / 구독하지 않은 이용자에게 안드로이드 앱 광고 표시·측정 / Google 정책에 따름",
       "OpenAI는 API 약관에 따라 API로 전송된 데이터를 기본적으로 모델 학습에 사용하지 않습니다.",
       "국외 이전을 원하지 않으면 해당 기능을 사용하지 않거나 서비스 이용을 중단할 수 있습니다. 다만 이 경우 채팅·통화·영상 학습 등 핵심 기능을 이용할 수 없습니다.",
+    ],
+  },
+  {
+    title: "광고",
+    body: [
+      "안드로이드 앱은 구독하지 않은 이용자에게 광고를 표시합니다. 활동이 자연스럽게 끝나는 때(예: 통화나 미션이 끝났을 때) 전체 화면 광고가 나올 수 있고, 채팅을 더 쓰고 싶을 때 직접 골라 보는 광고가 있습니다. 구독자, iOS 앱, 웹에는 광고가 없습니다.",
+      "광고는 Google AdMob이 제공합니다. 광고 표시와 측정을 위해 기기의 Google 모바일 광고 SDK가 Google 정책(https://policies.google.com/technologies/ads)에 따라 광고 ID, IP 주소, 기기·앱 정보, 광고 반응을 수집할 수 있습니다. 대화 내용, 학습 기록, 이메일, 계정 정보는 AdMob에 보내지 않습니다.",
+      "광고를 보고 채팅을 더 받으면, AdMob이 광고를 끝까지 봤다는 사실과 우리 서버가 앱에 발급한 확인 코드를 서버로 보내 올바른 사람에게 채팅이 늘어나게 합니다. 서버는 하루 보상 횟수만 남깁니다.",
+      "법이 동의를 요구하는 지역(예: 유럽경제지역, 영국)에서는 맞춤 광고 전에 동의를 묻습니다. 광고 ID는 기기 설정(설정 → Google → 광고, 또는 설정 → 개인정보 보호 → 광고)에서 재설정하거나 끌 수 있습니다.",
     ],
   },
   {
