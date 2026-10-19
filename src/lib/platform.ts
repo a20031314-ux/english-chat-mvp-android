@@ -34,7 +34,9 @@ export function socialFeaturesEnabled(): boolean {
  * (심사 지침 4.8). iOS 1차는 아이디·비밀번호와 이메일 코드만 둔다.
  */
 export function googleLoginAvailable(): boolean {
-  return appPlatform() === "android";
+  // 웹(2026-10-20): Google Cloud 웹 클라이언트에 www.languagebank.net·english-chat-mvp.vercel.app 원본과
+  // 리디렉션(끝 "/")을 넣어 둠. 팝업으로 로그인하고 id 토큰은 서버가 같은 클라이언트 id로 확인한다.
+  return appPlatform() !== "ios";
 }
 
 /**
