@@ -64,7 +64,8 @@ export class RelayPlayer {
     this.frame = frame;
 
     this.onMessage = (event: MessageEvent) => {
-      if (event.source !== frame.contentWindow || event.origin !== this.origin) return;
+      // 보낸 창으로만 확인한다. iOS 웹뷰가 origin 문자열을 어떻게 적든 우리 iframe에서 온 것만 받는다.
+      if (event.source !== frame.contentWindow) return;
       const data = event.data as { lbYt?: string; time?: number; state?: number; duration?: number } | null;
       if (!data || typeof data.lbYt !== "string") return;
       if (typeof data.duration === "number" && data.duration > 0) this.duration = data.duration;

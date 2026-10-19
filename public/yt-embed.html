@@ -19,30 +19,39 @@
 <style>
   html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
   #p { position: absolute; inset: 0; width: 100%; height: 100%; }
+  /* 상태 줄: 아이폰에서만 생기는 문제를 맥 없이 보려고(2026-10-20). 재생이 시작되면 사라진다. */
+  #s { position: absolute; left: 8px; bottom: 6px; font: 11px -apple-system, system-ui, sans-serif; color: #8a8f98; pointer-events: none; }
 </style>
 </head>
 <body>
 <div id="p"></div>
+<div id="s">relay · start</div>
 <script>
 (function () {
   // 앱 화면만 명령을 보낼 수 있다(다른 사이트가 이 페이지를 띄워 조종하지 못하게).
   var ALLOWED = ["capacitor://localhost", "https://localhost", "http://localhost", "ionic://localhost"];
   var q = new URLSearchParams(location.search);
   var videoId = (q.get("v") || "").replace(/[^A-Za-z0-9_-]/g, "").slice(0, 20);
-  var parentOrigin = q.get("parent") || "capacitor://localhost";
-  if (ALLOWED.indexOf(parentOrigin) < 0) parentOrigin = "capacitor://localhost";
   var player = null;
   var ready = false;
+  var statusEl = document.getElementById("s");
+  var gotCommand = false;
+  function status(text) { if (statusEl) statusEl.textContent = "relay · " + text + (gotCommand ? " · cmd ok" : ""); }
 
+  // 보내는 값은 시간·상태뿐이라 받는 쪽을 "*"로 둔다. iOS 웹뷰가 capacitor:// 부모의 origin을
+  // 다르게 보면 지정한 origin으로 보낸 메시지가 조용히 버려져 앱이 플레이어 준비를 영영 모른다.
   function send(msg) {
     msg.lbYt = msg.lbYt || "tick";
-    try { parent.postMessage(msg, parentOrigin); } catch (e) {}
+    try { parent.postMessage(msg, "*"); } catch (e) {}
   }
 
+  // 명령은 이 페이지를 띄운 부모 창에서 온 것만 받는다(origin 문자열 대신 보낸 창으로 확인).
   window.addEventListener("message", function (event) {
-    if (ALLOWED.indexOf(event.origin) < 0) return;
+    if (event.source !== window.parent && ALLOWED.indexOf(event.origin) < 0) return;
     var data = event.data;
-    if (!data || data.lbYt !== "cmd" || !player || !ready) return;
+    if (!data || data.lbYt !== "cmd") return;
+    if (!gotCommand) { gotCommand = true; status(ready ? "ready" : "waiting"); }
+    if (!player || !ready) return;
     var fn = data.fn;
     var args = Array.isArray(data.args) ? data.args : [];
     if (["playVideo", "pauseVideo", "seekTo", "mute", "unMute"].indexOf(fn) < 0) return;
@@ -50,6 +59,7 @@
   });
 
   window.onYouTubeIframeAPIReady = function () {
+    status("api ok");
     player = new YT.Player("p", {
       videoId: videoId,
       width: "100%",
@@ -66,6 +76,7 @@
       events: {
         onReady: function () {
           ready = true;
+          status("ready");
           var d = 0;
           try { d = player.getDuration(); } catch (e) {}
           send({ lbYt: "ready", duration: d });
@@ -75,8 +86,11 @@
             send({ lbYt: "tick", time: t, state: s, duration: dur });
           }, 250);
         },
-        onStateChange: function (e) { send({ lbYt: "state", state: e.data }); },
-        onError: function (e) { send({ lbYt: "error", code: e && e.data }); }
+        onStateChange: function (e) {
+          if (e.data === 1 && statusEl) statusEl.style.display = "none";
+          send({ lbYt: "state", state: e.data });
+        },
+        onError: function (e) { status("error " + (e && e.data)); send({ lbYt: "error", code: e && e.data }); }
       }
     });
   };
@@ -84,7 +98,8 @@
   var s = document.createElement("script");
   s.src = "https://www.youtube.com/iframe_api";
   s.async = true;
-  s.onerror = function () { send({ lbYt: "error", code: "api" }); };
+  s.onerror = function () { status("api failed"); send({ lbYt: "error", code: "api" }); };
+  status("api loading");
   document.head.appendChild(s);
 })();
 </script>
