@@ -4,6 +4,8 @@ import { useEffect, useState } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { apiUrl } from "@/lib/apiBase";
 import { appVersion } from "@/lib/appVersion";
+import { sendAppIntent } from "@/lib/appIntents";
+import { fillGuideLabels, findGuideSection, loadGuide, readCachedGuide, type GuideData } from "@/lib/guide/client";
 import type { Locale, UICopy } from "@/lib/copy";
 import {
   USE_SIGNAL_KEYS,
@@ -73,6 +75,19 @@ export function WhatsNewSheet({
   onOpenTab: (tab: WhatsNewTab) => void;
 }) {
   const [items, setItems] = useState<WhatsNewItem[]>(readPending);
+  // 설명 글은 사용법 칸에서(item.guide). 못 받으면 노트 자체의 글.
+  const [guide, setGuide] = useState<GuideData | null>(() => readCachedGuide(locale));
+  const wantsGuide = items.some((item) => item.guide);
+  useEffect(() => {
+    if (!wantsGuide) return;
+    let live = true;
+    void loadGuide(locale).then((loaded) => {
+      if (live && loaded) setGuide(loaded);
+    });
+    return () => {
+      live = false;
+    };
+  }, [wantsGuide, locale]);
 
   // Nothing to show still records the version, so a fresh install is not
   // mistaken for an update next time.
@@ -87,6 +102,14 @@ export function WhatsNewSheet({
     setItems([]);
     if (tab) onOpenTab(tab);
   };
+  const titleOf = (item: WhatsNewItem): string => {
+    const found = item.guide ? findGuideSection(guide, item.guide) : null;
+    return found ? fillGuideLabels(found.section.heading, ui) : String(ui[item.title]);
+  };
+  const bodyOf = (item: WhatsNewItem): string[] => {
+    const found = item.guide ? findGuideSection(guide, item.guide) : null;
+    return found ? found.section.body.map((paragraph) => fillGuideLabels(paragraph, ui)) : [String(ui[item.body])];
+  };
 
   return (
     <FullScreenLayer>
@@ -97,16 +120,34 @@ export function WhatsNewSheet({
         <div className="mx-auto flex max-w-xl flex-col gap-8 pb-6">
           {items.map((item) => (
             <section key={item.id}>
-              <h3 className="text-[15px] font-semibold text-neutral-100">{ui[item.title]}</h3>
-              <p className="mt-1.5 text-[13px] leading-relaxed text-neutral-300">{ui[item.body]}</p>
+              <h3 className="text-chat font-semibold text-ink">{titleOf(item)}</h3>
+              <div className="mt-1.5 flex flex-col gap-1.5 text-note leading-relaxed text-slate-300">
+                {bodyOf(item).map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
               <Shot item={item} locale={locale} alt={String(ui[item.title])} />
-              <button
-                type="button"
-                onClick={() => close(item.tab)}
-                className="mt-3 rounded-lg border border-white/15 px-3 py-1.5 text-[12px] text-neutral-200 hover:bg-white/10"
-              >
-                {ui.whatsNewTry}
-              </button>
+              <div className="mt-3 flex flex-wrap gap-2">
+                <button
+                  type="button"
+                  onClick={() => close(item.tab)}
+                  className="rounded-lg border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10"
+                >
+                  {ui.whatsNewTry}
+                </button>
+                {item.guide ? (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      close();
+                      sendAppIntent("openGuide", { section: item.guide! });
+                    }}
+                    className="rounded-lg border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10"
+                  >
+                    {ui.guideMore}
+                  </button>
+                ) : null}
+              </div>
             </section>
           ))}
         </div>

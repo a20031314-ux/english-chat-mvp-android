@@ -72,6 +72,13 @@
 
 **간격**: Tailwind 기본 단위(4px 배수)만. `p-[13px]` 같은 값 안 씀. 화면 좌우 여백 16px(`px-4`).
 
+## 안내 글 (사용법·새로워진 점, 2026-10-20 사용자 결정)
+
+- **설명은 한 곳에만:** 사용법 칸(`src/lib/guide/content.ts`, 칸 id `GUIDE_SECTION_IDS`). 새로워진 점 항목은 `guide: "<칸 id>"`로 그 칸을 가리키고 글을 따로 쓰지 않는다(제목·글은 칸에서, "자세히" → 사용법 창의 그 칸).
+- **글에 가는 길을 쓰지 않는다:** "'사람과 학습' → 'My' → '게시판'", "통화 탭에서" 같은 탭 경로 금지(`guide/chapters.test.ts`가 막음). 그 화면으로는 묶음의 "이 화면으로 가기" 버튼이 데려간다. 버튼 이름은 `{ui:키}`.
+- **탭 구조가 바뀌면:** 글은 그대로, `GUIDE_CHAPTERS`에서 칸을 옮기고 `go`만 바꾼다. 화면마다 열릴 묶음은 `GuideSheet.tsx` `SCREEN_CHAPTER`.
+- 새 기능 = 새 칸(heading·body·shot, 14개 언어) + id + 묶음에 넣기. 출시 땐 `RELEASE_NOTES` 항목에 그 id.
+
 ## 부품 (새로 만들기 전에 있는 것부터)
 
 - 시트·팝업: `BodyLayer`로 띄움(RULES.md 4번). 전체 화면은 `FullScreenLayer`.

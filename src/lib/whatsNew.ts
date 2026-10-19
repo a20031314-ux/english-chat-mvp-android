@@ -18,7 +18,7 @@
 import type { UICopy } from "./copy.ts";
 import { compareVersions } from "./appVersion.ts";
 
-export type WhatsNewTab = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people" | "messages";
+export type WhatsNewTab = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people" | "messages" | "talk";
 
 export type WhatsNewItem = {
   id: string;
@@ -28,6 +28,11 @@ export type WhatsNewItem = {
   shot: string;
   /** Where "try it" goes. */
   tab: WhatsNewTab;
+  /**
+   * 사용법 칸(guide/content.ts GUIDE_SECTION_IDS). 있으면 설명 글은 그 칸의 글을 쓰고(`body`는
+   * 칸을 못 받았을 때만), "자세히"가 사용법 창의 그 칸을 연다. 설명을 두 번 쓰지 않으려고(2026-10-20).
+   */
+  guide?: string;
 };
 
 export type ReleaseNote = {
@@ -42,17 +47,18 @@ export const RELEASE_NOTES: ReleaseNote[] = [
     version: "2.69",
     code: 83,
     items: [
-      { id: "people", title: "whatsNewPeopleTitle", body: "whatsNewPeopleBody", shot: "people", tab: "people" },
-      { id: "invite", title: "whatsNewInviteTitle", body: "whatsNewInviteBody", shot: "invite", tab: "people" },
-      { id: "groups", title: "whatsNewGroupsTitle", body: "whatsNewGroupsBody", shot: "groups", tab: "messages" },
-      { id: "team", title: "whatsNewTeamTitle", body: "whatsNewTeamBody", shot: "team", tab: "messages" },
-      { id: "freetalk", title: "whatsNewFreeTalkTitle", body: "whatsNewFreeTalkBody", shot: "freetalk", tab: "rooms" },
-      { id: "quote", title: "whatsNewQuoteTitle", body: "whatsNewQuoteBody", shot: "quote", tab: "rooms" },
-      { id: "layouts", title: "whatsNewLayoutsTitle", body: "whatsNewLayoutsBody", shot: "layouts", tab: "rooms" },
-      { id: "hint", title: "whatsNewHintTitle", body: "whatsNewHintBody", shot: "hint", tab: "rooms" },
-      { id: "host", title: "whatsNewHostTitle", body: "whatsNewHostBody", shot: "host", tab: "rooms" },
-      { id: "notes", title: "whatsNewNotesTitle", body: "whatsNewNotesBody", shot: "notes", tab: "map" },
-      { id: "board", title: "whatsNewBoardTitle", body: "whatsNewBoardBody", shot: "board", tab: "people" },
+      // 2.69부터 설명은 사용법 칸에서(`guide`). 묶음 이름·가는 길을 글에 쓰지 않는다(hub/DESIGN.md "안내 글").
+      { id: "people", title: "whatsNewPeopleTitle", body: "whatsNewPeopleBody", shot: "people", tab: "people", guide: "people.find" },
+      { id: "invite", title: "whatsNewInviteTitle", body: "whatsNewInviteBody", shot: "invite", tab: "people", guide: "people.invite" },
+      { id: "groups", title: "whatsNewGroupsTitle", body: "whatsNewGroupsBody", shot: "groups", tab: "talk", guide: "messages.groups" },
+      { id: "team", title: "whatsNewTeamTitle", body: "whatsNewTeamBody", shot: "team", tab: "talk" },
+      { id: "freetalk", title: "whatsNewFreeTalkTitle", body: "whatsNewFreeTalkBody", shot: "freetalk", tab: "rooms", guide: "room.find" },
+      { id: "quote", title: "whatsNewQuoteTitle", body: "whatsNewQuoteBody", shot: "quote", tab: "rooms", guide: "room.quote" },
+      { id: "layouts", title: "whatsNewLayoutsTitle", body: "whatsNewLayoutsBody", shot: "layouts", tab: "rooms", guide: "room.layouts" },
+      { id: "hint", title: "whatsNewHintTitle", body: "whatsNewHintBody", shot: "hint", tab: "rooms", guide: "room.stuck" },
+      { id: "host", title: "whatsNewHostTitle", body: "whatsNewHostBody", shot: "host", tab: "rooms", guide: "room.host" },
+      { id: "notes", title: "whatsNewNotesTitle", body: "whatsNewNotesBody", shot: "notes", tab: "map", guide: "my.notes" },
+      { id: "board", title: "whatsNewBoardTitle", body: "whatsNewBoardBody", shot: "board", tab: "people", guide: "people.board" },
     ],
   },
   {
@@ -187,6 +193,13 @@ export function notesBetween(
         compareVersions(note.version, target) <= 0,
     )
     .sort((a, b) => compareVersions(b.version, a.version));
+}
+
+/** 이 빌드의 노트가 가리키는 사용법 칸: 사용법 창에서 "새로" 표시. */
+export function newGuideSections(current: string, notes: ReleaseNote[] = RELEASE_NOTES): string[] {
+  if (!current) return [];
+  const note = notes.find((row) => compareVersions(row.version, current) === 0);
+  return note ? note.items.flatMap((item) => (item.guide ? [item.guide] : [])) : [];
 }
 
 /** The newest release that has notes. */

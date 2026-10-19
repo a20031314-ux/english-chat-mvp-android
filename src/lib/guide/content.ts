@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-19e";
+export const GUIDE_VERSION = "2026-10-20a";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms";
 
@@ -35,6 +35,72 @@ export type GuideSection = {
 export type GuideTab = { title: string; sections: GuideSection[] };
 
 export type Guide = Record<GuideTabId, GuideTab>;
+
+/**
+ * 칸마다 바뀌지 않는 이름(2026-10-20). 글은 탭 순서대로 쓰여 있고(옛 빌드가 그대로 받는다),
+ * 새 앱은 이 이름으로 칸을 집어 기능별 묶음(GUIDE_CHAPTERS)으로 보고, 새로워진 점이 칸을 가리킨다.
+ * 순서는 각 탭 `sections`와 같다 — 칸을 더하거나 빼면 여기도 같이(테스트가 길이를 맞춘다).
+ */
+export const GUIDE_SECTION_IDS: Record<GuideTabId, string[]> = {
+  map: ["my.start", "my.next", "my.growth", "my.graph", "my.element", "my.ask", "my.map", "my.notes", "my.more"],
+  chat: ["chat.next", "chat.talk", "chat.stuck", "chat.meaning", "chat.analyse", "chat.words", "chat.menu", "chat.history", "chat.more"],
+  roleplay: ["call.pack", "call.talk", "call.review", "call.ownline", "call.pause", "call.time"],
+  video: ["video.library", "video.subtitles", "video.bar", "video.ask", "video.import", "video.edit"],
+  vocab: ["words.find", "words.saved", "words.learn", "words.script"],
+  rooms: [
+    "room.find",
+    "room.layouts",
+    "room.quote",
+    "room.stuck",
+    "room.host",
+    "people.find",
+    "people.invite",
+    "messages.dm",
+    "messages.groups",
+    "people.board",
+  ],
+};
+
+/**
+ * 사용법 창 하나의 기능별 묶음. 탭 구조가 바뀌면 여기서 칸을 옮기고 `go`만 바꾼다 —
+ * 글에는 가는 길을 쓰지 않는다(hub/DESIGN.md "안내 글"). 제목은 화면의 탭·버튼 이름 그대로({ui:…}).
+ * `go`: "이 화면으로 가기"가 여는 곳(AppHome 탭, notes = My의 노트).
+ */
+export type GuideGo = "chat" | "roleplay" | "talk" | "video" | "people" | "rooms" | "map" | "notes";
+export type GuideChapterSpec = { id: string; title: string; go: GuideGo; sections: string[] };
+
+export const GUIDE_CHAPTERS: GuideChapterSpec[] = [
+  { id: "ai-chat", title: "{ui:talkAiTutor}", go: "chat", sections: GUIDE_SECTION_IDS.chat },
+  { id: "ai-call", title: "{ui:talkAiCall}", go: "roleplay", sections: GUIDE_SECTION_IDS.roleplay },
+  { id: "messages", title: "{ui:homeTabMessages}", go: "talk", sections: ["messages.dm", "messages.groups"] },
+  { id: "video", title: "{ui:homeTabVideo}", go: "video", sections: GUIDE_SECTION_IDS.video },
+  { id: "people", title: "{ui:homeTabPeople}", go: "people", sections: ["people.find", "people.invite", "people.board"] },
+  { id: "rooms", title: "{ui:homeTabRooms}", go: "rooms", sections: ["room.find", "room.layouts", "room.quote", "room.stuck", "room.host"] },
+  { id: "my", title: "{ui:homeTabProfile}", go: "map", sections: GUIDE_SECTION_IDS.map.filter((id) => id !== "my.notes") },
+  { id: "notes", title: "{ui:notesTitle}", go: "notes", sections: ["my.notes", ...GUIDE_SECTION_IDS.vocab] },
+];
+
+export type GuideChapter = { id: string; title: string; go: GuideGo; sections: (GuideSection & { id: string })[] };
+
+/** 한 언어의 글에서 칸 하나(없으면 null). */
+export function guideSection(guide: Guide, id: string): (GuideSection & { id: string }) | null {
+  for (const tab of Object.keys(GUIDE_SECTION_IDS) as GuideTabId[]) {
+    const at = GUIDE_SECTION_IDS[tab].indexOf(id);
+    const section = at >= 0 ? guide[tab]?.sections[at] : undefined;
+    if (section) return { ...section, id };
+  }
+  return null;
+}
+
+/** 한 언어의 글을 기능별 묶음으로. 그 언어에 없는 칸은 빠진다. */
+export function guideChapters(guide: Guide): GuideChapter[] {
+  return GUIDE_CHAPTERS.map((chapter) => ({
+    id: chapter.id,
+    title: chapter.title,
+    go: chapter.go,
+    sections: chapter.sections.map((id) => guideSection(guide, id)).filter((row): row is GuideSection & { id: string } => row !== null),
+  })).filter((chapter) => chapter.sections.length > 0);
+}
 
 export const GUIDE_KO: Guide = {
   map: {
@@ -183,7 +249,7 @@ export const GUIDE_KO: Guide = {
       {
         heading: "{ui:packTitle}",
         body: [
-          "통화 탭 맨 위 카드예요. 내 기록에서 지금 가장 키울 곳을 골라 약 7분짜리 대화를 만들어요.",
+          "내 기록에서 지금 가장 키울 곳을 골라 약 7분짜리 대화를 만들어요.",
           "하루 한 번 무료이고 통화 시간을 쓰지 않아요. ‘{ui:packStart}’을 누르면 시작해요.",
         ],
         shot: "call-pack",
@@ -217,7 +283,7 @@ export const GUIDE_KO: Guide = {
       {
         heading: "멈추고 이어서 하기",
         body: [
-          "‘{ui:roleplayPause}’을 누르면 대화가 저장돼요. 다음에 통화 탭에서 ‘{ui:roleplayResume}’로 계속해요.",
+          "‘{ui:roleplayPause}’을 누르면 대화가 저장돼요. 다음에 ‘{ui:roleplayResume}’로 계속해요.",
         ],
       },
       {
@@ -355,30 +421,42 @@ export const GUIDE_KO: Guide = {
         "shot": "r69-host"
       },
       {
-        "heading": "사람·메시지·통화",
+        "heading": "사람 찾기",
         "body": [
-          "‘사람과 학습’의 ‘My’ 탭에서 최근에 온 학습자를 보고, 사진을 누르면 프로필이 열려요. 팔로우하거나 메시지를 보내면 상대가 답한 뒤 대화 안에서 📞로 통화해요. 통화 자막은 기록으로 남아요.",
-          "‘My’ 위 ‘➕ 친구 초대’로 카카오톡 등에 링크를 보내요. 받은 사람은 앱을 깔고 로그인해 이름만 정하면 바로 들어와요. 방 위 ➕는 그 방으로 초대해요.",
+          "최근에 온 학습자의 프로필이 보여요. 사진을 누르면 프로필이 열리고, 팔로우하거나 메시지를 보낼 수 있어요.",
           "차단·신고도 프로필에서 해요."
         ],
         "shot": "r69-people"
       },
       {
+        "heading": "친구 초대",
+        "body": [
+          "‘➕ 친구 초대’로 카카오톡 등에 링크를 보내요. 받은 사람은 앱을 깔고 로그인해 이름만 정하면 바로 들어와요. 방 위 ➕는 그 방으로 초대해요."
+        ]
+      },
+      {
+        "heading": "메시지와 통화",
+        "body": [
+          "첫 메시지는 요청으로 가고, 상대가 답하면 대화가 열려요. 대화 위 📞로 통화하고, 통화 자막은 기록으로 남아요."
+        ]
+      },
+      {
         "heading": "단체방과 단체 통화",
         "body": [
-          "‘메시지’의 ‘+ 단체방’으로 팔로우한 사람을 초대해요(최대 20명). 대화 위 📞로 같이 통화하고, 끝나면 자막이 통화 기록으로 남아요."
+          "‘+ 단체방’으로 팔로우한 사람을 초대해요(최대 20명). 대화 위 📞로 같이 통화하고, 끝나면 자막이 통화 기록으로 남아요."
         ],
         "shot": "r69-groups"
       },
       {
         "heading": "게시판",
         "body": [
-          "‘My’ 위 ‘게시판’에서 배우는 언어로 글을 올리고 댓글을 달아요. 고치고 지우는 건 쓴 사람만 할 수 있어요. 글 아래 ‘내 언어로 보기’로 번역하고, 이름을 누르면 팔로우·메시지·신고."
+          "배우는 언어로 글을 올리고 댓글을 달아요. 고치고 지우는 건 쓴 사람만 할 수 있어요. 글 아래 ‘내 언어로 보기’로 번역하고, 이름을 누르면 팔로우·메시지·신고."
         ],
         "shot": "r69-board"
       }
     ]
   },
+
 };
 
 export const GUIDE_EN: Guide = {
@@ -528,7 +606,7 @@ export const GUIDE_EN: Guide = {
       {
         heading: "{ui:packTitle}",
         body: [
-          "The card at the top of the Calls tab. It picks what your record says to grow next and makes a conversation of about seven minutes from it.",
+          "It picks what your record says to grow next and makes a conversation of about seven minutes from it.",
           "It's free once a day and uses no call time. Tap {ui:packStart} to begin.",
         ],
         shot: "call-pack",
@@ -562,7 +640,7 @@ export const GUIDE_EN: Guide = {
       {
         heading: "Pause and carry on",
         body: [
-          "{ui:roleplayPause} saves the conversation. Next time, {ui:roleplayResume} in the Calls tab picks it up again.",
+          "{ui:roleplayPause} saves the conversation. Next time, {ui:roleplayResume} picks it up again.",
         ],
       },
       {
@@ -570,7 +648,7 @@ export const GUIDE_EN: Guide = {
         body: [
           "Free gives you 20 points (100 minutes) to start. A point is five minutes.",
           "Lite gives 7 minutes of free calls every day and Plus 10; after that, points carry you on. Premium gives 80 points a month.",
-          "The Calls tab shows today's time left. Today's pack uses no time on any plan.",
+          "The call screen shows today's time left. Today's pack uses no time on any plan.",
         ],
       },
     ],
@@ -700,28 +778,40 @@ export const GUIDE_EN: Guide = {
         "shot": "r69-host"
       },
       {
-        "heading": "People, messages and calls",
+        "heading": "Find people",
         "body": [
-          "In “Learn with people”, the My tab shows learners who were here lately; tap a photo for their profile. Follow or message them, and once they reply, call from the conversation with 📞. A call’s captions stay as a record.",
-          "In My, “➕ Invite friends” sends a link through any messenger. Whoever opens it installs the app, signs in, picks a name and they're in. ➕ in a room invites to that room.",
+          "Profiles of learners who were here lately. Tap a photo to open a profile, then follow or send a message.",
           "Blocking and reporting are on the profile too."
         ],
         "shot": "r69-people"
       },
       {
+        "heading": "Invite friends",
+        "body": [
+          "“➕ Invite friends” sends a link through any messenger. Whoever opens it installs the app, signs in, picks a name and they're in. ➕ in a room invites to that room."
+        ]
+      },
+      {
+        "heading": "Messages and calls",
+        "body": [
+          "Your first message goes as a request; once they reply, the conversation opens. Call with 📞 above the conversation; the call's captions stay as a record."
+        ]
+      },
+      {
         "heading": "Group chats and group calls",
         "body": [
-          "In Messages, “+ Group” invites people you follow (up to 20). Call together with 📞 above the chat; afterwards the captions stay as a call record."
+          "“+ Group” invites people you follow (up to 20). Call together with 📞 above the chat; afterwards the captions stay as a call record."
         ],
         "shot": "r69-groups"
       },
       {
         "heading": "Board",
         "body": [
-          "Above “My”, open “Board” to post in the language you’re learning and comment. Only the writer can edit or delete. “See in my language” translates a post; tap a name to follow, message or report."
+          "Post in the language you’re learning and comment. Only the writer can edit or delete. “See in my language” translates a post; tap a name to follow, message or report."
         ],
         "shot": "r69-board"
       }
     ]
   },
+
 };

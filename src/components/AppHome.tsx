@@ -16,6 +16,9 @@ import { onAppIntent, sendAppIntent } from "@/lib/appIntents";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
 import { BillingUiProvider, BillingOpenButton } from "@/components/BillingScreen";
 import { GuideButton } from "@/components/GuideSheet";
+import { appVersion } from "@/lib/appVersion";
+import { newGuideSections } from "@/lib/whatsNew";
+import type { GuideGo } from "@/lib/guide/content";
 import { FeedbackButton } from "@/components/FeedbackButton";
 import { RoomsScreen } from "@/components/rooms/RoomsScreen";
 import { PeopleTab } from "@/components/rooms/PeopleTab";
@@ -204,7 +207,16 @@ function AppHomeInner({
   ];
   const tabItems = socialOn ? socialTabItems : aiTabItems;
   // 사용법(?): 대화 목록은 채팅 안내, 사람은 말하는 방 안내를 같이 쓴다.
-  const guideTab = shownTab === "talk" ? "chat" : shownTab === "people" ? "rooms" : shownTab;
+  // 사용법 창: "?"는 지금 화면의 기능 칸으로 열고(GuideSheet SCREEN_CHAPTER), 묶음마다 "이 화면으로 가기".
+  const guideGo: GuideGo[] = [
+    "chat",
+    ...(roleplayAvailable ? (["roleplay"] as const) : []),
+    "video",
+    "map",
+    "notes",
+    ...(socialOn ? (["talk", "people", "rooms"] as const) : []),
+  ];
+  const goFromGuide = (go: GuideGo) => openTab(go === "notes" ? "vocab" : go);
   const guideTabs = [
     ...aiTabItems,
     // 단어장은 탭에서 빠졌지만(노트 안) 사용법은 그대로 둔다.
@@ -233,8 +245,11 @@ function AppHomeInner({
               <GuideButton
                 ui={ui}
                 locale={locale}
-                tab={guideTab as Exclude<AppTab, "people" | "messages" | "talk">}
+                tab={shownTab}
                 tabs={guideTabs}
+                availableGo={guideGo}
+                onGo={goFromGuide}
+                newSections={newGuideSections(appVersion())}
               />
               <FeedbackButton ui={ui} locale={locale} tab={shownTab} />
             </div>

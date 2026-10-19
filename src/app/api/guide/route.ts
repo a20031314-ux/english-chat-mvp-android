@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
-import { GUIDE_EN, GUIDE_KO, GUIDE_VERSION, type Guide } from "@/lib/guide/content";
+import { GUIDE_EN, GUIDE_KO, GUIDE_VERSION, guideChapters, type Guide } from "@/lib/guide/content";
 import translations from "@/lib/guide/translations.json";
 import beforeMy from "@/lib/guide/before-my.json";
 import videoBefore267 from "@/lib/guide/videoBefore267.json";
@@ -50,5 +50,8 @@ export async function GET(request: NextRequest) {
       });
     }
   }
-  return jsonWithCors(request, { version: GUIDE_VERSION, language, tabs });
+  // `chapters=1`(하단 탭 대화·영상·사람·Room·My 빌드부터, 2026-10-20): 같은 글을 기능별 묶음으로도.
+  // 옛 빌드는 묻지 않으니 `tabs`만 받는다.
+  const chapters = request.nextUrl.searchParams.get("chapters") === "1" ? guideChapters(current) : undefined;
+  return jsonWithCors(request, { version: GUIDE_VERSION, language, tabs, ...(chapters ? { chapters } : {}) });
 }

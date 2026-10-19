@@ -2,6 +2,8 @@ import { NextRequest } from "next/server";
 import { RECOMMENDED_APP_VERSION } from "@/lib/appVersion";
 import { copy, isLocale, type UICopy } from "@/lib/copy";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { GUIDE_EN, GUIDE_KO, guideSection, type Guide } from "@/lib/guide/content";
+import translations from "@/lib/guide/translations.json";
 import {
   RELEASE_NOTES,
   latestNotedVersion,
@@ -44,6 +46,17 @@ function targetVersion(params: URLSearchParams): string | null {
   return RECOMMENDED_APP_VERSION;
 }
 
+/** 노트가 사용법 칸을 가리키면 그 칸의 글(같은 설명을 두 번 쓰지 않게, 2026-10-20). */
+function guideText(locale: string, id: string, ui: UICopy): { heading: string; body: string } | null {
+  const translated = (translations as unknown as Partial<Record<string, Guide>>)[locale];
+  const guide = locale === "ko" ? GUIDE_KO : locale === "en" ? GUIDE_EN : (translated ?? GUIDE_EN);
+  const section = guideSection(guide, id) ?? guideSection(GUIDE_EN, id);
+  if (!section) return null;
+  const labels = ui as unknown as Record<string, unknown>;
+  const fill = (text: string) => text.replace(/\{ui:([a-zA-Z0-9]+)\}/g, (_, key: string) => (typeof labels[key] === "string" ? (labels[key] as string) : ""));
+  return { heading: fill(section.heading), body: section.body.map(fill).join(" ") };
+}
+
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams;
   const asked = params.get("ui")?.trim() ?? "";
@@ -55,13 +68,16 @@ export async function GET(request: NextRequest) {
   const releases = target
     ? notesBetween(from, target).map((note) => ({
         version: note.version,
-        items: note.items.map((item) => ({
+        items: note.items.map((item) => {
+          const fromGuide = item.guide ? guideText(locale, item.guide, ui) : null;
+          return {
           id: item.id,
-          title: String(ui[item.title] ?? copy.en[item.title]),
-          body: String(ui[item.body] ?? copy.en[item.body]),
+          title: fromGuide?.heading ?? String(ui[item.title] ?? copy.en[item.title]),
+          body: fromGuide?.body ?? String(ui[item.body] ?? copy.en[item.body]),
           image: shotPath(note.version, locale, item.shot),
           imageFallback: shotPath(note.version, "en", item.shot),
-        })),
+          };
+        }),
       }))
     : [];
   return jsonWithCors(request, {

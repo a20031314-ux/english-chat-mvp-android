@@ -147,7 +147,7 @@
           "heading": "{ui:packTitle}",
           "shot": "call-pack",
           "body": [
-            "Es la tarjeta de arriba en la pestaña Llamadas. Elige lo que tu registro dice que conviene mejorar y arma una conversación de unos siete minutos.",
+            "Elige lo que tu registro dice que conviene mejorar y arma una conversación de unos siete minutos.",
             "Es gratis una vez al día y no gasta tiempo de llamada. Toca {ui:packStart} para empezar."
           ]
         },
@@ -180,7 +180,7 @@
         {
           "heading": "Pausa y continúa",
           "body": [
-            "{ui:roleplayPause} guarda la conversación. La próxima vez, {ui:roleplayResume} en la pestaña Llamadas la retoma."
+            "{ui:roleplayPause} guarda la conversación. La próxima vez, {ui:roleplayResume} la retoma."
           ]
         },
         {
@@ -188,7 +188,7 @@
           "body": [
             "El plan gratis te da 20 puntos (100 minutos) para empezar. Un punto son cinco minutos.",
             "Lite da 7 minutos de llamada gratis cada día y Plus 10; después, sigues con puntos. Premium da 80 puntos al mes.",
-            "La pestaña Llamadas muestra el tiempo que te queda hoy. El paquete de hoy no gasta tiempo en ningún plan."
+            "La pantalla de llamada muestra el tiempo que te queda hoy. El paquete de hoy no gasta tiempo en ningún plan."
           ]
         }
       ]
@@ -319,25 +319,36 @@
           "shot": "r69-host"
         },
         {
-          "heading": "Personas, mensajes y llamadas",
+          "heading": "Buscar personas",
           "body": [
-            "En “Con personas”, la pestaña Mi espacio muestra a quien estuvo hace poco; toca una foto para ver su perfil. Síguelo o escríbele y, cuando responda, llama con 📞 desde la conversación. Los subtítulos de la llamada quedan guardados.",
-            "En Mi espacio, “➕ Invitar amigos” envía un enlace por cualquier mensajería. Quien lo abre instala la app, inicia sesión, elige un nombre y ya está dentro. ➕ en una sala invita a esa sala.",
+            "Perfiles de quienes estuvieron hace poco. Toca una foto para abrir el perfil y síguelo o escríbele.",
             "También puedes bloquear o denunciar desde el perfil."
           ],
           "shot": "r69-people"
         },
         {
+          "heading": "Invitar amigos",
+          "body": [
+            "“➕ Invitar amigos” envía un enlace por cualquier mensajería. Quien lo abre instala la app, inicia sesión, elige un nombre y ya está dentro. ➕ en una sala invita a esa sala."
+          ]
+        },
+        {
+          "heading": "Mensajes y llamadas",
+          "body": [
+            "Tu primer mensaje llega como solicitud; cuando responda, se abre la conversación. Llama con 📞 encima de la conversación; los subtítulos de la llamada quedan guardados."
+          ]
+        },
+        {
           "heading": "Grupos y llamadas en grupo",
           "body": [
-            "En Mensajes, “+ Grupo” invita a quienes sigues (hasta 20). Llamad juntos con 📞 encima del chat; al terminar, los subtítulos quedan como registro."
+            "“+ Grupo” invita a quienes sigues (hasta 20). Llamad juntos con 📞 encima del chat; al terminar, los subtítulos quedan como registro."
           ],
           "shot": "r69-groups"
         },
         {
           "heading": "Tablón",
           "body": [
-            "Encima de “Mi espacio”, abre “Tablón” para publicar en el idioma que aprendes y comentar. Solo quien escribe puede editar o borrar. “Ver en mi idioma” traduce; toca un nombre para seguir, escribir o denunciar."
+            "Publica en el idioma que aprendes y comenta. Solo quien escribe puede editar o borrar. “Ver en mi idioma” traduce; toca un nombre para seguir, escribir o denunciar."
           ],
           "shot": "r69-board"
         }
@@ -492,7 +503,7 @@
           "heading": "{ui:packTitle}",
           "shot": "call-pack",
           "body": [
-            "通話タブのいちばん上のカードです。記録からいま伸ばしたいところを選んで、7分ほどの会話を作ります。",
+            "記録からいま伸ばしたいところを選んで、7分ほどの会話を作ります。",
             "1日1回無料で、通話時間を使いません。{ui:packStart}を押すと始まります。"
           ]
         },
@@ -525,7 +536,7 @@
         {
           "heading": "止めて続きから",
           "body": [
-            "{ui:roleplayPause}を押すと会話が保存されます。次は通話タブの{ui:roleplayResume}で続けられます。"
+            "{ui:roleplayPause}を押すと会話が保存されます。次は{ui:roleplayResume}で続けられます。"
           ]
         },
         {
@@ -533,7 +544,7 @@
           "body": [
             "無料プランは最初に20ポイント（100分）あります。1ポイントで5分です。",
             "ライトは毎日7分、プラスは10分の無料通話があり、使い切ったらポイントで続けます。プレミアムは毎月80ポイントです。",
-            "通話タブに今日の残り時間が出ます。今日のパックはどのプランでも時間を使いません。"
+            "通話の画面に今日の残り時間が出ます。今日のパックはどのプランでも時間を使いません。"
           ]
         }
       ]
@@ -664,25 +675,36 @@
           "shot": "r69-host"
         },
         {
-          "heading": "人・メッセージ・通話",
+          "heading": "人を探す",
           "body": [
-            "「人と学ぶ」の「マイ」タブで最近来た学習者を見て、写真をタップするとプロフィールが開きます。フォローやメッセージを送り、返信があれば会話の📞で通話できます。通話の字幕は記録に残ります。",
-            "「マイ」の上の「➕ 友だちを招待」でLINEなどにリンクを送れます。受け取った人はアプリを入れてログインし、名前を決めればすぐ入れます。ルームの上の➕はそのルームに招待します。",
+            "最近来た学習者のプロフィールが並びます。写真をタップするとプロフィールが開き、フォローやメッセージができます。",
             "ブロックや報告もプロフィールからできます。"
           ],
           "shot": "r69-people"
         },
         {
+          "heading": "友だちを招待",
+          "body": [
+            "「➕ 友だちを招待」でLINEなどにリンクを送れます。受け取った人はアプリを入れてログインし、名前を決めればすぐ入れます。ルームの上の➕はそのルームに招待します。"
+          ]
+        },
+        {
+          "heading": "メッセージと通話",
+          "body": [
+            "最初のメッセージはリクエストとして届き、返信があると会話が開きます。会話の上の📞で通話でき、通話の字幕は記録に残ります。"
+          ]
+        },
+        {
           "heading": "グループとグループ通話",
           "body": [
-            "「メッセージ」の「+ グループ」でフォローした人を招待します（最大20人）。会話の上の📞でいっしょに通話でき、終わると字幕が通話の記録に残ります。"
+            "「+ グループ」でフォローした人を招待します（最大20人）。会話の上の📞でいっしょに通話でき、終わると字幕が通話の記録に残ります。"
           ],
           "shot": "r69-groups"
         },
         {
           "heading": "掲示板",
           "body": [
-            "「マイ」の上の「掲示板」で、学んでいる言語で投稿・コメントできます。編集・削除は書いた人だけ。「自分の言語で見る」で翻訳、名前を押すとフォロー・メッセージ・通報。"
+            "学んでいる言語で投稿・コメントできます。編集・削除は書いた人だけ。「自分の言語で見る」で翻訳、名前を押すとフォロー・メッセージ・通報。"
           ],
           "shot": "r69-board"
         }
@@ -837,7 +859,7 @@
           "heading": "{ui:packTitle}",
           "shot": "call-pack",
           "body": [
-            "通话页最上面的卡片。它根据你的记录挑出现在最该加强的地方，做成大约七分钟的对话。",
+            "它根据你的记录挑出现在最该加强的地方，做成大约七分钟的对话。",
             "每天免费一次，不占通话时间。点 {ui:packStart} 开始。"
           ]
         },
@@ -870,7 +892,7 @@
         {
           "heading": "暂停后继续",
           "body": [
-            "点 {ui:roleplayPause} 会保存对话。下次在通话页点 {ui:roleplayResume} 接着聊。"
+            "点 {ui:roleplayPause} 会保存对话。下次点 {ui:roleplayResume} 接着聊。"
           ]
         },
         {
@@ -878,7 +900,7 @@
           "body": [
             "免费版一开始有 20 积分（100 分钟），1 积分是 5 分钟。",
             "轻享版每天有 7 分钟免费通话，进阶版 10 分钟，用完后用积分继续。高级版每月 80 积分。",
-            "通话页会显示今天剩下的时间。今日练习包在任何方案下都不占时间。"
+            "通话画面会显示今天剩下的时间。今日练习包在任何方案下都不占时间。"
           ]
         }
       ]
@@ -1009,25 +1031,36 @@
           "shot": "r69-host"
         },
         {
-          "heading": "用户、消息和通话",
+          "heading": "找人",
           "body": [
-            "在“和人一起学”的“我的”标签看最近来过的学习者，点头像打开资料。关注或发消息，对方回复后在对话里点📞通话。通话字幕会作为记录保留。",
-            "在“我的”上方点“➕ 邀请朋友”，用微信等发送链接。收到的人安装应用、登录并起个名字，就能直接进来。房间上方的➕可以邀请进这个房间。",
+            "这里是最近来过的学习者的资料。点头像打开资料，可以关注或发消息。",
             "拉黑和举报也在资料页。"
           ],
           "shot": "r69-people"
         },
         {
+          "heading": "邀请朋友",
+          "body": [
+            "点“➕ 邀请朋友”，用微信等发送链接。收到的人安装应用、登录并起个名字，就能直接进来。房间上方的➕可以邀请进这个房间。"
+          ]
+        },
+        {
+          "heading": "消息和通话",
+          "body": [
+            "第一条消息会作为请求发出，对方回复后对话就会打开。点对话上方的📞通话，通话字幕会作为记录保留。"
+          ]
+        },
+        {
           "heading": "群聊和群通话",
           "body": [
-            "在“消息”里点“+ 群聊”邀请你关注的人（最多20人）。点对话上方的📞一起通话，结束后字幕会作为通话记录保留。"
+            "点“+ 群聊”邀请你关注的人（最多20人）。点对话上方的📞一起通话，结束后字幕会作为通话记录保留。"
           ],
           "shot": "r69-groups"
         },
         {
           "heading": "论坛",
           "body": [
-            "在“我的”上方打开“论坛”，用在学的语言发帖、评论。只有作者能编辑或删除。“用我的语言看”可翻译，点名字可关注、发消息或举报。"
+            "用在学的语言发帖、评论。只有作者能编辑或删除。“用我的语言看”可翻译，点名字可关注、发消息或举报。"
           ],
           "shot": "r69-board"
         }
@@ -1182,7 +1215,7 @@
           "heading": "{ui:packTitle}",
           "shot": "call-pack",
           "body": [
-            "Thẻ trên cùng ở tab Gọi. Nó chọn phần ghi chép của bạn cho thấy cần luyện nhất và tạo một cuộc trò chuyện khoảng bảy phút.",
+            "Nó chọn phần ghi chép của bạn cho thấy cần luyện nhất và tạo một cuộc trò chuyện khoảng bảy phút.",
             "Miễn phí mỗi ngày một lần và không tốn thời gian gọi. Chạm {ui:packStart} để bắt đầu."
           ]
         },
@@ -1215,7 +1248,7 @@
         {
           "heading": "Tạm dừng và tiếp tục",
           "body": [
-            "{ui:roleplayPause} lưu cuộc trò chuyện. Lần sau, {ui:roleplayResume} ở tab Gọi để nói tiếp."
+            "{ui:roleplayPause} lưu cuộc trò chuyện. Lần sau, {ui:roleplayResume} để nói tiếp."
           ]
         },
         {
@@ -1223,7 +1256,7 @@
           "body": [
             "Gói miễn phí cho bạn 20 điểm (100 phút) lúc đầu. Một điểm là năm phút.",
             "Lite có 7 phút gọi miễn phí mỗi ngày, Plus có 10 phút; hết thì tiếp tục bằng điểm. Premium nhận 80 điểm mỗi tháng.",
-            "Tab Gọi hiển thị thời gian còn lại hôm nay. Gói hôm nay không tốn thời gian ở mọi gói cước."
+            "Màn hình gọi hiển thị thời gian còn lại hôm nay. Gói hôm nay không tốn thời gian ở mọi gói cước."
           ]
         }
       ]
@@ -1354,25 +1387,36 @@
           "shot": "r69-host"
         },
         {
-          "heading": "Mọi người, tin nhắn và cuộc gọi",
+          "heading": "Tìm người",
           "body": [
-            "Trong “Học với mọi người”, thẻ Của tôi hiện người học vừa ghé; chạm ảnh để xem hồ sơ. Theo dõi hoặc nhắn tin, khi họ trả lời thì gọi bằng 📞 trong cuộc trò chuyện. Phụ đề cuộc gọi được lưu lại.",
-            "Ở Của tôi, “➕ Mời bạn bè” gửi link qua bất kỳ ứng dụng nhắn tin nào. Người nhận chỉ cần cài app, đăng nhập và đặt tên là vào được ngay. ➕ trong phòng sẽ mời vào phòng đó.",
+            "Hồ sơ của những người học vừa ghé. Chạm ảnh để mở hồ sơ, rồi theo dõi hoặc nhắn tin.",
             "Chặn và báo cáo cũng ở hồ sơ."
           ],
           "shot": "r69-people"
         },
         {
+          "heading": "Mời bạn bè",
+          "body": [
+            "“➕ Mời bạn bè” gửi link qua bất kỳ ứng dụng nhắn tin nào. Người nhận chỉ cần cài app, đăng nhập và đặt tên là vào được ngay. ➕ trong phòng sẽ mời vào phòng đó."
+          ]
+        },
+        {
+          "heading": "Tin nhắn và cuộc gọi",
+          "body": [
+            "Tin nhắn đầu tiên được gửi dưới dạng lời mời; khi họ trả lời, cuộc trò chuyện sẽ mở. Gọi bằng 📞 phía trên cuộc trò chuyện; phụ đề cuộc gọi được lưu lại."
+          ]
+        },
+        {
           "heading": "Nhóm chat và gọi nhóm",
           "body": [
-            "Trong Tin nhắn, “+ Nhóm” mời những người bạn theo dõi (tối đa 20). Gọi cùng nhau bằng 📞 phía trên cuộc trò chuyện; xong thì phụ đề được lưu làm nhật ký cuộc gọi."
+            "“+ Nhóm” mời những người bạn theo dõi (tối đa 20). Gọi cùng nhau bằng 📞 phía trên cuộc trò chuyện; xong thì phụ đề được lưu làm nhật ký cuộc gọi."
           ],
           "shot": "r69-groups"
         },
         {
           "heading": "Bảng tin",
           "body": [
-            "Phía trên “Của tôi”, mở “Bảng tin” để đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết mới sửa hoặc xóa được. “Xem bằng ngôn ngữ của tôi” để dịch; chạm vào tên để theo dõi, nhắn tin hoặc báo cáo."
+            "Đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết mới sửa hoặc xóa được. “Xem bằng ngôn ngữ của tôi” để dịch; chạm vào tên để theo dõi, nhắn tin hoặc báo cáo."
           ],
           "shot": "r69-board"
         }
@@ -1527,7 +1571,7 @@
           "heading": "{ui:packTitle}",
           "shot": "call-pack",
           "body": [
-            "La carte en haut de l’onglet Appels. Elle choisit ce que votre historique conseille de travailler et en fait une conversation d’environ sept minutes.",
+            "Elle choisit ce que votre historique conseille de travailler et en fait une conversation d’environ sept minutes.",
             "Gratuit une fois par jour, sans temps d’appel. Touchez {ui:packStart} pour commencer."
           ]
         },
@@ -1560,7 +1604,7 @@
         {
           "heading": "Faire une pause et reprendre",
           "body": [
-            "{ui:roleplayPause} enregistre la conversation. La prochaine fois, {ui:roleplayResume} dans l’onglet Appels la reprend."
+            "{ui:roleplayPause} enregistre la conversation. La prochaine fois, {ui:roleplayResume} la reprend."
           ]
         },
         {
@@ -1568,7 +1612,7 @@
           "body": [
             "La formule gratuite donne 20 points (100 minutes) au départ. Un point vaut cinq minutes.",
             "Lite offre 7 minutes d’appels gratuits par jour et Plus 10 ; ensuite, les points prennent le relais. Premium donne 80 points par mois.",
-            "L’onglet Appels affiche le temps restant aujourd’hui. Le pack du jour n’utilise pas de temps, quelle que soit la formule."
+            "L’écran d’appel affiche le temps restant aujourd’hui. Le pack du jour n’utilise pas de temps, quelle que soit la formule."
           ]
         }
       ]
@@ -1699,25 +1743,36 @@
           "shot": "r69-host"
         },
         {
-          "heading": "Personnes, messages et appels",
+          "heading": "Trouver des gens",
           "body": [
-            "Dans « Avec des gens », l’onglet Moi montre qui est passé récemment ; touchez une photo pour le profil. Suivez ou écrivez, et après sa réponse appelez avec 📞 depuis la conversation. Les sous-titres de l’appel restent en mémoire.",
-            "Dans Moi, « ➕ Inviter des amis » envoie un lien par n’importe quelle messagerie. La personne qui l’ouvre installe l’appli, se connecte, choisit un nom et entre. ➕ dans un salon invite dans ce salon.",
+            "Les profils des personnes passées récemment. Touchez une photo pour ouvrir le profil, puis suivez ou écrivez.",
             "Bloquer et signaler se font aussi depuis le profil."
           ],
           "shot": "r69-people"
         },
         {
+          "heading": "Inviter des amis",
+          "body": [
+            "« ➕ Inviter des amis » envoie un lien par n’importe quelle messagerie. La personne qui l’ouvre installe l’appli, se connecte, choisit un nom et entre. ➕ dans un salon invite dans ce salon."
+          ]
+        },
+        {
+          "heading": "Messages et appels",
+          "body": [
+            "Votre premier message part comme une demande ; après sa réponse, la conversation s’ouvre. Appelez avec 📞 au-dessus de la conversation ; les sous-titres de l’appel restent en mémoire."
+          ]
+        },
+        {
           "heading": "Groupes et appels de groupe",
           "body": [
-            "Dans Messages, « + Groupe » invite les personnes que vous suivez (20 au plus). Appelez ensemble avec 📞 au-dessus de la discussion ; ensuite, les sous-titres restent comme compte rendu."
+            "« + Groupe » invite les personnes que vous suivez (20 au plus). Appelez ensemble avec 📞 au-dessus de la discussion ; ensuite, les sous-titres restent comme compte rendu."
           ],
           "shot": "r69-groups"
         },
         {
           "heading": "Forum",
           "body": [
-            "Au-dessus de « Moi », ouvrez « Forum » pour publier dans la langue apprise et commenter. Seul l'auteur peut modifier ou supprimer. « Voir dans ma langue » traduit ; touchez un nom pour suivre, écrire ou signaler."
+            "Publiez dans la langue apprise et commentez. Seul l'auteur peut modifier ou supprimer. « Voir dans ma langue » traduit ; touchez un nom pour suivre, écrire ou signaler."
           ],
           "shot": "r69-board"
         }
@@ -1872,7 +1927,7 @@
           "heading": "{ui:packTitle}",
           "shot": "call-pack",
           "body": [
-            "È la scheda in cima alla scheda Chiamate. Sceglie ciò che il tuo storico dice di allenare ora e ne fa una conversazione di circa sette minuti.",
+            "Sceglie ciò che il tuo storico dice di allenare ora e ne fa una conversazione di circa sette minuti.",
             "È gratis una volta al giorno e non usa tempo di chiamata. Tocca {ui:packStart} per iniziare."
           ]
         },
@@ -1905,7 +1960,7 @@
         {
           "heading": "Metti in pausa e riprendi",
           "body": [
-            "{ui:roleplayPause} salva la conversazione. La prossima volta, {ui:roleplayResume} nella scheda Chiamate la riprende."
+            "{ui:roleplayPause} salva la conversazione. La prossima volta, {ui:roleplayResume} la riprende."
           ]
         },
         {
@@ -1913,7 +1968,7 @@
           "body": [
             "Il piano gratuito dà 20 punti (100 minuti) per iniziare. Un punto vale cinque minuti.",
             "Lite dà 7 minuti di chiamate gratis al giorno e Plus 10; poi continui con i punti. Premium dà 80 punti al mese.",
-            "La scheda Chiamate mostra il tempo rimasto oggi. Il pacchetto di oggi non usa tempo con nessun piano."
+            "La schermata della chiamata mostra il tempo rimasto oggi. Il pacchetto di oggi non usa tempo con nessun piano."
           ]
         }
       ]
@@ -2044,25 +2099,36 @@
           "shot": "r69-host"
         },
         {
-          "heading": "Persone, messaggi e chiamate",
+          "heading": "Trovare persone",
           "body": [
-            "In “Con le persone”, la scheda Io mostra chi è passato di recente; tocca una foto per il profilo. Seguilo o scrivigli e, quando risponde, chiama con 📞 dalla conversazione. I sottotitoli della chiamata restano salvati.",
-            "In Io, “➕ Invita amici” manda un link con qualsiasi app di messaggi. Chi lo apre installa l’app, accede, sceglie un nome ed è dentro. ➕ in una stanza invita in quella stanza.",
+            "I profili di chi è passato di recente. Tocca una foto per aprire il profilo, poi segui o scrivi.",
             "Blocca e segnala dal profilo."
           ],
           "shot": "r69-people"
         },
         {
+          "heading": "Invita amici",
+          "body": [
+            "“➕ Invita amici” manda un link con qualsiasi app di messaggi. Chi lo apre installa l’app, accede, sceglie un nome ed è dentro. ➕ in una stanza invita in quella stanza."
+          ]
+        },
+        {
+          "heading": "Messaggi e chiamate",
+          "body": [
+            "Il primo messaggio arriva come richiesta; quando risponde, la conversazione si apre. Chiama con 📞 sopra la conversazione; i sottotitoli della chiamata restano salvati."
+          ]
+        },
+        {
           "heading": "Gruppi e chiamate di gruppo",
           "body": [
-            "In Messaggi, “+ Gruppo” invita chi segui (fino a 20). Chiamate insieme con 📞 sopra la chat; alla fine i sottotitoli restano come registro."
+            "“+ Gruppo” invita chi segui (fino a 20). Chiamate insieme con 📞 sopra la chat; alla fine i sottotitoli restano come registro."
           ],
           "shot": "r69-groups"
         },
         {
           "heading": "Bacheca",
           "body": [
-            "Sopra “Io”, apri “Bacheca” per pubblicare nella lingua che impari e commentare. Solo chi scrive può modificare o eliminare. “Vedi nella mia lingua” traduce; tocca un nome per seguire, scrivere o segnalare."
+            "Pubblica nella lingua che impari e commenta. Solo chi scrive può modificare o eliminare. “Vedi nella mia lingua” traduce; tocca un nome per seguire, scrivere o segnalare."
           ],
           "shot": "r69-board"
         }
@@ -2217,7 +2283,7 @@
           "heading": "{ui:packTitle}",
           "shot": "call-pack",
           "body": [
-            "É o cartão no topo da aba Chamadas. Ele escolhe o que o seu histórico mostra que vale treinar agora e monta uma conversa de uns sete minutos.",
+            "Ele escolhe o que o seu histórico mostra que vale treinar agora e monta uma conversa de uns sete minutos.",
             "É grátis uma vez por dia e não usa tempo de chamada. Toque em {ui:packStart} para começar."
           ]
         },
@@ -2250,7 +2316,7 @@
         {
           "heading": "Pause e continue",
           "body": [
-            "{ui:roleplayPause} salva a conversa. Da próxima vez, {ui:roleplayResume} na aba Chamadas retoma."
+            "{ui:roleplayPause} salva a conversa. Da próxima vez, {ui:roleplayResume} retoma."
           ]
         },
         {
@@ -2258,7 +2324,7 @@
           "body": [
             "O plano grátis dá 20 pontos (100 minutos) para começar. Um ponto são cinco minutos.",
             "Lite dá 7 minutos de chamada grátis por dia e Plus 10; depois, você continua com pontos. Premium dá 80 pontos por mês.",
-            "A aba Chamadas mostra o tempo que resta hoje. O pacote de hoje não usa tempo em nenhum plano."
+            "A tela da chamada mostra o tempo que resta hoje. O pacote de hoje não usa tempo em nenhum plano."
           ]
         }
       ]
@@ -2389,25 +2455,36 @@
           "shot": "r69-host"
         },
         {
-          "heading": "Pessoas, mensagens e chamadas",
+          "heading": "Encontrar pessoas",
           "body": [
-            "Em “Com pessoas”, o separador Meu espaço mostra quem esteve cá há pouco; toque numa foto para ver o perfil. Siga ou envie mensagem e, depois da resposta, ligue com 📞 na conversa. As legendas da chamada ficam guardadas.",
-            "Em Meu espaço, “➕ Convidar amigos” envia um link por qualquer app de mensagens. Quem abre instala o app, entra na conta, escolhe um nome e já está dentro. ➕ numa sala convida para essa sala.",
+            "Perfis de quem esteve aqui há pouco. Toque numa foto para abrir o perfil e siga ou envie mensagem.",
             "Bloquear e denunciar também é no perfil."
           ],
           "shot": "r69-people"
         },
         {
+          "heading": "Convidar amigos",
+          "body": [
+            "“➕ Convidar amigos” envia um link por qualquer app de mensagens. Quem abre instala o app, entra na conta, escolhe um nome e já está dentro. ➕ numa sala convida para essa sala."
+          ]
+        },
+        {
+          "heading": "Mensagens e chamadas",
+          "body": [
+            "A primeira mensagem vai como pedido; depois da resposta, a conversa abre. Ligue com 📞 acima da conversa; as legendas da chamada ficam guardadas."
+          ]
+        },
+        {
           "heading": "Grupos e chamadas de grupo",
           "body": [
-            "Em Mensagens, “+ Grupo” convida quem segue (até 20). Liguem juntos com 📞 acima da conversa; no fim, as legendas ficam como registo."
+            "“+ Grupo” convida quem segue (até 20). Liguem juntos com 📞 acima da conversa; no fim, as legendas ficam como registo."
           ],
           "shot": "r69-groups"
         },
         {
           "heading": "Mural",
           "body": [
-            "Acima de “Meu espaço”, abra “Mural” para publicar no idioma que você aprende e comentar. Só quem escreveu pode editar ou excluir. “Ver no meu idioma” traduz; toque num nome para seguir, mandar mensagem ou denunciar."
+            "Publique no idioma que você aprende e comente. Só quem escreveu pode editar ou excluir. “Ver no meu idioma” traduz; toque num nome para seguir, mandar mensagem ou denunciar."
           ],
           "shot": "r69-board"
         }
@@ -2562,7 +2639,7 @@
           "heading": "{ui:packTitle}",
           "shot": "call-pack",
           "body": [
-            "Карточка вверху вкладки «Звонки». Она выбирает то, что по вашей истории стоит подтянуть сейчас, и делает из этого разговор минут на семь.",
+            "Она выбирает то, что по вашей истории стоит подтянуть сейчас, и делает из этого разговор минут на семь.",
             "Бесплатно раз в день и без расхода времени звонков. Нажмите {ui:packStart}, чтобы начать."
           ]
         },
@@ -2595,7 +2672,7 @@
         {
           "heading": "Пауза и продолжение",
           "body": [
-            "{ui:roleplayPause} сохраняет разговор. В следующий раз {ui:roleplayResume} во вкладке «Звонки» продолжит его."
+            "{ui:roleplayPause} сохраняет разговор. В следующий раз {ui:roleplayResume} продолжит его."
           ]
         },
         {
@@ -2603,7 +2680,7 @@
           "body": [
             "Бесплатный тариф даёт для начала 20 баллов (100 минут). Один балл — пять минут.",
             "Lite даёт 7 минут бесплатных звонков в день, Plus — 10; дальше можно продолжать за баллы. Premium даёт 80 баллов в месяц.",
-            "Во вкладке «Звонки» видно, сколько времени осталось сегодня. Набор на сегодня не тратит время ни на одном тарифе."
+            "На экране звонка видно, сколько времени осталось сегодня. Набор на сегодня не тратит время ни на одном тарифе."
           ]
         }
       ]
@@ -2734,25 +2811,36 @@
           "shot": "r69-host"
         },
         {
-          "heading": "Люди, сообщения и звонки",
+          "heading": "Найти людей",
           "body": [
-            "В «С людьми» вкладка «Моё» показывает, кто заходил недавно; нажмите на фото, чтобы открыть профиль. Подпишитесь или напишите, а после ответа звоните через 📞 в переписке. Субтитры звонка сохраняются.",
-            "В «Моё» кнопка «➕ Пригласить друзей» отправляет ссылку через любой мессенджер. Получатель ставит приложение, входит, выбирает имя — и он уже внутри. ➕ в комнате приглашает в эту комнату.",
+            "Профили тех, кто заходил недавно. Нажмите на фото, чтобы открыть профиль, подписаться или написать.",
             "Заблокировать и пожаловаться тоже можно в профиле."
           ],
           "shot": "r69-people"
         },
         {
+          "heading": "Пригласить друзей",
+          "body": [
+            "Кнопка «➕ Пригласить друзей» отправляет ссылку через любой мессенджер. Получатель ставит приложение, входит, выбирает имя — и он уже внутри. ➕ в комнате приглашает в эту комнату."
+          ]
+        },
+        {
+          "heading": "Сообщения и звонки",
+          "body": [
+            "Первое сообщение уходит как запрос; после ответа переписка открывается. Звоните через 📞 над перепиской; субтитры звонка сохраняются."
+          ]
+        },
+        {
           "heading": "Группы и групповые звонки",
           "body": [
-            "В «Сообщениях» кнопка «+ Группа» приглашает тех, на кого вы подписаны (до 20). Звоните вместе через 📞 над чатом; после звонка субтитры остаются записью."
+            "Кнопка «+ Группа» приглашает тех, на кого вы подписаны (до 20). Звоните вместе через 📞 над чатом; после звонка субтитры остаются записью."
           ],
           "shot": "r69-groups"
         },
         {
           "heading": "Доска",
           "body": [
-            "Над «Моё» откройте «Доска», чтобы публиковать на изучаемом языке и комментировать. Изменять и удалять может только автор. «Показать на моём языке» переводит; нажмите на имя, чтобы подписаться, написать или пожаловаться."
+            "Публикуйте на изучаемом языке и комментируйте. Изменять и удалять может только автор. «Показать на моём языке» переводит; нажмите на имя, чтобы подписаться, написать или пожаловаться."
           ],
           "shot": "r69-board"
         }
@@ -2907,7 +2995,7 @@
           "heading": "{ui:packTitle}",
           "shot": "call-pack",
           "body": [
-            "Kartu paling atas di tab Panggilan. Ia memilih bagian yang menurut catatanmu paling perlu dilatih dan membuat percakapan sekitar tujuh menit.",
+            "Ia memilih bagian yang menurut catatanmu paling perlu dilatih dan membuat percakapan sekitar tujuh menit.",
             "Gratis sekali sehari dan tidak memakai waktu panggilan. Ketuk {ui:packStart} untuk mulai."
           ]
         },
@@ -2940,7 +3028,7 @@
         {
           "heading": "Jeda dan lanjutkan",
           "body": [
-            "{ui:roleplayPause} menyimpan percakapan. Lain kali, {ui:roleplayResume} di tab Panggilan melanjutkannya."
+            "{ui:roleplayPause} menyimpan percakapan. Lain kali, {ui:roleplayResume} melanjutkannya."
           ]
         },
         {
@@ -2948,7 +3036,7 @@
           "body": [
             "Paket gratis memberi 20 poin (100 menit) di awal. Satu poin lima menit.",
             "Lite memberi 7 menit panggilan gratis tiap hari dan Plus 10; setelah habis, lanjut dengan poin. Premium memberi 80 poin per bulan.",
-            "Tab Panggilan menunjukkan sisa waktu hari ini. Paket hari ini tidak memakai waktu di paket langganan mana pun."
+            "Layar panggilan menunjukkan sisa waktu hari ini. Paket hari ini tidak memakai waktu di paket langganan mana pun."
           ]
         }
       ]
@@ -3079,25 +3167,36 @@
           "shot": "r69-host"
         },
         {
-          "heading": "Orang, pesan, dan panggilan",
+          "heading": "Cari orang",
           "body": [
-            "Di “Belajar dengan orang”, tab Saya menampilkan pelajar yang baru mampir; ketuk foto untuk profilnya. Ikuti atau kirim pesan, lalu setelah dibalas telepon dengan 📞 dari percakapan. Teks panggilan tersimpan.",
-            "Di Saya, “➕ Undang teman” mengirim tautan lewat aplikasi pesan apa pun. Penerima cukup memasang aplikasi, masuk, dan memilih nama, lalu langsung bergabung. ➕ di ruang mengundang ke ruang itu.",
+            "Profil pelajar yang baru mampir. Ketuk foto untuk membuka profil, lalu ikuti atau kirim pesan.",
             "Blokir dan laporkan juga dari profil."
           ],
           "shot": "r69-people"
         },
         {
+          "heading": "Undang teman",
+          "body": [
+            "“➕ Undang teman” mengirim tautan lewat aplikasi pesan apa pun. Penerima cukup memasang aplikasi, masuk, dan memilih nama, lalu langsung bergabung. ➕ di ruang mengundang ke ruang itu."
+          ]
+        },
+        {
+          "heading": "Pesan dan panggilan",
+          "body": [
+            "Pesan pertama terkirim sebagai permintaan; setelah dibalas, percakapan terbuka. Telepon dengan 📞 di atas percakapan; teks panggilan tersimpan."
+          ]
+        },
+        {
           "heading": "Grup dan panggilan grup",
           "body": [
-            "Di Pesan, “+ Grup” mengundang orang yang kamu ikuti (maks. 20). Telepon bersama dengan 📞 di atas obrolan; setelahnya teks tersimpan sebagai catatan panggilan."
+            "“+ Grup” mengundang orang yang kamu ikuti (maks. 20). Telepon bersama dengan 📞 di atas obrolan; setelahnya teks tersimpan sebagai catatan panggilan."
           ],
           "shot": "r69-groups"
         },
         {
           "heading": "Papan",
           "body": [
-            "Di atas “Saya”, buka “Papan” untuk menulis dalam bahasa yang dipelajari dan berkomentar. Hanya penulis yang bisa mengubah atau menghapus. “Lihat dalam bahasaku” menerjemahkan; ketuk nama untuk mengikuti, mengirim pesan, atau melapor."
+            "Tulis dalam bahasa yang dipelajari dan berkomentar. Hanya penulis yang bisa mengubah atau menghapus. “Lihat dalam bahasaku” menerjemahkan; ketuk nama untuk mengikuti, mengirim pesan, atau melapor."
           ],
           "shot": "r69-board"
         }
@@ -3252,7 +3351,7 @@
           "heading": "{ui:packTitle}",
           "shot": "call-pack",
           "body": [
-            "البطاقة في أعلى تبويب المكالمات. تختار ما يقول سجلّك إنه الأحوج إلى التقوية الآن، وتصنع منه محادثة مدتها نحو سبع دقائق.",
+            "تختار ما يقول سجلّك إنه الأحوج إلى التقوية الآن، وتصنع منه محادثة مدتها نحو سبع دقائق.",
             "مجانية مرة في اليوم ولا تستهلك وقت المكالمات. اضغط {ui:packStart} للبدء."
           ]
         },
@@ -3285,7 +3384,7 @@
         {
           "heading": "توقّف ثم تابع",
           "body": [
-            "يحفظ {ui:roleplayPause} المحادثة. في المرة القادمة يتابعها {ui:roleplayResume} في تبويب المكالمات."
+            "يحفظ {ui:roleplayPause} المحادثة. في المرة القادمة يتابعها {ui:roleplayResume}."
           ]
         },
         {
@@ -3293,7 +3392,7 @@
           "body": [
             "تمنحك الخطة المجانية 20 نقطة (100 دقيقة) في البداية. النقطة خمس دقائق.",
             "تمنح لايت 7 دقائق مكالمات مجانية يوميًا وبلس 10، وبعدها تتابع بالنقاط. يمنح الاشتراك المميز 80 نقطة شهريًا.",
-            "يُظهر تبويب المكالمات الوقت المتبقي اليوم. لا تستهلك باقة اليوم وقتًا في أي خطة."
+            "تُظهر شاشة المكالمة الوقت المتبقي اليوم. لا تستهلك باقة اليوم وقتًا في أي خطة."
           ]
         }
       ]
@@ -3424,25 +3523,36 @@
           "shot": "r69-host"
         },
         {
-          "heading": "الأشخاص والرسائل والمكالمات",
+          "heading": "البحث عن أشخاص",
           "body": [
-            "في «التعلّم مع الناس» يعرض تبويب «أنا» من زار مؤخرًا، واضغط على الصورة لفتح الملف الشخصي. تابِع أو راسل، وبعد الرد اتصل بـ📞 من المحادثة. تبقى ترجمة المكالمة سجلًا.",
-            "في «أنا» يرسل زر «➕ ادعُ أصدقاءك» رابطًا عبر أي تطبيق مراسلة. من يفتحه يثبّت التطبيق ويسجّل الدخول ويختار اسمًا فيدخل مباشرة. و➕ في الغرفة يدعو إلى تلك الغرفة.",
+            "ملفات من زاروا مؤخرًا. اضغط على الصورة لفتح الملف الشخصي، ثم تابِع أو راسل.",
             "الحظر والإبلاغ من الملف الشخصي أيضًا."
           ],
           "shot": "r69-people"
         },
         {
+          "heading": "دعوة الأصدقاء",
+          "body": [
+            "يرسل زر «➕ ادعُ أصدقاءك» رابطًا عبر أي تطبيق مراسلة. من يفتحه يثبّت التطبيق ويسجّل الدخول ويختار اسمًا فيدخل مباشرة. و➕ في الغرفة يدعو إلى تلك الغرفة."
+          ]
+        },
+        {
+          "heading": "الرسائل والمكالمات",
+          "body": [
+            "تصل رسالتك الأولى كطلب، وبعد الرد تُفتح المحادثة. اتصل بـ📞 فوق المحادثة، وتبقى ترجمة المكالمة سجلًا."
+          ]
+        },
+        {
           "heading": "المجموعات والمكالمات الجماعية",
           "body": [
-            "في «الرسائل» يدعو «+ مجموعة» من تتابعهم (حتى 20). اتصلوا معًا بـ📞 فوق المحادثة، وبعدها تبقى الترجمة النصية سجلًا للمكالمة."
+            "يدعو «+ مجموعة» من تتابعهم (حتى 20). اتصلوا معًا بـ📞 فوق المحادثة، وبعدها تبقى الترجمة النصية سجلًا للمكالمة."
           ],
           "shot": "r69-groups"
         },
         {
           "heading": "اللوحة",
           "body": [
-            "فوق «أنا» افتح «اللوحة» لتنشر باللغة التي تتعلمها وتعلّق. الكاتب وحده يعدّل أو يحذف. «اعرض بلغتي» يترجم المنشور، واضغط الاسم للمتابعة أو المراسلة أو الإبلاغ."
+            "انشر باللغة التي تتعلمها وعلّق. الكاتب وحده يعدّل أو يحذف. «اعرض بلغتي» يترجم المنشور، واضغط الاسم للمتابعة أو المراسلة أو الإبلاغ."
           ],
           "shot": "r69-board"
         }
@@ -3597,7 +3707,7 @@
           "heading": "{ui:packTitle}",
           "shot": "call-pack",
           "body": [
-            "การ์ดบนสุดของแท็บโทร มันเลือกจุดที่บันทึกของคุณบอกว่าควรฝึกตอนนี้ แล้วทำเป็นบทสนทนาราวเจ็ดนาที",
+            "มันเลือกจุดที่บันทึกของคุณบอกว่าควรฝึกตอนนี้ แล้วทำเป็นบทสนทนาราวเจ็ดนาที",
             "ฟรีวันละครั้งและไม่ใช้เวลาโทร แตะ {ui:packStart} เพื่อเริ่ม"
           ]
         },
@@ -3630,7 +3740,7 @@
         {
           "heading": "หยุดแล้วทำต่อ",
           "body": [
-            "{ui:roleplayPause} จะบันทึกบทสนทนา ครั้งหน้าแตะ {ui:roleplayResume} ในแท็บโทรเพื่อคุยต่อ"
+            "{ui:roleplayPause} จะบันทึกบทสนทนา ครั้งหน้าแตะ {ui:roleplayResume} เพื่อคุยต่อ"
           ]
         },
         {
@@ -3638,7 +3748,7 @@
           "body": [
             "แพ็กเกจฟรีให้ 20 พอยต์ (100 นาที) ตอนเริ่ม หนึ่งพอยต์คือห้านาที",
             "Lite มีเวลาโทรฟรีวันละ 7 นาที Plus วันละ 10 นาที ใช้หมดแล้วคุยต่อด้วยพอยต์ Premium ได้ 80 พอยต์ต่อเดือน",
-            "แท็บโทรจะแสดงเวลาที่เหลือของวันนี้ แพ็กวันนี้ไม่ใช้เวลาในทุกแพ็กเกจ"
+            "หน้าจอโทรจะแสดงเวลาที่เหลือของวันนี้ แพ็กวันนี้ไม่ใช้เวลาในทุกแพ็กเกจ"
           ]
         }
       ]
@@ -3769,25 +3879,36 @@
           "shot": "r69-host"
         },
         {
-          "heading": "ผู้คน ข้อความ และการโทร",
+          "heading": "หาคน",
           "body": [
-            "ใน “เรียนกับผู้คน” แท็บของฉันแสดงผู้เรียนที่เพิ่งเข้ามา แตะรูปเพื่อดูโปรไฟล์ ติดตามหรือส่งข้อความ เมื่อเขาตอบแล้วโทรด้วย 📞 ในแชต ซับของการโทรจะเก็บไว้",
-            "ในของฉัน กด “➕ ชวนเพื่อน” เพื่อส่งลิงก์ทาง LINE หรือแอปแชตอื่น คนที่ได้รับแค่ติดตั้งแอป เข้าสู่ระบบ ตั้งชื่อ ก็เข้ามาได้เลย ส่วน ➕ ในห้องคือชวนเข้าห้องนั้น",
+            "โปรไฟล์ของผู้เรียนที่เพิ่งเข้ามา แตะรูปเพื่อเปิดโปรไฟล์ แล้วติดตามหรือส่งข้อความได้",
             "บล็อกและรายงานได้จากโปรไฟล์"
           ],
           "shot": "r69-people"
         },
         {
+          "heading": "ชวนเพื่อน",
+          "body": [
+            "กด “➕ ชวนเพื่อน” เพื่อส่งลิงก์ทาง LINE หรือแอปแชตอื่น คนที่ได้รับแค่ติดตั้งแอป เข้าสู่ระบบ ตั้งชื่อ ก็เข้ามาได้เลย ส่วน ➕ ในห้องคือชวนเข้าห้องนั้น"
+          ]
+        },
+        {
+          "heading": "ข้อความและการโทร",
+          "body": [
+            "ข้อความแรกจะส่งเป็นคำขอ เมื่ออีกฝ่ายตอบ แชตจะเปิด โทรด้วย 📞 เหนือแชต ซับของการโทรจะเก็บไว้"
+          ]
+        },
+        {
           "heading": "กลุ่มแชตและโทรกลุ่ม",
           "body": [
-            "ในข้อความ กด “+ กลุ่ม” เพื่อชวนคนที่คุณติดตาม (สูงสุด 20 คน) โทรด้วยกันด้วย 📞 เหนือแชต จบแล้วซับจะเก็บไว้เป็นบันทึกการโทร"
+            "กด “+ กลุ่ม” เพื่อชวนคนที่คุณติดตาม (สูงสุด 20 คน) โทรด้วยกันด้วย 📞 เหนือแชต จบแล้วซับจะเก็บไว้เป็นบันทึกการโทร"
           ],
           "shot": "r69-groups"
         },
         {
           "heading": "กระดาน",
           "body": [
-            "เหนือ “ของฉัน” เปิด “กระดาน” เพื่อโพสต์เป็นภาษาที่เรียนและแสดงความคิดเห็น แก้ไขหรือลบได้เฉพาะคนเขียน “ดูเป็นภาษาของฉัน” ช่วยแปล แตะชื่อเพื่อติดตาม ส่งข้อความ หรือรายงาน"
+            "โพสต์เป็นภาษาที่เรียนและแสดงความคิดเห็น แก้ไขหรือลบได้เฉพาะคนเขียน “ดูเป็นภาษาของฉัน” ช่วยแปล แตะชื่อเพื่อติดตาม ส่งข้อความ หรือรายงาน"
           ],
           "shot": "r69-board"
         }
@@ -3942,7 +4063,7 @@
           "heading": "{ui:packTitle}",
           "shot": "call-pack",
           "body": [
-            "कॉल्स टैब में सबसे ऊपर वाला कार्ड। यह आपके रिकॉर्ड से वह हिस्सा चुनता है जिसे अभी सबसे ज़्यादा बढ़ाना है, और उससे लगभग सात मिनट की बातचीत बनाता है।",
+            "यह आपके रिकॉर्ड से वह हिस्सा चुनता है जिसे अभी सबसे ज़्यादा बढ़ाना है, और उससे लगभग सात मिनट की बातचीत बनाता है।",
             "दिन में एक बार मुफ़्त, कॉल का समय नहीं लगता। शुरू करने के लिए {ui:packStart} दबाएँ।"
           ]
         },
@@ -3975,7 +4096,7 @@
         {
           "heading": "रोकें और फिर जारी रखें",
           "body": [
-            "{ui:roleplayPause} बातचीत सहेज लेता है। अगली बार कॉल्स टैब में {ui:roleplayResume} से जारी रखें।"
+            "{ui:roleplayPause} बातचीत सहेज लेता है। अगली बार {ui:roleplayResume} से जारी रखें।"
           ]
         },
         {
@@ -3983,7 +4104,7 @@
           "body": [
             "मुफ़्त प्लान शुरू में 20 पॉइंट (100 मिनट) देता है। एक पॉइंट पाँच मिनट का है।",
             "लाइट रोज़ 7 मिनट और प्लस 10 मिनट मुफ़्त कॉल देता है; उसके बाद पॉइंट्स से जारी रखें। प्रीमियम हर महीने 80 पॉइंट देता है।",
-            "कॉल्स टैब में आज का बचा समय दिखता है। आज का पैक किसी भी प्लान में समय नहीं लेता।"
+            "कॉल स्क्रीन पर आज का बचा समय दिखता है। आज का पैक किसी भी प्लान में समय नहीं लेता।"
           ]
         }
       ]
@@ -4114,25 +4235,36 @@
           "shot": "r69-host"
         },
         {
-          "heading": "लोग, मैसेज और कॉल",
+          "heading": "लोग ढूँढें",
           "body": [
-            "“लोगों के साथ सीखें” में मेरा टैब हाल में आए सीखने वालों को दिखाता है; फ़ोटो पर टैप करके प्रोफ़ाइल खोलें। फ़ॉलो करें या मैसेज भेजें, जवाब आने पर बातचीत में 📞 से कॉल करें। कॉल के सबटाइटल रिकॉर्ड में रहते हैं।",
-            "मेरा में “➕ दोस्तों को बुलाएँ” किसी भी मैसेंजर से लिंक भेजता है। लिंक पाने वाला ऐप इंस्टॉल करे, लॉग इन करे, नाम चुने और सीधे अंदर आ जाए। रूम में ➕ उस रूम में बुलाता है।",
+            "हाल में आए सीखने वालों की प्रोफ़ाइल। फ़ोटो पर टैप करके प्रोफ़ाइल खोलें, फिर फ़ॉलो करें या मैसेज भेजें।",
             "ब्लॉक और रिपोर्ट भी प्रोफ़ाइल से होते हैं।"
           ],
           "shot": "r69-people"
         },
         {
+          "heading": "दोस्तों को बुलाएँ",
+          "body": [
+            "“➕ दोस्तों को बुलाएँ” किसी भी मैसेंजर से लिंक भेजता है। लिंक पाने वाला ऐप इंस्टॉल करे, लॉग इन करे, नाम चुने और सीधे अंदर आ जाए। रूम में ➕ उस रूम में बुलाता है।"
+          ]
+        },
+        {
+          "heading": "मैसेज और कॉल",
+          "body": [
+            "पहला मैसेज अनुरोध के रूप में जाता है; जवाब आने पर बातचीत खुल जाती है। बातचीत के ऊपर 📞 से कॉल करें; कॉल के सबटाइटल रिकॉर्ड में रहते हैं।"
+          ]
+        },
+        {
           "heading": "ग्रुप चैट और ग्रुप कॉल",
           "body": [
-            "मैसेज में “+ ग्रुप” से उन लोगों को बुलाएँ जिन्हें आप फ़ॉलो करते हैं (20 तक)। चैट के ऊपर 📞 से साथ कॉल करें; बाद में सबटाइटल कॉल रिकॉर्ड के रूप में रहते हैं।"
+            "“+ ग्रुप” से उन लोगों को बुलाएँ जिन्हें आप फ़ॉलो करते हैं (20 तक)। चैट के ऊपर 📞 से साथ कॉल करें; बाद में सबटाइटल कॉल रिकॉर्ड के रूप में रहते हैं।"
           ],
           "shot": "r69-groups"
         },
         {
           "heading": "बोर्ड",
           "body": [
-            "“मेरा” के ऊपर “बोर्ड” खोलें और सीखी जा रही भाषा में पोस्ट व टिप्पणी करें। सिर्फ़ लिखने वाला बदल या हटा सकता है। “मेरी भाषा में देखें” अनुवाद करता है; नाम दबाकर फ़ॉलो, मैसेज या रिपोर्ट करें।"
+            "सीखी जा रही भाषा में पोस्ट व टिप्पणी करें। सिर्फ़ लिखने वाला बदल या हटा सकता है। “मेरी भाषा में देखें” अनुवाद करता है; नाम दबाकर फ़ॉलो, मैसेज या रिपोर्ट करें।"
           ],
           "shot": "r69-board"
         }

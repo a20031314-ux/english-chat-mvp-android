@@ -36,6 +36,8 @@ export type AppIntents = {
   openTopic: { topicId: string };
   /** 노트(My)의 한 부분을 연다 — 단어장 탭이 노트로 들어온 뒤 "단어장으로" 가던 곳. */
   openNotes: { section: "words" };
+  /** 사용법 창을 그 칸으로 연다(새로워진 점의 "자세히", 2026-10-20). 칸 id는 guide/content.ts GUIDE_SECTION_IDS. */
+  openGuide: { section: string };
 };
 
 const PREFIX = "talkbank:";
