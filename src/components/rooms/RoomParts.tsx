@@ -10,8 +10,7 @@ import {
   reportPerson,
   setBlock,
   setFollow,
-  translateLine,
-} from "@/lib/rooms/client";
+  translateLine, aiFailText, RoomApiError } from "@/lib/rooms/client";
 import { byPerson, contextBefore, overlapsPrevious, timeline, type RoomLine, type RoomMember } from "@/lib/rooms/protocol";
 import type { PublicProfile } from "@/lib/rooms/social";
 import type { HowToSayExpression } from "@/lib/howToSay";
@@ -388,7 +387,7 @@ export function Composer({
   const [text, setText] = useState(initialText ?? "");
   const [busy, setBusy] = useState(false);
   const [suggestion, setSuggestion] = useState<HowToSayExpression | null>(null);
-  const [state, setState] = useState<"" | "loading" | "failed">("");
+  const [state, setState] = useState<"" | "loading" | "failed" | "limit">("");
   const input = useRef<HTMLInputElement>(null);
 
   const send = async (value: string) => {
@@ -415,8 +414,8 @@ export function Composer({
       const found = await howToSay({ message: line, recent: recent(), locale, targetLanguage });
       setSuggestion(found);
       setState(found ? "" : "failed");
-    } catch {
-      setState("failed");
+    } catch (error) {
+      setState(error instanceof RoomApiError && error.code === "AI_HELP_LIMIT" ? "limit" : "failed");
     }
   };
 
@@ -440,6 +439,7 @@ export function Composer({
       ) : null}
       {state === "loading" ? <p className="text-xs text-slate-400">{t.howToSayLoading}</p> : null}
       {state === "failed" ? <p className="text-xs text-rose-300">{t.howToSayFailed}</p> : null}
+      {state === "limit" ? <p className="text-xs text-rose-300">{t.aiHelpLimit}</p> : null}
       {suggestion ? (
         <div className="rounded-xl border border-emerald-300/30 bg-emerald-300/5 p-2.5">
           <p className="text-[15px] text-white" dir="auto">
@@ -583,8 +583,8 @@ export function Lines({
         targetLanguage,
       });
       setOpen((have) => (line.seq in have ? { ...have, [line.seq]: translated || t.translateFailed } : have));
-    } catch {
-      setOpen((have) => (line.seq in have ? { ...have, [line.seq]: t.translateFailed } : have));
+    } catch (error) {
+      setOpen((have) => (line.seq in have ? { ...have, [line.seq]: aiFailText(t, error) } : have));
     }
   };
 

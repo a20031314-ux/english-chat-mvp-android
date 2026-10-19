@@ -12,8 +12,7 @@ import {
   dmPoll,
   dmSend,
   howToSay,
-  translateLine,
-} from "@/lib/rooms/client";
+  translateLine, aiFailText } from "@/lib/rooms/client";
 import { DM_PENDING_LIMIT, type DmMessage, type DmSummary, type DmThread } from "@/lib/rooms/dm";
 import type { RoomMeta } from "@/lib/rooms/protocol";
 import { askPhrase, questionCount } from "@/lib/rooms/quote";
@@ -362,8 +361,8 @@ function Bubble({
       } else {
         setExtra((await translateLine({ text: message.text, context, locale, targetLanguage })) || t.translateFailed);
       }
-    } catch {
-      setExtra(mine ? t.howToSayFailed : t.translateFailed);
+    } catch (error) {
+      setExtra(aiFailText({ ...t, translateFailed: mine ? t.howToSayFailed : t.translateFailed }, error));
     }
   };
 
@@ -504,7 +503,7 @@ function LogLine({
           if (translation === null) {
             void translateLine({ text: line.text, context, locale, targetLanguage }).then(
               (value) => setTranslation(value || t.translateFailed),
-              () => setTranslation(t.translateFailed),
+              (error: unknown) => setTranslation(aiFailText(t, error)),
             );
           }
         }}

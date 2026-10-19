@@ -2,7 +2,8 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestUserId, resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
-import { ensurePack, growthNow, phraseStates, readPack } from "@/lib/server/packStore";
+import { ensurePack, growthNow, phraseStates, readPack, readPackDays, writePackDays } from "@/lib/server/packStore";
+import { notePackDay, packWeekGate } from "@/lib/pack/weekly";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { packIdFor, packSummary, retro } from "@/lib/pack/pack";
 import { packBankFor } from "@/lib/pack/questions";
@@ -44,7 +45,8 @@ export async function GET(request: NextRequest) {
     return jsonWithCors(request, { error: "BAD_DAY" }, { status: 400 });
   }
   if (!packBankFor(language)) return jsonWithCors(request, { language, available: false });
-  const allowed = 1 + (await resolveRequestEntitlement(request)).terms.extraPacks;
+  const { terms } = await resolveRequestEntitlement(request);
+  const allowed = 1 + terms.extraPacks;
   // Without n: the latest of today's packs that exists. With n: that pack,
   // made now if the plan gives it and the one before it is finished.
   const asked = Number(request.nextUrl.searchParams.get("n"));
@@ -55,8 +57,18 @@ export async function GET(request: NextRequest) {
   } else {
     while (n < allowed && (await readPack(userId, language, packIdFor(day, n + 1)))) n += 1;
   }
+  // 무료는 7일 동안 며칠까지만 새 팩(billing/plans.ts packDaysPerWeek). 오늘 이미 연 팩은 그대로 이어 간다.
+  // 막힌 날은 available: false(옛 빌드는 카드를 숨김) + locked·nextDay(새 빌드는 다음에 열리는 날을 보임).
+  const weekly = terms.packDaysPerWeek;
+  let packDays: string[] | null = null;
+  if (weekly !== null && n === 1 && !(await readPack(userId, language, packIdFor(day, 1)))) {
+    packDays = await readPackDays(userId);
+    const gate = packWeekGate(packDays, day, weekly);
+    if (!gate.open) return jsonWithCors(request, { language, available: false, locked: true, nextDay: gate.nextDay, perWeek: weekly });
+  }
   const pack = await ensurePack(userId, language, packIdFor(day, n), now);
   if (!pack) return jsonWithCors(request, { language, available: false });
+  if (packDays) await writePackDays(userId, notePackDay(packDays, day));
   const summary = packSummary(pack);
   return jsonWithCors(request, {
     language,

@@ -1,3 +1,4 @@
+import { takeAiHelp } from "@/lib/server/aiHelp";
 import { NextRequest } from "next/server";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
@@ -82,6 +83,10 @@ export async function POST(request: NextRequest) {
     }
   }
 
+  // 누를 때만 도는 AI 도움 하루 한도(server/aiHelp.ts). 통화·영상 해석(translateUtterance)은 사용자 머리 없이 와서
+  // 익명으로 보이므로 세지 않는다 — 세는 건 사람끼리 화면의 번역처럼 누가 눌렀는지 아는 요청.
+  const help = await takeAiHelp(request, "help");
+  if (!help.ok) return jsonWithCors(request, { error: help.error, limit: help.limit }, { status: 429 });
   await meterRequest(request, "translate");
 
   try {

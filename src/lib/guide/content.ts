@@ -253,7 +253,7 @@ export const GUIDE_KO: Guide = {
         body: [
           "무슨 말을 할지 모르겠으면 ‘{ui:chatStartCta}’를 누르세요. 튜터가 대화를 시작해요.",
           "+ 버튼으로 사진을 보내면 사진을 보며 대화할 수 있어요.",
-          "무료로는 하루 10번까지 보낼 수 있고, 프리미엄은 제한이 없어요.",
+          "무료로는 하루 7번까지 보낼 수 있어요. 구독하면 요금에 따라 더 많이 보낼 수 있어요.",
         ],
       },
     ],
@@ -265,7 +265,7 @@ export const GUIDE_KO: Guide = {
         heading: "{ui:packTitle}",
         body: [
           "내 기록에서 지금 가장 키울 곳을 골라 약 7분짜리 대화를 만들어요.",
-          "하루 한 번 무료이고 통화 시간을 쓰지 않아요. ‘{ui:packStart}’을 누르면 시작해요.",
+          "구독하면 매일, 무료는 일주일에 2번 할 수 있고 통화 시간을 쓰지 않아요. ‘{ui:packStart}’을 누르면 시작해요.",
         ],
         shot: "call-pack",
       },
@@ -631,7 +631,7 @@ export const GUIDE_EN: Guide = {
         body: [
           "Not sure what to say? Tap {ui:chatStartCta} and the tutor will begin.",
           "Use + to send a photo and talk about it.",
-          "Free accounts can send 10 messages a day; Premium has no daily limit.",
+          "Free accounts can send 7 messages a day. Subscriptions give you more, depending on the plan.",
         ],
       },
     ],
@@ -643,7 +643,7 @@ export const GUIDE_EN: Guide = {
         heading: "{ui:packTitle}",
         body: [
           "It picks what your record says to grow next and makes a conversation of about seven minutes from it.",
-          "It's free once a day and uses no call time. Tap {ui:packStart} to begin.",
+          "Subscribers get it every day and free accounts twice a week; it uses no call time. Tap {ui:packStart} to begin.",
         ],
         shot: "call-pack",
       },

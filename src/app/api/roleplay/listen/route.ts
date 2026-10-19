@@ -1,3 +1,4 @@
+import { takeAiHelp } from "@/lib/server/aiHelp";
 import { NextRequest, after } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -63,6 +64,11 @@ export async function POST(request: NextRequest) {
   // but is not necessarily speaking the language they learn — a language
   // exchange swaps — so nothing is noted about them as a learner.
   const forRoom = body.room === true;
+  if (forRoom) {
+    // 말하는 방 자막은 하루 줄 수 한도(billing/plans.ts dailyCaptionLines). 넘으면 자막만 멈추고 음성 대화는 그대로.
+    const caption = await takeAiHelp(request, "caption");
+    if (!caption.ok) return jsonWithCors(request, { error: caption.error, limit: caption.limit }, { status: 429 });
+  }
   void meterRequest(request, forRoom ? "roomListen" : "roleplayListen");
 
   const mimeType = typeof body.mimeType === "string" ? body.mimeType : "audio/webm";

@@ -15,7 +15,7 @@ type ExpressionInsightSheetProps = {
   locale: string;
   insight: ExpressionInsight | null;
   isLoading: boolean;
-  failed: boolean;
+  failed: boolean | "limit";
   ui: UICopy;
   onClose: () => void;
 };
@@ -90,7 +90,7 @@ export function ExpressionInsightSheet({
           {isLoading ? (
             <p className="mt-4 text-sm text-slate-300">{ui.insightLoading}</p>
           ) : failed ? (
-            <p className="mt-4 text-sm text-rose-300">{ui.insightFailed}</p>
+            <p className="mt-4 text-sm text-rose-300">{failed === "limit" ? ui.aiHelpLimit : ui.insightFailed}</p>
           ) : insight ? (
             <div className="mt-4 space-y-4">
               {insight.explanation && !insight.dimensionResults ? (

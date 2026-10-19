@@ -1,3 +1,4 @@
+import { takeAiHelp } from "@/lib/server/aiHelp";
 import { NextRequest } from "next/server";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
@@ -26,6 +27,8 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "MISSING_OPENAI_KEY" }, { status: 503 });
   }
 
+  const help = await takeAiHelp(request, "help");
+  if (!help.ok) return jsonWithCors(request, { error: help.error, limit: help.limit }, { status: 429 });
   await meterRequest(request, "analysisElement");
 
   let body: {

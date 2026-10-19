@@ -22,6 +22,7 @@
 
 import {
   FREE_DAILY_CHAT_LIMIT,
+  FREE_PACK_DAYS_PER_WEEK,
   PREMIUM_ENTITLEMENT_ID,
   PREMIUM_MONTHLY_IMPORT_POINTS,
   PREMIUM_MONTHLY_PRODUCT_ID,
@@ -75,21 +76,40 @@ export type PlanTerms = {
   canImport: boolean;
   /** Won a month, for the screen's comparison only; the store's price is the one shown on the button. */
   priceKrw: number | null;
+  /**
+   * 누를 때만 도는 AI 도움(번역·표현 카드·문장분석·표현 자세히·단위·단어 뜻)의 하루 한도.
+   * 사람끼리 주고받는 것(메시지·묻기·방 대화)은 세지 않는다(hub/drafts/ai-help-limits.md).
+   */
+  dailyAiHelp: number;
+  /** 말하는 방 자막(받아쓰기) 하루 줄 수. 한 줄 ≈ 6초라 100줄 ≈ 10분. 넘으면 자막만 멈추고 음성은 계속. */
+  dailyCaptionLines: number;
+  /** 오늘의 팩을 7일 동안 며칠까지. null이면 매일. */
+  packDaysPerWeek: number | null;
 };
+
+/**
+ * 요금별 AI 도움·방 자막 한도(흑자 구조 2026-10-20). 듣기(TTS)는 통화가 같은 길로 소리를 내서 한도를 두지 않는다.
+ */
+const HELP_LIMITS = {
+  free: { dailyAiHelp: 20, dailyCaptionLines: 100 },
+  lite: { dailyAiHelp: 100, dailyCaptionLines: 300 },
+  plus: { dailyAiHelp: 150, dailyCaptionLines: 600 },
+  premium: { dailyAiHelp: 300, dailyCaptionLines: 1200 },
+} as const;
 
 export function termsFor(tier: PlanTier, now = Date.now(), from: string | null = PREMIUM_DAILY_PLAN_FROM): PlanTerms {
   const premium = premiumDailyAt(now, from);
   switch (tier) {
     case "lite":
-      return { tier, dailyCallMinutes: 7, monthlyGrantPoints: 0, dailyChat: 30, libraryOpen: false, extraPacks: 0, canImport: true, priceKrw: 3900 };
+      return { tier, dailyCallMinutes: 7, monthlyGrantPoints: 0, dailyChat: 30, libraryOpen: false, extraPacks: 0, canImport: true, priceKrw: 3900, ...HELP_LIMITS.lite, packDaysPerWeek: null };
     case "plus":
-      return { tier, dailyCallMinutes: 10, monthlyGrantPoints: 0, dailyChat: 50, libraryOpen: false, extraPacks: 0, canImport: true, priceKrw: 5500 };
+      return { tier, dailyCallMinutes: 10, monthlyGrantPoints: 0, dailyChat: 50, libraryOpen: false, extraPacks: 0, canImport: true, priceKrw: 5500, ...HELP_LIMITS.plus, packDaysPerWeek: null };
     case "premium":
       return premium.daily
-        ? { tier, dailyCallMinutes: 15, monthlyGrantPoints: premium.keepGrant ? PREMIUM_MONTHLY_IMPORT_POINTS : 0, dailyChat: 100, libraryOpen: true, extraPacks: 2, canImport: true, priceKrw: 8900 }
-        : { tier, dailyCallMinutes: null, monthlyGrantPoints: PREMIUM_MONTHLY_IMPORT_POINTS, dailyChat: null, libraryOpen: true, extraPacks: 0, canImport: true, priceKrw: 9900 };
+        ? { tier, dailyCallMinutes: 15, monthlyGrantPoints: premium.keepGrant ? PREMIUM_MONTHLY_IMPORT_POINTS : 0, dailyChat: 100, libraryOpen: true, extraPacks: 2, canImport: true, priceKrw: 8900, ...HELP_LIMITS.premium, packDaysPerWeek: null }
+        : { tier, dailyCallMinutes: null, monthlyGrantPoints: PREMIUM_MONTHLY_IMPORT_POINTS, dailyChat: null, libraryOpen: true, extraPacks: 0, canImport: true, priceKrw: 9900, ...HELP_LIMITS.premium, packDaysPerWeek: null };
     default:
-      return { tier: "free", dailyCallMinutes: null, monthlyGrantPoints: 0, dailyChat: FREE_DAILY_CHAT_LIMIT, libraryOpen: false, extraPacks: 0, canImport: false, priceKrw: null };
+      return { tier: "free", dailyCallMinutes: null, monthlyGrantPoints: 0, dailyChat: FREE_DAILY_CHAT_LIMIT, libraryOpen: false, extraPacks: 0, canImport: false, priceKrw: null, ...HELP_LIMITS.free, packDaysPerWeek: FREE_PACK_DAYS_PER_WEEK };
   }
 }
 

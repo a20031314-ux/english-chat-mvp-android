@@ -366,7 +366,7 @@
     "myHowPronunciation": "「{button}」ですべての単語が正しく聞き取られるたびに育ちます。",
     "myHowNatural": "添削も、より自然な言い方も必要ない文ごとに育ちます。",
     "packTitle": "今日のパック",
-    "packFree": "1日1回無料",
+    "packFree": "通話時間を使いません",
     "packFocus": "今日は{element}中心、{side}も少し",
     "packHint": "約{minutes}分・いま一番必要なことで組んだ会話",
     "packTry": "使ってみる表現",
@@ -545,7 +545,9 @@
     "adRewardCta": "広告を見てチャットを{n}回追加(今日あと{left}回)",
     "adRewardWaiting": "広告を確認しています…",
     "adRewardDone": "チャットが{n}回増えました。",
-    "adRewardFailed": "今は広告を読み込めませんでした。少ししてからもう一度お試しください。"
+    "adRewardFailed": "今は広告を読み込めませんでした。少ししてからもう一度お試しください。",
+    "aiHelpLimit": "今日のAIヘルプを使い切りました。明日また使えます。人との会話では相手に「どういう意味？」と聞けます。",
+    "packWeeklyLocked": "無料では今日のパックを週{n}回まで使えます。次のパック：{day}"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -914,7 +916,7 @@
     "myHowPronunciation": "每次在「{button}」中所有单词都被正确听出，就会成长。",
     "myHowNatural": "每句既不用修改也不需要更自然说法的句子，都会让它成长。",
     "packTitle": "今日练习包",
-    "packFree": "每天免费一次",
+    "packFree": "不占通话时间",
     "packFocus": "今天以{element}为主，也练一点{side}",
     "packHint": "约{minutes}分钟 · 根据你现在最需要的内容组成的对话",
     "packTry": "试着用",
@@ -1093,7 +1095,9 @@
     "adRewardCta": "看广告再聊 {n} 次(今天还剩 {left} 次)",
     "adRewardWaiting": "正在确认广告…",
     "adRewardDone": "聊天次数增加了 {n} 次。",
-    "adRewardFailed": "现在无法加载广告,请稍后再试。"
+    "adRewardFailed": "现在无法加载广告,请稍后再试。",
+    "aiHelpLimit": "今天的 AI 帮助已用完,明天会恢复。和别人聊天时,可以直接问对方“这是什么意思？”",
+    "packWeeklyLocked": "免费账户每周可做 {n} 次今日练习包。下一个：{day}"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1464,7 +1468,7 @@
     "myHowPronunciation": "Lớn lên mỗi lần mọi từ đều được nghe đúng trong “{button}”.",
     "myHowNatural": "Lớn lên với mỗi câu không cần sửa cũng không cần cách nói tự nhiên hơn.",
     "packTitle": "Gói hôm nay",
-    "packFree": "Miễn phí, mỗi ngày một lần",
+    "packFree": "Không tốn thời gian gọi",
     "packFocus": "Hôm nay: {element}, thêm một chút {side}",
     "packHint": "Khoảng {minutes} phút · cuộc trò chuyện dựa trên điều bạn cần nhất",
     "packTry": "Thử dùng",
@@ -1643,7 +1647,9 @@
     "adRewardCta": "Xem quảng cáo để có thêm {n} lượt chat (hôm nay còn {left})",
     "adRewardWaiting": "Đang kiểm tra quảng cáo…",
     "adRewardDone": "Bạn có thêm {n} lượt chat.",
-    "adRewardFailed": "Hiện không tải được quảng cáo. Hãy thử lại sau ít phút."
+    "adRewardFailed": "Hiện không tải được quảng cáo. Hãy thử lại sau ít phút.",
+    "aiHelpLimit": "Bạn đã dùng hết trợ giúp AI hôm nay. Ngày mai sẽ được nạp lại. Khi trò chuyện với người khác, bạn có thể hỏi họ \"Câu này nghĩa là gì?\"",
+    "packWeeklyLocked": "Tài khoản miễn phí được làm gói hôm nay {n} lần mỗi tuần. Gói tiếp theo: {day}"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2019,7 +2025,7 @@
     "myHowPronunciation": "Grandit chaque fois que tous les mots sont bien entendus dans « {button} ».",
     "myHowNatural": "Grandit avec chaque phrase qui n'a besoin ni de correction ni d'une version plus naturelle.",
     "packTitle": "Pack du jour",
-    "packFree": "Gratuit, une fois par jour",
+    "packFree": "Sans temps d’appel",
     "packFocus": "Aujourd’hui : {element}, avec un peu de {side}",
     "packHint": "Environ {minutes} min · une conversation construite sur ce dont vous avez le plus besoin",
     "packTry": "Essayez d’utiliser",
@@ -2198,7 +2204,9 @@
     "adRewardCta": "Regardez une pub pour {n} chats de plus ({left} restants aujourd'hui)",
     "adRewardWaiting": "Vérification de la pub…",
     "adRewardDone": "Vous avez {n} chats de plus.",
-    "adRewardFailed": "Impossible de charger une pub pour le moment. Réessayez dans un instant."
+    "adRewardFailed": "Impossible de charger une pub pour le moment. Réessayez dans un instant.",
+    "aiHelpLimit": "Vous avez utilisé l’aide IA du jour. Elle se recharge demain. Dans les discussions avec des personnes, vous pouvez leur demander « Ça veut dire quoi ? »",
+    "packWeeklyLocked": "Le compte gratuit donne le pack du jour {n} fois par semaine. Prochain pack : {day}"
   },
   "it": {
     "archive": "Report",
@@ -2765,7 +2773,7 @@
     "myHowPronunciation": "Cresce ogni volta che tutte le parole si sentono bene in «{button}».",
     "myHowNatural": "Cresce con ogni frase che non richiede né correzioni né una versione più naturale.",
     "packTitle": "Pacchetto di oggi",
-    "packFree": "Gratis, una volta al giorno",
+    "packFree": "Non usa tempo di chiamata",
     "packFocus": "Oggi: {element}, con un po’ di {side}",
     "packHint": "Circa {minutes} min · una conversazione fatta su ciò che ti serve di più",
     "packTry": "Prova a usare",
@@ -2944,7 +2952,9 @@
     "adRewardCta": "Guarda un annuncio per {n} chat in più ({left} rimasti oggi)",
     "adRewardWaiting": "Verifica dell'annuncio…",
     "adRewardDone": "Hai {n} chat in più.",
-    "adRewardFailed": "Impossibile caricare un annuncio ora. Riprova tra poco."
+    "adRewardFailed": "Impossibile caricare un annuncio ora. Riprova tra poco.",
+    "aiHelpLimit": "Hai usato l’aiuto IA di oggi. Si ricarica domani. Nelle chat con le persone puoi chiedere loro \"Cosa significa?\"",
+    "packWeeklyLocked": "Con l’account gratuito hai il pacchetto del giorno {n} volte a settimana. Prossimo: {day}"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3323,7 +3333,7 @@
     "myHowPronunciation": "Cresce cada vez que todas as palavras são ouvidas certo em “{button}”.",
     "myHowNatural": "Cresce a cada frase que não precisa de correção nem de uma versão mais natural.",
     "packTitle": "Pacote de hoje",
-    "packFree": "Grátis, uma vez por dia",
+    "packFree": "Não usa tempo de chamada",
     "packFocus": "Hoje: {element}, com um pouco de {side}",
     "packHint": "Cerca de {minutes} min · uma conversa feita com o que você mais precisa",
     "packTry": "Tente usar",
@@ -3502,7 +3512,9 @@
     "adRewardCta": "Veja um anúncio e ganhe mais {n} chats ({left} restantes hoje)",
     "adRewardWaiting": "Verificando o anúncio…",
     "adRewardDone": "Você ganhou mais {n} chats.",
-    "adRewardFailed": "Não foi possível carregar um anúncio agora. Tente de novo daqui a pouco."
+    "adRewardFailed": "Não foi possível carregar um anúncio agora. Tente de novo daqui a pouco.",
+    "aiHelpLimit": "Você usou a ajuda de IA de hoje. Ela recarrega amanhã. Em conversas com pessoas, você pode perguntar \"O que isso significa?\"",
+    "packWeeklyLocked": "A conta grátis tem o pacote do dia {n} vezes por semana. Próximo pacote: {day}"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4067,7 +4079,7 @@
     "myHowPronunciation": "Растёт каждый раз, когда в «{button}» все слова распознаны верно.",
     "myHowNatural": "Растёт с каждой фразой, которой не нужны ни исправление, ни более естественный вариант.",
     "packTitle": "Набор на сегодня",
-    "packFree": "Бесплатно, раз в день",
+    "packFree": "Без расхода времени звонков",
     "packFocus": "Сегодня: {element}, и немного {side}",
     "packHint": "Около {minutes} мин · разговор из того, что вам сейчас нужнее всего",
     "packTry": "Попробуйте сказать",
@@ -4246,7 +4258,9 @@
     "adRewardCta": "Посмотрите рекламу и получите ещё {n} сообщений (сегодня осталось {left})",
     "adRewardWaiting": "Проверяем рекламу…",
     "adRewardDone": "Добавлено {n} сообщений.",
-    "adRewardFailed": "Сейчас не удалось загрузить рекламу. Попробуйте чуть позже."
+    "adRewardFailed": "Сейчас не удалось загрузить рекламу. Попробуйте чуть позже.",
+    "aiHelpLimit": "Помощь ИИ на сегодня закончилась. Завтра она пополнится. В разговоре с людьми можно спросить собеседника: «Что это значит?»",
+    "packWeeklyLocked": "Бесплатно — набор дня {n} раза в неделю. Следующий: {day}"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -4621,7 +4635,7 @@
     "myHowPronunciation": "Tumbuh setiap kali semua kata terdengar benar di “{button}”.",
     "myHowNatural": "Tumbuh dengan setiap kalimat yang tidak perlu koreksi maupun versi yang lebih alami.",
     "packTitle": "Paket hari ini",
-    "packFree": "Gratis, sekali sehari",
+    "packFree": "Tidak memakai waktu panggilan",
     "packFocus": "Hari ini: {element}, dengan sedikit {side}",
     "packHint": "Sekitar {minutes} menit · percakapan dari hal yang paling kamu butuhkan",
     "packTry": "Coba pakai",
@@ -4800,7 +4814,9 @@
     "adRewardCta": "Tonton iklan untuk {n} chat lagi (sisa {left} hari ini)",
     "adRewardWaiting": "Memeriksa iklan…",
     "adRewardDone": "Kamu dapat {n} chat lagi.",
-    "adRewardFailed": "Iklan belum bisa dimuat sekarang. Coba lagi sebentar lagi."
+    "adRewardFailed": "Iklan belum bisa dimuat sekarang. Coba lagi sebentar lagi.",
+    "aiHelpLimit": "Bantuan AI hari ini sudah habis. Besok terisi lagi. Saat ngobrol dengan orang lain, kamu bisa tanya \"Ini artinya apa?\"",
+    "packWeeklyLocked": "Akun gratis dapat paket hari ini {n} kali seminggu. Paket berikutnya: {day}"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5169,7 +5185,7 @@
     "myHowPronunciation": "ينمو كلما سُمعت كل الكلمات صحيحة في «{button}».",
     "myHowNatural": "ينمو مع كل جملة لا تحتاج تصحيحًا ولا صيغة أكثر طبيعية.",
     "packTitle": "باقة اليوم",
-    "packFree": "مجانًا، مرة في اليوم",
+    "packFree": "لا تستهلك وقت المكالمات",
     "packFocus": "اليوم: {element}، مع قليل من {side}",
     "packHint": "حوالي {minutes} دقائق · محادثة مبنية على ما تحتاجه أكثر",
     "packTry": "جرّب أن تستخدم",
@@ -5348,7 +5364,9 @@
     "adRewardCta": "شاهد إعلانًا لتحصل على {n} رسائل دردشة إضافية (متبقٍ {left} اليوم)",
     "adRewardWaiting": "جارٍ التحقق من الإعلان…",
     "adRewardDone": "حصلت على {n} رسائل دردشة إضافية.",
-    "adRewardFailed": "تعذّر تحميل إعلان الآن. حاول مرة أخرى بعد قليل."
+    "adRewardFailed": "تعذّر تحميل إعلان الآن. حاول مرة أخرى بعد قليل.",
+    "aiHelpLimit": "استخدمت مساعدة الذكاء الاصطناعي لهذا اليوم. تتجدد غدًا. في المحادثات مع الأشخاص يمكنك أن تسألهم: \"ماذا يعني هذا؟\"",
+    "packWeeklyLocked": "الحساب المجاني يتيح حزمة اليوم {n} مرات في الأسبوع. الحزمة التالية: {day}"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -5717,7 +5735,7 @@
     "myHowPronunciation": "เติบโตทุกครั้งที่ทุกคำถูกได้ยินถูกต้องใน “{button}”",
     "myHowNatural": "เติบโตกับทุกประโยคที่ไม่ต้องแก้และไม่ต้องใช้สำนวนที่เป็นธรรมชาติกว่า",
     "packTitle": "แพ็กวันนี้",
-    "packFree": "ฟรีวันละครั้ง",
+    "packFree": "ไม่ใช้เวลาโทร",
     "packFocus": "วันนี้เน้น{element} และ{side}อีกนิด",
     "packHint": "ประมาณ {minutes} นาที · บทสนทนาที่จัดจากสิ่งที่คุณต้องการที่สุดตอนนี้",
     "packTry": "ลองใช้",
@@ -5896,7 +5914,9 @@
     "adRewardCta": "ดูโฆษณาเพื่อแชตเพิ่ม {n} ครั้ง (วันนี้เหลือ {left} ครั้ง)",
     "adRewardWaiting": "กำลังตรวจสอบโฆษณา…",
     "adRewardDone": "ได้แชตเพิ่ม {n} ครั้งแล้ว",
-    "adRewardFailed": "ตอนนี้โหลดโฆษณาไม่ได้ ลองใหม่อีกครั้งในอีกสักครู่"
+    "adRewardFailed": "ตอนนี้โหลดโฆษณาไม่ได้ ลองใหม่อีกครั้งในอีกสักครู่",
+    "aiHelpLimit": "ใช้ความช่วยเหลือจาก AI ของวันนี้หมดแล้ว พรุ่งนี้จะเติมให้ใหม่ ในแชตกับคนอื่น คุณถามเขาได้ว่า \"แปลว่าอะไร?\"",
+    "packWeeklyLocked": "บัญชีฟรีเล่นแพ็กของวันนี้ได้สัปดาห์ละ {n} ครั้ง แพ็กถัดไป: {day}"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -6265,7 +6285,7 @@
     "myHowPronunciation": "हर बार बढ़ता है जब “{button}” में हर शब्द सही सुनाई देता है।",
     "myHowNatural": "हर उस वाक्य से बढ़ता है जिसे न सुधार चाहिए, न ज़्यादा स्वाभाविक रूप।",
     "packTitle": "आज का पैक",
-    "packFree": "दिन में एक बार मुफ़्त",
+    "packFree": "कॉल का समय नहीं लगता",
     "packFocus": "आज: {element}, साथ में थोड़ा {side}",
     "packHint": "लगभग {minutes} मिनट · आपकी सबसे बड़ी ज़रूरत से बनी बातचीत",
     "packTry": "इस्तेमाल करके देखें",
@@ -6444,6 +6464,8 @@
     "adRewardCta": "विज्ञापन देखें और {n} चैट और पाएँ (आज {left} बाकी)",
     "adRewardWaiting": "विज्ञापन जाँचा जा रहा है…",
     "adRewardDone": "आपको {n} चैट और मिल गईं।",
-    "adRewardFailed": "अभी विज्ञापन लोड नहीं हो सका। थोड़ी देर बाद फिर कोशिश करें।"
+    "adRewardFailed": "अभी विज्ञापन लोड नहीं हो सका। थोड़ी देर बाद फिर कोशिश करें।",
+    "aiHelpLimit": "आज की AI मदद खत्म हो गई। कल फिर मिल जाएगी। लोगों से बातचीत में आप उनसे पूछ सकते हैं, \"इसका मतलब क्या है?\"",
+    "packWeeklyLocked": "फ़्री खाते में आज का पैक हफ़्ते में {n} बार मिलता है। अगला पैक: {day}"
   }
 }

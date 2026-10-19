@@ -22,6 +22,20 @@ import { AVOID_DAYS, chooseFocus, composePack, packDayOf, packIdFor, type Growth
 
 const PACK_TTL_SECONDS = 4 * 24 * 60 * 60;
 
+/** 무료 사용자가 팩을 연 날(주 N번 한도, pack/weekly.ts). 언어와 상관없이 한 줄. */
+function packDaysKey(userId: string): string {
+  return `pack:days:v1:${userId}`;
+}
+
+export async function readPackDays(userId: string): Promise<string[]> {
+  const days = await kvGetJson<string[]>(packDaysKey(userId));
+  return Array.isArray(days) ? days.filter((d): d is string => typeof d === "string") : [];
+}
+
+export async function writePackDays(userId: string, days: string[]): Promise<void> {
+  await kvSetJson(packDaysKey(userId), days, 15 * 24 * 60 * 60);
+}
+
 function packKey(userId: string, language: string, day: string): string {
   return `pack:v1:${userId}:${language}:${day}`;
 }

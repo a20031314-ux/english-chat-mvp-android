@@ -31,6 +31,9 @@ const won = (n) => `${n < 0 ? "−" : ""}${Math.round(Math.abs(n)).toLocaleStrin
 const signed = (n) => `${n < 0 ? "−" : "+"}${Math.round(Math.abs(n)).toLocaleString("ko-KR")}원`;
 const pct = (n) => `${Math.round(n * 1000) / 10}%`;
 
+/** 하루 한도(plans.ts dailyAiHelp)에 들어가는 기능(server/aiHelp.ts를 거치는 것). */
+const AI_HELP_OPS = ["translate", "howToSay", "howToSayCard", "analysisInput", "analysisElement", "expressionInsight", "vocabGloss"];
+
 export const PLANS = [
   { id: "free", name: "무료(+광고)", terms: termsFor("free") },
   { id: "lite", name: "라이트 3,900원", terms: termsFor("lite") },
@@ -96,9 +99,16 @@ export function simulate(type, terms, o) {
     const call = Math.min(type.callMinutes, callCap);
     callPool -= terms.monthlyGrantPoints ? call : 0;
     n.callMinutes += call;
-    n.packs += Math.min(type.packs, 1 + terms.extraPacks);
-    n.roomMinutes += type.roomMinutes;
-    for (const [op, times] of Object.entries(type.extras ?? {})) n.ops[op] = (n.ops[op] ?? 0) + times;
+    // 무료 팩은 주 N번(plans.ts packDaysPerWeek): 쓰는 날마다 그 비율만큼.
+    const packCap = terms.packDaysPerWeek ? terms.packDaysPerWeek / 7 : 1 + terms.extraPacks;
+    n.packs += Math.min(type.packs, packCap);
+    // 방 자막은 하루 줄 수 한도(한 줄 ≈ 6초 → 분당 10줄).
+    n.roomMinutes += terms.dailyCaptionLines ? Math.min(type.roomMinutes, terms.dailyCaptionLines / 10) : type.roomMinutes;
+    // 누를 때만 도는 AI 도움은 하루 한도(plans.ts dailyAiHelp)까지 — 넘는 만큼은 같은 비율로 줄인다.
+    const extras = Object.entries(type.extras ?? {});
+    const helpSum = extras.filter(([op]) => AI_HELP_OPS.includes(op)).reduce((sum, [, times]) => sum + times, 0);
+    const helpScale = terms.dailyAiHelp && helpSum > terms.dailyAiHelp ? terms.dailyAiHelp / helpSum : 1;
+    for (const [op, times] of extras) n.ops[op] = (n.ops[op] ?? 0) + times * (AI_HELP_OPS.includes(op) ? helpScale : 1);
 
     let clock = d * 1440 + 9 * 60;
     let today = 0;

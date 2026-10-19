@@ -121,9 +121,9 @@
     "premium": 20
   },
   "room": {
-    "_설명": "말하는 방 1분에 한 사람이 부르는 것: 자기 말 받아쓰기(roomListen), 남의 말 번역(translate).",
+    "_설명": "말하는 방 1분에 한 사람이 부르는 것: 자기 말 받아쓰기(roomListen), 남의 말 번역(translate — 줄을 누를 때만이라 분당 0.3번 정도, 2026-10-20 고침).",
     "roomListen": 2,
-    "translate": 2
+    "translate": 0.3
   },
   "storeVat": {
     "_설명": "Play 가격에 포함된 부가세. 한국 Play는 Google이 부가세를 떼고 정산한다고 보고 10% — 확인 필요. 0으로 두면 hub/costs.md와 같은 기준.",

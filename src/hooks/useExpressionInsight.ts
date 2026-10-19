@@ -19,7 +19,8 @@ type InsightFrame = {
   target: InsightTarget;
   insight: ExpressionInsight | null;
   isLoading: boolean;
-  failed: boolean;
+  /** "limit": 오늘 AI 도움을 다 씀(server/aiHelp.ts). */
+  failed: boolean | "limit";
 };
 
 export function useExpressionInsight(locale: Locale) {
@@ -66,14 +67,14 @@ export function useExpressionInsight(locale: Locale) {
           isLoading: false,
           failed: !result,
         });
-      } catch {
+      } catch (error) {
         if (idRef.current !== id) return;
         setFrame({
           id,
           target: { ...next, sentence, selected },
           insight: null,
           isLoading: false,
-          failed: true,
+          failed: error instanceof Error && error.message === "AI_HELP_LIMIT" ? "limit" : true,
         });
       }
     },

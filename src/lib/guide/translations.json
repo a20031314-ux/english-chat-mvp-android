@@ -135,7 +135,7 @@
           "body": [
             "¿No sabes qué decir? Toca {ui:chatStartCta} y el tutor empezará la conversación.",
             "Usa + para enviar una foto y hablar sobre ella.",
-            "Las cuentas gratis pueden enviar 10 mensajes al día; Premium no tiene límite diario."
+            "Con la cuenta gratis puedes enviar 7 mensajes al día. Con una suscripción tienes más, según el plan."
           ]
         }
       ]
@@ -148,7 +148,7 @@
           "shot": "call-pack",
           "body": [
             "Elige lo que tu registro dice que conviene mejorar y arma una conversación de unos siete minutos.",
-            "Es gratis una vez al día y no gasta tiempo de llamada. Toca {ui:packStart} para empezar."
+            "Con suscripción lo tienes cada día y gratis dos veces por semana; no gasta tiempo de llamada. Toca {ui:packStart} para empezar."
           ]
         },
         {
@@ -512,7 +512,7 @@
           "body": [
             "何を書けばいいか迷ったら「{ui:chatStartCta}」を押すと、チューターが会話を始めてくれます。",
             "+ボタンで写真を送って、それについて話すこともできます。",
-            "無料アカウントは1日10メッセージまで、プレミアムは無制限です。"
+            "無料では1日7回まで送れます。サブスクリプションではプランに応じてもっと送れます。"
           ]
         }
       ]
@@ -525,7 +525,7 @@
           "shot": "call-pack",
           "body": [
             "記録からいま伸ばしたいところを選んで、7分ほどの会話を作ります。",
-            "1日1回無料で、通話時間を使いません。{ui:packStart}を押すと始まります。"
+            "サブスクリプションなら毎日、無料は週2回できて、通話時間を使いません。{ui:packStart}を押すと始まります。"
           ]
         },
         {
@@ -889,7 +889,7 @@
           "body": [
             "不知道说什么时，点{ui:chatStartCta}让导师先开场。",
             "点击+可以发送照片，一起聊图片。",
-            "免费用户每天可发10条消息，会员无限制。"
+            "免费账户每天可以发 7 条。订阅后可按方案发更多。"
           ]
         }
       ]
@@ -902,7 +902,7 @@
           "shot": "call-pack",
           "body": [
             "它根据你的记录挑出现在最该加强的地方，做成大约七分钟的对话。",
-            "每天免费一次，不占通话时间。点 {ui:packStart} 开始。"
+            "订阅用户每天都能做，免费用户每周两次，不占通话时间。点 {ui:packStart} 开始。"
           ]
         },
         {
@@ -1266,7 +1266,7 @@
           "body": [
             "Không biết bắt đầu thế nào? Nhấn {ui:chatStartCta} để trợ lý bắt đầu cuộc trò chuyện.",
             "Dùng dấu + để gửi ảnh và trò chuyện về ảnh đó.",
-            "Tài khoản miễn phí gửi được 10 tin nhắn mỗi ngày; Premium không giới hạn."
+            "Tài khoản miễn phí gửi được 7 tin nhắn mỗi ngày. Đăng ký thì được nhiều hơn, tùy gói."
           ]
         }
       ]
@@ -1279,7 +1279,7 @@
           "shot": "call-pack",
           "body": [
             "Nó chọn phần ghi chép của bạn cho thấy cần luyện nhất và tạo một cuộc trò chuyện khoảng bảy phút.",
-            "Miễn phí mỗi ngày một lần và không tốn thời gian gọi. Chạm {ui:packStart} để bắt đầu."
+            "Người đăng ký được làm mỗi ngày, tài khoản miễn phí hai lần mỗi tuần, và không tốn thời gian gọi. Chạm {ui:packStart} để bắt đầu."
           ]
         },
         {
@@ -1643,7 +1643,7 @@
           "body": [
             "Vous ne savez pas quoi dire ? Touchez {ui:chatStartCta} et le tuteur lancera la conversation.",
             "Utilisez + pour envoyer une photo et en discuter.",
-            "Les comptes gratuits peuvent envoyer 10 messages par jour ; Premium n’a pas de limite quotidienne."
+            "Le compte gratuit permet 7 messages par jour. Un abonnement en donne plus, selon la formule."
           ]
         }
       ]
@@ -1656,7 +1656,7 @@
           "shot": "call-pack",
           "body": [
             "Elle choisit ce que votre historique conseille de travailler et en fait une conversation d’environ sept minutes.",
-            "Gratuit une fois par jour, sans temps d’appel. Touchez {ui:packStart} pour commencer."
+            "Tous les jours avec un abonnement, deux fois par semaine en gratuit, sans temps d’appel. Touchez {ui:packStart} pour commencer."
           ]
         },
         {
@@ -2020,7 +2020,7 @@
           "body": [
             "Non sai cosa scrivere? Tocca {ui:chatStartCta} e il tutor inizierà la conversazione.",
             "Con il + puoi inviare una foto e parlarne insieme.",
-            "Con l’account gratuito puoi inviare 10 messaggi al giorno; Premium non ha limiti giornalieri."
+            "Con l’account gratuito puoi inviare 7 messaggi al giorno. Con un abbonamento ne hai di più, in base al piano."
           ]
         }
       ]
@@ -2033,7 +2033,7 @@
           "shot": "call-pack",
           "body": [
             "Sceglie ciò che il tuo storico dice di allenare ora e ne fa una conversazione di circa sette minuti.",
-            "È gratis una volta al giorno e non usa tempo di chiamata. Tocca {ui:packStart} per iniziare."
+            "Ogni giorno con l’abbonamento, due volte a settimana gratis, e non usa tempo di chiamata. Tocca {ui:packStart} per iniziare."
           ]
         },
         {
@@ -2397,7 +2397,7 @@
           "body": [
             "Não sabe o que dizer? Toque em {ui:chatStartCta} e o tutor começa a conversa.",
             "Use o + para enviar uma foto e conversar sobre ela.",
-            "Contas grátis podem enviar 10 mensagens por dia; Premium não tem limite diário."
+            "A conta grátis envia 7 mensagens por dia. Com assinatura você tem mais, conforme o plano."
           ]
         }
       ]
@@ -2410,7 +2410,7 @@
           "shot": "call-pack",
           "body": [
             "Ele escolhe o que o seu histórico mostra que vale treinar agora e monta uma conversa de uns sete minutos.",
-            "É grátis uma vez por dia e não usa tempo de chamada. Toque em {ui:packStart} para começar."
+            "Assinantes têm todo dia e a conta grátis duas vezes por semana; não usa tempo de chamada. Toque em {ui:packStart} para começar."
           ]
         },
         {
@@ -2774,7 +2774,7 @@
           "body": [
             "Не знаете, с чего начать? Жмите {ui:chatStartCta} — тьютор начнёт разговор.",
             "Через + можно отправить фото и обсудить его.",
-            "Бесплатно — 10 сообщений в день, в Premium — без ограничений."
+            "Бесплатно — 7 сообщений в день. С подпиской — больше, в зависимости от тарифа."
           ]
         }
       ]
@@ -2787,7 +2787,7 @@
           "shot": "call-pack",
           "body": [
             "Она выбирает то, что по вашей истории стоит подтянуть сейчас, и делает из этого разговор минут на семь.",
-            "Бесплатно раз в день и без расхода времени звонков. Нажмите {ui:packStart}, чтобы начать."
+            "С подпиской — каждый день, бесплатно — два раза в неделю, без расхода времени звонков. Нажмите {ui:packStart}, чтобы начать."
           ]
         },
         {
@@ -3151,7 +3151,7 @@
           "body": [
             "Bingung mau mulai dari mana? Ketuk {ui:chatStartCta} dan tutor akan memulai percakapan.",
             "Gunakan + untuk kirim foto dan ngobrol tentangnya.",
-            "Akun gratis bisa kirim 10 pesan per hari; Premium tanpa batas harian."
+            "Akun gratis bisa kirim 7 pesan per hari. Dengan langganan kamu dapat lebih banyak, tergantung paketnya."
           ]
         }
       ]
@@ -3164,7 +3164,7 @@
           "shot": "call-pack",
           "body": [
             "Ia memilih bagian yang menurut catatanmu paling perlu dilatih dan membuat percakapan sekitar tujuh menit.",
-            "Gratis sekali sehari dan tidak memakai waktu panggilan. Ketuk {ui:packStart} untuk mulai."
+            "Pelanggan dapat setiap hari, akun gratis dua kali seminggu, dan tidak memakai waktu panggilan. Ketuk {ui:packStart} untuk mulai."
           ]
         },
         {
@@ -3528,7 +3528,7 @@
           "body": [
             "لا تعرف ماذا تقول؟ اضغط {ui:chatStartCta} وسيبدأ المعلم الحديث.",
             "استخدم + لإرسال صورة والدردشة عنها.",
-            "الحساب المجاني يسمح بإرسال 10 رسائل يومياً؛ الحساب المميز بلا حد يومي."
+            "الحساب المجاني يسمح بإرسال 7 رسائل يومياً. الاشتراك يمنحك أكثر حسب الخطة."
           ]
         }
       ]
@@ -3541,7 +3541,7 @@
           "shot": "call-pack",
           "body": [
             "تختار ما يقول سجلّك إنه الأحوج إلى التقوية الآن، وتصنع منه محادثة مدتها نحو سبع دقائق.",
-            "مجانية مرة في اليوم ولا تستهلك وقت المكالمات. اضغط {ui:packStart} للبدء."
+            "للمشتركين كل يوم، وللحساب المجاني مرتين في الأسبوع، ولا تستهلك وقت المكالمات. اضغط {ui:packStart} للبدء."
           ]
         },
         {
@@ -3905,7 +3905,7 @@
           "body": [
             "ไม่รู้จะเริ่มยังไง? กด {ui:chatStartCta} ให้ติวเตอร์เริ่มบทสนทนาให้",
             "กด + เพื่อส่งรูปภาพแล้วคุยเกี่ยวกับรูปได้",
-            "บัญชีฟรีส่งข้อความได้ 10 ข้อความต่อวัน; Premium ส่งได้ไม่จำกัด"
+            "บัญชีฟรีส่งข้อความได้วันละ 7 ข้อความ สมัครสมาชิกแล้วส่งได้มากขึ้นตามแพ็กเกจ"
           ]
         }
       ]
@@ -3918,7 +3918,7 @@
           "shot": "call-pack",
           "body": [
             "มันเลือกจุดที่บันทึกของคุณบอกว่าควรฝึกตอนนี้ แล้วทำเป็นบทสนทนาราวเจ็ดนาที",
-            "ฟรีวันละครั้งและไม่ใช้เวลาโทร แตะ {ui:packStart} เพื่อเริ่ม"
+            "สมาชิกเล่นได้ทุกวัน บัญชีฟรีสัปดาห์ละ 2 ครั้ง และไม่ใช้เวลาโทร แตะ {ui:packStart} เพื่อเริ่ม"
           ]
         },
         {
@@ -4282,7 +4282,7 @@
           "body": [
             "क्या लिखें समझ नहीं आ रहा? {ui:chatStartCta} दबाएँ — ट्यूटर शुरुआत करेगा।",
             "+ से फोटो भेजें और उस पर बात करें।",
-            "फ्री अकाउंट में रोज़ 10 संदेश भेज सकते हैं; प्रीमियम में कोई सीमा नहीं।"
+            "फ़्री खाते से दिन में 7 संदेश भेज सकते हैं। सब्सक्रिप्शन में प्लान के हिसाब से ज़्यादा मिलते हैं।"
           ]
         }
       ]
@@ -4295,7 +4295,7 @@
           "shot": "call-pack",
           "body": [
             "यह आपके रिकॉर्ड से वह हिस्सा चुनता है जिसे अभी सबसे ज़्यादा बढ़ाना है, और उससे लगभग सात मिनट की बातचीत बनाता है।",
-            "दिन में एक बार मुफ़्त, कॉल का समय नहीं लगता। शुरू करने के लिए {ui:packStart} दबाएँ।"
+            "सब्सक्राइबर को हर दिन, फ़्री खाते को हफ़्ते में दो बार मिलता है, और कॉल का समय नहीं लगता। शुरू करने के लिए {ui:packStart} दबाएँ।"
           ]
         },
         {

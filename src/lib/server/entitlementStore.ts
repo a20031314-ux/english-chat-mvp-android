@@ -199,6 +199,22 @@ export async function grantAdReward(
   return "granted";
 }
 
+/** AI 도움·방 자막 하루 수(채팅 한도와 같은 날, server/aiHelp.ts). */
+export type HelpBucket = "help" | "caption";
+
+function helpKey(userId: string, bucket: HelpBucket) {
+  return `usage:aihelp:${bucket}:${userId}:${dayKey()}`;
+}
+
+export async function getDailyHelp(userId: string, bucket: HelpBucket): Promise<number> {
+  return kvGetNumber(helpKey(userId, bucket));
+}
+
+/** 하나 더하고 새 합계. */
+export async function addDailyHelp(userId: string, bucket: HelpBucket): Promise<number> {
+  return kvIncrBy(helpKey(userId, bucket), 1, DAILY_TTL_SECONDS);
+}
+
 export async function getDailyUsed(userId: string): Promise<number> {
   return kvGetNumber(dailyChatKey(userId));
 }

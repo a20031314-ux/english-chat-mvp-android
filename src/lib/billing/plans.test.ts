@@ -12,11 +12,20 @@ test("each plan's terms are the ones decided", () => {
       return [t.dailyCallMinutes, t.dailyChat, t.libraryOpen, t.canImport];
     }),
     [
-      [null, 10, false, false],
+      [null, 7, false, false],
       [7, 30, false, true],
       [10, 50, false, true],
     ],
   );
+});
+
+test("AI 도움·방 자막·팩 한도(흑자 구조 2026-10-20): 무료가 가장 작고 요금이 오를수록 늘거나 같다", () => {
+  const order = ["free", "lite", "plus", "premium"] as const;
+  const terms = order.map((tier) => termsFor(tier, OCT_16, null));
+  assert.deepEqual(terms.map((t) => t.dailyAiHelp), [20, 100, 150, 300]);
+  assert.deepEqual(terms.map((t) => t.dailyCaptionLines), [100, 300, 600, 1200]);
+  assert.deepEqual(terms.map((t) => t.packDaysPerWeek), [2, null, null, null]);
+  assert.equal(termsFor("premium", Date.UTC(2100, 1, 1), "2100-01-01").dailyAiHelp, 300);
 });
 
 test("premium keeps its old terms until the switch day, and the grant for that month", () => {

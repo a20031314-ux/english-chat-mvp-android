@@ -53,15 +53,16 @@ export type AdsSettings = {
 };
 
 /**
- * 처음 값(보수적으로): 보상형 1회 = 채팅 5번(원가 약 10원 < 보상형 1회 수익 약 11~28원),
- * 하루 3번(무료 10 + 15 = 25번 < 라이트 30번), 전면은 5분에 한 번까지·채팅 4번 뒤.
+ * 흑자 구조(hub/drafts/pricing-profit-2026-10-20.md, 2026-10-20 사용자 결정): 보상형 1회 = 채팅 3번
+ * (원가 약 6원 < 보상형 1회 수익 약 11~28원), 하루 3번(무료 7 + 9 = 16번 < 라이트 30번),
+ * 전면은 3분에 한 번까지·채팅 3번 뒤.
  */
 export const DEFAULT_ADS_SETTINGS: AdsSettings = {
   enabled: true,
-  rewardChats: 5,
+  rewardChats: 3,
   rewardedDailyMax: 3,
-  interstitialMinGapSeconds: 300,
-  interstitialAfterChats: 4,
+  interstitialMinGapSeconds: 180,
+  interstitialAfterChats: 3,
   appOpenEnabled: true,
   appOpenAfterDays: 3,
   appOpenGapHours: 4,

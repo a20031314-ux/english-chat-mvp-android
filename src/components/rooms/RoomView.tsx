@@ -118,6 +118,9 @@ export function RoomView({
   const [muted, setMuted] = useState(false);
   const [speaking, setSpeaking] = useState(false);
   const [pending, setPending] = useState(0);
+  // 오늘 자막 줄을 다 쓰면(서버 CAPTION_LIMIT, billing/plans.ts) 이 방에서는 받아쓰기를 멈춘다. 음성은 그대로.
+  const [captionsOff, setCaptionsOff] = useState(false);
+  const captionsOffRef = useRef(false);
   const [peerStates, setPeerStates] = useState<Record<string, PeerState>>({});
   const [notice, setNotice] = useState<Notice>("");
   // 보는 방식(사람마다, 이 기기에 기억). 줄·질문·쪽지는 모두 같은 방 기록을 쓴다.
@@ -192,6 +195,7 @@ export function RoomView({
 
   const onUtterance = useCallback(
     async (blob: Blob, mimeType: string, startedAt: number, endedAt: number) => {
+      if (captionsOffRef.current) return;
       setPending((count) => count + 1);
       try {
         // 자유 대화방은 방 언어가 없어서 말하는 나의 두 언어(배우는 언어·앱 언어)로 받아쓴다.
@@ -223,6 +227,11 @@ export function RoomView({
           );
         }
       } catch (error) {
+        if (error instanceof RoomApiError && error.code === "CAPTION_LIMIT") {
+          captionsOffRef.current = true;
+          setCaptionsOff(true);
+          return;
+        }
         console.warn("[rooms] line failed", error);
       } finally {
         setPending((count) => Math.max(0, count - 1));
@@ -720,6 +729,7 @@ export function RoomView({
       <div className="flex min-h-0 flex-1 flex-col">
         <section className={`flex min-h-0 flex-col ${layout === "chat" ? "flex-[1]" : layout === "call" ? "shrink-0" : "flex-[3]"}`}>
           <p className="shrink-0 px-4 pt-2 text-meta font-medium text-slate-400">🎙 {t.captionsTitle}</p>
+          {captionsOff ? <p className="shrink-0 px-4 pt-1 text-meta text-amber-200">{t.captionLimit}</p> : null}
           <Lines
             onNote={noteFor}
             t={t}

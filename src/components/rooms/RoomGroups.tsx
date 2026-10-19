@@ -17,8 +17,7 @@ import {
   groupSend,
   groupTransfer,
   myRelations,
-  translateLine,
-} from "@/lib/rooms/client";
+  translateLine, aiFailText } from "@/lib/rooms/client";
 import { GROUP_MAX_MEMBERS, GROUP_MAX_NAME_CHARS, type Group, type GroupCall, type GroupMessage, type GroupSummary } from "@/lib/rooms/group";
 import { requestGroupCall } from "@/lib/rooms/openDm";
 import { askPhrase, questionCount } from "@/lib/rooms/quote";
@@ -359,7 +358,7 @@ function CallLogLine({
                     targetLanguage,
                   }).then(
                     (value) => setTranslated((have) => ({ ...have, [index]: value || t.translateFailed })),
-                    () => setTranslated((have) => ({ ...have, [index]: t.translateFailed })),
+                    (error: unknown) => setTranslated((have) => ({ ...have, [index]: aiFailText(t, error) })),
                   );
                 }}
                 className="w-full rounded-lg px-2 py-1 text-start hover:bg-white/5"
@@ -415,7 +414,7 @@ function GroupBubble({
     if (translation === null) {
       void translateLine({ text: message.text, context, locale, targetLanguage }).then(
         (value) => setTranslation(value || t.translateFailed),
-        () => setTranslation(t.translateFailed),
+        (error: unknown) => setTranslation(aiFailText(t, error)),
       );
     }
   };

@@ -7,7 +7,7 @@ import { sendAppIntent } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
 import { learningLanguageTextDir } from "@/lib/learningLanguages";
 import { usePremium } from "@/contexts/PremiumContext";
-import { fetchPackToday, finishPack, type PackToday } from "@/lib/pack/client";
+import { fetchPackToday, finishPack, isPackLocked, type PackLocked, type PackToday } from "@/lib/pack/client";
 import type { Retro } from "@/lib/pack/pack";
 import type { PracticeRequest } from "@/components/NextStepCard";
 
@@ -31,6 +31,7 @@ export function PackCard({
 }) {
   const { isPremium } = usePremium();
   const [pack, setPack] = useState<PackToday | null>(null);
+  const [locked, setLocked] = useState<PackLocked | null>(null);
   const [showRetro, setShowRetro] = useState(false);
   const [retro, setRetro] = useState<Retro | null>(null);
 
@@ -38,6 +39,12 @@ export function PackCard({
     let cancelled = false;
     void fetchPackToday(targetLanguage, isPremium).then((loaded) => {
       if (cancelled) return;
+      if (isPackLocked(loaded)) {
+        setLocked(loaded);
+        setPack(null);
+        return;
+      }
+      setLocked(null);
       setPack(loaded);
       setRetro(loaded?.retro ?? null);
     });
@@ -46,6 +53,27 @@ export function PackCard({
     };
   }, [targetLanguage, isPremium, refreshKey]);
 
+  if (locked) {
+    // 무료는 오늘의 팩이 주 N번(billing/plans.ts). 다음에 열리는 날을 보여 준다.
+    let next = locked.nextDay;
+    try {
+      next = new Date(`${locked.nextDay}T00:00:00`).toLocaleDateString(document.documentElement.lang || undefined, {
+        month: "short",
+        day: "numeric",
+        weekday: "short",
+      });
+    } catch {
+      // 날짜 그대로
+    }
+    return (
+      <div className="w-full rounded-2xl border border-white/10 bg-white/[0.03] px-4 py-3 text-start">
+        <p className="text-note font-semibold text-slate-300">{ui.packTitle}</p>
+        <p className="mt-1 text-caption leading-snug text-slate-400">
+          {ui.packWeeklyLocked.replace("{n}", String(locked.perWeek)).replace("{day}", next)}
+        </p>
+      </div>
+    );
+  }
   if (!pack) return null;
   const names = elementNames(ui);
   const done = pack.status === "done";
@@ -57,7 +85,7 @@ export function PackCard({
     // The next pack opens once this one is closed on the server.
     if (!retro) await finishPack(targetLanguage, pack.day, isPremium);
     const next = await fetchPackToday(targetLanguage, isPremium, n + 1);
-    if (!next) return;
+    if (!next || isPackLocked(next)) return;
     setPack(next);
     setRetro(next.retro ?? null);
   };

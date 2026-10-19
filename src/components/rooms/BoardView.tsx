@@ -14,8 +14,7 @@ import {
   boardList,
   boardOpen,
   boardWrite,
-  translateLine,
-} from "@/lib/rooms/client";
+  translateLine, aiFailText } from "@/lib/rooms/client";
 import type { RoomCopy } from "@/lib/rooms/copy";
 import { requestDm } from "@/lib/rooms/openDm";
 import { Face, ProfileSheet } from "./RoomParts";
@@ -204,6 +203,7 @@ function errorText(t: RoomCopy, error: unknown): string {
     if (error.code === "LIMIT" || error.code === "FULL") return t.boardLimit;
     if (error.code === "NOT_FOUND") return t.boardGone;
     if (error.code === "SIGNED_OUT") return t.loginNeeded;
+    if (error.code === "AI_HELP_LIMIT") return t.aiHelpLimit;
   }
   return t.translateFailed;
 }
@@ -348,7 +348,7 @@ function PostSheet({
       return;
     }
     setTranslated((current) => ({ ...current, [key]: t.translating }));
-    const value = await translateLine({ text, context: post && key !== post.id ? [post.text] : [], locale, targetLanguage }).catch(() => "");
+    const value = await translateLine({ text, context: post && key !== post.id ? [post.text] : [], locale, targetLanguage }).catch((error: unknown) => aiFailText(t, error));
     setTranslated((current) => ({ ...current, [key]: value || t.translateFailed }));
   };
 

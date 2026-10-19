@@ -17,7 +17,7 @@ test("구독자는 광고가 없고, 무료만 광고 수입이 생긴다", () =
 
 test("요금 한도로 잘린다: 무료 채팅은 기본 + 보상형 상한까지만", () => {
   const r = simulate(type("한도 꽉"), plan("free").terms, o);
-  const perDay = 10 + o.ads.rewardedDailyMax * o.ads.rewardChats;
+  const perDay = plan("free").terms.dailyChat + o.ads.rewardedDailyMax * o.ads.rewardChats;
   assert.equal(r.n.chats, perDay * 30);
   assert.ok(r.n.rewarded <= o.ads.rewardedDailyMax * 30);
   assert.equal(r.n.callMinutes, 0);

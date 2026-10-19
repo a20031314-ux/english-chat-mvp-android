@@ -83,7 +83,7 @@
             "무슨 말을 할지 모르겠으면 ‘{ui:chatStartCta}’를 누르세요. 튜터가 대화를 시작해요.",
             "+ 버튼으로 사진을 보내면 사진을 보며 대화할 수 있어요.",
             "왼쪽 위 메뉴에서 지난 대화를 보거나 새 대화를 시작할 수 있어요.",
-            "무료로는 하루 10번까지 보낼 수 있고, 프리미엄은 제한이 없어요."
+            "무료로는 하루 7번까지 보낼 수 있어요. 구독하면 요금에 따라 더 많이 보낼 수 있어요."
           ]
         }
       ]
@@ -173,7 +173,7 @@
             "Not sure what to say? Tap {ui:chatStartCta} and the tutor will begin.",
             "Use + to send a photo and talk about it.",
             "The menu at the top left has your past chats and starts a new one.",
-            "Free accounts can send 10 messages a day; Premium has no daily limit."
+            "Free accounts can send 7 messages a day. Subscriptions give you more, depending on the plan."
           ]
         }
       ]
@@ -263,7 +263,7 @@
             "¿No sabes qué decir? Toca {ui:chatStartCta} y el tutor empezará la conversación.",
             "Usa + para enviar una foto y hablar sobre ella.",
             "El menú arriba a la izquierda te muestra tus chats anteriores y te permite iniciar uno nuevo.",
-            "Las cuentas gratis pueden enviar 10 mensajes al día; Premium no tiene límite diario."
+            "Con la cuenta gratis puedes enviar 7 mensajes al día. Con una suscripción tienes más, según el plan."
           ]
         }
       ]
@@ -353,7 +353,7 @@
             "何を書けばいいか迷ったら「{ui:chatStartCta}」を押すと、チューターが会話を始めてくれます。",
             "+ボタンで写真を送って、それについて話すこともできます。",
             "左上のメニューから過去のチャットを見たり、新しいチャットを始めたりできます。",
-            "無料アカウントは1日10メッセージまで、プレミアムは無制限です。"
+            "無料では1日7回まで送れます。サブスクリプションではプランに応じてもっと送れます。"
           ]
         }
       ]
@@ -443,7 +443,7 @@
             "不知道说什么时，点{ui:chatStartCta}让导师先开场。",
             "点击+可以发送照片，一起聊图片。",
             "左上角菜单可查看历史聊天或开始新对话。",
-            "免费用户每天可发10条消息，会员无限制。"
+            "免费账户每天可以发 7 条。订阅后可按方案发更多。"
           ]
         }
       ]
@@ -533,7 +533,7 @@
             "Không biết bắt đầu thế nào? Nhấn {ui:chatStartCta} để trợ lý bắt đầu cuộc trò chuyện.",
             "Dùng dấu + để gửi ảnh và trò chuyện về ảnh đó.",
             "Menu góc trên bên trái cho phép xem lại các cuộc chat cũ hoặc bắt đầu chat mới.",
-            "Tài khoản miễn phí gửi được 10 tin nhắn mỗi ngày; Premium không giới hạn."
+            "Tài khoản miễn phí gửi được 7 tin nhắn mỗi ngày. Đăng ký thì được nhiều hơn, tùy gói."
           ]
         }
       ]
@@ -623,7 +623,7 @@
             "Vous ne savez pas quoi dire ? Touchez {ui:chatStartCta} et le tuteur lancera la conversation.",
             "Utilisez + pour envoyer une photo et en discuter.",
             "Le menu en haut à gauche permet de retrouver vos discussions ou d’en commencer une nouvelle.",
-            "Les comptes gratuits peuvent envoyer 10 messages par jour ; Premium n’a pas de limite quotidienne."
+            "Le compte gratuit permet 7 messages par jour. Un abonnement en donne plus, selon la formule."
           ]
         }
       ]
@@ -713,7 +713,7 @@
             "Non sai cosa scrivere? Tocca {ui:chatStartCta} e il tutor inizierà la conversazione.",
             "Con il + puoi inviare una foto e parlarne insieme.",
             "Dal menu in alto a sinistra trovi le chat passate e puoi iniziarne una nuova.",
-            "Con l’account gratuito puoi inviare 10 messaggi al giorno; Premium non ha limiti giornalieri."
+            "Con l’account gratuito puoi inviare 7 messaggi al giorno. Con un abbonamento ne hai di più, in base al piano."
           ]
         }
       ]
@@ -803,7 +803,7 @@
             "Não sabe o que dizer? Toque em {ui:chatStartCta} e o tutor começa a conversa.",
             "Use o + para enviar uma foto e conversar sobre ela.",
             "O menu no canto superior esquerdo mostra seus chats antigos e começa um novo.",
-            "Contas grátis podem enviar 10 mensagens por dia; Premium não tem limite diário."
+            "A conta grátis envia 7 mensagens por dia. Com assinatura você tem mais, conforme o plano."
           ]
         }
       ]
@@ -893,7 +893,7 @@
             "Не знаете, с чего начать? Жмите {ui:chatStartCta} — тьютор начнёт разговор.",
             "Через + можно отправить фото и обсудить его.",
             "В меню слева вверху — ваши прошлые чаты и кнопка для нового.",
-            "Бесплатно — 10 сообщений в день, в Premium — без ограничений."
+            "Бесплатно — 7 сообщений в день. С подпиской — больше, в зависимости от тарифа."
           ]
         }
       ]
@@ -983,7 +983,7 @@
             "Bingung mau mulai dari mana? Ketuk {ui:chatStartCta} dan tutor akan memulai percakapan.",
             "Gunakan + untuk kirim foto dan ngobrol tentangnya.",
             "Menu di kiri atas berisi riwayat chat dan untuk mulai chat baru.",
-            "Akun gratis bisa kirim 10 pesan per hari; Premium tanpa batas harian."
+            "Akun gratis bisa kirim 7 pesan per hari. Dengan langganan kamu dapat lebih banyak, tergantung paketnya."
           ]
         }
       ]
@@ -1073,7 +1073,7 @@
             "لا تعرف ماذا تقول؟ اضغط {ui:chatStartCta} وسيبدأ المعلم الحديث.",
             "استخدم + لإرسال صورة والدردشة عنها.",
             "القائمة في أعلى اليسار تعرض محادثاتك السابقة وتتيح بدء محادثة جديدة.",
-            "الحساب المجاني يسمح بإرسال 10 رسائل يومياً؛ الحساب المميز بلا حد يومي."
+            "الحساب المجاني يسمح بإرسال 7 رسائل يومياً. الاشتراك يمنحك أكثر حسب الخطة."
           ]
         }
       ]
@@ -1163,7 +1163,7 @@
             "ไม่รู้จะเริ่มยังไง? กด {ui:chatStartCta} ให้ติวเตอร์เริ่มบทสนทนาให้",
             "กด + เพื่อส่งรูปภาพแล้วคุยเกี่ยวกับรูปได้",
             "เมนูมุมซ้ายบนดูแชทเก่า หรือเริ่มแชทใหม่",
-            "บัญชีฟรีส่งข้อความได้ 10 ข้อความต่อวัน; Premium ส่งได้ไม่จำกัด"
+            "บัญชีฟรีส่งข้อความได้วันละ 7 ข้อความ สมัครสมาชิกแล้วส่งได้มากขึ้นตามแพ็กเกจ"
           ]
         }
       ]
@@ -1253,7 +1253,7 @@
             "क्या लिखें समझ नहीं आ रहा? {ui:chatStartCta} दबाएँ — ट्यूटर शुरुआत करेगा।",
             "+ से फोटो भेजें और उस पर बात करें।",
             "ऊपर बाएँ मेन्यू में पुराने चैट देखें या नया शुरू करें।",
-            "फ्री अकाउंट में रोज़ 10 संदेश भेज सकते हैं; प्रीमियम में कोई सीमा नहीं।"
+            "फ़्री खाते से दिन में 7 संदेश भेज सकते हैं। सब्सक्रिप्शन में प्लान के हिसाब से ज़्यादा मिलते हैं।"
           ]
         }
       ]

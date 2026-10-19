@@ -205,9 +205,16 @@ export async function transcribeUtterance(blob: Blob, mimeType: string, language
       languages,
     }),
   });
+  // 오늘 자막 줄을 다 썼으면 방 화면이 자막을 멈추고 안내한다(음성은 계속).
+  if (response.status === 429) throw new RoomApiError("CAPTION_LIMIT", 429);
   if (!response.ok) return "";
   const body = (await response.json()) as { text?: unknown };
   return typeof body.text === "string" ? body.text.trim() : "";
+}
+
+/** 번역·다듬기가 실패했을 때 보일 말: 오늘 AI 도움을 다 썼으면 그 안내, 아니면 실패 문구. */
+export function aiFailText(t: { translateFailed: string; aiHelpLimit: string }, error: unknown): string {
+  return error instanceof RoomApiError && error.code === "AI_HELP_LIMIT" ? t.aiHelpLimit : t.translateFailed;
 }
 
 /** 자막 줄 하나를 내 앱 언어로. 앞 줄들을 맥락으로 같이 보낸다. */
@@ -229,6 +236,7 @@ export async function translateLine(input: {
       context: input.context,
     }),
   });
+  if (response.status === 429) throw new RoomApiError("AI_HELP_LIMIT", 429);
   if (!response.ok) throw new Error(`translate ${response.status}`);
   const body = (await response.json()) as { translated?: unknown };
   return typeof body.translated === "string" ? body.translated : "";
@@ -260,6 +268,10 @@ export async function howToSay(input: {
       ...(input.purpose ? { purpose: input.purpose } : {}),
     }),
   });
+  if (response.status === 429) {
+    const body = (await response.json().catch(() => ({}))) as { error?: string };
+    throw new RoomApiError(body.error ?? "AI_HELP_LIMIT", 429);
+  }
   if (!response.ok) throw new Error(`how_to_say ${response.status}`);
   const data = (await response.json()) as HowToSayExpression;
   if (!data.expression?.trim()) return null;

@@ -45,7 +45,7 @@ export function ExpressionPeek({
 }) {
   const [open, setOpen] = useState(Boolean(expression));
   const [loading, setLoading] = useState(false);
-  const [failed, setFailed] = useState(false);
+  const [failed, setFailed] = useState<boolean | "limit">(false);
   const tipSeen = useSyncExternalStore(subscribe, readTipSeen, () => true);
   const [tipDismissed, setTipDismissed] = useState(false);
 
@@ -56,8 +56,8 @@ export function ExpressionPeek({
     setFailed(false);
     try {
       await onOpen();
-    } catch {
-      setFailed(true);
+    } catch (error) {
+      setFailed(error instanceof Error && error.message === "AI_HELP_LIMIT" ? "limit" : true);
     } finally {
       setLoading(false);
     }
@@ -99,7 +99,7 @@ export function ExpressionPeek({
           {loading ? (
             <p className="mt-1 text-sm text-slate-400">{ui.chatExpressionLoading}</p>
           ) : failed || !expression ? (
-            <p className="mt-1 text-sm text-rose-300">{ui.chatExpressionFailed}</p>
+            <p className="mt-1 text-sm text-rose-300">{failed === "limit" ? ui.aiHelpLimit : ui.chatExpressionFailed}</p>
           ) : (
             <>
               <div className="mt-1 flex items-start gap-2">

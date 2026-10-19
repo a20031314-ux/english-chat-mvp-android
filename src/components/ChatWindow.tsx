@@ -1102,6 +1102,8 @@ export function ChatWindow({
           .slice(-6),
       }),
     });
+    // 오늘 AI 도움을 다 썼으면(서버 429 AI_HELP_LIMIT) 카드가 그 안내를 보인다.
+    if (response.status === 429) throw new Error("AI_HELP_LIMIT");
     if (!response.ok) throw new Error("card failed");
     const data = (await response.json()) as ExpressionApiResponse;
     if (!data.expression?.trim()) throw new Error("empty card");

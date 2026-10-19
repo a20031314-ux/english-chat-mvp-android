@@ -1,4 +1,5 @@
 import { chatBonusToday } from "@/lib/server/adChat";
+import { takeAiHelp } from "@/lib/server/aiHelp";
 import { meterRequest, recordTokens } from "@/lib/server/meterRequest";
 import { takeRoomHint } from "@/lib/server/roomHint";
 import { NextRequest, after } from "next/server";
@@ -892,6 +893,11 @@ export async function POST(request: NextRequest) {
     const roomHint = body.purpose === "roomHint";
     if (roomHint && !(await takeRoomHint(userId))) {
       return jsonWithCors(request, { error: "HINT_LIMIT" }, { status: 429 });
+    }
+    // 표현 카드·다듬어 보기·학습 언어로(누를 때만 도는 AI 도움, server/aiHelp.ts). 방 힌트는 위의 자기 한도.
+    if (!roomHint) {
+      const help = await takeAiHelp(request, "help");
+      if (!help.ok) return jsonWithCors(request, { error: help.error, limit: help.limit }, { status: 429 });
     }
     try {
       void meterRequest(request, roomHint ? "roomHint" : "howToSayCard");

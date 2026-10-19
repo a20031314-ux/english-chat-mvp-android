@@ -16,7 +16,11 @@ export const PREMIUM_CLIENT_HEADER = "x-client-premium";
  */
 export const REVENUECAT_USER_HEADER = "x-rc-user";
 
-export const FREE_DAILY_CHAT_LIMIT = 10;
+/** 무료 채팅 하루(흑자 구조 2026-10-20: 10 → 7, 보상형 광고로 하루 최대 9번 더). */
+export const FREE_DAILY_CHAT_LIMIT = 7;
+
+/** 무료 오늘의 팩: 7일 동안 며칠(흑자 구조 2026-10-20: 매일 → 주 2번). 유료는 매일. */
+export const FREE_PACK_DAYS_PER_WEEK = 2;
 
 /**
  * Questions a learner may type about a selected part of a sentence, per day.

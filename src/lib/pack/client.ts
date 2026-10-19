@@ -26,20 +26,30 @@ export type PackToday = {
   retro?: Retro;
 };
 
+/** 무료 팩을 이번 주에 다 썼을 때(pack/weekly.ts): 다음에 열리는 날. */
+export type PackLocked = { available: false; locked: true; nextDay: string; perWeek: number };
+
+export function isPackLocked(value: PackToday | PackLocked | null): value is PackLocked {
+  return Boolean(value && value.available === false && value.locked);
+}
+
 /** The learner's own date: a pack turns over at their midnight, not the server's. */
 export function localDay(now = new Date()): string {
   const pad = (n: number) => String(n).padStart(2, "0");
   return `${now.getFullYear()}-${pad(now.getMonth() + 1)}-${pad(now.getDate())}`;
 }
 
-export async function fetchPackToday(language: string, isPremium: boolean, n?: number): Promise<PackToday | null> {
+export async function fetchPackToday(language: string, isPremium: boolean, n?: number): Promise<PackToday | PackLocked | null> {
   try {
     const response = await fetch(
       apiUrl(`/api/pack/today?lang=${encodeURIComponent(language)}&day=${localDay()}${n && n > 1 ? `&n=${n}` : ""}`),
       { headers: entitlementHeaders(isPremium) },
     );
     if (!response.ok) return null;
-    const data = (await response.json()) as { available?: boolean } & Partial<PackToday>;
+    const data = (await response.json()) as { available?: boolean; locked?: boolean; nextDay?: string; perWeek?: number } & Partial<Omit<PackToday, "available">>;
+    if (!data.available && data.locked && typeof data.nextDay === "string") {
+      return { available: false, locked: true, nextDay: data.nextDay, perWeek: data.perWeek ?? 2 };
+    }
     return data.available && typeof data.day === "string" && data.practice ? (data as PackToday) : null;
   } catch {
     return null;
