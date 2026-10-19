@@ -201,15 +201,23 @@ function watchForVoice(
 ): VoiceWatch {
   let source: MediaStreamAudioSourceNode;
   let analyser: AnalyserNode;
+  // iOS(WebKit): 같은 마이크 스트림을 Web Audio 분석기와 MediaRecorder가 함께 쓰면 분석기는 말소리를
+  // 듣는데 녹음 파일은 비거나 무음이 된다 — 받아쓰기가 매번 빈 줄("…")로 돌아왔다(TestFlight 83.3, 2026-10-20).
+  // 분석기에는 복사본을 준다. 서버는 iPhone 녹음 형식(mp4·조각 mp4·webm)을 모두 제대로 받아 적는 것 확인.
+  const listened = isIosApp() ? stream.clone() : stream;
+  const dropCopy = () => {
+    if (listened !== stream) for (const track of listened.getTracks()) track.stop();
+  };
   try {
     const ctx = analysisContext();
-    source = ctx.createMediaStreamSource(stream);
+    source = ctx.createMediaStreamSource(listened);
     analyser = ctx.createAnalyser();
     analyser.fftSize = 1024;
     source.connect(analyser);
   } catch {
     // No analysis available — the caller still has its own control, and a turn
     // that cannot be detected is better than a turn that cannot be spoken.
+    dropCopy();
     return { stop: () => undefined, speechStartedAt: () => null, heardNothing: () => false };
   }
 
@@ -231,6 +239,7 @@ function watchForVoice(
     } catch {
       // Already gone with the stream.
     }
+    dropCopy();
     on.settled();
   };
 
@@ -277,6 +286,7 @@ function watchForVoice(
       } catch {
         // Already gone with the stream.
       }
+      dropCopy();
     },
     speechStartedAt: () => turn.firstSpeechAt,
     heardNothing: () => silent,
@@ -306,7 +316,9 @@ export async function listenForTurn(input: {
   recorder.addEventListener("dataavailable", (event) => {
     if (event.data.size > 0) chunks.push(event.data);
   });
-  recorder.start();
+  // iOS: 조각 단위로 받아 두어야 멈출 때 녹음이 빠지지 않는다(멈춤 한 번에 넘겨받는 길이 빈 파일을 남김).
+  if (isIosApp()) recorder.start(250);
+  else recorder.start();
 
   const watch = watchForVoice(stream, {
     speaking: (yes) => input.onSpeaking?.(yes),
