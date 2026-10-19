@@ -8,15 +8,20 @@ import { adsAvailable } from "@/lib/platform";
  * - 전면 광고: 자연스러운 끝(통화·오늘의 팩·미션이 끝날 때, 채팅 몇 번 뒤 채팅 화면을 나갈 때)에만,
  *   서버가 정한 최소 간격을 두고. 학습 도중(쓰는 중·답 기다리는 중·통화 중)과 앱을 열자마자는 띄우지 않는다.
  * - 보상형 광고: 채팅 한도 안내의 "광고 보고 채팅 더". 보상은 앱이 아니라 서버가 AdMob 콜백으로 확인해서 준다.
+ * - 앱 오프닝 광고: 앱을 새로 켤 때·오래(서버 값, 30분) 떠났다 돌아올 때. 설치 며칠 뒤부터, 몇 시간에 한 번까지.
+ *   통화·말하는 방에 있을 때와 시트가 열려 있을 때는 띄우지 않는다.
+ * - 배너: 둘러보는 화면(My·영상·대화 목록) 아래, 하단 탭 바로 위. 시트가 열리거나 글을 쓰는 동안은 숨긴다.
  *
  * 어떤 실패도 학습을 막지 않는다 — 광고가 없으면 그냥 지나간다. 구독자는 서버가 enabled=false로 답한다.
  */
 
 type AdsConfig = {
   enabled: boolean;
-  units: { interstitial: string; rewarded: string };
+  units: { interstitial: string; rewarded: string; appOpen?: string; banner?: string };
   interstitialMinGapSeconds: number;
   interstitialAfterChats: number;
+  appOpen?: { enabled: boolean; afterDays: number; gapHours: number; awayMinutes: number };
+  banner?: { enabled: boolean };
   rewarded: { enabled: boolean; chats: number; dailyMax: number; left: number; token: string | null };
 };
 
@@ -26,6 +31,8 @@ export type InterstitialMoment = "callEnd" | "packEnd" | "missionDone" | "chatLe
 const TEST_UNITS = {
   interstitial: "ca-app-pub-3940256099942544/1033173712",
   rewarded: "ca-app-pub-3940256099942544/5224354917",
+  appOpen: "ca-app-pub-3940256099942544/9257395921",
+  banner: "ca-app-pub-3940256099942544/9214589741",
 };
 const TESTING = process.env.NEXT_PUBLIC_ADS_TEST?.trim() === "1";
 
@@ -45,8 +52,8 @@ export function noteChatSent() {
   chatsSinceInterstitial += 1;
 }
 
-function unitFor(kind: "interstitial" | "rewarded", cfg: AdsConfig): string {
-  return TESTING ? TEST_UNITS[kind] : cfg.units[kind];
+function unitFor(kind: keyof typeof TEST_UNITS, cfg: AdsConfig): string {
+  return TESTING ? TEST_UNITS[kind] : (cfg.units[kind] ?? "");
 }
 
 function readLastShown(): number {
@@ -216,4 +223,245 @@ export async function waitForChatBonus(previousLimit: number | null, attempts = 
     }
   }
   return null;
+}
+
+// ─── 앱 오프닝 광고 ────────────────────────────────────────────────────────────
+
+const FIRST_SEEN_KEY = "adsFirstSeenAt";
+const APP_OPEN_LAST_KEY = "adsLastAppOpenAt";
+/** 앱을 켤 때 광고가 이만큼 안에 준비되지 않으면 그냥 넘어간다(첫 화면을 붙잡지 않음). */
+const APP_OPEN_LOAD_WAIT_MS = 4000;
+
+function readNumber(key: string): number {
+  try {
+    return Number(window.localStorage.getItem(key) ?? 0) || 0;
+  } catch {
+    return 0;
+  }
+}
+
+function writeNumber(key: string, value: number) {
+  try {
+    window.localStorage.setItem(key, String(value));
+  } catch {
+    // 저장이 막혀 있으면 이번 실행 동안만.
+  }
+}
+
+/** 이 기기에서 처음 연 때(설치 며칠 뒤부터 앱 오프닝 광고). 없으면 지금으로 적는다. */
+function firstSeenAt(): number {
+  const seen = readNumber(FIRST_SEEN_KEY);
+  if (seen) return seen;
+  const now = Date.now();
+  writeNumber(FIRST_SEEN_KEY, now);
+  return now;
+}
+
+let appOpenLoaded = false;
+let appOpenLoading: Promise<boolean> | null = null;
+let memoryLastAppOpen = 0;
+/** 지금 보고 있는 화면이 앱 오프닝 광고를 띄워도 되는 곳인지(통화·방이면 false, AppHome이 알려 줌). */
+let appOpenAllowedHere = true;
+
+export function setAppOpenAllowedHere(allowed: boolean) {
+  appOpenAllowedHere = allowed;
+}
+
+function loadAppOpen(cfg: AdsConfig): Promise<boolean> {
+  if (appOpenLoaded) return Promise.resolve(true);
+  if (!appOpenLoading) {
+    appOpenLoading = (async () => {
+      try {
+        const { AdMob } = await import("@capacitor-community/admob");
+        await AdMob.loadAppOpen({ adId: unitFor("appOpen", cfg) });
+        appOpenLoaded = true;
+      } catch {
+        appOpenLoaded = false;
+      } finally {
+        appOpenLoading = null;
+      }
+      return appOpenLoaded;
+    })();
+  }
+  return appOpenLoading;
+}
+
+/**
+ * 앱을 켤 때("launch")·오래 떠났다 돌아올 때("resume") 부른다. 조건이 하나라도 안 맞으면 아무것도 하지 않는다:
+ * 무료·설정 켜짐·설치 며칠 지남·마지막 앱 오프닝 광고에서 몇 시간 지남·통화/방 아님·시트 없음·막 전면 광고를 본 직후 아님.
+ */
+export async function maybeShowAppOpen(_moment: "launch" | "resume"): Promise<void> {
+  try {
+    if (!adsAvailable()) return;
+    const installedAt = firstSeenAt();
+    const cfg = await loadAdsConfig();
+    const rule = cfg?.appOpen;
+    if (!cfg?.enabled || !rule?.enabled || !cfg.units.appOpen) return;
+    const now = Date.now();
+    if (now - installedAt < rule.afterDays * 24 * 60 * 60 * 1000) return;
+    const last = Math.max(readNumber(APP_OPEN_LAST_KEY), memoryLastAppOpen);
+    if (now - last < rule.gapHours * 60 * 60 * 1000) return;
+    if (now - Math.max(readLastShown(), memoryLastShown) < 60_000) return;
+    if (!appOpenAllowedHere || layersOpen > 0) return;
+    if (!(await startAds())) return;
+    const ready = await Promise.race([
+      loadAppOpen(cfg),
+      new Promise<boolean>((resolve) => window.setTimeout(() => resolve(false), APP_OPEN_LOAD_WAIT_MS)),
+    ]);
+    // 기다리는 동안 사용자가 통화로 들어갔거나 시트를 열었으면 띄우지 않는다(받아 둔 건 다음에).
+    if (!ready || !appOpenAllowedHere || layersOpen > 0) return;
+    const { AdMob } = await import("@capacitor-community/admob");
+    appOpenLoaded = false;
+    memoryLastAppOpen = now;
+    writeNumber(APP_OPEN_LAST_KEY, now);
+    await AdMob.showAppOpen();
+  } catch {
+    appOpenLoaded = false;
+  }
+}
+
+let hiddenAt = 0;
+let lifecycleWatched = false;
+
+/** 다른 앱에 갔다가 오래(서버 값) 지나 돌아오면 앱 오프닝 광고를 시도한다. 광고 화면에서 돌아오는 건 세지 않는다. */
+export function watchAppLifecycle(): () => void {
+  if (!adsAvailable() || lifecycleWatched) return () => undefined;
+  lifecycleWatched = true;
+  const onVisibility = () => {
+    if (document.visibilityState === "hidden") {
+      hiddenAt = Date.now();
+      return;
+    }
+    const away = hiddenAt ? Date.now() - hiddenAt : 0;
+    hiddenAt = 0;
+    const awayMinutes = config?.appOpen?.awayMinutes ?? 30;
+    if (away >= awayMinutes * 60 * 1000) void maybeShowAppOpen("resume");
+  };
+  document.addEventListener("visibilitychange", onVisibility);
+  return () => {
+    document.removeEventListener("visibilitychange", onVisibility);
+    lifecycleWatched = false;
+  };
+}
+
+// ─── 배너 ────────────────────────────────────────────────────────────────────
+
+/** 화면을 덮는 시트·전체 화면 수(FullScreenLayer·BodyLayer가 셈). 하나라도 있으면 배너를 숨긴다. */
+let layersOpen = 0;
+let bannerWanted = false;
+let bannerBottomMargin = 0;
+let typing = false;
+let bannerState: "none" | "shown" | "hidden" = "none";
+let bannerHeight = 0;
+let bannerListening = false;
+let bannerSync: Promise<void> = Promise.resolve();
+
+/** 배너가 차지하는 높이를 화면이 비워 둘 수 있게 CSS 변수로(AppHome의 내용 칸이 아래 여백으로 씀). */
+function publishBannerSpace(px: number) {
+  try {
+    document.documentElement.style.setProperty("--ad-banner-space", `${Math.max(0, Math.round(px))}px`);
+  } catch {
+    // 서버 렌더링 중에는 없음
+  }
+}
+
+export function noteLayerOpened(): () => void {
+  layersOpen += 1;
+  queueBannerSync();
+  return () => {
+    layersOpen = Math.max(0, layersOpen - 1);
+    queueBannerSync();
+  };
+}
+
+/**
+ * AppHome이 지금 화면이 배너를 둘 곳인지와 하단 탭 높이(배너를 그 바로 위에)를 알려 준다.
+ * 하단 탭 버튼과 바로 붙지 않게 몇 픽셀 띄운다(실수 클릭 방지).
+ */
+export function setBannerPlacement(wanted: boolean, bottomNavHeight: number) {
+  const margin = Math.round(bottomNavHeight) + 4;
+  const marginChanged = bannerState !== "none" && Math.abs(margin - bannerBottomMargin) > 2;
+  bannerWanted = wanted;
+  bannerBottomMargin = margin;
+  if (marginChanged) {
+    // 위치는 다시 띄워야 바뀐다.
+    bannerSync = bannerSync.then(async () => {
+      try {
+        const { AdMob } = await import("@capacitor-community/admob");
+        await AdMob.removeBanner();
+      } catch {
+        // 없던 배너
+      }
+      bannerState = "none";
+      publishBannerSpace(0);
+    });
+  }
+  queueBannerSync();
+}
+
+function onFocusIn(event: FocusEvent) {
+  const el = event.target as HTMLElement | null;
+  if (el && (el.tagName === "INPUT" || el.tagName === "TEXTAREA" || el.isContentEditable)) {
+    typing = true;
+    queueBannerSync();
+  }
+}
+
+function onFocusOut() {
+  // 다음 칸으로 옮겨 가는 사이에 깜빡이지 않게 잠깐 뒤에 본다.
+  window.setTimeout(() => {
+    const el = document.activeElement as HTMLElement | null;
+    typing = Boolean(el && (el.tagName === "INPUT" || el.tagName === "TEXTAREA" || el.isContentEditable));
+    queueBannerSync();
+  }, 150);
+}
+
+function queueBannerSync() {
+  if (!adsAvailable()) return;
+  bannerSync = bannerSync.then(syncBanner, syncBanner);
+}
+
+async function syncBanner(): Promise<void> {
+  try {
+    const cfg = config ?? (await loadAdsConfig());
+    const show = Boolean(cfg?.enabled && cfg.banner?.enabled && cfg.units.banner) && bannerWanted && layersOpen === 0 && !typing;
+    const { AdMob, BannerAdPluginEvents, BannerAdPosition, BannerAdSize } = await import("@capacitor-community/admob");
+    if (!bannerListening) {
+      bannerListening = true;
+      document.addEventListener("focusin", onFocusIn);
+      document.addEventListener("focusout", onFocusOut);
+      void AdMob.addListener(BannerAdPluginEvents.SizeChanged, (size) => {
+        bannerHeight = size.height;
+        if (bannerState === "shown") publishBannerSpace(bannerHeight);
+      });
+      void AdMob.addListener(BannerAdPluginEvents.FailedToLoad, () => {
+        bannerHeight = 0;
+        publishBannerSpace(0);
+      });
+    }
+    if (!show) {
+      if (bannerState === "shown") {
+        await AdMob.hideBanner();
+        bannerState = "hidden";
+      }
+      publishBannerSpace(0);
+      return;
+    }
+    if (!cfg || !(await startAds())) return;
+    if (bannerState === "none") {
+      await AdMob.showBanner({
+        adId: unitFor("banner", cfg),
+        adSize: BannerAdSize.ADAPTIVE_BANNER,
+        position: BannerAdPosition.BOTTOM_CENTER,
+        margin: bannerBottomMargin,
+        isTesting: TESTING,
+      });
+    } else if (bannerState === "hidden") {
+      await AdMob.resumeBanner();
+    }
+    bannerState = "shown";
+    publishBannerSpace(bannerHeight);
+  } catch {
+    publishBannerSpace(0);
+  }
 }

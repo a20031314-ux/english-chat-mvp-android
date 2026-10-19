@@ -1,7 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
-import { maybeShowInterstitial, warmUpAds } from "@/lib/ads";
+import { maybeShowAppOpen, maybeShowInterstitial, setAppOpenAllowedHere, setBannerPlacement, warmUpAds, watchAppLifecycle } from "@/lib/ads";
 import { ChatWindow } from "@/components/ChatWindow";
 import { LanguageSelector } from "@/components/LanguageSelector";
 import { readAppLocale } from "@/components/LearningBookPanel";
@@ -49,6 +49,10 @@ const noSubscribe = () => () => {};
 export type AppTab = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people" | "messages" | "talk";
 
 const TABS: AppTab[] = ["map", "chat", "roleplay", "video", "vocab", "rooms", "people", "messages", "talk"];
+/** 광고 배너를 두는 둘러보는 화면(lib/ads.ts). 채팅·통화·말하는 방·사람 화면에는 없음. */
+const BANNER_TABS: AppTab[] = ["map", "video", "vocab", "talk"];
+/** 앱 오프닝 광고를 띄우지 않는 화면(통화·말하는 방 — 소리가 이어지는 곳). */
+const NO_APP_OPEN_TABS: AppTab[] = ["roleplay", "rooms"];
 
 /**
  * 하단 탭(2026-10-20, `hub/drafts/one-list-tabs.md`): 대화 · 영상 · 사람 · 룸 · My. 묶음 스위치는 없다.
@@ -123,9 +127,32 @@ function AppHomeInner({
   // 광고(lib/ads.ts, 무료·안드로이드만): 첫 화면이 뜬 뒤 조용히 준비만 하고(열자마자 띄우지 않음),
   // 채팅을 몇 번 주고받은 뒤 채팅 화면을 떠날 때를 자연스러운 끝으로 본다.
   useEffect(() => {
+    // 앱 오프닝 광고는 설치 며칠 뒤부터·몇 시간에 한 번만(서버 값). 첫 화면이 그려진 뒤 시도한다.
+    const openTimer = window.setTimeout(() => void maybeShowAppOpen("launch"), 1_500);
     const timer = window.setTimeout(() => void warmUpAds(), 8_000);
-    return () => window.clearTimeout(timer);
+    const stopWatching = watchAppLifecycle();
+    return () => {
+      window.clearTimeout(openTimer);
+      window.clearTimeout(timer);
+      stopWatching();
+    };
   }, []);
+  // 통화·말하는 방에서는 앱 오프닝 광고를 띄우지 않는다.
+  useEffect(() => {
+    setAppOpenAllowedHere(!NO_APP_OPEN_TABS.includes(shownTab));
+  }, [shownTab]);
+  // 배너는 둘러보는 화면에만, 하단 탭 바로 위에.
+  const navRef = useRef<HTMLElement | null>(null);
+  useEffect(() => {
+    const wanted = BANNER_TABS.includes(shownTab);
+    const place = () => setBannerPlacement(wanted, navRef.current?.getBoundingClientRect().height ?? 0);
+    place();
+    const nav = navRef.current;
+    if (!nav || typeof ResizeObserver === "undefined") return;
+    const observer = new ResizeObserver(place);
+    observer.observe(nav);
+    return () => observer.disconnect();
+  }, [shownTab]);
   const previousTab = useRef(shownTab);
   useEffect(() => {
     if (previousTab.current === "chat" && shownTab !== "chat") void maybeShowInterstitial("chatLeave");
@@ -298,7 +325,11 @@ function AppHomeInner({
                 </button>
               </div>
             ) : null}
-            <div className="relative z-0 min-h-0 flex-1 overflow-hidden p-2 pb-0 sm:p-4 sm:pb-0">
+            <div
+              className="relative z-0 min-h-0 flex-1 overflow-hidden p-2 pb-0 sm:p-4 sm:pb-0"
+              // 광고 배너가 떠 있으면 그 높이만큼 비워 둔다(lib/ads.ts가 정하는 값, 없으면 0).
+              style={{ paddingBottom: "var(--ad-banner-space, 0px)" }}
+            >
               <div
                 className={
                   shownTab === "chat"
@@ -422,6 +453,7 @@ function AppHomeInner({
             ) : null}
 
             <nav
+              ref={navRef}
               data-app-chrome
               className="shrink-0 border-t border-white/10 bg-[#050505]/95 px-1 pb-[env(safe-area-inset-bottom)] pt-1 backdrop-blur-md"
               aria-label="Main"

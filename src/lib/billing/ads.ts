@@ -20,6 +20,8 @@ export const ADMOB_ANDROID_APP_ID = "ca-app-pub-8959652589063151~4979642668";
 export const ADMOB_UNITS = {
   interstitial: "ca-app-pub-8959652589063151/2248687484",
   rewarded: "ca-app-pub-8959652589063151/3513667692",
+  appOpen: "ca-app-pub-8959652589063151/5222510193",
+  banner: "ca-app-pub-8959652589063151/9312789287",
 } as const;
 
 /** SSV 콜백의 ad_unit은 "/" 뒤 숫자만 온다. */
@@ -38,6 +40,16 @@ export type AdsSettings = {
   interstitialMinGapSeconds: number;
   /** 채팅 화면을 나갈 때 전면 광고를 띄우려면 그 화면에서 이만큼은 보냈어야 한다. */
   interstitialAfterChats: number;
+  /** 앱을 열 때 광고(앱 오프닝 형식). */
+  appOpenEnabled: boolean;
+  /** 설치(이 기기에서 처음 연 날) 뒤 며칠이 지나야 앱 오프닝 광고를 띄우나 — 처음 쓰는 사람을 바로 놓치지 않게. */
+  appOpenAfterDays: number;
+  /** 앱 오프닝 광고 사이 최소 간격(시간). */
+  appOpenGapHours: number;
+  /** 다른 앱에 갔다 돌아올 때는 이만큼(분) 넘게 떠나 있었을 때만. */
+  appOpenAwayMinutes: number;
+  /** 둘러보는 화면(My·영상·대화 목록) 아래쪽 배너. 채팅·통화·말하는 방에는 없음. */
+  bannerEnabled: boolean;
 };
 
 /**
@@ -50,6 +62,11 @@ export const DEFAULT_ADS_SETTINGS: AdsSettings = {
   rewardedDailyMax: 3,
   interstitialMinGapSeconds: 300,
   interstitialAfterChats: 4,
+  appOpenEnabled: true,
+  appOpenAfterDays: 3,
+  appOpenGapHours: 4,
+  appOpenAwayMinutes: 30,
+  bannerEnabled: true,
 };
 
 function intFrom(value: string | undefined, fallback: number, min: number, max: number): number {
@@ -59,6 +76,12 @@ function intFrom(value: string | undefined, fallback: number, min: number, max: 
   return Math.min(max, Math.max(min, n));
 }
 
+function flagFrom(value: string | undefined, fallback: boolean): boolean {
+  const flag = value?.trim().toLowerCase();
+  if (flag === undefined || flag === "") return fallback;
+  return !(flag === "0" || flag === "false" || flag === "off");
+}
+
 /**
  * 광고 1회 수익 가정(한국, AdMob eCPM 대략값, 달러). 잰 값이 아니다 — AdMob 보고서의 실제 eCPM이 쌓이면 고친다.
  * 비용 표(scripts/plan-cost.mjs → hub/costs.md)가 읽는다.
@@ -66,19 +89,27 @@ function intFrom(value: string | undefined, fallback: number, min: number, max: 
 export const AD_REVENUE_USD = {
   rewarded: { low: 0.008, high: 0.02 },
   interstitial: { low: 0.003, high: 0.01 },
+  appOpen: { low: 0.002, high: 0.008 },
+  /** 배너는 노출 1,000번에 $0.3~1. 새로고침(약 60초)마다 한 번. */
+  banner: { low: 0.0003, high: 0.001 },
   source: "한국 AdMob eCPM 대략값(보상형 $8~20, 전면 $3~10), 가정 2026-10-18",
 } as const;
 
-/** 환경 변수(ADS_ENABLED, ADS_REWARD_CHATS, ADS_REWARDED_DAILY_MAX, ADS_INTERSTITIAL_GAP_SECONDS, ADS_INTERSTITIAL_AFTER_CHATS)가 있으면 그것으로. */
+/** 환경 변수(ADS_ENABLED, ADS_REWARD_CHATS, ADS_REWARDED_DAILY_MAX, ADS_INTERSTITIAL_GAP_SECONDS, ADS_INTERSTITIAL_AFTER_CHATS, ADS_APP_OPEN, ADS_APP_OPEN_AFTER_DAYS, ADS_APP_OPEN_GAP_HOURS, ADS_APP_OPEN_AWAY_MINUTES, ADS_BANNER)가 있으면 그것으로. */
 export function adsSettings(env: Record<string, string | undefined> = process.env): AdsSettings {
   const d = DEFAULT_ADS_SETTINGS;
   const flag = env.ADS_ENABLED?.trim().toLowerCase();
   return {
-    enabled: flag === undefined || flag === "" ? d.enabled : !(flag === "0" || flag === "false" || flag === "off"),
+    enabled: flagFrom(flag, d.enabled),
     rewardChats: intFrom(env.ADS_REWARD_CHATS, d.rewardChats, 1, 20),
     rewardedDailyMax: intFrom(env.ADS_REWARDED_DAILY_MAX, d.rewardedDailyMax, 0, 10),
     interstitialMinGapSeconds: intFrom(env.ADS_INTERSTITIAL_GAP_SECONDS, d.interstitialMinGapSeconds, 60, 3600),
     interstitialAfterChats: intFrom(env.ADS_INTERSTITIAL_AFTER_CHATS, d.interstitialAfterChats, 1, 50),
+    appOpenEnabled: flagFrom(env.ADS_APP_OPEN, d.appOpenEnabled),
+    appOpenAfterDays: intFrom(env.ADS_APP_OPEN_AFTER_DAYS, d.appOpenAfterDays, 0, 60),
+    appOpenGapHours: intFrom(env.ADS_APP_OPEN_GAP_HOURS, d.appOpenGapHours, 1, 48),
+    appOpenAwayMinutes: intFrom(env.ADS_APP_OPEN_AWAY_MINUTES, d.appOpenAwayMinutes, 5, 720),
+    bannerEnabled: flagFrom(env.ADS_BANNER, d.bannerEnabled),
   };
 }
 

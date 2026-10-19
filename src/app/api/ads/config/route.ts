@@ -27,6 +27,13 @@ export async function GET(request: NextRequest) {
     units: ADMOB_UNITS,
     interstitialMinGapSeconds: settings.interstitialMinGapSeconds,
     interstitialAfterChats: settings.interstitialAfterChats,
+    appOpen: {
+      enabled: enabled && settings.appOpenEnabled,
+      afterDays: settings.appOpenAfterDays,
+      gapHours: settings.appOpenGapHours,
+      awayMinutes: settings.appOpenAwayMinutes,
+    },
+    banner: { enabled: enabled && settings.bannerEnabled },
     rewarded: {
       enabled: enabled && rewardToken !== null && settings.rewardedDailyMax > 0,
       chats: settings.rewardChats,

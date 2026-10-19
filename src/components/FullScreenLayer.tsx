@@ -1,6 +1,7 @@
 "use client";
 
-import { useSyncExternalStore, type ReactNode } from "react";
+import { useEffect, useSyncExternalStore, type ReactNode } from "react";
+import { noteLayerOpened } from "@/lib/ads";
 import { createPortal } from "react-dom";
 
 /**
@@ -32,6 +33,8 @@ export function FullScreenLayer({ children }: { children: ReactNode }) {
     () => true,
     () => false,
   );
+  // 광고 배너(네이티브라 웹 화면 위에 뜸)가 이 층을 가리지 않게, 열려 있는 동안 숨긴다(lib/ads.ts).
+  useEffect(() => noteLayerOpened(), []);
   if (!onClient) return null;
   return createPortal(
     <div className="fixed inset-0 z-[70] flex flex-col bg-[#050505]">{children}</div>,
@@ -51,6 +54,7 @@ export function BodyLayer({ children }: { children: ReactNode }) {
     () => true,
     () => false,
   );
+  useEffect(() => noteLayerOpened(), []);
   if (!onClient) return null;
   return createPortal(children, document.body);
 }

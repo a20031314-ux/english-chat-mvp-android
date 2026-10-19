@@ -171,6 +171,8 @@ export function render() {
       return [
         `| 보상형 1회 = 채팅 ${s.rewardChats}번 | ${won1(rewardCost)} | ${won1(krw(rw.low))} ~ ${won1(krw(rw.high))} | ${won1(krw(rw.low) - rewardCost)} ~ ${won1(krw(rw.high) - rewardCost)} |`,
         `| 전면 1회(채팅 ${chatsPerInterstitial}번마다 기준, 무료 기본 채팅을 메움) | ${won1(intCost)} | ${won1(krw(it.low))} ~ ${won1(krw(it.high))} | ${won1(krw(it.low) - intCost)} ~ ${won1(krw(it.high) - intCost)} |`,
+        `| 앱 오프닝 1회(주는 것 없음) | 0원 | ${won1(krw(AD_REVENUE_USD.appOpen.low))} ~ ${won1(krw(AD_REVENUE_USD.appOpen.high))} | 같음 |`,
+        `| 배너 노출 1회(약 60초마다, 주는 것 없음) | 0원 | ${won1(krw(AD_REVENUE_USD.banner.low))} ~ ${won1(krw(AD_REVENUE_USD.banner.high))} | 같음 |`,
         `| 보상형 하루 ${s.rewardedDailyMax}번을 매일(한 달) | ${won(fullBonusMonth)} | ${won(krw(rw.low) * s.rewardedDailyMax * DAYS)} ~ ${won(krw(rw.high) * s.rewardedDailyMax * DAYS)} | ${won(krw(rw.low) * s.rewardedDailyMax * DAYS - fullBonusMonth)} ~ ${won(krw(rw.high) * s.rewardedDailyMax * DAYS - fullBonusMonth)} |`,
       ];
     })(),

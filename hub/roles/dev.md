@@ -24,6 +24,8 @@
 - **광고 (2026-10-20, `hub/drafts/ads-rewarded.md`):** 무료·안드로이드만, 구독자·iOS·웹 광고 없음. 서버(바로 반영): `billing/ads.ts`(단위 ID·처음 값·`ADS_*` 환경 변수), `/api/ads/config`(유료면 enabled=false, 보상 표 발급),
   `/api/ads/ssv`(Google 서명 + 우리 표 확인 → `grantAdReward`, 거래 한 번·하루 상한), 채팅 한도(chat·learner/ask·mission-check·entitlement)에 `chatBonusToday`. 앱(다음 빌드, **새 네이티브 플러그인 `@capacitor-community/admob` → PC `npm run pc:build`**):
   `lib/ads.ts` — 첫 화면 8초 뒤 준비만, 전면은 통화·팩 끝/미션 다음/채팅 4번 뒤 떠날 때·대화 끝(5분 간격, 미리 받은 것만), 한도 안내에 "광고 보고 채팅 5번 더". 동의(UMP) 먼저. iOS는 플러그인 제외(`capacitor.config.ts` `ios.includePlugins`).
+  더함(같은 날): 앱 오프닝(`…/5222510193`, 켤 때·30분 넘게 떠났다 돌아올 때, 설치 3일 뒤·4시간 간격, 통화·방·시트 중엔 안 띄움)과 배너(`…/9312789287`, My·영상·단어장·대화 목록 아래, 하단 탭 위,
+  `--ad-banner-space`만큼 내용 비움, `FullScreenLayer`·`BodyLayer`가 열려 있거나 입력 중이면 숨김). 켜고 끄기 `ADS_APP_OPEN`·`ADS_BANNER`.
   `NEXT_PUBLIC_ADS_TEST=1`로 빌드하면 Google 데모 광고. 남은 것: AdMob 콘솔에 SSV URL 등록(사람), 기기 확인(실제 광고·동의 창·보상 뒤 한도), 실제 eCPM이 쌓이면 `AD_REVENUE_USD`·처음 값 조정.
 - **사용법 창 하나 + 새로워진 점이 칸을 가리킴 (2026-10-20, 서버 바로 반영 / 창·자세히 버튼은 앱 다음 빌드):** 사용자 제안 "기능 설명을 한곳에, 탭에서는 그리로 가는 버튼만". 칸 id(`GUIDE_SECTION_IDS`)·기능별 묶음(`GUIDE_CHAPTERS`, `/api/guide?chapters=1`), `GuideSheet` 묶음 보기·"이 화면으로 가기"·"새로", 새로워진 점 `guide` → 칸의 제목·글 + "자세히"(`openGuide`), `/api/whats-new`도 칸 글.
   경로 문장 6개를 14개 언어로 새로 씀(통화 탭 2, 사람·메시지·통화 → 사람 찾기·친구 초대·메시지와 통화, 단체방, 게시판 — Claude가 씀, 원어민 확인 권장). 테스트 `guide/chapters.test.ts`(칸 수·묶음·노트 id·경로 문구 금지).

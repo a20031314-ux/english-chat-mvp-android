@@ -102,7 +102,7 @@ const en: Section[] = [
   {
     title: "Advertising",
     body: [
-      "The Android app shows ads to people without a subscription: a full-screen ad at the natural end of an activity (for example when a call or a mission ends), and an optional ad you can choose to watch for more chats. Subscribers see no ads, and the iOS app and the web show none.",
+      "The Android app shows ads to people without a subscription: a full-screen ad at the natural end of an activity (for example when a call or a mission ends) or when you open the app, a banner at the bottom of some screens, and an optional ad you can choose to watch for more chats. Subscribers see no ads, and the iOS app and the web show none.",
       "Ads are provided by Google AdMob. To show and measure ads, the Google Mobile Ads SDK on your device may collect your device's advertising ID, IP address, device and app information, and how you interact with ads, under Google's policies (https://policies.google.com/technologies/ads). We do not send AdMob your conversations, learning records, email or account details.",
       "When you watch an ad for more chats, AdMob tells our server that the ad was completed, together with a code our server issued for your app so the chats go to the right person. We keep only a count of those rewards per day.",
       "Where the law requires consent (for example in the European Economic Area and the United Kingdom), the app asks before personalised ads are shown. You can reset or turn off your advertising ID in your device settings (Settings → Google → Ads, or Settings → Privacy → Ads).",
@@ -231,7 +231,7 @@ const ko: Section[] = [
   {
     title: "광고",
     body: [
-      "안드로이드 앱은 구독하지 않은 이용자에게 광고를 표시합니다. 활동이 자연스럽게 끝나는 때(예: 통화나 미션이 끝났을 때) 전체 화면 광고가 나올 수 있고, 채팅을 더 쓰고 싶을 때 직접 골라 보는 광고가 있습니다. 구독자, iOS 앱, 웹에는 광고가 없습니다.",
+      "안드로이드 앱은 구독하지 않은 이용자에게 광고를 표시합니다. 활동이 자연스럽게 끝나는 때(예: 통화나 미션이 끝났을 때)나 앱을 열 때 전체 화면 광고가 나올 수 있고, 일부 화면 아래쪽에 배너가 있으며, 채팅을 더 쓰고 싶을 때 직접 골라 보는 광고가 있습니다. 구독자, iOS 앱, 웹에는 광고가 없습니다.",
       "광고는 Google AdMob이 제공합니다. 광고 표시와 측정을 위해 기기의 Google 모바일 광고 SDK가 Google 정책(https://policies.google.com/technologies/ads)에 따라 광고 ID, IP 주소, 기기·앱 정보, 광고 반응을 수집할 수 있습니다. 대화 내용, 학습 기록, 이메일, 계정 정보는 AdMob에 보내지 않습니다.",
       "광고를 보고 채팅을 더 받으면, AdMob이 광고를 끝까지 봤다는 사실과 우리 서버가 앱에 발급한 확인 코드를 서버로 보내 올바른 사람에게 채팅이 늘어나게 합니다. 서버는 하루 보상 횟수만 남깁니다.",
       "법이 동의를 요구하는 지역(예: 유럽경제지역, 영국)에서는 맞춤 광고 전에 동의를 묻습니다. 광고 ID는 기기 설정(설정 → Google → 광고, 또는 설정 → 개인정보 보호 → 광고)에서 재설정하거나 끌 수 있습니다.",

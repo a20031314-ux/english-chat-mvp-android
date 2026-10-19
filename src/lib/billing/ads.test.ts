@@ -33,6 +33,10 @@ test("환경 변수로 조정, 이상한 값은 기본값·범위 안으로", ()
   assert.equal(adsSettings({ ADS_REWARD_CHATS: "abc" }).rewardChats, DEFAULT_ADS_SETTINGS.rewardChats);
   assert.equal(adsSettings({ ADS_REWARDED_DAILY_MAX: "500" }).rewardedDailyMax, 10);
   assert.equal(adsSettings({ ADS_INTERSTITIAL_GAP_SECONDS: "5" }).interstitialMinGapSeconds, 60);
+  assert.equal(adsSettings({ ADS_APP_OPEN: "0" }).appOpenEnabled, false);
+  assert.equal(adsSettings({ ADS_BANNER: "off" }).bannerEnabled, false);
+  assert.equal(adsSettings({ ADS_APP_OPEN_AFTER_DAYS: "7" }).appOpenAfterDays, 7);
+  assert.equal(adsSettings({ ADS_APP_OPEN_GAP_HOURS: "0" }).appOpenGapHours, 1);
 });
 
 test("SSV 콜백의 ad_unit 숫자", () => {
