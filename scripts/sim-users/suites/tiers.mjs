@@ -201,7 +201,21 @@ async function runOverlap({ persona, userId, call, bank, step }) {
     }
     const askText = `B? ${bank.askMeaning[persona.ui]}`;
     jobs.push(acc.groups(B, "send", { groupId, text: askText, quoteSeq: firstSeq, ask: true }));
+    // C는 보는 중: 다시 열지 않고 이어 받기(poll)만 300ms마다 — 받은 번호 다음부터 물을 때 동시에 들어온 줄이 빠지는지(2026-10-20 고침 확인).
+    const watched = new Set();
+    let watchSince = 0;
+    let watching = true;
+    const watcher = (async () => {
+      while (watching) {
+        const r = await acc.groups(C, "poll", { groupId, since: watchSince });
+        for (const m of r.body?.messages ?? []) { watched.add(m.text); watchSince = Math.max(watchSince, m.seq); }
+        await new Promise((resolve) => setTimeout(resolve, 300));
+      }
+    })();
     const results = await Promise.all(jobs);
+    await new Promise((resolve) => setTimeout(resolve, 1500));
+    watching = false;
+    await watcher;
     const ms = Date.now() - started;
     const issues = [...joinIssues, ...results.flatMap((r) => checkHttp(P, r))];
     // 보내기 자체가 실패한 줄(앞단 막힘 등)은 '사라짐'으로 치지 않는다 — 그건 위 HTTP 오류로 따로 남는다.
@@ -228,6 +242,10 @@ async function runOverlap({ persona, userId, call, bank, step }) {
     if (new Set(orders).size > 1) issues.push(issue("error", "overlap_order", "세 사람이 보는 줄 순서가 서로 다름"));
     const ask = (views[0].body?.messages ?? []).find((m) => m.text === askText);
     if (askSent && (!ask?.quote || ask.quote.text !== `A0 ${L.ok[0]}`)) issues.push(issue("error", "overlap_quote", `끼어들어 집은 인용이 다름: ${ask?.quote?.text ?? "없음"}`));
+    const sentOk = [...sent, askText].filter((_, i) => results[i]?.status === 200);
+    const missedLive = sentOk.filter((t) => !watched.has(t));
+    if (missedLive.length) issues.push(issue("error", "overlap_live_miss", `보던 C가 이어 받기로 ${missedLive.length}줄을 못 받음`, { sample: missedLive[0] }));
+    measure.liveMissed = missedLive.length;
     measure.lines = texts(views[0]).length;
     measure.ms = ms;
     measure.ok = !issues.some((i) => i.kind.startsWith("overlap_"));
