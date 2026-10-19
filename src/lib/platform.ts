@@ -64,6 +64,46 @@ export function adsAvailable(): boolean {
   return appPlatform() === "android";
 }
 
+/**
+ * 다른 스토어에서 이미 구독 중인지(사용자 결정 2026-10-20: 안드로이드 구독자는 아이폰에서 결제를 막는다,
+ * 거꾸로도 같게). RevenueCat 권한의 `store`("PLAY_STORE"·"APP_STORE"…)를 보고, 이 기기와 다른 스토어면
+ * 그 스토어 이름을 돌려준다. 같은 계정으로 로그인해야 RevenueCat이 다른 스토어 구독을 알려 준다.
+ * 프로모션·서버가 준 기간(초대 보상 등)은 스토어가 아니라 막지 않는다.
+ */
+export function otherStoreName(store: string | null | undefined, platform: AppPlatform = appPlatform()): string | null {
+  if (!store) return null;
+  const apple = store === "APP_STORE" || store === "MAC_APP_STORE";
+  if (platform === "ios" && store === "PLAY_STORE") return "Google Play";
+  if (platform === "android" && apple) return "App Store";
+  return null;
+}
+
+/** 개인정보처리방침(웹 도메인). */
+export const PRIVACY_POLICY_URL = "https://www.languagebank.net/privacy";
+
+/** 구독 약관 링크. iOS는 애플 표준 이용약관(EULA), 그 밖은 없음(Play는 요구하지 않음). */
+export function subscriptionTermsUrl(platform: AppPlatform = appPlatform()): string | null {
+  return platform === "ios" ? "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" : null;
+}
+
+/** 구독을 해지·관리하는 스토어 이름(자동 갱신 안내 문구에 들어감). */
+export function subscriptionStoreName(platform: AppPlatform = appPlatform()): string {
+  return platform === "ios" ? "App Store" : "Google Play";
+}
+
+/**
+ * AI 데이터 동의(애플 심사 5.1.2(i), 2025-11): 채팅·통화·사진을 OpenAI로 보내기 전에 앱 안에서 밝히고 동의를 받는다.
+ * iOS만(안드로이드·웹은 처리방침과 통화 안내로 이미 안내). 동의는 이 기기에 저장(`AiConsentGate.tsx`).
+ */
+export function aiConsentRequired(platform: AppPlatform = appPlatform()): boolean {
+  return platform === "ios";
+}
+
+/** 사용자가 붙여 넣은 YouTube 링크로 영상 학습을 가져오는 입구. iOS 1차는 이달의 영상만(심사 5.2.2·5.2.3). */
+export function videoImportAvailable(platform: AppPlatform = appPlatform()): boolean {
+  return platform !== "ios";
+}
+
 /** 앱 바깥(스토어)으로 보내는 업데이트 링크. */
 const PLAY_LISTING = "https://play.google.com/store/apps/details?id=com.yourname.englishchat";
 

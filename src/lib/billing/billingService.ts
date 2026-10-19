@@ -1,4 +1,5 @@
 import { Capacitor } from "@capacitor/core";
+import { otherStoreName } from "@/lib/platform";
 import {
   PRODUCT_CATEGORY,
   Purchases,
@@ -617,18 +618,28 @@ export async function fetchPlanOffers(): Promise<PlanOffer[]> {
   }
 }
 
-/** The plan this install is subscribed to in the store right now, as Play's product id, for a change of plan. */
-async function currentPlanProduct(): Promise<string | null> {
+/**
+ * The plan this account is subscribed to right now: the product id (as Play's,
+ * for a change of plan) and the store it was bought in. RevenueCat points the
+ * entitlement at this device's store when there is one in both.
+ */
+async function currentPlan(): Promise<{ product: string | null; store: string | null }> {
   const plugin = getPurchasesPlugin();
-  if (!plugin) return null;
+  if (!plugin) return { product: null, store: null };
   try {
     const { customerInfo } = await withBillingTimeout("getCustomerInfo", plugin.getCustomerInfo(), BILLING_FETCH_TIMEOUT_MS);
     const active = customerInfo.entitlements.active[PREMIUM_ENTITLEMENT_ID];
-    return active?.productIdentifier ? active.productIdentifier.split(":")[0]! : null;
+    return {
+      product: active?.productIdentifier ? active.productIdentifier.split(":")[0]! : null,
+      store: active?.store ?? null,
+    };
   } catch {
-    return null;
+    return { product: null, store: null };
   }
 }
+
+/** A purchase refused because the subscription lives in the other store; the message carries that store's name. */
+export const OTHER_STORE_PREFIX = "OTHER_STORE:";
 
 function isPurchaseCancelledError(error: unknown): boolean {
   if (!error || typeof error !== "object") {
@@ -672,7 +683,13 @@ export async function purchaseMonthlyPremium(
 
   // Moving between plans replaces the subscription in Play rather than adding
   // a second one beside it, which would bill both.
-  const oldProduct = await currentPlanProduct();
+  const { product: oldProduct, store: oldStore } = await currentPlan();
+  // 다른 스토어(아이폰에서 Play, 안드로이드에서 App Store) 구독이 살아 있으면 여기서 사지 않는다 — 두 스토어가
+  // 따로 청구해 이중 결제가 된다. 바꾸거나 해지하는 건 처음 산 스토어에서(platform.ts otherStoreName).
+  const otherStore = otherStoreName(oldStore);
+  if (otherStore) {
+    return { status: "error", message: `${OTHER_STORE_PREFIX}${otherStore}` };
+  }
   const wantedProduct = PLAN_PRODUCT_IDS[tier];
   if (oldProduct === wantedProduct) {
     return { status: "success", isPremium: true };

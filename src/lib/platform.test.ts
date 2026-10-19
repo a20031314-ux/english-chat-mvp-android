@@ -1,7 +1,16 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import test from "node:test";
-import { appPlatform, iosStoreWording, socialFeaturesEnabled, STORE_WORDING_KEYS } from "./platform.ts";
+import {
+  aiConsentRequired,
+  appPlatform,
+  iosStoreWording,
+  otherStoreName,
+  socialFeaturesEnabled,
+  STORE_WORDING_KEYS,
+  subscriptionTermsUrl,
+  videoImportAvailable,
+} from "./platform.ts";
 
 const overlays = JSON.parse(readFileSync(new URL("./locales/overlays.json", import.meta.url), "utf8"));
 const generated = JSON.parse(readFileSync(new URL("./locales/generated.json", import.meta.url), "utf8"));
@@ -41,4 +50,22 @@ test("iOS 문구: 한국어·일본어·러시아어·아랍어 표기", () => {
 test("플랫폼: 앱 밖(노드·웹)에서는 웹, 방·메시지는 켜짐", () => {
   assert.equal(appPlatform(), "web");
   assert.equal(socialFeaturesEnabled(), true);
+});
+
+test("다른 스토어 구독: 아이폰에서 Play 구독, 안드로이드에서 App Store 구독만 막는다", () => {
+  assert.equal(otherStoreName("PLAY_STORE", "ios"), "Google Play");
+  assert.equal(otherStoreName("APP_STORE", "android"), "App Store");
+  assert.equal(otherStoreName("APP_STORE", "ios"), null);
+  assert.equal(otherStoreName("PLAY_STORE", "android"), null);
+  assert.equal(otherStoreName("PROMOTIONAL", "ios"), null);
+  assert.equal(otherStoreName(undefined, "ios"), null);
+});
+
+test("iOS 심사 항목: 약관 링크·AI 동의·영상 가져오기", () => {
+  assert.match(subscriptionTermsUrl("ios") ?? "", /^https:\/\/www\.apple\.com\//);
+  assert.equal(subscriptionTermsUrl("android"), null);
+  assert.equal(aiConsentRequired("ios"), true);
+  assert.equal(aiConsentRequired("android"), false);
+  assert.equal(videoImportAvailable("ios"), false);
+  assert.equal(videoImportAvailable("android"), true);
 });

@@ -46,6 +46,18 @@ const generatedChatOverlay = {
 } as const;
 
 const generatedBillingOverlay = {
+  paywallOtherStore:
+    "This account already has a subscription through {store}. You can change or cancel it in {store}.",
+  paywallAutoRenew:
+    "Subscriptions renew automatically every month. You’ll be charged the same amount unless you cancel in your {store} account settings at least 24 hours before renewal.",
+  paywallTermsLink:
+    "Terms of Use (EULA)",
+  aiConsentTitle:
+    "Your AI tutor and your data",
+  aiConsentBody:
+    "To write replies, corrections and calls, the text and photos you send in chat and your voice in calls are sent to OpenAI (United States) for processing. OpenAI does not use this data to train its models. You need to agree to use the AI tutor.",
+  aiConsentAgree:
+    "Agree and start",
   videoLearnQuotaReached:
     "You’ve used this month’s import points. Library and saved videos can still be replayed.",
   videoLearnTooLong:
@@ -1834,6 +1846,18 @@ export const copy = {
     paywallNoProduct:
       "결제 상품을 불러오지 못했어요. Play Console·RevenueCat 설정을 확인해 주세요.",
     paywallCancelled: "결제가 취소됐어요",
+    paywallOtherStore:
+      "이 계정은 {store}에서 이미 구독 중이에요. 구독 변경·해지는 {store}에서 할 수 있어요.",
+    paywallAutoRenew:
+      "구독은 매월 자동으로 갱신돼요. 갱신 24시간 전까지 {store} 계정 설정에서 해지하지 않으면 같은 금액이 청구돼요.",
+    paywallTermsLink:
+      "이용약관(EULA)",
+    aiConsentTitle:
+      "AI 튜터와 내 데이터",
+    aiConsentBody:
+      "답장·교정·통화를 만들기 위해, 채팅에 쓴 글과 보낸 사진, 통화에서 말한 목소리를 OpenAI(미국)로 보내 처리해요. OpenAI는 이 데이터를 모델 학습에 쓰지 않아요. 동의해야 AI 튜터를 쓸 수 있어요.",
+    aiConsentAgree:
+      "동의하고 시작",
   },
   en: {
     appTitle: "{targetLanguage} correction chat",
@@ -3038,6 +3062,18 @@ export const copy = {
     paywallNoProduct:
       "We couldn't load the subscription product. Check Play Console and RevenueCat setup.",
     paywallCancelled: "Purchase cancelled",
+    paywallOtherStore:
+      "This account already has a subscription through {store}. You can change or cancel it in {store}.",
+    paywallAutoRenew:
+      "Subscriptions renew automatically every month. You’ll be charged the same amount unless you cancel in your {store} account settings at least 24 hours before renewal.",
+    paywallTermsLink:
+      "Terms of Use (EULA)",
+    aiConsentTitle:
+      "Your AI tutor and your data",
+    aiConsentBody:
+      "To write replies, corrections and calls, the text and photos you send in chat and your voice in calls are sent to OpenAI (United States) for processing. OpenAI does not use this data to train its models. You need to agree to use the AI tutor.",
+    aiConsentAgree:
+      "Agree and start",
   },
   es: {
     appTitle: "Chat de corrección de {targetLanguage}",
@@ -4245,6 +4281,18 @@ export const copy = {
     paywallNoProduct:
       "No se pudo cargar el producto. Revisa Play Console y RevenueCat.",
     paywallCancelled: "Compra cancelada",
+    paywallOtherStore:
+      "Esta cuenta ya tiene una suscripción en {store}. Puedes cambiarla o cancelarla en {store}.",
+    paywallAutoRenew:
+      "La suscripción se renueva automáticamente cada mes. Se te cobrará el mismo importe salvo que la canceles en los ajustes de tu cuenta de {store} al menos 24 horas antes de la renovación.",
+    paywallTermsLink:
+      "Términos de uso (EULA)",
+    aiConsentTitle:
+      "Tu tutor de IA y tus datos",
+    aiConsentBody:
+      "Para escribir respuestas, correcciones y llamadas, el texto y las fotos que envías en el chat y tu voz en las llamadas se envían a OpenAI (Estados Unidos) para procesarlos. OpenAI no usa estos datos para entrenar sus modelos. Debes aceptar para usar el tutor de IA.",
+    aiConsentAgree:
+      "Aceptar y empezar",
   },
   ja: { ...generatedLocales.ja, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...generatedMeantOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.ja>>>).ja },
   zh: { ...generatedLocales.zh, ...generatedBillingOverlay, ...generatedRoleplayOverlay, ...generatedChatOverlay, ...generatedAskOverlay, ...generatedMapOverlay, ...generatedWhatsNewOverlay, ...generatedMissionOverlay, ...generatedItemOverlay, ...generatedMeantOverlay, ...(overlayLocales as Partial<Record<string, Partial<typeof generatedBillingOverlay & typeof generatedRoleplayOverlay & typeof generatedChatOverlay & typeof generatedLocales.zh>>>).zh },

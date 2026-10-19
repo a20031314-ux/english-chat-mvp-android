@@ -12,6 +12,7 @@ export function VideoUrlInput({
   onSubmit,
   library,
   children,
+  allowImport = true,
 }: {
   ui: UICopy;
   value: string;
@@ -21,6 +22,8 @@ export function VideoUrlInput({
   onSubmit: () => void;
   library?: ReactNode;
   children?: ReactNode;
+  /** false면 링크 붙여 가져오기(입력창·설명·차감 안내)를 빼고 라이브러리만(iOS 1차, platform.ts videoImportAvailable). */
+  allowImport?: boolean;
 }) {
   const handleSubmit = (event: FormEvent) => {
     event.preventDefault();
@@ -32,15 +35,18 @@ export function VideoUrlInput({
       <p className="text-center text-lg font-semibold text-white">
         {ui.videoLearnHeadline}
       </p>
-      <p className="mt-2 text-center text-sm leading-relaxed text-slate-400">
-        {ui.videoLearnBody}
-      </p>
-      {hint ? (
+      {allowImport ? (
+        <p className="mt-2 text-center text-sm leading-relaxed text-slate-400">
+          {ui.videoLearnBody}
+        </p>
+      ) : null}
+      {allowImport && hint ? (
         <p className="mt-2 text-center text-xs leading-relaxed text-slate-500">
           {hint}
         </p>
       ) : null}
       {library}
+      {allowImport ? (
       <form onSubmit={handleSubmit} className="mt-6 flex flex-col gap-3">
         <input
           value={value}
@@ -58,6 +64,7 @@ export function VideoUrlInput({
           {ui.videoLearnLoad}
         </button>
       </form>
+      ) : null}
       {error ? (
         <p className="mt-3 text-center text-sm text-rose-300">{error}</p>
       ) : null}

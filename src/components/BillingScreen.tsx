@@ -1,5 +1,6 @@
 "use client";
 
+import { PRIVACY_POLICY_URL, subscriptionStoreName, subscriptionTermsUrl } from "@/lib/platform";
 import {
   createContext,
   useCallback,
@@ -13,6 +14,7 @@ import { usePremium } from "@/contexts/PremiumContext";
 import { apiUrl } from "@/lib/apiBase";
 import {
   isLocalPlanDebugEnabled,
+  OTHER_STORE_PREFIX,
   entitlementHeaders,
   fetchPlanFromServer,
   fetchPlanOffers,
@@ -264,6 +266,9 @@ export function BillingScreen({
     if (!message) return ui.paywallPurchaseFailed;
     if (message.startsWith("BILLING_TIMEOUT:")) return ui.paywallPurchaseTimeout;
     if (message === "NO_PACKAGE") return ui.paywallNoProduct;
+    if (message.startsWith(OTHER_STORE_PREFIX)) {
+      return ui.paywallOtherStore.replaceAll("{store}", message.slice(OTHER_STORE_PREFIX.length));
+    }
     return ui.paywallPurchaseFailed;
   };
 
@@ -419,6 +424,20 @@ export function BillingScreen({
             })}
           </div>
           <p className="mt-3 text-[12px] leading-relaxed text-slate-500">{ui.planFootnote}</p>
+          {/* 구독 안내(애플 심사 3.1.2): 자동 갱신·해지 방법, 이용약관(iOS는 애플 표준 EULA)·개인정보처리방침. */}
+          <p className="mt-2 text-meta leading-relaxed text-slate-500">
+            {ui.paywallAutoRenew.replace("{store}", subscriptionStoreName())}
+          </p>
+          <p className="mt-1 flex flex-wrap gap-x-3 text-meta text-slate-400">
+            {subscriptionTermsUrl() ? (
+              <a href={subscriptionTermsUrl()!} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">
+                {ui.paywallTermsLink}
+              </a>
+            ) : null}
+            <a href={PRIVACY_POLICY_URL} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4">
+              {ui.roleplayDataNoticeMore}
+            </a>
+          </p>
 
           {isLocalPlanDebugEnabled() ? (
             <div className="mt-4 flex overflow-hidden rounded-full border border-white/10 text-[11px] font-medium">

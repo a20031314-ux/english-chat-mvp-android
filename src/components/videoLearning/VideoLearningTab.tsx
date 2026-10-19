@@ -1,6 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { videoImportAvailable } from "@/lib/platform";
+
+const noSubscribe = () => () => {};
 import { CurrentSubtitleCard } from "@/components/videoLearning/CurrentSubtitleCard";
 import { SavedVideoSessions } from "@/components/videoLearning/SavedVideoSessions";
 import { EnglishSentenceList } from "@/components/videoLearning/StudyMaterialsList";
@@ -106,6 +109,8 @@ export function VideoLearningTab({
   // Every library video is premium's (billing/plans.ts); 3,900 and 5,500 won
   // keep the trial, and import with points they bought.
   const libraryOpen = tier === "premium";
+  // iOS 1차는 링크 가져오기·영상 찾기 없이 이달의 라이브러리만(platform.ts videoImportAvailable).
+  const importOn = useSyncExternalStore(noSubscribe, videoImportAvailable, () => true);
   const { openBilling } = useBillingUi();
   const [quotaVersion, setQuotaVersion] = useState(0);
   const targetLanguage =
@@ -788,6 +793,7 @@ export function VideoLearningTab({
           ) : null}
           <VideoUrlInput
             ui={ui}
+            allowImport={importOn}
             value={draftUrl}
             error={urlError}
             hint={
@@ -828,7 +834,7 @@ export function VideoLearningTab({
               />
             }
           >
-            {isPremium ? (
+            {isPremium && importOn ? (
             <ContentDiscoveryPanel
               ui={ui}
               locale={locale}

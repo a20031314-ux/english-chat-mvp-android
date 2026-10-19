@@ -547,7 +547,13 @@
     "adRewardDone": "チャットが{n}回増えました。",
     "adRewardFailed": "今は広告を読み込めませんでした。少ししてからもう一度お試しください。",
     "aiHelpLimit": "今日のAIヘルプを使い切りました。明日また使えます。人との会話では相手に「どういう意味？」と聞けます。",
-    "packWeeklyLocked": "無料では今日のパックを週{n}回まで使えます。次のパック：{day}"
+    "packWeeklyLocked": "無料では今日のパックを週{n}回まで使えます。次のパック：{day}",
+    "paywallOtherStore": "このアカウントはすでに{store}で購読中です。変更・解約は{store}で行えます。",
+    "paywallAutoRenew": "購読は毎月自動で更新されます。更新の24時間前までに{store}のアカウント設定で解約しない限り、同じ金額が請求されます。",
+    "paywallTermsLink": "利用規約（EULA）",
+    "aiConsentTitle": "AIチューターとあなたのデータ",
+    "aiConsentBody": "返信・添削・通話をつくるため、チャットで書いた文章と送った写真、通話での音声をOpenAI（米国）に送って処理します。OpenAIはこのデータをモデルの学習に使いません。AIチューターを使うには同意が必要です。",
+    "aiConsentAgree": "同意して始める"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1097,7 +1103,13 @@
     "adRewardDone": "聊天次数增加了 {n} 次。",
     "adRewardFailed": "现在无法加载广告,请稍后再试。",
     "aiHelpLimit": "今天的 AI 帮助已用完,明天会恢复。和别人聊天时,可以直接问对方“这是什么意思？”",
-    "packWeeklyLocked": "免费账户每周可做 {n} 次今日练习包。下一个：{day}"
+    "packWeeklyLocked": "免费账户每周可做 {n} 次今日练习包。下一个：{day}",
+    "paywallOtherStore": "此账号已在 {store} 订阅。可以在 {store} 更改或取消订阅。",
+    "paywallAutoRenew": "订阅每月自动续订。除非在续订前至少 24 小时在 {store} 账户设置中取消，否则将收取相同金额。",
+    "paywallTermsLink": "使用条款（EULA）",
+    "aiConsentTitle": "AI 导师与你的数据",
+    "aiConsentBody": "为了生成回复、纠错和通话，你在聊天中写的文字、发送的照片以及通话中的语音会发送给 OpenAI（美国）处理。OpenAI 不会用这些数据训练模型。同意后才能使用 AI 导师。",
+    "aiConsentAgree": "同意并开始"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1649,7 +1661,13 @@
     "adRewardDone": "Bạn có thêm {n} lượt chat.",
     "adRewardFailed": "Hiện không tải được quảng cáo. Hãy thử lại sau ít phút.",
     "aiHelpLimit": "Bạn đã dùng hết trợ giúp AI hôm nay. Ngày mai sẽ được nạp lại. Khi trò chuyện với người khác, bạn có thể hỏi họ \"Câu này nghĩa là gì?\"",
-    "packWeeklyLocked": "Tài khoản miễn phí được làm gói hôm nay {n} lần mỗi tuần. Gói tiếp theo: {day}"
+    "packWeeklyLocked": "Tài khoản miễn phí được làm gói hôm nay {n} lần mỗi tuần. Gói tiếp theo: {day}",
+    "paywallOtherStore": "Tài khoản này đã đăng ký qua {store}. Bạn có thể thay đổi hoặc hủy trong {store}.",
+    "paywallAutoRenew": "Gói đăng ký tự động gia hạn mỗi tháng. Bạn sẽ bị tính cùng số tiền trừ khi hủy trong cài đặt tài khoản {store} ít nhất 24 giờ trước khi gia hạn.",
+    "paywallTermsLink": "Điều khoản sử dụng (EULA)",
+    "aiConsentTitle": "Gia sư AI và dữ liệu của bạn",
+    "aiConsentBody": "Để tạo câu trả lời, sửa lỗi và cuộc gọi, văn bản và ảnh bạn gửi trong trò chuyện cùng giọng nói trong cuộc gọi sẽ được gửi đến OpenAI (Hoa Kỳ) để xử lý. OpenAI không dùng dữ liệu này để huấn luyện mô hình. Bạn cần đồng ý để dùng gia sư AI.",
+    "aiConsentAgree": "Đồng ý và bắt đầu"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2206,7 +2224,13 @@
     "adRewardDone": "Vous avez {n} chats de plus.",
     "adRewardFailed": "Impossible de charger une pub pour le moment. Réessayez dans un instant.",
     "aiHelpLimit": "Vous avez utilisé l’aide IA du jour. Elle se recharge demain. Dans les discussions avec des personnes, vous pouvez leur demander « Ça veut dire quoi ? »",
-    "packWeeklyLocked": "Le compte gratuit donne le pack du jour {n} fois par semaine. Prochain pack : {day}"
+    "packWeeklyLocked": "Le compte gratuit donne le pack du jour {n} fois par semaine. Prochain pack : {day}",
+    "paywallOtherStore": "Ce compte a déjà un abonnement via {store}. Vous pouvez le modifier ou l’annuler dans {store}.",
+    "paywallAutoRenew": "L’abonnement se renouvelle automatiquement chaque mois. Le même montant sera débité sauf si vous l’annulez dans les réglages de votre compte {store} au moins 24 heures avant le renouvellement.",
+    "paywallTermsLink": "Conditions d’utilisation (CLUF)",
+    "aiConsentTitle": "Votre tuteur IA et vos données",
+    "aiConsentBody": "Pour rédiger les réponses, les corrections et les appels, le texte et les photos que vous envoyez dans le chat ainsi que votre voix pendant les appels sont envoyés à OpenAI (États-Unis) pour être traités. OpenAI n’utilise pas ces données pour entraîner ses modèles. Vous devez accepter pour utiliser le tuteur IA.",
+    "aiConsentAgree": "Accepter et commencer"
   },
   "it": {
     "archive": "Report",
@@ -2954,7 +2978,13 @@
     "adRewardDone": "Hai {n} chat in più.",
     "adRewardFailed": "Impossibile caricare un annuncio ora. Riprova tra poco.",
     "aiHelpLimit": "Hai usato l’aiuto IA di oggi. Si ricarica domani. Nelle chat con le persone puoi chiedere loro \"Cosa significa?\"",
-    "packWeeklyLocked": "Con l’account gratuito hai il pacchetto del giorno {n} volte a settimana. Prossimo: {day}"
+    "packWeeklyLocked": "Con l’account gratuito hai il pacchetto del giorno {n} volte a settimana. Prossimo: {day}",
+    "paywallOtherStore": "Questo account ha già un abbonamento tramite {store}. Puoi modificarlo o annullarlo in {store}.",
+    "paywallAutoRenew": "L’abbonamento si rinnova automaticamente ogni mese. Ti verrà addebitato lo stesso importo a meno che tu non lo annulli nelle impostazioni dell’account {store} almeno 24 ore prima del rinnovo.",
+    "paywallTermsLink": "Termini di utilizzo (EULA)",
+    "aiConsentTitle": "Il tuo tutor IA e i tuoi dati",
+    "aiConsentBody": "Per scrivere risposte, correzioni e chiamate, il testo e le foto che invii in chat e la tua voce nelle chiamate vengono inviati a OpenAI (Stati Uniti) per l’elaborazione. OpenAI non usa questi dati per addestrare i suoi modelli. Per usare il tutor IA devi accettare.",
+    "aiConsentAgree": "Accetta e inizia"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3514,7 +3544,13 @@
     "adRewardDone": "Você ganhou mais {n} chats.",
     "adRewardFailed": "Não foi possível carregar um anúncio agora. Tente de novo daqui a pouco.",
     "aiHelpLimit": "Você usou a ajuda de IA de hoje. Ela recarrega amanhã. Em conversas com pessoas, você pode perguntar \"O que isso significa?\"",
-    "packWeeklyLocked": "A conta grátis tem o pacote do dia {n} vezes por semana. Próximo pacote: {day}"
+    "packWeeklyLocked": "A conta grátis tem o pacote do dia {n} vezes por semana. Próximo pacote: {day}",
+    "paywallOtherStore": "Esta conta já tem uma assinatura pelo {store}. Você pode alterá-la ou cancelá-la no {store}.",
+    "paywallAutoRenew": "A assinatura é renovada automaticamente todo mês. O mesmo valor será cobrado, a menos que você cancele nas configurações da sua conta {store} pelo menos 24 horas antes da renovação.",
+    "paywallTermsLink": "Termos de uso (EULA)",
+    "aiConsentTitle": "Seu tutor de IA e seus dados",
+    "aiConsentBody": "Para escrever respostas, correções e chamadas, o texto e as fotos que você envia no chat e sua voz nas chamadas são enviados à OpenAI (Estados Unidos) para processamento. A OpenAI não usa esses dados para treinar seus modelos. Você precisa concordar para usar o tutor de IA.",
+    "aiConsentAgree": "Concordar e começar"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4260,7 +4296,13 @@
     "adRewardDone": "Добавлено {n} сообщений.",
     "adRewardFailed": "Сейчас не удалось загрузить рекламу. Попробуйте чуть позже.",
     "aiHelpLimit": "Помощь ИИ на сегодня закончилась. Завтра она пополнится. В разговоре с людьми можно спросить собеседника: «Что это значит?»",
-    "packWeeklyLocked": "Бесплатно — набор дня {n} раза в неделю. Следующий: {day}"
+    "packWeeklyLocked": "Бесплатно — набор дня {n} раза в неделю. Следующий: {day}",
+    "paywallOtherStore": "У этого аккаунта уже есть подписка через {store}. Изменить или отменить её можно в {store}.",
+    "paywallAutoRenew": "Подписка продлевается автоматически каждый месяц. Будет списана та же сумма, если не отменить её в настройках аккаунта {store} как минимум за 24 часа до продления.",
+    "paywallTermsLink": "Условия использования (EULA)",
+    "aiConsentTitle": "ИИ-репетитор и ваши данные",
+    "aiConsentBody": "Чтобы составлять ответы, исправления и звонки, текст и фото, которые вы отправляете в чате, и ваш голос во время звонков передаются в OpenAI (США) для обработки. OpenAI не использует эти данные для обучения своих моделей. Чтобы пользоваться ИИ-репетитором, нужно согласие.",
+    "aiConsentAgree": "Согласиться и начать"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -4816,7 +4858,13 @@
     "adRewardDone": "Kamu dapat {n} chat lagi.",
     "adRewardFailed": "Iklan belum bisa dimuat sekarang. Coba lagi sebentar lagi.",
     "aiHelpLimit": "Bantuan AI hari ini sudah habis. Besok terisi lagi. Saat ngobrol dengan orang lain, kamu bisa tanya \"Ini artinya apa?\"",
-    "packWeeklyLocked": "Akun gratis dapat paket hari ini {n} kali seminggu. Paket berikutnya: {day}"
+    "packWeeklyLocked": "Akun gratis dapat paket hari ini {n} kali seminggu. Paket berikutnya: {day}",
+    "paywallOtherStore": "Akun ini sudah berlangganan melalui {store}. Kamu bisa mengubah atau membatalkannya di {store}.",
+    "paywallAutoRenew": "Langganan diperpanjang otomatis setiap bulan. Kamu akan ditagih jumlah yang sama kecuali membatalkannya di pengaturan akun {store} paling lambat 24 jam sebelum perpanjangan.",
+    "paywallTermsLink": "Ketentuan Penggunaan (EULA)",
+    "aiConsentTitle": "Tutor AI dan datamu",
+    "aiConsentBody": "Untuk membuat balasan, koreksi, dan panggilan, teks dan foto yang kamu kirim di chat serta suaramu saat panggilan dikirim ke OpenAI (Amerika Serikat) untuk diproses. OpenAI tidak memakai data ini untuk melatih modelnya. Kamu perlu setuju untuk memakai tutor AI.",
+    "aiConsentAgree": "Setuju dan mulai"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5366,7 +5414,13 @@
     "adRewardDone": "حصلت على {n} رسائل دردشة إضافية.",
     "adRewardFailed": "تعذّر تحميل إعلان الآن. حاول مرة أخرى بعد قليل.",
     "aiHelpLimit": "استخدمت مساعدة الذكاء الاصطناعي لهذا اليوم. تتجدد غدًا. في المحادثات مع الأشخاص يمكنك أن تسألهم: \"ماذا يعني هذا؟\"",
-    "packWeeklyLocked": "الحساب المجاني يتيح حزمة اليوم {n} مرات في الأسبوع. الحزمة التالية: {day}"
+    "packWeeklyLocked": "الحساب المجاني يتيح حزمة اليوم {n} مرات في الأسبوع. الحزمة التالية: {day}",
+    "paywallOtherStore": "هذا الحساب مشترك بالفعل عبر {store}. يمكنك تغيير الاشتراك أو إلغاؤه من {store}.",
+    "paywallAutoRenew": "يتجدد الاشتراك تلقائيًا كل شهر. سيُخصم المبلغ نفسه ما لم تُلغِه من إعدادات حسابك في {store} قبل التجديد بـ 24 ساعة على الأقل.",
+    "paywallTermsLink": "شروط الاستخدام (EULA)",
+    "aiConsentTitle": "مدرّس الذكاء الاصطناعي وبياناتك",
+    "aiConsentBody": "لكتابة الردود والتصحيحات وإجراء المكالمات، يُرسَل النص والصور التي ترسلها في الدردشة وصوتك في المكالمات إلى OpenAI (الولايات المتحدة) لمعالجتها. لا تستخدم OpenAI هذه البيانات لتدريب نماذجها. يجب أن توافق لاستخدام مدرّس الذكاء الاصطناعي.",
+    "aiConsentAgree": "موافق وابدأ"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -5916,7 +5970,13 @@
     "adRewardDone": "ได้แชตเพิ่ม {n} ครั้งแล้ว",
     "adRewardFailed": "ตอนนี้โหลดโฆษณาไม่ได้ ลองใหม่อีกครั้งในอีกสักครู่",
     "aiHelpLimit": "ใช้ความช่วยเหลือจาก AI ของวันนี้หมดแล้ว พรุ่งนี้จะเติมให้ใหม่ ในแชตกับคนอื่น คุณถามเขาได้ว่า \"แปลว่าอะไร?\"",
-    "packWeeklyLocked": "บัญชีฟรีเล่นแพ็กของวันนี้ได้สัปดาห์ละ {n} ครั้ง แพ็กถัดไป: {day}"
+    "packWeeklyLocked": "บัญชีฟรีเล่นแพ็กของวันนี้ได้สัปดาห์ละ {n} ครั้ง แพ็กถัดไป: {day}",
+    "paywallOtherStore": "บัญชีนี้สมัครสมาชิกผ่าน {store} อยู่แล้ว เปลี่ยนหรือยกเลิกได้ใน {store}",
+    "paywallAutoRenew": "การสมัครสมาชิกต่ออายุอัตโนมัติทุกเดือน ระบบจะเรียกเก็บเงินจำนวนเดิม เว้นแต่คุณยกเลิกในการตั้งค่าบัญชี {store} อย่างน้อย 24 ชั่วโมงก่อนต่ออายุ",
+    "paywallTermsLink": "ข้อกำหนดการใช้งาน (EULA)",
+    "aiConsentTitle": "ติวเตอร์ AI และข้อมูลของคุณ",
+    "aiConsentBody": "เพื่อสร้างคำตอบ การแก้ไข และการโทร ข้อความและรูปภาพที่คุณส่งในแชต รวมถึงเสียงของคุณในการโทร จะถูกส่งไปประมวลผลที่ OpenAI (สหรัฐอเมริกา) OpenAI ไม่นำข้อมูลนี้ไปฝึกโมเดล ต้องยินยอมก่อนจึงจะใช้ติวเตอร์ AI ได้",
+    "aiConsentAgree": "ยินยอมและเริ่มต้น"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -6466,6 +6526,12 @@
     "adRewardDone": "आपको {n} चैट और मिल गईं।",
     "adRewardFailed": "अभी विज्ञापन लोड नहीं हो सका। थोड़ी देर बाद फिर कोशिश करें।",
     "aiHelpLimit": "आज की AI मदद खत्म हो गई। कल फिर मिल जाएगी। लोगों से बातचीत में आप उनसे पूछ सकते हैं, \"इसका मतलब क्या है?\"",
-    "packWeeklyLocked": "फ़्री खाते में आज का पैक हफ़्ते में {n} बार मिलता है। अगला पैक: {day}"
+    "packWeeklyLocked": "फ़्री खाते में आज का पैक हफ़्ते में {n} बार मिलता है। अगला पैक: {day}",
+    "paywallOtherStore": "यह खाता पहले से {store} के ज़रिए सब्सक्राइब है। आप इसे {store} में बदल या रद्द कर सकते हैं।",
+    "paywallAutoRenew": "सब्सक्रिप्शन हर महीने अपने-आप रिन्यू होता है। रिन्यू होने से कम से कम 24 घंटे पहले {store} खाते की सेटिंग में रद्द न करने पर उतनी ही राशि ली जाएगी।",
+    "paywallTermsLink": "उपयोग की शर्तें (EULA)",
+    "aiConsentTitle": "आपका AI ट्यूटर और आपका डेटा",
+    "aiConsentBody": "जवाब, सुधार और कॉल बनाने के लिए, चैट में आपका लिखा टेक्स्ट और भेजी गई फ़ोटो, और कॉल में आपकी आवाज़ प्रोसेसिंग के लिए OpenAI (अमेरिका) को भेजी जाती है। OpenAI इस डेटा से अपने मॉडल को ट्रेन नहीं करता। AI ट्यूटर इस्तेमाल करने के लिए सहमति ज़रूरी है।",
+    "aiConsentAgree": "सहमत हूँ, शुरू करें"
   }
 }

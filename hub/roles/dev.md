@@ -27,6 +27,7 @@
   듣기(TTS)는 통화가 같은 길이라 한도 없음. 통화·영상 해석(translateUtterance)은 사용자 머리 없이 와서 세지 않음.
   앱(다음 빌드): 한도 안내(표현 카드·표현 자세히·방 번역/다듬기·방 자막 멈춤), 팩 카드 "주 2번 · 다음 팩: 날짜", 표현 자세히가 사용자 머리를 보냄(그래야 셈), 문구 14개 언어. 사용법 채팅·통화 문장 고침.
   남은 것: 기기 확인, 한도에 닿은 무료에게 보상형으로 AI 도움 더 줄지(결정 대기), 빠른·직접 질문을 AI 도움에 합칠지(결정 대기), ④ 유료 모듈형(보류).
+- **iOS 심사 대비 (2026-10-20, 앱 빌드 필요):** AI 동의 시트(`AiConsentGate.tsx`, iOS만), 결제 화면 자동 갱신·EULA·처리방침 링크, iOS 영상 탭 라이브러리만, 다른 스토어 구독자 결제 막기(`platform.ts otherStoreName`). 진단 상자·중계 상태 줄은 심사 빌드 전에 끔(`hub/drafts/ios-launch.md`).
 - **광고 (2026-10-20, `hub/drafts/ads-rewarded.md`):** 무료·안드로이드만, 구독자·iOS·웹 광고 없음. 서버(바로 반영): `billing/ads.ts`(단위 ID·처음 값·`ADS_*` 환경 변수), `/api/ads/config`(유료면 enabled=false, 보상 표 발급),
   `/api/ads/ssv`(Google 서명 + 우리 표 확인 → `grantAdReward`, 거래 한 번·하루 상한), 채팅 한도(chat·learner/ask·mission-check·entitlement)에 `chatBonusToday`. 앱(다음 빌드, **새 네이티브 플러그인 `@capacitor-community/admob` → PC `npm run pc:build`**):
   `lib/ads.ts` — 첫 화면 8초 뒤 준비만, 전면은 통화·팩 끝/미션 다음/채팅 4번 뒤 떠날 때·대화 끝(5분 간격, 미리 받은 것만), 한도 안내에 "광고 보고 채팅 5번 더". 동의(UMP) 먼저. iOS는 플러그인 제외(`capacitor.config.ts` `ios.includePlugins`).

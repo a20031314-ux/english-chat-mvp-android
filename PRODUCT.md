@@ -333,6 +333,10 @@ AI 도움(번역·표현 카드·다듬어 보기·학습 언어로·표현 자�
   iOS 1차는 **말하는 방·1:1 메시지 없음**(입구·🎙·`?rooms=1` 모두 꺼짐, `NEXT_PUBLIC_IOS_SOCIAL=1`로 나중에 켬), **Google 로그인 없음**(아이디·비밀번호·이메일 코드만),
   기기가 YouTube 오디오를 직접 받는 길 없음(자막 있는 영상·이달의 영상만), 결제·계정 삭제 문구의 Play 스토어 → App Store, 업데이트 링크는 App Store(`NEXT_PUBLIC_APP_STORE_URL`),
   다른 앱에서 글 넘겨받기(안드로이드 PROCESS_TEXT·공유) 없음. YouTube는 우리 https 페이지(`public/yt-embed.html`)를 거쳐 띄운다 — iOS 앱 화면(capacitor://)은 Referer가 없어 YouTube가 "오류 153"으로 막음(`videoLearning/relayPlayer.ts`). 웹뷰는 노치·홈 표시줄 바깥(안전 영역)에만. 버전은 `npm run build:ios`가 build.gradle을 따라 맞춘다.
+  심사 대비(2026-10-20): 처음 열 때 **AI 데이터 동의 시트**(글·사진·목소리를 OpenAI(미국)로 보냄, 학습에 안 씀, 동의해야 시작 — `AiConsentGate.tsx`, 기기에 저장),
+  영상 탭은 **이달의 라이브러리만**(링크 붙여 가져오기·영상 찾기 없음). 결제 화면 아래 **자동 갱신 안내 + 이용약관(애플 표준 EULA)·개인정보처리방침** 링크(안드로이드·웹은 Google Play 안내 + 처리방침).
+- **다른 스토어 구독 막기 (모든 앱, 2026-10-20 사용자 결정):** 같은 계정이 다른 스토어(아이폰에서 Google Play, 안드로이드에서 App Store)에서 구독 중이면 이 기기에서 구독을 사지 않고
+  "이미 {store}에서 구독 중, 변경·해지는 그 스토어에서" 안내(`platform.ts otherStoreName`, RevenueCat 권한의 store). 로그인해야 알 수 있다. 포인트 구매는 막지 않는다.
 - API는 Vercel(`english-chat-mvp.vercel.app`), main에 push하면 바로 배포. 화면 변경은 앱을 새로 빌드해야 사용자에게 간다.
 - 버전: `package.json` version과 `android/app/build.gradle` versionName이 같아야 빌드된다.
 

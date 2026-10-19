@@ -1,5 +1,6 @@
 "use client";
 
+import { AiConsentGate } from "@/components/AiConsentGate";
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { maybeShowAppOpen, maybeShowInterstitial, setAppOpenAllowedHere, setBannerPlacement, warmUpAds, watchAppLifecycle } from "@/lib/ads";
 import { ChatWindow } from "@/components/ChatWindow";
@@ -275,6 +276,7 @@ function AppHomeInner({
 
   return (
     <BillingUiProvider locale={locale} ui={ui}>
+    <AiConsentGate ui={ui} dir={learningLanguageTextDir(locale)} />
     <ExpressionInsightProvider locale={locale} ui={ui}>
       <EnglishAnalysisProvider locale={locale} ui={ui}>
           <div
