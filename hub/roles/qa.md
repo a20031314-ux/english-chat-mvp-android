@@ -41,7 +41,7 @@
   갤러리(2026-10-19 갱신): https://claude.ai/artifact/72hmTUMxEEy5xxkDXcFwtb (4조합 128장, 막힘 0). 한 조합 약 7분.
   **문장 종류 세분화**(2026-10-20): `--suite tiers` — 1차 8칸(맞는 문장·실수 하나·많이 틀림·편한 말 낱말 섞음·편한 말로만·소극적 대화·엉뚱한 입력·단체방 겹침),
   문장은 `tiers.json`(14개 언어, 검수 전), 한 사람이 한 칸·`--seed`로 돌아감, `TIERS_ONLY=overlap`으로 몇 칸만. 칸별 보통 결과 `node scripts/sim-users/tiers-report.mjs <실행> [--save|--compare]`,
-  기준 `scripts/sim-users/baselines/tiers.json`. 다음 단계: 기준에서 벗어난 칸만 2·3·4차로 쪼개기, 답 평가는 서버 점검 전용 주소(서버 키) 계획.
+  기준 `scripts/sim-users/baselines/tiers.json`. **답 평가는 Claude가**(2026-10-20, 모델 키·서버 변경 없음): `judge-export.mjs <실행>` → 묶음마다 에이전트가 `judge/RUBRIC.md`대로 verdicts → 큰 문제만 다른 에이전트가 `confirm.verdicts.json` → `tiers-report.mjs`가 합침. 다음: 벗어난 칸만 2·3·4차.
   **이 작업 공간(클라우드)에서는 `NODE_USE_ENV_PROXY=1`을 붙인다** — 없으면 node가 프록시 없이 바로 나가 Vercel 앞단에 막힘(403 Forbidden, 2026-10-19). 실제 앱과는 무관.
   **새 서버 기능을 만들면 `suites/`에 묶음을 하나 더한다.** 시드 문장 `bank.json`은 원어민 검수 전. 테스트 `npm run test:sim`.
 
