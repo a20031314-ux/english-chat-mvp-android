@@ -1,0 +1,255 @@
+{
+ "runId": "tiers1-20261019",
+ "seed": 7,
+ "at": "2026-10-19T15:27:57.747Z",
+ "edgeBlocks": 0,
+ "tiers": {
+  "ok": {
+   "label": "맞는 문장",
+   "people": 25,
+   "combos": 25,
+   "turns": 100,
+   "answered": 100,
+   "msMedian": 1624,
+   "msP95": 3800,
+   "rates": {
+    "답이 학습 언어": {
+     "pct": 100,
+     "of": 100
+    },
+    "괜히 고침": {
+     "pct": 11,
+     "of": 100
+    }
+   },
+   "issues": {
+    "warn false_correction": 11
+   },
+   "samples": {
+    "warn false_correction": "ja:ar 昨日見た映画は思ったより面白かったです。 → 昨日見た映画は思ったより面白かった。"
+   }
+  },
+  "light": {
+   "label": "약간 틀림(실수 하나)",
+   "people": 25,
+   "combos": 25,
+   "turns": 100,
+   "answered": 100,
+   "msMedian": 3044,
+   "msP95": 4399,
+   "rates": {
+    "답이 학습 언어": {
+     "pct": 100,
+     "of": 100
+    },
+    "짚음": {
+     "pct": 95,
+     "of": 100
+    },
+    "짚음·spelling": {
+     "pct": 100,
+     "of": 16
+    },
+    "짚음·particle": {
+     "pct": 100,
+     "of": 17
+    },
+    "짚음·word_order": {
+     "pct": 100,
+     "of": 13
+    },
+    "짚음·register": {
+     "pct": 71,
+     "of": 17
+    },
+    "짚음·agreement": {
+     "pct": 100,
+     "of": 17
+    },
+    "짚음·tense": {
+     "pct": 100,
+     "of": 17
+    },
+    "짚음·vocab": {
+     "pct": 100,
+     "of": 3
+    }
+   },
+   "issues": {
+    "warn missed_correction": 3
+   },
+   "samples": {
+    "warn missed_correction": "es:zh Oye profe, dame la respuesta ya."
+   }
+  },
+  "heavy": {
+   "label": "많이 틀림",
+   "people": 25,
+   "combos": 25,
+   "turns": 100,
+   "answered": 100,
+   "msMedian": 3737,
+   "msP95": 5033,
+   "rates": {
+    "답이 학습 언어": {
+     "pct": 100,
+     "of": 100
+    },
+    "짚음": {
+     "pct": 99,
+     "of": 100
+    }
+   },
+   "issues": {
+    "warn missed_correction": 1
+   },
+   "samples": {
+    "warn missed_correction": "id:zh Waktu saya kecil ibu saya selalu masak untuk kami makan malam besok"
+   }
+  },
+  "mixed": {
+   "label": "편한 말 낱말 섞음",
+   "people": 25,
+   "combos": 25,
+   "turns": 75,
+   "answered": 100,
+   "msMedian": 3165,
+   "msP95": 4586,
+   "rates": {
+    "답이 학습 언어": {
+     "pct": 100,
+     "of": 75
+    },
+    "섞은 낱말을 학습 언어로": {
+     "pct": 97,
+     "of": 69
+    }
+   },
+   "issues": {
+    "warn missed_correction": 2,
+    "warn mixed_kept": 2
+   },
+   "samples": {
+    "warn missed_correction": "th:pt เดี๋ยวไปกินcaféกันไหม",
+    "warn mixed_kept": "th:pt เดี๋ยวไปกินcaféกันไหม → เดี๋ยวไปกิน café กันไหม"
+   }
+  },
+  "own": {
+   "label": "편한 말로만",
+   "people": 24,
+   "combos": 24,
+   "turns": 72,
+   "answered": 100,
+   "msMedian": 2897,
+   "msP95": 4867,
+   "rates": {
+    "답이 학습 언어": {
+     "pct": 99,
+     "of": 72
+    },
+    "표현 카드 학습 언어": {
+     "pct": 100,
+     "of": 72
+    }
+   },
+   "issues": {
+    "error reply_wrong_language": 1,
+    "warn own_question_translated": 1
+   },
+   "samples": {
+    "error reply_wrong_language": "id:fr Kata \"ngapain\" itu berarti \"apa yang sedang dilakukan\". C'est une façon informel",
+    "warn own_question_translated": "es:ru Esa palabra significa \"what does this word mean?\". ¿Cuál palabra necesitas saber?"
+   }
+  },
+  "passive": {
+   "label": "소극적 대화",
+   "people": 24,
+   "combos": 24,
+   "turns": 120,
+   "answered": 100,
+   "msMedian": 1440,
+   "msP95": 3153,
+   "rates": {
+    "답이 학습 언어": {
+     "pct": 100,
+     "of": 120
+    },
+    "질문으로 이음": {
+     "pct": 79,
+     "of": 120
+    },
+    "되풀이": {
+     "pct": 0,
+     "of": 120
+    }
+   },
+   "replyChars": 46,
+   "issues": {},
+   "samples": {}
+  },
+  "odd": {
+   "label": "엉뚱한 입력",
+   "people": 24,
+   "combos": 24,
+   "turns": 72,
+   "answered": 100,
+   "msMedian": 2335,
+   "msP95": 4432,
+   "rates": {
+    "답이 학습 언어": {
+     "pct": 100,
+     "of": 72
+    },
+    "넘어가지 않음·emoji": {
+     "pct": 100,
+     "of": 13
+    },
+    "넘어가지 않음·offtopic": {
+     "pct": 100,
+     "of": 15
+    },
+    "넘어가지 않음·single": {
+     "pct": 100,
+     "of": 15
+    },
+    "넘어가지 않음·gibberish": {
+     "pct": 100,
+     "of": 13
+    },
+    "넘어가지 않음·injection": {
+     "pct": 100,
+     "of": 16
+    }
+   },
+   "issues": {},
+   "samples": {}
+  },
+  "overlap": {
+   "label": "단체방 겹침",
+   "people": 23,
+   "combos": 23,
+   "turns": 23,
+   "answered": 100,
+   "msMedian": 735,
+   "msP95": 10731,
+   "rates": {
+    "순서·중복·인용 정상": {
+     "pct": 61,
+     "of": 23
+    }
+   },
+   "issues": {
+    "error tiers_network": 5,
+    "error overlap_order": 25,
+    "error tiers_http": 3,
+    "error overlap_lost": 1
+   },
+   "samples": {
+    "error tiers_network": "id:en /api/groups 요청 실패: TypeError: fetch failed",
+    "error overlap_order": "ru:en A의 줄 번호 순서가 꼬임",
+    "error tiers_http": "zh:ja /api/groups HTTP 403 {\"error\":\"NOT_MEMBER\"}",
+    "error overlap_lost": "zh:ja A1 昨天看的电影比我想的有意思。"
+   }
+  }
+ }
+}

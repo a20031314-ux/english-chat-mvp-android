@@ -207,6 +207,7 @@ async function runOverlap({ persona, userId, call, bank, step }) {
     const measure = { tier: "overlap" };
     for (const [index, view] of views.entries()) {
       const who = "ABC"[index];
+      if (view.status !== 200) { issues.push(...checkHttp(P, view)); continue; } // 열기 실패는 사라짐이 아님
       const list = texts(view);
       const missing = expected.filter((t) => !list.includes(t));
       const dup = list.filter((t, i) => list.indexOf(t) !== i);
@@ -216,7 +217,7 @@ async function runOverlap({ persona, userId, call, bank, step }) {
       if (dup.length) issues.push(issue("error", "overlap_dup", `${who}에게 같은 줄이 두 번`, { sample: dup[0] }));
       if (unordered) issues.push(issue("error", "overlap_order", `${who}의 줄 번호 순서가 꼬임`));
     }
-    const orders = views.map((v) => texts(v).join("\u0001"));
+    const orders = views.filter((v) => v.status === 200).map((v) => texts(v).join("\u0001"));
     if (new Set(orders).size > 1) issues.push(issue("error", "overlap_order", "세 사람이 보는 줄 순서가 서로 다름"));
     const ask = (views[0].body?.messages ?? []).find((m) => m.text === askText);
     if (askSent && (!ask?.quote || ask.quote.text !== `A0 ${L.ok[0]}`)) issues.push(issue("error", "overlap_quote", `끼어들어 집은 인용이 다름: ${ask?.quote?.text ?? "없음"}`));

@@ -94,3 +94,5 @@
 - 2026-10-19 dev → store: 러닝메이트·팀 워크스페이스가 main에 있음(앱 빌드 필요). 2.69에 넣을지 2.70으로 미룰지 사용자 확인 — 넣으면 새로워진 점·사용법·출시 노트 다시.
 - 2026-10-19 dev → store: 2.69(83) 다시 자름 — 노트·게시판이 새로워진 점·사용법·출시 노트 PR #9에 들어감. 빌드는 같은 83. 러닝메이트·팀(bcc2bc4)은 새로워진 점·출시 노트에 아직 없음.
 
+- 2026-10-20 qa → dev: 채팅이 맞는 문장을 '고침'(가상 사용자 맞는 문장 100턴 중 11): 「面白かったです」→「面白かった」(반말로), 友だち→友達, 일 년→1년, 你能推荐一下→你能推荐. 틀린 게 없으면 corrected는 그대로 두고 말투·표기 취향은 natural로? 인니어 설명이 거꾸로인 것 1건("merekomendasikan 대신 rekomendasikan"인데 반대로 고침). 기준 `scripts/sim-users/baselines/tiers.json`, 다시 보기 `TIERS_ONLY=ok,light,passive npm run sim:users -- --suite tiers`.
+- 2026-10-20 qa → dev: 소극적인 짧은 답("네", "몰라", "not really")에 튜터가 질문 없이 대화를 닫는 답이 21%("Gotcha! Sometimes no plans is the best plan."). 말투 실수(선생님께 반말·명령조) 짚음 71%로 다른 실수(99~100%)보다 낮음.
