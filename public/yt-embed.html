@@ -1,0 +1,92 @@
+<!doctype html>
+<!--
+  iOS 앱용 YouTube 중계 페이지 (2026-10-20).
+
+  YouTube 퍼가기 플레이어는 띄운 사이트를 Referer로 알려야 재생한다(없으면 "오류 153").
+  안드로이드 앱 화면은 https://localhost라 Referer가 가지만, iOS 앱 화면은 capacitor://localhost라
+  https로 가는 요청에 Referer가 붙지 않는다. 그래서 iOS 앱은 이 페이지(우리 https 도메인)를
+  iframe으로 띄우고, 이 페이지가 YouTube 플레이어를 띄운다. 앱 ↔ 이 페이지는 postMessage:
+    앱 → 페이지: {lbYt:"cmd", fn:"playVideo"|"pauseVideo"|"seekTo"|"mute"|"unMute", args:[...]}
+    페이지 → 앱: {lbYt:"ready"|"state"|"error"|"tick", ...} — tick은 0.25초마다 시간·상태·길이.
+  짝: src/components/videoLearning/relayPlayer.ts. 바꾸면 둘 다.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>player</title>
+<style>
+  html, body { margin: 0; height: 100%; background: #000; overflow: hidden; }
+  #p { position: absolute; inset: 0; width: 100%; height: 100%; }
+</style>
+</head>
+<body>
+<div id="p"></div>
+<script>
+(function () {
+  // 앱 화면만 명령을 보낼 수 있다(다른 사이트가 이 페이지를 띄워 조종하지 못하게).
+  var ALLOWED = ["capacitor://localhost", "https://localhost", "http://localhost", "ionic://localhost"];
+  var q = new URLSearchParams(location.search);
+  var videoId = (q.get("v") || "").replace(/[^A-Za-z0-9_-]/g, "").slice(0, 20);
+  var parentOrigin = q.get("parent") || "capacitor://localhost";
+  if (ALLOWED.indexOf(parentOrigin) < 0) parentOrigin = "capacitor://localhost";
+  var player = null;
+  var ready = false;
+
+  function send(msg) {
+    msg.lbYt = msg.lbYt || "tick";
+    try { parent.postMessage(msg, parentOrigin); } catch (e) {}
+  }
+
+  window.addEventListener("message", function (event) {
+    if (ALLOWED.indexOf(event.origin) < 0) return;
+    var data = event.data;
+    if (!data || data.lbYt !== "cmd" || !player || !ready) return;
+    var fn = data.fn;
+    var args = Array.isArray(data.args) ? data.args : [];
+    if (["playVideo", "pauseVideo", "seekTo", "mute", "unMute"].indexOf(fn) < 0) return;
+    try { player[fn].apply(player, args); } catch (e) {}
+  });
+
+  window.onYouTubeIframeAPIReady = function () {
+    player = new YT.Player("p", {
+      videoId: videoId,
+      width: "100%",
+      height: "100%",
+      playerVars: {
+        rel: 0,
+        modestbranding: 1,
+        playsinline: 1,
+        enablejsapi: 1,
+        controls: 1,
+        origin: location.origin,
+        autoplay: q.get("autoplay") === "1" ? 1 : 0
+      },
+      events: {
+        onReady: function () {
+          ready = true;
+          var d = 0;
+          try { d = player.getDuration(); } catch (e) {}
+          send({ lbYt: "ready", duration: d });
+          setInterval(function () {
+            var t = 0, s = -1, dur = 0;
+            try { t = player.getCurrentTime(); s = player.getPlayerState(); dur = player.getDuration(); } catch (e) {}
+            send({ lbYt: "tick", time: t, state: s, duration: dur });
+          }, 250);
+        },
+        onStateChange: function (e) { send({ lbYt: "state", state: e.data }); },
+        onError: function (e) { send({ lbYt: "error", code: e && e.data }); }
+      }
+    });
+  };
+
+  var s = document.createElement("script");
+  s.src = "https://www.youtube.com/iframe_api";
+  s.async = true;
+  s.onerror = function () { send({ lbYt: "error", code: "api" }); };
+  document.head.appendChild(s);
+})();
+</script>
+</body>
+</html>

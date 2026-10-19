@@ -318,7 +318,7 @@
 - **iOS (준비 중, 2026-10-18, `ios/`, `hub/drafts/ios-launch.md`):** 같은 화면을 Capacitor iOS로. 플랫폼마다 다른 것은 `src/lib/platform.ts` 한곳:
   iOS 1차는 **말하는 방·1:1 메시지 없음**(입구·🎙·`?rooms=1` 모두 꺼짐, `NEXT_PUBLIC_IOS_SOCIAL=1`로 나중에 켬), **Google 로그인 없음**(아이디·비밀번호·이메일 코드만),
   기기가 YouTube 오디오를 직접 받는 길 없음(자막 있는 영상·이달의 영상만), 결제·계정 삭제 문구의 Play 스토어 → App Store, 업데이트 링크는 App Store(`NEXT_PUBLIC_APP_STORE_URL`),
-  다른 앱에서 글 넘겨받기(안드로이드 PROCESS_TEXT·공유) 없음. 웹뷰는 노치·홈 표시줄 바깥(안전 영역)에만. 버전은 `npm run build:ios`가 build.gradle을 따라 맞춘다.
+  다른 앱에서 글 넘겨받기(안드로이드 PROCESS_TEXT·공유) 없음. YouTube는 우리 https 페이지(`public/yt-embed.html`)를 거쳐 띄운다 — iOS 앱 화면(capacitor://)은 Referer가 없어 YouTube가 "오류 153"으로 막음(`videoLearning/relayPlayer.ts`). 웹뷰는 노치·홈 표시줄 바깥(안전 영역)에만. 버전은 `npm run build:ios`가 build.gradle을 따라 맞춘다.
 - API는 Vercel(`english-chat-mvp.vercel.app`), main에 push하면 바로 배포. 화면 변경은 앱을 새로 빌드해야 사용자에게 간다.
 - 버전: `package.json` version과 `android/app/build.gradle` versionName이 같아야 빌드된다.
 

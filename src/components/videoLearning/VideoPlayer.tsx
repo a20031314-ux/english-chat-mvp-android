@@ -9,6 +9,8 @@ import {
   useState,
 } from "react";
 import { formatSubtitleTime } from "@/lib/videoLearning";
+import { isIosApp } from "@/lib/platform";
+import { RelayPlayer } from "@/components/videoLearning/relayPlayer";
 
 export type VideoPlayerHandle = {
   seekTo: (seconds: number) => void;
@@ -403,23 +405,12 @@ export const VideoPlayer = forwardRef<
 
     void (async () => {
       try {
-        await loadYouTubeApi();
-        if (cancelled || !hostRef.current || !window.YT?.Player) return;
+        // iOS 앱은 YouTube를 우리 https 페이지를 거쳐 띄운다(오류 153, relayPlayer.ts).
+        const relay = isIosApp();
+        if (!relay) await loadYouTubeApi();
+        if (cancelled || !hostRef.current || (!relay && !window.YT?.Player)) return;
         let player!: YtPlayer;
-        player = new window.YT.Player(hostRef.current, {
-          videoId,
-          width: "100%",
-          height: "100%",
-          playerVars: {
-            rel: 0,
-            modestbranding: 1,
-            playsinline: 1,
-            origin: window.location.origin,
-            enablejsapi: 1,
-            controls: 1,
-            autoplay: autoPlayRef.current ? 1 : 0,
-          },
-          events: {
+        const events = {
             onReady: () => {
               try {
                 const loaded = player.getDuration?.();
@@ -438,7 +429,7 @@ export const VideoPlayer = forwardRef<
                 // user gesture may still be required
               }
             },
-            onStateChange: (event) => {
+            onStateChange: (event: { data: number }) => {
               if (event.data === 0 && !endedFiredRef.current) {
                 endedFiredRef.current = true;
                 playingRef.current = false;
@@ -451,7 +442,26 @@ export const VideoPlayer = forwardRef<
             onError: () => {
               // keep mock transport
             },
+        };
+        if (relay) {
+          player = new RelayPlayer(hostRef.current, { videoId, autoplay: autoPlayRef.current, events });
+          playerRef.current = player;
+          return;
+        }
+        player = new window.YT!.Player(hostRef.current, {
+          videoId,
+          width: "100%",
+          height: "100%",
+          playerVars: {
+            rel: 0,
+            modestbranding: 1,
+            playsinline: 1,
+            origin: window.location.origin,
+            enablejsapi: 1,
+            controls: 1,
+            autoplay: autoPlayRef.current ? 1 : 0,
           },
+          events,
         });
         playerRef.current = player;
       } catch {
