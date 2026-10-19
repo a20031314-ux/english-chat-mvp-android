@@ -30,6 +30,7 @@
 | 메시지(1:1) | `dm:v1` | 방·대화 | 30일 | 남음(30일 뒤 만료) | 1:1 대화·요청·차례 번호 | `dmStore.ts` |
 | 비용 | `usage:op` | 학습자 한 명 | 45일 | 지움(주 1회 정리) | 기능별 사용 횟수(비용 보고, 일별) | `entitlementStore.ts` |
 | 비용 | `usage:tok` | 운영 | 45일 | 해당 없음 | 기능별 잰 토큰(일별, 사람 없음) | `meterRequest.ts` |
+| 사람 사이 사진(1:1·단체방·게시판) | `media:v1` | 방·대화 | 2일 · 365일 · 37일 · 40일 · 계산(board ? BOARD_META_TTL : MEDIA) | 지움 | 사진 정보(올린 사람·붙인 곳·Blob 경로·크기·지울 때)·하루 올린 수·올린 사람별 id·날짜별 지울 목록 — 파일은 Vercel Blob(private) media/<id>, 1:1·단체방 30일·안 보낸 사진 하루·게시판은 글과 함께 | `mediaStore.ts` |
 | 사람·팔로우 | `social:v1` | 계정 | 60일 · 90일 · 영구 | 지움(일부: 접속 기록) | 팔로우·차단·관계·신고·접속·도운 수 | `presenceStore.ts` `socialStore.ts` |
 | 영상 | `usage:trial` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 영상 체험 쓴 것 | `entitlementStore.ts` |
 | 영상 | `usage:video` | 학습자 한 명 | 70일 | 지움(주 1회 정리) | 영상 준비 사용(월별) | `entitlementStore.ts` |

@@ -15,6 +15,8 @@ import { byPerson, contextBefore, overlapsPrevious, timeline, type RoomLine, typ
 import type { PublicProfile } from "@/lib/rooms/social";
 import type { HowToSayExpression } from "@/lib/howToSay";
 import { questionCount } from "@/lib/rooms/quote";
+import type { MediaRef, MediaScope } from "@/lib/rooms/media";
+import { MediaError, uploadImage, type MediaUploadError } from "@/lib/rooms/mediaClient";
 import { peekHint, type RoomHintMode } from "@/lib/rooms/layout";
 import { isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
 
@@ -371,6 +373,7 @@ export function Composer({
   quote,
   onClearQuote,
   initialText,
+  attach,
 }: {
   t: RoomCopy;
   placeholder?: string;
@@ -378,7 +381,10 @@ export function Composer({
   locale: string;
   targetLanguage: string;
   recent: () => string[];
-  onSend: (text: string) => Promise<void>;
+  /** 사진을 붙였으면 image(먼저 올린 것). 글은 비어 있을 수 있다. */
+  onSend: (text: string, image?: MediaRef) => Promise<void>;
+  /** 사진 첨부(📷): 어디에 올릴 사진인지. 없으면 버튼을 안 보인다(말하는 방 채팅 등). */
+  attach?: MediaScope | null;
   /** 집은 남의 말(묻기·답하기). 부르는 쪽은 인용이 바뀔 때 key를 바꿔 initialText를 새로 채운다. */
   quote?: { nickname: string; text: string; ask: boolean } | null;
   onClearQuote?: () => void;
@@ -389,15 +395,33 @@ export function Composer({
   const [suggestion, setSuggestion] = useState<HowToSayExpression | null>(null);
   const [state, setState] = useState<"" | "loading" | "failed" | "limit">("");
   const input = useRef<HTMLInputElement>(null);
+  const picker = useRef<HTMLInputElement>(null);
+  // 고른 사진(보낼 때 올린다)과 미리보기, 올리기 오류.
+  const [photo, setPhoto] = useState<{ file: File; preview: string } | null>(null);
+  const [photoError, setPhotoError] = useState<MediaUploadError | null>(null);
+  useEffect(() => () => {
+    if (photo) URL.revokeObjectURL(photo.preview);
+  }, [photo]);
 
   const send = async (value: string) => {
     const line = value.trim();
-    if (!line || busy) return;
+    if ((!line && !photo) || busy) return;
     setBusy(true);
+    setPhotoError(null);
     try {
-      await onSend(line);
+      let image: MediaRef | undefined;
+      if (photo && attach) {
+        try {
+          image = await uploadImage(attach, photo.file);
+        } catch (error) {
+          setPhotoError(error instanceof MediaError ? error.code : "FAILED");
+          return;
+        }
+      }
+      await onSend(line, image);
       setText("");
       setSuggestion(null);
+      setPhoto(null);
     } catch {
       // 못 보냈으면 글을 그대로 둔다(알림은 부르는 쪽).
     } finally {
@@ -474,7 +498,45 @@ export function Composer({
           </div>
         </div>
       ) : null}
+      {photo ? (
+        <div className="flex items-center gap-2">
+          {/* eslint-disable-next-line @next/next/no-img-element -- 고른 사진 미리보기(blob:) */}
+          <img src={photo.preview} alt="" className="h-14 w-14 rounded-lg object-cover" />
+          <span className="min-w-0 flex-1 text-meta text-slate-400">{busy ? t.photoUploading : t.photoReady}</span>
+          <button type="button" disabled={busy} onClick={() => setPhoto(null)} aria-label={t.photoRemove} className="shrink-0 rounded-lg px-2 text-title text-slate-400 hover:bg-white/10">
+            ×
+          </button>
+        </div>
+      ) : null}
+      {photoError ? <p className="text-xs text-rose-300">{photoErrorText(t, photoError)}</p> : null}
       <div className="flex gap-1.5">
+        {attach ? (
+          <>
+            <input
+              ref={picker}
+              type="file"
+              accept="image/*"
+              className="hidden"
+              onChange={(event) => {
+                const file = event.target.files?.[0];
+                event.target.value = "";
+                if (!file) return;
+                setPhotoError(null);
+                setPhoto({ file, preview: URL.createObjectURL(file) });
+              }}
+            />
+            <button
+              type="button"
+              disabled={disabled || busy}
+              onClick={() => picker.current?.click()}
+              aria-label={t.photoAttach}
+              title={t.photoAttach}
+              className="shrink-0 rounded-xl border border-white/15 px-2.5 text-chat text-slate-200 disabled:opacity-40"
+            >
+              📷
+            </button>
+          </>
+        ) : null}
         <input
           ref={input}
           autoFocus={Boolean(quote)}
@@ -496,7 +558,7 @@ export function Composer({
         </button>
         <button
           type="button"
-          disabled={disabled || !text.trim() || busy}
+          disabled={disabled || (!text.trim() && !photo) || busy}
           onClick={() => void send(text)}
           className="shrink-0 rounded-xl bg-white/90 px-3 text-sm font-medium text-black disabled:opacity-40"
         >
@@ -505,6 +567,15 @@ export function Composer({
       </div>
     </div>
   );
+}
+
+/** 사진 올리기 오류 문구. */
+export function photoErrorText(t: RoomCopy, code: MediaUploadError): string {
+  if (code === "LIMIT") return t.photoLimit;
+  if (code === "REJECTED") return t.photoRejected;
+  if (code === "TOO_BIG") return t.photoTooBig;
+  if (code === "BAD_TYPE") return t.photoBadType;
+  return t.photoFailed;
 }
 
 export function Lines({

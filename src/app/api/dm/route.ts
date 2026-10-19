@@ -9,6 +9,8 @@ import { createRoom, isInviteCode, liveCount, readLines, readMeta } from "@/lib/
 import { clipQuote } from "@/lib/rooms/quote";
 import { DM_MAX_CHARS, isThreadId, otherOf, threadIdFor } from "@/lib/rooms/dm";
 import { cleanText, isPeerId, isRoomId } from "@/lib/rooms/protocol";
+import { isMediaId } from "@/lib/rooms/media";
+import { claimMedia } from "@/lib/server/mediaStore";
 
 export const dynamic = "force-dynamic";
 
@@ -58,7 +60,10 @@ export async function POST(request: NextRequest) {
     }
     if (blocked) return bad(request, "BLOCKED", 403);
     const text = cleanText(body.text, DM_MAX_CHARS);
-    if (!text) return bad(request, "NO_TEXT");
+    // 사진: 이 대화에 올린 내 사진만, 한 번(server/mediaStore.ts).
+    const image = isMediaId(body.imageId) ? await claimMedia(body.imageId, me, { kind: "dm", threadId: id }) : null;
+    if (isMediaId(body.imageId) && !image) return bad(request, "BAD_IMAGE");
+    if (!text && !image) return bad(request, "NO_TEXT");
     let quote = undefined;
     const roomQuote = body.roomQuote as { roomId?: unknown; seq?: unknown } | undefined;
     if (roomQuote && isRoomId(roomQuote.roomId) && typeof roomQuote.seq === "number") {
@@ -77,7 +82,7 @@ export async function POST(request: NextRequest) {
       quote = await findQuote(id, body.quoteSeq, typeof body.quoteIndex === "number" ? body.quoteIndex : undefined);
       if (!quote) return bad(request, "NO_QUOTE", 404);
     }
-    const result = await send({ from: me, to: target, kind: "text", text, ...(quote ? { quote, ask: body.ask === true } : {}) });
+    const result = await send({ from: me, to: target, kind: "text", text, ...(quote ? { quote, ask: body.ask === true } : {}), ...(image ? { image } : {}) });
     if (!result.ok) return bad(request, result.error, 409);
     return jsonWithCors(request, { thread: result.thread, message: result.message });
   }

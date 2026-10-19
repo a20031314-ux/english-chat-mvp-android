@@ -30,6 +30,7 @@ import {
   type TeamSpace,
 } from "../rooms/group.ts";
 import { clipQuote, type LineQuote } from "../rooms/quote.ts";
+import type { MediaRef } from "../rooms/media.ts";
 import { kvDelete, kvGetJson, kvIncrBy, kvListPush, kvListRange, kvListTrim, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
 import { rowsAfter } from "./lateRows.ts";
 
@@ -109,7 +110,7 @@ async function push(group: Group, message: Omit<GroupMessage, "seq" | "at">): Pr
     ...group,
     lastAt: now,
     lastSeq: seq,
-    ...(row.kind === "text" ? { lastText: row.text, lastFrom: row.from } : {}),
+    ...(row.kind === "text" ? { lastText: row.image ? (row.text ? `📷 ${row.text}` : "📷") : row.text, lastFrom: row.from } : {}),
   };
   await saveGroup(next);
   return { group: next, message: row };
@@ -220,6 +221,8 @@ async function sendToGroupUnlocked(input: {
   text: string;
   quoteSeq?: number;
   ask?: boolean;
+  /** 붙인 사진(부르는 쪽이 claimMedia로 확인한 것). */
+  image?: MediaRef;
 }): Promise<{ ok: true; group: Group; message: GroupMessage } | { ok: false; error: "NO_GROUP" | "NOT_MEMBER" | "NO_QUOTE" }> {
   const group = await readGroup(input.id);
   if (!group) return { ok: false, error: "NO_GROUP" };
@@ -230,7 +233,13 @@ async function sendToGroupUnlocked(input: {
     if (!found) return { ok: false, error: "NO_QUOTE" };
     quote = { seq: found.seq, nickname: "", text: clipQuote(found.text), accountId: found.from };
   }
-  const result = await push(group, { from: input.from, kind: "text", text: input.text, ...(quote ? { quote, ask: input.ask === true } : {}) });
+  const result = await push(group, {
+    from: input.from,
+    kind: "text",
+    text: input.text,
+    ...(quote ? { quote, ask: input.ask === true } : {}),
+    ...(input.image ? { image: input.image } : {}),
+  });
   // 팀에서 "무슨 뜻이에요?"로 물은 줄은 워크스페이스 표현으로 남는다.
   if (group.team && quote && input.ask === true) {
     await addSpaceItem(group, { kind: "phrase", by: input.from, text: quote.text, from: quote.accountId ?? null });

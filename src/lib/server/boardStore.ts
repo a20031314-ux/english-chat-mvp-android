@@ -1,3 +1,5 @@
+import type { MediaRef } from "../rooms/media.ts";
+import { deleteMedia } from "./mediaStore.ts";
 import {
   kvDelete,
   kvGetJson,
@@ -74,9 +76,17 @@ export async function listPosts(input: { language?: string; offset?: number }): 
 
 export type WriteResult<T> = { ok: T } | { error: "LIMIT" | "NOT_FOUND" | "FORBIDDEN" | "FULL" };
 
-export async function createPost(input: { author: string; language: string; text: string }): Promise<WriteResult<BoardPost>> {
+export async function createPost(input: { author: string; language: string; text: string; images?: MediaRef[] }): Promise<WriteResult<BoardPost>> {
   if ((await kvIncrBy(dayKey(input.author), 1, 2 * 24 * 60 * 60)) > BOARD_POSTS_PER_DAY) return { error: "LIMIT" };
-  const post: BoardPost = { id: newBoardId(), author: input.author, language: input.language, text: input.text, at: Date.now(), comments: 0 };
+  const post: BoardPost = {
+    id: newBoardId(),
+    author: input.author,
+    language: input.language,
+    text: input.text,
+    at: Date.now(),
+    comments: 0,
+    ...(input.images?.length ? { images: input.images } : {}),
+  };
   await kvSetJson(postKey(post.id), post);
   await Promise.all([
     kvZAdd(ALL, post.at, post.id),
@@ -96,6 +106,10 @@ export async function editPost(me: string, id: string, text: string): Promise<Wr
 }
 
 async function removePost(post: BoardPost): Promise<void> {
+  // 글과 댓글에 붙은 사진도 같이(server/mediaStore.ts).
+  const comments = await readComments(post.id);
+  const media = [...(post.images ?? []).map((image) => image.id), ...comments.flatMap((comment) => (comment.image ? [comment.image.id] : []))];
+  if (media.length) await deleteMedia(media);
   await kvDelete([postKey(post.id), commentsKey(post.id)]);
   await Promise.all([kvZRem(ALL, post.id), kvZRem(langKey(post.language), post.id), kvZRem(byKey(post.author), post.id)]);
 }
@@ -114,12 +128,12 @@ async function writeComments(post: BoardPost, comments: BoardComment[]): Promise
   await kvSetJson(postKey(post.id), { ...post, comments: comments.length });
 }
 
-export async function addComment(input: { author: string; postId: string; text: string }): Promise<WriteResult<BoardComment>> {
+export async function addComment(input: { author: string; postId: string; text: string; image?: MediaRef }): Promise<WriteResult<BoardComment>> {
   const post = await readPost(input.postId);
   if (!post) return { error: "NOT_FOUND" };
   if (post.comments >= BOARD_MAX_COMMENTS) return { error: "FULL" };
   if ((await kvIncrBy(hourKey(input.author), 1, 2 * 60 * 60)) > BOARD_COMMENTS_PER_HOUR) return { error: "LIMIT" };
-  const comment: BoardComment = { id: newBoardId(), author: input.author, text: input.text, at: Date.now() };
+  const comment: BoardComment = { id: newBoardId(), author: input.author, text: input.text, at: Date.now(), ...(input.image ? { image: input.image } : {}) };
   await kvListPush(commentsKey(post.id), [JSON.stringify(comment)], KEEP_SECONDS);
   // 개수는 목록 길이에서 다시 센다(동시에 둘이 달아도 맞게).
   const count = (await kvListRange(commentsKey(post.id), 0, -1)).length;
@@ -147,6 +161,7 @@ export async function deleteComment(me: string, postId: string, commentId: strin
   const found = comments.find((comment) => comment.id === commentId);
   if (!found) return { error: "NOT_FOUND" };
   if (!canDeleteComment(me, post, found)) return { error: "FORBIDDEN" };
+  if (found.image) await deleteMedia([found.image.id]);
   await writeComments(post, comments.filter((comment) => comment.id !== commentId));
   return { ok: true };
 }

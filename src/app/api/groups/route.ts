@@ -1,4 +1,6 @@
 import { NextRequest } from "next/server";
+import { isMediaId } from "@/lib/rooms/media";
+import { claimMedia } from "@/lib/server/mediaStore";
 import { pollFrom } from "@/lib/server/lateRows";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
@@ -177,11 +179,15 @@ export async function POST(request: NextRequest) {
 
   if (action === "send") {
     const text = cleanText(body.text, DM_MAX_CHARS);
-    if (!text) return bad(request, "NO_TEXT");
+    // 사진: 이 단체방에 올린 내 사진만, 한 번(server/mediaStore.ts).
+    const image = isMediaId(body.imageId) ? await claimMedia(body.imageId, me, { kind: "group", groupId: group.id }) : null;
+    if (isMediaId(body.imageId) && !image) return bad(request, "BAD_IMAGE");
+    if (!text && !image) return bad(request, "NO_TEXT");
     const result = await sendToGroup({
       from: me,
       id: group.id,
       text,
+      ...(image ? { image } : {}),
       ...(typeof body.quoteSeq === "number" ? { quoteSeq: body.quoteSeq, ask: body.ask === true } : {}),
     });
     if (!result.ok) return bad(request, result.error, result.error === "NO_QUOTE" ? 404 : 403);

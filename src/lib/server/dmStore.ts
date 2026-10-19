@@ -68,6 +68,7 @@ export async function send(input: {
   lines?: DmMessage["lines"];
   quote?: DmMessage["quote"];
   ask?: boolean;
+  image?: DmMessage["image"];
 }): Promise<SendResult> {
   const id = threadIdFor(input.from, input.to);
   const existing = await readThread(id);
@@ -94,7 +95,10 @@ export async function send(input: {
     ...(input.roomId ? { roomId: input.roomId } : {}),
     ...(input.lines ? { lines: input.lines } : {}),
     ...(input.quote ? { quote: input.quote, ask: input.ask === true } : {}),
+    ...(input.image ? { image: input.image } : {}),
   };
+  // 목록 미리보기: 사진만 보냈으면 📷(화면이 그 언어 "사진"으로 바꿔 보인다).
+  const preview = input.image ? (input.text ? `📷 ${input.text}` : "📷") : input.text;
   const members = [input.from, input.to].sort() as [string, string];
   const thread: DmThread = existing
     ? {
@@ -102,7 +106,7 @@ export async function send(input: {
         // 받는 사람의 답이 대화를 연다(거절했다가 답해도 연다).
         status: existing.starter !== input.from ? "open" : existing.status,
         lastAt: now,
-        lastText: input.kind === "text" ? input.text : existing.lastText,
+        lastText: input.kind === "text" ? preview : existing.lastText,
         lastFrom: input.from,
         lastSeq: seq,
       }
@@ -113,7 +117,7 @@ export async function send(input: {
         status: "pending",
         createdAt: now,
         lastAt: now,
-        lastText: input.text,
+        lastText: preview,
         lastFrom: input.from,
         lastSeq: seq,
       };

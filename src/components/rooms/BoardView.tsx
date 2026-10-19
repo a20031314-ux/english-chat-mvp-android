@@ -1,6 +1,9 @@
 "use client";
 
-import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { MediaImage } from "./MediaImage";
+import { MEDIA_PER_POST, type MediaRef, type MediaScope } from "@/lib/rooms/media";
+import { MediaError, uploadImage } from "@/lib/rooms/mediaClient";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { BOARD_COMMENT_MAX_CHARS, BOARD_POST_MAX_CHARS, type BoardAuthor, type BoardComment, type BoardPost } from "@/lib/rooms/board";
@@ -17,7 +20,7 @@ import {
   translateLine, aiFailText } from "@/lib/rooms/client";
 import type { RoomCopy } from "@/lib/rooms/copy";
 import { requestDm } from "@/lib/rooms/openDm";
-import { Face, ProfileSheet } from "./RoomParts";
+import { Face, ProfileSheet, photoErrorText } from "./RoomParts";
 
 /**
  * 게시판(사람 탭의 "게시판" 보기, rooms/board.ts): 최신순 글, 전체 / 내 학습 언어,
@@ -144,6 +147,7 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
                   {post.text}
                 </span>
                 <span className="mt-2 block text-meta text-slate-500">
+                  {post.images?.length ? `📷 ${post.images.length} · ` : ""}
                   {t.boardComments.replace("{n}", String(post.comments))}
                   {post.editedAt ? ` · ${t.boardEdited}` : ""}
                 </span>
@@ -169,9 +173,10 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
           initial=""
           max={BOARD_POST_MAX_CHARS}
           submitLabel={t.boardPost}
+          maxPhotos={MEDIA_PER_POST}
           onClose={() => setWriting(false)}
-          onSubmit={async (text) => {
-            const { post } = await boardWrite(targetLanguage, text);
+          onSubmit={async (text, images) => {
+            const { post } = await boardWrite(targetLanguage, text, images.map((image) => image.id));
             if (me) setNames((current) => ({ ...current, [me]: current[me] ?? readCachedAccount()?.profile?.nickname ?? "" }));
             setPosts((current) => [post, ...(current ?? [])]);
             setWriting(false);
@@ -234,6 +239,7 @@ function Composer({
   submitLabel,
   onClose,
   onSubmit,
+  maxPhotos = 0,
 }: {
   t: RoomCopy;
   title: string;
@@ -241,17 +247,28 @@ function Composer({
   max: number;
   submitLabel: string;
   onClose: () => void;
-  onSubmit: (text: string) => Promise<void>;
+  /** images: 붙인 사진(올린 뒤). 고치기 창은 사진을 안 받는다(maxPhotos 0). */
+  onSubmit: (text: string, images: MediaRef[]) => Promise<void>;
+  maxPhotos?: number;
 }) {
   const [text, setText] = useState(initial);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
+  const photos = usePhotoPicks(maxPhotos);
   const submit = async () => {
-    if (!text.trim() || busy) return;
+    if ((!text.trim() && !photos.picks.length) || busy) return;
     setBusy(true);
     setError("");
+    let images: MediaRef[] = [];
     try {
-      await onSubmit(text.trim());
+      images = await photos.upload({ kind: "board" });
+    } catch (caught) {
+      setError(caught instanceof MediaError ? photoErrorText(t, caught.code) : t.photoFailed);
+      setBusy(false);
+      return;
+    }
+    try {
+      await onSubmit(text.trim(), images);
     } catch (caught) {
       setError(errorText(t, caught));
       setBusy(false);
@@ -276,6 +293,7 @@ function Composer({
           autoFocus
           className="w-full resize-none rounded-lg border border-line bg-surface px-3 py-2 text-chat text-ink placeholder:text-slate-500"
         />
+        {maxPhotos ? <PhotoPicks t={t} photos={photos} busy={busy} /> : null}
         <div className="mt-2 flex items-center gap-2">
           <span className="text-meta tabular-nums text-slate-500">
             {Array.from(text).length}/{max}
@@ -283,11 +301,11 @@ function Composer({
           {error ? <span className="min-w-0 flex-1 text-caption text-bad">{error}</span> : <span className="flex-1" />}
           <button
             type="button"
-            disabled={!text.trim() || busy}
+            disabled={(!text.trim() && !photos.picks.length) || busy}
             onClick={() => void submit()}
             className="tb-btn rounded-lg px-4 py-2 text-note font-semibold disabled:opacity-40"
           >
-            {submitLabel}
+            {busy && photos.picks.length ? t.photoUploading : submitLabel}
           </button>
         </div>
       </div>
@@ -319,6 +337,8 @@ function PostSheet({
   const [gone, setGone] = useState(false);
   const [translated, setTranslated] = useState<Record<string, string>>({});
   const [draft, setDraft] = useState("");
+  // 댓글 사진 한 장.
+  const commentPhoto = usePhotoPicks(1);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [editing, setEditing] = useState<{ kind: "post" } | { kind: "comment"; id: string; text: string } | null>(null);
@@ -353,11 +373,18 @@ function PostSheet({
   };
 
   const send = async () => {
-    if (!post || !draft.trim() || busy) return;
+    if (!post || (!draft.trim() && !commentPhoto.picks.length) || busy) return;
     setBusy(true);
     setError("");
     try {
-      const { comment } = await boardComment(post.id, draft.trim());
+      let image: MediaRef | undefined;
+      try {
+        image = (await commentPhoto.upload({ kind: "board" }))[0];
+      } catch (caught) {
+        setError(caught instanceof MediaError ? photoErrorText(t, caught.code) : t.photoFailed);
+        return;
+      }
+      const { comment } = await boardComment(post.id, draft.trim(), image?.id);
       if (me) setNames((current) => ({ ...current, [me]: current[me] ?? readCachedAccount()?.profile?.nickname ?? "" }));
       setComments((current) => [...current, comment]);
       const next = { ...post, comments: post.comments + 1 };
@@ -450,9 +477,18 @@ function PostSheet({
                 </div>
               </div>
             ) : null}
-            <p dir="auto" className="mt-3 whitespace-pre-wrap text-chat leading-relaxed text-ink">
-              {post.text}
-            </p>
+            {post.text ? (
+              <p dir="auto" className="mt-3 whitespace-pre-wrap text-chat leading-relaxed text-ink">
+                {post.text}
+              </p>
+            ) : null}
+            {post.images?.length ? (
+              <div className="mt-3 flex flex-wrap gap-2">
+                {post.images.map((image) => (
+                  <MediaImage key={image.id} image={image} t={t} maxWidth={post.images!.length > 1 ? 150 : 320} />
+                ))}
+              </div>
+            ) : null}
             {/* 앱 언어로 쓴 글을 같은 언어로 번역하면 말투만 바뀌어 나온다 — 그때는 버튼을 숨긴다. */}
             {post.language !== locale ? (
               <button type="button" onClick={() => void translate(post.id, post.text)} className="mt-2 text-caption text-info">
@@ -498,6 +534,12 @@ function PostSheet({
                         </button>
                       ) : null}
                     </div>
+                    {comment.image ? (
+                      <div className="mt-1">
+                        <MediaImage image={comment.image} t={t} maxWidth={200} />
+                      </div>
+                    ) : null}
+                    {comment.text ? (
                     <button type="button" onClick={() => void translate(comment.id, comment.text)} className="mt-1 block w-full text-start">
                       <span dir="auto" className="block whitespace-pre-wrap text-note text-ink">
                         {comment.text}
@@ -506,6 +548,7 @@ function PostSheet({
                         <span className="mt-1 block whitespace-pre-wrap text-caption text-slate-400">{translated[comment.id]}</span>
                       ) : null}
                     </button>
+                    ) : null}
                   </li>
                 );
               })}
@@ -516,7 +559,9 @@ function PostSheet({
       {post ? (
         <div className="border-t border-line p-3">
           {error ? <p className="mb-2 text-caption text-bad">{error}</p> : null}
+          <PhotoPicks t={t} photos={commentPhoto} busy={busy} compact />
           <div className="flex items-end gap-2">
+            <PhotoButton t={t} photos={commentPhoto} disabled={busy} />
             <textarea
               dir="auto"
               value={draft}
@@ -528,7 +573,7 @@ function PostSheet({
             />
             <button
               type="button"
-              disabled={!draft.trim() || busy}
+              disabled={(!draft.trim() && !commentPhoto.picks.length) || busy}
               onClick={() => void send()}
               className="tb-btn rounded-lg px-3 py-2 text-caption font-semibold disabled:opacity-40"
             >
@@ -586,5 +631,83 @@ function PostSheet({
         />
       ) : null}
     </Sheet>
+  );
+}
+
+type PhotoPickState = ReturnType<typeof usePhotoPicks>;
+
+/** 고른 사진(아직 안 올림). 보낼 때 upload()로 올려 MediaRef로. */
+function usePhotoPicks(max: number) {
+  const [picks, setPicks] = useState<{ file: File; preview: string }[]>([]);
+  useEffect(() => () => picks.forEach((pick) => URL.revokeObjectURL(pick.preview)), [picks]);
+  return {
+    max,
+    picks,
+    add(files: FileList | null) {
+      const chosen = Array.from(files ?? []).filter((file) => file.type.startsWith("image/"));
+      setPicks((current) => [...current, ...chosen.map((file) => ({ file, preview: URL.createObjectURL(file) }))].slice(0, max));
+    },
+    remove(index: number) {
+      setPicks((current) => current.filter((_, i) => i !== index));
+    },
+    async upload(scope: MediaScope): Promise<MediaRef[]> {
+      const refs: MediaRef[] = [];
+      for (const pick of picks) refs.push(await uploadImage(scope, pick.file));
+      setPicks([]);
+      return refs;
+    },
+  };
+}
+
+function PhotoButton({ t, photos, disabled }: { t: RoomCopy; photos: PhotoPickState; disabled?: boolean }) {
+  const picker = useRef<HTMLInputElement>(null);
+  if (!photos.max) return null;
+  return (
+    <>
+      <input
+        ref={picker}
+        type="file"
+        accept="image/*"
+        multiple={photos.max > 1}
+        className="hidden"
+        onChange={(event) => {
+          photos.add(event.target.files);
+          event.target.value = "";
+        }}
+      />
+      <button
+        type="button"
+        disabled={disabled || photos.picks.length >= photos.max}
+        onClick={() => picker.current?.click()}
+        aria-label={t.photoAttach}
+        title={t.photoAttach}
+        className="shrink-0 rounded-lg border border-line px-2.5 py-2 text-chat disabled:opacity-40"
+      >
+        📷
+      </button>
+    </>
+  );
+}
+
+function PhotoPicks({ t, photos, busy, compact = false }: { t: RoomCopy; photos: PhotoPickState; busy: boolean; compact?: boolean }) {
+  return (
+    <div className={`flex flex-wrap items-center gap-2 ${compact ? (photos.picks.length ? "mb-2" : "") : "mt-2"}`}>
+      {compact ? null : <PhotoButton t={t} photos={photos} disabled={busy} />}
+      {photos.picks.map((pick, index) => (
+        <span key={pick.preview} className="relative">
+          {/* eslint-disable-next-line @next/next/no-img-element -- 고른 사진 미리보기(blob:) */}
+          <img src={pick.preview} alt="" className="h-14 w-14 rounded-lg object-cover" />
+          <button
+            type="button"
+            disabled={busy}
+            onClick={() => photos.remove(index)}
+            aria-label={t.photoRemove}
+            className="absolute -end-1.5 -top-1.5 rounded-full bg-black/80 px-1.5 text-meta text-white"
+          >
+            ×
+          </button>
+        </span>
+      ))}
+    </div>
   );
 }

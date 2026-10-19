@@ -4,6 +4,7 @@ import { forgetPresence } from "./presenceStore.ts";
 import { leaveAllGroups } from "./groupStore.ts";
 import { forgetInvites } from "./inviteLinkStore.ts";
 import { forgetBoard } from "./boardStore.ts";
+import { forgetMedia } from "./mediaStore.ts";
 import { isIdentified } from "./identity.ts";
 import {
   EMAIL_CODE_LENGTH,
@@ -203,6 +204,8 @@ export async function deleteAccount(record: AccountRecord): Promise<void> {
   await leaveAllGroups(record.id);
   await forgetInvites(record.id);
   await forgetBoard(record.id);
+  // 올린 사진(1:1·단체방·게시판) 파일까지.
+  await forgetMedia(record.id);
   await kvListPush(PURGE_QUEUE_KEY, [record.dataUserId], 400 * 24 * 60 * 60);
 }
 

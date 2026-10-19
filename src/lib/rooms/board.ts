@@ -4,6 +4,8 @@
  * 글은 쓴 사람이 지울 때까지 남고, 계정을 지우면 그 사람의 글·댓글도 같이 지운다(server/boardStore.ts).
  */
 
+import type { MediaRef } from "./media.ts";
+
 export const BOARD_POST_MAX_CHARS = 2000;
 export const BOARD_COMMENT_MAX_CHARS = 500;
 export const BOARD_MAX_COMMENTS = 200;
@@ -21,6 +23,8 @@ export type BoardPost = {
   at: number;
   editedAt?: number;
   comments: number;
+  /** 붙인 사진(최대 MEDIA_PER_POST장, rooms/media.ts). 글을 지우면 같이 지운다. */
+  images?: MediaRef[];
 };
 
 export type BoardComment = {
@@ -29,6 +33,8 @@ export type BoardComment = {
   text: string;
   at: number;
   editedAt?: number;
+  /** 사진 한 장. */
+  image?: MediaRef;
 };
 
 /** 화면에 보낼 때 붙이는 이름(닉네임 없으면 빈 칸, 화면이 "?"로). */

@@ -1,4 +1,6 @@
 import { NextRequest } from "next/server";
+import { isMediaId, MEDIA_PER_POST, type MediaRef } from "@/lib/rooms/media";
+import { claimMedia } from "@/lib/server/mediaStore";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
 import { readAccount, readAccounts } from "@/lib/server/accountStore";
@@ -94,10 +96,14 @@ export async function POST(request: NextRequest) {
 
   if (action === "post") {
     const text = cleanBoardText(body.text, BOARD_POST_MAX_CHARS);
-    if (!text) return bad(request, "EMPTY");
     if (!isLearningLanguageCode(body.language)) return bad(request, "BAD_LANGUAGE");
     if (!(await readAccount(me))) return bad(request, "SIGNED_OUT", 401);
-    return answer(request, await createPost({ author: me, language: body.language, text }), "post");
+    // 사진(최대 MEDIA_PER_POST장): 게시판에 올린 내 사진만, 한 번.
+    const wanted = Array.isArray(body.imageIds) ? body.imageIds.filter(isMediaId).slice(0, MEDIA_PER_POST) : [];
+    const images = (await Promise.all(wanted.map((id) => claimMedia(id, me, { kind: "board" })))).filter((ref): ref is MediaRef => ref !== null);
+    if (images.length !== wanted.length) return bad(request, "BAD_IMAGE");
+    if (!text && !images.length) return bad(request, "EMPTY");
+    return answer(request, await createPost({ author: me, language: body.language, text, images }), "post");
   }
 
   if (!isBoardId(body.postId)) return bad(request, "BAD_POST");
@@ -125,8 +131,10 @@ export async function POST(request: NextRequest) {
 
   if (action === "comment") {
     const text = cleanBoardText(body.text, BOARD_COMMENT_MAX_CHARS);
-    if (!text) return bad(request, "EMPTY");
-    return answer(request, await addComment({ author: me, postId, text }), "comment");
+    const image = isMediaId(body.imageId) ? await claimMedia(body.imageId, me, { kind: "board" }) : null;
+    if (isMediaId(body.imageId) && !image) return bad(request, "BAD_IMAGE");
+    if (!text && !image) return bad(request, "EMPTY");
+    return answer(request, await addComment({ author: me, postId, text, ...(image ? { image } : {}) }), "comment");
   }
 
   if (!isBoardId(body.commentId)) return bad(request, "BAD_COMMENT");

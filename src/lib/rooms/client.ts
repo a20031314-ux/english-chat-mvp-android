@@ -364,11 +364,14 @@ export function dmSend(
   target: string,
   text: string,
   quote?: { seq: number; index?: number; ask: boolean; roomId?: string },
+  /** 먼저 올린 사진(mediaClient uploadImage) — 이 대화에 한 번만 붙는다. */
+  imageId?: string,
 ): Promise<{ thread: DmThread; message: DmMessage }> {
-  if (!quote) return dm("send", { target, text });
+  const image = imageId ? { imageId } : {};
+  if (!quote) return dm("send", { target, text, ...image });
   // roomId가 있으면 쪽지: 방 자막 줄을 집은 것(서버가 방 기록에서 채움).
-  if (quote.roomId) return dm("send", { target, text, roomQuote: { roomId: quote.roomId, seq: quote.seq }, ask: quote.ask });
-  return dm("send", { target, text, quoteSeq: quote.seq, quoteIndex: quote.index, ask: quote.ask });
+  if (quote.roomId) return dm("send", { target, text, roomQuote: { roomId: quote.roomId, seq: quote.seq }, ask: quote.ask, ...image });
+  return dm("send", { target, text, quoteSeq: quote.seq, quoteIndex: quote.index, ask: quote.ask, ...image });
 }
 
 export function dmDecline(threadId: string): Promise<{ ok: true }> {
@@ -422,8 +425,9 @@ export function groupEndCall(groupId: string, roomId: string): Promise<{ logged:
   return groups("endCall", { groupId, roomId });
 }
 
-export function groupSend(groupId: string, text: string, quote?: { seq: number; ask: boolean }): Promise<{ group: Group; message: GroupMessage }> {
-  return groups("send", quote ? { groupId, text, quoteSeq: quote.seq, ask: quote.ask } : { groupId, text });
+export function groupSend(groupId: string, text: string, quote?: { seq: number; ask: boolean }, imageId?: string): Promise<{ group: Group; message: GroupMessage }> {
+  const image = imageId ? { imageId } : {};
+  return groups("send", quote ? { groupId, text, quoteSeq: quote.seq, ask: quote.ask, ...image } : { groupId, text, ...image });
 }
 
 export function groupInvite(groupId: string, target: string): Promise<{ ok: true }> {
@@ -465,8 +469,8 @@ export function boardList(input: { language?: string; offset?: number }): Promis
 export function boardOpen(postId: string): Promise<{ post: BoardPost; comments: BoardComment[]; authors: BoardAuthor[] }> {
   return board("open", { postId });
 }
-export function boardWrite(language: string, text: string): Promise<{ post: BoardPost }> {
-  return board("post", { language, text });
+export function boardWrite(language: string, text: string, imageIds: string[] = []): Promise<{ post: BoardPost }> {
+  return board("post", { language, text, ...(imageIds.length ? { imageIds } : {}) });
 }
 export function boardEdit(postId: string, text: string): Promise<{ post: BoardPost }> {
   return board("edit", { postId, text });
@@ -474,8 +478,8 @@ export function boardEdit(postId: string, text: string): Promise<{ post: BoardPo
 export function boardDelete(postId: string): Promise<{ ok: true }> {
   return board("delete", { postId });
 }
-export function boardComment(postId: string, text: string): Promise<{ comment: BoardComment }> {
-  return board("comment", { postId, text });
+export function boardComment(postId: string, text: string, imageId?: string): Promise<{ comment: BoardComment }> {
+  return board("comment", { postId, text, ...(imageId ? { imageId } : {}) });
 }
 export function boardEditComment(postId: string, commentId: string, text: string): Promise<{ comment: BoardComment }> {
   return board("editComment", { postId, commentId, text });

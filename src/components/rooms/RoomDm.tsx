@@ -18,6 +18,7 @@ import type { RoomMeta } from "@/lib/rooms/protocol";
 import { askPhrase, questionCount } from "@/lib/rooms/quote";
 import type { RoomNote } from "@/lib/rooms/layout";
 import { Composer, Face, useProfile } from "./RoomParts";
+import { MediaImage } from "./MediaImage";
 
 /*
  * 1:1 메시지(rooms/dm.ts). 목록(DmList)과 대화(DmThreadView).
@@ -50,6 +51,8 @@ function Name({ id }: { id: string }) {
 }
 
 function preview(t: RoomCopy, thread: DmThread): string {
+  // 사진만 보낸 줄은 서버가 "📷"로 남긴다 — 그 언어의 "사진"을 붙여 보인다.
+  if (thread.lastText === "📷") return `📷 ${t.photoLabel}`;
   return thread.lastText || t.callStarted;
 }
 
@@ -292,9 +295,10 @@ export function DmThreadView({
               locale={locale}
               targetLanguage={targetLanguage}
               recent={() => messages.filter((message) => message.kind === "text").slice(-6).map((message) => `${message.from === me ? "me" : name}: ${message.text}`)}
-              onSend={async (text) => {
+              attach={{ kind: "dm", target: other }}
+              onSend={async (text, image) => {
                 try {
-                  const body = await dmSend(other, text, quoting ? { seq: quoting.seq, index: quoting.index, ask: quoting.ask, roomId: quoting.roomId } : undefined);
+                  const body = await dmSend(other, text, quoting ? { seq: quoting.seq, index: quoting.index, ask: quoting.ask, roomId: quoting.roomId } : undefined, image?.id);
                   setThread(body.thread);
                   add([body.message]);
                   setQuoting(null);
@@ -425,6 +429,12 @@ function Bubble({
             {t.askedYou.replace("{name}", quoteName(null, ""))}
           </p>
         ) : null}
+        {message.image ? (
+          <div className={`mb-1 flex ${mine ? "justify-end" : ""}`}>
+            <MediaImage image={message.image} t={t} />
+          </div>
+        ) : null}
+        {message.text || message.quote ? (
         <button
           type="button"
           onClick={() => void toggle()}
@@ -441,6 +451,7 @@ function Bubble({
           ) : null}
           {message.text}
         </button>
+        ) : null}
         {open ? (
           <p className={`mt-1 px-1 text-[13px] ${mine ? "text-end text-emerald-200" : "text-slate-300"}`} dir="auto">
             {extra ?? (mine ? t.howToSayLoading : t.translating)}

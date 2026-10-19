@@ -36,6 +36,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   howToSayCard: 1,
   // 말하는 방에서 편한 말로 한 줄 → 본인에게만 "이렇게 말해 보세요"(카드와 같은 길).
   roomHint: 1,
+  // 사람 사이 사진 한 장: 자동 검사 한 번(omni-moderation, 무료) + 저장.
+  mediaUpload: 1,
   // The opening line of a conversation nobody has spoken in yet.
   chatStart: 1,
   // A question about their own progress, answered from what is kept (learner/ask).

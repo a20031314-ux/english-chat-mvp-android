@@ -1,12 +1,13 @@
 {
   "_설명": "데이터 지도(scripts/data-map.mjs)의 사람이 쓰는 칸. 키 묶음마다 feature(기능), scope(user 학습자 한 명 / account 계정 / shared 모두 함께 / room 방·대화 / system 운영 / test 점검), onAccountDelete(지움 / 지움(주 1회 정리) / 남음 / 해당 없음), what(무엇). 보관 기간·코드 위치는 코드에서 자동. 새 키 묶음을 만들면 여기 한 줄 — 없으면 CI 실패. ignore는 키처럼 보이지만 저장 키가 아닌 문자열.",
   "ignore": [
-    "acct:", "acct:…", "rc:", "rc:…", "rc:simcheck-…", "purpose:", "languagebank-auth:", "node:crypto", "other:", "pick:", "call:", "feedback:",
+    "data:", "acct:", "acct:…", "rc:", "rc:…", "rc:simcheck-…", "purpose:", "languagebank-auth:", "node:crypto", "other:", "pick:", "call:", "feedback:",
     "capacitor://localhost", "http://localhost", "https:", "https://localhost", "https://accounts.google.com", "https://api.openai.com/v1/realtime/calls",
     "https://api.resend.com/emails", "https://api.revenuecat.com/v1/subscribers", "https://english-chat-mvp-android.vercel.app", "https://english-chat-mvp.vercel.app",
     "https://languagebank.net", "https://oauth2.googleapis.com/tokeninfo?id_token=", "https://www.gstatic.com/admob/reward/verifier-keys.json", "https://www.languagebank.net"
   ],
   "groups": {
+    "media:v1": { "feature": "사람 사이 사진(1:1·단체방·게시판)", "scope": "room", "onAccountDelete": "지움", "what": "사진 정보(올린 사람·붙인 곳·Blob 경로·크기·지울 때)·하루 올린 수·올린 사람별 id·날짜별 지울 목록 — 파일은 Vercel Blob(private) media/<id>, 1:1·단체방 30일·안 보낸 사진 하루·게시판은 글과 함께" },
     "account:v1": { "feature": "계정", "scope": "account", "onAccountDelete": "지움", "what": "계정 줄·아이디/이메일/Google 연결·사진·이메일 코드·로그인 실패 수, 지울 학습 id 목록(purge)" },
     "ads:tx": { "feature": "광고", "scope": "system", "onAccountDelete": "해당 없음", "what": "보상형 광고 거래 번호(같은 보상 두 번 막기)" },
     "usage:adreward": { "feature": "광고", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "오늘 본 보상형 광고 수" },

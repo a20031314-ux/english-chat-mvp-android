@@ -23,6 +23,7 @@ import { requestGroupCall } from "@/lib/rooms/openDm";
 import { askPhrase, questionCount } from "@/lib/rooms/quote";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
 import { Composer, Face, languagePair, useProfile } from "./RoomParts";
+import { MediaImage } from "./MediaImage";
 import { teamCopy, type TeamCopy } from "@/lib/rooms/teamCopy";
 import { TeamSpace } from "./TeamSpace";
 
@@ -129,7 +130,7 @@ export function GroupList({
                         {languagePair(group.languages, locale)}
                         {group.languages.length ? " · " : ""}
                         {t.groupMembers.replace("{n}", String(group.members.length))}
-                        {group.lastText ? ` · ${group.lastText}` : ""}
+                        {group.lastText ? ` · ${group.lastText === "📷" ? `📷 ${t.photoLabel}` : group.lastText}` : ""}
                       </>
                     )}
                   </span>
@@ -433,6 +434,12 @@ function GroupBubble({
             {t.askedYou.replace("{name}", name)}
           </p>
         ) : null}
+        {message.image ? (
+          <div className={`mb-1 flex ${mine ? "justify-end" : ""}`}>
+            <MediaImage image={message.image} t={t} />
+          </div>
+        ) : null}
+        {message.text || message.quote ? (
         <button
           type="button"
           onClick={toggle}
@@ -448,6 +455,7 @@ function GroupBubble({
           ) : null}
           {message.text}
         </button>
+        ) : null}
         {open ? (
           <p className="mt-1 px-1 text-note text-slate-300" dir="auto">
             {translation ?? t.translating}
@@ -809,8 +817,9 @@ export function GroupThreadView({
               locale={locale}
               targetLanguage={targetLanguage}
               recent={() => texts.slice(-6).map((row) => row.text)}
-              onSend={async (text) => {
-                const body = await groupSend(groupId, text, quoting ? { seq: quoting.seq, ask: quoting.ask } : undefined);
+              attach={{ kind: "group", id: groupId }}
+              onSend={async (text, image) => {
+                const body = await groupSend(groupId, text, quoting ? { seq: quoting.seq, ask: quoting.ask } : undefined, image?.id);
                 setGroup(body.group);
                 add([body.message]);
                 setQuoting(null);

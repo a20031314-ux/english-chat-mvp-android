@@ -69,6 +69,8 @@ export const OP_COST: Record<string, OpCost> = {
   howToSay: mini(),
   howToSayCard: mini(),
   roomHint: mini(),
+  // 검사 모델은 무료, 남는 것은 Blob 저장(150KB × 30일)과 전송 — 한 장 약 $0.00002 + 몇 번 보기.
+  mediaUpload: { kind: "flat", usd: 0.00005, basis: "assumed" },
   chatStart: mini(),
   learnerAsk: mini(),
   analysisInput: mini(),
