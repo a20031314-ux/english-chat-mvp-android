@@ -36,7 +36,9 @@
 | 영상 | `videoLine:v1` | 모두 함께 | ?(코드에서 못 읽음) | 해당 없음 | 자막 줄 풀이(영상·언어별 공유) | `subtitleGlossStore.ts` |
 | 영상 | `videoTranscript:v1` | 모두 함께 | 400일 | 해당 없음 | 영상 자막(언어별 공유) | `videoTranscriptStore.ts` |
 | 영상 | `videoTranscripts:v1` | 모두 함께 | 400일 | 해당 없음 | 자막 있는 영상 목록 | `videoTranscriptStore.ts` |
+| 오늘의 팩 | `pack:days` | 학습자 한 명 | 15일 | 해당 없음 | 무료 사용자가 팩을 연 날짜(주 2번 한도, 15일 뒤 저절로 사라짐) | `packStore.ts` |
 | 오늘의 팩 | `pack:v1` | 학습자 한 명 | 4일 | 남음(4일 뒤 만료) | 오늘의 팩 진행 | `packStore.ts` |
+| 요금 한도 | `usage:aihelp` | 학습자 한 명 | 3일 | 해당 없음 | 오늘 쓴 AI 도움·방 자막 줄 수(사흘 뒤 저절로 사라짐) | `entitlementStore.ts` |
 | 의견 보내기 | `feedback:v1` | 운영 | 120일 · 2일 · 90일 | 남음(90일) | 사용자가 보낸 의견·그림·반영 카드 | `feedbackFixStore.ts` `feedbackStore.ts` |
 | 자라는 중 | `growth:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 표현별 자라는 기록(언어별) | `growthStore.ts` |
 | 자라는 중 | `selfcheck:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 스스로 확인 기록(언어별) | `selfCheckStore.ts` |

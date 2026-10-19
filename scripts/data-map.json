@@ -57,6 +57,8 @@
     "usage:calls": { "feature": "자유 통화", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "통화 횟수(평생)" },
     "usage:callsec": { "feature": "자유 통화", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "통화 초(월별)" },
     "usage:chat": { "feature": "채팅", "scope": "user", "onAccountDelete": "해당 없음", "what": "오늘 보낸 채팅 수" },
+    "usage:aihelp": { "feature": "요금 한도", "scope": "user", "onAccountDelete": "해당 없음", "what": "오늘 쓴 AI 도움·방 자막 줄 수(사흘 뒤 저절로 사라짐)" },
+    "pack:days": { "feature": "오늘의 팩", "scope": "user", "onAccountDelete": "해당 없음", "what": "무료 사용자가 팩을 연 날짜(주 2번 한도, 15일 뒤 저절로 사라짐)" },
     "usage:op": { "feature": "비용", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "기능별 사용 횟수(비용 보고, 일별)" },
     "usage:rptrial": { "feature": "자유 통화", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "처음 20포인트 체험 쓴 양" },
     "usage:tok": { "feature": "비용", "scope": "system", "onAccountDelete": "해당 없음", "what": "기능별 잰 토큰(일별, 사람 없음)" },
