@@ -14,7 +14,7 @@
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
 | 다음 앱 버전 | 2.70 (versionCode 84) — 저장소에 올림(2026-10-20). 2.69(83)는 Play에 안 올리고 2.70에 합침(새로워진 점 2.70 2장 + 2.69 6장). 출시 노트 84는 PR, 빌드·내부 테스트 대기 | — |
-| iOS | TestFlight 빌드 올라감(2026-10-20, 2.69 빌드 83.2) — 아이폰 설치·기기 확인 대기. 말하는 방·메시지·Google 로그인 없는 1차, 결제는 아직 | `npm run build:ios`, `hub/drafts/ios-launch.md` |
+| iOS | TestFlight 2.70 빌드 84.7(2026-10-20) — 아이폰 13 mini에서 화면·영상·통화(받아쓰기·말 끝·튜터 목소리) 사용자 확인. 말하는 방·메시지·Google 로그인 없는 1차, 결제·심사 정책 손볼 것 남음(`hub/drafts/ios-launch.md`) | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할
 
