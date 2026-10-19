@@ -14,7 +14,7 @@
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
 | 다음 앱 버전 | 2.69 (versionCode 83) — 다시 자름(2026-10-19: 친구 초대·단체방·자유 대화·참여 방식·My/Room 탭·💡 힌트·My 노트(단어장 탭 뺌)·게시판), 빌드·Play 업로드 대기. 출시 노트 PR #9 | — |
-| iOS | 준비 중 — `ios/` 프로젝트 있음(2026-10-18), 말하는 방·메시지·Google 로그인 없는 1차. 클라우드 빌드(Actions "iOS: build to TestFlight") 준비, 사람 설정 대기 | `npm run build:ios`, `hub/drafts/ios-launch.md` |
+| iOS | TestFlight 빌드 올라감(2026-10-20, 2.69 빌드 83.2) — 아이폰 설치·기기 확인 대기. 말하는 방·메시지·Google 로그인 없는 1차, 결제는 아직 | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할
 
