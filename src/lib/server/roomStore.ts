@@ -37,6 +37,7 @@ import {
   kvListTrim,
   kvDelete,
   kvSetJson,
+  kvGetJsonMany,
 } from "./kv.ts";
 
 const MEMBER_TTL_SECONDS = 30;
@@ -87,7 +88,9 @@ export async function readMeta(id: string): Promise<RoomMeta | null> {
 
 async function readMembers(id: string): Promise<RoomMember[]> {
   const peers = [...new Set(await kvListRange(peersKey(id)))];
-  const rows = await Promise.all(peers.map((peer) => kvGetJson<RoomMember>(memberKey(id, peer))));
+  // 한 번에(MGET). 사람마다 GET을 따로 보내면 1.5초마다 묻는 사람 × 다녀간 사람(최대 64)만큼
+  // 저장소 명령이 늘었다 — 16명 방 하나가 초당 약 250개(부하 점검 2026-10-20).
+  const rows = await kvGetJsonMany<RoomMember>(peers.map((peer) => memberKey(id, peer)));
   return liveMembers(
     rows.filter((row): row is RoomMember => row !== null),
     Date.now(),
