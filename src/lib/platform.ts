@@ -48,6 +48,14 @@ export function deviceMediaDownloadAllowed(): boolean {
   return !isIosApp();
 }
 
+/**
+ * 통화 한 턴의 녹음·받아쓰기 상태를 화면 구석에 보여 주는 진단 상자(맥 없이 아이폰 문제를 보려고, 2026-10-20).
+ * TestFlight 빌드 작업 흐름이 `NEXT_PUBLIC_IOS_DIAG=1`로 켠다. **App Store 심사에 낼 빌드에서는 끈다.**
+ */
+export function turnDiagnosticsEnabled(): boolean {
+  return isIosApp() && process.env.NEXT_PUBLIC_IOS_DIAG?.trim() === "1";
+}
+
 /** 앱 바깥(스토어)으로 보내는 업데이트 링크. */
 const PLAY_LISTING = "https://play.google.com/store/apps/details?id=com.yourname.englishchat";
 

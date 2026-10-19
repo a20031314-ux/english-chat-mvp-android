@@ -1,6 +1,6 @@
 import type { PracticeGoal } from "@/lib/learner/practice";
 import { TURN_NOT_STARTED, hearFrame } from "./hearFrame.ts";
-import { isIosApp } from "@/lib/platform";
+import { isIosApp, turnDiagnosticsEnabled } from "@/lib/platform";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import {
@@ -54,6 +54,35 @@ export type Recorder = {
   speechStartedAt: () => number | null;
 };
 
+/**
+ * 한 턴에 무슨 일이 있었는지(진단 상자용, platform.ts `turnDiagnosticsEnabled`). 문장은 담지 않고 크기·상태만.
+ * 녹음 파일은 이 기기 안에서만 다시 들어 보도록 object URL로 둔다(서버로 가지 않음).
+ */
+export type TurnDiag = {
+  mime: string;
+  chunks: number;
+  bytes: number;
+  peak: number;
+  spoke: boolean;
+  heardNothing: boolean;
+  track: string;
+  status: string;
+  textLength: number;
+  audioUrl: string | null;
+};
+let lastDiag: TurnDiag | null = null;
+const diagListeners = new Set<(diag: TurnDiag) => void>();
+export function onTurnDiag(listener: (diag: TurnDiag) => void): () => void {
+  diagListeners.add(listener);
+  if (lastDiag) listener(lastDiag);
+  return () => void diagListeners.delete(listener);
+}
+function reportDiag(diag: TurnDiag) {
+  if (lastDiag?.audioUrl && lastDiag.audioUrl !== diag.audioUrl) URL.revokeObjectURL(lastDiag.audioUrl);
+  lastDiag = diag;
+  for (const listener of diagListeners) listener(diag);
+}
+
 /** Below this, the recording is a click or a breath rather than an answer. */
 const MIN_AUDIO_BYTES = 1200;
 
@@ -84,6 +113,7 @@ async function transcribe(
   mimeType: string,
   language: string,
   isPremium: boolean,
+  note?: (status: string) => void,
 ): Promise<string> {
   const response = await fetch(apiUrl("/api/roleplay/listen"), {
     method: "POST",
@@ -98,6 +128,7 @@ async function transcribe(
       language,
     }),
   });
+  note?.(String(response.status));
   if (!response.ok) {
     console.error("[roleplay] transcribe failed with", response.status);
     return "";
@@ -192,6 +223,8 @@ type VoiceWatch = {
   speechStartedAt: () => number | null;
   /** The whole wait for a first word passed with nothing loud enough to be one. */
   heardNothing: () => boolean;
+  /** Loudest raw level the analyser heard (진단용). */
+  peak: () => number;
 };
 
 function watchForVoice(
@@ -218,7 +251,7 @@ function watchForVoice(
     // No analysis available — the caller still has its own control, and a turn
     // that cannot be detected is better than a turn that cannot be spoken.
     dropCopy();
-    return { stop: () => undefined, speechStartedAt: () => null, heardNothing: () => false };
+    return { stop: () => undefined, speechStartedAt: () => null, heardNothing: () => false, peak: () => -1 };
   }
 
   const samples = new Float32Array(analyser.fftSize);
@@ -229,6 +262,7 @@ function watchForVoice(
   let silent = false;
   /** Any frame with sound in it at all. A real microphone is never exactly 0. */
   let anySignal = false;
+  let peak = 0;
 
   const finish = () => {
     if (done) return;
@@ -250,6 +284,7 @@ function watchForVoice(
     const now = Date.now();
     const raw = Math.sqrt(sum / samples.length);
     if (raw > 0) anySignal = true;
+    if (raw > peak) peak = raw;
     const level = scale(raw, now - startedAt);
 
     const wasSpeaking = turn.spoke;
@@ -290,6 +325,7 @@ function watchForVoice(
     },
     speechStartedAt: () => turn.firstSpeechAt,
     heardNothing: () => silent,
+    peak: () => peak,
   };
 }
 
@@ -311,6 +347,7 @@ export async function listenForTurn(input: {
     audio: { echoCancellation: true, noiseSuppression: true, autoGainControl: true },
   });
   const mimeType = preferredMimeType();
+  const diagnose = turnDiagnosticsEnabled();
   const recorder = new MediaRecorder(stream, mimeType ? { mimeType } : undefined);
   const chunks: Blob[] = [];
   recorder.addEventListener("dataavailable", (event) => {
@@ -336,12 +373,33 @@ export async function listenForTurn(input: {
         recorder.addEventListener(
           "stop",
           () => {
+            const firstTrack = stream.getAudioTracks()[0];
+            const track = firstTrack
+              ? `${firstTrack.readyState}${firstTrack.muted ? "/muted" : ""}${firstTrack.enabled ? "" : "/off"}`
+              : "none";
             release();
             const blob = new Blob(chunks, { type: mimeType || "audio/webm" });
+            const diag: TurnDiag = {
+              mime: recorder.mimeType || mimeType || "?",
+              chunks: chunks.length,
+              bytes: blob.size,
+              peak: watch.peak(),
+              spoke: watch.speechStartedAt() !== null,
+              heardNothing: watch.heardNothing(),
+              track,
+              status: "-",
+              textLength: 0,
+              audioUrl: diagnose ? URL.createObjectURL(blob) : null,
+            };
+            const finish = (text: string) => {
+              if (diagnose) reportDiag({ ...diag, textLength: text.length });
+              resolve(text);
+            };
             // Nothing worth sending: an empty answer reads as a miss, which is
             // what a turn nobody spoke in should be.
             if (blob.size < MIN_AUDIO_BYTES) {
-              resolve("");
+              diag.status = "small";
+              finish("");
               return;
             }
             // Twelve seconds of nothing is not sent to be written down: a
@@ -351,12 +409,18 @@ export async function listenForTurn(input: {
             // Only when the wait ran out — a turn they ended themselves is
             // still sent, in case the meter missed a quiet voice.
             if (watch.heardNothing()) {
-              resolve("");
+              diag.status = "silent";
+              finish("");
               return;
             }
-            void transcribe(blob, mimeType, input.language, input.isPremium)
-              .then(resolve)
-              .catch(() => resolve(""));
+            void transcribe(blob, mimeType, input.language, input.isPremium, (status) => {
+              diag.status = status;
+            })
+              .then(finish)
+              .catch(() => {
+                diag.status = diag.status === "-" ? "net" : diag.status;
+                finish("");
+              });
           },
           { once: true },
         );

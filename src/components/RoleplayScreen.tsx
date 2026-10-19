@@ -1,6 +1,8 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { TurnDiagBox } from "@/components/roleplay/TurnDiagBox";
+import { turnDiagnosticsEnabled } from "@/lib/platform";
 import { sayLine } from "@/components/RoleplayOwnLine";
 import { refreshLedgerSoon } from "@/lib/learner/ledgerClient";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
@@ -937,6 +939,7 @@ export function RoleplayScreen({
 
   return (
     <FullScreenLayer>
+      {turnDiagnosticsEnabled() ? <TurnDiagBox /> : null}
       <header className="flex shrink-0 items-center justify-between border-b border-white/10 px-4 py-3">
         <div>
           <h2 className="text-sm font-semibold text-white">{scenario.title}</h2>

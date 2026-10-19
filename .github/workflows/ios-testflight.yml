@@ -54,6 +54,8 @@ jobs:
           NEXT_PUBLIC_REVENUECAT_IOS_API_KEY: ${{ secrets.NEXT_PUBLIC_REVENUECAT_IOS_API_KEY }}
           NEXT_PUBLIC_APP_STORE_URL: ${{ vars.NEXT_PUBLIC_APP_STORE_URL }}
           IOS_BUNDLE_ID: ${{ vars.IOS_BUNDLE_ID }}
+          # 통화 진단 상자(platform.ts turnDiagnosticsEnabled). App Store 심사에 낼 빌드 전에 "0"으로.
+          NEXT_PUBLIC_IOS_DIAG: "1"
         run: npm run build:ios
 
       - name: App Store Connect 키
