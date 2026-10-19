@@ -12,6 +12,9 @@ const ALLOWED_ORIGIN_PREFIXES = [
   "capacitor://localhost",
   "https://english-chat-mvp.vercel.app",
   "https://english-chat-mvp-android.vercel.app",
+  // 웹 도메인(2026-10-20, 가비아 → Vercel). languagebank.net은 www로 넘어간다.
+  "https://www.languagebank.net",
+  "https://languagebank.net",
 ];
 
 // Every header the app actually sends. A missing one fails the preflight, which

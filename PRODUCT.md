@@ -314,7 +314,7 @@
 - **웹 (2026-10-20, 사용자 결정 "무료와 이어 쓰기, 도메인은 산다"):** 같은 서버·계정·방이라 웹 사용자와 앱 사용자가 같은 말하는 방·메시지·단체방에서 만난다. 웹은 무료,
   **유료는 앱에서 사고 같은 계정으로 로그인하면 웹에서 이어 쓴다**(서버가 계정 id로 RevenueCat에 확인 `premiumRequest.ts`, 웹은 서버가 확인한 요금만 기억 `fetchPlanFromServer`, 웹에서 요금 표시 머리를 바꿔도 소용없음).
   결제 화면은 "구독은 앱에서 사요…"(`paywallNativeOnly`), '복원'은 서버에 다시 묻기. 이름·아이콘 languagebank, 홈 화면에 추가(`app/manifest.ts`). Google 로그인은 웹에 아직 없음(웹용 OAuth 설정 필요), 영상은 자막 있는 것·서버가 준비한 것만(iOS와 같음).
-  단어장·담은 표현·문장 메모·채팅·통화 기록 일부는 아직 기기에만 있어 앱↔웹이 서로 안 보인다(계정 동기화는 다음 일). 도메인은 사람이 사서 Vercel에 붙이고 `NEXT_PUBLIC_WEB_BASE`를 바꾼다(초대 링크 주소).
+  단어장·담은 표현·문장 메모·채팅·통화 기록 일부는 아직 기기에만 있어 앱↔웹이 서로 안 보인다(계정 동기화는 다음 일). 도메인 **www.languagebank.net**(2026-10-20, 가비아 → Vercel, languagebank.net은 www로 넘김) — 초대 링크·처리방침 링크가 이 주소. 앱의 서버 통신(/api)은 그대로 english-chat-mvp.vercel.app.
 - **iOS (준비 중, 2026-10-18, `ios/`, `hub/drafts/ios-launch.md`):** 같은 화면을 Capacitor iOS로. 플랫폼마다 다른 것은 `src/lib/platform.ts` 한곳:
   iOS 1차는 **말하는 방·1:1 메시지 없음**(입구·🎙·`?rooms=1` 모두 꺼짐, `NEXT_PUBLIC_IOS_SOCIAL=1`로 나중에 켬), **Google 로그인 없음**(아이디·비밀번호·이메일 코드만),
   기기가 YouTube 오디오를 직접 받는 길 없음(자막 있는 영상·이달의 영상만), 결제·계정 삭제 문구의 Play 스토어 → App Store, 업데이트 링크는 App Store(`NEXT_PUBLIC_APP_STORE_URL`),

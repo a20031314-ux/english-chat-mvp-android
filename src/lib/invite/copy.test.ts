@@ -23,7 +23,7 @@ test("이름 채우기: 일본어·아랍어 이름, 이름 안의 {n}은 다시
 
 test("초대 주소 → Play 설치 경로 → 앱이 되읽기", () => {
   const invite = { code: "ab3cd4ef", room: "k2m3n4" };
-  assert.equal(inviteWebUrl(invite.code, invite.room), "https://english-chat-mvp.vercel.app/invite?c=ab3cd4ef&room=k2m3n4");
+  assert.equal(inviteWebUrl(invite.code, invite.room), "https://www.languagebank.net/invite?c=ab3cd4ef&room=k2m3n4");
   assert.deepEqual(parseInviteParams(referrerFor(invite), "invite"), invite);
   const play = new URL(playStoreUrl(invite));
   assert.deepEqual(parseInviteParams(play.searchParams.get("referrer") ?? "", "invite"), invite);

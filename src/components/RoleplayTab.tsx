@@ -41,7 +41,7 @@ type CallTime = {
  * shows it again, which is the safe side to fail on.
  */
 const DATA_NOTICE_KEY = "callDataNoticeSeen.v1";
-const PRIVACY_URL = "https://english-chat-mvp.vercel.app/privacy";
+const PRIVACY_URL = "https://www.languagebank.net/privacy";
 
 function readNoticeSeen(): boolean {
   try {
