@@ -50,6 +50,8 @@ App Store Connect API 키로 Xcode가 서명을 스스로 만들고(클라우드
    심사용 데모 계정(아이디·비밀번호), iPhone 스크린샷(store-shots로 만들 수 있음).
 6. 제출.
 
+- **심사 빌드 전에 진단 끄기**: 작업 흐름 `NEXT_PUBLIC_IOS_DIAG`를 "0"(통화 진단 상자), `public/yt-embed.html` 회색 상태 줄(`#s`) 빼기.
+
 ## 심사 정책 점검 (2026-10-19, 아직 안 고침 — 사용자 확인 대기)
 
 코드상 1차 범위(사람과 학습·초대·팀·메이트·Google 로그인·기기 YouTube 받기 끔)는 iOS에서 모두 꺼져 있음. TestFlight 첫 실행은 아직 없음.
