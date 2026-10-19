@@ -10,6 +10,7 @@
  *
  * 모두 마지막 활동으로부터 30일(DM_TTL_SECONDS)이면 사라진다.
  */
+import { rowsAfter } from "./lateRows.ts";
 import {
   DM_MAX_KEPT,
   DM_TTL_SECONDS,
@@ -49,7 +50,7 @@ function parse(rows: string[]): DmMessage[] {
 }
 
 export async function readMessages(id: string, since = 0): Promise<DmMessage[]> {
-  return parse(await kvListRange(msgsKey(id), -DM_MAX_KEPT, -1)).filter((message) => message.seq > since);
+  return rowsAfter(parse(await kvListRange(msgsKey(id), -DM_MAX_KEPT, -1)), since);
 }
 
 export type SendResult = { ok: true; thread: DmThread; message: DmMessage } | { ok: false; error: SendDecision | "BLOCKED" };

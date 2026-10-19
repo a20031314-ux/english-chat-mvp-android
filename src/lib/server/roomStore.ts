@@ -9,6 +9,7 @@
  * 서버에 남기지 않는다는 원칙의 예외라서, 시험 기능을 넘어서기 전에 동의와
  * 보관 방식을 정해야 한다(hub/drafts/voice-room-workspace.md).
  */
+import { rowsAfter } from "./lateRows.ts";
 import { roomMatches } from "../rooms/roomFilter.ts";
 import {
   MAX_LINES_KEPT,
@@ -303,7 +304,7 @@ export async function poll(input: {
     kvListRange(linesKey(input.id), -MAX_LINES_KEPT, -1),
   ]);
   const signals = parseRows<RoomSignal>(rawSignals);
-  const lines = parseRows<RoomLine>(rawLines).filter((line) => line.seq > input.since);
+  const lines = rowsAfter(parseRows<RoomLine>(rawLines), input.since);
   return { now, room: meta, members, signals, lines };
 }
 

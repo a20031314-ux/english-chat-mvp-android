@@ -30,7 +30,8 @@ import {
   type TeamSpace,
 } from "../rooms/group.ts";
 import { clipQuote, type LineQuote } from "../rooms/quote.ts";
-import { kvDelete, kvGetJson, kvIncrBy, kvListPush, kvListRange, kvListTrim, kvSetJson } from "./kv.ts";
+import { kvDelete, kvGetJson, kvIncrBy, kvListPush, kvListRange, kvListTrim, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
+import { rowsAfter } from "./lateRows.ts";
 
 const groupKey = (id: string) => `grp:v1:g:${id}`;
 const msgsKey = (id: string) => `grp:v1:m:${id}`;
@@ -41,6 +42,27 @@ const spaceKey = (id: string) => `grp:v1:ws:${id}`;
 const daysKey = (id: string) => `grp:v1:days:${id}`;
 const DAYS_KEEP = 400;
 const BOX_KEEP = 100;
+
+const lockKey = (id: string) => `grp:v1:lock:${id}`;
+
+/**
+ * 한 단체방의 정보(사람·방장·마지막 줄)를 읽고 고쳐 쓰는 동작을 한 줄로 세운다. 둘이 동시에 초대를 받으면
+ * 서로 읽은 옛 정보로 덮어써 한 사람이 빠졌다(가상 사용자 겹침 점검 2026-10-19). 줄 번호와 목록 순서도
+ * 같은 순서가 된다. 3초 안에 못 잡으면 막지 않고 그냥 한다(멈춤보다 낫다, 이어 받기는 lateRows가 메움).
+ */
+async function withGroupLock<T>(id: string, work: () => Promise<T>): Promise<T> {
+  const token = `${Date.now()}-${Math.random()}`;
+  let held = false;
+  for (let tries = 0; tries < 60 && !held; tries += 1) {
+    held = await kvSetJsonIfAbsent(lockKey(id), token, 5);
+    if (!held) await new Promise((resolve) => setTimeout(resolve, 50));
+  }
+  try {
+    return await work();
+  } finally {
+    if (held && (await kvGetJson<string>(lockKey(id))) === token) await kvDelete([lockKey(id)]);
+  }
+}
 
 export async function readGroup(id: string): Promise<Group | null> {
   return kvGetJson<Group>(groupKey(id));
@@ -72,7 +94,7 @@ function parse(rows: string[]): GroupMessage[] {
 }
 
 export async function readGroupMessages(id: string, since = 0): Promise<GroupMessage[]> {
-  return parse(await kvListRange(msgsKey(id), -GROUP_MAX_KEPT, -1)).filter((message) => message.seq > since);
+  return rowsAfter(parse(await kvListRange(msgsKey(id), -GROUP_MAX_KEPT, -1)), since);
 }
 
 async function push(group: Group, message: Omit<GroupMessage, "seq" | "at">): Promise<{ group: Group; message: GroupMessage }> {
@@ -119,7 +141,7 @@ export async function createGroup(input: { owner: string; name: string; language
 }
 
 /** 초대: 방에 있는 사람이면 누구나(정원 안에서). */
-export async function inviteToGroup(by: string, id: string, target: string): Promise<"ok" | "NO_GROUP" | "NOT_MEMBER" | "ALREADY" | "FULL"> {
+async function inviteToGroupUnlocked(by: string, id: string, target: string): Promise<"ok" | "NO_GROUP" | "NOT_MEMBER" | "ALREADY" | "FULL"> {
   const group = await readGroup(id);
   if (!group) return "NO_GROUP";
   if (!group.members.includes(by)) return "NOT_MEMBER";
@@ -131,7 +153,7 @@ export async function inviteToGroup(by: string, id: string, target: string): Pro
 }
 
 /** 초대에 답하기. 참여하면 "들어왔어요" 알림 줄. */
-export async function answerInvite(account: string, id: string, accept: boolean): Promise<Group | null> {
+async function answerInviteUnlocked(account: string, id: string, accept: boolean): Promise<Group | null> {
   const group = await readGroup(id);
   if (!group || !group.invited.includes(account)) return null;
   const invited = group.invited.filter((row) => row !== account);
@@ -146,7 +168,7 @@ export async function answerInvite(account: string, id: string, accept: boolean)
 }
 
 /** 나가기. 방장이 나가면 가장 먼저 들어온 사람이 방장, 아무도 없으면 방은 그대로 사라지게 둔다. */
-export async function leaveGroup(account: string, id: string): Promise<boolean> {
+async function leaveGroupUnlocked(account: string, id: string): Promise<boolean> {
   const group = await readGroup(id);
   if (!group || !group.members.includes(account)) return false;
   const members = group.members.filter((row) => row !== account);
@@ -163,7 +185,7 @@ export async function leaveGroup(account: string, id: string): Promise<boolean> 
 }
 
 /** 방장만: 내보내기(초대 중인 사람이면 초대 취소). */
-export async function kickFromGroup(by: string, id: string, target: string): Promise<"ok" | "NO_GROUP" | "NOT_OWNER" | "NO_TARGET"> {
+async function kickFromGroupUnlocked(by: string, id: string, target: string): Promise<"ok" | "NO_GROUP" | "NOT_OWNER" | "NO_TARGET"> {
   const group = await readGroup(id);
   if (!group) return "NO_GROUP";
   if (group.owner !== by) return "NOT_OWNER";
@@ -182,7 +204,7 @@ export async function kickFromGroup(by: string, id: string, target: string): Pro
 }
 
 /** 방장만: 방장 넘기기(방에 있는 사람에게). */
-export async function transferGroup(by: string, id: string, target: string): Promise<"ok" | "NO_GROUP" | "NOT_OWNER" | "NO_TARGET"> {
+async function transferGroupUnlocked(by: string, id: string, target: string): Promise<"ok" | "NO_GROUP" | "NOT_OWNER" | "NO_TARGET"> {
   const group = await readGroup(id);
   if (!group) return "NO_GROUP";
   if (group.owner !== by) return "NOT_OWNER";
@@ -192,7 +214,7 @@ export async function transferGroup(by: string, id: string, target: string): Pro
 }
 
 /** 글 보내기: 방에 있는 사람만. quoteSeq를 주면 이 방의 글 한 줄을 인용(묻기·답하기). */
-export async function sendToGroup(input: {
+async function sendToGroupUnlocked(input: {
   from: string;
   id: string;
   text: string;
@@ -241,12 +263,19 @@ export async function myGroups(account: string): Promise<GroupSummary[]> {
 
 /** 통화를 연 사람이 남기는 "통화 시작" 알림 줄과 방 번호. */
 export async function noteGroupCall(group: Group, from: string, roomId: string): Promise<Group> {
-  return (await push({ ...group, callRoomId: roomId }, { from, kind: "system", text: "call", roomId })).group;
+  return withGroupLock(group.id, async () => {
+    const fresh = (await readGroup(group.id)) ?? group;
+    return (await push({ ...fresh, callRoomId: roomId }, { from, kind: "system", text: "call", roomId })).group;
+  });
 }
 
 /** 통화가 끝난 뒤 자막 기록을 한 번 남긴다(누가 남길지는 호출하는 쪽이 SET NX로 정한다). */
 export async function logGroupCall(group: Group, from: string, roomId: string, lines: NonNullable<GroupMessage["lines"]>): Promise<void> {
-  await push(group, { from, kind: "callLog", text: `${lines.length}`, roomId, lines });
+  await withGroupLock(group.id, async () => {
+    // 사람·방장은 지금 것으로, 통화 번호는 부른 쪽이 정한 대로(끝난 통화면 지운 채로).
+    const fresh = await readGroup(group.id);
+    return push(fresh ? { ...fresh, callRoomId: group.callRoomId } : group, { from, kind: "callLog", text: `${lines.length}`, roomId, lines });
+  });
   if (group.team) await addSpaceItem(group, { kind: "session", by: from, text: `${lines.length}`, lines });
 }
 
@@ -309,7 +338,7 @@ export async function readSpace(id: string): Promise<TeamSpace> {
 }
 
 /** 단체방을 팀으로(방장만). 이후 키는 400일, 모두의 목록도 그만큼. */
-export async function makeTeam(by: string, id: string): Promise<Group | "NO_GROUP" | "NOT_OWNER" | "ALREADY"> {
+async function makeTeamUnlocked(by: string, id: string): Promise<Group | "NO_GROUP" | "NOT_OWNER" | "ALREADY"> {
   const group = await readGroup(id);
   if (!group) return "NO_GROUP";
   if (group.owner !== by) return "NOT_OWNER";
@@ -320,7 +349,7 @@ export async function makeTeam(by: string, id: string): Promise<Group | "NO_GROU
 }
 
 /** 팀 정보 고치기(목표·정기 모임) — 팀에 있는 사람이면 누구나. */
-export async function updateTeam(by: string, id: string, patch: Partial<Pick<TeamInfo, "goal" | "schedule">>): Promise<Group | null> {
+async function updateTeamUnlocked(by: string, id: string, patch: Partial<Pick<TeamInfo, "goal" | "schedule">>): Promise<Group | null> {
   const group = await readGroup(id);
   if (!group?.team || !group.members.includes(by)) return null;
   const team: TeamInfo = {
@@ -386,3 +415,19 @@ export async function leaveAllGroups(account: string): Promise<void> {
     else await leaveGroup(account, summary.group.id);
   }
 }
+
+export const inviteToGroup = (by: string, id: string, target: string) => withGroupLock(id, () => inviteToGroupUnlocked(by, id, target));
+
+export const answerInvite = (account: string, id: string, accept: boolean) => withGroupLock(id, () => answerInviteUnlocked(account, id, accept));
+
+export const leaveGroup = (account: string, id: string) => withGroupLock(id, () => leaveGroupUnlocked(account, id));
+
+export const kickFromGroup = (by: string, id: string, target: string) => withGroupLock(id, () => kickFromGroupUnlocked(by, id, target));
+
+export const transferGroup = (by: string, id: string, target: string) => withGroupLock(id, () => transferGroupUnlocked(by, id, target));
+
+export const makeTeam = (by: string, id: string) => withGroupLock(id, () => makeTeamUnlocked(by, id));
+
+export const updateTeam = (by: string, id: string, patch: Partial<Pick<TeamInfo, "goal" | "schedule">>) => withGroupLock(id, () => updateTeamUnlocked(by, id, patch));
+
+export const sendToGroup = (input: Parameters<typeof sendToGroupUnlocked>[0]) => withGroupLock(input.id, () => sendToGroupUnlocked(input));

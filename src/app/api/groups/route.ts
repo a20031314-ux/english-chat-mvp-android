@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { pollFrom } from "@/lib/server/lateRows";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
 import { readAccount } from "@/lib/server/accountStore";
@@ -123,7 +124,7 @@ export async function POST(request: NextRequest) {
 
   if (action === "open" || action === "poll") {
     const since = action === "poll" && typeof body.since === "number" && Number.isFinite(body.since) ? body.since : 0;
-    const [messages, call] = await Promise.all([readGroupMessages(group.id, since), callStatus(group.callRoomId)]);
+    const [messages, call] = await Promise.all([readGroupMessages(group.id, pollFrom(since)), callStatus(group.callRoomId)]);
     if (group.lastSeq) await markGroupRead(me, group.id, group.lastSeq);
     return jsonWithCors(request, { group, messages, call });
   }

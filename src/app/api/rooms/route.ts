@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { pollFrom } from "@/lib/server/lateRows";
 import { clipQuote, type LineQuote } from "@/lib/rooms/quote";
 import { cleanLanguages } from "@/lib/rooms/roomFilter";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
@@ -155,7 +156,7 @@ export async function POST(request: NextRequest) {
   }
 
   if (action === "poll") {
-    const since = typeof body.since === "number" && Number.isFinite(body.since) ? body.since : 0;
+    const since = pollFrom(typeof body.since === "number" && Number.isFinite(body.since) ? body.since : 0);
     const result = await poll({
       id: roomId,
       peerId,

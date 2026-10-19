@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { pollFrom } from "@/lib/server/lateRows";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
 import { readAccount } from "@/lib/server/accountStore";
@@ -112,7 +113,7 @@ export async function POST(request: NextRequest) {
 
   if (action === "poll") {
     const since = typeof body.since === "number" && Number.isFinite(body.since) ? body.since : 0;
-    const messages = await readMessages(thread.id, since);
+    const messages = await readMessages(thread.id, pollFrom(since));
     if (thread.lastSeq) await markRead(me, thread.id, thread.lastSeq);
     return jsonWithCors(request, { thread, messages });
   }
