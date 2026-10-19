@@ -77,6 +77,14 @@ COPY.room = {
     r5: "💡 अंग्रेज़ी में\nवाक्य मिलेगा", r6: "भेजें,\nसब देखेंगे", endTitle: "साथ सीखने वालों से\nबोलकर सीखें", endSub: "सबटाइटल वाले वॉइस रूम",
   },
 };
+COPY.invite = {
+  en: { i1: "Learning alone?\nBring a friend.", i2: "One link.\nThey're in.", i3: "Your own\nstudy team", i4: "Days together,\nregular meetups", i5: "Goals and phrases\nyou share", endTitle: "Learn with friends,\nnot alone", endSub: "Invite links, study mates and team spaces" },
+  ko: { i1: "혼자 공부 말고\n친구를 불러요", i2: "링크 하나로\n바로 들어와요", i3: "우리만의\n공부 팀", i4: "같이 한 날,\n정기 모임까지", i5: "목표와 표현을\n함께 쌓아요", endTitle: "친구랑 같이,\n꾸준히 배워요", endSub: "친구 초대 · 러닝메이트 · 팀 워크스페이스" },
+  ja: { i1: "一人で勉強より\n友達を呼ぼう", i2: "リンクひとつで\nすぐ参加", i3: "自分たちだけの\n勉強チーム", i4: "一緒にやった日も\n定例会も", i5: "目標と表現を\n一緒に貯める", endTitle: "友達と一緒に、\n続けて学ぼう", endSub: "友達招待・ラーニングメイト・チームスペース" },
+  zh: { i1: "别一个人学\n叫上朋友", i2: "一个链接\n马上加入", i3: "我们自己的\n学习小组", i4: "一起学的天数\n固定聚会", i5: "目标和表达\n一起积累", endTitle: "和朋友一起\n坚持学下去", endSub: "邀请好友 · 学习伙伴 · 小组空间" },
+  es: { i1: "¿Estudias solo?\nTrae a un amigo.", i2: "Un enlace\ny ya está dentro", i3: "Tu propio\nequipo de estudio", i4: "Días juntos,\nquedadas fijas", i5: "Metas y frases\ncompartidas", endTitle: "Aprende con amigos,\nno solo", endSub: "Invitaciones, compañeros y espacios de equipo" },
+  hi: { i1: "अकेले पढ़ाई?\nदोस्त को बुलाएँ", i2: "एक लिंक,\nऔर वे अंदर", i3: "आपकी अपनी\nस्टडी टीम", i4: "साथ बिताए दिन,\nतय मुलाक़ातें", i5: "लक्ष्य और वाक्यांश\nसाथ में", endTitle: "दोस्तों के साथ सीखें,\nअकेले नहीं", endSub: "दोस्त बुलाएँ · लर्निंग मेट · टीम स्पेस" },
+};
 const FONT = { ko: "'Noto Sans CJK KR', sans-serif", ja: "'Noto Sans CJK JP', sans-serif", zh: "'Noto Sans CJK SC', sans-serif", hi: "'Noto Sans Devanagari', 'Noto Sans', sans-serif" };
 const STORE_LINE = { ko: "Google Play에서 만나요", en: "Get it on Google Play", ja: "Google Playで配信中", zh: "在 Google Play 下载", es: "Disponible en Google Play", hi: "Google Play पर पाएँ" };
 const C = { font: FONT[locale] ?? "'Noto Sans', sans-serif", store: STORE_LINE[locale] ?? STORE_LINE.en, ...(COPY[story]?.[locale] ?? {}) };
@@ -131,11 +139,22 @@ STORIES.room = () => ({
   voice: ev.hintText,
   voiceIn: 0.6,
 });
+// 친구 초대 → 친구가 받은 초대 → 팀 워크스페이스(녹화: capture-whats-new.mjs promo-invite).
+STORIES.invite = () => ({
+  segs: [
+    [Math.max(0, ev.people - 0.9), ev.invite + 1.7, 1, "i1"],
+    [ev.welcome - 0.3, ev.welcome + 2.3, 1, "i2"],
+    [ev.messages - 0.2, ev.space - 0.2, 1.3, "i3"],
+    // 워크스페이스는 카드가 화면 가로를 꽉 채워 확대하면 양쪽이 잘린다: 확대 없이.
+    [ev.space - 0.2, ev.space + 2.0, 1, "i4"],
+    [ev.space + 2.0, ev.end - 0.2, 1.2, "i5"],
+  ],
+});
 const plan = STORIES[story]();
 
 // ── 1. 장면 자르기(원본 시각) ──
 const segs = plan.segs;
-const END_CARD = story === "room" ? 2.2 : 2.6;
+const END_CARD = story === "chat" || story === "people" ? 2.6 : 2.2;
 let out = 0;
 const timeline = segs.map(([a, b, speed, cap, zoom]) => {
   const dur = (b - a) / speed;
@@ -233,7 +252,7 @@ capInputs.forEach((k, i) => {
 });
 chain += `;[${endIdx}:v]setpts=PTS-STARTPTS+${phoneDur.toFixed(3)}/TB[endv];[${last}][endv]overlay=0:0:enable='gte(t,${phoneDur.toFixed(3)})'[v]`;
 const phoneScale = `[phone]scale=${PHONE.w}:${PHONE.h},tpad=stop_mode=clone:stop_duration=${END_CARD}[phonev]`;
-const cardAt = timeline.find((s) => s.zoom).at + plan.voiceIn;
+const cardAt = (timeline.find((s) => s.zoom)?.at ?? 0) + (plan.voiceIn ?? 0);
 const audio = voice
   ? `;[${endIdx + 1}:a]adelay=${Math.round(cardAt * 1000)}|${Math.round(cardAt * 1000)},apad,atrim=0:${total.toFixed(3)}[a]`
   : "";

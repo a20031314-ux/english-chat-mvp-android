@@ -196,7 +196,8 @@ const STORE_TABS_ITEMS = [
 // → tmp/promo/people/<locale>/raw.mp4 + events.json, 편집은 store-shots/promo/make.mjs people <locale>.
 // 상대(Yuki·Lucía·Omar)는 고정 응답이고 말은 한 줄씩 올라온다. 번역·💡 힌트는 운영. CAPTURE_MIC_WAV가 필요.
 // `promo-room`: Room 하나만(입장 → 실시간 자막 → 줄 번역 → 💡 힌트 → 보내기), 15초 쇼츠용.
-const PROMO = VERSION === "promo-people" || VERSION === "promo-room";
+// `promo-invite`: 친구 초대 → 친구가 받은 초대 → 함께 쓰는 팀 워크스페이스.
+const PROMO = VERSION === "promo-people" || VERSION === "promo-room" || VERSION === "promo-invite";
 const PROMO_NAME = VERSION.replace(/^promo-/, "");
 const note = PROMO
   ? { version: "promo", items: [{ shot: VERSION, save: false }] }
@@ -620,6 +621,9 @@ function socialMocks(page, target, ui) {
     }),
     page.route("**/api/invite", (route) => {
       const body = JSON.parse(route.request().postData() || "{}");
+      if (body.action === "lookup" && page.__social.inviterMe)
+        // 홍보 녹화: 내가 보낸 초대를 친구가 받은 모습.
+        return json(route, { inviter: { id: PEOPLE.me.id, nickname: "Minji", bio: "🇰🇷 → 🌏 ✈️ ☕", photo: PEOPLE.me.photo, learn: target, ui: "ko" }, room: null, isMe: false });
       if (body.action === "lookup")
         return json(route, { inviter: { id: PEOPLE.yuki.id, nickname: "Yuki", bio: "🇯🇵 → 🌏 ☕ 🎧", photo: PEOPLE.yuki.photo, learn: target, ui: "ja" }, room: null, isMe: false });
       if (body.action === "mine") return json(route, { code: "capture01" });
@@ -686,6 +690,50 @@ const STEPS = {
     await tapAt(page, page.getByRole("button", { name: exactly(t.sendThis) }).last());
     mark("sent");
     await wait(2400);
+    mark("end");
+  },
+  async "promo-invite"({ page, ui, locale, wait, target, mark }) {
+    const inv = inviteCopyFor(locale);
+    page.__social = { hostMe: false, roomOnly: true, inviterMe: true, team: true };
+    await socialMocks(page, target, ui);
+    // 웹에는 휴대폰 공유 창이 없다: 링크를 복사하고 "복사했어요"가 뜨는 웹 동작 그대로.
+    await page.context().grantPermissions(["clipboard-read", "clipboard-write"]).catch(() => undefined);
+    await page.evaluate(() => localStorage.removeItem("invite:pending:v1"));
+    // 1. 나: 사람 탭 → 친구 초대.
+    await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
+    await wait(1400);
+    mark("people");
+    await wait(900);
+    await tapAt(page, page.getByRole("button", { name: new RegExp(`${escape(inv.invite)}$`) }).first());
+    mark("invite");
+    await wait(2200);
+    // 2. 친구: 링크로 들어오면 "Minji님이 초대했어요".
+    await page.goto(`${BASE}/?screen=people&invite=capture01`, { waitUntil: "networkidle" });
+    await wait(1200);
+    mark("welcome");
+    await wait(2600);
+    // 3. 같이: 메시지 탭의 팀(단체방) → 워크스페이스.
+    await page.evaluate(() => localStorage.removeItem("invite:pending:v1"));
+    await page.goto(`${BASE}/?screen=messages`, { waitUntil: "networkidle" });
+    await wait(1200);
+    const later = page.getByRole("button", { name: exactly(inv.later) });
+    if (await later.count()) await later.first().click();
+    await wait(600);
+    mark("messages");
+    await wait(700);
+    await tapAt(page, page.locator("li button", { hasText: GROUP_LINES[target].name }).first());
+    mark("group");
+    await wait(1800);
+    await tapAt(page, page.getByRole("tab", { name: exactly(teamCopyFor(locale).tabSpace) }));
+    mark("space");
+    await wait(2200);
+    // 쌓인 것까지 천천히 내려 본다.
+    for (let i = 0; i < 6; i++) {
+      await page.mouse.wheel(0, 120);
+      await wait(260);
+    }
+    mark("scrolled");
+    await wait(1800);
     mark("end");
   },
   async "promo-people"({ page, ui, locale, wait, target, mark }) {

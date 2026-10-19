@@ -100,6 +100,8 @@ Claude Code ──(출시 노트·등록정보 수정)──▶ PR ──(검토
   → `node store-shots/promo/make.mjs people ko` → `tmp/promo/people/ko/promo-people-ko.mp4`. 상대 사람·글은 고정 응답, 번역·힌트는 운영.
   **기본 형식(2026-10-19 사용자 결정): 한 편에 기능 하나, 15초 안팎, 영어판 먼저 → 다른 언어로.** Room 편: `promo-room`(입장 → 실시간 자막 → 줄 번역 → 💡 힌트 → 보내기)
   `--only en,ko,ja,zh,es,hi` → `node store-shots/promo/make.mjs room <언어>` → `tmp/promo/room/<언어>/promo-room-<언어>.mp4`(자막 6개 언어는 make.mjs `COPY.room`).
+  친구 초대 편: `promo-invite`(사람 탭 친구 초대 → 링크 복사 → 친구 화면 "Minji님이 초대했어요" → 팀 단체방 → 워크스페이스) → `make.mjs invite <언어>`.
+  웹에는 휴대폰 공유 창이 없어 "초대 링크를 복사했어요"가 뜨는 웹 동작 그대로 찍힌다.
 - **스토어 8장 (지금 올리는 세트, 2.69~)**: 한 장에 탭의 핵심 기능 하나(큰 화면) + 세부 기능 둘(확대 카드) + 더 있는 기능 칩(사용자 결정 2026-10-18).
   지도·채팅·문장분석·My 성장·통화·영상·Room·사람과 학습 8장 × 6개 등록정보. 아래 탭별 캡처(`store-my`·`store-tabs`)를 찍은 뒤
   `node store-shots/combo/compose.mjs` → `store-shots/out/combo/<등록정보>/1~8-*.png`(폴더째 올리면 됨). 장면·자르는 위치·문구는 `store-shots/combo/strings.mjs`.
