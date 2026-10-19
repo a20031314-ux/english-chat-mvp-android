@@ -1631,6 +1631,18 @@ for (const locale of only ?? Object.keys(copy)) {
     route.continue({ headers: { ...route.request().headers(), "x-rc-user": `${process.env.CAPTURE_USER || `whats-new-capture-${day}${process.env.CAPTURE_RUN ? `-${process.env.CAPTURE_RUN}` : ""}`}-${locale}` } }),
   );
   const wait = (ms) => page.waitForTimeout(ms);
+  // 2.69 웹: 화면에 따라 주기적으로 묻는 요청이 이어져 networkidle이 안 올 때가 있다 — 15초 기다려 보고 넘어간다.
+  const rawGoto = page.goto.bind(page);
+  page.goto = async (url, opts = {}) => {
+    if (opts.waitUntil !== "networkidle") return rawGoto(url, opts);
+    try {
+      return await rawGoto(url, { ...opts, timeout: 15000 });
+    } catch (error) {
+      if (!String(error).includes("Timeout")) throw error;
+      await page.waitForTimeout(1500);
+      return null;
+    }
+  };
   // 화면이 깨지면(오류 페이지) 그대로 찍히니 원인을 남긴다.
   page.on("pageerror", (error) => console.log(`  [${locale} 페이지 오류] ${String(error).slice(0, 400)}`));
   // 홍보 녹화: 누른 곳 표시 + Chrome 화면 전송 프레임 + 장면 시각.
