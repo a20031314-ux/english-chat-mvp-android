@@ -1101,8 +1101,14 @@ const STEPS = {
       await page.getByRole("button", { name: exactly(ui.vocabSave) }).first().click();
       await wait(1200);
     }
-    await page.getByRole("button", { name: exactly(ui.vocabPreviewClose) }).first().click();
+    // 단어장이 노트 시트 안이라(2.69) 같은 이름의 "닫기"가 둘: 검색 결과의 것(맨 위 층)을 닫는다.
+    await page.getByRole("button", { name: exactly(ui.vocabPreviewClose) }).last().click();
     await wait(2500);
+    // 그래도 노트가 닫혔으면 단어장을 다시 연다(저장한 단어는 기기에 남아 있다).
+    if (!(await page.getByText(ui.vocabSavedTitle).count())) {
+      await page.goto(`${BASE}/?screen=vocab`, { waitUntil: "domcontentloaded" });
+      await wait(4000);
+    }
     await page.getByText(ui.vocabSavedTitle).first().scrollIntoViewIfNeeded();
     await wait(800);
   },
