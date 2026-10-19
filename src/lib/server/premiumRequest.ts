@@ -115,5 +115,14 @@ export async function resolveRequestEntitlement(
     return withTier(userId, withPass(claimedTier(request)), false);
   }
 
+  // 웹(RevenueCat SDK 없음): 로그인한 계정 id로 묻는다. 앱에서 로그인하면 RevenueCat이 이 계정 id로
+  // 묶이므로(billingService linkBillingAccount) 앱에서 산 구독을 웹에서 이어 쓴다. 웹에서는 팔지 않는다.
+  // 계정 id로 묻을 수 있으면 앱이 보낸 요금 표시는 믿지 않는다(웹에서 머리를 바꿔 유료인 척 못 하게).
+  if (accountId && revenueCatConfigured()) {
+    const plan = await planInRevenueCat(accountId);
+    if (plan !== null) return withTier(userId, withPass(plan), true);
+    return withTier(userId, withPass(claimedTier(request)), false);
+  }
+
   return withTier(userId, withPass(claimedTier(request)), false);
 }

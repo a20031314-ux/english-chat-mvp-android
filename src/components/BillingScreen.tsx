@@ -14,6 +14,7 @@ import { apiUrl } from "@/lib/apiBase";
 import {
   isLocalPlanDebugEnabled,
   entitlementHeaders,
+  fetchPlanFromServer,
   fetchPlanOffers,
   resetBillingConfigure,
   type PlanOffer,
@@ -303,6 +304,10 @@ export function BillingScreen({
 
   const handleRestore = async () => {
     if (!isBillingNative) {
+      // 웹: 앱에서 산 구독을 계정으로 다시 물어본다(서버가 RevenueCat에 확인).
+      setIsRestoring(true);
+      await fetchPlanFromServer().catch(() => false);
+      setIsRestoring(false);
       setNotice(ui.paywallNativeOnly);
       return;
     }

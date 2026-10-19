@@ -1,5 +1,6 @@
 "use client";
 
+import { subscribeSession } from "@/lib/account/session";
 import {
   createContext,
   useCallback,
@@ -100,6 +101,8 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
         }
         setIsPremium(result.isPremium);
         setIsBillingNative(result.isNative);
+        // 웹: 앱에서 산 구독을 서버가 계정으로 확인한 값으로 바로 맞춘다.
+        if (!result.isNative) void refreshPremium();
       } catch (error) {
         console.error("[premium] init failed", error);
       }
@@ -110,7 +113,13 @@ export function PremiumProvider({ children }: { children: ReactNode }) {
     return () => {
       cancelled = true;
     };
-  }, []);
+  }, [refreshPremium]);
+
+  // 웹: 로그인·로그아웃하면 요금을 다시 묻는다(구독은 계정에 묶여 있다).
+  useEffect(() => {
+    if (isBillingNativePlatform()) return;
+    return subscribeSession(() => void refreshPremium());
+  }, [refreshPremium]);
 
   const purchasePremium = useCallback(
     async (onStep?: BillingStepListener, wanted: Exclude<PlanTier, "free"> = "premium") => {

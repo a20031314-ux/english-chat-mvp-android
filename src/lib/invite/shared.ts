@@ -1,7 +1,8 @@
 /** 친구 초대 링크 — 앱·서버·초대 웹 페이지가 같이 쓰는 것. */
 
 /** 초대 웹 페이지가 있는 곳(운영 서버). 앱 안에서 링크를 만들 때도 이 주소. */
-export const INVITE_WEB_BASE = "https://english-chat-mvp.vercel.app";
+// 도메인을 사면 Vercel 환경 변수 NEXT_PUBLIC_WEB_BASE(예: https://languagebank.app)만 바꾼다 — 옛 주소도 계속 열린다.
+export const INVITE_WEB_BASE = (process.env.NEXT_PUBLIC_WEB_BASE?.trim() || "https://english-chat-mvp.vercel.app").replace(/\/$/, "");
 export const ANDROID_PACKAGE = "com.yourname.englishchat";
 /** 앱이 받는 링크: languagebank://invite?c=…&room=… */
 export const APP_LINK_SCHEME = "languagebank";

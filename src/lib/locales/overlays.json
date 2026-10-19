@@ -1,5 +1,6 @@
 {
   "ja": {
+    "paywallNativeOnly": "購読はアプリで行います。同じアカウントでログインすると、ウェブでもそのまま使えます。",
     "billingClose": "閉じる",
     "billingFreeLabel": "無料",
     "billingOpen": "プラン",
@@ -539,6 +540,7 @@
     "guideMore": "くわしく"
   },
   "zh": {
+    "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
     "billingClose": "关闭",
     "billingFreeLabel": "免费",
     "billingOpen": "方案",
@@ -1078,6 +1080,7 @@
     "guideMore": "详细"
   },
   "vi": {
+    "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
     "billingClose": "Đóng",
     "billingFreeLabel": "Miễn phí",
     "billingOpen": "Gói",
@@ -1619,6 +1622,7 @@
     "guideMore": "Xem thêm"
   },
   "fr": {
+    "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
     "billingClose": "Fermer",
     "billingFreeLabel": "Gratuit",
     "billingOpen": "Abonnement",
@@ -2283,7 +2287,7 @@
     "paywallCtaPlain": "Attiva Premium",
     "paywallCtaPrice": "Attiva Premium · {price}/mese",
     "paywallLimitBanner": "Hai raggiunto il limite gratuito. Passa a Premium per continuare con i video.",
-    "paywallNativeOnly": "Puoi completare il pagamento nell’app",
+    "paywallNativeOnly": "Abbonati nell’app. Accedi con lo stesso account e il tuo piano funziona anche qui sul web.",
     "paywallNoProduct": "Non riesco a caricare l’abbonamento. Controlla la configurazione su Play Console e RevenueCat.",
     "paywallPurchaseFailed": "Acquisto non riuscito. Riprova.",
     "paywallPurchaseTimeout": "Tempo scaduto per l'acquisto. Installa l'app dal Play Store e riprova.",
@@ -2903,6 +2907,7 @@
     "guideMore": "Di più"
   },
   "pt": {
+    "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
     "billingClose": "Fechar",
     "billingFreeLabel": "Grátis",
     "billingOpen": "Plano",
@@ -3568,7 +3573,7 @@
     "paywallCtaPlain": "Подключить Premium",
     "paywallCtaPrice": "Подключить Premium · {price}/мес",
     "paywallLimitBanner": "Вы достигли бесплатного лимита. Оформите Premium, чтобы продолжить учиться по видео.",
-    "paywallNativeOnly": "Оплатить можно прямо в приложении",
+    "paywallNativeOnly": "Подписку оформляют в приложении. Войдите в тот же аккаунт — и тариф работает и здесь, в вебе.",
     "paywallNoProduct": "Не удалось загрузить подписку. Проверьте настройки Play Console и RevenueCat.",
     "paywallPurchaseFailed": "Не удалось завершить покупку. Попробуйте ещё раз.",
     "paywallPurchaseTimeout": "Время ожидания оплаты истекло. Установите приложение из Play Store и попробуйте снова.",
@@ -4188,6 +4193,7 @@
     "guideMore": "Подробнее"
   },
   "id": {
+    "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
     "billingClose": "Tutup",
     "billingFreeLabel": "Gratis",
     "billingOpen": "Paket",
@@ -4733,6 +4739,7 @@
     "guideMore": "Selengkapnya"
   },
   "ar": {
+    "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
     "billingClose": "إغلاق",
     "billingFreeLabel": "مجاني",
     "billingOpen": "الخطة",
@@ -5272,6 +5279,7 @@
     "guideMore": "المزيد"
   },
   "th": {
+    "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
     "billingClose": "ปิด",
     "billingFreeLabel": "ฟรี",
     "billingOpen": "แพ็กเกจ",
@@ -5811,6 +5819,7 @@
     "guideMore": "ดูเพิ่ม"
   },
   "hi": {
+    "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
     "billingClose": "बंद करें",
     "billingFreeLabel": "मुफ़्त",
     "billingOpen": "योजना",

@@ -323,6 +323,11 @@ async function ensureConfigured(onStep?: BillingStepListener): Promise<boolean> 
  * 같은 구독이 보인다. 실패해도 로그인 자체는 그대로 둔다(익명 id로 계속 셈).
  */
 export async function linkBillingAccount(accountId: string): Promise<void> {
+  // 웹: 서버가 계정 id로 앱에서 산 구독을 확인해 준다.
+  if (!isBillingNativePlatform()) {
+    await fetchPlanFromServer().catch(() => {});
+    return;
+  }
   if (!(await ensureConfigured())) return;
   const plugin = getPurchasesPlugin();
   if (!plugin) return;
@@ -342,6 +347,10 @@ export async function linkBillingAccount(accountId: string): Promise<void> {
 
 /** 로그아웃·계정 삭제 뒤: RevenueCat을 새 익명 사용자로. 다시 로그인하면 구독이 돌아온다. */
 export async function unlinkBillingAccount(): Promise<void> {
+  if (!isBillingNativePlatform()) {
+    writeCachedPremium(false);
+    return;
+  }
   if (!(await ensureConfigured())) return;
   const plugin = getPurchasesPlugin();
   if (!plugin) return;
@@ -381,7 +390,9 @@ export async function initializeBilling(): Promise<BillingInitResult> {
   }
 
   if (!isBillingNativePlatform()) {
+    // 웹: 산 곳(앱)의 구독을 서버가 계정으로 확인해 준다. 우선 기억한 값, 뒤에서 새로.
     const cached = readCachedPremium();
+    void fetchPlanFromServer().catch(() => {});
     return { isPremium: cached, isNative: false };
   }
 
@@ -398,9 +409,32 @@ export async function initializeBilling(): Promise<BillingInitResult> {
   return { isPremium: cached, isNative: true };
 }
 
+/**
+ * 웹에서 요금 알기: 서버(/api/entitlement)가 로그인한 계정 id로 RevenueCat에 물어 본 값.
+ * 서버가 확인한 답(premiumSource "revenuecat")만 기억한다. 로그인 안 했으면 무료.
+ */
+export async function fetchPlanFromServer(): Promise<boolean> {
+  if (!readAuthToken()) {
+    writeCachedPremium(false);
+    return false;
+  }
+  const response = await fetch(apiUrl("/api/entitlement"), { headers: entitlementHeaders() });
+  if (!response.ok) return readCachedPremium();
+  const data = (await response.json()) as { tier?: unknown; premiumSource?: unknown };
+  if (data.premiumSource !== "revenuecat" || !isPlanTier(data.tier)) return readCachedPremium();
+  const isPremium = data.tier !== "free";
+  writeCachedPremium(isPremium);
+  try {
+    window.localStorage.setItem(PLAN_TIER_STORAGE_KEY, data.tier);
+  } catch {
+    // ignore
+  }
+  return isPremium;
+}
+
 export async function fetchPremiumFromRevenueCat(): Promise<boolean> {
   if (!isBillingNativePlatform()) {
-    return readCachedPremium();
+    return fetchPlanFromServer().catch(() => readCachedPremium());
   }
 
   const ready = await ensureConfigured();
