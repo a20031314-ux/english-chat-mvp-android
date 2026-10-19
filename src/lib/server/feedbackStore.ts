@@ -4,8 +4,8 @@ import {
   FEEDBACK_TTL_SECONDS,
   type FeedbackItem,
   type FeedbackSubmission,
-} from "@/lib/feedback";
-import { kvGetJson, kvIncrBy, kvListPush, kvListRange, kvSetJson } from "@/lib/server/kv";
+} from "../feedback.ts";
+import { kvGetJson, kvIncrBy, kvListPush, kvListRange, kvSetJson } from "./kv.ts";
 
 /**
  * Where in-app feedback is kept until it is read: one record per send, the

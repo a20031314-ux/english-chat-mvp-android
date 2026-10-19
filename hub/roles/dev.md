@@ -24,6 +24,10 @@
 - **사용법 창 하나 + 새로워진 점이 칸을 가리킴 (2026-10-20, 서버 바로 반영 / 창·자세히 버튼은 앱 다음 빌드):** 사용자 제안 "기능 설명을 한곳에, 탭에서는 그리로 가는 버튼만". 칸 id(`GUIDE_SECTION_IDS`)·기능별 묶음(`GUIDE_CHAPTERS`, `/api/guide?chapters=1`), `GuideSheet` 묶음 보기·"이 화면으로 가기"·"새로", 새로워진 점 `guide` → 칸의 제목·글 + "자세히"(`openGuide`), `/api/whats-new`도 칸 글.
   경로 문장 6개를 14개 언어로 새로 씀(통화 탭 2, 사람·메시지·통화 → 사람 찾기·친구 초대·메시지와 통화, 단체방, 게시판 — Claude가 씀, 원어민 확인 권장). 테스트 `guide/chapters.test.ts`(칸 수·묶음·노트 id·경로 문구 금지).
   남은 것: **사용법 그림·새로워진 점 캡처(2.69)가 옛 하단 탭을 찍음** — `capture-whats-new.mjs guide`와 `2.69` 다시(새 칸 people.invite·messages.dm은 그림 없음). 2.66 노트 "지도 탭 맨 위" 같은 옛 버전 글은 그대로(그 버전에서 오는 사람만 봄).
+- **의견 반영 소식 (2026-10-20, 서버 바로 반영·시트는 앱 다음 빌드):** 사용자 요청 "반영되면 보낸 사람에게 스크린샷과 함께, 같은 의견은 한 번에, 사진은 전·후 두 장".
+  서버 `/api/feedback/fixed`(의견 읽기 키) → `server/feedbackFixStore.ts`(카드 하나 → 묶인 해시마다 소식, 카드·사람마다 한 번, 공유 익명 id 제외), `/api/feedback/news`(앱을 열 때, 계정 id·기기 id 둘 다로 찾고 지움).
+  앱 `FeedbackFixedSheet.tsx`(전·후 그림, 옛 빌드면 "업데이트하면" 한 번 → 업데이트 뒤 다시), 문구 `lib/feedbackFixCopy.ts` 14개 언어(Claude가 씀). 그림 `scripts/capture-feedback-fix.mjs` → `public/feedback-fix/`(앱 묶음에서 뺌), 보내기 `scripts/feedback-notify.mjs`.
+  의견함 절차 `hub/feedback/README.md` 6·6-1번(카드에 `senders`·`notifiedAt`). 남은 것: 실제 카드로 한 번 돌려 보기(예약 작업 "의견함 정리"가 README대로), 기기에서 시트·업데이트 버튼, 화면 안에서 여러 번 눌러야 하는 수정의 `--steps` 예시.
 - **친구 초대 보상 (2026-10-20, 서버 바로 반영·화면은 앱 다음 빌드):** 7일 안 2일 쓰면 초대한 사람 +20·받은 사람 +10(전체 1,000번 뒤 +10·+5, `INVITE_EARLY_LIMIT`), 한 달 10명, 3명 플러스 7일·10명 프리미엄 30일(KV 기간제).
   남은 것: 보상 소식 시트는 자동 테스트로만 확인(실제 이틀 경과 필요), 같은 폰에서 계정 여러 개로 받는 것은 한 달 10명 한도로만 막음 — 남용이 보이면 기기 기준 추가.
 - **하단 탭 대화·영상·사람·Room·My (2026-10-20, 앱 다음 빌드, `hub/drafts/one-list-tabs.md` "최종"):** 묶음 스위치 없앰, 대화 목록 맨 위 `AiTutorRow`(줄 → 채팅, 📞 → 통화), 그 아래 예전 메시지 목록(`MessagesTab` `top`·`title`), 채팅·통화 위 "‹ 대화". 사람 탭 이름 My → 사람. 문구 5개 × 14개 언어(Claude가 씀).
