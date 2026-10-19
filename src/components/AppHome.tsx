@@ -22,6 +22,7 @@ import { PeopleTab } from "@/components/rooms/PeopleTab";
 import { InviteWelcome } from "@/components/invite/InviteWelcome";
 import { requestGroup } from "@/lib/rooms/openDm";
 import { MessagesTab } from "@/components/rooms/MessagesTab";
+import { AiTutorRow } from "@/components/AiTutorRow";
 import { useInbox } from "@/components/rooms/RoomDm";
 import { useGroups } from "@/components/rooms/RoomGroups";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
@@ -39,25 +40,27 @@ import {
 /** 방 입장 코드는 이 기기의 저장값이라 바뀌었다고 알려 주는 곳이 없다. */
 const noSubscribe = () => () => {};
 
-export type AppTab = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people" | "messages";
+export type AppTab = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people" | "messages" | "talk";
 
-const TABS: AppTab[] = ["map", "chat", "roleplay", "video", "vocab", "rooms", "people", "messages"];
+const TABS: AppTab[] = ["map", "chat", "roleplay", "video", "vocab", "rooms", "people", "messages", "talk"];
 
 /**
- * 하단 탭은 두 묶음: AI와 학습(My·채팅·통화·영상·단어장)과 사람과 학습(사람·말하는 방·메시지).
- * 맨 위 스위치로 묶음을 바꾸면 하단 탭이 통째로 바뀌고, 그 묶음에서 마지막으로 본 탭이 열린다.
- * 사람과 학습은 iOS 1차엔 없다(socialFeaturesEnabled) — 그때는 스위치도 없다.
+ * 하단 탭(2026-10-20, `hub/drafts/one-list-tabs.md`): 대화 · 영상 · 사람 · 룸 · My. 묶음 스위치는 없다.
+ * "대화"(talk)는 목록: 맨 위 AI 튜터(줄 → 채팅, 📞 → 통화), 그 아래 단체방·1:1(예전 메시지 탭).
+ * 채팅·통화는 대화 안에서 열리는 화면이라 하단에서는 대화가 켜져 보이고, 위에 "‹ 대화"가 생긴다.
+ * 사람 기능이 꺼지면(iOS 1차, socialFeaturesEnabled) 채팅 · 통화 · 영상 · My — 목록 없이 지금과 같다.
  */
-const PEOPLE_TABS: AppTab[] = ["people", "rooms", "messages"];
-type TabGroup = "ai" | "people";
-const groupOf = (tab: AppTab): TabGroup => (PEOPLE_TABS.includes(tab) ? "people" : "ai");
+const PEOPLE_TABS: AppTab[] = ["people", "rooms", "messages", "talk"];
+/** 대화 탭 안에서 열리는 화면들: 하단에서는 "대화"가 켜져 보인다. */
+const TALK_SCREENS: AppTab[] = ["talk", "messages", "chat", "roleplay"];
 
 function isAppTab(value: string | null): value is AppTab {
   return TABS.includes(value as AppTab);
 }
 
 function resolveTab(raw: string | null | undefined): AppTab {
-  if (!raw || raw === "home" || raw === "saved") return "chat";
+  if (!raw) return socialFeaturesEnabled() ? "talk" : "chat";
+  if (raw === "home" || raw === "saved") return "chat";
   if (raw === "reports" || raw === "sessions" || raw === "monthly") return "chat";
   if (raw === "quiz" || raw === "explore") return "chat";
   // Retired tabs: web reading and study materials both fall back to chat.
@@ -90,8 +93,13 @@ function AppHomeInner({
   // can pull the tab out from under the person standing on it — including via
   // ?screen=roleplay on a language that has none — and correcting that in an
   // effect would render the empty tab once before replacing it.
+  // 예전 메시지 탭은 대화 목록이 됐다(링크·초대·새로워진 점이 아직 "messages"로 연다).
   const shownTab: AppTab =
-    (tab === "roleplay" && !roleplayAvailable) || (PEOPLE_TABS.includes(tab) && !socialFeaturesEnabled()) ? "chat" : tab;
+    (tab === "roleplay" && !roleplayAvailable) || (PEOPLE_TABS.includes(tab) && !socialFeaturesEnabled())
+      ? "chat"
+      : tab === "messages"
+        ? "talk"
+        : tab;
 
   // 말하는 방: 하단 탭(2.68부터 모두에게). iOS 1차 출시엔 방·메시지를 통째로 끈다
   // (`lib/platform.ts`) — 그때는 탭도 ?screen=rooms도 채팅으로.
@@ -99,13 +107,13 @@ function AppHomeInner({
   const miniRoom = useSyncExternalStore(subscribeMiniRoom, readMiniRoom, () => null);
   const signedIn = useSyncExternalStore(subscribeSession, () => readCachedAccount() !== null, () => false);
   // 메시지 목록과 안 읽음 수: 메시지 탭을 보는 동안은 8초, 아니면 30초마다(로그인했을 때만).
-  const inbox = useInbox(socialOn && signedIn, shownTab === "messages" ? 8_000 : 30_000);
+  const inbox = useInbox(socialOn && signedIn, shownTab === "talk" ? 8_000 : 30_000);
   // 단체방(받은 초대·안 읽음 포함)도 같은 배지에.
-  const groups = useGroups(socialOn && signedIn, shownTab === "messages" ? 8_000 : 30_000);
+  const groups = useGroups(socialOn && signedIn, shownTab === "talk" ? 8_000 : 30_000);
   const messagesUnread = inbox.unread + groups.unread;
-  const group = groupOf(shownTab);
-  // 묶음마다 마지막으로 본 탭. 스위치를 누르면 그리로.
-  const [lastInGroup, setLastInGroup] = useState<Record<TabGroup, AppTab>>({ ai: "chat", people: "people" });
+  // 하단에서 켜져 보일 칸: 채팅·통화는 대화 안의 화면.
+  const bottomTab: AppTab = socialOn && TALK_SCREENS.includes(shownTab) ? "talk" : shownTab;
+  const insideTalk = socialOn && (shownTab === "chat" || shownTab === "roleplay");
 
   useEffect(() => {
     document.documentElement.lang = locale;
@@ -154,7 +162,6 @@ function AppHomeInner({
       const next: AppTab = requested === "vocab" ? "map" : requested;
       if (requested === "vocab") sendAppIntent("openNotes", { section: "words" });
       setTab(next);
-      setLastInGroup((last) => ({ ...last, [groupOf(next)]: next }));
       syncUrl(next);
     },
     [syncUrl],
@@ -177,29 +184,32 @@ function AppHomeInner({
     return () => window.removeEventListener("popstate", onPopState);
   }, []);
 
+  // Still "map" inside (links, intents, screenshots); "My" on screen.
+  const myItem = { id: "map" as const, label: ui.homeTabProfile };
   const aiTabItems: { id: AppTab; label: string }[] = [
-    // Still "map" inside (links, intents, screenshots); a profile on screen.
-    { id: "map", label: ui.homeTabProfile },
     { id: "chat", label: ui.homeTabChat },
     ...(roleplayAvailable
       ? [{ id: "roleplay" as const, label: ui.homeTabCall }]
       : []),
     { id: "video", label: ui.homeTabVideo },
+    myItem,
   ];
-  const peopleTabItems: { id: AppTab; label: string }[] = [
+  const socialTabItems: { id: AppTab; label: string }[] = [
+    { id: "talk", label: ui.homeTabTalk },
+    { id: "video", label: ui.homeTabVideo },
     { id: "people", label: ui.homeTabPeople },
     { id: "rooms", label: ui.homeTabRooms },
-    { id: "messages", label: ui.homeTabMessages },
+    myItem,
   ];
-  const tabItems = group === "people" && socialOn ? peopleTabItems : aiTabItems;
-  // 사용법(?)은 AI 쪽 탭만 따로 있고, 사람과 학습은 말하는 방 안내 하나를 같이 쓴다.
-  const guideTab = group === "people" ? "rooms" : shownTab;
+  const tabItems = socialOn ? socialTabItems : aiTabItems;
+  // 사용법(?): 대화 목록은 채팅 안내, 사람은 말하는 방 안내를 같이 쓴다.
+  const guideTab = shownTab === "talk" ? "chat" : shownTab === "people" ? "rooms" : shownTab;
   const guideTabs = [
     ...aiTabItems,
     // 단어장은 탭에서 빠졌지만(노트 안) 사용법은 그대로 둔다.
     { id: "vocab" as const, label: ui.homeTabVocab },
     ...(socialOn ? [{ id: "rooms" as const, label: ui.homeTabRooms }] : []),
-  ] as { id: Exclude<AppTab, "people" | "messages">; label: string }[];
+  ] as { id: Exclude<AppTab, "people" | "messages" | "talk">; label: string }[];
 
   return (
     <BillingUiProvider locale={locale} ui={ui}>
@@ -222,7 +232,7 @@ function AppHomeInner({
               <GuideButton
                 ui={ui}
                 locale={locale}
-                tab={guideTab as Exclude<AppTab, "people" | "messages">}
+                tab={guideTab as Exclude<AppTab, "people" | "messages" | "talk">}
                 tabs={guideTabs}
               />
               <FeedbackButton ui={ui} locale={locale} tab={shownTab} />
@@ -232,35 +242,20 @@ function AppHomeInner({
             <UpdateNotice ui={ui} locale={locale} />
             {/* Once, on the first launch after an update. */}
             <WhatsNewSheet ui={ui} locale={locale} onOpenTab={openTab} />
-            {socialOn ? (
-              <div className="shrink-0 px-2 pt-2 sm:px-4">
-                <div className="mx-auto flex max-w-md gap-1 rounded-full bg-white/[0.06] p-1" role="tablist">
-                  {(["ai", "people"] as const).map((option) => {
-                    const on = group === option;
-                    return (
-                      <button
-                        key={option}
-                        type="button"
-                        role="tab"
-                        aria-selected={on}
-                        onClick={() => {
-                          if (on) return;
-                          // 떠나는 묶음의 지금 탭을 기억해 두고(링크로 열린 탭도), 다른 묶음의 마지막 탭으로.
-                          setLastInGroup((last) => ({ ...last, [group]: shownTab }));
-                          openTab(lastInGroup[option]);
-                        }}
-                        className={`relative flex-1 rounded-full px-3 py-1.5 text-[13px] font-medium transition ${
-                          on ? "bg-[#e8e8e4] text-neutral-900" : "text-slate-300 hover:bg-white/5"
-                        }`}
-                      >
-                        {option === "ai" ? ui.modeAi : ui.modePeople}
-                        {option === "people" && !on && messagesUnread > 0 ? (
-                          <span className="absolute end-3 top-1/2 h-2 w-2 -translate-y-1/2 rounded-full bg-violet-400" aria-hidden />
-                        ) : null}
-                      </button>
-                    );
-                  })}
-                </div>
+            {insideTalk ? (
+              <div className="shrink-0 px-2 pt-1.5 sm:px-4">
+                {/* 채팅·통화는 대화 목록 안의 화면: 목록으로 돌아가는 길. */}
+                <button
+                  type="button"
+                  onClick={() => openTab("talk")}
+                  className="flex items-center gap-1 rounded-lg px-2 py-1 text-note text-slate-300 hover:bg-white/5"
+                >
+                  <span aria-hidden className="rtl:rotate-180">‹</span>
+                  {ui.homeTabTalk}
+                  {messagesUnread > 0 ? (
+                    <span className="ms-1 rounded-full bg-violet-500 px-1.5 text-meta font-semibold text-white">{Math.min(messagesUnread, 99)}</span>
+                  ) : null}
+                </button>
               </div>
             ) : null}
             <div className="relative z-0 min-h-0 flex-1 overflow-hidden p-2 pb-0 sm:p-4 sm:pb-0">
@@ -323,8 +318,24 @@ function AppHomeInner({
               ) : null}
 
 
-              {shownTab === "messages" && socialOn ? (
-                <MessagesTab ui={ui} locale={locale} targetLanguage={targetLanguage} threads={inbox.threads} groups={groups.groups} onGroupsChanged={groups.refresh} />
+              {shownTab === "talk" && socialOn ? (
+                <MessagesTab
+                  ui={ui}
+                  locale={locale}
+                  targetLanguage={targetLanguage}
+                  threads={inbox.threads}
+                  groups={groups.groups}
+                  onGroupsChanged={groups.refresh}
+                  title={ui.homeTabTalk}
+                  top={
+                    <AiTutorRow
+                      ui={ui}
+                      canCall={roleplayAvailable}
+                      onChat={() => openTab("chat")}
+                      onCall={() => openTab("roleplay")}
+                    />
+                  }
+                />
               ) : null}
 
               {shownTab === "people" && socialOn ? (
@@ -334,7 +345,7 @@ function AppHomeInner({
                   targetLanguage={targetLanguage}
                   teams={groups.groups.filter((row) => row.group.team && !row.invite)}
                   onOpenGroup={(groupId) => {
-                    openTab("messages");
+                    openTab("talk");
                     requestGroup(groupId);
                   }}
                 />
@@ -375,7 +386,7 @@ function AppHomeInner({
             >
               <div className="mx-auto flex max-w-4xl gap-0.5">
                 {tabItems.map((item) => {
-                  const active = shownTab === item.id;
+                  const active = bottomTab === item.id;
                   const meta = TAB_ICON_META[item.id];
                   const Icon = meta.Icon;
                   return (
@@ -397,7 +408,7 @@ function AppHomeInner({
                       >
                         {item.label}
                       </span>
-                      {item.id === "messages" && messagesUnread > 0 ? (
+                      {item.id === "talk" && messagesUnread > 0 ? (
                         <span className="absolute end-[22%] top-1 min-w-[1.1rem] rounded-full bg-violet-500 px-1 text-center text-[10px] font-semibold leading-4 text-white">
                           {Math.min(messagesUnread, 99)}
                         </span>

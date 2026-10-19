@@ -5,7 +5,7 @@ type TabIconProps = {
   className?: string;
 };
 
-type TabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people" | "messages";
+type TabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people" | "messages" | "talk";
 
 const iconBox = "h-6 w-6";
 
@@ -191,6 +191,12 @@ export const TAB_ICON_META: Record<
   },
   messages: {
     Icon: MessagesTabIcon,
+    activeBg: "bg-white/10 tb-glow-platinum",
+    idleBg: "hover:bg-white/5",
+  },
+  // 대화 목록(AI 튜터 + 사람): 채팅과 같은 말풍선.
+  talk: {
+    Icon: ChatTabIcon,
     activeBg: "bg-white/10 tb-glow-platinum",
     idleBg: "hover:bg-white/5",
   },

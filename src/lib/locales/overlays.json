@@ -491,7 +491,7 @@
     "whatsNewAccountTitle": "ログインとプロフィール",
     "whatsNewAccountBody": "IDでログインすると、機種を変えても記録とサブスクリプションが引き継がれます。写真・ニックネーム・自己紹介はルームとメッセージに表示されます。",
     "accountHideFromPeople": "「人」の一覧に自分のプロフィールを出さない",
-    "homeTabPeople": "マイ",
+    "homeTabPeople": "人",
     "homeTabMessages": "メッセージ",
     "modeAi": "AIと学ぶ",
     "modePeople": "人と学ぶ",
@@ -529,7 +529,11 @@
     "whatsNewBoardTitle": "📝 掲示板",
     "whatsNewBoardBody": "「人と学ぶ」→「マイ」→「掲示板」で、学んでいる言語で投稿し、コメントできます。編集・削除は書いた人だけ。「自分の言語で見る」で翻訳。",
     "whatsNewTeamTitle": "🤝 メイト・チーム",
-    "whatsNewTeamBody": "プロフィールから「🤝 メイト申請」、グループは「チームにする」。「ワークスペース」に今週の目標・定例会・いっしょにした日、聞いた表現と通話の記録がたまります。"
+    "whatsNewTeamBody": "プロフィールから「🤝 メイト申請」、グループは「チームにする」。「ワークスペース」に今週の目標・定例会・いっしょにした日、聞いた表現と通話の記録がたまります。",
+    "homeTabTalk": "会話",
+    "talkAiTutor": "AIチューター",
+    "talkAiTutorSub": "チャットで練習 · 📞 通話",
+    "talkAiCall": "AIチューターと通話"
   },
   "zh": {
     "billingClose": "关闭",
@@ -1023,7 +1027,7 @@
     "whatsNewAccountTitle": "登录和个人资料",
     "whatsNewAccountBody": "用账号登录后，换手机也能接着用学习记录和订阅。你的照片、昵称和自我介绍会显示在语音房和消息里。",
     "accountHideFromPeople": "不在“用户”列表中显示我的资料",
-    "homeTabPeople": "我的",
+    "homeTabPeople": "人",
     "homeTabMessages": "消息",
     "modeAi": "和 AI 学",
     "modePeople": "和人一起学",
@@ -1061,7 +1065,11 @@
     "whatsNewBoardTitle": "📝 论坛",
     "whatsNewBoardBody": "在“和人一起学”→“我的”→“论坛”里，用你在学的语言发帖、评论。只有作者能编辑或删除，“用我的语言看”可翻译。",
     "whatsNewTeamTitle": "🤝 学习伙伴和小组",
-    "whatsNewTeamBody": "在个人资料里点“🤝 申请成为伙伴”，群聊可以“设为小组”。“工作区”里有本周目标、固定聚会、一起学习的天数，问过的表达和通话记录也会一直留着。"
+    "whatsNewTeamBody": "在个人资料里点“🤝 申请成为伙伴”，群聊可以“设为小组”。“工作区”里有本周目标、固定聚会、一起学习的天数，问过的表达和通话记录也会一直留着。",
+    "homeTabTalk": "对话",
+    "talkAiTutor": "AI 导师",
+    "talkAiTutorSub": "聊天练习 · 📞 通话",
+    "talkAiCall": "和 AI 导师通话"
   },
   "vi": {
     "billingClose": "Đóng",
@@ -1557,7 +1565,7 @@
     "whatsNewAccountTitle": "Đăng nhập và hồ sơ của bạn",
     "whatsNewAccountBody": "Đăng nhập bằng tên người dùng để giữ tiến độ và gói đăng ký khi đổi điện thoại. Ảnh, biệt danh và giới thiệu của bạn hiện trong phòng và tin nhắn.",
     "accountHideFromPeople": "Ẩn hồ sơ của tôi khỏi danh sách Mọi người",
-    "homeTabPeople": "Của tôi",
+    "homeTabPeople": "Mọi người",
     "homeTabMessages": "Tin nhắn",
     "modeAi": "Học với AI",
     "modePeople": "Học với mọi người",
@@ -1595,7 +1603,11 @@
     "whatsNewBoardTitle": "📝 Bảng tin",
     "whatsNewBoardBody": "Ở “Học với mọi người” → “Của tôi” → “Bảng tin”, đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết mới sửa hoặc xóa được; “Xem bằng ngôn ngữ của tôi” để dịch.",
     "whatsNewTeamTitle": "🤝 Bạn học & nhóm",
-    "whatsNewTeamBody": "Từ hồ sơ chọn “🤝 Mời làm bạn học”, nhóm chat thì “Biến thành nhóm”. “Không gian” lưu mục tiêu tuần, buổi gặp định kỳ, số ngày học cùng, cùng các cụm từ đã hỏi và bản ghi cuộc gọi."
+    "whatsNewTeamBody": "Từ hồ sơ chọn “🤝 Mời làm bạn học”, nhóm chat thì “Biến thành nhóm”. “Không gian” lưu mục tiêu tuần, buổi gặp định kỳ, số ngày học cùng, cùng các cụm từ đã hỏi và bản ghi cuộc gọi.",
+    "homeTabTalk": "Trò chuyện",
+    "talkAiTutor": "Gia sư AI",
+    "talkAiTutorSub": "Luyện tập qua chat · 📞 gọi",
+    "talkAiCall": "Gọi gia sư AI"
   },
   "fr": {
     "billingClose": "Fermer",
@@ -2096,7 +2108,7 @@
     "whatsNewAccountTitle": "Connexion et profil",
     "whatsNewAccountBody": "Connectez-vous avec un identifiant : votre progression et votre abonnement vous suivent sur un autre téléphone. Votre photo, pseudo et présentation apparaissent dans les salons et les messages.",
     "accountHideFromPeople": "Masquer mon profil dans la liste Personnes",
-    "homeTabPeople": "Moi",
+    "homeTabPeople": "Personnes",
     "homeTabMessages": "Messages",
     "modeAi": "Avec l’IA",
     "modePeople": "Avec des gens",
@@ -2134,7 +2146,11 @@
     "whatsNewBoardTitle": "📝 Forum",
     "whatsNewBoardBody": "Dans « Avec des gens » → « Moi » → « Forum », publiez dans la langue que vous apprenez et commentez. Seul l'auteur peut modifier ou supprimer ; « Voir dans ma langue » traduit.",
     "whatsNewTeamTitle": "🤝 Partenaires et équipes",
-    "whatsNewTeamBody": "« 🤝 Proposer d’être partenaires » depuis un profil, ou « En faire une équipe » pour un groupe. L’« Espace » garde l’objectif de la semaine, le rendez-vous fixe, les jours ensemble, les expressions et les appels."
+    "whatsNewTeamBody": "« 🤝 Proposer d’être partenaires » depuis un profil, ou « En faire une équipe » pour un groupe. L’« Espace » garde l’objectif de la semaine, le rendez-vous fixe, les jours ensemble, les expressions et les appels.",
+    "homeTabTalk": "Discussions",
+    "talkAiTutor": "Tuteur IA",
+    "talkAiTutorSub": "S’entraîner par écrit · 📞 appel",
+    "talkAiCall": "Appeler le tuteur IA"
   },
   "it": {
     "archive": "Report",
@@ -2827,7 +2843,7 @@
     "whatsNewAccountTitle": "Accesso e profilo",
     "whatsNewAccountBody": "Accedi con un nome utente: progressi e abbonamento ti seguono su un altro telefono. Foto, nickname e presentazione si vedono nelle stanze e nei messaggi.",
     "accountHideFromPeople": "Nascondi il mio profilo dall’elenco Persone",
-    "homeTabPeople": "Io",
+    "homeTabPeople": "Persone",
     "homeTabMessages": "Messaggi",
     "modeAi": "Con l’IA",
     "modePeople": "Con le persone",
@@ -2865,7 +2881,11 @@
     "whatsNewBoardTitle": "📝 Bacheca",
     "whatsNewBoardBody": "In “Con le persone” → “Io” → “Bacheca”, pubblica nella lingua che impari e commenta. Solo chi scrive può modificare o eliminare; “Vedi nella mia lingua” traduce.",
     "whatsNewTeamTitle": "🤝 Compagni e squadre",
-    "whatsNewTeamBody": "“🤝 Proponi di essere compagni” da un profilo, o “Rendila una squadra” in un gruppo. Lo “Spazio” tiene l’obiettivo della settimana, l’incontro fisso, i giorni insieme, le espressioni e le chiamate."
+    "whatsNewTeamBody": "“🤝 Proponi di essere compagni” da un profilo, o “Rendila una squadra” in un gruppo. Lo “Spazio” tiene l’obiettivo della settimana, l’incontro fisso, i giorni insieme, le espressioni e le chiamate.",
+    "homeTabTalk": "Chat",
+    "talkAiTutor": "Tutor IA",
+    "talkAiTutorSub": "Esercitati in chat · 📞 chiamata",
+    "talkAiCall": "Chiama il tutor IA"
   },
   "pt": {
     "billingClose": "Fechar",
@@ -3369,7 +3389,7 @@
     "whatsNewAccountTitle": "Login e seu perfil",
     "whatsNewAccountBody": "Entre com um nome de usuário e seu progresso e assinatura vão junto para outro celular. Sua foto, apelido e apresentação aparecem nas salas e mensagens.",
     "accountHideFromPeople": "Ocultar meu perfil da lista Pessoas",
-    "homeTabPeople": "Meu espaço",
+    "homeTabPeople": "Pessoas",
     "homeTabMessages": "Mensagens",
     "modeAi": "Com a IA",
     "modePeople": "Com pessoas",
@@ -3407,7 +3427,11 @@
     "whatsNewBoardTitle": "📝 Mural",
     "whatsNewBoardBody": "Em “Com pessoas” → “Meu espaço” → “Mural”, publique no idioma que você aprende e comente. Só quem escreveu pode editar ou excluir; “Ver no meu idioma” traduz.",
     "whatsNewTeamTitle": "🤝 Parceiros e equipes",
-    "whatsNewTeamBody": "“🤝 Propor ser parceiros” no perfil, ou “Transformar em equipe” num grupo. O “Espaço” guarda a meta da semana, o encontro fixo, os dias juntos e as expressões e chamadas de vocês."
+    "whatsNewTeamBody": "“🤝 Propor ser parceiros” no perfil, ou “Transformar em equipe” num grupo. O “Espaço” guarda a meta da semana, o encontro fixo, os dias juntos e as expressões e chamadas de vocês.",
+    "homeTabTalk": "Conversas",
+    "talkAiTutor": "Tutor de IA",
+    "talkAiTutorSub": "Pratique no chat · 📞 chamada",
+    "talkAiCall": "Ligar para o tutor de IA"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4098,7 +4122,7 @@
     "whatsNewAccountTitle": "Вход и ваш профиль",
     "whatsNewAccountBody": "Войдите по логину — прогресс и подписка перейдут на новый телефон. Ваше фото, никнейм и описание видны в комнатах и сообщениях.",
     "accountHideFromPeople": "Не показывать мой профиль в списке «Люди»",
-    "homeTabPeople": "Моё",
+    "homeTabPeople": "Люди",
     "homeTabMessages": "Сообщения",
     "modeAi": "С ИИ",
     "modePeople": "С людьми",
@@ -4136,7 +4160,11 @@
     "whatsNewBoardTitle": "📝 Доска",
     "whatsNewBoardBody": "В «С людьми» → «Моё» → «Доска» публикуйте на изучаемом языке и комментируйте. Изменять и удалять может только автор; «Показать на моём языке» переводит.",
     "whatsNewTeamTitle": "🤝 Напарники и команды",
-    "whatsNewTeamBody": "«🤝 Предложить стать напарниками» в профиле или «Сделать командой» в группе. В «Пространстве» — цель недели, регулярная встреча, дни вместе, а ещё выражения и записи звонков."
+    "whatsNewTeamBody": "«🤝 Предложить стать напарниками» в профиле или «Сделать командой» в группе. В «Пространстве» — цель недели, регулярная встреча, дни вместе, а ещё выражения и записи звонков.",
+    "homeTabTalk": "Чаты",
+    "talkAiTutor": "ИИ-репетитор",
+    "talkAiTutorSub": "Практика в чате · 📞 звонок",
+    "talkAiCall": "Позвонить ИИ-репетитору"
   },
   "id": {
     "billingClose": "Tutup",
@@ -4636,7 +4664,7 @@
     "whatsNewAccountTitle": "Masuk dan profilmu",
     "whatsNewAccountBody": "Masuk dengan nama pengguna agar kemajuan dan langgananmu ikut pindah ke HP lain. Foto, nama panggilan, dan perkenalanmu tampil di ruang dan pesan.",
     "accountHideFromPeople": "Sembunyikan profilku dari daftar Orang",
-    "homeTabPeople": "Saya",
+    "homeTabPeople": "Orang",
     "homeTabMessages": "Pesan",
     "modeAi": "Belajar dengan AI",
     "modePeople": "Belajar dengan orang",
@@ -4674,7 +4702,11 @@
     "whatsNewBoardTitle": "📝 Papan",
     "whatsNewBoardBody": "Di “Belajar dengan orang” → “Saya” → “Papan”, kirim tulisan dalam bahasa yang kamu pelajari dan beri komentar. Hanya penulis yang bisa mengubah atau menghapus; “Lihat dalam bahasaku” menerjemahkan.",
     "whatsNewTeamTitle": "🤝 Teman belajar & tim",
-    "whatsNewTeamBody": "“🤝 Ajak jadi teman belajar” dari profil, atau “Jadikan tim” untuk grup. “Ruang kerja” menyimpan target minggu ini, jadwal rutin, hari belajar bersama, serta ungkapan dan rekaman panggilan."
+    "whatsNewTeamBody": "“🤝 Ajak jadi teman belajar” dari profil, atau “Jadikan tim” untuk grup. “Ruang kerja” menyimpan target minggu ini, jadwal rutin, hari belajar bersama, serta ungkapan dan rekaman panggilan.",
+    "homeTabTalk": "Obrolan",
+    "talkAiTutor": "Tutor AI",
+    "talkAiTutorSub": "Latihan lewat chat · 📞 telepon",
+    "talkAiCall": "Telepon tutor AI"
   },
   "ar": {
     "billingClose": "إغلاق",
@@ -5168,7 +5200,7 @@
     "whatsNewAccountTitle": "تسجيل الدخول وملفك الشخصي",
     "whatsNewAccountBody": "سجّل الدخول باسم مستخدم ليتبعك تقدّمك واشتراكك إلى هاتف آخر. تظهر صورتك واسمك المستعار ونبذتك في الغرف والرسائل.",
     "accountHideFromPeople": "إخفاء ملفي من قائمة الأشخاص",
-    "homeTabPeople": "أنا",
+    "homeTabPeople": "الأشخاص",
     "homeTabMessages": "الرسائل",
     "modeAi": "التعلّم مع الذكاء الاصطناعي",
     "modePeople": "التعلّم مع الناس",
@@ -5206,7 +5238,11 @@
     "whatsNewBoardTitle": "📝 اللوحة",
     "whatsNewBoardBody": "في «التعلّم مع الناس» ← «أنا» ← «اللوحة» انشر باللغة التي تتعلمها وعلّق على منشورات غيرك. الكاتب وحده يعدّل أو يحذف، و«اعرض بلغتي» يترجم.",
     "whatsNewTeamTitle": "🤝 الرفاق والفرق",
-    "whatsNewTeamBody": "«🤝 اطلب أن تكونا رفيقين» من الملف الشخصي، أو «اجعلها فريقًا» للمجموعة. تحفظ «مساحة العمل» هدف الأسبوع واللقاء الدوري وأيام الدراسة معًا والعبارات وسجلات المكالمات."
+    "whatsNewTeamBody": "«🤝 اطلب أن تكونا رفيقين» من الملف الشخصي، أو «اجعلها فريقًا» للمجموعة. تحفظ «مساحة العمل» هدف الأسبوع واللقاء الدوري وأيام الدراسة معًا والعبارات وسجلات المكالمات.",
+    "homeTabTalk": "المحادثات",
+    "talkAiTutor": "المعلّم الذكي",
+    "talkAiTutorSub": "تدرّب بالمحادثة · 📞 مكالمة",
+    "talkAiCall": "اتصل بالمعلّم الذكي"
   },
   "th": {
     "billingClose": "ปิด",
@@ -5700,7 +5736,7 @@
     "whatsNewAccountTitle": "เข้าสู่ระบบและโปรไฟล์ของคุณ",
     "whatsNewAccountBody": "เข้าสู่ระบบด้วยชื่อผู้ใช้ แล้วความคืบหน้าและการสมัครสมาชิกจะตามไปเครื่องใหม่ รูป ชื่อเล่น และคำแนะนำตัวจะแสดงในห้องและข้อความ",
     "accountHideFromPeople": "ไม่แสดงโปรไฟล์ของฉันในรายการผู้คน",
-    "homeTabPeople": "ของฉัน",
+    "homeTabPeople": "ผู้คน",
     "homeTabMessages": "ข้อความ",
     "modeAi": "เรียนกับ AI",
     "modePeople": "เรียนกับผู้คน",
@@ -5738,7 +5774,11 @@
     "whatsNewBoardTitle": "📝 กระดาน",
     "whatsNewBoardBody": "ที่ “เรียนกับผู้คน” → “ของฉัน” → “กระดาน” โพสต์เป็นภาษาที่เรียนและแสดงความคิดเห็นได้ แก้ไขหรือลบได้เฉพาะคนเขียน “ดูเป็นภาษาของฉัน” ช่วยแปล",
     "whatsNewTeamTitle": "🤝 เพื่อนเรียนและทีม",
-    "whatsNewTeamBody": "กด “🤝 ขอเป็นเพื่อนเรียน” จากโปรไฟล์ หรือ “ตั้งเป็นทีม” ในกลุ่ม “พื้นที่ทำงาน” เก็บเป้าหมายสัปดาห์นี้ นัดประจำ วันที่เรียนด้วยกัน สำนวนที่ถามและบันทึกการโทร"
+    "whatsNewTeamBody": "กด “🤝 ขอเป็นเพื่อนเรียน” จากโปรไฟล์ หรือ “ตั้งเป็นทีม” ในกลุ่ม “พื้นที่ทำงาน” เก็บเป้าหมายสัปดาห์นี้ นัดประจำ วันที่เรียนด้วยกัน สำนวนที่ถามและบันทึกการโทร",
+    "homeTabTalk": "แชต",
+    "talkAiTutor": "ติวเตอร์ AI",
+    "talkAiTutorSub": "ฝึกด้วยการแชต · 📞 โทร",
+    "talkAiCall": "โทรหาติวเตอร์ AI"
   },
   "hi": {
     "billingClose": "बंद करें",
@@ -6232,7 +6272,7 @@
     "whatsNewAccountTitle": "लॉग इन और आपकी प्रोफ़ाइल",
     "whatsNewAccountBody": "यूज़रनेम से लॉग इन करें, तो फ़ोन बदलने पर भी आपकी प्रगति और सब्सक्रिप्शन साथ रहेंगे। आपकी फ़ोटो, निकनेम और परिचय रूम और मैसेज में दिखते हैं।",
     "accountHideFromPeople": "लोग सूची में मेरी प्रोफ़ाइल न दिखाएँ",
-    "homeTabPeople": "मेरा",
+    "homeTabPeople": "लोग",
     "homeTabMessages": "मैसेज",
     "modeAi": "AI के साथ सीखें",
     "modePeople": "लोगों के साथ सीखें",
@@ -6270,6 +6310,10 @@
     "whatsNewBoardTitle": "📝 बोर्ड",
     "whatsNewBoardBody": "“लोगों के साथ सीखें” → “मेरा” → “बोर्ड” में सीखी जा रही भाषा में पोस्ट करें और टिप्पणी करें। सिर्फ़ लिखने वाला बदल या हटा सकता है; “मेरी भाषा में देखें” अनुवाद करता है।",
     "whatsNewTeamTitle": "🤝 साथी और टीमें",
-    "whatsNewTeamBody": "प्रोफ़ाइल से “🤝 साथी बनने का अनुरोध”, या ग्रुप के लिए “टीम बनाएँ”। “वर्कस्पेस” में इस हफ़्ते का लक्ष्य, नियमित मीटिंग, साथ पढ़े दिन, पूछे गए शब्द और कॉल रिकॉर्ड रहते हैं।"
+    "whatsNewTeamBody": "प्रोफ़ाइल से “🤝 साथी बनने का अनुरोध”, या ग्रुप के लिए “टीम बनाएँ”। “वर्कस्पेस” में इस हफ़्ते का लक्ष्य, नियमित मीटिंग, साथ पढ़े दिन, पूछे गए शब्द और कॉल रिकॉर्ड रहते हैं।",
+    "homeTabTalk": "बातचीत",
+    "talkAiTutor": "AI ट्यूटर",
+    "talkAiTutorSub": "चैट में अभ्यास · 📞 कॉल",
+    "talkAiCall": "AI ट्यूटर को कॉल करें"
   }
 }
