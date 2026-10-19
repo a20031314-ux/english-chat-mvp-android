@@ -158,40 +158,87 @@ STORIES.invite = () => ({
 // 확대 창: 자막 칸은 화면 위 1/3 아래쪽, 글줄은 왼쪽 정렬이라 창을 왼쪽에 붙인다.
 const UI_LANG = { ko: "ko-KR", ja: "ja-JP", zh: "zh-CN", es: "es-ES", hi: "hi-IN", en: "en-US" };
 const TARGET_LANG = target === "en" ? "en-US" : "es-ES";
+// 앱 TTS(운영 /api/tts, 24kHz 원시 PCM) → 앞뒤 무음을 자른 wav. 같은 글·목소리는 다시 받지 않는다.
+// curl: 작업 공간 프록시에서 Node fetch가 끊길 때가 있다.
+function tts(text, lang, voice, tempo = 1) {
+  const key = Buffer.from(`${voice}|${tempo}|${lang}|${text}`).toString("base64url").slice(0, 60);
+  const pcm = path.join(DIR, `tts-${key}.pcm`);
+  const wav = path.join(DIR, `tts-${key}.wav`);
+  if (!fs.existsSync(wav)) {
+    const url = `${API}/api/tts?text=${encodeURIComponent(text)}&lang=${lang}&voice=${voice}`;
+    execFileSync("curl", ["-sSf", "-o", pcm, "-H", `x-rc-user: promo-voice-${locale}`, url]);
+    execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", pcm, "-af", `silenceremove=start_periods=1:start_threshold=-40dB,areverse,silenceremove=start_periods=1:start_threshold=-40dB,areverse${tempo !== 1 ? `,atempo=${tempo}` : ""}`, wav]);
+  }
+  const len = Number(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", wav]).toString());
+  return { wav, len, text };
+}
+// 기능 설명(내레이터, UI 언어) → 그 기능의 실제 대화. 설명하는 동안 화면은 그 장면 첫 모습에 멈춘다.
+const NARRATION = {
+  en: { n1: "In Room, you talk live with people learning the same language.", n2: "Whatever people say turns into captions as they speak.", n3: "Don't get a line? Tap it to see it in English.",
+    n4: "Stuck? Just say it in your own language.", n5: "A hint gives you that line in Spanish.", n6: "Send it, and everyone in the room sees it.", end: "languagebank. Speak with people learning like you." },
+  ko: { n1: "Room에서는 같은 언어를 배우는 사람들과 목소리로 대화해요.", n2: "말하는 대로 바로 자막이 올라와요.", n3: "모르는 줄은 누르면 한국어로 보여줘요.",
+    n4: "말이 막히면 그냥 한국어로 말해도 돼요.", n5: "그러면 힌트가 할 말을 영어로 알려줘요.", n6: "보내면 방에 있는 모두가 볼 수 있어요.", end: "languagebank. 같은 언어 배우는 사람들과 말하며 배워요." },
+  ja: { n1: "Roomでは、同じ言語を学ぶ人と声で話せます。", n2: "話した言葉が、すぐに字幕になります。", n3: "わからない行は、タップすると日本語で表示されます。",
+    n4: "言葉に詰まったら、日本語で話しても大丈夫。", n5: "ヒントが、言いたいことを英語で教えてくれます。", n6: "送れば、ルームのみんなに届きます。", end: "languagebank。同じ言語を学ぶ人と、話して学ぼう。" },
+  zh: { n1: "在 Room 里，你可以和学同一种语言的人语音聊天。", n2: "大家说的话会实时变成字幕。", n3: "看不懂的句子，点一下就能看中文。",
+    n4: "卡住了？直接说中文也可以。", n5: "提示会告诉你这句话用英语怎么说。", n6: "发出去，房间里的人都能看到。", end: "languagebank，和一起学语言的人边说边学。" },
+  es: { n1: "En Room hablas en directo con gente que aprende tu mismo idioma.", n2: "Lo que dicen aparece en subtítulos mientras hablan.", n3: "¿No entiendes una frase? Tócala y la verás en español.",
+    n4: "¿Te atascas? Dilo en español, sin problema.", n5: "Una pista te da esa frase en inglés.", n6: "Envíala y todos en la sala la verán.", end: "languagebank. Habla con gente que aprende como tú." },
+  hi: { n1: "Room में आप वही भाषा सीख रहे लोगों से आवाज़ में बात करते हैं।", n2: "लोग जो बोलते हैं, वह तुरंत सबटाइटल बन जाता है।", n3: "कोई लाइन समझ न आए तो टैप करें, हिंदी में दिखेगी।",
+    n4: "अटक गए? बस हिंदी में बोल दीजिए।", n5: "हिंट आपको वही बात अंग्रेज़ी में बताता है।", n6: "भेजिए, और रूम में सब देख लेंगे।", end: "languagebank. साथ सीखने वालों से बोलकर सीखें।" },
+};
+const NARRATOR = "coral";
 STORIES.talk = () => {
   // 자막 칸(화면 위에서 43~61%)과 채팅 칸(62~75%)을 띄워 키운다.
   const CAPS = { pop: [0.432, 0.61] };
   const CHAT = { pop: [0.615, 0.75] };
+  const N = NARRATION[locale];
+  if (!N) throw new Error(`no narration for ${locale}`);
+  const ui = UI_LANG[locale] ?? "en-US";
+  // 멈춘 화면 + 설명: 원본 한 프레임(0.04초)을 설명 길이만큼 늘인다.
+  const hold = (src, key, cap, zoom) => {
+    const n = tts(N[key], ui, NARRATOR, 1.12);
+    const dur = n.len + 0.4;
+    return [src, src + 0.04, 0.04 / dur, cap, zoom, { narr: n }];
+  };
   return {
     segs: [
-      [Math.max(0, ev.rooms - 1.2), ev.join + 0.4, 1.3, "r1"],
-      [ev.join + 0.4, ev.line1 - 0.1, 2, "r1"],
-      [ev.line1 - 0.1, ev.tap - 0.2, 1, "r2", CAPS],
+      [Math.max(0, ev.rooms - 0.6), ev.rooms + 0.1, 1, "r1"],
+      hold(ev.rooms + 0.1, "n1", "r1"),
+      [ev.rooms + 0.15, ev.join + 0.4, 1.3, "r1"],
+      [ev.join + 0.4, ev.line1 - 0.3, 2, "r2"],
+      hold(ev.line1 - 0.3, "n2", "r2", CAPS),
+      [ev.line1 - 0.1, ev.tap - 0.3, 1, "r2", CAPS],
+      hold(ev.tap - 0.3, "n3", "r3", CAPS),
       [ev.tap - 0.2, ev.translated + 1.6, 1.3, "r3", CAPS],
+      hold(ev.question - 0.2, "n4", "r4", CAPS),
       [ev.question - 0.2, ev.mumble + 0.1, 1, "r4", CAPS],
       // 힌트는 운영 응답을 기다리므로 약 2.6초로 줄인다(웅얼거림 목소리는 이 구간 처음부터 제 속도로).
-      [ev.mumble + 0.1, ev.hint - 0.5, Math.max(1, (ev.hint - 0.6 - ev.mumble) / 2.6), "r4", CAPS],
-      [ev.hint - 0.5, ev.sent - 0.1, 1, "r5", CAPS],
+      [ev.mumble + 0.1, ev.hint + 0.15, Math.max(1, (ev.hint - 0.6 - ev.mumble) / 2.6), "r4", CAPS],
+      hold(ev.hint + 0.2, "n5", "r5", CAPS),
+      [ev.hint + 0.25, ev.sent - 0.15, 1, "r5", CAPS],
+      hold(ev.sent - 0.15, "n6", "r6", CAPS),
       [ev.sent - 0.1, ev.sent + 2.0, 1, "r6", CHAT],
     ],
     voices: [
       { text: ev.line1Text, lang: TARGET_LANG, voice: "nova", src: ev.line1 + 0.25 },
       { text: ev.line2Text, lang: TARGET_LANG, voice: "shimmer", src: ev.line2 + 0.2 },
       { text: ev.questionText, lang: TARGET_LANG, voice: "nova", src: ev.question + 0.2 },
-      { text: ev.mumbleText, lang: UI_LANG[locale] ?? "en-US", voice: "ash", src: ev.mumble + 0.15 },
-      { text: ev.hintText, lang: TARGET_LANG, voice: "ash", src: ev.hint + 0.6 },
+      { text: ev.mumbleText, lang: ui, voice: "ash", src: ev.mumble + 0.15 },
+      { text: ev.hintText, lang: TARGET_LANG, voice: "ash", src: ev.hint + 0.9 },
     ],
+    endNarr: tts(N.end, ui, NARRATOR, 1.12),
   };
 };
 const plan = STORIES[story]();
 
 // ── 1. 장면 자르기(원본 시각) ──
 const segs = plan.segs;
-const END_CARD = story === "chat" || story === "people" ? 2.6 : 2.2;
+const END_CARD = plan.endNarr ? Math.max(2.6, plan.endNarr.len + 1.0) : story === "chat" || story === "people" ? 2.6 : 2.2;
 let out = 0;
-const timeline = segs.map(([a, b, speed, cap, zoom]) => {
+const timeline = segs.map(([a, b, speed, cap, zoom, extra]) => {
   const dur = (b - a) / speed;
-  const row = { a, b, speed, cap, zoom, at: out, dur };
+  const row = { a, b, speed, cap, zoom, at: out, dur, narr: extra?.narr };
   out += dur;
   return row;
 });
@@ -243,23 +290,21 @@ let voice = null;
 // 여러 목소리: [{ wav, at(결과 영상 초) }]
 const voiceTracks = [];
 const outAt = (src) => {
-  const row = timeline.find((s) => src >= s.a && src < s.b) ?? timeline.find((s) => s.a >= src);
+  const playing = timeline.filter((s) => !s.narr);
+  const row = playing.find((s) => src >= s.a && src < s.b) ?? playing.find((s) => s.a >= src);
   return row ? row.at + Math.max(0, src - row.a) / row.speed : 0;
 };
 for (const [i, v] of (plan.voices ?? []).entries()) {
   if (!v.text) continue;
-  const url = `${API}/api/tts?text=${encodeURIComponent(v.text)}&lang=${v.lang}&voice=${v.voice}`;
-  const pcm = path.join(DIR, `voice-${i}.pcm`);
-  const wav = path.join(DIR, `voice-${i}.wav`);
   try {
-    execFileSync("curl", ["-sSf", "-o", pcm, "-H", `x-rc-user: promo-voice-${locale}`, url]);
-    execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", pcm, "-af", "silenceremove=start_periods=1:start_threshold=-40dB,areverse,silenceremove=start_periods=1:start_threshold=-40dB,areverse", wav]);
-    const len = Number(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", wav]).toString());
-    voiceTracks.push({ wav, at: outAt(v.src), len, text: v.text });
+    // 멈춘 구간(설명) 안의 시각은 건너뛰고 실제로 재생되는 구간에 맞춘다.
+    voiceTracks.push({ ...tts(v.text, v.lang, v.voice), at: outAt(v.src) });
   } catch {
     console.log(`목소리 ${i} 실패: ${v.text}`);
   }
 }
+for (const s of timeline) if (s.narr) voiceTracks.push({ ...s.narr, at: s.at + 0.25 });
+if (plan.endNarr) voiceTracks.push({ ...plan.endNarr, at: phoneDur + 0.35 });
 if (plan.voice) {
   // curl: 작업 공간 프록시에서 Node fetch가 끊길 때가 있다.
   const url = `${API}/api/tts?text=${encodeURIComponent(plan.voice)}&lang=${target === "en" ? "en-US" : "es-ES"}`;
@@ -315,7 +360,7 @@ pops.forEach((s, i) => {
   const h = Math.round(((y1 - y0) * 1830) / 2) * 2;
   const W = 1000;
   const top = Math.round(PHONE.y + ((y0 + y1) / 2) * PHONE.h - ((h * W) / 824 + 16) / 2);
-  chain += `;[${popFirst + i}:v]trim=start=${s.a.toFixed(3)}:end=${s.b.toFixed(3)},setpts=(PTS-STARTPTS)/${s.speed},crop=824:${h}:0:${Math.round(y0 * 1830)},scale=${W}:-2,pad=iw+16:ih+16:8:8:color=0x7CC4FF,format=rgba,fade=in:st=0:d=0.3:alpha=1,fps=25,setpts=PTS+${s.at.toFixed(3)}/TB[pop${i}]`;
+  chain += `;[${popFirst + i}:v]trim=start=${s.a.toFixed(3)}:end=${s.b.toFixed(3)},${s.narr ? `setpts=PTS-STARTPTS,tpad=stop_mode=clone:stop_duration=${s.dur.toFixed(3)}` : `setpts=(PTS-STARTPTS)/${s.speed}`},crop=824:${h}:0:${Math.round(y0 * 1830)},scale=${W}:-2,pad=iw+16:ih+16:8:8:color=0x7CC4FF,format=rgba,fade=in:st=0:d=0.3:alpha=1,fps=25,setpts=PTS+${s.at.toFixed(3)}/TB[pop${i}]`;
   chain += `;[${last}][pop${i}]overlay=x=${(1080 - W - 16) / 2}:y=${top}:eof_action=pass:enable='${between(s.at, s.at + s.dur)}'[q${i}]`;
   last = `q${i}`;
 });
