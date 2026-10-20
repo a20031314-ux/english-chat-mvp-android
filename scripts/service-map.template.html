@@ -42,6 +42,16 @@ header.top { display: grid; gap: 10px; margin-bottom: 26px; }
 h1 { margin: 0; font-size: clamp(26px, 4vw, 40px); line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; text-wrap: balance; }
 h1 .thin { color: var(--mute); font-weight: 500; }
 .meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--mono); font-size: 12px; color: var(--faint); font-variant-numeric: tabular-nums; }
+.history { max-width: 72ch; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }
+.history summary { cursor: pointer; padding: 10px 14px; font-size: 13.5px; display: flex; gap: 8px; align-items: baseline; flex-wrap: wrap; }
+.history summary b { font-weight: 600; }
+.history summary span { color: var(--mute); font-size: 12.5px; }
+.history ol { list-style: none; margin: 0; padding: 0 14px 12px; display: grid; gap: 10px; }
+.history li { display: grid; gap: 4px; }
+.history time { font-family: var(--mono); font-size: 11.5px; color: var(--faint); font-variant-numeric: tabular-nums; }
+.history .chips { gap: 4px; }
+.history .chip { font-size: 12px; padding: 3px 9px; }
+.history .chip small { color: var(--mute); margin-left: 4px; }
 .hint { color: var(--mute); font-size: 14px; max-width: 64ch; margin: 0; }
 
 .layout { display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 28px; align-items: start; }
@@ -176,6 +186,7 @@ details.code .v { font-family: var(--mono); font-size: 12px; color: var(--ink); 
     <h1>겉은 여러 창구, <span class="thin">속은 하나의 앱</span></h1>
     <p class="hint">칸을 누르면 그 화면의 사용 그림과 기능 설명, 가는 길, 코드 영역이 열려요. 점선 칸은 고른 칸과 이어진 곳이에요.</p>
     <div class="meta" id="meta"></div>
+    <details class="history" id="history"></details>
   </header>
 
   <div class="layout">
@@ -193,7 +204,7 @@ const TIER_NAME = { entry: "유입 창구", shell: "앱 틀", tab: "하단 탭",
 
 document.getElementById("meta").innerHTML = [
   `main ${esc(DATA.commit)}`,
-  `만든 날 ${esc(DATA.builtAt)}`,
+  `확인 ${esc(DATA.builtAt)} (한국 시간)`,
   `칸 ${DATA.nodes.length}`,
   `그림 ${DATA.nodes.reduce((s, n) => s + n.steps.filter((x) => x.img).length, 0)}`,
   `API ${DATA.apiCount}`,
@@ -228,6 +239,17 @@ document.getElementById("map").innerHTML = [
   joint("문장 → 분석, 기록은 모든 탭이 같이"),
   tier("어디서나", "SHARED", `<div class="row">${of("anywhere").map((n) => nodeButton(n)).join("")}</div>`),
 ].join("");
+
+{
+  const h = DATA.history || [];
+  const last = h[0];
+  const web = DATA.captured == null ? "창구 그림은 지난번 것" : `창구 그림 ${DATA.captured}/${DATA.webTotal} 새로 찍음`;
+  document.getElementById("history").innerHTML = `<summary><b>${DATA.changesToday ? `이번 확인에서 바뀐 칸 ${DATA.changesToday}개` : "이번 확인: 바뀐 칸 없음"}</b>
+      <span>${esc(web)}${last ? ` · 마지막 변경 ${esc(last.at)}` : ""} · 갱신 기록 ${h.length}</span></summary>
+    <ol>${h.map((row) => `<li><time>${esc(row.at)}${row.commit ? ` · main ${esc(row.commit)}` : ""}</time><div class="chips">${row.changes.map((c) =>
+      c.id && byId[c.id] ? `<button type="button" class="chip" data-go="${c.id}">${esc(c.title)}<small>${esc(c.what)}</small></button>` : `<span class="chip">${esc(c.title)}<small>${esc(c.what)}</small></span>`).join("")}</div></li>`).join("")}</ol>`;
+  if (DATA.changesToday) document.getElementById("history").open = true;
+}
 
 const panel = document.getElementById("panel");
 const isSheet = () => matchMedia("(max-width: 980px)").matches;
@@ -293,6 +315,7 @@ document.addEventListener("keydown", (e) => {
   if (z) z.remove(); else closeSheet();
 });
 document.querySelectorAll(".node").forEach((el) => el.addEventListener("click", () => select(el.dataset.id)));
+document.querySelectorAll("#history [data-go]").forEach((b) => b.addEventListener("click", () => select(b.dataset.go, { open: true, scroll: true })));
 
 const start = location.hash.slice(1);
 if (byId[start]) select(start, { open: true, scroll: true });

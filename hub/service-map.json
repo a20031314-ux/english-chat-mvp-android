@@ -1,0 +1,181 @@
+{
+ "_": "서비스 지도 갱신 기록. scripts/service-map.mjs가 쓴다(손으로 고치지 않음). 칸이 바뀐 날만 history에 한 줄.",
+ "checkedAt": "2026-10-20 23:37",
+ "commit": "4ca0b4e",
+ "nodes": {
+  "moyeo": {
+   "title": "Moyeo",
+   "text": "562b6b64cb57",
+   "shots": "15969fa74e18",
+   "links": "66b939f093ff",
+   "code": "cff5e6c192dd"
+  },
+  "pingo": {
+   "title": "Pingo",
+   "text": "6333de156b03",
+   "shots": "15969fa74e18",
+   "links": "f45b78a78884",
+   "code": "cff5e6c192dd"
+  },
+  "webapp": {
+   "title": "웹 앱",
+   "text": "912c3c030f94",
+   "shots": "59b17f7545f6",
+   "links": "7a94184479dc",
+   "code": "6fc6dfb0b893"
+  },
+  "invite": {
+   "title": "친구 초대 링크",
+   "text": "0f418ad2ce2b",
+   "shots": "36bfab5ddcd9",
+   "links": "9340a47cc38e",
+   "code": "73213659d3ba"
+  },
+  "stores": {
+   "title": "스토어 앱",
+   "text": "93a845cefb28",
+   "shots": "2455b710618a",
+   "links": "4011a05f9985",
+   "code": "6fc6dfb0b893"
+  },
+  "shell": {
+   "title": "상단바 · 앱 틀",
+   "text": "a18198fdb43a",
+   "shots": "3c221ee9e6a1",
+   "links": "e5b81328667f",
+   "code": "6fc6dfb0b893"
+  },
+  "billing": {
+   "title": "결제 · 포인트 · 광고",
+   "text": "3e8fad964fcd",
+   "shots": "97d170e1550e",
+   "links": "34ab1dcb8541",
+   "code": "f0d805475e47"
+  },
+  "feedback": {
+   "title": "의견 보내기",
+   "text": "dcd4291f4936",
+   "shots": "97d170e1550e",
+   "links": "4011a05f9985",
+   "code": "5b67a10b0cb6"
+  },
+  "talk": {
+   "title": "대화",
+   "text": "3e11ff90744b",
+   "shots": "94d1810eee85",
+   "links": "69ce588dafa2",
+   "code": "3b6619968834"
+  },
+  "chat": {
+   "title": "AI 채팅",
+   "text": "c58c5a505552",
+   "shots": "f4ad92ddd593",
+   "links": "ca6f7f7fc811",
+   "code": "c74bbd53e259"
+  },
+  "call": {
+   "title": "AI 통화 · 오늘의 팩",
+   "text": "33b8937c8cc9",
+   "shots": "7a863eec87f4",
+   "links": "82e45a80c680",
+   "code": "44b6e2d4d5cb"
+  },
+  "dm": {
+   "title": "1:1 메시지",
+   "text": "c571fe60100e",
+   "shots": "9d690b6219a5",
+   "links": "f564ad3fc247",
+   "code": "3b6619968834"
+  },
+  "groups": {
+   "title": "단체방 · 팀",
+   "text": "40ba9f58744b",
+   "shots": "5bfc92946018",
+   "links": "22972ca38045",
+   "code": "3b6619968834"
+  },
+  "video": {
+   "title": "영상 학습",
+   "text": "99abe67d775d",
+   "shots": "a1518633c123",
+   "links": "fbb882eac87e",
+   "code": "e6d2fd936bcd"
+  },
+  "people": {
+   "title": "사람",
+   "text": "f11c710657b1",
+   "shots": "b1b27153967f",
+   "links": "73f18aa06e4c",
+   "code": "0b6c082fbf0d"
+  },
+  "board": {
+   "title": "게시판",
+   "text": "ef9d3725f0b0",
+   "shots": "9264a0c20f6b",
+   "links": "da2e1c5ce392",
+   "code": "0b6c082fbf0d"
+  },
+  "rewards": {
+   "title": "친구 초대 · 보상",
+   "text": "ad8d8faf1136",
+   "shots": "36bfab5ddcd9",
+   "links": "41fcd58e4c8d",
+   "code": "73213659d3ba"
+  },
+  "room": {
+   "title": "Room",
+   "text": "0ac1a5541c83",
+   "shots": "2de12bc78012",
+   "links": "8e1776db4308",
+   "code": "eb0885dc8f30"
+  },
+  "my": {
+   "title": "My",
+   "text": "a7ca1bca481e",
+   "shots": "be464986a97a",
+   "links": "bc7ccaf1382e",
+   "code": "cbce66a2c971"
+  },
+  "growth": {
+   "title": "자라는 중 · 지도",
+   "text": "83f0fadb406d",
+   "shots": "14c037cc9e79",
+   "links": "d558e5cc6ea2",
+   "code": "cbce66a2c971"
+  },
+  "notes": {
+   "title": "노트 · 단어장",
+   "text": "81c5e7af9465",
+   "shots": "72b41bef2512",
+   "links": "fbb882eac87e",
+   "code": "cbce66a2c971"
+  },
+  "sheet": {
+   "title": "문장분석 · 표현 시트",
+   "text": "abb034daa321",
+   "shots": "38df95165730",
+   "links": "585c6d8b35ab",
+   "code": "e138274c17e9"
+  },
+  "learner": {
+   "title": "오늘 해볼 것 · 표현 장부",
+   "text": "07459588c7ce",
+   "shots": "250482544b29",
+   "links": "4e14f6b396a0",
+   "code": "05f40b400712"
+  }
+ },
+ "history": [
+  {
+   "at": "2026-10-20 23:37",
+   "commit": "4ca0b4e",
+   "changes": [
+    {
+     "id": "",
+     "title": "처음 기록",
+     "what": "칸 23개"
+    }
+   ]
+  }
+ ]
+}

@@ -13,6 +13,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
+import { createHash } from "node:crypto";
 import { createJiti } from "jiti";
 
 const ROOT = process.cwd();
@@ -324,7 +325,7 @@ const nodes = [
     points: ["단어장은 하단 탭에서 빠지고 노트 안으로(2026-10-19)"],
     path: "My → 노트",
     links: ["sheet", "learner"],
-    steps: ["my.notes", "words.find", "words.saved", "words.learn"].map(step),
+    steps: ["my.notes", "words.find", "words.saved", "words.learn", "words.script"].map(step),
   },
 
   // 어디서나
@@ -367,7 +368,70 @@ try {
 let apiCount = 0;
 for (const a of Object.values(areas)) apiCount += a.apis.length;
 
-const data = { nodes, commit, apiCount, builtAt: new Date().toISOString().slice(0, 10) };
+// ── 갱신 기록: hub/service-map.json(칸마다 지문 + 바뀐 것 기록) ─────────────────────────
+// 예약 작업 "서비스 지도 갱신"이 매일 이 스크립트를 돌린다. 칸의 글·그림(저장소 그림은 파일 내용,
+// 운영 캡처는 글만 — 열린 방 수처럼 매번 달라지는 화면은 세지 않음)·코드 영역이 바뀌면 그 칸을 기록한다.
+const SNAPSHOT = path.join(ROOT, "hub/service-map.json");
+const hashOf = (value) => createHash("sha1").update(value).digest("hex").slice(0, 12);
+const fileHash = (rel) => (rel && !rel.startsWith("shots/web-") && fs.existsSync(path.join(OUT_DIR, rel)) ? hashOf(fs.readFileSync(path.join(OUT_DIR, rel))) : "");
+function fingerprint(n) {
+  return {
+    title: n.title,
+    text: hashOf(JSON.stringify([n.title, n.sub, n.summary, n.points, n.path, n.status ?? "", n.steps.map((s) => [s.heading, s.body])])),
+    // 운영 캡처는 찍혔는지와 상관없이 같게 센다(찍기가 한 번 실패해도 "바뀜"으로 보이지 않게).
+    shots: hashOf(JSON.stringify(n.steps.map((s) => (s.from === "운영 주소 캡처" ? "web" : s.img ? `${s.img}:${fileHash(s.img)}` : "")))),
+    links: hashOf(JSON.stringify([n.links ?? [], n.children ?? []])),
+    code: hashOf(JSON.stringify(n.code ?? null)),
+  };
+}
+const PART_NAME = { text: "설명", shots: "그림", links: "이어진 칸", code: "코드 영역" };
+let previous = null;
+try {
+  previous = JSON.parse(fs.readFileSync(SNAPSHOT, "utf8"));
+} catch {}
+const now = new Date();
+const kst = new Date(now.getTime() + 9 * 3600e3).toISOString().replace("T", " ").slice(0, 16);
+const current = Object.fromEntries(nodes.map((n) => [n.id, fingerprint(n)]));
+const changes = [];
+if (previous?.nodes) {
+  for (const n of nodes) {
+    const before = previous.nodes[n.id];
+    if (!before) {
+      changes.push({ id: n.id, title: n.title, what: "새 칸" });
+      continue;
+    }
+    const parts = Object.keys(PART_NAME).filter((k) => before[k] !== current[n.id][k]).map((k) => PART_NAME[k]);
+    if (parts.length) changes.push({ id: n.id, title: n.title, what: parts.join(" · ") });
+  }
+  for (const [id, before] of Object.entries(previous.nodes)) if (!current[id]) changes.push({ id, title: before.title, what: "빠짐" });
+} else {
+  changes.push({ id: "", title: "처음 기록", what: `칸 ${nodes.length}개` });
+}
+// 지도에 아직 없는 것: 사용법 칸(그 밖에·옛 칸 제외)과 코드 영역 중 어느 칸도 안 쓰는 것, 창구(doors.ts) 중 칸이 없는 것.
+const usedSections = new Set(nodes.flatMap((n) => n.steps.map((s) => s.from.replace(/^사용법 /, ""))));
+const missing = {
+  guide: guide.GUIDE_CHAPTERS.flatMap((c) => c.sections).filter((id) => !id.endsWith(".more") && !usedSections.has(id) && guide.guideSection(guide.GUIDE_KO, id)?.shot),
+  areas: Object.keys(areas).filter((id) => !["ops", "account", "web"].includes(id) && !nodes.some((n) => n.area === id)),
+  doors: doorsLib.DOORS.map((d) => d.id).filter((id) => !["group-call", "random-chat"].includes(id)),
+};
+const captured = CAPTURE ? WEB_TARGETS.filter((t) => fs.existsSync(path.join(SHOTS, `${t.name}.jpg`))).length : null;
+const history = [...(previous?.history ?? [])];
+if (changes.length) history.unshift({ at: kst, commit: commit.split(" ")[0], changes });
+const snapshot = {
+  _: "서비스 지도 갱신 기록. scripts/service-map.mjs가 쓴다(손으로 고치지 않음). 칸이 바뀐 날만 history에 한 줄.",
+  checkedAt: kst,
+  commit: commit.split(" ")[0],
+  nodes: current,
+  history: history.slice(0, 20),
+};
+// 바뀐 게 없으면 파일을 건드리지 않는다(매일 빈 커밋이 생기지 않게). checkedAt은 페이지에만 보인다.
+if (changes.length) fs.writeFileSync(SNAPSHOT, JSON.stringify(snapshot, null, 1) + "\n");
+fs.writeFileSync(path.join(OUT_DIR, "changes.json"), JSON.stringify({ checkedAt: kst, captured, changes, missing }, null, 1));
+const missingCount = missing.guide.length + missing.areas.length + missing.doors.length;
+if (missingCount) console.log(`지도에 없는 것 ${missingCount}: 사용법 칸 ${missing.guide.join(", ") || "-"} · 영역 ${missing.areas.join(", ") || "-"} · 창구 ${missing.doors.join(", ") || "-"}`);
+console.log(changes.length ? `바뀐 칸 ${changes.length}: ${changes.map((c) => `${c.title}(${c.what})`).join(", ")}` : "바뀐 칸 없음");
+
+const data = { nodes, commit, apiCount, builtAt: kst, history: snapshot.history, changesToday: changes.length, captured, webTotal: WEB_TARGETS.length };
 const template = fs.readFileSync(path.join(ROOT, "scripts/service-map.template.html"), "utf8");
 fs.writeFileSync(path.join(OUT_DIR, "index.html"), template.replace("/*MAP_DATA*/null", JSON.stringify(data).replace(/</g, "\\u003c")));
 const bytes = [...usedFiles].reduce((sum, rel) => sum + fs.statSync(path.join(OUT_DIR, rel)).size, 0);

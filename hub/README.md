@@ -38,6 +38,10 @@ https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y (본인만). 칸을 누르면 
 그림과 글은 사용법(?)(`src/lib/guide/content.ts` + `public/guide/ko/`)에서, 웹 창구 그림은 운영 주소를 찍어서, 코드 영역은 `STRUCTURE.md`에서 가져온다.
 다시 만들기: `npm run service-map`(창구 안 찍으려면 `-- --no-capture`) → `tmp/service-map/index.html`과 `shots/`(`files.json`)를
 Artifact 도구로 **위 주소(url)에** 다시 올린다. 칸·설명·이어진 칸은 `scripts/service-map.mjs`의 `nodes`.
+- **자동:** 예약 작업 "서비스 지도 갱신"이 매일 06:52(한국 시간) 다시 만들어 같은 주소에 올린다. 사용법 칸·영역·창구가 새로 생겼는데
+  지도에 없으면 칸을 더하고, 바뀐 칸은 `hub/service-map.json`(칸마다 지문 + 갱신 기록 20개)에 남긴다 — 바뀐 날만 커밋, 폰 알림은 바뀌었거나 실패했을 때만.
+- **수동:** claude.ai 예약 작업 목록에서 "서비스 지도 갱신" → 지금 실행, 또는 아무 채팅에서 "서비스 지도 갱신 돌려".
+- **확인:** 페이지 맨 위 "이번 확인 …"(확인 시각·창구 그림 새로 찍은 수·갱신 기록, 칸 이름을 누르면 그 칸이 열림), 예약 작업 목록의 마지막 실행.
 
 ## 쓰는 법
 
