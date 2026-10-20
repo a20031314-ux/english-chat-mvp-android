@@ -144,7 +144,7 @@ for (const [key, value] of Object.entries(DEFAULT_ADS_SETTINGS)) {
   if (!fieldEnv[key]) problems.push(`설정 ${key}의 환경 변수를 못 찾음(ads.ts adsSettings)`);
   out.push(`| \`${key}\` | ${typeof value === "boolean" ? (value ? "켬" : "끔") : value} | \`${fieldEnv[key] ?? "?"}\` | ${esc(fieldNote[key] ?? "")} |`);
 }
-out.push("", "구독자(라이트·플러스·프리미엄)·iOS·웹은 광고 없음 — 서버가 `enabled: false`, 앱은 `platform.ts` `adsAvailable()`.", "");
+out.push("", "구독자(라이트·플러스·프리미엄)·iOS는 광고 없음, 웹은 목록 자리에 AdSense만(`src/lib/webAds.ts`, 값 넣기 전엔 꺼짐) — 서버가 `enabled: false`, 앱은 `platform.ts` `adsAvailable()`.", "");
 
 out.push("## 자동: 광고 단위 (AdMob, `ads.ts` `ADMOB_UNITS`)", "", "| 형식 | 단위 ID |", "|---|---|");
 for (const [kind, id] of Object.entries(ADMOB_UNITS)) out.push(`| ${kind} | \`${id}\` |`);

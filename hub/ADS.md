@@ -6,7 +6,8 @@
 
 ## 원칙 (손으로 씀)
 
-- **무료·안드로이드만.** 구독자·iOS·웹은 광고 없음. "광고 없이 쓰기"가 구독 이유의 하나.
+- **무료·안드로이드만(웹은 목록 광고만).** 구독자·iOS는 광고 없음. "광고 없이 쓰기"가 구독 이유의 하나.
+- **웹(2026-10-20, `src/lib/webAds.ts`·`WebAdSlot`):** `NativeAdSlot`과 같은 목록 자리에 AdSense 반응형 광고 하나, 무료만(`/api/ads/config` native.enabled). 전면·앱 오프닝·배너·보상형은 웹에 없음. Vercel `NEXT_PUBLIC_ADSENSE_CLIENT`·`NEXT_PUBLIC_ADSENSE_SLOT_FEED`를 넣어야 켜짐(지금 꺼짐), `/ads.txt`는 서버가 만듦.
 - **흐름을 끊지 않는다.** 전면 광고는 무언가 **끝난 자리**에만(통화·팩·미션 끝, 채팅·방·영상에서 나올 때), 서로 몇 분 간격. 쓰는 중·답 기다리는 중·통화 중·앱을 열자마자는 안 띄움.
 - **보상형은 꺼 둠**(2026-10-20 사용자: "광고 보고 더 주는 건 거부감, 그냥 뜨고 건너뛰는 게 흔하다"). 대신 전면을 채팅 2번 뒤로.
 - **값은 서버에서.** 간격·조건·켜고 끄기는 Vercel `ADS_*` → 앱 빌드 없이 조정. 광고 자리(어느 화면에 무엇) 자체는 앱 빌드.
@@ -27,6 +28,7 @@
 ## 사람이 할 일 (손으로 씀)
 
 - 광고가 든 첫 빌드를 Play에 올리기 전: Play Console 앱 콘텐츠 → 광고 "포함", 데이터 보안(광고 ID·기기 식별자, 광고 목적, AdMob 공유). AdMob "개인정보 보호 및 메시지"에서 GDPR 메시지 게시.
+- 웹 광고를 켜려면: AdSense 가입 → 사이트 `languagebank.net` 추가·승인 → 반응형 디스플레이 광고 단위 하나 → Vercel에 위 두 값 넣고 재배포. 유럽·영국 동의창은 AdSense "개인 정보 보호 및 메시지"에서 켠다.
 - 보상형을 다시 켜면: AdMob 보상형 단위에 서버 측 확인 URL `https://english-chat-mvp.vercel.app/api/ads/ssv`.
 - 개발 중 실제 광고를 직접 누르지 않는다(계정 정지 위험) — 테스트는 `NEXT_PUBLIC_ADS_TEST=1` 빌드.
 
@@ -84,7 +86,7 @@
 | `roomLeaveMinutes` | 3 | `ADS_ROOM_LEAVE_MINUTES` | 공개 말하는 방에 이만큼(분) 넘게 있다 나오면 전면 광고. 0이면 끔. |
 | `videoLeaveMinutes` | 2 | `ADS_VIDEO_LEAVE_MINUTES` | 영상을 이만큼(분) 넘게 보고 나오면 전면 광고. 0이면 끔. |
 
-구독자(라이트·플러스·프리미엄)·iOS·웹은 광고 없음 — 서버가 `enabled: false`, 앱은 `platform.ts` `adsAvailable()`.
+구독자(라이트·플러스·프리미엄)·iOS는 광고 없음, 웹은 목록 자리에 AdSense만(`src/lib/webAds.ts`, 값 넣기 전엔 꺼짐) — 서버가 `enabled: false`, 앱은 `platform.ts` `adsAvailable()`.
 
 ## 자동: 광고 단위 (AdMob, `ads.ts` `ADMOB_UNITS`)
 

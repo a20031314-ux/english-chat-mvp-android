@@ -124,6 +124,7 @@
     "components/PointStore": "billing",
     "components/PointsIcon": "billing",
     "components/NativeAdSlot": "billing",
+    "components/WebAdSlot": "billing",
     "api/entitlement": "billing",
     "api/points/": "billing",
     "api/ads/": "billing",
@@ -150,6 +151,7 @@
   },
   "external": {
     "api/ads/ssv": "AdMob 서버가 보상 확인으로 부름",
+    "api/ads/txt": "AdSense가 /ads.txt로 읽음(next.config.ts rewrites)",
     "api/account/purge": "Vercel 예약 작업(vercel.json)",
     "api/media/sweep": "Vercel 예약 작업(vercel.json)",
     "api/feedback/fixed": "의견함 예약 작업(scripts/feedback-notify.mjs)",
