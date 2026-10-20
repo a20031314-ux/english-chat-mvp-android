@@ -1,26 +1,26 @@
 {
  "_": "서비스 지도 갱신 기록. scripts/service-map.mjs가 쓴다(손으로 고치지 않음). 칸이 바뀐 날만 history에 한 줄.",
- "checkedAt": "2026-10-20 23:37",
- "commit": "4ca0b4e",
+ "checkedAt": "2026-10-20 23:40",
+ "commit": "7c31918",
  "nodes": {
   "moyeo": {
    "title": "Moyeo",
-   "text": "562b6b64cb57",
-   "shots": "15969fa74e18",
+   "text": "b6fe750fc182",
+   "shots": "4b1ccdb93325",
    "links": "66b939f093ff",
    "code": "cff5e6c192dd"
   },
   "pingo": {
    "title": "Pingo",
-   "text": "6333de156b03",
-   "shots": "15969fa74e18",
+   "text": "cba9204961d8",
+   "shots": "52f61d2f3ee3",
    "links": "f45b78a78884",
    "code": "cff5e6c192dd"
   },
   "webapp": {
    "title": "웹 앱",
-   "text": "912c3c030f94",
-   "shots": "59b17f7545f6",
+   "text": "aa984cafbac1",
+   "shots": "00909f0f07cd",
    "links": "7a94184479dc",
    "code": "6fc6dfb0b893"
   },
@@ -47,8 +47,8 @@
   },
   "billing": {
    "title": "결제 · 포인트 · 광고",
-   "text": "3e8fad964fcd",
-   "shots": "97d170e1550e",
+   "text": "94a6dce5dab3",
+   "shots": "694be068f734",
    "links": "34ab1dcb8541",
    "code": "f0d805475e47"
   },
@@ -82,8 +82,8 @@
   },
   "dm": {
    "title": "1:1 메시지",
-   "text": "c571fe60100e",
-   "shots": "9d690b6219a5",
+   "text": "3a57cfc2a9c7",
+   "shots": "b867e765d141",
    "links": "f564ad3fc247",
    "code": "3b6619968834"
   },
@@ -124,8 +124,8 @@
   },
   "room": {
    "title": "Room",
-   "text": "0ac1a5541c83",
-   "shots": "2de12bc78012",
+   "text": "6e1af3a4021d",
+   "shots": "02691a87b039",
    "links": "8e1776db4308",
    "code": "eb0885dc8f30"
   },
@@ -166,6 +166,42 @@
   }
  },
  "history": [
+  {
+   "at": "2026-10-20 23:40",
+   "commit": "7c31918",
+   "changes": [
+    {
+     "id": "moyeo",
+     "title": "Moyeo",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "pingo",
+     "title": "Pingo",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "webapp",
+     "title": "웹 앱",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "billing",
+     "title": "결제 · 포인트 · 광고",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "dm",
+     "title": "1:1 메시지",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "room",
+     "title": "Room",
+     "what": "설명 · 그림"
+    }
+   ]
+  },
   {
    "at": "2026-10-20 23:37",
    "commit": "4ca0b4e",

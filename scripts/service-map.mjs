@@ -41,16 +41,45 @@ function copyShot(src, name) {
   usedFiles.add(rel);
   return rel;
 }
-/** 사용법 칸 하나 → 그림·제목·글. */
+// ── 스크린샷 모음(hub/SHOTS.md): tmp/shots/plan.json(scripts/shots-plan.mjs)과 내려받은 그림 tmp/shots/img/<assetId>.* ──
+// 고른 그림(picks)은 그 사용법 칸 그림을 바꾸고, 칸마다 자동으로 고른 장면은 한국어 화면이 대표·다른 언어 조합은 보조(alts).
+const SHOT_DIR = path.join(ROOT, "tmp/shots");
+const plan = fs.existsSync(path.join(SHOT_DIR, "plan.json")) ? JSON.parse(fs.readFileSync(path.join(SHOT_DIR, "plan.json"), "utf8")) : null;
+const shotRows = {};
+if (plan && fs.existsSync(path.join(SHOT_DIR, "db/shots")))
+  for (const f of fs.readdirSync(path.join(SHOT_DIR, "db/shots"))) if (f.endsWith(".json")) shotRows[f.slice(0, -5)] = JSON.parse(fs.readFileSync(path.join(SHOT_DIR, "db/shots", f), "utf8"));
+const COMBO = { ko: "ja 학습 · ko 앱", ja: "en 학습 · ja 앱", ar: "es 학습 · ar 앱" };
+const needs = [];
+/** 모음의 그림 하나를 지도 묶음으로(내려받은 파일이 있을 때만). */
+function galleryImg(id) {
+  const row = shotRows[id];
+  if (!row) return null;
+  const dir = path.join(SHOT_DIR, "img");
+  const file = fs.existsSync(dir) ? fs.readdirSync(dir).find((f) => f.startsWith(`${row.assetId}.`)) : null;
+  if (file) return copyShot(path.relative(ROOT, path.join(dir, file)), `m-${row.assetId}${path.extname(file)}`);
+  // 이 작업 공간에서 찍은 그림이면 원본 파일 그대로(내려받기 생략).
+  if (row.file && fs.existsSync(path.join(ROOT, row.file))) return copyShot(row.file, `m-${row.assetId}${path.extname(row.file)}`);
+  return null;
+}
+const altsOf = (ids) =>
+  ids.map((id) => ({ img: galleryImg(id), label: COMBO[shotRows[id]?.lang] || shotRows[id]?.lang || "다른 조합" })).filter((a) => a.img);
+function galleryStep(id, alts = [], why = "스크린샷 모음") {
+  const row = shotRows[id];
+  const img = galleryImg(id);
+  if (!row || !img) return null;
+  return { heading: row.title, body: [`${COMBO[row.lang] || row.lang || ""} · ${row.date}`], img, alts: altsOf(alts), from: why };
+}
+
+/** 사용법 칸 하나 → 그림·제목·글. 사용자가 그 칸에 고른 그림이 있으면 그것. */
 function step(id) {
   const section = guide.guideSection(guide.GUIDE_KO, id);
   if (!section) throw new Error(`사용법 칸 없음: ${id}`);
-  return {
-    heading: fill(section.heading).replace(/^\d+\.\s*/, ""),
-    body: section.body.map(fill),
-    img: section.shot ? copyShot(`public/guide/ko/${section.shot}.webp`, `g-${section.shot}.webp`) : null,
-    from: `사용법 ${id}`,
-  };
+  const picked = plan?.sections?.[id];
+  const pickedImg = picked ? galleryImg(picked) : null;
+  const img = pickedImg ?? (section.shot ? copyShot(`public/guide/ko/${section.shot}.webp`, `g-${section.shot}.webp`) : null);
+  const heading = fill(section.heading).replace(/^\d+\.\s*/, "");
+  if (!img) needs.push({ key: id, label: heading });
+  return { heading, body: section.body.map(fill), img, from: pickedImg ? `사용법 ${id} · 고른 그림` : `사용법 ${id}` };
 }
 const wn = (version, shot, heading, body) => ({
   heading,
@@ -354,6 +383,12 @@ const ids = new Set(nodes.map((n) => n.id));
 for (const n of nodes) for (const ref of [...(n.links || []), ...(n.children || [])]) if (!ids.has(ref)) throw new Error(`${n.id} → 없는 칸 ${ref}`);
 for (const n of nodes) {
   n.steps = n.steps.filter(Boolean);
+  // 이 칸에 고른 대표 그림(node.<칸>)은 맨 앞, 모음에서 자동으로 고른 장면은 뒤에(한국어 대표 + 보조).
+  const picked = plan?.sections?.[`node.${n.id}`];
+  const lead = picked ? galleryStep(picked, [], "고른 대표 그림") : null;
+  const auto = (plan?.nodes?.[n.id] ?? []).filter((sc) => sc.primary !== picked).map((sc) => galleryStep(sc.primary, sc.alts)).filter(Boolean);
+  n.steps = [...(lead ? [lead] : []), ...n.steps, ...auto];
+  if (!n.steps.some((s) => s.img)) needs.push({ key: `node.${n.id}`, label: `${n.title} (칸 전체)` });
   const area = areas[n.area];
   n.code = area ? { id: n.area, title: area.title, screens: area.screens, apis: area.apis, pages: area.pages } : null;
 }
@@ -436,4 +471,6 @@ const template = fs.readFileSync(path.join(ROOT, "scripts/service-map.template.h
 fs.writeFileSync(path.join(OUT_DIR, "index.html"), template.replace("/*MAP_DATA*/null", JSON.stringify(data).replace(/</g, "\\u003c")));
 const bytes = [...usedFiles].reduce((sum, rel) => sum + fs.statSync(path.join(OUT_DIR, rel)).size, 0);
 console.log(`서비스 지도 → tmp/service-map/index.html (칸 ${nodes.length}, 그림 ${usedFiles.size}장 ${(bytes / 1e6).toFixed(1)}MB)`);
+// 그림이 필요한 칸 → 스크린샷 모음 페이지 meta/plan에 Claude가 옮긴다(hub/SHOTS.md).
+fs.writeFileSync(path.join(OUT_DIR, "needs.json"), JSON.stringify({ needs: [...new Map(needs.map((x) => [x.key, x])).values()], nodes: nodes.map((n) => ({ id: n.id, title: n.title })) }, null, 1));
 fs.writeFileSync(path.join(OUT_DIR, "files.json"), JSON.stringify(Object.fromEntries([...usedFiles].sort().map((rel) => [rel, path.join(OUT_DIR, rel)])), null, 1));

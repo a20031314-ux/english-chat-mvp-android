@@ -129,6 +129,9 @@ figure { margin: 0; scroll-snap-align: start; display: grid; gap: 8px; align-con
 .shot { background: var(--sunk); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: grid; place-items: center; max-height: 470px; }
 .shot img { display: block; width: 100%; height: auto; max-height: 470px; object-fit: contain; cursor: zoom-in; }
 .shot.none { height: 90px; color: var(--faint); font-size: 12.5px; }
+.alts { display: flex; flex-wrap: wrap; gap: 4px; }
+.alt { font: inherit; font-size: 11.5px; border: 1px solid var(--line); background: transparent; color: var(--mute); border-radius: 999px; padding: 2px 8px; cursor: pointer; }
+.alt.on { color: var(--ink, inherit); border-color: var(--line-strong); }
 figcaption { display: grid; gap: 3px; }
 figcaption b { font-size: 14px; }
 figcaption p { margin: 0; font-size: 13px; color: var(--mute); line-height: 1.55; }
@@ -258,7 +261,11 @@ function figure(s) {
   const img = s.img
     ? `<div class="shot"><img src="${esc(s.img)}" alt="${esc(s.heading)}" loading="lazy"></div>`
     : `<div class="shot none">그림 없음</div>`;
-  return `<figure>${img}<figcaption><b>${esc(s.heading)}</b>${s.body.map((p) => `<p>${esc(p)}</p>`).join("")}<small>${esc(s.from)}</small></figcaption></figure>`;
+  // 한국어 화면이 대표, 다른 언어 조합은 보조 — 누르면 위 그림이 그 조합으로 바뀐다.
+  const alts = s.alts && s.alts.length
+    ? `<div class="alts" role="group" aria-label="다른 언어 조합"><button type="button" class="alt on" data-src="${esc(s.img)}">한국어</button>${s.alts.map((a) => `<button type="button" class="alt" data-src="${esc(a.img)}">${esc(a.label)}</button>`).join("")}</div>`
+    : "";
+  return `<figure>${img}${alts}<figcaption><b>${esc(s.heading)}</b>${s.body.map((p) => `<p>${esc(p)}</p>`).join("")}<small>${esc(s.from)}</small></figcaption></figure>`;
 }
 function codeBlock(c) {
   if (!c) return "";
@@ -295,6 +302,11 @@ function select(id, { open = true, scroll = false } = {}) {
   panel.scrollTop = 0;
   panel.querySelectorAll("[data-go]").forEach((b) => b.addEventListener("click", () => select(b.dataset.go, { open: true, scroll: !isSheet() })));
   panel.querySelector("#close").addEventListener("click", closeSheet);
+  panel.querySelectorAll(".alts .alt").forEach((b) => b.addEventListener("click", () => {
+    const fig = b.closest("figure");
+    fig.querySelector(".shot img").src = b.dataset.src;
+    fig.querySelectorAll(".alt").forEach((x) => x.classList.toggle("on", x === b));
+  }));
   panel.querySelectorAll(".shot img").forEach((img) => img.addEventListener("click", () => zoom(img.src)));
   if (open && isSheet()) document.body.classList.add("open");
   if (scroll) document.querySelector(`.node[data-id="${id}"]`)?.scrollIntoView({ block: "center", behavior: "smooth" });
