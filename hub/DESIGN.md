@@ -38,6 +38,7 @@
 | `border-line` | 흰색 12% | 기본 테두리 (옛 `border-white/10~15`) |
 | `text-ink` | #f4f4f2 | 기본 글자 |
 | `bg-platinum` `hover:bg-platinum-hover` | #e8e8e4 / #f5f5f3 | 주요 버튼(글자는 검정) |
+| `door-accent` `door-soft` `door-bg` | 창구마다(`[data-door=…]`, 기본은 플래티넘·검정) | 창구 소개 페이지·창구 모드 앱의 이름표(`lib/doors.ts`). 다른 화면에는 쓰지 않는다 |
 | `text-slate-200 / 400 / 500` | — | 보조 글자 3단계. **회색은 slate 하나**(neutral·gray·zinc 안 씀) |
 
 **의미색** — 의미가 있을 때만 쓴다. 꾸밈으로 색을 넣지 않는다.
@@ -64,6 +65,7 @@
 | `text-chat` | 15 | 채팅·학습 언어 문장 |
 | `text-title` | 18 | 시트·섹션 제목 |
 | `text-heading` | 20 | 화면 제목 |
+| `text-hero` | 34 | 창구 소개 페이지 첫 문장만(`lib/doors.ts`) |
 
 10px·10.5·12.5px는 만들지 않는다(옛 코드는 고칠 때 11·12·13으로).
 `text-xs`·`text-sm`은 줄 높이까지 정하는 Tailwind 기본이라 그대로 둬도 된다(검사 안 함). 토큰으로 바꾸면 줄 간격이 달라지니 화면을 보고 바꾼다.

@@ -56,6 +56,19 @@
   --text-chat: 15px; /* 채팅·학습 문장 */
   --text-title: 18px; /* 시트·섹션 제목 */
   --text-heading: 20px; /* 화면 제목 */
+  --text-hero: 34px; /* 창구 소개 페이지 첫 문장(lib/doors.ts)만 */
+
+  /* 창구(lib/doors.ts) 색 — 기본은 앱과 같고, [data-door=…]가 바꾼다 */
+  --color-door-accent: #e8e8e4;
+  --color-door-soft: rgba(255, 255, 255, 0.08);
+  --color-door-bg: #000000;
+}
+
+/* 창구 Moyeo(단체통화): 따뜻한 산호색 */
+[data-door="moyeo"] {
+  --color-door-accent: #ff7a59;
+  --color-door-soft: rgba(255, 122, 89, 0.14);
+  --color-door-bg: #120806;
 }
 
 html,

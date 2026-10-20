@@ -341,6 +341,9 @@ AI 도움(번역·표현 카드·다듬어 보기·학습 언어로·표현 자�
   **유료는 앱에서 사고 같은 계정으로 로그인하면 웹에서 이어 쓴다**(서버가 계정 id로 RevenueCat에 확인 `premiumRequest.ts`, 웹은 서버가 확인한 요금만 기억 `fetchPlanFromServer`, 웹에서 요금 표시 머리를 바꿔도 소용없음).
   결제 화면은 "구독은 앱에서 사요…"(`paywallNativeOnly`), '복원'은 서버에 다시 묻기. 이름·아이콘 languagebank, 홈 화면에 추가(`app/manifest.ts`). Google 로그인 웹에서도(2026-10-20, 팝업 — Google Cloud 웹 클라이언트에 새 도메인 원본·리디렉션 등록), 영상은 자막 있는 것·서버가 준비한 것만(iOS와 같음).
   단어장·담은 표현·문장 메모·채팅·통화 기록 일부는 아직 기기에만 있어 앱↔웹이 서로 안 보인다(계정 동기화는 다음 일). 도메인 **www.languagebank.net**(2026-10-20, 가비아 → Vercel, languagebank.net은 www로 넘김) — 초대 링크·처리방침 링크가 이 주소. 앱의 서버 통신(/api)은 그대로 english-chat-mvp.vercel.app.
+- **창구 (웹, 2026-10-20 사용자 결정 "여러 창구로 유입, 겉은 다른 서비스, 속은 하나", `src/lib/doors.ts`, `hub/drafts/doors.md`):** 창구 = 이름·색·소개 글(14개 언어)·검색어·첫 화면·하단 탭 한 묶음.
+  첫 창구 **Moyeo**(단체통화, `call.languagebank.net`, 산호색): 소개 페이지(지금 열린 방 수·말하는 사람 수만 — 방 이름·사람은 안 실음, 운영자 "languagebank" 표시, 앱 받기는 Play `utm_source=group-call`) → "지금 방 둘러보기"는 같은 주소의 앱을 창구 모드로(첫 화면 Room, 하단 Room·대화·My, 상단에 Moyeo). 같은 계정·구독·기록.
+  하위 도메인마다 브라우저 저장이 따로라 창구를 옮기면 다시 로그인. 구글 '출입구 페이지' 정책 때문에 창구마다 그 주소에서 실제 기능을 쓰게 하고 비슷한 창구를 찍어내지 않는다. 앱 스토어는 앱 하나 그대로.
 - **iOS (준비 중, 2026-10-18, `ios/`, `hub/drafts/ios-launch.md`):** 같은 화면을 Capacitor iOS로. 플랫폼마다 다른 것은 `src/lib/platform.ts` 한곳:
   iOS 1차는 **말하는 방·1:1 메시지 없음**(입구·🎙·`?rooms=1` 모두 꺼짐, `NEXT_PUBLIC_IOS_SOCIAL=1`로 나중에 켬), **Google 로그인 없음**(아이디·비밀번호·이메일 코드만),
   기기가 YouTube 오디오를 직접 받는 길 없음(자막 있는 영상·이달의 영상만), 결제·계정 삭제 문구의 Play 스토어 → App Store, 업데이트 링크는 App Store(`NEXT_PUBLIC_APP_STORE_URL`),

@@ -22,6 +22,7 @@ import { appVersion } from "@/lib/appVersion";
 import { newGuideSections } from "@/lib/whatsNew";
 import type { GuideGo } from "@/lib/guide/content";
 import { FeedbackButton } from "@/components/FeedbackButton";
+import { readEntryDoor } from "@/lib/doors";
 import { FeedbackFixedSheet } from "@/components/FeedbackFixedSheet";
 import { RoomsScreen } from "@/components/rooms/RoomsScreen";
 import { PeopleTab } from "@/components/rooms/PeopleTab";
@@ -178,7 +179,8 @@ function AppHomeInner({
     try {
       const params = new URLSearchParams(window.location.search);
       const fromQuery = params.get("screen") ?? params.get("tab");
-      const initial = resolveTab(fromQuery);
+      // 창구(lib/doors.ts)로 들어오면 그 창구의 첫 화면.
+      const initial = fromQuery ? resolveTab(fromQuery) : (readEntryDoor()?.start ?? resolveTab(null));
       // 예전 단어장 탭 링크: My로 와서 노트의 단어장을 연다.
       if (fromQuery === "vocab") sendAppIntent("openNotes", { section: "words" });
       setTab(initial);
@@ -255,7 +257,13 @@ function AppHomeInner({
     { id: "rooms", label: ui.homeTabRooms },
     myItem,
   ];
-  const tabItems = socialOn ? socialTabItems : aiTabItems;
+  // 창구 모드(lib/doors.ts, 웹의 창구 주소): 하단은 그 창구의 탭만, 그 순서로. 계정·기록은 같은 앱.
+  const door = useSyncExternalStore(noSubscribe, readEntryDoor, () => null);
+  const tabItems = socialOn
+    ? door
+      ? door.tabs.map((id) => socialTabItems.find((item) => item.id === id)).filter((item): item is { id: AppTab; label: string } => Boolean(item))
+      : socialTabItems
+    : aiTabItems;
   // 사용법(?): 대화 목록은 채팅 안내, 사람은 말하는 방 안내를 같이 쓴다.
   // 사용법 창: "?"는 지금 화면의 기능 칸으로 열고(GuideSheet SCREEN_CHAPTER), 묶음마다 "이 화면으로 가기".
   const guideGo: GuideGo[] = [
@@ -285,6 +293,12 @@ function AppHomeInner({
             lang={locale}
           >
             <div data-app-chrome className="relative z-[60] flex shrink-0 flex-wrap items-center gap-2 overflow-visible border-b border-white/10 bg-[#050505]/80 px-3 py-1.5 backdrop-blur-md sm:px-4">
+              {door ? <title>{door.name}</title> : null}
+              {door ? (
+                <span data-door={door.theme} className="me-1 text-body font-bold text-door-accent">
+                  {door.name}
+                </span>
+              ) : null}
               <TargetLanguageSelector label={ui.learningLanguageLabel} />
               <LanguageSelector
                 locale={locale}

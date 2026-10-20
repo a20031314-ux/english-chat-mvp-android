@@ -31,6 +31,8 @@ const root = path.join(__dirname, "..");
 const MOVED_FOR_BUILD = [
   { dir: "api", backup: "_capacitor_build_backup_api" },
   { dir: "dev", backup: "_capacitor_build_backup_dev" },
+  // 창구 소개 페이지(lib/doors.ts)는 웹 서버에서만(열린 방 수를 서버에서 센다).
+  { dir: "door", backup: "_capacitor_build_backup_door" },
 ].map(({ dir, backup }) => ({
   name: dir,
   from: path.join(root, "src", "app", dir),

@@ -42,6 +42,8 @@
   목록 사이 네이티브 광고 `NativeAdSlot`: 대화 목록(단체방과 1:1 사이)·영상 목록(세 번째 뒤)·사람 목록(네 번째 뒤)·게시판(세 번째 글 뒤)·Room 로비(두 번째 방 뒤).
   웹 화면 위에 떠 있어 시트(`FullScreenLayer`·`BodyLayer`)가 열리면 멈추고, 탭이 숨으면 떼어 낸다(플러그인 동시 화면 2개 한도, `lib/ads.ts`).
   전면 광고는 끝나는 자리에만: 통화·팩·미션 끝, 채팅 몇 번 뒤 나갈 때, 공개 방에 몇 분 있다 나올 때(`RoomsScreen`), 영상을 몇 분 보고 나올 때(`VideoLearningTab`). 1:1·단체방 대화 안에는 광고 없음.
+- **창구(웹, `src/lib/doors.ts`, `hub/drafts/doors.md`):** 겉은 다른 서비스(이름·색·소개 글·검색어), 속은 같은 앱. `call.languagebank.net` = Moyeo(단체통화).
+  창구 주소의 `/`·`/<언어>` → 소개 페이지(`app/door/…`, next.config.ts rewrites), `?screen=`이 붙으면 같은 앱이 **창구 모드**(첫 화면·하단 탭만 그 창구 것, 상단에 창구 이름). 계정·구독·기록은 하나.
 - **로그인:** AI 기능(채팅·통화·영상·My)은 로그인 없이, 사람·Room·메시지·게시판은 로그인해야(안 했으면 계정 카드).
 
 ## 고칠 때 순서
@@ -68,7 +70,7 @@
 - 화면: `AiConsentGate` · `AppHome` · `FullScreenLayer` · `GuideSheet` · `LanguageSelector` · `LearningLanguageFlag` · `Providers` · `TabIcons` · `TargetLanguageSelector` · `UpdateNotice` · `WhatsNewSheet`
 - API: `guide` · `whats-new`
 - 웹 페이지: `/`
-- 다른 영역이 씀: `FullScreenLayer` ← 여러 영역 8곳 · `LanguageSelector` ← 웹 전용 페이지 · `LearningLanguageFlag` ← 사람 탭 · `TargetLanguageSelector` ← 웹 전용 페이지
+- 다른 영역이 씀: `AppHome` ← 웹 전용 페이지 · `FullScreenLayer` ← 여러 영역 8곳 · `LanguageSelector` ← 웹 전용 페이지 · `LearningLanguageFlag` ← 사람 탭 · `TargetLanguageSelector` ← 웹 전용 페이지
 
 ### 대화 탭 — AI 튜터 줄·1:1 메시지·단체방·팀 `talk`
 - 화면: `AiTutorRow` · `rooms/MateAsk` · `rooms/MessagesTab` · `rooms/RoomDm` · `rooms/RoomGroups` · `rooms/TeamSpace`
@@ -139,7 +141,7 @@
 
 ### 웹 전용 페이지 `web`
 - 화면: `LearningBookPanel` · `LearningReviewModal`
-- 웹 페이지: `/learning` · `/privacy`
+- 웹 페이지: `/door/[id]/[[...lang]]` · `/learning` · `/privacy`
 - 다른 영역이 씀: `LearningBookPanel` ← 앱 틀
 
 ### 예약 작업·점검·개발용 (앱 화면 아님) `ops`

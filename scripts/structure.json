@@ -143,6 +143,7 @@
     "components/LearningReviewModal": "web",
     "page:/learning": "web",
     "page:/privacy": "web",
+    "page:/door/": "web",
 
     "api/simcheck/": "ops",
     "api/account/purge": "ops",
