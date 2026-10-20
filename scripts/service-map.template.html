@@ -52,6 +52,12 @@ h1 .thin { color: var(--mute); font-weight: 500; }
 .history .chips { gap: 4px; }
 .history .chip { font-size: 12px; padding: 3px 9px; }
 .history .chip small { color: var(--mute); margin-left: 4px; }
+.refresh { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.refresh button { border: 1px solid var(--line-strong); background: var(--raised); border-radius: 999px; padding: 6px 14px; font-size: 13.5px; font-weight: 600; cursor: pointer; }
+.refresh button:disabled { opacity: 0.55; cursor: default; }
+.refresh span { color: var(--mute); font-size: 12.5px; }
+.refresh span.ok { color: var(--good); }
+.refresh span.warn { color: var(--warn); }
 .hint { color: var(--mute); font-size: 14px; max-width: 64ch; margin: 0; }
 
 .layout { display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 28px; align-items: start; }
@@ -189,6 +195,7 @@ details.code .v { font-family: var(--mono); font-size: 12px; color: var(--ink); 
     <h1>겉은 여러 창구, <span class="thin">속은 하나의 앱</span></h1>
     <p class="hint">칸을 누르면 그 화면의 사용 그림과 기능 설명, 가는 길, 코드 영역이 열려요. 점선 칸은 고른 칸과 이어진 곳이에요.</p>
     <div class="meta" id="meta"></div>
+    <div class="refresh" id="refresh" hidden><button type="button" id="refreshBtn">지금 갱신</button><span id="refreshMsg">예약 작업 "서비스 지도 갱신"을 바로 돌려요(약 5분).</span></div>
     <details class="history" id="history"></details>
   </header>
 
@@ -253,6 +260,45 @@ document.getElementById("map").innerHTML = [
       c.id && byId[c.id] ? `<button type="button" class="chip" data-go="${c.id}">${esc(c.title)}<small>${esc(c.what)}</small></button>` : `<span class="chip">${esc(c.title)}<small>${esc(c.what)}</small></span>`).join("")}</div></li>`).join("")}</ol>`;
   if (DATA.changesToday) document.getElementById("history").open = true;
 }
+
+// ── 지금 갱신: claude.ai 예약 작업 "서비스 지도 갱신"을 바로 실행(Claude Code Remote 커넥터의 fire_trigger, 보는 사람 권한) ──
+// 예약 작업 id가 바뀌면(지우고 다시 만들면) 여기를 고친다. 예약 작업 주인만 실행할 수 있다.
+const REFRESH_TRIGGER = "trig_019GyC8VxDfmiqabUmu8qUAa";
+const REFRESH_SERVER = "Claude Code Remote";
+(async () => {
+  const box = document.getElementById("refresh");
+  const btn = document.getElementById("refreshBtn");
+  const msg = document.getElementById("refreshMsg");
+  const say = (text, cls = "") => { msg.textContent = text; msg.className = cls; };
+  const KEY = "serviceMapRefreshAt";
+  const lastAt = () => { try { return Number(localStorage.getItem(KEY)) || 0; } catch { return 0; } };
+  let mcp = null;
+  try { mcp = window.claude && window.claude.use ? await window.claude.use("mcp") : null; } catch { mcp = null; }
+  if (!mcp) return; // claude.ai 밖이거나 커넥터를 못 쓰는 보기: 버튼을 숨긴 채로 둔다
+  box.hidden = false;
+  const since = Date.now() - lastAt();
+  if (since < 10 * 60 * 1000) say(`${Math.max(1, Math.round(since / 60000))}분 전에 갱신을 시작했어요. 끝나면 새로고침하면 새 지도가 보여요.`, "ok");
+  btn.addEventListener("click", async () => {
+    if (Date.now() - lastAt() < 3 * 60 * 1000 && !confirm("몇 분 전에 이미 갱신을 시작했어요. 한 번 더 돌릴까요?")) return;
+    btn.disabled = true;
+    say("갱신을 시작하는 중…");
+    try {
+      await mcp.callTool(REFRESH_SERVER, "fire_trigger", { trigger_id: REFRESH_TRIGGER });
+      try { localStorage.setItem(KEY, String(Date.now())); } catch {}
+      say("갱신을 시작했어요. 약 5분 뒤 새로고침하면 새 지도가 보여요(바뀐 칸이 있으면 폰 알림도 가요).", "ok");
+    } catch (e) {
+      const code = e && e.code;
+      if (code === "approval_required") say("실행하려면 허락이 필요해요. claude.ai에서 이 페이지를 열고 다시 누르면 허락 창이 떠요.", "warn");
+      else if (code === "needs_reauth") say("Claude Code Remote 연결이 끊겼어요. claude.ai 설정 → 커넥터에서 다시 연결해 주세요.", "warn");
+      else if (code === "server_not_connected") say("Claude Code Remote 커넥터가 없어요. claude.ai 설정 → 커넥터에서 추가해 주세요.", "warn");
+      else if (code === "blocked_by_policy") say("조직 설정이 이 실행을 막고 있어요.", "warn");
+      else if (code === "tool_error") say("예약 작업을 못 찾았거나 실행이 거절됐어요. 예약 작업 목록에서 \"서비스 지도 갱신\"을 직접 실행해 주세요.", "warn");
+      else say("실행됐는지 확실하지 않아요. 몇 분 뒤 새로고침해 보고, 안 바뀌었으면 다시 눌러 주세요.", "warn");
+    } finally {
+      btn.disabled = false;
+    }
+  });
+})();
 
 const panel = document.getElementById("panel");
 const isSheet = () => matchMedia("(max-width: 980px)").matches;
