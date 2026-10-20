@@ -283,7 +283,7 @@
         {
           "heading": "Busca una sala y entra",
           "body": [
-            "Encima de la lista, elige idiomas con “Todas”, “Mis idiomas” o “Buscar por idioma”. Toca una sala para entrar con la mano levantada; el anfitrión te sube para hablar. Con “Solo escuchar” escuchas en silencio.",
+            "Encima de la lista, elige idiomas con “Todas”, “Mis idiomas” o “Buscar por idioma”. Toca una sala para entrar con una solicitud para unirte; el anfitrión te sube a un asiento para hablar. También puedes tocar un asiento libre para pedir unirte. Con “Solo escuchar” escuchas en silencio.",
             "Lo que dice cada uno queda en subtítulos. Toca una línea para traducirla teniendo en cuenta lo anterior.",
             "Elige “Charla libre” al crear una sala y no se fija ningún idioma. Los subtítulos de cada persona salen en sus propios idiomas, y la sala aparece en “Buscar por idioma” con cualquier idioma."
           ],
@@ -314,7 +314,7 @@
         {
           "heading": "Si eres el anfitrión",
           "body": [
-            "“Subir” a quien levanta la mano; desde un perfil, “Bajar”, “Expulsar” o “Ceder anfitrión”. Con “Cerrar sala” eliges “Ceder y salir”, pausar o cerrar. Una sala en pausa vuelve con “Reabrir” encima de la lista."
+            "Toca un asiento libre y elige a quién subir (primero las solicitudes, luego los oyentes), o “Subir” en “Solicitudes”; desde un perfil, “Bajar”, “Expulsar” o “Ceder anfitrión”. Con “Cerrar sala” eliges “Ceder y salir”, pausar o cerrar. Una sala en pausa vuelve con “Reabrir” encima de la lista."
           ],
           "shot": "r69-host"
         },
@@ -660,7 +660,7 @@
         {
           "heading": "ルームを探して入る",
           "body": [
-            "一覧の上の「すべて」「自分の言語」「言語で探す」で言語の組み合わせを選びます。ルームをタップすると手を挙げた状態で入り、ホストが上げると話せます。「聞くだけ」で静かに聞くこともできます。",
+            "一覧の上の「すべて」「自分の言語」「言語で探す」で言語の組み合わせを選びます。ルームをタップすると参加をリクエストした状態で入り、ホストが席に上げると話せます。空いている席を押してもリクエストできます。「聞くだけ」で静かに聞くこともできます。",
             "話した内容は人ごとに字幕で残ります。行をタップすると前の会話をふまえて翻訳します。",
             "ルームを作るとき「フリートーク」を選ぶと言語を決めません。字幕は話す人ごとにその人の言語で書かれ、「言語で探す」ではどの言語でも出てきます。"
           ],
@@ -691,7 +691,7 @@
         {
           "heading": "ホストなら",
           "body": [
-            "手を挙げた人は「上げる」、プロフィールから「下ろす」「退出させる」「ホストを渡す」。「ルームを閉じる」で「ホストを渡して退出」・一時停止・閉じるを選べます。一時停止したルームは一覧の上の「再開」で同じルームを開けます。"
+            "空いている席を押すと、上げる人を選べます（参加リクエストした人が先、次に聞いている人）。「参加リクエスト」の人は「上げる」、プロフィールから「下ろす」「退出させる」「ホストを渡す」。「ルームを閉じる」で「ホストを渡して退出」・一時停止・閉じるを選べます。一時停止したルームは一覧の上の「再開」で同じルームを開けます。"
           ],
           "shot": "r69-host"
         },
@@ -1037,7 +1037,7 @@
         {
           "heading": "找房间并进入",
           "body": [
-            "在列表上方用“全部”“我的语言”“按语言找”选择语言组合。点房间就会举着手进入，房主让你上麦后就能说话。也可以“只听”。",
+            "在列表上方用“全部”“我的语言”“按语言找”选择语言组合。点房间就会带着上麦申请进入，房主让你上麦后就能说话。点空座位也能申请。也可以“只听”。",
             "每个人说的话会变成字幕。点一行，会结合前面的对话翻译成你的语言。",
             "建房时选“自由聊天”，就不限定语言。每个人的字幕用他自己的语言写出，“按语言找”时选任何语言都能看到。"
           ],
@@ -1068,7 +1068,7 @@
         {
           "heading": "如果你是房主",
           "body": [
-            "举手的人点“上麦”，在资料页可以“下麦”“移出”“转让房主”。点“关闭房间”可以选“转让房主并离开”、暂停或关闭。暂停的房间在列表上方点“重新开启”就能打开同一个房间。"
+            "点空座位可以选要请上来的人（先是申请的人，再是收听的人）；“上麦申请”里的人点“上麦”，在资料页可以“下麦”“移出”“转让房主”。点“关闭房间”可以选“转让房主并离开”、暂停或关闭。暂停的房间在列表上方点“重新开启”就能打开同一个房间。"
           ],
           "shot": "r69-host"
         },
@@ -1414,7 +1414,7 @@
         {
           "heading": "Tìm phòng và vào",
           "body": [
-            "Phía trên danh sách, chọn cặp ngôn ngữ bằng “Tất cả”, “Ngôn ngữ của tôi” hoặc “Tìm theo ngôn ngữ”. Chạm vào phòng để vào với tay giơ lên; chủ phòng mời lên thì bạn nói được. “Chỉ nghe” để nghe yên lặng.",
+            "Phía trên danh sách, chọn cặp ngôn ngữ bằng “Tất cả”, “Ngôn ngữ của tôi” hoặc “Tìm theo ngôn ngữ”. Chạm vào phòng để vào kèm yêu cầu tham gia; chủ phòng mời lên ghế thì bạn nói được. Chạm ghế trống cũng gửi yêu cầu. “Chỉ nghe” để nghe yên lặng.",
             "Lời mỗi người hiện thành phụ đề. Chạm vào dòng để dịch, có xét cả phần trước.",
             "Chọn “Trò chuyện tự do” khi tạo phòng thì không cố định ngôn ngữ. Phụ đề của mỗi người ghi bằng ngôn ngữ của chính họ, và phòng hiện ra trong “Tìm theo ngôn ngữ” với mọi ngôn ngữ."
           ],
@@ -1445,7 +1445,7 @@
         {
           "heading": "Nếu bạn là chủ phòng",
           "body": [
-            "“Mời lên” người giơ tay; trong hồ sơ có “Mời xuống”, “Mời ra” và “Nhường chủ phòng”. “Đóng phòng” cho bạn chọn “Nhường chủ phòng rồi rời đi”, tạm dừng hoặc đóng. Phòng tạm dừng mở lại bằng “Mở lại” phía trên danh sách."
+            "Chạm ghế trống để chọn người mời lên (người xin tham gia trước, rồi người đang nghe), hoặc “Mời lên” trong “Yêu cầu tham gia”; trong hồ sơ có “Mời xuống”, “Mời ra” và “Nhường chủ phòng”. “Đóng phòng” cho bạn chọn “Nhường chủ phòng rồi rời đi”, tạm dừng hoặc đóng. Phòng tạm dừng mở lại bằng “Mở lại” phía trên danh sách."
           ],
           "shot": "r69-host"
         },
@@ -1791,7 +1791,7 @@
         {
           "heading": "Trouver un salon et entrer",
           "body": [
-            "Au-dessus de la liste, choisissez les langues avec « Tous », « Mes langues » ou « Chercher par langue ». Touchez un salon pour entrer main levée ; l’hôte vous fait monter pour parler. « Juste écouter » permet d’écouter en silence.",
+            "Au-dessus de la liste, choisissez les langues avec « Tous », « Mes langues » ou « Chercher par langue ». Touchez un salon pour entrer avec une demande de participation ; l’hôte vous fait monter à une place pour parler. Toucher une place libre envoie aussi la demande. « Juste écouter » permet d’écouter en silence.",
             "Les paroles de chacun s’affichent en sous-titres. Touchez une ligne pour la traduire en tenant compte de ce qui précède.",
             "Choisissez « Discussion libre » en créant un salon : aucune langue n’est imposée. Les sous-titres de chacun sont écrits dans ses langues, et le salon apparaît dans « Chercher par langue » pour toute langue."
           ],
@@ -1822,7 +1822,7 @@
         {
           "heading": "Si vous êtes l’hôte",
           "body": [
-            "« Faire monter » qui lève la main ; depuis un profil, « Faire descendre », « Exclure » ou « Céder l’animation ». « Fermer le salon » propose « Céder et partir », la pause ou la fermeture. Un salon en pause revient avec « Rouvrir » au-dessus de la liste."
+            "Touchez une place libre pour choisir qui faire monter (les demandes d’abord, puis les auditeurs), ou « Faire monter » dans « Demandes de participation » ; depuis un profil, « Faire descendre », « Exclure » ou « Céder l’animation ». « Fermer le salon » propose « Céder et partir », la pause ou la fermeture. Un salon en pause revient avec « Rouvrir » au-dessus de la liste."
           ],
           "shot": "r69-host"
         },
@@ -2168,7 +2168,7 @@
         {
           "heading": "Trova una stanza ed entra",
           "body": [
-            "Sopra l’elenco, scegli le lingue con “Tutte”, “Le mie lingue” o “Cerca per lingua”. Tocca una stanza per entrare con la mano alzata; l’host ti fa salire per parlare. Con “Ascolta soltanto” ascolti in silenzio.",
+            "Sopra l’elenco, scegli le lingue con “Tutte”, “Le mie lingue” o “Cerca per lingua”. Tocca una stanza per entrare con una richiesta di partecipare; l’host ti fa salire a un posto per parlare. Anche toccare un posto libero invia la richiesta. Con “Ascolta soltanto” ascolti in silenzio.",
             "Quello che dice ognuno resta nei sottotitoli. Tocca una riga per tradurla tenendo conto di quanto detto prima.",
             "Scegli “Chiacchiera libera” quando crei una stanza: nessuna lingua fissa. I sottotitoli di ognuno sono scritti nelle sue lingue, e la stanza compare in “Cerca per lingua” con qualsiasi lingua."
           ],
@@ -2199,7 +2199,7 @@
         {
           "heading": "Se sei l’host",
           "body": [
-            "“Fai salire” chi alza la mano; dal profilo “Fai scendere”, “Fai uscire” o “Passa il ruolo di host”. “Chiudi stanza” ti fa scegliere tra “Passa il ruolo ed esci”, pausa o chiusura. Una stanza in pausa torna con “Riapri” sopra l’elenco."
+            "Tocca un posto libero per scegliere chi far salire (prima le richieste, poi chi ascolta), oppure “Fai salire” in “Richieste di partecipare”; dal profilo “Fai scendere”, “Fai uscire” o “Passa il ruolo di host”. “Chiudi stanza” ti fa scegliere tra “Passa il ruolo ed esci”, pausa o chiusura. Una stanza in pausa torna con “Riapri” sopra l’elenco."
           ],
           "shot": "r69-host"
         },
@@ -2545,7 +2545,7 @@
         {
           "heading": "Encontre uma sala e entre",
           "body": [
-            "Acima da lista, escolha as línguas com “Todas”, “As minhas línguas” ou “Procurar por língua”. Toque numa sala para entrar de mão levantada; o anfitrião chama-o para falar. “Só ouvir” deixa-o ouvir em silêncio.",
+            "Acima da lista, escolha as línguas com “Todas”, “As minhas línguas” ou “Procurar por língua”. Toque numa sala para entrar com um pedido para participar; o anfitrião chama-o para um lugar para falar. Tocar num lugar vazio também envia o pedido. “Só ouvir” deixa-o ouvir em silêncio.",
             "O que cada um diz fica em legendas. Toque numa linha para a traduzir tendo em conta o que veio antes.",
             "Escolha “Conversa livre” ao criar uma sala e nenhuma língua fica fixa. As legendas de cada pessoa saem nas suas próprias línguas, e a sala aparece em “Procurar por língua” com qualquer língua."
           ],
@@ -2576,7 +2576,7 @@
         {
           "heading": "Se for o anfitrião",
           "body": [
-            "“Chamar” quem levanta a mão; no perfil, “Tirar”, “Remover” ou “Passar anfitrião”. “Fechar sala” deixa escolher “Passar e sair”, pausar ou fechar. Uma sala em pausa volta com “Reabrir” acima da lista."
+            "Toque num lugar vazio para escolher quem chamar (primeiro os pedidos, depois quem está ouvindo), ou “Chamar” em “Pedidos para participar”; no perfil, “Tirar”, “Remover” ou “Passar anfitrião”. “Fechar sala” deixa escolher “Passar e sair”, pausar ou fechar. Uma sala em pausa volta com “Reabrir” acima da lista."
           ],
           "shot": "r69-host"
         },
@@ -2922,7 +2922,7 @@
         {
           "heading": "Найти комнату и войти",
           "body": [
-            "Над списком выберите языки: «Все», «Мои языки» или «Найти по языку». Нажмите на комнату — вы войдёте с поднятой рукой, хост пригласит вас говорить. «Только слушать» — слушать молча.",
+            "Над списком выберите языки: «Все», «Мои языки» или «Найти по языку». Нажмите на комнату — вы войдёте с запросом на участие, хост пригласит вас на место говорить. Запрос можно отправить и нажав на свободное место. «Только слушать» — слушать молча.",
             "Слова каждого видны в субтитрах. Нажмите на строку, чтобы перевести её с учётом предыдущего разговора.",
             "Выберите «Свободный разговор» при создании комнаты — языки не задаются. Субтитры каждого пишутся на его языках, а комната находится в «Найти по языку» по любому языку."
           ],
@@ -2953,7 +2953,7 @@
         {
           "heading": "Если вы хост",
           "body": [
-            "«Пригласить» того, кто поднял руку; в профиле — «Снять», «Удалить» или «Передать роль хоста». «Закрыть комнату» предлагает «Передать и выйти», паузу или закрытие. Приостановленная комната возвращается кнопкой «Открыть снова» над списком."
+            "Нажмите на свободное место и выберите, кого пригласить (сначала запросы, потом слушатели), или «Пригласить» в «Запросах на участие»; в профиле — «Снять», «Удалить» или «Передать роль хоста». «Закрыть комнату» предлагает «Передать и выйти», паузу или закрытие. Приостановленная комната возвращается кнопкой «Открыть снова» над списком."
           ],
           "shot": "r69-host"
         },
@@ -3299,7 +3299,7 @@
         {
           "heading": "Cari ruang lalu masuk",
           "body": [
-            "Di atas daftar, pilih bahasa dengan “Semua”, “Bahasaku”, atau “Cari per bahasa”. Ketuk ruang untuk masuk sambil angkat tangan; host menaikkanmu agar bisa bicara. “Dengar saja” untuk mendengarkan diam-diam.",
+            "Di atas daftar, pilih bahasa dengan “Semua”, “Bahasaku”, atau “Cari per bahasa”. Ketuk ruang untuk masuk dengan permintaan bergabung; host menaikkanmu ke kursi agar bisa bicara. Mengetuk kursi kosong juga mengirim permintaan. “Dengar saja” untuk mendengarkan diam-diam.",
             "Ucapan setiap orang muncul sebagai teks. Ketuk baris untuk menerjemahkan dengan melihat percakapan sebelumnya.",
             "Pilih “Obrolan bebas” saat membuat ruang, maka bahasa tidak ditetapkan. Teks tiap orang ditulis dalam bahasanya sendiri, dan ruang muncul di “Cari per bahasa” untuk bahasa apa pun."
           ],
@@ -3330,7 +3330,7 @@
         {
           "heading": "Kalau kamu host",
           "body": [
-            "“Naikkan” yang angkat tangan; dari profil, “Turunkan”, “Keluarkan”, atau “Jadikan host”. “Tutup ruang” memberi pilihan “Serahkan lalu keluar”, jeda, atau tutup. Ruang yang dijeda dibuka lagi dengan “Buka lagi” di atas daftar."
+            "Ketuk kursi kosong untuk memilih siapa yang dinaikkan (permintaan dulu, lalu pendengar), atau “Naikkan” di “Permintaan bergabung”; dari profil, “Turunkan”, “Keluarkan”, atau “Jadikan host”. “Tutup ruang” memberi pilihan “Serahkan lalu keluar”, jeda, atau tutup. Ruang yang dijeda dibuka lagi dengan “Buka lagi” di atas daftar."
           ],
           "shot": "r69-host"
         },
@@ -3676,7 +3676,7 @@
         {
           "heading": "ابحث عن غرفة وادخل",
           "body": [
-            "فوق القائمة اختر اللغات بـ«الكل» أو «لغاتي» أو «البحث حسب اللغة». اضغط على غرفة لتدخل رافعًا يدك، ويرفعك المضيف لتتحدث. «الاستماع فقط» يتيح لك الاستماع بهدوء.",
+            "فوق القائمة اختر اللغات بـ«الكل» أو «لغاتي» أو «البحث حسب اللغة». اضغط على غرفة لتدخل مع طلب مشاركة، ويرفعك المضيف إلى مقعد لتتحدث. الضغط على مقعد فارغ يرسل الطلب أيضًا. «الاستماع فقط» يتيح لك الاستماع بهدوء.",
             "يظهر كلام كل شخص كترجمة نصية. اضغط على سطر لترجمته مع مراعاة ما قيل قبله.",
             "اختر «محادثة حرة» عند إنشاء غرفة فلا تُحدَّد لغة. تُكتب ترجمة كلام كل شخص بلغاته هو، وتظهر الغرفة في «البحث حسب اللغة» مع أي لغة."
           ],
@@ -3707,7 +3707,7 @@
         {
           "heading": "إن كنت المضيف",
           "body": [
-            "«رفع» من رفع يده، ومن الملف الشخصي «إنزال» أو «إخراج» أو «تسليم الاستضافة». «إغلاق الغرفة» يتيح «سلّم الاستضافة وغادر» أو الإيقاف المؤقت أو الإغلاق. الغرفة الموقوفة تعود بـ«إعادة الفتح» فوق القائمة."
+            "اضغط على مقعد فارغ لتختار من ترفعه (الطلبات أولًا ثم المستمعون)، أو «رفع» في «طلبات المشاركة»، ومن الملف الشخصي «إنزال» أو «إخراج» أو «تسليم الاستضافة». «إغلاق الغرفة» يتيح «سلّم الاستضافة وغادر» أو الإيقاف المؤقت أو الإغلاق. الغرفة الموقوفة تعود بـ«إعادة الفتح» فوق القائمة."
           ],
           "shot": "r69-host"
         },
@@ -4053,7 +4053,7 @@
         {
           "heading": "หาห้องแล้วเข้า",
           "body": [
-            "เหนือรายการ เลือกคู่ภาษาด้วย “ทั้งหมด” “ภาษาของฉัน” หรือ “หาตามภาษา” แตะห้องเพื่อเข้าแบบยกมือไว้ โฮสต์เชิญขึ้นแล้วจึงพูดได้ หรือ “ฟังอย่างเดียว” เพื่อฟังเงียบๆ",
+            "เหนือรายการ เลือกคู่ภาษาด้วย “ทั้งหมด” “ภาษาของฉัน” หรือ “หาตามภาษา” แตะห้องเพื่อเข้าพร้อมคำขอร่วมพูด โฮสต์เชิญขึ้นที่นั่งแล้วจึงพูดได้ แตะที่นั่งว่างก็ส่งคำขอได้ หรือ “ฟังอย่างเดียว” เพื่อฟังเงียบๆ",
             "คำพูดของแต่ละคนขึ้นเป็นซับ แตะบรรทัดเพื่อแปลโดยดูบทสนทนาก่อนหน้า",
             "เลือก “คุยอิสระ” ตอนสร้างห้องจะไม่กำหนดภาษา ซับของแต่ละคนเขียนเป็นภาษาของคนนั้นเอง และห้องจะขึ้นใน “หาตามภาษา” ไม่ว่าเลือกภาษาไหน"
           ],
@@ -4084,7 +4084,7 @@
         {
           "heading": "ถ้าคุณเป็นโฮสต์",
           "body": [
-            "“เชิญขึ้น” คนที่ยกมือ ในโปรไฟล์มี “เชิญลง” “เชิญออก” และ “ให้เป็นโฮสต์” “ปิดห้อง” ให้เลือก “ส่งต่อโฮสต์แล้วออก” พักห้อง หรือปิด ห้องที่พักไว้เปิดได้อีกด้วย “เปิดอีกครั้ง” เหนือรายการ"
+            "แตะที่นั่งว่างเพื่อเลือกคนที่จะเชิญขึ้น (คนที่ขอก่อน แล้วจึงผู้ฟัง) หรือ “เชิญขึ้น” ใน “คำขอร่วมพูด” ในโปรไฟล์มี “เชิญลง” “เชิญออก” และ “ให้เป็นโฮสต์” “ปิดห้อง” ให้เลือก “ส่งต่อโฮสต์แล้วออก” พักห้อง หรือปิด ห้องที่พักไว้เปิดได้อีกด้วย “เปิดอีกครั้ง” เหนือรายการ"
           ],
           "shot": "r69-host"
         },
@@ -4430,7 +4430,7 @@
         {
           "heading": "रूम ढूँढें और जुड़ें",
           "body": [
-            "सूची के ऊपर “सभी”, “मेरी भाषाएँ” या “भाषा से खोजें” से भाषा जोड़ी चुनें। रूम पर टैप करें तो आप हाथ उठाए हुए जुड़ते हैं; होस्ट ऊपर लाए तो बोल सकते हैं। “सिर्फ़ सुनें” से चुपचाप सुनें।",
+            "सूची के ऊपर “सभी”, “मेरी भाषाएँ” या “भाषा से खोजें” से भाषा जोड़ी चुनें। रूम पर टैप करें तो आप जुड़ने के अनुरोध के साथ आते हैं; होस्ट सीट पर लाए तो बोल सकते हैं। खाली सीट दबाकर भी अनुरोध भेज सकते हैं। “सिर्फ़ सुनें” से चुपचाप सुनें।",
             "हर व्यक्ति की बात सबटाइटल में दिखती है। पंक्ति पर टैप करें तो पिछली बातचीत देखकर अनुवाद होता है।",
             "रूम बनाते समय “खुली बातचीत” चुनें तो कोई भाषा तय नहीं होती। हर व्यक्ति के सबटाइटल उसकी अपनी भाषाओं में लिखे जाते हैं, और “भाषा से खोजें” में रूम हर भाषा के साथ दिखता है।"
           ],
@@ -4461,7 +4461,7 @@
         {
           "heading": "अगर आप होस्ट हैं",
           "body": [
-            "हाथ उठाने वालों को “ऊपर लाएँ”; प्रोफ़ाइल से “नीचे भेजें”, “बाहर करें” या “होस्ट बनाएँ”। “रूम बंद करें” पर “होस्ट सौंपकर निकलें”, कुछ देर बंद करना या बंद करना चुनें। रोका गया रूम सूची के ऊपर “फिर खोलें” से वही रूम खुलता है।"
+            "खाली सीट दबाकर चुनें किसे ऊपर लाना है (पहले अनुरोध, फिर सुनने वाले), या “जुड़ने के अनुरोध” में “ऊपर लाएँ”; प्रोफ़ाइल से “नीचे भेजें”, “बाहर करें” या “होस्ट बनाएँ”। “रूम बंद करें” पर “होस्ट सौंपकर निकलें”, कुछ देर बंद करना या बंद करना चुनें। रोका गया रूम सूची के ऊपर “फिर खोलें” से वही रूम खुलता है।"
           ],
           "shot": "r69-host"
         },

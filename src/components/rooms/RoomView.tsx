@@ -163,6 +163,8 @@ export function RoomView({
   const [hostPeerId, setHostPeerId] = useState(room.hostPeerId);
   const hostRef = useRef(room.hostPeerId);
   const [leaving, setLeaving] = useState<"" | "choose" | "pick">("");
+  // 방장이 빈자리를 눌렀을 때 올릴 사람 고르기(참여 요청한 사람 먼저, 그다음 듣는 사람).
+  const [seatPick, setSeatPick] = useState(false);
   // 방장이 다시 들어오면 서버가 방장 자리를 새 peerId로 옮긴다 — 버튼 이름(방 닫기)을 맞추려고 들어갈 때 받은 값으로.
   // 집은 남의 줄 — 댓글창 위에 인용으로 붙는다(묻기면 학습 언어 질문이 미리 채워짐).
   const [quoting, setQuoting] = useState<{ line: RoomLine; ask: boolean } | null>(null);
@@ -445,6 +447,21 @@ export function RoomView({
     .sort((a, b) => Number(b.peerId === hostPeerId) - Number(a.peerId === hostPeerId) || a.joinedAt - b.joinedAt);
   const listeners = members.filter((member) => member.role === "listener");
   const hands = raisedHands(members);
+  // 참여 요청한 사람 먼저, 그다음 듣기만 하는 사람(채팅만 하는 사람은 마이크가 없어서 뺀다).
+  const seatCandidates = [...hands, ...listeners.filter((member) => !member.hand && !member.textOnly)];
+  const tapEmptySeat = () => {
+    if (isHostNow) {
+      setSeatPick(true);
+      return;
+    }
+    if (role === "speaker") return;
+    if (free) {
+      void askRole("speaker");
+      return;
+    }
+    if (!hand) raise(true);
+    setNotice("handUp");
+  };
   const sheetMember = sheet ? members.find((member) => member.peerId === sheet.peerId) ?? null : null;
   const openPerson = (target: string, accountId: string | null) => {
     const member = members.find((row) => row.peerId === target);
@@ -620,21 +637,29 @@ export function RoomView({
                 </button>
               </li>
             ) : (
-              <li key={`empty-${index}`} className="flex flex-col items-center gap-1">
-                <span
-                  className={`flex items-center justify-center rounded-full border border-dashed border-white/15 text-lg text-slate-600 ${
-                    layout === "call" ? "h-16 w-16" : "h-[52px] w-[52px]"
-                  }`}
+              <li key={`empty-${index}`}>
+                <button
+                  type="button"
+                  onClick={tapEmptySeat}
+                  disabled={!isHostNow && role === "speaker"}
+                  aria-label={isHostNow ? t.seatPick : t.seatAsk}
+                  className="flex w-full flex-col items-center gap-1 disabled:cursor-default"
                 >
-                  +
-                </span>
-                <span className="text-[11px] text-slate-600">{t.emptySeat}</span>
+                  <span
+                    className={`flex items-center justify-center rounded-full border border-dashed text-lg ${
+                      !isHostNow && role === "speaker" ? "border-white/15 text-slate-600" : "border-white/30 text-slate-400"
+                    } ${layout === "call" ? "h-16 w-16" : "h-[52px] w-[52px]"}`}
+                  >
+                    +
+                  </span>
+                  <span className="text-meta text-slate-600">{t.emptySeat}</span>
+                </button>
               </li>
             ),
           )}
         </ul>
 
-        {/* 듣는 사람 줄: 작은 얼굴들. 손든 사람은 ✋. */}
+        {/* 듣는 사람 줄: 작은 얼굴들. 참여 요청한 사람은 🙋. */}
         {listeners.length ? (
           <div className="mt-2 flex items-center gap-1.5 overflow-x-auto pb-1">
             <span className="shrink-0 text-[11px] text-slate-500">
@@ -651,7 +676,7 @@ export function RoomView({
                 <Face accountId={member.accountId ?? null} name={member.nickname} size={30} />
                 {member.hand ? (
                   <span className="absolute -top-1 -end-1 text-[11px]" aria-hidden>
-                    ✋
+                    🙋
                   </span>
                 ) : member.textOnly ? (
                   <span className="absolute -bottom-1 -end-1 text-meta" aria-hidden>
@@ -665,7 +690,7 @@ export function RoomView({
 
         {isHostNow && hands.length > 0 ? (
           <div className="mt-2 rounded-lg border border-amber-300/30 bg-amber-300/5 px-2 py-1.5">
-            <p className="mb-1 text-[11px] text-amber-200">✋ {t.hands}</p>
+            <p className="mb-1 text-[11px] text-amber-200">🙋 {t.hands}</p>
             <ul className="flex flex-wrap gap-1.5">
               {hands.map((member) => (
                 <li key={member.peerId} className="flex items-center gap-1 text-xs text-slate-100">
@@ -917,11 +942,53 @@ export function RoomView({
               }}
               className={`flex-1 rounded-xl px-3 py-2.5 text-sm font-medium ${hand ? "border border-amber-300/60 text-amber-200" : "bg-amber-300/90 text-black"}`}
             >
-              {hand ? t.lowerHand : `✋ ${t.raiseHand}`}
+              {hand ? t.lowerHand : `🙋 ${t.raiseHand}`}
             </button>
           )}
         </div>
       </footer>
+
+      {seatPick ? (
+        <BodyLayer>
+          <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60" onClick={() => setSeatPick(false)}>
+            <div
+              className="max-h-[70vh] w-full max-w-md space-y-2 overflow-y-auto rounded-t-2xl border border-white/10 bg-surface p-4 pb-[calc(env(safe-area-inset-bottom)+1rem)]"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <p className="text-sm font-semibold text-white">{t.seatPick}</p>
+              {seatCandidates.length ? (
+                <ul className="space-y-1.5">
+                  {seatCandidates.map((member) => (
+                    <li key={member.peerId}>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setSeatPick(false);
+                          void grant(member.peerId, "speaker");
+                        }}
+                        className="flex w-full items-center gap-2 rounded-xl border border-white/10 px-3 py-2 text-start text-sm text-white hover:bg-white/5"
+                      >
+                        <Face accountId={member.accountId ?? null} name={member.nickname} size={30} />
+                        <span className="min-w-0 flex-1 truncate" dir="auto">
+                          {member.nickname}
+                        </span>
+                        <span className={`shrink-0 text-meta ${member.hand ? "text-amber-200" : "text-slate-500"}`}>
+                          {member.hand ? `🙋 ${t.hands}` : t.listenersRow}
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className="text-xs text-slate-400">{t.seatPickNone}</p>
+              )}
+              <button type="button" onClick={() => setSeatPick(false)} className="w-full rounded-xl px-3 py-2 text-sm text-slate-400">
+                {t.cancel}
+              </button>
+            </div>
+          </div>
+        </BodyLayer>
+      ) : null}
 
       {leaving ? (
         <BodyLayer>

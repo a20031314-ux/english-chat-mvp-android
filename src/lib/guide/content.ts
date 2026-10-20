@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-20b";
+export const GUIDE_VERSION = "2026-10-20c";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -400,7 +400,7 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "방 찾고 들어가기",
         "body": [
-          "목록 위 ‘전체’·‘내 조합’·‘언어로 찾기’로 언어 조합을 골라요. 방을 누르면 손을 든 채 들어가고, 방장이 올려 주면 말해요. ‘듣기만’으로 조용히 들을 수도 있어요.",
+          "목록 위 ‘전체’·‘내 조합’·‘언어로 찾기’로 언어 조합을 골라요. 방을 누르면 참여를 요청한 채 들어가고, 방장이 자리에 올려 주면 말해요. 빈자리를 눌러도 참여 요청이 가요. ‘듣기만’으로 조용히 들을 수도 있어요.",
           "말한 내용은 사람마다 자막으로 쌓여요. 줄을 누르면 앞 대화를 보고 내 언어로 번역해요.",
           "새 방을 만들 때 ‘자유 대화’를 고르면 언어를 정하지 않아요. 자막은 말하는 사람마다 그 사람의 언어로 적히고, ‘언어로 찾기’에서 어떤 언어로도 나와요."
         ],
@@ -431,7 +431,7 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "방장이라면",
         "body": [
-          "손든 사람은 ‘올리기’, 프로필에서 ‘내리기’·‘내보내기’·‘방장 넘기기’. ‘방 닫기’를 누르면 ‘방장 넘기고 나가기’·‘잠시 닫기’·‘방 닫기’ 중에 골라요. 잠시 닫은 방은 목록 위 ‘다시 열기’로 같은 방을 열어요."
+          "빈자리를 누르면 올릴 사람을 골라요(참여 요청한 사람 먼저, 그다음 듣는 사람). ‘참여 요청’에서 ‘올리기’도 돼요. 프로필에서 ‘내리기’·‘내보내기’·‘방장 넘기기’. ‘방 닫기’를 누르면 ‘방장 넘기고 나가기’·‘잠시 닫기’·‘방 닫기’ 중에 골라요. 잠시 닫은 방은 목록 위 ‘다시 열기’로 같은 방을 열어요."
         ],
         "shot": "r69-host"
       },
@@ -778,7 +778,7 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Find a room and join",
         "body": [
-          "Above the list, pick a language pair with “All”, “My languages” or “Find by language”. Tap a room to join with your hand raised; the host brings you up to talk. “Just listen” lets you listen quietly.",
+          "Above the list, pick a language pair with “All”, “My languages” or “Find by language”. Tap a room to join with a request to join; the host brings you up to a seat to talk. Tapping an empty seat sends the request too. “Just listen” lets you listen quietly.",
           "What each person says builds up as captions. Tap a line to translate it, with the conversation before it in mind.",
           "Choose “Free talk” when you start a room and no languages are fixed. Each person’s captions are written in their own languages, and the room shows up in “Find by language” for any language."
         ],
@@ -809,7 +809,7 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "If you’re the host",
         "body": [
-          "“Bring up” someone with a raised hand; from a profile, “Move down”, “Remove” or “Make host”. “Close room” lets you choose “Hand over and leave”, pause, or close. A paused room comes back with “Reopen” above the list."
+          "Tap an empty seat to pick who to bring up (requests first, then listeners), or “Bring up” under “Requests to join”; from a profile, “Move down”, “Remove” or “Make host”. “Close room” lets you choose “Hand over and leave”, pause, or close. A paused room comes back with “Reopen” above the list."
         ],
         "shot": "r69-host"
       },

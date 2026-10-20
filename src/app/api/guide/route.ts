@@ -6,6 +6,7 @@ import beforeMy from "@/lib/guide/before-my.json";
 import videoBefore267 from "@/lib/guide/videoBefore267.json";
 import roleplayBefore267 from "@/lib/guide/roleplayBefore267.json";
 import roomsBefore269 from "@/lib/guide/roomsBefore269.json";
+import roomsBefore270 from "@/lib/guide/roomsBefore270.json";
 import mapBefore269 from "@/lib/guide/mapBefore269.json";
 
 export const runtime = "nodejs";
@@ -28,8 +29,14 @@ export async function GET(request: NextRequest) {
   const language = asked === "ko" || asked === "en" || translated ? asked : "en";
   // 2.68 이하는 탭이 "사람·말하는 방"이고 단체방·자유 대화·참여 방식이 없다: `rooms=269`를
   // 보내지 않으면 그 빌드가 보던 말하는 방 안내(스냅숏)를 준다.
+  // `seat=1`(2026-10-20부터): 손들기 대신 "참여 요청", 빈자리를 눌러 올리기. 그 전 빌드는 손들기 안내(스냅숏).
+  const roomsParam = request.nextUrl.searchParams.get("rooms");
   const oldRooms =
-    request.nextUrl.searchParams.get("rooms") !== "269" ? (roomsBefore269 as Partial<Record<string, Guide["rooms"]>>)[language] : undefined;
+    roomsParam !== "269"
+      ? (roomsBefore269 as Partial<Record<string, Guide["rooms"]>>)[language]
+      : request.nextUrl.searchParams.get("seat") !== "1"
+        ? (roomsBefore270 as Partial<Record<string, Guide["rooms"]>>)[language]
+        : undefined;
   // 노트(My 안)도 2.69부터: 그 전 빌드에는 노트 단계가 없는 My 안내(스냅숏).
   const oldMap =
     request.nextUrl.searchParams.get("rooms") !== "269" ? (mapBefore269 as Partial<Record<string, Guide["map"]>>)[language] : undefined;
