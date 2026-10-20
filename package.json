@@ -45,6 +45,7 @@
     "sim:users": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/sim-users/run.mjs",
     "test:sim": "node --experimental-strip-types --test scripts/sim-users/sim.test.mjs scripts/sim-users/economics.test.mjs src/lib/server/simData.test.ts scripts/data-map.test.mjs",
     "sim:economics": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/sim-users/economics.mjs",
+    "sim:room-views": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/sim-users/room-views.mjs",
     "sim:screens": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/sim-users/screens.mjs"
   },
   "dependencies": {
