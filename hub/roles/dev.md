@@ -21,6 +21,8 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **네이티브 광고 (2026-10-20):** 단위 `native_feed …/5493440106`. 서버(바로 반영): `ADMOB_UNITS.native`, `ADS_NATIVE`, `/api/ads/config` native. 앱(다음 빌드): `components/NativeAdSlot.tsx`·`lib/ads.ts` 네이티브 피드(플러그인 미리보기 기능, Small 틀·앱 색) — 대화 목록 단체방·1:1 사이, 영상 목록 세 번째 뒤. 시트(layersOpen)·숨은 탭(active)이면 멈춤, 못 채우면 자리 접음.
+  남은 것: 기기 확인(스크롤 따라가는지·시트 위에 안 뜨는지·탭 바꿀 때), 손익 모델에 네이티브 노출 넣기.
 - **게시판 답글 (2026-10-20, 서버 바로 반영·화면은 앱 다음 빌드):** 사용자 결정 "한 단계, 사진 1장". `BoardComment.parent`, `rooms/board.ts` `threadComments`·`replyRoot`·`withReplies`, `/api/board` comment `replyTo`,
   맨 위 지우면 답글도(사진·계정 삭제 포함), 화면 "답글" 버튼·들여쓰기·"○○님에게 답글" 띠, 문구 2개 × 14개 언어(Claude가 씀). 점검 묶음 board에 답글 단계. 남은 것: 답글이 많을 때 접기("답글 n개 보기"), 새 답글 알림(푸시 필요).
 - **흑자 구조 ①②③ (2026-10-20, `hub/drafts/pricing-profit-2026-10-20.md`):** 사용자 결정 "①②③ 지금". 서버(바로 반영): 광고 기본값(보상형 1회 = 채팅 3번, 전면 채팅 3번 뒤·3분),

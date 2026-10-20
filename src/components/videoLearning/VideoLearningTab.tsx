@@ -826,6 +826,7 @@ export function VideoLearningTab({
                 isPremium={libraryOpen}
                 preparingVideoId={phase === "extracting" ? videoId : null}
                 progressPercent={progressPercent}
+                adsActive={active}
                 onOpen={(url, durationSeconds) => loadVideo(url, durationSeconds)}
                 onLocked={() => {
                   setUrlError(ui.videoLearnCatalogLocked);

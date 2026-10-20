@@ -22,6 +22,7 @@ export const ADMOB_UNITS = {
   rewarded: "ca-app-pub-8959652589063151/3513667692",
   appOpen: "ca-app-pub-8959652589063151/5222510193",
   banner: "ca-app-pub-8959652589063151/9312789287",
+  native: "ca-app-pub-8959652589063151/5493440106",
 } as const;
 
 /** SSV 콜백의 ad_unit은 "/" 뒤 숫자만 온다. */
@@ -50,6 +51,8 @@ export type AdsSettings = {
   appOpenAwayMinutes: number;
   /** 둘러보는 화면(My·영상·대화 목록) 아래쪽 배너. 채팅·통화·말하는 방에는 없음. */
   bannerEnabled: boolean;
+  /** 목록 사이 네이티브 광고(앱 카드 모양, 대화 목록·영상 목록). */
+  nativeEnabled: boolean;
 };
 
 /**
@@ -68,6 +71,7 @@ export const DEFAULT_ADS_SETTINGS: AdsSettings = {
   appOpenGapHours: 4,
   appOpenAwayMinutes: 30,
   bannerEnabled: true,
+  nativeEnabled: true,
 };
 
 function intFrom(value: string | undefined, fallback: number, min: number, max: number): number {
@@ -93,10 +97,12 @@ export const AD_REVENUE_USD = {
   appOpen: { low: 0.002, high: 0.008 },
   /** 배너는 노출 1,000번에 $0.3~1. 새로고침(약 60초)마다 한 번. */
   banner: { low: 0.0003, high: 0.001 },
+  /** 네이티브는 배너와 전면 사이(노출 1,000번에 $1~4). */
+  native: { low: 0.001, high: 0.004 },
   source: "한국 AdMob eCPM 대략값(보상형 $8~20, 전면 $3~10), 가정 2026-10-18",
 } as const;
 
-/** 환경 변수(ADS_ENABLED, ADS_REWARD_CHATS, ADS_REWARDED_DAILY_MAX, ADS_INTERSTITIAL_GAP_SECONDS, ADS_INTERSTITIAL_AFTER_CHATS, ADS_APP_OPEN, ADS_APP_OPEN_AFTER_DAYS, ADS_APP_OPEN_GAP_HOURS, ADS_APP_OPEN_AWAY_MINUTES, ADS_BANNER)가 있으면 그것으로. */
+/** 환경 변수(ADS_ENABLED, ADS_REWARD_CHATS, ADS_REWARDED_DAILY_MAX, ADS_INTERSTITIAL_GAP_SECONDS, ADS_INTERSTITIAL_AFTER_CHATS, ADS_APP_OPEN, ADS_APP_OPEN_AFTER_DAYS, ADS_APP_OPEN_GAP_HOURS, ADS_APP_OPEN_AWAY_MINUTES, ADS_BANNER, ADS_NATIVE)가 있으면 그것으로. */
 export function adsSettings(env: Record<string, string | undefined> = process.env): AdsSettings {
   const d = DEFAULT_ADS_SETTINGS;
   const flag = env.ADS_ENABLED?.trim().toLowerCase();
@@ -111,6 +117,7 @@ export function adsSettings(env: Record<string, string | undefined> = process.en
     appOpenGapHours: intFrom(env.ADS_APP_OPEN_GAP_HOURS, d.appOpenGapHours, 1, 48),
     appOpenAwayMinutes: intFrom(env.ADS_APP_OPEN_AWAY_MINUTES, d.appOpenAwayMinutes, 5, 720),
     bannerEnabled: flagFrom(env.ADS_BANNER, d.bannerEnabled),
+    nativeEnabled: flagFrom(env.ADS_NATIVE, d.nativeEnabled),
   };
 }
 

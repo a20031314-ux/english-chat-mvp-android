@@ -34,6 +34,7 @@ export async function GET(request: NextRequest) {
       awayMinutes: settings.appOpenAwayMinutes,
     },
     banner: { enabled: enabled && settings.bannerEnabled },
+    native: { enabled: enabled && settings.nativeEnabled },
     rewarded: {
       enabled: enabled && rewardToken !== null && settings.rewardedDailyMax > 0,
       chats: settings.rewardChats,

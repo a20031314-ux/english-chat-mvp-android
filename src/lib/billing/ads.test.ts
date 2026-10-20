@@ -35,6 +35,7 @@ test("환경 변수로 조정, 이상한 값은 기본값·범위 안으로", ()
   assert.equal(adsSettings({ ADS_INTERSTITIAL_GAP_SECONDS: "5" }).interstitialMinGapSeconds, 60);
   assert.equal(adsSettings({ ADS_APP_OPEN: "0" }).appOpenEnabled, false);
   assert.equal(adsSettings({ ADS_BANNER: "off" }).bannerEnabled, false);
+  assert.equal(adsSettings({ ADS_NATIVE: "0" }).nativeEnabled, false);
   assert.equal(adsSettings({ ADS_APP_OPEN_AFTER_DAYS: "7" }).appOpenAfterDays, 7);
   assert.equal(adsSettings({ ADS_APP_OPEN_GAP_HOURS: "0" }).appOpenGapHours, 1);
 });

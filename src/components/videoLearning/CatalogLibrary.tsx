@@ -1,6 +1,8 @@
 "use client";
 
+import { Fragment } from "react";
 import type { UICopy } from "@/lib/copy";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { formatSubtitleTime } from "@/lib/videoLearning";
 import {
   type LibraryClip,
@@ -22,7 +24,10 @@ export function CatalogLibrary({
   onLocked,
   preparingVideoId = null,
   progressPercent = 0,
+  adsActive = true,
 }: {
+  /** 이 목록이 지금 보이는지(네이티브 광고를 숨은 탭 위에 띄우지 않게). */
+  adsActive?: boolean;
   ui: UICopy;
   clips: LibraryClip[];
   /** Library clips this learner has already opened. */
@@ -70,7 +75,7 @@ export function CatalogLibrary({
               .replace("{limit}", String(trialLimit))}
       </p>
       <ul className="mt-3 space-y-2">
-        {clips.map((clip) => {
+        {clips.map((clip, index) => {
           const unlocked =
             isPremium ||
             usedVideoIds.includes(clip.videoId) ||
@@ -78,7 +83,14 @@ export function CatalogLibrary({
               freeVideoIds.includes(clip.videoId));
           const preparing = clip.videoId === preparingVideoId;
           return (
-            <li key={clip.videoId} className="relative">
+            <Fragment key={clip.videoId}>
+            {/* 세 번째 영상 뒤에 네이티브 광고 하나(무료·안드로이드만, lib/ads.ts). */}
+            {index === 3 ? (
+              <li>
+                <NativeAdSlot feedId="video-library" slotKey="video-library-after-3" active={adsActive} />
+              </li>
+            ) : null}
+            <li className="relative">
               <button
                 type="button"
                 disabled={preparing}
@@ -138,6 +150,7 @@ export function CatalogLibrary({
                 </span>
               ) : null}
             </li>
+            </Fragment>
           );
         })}
       </ul>

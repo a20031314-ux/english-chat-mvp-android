@@ -17,11 +17,12 @@ import { adsAvailable } from "@/lib/platform";
 
 type AdsConfig = {
   enabled: boolean;
-  units: { interstitial: string; rewarded: string; appOpen?: string; banner?: string };
+  units: { interstitial: string; rewarded: string; appOpen?: string; banner?: string; native?: string };
   interstitialMinGapSeconds: number;
   interstitialAfterChats: number;
   appOpen?: { enabled: boolean; afterDays: number; gapHours: number; awayMinutes: number };
   banner?: { enabled: boolean };
+  native?: { enabled: boolean };
   rewarded: { enabled: boolean; chats: number; dailyMax: number; left: number; token: string | null };
 };
 
@@ -368,9 +369,11 @@ function publishBannerSpace(px: number) {
 export function noteLayerOpened(): () => void {
   layersOpen += 1;
   queueBannerSync();
+  syncNativeFeeds();
   return () => {
     layersOpen = Math.max(0, layersOpen - 1);
     queueBannerSync();
+    syncNativeFeeds();
   };
 }
 
@@ -464,4 +467,131 @@ async function syncBanner(): Promise<void> {
   } catch {
     publishBannerSpace(0);
   }
+}
+
+// ─── 네이티브 광고(목록 사이, 앱 카드 모양) ─────────────────────────────────────
+//
+// 플러그인의 NativeAdFeed(미리보기 기능): 웹 화면에 자리(높이 고정 div)를 두면 그 위치를 따라 네이티브 광고 보기를 얹는다.
+// 웹 화면 위에 떠 있어서 시트·전체 화면이 열리거나 탭이 숨으면 멈춰야 한다(layersOpen·active).
+// 한 화면(feedId)에 광고 최대 3개, 동시에 화면 2개까지 — 대화 목록·영상 목록 둘만 쓴다.
+
+/** 네이티브 광고 자리 높이(작은 틀, 플러그인 최소 120px). */
+export const NATIVE_SLOT_HEIGHT = 120;
+
+/** 앱의 어두운 카드와 맞춘 색(hub/DESIGN.md 토큰 값). */
+const NATIVE_STYLE = {
+  backgroundColor: "#121212",
+  borderColor: "#FFFFFF1A",
+  borderWidth: 1,
+  cornerRadius: 16,
+  headlineColor: "#F1F5F9",
+  headlineFontSize: 14,
+  bodyColor: "#94A3B8",
+  bodyFontSize: 12,
+  callToActionBackgroundColor: "#E8E8E4",
+  callToActionTextColor: "#111111",
+  callToActionFontSize: 13,
+};
+
+type NativeFeedHandle = {
+  attach(slotKey: string, element: HTMLElement): void;
+  detach(element: HTMLElement): void;
+  pause(): Promise<void>;
+  resume(): void;
+  destroy(): Promise<void>;
+};
+
+type FeedEntry = { feed: Promise<NativeFeedHandle | null>; refs: number; active: boolean; paused: boolean };
+const nativeFeeds = new Map<string, FeedEntry>();
+const failedSlots = new Set<string>();
+const failListeners = new Set<() => void>();
+
+/** 이 사용자에게 네이티브 광고를 둘지(안드로이드·무료·서버 설정). */
+export async function nativeAdsEnabled(): Promise<boolean> {
+  if (!adsAvailable()) return false;
+  const cfg = await loadAdsConfig();
+  return Boolean(cfg?.enabled && cfg.native?.enabled && (cfg.units.native || TESTING));
+}
+
+function createFeed(feedId: string): Promise<NativeFeedHandle | null> {
+  return (async () => {
+    try {
+      const cfg = await loadAdsConfig();
+      if (!cfg?.enabled || !cfg.native?.enabled) return null;
+      if (!(await startAds())) return null;
+      const { NativeAdFeed, NativeAdPluginEvents, NativeAdTemplate } = await import("@capacitor-community/admob");
+      const feed = await NativeAdFeed.create({
+        feedId,
+        template: NativeAdTemplate.Small,
+        style: NATIVE_STYLE,
+        ...(TESTING ? { isTesting: true } : { adId: cfg.units.native }),
+      });
+      // 채우지 못한 자리는 빈칸으로 남기지 않고 접는다.
+      void feed.addListener(NativeAdPluginEvents.FailedToLoad, (event) => {
+        failedSlots.add(`${feedId}:${event.slotKey}`);
+        for (const listener of failListeners) listener();
+      });
+      return feed as unknown as NativeFeedHandle;
+    } catch {
+      return null;
+    }
+  })();
+}
+
+function syncNativeFeeds() {
+  for (const entry of nativeFeeds.values()) {
+    const show = entry.active && layersOpen === 0;
+    void entry.feed.then((feed) => {
+      if (!feed) return;
+      if (show && entry.paused) {
+        entry.paused = false;
+        feed.resume();
+      } else if (!show && !entry.paused) {
+        entry.paused = true;
+        void feed.pause().catch(() => undefined);
+      }
+    });
+  }
+}
+
+/** 자리 하나를 광고에 붙인다. 돌려준 함수로 뗀다(마지막 자리가 떨어지면 그 화면의 광고를 모두 치움). */
+export function attachNativeSlot(feedId: string, slotKey: string, element: HTMLElement): () => void {
+  let entry = nativeFeeds.get(feedId);
+  if (!entry) {
+    entry = { feed: createFeed(feedId), refs: 0, active: true, paused: false };
+    nativeFeeds.set(feedId, entry);
+  }
+  const current = entry;
+  current.refs += 1;
+  void current.feed.then((feed) => {
+    feed?.attach(slotKey, element);
+    syncNativeFeeds();
+  });
+  return () => {
+    void current.feed.then((feed) => feed?.detach(element));
+    current.refs -= 1;
+    if (current.refs <= 0) {
+      nativeFeeds.delete(feedId);
+      void current.feed.then((feed) => feed?.destroy().catch(() => undefined));
+    }
+  };
+}
+
+/** 그 화면(탭)이 지금 보이는지. 숨으면 광고를 멈춘다(탭은 숨겨도 그려져 있어서). */
+export function setNativeFeedActive(feedId: string, active: boolean) {
+  const entry = nativeFeeds.get(feedId);
+  if (!entry) return;
+  entry.active = active;
+  syncNativeFeeds();
+}
+
+export function nativeSlotFailed(feedId: string, slotKey: string): boolean {
+  return failedSlots.has(`${feedId}:${slotKey}`);
+}
+
+export function watchNativeFailures(listener: () => void): () => void {
+  failListeners.add(listener);
+  return () => {
+    failListeners.delete(listener);
+  };
 }

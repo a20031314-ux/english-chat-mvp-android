@@ -38,6 +38,7 @@
 - **탭끼리는 서로를 직접 부르지 않는다.** "이 표현으로 채팅", "이 장면 영상으로" 같은 이동은 `appIntents` 신호(아래 자동 표)로 하고, 받는 쪽이 처리한다.
 - **오늘 해볼 것·표현 장부(`learner`)는 여러 탭이 같이 쓴다:** 채팅·통화 첫 화면, My 맨 위. 바꾸면 세 곳을 다 본다.
 - **광고**(무료·안드로이드만): 배너는 둘러보는 화면(My·영상·대화 목록), 채팅·통화·Room·사람에는 없음. 통화·Room에서는 앱 오프닝 광고 없음(`AppHome.tsx` `BANNER_TABS`·`NO_APP_OPEN_TABS`).
+  목록 사이 네이티브 광고 `NativeAdSlot`: 대화 목록(단체방과 1:1 사이)·영상 목록(세 번째 뒤). 웹 화면 위에 떠 있어 시트(`FullScreenLayer`·`BodyLayer`)가 열리거나 탭이 숨으면 멈춘다(`lib/ads.ts`).
 - **로그인:** AI 기능(채팅·통화·영상·My)은 로그인 없이, 사람·Room·메시지·게시판은 로그인해야(안 했으면 계정 카드).
 
 ## 고칠 때 순서
@@ -117,10 +118,10 @@
 - 다른 영역이 씀: `account/AccountCard` ← 대화 탭, 사람 탭, Room 탭, My 탭, 친구 초대·보상
 
 ### 요금·포인트·광고 `billing`
-- 화면: `BillingScreen` · `PointStore` · `PointsIcon`
+- 화면: `BillingScreen` · `NativeAdSlot` · `PointStore` · `PointsIcon`
 - API: `ads/config`(앱 틀, AI 채팅, AI 통화, My 탭) · `ads/ssv` · `entitlement`(여러 영역 13곳) · `points/sync`(여러 영역 13곳)
 - 웹 페이지: `/subscribe`
-- 다른 영역이 씀: `BillingScreen` ← 앱 틀, AI 채팅, 영상 학습 탭 · `PointsIcon` ← 영상 학습 탭
+- 다른 영역이 씀: `BillingScreen` ← 앱 틀, AI 채팅, 영상 학습 탭 · `NativeAdSlot` ← 대화 탭, 영상 학습 탭 · `PointsIcon` ← 영상 학습 탭
 
 ### 친구 초대·보상 `invite`
 - 화면: `invite/InviteButton` · `invite/InviteRewards` · `invite/InviteWelcome`

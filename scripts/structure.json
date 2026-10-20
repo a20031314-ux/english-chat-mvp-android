@@ -123,6 +123,7 @@
     "components/BillingScreen": "billing",
     "components/PointStore": "billing",
     "components/PointsIcon": "billing",
+    "components/NativeAdSlot": "billing",
     "api/entitlement": "billing",
     "api/points/": "billing",
     "api/ads/": "billing",

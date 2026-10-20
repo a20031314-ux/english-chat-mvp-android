@@ -10,6 +10,7 @@ import type { DmSummary } from "@/lib/rooms/dm";
 import type { GroupSummary } from "@/lib/rooms/group";
 import { DmList } from "./RoomDm";
 import { GroupCreateSheet, GroupList, GroupThreadView } from "./RoomGroups";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 
 /**
  * 하단 "대화" 탭(2026-10-20): 맨 위에 AI 튜터(`top`, AppHome), 그 아래 단체방·1:1 대화 목록. 받은 요청이 위에.
@@ -55,12 +56,15 @@ export function MessagesTab({
         {account ? (
           <div className="space-y-5">
             <GroupList t={t} me={account.id} locale={locale} groups={groups} onOpen={setOpenGroup} onCreate={() => setCreating(true)} onChanged={onGroupsChanged} />
+            {/* 목록 사이 네이티브 광고(무료·안드로이드만). 단체방 대화가 열리면 시트가 덮으므로 광고는 멈춘다. */}
+            <NativeAdSlot feedId="talk-list" slotKey="talk-between-lists" active={!openGroup && !creating} />
             <DmList t={t} threads={threads} onOpen={requestDm} />
           </div>
         ) : (
           <div className="space-y-3">
             <p className="text-sm text-slate-300">{t.loginNeeded}</p>
             <AccountCard ui={ui} locale={locale} />
+            <NativeAdSlot feedId="talk-list" slotKey="talk-after-account" />
           </div>
         )}
       </div>
