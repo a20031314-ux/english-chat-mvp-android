@@ -1,26 +1,33 @@
 {
  "_": "서비스 지도 갱신 기록. scripts/service-map.mjs가 쓴다(손으로 고치지 않음). 칸이 바뀐 날만 history에 한 줄.",
- "checkedAt": "2026-10-20 23:40",
- "commit": "7c31918",
+ "checkedAt": "2026-10-21 06:56",
+ "commit": "40907a6",
  "nodes": {
   "moyeo": {
    "title": "Moyeo",
-   "text": "b6fe750fc182",
-   "shots": "4b1ccdb93325",
+   "text": "562b6b64cb57",
+   "shots": "15969fa74e18",
    "links": "66b939f093ff",
    "code": "cff5e6c192dd"
   },
   "pingo": {
    "title": "Pingo",
-   "text": "cba9204961d8",
-   "shots": "52f61d2f3ee3",
+   "text": "8e94887f83c2",
+   "shots": "acce50b1040e",
    "links": "f45b78a78884",
    "code": "cff5e6c192dd"
   },
+  "spin": {
+   "title": "Spin",
+   "text": "1b79611351ee",
+   "shots": "97d170e1550e",
+   "links": "a25e4ff4cf79",
+   "code": "1ab89c83a65c"
+  },
   "webapp": {
    "title": "웹 앱",
-   "text": "aa984cafbac1",
-   "shots": "00909f0f07cd",
+   "text": "09764446d984",
+   "shots": "da939179fdbc",
    "links": "7a94184479dc",
    "code": "6fc6dfb0b893"
   },
@@ -82,8 +89,8 @@
   },
   "dm": {
    "title": "1:1 메시지",
-   "text": "3a57cfc2a9c7",
-   "shots": "b867e765d141",
+   "text": "c571fe60100e",
+   "shots": "9d690b6219a5",
    "links": "f564ad3fc247",
    "code": "3b6619968834"
   },
@@ -103,17 +110,17 @@
   },
   "people": {
    "title": "사람",
-   "text": "f11c710657b1",
-   "shots": "b1b27153967f",
+   "text": "b7bdf4dc8456",
+   "shots": "01ade07eb3a0",
    "links": "73f18aa06e4c",
-   "code": "0b6c082fbf0d"
+   "code": "2ea41cfc0b52"
   },
   "board": {
    "title": "게시판",
    "text": "ef9d3725f0b0",
    "shots": "9264a0c20f6b",
    "links": "da2e1c5ce392",
-   "code": "0b6c082fbf0d"
+   "code": "2ea41cfc0b52"
   },
   "rewards": {
    "title": "친구 초대 · 보상",
@@ -124,8 +131,8 @@
   },
   "room": {
    "title": "Room",
-   "text": "6e1af3a4021d",
-   "shots": "02691a87b039",
+   "text": "0ac1a5541c83",
+   "shots": "2de12bc78012",
    "links": "8e1776db4308",
    "code": "eb0885dc8f30"
   },
@@ -166,6 +173,63 @@
   }
  },
  "history": [
+  {
+   "at": "2026-10-21 06:56",
+   "commit": "40907a6",
+   "changes": [
+    {
+     "id": "pingo",
+     "title": "Pingo",
+     "what": "설명"
+    },
+    {
+     "id": "spin",
+     "title": "Spin",
+     "what": "새 칸"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-21 06:55",
+   "commit": "40907a6",
+   "changes": [
+    {
+     "id": "moyeo",
+     "title": "Moyeo",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "pingo",
+     "title": "Pingo",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "webapp",
+     "title": "웹 앱",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "dm",
+     "title": "1:1 메시지",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "people",
+     "title": "사람",
+     "what": "설명 · 그림 · 코드 영역"
+    },
+    {
+     "id": "board",
+     "title": "게시판",
+     "what": "코드 영역"
+    },
+    {
+     "id": "room",
+     "title": "Room",
+     "what": "설명 · 그림"
+    }
+   ]
+  },
   {
    "at": "2026-10-20 23:40",
    "commit": "7c31918",

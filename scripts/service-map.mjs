@@ -154,6 +154,7 @@ const door = (id) => {
 };
 const moyeo = door("group-call");
 const pingo = door("random-chat");
+const spin = door("random-meet");
 
 // ── 칸(node) ───────────────────────────────────────────────────────────────────────────
 // tier: entry(웹·스토어) · shell(앱 틀) · tab(하단 탭, children) · anywhere(어디서나)
@@ -171,12 +172,21 @@ const nodes = [
   },
   {
     id: "pingo", tier: "entry", kind: "door", tone: "pingo",
-    title: pingo.name, sub: `1:1 대화 · ${pingo.host}`, area: "web", status: "도메인 연결 대기",
+    title: pingo.name, sub: `1:1 대화 · ${pingo.host}`, area: "web", status: "열림",
     summary: `랜덤채팅 검색으로 들어오는 1:1 대화 창구예요. 무작위 연결 없이, 지금 접속한 사람(내 말 배우는 사람 먼저)을 보고 골라 요청하고 상대가 수락하면 대화가 열려요.`,
-    points: [...pingo.features, "도메인 연결 전에는 www.languagebank.net/door/random-chat 으로 열림", "2단계 ‘본인인증 바로 연결’은 인증 업체 계약 뒤"],
+    points: [...pingo.features, "2단계 ‘본인인증 바로 연결’은 인증 업체 계약 뒤"],
     path: "talk.languagebank.net → 지금 접속한 사람 보기 → 사람(🟢 지금 접속 중)",
     links: ["people", "dm", "talk"],
     steps: [web("web-pingo", "소개 페이지", "검색으로 들어오는 첫 화면. 지금 접속한 사람 수만 보여 줘요."), web("web-pingo-app", "창구 모드 앱", "Pingo 이름표로 사람 탭부터 열리고(하단 사람·대화·My), 로그인하면 ‘🟢 지금 접속 중’ 거르기로 보여요.")],
+  },
+  {
+    id: "spin", tier: "entry", kind: "door", tone: "spin",
+    title: spin.name, sub: `랜덤 채팅·영상 · ${spin.host}`, area: "random", status: "스위치 꺼짐",
+    summary: `본인인증한 성인끼리 랜덤으로 이어 주는 채팅·영상통화 창구예요(웹만, 앱에는 없음). 소개 페이지 “${spin.headline}”에서 들어가면 창구 모드로 🎲 랜덤 탭부터 열려요.`,
+    points: [...spin.features, "서버 스위치 RANDOM_ENABLED가 꺼져 있으면 ‘준비 중’", "켜지면 Pingo 사람 탭 위에 Spin으로 가는 줄", "켜기 전 사람 일: 사업자·본인인증 계약·법률 확인·도메인"],
+    path: "spin.languagebank.net → 랜덤 시작하기 → 🎲 랜덤",
+    links: ["pingo", "talk", "my"],
+    steps: [],
   },
   {
     id: "webapp", tier: "entry", kind: "web",
@@ -447,7 +457,7 @@ const usedSections = new Set(nodes.flatMap((n) => n.steps.map((s) => s.from.repl
 const missing = {
   guide: guide.GUIDE_CHAPTERS.flatMap((c) => c.sections).filter((id) => !id.endsWith(".more") && !usedSections.has(id) && guide.guideSection(guide.GUIDE_KO, id)?.shot),
   areas: Object.keys(areas).filter((id) => !["ops", "account", "web"].includes(id) && !nodes.some((n) => n.area === id)),
-  doors: doorsLib.DOORS.map((d) => d.id).filter((id) => !["group-call", "random-chat"].includes(id)),
+  doors: doorsLib.DOORS.map((d) => d.id).filter((id) => !["group-call", "random-chat", "random-meet"].includes(id)),
 };
 const captured = CAPTURE ? WEB_TARGETS.filter((t) => fs.existsSync(path.join(SHOTS, `${t.name}.jpg`))).length : null;
 const history = [...(previous?.history ?? [])];
