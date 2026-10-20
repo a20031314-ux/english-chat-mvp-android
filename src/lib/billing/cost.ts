@@ -49,9 +49,9 @@ export const TUTOR_SPEECH_SHARE = 0.5;
  * USD of model time in one minute of the realtime call.
  *
  * Retired as a way to spend a point: the call tab is call learning now
- * (RoleplayTab.tsx), and nothing in the app opens /api/realtime/call. Kept
- * because that route still logs an estimate with it, and because this is what
- * every point was priced against until 2026-10-06 — a minute here is half
+ * (RoleplayTab.tsx), and the realtime call route was deleted on 2026-10-20 (no
+ * build since 2.48 opened it). Kept because this is what every point was
+ * priced against until 2026-10-06 — a minute here is half
  * again what five minutes of call learning cost, so prices derived from it
  * were set against a bill nobody was running up.
  */

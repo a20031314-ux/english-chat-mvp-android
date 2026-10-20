@@ -101,7 +101,7 @@ App Store Connect API 키로 Xcode가 서명을 스스로 만들고(클라우드
 | 프로젝트 | `ios/` 없음 | `npm i @capacitor/ios` → `npx cap add ios`, `build:ios` 스크립트, Info.plist 마이크 문구(14개 언어) |
 | 로그인 | Google·이메일·아이디 | **Sign in with Apple 추가**(Google을 쓰면 4.8 요구). `capacitor.config.ts` `apple: true`(iOS만) |
 | 결제 | RevenueCat, 문구에 "Play Store" | 상품 id 매핑, "Play Store" 문구(계정 삭제·결제 타임아웃)를 플랫폼별로, 구독 관리 링크 |
-| 업데이트 배너·랜딩 | Play 주소 고정(`appVersion.ts`, `LandingPage.tsx`) | 플랫폼별 스토어 주소, iOS 버전 번호 따로 |
+| 업데이트 배너·랜딩 | Play 주소 고정(`appVersion.ts`, `LandingPage.tsx`(2026-10-20 지움)) | 플랫폼별 스토어 주소, iOS 버전 번호 따로 |
 | 텍스트 가져오기 | 안드로이드 PROCESS_TEXT·공유(`WebReaderPlugin`) | 없음 → 1차는 숨김, 나중에 Share Extension |
 | 영상 학습 | 기기가 YouTube 오디오를 직접 받음(`downloadAudioBytes.ts`) | **심사 위험(5.2.3: 제3자 미디어 다운로드)** → iOS는 이달의 영상(서버 준비) + 자막 있는 영상만, 기기 오디오 다운로드 끔 |
 | 녹음 | webm 우선, mp4 대체 | iOS는 mp4만 — 대체 경로 이미 있음(`rooms/speech.ts`, `listen` 파일명 처리). 기기 확인만 |

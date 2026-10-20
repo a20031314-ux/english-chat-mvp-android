@@ -21,9 +21,7 @@ import { fileURLToPath } from "node:url";
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 
 /** 일부러 기록하지 않는 경로와 이유. */
-export const UNMETERED = {
-  "src/app/api/realtime/call/route.ts": "예전 실시간 통화. 앱에서 더 이상 열지 않고, 열리면 자체 추정을 로그로 남김(cost.ts callMinuteUsd)",
-};
+export const UNMETERED = {};
 
 const IMPORT = /(?:import|export)\s+([^"';]*?)\s*from\s*["']([^"']+)["']|import\(\s*["']([^"']+)["']\s*\)/g;
 const MODEL_CALL = /getOpenAIClient\(|api\.openai\.com/;

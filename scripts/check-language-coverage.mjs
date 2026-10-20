@@ -143,7 +143,6 @@ const KOREAN_ON_PURPOSE = [
   // shown, are written in Korean and the route picks them by interface
   // language. Everything a learner reads comes back from the model.
   "src/app/api/",
-  "src/components/LandingPage.tsx",
   "src/app/subscribe/",
   "src/app/layout.tsx",
   "src/app/dev/",

@@ -61,7 +61,6 @@
     "components/PackCard": "call",
     "api/roleplay/": "call",
     "api/pack/": "call",
-    "api/realtime/": "call",
 
     "components/EnglishAnalysisProvider": "sheet",
     "components/EnglishAnalysisViewer": "sheet",
@@ -138,7 +137,6 @@
     "api/feedback": "feedback",
     "api/feedback/": "feedback",
 
-    "components/LandingPage": "web",
     "components/LearningBookPanel": "web",
     "components/LearningReviewModal": "web",
     "page:/learning": "web",
@@ -155,6 +153,10 @@
     "api/media/sweep": "Vercel 예약 작업(vercel.json)",
     "api/feedback/fixed": "의견함 예약 작업(scripts/feedback-notify.mjs)",
     "api/feedback/image": "의견함 정리(scripts/feedback-pull.mjs)",
-    "api/simcheck/forget": "가상 사용자 점검이 끝날 때"
+    "api/simcheck/forget": "가상 사용자 점검이 끝날 때",
+    "api/video-subtitles/window": "옛 앱 2.48~2.57이 영상 해석에 씀 — 최소 지원 버전을 2.58 이상으로 올리면 지움",
+    "api/english-analysis/input": "옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움",
+    "api/english-analysis/element": "옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움",
+    "api/learner/brief": "가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀"
   }
 }

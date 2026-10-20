@@ -78,7 +78,7 @@
 
 ### AI 통화 (대화 → AI 튜터 📞) · 오늘의 팩 `call`
 - 화면: `PackCard` · `RoleplayOwnLine` · `RoleplayPast` · `RoleplayReview` · `RoleplayScreen` · `RoleplayTab` · `roleplay/TurnDiagBox`
-- API: `pack/finish` · `pack/today` · `realtime/call/ended` · `realtime/call` · `roleplay/context` · `roleplay/correct` · `roleplay/listen`(대화 탭, 사람 탭, Room 탭, 계정·로그인) · `roleplay/practice` · `roleplay/review` · `roleplay/turn`
+- API: `pack/finish` · `pack/today` · `roleplay/context` · `roleplay/listen`(대화 탭, 사람 탭, Room 탭, 계정·로그인) · `roleplay/practice` · `roleplay/review` · `roleplay/turn`
 - 다른 영역이 씀: `RoleplayTab` ← 앱 틀
 
 ### 문장분석·표현 시트 (여러 화면에서 열림) `sheet`
@@ -134,7 +134,7 @@
 - 다른 영역이 씀: `FeedbackButton` ← 앱 틀 · `FeedbackFixedSheet` ← 앱 틀
 
 ### 웹 전용 페이지 `web`
-- 화면: `LandingPage` · `LearningBookPanel` · `LearningReviewModal`
+- 화면: `LearningBookPanel` · `LearningReviewModal`
 - 웹 페이지: `/learning` · `/privacy`
 - 다른 영역이 씀: `LearningBookPanel` ← 앱 틀
 
@@ -156,9 +156,8 @@
 
 ## 자동: 쓰지 않는 것 (지울지 확인)
 
-- 아무도 안 가져다 쓰는 화면 코드: `LandingPage`
-- 앱·스크립트 어디서도 안 부르는 API: `realtime/call/ended` · `realtime/call` · `roleplay/correct` · `video-subtitles/window`
-- 스크립트만 부르는 API: `english-analysis/element` · `english-analysis/input` · `learner/brief`
-- 밖에서 부르는 API: `ads/ssv` AdMob 서버가 보상 확인으로 부름 · `account/purge` Vercel 예약 작업(vercel.json) · `media/sweep` Vercel 예약 작업(vercel.json) · `feedback/fixed` 의견함 예약 작업(scripts/feedback-notify.mjs) · `feedback/image` 의견함 정리(scripts/feedback-pull.mjs) · `simcheck/forget` 가상 사용자 점검이 끝날 때
+- 아무도 안 가져다 쓰는 화면 코드: 없음
+- 앱·스크립트 어디서도 안 부르는 API: 없음
+- 밖에서 부르는 API: `ads/ssv` AdMob 서버가 보상 확인으로 부름 · `account/purge` Vercel 예약 작업(vercel.json) · `media/sweep` Vercel 예약 작업(vercel.json) · `feedback/fixed` 의견함 예약 작업(scripts/feedback-notify.mjs) · `feedback/image` 의견함 정리(scripts/feedback-pull.mjs) · `simcheck/forget` 가상 사용자 점검이 끝날 때 · `video-subtitles/window` 옛 앱 2.48~2.57이 영상 해석에 씀 — 최소 지원 버전을 2.58 이상으로 올리면 지움 · `english-analysis/input` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `english-analysis/element` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `learner/brief` 가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀
 
 <!-- 자동 끝 -->

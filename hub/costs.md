@@ -125,8 +125,7 @@
 
 ## 기록 확인
 
-모델을 쓰는 서버 경로 32개 중 31개가 사용량을 기록합니다 (`scripts/cost-coverage.mjs`).
-- 일부러 뺌: `src/app/api/realtime/call/route.ts` — 예전 실시간 통화. 앱에서 더 이상 열지 않고, 열리면 자체 추정을 로그로 남김(cost.ts callMinuteUsd)
+모델을 쓰는 서버 경로 30개 중 30개가 사용량을 기록합니다 (`scripts/cost-coverage.mjs`).
 
 ## 가정 (믿기 어려운 숫자부터 확인)
 

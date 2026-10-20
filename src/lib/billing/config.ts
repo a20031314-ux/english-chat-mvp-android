@@ -98,25 +98,12 @@ export const PREMIUM_MONTHLY_IMPORT_POINTS = 80;
 export const MAX_VIDEO_PREP_SECONDS = 15 * 60;
 
 /**
- * Lifetime free tutor calls. Two rather than one, so a call that drops on a
- * bad connection does not cost someone their only look at the feature.
- *
- * A count, not a budget of minutes, because once the SDP handshake is done
- * the audio runs straight between the phone and OpenAI — the server brokers
- * the offer and then has no session left to cut short. Whether to open one
- * at all is the only lever it holds.
- */
-export const FREE_TRIAL_CALL_COUNT = 2;
-
-/** How long a trial call runs before the app ends it itself. */
-export const TRIAL_CALL_MAX_SECONDS = 3 * 60;
-
-/**
  * What one point buys of the realtime call.
  *
- * A minute. Only /api/realtime/call reads this, and nothing in the app opens
- * that call any more — the call tab is call learning (ROLEPLAY_POINT_SECONDS).
- * Kept so the route still charges correctly if anything old reaches it.
+ * A minute. The realtime call itself is gone (its route was deleted on
+ * 2026-10-20 — no build since 2.48 opened it); the call tab is call learning
+ * (ROLEPLAY_POINT_SECONDS). Kept because the point bundles in points.ts are
+ * still sized against it.
  */
 export const POINT_CALL_SECONDS = 60;
 
@@ -133,23 +120,6 @@ export const POINT_CALL_SECONDS = 60;
  * enough that a lost report is a small loss.
  */
 export const CALL_BLOCK_POINTS = 10;
-
-/**
- * Sent by a build that understands call blocks and will hang up at the end of
- * one. Only such a build is charged points.
- *
- * The server cannot enforce the block itself, so charging a client that ignores
- * it would take the points and still leave the audio running — the worst of
- * both. Older builds therefore keep the behaviour they shipped with, and this
- * heals as people update, the way the entitlement header did before it.
- */
-export const CALL_BLOCK_CLIENT_HEADER = "x-call-blocks";
-
-/** Names the hold on the way out, so the app can settle it on the way back. */
-export const CALL_HOLD_HEADER = "x-call-hold";
-
-/** How many seconds the block bought, so the app knows when to hang up. */
-export const CALL_BLOCK_SECONDS_HEADER = "x-call-seconds";
 
 /**
  * What one point buys of call learning.

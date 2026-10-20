@@ -10,7 +10,7 @@
  * legitimately keep light-palette classes on a dark screen, and every one of
  * them is a case this script cannot tell apart from a leftover:
  *
- *   LandingPage and ReportContentDialog have deliberately light buttons, whose
+ *   ReportContentDialog has deliberately light buttons, whose
  *   hover state is `hover:bg-white`. The bg-white rule below matches through the
  *   `hover:` prefix and would turn the hover dark, so the button would lose its
  *   highlight rather than gain a theme.
