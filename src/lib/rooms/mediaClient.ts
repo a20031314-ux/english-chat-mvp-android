@@ -6,6 +6,7 @@
  * 1:1·단체방 사진은 그 방 사람만 볼 수 있어 그냥 주소로는 열리지 않는다.
  */
 import { apiUrl } from "@/lib/apiBase";
+import { noteSuspended } from "./suspended";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { fitSize, MEDIA_MAX_BYTES, MEDIA_MAX_SIDE, MEDIA_QUALITY, type MediaRef, type MediaScope } from "./media";
 
@@ -67,6 +68,7 @@ export async function uploadImage(scope: MediaScope, file: Blob): Promise<MediaR
   }
   const data = (await response.json().catch(() => ({}))) as { image?: MediaRef; error?: string };
   if (!response.ok || !data.image) {
+    noteSuspended(response.status, data);
     const code = data.error as MediaUploadError | undefined;
     throw new MediaError(code && ["TOO_BIG", "BAD_TYPE", "LIMIT", "REJECTED", "UNAVAILABLE", "SIGNED_OUT"].includes(code) ? code : "FAILED");
   }

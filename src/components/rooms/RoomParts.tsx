@@ -169,6 +169,8 @@ export function ProfileSheet({
     try {
       await setFollow(accountId, !profile.isFollowing);
       refresh();
+    } catch {
+      // 정지(SUSPENDED)면 앱 틀이 한 줄 띄운다(lib/rooms/suspended.ts). 그 밖의 실패는 버튼이 그대로인 것으로 충분.
     } finally {
       setBusy(false);
     }

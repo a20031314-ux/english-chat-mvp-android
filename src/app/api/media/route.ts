@@ -11,6 +11,7 @@ import { openMedia, readMediaMeta, uploadMedia, type MediaPlace } from "@/lib/se
 import { threadIdFor } from "@/lib/rooms/dm";
 import { isGroupId } from "@/lib/rooms/group";
 import { fitSize, isMediaId, mediaDailyLimit, MEDIA_MAX_BYTES } from "@/lib/rooms/media";
+import { suspendedResponse } from "@/lib/server/suspension";
 
 export const dynamic = "force-dynamic";
 export const runtime = "nodejs";
@@ -62,6 +63,11 @@ export async function POST(request: NextRequest) {
   if (!auth) return bad(request, "SIGNED_OUT", 401);
   const me = auth.accountId;
   const scope = body.scope as { kind?: unknown; target?: unknown; id?: unknown } | undefined;
+  // 운영자가 사람 기능을 정지한 계정은 쓰기만 막는다(opsStore.ts).
+  {
+    const stop = await suspendedResponse(request, me);
+    if (stop) return stop;
+  }
   let place: MediaPlace;
   if (scope?.kind === "dm") {
     if (!isAccountId(scope.target) || scope.target === me || !(await readAccount(scope.target))) return bad(request, "BAD_SCOPE");

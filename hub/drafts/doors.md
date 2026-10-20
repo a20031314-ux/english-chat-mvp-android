@@ -48,11 +48,12 @@
 - 나눈 이유: 랜덤은 위험·평판·광고 정책(AdSense)·스토어 정책(애플 1.2)을 한곳에 가둔다. Pingo는 "골라서 요청" 그대로.
 - 코드: 창구 `random-meet`(`lib/doors.ts`, `webOnly`), 🎲 탭 `random`(`RandomScreen.tsx`), `/api/random`(status·verify·join/poll·leave), `server/randomStore.ts`(성인 기록·ci 해시·대기열·짝), `server/identityVerify.ts`(포트원 조회),
   `lib/random/protocol.ts`(나이 규칙·언어 맞춤), 짝 = `dmStore.openThreadDirect`(요청 없이 열린 1:1) + 영상이면 비공개 영상 방(`RoomMeta.random` → 상대 영상 흐림, 눌러야 보임).
-- 법 요건 맞추기: ① 본인인증(성인만) ② 1:1 대화·통화 자막 30일 ③ 신고·차단. 운영자가 막기: KV `random:v1:off:<ci해시>`(손으로, ci 기준이라 새 계정도 막힘).
+- 법 요건 맞추기: ① 본인인증(성인만) ② 1:1 대화·통화 자막 30일 ③ 신고·차단. 운영자가 막기: 신고함 `/ops`의 "랜덤 막기"(KV `random:v1:off:<ci해시>`, ci 기준이라 새 계정도 막힘).
 - 사람 할 일 문서(체크리스트·켜는 순서·OmeTV 비교·AI 영상 검열 제안): https://claude.ai/code/artifact/44d51b53-1373-4156-a23f-39e39824dc4d
 - **켜기 전 사람 일:** ①사업자 등록 ②포트원 가입 + 본인인증 채널(다날 또는 KG이니시스, 건당 비용) → `PORTONE_API_SECRET`·`NEXT_PUBLIC_PORTONE_STORE_ID`·`NEXT_PUBLIC_PORTONE_IDV_CHANNEL_KEY`
   ③법률 확인(고시 요건·해외 신원 확인 인정 여부) ④가비아 CNAME `spin` → Vercel 도메인 ⑤Google 로그인 원본에 `https://spin.languagebank.net` ⑥처리방침에 본인인증 항목 ⑦Vercel `RANDOM_ENABLED=1`.
 - 외국인: 휴대폰 본인인증은 한국 번호만 → 처음에는 한국 번호 인증자만 랜덤. 해외 신원 확인(여권·얼굴 등)은 법률 확인 뒤.
 - AI 영상 검사(2026-10-21 만듦): 3초마다 내/상대 화면을 번갈아 OpenAI 무료 검사, 저장 없음. 내 화면 걸림 = 24시간 정지·30일 두 번이면 ci 기준 영구 정지, 상대 화면 걸림 = 통화 끝 + 자동 신고(`ai_video`, 자동 정지 없음).
 - 해외 인증: 화면·접속 나라(`x-vercel-ip-country`)만. 업체 결정 대기 — 후보 Yoti(얼굴 나이 추정·신분증, 영국 규제 인정), Veriff, Persona. 정하면 `route.ts` `globalVerifyConfigured`와 인증 연결을 붙인다.
-- 아직 없는 것: 대화 안 "다음 사람" 버튼(지금은 Spin 탭으로 돌아와 다시 누름), 신고 누적 자동 막기, 랜덤 대화의 영상 노출 자동 감지, 대기 중 인원 표시.
+- 운영자 신고함(2026-10-21 만듦, 웹 `/ops`): 사람 신고·AI 검사(`ai_video_self`·`ai_video_self_off`·`ai_video_other`)를 한곳에, 사람 기능 정지(1·7·30일·풀 때까지)·랜덤 멈춤/막기·처리함. 키는 Vercel `OPS_KEY`(없으면 의견함 키). 아자르의 "사람 검토 24시간"에 해당.
+- 아직 없는 것: 대화 안 "다음 사람" 버튼(지금은 Spin 탭으로 돌아와 다시 누름), 신고 누적 자동 막기, 랜덤 대화의 영상 노출 자동 감지, 대기 중 인원 표시, 정지 때 들어와 있는 방에서 내보내기.

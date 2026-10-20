@@ -34,6 +34,7 @@ import { DM_MAX_CHARS } from "@/lib/rooms/dm";
 import { GROUP_MAX_MEMBERS, GROUP_MAX_NAME_CHARS, SPACE_NOTE_MAX_CHARS, SPACE_TEXT_MAX_CHARS, TEAM_GOAL_MAX_CHARS, cleanSchedule, isGroupId } from "@/lib/rooms/group";
 import { cleanText, isPeerId, isRoomId } from "@/lib/rooms/protocol";
 import { cleanLanguages } from "@/lib/rooms/roomFilter";
+import { suspendedResponse } from "@/lib/server/suspension";
 
 export const dynamic = "force-dynamic";
 
@@ -88,6 +89,11 @@ export async function POST(request: NextRequest) {
   const me = auth.accountId;
   const action = body.action;
 
+  // 운영자가 사람 기능을 정지한 계정은 쓰기만 막는다(opsStore.ts).
+  if (typeof action === "string" && ["create", "mate", "answer", "call", "send", "invite", "share"].includes(action)) {
+    const stop = await suspendedResponse(request, me);
+    if (stop) return stop;
+  }
   if (action === "mine") return jsonWithCors(request, { groups: await myGroups(me) });
 
   if (action === "create") {

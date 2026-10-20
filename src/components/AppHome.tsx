@@ -24,6 +24,7 @@ import type { GuideGo } from "@/lib/guide/content";
 import { FeedbackButton } from "@/components/FeedbackButton";
 import { readEntryDoor } from "@/lib/doors";
 import { FeedbackFixedSheet } from "@/components/FeedbackFixedSheet";
+import { SuspendedNotice } from "@/components/SuspendedNotice";
 import { RoomsScreen } from "@/components/rooms/RoomsScreen";
 import { RandomScreen } from "@/components/rooms/RandomScreen";
 import { PeopleTab } from "@/components/rooms/PeopleTab";
@@ -338,6 +339,8 @@ function AppHomeInner({
             <WhatsNewSheet ui={ui} locale={locale} onOpenTab={openTab} />
             {/* 앱을 열 때 한 번: 내가 보낸 의견이 반영됐다는 소식(고치기 전·후 그림). */}
             <FeedbackFixedSheet locale={locale} />
+            {/* 운영자가 사람 기능을 정지한 계정이 쓰려 할 때(lib/rooms/suspended.ts). */}
+            <SuspendedNotice locale={locale} />
             {insideTalk ? (
               <div className="shrink-0 px-2 pt-1.5 sm:px-4">
                 {/* 채팅·통화는 대화 목록 안의 화면: 목록으로 돌아가는 길. */}

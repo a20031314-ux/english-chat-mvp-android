@@ -70,5 +70,6 @@ tmp/feature/
 /tmp/cap-*.log
 /tmp/capture-failed-*.png
 /src/_capacitor_build_backup_door/
+/src/_capacitor_build_backup_ops/
 /tmp/service-map/
 /tmp/shots/

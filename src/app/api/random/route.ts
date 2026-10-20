@@ -12,6 +12,7 @@ import { meterRequest } from "@/lib/server/meterRequest";
 import { readMeta } from "@/lib/server/roomStore";
 import { addReport } from "@/lib/server/socialStore";
 import { isRoomId } from "@/lib/rooms/protocol";
+import { readBan } from "@/lib/server/opsStore";
 import { RANDOM_FRAME_MAX_CHARS, isRandomMode, type RandomStatus } from "@/lib/random/protocol";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
 
@@ -42,6 +43,8 @@ function globalVerifyConfigured(): boolean {
 async function statusFor(me: string | null, country: string | null = null): Promise<RandomStatus> {
   if (!randomEnabled()) return { state: "off" };
   if (!me) return { state: "signedOut" };
+  // 운영자가 사람 기능을 정지했으면 랜덤도(opsStore.ts).
+  if (await readBan(me)) return { state: "blocked" };
   const record = await readAdult(me);
   if (record?.offBy) return { state: "blocked" };
   if (!record) return { state: "unverified", verifyReady: portoneConfigured(), globalReady: globalVerifyConfigured(), country };
@@ -108,12 +111,14 @@ export async function POST(request: NextRequest) {
     if (!flagged) return jsonWithCors(request, { flagged: false });
     if (body.who === "self") {
       const strike = await recordStrike(me);
+      // 운영자 신고함에도 남긴다(누가 몇 번 걸렸는지 사람이 보고 풀거나 막는다). 화면은 저장하지 않는다.
+      await addReport({ at: new Date().toISOString(), reporter: "ai", target: me, reason: strike.off ? "ai_video_self_off" : "ai_video_self", roomId: meta.id, lines: [] });
       return jsonWithCors(request, { flagged: true, pausedUntil: strike.pausedUntil, off: strike.off });
     }
     // 상대 화면: 통화를 끝내고 운영자 확인용 신고만(보낸 화면이 진짜 상대 것인지 서버가 알 수 없어 자동 정지는 하지 않는다).
     const other = (meta.allowed ?? []).find((id) => id !== me) ?? null;
     if (other) {
-      await addReport({ at: new Date().toISOString(), reporter: me, target: other, reason: "ai_video", roomId: meta.id, lines: [] });
+      await addReport({ at: new Date().toISOString(), reporter: me, target: other, reason: "ai_video_other", roomId: meta.id, lines: [] });
     }
     return jsonWithCors(request, { flagged: true });
   }

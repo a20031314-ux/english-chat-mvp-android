@@ -146,6 +146,8 @@ const KOREAN_ON_PURPOSE = [
   "src/app/subscribe/",
   "src/app/layout.tsx",
   "src/app/dev/",
+  // 운영자 신고함: 운영자(한국어)만 보는 화면.
+  "src/app/ops/",
   // The privacy policy carries a full Korean version beside the English one,
   // on purpose: Korean law asks for it, and it is a document, not a screen
   // that switches with the interface language.

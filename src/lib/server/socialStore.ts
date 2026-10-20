@@ -12,7 +12,7 @@
  * 목록은 그 주인만 쓰므로 읽고-고치고-쓰기가 다른 사람과 엉키지 않는다.
  * 팔로워는 여러 사람이 동시에 바꾸므로 목록 대신 카운터와 관계 줄로 센다.
  */
-import { kvDelete, kvGetJson, kvGetJsonMany, kvGetNumber, kvIncrBy, kvListPush, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
+import { kvDelete, kvGetJson, kvGetJsonMany, kvGetNumber, kvIncrBy, kvListPush, kvListRange, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
 
 const MAX_FOLLOWING = 500;
 const MAX_BLOCKED = 500;
@@ -123,4 +123,9 @@ export type Report = {
 
 export async function addReport(report: Report): Promise<void> {
   await kvListPush(REPORTS_KEY, [JSON.stringify(report)], REPORT_TTL_SECONDS);
+}
+
+/** 운영자 신고함(api/ops/reports)용: 최근 신고 원문 줄(JSON), 오래된 것부터. */
+export async function readReportRows(limit = 500): Promise<string[]> {
+  return kvListRange(REPORTS_KEY, -limit, -1);
 }

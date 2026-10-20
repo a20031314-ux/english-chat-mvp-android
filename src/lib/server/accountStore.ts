@@ -6,6 +6,7 @@ import { forgetInvites } from "./inviteLinkStore.ts";
 import { forgetBoard } from "./boardStore.ts";
 import { forgetMedia } from "./mediaStore.ts";
 import { forgetRandom } from "./randomStore.ts";
+import { forgetOps } from "./opsStore.ts";
 import { isIdentified } from "./identity.ts";
 import {
   EMAIL_CODE_LENGTH,
@@ -209,6 +210,8 @@ export async function deleteAccount(record: AccountRecord): Promise<void> {
   await forgetMedia(record.id);
   // 랜덤 연결의 성인인증 기록·대기·만난 사람(lib/server/randomStore.ts).
   await forgetRandom(record.id);
+  // 운영자 정지 표시(lib/server/opsStore.ts).
+  await forgetOps(record.id);
   await kvListPush(PURGE_QUEUE_KEY, [record.dataUserId], 400 * 24 * 60 * 60);
 }
 

@@ -17,6 +17,7 @@ import {
 } from "@/lib/server/socialStore";
 import { cleanText, isRoomId } from "@/lib/rooms/protocol";
 import { PEOPLE_WINDOW_MS, type PersonCard, type PublicProfile } from "@/lib/rooms/social";
+import { suspendedResponse } from "@/lib/server/suspension";
 
 export const dynamic = "force-dynamic";
 
@@ -118,6 +119,11 @@ export async function POST(request: NextRequest) {
   if (!me) return bad(request, "SIGNED_OUT", 401);
   if (!(await readAccount(target))) return bad(request, "NO_ACCOUNT", 404);
 
+  // 운영자가 사람 기능을 정지한 계정은 쓰기만 막는다(opsStore.ts).
+  if (typeof action === "string" && ["follow"].includes(action)) {
+    const stop = await suspendedResponse(request, me);
+    if (stop) return stop;
+  }
   if (action === "follow") {
     const result = await follow(me, target);
     return result === "ok" ? jsonWithCors(request, { ok: true }) : bad(request, result, 409);

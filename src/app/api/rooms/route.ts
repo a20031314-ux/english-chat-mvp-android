@@ -37,6 +37,7 @@ import { requestAuth } from "@/lib/server/premiumRequest";
 import { readAccount } from "@/lib/server/accountStore";
 import { STUN_ONLY, iceServers } from "@/lib/server/turn";
 import { blockedEitherWay, noteHelped, noteHosted, readBlocked, readFollowing } from "@/lib/server/socialStore";
+import { suspendedResponse } from "@/lib/server/suspension";
 
 export const dynamic = "force-dynamic";
 
@@ -95,6 +96,11 @@ export async function POST(request: NextRequest) {
   const needsAccount = action === "create" || action === "join" || action === "reopen";
   const account = auth && needsAccount ? await readAccount(auth.accountId) : null;
   if (needsAccount && !account) return bad(request, "SIGNED_OUT", 401);
+  // 운영자가 사람 기능을 정지한 계정은 쓰기만 막는다(opsStore.ts).
+  if (account) {
+    const stop = await suspendedResponse(request, account.id);
+    if (stop) return stop;
+  }
   const profileName = account
     ? cleanText(account.profile.nickname || account.username || "", MAX_NICKNAME_CHARS)
     : "";

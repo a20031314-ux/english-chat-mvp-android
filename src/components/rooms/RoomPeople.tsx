@@ -96,6 +96,8 @@ export function PeopleList({
       await setFollow(person.id, !person.isFollowing);
       setPeople((list) => (list ?? []).map((item) => (item.id === person.id ? { ...item, isFollowing: !person.isFollowing } : item)));
       loadProfile(person.id, true);
+    } catch {
+      // 정지(SUSPENDED)면 앱 틀이 한 줄 띄운다(lib/rooms/suspended.ts).
     } finally {
       setBusy(null);
     }

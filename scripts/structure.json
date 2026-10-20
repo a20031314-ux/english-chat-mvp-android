@@ -152,9 +152,13 @@
     "api/simcheck/": "ops",
     "api/account/purge": "ops",
     "api/media/sweep": "ops",
-    "page:/dev/": "ops"
+    "page:/dev/": "ops",
+    "api/ops/reports": "ops",
+    "page:/ops": "ops",
+    "components/SuspendedNotice": "people"
   },
   "external": {
+    "api/ops/reports": "운영자 신고함 페이지 /ops(운영자 키)",
     "api/ads/ssv": "AdMob 서버가 보상 확인으로 부름",
     "api/ads/txt": "AdSense가 /ads.txt로 읽음(next.config.ts rewrites)",
     "api/account/purge": "Vercel 예약 작업(vercel.json)",

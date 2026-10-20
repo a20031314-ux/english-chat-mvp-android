@@ -46,6 +46,8 @@
   `spin.languagebank.net` = Spin(랜덤 채팅·랜덤 영상통화, 성인인증한 사람끼리만, 첫 화면 🎲 랜덤 탭 `random` — 이 창구에만 보이는 탭, 웹만·앱에는 없음, 서버 스위치 `RANDOM_ENABLED`가 꺼져 있으면 "준비 중"). Pingo 사람 탭 위에 Spin으로 가는 줄(켜졌을 때만).
   창구 주소의 `/`·`/<언어>` → 소개 페이지(`app/door/…`, next.config.ts rewrites), `?screen=`이 붙으면 같은 앱이 **창구 모드**(첫 화면·하단 탭만 그 창구 것, 상단에 창구 이름). 계정·구독·기록은 하나.
 - **로그인:** AI 기능(채팅·통화·영상·My)은 로그인 없이, 사람·Room·메시지·게시판은 로그인해야(안 했으면 계정 카드).
+- **운영자 신고함 `/ops`(웹만, 앱 빌드에서 빠짐):** 운영자 키로 열고 `/api/ops/reports`. 여기서 누른 "사람 기능 정지"는 대화·사람·Room·게시판·사진·랜덤 API의 쓰기를 403 `SUSPENDED`로 막고(`server/suspension.ts`),
+  앱은 그 답을 `lib/rooms/suspended.ts`에 남겨 앱 틀의 `SuspendedNotice`가 한 줄 띄운다 — 사람 기능 API에 쓰기 동작을 새로 만들면 그 라우트의 정지 목록에도 넣는다.
 
 ## 고칠 때 순서
 
@@ -104,9 +106,9 @@
 - 다른 영역이 씀: `videoLearning/VideoLearningTab` ← 앱 틀
 
 ### 사람 탭 — 프로필 목록·게시판·사진 `people`
-- 화면: `rooms/BoardView` · `rooms/MediaImage` · `rooms/PeopleTab` · `rooms/RoomPeople`
+- 화면: `SuspendedNotice` · `rooms/BoardView` · `rooms/MediaImage` · `rooms/PeopleTab` · `rooms/RoomPeople`
 - API: `board`(대화 탭, Room 탭, 계정·로그인) · `media`(Room 탭) · `social`(대화 탭, Room 탭, 계정·로그인)
-- 다른 영역이 씀: `rooms/MediaImage` ← 대화 탭 · `rooms/PeopleTab` ← 앱 틀
+- 다른 영역이 씀: `SuspendedNotice` ← 앱 틀 · `rooms/MediaImage` ← 대화 탭 · `rooms/PeopleTab` ← 앱 틀
 
 ### Room 탭 — 말하는 방 `room`
 - 화면: `rooms/RoomParts` · `rooms/RoomView` · `rooms/RoomsScreen` · `rooms/VideoStage`
@@ -151,8 +153,8 @@
 - 다른 영역이 씀: `LearningBookPanel` ← 앱 틀
 
 ### 예약 작업·점검·개발용 (앱 화면 아님) `ops`
-- API: `account/purge` · `media/sweep` · `simcheck/forget`
-- 웹 페이지: `/dev/roleplay-review` · `/dev/roleplay-tab` · `/dev/update-notice`
+- API: `account/purge` · `media/sweep` · `ops/reports` · `simcheck/forget`
+- 웹 페이지: `/dev/roleplay-review` · `/dev/roleplay-tab` · `/dev/update-notice` · `/ops`
 
 ## 자동: 화면끼리 부르는 신호 (`src/lib/appIntents.ts`)
 
@@ -170,6 +172,6 @@
 
 - 아무도 안 가져다 쓰는 화면 코드: 없음
 - 앱·스크립트 어디서도 안 부르는 API: 없음
-- 밖에서 부르는 API: `ads/ssv` AdMob 서버가 보상 확인으로 부름 · `ads/txt` AdSense가 /ads.txt로 읽음(next.config.ts rewrites) · `account/purge` Vercel 예약 작업(vercel.json) · `media/sweep` Vercel 예약 작업(vercel.json) · `feedback/fixed` 의견함 예약 작업(scripts/feedback-notify.mjs) · `feedback/image` 의견함 정리(scripts/feedback-pull.mjs) · `simcheck/forget` 가상 사용자 점검이 끝날 때 · `video-subtitles/window` 옛 앱 2.48~2.57이 영상 해석에 씀 — 최소 지원 버전을 2.58 이상으로 올리면 지움 · `english-analysis/input` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `english-analysis/element` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `learner/brief` 가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀
+- 밖에서 부르는 API: `ops/reports` 운영자 신고함 페이지 /ops(운영자 키) · `ads/ssv` AdMob 서버가 보상 확인으로 부름 · `ads/txt` AdSense가 /ads.txt로 읽음(next.config.ts rewrites) · `account/purge` Vercel 예약 작업(vercel.json) · `media/sweep` Vercel 예약 작업(vercel.json) · `feedback/fixed` 의견함 예약 작업(scripts/feedback-notify.mjs) · `feedback/image` 의견함 정리(scripts/feedback-pull.mjs) · `simcheck/forget` 가상 사용자 점검이 끝날 때 · `video-subtitles/window` 옛 앱 2.48~2.57이 영상 해석에 씀 — 최소 지원 버전을 2.58 이상으로 올리면 지움 · `english-analysis/input` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `english-analysis/element` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `learner/brief` 가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀
 
 <!-- 자동 끝 -->

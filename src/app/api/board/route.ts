@@ -25,6 +25,7 @@ import {
   type BoardAuthor,
 } from "@/lib/rooms/board";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
+import { suspendedResponse } from "@/lib/server/suspension";
 
 export const dynamic = "force-dynamic";
 
@@ -81,6 +82,11 @@ export async function POST(request: NextRequest) {
   const me = auth.accountId;
   const action = body.action;
 
+  // 운영자가 사람 기능을 정지한 계정은 쓰기만 막는다(opsStore.ts).
+  if (typeof action === "string" && ["post", "edit", "comment", "editComment"].includes(action)) {
+    const stop = await suspendedResponse(request, me);
+    if (stop) return stop;
+  }
   if (action === "list") {
     const language = isLearningLanguageCode(body.language) ? body.language : undefined;
     const offset = typeof body.offset === "number" && Number.isFinite(body.offset) ? body.offset : 0;

@@ -57,7 +57,7 @@ const ADULT_TTL_SECONDS = 3 * 365 * 24 * 60 * 60;
 const MATCH_TTL_SECONDS = 120;
 const WAIT_KEEP = 400;
 
-export type AdultRecord = { adult: boolean; at: number; ci: string | null; foreigner?: boolean; offBy?: "strikes" };
+export type AdultRecord = { adult: boolean; at: number; ci: string | null; foreigner?: boolean; offBy?: "strikes" | "operator"; adultBefore?: boolean };
 type Ticket = { mode: RandomMode; learn: string | null; ui: string | null; at: number };
 
 /** 스위치: Vercel `RANDOM_ENABLED=1`일 때만 랜덤이 돈다(성인인증 계약·법률 확인 뒤). */
@@ -138,8 +138,67 @@ export async function recordStrike(accountId: string, now: number = Date.now()):
   if (strikes.length < RANDOM_STRIKES_TO_OFF) return { pausedUntil: until, off: false };
   const record = await readAdult(accountId);
   if (record?.ci) await kvSetJson(offKey(record.ci), now, ADULT_TTL_SECONDS);
-  else if (record) await kvSetJson(adultKey(accountId), { ...record, adult: false, offBy: "strikes" }, ADULT_TTL_SECONDS);
+  else if (record) await kvSetJson(adultKey(accountId), { ...record, adult: false, offBy: "strikes", adultBefore: record.adult }, ADULT_TTL_SECONDS);
   return { pausedUntil: until, off: true };
+}
+
+// ── 운영자(신고함 /ops, api/ops/reports) ─────────────────────
+
+export type RandomOpsView = {
+  verified: boolean;
+  adult: boolean;
+  foreigner: boolean;
+  pausedUntil: number | null;
+  strikes: number;
+  off: boolean;
+};
+
+export async function randomOpsView(accountId: string, now: number = Date.now()): Promise<RandomOpsView> {
+  const [record, until, strikes] = await Promise.all([
+    readAdult(accountId),
+    pausedUntil(accountId, now),
+    kvGetJson<number[]>(strikeKey(accountId)),
+  ]);
+  return {
+    verified: Boolean(record),
+    adult: Boolean(record?.adult || record?.adultBefore),
+    foreigner: Boolean(record?.foreigner),
+    pausedUntil: until,
+    strikes: (strikes ?? []).filter((at) => now - at < RANDOM_STRIKE_WINDOW_MS).length,
+    off: Boolean(record?.offBy) || (await isOff(record)),
+  };
+}
+
+/** 운영자가 랜덤만 잠시 멈춤(시간) 또는 풀기(null — 걸린 기록도 지움). */
+export async function setRandomPause(accountId: string, until: number | null, now: number = Date.now()): Promise<void> {
+  if (until === null || until <= now) {
+    await kvDelete([pauseKey(accountId), strikeKey(accountId)]);
+    return;
+  }
+  await kvSetJson(pauseKey(accountId), until, Math.ceil((until - now) / 1000));
+  await leaveQueue(accountId);
+}
+
+/**
+ * 운영자가 랜덤을 막음/풀기. 본인 확인값(ci)이 있으면 그 사람 기준(새 계정도 막힘), 없으면 그 계정만.
+ * 풀 때는 AI 검사로 막힌 것까지 같이 푼다.
+ */
+export async function setRandomOff(accountId: string, off: boolean, now: number = Date.now()): Promise<"ok" | "UNVERIFIED"> {
+  const record = await readAdult(accountId);
+  if (!record) return "UNVERIFIED";
+  if (off) {
+    if (record.ci) await kvSetJson(offKey(record.ci), now, ADULT_TTL_SECONDS);
+    else if (!record.offBy) await kvSetJson(adultKey(accountId), { ...record, adult: false, offBy: "operator", adultBefore: record.adult }, ADULT_TTL_SECONDS);
+    await leaveQueue(accountId);
+    return "ok";
+  }
+  if (record.ci) await kvDelete([offKey(record.ci)]);
+  if (record.offBy) {
+    const { offBy: _offBy, adultBefore, ...rest } = record;
+    await kvSetJson(adultKey(accountId), { ...rest, adult: adultBefore ?? true }, ADULT_TTL_SECONDS);
+  }
+  await kvDelete([strikeKey(accountId)]);
+  return "ok";
 }
 
 // ── 대기열·짝 맞추기 ─────────────────────────────────────────

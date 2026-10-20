@@ -1,6 +1,7 @@
 "use client";
 
 import { apiUrl } from "@/lib/apiBase";
+import { noteSuspended } from "./suspended";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { readCachedAccount } from "@/lib/account/session";
 import type { LineKind, PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, RoomSummary, SignalKind } from "./protocol";
@@ -72,7 +73,10 @@ async function call<T>(action: string, payload: Record<string, unknown>, code = 
     body: JSON.stringify({ action, code, ...payload }),
   });
   const body = (await response.json().catch(() => ({}))) as { error?: string } & T;
-  if (!response.ok) throw new RoomApiError(body.error ?? "FAILED", response.status);
+  if (!response.ok) {
+    noteSuspended(response.status, body);
+    throw new RoomApiError(body.error ?? "FAILED", response.status);
+  }
   return body;
 }
 
@@ -312,7 +316,10 @@ async function social<T>(action: string, payload: Record<string, unknown>): Prom
     body: JSON.stringify({ action, ...payload }),
   });
   const body = (await response.json().catch(() => ({}))) as { error?: string } & T;
-  if (!response.ok) throw new RoomApiError(body.error ?? "FAILED", response.status);
+  if (!response.ok) {
+    noteSuspended(response.status, body);
+    throw new RoomApiError(body.error ?? "FAILED", response.status);
+  }
   return body;
 }
 
@@ -369,7 +376,10 @@ async function dm<T>(action: string, payload: Record<string, unknown>): Promise<
     body: JSON.stringify({ action, code: readInviteCode(), ...payload }),
   });
   const body = (await response.json().catch(() => ({}))) as { error?: string } & T;
-  if (!response.ok) throw new RoomApiError(body.error ?? "FAILED", response.status);
+  if (!response.ok) {
+    noteSuspended(response.status, body);
+    throw new RoomApiError(body.error ?? "FAILED", response.status);
+  }
   return body;
 }
 
@@ -421,7 +431,10 @@ async function groups<T>(action: string, payload: Record<string, unknown>): Prom
     body: JSON.stringify({ action, code: readInviteCode(), ...payload }),
   });
   const body = (await response.json().catch(() => ({}))) as { error?: string } & T;
-  if (!response.ok) throw new RoomApiError(body.error ?? "FAILED", response.status);
+  if (!response.ok) {
+    noteSuspended(response.status, body);
+    throw new RoomApiError(body.error ?? "FAILED", response.status);
+  }
   return body;
 }
 
@@ -486,7 +499,10 @@ async function board<T>(action: string, payload: Record<string, unknown>): Promi
     body: JSON.stringify({ action, ...payload }),
   });
   const body = (await response.json().catch(() => ({}))) as { error?: string } & T;
-  if (!response.ok) throw new RoomApiError(body.error ?? "FAILED", response.status);
+  if (!response.ok) {
+    noteSuspended(response.status, body);
+    throw new RoomApiError(body.error ?? "FAILED", response.status);
+  }
   return body;
 }
 

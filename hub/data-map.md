@@ -16,7 +16,7 @@
 | 내 표현 | `learnerLedger:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 표현 장부(쓴 표현·횟수, 언어별) | `ledgerStore.ts` |
 | 노트 | `notePlace:v1` | 모두 함께 | 영구 | 해당 없음 | 노트 자리 찾기 결과(언어별 공유, 재사용) | `api/notes/place/route.ts` |
 | 단체방·팀 | `grp:v1` | 방·대화 | 400일 · 5초 · 7일 · 계산(group ? groupTtl(group) : GROU) · 계산(groupTtl(group)) · 계산(ttl) | 지움(나가기) | 단체방·팀·초대·줄·잠금 | `api/groups/route.ts` `groupStore.ts` |
-| 랜덤 연결(Spin) | `random:v1` | 계정 | 1095일 · 10초 · 1시간 · 1일 · 20초 · 2분 · 30일 · 3초 | 지움(막힌 사람의 ci 해시 자리만 남김) | 성인인증 결과(성인 여부·날짜·ci 해시, 이름·번호·생년월일 없음)·쓴 인증 번호·대기 표·짝·최근 만난 사람·AI 검사 정지(24시간)·걸린 시각(30일)·검사 간격(3초) — 화면 자체는 저장 안 함 | `randomStore.ts` |
+| 랜덤 연결(Spin) | `random:v1` | 계정 | 1095일 · 10초 · 1시간 · 1일 · 20초 · 2분 · 30일 · 3초 · 계산(Math.ceil((until - now) / 1000) | 지움(막힌 사람의 ci 해시 자리만 남김) | 성인인증 결과(성인 여부·날짜·ci 해시, 이름·번호·생년월일 없음)·쓴 인증 번호·대기 표·짝·최근 만난 사람·AI 검사 정지(24시간)·걸린 시각(30일)·검사 간격(3초) — 화면 자체는 저장 안 함 | `randomStore.ts` |
 | 말하는 방 | `room:ban` | 방·대화 | 6시간 | 해당 없음 | 방에서 내보낸 사람 | `roomStore.ts` |
 | 말하는 방 | `room:grant` | 방·대화 | 1분 | 해당 없음 | 말하기 자리 올리기 신호 | `roomStore.ts` |
 | 말하는 방 | `room:index` | 방·대화 | 6시간 | 해당 없음 | 열린 방 목록 | `roomStore.ts` |
@@ -32,7 +32,7 @@
 | 비용 | `usage:op` | 학습자 한 명 | 45일 | 지움(주 1회 정리) | 기능별 사용 횟수(비용 보고, 일별) | `entitlementStore.ts` |
 | 비용 | `usage:tok` | 운영 | 45일 | 해당 없음 | 기능별 잰 토큰(일별, 사람 없음) | `meterRequest.ts` |
 | 사람 사이 사진(1:1·단체방·게시판) | `media:v1` | 방·대화 | 2일 · 365일 · 37일 · 40일 · 계산(board ? BOARD_META_TTL : MEDIA) | 지움 | 사진 정보(올린 사람·붙인 곳·Blob 경로·크기·지울 때)·하루 올린 수·올린 사람별 id·날짜별 지울 목록 — 파일은 Vercel Blob(private) media/<id>, 1:1·단체방 30일·안 보낸 사진 하루·게시판은 글과 함께 | `mediaStore.ts` |
-| 사람·팔로우 | `social:v1` | 계정 | 60일 · 90일 · 영구 | 지움(일부: 접속 기록) | 팔로우·차단·관계·신고·접속·도운 수 | `presenceStore.ts` `socialStore.ts` |
+| 사람·팔로우 | `social:v1` | 계정 | 60일 · 90일 · 영구 | 지움(일부: 접속 기록) | 팔로우·차단·관계·신고·접속·도운 수 | `opsStore.ts` `presenceStore.ts` `socialStore.ts` |
 | 영상 | `usage:trial` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 영상 체험 쓴 것 | `entitlementStore.ts` |
 | 영상 | `usage:video` | 학습자 한 명 | 70일 | 지움(주 1회 정리) | 영상 준비 사용(월별) | `entitlementStore.ts` |
 | 영상 | `videoLine:v1` | 모두 함께 | ?(코드에서 못 읽음) | 해당 없음 | 자막 줄 풀이(영상·언어별 공유) | `subtitleGlossStore.ts` |
@@ -41,6 +41,7 @@
 | 오늘의 팩 | `pack:days` | 학습자 한 명 | 15일 | 해당 없음 | 무료 사용자가 팩을 연 날짜(주 2번 한도, 15일 뒤 저절로 사라짐) | `packStore.ts` |
 | 오늘의 팩 | `pack:v1` | 학습자 한 명 | 4일 | 남음(4일 뒤 만료) | 오늘의 팩 진행 | `packStore.ts` |
 | 요금 한도 | `usage:aihelp` | 학습자 한 명 | 2분 · 3일 | 해당 없음 | 오늘 쓴 AI 도움·방 자막 줄 수(사흘 뒤 저절로 사라짐) | `entitlementStore.ts` |
+| 운영자 신고함(정지) | `ops:v1` | 계정 | 90일 · 계산(ttl) | 지움(정지 표시), 처리 표시는 90일 뒤 저절로 | 운영자가 누른 사람 기능 정지(기한·메모)와 처리한 신고 표시 | `opsStore.ts` |
 | 의견 보내기 | `feedback:v1` | 운영 | 120일 · 2일 · 90일 | 남음(90일) | 사용자가 보낸 의견·그림·반영 카드 | `feedbackFixStore.ts` `feedbackStore.ts` |
 | 자라는 중 | `growth:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 표현별 자라는 기록(언어별) | `growthStore.ts` |
 | 자라는 중 | `selfcheck:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 스스로 확인 기록(언어별) | `selfCheckStore.ts` |
