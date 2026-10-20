@@ -87,6 +87,10 @@ details.about[open] summary { margin-bottom: 8px; }
 .app-structure > *, .app-structure #app-body > * { min-width: 0; max-width: 100%; }
 .app-structure h2 { white-space: normal; }
 .app-structure li, .app-structure p, .app-structure code { overflow-wrap: anywhere; word-break: break-word; white-space: normal; }
+.forgotten .forgot-sum { margin: 0; font-weight: 500; }
+.forgotten details summary { cursor: pointer; font-size: 12px; color: var(--muted); }
+.forgotten h4 { font-size: 13.5px; margin: 14px 0 4px; }
+.forgotten li { overflow-wrap: anywhere; }
 .app-structure h3 { font-size: 15px; margin: 18px 0 6px; }
 .app-structure h4 { font-size: 13.5px; margin: 14px 0 4px; }
 .md table { border-collapse: collapse; font-size: 12.5px; width: 100%; }
@@ -144,6 +148,12 @@ a.area-link code { border-bottom: 1px dashed var(--accent); }
 
   <section aria-label="버전" class="versions" id="versions"></section>
   <div class="ask" id="ask" hidden></div>
+
+  <section class="panel forgotten" aria-labelledby="forgot-h" id="forgotten" hidden>
+    <h2 id="forgot-h">잊힌 일 <small>(hub/forgotten.md, 매일 아침 자동)</small></h2>
+    <p class="forgot-sum" id="forgot-sum"></p>
+    <details><summary>자세히</summary><div id="forgot-body" class="md"></div></details>
+  </section>
 
   <section aria-label="역할" class="lanes" id="lanes"></section>
 
@@ -322,6 +332,25 @@ function renderDoc(text, extraAfterHeading = () => "") {
 }
 
 const jumps = [];
+// 잊힌 일: 요약 한 줄은 늘 보이고, 나머지는 펼쳐서.
+if (HUB.forgotten) {
+  const lines = HUB.forgotten.split("\n");
+  const sum = lines.find((l) => l.startsWith("기준일 "));
+  if (sum) document.getElementById("forgot-sum").textContent = sum;
+  const parts = [];
+  let chunk = [];
+  const flush = () => { if (chunk.length) { parts.push(md(chunk.join("\n"))); chunk = []; } };
+  for (const raw of lines) {
+    if (raw.startsWith("# ") || raw.startsWith(">") || raw.startsWith("기준일 ")) continue;
+    const h = raw.match(/^## (.*)$/);
+    if (h) { flush(); parts.push(`<h4>${inline(h[1])}</h4>`); continue; }
+    chunk.push(raw.replace(/^  - /, "- ↳ "));
+  }
+  flush();
+  document.getElementById("forgot-body").innerHTML = parts.join("");
+  document.getElementById("forgotten").hidden = false;
+}
+
 if (HUB.structure) {
   for (const m of HUB.structure.matchAll(/^### .*`([a-z]+)`\s*$/gm)) areaKeys.add(m[1]);
   // 요금·포인트·광고 영역 아래에 광고 구조로 가는 줄.

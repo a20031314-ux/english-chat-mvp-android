@@ -98,7 +98,14 @@ try {
 } catch {
   // 아직 없으면 칸을 숨긴다.
 }
-const data = { state, rules, roles, inbox, logs, dataMap, structure, ads, commit, builtAt: new Date().toISOString() };
+// 잊힌 일(hub/forgotten.md, scripts/hub-forgotten.mjs가 만듦 — 예약 작업 "잊힌 일 알림"이 매일).
+let forgotten = "";
+try {
+  forgotten = read("forgotten.md");
+} catch {
+  // 아직 없으면 칸을 숨긴다.
+}
+const data = { state, rules, roles, inbox, logs, dataMap, structure, ads, forgotten, commit, builtAt: new Date().toISOString() };
 const template = fs.readFileSync(path.join(ROOT, "scripts", "hub-page.template.html"), "utf8");
 const html = template.replace("/*HUB_DATA*/null", JSON.stringify(data).replace(/</g, "\\u003c"));
 fs.mkdirSync(path.dirname(OUT), { recursive: true });
