@@ -15,9 +15,9 @@ import {
   translateLine, aiFailText } from "@/lib/rooms/client";
 import { DM_PENDING_LIMIT, type DmMessage, type DmSummary, type DmThread } from "@/lib/rooms/dm";
 import type { RoomMeta } from "@/lib/rooms/protocol";
-import { askPhrase, questionCount } from "@/lib/rooms/quote";
+import { askPhraseAbout, questionCount } from "@/lib/rooms/quote";
 import type { RoomNote } from "@/lib/rooms/layout";
-import { Composer, Face, useProfile } from "./RoomParts";
+import { Composer, Face, LineActions, QuoteText, useProfile } from "./RoomParts";
 import { MediaImage } from "./MediaImage";
 
 /*
@@ -189,8 +189,8 @@ export function DmThreadView({
       .map((message) => `${message.from === me ? "me" : name}: ${message.text}`);
 
   // 집은 말(상대 메시지나 통화 기록의 한 줄) — 입력창 위에 인용으로 붙는다.
-  const [quoting, setQuoting] = useState<{ seq: number; index?: number; nickname: string; text: string; ask: boolean; roomId?: string } | null>(
-    note ? { seq: note.seq, nickname: note.nickname, text: note.text, ask: true, roomId: note.roomId } : null,
+  const [quoting, setQuoting] = useState<{ seq: number; index?: number; nickname: string; text: string; ask: boolean; roomId?: string; focus?: string } | null>(
+    note ? { seq: note.seq, nickname: note.nickname, text: note.text, ask: true, roomId: note.roomId, focus: note.focus } : null,
   );
   const quoteName = (accountId: string | null | undefined, fallback: string) => (accountId === me ? t.you : fallback || name);
 
@@ -254,7 +254,7 @@ export function DmThreadView({
                 onJoinCall={(roomId) => onJoinCall(roomId, name)}
                 quoteName={quoteName}
                 asked={questionCount(messages, message.seq)}
-                onQuote={(index, nickname, text, ask) => setQuoting({ seq: message.seq, index, nickname, text, ask })}
+                onQuote={(index, nickname, text, ask, focus) => setQuoting({ seq: message.seq, index, nickname, text, ask, focus })}
               />
             ))}
           </div>
@@ -285,10 +285,10 @@ export function DmThreadView({
             ) : null}
             {thread?.status === "declined" && thread.starter === me ? <p className="text-xs text-slate-400">{t.declinedMine}</p> : null}
             <Composer
-              key={quoting ? `q${quoting.seq}.${quoting.index ?? "-"}${quoting.ask ? "a" : "r"}` : "plain"}
-              quote={quoting ? { nickname: quoting.nickname, text: quoting.text, ask: quoting.ask } : null}
+              key={quoting ? `q${quoting.seq}.${quoting.index ?? "-"}${quoting.ask ? "a" : "r"}${quoting.focus ?? ""}` : "plain"}
+              quote={quoting ? { nickname: quoting.nickname, text: quoting.text, ask: quoting.ask, focus: quoting.focus } : null}
               onClearQuote={() => setQuoting(null)}
-              initialText={quoting?.ask ? askPhrase(targetLanguage) : ""}
+              initialText={quoting?.ask ? askPhraseAbout(targetLanguage, quoting.focus) : ""}
               t={t}
               placeholder={t.messagePlaceholder}
               disabled={!loaded || blocked || (pendingMine && mineSent >= DM_PENDING_LIMIT) || (thread?.status === "declined" && thread.starter === me)}
@@ -298,7 +298,7 @@ export function DmThreadView({
               attach={{ kind: "dm", target: other }}
               onSend={async (text, image) => {
                 try {
-                  const body = await dmSend(other, text, quoting ? { seq: quoting.seq, index: quoting.index, ask: quoting.ask, roomId: quoting.roomId } : undefined, image?.id);
+                  const body = await dmSend(other, text, quoting ? { seq: quoting.seq, index: quoting.index, ask: quoting.ask, roomId: quoting.roomId, focus: quoting.focus } : undefined, image?.id);
                   setThread(body.thread);
                   add([body.message]);
                   setQuoting(null);
@@ -335,7 +335,7 @@ function Bubble({
   /** 이 메시지를 집어 물은 질문 수. */
   asked: number;
   /** 집기: 글 메시지는 index 없이, 통화 기록의 줄은 index와 함께. */
-  onQuote: (index: number | undefined, nickname: string, text: string, ask: boolean) => void;
+  onQuote: (index: number | undefined, nickname: string, text: string, ask: boolean, focus?: string) => void;
   message: DmMessage;
   mine: boolean;
   me: string;
@@ -412,7 +412,7 @@ function Bubble({
                 locale={locale}
                 targetLanguage={targetLanguage}
                 context={lines.slice(Math.max(0, index - 4), index).map((row) => `${row.nickname}: ${row.text}`)}
-                onAsk={line.from === me ? undefined : () => onQuote(index, line.nickname, line.text, true)}
+                onAsk={line.from === me ? undefined : (focus) => onQuote(index, line.nickname, line.text, true, focus)}
               />
             ))}
           </ul>
@@ -446,7 +446,7 @@ function Bubble({
           {message.quote ? (
             <span className="mb-1 block border-s-2 border-white/30 ps-2 text-xs text-slate-300/80">
               {message.quote.roomId ? <span className="block text-meta text-sky-200">🎙 {t.fromRoom}</span> : null}
-              ↪ {quoteName(message.quote.accountId, message.quote.nickname)}: {message.quote.text}
+              ↪ {quoteName(message.quote.accountId, message.quote.nickname)}: <QuoteText text={message.quote.text} focus={message.quote.focus} />
             </span>
           ) : null}
           {message.text}
@@ -458,22 +458,12 @@ function Bubble({
           </p>
         ) : null}
         {open && !mine ? (
-          <div className="mt-1 flex gap-1.5 px-1">
-            <button
-              type="button"
-              onClick={() => onQuote(undefined, "", message.text, true)}
-              className="rounded-lg border border-amber-300/40 px-2 py-0.5 text-xs text-amber-200 hover:bg-amber-300/10"
-            >
-              ❓ {t.askMeaning}
-            </button>
-            <button
-              type="button"
-              onClick={() => onQuote(undefined, "", message.text, false)}
-              className="rounded-lg border border-white/15 px-2 py-0.5 text-xs text-slate-300 hover:bg-white/10"
-            >
-              ↩ {t.replyTo}
-            </button>
-          </div>
+          <LineActions
+            t={t}
+            text={message.text}
+            onAsk={(focus) => onQuote(undefined, "", message.text, true, focus)}
+            onReply={(focus) => onQuote(undefined, "", message.text, false, focus)}
+          />
         ) : null}
         <p className={`mt-0.5 px-1 text-[10px] text-slate-600 ${mine ? "text-end" : ""}`}>
           {time}
@@ -496,7 +486,7 @@ function LogLine({
   onAsk,
 }: {
   t: RoomCopy;
-  onAsk?: () => void;
+  onAsk?: (focus?: string) => void;
   line: { from: string | null; nickname: string; text: string };
   mine: boolean;
   locale: string;
@@ -532,15 +522,7 @@ function LogLine({
           </span>
         ) : null}
       </button>
-      {open && onAsk ? (
-        <button
-          type="button"
-          onClick={onAsk}
-          className="ms-2 mt-0.5 rounded-lg border border-amber-300/40 px-2 py-0.5 text-xs text-amber-200 hover:bg-amber-300/10"
-        >
-          ❓ {t.askMeaning}
-        </button>
-      ) : null}
+      {open && onAsk ? <LineActions t={t} text={line.text} onAsk={onAsk} /> : null}
     </li>
   );
 }

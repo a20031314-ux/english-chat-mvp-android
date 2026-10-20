@@ -20,9 +20,9 @@ import {
   translateLine, aiFailText } from "@/lib/rooms/client";
 import { GROUP_MAX_MEMBERS, GROUP_MAX_NAME_CHARS, type Group, type GroupCall, type GroupMessage, type GroupSummary } from "@/lib/rooms/group";
 import { requestGroupCall } from "@/lib/rooms/openDm";
-import { askPhrase, questionCount } from "@/lib/rooms/quote";
+import { askPhraseAbout, questionCount } from "@/lib/rooms/quote";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
-import { Composer, Face, languagePair, useProfile } from "./RoomParts";
+import { Composer, Face, LineActions, QuoteText, languagePair, useProfile } from "./RoomParts";
 import { MediaImage } from "./MediaImage";
 import { teamCopy, type TeamCopy } from "@/lib/rooms/teamCopy";
 import { TeamSpace } from "./TeamSpace";
@@ -401,7 +401,7 @@ function GroupBubble({
   targetLanguage: string;
   context: string[];
   asked: number;
-  onQuote: (ask: boolean) => void;
+  onQuote: (ask: boolean, focus: string | undefined, nickname: string) => void;
 }) {
   const mine = message.from === me;
   const profile = useProfile(message.from);
@@ -450,7 +450,7 @@ function GroupBubble({
         >
           {message.quote ? (
             <span className="mb-1 block border-s-2 border-white/30 ps-2 text-xs text-slate-300/80">
-              ↪ {message.quote.accountId === me ? t.you : quoted?.nickname || "…"}: {message.quote.text}
+              ↪ {message.quote.accountId === me ? t.you : quoted?.nickname || "…"}: <QuoteText text={message.quote.text} focus={message.quote.focus} />
             </span>
           ) : null}
           {message.text}
@@ -462,22 +462,7 @@ function GroupBubble({
           </p>
         ) : null}
         {open ? (
-          <div className="mt-1 flex gap-1.5 px-1">
-            <button
-              type="button"
-              onClick={() => onQuote(true)}
-              className="rounded-lg border border-amber-300/40 px-2 py-0.5 text-xs text-amber-200 hover:bg-amber-300/10"
-            >
-              ❓ {t.askMeaning}
-            </button>
-            <button
-              type="button"
-              onClick={() => onQuote(false)}
-              className="rounded-lg border border-white/15 px-2 py-0.5 text-xs text-slate-300 hover:bg-white/10"
-            >
-              ↩ {t.replyTo}
-            </button>
-          </div>
+          <LineActions t={t} text={message.text} onAsk={(focus) => onQuote(true, focus, name)} onReply={(focus) => onQuote(false, focus, name)} />
         ) : null}
         <p className={`mt-0.5 px-1 text-meta text-slate-600 ${mine ? "text-end" : ""}`}>
           {time}
@@ -633,7 +618,7 @@ export function GroupThreadView({
   const [group, setGroup] = useState<Group | null>(null);
   const [messages, setMessages] = useState<GroupMessage[]>([]);
   const [members, setMembers] = useState(false);
-  const [quoting, setQuoting] = useState<{ seq: number; nickname: string; text: string; ask: boolean } | null>(null);
+  const [quoting, setQuoting] = useState<{ seq: number; nickname: string; text: string; ask: boolean; focus?: string } | null>(null);
   // 내보내졌거나(removed) 방이 없어졌으면(gone) 입력을 막고 안내.
   const [gone, setGone] = useState<"" | "removed" | "gone">("");
   const [call, setCall] = useState<GroupCall>(null);
@@ -799,7 +784,7 @@ export function GroupThreadView({
                   targetLanguage={targetLanguage}
                   context={contextFor(message.seq)}
                   asked={questionCount(texts, message.seq)}
-                  onQuote={(ask) => setQuoting({ seq: message.seq, nickname: "", text: message.text, ask })}
+                  onQuote={(ask, focus, nickname) => setQuoting({ seq: message.seq, nickname, text: message.text, ask, focus })}
                 />
               ),
             )}
@@ -807,10 +792,10 @@ export function GroupThreadView({
 
           <footer className="shrink-0 space-y-2 border-t border-white/10 px-3 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] pt-2">
             <Composer
-              key={quoting ? `q${quoting.seq}${quoting.ask ? "a" : "r"}` : "plain"}
-              quote={quoting ? { nickname: quoting.nickname || "↪", text: quoting.text, ask: quoting.ask } : null}
+              key={quoting ? `q${quoting.seq}${quoting.ask ? "a" : "r"}${quoting.focus ?? ""}` : "plain"}
+              quote={quoting ? { nickname: quoting.nickname, text: quoting.text, ask: quoting.ask, focus: quoting.focus } : null}
               onClearQuote={() => setQuoting(null)}
-              initialText={quoting?.ask ? askPhrase(targetLanguage) : ""}
+              initialText={quoting?.ask ? askPhraseAbout(targetLanguage, quoting.focus) : ""}
               t={t}
               placeholder={t.messagePlaceholder}
               disabled={!group || Boolean(gone)}
@@ -819,7 +804,7 @@ export function GroupThreadView({
               recent={() => texts.slice(-6).map((row) => row.text)}
               attach={{ kind: "group", id: groupId }}
               onSend={async (text, image) => {
-                const body = await groupSend(groupId, text, quoting ? { seq: quoting.seq, ask: quoting.ask } : undefined, image?.id);
+                const body = await groupSend(groupId, text, quoting ? { seq: quoting.seq, ask: quoting.ask, focus: quoting.focus } : undefined, image?.id);
                 setGroup(body.group);
                 add([body.message]);
                 setQuoting(null);

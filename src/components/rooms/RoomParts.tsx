@@ -1,7 +1,7 @@
 "use client";
 
 import { MateButton } from "./MateAsk";
-import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore, type ReactNode } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import type { RoomCopy } from "@/lib/rooms/copy";
 import {
@@ -14,7 +14,7 @@ import {
 import { byPerson, contextBefore, overlapsPrevious, timeline, type RoomLine, type RoomMember } from "@/lib/rooms/protocol";
 import type { PublicProfile } from "@/lib/rooms/social";
 import type { HowToSayExpression } from "@/lib/howToSay";
-import { questionCount } from "@/lib/rooms/quote";
+import { focusOf, pickTokens, questionCount } from "@/lib/rooms/quote";
 import type { MediaRef, MediaScope } from "@/lib/rooms/media";
 import { MediaError, uploadImage, type MediaUploadError } from "@/lib/rooms/mediaClient";
 import { peekHint, type RoomHintMode } from "@/lib/rooms/layout";
@@ -386,7 +386,7 @@ export function Composer({
   /** 사진 첨부(📷): 어디에 올릴 사진인지. 없으면 버튼을 안 보인다(말하는 방 채팅 등). */
   attach?: MediaScope | null;
   /** 집은 남의 말(묻기·답하기). 부르는 쪽은 인용이 바뀔 때 key를 바꿔 initialText를 새로 채운다. */
-  quote?: { nickname: string; text: string; ask: boolean } | null;
+  quote?: { nickname: string; text: string; ask: boolean; focus?: string } | null;
   onClearQuote?: () => void;
   initialText?: string;
 }) {
@@ -452,7 +452,7 @@ export function Composer({
               ↪ {quote.nickname}
             </p>
             <p className="line-clamp-2 text-xs text-slate-300" dir="auto">
-              {quote.text}
+              <QuoteText text={quote.text} focus={quote.focus} />
             </p>
             {quote.ask ? <p className="mt-0.5 text-[10px] text-slate-500">{t.askHint}</p> : null}
           </div>
@@ -570,6 +570,101 @@ export function Composer({
 }
 
 /** 사진 올리기 오류 문구. */
+/**
+ * 인용 글: 고른 부분(focus)이 있으면 그 부분만 밝게. 글 자체는 서버가 방·대화 기록에서 채운 것.
+ */
+export function QuoteText({ text, focus }: { text: string; focus?: string | null }) {
+  const at = focus ? text.indexOf(focus) : -1;
+  if (!focus || at < 0) return <>{text}</>;
+  return (
+    <>
+      {text.slice(0, at)}
+      <span className="rounded-lg bg-amber-300/25 px-0.5 font-medium text-amber-100">{focus}</span>
+      {text.slice(at + focus.length)}
+    </>
+  );
+}
+
+/**
+ * 남의 줄을 누른 뒤: 낱말을 골라(눌러서, 이어서 누르면 구절) 그 부분만 묻거나 답한다.
+ * 낱말은 기기에서 자른다(wordSegments — 띄어쓰기 없는 일본어·중국어·태국어도). 모델을 부르지 않아
+ * 고르기만으로는 AI 도움·비용이 들지 않는다. 고르지 않으면 지금처럼 줄 전체.
+ */
+export function LineActions({
+  t,
+  text,
+  language,
+  onAsk,
+  onReply,
+  extra,
+}: {
+  t: RoomCopy;
+  text: string;
+  language?: string;
+  onAsk: (focus?: string) => void;
+  onReply?: (focus?: string) => void;
+  /** 그 밖의 버튼(✉ 쪽지로 묻기 등) — 고른 부분을 받는다. */
+  extra?: (focus?: string) => ReactNode;
+}) {
+  const tokens = useMemo(() => pickTokens(text, language), [text, language]);
+  const [pick, setPick] = useState<[number, number] | null>(null);
+  const tap = (index: number) =>
+    setPick((have) => {
+      if (!have) return [index, index];
+      const [from, to] = have;
+      if (index >= from && index <= to) return from === to ? null : [index, index];
+      return [Math.min(from, index), Math.max(to, index)];
+    });
+  const focus = pick ? focusOf(text, tokens, pick[0], pick[1]) : undefined;
+  return (
+    <div className="mt-1 space-y-1 ps-1">
+      {tokens.length > 1 ? (
+        <div className="space-y-1">
+          <p className="text-meta text-slate-500">{t.pickHint}</p>
+          <div className="flex flex-wrap gap-1" dir="auto">
+            {tokens.map((token, index) => {
+              const on = pick !== null && index >= pick[0] && index <= pick[1];
+              return (
+                <button
+                  key={`${token.start}-${token.word}`}
+                  type="button"
+                  aria-pressed={on}
+                  onClick={() => tap(index)}
+                  className={`rounded-lg border px-1.5 py-0.5 text-xs ${
+                    on ? "border-amber-300/70 bg-amber-300/20 text-amber-100" : "border-white/10 text-slate-300 hover:bg-white/5"
+                  }`}
+                >
+                  {token.word}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      ) : null}
+      <div className="flex flex-wrap gap-1.5">
+        <button
+          type="button"
+          onClick={() => onAsk(focus)}
+          className="rounded-lg border border-amber-300/40 px-2 py-0.5 text-xs text-amber-200 hover:bg-amber-300/10"
+        >
+          ❓ {focus ? `“${focus}” ` : ""}
+          {t.askMeaning}
+        </button>
+        {onReply ? (
+          <button
+            type="button"
+            onClick={() => onReply(focus)}
+            className="rounded-lg border border-white/15 px-2 py-0.5 text-xs text-slate-300 hover:bg-white/10"
+          >
+            ↩ {t.replyTo}
+          </button>
+        ) : null}
+        {extra?.(focus)}
+      </div>
+    </div>
+  );
+}
+
 export function photoErrorText(t: RoomCopy, code: MediaUploadError): string {
   if (code === "LIMIT") return t.photoLimit;
   if (code === "REJECTED") return t.photoRejected;
@@ -620,9 +715,9 @@ export function Lines({
   /** 이름(사진)을 누르면 그 사람 프로필. */
   onPerson: (peerId: string, accountId: string | null) => void;
   /** 남의 줄을 집어 묻기(ask) 또는 답하기. 없으면 버튼을 안 보인다. */
-  onQuote?: (line: RoomLine, ask: boolean) => void;
+  onQuote?: (line: RoomLine, ask: boolean, focus?: string) => void;
   /** 쪽지로 묻기(그 줄을 말한 사람에게 1:1). 계정이 있는 줄에만. */
-  onNote?: (line: RoomLine) => void;
+  onNote?: (line: RoomLine, focus?: string) => void;
   /** 채팅 위주 보기: 글자를 크게. */
   big?: boolean;
 }) {
@@ -746,7 +841,7 @@ export function Lines({
             ) : null}
             {line.quote ? (
               <span className="my-1 block border-s-2 border-white/25 ps-2 text-xs text-slate-400" dir="auto">
-                ↪ {line.quote.nickname}: {line.quote.text}
+                ↪ {line.quote.nickname}: <QuoteText text={line.quote.text} focus={line.quote.focus} />
               </span>
             ) : null}
             <span className={`block leading-snug text-white ${big ? "text-title" : typed ? "text-sm" : "text-chat"}`} dir="auto">
@@ -769,31 +864,26 @@ export function Lines({
             />
           ) : null}
           {isOpen && others && onQuote ? (
-            <div className="mt-1 flex gap-1.5 ps-1">
-              <button
-                type="button"
-                onClick={() => onQuote(line, true)}
-                className="rounded-lg border border-amber-300/40 px-2 py-0.5 text-xs text-amber-200 hover:bg-amber-300/10"
-              >
-                ❓ {t.askMeaning}
-              </button>
-              <button
-                type="button"
-                onClick={() => onQuote(line, false)}
-                className="rounded-lg border border-white/15 px-2 py-0.5 text-xs text-slate-300 hover:bg-white/10"
-              >
-                ↩ {t.replyTo}
-              </button>
-              {onNote && line.accountId ? (
-                <button
-                  type="button"
-                  onClick={() => onNote(line)}
-                  className="rounded-lg border border-sky-300/40 px-2 py-0.5 text-xs text-sky-200 hover:bg-sky-300/10"
-                >
-                  ✉ {t.noteAsk}
-                </button>
-              ) : null}
-            </div>
+            <LineActions
+              t={t}
+              text={line.text}
+              language={line.lang}
+              onAsk={(focus) => onQuote(line, true, focus)}
+              onReply={(focus) => onQuote(line, false, focus)}
+              extra={
+                onNote && line.accountId
+                  ? (focus) => (
+                      <button
+                        type="button"
+                        onClick={() => onNote(line, focus)}
+                        className="rounded-lg border border-sky-300/40 px-2 py-0.5 text-xs text-sky-200 hover:bg-sky-300/10"
+                      >
+                        ✉ {t.noteAsk}
+                      </button>
+                    )
+                  : undefined
+              }
+            />
           ) : null}
         </div>
       </li>

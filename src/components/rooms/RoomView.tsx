@@ -36,7 +36,7 @@ import {
   type RoomMeta,
   type RoomRole,
 } from "@/lib/rooms/protocol";
-import { askPhrase } from "@/lib/rooms/quote";
+import { askPhraseAbout } from "@/lib/rooms/quote";
 import { cleanLanguages } from "@/lib/rooms/roomFilter";
 import { leansOnOwnLanguage, whichLanguage } from "@/lib/roleplay/transcript";
 import { BodyLayer } from "@/components/FullScreenLayer";
@@ -228,7 +228,7 @@ export function RoomView({
   const [seatPick, setSeatPick] = useState(false);
   // 방장이 다시 들어오면 서버가 방장 자리를 새 peerId로 옮긴다 — 버튼 이름(방 닫기)을 맞추려고 들어갈 때 받은 값으로.
   // 집은 남의 줄 — 댓글창 위에 인용으로 붙는다(묻기면 학습 언어 질문이 미리 채워짐).
-  const [quoting, setQuoting] = useState<{ line: RoomLine; ask: boolean } | null>(null);
+  const [quoting, setQuoting] = useState<{ line: RoomLine; ask: boolean; focus?: string } | null>(null);
   const free = Boolean(room.private) || canSeatFreely(peerId, hostPeerId, members);
   const closesOnLeave = !room.private && hostPeerId === peerId;
 
@@ -679,8 +679,8 @@ export function RoomView({
       .map((member) => ({ peerId: member.peerId, accountId: member.accountId ?? null, nickname: member.nickname })),
   ];
   const noteFor = onMessage
-    ? (line: RoomLine) => {
-        if (line.accountId) onMessage(line.accountId, { roomId: room.id, seq: line.seq, nickname: line.nickname, text: line.text });
+    ? (line: RoomLine, focus?: string) => {
+        if (line.accountId) onMessage(line.accountId, { roomId: room.id, seq: line.seq, nickname: line.nickname, text: line.text, ...(focus ? { focus } : {}) });
       }
     : undefined;
   // 참여 방식 고르기. 방장은 말하기 자리에서 내려가지 않는다(듣기·채팅만은 막음).
@@ -1002,7 +1002,7 @@ export function RoomView({
             targetLanguage={targetLanguage}
             blocked={blocked}
             onPerson={openPerson}
-            onQuote={(line, ask) => setQuoting({ line, ask })}
+            onQuote={(line, ask, focus) => setQuoting({ line, ask, focus })}
           />
         </section>
         {(!hideChat && (layout !== "call" || composerOpen)) || quoting ? (
@@ -1024,7 +1024,7 @@ export function RoomView({
               targetLanguage={targetLanguage}
               blocked={blocked}
               onPerson={openPerson}
-              onQuote={(line, ask) => setQuoting({ line, ask })}
+              onQuote={(line, ask, focus) => setQuoting({ line, ask, focus })}
             />
           </section>
         ) : null}
@@ -1080,10 +1080,10 @@ export function RoomView({
           </button>
         ) : (
         <Composer
-          key={quoting ? `q${quoting.line.seq}${quoting.ask ? "a" : "r"}` : "plain"}
-          quote={quoting ? { nickname: quoting.line.nickname, text: quoting.line.text, ask: quoting.ask } : null}
+          key={quoting ? `q${quoting.line.seq}${quoting.ask ? "a" : "r"}${quoting.focus ?? ""}` : "plain"}
+          quote={quoting ? { nickname: quoting.line.nickname, text: quoting.line.text, ask: quoting.ask, focus: quoting.focus } : null}
           onClearQuote={() => setQuoting(null)}
-          initialText={quoting?.ask ? askPhrase(targetLanguage) : ""}
+          initialText={quoting?.ask ? askPhraseAbout(targetLanguage, quoting.focus) : ""}
           t={t}
           disabled={!joined}
           locale={locale}
@@ -1098,7 +1098,7 @@ export function RoomView({
                 text,
                 startedAt: Date.now() + offsetRef.current,
                 endedAt: Date.now() + offsetRef.current,
-                ...(quoting ? { quoteSeq: quoting.line.seq, ask: quoting.ask } : {}),
+                ...(quoting ? { quoteSeq: quoting.line.seq, ask: quoting.ask, ...(quoting.focus ? { quoteFocus: quoting.focus } : {}) } : {}),
               }),
             );
             setQuoting(null);

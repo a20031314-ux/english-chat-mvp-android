@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { pollFrom } from "@/lib/server/lateRows";
-import { clipQuote, type LineQuote } from "@/lib/rooms/quote";
+import { cleanFocus, clipQuote, type LineQuote } from "@/lib/rooms/quote";
 import { cleanLanguages } from "@/lib/rooms/roomFilter";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
@@ -240,7 +240,9 @@ export async function POST(request: NextRequest) {
     if (kind === "text" && typeof body.quoteSeq === "number") {
       const found = (await readLines(roomId)).find((row) => row.seq === body.quoteSeq);
       if (!found) return bad(request, "NO_QUOTE", 404);
-      quote = { seq: found.seq, nickname: found.nickname, text: clipQuote(found.text), peerId: found.peerId, accountId: found.accountId ?? null };
+      const quoted = clipQuote(found.text);
+      const focus = cleanFocus(quoted, body.quoteFocus);
+      quote = { seq: found.seq, nickname: found.nickname, text: quoted, peerId: found.peerId, accountId: found.accountId ?? null, ...(focus ? { focus } : {}) };
     }
     const line = await addLine(roomId, {
       kind,

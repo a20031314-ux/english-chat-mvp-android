@@ -20,7 +20,7 @@ const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "../.
 const WWW = path.join(ROOT, "www");
 const API = (process.env.API_BASE || "https://english-chat-mvp.vercel.app").replace(/\/$/, "");
 const PORT = Number(process.env.PORT || 4224);
-const RUN = value("run-id", `groupask-${new Date(Date.now() + 9 * 3600_000).toISOString().replace(/[-:]/g, "").slice(0, 13)}`);
+const RUN = value("run-id", `groupask-${value("variant", "en")}-${new Date(Date.now() + 9 * 3600_000).toISOString().replace(/[-:]/g, "").slice(0, 13)}`);
 const OUT = path.join(ROOT, "tmp/sim-users", RUN, "group-ask-views");
 fs.mkdirSync(OUT, { recursive: true });
 const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || "playwright");
@@ -64,8 +64,15 @@ const server = http.createServer(async (req, res) => {
 await new Promise((resolve) => server.listen(PORT, "127.0.0.1", resolve));
 const BASE = `http://127.0.0.1:${PORT}`;
 
+// 언어 조합(--variant): 기본 en(영어 배움·앱 한국어), ja(일본어 배움·앱 한국어), es-ar(스페인어 배움·앱 아랍어).
+const VARIANTS = {
+  en: { target: "en", ui: "ko", line: "Sounds fun. I'm gonna crash at home and binge-watch a drama.", pick: [8, 8], answer: "\"Binge-watch\" means watching many episodes in a row, like 몰아보기 😄" },
+  ja: { target: "ja", ui: "ko", line: "いいね。週末は家でドラマを一気見するつもり。", pick: [8, 9], answer: "「一気見」は何話も続けて見ること。몰아보기예요 😄" },
+  "es-ar": { target: "es", ui: "ar", line: "¡Qué bien! Yo me quedo en casa a ver series a lo bestia.", pick: [10, 12], answer: "«A lo bestia» significa muchísimo, sin parar 😄" },
+};
+const V = VARIANTS[value("variant", "en")];
 const CAST = [
-  { key: "me", nick: "지수", target: "en", ui: "ko", bio: "영어로 수다 떨 친구 찾아요" },
+  { key: "me", nick: "지수", target: V.target, ui: V.ui, bio: "" },
   { key: "mina", nick: "Mina", target: "ko", ui: "en", bio: "Learning Korean. Let's exchange!" },
   { key: "leo", nick: "Leo", target: "en", ui: "ko", bio: "" },
 ];
@@ -141,7 +148,7 @@ try {
   for (const [who, text] of [
     [leo, "Welcome! Today's topic: weekend plans 🙂"],
     [mina, "이번 주말에 친구랑 한강에서 치맥 하기로 했어요!"],
-    [leo, "Sounds fun. I'm gonna crash at home and binge-watch a drama."],
+    [leo, V.line],
     [me, "I want to go hiking but it might rain."],
   ]) {
     await groups(who, "send", { groupId, text });
@@ -162,10 +169,17 @@ try {
   // ① 지수(영어 배움): Leo의 영어 줄을 눌러 번역 → ❓ 무슨 뜻이에요?
   await openGroup(me);
   await tryDo("Leo 줄 누르기", async () => {
-    await me.page.getByText("binge-watch a drama", { exact: false }).filter({ visible: true }).last().click();
+    await me.page.getByText(V.line.slice(-12), { exact: false }).filter({ visible: true }).last().click();
     await wait(6000);
   });
-  await shot(me, "01-tap-line.png", "지수 — 단체방에서 남의 줄을 누름", "앱 언어(한국어) 번역 + ❓ 무슨 뜻이에요? · ↩ 답하기.");
+  // 낱말 고르기: 첫 낱말과 끝 낱말을 누르면 그 사이가 구절로.
+  await tryDo("낱말 고르기", async () => {
+    const chips = me.page.locator("div.flex.flex-wrap.gap-1 > button[aria-pressed]").filter({ visible: true });
+    await chips.nth(V.pick[0]).click();
+    if (V.pick[1] !== V.pick[0]) await chips.nth(V.pick[1]).click();
+    await wait(800);
+  });
+  await shot(me, "01-tap-line.png", "지수 — 남의 줄을 눌러 낱말 고르기", "번역 + 낱말 칩. 누른 낱말(이어서 누르면 구절)만 묻는다.");
   await tryDo("묻기", async () => {
     await me.page.getByRole("button", { name: re(me.t.askMeaning) }).filter({ visible: true }).last().click();
     await wait(1500);
@@ -181,13 +195,13 @@ try {
   await openGroup(leo);
   await wait(3000);
   await shot(leo, "04-leo-asked.png", "Leo — 내 말을 누가 물어봄", "노란 테두리 \"지수님이 내 말을 물어봤어요\".");
-  await groups(leo, "send", { groupId, text: "\"Binge-watch\" means watching many episodes in a row, like 몰아보기 😄" });
+  await groups(leo, "send", { groupId, text: V.answer });
   await wait(6000);
 
   // ③ Mina(한국어 배움 · 앱 영어): 같은 단체방 + 지수의 한국어 아닌 줄도 앱 언어로
   await openGroup(mina);
   await tryDo("Mina 줄 누르기", async () => {
-    await mina.page.getByText("몰아보기", { exact: false }).filter({ visible: true }).last().click();
+    await mina.page.getByText(V.answer.slice(-8), { exact: false }).filter({ visible: true }).last().click();
     await wait(6000);
   });
   await shot(mina, "05-mina-view.png", "Mina(앱 영어) — 같은 단체방, 답 줄을 누름", "질문·답이 한 흐름으로, 번역은 Mina의 앱 언어(영어)로.");

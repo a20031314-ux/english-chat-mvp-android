@@ -7,6 +7,7 @@
  */
 
 import type { LearningLanguageCode } from "../learningLanguages.ts";
+import { segmentWords } from "../wordSegments.ts";
 
 /** 인용으로 남기는 글자 수(글자 단위, 태국어·힌디어 모음 기호는 자르지 않음). */
 export const QUOTE_MAX_CHARS = 140;
@@ -24,7 +25,12 @@ export type LineQuote = {
   accountId?: string | null;
   /** 쪽지: 말하는 방의 줄을 집어 1:1 메시지로 물었을 때 그 방(seq는 방 자막 줄 번호). */
   roomId?: string;
+  /** 줄 안에서 고른 부분(단어·구절) — 그 부분만 물을 때. 늘 text 안에 있는 글. */
+  focus?: string;
 };
+
+/** 고른 부분으로 남기는 글자 수. */
+export const FOCUS_MAX_CHARS = 60;
 
 const ASK_PHRASES: Record<LearningLanguageCode, string> = {
   en: "What does this mean?",
@@ -42,6 +48,69 @@ const ASK_PHRASES: Record<LearningLanguageCode, string> = {
   th: "อันนี้แปลว่าอะไร",
   hi: "इसका मतलब क्या है?",
 };
+
+/** 고른 부분을 넣은 질문({x} 자리). 묻는 사람의 학습 언어, 모델 안 부름. */
+const ASK_ABOUT_PHRASES: Record<LearningLanguageCode, string> = {
+  en: "What does \"{x}\" mean?",
+  ko: "\"{x}\" 무슨 뜻이에요?",
+  ja: "「{x}」ってどういう意味ですか？",
+  zh: "“{x}”是什么意思？",
+  es: "¿Qué significa «{x}»?",
+  fr: "« {x} », ça veut dire quoi ?",
+  it: "Che cosa significa \"{x}\"?",
+  pt: "O que significa \"{x}\"?",
+  ru: "Что значит «{x}»?",
+  ar: "ماذا يعني \"{x}\"؟",
+  id: "\"{x}\" artinya apa?",
+  vi: "\"{x}\" nghĩa là gì?",
+  th: "\"{x}\" แปลว่าอะไร",
+  hi: "\"{x}\" का मतलब क्या है?",
+};
+
+/** 고른 부분이 있으면 그 부분을 넣은 질문, 없으면 줄 전체 질문. */
+export function askPhraseAbout(language: string, focus?: string | null): string {
+  if (!focus) return askPhrase(language);
+  const template = ASK_ABOUT_PHRASES[language as LearningLanguageCode] ?? ASK_ABOUT_PHRASES.en;
+  return template.replace("{x}", focus);
+}
+
+/** 고를 수 있는 낱말(앞뒤 문장부호·기호 뺀 것)과 줄 안 위치. 띄어쓰기 없는 언어도 낱말로(wordSegments). */
+export type PickToken = { word: string; start: number; end: number };
+
+const EDGE = /^[\p{P}\p{S}]+|[\p{P}\p{S}]+$/gu;
+
+export function pickTokens(text: string, language?: string, max = 40): PickToken[] {
+  const tokens: PickToken[] = [];
+  let cursor = 0;
+  for (const segment of segmentWords(text, language)) {
+    const at = text.indexOf(segment, cursor);
+    if (at < 0) continue;
+    cursor = at + segment.length;
+    const lead = segment.length - segment.replace(/^[\p{P}\p{S}]+/u, "").length;
+    const word = segment.replace(EDGE, "");
+    if (!word) continue;
+    tokens.push({ word, start: at + lead, end: at + lead + word.length });
+    if (tokens.length >= max) break;
+  }
+  return tokens;
+}
+
+/** from~to 번째 낱말을 줄의 원래 글 그대로(사이 띄어쓰기 포함) 잘라 낸다. */
+export function focusOf(text: string, tokens: PickToken[], from: number, to: number): string {
+  const a = tokens[Math.min(from, to)];
+  const b = tokens[Math.max(from, to)];
+  if (!a || !b) return "";
+  return text.slice(a.start, b.end);
+}
+
+/** 서버: 보낸 고른 부분이 인용 글 안에 그대로 있을 때만 남긴다(남이 하지 않은 말을 꾸미지 못하게). */
+export function cleanFocus(quoteText: string, focus: unknown): string | undefined {
+  if (typeof focus !== "string") return undefined;
+  const clean = focus.replace(/\s+/g, " ").trim();
+  if (!clean || Array.from(clean).length > FOCUS_MAX_CHARS) return undefined;
+  if (clean === quoteText.replace(/\s+/g, " ").trim()) return undefined;
+  return quoteText.replace(/\s+/g, " ").includes(clean) ? clean : undefined;
+}
 
 /** 묻는 사람의 학습 언어로 된 질문 문장. 모르는 언어면 영어. */
 export function askPhrase(language: string): string {

@@ -44,7 +44,7 @@ export const dynamic = "force-dynamic";
  *   create { name, languages, invite[] }  → { group }
  *   open { groupId }                      → { group, messages }   (참여한 사람만 줄, 읽음 표시)
  *   poll { groupId, since }               → { group, messages }
- *   send { groupId, text, quoteSeq?, ask? } → { group, message }
+ *   send { groupId, text, quoteSeq?, ask?, quoteFocus? } → { group, message }  (quoteFocus: 그 줄 안에서 고른 부분)
  *   invite { groupId, target }            → 방에 있는 사람이면 누구나
  *   answer { groupId, accept }            → 받은 초대에 참여/거절
  *   leave { groupId } · kick/transfer { groupId, target } (방장만)
@@ -190,7 +190,7 @@ export async function POST(request: NextRequest) {
       id: group.id,
       text,
       ...(image ? { image } : {}),
-      ...(typeof body.quoteSeq === "number" ? { quoteSeq: body.quoteSeq, ask: body.ask === true } : {}),
+      ...(typeof body.quoteSeq === "number" ? { quoteSeq: body.quoteSeq, ask: body.ask === true, quoteFocus: body.quoteFocus } : {}),
     });
     if (!result.ok) return bad(request, result.error, result.error === "NO_QUOTE" ? 404 : 403);
     await markGroupRead(me, group.id, result.message.seq);

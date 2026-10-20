@@ -47,7 +47,7 @@ function literals(text) {
   const out = [];
   for (const m of text.matchAll(/`([^`\n]*)`|"([^"\n]*)"/g)) {
     const lit = m[1] ?? m[2];
-    if (!KEYLIKE.test(lit) || /\s/.test(lit.split("${")[0])) continue;
+    if (!KEYLIKE.test(lit) || /\s/.test(lit.split("${")[0]) || lit.includes("://")) continue; // 주소는 저장 키가 아님
     out.push({ lit, index: m.index });
   }
   return out;

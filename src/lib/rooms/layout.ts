@@ -16,7 +16,7 @@ export type RoomLayout = (typeof ROOM_LAYOUTS)[number];
 export const ROOM_LAYOUT_STORAGE_KEY = "roomLayout";
 
 /** 쪽지: 방 줄 하나를 집어 그 줄을 말한 사람에게 1:1로 묻기. */
-export type RoomNote = { roomId: string; seq: number; nickname: string; text: string };
+export type RoomNote = { roomId: string; seq: number; nickname: string; text: string; focus?: string };
 
 export function parseRoomLayout(raw: string | null | undefined): RoomLayout {
   return (ROOM_LAYOUTS as readonly string[]).includes(raw ?? "") ? (raw as RoomLayout) : "group";

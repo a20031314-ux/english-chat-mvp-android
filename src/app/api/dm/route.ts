@@ -6,7 +6,7 @@ import { readAccount } from "@/lib/server/accountStore";
 import { blockedEitherWay, isAccountId } from "@/lib/server/socialStore";
 import { claimCallLog, decline, findQuote, inbox, markRead, readMessages, readThread, send } from "@/lib/server/dmStore";
 import { createRoom, isInviteCode, liveCount, readLines, readMeta } from "@/lib/server/roomStore";
-import { clipQuote } from "@/lib/rooms/quote";
+import { cleanFocus, clipQuote, type LineQuote } from "@/lib/rooms/quote";
 import { DM_MAX_CHARS, isThreadId, otherOf, threadIdFor } from "@/lib/rooms/dm";
 import { cleanText, isPeerId, isRoomId } from "@/lib/rooms/protocol";
 import { isMediaId } from "@/lib/rooms/media";
@@ -64,7 +64,7 @@ export async function POST(request: NextRequest) {
     const image = isMediaId(body.imageId) ? await claimMedia(body.imageId, me, { kind: "dm", threadId: id }) : null;
     if (isMediaId(body.imageId) && !image) return bad(request, "BAD_IMAGE");
     if (!text && !image) return bad(request, "NO_TEXT");
-    let quote = undefined;
+    let quote: LineQuote | undefined = undefined;
     const roomQuote = body.roomQuote as { roomId?: unknown; seq?: unknown } | undefined;
     if (roomQuote && isRoomId(roomQuote.roomId) && typeof roomQuote.seq === "number") {
       // 쪽지: 말하는 방의 줄을 집어 둘만 묻기. 인용 글은 방 기록에서.
@@ -79,9 +79,12 @@ export async function POST(request: NextRequest) {
         roomId: roomQuote.roomId,
       };
     } else if (typeof body.quoteSeq === "number") {
-      quote = await findQuote(id, body.quoteSeq, typeof body.quoteIndex === "number" ? body.quoteIndex : undefined);
+      quote = (await findQuote(id, body.quoteSeq, typeof body.quoteIndex === "number" ? body.quoteIndex : undefined)) ?? undefined;
       if (!quote) return bad(request, "NO_QUOTE", 404);
     }
+    // 줄 안에서 고른 부분(인용 글 안에 있을 때만).
+    const focus = quote ? cleanFocus(quote.text, body.quoteFocus) : undefined;
+    if (quote && focus) quote = { ...quote, focus };
     const result = await send({ from: me, to: target, kind: "text", text, ...(quote ? { quote, ask: body.ask === true } : {}), ...(image ? { image } : {}) });
     if (!result.ok) return bad(request, result.error, 409);
     return jsonWithCors(request, { thread: result.thread, message: result.message });

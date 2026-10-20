@@ -58,6 +58,13 @@ test("묻기: 이 방의 글 한 줄만 인용, 질문 표시", async () => {
   const ask = await sendToGroup({ from: OMAR, id: group.id, text: "¿Qué significa esto?", quoteSeq: line.ok ? line.message.seq : 0, ask: true });
   assert.ok(ask.ok && ask.message.ask === true && ask.message.quote?.text === "¡Qué guay!" && ask.message.quote.accountId === MINJI);
   assert.deepEqual(await sendToGroup({ from: OMAR, id: group.id, text: "?", quoteSeq: 1 }), { ok: false, error: "NO_QUOTE" });
+  // 줄 안에서 고른 부분: 그 줄에 있는 말만 남고, 없는 말은 버려 줄 전체 질문이 된다.
+  const ja = await sendToGroup({ from: MINJI, id: group.id, text: "週末は友だちと映画を見に行きます。" });
+  const seq = ja.ok ? ja.message.seq : 0;
+  const picked = await sendToGroup({ from: OMAR, id: group.id, text: "「映画」ってどういう意味ですか？", quoteSeq: seq, ask: true, quoteFocus: "映画" });
+  assert.ok(picked.ok && picked.message.quote?.focus === "映画");
+  const made = await sendToGroup({ from: OMAR, id: group.id, text: "?", quoteSeq: seq, ask: true, quoteFocus: "寿司" });
+  assert.ok(made.ok && made.message.quote && made.message.quote.focus === undefined);
 });
 
 test("정원·방장: 20명까지, 방장만 내보내기·넘기기, 방장이 나가면 다음 사람", async () => {
