@@ -30,7 +30,7 @@ import type { RoomNote } from "@/lib/rooms/layout";
 import { Face, languagePair } from "./RoomParts";
 import { RoomView } from "./RoomView";
 import { DmThreadView } from "./RoomDm";
-import { onDmRequest, onGroupCallRequest, onRoomRequest, requestGroup } from "@/lib/rooms/openDm";
+import { onDmRequest, onGroupCallRequest, onPrivateCallRequest, onRoomRequest, requestGroup } from "@/lib/rooms/openDm";
 
 /**
  * 사용자끼리 말하는 방 (시험 기능, 숨은 입구).
@@ -90,6 +90,19 @@ export function RoomsScreen({
           if (!meta) return;
           setMinimized(false);
           setInRoom({ room: meta, role: "listener" });
+        });
+      }),
+    [peerId],
+  );
+  // 랜덤으로 만난 영상 방(RandomScreen) → 말하는 사람으로. 끝나면 그 사람과의 대화로(통화 기록이 남는다).
+  useEffect(
+    () =>
+      onPrivateCallRequest((roomId, title, back) => {
+        void peekRoom(roomId, peerId).then((meta) => {
+          if (!meta) return;
+          setMinimized(false);
+          setDmWith(null);
+          setInRoom({ room: meta, role: "speaker", title, back });
         });
       }),
     [peerId],

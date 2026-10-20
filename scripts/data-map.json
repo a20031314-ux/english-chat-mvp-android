@@ -22,6 +22,7 @@
     "feedback:v1": { "feature": "의견 보내기", "scope": "system", "onAccountDelete": "남음(90일)", "what": "사용자가 보낸 의견·그림·반영 카드" },
     "growth:v1": { "feature": "자라는 중", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "표현별 자라는 기록(언어별)" },
     "grp:v1": { "feature": "단체방·팀", "scope": "room", "onAccountDelete": "지움(나가기)", "what": "단체방·팀·초대·줄·잠금" },
+    "random:v1": { "feature": "랜덤 연결(Spin)", "scope": "account", "onAccountDelete": "지움(막힌 사람의 ci 해시 자리만 남김)", "what": "성인인증 결과(성인 여부·날짜·ci 해시, 이름·번호·생년월일 없음)·쓴 인증 번호·대기 표·짝·최근 만난 사람" },
     "invite:v1": { "feature": "친구 초대", "scope": "account", "onAccountDelete": "지움", "what": "초대 코드·받은 사람·보상·월 횟수" },
     "learnerComprehension:v1": { "feature": "학습자 프로필", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "이해한 표현 기록(언어별)" },
     "learnerLedger:v1": { "feature": "내 표현", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "표현 장부(쓴 표현·횟수, 언어별)" },

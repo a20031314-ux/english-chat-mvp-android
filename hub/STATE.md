@@ -56,4 +56,5 @@
 - 제휴 상품 카드(`hub/drafts/coupang-affiliate.md`): **보류(2026-10-20)**. 한국 쿠팡 + 해외(Amazon·Rakuten·Shopee·Lazada·AliExpress·Mercado Livre·Noon) + 여행(Klook·Agoda·Airalo) 조사해 둠. 문서의 "꺼낼 때" 조건(학습 주제 카드 자리 생김, 한국어 무료 월 1,000명, 한 나라 설치 10%, AdMob 단가 낮음, 게시판 활발)이 보이면 **먼저 사용자에게 알린다**.
 - 영상통화 워크스페이스(`hub/drafts/video-workspace.md`): **1단계 1:1 만듦(2026-10-20)** — 1:1 대화·러닝메이트 📞에 카메라(기본 꺼짐), 서버 반영·앱 다음 빌드. 중계(Cloudflare TURN) 켜짐·운영 확인(2026-10-20, 사용자가 Vercel에 키). 남은 결정: 무료/구독 구분(지금은 모두), 2단계 팀 영상 4명.
 - 창구(`hub/drafts/doors.md`): **Moyeo 단체통화 열림(2026-10-20)** — `call.languagebank.net` 연결·폰(LTE)에서 소개 페이지 확인(사용자). 남은 사람 일: Google OAuth 원본에 이 주소, 서치 콘솔 등록. **Pingo 1:1 대화(랜덤채팅 1단계) 만듦(2026-10-20)** — 사용자가 `talk.languagebank.net` 연결하면 운영 확인. 2단계 본인인증 "바로 연결"은 본인인증 업체 계약 뒤.
+- 랜덤 창구 **Spin**(`spin.languagebank.net`, `hub/drafts/doors.md` "랜덤 창구 Spin"): **코드 끝, 스위치 꺼짐(2026-10-21)** — 성인인증한 사람끼리 랜덤 채팅·영상, 웹만. 켜기 전 사람 일: 사업자·포트원 본인인증 계약·법률 확인·도메인·`RANDOM_ENABLED=1`.
 - 흑자 구조(`hub/drafts/pricing-profit-2026-10-20.md`): **①②③ 넣음(2026-10-20, 서버 반영)** — 무료 채팅 7·팩 주 2번·AI 도움 20·광고 조정. 남은 결정: 빠른·직접 질문을 AI 도움에 합칠지, ④ 유료 모듈형.

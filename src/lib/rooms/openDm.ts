@@ -63,3 +63,19 @@ export function onRoomRequest(listener: Listener): () => void {
   roomListeners.add(listener);
   return () => roomListeners.delete(listener);
 }
+
+/**
+ * 랜덤으로 만난 영상 방(api/random) → RoomsScreen이 둘만의 방에 말하는 사람으로 들어간다.
+ * 끝나면 그 사람과의 1:1 대화로 돌아간다(자막·채팅은 통화 기록으로 남음).
+ */
+type PrivateCallListener = (roomId: string, title: string, back: string) => void;
+const privateCallListeners = new Set<PrivateCallListener>();
+
+export function requestPrivateCall(roomId: string, title: string, back: string): void {
+  for (const listener of privateCallListeners) listener(roomId, title, back);
+}
+
+export function onPrivateCallRequest(listener: PrivateCallListener): () => void {
+  privateCallListeners.add(listener);
+  return () => privateCallListeners.delete(listener);
+}

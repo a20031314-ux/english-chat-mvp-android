@@ -807,6 +807,7 @@ export function RoomView({
             selfSpeaking={speaking}
             selfBig={selfBig}
             onToggleSelfBig={() => setSelfBig(!selfBig)}
+            blurUntilTap={Boolean(room.random)}
             onPerson={openPerson}
           />
         ) : null}

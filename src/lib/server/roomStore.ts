@@ -114,6 +114,8 @@ export async function createRoom(input: {
   free?: boolean;
   /** 영상통화 방(비공개 방만). */
   video?: boolean;
+  /** 랜덤으로 만난 영상 방(비공개 방만). */
+  random?: boolean;
 }): Promise<RoomMeta> {
   let id = input.id ?? newRoomId();
   // 겹칠 일은 거의 없지만, 살아 있는 방을 덮어쓰지는 않게.
@@ -127,7 +129,7 @@ export async function createRoom(input: {
     hostAccountId: input.hostAccountId ?? null,
     hostNickname: input.hostNickname ?? "",
     ...(input.private
-      ? { private: true, allowed: input.allowed ?? [], ...(input.threadId ? { threadId: input.threadId } : {}), ...(input.groupId ? { groupId: input.groupId } : {}), ...(input.video ? { video: true } : {}) }
+      ? { private: true, allowed: input.allowed ?? [], ...(input.threadId ? { threadId: input.threadId } : {}), ...(input.groupId ? { groupId: input.groupId } : {}), ...(input.video ? { video: true } : {}), ...(input.random ? { random: true } : {}) }
       : {}),
     createdAt: Date.now(),
   };

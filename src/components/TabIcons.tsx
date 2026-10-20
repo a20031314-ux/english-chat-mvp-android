@@ -5,7 +5,7 @@ type TabIconProps = {
   className?: string;
 };
 
-type TabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people" | "messages" | "talk";
+type TabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people" | "messages" | "talk" | "random";
 
 const iconBox = "h-6 w-6";
 
@@ -141,6 +141,18 @@ export function PeopleTabIcon({ active, className = "" }: TabIconProps) {
   );
 }
 
+export function RandomTabIcon({ active, className = "" }: TabIconProps) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" className={`${iconBox} ${className}`} aria-hidden>
+      {/* A die: meeting someone by chance (창구 Spin). */}
+      <rect x="4" y="4" width="16" height="16" rx="3.5" className={active ? "fill-white/25" : "fill-white/10"} stroke="white" strokeOpacity={active ? 0.9 : 0.5} strokeWidth="1.3" />
+      <circle cx="8.5" cy="8.5" r="1.4" className={active ? "fill-platinum" : "fill-white/45"} />
+      <circle cx="12" cy="12" r="1.4" className={active ? "fill-platinum" : "fill-white/45"} />
+      <circle cx="15.5" cy="15.5" r="1.4" className={active ? "fill-platinum" : "fill-white/45"} />
+    </svg>
+  );
+}
+
 export function MessagesTabIcon({ active, className = "" }: TabIconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" className={`${iconBox} ${className}`} aria-hidden>
@@ -202,6 +214,11 @@ export const TAB_ICON_META: Record<
   },
   people: {
     Icon: PeopleTabIcon,
+    activeBg: "bg-white/10 tb-glow-platinum",
+    idleBg: "hover:bg-white/5",
+  },
+  random: {
+    Icon: RandomTabIcon,
     activeBg: "bg-white/10 tb-glow-platinum",
     idleBg: "hover:bg-white/5",
   },

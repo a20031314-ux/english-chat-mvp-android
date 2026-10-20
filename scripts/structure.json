@@ -10,6 +10,7 @@
     "video": "영상 학습 탭",
     "people": "사람 탭 — 프로필 목록·게시판·사진",
     "room": "Room 탭 — 말하는 방",
+    "random": "랜덤 연결 — 창구 Spin(성인인증·짝 맞추기, 웹만)",
     "my": "My 탭 — 계정 카드·자라는 중·지도·노트·단어장",
     "account": "계정·로그인",
     "billing": "요금·포인트·광고",
@@ -108,6 +109,8 @@
     "components/rooms/RoomParts": "room",
     "components/rooms/VideoStage": "room",
     "api/rooms": "room",
+    "api/random": "random",
+    "components/rooms/RandomScreen": "random",
 
     "components/studyMap/": "my",
     "components/notes/": "my",

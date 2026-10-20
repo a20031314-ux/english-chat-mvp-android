@@ -43,6 +43,7 @@
   웹 화면 위에 떠 있어 시트(`FullScreenLayer`·`BodyLayer`)가 열리면 멈추고, 탭이 숨으면 떼어 낸다(플러그인 동시 화면 2개 한도, `lib/ads.ts`).
   전면 광고는 끝나는 자리에만: 통화·팩·미션 끝, 채팅 몇 번 뒤 나갈 때, 공개 방에 몇 분 있다 나올 때(`RoomsScreen`), 영상을 몇 분 보고 나올 때(`VideoLearningTab`). 1:1·단체방 대화 안에는 광고 없음.
 - **창구(웹, `src/lib/doors.ts`, `hub/drafts/doors.md`):** 겉은 다른 서비스(이름·색·소개 글·검색어), 속은 같은 앱. `call.languagebank.net` = Moyeo(단체통화, 첫 화면 Room), `talk.languagebank.net` = Pingo(1:1 대화, 첫 화면 사람 "🟢 지금 접속 중").
+  `spin.languagebank.net` = Spin(랜덤 채팅·랜덤 영상통화, 성인인증한 사람끼리만, 첫 화면 🎲 랜덤 탭 `random` — 이 창구에만 보이는 탭, 웹만·앱에는 없음, 서버 스위치 `RANDOM_ENABLED`가 꺼져 있으면 "준비 중"). Pingo 사람 탭 위에 Spin으로 가는 줄(켜졌을 때만).
   창구 주소의 `/`·`/<언어>` → 소개 페이지(`app/door/…`, next.config.ts rewrites), `?screen=`이 붙으면 같은 앱이 **창구 모드**(첫 화면·하단 탭만 그 창구 것, 상단에 창구 이름). 계정·구독·기록은 하나.
 - **로그인:** AI 기능(채팅·통화·영상·My)은 로그인 없이, 사람·Room·메시지·게시판은 로그인해야(안 했으면 계정 카드).
 
@@ -57,7 +58,7 @@
 
 ## 자동: 하단 탭 (`src/components/AppHome.tsx`)
 
-- 사람 기능 켜짐: 대화`talk` · 영상 학습`video` · 사람`people` · Room`rooms` · My`map`
+- 사람 기능 켜짐: 대화`talk` · 영상 학습`video` · 사람`people` · Room`rooms` · My`map` · 랜덤`random`
 - 사람 기능 꺼짐(iOS 1차, `socialFeaturesEnabled()`): 채팅`chat` · 통화`roleplay`* · 영상 학습`video` · My`map`
 - \* 그 학습 언어에 통화 대본이 있을 때만(`hasRoleplay`)
 
@@ -112,6 +113,11 @@
 - API: `rooms`(대화 탭, 사람 탭, 계정·로그인)
 - 다른 영역이 씀: `rooms/RoomParts` ← 대화 탭, 사람 탭 · `rooms/RoomsScreen` ← 앱 틀
 
+### 랜덤 연결 — 창구 Spin(성인인증·짝 맞추기, 웹만) `random`
+- 화면: `rooms/RandomScreen`
+- API: `random`(사람 탭)
+- 다른 영역이 씀: `rooms/RandomScreen` ← 앱 틀
+
 ### My 탭 — 계정 카드·자라는 중·지도·노트·단어장 `my`
 - 화면: `CharacterGuidePanel` · `VocabularyPanel` · `notes/NotesPanel` · `studyMap/GrowthNetwork` · `studyMap/LearnerPanel` · `studyMap/LedgerPanel` · `studyMap/MissionScreen` · `studyMap/StudyMapTab` · `studyMap/TopicItems`
 - API: `curriculum/generate`(학습 기록 공통) · `curriculum/mission-check`(학습 기록 공통) · `curriculum/mission-seen`(학습 기록 공통) · `curriculum/missions`(학습 기록 공통) · `curriculum/pick`(문장분석·표현 시트) · `curriculum/progress`(학습 기록 공통) · `curriculum/restore`(학습 기록 공통) · `curriculum/review`(학습 기록 공통) · `curriculum`(문장분석·표현 시트, 학습 기록 공통) · `notes/place` · `video-index/find`(학습 기록 공통)
@@ -120,11 +126,11 @@
 ### 계정·로그인 `account`
 - 화면: `account/AccountCard`
 - API: `account/config`(친구 초대·보상) · `account/delete`(친구 초대·보상) · `account/email/start`(친구 초대·보상) · `account/email/verify`(친구 초대·보상) · `account/google`(친구 초대·보상) · `account/me`(친구 초대·보상) · `account/password/change`(친구 초대·보상) · `account/password/login`(친구 초대·보상) · `account/password/signup`(친구 초대·보상) · `account/profile`(친구 초대·보상)
-- 다른 영역이 씀: `account/AccountCard` ← 대화 탭, 사람 탭, Room 탭, My 탭, 친구 초대·보상
+- 다른 영역이 씀: `account/AccountCard` ← 여러 영역 6곳
 
 ### 요금·포인트·광고 `billing`
 - 화면: `BillingScreen` · `NativeAdSlot` · `PointStore` · `PointsIcon` · `WebAdSlot`
-- API: `ads/config`(여러 영역 6곳) · `ads/ssv` · `ads/txt` · `entitlement`(여러 영역 13곳) · `points/sync`(여러 영역 13곳)
+- API: `ads/config`(여러 영역 6곳) · `ads/ssv` · `ads/txt` · `entitlement`(여러 영역 14곳) · `points/sync`(여러 영역 14곳)
 - 웹 페이지: `/subscribe`
 - 다른 영역이 씀: `BillingScreen` ← 앱 틀, AI 채팅, 영상 학습 탭 · `NativeAdSlot` ← 대화 탭, 영상 학습 탭, 사람 탭, Room 탭 · `PointsIcon` ← 영상 학습 탭
 

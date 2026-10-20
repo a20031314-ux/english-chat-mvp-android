@@ -25,6 +25,7 @@ import { FeedbackButton } from "@/components/FeedbackButton";
 import { readEntryDoor } from "@/lib/doors";
 import { FeedbackFixedSheet } from "@/components/FeedbackFixedSheet";
 import { RoomsScreen } from "@/components/rooms/RoomsScreen";
+import { RandomScreen } from "@/components/rooms/RandomScreen";
 import { PeopleTab } from "@/components/rooms/PeopleTab";
 import { InviteWelcome } from "@/components/invite/InviteWelcome";
 import { InviteNewsSheet } from "@/components/invite/InviteRewards";
@@ -48,9 +49,9 @@ import {
 /** 방 입장 코드는 이 기기의 저장값이라 바뀌었다고 알려 주는 곳이 없다. */
 const noSubscribe = () => () => {};
 
-export type AppTab = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people" | "messages" | "talk";
+export type AppTab = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "people" | "messages" | "talk" | "random";
 
-const TABS: AppTab[] = ["map", "chat", "roleplay", "video", "vocab", "rooms", "people", "messages", "talk"];
+const TABS: AppTab[] = ["map", "chat", "roleplay", "video", "vocab", "rooms", "people", "messages", "talk", "random"];
 /** 광고 배너를 두는 둘러보는 화면(lib/ads.ts). 채팅·통화·말하는 방·사람 화면에는 없음. */
 const BANNER_TABS: AppTab[] = ["map", "video", "vocab", "talk"];
 /** 앱 오프닝 광고를 띄우지 않는 화면(통화·말하는 방 — 소리가 이어지는 곳). */
@@ -62,7 +63,7 @@ const NO_APP_OPEN_TABS: AppTab[] = ["roleplay", "rooms"];
  * 채팅·통화는 대화 안에서 열리는 화면이라 하단에서는 대화가 켜져 보이고, 위에 "‹ 대화"가 생긴다.
  * 사람 기능이 꺼지면(iOS 1차, socialFeaturesEnabled) 채팅 · 통화 · 영상 · My — 목록 없이 지금과 같다.
  */
-const PEOPLE_TABS: AppTab[] = ["people", "rooms", "messages", "talk"];
+const PEOPLE_TABS: AppTab[] = ["people", "rooms", "messages", "talk", "random"];
 /** 대화 탭 안에서 열리는 화면들: 하단에서는 "대화"가 켜져 보인다. */
 const TALK_SCREENS: AppTab[] = ["talk", "messages", "chat", "roleplay"];
 
@@ -256,13 +257,15 @@ function AppHomeInner({
     { id: "people", label: ui.homeTabPeople },
     { id: "rooms", label: ui.homeTabRooms },
     myItem,
+    // 🎲 랜덤(창구 Spin에서만 하단에 보인다 — 아래 창구 모드가 door.tabs로 고른다).
+    { id: "random", label: ui.homeTabRandom },
   ];
   // 창구 모드(lib/doors.ts, 웹의 창구 주소): 하단은 그 창구의 탭만, 그 순서로. 계정·기록은 같은 앱.
   const door = useSyncExternalStore(noSubscribe, readEntryDoor, () => null);
   const tabItems = socialOn
     ? door
       ? door.tabs.map((id) => socialTabItems.find((item) => item.id === id)).filter((item): item is { id: AppTab; label: string } => Boolean(item))
-      : socialTabItems
+      : socialTabItems.filter((item) => item.id !== "random")
     : aiTabItems;
   // 창구 모드면 브라우저 탭·홈 화면 이름도 그 창구. Next가 머리말 제목을 다시 쓰면 다시 맞춘다.
   useEffect(() => {
@@ -291,7 +294,7 @@ function AppHomeInner({
     // 단어장은 탭에서 빠졌지만(노트 안) 사용법은 그대로 둔다.
     { id: "vocab" as const, label: ui.homeTabVocab },
     ...(socialOn ? [{ id: "rooms" as const, label: ui.homeTabRooms }] : []),
-  ] as { id: Exclude<AppTab, "people" | "messages" | "talk">; label: string }[];
+  ] as { id: Exclude<AppTab, "people" | "messages" | "talk" | "random">; label: string }[];
 
   return (
     <BillingUiProvider locale={locale} ui={ui}>
@@ -447,6 +450,8 @@ function AppHomeInner({
                   }}
                 />
               ) : null}
+
+              {shownTab === "random" && socialOn ? <RandomScreen ui={ui} locale={locale} targetLanguage={targetLanguage} /> : null}
 
               {/* 다른 탭에서도 떠 있어야 접어 둔 방이 끊기지 않는다(로비는 이 탭일 때만 그린다). */}
               {socialOn ? (

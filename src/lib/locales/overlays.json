@@ -553,7 +553,8 @@
     "paywallTermsLink": "利用規約（EULA）",
     "aiConsentTitle": "AIチューターとあなたのデータ",
     "aiConsentBody": "返信・添削・通話をつくるため、チャットで書いた文章と送った写真、通話での音声をOpenAI（米国）に送って処理します。OpenAIはこのデータをモデルの学習に使いません。AIチューターを使うには同意が必要です。",
-    "aiConsentAgree": "同意して始める"
+    "aiConsentAgree": "同意して始める",
+    "homeTabRandom": "ランダム"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1109,7 +1110,8 @@
     "paywallTermsLink": "使用条款（EULA）",
     "aiConsentTitle": "AI 导师与你的数据",
     "aiConsentBody": "为了生成回复、纠错和通话，你在聊天中写的文字、发送的照片以及通话中的语音会发送给 OpenAI（美国）处理。OpenAI 不会用这些数据训练模型。同意后才能使用 AI 导师。",
-    "aiConsentAgree": "同意并开始"
+    "aiConsentAgree": "同意并开始",
+    "homeTabRandom": "随机"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1667,7 +1669,8 @@
     "paywallTermsLink": "Điều khoản sử dụng (EULA)",
     "aiConsentTitle": "Gia sư AI và dữ liệu của bạn",
     "aiConsentBody": "Để tạo câu trả lời, sửa lỗi và cuộc gọi, văn bản và ảnh bạn gửi trong trò chuyện cùng giọng nói trong cuộc gọi sẽ được gửi đến OpenAI (Hoa Kỳ) để xử lý. OpenAI không dùng dữ liệu này để huấn luyện mô hình. Bạn cần đồng ý để dùng gia sư AI.",
-    "aiConsentAgree": "Đồng ý và bắt đầu"
+    "aiConsentAgree": "Đồng ý và bắt đầu",
+    "homeTabRandom": "Ngẫu nhiên"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2230,7 +2233,8 @@
     "paywallTermsLink": "Conditions d’utilisation (CLUF)",
     "aiConsentTitle": "Votre tuteur IA et vos données",
     "aiConsentBody": "Pour rédiger les réponses, les corrections et les appels, le texte et les photos que vous envoyez dans le chat ainsi que votre voix pendant les appels sont envoyés à OpenAI (États-Unis) pour être traités. OpenAI n’utilise pas ces données pour entraîner ses modèles. Vous devez accepter pour utiliser le tuteur IA.",
-    "aiConsentAgree": "Accepter et commencer"
+    "aiConsentAgree": "Accepter et commencer",
+    "homeTabRandom": "Hasard"
   },
   "it": {
     "archive": "Report",
@@ -2984,7 +2988,8 @@
     "paywallTermsLink": "Termini di utilizzo (EULA)",
     "aiConsentTitle": "Il tuo tutor IA e i tuoi dati",
     "aiConsentBody": "Per scrivere risposte, correzioni e chiamate, il testo e le foto che invii in chat e la tua voce nelle chiamate vengono inviati a OpenAI (Stati Uniti) per l’elaborazione. OpenAI non usa questi dati per addestrare i suoi modelli. Per usare il tutor IA devi accettare.",
-    "aiConsentAgree": "Accetta e inizia"
+    "aiConsentAgree": "Accetta e inizia",
+    "homeTabRandom": "A caso"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3550,7 +3555,8 @@
     "paywallTermsLink": "Termos de uso (EULA)",
     "aiConsentTitle": "Seu tutor de IA e seus dados",
     "aiConsentBody": "Para escrever respostas, correções e chamadas, o texto e as fotos que você envia no chat e sua voz nas chamadas são enviados à OpenAI (Estados Unidos) para processamento. A OpenAI não usa esses dados para treinar seus modelos. Você precisa concordar para usar o tutor de IA.",
-    "aiConsentAgree": "Concordar e começar"
+    "aiConsentAgree": "Concordar e começar",
+    "homeTabRandom": "Aleatório"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4302,7 +4308,8 @@
     "paywallTermsLink": "Условия использования (EULA)",
     "aiConsentTitle": "ИИ-репетитор и ваши данные",
     "aiConsentBody": "Чтобы составлять ответы, исправления и звонки, текст и фото, которые вы отправляете в чате, и ваш голос во время звонков передаются в OpenAI (США) для обработки. OpenAI не использует эти данные для обучения своих моделей. Чтобы пользоваться ИИ-репетитором, нужно согласие.",
-    "aiConsentAgree": "Согласиться и начать"
+    "aiConsentAgree": "Согласиться и начать",
+    "homeTabRandom": "Случайно"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -4864,7 +4871,8 @@
     "paywallTermsLink": "Ketentuan Penggunaan (EULA)",
     "aiConsentTitle": "Tutor AI dan datamu",
     "aiConsentBody": "Untuk membuat balasan, koreksi, dan panggilan, teks dan foto yang kamu kirim di chat serta suaramu saat panggilan dikirim ke OpenAI (Amerika Serikat) untuk diproses. OpenAI tidak memakai data ini untuk melatih modelnya. Kamu perlu setuju untuk memakai tutor AI.",
-    "aiConsentAgree": "Setuju dan mulai"
+    "aiConsentAgree": "Setuju dan mulai",
+    "homeTabRandom": "Acak"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5420,7 +5428,8 @@
     "paywallTermsLink": "شروط الاستخدام (EULA)",
     "aiConsentTitle": "مدرّس الذكاء الاصطناعي وبياناتك",
     "aiConsentBody": "لكتابة الردود والتصحيحات وإجراء المكالمات، يُرسَل النص والصور التي ترسلها في الدردشة وصوتك في المكالمات إلى OpenAI (الولايات المتحدة) لمعالجتها. لا تستخدم OpenAI هذه البيانات لتدريب نماذجها. يجب أن توافق لاستخدام مدرّس الذكاء الاصطناعي.",
-    "aiConsentAgree": "موافق وابدأ"
+    "aiConsentAgree": "موافق وابدأ",
+    "homeTabRandom": "عشوائي"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -5976,7 +5985,8 @@
     "paywallTermsLink": "ข้อกำหนดการใช้งาน (EULA)",
     "aiConsentTitle": "ติวเตอร์ AI และข้อมูลของคุณ",
     "aiConsentBody": "เพื่อสร้างคำตอบ การแก้ไข และการโทร ข้อความและรูปภาพที่คุณส่งในแชต รวมถึงเสียงของคุณในการโทร จะถูกส่งไปประมวลผลที่ OpenAI (สหรัฐอเมริกา) OpenAI ไม่นำข้อมูลนี้ไปฝึกโมเดล ต้องยินยอมก่อนจึงจะใช้ติวเตอร์ AI ได้",
-    "aiConsentAgree": "ยินยอมและเริ่มต้น"
+    "aiConsentAgree": "ยินยอมและเริ่มต้น",
+    "homeTabRandom": "สุ่ม"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -6532,6 +6542,7 @@
     "paywallTermsLink": "उपयोग की शर्तें (EULA)",
     "aiConsentTitle": "आपका AI ट्यूटर और आपका डेटा",
     "aiConsentBody": "जवाब, सुधार और कॉल बनाने के लिए, चैट में आपका लिखा टेक्स्ट और भेजी गई फ़ोटो, और कॉल में आपकी आवाज़ प्रोसेसिंग के लिए OpenAI (अमेरिका) को भेजी जाती है। OpenAI इस डेटा से अपने मॉडल को ट्रेन नहीं करता। AI ट्यूटर इस्तेमाल करने के लिए सहमति ज़रूरी है।",
-    "aiConsentAgree": "सहमत हूँ, शुरू करें"
+    "aiConsentAgree": "सहमत हूँ, शुरू करें",
+    "homeTabRandom": "रैंडम"
   }
 }

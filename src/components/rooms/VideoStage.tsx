@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { RoomCopy } from "@/lib/rooms/copy";
 import type { RoomLine, RoomMember } from "@/lib/rooms/protocol";
 import { Face } from "./RoomParts";
@@ -26,6 +26,7 @@ export function VideoStage({
   selfBig,
   onToggleSelfBig,
   onPerson,
+  blurUntilTap = false,
 }: {
   t: RoomCopy;
   /** 상대(아직 안 들어왔으면 null). */
@@ -45,6 +46,8 @@ export function VideoStage({
   selfBig: boolean;
   onToggleSelfBig: () => void;
   onPerson: (peerId: string, accountId: string | null) => void;
+  /** 랜덤으로 만난 사람(RoomMeta.random): 상대 영상은 내가 누를 때까지 흐리게. */
+  blurUntilTap?: boolean;
 }) {
   const remoteTile = (
     <RemoteTile
@@ -57,6 +60,7 @@ export function VideoStage({
       otherSpeaking={otherSpeaking}
       onPerson={onPerson}
       compact={selfBig}
+      blurUntilTap={blurUntilTap}
     />
   );
 
@@ -108,6 +112,7 @@ function RemoteTile({
   otherSpeaking,
   onPerson,
   compact,
+  blurUntilTap,
 }: {
   t: RoomCopy;
   other: RoomMember | null;
@@ -119,12 +124,26 @@ function RemoteTile({
   onPerson: (peerId: string, accountId: string | null) => void;
   /** 위아래로 나눌 때: 자막 한 줄이 내 칸 자리를 비워 둘 필요 없음. */
   compact: boolean;
+  blurUntilTap: boolean;
 }) {
   const showRemote = Boolean(remote) && !hidden;
+  const [revealed, setRevealed] = useState(false);
+  const blurred = blurUntilTap && !revealed;
   return (
     <>
       {showRemote ? (
-        <VideoBox stream={remote} className="h-full w-full object-cover" label={other?.nickname ?? ""} />
+        <>
+          <VideoBox stream={remote} className={`h-full w-full object-cover ${blurred ? "scale-110 blur-2xl" : ""}`} label={other?.nickname ?? ""} />
+          {blurred ? (
+            <button
+              type="button"
+              onClick={() => setRevealed(true)}
+              className="absolute inset-0 flex items-center justify-center bg-black/30 text-sm font-medium text-ink"
+            >
+              👁 {t.videoBlurTap}
+            </button>
+          ) : null}
+        </>
       ) : (
         <button
           type="button"

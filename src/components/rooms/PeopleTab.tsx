@@ -4,9 +4,11 @@ import { InviteRewardsCard } from "@/components/invite/InviteRewards";
 import { GroupTitle, groupIcon } from "./RoomGroups";
 import { teamCopy } from "@/lib/rooms/teamCopy";
 import type { GroupSummary } from "@/lib/rooms/group";
-import { useState, useSyncExternalStore } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import type { UICopy } from "@/lib/copy";
 import { AccountCard } from "@/components/account/AccountCard";
+import { doorById, doorUrl, isDoorLang, readEntryDoor } from "@/lib/doors";
+import { randomStatus } from "@/lib/random/client";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { roomCopy } from "@/lib/rooms/copy";
 import { requestDm } from "@/lib/rooms/openDm";
@@ -64,6 +66,8 @@ export function PeopleTab({
         {/* 앱이 없는 친구도: 링크 → Play → 로그인·이름 정하고 입장(lib/invite, 팔로우 없음). */}
         {account ? <InviteButton locale={locale} /> : null}
       </header>
+      {/* Pingo에서만: 랜덤이 켜져 있으면 랜덤 창구 Spin으로 가는 길(골라서 요청하는 Pingo와 랜덤은 떨어뜨려 둔다). */}
+      <SpinLink locale={locale} label={t.randomTitle} />
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         {account ? (
           <>
@@ -116,5 +120,29 @@ export function PeopleTab({
         )}
       </div>
     </div>
+  );
+}
+
+function SpinLink({ locale, label }: { locale: string; label: string }) {
+  const [href, setHref] = useState<string | null>(null);
+  useEffect(() => {
+    if (readEntryDoor()?.id !== "random-chat") return;
+    const spin = doorById("random-meet");
+    if (!spin) return;
+    let alive = true;
+    void randomStatus()
+      .then((status) => {
+        if (alive && status.state !== "off") setHref(doorUrl(spin, isDoorLang(locale) ? locale : spin.defaultLang));
+      })
+      .catch(() => {});
+    return () => {
+      alive = false;
+    };
+  }, [locale]);
+  if (!href) return null;
+  return (
+    <a href={href} className="mx-4 mt-3 block shrink-0 rounded-xl border border-violet-300/30 bg-violet-500/10 px-3 py-2 text-note text-ink">
+      🎲 {label} · 🔞 →
+    </a>
   );
 }

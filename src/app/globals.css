@@ -71,6 +71,13 @@
   --color-door-bg: #04110e;
 }
 
+/* 창구 Spin(랜덤, 성인 인증): 보라 */
+[data-door="spin"] {
+  --color-door-accent: #b794ff;
+  --color-door-soft: rgba(183, 148, 255, 0.13);
+  --color-door-bg: #0b0714;
+}
+
 /* 창구 Moyeo(단체통화): 따뜻한 산호색 */
 [data-door="moyeo"] {
   --color-door-accent: #ff7a59;

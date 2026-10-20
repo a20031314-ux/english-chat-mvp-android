@@ -70,6 +70,8 @@ export type RoomMeta = {
   groupId?: string;
   /** 영상통화 방(1:1 대화 📞·러닝메이트 통화): 카메라를 켤 수 있다. 영상은 사람끼리 직접, 서버에 남지 않는다. */
   video?: boolean;
+  /** 랜덤으로 만난 두 사람의 영상 방(창구 Spin): 상대 영상은 누를 때까지 흐리게(VideoStage). */
+  random?: boolean;
   createdAt: number;
 };
 

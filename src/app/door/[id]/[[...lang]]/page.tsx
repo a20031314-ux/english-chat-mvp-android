@@ -99,9 +99,11 @@ export default async function DoorPage({ params }: { params: Promise<Params> }) 
           <a href={enter} className="flex-1 rounded-2xl bg-door-accent px-4 py-3.5 text-center text-chat font-semibold text-black">
             {copy.cta}
           </a>
-          <a href={store} className="flex-1 rounded-2xl border border-line px-4 py-3.5 text-center text-chat text-slate-200">
-            {copy.app}
-          </a>
+          {door.webOnly ? null : (
+            <a href={store} className="flex-1 rounded-2xl border border-line px-4 py-3.5 text-center text-chat text-slate-200">
+              {copy.app}
+            </a>
+          )}
         </div>
 
         <ul className="space-y-3">

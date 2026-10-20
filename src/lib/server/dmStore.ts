@@ -135,6 +135,27 @@ export async function send(input: {
   return { ok: true, thread, message };
 }
 
+/**
+ * 요청·수락 없이 바로 열린 대화(랜덤 연결, lib/random/protocol.ts — 둘 다 성인인증하고 "랜덤"을 눌러 만났다).
+ * 이미 대화가 있으면 그대로 열고, 없으면 빈 대화를 만든다. 대화는 다른 1:1과 같이 30일 남는다(법 ② 대화 저장).
+ */
+export async function openThreadDirect(a: string, b: string, now: number = Date.now()): Promise<DmThread> {
+  const id = threadIdFor(a, b);
+  const existing = await readThread(id);
+  const members = [a, b].sort() as [string, string];
+  const thread: DmThread = existing
+    ? { ...existing, status: "open", lastAt: now }
+    : { id, members, starter: a, status: "open", createdAt: now, lastAt: now, lastText: "", lastFrom: a, lastSeq: 0 };
+  await kvSetJson(threadKey(id), thread, DM_TTL_SECONDS);
+  if (!existing) {
+    for (const account of members) {
+      await kvListPush(boxKey(account), [id], DM_TTL_SECONDS);
+      await kvListTrim(boxKey(account), BOX_KEEP);
+    }
+  }
+  return thread;
+}
+
 /** 받는 사람이 요청을 거절: 보낸 사람은 더 보낼 수 없다(받는 사람이 답하면 다시 열림). */
 export async function decline(me: string, id: string): Promise<boolean> {
   const thread = await readThread(id);

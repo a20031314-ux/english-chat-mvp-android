@@ -25,6 +25,7 @@
 |---|---|---|---|---|
 | group-call | call.languagebank.net | Moyeo | 단체통화(Room) | 열림(2026-10-20, 가비아 CNAME → Vercel, 폰 LTE에서 확인). OAuth 원본·서치 콘솔 남음 |
 | random-chat | talk.languagebank.net | Pingo(민트) | 1:1 대화 — 1단계(나): 지금 접속 중인 사람 목록(내 말 배우는 사람 먼저) → 대화 요청 → 수락 | 코드 끝(2026-10-20), 도메인 연결 대기. 2단계(가, 본인인증 바로 연결)는 계약 뒤 |
+| random-meet | spin.languagebank.net | Spin(보라) | 랜덤 채팅·랜덤 영상통화 — 성인인증한 사람끼리만, 웹만 | 코드 끝·**스위치 꺼짐**(2026-10-21). 켜기 전: 사업자·포트원 본인인증 계약·법률 확인·도메인 연결 |
 
 ## 랜덤채팅 — 가+나 섞기 (안)
 배경: 2020-12부터 랜덤채팅 앱은 ①본인인증 ②대화 저장 ③신고가 없으면 청소년유해매체물(19금). 기능(모르는 사람과 무작위 연결)으로 판단.
@@ -42,3 +43,13 @@
 - 걸림돌: 휴대폰 본인인증은 한국 번호만 됨 → 무작위 연결 쪽에 외국인이 거의 못 들어와 언어 교환 취지와 어긋남. 해외 신원 확인(여권 등)이 ①로 인정되는지는 법률 확인.
 - iOS: App Store 지침 1.2(2026-02 개정)에 "random or anonymous chat"이 주 용도인 앱은 예고 없이 내릴 수 있다고 명시 → iOS 앱에는 무작위 연결 넣지 않음(`platform.ts`에서 끔). 웹·안드로이드만 검토.
 - 중간안(법·스토어 위험 낮음, 인증 없이 가능): "추천 한 명" — 서버가 언어 맞는 접속자 한 명을 프로필과 보여 주고 내가 요청, 상대 수락(지금 흐름 그대로, 고르는 수고만 줄임). "동시 수락 매칭"(둘 다 찾기 → 서로 프로필 보고 둘 다 수락)은 무작위로 볼지 애매 → 법률 확인.
+
+## 랜덤 창구 Spin (2026-10-21, 사용자 결정 "Pingo에서 파생된 별도 웹·하위 주소·다른 이름, 미성년은 랜덤만 막기, 앱은 보류")
+- 나눈 이유: 랜덤은 위험·평판·광고 정책(AdSense)·스토어 정책(애플 1.2)을 한곳에 가둔다. Pingo는 "골라서 요청" 그대로.
+- 코드: 창구 `random-meet`(`lib/doors.ts`, `webOnly`), 🎲 탭 `random`(`RandomScreen.tsx`), `/api/random`(status·verify·join/poll·leave), `server/randomStore.ts`(성인 기록·ci 해시·대기열·짝), `server/identityVerify.ts`(포트원 조회),
+  `lib/random/protocol.ts`(나이 규칙·언어 맞춤), 짝 = `dmStore.openThreadDirect`(요청 없이 열린 1:1) + 영상이면 비공개 영상 방(`RoomMeta.random` → 상대 영상 흐림, 눌러야 보임).
+- 법 요건 맞추기: ① 본인인증(성인만) ② 1:1 대화·통화 자막 30일 ③ 신고·차단. 운영자가 막기: KV `random:v1:off:<ci해시>`(손으로, ci 기준이라 새 계정도 막힘).
+- **켜기 전 사람 일:** ①사업자 등록 ②포트원 가입 + 본인인증 채널(다날 또는 KG이니시스, 건당 비용) → `PORTONE_API_SECRET`·`NEXT_PUBLIC_PORTONE_STORE_ID`·`NEXT_PUBLIC_PORTONE_IDV_CHANNEL_KEY`
+  ③법률 확인(고시 요건·해외 신원 확인 인정 여부) ④가비아 CNAME `spin` → Vercel 도메인 ⑤Google 로그인 원본에 `https://spin.languagebank.net` ⑥처리방침에 본인인증 항목 ⑦Vercel `RANDOM_ENABLED=1`.
+- 외국인: 휴대폰 본인인증은 한국 번호만 → 처음에는 한국 번호 인증자만 랜덤. 해외 신원 확인(여권·얼굴 등)은 법률 확인 뒤.
+- 아직 없는 것: 대화 안 "다음 사람" 버튼(지금은 Spin 탭으로 돌아와 다시 누름), 신고 누적 자동 막기, 랜덤 대화의 영상 노출 자동 감지, 대기 중 인원 표시.
