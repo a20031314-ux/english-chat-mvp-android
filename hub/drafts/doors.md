@@ -16,7 +16,7 @@
 
 ## 사람이 할 일 (창구마다)
 1. Vercel 프로젝트 → Domains → `call.languagebank.net` 추가.
-2. 가비아 DNS: 호스트 `call`, 타입 CNAME, 값은 Vercel이 보여 주는 값(보통 `cname.vercel-dns.com`).
+2. 가비아 DNS: 호스트 `call`, 타입 CNAME, 값은 Vercel이 보여 주는 값(새 값 `xxxx.vercel-dns-017.com.`, 옛 값 `cname.vercel-dns.com`도 동작). Vercel 화면에서 값이 복사 안 되면 채팅에 읽어 달라고 하면 된다.
 3. Google Cloud OAuth 클라이언트: 승인된 자바스크립트 원본·리디렉션 URI에 `https://call.languagebank.net` 추가(웹 Google 로그인).
 4. 서치 콘솔에 `call.languagebank.net` 등록 → 사이트맵/색인 요청.
 
@@ -24,7 +24,7 @@
 | id | 주소 | 이름 | 기능 | 상태 |
 |---|---|---|---|---|
 | group-call | call.languagebank.net | Moyeo | 단체통화(Room) | 열림(2026-10-20, 가비아 CNAME → Vercel, 폰 LTE에서 확인). OAuth 원본·서치 콘솔 남음 |
-| random-chat | talk.languagebank.net | Pingo(민트) | 1:1 대화 — 1단계(나): 지금 접속 중인 사람 목록(내 말 배우는 사람 먼저) → 대화 요청 → 수락 | 코드 끝(2026-10-20), 도메인 연결 대기. 2단계(가, 본인인증 바로 연결)는 계약 뒤 |
+| random-chat | talk.languagebank.net | Pingo(민트) | 1:1 대화 — 1단계(나): 지금 접속 중인 사람 목록(내 말 배우는 사람 먼저) → 대화 요청 → 수락 | 열림(2026-10-21, 가비아 CNAME `talk` → `ca546a7d1095fa43.vercel-dns-017.com.`, Vercel Valid·HTTPS 소개 페이지·창구 모드 사람 탭 확인). OAuth 원본·서치 콘솔 남음. 2단계(가, 본인인증 바로 연결)는 계약 뒤 |
 | random-meet | spin.languagebank.net | Spin(보라) | 랜덤 채팅·랜덤 영상통화 — 성인인증한 사람끼리만, 웹만 | 코드 끝·**스위치 꺼짐**(2026-10-21). 켜기 전: 사업자·포트원 본인인증 계약·법률 확인·도메인 연결 |
 
 ## 랜덤채팅 — 가+나 섞기 (안)
