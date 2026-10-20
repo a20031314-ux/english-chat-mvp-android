@@ -23,7 +23,7 @@
 ## 창구 목록
 | id | 주소 | 이름 | 기능 | 상태 |
 |---|---|---|---|---|
-| group-call | call.languagebank.net | Moyeo | 단체통화(Room) | 코드 끝, 도메인 연결 대기 |
+| group-call | call.languagebank.net | Moyeo | 단체통화(Room) | 열림(2026-10-20, 가비아 CNAME → Vercel, 폰 LTE에서 확인). OAuth 원본·서치 콘솔 남음 |
 | random-chat | (안) chat.languagebank.net | 미정 | 1:1 바로 대화 | 설계(아래), 사용자 결정 대기 |
 
 ## 랜덤채팅 — 가+나 섞기 (안)
