@@ -21,6 +21,9 @@ export const TURN_TTL_SECONDS = 12 * 60 * 60;
 /** 같은 서버 인스턴스는 받은 아이디를 이만큼 다시 쓴다(수명의 절반 — 받은 사람이 반나절은 쓸 수 있게). */
 const REUSE_MS = 6 * 60 * 60 * 1000;
 
+/** 점검용 한 단어(비밀값 없음): off = 키 없음, error = Cloudflare가 거절·응답 없음, on = 중계 받음. */
+export type TurnState = "off" | "error" | "on";
+
 let cached: { at: number; servers: IceServer[] } | null = null;
 
 export function turnConfigured(env: NodeJS.ProcessEnv = process.env): boolean {
@@ -55,9 +58,9 @@ export async function iceServers(
   env: NodeJS.ProcessEnv = process.env,
   fetcher: typeof fetch = fetch,
   now: number = Date.now(),
-): Promise<{ servers: IceServer[]; relay: boolean }> {
-  if (!turnConfigured(env)) return { servers: STUN_ONLY, relay: false };
-  if (cached && now - cached.at < REUSE_MS) return { servers: cached.servers, relay: true };
+): Promise<{ servers: IceServer[]; relay: boolean; turn: TurnState }> {
+  if (!turnConfigured(env)) return { servers: STUN_ONLY, relay: false, turn: "off" };
+  if (cached && now - cached.at < REUSE_MS) return { servers: cached.servers, relay: true, turn: "on" };
   try {
     const keyId = env.CLOUDFLARE_TURN_KEY_ID!.trim();
     const response = await fetcher(
@@ -75,10 +78,10 @@ export async function iceServers(
       throw new Error("TURN: no relay url");
     }
     cached = { at: now, servers };
-    return { servers, relay: true };
+    return { servers, relay: true, turn: "on" };
   } catch (error) {
     console.warn("[turn] falling back to STUN", error);
-    return { servers: STUN_ONLY, relay: false };
+    return { servers: STUN_ONLY, relay: false, turn: "error" };
   }
 }
 

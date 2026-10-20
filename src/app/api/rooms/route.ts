@@ -133,7 +133,7 @@ export async function POST(request: NextRequest) {
       return jsonWithCors(request, { iceServers: STUN_ONLY, relay: false });
     }
     const found = await iceServers();
-    return jsonWithCors(request, { iceServers: found.servers, relay: found.relay });
+    return jsonWithCors(request, { iceServers: found.servers, relay: found.relay, turn: found.turn });
   }
 
   // 들어가기 전에 방 모양만(1:1 통화 받기). 비공개 방은 그 두 사람에게만.

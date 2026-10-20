@@ -3,7 +3,8 @@
  * 둘 다 "카메라 켜기"를 누른 뒤 서로 영상이 오는지(받은 영상 바이트·화면의 video 크기) 본다.
  *
  *   npm run build:capacitor   (www가 지금 코드여야)
- *   NODE_USE_ENV_PROXY=1 node --experimental-strip-types scripts/sim-users/video-call.mjs [--locale ko] [--target en] [--locale2 ar] [--target2 es]
+ *   NODE_USE_ENV_PROXY=1 node --experimental-strip-types scripts/sim-users/video-call.mjs [--locale ko] [--target en] [--locale2 ar] [--target2 es] [--relay]
+ *   --relay: 직접 연결을 막고 중계(TURN)로만 잇는다(routes가 relay여야 통과).
  *
  * - 가짜 카메라·마이크(크롬 --use-fake-device-for-media-stream: 움직이는 시험 화면 + 삐 소리).
  * - 임시 계정 둘(숨김), 첫 메시지·답으로 대화를 연 뒤 📞. 끝에 계정 삭제.
@@ -70,13 +71,14 @@ await new Promise((resolve) => server.listen(PORT, "127.0.0.1", resolve));
 const BASE = `http://127.0.0.1:${PORT}`;
 
 /** 브라우저 안: 연결을 모아 받은 영상·소리 바이트와 화면의 video 크기를 센다. */
-const TRACK = () => {
+const TRACK = (forceRelay) => {
   const Native = window.RTCPeerConnection;
   window.__pcs = [];
   window.__ice = [];
   window.RTCPeerConnection = function (config, ...rest) {
     window.__ice.push((config?.iceServers ?? []).flatMap((row) => [].concat(row.urls)));
-    const pc = new Native(config, ...rest);
+    // --relay: 직접 연결을 막고 중계(TURN)로만 — 중계 아이디가 실제로 쓰이는지 본다.
+    const pc = new Native(forceRelay ? { ...config, iceTransportPolicy: "relay" } : config, ...rest);
     window.__pcs.push(pc);
     return pc;
   };
@@ -86,6 +88,7 @@ const TRACK = () => {
     let audioIn = 0;
     let videoOut = 0;
     const states = [];
+    const routes = [];
     for (const pc of window.__pcs) {
       states.push(pc.connectionState);
       if (pc.connectionState !== "connected") continue;
@@ -95,9 +98,15 @@ const TRACK = () => {
         if (s.type === "inbound-rtp" && s.kind === "audio") audioIn += s.bytesReceived ?? 0;
         if (s.type === "outbound-rtp" && s.kind === "video") videoOut += s.bytesSent ?? 0;
       });
+      stats.forEach((s) => {
+        if (s.type === "candidate-pair" && s.nominated && s.state === "succeeded") {
+          const local = stats.get(s.localCandidateId);
+          routes.push(local?.candidateType ?? "?");
+        }
+      });
     }
     const videos = [...document.querySelectorAll("video")].map((v) => ({ w: v.videoWidth, h: v.videoHeight, label: v.getAttribute("aria-label") }));
-    return { states, videoIn, audioIn, videoOut, videos, ice: window.__ice };
+    return { states, routes, videoIn, audioIn, videoOut, videos, ice: window.__ice };
   };
 };
 
@@ -127,7 +136,7 @@ try {
   const pages = [];
   for (const person of people) {
     const context = await browser.newContext({ viewport: { width: 412, height: 915 }, permissions: ["microphone", "camera"] });
-    await context.addInitScript(TRACK);
+    await context.addInitScript(TRACK, args.includes("--relay"));
     const page = await context.newPage();
     page.on("console", (msg) => { if (msg.type() === "warning" && msg.text().includes("[rooms]")) console.log(`[${person.name}]`, msg.text()); });
     await page.route("**/api/**", (route) => route.continue({ headers: { ...route.request().headers(), "x-rc-user": person.uid } }));

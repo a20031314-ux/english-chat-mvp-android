@@ -27,7 +27,7 @@ test("설정이 없으면 STUN만, 바깥에 묻지 않는다", async () => {
     return new Response("{}");
   }) as typeof fetch);
   assert.equal(turnConfigured({} as NodeJS.ProcessEnv), false);
-  assert.deepEqual(result, { servers: STUN_ONLY, relay: false });
+  assert.deepEqual(result, { servers: STUN_ONLY, relay: false, turn: "off" });
   assert.equal(called, false);
 });
 
@@ -40,6 +40,7 @@ test("Cloudflare에서 받은 중계 주소: 53번 포트는 빼고, 키는 머�
   }) as unknown as typeof fetch;
   const result = await iceServers(ENV, fetcher, 1_000);
   assert.equal(result.relay, true);
+  assert.equal(result.turn, "on");
   assert.ok(seen);
   const sent = seen as { url: string; auth: string | null; body: string };
   assert.match(sent.url, /\/turn\/keys\/key123\/credentials\/generate-ice-servers$/);
@@ -59,7 +60,7 @@ test("Cloudflare에서 받은 중계 주소: 53번 포트는 빼고, 키는 머�
 test("Cloudflare 오류면 STUN만으로 — 통화는 지금처럼", async () => {
   resetTurnCache();
   const result = await iceServers(ENV, (async () => new Response("no", { status: 500 })) as typeof fetch);
-  assert.deepEqual(result, { servers: STUN_ONLY, relay: false });
+  assert.deepEqual(result, { servers: STUN_ONLY, relay: false, turn: "error" });
   resetTurnCache();
   const noRelay = await iceServers(ENV, (async () => new Response(JSON.stringify({ iceServers: [{ urls: "stun:x:3478" }] }), { status: 201 })) as typeof fetch);
   assert.equal(noRelay.relay, false);
