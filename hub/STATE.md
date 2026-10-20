@@ -53,4 +53,5 @@
 - 광고(`hub/drafts/ads-rewarded.md`): **넣음(2026-10-20)** — 서버 반영, 앱은 다음 빌드. 지금 값: **보상형 끔**(사용자 2026-10-20 "광고 보고 더 주는 건 거부감, 그냥 뜨고 건너뛰는 게 낫다"), 전면 채팅 2번 뒤·3분 간격, 앱 오프닝·배너·네이티브 켬 — Vercel `ADS_*`로 조정(보상형 다시 켜기 `ADS_REWARDED_DAILY_MAX=3`). 빌드를 Play에 올리기 전에 Play 광고·데이터 보안 신고(inbox store).
 - 제휴 상품 카드(`hub/drafts/coupang-affiliate.md`): **보류(2026-10-20)**. 한국 쿠팡 + 해외(Amazon·Rakuten·Shopee·Lazada·AliExpress·Mercado Livre·Noon) + 여행(Klook·Agoda·Airalo) 조사해 둠. 문서의 "꺼낼 때" 조건(학습 주제 카드 자리 생김, 한국어 무료 월 1,000명, 한 나라 설치 10%, AdMob 단가 낮음, 게시판 활발)이 보이면 **먼저 사용자에게 알린다**.
 - 영상통화 워크스페이스(`hub/drafts/video-workspace.md`): **검토만(2026-10-20)** — 가능함. 1:1 메이트는 지금 구조(메시)에 카메라 + TURN, 팀 4명까지 메시, 5명 이상은 중계(SFU). 정할 것: 할지·1단계부터인지, 무료/구독 구분, Cloudflare Realtime / LiveKit 중 선택.
+- 창구(`hub/drafts/doors.md`): **Moyeo 단체통화 만듦(2026-10-20, 서버)** — 사용자가 `call.languagebank.net` 도메인(Vercel·가비아 CNAME·Google OAuth 원본) 연결하면 운영 확인. 랜덤채팅 창구는 가+나 설계안(기본=언어 맞는 접속자 골라 요청, 바로 연결=본인인증 성인만) 결정 대기.
 - 흑자 구조(`hub/drafts/pricing-profit-2026-10-20.md`): **①②③ 넣음(2026-10-20, 서버 반영)** — 무료 채팅 7·팩 주 2번·AI 도움 20·광고 조정. 남은 결정: 빠른·직접 질문을 AI 도움에 합칠지, ④ 유료 모듈형.
