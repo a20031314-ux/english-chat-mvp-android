@@ -6,9 +6,10 @@ import type { RoomLine, RoomMember } from "@/lib/rooms/protocol";
 import { Face } from "./RoomParts";
 
 /**
- * 영상통화 방(1:1·러닝메이트 통화, RoomMeta.video)의 위쪽: 상대를 크게, 나는 구석에 작게.
- * 상대 카메라가 꺼져 있으면 사진(말하는 중 테두리), 상대 얼굴 칸 아래에는 그 사람의 마지막 자막 한 줄 —
- * 누가 무슨 말을 했는지가 얼굴과 붙어 보이게(hub/drafts/video-workspace.md).
+ * 영상통화 방(1:1·러닝메이트 통화, RoomMeta.video)의 위쪽. 보는 방식 두 가지(사람마다, 기기에 기억 — RoomView `videoSelfBig`):
+ * - 작게(기본): 상대를 크게, 나는 구석에 작게.
+ * - 크게: 상대 위·나 아래 같은 크기로(위아래 대칭). 이때 RoomView는 자막을 마지막 몇 줄만 작게 둔다.
+ * 상대 카메라가 꺼져 있으면 사진(말하는 중 테두리), 상대 칸 아래에는 그 사람의 마지막 자막 한 줄.
  * 영상은 사람끼리 직접 오가고(lib/rooms/mesh.ts) 어디에도 남지 않는다.
  */
 export function VideoStage({
@@ -22,7 +23,8 @@ export function VideoStage({
   otherSpeaking,
   self,
   selfSpeaking,
-  size,
+  selfBig,
+  onToggleSelfBig,
   onPerson,
 }: {
   t: RoomCopy;
@@ -39,14 +41,88 @@ export function VideoStage({
   otherSpeaking: boolean;
   self: { accountId: string | null; nickname: string };
   selfSpeaking: boolean;
-  /** 통화 위주면 크게, 채팅 위주면 작게. */
-  size: "large" | "medium" | "small";
+  /** 내 화면을 상대와 같은 크기로(위아래). */
+  selfBig: boolean;
+  onToggleSelfBig: () => void;
   onPerson: (peerId: string, accountId: string | null) => void;
 }) {
-  const height = size === "large" ? "h-[46vh]" : size === "medium" ? "h-[30vh]" : "h-32";
+  const remoteTile = (
+    <RemoteTile
+      t={t}
+      other={other}
+      remote={remote}
+      hidden={hidden}
+      onToggleHidden={onToggleHidden}
+      lastLine={lastLine}
+      otherSpeaking={otherSpeaking}
+      onPerson={onPerson}
+      compact={selfBig}
+    />
+  );
+
+  if (selfBig) {
+    return (
+      <div className="mt-3 flex w-full flex-col gap-2">
+        <div className="relative h-[25vh] overflow-hidden rounded-2xl border border-line bg-surface-sunk">{remoteTile}</div>
+        <div className="relative h-[25vh] overflow-hidden rounded-2xl border border-line bg-surface-sunk">
+          <SelfView t={t} local={local} self={self} selfSpeaking={selfSpeaking} faceSize={64} />
+          <button
+            type="button"
+            onClick={onToggleSelfBig}
+            className="absolute end-2 top-2 rounded-full bg-black/60 px-2.5 py-1 text-meta text-slate-200"
+          >
+            ↘ {t.videoSelfSmall}
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="relative mt-3 h-[30vh] w-full overflow-hidden rounded-2xl border border-line bg-surface-sunk">
+      {remoteTile}
+      {/* 나: 구석에 작게. 누르면 크게(위아래 대칭). */}
+      <button
+        type="button"
+        onClick={onToggleSelfBig}
+        aria-label={t.videoSelfBig}
+        title={t.videoSelfBig}
+        className="absolute bottom-2 end-2 h-28 w-20 overflow-hidden rounded-xl border border-line bg-surface shadow-lg"
+      >
+        <SelfView t={t} local={local} self={self} selfSpeaking={selfSpeaking} faceSize={44} />
+        <span className="absolute end-1 top-1 rounded-full bg-black/60 px-1 text-meta text-slate-200" aria-hidden>
+          ↖
+        </span>
+      </button>
+    </div>
+  );
+}
+
+function RemoteTile({
+  t,
+  other,
+  remote,
+  hidden,
+  onToggleHidden,
+  lastLine,
+  otherSpeaking,
+  onPerson,
+  compact,
+}: {
+  t: RoomCopy;
+  other: RoomMember | null;
+  remote: MediaStream | null;
+  hidden: boolean;
+  onToggleHidden: () => void;
+  lastLine: RoomLine | null;
+  otherSpeaking: boolean;
+  onPerson: (peerId: string, accountId: string | null) => void;
+  /** 위아래로 나눌 때: 자막 한 줄이 내 칸 자리를 비워 둘 필요 없음. */
+  compact: boolean;
+}) {
   const showRemote = Boolean(remote) && !hidden;
   return (
-    <div className={`relative mt-3 w-full overflow-hidden rounded-2xl border border-line bg-surface-sunk ${height}`}>
+    <>
       {showRemote ? (
         <VideoBox stream={remote} className="h-full w-full object-cover" label={other?.nickname ?? ""} />
       ) : (
@@ -58,7 +134,7 @@ export function VideoStage({
         >
           {other ? (
             <>
-              <Face accountId={other.accountId ?? null} name={other.nickname} size={size === "small" ? 48 : 88} speaking={otherSpeaking} />
+              <Face accountId={other.accountId ?? null} name={other.nickname} size={compact ? 64 : 88} speaking={otherSpeaking} />
               <span className="max-w-full truncate px-4 text-sm text-slate-200" dir="auto">
                 {other.nickname}
               </span>
@@ -82,26 +158,38 @@ export function VideoStage({
         </button>
       ) : null}
 
-      {/* 나: 구석에 작게(거울처럼 좌우 뒤집어 보임 — 상대에게는 그대로 간다). */}
-      <div className="absolute bottom-2 end-2 overflow-hidden rounded-xl border border-line bg-surface shadow-lg">
-        {local ? (
-          <VideoBox stream={local} mirrored className={size === "small" ? "h-20 w-14 object-cover" : "h-28 w-20 object-cover"} label={t.you2} />
-        ) : (
-          <div className={`flex items-center justify-center ${size === "small" ? "h-20 w-14" : "h-28 w-20"}`}>
-            <Face accountId={self.accountId} name={self.nickname} size={size === "small" ? 32 : 44} speaking={selfSpeaking} />
-          </div>
-        )}
-      </div>
-
       {/* 상대의 마지막 자막 한 줄. */}
-      {lastLine && size !== "small" ? (
+      {lastLine ? (
         <p
-          className="absolute inset-x-2 bottom-2 me-24 line-clamp-2 rounded-xl bg-black/65 px-3 py-1.5 text-chat text-ink"
+          className={`absolute inset-x-2 bottom-2 line-clamp-2 rounded-xl bg-black/65 px-3 py-1.5 text-chat text-ink ${compact ? "" : "me-24"}`}
           dir="auto"
         >
           {lastLine.text}
         </p>
       ) : null}
+    </>
+  );
+}
+
+function SelfView({
+  t,
+  local,
+  self,
+  selfSpeaking,
+  faceSize,
+}: {
+  t: RoomCopy;
+  local: MediaStream | null;
+  self: { accountId: string | null; nickname: string };
+  selfSpeaking: boolean;
+  faceSize: number;
+}) {
+  // 거울처럼 좌우 뒤집어 보임 — 상대에게는 그대로 간다.
+  return local ? (
+    <VideoBox stream={local} mirrored className="h-full w-full object-cover" label={t.you2} />
+  ) : (
+    <div className="flex h-full w-full items-center justify-center">
+      <Face accountId={self.accountId} name={self.nickname} size={faceSize} speaking={selfSpeaking} />
     </div>
   );
 }

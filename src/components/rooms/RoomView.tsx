@@ -141,8 +141,14 @@ export function RoomView({
     setLayoutState(next);
     saveRoomLayout(next);
   };
-  // 1:1 영상통화는 고르는 보기 없이 영상 + 자막 + 채팅 한 모양(여러 사람 방의 보기·참여 방식은 숨김).
-  const layout: RoomLayout = room.video ? "group" : layoutPicked;
+  // 1:1 영상통화: 여러 사람 방의 보기·참여 방식은 숨기고, 보기는 "내 화면 작게/크게" 둘만(기기에 기억).
+  // 크게(위아래 대칭)면 영상이 화면을 많이 쓰니 자막은 마지막 몇 줄만, 채팅은 "댓글 쓰기"를 눌러서(통화 위주 보기와 같은 모양).
+  const [selfBig, setSelfBigState] = useState<boolean>(() => readVideoSelfBig());
+  const setSelfBig = (next: boolean) => {
+    setSelfBigState(next);
+    saveVideoSelfBig(next);
+  };
+  const layout: RoomLayout = room.video ? (selfBig ? "call" : "group") : layoutPicked;
   const view = layout === "people" ? "people" : "timeline";
   const [composerOpen, setComposerOpen] = useState(false);
   // 같은 방 사람이 보낸 안 읽은 쪽지·메시지 → 위에 알림(누르면 대화).
@@ -799,7 +805,8 @@ export function RoomView({
             otherSpeaking={videoOther ? isSpeaking(videoOther) : false}
             self={{ accountId: self?.accountId ?? null, nickname: self?.nickname ?? nickname }}
             selfSpeaking={speaking}
-            size={layout === "call" ? "large" : layout === "chat" ? "small" : "medium"}
+            selfBig={selfBig}
+            onToggleSelfBig={() => setSelfBig(!selfBig)}
             onPerson={openPerson}
           />
         ) : null}
@@ -980,7 +987,7 @@ export function RoomView({
 
       {/* 자막(말한 것)과 채팅(쓴 것)을 나눠 그린다. 질문 수·번역 맥락은 둘을 합쳐서. */}
       <div className="flex min-h-0 flex-1 flex-col">
-        <section className={`flex min-h-0 flex-col ${layout === "chat" ? "flex-[1]" : layout === "call" ? "shrink-0" : "flex-[3]"}`}>
+        <section className={`flex min-h-0 flex-col ${layout === "chat" ? "flex-[1]" : layout === "call" ? (videoRoom ? "flex-1" : "shrink-0") : "flex-[3]"}`}>
           <p className="shrink-0 px-4 pt-2 text-meta font-medium text-slate-400">🎙 {t.captionsTitle}</p>
           {captionsOff ? <p className="shrink-0 px-4 pt-1 text-meta text-amber-200">{t.captionLimit}</p> : null}
           <Lines
@@ -1310,4 +1317,22 @@ function withoutHint(hints: Record<number, string>, seq: number): Record<number,
   const next = { ...hints };
   delete next[seq];
   return next;
+}
+
+const VIDEO_SELF_BIG_KEY = "roomVideoSelfBig";
+
+function readVideoSelfBig(): boolean {
+  try {
+    return localStorage.getItem(VIDEO_SELF_BIG_KEY) === "1";
+  } catch {
+    return false;
+  }
+}
+
+function saveVideoSelfBig(value: boolean): void {
+  try {
+    localStorage.setItem(VIDEO_SELF_BIG_KEY, value ? "1" : "0");
+  } catch {
+    // 못 남기면 이번만.
+  }
 }

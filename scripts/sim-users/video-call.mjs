@@ -177,6 +177,21 @@ try {
   await pa.screenshot({ path: path.join(OUT, "caller.png") });
   await pb.screenshot({ path: path.join(OUT, "callee.png") });
 
+  // 내 화면 크게(위아래 대칭) → 다시 작게.
+  await pa.getByRole("button", { name: ta.videoSelfBig }).click();
+  await pa.waitForTimeout(1500);
+  await pb.getByRole("button", { name: tb.videoSelfBig }).click();
+  await pb.waitForTimeout(1500);
+  result.selfBig = {
+    callerSmallButton: await pa.getByRole("button", { name: new RegExp(ta.videoSelfSmall) }).isVisible().catch(() => false),
+    callerVideos: await pa.evaluate(() => [...document.querySelectorAll("video")].map((v) => Math.round(v.getBoundingClientRect().height))),
+  };
+  await pa.screenshot({ path: path.join(OUT, "caller-big.png") });
+  await pb.screenshot({ path: path.join(OUT, "callee-big.png") });
+  await pa.getByRole("button", { name: new RegExp(ta.videoSelfSmall) }).click();
+  await pa.waitForTimeout(800);
+  result.selfBig.backToSmall = await pa.getByRole("button", { name: ta.videoSelfBig }).isVisible().catch(() => false);
+
   // 받는 쪽이 끄면 거는 쪽은 사진 + "카메라 꺼짐".
   await pb.getByRole("button", { name: new RegExp(tb.cameraOff) }).click();
   await pa.waitForTimeout(4000);
