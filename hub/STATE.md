@@ -44,6 +44,8 @@
   매일 자유 통화 7 / 10 / 15분(오늘의 팩 별도, 하루 리셋·이월 없음), 넘으면 구매 포인트, 채팅 하루 10 / 30 / 50 / 100번,
   8,900원만 이달의 영상 전체·추가 팩 2번. 8,900원 혜택 전환은 Play 가격 변경일에 `PREMIUM_DAILY_PLAN_FROM`(`src/lib/billing/plans.ts`)을 켠다 — 그때까지 프리미엄은 9,900원·80포인트 그대로.
 
+- 스크린샷 모음(2026-10-20): https://claude.ai/artifact/VP562k9QhrFiybAYv4ggbW — 모든 채팅이 찍은 화면을 올리고(`hub/SHOTS.md`), 사용자가 사용법 칸에 넣을 그림을 고른다.
+
 ## 사용자에게 물어볼 것
 
 - iOS(`hub/drafts/ios-launch.md` "출시까지 남은 사람 일"): 정함(2026-10-20) — 번들 ID는 안드로이드와 같은 `com.yourname.englishchat`, 구독·포인트 상품 ID도 같게, 다른 스토어 구독자는 결제 막음.
