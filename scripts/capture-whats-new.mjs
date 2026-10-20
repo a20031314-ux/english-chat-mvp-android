@@ -197,6 +197,7 @@ const STORE_TABS_ITEMS = [
   { shot: "people" },
   { shot: "invite" },
   { shot: "groups" },
+  { shot: "group-pick" },
   { shot: "freetalk" },
   { shot: "quote" },
   { shot: "layouts" },
@@ -661,6 +662,15 @@ async function tapAt(page, locator) {
   await page.mouse.click(box.x + box.width / 2, box.y + box.height / 2);
 }
 
+/** 줄 아래 낱말 칩에서 [처음, 끝]을 누른다 — 사이가 구절로 골라진다(RoomParts LineActions). */
+async function pickWords(page, [from, to], wait) {
+  const chips = page.locator("div.flex.flex-wrap.gap-1 > button[aria-pressed]").filter({ visible: true });
+  if ((await chips.count()) <= to) return;
+  await chips.nth(from).click();
+  if (to !== from) await chips.nth(to).click();
+  await wait(700);
+}
+
 const STEPS = {
   async "promo-room"({ page, ui, locale, wait, target, mark }) {
     // 목소리를 입히는 쇼츠: 줄마다 시각과 글자를 남기고, 말이 끝날 만큼 기다린다(make.mjs room이 TTS로 입힌다).
@@ -1006,7 +1016,7 @@ const STEPS = {
     await page.getByRole("button", { name: exactly(`🌐 ${t.freeTalk}`) }).first().click();
     await wait(1500);
   },
-  async quote({ page, locale, wait }) {
+  async quote({ page, locale, wait, target }) {
     // 방에 들어가 Yuki의 첫 줄을 눌러 번역 + "무슨 뜻이에요?·답하기·쪽지로 묻기", 아래에 Omar의 질문.
     const t = roomCopyFor(locale);
     page.__social.free = false;
@@ -1018,6 +1028,16 @@ const STEPS = {
     await page.locator('div[class*="z-[80]"] li > div > button.w-full').first().click();
     await translated;
     await wait(1200);
+    // 줄 안 낱말 골라 묻기: 두 낱말을 누르면 그 사이가 구절로(en "last weekend", es "fin de semana").
+    await pickWords(page, target === "es" ? [1, 3] : [4, 5], wait);
+  },
+  async "group-pick"({ page, wait, target }) {
+    // 단체방에서 남의 줄을 눌러 번역 + 낱말 골라 묻기(en "works for me", es "me va bien").
+    const translated = page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 30000 }).catch(() => undefined);
+    await page.getByText(GROUP_LINES[target].b, { exact: true }).filter({ visible: true }).last().click();
+    await translated;
+    await wait(1200);
+    await pickWords(page, [3, 5], wait);
   },
   async layouts({ page, locale, wait }) {
     // 2.69(다시 자름): 채팅 위주 — 자막 칸·채팅 칸과 아래 참여 방식이 같이 보인다.
