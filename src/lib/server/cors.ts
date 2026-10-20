@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { DOOR_BASE_DOMAIN, DOORS } from "@/lib/doors";
 import {
   APP_UPDATE_HEADER,
   requestAppVersion,
@@ -15,6 +16,8 @@ const ALLOWED_ORIGIN_PREFIXES = [
   // 웹 도메인(2026-10-20, 가비아 → Vercel). languagebank.net은 www로 넘어간다.
   "https://www.languagebank.net",
   "https://languagebank.net",
+  // 창구(lib/doors.ts): call.languagebank.net 등 — 같은 앱이 그 주소에서 API를 부른다.
+  ...DOORS.map((door) => `https://${door.host}.${DOOR_BASE_DOMAIN}`),
 ];
 
 // Every header the app actually sends. A missing one fails the preflight, which
