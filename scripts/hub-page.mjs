@@ -84,7 +84,14 @@ try {
 } catch {
   // 지도가 아직 없으면 탭을 비워 둔다.
 }
-const data = { state, rules, roles, inbox, logs, dataMap, commit, builtAt: new Date().toISOString() };
+// 앱 전체구조(hub/STRUCTURE.md): 화면 흐름(손으로) + 영역별 코드(scripts/structure.mjs가 자동).
+let structure = "";
+try {
+  structure = read("STRUCTURE.md");
+} catch {
+  // 아직 없으면 칸을 숨긴다.
+}
+const data = { state, rules, roles, inbox, logs, dataMap, structure, commit, builtAt: new Date().toISOString() };
 const template = fs.readFileSync(path.join(ROOT, "scripts", "hub-page.template.html"), "utf8");
 const html = template.replace("/*HUB_DATA*/null", JSON.stringify(data).replace(/</g, "\\u003c"));
 fs.mkdirSync(path.dirname(OUT), { recursive: true });

@@ -93,6 +93,19 @@ new chat continues where the last one stopped. `hub/README.md` has the rules
   `node scripts/hub-page.mjs` and republishes `tmp/hub/index.html` to that
   URL with the Artifact tool — never as a new artifact.
 
+# App structure
+
+`hub/STRUCTURE.md` (Korean, imported by CLAUDE.md) maps the whole app: the
+screen flow and tab rules (hand-written, top) and, generated from the code by
+`node scripts/structure.mjs`, each area's screen files, API routes, who else
+uses them and the cross-tab signals (bottom). Before changing code, find the
+area there and check what else uses it; work from that map, not from memory.
+The commit that changes the app updates it: the top when a flow, tab or area
+changes, `scripts/structure.json` when a screen file, API route or page is
+added or moved. When the structure is unchanged, the chat's `hub/log` entry
+says `- 구조: 변화 없음`. The Stop hook enforces this and CI `structure`
+fails when the map misses a file; on main, CI regenerates the bottom part.
+
 # Product doc
 
 `PRODUCT.md` (Korean) says what the app is: its core values, screens,

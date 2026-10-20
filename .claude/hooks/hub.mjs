@@ -7,7 +7,11 @@
  *   compact  SessionStart after compaction: the summary loses detail, so say
  *            again what this chat has committed and what the hub expects.
  *   stop     Stop: a chat that committed work and left no handoff in
- *            hub/log/ is not allowed to finish until it writes one.
+ *            hub/log/ is not allowed to finish until it writes one. A chat
+ *            that changed app code (src/) must also have touched the app
+ *            structure (hub/STRUCTURE.md, scripts/structure.json) or said
+ *            "구조: 변화 없음" in its handoff, and the structure map must
+ *            still cover every screen file, API route and page.
  *
  * Hooks read JSON on stdin; for SessionStart, stdout becomes context. Any
  * failure here stays silent and lets the chat carry on: a broken hook must
@@ -112,11 +116,22 @@ function commitsSince(base, startedAt) {
     }
     const [head, ...files] = git("show", "--name-only", "--format=%h %s", sha).split("\n").filter(Boolean);
     const [short, ...subject] = head.split(" ");
+    const log = files.some((f) => f.startsWith("hub/log/"));
+    let structureNote = false;
+    if (log) {
+      try {
+        structureNote = /^\+\s*- 구조:/m.test(git("show", "--format=", sha, "--", "hub/log"));
+      } catch {
+        // A note we cannot read counts as missing; the chat is asked once more.
+      }
+    }
     mine.push({
       sha: short,
       subject: subject.join(" "),
       work: files.some((f) => !f.startsWith("hub/")),
-      log: files.some((f) => f.startsWith("hub/log/")),
+      log,
+      src: files.some((f) => f.startsWith("src/")),
+      structure: files.some((f) => f === "hub/STRUCTURE.md" || f === "scripts/structure.json") || structureNote,
     });
   }
   return mine;
@@ -162,7 +177,8 @@ if (mode === "start" || mode === "compact") {
     }
   } else {
     parts.push(
-      "[허브] 이 저장소는 채팅을 역할(dev/qa/store)로 나누고 기억은 hub/에 둔다. 요청에 맞는 `hub/roles/<역할>.md`를 읽고 시작하고, 끝날 때 역할 파일과 hub/log에 남겨라 (hub/README.md).",
+      "[허브] 이 저장소는 채팅을 역할(dev/qa/store)로 나누고 기억은 hub/에 둔다. 요청에 맞는 `hub/roles/<역할>.md`를 읽고 시작하고, 끝날 때 역할 파일과 hub/log에 남겨라 (hub/README.md). " +
+        "코드를 고치기 전에 hub/STRUCTURE.md(앱 전체구조, CLAUDE.md가 불러옴)에서 영역과 영향 범위를 보고, 고친 커밋에서 구조도 고친다.",
     );
   }
   const inbox = inboxLines();
@@ -173,23 +189,66 @@ if (mode === "start" || mode === "compact") {
   process.exit(0);
 }
 
+/**
+ * App code changed without the structure being looked at: no commit of this
+ * chat touched hub/STRUCTURE.md or scripts/structure.json, and no handoff said
+ * "구조: …". Returns the commits that changed src/, or [] when all is well.
+ */
+function structureUnchecked(commits) {
+  const changed = commits.filter((c) => c.src);
+  if (!changed.length || commits.some((c) => c.structure)) return [];
+  return changed;
+}
+
+/** The structure map's own check (every screen file, API and page has an area). "" when it passes. */
+function structureMapProblems() {
+  try {
+    execFileSync("node", [path.join(ROOT, "scripts", "structure.mjs"), "--check", "--assign-only"], {
+      cwd: ROOT,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "pipe"],
+      timeout: 15_000,
+    });
+    return "";
+  } catch (error) {
+    // No script yet (an older checkout) or node missing: never block on that.
+    if (!fs.existsSync(path.join(ROOT, "scripts", "structure.mjs")) || error.code === "ENOENT") return "";
+    return String(error.stderr || error.stdout || "").trim();
+  }
+}
+
 if (mode === "stop") {
   if (input.stop_hook_active) process.exit(0);
   const state = readState(input.session_id);
-  const missing = unrecorded(commitsSince(state?.base, state?.startedAt));
-  if (missing.length === 0) process.exit(0);
-  const list = missing.map((c) => `- ${c.sha} ${c.subject}`).join("\n");
-  process.stdout.write(
-    JSON.stringify({
-      decision: "block",
-      reason:
-        "이 채팅에서 커밋한 작업이 허브에 인계되지 않았다:\n" +
-        list +
+  const commits = commitsSince(state?.base, state?.startedAt);
+  const missing = unrecorded(commits);
+  const unchecked = structureUnchecked(commits);
+  const mapProblems = commits.some((c) => c.src) ? structureMapProblems() : "";
+  if (missing.length === 0 && unchecked.length === 0 && !mapProblems) process.exit(0);
+
+  const reasons = [];
+  if (missing.length) {
+    reasons.push(
+      "이 채팅에서 커밋한 작업이 허브에 인계되지 않았다:\n" +
+        missing.map((c) => `- ${c.sha} ${c.subject}`).join("\n") +
         "\n\n끝내기 전에: hub/log/YYYY-MM.md에 한 항목(한 일 / 남긴 일 / 커밋), 해당 역할 파일의 열린 일 갱신, " +
         "다른 역할에 넘길 것은 hub/inbox.md에 한 줄. 그다음 커밋하고 푸시한 브랜치에 같이 올려라. " +
         "형식은 hub/README.md와 hub/log 맨 위. 화면·기능·한도가 바뀌었으면 PRODUCT.md도 같이 고쳐라.",
-    }),
-  );
+    );
+  }
+  if (unchecked.length) {
+    reasons.push(
+      "앱 코드(src/)를 바꿨는데 전체구조(hub/STRUCTURE.md)를 확인한 흔적이 없다:\n" +
+        unchecked.map((c) => `- ${c.sha} ${c.subject}`).join("\n") +
+        "\n\n화면 흐름·탭·영역이 바뀌었으면 hub/STRUCTURE.md 위쪽(손으로 쓴 부분)을 고치고, 새 화면 파일·API·페이지는 " +
+        "scripts/structure.json에 영역을 넣은 뒤 node scripts/structure.mjs. 구조가 그대로면 hub/log 항목에 " +
+        "\"- 구조: 변화 없음\" 한 줄. 커밋하고 푸시하라.",
+    );
+  }
+  if (mapProblems) {
+    reasons.push("전체구조 자리표가 코드와 어긋난다 (CI structure도 실패한다):\n" + mapProblems);
+  }
+  process.stdout.write(JSON.stringify({ decision: "block", reason: reasons.join("\n\n") }));
   process.exit(0);
 }
 

@@ -1,0 +1,164 @@
+# 앱 전체구조
+
+> 모든 채팅이 시작할 때 자동으로 읽는다(CLAUDE.md). **고치기 전에** 여기서 바꿀 곳이 어느 영역이고 누가 같이 쓰는지 보고,
+> **고친 커밋에서** 이 문서도 고친다. 무엇을 왜 지키는지는 `PRODUCT.md`(기능별 자세한 규칙), 서버가 저장하는 것은 `hub/data-map.md`.
+>
+> - 위쪽(손으로 씀): 화면 흐름·들어가는 길·영역 사이 규칙. 화면·흐름·탭·영역이 바뀌면 고친다.
+> - 아래쪽(자동): 탭·영역별 코드·API·화면끼리 신호·안 쓰는 코드. `node scripts/structure.mjs`가 코드에서 만든다(main push 때 CI도 다시 만듦).
+>   새 화면 파일·API·페이지는 `scripts/structure.json` 자리표에 영역을 정해 넣는다 — 빠지면 CI `structure`와 끝내기 훅이 막는다.
+> - 구조가 안 바뀐 커밋(버그 수정·문구 등)은 그 채팅의 `hub/log` 항목에 `- 구조: 변화 없음` 한 줄.
+
+## 화면 흐름 (손으로 씀)
+
+```
+앱 열기 ─ AI 동의(iOS만) ─ 새로워진 점(업데이트 뒤 한 번) ─ 초대 환영(초대 링크로 왔을 때)
+│
+상단바   학습 언어 · UI 언어 · 포인트/플랜 → 결제 화면 · ? 사용법(지금 탭의 칸) · 💬 의견 보내기
+│        └ 업데이트 배너
+하단 탭  대화 │ 영상 학습 │ 사람 │ Room │ My        (첫 화면: 대화)
+│
+├ 대화 talk ─ AI 튜터 줄(맨 위 고정) ─ 줄 → AI 채팅 chat ──┐  열면 위에 "‹ 대화",
+│           │                      └ 📞 → AI 통화 call ──┘  하단은 "대화"가 켜진 채
+│           ├ 단체방(팀이면 "대화 | 워크스페이스", 📞 단체방 통화 → 비공개 Room)
+│           └ 1:1 메시지(요청 → 열림, 📞 → 둘만의 비공개 Room)
+├ 영상 학습 video ─ 이달의 영상 · 링크 넣기 · 학습 언어 자막 · 문장 바 → 문장분석 시트
+├ 사람 people ─ 칩 [사람 | 게시판] · 프로필 시트(팔로우·메시지·메이트 신청·차단·신고) · ➕ 친구 초대
+├ Room room ─ 로비(방 카드) → 방(자리 8칸·듣는 줄·자막·댓글) · 👥 이 방 사람들과 단체방
+└ My my ─ 계정 카드 · 🎁 초대 보상 · 🤝 메이트·팀 줄 → 대화의 워크스페이스
+          오늘 해볼 것 → 자라는 중 [망 | 그래프 | 지도] → 내 표현 → 노트(장 8 × 주제 3, 단어장 줄)
+          지도가 없으면 체크 3질문 화면
+
+어디서나 열림  문장분석 시트 sheet (채팅·통화 돌아보기·영상·노트의 문장 → "분석") · 표현 시트 · 결제 화면
+```
+
+- **사람 기능이 꺼지면**(iOS 1차, `src/lib/platform.ts` `socialFeaturesEnabled`): 하단은 채팅 │ 통화 │ 영상 학습 │ My, 대화·사람·Room·메시지·단체방 전부 없음.
+  플랫폼마다 다른 것은 `platform.ts`에만 둔다(광고 `adsAvailable`, Google 로그인, 영상 받기 등).
+- **안에서 쓰는 이름과 화면 이름이 다르다:** My = `map`, 대화 = `talk`(옛 `messages`도 여기로), 통화 = `roleplay`, Room = `rooms`, 단어장 = `vocab`(My 노트 안).
+  옛 링크 `?screen=…`는 `AppHome.tsx` `resolveTab`이 새 자리로 보낸다 — 탭을 바꾸면 여기와 사용법(`GUIDE_CHAPTERS`)·새로워진 점 `guide` 칸·캡처 스크립트를 같이 본다.
+- **탭끼리는 서로를 직접 부르지 않는다.** "이 표현으로 채팅", "이 장면 영상으로" 같은 이동은 `appIntents` 신호(아래 자동 표)로 하고, 받는 쪽이 처리한다.
+- **오늘 해볼 것·표현 장부(`learner`)는 여러 탭이 같이 쓴다:** 채팅·통화 첫 화면, My 맨 위. 바꾸면 세 곳을 다 본다.
+- **광고**(무료·안드로이드만): 배너는 둘러보는 화면(My·영상·대화 목록), 채팅·통화·Room·사람에는 없음. 통화·Room에서는 앱 오프닝 광고 없음(`AppHome.tsx` `BANNER_TABS`·`NO_APP_OPEN_TABS`).
+- **로그인:** AI 기능(채팅·통화·영상·My)은 로그인 없이, 사람·Room·메시지·게시판은 로그인해야(안 했으면 계정 카드).
+
+## 고칠 때 순서
+
+1. 바꿀 기능의 영역을 아래 자동 표에서 찾고, "다른 영역이 씀"·API 괄호·신호 표로 같이 영향받는 곳을 본다.
+2. 자세한 규칙은 `PRODUCT.md`의 그 기능 절에서 확인한다.
+3. 코드를 고치고, 같은 커밋에서: 흐름·탭·영역이 바뀌었으면 위 "화면 흐름", 새 파일이면 `scripts/structure.json`, 그다음 `node scripts/structure.mjs`.
+4. 구조가 그대로면 `hub/log` 항목에 `- 구조: 변화 없음`.
+
+<!-- 자동: scripts/structure.mjs가 아래를 다시 쓴다. 손으로 고치지 않는다. -->
+
+## 자동: 하단 탭 (`src/components/AppHome.tsx`)
+
+- 사람 기능 켜짐: 대화`talk` · 영상 학습`video` · 사람`people` · Room`rooms` · My`map`
+- 사람 기능 꺼짐(iOS 1차, `socialFeaturesEnabled()`): 채팅`chat` · 통화`roleplay`* · 영상 학습`video` · My`map`
+- \* 그 학습 언어에 통화 대본이 있을 때만(`hasRoleplay`)
+
+## 자동: 영역별 코드
+
+> 화면 = `src/components/`, API = `src/app/api/`. API 뒤 괄호는 이 영역 밖에서 그 API를 부르는 영역,
+> "다른 영역이 씀"은 이 영역 화면 코드를 가져다 쓰는 다른 영역. 고치기 전에 여기서 영향 범위를 본다.
+
+### 앱 틀 — 상단바·하단 탭·업데이트·새로워진 점·사용법 `shell`
+- 화면: `AiConsentGate` · `AppHome` · `FullScreenLayer` · `GuideSheet` · `LanguageSelector` · `LearningLanguageFlag` · `Providers` · `TabIcons` · `TargetLanguageSelector` · `UpdateNotice` · `WhatsNewSheet`
+- API: `guide` · `whats-new`
+- 웹 페이지: `/`
+- 다른 영역이 씀: `FullScreenLayer` ← 여러 영역 8곳 · `LanguageSelector` ← 웹 전용 페이지 · `LearningLanguageFlag` ← 사람 탭 · `TargetLanguageSelector` ← 웹 전용 페이지
+
+### 대화 탭 — AI 튜터 줄·1:1 메시지·단체방·팀 `talk`
+- 화면: `AiTutorRow` · `rooms/MateAsk` · `rooms/MessagesTab` · `rooms/RoomDm` · `rooms/RoomGroups` · `rooms/TeamSpace`
+- API: `dm`(사람 탭, Room 탭, 계정·로그인) · `groups`(사람 탭, Room 탭, 계정·로그인)
+- 다른 영역이 씀: `AiTutorRow` ← 앱 틀 · `rooms/MateAsk` ← Room 탭 · `rooms/MessagesTab` ← 앱 틀 · `rooms/RoomDm` ← 앱 틀, Room 탭 · `rooms/RoomGroups` ← 앱 틀, 사람 탭
+
+### AI 채팅 (대화 → AI 튜터 줄) `chat`
+- 화면: `ArchivePanel` · `ChatHistoryPanel` · `ChatWindow` · `ExpressionPeek` · `MessageBubble` · `ReportContentDialog`
+- API: `chat`(대화 탭, 사람 탭, Room 탭, 계정·로그인) · `report`
+- 다른 영역이 씀: `ChatWindow` ← 앱 틀
+
+### AI 통화 (대화 → AI 튜터 📞) · 오늘의 팩 `call`
+- 화면: `PackCard` · `RoleplayOwnLine` · `RoleplayPast` · `RoleplayReview` · `RoleplayScreen` · `RoleplayTab` · `roleplay/TurnDiagBox`
+- API: `pack/finish` · `pack/today` · `realtime/call/ended` · `realtime/call` · `roleplay/context` · `roleplay/correct` · `roleplay/listen`(대화 탭, 사람 탭, Room 탭, 계정·로그인) · `roleplay/practice` · `roleplay/review` · `roleplay/turn`
+- 다른 영역이 씀: `RoleplayTab` ← 앱 틀
+
+### 문장분석·표현 시트 (여러 화면에서 열림) `sheet`
+- 화면: `AnalyzableEnglish` · `EnglishAnalysisProvider` · `EnglishAnalysisViewer` · `ExpressionInsightProvider` · `ExpressionInsightSheet` · `MarkForMap` · `SelectableEnglishText` · `SentenceAskPanel` · `TTSButton` · `VocabPreviewProvider` · `VocabSenseList` · `VocabWordPreview`
+- API: `english-analysis/element` · `english-analysis/input` · `expression-ask` · `expression-insight` · `expression-units` · `learning-spans` · `translate`(대화 탭, AI 통화, 사람 탭, Room 탭, 계정·로그인) · `tts`(AI 통화) · `vocab/gloss` · `vocab`(My 탭)
+- 다른 영역이 씀: `AnalyzableEnglish` ← AI 채팅, 영상 학습 탭, My 탭, 웹 전용 페이지 · `EnglishAnalysisProvider` ← 앱 틀, 웹 전용 페이지 · `ExpressionInsightProvider` ← 앱 틀, 웹 전용 페이지 · `SelectableEnglishText` ← AI 채팅 · `TTSButton` ← AI 채팅, AI 통화, My 탭 · `VocabSenseList` ← My 탭
+
+### 학습 기록 공통 — 오늘 해볼 것·표현 장부 (여러 화면이 같이 씀) `learner`
+- 화면: `LedgerLinks` · `NextStepCard`
+- API: `learner/ask`(My 탭) · `learner/brief` · `learner/comprehension`(문장분석·표현 시트, 영상 학습 탭) · `learner/growth`(My 탭) · `learner/ledger`(대화 탭, AI 채팅, AI 통화, 문장분석·표현 시트, My 탭) · `learner/next` · `learner/profile`(My 탭) · `learner/self-check`(My 탭)
+- 다른 영역이 씀: `LedgerLinks` ← AI 채팅, AI 통화, 영상 학습 탭, My 탭 · `NextStepCard` ← AI 채팅, AI 통화, My 탭
+
+### 영상 학습 탭 `video`
+- 화면: `contentDiscovery/ContentDiscoveryPanel` · `videoLearning/CatalogLibrary` · `videoLearning/CurrentSubtitleCard` · `videoLearning/SavedVideoSessions` · `videoLearning/SegmentPlayButton` · `videoLearning/StudyMaterialsList` · `videoLearning/SubtitleDebugPanel` · `videoLearning/SubtitleGenerationStatus` · `videoLearning/VideoLearningTab` · `videoLearning/VideoPlayer` · `videoLearning/VideoUrlInput` · `videoLearning/VideoWatchFullscreenDock` · `videoLearning/relayPlayer`
+- API: `content-discovery/avatar` · `content-discovery/channels` · `content-discovery` · `video-library`(My 탭) · `video-subtitles/analyze` · `video-subtitles/gloss` · `video-subtitles/prepare` · `video-subtitles/prepare-from-stt` · `video-subtitles/transcribe-chunk` · `video-subtitles/window`
+- 다른 영역이 씀: `videoLearning/VideoLearningTab` ← 앱 틀
+
+### 사람 탭 — 프로필 목록·게시판·사진 `people`
+- 화면: `rooms/BoardView` · `rooms/MediaImage` · `rooms/PeopleTab` · `rooms/RoomPeople`
+- API: `board`(대화 탭, Room 탭, 계정·로그인) · `media`(Room 탭) · `social`(대화 탭, Room 탭, 계정·로그인)
+- 다른 영역이 씀: `rooms/MediaImage` ← 대화 탭 · `rooms/PeopleTab` ← 앱 틀
+
+### Room 탭 — 말하는 방 `room`
+- 화면: `rooms/RoomParts` · `rooms/RoomView` · `rooms/RoomsScreen`
+- API: `rooms`(대화 탭, 사람 탭, 계정·로그인)
+- 다른 영역이 씀: `rooms/RoomParts` ← 대화 탭, 사람 탭 · `rooms/RoomsScreen` ← 앱 틀
+
+### My 탭 — 계정 카드·자라는 중·지도·노트·단어장 `my`
+- 화면: `CharacterGuidePanel` · `VocabularyPanel` · `notes/NotesPanel` · `studyMap/GrowthNetwork` · `studyMap/LearnerPanel` · `studyMap/LedgerPanel` · `studyMap/MissionScreen` · `studyMap/StudyMapTab` · `studyMap/TopicItems`
+- API: `curriculum/generate`(학습 기록 공통) · `curriculum/mission-check`(학습 기록 공통) · `curriculum/mission-seen`(학습 기록 공통) · `curriculum/missions`(학습 기록 공통) · `curriculum/pick`(문장분석·표현 시트) · `curriculum/progress`(학습 기록 공통) · `curriculum/restore`(학습 기록 공통) · `curriculum/review`(학습 기록 공통) · `curriculum`(문장분석·표현 시트, 학습 기록 공통) · `notes/place` · `video-index/find`(학습 기록 공통)
+- 다른 영역이 씀: `studyMap/GrowthNetwork` ← AI 통화 · `studyMap/StudyMapTab` ← 앱 틀
+
+### 계정·로그인 `account`
+- 화면: `account/AccountCard`
+- API: `account/config`(친구 초대·보상) · `account/delete`(친구 초대·보상) · `account/email/start`(친구 초대·보상) · `account/email/verify`(친구 초대·보상) · `account/google`(친구 초대·보상) · `account/me`(친구 초대·보상) · `account/password/change`(친구 초대·보상) · `account/password/login`(친구 초대·보상) · `account/password/signup`(친구 초대·보상) · `account/profile`(친구 초대·보상)
+- 다른 영역이 씀: `account/AccountCard` ← 대화 탭, 사람 탭, Room 탭, My 탭, 친구 초대·보상
+
+### 요금·포인트·광고 `billing`
+- 화면: `BillingScreen` · `PointStore` · `PointsIcon`
+- API: `ads/config`(앱 틀, AI 채팅, AI 통화, My 탭) · `ads/ssv` · `entitlement`(여러 영역 13곳) · `points/sync`(여러 영역 13곳)
+- 웹 페이지: `/subscribe`
+- 다른 영역이 씀: `BillingScreen` ← 앱 틀, AI 채팅, 영상 학습 탭 · `PointsIcon` ← 영상 학습 탭
+
+### 친구 초대·보상 `invite`
+- 화면: `invite/InviteButton` · `invite/InviteRewards` · `invite/InviteWelcome`
+- API: `invite`(여러 영역 7곳)
+- 웹 페이지: `/invite`
+- 다른 영역이 씀: `invite/InviteButton` ← 사람 탭, Room 탭 · `invite/InviteRewards` ← 앱 틀, 사람 탭 · `invite/InviteWelcome` ← 앱 틀
+
+### 의견 보내기·반영 소식 `feedback`
+- 화면: `FeedbackButton` · `FeedbackFixedSheet`
+- API: `feedback/fixed` · `feedback/image` · `feedback/news` · `feedback`
+- 다른 영역이 씀: `FeedbackButton` ← 앱 틀 · `FeedbackFixedSheet` ← 앱 틀
+
+### 웹 전용 페이지 `web`
+- 화면: `LandingPage` · `LearningBookPanel` · `LearningReviewModal`
+- 웹 페이지: `/learning` · `/privacy`
+- 다른 영역이 씀: `LearningBookPanel` ← 앱 틀
+
+### 예약 작업·점검·개발용 (앱 화면 아님) `ops`
+- API: `account/purge` · `media/sweep` · `simcheck/forget`
+- 웹 페이지: `/dev/roleplay-review` · `/dev/roleplay-tab` · `/dev/update-notice`
+
+## 자동: 화면끼리 부르는 신호 (`src/lib/appIntents.ts`)
+
+| 신호 | 보내는 영역 | 받는 영역 |
+|---|---|---|
+| `openTab` | 여러 영역 6곳 | 앱 틀 |
+| `chatDraft` | 여러 영역 6곳 | AI 채팅 |
+| `openVideo` | 여러 영역 6곳 | 영상 학습 탭 |
+| `practice` | AI 채팅, AI 통화, 학습 기록 공통, My 탭 | 앱 틀, AI 채팅, AI 통화 |
+| `openTopic` | 학습 기록 공통 | 앱 틀, My 탭 |
+| `openNotes` | 앱 틀 | My 탭 |
+| `openGuide` | 앱 틀 | 앱 틀 |
+
+## 자동: 쓰지 않는 것 (지울지 확인)
+
+- 아무도 안 가져다 쓰는 화면 코드: `LandingPage`
+- 앱·스크립트 어디서도 안 부르는 API: `realtime/call/ended` · `realtime/call` · `roleplay/correct` · `video-subtitles/window`
+- 스크립트만 부르는 API: `english-analysis/element` · `english-analysis/input` · `learner/brief`
+- 밖에서 부르는 API: `ads/ssv` AdMob 서버가 보상 확인으로 부름 · `account/purge` Vercel 예약 작업(vercel.json) · `media/sweep` Vercel 예약 작업(vercel.json) · `feedback/fixed` 의견함 예약 작업(scripts/feedback-notify.mjs) · `feedback/image` 의견함 정리(scripts/feedback-pull.mjs) · `simcheck/forget` 가상 사용자 점검이 끝날 때
+
+<!-- 자동 끝 -->

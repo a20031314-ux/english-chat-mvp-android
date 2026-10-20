@@ -10,6 +10,9 @@
 - 사용자 PC 경로를 짐작하지 않는다. 앱 저장소는 `C:\dev\english-chat-mvp`(PowerShell). 모르면 묻는다.
 
 ## 기능을 바꿀 때 (체크리스트)
+0. **전체구조 먼저:** 고치기 전에 `hub/STRUCTURE.md`(자동으로 읽힘)에서 바꿀 영역과 같이 쓰는 곳(다른 영역이 씀·API 괄호·신호 표)을 보고 그 범위를 같이 확인한다.
+   고친 커밋에서 흐름·탭·영역이 바뀌었으면 위쪽을 고치고, 새 화면 파일·API·페이지는 `scripts/structure.json`에 영역 → `node scripts/structure.mjs`.
+   구조가 그대로면 `hub/log` 항목에 `- 구조: 변화 없음`. 빠지면 끝내기 훅이 막고, 자리표가 어긋나면 CI `structure`가 실패한다(사용자 결정 2026-10-20).
 1. **14개 언어 문구:** 새 문구는 `copy.ts`의 ko/en/es + `src/lib/locales/overlays.json` 11개 언어.
    `node --experimental-strip-types scripts/translate-ui-overlays.mjs --check` 전부 0, `npm run check:languages` 통과.
    버튼 이름을 다른 문구(새로워진 점·출시 노트·사용법)에서 부를 때는 그 언어의 실제 버튼 문구를 그대로 쓴다.
@@ -24,7 +27,7 @@
    점검에서 찾아 고친 것은 **배포 뒤 같은 점검을 다시** + 건드린 영역 묶음 전체를 회귀로 돌려 둘 다 기록한다(단위 테스트만으로 '고쳤다' 하지 않음, 사용자 2026-10-20).
 6. **사용법·안내는 그림 먼저:** 설명은 단계별 스크린샷(UI 언어별) + 한두 줄. 긴 글로 설명하지 않는다(사용자 결정 2026-10-16).
    화면이 바뀌면 `capture-whats-new.mjs guide`로 사용법 그림도 다시 찍는다.
-7. **PRODUCT.md:** 화면·기능·한도·저장하는 것이 바뀌면 같은 커밋에서 고친다.
+7. **PRODUCT.md:** 화면·기능·한도·저장하는 것이 바뀌면 같은 커밋에서 고친다(구조·흐름은 `hub/STRUCTURE.md`, 기능별 자세한 규칙은 PRODUCT.md).
 8. **저장 데이터:** 서버에 새 키 묶음을 만들면 `scripts/data-map.json`에 기능·누구 것·계정 지울 때 한 줄(없으면 CI `data-map` 실패), 지도는 `hub/data-map.md`에 저절로.
    점검(가상 사용자)은 `simcheck-` id만 쓰고 끝날 때 지운다(`sim-users/forget.mjs`).
 9. **비용:** 모델을 부르는 서버 경로는 `meterRequest(request, "<op>")`, op는 `modelCalls.ts`(호출 횟수)와 `billing/opCost.ts`(단가)에 — 빠지면 CI `cost`가 실패.

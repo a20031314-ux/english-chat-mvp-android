@@ -82,6 +82,13 @@ details.about[open] summary { margin-bottom: 8px; }
 .md p { margin: 0; }
 .md > * + * { margin-top: 6px; }
 .table-scroll { overflow-x: auto; }
+.app-structure pre.flow { overflow-x: auto; font-family: var(--font-mono); font-size: 12px; line-height: 1.5; padding: 12px; border-radius: 8px; background: color-mix(in srgb, currentColor 6%, transparent); }
+.app-structure { min-width: 0; max-width: 100%; overflow: hidden; }
+.app-structure > *, .app-structure #app-body > * { min-width: 0; max-width: 100%; }
+.app-structure h2 { white-space: normal; }
+.app-structure li, .app-structure p, .app-structure code { overflow-wrap: anywhere; word-break: break-word; white-space: normal; }
+.app-structure h3 { font-size: 15px; margin: 18px 0 6px; }
+.app-structure h4 { font-size: 13.5px; margin: 14px 0 4px; }
 .md table { border-collapse: collapse; font-size: 12.5px; width: 100%; }
 .md th, .md td { border-bottom: 1px solid var(--line); padding: 5px 8px 5px 0; text-align: left; vertical-align: top; }
 .md th { color: var(--muted); font-weight: 500; }
@@ -132,8 +139,14 @@ details.about[open] summary { margin-bottom: 8px; }
 
   <section aria-label="역할" class="lanes" id="lanes"></section>
 
+  <section class="panel app-structure" aria-labelledby="app-h" id="app-structure" hidden>
+    <h2 id="app-h">앱 전체구조 <small>(hub/STRUCTURE.md, 흐름은 손으로 · 영역별 코드는 코드에서 자동)</small></h2>
+    <div id="app-body" class="md"></div>
+    <p class="how">모든 채팅이 시작할 때 읽고, 코드를 고칠 때 여기서 영향 범위를 본 뒤 같은 커밋에서 고칩니다. 새 화면 파일·API·페이지에 영역이 없으면 CI <code>structure</code>가 실패합니다.</p>
+  </section>
+
   <section class="panel structure" aria-labelledby="map-h" id="structure" hidden>
-    <h2 id="map-h">앱 구조 · 저장하는 데이터 <small>(hub/data-map.md, 코드에서 자동)</small></h2>
+    <h2 id="map-h">저장하는 데이터 <small>(hub/data-map.md, 코드에서 자동)</small></h2>
     <div class="map-tools" role="group" aria-label="누구 것으로 거르기" id="map-filter"></div>
     <div id="map" class="md"></div>
     <p class="how">키 묶음마다 기능·누구 것·보관 기간·계정을 지울 때 어떻게 되는지. 새 키에 설명이 없으면 CI가 실패하고, 점검 데이터(<code>simcheck-</code>)는 점검이 끝날 때 지워집니다.</p>
@@ -260,6 +273,31 @@ document.getElementById("log").innerHTML = HUB.logs.map((e, i) => `
     <summary><span class="date">${esc(e.date)}</span><span class="role-tag" style="--role:${ROLE_COLOR[e.role] || "var(--accent)"}">${esc(e.role)}</span><span class="title">${inline(e.title)}</span></summary>
     <div class="md">${md(e.body)}</div>
   </details>`).join("") || `<div class="empty">아직 기록이 없습니다.</div>`;
+
+// 앱 전체구조: 흐름 그림(코드 블록)은 그대로, 제목은 제목으로, 나머지는 md().
+if (HUB.structure) {
+  const parts = [];
+  let chunk = [], pre = null;
+  const flush = () => { if (chunk.length) { parts.push(md(chunk.join("\n"))); chunk = []; } };
+  for (const raw of HUB.structure.replace(/<!--[\s\S]*?-->/g, "").split("\n")) {
+    if (raw.startsWith("```")) {
+      if (pre) { parts.push(`<pre class="flow">${esc(pre.join("\n"))}</pre>`); pre = null; }
+      else { flush(); pre = []; }
+      continue;
+    }
+    if (pre) { pre.push(raw); continue; }
+    const h = raw.match(/^(#{1,3}) (.*)$/);
+    if (h) {
+      flush();
+      if (h[1].length > 1) parts.push(h[1].length === 2 ? `<h3>${inline(h[2])}</h3>` : `<h4>${inline(h[2])}</h4>`);
+      continue;
+    }
+    chunk.push(raw);
+  }
+  flush();
+  document.getElementById("app-body").innerHTML = parts.join("");
+  document.getElementById("app-structure").hidden = false;
+}
 
 // 앱 구조: 데이터 지도. "누구 것"으로 거르고, 보는 방식(카드·표)을 고른다.
 if (HUB.dataMap) {
