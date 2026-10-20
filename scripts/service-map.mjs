@@ -1,0 +1,375 @@
+/**
+ * 서비스 지도: 웹 유입 창구 → 앱 틀 → 하단 탭 → 어디서나 열리는 것을 한 장의 구조도로,
+ * 칸을 누르면 그 화면의 사용 그림과 기능 설명·가는 길·코드 영역이 열리는 웹 페이지.
+ *
+ * - 그림과 글은 사용법(?)에서 가져온다: `src/lib/guide/content.ts`의 한국어 글(GUIDE_KO) + `public/guide/ko/*.webp`.
+ *   버튼 이름 {ui:키}는 `copy.ts` 한국어 문구로 채운다. 사용법을 고치면 지도도 다시 만들기만 하면 맞춰진다.
+ * - 웹 창구(Moyeo·Pingo·웹 앱)는 운영 주소를 폰 크기로 찍는다(`--no-capture`면 지난번 그림을 그대로 쓴다).
+ * - 코드 영역(화면 파일·API)은 `hub/STRUCTURE.md` 자동 부분에서 읽는다.
+ *
+ * 실행: node scripts/service-map.mjs [--no-capture]   → tmp/service-map/index.html + shots/
+ * 올리기: Artifact 도구로 tmp/service-map/index.html을 hub/README.md "서비스 지도" 주소(url)에, shots/는 files로.
+ */
+import fs from "node:fs";
+import path from "node:path";
+import { execFileSync } from "node:child_process";
+import { createJiti } from "jiti";
+
+const ROOT = process.cwd();
+const OUT_DIR = path.resolve("tmp/service-map");
+const SHOTS = path.join(OUT_DIR, "shots");
+const CAPTURE = !process.argv.includes("--no-capture");
+
+const jiti = createJiti(import.meta.url, { alias: { "@": path.resolve("src") } });
+const guide = await jiti.import(path.resolve("src/lib/guide/content.ts"));
+const { copy } = await jiti.import(path.resolve("src/lib/copy.ts"));
+const doorsLib = await jiti.import(path.resolve("src/lib/doors.ts"));
+const ko = copy.ko;
+const en = copy.en;
+const fill = (text) =>
+  text.replace(/\{ui:([a-zA-Z0-9]+)\}/g, (_, key) => (typeof ko[key] === "string" ? ko[key] : typeof en[key] === "string" ? en[key] : key));
+
+// ── 그림: 사용법 칸(guide) · 새로워진 점(wn) · 웹 창구 캡처(web) ─────────────────────────────
+fs.mkdirSync(SHOTS, { recursive: true });
+const usedFiles = new Set();
+function copyShot(src, name) {
+  const from = path.join(ROOT, src);
+  if (!fs.existsSync(from)) return null;
+  const rel = `shots/${name}`;
+  fs.copyFileSync(from, path.join(OUT_DIR, rel));
+  usedFiles.add(rel);
+  return rel;
+}
+/** 사용법 칸 하나 → 그림·제목·글. */
+function step(id) {
+  const section = guide.guideSection(guide.GUIDE_KO, id);
+  if (!section) throw new Error(`사용법 칸 없음: ${id}`);
+  return {
+    heading: fill(section.heading).replace(/^\d+\.\s*/, ""),
+    body: section.body.map(fill),
+    img: section.shot ? copyShot(`public/guide/ko/${section.shot}.webp`, `g-${section.shot}.webp`) : null,
+    from: `사용법 ${id}`,
+  };
+}
+const wn = (version, shot, heading, body) => ({
+  heading,
+  body: [body],
+  img: copyShot(`public/whats-new/${version}/ko/${shot}.webp`, `wn-${version}-${shot}.webp`),
+  from: `새로워진 점 ${version}`,
+});
+const extra = (src, name, heading, body) => ({ heading, body: [body], img: copyShot(src, name), from: "그림" });
+
+// 웹 창구는 운영 주소를 찍는다.
+const WEB_TARGETS = [
+  { name: "web-moyeo", url: "https://call.languagebank.net/" },
+  { name: "web-moyeo-app", url: "https://call.languagebank.net/?screen=rooms" },
+  { name: "web-pingo", url: "https://www.languagebank.net/door/random-chat" },
+  { name: "web-pingo-app", url: "https://www.languagebank.net/?door=random-chat&screen=people" },
+  { name: "web-app", url: "https://www.languagebank.net/" },
+  { name: "web-whatsnew", url: "https://www.languagebank.net/", keepSheet: true },
+];
+if (CAPTURE) {
+  const { chromium } = await import("playwright");
+  const browser = await chromium.launch();
+  for (const target of WEB_TARGETS) {
+    const context = await browser.newContext({
+      viewport: { width: 390, height: 844 },
+      deviceScaleFactor: 2,
+      locale: "ko-KR",
+      isMobile: true,
+      hasTouch: true,
+    });
+    await context.addInitScript((keepSheet) => {
+      try {
+        localStorage.setItem("appUiLocale", "ko");
+        localStorage.setItem("appTargetLanguage", "en");
+        if (!keepSheet) localStorage.setItem("whatsNewSeenVersion", "99.0");
+      } catch {}
+    }, Boolean(target.keepSheet));
+    const page = await context.newPage();
+    try {
+      await page.goto(target.url, { waitUntil: "networkidle", timeout: 45000 });
+      await page.waitForTimeout(2500);
+      await page.screenshot({ path: path.join(SHOTS, `${target.name}.jpg`), type: "jpeg", quality: 78 });
+      console.log(`찍음 ${target.name} ← ${target.url}`);
+    } catch (error) {
+      console.warn(`못 찍음 ${target.name}: ${String(error.message).split("\n")[0]}`);
+    }
+    await context.close();
+  }
+  await browser.close();
+}
+const web = (name, heading, body) => {
+  const rel = `shots/${name}.jpg`;
+  const ok = fs.existsSync(path.join(OUT_DIR, rel));
+  if (ok) usedFiles.add(rel);
+  return { heading, body: [body], img: ok ? rel : null, from: "운영 주소 캡처" };
+};
+
+// ── 코드 영역: hub/STRUCTURE.md 자동 부분 ──────────────────────────────────────────────
+const structure = fs.readFileSync(path.join(ROOT, "hub/STRUCTURE.md"), "utf8");
+const areas = {};
+for (const block of structure.split(/\n(?=### )/)) {
+  const head = block.match(/^### (.+?) `(\w+)`/);
+  if (!head) continue;
+  const line = (label) => (block.match(new RegExp(`^- ${label}: (.+)$`, "m")) || [, ""])[1];
+  const names = (text) => [...text.matchAll(/`([^`]+)`(\([^)]*\))?/g)].map((m) => m[1]);
+  areas[head[2]] = { title: head[1], screens: names(line("화면")), apis: names(line("API")), pages: names(line("웹 페이지")) };
+}
+
+// ── 창구 정보: src/lib/doors.ts ─────────────────────────────────────────────────────────
+const door = (id) => {
+  const d = doorsLib.doorById(id);
+  return { host: `${d.host}.languagebank.net`, name: d.name, headline: d.copy.ko.headline, features: d.copy.ko.features.map(([t, b]) => `${t} — ${b}`) };
+};
+const moyeo = door("group-call");
+const pingo = door("random-chat");
+
+// ── 칸(node) ───────────────────────────────────────────────────────────────────────────
+// tier: entry(웹·스토어) · shell(앱 틀) · tab(하단 탭, children) · anywhere(어디서나)
+// links: 누르면 같이 밝아지는 칸(들어가면 닿는 곳·같이 쓰는 곳)
+const nodes = [
+  // 유입 창구
+  {
+    id: "moyeo", tier: "entry", kind: "door", tone: "moyeo",
+    title: moyeo.name, sub: `단체통화 · ${moyeo.host}`, area: "web", status: "열림",
+    summary: `겉은 따로인 단체통화 서비스, 속은 같은 앱이에요. 소개 페이지 “${moyeo.headline}”에서 들어가면 앱이 창구 모드(첫 화면 Room, 하단 Room·대화·My)로 열려요.`,
+    points: [...moyeo.features, "계정·구독·기록은 본 앱과 하나. 검색어: 단체통화·외국인 음성 채팅"],
+    path: "call.languagebank.net → 지금 방 둘러보기 → Room 로비",
+    links: ["room", "talk", "my"],
+    steps: [web("web-moyeo", "소개 페이지", "검색으로 들어오는 첫 화면. 지금 열린 방 수를 60초마다 보여 줘요(사람·방 이름은 싣지 않음)."), web("web-moyeo-app", "창구 모드 앱", "같은 앱이 Moyeo 이름표를 달고 Room부터 열려요(하단 Room·대화·My). 처음 온 사람에게는 로그인 카드가 먼저 보여요.")],
+  },
+  {
+    id: "pingo", tier: "entry", kind: "door", tone: "pingo",
+    title: pingo.name, sub: `1:1 대화 · ${pingo.host}`, area: "web", status: "도메인 연결 대기",
+    summary: `랜덤채팅 검색으로 들어오는 1:1 대화 창구예요. 무작위 연결 없이, 지금 접속한 사람(내 말 배우는 사람 먼저)을 보고 골라 요청하고 상대가 수락하면 대화가 열려요.`,
+    points: [...pingo.features, "도메인 연결 전에는 www.languagebank.net/door/random-chat 으로 열림", "2단계 ‘본인인증 바로 연결’은 인증 업체 계약 뒤"],
+    path: "talk.languagebank.net → 지금 접속한 사람 보기 → 사람(🟢 지금 접속 중)",
+    links: ["people", "dm", "talk"],
+    steps: [web("web-pingo", "소개 페이지", "검색으로 들어오는 첫 화면. 지금 접속한 사람 수만 보여 줘요."), web("web-pingo-app", "창구 모드 앱", "Pingo 이름표로 사람 탭부터 열리고(하단 사람·대화·My), 로그인하면 ‘🟢 지금 접속 중’ 거르기로 보여요.")],
+  },
+  {
+    id: "webapp", tier: "entry", kind: "web",
+    title: "웹 앱", sub: "www.languagebank.net", area: "shell",
+    summary: "설치 없이 브라우저에서 쓰는 같은 앱이에요. main에 push하면 Vercel이 바로 배포해서, 앱 빌드 없이 가장 먼저 바뀌는 곳이에요.",
+    points: ["AI 기능(채팅·통화·영상·My)은 로그인 없이, 사람·Room·메시지는 로그인해야", "광고는 목록 자리에 AdSense만(Vercel 값 넣기 전엔 꺼짐)", "업데이트 뒤 첫 실행에 ‘새로워진 점’"],
+    path: "www.languagebank.net → 대화 탭",
+    links: ["shell", "talk"],
+    steps: [web("web-app", "첫 화면", "하단 탭 대화부터 열려요. 맨 위가 AI 튜터 줄, 로그인하면 그 아래 단체방·1:1이 보여요.")],
+  },
+  {
+    id: "invite", tier: "entry", kind: "web",
+    title: "친구 초대 링크", sub: "languagebank.net/invite", area: "invite",
+    summary: "사람 탭의 ➕ 친구 초대로 만든 링크예요. 받은 사람이 앱을 열면 초대 환영 화면이 뜨고, 일주일 안에 이틀 이상 쓰면 둘 다 포인트를 받아요.",
+    points: ["데려온 친구가 늘면 플러스·프리미엄 기간 보상", "보상 진행은 My의 🎁 초대 보상 카드에서"],
+    path: "사람 → ➕ 친구 초대 → 링크 공유 → (받은 사람) 앱 열기 → 초대 환영",
+    links: ["people", "shell"],
+    steps: [step("people.invite"), step("people.rewards")],
+  },
+  {
+    id: "stores", tier: "entry", kind: "store",
+    title: "스토어 앱", sub: "Google Play · App Store(TestFlight)", area: "shell",
+    summary: "안드로이드는 Play 2.68 공개, 2.70은 빌드·내부 테스트 대기예요. iOS는 TestFlight 2.70 — 사람 기능(대화·사람·Room·메시지) 없는 1차라 하단이 채팅·통화·영상 학습·My예요.",
+    points: ["앱 ID com.yourname.englishchat (바꿀 수 없음)", "Play 업로드·서명은 사람이, Claude는 파일과 PR까지", "광고(AdMob)는 무료 안드로이드만"],
+    path: "Play/App Store 설치 → 앱 열기",
+    links: ["shell"],
+    steps: [extra("store-shots/feature/featureGraphic.png", "store-feature.png", "Play 대표 그림", "스토어 등록정보의 대표 그림이에요.")],
+  },
+
+  // 앱 틀
+  {
+    id: "shell", tier: "shell",
+    title: "상단바 · 앱 틀", sub: "언어 · 포인트 · ? 사용법 · 💬 의견", area: "shell",
+    summary: "어느 탭에서나 위에 있는 줄이에요. 학습 언어·화면 언어를 바꾸고, 포인트/플랜을 누르면 결제 화면, ?는 지금 탭의 사용법 칸, 💬는 의견 보내기예요. 업데이트 뒤 첫 실행에 ‘새로워진 점’이 그림과 함께 한 번 떠요.",
+    points: ["앱 열기 → AI 동의(iOS만) → 새로워진 점 → 초대 환영(초대로 왔을 때)", "학습 언어·화면 언어 각 14개", "업데이트 배너: 2.67부터 폰이 Play에 직접 물어 봄"],
+    path: "모든 화면 맨 위",
+    links: ["billing", "feedback"],
+    steps: [web("web-whatsnew", "새로워진 점", "업데이트하고 처음 열면 바뀐 기능을 그림으로 보여 주고 ‘써보기’로 그 화면에 가요."), wn("2.68", "account", "계정", "로그인하면 사람·Room·메시지를 쓸 수 있어요.")],
+  },
+  {
+    id: "billing", tier: "shell",
+    title: "결제 · 포인트 · 광고", sub: "무료 · 라이트 · 플러스 · 프리미엄", area: "billing",
+    summary: "상단 포인트/플랜이나 한도 안내에서 열리는 결제 화면이에요. 요금마다 하루 채팅 수와 자유 통화 분이 다르고, 넘으면 구매 포인트를 써요. 광고는 무료 사용자에게만 붙어요.",
+    points: ["채팅 하루: 무료 7 / 라이트 30 / 플러스 50 / 프리미엄 100", "자유 통화 하루: 7 / 10 / 15분(오늘의 팩 별도, 이월 없음)", "8,900원만 이달의 영상 전체·추가 팩", "광고: 전면은 끝나는 자리에만, 채팅·통화·Room 안에는 없음"],
+    path: "상단 포인트/플랜 → 결제 화면",
+    links: ["shell", "chat", "call"],
+    steps: [],
+  },
+  {
+    id: "feedback", tier: "shell",
+    title: "의견 보내기", sub: "💬 → 의견함 → 반영 소식", area: "feedback",
+    summary: "상단 💬로 글과 사진을 보내면 의견함에 모이고, 사용자가 ‘반영’으로 고른 것만 고쳐요. 고쳐지면 보낸 사람에게 전·후 그림으로 반영 소식이 가요.",
+    points: ["보낸 의견은 90일 보관(학습자 문장 중 유일한 예외)", "같은 의견은 한 번에 묶어 알림"],
+    path: "상단 💬",
+    links: ["shell"],
+    steps: [],
+  },
+
+  // 하단 탭
+  {
+    id: "talk", tier: "tab", tab: "대화",
+    title: "대화", sub: "첫 화면 · AI 튜터 줄 + 사람과의 대화", area: "talk",
+    summary: "앱의 첫 화면이에요. 맨 위에 AI 튜터 줄이 고정되고(줄 → AI 채팅, 📞 → AI 통화), 아래로 단체방과 1:1 메시지가 이어져요.",
+    points: ["채팅·통화를 열면 위에 ‘‹ 대화’, 하단은 대화가 켜진 채", "안 읽은 메시지 수 표시"],
+    path: "하단 대화",
+    links: ["chat", "call", "dm", "groups"],
+    steps: [step("talk.list")],
+    children: ["chat", "call", "dm", "groups"],
+  },
+  {
+    id: "chat", tier: "child", parent: "talk",
+    title: "AI 채팅", sub: "고쳐 주는 튜터", area: "chat",
+    summary: "입력창 하나로 대화해요. 배우는 언어로 쓰면 틀린 점을 고쳐 주며 이어가고, 편한 말로 쓰면 튜터는 배우는 언어로 답하고 ‘표현 보기’로 표현 카드를 불러와요. 수준(A1·B2)은 보여 주지 않아요.",
+    points: ["채팅 차감은 보낸 메시지 수(언어 상관없음)", "문장마다 ‘분석’ → 문장분석 시트"],
+    path: "대화 → AI 튜터 줄",
+    links: ["sheet", "learner", "billing"],
+    steps: ["chat.next", "chat.talk", "chat.stuck", "chat.meaning", "chat.analyse", "chat.words", "chat.menu", "chat.history"].map(step),
+  },
+  {
+    id: "call", tier: "child", parent: "talk",
+    title: "AI 통화 · 오늘의 팩", sub: "말하고 돌아보기", area: "call",
+    summary: "튜터와 소리로 말해요. 말이 끝나면 받아쓰고 튜터가 이어 말하며, 통화가 끝나면 돌아보기에서 내 문장을 고쳐 보고 다시 말해 봐요. 오늘의 팩은 상황 하나를 짧게 연습하는 묶음이에요.",
+    points: ["자유 통화 하루 7 / 10 / 15분", "무료 오늘의 팩 7일에 2번", "통화 안에는 광고 없음, 끝나면 전면 광고"],
+    path: "대화 → AI 튜터 📞",
+    links: ["learner", "sheet", "billing"],
+    steps: ["call.pack", "call.talk", "call.review", "call.ownline"].map(step),
+  },
+  {
+    id: "dm", tier: "child", parent: "talk",
+    title: "1:1 메시지", sub: "요청 → 수락 · 📞 영상통화", area: "talk",
+    summary: "사람 탭이나 Room에서 메시지를 요청하고 상대가 수락하면 열려요. 남의 줄을 누르면 번역, 낱말을 골라 ‘무슨 뜻이에요?’로 물을 수 있어요. 📞는 둘만의 비공개 Room(카메라는 기본 꺼짐).",
+    points: ["대화는 마지막 메시지로부터 30일 보관", "차단·신고 바로"],
+    path: "사람 → 프로필 → 메시지 / 대화 목록의 1:1 줄",
+    links: ["people", "room", "pingo"],
+    steps: [step("messages.dm"), extra("public/guide/ko/rooms-dm.webp", "g-rooms-dm.webp", "1:1 대화 화면", "줄을 눌러 번역하고, 묻고 싶은 낱말을 골라 물어요."), wn("2.68", "dm", "메시지 요청", "처음엔 요청으로 가고, 상대가 받으면 대화가 열려요.")],
+  },
+  {
+    id: "groups", tier: "child", parent: "talk",
+    title: "단체방 · 팀", sub: "여럿이 · 워크스페이스", area: "talk",
+    summary: "여럿이 쓰는 대화방이에요. 팀이면 ‘대화 | 워크스페이스’로 나뉘고, 📞 단체방 통화는 비공개 Room으로 열려요. Room에서 👥로 그 방 사람들과 단체방을 만들 수도 있어요.",
+    points: ["러닝메이트·팀 줄은 My에서도 열림"],
+    path: "대화 → 단체방 / + 단체방",
+    links: ["room", "my"],
+    steps: [step("messages.groups"), wn("2.69", "team", "팀 워크스페이스", "팀이 같이 모은 표현과 할 일을 한곳에서 봐요.")],
+  },
+  {
+    id: "video", tier: "tab", tab: "영상 학습",
+    title: "영상 학습", sub: "이달의 영상 · 자막 · 문장 바", area: "video",
+    summary: "이달의 영상을 고르거나 링크를 넣으면 배우는 언어 자막이 깔리고, 지금 문장이 아래 문장 바에 떠요. 문장을 누르면 문장분석, 점을 끌어 부분만 골라 물을 수 있어요.",
+    points: ["iOS는 라이브러리만", "영상을 몇 분 보고 나오면 전면 광고(무료 안드로이드)"],
+    path: "하단 영상 학습",
+    links: ["sheet", "learner"],
+    steps: ["video.library", "video.subtitles", "video.bar", "video.ask"].map(step),
+  },
+  {
+    id: "people", tier: "tab", tab: "사람",
+    title: "사람", sub: "프로필 목록 · 게시판 · 친구 초대", area: "people",
+    summary: "배우는 말과 쓰는 말이 맞는 사람을 찾아요. 칩으로 [사람 | 게시판]을 바꾸고, 프로필 시트에서 팔로우·메시지·메이트 신청·차단·신고를 해요.",
+    points: ["로그인해야 보임", "Pingo로 오면 ‘🟢 지금 접속 중’ 거르기로 열림"],
+    path: "하단 사람",
+    links: ["dm", "invite", "pingo"],
+    steps: [step("people.find"), step("people.board")],
+    children: ["board", "rewards"],
+  },
+  {
+    id: "board", tier: "child", parent: "people",
+    title: "게시판", sub: "글 · 사진 1장 · 답글", area: "people",
+    summary: "학습자끼리 글과 사진을 올리고 댓글·답글(한 단계)을 달아요.",
+    points: ["맨 위 글을 지우면 답글도 같이"],
+    path: "사람 → 게시판 칩",
+    links: ["people"],
+    steps: [step("people.board"), wn("2.69", "board", "게시판", "새로 생긴 게시판이에요.")],
+  },
+  {
+    id: "rewards", tier: "child", parent: "people",
+    title: "친구 초대 · 보상", sub: "➕ 초대 · 🎁 보상", area: "invite",
+    summary: "초대 링크를 보내고, 친구가 쓰기 시작하면 둘 다 포인트를 받아요. 진행은 보상 카드에 숫자로 보여요.",
+    points: [],
+    path: "사람 → ➕ 친구 초대 / My → 🎁 초대 보상",
+    links: ["invite", "my"],
+    steps: [step("people.invite"), step("people.rewards")],
+  },
+  {
+    id: "room", tier: "tab", tab: "Room",
+    title: "Room", sub: "말하는 방 · 최대 8명", area: "room",
+    summary: "로비에서 방을 골라 들어가요. 자리 8칸에 앉으면 말하고, 아니면 듣거나 댓글만 해도 돼요. 말은 자막으로 바로 뜨고(말 시작하면 ‘…’ 말풍선), 줄을 눌러 번역·인용·묻기를 해요.",
+    points: ["보는 방식: 대화 / 사람별 / 채팅 위주 / 통화 위주", "방장이 자리를 올리고 내림", "Moyeo로 오면 여기가 첫 화면"],
+    path: "하단 Room → 방 카드",
+    links: ["moyeo", "groups", "dm"],
+    steps: [extra("public/guide/ko/rooms-room.webp", "g-rooms-room.webp", "방 안", "자리·듣는 줄·자막·댓글이 한 화면에 있어요."), ...["room.find", "room.layouts", "room.quote", "room.stuck", "room.host"].map(step)],
+  },
+  {
+    id: "my", tier: "tab", tab: "My",
+    title: "My", sub: "오늘 해볼 것 · 자라는 중 · 노트", area: "my",
+    summary: "학습 상태를 누적 기록으로 보여 주는 곳이에요. 맨 위 계정 카드와 초대 보상, 오늘 해볼 것, 여섯 부분이 자라는 모습, 내 표현과 노트가 이어져요. 지도가 없으면 체크 3질문으로 시작해요.",
+    points: ["수준(레벨)은 보여 주지 않음", "배우는 언어마다 따로 저장"],
+    path: "하단 My",
+    links: ["learner", "groups", "rewards"],
+    steps: ["my.start", "my.next", "my.ask"].map(step),
+    children: ["growth", "notes"],
+  },
+  {
+    id: "growth", tier: "child", parent: "my",
+    title: "자라는 중 · 지도", sub: "망 | 그래프 | 지도", area: "my",
+    summary: "여섯 부분이 쓸수록 커지고 줄지 않아요. 보는 방식을 망·그래프·지도 중에 고르고, 부분을 누르면 키운 표현과 ‘키우기’ 연습, 지도에서는 주제별 미션을 해요.",
+    points: ["고른 보기는 기기에 기억"],
+    path: "My → 자라는 중",
+    links: ["learner", "chat", "call"],
+    steps: ["my.growth", "my.graph", "my.element", "my.map"].map(step),
+  },
+  {
+    id: "notes", tier: "child", parent: "my",
+    title: "노트 · 단어장", sub: "장 8 × 주제 3", area: "my",
+    summary: "내 표현·단어·문장분석에서 물은 것이 8개 장 주제별로 모여요. 검색하고, 주제마다 연습하고, 단어장 줄을 누르면 단어장이 열려요.",
+    points: ["단어장은 하단 탭에서 빠지고 노트 안으로(2026-10-19)"],
+    path: "My → 노트",
+    links: ["sheet", "learner"],
+    steps: ["my.notes", "words.find", "words.saved", "words.learn"].map(step),
+  },
+
+  // 어디서나
+  {
+    id: "sheet", tier: "anywhere",
+    title: "문장분석 · 표현 시트", sub: "채팅 · 통화 · 영상 · 노트에서", area: "sheet",
+    summary: "어느 화면의 문장이든 ‘분석’을 누르면 아래에서 올라오는 시트예요. 문장 구조와 뜻, 점을 끌어 고른 부분에 대한 질문, 단어 뜻과 듣기가 있어요.",
+    points: ["AI 도움 하루 한도: 무료 20 · 라이트 100 · 플러스 150 · 프리미엄 300"],
+    path: "문장 → 분석",
+    links: ["chat", "call", "video", "notes"],
+    steps: ["chat.analyse", "chat.meaning", "video.ask", "chat.words"].map(step),
+  },
+  {
+    id: "learner", tier: "anywhere",
+    title: "오늘 해볼 것 · 표현 장부", sub: "여러 탭이 같이 씀", area: "learner",
+    summary: "쌓인 기록으로 지금 할 것 하나를 권하는 카드와, 모든 탭에서 만난 표현이 쌓이는 장부예요. 채팅·통화 첫 화면과 My 맨 위에 같이 나와서, 바꾸면 세 곳을 다 봐야 해요.",
+    points: ["표현의 세 상태: 숙지 / 배운 것 / 알아야 할 것", "학습자 문장은 서버에 저장하지 않음(표현만)"],
+    path: "채팅·통화 첫 화면 / My 맨 위",
+    links: ["chat", "call", "my", "growth"],
+    steps: [step("my.next"), step("chat.next"), extra("public/guide/ko/ledger.webp", "g-ledger.webp", "표현 장부", "모든 탭에서 만난 표현이 상태별로 쌓여요.")],
+  },
+];
+
+// 확인: links·children이 실제 칸을 가리키는지.
+const ids = new Set(nodes.map((n) => n.id));
+for (const n of nodes) for (const ref of [...(n.links || []), ...(n.children || [])]) if (!ids.has(ref)) throw new Error(`${n.id} → 없는 칸 ${ref}`);
+for (const n of nodes) {
+  n.steps = n.steps.filter(Boolean);
+  const area = areas[n.area];
+  n.code = area ? { id: n.area, title: area.title, screens: area.screens, apis: area.apis, pages: area.pages } : null;
+}
+
+// 지난 실행에서 남은, 이번에 안 쓰는 그림은 지운다(올릴 묶음을 가볍게).
+for (const file of fs.readdirSync(SHOTS)) if (!usedFiles.has(`shots/${file}`)) fs.rmSync(path.join(SHOTS, file));
+
+let commit = "";
+try {
+  commit = execFileSync("git", ["log", "-1", "--format=%h %cd", "--date=format:%Y-%m-%d"], { cwd: ROOT, encoding: "utf8" }).trim();
+} catch {}
+let apiCount = 0;
+for (const a of Object.values(areas)) apiCount += a.apis.length;
+
+const data = { nodes, commit, apiCount, builtAt: new Date().toISOString().slice(0, 10) };
+const template = fs.readFileSync(path.join(ROOT, "scripts/service-map.template.html"), "utf8");
+fs.writeFileSync(path.join(OUT_DIR, "index.html"), template.replace("/*MAP_DATA*/null", JSON.stringify(data).replace(/</g, "\\u003c")));
+const bytes = [...usedFiles].reduce((sum, rel) => sum + fs.statSync(path.join(OUT_DIR, rel)).size, 0);
+console.log(`서비스 지도 → tmp/service-map/index.html (칸 ${nodes.length}, 그림 ${usedFiles.size}장 ${(bytes / 1e6).toFixed(1)}MB)`);
+fs.writeFileSync(path.join(OUT_DIR, "files.json"), JSON.stringify(Object.fromEntries([...usedFiles].sort().map((rel) => [rel, path.join(OUT_DIR, rel)])), null, 1));

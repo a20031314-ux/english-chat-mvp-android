@@ -1,0 +1,300 @@
+<title>languagebank 서비스 지도</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+/* 레이아웃: 위에서 아래로 흐르는 층(창구 → 앱 틀 → 하단 탭 → 어디서나), 오른쪽은 고른 칸의 설명 패널(폰에서는 아래 시트).
+   앱과 같은 검정 바탕 하나로 간다(앱에 밝은 테마가 없음). 창구 색만 그 서비스의 색. */
+:root {
+  --canvas: #060607;
+  --surface: #111113;
+  --raised: #19191c;
+  --sunk: #0b0b0c;
+  --line: rgba(255, 255, 255, 0.10);
+  --line-strong: rgba(255, 255, 255, 0.26);
+  --ink: #f2f1ec;
+  --mute: #9ba0a9;
+  --faint: #6b7079;
+  --platinum: #e8e8e4;
+  --moyeo: #ff6f4f;
+  --pingo: #3fd9b1;
+  --good: #34d399;
+  --warn: #fbbf24;
+  --sans: "IBM Plex Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { background: var(--canvas); color: var(--ink); }
+body { font-family: var(--sans); font-size: 15px; line-height: 1.55; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--platinum); outline-offset: 2px; }
+
+.wrap {
+  max-width: 1440px; margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 28px 64px;
+}
+header.top { display: grid; gap: 10px; margin-bottom: 26px; }
+.eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--mute); }
+h1 { margin: 0; font-size: clamp(26px, 4vw, 40px); line-height: 1.2; font-weight: 700; letter-spacing: -0.02em; text-wrap: balance; }
+h1 .thin { color: var(--mute); font-weight: 500; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px 16px; font-family: var(--mono); font-size: 12px; color: var(--faint); font-variant-numeric: tabular-nums; }
+.hint { color: var(--mute); font-size: 14px; max-width: 64ch; margin: 0; }
+
+.layout { display: grid; grid-template-columns: minmax(0, 1fr) 460px; gap: 28px; align-items: start; }
+
+/* ── 구조도 ── */
+.map { display: grid; gap: 0; min-width: 0; }
+.tier { display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 16px; align-items: start; }
+.tier-label { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); padding-top: 12px; }
+.tier-label b { display: block; font-size: 14px; font-weight: 600; }
+.tier-label span { font-family: var(--mono); font-size: 11px; color: var(--faint); letter-spacing: 0.04em; }
+.joint { display: grid; grid-template-columns: 108px minmax(0, 1fr); gap: 16px; }
+.joint div { display: flex; align-items: center; gap: 10px; padding: 8px 0 8px 22px; color: var(--faint); font-size: 12.5px; font-family: var(--mono); }
+.joint div::before { content: ""; width: 1px; height: 30px; background: linear-gradient(var(--line-strong), transparent); }
+
+.row { display: grid; gap: 10px; grid-template-columns: repeat(auto-fill, minmax(176px, 1fr)); }
+.node {
+  position: relative; display: grid; gap: 3px; text-align: left; cursor: pointer;
+  padding: 12px 14px 12px 14px; border-radius: 12px;
+  background: var(--surface); border: 1px solid var(--line);
+  transition: border-color .15s, background .15s, transform .15s;
+}
+.node:hover { border-color: var(--line-strong); background: var(--raised); }
+.node .t { font-weight: 600; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+.node .s { font-size: 12.5px; color: var(--mute); line-height: 1.4; }
+.node .n { font-family: var(--mono); font-size: 11px; color: var(--faint); margin-top: 4px; }
+.dot { width: 9px; height: 9px; border-radius: 50%; background: var(--platinum); flex: none; }
+.node[data-tone="moyeo"] .dot { background: var(--moyeo); }
+.node[data-tone="pingo"] .dot { background: var(--pingo); }
+.node[data-kind="web"] .dot, .node[data-kind="store"] .dot { background: transparent; border: 1.5px solid var(--mute); }
+.pill { font-family: var(--mono); font-size: 10.5px; font-weight: 500; padding: 1px 7px; border-radius: 99px; border: 1px solid currentColor; white-space: nowrap; }
+.pill.ok { color: var(--good); }
+.pill.wait { color: var(--warn); }
+.node.sel { border-color: var(--platinum); background: var(--raised); box-shadow: 0 0 0 1px var(--platinum) inset; }
+.node.linked { border-style: dashed; border-color: var(--line-strong); }
+.node.linked .n::after { content: " · 이어짐"; color: var(--mute); }
+
+/* 하단 탭 묶음 */
+.tabs { display: grid; gap: 10px; }
+.tabcol { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 10px; align-items: start; padding: 8px; border-radius: 16px; background: var(--sunk); border: 1px solid var(--line); min-width: 0; }
+.tabhead { display: grid; gap: 6px; }
+.tabcol .node.tab { padding-block: 14px; }
+@media (max-width: 380px) { .children { grid-template-columns: minmax(0, 1fr); } }
+.tabcol .node.tab .t { font-size: 17px; }
+.tabbar-idx { font-family: var(--mono); font-size: 10.5px; color: var(--faint); padding: 0 6px; }
+.children { display: grid; gap: 6px; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); padding-left: 10px; border-left: 1px solid var(--line); align-self: stretch; align-content: start; }
+.children:empty { display: none; }
+.children .node { padding: 9px 11px; border-radius: 10px; }
+.children .node .t { font-size: 14px; }
+.ios-note { margin: 10px 0 0; font-size: 12.5px; color: var(--faint); }
+.ios-note b { color: var(--mute); font-weight: 500; }
+
+/* ── 설명 패널 ── */
+.panel {
+  position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px);
+  max-height: calc(100vh - 32px); overflow: auto;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+  overscroll-behavior: contain;
+}
+.panel-in { display: grid; gap: 16px; padding: 20px 20px 24px; }
+.panel-head { display: grid; gap: 6px; }
+.panel-head h2 { margin: 0; font-size: 24px; line-height: 1.25; letter-spacing: -0.01em; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.panel-head .s { color: var(--mute); font-size: 13.5px; }
+.close { display: none; }
+.summary { margin: 0; font-size: 15px; line-height: 1.65; }
+.route { display: grid; gap: 4px; padding: 10px 12px; border-radius: 10px; background: var(--sunk); border: 1px solid var(--line); }
+.route span { font-family: var(--mono); font-size: 10.5px; color: var(--faint); letter-spacing: 0.06em; text-transform: uppercase; }
+.route code { font-family: var(--mono); font-size: 12.5px; color: var(--ink); white-space: normal; overflow-wrap: anywhere; }
+.points { margin: 0; padding-left: 18px; display: grid; gap: 4px; color: var(--mute); font-size: 13.5px; }
+.section-t { font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: var(--faint); margin: 0; display: flex; justify-content: space-between; }
+
+.gallery { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(240px, 82%); gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 6px; }
+.gallery::-webkit-scrollbar { height: 6px; }
+.gallery::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 3px; }
+figure { margin: 0; scroll-snap-align: start; display: grid; gap: 8px; align-content: start; min-width: 0; }
+.shot { background: var(--sunk); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; display: grid; place-items: center; max-height: 470px; }
+.shot img { display: block; width: 100%; height: auto; max-height: 470px; object-fit: contain; cursor: zoom-in; }
+.shot.none { height: 90px; color: var(--faint); font-size: 12.5px; }
+figcaption { display: grid; gap: 3px; }
+figcaption b { font-size: 14px; }
+figcaption p { margin: 0; font-size: 13px; color: var(--mute); line-height: 1.55; }
+figcaption small { font-family: var(--mono); font-size: 10.5px; color: var(--faint); }
+.noshots { margin: 0; padding: 14px; border: 1px dashed var(--line-strong); border-radius: 12px; color: var(--faint); font-size: 13px; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { cursor: pointer; padding: 5px 11px; border-radius: 99px; border: 1px solid var(--line-strong); background: transparent; font-size: 13px; }
+.chip:hover { background: var(--raised); }
+
+details.code { border: 1px solid var(--line); border-radius: 12px; background: var(--sunk); }
+details.code summary { cursor: pointer; padding: 10px 12px; font-size: 13px; color: var(--mute); list-style-position: inside; }
+details.code .body { padding: 0 12px 12px; display: grid; gap: 8px; }
+details.code .k { font-family: var(--mono); font-size: 10.5px; color: var(--faint); text-transform: uppercase; letter-spacing: 0.06em; }
+details.code .v { font-family: var(--mono); font-size: 12px; color: var(--ink); line-height: 1.7; overflow-wrap: anywhere; }
+
+/* 그림 크게 보기 */
+.zoom { position: fixed; inset: 0; z-index: 50; background: rgba(0,0,0,.88); display: grid; place-items: center;
+  padding: calc(env(safe-area-inset-top, 0px) + 16px) max(16px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 16px) max(16px, env(safe-area-inset-left, 0px)); cursor: zoom-out; }
+.zoom img { max-width: 100%; max-height: 100%; border-radius: 12px; }
+.backdrop { display: none; }
+
+@media (max-width: 980px) {
+  .layout { grid-template-columns: minmax(0, 1fr); }
+  .panel {
+    position: fixed; left: 0; right: 0; bottom: 0; top: auto; z-index: 40;
+    max-height: 88vh; border-radius: 20px 20px 0 0; border-bottom: 0;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    padding-left: env(safe-area-inset-left, 0px); padding-right: env(safe-area-inset-right, 0px);
+    transform: translateY(105%); transition: transform .25s ease;
+  }
+  body.open .panel { transform: none; }
+  .backdrop { display: block; position: fixed; inset: 0; z-index: 39; background: rgba(0,0,0,.55); opacity: 0; pointer-events: none; transition: opacity .2s; }
+  body.open .backdrop { opacity: 1; pointer-events: auto; }
+  .close { display: inline-flex; position: sticky; top: 0; justify-self: end; margin: -6px -6px -40px 0; z-index: 2;
+    width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--line-strong); background: var(--raised); align-items: center; justify-content: center; cursor: pointer; font-size: 18px; }
+  .panel-in::before { content: ""; justify-self: center; width: 40px; height: 4px; border-radius: 2px; background: var(--line-strong); margin-bottom: -6px; }
+}
+@media (max-width: 720px) {
+  .tier, .joint { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+  .tier-label { position: static; padding-top: 0; display: flex; align-items: baseline; gap: 8px; }
+  .joint div { padding-left: 12px; }
+  .tabcol { grid-template-columns: minmax(0, 1fr); }
+  .children { grid-template-columns: repeat(2, minmax(0, 1fr)); border-left: 0; padding-left: 0; }
+  .row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .gallery { grid-auto-columns: minmax(220px, 86%); }
+}
+@media (max-width: 380px) { .row { grid-template-columns: minmax(0, 1fr); } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="wrap">
+  <header class="top">
+    <div class="eyebrow">languagebank · 서비스 지도</div>
+    <h1>겉은 여러 창구, <span class="thin">속은 하나의 앱</span></h1>
+    <p class="hint">칸을 누르면 그 화면의 사용 그림과 기능 설명, 가는 길, 코드 영역이 열려요. 점선 칸은 고른 칸과 이어진 곳이에요.</p>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <div class="layout">
+    <main class="map" id="map" aria-label="서비스 구조도"></main>
+    <aside class="panel" id="panel" aria-live="polite"></aside>
+  </div>
+</div>
+<div class="backdrop" id="backdrop"></div>
+
+<script>
+const DATA = /*MAP_DATA*/null;
+const byId = Object.fromEntries(DATA.nodes.map((n) => [n.id, n]));
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const TIER_NAME = { entry: "유입 창구", shell: "앱 틀", tab: "하단 탭", child: "하단 탭 안", anywhere: "어디서나" };
+
+document.getElementById("meta").innerHTML = [
+  `main ${esc(DATA.commit)}`,
+  `만든 날 ${esc(DATA.builtAt)}`,
+  `칸 ${DATA.nodes.length}`,
+  `그림 ${DATA.nodes.reduce((s, n) => s + n.steps.filter((x) => x.img).length, 0)}`,
+  `API ${DATA.apiCount}`,
+].map((t) => `<span>${t}</span>`).join("");
+
+function statusPill(n) {
+  if (!n.status) return "";
+  return `<span class="pill ${n.status === "열림" ? "ok" : "wait"}">${esc(n.status)}</span>`;
+}
+function nodeButton(n, extraClass = "") {
+  const shots = n.steps.filter((s) => s.img).length;
+  return `<button type="button" class="node ${extraClass}" data-id="${n.id}" data-tone="${n.tone || ""}" data-kind="${n.kind || ""}">
+    <span class="t"><span class="dot"></span>${esc(n.title)}${statusPill(n)}</span>
+    <span class="s">${esc(n.sub)}</span>
+    <span class="n">${shots ? `그림 ${shots}` : "설명만"}</span>
+  </button>`;
+}
+const tier = (label, sub, inner) => `<section class="tier"><div class="tier-label"><b>${label}</b><span>${sub}</span></div><div>${inner}</div></section>`;
+const joint = (text) => `<div class="joint"><span></span><div>${esc(text)}</div></div>`;
+const of = (t) => DATA.nodes.filter((n) => n.tier === t);
+
+document.getElementById("map").innerHTML = [
+  tier("웹 · 스토어", "ENTRY", `<div class="row">${of("entry").map((n) => nodeButton(n)).join("")}</div>`),
+  joint("어디로 들어와도 같은 계정 · 구독 · 기록"),
+  tier("앱 틀", "SHELL", `<div class="row">${of("shell").map((n) => nodeButton(n)).join("")}</div>`),
+  joint("하단 탭 다섯 개 · 첫 화면은 대화"),
+  tier("하단 탭", "TABS", `<div class="tabs">${of("tab").map((t, i) => `<div class="tabcol">
+      <div class="tabhead"><span class="tabbar-idx">하단 탭 ${i + 1}</span>${nodeButton(t, "tab")}</div>
+      <div class="children">${(t.children || []).map((c) => nodeButton(byId[c])).join("")}</div>
+    </div>`).join("")}</div>
+    <p class="ios-note"><b>iOS 1차(사람 기능 꺼짐):</b> 하단은 채팅 · 통화 · 영상 학습 · My. 대화 목록 · 사람 · Room · 메시지는 없어요.</p>`),
+  joint("문장 → 분석, 기록은 모든 탭이 같이"),
+  tier("어디서나", "SHARED", `<div class="row">${of("anywhere").map((n) => nodeButton(n)).join("")}</div>`),
+].join("");
+
+const panel = document.getElementById("panel");
+const isSheet = () => matchMedia("(max-width: 980px)").matches;
+
+function figure(s) {
+  const img = s.img
+    ? `<div class="shot"><img src="${esc(s.img)}" alt="${esc(s.heading)}" loading="lazy"></div>`
+    : `<div class="shot none">그림 없음</div>`;
+  return `<figure>${img}<figcaption><b>${esc(s.heading)}</b>${s.body.map((p) => `<p>${esc(p)}</p>`).join("")}<small>${esc(s.from)}</small></figcaption></figure>`;
+}
+function codeBlock(c) {
+  if (!c) return "";
+  const line = (k, list) => (list && list.length ? `<div><div class="k">${k}</div><div class="v">${list.map(esc).join(" · ")}</div></div>` : "");
+  return `<details class="code"><summary>코드 영역 · <code>${esc(c.id)}</code> ${esc(c.title)}</summary><div class="body">
+    ${line("화면 src/components/", c.screens)}${line("API src/app/api/", c.apis)}${line("웹 페이지", c.pages)}
+  </div></details>`;
+}
+
+function select(id, { open = true, scroll = false } = {}) {
+  const n = byId[id];
+  if (!n) return;
+  document.querySelectorAll(".node").forEach((el) => {
+    el.classList.toggle("sel", el.dataset.id === id);
+    el.classList.toggle("linked", (n.links || []).includes(el.dataset.id));
+  });
+  const parent = n.parent ? byId[n.parent] : null;
+  const withImg = n.steps.filter((s) => s.img).length;
+  panel.innerHTML = `<div class="panel-in">
+    <button type="button" class="close" id="close" aria-label="닫기">×</button>
+    <div class="panel-head">
+      <div class="eyebrow">${esc(TIER_NAME[n.tier])}${parent ? ` · ${esc(parent.title)}` : ""}</div>
+      <h2>${esc(n.title)} ${statusPill(n)}</h2>
+      <div class="s">${esc(n.sub)}</div>
+    </div>
+    <p class="summary">${esc(n.summary)}</p>
+    <div class="route"><span>가는 길</span><code>${esc(n.path)}</code></div>
+    ${n.steps.length ? `<p class="section-t"><span>사용 화면</span><span>${withImg}장 · 옆으로 넘겨 보기</span></p><div class="gallery">${n.steps.map(figure).join("")}</div>`
+      : `<p class="noshots">아직 이 화면의 사용 그림이 없어요. 사용법(?) 칸이 생기면 다시 만들 때 들어와요.</p>`}
+    ${n.points && n.points.length ? `<p class="section-t"><span>알아 둘 것</span></p><ul class="points">${n.points.map((p) => `<li>${esc(p)}</li>`).join("")}</ul>` : ""}
+    ${n.links && n.links.length ? `<p class="section-t"><span>이어진 칸</span></p><div class="chips">${n.links.map((l) => `<button type="button" class="chip" data-go="${l}">${esc(byId[l].title)}</button>`).join("")}</div>` : ""}
+    ${codeBlock(n.code)}
+  </div>`;
+  panel.scrollTop = 0;
+  panel.querySelectorAll("[data-go]").forEach((b) => b.addEventListener("click", () => select(b.dataset.go, { open: true, scroll: !isSheet() })));
+  panel.querySelector("#close").addEventListener("click", closeSheet);
+  panel.querySelectorAll(".shot img").forEach((img) => img.addEventListener("click", () => zoom(img.src)));
+  if (open && isSheet()) document.body.classList.add("open");
+  if (scroll) document.querySelector(`.node[data-id="${id}"]`)?.scrollIntoView({ block: "center", behavior: "smooth" });
+  try { history.replaceState(null, "", `#${id}`); } catch {}
+}
+function closeSheet() { document.body.classList.remove("open"); }
+function zoom(src) {
+  const z = document.createElement("div");
+  z.className = "zoom";
+  z.innerHTML = `<img src="${esc(src)}" alt="">`;
+  z.addEventListener("click", () => z.remove());
+  document.body.appendChild(z);
+}
+document.getElementById("backdrop").addEventListener("click", closeSheet);
+document.addEventListener("keydown", (e) => {
+  if (e.key !== "Escape") return;
+  const z = document.querySelector(".zoom");
+  if (z) z.remove(); else closeSheet();
+});
+document.querySelectorAll(".node").forEach((el) => el.addEventListener("click", () => select(el.dataset.id)));
+
+const start = location.hash.slice(1);
+if (byId[start]) select(start, { open: true, scroll: true });
+else select("talk", { open: false });
+</script>

@@ -31,6 +31,14 @@ hub/
 `node scripts/hub-page.mjs`로 `tmp/hub/index.html`을 다시 만들고 Artifact 도구로
 **위 주소(url)에** 다시 올립니다. 역할 칸의 "이 역할로 새 채팅"을 누르면 시작 명령이 복사됩니다.
 
+## 서비스 지도
+
+웹 유입 창구(Moyeo·Pingo·웹 앱·초대 링크·스토어) → 앱 틀 → 하단 탭 → 어디서나 열리는 것을 한 장으로 그린 구조도:
+https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y (본인만). 칸을 누르면 그 화면의 사용 그림·기능 설명·가는 길·코드 영역이 열린다.
+그림과 글은 사용법(?)(`src/lib/guide/content.ts` + `public/guide/ko/`)에서, 웹 창구 그림은 운영 주소를 찍어서, 코드 영역은 `STRUCTURE.md`에서 가져온다.
+다시 만들기: `npm run service-map`(창구 안 찍으려면 `-- --no-capture`) → `tmp/service-map/index.html`과 `shots/`(`files.json`)를
+Artifact 도구로 **위 주소(url)에** 다시 올린다. 칸·설명·이어진 칸은 `scripts/service-map.mjs`의 `nodes`.
+
 ## 쓰는 법
 
 - **새 채팅을 열 때:** 하고 싶은 일을 그냥 말하면 됩니다. 어느 역할인지

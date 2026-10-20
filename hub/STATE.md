@@ -3,7 +3,7 @@
 > 모든 채팅이 시작할 때 자동으로 읽는 한 장입니다. 역할별 자세한 내용은
 > `hub/roles/`, 역할 사이에 넘긴 일은 `hub/inbox.md`, 지난 기록은 `hub/log/`.
 > 새 채팅이면 `hub/HANDOFF.md`(직전 채팅의 인계 노트)부터. 자동 실행이 남긴 보고·결정 대기는 `hub/reports.md`.
-> 허브 쓰는 법: `hub/README.md`. 마지막 갱신: 2026-10-20(2.70 자름).
+> 허브 쓰는 법: `hub/README.md`. 서비스 지도(구조도 + 화면 그림): https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y. 마지막 갱신: 2026-10-20(2.70 자름).
 
 ## 버전
 

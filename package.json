@@ -3,6 +3,7 @@
   "version": "2.70.0",
   "private": true,
   "scripts": {
+    "service-map": "node scripts/service-map.mjs",
     "dev": "next dev",
     "build": "next build",
     "build:capacitor": "node scripts/build-capacitor.mjs",
