@@ -30,7 +30,8 @@
 7. **PRODUCT.md:** 화면·기능·한도·저장하는 것이 바뀌면 같은 커밋에서 고친다(구조·흐름은 `hub/STRUCTURE.md`, 기능별 자세한 규칙은 PRODUCT.md).
 8. **저장 데이터:** 서버에 새 키 묶음을 만들면 `scripts/data-map.json`에 기능·누구 것·계정 지울 때 한 줄(없으면 CI `data-map` 실패), 지도는 `hub/data-map.md`에 저절로.
    점검(가상 사용자)은 `simcheck-` id만 쓰고 끝날 때 지운다(`sim-users/forget.mjs`).
-9. **비용:** 모델을 부르는 서버 경로는 `meterRequest(request, "<op>")`, op는 `modelCalls.ts`(호출 횟수)와 `billing/opCost.ts`(단가)에 — 빠지면 CI `cost`가 실패.
+9. **광고:** 광고 자리(`NativeAdSlot`·`maybeShowInterstitial`·배너 탭)나 `ADS_*` 설정을 바꾸면 `hub/ADS.md`를 먼저 보고, 새 전면 광고 순간은 `scripts/ads-map.mjs` `MOMENTS`에 설명 한 줄 → `npm run ads:map`(없으면 CI `ads-map` 실패). 손익은 `npm run sim:economics -- --write`.
+10. **비용:** 모델을 부르는 서버 경로는 `meterRequest(request, "<op>")`, op는 `modelCalls.ts`(호출 횟수)와 `billing/opCost.ts`(단가)에 — 빠지면 CI `cost`가 실패.
    요금 한도에 걸리는 기능(채팅 한 통에 따라붙는 호출 등)은 `opCost.ts` `CHAT_MESSAGE_OPS`·`PACK`에도. 결과는 push 뒤 `hub/costs.md`에 저절로.
 
 ## 커밋·푸시할 때 (브라우저 확인, AGENTS.md)

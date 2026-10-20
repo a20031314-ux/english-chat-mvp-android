@@ -109,6 +109,14 @@ details.about[open] summary { margin-bottom: 8px; }
 .decisions ul { margin: 0; padding-left: 18px; display: grid; gap: 8px; }
 .how { font-size: 13px; color: var(--muted); }
 .structure { margin: 0 0 18px; }
+.jump { display: flex; flex-wrap: wrap; gap: 6px; margin: 0 0 14px; }
+.jump a { font-size: 12.5px; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); text-decoration: none; }
+.jump a:hover { border-color: var(--accent); color: var(--accent); }
+a.area-link { text-decoration: none; }
+a.area-link code { border-bottom: 1px dashed var(--accent); }
+.see-also { font-size: 12.5px; margin: 2px 0 8px; }
+.see-also a { color: var(--accent); }
+.app-structure h4:target, .app-structure h3:target { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: 4px; }
 .map-tools { display: flex; flex-wrap: wrap; gap: 6px; margin: 4px 0 10px; }
 .map-tools button { font: inherit; font-size: 12.5px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); cursor: pointer; }
 .map-tools button[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
@@ -139,10 +147,18 @@ details.about[open] summary { margin-bottom: 8px; }
 
   <section aria-label="역할" class="lanes" id="lanes"></section>
 
+  <nav class="jump" aria-label="칸으로 가기" id="jump"></nav>
+
   <section class="panel app-structure" aria-labelledby="app-h" id="app-structure" hidden>
     <h2 id="app-h">앱 전체구조 <small>(hub/STRUCTURE.md, 흐름은 손으로 · 영역별 코드는 코드에서 자동)</small></h2>
     <div id="app-body" class="md"></div>
     <p class="how">모든 채팅이 시작할 때 읽고, 코드를 고칠 때 여기서 영향 범위를 본 뒤 같은 커밋에서 고칩니다. 새 화면 파일·API·페이지에 영역이 없으면 CI <code>structure</code>가 실패합니다.</p>
+  </section>
+
+  <section class="panel app-structure" aria-labelledby="ads-h" id="ads" hidden>
+    <h2 id="ads-h">광고 구조 <small>(hub/ADS.md, 원칙은 손으로 · 자리·설정·손익은 코드에서 자동)</small></h2>
+    <div id="ads-body" class="md"></div>
+    <p class="how">광고 자리·설정을 바꾸는 채팅이 먼저 읽습니다. 영역 이름(<code>call</code> 같은)을 누르면 앱 전체구조의 그 영역으로 갑니다. 새 전면 광고 순간에 설명이 없으면 CI <code>ads-map</code>이 실패하고, main push 때 아래쪽은 저절로 다시 만들어집니다.</p>
   </section>
 
   <section class="panel structure" aria-labelledby="map-h" id="structure" hidden>
@@ -274,12 +290,14 @@ document.getElementById("log").innerHTML = HUB.logs.map((e, i) => `
     <div class="md">${md(e.body)}</div>
   </details>`).join("") || `<div class="empty">아직 기록이 없습니다.</div>`;
 
-// 앱 전체구조: 흐름 그림(코드 블록)은 그대로, 제목은 제목으로, 나머지는 md().
-if (HUB.structure) {
+// 긴 문서(전체구조·광고 구조): 흐름 그림(코드 블록)은 그대로, 제목은 제목으로, 나머지는 md().
+// 영역 제목("… `billing`")에는 id(area-billing)를 붙여 다른 칸에서 이어 올 수 있게 한다.
+const areaKeys = new Set();
+function renderDoc(text, extraAfterHeading = () => "") {
   const parts = [];
   let chunk = [], pre = null;
   const flush = () => { if (chunk.length) { parts.push(md(chunk.join("\n"))); chunk = []; } };
-  for (const raw of HUB.structure.replace(/<!--[\s\S]*?-->/g, "").split("\n")) {
+  for (const raw of text.replace(/<!--[\s\S]*?-->/g, "").split("\n")) {
     if (raw.startsWith("```")) {
       if (pre) { parts.push(`<pre class="flow">${esc(pre.join("\n"))}</pre>`); pre = null; }
       else { flush(); pre = []; }
@@ -289,14 +307,37 @@ if (HUB.structure) {
     const h = raw.match(/^(#{1,3}) (.*)$/);
     if (h) {
       flush();
-      if (h[1].length > 1) parts.push(h[1].length === 2 ? `<h3>${inline(h[2])}</h3>` : `<h4>${inline(h[2])}</h4>`);
+      if (h[1].length > 1) {
+        const key = (h[2].match(/`([a-z]+)`\s*$/) || [])[1];
+        const id = key ? ` id="area-${key}"` : "";
+        parts.push(h[1].length === 2 ? `<h3${id}>${inline(h[2])}</h3>` : `<h4${id}>${inline(h[2])}</h4>`);
+        if (key) parts.push(extraAfterHeading(key));
+      }
       continue;
     }
     chunk.push(raw);
   }
   flush();
-  document.getElementById("app-body").innerHTML = parts.join("");
+  return parts.join("");
+}
+
+const jumps = [];
+if (HUB.structure) {
+  for (const m of HUB.structure.matchAll(/^### .*`([a-z]+)`\s*$/gm)) areaKeys.add(m[1]);
+  // 요금·포인트·광고 영역 아래에 광고 구조로 가는 줄.
+  document.getElementById("app-body").innerHTML = renderDoc(HUB.structure, (key) =>
+    key === "billing" && HUB.ads ? `<p class="see-also">→ 광고 자리·설정·손익은 <a href="#ads">광고 구조</a></p>` : "");
   document.getElementById("app-structure").hidden = false;
+  jumps.push(["app-structure", "앱 전체구조"]);
+}
+
+// 광고 구조: 영역 이름(`call` 같은 코드)을 전체구조의 그 영역으로 잇는다.
+if (HUB.ads) {
+  const html = renderDoc(HUB.ads).replace(/<code>([a-z]+)<\/code>/g, (whole, key) =>
+    areaKeys.has(key) ? `<a class="area-link" href="#area-${key}">${whole}</a>` : whole);
+  document.getElementById("ads-body").innerHTML = html;
+  document.getElementById("ads").hidden = false;
+  jumps.push(["ads", "광고 구조"]);
 }
 
 // 앱 구조: 데이터 지도. "누구 것"으로 거르고, 보는 방식(카드·표)을 고른다.
@@ -328,7 +369,10 @@ if (HUB.dataMap) {
   document.querySelectorAll("#map-filter button[data-view]").forEach((b) => b.addEventListener("click", () => { view = b.dataset.view; try { localStorage.setItem("hubMapView", view); } catch {} draw(); }));
   draw();
   document.getElementById("structure").hidden = false;
+  jumps.push(["structure", "저장하는 데이터"]);
 }
+jumps.push(["log-h", "인계 기록"]);
+document.getElementById("jump").innerHTML = jumps.map(([id, label]) => `<a href="#${id}">${esc(label)}</a>`).join("");
 
 document.getElementById("decisions").innerHTML = md(HUB.state["계속 지키는 결정"]);
 document.getElementById("rules").innerHTML = Object.entries(HUB.rules || {})

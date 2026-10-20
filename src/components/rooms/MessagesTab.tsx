@@ -64,6 +64,7 @@ export function MessagesTab({
           <div className="space-y-3">
             <p className="text-sm text-slate-300">{t.loginNeeded}</p>
             <AccountCard ui={ui} locale={locale} />
+            {/* 로그인 전이면 계정 카드 아래에 네이티브 광고 하나(무료·안드로이드만). */}
             <NativeAdSlot feedId="talk-list" slotKey="talk-after-account" />
           </div>
         )}

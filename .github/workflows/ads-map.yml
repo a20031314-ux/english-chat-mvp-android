@@ -1,0 +1,50 @@
+# 광고 구조(hub/ADS.md)가 코드보다 뒤처지지 않게 한다.
+#
+# - 모든 push·PR: 전면 광고 순간마다 설명(scripts/ads-map.mjs MOMENTS)이 있는지, 광고 자리 파일마다 영역(scripts/structure.json)이 있는지. 어긋나면 실패.
+# - main push: npm run ads:map으로 hub/ADS.md 자동 부분을 다시 만들고, 바뀌었으면 커밋
+#   (허브만 바뀐 커밋이라 Vercel은 다시 배포하지 않음). 손으로 쓴 위쪽은 건드리지 않는다.
+# 키·네트워크가 필요 없다.
+name: ads-map
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: ads-map-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  ads-map:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 20
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: 광고 자리마다 설명·영역이 있는지
+        run: npm run ads:map -- --places-only
+      - name: 광고 구조 자동 부분 다시 만들기
+        run: npm run ads:map
+      - name: main이면 hub/ADS.md 커밋
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          if git diff --quiet -- hub/ADS.md; then
+            echo "광고 구조 그대로"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add hub/ADS.md
+          git commit -m "광고 구조 자동 갱신 (${GITHUB_SHA::7} 기준)"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 5
+          done
+          exit 1

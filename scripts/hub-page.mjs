@@ -91,7 +91,14 @@ try {
 } catch {
   // 아직 없으면 칸을 숨긴다.
 }
-const data = { state, rules, roles, inbox, logs, dataMap, structure, commit, builtAt: new Date().toISOString() };
+// 광고 구조(hub/ADS.md): 원칙(손으로) + 자리·설정·손익(scripts/ads-map.mjs가 자동). 영역 이름으로 전체구조와 이어진다.
+let ads = "";
+try {
+  ads = read("ADS.md");
+} catch {
+  // 아직 없으면 칸을 숨긴다.
+}
+const data = { state, rules, roles, inbox, logs, dataMap, structure, ads, commit, builtAt: new Date().toISOString() };
 const template = fs.readFileSync(path.join(ROOT, "scripts", "hub-page.template.html"), "utf8");
 const html = template.replace("/*HUB_DATA*/null", JSON.stringify(data).replace(/</g, "\\u003c"));
 fs.mkdirSync(path.dirname(OUT), { recursive: true });

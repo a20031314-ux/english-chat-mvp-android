@@ -38,6 +38,7 @@
     "test:billing": "node --experimental-strip-types --test src/lib/platform.test.ts src/lib/billing/plans.test.ts src/lib/billing/ads.test.ts src/lib/server/adReward.test.ts src/lib/pack/weekly.test.ts src/lib/appVersion.test.ts src/lib/billing/videoPrep.test.ts src/lib/billing/points.test.ts src/lib/billing/cost.test.ts src/lib/billing/opCost.test.ts src/lib/server/entitlementStore.test.ts src/lib/server/callHold.test.ts src/lib/server/creditPurchase.test.ts src/lib/server/kv.test.ts src/lib/server/learnerMetrics.test.ts src/lib/server/subtitleGlossStore.test.ts",
     "cost:plan": "node --experimental-strip-types scripts/plan-cost.mjs",
     "check:data-map": "node scripts/data-map.mjs --check",
+    "ads:map": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/ads-map.mjs",
     "check:cost": "node scripts/cost-coverage.mjs && node --experimental-strip-types scripts/plan-cost.mjs --check",
     "test:account": "node --experimental-strip-types --test src/lib/server/account.test.ts",
     "account:purge": "node --experimental-strip-types scripts/account-purge.mjs",
