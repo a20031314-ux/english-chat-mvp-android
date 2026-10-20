@@ -52,7 +52,10 @@ export function languageFit(a: RandomSide, b: RandomSide): 0 | 1 | 2 {
 export type RandomStatus =
   | { state: "off" }
   | { state: "signedOut" }
-  | { state: "unverified"; verifyReady: boolean }
+  /** kr = 포트원 휴대폰 본인인증(한국 번호), global = 해외용 나이 확인(업체 계약 뒤, 지금은 false). country = 접속 나라(Vercel). */
+  | { state: "unverified"; verifyReady: boolean; globalReady: boolean; country: string | null }
+  /** AI 영상 검사에 걸려 잠시 멈춤(이 시각까지). */
+  | { state: "paused"; until: number }
   | { state: "minor" }
   | { state: "blocked" }
   | { state: "ready" };
@@ -66,3 +69,14 @@ export type RandomMatch = {
   roomId?: string;
   at: number;
 };
+
+/** AI 영상 검사(랜덤 영상만): 앱이 몇 초마다 한 장. 내 화면(self)은 걸리면 내가 멈추고, 상대 화면(other)은 통화를 끝내고 신고만(누명을 막으려고 자동 정지 없음). */
+export type FrameWho = "self" | "other";
+export const RANDOM_FRAME_EVERY_MS = 3_000;
+/** 내 화면이 걸리면 이만큼 랜덤을 멈춘다. */
+export const RANDOM_PAUSE_MS = 24 * 60 * 60 * 1000;
+/** 이 기간에 두 번 걸리면 랜덤을 영구히(본인 확인값 기준 — 새 계정도) 막는다. */
+export const RANDOM_STRIKE_WINDOW_MS = 30 * 24 * 60 * 60 * 1000;
+export const RANDOM_STRIKES_TO_OFF = 2;
+/** 검사에 보내는 한 장의 크기 상한(data URL 글자 수). */
+export const RANDOM_FRAME_MAX_CHARS = 200_000;

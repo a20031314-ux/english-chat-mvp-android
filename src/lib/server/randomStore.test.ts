@@ -2,7 +2,7 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { isAdultBirthDate, languageFit } from "../random/protocol.ts";
 import { readPortoneVerification } from "./identityVerify.ts";
-import { forgetRandom, isOff, joinOrPoll, leaveQueue, readAdult, recordAdult, type JoinInput } from "./randomStore.ts";
+import { forgetRandom, isOff, joinOrPoll, leaveQueue, pausedUntil, readAdult, recordAdult, recordStrike, takeFrameTurn, type JoinInput } from "./randomStore.ts";
 
 // KV 접속 정보 없이 메모리로 돈다(kv.ts). 운영 저장소에 닿지 않는다.
 delete process.env.KV_REST_API_URL;
@@ -98,4 +98,24 @@ test("짝 맞추기: 차단한 사람·오래 소식 없는 사람·모드가 �
   );
   assert.equal(found, null);
   for (const id of ["acct_b_old", "acct_b_chat", "acct_b_blocked", "acct_b_me"]) await leaveQueue(id);
+});
+
+test("AI 검사: 한 번 걸리면 24시간 멈춤, 30일 안 두 번이면 본인 확인값(ci)으로 막힘 — 새 계정도", async () => {
+  const t0 = NOW + 500_000;
+  assert.equal(await recordAdult("acct_strike_1", "iv_strike_001", { birthDate: "1990-01-01", ci: "CI-STRIKE" }, t0), "adult");
+  const first = await recordStrike("acct_strike_1", t0);
+  assert.equal(first.off, false);
+  assert.equal(await pausedUntil("acct_strike_1", t0 + 1_000), t0 + 24 * 60 * 60 * 1000);
+  assert.equal(await pausedUntil("acct_strike_1", t0 + 25 * 60 * 60 * 1000), null);
+  const second = await recordStrike("acct_strike_1", t0 + 2 * 24 * 60 * 60 * 1000);
+  assert.equal(second.off, true);
+  assert.equal(await isOff(await readAdult("acct_strike_1")), true);
+  // 계정을 지우고 같은 사람이 새 계정으로 인증해도 막힘(ci 자리는 남는다).
+  await forgetRandom("acct_strike_1");
+  assert.equal(await recordAdult("acct_strike_2", "iv_strike_002", { birthDate: "1990-01-01", ci: "CI-STRIKE" }, t0), "OFF");
+});
+
+test("AI 검사: 3초에 한 장까지", async () => {
+  assert.equal(await takeFrameTurn("acct_frame_rate"), true);
+  assert.equal(await takeFrameTurn("acct_frame_rate"), false);
 });

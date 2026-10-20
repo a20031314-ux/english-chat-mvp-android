@@ -8,11 +8,17 @@
  *   random:v1:wait:<모드>    기다리는 계정 순서(RPUSH, 읽을 때 겹친 것·빠진 것 정리)
  *   random:v1:match:<계정>   정해진 짝(그 사람이 가져가면 지움)
  *   random:v1:met:<계정>     최근 만난 사람(24시간 안 다시 안 이음)
- *   random:v1:off:<ci해시>   운영자가 막은 사람(손으로)
+ *   random:v1:off:<ci해시>   막힌 사람(운영자가 손으로, 또는 AI 검사에 두 번 걸림)
+ *   random:v1:pause:<계정>   AI 검사에 걸려 24시간 멈춤
+ *   random:v1:strike:<계정>  AI 검사에 걸린 시각들(30일)
+ *   random:v1:fr:<계정>      화면 검사 간격(3초에 한 번)
  */
 import { createHash } from "node:crypto";
 import {
   RANDOM_MET_KEEP,
+  RANDOM_PAUSE_MS,
+  RANDOM_STRIKES_TO_OFF,
+  RANDOM_STRIKE_WINDOW_MS,
   RANDOM_REMATCH_COOLDOWN_MS,
   RANDOM_SCAN,
   RANDOM_TICKET_STALE_MS,
@@ -42,13 +48,16 @@ const waitKey = (mode: RandomMode) => `random:v1:wait:${mode}`;
 const matchKey = (id: string) => `random:v1:match:${id}`;
 const metKey = (id: string) => `random:v1:met:${id}`;
 const offKey = (hash: string) => `random:v1:off:${hash}`;
+const pauseKey = (id: string) => `random:v1:pause:${id}`;
+const strikeKey = (id: string) => `random:v1:strike:${id}`;
+const frameKey = (id: string) => `random:v1:fr:${id}`;
 
 /** 성인인증은 다시 받지 않는다(계정이 있는 동안). 키 수명은 길게 두고 계정 삭제 때 지운다. */
 const ADULT_TTL_SECONDS = 3 * 365 * 24 * 60 * 60;
 const MATCH_TTL_SECONDS = 120;
 const WAIT_KEEP = 400;
 
-export type AdultRecord = { adult: boolean; at: number; ci: string | null; foreigner?: boolean };
+export type AdultRecord = { adult: boolean; at: number; ci: string | null; foreigner?: boolean; offBy?: "strikes" };
 type Ticket = { mode: RandomMode; learn: string | null; ui: string | null; at: number };
 
 /** 스위치: Vercel `RANDOM_ENABLED=1`일 때만 랜덤이 돈다(성인인증 계약·법률 확인 뒤). */
@@ -98,6 +107,39 @@ export async function recordAdult(
 /** 운영자가 막았는지(ci 기준 — 새 계정으로 다시 인증해도 막힘). */
 export async function isOff(record: AdultRecord | null): Promise<boolean> {
   return Boolean(record?.ci && (await kvGetJson<number>(offKey(record.ci))));
+}
+
+// ── AI 영상 검사 ─────────────────────────────────────────────
+
+/** 지금 멈춘 중이면 풀리는 시각. */
+export async function pausedUntil(accountId: string, now: number = Date.now()): Promise<number | null> {
+  const until = await kvGetJson<number>(pauseKey(accountId));
+  return until && until > now ? until : null;
+}
+
+/** 화면 검사는 한 사람 3초에 한 번(더 자주 오면 건너뜀). */
+export async function takeFrameTurn(accountId: string): Promise<boolean> {
+  return kvSetJsonIfAbsent(frameKey(accountId), 1, 3);
+}
+
+export type StrikeResult = { pausedUntil: number; off: boolean };
+
+/**
+ * 내 화면이 걸림: 24시간 멈춤, 30일 안 두 번째면 본인 확인값(ci) 기준으로 랜덤을 막는다(새 계정도).
+ * ci가 없으면(인증 업체가 안 줌) 그 계정만 막는다.
+ */
+export async function recordStrike(accountId: string, now: number = Date.now()): Promise<StrikeResult> {
+  const strikes = ((await kvGetJson<number[]>(strikeKey(accountId))) ?? []).filter((at) => now - at < RANDOM_STRIKE_WINDOW_MS);
+  strikes.push(now);
+  await kvSetJson(strikeKey(accountId), strikes, Math.ceil(RANDOM_STRIKE_WINDOW_MS / 1000));
+  const until = now + RANDOM_PAUSE_MS;
+  await kvSetJson(pauseKey(accountId), until, Math.ceil(RANDOM_PAUSE_MS / 1000));
+  await leaveQueue(accountId);
+  if (strikes.length < RANDOM_STRIKES_TO_OFF) return { pausedUntil: until, off: false };
+  const record = await readAdult(accountId);
+  if (record?.ci) await kvSetJson(offKey(record.ci), now, ADULT_TTL_SECONDS);
+  else if (record) await kvSetJson(adultKey(accountId), { ...record, adult: false, offBy: "strikes" }, ADULT_TTL_SECONDS);
+  return { pausedUntil: until, off: true };
 }
 
 // ── 대기열·짝 맞추기 ─────────────────────────────────────────
@@ -204,7 +246,7 @@ async function noteMet(me: string, other: string, now: number): Promise<void> {
 /** 계정을 지울 때: 성인인증 기록·대기·짝·만난 사람. ci 자리는 남겨 둔다(막힌 사람이 새 계정으로 못 돌아오게 — 막히지 않았으면 지움). */
 export async function forgetRandom(accountId: string): Promise<void> {
   const record = await readAdult(accountId);
-  const keys = [adultKey(accountId), ticketKey(accountId), matchKey(accountId), metKey(accountId)];
+  const keys = [adultKey(accountId), ticketKey(accountId), matchKey(accountId), metKey(accountId), pauseKey(accountId), strikeKey(accountId), frameKey(accountId)];
   if (record?.ci && !(await kvGetJson<number>(offKey(record.ci)))) keys.push(ciKey(record.ci));
   await kvDelete(keys);
 }

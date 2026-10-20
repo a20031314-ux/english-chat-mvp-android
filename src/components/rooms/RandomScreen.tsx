@@ -166,7 +166,24 @@ export function RandomScreen({ ui, locale, targetLanguage }: { ui: UICopy; local
               🔞 {t.randomVerify}
             </button>
             {!status.verifyReady || !portoneClientReady() ? <p className="text-caption text-slate-500">{t.randomOff}</p> : null}
+            {/* 해외 접속: 한국 휴대폰 번호가 없으면 해외용 나이 확인(업체 계약 뒤 globalReady). */}
+            {status.country && status.country !== "KR" ? (
+              <>
+                <button
+                  type="button"
+                  disabled={!status.globalReady}
+                  className="w-full rounded-xl border border-white/20 px-4 py-3 text-chat text-slate-200 disabled:opacity-40"
+                >
+                  🌐 {t.randomVerifyGlobal}
+                </button>
+                {status.globalReady ? null : <p className="text-caption text-slate-500">{t.randomGlobalSoon}</p>}
+              </>
+            ) : null}
           </div>
+        ) : null}
+
+        {status?.state === "paused" ? (
+          <Card>{t.randomPaused.replace("{time}", new Date(status.until).toLocaleString(locale, { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" }))}</Card>
         ) : null}
 
         {status?.state === "minor" ? <Card>{t.randomMinor}</Card> : null}
@@ -219,7 +236,9 @@ export function RandomScreen({ ui, locale, targetLanguage }: { ui: UICopy; local
           )
         ) : null}
 
-        <p className="text-caption leading-relaxed text-slate-500">{t.randomRules}</p>
+        <p className="text-caption leading-relaxed text-slate-500">
+          {t.randomRules} {t.randomAiRule}
+        </p>
       </div>
     </div>
   );

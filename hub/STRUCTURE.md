@@ -115,7 +115,7 @@
 
 ### 랜덤 연결 — 창구 Spin(성인인증·짝 맞추기, 웹만) `random`
 - 화면: `rooms/RandomScreen`
-- API: `random`(사람 탭)
+- API: `random`(사람 탭, Room 탭)
 - 다른 영역이 씀: `rooms/RandomScreen` ← 앱 틀
 
 ### My 탭 — 계정 카드·자라는 중·지도·노트·단어장 `my`

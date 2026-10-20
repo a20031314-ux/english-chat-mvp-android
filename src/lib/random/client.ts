@@ -38,6 +38,62 @@ export async function randomLeave(): Promise<void> {
   await call("leave").catch(() => {});
 }
 
+/** AI 영상 검사 한 장(랜덤 영상 방). 검사 못 하면 걸리지 않은 것으로. */
+export async function randomFrame(
+  roomId: string,
+  who: "self" | "other",
+  image: string,
+): Promise<{ flagged: boolean; pausedUntil?: number; off?: boolean }> {
+  try {
+    return await call("frame", { roomId, who, image });
+  } catch {
+    return { flagged: false };
+  }
+}
+
+/**
+ * 영상 한 장을 작게(긴 쪽 320px, JPEG) — 검사에만 쓰고 서버는 저장하지 않는다.
+ * 스트림마다 화면에 안 보이는 video 하나를 두고 다시 쓴다.
+ */
+export class FrameGrabber {
+  private video: HTMLVideoElement | null = null;
+  private canvas: HTMLCanvasElement | null = null;
+  private stream: MediaStream | null = null;
+
+  grab(stream: MediaStream | null): string | null {
+    if (!stream || !stream.getVideoTracks().some((track) => track.readyState === "live" && track.enabled)) return null;
+    if (this.stream !== stream || !this.video) {
+      this.stop();
+      const video = document.createElement("video");
+      video.muted = true;
+      video.playsInline = true;
+      video.srcObject = stream;
+      void video.play().catch(() => {});
+      this.video = video;
+      this.stream = stream;
+      return null;
+    }
+    const video = this.video;
+    if (!video.videoWidth || !video.videoHeight) return null;
+    const scale = 320 / Math.max(video.videoWidth, video.videoHeight);
+    const canvas = (this.canvas ??= document.createElement("canvas"));
+    canvas.width = Math.round(video.videoWidth * scale);
+    canvas.height = Math.round(video.videoHeight * scale);
+    const context = canvas.getContext("2d");
+    if (!context) return null;
+    context.drawImage(video, 0, 0, canvas.width, canvas.height);
+    return canvas.toDataURL("image/jpeg", 0.6);
+  }
+
+  stop(): void {
+    if (this.video) {
+      this.video.srcObject = null;
+      this.video = null;
+    }
+    this.stream = null;
+  }
+}
+
 // ── 포트원 본인인증 창 ────────────────────────────────────────
 
 type PortOneResponse = { code?: string; message?: string; identityVerificationId?: string } | undefined;

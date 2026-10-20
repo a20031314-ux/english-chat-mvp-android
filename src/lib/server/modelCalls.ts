@@ -38,6 +38,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   roomHint: 1,
   // 사람 사이 사진 한 장: 자동 검사 한 번(omni-moderation, 무료) + 저장.
   mediaUpload: 1,
+  // 랜덤 영상(창구 Spin) 화면 한 장 검사(omni-moderation, 무료) — 3초에 한 번까지.
+  randomFrame: 1,
   // The opening line of a conversation nobody has spoken in yet.
   chatStart: 1,
   // A question about their own progress, answered from what is kept (learner/ask).

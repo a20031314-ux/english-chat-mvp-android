@@ -43,6 +43,8 @@ import { BodyLayer } from "@/components/FullScreenLayer";
 import { Composer, Face, Lines, ProfileSheet, languagePair } from "./RoomParts";
 import { useInbox } from "./RoomDm";
 import { VideoStage } from "./VideoStage";
+import { FrameGrabber, randomFrame } from "@/lib/random/client";
+import { RANDOM_FRAME_EVERY_MS } from "@/lib/random/protocol";
 import { CALL_LAYOUT_LINES, ROOM_HINT_MODES, ROOM_LAYOUTS, pendingNotes, readRoomHintMode, readRoomLayout, saveRoomHintMode, saveRoomLayout, type RoomHintMode, type RoomLayout, type RoomNote } from "@/lib/rooms/layout";
 
 /**
@@ -111,7 +113,7 @@ export function RoomView({
   const [members, setMembers] = useState<RoomMember[]>([]);
   const [lines, setLines] = useState<RoomLine[]>([]);
   // 방이 닫혔거나(방장이 닫음·잠시 닫음) 내보내졌으면 방 화면 대신 안내만 — 자리·자막·입력창이 남아 열린 방처럼 보이지 않게(qa 2026-10-20).
-  const [ended, setEnded] = useState<null | "roomGone" | "kicked" | "banned">(null);
+  const [ended, setEnded] = useState<null | "roomGone" | "kicked" | "banned" | "randomAiSelf" | "randomAiOther">(null);
   const linesRef = useRef<RoomLine[]>([]);
   useEffect(() => {
     linesRef.current = lines;
@@ -730,6 +732,39 @@ export function RoomView({
   const videoOtherStream = videoOther && !videoOtherBlocked ? remoteVideo[videoOther.peerId] ?? null : null;
   const videoOtherLine = videoOther ? spoken.filter((line) => line.peerId === videoOther.peerId).at(-1) ?? null : null;
 
+  // 랜덤 영상(창구 Spin)의 AI 화면 검사: 3초마다 내 화면과 상대 화면을 번갈아 한 장씩(작게, 서버는 검사 뒤 버림).
+  // 내 화면이 걸리면 나는 24시간 랜덤 정지, 상대 화면이 걸리면 통화를 끝내고 자동 신고 — 둘 다 그 자리에서 끊는다.
+  const otherStreamRef = useRef<MediaStream | null>(null);
+  useEffect(() => {
+    otherStreamRef.current = videoOtherStream;
+  }, [videoOtherStream]);
+  useEffect(() => {
+    if (!room.random || ended) return;
+    const grabSelf = new FrameGrabber();
+    const grabOther = new FrameGrabber();
+    let turn = 0;
+    const timer = window.setInterval(() => {
+      turn += 1;
+      const who = turn % 2 ? "self" : "other";
+      const image = who === "self" ? grabSelf.grab(cameraRef.current) : grabOther.grab(otherStreamRef.current);
+      if (!image) return;
+      void randomFrame(room.id, who, image).then((result) => {
+        if (!result.flagged || !aliveRef.current) return;
+        cameraRef.current?.getTracks().forEach((track) => track.stop());
+        cameraRef.current = null;
+        setCamera(null);
+        stopMic();
+        meshRef.current?.close();
+        void leaveRoom(room.id, peerId);
+        setEnded(who === "self" ? "randomAiSelf" : "randomAiOther");
+      });
+    }, RANDOM_FRAME_EVERY_MS);
+    return () => {
+      window.clearInterval(timer);
+      grabSelf.stop();
+      grabOther.stop();
+    };
+  }, [room.random, room.id, peerId, ended, stopMic]);
 
   if (ended) {
     return (
