@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { Fragment, useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { MediaImage } from "./MediaImage";
 import { MEDIA_PER_POST, type MediaRef, type MediaScope } from "@/lib/rooms/media";
 import { MediaError, uploadImage } from "@/lib/rooms/mediaClient";
@@ -131,8 +132,15 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
         <p className="mt-6 text-center text-note text-slate-400">{t.boardEmpty}</p>
       ) : (
         <ul className="mt-3 space-y-2">
-          {posts.map((post) => (
-            <li key={post.id}>
+          {posts.map((post, index) => (
+            <Fragment key={post.id}>
+            {/* 세 번째 글 뒤에 네이티브 광고 하나(무료·안드로이드만, lib/ads.ts). 글을 열면 시트가 덮어 멈춘다. */}
+            {index === 3 ? (
+              <li>
+                <NativeAdSlot feedId="people-tab" slotKey="board-after-3" />
+              </li>
+            ) : null}
+            <li>
               <button
                 type="button"
                 onClick={() => setOpenId(post.id)}
@@ -153,6 +161,7 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
                 </span>
               </button>
             </li>
+            </Fragment>
           ))}
         </ul>
       )}

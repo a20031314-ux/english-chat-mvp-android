@@ -51,8 +51,12 @@ export type AdsSettings = {
   appOpenAwayMinutes: number;
   /** 둘러보는 화면(My·영상·대화 목록) 아래쪽 배너. 채팅·통화·말하는 방에는 없음. */
   bannerEnabled: boolean;
-  /** 목록 사이 네이티브 광고(앱 카드 모양, 대화 목록·영상 목록). */
+  /** 목록 사이 네이티브 광고(앱 카드 모양, 대화·영상·게시판·사람·방 목록). */
   nativeEnabled: boolean;
+  /** 공개 말하는 방에 이만큼(분) 넘게 있다 나오면 전면 광고. 0이면 끔. */
+  roomLeaveMinutes: number;
+  /** 영상을 이만큼(분) 넘게 보고 나오면 전면 광고. 0이면 끔. */
+  videoLeaveMinutes: number;
 };
 
 /**
@@ -72,6 +76,8 @@ export const DEFAULT_ADS_SETTINGS: AdsSettings = {
   appOpenAwayMinutes: 30,
   bannerEnabled: true,
   nativeEnabled: true,
+  roomLeaveMinutes: 3,
+  videoLeaveMinutes: 2,
 };
 
 function intFrom(value: string | undefined, fallback: number, min: number, max: number): number {
@@ -102,7 +108,7 @@ export const AD_REVENUE_USD = {
   source: "한국 AdMob eCPM 대략값(보상형 $8~20, 전면 $3~10), 가정 2026-10-18",
 } as const;
 
-/** 환경 변수(ADS_ENABLED, ADS_REWARD_CHATS, ADS_REWARDED_DAILY_MAX, ADS_INTERSTITIAL_GAP_SECONDS, ADS_INTERSTITIAL_AFTER_CHATS, ADS_APP_OPEN, ADS_APP_OPEN_AFTER_DAYS, ADS_APP_OPEN_GAP_HOURS, ADS_APP_OPEN_AWAY_MINUTES, ADS_BANNER, ADS_NATIVE)가 있으면 그것으로. */
+/** 환경 변수(ADS_ENABLED, ADS_REWARD_CHATS, ADS_REWARDED_DAILY_MAX, ADS_INTERSTITIAL_GAP_SECONDS, ADS_INTERSTITIAL_AFTER_CHATS, ADS_APP_OPEN, ADS_APP_OPEN_AFTER_DAYS, ADS_APP_OPEN_GAP_HOURS, ADS_APP_OPEN_AWAY_MINUTES, ADS_BANNER, ADS_NATIVE, ADS_ROOM_LEAVE_MINUTES, ADS_VIDEO_LEAVE_MINUTES)가 있으면 그것으로. */
 export function adsSettings(env: Record<string, string | undefined> = process.env): AdsSettings {
   const d = DEFAULT_ADS_SETTINGS;
   const flag = env.ADS_ENABLED?.trim().toLowerCase();
@@ -118,6 +124,8 @@ export function adsSettings(env: Record<string, string | undefined> = process.en
     appOpenAwayMinutes: intFrom(env.ADS_APP_OPEN_AWAY_MINUTES, d.appOpenAwayMinutes, 5, 720),
     bannerEnabled: flagFrom(env.ADS_BANNER, d.bannerEnabled),
     nativeEnabled: flagFrom(env.ADS_NATIVE, d.nativeEnabled),
+    roomLeaveMinutes: intFrom(env.ADS_ROOM_LEAVE_MINUTES, d.roomLeaveMinutes, 0, 120),
+    videoLeaveMinutes: intFrom(env.ADS_VIDEO_LEAVE_MINUTES, d.videoLeaveMinutes, 0, 120),
   };
 }
 

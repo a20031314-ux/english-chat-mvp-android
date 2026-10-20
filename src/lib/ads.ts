@@ -5,7 +5,8 @@ import { adsAvailable } from "@/lib/platform";
 /**
  * 광고(AdMob) — 무료 사용자에게만, 안드로이드 앱에서만(hub/drafts/ads-rewarded.md, 서버 billing/ads.ts).
  *
- * - 전면 광고: 자연스러운 끝(통화·오늘의 팩·미션이 끝날 때, 채팅 몇 번 뒤 채팅 화면을 나갈 때)에만,
+ * - 전면 광고: 자연스러운 끝(통화·오늘의 팩·미션이 끝날 때, 채팅 몇 번 뒤 채팅 화면을 나갈 때,
+ *   공개 말하는 방에 몇 분 있다 나올 때, 영상을 몇 분 보고 나올 때)에만,
  *   서버가 정한 최소 간격을 두고. 학습 도중(쓰는 중·답 기다리는 중·통화 중)과 앱을 열자마자는 띄우지 않는다.
  * - 보상형 광고: 채팅 한도 안내의 "광고 보고 채팅 더". 보상은 앱이 아니라 서버가 AdMob 콜백으로 확인해서 준다.
  * - 앱 오프닝 광고: 앱을 새로 켤 때·오래(서버 값, 30분) 떠났다 돌아올 때. 설치 며칠 뒤부터, 몇 시간에 한 번까지.
@@ -23,10 +24,11 @@ type AdsConfig = {
   appOpen?: { enabled: boolean; afterDays: number; gapHours: number; awayMinutes: number };
   banner?: { enabled: boolean };
   native?: { enabled: boolean };
+  leave?: { roomMinutes: number; videoMinutes: number };
   rewarded: { enabled: boolean; chats: number; dailyMax: number; left: number; token: string | null };
 };
 
-export type InterstitialMoment = "callEnd" | "packEnd" | "missionDone" | "chatLeave";
+export type InterstitialMoment = "callEnd" | "packEnd" | "missionDone" | "chatLeave" | "roomLeave" | "videoLeave";
 
 /** Google 데모 광고 단위(개발·내부 테스트용). `NEXT_PUBLIC_ADS_TEST=1`로 빌드하면 실제 광고 대신 이것. */
 const TEST_UNITS = {
@@ -146,13 +148,18 @@ export async function warmUpAds(): Promise<void> {
  * 자연스러운 끝에서 부른다. 조건이 맞을 때만(무료·간격·채팅 수), 미리 받아 둔 광고가 있을 때만 띄운다 —
  * 그 자리에서 광고를 받느라 화면을 붙잡지 않는다.
  */
-export async function maybeShowInterstitial(moment: InterstitialMoment): Promise<void> {
+export async function maybeShowInterstitial(moment: InterstitialMoment, stayedSeconds = 0): Promise<void> {
   try {
     if (!adsAvailable()) return;
     if (moment === "chatLeave" && chatsSinceInterstitial === 0) return;
     const cfg = await loadAdsConfig();
     if (!cfg?.enabled) return;
     if (moment === "chatLeave" && chatsSinceInterstitial < cfg.interstitialAfterChats) return;
+    // 공개 방·영상은 서버가 정한 시간(분) 넘게 있다 나올 때만. 설정이 없으면(옛 서버) 띄우지 않는다.
+    if (moment === "roomLeave" || moment === "videoLeave") {
+      const minutes = moment === "roomLeave" ? cfg.leave?.roomMinutes : cfg.leave?.videoMinutes;
+      if (!minutes || stayedSeconds < minutes * 60) return;
+    }
     const last = Math.max(readLastShown(), memoryLastShown);
     if (Date.now() - last < cfg.interstitialMinGapSeconds * 1000) return;
     if (!(await startAds())) return;
@@ -473,7 +480,8 @@ async function syncBanner(): Promise<void> {
 //
 // 플러그인의 NativeAdFeed(미리보기 기능): 웹 화면에 자리(높이 고정 div)를 두면 그 위치를 따라 네이티브 광고 보기를 얹는다.
 // 웹 화면 위에 떠 있어서 시트·전체 화면이 열리거나 탭이 숨으면 멈춰야 한다(layersOpen·active).
-// 한 화면(feedId)에 광고 최대 3개, 동시에 화면 2개까지 — 대화 목록·영상 목록 둘만 쓴다.
+// 한 화면(feedId)에 광고 최대 3개, 동시에 화면 2개까지(플러그인 한도). 그래서 자리는 보이는 동안에만 붙이고(NativeAdSlot의 active),
+// 화면을 떠나면 그 화면의 광고를 치운다 — 새 화면의 광고는 앞 화면을 다 치운 뒤에 만든다.
 
 /** 네이티브 광고 자리 높이(작은 틀, 플러그인 최소 120px). */
 export const NATIVE_SLOT_HEIGHT = 120;
@@ -503,6 +511,8 @@ type NativeFeedHandle = {
 
 type FeedEntry = { feed: Promise<NativeFeedHandle | null>; refs: number; active: boolean; paused: boolean };
 const nativeFeeds = new Map<string, FeedEntry>();
+/** 치우는 중인 화면들 — 다 끝난 뒤에 새 화면을 만들어 동시에 2개 한도를 넘지 않게. */
+let nativeDestroying: Promise<unknown> = Promise.resolve();
 const failedSlots = new Set<string>();
 const failListeners = new Set<() => void>();
 
@@ -519,6 +529,7 @@ function createFeed(feedId: string): Promise<NativeFeedHandle | null> {
       const cfg = await loadAdsConfig();
       if (!cfg?.enabled || !cfg.native?.enabled) return null;
       if (!(await startAds())) return null;
+      await nativeDestroying.catch(() => undefined);
       const { NativeAdFeed, NativeAdPluginEvents, NativeAdTemplate } = await import("@capacitor-community/admob");
       const feed = await NativeAdFeed.create({
         feedId,
@@ -572,7 +583,8 @@ export function attachNativeSlot(feedId: string, slotKey: string, element: HTMLE
     current.refs -= 1;
     if (current.refs <= 0) {
       nativeFeeds.delete(feedId);
-      void current.feed.then((feed) => feed?.destroy().catch(() => undefined));
+      const gone = current.feed.then((feed) => feed?.destroy().catch(() => undefined));
+      nativeDestroying = Promise.all([nativeDestroying, gone]);
     }
   };
 }

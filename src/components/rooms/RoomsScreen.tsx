@@ -1,7 +1,9 @@
 "use client";
 
 import { MateAskSheet } from "./MateAsk";
-import { useCallback, useEffect, useState, useSyncExternalStore } from "react";
+import { Fragment, useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
+import { maybeShowInterstitial } from "@/lib/ads";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { AccountCard } from "@/components/account/AccountCard";
 import type { UICopy } from "@/lib/copy";
@@ -64,6 +66,11 @@ export function RoomsScreen({
   /** 막 끝난 1:1 통화의 상대 — 메이트 신청을 묻는다. */
   const [mateAsk, setMateAsk] = useState<string | null>(null);
   const closeMateAsk = useCallback(() => setMateAsk(null), []);
+  /** 방에 들어간 때 — 공개 방을 몇 분 넘게 있다 나오면 전면 광고(자연스러운 끝, lib/ads.ts "roomLeave"). */
+  const joinedAt = useRef(0);
+  useEffect(() => {
+    if (inRoom) joinedAt.current = Date.now();
+  }, [inRoom]);
   const account = useSyncExternalStore(subscribeSession, readCachedAccount, () => null);
   const nickname = account?.profile.nickname || account?.username || "";
 
@@ -161,6 +168,10 @@ export function RoomsScreen({
                 onLeave={() => {
                   const back = inRoom.back;
                   const backGroup = inRoom.backGroup;
+                  // 1:1·단체방 통화는 끝나고 메이트 신청·대화로 이어지므로 광고 없음 — 공개 방만.
+                  if (!inRoom.room.private && !back && !backGroup) {
+                    void maybeShowInterstitial("roomLeave", (Date.now() - joinedAt.current) / 1000);
+                  }
                   setMinimized(false);
                   setInRoom(null);
                   if (back) {
@@ -431,8 +442,15 @@ function Lobby({
         {error ? <p className="text-sm text-rose-300">{error}</p> : null}
         {rooms && rooms.length === 0 ? <p className="text-sm text-slate-500">{wanted.length ? t.noRoomsFilter : t.noRooms}</p> : null}
         <ul className="space-y-2.5">
-          {(rooms ?? []).map((room) => (
-            <li key={room.id}>
+          {(rooms ?? []).map((room, index) => (
+            <Fragment key={room.id}>
+            {/* 두 번째 방 뒤에 네이티브 광고 하나(무료·안드로이드만). 방에 들어가면 방 화면이 덮어 멈춘다. */}
+            {index === 2 ? (
+              <li>
+                <NativeAdSlot feedId="room-lobby" slotKey="room-lobby-after-2" />
+              </li>
+            ) : null}
+            <li>
               <div className="rounded-2xl border border-white/10 bg-gradient-to-br from-violet-500/[0.12] to-white/[0.02] p-3">
                 <button type="button" onClick={() => onJoin(room, "speaker")} className="block w-full text-start">
                   <div className="flex flex-wrap items-center gap-1.5">
@@ -477,6 +495,7 @@ function Lobby({
                 </div>
               </div>
             </li>
+            </Fragment>
           ))}
         </ul>
       </section>

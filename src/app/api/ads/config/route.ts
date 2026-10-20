@@ -35,6 +35,8 @@ export async function GET(request: NextRequest) {
     },
     banner: { enabled: enabled && settings.bannerEnabled },
     native: { enabled: enabled && settings.nativeEnabled },
+    // 나올 때 전면 광고(공개 방·영상): 이만큼 있었어야(분), 0이면 끔.
+    leave: { roomMinutes: settings.roomLeaveMinutes, videoMinutes: settings.videoLeaveMinutes },
     rewarded: {
       enabled: enabled && rewardToken !== null && settings.rewardedDailyMax > 0,
       chats: settings.rewardChats,

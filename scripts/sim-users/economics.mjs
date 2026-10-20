@@ -123,7 +123,7 @@ export function simulate(type, terms, o) {
       const browse = type.browseMinutes / type.sessions;
       if (ads && o.ads.bannerEnabled) n.banner += browse; // 배너 새로고침 약 60초
       // 네이티브는 목록(대화·영상)을 열 때 한 번씩, 자동 새로고침 없음(lib/ads.ts).
-      if (ads && o.ads.nativeEnabled) n.native += o.assume.native.perSession;
+      if (ads && o.ads.nativeEnabled) n.native += o.assume.native.perSession + o.assume.native.peopleBoardPerSession;
       let sent = 0;
       while (sent < perSession && today < type.chats) {
         if (today >= limit) {
@@ -154,6 +154,15 @@ export function simulate(type, terms, o) {
         // 팩을 마치고 나올 때도 전면(간격만 지키면) — 팩을 일부 날만 하면 그 비율만큼.
         if (ads && clock - lastInter >= o.ads.interstitialMinGapSeconds / 60) {
           n.interstitial += Math.min(type.packs, 1);
+          lastInter = clock;
+        }
+      }
+      // 공개 말하는 방: 쓰는 날 첫 세션에 방 로비(네이티브) → 방 → 몇 분 넘게 있다 나오면 전면(간격만 지키면).
+      if (s === 0 && type.roomMinutes > 0) {
+        if (ads && o.ads.nativeEnabled) n.native += 1;
+        clock += type.roomMinutes;
+        if (ads && o.ads.roomLeaveMinutes > 0 && type.roomMinutes >= o.ads.roomLeaveMinutes && clock - lastInter >= o.ads.interstitialMinGapSeconds / 60) {
+          n.interstitial += 1;
           lastInter = clock;
         }
       }
@@ -211,7 +220,7 @@ export function render(o) {
     "> 모두 **추정**입니다. 행동 유형과 비율, 광고 단가, 채움률은 가정입니다. 실측이 생기면 `economics.json`과 `ads.ts`의 숫자를 고치고 다시 돌립니다.",
     "",
     `이번 계산: 광고 단가 **${label}** · 채움률 ${pct(o.fill)} · 결제 전환율 ${pct(o.conv)} · 채팅 1통 ${Math.round(o.chatWon * 100) / 100}원 · Play 수수료 ${pct(STORE_FEE_SHARE)} · 부가세 ${pct(o.vat)}` +
-      ` · 광고 설정: ${o.ads.rewardedDailyMax > 0 ? `보상형 1회 = 채팅 ${o.ads.rewardChats}번·하루 ${o.ads.rewardedDailyMax}번` : "보상형 끔"}, 무료 채팅 하루 ${PLANS[0].terms.dailyChat}번, 전면 ${o.ads.interstitialMinGapSeconds / 60}분 간격·채팅 ${o.ads.interstitialAfterChats}번 뒤, 앱 오프닝 설치 ${o.ads.appOpenAfterDays}일 뒤·${o.ads.appOpenGapHours}시간 간격${o.ads.bannerEnabled ? ", 배너 켬" : ", 배너 끔"}${o.ads.nativeEnabled ? `, 네이티브 켬(세션당 ${o.assume.native.perSession}번)` : ", 네이티브 끔"}.`,
+      ` · 광고 설정: ${o.ads.rewardedDailyMax > 0 ? `보상형 1회 = 채팅 ${o.ads.rewardChats}번·하루 ${o.ads.rewardedDailyMax}번` : "보상형 끔"}, 무료 채팅 하루 ${PLANS[0].terms.dailyChat}번, 전면 ${o.ads.interstitialMinGapSeconds / 60}분 간격·채팅 ${o.ads.interstitialAfterChats}번 뒤, 앱 오프닝 설치 ${o.ads.appOpenAfterDays}일 뒤·${o.ads.appOpenGapHours}시간 간격${o.ads.bannerEnabled ? ", 배너 켬" : ", 배너 끔"}${o.ads.nativeEnabled ? `, 네이티브 켬(세션당 ${o.assume.native.perSession + o.assume.native.peopleBoardPerSession}번 + 방 로비), 방 ${o.ads.roomLeaveMinutes}분 넘게 있다 나오면 전면` : ", 네이티브 끔"}.`,
     "",
   );
 
@@ -285,6 +294,7 @@ export function render(o) {
     ["보상형 켬(1회 = 채팅 3번, 하루 3번)", { ads: { ...o.ads, rewardChats: 3, rewardedDailyMax: 3 } }],
     ["전면 채팅 3번 뒤", { ads: { ...o.ads, interstitialAfterChats: 3 } }],
     ["네이티브 끔", { ads: { ...o.ads, nativeEnabled: false } }],
+    ["방 퇴장 전면 끔", { ads: { ...o.ads, roomLeaveMinutes: 0 } }],
     ["배너 끔", { ads: { ...o.ads, bannerEnabled: false } }],
   ];
   for (const [name, change] of variants) {

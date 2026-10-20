@@ -45,3 +45,10 @@ test("환경 변수로 조정, 이상한 값은 기본값·범위 안으로", ()
 test("SSV 콜백의 ad_unit 숫자", () => {
   assert.equal(adUnitNumber(ADMOB_UNITS.rewarded), "3513667692");
 });
+
+test("방·영상 퇴장 전면: 기본 3분·2분, 0이면 끔, 범위 안으로", () => {
+  assert.equal(DEFAULT_ADS_SETTINGS.roomLeaveMinutes, 3);
+  assert.equal(DEFAULT_ADS_SETTINGS.videoLeaveMinutes, 2);
+  assert.equal(adsSettings({ ADS_ROOM_LEAVE_MINUTES: "0" }).roomLeaveMinutes, 0);
+  assert.equal(adsSettings({ ADS_VIDEO_LEAVE_MINUTES: "999" }).videoLeaveMinutes, 120);
+});

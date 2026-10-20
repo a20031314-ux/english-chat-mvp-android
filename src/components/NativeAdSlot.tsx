@@ -14,7 +14,8 @@ import { adsAvailable } from "@/lib/platform";
 /**
  * 목록 사이 네이티브 광고 자리(무료·안드로이드만, `lib/ads.ts`). 광고는 앱 카드 모양으로 Google SDK가 그리고
  * ("광고" 표시·AdChoices 포함), 이 div는 그 자리만 잡는다. 구독자·웹·iOS·광고 꺼짐이면 아무것도 그리지 않는다.
- * `active`: 이 화면이 지금 보이는지(숨은 탭에서 광고가 다른 화면 위에 뜨지 않게).
+ * `active`: 이 화면이 지금 보이는지. 안 보이면 자리를 떼어(마지막 자리면 그 화면 광고를 치움) 숨은 탭의 광고가
+ * 다른 화면 위에 뜨지 않고, 플러그인의 동시 화면 한도(2개)도 넘지 않는다. 다시 보이면 새 광고를 받는다.
  */
 export function NativeAdSlot({ feedId, slotKey, active = true }: { feedId: string; slotKey: string; active?: boolean }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -38,9 +39,9 @@ export function NativeAdSlot({ feedId, slotKey, active = true }: { feedId: strin
 
   useEffect(() => {
     const element = ref.current;
-    if (!enabled || failed || !element) return;
+    if (!enabled || failed || !active || !element) return;
     return attachNativeSlot(feedId, slotKey, element);
-  }, [enabled, failed, feedId, slotKey]);
+  }, [enabled, failed, active, feedId, slotKey]);
 
   useEffect(() => {
     setNativeFeedActive(feedId, active);

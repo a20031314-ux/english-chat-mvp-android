@@ -1,6 +1,7 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
+import { NativeAdSlot } from "@/components/NativeAdSlot";
 import type { RoomCopy } from "@/lib/rooms/copy";
 import { listPeople, setFollow } from "@/lib/rooms/client";
 import { ONLINE_WINDOW_MS, type PersonCard } from "@/lib/rooms/social";
@@ -119,10 +120,17 @@ export function PeopleList({
       {people && shown.length === 0 ? <p className="py-6 text-center text-sm text-slate-500">{t.peopleEmpty}</p> : null}
 
       <ul className="divide-y divide-white/[0.07]">
-        {shown.map((person) => {
+        {shown.map((person, index) => {
           const seen = activity(t, person.lastSeen, now);
           return (
-            <li key={person.id} className="flex gap-3 py-3">
+            <Fragment key={person.id}>
+            {/* 네 번째 사람 뒤에 네이티브 광고 하나(무료·안드로이드만). 프로필을 열면 시트가 덮어 멈춘다. */}
+            {index === 4 ? (
+              <li className="py-3">
+                <NativeAdSlot feedId="people-tab" slotKey="people-after-4" />
+              </li>
+            ) : null}
+            <li className="flex gap-3 py-3">
               <button type="button" onClick={() => setOpen(person)} className="relative shrink-0 self-start" aria-label={person.nickname}>
                 <Face accountId={person.id} name={person.nickname} size={60} speaking={false} photo={person.hasPhoto ? undefined : null} />
                 {seen.online ? (
@@ -169,6 +177,7 @@ export function PeopleList({
                 </div>
               </div>
             </li>
+            </Fragment>
           );
         })}
       </ul>

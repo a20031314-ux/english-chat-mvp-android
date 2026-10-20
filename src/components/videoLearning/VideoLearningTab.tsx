@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { maybeShowInterstitial } from "@/lib/ads";
 import { videoImportAvailable } from "@/lib/platform";
 
 const noSubscribe = () => () => {};
@@ -223,6 +224,19 @@ export function VideoLearningTab({
     setWatchFullscreen(false);
     setToast(null);
   }, [replaceBaseline]);
+
+  // 영상을 몇 분 넘게 보고 나오면 전면 광고(자연스러운 끝, lib/ads.ts "videoLeave"). 보는 중에는 없음.
+  const watchStartedAt = useRef(0);
+  useEffect(() => {
+    if (phase === "watching") {
+      watchStartedAt.current = Date.now();
+      return;
+    }
+    if (!watchStartedAt.current) return;
+    const watchedSeconds = (Date.now() - watchStartedAt.current) / 1000;
+    watchStartedAt.current = 0;
+    void maybeShowInterstitial("videoLeave", watchedSeconds);
+  }, [phase]);
 
   const languageRef = useRef(targetLanguage);
   useEffect(() => {
