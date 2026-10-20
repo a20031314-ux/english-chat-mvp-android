@@ -149,11 +149,14 @@ try {
 
   // 걸기: 대화 목록 → 상대 → 📞.
   await pa.getByText(`video-${b.name}`).first().click({ timeout: 30_000 });
-  await pa.getByRole("button", { name: ta.call }).click({ timeout: 15_000 });
+  // 대화가 열린 상태(답이 온 대화)로 불러와진 뒤에 📞 — 먼저 누르면 "대화가 열린 뒤에" 안내만.
+  await pa.getByText("[test] hello").first().waitFor({ timeout: 30_000 });
+  await pa.waitForTimeout(1500);
+  await pa.getByRole("button", { name: ta.call, exact: true }).click({ timeout: 15_000 });
   await pa.getByRole("button", { name: new RegExp(ta.cameraOn) }).waitFor({ timeout: 30_000 });
   // 받기: 대화 목록 → 상대 → 받기.
   await pb.getByText(`video-${a.name}`).first().click({ timeout: 30_000 });
-  await pb.getByRole("button", { name: tb.callJoin }).click({ timeout: 30_000 });
+  await pb.getByRole("button", { name: tb.callJoin, exact: true }).click({ timeout: 30_000 });
   await pb.getByRole("button", { name: new RegExp(tb.cameraOn) }).waitFor({ timeout: 30_000 });
   await pa.waitForTimeout(6000);
   result.beforeCamera = await Promise.all(pages.map((p) => p.evaluate(() => window.__videoStats())));
