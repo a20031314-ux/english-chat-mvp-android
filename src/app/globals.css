@@ -111,3 +111,8 @@ body {
 body[data-video-fullscreen="1"] [data-app-chrome] {
   display: none;
 }
+
+/* 웹 광고(AdSense): 채우지 못한 자리는 빈칸으로 남기지 않는다. */
+ins.adsbygoogle[data-ad-status="unfilled"] {
+  display: none !important;
+}

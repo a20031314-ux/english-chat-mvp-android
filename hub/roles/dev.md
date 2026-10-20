@@ -21,6 +21,7 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **웹 광고 AdSense (2026-10-20, 서버만·앱 빌드 필요 없음):** 코드 준비 끝(`src/lib/webAds.ts`, `WebAdSlot`, 앱 네이티브 광고와 같은 목록 자리, 무료만, `/ads.txt`, 사이트 확인 태그, 처리방침). 꺼져 있음 — 사용자가 AdSense 가입·`languagebank.net` 사이트 승인·반응형 디스플레이 광고 단위를 만든 뒤 Vercel `NEXT_PUBLIC_ADSENSE_CLIENT`(ca-pub-…)·`NEXT_PUBLIC_ADSENSE_SLOT_FEED` 넣고 재배포. 켜면 운영에서 `/ads.txt`·광고 자리 다시 확인. 유럽 동의창은 AdSense '개인 정보 보호 및 메시지'에서 켜야 함.
 - **네이티브 광고 (2026-10-20):** 단위 `native_feed …/5493440106`. 서버(바로 반영): `ADMOB_UNITS.native`, `ADS_NATIVE`, `/api/ads/config` native. 앱(다음 빌드): `components/NativeAdSlot.tsx`·`lib/ads.ts` 네이티브 피드(플러그인 미리보기 기능, Small 틀·앱 색) — 대화 목록 단체방·1:1 사이, 영상 목록 세 번째 뒤. 시트(layersOpen)·숨은 탭(active)이면 멈춤, 못 채우면 자리 접음.
   남은 것: 기기 확인(스크롤 따라가는지·시트 위에 안 뜨는지·탭 바꿀 때), 손익 모델에 네이티브 노출 넣기.
 - **게시판 답글 (2026-10-20, 서버 바로 반영·화면은 앱 다음 빌드):** 사용자 결정 "한 단계, 사진 1장". `BoardComment.parent`, `rooms/board.ts` `threadComments`·`replyRoot`·`withReplies`, `/api/board` comment `replyTo`,

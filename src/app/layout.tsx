@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     description: "Chat, talk and watch in the language you are learning — every sentence checked, and people to practise with.",
     images: [{ url: "/icon-512.png", width: 512, height: 512 }],
   },
+  // AdSense 사이트 확인(웹 광고, lib/webAds.ts). 값이 없으면 넣지 않는다.
+  ...(process.env.NEXT_PUBLIC_ADSENSE_CLIENT?.trim() ? { other: { "google-adsense-account": process.env.NEXT_PUBLIC_ADSENSE_CLIENT.trim() } } : {}),
 };
 
 export const viewport = { themeColor: "#000000" };

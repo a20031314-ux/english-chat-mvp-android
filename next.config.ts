@@ -21,6 +21,8 @@ const nextConfig: NextConfig = {
   images: {
     unoptimized: true,
   },
+  // 웹 광고(AdSense) 판매자 확인 파일. 앱 정적 빌드에는 서버가 없어서 넣지 않는다.
+  ...(capacitorStatic ? {} : { rewrites: async () => [{ source: "/ads.txt", destination: "/api/ads/txt" }] }),
 };
 
 export default nextConfig;
