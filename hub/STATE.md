@@ -48,6 +48,7 @@
 
 ## 사용자에게 물어볼 것
 
+- **운영 저장소(Upstash KV) 쓰기 실패(2026-10-21 01:10 발견):** 가입이 503 `STORE_FAILED`. 무료 월 50만 명령 초과 의심 → 사용자가 Upstash Usage 확인·Pay-as-you-go 전환. 풀리면 다음 채팅이 운영 가입·저장 확인(이 줄 지우기).
 - iOS(`hub/drafts/ios-launch.md` "출시까지 남은 사람 일"): 정함(2026-10-20) — 번들 ID는 안드로이드와 같은 `com.yourname.englishchat`, 구독·포인트 상품 ID도 같게, 다른 스토어 구독자는 결제 막음.
   App Store Connect 구독 3·포인트 4, RevenueCat 아이폰 앱·권한·offering 패키지(lite·plus·premium) 설정 끝. 남은 것: GitHub ios 환경에 `NEXT_PUBLIC_REVENUECAT_IOS_API_KEY`, 상품 한국어 이름·심사 스크린샷, 아이콘, 유료 앱 계약.
 - 비용 표(`hub/costs.md`, 자동 계산)에서 채팅 한도까지 매일 다 쓰면 유료 요금 모두 손해(라이트 −1,243원 ~ 8,900원 −4,727원/월). 채팅 한 통 2원은 가정이라, 2.67 출시 1주 뒤 실측 토큰으로 확인하고 한도를 다시 볼지.
