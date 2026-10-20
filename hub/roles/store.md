@@ -12,6 +12,8 @@
 - 앱 안 업데이트 배너 기준 `RECOMMENDED_APP_VERSION` — Play에 실제로 공개된 뒤에만 올린다.
 - 사용자가 PC에서 빌드할 때 막히면 돕는다 (`npm run build:android` → Sync → Signed Bundle).
 
+- 등록정보 설명 14개 언어 새 글 PR #11(2026-10-21) — 병합하면 Play 설명을 덮어씀. 2.70 출시와 같이 병합(광고 문장 때문), 사용자 확인 대기.
+
 ## 하지 않는 일
 - fastlane 실행, Play API 호출, 서명 키 읽기, 프로덕션 워크플로 실행 — 막혀 있고, 사람이 한다.
 - 기능 코드 수정 (→ dev).
