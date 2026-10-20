@@ -5,6 +5,7 @@ import { NativeAdSlot } from "@/components/NativeAdSlot";
 import type { RoomCopy } from "@/lib/rooms/copy";
 import { listPeople, setFollow } from "@/lib/rooms/client";
 import { ONLINE_WINDOW_MS, type PersonCard } from "@/lib/rooms/social";
+import { readEntryDoor } from "@/lib/doors";
 import { getLearningLanguage, isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
 import { LearningLanguageFlag } from "@/components/LearningLanguageFlag";
 import { Face, ProfileSheet, loadProfile } from "./RoomParts";
@@ -17,7 +18,7 @@ import { Face, ProfileSheet, loadProfile } from "./RoomParts";
  * 거르기는 화면에서만(서버는 최대 60명을 준다).
  */
 
-type Filter = "all" | "partners" | "same";
+type Filter = "all" | "online" | "partners" | "same";
 
 function activity(t: RoomCopy, lastSeen: number, now: number): { text: string; online: boolean } {
   if (now - lastSeen < ONLINE_WINDOW_MS) return { text: t.onlineNow, online: true };
@@ -52,7 +53,8 @@ export function PeopleList({
 }) {
   const [people, setPeople] = useState<PersonCard[] | null>(null);
   const [error, setError] = useState(false);
-  const [filter, setFilter] = useState<Filter>("all");
+  // 창구 Pingo(lib/doors.ts)로 오면 "지금 접속 중"으로 연다.
+  const [filter, setFilter] = useState<Filter>(() => readEntryDoor()?.peopleFilter ?? "all");
   const [open, setOpen] = useState<PersonCard | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
   const [now, setNow] = useState(() => Date.now());
@@ -76,10 +78,16 @@ export function PeopleList({
 
   const shown = useMemo(() => {
     const list = people ?? [];
+    if (filter === "online") {
+      // 지금 접속한 사람 중 내 말을 배우는 사람(언어 교환 짝)이 먼저.
+      return list
+        .filter((person) => now - person.lastSeen < ONLINE_WINDOW_MS)
+        .sort((a, b) => Number(b.learn === locale) - Number(a.learn === locale));
+    }
     if (filter === "partners") return list.filter((person) => person.learn === locale);
     if (filter === "same") return list.filter((person) => person.learn === targetLanguage);
     return list;
-  }, [people, filter, locale, targetLanguage]);
+  }, [people, filter, locale, targetLanguage, now]);
 
   const toggleFollow = async (person: PersonCard) => {
     if (busy) return;
@@ -95,6 +103,7 @@ export function PeopleList({
 
   const filters: [Filter, string][] = [
     ["all", t.peopleAll],
+    ["online", t.peopleOnline],
     ["partners", t.peoplePartners],
     ["same", t.peopleSame],
   ];

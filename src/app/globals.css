@@ -64,6 +64,13 @@
   --color-door-bg: #000000;
 }
 
+/* 창구 Pingo(1:1 대화): 민트 */
+[data-door="pingo"] {
+  --color-door-accent: #3ddbb4;
+  --color-door-soft: rgba(61, 219, 180, 0.13);
+  --color-door-bg: #04110e;
+}
+
 /* 창구 Moyeo(단체통화): 따뜻한 산호색 */
 [data-door="moyeo"] {
   --color-door-accent: #ff7a59;

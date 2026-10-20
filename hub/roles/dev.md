@@ -21,6 +21,7 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **창구 Pingo 1:1 대화 (2026-10-20, 서버만):** 1단계 코드 끝(소개 14개 언어, 사람 목록 "🟢 지금 접속 중" 거르기 14개 언어). 사용자 도메인 `talk.languagebank.net`(Vercel·가비아 CNAME `talk`·OAuth 원본) 뒤 운영 확인. 2단계 본인인증 바로 연결은 계약 뒤.
 - **1:1 영상통화 (2026-10-20, 서버 바로 반영·화면은 앱 다음 빌드, `hub/drafts/video-workspace.md` 1단계):** 사용자 "1대1 메이트 만들어줘". 1:1 대화 📞·러닝메이트 📞 방에 `RoomMeta.video`,
   메시(`rooms/mesh.ts`)에 영상 자리 하나(켜고 끌 때 다시 협상 없이 replaceTrack, 켬/끔은 `cam` 신호, 한 갈래 450kbps), 방 위 `VideoStage.tsx`(상대 크게·나 작게·상대 마지막 자막), "📷 카메라 켜기"(기본 꺼짐)·"🙈 영상 가리기"(이 기기만)·차단한 사람 영상 숨김,
   접거나 뒤로 가면 카메라 끔. 비공개 방은 `/api/rooms` `ice` → `server/turn.ts`(Cloudflare TURN, 환경 변수 없으면 STUN만). 안드로이드 `CAMERA` 권한(required=false). 문구 9개 × 14개 언어(Claude가 씀).

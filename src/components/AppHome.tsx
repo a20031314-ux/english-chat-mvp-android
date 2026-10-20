@@ -264,6 +264,17 @@ function AppHomeInner({
       ? door.tabs.map((id) => socialTabItems.find((item) => item.id === id)).filter((item): item is { id: AppTab; label: string } => Boolean(item))
       : socialTabItems
     : aiTabItems;
+  // 창구 모드면 브라우저 탭·홈 화면 이름도 그 창구. Next가 머리말 제목을 다시 쓰면 다시 맞춘다.
+  useEffect(() => {
+    if (!door) return;
+    const apply = () => {
+      if (document.title !== door.name) document.title = door.name;
+    };
+    apply();
+    const watcher = new MutationObserver(apply);
+    watcher.observe(document.head, { subtree: true, childList: true, characterData: true });
+    return () => watcher.disconnect();
+  }, [door]);
   // 사용법(?): 대화 목록은 채팅 안내, 사람은 말하는 방 안내를 같이 쓴다.
   // 사용법 창: "?"는 지금 화면의 기능 칸으로 열고(GuideSheet SCREEN_CHAPTER), 묶음마다 "이 화면으로 가기".
   const guideGo: GuideGo[] = [
@@ -293,7 +304,6 @@ function AppHomeInner({
             lang={locale}
           >
             <div data-app-chrome className="relative z-[60] flex shrink-0 flex-wrap items-center gap-2 overflow-visible border-b border-white/10 bg-[#050505]/80 px-3 py-1.5 backdrop-blur-md sm:px-4">
-              {door ? <title>{door.name}</title> : null}
               {door ? (
                 <span data-door={door.theme} className="me-1 text-body font-bold text-door-accent">
                   {door.name}

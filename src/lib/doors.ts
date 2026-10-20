@@ -45,6 +45,10 @@ export type Door = {
   tabs: AppTab[];
   /** 소개 페이지 색(`globals.css`의 `[data-door=…]` 토큰을 쓴다). */
   theme: string;
+  /** 소개 페이지에 세는 것: 열린 방·말하는 사람(rooms) 또는 지금 접속한 사람(people). */
+  live: "rooms" | "people";
+  /** 사람 목록을 이 거르기로 연다(`RoomPeople`). */
+  peopleFilter?: "online";
   copy: Record<DoorLang, DoorCopy>;
 };
 
@@ -56,6 +60,7 @@ const GROUP_CALL: Door = {
   start: "rooms",
   tabs: ["rooms", "talk", "map"],
   theme: "moyeo",
+  live: "rooms",
   copy: {
     ko: {
       title: "Moyeo 모여 — 외국인과 단체통화, 언어교환 음성 채팅방",
@@ -298,7 +303,264 @@ const GROUP_CALL: Door = {
   },
 };
 
-export const DOORS: Door[] = [GROUP_CALL];
+/**
+ * Pingo — 1:1 대화 창구(사용자 결정 2026-10-20 "랜덤채팅은 가+나 섞어서"). 1단계(나): 무작위 연결이 아니라
+ * 지금 접속한 사람 중 언어가 맞는 사람을 프로필과 함께 보여 주고, 내가 골라 대화를 요청 → 상대가 수락하면 1:1.
+ * 2단계(가, 본인인증한 성인끼리 "바로 연결")는 본인인증 계약 뒤(`hub/drafts/doors.md`).
+ */
+const RANDOM_CHAT: Door = {
+  id: "random-chat",
+  host: "talk",
+  name: "Pingo",
+  defaultLang: "ko",
+  start: "people",
+  tabs: ["people", "talk", "map"],
+  theme: "pingo",
+  live: "people",
+  peopleFilter: "online",
+  copy: {
+    ko: {
+      title: "Pingo 핑고 — 외국인과 1:1 채팅, 랜덤채팅 말고 언어가 맞는 사람과",
+      description: "지금 접속한 외국인 중 내 언어를 배우는 사람을 골라 1:1로 대화해요. 무작위 연결이 아니라 프로필을 보고 고르고, 상대가 수락해야 시작돼요.",
+      headline: "지금 접속한 외국인과, 1:1로",
+      sub: "내 말을 배우는 사람과 상대 말을 배우는 내가 만나요. 프로필을 보고 골라 대화를 요청하면, 상대가 수락할 때 시작해요.",
+      features: [
+        ["🟢 지금 접속 중인 사람부터", "방금 앱을 쓴 사람이 맨 위에. 쓰는 말과 배우는 말이 바로 보여요."],
+        ["🤝 서로 고르고 수락해야 시작", "아무나 연결되지 않아요. 요청을 받은 사람이 수락해야 대화가 열려요."],
+        ["🛡 차단·신고 바로", "불편하면 프로필에서 바로 차단하고 신고할 수 있어요."],
+      ],
+      cta: "지금 접속한 사람 보기",
+      app: "앱으로 받기",
+      live: "지금 {people}명이 접속 중",
+      liveEmpty: "지금 접속한 사람이 적어요. 먼저 들어와 기다려 보세요.",
+      privacy: "개인정보 처리방침",
+      operator: "languagebank가 운영해요",
+    },
+    en: {
+      title: "Pingo — 1:1 chat with people abroad, matched by language, not at random",
+      description: "Pick someone online now who is learning your language and chat one-to-one. Not random: you choose from profiles, and a chat starts only when they accept.",
+      headline: "Chat one-to-one with someone online now",
+      sub: "You meet people learning your language while you learn theirs. Pick a profile, send a request, and the chat starts when they accept.",
+      features: [
+        ["🟢 People online now come first", "Whoever just used the app is at the top, with the languages they speak and learn."],
+        ["🤝 Both sides choose", "Nobody is connected at random. A chat opens only when the other person accepts."],
+        ["🛡 Block and report right away", "If something feels off, block and report from their profile."],
+      ],
+      cta: "See who's online",
+      app: "Get the app",
+      live: "{people} people online now",
+      liveEmpty: "Few people are online right now. Come in and wait a moment.",
+      privacy: "Privacy policy",
+      operator: "Run by languagebank",
+    },
+    es: {
+      title: "Pingo — chat 1:1 con gente de otros países, por idioma y no al azar",
+      description: "Elige a alguien conectado ahora que aprende tu idioma y chatea uno a uno. No es aleatorio: eliges por perfil y el chat empieza solo si acepta.",
+      headline: "Chatea uno a uno con alguien conectado ahora",
+      sub: "Conoces a gente que aprende tu idioma mientras tú aprendes el suyo. Elige un perfil, envía una solicitud y el chat empieza cuando acepta.",
+      features: [
+        ["🟢 Primero quien está conectado", "Arriba quien acaba de usar la app, con los idiomas que habla y aprende."],
+        ["🤝 Eligen los dos", "Nadie se conecta al azar. El chat se abre solo cuando la otra persona acepta."],
+        ["🛡 Bloquear y denunciar al instante", "Si algo no va bien, bloquea y denuncia desde su perfil."],
+      ],
+      cta: "Ver quién está conectado",
+      app: "Descargar la app",
+      live: "{people} personas conectadas ahora",
+      liveEmpty: "Ahora hay poca gente conectada. Entra y espera un momento.",
+      privacy: "Política de privacidad",
+      operator: "Gestionado por languagebank",
+    },
+    ja: {
+      title: "Pingo — 海外の人と1対1チャット、ランダムではなく言語で選ぶ",
+      description: "いまオンラインの人の中から、自分の言語を学んでいる人を選んで1対1で話せます。ランダムではなくプロフィールを見て選び、相手が承認すると始まります。",
+      headline: "いまオンラインの人と、1対1で",
+      sub: "自分の言語を学ぶ人と、その人の言語を学ぶ自分が出会います。プロフィールを見てリクエストし、相手が承認したら会話スタート。",
+      features: [
+        ["🟢 いまオンラインの人から", "さっきアプリを使った人が一番上に。話す言語と学ぶ言語がすぐわかります。"],
+        ["🤝 お互いに選んで承認", "勝手につながりません。リクエストを受けた人が承認すると会話が開きます。"],
+        ["🛡 すぐブロック・通報", "嫌だと思ったら、プロフィールからすぐブロック・通報できます。"],
+      ],
+      cta: "オンラインの人を見る",
+      app: "アプリを入手",
+      live: "いま {people}人がオンライン",
+      liveEmpty: "いまオンラインの人が少なめです。先に入って待ってみましょう。",
+      privacy: "プライバシーポリシー",
+      operator: "運営: languagebank",
+    },
+    zh: {
+      title: "Pingo — 和外国人一对一聊天，按语言匹配而不是随机",
+      description: "从现在在线的人里选一个在学你语言的人，一对一聊天。不是随机连接：看资料来选，对方接受后才开始。",
+      headline: "和现在在线的人，一对一聊",
+      sub: "你遇到在学你语言的人，你也在学他的语言。看资料发出请求，对方接受后就开始聊天。",
+      features: [
+        ["🟢 先看现在在线的人", "刚用过应用的人排在最上面，会说和在学的语言一目了然。"],
+        ["🤝 双方都要选择", "不会随机连上任何人。对方接受后对话才会打开。"],
+        ["🛡 随时拉黑、举报", "觉得不舒服，可以在资料页马上拉黑并举报。"],
+      ],
+      cta: "看看谁在线",
+      app: "下载应用",
+      live: "现在有 {people} 人在线",
+      liveEmpty: "现在在线的人不多。先进来等一会儿吧。",
+      privacy: "隐私政策",
+      operator: "由 languagebank 运营",
+    },
+    vi: {
+      title: "Pingo — chat 1:1 với người nước ngoài, ghép theo ngôn ngữ chứ không ngẫu nhiên",
+      description: "Chọn một người đang online đang học ngôn ngữ của bạn và trò chuyện 1:1. Không ngẫu nhiên: bạn chọn theo hồ sơ, chỉ bắt đầu khi họ chấp nhận.",
+      headline: "Trò chuyện 1:1 với người đang online",
+      sub: "Bạn gặp người học ngôn ngữ của bạn, còn bạn học ngôn ngữ của họ. Chọn hồ sơ, gửi yêu cầu, và bắt đầu khi họ chấp nhận.",
+      features: [
+        ["🟢 Người đang online lên trước", "Ai vừa dùng ứng dụng ở trên cùng, kèm ngôn ngữ họ nói và đang học."],
+        ["🤝 Cả hai cùng chọn", "Không ai bị nối ngẫu nhiên. Cuộc trò chuyện chỉ mở khi người kia chấp nhận."],
+        ["🛡 Chặn và báo cáo ngay", "Thấy không thoải mái thì chặn và báo cáo ngay trong hồ sơ."],
+      ],
+      cta: "Xem ai đang online",
+      app: "Tải ứng dụng",
+      live: "{people} người đang online",
+      liveEmpty: "Hiện ít người online. Vào trước và chờ một chút nhé.",
+      privacy: "Chính sách quyền riêng tư",
+      operator: "Vận hành bởi languagebank",
+    },
+    fr: {
+      title: "Pingo — chat 1:1 avec des gens d’autres pays, par langue et non au hasard",
+      description: "Choisissez une personne en ligne qui apprend votre langue et discutez en tête-à-tête. Pas de hasard : vous choisissez par profil, et la discussion commence seulement si elle accepte.",
+      headline: "Discutez en tête-à-tête avec quelqu’un en ligne",
+      sub: "Vous rencontrez des gens qui apprennent votre langue pendant que vous apprenez la leur. Choisissez un profil, envoyez une demande : ça commence quand la personne accepte.",
+      features: [
+        ["🟢 Les personnes en ligne d’abord", "Celles qui viennent d’utiliser l’app sont en haut, avec les langues parlées et apprises."],
+        ["🤝 Les deux choisissent", "Personne n’est connecté au hasard. La discussion s’ouvre seulement si l’autre accepte."],
+        ["🛡 Bloquer et signaler tout de suite", "Si quelque chose ne va pas, bloquez et signalez depuis son profil."],
+      ],
+      cta: "Voir qui est en ligne",
+      app: "Télécharger l’app",
+      live: "{people} personnes en ligne",
+      liveEmpty: "Peu de monde en ligne pour l’instant. Entrez et patientez un peu.",
+      privacy: "Politique de confidentialité",
+      operator: "Géré par languagebank",
+    },
+    it: {
+      title: "Pingo — chat 1:1 con persone di altri paesi, per lingua e non a caso",
+      description: "Scegli qualcuno online che impara la tua lingua e chatta a tu per tu. Non è casuale: scegli dal profilo e la chat inizia solo se accetta.",
+      headline: "Chatta a tu per tu con qualcuno online ora",
+      sub: "Incontri chi impara la tua lingua mentre tu impari la sua. Scegli un profilo, invia una richiesta e si comincia quando accetta.",
+      features: [
+        ["🟢 Prima chi è online", "In cima chi ha appena usato l’app, con le lingue che parla e impara."],
+        ["🤝 Scelgono entrambi", "Nessuno viene collegato a caso. La chat si apre solo quando l’altra persona accetta."],
+        ["🛡 Blocca e segnala subito", "Se qualcosa non va, blocca e segnala dal suo profilo."],
+      ],
+      cta: "Guarda chi è online",
+      app: "Scarica l’app",
+      live: "{people} persone online ora",
+      liveEmpty: "Ora ci sono poche persone online. Entra e aspetta un attimo.",
+      privacy: "Informativa sulla privacy",
+      operator: "Gestito da languagebank",
+    },
+    pt: {
+      title: "Pingo — chat 1:1 com pessoas de outros países, por idioma e não aleatório",
+      description: "Escolha alguém online que aprende o seu idioma e converse a dois. Não é aleatório: você escolhe pelo perfil e a conversa só começa se a pessoa aceitar.",
+      headline: "Converse a dois com alguém online agora",
+      sub: "Você conhece quem aprende o seu idioma enquanto aprende o dela. Escolha um perfil, envie um pedido e a conversa começa quando a pessoa aceita.",
+      features: [
+        ["🟢 Quem está online vem primeiro", "No topo, quem acabou de usar o app, com os idiomas que fala e aprende."],
+        ["🤝 Os dois escolhem", "Ninguém é conectado ao acaso. A conversa só abre quando a outra pessoa aceita."],
+        ["🛡 Bloquear e denunciar na hora", "Se algo incomodar, bloqueie e denuncie pelo perfil."],
+      ],
+      cta: "Ver quem está online",
+      app: "Baixar o app",
+      live: "{people} pessoas online agora",
+      liveEmpty: "Pouca gente online agora. Entre e espere um pouco.",
+      privacy: "Política de privacidade",
+      operator: "Mantido por languagebank",
+    },
+    ru: {
+      title: "Pingo — чат 1:1 с людьми из других стран, по языку, а не наугад",
+      description: "Выберите человека онлайн, который учит ваш язык, и общайтесь один на один. Не наугад: вы выбираете по профилю, а чат начинается, только если человек согласится.",
+      headline: "Общайтесь один на один с теми, кто онлайн",
+      sub: "Вы встречаете тех, кто учит ваш язык, пока вы учите их. Выберите профиль, отправьте запрос — разговор начнётся, когда человек примет.",
+      features: [
+        ["🟢 Сначала те, кто онлайн", "Наверху те, кто только что заходил, с языками, которые они знают и учат."],
+        ["🤝 Выбирают оба", "Никого не соединяют наугад. Чат откроется, только когда собеседник примет запрос."],
+        ["🛡 Блок и жалоба сразу", "Если что-то не так, заблокируйте и пожалуйтесь из профиля."],
+      ],
+      cta: "Посмотреть, кто онлайн",
+      app: "Скачать приложение",
+      live: "Сейчас онлайн: {people}",
+      liveEmpty: "Сейчас онлайн мало людей. Заходите и немного подождите.",
+      privacy: "Политика конфиденциальности",
+      operator: "Работает на languagebank",
+    },
+    id: {
+      title: "Pingo — chat 1:1 dengan orang luar negeri, dicocokkan lewat bahasa, bukan acak",
+      description: "Pilih orang yang sedang online dan belajar bahasamu, lalu ngobrol berdua. Bukan acak: kamu memilih dari profil, dan obrolan baru mulai kalau dia menerima.",
+      headline: "Ngobrol berdua dengan yang sedang online",
+      sub: "Kamu bertemu orang yang belajar bahasamu, sementara kamu belajar bahasanya. Pilih profil, kirim permintaan, dan mulai saat dia menerima.",
+      features: [
+        ["🟢 Yang online duluan", "Yang baru memakai aplikasi ada di atas, lengkap dengan bahasa yang dipakai dan dipelajari."],
+        ["🤝 Sama-sama memilih", "Tidak ada yang tersambung acak. Obrolan terbuka hanya kalau orang itu menerima."],
+        ["🛡 Blokir dan laporkan langsung", "Kalau tidak nyaman, blokir dan laporkan dari profilnya."],
+      ],
+      cta: "Lihat yang online",
+      app: "Unduh aplikasi",
+      live: "{people} orang online sekarang",
+      liveEmpty: "Sedang sedikit yang online. Masuk dulu dan tunggu sebentar.",
+      privacy: "Kebijakan privasi",
+      operator: "Dikelola oleh languagebank",
+    },
+    ar: {
+      title: "Pingo — دردشة فردية مع أشخاص من بلدان أخرى، حسب اللغة لا عشوائيًا",
+      description: "اختر شخصًا متصلًا الآن يتعلّم لغتك وتحدث معه على انفراد. ليست عشوائية: تختار من الملف الشخصي، ولا تبدأ الدردشة إلا إذا قبل.",
+      headline: "تحدث على انفراد مع شخص متصل الآن",
+      sub: "تلتقي بمن يتعلّم لغتك بينما تتعلّم لغته. اختر ملفًا وأرسل طلبًا، وتبدأ الدردشة عندما يقبل.",
+      features: [
+        ["🟢 المتصلون الآن أولًا", "في الأعلى من استخدم التطبيق للتو، مع اللغات التي يتحدثها ويتعلّمها."],
+        ["🤝 الطرفان يختاران", "لا أحد يُوصل عشوائيًا. تُفتح الدردشة فقط عندما يقبل الطرف الآخر."],
+        ["🛡 حظر وإبلاغ فورًا", "إن شعرت بعدم الارتياح، احظر وأبلغ من ملفه الشخصي."],
+      ],
+      cta: "شاهد من المتصل",
+      app: "حمّل التطبيق",
+      live: "{people} متصلون الآن",
+      liveEmpty: "عدد المتصلين قليل الآن. ادخل وانتظر قليلًا.",
+      privacy: "سياسة الخصوصية",
+      operator: "تديره languagebank",
+    },
+    th: {
+      title: "Pingo — แชท 1:1 กับคนต่างชาติ จับคู่ตามภาษา ไม่ใช่สุ่ม",
+      description: "เลือกคนที่ออนไลน์อยู่และกำลังเรียนภาษาของคุณ แล้วคุยกันแบบตัวต่อตัว ไม่ใช่การสุ่ม: เลือกจากโปรไฟล์ และจะเริ่มเมื่ออีกฝ่ายตอบรับ",
+      headline: "คุยตัวต่อตัวกับคนที่ออนไลน์อยู่ตอนนี้",
+      sub: "คุณได้เจอคนที่เรียนภาษาของคุณ ขณะที่คุณเรียนภาษาของเขา เลือกโปรไฟล์ ส่งคำขอ แล้วเริ่มคุยเมื่ออีกฝ่ายตอบรับ",
+      features: [
+        ["🟢 คนที่ออนไลน์ขึ้นก่อน", "คนที่เพิ่งใช้แอปอยู่บนสุด พร้อมภาษาที่พูดและภาษาที่เรียน"],
+        ["🤝 ต่างฝ่ายต่างเลือก", "ไม่มีการเชื่อมต่อแบบสุ่ม แชทจะเปิดเมื่ออีกฝ่ายตอบรับเท่านั้น"],
+        ["🛡 บล็อกและรายงานได้ทันที", "ถ้ารู้สึกไม่สบายใจ บล็อกและรายงานจากโปรไฟล์ได้เลย"],
+      ],
+      cta: "ดูว่าใครออนไลน์",
+      app: "ดาวน์โหลดแอป",
+      live: "ออนไลน์อยู่ {people} คน",
+      liveEmpty: "ตอนนี้คนออนไลน์น้อย เข้ามารอสักครู่ได้เลย",
+      privacy: "นโยบายความเป็นส่วนตัว",
+      operator: "ดำเนินการโดย languagebank",
+    },
+    hi: {
+      title: "Pingo — दूसरे देशों के लोगों से 1:1 चैट, भाषा से मिलान, रैंडम नहीं",
+      description: "अभी ऑनलाइन किसी ऐसे व्यक्ति को चुनें जो आपकी भाषा सीख रहा हो, और आमने-सामने चैट करें। रैंडम नहीं: आप प्रोफ़ाइल देखकर चुनते हैं, और चैट तभी शुरू होती है जब वह स्वीकार करे।",
+      headline: "अभी ऑनलाइन किसी से आमने-सामने बात करें",
+      sub: "आप उनसे मिलते हैं जो आपकी भाषा सीख रहे हैं, और आप उनकी। प्रोफ़ाइल चुनें, अनुरोध भेजें, और स्वीकार होते ही बात शुरू।",
+      features: [
+        ["🟢 पहले ऑनलाइन लोग", "जिन्होंने अभी ऐप इस्तेमाल किया वे सबसे ऊपर, बोली और सीखी जा रही भाषाओं के साथ।"],
+        ["🤝 दोनों चुनते हैं", "कोई रैंडम नहीं जुड़ता। चैट तभी खुलती है जब सामने वाला स्वीकार करे।"],
+        ["🛡 तुरंत ब्लॉक और रिपोर्ट", "कुछ ठीक न लगे तो प्रोफ़ाइल से तुरंत ब्लॉक और रिपोर्ट करें।"],
+      ],
+      cta: "देखें कौन ऑनलाइन है",
+      app: "ऐप पाएँ",
+      live: "अभी {people} लोग ऑनलाइन",
+      liveEmpty: "अभी कम लोग ऑनलाइन हैं। आइए और थोड़ा इंतज़ार करें।",
+      privacy: "गोपनीयता नीति",
+      operator: "languagebank द्वारा संचालित",
+    },
+  },
+};
+
+export const DOORS: Door[] = [GROUP_CALL, RANDOM_CHAT];
 
 export function doorById(id: string | null | undefined): Door | null {
   return DOORS.find((door) => door.id === id) ?? null;
