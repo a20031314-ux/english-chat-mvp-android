@@ -171,8 +171,12 @@ export function chatMessageUsd(measured?: Record<string, Tokens>): number {
  * 새로 합성한다고 보고 그 비율을 가정한다(hub/drafts/daily-pack.md "비용").
  */
 export const PACK = {
+  // Twelve questions and up to three follow-ups of the tutor's own (pack.ts PACK_FOLLOWS).
   items: 12,
-  synthesisedShare: 0.1,
+  follows: 3,
+  // The questions come from the shared cache; reactions now name what was said
+  // and follow-ups are new lines, so about a third of what is spoken is synthesised.
+  synthesisedShare: 0.35,
   basis: "assumed" as Basis,
 };
 
@@ -181,5 +185,5 @@ export function packUsd(): number {
     opUsd("roleplayListen") +
     opUsd("roleplayTurn") +
     (ROLEPLAY_TURN.tutorSpeakingSeconds / 60) * TTS_USD_PER_MINUTE * PACK.synthesisedShare;
-  return PACK.items * perItem;
+  return (PACK.items + PACK.follows) * perItem;
 }

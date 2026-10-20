@@ -420,7 +420,10 @@ export async function POST(request: NextRequest) {
     });
     // The question that will be asked is the one the pack moves past.
     packChoice = asked;
-    return shaped;
+    // Questions answered once this turn counts: the one this answers, if any.
+    const answered = new Set(playingPack.turns.map((t) => t.index).filter((i) => i >= 0));
+    if (playingPack.cursor - 1 >= 0) answered.add(playingPack.cursor - 1);
+    return { ...shaped, progress: { answered: answered.size, total: playingPack.items.length } };
   };
 
   try {

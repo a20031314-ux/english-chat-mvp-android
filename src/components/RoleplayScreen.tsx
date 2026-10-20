@@ -308,6 +308,9 @@ export function RoleplayScreen({
   // going quiet, which is what a dropped turn looks like and is not this.
   // "daily" when a plan's free talk for today is what ran out (billing/plans.ts).
   const [outOfPoints, setOutOfPoints] = useState<false | "points" | "daily">(false);
+  // The pack's own count from the server, once a turn has brought one: a
+  // follow-up the tutor asked is a line said but not a pack question.
+  const [packCount, setPackCount] = useState<{ answered: number; total: number } | null>(null);
   // Bumped per session, so a fold that comes back after the scene changed is
   // dropped rather than applied to the wrong conversation.
   const sessionRef = useRef(0);
@@ -628,6 +631,7 @@ export function RoleplayScreen({
         return;
       }
       const direction = answer;
+      if (direction?.progress) setPackCount(direction.progress);
       // The tutor's own reading of the turn is what marks it: it is the one
       // judgement in the scene that looked at what they meant, not at whether
       // a recorded phrase happened to match.
@@ -1016,8 +1020,14 @@ export function RoleplayScreen({
                 ? {
                     ...practice,
                     title: ui.packProgress
-                      .replace("{n}", String(Math.min(PACK_ITEMS, (practice.packAnswered ?? 0) + Math.max(0, said.filter((line) => line.who === "learner").length - 1))))
-                      .replace("{total}", String(PACK_ITEMS)),
+                      .replace(
+                        "{n}",
+                        String(
+                          packCount?.answered ??
+                            Math.min(PACK_ITEMS, (practice.packAnswered ?? 0) + Math.max(0, said.filter((line) => line.who === "learner").length - 1)),
+                        ),
+                      )
+                      .replace("{total}", String(packCount?.total ?? PACK_ITEMS)),
                   }
                 : practice
             }

@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { MODEL_CALLS_PER_REQUEST } from "../server/modelCalls.ts";
-import { PACK_ITEMS } from "../pack/pack.ts";
+import { PACK_ITEMS, PACK_FOLLOWS } from "../pack/pack.ts";
 import { CALL_TRANSCRIBE_USD_PER_MINUTE, ROLEPLAY_TURN, TTS_USD_PER_MINUTE } from "./cost.ts";
 import { OP_COST, PACK, assumedOps, chatMessageUsd, opUsd, packUsd } from "./opCost.ts";
 
@@ -41,6 +41,7 @@ test("예전 보고서와 같은 값으로 매긴다", () => {
 
 test("팩 문답 수가 팩 코드와 같다", () => {
   assert.equal(PACK.items, PACK_ITEMS);
+  assert.equal(PACK.follows, PACK_FOLLOWS);
   assert.ok(packUsd() > 0 && packUsd() < 0.05);
 });
 

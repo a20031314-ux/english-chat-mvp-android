@@ -72,11 +72,23 @@ export function shapePackDirection(
   // The tutor's own question, written into its line: asked, and the pack moves past it.
   if (chosen?.free) return as(direction, chosen);
   const written0 = "text" in direction.say ? direction.say.text : "";
+  // A follow-up of its own about what they said: asked as written, the
+  // conversation goes on, and the pack's planned question waits. A follow-up
+  // picked with no question written is just a reaction, and the planned
+  // question comes after it.
+  if (chosen?.follow) {
+    if (QUESTION_END.test(written0.trim())) {
+      const next = "end" in direction.next ? { step: input.nodeId } : direction.next;
+      return as({ ...direction, next }, chosen);
+    }
+    chosen = input.planned && !input.planned.follow ? input.planned : null;
+    if (!chosen) return as(direction);
+  }
   if (!chosen) {
     // No pick. Fine when the tutor asked or answered something itself; when it
     // only reacted, the learner would be left with nothing to answer, so the
     // planned question follows (seen on the first production run).
-    if (QUESTION_END.test(written0.trim()) || !input.planned || input.planned.free) return as(direction);
+    if (QUESTION_END.test(written0.trim()) || !input.planned || input.planned.free || input.planned.follow) return as(direction);
     chosen = input.planned;
   }
   const raw = reactionOnly(written0);

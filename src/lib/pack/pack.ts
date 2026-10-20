@@ -34,6 +34,13 @@ export const PACK_ITEMS = 12;
 const BLOCK = 3;
 /** Openers a learner saw in the packs this many days back are not used again yet. */
 export const AVOID_DAYS = 3;
+/**
+ * Follow-up questions of the tutor's own a pack may ask, about something the
+ * learner just said ("developing an app? what kind?"), never two in a row.
+ * Without them the pack heard "I'm busy because I'm building an app" and went
+ * straight on to "Cats or dogs?" (seen on a phone, 2026-10-20).
+ */
+export const PACK_FOLLOWS = 3;
 /** A start this quick, on the first try, is a turn the words came out for. */
 export const QUICK_START_MS = 4000;
 
@@ -64,6 +71,8 @@ export type PackTurn = {
   stuck: boolean;
   /** Target phrases this answer contained. */
   used: string[];
+  /** The tutor answered it with a follow-up of its own rather than the pack's next question. */
+  followed?: boolean;
 };
 
 export type Pack = {
@@ -294,6 +303,8 @@ export type Candidate = {
   free?: string;
   /** Said just before the question: the lead-in to a run of quick ones (questions.ts quickLead). */
   lead?: { text: string; translation: string };
+  /** Not a pack question: the tutor's own follow-up on what they said (PACK_FOLLOWS). */
+  follow?: true;
 };
 
 /**
@@ -324,6 +335,12 @@ export function candidates(pack: Pack): Candidate[] {
     const next = pack.items[nextBlock]!;
     add(nextBlock, next.text, next.translation, next.id === "free" ? next.invite : undefined);
   }
+  const followed = pack.turns.filter((turn) => turn.followed).length;
+  const last = pack.turns[pack.turns.length - 1];
+  // Not after the greeting, which is small talk on its way to the first question.
+  if (pack.cursor > 0 && followed < PACK_FOLLOWS && !last?.followed) {
+    out.push({ slot: out.length + 1, index: pack.cursor, text: "", translation: "", follow: true });
+  }
   return out;
 }
 
@@ -337,8 +354,9 @@ export function advance(pack: Pack, turn: Omit<PackTurn, "index" | "gap">, chose
   };
   return {
     ...pack,
-    turns: [...pack.turns, recorded].slice(-40),
-    cursor: chosen ? chosen.index + 1 : pack.cursor,
+    turns: [...pack.turns, chosen?.follow ? { ...recorded, followed: true } : recorded].slice(-40),
+    // A follow-up of the tutor's own leaves the planned question still to ask.
+    cursor: chosen && !chosen.follow ? chosen.index + 1 : pack.cursor,
   };
 }
 
@@ -432,17 +450,22 @@ export function packPrompt(pack: Pack, options: Candidate[]): string {
     ].join("\n");
   }
   const listed = options.map((option) =>
-    option.free
-      ? `${option.slot}. (a short question of your own that gives them a natural chance to say "${option.free}" — do not say it or hint at it yourself)`
-      : `${option.slot}. "${option.text}"`,
+    option.follow
+      ? `${option.slot}. (a short follow-up question of your own about something they just told you — only when their answer opened something worth asking about)`
+      : option.free
+        ? `${option.slot}. (a short question of your own that gives them a natural chance to say "${option.free}" — do not say it or hint at it yourself)`
+        : `${option.slot}. "${option.text}"`,
   );
   return [
     "Today's guided practice: after your reaction, the app itself asks the learner the next question. Your choices for it:",
     ...listed,
     `Pick the one that fits best after what they just said — 1 unless it no longer makes sense (for example they already answered it). Put its number in "ask".`,
-    'In "say", write only a short reaction to what they said — two to five words, no question — such as "Oh, nice!", "That sounds fun!", "Oh no, that sounds rough.", "Ah, that makes sense." or "I see." (in the language of the conversation), or leave it empty.',
-    options.some((o) => o.free)
-      ? 'If you pick the choice that is a question of your own, write your short reaction and that question together in "say".'
+    options.some((o) => o.follow)
+      ? "When they told you something of their own — what they are doing, a plan, a reason, a feeling — prefer the follow-up: a friend would ask about it before changing the subject."
+      : "",
+    'In "say", write a short reaction to what they actually said: one short sentence that picks up the thing they mentioned, so they can hear you listened — not a reaction that would fit any answer. No question, unless you picked a question of your own.',
+    options.some((o) => o.free || o.follow)
+      ? 'If you pick a question of your own, write your reaction and that question together in "say".'
       : "",
     'If they are stuck, or asked you something, or are leaving: ignore the choices, answer as you normally would, and set "ask" to 0.',
   ]

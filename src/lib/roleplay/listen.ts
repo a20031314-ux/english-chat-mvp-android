@@ -501,6 +501,9 @@ function shapeDirection(raw: unknown): Direction | null {
       ? { meant: body.meant.trim() }
       : {}),
     ...(typeof body.follow === "string" ? { follow: body.follow } : {}),
+    ...(body.progress && typeof body.progress.answered === "number" && typeof body.progress.total === "number"
+      ? { progress: { answered: body.progress.answered, total: body.progress.total } }
+      : {}),
     ...(body.react && typeof body.react.text === "string" && body.react.text.trim()
       ? {
           react: {

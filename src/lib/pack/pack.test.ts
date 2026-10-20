@@ -268,3 +268,40 @@ test("a run of quick questions starts with a line that says so, in its language,
   assert.ok("text" in direction.say && direction.say.text.startsWith("Okay, a few quick ones"));
   assert.ok("text" in direction.say && direction.say.text.endsWith(pick!.text));
 });
+
+test("the tutor may follow up on what they said: the planned question waits, never twice in a row, at most a few", () => {
+  const turn = { at: NOW, latencyMs: 1500, attempts: 1, corrected: false, stuck: false, used: [] };
+  let pack = compose({ language: "en", centre: "speaking" });
+  pack = advance(pack, turn, candidates(pack)[0]!);
+  const options = candidates(pack);
+  const follow = options.find((c) => c.follow);
+  assert.ok(follow, "a follow-up is offered once a question has been asked");
+  assert.match(packPrompt(pack, options), /follow-up question of your own/);
+  const cursor = pack.cursor;
+  pack = advance(pack, turn, follow!);
+  assert.equal(pack.cursor, cursor, "the planned question is still next");
+  assert.equal(candidates(pack).some((c) => c.follow), false, "not two in a row");
+  // Spoken as the tutor wrote it, and the talk goes on.
+  const { direction, asked } = shapePackDirection(
+    { assessment: "on_track", say: { text: "An app? What kind of app are you building?" }, note: "", next: { end: true } } as never,
+    follow!,
+    { complete: false, language: "en", nativeLanguage: "ko", bank: {}, canSplit: true, nodeId: "talk", planned: options[0]! },
+  );
+  assert.equal("text" in direction.say && direction.say.text, "An app? What kind of app are you building?");
+  assert.deepEqual(direction.next, { step: "talk" });
+  assert.equal(asked?.follow, true);
+  // Picked with no question written: the planned question follows the reaction.
+  const { direction: plain } = shapePackDirection(
+    { assessment: "on_track", say: { text: "Building an app, nice." }, note: "", next: { free: true } } as never,
+    follow!,
+    { complete: false, language: "en", nativeLanguage: "ko", bank: {}, canSplit: false, nodeId: "talk", planned: options[0]! },
+  );
+  assert.ok("text" in plain.say && plain.say.text.endsWith(options[0]!.text));
+  // At most PACK_FOLLOWS in a pack.
+  for (let i = 0; i < 6; i++) {
+    const next = candidates(pack);
+    const pick = next.find((c) => c.follow) ?? next[0]!;
+    pack = advance(pack, turn, pick);
+  }
+  assert.ok(pack.turns.filter((t) => t.followed).length <= 3);
+});

@@ -171,6 +171,12 @@ export type Direction = {
    * Only for a build that sent ROLEPLAY_REACT_CLIENT_HEADER.
    */
   react?: { text: string; translation?: string };
+  /**
+   * In a daily pack: questions answered with this turn, of the pack's. From
+   * the server's record, so a follow-up the tutor asked of its own is not
+   * counted as a pack question (pack/pack.ts PACK_FOLLOWS).
+   */
+  progress?: { answered: number; total: number };
 };
 
 /**
