@@ -1032,12 +1032,12 @@ const STEPS = {
     await pickWords(page, target === "es" ? [1, 3] : [4, 5], wait);
   },
   async "group-pick"({ page, wait, target }) {
-    // 단체방에서 남의 줄을 눌러 번역 + 낱말 골라 묻기(en "works for me", es "me va bien").
+    // 단체방에서 남의 줄을 눌러 번역 + 낱말 골라 묻기(en "works for me", es "me va bien" — ¡Yo! 뒤라 한 칸 밀림).
     const translated = page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 30000 }).catch(() => undefined);
     await page.getByText(GROUP_LINES[target].b, { exact: true }).filter({ visible: true }).last().click();
     await translated;
     await wait(1200);
-    await pickWords(page, [3, 5], wait);
+    await pickWords(page, target === "es" ? [4, 6] : [3, 5], wait);
   },
   async layouts({ page, locale, wait }) {
     // 2.69(다시 자름): 채팅 위주 — 자막 칸·채팅 칸과 아래 참여 방식이 같이 보인다.
