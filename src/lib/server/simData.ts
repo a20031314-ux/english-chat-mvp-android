@@ -14,8 +14,8 @@ import { kvDelete, kvIncrBy, kvScanKeys } from "./kv.ts";
 
 export const SIM_USER_MARK = "simcheck-";
 
-/** 하루에 지우기를 부를 수 있는 횟수(모든 점검 합쳐서). 예약 점검 하루 약 7번 + 손으로 돌리는 것. */
-export const SIM_FORGET_DAILY_MAX = 40;
+/** 하루(UTC)에 지우기를 부를 수 있는 횟수(모든 점검 합쳐서). 예약 점검 + 여러 채팅의 화면·회귀 점검(2026-10-20 하루에 40번을 넘김). 한 번 SCAN은 키 1,000개당 명령 1번. */
+export const SIM_FORGET_DAILY_MAX = 200;
 
 const PREFIX = /^[A-Za-z0-9_-]{3,80}$/;
 

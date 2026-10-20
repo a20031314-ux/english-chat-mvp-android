@@ -1,7 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { kvGetJson, kvSetJson } from "./kv.ts";
-import { forgetSimData, isSimCaller, simForgetPattern } from "./simData.ts";
+import { SIM_FORGET_DAILY_MAX, forgetSimData, isSimCaller, simForgetPattern } from "./simData.ts";
 
 test("패턴은 점검 데이터 안으로만: 잘못된 접두어·패턴 글자는 거절", () => {
   assert.equal(simForgetPattern({ prefix: "regress2-20261020-" }), "*simcheck-regress2-20261020-*");
@@ -34,6 +34,6 @@ test("그 실행의 점검 데이터만 지우고 실제 사용자·다른 실�
 test("하루 횟수를 넘으면 LIMIT", async () => {
   const day = Date.UTC(2031, 0, 1);
   let last;
-  for (let i = 0; i < 41; i += 1) last = await forgetSimData({ prefix: "none-" }, day);
+  for (let i = 0; i <= SIM_FORGET_DAILY_MAX; i += 1) last = await forgetSimData({ prefix: "none-" }, day);
   assert.deepEqual(last, { ok: false, error: "LIMIT" });
 });
