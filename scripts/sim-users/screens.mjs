@@ -4,6 +4,7 @@
  *
  *   npm run build:capacitor      (www가 없으면 먼저)
  *   npm run sim:screens -- [--combos ja:ko,en:ja,es:ar,en:ko] [--scenes chat-correct,map] [--run-id …]
+ *   재현 한 장: --combos ar:vi --scenes chat-correct --text "😂😂👍🔥"  (점검에서 문제가 난 문장을 채팅에 그대로 보내 찍음)
  *
  * 결과: tmp/sim-users/<실행>/screens/<학습>-<앱>/<장면>.png 과 screens.html(장면 × 조합 갤러리).
  * 장면마다 따로 시도한다 — 하나가 막혀도 나머지는 찍고, 막힌 장면은 그 순간 화면을 "실패"로 남긴다.
@@ -31,6 +32,8 @@ const COMBOS = value("combos", "ja:ko,en:ja,es:ar,en:ko").split(",").map((c) => 
   return { target, ui };
 });
 const ONLY_SCENES = value("scenes", null)?.split(",") ?? null;
+/** --text: chat-correct가 시드 문장 대신 이 문장을 보낸다(문제 재현 캡처용). */
+const REPRO_TEXT = value("text", null);
 const stamp = new Date(Date.now() + 9 * 3600_000).toISOString().replace(/[-:]/g, "").slice(0, 13).replace("T", "-");
 const RUN_ID = value("run-id", `screens-${stamp}`);
 const OUT = path.join(ROOT, value("out", `tmp/sim-users/${RUN_ID}`), "screens");
@@ -142,7 +145,7 @@ const SCENES = [
       await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
       await wait(3000);
       const before = await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count();
-      await page.locator("textarea:visible").first().fill(linesFor(target).slipped);
+      await page.locator("textarea:visible").first().fill(REPRO_TEXT ?? linesFor(target).slipped);
       await page.getByRole("button", { name: exactly(ui.send) }).click();
       for (let i = 0; i < 60; i++) {
         await wait(500);
