@@ -100,6 +100,8 @@ export function RoomView({
   }, [onLeft]);
   const [members, setMembers] = useState<RoomMember[]>([]);
   const [lines, setLines] = useState<RoomLine[]>([]);
+  // 방이 닫혔거나(방장이 닫음·잠시 닫음) 내보내졌으면 방 화면 대신 안내만 — 자리·자막·입력창이 남아 열린 방처럼 보이지 않게(qa 2026-10-20).
+  const [ended, setEnded] = useState<null | "roomGone" | "kicked" | "banned">(null);
   const linesRef = useRef<RoomLine[]>([]);
   useEffect(() => {
     linesRef.current = lines;
@@ -364,6 +366,7 @@ export function RoomView({
       } catch (error) {
         if (error instanceof RoomApiError && (error.status === 404 || error.code === "KICKED")) {
           setNotice(error.code === "KICKED" ? "kicked" : "roomGone");
+          setEnded(error.code === "KICKED" ? "kicked" : "roomGone");
           stopMic();
           mesh.close();
           return;
@@ -396,6 +399,8 @@ export function RoomView({
           setNotice(
             error.code === "ROOM_FULL" ? "full" : error.code === "BANNED" ? "banned" : error.code === "SIGNED_OUT" ? "loginNeeded" : error.status === 404 ? "roomGone" : "error",
           );
+          if (error.code === "BANNED") setEnded("banned");
+          else if (error.status === 404) setEnded("roomGone");
         }
         else setNotice("error");
       }
@@ -490,6 +495,8 @@ export function RoomView({
       }
     }
     if ((next === "listen" || next === "chat") && role === "speaker" && !isHostNow) await askRole("listener");
+    // 듣기·채팅만을 고르면 들었던 손도 내린다 — 방장 "손든 사람"에 말할 생각 없는 사람이 남지 않게(qa 2026-10-20).
+    if ((next === "listen" || next === "chat") && handRef.current) raise(false);
   };
   // 🔇 보이스만일 때 누가 내 말을 물으면 위에 알린다(채팅 칸이 숨어 있으니).
   const askedMe = lines.filter((line) => line.ask && line.quote?.peerId === peerId && line.peerId !== peerId && line.seq > seenAsk).at(-1);
@@ -508,6 +515,17 @@ export function RoomView({
   const isSpeaking = (member: RoomMember) =>
     member.peerId === peerId ? speaking : Boolean(talking[member.peerId]) && !member.muted;
 
+
+  if (ended) {
+    return (
+      <div className="flex flex-1 flex-col items-center justify-center gap-4 px-6 text-center">
+        <p className="text-title text-white">{t[ended]}</p>
+        <button type="button" onClick={onLeave} className="rounded-xl bg-white/90 px-5 py-2.5 text-chat font-medium text-black">
+          {t.leave}
+        </button>
+      </div>
+    );
+  }
   return (
     <>
       <header className="shrink-0 border-b border-white/10 px-4 pb-2 pt-3">
