@@ -12,7 +12,8 @@
 - 앱 안 업데이트 배너 기준 `RECOMMENDED_APP_VERSION` — Play에 실제로 공개된 뒤에만 올린다.
 - 사용자가 PC에서 빌드할 때 막히면 돕는다 (`npm run build:android` → Sync → Signed Bundle).
 
-- 등록정보 설명 14개 언어 새 글 PR #11(2026-10-21) — 병합하면 Play 설명을 덮어씀. 2.70 출시와 같이 병합(광고 문장 때문), 사용자 확인 대기.
+- 등록정보 설명 PR #11 병합됨(2026-10-21), 업로드는 실패 — 서비스 계정에 Play 앱 권한 필요(사람). 권한 뒤 "Play: upload listing" 다시 실행.
+- 기본 등록정보 스크린샷 8장 PR #12(영어 기본 + 5개 언어 번역). "Store: screenshots"(v* 태그)의 옛 3장 PR은 병합 금지.
 
 ## 하지 않는 일
 - fastlane 실행, Play API 호출, 서명 키 읽기, 프로덕션 워크플로 실행 — 막혀 있고, 사람이 한다.
