@@ -668,7 +668,10 @@ async function pickWords(page, [from, to], wait) {
   if ((await chips.count()) <= to) return;
   await chips.nth(from).click();
   if (to !== from) await chips.nth(to).click();
-  await wait(700);
+  await wait(500);
+  // 자막 칸은 따로 스크롤된다: 고른 구절이 든 "❓ … 무슨 뜻이에요?" 버튼까지 보이게.
+  await page.locator("button", { hasText: "❓ “" }).filter({ visible: true }).last().evaluate((el) => el.scrollIntoView({ block: "center" })).catch(() => undefined);
+  await wait(500);
 }
 
 const STEPS = {
