@@ -46,8 +46,8 @@
 
 ## 사용자에게 물어볼 것
 
-- iOS(`hub/drafts/ios-launch.md` "사람이 할 일"): 빌드는 **클라우드(GitHub Actions)로 결정**(2026-10-18), 작업 흐름 있음 — 설정 8단계 대기. 남은 것: 번들 ID를 안드로이드와 같은 `com.yourname.englishchat`로 둘지(App Store에 한 번 올리면 못 바꿈).
-  (정함 2026-10-20: 다른 스토어 구독자는 결제 막음, 구독 상품은 안드로이드와 같은 ID.)
+- iOS(`hub/drafts/ios-launch.md` "출시까지 남은 사람 일"): 정함(2026-10-20) — 번들 ID는 안드로이드와 같은 `com.yourname.englishchat`, 구독·포인트 상품 ID도 같게, 다른 스토어 구독자는 결제 막음.
+  App Store Connect 구독 3·포인트 4, RevenueCat 아이폰 앱·권한·offering 패키지(lite·plus·premium) 설정 끝. 남은 것: GitHub ios 환경에 `NEXT_PUBLIC_REVENUECAT_IOS_API_KEY`, 상품 한국어 이름·심사 스크린샷, 아이콘, 유료 앱 계약.
 - 비용 표(`hub/costs.md`, 자동 계산)에서 채팅 한도까지 매일 다 쓰면 유료 요금 모두 손해(라이트 −1,243원 ~ 8,900원 −4,727원/월). 채팅 한 통 2원은 가정이라, 2.67 출시 1주 뒤 실측 토큰으로 확인하고 한도를 다시 볼지.
   광고는 무료 사용자에게만 붙어(구독자 광고 없음) 유료 손해와는 별개 — 광고 수익·보상 원가는 `hub/costs.md` "광고" 절(2026-10-20부터 자동 계산).
 - 광고(`hub/drafts/ads-rewarded.md`): **넣음(2026-10-20)** — 서버 반영, 앱은 다음 빌드. 처음 값(보상형 1회 = 채팅 5번·하루 3번, 전면 5분 간격·채팅 4번 뒤)은 Vercel `ADS_*`로 조정. 빌드를 Play에 올리기 전에 Play 광고·데이터 보안 신고, AdMob SSV URL 등록(inbox store).
