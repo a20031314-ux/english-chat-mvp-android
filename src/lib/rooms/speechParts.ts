@@ -14,6 +14,12 @@ export const END_SILENCE_MS = 1_200;
 export const MAX_PART_MS = 8_000;
 /** 조각 안의 소리가 이보다 짧으면 기침·숨소리로 보고 버린다. */
 export const MIN_PART_VOICED_MS = 400;
+/**
+ * 짧은 쉼에서 자르려면 조각에 말소리가 이만큼은 있어야 한다. 낱말 하나("昨日")만 따로 받아쓰면 맥락이 없어
+ * 틀리기 쉽다 — 일본어 시험에서 「友達と公園に行きました」를 쪼개니 「公園」이 「応援」으로 나왔다(통째로는 3번 다 맞음).
+ * 그래서 짧은 말은 말이 끝날 때(1.2초) 통째로, 긴 말만 쉼마다 나눈다.
+ */
+export const MIN_CUT_VOICED_MS = 1_500;
 
 export type PartState = {
   /** 지금 말(말풍선) 번호. 말 사이에는 null. */
@@ -101,7 +107,9 @@ export function stepParts(
   if (voiced) {
     state = { ...state, lastVoiceAt: now, partVoicedMs: state.partVoicedMs + tickMs };
   }
-  if (now - state.lastVoiceAt >= PART_PAUSE_MS || now - state.partStartedAt >= MAX_PART_MS) {
+  const quiet = now - state.lastVoiceAt;
+  const pauseCut = quiet >= PART_PAUSE_MS && state.partVoicedMs >= MIN_CUT_VOICED_MS;
+  if (pauseCut || quiet >= END_SILENCE_MS || now - state.partStartedAt >= MAX_PART_MS) {
     finishPart();
     // 조각 길이로 끊었는데 아직 말하는 중이면, 다음 틱에서 같은 말로 새 조각이 시작된다.
   }
@@ -118,7 +126,13 @@ export function joinPartTexts(parts: string[]): string {
       out = text;
       continue;
     }
-    out += SPACELESS.test(out.slice(-1)) && SPACELESS.test(text[0]) ? text : ` ${text}`;
+    if (SPACELESS.test(out.slice(-1)) && SPACELESS.test(text[0])) {
+      out += text;
+      continue;
+    }
+    // 받아쓰기는 조각마다 끝에 마침표를 붙인다. 다음 조각이 소문자로 이어지면(문장 중간) 그 마침표는 뺀다: "amiga. y vimos" → "amiga y vimos".
+    if (/^\p{Ll}/u.test(text) && /[^.]\.$/.test(out)) out = out.slice(0, -1);
+    out += ` ${text}`;
   }
   return out;
 }

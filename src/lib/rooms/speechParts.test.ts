@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { IDLE, END_SILENCE_MS, MAX_PART_MS, PART_PAUSE_MS, joinPartTexts, stepParts, type PartAction, type PartState } from "./speechParts.ts";
+import { IDLE, END_SILENCE_MS, MAX_PART_MS, MIN_CUT_VOICED_MS, PART_PAUSE_MS, joinPartTexts, stepParts, type PartAction, type PartState } from "./speechParts.ts";
 import { directLine, joinParts, type RoomLine } from "./protocol.ts";
 
 /** 소리(true)·조용(false)을 50ms 틱으로 흘려 보내고 나온 일들을 모은다. */
@@ -38,10 +38,18 @@ test("1.2초 넘게 쉬면 다음 말은 새 말풍선", () => {
   assert.deepEqual(finished.map((a) => [a.utterance, a.part]), [["u1", 0], ["u2", 0]]);
 });
 
-test("기침 같은 짧은 소리는 보내지 않고 순번도 쓰지 않는다", () => {
-  const actions = run([...talk(200), ...quiet(PART_PAUSE_MS + 100), ...talk(1_000), ...quiet(END_SILENCE_MS + 100)]);
+test("기침 같은 짧은 소리만 있으면 보내지 않는다", () => {
+  const actions = run([...talk(200), ...quiet(END_SILENCE_MS + 100), ...talk(1_000), ...quiet(END_SILENCE_MS + 100)]);
   const finished = actions.filter((a): a is Extract<PartAction, { kind: "finish" }> & { at: number } => a.kind === "finish");
-  assert.deepEqual(finished.map((a) => [a.part, a.keep]), [[0, false], [0, true]]);
+  assert.deepEqual(finished.map((a) => [a.utterance, a.part, a.keep]), [["u1", 0, false], ["u2", 0, true]]);
+});
+
+test("말소리가 짧은 동안의 쉼에서는 자르지 않는다(낱말 하나만 따로 받아쓰면 틀리기 쉬움)", () => {
+  // 「昨日、」 0.5초 · 쉼 0.75초 · 「友達と」 0.7초 · 쉼 0.6초 · 「公園に行きました」 1.5초 → 한 조각.
+  const actions = run([...talk(500), ...quiet(750), ...talk(700), ...quiet(650), ...talk(1_500), ...quiet(END_SILENCE_MS + 100)]);
+  const finished = actions.filter((a): a is Extract<PartAction, { kind: "finish" }> & { at: number } => a.kind === "finish");
+  assert.equal(finished.length, 1);
+  assert.ok(MIN_CUT_VOICED_MS <= 2_700);
 });
 
 test("쉬지 않고 길게 말해도 정해진 길이마다 끊어 보낸다", () => {
@@ -64,6 +72,9 @@ test("조각 글 잇기: 띄어쓰기 없는 글자끼리는 붙이고, 그 밖�
   assert.equal(joinPartTexts(["昨日は公園に行って、", "犬を見ました。"]), "昨日は公園に行って、犬を見ました。");
   assert.equal(joinPartTexts(["เมื่อวานไป", "สวนสาธารณะ"]), "เมื่อวานไปสวนสาธารณะ");
   assert.equal(joinPartTexts(["Ayer fui al parque", "", "y vi un perro."]), "Ayer fui al parque y vi un perro.");
+  assert.equal(joinPartTexts(["Ayer fui al parque con mi amiga.", "y vimos un perro."]), "Ayer fui al parque con mi amiga y vimos un perro.");
+  assert.equal(joinPartTexts(["I went to the park.", "And I saw a dog."]), "I went to the park. And I saw a dog.");
+  assert.equal(joinPartTexts(["Espera...", "no sé."]), "Espera... no sé.");
   assert.equal(joinPartTexts(["어제 공원에 갔는데", "강아지를 봤어요"]), "어제 공원에 갔는데 강아지를 봤어요");
 });
 
