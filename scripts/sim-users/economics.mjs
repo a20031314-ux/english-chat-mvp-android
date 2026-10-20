@@ -52,7 +52,7 @@ export function options(argv = [], env = process.env) {
   const num = (name, fallback) => (arg(name) !== undefined && Number.isFinite(Number(arg(name))) ? Number(arg(name)) : fallback);
   // 광고 설정: 운영과 같은 ADS_* 환경 변수, 그 위에 --ads-reward-chats 같은 옵션.
   const adEnv = { ...env };
-  for (const [flag, key] of [["ads-reward-chats", "ADS_REWARD_CHATS"], ["ads-rewarded-max", "ADS_REWARDED_DAILY_MAX"], ["ads-gap", "ADS_INTERSTITIAL_GAP_SECONDS"], ["ads-after-chats", "ADS_INTERSTITIAL_AFTER_CHATS"], ["ads-banner", "ADS_BANNER"], ["ads-app-open", "ADS_APP_OPEN"]]) {
+  for (const [flag, key] of [["ads-native", "ADS_NATIVE"], ["ads-reward-chats", "ADS_REWARD_CHATS"], ["ads-rewarded-max", "ADS_REWARDED_DAILY_MAX"], ["ads-gap", "ADS_INTERSTITIAL_GAP_SECONDS"], ["ads-after-chats", "ADS_INTERSTITIAL_AFTER_CHATS"], ["ads-banner", "ADS_BANNER"], ["ads-app-open", "ADS_APP_OPEN"]]) {
     if (arg(flag) !== undefined) adEnv[key] = arg(flag);
   }
   return {
@@ -87,7 +87,7 @@ function active(type, d) {
  */
 export function simulate(type, terms, o) {
   const ads = adsApply(terms.tier, o.ads);
-  const n = { chats: 0, callMinutes: 0, packs: 0, roomMinutes: 0, ops: {}, interstitial: 0, appOpen: 0, banner: 0, rewarded: 0, blockedChats: 0 };
+  const n = { chats: 0, callMinutes: 0, packs: 0, roomMinutes: 0, ops: {}, interstitial: 0, appOpen: 0, banner: 0, native: 0, rewarded: 0, blockedChats: 0 };
   let callPool = terms.monthlyGrantPoints ? terms.monthlyGrantPoints * 5 : Infinity; // 옛 프리미엄: 포인트 1개 = 통화 5분
   let lastAppOpen = -1e9;
   let lastInter = -1e9;
@@ -122,6 +122,8 @@ export function simulate(type, terms, o) {
       }
       const browse = type.browseMinutes / type.sessions;
       if (ads && o.ads.bannerEnabled) n.banner += browse; // 배너 새로고침 약 60초
+      // 네이티브는 목록(대화·영상)을 열 때 한 번씩, 자동 새로고침 없음(lib/ads.ts).
+      if (ads && o.ads.nativeEnabled) n.native += o.assume.native.perSession;
       let sent = 0;
       while (sent < perSession && today < type.chats) {
         if (today >= limit) {
@@ -167,7 +169,7 @@ export function simulate(type, terms, o) {
   };
   const costKrw = Object.values(cost).reduce((a, b) => a + b, 0);
   const shown = (k) => (k === "rewarded" ? n.rewarded : n[k] * o.fill); // 보상형은 채워진 것만 셌음
-  const adKrw = (scenario) => ["interstitial", "appOpen", "banner", "rewarded"].reduce((sum, k) => sum + shown(k) * adWon(k, scenario), 0);
+  const adKrw = (scenario) => ["interstitial", "appOpen", "banner", "native", "rewarded"].reduce((sum, k) => sum + shown(k) * adWon(k, scenario), 0);
   const subKrw = terms.priceKrw ? (terms.priceKrw / (1 + o.vat)) * (1 - STORE_FEE_SHARE) : 0;
   return { n, cost, costKrw, subKrw, adKrw, net: (scenario = o.ecpm) => subKrw + adKrw(scenario) - costKrw };
 }
@@ -209,7 +211,7 @@ export function render(o) {
     "> 모두 **추정**입니다. 행동 유형과 비율, 광고 단가, 채움률은 가정입니다. 실측이 생기면 `economics.json`과 `ads.ts`의 숫자를 고치고 다시 돌립니다.",
     "",
     `이번 계산: 광고 단가 **${label}** · 채움률 ${pct(o.fill)} · 결제 전환율 ${pct(o.conv)} · 채팅 1통 ${Math.round(o.chatWon * 100) / 100}원 · Play 수수료 ${pct(STORE_FEE_SHARE)} · 부가세 ${pct(o.vat)}` +
-      ` · 광고 설정: 보상형 1회 = 채팅 ${o.ads.rewardChats}번·하루 ${o.ads.rewardedDailyMax}번, 전면 ${o.ads.interstitialMinGapSeconds / 60}분 간격·채팅 ${o.ads.interstitialAfterChats}번 뒤, 앱 오프닝 설치 ${o.ads.appOpenAfterDays}일 뒤·${o.ads.appOpenGapHours}시간 간격${o.ads.bannerEnabled ? ", 배너 켬" : ", 배너 끔"}.`,
+      ` · 광고 설정: ${o.ads.rewardedDailyMax > 0 ? `보상형 1회 = 채팅 ${o.ads.rewardChats}번·하루 ${o.ads.rewardedDailyMax}번` : "보상형 끔"}, 무료 채팅 하루 ${PLANS[0].terms.dailyChat}번, 전면 ${o.ads.interstitialMinGapSeconds / 60}분 간격·채팅 ${o.ads.interstitialAfterChats}번 뒤, 앱 오프닝 설치 ${o.ads.appOpenAfterDays}일 뒤·${o.ads.appOpenGapHours}시간 간격${o.ads.bannerEnabled ? ", 배너 켬" : ", 배너 끔"}${o.ads.nativeEnabled ? `, 네이티브 켬(세션당 ${o.assume.native.perSession}번)` : ", 네이티브 끔"}.`,
     "",
   );
 
@@ -243,12 +245,12 @@ export function render(o) {
   push("", "사용률 = 매일 모든 한도(채팅·통화·팩·그 밖의 기능)를 같은 비율로 쓴다고 볼 때. 평균 사용자가 이 비율 아래면 그 요금은 남습니다.", "");
 
   // 3. 무료 + 광고
-  push("## 3. 무료 + 광고 손익분기점", "", "| 유형 | 원가 | 광고 수입 낮음 / 중간 / 높음 | 본전에 필요한 광고 단가 | 광고 노출(전면·앱 오프닝·배너·보상형) |", "|---|---|---|---|---|");
+  push("## 3. 무료 + 광고 손익분기점", "", "| 유형 | 원가 | 광고 수입 낮음 / 중간 / 높음 | 본전에 필요한 광고 단가 | 광고 노출(전면·앱 오프닝·배너·네이티브·보상형) |", "|---|---|---|---|---|");
   const freePlan = PLANS[0];
   for (const id of typeIds) {
     const r = simulate(o.assume.types[id], freePlan.terms, o);
     const need = r.adKrw("mid") > 0 ? r.costKrw / r.adKrw("mid") : Infinity;
-    push(`| ${id} | ${won(r.costKrw)} | ${won(r.adKrw("low"))} / ${won(r.adKrw("mid"))} / ${won(r.adKrw("high"))} | ${need === Infinity ? "광고 없음" : need <= 1 ? `중간의 ${Math.round(need * 100)}%면 됨` : `중간의 **${Math.round(need * 10) / 10}배**`} | ${Math.round(r.n.interstitial * o.fill)} · ${Math.round(r.n.appOpen * o.fill)} · ${Math.round(r.n.banner * o.fill)} · ${r.n.rewarded} |`);
+    push(`| ${id} | ${won(r.costKrw)} | ${won(r.adKrw("low"))} / ${won(r.adKrw("mid"))} / ${won(r.adKrw("high"))} | ${need === Infinity ? "광고 없음" : need <= 1 ? `중간의 ${Math.round(need * 100)}%면 됨` : `중간의 **${Math.round(need * 10) / 10}배**`} | ${Math.round(r.n.interstitial * o.fill)} · ${Math.round(r.n.appOpen * o.fill)} · ${Math.round(r.n.banner * o.fill)} · ${Math.round(r.n.native * o.fill)} · ${r.n.rewarded} |`);
   }
   const fm = blended(freePlan, o.assume.mix.free, o);
   push("", `무료 사용자 평균(유형 비율대로): 원가 ${won(fm.costKrw)}, 광고 ${won(fm.ad.low)} / ${won(fm.ad.mid)} / ${won(fm.ad.high)} → 남는 돈 ${signed(fm.net("low"))} / ${signed(fm.net("mid"))} / ${signed(fm.net("high"))}.`, "");
@@ -280,7 +282,9 @@ export function render(o) {
     ["채팅 1통 원가 두 배", { chatWon: o.chatWon * 2 }],
     ["광고 채움률 60%", { fill: 0.6 }],
     ["부가세 없음(비용 표 기준)", { vat: 0 }],
-    ["보상형 1회 = 채팅 3번", { ads: { ...o.ads, rewardChats: 3 } }],
+    ["보상형 켬(1회 = 채팅 3번, 하루 3번)", { ads: { ...o.ads, rewardChats: 3, rewardedDailyMax: 3 } }],
+    ["전면 채팅 3번 뒤", { ads: { ...o.ads, interstitialAfterChats: 3 } }],
+    ["네이티브 끔", { ads: { ...o.ads, nativeEnabled: false } }],
     ["배너 끔", { ads: { ...o.ads, bannerEnabled: false } }],
   ];
   for (const [name, change] of variants) {

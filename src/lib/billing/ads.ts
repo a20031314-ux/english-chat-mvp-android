@@ -56,16 +56,16 @@ export type AdsSettings = {
 };
 
 /**
- * 흑자 구조(hub/drafts/pricing-profit-2026-10-20.md, 2026-10-20 사용자 결정): 보상형 1회 = 채팅 3번
- * (원가 약 6원 < 보상형 1회 수익 약 11~28원), 하루 3번(무료 7 + 9 = 16번 < 라이트 30번),
- * 전면은 3분에 한 번까지·채팅 3번 뒤.
+ * 흑자 구조(hub/drafts/pricing-profit-2026-10-20.md, 2026-10-20 사용자 결정): 전면은 3분에 한 번까지·채팅 2번 뒤.
+ * 보상형("광고 보고 채팅 더")은 끔(2026-10-20 사용자: "광고 보고 더 주는 방식은 거부감, 그냥 뜨고 건너뛰는 게 흔하다").
+ * 다시 켜려면 ADS_REWARDED_DAILY_MAX(예: 3) — 1회 = 채팅 3번, 무료 7 + 9 = 16번 < 라이트 30번.
  */
 export const DEFAULT_ADS_SETTINGS: AdsSettings = {
   enabled: true,
   rewardChats: 3,
-  rewardedDailyMax: 3,
+  rewardedDailyMax: 0,
   interstitialMinGapSeconds: 180,
-  interstitialAfterChats: 3,
+  interstitialAfterChats: 2,
   appOpenEnabled: true,
   appOpenAfterDays: 3,
   appOpenGapHours: 4,

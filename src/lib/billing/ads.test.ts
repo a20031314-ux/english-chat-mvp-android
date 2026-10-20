@@ -10,16 +10,18 @@ test("광고는 무료에게만, 구독자는 광고 없음", () => {
   assert.equal(adsApply("free", { ...s, enabled: false }), false);
 });
 
-test("보상형 보너스: 하루 상한까지만, 구독자는 0", () => {
-  const s = DEFAULT_ADS_SETTINGS;
+test("보상형은 기본으로 꺼져 있다(보너스 0) — 켜면 하루 상한까지만, 구독자는 0", () => {
+  assert.equal(DEFAULT_ADS_SETTINGS.rewardedDailyMax, 0);
+  assert.equal(adChatBonus("free", 3, DEFAULT_ADS_SETTINGS), 0);
+  const s = adsSettings({ ADS_REWARDED_DAILY_MAX: "3" });
   assert.equal(adChatBonus("free", 0, s), 0);
   assert.equal(adChatBonus("free", 2, s), 2 * s.rewardChats);
   assert.equal(adChatBonus("free", 99, s), s.rewardedDailyMax * s.rewardChats);
   assert.equal(adChatBonus("plus", 3, s), 0);
 });
 
-test("무료 + 광고 최대치는 라이트 채팅 한도보다 작다(구독할 이유가 남음)", () => {
-  const s = DEFAULT_ADS_SETTINGS;
+test("보상형을 다시 켜도(하루 3번) 무료 + 광고 최대치는 라이트 채팅 한도보다 작다", () => {
+  const s = adsSettings({ ADS_REWARDED_DAILY_MAX: "3" });
   const freeMax = termsFor("free").dailyChat! + s.rewardedDailyMax * s.rewardChats;
   assert.ok(freeMax < termsFor("lite").dailyChat!, `${freeMax} < ${termsFor("lite").dailyChat}`);
 });
