@@ -136,11 +136,13 @@ export function RoomView({
   const [peerStates, setPeerStates] = useState<Record<string, PeerState>>({});
   const [notice, setNotice] = useState<Notice>("");
   // 보는 방식(사람마다, 이 기기에 기억). 줄·질문·쪽지는 모두 같은 방 기록을 쓴다.
-  const [layout, setLayoutState] = useState<RoomLayout>(() => readRoomLayout());
+  const [layoutPicked, setLayoutState] = useState<RoomLayout>(() => readRoomLayout());
   const setLayout = (next: RoomLayout) => {
     setLayoutState(next);
     saveRoomLayout(next);
   };
+  // 1:1 영상통화는 고르는 보기 없이 영상 + 자막 + 채팅 한 모양(여러 사람 방의 보기·참여 방식은 숨김).
+  const layout: RoomLayout = room.video ? "group" : layoutPicked;
   const view = layout === "people" ? "people" : "timeline";
   const [composerOpen, setComposerOpen] = useState(false);
   // 같은 방 사람이 보낸 안 읽은 쪽지·메시지 → 위에 알림(누르면 대화).
@@ -741,11 +743,13 @@ export function RoomView({
             <h1 className="truncate text-base font-semibold text-white" dir="auto">
               {title ?? room.name}
             </h1>
-            <p className="text-xs text-slate-400">
-              {room.free ? `🌐 ${t.freeTalk}` : languagePair(room.languages, locale)}
-              {room.free || room.languages.length ? " · " : ""}
-              {t.speakers} {speakers.length}/{MAX_SPEAKERS} · {t.listeners} {listeners.length}
-            </p>
+            {room.video ? null : (
+              <p className="text-xs text-slate-400">
+                {room.free ? `🌐 ${t.freeTalk}` : languagePair(room.languages, locale)}
+                {room.free || room.languages.length ? " · " : ""}
+                {t.speakers} {speakers.length}/{MAX_SPEAKERS} · {t.listeners} {listeners.length}
+              </p>
+            )}
           </div>
           <div className="flex shrink-0 items-center gap-2">
             {/* 공개 방만: 앱이 없는 친구도 링크로 이 방에(lib/invite). */}
@@ -915,7 +919,7 @@ export function RoomView({
           </div>
         ) : null}
 
-        <div className="mt-2 flex gap-1 rounded-lg bg-white/5 p-0.5 text-xs">
+        <div className={`mt-2 flex gap-1 rounded-lg bg-white/5 p-0.5 text-xs ${videoRoom ? "hidden" : ""}`}>
           {ROOM_LAYOUTS.map((option) => (
             <button
               key={option}
@@ -1032,7 +1036,7 @@ export function RoomView({
 
       <footer className="shrink-0 space-y-2 border-t border-white/10 px-4 pb-[calc(env(safe-area-inset-bottom)+0.75rem)] pt-2">
         {/* 참여 방식: 🎙 말하기 / 👂 듣기 / 💬 채팅만(소리 안 이음) / 🔇 보이스만(채팅 숨김). */}
-        <div className="flex gap-1 rounded-lg bg-white/5 p-0.5 text-xs">
+        <div className={`flex gap-1 rounded-lg bg-white/5 p-0.5 text-xs ${videoRoom ? "hidden" : ""}`}>
           {(
             [
               ["speak", "🎙", t.joinSpeak],
@@ -1054,7 +1058,7 @@ export function RoomView({
           ))}
         </div>
         {textOnly ? <p className="text-meta text-slate-500">{t.chatOnlyHint}</p> : null}
-        {role === "speaker" ? (
+        {role === "speaker" && !videoRoom ? (
           <label className="flex items-center gap-1.5 text-meta text-slate-400">
             💡 {t.hintMode}
             <select
@@ -1132,7 +1136,7 @@ export function RoomView({
                 </button>
               ) : null}
               {/* 방장은 내려가지 않는다(서버도 막음). 조용히 하려면 마이크 끄기. */}
-              {isHostNow ? null : (
+              {isHostNow || videoRoom ? null : (
                 <button
                   type="button"
                   onClick={() => void askRole("listener")}
