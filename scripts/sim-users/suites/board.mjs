@@ -69,6 +69,25 @@ export default {
       if (comment.status === 200 && !commentId) cIssues.push(issue("error", "board_shape", "댓글 id 없음"));
       step({ title: "B 열기·댓글", input: bank.askMeaning[persona.ui], status: comment.status, ms: comment.ms, outputs: [{ label: "댓글", text: comment.body?.comment?.text }], issues: cIssues });
 
+      // ── 답글(한 단계, 2026-10-20): 답글에 답해도 같은 맨 위 댓글 아래로, 맨 위를 지우면 답글도 ──
+      if (commentId) {
+        const rIssues = [];
+        const reply = await board(A, "comment", { postId, text: "[test] ↳", replyTo: commentId });
+        rIssues.push(...checkHttp(P, reply));
+        const replyId = reply.body?.comment?.id ?? null;
+        if (reply.status === 200 && reply.body?.comment?.parent !== commentId) rIssues.push(issue("error", "board_logic", "답글의 parent가 맨 위 댓글이 아님"));
+        const nested = replyId ? await board(B, "comment", { postId, text: "[test] ↳↳", replyTo: replyId }) : null;
+        if (nested) rIssues.push(...checkHttp(P, nested));
+        if (nested?.status === 200 && nested.body?.comment?.parent !== commentId) rIssues.push(issue("error", "board_logic", "답글의 답글이 맨 위 댓글 아래로 안 감(깊어짐)"));
+        rIssues.push(...expectError(P, await board(B, "comment", { postId, text: "[test] x", replyTo: "b_nothere000" }), "NOT_FOUND", "없는 댓글에 답글"));
+        const after = await board(B, "open", { postId });
+        const ids = (after.body?.comments ?? []).map((row) => row.id);
+        if (replyId && !ids.includes(replyId)) rIssues.push(issue("error", "board_logic", "답글이 열기에 안 보임"));
+        // 답글만 지우고, 남은 답글은 맨 위 댓글을 지울 때(아래 '댓글·글 지우기') 같이 지워진다.
+        if (replyId) rIssues.push(...checkHttp(P, await board(A, "deleteComment", { postId, commentId: replyId })));
+        step({ title: "답글·답글의 답글", status: reply.status, ms: reply.ms, issues: rIssues });
+      }
+
       // ── 권한 ──
       const pIssues = [
         ...expectError(P, await board(B, "edit", { postId, text: "[test] hacked" }), "FORBIDDEN", "남의 글 고치기"),
@@ -98,7 +117,11 @@ export default {
 
       // ── 글쓴이가 댓글 지우기 → 글 삭제 ──
       const dIssues = [];
-      if (commentId) dIssues.push(...checkHttp(P, await board(A, "deleteComment", { postId, commentId })));
+      if (commentId) {
+        dIssues.push(...checkHttp(P, await board(A, "deleteComment", { postId, commentId })));
+        const left = await board(A, "open", { postId });
+        if (left.status === 200 && (left.body?.comments ?? []).some((row) => row.parent === commentId)) dIssues.push(issue("error", "board_logic", "맨 위 댓글을 지웠는데 답글이 남음"));
+      }
       const removed = await board(A, "delete", { postId });
       dIssues.push(...checkHttp(P, removed));
       if (removed.status === 200) postId = null;

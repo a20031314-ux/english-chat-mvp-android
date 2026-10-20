@@ -35,7 +35,42 @@ export type BoardComment = {
   editedAt?: number;
   /** 사진 한 장. */
   image?: MediaRef;
+  /** 답글이면 맨 위 댓글 id(한 단계만 — 답글의 답글도 같은 맨 위 댓글 아래로, 2026-10-20). */
+  parent?: string;
 };
+
+/** 화면용: 맨 위 댓글마다 그 아래 답글. 부모가 안 보이는(지워졌거나 차단한 사람) 답글은 맨 위로. */
+export function threadComments(comments: BoardComment[]): { comment: BoardComment; replies: BoardComment[] }[] {
+  const top = new Set(comments.filter((comment) => !comment.parent).map((comment) => comment.id));
+  const replies = new Map<string, BoardComment[]>();
+  const out: { comment: BoardComment; replies: BoardComment[] }[] = [];
+  for (const comment of comments) {
+    if (comment.parent && top.has(comment.parent)) {
+      const list = replies.get(comment.parent) ?? [];
+      list.push(comment);
+      replies.set(comment.parent, list);
+    } else {
+      out.push({ comment, replies: [] });
+    }
+  }
+  for (const row of out) row.replies = replies.get(row.comment.id) ?? [];
+  return out;
+}
+
+/** 답글을 달 맨 위 댓글: 답글에 답하면 그 답글의 맨 위 댓글. 없는 댓글이면 null. */
+export function replyRoot(comments: Pick<BoardComment, "id" | "parent">[], targetId: string): string | null {
+  const target = comments.find((comment) => comment.id === targetId);
+  if (!target) return null;
+  if (!target.parent) return target.id;
+  return comments.some((comment) => comment.id === target.parent) ? target.parent : null;
+}
+
+/** 지울 댓글과 함께 지울 것: 맨 위 댓글이면 그 답글까지. */
+export function withReplies(comments: BoardComment[], ids: Set<string>): Set<string> {
+  const out = new Set(ids);
+  for (const comment of comments) if (comment.parent && ids.has(comment.parent)) out.add(comment.id);
+  return out;
+}
 
 /** 화면에 보낼 때 붙이는 이름(닉네임 없으면 빈 칸, 화면이 "?"로). */
 export type BoardAuthor = { id: string; nickname: string };

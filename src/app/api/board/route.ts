@@ -35,7 +35,7 @@ export const dynamic = "force-dynamic";
  *   open { postId }                            → { post, comments, authors }
  *   post { language, text }                    → { post }             하루 10개
  *   edit { postId, text } · delete { postId }  → 쓴 사람만
- *   comment { postId, text }                   → { comment }          한 시간 60개, 글마다 200개
+ *   comment { postId, text, imageId?, replyTo? } → { comment }        한 시간 60개, 글마다 200개(답글 포함), 답글은 한 단계
  *   editComment { postId, commentId, text }    → 쓴 사람만
  *   deleteComment { postId, commentId }        → 쓴 사람 또는 글쓴이
  */
@@ -134,7 +134,8 @@ export async function POST(request: NextRequest) {
     const image = isMediaId(body.imageId) ? await claimMedia(body.imageId, me, { kind: "board" }) : null;
     if (isMediaId(body.imageId) && !image) return bad(request, "BAD_IMAGE");
     if (!text && !image) return bad(request, "EMPTY");
-    return answer(request, await addComment({ author: me, postId, text, ...(image ? { image } : {}) }), "comment");
+    const replyTo = isBoardId(body.replyTo) ? body.replyTo : undefined;
+    return answer(request, await addComment({ author: me, postId, text, ...(image ? { image } : {}), ...(replyTo ? { replyTo } : {}) }), "comment");
   }
 
   if (!isBoardId(body.commentId)) return bad(request, "BAD_COMMENT");

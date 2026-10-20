@@ -20,6 +20,8 @@ import {
   canDeleteComment,
   canEditPost,
   newBoardId,
+  replyRoot,
+  withReplies,
   type BoardComment,
   type BoardPost,
 } from "../rooms/board.ts";
@@ -128,12 +130,31 @@ async function writeComments(post: BoardPost, comments: BoardComment[]): Promise
   await kvSetJson(postKey(post.id), { ...post, comments: comments.length });
 }
 
-export async function addComment(input: { author: string; postId: string; text: string; image?: MediaRef }): Promise<WriteResult<BoardComment>> {
+export async function addComment(input: {
+  author: string;
+  postId: string;
+  text: string;
+  image?: MediaRef;
+  /** 답글이면 답하는 댓글(맨 위든 답글이든 — 맨 위 댓글 아래로 붙는다). */
+  replyTo?: string;
+}): Promise<WriteResult<BoardComment>> {
   const post = await readPost(input.postId);
   if (!post) return { error: "NOT_FOUND" };
   if (post.comments >= BOARD_MAX_COMMENTS) return { error: "FULL" };
+  let parent: string | null = null;
+  if (input.replyTo) {
+    parent = replyRoot(await readComments(post.id), input.replyTo);
+    if (!parent) return { error: "NOT_FOUND" };
+  }
   if ((await kvIncrBy(hourKey(input.author), 1, 2 * 60 * 60)) > BOARD_COMMENTS_PER_HOUR) return { error: "LIMIT" };
-  const comment: BoardComment = { id: newBoardId(), author: input.author, text: input.text, at: Date.now(), ...(input.image ? { image: input.image } : {}) };
+  const comment: BoardComment = {
+    id: newBoardId(),
+    author: input.author,
+    text: input.text,
+    at: Date.now(),
+    ...(input.image ? { image: input.image } : {}),
+    ...(parent ? { parent } : {}),
+  };
   await kvListPush(commentsKey(post.id), [JSON.stringify(comment)], KEEP_SECONDS);
   // 개수는 목록 길이에서 다시 센다(동시에 둘이 달아도 맞게).
   const count = (await kvListRange(commentsKey(post.id), 0, -1)).length;
@@ -161,8 +182,11 @@ export async function deleteComment(me: string, postId: string, commentId: strin
   const found = comments.find((comment) => comment.id === commentId);
   if (!found) return { error: "NOT_FOUND" };
   if (!canDeleteComment(me, post, found)) return { error: "FORBIDDEN" };
-  if (found.image) await deleteMedia([found.image.id]);
-  await writeComments(post, comments.filter((comment) => comment.id !== commentId));
+  // 맨 위 댓글을 지우면 그 답글도(사진까지) 같이.
+  const gone = withReplies(comments, new Set([commentId]));
+  const media = comments.flatMap((comment) => (gone.has(comment.id) && comment.image ? [comment.image.id] : []));
+  if (media.length) await deleteMedia(media);
+  await writeComments(post, comments.filter((comment) => !gone.has(comment.id)));
   return { ok: true };
 }
 
@@ -176,8 +200,11 @@ export async function forgetBoard(account: string): Promise<void> {
     const post = await readPost(row.member);
     if (!post) continue;
     const comments = await readComments(post.id);
-    const kept = comments.filter((comment) => comment.author !== account);
-    if (kept.length !== comments.length) await writeComments(post, kept);
+    const gone = withReplies(comments, new Set(comments.filter((comment) => comment.author === account).map((comment) => comment.id)));
+    if (!gone.size) continue;
+    const media = comments.flatMap((comment) => (gone.has(comment.id) && comment.image ? [comment.image.id] : []));
+    if (media.length) await deleteMedia(media);
+    await writeComments(post, comments.filter((comment) => !gone.has(comment.id)));
   }
   await kvDelete([byKey(account), commentedKey(account)]);
 }

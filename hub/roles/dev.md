@@ -21,6 +21,8 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **게시판 답글 (2026-10-20, 서버 바로 반영·화면은 앱 다음 빌드):** 사용자 결정 "한 단계, 사진 1장". `BoardComment.parent`, `rooms/board.ts` `threadComments`·`replyRoot`·`withReplies`, `/api/board` comment `replyTo`,
+  맨 위 지우면 답글도(사진·계정 삭제 포함), 화면 "답글" 버튼·들여쓰기·"○○님에게 답글" 띠, 문구 2개 × 14개 언어(Claude가 씀). 점검 묶음 board에 답글 단계. 남은 것: 답글이 많을 때 접기("답글 n개 보기"), 새 답글 알림(푸시 필요).
 - **흑자 구조 ①②③ (2026-10-20, `hub/drafts/pricing-profit-2026-10-20.md`):** 사용자 결정 "①②③ 지금". 서버(바로 반영): 광고 기본값(보상형 1회 = 채팅 3번, 전면 채팅 3번 뒤·3분),
   무료 채팅 10 → 7(`FREE_DAILY_CHAT_LIMIT`), 무료 오늘의 팩 7일에 2번(`pack/weekly.ts`, `pack:days:v1:*`, 막히면 available:false + locked·nextDay), AI 도움 하루 한도
   (`server/aiHelp.ts`: 무료 20·라이트 100·플러스 150·프리미엄 300 — 번역(누가 눌렀는지 아는 요청만)·표현 카드(방 힌트 제외)·표현 자세히·단어 뜻·문장분석 route), 방 자막 하루 100/300/600/1200줄.

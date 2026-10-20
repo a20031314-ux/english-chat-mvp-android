@@ -225,6 +225,8 @@ const ko = {
   boardGone: "지워졌거나 볼 수 없는 글이에요.",
   boardMore: "더 보기",
   boardTranslate: "내 언어로 보기",
+  boardReply: "답글",
+  boardReplyingTo: "{name}님에게 답글",
 };
 
 type RoomCopy = typeof ko;
@@ -448,6 +450,8 @@ const en: RoomCopy = {
   boardGone: "This post was deleted or can't be shown.",
   boardMore: "More",
   boardTranslate: "See in my language",
+  boardReply: "Reply",
+  boardReplyingTo: "Replying to {name}",
 };
 
 /** 앱 언어의 문구. 빠진 키는 영어로(copy.test.ts가 빠짐을 막는다). */

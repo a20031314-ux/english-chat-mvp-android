@@ -223,6 +223,8 @@ export const ROOM_COPY_LOCALES: Record<string, Record<string, string>> = {
     boardGone: "Esta publicación se borró o no se puede mostrar.",
     boardMore: "Ver más",
     boardTranslate: "Ver en mi idioma",
+    boardReply: "Responder",
+    boardReplyingTo: "Respondiendo a {name}",
   },
   ja: {
     title: "トークルーム",
@@ -443,6 +445,8 @@ export const ROOM_COPY_LOCALES: Record<string, Record<string, string>> = {
     boardGone: "削除されたか、表示できない投稿です。",
     boardMore: "もっと見る",
     boardTranslate: "自分の言語で見る",
+    boardReply: "返信",
+    boardReplyingTo: "{name}さんに返信",
   },
   zh: {
     title: "语音房",
@@ -663,6 +667,8 @@ export const ROOM_COPY_LOCALES: Record<string, Record<string, string>> = {
     boardGone: "帖子已删除或无法显示。",
     boardMore: "更多",
     boardTranslate: "用我的语言看",
+    boardReply: "回复",
+    boardReplyingTo: "回复 {name}",
   },
   vi: {
     title: "Phòng nói chuyện",
@@ -883,6 +889,8 @@ export const ROOM_COPY_LOCALES: Record<string, Record<string, string>> = {
     boardGone: "Bài viết đã bị xóa hoặc không thể hiển thị.",
     boardMore: "Xem thêm",
     boardTranslate: "Xem bằng ngôn ngữ của tôi",
+    boardReply: "Trả lời",
+    boardReplyingTo: "Đang trả lời {name}",
   },
   fr: {
     title: "Salons vocaux",
@@ -1103,6 +1111,8 @@ export const ROOM_COPY_LOCALES: Record<string, Record<string, string>> = {
     boardGone: "Cette publication a été supprimée ou ne peut pas être affichée.",
     boardMore: "Voir plus",
     boardTranslate: "Voir dans ma langue",
+    boardReply: "Répondre",
+    boardReplyingTo: "En réponse à {name}",
   },
   it: {
     title: "Stanze per parlare",
@@ -1323,6 +1333,8 @@ export const ROOM_COPY_LOCALES: Record<string, Record<string, string>> = {
     boardGone: "Questo post è stato eliminato o non può essere mostrato.",
     boardMore: "Altro",
     boardTranslate: "Vedi nella mia lingua",
+    boardReply: "Rispondi",
+    boardReplyingTo: "Rispondi a {name}",
   },
   pt: {
     title: "Salas de conversa",
@@ -1543,6 +1555,8 @@ export const ROOM_COPY_LOCALES: Record<string, Record<string, string>> = {
     boardGone: "Este post foi excluído ou não pode ser exibido.",
     boardMore: "Ver mais",
     boardTranslate: "Ver no meu idioma",
+    boardReply: "Responder",
+    boardReplyingTo: "Respondendo a {name}",
   },
   ru: {
     title: "Голосовые комнаты",
@@ -1763,6 +1777,8 @@ export const ROOM_COPY_LOCALES: Record<string, Record<string, string>> = {
     boardGone: "Пост удалён или недоступен.",
     boardMore: "Ещё",
     boardTranslate: "Показать на моём языке",
+    boardReply: "Ответить",
+    boardReplyingTo: "Ответ для {name}",
   },
   id: {
     title: "Ruang ngobrol",
@@ -1983,6 +1999,8 @@ export const ROOM_COPY_LOCALES: Record<string, Record<string, string>> = {
     boardGone: "Postingan ini sudah dihapus atau tidak bisa ditampilkan.",
     boardMore: "Lihat lagi",
     boardTranslate: "Lihat dalam bahasaku",
+    boardReply: "Balas",
+    boardReplyingTo: "Membalas {name}",
   },
   ar: {
     title: "غرف المحادثة",
@@ -2203,6 +2221,8 @@ export const ROOM_COPY_LOCALES: Record<string, Record<string, string>> = {
     boardGone: "هذا المنشور محذوف أو لا يمكن عرضه.",
     boardMore: "المزيد",
     boardTranslate: "اعرض بلغتي",
+    boardReply: "رد",
+    boardReplyingTo: "الرد على {name}",
   },
   th: {
     title: "ห้องคุย",
@@ -2423,6 +2443,8 @@ export const ROOM_COPY_LOCALES: Record<string, Record<string, string>> = {
     boardGone: "โพสต์นี้ถูกลบหรือแสดงไม่ได้",
     boardMore: "ดูเพิ่ม",
     boardTranslate: "ดูเป็นภาษาของฉัน",
+    boardReply: "ตอบกลับ",
+    boardReplyingTo: "ตอบกลับ {name}",
   },
   hi: {
     title: "बातचीत के रूम",
@@ -2643,5 +2665,7 @@ export const ROOM_COPY_LOCALES: Record<string, Record<string, string>> = {
     boardGone: "यह पोस्ट हटा दी गई है या दिखाई नहीं जा सकती।",
     boardMore: "और देखें",
     boardTranslate: "मेरी भाषा में देखें",
+    boardReply: "जवाब दें",
+    boardReplyingTo: "{name} को जवाब",
   },
 };

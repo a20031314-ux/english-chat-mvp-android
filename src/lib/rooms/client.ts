@@ -478,8 +478,8 @@ export function boardEdit(postId: string, text: string): Promise<{ post: BoardPo
 export function boardDelete(postId: string): Promise<{ ok: true }> {
   return board("delete", { postId });
 }
-export function boardComment(postId: string, text: string, imageId?: string): Promise<{ comment: BoardComment }> {
-  return board("comment", { postId, text, ...(imageId ? { imageId } : {}) });
+export function boardComment(postId: string, text: string, imageId?: string, replyTo?: string): Promise<{ comment: BoardComment }> {
+  return board("comment", { postId, text, ...(imageId ? { imageId } : {}), ...(replyTo ? { replyTo } : {}) });
 }
 export function boardEditComment(postId: string, commentId: string, text: string): Promise<{ comment: BoardComment }> {
   return board("editComment", { postId, commentId, text });

@@ -6,7 +6,7 @@ import { MEDIA_PER_POST, type MediaRef, type MediaScope } from "@/lib/rooms/medi
 import { MediaError, uploadImage } from "@/lib/rooms/mediaClient";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
-import { BOARD_COMMENT_MAX_CHARS, BOARD_POST_MAX_CHARS, type BoardAuthor, type BoardComment, type BoardPost } from "@/lib/rooms/board";
+import { BOARD_COMMENT_MAX_CHARS, BOARD_POST_MAX_CHARS, threadComments, withReplies, type BoardAuthor, type BoardComment, type BoardPost } from "@/lib/rooms/board";
 import {
   RoomApiError,
   boardComment,
@@ -339,6 +339,9 @@ function PostSheet({
   const [draft, setDraft] = useState("");
   // 댓글 사진 한 장.
   const commentPhoto = usePhotoPicks(1);
+  // 답글을 다는 중이면 답하는 댓글(답글에 답해도 맨 위 댓글 아래로 — 서버가 정함).
+  const [replying, setReplying] = useState<{ id: string; name: string } | null>(null);
+  const inputRef = useRef<HTMLTextAreaElement | null>(null);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const [editing, setEditing] = useState<{ kind: "post" } | { kind: "comment"; id: string; text: string } | null>(null);
@@ -384,13 +387,14 @@ function PostSheet({
         setError(caught instanceof MediaError ? photoErrorText(t, caught.code) : t.photoFailed);
         return;
       }
-      const { comment } = await boardComment(post.id, draft.trim(), image?.id);
+      const { comment } = await boardComment(post.id, draft.trim(), image?.id, replying?.id);
       if (me) setNames((current) => ({ ...current, [me]: current[me] ?? readCachedAccount()?.profile?.nickname ?? "" }));
       setComments((current) => [...current, comment]);
       const next = { ...post, comments: post.comments + 1 };
       setPost(next);
       onChanged(next);
       setDraft("");
+      setReplying(null);
     } catch (caught) {
       setError(errorText(t, caught));
     } finally {
@@ -402,8 +406,11 @@ function PostSheet({
     if (!post) return;
     try {
       await boardDeleteComment(post.id, comment.id);
-      setComments((current) => current.filter((row) => row.id !== comment.id));
-      const next = { ...post, comments: Math.max(0, post.comments - 1) };
+      // 맨 위 댓글이면 답글도 같이 지워진다(서버와 같게).
+      const gone = withReplies(comments, new Set([comment.id]));
+      setComments((current) => current.filter((row) => !gone.has(row.id)));
+      if (replying && gone.has(replying.id)) setReplying(null);
+      const next = { ...post, comments: Math.max(0, post.comments - gone.size) };
       setPost(next);
       onChanged(next);
     } catch (caught) {
@@ -412,6 +419,72 @@ function PostSheet({
   };
 
   const mine = Boolean(post && me && post.author === me);
+
+  const renderComment = (comment: BoardComment, isReply: boolean) => {
+    const own = me === comment.author;
+    return (
+      <li key={comment.id} className={`rounded-lg bg-white/[0.04] px-3 py-2 ${isReply ? "ms-6" : ""}`}>
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            disabled={own}
+            onClick={() => setProfile({ id: comment.author, lines: [comment.text] })}
+            className="flex min-w-0 flex-1 items-center gap-2 text-start"
+          >
+            <Face accountId={comment.author} name={names[comment.author] ?? ""} size={20} />
+            <span className="truncate text-caption text-slate-200">{names[comment.author] || "?"}</span>
+            <span className="shrink-0 text-meta text-slate-500">
+              {when(comment.at, locale)}
+              {comment.editedAt ? ` · ${t.boardEdited}` : ""}
+            </span>
+          </button>
+          <button
+            type="button"
+            onClick={() => {
+              const name = names[comment.author] || "?";
+              setReplying({ id: comment.id, name });
+              // 답글에 답할 때는 누구에게 하는 말인지 앞에 붙여 둔다(한 단계라 같은 줄 아래로 모임).
+              if (isReply && !own) setDraft((current) => (current.trim() ? current : `@${name} `));
+              inputRef.current?.focus();
+            }}
+            className="text-meta text-slate-400"
+          >
+            {t.boardReply}
+          </button>
+          {own ? (
+            <button
+              type="button"
+              onClick={() => setEditing({ kind: "comment", id: comment.id, text: comment.text })}
+              className="text-meta text-slate-400"
+            >
+              {t.boardEdit}
+            </button>
+          ) : null}
+          {own || mine ? (
+            <button type="button" onClick={() => void removeComment(comment)} className="text-meta text-bad">
+              {t.boardDelete}
+            </button>
+          ) : null}
+        </div>
+        {comment.image ? (
+          <div className="mt-1">
+            <MediaImage image={comment.image} t={t} maxWidth={200} />
+          </div>
+        ) : null}
+        {comment.text ? (
+        <button type="button" onClick={() => void translate(comment.id, comment.text)} className="mt-1 block w-full text-start">
+          <span dir="auto" className="block whitespace-pre-wrap text-note text-ink">
+            {comment.text}
+          </span>
+          {translated[comment.id] ? (
+            <span className="mt-1 block whitespace-pre-wrap text-caption text-slate-400">{translated[comment.id]}</span>
+          ) : null}
+        </button>
+        ) : null}
+      </li>
+    );
+  };
+
 
   return (
     <Sheet t={t} label={t.boardTab} onClose={onClose}>
@@ -501,57 +574,10 @@ function PostSheet({
               {t.boardComments.replace("{n}", String(comments.length))}
             </p>
             <ul className="mt-2 space-y-2">
-              {comments.map((comment) => {
-                const own = me === comment.author;
-                return (
-                  <li key={comment.id} className="rounded-lg bg-white/[0.04] px-3 py-2">
-                    <div className="flex items-center gap-2">
-                      <button
-                        type="button"
-                        disabled={own}
-                        onClick={() => setProfile({ id: comment.author, lines: [comment.text] })}
-                        className="flex min-w-0 flex-1 items-center gap-2 text-start"
-                      >
-                        <Face accountId={comment.author} name={names[comment.author] ?? ""} size={20} />
-                        <span className="truncate text-caption text-slate-200">{names[comment.author] || "?"}</span>
-                        <span className="shrink-0 text-meta text-slate-500">
-                          {when(comment.at, locale)}
-                          {comment.editedAt ? ` · ${t.boardEdited}` : ""}
-                        </span>
-                      </button>
-                      {own ? (
-                        <button
-                          type="button"
-                          onClick={() => setEditing({ kind: "comment", id: comment.id, text: comment.text })}
-                          className="text-meta text-slate-400"
-                        >
-                          {t.boardEdit}
-                        </button>
-                      ) : null}
-                      {own || mine ? (
-                        <button type="button" onClick={() => void removeComment(comment)} className="text-meta text-bad">
-                          {t.boardDelete}
-                        </button>
-                      ) : null}
-                    </div>
-                    {comment.image ? (
-                      <div className="mt-1">
-                        <MediaImage image={comment.image} t={t} maxWidth={200} />
-                      </div>
-                    ) : null}
-                    {comment.text ? (
-                    <button type="button" onClick={() => void translate(comment.id, comment.text)} className="mt-1 block w-full text-start">
-                      <span dir="auto" className="block whitespace-pre-wrap text-note text-ink">
-                        {comment.text}
-                      </span>
-                      {translated[comment.id] ? (
-                        <span className="mt-1 block whitespace-pre-wrap text-caption text-slate-400">{translated[comment.id]}</span>
-                      ) : null}
-                    </button>
-                    ) : null}
-                  </li>
-                );
-              })}
+              {threadComments(comments).flatMap(({ comment, replies }) => [
+                renderComment(comment, false),
+                ...replies.map((reply) => renderComment(reply, true)),
+              ])}
             </ul>
           </>
         ) : null}
@@ -559,10 +585,19 @@ function PostSheet({
       {post ? (
         <div className="border-t border-line p-3">
           {error ? <p className="mb-2 text-caption text-bad">{error}</p> : null}
+          {replying ? (
+            <div className="mb-2 flex items-center gap-2 rounded-lg bg-info/15 px-3 py-1.5 text-caption text-info">
+              <span className="min-w-0 flex-1 truncate">↳ {t.boardReplyingTo.replace("{name}", replying.name)}</span>
+              <button type="button" onClick={() => setReplying(null)} className="shrink-0 text-slate-300">
+                {t.cancel}
+              </button>
+            </div>
+          ) : null}
           <PhotoPicks t={t} photos={commentPhoto} busy={busy} compact />
           <div className="flex items-end gap-2">
             <PhotoButton t={t} photos={commentPhoto} disabled={busy} />
             <textarea
+              ref={inputRef}
               dir="auto"
               value={draft}
               maxLength={BOARD_COMMENT_MAX_CHARS}
