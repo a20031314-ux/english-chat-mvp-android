@@ -17,6 +17,7 @@ import {
   MAX_SPEAKERS,
   ROOM_TTL_SECONDS,
   canSeatFreely,
+  joinParts,
   liveMembers,
   newRoomId,
   type PollResponse,
@@ -372,9 +373,12 @@ function parseRows<T>(rows: string[]): T[] {
   return out;
 }
 
-/** 방의 자막 줄 전부(통화가 끝난 뒤 1:1 대화에 기록으로 남길 때). */
+/**
+ * 방의 자막 줄 전부(통화가 끝난 뒤 대화에 기록으로 남길 때, 줄 집어 묻기의 인용).
+ * 쉼마다 자른 조각은 말 하나로 이어서 돌려준다(protocol.ts joinParts) — 기록·인용이 반쪽 문장이 되지 않게.
+ */
 export async function readLines(id: string): Promise<RoomLine[]> {
-  return parseRows<RoomLine>(await kvListRange(linesKey(id), -MAX_LINES_KEPT, -1));
+  return joinParts(parseRows<RoomLine>(await kvListRange(linesKey(id), -MAX_LINES_KEPT, -1)));
 }
 
 /** 방에 지금 있는 사람 수. */

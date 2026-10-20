@@ -136,3 +136,21 @@ body[data-video-fullscreen="1"] [data-app-chrome] {
 ins.adsbygoogle[data-ad-status="unfilled"] {
   display: none !important;
 }
+
+/* 말하는 방 "…" 말풍선(RoomParts composingRow): 점 세 개가 차례로 깜박인다. 움직임 줄이기면 멈춘 점. */
+.composing-dots > span {
+  animation: composing-blink 1.2s infinite ease-in-out;
+}
+.composing-dots > span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.composing-dots > span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+@keyframes composing-blink {
+  0%, 80%, 100% { opacity: 0.25; }
+  40% { opacity: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .composing-dots > span { animation: none; opacity: 0.6; }
+}

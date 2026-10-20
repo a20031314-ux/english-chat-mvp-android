@@ -16,6 +16,10 @@ import { shouldInitiate, type RoomSignal, type SignalKind } from "./protocol";
  * 켜고 끌 때도 다시 협상하지 않고 트랙만 끼우거나 빼고, 켬/끔은 "cam" 신호로 알린다
  * (빈 영상 자리는 화면만 검게 남아서, 상대가 얼굴 대신 사진을 띄우려면 알려 줘야 한다).
  * 비공개 통화 방은 서버가 중계(TURN) 주소를 같이 준다(setIceServers, lib/server/turn.ts).
+ *
+ * 연결마다 글 통로(데이터 채널) 하나도 연다: 받아쓴 자막 줄을 서버에 올린 뒤 바로 사람들에게도 보내,
+ * 1.5초마다 묻는 서버 확인을 기다리지 않고 뜨게 한다(broadcast). 서버 기록이 원본이고 이건 빨리 보이게 하는 것뿐 —
+ * 예전 앱과 이어진 연결은 통로가 안 열려서 지금처럼 서버 확인으로 받는다.
  */
 const DEFAULT_ICE_SERVERS: RTCIceServer[] = [
   { urls: ["stun:stun.l.google.com:19302", "stun:stun1.l.google.com:19302"] },
@@ -37,7 +41,14 @@ type Peer = {
   remoteSet: boolean;
   /** 상대 소리 크기를 재는 것(자리 격자의 "말하는 중" 테두리). */
   meter: { source: MediaStreamAudioSourceNode; analyser: AnalyserNode; speaking: boolean } | null;
+  /** 글 통로(자막 줄을 바로 보냄). 못 열면 null. */
+  channel: RTCDataChannel | null;
 };
+
+/** 양쪽이 같은 번호로 미리 만드는 글 통로(협상 없이 열림). 예전 앱은 이 통로가 없어 그냥 안 열린다. */
+const LINE_CHANNEL_ID = 7;
+/** 통로로 받는 글 하나의 상한(자막 줄 하나면 충분). */
+const MAX_CHANNEL_MESSAGE = 4_000;
 
 /** 이보다 크면 말하는 중으로 본다. 내 마이크 쪽(speech.ts)과 비슷한 값. */
 const SPEAKING_RMS = 0.02;
@@ -51,6 +62,7 @@ export class RoomMesh {
   private ctx: AudioContext | null = null;
   private meterTimer = 0;
   private samples = new Float32Array(512);
+  private onMessage: ((peerId: string, data: string) => void) | null = null;
 
   constructor(
     private readonly selfId: string,
@@ -60,6 +72,23 @@ export class RoomMesh {
     /** 영상 방이면 영상 자리를 열고, 상대 영상·카메라 켬/끔을 알린다. */
     private readonly video?: { onVideo: (peerId: string, stream: MediaStream | null, camOn: boolean) => void },
   ) {}
+
+  /** 글 통로로 온 것을 받을 곳(자막 줄). */
+  setMessageHandler(handler: (peerId: string, data: string) => void): void {
+    this.onMessage = handler;
+  }
+
+  /** 열린 글 통로 모두에 보낸다. 못 보낸 사람은 서버 확인으로 받는다. */
+  broadcast(data: string): void {
+    for (const peer of this.peers.values()) {
+      if (peer.channel?.readyState !== "open") continue;
+      try {
+        peer.channel.send(data);
+      } catch {
+        // 막 닫힌 통로 — 서버 기록으로 받는다.
+      }
+    }
+  }
 
   /** 비공개 통화 방: 서버가 준 중계 주소. 새로 잇는 연결부터 쓴다. */
   setIceServers(servers: RTCIceServer[]): void {
@@ -212,7 +241,16 @@ export class RoomMesh {
     audio.dataset.roomPeer = peerId;
     audio.style.display = "none";
     document.body.appendChild(audio);
-    const peer: Peer = { pc, audio, video: null, camOn: false, pendingIce: [], remoteSet: false, meter: null };
+    let channel: RTCDataChannel | null = null;
+    try {
+      channel = pc.createDataChannel("lines", { negotiated: true, id: LINE_CHANNEL_ID, ordered: true });
+      channel.onmessage = (event) => {
+        if (typeof event.data === "string" && event.data.length <= MAX_CHANNEL_MESSAGE) this.onMessage?.(peerId, event.data);
+      };
+    } catch {
+      channel = null;
+    }
+    const peer: Peer = { pc, audio, video: null, camOn: false, pendingIce: [], remoteSet: false, meter: null, channel };
     this.peers.set(peerId, peer);
     this.onState(peerId, "connecting");
 
@@ -258,6 +296,11 @@ export class RoomMesh {
     if (!peer) return;
     this.peers.delete(peerId);
     if (sayBye && !this.closed) this.send(peerId, "bye", "");
+    try {
+      peer.channel?.close();
+    } catch {
+      // 이미 닫힘.
+    }
     peer.pc.close();
     peer.meter?.source.disconnect();
     if (peer.meter?.speaking) this.onSpeaking?.(peerId, false);

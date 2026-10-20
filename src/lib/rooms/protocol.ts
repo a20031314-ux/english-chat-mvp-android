@@ -1,4 +1,5 @@
 import type { LineQuote } from "./quote.ts";
+import { joinPartTexts } from "./speechParts.ts";
 
 /**
  * 사용자끼리 말하는 방(시험 기능)의 공통 약속.
@@ -107,6 +108,9 @@ export type RoomLine = {
   ask?: boolean;
   /** 받아쓴 말이 어느 언어인지(글자로 가를 수 있을 때만, 자유 대화방에서 줄 옆에 표시). */
   lang?: string;
+  /** 쉼마다 자른 조각이면 같은 말의 번호와 그 안의 순번(rooms/speechParts.ts). 화면은 joinParts로 한 말풍선으로 잇는다. */
+  uid?: string;
+  part?: number;
 };
 
 /** cam = 영상 방에서 내 카메라 켬/끔("on"/"off"). 예전 앱은 모르는 신호를 그냥 넘긴다. */
@@ -207,6 +211,77 @@ export function byPerson(lines: RoomLine[]): { peerId: string; nickname: string;
     group.lines.push(line);
   }
   return [...groups.values()];
+}
+
+/**
+ * 같은 사람·같은 말 번호(uid)의 조각 줄을 한 줄로 잇는다(순번 순서, 띄어쓰기 없는 글자끼리는 붙임).
+ * 이은 줄은 첫 조각의 번호(seq)·시작 시각을 쓰고 끝 시각은 마지막 조각 것. 조각이 아닌 줄은 그대로.
+ */
+export function joinParts(lines: RoomLine[]): RoomLine[] {
+  const groups = new Map<string, RoomLine[]>();
+  const out: RoomLine[] = [];
+  for (const line of lines) {
+    if (!line.uid || line.kind === "text") {
+      out.push(line);
+      continue;
+    }
+    const key = `${line.peerId}|${line.uid}`;
+    const group = groups.get(key);
+    if (group) group.push(line);
+    else {
+      groups.set(key, [line]);
+      out.push(line);
+    }
+  }
+  return out.map((line) => {
+    const group = line.uid && line.kind !== "text" ? groups.get(`${line.peerId}|${line.uid}`) : undefined;
+    if (!group || group.length < 2) return line;
+    const ordered = [...group].sort((a, b) => (a.part ?? 0) - (b.part ?? 0) || a.seq - b.seq);
+    const first = ordered.reduce((a, b) => (b.seq < a.seq ? b : a));
+    return {
+      ...first,
+      text: joinPartTexts(ordered.map((row) => row.text)),
+      startedAt: Math.min(...ordered.map((row) => row.startedAt)),
+      endedAt: Math.max(...ordered.map((row) => row.endedAt)),
+    };
+  });
+}
+
+/**
+ * 글 통로(mesh.broadcast)로 바로 온 자막 줄을 받아도 되는 모양으로. 받아쓴 말만, 보낸 사람 자신의 줄만.
+ * 이름·계정은 통로 글이 아니라 서버가 준 사람 목록에서 채운다(사칭·차단 피하기 막기). 안 맞으면 null.
+ */
+export function directLine(from: string, data: string, members: Pick<RoomMember, "peerId" | "accountId" | "nickname">[]): RoomLine | null {
+  let parsed: unknown;
+  try {
+    parsed = JSON.parse(data);
+  } catch {
+    return null;
+  }
+  const raw = (parsed as { t?: unknown; line?: unknown })?.t === "line" ? (parsed as { line: Record<string, unknown> }).line : null;
+  if (!raw || typeof raw !== "object") return null;
+  const member = members.find((row) => row.peerId === from);
+  if (!member || raw.peerId !== from) return null;
+  const { seq, text, startedAt, endedAt } = raw;
+  if (raw.kind !== undefined && raw.kind !== "speech") return null;
+  if (typeof seq !== "number" || !Number.isInteger(seq) || seq <= 0) return null;
+  if (typeof text !== "string" || !text.trim() || text.length > 2_000) return null;
+  if (typeof startedAt !== "number" || typeof endedAt !== "number" || !Number.isFinite(startedAt) || !Number.isFinite(endedAt)) return null;
+  const uid = typeof raw.uid === "string" && /^[A-Za-z0-9_-]{4,40}$/.test(raw.uid) ? raw.uid : undefined;
+  const part = uid && typeof raw.part === "number" && Number.isInteger(raw.part) && raw.part >= 0 && raw.part < 100 ? raw.part : undefined;
+  const lang = typeof raw.lang === "string" && /^[a-z]{2,3}$/.test(raw.lang) ? raw.lang : undefined;
+  return {
+    seq,
+    kind: "speech",
+    peerId: from,
+    accountId: member.accountId ?? null,
+    nickname: member.nickname,
+    text,
+    startedAt,
+    endedAt: Math.max(startedAt, endedAt),
+    ...(lang ? { lang } : {}),
+    ...(uid ? { uid, part: part ?? 0 } : {}),
+  };
 }
 
 /** 새로 받은 줄을 이미 가진 줄에 더한다(같은 seq는 한 번만). */

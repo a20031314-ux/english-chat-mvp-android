@@ -276,6 +276,11 @@ export function RoleplayScreen({
   const [thinking, setThinking] = useState(false);
   /** What they have said of a sentence the pause cut off, while the rest is awaited. */
   const [pending, setPending] = useState("");
+  /**
+   * 학습자가 말을 시작했다 — 받아쓴 글이 올 때까지 학습자 쪽에 "…" 말풍선(말하는 방과 같은 방식).
+   * 예전에는 말하는 동안 화면에 아무것도 없다가, 다 끝난 뒤에야 튜터 쪽 "…"가 떴다.
+   */
+  const [learnerTalking, setLearnerTalking] = useState(false);
   /** Lets a review or a close release the wait for the rest of a sentence. */
   const releaseRestRef = useRef<() => void>(() => undefined);
   // The director is deciding what the character says. Shown as the character
@@ -843,6 +848,9 @@ export function RoleplayScreen({
       recorderRef.current = await listenForTurn({
         language: scenario.language,
         isPremium,
+        onSpeaking: (yes) => {
+          if (yes) setLearnerTalking(true);
+        },
         onSettled: () => setSettled((count) => count + 1),
       });
       setRecording(true);
@@ -866,6 +874,7 @@ export function RoleplayScreen({
     setThinking(true);
     let heard = await recorder.stop();
     setThinking(false);
+    setLearnerTalking(false);
     let lastEnd = endedAt;
 
     // Cut off mid-sentence by the pause that ends a turn: "…coffee and". Give
@@ -877,6 +886,7 @@ export function RoleplayScreen({
       if (rest === null) {
         // Closed or put down while waiting: this turn is no longer being sent.
         setPending("");
+        setLearnerTalking(false);
         return;
       }
       if (!rest.text) break;
@@ -906,6 +916,9 @@ export function RoleplayScreen({
         language: scenario.language,
         isPremium,
         noSpeechMs: REST_OF_SENTENCE_MS,
+        onSpeaking: (yes) => {
+          if (yes) setLearnerTalking(true);
+        },
         onSettled: () => settle(),
       });
     } catch {
@@ -926,6 +939,7 @@ export function RoleplayScreen({
     setThinking(true);
     const text = await more.stop();
     setThinking(false);
+    setLearnerTalking(false);
     return { text, endedAt };
   };
 
@@ -1062,7 +1076,19 @@ export function RoleplayScreen({
             </div>
           </li>
         ) : null}
-        {(directing || thinking) && !pending ? (
+        {/* 학습자가 말하는 중이거나 받아쓰는 중: 학습자 쪽 "…"(글이 오면 그 줄로 바뀐다). */}
+        {learnerTalking && !pending ? (
+          <li className="mb-2 flex justify-end" aria-hidden>
+            <div className="rounded-2xl bg-white/[0.07] px-3 py-2 text-chat text-slate-400">
+              <span className="composing-dots inline-flex gap-1">
+                <span>•</span>
+                <span>•</span>
+                <span>•</span>
+              </span>
+            </div>
+          </li>
+        ) : null}
+        {(directing || (thinking && !learnerTalking)) && !pending ? (
           <li className="mb-2 flex justify-start">
             <div className="rounded-2xl bg-[#141414] px-3 py-2 text-[14px] text-neutral-500">
               …

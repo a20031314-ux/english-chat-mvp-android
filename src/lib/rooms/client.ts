@@ -159,6 +159,9 @@ export async function postLine(input: {
   ask?: boolean;
   /** 받아쓴 말의 언어(자유 대화방에서 줄 옆에 표시). */
   lang?: string;
+  /** 같은 말(말풍선)의 조각끼리 같은 번호와 순번 — 화면이 한 말풍선으로 잇는다(protocol.ts joinParts). */
+  uid?: string;
+  part?: number;
 }): Promise<RoomLine> {
   return (await call<{ line: RoomLine }>("line", input)).line;
 }
@@ -201,8 +204,17 @@ async function toBase64(blob: Blob): Promise<string> {
   return btoa(binary);
 }
 
-/** 내 마이크 한 덩어리를 받아쓴다. 통화 학습과 같은 빠른 길(room 표시). */
-export async function transcribeUtterance(blob: Blob, mimeType: string, languages: string[] = []): Promise<string> {
+/**
+ * 내 마이크 한 조각을 받아쓴다. 통화 학습과 같은 빠른 길(room 표시).
+ * 같은 말의 뒷조각이면 말 번호·순번과 앞에서 받아쓴 글을 같이 보낸다: 서버는 말 하나를 자막 한 줄로 세고(조각마다 세지 않음),
+ * 앞 글을 맥락으로 이어 받아쓴다.
+ */
+export async function transcribeUtterance(
+  blob: Blob,
+  mimeType: string,
+  languages: string[] = [],
+  piece?: { utterance: string; part: number; previous?: string },
+): Promise<string> {
   const response = await fetch(apiUrl("/api/roleplay/listen"), {
     method: "POST",
     headers: { "Content-Type": "application/json", ...entitlementHeaders() },
@@ -211,6 +223,7 @@ export async function transcribeUtterance(blob: Blob, mimeType: string, language
       filename: mimeType.includes("mp4") ? "line.mp4" : "line.webm",
       mimeType: mimeType || "audio/webm",
       room: true,
+      ...(piece ? { utterance: piece.utterance, part: piece.part, ...(piece.previous ? { previous: piece.previous } : {}) } : {}),
       // 방의 언어(보통 둘), 자유 대화방이면 말하는 사람의 두 언어 — 이 밖의 글자로 나온 자막은 지어낸 것으로 본다(서버).
       languages,
     }),

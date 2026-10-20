@@ -20,10 +20,13 @@ import {
   howToSay,
 } from "@/lib/rooms/client";
 import { RoomMesh, type PeerState } from "@/lib/rooms/mesh";
-import { startSpeechCapture, type SpeechCapture } from "@/lib/rooms/speech";
+import { startSpeechCapture, type SpeechCapture, type Utterance } from "@/lib/rooms/speech";
+import { joinPartTexts } from "@/lib/rooms/speechParts";
 import {
   MAX_SPEAKERS,
   canSeatFreely,
+  directLine,
+  joinParts,
   liveMembers,
   mergeLines,
   raisedHands,
@@ -159,6 +162,51 @@ export function RoomView({
   const handRef = useRef(false);
   const mutedRef = useRef(false);
   const offsetRef = useRef(0);
+  // 쉼마다 자른 조각(speechParts.ts): 말 번호마다 받아쓴 조각 글, 첫 줄 번호, 아직 받아쓰는 중인 조각 수, 끝난 말.
+  const partTextRef = useRef(new Map<string, string[]>());
+  const firstSeqRef = useRef(new Map<string, number>());
+  const inflightRef = useRef(new Map<string, number>());
+  const endedUtteranceRef = useRef(new Set<string>());
+  /** 내가 말하는 중이거나 아직 받아쓰는 중인 말 — 내 "…" 말풍선. */
+  const [selfComposing, setSelfComposing] = useState<string | null>(null);
+  /**
+   * 다른 사람이 말하는 중(소리 크기, mesh) → 그 사람 "…" 말풍선. 말이 멈추고 그 뒤 줄이 오면 지우고,
+   * 줄이 안 오면(기침·받아쓸 것 없음) 잠시 뒤 지운다. 시각은 이 기기 시계.
+   */
+  const [composingOthers, setComposingOthers] = useState<Record<string, { talking: boolean; lastVoice: number }>>({});
+  const membersRef = useRef<RoomMember[]>([]);
+
+  // 다른 사람의 "…": 말이 멈춘 뒤 그 사람 줄이 오면 거두고, 7초 안에 안 오면(받아쓸 말이 없었음) 거둔다.
+  useEffect(() => {
+    setComposingOthers((have) => {
+      let changed = false;
+      const next: typeof have = {};
+      for (const [other, row] of Object.entries(have)) {
+        const since = row.lastVoice + offsetRef.current - 2_500;
+        const answered = !row.talking && lines.some((line) => line.peerId === other && line.kind !== "text" && line.endedAt >= since);
+        if (answered) changed = true;
+        else next[other] = row;
+      }
+      return changed ? next : have;
+    });
+  }, [lines]);
+  const anyComposing = Object.keys(composingOthers).length > 0;
+  useEffect(() => {
+    if (!anyComposing) return;
+    const timer = window.setInterval(() => {
+      const now = Date.now();
+      setComposingOthers((have) => {
+        let changed = false;
+        const next: typeof have = {};
+        for (const [other, row] of Object.entries(have)) {
+          if (!row.talking && now - row.lastVoice > 7_000) changed = true;
+          else next[other] = row;
+        }
+        return changed ? next : have;
+      });
+    }, 1_000);
+    return () => window.clearInterval(timer);
+  }, [anyComposing]);
   const sinceRef = useRef(0);
   const meshRef = useRef<RoomMesh | null>(null);
   const streamRef = useRef<MediaStream | null>(null);
@@ -253,35 +301,59 @@ export function RoomView({
     [targetLanguage, locale],
   );
 
+  /** 끝난 말이고 받아쓰는 조각이 없으면 내 "…"를 거두고 조각 기록을 비운다. */
+  const settleUtterance = useCallback((uid: string) => {
+    if (!endedUtteranceRef.current.has(uid) || (inflightRef.current.get(uid) ?? 0) > 0) return;
+    setSelfComposing((have) => (have === uid ? null : have));
+    endedUtteranceRef.current.delete(uid);
+    inflightRef.current.delete(uid);
+    partTextRef.current.delete(uid);
+    // 첫 줄 번호는 힌트가 나중 조각에서 올 수 있어 조금 더 둔다(작은 Map이라 방을 나갈 때 함께 사라짐).
+  }, []);
+
   const onUtterance = useCallback(
-    async (blob: Blob, mimeType: string, startedAt: number, endedAt: number) => {
+    async (piece: Utterance) => {
       if (captionsOffRef.current) return;
+      const uid = piece.utterance;
       setPending((count) => count + 1);
+      inflightRef.current.set(uid, (inflightRef.current.get(uid) ?? 0) + 1);
       try {
         // 자유 대화방은 방 언어가 없어서 말하는 나의 두 언어(배우는 언어·앱 언어)로 받아쓴다.
         const languages = room.free ? speakerLanguages : room.languages;
-        const text = await transcribeUtterance(blob, mimeType, languages);
+        // 뒷조각이면 앞 조각에서 받아쓴 글을 맥락으로(아직 안 온 조각은 빈칸 — 기다리지 않는다).
+        const previous = piece.part > 0 ? joinPartTexts(partTextRef.current.get(uid) ?? []) : "";
+        const text = await transcribeUtterance(piece.blob, piece.mimeType, languages, { utterance: uid, part: piece.part, previous });
         if (!text || !aliveRef.current) return;
+        const parts = partTextRef.current.get(uid) ?? [];
+        parts[piece.part] = text;
+        partTextRef.current.set(uid, parts);
         const lang = room.free ? whichLanguage(text, languages) : null;
         const mine = await postLine({
           roomId: room.id,
           peerId,
           kind: "speech",
           text,
-          startedAt: startedAt + offsetRef.current,
-          endedAt: endedAt + offsetRef.current,
+          startedAt: piece.startedAt + offsetRef.current,
+          endedAt: piece.endedAt + offsetRef.current,
           ...(lang ? { lang } : {}),
+          uid,
+          part: piece.part,
         });
         addMine(mine);
+        // 서버에 올린 줄을 연결된 사람들에게도 바로(1.5초마다 묻는 서버 확인을 기다리지 않게). 서버 기록이 원본.
+        meshRef.current?.broadcast(JSON.stringify({ t: "line", line: mine }));
+        const firstSeq = Math.min(firstSeqRef.current.get(uid) ?? mine.seq, mine.seq);
+        firstSeqRef.current.set(uid, firstSeq);
         // 편한 말이 든 줄이면 나에게만 "이렇게 말해 보세요"(앞 대화를 맥락으로). 실패·상한이면 조용히 없음.
+        // 조각은 한 말풍선으로 이어져 보이니, 힌트도 그 말풍선(첫 줄 번호)에 단다.
         if (hintModeRef.current !== "off" && leansOnOwnLanguage(text, targetLanguage, locale)) {
-          const recent = timeline(linesRef.current)
-            .filter((row) => row.seq !== mine.seq)
+          const recent = timeline(joinParts(linesRef.current))
+            .filter((row) => row.seq !== firstSeq)
             .slice(-6)
             .map((row) => `${row.nickname}: ${row.text}`);
           void howToSay({ message: text, recent, locale, targetLanguage, purpose: "roomHint" }).then(
             (found) => {
-              if (found && aliveRef.current) setHints((have) => ({ ...have, [mine.seq]: found.expression }));
+              if (found && aliveRef.current) setHints((have) => ({ ...have, [firstSeq]: found.expression }));
             },
             () => {},
           );
@@ -290,14 +362,17 @@ export function RoomView({
         if (error instanceof RoomApiError && error.code === "CAPTION_LIMIT") {
           captionsOffRef.current = true;
           setCaptionsOff(true);
+          setSelfComposing(null);
           return;
         }
         console.warn("[rooms] line failed", error);
       } finally {
         setPending((count) => Math.max(0, count - 1));
+        inflightRef.current.set(uid, Math.max(0, (inflightRef.current.get(uid) ?? 1) - 1));
+        settleUtterance(uid);
       }
     },
-    [addMine, peerId, room.id, room.languages, room.free, speakerLanguages, targetLanguage, locale],
+    [addMine, peerId, room.id, room.languages, room.free, speakerLanguages, targetLanguage, locale, settleUtterance],
   );
 
   const startMic = useCallback(async (): Promise<boolean> => {
@@ -315,9 +390,16 @@ export function RoomView({
       if (track) track.enabled = !mutedRef.current;
       meshRef.current?.setLocalTrack(track);
       captureRef.current = startSpeechCapture(stream, {
-        onUtterance: (utterance) =>
-          void onUtterance(utterance.blob, utterance.mimeType, utterance.startedAt, utterance.endedAt),
+        onUtterance: (utterance) => void onUtterance(utterance),
         onSpeaking: setSpeaking,
+        // 말을 시작하자마자 내 "…" 말풍선, 말이 끝나고 받아쓴 조각이 다 오면 거둔다.
+        onUtteranceStart: (uid) => {
+          if (!captionsOffRef.current) setSelfComposing(uid);
+        },
+        onUtteranceEnd: (uid) => {
+          endedUtteranceRef.current.add(uid);
+          settleUtterance(uid);
+        },
         isMuted: () => mutedRef.current,
       });
       return true;
@@ -325,7 +407,7 @@ export function RoomView({
       console.warn("[rooms] mic failed", error);
       return false;
     }
-  }, [onUtterance]);
+  }, [onUtterance, settleUtterance]);
 
   /** 서버가 정한 자리를 따른다(방장의 결정, 자리 부족). 마이크도 같이. */
   const adoptRole = useCallback(
@@ -381,7 +463,15 @@ export function RoomView({
           else delete next[other];
           return next;
         }),
-      (other, on) => setTalking((have) => ({ ...have, [other]: on })),
+      (other, on) => {
+        setTalking((have) => ({ ...have, [other]: on }));
+        // 그 사람 "…" 말풍선: 말소리가 나면 띄우고, 멈춘 때를 적어 둔다(줄이 오거나 잠시 지나면 거둠).
+        setComposingOthers((have) => {
+          const row = have[other];
+          if (on) return { ...have, [other]: { talking: true, lastVoice: Date.now() } };
+          return row ? { ...have, [other]: { talking: false, lastVoice: Date.now() } } : have;
+        });
+      },
       room.video
         ? {
             onVideo: (other, stream) =>
@@ -395,6 +485,12 @@ export function RoomView({
         : undefined,
     );
     meshRef.current = mesh;
+    // 글 통로로 바로 온 자막 줄(mesh.broadcast). 보낸 사람의 이름·계정은 서버가 준 사람 목록에서 다시 채운다 —
+    // 통로로 온 글이 남을 사칭하거나 차단을 피하지 못하게. 같은 줄은 나중에 서버 확인으로도 오고, 번호(seq)로 한 번만 쓴다.
+    mesh.setMessageHandler((from, data) => {
+      const line = directLine(from, data, membersRef.current);
+      if (line && aliveRef.current) setLines((have) => mergeLines(have, [line]));
+    });
     // 비공개 통화 방은 중계(TURN) 주소를 받아 둔다 — 들어가는 동안 같이 묻고, 첫 연결 전에 끼운다.
     const ice = room.private ? fetchIceServers(room.id, peerId) : Promise.resolve(null);
 
@@ -416,6 +512,7 @@ export function RoomView({
         offsetRef.current = result.now - (sentAt + receivedAt) / 2;
         const live = liveMembers(result.members, result.now);
         setMembers(live);
+        membersRef.current = live;
         if (result.room.hostPeerId !== hostRef.current) {
           // 방장이 바뀌었다(넘겨받음). 내가 받았으면 알려 준다.
           if (result.room.hostPeerId === peerId) setNotice("becameHost");
@@ -568,8 +665,19 @@ export function RoomView({
   };
   const nextHosts = members.filter((member) => member.peerId !== peerId && member.role === "speaker" && member.accountId);
   // 자막(받아쓴 말)과 채팅(쓴 댓글)을 나눈다 — 예전 앱의 줄에는 kind가 없을 수 있다(그러면 말).
-  const spoken = timeline(lines).filter((line) => line.kind !== "text");
-  const typed = timeline(lines).filter((line) => line.kind === "text");
+  const self = members.find((member) => member.peerId === peerId);
+  // 쉼마다 자른 조각은 한 말풍선으로 잇는다(joinParts).
+  const shownLines = joinParts(lines);
+  const spoken = timeline(shownLines).filter((line) => line.kind !== "text");
+  const typed = timeline(shownLines).filter((line) => line.kind === "text");
+  // 지금 말하는 중이거나 받아쓰는 중인 사람의 "…" 말풍선(자막 칸 맨 아래). 차단한 사람·음소거한 사람은 빼고.
+  const composing = [
+    ...(selfComposing && !captionsOff ? [{ peerId, accountId: self?.accountId ?? null, nickname: self?.nickname ?? "" }] : []),
+    ...Object.keys(composingOthers)
+      .map((other) => members.find((member) => member.peerId === other))
+      .filter((member): member is RoomMember => Boolean(member && !member.muted && !(member.accountId && blocked.includes(member.accountId))))
+      .map((member) => ({ peerId: member.peerId, accountId: member.accountId ?? null, nickname: member.nickname })),
+  ];
   const noteFor = onMessage
     ? (line: RoomLine) => {
         if (line.accountId) onMessage(line.accountId, { roomId: room.id, seq: line.seq, nickname: line.nickname, text: line.text });
@@ -613,7 +721,6 @@ export function RoomView({
   const videoOtherBlocked = Boolean(videoOther?.accountId && blocked.includes(videoOther.accountId));
   const videoOtherStream = videoOther && !videoOtherBlocked ? remoteVideo[videoOther.peerId] ?? null : null;
   const videoOtherLine = videoOther ? spoken.filter((line) => line.peerId === videoOther.peerId).at(-1) ?? null : null;
-  const self = members.find((member) => member.peerId === peerId);
 
 
   if (ended) {
@@ -875,8 +982,9 @@ export function RoomView({
           <Lines
             onNote={noteFor}
             t={t}
-            allLines={lines}
+            allLines={shownLines}
             lines={layout === "call" ? spoken.slice(-CALL_LAYOUT_LINES) : spoken}
+            composing={composing}
             hints={hints}
             hintMode={hintMode}
             onHintClose={(seq) => setHints((have) => withoutHint(have, seq))}
@@ -907,7 +1015,7 @@ export function RoomView({
               big={layout === "chat"}
               onNote={noteFor}
               t={t}
-              allLines={lines}
+              allLines={shownLines}
               lines={typed}
               emptyText={t.noComments}
               view="timeline"

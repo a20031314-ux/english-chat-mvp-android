@@ -596,9 +596,12 @@ export function Lines({
   hintMode,
   onHintSend,
   onHintClose,
+  composing,
 }: {
   t: RoomCopy;
   lines: RoomLine[];
+  /** 지금 말하는 중(받아쓰는 중)인 사람 — 말을 시작하자마자 "…" 말풍선, 받아쓴 글이 오면 그 줄로 바뀐다. */
+  composing?: { peerId: string; accountId: string | null; nickname: string }[];
   /** 내 줄 번호 → 본인에게만 보이는 "이렇게 말해 보세요"(배우는 언어 문장). */
   hints?: Record<number, string>;
   hintMode?: RoomHintMode;
@@ -626,15 +629,45 @@ export function Lines({
   const [open, setOpen] = useState<Record<number, string | null>>({});
   const scroller = useRef<HTMLDivElement>(null);
   const ordered = useMemo(() => timeline(lines), [lines]);
+  // 처음 그릴 때 이미 있던 줄 번호. 그 뒤에 생긴 줄만 글이 채워지듯 보인다(RevealText).
+  const knownSeqs = useRef<Set<number>>(new Set(lines.map((line) => line.seq)));
+  useEffect(() => {
+    for (const line of lines) knownSeqs.current.add(line.seq);
+  }, [lines]);
   const groups = useMemo(() => byPerson(lines), [lines]);
 
-  // 💡 힌트가 오면 그 카드까지 보이게(내 마지막 줄 아래라 맨 아래로).
+  // 💡 힌트가 오면 그 카드까지 보이게(내 마지막 줄 아래라 맨 아래로). "…" 말풍선이 생기거나 글이 이어 붙어도.
   const hintCount = Object.keys(hints ?? {}).length;
+  const composingKey = (composing ?? []).map((row) => row.peerId).join(",");
+  const lastText = ordered.at(-1)?.text.length ?? 0;
   useEffect(() => {
     if (view !== "timeline") return;
     const node = scroller.current;
     if (node) node.scrollTop = node.scrollHeight;
-  }, [ordered.length, view, hintCount]);
+  }, [ordered.length, view, hintCount, composingKey, lastText]);
+
+  /** "…" 말풍선 한 개: 줄과 같은 자리(사진·이름)에 점 세 개가 깜박인다. */
+  const composingRow = (row: { peerId: string; accountId: string | null; nickname: string }, showName: boolean) => (
+    <li key={`composing-${row.peerId}`} className="flex items-start gap-2" aria-label={row.nickname}>
+      {showName ? (
+        <span className="mt-1 shrink-0">
+          <Face accountId={row.accountId} name={row.nickname} size={28} />
+        </span>
+      ) : null}
+      <div className={`rounded-xl px-3 py-2 ${row.peerId === selfId ? "bg-white/[0.07]" : "bg-white/[0.03]"}`}>
+        {showName ? (
+          <span className={`me-2 text-xs font-medium ${colorFor(row.peerId)}`} dir="auto">
+            {row.nickname}
+          </span>
+        ) : null}
+        <span className="composing-dots inline-flex gap-1 align-middle text-slate-400" aria-hidden>
+          <span>•</span>
+          <span>•</span>
+          <span>•</span>
+        </span>
+      </div>
+    </li>
+  );
 
   const toggle = async (line: RoomLine) => {
     if (line.seq in open) {
@@ -717,7 +750,7 @@ export function Lines({
               </span>
             ) : null}
             <span className={`block leading-snug text-white ${big ? "text-title" : typed ? "text-sm" : "text-chat"}`} dir="auto">
-              {line.text}
+              {typed ? line.text : <RevealText text={line.text} fresh={!knownSeqs.current.has(line.seq)} />}
             </span>
             {isOpen ? (
               <span className="mt-1 block text-sm text-slate-300" dir="auto">
@@ -767,7 +800,8 @@ export function Lines({
     );
   };
 
-  if (lines.length === 0) {
+  const composingRows = composing ?? [];
+  if (lines.length === 0 && composingRows.length === 0) {
     return <p className="min-h-0 flex-1 px-4 py-4 text-sm text-slate-500">{emptyText ?? t.noLines}</p>;
   }
 
@@ -777,6 +811,7 @@ export function Lines({
       {view === "timeline" ? (
         <ul className="space-y-1.5">
           {ordered.map((line, index) => row(line, true, line.kind !== "text" && overlapsPrevious(ordered, index)))}
+          {composingRows.map((row) => composingRow(row, true))}
         </ul>
       ) : (
         <div className="space-y-4">
@@ -786,13 +821,54 @@ export function Lines({
                 {group.nickname}
                 {group.peerId === selfId ? <span className="ms-1 text-xs text-slate-500">({t.you})</span> : null}
               </h3>
-              <ul className="space-y-1.5">{group.lines.map((line) => row(line, false, false))}</ul>
+              <ul className="space-y-1.5">
+                {group.lines.map((line) => row(line, false, false))}
+                {composingRows.filter((row) => row.peerId === group.peerId).map((row) => composingRow(row, false))}
+              </ul>
             </section>
           ))}
+          {/* 아직 줄이 없는 사람이 말을 시작했으면 맨 아래에 이름과 함께. */}
+          {composingRows.some((row) => !groups.some((group) => group.peerId === row.peerId)) ? (
+            <ul className="space-y-1.5">
+              {composingRows.filter((row) => !groups.some((group) => group.peerId === row.peerId)).map((row) => composingRow(row, true))}
+            </ul>
+          ) : null}
         </div>
       )}
     </div>
   );
+}
+
+/**
+ * 받아쓴 글이 오면 앞에서부터 빠르게 채워 보인다(약 0.3초). 같은 말풍선에 다음 조각이 이어 붙으면 붙은 부분만.
+ * 글자를 늦추는 건 보이는 방식뿐이라(글은 이미 와 있음) 움직임 줄이기 설정이면 바로 다 보인다.
+ */
+function RevealText({ text, fresh }: { text: string; fresh: boolean }) {
+  // 방에 들어와 받은 지난 줄은 바로 다 보이고, 새로 온 줄(fresh)만 빈칸부터 채운다.
+  const [shown, setShown] = useState(fresh ? 0 : text.length);
+  const fromRef = useRef(fresh ? "" : text);
+  useEffect(() => {
+    const before = fromRef.current;
+    fromRef.current = text;
+    const reduce = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
+    const start = text.startsWith(before) ? before.length : 0;
+    if (reduce || start >= text.length) {
+      const frame = requestAnimationFrame(() => setShown(text.length));
+      return () => cancelAnimationFrame(frame);
+    }
+    const began = performance.now();
+    const total = text.length - start;
+    const duration = Math.min(450, 120 + total * 12);
+    let frame = 0;
+    const tick = (now: number) => {
+      const done = Math.min(1, (now - began) / duration);
+      setShown(start + Math.ceil(total * done));
+      if (done < 1) frame = requestAnimationFrame(tick);
+    };
+    frame = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(frame);
+  }, [text]);
+  return <>{text.slice(0, Math.max(0, shown))}</>;
 }
 
 /** 본인에게만: 편한 말로 한 줄 아래 "💡 이렇게 말해 보세요". 살짝만이면 첫 낱말, 누르면 전체. */

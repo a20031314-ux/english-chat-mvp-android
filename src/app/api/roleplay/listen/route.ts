@@ -1,4 +1,5 @@
 import { takeAiHelp } from "@/lib/server/aiHelp";
+import { captionPartCounts } from "@/lib/server/entitlementStore";
 import { NextRequest, after } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -64,10 +65,17 @@ export async function POST(request: NextRequest) {
   // but is not necessarily speaking the language they learn — a language
   // exchange swaps — so nothing is noted about them as a learner.
   const forRoom = body.room === true;
+  // 쉼마다 자른 조각(rooms/speechParts.ts): 같은 말의 번호와 순번, 그리고 앞 조각에서 받아쓴 글(맥락).
+  const utterance = typeof body.utterance === "string" && /^[A-Za-z0-9_-]{4,40}$/.test(body.utterance) ? body.utterance : "";
+  const previous = typeof body.previous === "string" ? body.previous.replace(/\s+/g, " ").trim().slice(-240) : "";
   if (forRoom) {
     // 말하는 방 자막은 하루 줄 수 한도(billing/plans.ts dailyCaptionLines). 넘으면 자막만 멈추고 음성 대화는 그대로.
-    const caption = await takeAiHelp(request, "caption");
-    if (!caption.ok) return jsonWithCors(request, { error: caption.error, limit: caption.limit }, { status: 429 });
+    // 말 하나를 한 줄로 센다(뒷조각은 세지 않음, entitlementStore.captionPartCounts).
+    const counts = utterance ? await captionPartCounts(requestUserId(request), utterance).catch(() => true) : true;
+    if (counts) {
+      const caption = await takeAiHelp(request, "caption");
+      if (!caption.ok) return jsonWithCors(request, { error: caption.error, limit: caption.limit }, { status: 429 });
+    }
   }
   void meterRequest(request, forRoom ? "roomListen" : "roleplayListen");
 
@@ -100,7 +108,9 @@ export async function POST(request: NextRequest) {
     // so it can neither correct it nor work out what was meant (director.ts).
     prompt:
       "A language learner speaking one short turn in a casual conversation. Write exactly what they say, mistakes included: wrong verb forms, missing words, words from another language. Do not correct it. If nobody speaks, or there is only noise, write nothing." +
-      spoken,
+      spoken +
+      // 뒷조각: 앞에서 한 말을 알려 줘야 문장 중간에서 시작하는 소리를 제대로 잇는다. 앞 글을 다시 쓰지는 말라고.
+      (previous ? ` This audio continues what they just said: "${previous}". Write only the words in this audio, not the earlier ones.` : ""),
   };
 
   try {
