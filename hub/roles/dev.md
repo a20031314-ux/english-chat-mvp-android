@@ -30,7 +30,7 @@
 - **1:1 영상통화 (2026-10-20, 서버 바로 반영·화면은 앱 다음 빌드, `hub/drafts/video-workspace.md` 1단계):** 사용자 "1대1 메이트 만들어줘". 1:1 대화 📞·러닝메이트 📞 방에 `RoomMeta.video`,
   메시(`rooms/mesh.ts`)에 영상 자리 하나(켜고 끌 때 다시 협상 없이 replaceTrack, 켬/끔은 `cam` 신호, 한 갈래 450kbps), 방 위 `VideoStage.tsx`(상대 크게·나 작게·상대 마지막 자막), "📷 카메라 켜기"(기본 꺼짐)·"🙈 영상 가리기"(이 기기만)·차단한 사람 영상 숨김,
   접거나 뒤로 가면 카메라 끔. 비공개 방은 `/api/rooms` `ice` → `server/turn.ts`(Cloudflare TURN, 환경 변수 없으면 STUN만). 안드로이드 `CAMERA` 권한(required=false). 문구 9개 × 14개 언어(Claude가 씀).
-  점검 `scripts/sim-users/video-call.mjs`(브라우저 둘, 가짜 카메라). **사람 할 일:** Cloudflare 대시보드 Realtime → TURN 키 만들기 → Vercel `CLOUDFLARE_TURN_KEY_ID`·`CLOUDFLARE_TURN_API_TOKEN` → 재배포(없어도 통화는 되지만 일부 망에서 안 이어짐).
+  점검 `scripts/sim-users/video-call.mjs`(브라우저 둘, 가짜 카메라). 중계: Cloudflare TURN 키를 사용자가 Vercel(Production)에 넣음(2026-10-20) → 운영 `ice`가 `turn: "on"`, 중계로만 잇기 점검 통과. 키를 바꾸면 새 배포 뒤 반영(인스턴스마다 6시간 재사용).
   남은 것: 실제 폰 두 대(다른 망·이어폰 없이·발열), 사용법(?) 칸 "영상통화"(버전 자를 때 14개 언어 + 그림), 2단계 팀 영상 4명, 앞뒤 카메라 바꾸기, 영상 신고 사유.
 - **창구 Moyeo 단체통화 (2026-10-20, 서버만, `hub/drafts/doors.md`):** 코드 끝(소개 페이지 14개 언어·창구 모드 앱). 도메인 연결됨(2026-10-20, 사용자 폰 확인). 남은 것: 운영에서 `/ja`·`/?screen=rooms` 창구 모드·Google 로그인(OAuth 원본 추가 뒤) 확인. 랜덤채팅 창구는 설계안(가+나) 사용자 결정 대기.
 - **웹 광고 AdSense (2026-10-20, 서버만·앱 빌드 필요 없음):** 코드 준비 끝(`src/lib/webAds.ts`, `WebAdSlot`, 앱 네이티브 광고와 같은 목록 자리, 무료만, `/ads.txt`, 사이트 확인 태그, 처리방침). 꺼져 있음 — 사용자가 AdSense 가입·`languagebank.net` 사이트 승인·반응형 디스플레이 광고 단위를 만든 뒤 Vercel `NEXT_PUBLIC_ADSENSE_CLIENT`(ca-pub-…)·`NEXT_PUBLIC_ADSENSE_SLOT_FEED` 넣고 재배포. 켜면 운영에서 `/ads.txt`·광고 자리 다시 확인. 유럽 동의창은 AdSense '개인 정보 보호 및 메시지'에서 켜야 함.
