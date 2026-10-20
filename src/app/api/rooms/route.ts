@@ -35,6 +35,7 @@ import {
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
 import { requestAuth } from "@/lib/server/premiumRequest";
 import { readAccount } from "@/lib/server/accountStore";
+import { STUN_ONLY, iceServers } from "@/lib/server/turn";
 import { blockedEitherWay, noteHelped, noteHosted, readBlocked, readFollowing } from "@/lib/server/socialStore";
 
 export const dynamic = "force-dynamic";
@@ -122,6 +123,17 @@ export async function POST(request: NextRequest) {
   if (action === "reopen") {
     const meta = await reopenRoom({ accountId: account!.id, id: roomId, hostPeerId: peerId, hostNickname: profileName });
     return meta ? jsonWithCors(request, { room: meta }) : bad(request, "NO_ROOM", 404);
+  }
+
+  // 통화 연결 길(ICE). 비공개 통화 방의 두 사람(또는 단체방 사람)에게만 중계(TURN) 아이디를 준다(lib/server/turn.ts).
+  if (action === "ice") {
+    const meta = await readMeta(roomId);
+    if (!meta) return bad(request, "NO_ROOM", 404);
+    if (!meta.private || !auth || !(meta.allowed ?? []).includes(auth.accountId)) {
+      return jsonWithCors(request, { iceServers: STUN_ONLY, relay: false });
+    }
+    const found = await iceServers();
+    return jsonWithCors(request, { iceServers: found.servers, relay: found.relay });
   }
 
   // 들어가기 전에 방 모양만(1:1 통화 받기). 비공개 방은 그 두 사람에게만.

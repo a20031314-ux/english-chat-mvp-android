@@ -28,9 +28,9 @@ export function WebAdSlot({ active = true }: { active?: boolean }) {
   }, [enabled, active]);
 
   if (!enabled || !active) return null;
+  // AdSense 반응형 디스플레이 광고 단위 하나를 모든 목록 자리에 쓴다.
   return (
     <div className="w-full overflow-hidden">
-      {/* AdSense "디스플레이 광고(반응형)" 단위 하나를 모든 목록 자리에 쓴다. */}
       <ins
         ref={ref}
         className="adsbygoogle block w-full"

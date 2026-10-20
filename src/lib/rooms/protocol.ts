@@ -67,6 +67,8 @@ export type RoomMeta = {
   threadId?: string;
   /** 단체방 통화면 그 단체방(rooms/group.ts) — 끝나면 기록을 그 방에 남긴다. */
   groupId?: string;
+  /** 영상통화 방(1:1 대화 📞·러닝메이트 통화): 카메라를 켤 수 있다. 영상은 사람끼리 직접, 서버에 남지 않는다. */
+  video?: boolean;
   createdAt: number;
 };
 
@@ -107,7 +109,8 @@ export type RoomLine = {
   lang?: string;
 };
 
-export type SignalKind = "offer" | "answer" | "ice" | "bye";
+/** cam = 영상 방에서 내 카메라 켬/끔("on"/"off"). 예전 앱은 모르는 신호를 그냥 넘긴다. */
+export type SignalKind = "offer" | "answer" | "ice" | "bye" | "cam";
 
 export type RoomSignal = {
   from: string;
@@ -149,7 +152,7 @@ export function cleanText(value: unknown, max: number): string {
 }
 
 export function isSignalKind(value: unknown): value is SignalKind {
-  return value === "offer" || value === "answer" || value === "ice" || value === "bye";
+  return value === "offer" || value === "answer" || value === "ice" || value === "bye" || value === "cam";
 }
 
 /**

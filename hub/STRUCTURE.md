@@ -108,7 +108,7 @@
 - 다른 영역이 씀: `rooms/MediaImage` ← 대화 탭 · `rooms/PeopleTab` ← 앱 틀
 
 ### Room 탭 — 말하는 방 `room`
-- 화면: `rooms/RoomParts` · `rooms/RoomView` · `rooms/RoomsScreen`
+- 화면: `rooms/RoomParts` · `rooms/RoomView` · `rooms/RoomsScreen` · `rooms/VideoStage`
 - API: `rooms`(대화 탭, 사람 탭, 계정·로그인)
 - 다른 영역이 씀: `rooms/RoomParts` ← 대화 탭, 사람 탭 · `rooms/RoomsScreen` ← 앱 틀
 

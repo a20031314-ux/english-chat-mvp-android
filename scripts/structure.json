@@ -106,6 +106,7 @@
     "components/rooms/RoomsScreen": "room",
     "components/rooms/RoomView": "room",
     "components/rooms/RoomParts": "room",
+    "components/rooms/VideoStage": "room",
     "api/rooms": "room",
 
     "components/studyMap/": "my",

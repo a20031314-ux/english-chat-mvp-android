@@ -123,6 +123,16 @@ export async function sendSignal(roomId: string, peerId: string, to: string, kin
   await call("signal", { roomId, peerId, to, kind, data });
 }
 
+/** 통화 연결 길. 비공개 통화 방이면 중계(TURN)가 붙어 온다. 못 받으면 null(그러면 메시가 STUN만 쓴다). */
+export async function fetchIceServers(roomId: string, peerId: string): Promise<RTCIceServer[] | null> {
+  try {
+    const found = await call<{ iceServers?: RTCIceServer[] }>("ice", { roomId, peerId });
+    return Array.isArray(found.iceServers) && found.iceServers.length ? found.iceServers : null;
+  } catch {
+    return null;
+  }
+}
+
 /** 들어가기 전에 방 모양(1:1 통화 받기). 없으면 null. */
 export async function peekRoom(roomId: string, peerId: string): Promise<RoomMeta | null> {
   try {

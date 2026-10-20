@@ -146,6 +146,8 @@ export async function POST(request: NextRequest) {
       private: true,
       allowed: [...group.members],
       groupId: group.id,
+      // 러닝메이트(둘)만 영상. 팀 영상은 사람이 많아 중계가 필요해 아직(hub/drafts/video-workspace.md).
+      ...(group.team?.kind === "mate" ? { video: true } : {}),
     });
     await noteGroupCall(group, me, room.id);
     return jsonWithCors(request, { room });

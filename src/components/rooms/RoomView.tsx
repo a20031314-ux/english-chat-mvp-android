@@ -15,6 +15,7 @@ import {
   pollRoom,
   postLine,
   sendSignal,
+  fetchIceServers,
   transcribeUtterance,
   howToSay,
 } from "@/lib/rooms/client";
@@ -38,6 +39,7 @@ import { leansOnOwnLanguage, whichLanguage } from "@/lib/roleplay/transcript";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { Composer, Face, Lines, ProfileSheet, languagePair } from "./RoomParts";
 import { useInbox } from "./RoomDm";
+import { VideoStage } from "./VideoStage";
 import { CALL_LAYOUT_LINES, ROOM_HINT_MODES, ROOM_LAYOUTS, pendingNotes, readRoomHintMode, readRoomLayout, saveRoomHintMode, saveRoomLayout, type RoomHintMode, type RoomLayout, type RoomNote } from "@/lib/rooms/layout";
 
 /**
@@ -60,7 +62,9 @@ type Notice =
   | "kicked"
   | "banned"
   | "loginNeeded"
-  | "becameHost";
+  | "becameHost"
+  | "cameraDenied"
+  | "cameraPaused";
 
 export function RoomView({
   t,
@@ -75,6 +79,7 @@ export function RoomView({
   onLeft,
   onMessage,
   onMinimize,
+  minimized = false,
 }: {
   t: RoomCopy;
   room: RoomMeta;
@@ -93,6 +98,8 @@ export function RoomView({
   onMessage?: (accountId: string, note?: RoomNote) => void;
   /** 방에 있는 채로 화면만 접기(연결·마이크는 그대로, RoomsScreen이 아래 막대를 띄움). */
   onMinimize?: () => void;
+  /** 접혀 있는 동안(영상 방이면 카메라를 끈다 — 소리는 그대로). */
+  minimized?: boolean;
 }) {
   const onLeftRef = useRef(onLeft);
   useEffect(() => {
@@ -157,6 +164,12 @@ export function RoomView({
   const streamRef = useRef<MediaStream | null>(null);
   const captureRef = useRef<SpeechCapture | null>(null);
   const aliveRef = useRef(true);
+  // 영상 방(1:1·러닝메이트 통화): 상대 영상과 내 카메라. 카메라는 기본 꺼짐.
+  const videoRoom = Boolean(room.video);
+  const [remoteVideo, setRemoteVideo] = useState<Record<string, MediaStream | null>>({});
+  const [camera, setCamera] = useState<MediaStream | null>(null);
+  const cameraRef = useRef<MediaStream | null>(null);
+  const [videoHidden, setVideoHidden] = useState(false);
 
   const isHost = peerId === room.hostPeerId;
   // 지금 방장(넘기기·다시 들어오기로 바뀐다 — 들어갈 때와 물을 때마다 서버 값으로).
@@ -190,6 +203,49 @@ export function RoomView({
     meshRef.current?.setLocalTrack(null);
     setSpeaking(false);
   }, []);
+
+  const stopCamera = useCallback((why?: Notice) => {
+    const had = cameraRef.current;
+    if (!had) return;
+    had.getTracks().forEach((track) => track.stop());
+    cameraRef.current = null;
+    setCamera(null);
+    meshRef.current?.setLocalVideo(null);
+    if (why) setNotice(why);
+  }, []);
+
+  const startCamera = useCallback(async () => {
+    if (cameraRef.current || !videoRoom) return;
+    try {
+      // 1:1이라 화질은 적당히(360~480p·15fps) — 모바일 데이터·발열(mesh.ts VIDEO_MAX_BITRATE).
+      const stream = await navigator.mediaDevices.getUserMedia({
+        video: { facingMode: "user", width: { ideal: 640 }, height: { ideal: 480 }, frameRate: { ideal: 15, max: 24 } },
+      });
+      if (!aliveRef.current) {
+        stream.getTracks().forEach((track) => track.stop());
+        return;
+      }
+      cameraRef.current = stream;
+      setCamera(stream);
+      meshRef.current?.setLocalVideo(stream.getVideoTracks()[0] ?? null);
+    } catch (error) {
+      console.warn("[rooms] camera failed", error);
+      setNotice("cameraDenied");
+    }
+  }, [videoRoom]);
+
+  // 접거나 앱을 뒤로 보내면 카메라는 끈다(소리는 이어짐). 다시 켜는 건 사람이.
+  useEffect(() => {
+    if (minimized) stopCamera("cameraPaused");
+  }, [minimized, stopCamera]);
+  useEffect(() => {
+    if (!videoRoom) return;
+    const onVisibility = () => {
+      if (document.visibilityState === "hidden") stopCamera("cameraPaused");
+    };
+    document.addEventListener("visibilitychange", onVisibility);
+    return () => document.removeEventListener("visibilitychange", onVisibility);
+  }, [videoRoom, stopCamera]);
 
   const addMine = useCallback((line: RoomLine) => setLines((have) => mergeLines(have, [line])), []);
   const speakerLanguages = useMemo(
@@ -326,8 +382,21 @@ export function RoomView({
           return next;
         }),
       (other, on) => setTalking((have) => ({ ...have, [other]: on })),
+      room.video
+        ? {
+            onVideo: (other, stream) =>
+              setRemoteVideo((have) => {
+                const next = { ...have };
+                if (stream) next[other] = stream;
+                else delete next[other];
+                return next;
+              }),
+          }
+        : undefined,
     );
     meshRef.current = mesh;
+    // 비공개 통화 방은 중계(TURN) 주소를 받아 둔다 — 들어가는 동안 같이 묻고, 첫 연결 전에 끼운다.
+    const ice = room.private ? fetchIceServers(room.id, peerId) : Promise.resolve(null);
 
     const tick = async () => {
       if (!aliveRef.current) return;
@@ -370,6 +439,9 @@ export function RoomView({
           setNotice(error.code === "KICKED" ? "kicked" : "roomGone");
           setEnded(error.code === "KICKED" ? "kicked" : "roomGone");
           stopMic();
+          cameraRef.current?.getTracks().forEach((track) => track.stop());
+          cameraRef.current = null;
+          setCamera(null);
           mesh.close();
           return;
         }
@@ -394,6 +466,9 @@ export function RoomView({
         if (result.member.role === "speaker") await adoptRole("speaker", "");
         else if (result.member.hand) setNotice("handUp");
         else if (wantRole === "speaker") setNotice("joinedAsListener");
+        const servers = await ice;
+        if (servers) mesh.setIceServers(servers);
+        if (!aliveRef.current) return;
         setJoined(true);
         void tick();
       } catch (error) {
@@ -417,6 +492,8 @@ export function RoomView({
       mesh.close();
       meshRef.current = null;
       stopMic();
+      cameraRef.current?.getTracks().forEach((track) => track.stop());
+      cameraRef.current = null;
       void leaveRoom(room.id, peerId).then(() => onLeftRef.current?.());
     };
     // 방 하나에 한 번. 이름·역할은 들어갈 때 값만 쓴다.
@@ -531,6 +608,12 @@ export function RoomView({
   const notes = pendingNotes(inbox.threads, memberAccounts, seenNotes);
   const isSpeaking = (member: RoomMember) =>
     member.peerId === peerId ? speaking : Boolean(talking[member.peerId]) && !member.muted;
+  // 영상 방의 상대(1:1이라 한 사람). 차단한 사람의 영상은 보이지 않는다.
+  const videoOther = videoRoom ? members.find((member) => member.peerId !== peerId) ?? null : null;
+  const videoOtherBlocked = Boolean(videoOther?.accountId && blocked.includes(videoOther.accountId));
+  const videoOtherStream = videoOther && !videoOtherBlocked ? remoteVideo[videoOther.peerId] ?? null : null;
+  const videoOtherLine = videoOther ? spoken.filter((line) => line.peerId === videoOther.peerId).at(-1) ?? null : null;
+  const self = members.find((member) => member.peerId === peerId);
 
 
   if (ended) {
@@ -593,8 +676,24 @@ export function RoomView({
           </div>
         </div>
 
+        {videoRoom ? (
+          <VideoStage
+            t={t}
+            other={videoOther}
+            remote={videoOtherStream}
+            local={camera}
+            hidden={videoHidden || videoOtherBlocked}
+            onToggleHidden={() => setVideoHidden((value) => !value)}
+            lastLine={videoOtherLine}
+            otherSpeaking={videoOther ? isSpeaking(videoOther) : false}
+            self={{ accountId: self?.accountId ?? null, nickname: self?.nickname ?? nickname }}
+            selfSpeaking={speaking}
+            size={layout === "call" ? "large" : layout === "chat" ? "small" : "medium"}
+            onPerson={openPerson}
+          />
+        ) : null}
         {/* 채팅 위주: 자리 격자 대신 말하는 사람 얼굴 한 줄. */}
-        {layout === "chat" ? (
+        {layout === "chat" && !videoRoom ? (
           <div className="mt-2 flex items-center gap-1.5 overflow-x-auto pb-1">
             {speakers.map((member) => (
               <button
@@ -610,7 +709,7 @@ export function RoomView({
           </div>
         ) : null}
         {/* 말하기 자리: 방장 먼저, 8자리 격자(헬로우톡처럼). 누르면 프로필. 통화 위주면 크게. */}
-        <ul className={`mt-3 grid grid-cols-4 gap-x-2 ${layout === "call" ? "gap-y-4" : "gap-y-2"} ${layout === "chat" ? "hidden" : ""}`}>
+        <ul className={`mt-3 grid grid-cols-4 gap-x-2 ${layout === "call" ? "gap-y-4" : "gap-y-2"} ${layout === "chat" || videoRoom ? "hidden" : ""}`}>
           {Array.from({ length: MAX_SPEAKERS }, (_, index) => speakers[index] ?? null).map((member, index) =>
             member ? (
               <li key={member.peerId}>
@@ -914,6 +1013,16 @@ export function RoomView({
               >
                 {muted ? t.unmute : t.mute}
               </button>
+              {videoRoom ? (
+                <button
+                  type="button"
+                  onClick={() => (camera ? stopCamera() : void startCamera())}
+                  aria-pressed={Boolean(camera)}
+                  className={`flex-1 rounded-xl px-3 py-2.5 text-sm font-medium ${camera ? "bg-violet-400 text-black" : "border border-white/20 text-slate-200"}`}
+                >
+                  {camera ? `📷 ${t.cameraOff}` : `📷 ${t.cameraOn}`}
+                </button>
+              ) : null}
               {/* 방장은 내려가지 않는다(서버도 막음). 조용히 하려면 마이크 끄기. */}
               {isHostNow ? null : (
                 <button

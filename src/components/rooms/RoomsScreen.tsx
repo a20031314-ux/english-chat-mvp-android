@@ -182,6 +182,7 @@ export function RoomsScreen({
                   if (backGroup) requestGroup(backGroup);
                 }}
                 onMinimize={() => setMinimized(true)}
+                minimized={minimized}
                 onLeft={
                   inRoom.room.private
                     ? () => {

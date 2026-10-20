@@ -241,3 +241,15 @@ test("자유 대화방: 방 언어 없이, 어떤 언어로 찾든 나오고, �
   const line = await addLine(room.id, { kind: "speech", peerId: "peer_free0002", nickname: "민지", text: "こんにちは", startedAt: 1, endedAt: 2, lang: "ja" });
   assert.equal(line.lang, "ja");
 });
+
+test("영상통화 표시는 비공개 방에만 붙는다(1:1·러닝메이트 통화)", async () => {
+  const call = await createRoom({ name: "📞", languages: [], hostPeerId: "peer_video001", hostAccountId: "acct_video_a", private: true, allowed: ["acct_video_a", "acct_video_b"], threadId: "t1", video: true });
+  assert.equal(call.video, true);
+  assert.equal((await readMeta(call.id))?.video, true);
+  const open = await createRoom({ name: "English ↔ 日本語", languages: ["en", "ja"], hostPeerId: "peer_video002", video: true });
+  assert.equal(open.video, undefined);
+  const group = await createRoom({ name: "📞 팀", languages: [], hostPeerId: "peer_video003", private: true, allowed: ["a", "b", "c"], groupId: "g1" });
+  assert.equal(group.video, undefined);
+  // 카메라 켬/끔 신호도 다른 신호처럼 상대에게 간다.
+  await sendSignal(call.id, { from: "peer_video001", to: "peer_video009", kind: "cam", data: "on", at: Date.now() });
+});

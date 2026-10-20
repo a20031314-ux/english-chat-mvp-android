@@ -21,6 +21,11 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **1:1 영상통화 (2026-10-20, 서버 바로 반영·화면은 앱 다음 빌드, `hub/drafts/video-workspace.md` 1단계):** 사용자 "1대1 메이트 만들어줘". 1:1 대화 📞·러닝메이트 📞 방에 `RoomMeta.video`,
+  메시(`rooms/mesh.ts`)에 영상 자리 하나(켜고 끌 때 다시 협상 없이 replaceTrack, 켬/끔은 `cam` 신호, 한 갈래 450kbps), 방 위 `VideoStage.tsx`(상대 크게·나 작게·상대 마지막 자막), "📷 카메라 켜기"(기본 꺼짐)·"🙈 영상 가리기"(이 기기만)·차단한 사람 영상 숨김,
+  접거나 뒤로 가면 카메라 끔. 비공개 방은 `/api/rooms` `ice` → `server/turn.ts`(Cloudflare TURN, 환경 변수 없으면 STUN만). 안드로이드 `CAMERA` 권한(required=false). 문구 9개 × 14개 언어(Claude가 씀).
+  점검 `scripts/sim-users/video-call.mjs`(브라우저 둘, 가짜 카메라). **사람 할 일:** Cloudflare 대시보드 Realtime → TURN 키 만들기 → Vercel `CLOUDFLARE_TURN_KEY_ID`·`CLOUDFLARE_TURN_API_TOKEN` → 재배포(없어도 통화는 되지만 일부 망에서 안 이어짐).
+  남은 것: 실제 폰 두 대(다른 망·이어폰 없이·발열), 사용법(?) 칸 "영상통화"(버전 자를 때 14개 언어 + 그림), 2단계 팀 영상 4명, 앞뒤 카메라 바꾸기, 영상 신고 사유.
 - **창구 Moyeo 단체통화 (2026-10-20, 서버만, `hub/drafts/doors.md`):** 코드 끝(소개 페이지 14개 언어·창구 모드 앱). 남은 것: 사용자 도메인 연결(Vercel `call.languagebank.net`·가비아 CNAME·Google OAuth 원본) 뒤 운영에서 `call.languagebank.net/`·`/ja`·`/?screen=rooms` 확인. 랜덤채팅 창구는 설계안(가+나) 사용자 결정 대기.
 - **웹 광고 AdSense (2026-10-20, 서버만·앱 빌드 필요 없음):** 코드 준비 끝(`src/lib/webAds.ts`, `WebAdSlot`, 앱 네이티브 광고와 같은 목록 자리, 무료만, `/ads.txt`, 사이트 확인 태그, 처리방침). 꺼져 있음 — 사용자가 AdSense 가입·`languagebank.net` 사이트 승인·반응형 디스플레이 광고 단위를 만든 뒤 Vercel `NEXT_PUBLIC_ADSENSE_CLIENT`(ca-pub-…)·`NEXT_PUBLIC_ADSENSE_SLOT_FEED` 넣고 재배포. 켜면 운영에서 `/ads.txt`·광고 자리 다시 확인. 유럽 동의창은 AdSense '개인 정보 보호 및 메시지'에서 켜야 함.
 - **네이티브 광고 (2026-10-20):** 단위 `native_feed …/5493440106`. 서버(바로 반영): `ADMOB_UNITS.native`, `ADS_NATIVE`, `/api/ads/config` native. 앱(다음 빌드): `components/NativeAdSlot.tsx`·`lib/ads.ts` 네이티브 피드(플러그인 미리보기 기능, Small 틀·앱 색) — 대화 목록 단체방·1:1 사이, 영상 목록 세 번째 뒤. 시트(layersOpen)·숨은 탭(active)이면 멈춤, 못 채우면 자리 접음.
