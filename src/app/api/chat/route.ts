@@ -1,4 +1,4 @@
-import { completeChat } from "@/lib/server/llm";
+import { completeChat, simErrorDetail } from "@/lib/server/llm";
 import { chatBonusToday } from "@/lib/server/adChat";
 import { takeAiHelp } from "@/lib/server/aiHelp";
 import { meterRequest, recordTokens } from "@/lib/server/meterRequest";
@@ -1082,6 +1082,7 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, data);
   } catch (error) {
     console.error("[chat]", error);
-    return jsonWithCors(request, { error: "CHAT_FAILED" }, { status: 500 });
+    const detail = simErrorDetail(error);
+    return jsonWithCors(request, { error: "CHAT_FAILED", ...(detail ? { detail } : {}) }, { status: 500 });
   }
 }

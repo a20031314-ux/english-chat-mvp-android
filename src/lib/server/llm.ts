@@ -93,6 +93,12 @@ function parseTarget(value: string): { provider: Provider; model: string } | nul
 const simRoutes = new AsyncLocalStorage<Record<string, string>>();
 const SIM_ALLOWED = /^(anthropic:\s*claude-(haiku|sonnet)-5-5|openai:\s*gpt-[\w.-]+)$/;
 
+/** 점검(모델 경로 바꾼 simcheck- 사용자)일 때만 오류 내용을 돌려준다 — 실제 사용자에겐 undefined. */
+export function simErrorDetail(error: unknown): string | undefined {
+  if (!simRoutes.getStore()) return undefined;
+  return (error instanceof Error ? error.message : String(error)).slice(0, 300);
+}
+
 export function adoptSimRoutes(userId: string, header: string | null | undefined): void {
   // 서버가 넘기는 id는 "rc:simcheck-…"(requestUserId) — 앞에 rc:가 붙는다(2026-10-21, 이게 빠져 시험 헤더가 안 먹었음).
   if (!header || !/^(rc:)?simcheck-/.test(userId)) return;
