@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useSyncExternalStore } from "react";
+import { useState } from "react";
 import { TTSButton } from "@/components/TTSButton";
 import type { UICopy } from "@/lib/copy";
 import type { HowToSayExpression } from "@/lib/howToSay";
@@ -16,19 +16,8 @@ import type { HowToSayExpression } from "@/lib/howToSay";
  * like 해석 under the tutor's line. Opening it is not a chat and is not
  * counted as one.
  *
- * The first time this appears it says, once, what it is.
+ * 처음 한 번 띄우던 설명 줄은 뺐다(2026-10-22 사용자 — 쓰는 법은 사용법 창에).
  */
-
-const TIP_KEY = "chatOwnLanguageTipSeen";
-const subscribe = () => () => {};
-
-function readTipSeen(): boolean {
-  try {
-    return globalThis.localStorage?.getItem(TIP_KEY) === "1";
-  } catch {
-    return true;
-  }
-}
 
 export function ExpressionPeek({
   ui,
@@ -46,8 +35,6 @@ export function ExpressionPeek({
   const [open, setOpen] = useState(Boolean(expression));
   const [loading, setLoading] = useState(false);
   const [failed, setFailed] = useState<boolean | "limit">(false);
-  const tipSeen = useSyncExternalStore(subscribe, readTipSeen, () => true);
-  const [tipDismissed, setTipDismissed] = useState(false);
 
   const show = async () => {
     setOpen(true);
@@ -63,34 +50,18 @@ export function ExpressionPeek({
     }
   };
 
-  const dismissTip = () => {
-    try {
-      globalThis.localStorage?.setItem(TIP_KEY, "1");
-    } catch {
-      // Shown again next time, which is harmless.
-    }
-    setTipDismissed(true);
-  };
-
   return (
     <div className="mt-1.5 flex flex-col items-end gap-1.5">
       {!open ? (
         <button
           type="button"
           onClick={() => {
-            dismissTip();
             void show();
           }}
           className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 text-[13px] text-slate-200 hover:bg-white/10"
         >
           {ui.chatShowExpression}
         </button>
-      ) : null}
-
-      {!tipSeen && !tipDismissed && !open ? (
-        <p className="max-w-[80%] rounded-lg bg-white/5 px-3 py-2 text-right text-[12px] leading-relaxed text-slate-400">
-          {ui.chatOwnLanguageTip}
-        </p>
       ) : null}
 
       {open ? (

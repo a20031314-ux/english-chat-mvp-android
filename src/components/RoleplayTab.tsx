@@ -302,9 +302,6 @@ export function RoleplayTab({
               />
             </div>
           ) : null}
-          <p className="text-[13px] leading-relaxed text-neutral-400">
-            {ui.roleplayIntro}
-          </p>
           {showNotice ? (
             <div className="w-full max-w-xs rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left text-[12px] leading-relaxed text-neutral-300">
               <p>{ui.roleplayDataNotice}</p>
@@ -383,9 +380,6 @@ export function RoleplayTab({
         </div>
       ) : (
         <>
-          <p className="shrink-0 px-4 pt-3 text-[12px] text-neutral-500">
-            {ui.roleplayIntro}
-          </p>
           <ul className="min-h-0 flex-1 overflow-y-auto p-3">
             {scenarios.map((scenario) => (
               <li key={scenario.id} className="mb-2">

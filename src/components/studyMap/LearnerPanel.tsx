@@ -242,7 +242,6 @@ export function LearnerPanel({
             ) : null}
           </div>
 
-          <p className="text-[11px] leading-relaxed text-slate-500">{ui.needsNote}</p>
         </div>
       ) : null}
     </section>

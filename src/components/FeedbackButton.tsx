@@ -206,7 +206,6 @@ export function FeedbackButton({ ui, locale, tab }: { ui: UICopy; locale: string
               </button>
             </div>
             <div className="min-h-0 flex-1 overflow-y-auto px-4 py-3">
-              <p className="text-xs leading-relaxed text-slate-400">{ui.feedbackHint}</p>
               <textarea
                 value={note}
                 maxLength={FEEDBACK_NOTE_MAX}

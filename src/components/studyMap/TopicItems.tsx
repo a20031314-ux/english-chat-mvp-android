@@ -82,7 +82,6 @@ export function TopicItems({
   return (
     <section className="mt-4">
       <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.topicItemsTitle}</p>
-      <p className="mt-1 text-[12px] leading-relaxed text-slate-500">{ui.topicItemsHint}</p>
       <ul className="mt-2 space-y-1.5">
         {rows.map(({ mission, item }) => (
           <li key={mission.id} className="flex items-start gap-2 rounded-lg bg-white/[0.03] px-3 py-2">

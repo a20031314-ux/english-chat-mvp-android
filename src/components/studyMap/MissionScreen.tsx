@@ -230,9 +230,6 @@ export function MissionScreen({
           {!reviewing && !state && !loadError ? (
             <p className="text-[13px] text-slate-400">{ui.missionLoading}</p>
           ) : null}
-          {reviewing && reviewIndex === 0 && attempts.length === 0 && reviewItem ? (
-            <p className="text-[13px] leading-relaxed text-slate-400">{ui.reviewIntro}</p>
-          ) : null}
           {loadError ? (
             <button
               type="button"

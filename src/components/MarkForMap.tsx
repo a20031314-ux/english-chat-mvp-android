@@ -112,9 +112,7 @@ export function MarkForMap({
         <p className="mt-2 text-[12px] text-slate-400">{ui.markNoMap}</p>
       ) : state.at === "failed" ? (
         <p className="mt-2 text-[12px] text-rose-300">{ui.markFailed}</p>
-      ) : (
-        <p className="mt-2 text-[11px] leading-relaxed text-slate-500">{ui.markHint}</p>
-      )}
+      ) : null}
     </section>
   );
 }

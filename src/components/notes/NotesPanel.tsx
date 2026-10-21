@@ -204,7 +204,6 @@ export function NotesPanel({
       <div className="flex items-start gap-2">
         <div className="min-w-0 flex-1">
           <h2 className="text-body font-semibold text-ink">{ui.notesTitle}</h2>
-          <p className="mt-0.5 text-caption text-slate-500">{ui.notesHint}</p>
         </div>
         {total > 0 ? (
           <div className="flex shrink-0 gap-1">

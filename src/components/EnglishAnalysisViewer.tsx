@@ -422,9 +422,6 @@ function SentenceTab({
         active={session.rangeActive}
         onRange={onRange}
       />
-      {!session.rangeActive && words.length > 1 ? (
-        <p className="mt-2 text-xs leading-relaxed text-slate-500">{ui.rangeHint}</p>
-      ) : null}
 
       {selected && !rangeIsSentence ? (
         <div className="mt-3 flex items-start gap-2">
@@ -502,13 +499,8 @@ function WordTab({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [word, sentence, blockedSentence]);
 
-  if (!word || blockedSentence) {
-    return (
-      <p className="text-sm leading-relaxed text-slate-500">
-        {ui.exploreTapHint}
-      </p>
-    );
-  }
+  // 고른 낱말이 없으면 비워 둔다(쓰는 법 설명은 사용법 창에, 2026-10-22 사용자).
+  if (!word || blockedSentence) return null;
   return (
     <VocabWordPanel
       word={vocab?.word || word}

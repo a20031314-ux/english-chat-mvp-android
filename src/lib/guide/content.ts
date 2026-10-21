@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-22";
+export const GUIDE_VERSION = "2026-10-22b";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -125,6 +125,7 @@ export const GUIDE_KO: Guide = {
         heading: "1. 체크로 시작",
         body: [
           "부족한 부분과 위주로 할 것을 고르고 ‘{ui:mapDraw}’. 수준은 묻지 않아요.",
+          "여러 개 골라도 돼요.",
         ],
         shot: "goal",
       },
@@ -167,6 +168,7 @@ export const GUIDE_KO: Guide = {
         heading: "7. 지도로 보기",
         body: [
           "‘{ui:myViewMap}’을 누르면 목표로 그린 주제가 보이고, 주제에서 ‘{ui:missionStart}’로 연습해요.",
+          "할 일은 정답을 숨기고 써 보게 해요. 쓰면 고쳐 주고, 힌트 없이 맞히면 숙지로 올라가요.",
         ],
         shot: "mapview",
       },
@@ -181,6 +183,7 @@ export const GUIDE_KO: Guide = {
         heading: "그 밖에",
         body: [
           "‘{ui:ledgerTitle}’에 모든 탭에서 만난 표현이 쌓여요. 목표가 바뀌면 ‘{ui:mapNewGoal}’. 배우는 언어마다 따로예요.",
+          "도움 없이 꺼내 쓴 표현만 숙지로 세요(레벨이 아니라 쓸 수 있게 된 표현 수). 부족한 부분은 채팅 문장과 튜터 말에서 막힌 곳으로만 보고, 문장 자체는 저장하지 않아요. 문장분석에서 표현을 표시하면 내 표현에 남고, 지도에 넣으면 그 표현으로 할 일이 생겨요.",
         ],
       },
     ],
@@ -505,6 +508,7 @@ export const GUIDE_EN: Guide = {
         heading: "1. Start by ticking",
         body: [
           "Tick where you fall short and what to focus on, then ‘{ui:mapDraw}’. There's no level to pick.",
+          "You can pick more than one.",
         ],
         shot: "goal",
       },
@@ -547,6 +551,7 @@ export const GUIDE_EN: Guide = {
         heading: "7. See it as a map",
         body: [
           "Tap ‘{ui:myViewMap}’ for the topics drawn from your goal; in a topic, ‘{ui:missionStart}’.",
+          "A task hides the answer and has you write it. It corrects what you write, and getting it right without hints moves it to mastered.",
         ],
         shot: "mapview",
       },
@@ -561,6 +566,7 @@ export const GUIDE_EN: Guide = {
         heading: "Also",
         body: [
           "‘{ui:ledgerTitle}’ gathers phrases from every tab. New goal? ‘{ui:mapNewGoal}’. Each learning language has its own.",
+          "Only phrases you produced without help count as mastered (not a level, just how many you can use). Gaps come only from your chat sentences and the tutor lines you got stuck on, and the sentences themselves aren't saved. Marking a phrase in sentence analysis keeps it in My phrases; adding it to the map makes a task for it.",
         ],
       },
     ],

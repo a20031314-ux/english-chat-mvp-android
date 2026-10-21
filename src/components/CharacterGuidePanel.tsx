@@ -80,10 +80,6 @@ export function CharacterGuidePanel({
 
   return (
     <div className="flex flex-col gap-4">
-      <p className="text-sm leading-relaxed text-slate-300">
-        {ui.characterGuideHint}
-      </p>
-
       {guide.categories.length > 1 ? (
         <div className="flex flex-wrap gap-1.5">
           {guide.categories.map((category) => {

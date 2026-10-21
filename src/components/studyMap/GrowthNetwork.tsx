@@ -177,11 +177,7 @@ export function GrowthNetwork({
           ))}
         </div>
       </div>
-      {mode !== "map" ? (
-        <p className="mt-1 px-1 text-[11px] text-slate-500">
-          {total === 0 ? ui.myStart : mode === "graph" ? ui.myGraphHint : ui.myNetworkHint}
-        </p>
-      ) : null}
+      {mode !== "map" && total === 0 ? <p className="mt-1 px-1 text-[11px] text-slate-500">{ui.myStart}</p> : null}
       {mode === "graph" ? (
         <GrowthGraph ui={ui} view={view} onOpen={setOpen} />
       ) : mode === "map" ? (

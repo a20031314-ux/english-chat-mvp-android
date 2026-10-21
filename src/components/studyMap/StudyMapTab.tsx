@@ -295,7 +295,6 @@ export function StudyMapTab({
                   <div className="px-1">
                     <p className="text-[11px] font-semibold tracking-wide text-slate-400">{ui.profileGoalTitle}</p>
                     <p className="mt-0.5 truncate text-[14px] font-medium text-slate-100">{map.title}</p>
-                    <p className="mt-0.5 text-[12px] text-slate-500">{ui.profileGoalHint}</p>
                   </div>
                   <div className="mt-3">
                     <LearnerPanel
@@ -492,7 +491,6 @@ function GoalForm({
     >
       <fieldset className="flex flex-col gap-2" disabled={drawing}>
         <legend className="text-[15px] font-semibold text-slate-100">{ui.selfGapsTitle}</legend>
-        <p className="text-[12px] text-slate-500">{ui.selfGapsHint}</p>
         <div className="mt-1 flex flex-wrap gap-2">
           {GAP_IDS.map((id) => (
             <button key={id} type="button" aria-pressed={gaps.includes(id)} onClick={() => setGaps(toggle(gaps, id))} className={chip(gaps.includes(id))}>
@@ -893,7 +891,6 @@ function TopicSheet({
               </span>
             ) : null}
           </span>
-          <span className="mt-0.5 block text-[12px] leading-relaxed text-neutral-600">{ui.missionStartHint}</span>
         </button>
 
         {missions && missions.total > 0 ? (

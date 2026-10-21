@@ -642,9 +642,6 @@ export function ContentDiscoveryPanel({
         >
           {ui.discoverCta}
         </button>
-        <p className="mt-2 text-center text-xs text-slate-500">
-          {ui.discoverCtaHint}
-        </p>
       </div>
     );
   }
@@ -885,11 +882,7 @@ export function ContentDiscoveryPanel({
                     );
                   })}
                 </div>
-              ) : (
-                <p className="mt-2 text-xs text-slate-500">
-                  {ui.discoverChannelEmpty}
-                </p>
-              )
+              ) : null
             ) : null}
 
             <span className="mb-1 mt-3 block text-[11px] font-medium uppercase tracking-wide text-slate-500">
@@ -945,11 +938,7 @@ export function ContentDiscoveryPanel({
                   );
                 })}
               </div>
-            ) : (
-              <p className="text-xs text-slate-500">
-                {ui.discoverChannelEmpty}
-              </p>
-            )}
+            ) : null}
           </div>
         ) : null}
 

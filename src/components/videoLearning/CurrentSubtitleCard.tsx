@@ -32,10 +32,7 @@ export function CurrentSubtitleCard({
   if (!cue) {
     return (
       <div className="px-4 py-5">
-        <p className="text-center text-sm text-slate-500">
-          {ui.videoLearnIdleEnglish}
-        </p>
-        <div className="mt-3 flex justify-center">
+        <div className="flex justify-center">
           <button
             type="button"
             onClick={onSaveSession}

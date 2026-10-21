@@ -96,7 +96,6 @@ export function RoleplayOwnLine({
           ✕
         </button>
       </div>
-      <p className="mt-1 text-[12px] leading-relaxed text-neutral-500">{ui.roleplayOwnLineHint}</p>
       <form
         className="mt-2 flex items-end gap-2"
         onSubmit={(event) => {

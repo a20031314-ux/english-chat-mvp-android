@@ -332,11 +332,6 @@ export function EnglishSentenceList({
 
   return (
     <div className="border-t border-white/10 px-4 py-3">
-      <p className="text-[11px] leading-snug text-slate-400">
-        {bundlingId
-          ? ui.videoLearnBundleClickHint
-          : `${ui.videoLearnRangeHint} ${ui.videoLearnSplitHint}`}
-      </p>
       {canUndoEdit || canResetAllCues ? (
         <div className="mt-2 flex flex-wrap gap-2">
           {canUndoEdit && onUndoLastEdit ? (
@@ -489,9 +484,6 @@ export function EnglishSentenceList({
                     className="mt-3 space-y-3"
                     onClick={(event) => event.stopPropagation()}
                   >
-                    <p className="text-[11px] leading-snug text-slate-500">
-                      {ui.videoLearnBundleGaugeHint} {ui.videoLearnBundleClickHint}
-                    </p>
                     <BundleRangeGauge
                       total={cues.length}
                       anchor={bundlingIndex}
@@ -555,9 +547,6 @@ export function EnglishSentenceList({
                     className="mt-2 space-y-3"
                     onClick={(event) => event.stopPropagation()}
                   >
-                    <p className="text-[11px] leading-snug text-slate-500">
-                      {ui.videoLearnSplitSliderHint}
-                    </p>
                     <p className="text-sm leading-snug">
                       <span className="font-medium text-slate-100">
                         {splitPreview.left}
