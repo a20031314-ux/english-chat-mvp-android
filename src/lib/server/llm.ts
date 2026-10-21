@@ -94,7 +94,8 @@ const simRoutes = new AsyncLocalStorage<Record<string, string>>();
 const SIM_ALLOWED = /^(anthropic:\s*claude-(haiku|sonnet)-5-5|openai:\s*gpt-[\w.-]+)$/;
 
 export function adoptSimRoutes(userId: string, header: string | null | undefined): void {
-  if (!header || !userId.startsWith("simcheck-")) return;
+  // 서버가 넘기는 id는 "rc:simcheck-…"(requestUserId) — 앞에 rc:가 붙는다(2026-10-21, 이게 빠져 시험 헤더가 안 먹었음).
+  if (!header || !/^(rc:)?simcheck-/.test(userId)) return;
   try {
     const parsed = JSON.parse(header) as Record<string, unknown>;
     const kept = Object.fromEntries(
@@ -119,7 +120,8 @@ export function routeFor(task: Task, override?: string): Route {
   const routes = { ...parseRoutes(), ...(simRoutes.getStore() ?? {}) };
   const chosen = parseTarget(routes[task] ?? "") ?? parseTarget(routes[tier] ?? "");
   if (chosen) {
-    if (chosen.provider === "anthropic" && !env("ANTHROPIC_API_KEY")) {
+    // 점검 경로에서는 키가 없어도 OpenAI로 몰래 바꾸지 않는다 — 실패해야 키 문제가 보인다.
+    if (chosen.provider === "anthropic" && !env("ANTHROPIC_API_KEY") && !simRoutes.getStore()) {
       return { provider: "openai", model: spec.openai(), task, tier };
     }
     return { ...chosen, task, tier };

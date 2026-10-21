@@ -185,6 +185,12 @@ test("점검 사용자만 헤더로 모델 경로를 바꾼다(허용 모델만)
   );
   await inFreshContext(() =>
     withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
+      adoptSimRoutes("rc:simcheck-run-p002", JSON.stringify({ basic: "anthropic: claude-haiku-5-5" }));
+      assert.equal(routeFor("chat").model, "claude-haiku-5-5"); // 서버가 실제로 넘기는 모양
+    }),
+  );
+  await inFreshContext(() =>
+    withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
       adoptSimRoutes("rc:real-user", JSON.stringify({ basic: "anthropic: claude-haiku-5-5" }));
       assert.equal(routeFor("chat").model, "gpt-4o-mini");
     }),
