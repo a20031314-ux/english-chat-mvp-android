@@ -15,6 +15,7 @@ import { normalizeMap, type StudyMap } from "@/lib/curriculum/map";
 import { mapSystemPrompt, mapUserMessage } from "@/lib/curriculum/prompt";
 import { parseSelfCheck, pitchFor, selfCheckMapRules } from "@/lib/learner/selfCheck";
 import { saveSelfCheck } from "@/lib/server/selfCheckStore";
+import { stageById, stageScopeForPrompt } from "@/lib/curriculum/stages";
 import { forgetLearnerBrief } from "@/lib/server/learnerBrief";
 import { currentLibraryPack } from "@/lib/videoLibrary/catalog";
 import {
@@ -24,7 +25,8 @@ import {
 } from "@/lib/learningLanguages";
 
 export const dynamic = "force-dynamic";
-export const maxDuration = 60;
+// 고가 모델(Sonnet)로 그리면 35~46초(2026-10-22 비교) — 60초에 가까워 넉넉히.
+export const maxDuration = 90;
 
 /**
  * Draw a study map from a goal the learner wrote.
@@ -107,8 +109,12 @@ export async function POST(request: NextRequest) {
   };
   const hasHistory =
     profile.turns > 0 || profile.updatedAt > 0 || Object.keys(comprehension.items).length > 0;
+  // 대화 예시로 고른 단계가 이 학습 언어의 것이면 그 범위 안에서만 그린다(curriculum/stages).
+  const stage = selfCheck?.stage ? stageById(selfCheck.stage) : null;
+  const stageForMap = stage && stage.id.startsWith(`${targetCode}-`) ? stage : null;
   const input = {
     goal,
+    ...(stageForMap ? { stageScope: stageScopeForPrompt(stageForMap, learningLanguageName(targetCode)) } : {}),
     level,
     target: learningLanguageName(targetCode),
     uiName: INTERFACE_LANGUAGE_LABELS[uiCode] ?? "Korean",
@@ -138,6 +144,7 @@ export async function POST(request: NextRequest) {
       level,
       createdAt: new Date().toISOString(),
       libraryVideoIds: library.map((clip) => clip.videoId),
+      ...(stageForMap ? { stageId: stageForMap.id } : {}),
     });
     if (!result) {
       console.error("[curriculum] map too thin to keep", { model: MODEL() });

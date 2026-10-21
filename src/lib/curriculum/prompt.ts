@@ -27,6 +27,11 @@ export type MapRequest = {
   uiName: string;
   library: { videoId: string; title: string }[];
   /**
+   * 언어별로 고정한 단계 범위(curriculum/stages, stageScopeForPrompt). 있으면 지도는 그 범위 안에서만,
+   * 상황 하나를 단원 하나로 그린다. 영어·일본어·한국어 먼저(2026-10-22).
+   */
+  stageScope?: string;
+  /**
    * What their chats say about their sentences, and how they want to go on
    * (learner/profile.ts profileBrief). Absent for someone with no history.
    */
@@ -77,6 +82,13 @@ ${selfCheck ? "" : `${FOCUS_RULE[learner.plan.focus]}\n${METHOD_RULE[learner.pla
 Name the construction in the topic's title or summary when a topic is there for it, in plain words a learner understands.`;
 }
 
+// 예전 지도는 상황 하나를 네 칸(상황·문법·단어·소리)으로 쪼개 같은 말을 네 번 했다(2026-10-22 사용자 "난잡"). 지시에 베낄 예문은 두지 않는다(RULES).
+const ONE_UNIT_RULE =
+  "Never split one situation into separate topics per sector. The grammar, words and sounds a single situation needs belong inside that situation's topic (in its summary, starter, listenFor and tasks). Give a topic of its own in B, C or D only to a structure, word family or sound that several situations share, and say in its summary which ones.";
+
+const STAGE_TOPIC_RULES =
+  "Write 6 to 10 topics in total. Each topic is one unit the learner can finish in one or two sittings, taken from the stage scope below; most are situations (A). Every core expression of the stage appears in at least one topic, in a chat starter, in listenFor or named in a task, and its summary says concretely what they will be able to say. Cover every grammar point of the stage somewhere. Stay inside the stage: nothing much harder or much easier.";
+
 export function mapSystemPrompt(input: MapRequest): string {
   const sectors = SECTOR_IDS.map((id) => `  ${id}: ${SECTOR_BRIEFS[id]}`).join("\n");
   const library = input.library.length
@@ -87,7 +99,8 @@ export function mapSystemPrompt(input: MapRequest): string {
 The map has four fixed sectors:
 ${sectors}
 
-Write 8 to 12 topics in total, at least 2 in every sector. Each topic is small enough to study in one or two sittings and specific to this goal — "Ordering at a café: asking for changes", not "Restaurants". Pitch them at a ${input.level} learner.
+${input.stageScope ? STAGE_TOPIC_RULES : `Write 8 to 12 topics in total, at least 2 in every sector. Each topic is small enough to study in one or two sittings and specific to this goal, never a broad category. Pitch them at a ${input.level} learner.`}
+${ONE_UNIT_RULE}
 
 Topic ids are the sector letter and a number: A1, A2, B1, … Give every topic:
 - title: a few words.
@@ -99,8 +112,9 @@ Topic ids are the sector letter and a number: A1, A2, B1, … Give every topic:
     video — watching real people say it. Add "listenFor": 1 to 3 short expressions from this topic, in ${input.target}, separated by " | " ("end up | wait it out") — the app finds scenes in videos where they are said. If a clip from this list fits the topic, also put its id in "videoId" (not in the task); otherwise leave videoId out. Only these ids:
 ${library}
     vocab — reviewing the words they saved.
-- links: 1 to 3 other topics this one connects to, mostly in other sectors, each with "why": one sentence on how the two help each other ("the polite request forms in B2 are what you say when ordering in A1").
+- links: 1 to 3 other topics this one connects to, mostly in other sectors, each with "why": one sentence on how the two help each other.
 
+${input.stageScope ? `\n${input.stageScope}\n` : ""}
 ${learnerSection(input.learner, input.selfCheck)}
 ${input.selfCheck ? `\n${input.selfCheck}\n` : ""}
 

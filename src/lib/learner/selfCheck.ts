@@ -23,6 +23,11 @@ export type SelfCheck = {
   gaps: GapId[];
   focus: FocusId[];
   use?: UseId;
+  /**
+   * 대화 예시로 고른 시작 단계(curriculum/stages, "en-2" 같은 id). 범위가 있는 언어(영어·일본어·한국어)만.
+   * 화면에는 대화로만 보이고 이름·숫자는 보이지 않는다(2026-10-22).
+   */
+  stage?: string;
   /** ms since epoch. */
   at: number;
 };
@@ -46,9 +51,10 @@ export function parseSelfCheck(value: unknown, now: number): SelfCheck | null {
   const gaps = pick(raw.gaps, GAP_IDS, GAP_IDS.length);
   const focus = pick(raw.focus, FOCUS_IDS, MAX_FOCUS);
   const use = typeof raw.use === "string" && (USE_IDS as readonly string[]).includes(raw.use) ? (raw.use as UseId) : undefined;
-  if (gaps.length === 0 && focus.length === 0 && !use) return null;
+  const stage = typeof raw.stage === "string" && /^[a-z]{2}-[1-9]$/.test(raw.stage) ? raw.stage : undefined;
+  if (gaps.length === 0 && focus.length === 0 && !use && !stage) return null;
   const at = typeof raw.at === "number" && Number.isFinite(raw.at) ? raw.at : now;
-  return { gaps, focus, ...(use ? { use } : {}), at };
+  return { gaps, focus, ...(use ? { use } : {}), ...(stage ? { stage } : {}), at };
 }
 
 /**
@@ -56,7 +62,10 @@ export function parseSelfCheck(value: unknown, now: number): SelfCheck | null {
  * the gaps is starting out; anyone else gets the middle, and the tutors move
  * from there on what the turns show (learner/brief.ts).
  */
-export function pitchFor(check: SelfCheck): "beginner" | "intermediate" {
+export function pitchFor(check: SelfCheck): "beginner" | "intermediate" | "advanced" {
+  // 대화 예시로 단계를 골랐으면 그게 먼저(1·2 → 처음, 3·4 → 중간, 5 → 높게).
+  const order = check.stage ? Number(check.stage.slice(-1)) : 0;
+  if (order) return order <= 2 ? "beginner" : order <= 4 ? "intermediate" : "advanced";
   return check.gaps.length >= 3 || (check.gaps.includes("speaking") && check.gaps.includes("accuracy"))
     ? "beginner"
     : "intermediate";

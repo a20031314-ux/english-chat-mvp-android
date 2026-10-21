@@ -13,6 +13,15 @@ import { readLedger } from "./ledgerStore.ts";
 import { readWeakRecord } from "./weakPointStore.ts";
 import { eventsKey, type LearnerTurnMetric } from "./learnerMetrics.ts";
 import { readSelfCheck } from "./selfCheckStore.ts";
+import { stageById, stageProgress } from "../curriculum/stages/index.ts";
+import type { Ledger } from "../learner/ledger.ts";
+
+/** 고른 단계의 겨냥과 아직 숙지 안 한 표현(튜터 요약용). 다른 학습 언어의 단계면 없음. */
+function stageBrief(stageId: string | undefined, language: string, ledger: Ledger) {
+  const stage = stageById(stageId);
+  if (!stage || !stage.id.startsWith(`${language}-`)) return null;
+  return { aim: stage.title.en, open: stageProgress(stage, ledger).open };
+}
 import { readGrowthRecord } from "./growthStore.ts";
 import { recentStuckPhrases } from "../learner/growth.ts";
 import {
@@ -81,6 +90,7 @@ export async function readLearnerBrief(userId: string, language: string, now = D
       stats: turnStats(samples, language, now),
       selfCheck,
       stuckPhrases: recentStuckPhrases(growth, now),
+      stage: stageBrief(selfCheck?.stage, language, ledger),
       now,
     });
     await kvSetJson(

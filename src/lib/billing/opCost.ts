@@ -90,6 +90,8 @@ export const OP_COST: Record<string, OpCost> = {
   expressionAskRetry: tutor,
   expressionAskQuick: tutor,
   curriculumGenerate: mini(),
+  // 단계 다섯 개 글(약 120줄) 한 번 옮기기, 학습 언어 × 앱 언어마다 한 번(2026-10-22 어림).
+  stageCopy: estimated({ input: 3500, output: 4500 }),
   // 영어 구문 목록(38개) 분류 프롬프트 약 3,400자 + 문장 두 줄, 답은 max_tokens 150의 짧은 JSON(2026-10-21 어림).
   learnerObserve: estimated({ input: 900, output: 80 }),
   curriculumMissions: mini(),

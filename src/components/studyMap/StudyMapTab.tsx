@@ -37,6 +37,7 @@ import { LedgerPanel } from "@/components/studyMap/LedgerPanel";
 import { NotesPanel } from "@/components/notes/NotesPanel";
 import { NextStepCard } from "@/components/NextStepCard";
 import { GrowthNetwork } from "@/components/studyMap/GrowthNetwork";
+import { StageGoal, StagePicker, useStages, type StageView } from "@/components/studyMap/StageCheck";
 import { FOCUS_IDS, GAP_IDS, USE_IDS, type FocusId, type GapId, type UseId } from "@/lib/learner/selfCheck";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 import { AccountCard } from "@/components/account/AccountCard";
@@ -133,6 +134,11 @@ export function StudyMapTab({
 
   const map = record?.map ?? null;
   const showForm = !loading && (editing || !map);
+  // 단계 범위(영어·일본어·한국어): 대화 예시로 시작 단계 고르기·지도 위 목표 대화. 지도가 바뀌면 진행을 다시 읽는다.
+  const stagesData = useStages(targetLanguage, locale, isPremium, map ? `${map.id}:${Object.keys(record?.missions ?? {}).length}` : "");
+  const stages = stagesData?.stages ?? null;
+  const mapStage = map?.stageId ? (stages?.find((stage) => stage.id === map.stageId) ?? null) : null;
+  const [startStage, setStartStage] = useState<string | null>(null);
 
   const draw = async (goal: string, selfCheck: SelfCheckAnswer | null) => {
     setDrawing(true);
@@ -152,6 +158,7 @@ export function StudyMapTab({
     }
     setRecord(result.record);
     setEditing(false);
+    setStartStage(null);
     setOpenTopicId(null);
     setLastOpenedId(null);
   };
@@ -254,6 +261,8 @@ export function StudyMapTab({
               limit={limit}
               canCancel={Boolean(map)}
               hasPrevious={Boolean(record?.hasPrevious)}
+              stages={stages}
+              startStage={startStage}
               onDraw={draw}
               onCancel={() => setEditing(false)}
               onRestore={restore}
@@ -296,6 +305,18 @@ export function StudyMapTab({
                     <p className="text-[11px] font-semibold tracking-wide text-slate-400">{ui.profileGoalTitle}</p>
                     <p className="mt-0.5 truncate text-[14px] font-medium text-slate-100">{map.title}</p>
                   </div>
+                  {mapStage ? (
+                    <StageGoal
+                      ui={ui}
+                      stage={mapStage}
+                      current={stagesData?.current?.stageId === mapStage.id ? stagesData.current : null}
+                      onNext={() => {
+                        const next = stages?.find((stage) => stage.order === mapStage.order + 1);
+                        setStartStage(next?.id ?? null);
+                        setEditing(true);
+                      }}
+                    />
+                  ) : null}
                   <div className="mt-3">
                     <LearnerPanel
                       ui={ui}
@@ -385,7 +406,7 @@ export function StudyMapTab({
   );
 }
 
-type SelfCheckAnswer = { gaps: GapId[]; focus: FocusId[]; use?: UseId };
+type SelfCheckAnswer = { gaps: GapId[]; focus: FocusId[]; use?: UseId; stage?: string };
 
 /**
  * How a map starts: three questions answered by ticking, not a goal to write
@@ -402,6 +423,8 @@ function GoalForm({
   limit,
   canCancel,
   hasPrevious,
+  stages,
+  startStage,
   onDraw,
   onCancel,
   onRestore,
@@ -414,6 +437,10 @@ function GoalForm({
   limit: number;
   canCancel: boolean;
   hasPrevious: boolean;
+  /** 단계 범위가 있는 학습 언어면 대화 예시 목록(없으면 null — 예전 체크만). */
+  stages: StageView[] | null;
+  /** "다음 단계로 새 지도"에서 왔을 때 미리 골라 둘 단계. */
+  startStage: string | null;
   onDraw: (goal: string, selfCheck: SelfCheckAnswer | null) => void;
   onCancel: () => void;
   onRestore: () => void;
@@ -422,6 +449,7 @@ function GoalForm({
   const [focus, setFocus] = useState<FocusId[]>([]);
   const [use, setUse] = useState<UseId | null>(null);
   const [goal, setGoal] = useState("");
+  const [stage, setStage] = useState<string | null>(startStage);
 
   // What they ticked last time, shown again when they start a new map.
   useEffect(() => {
@@ -436,12 +464,16 @@ function GoalForm({
         setGaps(check.gaps ?? []);
         setFocus(check.focus ?? []);
         setUse(check.use ?? null);
+        if (!startStage && check.stage) setStage(check.stage);
       })
       .catch(() => undefined);
     return () => {
       cancelled = true;
     };
-  }, [targetLanguage, isPremium]);
+  }, [targetLanguage, isPremium, startStage]);
+  // 다른 학습 언어로 바꾸면 고른 단계는 그 언어 것이 아니다.
+  const stageOk = Boolean(stage && stages?.some((entry) => entry.id === stage));
+  const stageTitle = stageOk ? (stages?.find((entry) => entry.id === stage)?.title ?? "") : "";
 
   const gapLabel: Record<GapId, string> = {
     speaking: ui.selfGapSpeaking,
@@ -465,10 +497,10 @@ function GoalForm({
   };
 
   const written = goal.replace(/\s+/g, " ").trim();
-  const ticked = gaps.length > 0 || focus.length > 0 || use !== null;
+  const ticked = gaps.length > 0 || focus.length > 0 || use !== null || stageOk;
   const ready = !drawing && (ticked || written.length >= 2);
   // With nothing written, the map's goal line is what they ticked, in their language.
-  const composed = [...(use ? [useLabel[use]] : []), ...gaps.map((g) => gapLabel[g]), ...focus.map((f) => focusLabel[f])]
+  const composed = [...(stageTitle ? [stageTitle] : []), ...(use ? [useLabel[use]] : []), ...gaps.map((g) => gapLabel[g]), ...focus.map((f) => focusLabel[f])]
     .join(" · ")
     .slice(0, 300);
 
@@ -486,9 +518,12 @@ function GoalForm({
       onSubmit={(event) => {
         event.preventDefault();
         if (!ready) return;
-        onDraw(written.length >= 2 ? written : composed, ticked ? { gaps, focus, ...(use ? { use } : {}) } : null);
+        onDraw(written.length >= 2 ? written : composed, ticked ? { gaps, focus, ...(use ? { use } : {}), ...(stageOk && stage ? { stage } : {}) } : null);
       }}
     >
+      {stages?.length ? (
+        <StagePicker ui={ui} stages={stages} chosen={stageOk ? stage : null} onChoose={setStage} disabled={drawing} />
+      ) : null}
       <fieldset className="flex flex-col gap-2" disabled={drawing}>
         <legend className="text-[15px] font-semibold text-slate-100">{ui.selfGapsTitle}</legend>
         <div className="mt-1 flex flex-wrap gap-2">

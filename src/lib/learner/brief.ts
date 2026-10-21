@@ -54,7 +54,9 @@ export type BriefNote =
   | { kind: "recycle"; phrases: string[] }
   | { kind: "easier"; because: Array<"corrections" | "pauses" | "retries"> }
   | { kind: "harder" }
-  | { kind: "self"; gaps: GapId[] };
+  | { kind: "self"; gaps: GapId[] }
+  /** 대화 예시로 고른 단계(curriculum/stages)에서 아직 숙지 안 한 표현과 그 단계가 겨냥하는 것. */
+  | { kind: "stage"; aim: string; phrases: string[] };
 
 export type LearnerBrief = {
   notes: BriefNote[];
@@ -97,6 +99,8 @@ export function buildBrief(input: {
   /** Phrases handed to them when they got stuck in a call lately (growth.ts), brought back first. */
   stuckPhrases?: string[];
   now: number;
+  /** 고른 단계: 겨냥(영어 한 줄)과 아직 숙지 안 한 표현(curriculum/stages stageProgress의 open). */
+  stage?: { aim: string; open: string[] } | null;
   /** Kinds of note the learner switched off (the screen comes later). */
   off?: ReadonlyArray<BriefNote["kind"]>;
 }): LearnerBrief {
@@ -133,6 +137,10 @@ export function buildBrief(input: {
   const gaps = input.selfCheck?.gaps.slice(0, 2) ?? [];
   if (gaps.length && stats.turns < SELF_UNTIL_TURNS && !off.has("self")) notes.push({ kind: "self", gaps });
 
+  // 단계 표현은 이미 다시 써 주는 것(recycle)과 겹치지 않게, 두 개까지.
+  const stagePhrases = (input.stage?.open ?? []).filter((phrase) => !recycle.includes(phrase)).slice(0, 2);
+  if (input.stage && stagePhrases.length && !off.has("stage")) notes.push({ kind: "stage", aim: input.stage.aim, phrases: stagePhrases });
+
   return { notes, prompt: briefPrompt(notes) };
 }
 
@@ -161,6 +169,11 @@ export function briefPrompt(notes: BriefNote[]): string {
       case "harder":
         lines.push(
           "- Lately they have been doing well. Stretch them a little: a less common word now and then, and open questions that take more than a few words to answer.",
+        );
+        break;
+      case "stage":
+        lines.push(
+          `- What they are working towards: ${note.aim}. Pitch your language at that range. Expressions from it they have not produced yet: ${note.phrases.map((p) => `"${p}"`).join(", ")} — now and then steer the talk to a moment where one of them is the natural thing for them to say. Never name them or ask them to use them.`,
         );
         break;
       case "self":

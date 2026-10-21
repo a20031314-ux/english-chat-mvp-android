@@ -560,7 +560,17 @@
     "chatCorrectionView": "直した文",
     "chatCorrectionViewTap": "タップして見る",
     "chatCorrectionViewAuto": "すぐに表示",
-    "heardUnsure": "よく聞き取れませんでした。実際の発言と違うかもしれません。"
+    "heardUnsure": "よく聞き取れませんでした。実際の発言と違うかもしれません。",
+    "stageCheckTitle": "こんな会話、できますか？",
+    "stageCan": "できる",
+    "stageAlmost": "だいたい",
+    "stageHard": "まだ難しい",
+    "stageStartTitle": "ここから始めます",
+    "stageRechoose": "選び直す",
+    "stageGoalTitle": "この部分を終えると",
+    "stageProgress": "表現 {n}/{total}",
+    "stageCanDo": "できるようになること",
+    "stageNext": "次の部分で新しい地図"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1123,7 +1133,17 @@
     "chatCorrectionView": "修改后的句子",
     "chatCorrectionViewTap": "点开查看",
     "chatCorrectionViewAuto": "直接显示",
-    "heardUnsure": "没听清楚，可能和实际说的不一样。"
+    "heardUnsure": "没听清楚，可能和实际说的不一样。",
+    "stageCheckTitle": "这样的对话，你能做到吗？",
+    "stageCan": "能做到",
+    "stageAlmost": "差不多",
+    "stageHard": "还很难",
+    "stageStartTitle": "从这里开始",
+    "stageRechoose": "重新选择",
+    "stageGoalTitle": "完成这一部分后",
+    "stageProgress": "表达 {n}/{total}",
+    "stageCanDo": "将能做到的事",
+    "stageNext": "下一部分的新地图"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1688,7 +1708,17 @@
     "chatCorrectionView": "Câu đã sửa",
     "chatCorrectionViewTap": "Chạm để xem",
     "chatCorrectionViewAuto": "Hiện ngay",
-    "heardUnsure": "Nghe không rõ. Có thể khác với điều đã nói."
+    "heardUnsure": "Nghe không rõ. Có thể khác với điều đã nói.",
+    "stageCheckTitle": "Bạn có nói được đoạn hội thoại này không?",
+    "stageCan": "Được",
+    "stageAlmost": "Gần được",
+    "stageHard": "Chưa được",
+    "stageStartTitle": "Bắt đầu từ đây",
+    "stageRechoose": "Chọn lại",
+    "stageGoalTitle": "Khi xong phần này",
+    "stageProgress": "{n}/{total} cách diễn đạt",
+    "stageCanDo": "Những gì bạn sẽ làm được",
+    "stageNext": "Bản đồ mới cho phần tiếp theo"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2258,7 +2288,17 @@
     "chatCorrectionView": "Corrections",
     "chatCorrectionViewTap": "Toucher pour voir",
     "chatCorrectionViewAuto": "Afficher tout de suite",
-    "heardUnsure": "Mal entendu. Cela peut différer de ce qui a été dit."
+    "heardUnsure": "Mal entendu. Cela peut différer de ce qui a été dit.",
+    "stageCheckTitle": "Pourrais-tu tenir cette conversation ?",
+    "stageCan": "Oui, je peux",
+    "stageAlmost": "Presque",
+    "stageHard": "Pas encore",
+    "stageStartTitle": "Tu commences ici",
+    "stageRechoose": "Choisir à nouveau",
+    "stageGoalTitle": "À la fin de cette partie",
+    "stageProgress": "{n}/{total} expressions",
+    "stageCanDo": "Ce que tu sauras faire",
+    "stageNext": "Nouvelle carte pour la partie suivante"
   },
   "it": {
     "archive": "Report",
@@ -3019,7 +3059,17 @@
     "chatCorrectionView": "Correzioni",
     "chatCorrectionViewTap": "Tocca per vedere",
     "chatCorrectionViewAuto": "Mostra subito",
-    "heardUnsure": "Si è sentito male. Potrebbe essere diverso da ciò che è stato detto."
+    "heardUnsure": "Si è sentito male. Potrebbe essere diverso da ciò che è stato detto.",
+    "stageCheckTitle": "Riusciresti a fare questa conversazione?",
+    "stageCan": "Sì, ci riesco",
+    "stageAlmost": "Quasi",
+    "stageHard": "Non ancora",
+    "stageStartTitle": "Si parte da qui",
+    "stageRechoose": "Scegli di nuovo",
+    "stageGoalTitle": "Finita questa parte",
+    "stageProgress": "{n}/{total} espressioni",
+    "stageCanDo": "Cosa saprai fare",
+    "stageNext": "Nuova mappa per la parte successiva"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3592,7 +3642,17 @@
     "chatCorrectionView": "Correções",
     "chatCorrectionViewTap": "Toque para ver",
     "chatCorrectionViewAuto": "Mostrar na hora",
-    "heardUnsure": "Não deu para ouvir bem. Pode ser diferente do que foi dito."
+    "heardUnsure": "Não deu para ouvir bem. Pode ser diferente do que foi dito.",
+    "stageCheckTitle": "Você conseguiria ter esta conversa?",
+    "stageCan": "Sim, consigo",
+    "stageAlmost": "Quase",
+    "stageHard": "Ainda não",
+    "stageStartTitle": "Você começa aqui",
+    "stageRechoose": "Escolher de novo",
+    "stageGoalTitle": "Ao terminar esta parte",
+    "stageProgress": "{n}/{total} expressões",
+    "stageCanDo": "O que você vai conseguir fazer",
+    "stageNext": "Novo mapa para a próxima parte"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4351,7 +4411,17 @@
     "chatCorrectionView": "Исправления",
     "chatCorrectionViewTap": "Показать по нажатию",
     "chatCorrectionViewAuto": "Показывать сразу",
-    "heardUnsure": "Плохо слышно. Сказанное могло быть другим."
+    "heardUnsure": "Плохо слышно. Сказанное могло быть другим.",
+    "stageCheckTitle": "Смогли бы вы поддержать такой разговор?",
+    "stageCan": "Да, смогу",
+    "stageAlmost": "Почти",
+    "stageHard": "Пока нет",
+    "stageStartTitle": "Начинаем отсюда",
+    "stageRechoose": "Выбрать заново",
+    "stageGoalTitle": "Когда закончите эту часть",
+    "stageProgress": "Выражения {n}/{total}",
+    "stageCanDo": "Что вы сможете",
+    "stageNext": "Новая карта для следующей части"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -4920,7 +4990,17 @@
     "chatCorrectionView": "Koreksi",
     "chatCorrectionViewTap": "Ketuk untuk melihat",
     "chatCorrectionViewAuto": "Langsung tampilkan",
-    "heardUnsure": "Kurang terdengar. Bisa berbeda dari yang sebenarnya diucapkan."
+    "heardUnsure": "Kurang terdengar. Bisa berbeda dari yang sebenarnya diucapkan.",
+    "stageCheckTitle": "Bisakah kamu melakukan percakapan ini?",
+    "stageCan": "Bisa",
+    "stageAlmost": "Hampir",
+    "stageHard": "Belum",
+    "stageStartTitle": "Mulai dari sini",
+    "stageRechoose": "Pilih lagi",
+    "stageGoalTitle": "Setelah bagian ini selesai",
+    "stageProgress": "{n}/{total} ungkapan",
+    "stageCanDo": "Yang akan bisa kamu lakukan",
+    "stageNext": "Peta baru untuk bagian berikutnya"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5483,7 +5563,17 @@
     "chatCorrectionView": "التصحيحات",
     "chatCorrectionViewTap": "اضغط للعرض",
     "chatCorrectionViewAuto": "اعرض فورًا",
-    "heardUnsure": "لم يُسمع جيدًا. قد يختلف عمّا قيل فعلًا."
+    "heardUnsure": "لم يُسمع جيدًا. قد يختلف عمّا قيل فعلًا.",
+    "stageCheckTitle": "هل تستطيع إجراء هذه المحادثة؟",
+    "stageCan": "نعم، أستطيع",
+    "stageAlmost": "تقريبًا",
+    "stageHard": "ليس بعد",
+    "stageStartTitle": "تبدأ من هنا",
+    "stageRechoose": "اختر من جديد",
+    "stageGoalTitle": "عند إنهاء هذا الجزء",
+    "stageProgress": "التعبيرات {n}/{total}",
+    "stageCanDo": "ما ستتمكن من فعله",
+    "stageNext": "خريطة جديدة للجزء التالي"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6046,7 +6136,17 @@
     "chatCorrectionView": "ประโยคที่แก้",
     "chatCorrectionViewTap": "แตะเพื่อดู",
     "chatCorrectionViewAuto": "แสดงทันที",
-    "heardUnsure": "ได้ยินไม่ชัด อาจไม่ตรงกับที่พูดจริง"
+    "heardUnsure": "ได้ยินไม่ชัด อาจไม่ตรงกับที่พูดจริง",
+    "stageCheckTitle": "คุณพูดบทสนทนาแบบนี้ได้ไหม",
+    "stageCan": "ได้",
+    "stageAlmost": "เกือบได้",
+    "stageHard": "ยังยาก",
+    "stageStartTitle": "เริ่มตรงนี้",
+    "stageRechoose": "เลือกใหม่",
+    "stageGoalTitle": "เมื่อจบส่วนนี้",
+    "stageProgress": "สำนวน {n}/{total}",
+    "stageCanDo": "สิ่งที่คุณจะทำได้",
+    "stageNext": "แผนที่ใหม่สำหรับส่วนถัดไป"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -6609,6 +6709,16 @@
     "chatCorrectionView": "सुधार",
     "chatCorrectionViewTap": "टैप करके देखें",
     "chatCorrectionViewAuto": "तुरंत दिखाएँ",
-    "heardUnsure": "ठीक से सुनाई नहीं दिया। जो कहा गया उससे अलग हो सकता है।"
+    "heardUnsure": "ठीक से सुनाई नहीं दिया। जो कहा गया उससे अलग हो सकता है।",
+    "stageCheckTitle": "क्या आप ऐसी बातचीत कर सकते हैं?",
+    "stageCan": "हाँ, कर सकता/सकती हूँ",
+    "stageAlmost": "लगभग",
+    "stageHard": "अभी नहीं",
+    "stageStartTitle": "यहीं से शुरू",
+    "stageRechoose": "फिर से चुनें",
+    "stageGoalTitle": "यह हिस्सा पूरा होने पर",
+    "stageProgress": "अभिव्यक्तियाँ {n}/{total}",
+    "stageCanDo": "आप क्या कर पाएँगे",
+    "stageNext": "अगले हिस्से के लिए नया नक्शा"
   }
 }

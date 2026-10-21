@@ -50,6 +50,7 @@
 | 자유 통화 | `usage:callsec` | 학습자 한 명 | 70일 | 지움(주 1회 정리) | 통화 초(월별) | `entitlementStore.ts` |
 | 자유 통화 | `usage:rptrial` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 처음 20포인트 체험 쓴 양 | `entitlementStore.ts` |
 | 점검 | `simforget:v1` | 점검 | 2일 | 해당 없음 | 점검 데이터 지우기 하루 횟수 | `simData.ts` |
+| 지도 단계 | `stagecopy:v1` | 모두 함께 | ?(코드에서 못 읽음) | 해당 없음 | 단계 범위 화면 글을 앱 언어로 옮긴 것(학습 언어 × 앱 언어마다 하나) | `stageCopy.ts` |
 | 지도·미션 | `curriculum:` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 학습 지도·이전 지도·미션·약점(언어별) | `curriculumStore.ts` `weakPointStore.ts` |
 | 채팅 | `brief:v1` | 학습자 한 명 | 계산(brief.notes.length ? BRIEF_TTL) | 지움(주 1회 정리) | 튜터에게 주는 학습자 요약(짧게 캐시) | `learnerBrief.ts` |
 | 채팅 | `usage:chat` | 학습자 한 명 | 3일 | 해당 없음 | 오늘 보낸 채팅 수 | `entitlementStore.ts` |

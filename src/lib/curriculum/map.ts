@@ -26,8 +26,9 @@ export type SectorId = (typeof SECTOR_IDS)[number];
 
 /** What each sector is for, in the words the generator is given. */
 export const SECTOR_BRIEFS: Record<SectorId, string> = {
-  A: "Situations — the real moments the goal is about (introducing yourself, ordering, a meeting, small talk).",
-  B: "Expressions and grammar — the structures and set phrases those situations need (politeness, asking, past tense).",
+  // 예시를 괄호로 달았더니 목표와 상관없이 자기소개·주문이 지도마다 나왔다(2026-10-22) — 예시 없이.
+  A: "Situations — the real moments the goal is about.",
+  B: "Expressions and grammar — the structures and set phrases those situations need.",
   C: "Vocabulary — the words and word families those situations use.",
   D: "Pronunciation and listening — how it sounds and how to follow it at natural speed.",
 };
@@ -88,6 +89,8 @@ export type StudyMap = {
   sectors: MapSector[];
   topics: MapTopic[];
   createdAt: string;
+  /** 단계 범위로 그린 지도(curriculum/stages) — 그 단계 id. 없으면 예전 방식 지도. */
+  stageId?: string;
 };
 
 export type TopicStatus = "todo" | "doing" | "done";
@@ -113,6 +116,7 @@ export function normalizeMap(
     level: StudyMap["level"];
     createdAt: string;
     libraryVideoIds: string[];
+    stageId?: string;
   },
 ): { map: StudyMap; dropped: string[] } | null {
   const dropped: string[] = [];
@@ -220,6 +224,7 @@ export function normalizeMap(
       sectors,
       topics,
       createdAt: base.createdAt,
+      ...(base.stageId ? { stageId: base.stageId } : {}),
     },
     dropped,
   };
