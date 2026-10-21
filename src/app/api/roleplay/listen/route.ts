@@ -12,6 +12,7 @@ import { confidenceFromLogprobs, noteRecognition } from "@/lib/server/learnerMet
 import { toFile } from "openai";
 import { isNextGenTranscribe, turnTranscribeModel, wantsTrialReport } from "@/lib/server/speechModels";
 import { externalSttReady, isExternalStt, transcribeExternal } from "@/lib/server/sttProviders";
+import { confidenceOfLogprobs, confidenceOfWords, isUnsure, type SpeechConfidence } from "@/lib/speechConfidence";
 
 export const dynamic = "force-dynamic";
 
@@ -138,10 +139,12 @@ export async function POST(request: NextRequest) {
       const text = roomLanguages.length > 1 ? heardInAny(raw, roomLanguages) : heardOrNothing(raw, hint);
       const userId = requestUserId(request);
       if (!forRoom) after(() => noteRecognition(userId, text, heard.confidence));
+      const sure = confidenceOfWords(heard.words.map((word) => word.confidence));
+      const unsure = Boolean(text) && isUnsure(sure, heard.provider === "elevenlabs" ? "elevenlabs" : "openai");
       if (wantsTrialReport(request)) {
-        return jsonWithCors(request, { text, raw, confidence: heard.confidence, detected: heard.languages, words: heard.words, model, ms: Date.now() - started });
+        return jsonWithCors(request, { text, raw, confidence: heard.confidence, sure, unsure, detected: heard.languages, words: heard.words, model, ms: Date.now() - started });
       }
-      return jsonWithCors(request, { text });
+      return jsonWithCors(request, { text, ...(unsure ? { unsure } : {}) });
     } catch (error) {
       console.error(`[roleplay/listen] ${model} failed, falling back:`, error);
       if (wantsTrialReport(request)) {
@@ -170,12 +173,14 @@ export async function POST(request: NextRequest) {
     const plain: Asked = nextGen ? { response_format: "json" } : { response_format: "text" };
     let raw: string;
     let confidence: number | null = null;
+    let sure: SpeechConfidence = { mean: null, min: null };
     let detected: unknown = null;
     try {
       const result = await transcribe({ response_format: "json", include: ["logprobs"] });
       raw = textOf(result);
       detected = (result as { languages?: unknown }).languages ?? null;
       confidence = confidenceFromLogprobs((result as { logprobs?: unknown }).logprobs);
+      sure = confidenceOfLogprobs((result as { logprobs?: unknown }).logprobs);
     } catch (error) {
       if ((error as { status?: number })?.status !== 400) throw error;
       const result = await transcribe(plain);
@@ -186,6 +191,7 @@ export async function POST(request: NextRequest) {
     // is a guarantee: a reply in a script this language does not use was not a
     // transcription of it (roleplay/transcript.ts).
     let text = roomLanguages.length > 1 ? heardInAny(raw, roomLanguages) : heardOrNothing(raw, hint);
+    const heardText = text;
     if (!text && raw.trim() && roomLanguages.length > 1) {
       // Written in neither of the room's scripts: invented. Asked once more with
       // the room's first language (the one it is about) as the hint.
@@ -196,10 +202,13 @@ export async function POST(request: NextRequest) {
     }
     const userId = requestUserId(request);
     if (!forRoom) after(() => noteRecognition(userId, text, confidence));
+    // 확신이 낮은 줄은 앱이 말풍선 끝에 "?"(speechConfidence.ts). 옛 앱은 이 값을 모르고 지나간다.
+    // 다시 받아쓴 줄(방 언어 밖 글자)은 첫 답의 확률이 그 글과 맞지 않아 표시하지 않는다.
+    const unsure = Boolean(text) && text === heardText && isUnsure(sure);
     if (wantsTrialReport(request)) {
-      return jsonWithCors(request, { text, raw, confidence, detected, model, ms: Date.now() - started });
+      return jsonWithCors(request, { text, raw, confidence, sure, unsure, detected, model, ms: Date.now() - started });
     }
-    return jsonWithCors(request, { text });
+    return jsonWithCors(request, { text, ...(unsure ? { unsure } : {}) });
   } catch (error) {
     console.error("[roleplay/listen]", error);
     return jsonWithCors(request, { error: "STT_FAILED" }, { status: 502 });
