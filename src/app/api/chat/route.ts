@@ -593,9 +593,9 @@ async function runChat(
     natural = repairIrregularSlips(natural, [...koSlips, ...findIrregularSlips(natural)]);
   }
   // 고칠 게 없는 줄(문장부호만 다름, ?·이모지, 짧은 답을 문장으로 늘림)은 고침·설명을 비운다.
-  if (!koSlips.length && shouldKeepLearnerLine(message, corrected)) {
+  if (!koSlips.length && shouldKeepLearnerLine(message, corrected, langs.targetLanguage)) {
     corrected = message;
-    natural = shouldKeepLearnerLine(message, natural) ? message : natural;
+    natural = shouldKeepLearnerLine(message, natural, langs.targetLanguage) ? message : natural;
     explanation = "";
   }
 
