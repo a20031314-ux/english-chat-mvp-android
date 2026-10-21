@@ -45,3 +45,11 @@ test("Realtime에 없는 목소리는 가까운 목소리로", () => {
   assert.equal(realtimeVoice("fable"), "ballad");
   assert.match(readAloudInstructions("Speak only in Thai."), /word for word[\s\S]*Speak only in Thai\./);
 });
+
+test("바깥 받아쓰기 모델도 점검에서 고를 수 있다", async () => {
+  const { isExternalStt } = await import("./sttProviders.ts");
+  assert.equal(turnTranscribeModel(ask("simcheck-speechx-a", { "x-stt-model": "scribe_v2" })), "scribe_v2");
+  assert.equal(turnTranscribeModel(ask("simcheck-speechx-a", { "x-stt-model": "assemblyai-sync" })), "assemblyai-sync");
+  assert.equal(isExternalStt("scribe_v2"), true);
+  assert.equal(isExternalStt("gpt-transcribe"), false);
+});

@@ -11,6 +11,7 @@ import { requestUserId } from "@/lib/server/premiumRequest";
 import { confidenceFromLogprobs, noteRecognition } from "@/lib/server/learnerMetrics";
 import { toFile } from "openai";
 import { isNextGenTranscribe, turnTranscribeModel, wantsTrialReport } from "@/lib/server/speechModels";
+import { externalSttReady, isExternalStt, transcribeExternal } from "@/lib/server/sttProviders";
 
 export const dynamic = "force-dynamic";
 
@@ -94,7 +95,9 @@ export async function POST(request: NextRequest) {
     roomLanguages.length > 1 ? ` They speak ${roomLanguages.map((code) => learningLanguageName(code)).join(" or ")}.` : "";
 
   const model = turnTranscribeModel(request);
-  const nextGen = isNextGenTranscribe(model);
+  // 바깥 받아쓰기가 실패하면 OpenAI로 다시 — 그때 쓸 모델(Vercel 값 또는 기본값).
+  const openaiModel = isExternalStt(model) ? turnTranscribeModel() : model;
+  const nextGen = isNextGenTranscribe(openaiModel);
   const started = Date.now();
   // gpt-transcribe는 language 대신 languages(배열)를 받고 temperature는 문서에 없다. 방의 두 언어를 그대로 넘길 수 있다.
   const languageHint = nextGen
@@ -103,7 +106,7 @@ export async function POST(request: NextRequest) {
       ? { language: hint }
       : {};
   const asked = {
-    model,
+    model: isExternalStt(openaiModel) ? "gpt-4o-mini-transcribe" : openaiModel,
     ...(nextGen ? {} : { temperature: 0 }),
     ...languageHint,
     // Says what kind of audio this is, which is most of what stops a model
@@ -121,6 +124,31 @@ export async function POST(request: NextRequest) {
       (previous ? ` This audio continues what they just said: "${previous}". Write only the words in this audio, not the earlier ones.` : ""),
   };
 
+  // OpenAI 밖 받아쓰기(Scribe v2·AssemblyAI). 키가 없거나 실패하면 아래 OpenAI 길로(한 마디가 사라지지 않게).
+  if (isExternalStt(model) && externalSttReady(model)) {
+    try {
+      const heard = await transcribeExternal(model, {
+        bytes,
+        mimeType,
+        filename,
+        languages: roomLanguages.length ? roomLanguages : hint.length === 2 ? [hint] : [],
+        context: previous,
+      });
+      const raw = heard.text;
+      const text = roomLanguages.length > 1 ? heardInAny(raw, roomLanguages) : heardOrNothing(raw, hint);
+      const userId = requestUserId(request);
+      if (!forRoom) after(() => noteRecognition(userId, text, heard.confidence));
+      if (wantsTrialReport(request)) {
+        return jsonWithCors(request, { text, raw, confidence: heard.confidence, detected: heard.languages, words: heard.words, model, ms: Date.now() - started });
+      }
+      return jsonWithCors(request, { text });
+    } catch (error) {
+      console.error(`[roleplay/listen] ${model} failed, falling back:`, error);
+      if (wantsTrialReport(request)) {
+        return jsonWithCors(request, { text: "", error: String((error as Error)?.message ?? error).slice(0, 300), model, ms: Date.now() - started }, { status: 502 });
+      }
+    }
+  }
   try {
     // The words are the same either way. Asked as JSON with token
     // probabilities so the recogniser's confidence can be kept beside the turn

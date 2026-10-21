@@ -13,7 +13,7 @@ import { SIM_USER_MARK } from "./simData.ts";
  */
 
 /** 점검에서 골라 볼 수 있는 받아쓰기 모델. 목록 밖의 이름은 무시한다. */
-export const TRANSCRIBE_TRIAL_MODELS = ["gpt-4o-mini-transcribe", "gpt-4o-transcribe", "gpt-transcribe"] as const;
+export const TRANSCRIBE_TRIAL_MODELS = ["gpt-4o-mini-transcribe", "gpt-4o-transcribe", "gpt-transcribe", "scribe_v2", "assemblyai-sync"] as const;
 /** 읽어 주기 방식: speech = /v1/audio/speech(gpt-4o-mini-tts), realtime = Realtime API로 그대로 읽게. */
 export const TTS_ENGINES = ["speech", "realtime"] as const;
 export type TtsEngine = (typeof TTS_ENGINES)[number];
