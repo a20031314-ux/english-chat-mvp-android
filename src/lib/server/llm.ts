@@ -247,7 +247,14 @@ export function toAnthropicRequest(model: string, params: Omit<CreateParams, "mo
   if (system.length) body.system = system.join("\n\n");
   if (wantsJson) {
     body.tools = [RESPOND_TOOL];
-    body.tool_choice = { type: "tool", name: RESPOND_TOOL.name };
+    // Sonnet·Opus 5.5는 도구 강제(tool·any)를 400으로 거절한다(운영 2026-10-22, 지도·확인 모델 전부 실패) —
+    // 그 모델은 auto로 두고 지시로 부르게 한다. 도구를 안 쓰고 글로 답해도 아래에서 JSON만 뽑는다.
+    if (/sonnet|opus/.test(model)) {
+      body.tool_choice = { type: "auto" };
+      body.system = [...system, `Answer by calling the ${RESPOND_TOOL.name} tool once with the JSON object as its input.`].join("\n\n");
+    } else {
+      body.tool_choice = { type: "tool", name: RESPOND_TOOL.name };
+    }
   }
   // temperature는 넘기지 않는다: Claude 5.5 세대는 받으면 400 "temperature is deprecated"(운영 확인 2026-10-21).
   return { body, wantsJson };

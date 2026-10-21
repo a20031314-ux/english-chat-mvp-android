@@ -128,3 +128,9 @@ test("화면 글: 앱 언어 = 학습 언어면 뜻풀이 없음, 옮긴 글은 
   assert.equal(back![4]!.dialogues[1]!.lines.at(-1)!.gloss, `#${english[4]!.dialogues[1]!.lines.at(-1)!.gloss}`);
   assert.equal(withTexts(english, texts.slice(1)), null);
 });
+
+test("영어 학습·다른 앱 언어: 옮길 원문에 뜻풀이가 비지 않는다", () => {
+  const english = viewsFrom(ladderFor("en")!.stages, "en", "en", true);
+  assert.ok(textsOf(english).every((text) => text.trim()));
+  assert.equal(viewsFrom(ladderFor("en")!.stages, "en", "en")[0]!.dialogues[0]!.lines[0]!.gloss, "");
+});

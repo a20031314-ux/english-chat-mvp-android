@@ -25,7 +25,7 @@ function key(language: string, version: number, ui: string): string {
 }
 
 /** 손으로 쓴 글로 만든 모양. ui가 학습 언어와 같으면 뜻풀이는 비운다. */
-export function viewsFrom(stages: Stage[], language: string, ui: string): StageView[] {
+export function viewsFrom(stages: Stage[], language: string, ui: string, keepGloss = false): StageView[] {
   const t = (text: StageText) => stageText(text, ui);
   return stages.map((stage) => ({
     id: stage.id,
@@ -37,7 +37,7 @@ export function viewsFrom(stages: Stage[], language: string, ui: string): StageV
       lines: dialogue.lines.map((line) => ({
         who: line.who,
         text: line.text,
-        gloss: ui === language ? "" : (ui === "ko" ? line.ko : undefined) ?? line.en,
+        gloss: ui === language && !keepGloss ? "" : (ui === "ko" ? line.ko : undefined) ?? line.en,
       })),
     })),
   }));
@@ -80,7 +80,8 @@ export async function stageViews(
   const ladder = ladderFor(language);
   if (!ladder) return null;
   if (ui === "en" || ui === "ko" || ui === language) return viewsFrom(ladder.stages, language, ui);
-  const english = viewsFrom(ladder.stages, language, "en");
+  // 옮길 원문: 영어 학습이어도 뜻풀이(영어)를 남겨야 다른 앱 언어로 옮길 수 있다(2026-10-22, en·ja에서 뜻이 비고 영어로 떨어졌음).
+  const english = viewsFrom(ladder.stages, language, "en", true);
   const cacheKey = key(language, ladder.version, ui);
   try {
     const kept = await kvGetJson<StageView[]>(cacheKey);

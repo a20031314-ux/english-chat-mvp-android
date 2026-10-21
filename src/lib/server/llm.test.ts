@@ -211,3 +211,12 @@ test("도구 입력이 한 겹 싸여 오면 벗긴다", () => {
   assert.deepEqual(unwrapToolInput({ assistantMessage: "いいね", spokenReply: "" }), { assistantMessage: "いいね", spokenReply: "" });
   assert.equal(unwrapToolInput(null), undefined);
 });
+
+test("Sonnet·Opus는 도구 강제 없이 auto(5.5 세대가 강제를 거절)", () => {
+  const { body } = toAnthropicRequest("claude-sonnet-5-5", {
+    messages: [{ role: "user", content: "hi" }],
+    response_format: { type: "json_object" },
+  });
+  assert.deepEqual(body.tool_choice, { type: "auto" });
+  assert.match(String(body.system), /calling the respond tool/);
+});
