@@ -2,7 +2,7 @@ import { completeChat } from "@/lib/server/llm";
 import { NextRequest } from "next/server";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
-import { meterRequest } from "@/lib/server/meterRequest";
+import { meterRequest, simDetail } from "@/lib/server/meterRequest";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
 import { getDailyOpUsed } from "@/lib/server/entitlementStore";
@@ -120,13 +120,15 @@ export async function POST(request: NextRequest) {
   try {
     const completion = await completeChat(openai, "curriculum", {
       temperature: 0.4,
-      max_tokens: 4000,
+      // Claude는 같은 한국어·일본어 글에 토큰을 더 많이 써서 4000이면 지도 JSON이 중간에 끊겼다(2026-10-22 점검, 세 조합 모두 MAP_FAILED).
+      max_tokens: 8000,
       response_format: { type: "json_object" },
       messages: [
         { role: "system", content: mapSystemPrompt(input) },
         { role: "user", content: mapUserMessage(input) },
       ],
     });
+    if (completion.choices[0]?.finish_reason === "length") throw new Error("map cut off at max_tokens");
     const raw = JSON.parse(completion.choices[0]?.message?.content ?? "{}") as unknown;
     const result = normalizeMap(raw, {
       id: crypto.randomUUID(),
@@ -139,13 +141,13 @@ export async function POST(request: NextRequest) {
     });
     if (!result) {
       console.error("[curriculum] map too thin to keep", { model: MODEL() });
-      return jsonWithCors(request, { error: "MAP_FAILED" }, { status: 502 });
+      return jsonWithCors(request, { error: "MAP_FAILED", ...simDetail(request, "map too thin") }, { status: 502 });
     }
     if (result.dropped.length) console.log("[curriculum] dropped", result.dropped);
     const record = await saveNewMap(userId, result.map);
     return jsonWithCors(request, record);
   } catch (error) {
     console.error("[curriculum]", error);
-    return jsonWithCors(request, { error: "MAP_FAILED" }, { status: 502 });
+    return jsonWithCors(request, { error: "MAP_FAILED", ...simDetail(request, error) }, { status: 502 });
   }
 }

@@ -98,7 +98,8 @@ export async function POST(request: NextRequest) {
   try {
     const completion = await completeChat(openai, "curriculum", {
       temperature: 0.5,
-      max_tokens: 1500,
+      // Claude는 같은 글에 토큰을 더 써서 넉넉히(2026-10-22, 지도 만들기가 4000에서 끊긴 것과 같은 이유).
+      max_tokens: 3000,
       response_format: { type: "json_object" },
       messages: [
         {
