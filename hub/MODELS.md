@@ -55,6 +55,9 @@
 
 | 무엇 | 하는 일 | 키·설정 | 어디서 |
 |---|---|---|---|
+| Anthropic (Claude) | 글 모델 2단계(Haiku 5.5·Sonnet 5.5), `MODEL_ROUTES`로 켬 | `ANTHROPIC_API_KEY` (2026-10-21 넣음, 10-22 운영 호출 확인) | `lib/server/llm.ts` |
+| ElevenLabs Scribe v2 | 받아쓰기 시험 후보(점검 사용자만) | `ELEVENLABS_API_KEY` (10-22 운영 호출 확인) | `lib/server/sttProviders.ts` |
+| AssemblyAI | 받아쓰기 시험 후보(점검 사용자만) | `ASSEMBLYAI_API_KEY` (10-22 운영 호출 확인) | `lib/server/sttProviders.ts` |
 | Vercel | 서버·웹 배포, 예약 작업(계정 정리·사진 정리) | 프로젝트 설정 | `vercel.json` |
 | Vercel Blob | 사진(대화·게시판) 저장 | `BLOB_READ_WRITE_TOKEN` | `@vercel/blob` |
 | Upstash Redis (Vercel KV) | 모든 서버 데이터(계정·기록·방·메시지·한도) | `KV_REST_API_*` / `UPSTASH_REDIS_REST_*` | `lib/server/kv.ts`. 2026-10-21에 사용량 따라 내는 요금으로 바꿈 |
@@ -73,5 +76,7 @@
 | Next.js | 웹·API 틀 | — | `next` |
 
 ## 3. 새 소식 (예약 작업이 위에 더함)
+
+- 2026-10-22 · Anthropic·ElevenLabs·AssemblyAI 키 운영에서 실제 호출 확인(점검 사용자로만). 실제 사용자는 아직 예전 모델 그대로.
 
 - 2026-10-21 · 처음 정리. 위 표의 종료일과 대체 모델은 OpenAI 공식 종료 목록에서 확인했습니다. 남은 일: ① Vercel에 `ANTHROPIC_API_KEY`를 넣고 Haiku로 전환(같은 날 다른 채팅이 `llm.ts` 1단계 완료). 통화 돌아보기는 12-11 전에. ② 목소리(01-06)·받아쓰기(02-26) 대체 모델의 비용과 방식 확인. 이 둘은 Claude에 대체가 없습니다. ③ 비교용: OpenAI 쪽 대체는 gpt-6-luna로, 지금보다 쌉니다.
