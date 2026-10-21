@@ -849,7 +849,18 @@ export function Lines({
             ) : null}
             <span className={`block leading-snug text-white ${big ? "text-title" : typed ? "text-sm" : "text-chat"}`} dir="auto">
               {typed ? line.text : <RevealText text={line.text} fresh={!knownSeqs.current.has(line.seq)} />}
+              {/* 받아쓰기가 확신이 낮은 줄: 끝에 "?" 하나. 눌러 열면 아래에 한 줄 설명(따로 알림은 없음). */}
+              {!typed && line.unsure ? (
+                <span className="ms-1 align-middle text-meta font-semibold text-amber-300" title={t.unsureMark} aria-label={t.unsureMark}>
+                  ?
+                </span>
+              ) : null}
             </span>
+            {isOpen && !typed && line.unsure ? (
+              <span className="mt-1 block text-meta text-amber-200" dir="auto">
+                {t.unsureLine}
+              </span>
+            ) : null}
             {isOpen ? (
               <span className="mt-1 block text-sm text-slate-300" dir="auto">
                 {translation ?? t.translating}

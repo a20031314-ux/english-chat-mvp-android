@@ -9,8 +9,13 @@
  * 실시간 스트리밍 받아쓰기보다 5배쯤 싸고(소리를 한 번씩만 보냄), 긴 말도 쉬는 단위로 먼저 뜬다.
  *
  * 숫자들은 시험하면서 맞출 값이다.
+ *
+ * 2026-10-22: 소리는 MediaRecorder 대신 표본을 직접 모아(pcm.ts) 늘 최근 0.4초를 쥐고 있다가, 말이 시작되면 그 앞부터 붙여 WAV로 보낸다.
+ * 예전에는 소리가 기준을 넘은 뒤에야 녹음기를 켜서 첫 음절이 잘렸고(작게 시작한 말일수록 더), 받아쓰기는 잘린 앞을 엉뚱한 말로 메웠다.
+ * 표본을 받을 수 없는 브라우저는 예전 방식(MediaRecorder) 그대로.
  */
 import { IDLE, stepParts, type PartState } from "./speechParts";
+import { PREROLL_MS, PcmRing, concatPcm, downsample, encodeWav } from "./pcm";
 
 const TICK_MS = 50;
 const MIN_THRESHOLD = 0.018;
@@ -62,6 +67,27 @@ export function startSpeechCapture(
   const samples = new Float32Array(analyser.fftSize);
   const mimeType = preferredMimeType();
 
+  // 표본 직접 모으기(앞부분 미리 담기). createScriptProcessor는 낡았지만 웹뷰·사파리 모두에 있고 따로 파일이 필요 없다.
+  // 소리는 0 크기로 내보내 스피커로는 아무것도 나가지 않는다(연결해야 돌아가는 브라우저가 있음).
+  const pcm = typeof ctx.createScriptProcessor === "function";
+  const ring = new PcmRing((ctx.sampleRate * PREROLL_MS) / 1000);
+  let pcmParts: Float32Array[] | null = null;
+  let processor: ScriptProcessorNode | null = null;
+  let mute: GainNode | null = null;
+  if (pcm) {
+    processor = ctx.createScriptProcessor(2048, 1, 1);
+    mute = ctx.createGain();
+    mute.gain.value = 0;
+    processor.onaudioprocess = (event) => {
+      const frame = new Float32Array(event.inputBuffer.getChannelData(0));
+      if (pcmParts) pcmParts.push(frame);
+      else ring.push(frame);
+    };
+    source.connect(processor);
+    processor.connect(mute);
+    mute.connect(ctx.destination);
+  }
+
   let noiseFloor = 0.01;
   let recorder: MediaRecorder | null = null;
   let chunks: Blob[] = [];
@@ -77,6 +103,19 @@ export function startSpeechCapture(
 
   /** 녹음 중인 조각을 닫는다. keep이면 다 모인 뒤 넘긴다. */
   const closeRecorder = (keep: boolean, meta: { utterance: string; part: number; startedAt: number; endedAt: number } | null) => {
+    if (pcm) {
+      const parts = pcmParts;
+      pcmParts = null;
+      if (!parts) return;
+      const samples = concatPcm(parts);
+      // 끝자락은 고리에 다시 담지 않는다: 8초에서 말 중간에 끊긴 조각이면 다음 조각 앞에 같은 낱말이 두 번 들어간다.
+      // 고리에는 녹음하지 않는 사이(쉼)의 소리만 — 쉼에서 끊긴 뒤 다시 말하면 그 쉼이 앞부분이 된다.
+      if (keep && meta) {
+        const wav = encodeWav(downsample(samples, ctx.sampleRate));
+        if (wav.byteLength > 1200) handlers.onUtterance({ blob: new Blob([wav as BlobPart], { type: "audio/wav" }), mimeType: "audio/wav", ...meta });
+      }
+      return;
+    }
     const current = recorder;
     if (!current) return;
     recorder = null;
@@ -92,6 +131,11 @@ export function startSpeechCapture(
   };
 
   const openRecorder = () => {
+    if (pcm) {
+      // 미리 담아 둔 앞부분부터.
+      pcmParts = [ring.snapshot()];
+      return;
+    }
     chunks = [];
     const next = new MediaRecorder(stream, mimeType ? { mimeType } : undefined);
     const target = chunks;
@@ -142,6 +186,11 @@ export function startSpeechCapture(
     stop: () => {
       window.clearInterval(timer);
       apply(Date.now(), false, true);
+      if (processor) {
+        processor.onaudioprocess = null;
+        processor.disconnect();
+      }
+      mute?.disconnect();
       source.disconnect();
       void ctx.close().catch(() => {});
     },

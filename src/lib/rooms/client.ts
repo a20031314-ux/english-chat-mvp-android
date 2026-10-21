@@ -168,6 +168,8 @@ export async function postLine(input: {
   /** 같은 말(말풍선)의 조각끼리 같은 번호와 순번 — 화면이 한 말풍선으로 잇는다(protocol.ts joinParts). */
   uid?: string;
   part?: number;
+  /** 받아쓰기가 확신이 낮았음 — 말풍선 끝에 "?". */
+  unsure?: boolean;
 }): Promise<RoomLine> {
   return (await call<{ line: RoomLine }>("line", input)).line;
 }
@@ -220,13 +222,13 @@ export async function transcribeUtterance(
   mimeType: string,
   languages: string[] = [],
   piece?: { utterance: string; part: number; previous?: string },
-): Promise<string> {
+): Promise<{ text: string; unsure: boolean }> {
   const response = await fetch(apiUrl("/api/roleplay/listen"), {
     method: "POST",
     headers: { "Content-Type": "application/json", ...entitlementHeaders() },
     body: JSON.stringify({
       audioBase64: await toBase64(blob),
-      filename: mimeType.includes("mp4") ? "line.mp4" : "line.webm",
+      filename: mimeType.includes("wav") ? "line.wav" : mimeType.includes("mp4") ? "line.mp4" : "line.webm",
       mimeType: mimeType || "audio/webm",
       room: true,
       ...(piece ? { utterance: piece.utterance, part: piece.part, ...(piece.previous ? { previous: piece.previous } : {}) } : {}),
@@ -236,9 +238,9 @@ export async function transcribeUtterance(
   });
   // 오늘 자막 줄을 다 썼으면 방 화면이 자막을 멈추고 안내한다(음성은 계속).
   if (response.status === 429) throw new RoomApiError("CAPTION_LIMIT", 429);
-  if (!response.ok) return "";
-  const body = (await response.json()) as { text?: unknown };
-  return typeof body.text === "string" ? body.text.trim() : "";
+  if (!response.ok) return { text: "", unsure: false };
+  const body = (await response.json()) as { text?: unknown; unsure?: unknown };
+  return { text: typeof body.text === "string" ? body.text.trim() : "", unsure: body.unsure === true };
 }
 
 /** 번역·다듬기가 실패했을 때 보일 말: 오늘 AI 도움을 다 썼으면 그 안내, 아니면 실패 문구. */

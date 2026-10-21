@@ -574,7 +574,8 @@
     "chatCorrectionChecking": "確認しています…",
     "chatCorrectionView": "直した文",
     "chatCorrectionViewTap": "タップして見る",
-    "chatCorrectionViewAuto": "すぐに表示"
+    "chatCorrectionViewAuto": "すぐに表示",
+    "heardUnsure": "よく聞き取れませんでした。実際の発言と違うかもしれません。"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1151,7 +1152,8 @@
     "chatCorrectionChecking": "正在检查…",
     "chatCorrectionView": "修改后的句子",
     "chatCorrectionViewTap": "点开查看",
-    "chatCorrectionViewAuto": "直接显示"
+    "chatCorrectionViewAuto": "直接显示",
+    "heardUnsure": "没听清楚，可能和实际说的不一样。"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1730,7 +1732,8 @@
     "chatCorrectionChecking": "Đang kiểm tra…",
     "chatCorrectionView": "Câu đã sửa",
     "chatCorrectionViewTap": "Chạm để xem",
-    "chatCorrectionViewAuto": "Hiện ngay"
+    "chatCorrectionViewAuto": "Hiện ngay",
+    "heardUnsure": "Nghe không rõ. Có thể khác với điều đã nói."
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2314,7 +2317,8 @@
     "chatCorrectionChecking": "Vérification…",
     "chatCorrectionView": "Corrections",
     "chatCorrectionViewTap": "Toucher pour voir",
-    "chatCorrectionViewAuto": "Afficher tout de suite"
+    "chatCorrectionViewAuto": "Afficher tout de suite",
+    "heardUnsure": "Mal entendu. Cela peut différer de ce qui a été dit."
   },
   "it": {
     "archive": "Report",
@@ -3089,7 +3093,8 @@
     "chatCorrectionChecking": "Controllo in corso…",
     "chatCorrectionView": "Correzioni",
     "chatCorrectionViewTap": "Tocca per vedere",
-    "chatCorrectionViewAuto": "Mostra subito"
+    "chatCorrectionViewAuto": "Mostra subito",
+    "heardUnsure": "Si è sentito male. Potrebbe essere diverso da ciò che è stato detto."
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3676,7 +3681,8 @@
     "chatCorrectionChecking": "Verificando…",
     "chatCorrectionView": "Correções",
     "chatCorrectionViewTap": "Toque para ver",
-    "chatCorrectionViewAuto": "Mostrar na hora"
+    "chatCorrectionViewAuto": "Mostrar na hora",
+    "heardUnsure": "Não deu para ouvir bem. Pode ser diferente do que foi dito."
   },
   "ru": {
     "archive": "Отчёты",
@@ -4449,7 +4455,8 @@
     "chatCorrectionChecking": "Проверяю…",
     "chatCorrectionView": "Исправления",
     "chatCorrectionViewTap": "Показать по нажатию",
-    "chatCorrectionViewAuto": "Показывать сразу"
+    "chatCorrectionViewAuto": "Показывать сразу",
+    "heardUnsure": "Плохо слышно. Сказанное могло быть другим."
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5032,7 +5039,8 @@
     "chatCorrectionChecking": "Memeriksa…",
     "chatCorrectionView": "Koreksi",
     "chatCorrectionViewTap": "Ketuk untuk melihat",
-    "chatCorrectionViewAuto": "Langsung tampilkan"
+    "chatCorrectionViewAuto": "Langsung tampilkan",
+    "heardUnsure": "Kurang terdengar. Bisa berbeda dari yang sebenarnya diucapkan."
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5609,7 +5617,8 @@
     "chatCorrectionChecking": "جارٍ التحقق…",
     "chatCorrectionView": "التصحيحات",
     "chatCorrectionViewTap": "اضغط للعرض",
-    "chatCorrectionViewAuto": "اعرض فورًا"
+    "chatCorrectionViewAuto": "اعرض فورًا",
+    "heardUnsure": "لم يُسمع جيدًا. قد يختلف عمّا قيل فعلًا."
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6186,7 +6195,8 @@
     "chatCorrectionChecking": "กำลังตรวจสอบ…",
     "chatCorrectionView": "ประโยคที่แก้",
     "chatCorrectionViewTap": "แตะเพื่อดู",
-    "chatCorrectionViewAuto": "แสดงทันที"
+    "chatCorrectionViewAuto": "แสดงทันที",
+    "heardUnsure": "ได้ยินไม่ชัด อาจไม่ตรงกับที่พูดจริง"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -6763,6 +6773,7 @@
     "chatCorrectionChecking": "जाँच हो रही है…",
     "chatCorrectionView": "सुधार",
     "chatCorrectionViewTap": "टैप करके देखें",
-    "chatCorrectionViewAuto": "तुरंत दिखाएँ"
+    "chatCorrectionViewAuto": "तुरंत दिखाएँ",
+    "heardUnsure": "ठीक से सुनाई नहीं दिया। जो कहा गया उससे अलग हो सकता है।"
   }
 }

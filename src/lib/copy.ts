@@ -42,6 +42,7 @@ const generatedChatOverlay = {
   chatCorrectionView: "Corrections",
   chatCorrectionViewTap: "Tap to see",
   chatCorrectionViewAuto: "Show right away",
+  heardUnsure: "Hard to hear. This may differ from what was actually said.",
   chatTempErrorReply: "Something went wrong just now.",
   chatTempErrorExplanation: "A temporary error. Please try again in a moment.",
   guideOpen: "How to use",
@@ -661,6 +662,7 @@ const generatedAskOverlay = {
 
 export const copy = {
   ko: {
+    heardUnsure: "잘 안 들렸어요. 실제로 한 말과 다를 수 있어요.",
     appTitle: "{targetLanguage} 교정 채팅",
     chatEmptyHint:
       "예: \"I had a really busy day today.\"\n내 말로 {targetLanguage} 문장을 직접 써보세요",
@@ -1900,6 +1902,7 @@ export const copy = {
       "동의하고 시작",
   },
   en: {
+    heardUnsure: "Hard to hear. This may differ from what was actually said.",
     appTitle: "{targetLanguage} correction chat",
     chatEmptyHint:
       "Example: \"I had a really busy day today.\"\nTry writing full sentences in your own words.",
@@ -3137,6 +3140,7 @@ export const copy = {
       "Agree and start",
   },
   es: {
+    heardUnsure: "Se oyó mal. Puede ser distinto de lo que se dijo.",
     appTitle: "Chat de corrección de {targetLanguage}",
     chatEmptyHint:
       "Ejemplo: \"I had a really busy day today.\"\nEscribe frases completas con tus palabras.",

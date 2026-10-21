@@ -132,6 +132,15 @@ async function toBase64(blob: Blob): Promise<string> {
   return btoa(binary);
 }
 
+/**
+ * 받아쓰기가 확신이 낮았던 말(서버 `unsure`, speechConfidence.ts). 말이 화면 줄이 되는 곳이 여러 갈래라
+ * 반환형을 바꾸지 않고 글로 찾아 보게 둔다 — 최근 몇 개만.
+ */
+const unsureHeard: string[] = [];
+export function heardUnsure(text: string): boolean {
+  return Boolean(text) && unsureHeard.includes(text.trim());
+}
+
 async function transcribe(
   blob: Blob,
   mimeType: string,
@@ -160,8 +169,15 @@ async function transcribe(
   const body = (await response.json()) as {
     segments?: { text?: unknown }[];
     text?: unknown;
+    unsure?: unknown;
   };
-  if (typeof body.text === "string" && body.text.trim()) return body.text.trim();
+  if (typeof body.text === "string" && body.text.trim()) {
+    if (body.unsure === true) {
+      unsureHeard.push(body.text.trim());
+      if (unsureHeard.length > 20) unsureHeard.shift();
+    }
+    return body.text.trim();
+  }
   return (body.segments ?? [])
     .map((segment) => (typeof segment.text === "string" ? segment.text : ""))
     .join(" ")

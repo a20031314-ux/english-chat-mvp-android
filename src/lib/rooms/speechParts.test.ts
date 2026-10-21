@@ -116,3 +116,15 @@ test("글 통로로 온 줄: 보낸 사람 자신의 받아쓴 줄만, 이름·�
   assert.equal(directLine("p1", JSON.stringify({ t: "line", line: { seq: 9, kind: "text", peerId: "p1", text: "x", startedAt: 1, endedAt: 2 } }), members), null);
   assert.equal(directLine("p1", "{oops", members), null);
 });
+
+test("조각 중 하나라도 확실하지 않으면 말풍선 전체에 ?", () => {
+  const base = { peerId: "p1", nickname: "A", kind: "speech" as const, uid: "uu11", startedAt: 0, endedAt: 1 };
+  const joined = joinParts([
+    { ...base, seq: 1, part: 0, text: "I went" } as RoomLine,
+    { ...base, seq: 2, part: 1, text: "to the station", unsure: true } as RoomLine,
+  ]);
+  assert.equal(joined.length, 1);
+  assert.equal(joined[0].unsure, true);
+  const plain = joinParts([{ ...base, seq: 3, part: 0, text: "네", uid: "uu22" } as RoomLine]);
+  assert.equal(plain[0].unsure, undefined);
+});

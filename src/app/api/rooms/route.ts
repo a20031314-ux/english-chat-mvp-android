@@ -261,6 +261,7 @@ export async function POST(request: NextRequest) {
       ...(quote ? { quote, ask: body.ask === true } : {}),
       // 받아쓴 말의 언어(앱이 글자로 가른 것). 모르는 코드는 버린다.
       ...(kind === "speech" && typeof body.lang === "string" && isLearningLanguageCode(body.lang) ? { lang: body.lang } : {}),
+      ...(kind === "speech" && body.unsure === true ? { unsure: true } : {}),
       // 쉼마다 자른 조각: 같은 말의 번호와 순번(앱이 한 말풍선으로 잇는다, protocol.ts joinParts). 예전 앱은 따로 보인다.
       ...(kind === "speech" && typeof body.uid === "string" && /^[A-Za-z0-9_-]{4,40}$/.test(body.uid)
         ? { uid: body.uid, part: typeof body.part === "number" && Number.isInteger(body.part) && body.part >= 0 && body.part < 100 ? body.part : 0 }

@@ -113,6 +113,8 @@ export type RoomLine = {
   /** 쉼마다 자른 조각이면 같은 말의 번호와 그 안의 순번(rooms/speechParts.ts). 화면은 joinParts로 한 말풍선으로 잇는다. */
   uid?: string;
   part?: number;
+  /** 받아쓰기가 확신이 낮았던 줄(speechConfidence.ts) — 말풍선 끝에 "?". 조각 중 하나라도 그러면 말풍선 전체. */
+  unsure?: boolean;
 };
 
 /** cam = 영상 방에서 내 카메라 켬/끔("on"/"off"). 예전 앱은 모르는 신호를 그냥 넘긴다. */
@@ -245,6 +247,7 @@ export function joinParts(lines: RoomLine[]): RoomLine[] {
       text: joinPartTexts(ordered.map((row) => row.text)),
       startedAt: Math.min(...ordered.map((row) => row.startedAt)),
       endedAt: Math.max(...ordered.map((row) => row.endedAt)),
+      ...(ordered.some((row) => row.unsure) ? { unsure: true } : {}),
     };
   });
 }

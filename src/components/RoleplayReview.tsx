@@ -104,7 +104,11 @@ export function RoleplayLine({
         ) : (
           // What was said is in the language being learned: it keeps its own
           // direction, so "Hi!" does not end up as "!Hi" under an Arabic app.
-          <p dir="auto" className="text-[14px] leading-snug">{line.text}</p>
+          <p dir="auto" className="text-[14px] leading-snug">
+            {line.text}
+            {/* 받아쓰기가 확신이 낮은 내 말: 끝에 "?" 하나, 누르면 한 줄 설명. */}
+            {line.who === "learner" && line.unsure ? <UnsureMark text={ui.heardUnsure} /> : null}
+          </p>
         )}
         {line.translation && translationShown ? (
           <p className="mt-1 text-[12px] text-neutral-500">{line.translation}</p>
@@ -413,5 +417,22 @@ export function RoleplayReviewPanel({
         </button>
       </div>
     </div>
+  );
+}
+
+function UnsureMark({ text }: { text: string }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <>
+      <button
+        type="button"
+        onClick={() => setOpen((was) => !was)}
+        aria-label={text}
+        className="ms-1 align-middle text-meta font-semibold text-amber-300"
+      >
+        ?
+      </button>
+      {open ? <span className="mt-1 block text-meta text-amber-200">{text}</span> : null}
+    </>
   );
 }

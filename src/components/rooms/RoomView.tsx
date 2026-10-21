@@ -332,7 +332,7 @@ export function RoomView({
         const languages = room.free ? speakerLanguages : room.languages;
         // 뒷조각이면 앞 조각에서 받아쓴 글을 맥락으로(아직 안 온 조각은 빈칸 — 기다리지 않는다).
         const previous = piece.part > 0 ? joinPartTexts(partTextRef.current.get(uid) ?? []) : "";
-        const text = await transcribeUtterance(piece.blob, piece.mimeType, languages, { utterance: uid, part: piece.part, previous });
+        const { text, unsure } = await transcribeUtterance(piece.blob, piece.mimeType, languages, { utterance: uid, part: piece.part, previous });
         if (!text || !aliveRef.current) return;
         const parts = partTextRef.current.get(uid) ?? [];
         parts[piece.part] = text;
@@ -348,6 +348,7 @@ export function RoomView({
           ...(lang ? { lang } : {}),
           uid,
           part: piece.part,
+          ...(unsure ? { unsure } : {}),
         });
         addMine(mine);
         // 서버에 올린 줄을 연결된 사람들에게도 바로(1.5초마다 묻는 서버 확인을 기다리지 않게). 서버 기록이 원본.

@@ -140,7 +140,7 @@ export async function POST(request: NextRequest) {
       const userId = requestUserId(request);
       if (!forRoom) after(() => noteRecognition(userId, text, heard.confidence));
       const sure = confidenceOfWords(heard.words.map((word) => word.confidence));
-      const unsure = Boolean(text) && isUnsure(sure, heard.provider === "elevenlabs" ? "elevenlabs" : "openai");
+      const unsure = Boolean(text) && isUnsure(sure, model);
       if (wantsTrialReport(request)) {
         return jsonWithCors(request, { text, raw, confidence: heard.confidence, sure, unsure, detected: heard.languages, words: heard.words, model, ms: Date.now() - started });
       }
@@ -204,7 +204,7 @@ export async function POST(request: NextRequest) {
     if (!forRoom) after(() => noteRecognition(userId, text, confidence));
     // 확신이 낮은 줄은 앱이 말풍선 끝에 "?"(speechConfidence.ts). 옛 앱은 이 값을 모르고 지나간다.
     // 다시 받아쓴 줄(방 언어 밖 글자)은 첫 답의 확률이 그 글과 맞지 않아 표시하지 않는다.
-    const unsure = Boolean(text) && text === heardText && isUnsure(sure);
+    const unsure = Boolean(text) && text === heardText && isUnsure(sure, asked.model);
     if (wantsTrialReport(request)) {
       return jsonWithCors(request, { text, raw, confidence, sure, unsure, detected, model, ms: Date.now() - started });
     }

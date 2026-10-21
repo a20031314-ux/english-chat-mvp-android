@@ -40,6 +40,8 @@ export type TranscriptLine = {
   meant?: string;
   /** A word about that sentence, in their own language. Also never spoken. */
   about?: string;
+  /** 학습자 줄: 받아쓰기가 확신이 낮았음 — 줄 끝에 "?"(speechConfidence.ts). */
+  unsure?: boolean;
 };
 
 export type StuckTurn = {

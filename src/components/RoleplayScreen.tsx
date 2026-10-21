@@ -36,6 +36,7 @@ import {
   listenOnce,
   reportTutorDiag,
   type Recorder,
+  heardUnsure,
 } from "@/lib/roleplay/listen";
 import {
   EMPTY_MEMORY,
@@ -711,7 +712,7 @@ export function RoleplayScreen({
   const answer = useCallback(
     async (heard: string, endedAt: number, speechStartedAt: number | null) => {
       if (!scenario || !state) return;
-      setSaid((current) => [...current, { who: "learner", text: heard || "…" }]);
+      setSaid((current) => [...current, { who: "learner", text: heard || "…", ...(heardUnsure(heard) ? { unsure: true } : {}) }]);
       if (heard) refreshLedgerSoon(scenario.language, 6000);
       const result = submitSpeech(scenario, bank, state, heard, endedAt, speechStartedAt);
       setState(result.state);
