@@ -11,7 +11,8 @@ import type {
  *
  * 왜: OpenAI가 gpt-4o-mini·gpt-4.1·gpt-4.1-mini 종료를 2027-01-14로 발표(2026-10-14).
  * 기능마다 어느 모델을 쓸지를 코드 곳곳이 아니라 이 표 한 장(`TASKS`)과 Vercel 값 하나(`MODEL_ROUTES`)로 정한다.
- * 기본은 지금과 똑같다(각 기능이 쓰던 OpenAI 모델과 그 환경 변수). `MODEL_ROUTES`를 넣어야 바뀐다.
+ * 기본은 각 기능이 쓰던 OpenAI 모델과 그 환경 변수, 단 `DEFAULT_ROUTES`에 적은 기능(채팅·표현 카드 → Haiku, 2026-10-22)은 예외.
+ * `MODEL_ROUTES`가 둘 다보다 앞선다.
  *
  *   MODEL_ROUTES = {"basic": "anthropic: claude-haiku-5-5", "high": "anthropic: claude-sonnet-5-5"}
  *   MODEL_ROUTES = {"chat": "anthropic: claude-haiku-5-5"}          ← 기능 하나만
@@ -58,6 +59,18 @@ export const TASKS = {
 export type Task = keyof typeof TASKS;
 
 export type Route = { provider: Provider; model: string; task: Task; tier: Tier };
+
+/**
+ * 코드에 박은 기본 경로 — Vercel `MODEL_ROUTES`가 비어 있어도 이것을 쓴다(키가 없으면 OpenAI 기본).
+ * 2026-10-22 사용자 결정: 채팅(교정 + 답)과 표현 카드를 Claude Haiku 5.5로(`hub/drafts/correction-models-2026-10-21.md`
+ * "고친 뒤 다시 비교" — 큰 문제 6~10% → 4.5%, 답 2.0 → 1.7초). 나머지 기능은 아직 비교 전이라 그대로.
+ * 되돌리기: Vercel `MODEL_ROUTES = {"chat":"openai: gpt-4o-mini","howToSay":"openai: gpt-4o-mini"}`(기능 이름이 이긴다).
+ * 우선순위: MODEL_ROUTES 기능 > MODEL_ROUTES 등급 > 여기 > 그 기능의 OpenAI 기본값.
+ */
+export const DEFAULT_ROUTES: Partial<Record<Task, string>> = {
+  chat: "anthropic: claude-haiku-5-5",
+  howToSay: "anthropic: claude-haiku-5-5",
+};
 
 function parseRoutes(): Record<string, string> {
   const raw = env("MODEL_ROUTES");
@@ -124,7 +137,10 @@ export function routeFor(task: Task, override?: string): Route {
   const tier = spec.tier as Tier;
   if (override) return { provider: "openai", model: override, task, tier };
   const routes = { ...parseRoutes(), ...(simRoutes.getStore() ?? {}) };
-  const chosen = parseTarget(routes[task] ?? "") ?? parseTarget(routes[tier] ?? "");
+  const chosen =
+    parseTarget(routes[task] ?? "") ??
+    parseTarget(routes[tier] ?? "") ??
+    parseTarget(DEFAULT_ROUTES[task] ?? "");
   if (chosen) {
     // 점검 경로에서는 키가 없어도 OpenAI로 몰래 바꾸지 않는다 — 실패해야 키 문제가 보인다.
     if (chosen.provider === "anthropic" && !env("ANTHROPIC_API_KEY") && !simRoutes.getStore()) {

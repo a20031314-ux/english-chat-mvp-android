@@ -42,6 +42,35 @@ test("설정이 없으면 기능마다 예전 OpenAI 모델 그대로", () => {
   });
 });
 
+test("키가 있으면 채팅·표현 카드는 코드 기본값 Haiku, 나머지는 예전 그대로(2026-10-22)", () => {
+  withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
+    assert.deepEqual(
+      { ...routeFor("chat") },
+      { provider: "anthropic", model: "claude-haiku-5-5", task: "chat", tier: "basic" },
+    );
+    assert.equal(routeFor("howToSay").model, "claude-haiku-5-5");
+    assert.equal(routeFor("translate").model, "gpt-4o-mini");
+    assert.equal(routeFor("roleplayTutor").model, "gpt-4.1-mini");
+    assert.equal(routeFor("chatVerify").model, "gpt-4.1");
+  });
+});
+
+test("MODEL_ROUTES로 코드 기본값을 되돌린다", () => {
+  withEnv(
+    { ANTHROPIC_API_KEY: "k", MODEL_ROUTES: JSON.stringify({ chat: "openai: gpt-4o-mini", howToSay: "openai: gpt-4o-mini" }) },
+    () => {
+      assert.deepEqual(
+        { provider: routeFor("chat").provider, model: routeFor("chat").model },
+        { provider: "openai", model: "gpt-4o-mini" },
+      );
+      assert.equal(routeFor("howToSay").provider, "openai");
+    },
+  );
+  withEnv({ ANTHROPIC_API_KEY: "k", MODEL_ROUTES: JSON.stringify({ basic: "openai: gpt-6-luna" }) }, () => {
+    assert.equal(routeFor("chat").model, "gpt-6-luna"); // 등급 설정도 코드 기본값보다 앞선다
+  });
+});
+
 test("예전 환경 변수도 그대로 먹는다", () => {
   withEnv({ OPENAI_MODEL: "gpt-x", OPENAI_CURRICULUM_MODEL: "gpt-y" }, () => {
     assert.equal(routeFor("chat").model, "gpt-x");
@@ -194,13 +223,13 @@ test("점검 사용자만 헤더로 모델 경로를 바꾼다(허용 모델만)
   await inFreshContext(() =>
     withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
       adoptSimRoutes("rc:real-user", JSON.stringify({ basic: "anthropic: claude-haiku-5-5" }));
-      assert.equal(routeFor("chat").model, "gpt-4o-mini");
+      assert.equal(routeFor("translate").model, "gpt-4o-mini");
     }),
   );
   await inFreshContext(() =>
     withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
       adoptSimRoutes("simcheck-x", "{nope");
-      assert.equal(routeFor("chat").model, "gpt-4o-mini");
+      assert.equal(routeFor("translate").model, "gpt-4o-mini");
     }),
   );
 });

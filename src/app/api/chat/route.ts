@@ -1,4 +1,4 @@
-import { completeChat, simErrorDetail } from "@/lib/server/llm";
+import { completeChat, routeFor, simErrorDetail } from "@/lib/server/llm";
 import { chatBonusToday } from "@/lib/server/adChat";
 import { takeAiHelp } from "@/lib/server/aiHelp";
 import { meterRequest, recordTokens } from "@/lib/server/meterRequest";
@@ -1232,6 +1232,9 @@ export async function POST(request: NextRequest) {
       recentLines,
       {
         ...turnOptions,
+        // 옛 앱(스트림 없음): Claude는 틀린 줄도 뜻한 대로 알아듣고 답해서 다시 답하기를 뺀다 —
+        // 두 번 기다리면 약 4.5초, 빼면 약 2초(2026-10-22 비교). OpenAI 모델이면 예전처럼.
+        skipReread: routeFor("chat").provider === "anthropic",
         onReread: () => void meterRequest(request, "chatReread"),
       },
     );

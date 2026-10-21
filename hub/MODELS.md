@@ -13,6 +13,7 @@
   - 값이 없으면 아래 표의 OpenAI 모델을 그대로 씁니다.
   - Claude 호출이 실패하면 그 기능의 OpenAI 모델로 한 번 더 시도합니다.
   - 사용자 결정(2026-10-21): **기본은 Haiku 5.5, 중요한 기능(high)만 고가 모델**. 2단계에 Vercel `ANTHROPIC_API_KEY`가 필요합니다.
+  - **2026-10-22 전환:** 채팅·표현 카드가 Haiku 5.5(`llm.ts` `DEFAULT_ROUTES`). 되돌리기는 Vercel `MODEL_ROUTES`에 `{"chat":"openai: gpt-4o-mini","howToSay":"openai: gpt-4o-mini"}`.
 - 주의: Claude가 실패했을 때 다시 시도하는 OpenAI 모델도 종료일이 지나면 같이 꺼집니다. 통화 돌아보기(`roleplayReview`)의 대비 모델 gpt-5-mini는 **2026-12-11** 종료라, 그 전에 Claude로 옮기거나 `OPENAI_REVIEW_MODEL`을 바꿔야 합니다.
 - **받아쓰기·목소리·통화 턴 스트리밍**은 OpenAI만 씁니다(`llm.ts` 밖). 대체할 모델은 아래 표에 있습니다.
 
