@@ -43,6 +43,8 @@ Artifact 도구로 **위 주소(url)에** 다시 올린다. 칸·설명·이어�
 - **수동:** 지도 페이지 맨 위 **지금 갱신** 버튼(예약 작업을 바로 실행, 약 5분 — 처음 한 번 Claude Code Remote 허락), 또는 claude.ai 예약 작업 목록에서 "서비스 지도 갱신" → 지금 실행, 또는 아무 채팅에서 "서비스 지도 갱신 돌려".
   버튼은 `scripts/service-map.template.html` `REFRESH_TRIGGER`(예약 작업 id)를 부른다 — 예약 작업을 지우고 다시 만들면 그 id를 고친다. 페이지는 `mcp` 권한(Claude Code Remote `fire_trigger`)을 달고 있어, 예약 작업이 다시 올릴 때 capabilities를 넘기지 않으면 그대로 남는다.
 - **확인:** 페이지 맨 위 "이번 확인 …"(확인 시각·창구 그림 새로 찍은 수·갱신 기록, 칸 이름을 누르면 그 칸이 열림), 예약 작업 목록의 마지막 실행.
+- **폰 화면 지도(따로 보기, 2026-10-21 사용자 요청):** https://claude.ai/artifact/PSiSUHGHeJntdX7TBt8taT — 같은 칸·그림을 앱처럼 생긴 폰 화면(상단바·하단 탭·창구 모드·iOS 1차)으로. 탭·버튼을 누르면 그 기능의 스크린샷과 설명, "실제로 열기"는 웹 앱의 그 화면(`?screen=…`)을 새 창에.
+  다시 만들기: `npm run service-map` 다음 `npm run phone-map`(`scripts/phone-map.mjs`·`phone-map.template.html`) → `tmp/phone-map/index.html`과 `files.json`을 위 주소에. 구조도 지도는 그대로 둔다.
 
 ## 쓰는 법
 

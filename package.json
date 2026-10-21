@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "service-map": "node scripts/service-map.mjs",
+    "phone-map": "node scripts/phone-map.mjs",
     "dev": "next dev",
     "build": "next build",
     "build:capacitor": "node scripts/build-capacitor.mjs",

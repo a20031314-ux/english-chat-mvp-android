@@ -1,0 +1,389 @@
+<title>languagebank 폰 화면 지도</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* 레이아웃: 왼쪽 폰(앱 그대로의 검정 화면, 테마와 상관없이 고정) + 오른쪽 설명 판. 좁으면 폰 위·판 아래. */
+:root {
+  --bg: #eceef2;
+  --surface: #ffffff;
+  --sunk: #f5f6f9;
+  --ink: #15171c;
+  --muted: #596173;
+  --line: #d6dae2;
+  --accent: #4252c9;
+  --accent-soft: #e3e6fb;
+  --good: #11845b;
+  --warn: #a45f00;
+  /* 폰 안은 앱 화면 규칙(hub/DESIGN.md) 그대로: 검정 바탕 하나 */
+  --ph-canvas: #000000;
+  --ph-surface: #121212;
+  --ph-raised: #1c1c1c;
+  --ph-line: rgba(255, 255, 255, 0.12);
+  --ph-ink: #f4f4f2;
+  --ph-muted: #94a3b8;
+  --ph-platinum: #e8e8e4;
+  --ph-bezel: #2b2d33;
+  --font-body: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c0e12; --surface: #161920; --sunk: #1b1f27; --ink: #eceef3; --muted: #9ba3b3; --line: #2a303b;
+    --accent: #9aa5ff; --accent-soft: #232a4d; --good: #43c493; --warn: #e3a64a; --ph-bezel: #3a3d45;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c0e12; --surface: #161920; --sunk: #1b1f27; --ink: #eceef3; --muted: #9ba3b3; --line: #2a303b;
+  --accent: #9aa5ff; --accent-soft: #232a4d; --good: #43c493; --warn: #e3a64a; --ph-bezel: #3a3d45;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body {
+  background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.6;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 24px 48px;
+}
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.wrap { max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 20px; }
+header { display: flex; flex-wrap: wrap; gap: 8px 20px; align-items: end; justify-content: space-between; }
+header h1 { margin: 0; font-size: 26px; line-height: 1.25; letter-spacing: -0.01em; text-wrap: balance; }
+header p { margin: 4px 0 0; color: var(--muted); font-size: 14px; }
+.meta { font-family: var(--font-mono); font-size: 12px; color: var(--muted); }
+.meta a { color: var(--accent); }
+
+.controls { display: flex; flex-wrap: wrap; gap: 12px 24px; align-items: center; }
+.group { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.group-label { font-size: 12px; letter-spacing: 0.06em; color: var(--muted); margin-right: 4px; }
+.chip {
+  border: 1px solid var(--line); background: var(--surface); border-radius: 999px; padding: 5px 12px; font-size: 13px;
+  cursor: pointer; display: inline-flex; gap: 6px; align-items: center; white-space: nowrap;
+}
+.chip:hover { border-color: var(--accent); }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--surface); }
+.chip .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor; opacity: 0.55; }
+
+.stage { display: grid; grid-template-columns: 380px minmax(0, 1fr); gap: 28px; align-items: start; }
+@media (max-width: 820px) { .stage { grid-template-columns: minmax(0, 1fr); } }
+
+/* ── 폰 ── */
+.phone-col { position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); display: flex; justify-content: center; }
+@media (max-width: 820px) { .phone-col { position: static; } }
+.phone {
+  width: 100%; max-width: 372px; background: var(--ph-bezel); border-radius: 46px; padding: 11px;
+  box-shadow: 0 18px 40px rgba(10, 12, 20, 0.22);
+}
+.screen {
+  background: var(--ph-canvas); color: var(--ph-ink); border-radius: 36px; overflow: hidden;
+  display: flex; flex-direction: column; height: min(760px, 82vh); min-height: 560px;
+}
+.status { display: flex; justify-content: space-between; padding: 10px 26px 4px; font-size: 12px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.status .notch { width: 92px; height: 22px; background: var(--ph-bezel); border-radius: 14px; }
+.topbar { display: flex; align-items: center; gap: 6px; padding: 6px 12px 8px; border-bottom: 1px solid var(--ph-line); }
+.tb {
+  background: var(--ph-surface); border: 1px solid var(--ph-line); color: var(--ph-ink); border-radius: 999px;
+  padding: 3px 9px; font-size: 12px; cursor: pointer; display: inline-flex; align-items: center; gap: 4px;
+}
+.tb.round { width: 28px; height: 28px; padding: 0; justify-content: center; }
+.tb:hover, .tb.on { border-color: var(--ph-platinum); }
+.door-tag { font-size: 11px; font-weight: 700; letter-spacing: 0.04em; padding: 2px 8px; border-radius: 6px; background: var(--ph-platinum); color: #000; }
+.spacer { flex: 1; }
+.view { position: relative; flex: 1; min-height: 0; background: var(--ph-canvas); }
+.view-scroll { position: absolute; inset: 0; overflow-y: auto; }
+.view-scroll img { display: block; width: 100%; height: auto; }
+.empty { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 24px; text-align: center; color: var(--ph-muted); font-size: 13px; }
+.empty strong { color: var(--ph-ink); font-size: 15px; }
+.nav {
+  position: absolute; top: 50%; transform: translateY(-50%); width: 34px; height: 34px; border-radius: 50%;
+  border: 1px solid var(--ph-line); background: rgba(18, 18, 18, 0.82); color: var(--ph-ink); cursor: pointer; font-size: 16px;
+}
+.nav.prev { left: 8px; } .nav.next { right: 8px; }
+.counter {
+  position: absolute; bottom: 10px; left: 50%; transform: translateX(-50%); background: rgba(18, 18, 18, 0.85);
+  border: 1px solid var(--ph-line); border-radius: 999px; padding: 2px 10px; font-size: 11px; font-variant-numeric: tabular-nums;
+}
+.inside { display: flex; gap: 6px; overflow-x: auto; padding: 8px 10px; border-top: 1px solid var(--ph-line); background: var(--ph-surface); scrollbar-width: none; }
+.inside::-webkit-scrollbar { display: none; }
+.inside .tb { white-space: nowrap; }
+.inside .lbl { font-size: 11px; color: var(--ph-muted); align-self: center; white-space: nowrap; }
+.tabs { display: grid; border-top: 1px solid var(--ph-line); padding: 6px 4px 14px; }
+.tab {
+  background: none; border: 0; color: var(--ph-muted); display: flex; flex-direction: column; align-items: center; gap: 2px;
+  font-size: 11px; cursor: pointer; padding: 4px 0; border-radius: 10px;
+}
+.tab svg { width: 22px; height: 22px; stroke: currentColor; fill: none; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.tab.on { color: var(--ph-ink); }
+.tab.on svg { stroke-width: 2.2; }
+.tab:hover { color: var(--ph-ink); }
+
+/* ── 설명 판 ── */
+.panel { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 22px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.eyebrow { font-size: 12px; letter-spacing: 0.08em; color: var(--muted); display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.pill { font-size: 11px; letter-spacing: 0.02em; padding: 1px 8px; border-radius: 999px; border: 1px solid currentColor; }
+.pill.ok { color: var(--good); } .pill.wait { color: var(--warn); }
+.panel h2 { margin: 2px 0 0; font-size: 24px; line-height: 1.3; text-wrap: balance; }
+.sub { color: var(--muted); font-size: 14px; margin: 0; }
+.summary { margin: 0; max-width: 62ch; }
+.actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+.open {
+  display: inline-flex; align-items: center; gap: 6px; background: var(--accent); color: var(--surface); text-decoration: none;
+  border-radius: 10px; padding: 8px 14px; font-weight: 500; font-size: 14px;
+}
+.open:hover { filter: brightness(1.08); }
+.open-note { font-size: 13px; color: var(--muted); }
+.step { background: var(--sunk); border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; display: flex; flex-direction: column; gap: 6px; }
+.step h3 { margin: 0; font-size: 16px; }
+.step p { margin: 0; font-size: 14px; max-width: 62ch; }
+.from { font-size: 12px; color: var(--muted); font-family: var(--font-mono); }
+.alts { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; font-size: 12px; color: var(--muted); }
+.thumbs { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 4px; }
+.thumb {
+  flex: 0 0 auto; width: 74px; border: 2px solid transparent; border-radius: 10px; padding: 0; background: var(--ph-canvas);
+  cursor: pointer; overflow: hidden; display: flex; flex-direction: column;
+}
+.thumb img { display: block; width: 100%; height: 110px; object-fit: cover; object-position: top; }
+.thumb span { font-size: 10px; color: var(--ph-ink); padding: 3px 4px; background: var(--ph-surface); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.thumb.noimg { height: 128px; align-items: center; justify-content: center; color: var(--ph-muted); font-size: 11px; padding: 6px; }
+.thumb[aria-pressed="true"] { border-color: var(--accent); }
+.section-title { font-size: 12px; letter-spacing: 0.08em; color: var(--muted); margin: 0 0 6px; }
+.path { font-family: var(--font-mono); font-size: 13px; background: var(--sunk); border-radius: 8px; padding: 8px 10px; overflow-x: auto; white-space: nowrap; }
+ul.points { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 4px; font-size: 14px; }
+.related { display: flex; flex-wrap: wrap; gap: 6px; }
+.code { font-size: 13px; color: var(--muted); }
+@media (prefers-reduced-motion: no-preference) { .view-scroll img { animation: fade 0.18s ease-out; } @keyframes fade { from { opacity: 0.4; } to { opacity: 1; } } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>폰 화면 지도</h1>
+      <p>앱처럼 생긴 화면에서 탭과 버튼을 누르면 그 기능의 스크린샷과 설명이 떠요. 실제로 열기는 웹 앱의 그 화면을 새 창에 열어요.</p>
+    </div>
+    <div class="meta" id="meta"></div>
+  </header>
+
+  <div class="controls">
+    <div class="group" id="modes"><span class="group-label">앱</span></div>
+    <div class="group" id="doors"><span class="group-label">창구 모드</span></div>
+    <div class="group" id="entries"><span class="group-label">들어오는 길</span></div>
+  </div>
+
+  <div class="stage">
+    <div class="phone-col">
+      <div class="phone">
+        <div class="screen">
+          <div class="status"><span>9:41</span><span class="notch" aria-hidden="true"></span><span>LTE</span></div>
+          <div class="topbar" id="topbar"></div>
+          <div class="view" id="view"></div>
+          <div class="inside" id="inside"></div>
+          <nav class="tabs" id="tabs" aria-label="하단 탭"></nav>
+        </div>
+      </div>
+    </div>
+    <section class="panel" id="panel" aria-live="polite"></section>
+  </div>
+</div>
+
+<script>
+const DATA = /*PHONE_DATA*/null;
+const MAP_URL = "https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y";
+const byId = Object.fromEntries(DATA.nodes.map((n) => [n.id, n]));
+const TIER = { entry: "들어오는 길", shell: "앱 틀", tab: "하단 탭", child: "탭 안", anywhere: "어디서나 열림" };
+const ICONS = {
+  talk: '<path d="M4 5h16v11H9l-5 4z"/>',
+  call: '<path d="M6 3h3l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v3a2 2 0 0 1-2 2A16 16 0 0 1 4 5a2 2 0 0 1 2-2z"/>',
+  video: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9l5 3-5 3z"/>',
+  people: '<circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M15.5 14.2A5 5 0 0 1 21 19"/>',
+  room: '<rect x="9" y="3" width="6" height="11" rx="3"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3"/>',
+  my: '<circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/>',
+  dice: '<rect x="4" y="4" width="16" height="16" rx="3"/><circle cx="9" cy="9" r="1"/><circle cx="15" cy="15" r="1"/><circle cx="15" cy="9" r="1"/><circle cx="9" cy="15" r="1"/>',
+};
+const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+
+const state = { mode: "app", node: "talk", step: 0, alt: -1 };
+
+function tabsNow() {
+  const door = DATA.doors.find((d) => d.id === state.mode);
+  return door ? door.tabs : DATA.modes[state.mode].tabs;
+}
+function tabOf(id) {
+  const n = byId[id];
+  if (!n) return null;
+  const tabs = tabsNow();
+  if (tabs.some((t) => t.node === id)) return id;
+  if (n.parent && tabs.some((t) => t.node === n.parent)) return n.parent;
+  return null;
+}
+function insideOf(tabNode) {
+  if (!tabNode) return [];
+  const n = byId[tabNode];
+  const kids = DATA.nodes.filter((x) => x.parent === tabNode).map((x) => x.id);
+  const anywhere = (n.links || []).filter((id) => byId[id] && byId[id].tier === "anywhere");
+  return [...kids, ...anywhere];
+}
+
+function select(id, opts = {}) {
+  if (!byId[id]) return;
+  state.node = id;
+  state.step = 0;
+  state.alt = -1;
+  if (opts.keepMode !== true) {
+    const n = byId[id];
+    if (n.kind === "door") {
+      const d = DATA.doors.find((x) => x.node === id);
+      if (d) state.mode = d.id;
+    }
+  }
+  try { history.replaceState(null, "", "#" + id); } catch {}
+  render();
+}
+
+function renderControls() {
+  const modes = document.getElementById("modes");
+  modes.querySelectorAll("button").forEach((b) => b.remove());
+  for (const [key, m] of Object.entries(DATA.modes)) {
+    const b = document.createElement("button");
+    b.className = "chip"; b.type = "button"; b.textContent = m.label;
+    b.setAttribute("aria-pressed", String(state.mode === key));
+    b.onclick = () => { state.mode = key; const first = DATA.modes[key].tabs[0].node; select(tabOf(state.node) ? state.node : first, { keepMode: true }); };
+    modes.append(b);
+  }
+  const doors = document.getElementById("doors");
+  doors.querySelectorAll("button").forEach((b) => b.remove());
+  for (const d of DATA.doors) {
+    const b = document.createElement("button");
+    b.className = "chip"; b.type = "button";
+    const n = byId[d.node];
+    b.innerHTML = `<span class="dot"></span>${esc(d.name)}`;
+    b.title = `${d.host}${n && n.status ? " · " + n.status : ""}`;
+    b.setAttribute("aria-pressed", String(state.mode === d.id));
+    b.onclick = () => { state.mode = d.id; select(d.node, { keepMode: true }); };
+    doors.append(b);
+  }
+  const entries = document.getElementById("entries");
+  entries.querySelectorAll("button").forEach((b) => b.remove());
+  for (const n of DATA.nodes.filter((x) => x.tier === "entry" && x.kind !== "door")) {
+    const b = document.createElement("button");
+    b.className = "chip"; b.type = "button"; b.textContent = n.title;
+    b.setAttribute("aria-pressed", String(state.node === n.id));
+    b.onclick = () => select(n.id, { keepMode: true });
+    entries.append(b);
+  }
+}
+
+function renderPhone() {
+  const door = DATA.doors.find((d) => d.id === state.mode);
+  const top = document.getElementById("topbar");
+  const on = (id) => (state.node === id ? " on" : "");
+  top.innerHTML =
+    (door ? `<span class="door-tag">${esc(door.name)}</span>` : "") +
+    `<button class="tb${on("shell")}" data-go="shell" title="학습 언어 · UI 언어">🇺🇸 영어</button>` +
+    `<button class="tb${on("shell")}" data-go="shell" title="UI 언어">한국어</button>` +
+    `<span class="spacer"></span>` +
+    `<button class="tb${on("billing")}" data-go="billing" title="포인트 · 플랜">◆ 80</button>` +
+    `<button class="tb round${on("shell")}" data-go="shell" title="? 사용법">?</button>` +
+    `<button class="tb round${on("feedback")}" data-go="feedback" title="💬 의견 보내기">💬</button>`;
+
+  const n = byId[state.node];
+  const steps = n.steps;
+  const view = document.getElementById("view");
+  const s = steps[state.step];
+  const img = s ? (state.alt >= 0 && s.alts[state.alt] ? s.alts[state.alt].img : s.img) : null;
+  let html = "";
+  if (img) html += `<div class="view-scroll"><img src="${esc(img)}" alt="${esc(s.heading)}"></div>`;
+  else html += `<div class="empty"><strong>${esc(n.title)}</strong><span>${s ? "이 장면은 아직 그림이 없어요." : "이 칸은 아직 그림이 없어요."}</span><span>스크린샷 모음에서 이 칸 그림이 생기면 다음 갱신 때 붙어요.</span></div>`;
+  if (steps.length > 1) {
+    html += `<button class="nav prev" type="button" aria-label="이전 장면" data-step="-1">‹</button><button class="nav next" type="button" aria-label="다음 장면" data-step="1">›</button>`;
+    html += `<span class="counter">${state.step + 1} / ${steps.length}</span>`;
+  }
+  view.innerHTML = html;
+
+  const tabNode = tabOf(state.node);
+  const inside = document.getElementById("inside");
+  const list = insideOf(tabNode);
+  inside.hidden = list.length === 0;
+  inside.innerHTML = list.length
+    ? `<span class="lbl">이 탭 안</span>` +
+      (tabNode ? `<button class="tb${on(tabNode)}" data-go="${tabNode}">${esc(byId[tabNode].title)} 첫 화면</button>` : "") +
+      list.map((id) => `<button class="tb${on(id)}" data-go="${id}">${esc(byId[id].title)}</button>`).join("")
+    : "";
+
+  const tabs = tabsNow();
+  const nav = document.getElementById("tabs");
+  nav.style.gridTemplateColumns = `repeat(${tabs.length}, minmax(0, 1fr))`;
+  nav.innerHTML = tabs
+    .map((t) => `<button class="tab${t.node === tabNode ? " on" : ""}" type="button" data-go="${t.node}" aria-current="${t.node === tabNode ? "page" : "false"}"><svg viewBox="0 0 24 24" aria-hidden="true">${ICONS[t.icon] || ICONS.talk}</svg>${esc(t.label)}</button>`)
+    .join("");
+}
+
+function openUrl(n) {
+  const door = DATA.doors.find((d) => d.id === state.mode);
+  if (door) {
+    const t = door.tabs.find((x) => x.node === n.id || x.node === n.parent);
+    if (t && t.open) return t.open;
+  }
+  return n.open;
+}
+
+function renderPanel() {
+  const n = byId[state.node];
+  const p = document.getElementById("panel");
+  const s = n.steps[state.step];
+  const statusPill = n.status ? `<span class="pill ${n.status === "열림" ? "ok" : "wait"}">${esc(n.status)}</span>` : "";
+  const url = openUrl(n);
+  const openHtml = url
+    ? `<a class="open" href="${esc(url)}" target="_blank" rel="noopener">실제로 열기 ↗</a><span class="open-note">${esc(url.replace(/^https:\/\//, ""))}</span>`
+    : `<span class="open-note">아직 열 수 있는 주소가 없어요${n.status ? ` (${esc(n.status)})` : ""}.</span>`;
+  const alts = s && s.alts.length
+    ? `<div class="alts">다른 언어 조합: <button class="chip" type="button" data-alt="-1" aria-pressed="${state.alt === -1}">대표</button>${s.alts.map((a, i) => `<button class="chip" type="button" data-alt="${i}" aria-pressed="${state.alt === i}">${esc(a.label)}</button>`).join("")}</div>`
+    : "";
+  const thumbs = n.steps.length > 1
+    ? `<div><p class="section-title">장면 ${n.steps.length}개</p><div class="thumbs">${n.steps.map((st, i) => st.img
+        ? `<button class="thumb" type="button" data-to="${i}" aria-pressed="${i === state.step}"><img src="${esc(st.img)}" alt="" loading="lazy"><span>${esc(st.heading)}</span></button>`
+        : `<button class="thumb noimg" type="button" data-to="${i}" aria-pressed="${i === state.step}">${esc(st.heading)}</button>`).join("")}</div></div>`
+    : "";
+  const related = (n.links || []).filter((id) => byId[id]);
+  p.innerHTML = `
+    <div>
+      <div class="eyebrow">${esc(TIER[n.tier] || "")}${n.parent && byId[n.parent] ? ` · ${esc(byId[n.parent].title)}` : ""} ${statusPill}</div>
+      <h2>${esc(n.title)}</h2>
+      <p class="sub">${esc(n.sub)}</p>
+    </div>
+    <p class="summary">${esc(n.summary)}</p>
+    <div class="actions">${openHtml}</div>
+    ${s ? `<div class="step"><h3>${esc(s.heading)}</h3>${s.body.map((b) => `<p>${esc(b)}</p>`).join("")}<span class="from">${esc(s.from)}</span>${alts}</div>` : ""}
+    ${thumbs}
+    ${n.path ? `<div><p class="section-title">가는 길</p><div class="path">${esc(n.path)}</div></div>` : ""}
+    ${n.points.length ? `<div><p class="section-title">알아 둘 것</p><ul class="points">${n.points.map((x) => `<li>${esc(x)}</li>`).join("")}</ul></div>` : ""}
+    ${related.length ? `<div><p class="section-title">같이 쓰는 곳</p><div class="related">${related.map((id) => `<button class="chip" type="button" data-go="${id}">${esc(byId[id].title)}</button>`).join("")}</div></div>` : ""}
+    ${n.code ? `<p class="code">코드 영역: ${esc(n.code.title)} · 화면 ${n.code.screens} · API ${n.code.apis}</p>` : ""}`;
+}
+
+function render() {
+  renderControls();
+  renderPhone();
+  renderPanel();
+}
+
+document.addEventListener("click", (e) => {
+  const go = e.target.closest("[data-go]");
+  if (go) { select(go.dataset.go, { keepMode: true }); return; }
+  const step = e.target.closest("[data-step]");
+  if (step) {
+    const len = byId[state.node].steps.length;
+    state.step = (state.step + Number(step.dataset.step) + len) % len; state.alt = -1; renderPhone(); renderPanel(); return;
+  }
+  const to = e.target.closest("[data-to]");
+  if (to) { state.step = Number(to.dataset.to); state.alt = -1; renderPhone(); renderPanel(); return; }
+  const alt = e.target.closest("[data-alt]");
+  if (alt) { state.alt = Number(alt.dataset.alt); renderPhone(); renderPanel(); }
+});
+
+document.getElementById("meta").innerHTML =
+  `${esc(DATA.builtAt)} · ${esc(DATA.commit)} · <a href="${MAP_URL}" target="_blank" rel="noopener">구조도로 보기 ↗</a>`;
+const start = (location.hash || "").slice(1);
+if (byId[start]) select(start); else render();
+</script>

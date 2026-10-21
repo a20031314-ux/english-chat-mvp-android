@@ -477,6 +477,8 @@ if (missingCount) console.log(`지도에 없는 것 ${missingCount}: 사용법 �
 console.log(changes.length ? `바뀐 칸 ${changes.length}: ${changes.map((c) => `${c.title}(${c.what})`).join(", ")}` : "바뀐 칸 없음");
 
 const data = { nodes, commit, apiCount, builtAt: kst, history: snapshot.history, changesToday: changes.length, captured, webTotal: WEB_TARGETS.length };
+// 폰 화면 지도(scripts/phone-map.mjs)가 같은 칸·그림을 쓴다.
+fs.writeFileSync(path.join(OUT_DIR, "data.json"), JSON.stringify(data));
 const template = fs.readFileSync(path.join(ROOT, "scripts/service-map.template.html"), "utf8");
 fs.writeFileSync(path.join(OUT_DIR, "index.html"), template.replace("/*MAP_DATA*/null", JSON.stringify(data).replace(/</g, "\\u003c")));
 const bytes = [...usedFiles].reduce((sum, rel) => sum + fs.statSync(path.join(OUT_DIR, rel)).size, 0);
