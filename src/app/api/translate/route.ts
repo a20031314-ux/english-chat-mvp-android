@@ -3,8 +3,7 @@ import { takeAiHelp } from "@/lib/server/aiHelp";
 import { NextRequest } from "next/server";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
-import { meterRequest } from "@/lib/server/meterRequest";
-import { requestUserId } from "@/lib/server/premiumRequest";
+import { meterRequest, simDetail } from "@/lib/server/meterRequest";
 import { spokenTranslateSystem } from "@/lib/spokenTranslate";
 import { asTranslationSourceType } from "@/lib/naturalTranslation";
 import { coerceLanguageCode, isInterfaceLanguage } from "@/lib/learningLanguages";
@@ -130,8 +129,6 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { translated });
   } catch (error) {
     console.error("[translate]", error);
-    // 점검 사용자에게만 실패 원인(모델 바꾸기 시험에서 키·모델 이름 문제를 보려고). 키 값은 메시지에 없다.
-    const detail = /^rc:simcheck-/.test(requestUserId(request)) ? String((error as Error)?.message ?? error).slice(0, 300) : undefined;
-    return jsonWithCors(request, { error: "TRANSLATION_FAILED", ...(detail ? { detail } : {}) }, { status: 500 });
+    return jsonWithCors(request, { error: "TRANSLATION_FAILED", ...simDetail(request, error) }, { status: 500 });
   }
 }

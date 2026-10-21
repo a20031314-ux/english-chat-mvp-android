@@ -6,7 +6,7 @@ import { isIdentified } from "@/lib/server/identity";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { getDailyUsed, incrementDailyUsed } from "@/lib/server/entitlementStore";
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
-import { meterRequest } from "@/lib/server/meterRequest";
+import { meterRequest, simDetail } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { readGrowth, readGrowthRecord } from "@/lib/server/growthStore";
 import { readWeakRecord } from "@/lib/server/weakPointStore";
@@ -109,12 +109,13 @@ export async function POST(request: NextRequest) {
         },
       ],
     });
-    const parsed = parseAnswer(completion.choices[0]?.message?.content ?? "");
-    if (!parsed) return jsonWithCors(request, { error: "ASK_FAILED" }, { status: 502 });
+    const raw = completion.choices[0]?.message?.content ?? "";
+    const parsed = parseAnswer(raw);
+    if (!parsed) return jsonWithCors(request, { error: "ASK_FAILED", ...simDetail(request, `unparsed: ${raw}`) }, { status: 502 });
     if (!isPremium) await incrementDailyUsed(userId);
     return jsonWithCors(request, parsed);
   } catch (error) {
     console.error("[learner/ask]", error);
-    return jsonWithCors(request, { error: "ASK_FAILED" }, { status: 502 });
+    return jsonWithCors(request, { error: "ASK_FAILED", ...simDetail(request, error) }, { status: 502 });
   }
 }

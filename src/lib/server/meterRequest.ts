@@ -83,3 +83,13 @@ export async function recordTokens(
   }
 }
 
+
+/**
+ * 점검 사용자(`rc:simcheck-…`)에게만 실패 원인을 붙여 돌려줄 때 — 모델 바꾸기 시험에서 키·모델·모양 문제를 보려고.
+ * 실제 사용자에게는 아무것도 붙지 않는다. 키 값은 오류 메시지에 들어 있지 않다.
+ */
+export function simDetail(request: NextRequest, value: unknown): { detail?: string } {
+  if (!/^rc:simcheck-/.test(requestUserId(request))) return {};
+  const text = value instanceof Error ? value.message : String(value ?? "");
+  return { detail: text.slice(0, 300) };
+}
