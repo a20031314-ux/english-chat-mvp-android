@@ -23,6 +23,7 @@ import type OpenAI from "openai";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { targetLanguageFocusHints } from "@/lib/languageFocus";
 import { shouldKeepLearnerLine } from "@/lib/correctionGuard";
+import { findIrregularSlips, koreanSlipHint, repairIrregularSlips } from "@/lib/koreanSlips";
 import {
   getDailyUsed,
   incrementDailyUsed,
@@ -290,7 +291,7 @@ ${tutorBlock}
 ${ownLanguageBlock}
 ${imageBlock}
 
-The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only).
+The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only). It may also have "noticed": mistakes a rule checker already found in message — trust it, fix them in corrected and explain them.
 
 ${voice}
 ${spoken}
@@ -518,11 +519,17 @@ async function runChat(
   recent: string[] = [],
   options: ChatTurnOptions & { onReread?: () => void } = {},
 ): Promise<ChatPayload> {
+  // 한국어 학습: 모델이 자주 놓치는 불규칙 활용·윗사람께 반말을 규칙으로 먼저 찾아 알려 준다(koreanSlips.ts).
+  const koSlips =
+    langs.targetLanguage === "ko" && !options.ownLanguage ? findIrregularSlips(message) : [];
+  const koHint =
+    langs.targetLanguage === "ko" && !options.ownLanguage ? koreanSlipHint(message) : "";
   const payload = JSON.stringify({
     message,
     recent: recent.slice(-8),
     instruction:
       "Reply to message. Use recent only if this turn still refers to it.",
+    ...(koHint ? { noticed: koHint } : {}),
     hasImage: Boolean(options.imageDataUrl),
   });
   const userContent = options.imageDataUrl
@@ -579,8 +586,13 @@ async function runChat(
   let natural = asText(c?.natural) || corrected;
   let explanation =
     asText(c?.explanation) || asText(parsed.explanation);
+  // 모델이 불규칙 활용 실수를 고친 문장에 그대로 두면 바로잡는다.
+  if (koSlips.length) {
+    corrected = repairIrregularSlips(corrected, koSlips);
+    natural = repairIrregularSlips(natural, koSlips);
+  }
   // 고칠 게 없는 줄(문장부호만 다름, ?·이모지, 짧은 답을 문장으로 늘림)은 고침·설명을 비운다.
-  if (shouldKeepLearnerLine(message, corrected)) {
+  if (!koSlips.length && shouldKeepLearnerLine(message, corrected)) {
     corrected = message;
     natural = shouldKeepLearnerLine(message, natural) ? message : natural;
     explanation = "";
