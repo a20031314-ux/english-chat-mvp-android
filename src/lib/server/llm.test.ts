@@ -131,6 +131,7 @@ test("OpenAI 메시지를 Anthropic 요청으로", () => {
   });
   assert.equal(wantsJson, true);
   assert.equal(body.model, "claude-haiku-5-5");
+  assert.deepEqual(body.tool_choice, { type: "tool", name: "respond" });
   assert.equal(body.max_tokens, 300);
   assert.equal(body.temperature, undefined); // 5.5 세대는 temperature를 거절
   assert.match(String(body.system), /^You are a tutor\.\n\nLearner brief\.\n\n.*JSON/s);
@@ -154,6 +155,7 @@ test("첫 메시지가 user가 아니면 앞에 하나 넣고, 토큰 한도 기
   assert.equal((body.messages as Array<{ role: string }>)[0].role, "user");
   assert.equal(body.temperature, undefined);
   assert.equal(body.system, undefined);
+  assert.equal(body.tools, undefined);
 });
 
 test("JSON만 남기기", () => {

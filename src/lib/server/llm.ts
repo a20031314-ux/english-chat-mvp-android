@@ -182,7 +182,17 @@ type AnthropicBlock =
 type AnthropicMessage = { role: "user" | "assistant"; content: AnthropicBlock[] };
 
 const JSON_ONLY =
-  "Return ONLY one valid JSON object — no prose before or after it, no markdown code fences.";
+  "Answer by calling the respond tool: its input is the JSON object these instructions describe (same keys).";
+
+/**
+ * JSON을 바라는 호출은 도구 하나를 꼭 부르게 한다 — 도구 입력은 API가 JSON으로 받아 주므로
+ * 글 속 따옴표·줄바꿈이 깨질 일이 없다(글로 받던 때 한국어 답에서 "Unterminated string"이 났음, 2026-10-22).
+ */
+const RESPOND_TOOL = {
+  name: "respond",
+  description: "Your whole answer, as the JSON object the instructions describe.",
+  input_schema: { type: "object", additionalProperties: true },
+};
 
 function toBlocks(content: ChatCompletionMessageParam["content"]): AnthropicBlock[] {
   if (content == null) return [];
@@ -234,6 +244,10 @@ export function toAnthropicRequest(model: string, params: Omit<CreateParams, "mo
     2048;
   const body: Record<string, unknown> = { model, max_tokens: maxTokens, messages };
   if (system.length) body.system = system.join("\n\n");
+  if (wantsJson) {
+    body.tools = [RESPOND_TOOL];
+    body.tool_choice = { type: "tool", name: RESPOND_TOOL.name };
+  }
   // temperature는 넘기지 않는다: Claude 5.5 세대는 받으면 400 "temperature is deprecated"(운영 확인 2026-10-21).
   return { body, wantsJson };
 }
@@ -263,12 +277,13 @@ async function anthropicComplete(model: string, params: Omit<CreateParams, "mode
   }
   const data = (await response.json()) as {
     id?: string;
-    content?: Array<{ type: string; text?: string }>;
+    content?: Array<{ type: string; text?: string; input?: unknown }>;
     stop_reason?: string;
     usage?: { input_tokens?: number; output_tokens?: number };
   };
   const raw = (data.content ?? []).filter((b) => b.type === "text").map((b) => b.text ?? "").join("");
-  const text = wantsJson ? extractJson(raw) : raw;
+  const tool = wantsJson ? (data.content ?? []).find((b) => b.type === "tool_use") : undefined;
+  const text = tool && tool.input && typeof tool.input === "object" ? JSON.stringify(tool.input) : wantsJson ? extractJson(raw) : raw;
   const prompt = data.usage?.input_tokens ?? 0;
   const completion = data.usage?.output_tokens ?? 0;
   return {
