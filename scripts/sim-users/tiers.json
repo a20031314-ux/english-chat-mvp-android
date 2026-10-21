@@ -7,32 +7,64 @@
   },
   "lang": {
     "en": {
-      "ok": ["I usually walk to work when the weather is nice.", "We watched a movie together last night.", "Could you recommend a good place to eat around here?", "My sister is learning to play the guitar.", "I have been living in this city for three years.", "If I had more time, I would travel more."],
+      "ok": ["I usually walk to work when the weather is nice.", "We watched a movie together last night.", "Could you recommend a good place to eat around here?", "My sister is learning to play the guitar.", "I have been living in this city for three years.", "If I had more time, I would travel more.", "I'm going to visit my grandparents this weekend.", "Have you ever been to Busan?", "I'm not sure, but I think the store closes at nine.", "Thanks for helping me with my homework yesterday.", "What do you usually do on weekends?", "I'd rather stay home tonight because it's raining.", "My phone died, so I couldn't text you back.", "It took me two hours to get here because of the traffic.", "Sorry I'm late, the bus didn't come.", "I'm looking forward to seeing you next week.", "The meeting got pushed back to Friday.", "I used to play the piano when I was a kid.", "lol same, I was so tired after work today"],
       "light": [
         { "text": "Yesterday I go to the park with my dog.", "tags": ["tense"] },
         { "text": "She don't like spicy food.", "tags": ["agreement"] },
         { "text": "I am interesting in learning languages.", "tags": ["vocab"] },
         { "text": "We arrived to the station late.", "tags": ["particle"] },
         { "text": "I like very much this song.", "tags": ["word_order"] },
-        { "text": "I recieved your message this morning.", "tags": ["spelling"] }
+        { "text": "I recieved your message this morning.", "tags": ["spelling"] },
+        { "text": "I am agree with your opinion.", "tags": ["vocab"] },
+        { "text": "I went to there last weekend.", "tags": ["particle"] },
+        { "text": "She is my best friend since high school.", "tags": ["tense"] },
+        { "text": "I have many homeworks today.", "tags": ["agreement"] },
+        { "text": "I didn't went to class today.", "tags": ["tense"] },
+        { "text": "Please explain me how this works.", "tags": ["particle"] },
+        { "text": "I'm so boring today, there's nothing to do.", "tags": ["vocab"] },
+        { "text": "He is very handsome and kind man.", "tags": ["particle"] },
+        { "text": "I discussed about the problem with my boss.", "tags": ["particle"] },
+        { "text": "My hobby is listening music.", "tags": ["particle"] },
+        { "text": "I married with him two years ago.", "tags": ["particle"] },
+        { "text": "I'm living in Seoul since 2020.", "tags": ["tense"] },
+        { "text": "There is many people on the subway.", "tags": ["agreement"] },
+        { "text": "I enjoyed to watch the game last night.", "tags": ["vocab"] },
+        { "text": "I'll call you when I will arrive.", "tags": ["tense"] },
+        { "text": "She said me that she was busy.", "tags": ["particle"] },
+        { "text": "I lost my weight a lot this year.", "tags": ["vocab"] },
+        { "text": "Sorry for late reply.", "tags": ["particle"] }
       ],
-      "heavy": ["yesterday i go store buy many thing but money not enough", "He have went to school since two year ago and he like it very", "me want eat food now where good restaurant", "When I was child my mother always cook for we dinner"],
+      "heavy": ["yesterday i go store buy many thing but money not enough", "He have went to school since two year ago and he like it very", "me want eat food now where good restaurant", "When I was child my mother always cook for we dinner", "I very like korea food but spicy is many difficult for me", "tomorrow I go to busan with friend, we eat seafood and see sea maybe", "my company is many work so I am every day tired and no time exercise", "Last weekend I go to my grandmother house and she make many food for me", "I am not understand what teacher say in the class, it was very fast"],
       "mixed": ["I went to the {market} yesterday and bought apples.", "Do you want to get some {coffee} later?", "My {friend} is coming to visit this weekend."],
-      "passive": ["yes", "ok", "I don't know", "hmm", "not really", "maybe"]
+      "passive": ["yes", "ok", "I don't know", "hmm", "not really", "maybe", "sure", "idk", "nothing much", "I guess"]
     },
     "ko": {
-      "ok": ["저는 주말마다 친구들이랑 등산을 가요.", "어제 본 영화가 생각보다 재미있었어요.", "이 근처에 맛있는 식당 좀 추천해 주실 수 있어요?", "요즘 회사 일이 많아서 좀 피곤해요.", "한국에 온 지 벌써 일 년이 됐어요.", "시간이 있으면 같이 커피 마셔요."],
+      "ok": ["저는 주말마다 친구들이랑 등산을 가요.", "어제 본 영화가 생각보다 재미있었어요.", "이 근처에 맛있는 식당 좀 추천해 주실 수 있어요?", "요즘 회사 일이 많아서 좀 피곤해요.", "한국에 온 지 벌써 일 년이 됐어요.", "시간이 있으면 같이 커피 마셔요.", "주말에 뭐 하실 거예요?", "저는 아직 한국어를 잘 못하지만 열심히 배우고 있어요.", "오늘은 비가 와서 집에 있을 거예요.", "지하철을 타면 30분쯤 걸려요.", "어제 친구 생일이라서 같이 저녁을 먹었어요.", "혹시 이 단어가 무슨 뜻인지 알려 주실 수 있어요?", "커피를 너무 많이 마셔서 잠이 안 와요.", "다음 주에 부산으로 여행 갈 계획이에요.", "한국 음식 중에서 김치찌개를 제일 좋아해요.", "늦어서 죄송해요. 버스가 안 왔어요.", "요즘 날씨가 많이 추워졌네요.", "어렸을 때 피아노를 배운 적이 있어요.", "이 옷이 저한테 좀 작은 것 같아요.", "저는 커피가 마시고 싶어요."],
       "light": [
         { "text": "어제 친구를 만나요.", "tags": ["tense"] },
         { "text": "저는 사과을 좋아해요.", "tags": ["particle"] },
         { "text": "선생님, 내일 시간 있어?", "tags": ["register"] },
         { "text": "도서관에서 책이 읽었어요.", "tags": ["particle"] },
         { "text": "날씨가 너무 덥어요.", "tags": ["spelling"] },
-        { "text": "저는 매일 아침에 운동을 해요 했어요.", "tags": ["agreement"] }
+        { "text": "저는 매일 아침에 운동을 해요 했어요.", "tags": ["agreement"] },
+        { "text": "저는 매일 한국어가 공부해요.", "tags": ["particle"] },
+        { "text": "저는 커피을 마셔요.", "tags": ["particle"] },
+        { "text": "지난주에 부산에 가요.", "tags": ["tense"] },
+        { "text": "내일 친구를 만났어요.", "tags": ["tense"] },
+        { "text": "이 음식이 너무 맵어요.", "tags": ["spelling"] },
+        { "text": "저는 매일 밤 음악을 듣어요.", "tags": ["spelling"] },
+        { "text": "한국어가 너무 어렵어요.", "tags": ["spelling"] },
+        { "text": "저는 노래를 잘 부루어요.", "tags": ["spelling"] },
+        { "text": "할머니, 밥 먹었어?", "tags": ["register"] },
+        { "text": "사장님, 이거 빨리 해.", "tags": ["register"] },
+        { "text": "저는 한국 음식이 좋아해요.", "tags": ["particle"] },
+        { "text": "저는 고양이 두 개 있어요.", "tags": ["vocab"] },
+        { "text": "주말에 집에서 쉬었고 책을 읽어요.", "tags": ["tense"] },
+        { "text": "선생님이 저한테 숙제를 줬어요.", "tags": ["register"] }
       ],
-      "heavy": ["어제 나 시장 가다 사과 사다 많이", "저 한국어 공부 하다 어렵다 너무 그래서 포기 하고 싶다요", "선생님 너 내일 학교 오다 나 기다리다", "친구 같이 영화 보다 재밌어 어제요"],
+      "heavy": ["어제 나 시장 가다 사과 사다 많이", "저 한국어 공부 하다 어렵다 너무 그래서 포기 하고 싶다요", "선생님 너 내일 학교 오다 나 기다리다", "친구 같이 영화 보다 재밌어 어제요", "나 어제 친구 만나다 우리 같이 밥 먹다 맛있다", "저 한국 오다 3년 전에 근데 한국말 아직 못하다요", "선생님 숙제 내일 내다 괜찮아? 나 바쁘다 오늘", "주말 나 집 있다 영화 보다 그리고 자다 많이", "어제 비 오다 그래서 학교 안 가다 집에서 공부 했어요 조금"],
       "mixed": ["어제 {market}에 가서 사과를 샀어요.", "이따가 {coffee} 한잔할래요?", "이번 주말에 {friend}가 놀러 와요."],
-      "passive": ["네", "응", "몰라요", "음…", "그냥요", "아마도요"]
+      "passive": ["네", "응", "몰라요", "음…", "그냥요", "아마도요", "그래요", "잘 모르겠어요", "글쎄요", "별로요"]
     },
     "ja": {
       "ok": ["週末はよく友だちと山に登ります。", "昨日見た映画は思ったより面白かったです。", "この近くでおいしいお店を教えてもらえますか。", "最近仕事が忙しくて少し疲れています。", "日本に来てからもう一年になります。", "時間があったら一緒にコーヒーを飲みましょう。"],
