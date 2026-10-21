@@ -21,6 +21,7 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **음성 모델·자막 정확도 (2026-10-21~22, `hub/drafts/speech-models-2026-10-21.md`):** 시험 경로(점검 사용자만 `x-tts-engine`·`x-stt-model`, `server/speechModels.ts`·`realtimeSpeech.ts`·`sttProviders.ts`), 비교 스크립트 `speech-trial.mjs`·`stt-trial.mjs`. 자막 "?"(`speechConfidence.ts`, 서버 바로 반영)·앞부분 미리 담기(`rooms/pcm.ts`)는 앱 다음 빌드. 남은 것: 목소리 샘플 사용자 답 → 기본값 전환(TTS 01-06 전), 받아쓰기 언어별 모델 고르기, 영상 받아쓰기 Scribe v2(낱말 시간, 02-26 전), 통화 안 받아쓰기, en↔ja 방 한자 통과 문제(다음 날 확인 ①).
 - **모델 창구 (2026-10-21, 서버만):** `src/lib/server/llm.ts` 표(기능 18개 → basic·high + OpenAI 기본값), `completeChat`, Vercel `MODEL_ROUTES`·`ANTHROPIC_API_KEY`·`MODEL_FALLBACK`. 1단계(동작 그대로) 끝. 남은 것: 키 받은 뒤 미리보기에서 Haiku 비교·전환, high 등급 고가 모델, 어려운 턴만 고친 문장 다시 확인(Sonnet), `opCost.ts` 단가를 표의 모델로, 스트리밍 통화 턴 Anthropic 길. 종료 2027-01-14. 설계안 `hub/drafts/model-cascade-2026-10-21.md`(잘게 나눠 위험한 턴·오래 남는 결과에만 고가 모델로 확인).
 - **쓸 기능 고르기 (2026-10-21, 앱 다음 빌드, `hub/drafts/feature-modules.md`):** 사용법 장마다 사용함/사용안함, 처음 설치 첫 화면 = 고르기(건너뛰면 전부), My "쓸 기능 고르기".
   남은 것: 계정에 저장, 묶음별 광고 영향(`sim:economics`), 고르기 화면 길이.
