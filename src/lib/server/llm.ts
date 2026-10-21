@@ -51,6 +51,7 @@ export const TASKS = {
   curriculum: { tier: "high", openai: () => env("OPENAI_CURRICULUM_MODEL") ?? "gpt-4.1", about: "학습 지도 만들기·미션·고르기" },
   learnerRead: { tier: "high", openai: () => env("OPENAI_LEARNER_MODEL") ?? "gpt-4.1-mini", about: "학습자 프로필·자주 틀리는 것 읽기" },
   roleplayReview: { tier: "high", openai: () => env("OPENAI_REVIEW_MODEL") ?? "gpt-5-mini", about: "통화 돌아보기 평가" },
+  chatVerify: { tier: "high", openai: () => env("OPENAI_VERIFY_MODEL") ?? "gpt-4.1", about: "채팅 고친 문장 확인(위험한 줄만, 열 때)" },
 } satisfies Record<string, { tier: Tier; openai: () => string; about: string }>;
 
 export type Task = keyof typeof TASKS;

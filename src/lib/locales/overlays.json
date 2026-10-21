@@ -569,7 +569,12 @@
     "featurePresetAll": "すべて",
     "featureLinkedPeople": "1対1・グループの会話も一緒に切り替わります。",
     "featureNeedsPeople": "オンにすると人との機能もオンになります。",
-    "featureHiddenHint": "隠している機能です。「使う」にするとまた表示されます。"
+    "featureHiddenHint": "隠している機能です。「使う」にするとまた表示されます。",
+    "chatCorrectionChip": "直すところがあります",
+    "chatCorrectionChecking": "確認しています…",
+    "chatCorrectionView": "直した文",
+    "chatCorrectionViewTap": "タップして見る",
+    "chatCorrectionViewAuto": "すぐに表示"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1141,7 +1146,12 @@
     "featurePresetAll": "全部",
     "featureLinkedPeople": "一对一和群聊也会一起切换。",
     "featureNeedsPeople": "打开后，真人功能也会一起打开。",
-    "featureHiddenHint": "这个功能已隐藏。改为“使用”即可重新显示。"
+    "featureHiddenHint": "这个功能已隐藏。改为“使用”即可重新显示。",
+    "chatCorrectionChip": "有需要修改的地方",
+    "chatCorrectionChecking": "正在检查…",
+    "chatCorrectionView": "修改后的句子",
+    "chatCorrectionViewTap": "点开查看",
+    "chatCorrectionViewAuto": "直接显示"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1715,7 +1725,12 @@
     "featurePresetAll": "Tất cả",
     "featureLinkedPeople": "Trò chuyện 1:1 và nhóm cũng thay đổi theo.",
     "featureNeedsPeople": "Bật mục này cũng sẽ bật các tính năng với người thật.",
-    "featureHiddenHint": "Bạn đã ẩn tính năng này. Chuyển sang Dùng để hiện lại."
+    "featureHiddenHint": "Bạn đã ẩn tính năng này. Chuyển sang Dùng để hiện lại.",
+    "chatCorrectionChip": "Có chỗ cần sửa",
+    "chatCorrectionChecking": "Đang kiểm tra…",
+    "chatCorrectionView": "Câu đã sửa",
+    "chatCorrectionViewTap": "Chạm để xem",
+    "chatCorrectionViewAuto": "Hiện ngay"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2294,7 +2309,12 @@
     "featurePresetAll": "Tout",
     "featureLinkedPeople": "Les discussions privées et de groupe changent avec.",
     "featureNeedsPeople": "L'activer active aussi les fonctions avec des personnes.",
-    "featureHiddenHint": "Vous l'avez masqué. Activez-le pour le faire réapparaître."
+    "featureHiddenHint": "Vous l'avez masqué. Activez-le pour le faire réapparaître.",
+    "chatCorrectionChip": "Il y a quelque chose à corriger",
+    "chatCorrectionChecking": "Vérification…",
+    "chatCorrectionView": "Corrections",
+    "chatCorrectionViewTap": "Toucher pour voir",
+    "chatCorrectionViewAuto": "Afficher tout de suite"
   },
   "it": {
     "archive": "Report",
@@ -3064,7 +3084,12 @@
     "featurePresetAll": "Tutto",
     "featureLinkedPeople": "Cambiano insieme anche le chat private e di gruppo.",
     "featureNeedsPeople": "Attivandolo si attivano anche le funzioni con le persone.",
-    "featureHiddenHint": "L'hai nascosto. Attivalo per farlo ricomparire."
+    "featureHiddenHint": "L'hai nascosto. Attivalo per farlo ricomparire.",
+    "chatCorrectionChip": "C'è qualcosa da correggere",
+    "chatCorrectionChecking": "Controllo in corso…",
+    "chatCorrectionView": "Correzioni",
+    "chatCorrectionViewTap": "Tocca per vedere",
+    "chatCorrectionViewAuto": "Mostra subito"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3646,7 +3671,12 @@
     "featurePresetAll": "Tudo",
     "featureLinkedPeople": "As conversas individuais e em grupo mudam junto.",
     "featureNeedsPeople": "Ativar isto também ativa os recursos com pessoas.",
-    "featureHiddenHint": "Você ocultou isto. Ative para que volte a aparecer."
+    "featureHiddenHint": "Você ocultou isto. Ative para que volte a aparecer.",
+    "chatCorrectionChip": "Há algo para corrigir",
+    "chatCorrectionChecking": "Verificando…",
+    "chatCorrectionView": "Correções",
+    "chatCorrectionViewTap": "Toque para ver",
+    "chatCorrectionViewAuto": "Mostrar na hora"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4414,7 +4444,12 @@
     "featurePresetAll": "Всё",
     "featureLinkedPeople": "Личные и групповые чаты переключаются вместе с этим.",
     "featureNeedsPeople": "При включении включатся и функции общения с людьми.",
-    "featureHiddenHint": "Вы скрыли эту функцию. Включите её, чтобы она снова появилась."
+    "featureHiddenHint": "Вы скрыли эту функцию. Включите её, чтобы она снова появилась.",
+    "chatCorrectionChip": "Есть что исправить",
+    "chatCorrectionChecking": "Проверяю…",
+    "chatCorrectionView": "Исправления",
+    "chatCorrectionViewTap": "Показать по нажатию",
+    "chatCorrectionViewAuto": "Показывать сразу"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -4992,7 +5027,12 @@
     "featurePresetAll": "Semua",
     "featureLinkedPeople": "Obrolan 1:1 dan grup ikut berubah.",
     "featureNeedsPeople": "Menyalakan ini juga menyalakan fitur dengan orang.",
-    "featureHiddenHint": "Kamu menyembunyikan fitur ini. Ubah ke Pakai agar muncul lagi."
+    "featureHiddenHint": "Kamu menyembunyikan fitur ini. Ubah ke Pakai agar muncul lagi.",
+    "chatCorrectionChip": "Ada yang perlu diperbaiki",
+    "chatCorrectionChecking": "Memeriksa…",
+    "chatCorrectionView": "Koreksi",
+    "chatCorrectionViewTap": "Ketuk untuk melihat",
+    "chatCorrectionViewAuto": "Langsung tampilkan"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5564,7 +5604,12 @@
     "featurePresetAll": "الكل",
     "featureLinkedPeople": "تتغيّر معها المحادثات الفردية والجماعية.",
     "featureNeedsPeople": "تفعيله يفعّل أيضًا ميزات التواصل مع الناس.",
-    "featureHiddenHint": "لقد أخفيت هذه الميزة. فعّلها لتظهر من جديد."
+    "featureHiddenHint": "لقد أخفيت هذه الميزة. فعّلها لتظهر من جديد.",
+    "chatCorrectionChip": "هناك ما يحتاج إلى تصحيح",
+    "chatCorrectionChecking": "جارٍ التحقق…",
+    "chatCorrectionView": "التصحيحات",
+    "chatCorrectionViewTap": "اضغط للعرض",
+    "chatCorrectionViewAuto": "اعرض فورًا"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6136,7 +6181,12 @@
     "featurePresetAll": "ทั้งหมด",
     "featureLinkedPeople": "แชตตัวต่อตัวและแชตกลุ่มจะเปลี่ยนไปด้วย",
     "featureNeedsPeople": "เปิดแล้วฟีเจอร์คุยกับคนจริงจะเปิดด้วย",
-    "featureHiddenHint": "ฟีเจอร์นี้ถูกซ่อนอยู่ เปลี่ยนเป็น ใช้ เพื่อให้กลับมา"
+    "featureHiddenHint": "ฟีเจอร์นี้ถูกซ่อนอยู่ เปลี่ยนเป็น ใช้ เพื่อให้กลับมา",
+    "chatCorrectionChip": "มีจุดที่ต้องแก้",
+    "chatCorrectionChecking": "กำลังตรวจสอบ…",
+    "chatCorrectionView": "ประโยคที่แก้",
+    "chatCorrectionViewTap": "แตะเพื่อดู",
+    "chatCorrectionViewAuto": "แสดงทันที"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -6708,6 +6758,11 @@
     "featurePresetAll": "सब",
     "featureLinkedPeople": "एक-से-एक और ग्रुप चैट भी साथ में बदलेंगे।",
     "featureNeedsPeople": "इसे चालू करने पर लोगों वाली सुविधाएँ भी चालू होंगी।",
-    "featureHiddenHint": "आपने इसे छिपाया है। फिर से दिखाने के लिए इसे चालू करें।"
+    "featureHiddenHint": "आपने इसे छिपाया है। फिर से दिखाने के लिए इसे चालू करें।",
+    "chatCorrectionChip": "कुछ सुधारना है",
+    "chatCorrectionChecking": "जाँच हो रही है…",
+    "chatCorrectionView": "सुधार",
+    "chatCorrectionViewTap": "टैप करके देखें",
+    "chatCorrectionViewAuto": "तुरंत दिखाएँ"
   }
 }

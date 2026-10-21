@@ -51,6 +51,7 @@
     "components/ArchivePanel": "chat",
     "components/MessageBubble": "chat",
     "api/chat": "chat",
+    "api/chat/verify": "chat",
     "api/report": "chat",
 
     "components/RoleplayTab": "call",

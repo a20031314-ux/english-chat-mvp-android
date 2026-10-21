@@ -140,7 +140,7 @@ function linesFor(target) {
 const SCENES = [
   {
     id: "chat-correct",
-    label: "채팅 — 틀린 문장을 보내면 고친 문장·설명",
+    label: "채팅 — 틀린 문장을 보내면 \"고칠 곳이 있어요\" 칩(기본 눌러서 보기)",
     async run({ page, ui, wait, target }) {
       await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
       await wait(3000);
@@ -152,6 +152,20 @@ const SCENES = [
         if ((await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count()) > before + 1) break;
       }
       await wait(2500);
+    },
+  },
+  {
+    id: "chat-correct-open",
+    label: "채팅 — 칩을 누르면 고친 문장이 열림(위험한 줄은 확인 모델이 먼저 봄)",
+    async run({ page, ui, wait }) {
+      const chip = page.getByRole("button", { name: exactly(ui.chatCorrectionChip) });
+      for (let i = 0; i < 20 && !(await chip.count()); i++) await wait(500);
+      if (!(await chip.count())) return; // 고칠 곳이 없던 줄 — 그대로 찍는다
+      const verified = page.waitForResponse((r) => r.url().includes("/api/chat/verify"), { timeout: 15000 }).catch(() => undefined);
+      await chip.last().click();
+      await verified;
+      for (let i = 0; i < 30 && (await chip.count()); i++) await wait(300);
+      await wait(1200);
     },
   },
   {

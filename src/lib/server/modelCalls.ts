@@ -47,6 +47,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   analysisInput: 5,
   analysisElement: 1,
   expressionInsight: 1,
+  // 채팅 고친 문장을 확인 모델에 한 번 더(위험한 줄만, 열 때 또는 바로 보기의 뒤에서) — /api/chat/verify.
+  chatVerify: 1,
   // A question the learner typed about a part of a sentence. One call, and a
   // second only when the answer came back in the language being learned and
   // had to be asked for again — counted on its own so the pair says how often.

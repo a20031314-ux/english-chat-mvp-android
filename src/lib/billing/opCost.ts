@@ -24,13 +24,15 @@ import {
 } from "./cost.ts";
 import { MODEL_CALLS_PER_REQUEST } from "../server/modelCalls.ts";
 
-export type ModelName = "mini" | "4.1-mini" | "4.1";
+export type ModelName = "mini" | "4.1-mini" | "4.1" | "sonnet-5.5";
 
 /** 100만 토큰당 달러. 출처는 cost.ts PRICE_SOURCE. */
 export const MODEL_USD_PER_MTOK: Record<ModelName, { input: number; output: number }> = {
   mini: MINI_USD_PER_MTOK, // gpt-4o-mini, chatModel() 기본값
   "4.1-mini": TUTOR_USD_PER_MTOK,
   "4.1": { input: 2, output: 8 },
+  // Claude Sonnet 5.5 (platform.claude.com pricing, 2026-10-21). 확인 모델(llm.ts high 등급, 결정 2026-10-21).
+  "sonnet-5.5": { input: 2, output: 10 },
 };
 
 export type Tokens = { input: number; output: number };
@@ -80,6 +82,8 @@ export const OP_COST: Record<string, OpCost> = {
   analysisInput: mini(),
   analysisElement: mini(),
   expressionInsight: mini(),
+  // 원문·고친 문장·설명만 보내는 짧은 확인(2026-10-21 어림). 지금 기본은 OpenAI(OPENAI_VERIFY_MODEL), MODEL_ROUTES로 Sonnet.
+  chatVerify: { kind: "model", model: "sonnet-5.5", tokens: { input: 900, output: 200 }, basis: "assumed" },
   expressionAsk: tutor,
   expressionAskRetry: tutor,
   expressionAskQuick: tutor,

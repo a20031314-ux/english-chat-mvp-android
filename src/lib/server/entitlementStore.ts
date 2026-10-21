@@ -216,6 +216,14 @@ export async function addDailyHelp(userId: string, bucket: HelpBucket): Promise<
 }
 
 /**
+ * 채팅 고친 문장을 확인 모델에 다시 보인 횟수(오늘) — 하나 더하고 새 합계(`/api/chat/verify`, 하루 상한 `VERIFY_DAILY_MAX`).
+ * 사용자의 AI 도움 한도와는 따로 센다: 확인은 앱이 품질을 위해 고르는 일이라 사용자 몫을 쓰지 않는다.
+ */
+export async function addDailyVerify(userId: string): Promise<number> {
+  return kvIncrBy(`usage:aihelp:verify:${userId}:${dayKey()}`, 1, DAILY_TTL_SECONDS);
+}
+
+/**
  * 말하는 방 자막은 말(말풍선) 하나를 한 줄로 센다. 쉼마다 조각으로 받아쓰게 된 뒤(rooms/speechParts.ts)
  * 같은 말의 뒷조각은 세지 않는다 — 다만 한 말에 조각이 너무 많으면(PART_FREE 넘음) 그때부터 조각마다 센다.
  * 앱이 말 번호를 마음대로 붙여도 한 번호로 아낄 수 있는 건 2분 동안 조각 몇 개뿐이다.

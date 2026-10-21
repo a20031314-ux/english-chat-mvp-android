@@ -53,6 +53,13 @@ import { saidPhrase } from "@/lib/learner/practice";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 import { ExpressionPeek } from "@/components/ExpressionPeek";
 import { compressChatImage } from "@/lib/chatImage";
+import { correctionRisk } from "@/lib/correctionRisk";
+import {
+  DEFAULT_CORRECTION_VIEW,
+  readCorrectionView,
+  writeCorrectionView,
+  type CorrectionView,
+} from "@/lib/correctionView";
 import { formatCallDuration, type ChatCallEvent } from "@/lib/callSession";
 import {
   ReportContentDialog,
@@ -84,6 +91,12 @@ type ChatTurn = {
   suppressCorrectionCard?: boolean;
   /** Written in the learner's own language; how to say it is a card they open. */
   ownLanguage?: boolean;
+  /** The folded correction was opened ("눌러서 보기"). */
+  correctionOpen?: boolean;
+  /** The check model is looking at this correction right now. */
+  correctionChecking?: boolean;
+  /** The check model has already looked (or it was not worth a look). */
+  correctionVerified?: boolean;
   attachmentUrl?: string;
   conversationMode?: ConversationMode;
   /**
@@ -731,6 +744,15 @@ export function ChatWindow({
   );
   const [isChatHistoryOpen, setIsChatHistoryOpen] = useState(false);
   const [sessionMenuOpen, setSessionMenuOpen] = useState(false);
+  // 고친 문장 보기: 눌러서(기본) / 바로. 기기에 기억(lib/correctionView.ts).
+  const [correctionView, setCorrectionView] = useState<CorrectionView>(DEFAULT_CORRECTION_VIEW);
+  useEffect(() => {
+    setCorrectionView(readCorrectionView());
+  }, []);
+  const chooseCorrectionView = (view: CorrectionView) => {
+    setCorrectionView(view);
+    writeCorrectionView(view);
+  };
   const sessionMenuRef = useRef<HTMLDivElement>(null);
   const [sessionEnded, setSessionEnded] = useState(false);
   const photoInputRef = useRef<HTMLInputElement>(null);
@@ -1048,10 +1070,11 @@ export function ChatWindow({
       locale,
     );
 
+    const turnId = `${Date.now()}`;
     setTurns((previous) => [
       ...previous,
       {
-        id: `${Date.now()}`,
+        id: turnId,
         mode: "chat",
         userMessage: message,
         assistantMessage:
@@ -1067,6 +1090,89 @@ export function ChatWindow({
         ...(ownLanguage ? { ownLanguage: true } : {}),
       },
     ]);
+    // "바로 보기"면 위험한 교정은 뒤에서 확인하고, 바뀌면 그 자리에서 고친다.
+    if (correctionView === "auto" && !ownLanguage && correctionResult.hasError) {
+      void verifyTurnCorrection(turnId, message, correctionResult);
+    }
+  };
+
+  /** 확인 모델에 교정을 한 번 더(위험한 줄만 — 서버도 같은 규칙으로 다시 거른다). 끝나면 그 턴의 교정을 바꾼다. */
+  const verifyTurnCorrection = async (
+    turnId: string,
+    original: string,
+    result: CorrectionResult,
+  ) => {
+    const risk = correctionRisk({
+      original,
+      corrected: result.corrected,
+      target: sessionLanguageCode,
+      explanation: result.explanation,
+    });
+    if (!risk.risky) {
+      setTurns((previous) =>
+        previous.map((t) => (t.id === turnId ? { ...t, correctionVerified: true } : t)),
+      );
+      return;
+    }
+    setTurns((previous) =>
+      previous.map((t) => (t.id === turnId ? { ...t, correctionChecking: true } : t)),
+    );
+    let next: CorrectionResult = result;
+    try {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 9000);
+      const response = await fetch(apiUrl("/api/chat/verify"), {
+        method: "POST",
+        signal: controller.signal,
+        headers: { "Content-Type": "application/json", ...premiumRequestHeaders(isPremium) },
+        body: JSON.stringify({
+          original,
+          corrected: result.corrected,
+          explanation: result.explanation,
+          targetLanguage: sessionLanguageCode,
+          interfaceLanguage: locale,
+          locale,
+        }),
+      });
+      clearTimeout(timer);
+      if (response.ok) {
+        const data = (await response.json()) as {
+          changed?: boolean;
+          noError?: boolean;
+          corrected?: string;
+          explanation?: string;
+        };
+        if (data.noError) {
+          next = { ...result, corrected: original, explanation: "", hasError: false };
+        } else if (data.changed && data.corrected?.trim()) {
+          next = {
+            ...result,
+            corrected: data.corrected.trim(),
+            explanation: data.explanation?.trim() || result.explanation,
+          };
+        }
+      }
+    } catch {
+      // 확인을 못 하면 싼 모델 교정 그대로.
+    }
+    setTurns((previous) =>
+      previous.map((t) =>
+        t.id === turnId
+          ? { ...t, correctionResult: next, correctionChecking: false, correctionVerified: true }
+          : t,
+      ),
+    );
+  };
+
+  /** 접힌 교정 열기: 아직 확인 전이면 확인하고 연다(기다림은 누른 뒤에만). */
+  const openTurnCorrection = async (turn: ChatTurn) => {
+    if (!turn.correctionResult || turn.correctionChecking) return;
+    if (!turn.correctionVerified) {
+      await verifyTurnCorrection(turn.id, turn.userMessage, turn.correctionResult);
+    }
+    setTurns((previous) =>
+      previous.map((t) => (t.id === turn.id ? { ...t, correctionOpen: true } : t)),
+    );
   };
 
   /**
@@ -1481,6 +1587,26 @@ export function ChatWindow({
                   >
                     {ui.reportTitle}
                   </button>
+                  <div className="border-t border-line px-3 py-2">
+                    <p className="text-meta text-slate-400">{ui.chatCorrectionView}</p>
+                    <div className="mt-1 flex flex-col gap-1" role="group" aria-label={ui.chatCorrectionView}>
+                      {(["tap", "auto"] as const).map((view) => (
+                        <button
+                          key={view}
+                          type="button"
+                          aria-pressed={correctionView === view}
+                          onClick={() => chooseCorrectionView(view)}
+                          className={`rounded-lg px-2 py-1 text-left text-xs ${
+                            correctionView === view
+                              ? "bg-platinum text-slate-900"
+                              : "text-slate-200 hover:bg-white/10"
+                          }`}
+                        >
+                          {view === "tap" ? ui.chatCorrectionViewTap : ui.chatCorrectionViewAuto}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 </div>
               ) : null}
             </div>
@@ -1587,6 +1713,12 @@ export function ChatWindow({
               ...(assistantReading ? { reading: ui.chatReading } : {}),
             };
 
+            const hasCorrection = Boolean(
+              turn.mode === "chat" &&
+                turn.correctionResult &&
+                turn.correctionResult.hasError &&
+                shouldShowCorrectionCard(turn.userMessage, turn.correctionResult),
+            );
             return (
               <article key={turn.id} className="space-y-1.5 sm:space-y-2">
                 {turn.callEvent?.kind === "ended" ? (
@@ -1616,16 +1748,20 @@ export function ChatWindow({
                         : undefined
                     }
                     correction={
-                      turn.mode === "chat" &&
-                      turn.correctionResult &&
-                      turn.correctionResult.hasError &&
-                      shouldShowCorrectionCard(
-                        turn.userMessage,
-                        turn.correctionResult,
-                      )
+                      hasCorrection && (correctionView === "auto" || turn.correctionOpen)
                         ? {
                             original: turn.userMessage,
-                            corrected: turn.correctionResult.corrected,
+                            corrected: turn.correctionResult!.corrected,
+                          }
+                        : undefined
+                    }
+                    correctionChip={
+                      hasCorrection && correctionView === "tap" && !turn.correctionOpen
+                        ? {
+                            label: ui.chatCorrectionChip,
+                            busyLabel: ui.chatCorrectionChecking,
+                            busy: Boolean(turn.correctionChecking),
+                            onOpen: () => void openTurnCorrection(turn),
                           }
                         : undefined
                     }

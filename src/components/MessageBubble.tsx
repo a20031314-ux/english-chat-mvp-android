@@ -14,6 +14,11 @@ type MessageBubbleProps = {
   analyzeUserLine?: boolean;
   /** Inline correction attached to a chat user message */
   correction?: { original: string; corrected: string } | null;
+  /**
+   * A correction that exists but is folded away ("눌러서 보기", lib/correctionView.ts):
+   * a chip under the line opens it. Ignored while `correction` is shown.
+   */
+  correctionChip?: { label: string; busyLabel: string; busy: boolean; onOpen: () => void } | null;
   /** Conversational reading in the UI language — not a second translation */
   reading?: string;
   pickMode?: boolean;
@@ -76,6 +81,7 @@ export function MessageBubble({
   attachedEnglish,
   analyzeUserLine = false,
   correction,
+  correctionChip,
   reading,
   pickMode = false,
   isWordSaved,
@@ -151,6 +157,19 @@ export function MessageBubble({
             />
           </p>
         )}
+
+        {correctionChip && !showCorrection ? (
+          <button
+            type="button"
+            onClick={correctionChip.onOpen}
+            disabled={correctionChip.busy}
+            aria-busy={correctionChip.busy}
+            className="mt-2 inline-flex items-center gap-1 rounded-full border border-warn/50 bg-warn/25 px-2.5 py-0.5 text-caption text-slate-900 disabled:opacity-70"
+          >
+            <span aria-hidden="true">✎</span>
+            {correctionChip.busy ? correctionChip.busyLabel : correctionChip.label}
+          </button>
+        ) : null}
 
         {showCorrection && correction ? (
           <div
