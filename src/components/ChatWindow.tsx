@@ -9,6 +9,7 @@ import {
   normalizeSavedItem,
   SavedItem,
 } from "./ArchivePanel";
+import { ChatHttpError, postChatStream } from "@/lib/chatStream";
 import { APP_LOCALE_STORAGE_KEY, isLocale, Locale } from "@/lib/copy";
 import { useUiCopy } from "@/hooks/useUiCopy";
 import {
@@ -255,6 +256,9 @@ function shouldShowCorrectionCard(
   if (n && n !== o && n !== c) return true;
   return false;
 }
+
+/** 이번 실행에서 채팅 흘려 받기가 되는지(한 번 네트워크 층에서 실패하면 예전 방식). */
+let chatStreamWorks = true;
 
 function makeSessionId() {
   return `session-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
@@ -1015,37 +1019,109 @@ export function ChatWindow({
     ownLanguage = false,
   ) => {
     const url = apiUrl("/api/chat");
+    const headers = {
+      "Content-Type": "application/json",
+      ...premiumRequestHeaders(isPremium),
+    };
+    const requestBody = {
+      message,
+      mode: "chat",
+      locale,
+      interfaceLanguage: locale,
+      targetLanguage: sessionLanguageCode,
+      conversationMode,
+      ...(imageDataUrl ? { imageDataUrl } : {}),
+      ...(ownLanguage ? { ownLanguage: true } : {}),
+      ...(practice ? { practice: practice.goal } : {}),
+      recent: turns
+        .flatMap((turn) => {
+          const lines: string[] = [];
+          if (turn.mode === "how_to_say" && turn.expressionResult?.expression) {
+            lines.push(`me: ${turn.expressionResult.expression}`);
+          } else if (turn.userMessage.trim() && turn.mode === "chat") {
+            lines.push(`me: ${turn.userMessage.trim()}`);
+          }
+          if (turn.assistantMessage?.trim()) {
+            lines.push(`other: ${turn.assistantMessage.trim()}`);
+          }
+          return lines;
+        })
+        .slice(-8),
+    };
+
+    const turnId = `${Date.now()}`;
+    const showReply = (reply: { assistantMessage?: string; spokenReply?: string }) => {
+      // The server reads this turn into the ledger after replying; look again
+      // once it has, so a phrase just mastered says so.
+      refreshLedgerSoon(sessionLanguageCode);
+      setTurns((previous) => [
+        ...previous,
+        {
+          id: turnId,
+          mode: "chat",
+          userMessage: message,
+          assistantMessage: reply.assistantMessage?.trim() || "Yeah, go on.",
+          spokenReply: reply.spokenReply?.trim() || undefined,
+          translatedMessage:
+            locale === sessionLanguageCode
+              ? undefined
+              : reply.spokenReply?.trim() || undefined,
+          attachmentUrl: imageDataUrl,
+          conversationMode,
+          ...(ownLanguage ? { ownLanguage: true } : {}),
+        },
+      ]);
+    };
+    const applyCorrection = (correction: ChatModeApiResponse["correction"] | undefined) => {
+      const correctionResult = normalizeCorrectionResult(message, correction, locale);
+      setTurns((previous) =>
+        previous.map((t) => (t.id === turnId ? { ...t, correctionResult } : t)),
+      );
+      // "바로 보기"면 위험한 교정은 뒤에서 확인하고, 바뀌면 그 자리에서 고친다.
+      if (correctionView === "auto" && !ownLanguage && correctionResult.hasError) {
+        void verifyTurnCorrection(turnId, message, correctionResult);
+      }
+    };
+
+    // 답을 먼저 띄우고, 교정(✎ 고친 문장)은 도착하면 붙는다(2026-10-22). 스트림이 안 되는 기기는 예전처럼 한 번에.
+    if (chatStreamWorks) {
+      let replied = false;
+      try {
+        let markReplied: () => void = () => {};
+        const repliedSignal = new Promise<void>((resolve) => {
+          markReplied = resolve;
+        });
+        const correctionArrives = postChatStream(url, headers, requestBody, (reply) => {
+          replied = true;
+          showReply(reply);
+          markReplied();
+        });
+        // 답이 뜰 때까지만 기다린다 — 교정은 뒤에서.
+        await Promise.race([repliedSignal, correctionArrives.then(() => undefined)]);
+        void correctionArrives
+          .then((correction) => {
+            if (correction) applyCorrection(correction);
+          })
+          .catch(() => {});
+        return;
+      } catch (error) {
+        if (replied) return;
+        if (error instanceof ChatHttpError) {
+          if (error.status === 403 && error.code === "DAILY_LIMIT_REACHED") {
+            throw new Error("DAILY_LIMIT_REACHED");
+          }
+          throw new Error("Failed to get chat response.");
+        }
+        // 흘려 받기가 이 기기에서 안 됨(네트워크 층) — 이번 실행은 예전 방식으로.
+        chatStreamWorks = false;
+        console.error("[chat] streaming failed, falling back", error);
+      }
+    }
+
     const response = await fetch(url, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        ...premiumRequestHeaders(isPremium),
-      },
-      body: JSON.stringify({
-        message,
-        mode: "chat",
-        locale,
-        interfaceLanguage: locale,
-        targetLanguage: sessionLanguageCode,
-        conversationMode,
-        ...(imageDataUrl ? { imageDataUrl } : {}),
-        ...(ownLanguage ? { ownLanguage: true } : {}),
-        ...(practice ? { practice: practice.goal } : {}),
-        recent: turns
-          .flatMap((turn) => {
-            const lines: string[] = [];
-            if (turn.mode === "how_to_say" && turn.expressionResult?.expression) {
-              lines.push(`me: ${turn.expressionResult.expression}`);
-            } else if (turn.userMessage.trim() && turn.mode === "chat") {
-              lines.push(`me: ${turn.userMessage.trim()}`);
-            }
-            if (turn.assistantMessage?.trim()) {
-              lines.push(`other: ${turn.assistantMessage.trim()}`);
-            }
-            return lines;
-          })
-          .slice(-8),
-      }),
+      headers,
+      body: JSON.stringify(requestBody),
     });
 
     if (!response.ok) {
@@ -1061,39 +1137,8 @@ export function ChatWindow({
     }
 
     const data = (await response.json()) as ChatModeApiResponse;
-    // The server reads this turn into the ledger after replying; look again
-    // once it has, so a phrase just mastered says so.
-    refreshLedgerSoon(sessionLanguageCode);
-    const correctionResult = normalizeCorrectionResult(
-      message,
-      data.correction,
-      locale,
-    );
-
-    const turnId = `${Date.now()}`;
-    setTurns((previous) => [
-      ...previous,
-      {
-        id: turnId,
-        mode: "chat",
-        userMessage: message,
-        assistantMessage:
-          data.assistantMessage?.trim() || "Yeah, go on.",
-        spokenReply: data.spokenReply?.trim() || undefined,
-        translatedMessage:
-          locale === sessionLanguageCode
-            ? undefined
-            : data.spokenReply?.trim() || undefined,
-        correctionResult,
-        attachmentUrl: imageDataUrl,
-        conversationMode,
-        ...(ownLanguage ? { ownLanguage: true } : {}),
-      },
-    ]);
-    // "바로 보기"면 위험한 교정은 뒤에서 확인하고, 바뀌면 그 자리에서 고친다.
-    if (correctionView === "auto" && !ownLanguage && correctionResult.hasError) {
-      void verifyTurnCorrection(turnId, message, correctionResult);
-    }
+    showReply(data);
+    applyCorrection(data.correction);
   };
 
   /** 확인 모델에 교정을 한 번 더(위험한 줄만 — 서버도 같은 규칙으로 다시 거른다). 끝나면 그 턴의 교정을 바꾼다. */

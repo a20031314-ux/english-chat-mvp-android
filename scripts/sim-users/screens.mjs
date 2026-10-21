@@ -32,6 +32,8 @@ const COMBOS = value("combos", "ja:ko,en:ja,es:ar,en:ko").split(",").map((c) => 
   return { target, ui };
 });
 const ONLY_SCENES = value("scenes", null)?.split(",") ?? null;
+/** --model-routes: 점검 사용자 요청만 다른 모델로(서버 llm.ts adoptSimRoutes) — 예: '{"basic":"anthropic: claude-haiku-5-5"}' */
+const MODEL_ROUTES = value("model-routes", null);
 /** --text: chat-correct가 시드 문장 대신 이 문장을 보낸다(문제 재현 캡처용). */
 const REPRO_TEXT = value("text", null);
 const stamp = new Date(Date.now() + 9 * 3600_000).toISOString().replace(/[-:]/g, "").slice(0, 13).replace("T", "-");
@@ -76,9 +78,17 @@ const server = http.createServer(async (req, res) => {
     const headers = { ...req.headers };
     for (const h of ["host", "origin", "referer", "content-length"]) delete headers[h];
     try {
+      if (MODEL_ROUTES) headers["x-sim-model-routes"] = MODEL_ROUTES;
       const upstream = await fetch(API + req.url, { method: req.method, headers, body: ["GET", "HEAD"].includes(req.method) ? undefined : Buffer.concat(chunks) });
-      res.writeHead(upstream.status, { "content-type": upstream.headers.get("content-type") || "application/octet-stream" });
-      res.end(Buffer.from(await upstream.arrayBuffer()));
+      const type = upstream.headers.get("content-type") || "application/octet-stream";
+      res.writeHead(upstream.status, { "content-type": type });
+      if (type.includes("ndjson") && upstream.body) {
+        // 채팅 스트림(답 먼저 → 교정)은 받는 대로 흘려 보낸다 — 모아 보내면 앱에서 한 번에 뜬다.
+        for await (const chunk of upstream.body) res.write(chunk);
+        res.end();
+      } else {
+        res.end(Buffer.from(await upstream.arrayBuffer()));
+      }
     } catch {
       res.writeHead(502);
       res.end();
@@ -152,6 +162,22 @@ const SCENES = [
         if ((await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count()) > before + 1) break;
       }
       await wait(2500);
+    },
+  },
+  {
+    id: "chat-reply-first",
+    label: "채팅 — 답이 먼저 뜨고 ✎ 고친 문장 표시는 조금 뒤(스트림)",
+    async run({ page, ui, wait, target }) {
+      await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
+      await wait(3000);
+      const before = await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count();
+      await page.locator("textarea:visible").first().fill(REPRO_TEXT ?? linesFor(target).slipped);
+      await page.getByRole("button", { name: exactly(ui.send) }).click();
+      // 답 줄이 생기는 순간을 찍는다(교정 표시가 아직 없을 수 있음).
+      for (let i = 0; i < 120; i++) {
+        await wait(100);
+        if ((await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count()) > before + 1) break;
+      }
     },
   },
   {
