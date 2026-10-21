@@ -116,7 +116,8 @@ export function StagePicker({
           {ui.stageHard}
         </button>
       </div>
-      <p className="text-meta text-slate-500">
+      {/* 숫자 쪽수는 아랍어 화면에서도 1 / 5 순서로(뒤집혀 5 / 1로 보였음). */}
+      <p dir="ltr" className="self-start text-meta text-slate-500 rtl:self-end">
         {index + 1} / {stages.length}
       </p>
     </section>
