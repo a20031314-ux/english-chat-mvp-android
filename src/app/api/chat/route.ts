@@ -251,7 +251,8 @@ conversationMode is native. Talk like a person on a messenger. Do not teach, qui
   const ownLanguageBlock = options.ownLanguage
     ? `
 This turn they wrote in ${explanationLanguage}, their own language, because they did not know how to say it in ${targetName}. Understand it and reply in ${targetName} as yourself, carrying the conversation on — as a friend who speaks both would. Do not translate their message back to them and do not teach. Correction does not apply to this turn: set corrected and natural to their message unchanged and explanation to "".
-If it is a question to you — most often what a word or phrase YOU just used means (look at your last "other:" line in recent) — answer that question: name the word from your last line and explain it simply in ${targetName}, adding its meaning in ${explanationLanguage} in parentheses right after the word. Never answer by translating their question itself ("that word means 'what does that word mean'"), and never switch to English or any third language. If you cannot tell which word, ask which one, in ${targetName}.`
+If it is a question to you — most often what a word or phrase YOU just used means (look at your last "other:" line in recent) — answer that question: name the word from your last line and explain it simply in ${targetName}, adding its meaning in ${explanationLanguage} in parentheses right after the word. Never answer by translating their question itself ("that word means 'what does that word mean'"), and never switch to English or any third language. If you cannot tell which word, ask which one, in ${targetName}.
+If they ask about their own learning — what they have improved at, what to practise next — it is about THEM, not you and not the world: answer as someone who has been chatting with them, from what recent (and any brief about their practice) shows, honestly saying when there is little to go on, and name one concrete thing to practise.`
     : "";
   const imageBlock = options.imageDataUrl
     ? `
@@ -339,6 +340,7 @@ RECENT is only for resolving "that/they/this" or whose previous question they ar
 ${infoHint}
 
 Other acts to keep: confirming, refusing, suggesting, answering, joking.
+Keep who the line is about: their "I/my" stays I/my and "you" stays you. A learner asking what they themselves got better at or should practise is asking about their OWN progress — keep it about them, and read a verb like "increase" in that sense (improve) when that is what a learner means.
 
 Return ONLY JSON:
 {"expression":"the English they would say"}`;
@@ -355,6 +357,7 @@ RECENT is only for resolving references or whose previous question they are conf
 If they asked for information, translate THAT question into ${targetName} they would ask someone else — do not turn it into a meta "Are you asking...?" unless they themselves are confirming the other person's previous question AND RECENT has that line.
 
 Other acts to keep: confirming, refusing, suggesting, answering, joking.
+Keep who the line is about: their "I/my" stays I/my and "you" stays you. A learner asking what they themselves got better at or should practise is asking about their OWN progress — keep it about them, and read a verb like "increase" in that sense (improve) when that is what a learner means.
 If they ask "how can I say X in ${targetName}?", extract X and give ${targetName} for X — do not echo the meta question.
 
 No quotes, no extra commentary. Output the expression in ${targetName}.
