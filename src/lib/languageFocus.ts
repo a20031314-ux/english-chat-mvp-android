@@ -32,7 +32,13 @@ export function targetLanguageFocusHints(targetLanguage: LearningLanguageCode): 
 - Particles (は/が/を/に/で/と/も…), verb/adjective conjugation, polite vs plain (です/ます vs 辞書形), word order, counters, transitive/intransitive pairs when wrong, unnatural calques from Korean/English.`;
     case "ko":
       return `Korean focus (use Korean terms):
-- Particles (은/는/이/가/을/를/에/에서…), endings/politeness (해요체/반말/합쇼체), conjugation, honorifics when required by context, spacing, unnatural calques.`;
+- Particles (은/는/이/가/을/를/에/에서…), endings/politeness (해요체/반말/합쇼체), conjugation, honorifics when required by context, spacing, unnatural calques.
+- Irregular conjugation is the most missed error. ㅂ-irregular stems (덥다, 춥다, 맵다, 어렵다, 쉽다, 귀엽다, 무섭다…) turn ㅂ into 우 before 아/어 endings; ㄷ-irregular stems (듣다, 걷다, 묻다 'ask', 싣다) turn ㄷ into ㄹ before vowels; 르-irregular stems (부르다, 모르다, 다르다, 빠르다) double the ㄹ (ㄹ라/ㄹ러). A learner form that leaves such a stem unchanged before 어요/아요/었 is WRONG — fix it in corrected, and check that your own corrected form applies the irregular rule. Never tell them the unchanged form is also correct or merely more polite.
+- A time word and the tense ending must agree (a past time word with a present or future ending, or a future time word with a past ending, is wrong).
+- Respect: when the learner speaks TO or ABOUT a teacher, grandparent, parent, boss, customer or stranger, 반말 or a bare command is a real error even if everything else is right. corrected must use 해요체 with -(으)시- where it belongs (있으세요, 드셨어요, 주셨어요) and a request form instead of a command (해 주세요). natural must keep that respect too.
+- Never lower politeness the learner already used: keep -(으)시-, keep 해요체/합쇼체. Any word + 요 (별로요, 그냥요, 아마도요, 몰라요) is correct polite speech. 할래요 and 할까요 are both polite.
+- Not errors — leave them: numerals vs words for numbers, synonym choice (쯤/정도, 이랑/하고), spacing that is commonly accepted both ways (한잔하다, 해 주다/해주다), 이/가 or 을/를 before -고 싶다.
+- The explanation names the exact part that changed (which particle, which ending) and the correct form.`;
     case "zh":
       return `Chinese focus (use Chinese terms):
 - Word order, 了/过/着, measure words, 的/地/得, aspect/result complements, coverbs (在/把/被), missing or wrong function words, unnatural calques.`;

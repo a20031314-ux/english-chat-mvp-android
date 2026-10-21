@@ -22,6 +22,7 @@ import { writtenInLearningLanguage } from "@/lib/inputLanguage";
 import type OpenAI from "openai";
 import { chatModel, getOpenAIClient } from "@/lib/server/openai";
 import { targetLanguageFocusHints } from "@/lib/languageFocus";
+import { shouldKeepLearnerLine } from "@/lib/correctionGuard";
 import {
   getDailyUsed,
   incrementDailyUsed,
@@ -172,6 +173,9 @@ function englishCorrectionPolicy(
 - Never mention a missing optional word (especially "right" before "now") as a grammar mistake. Suggest it only in natural. If you also fix a real grammar error, do not add those optional words into corrected.
 - Never change the meaning in corrected (do not rewrite "I'm studying nothing" into "I'm just chilling"). Meaning/style rewrites belong in natural only.
 - If there is no real grammar/agreement/article/preposition/tense error, corrected MUST equal the user's message.
+- Keep tenses consistent across the whole corrected line: when one clause is about the past, related verbs are past too.
+- Very short replies (one or two words: yes, ok, idk, maybe, hmm) are complete answers. Keep corrected equal to the message unless the word itself is misspelled; never expand it into a sentence they did not say.
+- The explanation must describe exactly what changed between the message and corrected — never a change you did not make.
 - If the user embeds a word from their UI language inside an otherwise English sentence (proper noun or a word they don't know yet), that is NOT a grammar error — keep it in corrected, and you may gloss the meaning in assistantMessage.
 ${explanationGuard}`;
 }
@@ -208,7 +212,9 @@ Hard rules:
 - Do NOT "correct" informal-but-acceptable spoken ${targetName} into textbook wording; put style upgrades only in natural.
 - Do NOT change meaning in corrected. Meaning/style rewrites belong in natural only.
 - Do NOT invent mistakes. If the line is already grammatical for the intended register, corrected MUST equal the user's message.
-- Prefer keeping the learner's register (casual vs polite) in corrected unless that register is itself ungrammatical for what they are trying to say.
+- Prefer keeping the learner's register (casual vs polite) in corrected unless that register is itself ungrammatical for what they are trying to say — or wrong for who they are talking to (a teacher, elder, boss or customer addressed casually where ${targetName} requires respect: fix that in corrected and keep natural respectful too). Never lower the politeness they already used.
+- Very short replies (one or two words: yes/no, I don't know, maybe, a filler, a polite short answer) are complete answers. Keep corrected equal to the message unless the word itself is misspelled or ungrammatical; never expand it into a sentence they did not say.
+- The explanation must describe exactly what changed between the message and corrected — never a change you did not make, never a different part than the one you fixed, and never call their wrong form acceptable.
 - If the user embeds UI-language words inside an otherwise ${targetName} sentence as a placeholder, that is NOT a grammar error — keep it in corrected; you may gloss it in assistantMessage.
 ${explanationGuard}`;
 }
@@ -566,10 +572,16 @@ async function runChat(
         asText(parsed.assistantSpoken) ||
         asText(parsed.assistantNative);
   const c = parsed.correction;
-  const corrected = asText(c?.corrected) || message;
-  const natural = asText(c?.natural) || corrected;
+  let corrected = asText(c?.corrected) || message;
+  let natural = asText(c?.natural) || corrected;
   let explanation =
     asText(c?.explanation) || asText(parsed.explanation);
+  // 고칠 게 없는 줄(문장부호만 다름, ?·이모지, 짧은 답을 문장으로 늘림)은 고침·설명을 비운다.
+  if (shouldKeepLearnerLine(message, corrected)) {
+    corrected = message;
+    natural = shouldKeepLearnerLine(message, natural) ? message : natural;
+    explanation = "";
+  }
 
   const needsExplanation =
     Boolean(message.trim()) &&

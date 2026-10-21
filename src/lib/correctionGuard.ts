@@ -1,0 +1,36 @@
+/**
+ * 고친 문장을 버려야 할 때 — 모델이 고칠 게 없는 줄을 "고쳤다"고 돌려준 경우.
+ *
+ * 가상 사용자 점검(2026-10-21, 영어↔한국어)에서 나온 것:
+ * - "?"·이모지만 보냈는데 튜터 말 같은 문장을 고친 문장으로 넣음
+ * - 마침표 하나만 붙이고 "더 자연스러워요" 설명을 붙임
+ * - "음…"·"글쎄요" 같은 짧은 답을 학습자가 하지 않은 문장으로 늘림
+ * 셋 다 학습자 말이 그대로 맞다는 뜻이므로 고침·설명을 비운다.
+ */
+
+const LETTER = /\p{L}/u;
+
+/** 문장부호·기호를 빼고 공백을 하나로, 소문자로 — 띄어쓰기 차이는 남긴다(한국어 띄어쓰기는 고칠 수 있음). */
+function surface(text: string): string {
+  return text
+    .normalize("NFC")
+    .toLowerCase()
+    .replace(/[\p{P}\p{S}]/gu, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function words(text: string): number {
+  const t = surface(text);
+  return t ? t.split(" ").length : 0;
+}
+
+export function shouldKeepLearnerLine(message: string, corrected: string): boolean {
+  const original = message.trim();
+  if (!original) return true;
+  if (!LETTER.test(original)) return true;
+  if (surface(original) === surface(corrected)) return true;
+  const before = words(original);
+  if (before <= 2 && words(corrected) >= before + 3) return true;
+  return false;
+}
