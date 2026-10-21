@@ -228,7 +228,7 @@ export function toAnthropicRequest(model: string, params: Omit<CreateParams, "mo
     2048;
   const body: Record<string, unknown> = { model, max_tokens: maxTokens, messages };
   if (system.length) body.system = system.join("\n\n");
-  if (typeof params.temperature === "number") body.temperature = Math.max(0, Math.min(1, params.temperature));
+  // temperature는 넘기지 않는다: Claude 5.5 세대는 받으면 400 "temperature is deprecated"(운영 확인 2026-10-21).
   return { body, wantsJson };
 }
 

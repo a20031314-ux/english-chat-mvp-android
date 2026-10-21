@@ -132,7 +132,7 @@ test("OpenAI 메시지를 Anthropic 요청으로", () => {
   assert.equal(wantsJson, true);
   assert.equal(body.model, "claude-haiku-5-5");
   assert.equal(body.max_tokens, 300);
-  assert.equal(body.temperature, 1);
+  assert.equal(body.temperature, undefined); // 5.5 세대는 temperature를 거절
   assert.match(String(body.system), /^You are a tutor\.\n\nLearner brief\.\n\n.*JSON/s);
   const messages = body.messages as Array<{ role: string; content: Array<Record<string, unknown>> }>;
   assert.equal(messages.length, 2);
