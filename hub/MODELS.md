@@ -49,7 +49,7 @@
 | Claude Haiku 5.5 | 한 턴 약 0.49원(지금 0.67원) | 10-21 시험에서 교정 큰 문제 영어 1·한국어 2(지금은 2·6). `ANTHROPIC_API_KEY`가 필요합니다. |
 | Gemini 2.5 Flash-Lite / 3.1 Flash-Lite | $0.10/$0.40 · $0.25/$1.50 | 품질은 시험하지 않았습니다(키 없음). 3.6·3.7 Flash는 2027-01-01부터 가격이 두 배가 됩니다. |
 | gpt-live-transcribe | 분당 $0.017 | 받아쓰기 대체 후보. 지금(whisper 분당 약 $0.006, mini-transcribe 약 $0.003)보다 비쌀 수 있어 비용 표와 같이 봐야 합니다. |
-| gpt-realtime-2.1-mini | $0.60 / $2.40 (오디오 토큰) | 목소리 대체로 OpenAI가 지정한 모델. 지금 TTS 방식(`/api/tts`)을 그대로 쓸 수 있는지 확인이 필요합니다. |
+| gpt-realtime-2.1-mini | 글 $0.60 / $2.40, 오디오 $10 / $20 (1M 토큰) | 목소리 대체. `/v1/audio/speech`로는 안 되고 Realtime으로 — `server/realtimeSpeech.ts`로 만들고 비교함(6초 약 3.7원, 지금 1.8배, `hub/drafts/speech-models-2026-10-21.md`). |
 
 ## 2. 바깥 서비스·도구
 
