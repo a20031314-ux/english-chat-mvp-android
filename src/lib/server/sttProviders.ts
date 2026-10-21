@@ -14,6 +14,10 @@ export function isExternalStt(model: string): model is ExternalSttModel {
   return (EXTERNAL_STT_MODELS as readonly string[]).includes(model);
 }
 
+function assemblyKey(): string {
+  return (process.env.ASSEMBLYAI_API_KEY ?? "").trim().replace(/^Bearer\s+/i, "");
+}
+
 export function externalSttReady(model: ExternalSttModel): boolean {
   return Boolean(model === "scribe_v2" ? process.env.ELEVENLABS_API_KEY : process.env.ASSEMBLYAI_API_KEY);
 }
@@ -40,7 +44,7 @@ async function scribe(bytes: Buffer, mimeType: string, filename: string, languag
   form.set("no_verbatim", "false");
   const response = await fetch("https://api.elevenlabs.io/v1/speech-to-text", {
     method: "POST",
-    headers: { "xi-api-key": process.env.ELEVENLABS_API_KEY ?? "" },
+    headers: { "xi-api-key": (process.env.ELEVENLABS_API_KEY ?? "").trim() },
     body: form,
     signal: AbortSignal.timeout(20_000),
   });
@@ -85,11 +89,20 @@ async function assembly(bytes: Buffer, mimeType: string, filename: string, langu
   );
   const response = await fetch("https://sync.assemblyai.com/v1/transcribe", {
     method: "POST",
-    headers: { Authorization: process.env.ASSEMBLYAI_API_KEY ?? "", "X-AAI-Model": "universal-3-5-pro" },
+    headers: { Authorization: assemblyKey(), "X-AAI-Model": "universal-3-5-pro" },
     body: form,
     signal: AbortSignal.timeout(20_000),
   });
-  if (!response.ok) throw new SttHttpError(response.status, `assemblyai ${response.status} ${(await response.text()).slice(0, 200)}`);
+  if (!response.ok) {
+    const detail = (await response.text()).slice(0, 200);
+    // 키 문제인지 Sync만의 문제인지 가르려고, 키가 거절되면 일반 API에 같은 키로 한 번 물어 본다(점검 오류 글에만 쓰임).
+    let probe = "";
+    if (response.status === 401 || response.status === 403 || response.status === 404) {
+      const check = await fetch("https://api.assemblyai.com/v2/transcript?limit=1", { headers: { Authorization: assemblyKey() } }).catch(() => null);
+      probe = ` · v2 ${check?.status ?? "?"} · key ${assemblyKey().length}자`;
+    }
+    throw new SttHttpError(response.status, `assemblyai ${response.status} ${detail}${probe}`);
+  }
   const body = (await response.json()) as {
     text?: string;
     confidence?: number;
