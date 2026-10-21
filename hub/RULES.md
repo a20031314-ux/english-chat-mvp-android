@@ -65,6 +65,7 @@
 
 ## 자주 걸리는 것
 - `tmp/copycheck/`의 추적 중인 파일은 지우지 않는다(지웠으면 `git checkout -- tmp/copycheck`). 새로 생긴 copy-*.ts만 정리.
+- **`npm run build:capacitor`가 도는 동안 커밋·pull 금지** — 빌드가 `src/app/api`·dev 페이지를 잠깐 옆으로 옮겨서, 그때 `git add -A`하면 API 90여 개가 지워진 채 올라가 운영이 꺼진다(2026-10-22 겪음, 몇 분 장애). 빌드가 끝나고(`git status`에 지움이 없을 때) 커밋.
 - push가 거부되면 `git pull --rebase` 후 다시. 다른 채팅(사람·Cursor)이 main에 올렸을 수 있다.
 - YouTube는 이 작업 공간에서 막혀 있다. 영상 관련 확인은 사용자 PC 브라우저(연결돼 있을 때)나 기기에서.
 - OpenAI 크레딧이 떨어지면 모델 호출이 전부 실패한다 — 오류가 한꺼번에 나면 먼저 의심.
