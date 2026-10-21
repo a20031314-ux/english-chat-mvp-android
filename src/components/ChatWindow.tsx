@@ -955,13 +955,10 @@ export function ChatWindow({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [targetLanguage]);
 
-  useEffect(() => {
-    // A subscriber who has used the day's chats is told so in the chat, not
-    // sent to a plan screen they have already paid on.
-    if (isChatDailyLimitReached && !isPremium) {
-      openPaywall("PAYWALL_OPEN_LIMIT_REACHED");
-    }
-  }, [isChatDailyLimitReached, isPremium, openPaywall]);
+  // 한도를 다 쓴 것만으로는 결제 화면을 띄우지 않는다: 채팅 창은 다른 탭에서도
+  // 붙어 있어서, 앱을 열거나 탭을 바꿀 때마다 결제 화면이 다른 기능을 가렸다
+  // (qa 2026-10-21). 결제 화면은 한도에서 보내려 할 때(handleSubmit)와 채팅 안
+  // 안내 줄의 버튼으로만 연다.
 
   useEffect(() => {
     if (!sessionMenuOpen) return;

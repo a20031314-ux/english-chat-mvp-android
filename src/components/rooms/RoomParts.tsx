@@ -88,7 +88,8 @@ export function Face({
 }) {
   const profile = useProfile(photo === undefined ? accountId : null);
   const src = photo ?? profile?.photo ?? null;
-  const letter = Array.from(name || "?")[0]?.toUpperCase() ?? "?";
+  // 이름을 안 넘긴 곳(대화 목록 등)은 프로필 닉네임의 첫 글자 — "?"는 프로필도 없을 때만(qa 2026-10-21).
+  const letter = Array.from(name || profile?.nickname || "?")[0]?.toUpperCase() ?? "?";
   const ring = speaking ? "ring-2 ring-emerald-400 ring-offset-2 ring-offset-[#050505]" : "";
   return src ? (
     // eslint-disable-next-line @next/next/no-img-element

@@ -709,6 +709,8 @@ export function RoomView({
     if ((next === "listen" || next === "chat") && role === "speaker" && !isHostNow) await askRole("listener");
     // 듣기·채팅만을 고르면 들었던 손도 내린다 — 방장 "손든 사람"에 말할 생각 없는 사람이 남지 않게(qa 2026-10-20).
     if ((next === "listen" || next === "chat") && handRef.current) raise(false);
+    // 손을 내렸으면 "참여를 요청했어요" 안내도 같이 지운다(qa 2026-10-21 — 듣기·채팅만인데 요청 중처럼 보였음).
+    if (next === "listen" || next === "chat") setNotice((current) => (current === "handUp" ? "" : current));
   };
   // 🔇 보이스만일 때 누가 내 말을 물으면 위에 알린다(채팅 칸이 숨어 있으니).
   const askedMe = lines.filter((line) => line.ask && line.quote?.peerId === peerId && line.peerId !== peerId && line.seq > seenAsk).at(-1);
