@@ -32,7 +32,7 @@ import {
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { normalizeHowToSayExpression } from "@/lib/howToSay";
 import { inLearningScript } from "@/lib/vocabScript";
-import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
 import {
   conversationKoreanParallel,
   conversationVoicePrinciples,
@@ -88,6 +88,11 @@ type ChatLanguages = {
 };
 
 type ChatTurnOptions = {
+  /**
+   * 답만 쓰는 호출(새 앱 스트림): 교정은 나란히 도는 다른 호출이 맡는다.
+   * 학습자 문장이 틀렸어도 뜻한 것에 답하게 해서 다시 답하기(reread)가 필요 없다.
+   */
+  replyOnly?: boolean;
   conversationMode?: ConversationMode;
   imageDataUrl?: string;
   /**
@@ -178,7 +183,7 @@ function englishCorrectionPolicy(
 - Keep tenses consistent across the whole corrected line: when one clause is about the past, related verbs are past too.
 - Very short replies (one or two words: yes, ok, idk, maybe, hmm) are complete answers. Keep corrected equal to the message unless the word itself is misspelled; never expand it into a sentence they did not say.
 - The explanation must describe exactly what changed between the message and corrected — never a change you did not make.
-- If the user embeds a word from their UI language inside an otherwise English sentence (proper noun or a word they don't know yet), that is NOT a grammar error — keep it in corrected, and you may gloss the meaning in assistantMessage.
+- If the user embeds a word from another language inside an otherwise English sentence, they did not know the English word: put the English word in corrected (that is the point of the correction) and say in the explanation which word it replaces. Names of people, places, brands and dishes with no English equivalent stay as they are.
 ${explanationGuard}`;
 }
 
@@ -217,7 +222,7 @@ Hard rules:
 - Prefer keeping the learner's register (casual vs polite) in corrected unless that register is itself ungrammatical for what they are trying to say — or wrong for who they are talking to (a teacher, elder, boss or customer addressed casually where ${targetName} requires respect: fix that in corrected and keep natural respectful too). Never lower the politeness they already used.
 - Very short replies (one or two words: yes/no, I don't know, maybe, a filler, a polite short answer) are complete answers. Keep corrected equal to the message unless the word itself is misspelled or ungrammatical; never expand it into a sentence they did not say.
 - The explanation must describe exactly what changed between the message and corrected — never a change you did not make, never a different part than the one you fixed, and never call their wrong form acceptable.
-- If the user embeds UI-language words inside an otherwise ${targetName} sentence as a placeholder, that is NOT a grammar error — keep it in corrected; you may gloss it in assistantMessage.
+- If the user embeds a word from another language inside an otherwise ${targetName} sentence, they did not know the ${targetName} word: put the ${targetName} word in corrected (that is the point of the correction) and say in the explanation which word it replaces. Names of people, places, brands and dishes with no ${targetName} equivalent stay as they are.
 ${explanationGuard}`;
 }
 
@@ -260,6 +265,24 @@ If they ask about their own learning — what they have improved at, what to pra
     ? `
 They attached a photo. Look at it and react the way a friend would in chat. Do not caption it like a vision demo unless they asked what is in the picture. If they also sent text, reply to the text and the photo together. Correction applies to their text only, not the image.`
     : "";
+
+  if (options.replyOnly) {
+    return `${targetLanguage === "en" ? "" : commonLanguageInstructions({ targetLanguage, interfaceLanguage }) + "\n\n"}${identity}
+
+You chat in ${targetName} with the user. This call only writes your reply — another step corrects their language, so do not correct, quote back or comment on their wording.
+${tutorBlock}
+${ownLanguageBlock}
+${imageBlock}
+
+The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only).
+Their message may have mistakes (wrong word, wrong ending, a word from another language mixed in). Reply to what they clearly meant, the way a friend would who understood them.
+
+${voice}
+${spoken}
+
+Return ONLY valid JSON (no markdown) with this exact shape:
+{"assistantMessage":"...","spokenReply":"..."}`;
+  }
 
   if (targetLanguage === "en") {
     return `${identity}
@@ -516,7 +539,7 @@ async function runChat(
   message: string,
   langs: ChatLanguages,
   recent: string[] = [],
-  options: ChatTurnOptions & { onReread?: () => void } = {},
+  options: ChatTurnOptions & { onReread?: () => void; skipReread?: boolean } = {},
 ): Promise<ChatPayload> {
   // 한국어 학습: 모델이 자주 놓치는 불규칙 활용·윗사람께 반말을 규칙으로 먼저 찾아 알려 준다(koreanSlips.ts).
   const koSlips =
@@ -617,7 +640,7 @@ async function runChat(
 
   let reply = assistantMessage;
   let spoken = spokenReply;
-  if (needsExplanation && corrected.trim()) {
+  if (needsExplanation && corrected.trim() && !options.skipReread) {
     try {
       options.onReread?.();
       const reread = await replyToCorrected(openai, corrected, recent, langs);
@@ -632,6 +655,57 @@ async function runChat(
     assistantMessage: reply,
     spokenReply: spoken,
     correction: { corrected, natural, explanation },
+  };
+}
+
+/** 새 앱 스트림의 답 호출: 교정 없이 답만(짧게 → 빨리). */
+async function runChatReply(
+  openai: OpenAI,
+  message: string,
+  langs: ChatLanguages,
+  recent: string[] = [],
+  options: ChatTurnOptions = {},
+): Promise<{ assistantMessage: string; spokenReply: string }> {
+  const payload = JSON.stringify({
+    message,
+    recent: recent.slice(-8),
+    instruction: "Reply to message. Use recent only if this turn still refers to it.",
+    hasImage: Boolean(options.imageDataUrl),
+  });
+  const userContent = options.imageDataUrl
+    ? [
+        { type: "text" as const, text: payload },
+        { type: "image_url" as const, image_url: { url: options.imageDataUrl } },
+      ]
+    : payload;
+  const completion = await completeChat(openai, "chat", {
+    messages: [
+      { role: "system", content: buildChatSystem(langs, { ...options, replyOnly: true }) },
+      ...(options.brief ? [{ role: "system" as const, content: options.brief }] : []),
+      ...(options.practice
+        ? [
+            {
+              role: "system" as const,
+              content: practicePrompt(options.practice, learningLanguageName(langs.targetLanguage)),
+            },
+          ]
+        : []),
+      { role: "user", content: userContent },
+    ],
+    response_format: { type: "json_object" },
+    temperature: 0.9,
+    max_tokens: 400,
+  });
+  void recordTokens("chatReply", completion.usage);
+  const raw = completion.choices[0]?.message?.content;
+  if (!raw) throw new Error("empty reply");
+  const parsed = JSON.parse(raw) as { assistantMessage?: unknown; spokenReply?: unknown };
+  const assistantMessage = asText(parsed.assistantMessage).trim();
+  if (!assistantMessage) throw new Error("empty reply");
+  return {
+    assistantMessage,
+    spokenReply:
+      langs.interfaceLanguage === langs.targetLanguage ? "" : asText(parsed.spokenReply).trim(),
   };
 }
 
@@ -856,6 +930,7 @@ export async function POST(request: NextRequest) {
     expressionOnly?: unknown;
     purpose?: unknown;
     practice?: unknown;
+    stream?: unknown;
   };
   try {
     body = await request.json();
@@ -940,6 +1015,117 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "DAILY_LIMIT_REACHED" }, { status: 403 });
   }
 
+  // 답이 나간 뒤의 기록들(문장은 저장하지 않고 표현·지표만). 옛 앱은 답 뒤에, 새 앱은 교정까지 보낸 뒤에.
+  const chatBookkeeping = async (data: ChatPayload) => {
+      const jobs: Promise<unknown>[] = [];
+      const later = (job: () => Promise<unknown> | unknown) => {
+        jobs.push(Promise.resolve().then(job).catch((error) => console.error("[chat-after]", error)));
+      };
+      // The sentence is read for the constructions in it once the reply is on
+      // its way (learner/profile.ts). Only a sentence written in the language
+      // being learned is practice; a question asked in the learner's own
+      // language is not read.
+      const practised =
+        Boolean(message) &&
+        writtenInLearningLanguage(message, langs.targetLanguage, langs.interfaceLanguage);
+      // And both lines are held against what they have looked up before: the
+      // reply as an appearance, their sentence as use (learner/comprehension.ts).
+      // And into the expression ledger: their sentence as output, the reply as
+      // something heard (learner/ledger.ts).
+      // How the turn went, without the words (learnerMetrics.ts): whether it
+      // needed correcting is what the learner brief reads for chat.
+      if (practised) {
+        later(async () => {
+          await recordLearnerTurn({
+            userId,
+            surface: "chat",
+            language: langs.targetLanguage,
+            uiLanguage: langs.interfaceLanguage,
+            sessionId: null,
+            turnIndex: null,
+            text: message,
+            spoken: false,
+            corrected: data.correction?.corrected ?? "",
+            appVersion: requestAppVersion(request.headers),
+            now: Date.now(),
+          });
+          await forgetLearnerBrief(userId, langs.targetLanguage);
+          // The My tab's elements (learner/growth.ts): a line needing no
+          // correction grows accuracy, and one already as natural as it gets
+          // grows naturalness too.
+          const same = (a: string, b: string) => a.replace(/\s+/g, " ").trim().toLowerCase() === b.replace(/\s+/g, " ").trim().toLowerCase();
+          const corrected = data.correction?.corrected ?? "";
+          const natural = data.correction?.natural ?? "";
+          await recordGrowthTurn({
+            userId,
+            language: langs.targetLanguage,
+            turn: {
+              surface: "chat",
+              corrected: corrected ? !same(corrected, message) : null,
+              alreadyNatural: !natural || nearlySame(natural, message),
+            },
+          });
+        });
+      }
+      later(() =>
+        recordTurn({
+          userId,
+          language: langs.targetLanguage,
+          where: "chat",
+          tutorLine: data.assistantMessage ?? "",
+          ...(practised
+            ? { learner: { sentence: message, corrected: data.correction?.corrected ?? "" } }
+            : {}),
+        }),
+      );
+      later(() =>
+        observeChatLines({
+          userId,
+          language: langs.targetLanguage,
+          tutorLine: data.assistantMessage ?? "",
+          ...(practised
+            ? { learnerLine: { sentence: message, corrected: data.correction?.corrected ?? "" } }
+            : {}),
+        }),
+      );
+      if (practised) {
+        // A phrase on their study map, said here, is output they produced on
+        // their own (curriculum/missions.ts).
+        // Then, one after the other since both write the map's items: a
+        // mistake of a kind they keep making goes onto the map to learn
+        // (curriculum/weakPoints.ts).
+        later(async () => {
+          await observeMapUse({
+            userId,
+            language: langs.targetLanguage,
+            sentence: message,
+            corrected: data.correction?.corrected ?? "",
+            where: "chat",
+          });
+          await observeWeakPoints({
+            openai,
+            userId,
+            language: langs.targetLanguage,
+            sentence: message,
+            corrected: data.correction?.corrected ?? "",
+            meter: (op) => void meterRequest(request, op),
+          });
+        });
+        later(async () => {
+          await observeChatTurn({
+            openai,
+            userId,
+            language: langs.targetLanguage,
+            sentence: message,
+            corrected: data.correction?.corrected ?? "",
+            meter: () => void meterRequest(request, "learnerObserve"),
+          });
+        });
+      }
+
+      await Promise.all(jobs);
+  };
+
   try {
     if (mode === "how_to_say") {
       void meterRequest(request, "howToSay");
@@ -963,122 +1149,86 @@ export async function POST(request: NextRequest) {
     // bring back, whether to ease off or stretch (learner/brief.ts). Built from
     // what is kept and cached for minutes; empty when there is nothing yet.
     const brief = (await readLearnerBrief(userId, langs.targetLanguage)).prompt;
+    const turnOptions: ChatTurnOptions = {
+      conversationMode,
+      imageDataUrl,
+      ownLanguage: body.ownLanguage === true,
+      brief,
+      practice,
+    };
+    const recentLines = parseRecent(body.recent);
+
+    // 새 앱(2026-10-22~): 답을 먼저 보내고 교정은 도착하면(NDJSON 두 줄).
+    // 답 호출과 교정 호출이 나란히 돌아, 답은 짧은 호출만큼만 기다린다. 옛 앱은 아래 한 덩어리 그대로.
+    if (body.stream === true) {
+      void meterRequest(request, "chatReply");
+      const encoder = new TextEncoder();
+      const ownLanguage = turnOptions.ownLanguage === true;
+      const correctionCall: Promise<ChatPayload | null> = ownLanguage
+        ? Promise.resolve(null)
+        : runChat(openai, message, langs, recentLines, { ...turnOptions, skipReread: true });
+      // 교정 호출이 실패해도 답은 간다 — 처리 안 된 거부로 남지 않게 미리 받아 둔다.
+      const correctionSafe = correctionCall.catch((error) => {
+        console.error("[chat-stream-correction]", error);
+        return null;
+      });
+      const replyCall = runChatReply(openai, message, langs, recentLines, turnOptions);
+      let finish: (data: ChatPayload | null) => void = () => {};
+      const finished = new Promise<ChatPayload | null>((resolve) => {
+        finish = resolve;
+      });
+      after(async () => {
+        const data = await finished;
+        if (data) await chatBookkeeping(data);
+      });
+      const stream = new ReadableStream<Uint8Array>({
+        async start(controller) {
+          const send = (line: unknown) => controller.enqueue(encoder.encode(`${JSON.stringify(line)}\n`));
+          let reply: { assistantMessage: string; spokenReply: string } | null = null;
+          try {
+            reply = await replyCall;
+          } catch (error) {
+            console.error("[chat-stream-reply]", error);
+            // 답 호출이 안 되면 교정 호출이 같이 쓴 답으로.
+            const fallback = await correctionSafe;
+            if (fallback?.assistantMessage) {
+              reply = { assistantMessage: fallback.assistantMessage, spokenReply: fallback.spokenReply ?? "" };
+            }
+          }
+          if (!reply) {
+            const detail = simErrorDetail(new Error("reply failed"));
+            send({ type: "error", error: "CHAT_FAILED", ...(detail ? { detail } : {}) });
+            controller.close();
+            finish(null);
+            return;
+          }
+          await incrementDailyUsed(userId);
+          send({ type: "reply", ...reply });
+          const corrected = await correctionSafe;
+          const correction = ownLanguage
+            ? { corrected: message, natural: message, explanation: "" }
+            : corrected?.correction ?? null;
+          send({ type: "correction", correction });
+          controller.close();
+          // 교정이 없으면(실패) 기록을 건너뛴다 — 맞은 줄로 잘못 세지 않게.
+          finish(correction ? { ...reply, correction } : null);
+        },
+      });
+      return streamWithCors(request, stream);
+    }
+
     const data = await runChat(
       openai,
       message,
       langs,
-      parseRecent(body.recent),
+      recentLines,
       {
-        conversationMode,
-        imageDataUrl,
-        ownLanguage: body.ownLanguage === true,
-        brief,
-        practice,
+        ...turnOptions,
         onReread: () => void meterRequest(request, "chatReread"),
       },
     );
     await incrementDailyUsed(userId);
-    // The sentence is read for the constructions in it once the reply is on
-    // its way (learner/profile.ts). Only a sentence written in the language
-    // being learned is practice; a question asked in the learner's own
-    // language is not read.
-    const practised =
-      Boolean(message) &&
-      writtenInLearningLanguage(message, langs.targetLanguage, langs.interfaceLanguage);
-    // And both lines are held against what they have looked up before: the
-    // reply as an appearance, their sentence as use (learner/comprehension.ts).
-    // And into the expression ledger: their sentence as output, the reply as
-    // something heard (learner/ledger.ts).
-    // How the turn went, without the words (learnerMetrics.ts): whether it
-    // needed correcting is what the learner brief reads for chat.
-    if (practised) {
-      after(async () => {
-        await recordLearnerTurn({
-          userId,
-          surface: "chat",
-          language: langs.targetLanguage,
-          uiLanguage: langs.interfaceLanguage,
-          sessionId: null,
-          turnIndex: null,
-          text: message,
-          spoken: false,
-          corrected: data.correction?.corrected ?? "",
-          appVersion: requestAppVersion(request.headers),
-          now: Date.now(),
-        });
-        await forgetLearnerBrief(userId, langs.targetLanguage);
-        // The My tab's elements (learner/growth.ts): a line needing no
-        // correction grows accuracy, and one already as natural as it gets
-        // grows naturalness too.
-        const same = (a: string, b: string) => a.replace(/\s+/g, " ").trim().toLowerCase() === b.replace(/\s+/g, " ").trim().toLowerCase();
-        const corrected = data.correction?.corrected ?? "";
-        const natural = data.correction?.natural ?? "";
-        await recordGrowthTurn({
-          userId,
-          language: langs.targetLanguage,
-          turn: {
-            surface: "chat",
-            corrected: corrected ? !same(corrected, message) : null,
-            alreadyNatural: !natural || nearlySame(natural, message),
-          },
-        });
-      });
-    }
-    after(() =>
-      recordTurn({
-        userId,
-        language: langs.targetLanguage,
-        where: "chat",
-        tutorLine: data.assistantMessage ?? "",
-        ...(practised
-          ? { learner: { sentence: message, corrected: data.correction?.corrected ?? "" } }
-          : {}),
-      }),
-    );
-    after(() =>
-      observeChatLines({
-        userId,
-        language: langs.targetLanguage,
-        tutorLine: data.assistantMessage ?? "",
-        ...(practised
-          ? { learnerLine: { sentence: message, corrected: data.correction?.corrected ?? "" } }
-          : {}),
-      }),
-    );
-    if (practised) {
-      // A phrase on their study map, said here, is output they produced on
-      // their own (curriculum/missions.ts).
-      // Then, one after the other since both write the map's items: a
-      // mistake of a kind they keep making goes onto the map to learn
-      // (curriculum/weakPoints.ts).
-      after(async () => {
-        await observeMapUse({
-          userId,
-          language: langs.targetLanguage,
-          sentence: message,
-          corrected: data.correction?.corrected ?? "",
-          where: "chat",
-        });
-        await observeWeakPoints({
-          openai,
-          userId,
-          language: langs.targetLanguage,
-          sentence: message,
-          corrected: data.correction?.corrected ?? "",
-          meter: (op) => void meterRequest(request, op),
-        });
-      });
-      after(async () => {
-        await observeChatTurn({
-          openai,
-          userId,
-          language: langs.targetLanguage,
-          sentence: message,
-          corrected: data.correction?.corrected ?? "",
-          meter: () => void meterRequest(request, "learnerObserve"),
-        });
-      });
-    }
+    after(() => chatBookkeeping(data));
     return jsonWithCors(request, data);
   } catch (error) {
     console.error("[chat]", error);

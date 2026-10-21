@@ -12,6 +12,7 @@
  *   npm run sim:users -- --api https://미리보기주소     운영 대신 미리보기 배포에
  *   npm run sim:users -- --judge / --llm-persona       LLM 평가·페르소나 (OPENAI_API_KEY 필요)
  *   npm run sim:users -- --model-routes '{"basic":"anthropic: claude-haiku-5-5"}'   이 점검만 다른 모델(서버 llm.ts, simcheck- 사용자만)
+ *   npm run sim:users -- --chat-stream   채팅을 새 앱처럼 스트림으로(답 먼저, 교정 나중)
  *   npm run sim:users -- --rescan tmp/sim-users/<실행>  저장된 채팅을 지금 규칙으로 다시 검사 (요청 0)
  *
  * 운영 API(API_BASE)를 부른다 — 요청마다 서버의 OpenAI 비용이 든다. 사용자 id는
@@ -81,7 +82,9 @@ const OUT = value("out", `tmp/sim-users/${RUN_ID}`);
 
 // --model-routes '{"basic":"anthropic: claude-haiku-5-5"}' — 이 점검만 다른 모델로(서버가 simcheck- 사용자에게만 허용).
 const MODEL_ROUTES = value("model-routes", null);
-const client = makeClient({ api: API, maxRequests: MAX_REQUESTS, appVersion: APP_VERSION, modelRoutes: MODEL_ROUTES });
+// --chat-stream — 채팅 턴을 새 앱처럼 스트림으로(답 먼저 → 교정). firstMs가 답이 뜨는 시간.
+const CHAT_STREAM = flag("chat-stream");
+const client = makeClient({ api: API, maxRequests: MAX_REQUESTS, appVersion: APP_VERSION, modelRoutes: MODEL_ROUTES, chatStream: CHAT_STREAM });
 
 /** 이 사람이 이 묶음을 도나: 묶음마다 정한 비율(every)대로, 조합이 고르게 퍼지게. */
 function suitesFor(persona, index) {

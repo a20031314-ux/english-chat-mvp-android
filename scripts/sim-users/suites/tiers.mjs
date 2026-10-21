@@ -150,7 +150,7 @@ export default {
         if (similar) issues.push(issue("warn", "passive_repeat", "짧게 답했더니 앞과 거의 같은 말을 되풀이", { sample: reply.slice(0, 80) }));
         if (measure.length > 280) issues.push(issue("warn", "passive_long", `짧은 답에 ${measure.length}자로 길게 답함`, { sample: reply.slice(0, 80) }));
       }
-      const entry = { suite: "tiers", tier, turn: t + 1, kind: turn.kind, misbehavior: turn.misbehavior, expect: turn.expect, text: turn.text, status: response.status, ms: response.ms, reply, corrected, natural: response.body?.correction?.natural ?? "", explanation: response.body?.correction?.explanation ?? "", measure, issues };
+      const entry = { suite: "tiers", tier, turn: t + 1, kind: turn.kind, misbehavior: turn.misbehavior, expect: turn.expect, text: turn.text, status: response.status, ms: response.ms, ...(response.firstMs != null ? { firstMs: response.firstMs } : {}), reply, corrected, natural: response.body?.correction?.natural ?? "", explanation: response.body?.correction?.explanation ?? "", measure, issues };
       if (own && response.status === 200) {
         const card = await call(userId, "/api/chat", { body: { mode: "how_to_say", expressionOnly: true, message: turn.text, ...langsFor(persona), recent: recent.slice(-8) } });
         entry.card = { status: card.status, ms: card.ms, expression: card.body?.expression ?? "" };

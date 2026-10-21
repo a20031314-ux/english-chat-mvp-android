@@ -70,6 +70,8 @@ const counter: OpCost = { kind: "counter" };
 export const OP_COST: Record<string, OpCost> = {
   chat: mini(),
   chatReread: mini(),
+  // 답만 쓰는 짧은 호출(교정 지시 없음) — 프롬프트 길이에서 어림.
+  chatReply: estimated({ input: 1400, output: 120 }),
   howToSay: mini(),
   howToSayCard: mini(),
   roomHint: mini(),
@@ -167,9 +169,10 @@ export function assumedOps(): string[] {
 /**
  * 채팅 한 통이 부르는 기록들. 답(chat) 뒤에 문장 읽기(learnerObserve)와,
  * 고친 줄이면 실수 종류 읽기(weakRead)가 따라간다(chat route `after`).
- * 최악 계산은 셋 다(모든 문장이 길고 틀린 영어 학습자), 다시 쓰기(chatReread)는 드물어 뺀다.
+ * 새 앱(2026-10-22~)은 답만 쓰는 호출(chatReply)이 교정 호출과 나란히 늘 붙는다 — 옛 앱엔 없지만 넉넉히 넣어 센다.
+ * 최악 계산은 넷 다(모든 문장이 길고 틀린 영어 학습자), 다시 쓰기(chatReread)는 옛 앱에서만·드물어 뺀다.
  */
-export const CHAT_MESSAGE_OPS = ["chat", "learnerObserve", "weakRead"] as const;
+export const CHAT_MESSAGE_OPS = ["chat", "chatReply", "learnerObserve", "weakRead"] as const;
 
 export function chatMessageUsd(measured?: Record<string, Tokens>): number {
   return CHAT_MESSAGE_OPS.reduce((sum, op) => sum + opUsd(op, measured), 0);
@@ -186,6 +189,7 @@ export const CHAT_FOLLOW_SHARE = { learnerObserve: 0.33, weakRead: 0.33, basis: 
 export function chatMessageTypicalUsd(measured?: Record<string, Tokens>): number {
   return (
     opUsd("chat", measured) +
+    opUsd("chatReply", measured) +
     CHAT_FOLLOW_SHARE.learnerObserve * opUsd("learnerObserve", measured) +
     CHAT_FOLLOW_SHARE.weakRead * opUsd("weakRead", measured)
   );

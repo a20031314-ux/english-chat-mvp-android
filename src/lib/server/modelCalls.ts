@@ -29,6 +29,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   // counted on its own below, so the pair says how often it happens.
   chat: 1,
   chatReread: 1,
+  // 새 앱 스트림: 답만 쓰는 호출(교정 호출과 나란히, 2026-10-22). 이때는 chatReread가 없다.
+  chatReply: 1,
   // A "how do I say this" turn. One call, and the same model.
   howToSay: 1,
   // The same expression opened as a card under a line written in the
