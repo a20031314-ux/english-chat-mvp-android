@@ -1067,7 +1067,7 @@ export function RoomView({
               t={t}
               allLines={shownLines}
               lines={typed}
-              emptyText={t.noComments}
+              emptyText=""
               view="timeline"
               selfId={peerId}
               locale={locale}
@@ -1155,10 +1155,12 @@ export function RoomView({
           }}
         />
         )}
-        <p className="text-xs text-slate-500" dir="auto">
-          {!joined ? t.connecting : role === "listener" ? t.listenerHint : pending > 0 ? t.transcribing : t.listening}
-          {role === "speaker" ? ` · ${t.earphones}` : ""}
-        </p>
+        {/* 상태만(연결 중·받아쓰는 중). 쓰는 법 설명은 사용법(?) 창에(2026-10-22 사용자). */}
+        {!joined || pending > 0 ? (
+          <p className="text-xs text-slate-500" dir="auto">
+            {!joined ? t.connecting : t.transcribing}
+          </p>
+        ) : null}
         <div className="flex gap-2">
           {role === "speaker" ? (
             <>

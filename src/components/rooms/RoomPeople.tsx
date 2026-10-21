@@ -126,7 +126,6 @@ export function PeopleList({
           </button>
         ))}
       </div>
-      <p className="text-[11px] leading-relaxed text-slate-500">{t.peopleHint}</p>
       {error ? <p className="text-sm text-rose-300">{t.error}</p> : null}
       {people && shown.length === 0 ? <p className="py-6 text-center text-sm text-slate-500">{t.peopleEmpty}</p> : null}
 

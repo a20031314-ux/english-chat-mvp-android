@@ -468,8 +468,6 @@ function Bubble({
         <p className={`mt-0.5 px-1 text-[10px] text-slate-600 ${mine ? "text-end" : ""}`}>
           {time}
           {asked > 0 ? ` · ❓ ${asked}` : ""}
-          {!mine && !open ? ` · ${t.tapToTranslate}` : ""}
-          {mine && !open ? ` · ${t.polish}` : ""}
         </p>
       </div>
     </div>

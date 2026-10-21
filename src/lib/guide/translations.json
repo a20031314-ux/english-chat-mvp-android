@@ -292,14 +292,16 @@
         {
           "heading": "Cómo participar y ver",
           "body": [
-            "Arriba, elige “Conversación”, “Vista chat”, “Vista llamada” y más. Subtítulos y chat van en cuadros separados, y abajo eliges “Hablar”, “Escuchar”, “Solo chat” o “Solo voz”."
+            "Arriba, elige “Conversación”, “Vista chat”, “Vista llamada” y más. Subtítulos y chat van en cuadros separados, y abajo eliges “Hablar”, “Escuchar”, “Solo chat” o “Solo voz”.",
+            "Si hablas, usa auriculares para que las voces de los demás no entren en tus subtítulos."
           ],
           "shot": "r69-layouts"
         },
         {
           "heading": "Elige una frase y pregunta",
           "body": [
-            "Toca una línea y, bajo la traducción, elige “¿Qué significa?”, “Responder” o “Preguntar en privado”. La pregunta sale en el idioma que aprendes y avisamos a quien lo dijo. La privada va como mensaje solo entre los dos."
+            "Toca una línea y, bajo la traducción, elige “¿Qué significa?”, “Responder” o “Preguntar en privado”. La pregunta sale en el idioma que aprendes y avisamos a quien lo dijo. La privada va como mensaje solo entre los dos.",
+            "Bajo la traducción, toca una palabra para preguntar solo por esa parte; toca otra para formar una frase."
           ],
           "shot": "r69-quote"
         },
@@ -669,14 +671,16 @@
         {
           "heading": "参加のしかたと見え方",
           "body": [
-            "上で「会話」「チャット中心」「通話中心」などを選べます。字幕とチャットは欄が分かれ、下で「話す」「聞く」「チャットのみ」「声のみ」から参加のしかたを選びます。"
+            "上で「会話」「チャット中心」「通話中心」などを選べます。字幕とチャットは欄が分かれ、下で「話す」「聞く」「チャットのみ」「声のみ」から参加のしかたを選びます。",
+            "話す席ではイヤホンを使うと、相手の声が自分の字幕に混ざりません。"
           ],
           "shot": "r69-layouts"
         },
         {
           "heading": "行を選んで質問",
           "body": [
-            "行をタップすると、翻訳の下に「どういう意味？」「返信」「こっそり質問」が出ます。質問は学習中の言語で入り、話した人に知らせます。こっそり質問は二人だけのメッセージになります。"
+            "行をタップすると、翻訳の下に「どういう意味？」「返信」「こっそり質問」が出ます。質問は学習中の言語で入り、話した人に知らせます。こっそり質問は二人だけのメッセージになります。",
+            "訳の下の単語をタップするとその部分だけ質問でき、続けてタップするとフレーズになります。"
           ],
           "shot": "r69-quote"
         },
@@ -1046,14 +1050,16 @@
         {
           "heading": "参与方式和查看方式",
           "body": [
-            "在上方选择“对话”“聊天为主”“通话为主”等。字幕和聊天分成两栏，下方可选“说话”“收听”“只聊天”“只语音”来参与。"
+            "在上方选择“对话”“聊天为主”“通话为主”等。字幕和聊天分成两栏，下方可选“说话”“收听”“只聊天”“只语音”来参与。",
+            "在发言席上戴耳机，别人的声音就不会混进你的字幕。"
           ],
           "shot": "r69-layouts"
         },
         {
           "heading": "选一句话提问",
           "body": [
-            "点一行，在翻译下方会出现“什么意思？”“回复”“私下问”。问题会用你在学的语言写好，并通知说话的人。私下问会作为只有你们俩看到的消息发出。"
+            "点一行，在翻译下方会出现“什么意思？”“回复”“私下问”。问题会用你在学的语言写好，并通知说话的人。私下问会作为只有你们俩看到的消息发出。",
+            "在翻译下面点一个词，就只问这一部分；再点一个就变成短语。"
           ],
           "shot": "r69-quote"
         },
@@ -1423,14 +1429,16 @@
         {
           "heading": "Cách tham gia và cách xem",
           "body": [
-            "Ở trên, chọn “Hội thoại”, “Ưu tiên chat”, “Ưu tiên gọi” và hơn thế. Phụ đề và chat nằm ở hai khung riêng, bên dưới chọn “Nói”, “Nghe”, “Chỉ chat” hoặc “Chỉ giọng nói”."
+            "Ở trên, chọn “Hội thoại”, “Ưu tiên chat”, “Ưu tiên gọi” và hơn thế. Phụ đề và chat nằm ở hai khung riêng, bên dưới chọn “Nói”, “Nghe”, “Chỉ chat” hoặc “Chỉ giọng nói”.",
+            "Khi đang nói, dùng tai nghe để giọng người khác không lẫn vào phụ đề của bạn."
           ],
           "shot": "r69-layouts"
         },
         {
           "heading": "Chọn một câu để hỏi",
           "body": [
-            "Chạm vào dòng, dưới bản dịch có “Nghĩa là gì?”, “Trả lời” và “Hỏi riêng”. Câu hỏi được viết sẵn bằng ngôn ngữ bạn học và người nói sẽ được báo. Hỏi riêng là tin nhắn chỉ hai người thấy."
+            "Chạm vào dòng, dưới bản dịch có “Nghĩa là gì?”, “Trả lời” và “Hỏi riêng”. Câu hỏi được viết sẵn bằng ngôn ngữ bạn học và người nói sẽ được báo. Hỏi riêng là tin nhắn chỉ hai người thấy.",
+            "Dưới bản dịch, chạm một từ để hỏi riêng phần đó; chạm thêm từ khác để thành cụm."
           ],
           "shot": "r69-quote"
         },
@@ -1800,14 +1808,16 @@
         {
           "heading": "Participer et voir à votre façon",
           "body": [
-            "En haut, choisissez « Conversation », « Vue discussion », « Vue appel » et d’autres. Sous-titres et discussion ont chacun leur cadre, et en bas vous choisissez « Parler », « Écouter », « Discussion seule » ou « Voix seule »."
+            "En haut, choisissez « Conversation », « Vue discussion », « Vue appel » et d’autres. Sous-titres et discussion ont chacun leur cadre, et en bas vous choisissez « Parler », « Écouter », « Discussion seule » ou « Voix seule ».",
+            "Quand vous parlez, des écouteurs évitent que la voix des autres entre dans vos sous-titres."
           ],
           "shot": "r69-layouts"
         },
         {
           "heading": "Choisir une phrase et demander",
           "body": [
-            "Touchez une ligne puis, sous la traduction, « Ça veut dire quoi ? », « Répondre » ou « Demander en privé ». La question est écrite dans la langue que vous apprenez et la personne est prévenue. En privé, c’est un message entre vous deux."
+            "Touchez une ligne puis, sous la traduction, « Ça veut dire quoi ? », « Répondre » ou « Demander en privé ». La question est écrite dans la langue que vous apprenez et la personne est prévenue. En privé, c’est un message entre vous deux.",
+            "Sous la traduction, touchez un mot pour ne demander que cette partie ; touchez-en un autre pour former une expression."
           ],
           "shot": "r69-quote"
         },
@@ -2177,14 +2187,16 @@
         {
           "heading": "Come partecipare e vedere",
           "body": [
-            "In alto scegli “Conversazione”, “Vista chat”, “Vista chiamata” e altro. Sottotitoli e chat stanno in riquadri separati, e sotto scegli “Parla”, “Ascolta”, “Solo chat” o “Solo voce”."
+            "In alto scegli “Conversazione”, “Vista chat”, “Vista chiamata” e altro. Sottotitoli e chat stanno in riquadri separati, e sotto scegli “Parla”, “Ascolta”, “Solo chat” o “Solo voce”.",
+            "Quando parli, con gli auricolari le voci degli altri non entrano nei tuoi sottotitoli."
           ],
           "shot": "r69-layouts"
         },
         {
           "heading": "Scegli una frase e chiedi",
           "body": [
-            "Tocca una riga e, sotto la traduzione, scegli “Che significa?”, “Rispondi” o “Chiedi in privato”. La domanda è scritta nella lingua che studi e chi l’ha detto riceve un avviso. In privato diventa un messaggio solo tra voi due."
+            "Tocca una riga e, sotto la traduzione, scegli “Che significa?”, “Rispondi” o “Chiedi in privato”. La domanda è scritta nella lingua che studi e chi l’ha detto riceve un avviso. In privato diventa un messaggio solo tra voi due.",
+            "Sotto la traduzione, tocca una parola per chiedere solo quella parte; toccane un'altra per formare una frase."
           ],
           "shot": "r69-quote"
         },
@@ -2554,14 +2566,16 @@
         {
           "heading": "Como participar e ver",
           "body": [
-            "Em cima, escolha “Conversa”, “Vista conversa”, “Vista chamada” e mais. Legendas e conversa ficam em caixas separadas, e em baixo escolhe “Falar”, “Ouvir”, “Só conversa” ou “Só voz”."
+            "Em cima, escolha “Conversa”, “Vista conversa”, “Vista chamada” e mais. Legendas e conversa ficam em caixas separadas, e em baixo escolhe “Falar”, “Ouvir”, “Só conversa” ou “Só voz”.",
+            "Quando estiver falando, use fones para que a voz dos outros não entre nas suas legendas."
           ],
           "shot": "r69-layouts"
         },
         {
           "heading": "Escolha uma frase e pergunte",
           "body": [
-            "Toque numa linha e, por baixo da tradução, escolha “O que significa?”, “Responder” ou “Perguntar em privado”. A pergunta vem na língua que está a aprender e quem a disse é avisado. Em privado vai como mensagem só entre os dois."
+            "Toque numa linha e, por baixo da tradução, escolha “O que significa?”, “Responder” ou “Perguntar em privado”. A pergunta vem na língua que está a aprender e quem a disse é avisado. Em privado vai como mensagem só entre os dois.",
+            "Abaixo da tradução, toque numa palavra para perguntar só sobre ela; toque em outra para formar uma expressão."
           ],
           "shot": "r69-quote"
         },
@@ -2931,14 +2945,16 @@
         {
           "heading": "Как участвовать и смотреть",
           "body": [
-            "Вверху выберите «Разговор», «Чат», «Звонок» и другие виды. Субтитры и чат — в отдельных блоках, а внизу выберите «Говорить», «Слушать», «Только чат» или «Только голос»."
+            "Вверху выберите «Разговор», «Чат», «Звонок» и другие виды. Субтитры и чат — в отдельных блоках, а внизу выберите «Говорить», «Слушать», «Только чат» или «Только голос».",
+            "Когда вы говорите, наушники не дают чужим голосам попасть в ваши субтитры."
           ],
           "shot": "r69-layouts"
         },
         {
           "heading": "Выбрать фразу и спросить",
           "body": [
-            "Нажмите на строку, и под переводом появятся «Что это значит?», «Ответить» и «Спросить лично». Вопрос уже написан на изучаемом языке, автору придёт уведомление. «Лично» — сообщение только для вас двоих."
+            "Нажмите на строку, и под переводом появятся «Что это значит?», «Ответить» и «Спросить лично». Вопрос уже написан на изучаемом языке, автору придёт уведомление. «Лично» — сообщение только для вас двоих.",
+            "Под переводом нажмите слово, чтобы спросить только о нём; нажмите ещё одно — получится фраза."
           ],
           "shot": "r69-quote"
         },
@@ -3308,14 +3324,16 @@
         {
           "heading": "Cara ikut dan melihat",
           "body": [
-            "Di atas, pilih “Percakapan”, “Fokus chat”, “Fokus panggilan”, dan lainnya. Teks dan chat ada di kotak terpisah, dan di bawah pilih “Bicara”, “Dengar”, “Chat saja”, atau “Suara saja”."
+            "Di atas, pilih “Percakapan”, “Fokus chat”, “Fokus panggilan”, dan lainnya. Teks dan chat ada di kotak terpisah, dan di bawah pilih “Bicara”, “Dengar”, “Chat saja”, atau “Suara saja”.",
+            "Saat berbicara, pakai earphone agar suara orang lain tidak masuk ke subtitelmu."
           ],
           "shot": "r69-layouts"
         },
         {
           "heading": "Pilih kalimat lalu tanya",
           "body": [
-            "Ketuk baris, lalu di bawah terjemahan ada “Artinya apa?”, “Balas”, dan “Tanya diam-diam”. Pertanyaan ditulis dalam bahasa yang kamu pelajari dan yang bicara diberi tahu. Tanya diam-diam terkirim sebagai pesan berdua."
+            "Ketuk baris, lalu di bawah terjemahan ada “Artinya apa?”, “Balas”, dan “Tanya diam-diam”. Pertanyaan ditulis dalam bahasa yang kamu pelajari dan yang bicara diberi tahu. Tanya diam-diam terkirim sebagai pesan berdua.",
+            "Di bawah terjemahan, ketuk satu kata untuk menanyakan bagian itu saja; ketuk kata lain untuk membentuk frasa."
           ],
           "shot": "r69-quote"
         },
@@ -3685,14 +3703,16 @@
         {
           "heading": "طريقة المشاركة والعرض",
           "body": [
-            "في الأعلى اختر «المحادثة» أو «عرض الدردشة» أو «عرض المكالمة» وغيرها. الترجمة النصية والدردشة في خانتين منفصلتين، وفي الأسفل تختار «تحدّث» أو «استمع» أو «دردشة فقط» أو «صوت فقط»."
+            "في الأعلى اختر «المحادثة» أو «عرض الدردشة» أو «عرض المكالمة» وغيرها. الترجمة النصية والدردشة في خانتين منفصلتين، وفي الأسفل تختار «تحدّث» أو «استمع» أو «دردشة فقط» أو «صوت فقط».",
+            "عندما تتحدث، استخدم السماعات حتى لا تختلط أصوات الآخرين بترجمتك النصية."
           ],
           "shot": "r69-layouts"
         },
         {
           "heading": "اختر جملة واسأل عنها",
           "body": [
-            "اضغط على سطر، وتحت الترجمة ستجد «ماذا يعني؟» و«رد» و«اسأل بشكل خاص». يُكتب السؤال باللغة التي تتعلمها ويصل تنبيه لصاحب الكلام. السؤال الخاص يُرسل رسالةً بينكما فقط."
+            "اضغط على سطر، وتحت الترجمة ستجد «ماذا يعني؟» و«رد» و«اسأل بشكل خاص». يُكتب السؤال باللغة التي تتعلمها ويصل تنبيه لصاحب الكلام. السؤال الخاص يُرسل رسالةً بينكما فقط.",
+            "تحت الترجمة، اضغط على كلمة لتسأل عنها وحدها، واضغط على كلمة أخرى لتكوين عبارة."
           ],
           "shot": "r69-quote"
         },
@@ -4062,14 +4082,16 @@
         {
           "heading": "วิธีเข้าร่วมและวิธีดู",
           "body": [
-            "ด้านบนเลือก “บทสนทนา” “เน้นแชต” “เน้นโทร” และอื่นๆ ซับกับแชตแยกเป็นสองช่อง ด้านล่างเลือก “พูด” “ฟัง” “แชตอย่างเดียว” หรือ “เสียงอย่างเดียว”"
+            "ด้านบนเลือก “บทสนทนา” “เน้นแชต” “เน้นโทร” และอื่นๆ ซับกับแชตแยกเป็นสองช่อง ด้านล่างเลือก “พูด” “ฟัง” “แชตอย่างเดียว” หรือ “เสียงอย่างเดียว”",
+            "ตอนพูด ใช้หูฟังเพื่อไม่ให้เสียงคนอื่นปนเข้ามาในคำบรรยายของคุณ"
           ],
           "shot": "r69-layouts"
         },
         {
           "heading": "เลือกประโยคแล้วถาม",
           "body": [
-            "แตะบรรทัด ใต้คำแปลจะมี “แปลว่าอะไร?” “ตอบกลับ” และ “ถามเป็นการส่วนตัว” คำถามเขียนเป็นภาษาที่คุณเรียนไว้ให้ และคนพูดจะได้รับแจ้ง การถามส่วนตัวจะไปเป็นข้อความที่เห็นกันสองคน"
+            "แตะบรรทัด ใต้คำแปลจะมี “แปลว่าอะไร?” “ตอบกลับ” และ “ถามเป็นการส่วนตัว” คำถามเขียนเป็นภาษาที่คุณเรียนไว้ให้ และคนพูดจะได้รับแจ้ง การถามส่วนตัวจะไปเป็นข้อความที่เห็นกันสองคน",
+            "ใต้คำแปล แตะคำหนึ่งเพื่อถามเฉพาะส่วนนั้น แตะอีกคำเพื่อรวมเป็นวลี"
           ],
           "shot": "r69-quote"
         },
@@ -4439,14 +4461,16 @@
         {
           "heading": "जुड़ने और देखने का तरीका",
           "body": [
-            "ऊपर “बातचीत”, “चैट व्यू”, “कॉल व्यू” वगैरह चुनें। सबटाइटल और चैट अलग-अलग खाने में रहते हैं, और नीचे “बोलें”, “सुनें”, “सिर्फ़ चैट” या “सिर्फ़ आवाज़” चुनें।"
+            "ऊपर “बातचीत”, “चैट व्यू”, “कॉल व्यू” वगैरह चुनें। सबटाइटल और चैट अलग-अलग खाने में रहते हैं, और नीचे “बोलें”, “सुनें”, “सिर्फ़ चैट” या “सिर्फ़ आवाज़” चुनें।",
+            "बोलते समय ईयरफ़ोन लगाएँ, ताकि दूसरों की आवाज़ आपके सबटाइटल में न मिले।"
           ],
           "shot": "r69-layouts"
         },
         {
           "heading": "पंक्ति चुनकर पूछें",
           "body": [
-            "पंक्ति पर टैप करें, अनुवाद के नीचे “इसका मतलब?”, “जवाब दें” और “अकेले में पूछें” मिलेंगे। सवाल आपकी सीखी जा रही भाषा में भरा होता है और बोलने वाले को सूचना जाती है। अकेले में पूछा सवाल दोनों के बीच मैसेज बनकर जाता है।"
+            "पंक्ति पर टैप करें, अनुवाद के नीचे “इसका मतलब?”, “जवाब दें” और “अकेले में पूछें” मिलेंगे। सवाल आपकी सीखी जा रही भाषा में भरा होता है और बोलने वाले को सूचना जाती है। अकेले में पूछा सवाल दोनों के बीच मैसेज बनकर जाता है।",
+            "अनुवाद के नीचे किसी शब्द पर टैप करें तो सिर्फ़ उसी के बारे में पूछेंगे; दूसरे पर टैप करें तो वाक्यांश बनेगा।"
           ],
           "shot": "r69-quote"
         },

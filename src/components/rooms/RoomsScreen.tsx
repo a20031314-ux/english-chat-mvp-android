@@ -495,7 +495,7 @@ function Lobby({
                     </span>
                   </div>
                   <p className="mt-1.5 text-[11px] text-slate-400">
-                    {t.speakers} {room.speakers}/{MAX_SPEAKERS} · {t.listeners} {room.listeners} · {t.tapToJoin}
+                    {t.speakers} {room.speakers}/{MAX_SPEAKERS} · {t.listeners} {room.listeners}
                   </p>
                 </button>
                 <div className="mt-2 flex justify-end">

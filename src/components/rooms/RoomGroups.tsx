@@ -467,7 +467,6 @@ function GroupBubble({
         <p className={`mt-0.5 px-1 text-meta text-slate-600 ${mine ? "text-end" : ""}`}>
           {time}
           {asked > 0 ? ` · ❓ ${asked}` : ""}
-          {!mine && !open ? ` · ${t.tapToTranslate}` : ""}
         </p>
       </div>
     </div>

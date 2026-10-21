@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-20c";
+export const GUIDE_VERSION = "2026-10-22";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -409,14 +409,16 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "참여 방식·보는 방식",
         "body": [
-          "방 위에서 ‘대화 보기’·‘채팅 위주’·‘통화 위주’ 등을 골라요. 자막과 채팅은 칸이 나뉘고, 아래에서 ‘말하기’·‘듣기’·‘채팅만’·‘보이스만’으로 참여 방식을 골라요."
+          "방 위에서 ‘대화 보기’·‘채팅 위주’·‘통화 위주’ 등을 골라요. 자막과 채팅은 칸이 나뉘고, 아래에서 ‘말하기’·‘듣기’·‘채팅만’·‘보이스만’으로 참여 방식을 골라요.",
+          "말하기 자리에서는 이어폰을 쓰면 상대 목소리가 내 자막에 섞이지 않아요."
         ],
         "shot": "r69-layouts"
       },
       {
         "heading": "줄을 집어서 묻기",
         "body": [
-          "줄을 누르면 번역 아래 ‘무슨 뜻이에요?’·‘답하기’·‘쪽지로 묻기’가 나와요. 질문은 내가 배우는 언어로 채워지고, 말한 사람에게 알림이 가요. 쪽지는 둘만 보는 메시지로 가요."
+          "줄을 누르면 번역 아래 ‘무슨 뜻이에요?’·‘답하기’·‘쪽지로 묻기’가 나와요. 질문은 내가 배우는 언어로 채워지고, 말한 사람에게 알림이 가요. 쪽지는 둘만 보는 메시지로 가요.",
+          "번역 아래 낱말을 누르면 그 부분만 묻고, 이어서 누르면 구절이 돼요."
         ],
         "shot": "r69-quote"
       },
@@ -787,14 +789,16 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Join and view your way",
         "body": [
-          "At the top, choose “Conversation”, “Chat view”, “Call view” and more. Captions and chat sit in separate boxes, and below you join with “Speak”, “Listen”, “Chat only” or “Voice only”."
+          "At the top, choose “Conversation”, “Chat view”, “Call view” and more. Captions and chat sit in separate boxes, and below you join with “Speak”, “Listen”, “Chat only” or “Voice only”.",
+          "When you're speaking, earphones keep other people's voices out of your captions."
         ],
         "shot": "r69-layouts"
       },
       {
         "heading": "Pick a line and ask",
         "body": [
-          "Tap a line and, under the translation, choose “What does it mean?”, “Reply” or “Ask privately”. The question is filled in in the language you’re learning and the speaker is told. A private question goes as a message only the two of you see."
+          "Tap a line and, under the translation, choose “What does it mean?”, “Reply” or “Ask privately”. The question is filled in in the language you’re learning and the speaker is told. A private question goes as a message only the two of you see.",
+          "Below the translation, tap a word to ask about just that part; tap another to make it a phrase."
         ],
         "shot": "r69-quote"
       },

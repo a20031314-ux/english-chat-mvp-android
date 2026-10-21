@@ -457,7 +457,6 @@ export function Composer({
             <p className="line-clamp-2 text-xs text-slate-300" dir="auto">
               <QuoteText text={quote.text} focus={quote.focus} />
             </p>
-            {quote.ask ? <p className="mt-0.5 text-[10px] text-slate-500">{t.askHint}</p> : null}
           </div>
           <button type="button" onClick={onClearQuote} aria-label={t.quoteCancel} className="shrink-0 rounded px-1.5 text-sm text-slate-400 hover:bg-white/10">
             ×
@@ -477,7 +476,6 @@ export function Composer({
               {t.simpler}: {suggestion.simpler}
             </p>
           ) : null}
-          <p className="mt-1 text-[11px] text-slate-500">{t.sayIt}</p>
           <div className="mt-1.5 flex gap-2">
             <button
               type="button"
@@ -623,7 +621,6 @@ export function LineActions({
     <div className="mt-1 space-y-1 ps-1">
       {tokens.length > 1 ? (
         <div className="space-y-1">
-          <p className="text-meta text-slate-500">{t.pickHint}</p>
           <div className="flex flex-wrap gap-1" dir="auto">
             {tokens.map((token, index) => {
               const on = pick !== null && index >= pick[0] && index <= pick[1];
@@ -906,12 +903,12 @@ export function Lines({
 
   const composingRows = composing ?? [];
   if (lines.length === 0 && composingRows.length === 0) {
-    return <p className="min-h-0 flex-1 px-4 py-4 text-sm text-slate-500">{emptyText ?? t.noLines}</p>;
+    // 비어 있으면 빈칸(칸 위에 🎙 자막·💬 채팅 이름이 있다). 설명 글은 사용법(?) 창에.
+    return emptyText ? <p className="min-h-0 flex-1 px-4 py-4 text-sm text-slate-500">{emptyText}</p> : <div className="min-h-0 flex-1" />;
   }
 
   return (
     <div ref={scroller} className="min-h-0 flex-1 overflow-y-auto px-3 py-3">
-      <p className="mb-2 px-1 text-[11px] text-slate-500">{t.tapToTranslate}</p>
       {view === "timeline" ? (
         <ul className="space-y-1.5">
           {ordered.map((line, index) => row(line, true, line.kind !== "text" && overlapsPrevious(ordered, index)))}
