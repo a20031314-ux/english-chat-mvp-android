@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { extractJson, openaiModel, routeFor, TASKS, toAnthropicRequest } from "./llm.ts";
+import { adoptSimRoutes, extractJson, openaiModel, routeFor, TASKS, toAnthropicRequest } from "./llm.ts";
 
 const KEYS = [
   "MODEL_ROUTES",
@@ -161,4 +161,38 @@ test("JSON만 남기기", () => {
   assert.equal(extractJson('Here you go: {"a":{"b":2}} thanks'), '{"a":{"b":2}}');
   assert.equal(extractJson('{"a":1}'), '{"a":1}');
   assert.equal(extractJson("[1,2]"), "[1,2]");
+});
+
+const inFreshContext = (run: () => void) =>
+  new Promise<void>((resolve, reject) =>
+    setImmediate(() => {
+      try {
+        run();
+        resolve();
+      } catch (error) {
+        reject(error);
+      }
+    }),
+  );
+
+test("점검 사용자만 헤더로 모델 경로를 바꾼다(허용 모델만)", async () => {
+  await inFreshContext(() =>
+    withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
+      adoptSimRoutes("simcheck-run-p001", JSON.stringify({ basic: "anthropic: claude-haiku-5-5", high: "anthropic: claude-opus-5-5" }));
+      assert.equal(routeFor("chat").model, "claude-haiku-5-5");
+      assert.equal(routeFor("mission").model, "gpt-4.1-mini"); // opus는 허용 목록 밖
+    }),
+  );
+  await inFreshContext(() =>
+    withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
+      adoptSimRoutes("rc:real-user", JSON.stringify({ basic: "anthropic: claude-haiku-5-5" }));
+      assert.equal(routeFor("chat").model, "gpt-4o-mini");
+    }),
+  );
+  await inFreshContext(() =>
+    withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
+      adoptSimRoutes("simcheck-x", "{nope");
+      assert.equal(routeFor("chat").model, "gpt-4o-mini");
+    }),
+  );
 });

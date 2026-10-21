@@ -1,3 +1,4 @@
+import { AsyncLocalStorage } from "node:async_hooks";
 import type OpenAI from "openai";
 import type {
   ChatCompletion,
@@ -84,12 +85,38 @@ function parseTarget(value: string): { provider: Provider; model: string } | nul
   return { provider, model };
 }
 
+/**
+ * 점검용 경로 바꾸기 — 가상 사용자(`simcheck-…`)의 요청에만, 헤더 `x-sim-model-routes`(MODEL_ROUTES와 같은 모양)로.
+ * 운영 사용자는 그대로 두고 새 모델을 같은 점검으로 비교하려고(2026-10-21). 허용 모델만 받고, 이 경로에서는
+ * 실패를 OpenAI로 덮지 않는다(점검이 실제 실패를 봐야 하므로). `meterRequest`가 요청 첫머리에서 부른다.
+ */
+const simRoutes = new AsyncLocalStorage<Record<string, string>>();
+const SIM_ALLOWED = /^(anthropic:\s*claude-(haiku|sonnet)-5-5|openai:\s*gpt-[\w.-]+)$/;
+
+export function adoptSimRoutes(userId: string, header: string | null | undefined): void {
+  if (!header || !userId.startsWith("simcheck-")) return;
+  try {
+    const parsed = JSON.parse(header) as Record<string, unknown>;
+    const kept = Object.fromEntries(
+      Object.entries(parsed).filter(
+        (entry): entry is [string, string] =>
+          typeof entry[1] === "string" &&
+          SIM_ALLOWED.test(entry[1].trim()) &&
+          (entry[0] in TASKS || entry[0] === "basic" || entry[0] === "high"),
+      ),
+    );
+    if (Object.keys(kept).length) simRoutes.enterWith(kept);
+  } catch {
+    // 모양이 틀린 헤더는 무시.
+  }
+}
+
 /** 이 기능이 지금 쓸 모델. `override`는 예전처럼 부르는 쪽이 모델 이름을 직접 줄 때(지도 엔진 등). */
 export function routeFor(task: Task, override?: string): Route {
   const spec = TASKS[task];
   const tier = spec.tier as Tier;
   if (override) return { provider: "openai", model: override, task, tier };
-  const routes = parseRoutes();
+  const routes = { ...parseRoutes(), ...(simRoutes.getStore() ?? {}) };
   const chosen = parseTarget(routes[task] ?? "") ?? parseTarget(routes[tier] ?? "");
   if (chosen) {
     if (chosen.provider === "anthropic" && !env("ANTHROPIC_API_KEY")) {
@@ -128,7 +155,7 @@ export async function completeChat(
   try {
     return await anthropicComplete(route.model, rest);
   } catch (error) {
-    if (env("MODEL_FALLBACK") === "off") throw error;
+    if (env("MODEL_FALLBACK") === "off" || simRoutes.getStore()) throw error;
     console.error(`[llm] ${task} on ${route.model} failed — falling back to OpenAI`, error);
     return client.chat.completions.create({ ...rest, model: TASKS[task].openai() });
   }
