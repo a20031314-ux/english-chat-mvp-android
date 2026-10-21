@@ -27,7 +27,7 @@ function words(text: string): number {
 
 /** 글자만 보고 알 수 있는 학습 언어 — 학습자 줄에 이 글자가 하나도 없는데 고친 문장에 생겼으면 고침이 아니라 번역이다. */
 const TARGET_SCRIPT: Partial<Record<string, RegExp>> = {
-  ko: /\p{Script=Hangul}/u,
+  ko: /[\uac00-\ud7a3]/u, // 완성 음절만 — ㅁㄴㅇㄹ 같은 자모만 친 줄은 한국어 문장이 아니다
   ja: /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/u,
   zh: /\p{Script=Han}/u,
   th: /\p{Script=Thai}/u,
@@ -49,5 +49,13 @@ export function shouldKeepLearnerLine(message: string, corrected: string, target
   if (surface(original) === surface(corrected)) return true;
   const before = words(original);
   if (before <= 2 && words(corrected) >= before + 3) return true;
+  // 세 낱말 이상인데 고친 문장에 학습자 낱말이 하나도 안 남았으면 고침이 아니라 다른 말(아무 글자나 친 줄을 튜터 말로 바꿈).
+  if (before >= 3) {
+    const kept = surface(original)
+      .split(" ")
+      .filter((w) => [...w].length >= 2)
+      .some((w) => surface(corrected).includes(w));
+    if (!kept) return true;
+  }
   return false;
 }

@@ -49,3 +49,11 @@ test("한국어 짧은 존댓말 답은 고치지 않는다", () => {
   assert.equal(shouldKeepLearnerLine("저는 커피을 마셔요.", "저는 커피를 마셔요.", "ko"), false);
   assert.equal(shouldKeepLearnerLine("별로요", "별로예요", "ja"), false);
 });
+
+test("아무 글자나 친 줄을 튜터 말로 바꾸지 않는다", () => {
+  assert.equal(shouldKeepLearnerLine("asdf qwer zxcv ㅁㄴㅇㄹ", "잘 지내고 있어! 너는?", "ko"), true);
+  assert.equal(shouldKeepLearnerLine("asdf qwer zxcv ㅁㄴㅇㄹ", "I didn't quite get that. Did you mean to say something?", "en"), true);
+  assert.equal(shouldKeepLearnerLine("me want eat food now where good restaurant", "I want to eat now. Where is a good restaurant?", "en"), false);
+  assert.equal(shouldKeepLearnerLine("나 어제 친구 만나다 우리 같이 밥 먹다 맛있다", "저는 어제 친구를 만나서 같이 밥을 먹었는데 맛있었어요.", "ko"), false);
+  assert.equal(shouldKeepLearnerLine("yo soy estudiante de inglés", "Soy estudiante de inglés.", "es"), false);
+});
