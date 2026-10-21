@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { adoptSimRoutes, extractJson, openaiModel, routeFor, TASKS, toAnthropicRequest } from "./llm.ts";
+import { adoptSimRoutes, extractJson, unwrapToolInput, openaiModel, routeFor, TASKS, toAnthropicRequest } from "./llm.ts";
 
 const KEYS = [
   "MODEL_ROUTES",
@@ -203,4 +203,11 @@ test("점검 사용자만 헤더로 모델 경로를 바꾼다(허용 모델만)
       assert.equal(routeFor("chat").model, "gpt-4o-mini");
     }),
   );
+});
+
+test("도구 입력이 한 겹 싸여 오면 벗긴다", () => {
+  assert.deepEqual(unwrapToolInput({ respond: { assistantMessage: "좋아요!" } }), { assistantMessage: "좋아요!" });
+  assert.deepEqual(unwrapToolInput({ respond: '{"assistantMessage":"¡Vale!"}' }), { assistantMessage: "¡Vale!" });
+  assert.deepEqual(unwrapToolInput({ assistantMessage: "いいね", spokenReply: "" }), { assistantMessage: "いいね", spokenReply: "" });
+  assert.equal(unwrapToolInput(null), undefined);
 });

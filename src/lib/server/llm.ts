@@ -190,7 +190,8 @@ const JSON_ONLY =
  */
 const RESPOND_TOOL = {
   name: "respond",
-  description: "Your whole answer, as the JSON object the instructions describe.",
+  description:
+    "Your whole answer: the tool input IS the JSON object the instructions describe, with those keys at the top level (do not wrap it under another key).",
   input_schema: { type: "object", additionalProperties: true },
 };
 
@@ -252,6 +253,26 @@ export function toAnthropicRequest(model: string, params: Omit<CreateParams, "mo
   return { body, wantsJson };
 }
 
+/** 도구 입력이 {"respond": {...}}처럼 한 겹 싸여 오면 벗긴다(Haiku가 가끔 그렇게 보냄, 2026-10-22). */
+export function unwrapToolInput(input: unknown): Record<string, unknown> | undefined {
+  if (!input || typeof input !== "object" || Array.isArray(input)) return undefined;
+  const obj = input as Record<string, unknown>;
+  const keys = Object.keys(obj);
+  if (keys.length === 1 && ["respond", "response", "input", "answer", "json"].includes(keys[0])) {
+    const inner = obj[keys[0]];
+    if (inner && typeof inner === "object" && !Array.isArray(inner)) return inner as Record<string, unknown>;
+    if (typeof inner === "string") {
+      try {
+        const parsed = JSON.parse(extractJson(inner)) as unknown;
+        if (parsed && typeof parsed === "object" && !Array.isArray(parsed)) return parsed as Record<string, unknown>;
+      } catch {
+        // 글로 싸여 왔는데 JSON이 아니면 그대로 둔다.
+      }
+    }
+  }
+  return obj;
+}
+
 /** 모델이 코드 울타리나 앞뒤 말을 붙였으면 JSON 덩어리만 남긴다. */
 export function extractJson(text: string): string {
   const trimmed = text.trim();
@@ -283,7 +304,8 @@ async function anthropicComplete(model: string, params: Omit<CreateParams, "mode
   };
   const raw = (data.content ?? []).filter((b) => b.type === "text").map((b) => b.text ?? "").join("");
   const tool = wantsJson ? (data.content ?? []).find((b) => b.type === "tool_use") : undefined;
-  const text = tool && tool.input && typeof tool.input === "object" ? JSON.stringify(tool.input) : wantsJson ? extractJson(raw) : raw;
+  const input = tool ? unwrapToolInput(tool.input) : undefined;
+  const text = input ? JSON.stringify(input) : wantsJson ? extractJson(raw) : raw;
   const prompt = data.usage?.input_tokens ?? 0;
   const completion = data.usage?.output_tokens ?? 0;
   return {
