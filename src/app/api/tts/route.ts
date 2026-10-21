@@ -5,6 +5,8 @@ import { getOpenAIClient } from "@/lib/server/openai";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { realtimeCallVoice } from "@/lib/realtimeCallSession";
 import { isTtsVoice } from "@/lib/roleplay/voices";
+import { realtimeSpeech } from "@/lib/server/realtimeSpeech";
+import { realtimeTtsModel, speechTtsModel, ttsEngine, wantsTrialReport } from "@/lib/server/speechModels";
 import {
   spokenFormForTts,
   speechLangPrefix,
@@ -14,7 +16,7 @@ import {
 
 export const dynamic = "force-dynamic";
 
-const MODEL = process.env.OPENAI_TTS_MODEL ?? "gpt-4o-mini-tts";
+// 모델은 server/speechModels.ts에서 고른다(gpt-4o-mini-tts 2027-01-06 종료 → Realtime으로 옮기는 중).
 const MAX_CHARS = 2000;
 
 /**
@@ -96,7 +98,57 @@ async function synthesize(
 
   const lang = rawLang.trim() || "en-US";
   const spoken = spokenFormForTts(text, lang);
+  const MODEL = speechTtsModel();
   const useInstructions = !MODEL.startsWith("tts-1");
+  const voice = isTtsVoice(rawVoice) ? rawVoice : realtimeCallVoice(coerceLanguageCode(speechLangPrefix(lang)));
+  const delivery = isTtsVoice(rawVoice) ? sceneSpeechInstructions(lang) : ttsSpeechInstructions(lang);
+  const shared = mayBeShared(request, rawVoice);
+
+  if (ttsEngine(request) === "realtime") {
+    const started = Date.now();
+    const made = realtimeSpeech({ apiKey: process.env.OPENAI_API_KEY ?? "", model: realtimeTtsModel(), voice, text: spoken, delivery });
+    if (wantsTrialReport(request)) {
+      // 점검: 소리를 다 모아 읽은 말·토큰·시간과 함께(점검 사용자만 이 머리글이 먹는다).
+      const chunks: Uint8Array[] = [];
+      try {
+        for await (const chunk of made.audio as unknown as AsyncIterable<Uint8Array>) chunks.push(chunk);
+      } catch {}
+      const report = await made.done;
+      const pcm = Buffer.concat(chunks);
+      return jsonWithCors(request, {
+        engine: "realtime",
+        model: realtimeTtsModel(),
+        voice,
+        spoken,
+        ...report,
+        audioSeconds: pcm.byteLength / 48000,
+        pcmBase64: pcm.toString("base64"),
+        ms: Date.now() - started,
+      });
+    }
+    // 첫 소리가 오기 전에 실패하면 예전 방식으로(사람에게는 소리가 안 나는 것보다 낫다).
+    const reader = made.audio.getReader();
+    try {
+      const first = await reader.read();
+      const body = new ReadableStream<Uint8Array>({
+        start(controller) {
+          if (first.value) controller.enqueue(first.value);
+          if (first.done) controller.close();
+        },
+        async pull(controller) {
+          const next = await reader.read().catch(() => ({ done: true as const, value: undefined }));
+          if (next.done) controller.close();
+          else controller.enqueue(next.value);
+        },
+        cancel() {
+          void reader.cancel();
+        },
+      });
+      return new NextResponse(body, { status: 200, headers: streamHeaders(request, lang, shared) });
+    } catch (error) {
+      console.error("[tts] realtime failed, falling back:", error);
+    }
+  }
 
   try {
     const speech = await client.audio.speech.create({
@@ -110,9 +162,7 @@ async function synthesize(
       // the spot comes out of the same mouth as the recorded ones around it.
       // Anything else — including every build that predates the parameter —
       // gets the call's voice exactly as before.
-      voice: isTtsVoice(rawVoice)
-        ? rawVoice
-        : realtimeCallVoice(coerceLanguageCode(speechLangPrefix(lang))),
+      voice,
       input: spoken,
       response_format: "pcm",
       ...(useInstructions
@@ -129,14 +179,15 @@ async function synthesize(
             // URL, and the URL is the cache key: every warmed line would miss
             // and every build that does not send it would be inconsistent
             // again. Role-neutral gets the delivery back without any of that.
-            instructions: isTtsVoice(rawVoice)
-              ? sceneSpeechInstructions(lang)
-              : ttsSpeechInstructions(lang),
+            instructions: delivery,
             stream_format: "audio",
           }
         : {}),
     });
-    const shared = mayBeShared(request, rawVoice);
+    if (wantsTrialReport(request)) {
+      const pcm = Buffer.from(await speech.arrayBuffer());
+      return jsonWithCors(request, { engine: "speech", model: MODEL, voice, spoken, audioSeconds: pcm.byteLength / 48000, pcmBase64: pcm.toString("base64") });
+    }
     const body = speech.body;
     if (!body) {
       const bytes = Buffer.from(await speech.arrayBuffer());

@@ -10,6 +10,7 @@ import { learningLanguageName } from "@/lib/learningLanguages";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { confidenceFromLogprobs, noteRecognition } from "@/lib/server/learnerMetrics";
 import { toFile } from "openai";
+import { isNextGenTranscribe, turnTranscribeModel, wantsTrialReport } from "@/lib/server/speechModels";
 
 export const dynamic = "force-dynamic";
 
@@ -28,9 +29,7 @@ export const dynamic = "force-dynamic";
  * the line being synthesised — three waits in a row with a person sitting
  * there, so the one that was paying for subtitle machinery is the one to cut.
  */
-function turnTranscribeModel(): string {
-  return process.env.OPENAI_TURN_TRANSCRIBE_MODEL?.trim() || "gpt-4o-mini-transcribe";
-}
+// 모델은 server/speechModels.ts에서 고른다(gpt-4o-mini-transcribe 2027-02-26 종료 → gpt-transcribe로 옮기는 중).
 
 /** A turn is seconds of speech. Anything larger is not one. */
 const MAX_TURN_BYTES = 8 * 1024 * 1024;
@@ -94,10 +93,19 @@ export async function POST(request: NextRequest) {
   const spoken =
     roomLanguages.length > 1 ? ` They speak ${roomLanguages.map((code) => learningLanguageName(code)).join(" or ")}.` : "";
 
+  const model = turnTranscribeModel(request);
+  const nextGen = isNextGenTranscribe(model);
+  const started = Date.now();
+  // gpt-transcribe는 language 대신 languages(배열)를 받고 temperature는 문서에 없다. 방의 두 언어를 그대로 넘길 수 있다.
+  const languageHint = nextGen
+    ? (roomLanguages.length ? { languages: roomLanguages } : hint.length === 2 ? { languages: [hint] } : {})
+    : hint.length === 2
+      ? { language: hint }
+      : {};
   const asked = {
-    model: turnTranscribeModel(),
-    temperature: 0,
-    ...(hint.length === 2 ? { language: hint } : {}),
+    model,
+    ...(nextGen ? {} : { temperature: 0 }),
+    ...languageHint,
     // Says what kind of audio this is, which is most of what stops a model
     // handed half a second of sound from filling the gap with something it
     // has heard often. The language hint alone did not.
@@ -120,26 +128,31 @@ export async function POST(request: NextRequest) {
     // can recover. A model that refuses the option is asked the old way, plain
     // text, so a turn never fails for the sake of a measurement. No timestamps:
     // they are what made the subtitle path slow and a turn has no use for them.
+    // gpt-transcribe 계열은 SDK 타입에 아직 없는 필드(languages)를 받아서, 부르는 곳을 한 군데로 모은다.
+    type Asked = Record<string, unknown>;
+    const transcribe = async (extra: Asked) =>
+      (await client.audio.transcriptions.create({
+        ...asked,
+        ...extra,
+        file: await toFile(bytes, filename, { type: mimeType }),
+      } as unknown as Parameters<typeof client.audio.transcriptions.create>[0])) as unknown;
+    const textOf = (result: unknown) =>
+      typeof result === "string" ? result : String((result as { text?: unknown })?.text ?? "");
+    // 새 모델은 text 형식을 문서에 안 적어 둬서 언제나 json으로 묻는다.
+    const plain: Asked = nextGen ? { response_format: "json" } : { response_format: "text" };
     let raw: string;
     let confidence: number | null = null;
+    let detected: unknown = null;
     try {
-      const result = await client.audio.transcriptions.create({
-        ...asked,
-        file: await toFile(bytes, filename, { type: mimeType }),
-        response_format: "json",
-        include: ["logprobs"],
-      });
-      raw = result.text;
+      const result = await transcribe({ response_format: "json", include: ["logprobs"] });
+      raw = textOf(result);
+      detected = (result as { languages?: unknown }).languages ?? null;
       confidence = confidenceFromLogprobs((result as { logprobs?: unknown }).logprobs);
     } catch (error) {
       if ((error as { status?: number })?.status !== 400) throw error;
-      raw = String(
-        await client.audio.transcriptions.create({
-          ...asked,
-          file: await toFile(bytes, filename, { type: mimeType }),
-          response_format: "text",
-        }),
-      );
+      const result = await transcribe(plain);
+      raw = textOf(result);
+      detected = (result as { languages?: unknown })?.languages ?? null;
     }
     // Checked on the way back as well, because neither the hint nor the prompt
     // is a guarantee: a reply in a script this language does not use was not a
@@ -148,18 +161,16 @@ export async function POST(request: NextRequest) {
     if (!text && raw.trim() && roomLanguages.length > 1) {
       // Written in neither of the room's scripts: invented. Asked once more with
       // the room's first language (the one it is about) as the hint.
-      const again = String(
-        await client.audio.transcriptions.create({
-          ...asked,
-          language: roomLanguages[0],
-          file: await toFile(bytes, filename, { type: mimeType }),
-          response_format: "text",
-        }),
+      const again = textOf(
+        await transcribe({ ...plain, ...(nextGen ? { languages: [roomLanguages[0]] } : { language: roomLanguages[0] }) }),
       );
       text = heardOrNothing(again, roomLanguages[0]);
     }
     const userId = requestUserId(request);
     if (!forRoom) after(() => noteRecognition(userId, text, confidence));
+    if (wantsTrialReport(request)) {
+      return jsonWithCors(request, { text, raw, confidence, detected, model, ms: Date.now() - started });
+    }
     return jsonWithCors(request, { text });
   } catch (error) {
     console.error("[roleplay/listen]", error);
