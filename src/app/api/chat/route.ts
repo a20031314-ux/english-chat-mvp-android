@@ -701,7 +701,7 @@ async function runChatReply(
   if (!raw) throw new Error("empty reply");
   const parsed = JSON.parse(raw) as { assistantMessage?: unknown; spokenReply?: unknown };
   const assistantMessage = asText(parsed.assistantMessage).trim();
-  if (!assistantMessage) throw new Error("empty reply");
+  if (!assistantMessage) throw new Error(`empty reply: ${raw.slice(0, 200)}`);
   return {
     assistantMessage,
     spokenReply:
