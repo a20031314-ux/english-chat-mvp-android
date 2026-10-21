@@ -36,6 +36,12 @@
 
 ## 새 보고
 
+### 2026-10-21 · AI 모델 정리 · 지금 쓰는 모델이 전부 종료 일정에 걸림 — 통화 돌아보기는 12-11
+- 무엇을: OpenAI 공식 종료 목록(developers.openai.com/api/docs/deprecations)과 코드 기본값 대조.
+- 결과: OpenAI 공식 종료 목록 기준, 앱 기본 모델이 검사 모델 하나만 빼고 다 꺼짐. 통화 돌아보기(gpt-5-mini) 2026-12-11 → 목소리(gpt-4o-mini-tts) 2027-01-06 → 채팅·지도·미션·통화 튜터(gpt-4o-mini·gpt-4.1·gpt-4.1-mini) 2027-01-14 → 받아쓰기(whisper-1·gpt-4o-mini-transcribe) 2027-02-26.
+- 제안: 글 모델은 같은 날 `llm.ts` 창구 1단계가 끝나 Vercel `ANTHROPIC_API_KEY` + `MODEL_ROUTES`로 Haiku 전환만 남음 — 통화 돌아보기의 OpenAI 대비 모델(gpt-5-mini)이 12-11에 꺼지니 그 전에. 목소리·받아쓰기는 Claude에 대체가 없어 OpenAI 대체(gpt-realtime-2.1-mini·gpt-transcribe) 비용·방식 확인 필요. 자세히 `hub/MODELS.md`. 바꾸면 서버만(앱 빌드 불필요).
+- 결정:
+
 ### 2026-10-21 · 가상 사용자 채팅 점검 · 급함: AI 채팅 전부 실패(500 CHAT_FAILED) — 01:20의 절반 실패가 02시엔 100%
 - 무엇을: 02시 예약 실행(seed 2026102102). 98명 실행이 첫 23명 전원 오류라 멈추고, 2명 탐색(`probe-20261021-02`)으로 확인.
 - 결과: 채팅 턴 12번 중 12번 HTTP 500 `CHAT_FAILED`, 해석·번역·단어 3번 500. 첫 인사만 200(학습 언어가 아닌 영어 기본 문구 — 모델 안 거친 것). 저장소(Upstash)는 정상(점검 데이터 지우기·가입 없는 저장 200). 8칸·Claude 평가는 돌리지 않음(모델 비용만 나감).
