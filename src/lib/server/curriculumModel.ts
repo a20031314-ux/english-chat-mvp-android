@@ -1,4 +1,5 @@
 import { getOpenAIClient } from "./openai.ts";
+import { completeChat } from "./llm.ts";
 import type { CurriculumModel } from "../curriculum/engine/generate.ts";
 
 /**
@@ -15,10 +16,10 @@ import type { CurriculumModel } from "../curriculum/engine/generate.ts";
 export function openAICurriculumModel(model?: string): CurriculumModel | null {
   const openai = getOpenAIClient();
   if (!openai) return null;
-  const name = model ?? (process.env.OPENAI_CURRICULUM_MODEL?.trim() || "gpt-4.1");
   return async ({ system, user, maxTokens }) => {
-    const completion = await openai.chat.completions.create({
-      model: name,
+    // 모델은 llm.ts 표("curriculum")가 고른다 — 부르는 쪽이 이름을 주면 그것(예전과 같음).
+    const completion = await completeChat(openai, "curriculum", {
+      ...(model ? { model } : {}),
       temperature: 0.4,
       max_tokens: maxTokens,
       response_format: { type: "json_object" },

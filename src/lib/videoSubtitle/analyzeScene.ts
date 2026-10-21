@@ -1,7 +1,7 @@
+import { completeChat } from "../server/llm.ts";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { asNumber, asRecord, asString, parseModelJson } from "@/lib/videoSubtitle/parseModelJson";
-import { VISION_MODEL } from "@/lib/videoSubtitle/sceneConfig";
 import type {
   RepresentativeFrame,
   SceneContext,
@@ -40,8 +40,7 @@ export async function analyzeScene(input: {
   }
 
   try {
-    const completion = await client.chat.completions.create({
-      model: VISION_MODEL,
+    const completion = await completeChat(client, "vision", {
       temperature: 0.2,
       response_format: { type: "json_object" },
       max_tokens: 400,

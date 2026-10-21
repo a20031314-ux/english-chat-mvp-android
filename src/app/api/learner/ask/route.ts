@@ -1,3 +1,4 @@
+import { completeChat } from "@/lib/server/llm";
 import { chatBonusToday } from "@/lib/server/adChat";
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
@@ -6,7 +7,7 @@ import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { getDailyUsed, incrementDailyUsed } from "@/lib/server/entitlementStore";
 import { FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
 import { meterRequest } from "@/lib/server/meterRequest";
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 import { readGrowth, readGrowthRecord } from "@/lib/server/growthStore";
 import { readWeakRecord } from "@/lib/server/weakPointStore";
 import { readSelfCheck } from "@/lib/server/selfCheckStore";
@@ -80,8 +81,7 @@ export async function POST(request: NextRequest) {
 
   await meterRequest(request, "learnerAsk");
   try {
-    const completion = await openai.chat.completions.create({
-      model: chatModel(),
+    const completion = await completeChat(openai, "learnerAsk", {
       temperature: 0.4,
       max_tokens: 400,
       response_format: { type: "json_object" },

@@ -1,3 +1,4 @@
+import { completeChat, routeFor } from "@/lib/server/llm";
 import { NextRequest, after } from "next/server";
 import { coerceLanguageCode, interfaceLanguageName } from "@/lib/learningLanguages";
 import { findScenario } from "@/lib/roleplay/catalog";
@@ -23,7 +24,7 @@ export const dynamic = "force-dynamic";
  * missed the words, or simply answered slowly.
  */
 function reviewModel(): string {
-  return process.env.OPENAI_REVIEW_MODEL?.trim() || "gpt-5-mini";
+  return routeFor("roleplayReview").model;
 }
 
 export async function OPTIONS(request: NextRequest) {
@@ -90,8 +91,7 @@ export async function POST(request: NextRequest) {
   try {
     const model = reviewModel();
     const reasoning = /^(gpt-5|o\d)/.test(model);
-    const completion = await client.chat.completions.create({
-      model,
+    const completion = await completeChat(client, "roleplayReview", {
       messages: [
         {
           role: "system",

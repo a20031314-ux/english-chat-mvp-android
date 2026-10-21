@@ -1,5 +1,6 @@
+import { completeChat } from "../server/llm.ts";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 import { asRecord, asString, parseModelJson } from "@/lib/videoSubtitle/parseModelJson";
 import type { NormalizedSegment, SttSegment } from "@/lib/videoSubtitle/types";
 
@@ -56,8 +57,7 @@ async function normalizeBatch(
   const client = getOpenAIClient();
   if (!client) throw new VideoPipelineError("MISSING_OPENAI_KEY");
 
-  const completion = await client.chat.completions.create({
-    model: chatModel(),
+  const completion = await completeChat(client, "video", {
     temperature: 0.1,
     response_format: { type: "json_object" },
     messages: [

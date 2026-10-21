@@ -1,3 +1,4 @@
+import { completeChat } from "@/lib/server/llm";
 import { chatBonusToday } from "@/lib/server/adChat";
 import { NextRequest, after } from "next/server";
 import { getOpenAIClient } from "@/lib/server/openai";
@@ -29,7 +30,6 @@ export const dynamic = "force-dynamic";
  * language it is in, and it feeds the learner's needs the way a chat line
  * does. Hints are not asked for here; they were written with the missions.
  */
-const MODEL = () => process.env.OPENAI_MISSION_MODEL?.trim() || "gpt-4.1-mini";
 const MAX_ANSWER_CHARS = 400;
 
 export async function OPTIONS(request: NextRequest) {
@@ -100,8 +100,7 @@ export async function POST(request: NextRequest) {
     },
   ];
   const ask = async (extra?: string) => {
-    const completion = await openai.chat.completions.create({
-      model: MODEL(),
+    const completion = await completeChat(openai, "mission", {
       temperature: 0.2,
       max_tokens: 400,
       response_format: { type: "json_object" },

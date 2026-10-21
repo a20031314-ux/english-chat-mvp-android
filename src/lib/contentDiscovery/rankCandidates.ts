@@ -1,3 +1,4 @@
+import { completeChat } from "../server/llm.ts";
 import type OpenAI from "openai";
 import { learningLanguageName } from "@/lib/learningLanguages";
 import type {
@@ -5,7 +6,6 @@ import type {
   ContentSearchIntent,
 } from "@/lib/contentDiscovery/types";
 
-import { chatModel } from "@/lib/server/openai";
 
 type RankRow = {
   id?: string;
@@ -45,8 +45,7 @@ export async function rankCandidates(
   }));
 
   try {
-    const completion = await client.chat.completions.create({
-      model: chatModel(),
+    const completion = await completeChat(client, "video", {
       temperature: 0.3,
       response_format: { type: "json_object" },
       messages: [

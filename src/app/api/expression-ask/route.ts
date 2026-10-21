@@ -1,3 +1,4 @@
+import { completeChat } from "@/lib/server/llm";
 import { NextRequest, after } from "next/server";
 import { recordComprehensionEvents } from "@/lib/server/learnerProfileStore";
 import { recordMeets } from "@/lib/server/ledgerStore";
@@ -44,7 +45,6 @@ export const dynamic = "force-dynamic";
  * keeps it a way to ask about the sentence in front of you, not a free
  * chatbot. The question is not stored.
  */
-const MODEL = () => process.env.OPENAI_ASK_MODEL?.trim() || "gpt-4.1-mini";
 const MAX_QUESTION_CHARS = 300;
 const MAX_SENTENCE_CHARS = 600;
 const MAX_HISTORY = 4;
@@ -160,8 +160,7 @@ export async function POST(request: NextRequest) {
   ];
 
   const ask = async (extra?: string) => {
-    const completion = await openai.chat.completions.create({
-      model: MODEL(),
+    const completion = await completeChat(openai, "ask", {
       temperature: 0.3,
       max_tokens: 500,
       response_format: { type: "json_object" },

@@ -1,10 +1,11 @@
+import { completeChat } from "@/lib/server/llm";
 import { NextRequest } from "next/server";
 import { findScenario } from "@/lib/roleplay/catalog";
 import { readSpokenLines } from "@/lib/roleplay/director";
 import { MAX_CONTEXT_CHARS, contextPrompt, parseContext } from "@/lib/roleplay/memory";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 
 export const dynamic = "force-dynamic";
 
@@ -44,8 +45,7 @@ export async function POST(request: NextRequest) {
   await meterRequest(request, "roleplayContext");
 
   try {
-    const completion = await client.chat.completions.create({
-      model: chatModel(),
+    const completion = await completeChat(client, "roleplayContext", {
       messages: [
         {
           role: "system",

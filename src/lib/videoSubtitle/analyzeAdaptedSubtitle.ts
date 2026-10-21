@@ -1,5 +1,6 @@
+import { completeChat } from "../server/llm.ts";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 import { asRecord, asString, parseModelJson } from "@/lib/videoSubtitle/parseModelJson";
 import { scenePayload, localeTargetName } from "@/lib/videoSubtitle/subtitleDraft";
 import type { SceneContext } from "@/lib/videoSubtitle/sceneTypes";
@@ -47,8 +48,7 @@ export async function analyzeAdaptedSubtitle(input: {
   const inKorean = input.locale === "ko";
   const target = localeTargetName(input.locale);
 
-  const completion = await client.chat.completions.create({
-    model: chatModel(),
+  const completion = await completeChat(client, "video", {
     temperature: 0.65,
     response_format: { type: "json_object" },
     messages: [

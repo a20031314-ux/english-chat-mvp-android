@@ -1,10 +1,10 @@
+import { completeChat } from "../../server/llm.ts";
 import type OpenAI from "openai";
 import {
   learningLanguageName,
   type LearningLanguageCode,
 } from "@/lib/learningLanguages";
 
-import { chatModel } from "@/lib/server/openai";
 
 /**
  * Turn whatever the user typed into a YouTube query in the learning language.
@@ -21,8 +21,7 @@ export async function translateYoutubeQuery(
 
   const languageName = learningLanguageName(language);
   try {
-    const completion = await client.chat.completions.create({
-      model: chatModel(),
+    const completion = await completeChat(client, "video", {
       temperature: 0,
       messages: [
         {

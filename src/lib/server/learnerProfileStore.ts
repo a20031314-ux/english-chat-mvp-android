@@ -1,3 +1,4 @@
+import { completeChat } from "./llm.ts";
 import type OpenAI from "openai";
 import { kvGetJson, kvSetJson } from "./kv.ts";
 import { isIdentified } from "./identity.ts";
@@ -29,7 +30,6 @@ import {
  */
 
 const TTL_SECONDS = 400 * 24 * 60 * 60;
-const MODEL = () => process.env.OPENAI_LEARNER_MODEL?.trim() || "gpt-4.1-mini";
 
 function key(userId: string, language: string): string {
   return `learnerProfile:v1:${userId}:${language}`;
@@ -133,8 +133,7 @@ export async function observeChatTurn(input: {
     // 너무 짧은 줄, 고칠 데 없는 짧은 줄은 읽지 않는다(learner/readGate.ts).
     if (list.length === 0 || !shouldReadChatTurn(sentence, input.corrected, input.language)) return;
     input.meter?.();
-    const completion = await input.openai.chat.completions.create({
-      model: MODEL(),
+    const completion = await completeChat(input.openai, "learnerRead", {
       temperature: 0,
       max_tokens: 150,
       response_format: { type: "json_object" },

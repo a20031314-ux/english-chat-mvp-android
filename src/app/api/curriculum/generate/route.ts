@@ -1,3 +1,4 @@
+import { completeChat } from "@/lib/server/llm";
 import { NextRequest } from "next/server";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
@@ -117,8 +118,7 @@ export async function POST(request: NextRequest) {
   };
 
   try {
-    const completion = await openai.chat.completions.create({
-      model: MODEL(),
+    const completion = await completeChat(openai, "curriculum", {
       temperature: 0.4,
       max_tokens: 4000,
       response_format: { type: "json_object" },

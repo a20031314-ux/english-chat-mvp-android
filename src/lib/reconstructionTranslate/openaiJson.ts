@@ -1,4 +1,5 @@
-import { chatModel, getOpenAIClient } from "../server/openai.ts";
+import { completeChat } from "../server/llm.ts";
+import { getOpenAIClient } from "../server/openai.ts";
 import { parseModelJson } from "../videoSubtitle/parseModelJson.ts";
 import type { JsonCompleter } from "./types.ts";
 
@@ -8,8 +9,7 @@ export function openAiJsonCompleter(): JsonCompleter {
     throw new Error("MISSING_OPENAI_KEY");
   }
   return async (system, user) => {
-    const completion = await client.chat.completions.create({
-      model: chatModel(),
+    const completion = await completeChat(client, "translate", {
       temperature: 0.4,
       response_format: { type: "json_object" },
       messages: [

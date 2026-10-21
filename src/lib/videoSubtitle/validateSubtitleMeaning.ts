@@ -1,3 +1,4 @@
+import { completeChat } from "../server/llm.ts";
 import {
   looksIdiomaticEnglish,
   looksLikeLiteralOrForeignCaption,
@@ -5,7 +6,7 @@ import {
 } from "@/lib/videoSubtitle/calqueDetect";
 import { lockedCollocationPromptRule } from "@/lib/videoSubtitle/lockedCollocations";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 import { asRecord, asString, parseModelJson } from "@/lib/videoSubtitle/parseModelJson";
 import {
   contextPayload,
@@ -90,8 +91,7 @@ async function rewriteLines(input: {
     ? rewriteEmergencySystem(input.target, input.locale)
     : rewritePoliceSystem(input.target, input.locale, input.context);
 
-  const completion = await input.client.chat.completions.create({
-    model: chatModel(),
+  const completion = await completeChat(input.client, "video", {
     temperature: input.emergency ? 0.75 : 0.55,
     response_format: { type: "json_object" },
     messages: [

@@ -1,5 +1,6 @@
+import { completeChat } from "../server/llm.ts";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 import {
   asRecord,
   asString,
@@ -151,8 +152,7 @@ Video-line constraints (on top of the shared translate craft):
     const useMeaning = meaningItems.every((item) => "coreMeaning" in item && item.coreMeaning);
 
     try {
-      const completion = await client.chat.completions.create({
-        model: chatModel(),
+      const completion = await completeChat(client, "video", {
         temperature: 0.4,
         response_format: { type: "json_object" },
         messages: [

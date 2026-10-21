@@ -1,7 +1,8 @@
+import { completeChat } from "../server/llm.ts";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import type { MeaningUnit } from "@/lib/videoSubtitle/groupMeaningUnits";
 import { sceneContextForUnit } from "@/lib/videoSubtitle/getSceneContextAtTime";
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 import { asNumber, asRecord, asString, parseModelJson } from "@/lib/videoSubtitle/parseModelJson";
 import type { SceneContext } from "@/lib/videoSubtitle/sceneTypes";
 import {
@@ -74,8 +75,7 @@ export async function expressForKoreanViewer(input: {
   for (let i = 0; i < input.units.length; i += BATCH) {
     const batch = input.units.slice(i, i + BATCH);
     try {
-      const completion = await client.chat.completions.create({
-        model: chatModel(),
+      const completion = await completeChat(client, "video", {
         temperature: 0.4,
         response_format: { type: "json_object" },
         messages: [

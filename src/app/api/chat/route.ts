@@ -1,3 +1,4 @@
+import { completeChat } from "@/lib/server/llm";
 import { chatBonusToday } from "@/lib/server/adChat";
 import { takeAiHelp } from "@/lib/server/aiHelp";
 import { meterRequest, recordTokens } from "@/lib/server/meterRequest";
@@ -20,7 +21,7 @@ import {
 } from "@/lib/learner/practice";
 import { writtenInLearningLanguage } from "@/lib/inputLanguage";
 import type OpenAI from "openai";
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 import { targetLanguageFocusHints } from "@/lib/languageFocus";
 import { shouldKeepLearnerLine } from "@/lib/correctionGuard";
 import { findIrregularSlips, koreanSlipHint, repairIrregularSlips } from "@/lib/koreanSlips";
@@ -431,8 +432,7 @@ async function restateExplanation(
     EXPLANATION_LANGUAGES[langs.interfaceLanguage] ?? EXPLANATION_LANGUAGES.ko;
   const targetName = learningLanguageName(langs.targetLanguage);
   try {
-    const completion = await openai.chat.completions.create({
-      model: chatModel(),
+    const completion = await completeChat(openai, "chat", {
       messages: [
         {
           role: "system",
@@ -469,8 +469,7 @@ async function replyToCorrected(
   recent: string[] = [],
   langs: ChatLanguages,
 ): Promise<{ assistantMessage: string; spokenReply: string }> {
-  const completion = await openai.chat.completions.create({
-    model: chatModel(),
+  const completion = await completeChat(openai, "chat", {
     messages: [
       {
         role: "system",
@@ -541,8 +540,7 @@ async function runChat(
         },
       ]
     : payload;
-  const completion = await openai.chat.completions.create({
-    model: chatModel(),
+  const completion = await completeChat(openai, "chat", {
     messages: [
       { role: "system", content: buildChatSystem(langs, options) },
       ...(options.brief ? [{ role: "system" as const, content: options.brief }] : []),
@@ -695,8 +693,7 @@ async function runStart(
     langs.targetLanguage,
   );
 
-  const completion = await openai.chat.completions.create({
-    model: chatModel(),
+  const completion = await completeChat(openai, "chat", {
     messages: [
       {
         role: "system",
@@ -759,8 +756,7 @@ async function runHowToSayCard(
   isPremium: boolean,
 ): Promise<Omit<ExpressionPayload, "assistantMessage" | "spokenReply" | "correction">> {
   const ask = async (insist: boolean) => {
-    const completion = await openai.chat.completions.create({
-      model: chatModel(),
+    const completion = await completeChat(openai, "howToSay", {
       messages: [
         {
           role: "system",
@@ -801,8 +797,7 @@ async function runHowToSay(
   langs: ChatLanguages,
   isPremium: boolean,
 ): Promise<ExpressionPayload> {
-  const completion = await openai.chat.completions.create({
-    model: chatModel(),
+  const completion = await completeChat(openai, "howToSay", {
     messages: [
       { role: "system", content: buildHowToSaySystem(langs, isPremium) },
       {

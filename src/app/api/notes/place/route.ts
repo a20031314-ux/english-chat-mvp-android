@@ -1,7 +1,8 @@
+import { completeChat } from "@/lib/server/llm";
 import { createHash } from "node:crypto";
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
@@ -77,8 +78,7 @@ export async function POST(request: NextRequest) {
   await meterRequest(request, "notesPlace");
 
   try {
-    const completion = await openai.chat.completions.create({
-      model: chatModel(),
+    const completion = await completeChat(openai, "notes", {
       temperature: 0,
       max_tokens: 1200,
       response_format: { type: "json_object" },

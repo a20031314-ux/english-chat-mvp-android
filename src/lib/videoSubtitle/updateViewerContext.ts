@@ -1,6 +1,7 @@
+import { completeChat } from "../server/llm.ts";
 import { VideoPipelineError } from "@/lib/videoSubtitle/errors";
 import type { MeaningUnit } from "@/lib/videoSubtitle/groupMeaningUnits";
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 import { asRecord, asString, parseModelJson } from "@/lib/videoSubtitle/parseModelJson";
 import type {
   EvidenceLevel,
@@ -45,8 +46,7 @@ export async function updateViewerContext(input: {
   ].slice(-8);
 
   try {
-    const completion = await client.chat.completions.create({
-      model: chatModel(),
+    const completion = await completeChat(client, "video", {
       temperature: 0.2,
       response_format: { type: "json_object" },
       max_tokens: 700,

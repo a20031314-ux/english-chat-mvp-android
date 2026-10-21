@@ -1,6 +1,7 @@
+import { completeChat } from "@/lib/server/llm";
 import { NextRequest } from "next/server";
 import { meterRequest } from "@/lib/server/meterRequest";
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
   localExpressionUnits,
@@ -100,8 +101,7 @@ export async function POST(request: NextRequest) {
 
   void meterRequest(request, "expressionUnits");
   try {
-    const completion = await openai.chat.completions.create({
-      model: chatModel(),
+    const completion = await completeChat(openai, "analysis", {
       messages: [
         { role: "system", content: buildSystem(targetLanguage) },
         { role: "user", content: JSON.stringify({ sentence }) },

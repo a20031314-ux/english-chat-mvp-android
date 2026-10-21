@@ -1,3 +1,4 @@
+import { completeChat } from "@/lib/server/llm";
 import { NextRequest, after } from "next/server";
 import { updateLedger } from "@/lib/server/ledgerStore";
 import { applyMeet } from "@/lib/learner/ledger";
@@ -36,7 +37,6 @@ export const maxDuration = 60;
  * Written in the interface language the map was drawn in, not the one the app
  * happens to show now, so a topic reads the same as the map it belongs to.
  */
-const MODEL = () => process.env.OPENAI_CURRICULUM_MODEL?.trim() || "gpt-4.1";
 const SECTOR_NAMES: Record<string, string> = {
   A: "a situation",
   B: "expressions and grammar",
@@ -96,8 +96,7 @@ export async function POST(request: NextRequest) {
   const chat = topic.activities.find((a) => a.tab === "chat");
   const listen = topic.activities.flatMap((a) => listenForPhrases(a));
   try {
-    const completion = await openai.chat.completions.create({
-      model: MODEL(),
+    const completion = await completeChat(openai, "curriculum", {
       temperature: 0.5,
       max_tokens: 1500,
       response_format: { type: "json_object" },

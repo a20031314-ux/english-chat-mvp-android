@@ -1,3 +1,4 @@
+import { completeChat, routeFor } from "@/lib/server/llm";
 import { NextRequest, after } from "next/server";
 import { recordPronunciation } from "@/lib/server/growthStore";
 import { requestUserId } from "@/lib/server/premiumRequest";
@@ -26,7 +27,7 @@ export const dynamic = "force-dynamic";
  * is phrasing.
  */
 function practiceModel(): string {
-  return process.env.OPENAI_PRACTICE_MODEL?.trim() || "gpt-4.1-mini";
+  return routeFor("roleplayPractice").model;
 }
 
 export async function OPTIONS(request: NextRequest) {
@@ -69,8 +70,7 @@ export async function POST(request: NextRequest) {
   try {
     const model = practiceModel();
     const reasoning = /^(gpt-5|o\d)/.test(model);
-    const completion = await client.chat.completions.create({
-      model,
+    const completion = await completeChat(client, "roleplayPractice", {
       messages: [
         {
           role: "system",

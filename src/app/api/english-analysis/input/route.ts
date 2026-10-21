@@ -1,6 +1,7 @@
+import { completeChat } from "@/lib/server/llm";
 import { takeAiHelp } from "@/lib/server/aiHelp";
 import { NextRequest } from "next/server";
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
 import {
@@ -92,8 +93,7 @@ export async function POST(request: NextRequest) {
   const useEnglishPipeline = targetLanguage === "en";
 
   try {
-    const completion = await openai.chat.completions.create({
-      model: chatModel(),
+    const completion = await completeChat(openai, "analysis", {
       messages: [
         {
           role: "system",

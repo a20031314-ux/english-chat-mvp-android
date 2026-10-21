@@ -1,3 +1,4 @@
+import { completeChat } from "../server/llm.ts";
 import type OpenAI from "openai";
 import {
   LEARNER_LEVELS,
@@ -22,7 +23,6 @@ import {
   type PreferredDurationBucket,
 } from "@/lib/contentDiscovery/types";
 
-import { chatModel } from "@/lib/server/openai";
 
 function asContentType(value: unknown): ContentDiscoveryType | null {
   return value === "video" || value === "reading" ? value : null;
@@ -177,8 +177,7 @@ export async function parseSearchIntent(
   }
 
   try {
-    const completion = await client.chat.completions.create({
-      model: chatModel(),
+    const completion = await completeChat(client, "video", {
       temperature: 0.2,
       response_format: { type: "json_object" },
       messages: [

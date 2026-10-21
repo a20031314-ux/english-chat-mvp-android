@@ -1,3 +1,4 @@
+import { openaiModel } from "@/lib/server/llm";
 import { NextRequest, after } from "next/server";
 import { coerceLanguageCode, learningLanguageName } from "@/lib/learningLanguages";
 import { SCENARIOS, sentencesFor } from "@/lib/roleplay/catalog";
@@ -67,7 +68,8 @@ export const dynamic = "force-dynamic";
  * choice can move without a release.
  */
 function tutorModel(): string {
-  return process.env.OPENAI_DIRECTOR_MODEL?.trim() || "gpt-4.1-mini";
+  // 스트리밍(앞부분 먼저 보내기)은 OpenAI 길만 있어 Anthropic 경로여도 OpenAI 모델(llm.ts).
+  return openaiModel("roleplayTutor");
 }
 
 export async function OPTIONS(request: NextRequest) {

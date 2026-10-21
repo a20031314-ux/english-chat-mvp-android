@@ -1,4 +1,5 @@
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { completeChat } from "../server/llm.ts";
+import { getOpenAIClient } from "@/lib/server/openai";
 import {
   refineSpansWithLlm,
   splitSentencesFromWords,
@@ -17,8 +18,7 @@ export async function markSentencesWithLlm(text: string): Promise<string | null>
   const client = getOpenAIClient();
   const trimmed = text.replace(/\s+/g, " ").trim();
   if (!client || !trimmed) return null;
-  const completion = await client.chat.completions.create({
-    model: chatModel(),
+  const completion = await completeChat(client, "video", {
     temperature: 0,
     messages: [
       { role: "system", content: LLM_PROMPT },

@@ -1,6 +1,7 @@
+import { completeChat } from "@/lib/server/llm";
 import { takeAiHelp } from "@/lib/server/aiHelp";
 import { NextRequest } from "next/server";
-import { chatModel, getOpenAIClient } from "@/lib/server/openai";
+import { getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { naturalTranslationPrinciples } from "@/lib/naturalTranslation";
@@ -114,8 +115,7 @@ export async function POST(request: NextRequest) {
     targetLanguage === "hi";
 
   try {
-    const completion = await client.chat.completions.create({
-      model: chatModel(),
+    const completion = await completeChat(client, "vocab", {
       messages: [
         {
           role: "system",

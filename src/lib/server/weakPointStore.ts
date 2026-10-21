@@ -1,3 +1,4 @@
+import { completeChat } from "./llm.ts";
 import type OpenAI from "openai";
 import { kvGetJson, kvSetJson } from "./kv.ts";
 import { isIdentified } from "./identity.ts";
@@ -31,8 +32,6 @@ import { INTERFACE_LANGUAGE_LABELS, learningLanguageName } from "../learningLang
  * per person and learning language, beside the map, for as long as the map.
  */
 
-const READ_MODEL = () => process.env.OPENAI_LEARNER_MODEL?.trim() || "gpt-4.1-mini";
-const MISSION_MODEL = () => process.env.OPENAI_CURRICULUM_MODEL?.trim() || "gpt-4.1";
 
 function weakKey(userId: string, language: string): string {
   return `curriculum:${userId}:${language}:weak`;
@@ -77,8 +76,7 @@ export async function observeWeakPoints(input: {
       .slice(0, 30);
 
     input.meter?.("weakRead");
-    const read = await input.openai.chat.completions.create({
-      model: READ_MODEL(),
+    const read = await completeChat(input.openai, "learnerRead", {
       temperature: 0,
       max_tokens: 150,
       response_format: { type: "json_object" },
@@ -111,8 +109,7 @@ export async function observeWeakPoints(input: {
       const map = record.map;
       const uiName = INTERFACE_LANGUAGE_LABELS[map.uiLanguage] ?? "Korean";
       const ask = async (extra: string) => {
-        const written = await input.openai!.chat.completions.create({
-          model: MISSION_MODEL(),
+        const written = await completeChat(input.openai!, "curriculum", {
           temperature: 0.4,
           max_tokens: 500,
           response_format: { type: "json_object" },

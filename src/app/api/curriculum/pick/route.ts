@@ -1,3 +1,4 @@
+import { completeChat } from "@/lib/server/llm";
 import { NextRequest } from "next/server";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
@@ -31,7 +32,6 @@ export const maxDuration = 60;
  *
  * One model call; counted with the map's task writing and limited the same way.
  */
-const MODEL = () => process.env.OPENAI_CURRICULUM_MODEL?.trim() || "gpt-4.1";
 
 function clean(value: unknown, max: number): string {
   return typeof value === "string" ? value.replace(/\s+/g, " ").trim().slice(0, max) : "";
@@ -87,8 +87,7 @@ export async function POST(request: NextRequest) {
 
   const uiName = INTERFACE_LANGUAGE_LABELS[map.uiLanguage] ?? "Korean";
   try {
-    const completion = await openai.chat.completions.create({
-      model: MODEL(),
+    const completion = await completeChat(openai, "curriculum", {
       temperature: 0.4,
       max_tokens: 500,
       response_format: { type: "json_object" },
