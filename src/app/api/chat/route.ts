@@ -587,9 +587,10 @@ async function runChat(
   let explanation =
     asText(c?.explanation) || asText(parsed.explanation);
   // 모델이 불규칙 활용 실수를 고친 문장에 그대로 두면 바로잡는다.
-  if (koSlips.length) {
-    corrected = repairIrregularSlips(corrected, koSlips);
-    natural = repairIrregularSlips(natural, koSlips);
+  if (langs.targetLanguage === "ko" && !options.ownLanguage) {
+    // 학습자 문장에서 찾은 것 + 모델이 고친 문장에 새로 만든 틀린 꼴(예: 부루어요 → 부르어요)까지.
+    corrected = repairIrregularSlips(corrected, [...koSlips, ...findIrregularSlips(corrected)]);
+    natural = repairIrregularSlips(natural, [...koSlips, ...findIrregularSlips(natural)]);
   }
   // 고칠 게 없는 줄(문장부호만 다름, ?·이모지, 짧은 답을 문장으로 늘림)은 고침·설명을 비운다.
   if (!koSlips.length && shouldKeepLearnerLine(message, corrected)) {

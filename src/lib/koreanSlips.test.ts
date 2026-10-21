@@ -40,3 +40,8 @@ test("힌트는 찾은 게 없으면 비어 있다", () => {
   assert.match(koreanSlipHint("날씨가 덥어요"), /더워/);
   assert.match(koreanSlipHint("선생님, 시간 있어?"), /반말/);
 });
+
+test("모델이 고친 문장에 새로 만든 틀린 꼴도 찾는다", () => {
+  const corrected = "저는 노래를 잘 부르어요.";
+  assert.equal(repairIrregularSlips(corrected, findIrregularSlips(corrected)), "저는 노래를 잘 불러요.");
+});
