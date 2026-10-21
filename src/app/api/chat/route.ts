@@ -694,7 +694,7 @@ async function runChatReply(
     ],
     response_format: { type: "json_object" },
     temperature: 0.9,
-    max_tokens: 400,
+    max_tokens: 800,
   });
   void recordTokens("chatReply", completion.usage);
   const raw = completion.choices[0]?.message?.content;
@@ -1185,9 +1185,11 @@ export async function POST(request: NextRequest) {
         async start(controller) {
           const send = (line: unknown) => controller.enqueue(encoder.encode(`${JSON.stringify(line)}\n`));
           let reply: { assistantMessage: string; spokenReply: string } | null = null;
+          let replyError: unknown = null;
           try {
             reply = await replyCall;
           } catch (error) {
+            replyError = error;
             console.error("[chat-stream-reply]", error);
             // 답 호출이 안 되면 교정 호출이 같이 쓴 답으로.
             const fallback = await correctionSafe;
@@ -1196,7 +1198,7 @@ export async function POST(request: NextRequest) {
             }
           }
           if (!reply) {
-            const detail = simErrorDetail(new Error("reply failed"));
+            const detail = simErrorDetail(replyError ?? new Error("reply failed"));
             send({ type: "error", error: "CHAT_FAILED", ...(detail ? { detail } : {}) });
             controller.close();
             finish(null);
