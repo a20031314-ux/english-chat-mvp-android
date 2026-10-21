@@ -10,6 +10,7 @@ import { correctionRisk } from "@/lib/correctionRisk";
 import { shouldKeepLearnerLine } from "@/lib/correctionGuard";
 import { findIrregularSlips, koreanSlipHint, repairIrregularSlips } from "@/lib/koreanSlips";
 import { targetLanguageFocusHints } from "@/lib/languageFocus";
+import { touchesDisputed } from "@/lib/rooms/agreement";
 import {
   coerceLanguageCode,
   INTERFACE_LANGUAGE_LABELS,
@@ -41,9 +42,13 @@ function dailyMax(): number {
   return Number.isFinite(n) && n >= 0 ? n : 30;
 }
 
-function systemPrompt(target: string, uiName: string): string {
+// 말하는 방 내 줄(받아쓴 말)을 확인할 때 덧붙이는 지시(2026-10-22) — 문장부호·대소문자는 받아쓰기 몫, "unsure" 낱말은 그대로.
+const SPOKEN_NOTE = `
+"original" is a speech-to-text transcript of something the learner SAID. Punctuation, capital letters and spacing come from the transcriber: never correct or mention them. Fillers, restarts and repeated words are normal speech, not mistakes. If "unsure" lists words, keep each exactly as it is in corrected.`;
+
+function systemPrompt(target: string, uiName: string, spoken: boolean): string {
   const name = learningLanguageName(target as Parameters<typeof learningLanguageName>[0]);
-  return `You check one correction made by a language-learning chat app. A learner wrote "original" in ${name}; a fast model produced "corrected" and "explanation". Act as a strict native ${name} teacher.
+  return `You check one correction made by a language-learning chat app. A learner wrote "original" in ${name}; a fast model produced "corrected" and "explanation". Act as a strict native ${name} teacher.${spoken ? SPOKEN_NOTE : ""}
 
 Return the best correction:
 - corrected: the learner's line with EVERY real mistake fixed (grammar, conjugation/irregular forms, particles, word order, tense with time words, politeness/honorifics toward a teacher, elder, boss or customer). Keep their meaning exactly — who does what to whom, the tense they meant — and keep their wording wherever it is already acceptable. Never lower the politeness they used. Do not rewrite acceptable text for style.
@@ -77,6 +82,11 @@ export async function POST(request: NextRequest) {
         ? body.locale
         : "ko";
   const same = { verified: false, changed: false, corrected, explanation };
+  // 말하는 방 내 줄에서 열 때(spoken): 받아쓴 말이라는 것과, 두 받아쓰기가 다르게 들은 낱말(unsure).
+  const spoken = body.spoken === true;
+  const unsure = Array.isArray(body.unsure)
+    ? body.unsure.filter((word): word is string => typeof word === "string").map((word) => word.slice(0, 60)).slice(0, 20)
+    : [];
 
   const risk = correctionRisk({ original, corrected, target, explanation });
   if (!risk.risky) return jsonWithCors(request, { ...same, reason: "not_risky" });
@@ -100,10 +110,16 @@ export async function POST(request: NextRequest) {
     const hint = target === "ko" ? koreanSlipHint(original) : "";
     const completion = await completeChat(openai, "chatVerify", {
       messages: [
-        { role: "system", content: systemPrompt(target, INTERFACE_LANGUAGE_LABELS[ui] ?? "Korean") },
+        { role: "system", content: systemPrompt(target, INTERFACE_LANGUAGE_LABELS[ui] ?? "Korean", spoken) },
         {
           role: "user",
-          content: JSON.stringify({ original, corrected, explanation, ...(hint ? { noticed: hint } : {}) }),
+          content: JSON.stringify({
+            original,
+            corrected,
+            explanation,
+            ...(hint ? { noticed: hint } : {}),
+            ...(spoken && unsure.length ? { unsure } : {}),
+          }),
         },
       ],
       response_format: { type: "json_object" },
@@ -120,7 +136,7 @@ export async function POST(request: NextRequest) {
       // 확인 모델이 "고칠 것 없음" — 싼 모델이 괜히 고친 줄(별로요·커피가 마시고 싶어요 등). 교정을 거둔다.
       return jsonWithCors(request, { verified: true, changed: true, noError: true, corrected: original, explanation: "" });
     }
-    if (shouldKeepLearnerLine(original, next, target)) {
+    if (shouldKeepLearnerLine(original, next, target) || touchesDisputed(next, unsure, target)) {
       // 확인 모델 답을 가드가 버림(번역·다른 말로 바꿈 등) — 원래 교정을 그대로 둔다.
       return jsonWithCors(request, { ...same, verified: true, reason: "kept" });
     }

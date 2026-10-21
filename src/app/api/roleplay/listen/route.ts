@@ -1,5 +1,6 @@
 import { takeAiHelp } from "@/lib/server/aiHelp";
-import { captionPartCounts } from "@/lib/server/entitlementStore";
+import { captionPartCounts, markFixable } from "@/lib/server/entitlementStore";
+import { contentHash } from "@/lib/roleplay/script";
 import { NextRequest, after } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -10,9 +11,9 @@ import { learningLanguageName } from "@/lib/learningLanguages";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { confidenceFromLogprobs, noteRecognition } from "@/lib/server/learnerMetrics";
 import { toFile } from "openai";
-import { isNextGenTranscribe, turnTranscribeModel, wantsTrialReport } from "@/lib/server/speechModels";
+import { isNextGenTranscribe, roomFixSecondAlways, turnTranscribeModel, wantsTrialReport } from "@/lib/server/speechModels";
 import { externalSttReady, isExternalStt, transcribeExternal } from "@/lib/server/sttProviders";
-import { confidenceOfLogprobs, confidenceOfWords, isUnsure, type SpeechConfidence } from "@/lib/speechConfidence";
+import { confidenceOfLogprobs, confidenceOfWords, fixTrust, isUnsure, type FixTrust, type SpeechConfidence } from "@/lib/speechConfidence";
 
 export const dynamic = "force-dynamic";
 
@@ -69,15 +70,28 @@ export async function POST(request: NextRequest) {
   // 쉼마다 자른 조각(rooms/speechParts.ts): 같은 말의 번호와 순번, 그리고 앞 조각에서 받아쓴 글(맥락).
   const utterance = typeof body.utterance === "string" && /^[A-Za-z0-9_-]{4,40}$/.test(body.utterance) ? body.utterance : "";
   const previous = typeof body.previous === "string" ? body.previous.replace(/\s+/g, " ").trim().slice(-240) : "";
+  const part = typeof body.part === "number" && Number.isInteger(body.part) && body.part >= 0 && body.part < 100 ? body.part : 0;
+  // 방 자막 하루 한도(billing/plans.ts dailyCaptionLines)는 자막 위에 붙는 AI 덧붙임(내 줄 교정·두 번째 받아쓰기)의 한도다.
+  // 넘어도 자막 자체는 계속 받아쓴다(사용자 결정 2026-10-22 — 자막이 끊기면 듣는 상대가 손해). 옛 앱도 429를 받지 않으니 자막이 이어진다.
+  // 말 하나를 한 줄로 센다(뒷조각은 세지 않음, entitlementStore.captionPartCounts).
+  let extras = true;
   if (forRoom) {
-    // 말하는 방 자막은 하루 줄 수 한도(billing/plans.ts dailyCaptionLines). 넘으면 자막만 멈추고 음성 대화는 그대로.
-    // 말 하나를 한 줄로 센다(뒷조각은 세지 않음, entitlementStore.captionPartCounts).
     const counts = utterance ? await captionPartCounts(requestUserId(request), utterance).catch(() => true) : true;
-    if (counts) {
-      const caption = await takeAiHelp(request, "caption");
-      if (!caption.ok) return jsonWithCors(request, { error: caption.error, limit: caption.limit }, { status: 429 });
-    }
+    if (counts) extras = (await takeAiHelp(request, "caption")).ok;
   }
+  // 새 앱이 내 줄 교정을 원하면(fix), 믿을 만하게 받아쓴 조각에 표를 남긴다 — 교정은 말이 끝난 뒤 /api/rooms/fix가.
+  // high = 확신이 높아 이대로 교정, check = 어중간해서 두 번째 받아쓰기로 견준 뒤 교정. "?"(확실하지 않음) 줄은 표 없음.
+  const wantsFix = forRoom && body.fix === true && Boolean(utterance);
+  const fixField = async (text: string, unsure: boolean, sure: SpeechConfidence, modelName: string): Promise<{ fix?: FixTrust; extras?: false }> => {
+    if (!forRoom) return {};
+    if (!extras) return { extras: false };
+    if (!wantsFix || !text || unsure) return {};
+    const trust = fixTrust(sure, modelName, roomFixSecondAlways(request));
+    const marked = await markFixable(requestUserId(request), utterance, part, { h: contentHash(text.replace(/\s+/g, " ").trim()), trust })
+      .then(() => true)
+      .catch(() => false);
+    return marked ? { fix: trust } : {};
+  };
   void meterRequest(request, forRoom ? "roomListen" : "roleplayListen");
 
   const mimeType = typeof body.mimeType === "string" ? body.mimeType : "audio/webm";
@@ -144,7 +158,7 @@ export async function POST(request: NextRequest) {
       if (wantsTrialReport(request)) {
         return jsonWithCors(request, { text, raw, confidence: heard.confidence, sure, unsure, detected: heard.languages, words: heard.words, model, ms: Date.now() - started });
       }
-      return jsonWithCors(request, { text, ...(unsure ? { unsure } : {}) });
+      return jsonWithCors(request, { text, ...(unsure ? { unsure } : {}), ...(await fixField(text, unsure, sure, model)) });
     } catch (error) {
       console.error(`[roleplay/listen] ${model} failed, falling back:`, error);
       if (wantsTrialReport(request)) {
@@ -208,7 +222,9 @@ export async function POST(request: NextRequest) {
     if (wantsTrialReport(request)) {
       return jsonWithCors(request, { text, raw, confidence, sure, unsure, detected, model, ms: Date.now() - started });
     }
-    return jsonWithCors(request, { text, ...(unsure ? { unsure } : {}) });
+    // 다시 받아쓴 줄은 첫 답의 확률과 글이 맞지 않아 교정 표도 남기지 않는다.
+    const fix = text === heardText ? await fixField(text, unsure, sure, asked.model) : await fixField("", false, sure, asked.model);
+    return jsonWithCors(request, { text, ...(unsure ? { unsure } : {}), ...fix });
   } catch (error) {
     console.error("[roleplay/listen]", error);
     return jsonWithCors(request, { error: "STT_FAILED" }, { status: 502 });

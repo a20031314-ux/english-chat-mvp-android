@@ -173,7 +173,13 @@ export function simulate(type, terms, o) {
     chat: n.chats * o.chatWon,
     call: krw(n.callMinutes * roleplayMinuteUsd()),
     pack: krw(n.packs * packUsd()),
-    room: krw(n.roomMinutes * (o.assume.room.roomListen * opUsd("roomListen") + o.assume.room.translate * opUsd("translate"))),
+    room: krw(
+      n.roomMinutes *
+        (o.assume.room.roomListen * opUsd("roomListen") +
+          o.assume.room.translate * opUsd("translate") +
+          (o.assume.room.roomFix ?? 0) * opUsd("roomFix") +
+          (o.assume.room.roomFixListen ?? 0) * opUsd("roomFixListen")),
+    ),
     other: krw(Object.entries(n.ops).reduce((sum, [op, times]) => sum + times * opUsd(op), 0)),
   };
   const costKrw = Object.values(cost).reduce((a, b) => a + b, 0);

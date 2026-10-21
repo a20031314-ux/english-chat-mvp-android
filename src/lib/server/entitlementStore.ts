@@ -21,6 +21,8 @@ import {
   kvSetJsonIfAbsent,
   kvListPush,
   kvListTrim,
+  kvGetJsonMany,
+  kvDelete,
 } from "./kv.ts";
 // Relative, not "@/": a script under scripts/ imports this directly and Node
 // cannot resolve the alias there (see modelCalls.ts, which was split out over
@@ -236,6 +238,33 @@ export async function captionPartCounts(userId: string, utterance: string): Prom
   if (!isIdentified(userId)) return true;
   const seen = await kvIncrBy(`usage:aihelp:part:${userId}:${utterance}`, 1, CAPTION_PART_TTL_SECONDS);
   return seen === 1 || seen > CAPTION_PART_FREE;
+}
+
+/**
+ * 방 내 줄 교정 표(2026-10-22): 받아쓰기(`/api/roleplay/listen`)가 이 조각을 교정해도 된다고 본 흔적 —
+ * 글의 지문(해시)과 믿음 정도(high·check)만, 글 자체는 저장하지 않는다. 교정(`/api/rooms/fix`)은 이 표가 있는 글만 고치고 표를 지운다.
+ * 그래서 받아쓰기를 거치지 않은 아무 글이나 공짜 교정으로 보낼 수 없다. 10분이면 저절로 사라진다.
+ */
+const FIX_MARK_TTL_SECONDS = 600;
+
+export type FixMark = { h: string; trust: "high" | "check" };
+
+function fixMarkKey(userId: string, utterance: string, part: number) {
+  return `usage:aihelp:fix:${userId}:${utterance}:${part}`;
+}
+
+export async function markFixable(userId: string, utterance: string, part: number, mark: FixMark): Promise<void> {
+  if (!isIdentified(userId)) return;
+  await kvSetJson(fixMarkKey(userId, utterance, part), mark, FIX_MARK_TTL_SECONDS);
+}
+
+/** 조각마다 표(없으면 null), 읽은 표는 지운다(한 번만 쓰임). */
+export async function takeFixMarks(userId: string, utterance: string, parts: number[]): Promise<(FixMark | null)[]> {
+  if (!isIdentified(userId) || parts.length === 0) return parts.map(() => null);
+  const keys = parts.map((part) => fixMarkKey(userId, utterance, part));
+  const marks = await kvGetJsonMany<FixMark>(keys);
+  await kvDelete(keys).catch(() => {});
+  return marks;
 }
 
 export async function getDailyUsed(userId: string): Promise<number> {

@@ -40,7 +40,7 @@
 | 영상 | `videoTranscripts:v1` | 모두 함께 | 400일 | 해당 없음 | 자막 있는 영상 목록 | `videoTranscriptStore.ts` |
 | 오늘의 팩 | `pack:days` | 학습자 한 명 | 15일 | 해당 없음 | 무료 사용자가 팩을 연 날짜(주 2번 한도, 15일 뒤 저절로 사라짐) | `packStore.ts` |
 | 오늘의 팩 | `pack:v1` | 학습자 한 명 | 4일 | 남음(4일 뒤 만료) | 오늘의 팩 진행 | `packStore.ts` |
-| 요금 한도 | `usage:aihelp` | 학습자 한 명 | 2분 · 3일 | 해당 없음 | 오늘 쓴 AI 도움·방 자막 줄 수(사흘 뒤 저절로 사라짐) | `entitlementStore.ts` |
+| 요금 한도 | `usage:aihelp` | 학습자 한 명 | 10분 · 2분 · 3일 | 해당 없음 | 오늘 쓴 AI 도움·방 자막 줄 수(사흘 뒤 저절로 사라짐), 방 내 줄 교정 표(글 지문·믿음 정도만, 10분) | `entitlementStore.ts` |
 | 운영자 신고함(정지) | `ops:v1` | 계정 | 90일 · 계산(ttl) | 지움(정지 표시), 처리 표시는 90일 뒤 저절로 | 운영자가 누른 사람 기능 정지(기한·메모)와 처리한 신고 표시 | `opsStore.ts` |
 | 의견 보내기 | `feedback:v1` | 운영 | 120일 · 2일 · 90일 | 남음(90일) | 사용자가 보낸 의견·그림·반영 카드 | `feedbackFixStore.ts` `feedbackStore.ts` |
 | 자라는 중 | `growth:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 표현별 자라는 기록(언어별) | `growthStore.ts` |

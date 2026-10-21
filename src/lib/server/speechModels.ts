@@ -32,6 +32,16 @@ export function wantsTrialReport(request: NextRequest): boolean {
   return trialHeader(request, "x-speech-trial-report") === "1";
 }
 
+/**
+ * 방 내 줄 교정에서 두 번째 받아쓰기를 늘 받을지(2026-10-22). 기본은 확신이 어중간한 조각만(사용자 결정 (나)),
+ * Vercel `ROOM_FIX_SECOND=always`면 모든 조각, 점검 사용자는 머리글 `x-room-fix-second: always|borderline`으로 견줘 볼 수 있다.
+ */
+export function roomFixSecondAlways(request?: NextRequest): boolean {
+  const trial = request ? trialHeader(request, "x-room-fix-second") : "";
+  if (trial === "always" || trial === "borderline") return trial === "always";
+  return process.env.ROOM_FIX_SECOND?.trim() === "always";
+}
+
 /** 통화 학습·Room 자막의 한 마디 받아쓰기. */
 export function turnTranscribeModel(request?: NextRequest): string {
   const trial = trialHeader(request, "x-stt-model");

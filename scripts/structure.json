@@ -110,6 +110,7 @@
     "components/rooms/RoomParts": "room",
     "components/rooms/VideoStage": "room",
     "api/rooms": "room",
+    "api/rooms/fix": "room",
     "api/random": "random",
     "components/rooms/RandomScreen": "random",
 

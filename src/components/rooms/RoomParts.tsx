@@ -691,6 +691,9 @@ export function Lines({
   hintMode,
   onHintSend,
   onHintClose,
+  fixes,
+  onFixOpen,
+  onFixClose,
   composing,
 }: {
   t: RoomCopy;
@@ -702,6 +705,10 @@ export function Lines({
   hintMode?: RoomHintMode;
   onHintSend?: (seq: number, text: string) => void;
   onHintClose?: (seq: number) => void;
+  /** 내 줄 번호 → 본인에게만 보이는 교정(접혀 있으면 칩, 열면 고친 문장·설명). 2026-10-22. */
+  fixes?: Record<number, RoomLineFix>;
+  onFixOpen?: (seq: number) => void;
+  onFixClose?: (seq: number) => void;
   /** 자막·채팅을 나눠 그릴 때 방의 모든 줄(질문 수·번역 맥락은 둘을 합쳐서 본다). */
   allLines?: RoomLine[];
   /** 줄이 없을 때 문구(채팅 칸은 "아직 댓글이 없어요"). */
@@ -733,13 +740,15 @@ export function Lines({
 
   // 💡 힌트가 오면 그 카드까지 보이게(내 마지막 줄 아래라 맨 아래로). "…" 말풍선이 생기거나 글이 이어 붙어도.
   const hintCount = Object.keys(hints ?? {}).length;
+  // 교정 칩이 생기거나 열려도 보이게.
+  const fixKey = Object.entries(fixes ?? {}).map(([seq, fix]) => `${seq}${fix.open ? "o" : ""}`).join(",");
   const composingKey = (composing ?? []).map((row) => row.peerId).join(",");
   const lastText = ordered.at(-1)?.text.length ?? 0;
   useEffect(() => {
     if (view !== "timeline") return;
     const node = scroller.current;
     if (node) node.scrollTop = node.scrollHeight;
-  }, [ordered.length, view, hintCount, composingKey, lastText]);
+  }, [ordered.length, view, hintCount, fixKey, composingKey, lastText]);
 
   /** "…" 말풍선 한 개: 줄과 같은 자리(사진·이름)에 점 세 개가 깜박인다. */
   const composingRow = (row: { peerId: string; accountId: string | null; nickname: string }, showName: boolean) => (
@@ -874,6 +883,9 @@ export function Lines({
               onClose={() => onHintClose?.(line.seq)}
             />
           ) : null}
+          {line.peerId === selfId && fixes?.[line.seq] ? (
+            <FixCard t={t} fix={fixes[line.seq]} onOpen={() => onFixOpen?.(line.seq)} onClose={() => onFixClose?.(line.seq)} />
+          ) : null}
           {isOpen && others && onQuote ? (
             <LineActions
               t={t}
@@ -973,6 +985,53 @@ function RevealText({ text, fresh }: { text: string; fresh: boolean }) {
 }
 
 /** 본인에게만: 편한 말로 한 줄 아래 "💡 이렇게 말해 보세요". 살짝만이면 첫 낱말, 누르면 전체. */
+/** 내 줄 교정 한 건(본인 화면에만). open이면 고친 문장·설명, 아니면 칩. */
+export type RoomLineFix = {
+  original: string;
+  corrected: string;
+  explanation: string;
+  /** 두 받아쓰기가 다르게 들은 낱말 — 확인 모델도 건드리지 않게 넘긴다. */
+  disputed: string[];
+  open: boolean;
+  checking: boolean;
+  verified: boolean;
+};
+
+function FixCard({ t, fix, onOpen, onClose }: { t: RoomCopy; fix: RoomLineFix; onOpen: () => void; onClose: () => void }) {
+  if (!fix.open) {
+    return (
+      <button
+        type="button"
+        onClick={onOpen}
+        disabled={fix.checking}
+        aria-busy={fix.checking}
+        className="mt-1 inline-flex items-center gap-1 rounded-full border border-warn/50 bg-warn/15 px-2.5 py-0.5 text-caption text-amber-100 disabled:opacity-70"
+      >
+        <span aria-hidden="true">✎</span>
+        {fix.checking ? t.fixChecking : t.fixChip}
+      </button>
+    );
+  }
+  return (
+    <div className="mt-1 rounded-xl border border-warn/40 bg-warn/10 px-2.5 py-1.5">
+      <div className="flex items-center gap-2">
+        <p className="min-w-0 flex-1 text-meta text-amber-200">✎ {t.fixTitle}</p>
+        <button type="button" onClick={onClose} aria-label={t.hintClose} className="shrink-0 rounded-lg px-1.5 text-sm text-slate-400 hover:bg-white/10">
+          ×
+        </button>
+      </div>
+      <p className="text-chat text-white" dir="auto">
+        {fix.corrected}
+      </p>
+      {fix.explanation ? (
+        <p className="mt-0.5 text-sm text-slate-300" dir="auto">
+          {fix.explanation}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 function HintCard({ t, text, language, peek, onSend, onClose }: { t: RoomCopy; text: string; language: string; peek: boolean; onSend?: () => void; onClose: () => void }) {
   const [shown, setShown] = useState(!peek);
   return (

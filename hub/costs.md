@@ -105,8 +105,10 @@
 | weakMission | 0.7원 | 1 | gpt-4o-mini 2000/300 토큰 | 가정 |
 | roleplayTurn | 0.6원 | 1 | gpt-4.1-mini 851/50 토큰 | 잰 값 |
 | roleplayListen | 0.4원 | 1 | 받아쓰기 6초 | 가정 |
+| roomFixListen | 0.4원 | 1 | 받아쓰기 6초 | 가정 |
 | roomListen | 0.4원 | 1 | 받아쓰기 6초 | 가정 |
 | chatReply | 0.4원 | 1 | gpt-4o-mini 1400/120 토큰 | 가정 |
+| roomFix | 0.3원 | 1 | gpt-4o-mini 900/120 토큰 | 가정 |
 | learnerObserve | 0.3원 | 1 | gpt-4o-mini 900/80 토큰 | 가정 |
 | weakRead | 0.2원 | 1 | gpt-4o-mini 600/80 토큰 | 가정 |
 | mediaUpload | 0.1원 | 1 | 한 번 고정값 | 가정 |
@@ -130,14 +132,14 @@
 
 ## 기록 확인
 
-모델을 쓰는 서버 경로 33개 중 33개가 사용량을 기록합니다 (`scripts/cost-coverage.mjs`).
+모델을 쓰는 서버 경로 34개 중 34개가 사용량을 기록합니다 (`scripts/cost-coverage.mjs`).
 
 ## 가정 (믿기 어려운 숫자부터 확인)
 
 - 모델 단가: https://developers.openai.com/api/docs/pricing (2026-09-04 확인). 1달러 1400원(2026-09-04).
 - 음성 합성 분당 $0.015 — 통화 비용의 대부분, `cost.ts`에서 가장 약한 숫자.
 - 잰 적 없는 모델 호출 한 번 = 2000/300 토큰. 실측 보고서는 서버가 잰 토큰(`usage:tok:*`)이 20번 넘게 쌓인 기능부터 그 값을 씁니다.
-- 가정으로 값을 매기는 기능 43개: chat, chatReread, chatReply, howToSay, howToSayCard, roomHint, mediaUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, stageCopy, learnerObserve, curriculumMissions, learnerPick, notesPlace, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, expressionUnits, vocabSearch, contentDiscovery.
+- 가정으로 값을 매기는 기능 45개: chat, chatReread, chatReply, howToSay, howToSayCard, roomHint, mediaUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, stageCopy, learnerObserve, curriculumMissions, learnerPick, notesPlace, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, expressionUnits, vocabSearch, contentDiscovery.
 
 ## 새 기능을 넣을 때
 

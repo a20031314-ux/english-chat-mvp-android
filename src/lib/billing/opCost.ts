@@ -113,6 +113,10 @@ export const OP_COST: Record<string, OpCost> = {
   translateKept: counter,
   roleplayListen: { kind: "transcribe", seconds: ROLEPLAY_TURN.learnerSpeakingSeconds, basis: "assumed" },
   roomListen: { kind: "transcribe", seconds: ROLEPLAY_TURN.learnerSpeakingSeconds, basis: "assumed" },
+  // 방 내 줄 교정: 교정 지시(약 2,400자) + 한 마디·앞 6줄, 답은 짧은 JSON(2026-10-22 어림). 실제 모델은 Haiku 5.5(채팅과 같이 아직 mini 단가로 셈).
+  roomFix: estimated({ input: 900, output: 120 }),
+  // 두 번째 받아쓰기는 확신이 어중간한 조각만(조각 하나 몇 초).
+  roomFixListen: { kind: "transcribe", seconds: ROLEPLAY_TURN.learnerSpeakingSeconds, basis: "assumed" },
   roleplayCorrect: mini(),
   roleplayTurn: { kind: "model", model: "4.1-mini", tokens: { input: ROLEPLAY_TURN.input, output: ROLEPLAY_TURN.output }, basis: "measured" },
   roleplayContext: mini(),

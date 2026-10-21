@@ -84,7 +84,7 @@
 
 ### AI 채팅 (대화 → AI 튜터 줄) `chat`
 - 화면: `ArchivePanel` · `ChatHistoryPanel` · `ChatWindow` · `ExpressionPeek` · `MessageBubble` · `ReportContentDialog`
-- API: `chat`(대화 탭, 사람 탭, Room 탭, 계정·로그인) · `chat/verify` · `report`
+- API: `chat`(대화 탭, 사람 탭, Room 탭, 계정·로그인) · `chat/verify`(대화 탭, 사람 탭, Room 탭, 계정·로그인) · `report`
 - 다른 영역이 씀: `ChatWindow` ← 앱 틀
 
 ### AI 통화 (대화 → AI 튜터 📞) · 오늘의 팩 `call`
@@ -114,7 +114,7 @@
 
 ### Room 탭 — 말하는 방 `room`
 - 화면: `rooms/RoomParts` · `rooms/RoomView` · `rooms/RoomsScreen` · `rooms/VideoStage`
-- API: `rooms`(대화 탭, 사람 탭, 계정·로그인)
+- API: `rooms/fix`(대화 탭, 사람 탭, 계정·로그인) · `rooms`(대화 탭, 사람 탭, 계정·로그인)
 - 다른 영역이 씀: `rooms/RoomParts` ← 대화 탭, 사람 탭 · `rooms/RoomsScreen` ← 앱 틀
 
 ### 랜덤 연결 — 창구 Spin(성인인증·짝 맞추기, 웹만) `random`

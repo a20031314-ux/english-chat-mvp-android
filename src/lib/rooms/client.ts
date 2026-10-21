@@ -217,12 +217,15 @@ async function toBase64(blob: Blob): Promise<string> {
  * 같은 말의 뒷조각이면 말 번호·순번과 앞에서 받아쓴 글을 같이 보낸다: 서버는 말 하나를 자막 한 줄로 세고(조각마다 세지 않음),
  * 앞 글을 맥락으로 이어 받아쓴다.
  */
+export type FixTrust = "high" | "check";
+
 export async function transcribeUtterance(
   blob: Blob,
   mimeType: string,
   languages: string[] = [],
   piece?: { utterance: string; part: number; previous?: string },
-): Promise<{ text: string; unsure: boolean }> {
+  options: { fix?: boolean } = {},
+): Promise<{ text: string; unsure: boolean; fix: FixTrust | null; extrasOff: boolean }> {
   const response = await fetch(apiUrl("/api/roleplay/listen"), {
     method: "POST",
     headers: { "Content-Type": "application/json", ...entitlementHeaders() },
@@ -234,13 +237,111 @@ export async function transcribeUtterance(
       ...(piece ? { utterance: piece.utterance, part: piece.part, ...(piece.previous ? { previous: piece.previous } : {}) } : {}),
       // 방의 언어(보통 둘), 자유 대화방이면 말하는 사람의 두 언어 — 이 밖의 글자로 나온 자막은 지어낸 것으로 본다(서버).
       languages,
+      // 내 줄 교정을 원함(서버가 믿을 만한 조각에 표를 남기고 fix로 알려 줌).
+      ...(options.fix ? { fix: true } : {}),
     }),
   });
-  // 오늘 자막 줄을 다 썼으면 방 화면이 자막을 멈추고 안내한다(음성은 계속).
+  // 2026-10-22부터 서버는 한도를 넘어도 자막을 계속 준다(429 없음). 옛 서버 대비로만 남김.
   if (response.status === 429) throw new RoomApiError("CAPTION_LIMIT", 429);
-  if (!response.ok) return { text: "", unsure: false };
-  const body = (await response.json()) as { text?: unknown; unsure?: unknown };
-  return { text: typeof body.text === "string" ? body.text.trim() : "", unsure: body.unsure === true };
+  if (!response.ok) return { text: "", unsure: false, fix: null, extrasOff: false };
+  const body = (await response.json()) as { text?: unknown; unsure?: unknown; fix?: unknown; extras?: unknown };
+  return {
+    text: typeof body.text === "string" ? body.text.trim() : "",
+    unsure: body.unsure === true,
+    fix: body.fix === "high" || body.fix === "check" ? body.fix : null,
+    // 오늘 방 자막 한도를 넘음: 자막은 계속, 교정 같은 덧붙임만 멈춤.
+    extrasOff: body.extras === false,
+  };
+}
+
+export type RoomFixResult = { original: string; corrected: string; explanation: string; disputed: string[] };
+
+/**
+ * 내 말 한 마디(조각들)를 교정해 달라고(서버 `/api/rooms/fix`). 고칠 게 없거나 교정할 수 없는 줄이면 null.
+ * 확신이 어중간한(check) 조각은 소리도 같이 — 서버가 다른 모델로 한 번 더 받아써 견준다.
+ */
+export async function fixMyLine(input: {
+  utterance: string;
+  parts: { part: number; text: string; blob?: Blob; mimeType?: string }[];
+  targetLanguage: string;
+  locale: string;
+  recent: string[];
+}): Promise<RoomFixResult | null> {
+  const parts = await Promise.all(
+    input.parts.map(async (row) => ({
+      part: row.part,
+      text: row.text,
+      ...(row.blob ? { audioBase64: await toBase64(row.blob), mimeType: row.mimeType || "audio/webm" } : {}),
+    })),
+  );
+  const response = await fetch(apiUrl("/api/rooms/fix"), {
+    method: "POST",
+    headers: { "Content-Type": "application/json", ...entitlementHeaders() },
+    body: JSON.stringify({
+      utterance: input.utterance,
+      parts,
+      targetLanguage: input.targetLanguage,
+      interfaceLanguage: input.locale,
+      recent: input.recent,
+    }),
+  });
+  if (!response.ok) return null;
+  const body = (await response.json()) as {
+    skip?: unknown;
+    hasError?: unknown;
+    original?: unknown;
+    corrected?: unknown;
+    explanation?: unknown;
+    disputed?: unknown;
+  };
+  if (body.skip || body.hasError !== true || typeof body.corrected !== "string" || typeof body.original !== "string") return null;
+  return {
+    original: body.original,
+    corrected: body.corrected,
+    explanation: typeof body.explanation === "string" ? body.explanation : "",
+    disputed: Array.isArray(body.disputed) ? body.disputed.filter((word): word is string => typeof word === "string") : [],
+  };
+}
+
+/** 내 줄 교정을 확인 모델에 한 번 더(위험한 줄만 — 서버도 같은 규칙으로 거른다). 바뀐 교정, 고칠 게 없으면 null. */
+export async function verifyMyLine(input: {
+  original: string;
+  corrected: string;
+  explanation: string;
+  disputed: string[];
+  targetLanguage: string;
+  locale: string;
+}): Promise<{ corrected: string; explanation: string } | null> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), 9000);
+  try {
+    const response = await fetch(apiUrl("/api/chat/verify"), {
+      method: "POST",
+      signal: controller.signal,
+      headers: { "Content-Type": "application/json", ...entitlementHeaders() },
+      body: JSON.stringify({
+        original: input.original,
+        corrected: input.corrected,
+        explanation: input.explanation,
+        targetLanguage: input.targetLanguage,
+        interfaceLanguage: input.locale,
+        locale: input.locale,
+        spoken: true,
+        unsure: input.disputed,
+      }),
+    });
+    if (!response.ok) return { corrected: input.corrected, explanation: input.explanation };
+    const data = (await response.json()) as { changed?: boolean; noError?: boolean; corrected?: string; explanation?: string };
+    if (data.noError) return null;
+    if (data.changed && data.corrected?.trim()) {
+      return { corrected: data.corrected.trim(), explanation: data.explanation?.trim() || input.explanation };
+    }
+  } catch {
+    // 확인을 못 하면 처음 교정 그대로.
+  } finally {
+    clearTimeout(timer);
+  }
+  return { corrected: input.corrected, explanation: input.explanation };
 }
 
 /** 번역·다듬기가 실패했을 때 보일 말: 오늘 AI 도움을 다 썼으면 그 안내, 아니면 실패 문구. */

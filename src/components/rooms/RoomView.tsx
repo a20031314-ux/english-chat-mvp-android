@@ -18,7 +18,14 @@ import {
   fetchIceServers,
   transcribeUtterance,
   howToSay,
+  fixMyLine,
+  verifyMyLine,
+  type FixTrust,
+  type RoomFixResult,
 } from "@/lib/rooms/client";
+import { correctionRisk } from "@/lib/correctionRisk";
+import { readCorrectionView } from "@/lib/correctionView";
+import { writtenInLearningLanguage } from "@/lib/inputLanguage";
 import { RoomMesh, type PeerState } from "@/lib/rooms/mesh";
 import { startSpeechCapture, type SpeechCapture, type Utterance } from "@/lib/rooms/speech";
 import { joinPartTexts } from "@/lib/rooms/speechParts";
@@ -40,7 +47,7 @@ import { askPhraseAbout } from "@/lib/rooms/quote";
 import { cleanLanguages } from "@/lib/rooms/roomFilter";
 import { leansOnOwnLanguage, whichLanguage } from "@/lib/roleplay/transcript";
 import { BodyLayer } from "@/components/FullScreenLayer";
-import { Composer, Face, Lines, ProfileSheet, languagePair } from "./RoomParts";
+import { Composer, Face, Lines, ProfileSheet, languagePair, type RoomLineFix } from "./RoomParts";
 import { useInbox } from "./RoomDm";
 import { VideoStage } from "./VideoStage";
 import { FrameGrabber, randomFrame } from "@/lib/random/client";
@@ -132,7 +139,7 @@ export function RoomView({
   const [muted, setMuted] = useState(false);
   const [speaking, setSpeaking] = useState(false);
   const [pending, setPending] = useState(0);
-  // 오늘 자막 줄을 다 쓰면(서버 CAPTION_LIMIT, billing/plans.ts) 이 방에서는 받아쓰기를 멈춘다. 음성은 그대로.
+  // 오늘 방 자막 한도(billing/plans.ts dailyCaptionLines)를 넘음 — 자막은 계속, 내 줄 교정 같은 덧붙임만 멈췄다는 한 줄 안내.
   const [captionsOff, setCaptionsOff] = useState(false);
   const captionsOffRef = useRef(false);
   const [peerStates, setPeerStates] = useState<Record<string, PeerState>>({});
@@ -177,6 +184,11 @@ export function RoomView({
   const firstSeqRef = useRef(new Map<string, number>());
   const inflightRef = useRef(new Map<string, number>());
   const endedUtteranceRef = useRef(new Set<string>());
+  // 내 줄 교정(2026-10-22): 말 번호 → 조각마다 받아쓰기 믿음(high·check, 교정 못 하면 null)과 어중간한 조각의 소리.
+  // 말이 끝나면 한 번 교정을 묻고 지운다. 결과는 나에게만(첫 줄 번호 → 교정), 화면에만 두고 저장하지 않는다.
+  const partFixRef = useRef(new Map<string, Map<number, { trust: FixTrust | null; blob?: Blob; mimeType?: string }>>());
+  const [fixes, setFixes] = useState<Record<number, RoomLineFix>>({});
+  const [correctionView] = useState(() => readCorrectionView());
   /** 내가 말하는 중이거나 아직 받아쓰는 중인 말 — 내 "…" 말풍선. */
   const [selfComposing, setSelfComposing] = useState<string | null>(null);
   /**
@@ -311,19 +323,94 @@ export function RoomView({
     [targetLanguage, locale],
   );
 
-  /** 끝난 말이고 받아쓰는 조각이 없으면 내 "…"를 거두고 조각 기록을 비운다. */
-  const settleUtterance = useCallback((uid: string) => {
-    if (!endedUtteranceRef.current.has(uid) || (inflightRef.current.get(uid) ?? 0) > 0) return;
-    setSelfComposing((have) => (have === uid ? null : have));
-    endedUtteranceRef.current.delete(uid);
-    inflightRef.current.delete(uid);
-    partTextRef.current.delete(uid);
-    // 첫 줄 번호는 힌트가 나중 조각에서 올 수 있어 조금 더 둔다(작은 Map이라 방을 나갈 때 함께 사라짐).
+  const setFix = useCallback((seq: number, change: ((fix: RoomLineFix) => RoomLineFix | null) | null) => {
+    setFixes((have) => {
+      const fix = have[seq];
+      if (!fix) return have;
+      const next = change ? change(fix) : null;
+      const out = { ...have };
+      if (next) out[seq] = next;
+      else delete out[seq];
+      return out;
+    });
   }, []);
+
+  /** 위험한 교정만 확인 모델에 한 번 더(채팅과 같은 규칙). 끝나면 바꾸거나(고칠 것 없음이면 거둠) 그대로. */
+  const verifyFix = useCallback(
+    async (seq: number, fix: RoomFixResult, openAfter: boolean) => {
+      const risk = correctionRisk({ original: fix.original, corrected: fix.corrected, target: targetLanguage, explanation: fix.explanation });
+      if (!risk.risky) {
+        setFix(seq, (have) => ({ ...have, verified: true, checking: false, open: have.open || openAfter }));
+        return;
+      }
+      setFix(seq, (have) => ({ ...have, checking: true }));
+      const next = await verifyMyLine({ ...fix, targetLanguage, locale });
+      if (!aliveRef.current) return;
+      setFix(seq, next ? (have) => ({ ...have, ...next, verified: true, checking: false, open: have.open || openAfter }) : null);
+    },
+    [targetLanguage, locale, setFix],
+  );
+
+  /** 말이 끝나면: 모든 조각이 믿을 만하게 받아써졌고 배우는 언어로 한 말이면 교정을 묻는다. */
+  const requestFix = useCallback(
+    async (uid: string, firstSeq: number, texts: string[], fixParts: Map<number, { trust: FixTrust | null; blob?: Blob; mimeType?: string }>) => {
+      const rows = texts.map((text, part) => ({ part, text: (text ?? "").trim() })).filter((row) => row.text);
+      if (rows.length === 0 || rows.some((row) => !fixParts.get(row.part)?.trust)) return;
+      const joined = joinPartTexts(rows.map((row) => row.text));
+      if (!writtenInLearningLanguage(joined, targetLanguage, locale) || leansOnOwnLanguage(joined, targetLanguage, locale)) return;
+      const recent = timeline(joinParts(linesRef.current))
+        .filter((row) => row.seq !== firstSeq)
+        .slice(-6)
+        .map((row) => `${row.nickname}: ${row.text}`);
+      const result = await fixMyLine({
+        utterance: uid,
+        parts: rows.map((row) => {
+          const heard = fixParts.get(row.part);
+          return { ...row, ...(heard?.trust === "check" && heard.blob ? { blob: heard.blob, mimeType: heard.mimeType } : {}) };
+        }),
+        targetLanguage,
+        locale,
+        recent,
+      }).catch(() => null);
+      if (!result || !aliveRef.current) return;
+      const auto = correctionView === "auto";
+      setFixes((have) => ({ ...have, [firstSeq]: { ...result, open: auto, checking: false, verified: false } }));
+      // 바로 보기면 뒤에서 확인하고 그 자리에서 바꾼다(채팅과 같음).
+      if (auto) void verifyFix(firstSeq, result, true);
+    },
+    [targetLanguage, locale, correctionView, verifyFix],
+  );
+
+  /** 접힌 교정 열기: 아직 확인 전이면 확인하고 연다(기다림은 누른 뒤에만). */
+  const openFix = useCallback(
+    (seq: number) => {
+      const fix = fixes[seq];
+      if (!fix || fix.checking) return;
+      if (fix.verified) setFix(seq, (have) => ({ ...have, open: true }));
+      else void verifyFix(seq, fix, true);
+    },
+    [fixes, setFix, verifyFix],
+  );
+
+  /** 끝난 말이고 받아쓰는 조각이 없으면 내 "…"를 거두고 조각 기록을 비운다(그 전에 교정을 묻는다). */
+  const settleUtterance = useCallback(
+    (uid: string) => {
+      if (!endedUtteranceRef.current.has(uid) || (inflightRef.current.get(uid) ?? 0) > 0) return;
+      setSelfComposing((have) => (have === uid ? null : have));
+      const fixParts = partFixRef.current.get(uid);
+      const firstSeq = firstSeqRef.current.get(uid);
+      if (fixParts && firstSeq !== undefined) void requestFix(uid, firstSeq, [...(partTextRef.current.get(uid) ?? [])], fixParts);
+      endedUtteranceRef.current.delete(uid);
+      inflightRef.current.delete(uid);
+      partTextRef.current.delete(uid);
+      partFixRef.current.delete(uid);
+      // 첫 줄 번호는 힌트가 나중 조각에서 올 수 있어 조금 더 둔다(작은 Map이라 방을 나갈 때 함께 사라짐).
+    },
+    [requestFix],
+  );
 
   const onUtterance = useCallback(
     async (piece: Utterance) => {
-      if (captionsOffRef.current) return;
       const uid = piece.utterance;
       setPending((count) => count + 1);
       inflightRef.current.set(uid, (inflightRef.current.get(uid) ?? 0) + 1);
@@ -332,8 +419,25 @@ export function RoomView({
         const languages = room.free ? speakerLanguages : room.languages;
         // 뒷조각이면 앞 조각에서 받아쓴 글을 맥락으로(아직 안 온 조각은 빈칸 — 기다리지 않는다).
         const previous = piece.part > 0 ? joinPartTexts(partTextRef.current.get(uid) ?? []) : "";
-        const { text, unsure } = await transcribeUtterance(piece.blob, piece.mimeType, languages, { utterance: uid, part: piece.part, previous });
+        // 내 배우는 언어로 말하는 방이면 교정도 원한다(서버가 믿을 만한 조각에 표를 남김).
+        const fixWanted = room.free || room.languages.includes(targetLanguage);
+        const { text, unsure, fix, extrasOff } = await transcribeUtterance(
+          piece.blob,
+          piece.mimeType,
+          languages,
+          { utterance: uid, part: piece.part, previous },
+          { fix: fixWanted },
+        );
+        if (extrasOff && !captionsOffRef.current) {
+          captionsOffRef.current = true;
+          setCaptionsOff(true);
+        }
         if (!text || !aliveRef.current) return;
+        if (fixWanted) {
+          const fixParts = partFixRef.current.get(uid) ?? new Map();
+          fixParts.set(piece.part, { trust: fix, ...(fix === "check" ? { blob: piece.blob, mimeType: piece.mimeType } : {}) });
+          partFixRef.current.set(uid, fixParts);
+        }
         const parts = partTextRef.current.get(uid) ?? [];
         parts[piece.part] = text;
         partTextRef.current.set(uid, parts);
@@ -371,9 +475,9 @@ export function RoomView({
         }
       } catch (error) {
         if (error instanceof RoomApiError && error.code === "CAPTION_LIMIT") {
+          // 옛 서버만(2026-10-22부터는 한도를 넘어도 자막을 준다).
           captionsOffRef.current = true;
           setCaptionsOff(true);
-          setSelfComposing(null);
           return;
         }
         console.warn("[rooms] line failed", error);
@@ -404,9 +508,7 @@ export function RoomView({
         onUtterance: (utterance) => void onUtterance(utterance),
         onSpeaking: setSpeaking,
         // 말을 시작하자마자 내 "…" 말풍선, 말이 끝나고 받아쓴 조각이 다 오면 거둔다.
-        onUtteranceStart: (uid) => {
-          if (!captionsOffRef.current) setSelfComposing(uid);
-        },
+        onUtteranceStart: (uid) => setSelfComposing(uid),
         onUtteranceEnd: (uid) => {
           endedUtteranceRef.current.add(uid);
           settleUtterance(uid);
@@ -683,7 +785,7 @@ export function RoomView({
   const typed = timeline(shownLines).filter((line) => line.kind === "text");
   // 지금 말하는 중이거나 받아쓰는 중인 사람의 "…" 말풍선(자막 칸 맨 아래). 차단한 사람·음소거한 사람은 빼고.
   const composing = [
-    ...(selfComposing && !captionsOff ? [{ peerId, accountId: self?.accountId ?? null, nickname: self?.nickname ?? "" }] : []),
+    ...(selfComposing ? [{ peerId, accountId: self?.accountId ?? null, nickname: self?.nickname ?? "" }] : []),
     ...Object.keys(composingOthers)
       .map((other) => members.find((member) => member.peerId === other))
       .filter((member): member is RoomMember => Boolean(member && !member.muted && !(member.accountId && blocked.includes(member.accountId))))
@@ -1037,6 +1139,9 @@ export function RoomView({
             composing={composing}
             hints={hints}
             hintMode={hintMode}
+            fixes={fixes}
+            onFixOpen={openFix}
+            onFixClose={(seq) => setFix(seq, (have) => ({ ...have, open: false }))}
             onHintClose={(seq) => setHints((have) => withoutHint(have, seq))}
             onHintSend={async (seq, text) => {
               setHints((have) => withoutHint(have, seq));
