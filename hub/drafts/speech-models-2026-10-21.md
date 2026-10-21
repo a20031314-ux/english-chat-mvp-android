@@ -27,3 +27,34 @@
 2. 통화 안 받아쓰기(`realtimeCallSession.ts` `OPENAI_REALTIME_TRANSCRIBE_MODEL`): Realtime 세션 안이라 `gpt-live-transcribe`(분당 $0.017)인지 `gpt-transcribe`가 되는지 실제 통화로 확인.
 3. **영상 받아쓰기(whisper-1)는 그대로 못 바꿈:** 자막 시간 맞추기에 낱말·구간 시간(`timestamp_granularities`)을 쓰는데 whisper-1에만 있음. 짧은 조각으로 잘라 조각 시간으로 맞추는 방식 등 따로 설계 필요(2027-02-26 전).
 4. 녹음해 둔 장면 대사(`scripts/build-roleplay-audio.mjs`, gpt-4o-mini-tts)는 파일이라 계속 재생되지만, 새로 만드는 줄은 다른 모델 목소리 → 장면 안에서 느낌이 다를 수 있음. 01-06 전에 새 방식으로 다시 녹음할지.
+
+## GPT 밖 후보 (2026-10-21 조사, 시험 안 함 — 키 없음)
+
+한 줄 = 6초, 1,400원/$, 글자는 6초 약 70자로 어림. 짧은 조각의 최소 과금(15초 등)은 업체마다 확인 필요.
+
+| 목소리 | 6초 한 줄 | 메모 |
+|---|---|---|
+| 지금 gpt-4o-mini-tts | 2.1원 | 01-06 종료 |
+| OpenAI Realtime mini(시험함) | 3.7원 | 통화 튜터와 같은 목소리 계열 |
+| Google WaveNet | 0.4원 | 월 400만 자 무료, 14개 언어, 소리 품질은 한 세대 전 |
+| Google Neural2 | 1.6원 | 월 100만 자 무료 |
+| Google Chirp 3 HD | 2.9원 | 월 100만 자 무료, 최신 |
+| Gemini 3.8 Flash-Lite TTS | 1.3원(2027-01부터 2.5원) | 지시문으로 말투 조절(지금 방식과 가장 비슷) |
+| Gemini 2.5 Flash TTS | 2.1원 | |
+| Azure Neural | 약 1.5원 | 14개 언어, 낱말 경계 시간 |
+| ElevenLabs Flash | 3.9원 | 32개 언어(태국어 등 확인 필요) |
+
+| 받아쓰기 | Room 한 줄 | 낱말 시간(영상에 필요) | 메모 |
+|---|---|---|---|
+| 지금 gpt-4o-mini-transcribe | 0.4원 | 없음 | 02-26 종료 |
+| gpt-transcribe(시험함) | 0.6원 | 없음 | |
+| ElevenLabs Scribe v2 | 0.5원(실시간 0.9원) | 있음 | 90+ 언어 |
+| AssemblyAI Universal-3 Pro / 2 | 0.5원 / 0.35원 | 있음 | |
+| Mistral Voxtral Mini Transcribe 2 | 0.4원 | 있음 | 태국어·베트남어·인니어 없음 |
+| Deepgram Nova-3 다국어 | 1.3원 | 있음 | |
+| Google Chirp 3 | 동기 약 2.2원 | 있음 | 싼 값($0.003)은 늦게 나오는 일괄 처리 |
+
+- 영상 받아쓰기(whisper-1 대체)는 **낱말 시간을 주는 Scribe v2·AssemblyAI가 답** — gpt-transcribe로는 안 됨.
+- 학습자 실수: 소리 그대로 적는 받아쓰기 전용 모델이 언어 모델 계열(gpt-transcribe·Gemini)보다 문법을 덜 고쳐 쓸 가능성이 큼 — 시험으로 확인.
+- 목소리를 다른 회사로 바꾸면 AI 통화 튜터(OpenAI Realtime)와 채팅 읽어 주기 목소리가 달라짐(`tts/route.ts` 주석의 문제).
+- 필요한 키: Google Cloud(목소리·Gemini 함께), ElevenLabs 또는 AssemblyAI(받아쓰기). 넣으면 `speech-trial.mjs`에 후보를 더해 같은 방식으로 비교.
