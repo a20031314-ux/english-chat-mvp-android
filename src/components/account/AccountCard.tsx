@@ -234,15 +234,19 @@ function LoginPanel({ ui, locale, config, onClose }: {
   const [code, setCode] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<AccountError | null>(null);
+  // Google 로그인이 왜 안 됐는지(플러그인·서버가 준 원인 한 줄) — 기기에서 바로 가려내려고 작게 보인다.
+  const [detail, setDetail] = useState("");
   const codeRef = useRef<HTMLInputElement>(null);
 
   const run = async (task: () => Promise<void>) => {
     setBusy(true);
     setError(null);
+    setDetail("");
     try {
       await task();
     } catch (caught) {
       setError(codeOf(caught));
+      setDetail(caught instanceof AccountRequestError ? caught.detail : "");
       setBusy(false);
     }
   };
@@ -436,6 +440,11 @@ function LoginPanel({ ui, locale, config, onClose }: {
         ) : null}
 
         {message ? <p className="mt-3 text-[12px] text-rose-300">{message}</p> : null}
+        {message && detail ? (
+          <p className="mt-1 break-all text-meta text-slate-500" dir="ltr">
+            {detail}
+          </p>
+        ) : null}
       </div>
     </>
   );

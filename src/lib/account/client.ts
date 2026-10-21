@@ -36,7 +36,8 @@ export type AccountError =
   | "NETWORK";
 
 export class AccountRequestError extends Error {
-  constructor(readonly code: AccountError) {
+  /** detail: 화면 아래 작게 보여 줄 원인(Google 로그인 실패를 기기에서 가려내려고). */
+  constructor(readonly code: AccountError, readonly detail = "") {
     super(code);
   }
 }
@@ -56,7 +57,7 @@ async function call<T>(path: string, init?: { method?: string; body?: unknown })
   if (!response.ok) {
     const code = data.error;
     if (code === "ACCOUNT_GONE" || code === "SIGNED_OUT") throw new AccountRequestError("SIGNED_OUT");
-    if (code === "GOOGLE_INVALID" || code === "GOOGLE_DISABLED") throw new AccountRequestError("GOOGLE_FAILED");
+    if (code === "GOOGLE_INVALID" || code === "GOOGLE_DISABLED") throw new AccountRequestError("GOOGLE_FAILED", `server ${code}`);
     const known: AccountError[] = [
       "INVALID_EMAIL", "RATE_LIMITED", "SEND_FAILED", "WRONG_CODE", "CODE_EXPIRED", "TOO_MANY_TRIES", "PHOTO_INVALID",
       "USERNAME_INVALID", "USERNAME_TAKEN", "PASSWORD_WEAK", "WRONG_PASSWORD",
@@ -123,16 +124,18 @@ export async function googleLogin(clientId: string): Promise<void> {
   let idToken: string | null = null;
   try {
     await googleReady;
-    const response = await SocialLogin.login({ provider: "google", options: { scopes: ["email", "profile"] } });
+    // scopes를 넘기지 않는다: 플러그인은 email·profile·openid를 늘 요청하고, scopes를 주면
+    // MainActivity를 바꾸지 않은 앱에선 "You CANNOT use scopes…"로 바로 거절한다(2.68·2.69에서 Google 로그인이 늘 실패한 원인).
+    const response = await SocialLogin.login({ provider: "google", options: {} });
     const result = response.result as { idToken?: string | null };
     idToken = result.idToken ?? null;
   } catch (error) {
     const message = String((error as { message?: string })?.message ?? error).toLowerCase();
     if (message.includes("cancel")) throw new AccountRequestError("GOOGLE_CANCELLED");
     console.warn("[account] google login failed", error);
-    throw new AccountRequestError("GOOGLE_FAILED");
+    throw new AccountRequestError("GOOGLE_FAILED", String((error as { message?: string })?.message ?? error).slice(0, 140));
   }
-  if (!idToken) throw new AccountRequestError("GOOGLE_FAILED");
+  if (!idToken) throw new AccountRequestError("GOOGLE_FAILED", "no idToken");
   await finishLogin(await call<LoginResult>("/api/account/google", { body: { idToken } }));
 }
 
