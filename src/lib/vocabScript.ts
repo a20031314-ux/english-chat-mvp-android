@@ -35,3 +35,18 @@ export function inLearningScript(word: string, targetLanguage: string): boolean 
   });
 }
 
+
+/**
+ * 학습 언어 문장에 섞인 다른 문자의 낱말(예: 영어 문장 속 한글, 한국어 문장 속 로마자).
+ * 채팅 교정에 "noticed"로 알려 고친 문장에서 학습 언어 낱말로 바꾸게 한다 — Haiku가 지시만으로는 영어 쪽을 자주 놓침(2026-10-22).
+ */
+export function foreignWords(message: string, targetLanguage: string): string[] {
+  const runs = message.match(/[\p{L}\p{M}]+/gu) ?? [];
+  const out: string[] = [];
+  for (const run of runs) {
+    if (/^\p{Script=Latin}$/u.test(run)) continue; // 한 글자 로마자(I, a)는 건너뜀
+    if (!inLearningScript(run, targetLanguage) && !out.includes(run)) out.push(run);
+    if (out.length >= 5) break;
+  }
+  return out;
+}

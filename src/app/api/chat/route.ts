@@ -31,7 +31,7 @@ import {
 } from "@/lib/server/entitlementStore";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { normalizeHowToSayExpression } from "@/lib/howToSay";
-import { inLearningScript } from "@/lib/vocabScript";
+import { foreignWords, inLearningScript } from "@/lib/vocabScript";
 import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
 import {
   conversationKoreanParallel,
@@ -292,7 +292,7 @@ ${tutorBlock}
 ${ownLanguageBlock}
 ${imageBlock}
 
-The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only).
+The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only). It may also have "noticed": something a rule checker already found in message — trust it, fix it in corrected and explain it.
 
 ${voice}
 ${spoken}
@@ -546,12 +546,18 @@ async function runChat(
     langs.targetLanguage === "ko" && !options.ownLanguage ? findIrregularSlips(message) : [];
   const koHint =
     langs.targetLanguage === "ko" && !options.ownLanguage ? koreanSlipHint(message) : "";
+  // 다른 문자로 쓴 낱말이 섞였으면(영어 문장 속 한글 등) 규칙으로 찾아 알려 준다(vocabScript.foreignWords).
+  const mixed = options.ownLanguage ? [] : foreignWords(message, langs.targetLanguage);
+  const mixedHint = mixed.length
+    ? `Words from another language in message: ${mixed.map((w) => `"${w}"`).join(", ")}. Unless one is a name of a person, place or brand, put the ${learningLanguageName(langs.targetLanguage)} word in corrected and name it in the explanation.`
+    : "";
+  const noticed = [koHint, mixedHint].filter(Boolean).join(" ");
   const payload = JSON.stringify({
     message,
     recent: recent.slice(-8),
     instruction:
       "Reply to message. Use recent only if this turn still refers to it.",
-    ...(koHint ? { noticed: koHint } : {}),
+    ...(noticed ? { noticed } : {}),
     hasImage: Boolean(options.imageDataUrl),
   });
   const userContent = options.imageDataUrl
