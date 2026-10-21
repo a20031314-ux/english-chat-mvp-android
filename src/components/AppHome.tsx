@@ -38,6 +38,7 @@ import { useGroups } from "@/components/rooms/RoomGroups";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { readMiniRoom, subscribeMiniRoom } from "@/lib/rooms/miniRoom";
 import { isIosApp, socialFeaturesEnabled } from "@/lib/platform";
+import { featureOfTab, isFeatureOn, matchingPreset, readFeatures, readFeaturesOnServer, subscribeFeatures, type FeatureId } from "@/lib/features";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
 import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
@@ -89,6 +90,15 @@ function resolveTab(raw: string | null | undefined): AppTab {
 
 type HistoryState = { talkbankScreen?: AppTab };
 
+/** 숨긴 기능 → 사용법에서 그 기능의 장(guide/content.ts GUIDE_CHAPTERS). */
+const FEATURE_CHAPTER: Record<FeatureId, string> = {
+  call: "ai-call",
+  video: "video",
+  people: "people",
+  rooms: "rooms",
+  notes: "notes",
+};
+
 function AppHomeInner({
   locale,
   setLocale,
@@ -102,31 +112,42 @@ function AppHomeInner({
   // Hidden rather than shown empty: only English has scenarios written, so a
   // learner of anything else would get a tab with nothing behind it.
   const roleplayAvailable = hasRoleplay(targetLanguage);
+  // 쓸 기능 고르기(lib/features.ts): 숨긴 기능은 탭·버튼에서 빠진다. 창구 모드는 창구 탭 그대로(고르기 없음).
+  const door = useSyncExternalStore(noSubscribe, readEntryDoor, () => null);
+  const features = useSyncExternalStore(subscribeFeatures, readFeatures, readFeaturesOnServer);
+  const featureOff: FeatureId[] = door ? [] : features.off;
+  const featureOn = (feature: FeatureId) => isFeatureOn(featureOff, feature);
+  const callOn = roleplayAvailable && featureOn("call");
 
   // Derived rather than synced back into state. Switching the target language
   // can pull the tab out from under the person standing on it — including via
   // ?screen=roleplay on a language that has none — and correcting that in an
   // effect would render the empty tab once before replacing it.
   // 예전 메시지 탭은 대화 목록이 됐다(링크·초대·새로워진 점이 아직 "messages"로 연다).
-  const shownTab: AppTab =
-    (tab === "roleplay" && !roleplayAvailable) || (PEOPLE_TABS.includes(tab) && !socialFeaturesEnabled())
-      ? "chat"
-      : tab === "messages"
-        ? "talk"
-        : tab;
-
   // 말하는 방: 하단 탭(2.68부터 모두에게). iOS 1차 출시엔 방·메시지를 통째로 끈다
   // (`lib/platform.ts`) — 그때는 탭도 ?screen=rooms도 채팅으로.
   const socialOn = useSyncExternalStore(noSubscribe, socialFeaturesEnabled, () => false);
+  // 하단을 대화·사람·Room 모양으로 둘지: 플랫폼에 사람 기능이 있고, 사용자가 사람을 숨기지 않았을 때.
+  // 사람을 숨기면 iOS 1차처럼 채팅 · 통화 · 영상 · My(숨긴 것 빼고).
+  const socialLayout = socialOn && (Boolean(door) || featureOn("people"));
+  const tabHidden = (value: AppTab): boolean => {
+    if (value === "roleplay" && !roleplayAvailable) return true;
+    if (PEOPLE_TABS.includes(value) && !socialFeaturesEnabled()) return true;
+    const feature = featureOfTab(value);
+    return feature !== null && !featureOn(feature);
+  };
+  const homeTab: AppTab = socialLayout ? "talk" : "chat";
+  const shownTab: AppTab = tabHidden(tab) ? homeTab : tab === "messages" ? "talk" : tab;
+
   const miniRoom = useSyncExternalStore(subscribeMiniRoom, readMiniRoom, () => null);
   const signedIn = useSyncExternalStore(subscribeSession, () => readCachedAccount() !== null, () => false);
   // 메시지 목록과 안 읽음 수: 메시지 탭을 보는 동안은 8초, 아니면 30초마다(로그인했을 때만).
-  const inbox = useInbox(socialOn && signedIn, shownTab === "talk" ? 8_000 : 30_000);
+  const inbox = useInbox(socialLayout && signedIn, shownTab === "talk" ? 8_000 : 30_000);
   // 단체방(받은 초대·안 읽음 포함)도 같은 배지에.
-  const groups = useGroups(socialOn && signedIn, shownTab === "talk" ? 8_000 : 30_000);
+  const groups = useGroups(socialLayout && signedIn, shownTab === "talk" ? 8_000 : 30_000);
   const messagesUnread = inbox.unread + groups.unread;
   // 하단에서 켜져 보일 칸: 채팅·통화는 대화 안의 화면.
-  const bottomTab: AppTab = socialOn && TALK_SCREENS.includes(shownTab) ? "talk" : shownTab;
+  const bottomTab: AppTab = socialLayout && TALK_SCREENS.includes(shownTab) ? "talk" : shownTab;
 
   // 광고(lib/ads.ts, 무료·안드로이드만): 첫 화면이 뜬 뒤 조용히 준비만 하고(열자마자 띄우지 않음),
   // 채팅을 몇 번 주고받은 뒤 채팅 화면을 떠날 때를 자연스러운 끝으로 본다.
@@ -162,7 +183,7 @@ function AppHomeInner({
     if (previousTab.current === "chat" && shownTab !== "chat") void maybeShowInterstitial("chatLeave");
     previousTab.current = shownTab;
   }, [shownTab]);
-  const insideTalk = socialOn && (shownTab === "chat" || shownTab === "roleplay");
+  const insideTalk = socialLayout && (shownTab === "chat" || shownTab === "roleplay");
 
   useEffect(() => {
     // iOS: 화면은 1배로 고정 — 글자가 16px보다 작은 입력칸을 누르면 WebKit이 확대하고
@@ -214,15 +235,23 @@ function AppHomeInner({
     }
   }, []);
 
+  // 숨긴 기능으로 가려 하면(지도의 "영상에서 보기" 등) 탭을 바꾸지 않고 사용법의 그 장을 연다 — 거기서 다시 켤 수 있다.
+  const offList = door ? "" : features.off.join(",");
   const openTab = useCallback(
     (requested: AppTab) => {
+      const feature = featureOfTab(requested);
+      const hidden = feature !== null && !isFeatureOn(offList ? (offList.split(",") as FeatureId[]) : [], feature) ? feature : null;
+      if (hidden) {
+        sendAppIntent("openGuide", { chapter: FEATURE_CHAPTER[hidden], hidden: true });
+        return;
+      }
       // 단어장은 탭이 아니라 My 노트 안에 있다: My로 가서 단어장을 연다.
       const next: AppTab = requested === "vocab" ? "map" : requested;
       if (requested === "vocab") sendAppIntent("openNotes", { section: "words" });
       setTab(next);
       syncUrl(next);
     },
-    [syncUrl],
+    [syncUrl, offList],
   );
 
   // The study map sends learners to the tab a topic is practised in.
@@ -246,10 +275,10 @@ function AppHomeInner({
   const myItem = { id: "map" as const, label: ui.homeTabProfile };
   const aiTabItems: { id: AppTab; label: string }[] = [
     { id: "chat", label: ui.homeTabChat },
-    ...(roleplayAvailable
+    ...(callOn
       ? [{ id: "roleplay" as const, label: ui.homeTabCall }]
       : []),
-    { id: "video", label: ui.homeTabVideo },
+    ...(featureOn("video") ? [{ id: "video" as const, label: ui.homeTabVideo }] : []),
     myItem,
   ];
   const socialTabItems: { id: AppTab; label: string }[] = [
@@ -262,11 +291,10 @@ function AppHomeInner({
     { id: "random", label: ui.homeTabRandom },
   ];
   // 창구 모드(lib/doors.ts, 웹의 창구 주소): 하단은 그 창구의 탭만, 그 순서로. 계정·기록은 같은 앱.
-  const door = useSyncExternalStore(noSubscribe, readEntryDoor, () => null);
-  const tabItems = socialOn
+  const tabItems = socialLayout
     ? door
       ? door.tabs.map((id) => socialTabItems.find((item) => item.id === id)).filter((item): item is { id: AppTab; label: string } => Boolean(item))
-      : socialTabItems.filter((item) => item.id !== "random")
+      : socialTabItems.filter((item) => item.id !== "random" && !tabHidden(item.id))
     : aiTabItems;
   // 창구 모드면 브라우저 탭·홈 화면 이름도 그 창구. Next가 머리말 제목을 다시 쓰면 다시 맞춘다.
   useEffect(() => {
@@ -329,6 +357,17 @@ function AppHomeInner({
                 availableGo={guideGo}
                 onGo={goFromGuide}
                 newSections={newGuideSections(appVersion())}
+                features={door ? null : features}
+                pickHeader={
+                  <>
+                    <TargetLanguageSelector label={ui.learningLanguageLabel} />
+                    <LanguageSelector locale={locale} onChange={setLocale} label={ui.uiLanguageLabel} />
+                  </>
+                }
+                onChosen={(off) => {
+                  // "영상으로" 묶음이면 첫 화면을 영상으로.
+                  if (matchingPreset(off) === "video") openTab("video");
+                }}
               />
               <FeedbackButton ui={ui} locale={locale} tab={shownTab} />
             </div>
@@ -421,7 +460,7 @@ function AppHomeInner({
               ) : null}
 
 
-              {shownTab === "talk" && socialOn ? (
+              {shownTab === "talk" && socialLayout ? (
                 <MessagesTab
                   ui={ui}
                   locale={locale}
@@ -433,7 +472,7 @@ function AppHomeInner({
                   top={
                     <AiTutorRow
                       ui={ui}
-                      canCall={roleplayAvailable}
+                      canCall={callOn}
                       onChat={() => openTab("chat")}
                       onCall={() => openTab("roleplay")}
                     />
@@ -441,7 +480,7 @@ function AppHomeInner({
                 />
               ) : null}
 
-              {shownTab === "people" && socialOn ? (
+              {shownTab === "people" && socialLayout ? (
                 <PeopleTab
                   ui={ui}
                   locale={locale}
@@ -461,7 +500,8 @@ function AppHomeInner({
                 <RoomsScreen ui={ui} locale={locale} targetLanguage={targetLanguage} visible={shownTab === "rooms"} />
               ) : null}
               {/* 초대 링크로 열었을 때 한 번(설치 직후 첫 실행 포함). */}
-              {socialOn ? <InviteWelcome ui={ui} locale={locale} onOpenTab={openTab} /> : null}
+              {/* 처음 설치면 기능 고르기를 마친 뒤에. */}
+              {socialOn && (door || features.chosen) ? <InviteWelcome ui={ui} locale={locale} onOpenTab={openTab} /> : null}
               {/* 친구 초대 보상 소식(지급·단계 보상)을 앱을 열 때 한 번. 이때 서버가 사용한 날도 센다. */}
               {socialOn && signedIn ? <InviteNewsSheet ui={ui} locale={locale} /> : null}
             </div>

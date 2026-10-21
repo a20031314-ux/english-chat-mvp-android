@@ -1,6 +1,8 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { isFeatureOn, readFeatures, readFeaturesOnServer, subscribeFeatures } from "@/lib/features";
+import { readEntryDoor } from "@/lib/doors";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { sendAppIntent, type AppIntents } from "@/lib/appIntents";
@@ -110,11 +112,13 @@ export function stepTexts(step: NextStep, ui: UICopy, labelOk: boolean): { title
   }
 }
 
+const noSubscribe = () => () => {};
+
 export function NextStepCard({
   ui,
   locale,
   targetLanguage,
-  canCall,
+  canCall: languageHasCall,
   onStart,
   onOpenTopic,
   refreshKey,
@@ -130,6 +134,10 @@ export function NextStepCard({
   /** Changes when what the steps are made from changes (a new map), so they are read again. */
   refreshKey?: string | null;
 }) {
+  // 통화를 숨겼으면(lib/features.ts, 창구 모드는 제외) 통화를 권하지 않고 채팅으로.
+  const features = useSyncExternalStore(subscribeFeatures, readFeatures, readFeaturesOnServer);
+  const door = useSyncExternalStore(noSubscribe, readEntryDoor, () => null);
+  const canCall = languageHasCall && (Boolean(door) || isFeatureOn(features.off, "call"));
   const [data, setData] = useState<Loaded | null>(() => cache.get(targetLanguage)?.data ?? null);
   const [passes, setPasses] = useState<Record<string, number>>(() =>
     typeof window === "undefined" ? {} : readPasses(),

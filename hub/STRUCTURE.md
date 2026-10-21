@@ -11,7 +11,7 @@
 ## 화면 흐름 (손으로 씀)
 
 ```
-앱 열기 ─ AI 동의(iOS만) ─ 새로워진 점(업데이트 뒤 한 번) ─ 초대 환영(초대 링크로 왔을 때)
+앱 열기 ─ AI 동의(iOS만) ─ 쓸 기능 고르기(처음 설치만) ─ 새로워진 점(업데이트 뒤 한 번) ─ 초대 환영(초대 링크로 왔을 때)
 │
 상단바   학습 언어 · UI 언어 · 포인트/플랜 → 결제 화면 · ? 사용법(지금 탭의 칸) · 💬 의견 보내기
 │        └ 업데이트 배너
@@ -33,6 +33,9 @@
 
 - **사람 기능이 꺼지면**(iOS 1차, `src/lib/platform.ts` `socialFeaturesEnabled`): 하단은 채팅 │ 통화 │ 영상 학습 │ My, 대화·사람·Room·메시지·단체방 전부 없음.
   플랫폼마다 다른 것은 `platform.ts`에만 둔다(광고 `adsAvailable`, Google 로그인, 영상 받기 등).
+- **쓸 기능 고르기**(`src/lib/features.ts`, 2026-10-21): 사용자가 통화·영상·사람·Room·노트를 숨기면 `AppHome`이 탭에서 빼고(`tabHidden`),
+  숨긴 탭으로 가는 `openTab`·`practice`는 탭을 바꾸지 않고 사용법의 그 장을 연다(`openGuide` hidden). 스위치는 사용법 창(`GuideSheet`)에만 있고, 장 ↔ 기능은 `featureOfGo`.
+  새 탭이나 새 사용법 장을 만들면 `featureOfTab`·`featureOfGo`·`FEATURE_CHAPTER`(AppHome)를 같이 본다. 창구 모드에서는 쓰지 않는다.
 - **안에서 쓰는 이름과 화면 이름이 다르다:** My = `map`, 대화 = `talk`(옛 `messages`도 여기로), 통화 = `roleplay`, Room = `rooms`, 단어장 = `vocab`(My 노트 안).
   옛 링크 `?screen=…`는 `AppHome.tsx` `resolveTab`이 새 자리로 보낸다 — 탭을 바꾸면 여기와 사용법(`GUIDE_CHAPTERS`)·새로워진 점 `guide` 칸·캡처 스크립트를 같이 본다.
 - **탭끼리는 서로를 직접 부르지 않는다.** "이 표현으로 채팅", "이 장면 영상으로" 같은 이동은 `appIntents` 신호(아래 자동 표)로 하고, 받는 쪽이 처리한다.
@@ -61,8 +64,7 @@
 ## 자동: 하단 탭 (`src/components/AppHome.tsx`)
 
 - 사람 기능 켜짐: 대화`talk` · 영상 학습`video` · 사람`people` · Room`rooms` · My`map` · 랜덤`random`
-- 사람 기능 꺼짐(iOS 1차, `socialFeaturesEnabled()`): 채팅`chat` · 통화`roleplay`* · 영상 학습`video` · My`map`
-- \* 그 학습 언어에 통화 대본이 있을 때만(`hasRoleplay`)
+- 사람 기능 꺼짐(iOS 1차, `socialFeaturesEnabled()`): 채팅`chat` · 통화`roleplay` · 영상 학습`video` · My`map`
 
 ## 자동: 영역별 코드
 
@@ -73,7 +75,7 @@
 - 화면: `AiConsentGate` · `AppHome` · `FullScreenLayer` · `GuideSheet` · `LanguageSelector` · `LearningLanguageFlag` · `Providers` · `TabIcons` · `TargetLanguageSelector` · `UpdateNotice` · `WhatsNewSheet`
 - API: `guide` · `whats-new`
 - 웹 페이지: `/`
-- 다른 영역이 씀: `AppHome` ← 사람 탭, 웹 전용 페이지 · `FullScreenLayer` ← 여러 영역 8곳 · `LanguageSelector` ← 웹 전용 페이지 · `LearningLanguageFlag` ← 사람 탭 · `TargetLanguageSelector` ← 웹 전용 페이지
+- 다른 영역이 씀: `AppHome` ← 학습 기록 공통, 사람 탭, My 탭, 웹 전용 페이지 · `FullScreenLayer` ← 여러 영역 8곳 · `LanguageSelector` ← 웹 전용 페이지 · `LearningLanguageFlag` ← 사람 탭 · `TargetLanguageSelector` ← 웹 전용 페이지
 
 ### 대화 탭 — AI 튜터 줄·1:1 메시지·단체방·팀 `talk`
 - 화면: `AiTutorRow` · `rooms/MateAsk` · `rooms/MessagesTab` · `rooms/RoomDm` · `rooms/RoomGroups` · `rooms/TeamSpace`
@@ -166,7 +168,7 @@
 | `practice` | AI 채팅, AI 통화, 학습 기록 공통, My 탭 | 앱 틀, AI 채팅, AI 통화 |
 | `openTopic` | 학습 기록 공통 | 앱 틀, My 탭 |
 | `openNotes` | 앱 틀 | My 탭 |
-| `openGuide` | 앱 틀 | 앱 틀 |
+| `openGuide` | 앱 틀, My 탭 | 앱 틀 |
 
 ## 자동: 쓰지 않는 것 (지울지 확인)
 

@@ -1,12 +1,24 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { apiUrl } from "@/lib/apiBase";
 import { onAppIntent } from "@/lib/appIntents";
 import type { Locale, UICopy } from "@/lib/copy";
 import type { GuideChapter, GuideGo, GuideSection, GuideTabId } from "@/lib/guide/content";
 import { fillGuideLabels, loadGuide, readCachedGuide, type GuideData } from "@/lib/guide/client";
+import {
+  FEATURE_PRESETS,
+  applyPreset,
+  featureOfGo,
+  finishChoosing,
+  isFeatureOn,
+  matchingPreset,
+  setFeatureOn,
+  type FeatureId,
+  type FeaturePresetId,
+  type FeatureState,
+} from "@/lib/features";
 
 /**
  * 사용법 창 하나(2026-10-20, hub/DESIGN.md "안내 글"). 위쪽 "?"는 지금 화면의 기능 칸으로 열고,
@@ -15,6 +27,9 @@ import { fillGuideLabels, loadGuide, readCachedGuide, type GuideData } from "@/l
  * 글은 서버에서 온다(/api/guide, src/lib/guide/content.ts) — 푸시로 고칠 수 있게. 버튼 이름은
  * {ui:<키>}로 와서 이 사람의 화면 문구로 채워지므로, 글과 버튼이 같은 버튼을 다르게 부를 수 없다.
  * 묶음을 못 받은 옛 저장분이면 예전처럼 탭별로 보여 준다.
+ *
+ * 쓸 기능 고르기(2026-10-21, lib/features.ts): 장마다 [사용함 | 사용안함]. 숨긴 장은 흐리게 남아 다시 켜는 곳이 된다.
+ * 처음 설치한 사람에겐 첫 화면이 이 창의 "고르기" 모양(장마다 첫 칸 하나 + 묶음 버튼 + 시작하기/건너뛰기 = 전부 사용).
  */
 
 /** 화면 → 처음 펼칠 묶음. */
@@ -105,6 +120,57 @@ function SectionView({
   );
 }
 
+const PRESET_LABEL: Record<FeaturePresetId, keyof UICopy> = {
+  solo: "featurePresetSolo",
+  video: "featurePresetVideo",
+  people: "featurePresetPeople",
+  all: "featurePresetAll",
+};
+
+function PresetRow({ ui, off }: { ui: UICopy; off: FeatureId[] }) {
+  const active = matchingPreset(off);
+  return (
+    <div className="flex flex-wrap gap-2" role="group" aria-label={ui.featurePresets}>
+      {FEATURE_PRESETS.map((preset) => (
+        <button
+          key={preset.id}
+          type="button"
+          aria-pressed={active === preset.id}
+          onClick={() => applyPreset(preset.id)}
+          className={`rounded-full px-3 py-1.5 text-caption ${
+            active === preset.id ? "bg-platinum text-canvas" : "border border-line text-slate-200 hover:bg-white/10"
+          }`}
+        >
+          {String(ui[PRESET_LABEL[preset.id]])}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+/** 장 제목 옆 [사용함 | 사용안함]. AI 채팅·My는 "항상 사용". */
+function FeatureSwitch({ ui, feature, off }: { ui: UICopy; feature: FeatureId | null; off: FeatureId[] }) {
+  if (!feature) return <span className="shrink-0 text-meta text-slate-400">{ui.featureAlways}</span>;
+  const on = isFeatureOn(off, feature);
+  const option = (value: boolean, label: string) => (
+    <button
+      type="button"
+      role="radio"
+      aria-checked={on === value}
+      onClick={() => setFeatureOn(feature, value)}
+      className={`rounded-lg px-2.5 py-1 text-caption ${on === value ? (value ? "bg-platinum text-canvas" : "bg-white/15 text-ink") : "text-slate-400 hover:bg-white/10"}`}
+    >
+      {label}
+    </button>
+  );
+  return (
+    <div role="radiogroup" className="flex shrink-0 gap-0.5 rounded-xl border border-line p-0.5">
+      {option(true, ui.featureOn)}
+      {option(false, ui.featureOff)}
+    </div>
+  );
+}
+
 export function GuideButton({
   ui,
   locale,
@@ -113,6 +179,9 @@ export function GuideButton({
   availableGo,
   onGo,
   newSections = [],
+  features = null,
+  onChosen,
+  pickHeader,
 }: {
   ui: UICopy;
   locale: Locale;
@@ -125,24 +194,33 @@ export function GuideButton({
   onGo: (go: GuideGo) => void;
   /** 이번 빌드에서 새로 생긴 칸(새로워진 점이 가리키는 칸): "새로" 표시. */
   newSections?: string[];
+  /** 쓸 기능 고르기(lib/features.ts). 없으면(창구 모드) 스위치를 안 보인다. */
+  features?: FeatureState | null;
+  /** 처음 고르기를 마쳤을 때(첫 화면을 정하려고). */
+  onChosen?: (off: FeatureId[]) => void;
+  /** 고르기 화면 위에 둘 것(학습 언어·화면 언어 — 첫 화면이 상단바를 가리므로). */
+  pickHeader?: ReactNode;
 }) {
-  const [open, setOpen] = useState(false);
+  // 처음 설치면 기능 고르기가 첫 화면: 고르기를 마칠 때까지(features.chosen) 열려 있다.
+  const picking = Boolean(features && !features.chosen);
+  const [openAsked, setOpen] = useState(false);
+  const open = openAsked || picking;
   const [data, setData] = useState<GuideData | null>(null);
   const [failed, setFailed] = useState(false);
   // 펼칠 곳: 묶음 id, 또는 칸 id(새로워진 점에서).
-  const [target, setTarget] = useState<{ chapter: string; section?: string }>({ chapter: "ai-chat" });
+  const [target, setTarget] = useState<{ chapter: string; section?: string; hidden?: boolean; manage?: boolean }>({ chapter: "ai-chat" });
   const [oldTab, setOldTab] = useState<GuideTabId>("chat");
   const scroller = useRef<HTMLDivElement>(null);
 
-  const openAt = (next: { chapter?: string; section?: string }) => {
-    setTarget({ chapter: next.chapter ?? SCREEN_CHAPTER[tab] ?? "ai-chat", section: next.section });
+  const openAt = (next: { chapter?: string; section?: string; hidden?: boolean; manage?: boolean }) => {
+    setTarget({ chapter: next.chapter ?? SCREEN_CHAPTER[tab] ?? "ai-chat", section: next.section, hidden: next.hidden, manage: next.manage });
     setOldTab((["map", "chat", "roleplay", "video", "vocab", "rooms"] as const).find((id) => id === tab) ?? (tab === "people" ? "rooms" : "chat"));
     setFailed(false);
     setOpen(true);
   };
 
-  // 새로워진 점 "자세히": 그 칸으로.
-  useEffect(() => onAppIntent("openGuide", ({ section }) => openAt({ section })));
+  // 새로워진 점 "자세히": 그 칸으로. 숨긴 기능으로 가려던 곳·My "기능 고르기"도 여기로.
+  useEffect(() => onAppIntent("openGuide", (detail) => openAt(detail)));
 
   useEffect(() => {
     if (!open) return;
@@ -161,19 +239,30 @@ export function GuideButton({
   const chapters: GuideChapter[] = (shown?.chapters ?? []).filter((chapter) => availableGo.includes(chapter.go));
   const sectionChapter = target.section ? chapters.find((chapter) => chapter.sections.some((row) => row.id === target.section))?.id : undefined;
   const focusChapter = sectionChapter ?? target.chapter;
+  const off = features?.off ?? [];
+  const chapterOn = (chapter: GuideChapter) => {
+    const feature = featureOfGo(chapter.go);
+    return !features || !feature || isFeatureOn(off, feature);
+  };
 
-  // 열리면 그 묶음(또는 칸)으로 내린다.
+  // 열리면 그 묶음(또는 칸)으로 내린다. 고르기·기능 고르기는 맨 위부터.
   useEffect(() => {
-    if (!open || !chapters.length) return;
+    if (!open || !chapters.length || picking || target.manage) return;
     const root = scroller.current;
     const selector = target.section ? `[data-guide-section="${target.section}"]` : `[data-guide-chapter="${focusChapter}"]`;
     const element = root?.querySelector(selector);
     if (element instanceof HTMLElement) element.scrollIntoView({ block: "start" });
-  }, [open, chapters.length, focusChapter, target.section]);
+  }, [open, chapters.length, focusChapter, target.section, picking, target.manage]);
 
   const jump = (chapterId: string) => {
     const element = scroller.current?.querySelector(`[data-guide-chapter="${chapterId}"]`);
     if (element instanceof HTMLElement) element.scrollIntoView({ block: "start", behavior: "smooth" });
+  };
+
+  const finish = (skip: boolean) => {
+    finishChoosing(skip);
+    setOpen(false);
+    onChosen?.(skip ? [] : off);
   };
 
   const oldPage = shown?.tabs?.[oldTab];
@@ -192,82 +281,115 @@ export function GuideButton({
       {open ? (
         <FullScreenLayer>
           <div className="flex shrink-0 items-center justify-between gap-3 border-b border-line px-4 pb-3 pt-[calc(0.75rem+env(safe-area-inset-top,0px))]">
-            <h2 className="text-chat font-semibold text-ink">{ui.guideOpen}</h2>
+            <h2 className="text-chat font-semibold text-ink">{picking ? ui.featurePickTitle : ui.guideOpen}</h2>
             <button
               type="button"
-              onClick={() => setOpen(false)}
+              onClick={() => (picking ? finish(true) : setOpen(false))}
               className="rounded-lg border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10"
             >
-              {ui.guideClose}
+              {picking ? ui.featurePickSkip : ui.guideClose}
             </button>
           </div>
-          <div className="flex shrink-0 gap-2 overflow-x-auto border-b border-line px-4 py-2" role="tablist">
-            {chapters.length
-              ? chapters.map((chapter) => (
-                  <button
-                    key={chapter.id}
-                    type="button"
-                    role="tab"
-                    aria-selected={focusChapter === chapter.id}
-                    onClick={() => {
-                      setTarget({ chapter: chapter.id });
-                      jump(chapter.id);
-                    }}
-                    className={`shrink-0 rounded-full px-3 py-1 text-caption ${
-                      focusChapter === chapter.id ? "bg-platinum text-canvas" : "border border-line text-slate-300 hover:bg-white/10"
-                    }`}
-                  >
-                    {fillGuideLabels(chapter.title, ui)}
-                  </button>
-                ))
-              : tabs.map((item) => (
-                  <button
-                    key={item.id}
-                    type="button"
-                    role="tab"
-                    aria-selected={oldTab === item.id}
-                    onClick={() => setOldTab(item.id)}
-                    className={`shrink-0 rounded-full px-3 py-1 text-caption ${
-                      oldTab === item.id ? "bg-platinum text-canvas" : "border border-line text-slate-300 hover:bg-white/10"
-                    }`}
-                  >
-                    {item.label}
-                  </button>
-                ))}
-          </div>
+          {picking && pickHeader ? (
+            <div className="relative z-10 flex shrink-0 flex-wrap items-center gap-2 border-b border-line px-4 py-2">{pickHeader}</div>
+          ) : null}
+          {picking ? null : (
+            <div className="flex shrink-0 gap-2 overflow-x-auto border-b border-line px-4 py-2" role="tablist">
+              {chapters.length
+                ? chapters.map((chapter) => (
+                    <button
+                      key={chapter.id}
+                      type="button"
+                      role="tab"
+                      aria-selected={focusChapter === chapter.id}
+                      onClick={() => {
+                        setTarget({ chapter: chapter.id });
+                        jump(chapter.id);
+                      }}
+                      className={`shrink-0 rounded-full px-3 py-1 text-caption ${
+                        focusChapter === chapter.id
+                          ? "bg-platinum text-canvas"
+                          : `border border-line hover:bg-white/10 ${chapterOn(chapter) ? "text-slate-300" : "text-slate-500"}`
+                      }`}
+                    >
+                      {fillGuideLabels(chapter.title, ui)}
+                    </button>
+                  ))
+                : tabs.map((item) => (
+                    <button
+                      key={item.id}
+                      type="button"
+                      role="tab"
+                      aria-selected={oldTab === item.id}
+                      onClick={() => setOldTab(item.id)}
+                      className={`shrink-0 rounded-full px-3 py-1 text-caption ${
+                        oldTab === item.id ? "bg-platinum text-canvas" : "border border-line text-slate-300 hover:bg-white/10"
+                      }`}
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+            </div>
+          )}
           <div ref={scroller} className="min-h-0 flex-1 overflow-y-auto px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] pt-4">
             {chapters.length ? (
-              <div className="mx-auto flex max-w-xl flex-col gap-10">
-                {chapters.map((chapter) => (
-                  <div key={chapter.id} data-guide-chapter={chapter.id} className="scroll-mt-4">
-                    <div className="mb-3 flex items-center justify-between gap-3 border-b border-line pb-2">
-                      <h2 className="text-title font-semibold text-ink">{fillGuideLabels(chapter.title, ui)}</h2>
-                      {/* 글에는 가는 길을 쓰지 않는다: 그 화면으로는 이 버튼이 데려간다. */}
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setOpen(false);
-                          onGo(chapter.go);
-                        }}
-                        className="shrink-0 rounded-lg border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10"
-                      >
-                        {ui.guideGoThere} <span aria-hidden className="inline-block rtl:rotate-180">›</span>
-                      </button>
-                    </div>
-                    <div className="flex flex-col gap-5">
-                      {chapter.sections.map((section) => (
-                        <SectionView
-                          key={section.id}
-                          section={section}
-                          ui={ui}
-                          locale={locale}
-                          anchor={section.id}
-                          isNew={newSections.includes(section.id)}
-                        />
-                      ))}
-                    </div>
+              <div className={`mx-auto flex max-w-xl flex-col ${picking ? "gap-6" : "gap-10"}`}>
+                {features && (picking || target.manage) ? (
+                  <div className="flex flex-col gap-3">
+                    <p className="text-note leading-relaxed text-slate-300">{ui.featurePickHint}</p>
+                    <PresetRow ui={ui} off={off} />
                   </div>
-                ))}
+                ) : null}
+                {chapters.map((chapter) => {
+                  const feature = featureOfGo(chapter.go);
+                  const on = chapterOn(chapter);
+                  // 고르기 화면은 장마다 첫 칸 하나만(그림 먼저, 짧게).
+                  const sections = picking ? chapter.sections.slice(0, 1) : chapter.sections;
+                  return (
+                    <div key={chapter.id} data-guide-chapter={chapter.id} className="scroll-mt-4">
+                      <div className="mb-3 flex flex-wrap items-center justify-between gap-2 border-b border-line pb-2">
+                        <h2 className={`text-title font-semibold ${on ? "text-ink" : "text-slate-400"}`}>{fillGuideLabels(chapter.title, ui)}</h2>
+                        <div className="flex flex-wrap items-center gap-2">
+                          {features ? <FeatureSwitch ui={ui} feature={feature} off={off} /> : null}
+                          {/* 글에는 가는 길을 쓰지 않는다: 그 화면으로는 이 버튼이 데려간다. */}
+                          {!picking && on ? (
+                            <button
+                              type="button"
+                              onClick={() => {
+                                setOpen(false);
+                                onGo(chapter.go);
+                              }}
+                              className="shrink-0 rounded-lg border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10"
+                            >
+                              {ui.guideGoThere} <span aria-hidden className="inline-block rtl:rotate-180">›</span>
+                            </button>
+                          ) : null}
+                        </div>
+                      </div>
+                      {features && feature === "people" ? (
+                        <p className="-mt-1 mb-3 text-meta text-slate-400">{ui.featureLinkedPeople}</p>
+                      ) : null}
+                      {features && feature === "rooms" && !on && off.includes("people") ? (
+                        <p className="-mt-1 mb-3 text-meta text-slate-400">{ui.featureNeedsPeople}</p>
+                      ) : null}
+                      {features && !on && target.hidden && focusChapter === chapter.id && !picking ? (
+                        <p className="mb-3 rounded-lg bg-info/15 px-3 py-2 text-note text-info">{ui.featureHiddenHint}</p>
+                      ) : null}
+                      <div className={`flex flex-col gap-5 ${on ? "" : "opacity-60"}`}>
+                        {sections.map((section) => (
+                          <SectionView
+                            key={section.id}
+                            section={section}
+                            ui={ui}
+                            locale={locale}
+                            anchor={section.id}
+                            isNew={!picking && newSections.includes(section.id)}
+                          />
+                        ))}
+                      </div>
+                    </div>
+                  );
+                })}
               </div>
             ) : oldPage ? (
               <div className="mx-auto flex max-w-xl flex-col gap-5">
@@ -279,6 +401,17 @@ export function GuideButton({
               <p className="mt-10 text-center text-note text-slate-400">{failed ? ui.guideUnavailable : ui.guideLoading}</p>
             )}
           </div>
+          {picking ? (
+            <div className="shrink-0 border-t border-line px-4 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] pt-3">
+              <button
+                type="button"
+                onClick={() => finish(false)}
+                className="w-full rounded-xl bg-platinum py-3 text-note font-medium text-canvas hover:bg-platinum-hover"
+              >
+                {ui.featurePickStart}
+              </button>
+            </div>
+          ) : null}
         </FullScreenLayer>
       ) : null}
     </>
