@@ -71,8 +71,7 @@ const generatedBillingOverlay = {
   planPremium: "Premium · this month’s library + {limit} import points",
   paywallCtaPrice: "Start Premium · {price}/month",
   paywallCtaPlain: "Start Premium",
-  paywallLimitBanner:
-    "You've reached a free limit. Go Premium to keep learning from video.",
+  paywallLimitBanner: "You've used today's {limit} free chats. They refill tomorrow, or upgrade to chat more.",
   paywallSubtitle:
     "Premium opens this month’s study library and 80 import points for your own links. Saved videos and library titles don’t use points.",
   paywallBenefits:
@@ -1824,8 +1823,7 @@ export const copy = {
     planPremium: "프리미엄 · 이번 달 라이브러리 + 가져오기 {limit}포인트",
     planFree: "무료 플랜 · 오늘 {used}/{limit}",
     upgradeCta: "프리미엄 업그레이드",
-    paywallLimitBanner:
-      "무료 한도에 도달했어요. 프리미엄으로 영상 학습을 이어갈 수 있어요.",
+    paywallLimitBanner: "오늘 무료 채팅 {limit}번을 다 썼어요. 내일 다시 채워지고, 플랜을 올리면 더 쓸 수 있어요.",
     paywallTitle: "프리미엄으로 계속 학습하기",
     paywallSubtitle:
       "프리미엄은 이번 달 학습 라이브러리 전체와, 직접 가져오기 80포인트를 줍니다. 라이브러리와 저장한 영상은 포인트가 나가지 않아요.",
@@ -3042,7 +3040,7 @@ export const copy = {
     planPremium: "Premium · this month’s library + {limit} import points",
     planFree: "Free plan · {used}/{limit} today",
     upgradeCta: "Upgrade to Premium",
-    paywallLimitBanner: "You've reached a free limit. Go Premium to keep learning from video.",
+    paywallLimitBanner: "You've used today's {limit} free chats. They refill tomorrow, or upgrade to chat more.",
     paywallTitle: "Keep learning with Premium",
     paywallSubtitle:
       "Premium opens this month’s study library and 80 import points for your own links. Saved videos and library titles don’t use points.",
@@ -4262,7 +4260,7 @@ export const copy = {
     planPremium: "Premium · biblioteca del mes + {limit} puntos",
     planFree: "Plan gratis · {used}/{limit} hoy",
     upgradeCta: "Mejorar a Premium",
-    paywallLimitBanner: "Llegaste a un límite gratis. Premium te deja seguir con vídeos.",
+    paywallLimitBanner: "Ya usaste los {limit} chats gratis de hoy. Se recargan mañana, o mejora tu plan para chatear más.",
     paywallTitle: "Sigue aprendiendo con Premium",
     paywallSubtitle:
       "Premium abre la biblioteca de este mes y 80 puntos para importar tus enlaces. La biblioteca y los vídeos guardados no gastan puntos.",

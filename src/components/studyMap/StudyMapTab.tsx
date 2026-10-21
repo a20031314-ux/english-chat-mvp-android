@@ -1062,7 +1062,7 @@ function VideoActivity({
             onClick={() => openVideo(clip.videoId, undefined, clip.durationSeconds)}
             className="rounded-lg border border-white/15 px-3 py-1.5 text-left text-[12px] text-slate-300 hover:bg-white/10"
           >
-            {ui.mapLibraryClip}: {clip.title}
+            {ui.mapLibraryClip}: <bdi>{clip.title}</bdi>
           </button>
         ) : null}
       </div>

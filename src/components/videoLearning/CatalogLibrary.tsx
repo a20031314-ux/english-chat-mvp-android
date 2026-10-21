@@ -124,7 +124,8 @@ export function CatalogLibrary({
                   ) : null}
                 </span>
                 <span className="min-w-0 flex-1 py-0.5">
-                  <span className="line-clamp-2 block text-sm leading-snug text-slate-100">
+                  {/* 영상 제목은 영상 언어 그대로: 아랍어 화면에서 "¿"가 끝으로 밀리지 않게 방향은 글에 맡긴다. */}
+                  <span dir="auto" className="line-clamp-2 block text-start text-sm leading-snug text-slate-100">
                     {clip.title}
                   </span>
                   <span className="mt-1 block text-[11px] tabular-nums text-slate-400">

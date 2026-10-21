@@ -1514,7 +1514,7 @@ export function ChatWindow({
               <p className="leading-relaxed">
                 {isPremium
                   ? ui.chatDailyUsedUp.replace("{limit}", String(dailyLimit))
-                  : ui.paywallLimitBanner}
+                  : ui.paywallLimitBanner.replace("{limit}", String(dailyLimit))}
               </p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {turns.length > 0 ? (

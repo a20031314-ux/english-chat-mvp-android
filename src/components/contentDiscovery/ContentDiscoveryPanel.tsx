@@ -1133,7 +1133,7 @@ export function ContentDiscoveryPanel({
                 />
               ) : null}
               <div className="p-3">
-                <p className="text-sm font-semibold leading-snug text-slate-100">
+                <p dir="auto" className="text-start text-sm font-semibold leading-snug text-slate-100">
                   {item.title}
                 </p>
                 <DiscoveryResultMeta item={item} ui={ui} />
