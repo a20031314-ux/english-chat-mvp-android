@@ -21,7 +21,7 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
-- **모델 창구 (2026-10-21, 서버만):** `src/lib/server/llm.ts` 표(기능 18개 → basic·high + OpenAI 기본값), `completeChat`, Vercel `MODEL_ROUTES`·`ANTHROPIC_API_KEY`·`MODEL_FALLBACK`. 1단계(동작 그대로) 끝. 남은 것: 키 받은 뒤 미리보기에서 Haiku 비교·전환, high 등급 고가 모델, 어려운 턴만 고친 문장 다시 확인(Sonnet), `opCost.ts` 단가를 표의 모델로, 스트리밍 통화 턴 Anthropic 길. 종료 2027-01-14.
+- **모델 창구 (2026-10-21, 서버만):** `src/lib/server/llm.ts` 표(기능 18개 → basic·high + OpenAI 기본값), `completeChat`, Vercel `MODEL_ROUTES`·`ANTHROPIC_API_KEY`·`MODEL_FALLBACK`. 1단계(동작 그대로) 끝. 남은 것: 키 받은 뒤 미리보기에서 Haiku 비교·전환, high 등급 고가 모델, 어려운 턴만 고친 문장 다시 확인(Sonnet), `opCost.ts` 단가를 표의 모델로, 스트리밍 통화 턴 Anthropic 길. 종료 2027-01-14. 설계안 `hub/drafts/model-cascade-2026-10-21.md`(잘게 나눠 위험한 턴·오래 남는 결과에만 고가 모델로 확인).
 - **쓸 기능 고르기 (2026-10-21, 앱 다음 빌드, `hub/drafts/feature-modules.md`):** 사용법 장마다 사용함/사용안함, 처음 설치 첫 화면 = 고르기(건너뛰면 전부), My "쓸 기능 고르기".
   남은 것: 계정에 저장, 묶음별 광고 영향(`sim:economics`), 고르기 화면 길이.
 - **운영자 신고함 `/ops` (2026-10-21, 서버 바로 반영·정지 안내 줄은 앱 다음 빌드):** 사용자 "만들어줘"(AI 신고·사용자 신고 한곳에, 정지·해제). 사람 기능 정지(1·7·30일·풀 때까지)·랜덤 멈춤/막기·처리함, [신고별|사람별].
