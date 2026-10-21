@@ -2,6 +2,7 @@ import type OpenAI from "openai";
 import { kvGetJson, kvSetJson } from "./kv.ts";
 import { isIdentified } from "./identity.ts";
 import { constructionsFor } from "../learner/constructions.ts";
+import { shouldReadChatTurn } from "../learner/readGate.ts";
 import { classifyMessage, classifyPrompt, readClassification } from "../learner/classify.ts";
 import {
   applyEvent,
@@ -122,12 +123,16 @@ export async function observeChatTurn(input: {
   language: string;
   sentence: string;
   corrected: string;
+  /** 모델을 실제로 부를 때만 센다(건너뛴 줄은 비용 기록에 안 들어감). */
+  meter?: () => void;
 }): Promise<void> {
   try {
     if (!isIdentified(input.userId)) return;
     const list = constructionsFor(input.language);
     const sentence = input.sentence.replace(/\s+/g, " ").trim().slice(0, 400);
-    if (list.length === 0 || sentence.split(" ").length < 3) return;
+    // 너무 짧은 줄, 고칠 데 없는 짧은 줄은 읽지 않는다(learner/readGate.ts).
+    if (list.length === 0 || !shouldReadChatTurn(sentence, input.corrected, input.language)) return;
+    input.meter?.();
     const completion = await input.openai.chat.completions.create({
       model: MODEL(),
       temperature: 0,

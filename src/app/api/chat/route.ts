@@ -1074,13 +1074,13 @@ export async function POST(request: NextRequest) {
         });
       });
       after(async () => {
-        void meterRequest(request, "learnerObserve");
         await observeChatTurn({
           openai,
           userId,
           language: langs.targetLanguage,
           sentence: message,
           corrected: data.correction?.corrected ?? "",
+          meter: () => void meterRequest(request, "learnerObserve"),
         });
       });
     }

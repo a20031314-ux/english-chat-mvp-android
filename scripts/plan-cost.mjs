@@ -38,6 +38,8 @@ import {
   OP_COST,
   PACK,
   assumedOps,
+  CHAT_FOLLOW_SHARE,
+  chatMessageTypicalUsd,
   chatMessageUsd,
   opUsd,
   packUsd,
@@ -69,7 +71,8 @@ export function monthCost(terms, day = null) {
   const parts = {
     pack: packs * packUsd() * DAYS,
     call: callMinutes * roleplayMinuteUsd() * DAYS,
-    chat: chats * chatMessageUsd() * DAYS,
+    // 한도 꽉(최악)은 모든 문장이 길고 틀린 경우, 실제 사용 하루는 보통 한 통으로.
+    chat: chats * (day ? chatMessageTypicalUsd() : chatMessageUsd()) * DAYS,
     grant: grantUsd,
   };
   const totalUsd = parts.pack + parts.call + parts.chat + parts.grant;
@@ -123,7 +126,7 @@ export function render() {
     if (warnings.length) {
       const chatAssumed = CHAT_MESSAGE_OPS.filter((op) => assumedOps().includes(op));
       push(
-        `- 최악은 구독자 모두가 매일 모든 한도를 다 쓰는 경우입니다. 채팅 한 통 ${won1(krw(chatMessageUsd()))}${chatAssumed.length ? `은 잰 값이 아닌 가정(${chatAssumed.join(", ")} 호출당 ${DEFAULT_CALL_TOKENS.input}/${DEFAULT_CALL_TOKENS.output} 토큰)` : ""}이라, 실측 토큰이 쌓이면 \`cost-report.mjs\`로 다시 봐야 합니다.`,
+        `- 최악은 구독자 모두가 매일 모든 한도를 다 쓰는 경우입니다. 최악의 채팅 한 통 ${won1(krw(chatMessageUsd()))}(모든 문장이 길고 틀림, 보통은 ${won1(krw(chatMessageTypicalUsd()))})${chatAssumed.length ? `은 잰 값이 아닌 가정(${chatAssumed.join(", ")} — 아래 "기능별 한 번 비용"의 토큰)` : ""}이라, 실측 토큰이 쌓이면 \`cost-report.mjs\`로 다시 봐야 합니다.`,
       );
     }
     push("");
@@ -162,12 +165,13 @@ export function render() {
     "|---|---|---|---|",
     ...(() => {
       const s = DEFAULT_ADS_SETTINGS;
-      const rewardCost = krw(s.rewardChats * chatMessageUsd());
+      // 광고로 메우는 채팅은 보통 한 통으로(무료 사용자의 실제 채팅).
+      const rewardCost = krw(s.rewardChats * chatMessageTypicalUsd());
       const rw = AD_REVENUE_USD.rewarded;
       const it = AD_REVENUE_USD.interstitial;
       const chatsPerInterstitial = s.interstitialAfterChats;
-      const intCost = krw(chatsPerInterstitial * chatMessageUsd());
-      const fullBonusMonth = krw(s.rewardedDailyMax * s.rewardChats * chatMessageUsd() * DAYS);
+      const intCost = krw(chatsPerInterstitial * chatMessageTypicalUsd());
+      const fullBonusMonth = krw(s.rewardedDailyMax * s.rewardChats * chatMessageTypicalUsd() * DAYS);
       return [
         `| 보상형 1회 = 채팅 ${s.rewardChats}번 | ${won1(rewardCost)} | ${won1(krw(rw.low))} ~ ${won1(krw(rw.high))} | ${won1(krw(rw.low) - rewardCost)} ~ ${won1(krw(rw.high) - rewardCost)} |`,
         `| 전면 1회(채팅 ${chatsPerInterstitial}번마다 기준, 무료 기본 채팅을 메움) | ${won1(intCost)} | ${won1(krw(it.low))} ~ ${won1(krw(it.high))} | ${won1(krw(it.low) - intCost)} ~ ${won1(krw(it.high) - intCost)} |`,
@@ -185,7 +189,8 @@ export function render() {
     "|---|---|---|",
     `| 자유 통화 1분 | ${won1(krw(roleplayMinuteUsd()))} | 15초 턴 4번: 캐릭터 판단(4.1-mini) + 음성 합성 ${ROLEPLAY_TURN.tutorSpeakingSeconds}초 + 받아쓰기 ${ROLEPLAY_TURN.learnerSpeakingSeconds}초 |`,
     `| 오늘의 팩 1번 | ${won1(krw(packUsd()))} | ${PACK.items}문답 × (받아쓰기 + 판단) + 합성 ${pct(PACK.synthesisedShare)}만 (가정) |`,
-    `| 채팅 1통 | ${won1(krw(chatMessageUsd()))} | ${CHAT_MESSAGE_OPS.join(" + ")} |`,
+    `| 채팅 1통(보통) | ${won1(krw(chatMessageTypicalUsd()))} | chat + 문장 읽기 ${pct(CHAT_FOLLOW_SHARE.learnerObserve)} + 실수 읽기 ${pct(CHAT_FOLLOW_SHARE.weakRead)} (가정 — 짧고 맞은 줄·영어 아닌 학습 언어는 문장 읽기 건너뜀) |`,
+    `| 채팅 1통(최악) | ${won1(krw(chatMessageUsd()))} | ${CHAT_MESSAGE_OPS.join(" + ")} 모두(길고 틀린 문장) |`,
     `| 포인트 1개 | ${won1(krw(pointCostUsd()))} | 통화 5분과 영상 3분 준비 중 비싼 쪽 |`,
     "",
     "## 기능별 한 번 비용 (요금 한도 밖 기능 포함)",

@@ -3,7 +3,7 @@ import test from "node:test";
 import { MODEL_CALLS_PER_REQUEST } from "../server/modelCalls.ts";
 import { PACK_ITEMS, PACK_FOLLOWS } from "../pack/pack.ts";
 import { CALL_TRANSCRIBE_USD_PER_MINUTE, ROLEPLAY_TURN, TTS_USD_PER_MINUTE } from "./cost.ts";
-import { OP_COST, PACK, assumedOps, chatMessageUsd, opUsd, packUsd } from "./opCost.ts";
+import { OP_COST, PACK, assumedOps, chatMessageTypicalUsd, chatMessageUsd, opUsd, packUsd } from "./opCost.ts";
 
 test("기록되는 기능(op)마다 단가가 정해져 있다", () => {
   // 새 기능이 modelCalls.ts에 op를 더하고 여기를 빠뜨리면, 비용 계산은 그 기능을
@@ -47,6 +47,7 @@ test("팩 문답 수가 팩 코드와 같다", () => {
 
 test("채팅 한 통은 답 + 문장 읽기 + 실수 읽기", () => {
   assert.equal(chatMessageUsd(), opUsd("chat") + opUsd("learnerObserve") + opUsd("weakRead"));
+  assert.ok(chatMessageTypicalUsd() < chatMessageUsd() && chatMessageTypicalUsd() > opUsd("chat"));
   assert.ok(assumedOps().includes("chat"));
   assert.ok(!assumedOps().includes("roleplayTurn"));
 });

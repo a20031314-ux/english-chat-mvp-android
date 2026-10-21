@@ -168,7 +168,14 @@ export async function POST(request: NextRequest) {
         tutorLine: check.reply,
         learnerLine: { sentence: answer, corrected: check.better || answer },
       });
-      await observeChatTurn({ openai, userId, language, sentence: answer, corrected: check.better || answer });
+      await observeChatTurn({
+        openai,
+        userId,
+        language,
+        sentence: answer,
+        corrected: check.better || answer,
+        meter: () => void meterRequest(request, "learnerObserve"),
+      });
     });
 
     return jsonWithCors(request, {

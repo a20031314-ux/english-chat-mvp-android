@@ -56,6 +56,8 @@ export type OpCost =
   | { kind: "counter" };
 
 const mini = (tokens?: Tokens): OpCost => ({ kind: "model", model: "mini", tokens, basis: tokens ? "measured" : "assumed" });
+/** 프롬프트 길이에서 어림한 토큰(잰 것은 아님) — 기본값 2000/300보다 훨씬 짧은 호출. */
+const estimated = (tokens: Tokens): OpCost => ({ kind: "model", model: "mini", tokens, basis: "assumed" });
 const tutor: OpCost = { kind: "model", model: "4.1-mini", basis: "assumed" };
 const counter: OpCost = { kind: "counter" };
 
@@ -82,12 +84,14 @@ export const OP_COST: Record<string, OpCost> = {
   expressionAskRetry: tutor,
   expressionAskQuick: tutor,
   curriculumGenerate: mini(),
-  learnerObserve: mini(),
+  // 영어 구문 목록(38개) 분류 프롬프트 약 3,400자 + 문장 두 줄, 답은 max_tokens 150의 짧은 JSON(2026-10-21 어림).
+  learnerObserve: estimated({ input: 900, output: 80 }),
   curriculumMissions: mini(),
   learnerPick: { kind: "model", model: "4.1", basis: "assumed" },
   notesPlace: mini(),
   missionCheck: tutor,
-  weakRead: mini(),
+  // 실수 종류 프롬프트 약 1,100~2,200자(이미 아는 실수 30개까지) + 두 줄, 답 짧은 JSON(2026-10-21 어림).
+  weakRead: estimated({ input: 600, output: 80 }),
   weakMission: mini(),
   vocabGloss: mini(),
   learningSpans: mini(),
@@ -159,12 +163,28 @@ export function assumedOps(): string[] {
 /**
  * 채팅 한 통이 부르는 기록들. 답(chat) 뒤에 문장 읽기(learnerObserve)와,
  * 고친 줄이면 실수 종류 읽기(weakRead)가 따라간다(chat route `after`).
- * 최악 계산은 셋 다, 다시 쓰기(chatReread)는 드물어 뺀다.
+ * 최악 계산은 셋 다(모든 문장이 길고 틀린 영어 학습자), 다시 쓰기(chatReread)는 드물어 뺀다.
  */
 export const CHAT_MESSAGE_OPS = ["chat", "learnerObserve", "weakRead"] as const;
 
 export function chatMessageUsd(measured?: Record<string, Tokens>): number {
   return CHAT_MESSAGE_OPS.reduce((sum, op) => sum + opUsd(op, measured), 0);
+}
+
+/**
+ * 보통 한 통: 따라붙는 호출이 도는 비율(가정, 2026-10-21).
+ * - learnerObserve: 영어 학습자만(구문 목록이 영어뿐) + 짧고 맞은 줄은 건너뜀(learner/readGate.ts) → 셋에 하나꼴.
+ * - weakRead: 지도가 있는 사람의 고칠 데 있는 줄만 → 셋에 하나꼴.
+ * 2026-10-21부터 두 기록은 실제로 부를 때만 세므로, cost-report.mjs의 op별 횟수 ÷ chat 횟수가 이 비율의 실측이다.
+ */
+export const CHAT_FOLLOW_SHARE = { learnerObserve: 0.33, weakRead: 0.33, basis: "assumed" as Basis };
+
+export function chatMessageTypicalUsd(measured?: Record<string, Tokens>): number {
+  return (
+    opUsd("chat", measured) +
+    CHAT_FOLLOW_SHARE.learnerObserve * opUsd("learnerObserve", measured) +
+    CHAT_FOLLOW_SHARE.weakRead * opUsd("weakRead", measured)
+  );
 }
 
 /**
