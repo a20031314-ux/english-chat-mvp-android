@@ -21,7 +21,7 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
-- **모델 (2026-10-22, `hub/drafts/model-switch-2026-10-22.md`):** 글 기능 Haiku·확인·돌아보기 Sonnet으로 옮김. 남은 것: 지도·미션(curriculum·mission)을 Claude로(Sonnet 지도 "map too thin" 해결), 통화 튜터 Claude 스트리밍 길(둘 다 01-14 전), 받아쓰기 Scribe v2·목소리 결정(사용자), 영상 받아쓰기 Scribe v2 설계(02-26 전), Haiku 뒤 경고(지도 주제 제목 학습 언어 위주·표현 뜻 학습 언어 위주) 지켜보기.
+- **모델 (2026-10-22, `hub/drafts/model-switch-2026-10-22.md`):** 글 기능 Haiku·확인·돌아보기 Sonnet으로 옮김. 지도 그리기는 Sonnet(curriculumMap, 먼저 생각, 36~52초 — 앞 생각 끄고 빨라지는지 볼 것). 남은 것: 미션 쓰기·지도에 넣기·미션 확인을 Claude로(도구 입력 글자 문제 고친 뒤 다시 점검), 통화 튜터 Claude 스트리밍 길(둘 다 01-14 전), 받아쓰기 Scribe v2·목소리 결정(사용자), 영상 받아쓰기 Scribe v2 설계(02-26 전), Haiku 뒤 경고(지도 주제 제목 학습 언어 위주·표현 뜻 학습 언어 위주) 지켜보기.
 - **방 내 줄 교정 (2026-10-22, `hub/drafts/room-fix-2026-10-22.md`, 서버 바로 반영·화면 앱 다음 빌드):** 믿을 만한 받아쓰기만(확신도 ≥ 0.97 바로, 어중간하면 두 번째 받아쓰기로 견줌 — 사용자 결정 (나)) 채팅 교정 기준으로 고쳐 내 줄 아래 나에게만 칩. 방 자막 한도는 넘어도 자막 계속(덧붙임만 멈춤).
   남은 것: 학습 기록(장부)에 남길지, 한국어권·자유 대화·폰 마이크로 다시 재기, 공개 옵션(사용자가 원하면), opCost `roomFix` Haiku 단가.
 - **음성 모델·자막 정확도 (2026-10-21~22, `hub/drafts/speech-models-2026-10-21.md`):** 시험 경로(점검 사용자만 `x-tts-engine`·`x-stt-model`, `server/speechModels.ts`·`realtimeSpeech.ts`·`sttProviders.ts`), 비교 스크립트 `speech-trial.mjs`·`stt-trial.mjs`. 자막 "?"(`speechConfidence.ts`, 서버 바로 반영)·앞부분 미리 담기(`rooms/pcm.ts`)는 앱 다음 빌드. 남은 것: 목소리 샘플 사용자 답 → 기본값 전환(TTS 01-06 전), 받아쓰기 언어별 모델 고르기, 영상 받아쓰기 Scribe v2(낱말 시간, 02-26 전), 통화 안 받아쓰기, en↔ja 방 한자 통과 문제(다음 날 확인 ①).
