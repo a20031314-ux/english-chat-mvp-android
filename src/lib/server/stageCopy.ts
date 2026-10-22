@@ -169,7 +169,16 @@ async function translated(source: string[], ui: string, uiName: string, cacheKey
         ],
       });
       const parsed = JSON.parse(completion.choices[0]?.message?.content ?? "{}") as { texts?: unknown };
-      const texts = Array.isArray(parsed.texts) ? parsed.texts.map((t) => (typeof t === "string" ? t.trim() : "")) : [];
+      // Haiku가 도구 입력으로 답할 때 배열을 JSON 글자로 보내기도 한다(2026-10-22 운영, "texts":"[\"…\"]") — 풀어서 쓴다.
+      let list: unknown = parsed.texts;
+      if (typeof list === "string") {
+        try {
+          list = JSON.parse(list);
+        } catch {
+          list = [];
+        }
+      }
+      const texts = Array.isArray(list) ? list.map((t) => (typeof t === "string" ? t.trim() : "")) : [];
       if (texts.length !== part.length || texts.some((t) => !t)) {
         lastFailure = `chunk ${start}: got ${texts.length}/${part.length}, raw ${String(completion.choices[0]?.message?.content ?? "").slice(0, 160)}`;
         return null;
