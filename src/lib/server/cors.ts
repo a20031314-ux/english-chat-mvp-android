@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { simModelsHeader } from "@/lib/server/simModels";
 import { DOOR_BASE_DOMAIN, DOORS } from "@/lib/doors";
 import {
   APP_UPDATE_HEADER,
@@ -112,8 +113,10 @@ export function jsonWithCors(
   data: unknown,
   init?: { status?: number },
 ): NextResponse {
+  // 점검 사용자에게만: 이 요청이 실제로 부른 글 모델(server/simModels.ts).
+  const models = simModelsHeader();
   return NextResponse.json(data, {
     status: init?.status ?? 200,
-    headers: corsHeaders(request),
+    headers: models ? { ...corsHeaders(request), "x-sim-models": models } : corsHeaders(request),
   });
 }

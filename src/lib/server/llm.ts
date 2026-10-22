@@ -1,6 +1,7 @@
 import { AsyncLocalStorage } from "async_hooks";
 import type OpenAI from "openai";
 import { DEFAULT_ROUTES, OPENAI_TEXT_DEFAULTS, routeModel, type TextTask } from "../aiDefaults.ts";
+import { noteSimModel } from "./simModels.ts";
 import type {
   ChatCompletion,
   ChatCompletionCreateParamsNonStreaming,
@@ -161,6 +162,7 @@ export async function completeChat(
 ): Promise<ChatCompletion> {
   const { model: override, ...rest } = params;
   const route = routeFor(task, override);
+  noteSimModel(`${task}=${route.provider}:${route.model}`);
   if (route.provider === "openai") {
     return client.chat.completions.create({ ...rest, model: route.model });
   }
@@ -169,6 +171,7 @@ export async function completeChat(
   } catch (error) {
     if (env("MODEL_FALLBACK") === "off" || simRoutes.getStore()) throw error;
     console.error(`[llm] ${task} on ${route.model} failed — falling back to OpenAI`, error);
+    noteSimModel(`${task}=openai:${TASKS[task].openai()}(대체)`);
     return client.chat.completions.create({ ...rest, model: TASKS[task].openai() });
   }
 }

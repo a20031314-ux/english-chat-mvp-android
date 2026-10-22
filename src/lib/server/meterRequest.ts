@@ -8,6 +8,7 @@ import { incrementDailyOpUsed } from "@/lib/server/entitlementStore";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { kvIncrBy } from "@/lib/server/kv";
 import { adoptSimRoutes } from "@/lib/server/llm";
+import { trackSimModels } from "@/lib/server/simModels";
 
 /**
  * Counts one use of a route that spends model time.
@@ -31,6 +32,7 @@ export async function meterRequest(
   // await 앞에서(같은 요청 흐름에 남도록): 점검 사용자의 모델 경로 바꾸기(llm.ts).
   try {
     adoptSimRoutes(requestUserId(request), request.headers.get("x-sim-model-routes"));
+    trackSimModels(requestUserId(request));
   } catch {
     // 무시
   }
