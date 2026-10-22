@@ -2,7 +2,7 @@ languagebank helps you actually speak and write in the language you're learning 
 
 TALK WITH AN AI TUTOR
 • Chat in the language you're learning. Stuck? Write in your own language: the tutor keeps going in the language you're learning, and "Show how to say it" puts the expression right under that line.
-• Corrections appear right under your sentence, so you see exactly what to fix.
+• When a sentence has a mistake, a "Something to fix" chip appears under it. Tap it to see the corrected sentence.
 • Call the AI tutor and just talk out loud. Today's pack gives you a short call with a goal, and afterwards you can look back at what you meant to say.
 
 ASK ABOUT ANY SENTENCE
@@ -13,14 +13,16 @@ LEARN FROM REAL VIDEOS
 
 SEE WHAT YOU'RE MISSING
 • No levels. Each sentence shows only what was wrong or missing, and what you've written shows where you're weak and what to do next.
-• Set a goal and get a study map with missions. Hints open one at a time, so you try first.
+• Start in My with short example conversations. Answer "Yes, I can", "Almost" or "Not yet", and your study map starts where you are, with the conversation you'll be able to have, the grammar in this part and, if you're just beginning, letters and sounds first.
+• Missions open hints one at a time, so you try first.
 • In My: Try this, Growing, My phrases and Notes (with Vocab) gather what you've used and learned.
 
 LEARN WITH PEOPLE
-• Room: voice rooms with live captions. Tap a line to translate it, or pick just the words you want to ask about. A 💡 hint shows you what to say in the language you're learning.
+• Room: voice rooms with live captions. Tap a line to translate it, or pick just the words you want to ask about. A 💡 hint shows you what to say in the language you're learning, and your own captioned lines can show corrections only you see.
 • Chats: group chats and 1:1 messages, voice calls and 1:1 video calls, and team spaces with study mates.
 • People: find people learning your language, follow them and post on the board.
 • Invite a friend with one link.
+• Turn off the features you don't use, and the app shows only what you need.
 
 PLANS
 Free to start, with daily limits. The free plan shows ads. Subscriptions add more chats, more AI help and daily call time, without ads.
