@@ -100,6 +100,43 @@ export async function drawStudyMap(input: {
   }
 }
 
+export type DrawResult = Awaited<ReturnType<typeof drawStudyMap>>;
+
+/**
+ * 그리는 중인 요청을 화면 밖(모듈)에 둔다 — My 탭은 보일 때만 그려져서(AppHome), 그리는 동안 다른 탭에 갔다 오면
+ * 화면 상태(그리는 중·쓴 목표)가 사라지고 빈 체크 화면이 다시 떴다(사용자 2026-10-23).
+ * 요청은 그대로 돌고, 돌아오면 같은 요청을 다시 기다리거나 이미 끝난 결과를 받는다. 학습 언어마다 하나.
+ */
+/** 화면에 다시 보여 줄 입력: 직접 쓴 목표(체크만 했으면 빈 칸)와 고른 체크. */
+type DrawForm = { typed: string; selfCheck?: { gaps: string[]; focus: string[]; use?: string; stage?: string } };
+type PendingDraw = { form: DrawForm; promise: Promise<DrawResult>; result?: DrawResult };
+const pendingDraws = new Map<string, PendingDraw>();
+
+export function startStudyMapDraw(input: Parameters<typeof drawStudyMap>[0], typed = ""): PendingDraw {
+  const existing = pendingDraws.get(input.targetLanguage);
+  if (existing && !existing.result) return existing;
+  const entry: PendingDraw = {
+    form: { typed, ...(input.selfCheck ? { selfCheck: input.selfCheck } : {}) },
+    promise: Promise.resolve(null as unknown as DrawResult),
+  };
+  entry.promise = drawStudyMap(input).then((result) => {
+    entry.result = result;
+    return result;
+  });
+  pendingDraws.set(input.targetLanguage, entry);
+  return entry;
+}
+
+/** 이 학습 언어로 그리는 중이거나, 화면이 없는 동안 끝나 아직 받지 않은 요청. */
+export function pendingStudyMapDraw(targetLanguage: string): PendingDraw | null {
+  return pendingDraws.get(targetLanguage) ?? null;
+}
+
+/** 결과를 화면에 넣었으면 지운다(같은 요청일 때만 — 그사이 새로 시작한 것은 남긴다). */
+export function finishStudyMapDraw(targetLanguage: string, entry: PendingDraw): void {
+  if (pendingDraws.get(targetLanguage) === entry) pendingDraws.delete(targetLanguage);
+}
+
 export async function saveTopicStatus(input: {
   language: string;
   mapId: string;

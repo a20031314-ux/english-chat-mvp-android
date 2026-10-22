@@ -300,6 +300,31 @@ const SCENES = [
     },
   },
   {
+    id: "map-leave",
+    label: "My — 생성 중에 다른 탭에 갔다 돌아오면 그대로 생성 중(2026-10-23 사용자 신고)",
+    async run({ page, ui, wait, locale, shot }) {
+      await page.locator("textarea:visible").first().fill(bank.mapGoal[locale]).catch(() => undefined);
+      await page.getByRole("button", { name: ui.mapDraw }).click();
+      await wait(2500);
+      // 하단 탭으로 다른 탭(영상 학습) → My로 돌아오기(앱 안 이동, 새로고침 없음).
+      await page.getByRole("button", { name: exactly(ui.homeTabVideo) }).last().click();
+      await wait(3000);
+      await page.getByRole("button", { name: exactly(ui.homeTabProfile) }).last().click();
+      await wait(1500);
+      const drawing = ui.mapDrawing.split("…")[0];
+      const stillDrawing = (await page.locator("body").innerText()).includes(drawing);
+      await page.getByRole("button", { name: drawing }).first().scrollIntoViewIfNeeded().catch(() => undefined);
+      await wait(400);
+      if (shot) await shot("back");
+      if (!stillDrawing) throw new Error("돌아오니 생성 중 표시가 사라짐(초기화)");
+      for (let i = 0; i < 120; i++) {
+        await wait(1000);
+        if (!(await page.locator("body").innerText()).includes(drawing)) break;
+      }
+      await wait(1500);
+    },
+  },
+  {
     id: "map",
     label: "My — 체크로 그린 학습 지도",
     async run({ page, ui, wait, locale }) {
@@ -728,7 +753,7 @@ for (const combo of COMBOS) {
       const file = path.join(dir, `${scene.id}.png`);
       const started = Date.now();
       try {
-        await scene.run({ page, ui, rc, wait, locale, target, state });
+        await scene.run({ page, ui, rc, wait, locale, target, state, shot: (name) => page.screenshot({ path: path.join(dir, `${scene.id}-${name}.png`) }) });
         await page.screenshot({ path: file });
         row.shots.push({ id: scene.id, label: scene.label, file, ok: true, seconds: Math.round((Date.now() - started) / 1000) });
         console.log(`${target}:${locale} ✓ ${scene.id}`);

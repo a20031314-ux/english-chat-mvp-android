@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { usePremium } from "@/contexts/PremiumContext";
 import { onAppIntent, sendAppIntent, takeAppIntent } from "@/lib/appIntents";
 import { apiUrl } from "@/lib/apiBase";
@@ -15,7 +15,10 @@ import {
   type TopicStatus,
 } from "@/lib/curriculum/map";
 import {
-  drawStudyMap,
+  finishStudyMapDraw,
+  pendingStudyMapDraw,
+  startStudyMapDraw,
+  type DrawResult,
   fetchDueItems,
   fetchStudyMap,
   findScenes,
@@ -89,9 +92,17 @@ export function StudyMapTab({
   const [record, setRecord] = useState<MapRecord | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<MapError | null>(null);
-  const [drawing, setDrawing] = useState(false);
+  // 다른 탭에 갔다 와도 그리는 중이면 그대로(studyMapClient.ts startStudyMapDraw).
+  const [drawing, setDrawing] = useState(() => Boolean(pendingStudyMapDraw(targetLanguage)));
   const [limit, setLimit] = useState(0);
-  const [editing, setEditing] = useState(false);
+  const mountedRef = useRef(true);
+  useEffect(() => {
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+    };
+  }, []);
+  const [editing, setEditing] = useState(() => Boolean(pendingStudyMapDraw(targetLanguage)));
   const [openTopicId, setOpenTopicId] = useState<string | null>(null);
   const [lastOpenedId, setLastOpenedId] = useState<string | null>(null);
   const [clips, setClips] = useState<Clip[]>([]);
@@ -140,16 +151,7 @@ export function StudyMapTab({
   const mapStage = map?.stageId ? (stages?.find((stage) => stage.id === map.stageId) ?? null) : null;
   const [startStage, setStartStage] = useState<string | null>(null);
 
-  const draw = async (goal: string, selfCheck: SelfCheckAnswer | null) => {
-    setDrawing(true);
-    setError(null);
-    const result = await drawStudyMap({
-      goal,
-      ...(selfCheck ? { selfCheck } : {}),
-      targetLanguage,
-      interfaceLanguage: locale,
-      isPremium,
-    });
+  const applyDraw = useCallback((result: DrawResult) => {
     setDrawing(false);
     if (!result.ok) {
       setError(result.error);
@@ -161,6 +163,43 @@ export function StudyMapTab({
     setStartStage(null);
     setOpenTopicId(null);
     setLastOpenedId(null);
+  }, []);
+
+  // 그리는 동안 화면을 떠났다 돌아왔으면: 아직 도는 요청을 다시 기다리거나, 그사이 끝난 결과를 받는다.
+  useEffect(() => {
+    const pending = pendingStudyMapDraw(targetLanguage);
+    if (!pending) {
+      setDrawing(false);
+      return;
+    }
+    let cancelled = false;
+    setDrawing(true);
+    setEditing(true);
+    void pending.promise.then((result) => {
+      if (cancelled) return;
+      finishStudyMapDraw(targetLanguage, pending);
+      applyDraw(result);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [targetLanguage, applyDraw]);
+
+  const draw = async (goal: string, selfCheck: SelfCheckAnswer | null, typed = "") => {
+    setDrawing(true);
+    setError(null);
+    const pending = startStudyMapDraw({
+      goal,
+      ...(selfCheck ? { selfCheck } : {}),
+      targetLanguage,
+      interfaceLanguage: locale,
+      isPremium,
+    }, typed);
+    const result = await pending.promise;
+    // 화면을 떠났으면 결과는 돌아올 때 위 effect가 받는다(이 컴포넌트는 이미 없음).
+    if (!mountedRef.current) return;
+    finishStudyMapDraw(targetLanguage, pending);
+    applyDraw(result);
   };
 
   const restore = async () => {
@@ -445,15 +484,17 @@ function GoalForm({
   stages: StageView[] | null;
   /** "다음 단계로 새 지도"에서 왔을 때 미리 골라 둘 단계. */
   startStage: string | null;
-  onDraw: (goal: string, selfCheck: SelfCheckAnswer | null) => void;
+  onDraw: (goal: string, selfCheck: SelfCheckAnswer | null, typed?: string) => void;
   onCancel: () => void;
   onRestore: () => void;
 }) {
-  const [gaps, setGaps] = useState<GapId[]>([]);
-  const [focus, setFocus] = useState<FocusId[]>([]);
-  const [use, setUse] = useState<UseId | null>(null);
-  const [goal, setGoal] = useState("");
-  const [stage, setStage] = useState<string | null>(startStage);
+  // 그리는 중에 다른 탭에 갔다 오면 고른 체크·쓴 목표를 그대로 보여 준다(studyMapClient.ts startStudyMapDraw).
+  const pendingForm = pendingStudyMapDraw(targetLanguage)?.form;
+  const [gaps, setGaps] = useState<GapId[]>(() => (pendingForm?.selfCheck?.gaps ?? []) as GapId[]);
+  const [focus, setFocus] = useState<FocusId[]>(() => (pendingForm?.selfCheck?.focus ?? []) as FocusId[]);
+  const [use, setUse] = useState<UseId | null>(() => (pendingForm?.selfCheck?.use ?? null) as UseId | null);
+  const [goal, setGoal] = useState(() => pendingForm?.typed ?? "");
+  const [stage, setStage] = useState<string | null>(() => pendingForm?.selfCheck?.stage ?? startStage);
 
   // What they ticked last time, shown again when they start a new map.
   useEffect(() => {
@@ -464,7 +505,7 @@ function GoalForm({
       .then((response) => (response.ok ? response.json() : null))
       .then((data: { selfCheck?: SelfCheckAnswer | null } | null) => {
         const check = data?.selfCheck;
-        if (cancelled || !check) return;
+        if (cancelled || !check || pendingStudyMapDraw(targetLanguage)) return;
         setGaps(check.gaps ?? []);
         setFocus(check.focus ?? []);
         setUse(check.use ?? null);
@@ -522,7 +563,7 @@ function GoalForm({
       onSubmit={(event) => {
         event.preventDefault();
         if (!ready) return;
-        onDraw(written.length >= 2 ? written : composed, ticked ? { gaps, focus, ...(use ? { use } : {}), ...(stageOk && stage ? { stage } : {}) } : null);
+        onDraw(written.length >= 2 ? written : composed, ticked ? { gaps, focus, ...(use ? { use } : {}), ...(stageOk && stage ? { stage } : {}) } : null, goal);
       }}
     >
       {stages?.length ? (
