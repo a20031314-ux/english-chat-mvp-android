@@ -84,7 +84,7 @@ export const OP_COST: Record<string, OpCost> = {
   analysisInput: mini(),
   analysisElement: mini(),
   expressionInsight: mini(),
-  // 원문·고친 문장·설명만 보내는 짧은 확인(2026-10-21 어림). 지금 기본은 OpenAI(OPENAI_VERIFY_MODEL), MODEL_ROUTES로 Sonnet.
+  // 원문·고친 문장·설명만 보내는 짧은 확인(2026-10-21 어림). 기본 Sonnet 5.5(llm.ts DEFAULT_ROUTES, 2026-10-22), MODEL_ROUTES로 되돌림.
   chatVerify: { kind: "model", model: "sonnet-5.5", tokens: { input: 900, output: 200 }, basis: "assumed" },
   expressionAsk: tutor,
   expressionAskRetry: tutor,

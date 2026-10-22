@@ -73,6 +73,8 @@ export const DEFAULT_ROUTES: Partial<Record<Task, string>> = {
   howToSay: "anthropic: claude-haiku-5-5",
   // 방 내 줄 교정은 채팅 교정과 같은 모델로(2026-10-22, 채팅 Haiku 전환과 같은 근거).
   roomFix: "anthropic: claude-haiku-5-5",
+  // 교정 확인 모델(위험한 줄만, 열 때)은 Sonnet 5.5 — 사용자 결정 2026-10-21, 코드 기본값으로 넣음 2026-10-22.
+  chatVerify: "anthropic: claude-sonnet-5-5",
 };
 
 function parseRoutes(): Record<string, string> {

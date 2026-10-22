@@ -56,7 +56,7 @@
 
 | 무엇 | 하는 일 | 키·설정 | 어디서 |
 |---|---|---|---|
-| Anthropic (Claude) | 글 모델 2단계(Haiku 5.5·Sonnet 5.5), `MODEL_ROUTES`로 켬 | `ANTHROPIC_API_KEY` (2026-10-21 넣음, 10-22 운영 호출 확인) | `lib/server/llm.ts` |
+| Anthropic (Claude) | 채팅·표현 카드·방 교정 Haiku 5.5, 교정 확인 Sonnet 5.5(코드 기본값 `DEFAULT_ROUTES`, 2026-10-22), 나머지는 `MODEL_ROUTES`로 | `ANTHROPIC_API_KEY` (2026-10-21 넣음, 10-22 운영 호출 확인) | `lib/server/llm.ts` |
 | ElevenLabs Scribe v2 | 받아쓰기 시험 후보(점검 사용자만) | `ELEVENLABS_API_KEY` (10-22 운영 호출 확인) | `lib/server/sttProviders.ts` |
 | AssemblyAI | 받아쓰기 시험 후보(점검 사용자만) | `ASSEMBLYAI_API_KEY` (10-22 운영 호출 확인) | `lib/server/sttProviders.ts` |
 | Vercel | 서버·웹 배포, 예약 작업(계정 정리·사진 정리) | 프로젝트 설정 | `vercel.json` |

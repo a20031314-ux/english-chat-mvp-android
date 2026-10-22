@@ -42,7 +42,7 @@ test("설정이 없으면 기능마다 예전 OpenAI 모델 그대로", () => {
   });
 });
 
-test("키가 있으면 채팅·표현 카드는 코드 기본값 Haiku, 나머지는 예전 그대로(2026-10-22)", () => {
+test("키가 있으면 채팅·표현 카드·방 교정은 Haiku, 확인 모델은 Sonnet, 나머지는 예전 그대로(2026-10-22)", () => {
   withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
     assert.deepEqual(
       { ...routeFor("chat") },
@@ -51,7 +51,11 @@ test("키가 있으면 채팅·표현 카드는 코드 기본값 Haiku, 나머�
     assert.equal(routeFor("howToSay").model, "claude-haiku-5-5");
     assert.equal(routeFor("translate").model, "gpt-4o-mini");
     assert.equal(routeFor("roleplayTutor").model, "gpt-4.1-mini");
-    assert.equal(routeFor("chatVerify").model, "gpt-4.1");
+    assert.equal(routeFor("roomFix").model, "claude-haiku-5-5");
+    assert.deepEqual(
+      { ...routeFor("chatVerify") },
+      { provider: "anthropic", model: "claude-sonnet-5-5", task: "chatVerify", tier: "high" },
+    );
   });
 });
 
