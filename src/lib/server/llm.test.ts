@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { adoptSimRoutes, extractJson, unwrapToolInput, openaiModel, routeFor, TASKS, toAnthropicRequest } from "./llm.ts";
+import { adoptSimRoutes, extractJson, parseStringifiedValues, unwrapToolInput, openaiModel, routeFor, TASKS, toAnthropicRequest } from "./llm.ts";
 
 const KEYS = [
   "MODEL_ROUTES",
@@ -274,4 +274,11 @@ test("think를 주면 Sonnet은 먼저 생각하게 두고 그 몫만큼 한도�
   const body = req.body as { thinking?: unknown; max_tokens?: number };
   assert.equal(body.thinking, undefined);
   assert.equal(body.max_tokens, 20000);
+});
+
+test("도구 입력의 배열이 JSON 글자로 오면 풀어 준다(Sonnet 지도 topics)", () => {
+  const fixed = parseStringifiedValues({ title: "[여행] 지도", topics: '[{"id":"A1","title":"주문"}]', note: "{not json" });
+  assert.deepEqual(fixed.topics, [{ id: "A1", title: "주문" }]);
+  assert.equal(fixed.title, "[여행] 지도");
+  assert.equal(fixed.note, "{not json");
 });

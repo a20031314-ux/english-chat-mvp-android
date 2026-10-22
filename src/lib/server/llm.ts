@@ -298,6 +298,26 @@ export function unwrapToolInput(input: unknown): Record<string, unknown> | undef
   return obj;
 }
 
+/**
+ * 도구 입력의 큰 배열·객체 값이 JSON 글자로 싸여 오면 풀어 준다 — Sonnet이 지도 `topics`를 "[{…}]" 글자로 보내
+ * 주제 0개로 버려진 적 있음(2026-10-22). 맨 위 값만, 풀어서 배열·객체가 될 때만 바꾼다.
+ */
+export function parseStringifiedValues(input: Record<string, unknown>): Record<string, unknown> {
+  const out: Record<string, unknown> = { ...input };
+  for (const [key, value] of Object.entries(input)) {
+    if (typeof value !== "string") continue;
+    const trimmed = value.trim();
+    if (!(trimmed.startsWith("[") || trimmed.startsWith("{"))) continue;
+    try {
+      const parsed = JSON.parse(trimmed) as unknown;
+      if (parsed && typeof parsed === "object") out[key] = parsed;
+    } catch {
+      // 글자 그대로 둔다.
+    }
+  }
+  return out;
+}
+
 /** 모델이 코드 울타리나 앞뒤 말을 붙였으면 JSON 덩어리만 남긴다. */
 export function extractJson(text: string): string {
   const trimmed = text.trim();
@@ -329,7 +349,8 @@ async function anthropicComplete(model: string, params: Omit<CreateParams, "mode
   };
   const raw = (data.content ?? []).filter((b) => b.type === "text").map((b) => b.text ?? "").join("");
   const tool = wantsJson ? (data.content ?? []).find((b) => b.type === "tool_use") : undefined;
-  const input = tool ? unwrapToolInput(tool.input) : undefined;
+  const unwrapped = tool ? unwrapToolInput(tool.input) : undefined;
+  const input = unwrapped ? parseStringifiedValues(unwrapped) : undefined;
   const text = input ? JSON.stringify(input) : wantsJson ? extractJson(raw) : raw;
   const prompt = data.usage?.input_tokens ?? 0;
   const completion = data.usage?.output_tokens ?? 0;
