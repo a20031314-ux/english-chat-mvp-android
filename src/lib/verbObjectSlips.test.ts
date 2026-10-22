@@ -23,10 +23,25 @@ test("뒤가 의문사 절이면 'to 사람'을 동사 바로 뒤에", () => {
   );
 });
 
+test("natural이 사람을 뺀 채 의문사 절을 이으면 'to 사람'을 넣는다", () => {
+  assert.equal(
+    promoteVerbObjectSlip("Please explain me what this means", "Can you explain what this means?")?.corrected,
+    "Please explain to me what this means",
+  );
+});
+
+test("때·곳 말 앞에 'to 사람'(natural을 따라)", () => {
+  assert.equal(
+    promoteVerbObjectSlip("My teacher explained us the rules yesterday", "My teacher explained the rules to us yesterday.")?.corrected,
+    "My teacher explained the rules to us yesterday",
+  );
+});
+
 test("natural이 다르게 바꿔 썼거나 그대로면 손대지 않는다", () => {
   assert.equal(promoteVerbObjectSlip("Can you explain me this word?", "What does this word mean?"), null);
   assert.equal(promoteVerbObjectSlip("Can you explain me this word?", "Can you explain me this word?"), null);
   assert.equal(promoteVerbObjectSlip("Can you explain this word to me?", "Can you explain this word to me?"), null);
+  assert.equal(promoteVerbObjectSlip("Can you introduce me to your friend?", "Could you introduce your friend?"), null);
   assert.equal(promoteVerbObjectSlip("Tell me the story.", "Tell me the story, please."), null); // tell은 사람을 바로 둔다
 });
 

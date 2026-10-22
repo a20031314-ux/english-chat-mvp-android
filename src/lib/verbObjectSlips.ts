@@ -12,6 +12,7 @@
 
 const VERB = "(explain(?:s|ed|ing)?|describ(?:e|es|ed|ing)|suggest(?:s|ed|ing)?|introduc(?:e|es|ed|ing))";
 const PERSON = "(me|us|him|her|them)";
+const escape = (word: string) => word.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const CLAUSE = /^(what|how|why|where|when|who|whom|which|whether|if|that)\b/i;
 
 export type VerbObjectSlip = { verb: string; person: string };
@@ -29,13 +30,34 @@ export function promoteVerbObjectSlip(
   const [, verb, person, what] = match;
   const naturalLow = natural.toLowerCase();
   const stem = stemOf(verb);
-  // natural이 같은 동사를 쓰고 "to 사람"으로 고쳤어야 한다 — 다른 말로 바꿔 쓴 natural은 판단 근거가 아니다.
+  // natural이 같은 동사를 쓰고 사람을 동사 바로 뒤에서 뺐어야 한다 — "to 사람"으로 옮겼거나(대부분),
+  // 사람 없이 바로 무엇을 이어 썼거나. 다른 말로 바꿔 쓴 natural은 판단 근거가 아니다.
   if (!naturalLow.includes(stem)) return null;
-  if (!new RegExp(`\\bto\\s+${person}\\b`, "i").test(natural)) return null;
   if (new RegExp(`\\b${stem}\\w*\\s+${person}\\s`, "i").test(natural)) return null;
-
   const object = what.trim();
-  const fixed = CLAUSE.test(object) ? `${verb} to ${person} ${object}` : `${verb} ${object} to ${person}`;
+  // "introduce me to her"처럼 이미 to가 붙은 꼴은 맞다.
+  if (/^to\b/i.test(object)) return null;
+  const objectWords = object.split(/\s+/);
+  const movedTo = new RegExp(`\\bto\\s+${person}\\b`, "i").test(natural);
+  const dropped = new RegExp(`\\b${stem}\\w*\\s+${escape(objectWords[0])}\\b`, "i").test(natural);
+  if (!movedTo && !dropped) return null;
+
+  let fixed: string;
+  if (CLAUSE.test(object)) {
+    fixed = `${verb} to ${person} ${object}`;
+  } else {
+    // natural에서 "… to 사람"이 붙은 자리를 따라간다(무엇 뒤의 때·곳 말 앞) — 못 찾으면 무엇 끝.
+    let cut = objectWords.length;
+    for (let k = objectWords.length; k >= 1; k--) {
+      const head = objectWords.slice(0, k).join(" ").toLowerCase();
+      if (naturalLow.includes(`${head} to ${person.toLowerCase()}`)) {
+        cut = k;
+        break;
+      }
+    }
+    const rest = objectWords.slice(cut).join(" ");
+    fixed = `${verb} ${objectWords.slice(0, cut).join(" ")} to ${person}${rest ? ` ${rest}` : ""}`;
+  }
   const next = corrected.replace(pattern, (_all, _v, _p, _w, tail: string) => fixed + tail);
   return { corrected: next, slips: [{ verb: verb.toLowerCase(), person: person.toLowerCase() }] };
 }
