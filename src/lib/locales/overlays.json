@@ -588,7 +588,13 @@
     "featureMapTop": "上部バー",
     "featureMapTabs": "下のタブ",
     "featureMapPreview": "このように表示されます",
-    "featureMapDm": "1対1・グループの会話"
+    "featureMapDm": "1対1・グループの会話",
+    "whatsNewProfileFactsTitle": "自分が伝わるプロフィール",
+    "whatsNewProfileFactsBody": "国籍・言語・興味を選ぶとプロフィールに表示されます。質問に答えてくれた人にお礼を伝えられます。",
+    "whatsNewGamesTitle": "Roomでゲーム",
+    "whatsNewGamesBody": "ホストが🎭でライアーゲームやマフィアを始めます。学習中の言語で説明して投票。聞いている人は🔮で推理します。",
+    "whatsNewIconsTitle": "アイコン・スタンプのパック",
+    "whatsNewIconsBody": "自分で作った画像をアップロードしてみんなと共有し、もらったアイコンをメッセージやコメントで送れます。"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1179,7 +1185,13 @@
     "featureMapTop": "顶部栏",
     "featureMapTabs": "底部标签",
     "featureMapPreview": "会显示成这样",
-    "featureMapDm": "一对一和群聊"
+    "featureMapDm": "一对一和群聊",
+    "whatsNewProfileFactsTitle": "展示自己的个人资料",
+    "whatsNewProfileFactsBody": "选择国籍、语言和兴趣，就会显示在个人资料上。可以向回答你问题的人表示感谢。",
+    "whatsNewGamesTitle": "Room 里的游戏",
+    "whatsNewGamesBody": "房主用 🎭 开始谁是卧底或黑手党。用正在学的语言描述并投票。旁听的人用 🔮 来推理。",
+    "whatsNewIconsTitle": "表情包",
+    "whatsNewIconsBody": "上传自己做的图片和大家分享，把收到的表情发到私信和评论里。"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1772,7 +1784,13 @@
     "featureMapTop": "Thanh trên cùng",
     "featureMapTabs": "Thẻ phía dưới",
     "featureMapPreview": "Sẽ trông như thế này",
-    "featureMapDm": "Trò chuyện 1:1 và nhóm"
+    "featureMapDm": "Trò chuyện 1:1 và nhóm",
+    "whatsNewProfileFactsTitle": "Hồ sơ thể hiện bạn",
+    "whatsNewProfileFactsBody": "Chọn quốc tịch, ngôn ngữ và sở thích để hiện trên hồ sơ. Bạn có thể cảm ơn người đã trả lời câu hỏi của mình.",
+    "whatsNewGamesTitle": "Trò chơi trong Room",
+    "whatsNewGamesBody": "Chủ phòng bắt đầu Trò kẻ nói dối hoặc Ma sói bằng 🎭. Mô tả và bình chọn bằng ngôn ngữ bạn đang học. Người nghe đoán bằng 🔮.",
+    "whatsNewIconsTitle": "Bộ biểu tượng và sticker",
+    "whatsNewIconsBody": "Tải lên hình bạn tự làm để chia sẻ với mọi người, và gửi biểu tượng bạn nhận được trong tin nhắn và bình luận."
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2370,7 +2388,13 @@
     "featureMapTop": "Barre du haut",
     "featureMapTabs": "Onglets du bas",
     "featureMapPreview": "Voici le résultat",
-    "featureMapDm": "Discussions privées et de groupe"
+    "featureMapDm": "Discussions privées et de groupe",
+    "whatsNewProfileFactsTitle": "Un profil qui vous ressemble",
+    "whatsNewProfileFactsBody": "Choisissez nationalité, langues et centres d’intérêt : ils s’affichent sur votre profil. Remerciez qui a répondu à vos questions.",
+    "whatsNewGamesTitle": "Des jeux dans Room",
+    "whatsNewGamesBody": "L’hôte lance le Jeu du menteur ou la Mafia avec 🎭. Décrivez et votez dans la langue que vous apprenez. Les auditeurs devinent avec 🔮.",
+    "whatsNewIconsTitle": "Packs d’icônes et de stickers",
+    "whatsNewIconsBody": "Envoyez des images que vous avez créées pour les partager avec tous, et utilisez les icônes reçues dans les messages et commentaires."
   },
   "it": {
     "archive": "Report",
@@ -3159,7 +3183,13 @@
     "featureMapTop": "Barra in alto",
     "featureMapTabs": "Schede in basso",
     "featureMapPreview": "Ecco come apparirà",
-    "featureMapDm": "Chat private e di gruppo"
+    "featureMapDm": "Chat private e di gruppo",
+    "whatsNewProfileFactsTitle": "Un profilo che ti racconta",
+    "whatsNewProfileFactsBody": "Scegli nazionalità, lingue e interessi: compariranno sul profilo. Ringrazia chi ha risposto alle tue domande.",
+    "whatsNewGamesTitle": "Giochi in Room",
+    "whatsNewGamesBody": "L’host avvia il Gioco del bugiardo o Mafia con 🎭. Descrivi e vota nella lingua che studi. Chi ascolta indovina con 🔮.",
+    "whatsNewIconsTitle": "Pacchetti di icone e sticker",
+    "whatsNewIconsBody": "Carica immagini fatte da te per condividerle con tutti e invia le icone che ricevi nei messaggi e nei commenti."
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3760,7 +3790,13 @@
     "featureMapTop": "Barra superior",
     "featureMapTabs": "Abas inferiores",
     "featureMapPreview": "Vai ficar assim",
-    "featureMapDm": "Conversas individuais e em grupo"
+    "featureMapDm": "Conversas individuais e em grupo",
+    "whatsNewProfileFactsTitle": "Um perfil que mostra você",
+    "whatsNewProfileFactsBody": "Escolha nacionalidade, idiomas e interesses e eles aparecem no seu perfil. Agradeça quem respondeu suas perguntas.",
+    "whatsNewGamesTitle": "Jogos na Room",
+    "whatsNewGamesBody": "O anfitrião começa o Jogo do mentiroso ou a Máfia com 🎭. Descreva e vote no idioma que você aprende. Quem ouve dá palpites com 🔮.",
+    "whatsNewIconsTitle": "Pacotes de ícones e figurinhas",
+    "whatsNewIconsBody": "Envie imagens que você fez para compartilhar com todos e mande os ícones que pegar em mensagens e comentários."
   },
   "ru": {
     "archive": "Отчёты",
@@ -4547,7 +4583,13 @@
     "featureMapTop": "Верхняя панель",
     "featureMapTabs": "Нижние вкладки",
     "featureMapPreview": "Так это будет выглядеть",
-    "featureMapDm": "Личные и групповые чаты"
+    "featureMapDm": "Личные и групповые чаты",
+    "whatsNewProfileFactsTitle": "Профиль, который рассказывает о вас",
+    "whatsNewProfileFactsBody": "Выберите гражданство, языки и интересы — они появятся в профиле. Благодарите тех, кто ответил на ваши вопросы.",
+    "whatsNewGamesTitle": "Игры в Room",
+    "whatsNewGamesBody": "Ведущий запускает игру «Лжец» или «Мафию» через 🎭. Описывайте и голосуйте на изучаемом языке. Слушатели угадывают через 🔮.",
+    "whatsNewIconsTitle": "Наборы иконок и стикеров",
+    "whatsNewIconsBody": "Загружайте свои картинки, чтобы делиться со всеми, и отправляйте полученные иконки в сообщениях и комментариях."
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5144,7 +5186,13 @@
     "featureMapTop": "Bilah atas",
     "featureMapTabs": "Tab bawah",
     "featureMapPreview": "Akan terlihat seperti ini",
-    "featureMapDm": "Obrolan 1:1 dan grup"
+    "featureMapDm": "Obrolan 1:1 dan grup",
+    "whatsNewProfileFactsTitle": "Profil yang menunjukkan dirimu",
+    "whatsNewProfileFactsBody": "Pilih kewarganegaraan, bahasa, dan minat agar tampil di profil. Kamu bisa berterima kasih kepada orang yang menjawab pertanyaanmu.",
+    "whatsNewGamesTitle": "Game di Room",
+    "whatsNewGamesBody": "Host memulai Permainan pembohong atau Mafia dengan 🎭. Jelaskan dan pilih dalam bahasa yang kamu pelajari. Pendengar menebak dengan 🔮.",
+    "whatsNewIconsTitle": "Paket ikon dan stiker",
+    "whatsNewIconsBody": "Unggah gambar buatanmu untuk dibagikan ke semua orang, dan kirim ikon yang kamu ambil di pesan dan komentar."
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5735,7 +5783,13 @@
     "featureMapTop": "الشريط العلوي",
     "featureMapTabs": "علامات التبويب السفلية",
     "featureMapPreview": "هكذا سيبدو",
-    "featureMapDm": "المحادثات الفردية والجماعية"
+    "featureMapDm": "المحادثات الفردية والجماعية",
+    "whatsNewProfileFactsTitle": "ملف شخصي يعبّر عنك",
+    "whatsNewProfileFactsBody": "اختر جنسيتك ولغاتك واهتماماتك لتظهر في ملفك الشخصي. يمكنك شكر من أجاب عن أسئلتك.",
+    "whatsNewGamesTitle": "ألعاب في Room",
+    "whatsNewGamesBody": "يبدأ المضيف لعبة الكاذب أو المافيا بزر 🎭. صِف وصوّت باللغة التي تتعلمها، ويخمّن المستمعون عبر 🔮.",
+    "whatsNewIconsTitle": "حزم الأيقونات والملصقات",
+    "whatsNewIconsBody": "ارفع صورًا صنعتها لتشاركها مع الجميع، وأرسل الأيقونات التي تحصل عليها في الرسائل والتعليقات."
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6326,7 +6380,13 @@
     "featureMapTop": "แถบด้านบน",
     "featureMapTabs": "แท็บด้านล่าง",
     "featureMapPreview": "จะแสดงแบบนี้",
-    "featureMapDm": "แชตตัวต่อตัวและแชตกลุ่ม"
+    "featureMapDm": "แชตตัวต่อตัวและแชตกลุ่ม",
+    "whatsNewProfileFactsTitle": "โปรไฟล์ที่บอกความเป็นคุณ",
+    "whatsNewProfileFactsBody": "เลือกสัญชาติ ภาษา และความสนใจ แล้วจะแสดงในโปรไฟล์ ขอบคุณคนที่ตอบคำถามของคุณได้",
+    "whatsNewGamesTitle": "เกมใน Room",
+    "whatsNewGamesBody": "เจ้าของห้องเริ่มเกมคนโกหกหรือมาเฟียด้วย 🎭 อธิบายและโหวตด้วยภาษาที่เรียน คนฟังทายได้ด้วย 🔮",
+    "whatsNewIconsTitle": "ชุดไอคอนและสติกเกอร์",
+    "whatsNewIconsBody": "อัปโหลดรูปที่ทำเองเพื่อแบ่งปันกับทุกคน และส่งไอคอนที่ได้มาในข้อความและความคิดเห็น"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -6917,6 +6977,12 @@
     "featureMapTop": "ऊपर की पट्टी",
     "featureMapTabs": "नीचे के टैब",
     "featureMapPreview": "ऐसा दिखेगा",
-    "featureMapDm": "एक-से-एक और ग्रुप चैट"
+    "featureMapDm": "एक-से-एक और ग्रुप चैट",
+    "whatsNewProfileFactsTitle": "आपको दिखाने वाली प्रोफ़ाइल",
+    "whatsNewProfileFactsBody": "राष्ट्रीयता, भाषाएँ और रुचियाँ चुनें, वे प्रोफ़ाइल पर दिखेंगी। जिन्होंने आपके सवालों के जवाब दिए उन्हें धन्यवाद दें।",
+    "whatsNewGamesTitle": "Room में खेल",
+    "whatsNewGamesBody": "होस्ट 🎭 से झूठा कौन खेल या माफ़िया शुरू करता है। सीखी जा रही भाषा में बताएँ और वोट करें। सुनने वाले 🔮 से अंदाज़ा लगाते हैं।",
+    "whatsNewIconsTitle": "आइकन और स्टिकर पैक",
+    "whatsNewIconsBody": "अपनी बनाई तस्वीरें अपलोड करके सबसे साझा करें, और मिले आइकन संदेशों और टिप्पणियों में भेजें।"
   }
 }

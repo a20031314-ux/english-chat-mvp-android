@@ -74,9 +74,15 @@ function PackCard({ pack, t, onOpen }: { pack: IconPack; t: IconCopy; onOpen: ()
           </span>
           <span className="shrink-0 text-meta text-slate-400">{fill(t.uses, { n: pack.uses ?? 0 })}</span>
         </span>
-        <span className="mt-0.5 block truncate text-meta text-slate-400" dir="auto">
-          {fill(t.by, { name: pack.ownerName || "?" })} · {pack.license === "cc0" ? "CC0" : "CC BY 4.0"}
-          {pack.added ? ` · ${t.collected}` : ""}
+        {/* 조각마다 bdi: 아랍어 앱에서 라틴 이름·CC0·숫자가 한 덩어리로 섞이지 않게(점검 10-23). */}
+        <span className="mt-0.5 block truncate text-meta text-slate-400">
+          <bdi>{fill(t.by, { name: pack.ownerName || "?" })}</bdi> · <bdi>{pack.license === "cc0" ? "CC0" : "CC BY 4.0"}</bdi>
+          {pack.added ? (
+            <>
+              {" · "}
+              <bdi>{t.collected}</bdi>
+            </>
+          ) : null}
         </span>
         {pack.icons.length ? (
           <span className="mt-2 flex gap-1.5 overflow-hidden">
@@ -313,12 +319,12 @@ function PackSheet({
 
   return (
     <Sheet title={pack.name} onClose={onClose} closeLabel={t.close}>
-      <p className="-mt-2 mb-3 text-meta text-slate-400" dir="auto">
-        {fill(t.by, { name: pack.ownerName || "?" })} ·{" "}
+      <p className="-mt-2 mb-3 text-meta text-slate-400">
+        <bdi>{fill(t.by, { name: pack.ownerName || "?" })}</bdi> ·{" "}
         <a href={ICON_LICENSE_URL[pack.license]} target="_blank" rel="noreferrer" className="text-info">
-          {pack.license === "cc0" ? "CC0" : "CC BY 4.0"}
+          <bdi>{pack.license === "cc0" ? "CC0" : "CC BY 4.0"}</bdi>
         </a>{" "}
-        · {fill(t.count, { n: pack.icons.length })} · {fill(t.uses, { n: pack.uses ?? 0 })}
+        · <bdi>{fill(t.count, { n: pack.icons.length })}</bdi> · <bdi>{fill(t.uses, { n: pack.uses ?? 0 })}</bdi>
       </p>
       {pack.icons.length ? (
         <ul className="grid grid-cols-4 gap-2">

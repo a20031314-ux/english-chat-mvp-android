@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-23e";
+export const GUIDE_VERSION = "2026-10-23f";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -472,7 +472,8 @@ export const GUIDE_KO: Guide = {
         "heading": "사람 찾기",
         "body": [
           "최근에 온 학습자의 프로필이 보여요. 사진을 누르면 프로필이 열리고, 팔로우하거나 메시지를 보낼 수 있어요.",
-          "차단·신고도 프로필에서 해요."
+          "차단·신고도 프로필에서 해요.",
+          "프로필에서 국적·모국어·관심사를 칩으로 고르고, 다른 사람에게 보일 칸을 켜고 꺼요. 내 질문에 답해 준 사람에게는 ‘🙌 도움됐어요’, 남의 소개·올린 글은 ‘한국어로 보기’로 번역해요."
         ],
         "shot": "r69-people"
       },
@@ -494,7 +495,8 @@ export const GUIDE_KO: Guide = {
         "heading": "메시지와 통화",
         "body": [
           "첫 메시지는 요청으로 가고, 상대가 답하면 대화가 열려요. 대화 위 📞로 통화하고, 통화 자막은 기록으로 남아요.",
-          "1:1 통화에서는 카메라를 켜고 얼굴을 보며 이야기할 수 있어요(처음엔 꺼져 있어요)."
+          "1:1 통화에서는 카메라를 켜고 얼굴을 보며 이야기할 수 있어요(처음엔 꺼져 있어요).",
+          "내가 보낸 줄을 길게 누르면 지울 수 있어요(상대에게서도 사라져요). 목록에서 줄 끝 ⋯을 누르면 대화를 내 목록에서 지워요."
         ]
       },
       {
@@ -507,7 +509,8 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "게시판",
         "body": [
-          "배우는 언어로 글을 올리고 댓글을 달아요. 고치고 지우는 건 쓴 사람만 할 수 있어요. 글 아래 ‘한국어로 보기’로 번역하고, 이름을 누르면 팔로우·메시지·신고."
+          "배우는 언어로 글을 올리고 댓글을 달아요. 고치고 지우는 건 쓴 사람만 할 수 있어요. 글 아래 ‘한국어로 보기’로 번역하고, 이름을 누르면 팔로우·메시지·신고.",
+          "글마다 ♡ 좋아요를 누를 수 있어요. 사진을 붙이면 목록에도 작게 보여요."
         ],
         "shot": "r69-board"
       },
@@ -885,7 +888,8 @@ export const GUIDE_EN: Guide = {
         "heading": "Find people",
         "body": [
           "Profiles of learners who were here lately. Tap a photo to open a profile, then follow or send a message.",
-          "Blocking and reporting are on the profile too."
+          "Blocking and reporting are on the profile too.",
+          "In your profile, pick your nationality, native language and interests as chips, and turn on or off what others see. Tap “🙌 Helpful” for someone who answered your question; “See in English” translates others’ intros and posts."
         ],
         "shot": "r69-people"
       },
@@ -907,7 +911,8 @@ export const GUIDE_EN: Guide = {
         "heading": "Messages and calls",
         "body": [
           "Your first message goes as a request; once they reply, the conversation opens. Call with 📞 above the conversation; the call's captions stay as a record.",
-          "In a 1:1 call you can turn on the camera and talk face to face (it starts off)."
+          "In a 1:1 call you can turn on the camera and talk face to face (it starts off).",
+          "Press and hold a line you sent to delete it (it disappears for them too). Tap ⋯ at the end of a row to remove the chat from your list."
         ]
       },
       {
@@ -920,7 +925,8 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Board",
         "body": [
-          "Post in the language you’re learning and comment. Only the writer can edit or delete. “See in English” translates a post; tap a name to follow, message or report."
+          "Post in the language you’re learning and comment. Only the writer can edit or delete. “See in English” translates a post; tap a name to follow, message or report.",
+          "Tap ♡ Like on any post. Photos you attach also show small in the list."
         ],
         "shot": "r69-board"
       },

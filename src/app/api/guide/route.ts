@@ -7,6 +7,7 @@ import videoBefore267 from "@/lib/guide/videoBefore267.json";
 import roleplayBefore267 from "@/lib/guide/roleplayBefore267.json";
 import roomsBefore269 from "@/lib/guide/roomsBefore269.json";
 import roomsBefore270 from "@/lib/guide/roomsBefore270.json";
+import roomsBefore272 from "@/lib/guide/roomsBefore272.json";
 import mapBefore269 from "@/lib/guide/mapBefore269.json";
 import chatBefore271 from "@/lib/guide/chatBefore271.json";
 
@@ -30,7 +31,21 @@ export async function OPTIONS(request: NextRequest) {
 export async function GET(request: NextRequest) {
   const asked = request.nextUrl.searchParams.get("lang")?.trim().toLowerCase() ?? "";
   const translated = (translations as Partial<Record<string, Guide>>)[asked];
-  const full = asked === "ko" ? GUIDE_KO : asked === "en" ? GUIDE_EN : (translated ?? GUIDE_EN);
+  const newest = asked === "ko" ? GUIDE_KO : asked === "en" ? GUIDE_EN : (translated ?? GUIDE_EN);
+  // 2.72(`r272=1`)부터: 프로필 칩·도움됐어요·보낸 줄 지우기·대화 목록 ⋯·게시판 ♡가 있는 글. 그 전 빌드는 화면에 없는 것을 읽지 않게
+  // 그 세 칸만 예전 글(스냅숏, 칸 id로 바꿔 끼움 — 칸 순서는 그대로).
+  const before272 = request.nextUrl.searchParams.get("r272") === "1"
+    ? undefined
+    : (roomsBefore272 as Partial<Record<string, Record<string, Guide["rooms"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  const full: Guide = before272
+    ? {
+        ...newest,
+        rooms: {
+          ...newest.rooms,
+          sections: newest.rooms.sections.map((section, index) => before272[GUIDE_SECTION_IDS.rooms[index]] ?? section),
+        },
+      }
+    : newest;
   // 게임 칸(라이어 게임 room.game·마피아 room.mafia, 2026-10-23)은 게임이 있는 빌드(`game=1`)만. 옛 빌드는 칸 순서로 칸 이름을 붙이므로(GUIDE_SECTION_IDS)
   // 그 칸을 빼서 돌려준다 — 넣은 채로 주면 옛 앱에서 '방장이라면' 자리에 게임 글이 보인다.
   const withGame = request.nextUrl.searchParams.get("game") === "1";

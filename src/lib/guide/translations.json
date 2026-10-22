@@ -350,7 +350,8 @@
           "heading": "Buscar personas",
           "body": [
             "Perfiles de quienes estuvieron hace poco. Toca una foto para abrir el perfil y síguelo o escríbele.",
-            "También puedes bloquear o denunciar desde el perfil."
+            "También puedes bloquear o denunciar desde el perfil.",
+            "En tu perfil elige con etiquetas tu nacionalidad, lengua materna e intereses, y activa o desactiva lo que ven los demás. Toca «🙌 Me ayudó» a quien respondió tu pregunta; «Ver en español» traduce presentaciones y publicaciones."
           ],
           "shot": "r69-people"
         },
@@ -372,7 +373,8 @@
           "heading": "Mensajes y llamadas",
           "body": [
             "Tu primer mensaje llega como solicitud; cuando responda, se abre la conversación. Llama con 📞 encima de la conversación; los subtítulos de la llamada quedan guardados.",
-            "En una llamada 1:1 puedes encender la cámara y hablar cara a cara (empieza apagada)."
+            "En una llamada 1:1 puedes encender la cámara y hablar cara a cara (empieza apagada).",
+            "Mantén pulsada una línea que enviaste para borrarla (también desaparece para la otra persona). Toca ⋯ al final de una fila para quitar la conversación de tu lista."
           ]
         },
         {
@@ -385,7 +387,8 @@
         {
           "heading": "Tablón",
           "body": [
-            "Publica en el idioma que aprendes y comenta. Solo quien escribe puede editar o borrar. “Ver en español” traduce; toca un nombre para seguir, escribir o denunciar."
+            "Publica en el idioma que aprendes y comenta. Solo quien escribe puede editar o borrar. “Ver en español” traduce; toca un nombre para seguir, escribir o denunciar.",
+            "Toca ♡ Me gusta en cualquier publicación. Las fotos que adjuntes también se ven pequeñas en la lista."
           ],
           "shot": "r69-board"
         },
@@ -762,7 +765,8 @@
           "heading": "人を探す",
           "body": [
             "最近来た学習者のプロフィールが並びます。写真をタップするとプロフィールが開き、フォローやメッセージができます。",
-            "ブロックや報告もプロフィールからできます。"
+            "ブロックや報告もプロフィールからできます。",
+            "プロフィールで国籍・母語・興味をチップで選び、ほかの人に見せる欄をオン・オフできます。質問に答えてくれた人には「🙌 助かった」、ほかの人の自己紹介や投稿は「日本語で見る」で翻訳します。"
           ],
           "shot": "r69-people"
         },
@@ -784,7 +788,8 @@
           "heading": "メッセージと通話",
           "body": [
             "最初のメッセージはリクエストとして届き、返信があると会話が開きます。会話の上の📞で通話でき、通話の字幕は記録に残ります。",
-            "1対1の通話ではカメラをオンにして顔を見ながら話せます（最初はオフです）。"
+            "1対1の通話ではカメラをオンにして顔を見ながら話せます（最初はオフです）。",
+            "自分が送った行を長押しすると削除できます（相手からも消えます）。一覧の行の端の⋯で、会話を自分の一覧から消せます。"
           ]
         },
         {
@@ -797,7 +802,8 @@
         {
           "heading": "掲示板",
           "body": [
-            "学んでいる言語で投稿・コメントできます。編集・削除は書いた人だけ。「日本語で見る」で翻訳、名前を押すとフォロー・メッセージ・通報。"
+            "学んでいる言語で投稿・コメントできます。編集・削除は書いた人だけ。「日本語で見る」で翻訳、名前を押すとフォロー・メッセージ・通報。",
+            "投稿ごとに♡いいねを押せます。写真を付けると一覧にも小さく表示されます。"
           ],
           "shot": "r69-board"
         },
@@ -1174,7 +1180,8 @@
           "heading": "找人",
           "body": [
             "这里是最近来过的学习者的资料。点头像打开资料，可以关注或发消息。",
-            "拉黑和举报也在资料页。"
+            "拉黑和举报也在资料页。",
+            "在个人资料里用标签选择国籍、母语和兴趣，并开关别人能看到的栏目。回答了你问题的人，可以点“🙌 有帮助”；别人的自我介绍和帖子可以用“用中文查看”翻译。"
           ],
           "shot": "r69-people"
         },
@@ -1196,7 +1203,8 @@
           "heading": "消息和通话",
           "body": [
             "第一条消息会作为请求发出，对方回复后对话就会打开。点对话上方的📞通话，通话字幕会作为记录保留。",
-            "一对一通话时可以打开摄像头面对面聊天（默认关闭）。"
+            "一对一通话时可以打开摄像头面对面聊天（默认关闭）。",
+            "长按自己发出的消息即可删除（对方那边也会消失）。点列表行末的 ⋯ 可以把对话从自己的列表中删除。"
           ]
         },
         {
@@ -1209,7 +1217,8 @@
         {
           "heading": "论坛",
           "body": [
-            "用在学的语言发帖、评论。只有作者能编辑或删除。“用中文查看”可翻译，点名字可关注、发消息或举报。"
+            "用在学的语言发帖、评论。只有作者能编辑或删除。“用中文查看”可翻译，点名字可关注、发消息或举报。",
+            "每篇帖子都可以点 ♡ 点赞。附上的照片在列表里也会小图显示。"
           ],
           "shot": "r69-board"
         },
@@ -1586,7 +1595,8 @@
           "heading": "Tìm người",
           "body": [
             "Hồ sơ của những người học vừa ghé. Chạm ảnh để mở hồ sơ, rồi theo dõi hoặc nhắn tin.",
-            "Chặn và báo cáo cũng ở hồ sơ."
+            "Chặn và báo cáo cũng ở hồ sơ.",
+            "Trong hồ sơ, chọn quốc tịch, tiếng mẹ đẻ và sở thích bằng các thẻ, rồi bật hoặc tắt phần người khác thấy. Bấm “🙌 Hữu ích” cho người đã trả lời câu hỏi của bạn; “Xem bằng tiếng Việt” dịch phần giới thiệu và bài đăng của người khác."
           ],
           "shot": "r69-people"
         },
@@ -1608,7 +1618,8 @@
           "heading": "Tin nhắn và cuộc gọi",
           "body": [
             "Tin nhắn đầu tiên được gửi dưới dạng lời mời; khi họ trả lời, cuộc trò chuyện sẽ mở. Gọi bằng 📞 phía trên cuộc trò chuyện; phụ đề cuộc gọi được lưu lại.",
-            "Trong cuộc gọi 1:1, bạn có thể bật camera để nói chuyện mặt đối mặt (mặc định tắt)."
+            "Trong cuộc gọi 1:1, bạn có thể bật camera để nói chuyện mặt đối mặt (mặc định tắt).",
+            "Nhấn giữ một dòng bạn đã gửi để xóa (bên kia cũng không còn thấy). Bấm ⋯ ở cuối một dòng trong danh sách để xóa cuộc trò chuyện khỏi danh sách của bạn."
           ]
         },
         {
@@ -1621,7 +1632,8 @@
         {
           "heading": "Bảng tin",
           "body": [
-            "Đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết mới sửa hoặc xóa được. “Xem bằng tiếng Việt” để dịch; chạm vào tên để theo dõi, nhắn tin hoặc báo cáo."
+            "Đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết mới sửa hoặc xóa được. “Xem bằng tiếng Việt” để dịch; chạm vào tên để theo dõi, nhắn tin hoặc báo cáo.",
+            "Bấm ♡ Thích ở mỗi bài. Ảnh bạn đính kèm cũng hiện nhỏ trong danh sách."
           ],
           "shot": "r69-board"
         },
@@ -1998,7 +2010,8 @@
           "heading": "Trouver des gens",
           "body": [
             "Les profils des personnes passées récemment. Touchez une photo pour ouvrir le profil, puis suivez ou écrivez.",
-            "Bloquer et signaler se font aussi depuis le profil."
+            "Bloquer et signaler se font aussi depuis le profil.",
+            "Dans votre profil, choisissez en étiquettes votre nationalité, votre langue maternelle et vos centres d’intérêt, et activez ou non ce que les autres voient. Touchez « 🙌 Utile » pour qui a répondu à votre question ; « Voir en français » traduit les présentations et les posts."
           ],
           "shot": "r69-people"
         },
@@ -2020,7 +2033,8 @@
           "heading": "Messages et appels",
           "body": [
             "Votre premier message part comme une demande ; après sa réponse, la conversation s’ouvre. Appelez avec 📞 au-dessus de la conversation ; les sous-titres de l’appel restent en mémoire.",
-            "Pendant un appel à deux, tu peux activer la caméra et parler face à face (elle est éteinte au départ)."
+            "Pendant un appel à deux, tu peux activer la caméra et parler face à face (elle est éteinte au départ).",
+            "Appuyez longuement sur une ligne que vous avez envoyée pour la supprimer (elle disparaît aussi chez l’autre). Touchez ⋯ au bout d’une ligne de la liste pour retirer la conversation de votre liste."
           ]
         },
         {
@@ -2033,7 +2047,8 @@
         {
           "heading": "Forum",
           "body": [
-            "Publiez dans la langue apprise et commentez. Seul l'auteur peut modifier ou supprimer. « Voir en français » traduit ; touchez un nom pour suivre, écrire ou signaler."
+            "Publiez dans la langue apprise et commentez. Seul l'auteur peut modifier ou supprimer. « Voir en français » traduit ; touchez un nom pour suivre, écrire ou signaler.",
+            "Touchez ♡ J’aime sur un post. Les photos jointes s’affichent aussi en petit dans la liste."
           ],
           "shot": "r69-board"
         },
@@ -2410,7 +2425,8 @@
           "heading": "Trovare persone",
           "body": [
             "I profili di chi è passato di recente. Tocca una foto per aprire il profilo, poi segui o scrivi.",
-            "Blocca e segnala dal profilo."
+            "Blocca e segnala dal profilo.",
+            "Nel profilo scegli con le etichette nazionalità, lingua madre e interessi, e attiva o disattiva ciò che vedono gli altri. Tocca «🙌 Utile» per chi ha risposto alla tua domanda; «Vedi in italiano» traduce presentazioni e post."
           ],
           "shot": "r69-people"
         },
@@ -2432,7 +2448,8 @@
           "heading": "Messaggi e chiamate",
           "body": [
             "Il primo messaggio arriva come richiesta; quando risponde, la conversazione si apre. Chiama con 📞 sopra la conversazione; i sottotitoli della chiamata restano salvati.",
-            "In una chiamata 1:1 puoi accendere la fotocamera e parlare faccia a faccia (all'inizio è spenta)."
+            "In una chiamata 1:1 puoi accendere la fotocamera e parlare faccia a faccia (all'inizio è spenta).",
+            "Tieni premuta una riga che hai inviato per eliminarla (sparisce anche per l’altra persona). Tocca ⋯ in fondo a una riga dell’elenco per togliere la chat dal tuo elenco."
           ]
         },
         {
@@ -2445,7 +2462,8 @@
         {
           "heading": "Bacheca",
           "body": [
-            "Pubblica nella lingua che impari e commenta. Solo chi scrive può modificare o eliminare. “Vedi in italiano” traduce; tocca un nome per seguire, scrivere o segnalare."
+            "Pubblica nella lingua che impari e commenta. Solo chi scrive può modificare o eliminare. “Vedi in italiano” traduce; tocca un nome per seguire, scrivere o segnalare.",
+            "Tocca ♡ Mi piace su qualsiasi post. Le foto allegate si vedono piccole anche nell’elenco."
           ],
           "shot": "r69-board"
         },
@@ -2822,7 +2840,8 @@
           "heading": "Encontrar pessoas",
           "body": [
             "Perfis de quem esteve aqui há pouco. Toque numa foto para abrir o perfil e siga ou envie mensagem.",
-            "Bloquear e denunciar também é no perfil."
+            "Bloquear e denunciar também é no perfil.",
+            "No perfil, escolha em etiquetas sua nacionalidade, língua materna e interesses, e ative ou desative o que os outros veem. Toque em “🙌 Ajudou” para quem respondeu sua pergunta; “Ver em português” traduz apresentações e posts."
           ],
           "shot": "r69-people"
         },
@@ -2844,7 +2863,8 @@
           "heading": "Mensagens e chamadas",
           "body": [
             "A primeira mensagem vai como pedido; depois da resposta, a conversa abre. Ligue com 📞 acima da conversa; as legendas da chamada ficam guardadas.",
-            "Em uma chamada 1:1 você pode ligar a câmera e conversar cara a cara (começa desligada)."
+            "Em uma chamada 1:1 você pode ligar a câmera e conversar cara a cara (começa desligada).",
+            "Toque e segure uma linha que você enviou para apagá-la (some para a outra pessoa também). Toque em ⋯ no fim de uma linha da lista para tirar a conversa da sua lista."
           ]
         },
         {
@@ -2857,7 +2877,8 @@
         {
           "heading": "Mural",
           "body": [
-            "Publique no idioma que você aprende e comente. Só quem escreveu pode editar ou excluir. “Ver em português” traduz; toque num nome para seguir, mandar mensagem ou denunciar."
+            "Publique no idioma que você aprende e comente. Só quem escreveu pode editar ou excluir. “Ver em português” traduz; toque num nome para seguir, mandar mensagem ou denunciar.",
+            "Toque em ♡ Curtir em qualquer post. As fotos anexadas também aparecem pequenas na lista."
           ],
           "shot": "r69-board"
         },
@@ -3234,7 +3255,8 @@
           "heading": "Найти людей",
           "body": [
             "Профили тех, кто заходил недавно. Нажмите на фото, чтобы открыть профиль, подписаться или написать.",
-            "Заблокировать и пожаловаться тоже можно в профиле."
+            "Заблокировать и пожаловаться тоже можно в профиле.",
+            "В профиле выберите метками гражданство, родной язык и интересы и включайте или скрывайте то, что видят другие. Нажмите «🙌 Помогло» тому, кто ответил на ваш вопрос; «Перевести на русский» переводит чужие описания и посты."
           ],
           "shot": "r69-people"
         },
@@ -3256,7 +3278,8 @@
           "heading": "Сообщения и звонки",
           "body": [
             "Первое сообщение уходит как запрос; после ответа переписка открывается. Звоните через 📞 над перепиской; субтитры звонка сохраняются.",
-            "В звонке один на один можно включить камеру и говорить лицом к лицу (сначала она выключена)."
+            "В звонке один на один можно включить камеру и говорить лицом к лицу (сначала она выключена).",
+            "Удерживайте отправленную вами строку, чтобы удалить её (она пропадёт и у собеседника). Нажмите ⋯ в конце строки списка, чтобы убрать переписку из своего списка."
           ]
         },
         {
@@ -3269,7 +3292,8 @@
         {
           "heading": "Доска",
           "body": [
-            "Публикуйте на изучаемом языке и комментируйте. Изменять и удалять может только автор. «Перевести на русский» переводит; нажмите на имя, чтобы подписаться, написать или пожаловаться."
+            "Публикуйте на изучаемом языке и комментируйте. Изменять и удалять может только автор. «Перевести на русский» переводит; нажмите на имя, чтобы подписаться, написать или пожаловаться.",
+            "Нажимайте ♡ Нравится под постами. Прикреплённые фото видны маленькими и в списке."
           ],
           "shot": "r69-board"
         },
@@ -3646,7 +3670,8 @@
           "heading": "Cari orang",
           "body": [
             "Profil pelajar yang baru mampir. Ketuk foto untuk membuka profil, lalu ikuti atau kirim pesan.",
-            "Blokir dan laporkan juga dari profil."
+            "Blokir dan laporkan juga dari profil.",
+            "Di profil, pilih kewarganegaraan, bahasa ibu, dan minat lewat chip, lalu nyalakan atau matikan bagian yang dilihat orang lain. Ketuk “🙌 Membantu” untuk orang yang menjawab pertanyaanmu; “Lihat dalam bahasa Indonesia” menerjemahkan perkenalan dan postingan orang lain."
           ],
           "shot": "r69-people"
         },
@@ -3668,7 +3693,8 @@
           "heading": "Pesan dan panggilan",
           "body": [
             "Pesan pertama terkirim sebagai permintaan; setelah dibalas, percakapan terbuka. Telepon dengan 📞 di atas percakapan; teks panggilan tersimpan.",
-            "Dalam panggilan 1:1 kamu bisa menyalakan kamera dan bicara tatap muka (awalnya mati)."
+            "Dalam panggilan 1:1 kamu bisa menyalakan kamera dan bicara tatap muka (awalnya mati).",
+            "Tekan lama baris yang kamu kirim untuk menghapusnya (hilang juga di pihak lawan bicara). Ketuk ⋯ di ujung baris daftar untuk menghapus obrolan dari daftarmu."
           ]
         },
         {
@@ -3681,7 +3707,8 @@
         {
           "heading": "Papan",
           "body": [
-            "Tulis dalam bahasa yang dipelajari dan berkomentar. Hanya penulis yang bisa mengubah atau menghapus. “Lihat dalam bahasa Indonesia” menerjemahkan; ketuk nama untuk mengikuti, mengirim pesan, atau melapor."
+            "Tulis dalam bahasa yang dipelajari dan berkomentar. Hanya penulis yang bisa mengubah atau menghapus. “Lihat dalam bahasa Indonesia” menerjemahkan; ketuk nama untuk mengikuti, mengirim pesan, atau melapor.",
+            "Ketuk ♡ Suka di postingan mana pun. Foto yang dilampirkan juga tampil kecil di daftar."
           ],
           "shot": "r69-board"
         },
@@ -4058,7 +4085,8 @@
           "heading": "البحث عن أشخاص",
           "body": [
             "ملفات من زاروا مؤخرًا. اضغط على الصورة لفتح الملف الشخصي، ثم تابِع أو راسل.",
-            "الحظر والإبلاغ من الملف الشخصي أيضًا."
+            "الحظر والإبلاغ من الملف الشخصي أيضًا.",
+            "في ملفك الشخصي اختر بالرقاقات جنسيتك ولغتك الأم واهتماماتك، وشغّل أو أخفِ ما يراه الآخرون. اضغط «🙌 مفيد» لمن أجاب عن سؤالك، و«عرض باللغة العربية» يترجم تعريفات الآخرين ومنشوراتهم."
           ],
           "shot": "r69-people"
         },
@@ -4080,7 +4108,8 @@
           "heading": "الرسائل والمكالمات",
           "body": [
             "تصل رسالتك الأولى كطلب، وبعد الرد تُفتح المحادثة. اتصل بـ📞 فوق المحادثة، وتبقى ترجمة المكالمة سجلًا.",
-            "في المكالمة الفردية يمكنك تشغيل الكاميرا والتحدث وجهًا لوجه (تكون مطفأة في البداية)."
+            "في المكالمة الفردية يمكنك تشغيل الكاميرا والتحدث وجهًا لوجه (تكون مطفأة في البداية).",
+            "اضغط مطولًا على سطر أرسلته لحذفه (يختفي عند الطرف الآخر أيضًا). اضغط ⋯ في آخر الصف لإزالة المحادثة من قائمتك."
           ]
         },
         {
@@ -4093,7 +4122,8 @@
         {
           "heading": "اللوحة",
           "body": [
-            "انشر باللغة التي تتعلمها وعلّق. الكاتب وحده يعدّل أو يحذف. «عرض باللغة العربية» يترجم المنشور، واضغط الاسم للمتابعة أو المراسلة أو الإبلاغ."
+            "انشر باللغة التي تتعلمها وعلّق. الكاتب وحده يعدّل أو يحذف. «عرض باللغة العربية» يترجم المنشور، واضغط الاسم للمتابعة أو المراسلة أو الإبلاغ.",
+            "اضغط ♡ إعجاب على أي منشور. الصور المرفقة تظهر صغيرة في القائمة أيضًا."
           ],
           "shot": "r69-board"
         },
@@ -4470,7 +4500,8 @@
           "heading": "หาคน",
           "body": [
             "โปรไฟล์ของผู้เรียนที่เพิ่งเข้ามา แตะรูปเพื่อเปิดโปรไฟล์ แล้วติดตามหรือส่งข้อความได้",
-            "บล็อกและรายงานได้จากโปรไฟล์"
+            "บล็อกและรายงานได้จากโปรไฟล์",
+            "ในโปรไฟล์ เลือกสัญชาติ ภาษาแม่ และความสนใจเป็นชิป แล้วเปิดหรือปิดส่วนที่คนอื่นเห็น กด “🙌 ช่วยได้” ให้คนที่ตอบคำถามของคุณ และ “ดูเป็นภาษาไทย” แปลคำแนะนำตัวและโพสต์ของคนอื่น"
           ],
           "shot": "r69-people"
         },
@@ -4492,7 +4523,8 @@
           "heading": "ข้อความและการโทร",
           "body": [
             "ข้อความแรกจะส่งเป็นคำขอ เมื่ออีกฝ่ายตอบ แชตจะเปิด โทรด้วย 📞 เหนือแชต ซับของการโทรจะเก็บไว้",
-            "ในการโทรแบบ 1:1 เปิดกล้องคุยกันแบบเห็นหน้าได้ (เริ่มต้นปิดอยู่)"
+            "ในการโทรแบบ 1:1 เปิดกล้องคุยกันแบบเห็นหน้าได้ (เริ่มต้นปิดอยู่)",
+            "กดค้างที่ข้อความที่คุณส่งเพื่อลบ (อีกฝ่ายก็จะไม่เห็นด้วย) กด ⋯ ท้ายแถวในรายการเพื่อลบแชทออกจากรายการของคุณ"
           ]
         },
         {
@@ -4505,7 +4537,8 @@
         {
           "heading": "กระดาน",
           "body": [
-            "โพสต์เป็นภาษาที่เรียนและแสดงความคิดเห็น แก้ไขหรือลบได้เฉพาะคนเขียน “ดูเป็นภาษาไทย” ช่วยแปล แตะชื่อเพื่อติดตาม ส่งข้อความ หรือรายงาน"
+            "โพสต์เป็นภาษาที่เรียนและแสดงความคิดเห็น แก้ไขหรือลบได้เฉพาะคนเขียน “ดูเป็นภาษาไทย” ช่วยแปล แตะชื่อเพื่อติดตาม ส่งข้อความ หรือรายงาน",
+            "กด ♡ ถูกใจ ได้ทุกโพสต์ รูปที่แนบจะแสดงเล็กๆ ในรายการด้วย"
           ],
           "shot": "r69-board"
         },
@@ -4882,7 +4915,8 @@
           "heading": "लोग ढूँढें",
           "body": [
             "हाल में आए सीखने वालों की प्रोफ़ाइल। फ़ोटो पर टैप करके प्रोफ़ाइल खोलें, फिर फ़ॉलो करें या मैसेज भेजें।",
-            "ब्लॉक और रिपोर्ट भी प्रोफ़ाइल से होते हैं।"
+            "ब्लॉक और रिपोर्ट भी प्रोफ़ाइल से होते हैं।",
+            "प्रोफ़ाइल में चिप से अपनी राष्ट्रीयता, मातृभाषा और रुचियाँ चुनें, और दूसरों को दिखने वाले हिस्से चालू या बंद करें। जिसने आपके सवाल का जवाब दिया उसे “🙌 मदद मिली” दें; “हिन्दी में देखें” दूसरों के परिचय और पोस्ट का अनुवाद करता है।"
           ],
           "shot": "r69-people"
         },
@@ -4904,7 +4938,8 @@
           "heading": "मैसेज और कॉल",
           "body": [
             "पहला मैसेज अनुरोध के रूप में जाता है; जवाब आने पर बातचीत खुल जाती है। बातचीत के ऊपर 📞 से कॉल करें; कॉल के सबटाइटल रिकॉर्ड में रहते हैं।",
-            "1:1 कॉल में कैमरा चालू करके आमने-सामने बात कर सकते हैं (शुरू में बंद रहता है)।"
+            "1:1 कॉल में कैमरा चालू करके आमने-सामने बात कर सकते हैं (शुरू में बंद रहता है)।",
+            "अपनी भेजी पंक्ति को दबाकर रखें तो वह मिट जाती है (सामने वाले के यहाँ से भी)। सूची की पंक्ति के आख़िर में ⋯ दबाकर बातचीत को अपनी सूची से हटाएँ।"
           ]
         },
         {
@@ -4917,7 +4952,8 @@
         {
           "heading": "बोर्ड",
           "body": [
-            "सीखी जा रही भाषा में पोस्ट व टिप्पणी करें। सिर्फ़ लिखने वाला बदल या हटा सकता है। “हिन्दी में देखें” अनुवाद करता है; नाम दबाकर फ़ॉलो, मैसेज या रिपोर्ट करें।"
+            "सीखी जा रही भाषा में पोस्ट व टिप्पणी करें। सिर्फ़ लिखने वाला बदल या हटा सकता है। “हिन्दी में देखें” अनुवाद करता है; नाम दबाकर फ़ॉलो, मैसेज या रिपोर्ट करें।",
+            "हर पोस्ट पर ♡ पसंद दबा सकते हैं। लगाई गई फ़ोटो सूची में भी छोटी दिखती है।"
           ],
           "shot": "r69-board"
         },

@@ -540,15 +540,17 @@ function Bubble({
           className={`block w-full rounded-2xl px-3 py-2 text-start text-[15px] leading-snug text-white ${
             mine ? "rounded-br-md bg-violet-600/80" : "rounded-bl-md bg-white/[0.08]"
           }`}
-          dir="auto"
         >
           {message.quote ? (
             <span className="mb-1 block border-s-2 border-white/30 ps-2 text-xs text-slate-300/80">
               {message.quote.roomId ? <span className="block text-meta text-sky-200">🎙 {t.fromRoom}</span> : null}
-              ↪ {quoteName(message.quote.accountId, message.quote.nickname)}: <QuoteText text={message.quote.text} focus={message.quote.focus} />
+              ↪ <bdi>{quoteName(message.quote.accountId, message.quote.nickname)}</bdi>: <bdi><QuoteText text={message.quote.text} focus={message.quote.focus} /></bdi>
             </span>
           ) : null}
-          {message.text}
+          {/* 인용 머리(이름)가 아랍어면 말풍선 전체가 오른쪽→왼쪽으로 잡혀 학습 언어 문장부호가 뒤집혔다(점검 10-23) — 본문은 따로 방향을 잡는다. */}
+          <span className="block" dir="auto">
+            {message.text}
+          </span>
         </button>
         ) : null}
         {open ? (

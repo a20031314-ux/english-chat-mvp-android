@@ -519,6 +519,9 @@ const TEAM_SPACE = {
   en: { goal: "Each of us tells one story from the weekend", phrase: "It was a piece of cake.", share: ["catch up", "to talk after not seeing each other"], call: ["How was your weekend?", "I went hiking with my sister.", "Nice! Where did you go?"] },
   es: { goal: "Cada uno cuenta una historia del fin de semana", phrase: "Fue pan comido.", share: ["ponerse al día", "hablar después de no verse"], call: ["¿Qué tal tu fin de semana?", "Fui de excursión con mi hermana.", "¡Qué bien! ¿Adónde fuisteis?"] },
 };
+// 2.72 라이어 게임 장면의 주제·제시어(14개 언어 — 앱 언어·학습 언어 어느 쪽이든 보이게).
+const GAME_TOPIC = { ko: "음식", en: "food", es: "comida", ja: "食べ物", zh: "食物", vi: "đồ ăn", fr: "nourriture", it: "cibo", pt: "comida", ru: "еда", id: "makanan", ar: "طعام", th: "อาหาร", hi: "खाना" };
+const GAME_WORD = { ko: "피자", en: "pizza", es: "pizza", ja: "ピザ", zh: "披萨", vi: "pizza", fr: "pizza", it: "pizza", pt: "pizza", ru: "пицца", id: "pizza", ar: "بيتزا", th: "พิซซ่า", hi: "पिज़्ज़ा" };
 function socialMocks(page, target, ui) {
   const now = Date.now();
   // 2.69 host 장면: 내가 방장이 된 것처럼(물을 때마다 읽음).
@@ -550,7 +553,18 @@ function socialMocks(page, target, ui) {
     { seq: 3, from: PEOPLE.me.id, kind: "callLog", text: "3", roomId: "capt02", at: now - 6_400_000, lines: lines.slice(0, 3).map((line) => ({ from: line.accountId, nickname: line.nickname, text: line.text })) },
     { seq: 4, from: PEOPLE.yuki.id, kind: "text", text: DM_LINES[target].reply, at: now - 60_000 },
   ];
-  const profile = (key) => ({ id: PEOPLE[key].id, nickname: PEOPLE[key].nickname, bio: "", photo: PEOPLE[key].photo, since: "2026-09", followers: 12, following: 8, hosted: 5, helped: 9, isMe: key === "me", isFollowing: false, blockedByMe: false });
+  const profile = (key) => ({
+    id: PEOPLE[key].id, nickname: PEOPLE[key].nickname, bio: "", photo: PEOPLE[key].photo, since: "2026-09", followers: 12, following: 8, hosted: 5, helped: 9, isMe: key === "me", isFollowing: false, blockedByMe: false,
+    // 2.72 프로필(Yuki만 꽉 채움): 사실 칩·도움됐어요·꾸준함·올린 글.
+    ...(key === "yuki"
+      ? {
+          bio: "🇯🇵 → 🌏 ☕ 🎧",
+          facts: { country: "JP", native: "ja", speaks: [target === "es" ? "es" : "en"], interests: ["travel", "cafe", "music", "photo"], work: "worker", meetModes: ["call", "text"], meetTimes: ["evening"] },
+          badges: { help: { count: 9, lang: target }, streak: { week: 5, run: 3 } },
+          posts: [{ id: "bp_capture1", author: PEOPLE.yuki.id, language: target, text: BOARD_POSTS[target][0][1], at: now - 3_600_000, comments: 4, likes: 6, liked: false }],
+        }
+      : {}),
+  });
   const json = (route, body) => route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(body) });
   return Promise.all([
     page.route("**/api/rooms", (route) => {
@@ -562,7 +576,7 @@ function socialMocks(page, target, ui) {
       const faces = members.map((m) => ({ accountId: m.accountId, nickname: m.nickname }));
       // 2.69 자유 대화 장면: 목록 맨 위에 🌐 방 하나.
       const free = { id: "capt03", name: target === "es" ? "🌍 Charla de los viernes" : "🌍 Friday chat", languages: [], free: true, hostPeerId: peers.lucia, hostAccountId: PEOPLE.lucia.id, hostNickname: "Lucía", createdAt: now - 300_000, speakers: 3, listeners: 1, faces: [faces[1], faces[0], faces[2]] };
-      if (body.action === "list") return json(route, { rooms: [...(page.__social.free ? [free] : []), { ...room, speakers: 2, listeners: 2, faces, followed: true }] });
+      if (body.action === "list") return json(route, { rooms: [...(page.__social.free ? [free] : []), { ...room, speakers: 2, listeners: 2, faces, followed: true, ...(page.__social.game ? { gameKind: "liar" } : {}) }] });
       if (body.action === "join") return json(route, { member: members[3], room, now: Date.now() });
       if (body.action === "poll" && page.__social.live) {
         const at = page.__social.revealedAt ?? {};
@@ -570,6 +584,16 @@ function socialMocks(page, target, ui) {
           .filter((l) => l.seq <= (page.__social.shown ?? 0) && l.seq > (body.since ?? 0))
           .map((l) => ({ ...l, startedAt: at[l.seq] - 2500, endedAt: at[l.seq] }));
         return json(route, { now: Date.now(), room, members, signals: [], lines: shown });
+      }
+      // 2.72 라이어 게임 장면: 방장(나)·Yuki·Lucía가 플레이어, Yuki 차례(제시어는 앱 언어·학습 언어로).
+      if (body.action === "poll" && page.__social.game) {
+        const game = {
+          kind: "liar", id: "lg_capture1", mode: "ai", moderator: "ai",
+          players: [{ peerId: mePeer, accountId: PEOPLE.me.id, nickname: "Minji" }, { peerId: peers.yuki, accountId: PEOPLE.yuki.id, nickname: "Yuki" }, { peerId: peers.lucia, accountId: PEOPLE.lucia.id, nickname: "Lucía" }],
+          topic: "food", topicNames: GAME_TOPIC, laps: 1, phase: "clue", turn: 1, endsAt: Date.now() + 38_000, current: peers.yuki, me: "player", words: GAME_WORD,
+          watch: { can: false, spectator: false, count: 1 },
+        };
+        return json(route, { now: Date.now(), room: { ...room, game: { id: game.id, kind: "liar" } }, members, signals: [], lines: body.since ? [] : lines.slice(0, 2), game });
       }
       if (body.action === "poll") return json(route, { now: Date.now(), room, members, signals: [], lines: body.since ? [] : lines });
       if (body.action === "peek") return json(route, { room });
@@ -585,9 +609,10 @@ function socialMocks(page, target, ui) {
         const seen = (minutes) => Date.now() - minutes * 60_000;
         return json(route, {
           people: [
-            { id: PEOPLE.yuki.id, nickname: "Yuki", bio: "🇯🇵 → 🌏 ☕ 🎧", hasPhoto: true, ui: "ja", learn: target, lastSeen: seen(1), isFollowing: true },
-            { id: PEOPLE.lucia.id, nickname: "Lucía", bio: "🇪🇸 → 🇯🇵 🍣 📚", hasPhoto: true, ui: "es", learn: "ja", lastSeen: seen(40), isFollowing: false },
-            { id: PEOPLE.omar.id, nickname: "Omar", bio: "🇪🇬 → 🌍 ⚽", hasPhoto: true, ui: "ar", learn: target, lastSeen: seen(60 * 26), isFollowing: false },
+            // 2.72: 국적(국기)·모국어·관심사 칩·도움됐어요 수(프로필 사실, account/profileFacts.ts).
+            { id: PEOPLE.yuki.id, nickname: "Yuki", bio: "🇯🇵 → 🌏 ☕ 🎧", hasPhoto: true, ui: "ja", learn: target, lastSeen: seen(1), isFollowing: true, country: "JP", native: "ja", interests: ["travel", "cafe", "music"], sharedInterests: 2, help: 9, meetModes: ["call"] },
+            { id: PEOPLE.lucia.id, nickname: "Lucía", bio: "🇪🇸 → 🇯🇵 🍣 📚", hasPhoto: true, ui: "es", learn: "ja", lastSeen: seen(40), isFollowing: false, country: "ES", native: "es", interests: ["food", "books", "anime"], sharedInterests: 1, help: 3 },
+            { id: PEOPLE.omar.id, nickname: "Omar", bio: "🇪🇬 → 🌍 ⚽", hasPhoto: true, ui: "ar", learn: target, lastSeen: seen(60 * 26), isFollowing: false, country: "EG", native: "ar", interests: ["sports", "games"] },
           ],
         });
       }
@@ -967,6 +992,71 @@ const STEPS = {
     await socialMocks(page, target, ui);
     await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
     await wait(2500);
+  },
+  async "profile-facts"({ page, ui, wait, target }) {
+    // 2.72: 사람 탭 → Yuki 프로필 시트(국기·모국어·관심사 칩·도움됐어요·꾸준함·올린 글, 고정 응답).
+    await socialMocks(page, target, ui);
+    await page.evaluate(() => localStorage.setItem("peopleViewMode", "people"));
+    await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
+    await wait(2500);
+    await page.getByRole("button", { name: "Yuki", exact: true }).first().click();
+    await wait(2500);
+  },
+  async "room-game"({ page, ui, locale, wait, target }) {
+    // 2.72: 내가 말하기 자리에 있는 방에서 라이어 게임 판(Yuki 차례, 제시어 피자) — 고정 응답.
+    const t = roomCopyFor(locale);
+    // roomOnly: 받은 쪽지 띠가 판을 가리지 않게. 마이크는 페이지가 뜨기 전에 조용한 가짜로(안내 줄이 안 뜨게).
+    page.__social = { hostMe: true, game: true, roomOnly: true };
+    await socialMocks(page, target, ui);
+    await page.addInitScript(() => {
+      navigator.mediaDevices.getUserMedia = async () => new AudioContext().createMediaStreamDestination().stream;
+    });
+    await page.goto(`${BASE}/?screen=rooms`, { waitUntil: "networkidle" });
+    await wait(2000);
+    const later = page.getByRole("button", { name: exactly(inviteCopyFor(locale).later) });
+    if (await later.count()) await later.first().click();
+    await page.getByRole("button", { name: exactly(t.justListen) }).first().click();
+    await wait(4500);
+    const micNotice = page.getByText(t.micDenied);
+    if (await micNotice.count()) await micNotice.first().click();
+    await wait(800);
+  },
+  async icons({ page, ui, wait, target }) {
+    // 2.72: 사람 탭 → 아이콘 → 묶음 시트(고정 응답, 그림은 여기서 만든 움직이는 WebP).
+    await socialMocks(page, target, ui);
+    const sharp = (await import("sharp")).default;
+    const colors = ["#f59e0b", "#22c55e", "#3b82f6", "#ec4899", "#a855f7", "#14b8a6", "#ef4444", "#eab308"];
+    const face = (bg, mouth) =>
+      Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><circle cx="64" cy="64" r="60" fill="${bg}"/><circle cx="44" cy="52" r="9" fill="#111"/><circle cx="84" cy="52" r="9" fill="#111"/><path d="${mouth}" stroke="#111" stroke-width="8" fill="none" stroke-linecap="round"/></svg>`);
+    const images = new Map();
+    for (let i = 0; i < colors.length; i++) {
+      const frames = await Promise.all(["M36 82 Q64 108 92 82", "M40 88 Q64 96 88 88"].map((mouth) => sharp(face(colors[i], mouth)).png().toBuffer()));
+      images.set(`ic_capture0${i}`, await sharp(frames, { join: { animated: true } }).webp({ delay: [400, 400], loop: 0 }).toBuffer());
+    }
+    const phrase = { en: "Nice!", es: "¡Genial!" }[target];
+    const pack = (id, owner, ownerName, name, license, uses, n) => ({
+      id, owner, ownerName, name, license, uses, added: false, createdAt: Date.now(),
+      icons: [...images.keys()].slice(0, n).map((icon, index) => ({ id: icon, w: 128, h: 128, animated: true, ...(index === 0 ? { phrase: { lang: target, text: phrase } } : {}) })),
+    });
+    const packs = [pack("ip_capture01", PEOPLE.yuki.id, "Yuki", "Smile 😀", "cc-by-4.0", 128, 8), pack("ip_capture02", PEOPLE.lucia.id, "Lucía", "Gatos 🐱", "cc0", 54, 6)];
+    await page.route("**/api/icons**", async (route) => {
+      const request = route.request();
+      if (request.method() === "GET") {
+        const icon = new URL(request.url()).searchParams.get("f")?.split(".")[1] ?? "";
+        const bytes = images.get(icon);
+        return bytes ? route.fulfill({ status: 200, contentType: "image/webp", body: bytes }) : route.fulfill({ status: 404, body: "" });
+      }
+      const body = JSON.parse(request.postData() || "{}");
+      if (body.action === "list") return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ packs, next: 2 }) });
+      if (body.action === "mine") return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ packs: [], own: [] }) });
+      return route.fulfill({ status: 200, contentType: "application/json", body: "{}" });
+    });
+    await page.evaluate(() => localStorage.setItem("peopleViewMode", "icons"));
+    await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
+    await wait(2500);
+    await page.getByText("Smile 😀").first().click();
+    await wait(2000);
+    await page.evaluate(() => localStorage.setItem("peopleViewMode", "people"));
   },
   async invite({ page, wait }) {
     // 초대 링크로 연 것처럼(?invite=) — "Yuki님이 초대했어요" 시트(고정 응답).

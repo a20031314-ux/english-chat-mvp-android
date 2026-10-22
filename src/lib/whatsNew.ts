@@ -44,6 +44,17 @@ export type ReleaseNote = {
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    // 2.72(86): 프로필 칩·국기·도움됐어요, Room 라이어 게임·마피아·관전자 추리, 아이콘·짤 묶음.
+    // 보낸 줄 지우기·대화 목록 ⋯·게시판 ♡·방 40명/자리 막기는 사용법(사람·대화·Room)에만.
+    version: "2.72",
+    code: 86,
+    items: [
+      { id: "profile-facts", title: "whatsNewProfileFactsTitle", body: "whatsNewProfileFactsBody", shot: "profile-facts", tab: "people", guide: "people.find" },
+      { id: "games", title: "whatsNewGamesTitle", body: "whatsNewGamesBody", shot: "room-game", tab: "rooms", guide: "room.game" },
+      { id: "icons", title: "whatsNewIconsTitle", body: "whatsNewIconsBody", shot: "icons", tab: "people", guide: "people.icons" },
+    ],
+  },
+  {
     // 2.71(85): My를 대화 예시로 시작(단계 고르기 → Sonnet이 그 범위로 지도), 채팅 고친 문장은 눌러서 보기.
     // 방 내 줄 교정·1:1 카메라는 사용법(Room·대화)에만(그림을 찍으려면 마이크·두 사람이 필요).
     version: "2.71",
