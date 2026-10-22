@@ -87,9 +87,10 @@ export function promoteFeelingSlip(
 
 /** 앱 언어로 쓴 짧은 설명. 낱말은 영어 그대로 따옴표 안에. */
 const EXPLAIN: Record<string, (from: string, to: string, feeler: boolean) => string> = {
+  // 영어 낱말 바로 뒤에 조사를 붙이지 않는다(boring은/bored는처럼 받침에 따라 달라짐).
   ko: (f, t, p) => p
-    ? `'${f}'는 그런 느낌을 주는 쪽을 말해요. 내가 그렇게 느낄 때는 '${t}'를 써요.`
-    : `'${f}'는 그렇게 느끼는 사람을 말해요. 그렇게 만드는 것을 말할 때는 '${t}'를 써요.`,
+    ? `느낌을 주는 쪽 → '${f}', 느끼는 사람 → '${t}'. 내가 그렇게 느낄 때는 '${t}' 꼴을 써요.`
+    : `느끼는 사람 → '${f}', 느낌을 주는 것 → '${t}'. 그렇게 만드는 것을 말할 때는 '${t}' 꼴을 써요.`,
   en: (f, t, p) => p
     ? `'${f}' describes what causes the feeling; for the person who feels it, use '${t}'.`
     : `'${f}' describes the person who feels it; for what causes the feeling, use '${t}'.`,

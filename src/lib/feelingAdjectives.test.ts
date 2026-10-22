@@ -38,8 +38,9 @@ test("설명은 14개 앱 언어, 영어 낱말을 그대로 넣는다", () => {
     assert.match(text, /'boring'/, ui);
     assert.match(text, /'bored'/, ui);
   }
-  assert.match(explainFeelingSlips([{ from: "boring", to: "bored" }], "ko"), /내가 그렇게 느낄 때/);
+  assert.match(explainFeelingSlips([{ from: "boring", to: "bored" }], "ko"), /내가 그렇게 느낄 때는 'bored' 꼴을/);
   assert.match(explainFeelingSlips([{ from: "bored", to: "boring" }], "ja"), /感じさせるもの/);
+  assert.doesNotMatch(explainFeelingSlips([{ from: "boring", to: "bored" }], "ko"), /'[a-z]+'(는|은|를|을|이|가)/);
   // 모르는 앱 언어는 영어
   assert.match(explainFeelingSlips([{ from: "boring", to: "bored" }], "xx"), /person who feels/);
 });
