@@ -3,17 +3,17 @@
 > 모든 채팅이 시작할 때 자동으로 읽는 한 장입니다. 역할별 자세한 내용은
 > `hub/roles/`, 역할 사이에 넘긴 일은 `hub/inbox.md`, 지난 기록은 `hub/log/`.
 > 새 채팅이면 `hub/HANDOFF.md`(직전 채팅의 인계 노트)부터. 자동 실행이 남긴 보고·결정 대기는 `hub/reports.md`.
-> 허브 쓰는 법: `hub/README.md`. 서비스 지도(구조도 + 화면 그림): https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y. 마지막 갱신: 2026-10-22(2.70 업로드·사람 설정 끝).
+> 허브 쓰는 법: `hub/README.md`. 서비스 지도(구조도 + 화면 그림): https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y. 마지막 갱신: 2026-10-23(2.71 업로드, 2.72 자름).
 
 ## 버전
 
 | 항목 | 값 | 어디서 바꾸나 |
 |---|---|---|
-| Play에 올라간 앱 | 2.68 (versionCode 82) — 사용자 확인 2026-10-19 | `package.json` + `android/app/build.gradle` (둘이 같아야 빌드됨) |
+| Play에 올라간 앱 | 2.71 (versionCode 85) — 사용자 "올렸어" 2026-10-23(트랙·공개 여부는 확인 필요) | `package.json` + `android/app/build.gradle` (둘이 같아야 빌드됨) |
 | 서버 | main에 push하면 Vercel이 바로 배포 | — |
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
-| 다음 앱 버전 | 2.71 (versionCode 85) — **자름(2026-10-22, 가상 사용자 전체 점검 뒤)**: My 대화 예시로 시작·채팅 고친 문장 눌러서 보기·Room 내 줄 교정·1:1 카메라·아랍어 카드. 새로워진 점 2장, 출시 노트 85 PR. 빌드·Play 업로드는 사람(`npm run pc:build`). 2.70(84)은 Play에 올림(사용자 2026-10-22), 트랙·공개 여부는 사용자 확인 | — |
+| 다음 앱 버전 | 2.72 (versionCode 86) — **자름(2026-10-23, 가상 사용자 전체 점검 release272 뒤)**: 프로필 칩·국기·도움됐어요, Room 라이어 게임·마피아·관전자 추리·40명, 아이콘·짤 묶음, 보낸 줄 지우기·게시판 ♡, 아랍어 인용 줄 방향. 새로워진 점 3장, 출시 노트 86 PR. 빌드·Play 업로드는 사람(`npm run pc:build`). 2.71(85)은 Play에 올림(사용자 2026-10-23) | — |
 | iOS | **App Store 심사 제출(2026-10-23 05:12, 2.71 빌드 85.9, 앱 ID 6824542951)** — 사람 기능·광고 없는 1차. 심사 대기 중. 제출 목록에 인앱 상품이 없음(확인 필요). 남은 일 `hub/drafts/ios-launch.md` "심사 중" | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할
