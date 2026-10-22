@@ -110,7 +110,7 @@ export async function POST(request: NextRequest) {
         },
       ],
       response_format: { type: "json_object" },
-      ...(reasoning ? { max_completion_tokens: 2000 } : { max_tokens: 500 }),
+      ...(reasoning ? { max_completion_tokens: 2000 } : { max_tokens: 900 }),
     });
     const review = parseReview(completion.choices[0]?.message?.content ?? "");
     if (!review) {

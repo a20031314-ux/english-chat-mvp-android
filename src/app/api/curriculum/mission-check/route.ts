@@ -102,7 +102,7 @@ export async function POST(request: NextRequest) {
   const ask = async (extra?: string) => {
     const completion = await completeChat(openai, "mission", {
       temperature: 0.2,
-      max_tokens: 400,
+      max_tokens: 700, // Sonnet 여유(2026-10-22)
       response_format: { type: "json_object" },
       messages: extra ? [...messages, { role: "system" as const, content: extra }] : messages,
     });

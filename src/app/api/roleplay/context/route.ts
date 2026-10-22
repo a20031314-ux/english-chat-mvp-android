@@ -59,7 +59,7 @@ export async function POST(request: NextRequest) {
         },
       ],
       response_format: { type: "json_object" },
-      max_tokens: 250,
+      max_tokens: 400, // Claude 여유(2026-10-22)
     });
     const notes = parseContext(completion.choices[0]?.message?.content ?? "");
     if (!notes) {

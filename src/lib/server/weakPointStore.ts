@@ -78,7 +78,7 @@ export async function observeWeakPoints(input: {
     input.meter?.("weakRead");
     const read = await completeChat(input.openai, "learnerRead", {
       temperature: 0,
-      max_tokens: 150,
+      max_tokens: 300, // Claude(도구 입력 JSON)가 끊기지 않게 여유(2026-10-22)
       response_format: { type: "json_object" },
       messages: [
         { role: "system", content: patternPrompt({ target, known }) },
@@ -111,7 +111,7 @@ export async function observeWeakPoints(input: {
       const ask = async (extra: string) => {
         const written = await completeChat(input.openai!, "curriculum", {
           temperature: 0.4,
-          max_tokens: 500,
+          max_tokens: 1000, // Sonnet이 더 길게 씀(2026-10-22)
           response_format: { type: "json_object" },
           messages: [
             {

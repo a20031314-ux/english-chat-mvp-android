@@ -135,7 +135,7 @@ export async function observeChatTurn(input: {
     input.meter?.();
     const completion = await completeChat(input.openai, "learnerRead", {
       temperature: 0,
-      max_tokens: 150,
+      max_tokens: 300, // Claude(도구 입력 JSON)가 끊기지 않게 여유(2026-10-22)
       response_format: { type: "json_object" },
       messages: [
         { role: "system", content: classifyPrompt(list) },

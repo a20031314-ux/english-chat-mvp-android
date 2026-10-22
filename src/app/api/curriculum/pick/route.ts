@@ -1,4 +1,4 @@
-import { completeChat } from "@/lib/server/llm";
+import { completeChat, simErrorDetail } from "@/lib/server/llm";
 import { NextRequest } from "next/server";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
@@ -89,7 +89,8 @@ export async function POST(request: NextRequest) {
   try {
     const completion = await completeChat(openai, "curriculum", {
       temperature: 0.4,
-      max_tokens: 500,
+      // Claude는 같은 JSON을 더 길게 쓴다(도구 입력) — 500이면 끊겨 PICK_FAILED(2026-10-22 점검에서 Sonnet 8/8).
+      max_tokens: 1000,
       response_format: { type: "json_object" },
       messages: [
         { role: "system", content: pickMissionPrompt({ target: learningLanguageName(language), uiName, level: map.level }) },
@@ -120,7 +121,11 @@ export async function POST(request: NextRequest) {
       uiLanguage: map.uiLanguage,
       mistakeName: "",
     });
-    if (!placed) return jsonWithCors(request, { error: "PICK_FAILED" }, { status: 502 });
+    if (!placed) {
+      // 점검 사용자에게만 모델 답 앞부분(무엇이 모자랐는지 보려고).
+      const detail = simErrorDetail(new Error(`${completion.choices[0]?.finish_reason ?? ""} ${completion.choices[0]?.message?.content ?? ""}`));
+      return jsonWithCors(request, { error: "PICK_FAILED", ...(detail ? { detail } : {}) }, { status: 502 });
+    }
     // A pick, not a weak spot: practised first and marked as their choice.
     // The key stays in `weak` only to find it again; `picked` is what counts.
     const mission = { ...placed.mission, picked: true };
@@ -141,6 +146,7 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { topicId: placed.topicId, topicTitle: t?.title ?? "", missionId });
   } catch (error) {
     console.error("[curriculum-pick]", error);
-    return jsonWithCors(request, { error: "PICK_FAILED" }, { status: 502 });
+    const detail = simErrorDetail(error);
+    return jsonWithCors(request, { error: "PICK_FAILED", ...(detail ? { detail } : {}) }, { status: 502 });
   }
 }

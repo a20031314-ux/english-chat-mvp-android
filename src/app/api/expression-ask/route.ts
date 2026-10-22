@@ -162,7 +162,7 @@ export async function POST(request: NextRequest) {
   const ask = async (extra?: string) => {
     const completion = await completeChat(openai, "ask", {
       temperature: 0.3,
-      max_tokens: 500,
+      max_tokens: 800, // Claude 여유(2026-10-22)
       response_format: { type: "json_object" },
       messages: extra ? [...messages, { role: "system" as const, content: extra }] : messages,
     });
