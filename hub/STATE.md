@@ -3,7 +3,7 @@
 > 모든 채팅이 시작할 때 자동으로 읽는 한 장입니다. 역할별 자세한 내용은
 > `hub/roles/`, 역할 사이에 넘긴 일은 `hub/inbox.md`, 지난 기록은 `hub/log/`.
 > 새 채팅이면 `hub/HANDOFF.md`(직전 채팅의 인계 노트)부터. 자동 실행이 남긴 보고·결정 대기는 `hub/reports.md`.
-> 허브 쓰는 법: `hub/README.md`. 서비스 지도(구조도 + 화면 그림): https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y. 마지막 갱신: 2026-10-22(채팅 Haiku 전환).
+> 허브 쓰는 법: `hub/README.md`. 서비스 지도(구조도 + 화면 그림): https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y. 마지막 갱신: 2026-10-22(2.70 업로드·사람 설정 끝).
 
 ## 버전
 
@@ -13,7 +13,7 @@
 | 서버 | main에 push하면 Vercel이 바로 배포 | — |
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
-| 다음 앱 버전 | 2.70 (versionCode 84) — 저장소에 올림(2026-10-20). 2.69(83)는 Play에 안 올리고 2.70에 합침(새로워진 점 2.70 2장 + 2.69 6장). 출시 노트 84는 main에 있음(PR #10 닫힘, 2026-10-22 확인), 빌드·내부 테스트 대기 | — |
+| 다음 앱 버전 | 2.70 (versionCode 84) — **빌드해서 Play에 올림(사용자 2026-10-22)**, 트랙·공개 여부는 사용자 확인. 2.69(83)는 안 올리고 2.70에 합침. 출시 노트 84는 main. 그 뒤 앱 변경(아랍어 카드 문장부호 등)은 다음 빌드(2.71) | — |
 | iOS | TestFlight 2.70 빌드 84.7(2026-10-20) — 아이폰 13 mini에서 화면·영상·통화(받아쓰기·말 끝·튜터 목소리) 사용자 확인. 말하는 방·메시지·Google 로그인 없는 1차, 결제·심사 정책 손볼 것 남음(`hub/drafts/ios-launch.md`) | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할
@@ -47,6 +47,8 @@
 - 스크린샷 모음(2026-10-20): https://claude.ai/artifact/VP562k9QhrFiybAYv4ggbW — 모든 채팅이 찍은 화면을 올리고(`hub/SHOTS.md`), 사용자가 사용법 칸에 넣을 그림을 고른다.
 
 ## 사용자에게 물어볼 것
+
+- **사람 설정 끝(사용자 2026-10-22):** Vercel `OPS_KEY`, Moyeo·Pingo Google OAuth 원본·서치 콘솔, AdSense 값, Play 광고·데이터 보안 신고, iOS RevenueCat 키. 남은 것은 프리미엄 8,900원 전환일(그날 `PREMIUM_DAILY_PLAN_FROM`)뿐 — 아래 줄의 "남은 사람 일"은 이 줄이 앞선다.
 
 - iOS(`hub/drafts/ios-launch.md` "출시까지 남은 사람 일"): 정함(2026-10-20) — 번들 ID는 안드로이드와 같은 `com.yourname.englishchat`, 구독·포인트 상품 ID도 같게, 다른 스토어 구독자는 결제 막음.
   App Store Connect 구독 3·포인트 4, RevenueCat 아이폰 앱·권한·offering 패키지(lite·plus·premium) 설정 끝. 남은 것: GitHub ios 환경에 `NEXT_PUBLIC_REVENUECAT_IOS_API_KEY`, 상품 한국어 이름·심사 스크린샷, 아이콘, 유료 앱 계약.

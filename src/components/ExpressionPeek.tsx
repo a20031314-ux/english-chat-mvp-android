@@ -74,19 +74,19 @@ export function ExpressionPeek({
           ) : (
             <>
               <div className="mt-1 flex items-start gap-2">
-                <p className="min-w-0 flex-1 text-[15px] font-medium leading-snug text-slate-100">
+                <p dir="auto" className="min-w-0 flex-1 text-[15px] font-medium leading-snug text-slate-100">
                   {expression.expression}
                 </p>
                 <TTSButton text={expression.expression} ariaLabel={ui.listen} />
               </div>
               {/* Older servers filled a missing example with this English line. */}
               {expression.example && expression.example !== "Please try again later." ? (
-                <p className="mt-1.5 text-[13px] leading-relaxed text-slate-400">{expression.example}</p>
+                <p dir="auto" className="mt-1.5 text-[13px] leading-relaxed text-slate-400">{expression.example}</p>
               ) : null}
               {expression.simpler || expression.moreNative ? (
                 <ul className="mt-1.5 space-y-0.5 text-[13px] text-slate-300">
-                  {expression.simpler ? <li>· {expression.simpler}</li> : null}
-                  {expression.moreNative ? <li>· {expression.moreNative}</li> : null}
+                  {expression.simpler ? <li>· <bdi>{expression.simpler}</bdi></li> : null}
+                  {expression.moreNative ? <li>· <bdi>{expression.moreNative}</bdi></li> : null}
                 </ul>
               ) : null}
               <button

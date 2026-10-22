@@ -45,7 +45,7 @@ function SenseRow({
     <div>
       <p className="text-sm leading-relaxed text-slate-100">
         {sense.partOfSpeech ? (
-          <span className="mr-2 text-[11px] uppercase tracking-wide text-slate-500">
+          <span className="me-2 text-[11px] uppercase tracking-wide text-slate-500">
             {sense.partOfSpeech}
           </span>
         ) : null}
@@ -53,7 +53,7 @@ function SenseRow({
       </p>
       {sense.example ? (
         <div className="mt-1 flex items-start gap-2">
-          <p className="min-w-0 flex-1 text-xs leading-relaxed text-slate-500">
+          <p dir="auto" className="min-w-0 flex-1 text-xs leading-relaxed text-slate-500">
             {sense.example}
           </p>
           {listenLabel ? (
