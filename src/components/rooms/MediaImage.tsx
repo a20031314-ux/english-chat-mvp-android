@@ -54,3 +54,26 @@ export function MediaImage({ image, t, maxWidth = 240 }: { image: MediaRef; t: R
     </>
   );
 }
+
+/**
+ * 목록 카드 안의 작은 사진(누르면 카드가 열린다 — 버튼 안이라 버튼을 겹치지 않게 그림만).
+ * 게시판 목록에서 "📷 1"만 보여 사진이 없는 글처럼 보였다(사용자 2026-10-23).
+ */
+export function MediaThumb({ image, size = 88 }: { image: MediaRef; size?: number }) {
+  const [src, setSrc] = useState<string | null | undefined>(undefined);
+  useEffect(() => {
+    let alive = true;
+    void mediaSrc(image.id).then((found) => alive && setSrc(found));
+    return () => {
+      alive = false;
+    };
+  }, [image.id]);
+  return (
+    <span className="block shrink-0 overflow-hidden rounded-lg bg-white/5" style={{ width: size, height: size }} aria-hidden>
+      {src ? (
+        // eslint-disable-next-line @next/next/no-img-element -- 기기 안 주소(blob:)라 next/image를 못 쓴다.
+        <img src={src} alt="" className="h-full w-full object-cover" />
+      ) : null}
+    </span>
+  );
+}

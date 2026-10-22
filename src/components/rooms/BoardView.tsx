@@ -2,7 +2,7 @@
 
 import { Fragment, useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
-import { MediaImage } from "./MediaImage";
+import { MediaImage, MediaThumb } from "./MediaImage";
 import { MEDIA_PER_POST, type MediaRef, type MediaScope } from "@/lib/rooms/media";
 import { MediaError, uploadImage } from "@/lib/rooms/mediaClient";
 import { BodyLayer } from "@/components/FullScreenLayer";
@@ -153,6 +153,14 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
                 <span dir="auto" className="mt-2 line-clamp-4 block whitespace-pre-wrap text-chat text-ink">
                   {post.text}
                 </span>
+                {/* 사진이 있으면 작게 세 장까지(누르면 글이 열리고 크게 볼 수 있다). */}
+                {post.images?.length ? (
+                  <span className="mt-2 flex gap-1.5">
+                    {post.images.slice(0, 3).map((image) => (
+                      <MediaThumb key={image.id} image={image} size={post.images!.length === 1 ? 160 : 88} />
+                    ))}
+                  </span>
+                ) : null}
                 <span className="mt-2 block text-meta text-slate-500">
                   {post.images?.length ? `📷 ${post.images.length} · ` : ""}
                   {t.boardComments.replace("{n}", String(post.comments))}
