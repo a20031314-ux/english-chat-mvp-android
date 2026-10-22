@@ -1,7 +1,7 @@
 {
  "_": "서비스 지도 갱신 기록. scripts/service-map.mjs가 쓴다(손으로 고치지 않음). 칸이 바뀐 날만 history에 한 줄.",
- "checkedAt": "2026-10-22 10:25",
- "commit": "483be0d",
+ "checkedAt": "2026-10-22 13:44",
+ "commit": "53e6cb1",
  "nodes": {
   "moyeo": {
    "title": "Moyeo",
@@ -75,8 +75,8 @@
   },
   "chat": {
    "title": "AI 채팅",
-   "text": "3d438abfa388",
-   "shots": "68309e247187",
+   "text": "079498bef5f9",
+   "shots": "53e740b986cf",
    "links": "ca6f7f7fc811",
    "code": "954a41ee7758"
   },
@@ -89,7 +89,7 @@
   },
   "dm": {
    "title": "1:1 메시지",
-   "text": "c571fe60100e",
+   "text": "089a35d2833e",
    "shots": "9d690b6219a5",
    "links": "f564ad3fc247",
    "code": "3b6619968834"
@@ -131,36 +131,36 @@
   },
   "room": {
    "title": "Room",
-   "text": "b45d2fcc7f98",
+   "text": "2665a1775b31",
    "shots": "b020dd018d2b",
    "links": "8e1776db4308",
    "code": "4844d0685995"
   },
   "my": {
    "title": "My",
-   "text": "3c094b42ea80",
-   "shots": "01ad34435903",
+   "text": "8cdb6cb005e3",
+   "shots": "86acea31949f",
    "links": "bc7ccaf1382e",
-   "code": "265296691f7a"
+   "code": "29b76f381952"
   },
   "growth": {
    "title": "자라는 중 · 지도",
-   "text": "5f347e439874",
-   "shots": "14c037cc9e79",
+   "text": "83b82fa066e2",
+   "shots": "67ce6c55b8b6",
    "links": "d558e5cc6ea2",
-   "code": "265296691f7a"
+   "code": "29b76f381952"
   },
   "notes": {
    "title": "노트 · 단어장",
    "text": "81c5e7af9465",
    "shots": "72b41bef2512",
    "links": "fbb882eac87e",
-   "code": "265296691f7a"
+   "code": "29b76f381952"
   },
   "sheet": {
    "title": "문장분석 · 표현 시트",
-   "text": "abb034daa321",
-   "shots": "38df95165730",
+   "text": "4b71550aaabd",
+   "shots": "c4732a3787a2",
    "links": "585c6d8b35ab",
    "code": "e138274c17e9"
   },
@@ -173,6 +173,47 @@
   }
  },
  "history": [
+  {
+   "at": "2026-10-22 13:44",
+   "commit": "53e6cb1",
+   "changes": [
+    {
+     "id": "chat",
+     "title": "AI 채팅",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "dm",
+     "title": "1:1 메시지",
+     "what": "설명"
+    },
+    {
+     "id": "room",
+     "title": "Room",
+     "what": "설명"
+    },
+    {
+     "id": "my",
+     "title": "My",
+     "what": "설명 · 그림 · 코드 영역"
+    },
+    {
+     "id": "growth",
+     "title": "자라는 중 · 지도",
+     "what": "설명 · 그림 · 코드 영역"
+    },
+    {
+     "id": "notes",
+     "title": "노트 · 단어장",
+     "what": "코드 영역"
+    },
+    {
+     "id": "sheet",
+     "title": "문장분석 · 표현 시트",
+     "what": "설명 · 그림"
+    }
+   ]
+  },
   {
    "at": "2026-10-22 10:25",
    "commit": "483be0d",
