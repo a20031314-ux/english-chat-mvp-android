@@ -1,0 +1,4 @@
+• My bắt đầu bằng một đoạn hội thoại ngắn: trả lời bạn có làm được không, bản đồ sẽ được vẽ cho phần đó.
+• Câu sửa trong chat nằm dưới dòng của bạn — nhấn “Có chỗ cần sửa” để xem, hoặc chọn hiện ngay.
+• Trong Room, chỉ bạn thấy chỗ cần sửa trong câu của mình. Dòng nghe không rõ có dấu ? ở cuối.
+• Bật camera trong cuộc gọi 1:1.
