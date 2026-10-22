@@ -86,8 +86,18 @@ export function looksLikeLanguage(text: string, language: string): boolean {
   const letters = [...text].filter((character) => /\p{L}/u.test(character));
   if (letters.length === 0) return true;
   const matching = letters.filter((character) => RANGES[script].test(character)).length;
-  return matching / letters.length >= ENOUGH_OF_THE_LANGUAGE;
+  if (matching / letters.length < ENOUGH_OF_THE_LANGUAGE) return false;
+  // 일본어 글자에는 한자도 들어가서, 가나 하나 없는 중국어 줄이 일본어로 통과했다(2026-10-22 영어↔일본어 방에
+  // "这是一佛西海的三星…"가 자막으로 올라감, 노트에도 중국어 문장). 한자 다섯 자 이상에 가나가 없으면 일본어가 아니다 —
+  // 짧은 말("最近", "大丈夫")은 가나 없이도 일본어라 그대로. 거꾸로 중국어에 가나가 많이 섞이면 일본어다.
+  const kana = letters.filter((character) => KANA_ONLY.test(character)).length;
+  const han = letters.filter((character) => RANGES.han.test(character)).length;
+  if (language === "ja" && han >= 5 && kana === 0) return false;
+  if (language === "zh" && kana / letters.length >= ENOUGH_OF_THE_LANGUAGE) return false;
+  return true;
 }
+
+const KANA_ONLY = /[\p{Script=Hiragana}\p{Script=Katakana}]/u;
 
 /**
  * What the learner said, or nothing.

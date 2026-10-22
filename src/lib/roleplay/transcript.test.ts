@@ -115,3 +115,14 @@ test("말하는 방 힌트: 편한 말이 든 줄만(글자가 다른 두 언어
   // 일본어를 배우는 중국어 사용자: 한자만으로는 못 가른다.
   assert.equal(leansOnOwnLanguage("二十二", "ja", "zh"), false);
 });
+
+test("가나 없는 긴 한자 줄은 일본어가 아니다, 가나가 많은 줄은 중국어가 아니다", async () => {
+  const { looksLikeLanguage, heardInAny } = await import("./transcript.ts");
+  assert.equal(looksLikeLanguage("这是一佛西海的三星安哈尔明的。", "ja"), false);
+  assert.equal(heardInAny("这是一佛西海的三星安哈尔明的。", ["en", "ja"]), "");
+  assert.equal(looksLikeLanguage("昨日は友達と駅の近くでラーメンを食べました。", "ja"), true);
+  assert.equal(looksLikeLanguage("大丈夫", "ja"), true);
+  assert.equal(looksLikeLanguage("今日は駅の近くでラーメンを食べました。", "zh"), false);
+  assert.equal(looksLikeLanguage("我昨天去了图书馆。", "zh"), true);
+  assert.equal(looksLikeLanguage("Ayer fui a la playa.", "es"), true);
+});
