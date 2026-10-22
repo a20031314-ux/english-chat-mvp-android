@@ -1,5 +1,6 @@
 import type { LineQuote } from "./quote.ts";
 import type { LiarView } from "./liarGame.ts";
+import type { MafiaView } from "./mafiaGame.ts";
 import { joinPartTexts } from "./speechParts.ts";
 
 /**
@@ -73,7 +74,7 @@ export type RoomMeta = {
   video?: boolean;
   /** 랜덤으로 만난 두 사람의 영상 방(창구 Spin): 상대 영상은 누를 때까지 흐리게(VideoStage). */
   random?: boolean;
-  /** 지금 하는 게임 판 번호(라이어 게임, rooms/liarGame.ts). 있을 때만 방 물음이 판을 읽어 `game`으로 돌려준다. */
+  /** 지금 하는 게임 판 번호(라이어 게임·마피아, rooms/liarGame.ts·mafiaGame.ts). 있을 때만 방 물음이 판을 읽어 `game`으로 돌려준다. */
   game?: string;
   createdAt: number;
 };
@@ -138,7 +139,7 @@ export type PollResponse = {
   signals: RoomSignal[];
   lines: RoomLine[];
   /** 지금 판(이 사람에게 보일 것만). 예전 앱은 모르고 지나간다. */
-  game?: LiarView | null;
+  game?: LiarView | MafiaView | null;
 };
 
 const ID_ALPHABET = "abcdefghjkmnpqrstuvwxyz23456789";

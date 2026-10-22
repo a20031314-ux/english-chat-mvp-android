@@ -117,6 +117,8 @@ export const OP_COST: Record<string, OpCost> = {
   // 라이어 게임: 제시어(주제·언어 최대 6개 JSON), 답 판정(예/아니오). 2026-10-23 어림.
   roomGameWord: estimated("roomGame", { input: 450, output: 160 }),
   roomGameJudge: estimated("roomGame", { input: 220, output: 20 }),
+  // 마피아 배경 이야기: 무대 이름 + 두 문장 × 언어 최대 6개.
+  roomGameStory: estimated("roomGame", { input: 250, output: 500 }),
   roleplayCorrect: llm("roleplayTutor"),
   roleplayTurn: { kind: "llm", task: "roleplayTutor", tokens: { input: ROLEPLAY_TURN.input, output: ROLEPLAY_TURN.output }, basis: "measured" },
   roleplayContext: llm("roleplayContext"),

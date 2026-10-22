@@ -3,8 +3,9 @@ import { completeChat, extractJson } from "./llm.ts";
 import { recordTokens } from "./meterRequest.ts";
 import { learningLanguageName } from "../learningLanguages.ts";
 import { readWordPick, type LiarTopic, type LiarWordPick } from "../rooms/liarGame.ts";
+import { readMafiaStory, type MafiaStory } from "../rooms/mafiaGame.ts";
 
-/** 말하는 방 게임의 AI 쪽(2026-10-23): 제시어 고르기·라이어의 답 판정. 저장은 `roomGameStore.ts`. */
+/** 말하는 방 게임의 AI 쪽(2026-10-23): 라이어 게임 제시어 고르기·답 판정, 마피아 배경 이야기. 저장은 `roomGameStore.ts`. */
 
 const TOPIC_HINT: Record<LiarTopic, string> = {
   random: "any everyday topic (food, animals, places, jobs, things, sports, hobbies, weather, school, travel…) — pick one",
@@ -80,5 +81,39 @@ export async function judgeLiarGuess(openai: OpenAI, input: { guess: string; wor
   } catch (error) {
     console.error("[room-game] judge", error);
     return false;
+  }
+}
+
+/**
+ * 마피아 배경 이야기(사회자 AI일 때 시작에 한 번): 무대 이름과 첫 밤을 여는 두 문장, 방의 언어들로.
+ * 실패하면 이야기 없이 시작한다(게임은 그대로).
+ */
+export async function pickMafiaStory(openai: OpenAI, input: { languages: string[] }): Promise<MafiaStory | null> {
+  const names = input.languages.map((code) => `${code} = ${learningLanguageName(code)}`).join(", ");
+  const keys = input.languages.map((code) => `"${code}": "..."`).join(", ");
+  try {
+    const completion = await completeChat(openai, "roomGame", {
+      messages: [
+        {
+          role: "system",
+          content: `You are the narrator of a mafia (werewolf) party game played by language learners in a voice room. Invent a fresh, light setting (a place where a small group is stuck together for a few nights — never real people, nothing gory or scary; a playful mystery tone).
+
+Write in each of these languages: ${names}.
+- setting: the place, 2–5 words.
+- intro: two short, simple sentences a beginner can read aloud, setting the scene as the first night falls. Present tense, everyday words.
+
+Return ONLY JSON: {"setting": {${keys}}, "intro": {${keys}}}`,
+        },
+        { role: "user", content: "New game." },
+      ],
+      response_format: { type: "json_object" },
+      temperature: 1,
+      max_tokens: 900,
+    });
+    void recordTokens("roomGameStory", completion.usage);
+    return readMafiaStory(JSON.parse(extractJson(completion.choices[0]?.message?.content ?? "")), input.languages);
+  } catch (error) {
+    console.error("[room-game] story", error);
+    return null;
   }
 }

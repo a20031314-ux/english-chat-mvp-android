@@ -107,6 +107,7 @@
 | vocabSearch | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 vocab) | 가정 |
 | roleplayListen | 0.4원 | 1 | 받아쓰기 6초 gpt-4o-mini-transcribe | 가정 |
 | roomListen | 0.4원 | 1 | 받아쓰기 6초 gpt-4o-mini-transcribe | 가정 |
+| roomGameStory | 0.4원 | 1 | claude-haiku-5-5 250/500 토큰 (기능 roomGame) | 가정 |
 | chatReply | 0.3원 | 1 | claude-haiku-5-5 1400/120 토큰 (기능 chat) | 가정 |
 | roomFix | 0.2원 | 1 | claude-haiku-5-5 900/120 토큰 (기능 roomFix) | 가정 |
 | learnerObserve | 0.2원 | 1 | claude-haiku-5-5 900/80 토큰 (기능 learnerRead) | 가정 |
@@ -176,7 +177,7 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 - 모델 단가: https://developers.openai.com/api/docs/pricing (2026-09-04 확인). 1달러 1400원(2026-09-04).
 - 음성 합성 분당 $0.015 — 통화 비용의 대부분, `cost.ts`에서 가장 약한 숫자.
 - 잰 적 없는 모델 호출 한 번 = 2000/300 토큰. 실측 보고서는 서버가 잰 토큰(`usage:tok:*`)이 20번 넘게 쌓인 기능부터 그 값을 씁니다.
-- 가정으로 값을 매기는 기능 47개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, learnerObserve, curriculumMissions, learnerPick, notesPlace, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, expressionUnits, vocabSearch, contentDiscovery.
+- 가정으로 값을 매기는 기능 48개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, learnerObserve, curriculumMissions, learnerPick, notesPlace, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roomGameStory, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, expressionUnits, vocabSearch, contentDiscovery.
 
 ## 새 기능을 넣을 때
 

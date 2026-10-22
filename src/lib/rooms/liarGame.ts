@@ -29,6 +29,7 @@ export type LiarReason = "caught" | "escaped" | "tie" | "guessed" | "missed" | "
 
 export type LiarGame = {
   v: 1;
+  kind?: "liar";
   id: string;
   mode: LiarMode;
   /** 시작한 방장(다음 차례·끝내기·한 판 더). */
@@ -83,6 +84,7 @@ export function newLiarGame(input: {
   const liar = players[Math.floor(random() * players.length)]?.peerId ?? "";
   return {
     v: 1,
+    kind: "liar",
     id: input.id,
     mode: input.mode,
     moderator: input.moderator,
@@ -186,9 +188,6 @@ export function liarStepKey(game: LiarGame): string {
   return `${game.phase}:${game.turn}`;
 }
 
-export function sameLiarStep(a: LiarGame, b: LiarGame): boolean {
-  return a.phase === b.phase && a.turn === b.turn && a.winner === b.winner;
-}
 
 /** 글자만 비교: 대소문자·문장부호·띄어쓰기·영어 관사를 빼고 같거나, 한쪽이 다른 쪽을 품으면(“an apple” ↔ “apple”). */
 export function normalizeGuess(text: string): string {
@@ -225,6 +224,7 @@ export function liarLanguages(roomLanguages: string[], memberLangs: (string[] | 
 
 /** 이 사람에게 보여 줄 게임(라이어·제시어는 보면 안 되는 사람에게 빼고). */
 export type LiarView = {
+  kind: "liar";
   id: string;
   mode: LiarMode;
   moderator: string;
@@ -257,6 +257,7 @@ export function liarView(game: LiarGame, viewer: string, votes: Record<string, s
   const seesWord = done || me === "player" || me === "moderator";
   const seesLiar = done || me === "moderator" || game.phase === "guess";
   return {
+    kind: "liar",
     id: game.id,
     mode: game.mode,
     moderator: game.moderator,

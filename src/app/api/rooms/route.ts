@@ -38,8 +38,7 @@ import { readAccount } from "@/lib/server/accountStore";
 import { STUN_ONLY, iceServers } from "@/lib/server/turn";
 import { blockedEitherWay, noteHelped, noteHosted, readBlocked, readFollowing } from "@/lib/server/socialStore";
 import { suspendedResponse } from "@/lib/server/suspension";
-import { currentGame } from "@/lib/server/roomGameStore";
-import { liarView } from "@/lib/rooms/liarGame";
+import { currentGame, gameView } from "@/lib/server/roomGameStore";
 
 export const dynamic = "force-dynamic";
 
@@ -191,7 +190,7 @@ export async function POST(request: NextRequest) {
     // 게임 중이면 판을 넘기고(시간이 지난 단계) 이 사람에게 보일 것만 붙인다(api/rooms/game).
     if (result.room.game) {
       const found = await currentGame(roomId, result.room.game, new Set(result.members.map((member) => member.peerId)));
-      return jsonWithCors(request, { ...result, game: found ? liarView(found.game, peerId, found.votes) : null });
+      return jsonWithCors(request, { ...result, game: found ? gameView(found.game, peerId, found.votes) : null });
     }
     return jsonWithCors(request, result);
   }

@@ -26,3 +26,21 @@ test("단계 넘기기는 한 번만(잠금): 두 번째 쓰기는 이미 저장
   assert.equal((await readGame("rtest1", "glock1"))?.turn, 1);
   assert.equal(await readGame("rtest1", "other"), null);
 });
+
+test("마피아: 밤 행동은 단계마다 따로 저장, 다 고르면 방 물음이 아침으로", async () => {
+  const { newMafiaGame } = await import("../rooms/mafiaGame.ts");
+  const { currentGame, writeVote, readVotes } = await import("./roomGameStore.ts");
+  const players = ["a", "b", "c", "d", "e"].map((id) => ({ peerId: `p_${id}`, accountId: null, nickname: id }));
+  const g = newMafiaGame({ id: "mf1", mode: "ai", moderator: "p_a", players, now: Date.now(), random: () => 0.99 });
+  await writeGame("rtest2", g);
+  assert.equal(await writeVote("rtest2", g, "p_a", "p_d"), true);
+  await writeVote("rtest2", g, "p_b", "p_e");
+  assert.deepEqual(await readVotes("rtest2", g), { p_a: "p_d", p_b: "p_e" });
+  const present = new Set(players.map((p) => p.peerId));
+  assert.equal((await currentGame("rtest2", "mf1", present))?.game.phase, "night");
+  await writeVote("rtest2", g, "p_c", "p_a");
+  const day = await currentGame("rtest2", "mf1", present);
+  assert.equal(day?.game.phase, "day");
+  // 낮에는 고르는 것이 없다(밤의 표는 다음 단계에 보이지 않음)
+  assert.deepEqual(day?.votes, {});
+});

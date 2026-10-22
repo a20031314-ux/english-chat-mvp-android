@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-23b";
+export const GUIDE_VERSION = "2026-10-23c";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -58,6 +58,7 @@ export const GUIDE_SECTION_IDS: Record<GuideTabId, string[]> = {
     "room.quote",
     "room.stuck",
     "room.game",
+    "room.mafia",
     "room.host",
     "people.find",
     "people.invite",
@@ -85,7 +86,7 @@ export const GUIDE_CHAPTERS: GuideChapterSpec[] = [
   { id: "messages", title: "{ui:homeTabTalk}", go: "talk", sections: ["talk.list", "messages.dm", "messages.groups"] },
   { id: "video", title: "{ui:homeTabVideo}", go: "video", sections: GUIDE_SECTION_IDS.video },
   { id: "people", title: "{ui:homeTabPeople}", go: "people", sections: ["people.find", "people.invite", "people.rewards", "people.board"] },
-  { id: "rooms", title: "{ui:homeTabRooms}", go: "rooms", sections: ["room.find", "room.layouts", "room.quote", "room.stuck", "room.game", "room.host"] },
+  { id: "rooms", title: "{ui:homeTabRooms}", go: "rooms", sections: ["room.find", "room.layouts", "room.quote", "room.stuck", "room.game", "room.mafia", "room.host"] },
   { id: "my", title: "{ui:homeTabProfile}", go: "map", sections: GUIDE_SECTION_IDS.map.filter((id) => id !== "my.notes") },
   { id: "notes", title: "{ui:notesTitle}", go: "notes", sections: ["my.notes", ...GUIDE_SECTION_IDS.vocab] },
 ];
@@ -439,6 +440,14 @@ export const GUIDE_KO: Guide = {
           "방장이 위의 🎭을 눌러 사회자(AI·나)와 주제를 고르고 ‘시작’. 말하기 자리에 3명 이상 있어야 해요.",
           "라이어만 제시어를 몰라요. 내 차례가 오면 배우는 언어로 제시어를 한 문장 설명하고 ‘다 말했어요’. 다 돌면 라이어라고 생각하는 사람에게 투표해요.",
           "라이어가 뽑히면 제시어를 맞혀 볼 수 있어요. 맞히거나 엉뚱한 사람이 뽑히면 라이어 승. 사회자가 ‘나’면 방장은 참가하지 않고 제시어와 라이어를 봐요."
+        ]
+      },
+      {
+        "heading": "마피아",
+        "body": [
+          "🎭에서 ‘마피아’를 고르고 ‘시작’. 말하기 자리에 5명 이상 있어야 해요(7명부터 마피아 2명). 내 역할은 나에게만 보이고, 마피아끼리는 서로 알아요.",
+          "밤에는 마피아가 노릴 사람, 의사가 지킬 사람, 경찰이 확인할 사람을 골라요. 낮에는 밤에 있었던 일을 보고 배우는 언어로 이야기한 뒤, 투표로 한 명을 내보내요.",
+          "마피아가 모두 나가면 시민 승, 마피아 수가 나머지 사람 수만큼 되면 마피아 승. 사회자가 AI면 처음에 배경 이야기를 들려줘요."
         ]
       },
       {
@@ -830,6 +839,14 @@ export const GUIDE_EN: Guide = {
           "The host taps 🎭 at the top, picks a host (AI or Me) and a topic, and taps “Start”. You need 3 or more people in talking seats.",
           "Only the liar doesn't know the secret word. On your turn, describe it in one sentence in the language you're learning, then tap “I'm done”. After everyone has spoken, vote for who you think the liar is.",
           "If the liar is picked, they can guess the word. If they get it, or the wrong person is picked, the liar wins. With “Me” as host, the room host doesn't play and sees the word and the liar."
+        ]
+      },
+      {
+        "heading": "Mafia",
+        "body": [
+          "In 🎭, pick “Mafia” and tap “Start”. You need 5 or more people in talking seats (2 mafia from 7 people). Only you see your role, and the mafia know each other.",
+          "At night the mafia pick a target, the doctor picks someone to protect and the police pick someone to check. By day, see what happened, talk it over in the language you're learning, then vote one person out.",
+          "The town wins when all the mafia are out; the mafia win when they match the rest in number. With AI as host, a short story opens the game."
         ]
       },
       {

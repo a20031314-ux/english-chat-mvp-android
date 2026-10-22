@@ -52,6 +52,7 @@ import { useInbox } from "./RoomDm";
 import { VideoStage } from "./VideoStage";
 import { GamePanel, GameStartSheet, type GameStart } from "./RoomGame";
 import type { LiarView } from "@/lib/rooms/liarGame";
+import type { MafiaView } from "@/lib/rooms/mafiaGame";
 import { FrameGrabber, randomFrame } from "@/lib/random/client";
 import { RANDOM_FRAME_EVERY_MS } from "@/lib/random/protocol";
 import { CALL_LAYOUT_LINES, ROOM_LAYOUTS, pendingNotes, readRoomLayout, saveRoomLayout, type RoomLayout, type RoomNote } from "@/lib/rooms/layout";
@@ -242,13 +243,14 @@ export function RoomView({
   const [leaving, setLeaving] = useState<"" | "choose" | "pick">("");
   // 방장이 빈자리를 눌렀을 때 올릴 사람 고르기(참여 요청한 사람 먼저, 그다음 듣는 사람).
   const [seatPick, setSeatPick] = useState(false);
-  // 🎭 라이어 게임(2026-10-23): 판은 방 물음이 같이 돌려준다. 닫기(×)는 이 기기에서 끝난 판만 접는다.
-  const [game, setGame] = useState<LiarView | null>(null);
+  // 🎭 라이어 게임·마피아(2026-10-23): 판은 방 물음이 같이 돌려준다. 닫기(×)는 이 기기에서 끝난 판만 접는다.
+  const [game, setGame] = useState<LiarView | MafiaView | null>(null);
   const [gameSheet, setGameSheet] = useState(false);
   const [gameBusy, setGameBusy] = useState(false);
   const [gameError, setGameError] = useState("");
   const [gameHidden, setGameHidden] = useState("");
   const lastStartRef = useRef<GameStart | null>(null);
+  const lastTriedRef = useRef<GameStart["game"]>("liar");
   // 방장이 다시 들어오면 서버가 방장 자리를 새 peerId로 옮긴다 — 버튼 이름(방 닫기)을 맞추려고 들어갈 때 받은 값으로.
   // 집은 남의 줄 — 댓글창 위에 인용으로 붙는다(묻기면 학습 언어 질문이 미리 채워짐).
   const [quoting, setQuoting] = useState<{ line: RoomLine; ask: boolean; focus?: string } | null>(null);
@@ -817,11 +819,12 @@ export function RoomView({
   };
   const gameErrorText = (error: unknown) =>
     error instanceof RoomApiError && error.code === "NOT_ENOUGH"
-      ? t.gameNeedPlayers.replace("{n}", "3")
+      ? t.gameNeedPlayers.replace("{n}", lastTriedRef.current === "mafia" ? "5" : "3")
       : error instanceof RoomApiError && error.code === "GAME_LIMIT"
         ? t.gameLimit
         : t.gameFailed;
   const startGame = async (start: GameStart) => {
+    lastTriedRef.current = start.game;
     setGameBusy(true);
     setGameError("");
     try {
@@ -1019,7 +1022,12 @@ export function RoomView({
                         🔇
                       </span>
                     ) : null}
-                    {shownGame?.current === member.peerId ? (
+                    {shownGame?.kind === "mafia" && shownGame.players.some((player) => player.peerId === member.peerId) && !shownGame.alive.includes(member.peerId) ? (
+                      <span className="absolute -top-1 -start-1 rounded-full bg-black/80 px-1 text-caption" aria-hidden>
+                        💀
+                      </span>
+                    ) : null}
+                    {shownGame?.kind === "liar" && shownGame.current === member.peerId ? (
                       <span className="absolute -top-1 -start-1 rounded-full bg-emerald-400 px-1 text-caption" title={t.gameCurrent}>
                         🎤
                       </span>

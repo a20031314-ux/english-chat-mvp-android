@@ -7,6 +7,7 @@ import { readCachedAccount } from "@/lib/account/session";
 import type { LineKind, PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, RoomSummary, SignalKind } from "./protocol";
 import type { PersonCard, PublicProfile } from "./social";
 import type { LiarMode, LiarTopic, LiarView } from "./liarGame";
+import type { MafiaView } from "./mafiaGame";
 import type { DmMessage, DmSummary, DmThread } from "./dm";
 import type { Group, GroupCall, GroupMessage, GroupSummary, SpaceItem, TeamSchedule, TeamSpace } from "./group";
 import type { BoardAuthor, BoardComment, BoardPost } from "./board";
@@ -124,20 +125,20 @@ export async function pollRoom(input: {
   return call("poll", input);
 }
 
-/** 방 게임(라이어 게임, api/rooms/game). 답은 이 사람에게 보일 판(끝내면 null). 실패하면 RoomApiError(NOT_ENOUGH·GAME_LIMIT·WORD_FAILED 등). */
+/** 방 게임(라이어 게임·마피아, api/rooms/game). 답은 이 사람에게 보일 판(끝내면 null). 실패하면 RoomApiError(NOT_ENOUGH·GAME_LIMIT·WORD_FAILED 등). */
 export async function roomGame(
   input:
-    | { action: "start"; roomId: string; peerId: string; mode: LiarMode; topic: LiarTopic; laps: 1 | 2; word?: string }
+    | { action: "start"; roomId: string; peerId: string; game: "liar" | "mafia"; mode: LiarMode; topic: LiarTopic; laps: 1 | 2; word?: string }
     | { action: "next" | "end"; roomId: string; peerId: string }
     | { action: "vote"; roomId: string; peerId: string; target: string }
     | { action: "guess"; roomId: string; peerId: string; text: string },
-): Promise<LiarView | null> {
+): Promise<LiarView | MafiaView | null> {
   const response = await fetch(apiUrl("/api/rooms/game"), {
     method: "POST",
     headers: { "Content-Type": "application/json", ...entitlementHeaders() },
     body: JSON.stringify(input),
   });
-  const body = (await response.json().catch(() => ({}))) as { error?: string; game?: LiarView | null };
+  const body = (await response.json().catch(() => ({}))) as { error?: string; game?: LiarView | MafiaView | null };
   if (!response.ok) {
     noteSuspended(response.status, body);
     throw new RoomApiError(body.error ?? "FAILED", response.status);

@@ -114,6 +114,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   // 방 라이어 게임(2026-10-23): 한 판 시작에 제시어 고르기 한 번, 라이어가 답했는데 글자로 안 맞으면 판정 한 번.
   roomGameWord: 1,
   roomGameJudge: 1,
+  // 마피아(사회자 AI): 시작에 배경 이야기 한 번.
+  roomGameStory: 1,
   // A correction the scenario did not have written. Rarer than listening by
   // design — most misses at a turn are the same miss and were recorded — so a
   // count that climbs towards the listen count means the scripts are missing
