@@ -152,6 +152,9 @@ export async function POST(request: NextRequest) {
   const simSplit = simUser ? request.headers.get("x-sim-map-split") : null;
   const split = simSplit === "1" || (simSplit !== "0" && mapSplitOn());
   const wantsStream = body.stream === true && split;
+  // 뼈대 짜기에서 먼저 생각할지(운영 MAP_PLAN_THINK, 기본 켬) — 점검 사용자는 x-sim-map-think: 1/0으로 비교.
+  const simThink = simUser ? request.headers.get("x-sim-map-think") : null;
+  const planThinks = simThink === "1" || (simThink !== "0" && (process.env.MAP_PLAN_THINK?.trim() ?? "1") !== "0");
 
   if (!split) return drawWhole();
 
@@ -228,7 +231,7 @@ export async function POST(request: NextRequest) {
             { role: "system", content: mapPlanPrompt(input) },
             { role: "user", content: mapUserMessage(input) },
           ],
-        }, { think: true });
+        }, { think: planThinks });
         if (completion.choices[0]?.finish_reason === "length") throw new Error("plan cut off at max_tokens");
         const raw = JSON.parse(completion.choices[0]?.message?.content ?? "{}") as Record<string, unknown>;
         return { raw, skeleton: normalizeMap(raw, base()) };
