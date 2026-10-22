@@ -308,7 +308,6 @@ export function GuideButton({
   };
   const pickTop = choosing ? (
     <div className="flex flex-col gap-3">
-      {picking ? <p className="text-note leading-relaxed text-slate-300">{ui.featurePickHint}</p> : null}
       <PresetRow ui={ui} off={off} />
       <div role="radiogroup" aria-label={ui.featurePickTitle} className="flex gap-0.5 self-start rounded-xl border border-line p-0.5">
         {(["map", "list"] as const).map((view) => (
@@ -432,15 +431,6 @@ export function GuideButton({
                           ) : null}
                         </div>
                       </div>
-                      {features && feature === "people" ? (
-                        <p className="-mt-1 mb-3 text-meta text-slate-400">{ui.featureLinkedPeople}</p>
-                      ) : null}
-                      {features && feature === "rooms" && !on && off.includes("people") ? (
-                        <p className="-mt-1 mb-3 text-meta text-slate-400">{ui.featureNeedsPeople}</p>
-                      ) : null}
-                      {features && !on && target.hidden && focusChapter === chapter.id && !picking ? (
-                        <p className="mb-3 rounded-lg bg-info/15 px-3 py-2 text-note text-info">{ui.featureHiddenHint}</p>
-                      ) : null}
                       <div className={`flex flex-col gap-5 ${on ? "" : "opacity-60"}`}>
                         {sections.map((section) => (
                           <SectionView
