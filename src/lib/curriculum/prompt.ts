@@ -132,3 +132,91 @@ export function mapUserMessage(input: MapRequest): string {
 
 /** For tests: whether the chosen plan's lines are left out when a self-check speaks instead. */
 export const PLAN_RULES = { FOCUS_RULE, METHOD_RULE };
+
+/* ───────── 나눠 그리기(2026-10-23): 짜기 한 번 → 연습 채우기 여러 번 나란히 ─────────
+ * 한 번에 다 쓰면 40~50초(재시도면 85초). 지도의 뼈대(제목·요약·칸·주제·순서)만 먼저 짜고,
+ * 주제마다 연습·이어진 주제는 몇 개씩 나눠 나란히 채운다. 뼈대가 오면 화면에 바로 보인다.
+ */
+
+function libraryLines(input: MapRequest): string {
+  return input.library.length
+    ? input.library.map((clip) => `  ${clip.videoId}: ${clip.title}`).join("\n")
+    : "  (none this month — leave videoId out)";
+}
+
+function activityRules(input: MapRequest): string {
+  return `- activities: 1 to 3 ways to practise it in this app. Each has a tab and a task, one short sentence saying what to do there:
+    chat — writing back and forth with a tutor. Add "starter": the first line the learner could send, in ${input.target}.
+    roleplay — a spoken call with a character in a scene.
+    video — watching real people say it. Add "listenFor": 1 to 3 short expressions from this topic, in ${input.target}, separated by " | " — the app finds scenes in videos where they are said. If a clip from this list fits the topic, also put its id in "videoId" (not in the task); otherwise leave videoId out. Only these ids:
+${libraryLines(input)}
+    vocab — reviewing the words they saved.
+- links: 1 to 3 other topics of the map this one connects to, mostly in other sectors, each with "why": one sentence on how the two help each other.`;
+}
+
+/** 1단계: 뼈대만. covers는 채우기 단계에 넘기는 "이 주제가 꼭 연습시킬 것"(저장하지 않음). */
+export function mapPlanPrompt(input: MapRequest): string {
+  const sectors = SECTOR_IDS.map((id) => `  ${id}: ${SECTOR_BRIEFS[id]}`).join("\n");
+  return `You design a study map for one person learning ${input.target}. They told you what they want to be able to do; you lay out what to study to get there. In this step you plan the map; the practice activities are written afterwards from your plan.
+
+The map has four fixed sectors:
+${sectors}
+
+${input.stageScope ? STAGE_TOPIC_RULES : `Write 8 to 12 topics in total, at least 2 in every sector. Each topic is small enough to study in one or two sittings and specific to this goal, never a broad category. Pitch them at a ${input.level} learner.`}
+${ONE_UNIT_RULE}
+
+Topic ids are the sector letter and a number: A1, A2, B1, … Give every topic:
+- title: a few words.
+- summary: one sentence on what they will be able to do after it.
+- order: its place in the order you recommend studying the whole map, 1 first. Start with a situation they can use soon, and bring in what it needs right before it is needed — pronunciation and listening topics too, next to the situations they serve, not saved for the end.
+- covers: the ${input.target} expressions, structures, words or sounds this topic must make them practise, separated by " | " — the activities will be written from it.
+${input.stageScope ? `\n${input.stageScope}\n` : ""}
+${learnerSection(input.learner, input.selfCheck)}
+${input.selfCheck ? `\n${input.selfCheck}\n` : ""}
+
+Also give the map a title (a few words) and a summary (two sentences: what the goal takes, and the path the order follows), and give each sector a title and a one-line description specific to this goal.
+
+Write every title, summary and description in ${input.uiName}. Only "covers" is in ${input.target}. Quote ${input.target} words inside quotes when you mention them.
+
+Return only a json object:
+{"title":"","summary":"","sectors":[{"id":"A","title":"","description":""}],"topics":[{"id":"A1","sector":"A","title":"","summary":"","order":1,"covers":""}]}`;
+}
+
+export type PlannedTopic = { id: string; sector: string; title: string; summary: string; order: number; covers: string };
+
+/** 2단계: 정해진 주제 몇 개의 연습·이어진 주제만. 지도 전체(뼈대)를 같이 보여 줘 이을 곳을 알게 한다. */
+export function mapFillPrompt(input: MapRequest, plan: { title: string; topics: PlannedTopic[] }, ids: string[]): string {
+  const outline = plan.topics
+    .map((t) => `  ${t.id} (${t.sector}, #${t.order}) ${t.title} — ${t.summary}${t.covers ? ` [covers: ${t.covers}]` : ""}`)
+    .join("\n");
+  return `You write the practice for part of a study map for one person learning ${input.target}. The map is already planned:
+
+Map: ${plan.title}
+${outline}
+
+Write activities and links for these topics only: ${ids.join(", ")}. For each:
+${activityRules(input)}
+
+Make the activities practise what the topic covers: put its expressions in chat starters, in listenFor or name them in tasks, so every covered item is practised somewhere. Links point only to topic ids of the map above.
+${input.stageScope ? `\n${input.stageScope}\n` : ""}
+${learnerSection(input.learner, input.selfCheck)}
+${input.selfCheck ? `\n${input.selfCheck}\n` : ""}
+
+Write every task and why in ${input.uiName}. Only "starter" and "listenFor" are in ${input.target}. Quote ${input.target} words inside quotes when you mention them.
+
+Return only a json object:
+{"topics":[{"id":"${ids[0] ?? "A1"}","activities":[{"tab":"chat","task":"","starter":""},{"tab":"video","task":"","listenFor":"","videoId":""}],"links":[{"to":"","why":""}]}]}`;
+}
+
+/** 뼈대 주제를 채우기 묶음으로: 추천 순서대로 size개씩(마지막 묶음이 너무 작으면 앞에 붙임). */
+export function fillGroups(topics: { id: string; order: number }[], size = 3): string[][] {
+  const ordered = [...topics].sort((a, b) => a.order - b.order).map((t) => t.id);
+  const groups: string[][] = [];
+  for (let i = 0; i < ordered.length; i += size) groups.push(ordered.slice(i, i + size));
+  if (groups.length > 1 && groups[groups.length - 1].length < 2) {
+    const last = groups.pop()!;
+    groups[groups.length - 1].push(...last);
+  }
+  return groups;
+}
+

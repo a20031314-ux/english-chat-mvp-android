@@ -85,7 +85,9 @@ export const OP_COST: Record<string, OpCost> = {
   expressionAskRetry: llm("ask"),
   expressionAskQuick: llm("ask"),
   // 지도 그리기: 지시·단계 범위 약 3,500토큰 + 지도 JSON과 먼저 생각하는 몫 약 8,000(Sonnet, 2026-10-22 어림).
-  curriculumGenerate: estimated("curriculumMap", { input: 3500, output: 8000 }),
+  // 나눠 그리기(2026-10-23): 뼈대만(생각 포함) — 예전 한 번에 쓰던 8000보다 짧다. 채우기는 아래 따로.
+  curriculumGenerate: estimated("curriculumMap", { input: 3500, output: 4000 }),
+  curriculumMapFill: estimated("curriculumMapFill", { input: 4000, output: 1800 }),
   // 단계 다섯 개 글(약 120줄) 한 번 옮기기, 학습 언어 × 앱 언어마다 한 번(2026-10-22 어림).
   stageCopy: estimated("translate", { input: 3500, output: 4500 }),
   // 영어 구문 목록(38개) 분류 프롬프트 약 3,400자 + 문장 두 줄, 답은 max_tokens 150의 짧은 JSON(2026-10-21 어림).

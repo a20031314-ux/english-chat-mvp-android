@@ -61,6 +61,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   // A study map drawn from a goal (curriculum/generate.ts). One call, larger
   // than most — it writes the whole map at once.
   curriculumGenerate: 1,
+  // 나눠 그리기의 채우기 한 묶음(주제 3개 안팎, 2026-10-23) — 지도 하나에 보통 3묶음.
+  curriculumMapFill: 1,
   // 단계 범위 화면 글을 앱 언어로 한 번 옮김(server/stageCopy.ts) — 학습 언어 × 앱 언어마다 한 번, 저장된 뒤엔 0.
   stageCopy: 1,
   // One chat sentence read for the constructions in it (learner/classify.ts),

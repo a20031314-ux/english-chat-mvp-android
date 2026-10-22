@@ -1,8 +1,9 @@
 import { completeChat } from "@/lib/server/llm";
 import { NextRequest } from "next/server";
 import { getOpenAIClient } from "@/lib/server/openai";
-import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
+import { corsPreflightResponse, jsonWithCors, streamWithCors } from "@/lib/server/cors";
 import { meterRequest, simDetail } from "@/lib/server/meterRequest";
+import { requestUserId } from "@/lib/server/premiumRequest";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
 import { getDailyOpUsed } from "@/lib/server/entitlementStore";
@@ -12,7 +13,7 @@ import { itemsIn } from "@/lib/learner/comprehension";
 import { profileBrief } from "@/lib/learner/profile";
 import { FREE_DAILY_MAP_LIMIT, PREMIUM_DAILY_MAP_LIMIT } from "@/lib/billing/config";
 import { normalizeMap, type StudyMap } from "@/lib/curriculum/map";
-import { mapSystemPrompt, mapUserMessage } from "@/lib/curriculum/prompt";
+import { fillGroups, mapFillPrompt, mapPlanPrompt, mapSystemPrompt, mapUserMessage, type PlannedTopic } from "@/lib/curriculum/prompt";
 import { parseSelfCheck, pitchFor, selfCheckMapRules } from "@/lib/learner/selfCheck";
 import { saveSelfCheck } from "@/lib/server/selfCheckStore";
 import { stageById, stageScopeForPrompt } from "@/lib/curriculum/stages";
@@ -42,6 +43,15 @@ export const maxDuration = 120;
  */
 const MODEL = () => process.env.OPENAI_CURRICULUM_MODEL?.trim() || "gpt-4.1";
 const MAX_GOAL_CHARS = 300;
+/** 나눠 그리기 운영 스위치(Vercel MAP_SPLIT=1/0). 코드 기본값은 아래 — 점검 뒤 켬. */
+const mapSplitOn = () => (process.env.MAP_SPLIT?.trim() ?? "0") === "1";
+
+function thinWhy(raw: unknown): string {
+  // 점검 사용자에게만: 무엇이 왔는지(어떤 모양이라 버려졌는지 보려고).
+  const shape = raw && typeof raw === "object" ? (raw as Record<string, unknown>) : {};
+  const topicsIn = Array.isArray(shape.topics) ? shape.topics : [];
+  return `map too thin: keys=${Object.keys(shape).join(",")} topics=${topicsIn.length} first=${JSON.stringify(topicsIn[0] ?? shape).slice(0, 220)}`;
+}
 const LEVELS: StudyMap["level"][] = ["beginner", "intermediate", "advanced"];
 
 export async function OPTIONS(request: NextRequest) {
@@ -123,53 +133,183 @@ export async function POST(request: NextRequest) {
     ...(selfCheck ? { selfCheck: selfCheckMapRules(selfCheck) } : {}),
   };
 
-  try {
-    // 지도 그리기는 따로(curriculumMap, 코드 기본값 Sonnet) — 먼저 생각하게 둔다(think): 끄면 지도가 얇아졌다(2026-10-22 점검).
-    // 얇은 지도(주제 0개)가 28번 중 2번 와서(2026-10-22 release271) 시간이 남으면 한 번 더 그린다(한 번 36~52초, maxDuration 120).
+  // 아래 안쪽 함수들이 쓴다(위에서 이미 없으면 503).
+  const client = openai;
+  const base = () => ({
+    id: crypto.randomUUID(),
+    language: targetCode,
+    uiLanguage: uiCode,
+    goal,
+    level,
+    createdAt: new Date().toISOString(),
+    libraryVideoIds: library.map((clip) => clip.videoId),
+    ...(stageForMap ? { stageId: stageForMap.id } : {}),
+  });
+
+  // 나눠 그리기(2026-10-23): 뼈대 짜기 → 주제 몇 개씩 연습 나란히 채우기. 운영 기본은 MAP_SPLIT(켜기 전엔 꺼짐),
+  // 점검 사용자는 x-sim-map-split: 1/0으로 골라 비교한다. 새 앱은 stream:true로 진행·뼈대를 바로 받는다.
+  const simUser = /^rc:simcheck-/.test(requestUserId(request));
+  const simSplit = simUser ? request.headers.get("x-sim-map-split") : null;
+  const split = simSplit === "1" || (simSplit !== "0" && mapSplitOn());
+  const wantsStream = body.stream === true && split;
+
+  if (!split) return drawWhole();
+
+  if (!wantsStream) {
+    const out = await drawSplit(() => undefined);
+    return jsonWithCors(request, out.body, { status: out.status });
+  }
+  const encoder = new TextEncoder();
+  const stream = new ReadableStream<Uint8Array>({
+    async start(controller) {
+      const send = (line: unknown) => controller.enqueue(encoder.encode(`${JSON.stringify(line)}\n`));
+      try {
+        const out = await drawSplit(send);
+        send(out.status === 200 ? { type: "done", record: out.body } : { type: "error", status: out.status, ...out.body });
+      } catch (error) {
+        console.error("[curriculum-split-stream]", error);
+        send({ type: "error", status: 502, error: "MAP_FAILED", ...simDetail(request, error) });
+      }
+      controller.close();
+    },
+  });
+  return streamWithCors(request, stream);
+
+  /** 예전처럼 한 번에(Sonnet, 먼저 생각). 나눠 그리기가 꺼져 있을 때. */
+  async function drawWhole() {
+    try {
+      // 지도 그리기는 따로(curriculumMap, 코드 기본값 Sonnet) — 먼저 생각하게 둔다(think): 끄면 지도가 얇아졌다(2026-10-22 점검).
+      // 얇은 지도(주제 0개)가 28번 중 2번 와서(2026-10-22 release271) 시간이 남으면 한 번 더 그린다(한 번 36~52초, maxDuration 120).
+      const startedAt = Date.now();
+      const drawOnce = async () => {
+        const completion = await completeChat(client, "curriculumMap", {
+          temperature: 0.4,
+          // Claude는 같은 한국어·일본어 글에 토큰을 더 많이 써서 4000이면 지도 JSON이 중간에 끊겼다(2026-10-22 점검, 세 조합 모두 MAP_FAILED).
+          max_tokens: 8000,
+          response_format: { type: "json_object" },
+          messages: [
+            { role: "system", content: mapSystemPrompt(input) },
+            { role: "user", content: mapUserMessage(input) },
+          ],
+        }, { think: true });
+        if (completion.choices[0]?.finish_reason === "length") throw new Error("map cut off at max_tokens");
+        const drawn = JSON.parse(completion.choices[0]?.message?.content ?? "{}") as unknown;
+        return { raw: drawn, result: normalizeMap(drawn, base()) };
+      };
+      let { raw, result } = await drawOnce();
+      if (!result && Date.now() - startedAt < 55_000) {
+        console.error("[curriculum] map too thin, drawing again", { model: MODEL() });
+        ({ raw, result } = await drawOnce());
+      }
+      if (!result) {
+        console.error("[curriculum] map too thin to keep", { model: MODEL() });
+        return jsonWithCors(request, { error: "MAP_FAILED", ...simDetail(request, thinWhy(raw)) }, { status: 502 });
+      }
+      if (result.dropped.length) console.log("[curriculum] dropped", result.dropped);
+      const record = await saveNewMap(userId, result.map);
+      return jsonWithCors(request, record);
+    } catch (error) {
+      console.error("[curriculum]", error);
+      return jsonWithCors(request, { error: "MAP_FAILED", ...simDetail(request, error) }, { status: 502 });
+    }
+  }
+
+  /** 뼈대 → 채우기. send는 진행을 흘려 보낼 곳(스트림이 아니면 버림). */
+  async function drawSplit(send: (line: unknown) => void): Promise<{ status: number; body: Record<string, unknown> }> {
     const startedAt = Date.now();
-    const drawOnce = async () => {
-      const completion = await completeChat(openai, "curriculumMap", {
-        temperature: 0.4,
-        // Claude는 같은 한국어·일본어 글에 토큰을 더 많이 써서 4000이면 지도 JSON이 중간에 끊겼다(2026-10-22 점검, 세 조합 모두 MAP_FAILED).
-        max_tokens: 8000,
-        response_format: { type: "json_object" },
-        messages: [
-          { role: "system", content: mapSystemPrompt(input) },
-          { role: "user", content: mapUserMessage(input) },
-        ],
-      }, { think: true });
-      if (completion.choices[0]?.finish_reason === "length") throw new Error("map cut off at max_tokens");
-      const drawn = JSON.parse(completion.choices[0]?.message?.content ?? "{}") as unknown;
-      const normalized = normalizeMap(drawn, {
-        id: crypto.randomUUID(),
-        language: targetCode,
-        uiLanguage: uiCode,
-        goal,
-        level,
-        createdAt: new Date().toISOString(),
-        libraryVideoIds: library.map((clip) => clip.videoId),
-        ...(stageForMap ? { stageId: stageForMap.id } : {}),
-      });
-      return { raw: drawn, result: normalized };
-    };
-    let { raw, result } = await drawOnce();
-    if (!result && Date.now() - startedAt < 55_000) {
-      console.error("[curriculum] map too thin, drawing again", { model: MODEL() });
-      ({ raw, result } = await drawOnce());
+    try {
+      send({ type: "step", step: "plan" });
+      const planOnce = async () => {
+        const completion = await completeChat(client, "curriculumMap", {
+          temperature: 0.4,
+          max_tokens: 6000,
+          response_format: { type: "json_object" },
+          messages: [
+            { role: "system", content: mapPlanPrompt(input) },
+            { role: "user", content: mapUserMessage(input) },
+          ],
+        }, { think: true });
+        if (completion.choices[0]?.finish_reason === "length") throw new Error("plan cut off at max_tokens");
+        const raw = JSON.parse(completion.choices[0]?.message?.content ?? "{}") as Record<string, unknown>;
+        return { raw, skeleton: normalizeMap(raw, base()) };
+      };
+      let { raw, skeleton } = await planOnce();
+      if (!skeleton && Date.now() - startedAt < 40_000) {
+        console.error("[curriculum-split] plan too thin, again");
+        ({ raw, skeleton } = await planOnce());
+      }
+      if (!skeleton) return { status: 502, body: { error: "MAP_FAILED", ...simDetail(request, thinWhy(raw)) } };
+      const planAt = Date.now();
+      const kept = new Set(skeleton.map.topics.map((t) => t.id));
+      const planned: PlannedTopic[] = (Array.isArray(raw.topics) ? (raw.topics as Record<string, unknown>[]) : [])
+        .map((t) => ({
+          id: String(t?.id ?? "").toUpperCase(),
+          sector: String(t?.sector ?? ""),
+          title: String(t?.title ?? ""),
+          summary: String(t?.summary ?? ""),
+          order: skeleton!.map.topics.find((k) => k.id === String(t?.id ?? "").toUpperCase())?.order ?? 99,
+          covers: typeof t?.covers === "string" ? t.covers.slice(0, 200) : "",
+        }))
+        .filter((t) => kept.has(t.id));
+      const groups = fillGroups(planned);
+      send({ type: "plan", map: skeleton.map, fill: { done: 0, total: groups.length } });
+
+      const plan = { title: skeleton.map.title, topics: planned };
+      const filled = new Map<string, Record<string, unknown>>();
+      let done = 0;
+      const fillOnce = async (ids: string[]) => {
+        void meterRequest(request, "curriculumMapFill");
+        const completion = await completeChat(client, "curriculumMapFill", {
+          temperature: 0.4,
+          max_tokens: 3500,
+          response_format: { type: "json_object" },
+          messages: [
+            { role: "system", content: mapFillPrompt(input, plan, ids) },
+            { role: "user", content: JSON.stringify({ topics: ids }) },
+          ],
+        });
+        if (completion.choices[0]?.finish_reason === "length") throw new Error("fill cut off at max_tokens");
+        const out = JSON.parse(completion.choices[0]?.message?.content ?? "{}") as { topics?: unknown };
+        const rows = Array.isArray(out.topics) ? (out.topics as Record<string, unknown>[]) : [];
+        const got = rows.filter((row) => ids.includes(String(row?.id ?? "").toUpperCase()));
+        if (!got.length) throw new Error(`fill returned none of ${ids.join(",")}`);
+        return got;
+      };
+      await Promise.all(
+        groups.map(async (ids) => {
+          let rows: Record<string, unknown>[] = [];
+          try {
+            rows = await fillOnce(ids);
+          } catch (error) {
+            console.error("[curriculum-split] fill failed, again", ids, error);
+            rows = await fillOnce(ids).catch((again) => {
+              console.error("[curriculum-split] fill failed twice — topics kept without practice", ids, again);
+              return [];
+            });
+          }
+          for (const row of rows) filled.set(String(row.id).toUpperCase(), row);
+          done += 1;
+          send({ type: "step", step: "fill", done, total: groups.length });
+        }),
+      );
+
+      // 뼈대 + 채운 것 → 예전과 같은 모양으로 한 번 더 걸러 저장.
+      const merged = {
+        ...raw,
+        topics: (raw.topics as Record<string, unknown>[]).map((t) => {
+          const row = filled.get(String(t?.id ?? "").toUpperCase());
+          return { ...t, activities: row?.activities ?? [], links: row?.links ?? [] };
+        }),
+      };
+      const result = normalizeMap(merged, { ...base(), id: skeleton.map.id, createdAt: skeleton.map.createdAt });
+      if (!result) return { status: 502, body: { error: "MAP_FAILED", ...simDetail(request, "merged map too thin") } };
+      if (result.dropped.length) console.log("[curriculum-split] dropped", result.dropped);
+      console.log("[curriculum-split] ms", { plan: planAt - startedAt, fill: Date.now() - planAt, groups: groups.length, missing: planned.length - filled.size });
+      const record = await saveNewMap(userId, result.map);
+      return { status: 200, body: record as unknown as Record<string, unknown> };
+    } catch (error) {
+      console.error("[curriculum-split]", error);
+      return { status: 502, body: { error: "MAP_FAILED", ...simDetail(request, error) } };
     }
-    if (!result) {
-      console.error("[curriculum] map too thin to keep", { model: MODEL() });
-      // 점검 사용자에게만: 무엇이 왔는지(어떤 모양이라 버려졌는지 보려고).
-      const shape = raw && typeof raw === "object" ? (raw as Record<string, unknown>) : {};
-      const topicsIn = Array.isArray(shape.topics) ? shape.topics : [];
-      const why = `map too thin: keys=${Object.keys(shape).join(",")} topics=${topicsIn.length} first=${JSON.stringify(topicsIn[0] ?? shape).slice(0, 220)}`;
-      return jsonWithCors(request, { error: "MAP_FAILED", ...simDetail(request, why) }, { status: 502 });
-    }
-    if (result.dropped.length) console.log("[curriculum] dropped", result.dropped);
-    const record = await saveNewMap(userId, result.map);
-    return jsonWithCors(request, record);
-  } catch (error) {
-    console.error("[curriculum]", error);
-    return jsonWithCors(request, { error: "MAP_FAILED", ...simDetail(request, error) }, { status: 502 });
   }
 }

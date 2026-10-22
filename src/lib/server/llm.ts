@@ -57,6 +57,7 @@ export const TASKS = {
   mission: { tier: "high", openai: () => env("OPENAI_MISSION_MODEL") ?? D.mission, about: "지도 미션 확인" },
   curriculum: { tier: "high", openai: () => env("OPENAI_CURRICULUM_MODEL") ?? D.curriculum, about: "미션 쓰기·지도에 넣기·약점 미션" },
   curriculumMap: { tier: "high", openai: () => env("OPENAI_CURRICULUM_MODEL") ?? D.curriculumMap, about: "My 지도 그리기(고른 단계 범위)" },
+  curriculumMapFill: { tier: "high", openai: () => env("OPENAI_CURRICULUM_MODEL") ?? D.curriculumMapFill, about: "My 지도 나눠 그리기 — 주제 몇 개씩 연습 채우기" },
   learnerRead: { tier: "high", openai: () => env("OPENAI_LEARNER_MODEL") ?? D.learnerRead, about: "학습자 프로필·자주 틀리는 것 읽기" },
   roleplayReview: { tier: "high", openai: () => env("OPENAI_REVIEW_MODEL") ?? D.roleplayReview, about: "통화 돌아보기 평가" },
   chatVerify: { tier: "high", openai: () => env("OPENAI_VERIFY_MODEL") ?? D.chatVerify, about: "채팅 고친 문장 확인(위험한 줄만, 열 때)" },

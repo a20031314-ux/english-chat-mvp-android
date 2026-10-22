@@ -29,6 +29,7 @@ export const OPENAI_TEXT_DEFAULTS = {
   mission: "gpt-4.1-mini",
   curriculum: "gpt-4.1",
   curriculumMap: "gpt-4.1",
+  curriculumMapFill: "gpt-4.1",
   learnerRead: "gpt-4.1-mini",
   roleplayReview: "gpt-5-mini",
   chatVerify: "gpt-4.1",
@@ -73,6 +74,8 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   // My 지도 그리기(대화 예시로 "이게 내 수준"을 고른 뒤 그 단계 범위로) — 사용자 생각 2026-10-22: Sonnet이 그린다.
   // 이 호출만 Sonnet이 먼저 생각하게 둔다(completeChat think) — 생각을 끄면 지도가 얇아졌다(점검 8/14 "map too thin").
   curriculumMap: SONNET,
+  // 나눠 그리기(2026-10-23): 뼈대를 짠 뒤 주제 몇 개씩 연습·이어진 주제를 나란히 채운다 — 생각 없이(짧게).
+  curriculumMapFill: SONNET,
 };
 
 /** "제공자: 모델" → 모델 이름(틀린 모양이면 null). */

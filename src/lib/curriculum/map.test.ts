@@ -117,3 +117,23 @@ test("a video activity keeps what to listen for, split into phrases", async () =
   assert.equal(video!.videoId, undefined);
   assert.equal(chat!.listenFor, undefined);
 });
+
+test("나눠 그리기: 채우기 묶음은 추천 순서대로 3개씩, 끝에 1개만 남으면 앞에 붙임", async () => {
+  const { fillGroups } = await import("./prompt.ts");
+  const topics = ["A1", "B1", "A2", "C1", "D1", "A3", "B2"].map((id, i) => ({ id, order: i + 1 }));
+  assert.deepEqual(fillGroups(topics), [["A1", "B1", "A2"], ["C1", "D1", "A3", "B2"]]);
+  assert.deepEqual(fillGroups(topics.slice(0, 6)), [["A1", "B1", "A2"], ["C1", "D1", "A3"]]);
+  assert.deepEqual(fillGroups([{ id: "B1", order: 2 }, { id: "A1", order: 1 }]), [["A1", "B1"]]);
+});
+
+test("나눠 그리기: 뼈대 지시는 연습을 쓰지 않고 covers를, 채우기 지시는 맡은 주제만", async () => {
+  const { mapPlanPrompt, mapFillPrompt } = await import("./prompt.ts");
+  const input = { goal: "여행", level: "beginner" as const, target: "Japanese", uiName: "Korean", library: [] };
+  const plan = mapPlanPrompt(input);
+  assert.match(plan, /"covers"/);
+  assert.doesNotMatch(plan, /"activities"/);
+  const fill = mapFillPrompt(input, { title: "지도", topics: [{ id: "A1", sector: "A", title: "인사", summary: "s", order: 1, covers: "はじめまして" }] }, ["A1"]);
+  assert.match(fill, /these topics only: A1/);
+  assert.match(fill, /covers: はじめまして/);
+  assert.match(fill, /"activities"/);
+});

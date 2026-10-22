@@ -67,7 +67,8 @@
 
 | 기능(op) | 한 번 | 모델 호출 | 값 매기는 법 | 근거 |
 |---|---|---|---|---|
-| curriculumGenerate | 121.8원 | 1 | claude-sonnet-5-5 3500/8000 토큰 (기능 curriculumMap) | 가정 |
+| curriculumGenerate | 65.8원 | 1 | claude-sonnet-5-5 3500/4000 토큰 (기능 curriculumMap) | 가정 |
+| curriculumMapFill | 36.4원 | 1 | claude-sonnet-5-5 4000/1800 토큰 (기능 curriculumMapFill) | 가정 |
 | roleplayReview | 15.4원 | 1 | claude-sonnet-5-5 1500/800 토큰 (기능 roleplayReview) | 가정 |
 | curriculumMissions | 9원 | 1 | gpt-4.1 2000/300 토큰 (기능 curriculum) | 가정 |
 | learnerPick | 9원 | 1 | gpt-4.1 2000/300 토큰 (기능 curriculum) | 가정 |
@@ -146,6 +147,7 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 | mission | gpt-4.1-mini (OpenAI 기본) | $0.4 / $1.6 | OpenAI pricing |
 | curriculum | gpt-4.1 (OpenAI 기본) | $2 / $8 | OpenAI pricing |
 | curriculumMap | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
+| curriculumMapFill | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
 | learnerRead | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | roleplayReview | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
 | chatVerify | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
@@ -172,7 +174,7 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 - 모델 단가: https://developers.openai.com/api/docs/pricing (2026-09-04 확인). 1달러 1400원(2026-09-04).
 - 음성 합성 분당 $0.015 — 통화 비용의 대부분, `cost.ts`에서 가장 약한 숫자.
 - 잰 적 없는 모델 호출 한 번 = 2000/300 토큰. 실측 보고서는 서버가 잰 토큰(`usage:tok:*`)이 20번 넘게 쌓인 기능부터 그 값을 씁니다.
-- 가정으로 값을 매기는 기능 45개: chat, chatReread, chatReply, howToSay, howToSayCard, roomHint, mediaUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, stageCopy, learnerObserve, curriculumMissions, learnerPick, notesPlace, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, expressionUnits, vocabSearch, contentDiscovery.
+- 가정으로 값을 매기는 기능 46개: chat, chatReread, chatReply, howToSay, howToSayCard, roomHint, mediaUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, learnerObserve, curriculumMissions, learnerPick, notesPlace, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, expressionUnits, vocabSearch, contentDiscovery.
 
 ## 새 기능을 넣을 때
 
