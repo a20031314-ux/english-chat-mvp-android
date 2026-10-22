@@ -26,7 +26,7 @@ import {
 
 export const dynamic = "force-dynamic";
 // 고가 모델(Sonnet)로 그리면 35~46초(2026-10-22 비교) — 60초에 가까워 넉넉히.
-export const maxDuration = 90;
+export const maxDuration = 120;
 
 /**
  * Draw a study map from a goal the learner wrote.
@@ -124,7 +124,8 @@ export async function POST(request: NextRequest) {
   };
 
   try {
-    const completion = await completeChat(openai, "curriculum", {
+    // 지도 그리기는 따로(curriculumMap, 코드 기본값 Sonnet) — 먼저 생각하게 둔다(think): 끄면 지도가 얇아졌다(2026-10-22 점검).
+    const completion = await completeChat(openai, "curriculumMap", {
       temperature: 0.4,
       // Claude는 같은 한국어·일본어 글에 토큰을 더 많이 써서 4000이면 지도 JSON이 중간에 끊겼다(2026-10-22 점검, 세 조합 모두 MAP_FAILED).
       max_tokens: 8000,
@@ -133,7 +134,7 @@ export async function POST(request: NextRequest) {
         { role: "system", content: mapSystemPrompt(input) },
         { role: "user", content: mapUserMessage(input) },
       ],
-    });
+    }, { think: true });
     if (completion.choices[0]?.finish_reason === "length") throw new Error("map cut off at max_tokens");
     const raw = JSON.parse(completion.choices[0]?.message?.content ?? "{}") as unknown;
     const result = normalizeMap(raw, {

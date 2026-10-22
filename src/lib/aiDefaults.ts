@@ -28,6 +28,7 @@ export const OPENAI_TEXT_DEFAULTS = {
   ask: "gpt-4.1-mini",
   mission: "gpt-4.1-mini",
   curriculum: "gpt-4.1",
+  curriculumMap: "gpt-4.1",
   learnerRead: "gpt-4.1-mini",
   roleplayReview: "gpt-5-mini",
   chatVerify: "gpt-4.1",
@@ -54,7 +55,7 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   // 2026-10-22 사용자 "나머지 기능도 다 옮겨줘" — 기본은 Haiku, 드물고 결과가 오래 남는 것만 Sonnet(사용자 원칙 2026-10-21).
   // 표현 묻기(ask)·학습자 읽기(learnerRead)는 high 등급이지만 자주 불려(묻기 하루 30번, 읽기는 채팅마다) Haiku.
   // 아직 옮기지 않은 것(가상 사용자 점검 근거, `hub/drafts/model-switch-2026-10-22.md` "전체 옮기기"):
-  // - 지도·미션 쓰기(curriculum)·미션 확인(mission): Sonnet으로 지도 8/14가 "map too thin" — OpenAI(gpt-4.1·4.1-mini, 2027-01-14 종료) 그대로.
+  // - 미션 쓰기·지도에 넣기·약점 미션(curriculum)·미션 확인(mission): OpenAI(gpt-4.1·4.1-mini, 2027-01-14 종료) 그대로 — 지도 그리기만 따로 Sonnet(curriculumMap).
   // - 통화 튜터(roleplayTutor): 스트리밍이 OpenAI만이라(`openaiModel`) 옮겨도 소용없어 그대로 — 01-14 전에 Claude 스트리밍 길을 따로.
   translate: HAIKU,
   vocab: HAIKU,
@@ -69,6 +70,9 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   learnerRead: HAIKU,
   ask: HAIKU,
   roleplayReview: SONNET,
+  // My 지도 그리기(대화 예시로 "이게 내 수준"을 고른 뒤 그 단계 범위로) — 사용자 생각 2026-10-22: Sonnet이 그린다.
+  // 이 호출만 Sonnet이 먼저 생각하게 둔다(completeChat think) — 생각을 끄면 지도가 얇아졌다(점검 8/14 "map too thin").
+  curriculumMap: SONNET,
 };
 
 /** "제공자: 모델" → 모델 이름(틀린 모양이면 null). */

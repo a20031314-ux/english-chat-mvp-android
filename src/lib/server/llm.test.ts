@@ -264,3 +264,14 @@ test("Sonnet JSON 호출은 앞 생각을 끈다(between_tools), Haiku는 손대
   const haiku = toAnthropicRequest("claude-haiku-5-5", { messages: [{ role: "user", content: "x" }], response_format: { type: "json_object" } });
   assert.equal((haiku.body as { thinking?: unknown }).thinking, undefined);
 });
+
+test("think를 주면 Sonnet은 먼저 생각하게 두고 그 몫만큼 한도를 늘린다", () => {
+  const req = toAnthropicRequest(
+    "claude-sonnet-5-5",
+    { messages: [{ role: "user", content: "x" }], response_format: { type: "json_object" }, max_tokens: 8000 },
+    { think: true },
+  );
+  const body = req.body as { thinking?: unknown; max_tokens?: number };
+  assert.equal(body.thinking, undefined);
+  assert.equal(body.max_tokens, 20000);
+});

@@ -67,8 +67,8 @@
 
 | 기능(op) | 한 번 | 모델 호출 | 값 매기는 법 | 근거 |
 |---|---|---|---|---|
+| curriculumGenerate | 121.8원 | 1 | claude-sonnet-5-5 3500/8000 토큰 (기능 curriculumMap) | 가정 |
 | roleplayReview | 15.4원 | 1 | claude-sonnet-5-5 1500/800 토큰 (기능 roleplayReview) | 가정 |
-| curriculumGenerate | 9원 | 1 | gpt-4.1 2000/300 토큰 (기능 curriculum) | 가정 |
 | curriculumMissions | 9원 | 1 | gpt-4.1 2000/300 토큰 (기능 curriculum) | 가정 |
 | learnerPick | 9원 | 1 | gpt-4.1 2000/300 토큰 (기능 curriculum) | 가정 |
 | weakMission | 9원 | 1 | gpt-4.1 2000/300 토큰 (기능 curriculum) | 가정 |
@@ -145,6 +145,7 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 | ask | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | mission | gpt-4.1-mini (OpenAI 기본) | $0.4 / $1.6 | OpenAI pricing |
 | curriculum | gpt-4.1 (OpenAI 기본) | $2 / $8 | OpenAI pricing |
+| curriculumMap | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
 | learnerRead | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | roleplayReview | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
 | chatVerify | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |

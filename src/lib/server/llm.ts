@@ -55,7 +55,8 @@ export const TASKS = {
   roleplayPractice: { tier: "basic", openai: () => env("OPENAI_PRACTICE_MODEL") ?? D.roleplayPractice, about: "통화 다시 말해보기 비교" },
   ask: { tier: "high", openai: () => env("OPENAI_ASK_MODEL") ?? D.ask, about: "표현 묻기(빠른·직접 질문)" },
   mission: { tier: "high", openai: () => env("OPENAI_MISSION_MODEL") ?? D.mission, about: "지도 미션 확인" },
-  curriculum: { tier: "high", openai: () => env("OPENAI_CURRICULUM_MODEL") ?? D.curriculum, about: "학습 지도 만들기·미션·고르기" },
+  curriculum: { tier: "high", openai: () => env("OPENAI_CURRICULUM_MODEL") ?? D.curriculum, about: "미션 쓰기·지도에 넣기·약점 미션" },
+  curriculumMap: { tier: "high", openai: () => env("OPENAI_CURRICULUM_MODEL") ?? D.curriculumMap, about: "My 지도 그리기(고른 단계 범위)" },
   learnerRead: { tier: "high", openai: () => env("OPENAI_LEARNER_MODEL") ?? D.learnerRead, about: "학습자 프로필·자주 틀리는 것 읽기" },
   roleplayReview: { tier: "high", openai: () => env("OPENAI_REVIEW_MODEL") ?? D.roleplayReview, about: "통화 돌아보기 평가" },
   chatVerify: { tier: "high", openai: () => env("OPENAI_VERIFY_MODEL") ?? D.chatVerify, about: "채팅 고친 문장 확인(위험한 줄만, 열 때)" },
@@ -155,10 +156,14 @@ type CreateParams = Omit<ChatCompletionCreateParamsNonStreaming, "model"> & { mo
  * `openai.chat.completions.create`와 같은 인자(모델 빼고)·같은 모양의 답.
  * `client`는 기본 경로·실패 때 되돌아갈 OpenAI 클라이언트.
  */
+/** think: Claude Sonnet·Opus가 먼저 생각하게 둔다(앞 생각을 끄지 않음) — 오래 걸려도 결과가 오래 남는 호출(지도 그리기)만. */
+export type CompleteOptions = { think?: boolean };
+
 export async function completeChat(
   client: OpenAI,
   task: Task,
   params: CreateParams,
+  options: CompleteOptions = {},
 ): Promise<ChatCompletion> {
   const { model: override, ...rest } = params;
   const route = routeFor(task, override);
@@ -167,7 +172,7 @@ export async function completeChat(
     return client.chat.completions.create({ ...rest, model: route.model });
   }
   try {
-    return await anthropicComplete(route.model, rest);
+    return await anthropicComplete(route.model, rest, options);
   } catch (error) {
     if (env("MODEL_FALLBACK") === "off" || simRoutes.getStore()) throw error;
     console.error(`[llm] ${task} on ${route.model} failed — falling back to OpenAI`, error);
@@ -220,7 +225,7 @@ function toBlocks(content: ChatCompletionMessageParam["content"]): AnthropicBloc
 }
 
 /** OpenAI 메시지 → Anthropic 요청 본문. 시험할 수 있게 따로 둔다. */
-export function toAnthropicRequest(model: string, params: Omit<CreateParams, "model">) {
+export function toAnthropicRequest(model: string, params: Omit<CreateParams, "model">, options: CompleteOptions = {}) {
   const system: string[] = [];
   const messages: AnthropicMessage[] = [];
   for (const message of params.messages) {
@@ -250,7 +255,9 @@ export function toAnthropicRequest(model: string, params: Omit<CreateParams, "mo
     (typeof params.max_completion_tokens === "number" && params.max_completion_tokens) ||
     (typeof params.max_tokens === "number" && params.max_tokens) ||
     2048;
-  const body: Record<string, unknown> = { model, max_tokens: maxTokens, messages };
+  // 먼저 생각하게 두면 그 토큰도 max_tokens에 든다 — 답 몫이 줄지 않게 생각 몫을 얹는다.
+  const thinks = Boolean(options.think) && /sonnet|opus/.test(model);
+  const body: Record<string, unknown> = { model, max_tokens: thinks ? maxTokens + 12000 : maxTokens, messages };
   if (system.length) body.system = system.join("\n\n");
   if (wantsJson) {
     body.tools = [RESPOND_TOOL];
@@ -261,7 +268,7 @@ export function toAnthropicRequest(model: string, params: Omit<CreateParams, "mo
       // Sonnet 5.5는 thinking을 안 적으면 먼저 생각(adaptive)하고, 그 토큰이 max_tokens를 먹는다 — 지도에 넣기·미션·지도가
       // 짧은 한도에서 끊기고(점검 2026-10-22: pick 8/8, 미션 6, 지도 1 실패) 지도는 45초. JSON 하나를 내는 호출이라
       // 앞 생각을 끈다("between_tools", disabled는 이 모델이 400). 문서: platform.claude.com build-with-claude/thinking.
-      body.thinking = { type: "between_tools" };
+      if (!thinks) body.thinking = { type: "between_tools" };
       body.system = [...system, `Answer by calling the ${RESPOND_TOOL.name} tool once with the JSON object as its input.`].join("\n\n");
     } else {
       body.tool_choice = { type: "tool", name: RESPOND_TOOL.name };
@@ -302,10 +309,10 @@ export function extractJson(text: string): string {
   return start >= 0 && end > start ? inner.slice(start, end + 1) : inner;
 }
 
-async function anthropicComplete(model: string, params: Omit<CreateParams, "model">): Promise<ChatCompletion> {
+async function anthropicComplete(model: string, params: Omit<CreateParams, "model">, options: CompleteOptions = {}): Promise<ChatCompletion> {
   const key = env("ANTHROPIC_API_KEY");
   if (!key) throw new Error("ANTHROPIC_API_KEY missing");
-  const { body, wantsJson } = toAnthropicRequest(model, params);
+  const { body, wantsJson } = toAnthropicRequest(model, params, options);
   const response = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: { "x-api-key": key, "anthropic-version": "2023-06-01", "content-type": "application/json" },
