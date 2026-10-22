@@ -2,12 +2,12 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
-import { meterRequest } from "@/lib/server/meterRequest";
+import { meterRequest, simDetail } from "@/lib/server/meterRequest";
 import { readSelfCheck } from "@/lib/server/selfCheckStore";
 import { readLedger } from "@/lib/server/ledgerStore";
 import { readLearnerProfile } from "@/lib/server/learnerProfileStore";
 import { statusOf } from "@/lib/learner/profile";
-import { stageViews } from "@/lib/server/stageCopy";
+import { lastCopyFailure, stageViews } from "@/lib/server/stageCopy";
 import { STAGE_DONE_SHARE, stageById, stageProgress } from "@/lib/curriculum/stages";
 import { INTERFACE_LANGUAGE_LABELS, coerceLanguageCode } from "@/lib/learningLanguages";
 
@@ -58,5 +58,6 @@ export async function GET(request: NextRequest) {
       };
     }
   }
-  return jsonWithCors(request, { language, stages, current });
+  const failure = lastCopyFailure();
+  return jsonWithCors(request, { language, stages, current, ...(failure ? simDetail(request, failure) : {}) });
 }

@@ -2,8 +2,8 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
-import { meterRequest } from "@/lib/server/meterRequest";
-import { scriptView } from "@/lib/server/stageCopy";
+import { meterRequest, simDetail } from "@/lib/server/meterRequest";
+import { lastCopyFailure, scriptView } from "@/lib/server/stageCopy";
 import { markScriptPassed, readScriptPassed } from "@/lib/server/scriptProgressStore";
 import { scriptFor, scriptProgress } from "@/lib/curriculum/scripts";
 import { INTERFACE_LANGUAGE_LABELS, coerceLanguageCode } from "@/lib/learningLanguages";
@@ -33,7 +33,8 @@ export async function GET(request: NextRequest) {
   });
   const userId = requestUserId(request);
   const passed = isIdentified(userId) ? await readScriptPassed(userId, language) : {};
-  return jsonWithCors(request, { language, course: view, passed: Object.keys(passed), progress: scriptProgress(course, passed) });
+  const failure = lastCopyFailure();
+  return jsonWithCors(request, { language, course: view, passed: Object.keys(passed), progress: scriptProgress(course, passed), ...(failure ? simDetail(request, failure) : {}) });
 }
 
 export async function POST(request: NextRequest) {

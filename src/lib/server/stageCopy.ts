@@ -135,6 +135,12 @@ export function looksLike(ui: string, texts: string[]): boolean {
   return hits / lettered.length >= (ui === "vi" ? 0.4 : 0.5);
 }
 
+/** 마지막으로 옮기기가 실패한 까닭(점검 사용자에게만 돌려줌, 라우트의 simDetail). */
+let lastFailure = "";
+export function lastCopyFailure(): string {
+  return lastFailure;
+}
+
 /** 영어 글 묶음을 앱 언어로(저장해 두고 다시 씀). 실패하면 null. */
 async function translated(source: string[], ui: string, uiName: string, cacheKey: string, onTranslate?: () => void): Promise<string[] | null> {
   try {
@@ -164,9 +170,13 @@ async function translated(source: string[], ui: string, uiName: string, cacheKey
       });
       const parsed = JSON.parse(completion.choices[0]?.message?.content ?? "{}") as { texts?: unknown };
       const texts = Array.isArray(parsed.texts) ? parsed.texts.map((t) => (typeof t === "string" ? t.trim() : "")) : [];
-      if (texts.length !== part.length || texts.some((t) => !t)) return null;
+      if (texts.length !== part.length || texts.some((t) => !t)) {
+        lastFailure = `chunk ${start}: got ${texts.length}/${part.length}, raw ${String(completion.choices[0]?.message?.content ?? "").slice(0, 160)}`;
+        return null;
+      }
       if (!looksLike(ui, texts)) {
-        console.error("[stage-copy] not in", ui, texts.slice(0, 2));
+        lastFailure = `chunk ${start}: not ${ui}: ${texts.slice(0, 3).join(" | ").slice(0, 160)}`;
+        console.error("[stage-copy]", lastFailure);
         return null;
       }
       out.push(...texts);
@@ -174,6 +184,7 @@ async function translated(source: string[], ui: string, uiName: string, cacheKey
     await kvSetJson(cacheKey, out, TTL_SECONDS).catch(() => undefined);
     return out;
   } catch (error) {
+    lastFailure = String((error as Error)?.message ?? error).slice(0, 200);
     console.error("[stage-copy]", error);
     return null;
   }
