@@ -282,3 +282,16 @@ test("도구 입력의 배열이 JSON 글자로 오면 풀어 준다(Sonnet 지�
   assert.equal(fixed.title, "[여행] 지도");
   assert.equal(fixed.note, "{not json");
 });
+
+test("도구 호출 문법이 값 안으로 새면 잘라 내고 뒤 칸을 채운다", () => {
+  const leaked = {
+    assistantMessage: "哈哈，你想说什么？",
+    spokenReply: '555 พิมพ์มาเลย</spokenReply>\n<parameter name="correction">{"corrected":"asdf","natural":"asdf","explanation":"x"}',
+  };
+  const fixed = parseStringifiedValues(leaked);
+  assert.equal(fixed.spokenReply, "555 พิมพ์มาเลย");
+  assert.deepEqual(fixed.correction, { corrected: "asdf", natural: "asdf", explanation: "x" });
+  assert.equal(fixed.assistantMessage, "哈哈，你想说什么？");
+  const kept = parseStringifiedValues({ spokenReply: "plain", correction: { corrected: "a" } });
+  assert.deepEqual(kept, { spokenReply: "plain", correction: { corrected: "a" } });
+});

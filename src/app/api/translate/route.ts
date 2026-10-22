@@ -91,39 +91,46 @@ export async function POST(request: NextRequest) {
   await meterRequest(request, "translate");
 
   try {
-    const completion = await completeChat(client, "translate", {
-      messages: [
-        {
-          role: "system",
-          content: spokenTranslateSystem({
-            locale,
-            interfaceLanguage,
-            targetLanguage,
-            sourceType,
-          }),
-        },
-        {
-          role: "user",
-          content: JSON.stringify({
-            text,
-            ...(context.length ? { context } : {}),
-          }),
-        },
-      ],
-      response_format: { type: "json_object" },
-      temperature: 0.4,
-    });
-
-    const raw = completion.choices[0]?.message?.content;
-    if (!raw) {
+    // Haiku가 가끔 번역 칸을 비우거나 원문을 그대로 돌려준다(가상 사용자 98번 중 4번, 2026-10-22 release271) — 한 번만 다시.
+    const translateOnce = async (): Promise<string | null> => {
+      const completion = await completeChat(client, "translate", {
+        messages: [
+          {
+            role: "system",
+            content: spokenTranslateSystem({
+              locale,
+              interfaceLanguage,
+              targetLanguage,
+              sourceType,
+            }),
+          },
+          {
+            role: "user",
+            content: JSON.stringify({
+              text,
+              ...(context.length ? { context } : {}),
+            }),
+          },
+        ],
+        response_format: { type: "json_object" },
+        temperature: 0.4,
+      });
+      const raw = completion.choices[0]?.message?.content;
+      if (!raw) return null;
+      const parsed = JSON.parse(raw) as { translated?: unknown; translation?: unknown };
+      const value = typeof parsed.translated === "string" ? parsed.translated : typeof parsed.translation === "string" ? parsed.translation : "";
+      return value.trim();
+    };
+    const echoed = (value: string | null) => !value || value === text.trim();
+    let first = await translateOnce();
+    if (first === null) {
       return jsonWithCors(request, { error: "Empty model response" }, { status: 502 });
     }
-
-    const parsed = JSON.parse(raw) as { translated?: string };
-    const translated =
-      typeof parsed.translated === "string" && parsed.translated.trim() !== ""
-        ? parsed.translated.trim()
-        : text;
+    if (echoed(first) && interfaceLanguage !== targetLanguage) {
+      const again = await translateOnce().catch(() => null);
+      if (!echoed(again)) first = again;
+    }
+    const translated = first || text;
 
     if (lineKey && translated !== text) void keepVideoLine(lineKey, translated);
     return jsonWithCors(request, { translated });

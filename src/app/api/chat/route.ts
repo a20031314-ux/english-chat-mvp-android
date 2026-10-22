@@ -544,7 +544,7 @@ async function runChat(
   message: string,
   langs: ChatLanguages,
   recent: string[] = [],
-  options: ChatTurnOptions & { onReread?: () => void; skipReread?: boolean } = {},
+  options: ChatTurnOptions & { onReread?: () => void; skipReread?: boolean; /** 답 칸이 비어 오면 다시 받기(기본 켬, 스트림의 교정 호출은 답을 따로 받으니 끔). */ fillEmptyReply?: boolean } = {},
 ): Promise<ChatPayload> {
   // 한국어 학습: 모델이 자주 놓치는 불규칙 활용·윗사람께 반말을 규칙으로 먼저 찾아 알려 준다(koreanSlips.ts).
   const koSlips =
@@ -671,10 +671,12 @@ async function runChat(
 
   let reply = assistantMessage;
   let spoken = spokenReply;
-  if (needsExplanation && corrected.trim() && !options.skipReread) {
+  // 답 칸이 비어 온 줄(Haiku 5.5, 가상 사용자 1,987턴 중 25번 — 2026-10-22 release271)은 다시 답하기를 건너뛰는 앱에서도 다시 받는다.
+  const emptyReply = !assistantMessage.trim();
+  if (((emptyReply && options.fillEmptyReply !== false) || (needsExplanation && !options.skipReread)) && (corrected.trim() || message.trim())) {
     try {
       options.onReread?.();
-      const reread = await replyToCorrected(openai, corrected, recent, langs);
+      const reread = await replyToCorrected(openai, corrected.trim() || message, recent, langs);
       if (reread.assistantMessage) reply = reread.assistantMessage;
       if (reread.spokenReply) spoken = reread.spokenReply;
     } catch (error) {
@@ -1197,7 +1199,7 @@ export async function POST(request: NextRequest) {
       const ownLanguage = turnOptions.ownLanguage === true;
       const correctionCall: Promise<ChatPayload | null> = ownLanguage
         ? Promise.resolve(null)
-        : runChat(openai, message, langs, recentLines, { ...turnOptions, skipReread: true });
+        : runChat(openai, message, langs, recentLines, { ...turnOptions, skipReread: true, fillEmptyReply: false });
       // 교정 호출이 실패해도 답은 간다 — 처리 안 된 거부로 남지 않게 미리 받아 둔다.
       const correctionSafe = correctionCall.catch((error) => {
         console.error("[chat-stream-correction]", error);

@@ -303,8 +303,8 @@ export function unwrapToolInput(input: unknown): Record<string, unknown> | undef
  * 주제 0개로 버려진 적 있음(2026-10-22). 맨 위 값만, 풀어서 배열·객체가 될 때만 바꾼다.
  */
 export function parseStringifiedValues(input: Record<string, unknown>): Record<string, unknown> {
-  const out: Record<string, unknown> = { ...input };
-  for (const [key, value] of Object.entries(input)) {
+  const out: Record<string, unknown> = repairLeakedParameters(input);
+  for (const [key, value] of Object.entries(out)) {
     if (typeof value !== "string") continue;
     const trimmed = value.trim();
     if (!(trimmed.startsWith("[") || trimmed.startsWith("{"))) continue;
@@ -313,6 +313,36 @@ export function parseStringifiedValues(input: Record<string, unknown>): Record<s
       if (parsed && typeof parsed === "object") out[key] = parsed;
     } catch {
       // 글자 그대로 둔다.
+    }
+  }
+  return out;
+}
+
+const LEAKED_PARAMETER = /<\/?[A-Za-z_]*>?\s*<parameter name="([A-Za-z_]+)">/;
+
+/**
+ * 도구 호출 문법이 값 안으로 새어 들어온 것을 되돌린다 — Haiku가 `spokenReply` 값 끝에
+ * `</spokenReply>\n<parameter name="correction">{…}`를 그대로 써서 화면에 보인 적 있음(2026-10-22 release271).
+ * 새어 든 자리에서 값을 자르고, 뒤의 `<parameter name="k">값`은 그 칸이 비어 있을 때만 채운다.
+ */
+export function repairLeakedParameters(input: Record<string, unknown>): Record<string, unknown> {
+  const out: Record<string, unknown> = { ...input };
+  for (const [key, value] of Object.entries(input)) {
+    if (typeof value !== "string") continue;
+    const at = value.search(LEAKED_PARAMETER);
+    if (at < 0) continue;
+    out[key] = value.slice(0, at).trim();
+    const rest = value.slice(at);
+    const parts = rest.split(/<parameter name="([A-Za-z_]+)">/);
+    for (let i = 1; i + 1 < parts.length; i += 2) {
+      const name = parts[i]!;
+      const raw = parts[i + 1]!.replace(/<\/parameter>[\s\S]*$/, "").replace(/<\/?[A-Za-z_]+>\s*$/, "").trim();
+      if (out[name] !== undefined && out[name] !== "") continue;
+      try {
+        out[name] = JSON.parse(raw) as unknown;
+      } catch {
+        out[name] = raw;
+      }
     }
   }
   return out;

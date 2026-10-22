@@ -125,28 +125,38 @@ export async function POST(request: NextRequest) {
 
   try {
     // 지도 그리기는 따로(curriculumMap, 코드 기본값 Sonnet) — 먼저 생각하게 둔다(think): 끄면 지도가 얇아졌다(2026-10-22 점검).
-    const completion = await completeChat(openai, "curriculumMap", {
-      temperature: 0.4,
-      // Claude는 같은 한국어·일본어 글에 토큰을 더 많이 써서 4000이면 지도 JSON이 중간에 끊겼다(2026-10-22 점검, 세 조합 모두 MAP_FAILED).
-      max_tokens: 8000,
-      response_format: { type: "json_object" },
-      messages: [
-        { role: "system", content: mapSystemPrompt(input) },
-        { role: "user", content: mapUserMessage(input) },
-      ],
-    }, { think: true });
-    if (completion.choices[0]?.finish_reason === "length") throw new Error("map cut off at max_tokens");
-    const raw = JSON.parse(completion.choices[0]?.message?.content ?? "{}") as unknown;
-    const result = normalizeMap(raw, {
-      id: crypto.randomUUID(),
-      language: targetCode,
-      uiLanguage: uiCode,
-      goal,
-      level,
-      createdAt: new Date().toISOString(),
-      libraryVideoIds: library.map((clip) => clip.videoId),
-      ...(stageForMap ? { stageId: stageForMap.id } : {}),
-    });
+    // 얇은 지도(주제 0개)가 28번 중 2번 와서(2026-10-22 release271) 시간이 남으면 한 번 더 그린다(한 번 36~52초, maxDuration 120).
+    const startedAt = Date.now();
+    const drawOnce = async () => {
+      const completion = await completeChat(openai, "curriculumMap", {
+        temperature: 0.4,
+        // Claude는 같은 한국어·일본어 글에 토큰을 더 많이 써서 4000이면 지도 JSON이 중간에 끊겼다(2026-10-22 점검, 세 조합 모두 MAP_FAILED).
+        max_tokens: 8000,
+        response_format: { type: "json_object" },
+        messages: [
+          { role: "system", content: mapSystemPrompt(input) },
+          { role: "user", content: mapUserMessage(input) },
+        ],
+      }, { think: true });
+      if (completion.choices[0]?.finish_reason === "length") throw new Error("map cut off at max_tokens");
+      const drawn = JSON.parse(completion.choices[0]?.message?.content ?? "{}") as unknown;
+      const normalized = normalizeMap(drawn, {
+        id: crypto.randomUUID(),
+        language: targetCode,
+        uiLanguage: uiCode,
+        goal,
+        level,
+        createdAt: new Date().toISOString(),
+        libraryVideoIds: library.map((clip) => clip.videoId),
+        ...(stageForMap ? { stageId: stageForMap.id } : {}),
+      });
+      return { raw: drawn, result: normalized };
+    };
+    let { raw, result } = await drawOnce();
+    if (!result && Date.now() - startedAt < 55_000) {
+      console.error("[curriculum] map too thin, drawing again", { model: MODEL() });
+      ({ raw, result } = await drawOnce());
+    }
     if (!result) {
       console.error("[curriculum] map too thin to keep", { model: MODEL() });
       // 점검 사용자에게만: 무엇이 왔는지(어떤 모양이라 버려졌는지 보려고).
