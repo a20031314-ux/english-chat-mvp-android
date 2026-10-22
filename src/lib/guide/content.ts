@@ -496,7 +496,7 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "게시판",
         "body": [
-          "배우는 언어로 글을 올리고 댓글을 달아요. 고치고 지우는 건 쓴 사람만 할 수 있어요. 글 아래 ‘내 언어로 보기’로 번역하고, 이름을 누르면 팔로우·메시지·신고."
+          "배우는 언어로 글을 올리고 댓글을 달아요. 고치고 지우는 건 쓴 사람만 할 수 있어요. 글 아래 ‘한국어로 보기’로 번역하고, 이름을 누르면 팔로우·메시지·신고."
         ],
         "shot": "r69-board"
       }
@@ -895,7 +895,7 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Board",
         "body": [
-          "Post in the language you’re learning and comment. Only the writer can edit or delete. “See in my language” translates a post; tap a name to follow, message or report."
+          "Post in the language you’re learning and comment. Only the writer can edit or delete. “See in English” translates a post; tap a name to follow, message or report."
         ],
         "shot": "r69-board"
       }

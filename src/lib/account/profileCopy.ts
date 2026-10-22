@@ -1,4 +1,5 @@
 import { INTEREST_IDS, MEET_MODES, MEET_TIMES, WORK_IDS } from "./profileFacts.ts";
+import { learningLanguageUiLabel } from "../learningLanguages.ts";
 
 /**
  * 프로필 사실·칸·도움됐어요 문구(hub/drafts/profile-2026-10-23.md). 14개 언어 모두 여기에(profileCopy.test.ts가 빠짐을 막음).
@@ -6,6 +7,7 @@ import { INTEREST_IDS, MEET_MODES, MEET_TIMES, WORK_IDS } from "./profileFacts.t
  * 화면 규칙(hub/DESIGN.md "안내 글"): 칸 이름·버튼·상태만 — 쓰는 법 설명은 사용법(?) 칸에.
  */
 const ko = {
+  seeIn: "{lang}로 보기",
   posts: "올린 글",
   like: "좋아요",
   aboutMe: "나에 대해",
@@ -88,6 +90,7 @@ const ko = {
 type ProfileCopy = typeof ko;
 
 const en: ProfileCopy = {
+  seeIn: "See in {lang}",
   posts: "Posts",
   like: "Like",
   aboutMe: "About me",
@@ -169,6 +172,7 @@ const en: ProfileCopy = {
 
 const LOCALES: Record<string, ProfileCopy> = {
   es: {
+    seeIn: "Ver en {lang}",
     posts: "Publicaciones",
     like: "Me gusta",
     country: "Nacionalidad",
@@ -248,6 +252,7 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Vocabulario",
   },
   ja: {
+    seeIn: "{lang}で見る",
     posts: "投稿",
     like: "いいね",
     country: "国籍",
@@ -327,6 +332,7 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "語彙",
   },
   zh: {
+    seeIn: "用{lang}查看",
     posts: "发布的帖子",
     like: "点赞",
     country: "国籍",
@@ -406,6 +412,7 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "词汇",
   },
   vi: {
+    seeIn: "Xem bằng {lang}",
     posts: "Bài đã đăng",
     like: "Thích",
     country: "Quốc tịch",
@@ -485,6 +492,7 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Từ vựng",
   },
   fr: {
+    seeIn: "Voir en {lang}",
     posts: "Publications",
     like: "J’aime",
     country: "Nationalité",
@@ -564,6 +572,7 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Vocabulaire",
   },
   it: {
+    seeIn: "Vedi in {lang}",
     posts: "Post",
     like: "Mi piace",
     country: "Nazionalità",
@@ -643,6 +652,7 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Lessico",
   },
   pt: {
+    seeIn: "Ver em {lang}",
     posts: "Publicações",
     like: "Curtir",
     country: "Nacionalidade",
@@ -722,6 +732,7 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Vocabulário",
   },
   ru: {
+    seeIn: "Перевести на {lang}",
     posts: "Публикации",
     like: "Нравится",
     country: "Гражданство",
@@ -801,6 +812,7 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Лексика",
   },
   id: {
+    seeIn: "Lihat dalam {lang}",
     posts: "Postingan",
     like: "Suka",
     country: "Kewarganegaraan",
@@ -880,6 +892,7 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Kosakata",
   },
   ar: {
+    seeIn: "عرض باللغة {lang}",
     posts: "المنشورات",
     like: "إعجاب",
     country: "الجنسية",
@@ -959,6 +972,7 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "المفردات",
   },
   th: {
+    seeIn: "ดูเป็น{lang}",
     posts: "โพสต์",
     like: "ถูกใจ",
     country: "สัญชาติ",
@@ -1038,6 +1052,7 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "คำศัพท์",
   },
   hi: {
+    seeIn: "{lang} में देखें",
     posts: "पोस्ट",
     like: "पसंद",
     country: "नागरिकता",
@@ -1124,6 +1139,14 @@ export const PROFILE_COPY_KEYS = Object.keys(en) as (keyof ProfileCopy)[];
 export function profileCopy(locale: string): ProfileCopy {
   if (locale === "ko") return ko;
   return LOCALES[locale] ?? en;
+}
+
+/**
+ * 번역 버튼 이름: "내 언어로 보기" 대신 앱 언어 이름을 넣어 "한국어로 보기"·"日本語で見る"·"عرض باللغة العربية"(사용자 2026-10-23).
+ * 언어 이름은 그 언어로 쓴 이름(learningLanguageUiLabel(locale, locale)). 한국어 이름은 모두 "…어"로 끝나 "로"가 맞다.
+ */
+export function seeInLanguage(locale: string): string {
+  return profileCopy(locale).seeIn.replace("{lang}", learningLanguageUiLabel(locale, locale));
 }
 
 export function fillCount(text: string, n: number): string {

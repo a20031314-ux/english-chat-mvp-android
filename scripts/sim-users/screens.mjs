@@ -602,13 +602,15 @@ const SCENES = [
   },
   {
     id: "profile-translate",
-    label: "사람 — 프로필 자기소개·올린 글 \"내 언어로 보기\"",
-    async run({ page, wait, rc, state }) {
+    label: "사람 — 프로필 자기소개·올린 글 \"한국어로 보기\"(앱 언어 이름)",
+    async run({ page, wait, state, locale }) {
+      const { seeInLanguage } = await import(`file://${path.join(ROOT, "src/lib/account/profileCopy.ts")}`);
+      const seeIn = seeInLanguage(locale);
       if (!(await page.getByRole("dialog").count())) {
         await page.getByRole("button", { name: state.hostNickname, exact: true }).first().click();
         await wait(3000);
       }
-      const buttons = page.getByRole("dialog").getByRole("button", { name: rc.boardTranslate, exact: true });
+      const buttons = page.getByRole("dialog").getByRole("button", { name: seeIn, exact: true });
       const count = await buttons.count();
       for (let i = 0; i < Math.min(count, 2); i++) await buttons.nth(i).click();
       await wait(6000);

@@ -377,7 +377,7 @@
         {
           "heading": "Tablón",
           "body": [
-            "Publica en el idioma que aprendes y comenta. Solo quien escribe puede editar o borrar. “Ver en mi idioma” traduce; toca un nombre para seguir, escribir o denunciar."
+            "Publica en el idioma que aprendes y comenta. Solo quien escribe puede editar o borrar. “Ver en español” traduce; toca un nombre para seguir, escribir o denunciar."
           ],
           "shot": "r69-board"
         }
@@ -775,7 +775,7 @@
         {
           "heading": "掲示板",
           "body": [
-            "学んでいる言語で投稿・コメントできます。編集・削除は書いた人だけ。「自分の言語で見る」で翻訳、名前を押すとフォロー・メッセージ・通報。"
+            "学んでいる言語で投稿・コメントできます。編集・削除は書いた人だけ。「日本語で見る」で翻訳、名前を押すとフォロー・メッセージ・通報。"
           ],
           "shot": "r69-board"
         }
@@ -1173,7 +1173,7 @@
         {
           "heading": "论坛",
           "body": [
-            "用在学的语言发帖、评论。只有作者能编辑或删除。“用我的语言看”可翻译，点名字可关注、发消息或举报。"
+            "用在学的语言发帖、评论。只有作者能编辑或删除。“用中文查看”可翻译，点名字可关注、发消息或举报。"
           ],
           "shot": "r69-board"
         }
@@ -1571,7 +1571,7 @@
         {
           "heading": "Bảng tin",
           "body": [
-            "Đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết mới sửa hoặc xóa được. “Xem bằng ngôn ngữ của tôi” để dịch; chạm vào tên để theo dõi, nhắn tin hoặc báo cáo."
+            "Đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết mới sửa hoặc xóa được. “Xem bằng tiếng Việt” để dịch; chạm vào tên để theo dõi, nhắn tin hoặc báo cáo."
           ],
           "shot": "r69-board"
         }
@@ -1969,7 +1969,7 @@
         {
           "heading": "Forum",
           "body": [
-            "Publiez dans la langue apprise et commentez. Seul l'auteur peut modifier ou supprimer. « Voir dans ma langue » traduit ; touchez un nom pour suivre, écrire ou signaler."
+            "Publiez dans la langue apprise et commentez. Seul l'auteur peut modifier ou supprimer. « Voir en français » traduit ; touchez un nom pour suivre, écrire ou signaler."
           ],
           "shot": "r69-board"
         }
@@ -2367,7 +2367,7 @@
         {
           "heading": "Bacheca",
           "body": [
-            "Pubblica nella lingua che impari e commenta. Solo chi scrive può modificare o eliminare. “Vedi nella mia lingua” traduce; tocca un nome per seguire, scrivere o segnalare."
+            "Pubblica nella lingua che impari e commenta. Solo chi scrive può modificare o eliminare. “Vedi in italiano” traduce; tocca un nome per seguire, scrivere o segnalare."
           ],
           "shot": "r69-board"
         }
@@ -2765,7 +2765,7 @@
         {
           "heading": "Mural",
           "body": [
-            "Publique no idioma que você aprende e comente. Só quem escreveu pode editar ou excluir. “Ver no meu idioma” traduz; toque num nome para seguir, mandar mensagem ou denunciar."
+            "Publique no idioma que você aprende e comente. Só quem escreveu pode editar ou excluir. “Ver em português” traduz; toque num nome para seguir, mandar mensagem ou denunciar."
           ],
           "shot": "r69-board"
         }
@@ -3163,7 +3163,7 @@
         {
           "heading": "Доска",
           "body": [
-            "Публикуйте на изучаемом языке и комментируйте. Изменять и удалять может только автор. «Показать на моём языке» переводит; нажмите на имя, чтобы подписаться, написать или пожаловаться."
+            "Публикуйте на изучаемом языке и комментируйте. Изменять и удалять может только автор. «Перевести на русский» переводит; нажмите на имя, чтобы подписаться, написать или пожаловаться."
           ],
           "shot": "r69-board"
         }
@@ -3561,7 +3561,7 @@
         {
           "heading": "Papan",
           "body": [
-            "Tulis dalam bahasa yang dipelajari dan berkomentar. Hanya penulis yang bisa mengubah atau menghapus. “Lihat dalam bahasaku” menerjemahkan; ketuk nama untuk mengikuti, mengirim pesan, atau melapor."
+            "Tulis dalam bahasa yang dipelajari dan berkomentar. Hanya penulis yang bisa mengubah atau menghapus. “Lihat dalam bahasa Indonesia” menerjemahkan; ketuk nama untuk mengikuti, mengirim pesan, atau melapor."
           ],
           "shot": "r69-board"
         }
@@ -3959,7 +3959,7 @@
         {
           "heading": "اللوحة",
           "body": [
-            "انشر باللغة التي تتعلمها وعلّق. الكاتب وحده يعدّل أو يحذف. «اعرض بلغتي» يترجم المنشور، واضغط الاسم للمتابعة أو المراسلة أو الإبلاغ."
+            "انشر باللغة التي تتعلمها وعلّق. الكاتب وحده يعدّل أو يحذف. «عرض باللغة العربية» يترجم المنشور، واضغط الاسم للمتابعة أو المراسلة أو الإبلاغ."
           ],
           "shot": "r69-board"
         }
@@ -4357,7 +4357,7 @@
         {
           "heading": "กระดาน",
           "body": [
-            "โพสต์เป็นภาษาที่เรียนและแสดงความคิดเห็น แก้ไขหรือลบได้เฉพาะคนเขียน “ดูเป็นภาษาของฉัน” ช่วยแปล แตะชื่อเพื่อติดตาม ส่งข้อความ หรือรายงาน"
+            "โพสต์เป็นภาษาที่เรียนและแสดงความคิดเห็น แก้ไขหรือลบได้เฉพาะคนเขียน “ดูเป็นภาษาไทย” ช่วยแปล แตะชื่อเพื่อติดตาม ส่งข้อความ หรือรายงาน"
           ],
           "shot": "r69-board"
         }
@@ -4755,7 +4755,7 @@
         {
           "heading": "बोर्ड",
           "body": [
-            "सीखी जा रही भाषा में पोस्ट व टिप्पणी करें। सिर्फ़ लिखने वाला बदल या हटा सकता है। “मेरी भाषा में देखें” अनुवाद करता है; नाम दबाकर फ़ॉलो, मैसेज या रिपोर्ट करें।"
+            "सीखी जा रही भाषा में पोस्ट व टिप्पणी करें। सिर्फ़ लिखने वाला बदल या हटा सकता है। “हिन्दी में देखें” अनुवाद करता है; नाम दबाकर फ़ॉलो, मैसेज या रिपोर्ट करें।"
           ],
           "shot": "r69-board"
         }

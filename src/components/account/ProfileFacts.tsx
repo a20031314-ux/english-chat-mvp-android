@@ -12,7 +12,7 @@ import {
   type ProfileShow,
   type ShowKey,
 } from "@/lib/account/profileFacts";
-import { chipLabel, fillCount, profileCopy, type ProfileCopy } from "@/lib/account/profileCopy";
+import { chipLabel, fillCount, profileCopy, seeInLanguage, type ProfileCopy } from "@/lib/account/profileCopy";
 import type { ProfileBadges } from "@/lib/rooms/contribution";
 import { SUPPORTED_LEARNING_LANGUAGES, getLearningLanguage, isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
 import { COUNTRY_CODES, countryFlag, countryName } from "@/lib/account/countries";
@@ -459,7 +459,7 @@ export function TranslateToggle({ t, locale, text, language }: { t: RoomCopy; lo
   return (
     <span className="block">
       <button type="button" onClick={() => void toggle()} className="mt-1 text-caption text-info">
-        {t.boardTranslate}
+        {seeInLanguage(locale)}
       </button>
       {shown !== null ? <span className="mt-1 block whitespace-pre-wrap text-note text-slate-300">{shown}</span> : null}
     </span>

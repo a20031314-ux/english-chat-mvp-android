@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { CHIP_GROUPS, PROFILE_COPY_KEYS, PROFILE_COPY_LOCALES, chipLabel, fillCount, profileCopy } from "./profileCopy.ts";
+import { CHIP_GROUPS, PROFILE_COPY_KEYS, PROFILE_COPY_LOCALES, chipLabel, fillCount, profileCopy, seeInLanguage } from "./profileCopy.ts";
 
 test("프로필 문구: 14개 언어 모두 키가 비지 않고 {n} 자리가 그대로", () => {
   assert.equal(PROFILE_COPY_LOCALES.length, 14);
@@ -26,4 +26,13 @@ test("채우기: 태국어·스페인어, 모르는 언어는 영어", () => {
   assert.equal(fillCount(profileCopy("th").badgeRun, 3), "ติดต่อกัน 3 วัน");
   assert.equal(fillCount(profileCopy("es").shared, 2), "2 intereses en común");
   assert.equal(profileCopy("xx").thank, "🙌 Helpful");
+});
+
+test("번역 버튼은 앱 언어 이름으로: 한국어로 보기·日本語で見る·아랍어·태국어", () => {
+  assert.equal(seeInLanguage("ko"), "한국어로 보기");
+  assert.equal(seeInLanguage("ja"), "日本語で見る");
+  assert.equal(seeInLanguage("ar"), "عرض باللغة العربية");
+  assert.equal(seeInLanguage("th"), "ดูเป็นภาษาไทย");
+  assert.equal(seeInLanguage("es"), "Ver en español");
+  for (const locale of PROFILE_COPY_LOCALES) assert.ok(!seeInLanguage(locale).includes("{lang}"), locale);
 });

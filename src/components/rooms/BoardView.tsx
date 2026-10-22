@@ -8,6 +8,7 @@ import { MediaError, uploadImage } from "@/lib/rooms/mediaClient";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { LikeButton, ThankButton } from "@/components/account/ProfileFacts";
+import { seeInLanguage } from "@/lib/account/profileCopy";
 import { BOARD_COMMENT_MAX_CHARS, BOARD_POST_MAX_CHARS, threadComments, withReplies, type BoardAuthor, type BoardComment, type BoardPost } from "@/lib/rooms/board";
 import {
   RoomApiError,
@@ -598,7 +599,7 @@ function PostSheet({
             {/* 앱 언어로 쓴 글을 같은 언어로 번역하면 말투만 바뀌어 나온다 — 그때는 버튼을 숨긴다. */}
             {post.language !== locale ? (
               <button type="button" onClick={() => void translate(post.id, post.text)} className="mt-2 text-caption text-info">
-                {t.boardTranslate}
+                {seeInLanguage(locale)}
               </button>
             ) : null}
             {translated[post.id] ? <p className="mt-1 whitespace-pre-wrap text-note text-slate-300">{translated[post.id]}</p> : null}
