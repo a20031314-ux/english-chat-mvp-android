@@ -17,7 +17,9 @@ import type { ProfileBadges } from "@/lib/rooms/contribution";
 import { SUPPORTED_LEARNING_LANGUAGES, getLearningLanguage, isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
 import { COUNTRY_CODES, countryFlag, countryName } from "@/lib/account/countries";
 import { LearningLanguageFlag } from "@/components/LearningLanguageFlag";
-import { RoomApiError, boardLike, sendThank, type ThankTarget } from "@/lib/rooms/client";
+import { RoomApiError, aiFailText, boardLike, sendThank, translateLine, type ThankTarget } from "@/lib/rooms/client";
+import type { RoomCopy } from "@/lib/rooms/copy";
+import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import type { BoardPost } from "@/lib/rooms/board";
 
 /**
@@ -407,7 +409,7 @@ export function LikeButton({
 }
 
 /** 프로필 시트의 올린 글(최근 5개). 누르면 글 전체가 펼쳐지고, 좋아요는 그 자리에서. */
-export function ProfilePosts({ locale, posts }: { locale: string; posts?: BoardPost[] }) {
+export function ProfilePosts({ t: roomT, locale, posts }: { t: RoomCopy; locale: string; posts?: BoardPost[] }) {
   const t = profileCopy(locale);
   const [open, setOpen] = useState<string | null>(null);
   if (!posts?.length) return null;
@@ -423,6 +425,7 @@ export function ProfilePosts({ locale, posts }: { locale: string; posts?: BoardP
                 {post.text || (post.images?.length ? `📷 ${post.images.length}` : "")}
               </span>
             </button>
+            {post.text ? <TranslateToggle t={roomT} locale={locale} text={post.text} language={post.language} /> : null}
             <span className="mt-1 flex items-center gap-2 text-meta text-slate-500">
               <LikeButton locale={locale} postId={post.id} likes={post.likes ?? 0} liked={post.liked === true} />
               <span>💬 {post.comments}</span>
@@ -433,5 +436,32 @@ export function ProfilePosts({ locale, posts }: { locale: string; posts?: BoardP
         ))}
       </ul>
     </div>
+  );
+}
+
+/**
+ * 남이 직접 쓴 글(자기소개·올린 글)을 내 앱 언어로 — 게시판의 "내 언어로 보기"와 같은 버튼·같은 번역(AI 도움 한도에 들어감).
+ * `language`를 알면(글을 쓸 때의 언어) 앱 언어와 같을 때 버튼을 숨긴다. 다시 누르면 접는다.
+ */
+export function TranslateToggle({ t, locale, text, language }: { t: RoomCopy; locale: string; text: string; language?: string }) {
+  const targetLanguage = useLearningLanguageOptional()?.targetLanguage ?? "en";
+  const [shown, setShown] = useState<string | null>(null);
+  if (!text.trim() || language === locale) return null;
+  const toggle = async () => {
+    if (shown !== null) {
+      setShown(null);
+      return;
+    }
+    setShown(t.translating);
+    const value = await translateLine({ text, context: [], locale, targetLanguage }).catch((error: unknown) => aiFailText(t, error));
+    setShown(value || t.translateFailed);
+  };
+  return (
+    <span className="block">
+      <button type="button" onClick={() => void toggle()} className="mt-1 text-caption text-info">
+        {t.boardTranslate}
+      </button>
+      {shown !== null ? <span className="mt-1 block whitespace-pre-wrap text-note text-slate-300">{shown}</span> : null}
+    </span>
   );
 }

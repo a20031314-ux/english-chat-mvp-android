@@ -15,7 +15,7 @@ import { byPerson, contextBefore, overlapsPrevious, timeline, type RoomLine, typ
 import type { PublicProfile } from "@/lib/rooms/social";
 import type { HowToSayExpression } from "@/lib/howToSay";
 import { focusOf, pickTokens, questionCount } from "@/lib/rooms/quote";
-import { FactsView, ProfilePosts, ThankButton } from "@/components/account/ProfileFacts";
+import { FactsView, ProfilePosts, ThankButton, TranslateToggle } from "@/components/account/ProfileFacts";
 import { countryFlag, countryName } from "@/lib/account/countries";
 import type { MediaRef, MediaScope } from "@/lib/rooms/media";
 import { MediaError, uploadImage, type MediaUploadError } from "@/lib/rooms/mediaClient";
@@ -241,9 +241,11 @@ export function ProfileSheet({
           <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-slate-200" dir="auto">
             {profile?.bio || t.noBio}
           </p>
+          {/* 남의 자기소개는 내 앱 언어로 볼 수 있게(쓴 언어를 몰라 늘 보임, 내 프로필엔 없음). */}
+          {profile?.bio && !profile.isMe ? <TranslateToggle t={t} locale={locale} text={profile.bio} /> : null}
           {/* 나에 대한 사실(칩)과 켠 칸(도움·꾸준함·반영 의견·목표) — 학습 상태는 서버가 보내지 않는다. */}
           {profile ? <FactsView locale={locale} facts={profile.facts} badges={profile.badges} goal={profile.goal} /> : null}
-          {profile ? <ProfilePosts locale={locale} posts={profile.posts} /> : null}
+          {profile ? <ProfilePosts t={t} locale={locale} posts={profile.posts} /> : null}
           {profile ? (
             <dl className="mt-3 grid grid-cols-4 gap-1 text-center">
               {(

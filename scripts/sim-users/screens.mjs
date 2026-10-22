@@ -601,6 +601,21 @@ const SCENES = [
     },
   },
   {
+    id: "profile-translate",
+    label: "사람 — 프로필 자기소개·올린 글 \"내 언어로 보기\"",
+    async run({ page, wait, rc, state }) {
+      if (!(await page.getByRole("dialog").count())) {
+        await page.getByRole("button", { name: state.hostNickname, exact: true }).first().click();
+        await wait(3000);
+      }
+      const buttons = page.getByRole("dialog").getByRole("button", { name: rc.boardTranslate, exact: true });
+      const count = await buttons.count();
+      for (let i = 0; i < Math.min(count, 2); i++) await buttons.nth(i).click();
+      await wait(6000);
+      await page.unroute("**/api/social").catch(() => undefined);
+    },
+  },
+  {
     id: "board-likes",
     label: "사람 → 게시판 — 글 아래 ♡/♥ 좋아요 (테스트 계정 글만 보이게 거름)",
     async run({ page, wait, state, rc }) {
