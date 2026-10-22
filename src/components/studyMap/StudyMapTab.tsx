@@ -18,6 +18,7 @@ import {
   finishStudyMapDraw,
   pendingStudyMapDraw,
   startStudyMapDraw,
+  subscribeStudyMapDraw,
   type DrawResult,
   fetchDueItems,
   fetchStudyMap,
@@ -621,6 +622,7 @@ function GoalForm({
       >
         {drawing ? ui.mapDrawing : ui.mapDraw}
       </button>
+      {drawing ? <MapDrawProgress ui={ui} targetLanguage={targetLanguage} /> : null}
       {error ? (
         <p className="text-sm text-rose-300">
           {error === "identity"
@@ -1217,3 +1219,57 @@ function VideoActivity({
     </div>
   );
 }
+
+/**
+ * My 탭 생성 중 진행(2026-10-23 사용자 "오래 걸려 — 진행 상태를 바로"): 주제 짜기 → 연습 채우기 n/m, 지난 초,
+ * 뼈대가 오면 주제 목록을 순서대로 먼저 보여 준다. 진행은 studyMapClient의 그리는 요청에 있어 다른 탭에 갔다 와도 이어진다.
+ */
+function MapDrawProgress({ ui, targetLanguage }: { ui: UICopy; targetLanguage: string }) {
+  const progress = useSyncExternalStore(
+    (listener) => subscribeStudyMapDraw(targetLanguage, listener),
+    () => pendingStudyMapDraw(targetLanguage)?.progress ?? null,
+    () => null,
+  );
+  const startedAt = pendingStudyMapDraw(targetLanguage)?.startedAt ?? 0;
+  const [now, setNow] = useState(() => Date.now());
+  useEffect(() => {
+    const timer = window.setInterval(() => setNow(Date.now()), 1000);
+    return () => window.clearInterval(timer);
+  }, []);
+  if (!progress) return null;
+  const seconds = startedAt ? Math.max(0, Math.round((now - startedAt) / 1000)) : 0;
+  const planned = progress.step === "fill";
+  const total = progress.total ?? 0;
+  const done = progress.done ?? 0;
+  const topics = [...(progress.skeleton?.topics ?? [])].sort((a, b) => a.order - b.order);
+  const row = (state: "done" | "now" | "wait", label: string) => (
+    <li className={`flex items-center gap-2 text-note ${state === "wait" ? "text-slate-500" : state === "now" ? "text-ink" : "text-slate-400"}`}>
+      <span aria-hidden className={`inline-block h-2 w-2 rounded-full ${state === "done" ? "bg-good" : state === "now" ? "animate-pulse bg-white" : "bg-white/20"}`} />
+      {label}
+    </li>
+  );
+  return (
+    <div className="flex flex-col gap-3 rounded-xl border border-line bg-white/5 px-3 py-2.5" aria-live="polite">
+      <div className="flex items-start justify-between gap-3">
+        <ol className="flex flex-col gap-1.5">
+          {row(planned ? "done" : "now", ui.mapStepPlan)}
+          {row(planned ? (total && done >= total ? "done" : "now") : "wait", total ? `${ui.mapStepFill} ${done}/${total}` : ui.mapStepFill)}
+        </ol>
+        <span className="shrink-0 text-note tabular-nums text-slate-500">{ui.mapStepSeconds.replace("{n}", String(seconds))}</span>
+      </div>
+      {topics.length ? (
+        <div className="flex flex-col gap-1 border-t border-line pt-2">
+          <p className="text-note font-medium text-ink">{progress.skeleton?.title}</p>
+          <ol className="flex flex-col gap-1">
+            {topics.map((topic) => (
+              <li key={topic.id} className="text-note leading-snug text-slate-400">
+                {topic.order}. {topic.title}
+              </li>
+            ))}
+          </ol>
+        </div>
+      ) : null}
+    </div>
+  );
+}
+

@@ -43,8 +43,11 @@ export const maxDuration = 120;
  */
 const MODEL = () => process.env.OPENAI_CURRICULUM_MODEL?.trim() || "gpt-4.1";
 const MAX_GOAL_CHARS = 300;
-/** 나눠 그리기 운영 스위치(Vercel MAP_SPLIT=1/0). 코드 기본값은 아래 — 점검 뒤 켬. */
-const mapSplitOn = () => (process.env.MAP_SPLIT?.trim() ?? "0") === "1";
+/**
+ * 나눠 그리기 운영 스위치(Vercel MAP_SPLIT=0이면 예전 한 번에). 기본 켬(2026-10-23 운영 비교:
+ * 한 번에 40~47초·재시도 85초 → 나눠서 33~43초, 뼈대는 19~30초에 화면에 보임, 주제·연습 수와 질은 같음).
+ */
+const mapSplitOn = () => (process.env.MAP_SPLIT?.trim() ?? "1") !== "0";
 
 function thinWhy(raw: unknown): string {
   // 점검 사용자에게만: 무엇이 왔는지(어떤 모양이라 버려졌는지 보려고).
@@ -152,9 +155,10 @@ export async function POST(request: NextRequest) {
   const simSplit = simUser ? request.headers.get("x-sim-map-split") : null;
   const split = simSplit === "1" || (simSplit !== "0" && mapSplitOn());
   const wantsStream = body.stream === true && split;
-  // 뼈대 짜기에서 먼저 생각할지(운영 MAP_PLAN_THINK, 기본 켬) — 점검 사용자는 x-sim-map-think: 1/0으로 비교.
+  // 뼈대 짜기에서 먼저 생각할지(운영 MAP_PLAN_THINK=1이면 켬, 기본 끔) — 뼈대만 쓰면 생각 없이도 주제 수·질이 같고 10초쯤 빠름
+  // (2026-10-23 운영 비교 ja·en·es 6번 모두 9~12주제). 점검 사용자는 x-sim-map-think: 1/0으로 비교.
   const simThink = simUser ? request.headers.get("x-sim-map-think") : null;
-  const planThinks = simThink === "1" || (simThink !== "0" && (process.env.MAP_PLAN_THINK?.trim() ?? "1") !== "0");
+  const planThinks = simThink === "1" || (simThink !== "0" && process.env.MAP_PLAN_THINK?.trim() === "1");
 
   if (!split) return drawWhole();
 

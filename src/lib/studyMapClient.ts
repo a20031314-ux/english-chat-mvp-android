@@ -66,14 +66,26 @@ export async function fetchStudyMap(
   }
 }
 
-export async function drawStudyMap(input: {
-  goal: string;
-  /** What they ticked about themselves (learner/selfCheck.ts); the server pitches the map from it. */
-  selfCheck?: { gaps: string[]; focus: string[]; use?: string };
-  targetLanguage: string;
-  interfaceLanguage: string;
-  isPremium: boolean;
-}): Promise<{ ok: true; record: MapRecord } | { ok: false; error: MapError; limit?: number }> {
+/** 나눠 그리기 진행(서버 stream): 뼈대 짜는 중 → 뼈대 도착(주제 목록) → 연습 채우는 중 n/m. */
+export type DrawProgress = {
+  step: "plan" | "fill";
+  /** 뼈대가 오면 주제·순서(연습은 아직 비어 있음). */
+  skeleton?: StudyMap;
+  done?: number;
+  total?: number;
+};
+
+export async function drawStudyMap(
+  input: {
+    goal: string;
+    /** What they ticked about themselves (learner/selfCheck.ts); the server pitches the map from it. */
+    selfCheck?: { gaps: string[]; focus: string[]; use?: string };
+    targetLanguage: string;
+    interfaceLanguage: string;
+    isPremium: boolean;
+  },
+  onProgress?: (progress: DrawProgress) => void,
+): Promise<{ ok: true; record: MapRecord } | { ok: false; error: MapError; limit?: number }> {
   try {
     const response = await fetch(apiUrl("/api/curriculum/generate"), {
       method: "POST",
@@ -83,18 +95,65 @@ export async function drawStudyMap(input: {
         ...(input.selfCheck ? { selfCheck: input.selfCheck } : {}),
         targetLanguage: input.targetLanguage,
         interfaceLanguage: input.interfaceLanguage,
+        // 서버가 나눠 그리기를 켰으면 진행을 줄 단위로 흘려 보낸다(2026-10-23). 꺼져 있으면 예전처럼 끝에 한 번.
+        stream: true,
       }),
-      signal: AbortSignal.timeout(90000),
+      signal: AbortSignal.timeout(110000),
     });
-    const data = await readJson(response);
-    if (!response.ok) {
-      return {
-        ok: false,
-        error: errorOf(response),
-        ...(typeof data.limit === "number" ? { limit: data.limit } : {}),
-      };
+    const isStream = (response.headers.get("content-type") ?? "").includes("ndjson") && response.body;
+    if (!isStream) {
+      const data = await readJson(response);
+      if (!response.ok) {
+        return {
+          ok: false,
+          error: errorOf(response),
+          ...(typeof data.limit === "number" ? { limit: data.limit } : {}),
+        };
+      }
+      return { ok: true, record: { ...asRecord(data), hasPrevious: true } };
     }
-    return { ok: true, record: { ...asRecord(data), hasPrevious: true } };
+    const reader = response.body!.getReader();
+    const decoder = new TextDecoder();
+    let buffer = "";
+    let progress: DrawProgress = { step: "plan" };
+    for (;;) {
+      const { value, done } = await reader.read();
+      if (value) buffer += decoder.decode(value, { stream: true });
+      const lines = buffer.split("\n");
+      buffer = done ? "" : (lines.pop() ?? "");
+      for (const raw of lines) {
+        if (!raw.trim()) continue;
+        let line: Record<string, unknown>;
+        try {
+          line = JSON.parse(raw) as Record<string, unknown>;
+        } catch {
+          continue;
+        }
+        if (line.type === "done" && line.record && typeof line.record === "object") {
+          return { ok: true, record: { ...asRecord(line.record as Record<string, unknown>), hasPrevious: true } };
+        }
+        if (line.type === "error") {
+          const status = typeof line.status === "number" ? line.status : 502;
+          return {
+            ok: false,
+            error: status === 401 ? "identity" : status === 429 ? "limit" : "failed",
+            ...(typeof line.limit === "number" ? { limit: line.limit } : {}),
+          };
+        }
+        if (line.type === "plan" && line.map) {
+          const fill = (line.fill ?? {}) as { done?: number; total?: number };
+          progress = { step: "fill", skeleton: line.map as StudyMap, done: fill.done ?? 0, total: fill.total ?? 0 };
+          onProgress?.(progress);
+        } else if (line.type === "step" && line.step === "fill") {
+          progress = { ...progress, step: "fill", done: Number(line.done) || 0, total: Number(line.total) || progress.total };
+          onProgress?.(progress);
+        } else if (line.type === "step" && line.step === "plan") {
+          onProgress?.(progress);
+        }
+      }
+      if (done) break;
+    }
+    return { ok: false, error: "failed" };
   } catch {
     return { ok: false, error: "failed" };
   }
@@ -109,7 +168,15 @@ export type DrawResult = Awaited<ReturnType<typeof drawStudyMap>>;
  */
 /** 화면에 다시 보여 줄 입력: 직접 쓴 목표(체크만 했으면 빈 칸)와 고른 체크. */
 type DrawForm = { typed: string; selfCheck?: { gaps: string[]; focus: string[]; use?: string; stage?: string } };
-type PendingDraw = { form: DrawForm; promise: Promise<DrawResult>; result?: DrawResult };
+type PendingDraw = {
+  form: DrawForm;
+  promise: Promise<DrawResult>;
+  result?: DrawResult;
+  /** 언제 눌렀는지(지난 초 표시)와 마지막 진행. 화면을 떠났다 와도 이어서 보인다. */
+  startedAt: number;
+  progress: DrawProgress;
+  listeners: Set<() => void>;
+};
 const pendingDraws = new Map<string, PendingDraw>();
 
 export function startStudyMapDraw(input: Parameters<typeof drawStudyMap>[0], typed = ""): PendingDraw {
@@ -118,8 +185,14 @@ export function startStudyMapDraw(input: Parameters<typeof drawStudyMap>[0], typ
   const entry: PendingDraw = {
     form: { typed, ...(input.selfCheck ? { selfCheck: input.selfCheck } : {}) },
     promise: Promise.resolve(null as unknown as DrawResult),
+    startedAt: Date.now(),
+    progress: { step: "plan" },
+    listeners: new Set(),
   };
-  entry.promise = drawStudyMap(input).then((result) => {
+  entry.promise = drawStudyMap(input, (progress) => {
+    entry.progress = progress;
+    for (const listener of entry.listeners) listener();
+  }).then((result) => {
     entry.result = result;
     return result;
   });
@@ -130,6 +203,14 @@ export function startStudyMapDraw(input: Parameters<typeof drawStudyMap>[0], typ
 /** 이 학습 언어로 그리는 중이거나, 화면이 없는 동안 끝나 아직 받지 않은 요청. */
 export function pendingStudyMapDraw(targetLanguage: string): PendingDraw | null {
   return pendingDraws.get(targetLanguage) ?? null;
+}
+
+/** 진행이 바뀔 때 다시 그리기(useSyncExternalStore용). */
+export function subscribeStudyMapDraw(targetLanguage: string, listener: () => void): () => void {
+  const entry = pendingDraws.get(targetLanguage);
+  if (!entry) return () => undefined;
+  entry.listeners.add(listener);
+  return () => entry.listeners.delete(listener);
 }
 
 /** 결과를 화면에 넣었으면 지운다(같은 요청일 때만 — 그사이 새로 시작한 것은 남긴다). */

@@ -107,7 +107,7 @@
     "mapLevelIntermediate": "中級",
     "mapLevelAdvanced": "上級",
     "mapDraw": "マイを作成",
-    "mapDrawing": "マイを作成しています…（30秒ほど）",
+    "mapDrawing": "マイを作成しています…（40秒ほど）",
     "mapIdentityRequired": "マップはアプリで保存できます。アプリで開いてください。",
     "mapLimitReached": "今日はこれ以上マップを描けません（1日{limit}回）。",
     "mapFailed": "マイを作成できませんでした。もう一度お試しください。",
@@ -583,7 +583,10 @@
     "whatsNewStageTitle": "会話から始める",
     "whatsNewStageBody": "短い会話を見て始める場所を選ぶと、Myがその部分の地図を作ります。",
     "whatsNewFixTitle": "直した文は見たいときに",
-    "whatsNewFixBody": "直すところがある行の下に小さな表示が出ます。タップすると直した文が見えます。"
+    "whatsNewFixBody": "直すところがある行の下に小さな表示が出ます。タップすると直した文が見えます。",
+    "mapStepPlan": "トピックを考えています",
+    "mapStepFill": "練習を作っています",
+    "mapStepSeconds": "{n}秒"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -693,7 +696,7 @@
     "mapLevelIntermediate": "中级",
     "mapLevelAdvanced": "高级",
     "mapDraw": "生成“我的”",
-    "mapDrawing": "正在生成“我的”…（约30秒）",
+    "mapDrawing": "正在生成“我的”…（约40秒）",
     "mapIdentityRequired": "地图保存在应用里，请在应用中打开。",
     "mapLimitReached": "今天不能再画地图了（每天{limit}次）。",
     "mapFailed": "“我的”没能生成，请重试。",
@@ -1169,7 +1172,10 @@
     "whatsNewStageTitle": "从对话开始",
     "whatsNewStageBody": "看一段简短的对话选好起点，My 会为那一部分画出地图。",
     "whatsNewFixTitle": "想看时再看修改",
-    "whatsNewFixBody": "需要修改的句子下面会出现一个小标记，点一下就能看到改好的句子。"
+    "whatsNewFixBody": "需要修改的句子下面会出现一个小标记，点一下就能看到改好的句子。",
+    "mapStepPlan": "正在规划主题",
+    "mapStepFill": "正在编写练习",
+    "mapStepSeconds": "{n}秒"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1281,7 +1287,7 @@
     "mapLevelIntermediate": "Trung cấp",
     "mapLevelAdvanced": "Cao cấp",
     "mapDraw": "Tạo mục Của tôi",
-    "mapDrawing": "Đang tạo mục Của tôi… (khoảng 30 giây)",
+    "mapDrawing": "Đang tạo mục Của tôi… (khoảng 40 giây)",
     "mapIdentityRequired": "Bản đồ được lưu trong ứng dụng. Hãy mở trong ứng dụng.",
     "mapLimitReached": "Hôm nay không vẽ thêm bản đồ được ({limit} lần/ngày).",
     "mapFailed": "Không tạo được mục Của tôi. Vui lòng thử lại.",
@@ -1757,7 +1763,10 @@
     "whatsNewStageTitle": "Bắt đầu từ hội thoại",
     "whatsNewStageBody": "Đọc một đoạn hội thoại ngắn để chọn chỗ bắt đầu, rồi My vẽ bản đồ cho phần đó.",
     "whatsNewFixTitle": "Xem câu sửa khi bạn muốn",
-    "whatsNewFixBody": "Dòng nào có chỗ cần sửa sẽ có một nhãn nhỏ bên dưới. Nhấn để xem câu đã sửa."
+    "whatsNewFixBody": "Dòng nào có chỗ cần sửa sẽ có một nhãn nhỏ bên dưới. Nhấn để xem câu đã sửa.",
+    "mapStepPlan": "Đang lên chủ đề",
+    "mapStepFill": "Đang soạn bài luyện",
+    "mapStepSeconds": "{n} giây"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -1874,7 +1883,7 @@
     "mapLevelIntermediate": "Intermédiaire",
     "mapLevelAdvanced": "Avancé",
     "mapDraw": "Créer l’onglet Moi",
-    "mapDrawing": "Création de l’onglet Moi… (environ 30 secondes)",
+    "mapDrawing": "Création de l’onglet Moi… (environ 40 secondes)",
     "mapIdentityRequired": "Les cartes sont enregistrées dans l’application. Ouvre-la là-bas.",
     "mapLimitReached": "Plus de cartes pour aujourd’hui ({limit} par jour).",
     "mapFailed": "Impossible de créer l’onglet Moi. Réessaie.",
@@ -2350,7 +2359,10 @@
     "whatsNewStageTitle": "Commencer par une conversation",
     "whatsNewStageBody": "Choisis par où commencer en lisant une courte conversation, puis My dessine ta carte pour cette partie.",
     "whatsNewFixTitle": "Les corrections quand tu veux",
-    "whatsNewFixBody": "Quand une ligne a quelque chose à corriger, une petite étiquette apparaît dessous. Touche-la pour voir la phrase corrigée."
+    "whatsNewFixBody": "Quand une ligne a quelque chose à corriger, une petite étiquette apparaît dessous. Touche-la pour voir la phrase corrigée.",
+    "mapStepPlan": "Préparation des thèmes",
+    "mapStepFill": "Rédaction des exercices",
+    "mapStepSeconds": "{n} s"
   },
   "it": {
     "archive": "Report",
@@ -2657,7 +2669,7 @@
     "mapLevelIntermediate": "Intermedio",
     "mapLevelAdvanced": "Avanzato",
     "mapDraw": "Crea la scheda Io",
-    "mapDrawing": "Sto creando la scheda Io… (circa 30 secondi)",
+    "mapDrawing": "Sto creando la scheda Io… (circa 40 secondi)",
     "mapIdentityRequired": "Le mappe si salvano nell’app. Aprila lì.",
     "mapLimitReached": "Per oggi niente altre mappe ({limit} al giorno).",
     "mapFailed": "Non è stato possibile creare la scheda Io. Riprova.",
@@ -3134,7 +3146,10 @@
     "whatsNewStageTitle": "Inizia da una conversazione",
     "whatsNewStageBody": "Scegli da dove partire leggendo una breve conversazione, poi My crea la tua mappa per quella parte.",
     "whatsNewFixTitle": "Correzioni quando vuoi",
-    "whatsNewFixBody": "Se una riga ha qualcosa da correggere, sotto compare una piccola etichetta. Toccala per vedere la frase corretta."
+    "whatsNewFixBody": "Se una riga ha qualcosa da correggere, sotto compare una piccola etichetta. Toccala per vedere la frase corretta.",
+    "mapStepPlan": "Sto pianificando gli argomenti",
+    "mapStepFill": "Sto scrivendo gli esercizi",
+    "mapStepSeconds": "{n} s"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3254,7 +3269,7 @@
     "mapLevelIntermediate": "Intermediário",
     "mapLevelAdvanced": "Avançado",
     "mapDraw": "Criar Meu espaço",
-    "mapDrawing": "Criando Meu espaço… (cerca de 30 segundos)",
+    "mapDrawing": "Criando Meu espaço… (cerca de 40 segundos)",
     "mapIdentityRequired": "Os mapas ficam salvos no app. Abra por lá.",
     "mapLimitReached": "Sem mais mapas hoje ({limit} por dia).",
     "mapFailed": "Não foi possível criar Meu espaço. Tente de novo.",
@@ -3730,7 +3745,10 @@
     "whatsNewStageTitle": "Comece por uma conversa",
     "whatsNewStageBody": "Escolha por onde começar lendo uma conversa curta, e o My faz seu mapa para essa parte.",
     "whatsNewFixTitle": "Correções quando você quiser",
-    "whatsNewFixBody": "Quando uma linha tem algo para corrigir, aparece uma pequena etiqueta embaixo. Toque para ver a frase corrigida."
+    "whatsNewFixBody": "Quando uma linha tem algo para corrigir, aparece uma pequena etiqueta embaixo. Toque para ver a frase corrigida.",
+    "mapStepPlan": "Planejando os temas",
+    "mapStepFill": "Escrevendo os exercícios",
+    "mapStepSeconds": "{n} s"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4035,7 +4053,7 @@
     "mapLevelIntermediate": "Средний",
     "mapLevelAdvanced": "Продвинутый",
     "mapDraw": "Создать вкладку «Моё»",
-    "mapDrawing": "Создаём вкладку «Моё»… (около 30 секунд)",
+    "mapDrawing": "Создаём вкладку «Моё»… (около 40 секунд)",
     "mapIdentityRequired": "Карты сохраняются в приложении. Откройте её там.",
     "mapLimitReached": "Сегодня больше нельзя рисовать карты ({limit} в день).",
     "mapFailed": "Не удалось создать вкладку «Моё». Попробуйте ещё раз.",
@@ -4512,7 +4530,10 @@
     "whatsNewStageTitle": "Начните с разговора",
     "whatsNewStageBody": "Выберите, с чего начать, прочитав короткий диалог, и My построит карту для этой части.",
     "whatsNewFixTitle": "Исправления, когда хотите",
-    "whatsNewFixBody": "Если в строке есть что исправить, под ней появляется небольшая метка. Нажмите, чтобы увидеть исправленную фразу."
+    "whatsNewFixBody": "Если в строке есть что исправить, под ней появляется небольшая метка. Нажмите, чтобы увидеть исправленную фразу.",
+    "mapStepPlan": "Составляем темы",
+    "mapStepFill": "Пишем упражнения",
+    "mapStepSeconds": "{n} с"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -4628,7 +4649,7 @@
     "mapLevelIntermediate": "Menengah",
     "mapLevelAdvanced": "Mahir",
     "mapDraw": "Buat tab Saya",
-    "mapDrawing": "Sedang membuat tab Saya… (sekitar 30 detik)",
+    "mapDrawing": "Sedang membuat tab Saya… (sekitar 40 detik)",
     "mapIdentityRequired": "Peta disimpan di aplikasi. Silakan buka di sana.",
     "mapLimitReached": "Tidak bisa membuat peta lagi hari ini ({limit} per hari).",
     "mapFailed": "Tab Saya gagal dibuat. Coba lagi.",
@@ -5104,7 +5125,10 @@
     "whatsNewStageTitle": "Mulai dari percakapan",
     "whatsNewStageBody": "Pilih titik mulai dengan membaca percakapan singkat, lalu My membuat peta untuk bagian itu.",
     "whatsNewFixTitle": "Perbaikan saat kamu mau",
-    "whatsNewFixBody": "Kalau ada yang perlu diperbaiki, label kecil muncul di bawah baris itu. Ketuk untuk melihat kalimat yang sudah diperbaiki."
+    "whatsNewFixBody": "Kalau ada yang perlu diperbaiki, label kecil muncul di bawah baris itu. Ketuk untuk melihat kalimat yang sudah diperbaiki.",
+    "mapStepPlan": "Menyusun topik",
+    "mapStepFill": "Menulis latihan",
+    "mapStepSeconds": "{n} dtk"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5214,7 +5238,7 @@
     "mapLevelIntermediate": "متوسط",
     "mapLevelAdvanced": "متقدم",
     "mapDraw": "إنشاء تبويب «أنا»",
-    "mapDrawing": "جارٍ إنشاء تبويب «أنا»… (نحو 30 ثانية)",
+    "mapDrawing": "جارٍ إنشاء تبويب «أنا»… (نحو 40 ثانية)",
     "mapIdentityRequired": "تُحفظ الخرائط في التطبيق. افتحها هناك من فضلك.",
     "mapLimitReached": "لا مزيد من الخرائط اليوم ({limit} يوميًا).",
     "mapFailed": "تعذّر إنشاء تبويب «أنا». حاول مرة أخرى.",
@@ -5690,7 +5714,10 @@
     "whatsNewStageTitle": "ابدأ من محادثة",
     "whatsNewStageBody": "اختر من أين تبدأ بقراءة محادثة قصيرة، ثم يرسم My خريطتك لذلك الجزء.",
     "whatsNewFixTitle": "التصحيح حين تريده",
-    "whatsNewFixBody": "إذا كان في السطر ما يحتاج إلى تصحيح تظهر تحته علامة صغيرة. اضغط عليها لترى الجملة المصحّحة."
+    "whatsNewFixBody": "إذا كان في السطر ما يحتاج إلى تصحيح تظهر تحته علامة صغيرة. اضغط عليها لترى الجملة المصحّحة.",
+    "mapStepPlan": "جارٍ تخطيط الموضوعات",
+    "mapStepFill": "جارٍ كتابة التمارين",
+    "mapStepSeconds": "{n} ث"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -5800,7 +5827,7 @@
     "mapLevelIntermediate": "กลาง",
     "mapLevelAdvanced": "สูง",
     "mapDraw": "สร้างแท็บของฉัน",
-    "mapDrawing": "กำลังสร้างแท็บของฉัน… (ประมาณ 30 วินาที)",
+    "mapDrawing": "กำลังสร้างแท็บของฉัน… (ประมาณ 40 วินาที)",
     "mapIdentityRequired": "แผนที่บันทึกไว้ในแอป โปรดเปิดในแอป",
     "mapLimitReached": "วันนี้วาดแผนที่เพิ่มไม่ได้แล้ว (วันละ {limit} ครั้ง)",
     "mapFailed": "สร้างแท็บของฉันไม่สำเร็จ โปรดลองอีกครั้ง",
@@ -6276,7 +6303,10 @@
     "whatsNewStageTitle": "เริ่มจากบทสนทนา",
     "whatsNewStageBody": "อ่านบทสนทนาสั้น ๆ เพื่อเลือกจุดเริ่ม แล้ว My จะวาดแผนที่สำหรับส่วนนั้น",
     "whatsNewFixTitle": "ดูคำแก้เมื่ออยากดู",
-    "whatsNewFixBody": "ถ้าบรรทัดไหนมีจุดที่ต้องแก้ จะมีป้ายเล็ก ๆ ขึ้นด้านล่าง แตะเพื่อดูประโยคที่แก้แล้ว"
+    "whatsNewFixBody": "ถ้าบรรทัดไหนมีจุดที่ต้องแก้ จะมีป้ายเล็ก ๆ ขึ้นด้านล่าง แตะเพื่อดูประโยคที่แก้แล้ว",
+    "mapStepPlan": "กำลังวางหัวข้อ",
+    "mapStepFill": "กำลังเขียนแบบฝึก",
+    "mapStepSeconds": "{n} วินาที"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -6386,7 +6416,7 @@
     "mapLevelIntermediate": "मध्यम",
     "mapLevelAdvanced": "उन्नत",
     "mapDraw": "मेरा टैब बनाएँ",
-    "mapDrawing": "मेरा टैब बन रहा है… (लगभग 30 सेकंड)",
+    "mapDrawing": "मेरा टैब बन रहा है… (लगभग 40 सेकंड)",
     "mapIdentityRequired": "नक्शे ऐप में सहेजे जाते हैं। कृपया ऐप में खोलें।",
     "mapLimitReached": "आज और नक्शे नहीं बन सकते (दिन में {limit})।",
     "mapFailed": "मेरा टैब नहीं बन सका। फिर से कोशिश करें।",
@@ -6862,6 +6892,9 @@
     "whatsNewStageTitle": "बातचीत से शुरू करें",
     "whatsNewStageBody": "एक छोटी बातचीत पढ़कर तय करें कि कहाँ से शुरू करना है, फिर My उस हिस्से का नक्शा बनाता है।",
     "whatsNewFixTitle": "सुधार तब, जब आप चाहें",
-    "whatsNewFixBody": "जिस लाइन में कुछ सुधारना हो, उसके नीचे एक छोटा निशान आता है। दबाकर सुधरा वाक्य देखें।"
+    "whatsNewFixBody": "जिस लाइन में कुछ सुधारना हो, उसके नीचे एक छोटा निशान आता है। दबाकर सुधरा वाक्य देखें।",
+    "mapStepPlan": "विषय तय हो रहे हैं",
+    "mapStepFill": "अभ्यास लिखे जा रहे हैं",
+    "mapStepSeconds": "{n} सेकंड"
   }
 }
