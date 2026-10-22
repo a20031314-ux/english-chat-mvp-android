@@ -143,6 +143,7 @@ export function lastCopyFailure(): string {
 
 /** 영어 글 묶음을 앱 언어로(저장해 두고 다시 씀). 실패하면 null. */
 async function translated(source: string[], ui: string, uiName: string, cacheKey: string, onTranslate?: () => void): Promise<string[] | null> {
+  lastFailure = "";
   try {
     const kept = await kvGetJson<string[]>(cacheKey);
     if (Array.isArray(kept) && kept.length === source.length) return kept;
@@ -156,31 +157,27 @@ async function translated(source: string[], ui: string, uiName: string, cacheKey
     const out: string[] = [];
     for (let start = 0; start < source.length; start += CHUNK) {
       const part = source.slice(start, start + CHUNK);
+      // 번호 붙인 줄로 주고받는다: JSON으로 받으면 Haiku가 배열을 글자 하나로 싸 보내 깨지곤 했다(2026-10-22 운영).
       const completion = await completeChat(client, "translate", {
         temperature: 0,
         max_tokens: 8000,
-        response_format: { type: "json_object" },
         messages: [
           {
             role: "system",
-            content: `Translate every string of the JSON array "texts" from English into ${uiName}. They are labels and glosses on a language-learning app screen read by a ${uiName} speaker, so every output string must be written in ${uiName} — never in the language being studied, even when a string is about that language. Keep the meaning plain and natural, the same length or shorter; leave words in quotes, grammar terms written in another language (like "ser" or "-ar"), and anything already in another script as they are. Return only {"texts": [...]} with exactly ${part.length} strings in the same order.`,
+            content: `Translate each numbered line from English into ${uiName}. They are labels and glosses on a language-learning app screen read by a ${uiName} speaker, so every translation must be written in ${uiName} — never in the language being studied, even when a line is about that language. Keep the meaning plain and natural, the same length or shorter; leave words in quotes, grammar terms written in another language (like "ser" or "-ar"), and anything already in another script as they are. Answer with exactly ${part.length} lines in the same order, each as <number>|<translation>, and nothing else.`,
           },
-          { role: "user", content: JSON.stringify({ texts: part }) },
+          { role: "user", content: part.map((text, index) => `${index + 1}|${text.replace(/\s+/g, " ")}`).join("\n") },
         ],
       });
-      const parsed = JSON.parse(completion.choices[0]?.message?.content ?? "{}") as { texts?: unknown };
-      // Haiku가 도구 입력으로 답할 때 배열을 JSON 글자로 보내기도 한다(2026-10-22 운영, "texts":"[\"…\"]") — 풀어서 쓴다.
-      let list: unknown = parsed.texts;
-      if (typeof list === "string") {
-        try {
-          list = JSON.parse(list);
-        } catch {
-          list = [];
-        }
+      const raw = String(completion.choices[0]?.message?.content ?? "");
+      const byNumber = new Map<number, string>();
+      for (const line of raw.split(/\r?\n/)) {
+        const match = /^\s*(\d+)\s*[|｜]\s*(.*)$/.exec(line);
+        if (match) byNumber.set(Number(match[1]), match[2]!.trim());
       }
-      const texts = Array.isArray(list) ? list.map((t) => (typeof t === "string" ? t.trim() : "")) : [];
-      if (texts.length !== part.length || texts.some((t) => !t)) {
-        lastFailure = `chunk ${start}: got ${texts.length}/${part.length}, raw ${String(completion.choices[0]?.message?.content ?? "").slice(0, 160)}`;
+      const texts = part.map((_, index) => byNumber.get(index + 1) ?? "");
+      if (texts.some((t) => !t)) {
+        lastFailure = `chunk ${start}: got ${byNumber.size}/${part.length}, raw ${raw.slice(0, 160)}`;
         return null;
       }
       if (!looksLike(ui, texts)) {
