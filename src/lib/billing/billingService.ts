@@ -597,6 +597,38 @@ function packageForTier(packages: PurchasesPackage[], tier: Exclude<PlanTier, "f
  * created in Play and attached in RevenueCat, the screen shows premium alone,
  * the way it always has.
  */
+/**
+ * 파는 묶음의 패키지. RevenueCat이 기본 묶음(current)을 비워 줄 때가 있어서(2026-10-23 아이폰 TestFlight 진단:
+ * 대시보드에서 current가 기본인데 앱에는 `offering -`, 그래서 라이트·플러스가 안 보임) 이름이 current인 묶음,
+ * 그다음 모든 묶음의 패키지를 차례로 본다.
+ */
+function offeredPackages(offerings: { current?: { availablePackages: PurchasesPackage[] } | null; all?: Record<string, { availablePackages: PurchasesPackage[] }> } | null | undefined): PurchasesPackage[] {
+  if (!offerings) return [];
+  const current = offerings.current?.availablePackages ?? [];
+  if (current.length) return current;
+  const named = offerings.all?.current?.availablePackages ?? [];
+  if (named.length) return named;
+  return Object.values(offerings.all ?? {}).flatMap((offering) => offering.availablePackages ?? []);
+}
+
+/** 묶음에 없을 때 스토어에 직접 묻는 요금제 상품(라이트·플러스). */
+async function storeProductForTier(tier: Exclude<PlanTier, "free">): Promise<PurchasesStoreProduct | null> {
+  const plugin = getPurchasesPlugin();
+  if (!plugin) return null;
+  try {
+    const wanted = PLAN_PRODUCT_IDS[tier];
+    const { products } = await withBillingTimeout(
+      "getProducts",
+      plugin.getProducts({ productIdentifiers: [wanted] }),
+      BILLING_FETCH_TIMEOUT_MS,
+    );
+    return products.find((item) => item.identifier.split(":")[0] === wanted) ?? null;
+  } catch (error) {
+    console.error("[billing] getProducts for plan failed", tier, error);
+    return null;
+  }
+}
+
 export async function fetchPlanOffers(): Promise<PlanOffer[]> {
   if (!isBillingNativePlatform()) return [];
   if (!(await ensureConfigured())) return [];
@@ -604,11 +636,16 @@ export async function fetchPlanOffers(): Promise<PlanOffer[]> {
   if (!plugin) return [];
   try {
     const offerings = await withBillingTimeout("getOfferings", plugin.getOfferings(), BILLING_FETCH_TIMEOUT_MS);
-    const packages = offerings.current?.availablePackages ?? [];
+    const packages = offeredPackages(offerings);
     const offers: PlanOffer[] = [];
     for (const tier of ["lite", "plus"] as const) {
       const pkg = packageForTier(packages, tier);
-      if (pkg) offers.push({ tier, priceLabel: pkg.product.priceString || null });
+      if (pkg) {
+        offers.push({ tier, priceLabel: pkg.product.priceString || null });
+        continue;
+      }
+      const product = await storeProductForTier(tier);
+      if (product) offers.push({ tier, priceLabel: product.priceString || null });
     }
     offers.push({ tier: "premium", priceLabel: await fetchMonthlyPriceLabel() });
     return offers;
@@ -671,10 +708,14 @@ export async function purchaseMonthlyPremium(
       const offerings = plugin
         ? await withBillingTimeout("getOfferings", plugin.getOfferings(), BILLING_FETCH_TIMEOUT_MS)
         : null;
-      const pkg = packageForTier(offerings?.current?.availablePackages ?? [], tier);
+      const pkg = packageForTier(offeredPackages(offerings), tier);
       if (pkg) purchaseTarget = { kind: "package", value: pkg };
     } catch (error) {
       console.error("[billing] getOfferings failed", error);
+    }
+    if (!purchaseTarget) {
+      const product = await storeProductForTier(tier);
+      if (product) purchaseTarget = { kind: "product", value: product };
     }
   }
   if (!purchaseTarget) {
@@ -730,6 +771,8 @@ export async function purchaseMonthlyPremium(
         "purchaseStoreProduct",
         plugin.purchaseStoreProduct({
           product: purchaseTarget.value,
+          // 묶음 없이 스토어 상품으로 살 때도 안드로이드는 지금 구독을 바꾸게(새로 하나 더 사서 이중 청구되지 않게).
+          ...changeInfo,
         }),
         BILLING_PURCHASE_TIMEOUT_MS,
       );
@@ -943,7 +986,8 @@ export async function billingDiagnostics(): Promise<string> {
     const current = offerings.current;
     parts.push(
       `offering ${current?.identifier ?? "-"}: ` +
-        (current?.availablePackages ?? []).map((pkg) => `${pkg.identifier}=${pkg.product.identifier}`).join(", "),
+        (current?.availablePackages ?? []).map((pkg) => `${pkg.identifier}=${pkg.product.identifier}`).join(", ") +
+        ` | all: ${Object.keys(offerings.all ?? {}).join(", ") || "none"}`,
     );
   } catch (error) {
     parts.push(`offerings err ${formatBillingError(error)}`);
