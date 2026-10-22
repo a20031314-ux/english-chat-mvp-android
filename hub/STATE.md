@@ -14,7 +14,7 @@
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
 | 다음 앱 버전 | 2.71 (versionCode 85) — **자름(2026-10-22, 가상 사용자 전체 점검 뒤)**: My 대화 예시로 시작·채팅 고친 문장 눌러서 보기·Room 내 줄 교정·1:1 카메라·아랍어 카드. 새로워진 점 2장, 출시 노트 85 PR. 빌드·Play 업로드는 사람(`npm run pc:build`). 2.70(84)은 Play에 올림(사용자 2026-10-22), 트랙·공개 여부는 사용자 확인 | — |
-| iOS | TestFlight 2.70 빌드 84.7(2026-10-20) — 아이폰 13 mini에서 화면·영상·통화(받아쓰기·말 끝·튜터 목소리) 사용자 확인. 말하는 방·메시지·Google 로그인 없는 1차, 결제·심사 정책 손볼 것 남음(`hub/drafts/ios-launch.md`) | `npm run build:ios`, `hub/drafts/ios-launch.md` |
+| iOS | **App Store 심사 제출(2026-10-23 05:12, 2.71 빌드 85.9, 앱 ID 6824542951)** — 사람 기능·광고 없는 1차. 심사 대기 중. 제출 목록에 인앱 상품이 없음(확인 필요). 남은 일 `hub/drafts/ios-launch.md` "심사 중" | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할
 

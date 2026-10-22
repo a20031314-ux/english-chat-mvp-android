@@ -109,9 +109,9 @@ const PLAY_LISTING = "https://play.google.com/store/apps/details?id=com.yourname
 
 export function storeListingUrl(): string {
   if (isIosApp()) {
-    // App Store Connect에 앱을 만들면 생기는 주소(https://apps.apple.com/app/id…).
+    // App Store Connect 앱 ID 6824542951(2026-10-23 첫 제출). 바꿀 일이 있으면 NEXT_PUBLIC_APP_STORE_URL.
     const fromEnv = process.env.NEXT_PUBLIC_APP_STORE_URL?.trim();
-    return fromEnv || "https://apps.apple.com/search?term=languagebank";
+    return fromEnv || "https://apps.apple.com/app/id6824542951";
   }
   return PLAY_LISTING;
 }
