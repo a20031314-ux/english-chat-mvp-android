@@ -24,6 +24,7 @@ import type OpenAI from "openai";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { targetLanguageFocusHints } from "@/lib/languageFocus";
 import { shouldKeepLearnerLine } from "@/lib/correctionGuard";
+import { explainFeelingSlips, promoteFeelingSlip } from "@/lib/feelingAdjectives";
 import { findIrregularSlips, koreanSlipHint, repairIrregularSlips } from "@/lib/koreanSlips";
 import {
   getDailyUsed,
@@ -179,7 +180,9 @@ function englishCorrectionPolicy(
 - Optional spoken words are NOT grammar: "right" in "right now", "just", "really", "actually". If the sentence is already grammatical, set corrected to the user's exact message and put those upgrades only in natural.
 - Never mention a missing optional word (especially "right" before "now") as a grammar mistake. Suggest it only in natural. If you also fix a real grammar error, do not add those optional words into corrected.
 - Never change the meaning in corrected (do not rewrite "I'm studying nothing" into "I'm just chilling"). Meaning/style rewrites belong in natural only.
-- If there is no real grammar/agreement/article/preposition/tense error, corrected MUST equal the user's message.
+- A wrong word choice is a real error, not style: a feeling adjective used for the wrong side (the -ing form that describes what causes a feeling, used for the person who feels it, or the reverse), a verb used without the preposition or object pattern it needs, a singular or uncountable noun used where the meaning is many. Fix these in corrected and explain them.
+- If natural fixes something that was wrong (not just smoother), corrected must fix it too. natural is never the only place a mistake is fixed.
+- If there is no real grammar/agreement/article/preposition/tense/word-choice error, corrected MUST equal the user's message.
 - Keep tenses consistent across the whole corrected line: when one clause is about the past, related verbs are past too.
 - Very short replies (one or two words: yes, ok, idk, maybe, hmm) are complete answers. Keep corrected equal to the message unless the word itself is misspelled; never expand it into a sentence they did not say.
 - The explanation must describe exactly what changed between the message and corrected — never a change you did not make.
@@ -218,6 +221,7 @@ Hard rules:
 - Analyze ${targetName} in ITS own terms. Never force English grammar labels onto ${targetName} (no "article/preposition" lectures unless that category actually exists and matters here).
 - Do NOT "correct" informal-but-acceptable spoken ${targetName} into textbook wording; put style upgrades only in natural.
 - Do NOT change meaning in corrected. Meaning/style rewrites belong in natural only.
+- If natural fixes something that was wrong (not just smoother), corrected must fix it too. natural is never the only place a mistake is fixed.
 - Do NOT invent mistakes. If the line is already grammatical for the intended register, corrected MUST equal the user's message.
 - Prefer keeping the learner's register (casual vs polite) in corrected unless that register is itself ungrammatical for what they are trying to say — or wrong for who they are talking to (a teacher, elder, boss or customer addressed casually where ${targetName} requires respect: fix that in corrected and keep natural respectful too). Never lower the politeness they already used.
 - Very short replies (one or two words: yes/no, I don't know, maybe, a filler, a polite short answer) are complete answers. Keep corrected equal to the message unless the word itself is misspelled or ungrammatical; never expand it into a sentence they did not say.
@@ -624,6 +628,16 @@ async function runChat(
     corrected = message;
     natural = shouldKeepLearnerLine(message, natural, langs.targetLanguage) ? message : natural;
     explanation = "";
+  }
+  // 감정 형용사 -ing/-ed를 natural에서만 고친 줄 → corrected에도, 설명은 앱 언어로(2026-10-22, Haiku 운영 확인).
+  if (langs.targetLanguage === "en" && !options.ownLanguage) {
+    const feeling = promoteFeelingSlip(corrected, natural);
+    if (feeling) {
+      const wasUnchanged = normCompare(corrected) === normCompare(message);
+      corrected = feeling.corrected;
+      const note = explainFeelingSlips(feeling.slips, langs.interfaceLanguage);
+      explanation = wasUnchanged || !explanation.trim() ? note : `${explanation} ${note}`;
+    }
   }
 
   const needsExplanation =
