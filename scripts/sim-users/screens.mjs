@@ -317,6 +317,12 @@ const SCENES = [
       await wait(400);
       if (shot) await shot("back");
       if (!stillDrawing) throw new Error("돌아오니 생성 중 표시가 사라짐(초기화)");
+      // 뼈대가 오면 진행 칸에 "연습을 채우는 중"과 주제 목록이 보인다(2026-10-23 나눠 그리기).
+      const filling = page.getByText(new RegExp(`${ui.mapStepFill.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")} \\d+/\\d+`));
+      for (let i = 0; i < 60 && !(await filling.count()); i++) await wait(1000);
+      await filling.first().scrollIntoViewIfNeeded().catch(() => undefined);
+      await wait(400);
+      if (shot) await shot("skeleton");
       for (let i = 0; i < 120; i++) {
         await wait(1000);
         if (!(await page.locator("body").innerText()).includes(drawing)) break;
