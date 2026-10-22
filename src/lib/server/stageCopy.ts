@@ -87,7 +87,12 @@ export function scriptViewFrom(course: ScriptCourse, ui: string): ScriptView {
         char: item.char,
         reading: item.reading,
         say: item.say,
-        ...(item.example ? { word: item.example.word, meaning: t(item.example.meaning) } : {}),
+        // 영어 파닉스처럼 뜻이 낱말 그대로("cat" = cat)면 뜻은 빼고 낱말만 — 옮길 수도 없고 보여도 같은 말이다.
+        ...(item.example
+          ? item.example.meaning.en.trim().toLowerCase() === item.example.word.trim().toLowerCase()
+            ? { word: item.example.word }
+            : { word: item.example.word, meaning: t(item.example.meaning) }
+          : {}),
       })),
     })),
   };
