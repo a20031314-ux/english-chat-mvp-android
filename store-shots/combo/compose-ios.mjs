@@ -6,6 +6,7 @@ import { existsSync, mkdirSync, readFileSync, rmSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { chromium } from "playwright";
+import sharp from "sharp";
 import { COPY, LISTINGS, OVERRIDES, SHOTS } from "./strings.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
@@ -103,7 +104,14 @@ for (const L of LISTINGS.filter((l) => !only || only.includes(l.locale))) {
     });
     const bottom = await page.evaluate(() => document.querySelector(".chips").getBoundingClientRect().bottom);
     if (bottom > H - 20) problems.push(`${L.locale}/${shot.id}: 아래가 ${Math.round(bottom)}px까지 — 넘침`);
-    await page.screenshot({ path: path.join(dir, `${i + 1}-${shot.id}.png`) });
+    // 애플은 정확히 1320×2868만 받는다 — 배율 반올림으로 ±1px 어긋나면 아래 끝을 바탕색으로 맞춘다(아래 sharp).
+    const shotPng = await page.screenshot({ clip: { x: 0, y: 0, width: W, height: 2868 / (1320 / W) } });
+    await sharp(shotPng)
+      .extract({ left: 0, top: 0, width: 1320, height: Math.min(2868, (await sharp(shotPng).metadata()).height) })
+      .extend({ bottom: Math.max(0, 2868 - (await sharp(shotPng).metadata()).height), background: "#15161A" })
+      .flatten({ background: "#15161A" })
+      .png()
+      .toFile(path.join(dir, `${i + 1}-${shot.id}.png`));
   }
 }
 await browser.close();
