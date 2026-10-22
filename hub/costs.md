@@ -110,8 +110,10 @@
 | chatReply | 0.3원 | 1 | claude-haiku-5-5 1400/120 토큰 (기능 chat) | 가정 |
 | roomFix | 0.2원 | 1 | claude-haiku-5-5 900/120 토큰 (기능 roomFix) | 가정 |
 | learnerObserve | 0.2원 | 1 | claude-haiku-5-5 900/80 토큰 (기능 learnerRead) | 가정 |
+| roomGameWord | 0.2원 | 1 | claude-haiku-5-5 450/160 토큰 (기능 roomGame) | 가정 |
 | weakRead | 0.1원 | 1 | claude-haiku-5-5 600/80 토큰 (기능 learnerRead) | 가정 |
 | mediaUpload | 0.1원 | 1 | 한 번 고정값 | 가정 |
+| roomGameJudge | 0원 | 1 | claude-haiku-5-5 220/20 토큰 (기능 roomGame) | 가정 |
 | randomFrame | 0원 | 1 | 한 번 고정값 | 가정 |
 | roleplayBankLine | 0원 | 0 | 돈 안 듦(비율용 기록) | — |
 | roleplayInventedLine | 0원 | 0 | 돈 안 듦(비율용 기록) | — |
@@ -131,6 +133,7 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 | chat | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | howToSay | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | roomFix | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
+| roomGame | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | translate | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | vocab | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | analysis | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
@@ -166,14 +169,14 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 
 ## 기록 확인
 
-모델을 쓰는 서버 경로 35개 중 35개가 사용량을 기록합니다 (`scripts/cost-coverage.mjs`).
+모델을 쓰는 서버 경로 36개 중 36개가 사용량을 기록합니다 (`scripts/cost-coverage.mjs`).
 
 ## 가정 (믿기 어려운 숫자부터 확인)
 
 - 모델 단가: https://developers.openai.com/api/docs/pricing (2026-09-04 확인). 1달러 1400원(2026-09-04).
 - 음성 합성 분당 $0.015 — 통화 비용의 대부분, `cost.ts`에서 가장 약한 숫자.
 - 잰 적 없는 모델 호출 한 번 = 2000/300 토큰. 실측 보고서는 서버가 잰 토큰(`usage:tok:*`)이 20번 넘게 쌓인 기능부터 그 값을 씁니다.
-- 가정으로 값을 매기는 기능 45개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, learnerObserve, curriculumMissions, learnerPick, notesPlace, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, expressionUnits, vocabSearch, contentDiscovery.
+- 가정으로 값을 매기는 기능 47개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, learnerObserve, curriculumMissions, learnerPick, notesPlace, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, expressionUnits, vocabSearch, contentDiscovery.
 
 ## 새 기능을 넣을 때
 

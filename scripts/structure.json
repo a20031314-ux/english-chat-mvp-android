@@ -108,10 +108,12 @@
 
     "components/rooms/RoomsScreen": "room",
     "components/rooms/RoomView": "room",
+    "components/rooms/RoomGame": "room",
     "components/rooms/RoomParts": "room",
     "components/rooms/VideoStage": "room",
     "api/rooms": "room",
     "api/rooms/fix": "room",
+    "api/rooms/game": "room",
     "api/random": "random",
     "components/rooms/RandomScreen": "random",
 

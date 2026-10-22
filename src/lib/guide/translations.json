@@ -316,6 +316,14 @@
           ]
         },
         {
+          "heading": "Juego del mentiroso",
+          "body": [
+            "El anfitrión toca 🎭 arriba, elige presentador (IA o Yo) y tema, y toca «Empezar». Hacen falta 3 o más personas en asientos para hablar.",
+            "Solo el mentiroso no conoce la palabra secreta. En tu turno, descríbela con una frase en el idioma que aprendes y toca «Ya terminé». Cuando todos hayan hablado, vota por quien creas que es el mentiroso.",
+            "Si eligen al mentiroso, puede intentar adivinar la palabra. Si acierta, o si eligen a otra persona, gana el mentiroso. Con «Yo» como presentador, el anfitrión no juega y ve la palabra y al mentiroso."
+          ]
+        },
+        {
           "heading": "Si eres el anfitrión",
           "body": [
             "Toca un asiento libre y elige a quién subir (primero las solicitudes, luego los oyentes), o “Subir” en “Solicitudes”; desde un perfil, “Bajar”, “Expulsar” o “Ceder anfitrión”. Con “Cerrar sala” eliges “Ceder y salir”, pausar o cerrar. Una sala en pausa vuelve con “Reabrir” encima de la lista."
@@ -695,6 +703,14 @@
           "heading": "言葉が出ないとき",
           "body": [
             "下の欄に自分の言語で書いて「学習言語で」を押すと文を作ってくれます。そのままコメントで送るか、話す席で声に出して言ってみましょう。"
+          ]
+        },
+        {
+          "heading": "ライアーゲーム",
+          "body": [
+            "ルームのホストが上の🎭を押し、司会（AI・自分）とテーマを選んで「スタート」。話す席に3人以上必要です。",
+            "ライアーだけがお題を知りません。自分の番が来たら学習中の言語でお題を一文で説明し、「言い終わった」。全員が話したら、ライアーだと思う人に投票します。",
+            "ライアーが選ばれたら、お題を当てるチャンスがあります。当てるか、別の人が選ばれたらライアーの勝ち。司会が「自分」のとき、ホストは参加せずお題とライアーが見えます。"
           ]
         },
         {
@@ -1080,6 +1096,14 @@
           ]
         },
         {
+          "heading": "谁是卧底",
+          "body": [
+            "房主点上方的 🎭，选择主持人（AI 或 我）和主题，然后点「开始」。发言席需要 3 人以上。",
+            "只有卧底不知道词语。轮到你时，用正在学的语言用一句话描述这个词，然后点「我说完了」。所有人说完后，投票选出你认为的卧底。",
+            "如果卧底被选中，可以猜一次词语。猜中了，或者选错了人，卧底获胜。主持人选「我」时，房主不参加，能看到词语和卧底。"
+          ]
+        },
+        {
           "heading": "如果你是房主",
           "body": [
             "点空座位可以选要请上来的人（先是申请的人，再是收听的人）；“上麦申请”里的人点“上麦”，在资料页可以“下麦”“移出”“转让房主”。点“关闭房间”可以选“转让房主并离开”、暂停或关闭。暂停的房间在列表上方点“重新开启”就能打开同一个房间。"
@@ -1459,6 +1483,14 @@
           "heading": "Khi không nói được",
           "body": [
             "Viết bằng ngôn ngữ của bạn ở ô dưới rồi chạm “Bằng ngôn ngữ đang học” để có câu. Gửi thành bình luận hoặc nói to từ chỗ ngồi nói."
+          ]
+        },
+        {
+          "heading": "Trò kẻ nói dối",
+          "body": [
+            "Chủ phòng nhấn 🎭 ở trên, chọn người dẫn (AI hoặc Tôi) và chủ đề rồi nhấn “Bắt đầu”. Cần từ 3 người trở lên ở ghế nói.",
+            "Chỉ kẻ nói dối không biết từ bí mật. Đến lượt bạn, hãy mô tả từ đó bằng một câu bằng ngôn ngữ bạn đang học rồi nhấn “Tôi nói xong”. Khi mọi người nói xong, hãy bỏ phiếu cho người bạn nghĩ là kẻ nói dối.",
+            "Nếu kẻ nói dối bị chọn, họ được đoán từ. Đoán đúng, hoặc chọn nhầm người, thì kẻ nói dối thắng. Khi người dẫn là “Tôi”, chủ phòng không chơi và thấy từ cùng kẻ nói dối."
           ]
         },
         {
@@ -1844,6 +1876,14 @@
           ]
         },
         {
+          "heading": "Jeu du menteur",
+          "body": [
+            "L'hôte touche 🎭 en haut, choisit l'animateur (IA ou Moi) et un thème, puis touche « Commencer ». Il faut 3 personnes ou plus aux places pour parler.",
+            "Seul le menteur ne connaît pas le mot secret. À votre tour, décrivez-le en une phrase dans la langue que vous apprenez, puis touchez « J'ai fini ». Quand tout le monde a parlé, votez pour celui que vous pensez être le menteur.",
+            "Si le menteur est désigné, il peut deviner le mot. S'il trouve, ou si on désigne la mauvaise personne, le menteur gagne. Avec « Moi » comme animateur, l'hôte ne joue pas et voit le mot et le menteur."
+          ]
+        },
+        {
           "heading": "Si vous êtes l’hôte",
           "body": [
             "Touchez une place libre pour choisir qui faire monter (les demandes d’abord, puis les auditeurs), ou « Faire monter » dans « Demandes de participation » ; depuis un profil, « Faire descendre », « Exclure » ou « Céder l’animation ». « Fermer le salon » propose « Céder et partir », la pause ou la fermeture. Un salon en pause revient avec « Rouvrir » au-dessus de la liste."
@@ -2223,6 +2263,14 @@
           "heading": "Quando le parole non vengono",
           "body": [
             "Scrivi nella tua lingua qui sotto e tocca “Nella lingua che studio” per avere una frase. Inviala come commento o dilla ad alta voce da un posto per parlare."
+          ]
+        },
+        {
+          "heading": "Gioco del bugiardo",
+          "body": [
+            "L'host tocca 🎭 in alto, sceglie il conduttore (IA o Io) e un tema, poi tocca «Inizia». Servono almeno 3 persone ai posti per parlare.",
+            "Solo il bugiardo non conosce la parola segreta. Al tuo turno descrivila con una frase nella lingua che stai imparando, poi tocca «Ho finito». Quando tutti hanno parlato, vota chi pensi sia il bugiardo.",
+            "Se viene scelto il bugiardo, può provare a indovinare la parola. Se indovina, o se viene scelta la persona sbagliata, vince il bugiardo. Con «Io» come conduttore, l'host non gioca e vede la parola e il bugiardo."
           ]
         },
         {
@@ -2608,6 +2656,14 @@
           ]
         },
         {
+          "heading": "Jogo do mentiroso",
+          "body": [
+            "O anfitrião toca em 🎭 no topo, escolhe o apresentador (IA ou Eu) e um tema e toca em “Começar”. Precisa de 3 ou mais pessoas nos lugares de fala.",
+            "Só o mentiroso não sabe a palavra secreta. Na sua vez, descreva a palavra em uma frase no idioma que você está aprendendo e toque em “Terminei”. Depois que todos falarem, vote em quem você acha que é o mentiroso.",
+            "Se o mentiroso for escolhido, ele pode tentar adivinhar a palavra. Se acertar, ou se escolherem a pessoa errada, o mentiroso vence. Com “Eu” como apresentador, o anfitrião não joga e vê a palavra e o mentiroso."
+          ]
+        },
+        {
           "heading": "Se for o anfitrião",
           "body": [
             "Toque num lugar vazio para escolher quem chamar (primeiro os pedidos, depois quem está ouvindo), ou “Chamar” em “Pedidos para participar”; no perfil, “Tirar”, “Remover” ou “Passar anfitrião”. “Fechar sala” deixa escolher “Passar e sair”, pausar ou fechar. Uma sala em pausa volta com “Reabrir” acima da lista."
@@ -2987,6 +3043,14 @@
           "heading": "Когда не хватает слов",
           "body": [
             "Напишите внизу на своём языке и нажмите «На изучаемом языке» — получится фраза. Отправьте её комментарием или скажите вслух с места для разговора."
+          ]
+        },
+        {
+          "heading": "Игра «Лжец»",
+          "body": [
+            "Хозяин комнаты нажимает 🎭 вверху, выбирает ведущего (ИИ или Я) и тему и нажимает «Начать». Нужно 3 или больше человек на местах для разговора.",
+            "Только лжец не знает загаданного слова. В свой ход опишите его одной фразой на языке, который изучаете, и нажмите «Я всё сказал». Когда все выскажутся, проголосуйте за того, кого считаете лжецом.",
+            "Если выбрали лжеца, он может угадать слово. Если угадает или выберут не того, побеждает лжец. Когда ведущий «Я», хозяин комнаты не играет и видит слово и лжеца."
           ]
         },
         {
@@ -3372,6 +3436,14 @@
           ]
         },
         {
+          "heading": "Permainan pembohong",
+          "body": [
+            "Tuan rumah mengetuk 🎭 di atas, memilih pembawa acara (AI atau Saya) dan topik, lalu mengetuk “Mulai”. Perlu 3 orang atau lebih di kursi bicara.",
+            "Hanya pembohong yang tidak tahu kata rahasia. Saat giliranmu, jelaskan kata itu dalam satu kalimat dengan bahasa yang kamu pelajari, lalu ketuk “Sudah selesai”. Setelah semua bicara, pilih orang yang kamu kira pembohong.",
+            "Jika pembohong terpilih, dia boleh menebak katanya. Kalau tebakannya benar, atau orang yang salah terpilih, pembohong menang. Jika pembawa acara “Saya”, tuan rumah tidak ikut bermain dan bisa melihat kata serta pembohongnya."
+          ]
+        },
+        {
           "heading": "Kalau kamu host",
           "body": [
             "Ketuk kursi kosong untuk memilih siapa yang dinaikkan (permintaan dulu, lalu pendengar), atau “Naikkan” di “Permintaan bergabung”; dari profil, “Turunkan”, “Keluarkan”, atau “Jadikan host”. “Tutup ruang” memberi pilihan “Serahkan lalu keluar”, jeda, atau tutup. Ruang yang dijeda dibuka lagi dengan “Buka lagi” di atas daftar."
@@ -3751,6 +3823,14 @@
           "heading": "عندما لا تسعفك الكلمات",
           "body": [
             "اكتب بلغتك في الخانة بالأسفل واضغط «باللغة التي أتعلمها» لتحصل على جملة. أرسلها تعليقًا أو قلها بصوت عالٍ من مقعد التحدث."
+          ]
+        },
+        {
+          "heading": "لعبة الكاذب",
+          "body": [
+            "يضغط مضيف الغرفة 🎭 في الأعلى، ويختار المقدّم (الذكاء الاصطناعي أو أنا) والموضوع، ثم يضغط «ابدأ». يلزم 3 أشخاص أو أكثر في مقاعد التحدث.",
+            "الكاذب وحده لا يعرف الكلمة السرية. عندما يأتي دورك، صِف الكلمة بجملة واحدة باللغة التي تتعلمها ثم اضغط «انتهيت». بعد أن يتكلم الجميع، صوّت لمن تظن أنه الكاذب.",
+            "إذا اختير الكاذب، يمكنه أن يخمّن الكلمة. إذا أصاب، أو اختير شخص آخر، يفوز الكاذب. عندما يكون المقدّم «أنا»، لا يلعب المضيف ويرى الكلمة والكاذب."
           ]
         },
         {
@@ -4136,6 +4216,14 @@
           ]
         },
         {
+          "heading": "เกมคนโกหก",
+          "body": [
+            "เจ้าของห้องแตะ 🎭 ด้านบน เลือกพิธีกร (AI หรือ ฉัน) และหัวข้อ แล้วแตะ “เริ่ม” ต้องมีคนในที่นั่งพูด 3 คนขึ้นไป",
+            "มีแค่คนโกหกที่ไม่รู้คำลับ เมื่อถึงตาคุณ ให้อธิบายคำนั้นหนึ่งประโยคด้วยภาษาที่กำลังเรียน แล้วแตะ “พูดเสร็จแล้ว” เมื่อทุกคนพูดครบ ให้โหวตคนที่คิดว่าเป็นคนโกหก",
+            "ถ้าคนโกหกถูกเลือก เขาทายคำได้หนึ่งครั้ง ถ้าทายถูก หรือเลือกผิดคน คนโกหกชนะ ถ้าพิธีกรเป็น “ฉัน” เจ้าของห้องจะไม่ได้เล่นและเห็นคำกับคนโกหก"
+          ]
+        },
+        {
           "heading": "ถ้าคุณเป็นโฮสต์",
           "body": [
             "แตะที่นั่งว่างเพื่อเลือกคนที่จะเชิญขึ้น (คนที่ขอก่อน แล้วจึงผู้ฟัง) หรือ “เชิญขึ้น” ใน “คำขอร่วมพูด” ในโปรไฟล์มี “เชิญลง” “เชิญออก” และ “ให้เป็นโฮสต์” “ปิดห้อง” ให้เลือก “ส่งต่อโฮสต์แล้วออก” พักห้อง หรือปิด ห้องที่พักไว้เปิดได้อีกด้วย “เปิดอีกครั้ง” เหนือรายการ"
@@ -4515,6 +4603,14 @@
           "heading": "जब शब्द न सूझें",
           "body": [
             "नीचे अपनी भाषा में लिखें और “सीख रही भाषा में” दबाएँ, वाक्य बन जाएगा। उसे कमेंट में भेजें या बोलने वाली सीट से बोलकर देखें।"
+          ]
+        },
+        {
+          "heading": "झूठा कौन खेल",
+          "body": [
+            "रूम का होस्ट ऊपर 🎭 दबाता है, संचालक (AI या मैं) और विषय चुनता है और “शुरू करें” दबाता है। बोलने की सीटों पर 3 या ज़्यादा लोग चाहिए।",
+            "सिर्फ़ झूठे को गुप्त शब्द नहीं पता। अपनी बारी पर, जो भाषा सीख रहे हैं उसमें एक वाक्य में शब्द बताइए, फिर “मैंने कह दिया” दबाइए। सबके बोलने के बाद, जिसे आप झूठा समझते हैं उसे वोट दीजिए।",
+            "अगर झूठा चुना जाता है, तो वह शब्द का अनुमान लगा सकता है। सही बताए, या गलत व्यक्ति चुना जाए, तो झूठा जीतता है। संचालक “मैं” हो तो होस्ट नहीं खेलता और शब्द व झूठे को देखता है।"
           ]
         },
         {

@@ -463,6 +463,22 @@ export async function reopenRoom(input: {
   return meta;
 }
 
+/** 지금 하는 게임 판을 방 정보에 적거나(시작) 지운다(끝). 방 물음은 이 값이 있을 때만 판을 읽는다. */
+export async function setRoomGame(id: string, gameId: string | null): Promise<RoomMeta | null> {
+  const meta = await readMeta(id);
+  if (!meta) return null;
+  const { game: _old, ...rest } = meta;
+  void _old;
+  const next: RoomMeta = gameId ? { ...rest, game: gameId } : rest;
+  await kvSetJson(metaKey(id), next, ROOM_TTL_SECONDS);
+  return next;
+}
+
+/** 지금 방에 있는 사람들(게임 참가자 고르기). */
+export async function roomMembers(id: string): Promise<RoomMember[]> {
+  return readMembers(id);
+}
+
 /** 비공개 방(단체방 통화)에 나중에 들어온 단체방 사람도 들어올 수 있게. */
 export async function allowInRoom(id: string, accountId: string): Promise<RoomMeta | null> {
   const meta = await readMeta(id);

@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-23a";
+export const GUIDE_VERSION = "2026-10-23b";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -57,6 +57,7 @@ export const GUIDE_SECTION_IDS: Record<GuideTabId, string[]> = {
     "room.layouts",
     "room.quote",
     "room.stuck",
+    "room.game",
     "room.host",
     "people.find",
     "people.invite",
@@ -84,7 +85,7 @@ export const GUIDE_CHAPTERS: GuideChapterSpec[] = [
   { id: "messages", title: "{ui:homeTabTalk}", go: "talk", sections: ["talk.list", "messages.dm", "messages.groups"] },
   { id: "video", title: "{ui:homeTabVideo}", go: "video", sections: GUIDE_SECTION_IDS.video },
   { id: "people", title: "{ui:homeTabPeople}", go: "people", sections: ["people.find", "people.invite", "people.rewards", "people.board"] },
-  { id: "rooms", title: "{ui:homeTabRooms}", go: "rooms", sections: ["room.find", "room.layouts", "room.quote", "room.stuck", "room.host"] },
+  { id: "rooms", title: "{ui:homeTabRooms}", go: "rooms", sections: ["room.find", "room.layouts", "room.quote", "room.stuck", "room.game", "room.host"] },
   { id: "my", title: "{ui:homeTabProfile}", go: "map", sections: GUIDE_SECTION_IDS.map.filter((id) => id !== "my.notes") },
   { id: "notes", title: "{ui:notesTitle}", go: "notes", sections: ["my.notes", ...GUIDE_SECTION_IDS.vocab] },
 ];
@@ -430,6 +431,14 @@ export const GUIDE_KO: Guide = {
         "heading": "말이 막힐 때",
         "body": [
           "아래 칸에 편한 말로 쓰고 ‘학습 언어로’를 누르면 문장을 만들어 줘요. 그대로 댓글로 보내거나, 말하기 자리에서 소리 내어 말해 보세요."
+        ]
+      },
+      {
+        "heading": "라이어 게임",
+        "body": [
+          "방장이 위의 🎭을 눌러 사회자(AI·나)와 주제를 고르고 ‘시작’. 말하기 자리에 3명 이상 있어야 해요.",
+          "라이어만 제시어를 몰라요. 내 차례가 오면 배우는 언어로 제시어를 한 문장 설명하고 ‘다 말했어요’. 다 돌면 라이어라고 생각하는 사람에게 투표해요.",
+          "라이어가 뽑히면 제시어를 맞혀 볼 수 있어요. 맞히거나 엉뚱한 사람이 뽑히면 라이어 승. 사회자가 ‘나’면 방장은 참가하지 않고 제시어와 라이어를 봐요."
         ]
       },
       {
@@ -813,6 +822,14 @@ export const GUIDE_EN: Guide = {
         "heading": "When the words won’t come",
         "body": [
           "Write in your own language in the box below and tap “In my target language” to get a sentence. Send it as a comment, or say it out loud from a talking seat."
+        ]
+      },
+      {
+        "heading": "Liar game",
+        "body": [
+          "The host taps 🎭 at the top, picks a host (AI or Me) and a topic, and taps “Start”. You need 3 or more people in talking seats.",
+          "Only the liar doesn't know the secret word. On your turn, describe it in one sentence in the language you're learning, then tap “I'm done”. After everyone has spoken, vote for who you think the liar is.",
+          "If the liar is picked, they can guess the word. If they get it, or the wrong person is picked, the liar wins. With “Me” as host, the room host doesn't play and sees the word and the liar."
         ]
       },
       {

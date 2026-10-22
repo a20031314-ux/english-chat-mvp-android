@@ -19,6 +19,7 @@ import {
   transcribeUtterance,
   fixMyLine,
   verifyMyLine,
+  roomGame,
   type FixTrust,
   type RoomFixResult,
 } from "@/lib/rooms/client";
@@ -49,6 +50,8 @@ import { BodyLayer } from "@/components/FullScreenLayer";
 import { Composer, Face, Lines, ProfileSheet, languagePair, type RoomLineFix } from "./RoomParts";
 import { useInbox } from "./RoomDm";
 import { VideoStage } from "./VideoStage";
+import { GamePanel, GameStartSheet, type GameStart } from "./RoomGame";
+import type { LiarView } from "@/lib/rooms/liarGame";
 import { FrameGrabber, randomFrame } from "@/lib/random/client";
 import { RANDOM_FRAME_EVERY_MS } from "@/lib/random/protocol";
 import { CALL_LAYOUT_LINES, ROOM_LAYOUTS, pendingNotes, readRoomLayout, saveRoomLayout, type RoomLayout, type RoomNote } from "@/lib/rooms/layout";
@@ -124,7 +127,6 @@ export function RoomView({
   useEffect(() => {
     linesRef.current = lines;
   }, [lines]);
-  // 💡 힌트(본인만): 내 줄 번호 → 배우는 언어 문장. 화면에만 두고 저장하지 않는다.
 
   const [role, setRole] = useState<RoomRole>("listener");
   const [hand, setHand] = useState(false);
@@ -240,6 +242,13 @@ export function RoomView({
   const [leaving, setLeaving] = useState<"" | "choose" | "pick">("");
   // 방장이 빈자리를 눌렀을 때 올릴 사람 고르기(참여 요청한 사람 먼저, 그다음 듣는 사람).
   const [seatPick, setSeatPick] = useState(false);
+  // 🎭 라이어 게임(2026-10-23): 판은 방 물음이 같이 돌려준다. 닫기(×)는 이 기기에서 끝난 판만 접는다.
+  const [game, setGame] = useState<LiarView | null>(null);
+  const [gameSheet, setGameSheet] = useState(false);
+  const [gameBusy, setGameBusy] = useState(false);
+  const [gameError, setGameError] = useState("");
+  const [gameHidden, setGameHidden] = useState("");
+  const lastStartRef = useRef<GameStart | null>(null);
   // 방장이 다시 들어오면 서버가 방장 자리를 새 peerId로 옮긴다 — 버튼 이름(방 닫기)을 맞추려고 들어갈 때 받은 값으로.
   // 집은 남의 줄 — 댓글창 위에 인용으로 붙는다(묻기면 학습 언어 질문이 미리 채워짐).
   const [quoting, setQuoting] = useState<{ line: RoomLine; ask: boolean; focus?: string } | null>(null);
@@ -465,7 +474,7 @@ export function RoomView({
         settleUtterance(uid);
       }
     },
-    [addMine, peerId, room.id, room.languages, room.free, speakerLanguages, targetLanguage, locale, settleUtterance],
+    [addMine, peerId, room.id, room.languages, room.free, speakerLanguages, targetLanguage, settleUtterance],
   );
 
   const startMic = useCallback(async (): Promise<boolean> => {
@@ -618,6 +627,7 @@ export function RoomView({
         // 💬 채팅만이면 아무와도 소리를 잇지 않고, 다른 사람의 채팅만 사람과도 잇지 않는다.
         mesh.sync(textOnlyRef.current ? [] : live.filter((member) => !member.textOnly).map((member) => member.peerId));
         for (const signal of result.signals) if (!textOnlyRef.current) await mesh.handle(signal);
+        setGame(result.game ?? null);
         if (result.lines.length) {
           sinceRef.current = Math.max(sinceRef.current, ...result.lines.map((line) => line.seq));
           setLines((have) => mergeLines(have, result.lines));
@@ -805,6 +815,39 @@ export function RoomView({
       setNotice("error");
     }
   };
+  const gameErrorText = (error: unknown) =>
+    error instanceof RoomApiError && error.code === "NOT_ENOUGH"
+      ? t.gameNeedPlayers.replace("{n}", "3")
+      : error instanceof RoomApiError && error.code === "GAME_LIMIT"
+        ? t.gameLimit
+        : t.gameFailed;
+  const startGame = async (start: GameStart) => {
+    setGameBusy(true);
+    setGameError("");
+    try {
+      const view = await roomGame({ action: "start", roomId: room.id, peerId, ...start });
+      lastStartRef.current = start;
+      setGame(view);
+      setGameSheet(false);
+    } catch (error) {
+      setGameError(gameErrorText(error));
+      setGameSheet(true);
+    } finally {
+      setGameBusy(false);
+    }
+  };
+  const gameStep = async (input: { action: "next" | "end" } | { action: "vote"; target: string } | { action: "guess"; text: string }) => {
+    setGameBusy(true);
+    try {
+      setGame(await roomGame({ ...input, roomId: room.id, peerId }));
+    } catch {
+      // 판이 그새 넘어갔으면 다음 방 물음이 지금 판을 가져온다.
+    } finally {
+      setGameBusy(false);
+    }
+  };
+  const canGame = !room.video && !room.random;
+  const shownGame = game && !(game.phase === "done" && gameHidden === game.id) ? game : null;
   const memberAccounts = members.map((member) => member.accountId).filter((id): id is string => Boolean(id));
   const notes = pendingNotes(inbox.threads, memberAccounts, seenNotes);
   const isSpeaking = (member: RoomMember) =>
@@ -891,6 +934,20 @@ export function RoomView({
                 👥
               </button>
             ) : null}
+            {isHostNow && canGame ? (
+              <button
+                type="button"
+                onClick={() => {
+                  setGameError("");
+                  setGameSheet(true);
+                }}
+                aria-label={t.gameOpen}
+                title={t.gameOpen}
+                className="rounded-lg border border-white/20 px-2.5 py-1.5 text-sm text-slate-200"
+              >
+                🎭
+              </button>
+            ) : null}
             {onMinimize ? (
               <button
                 type="button"
@@ -960,6 +1017,11 @@ export function RoomView({
                     {member.muted ? (
                       <span className="absolute -bottom-0.5 -end-0.5 rounded-full bg-black/80 px-1 text-[11px]" aria-hidden>
                         🔇
+                      </span>
+                    ) : null}
+                    {shownGame?.current === member.peerId ? (
+                      <span className="absolute -top-1 -start-1 rounded-full bg-emerald-400 px-1 text-caption" title={t.gameCurrent}>
+                        🎤
                       </span>
                     ) : null}
                     {member.peerId !== peerId && peerStates[member.peerId] === "failed" ? (
@@ -1058,7 +1120,26 @@ export function RoomView({
             </button>
           ))}
         </div>
+        {shownGame && canGame ? (
+          <GamePanel
+            t={t}
+            game={shownGame}
+            selfId={peerId}
+            isHost={isHostNow}
+            locale={locale}
+            targetLanguage={targetLanguage}
+            offsetMs={offsetRef.current}
+            busy={gameBusy}
+            onNext={() => void gameStep({ action: "next" })}
+            onVote={(target) => void gameStep({ action: "vote", target })}
+            onGuess={(text) => void gameStep({ action: "guess", text })}
+            onAgain={() => (lastStartRef.current ? void startGame(lastStartRef.current) : setGameSheet(true))}
+            onEnd={() => void gameStep({ action: "end" })}
+            onClose={() => setGameHidden(shownGame.id)}
+          />
+        ) : null}
       </header>
+      {gameSheet ? <GameStartSheet t={t} busy={gameBusy} error={gameError} onStart={(start) => void startGame(start)} onClose={() => setGameSheet(false)} /> : null}
 
       {notice ? (
         <button

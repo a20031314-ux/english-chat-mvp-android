@@ -42,6 +42,7 @@ export const TASKS = {
   chat: { tier: "basic", openai: chatDefault, about: "AI 채팅 한 턴(교정 + 답)·첫 인사·다시 읽기" },
   howToSay: { tier: "basic", openai: chatDefault, about: "편한 말 → 학습 언어 표현 카드" },
   roomFix: { tier: "basic", openai: chatDefault, about: "말하는 방 내 줄 교정(믿을 만하게 받아쓴 줄만)" },
+  roomGame: { tier: "basic", openai: chatDefault, about: "말하는 방 게임(라이어 게임 제시어 고르기·답 판정)" },
   translate: { tier: "basic", openai: chatDefault, about: "줄 번역" },
   vocab: { tier: "basic", openai: chatDefault, about: "단어 뜻·단어장" },
   analysis: { tier: "basic", openai: chatDefault, about: "문장분석·표현 단위·학습 구간" },

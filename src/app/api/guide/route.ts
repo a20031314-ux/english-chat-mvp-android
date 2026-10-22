@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
-import { GUIDE_EN, GUIDE_KO, GUIDE_VERSION, guideChapters, type Guide } from "@/lib/guide/content";
+import { GUIDE_EN, GUIDE_KO, GUIDE_SECTION_IDS, GUIDE_VERSION, guideChapters, type Guide } from "@/lib/guide/content";
 import translations from "@/lib/guide/translations.json";
 import beforeMy from "@/lib/guide/before-my.json";
 import videoBefore267 from "@/lib/guide/videoBefore267.json";
@@ -26,7 +26,13 @@ export async function OPTIONS(request: NextRequest) {
 export async function GET(request: NextRequest) {
   const asked = request.nextUrl.searchParams.get("lang")?.trim().toLowerCase() ?? "";
   const translated = (translations as Partial<Record<string, Guide>>)[asked];
-  const current = asked === "ko" ? GUIDE_KO : asked === "en" ? GUIDE_EN : (translated ?? GUIDE_EN);
+  const full = asked === "ko" ? GUIDE_KO : asked === "en" ? GUIDE_EN : (translated ?? GUIDE_EN);
+  // 라이어 게임 칸(room.game, 2026-10-23)은 게임이 있는 빌드(`game=1`)만. 옛 빌드는 칸 순서로 칸 이름을 붙이므로(GUIDE_SECTION_IDS)
+  // 그 칸을 빼서 돌려준다 — 넣은 채로 주면 옛 앱에서 '방장이라면' 자리에 게임 글이 보인다.
+  const withGame = request.nextUrl.searchParams.get("game") === "1";
+  const gameAt = GUIDE_SECTION_IDS.rooms.indexOf("room.game");
+  const current: Guide =
+    withGame || gameAt < 0 ? full : { ...full, rooms: { ...full.rooms, sections: full.rooms.sections.filter((_, index) => index !== gameAt) } };
   const language = asked === "ko" || asked === "en" || translated ? asked : "en";
   // 2.68 이하는 탭이 "사람·말하는 방"이고 단체방·자유 대화·참여 방식이 없다: `rooms=269`를
   // 보내지 않으면 그 빌드가 보던 말하는 방 안내(스냅숏)를 준다.
@@ -64,6 +70,9 @@ export async function GET(request: NextRequest) {
   }
   // `chapters=1`(하단 탭 대화·영상·사람·Room·My 빌드부터, 2026-10-20): 같은 글을 기능별 묶음으로도.
   // 옛 빌드는 묻지 않으니 `tabs`만 받는다.
-  const chapters = request.nextUrl.searchParams.get("chapters") === "1" ? guideChapters(current) : undefined;
+  const chapters =
+    request.nextUrl.searchParams.get("chapters") === "1"
+      ? guideChapters(full).map((chapter) => (withGame ? chapter : { ...chapter, sections: chapter.sections.filter((section) => section.id !== "room.game") }))
+      : undefined;
   return jsonWithCors(request, { version: GUIDE_VERSION, language, tabs, ...(chapters ? { chapters } : {}) });
 }

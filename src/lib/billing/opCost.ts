@@ -114,6 +114,9 @@ export const OP_COST: Record<string, OpCost> = {
   roomFix: estimated("roomFix", { input: 900, output: 120 }),
   // 두 번째 받아쓰기는 확신이 어중간한 조각만(조각 하나 몇 초).
   roomFixListen: listen("second"),
+  // 라이어 게임: 제시어(주제·언어 최대 6개 JSON), 답 판정(예/아니오). 2026-10-23 어림.
+  roomGameWord: estimated("roomGame", { input: 450, output: 160 }),
+  roomGameJudge: estimated("roomGame", { input: 220, output: 20 }),
   roleplayCorrect: llm("roleplayTutor"),
   roleplayTurn: { kind: "llm", task: "roleplayTutor", tokens: { input: ROLEPLAY_TURN.input, output: ROLEPLAY_TURN.output }, basis: "measured" },
   roleplayContext: llm("roleplayContext"),

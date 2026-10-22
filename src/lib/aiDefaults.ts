@@ -14,6 +14,7 @@ export const OPENAI_TEXT_DEFAULTS = {
   chat: "gpt-4o-mini",
   howToSay: "gpt-4o-mini",
   roomFix: "gpt-4o-mini",
+  roomGame: "gpt-4o-mini",
   translate: "gpt-4o-mini",
   vocab: "gpt-4o-mini",
   analysis: "gpt-4o-mini",
@@ -52,6 +53,8 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   chat: HAIKU,
   howToSay: HAIKU,
   roomFix: HAIKU,
+  // 방 게임(라이어 게임 제시어·답 판정, 2026-10-23): 한 판에 한두 번, 짧은 JSON.
+  roomGame: HAIKU,
   chatVerify: SONNET,
   // 2026-10-22 사용자 "나머지 기능도 다 옮겨줘" — 기본은 Haiku, 드물고 결과가 오래 남는 것만 Sonnet(사용자 원칙 2026-10-21).
   // 표현 묻기(ask)·학습자 읽기(learnerRead)는 high 등급이지만 자주 불려(묻기 하루 30번, 읽기는 채팅마다) Haiku.

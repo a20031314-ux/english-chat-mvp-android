@@ -111,6 +111,9 @@ export const MODEL_CALLS_PER_REQUEST = {
   roomFix: 1,
   // 그 교정 전에, 확신이 어중간한 조각만 다른 받아쓰기 모델로 한 번 더(두 번째 의견, rooms/agreement.ts).
   roomFixListen: 1,
+  // 방 라이어 게임(2026-10-23): 한 판 시작에 제시어 고르기 한 번, 라이어가 답했는데 글자로 안 맞으면 판정 한 번.
+  roomGameWord: 1,
+  roomGameJudge: 1,
   // A correction the scenario did not have written. Rarer than listening by
   // design — most misses at a turn are the same miss and were recorded — so a
   // count that climbs towards the listen count means the scripts are missing
