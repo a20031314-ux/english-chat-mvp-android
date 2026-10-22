@@ -115,8 +115,28 @@ export function withScriptTexts(view: ScriptView, texts: string[]): ScriptView |
   };
 }
 
+/** 앱 언어별로 글에 나와야 할 문자(라틴 문자 앱 언어는 검사하지 않음). */
+const UI_SCRIPT: Record<string, RegExp> = {
+  ar: /[\u0600-\u06FF]/, th: /[\u0E00-\u0E7F]/, hi: /[\u0900-\u097F]/, ru: /[\u0400-\u04FF]/,
+  ja: /[\u3040-\u30FF\u4E00-\u9FFF]/, zh: /[\u4E00-\u9FFF]/, ko: /[\uAC00-\uD7A3]/,
+  vi: /[ăâđêôơưạảấầẩẫậắằẳẵặẹẻẽếềểễệỉịọỏốồổỗộớờởỡợụủứừửữựỳỵỷỹ]/i,
+};
+
+/**
+ * 옮긴 글이 정말 그 앱 언어인가. 학습 언어 이야기를 옮기다 보니 모델이 학습 언어로 옮긴 적이 있다
+ * (2026-10-22, 스페인어 학습·아랍어 앱이 전부 스페인어로 저장됨). 글자가 있는 줄의 절반 넘게 그 문자여야 한다.
+ */
+export function looksLike(ui: string, texts: string[]): boolean {
+  const pattern = UI_SCRIPT[ui];
+  if (!pattern) return true;
+  const lettered = texts.filter((text) => /\p{L}/u.test(text));
+  if (!lettered.length) return true;
+  const hits = lettered.filter((text) => pattern.test(text)).length;
+  return hits / lettered.length >= (ui === "vi" ? 0.4 : 0.5);
+}
+
 /** 영어 글 묶음을 앱 언어로(저장해 두고 다시 씀). 실패하면 null. */
-async function translated(source: string[], uiName: string, cacheKey: string, onTranslate?: () => void): Promise<string[] | null> {
+async function translated(source: string[], ui: string, uiName: string, cacheKey: string, onTranslate?: () => void): Promise<string[] | null> {
   try {
     const kept = await kvGetJson<string[]>(cacheKey);
     if (Array.isArray(kept) && kept.length === source.length) return kept;
@@ -137,7 +157,7 @@ async function translated(source: string[], uiName: string, cacheKey: string, on
         messages: [
           {
             role: "system",
-            content: `Translate every string of the JSON array "texts" from English into ${uiName}, for a language-learning app screen. Keep the meaning plain and natural, the same length or shorter, and keep anything in quotes or in another script as it is. Return only {"texts": [...]} with exactly ${part.length} strings in the same order.`,
+            content: `Translate every string of the JSON array "texts" from English into ${uiName}. They are labels and glosses on a language-learning app screen read by a ${uiName} speaker, so every output string must be written in ${uiName} — never in the language being studied, even when a string is about that language. Keep the meaning plain and natural, the same length or shorter; leave words in quotes, grammar terms written in another language (like "ser" or "-ar"), and anything already in another script as they are. Return only {"texts": [...]} with exactly ${part.length} strings in the same order.`,
           },
           { role: "user", content: JSON.stringify({ texts: part }) },
         ],
@@ -145,6 +165,10 @@ async function translated(source: string[], uiName: string, cacheKey: string, on
       const parsed = JSON.parse(completion.choices[0]?.message?.content ?? "{}") as { texts?: unknown };
       const texts = Array.isArray(parsed.texts) ? parsed.texts.map((t) => (typeof t === "string" ? t.trim() : "")) : [];
       if (texts.length !== part.length || texts.some((t) => !t)) return null;
+      if (!looksLike(ui, texts)) {
+        console.error("[stage-copy] not in", ui, texts.slice(0, 2));
+        return null;
+      }
       out.push(...texts);
     }
     await kvSetJson(cacheKey, out, TTL_SECONDS).catch(() => undefined);
@@ -170,7 +194,8 @@ export async function stageViews(
   if (ui === "en" || ui === "ko" || ui === language) return viewsFrom(ladder.stages, language, ui);
   // 옮길 원문: 영어 학습이어도 뜻풀이(영어)를 남겨야 다른 앱 언어로 옮길 수 있다(2026-10-22, en·ja에서 뜻이 비고 영어로 떨어졌음).
   const english = viewsFrom(ladder.stages, language, "en", true);
-  const texts = await translated(textsOf(english), uiName, `stagecopy:v1:stages2:${language}:${ladder.version}:${ui}`, onTranslate);
+  // stages3: 2026-10-22 학습 언어로 잘못 옮겨 저장된 것(stages2)을 버림.
+  const texts = await translated(textsOf(english), ui, uiName, `stagecopy:v1:stages3:${language}:${ladder.version}:${ui}`, onTranslate);
   return (texts && withTexts(english, texts)) ?? english;
 }
 
@@ -180,6 +205,6 @@ export async function scriptView(language: string, ui: string, uiName: string, o
   if (!course) return null;
   if (ui === "en" || ui === "ko") return scriptViewFrom(course, ui);
   const english = scriptViewFrom(course, "en");
-  const texts = await translated(scriptTextsOf(english), uiName, `stagecopy:v1:script:${language}:${course.version}:${ui}`, onTranslate);
+  const texts = await translated(scriptTextsOf(english), ui, uiName, `stagecopy:v1:script2:${language}:${course.version}:${ui}`, onTranslate);
   return (texts && withScriptTexts(english, texts)) ?? english;
 }

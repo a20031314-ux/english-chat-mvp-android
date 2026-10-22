@@ -138,7 +138,7 @@ test("영어 학습·다른 앱 언어: 옮길 원문에 뜻풀이가 비지 않
 });
 
 import { scriptFor, scriptProgress } from "../scripts/index.ts";
-import { scriptTextsOf, scriptViewFrom, withScriptTexts } from "../../server/stageCopy.ts";
+import { looksLike, scriptTextsOf, scriptViewFrom, withScriptTexts } from "../../server/stageCopy.ts";
 
 for (const language of ALL) {
   test(`${language}: 글자·소리 기초 묶음`, () => {
@@ -173,4 +173,11 @@ test("글자 기초 진행과 옮긴 글 순서", () => {
   const back = withScriptTexts(view, texts.map((t) => `#${t}`));
   assert.equal(back!.groups[0]!.title, `#${view.groups[0]!.title}`);
   assert.equal(withScriptTexts(view, texts.slice(1)), null);
+});
+
+test("옮긴 글 검사: 아랍어 앱에 스페인어로 옮긴 글은 버린다", () => {
+  assert.equal(looksLike("ar", ["Pretérito de los verbos regulares", "¿Qué haces el sábado?"]), false);
+  assert.equal(looksLike("ar", ["الماضي للأفعال المنتظمة", "ماذا تفعل يوم السبت؟", "ser"]), true);
+  assert.equal(looksLike("th", ["สวัสดี", "ครับ"]), true);
+  assert.equal(looksLike("es", ["anything"]), true);
 });
