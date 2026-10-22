@@ -8,6 +8,7 @@ import roleplayBefore267 from "@/lib/guide/roleplayBefore267.json";
 import roomsBefore269 from "@/lib/guide/roomsBefore269.json";
 import roomsBefore270 from "@/lib/guide/roomsBefore270.json";
 import mapBefore269 from "@/lib/guide/mapBefore269.json";
+import chatBefore271 from "@/lib/guide/chatBefore271.json";
 
 export const runtime = "nodejs";
 
@@ -40,7 +41,11 @@ export async function GET(request: NextRequest) {
   // 노트(My 안)도 2.69부터: 그 전 빌드에는 노트 단계가 없는 My 안내(스냅숏).
   const oldMap =
     request.nextUrl.searchParams.get("rooms") !== "269" ? (mapBefore269 as Partial<Record<string, Guide["map"]>>)[language] : undefined;
-  const tabs = { ...current, ...(oldRooms ? { rooms: oldRooms } : {}), ...(oldMap ? { map: oldMap } : {}) };
+  // 고친 문장 눌러서 보기(칩, 2026-10-21)가 없는 2.68 이하 빌드(`rooms=269`를 안 보냄): 예전 채팅 안내(스냅숏, 그림 chat-correct).
+  // 2.70 빌드는 칩이 있어 새 글을 받는다.
+  const oldChat =
+    request.nextUrl.searchParams.get("rooms") !== "269" ? (chatBefore271 as Partial<Record<string, Guide["chat"]>>)[language] : undefined;
+  const tabs = { ...current, ...(oldRooms ? { rooms: oldRooms } : {}), ...(oldMap ? { map: oldMap } : {}), ...(oldChat ? { chat: oldChat } : {}) };
   // Builds before 2.67 still have the map screen, not My, and translate every
   // video line under its subtitle instead of behind the sentence bar: they
   // ask without `my=1` and get the map, chat and video pages they can see.

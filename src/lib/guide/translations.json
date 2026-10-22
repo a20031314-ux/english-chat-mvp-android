@@ -4,12 +4,12 @@
       "title": "Cómo usar Mi espacio",
       "sections": [
         {
-          "heading": "1. Empieza marcando",
+          "heading": "1. Empieza con una conversación",
           "body": [
-            "Marca en qué te falta y en qué quieres centrarte, y toca «{ui:mapDraw}». No hay nivel que elegir.",
-            "Puedes elegir varias."
+            "Lee «{ui:stageCheckTitle}» y responde «{ui:stageCan}», «{ui:stageAlmost}» o «{ui:stageHard}» para encontrar por dónde empezar. No se muestran niveles.",
+            "Abajo marca lo que te cuesta y en qué quieres centrarte, y pulsa «{ui:mapDraw}». El mapa se hace para la parte que elegiste (un minuto más o menos)."
           ],
-          "shot": "goal"
+          "shot": "stage-start"
         },
         {
           "heading": "2. Prueba esto",
@@ -85,9 +85,9 @@
           "heading": "Chatea en el idioma que aprendes",
           "body": [
             "Escribe en el idioma que estás aprendiendo y el tutor te responde como un amigo.",
-            "Si hay algún error, se marca en tu mensaje y justo debajo ves la frase corregida."
+            "Si hay algo que corregir, aparece «{ui:chatCorrectionChip}» bajo tu mensaje. Tócalo para ver la frase corregida, o cambia a «{ui:chatCorrectionViewAuto}» en el menú ⋮."
           ],
-          "shot": "chat-correct"
+          "shot": "chat-fix"
         },
         {
           "heading": "¿Te atascas? Usa tu idioma",
@@ -288,7 +288,8 @@
           "body": [
             "Encima de la lista, elige idiomas con “Todas”, “Mis idiomas” o “Buscar por idioma”. Toca una sala para entrar con una solicitud para unirte; el anfitrión te sube a un asiento para hablar. También puedes tocar un asiento libre para pedir unirte. Con “Solo escuchar” escuchas en silencio.",
             "Lo que dice cada uno queda en subtítulos. Toca una línea para traducirla teniendo en cuenta lo anterior.",
-            "Elige “Charla libre” al crear una sala y no se fija ningún idioma. Los subtítulos de cada persona salen en sus propios idiomas, y la sala aparece en “Buscar por idioma” con cualquier idioma."
+            "Elige “Charla libre” al crear una sala y no se fija ningún idioma. Los subtítulos de cada persona salen en sus propios idiomas, y la sala aparece en “Buscar por idioma” con cualquier idioma.",
+            "Una línea que se oyó mal termina con ?. Si lo que dijiste en el idioma que aprendes tiene algo que corregir, bajo tu línea aparece «✎ Hay algo que corregir», solo para ti. Nadie más lo ve."
           ],
           "shot": "r69-free"
         },
@@ -348,7 +349,8 @@
         {
           "heading": "Mensajes y llamadas",
           "body": [
-            "Tu primer mensaje llega como solicitud; cuando responda, se abre la conversación. Llama con 📞 encima de la conversación; los subtítulos de la llamada quedan guardados."
+            "Tu primer mensaje llega como solicitud; cuando responda, se abre la conversación. Llama con 📞 encima de la conversación; los subtítulos de la llamada quedan guardados.",
+            "En una llamada 1:1 puedes encender la cámara y hablar cara a cara (empieza apagada)."
           ]
         },
         {
@@ -386,12 +388,12 @@
       "title": "マイの使い方",
       "sections": [
         {
-          "heading": "1. チェックで始める",
+          "heading": "1. 会話で始める",
           "body": [
-            "足りないところと中心にしたいことを選んで「{ui:mapDraw}」。レベルは聞きません。",
-            "いくつ選んでも大丈夫です。"
+            "「{ui:stageCheckTitle}」の会話を見て「{ui:stageCan}」「{ui:stageAlmost}」「{ui:stageHard}」で答えると、始める場所が見つかります。レベル名は表示されません。",
+            "下のチェックで足りないところと中心にしたいことを選んで「{ui:mapDraw}」。選んだ範囲で地図を作ります（1分ほどかかります）。"
           ],
-          "shot": "goal"
+          "shot": "stage-start"
         },
         {
           "heading": "2. やってみよう",
@@ -467,9 +469,9 @@
           "heading": "学習言語でチャット",
           "body": [
             "学んでいる言語で書くと、チューターが友達のように返事をしてくれます。",
-            "間違いがあると自分のメッセージに印がつき、正しい文がすぐ下に表示されます。"
+            "直すところがあると、自分のメッセージの下に「{ui:chatCorrectionChip}」が出ます。タップすると直した文が見え、⋮ メニューで「{ui:chatCorrectionViewAuto}」に変えられます。"
           ],
-          "shot": "chat-correct"
+          "shot": "chat-fix"
         },
         {
           "heading": "詰まったら自分の言葉で",
@@ -670,7 +672,8 @@
           "body": [
             "一覧の上の「すべて」「自分の言語」「言語で探す」で言語の組み合わせを選びます。ルームをタップすると参加をリクエストした状態で入り、ホストが席に上げると話せます。空いている席を押してもリクエストできます。「聞くだけ」で静かに聞くこともできます。",
             "話した内容は人ごとに字幕で残ります。行をタップすると前の会話をふまえて翻訳します。",
-            "ルームを作るとき「フリートーク」を選ぶと言語を決めません。字幕は話す人ごとにその人の言語で書かれ、「言語で探す」ではどの言語でも出てきます。"
+            "ルームを作るとき「フリートーク」を選ぶと言語を決めません。字幕は話す人ごとにその人の言語で書かれ、「言語で探す」ではどの言語でも出てきます。",
+            "よく聞き取れなかった行の最後には ? がつきます。学習言語で話した自分の言葉に直すところがあると、自分の行の下に自分だけに「✎ 直すところがあります」が出ます。ほかの人には見えません。"
           ],
           "shot": "r69-free"
         },
@@ -730,7 +733,8 @@
         {
           "heading": "メッセージと通話",
           "body": [
-            "最初のメッセージはリクエストとして届き、返信があると会話が開きます。会話の上の📞で通話でき、通話の字幕は記録に残ります。"
+            "最初のメッセージはリクエストとして届き、返信があると会話が開きます。会話の上の📞で通話でき、通話の字幕は記録に残ります。",
+            "1対1の通話ではカメラをオンにして顔を見ながら話せます（最初はオフです）。"
           ]
         },
         {
@@ -768,12 +772,12 @@
       "title": "“我的”使用方法",
       "sections": [
         {
-          "heading": "1. 勾选开始",
+          "heading": "1. 从对话开始",
           "body": [
-            "勾选不足之处和想重点练的，然后点“{ui:mapDraw}”。不会问你的水平。",
-            "可以多选。"
+            "看“{ui:stageCheckTitle}”的对话，用“{ui:stageCan}”“{ui:stageAlmost}”“{ui:stageHard}”回答，就能找到起点。不会显示级别名称。",
+            "在下面勾选不足之处和想侧重的练习，然后点“{ui:mapDraw}”。会按你选的范围画出地图（大约一分钟）。"
           ],
-          "shot": "goal"
+          "shot": "stage-start"
         },
         {
           "heading": "2. 试试这个",
@@ -849,9 +853,9 @@
           "heading": "用目标语言聊天",
           "body": [
             "用你正在学习的语言输入内容，导师会像朋友一样回复你。",
-            "有错误会在你的消息中标出，下面会显示正确的句子。"
+            "有需要修改的地方时，你的消息下方会出现“{ui:chatCorrectionChip}”。点一下就能看到改好的句子，也可以在 ⋮ 菜单里改成“{ui:chatCorrectionViewAuto}”。"
           ],
-          "shot": "chat-correct"
+          "shot": "chat-fix"
         },
         {
           "heading": "卡住了就用自己的语言",
@@ -1052,7 +1056,8 @@
           "body": [
             "在列表上方用“全部”“我的语言”“按语言找”选择语言组合。点房间就会带着上麦申请进入，房主让你上麦后就能说话。点空座位也能申请。也可以“只听”。",
             "每个人说的话会变成字幕。点一行，会结合前面的对话翻译成你的语言。",
-            "建房时选“自由聊天”，就不限定语言。每个人的字幕用他自己的语言写出，“按语言找”时选任何语言都能看到。"
+            "建房时选“自由聊天”，就不限定语言。每个人的字幕用他自己的语言写出，“按语言找”时选任何语言都能看到。",
+            "没听清的那一行末尾会加上 ?。你用正在学的语言说的话如果有需要修改的地方，你那行下面会只对你显示“✎ 有需要修改的地方”。其他人看不到。"
           ],
           "shot": "r69-free"
         },
@@ -1112,7 +1117,8 @@
         {
           "heading": "消息和通话",
           "body": [
-            "第一条消息会作为请求发出，对方回复后对话就会打开。点对话上方的📞通话，通话字幕会作为记录保留。"
+            "第一条消息会作为请求发出，对方回复后对话就会打开。点对话上方的📞通话，通话字幕会作为记录保留。",
+            "一对一通话时可以打开摄像头面对面聊天（默认关闭）。"
           ]
         },
         {
@@ -1150,12 +1156,12 @@
       "title": "Cách dùng Của tôi",
       "sections": [
         {
-          "heading": "1. Bắt đầu bằng cách đánh dấu",
+          "heading": "1. Bắt đầu bằng hội thoại",
           "body": [
-            "Đánh dấu phần còn thiếu và điều muốn tập trung, rồi chạm “{ui:mapDraw}”. Không cần chọn trình độ.",
-            "Có thể chọn nhiều mục."
+            "Xem đoạn hội thoại “{ui:stageCheckTitle}” rồi trả lời “{ui:stageCan}”, “{ui:stageAlmost}” hoặc “{ui:stageHard}” để tìm chỗ bắt đầu. Không hiện tên cấp độ.",
+            "Ở dưới, chọn phần bạn còn yếu và điều muốn tập trung, rồi nhấn “{ui:mapDraw}”. Bản đồ được vẽ theo phần bạn chọn (khoảng một phút)."
           ],
-          "shot": "goal"
+          "shot": "stage-start"
         },
         {
           "heading": "2. Thử cái này",
@@ -1231,9 +1237,9 @@
           "heading": "Chat bằng ngôn ngữ bạn học",
           "body": [
             "Viết bằng ngôn ngữ bạn đang học, trợ lý sẽ trả lời như một người bạn.",
-            "Nếu có lỗi, phần sai sẽ được đánh dấu trong tin nhắn của bạn, và câu sửa sẽ hiển thị ngay bên dưới."
+            "Nếu có chỗ cần sửa, “{ui:chatCorrectionChip}” hiện dưới tin nhắn của bạn. Nhấn vào để xem câu đã sửa, hoặc chuyển sang “{ui:chatCorrectionViewAuto}” trong menu ⋮."
           ],
-          "shot": "chat-correct"
+          "shot": "chat-fix"
         },
         {
           "heading": "Bí thì dùng tiếng của bạn",
@@ -1434,7 +1440,8 @@
           "body": [
             "Phía trên danh sách, chọn cặp ngôn ngữ bằng “Tất cả”, “Ngôn ngữ của tôi” hoặc “Tìm theo ngôn ngữ”. Chạm vào phòng để vào kèm yêu cầu tham gia; chủ phòng mời lên ghế thì bạn nói được. Chạm ghế trống cũng gửi yêu cầu. “Chỉ nghe” để nghe yên lặng.",
             "Lời mỗi người hiện thành phụ đề. Chạm vào dòng để dịch, có xét cả phần trước.",
-            "Chọn “Trò chuyện tự do” khi tạo phòng thì không cố định ngôn ngữ. Phụ đề của mỗi người ghi bằng ngôn ngữ của chính họ, và phòng hiện ra trong “Tìm theo ngôn ngữ” với mọi ngôn ngữ."
+            "Chọn “Trò chuyện tự do” khi tạo phòng thì không cố định ngôn ngữ. Phụ đề của mỗi người ghi bằng ngôn ngữ của chính họ, và phòng hiện ra trong “Tìm theo ngôn ngữ” với mọi ngôn ngữ.",
+            "Dòng nghe không rõ sẽ có dấu ? ở cuối. Nếu điều bạn nói bằng ngôn ngữ đang học có chỗ cần sửa, dưới dòng của bạn sẽ hiện “✎ Có chỗ cần sửa” chỉ cho bạn. Người khác không thấy."
           ],
           "shot": "r69-free"
         },
@@ -1494,7 +1501,8 @@
         {
           "heading": "Tin nhắn và cuộc gọi",
           "body": [
-            "Tin nhắn đầu tiên được gửi dưới dạng lời mời; khi họ trả lời, cuộc trò chuyện sẽ mở. Gọi bằng 📞 phía trên cuộc trò chuyện; phụ đề cuộc gọi được lưu lại."
+            "Tin nhắn đầu tiên được gửi dưới dạng lời mời; khi họ trả lời, cuộc trò chuyện sẽ mở. Gọi bằng 📞 phía trên cuộc trò chuyện; phụ đề cuộc gọi được lưu lại.",
+            "Trong cuộc gọi 1:1, bạn có thể bật camera để nói chuyện mặt đối mặt (mặc định tắt)."
           ]
         },
         {
@@ -1532,12 +1540,12 @@
       "title": "Utiliser Moi",
       "sections": [
         {
-          "heading": "1. Commence par cocher",
+          "heading": "1. Commencer par une conversation",
           "body": [
-            "Coche ce qui te manque et ce sur quoi te concentrer, puis « {ui:mapDraw} ». Pas de niveau à choisir.",
-            "Vous pouvez en choisir plusieurs."
+            "Lis « {ui:stageCheckTitle} » et réponds « {ui:stageCan} », « {ui:stageAlmost} » ou « {ui:stageHard} » pour trouver par où commencer. Aucun niveau n'est affiché.",
+            "En dessous, coche ce qui te manque et ce sur quoi te concentrer, puis « {ui:mapDraw} ». La carte est faite pour la partie choisie (environ une minute)."
           ],
-          "shot": "goal"
+          "shot": "stage-start"
         },
         {
           "heading": "2. À essayer",
@@ -1613,9 +1621,9 @@
           "heading": "Discuter dans la langue apprise",
           "body": [
             "Écrivez dans la langue que vous apprenez, le tuteur répond comme un ami.",
-            "Si quelque chose ne va pas, c’est signalé dans votre message, avec la correction juste en dessous."
+            "S'il y a quelque chose à corriger, « {ui:chatCorrectionChip} » apparaît sous ton message. Touche-le pour voir la phrase corrigée, ou passe à « {ui:chatCorrectionViewAuto} » dans le menu ⋮."
           ],
-          "shot": "chat-correct"
+          "shot": "chat-fix"
         },
         {
           "heading": "Tu bloques ? Écris dans ta langue",
@@ -1816,7 +1824,8 @@
           "body": [
             "Au-dessus de la liste, choisissez les langues avec « Tous », « Mes langues » ou « Chercher par langue ». Touchez un salon pour entrer avec une demande de participation ; l’hôte vous fait monter à une place pour parler. Toucher une place libre envoie aussi la demande. « Juste écouter » permet d’écouter en silence.",
             "Les paroles de chacun s’affichent en sous-titres. Touchez une ligne pour la traduire en tenant compte de ce qui précède.",
-            "Choisissez « Discussion libre » en créant un salon : aucune langue n’est imposée. Les sous-titres de chacun sont écrits dans ses langues, et le salon apparaît dans « Chercher par langue » pour toute langue."
+            "Choisissez « Discussion libre » en créant un salon : aucune langue n’est imposée. Les sous-titres de chacun sont écrits dans ses langues, et le salon apparaît dans « Chercher par langue » pour toute langue.",
+            "Une ligne mal entendue se termine par ?. Si ce que tu as dit dans la langue que tu apprends a quelque chose à corriger, « ✎ Il y a quelque chose à corriger » apparaît sous ta ligne, pour toi seul. Les autres ne le voient pas."
           ],
           "shot": "r69-free"
         },
@@ -1876,7 +1885,8 @@
         {
           "heading": "Messages et appels",
           "body": [
-            "Votre premier message part comme une demande ; après sa réponse, la conversation s’ouvre. Appelez avec 📞 au-dessus de la conversation ; les sous-titres de l’appel restent en mémoire."
+            "Votre premier message part comme une demande ; après sa réponse, la conversation s’ouvre. Appelez avec 📞 au-dessus de la conversation ; les sous-titres de l’appel restent en mémoire.",
+            "Pendant un appel à deux, tu peux activer la caméra et parler face à face (elle est éteinte au départ)."
           ]
         },
         {
@@ -1914,12 +1924,12 @@
       "title": "Come usare Io",
       "sections": [
         {
-          "heading": "1. Inizia spuntando",
+          "heading": "1. Inizia da una conversazione",
           "body": [
-            "Spunta dove sei carente e su cosa concentrarti, poi «{ui:mapDraw}». Nessun livello da scegliere.",
-            "Puoi sceglierne più di uno."
+            "Leggi «{ui:stageCheckTitle}» e rispondi «{ui:stageCan}», «{ui:stageAlmost}» o «{ui:stageHard}» per trovare da dove partire. Non vengono mostrati livelli.",
+            "Sotto, spunta ciò che ti riesce difficile e su cosa vuoi concentrarti, poi «{ui:mapDraw}». La mappa viene creata per la parte scelta (circa un minuto)."
           ],
-          "shot": "goal"
+          "shot": "stage-start"
         },
         {
           "heading": "2. Prova questo",
@@ -1995,9 +2005,9 @@
           "heading": "Chatta nella lingua che stai imparando",
           "body": [
             "Scrivi nella lingua che vuoi imparare e il tutor ti risponde come farebbe un amico.",
-            "Se c’è qualcosa da correggere, viene segnalato nel tuo messaggio e subito sotto trovi la frase corretta."
+            "Se c'è qualcosa da correggere, sotto il tuo messaggio compare «{ui:chatCorrectionChip}». Toccalo per vedere la frase corretta, oppure passa a «{ui:chatCorrectionViewAuto}» nel menu ⋮."
           ],
-          "shot": "chat-correct"
+          "shot": "chat-fix"
         },
         {
           "heading": "Ti blocchi? Usa la tua lingua",
@@ -2198,7 +2208,8 @@
           "body": [
             "Sopra l’elenco, scegli le lingue con “Tutte”, “Le mie lingue” o “Cerca per lingua”. Tocca una stanza per entrare con una richiesta di partecipare; l’host ti fa salire a un posto per parlare. Anche toccare un posto libero invia la richiesta. Con “Ascolta soltanto” ascolti in silenzio.",
             "Quello che dice ognuno resta nei sottotitoli. Tocca una riga per tradurla tenendo conto di quanto detto prima.",
-            "Scegli “Chiacchiera libera” quando crei una stanza: nessuna lingua fissa. I sottotitoli di ognuno sono scritti nelle sue lingue, e la stanza compare in “Cerca per lingua” con qualsiasi lingua."
+            "Scegli “Chiacchiera libera” quando crei una stanza: nessuna lingua fissa. I sottotitoli di ognuno sono scritti nelle sue lingue, e la stanza compare in “Cerca per lingua” con qualsiasi lingua.",
+            "Una riga che si è sentita male finisce con ?. Se quello che hai detto nella lingua che studi ha qualcosa da correggere, sotto la tua riga compare «✎ C'è qualcosa da correggere», solo per te. Gli altri non lo vedono."
           ],
           "shot": "r69-free"
         },
@@ -2258,7 +2269,8 @@
         {
           "heading": "Messaggi e chiamate",
           "body": [
-            "Il primo messaggio arriva come richiesta; quando risponde, la conversazione si apre. Chiama con 📞 sopra la conversazione; i sottotitoli della chiamata restano salvati."
+            "Il primo messaggio arriva come richiesta; quando risponde, la conversazione si apre. Chiama con 📞 sopra la conversazione; i sottotitoli della chiamata restano salvati.",
+            "In una chiamata 1:1 puoi accendere la fotocamera e parlare faccia a faccia (all'inizio è spenta)."
           ]
         },
         {
@@ -2296,12 +2308,12 @@
       "title": "Como usar Meu espaço",
       "sections": [
         {
-          "heading": "1. Comece marcando",
+          "heading": "1. Comece com uma conversa",
           "body": [
-            "Marque onde falta algo e no que focar, depois toque “{ui:mapDraw}”. Não precisa escolher nível.",
-            "Pode escolher mais de um."
+            "Leia “{ui:stageCheckTitle}” e responda “{ui:stageCan}”, “{ui:stageAlmost}” ou “{ui:stageHard}” para achar por onde começar. Nenhum nível é mostrado.",
+            "Abaixo, marque o que é difícil para você e o que quer focar, depois toque em “{ui:mapDraw}”. O mapa é feito para a parte escolhida (cerca de um minuto)."
           ],
-          "shot": "goal"
+          "shot": "stage-start"
         },
         {
           "heading": "2. Experimente isto",
@@ -2377,9 +2389,9 @@
           "heading": "Converse no idioma que está aprendendo",
           "body": [
             "Escreva na língua que está aprendendo e o tutor responde como um amigo.",
-            "Se algo estiver errado, aparece marcado na sua mensagem, com a frase corrigida logo abaixo."
+            "Se houver algo para corrigir, “{ui:chatCorrectionChip}” aparece abaixo da sua mensagem. Toque para ver a frase corrigida, ou mude para “{ui:chatCorrectionViewAuto}” no menu ⋮."
           ],
-          "shot": "chat-correct"
+          "shot": "chat-fix"
         },
         {
           "heading": "Travou? Use seu idioma",
@@ -2580,7 +2592,8 @@
           "body": [
             "Acima da lista, escolha as línguas com “Todas”, “As minhas línguas” ou “Procurar por língua”. Toque numa sala para entrar com um pedido para participar; o anfitrião chama-o para um lugar para falar. Tocar num lugar vazio também envia o pedido. “Só ouvir” deixa-o ouvir em silêncio.",
             "O que cada um diz fica em legendas. Toque numa linha para a traduzir tendo em conta o que veio antes.",
-            "Escolha “Conversa livre” ao criar uma sala e nenhuma língua fica fixa. As legendas de cada pessoa saem nas suas próprias línguas, e a sala aparece em “Procurar por língua” com qualquer língua."
+            "Escolha “Conversa livre” ao criar uma sala e nenhuma língua fica fixa. As legendas de cada pessoa saem nas suas próprias línguas, e a sala aparece em “Procurar por língua” com qualquer língua.",
+            "Uma linha que não deu para ouvir bem termina com ?. Se o que você disse no idioma que aprende tiver algo para corrigir, aparece “✎ Há algo para corrigir” abaixo da sua linha, só para você. Ninguém mais vê."
           ],
           "shot": "r69-free"
         },
@@ -2640,7 +2653,8 @@
         {
           "heading": "Mensagens e chamadas",
           "body": [
-            "A primeira mensagem vai como pedido; depois da resposta, a conversa abre. Ligue com 📞 acima da conversa; as legendas da chamada ficam guardadas."
+            "A primeira mensagem vai como pedido; depois da resposta, a conversa abre. Ligue com 📞 acima da conversa; as legendas da chamada ficam guardadas.",
+            "Em uma chamada 1:1 você pode ligar a câmera e conversar cara a cara (começa desligada)."
           ]
         },
         {
@@ -2678,12 +2692,12 @@
       "title": "Как пользоваться разделом «Моё»",
       "sections": [
         {
-          "heading": "1. Начните с отметок",
+          "heading": "1. Начните с разговора",
           "body": [
-            "Отметьте, чего не хватает и на чём сосредоточиться, затем «{ui:mapDraw}». Уровень выбирать не нужно.",
-            "Можно выбрать несколько."
+            "Прочитайте «{ui:stageCheckTitle}» и ответьте «{ui:stageCan}», «{ui:stageAlmost}» или «{ui:stageHard}», чтобы найти, с чего начать. Названия уровней не показываются.",
+            "Ниже отметьте, что даётся трудно и на чём хотите сосредоточиться, затем «{ui:mapDraw}». Карта строится для выбранной части (около минуты)."
           ],
-          "shot": "goal"
+          "shot": "stage-start"
         },
         {
           "heading": "2. Попробуйте",
@@ -2759,9 +2773,9 @@
           "heading": "Общайтесь на изучаемом языке",
           "body": [
             "Пишите на изучаемом языке — тьютор отвечает, как друг.",
-            "Ошибки отмечаются в вашем сообщении, а исправленный вариант появляется сразу под ним."
+            "Если есть что исправить, под вашим сообщением появляется «{ui:chatCorrectionChip}». Нажмите, чтобы увидеть исправленную фразу, или выберите «{ui:chatCorrectionViewAuto}» в меню ⋮."
           ],
-          "shot": "chat-correct"
+          "shot": "chat-fix"
         },
         {
           "heading": "Застряли? Пишите на своём языке",
@@ -2962,7 +2976,8 @@
           "body": [
             "Над списком выберите языки: «Все», «Мои языки» или «Найти по языку». Нажмите на комнату — вы войдёте с запросом на участие, хост пригласит вас на место говорить. Запрос можно отправить и нажав на свободное место. «Только слушать» — слушать молча.",
             "Слова каждого видны в субтитрах. Нажмите на строку, чтобы перевести её с учётом предыдущего разговора.",
-            "Выберите «Свободный разговор» при создании комнаты — языки не задаются. Субтитры каждого пишутся на его языках, а комната находится в «Найти по языку» по любому языку."
+            "Выберите «Свободный разговор» при создании комнаты — языки не задаются. Субтитры каждого пишутся на его языках, а комната находится в «Найти по языку» по любому языку.",
+            "Строка, которую плохо расслышали, заканчивается знаком ?. Если в сказанном на изучаемом языке есть что исправить, под вашей строкой появится «✎ Есть что исправить» — только для вас. Другие этого не видят."
           ],
           "shot": "r69-free"
         },
@@ -3022,7 +3037,8 @@
         {
           "heading": "Сообщения и звонки",
           "body": [
-            "Первое сообщение уходит как запрос; после ответа переписка открывается. Звоните через 📞 над перепиской; субтитры звонка сохраняются."
+            "Первое сообщение уходит как запрос; после ответа переписка открывается. Звоните через 📞 над перепиской; субтитры звонка сохраняются.",
+            "В звонке один на один можно включить камеру и говорить лицом к лицу (сначала она выключена)."
           ]
         },
         {
@@ -3060,12 +3076,12 @@
       "title": "Cara memakai Saya",
       "sections": [
         {
-          "heading": "1. Mulai dengan mencentang",
+          "heading": "1. Mulai dari percakapan",
           "body": [
-            "Centang bagian yang masih kurang dan yang ingin difokuskan, lalu “{ui:mapDraw}”. Tidak perlu memilih level.",
-            "Boleh pilih lebih dari satu."
+            "Baca “{ui:stageCheckTitle}” lalu jawab “{ui:stageCan}”, “{ui:stageAlmost}”, atau “{ui:stageHard}” untuk menemukan titik mulai. Nama level tidak ditampilkan.",
+            "Di bawah, centang bagian yang masih sulit dan yang ingin difokuskan, lalu “{ui:mapDraw}”. Peta dibuat untuk bagian yang dipilih (sekitar satu menit)."
           ],
-          "shot": "goal"
+          "shot": "stage-start"
         },
         {
           "heading": "2. Coba ini",
@@ -3141,9 +3157,9 @@
           "heading": "Chat dengan Bahasa yang Dipelajari",
           "body": [
             "Tulis dengan bahasa yang sedang kamu pelajari, tutor akan membalas seperti teman.",
-            "Jika ada yang kurang tepat, bagian yang salah akan ditandai di pesanmu, dan kalimat yang benar muncul di bawahnya."
+            "Kalau ada yang perlu diperbaiki, “{ui:chatCorrectionChip}” muncul di bawah pesanmu. Ketuk untuk melihat kalimat yang sudah diperbaiki, atau ganti ke “{ui:chatCorrectionViewAuto}” di menu ⋮."
           ],
-          "shot": "chat-correct"
+          "shot": "chat-fix"
         },
         {
           "heading": "Buntu? Pakai bahasamu",
@@ -3344,7 +3360,8 @@
           "body": [
             "Di atas daftar, pilih bahasa dengan “Semua”, “Bahasaku”, atau “Cari per bahasa”. Ketuk ruang untuk masuk dengan permintaan bergabung; host menaikkanmu ke kursi agar bisa bicara. Mengetuk kursi kosong juga mengirim permintaan. “Dengar saja” untuk mendengarkan diam-diam.",
             "Ucapan setiap orang muncul sebagai teks. Ketuk baris untuk menerjemahkan dengan melihat percakapan sebelumnya.",
-            "Pilih “Obrolan bebas” saat membuat ruang, maka bahasa tidak ditetapkan. Teks tiap orang ditulis dalam bahasanya sendiri, dan ruang muncul di “Cari per bahasa” untuk bahasa apa pun."
+            "Pilih “Obrolan bebas” saat membuat ruang, maka bahasa tidak ditetapkan. Teks tiap orang ditulis dalam bahasanya sendiri, dan ruang muncul di “Cari per bahasa” untuk bahasa apa pun.",
+            "Baris yang kurang terdengar diakhiri tanda ?. Kalau yang kamu ucapkan dalam bahasa yang dipelajari ada yang perlu diperbaiki, “✎ Ada yang perlu diperbaiki” muncul di bawah barismu, hanya untukmu. Orang lain tidak melihatnya."
           ],
           "shot": "r69-free"
         },
@@ -3404,7 +3421,8 @@
         {
           "heading": "Pesan dan panggilan",
           "body": [
-            "Pesan pertama terkirim sebagai permintaan; setelah dibalas, percakapan terbuka. Telepon dengan 📞 di atas percakapan; teks panggilan tersimpan."
+            "Pesan pertama terkirim sebagai permintaan; setelah dibalas, percakapan terbuka. Telepon dengan 📞 di atas percakapan; teks panggilan tersimpan.",
+            "Dalam panggilan 1:1 kamu bisa menyalakan kamera dan bicara tatap muka (awalnya mati)."
           ]
         },
         {
@@ -3442,12 +3460,12 @@
       "title": "كيف تستخدم «أنا»",
       "sections": [
         {
-          "heading": "1. ابدأ بالاختيار",
+          "heading": "1. ابدأ بمحادثة",
           "body": [
-            "اختر أين تشعر بالنقص وعلى ماذا تريد التركيز، ثم «{ui:mapDraw}». لا حاجة لاختيار مستوى.",
-            "يمكنك اختيار أكثر من واحد."
+            "اقرأ «{ui:stageCheckTitle}» وأجب بـ«{ui:stageCan}» أو «{ui:stageAlmost}» أو «{ui:stageHard}» لتجد من أين تبدأ. لا تظهر أسماء المستويات.",
+            "حدّد في الأسفل ما يصعب عليك وما تريد التركيز عليه، ثم «{ui:mapDraw}». تُرسم الخريطة للجزء الذي اخترته (نحو دقيقة)."
           ],
-          "shot": "goal"
+          "shot": "stage-start"
         },
         {
           "heading": "2. جرّب هذا",
@@ -3523,9 +3541,9 @@
           "heading": "الدردشة باللغة التي تتعلمها",
           "body": [
             "اكتب باللغة التي تتعلمها وسيجيبك المعلم كما يفعل صديق.",
-            "إذا كان هناك خطأ، سيتم تمييزه في رسالتك مع التصحيح أسفلها مباشرة."
+            "إذا كان هناك ما يحتاج إلى تصحيح يظهر «{ui:chatCorrectionChip}» تحت رسالتك. اضغط عليه لترى الجملة المصحّحة، أو غيّر إلى «{ui:chatCorrectionViewAuto}» من القائمة ⋮."
           ],
-          "shot": "chat-correct"
+          "shot": "chat-fix"
         },
         {
           "heading": "تعثّرت؟ اكتب بلغتك",
@@ -3726,7 +3744,8 @@
           "body": [
             "فوق القائمة اختر اللغات بـ«الكل» أو «لغاتي» أو «البحث حسب اللغة». اضغط على غرفة لتدخل مع طلب مشاركة، ويرفعك المضيف إلى مقعد لتتحدث. الضغط على مقعد فارغ يرسل الطلب أيضًا. «الاستماع فقط» يتيح لك الاستماع بهدوء.",
             "يظهر كلام كل شخص كترجمة نصية. اضغط على سطر لترجمته مع مراعاة ما قيل قبله.",
-            "اختر «محادثة حرة» عند إنشاء غرفة فلا تُحدَّد لغة. تُكتب ترجمة كلام كل شخص بلغاته هو، وتظهر الغرفة في «البحث حسب اللغة» مع أي لغة."
+            "اختر «محادثة حرة» عند إنشاء غرفة فلا تُحدَّد لغة. تُكتب ترجمة كلام كل شخص بلغاته هو، وتظهر الغرفة في «البحث حسب اللغة» مع أي لغة.",
+            "ينتهي السطر الذي لم يُسمع جيدًا بعلامة ?. إذا كان فيما قلته باللغة التي تتعلمها ما يحتاج إلى تصحيح يظهر «✎ هناك ما يحتاج إلى تصحيح» تحت سطرك، لك وحدك. لا يراه غيرك."
           ],
           "shot": "r69-free"
         },
@@ -3786,7 +3805,8 @@
         {
           "heading": "الرسائل والمكالمات",
           "body": [
-            "تصل رسالتك الأولى كطلب، وبعد الرد تُفتح المحادثة. اتصل بـ📞 فوق المحادثة، وتبقى ترجمة المكالمة سجلًا."
+            "تصل رسالتك الأولى كطلب، وبعد الرد تُفتح المحادثة. اتصل بـ📞 فوق المحادثة، وتبقى ترجمة المكالمة سجلًا.",
+            "في المكالمة الفردية يمكنك تشغيل الكاميرا والتحدث وجهًا لوجه (تكون مطفأة في البداية)."
           ]
         },
         {
@@ -3824,12 +3844,12 @@
       "title": "วิธีใช้ ของฉัน",
       "sections": [
         {
-          "heading": "1. เริ่มด้วยการเลือก",
+          "heading": "1. เริ่มจากบทสนทนา",
           "body": [
-            "เลือกจุดที่ยังขาดและสิ่งที่อยากเน้น แล้วแตะ “{ui:mapDraw}” ไม่ต้องเลือกระดับ",
-            "เลือกได้มากกว่าหนึ่งข้อ"
+            "อ่าน “{ui:stageCheckTitle}” แล้วตอบ “{ui:stageCan}” “{ui:stageAlmost}” หรือ “{ui:stageHard}” เพื่อหาจุดเริ่มต้น ไม่มีชื่อระดับแสดง",
+            "ด้านล่างเลือกส่วนที่ยังไม่ถนัดและสิ่งที่อยากเน้น แล้วกด “{ui:mapDraw}” แผนที่จะวาดตามส่วนที่เลือก (ประมาณหนึ่งนาที)"
           ],
-          "shot": "goal"
+          "shot": "stage-start"
         },
         {
           "heading": "2. ลองทำสิ่งนี้",
@@ -3905,9 +3925,9 @@
           "heading": "แชทด้วยภาษาที่คุณเรียน",
           "body": [
             "พิมพ์เป็นภาษาที่คุณกำลังเรียน แล้วติวเตอร์จะตอบกลับเหมือนเพื่อน",
-            "ถ้ามีจุดผิด จะมีเครื่องหมายในข้อความของคุณ พร้อมประโยคที่แก้ไขให้ดูด้านล่าง"
+            "ถ้ามีจุดที่ต้องแก้ “{ui:chatCorrectionChip}” จะขึ้นใต้ข้อความของคุณ แตะเพื่อดูประโยคที่แก้แล้ว หรือเปลี่ยนเป็น “{ui:chatCorrectionViewAuto}” ในเมนู ⋮"
           ],
-          "shot": "chat-correct"
+          "shot": "chat-fix"
         },
         {
           "heading": "ติดเมื่อไรใช้ภาษาของคุณ",
@@ -4108,7 +4128,8 @@
           "body": [
             "เหนือรายการ เลือกคู่ภาษาด้วย “ทั้งหมด” “ภาษาของฉัน” หรือ “หาตามภาษา” แตะห้องเพื่อเข้าพร้อมคำขอร่วมพูด โฮสต์เชิญขึ้นที่นั่งแล้วจึงพูดได้ แตะที่นั่งว่างก็ส่งคำขอได้ หรือ “ฟังอย่างเดียว” เพื่อฟังเงียบๆ",
             "คำพูดของแต่ละคนขึ้นเป็นซับ แตะบรรทัดเพื่อแปลโดยดูบทสนทนาก่อนหน้า",
-            "เลือก “คุยอิสระ” ตอนสร้างห้องจะไม่กำหนดภาษา ซับของแต่ละคนเขียนเป็นภาษาของคนนั้นเอง และห้องจะขึ้นใน “หาตามภาษา” ไม่ว่าเลือกภาษาไหน"
+            "เลือก “คุยอิสระ” ตอนสร้างห้องจะไม่กำหนดภาษา ซับของแต่ละคนเขียนเป็นภาษาของคนนั้นเอง และห้องจะขึ้นใน “หาตามภาษา” ไม่ว่าเลือกภาษาไหน",
+            "บรรทัดที่ได้ยินไม่ชัดจะมี ? ต่อท้าย ถ้าสิ่งที่คุณพูดเป็นภาษาที่เรียนมีจุดที่ต้องแก้ จะขึ้น “✎ มีจุดที่ต้องแก้” ใต้บรรทัดของคุณ เห็นแค่คุณ คนอื่นไม่เห็น"
           ],
           "shot": "r69-free"
         },
@@ -4168,7 +4189,8 @@
         {
           "heading": "ข้อความและการโทร",
           "body": [
-            "ข้อความแรกจะส่งเป็นคำขอ เมื่ออีกฝ่ายตอบ แชตจะเปิด โทรด้วย 📞 เหนือแชต ซับของการโทรจะเก็บไว้"
+            "ข้อความแรกจะส่งเป็นคำขอ เมื่ออีกฝ่ายตอบ แชตจะเปิด โทรด้วย 📞 เหนือแชต ซับของการโทรจะเก็บไว้",
+            "ในการโทรแบบ 1:1 เปิดกล้องคุยกันแบบเห็นหน้าได้ (เริ่มต้นปิดอยู่)"
           ]
         },
         {
@@ -4206,12 +4228,12 @@
       "title": "“मेरा” कैसे इस्तेमाल करें",
       "sections": [
         {
-          "heading": "1. चुनकर शुरू करें",
+          "heading": "1. बातचीत से शुरू करें",
           "body": [
-            "जहाँ कमी लगती है और जिस पर ध्यान देना है, वह चुनें, फिर “{ui:mapDraw}”। स्तर चुनने की ज़रूरत नहीं।",
-            "एक से ज़्यादा चुन सकते हैं।"
+            "“{ui:stageCheckTitle}” वाली बातचीत पढ़ें और “{ui:stageCan}”, “{ui:stageAlmost}” या “{ui:stageHard}” चुनें — इससे पता चलता है कि कहाँ से शुरू करें। लेवल के नाम नहीं दिखते।",
+            "नीचे जो मुश्किल लगता है और जिस पर ध्यान देना है उसे चुनें, फिर “{ui:mapDraw}”। चुने हुए हिस्से के लिए नक्शा बनता है (लगभग एक मिनट)।"
           ],
-          "shot": "goal"
+          "shot": "stage-start"
         },
         {
           "heading": "2. यह आज़माएँ",
@@ -4287,9 +4309,9 @@
           "heading": "सीख रही भाषा में चैट करें",
           "body": [
             "जिस भाषा को आप सीख रहे हैं, उसमें लिखें — ट्यूटर दोस्त की तरह जवाब देगा।",
-            "अगर कुछ गलत है, तो आपकी पंक्ति में चिह्नित होगा और सही वाक्य नीचे दिखेगा।"
+            "अगर कुछ सुधारना हो, तो आपके संदेश के नीचे “{ui:chatCorrectionChip}” दिखता है। दबाने पर सुधरा हुआ वाक्य दिखता है, या ⋮ मेन्यू में “{ui:chatCorrectionViewAuto}” चुन सकते हैं।"
           ],
-          "shot": "chat-correct"
+          "shot": "chat-fix"
         },
         {
           "heading": "अटकें तो अपनी भाषा में",
@@ -4490,7 +4512,8 @@
           "body": [
             "सूची के ऊपर “सभी”, “मेरी भाषाएँ” या “भाषा से खोजें” से भाषा जोड़ी चुनें। रूम पर टैप करें तो आप जुड़ने के अनुरोध के साथ आते हैं; होस्ट सीट पर लाए तो बोल सकते हैं। खाली सीट दबाकर भी अनुरोध भेज सकते हैं। “सिर्फ़ सुनें” से चुपचाप सुनें।",
             "हर व्यक्ति की बात सबटाइटल में दिखती है। पंक्ति पर टैप करें तो पिछली बातचीत देखकर अनुवाद होता है।",
-            "रूम बनाते समय “खुली बातचीत” चुनें तो कोई भाषा तय नहीं होती। हर व्यक्ति के सबटाइटल उसकी अपनी भाषाओं में लिखे जाते हैं, और “भाषा से खोजें” में रूम हर भाषा के साथ दिखता है।"
+            "रूम बनाते समय “खुली बातचीत” चुनें तो कोई भाषा तय नहीं होती। हर व्यक्ति के सबटाइटल उसकी अपनी भाषाओं में लिखे जाते हैं, और “भाषा से खोजें” में रूम हर भाषा के साथ दिखता है।",
+            "जो लाइन ठीक से सुनाई नहीं दी उसके अंत में ? लगता है। अगर सीखी जा रही भाषा में आपकी कही बात में कुछ सुधारना हो, तो आपकी लाइन के नीचे सिर्फ़ आपको “✎ कुछ सुधारना है” दिखता है। दूसरों को नहीं दिखता।"
           ],
           "shot": "r69-free"
         },
@@ -4550,7 +4573,8 @@
         {
           "heading": "मैसेज और कॉल",
           "body": [
-            "पहला मैसेज अनुरोध के रूप में जाता है; जवाब आने पर बातचीत खुल जाती है। बातचीत के ऊपर 📞 से कॉल करें; कॉल के सबटाइटल रिकॉर्ड में रहते हैं।"
+            "पहला मैसेज अनुरोध के रूप में जाता है; जवाब आने पर बातचीत खुल जाती है। बातचीत के ऊपर 📞 से कॉल करें; कॉल के सबटाइटल रिकॉर्ड में रहते हैं।",
+            "1:1 कॉल में कैमरा चालू करके आमने-सामने बात कर सकते हैं (शुरू में बंद रहता है)।"
           ]
         },
         {

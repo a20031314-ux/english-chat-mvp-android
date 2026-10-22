@@ -113,6 +113,8 @@ const GUIDE_SOCIAL_ITEMS = [
 ];
 const GUIDE = VERSION === "guide" || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
 const GUIDE_ITEMS = [
+  // 2.71: My 첫 화면 맨 위 "이런 대화, 할 수 있어요?"(단계 고르기, 사용법 my.start).
+  { shot: "stage-start" },
   { shot: "goal" },
   { shot: "next" },
   { shot: "growth" },
@@ -130,7 +132,8 @@ const GUIDE_VIDEO_ITEMS = [
   { shot: "video-ask", clip: true },
 ];
 const GUIDE_CHAT_ITEMS = [
-  { shot: "chat-correct" },
+  // 2.71: 고친 문장은 눌러서 보기(칩). 옛 빌드 사용법(chatBefore271.json)은 chat-correct 그림을 그대로 쓴다.
+  { shot: "chat-fix" },
   { shot: "chat-expression" },
   { shot: "chat-reading" },
   { shot: "chat-ask", clip: true },
@@ -1321,6 +1324,17 @@ const STEPS = {
     await wait(1000);
     mark("clipEnd");
   },
+  // 2.71 새로워진 점·사용법: 고친 문장 칩(눌러서 보기)이 보이는 같은 장면.
+  async "chat-fix"(context) {
+    await STEPS["chat-correct"](context);
+  },
+  async "stage-start"({ page, ui, wait }) {
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    const title = page.getByText(ui.stageCheckTitle, { exact: true });
+    for (let i = 0; i < 40 && !(await title.count()); i++) await wait(500);
+    await title.first().scrollIntoViewIfNeeded();
+    await wait(800);
+  },
   async goal({ page, ui, locale, wait }) {
     await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
     await wait(1500);
@@ -1569,7 +1583,9 @@ async function finishPromo(dir, frames, events) {
  */
 const exactLabel = (page, name) => page.getByRole("button", { name: exactly(name) });
 const SPOTS = {
+  "stage-start": ({ page, ui }) => page.getByRole("button", { name: exactly(ui.stageCan) }).locator(".."),
   goal: ({ page, ui }) => page.getByRole("button", { name: ui.mapDraw }),
+  "chat-fix": ({ page, ui }) => page.getByRole("button", { name: new RegExp(escape(ui.chatCorrectionChip)) }).last(),
   next: ({ page, ui }) => page.getByRole("button", { name: ui.nextByChat }),
   growth: ({ page, ui }) => page.getByText(ui.myNext, { exact: true }),
   graph: ({ page, ui }) => exactLabel(page, ui.myViewGraph),

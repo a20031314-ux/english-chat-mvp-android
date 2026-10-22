@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-22b";
+export const GUIDE_VERSION = "2026-10-22c";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -122,12 +122,12 @@ export const GUIDE_KO: Guide = {
     title: "My 사용법",
     sections: [
       {
-        heading: "1. 체크로 시작",
+        heading: "1. 대화로 시작",
         body: [
-          "부족한 부분과 위주로 할 것을 고르고 ‘{ui:mapDraw}’. 수준은 묻지 않아요.",
-          "여러 개 골라도 돼요.",
+          "‘{ui:stageCheckTitle}’ 대화를 보고 ‘{ui:stageCan}’·‘{ui:stageAlmost}’·‘{ui:stageHard}’로 답하면 시작할 곳을 찾아요. 레벨 이름은 보이지 않아요.",
+          "아래 체크로 부족한 부분과 위주로 할 것을 고르고 ‘{ui:mapDraw}’. 고른 범위로 지도를 그려요(1분쯤 걸려요).",
         ],
-        shot: "goal",
+        shot: "stage-start",
       },
       {
         heading: "2. 오늘 해볼 것",
@@ -203,9 +203,9 @@ export const GUIDE_KO: Guide = {
         heading: "배우는 언어로 대화하기",
         body: [
           "배우는 언어로 문장을 쓰면 튜터가 친구처럼 답해요.",
-          "틀린 부분이 있으면 내 문장에 표시가 생기고, 바로 아래에 고친 문장이 나와요.",
+          "틀린 부분이 있으면 내 문장 아래 ‘{ui:chatCorrectionChip}’가 떠요. 누르면 고친 문장이 보이고, ⋮ 메뉴에서 ‘{ui:chatCorrectionViewAuto}’로 바꿀 수 있어요.",
         ],
-        shot: "chat-correct",
+        shot: "chat-fix",
       },
       {
         heading: "막히면 내 언어로",
@@ -405,7 +405,8 @@ export const GUIDE_KO: Guide = {
         "body": [
           "목록 위 ‘전체’·‘내 조합’·‘언어로 찾기’로 언어 조합을 골라요. 방을 누르면 참여를 요청한 채 들어가고, 방장이 자리에 올려 주면 말해요. 빈자리를 눌러도 참여 요청이 가요. ‘듣기만’으로 조용히 들을 수도 있어요.",
           "말한 내용은 사람마다 자막으로 쌓여요. 줄을 누르면 앞 대화를 보고 내 언어로 번역해요.",
-          "새 방을 만들 때 ‘자유 대화’를 고르면 언어를 정하지 않아요. 자막은 말하는 사람마다 그 사람의 언어로 적히고, ‘언어로 찾기’에서 어떤 언어로도 나와요."
+          "새 방을 만들 때 ‘자유 대화’를 고르면 언어를 정하지 않아요. 자막은 말하는 사람마다 그 사람의 언어로 적히고, ‘언어로 찾기’에서 어떤 언어로도 나와요.",
+          "잘 안 들린 줄 끝에는 ?가 붙어요. 배우는 언어로 한 내 말에 고칠 곳이 있으면 내 줄 아래 나에게만 ‘✎ 고칠 곳이 있어요’가 떠요. 다른 사람에게는 안 보여요."
         ],
         "shot": "r69-free"
       },
@@ -465,7 +466,8 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "메시지와 통화",
         "body": [
-          "첫 메시지는 요청으로 가고, 상대가 답하면 대화가 열려요. 대화 위 📞로 통화하고, 통화 자막은 기록으로 남아요."
+          "첫 메시지는 요청으로 가고, 상대가 답하면 대화가 열려요. 대화 위 📞로 통화하고, 통화 자막은 기록으로 남아요.",
+          "1:1 통화에서는 카메라를 켜고 얼굴을 보며 이야기할 수 있어요(처음엔 꺼져 있어요)."
         ]
       },
       {
@@ -505,12 +507,12 @@ export const GUIDE_EN: Guide = {
     title: "Using My",
     sections: [
       {
-        heading: "1. Start by ticking",
+        heading: "1. Start with a conversation",
         body: [
-          "Tick where you fall short and what to focus on, then ‘{ui:mapDraw}’. There's no level to pick.",
-          "You can pick more than one.",
+          "Read ‘{ui:stageCheckTitle}’ and answer ‘{ui:stageCan}’, ‘{ui:stageAlmost}’ or ‘{ui:stageHard}’ to find where to begin. No level names are shown.",
+          "Tick what you find hard and what you want to focus on below, then ‘{ui:mapDraw}’. The map is drawn for the part you chose (about a minute).",
         ],
-        shot: "goal",
+        shot: "stage-start",
       },
       {
         heading: "2. Try this",
@@ -586,9 +588,9 @@ export const GUIDE_EN: Guide = {
         heading: "Chat in the language you're learning",
         body: [
           "Write in the language you're learning and the tutor answers like a friend would.",
-          "If something is off, it's marked in your message, with the corrected sentence right below.",
+          "If something needs fixing, ‘{ui:chatCorrectionChip}’ appears under your message. Tap it to see the corrected sentence, or switch to ‘{ui:chatCorrectionViewAuto}’ in the ⋮ menu.",
         ],
-        shot: "chat-correct",
+        shot: "chat-fix",
       },
       {
         heading: "Stuck? Use your own language",
@@ -788,7 +790,8 @@ export const GUIDE_EN: Guide = {
         "body": [
           "Above the list, pick a language pair with “All”, “My languages” or “Find by language”. Tap a room to join with a request to join; the host brings you up to a seat to talk. Tapping an empty seat sends the request too. “Just listen” lets you listen quietly.",
           "What each person says builds up as captions. Tap a line to translate it, with the conversation before it in mind.",
-          "Choose “Free talk” when you start a room and no languages are fixed. Each person’s captions are written in their own languages, and the room shows up in “Find by language” for any language."
+          "Choose “Free talk” when you start a room and no languages are fixed. Each person’s captions are written in their own languages, and the room shows up in “Find by language” for any language.",
+          "A line that was hard to hear ends with ?. If what you said in the language you're learning has something to fix, “✎ Something to fix” appears under your line, for you only. Nobody else sees it."
         ],
         "shot": "r69-free"
       },
@@ -848,7 +851,8 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Messages and calls",
         "body": [
-          "Your first message goes as a request; once they reply, the conversation opens. Call with 📞 above the conversation; the call's captions stay as a record."
+          "Your first message goes as a request; once they reply, the conversation opens. Call with 📞 above the conversation; the call's captions stay as a record.",
+          "In a 1:1 call you can turn on the camera and talk face to face (it starts off)."
         ]
       },
       {

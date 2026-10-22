@@ -579,7 +579,11 @@
     "scriptPassed": "合格です",
     "scriptAgain": "まだです — もう一度",
     "scriptRetry": "もう一度",
-    "scriptBackToList": "一覧へ"
+    "scriptBackToList": "一覧へ",
+    "whatsNewStageTitle": "会話から始める",
+    "whatsNewStageBody": "短い会話を見て始める場所を選ぶと、Myがその部分の地図を作ります。",
+    "whatsNewFixTitle": "直した文は見たいときに",
+    "whatsNewFixBody": "直すところがある行の下に小さな表示が出ます。タップすると直した文が見えます。"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1161,7 +1165,11 @@
     "scriptPassed": "通过了",
     "scriptAgain": "还没有——再来一次",
     "scriptRetry": "再来",
-    "scriptBackToList": "返回列表"
+    "scriptBackToList": "返回列表",
+    "whatsNewStageTitle": "从对话开始",
+    "whatsNewStageBody": "看一段简短的对话选好起点，My 会为那一部分画出地图。",
+    "whatsNewFixTitle": "想看时再看修改",
+    "whatsNewFixBody": "需要修改的句子下面会出现一个小标记，点一下就能看到改好的句子。"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1745,7 +1753,11 @@
     "scriptPassed": "Đã qua",
     "scriptAgain": "Chưa — thử lại nhé",
     "scriptRetry": "Làm lại",
-    "scriptBackToList": "Về danh sách"
+    "scriptBackToList": "Về danh sách",
+    "whatsNewStageTitle": "Bắt đầu từ hội thoại",
+    "whatsNewStageBody": "Đọc một đoạn hội thoại ngắn để chọn chỗ bắt đầu, rồi My vẽ bản đồ cho phần đó.",
+    "whatsNewFixTitle": "Xem câu sửa khi bạn muốn",
+    "whatsNewFixBody": "Dòng nào có chỗ cần sửa sẽ có một nhãn nhỏ bên dưới. Nhấn để xem câu đã sửa."
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2334,7 +2346,11 @@
     "scriptPassed": "Réussi",
     "scriptAgain": "Pas encore — encore une fois",
     "scriptRetry": "Recommencer",
-    "scriptBackToList": "Retour à la liste"
+    "scriptBackToList": "Retour à la liste",
+    "whatsNewStageTitle": "Commencer par une conversation",
+    "whatsNewStageBody": "Choisis par où commencer en lisant une courte conversation, puis My dessine ta carte pour cette partie.",
+    "whatsNewFixTitle": "Les corrections quand tu veux",
+    "whatsNewFixBody": "Quand une ligne a quelque chose à corriger, une petite étiquette apparaît dessous. Touche-la pour voir la phrase corrigée."
   },
   "it": {
     "archive": "Report",
@@ -3114,7 +3130,11 @@
     "scriptPassed": "Superato",
     "scriptAgain": "Non ancora — ancora una volta",
     "scriptRetry": "Di nuovo",
-    "scriptBackToList": "Torna all'elenco"
+    "scriptBackToList": "Torna all'elenco",
+    "whatsNewStageTitle": "Inizia da una conversazione",
+    "whatsNewStageBody": "Scegli da dove partire leggendo una breve conversazione, poi My crea la tua mappa per quella parte.",
+    "whatsNewFixTitle": "Correzioni quando vuoi",
+    "whatsNewFixBody": "Se una riga ha qualcosa da correggere, sotto compare una piccola etichetta. Toccala per vedere la frase corretta."
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3706,7 +3726,11 @@
     "scriptPassed": "Passou",
     "scriptAgain": "Ainda não — mais uma vez",
     "scriptRetry": "De novo",
-    "scriptBackToList": "Voltar à lista"
+    "scriptBackToList": "Voltar à lista",
+    "whatsNewStageTitle": "Comece por uma conversa",
+    "whatsNewStageBody": "Escolha por onde começar lendo uma conversa curta, e o My faz seu mapa para essa parte.",
+    "whatsNewFixTitle": "Correções quando você quiser",
+    "whatsNewFixBody": "Quando uma linha tem algo para corrigir, aparece uma pequena etiqueta embaixo. Toque para ver a frase corrigida."
   },
   "ru": {
     "archive": "Отчёты",
@@ -4484,7 +4508,11 @@
     "scriptPassed": "Пройдено",
     "scriptAgain": "Пока нет — ещё раз",
     "scriptRetry": "Ещё раз",
-    "scriptBackToList": "К списку"
+    "scriptBackToList": "К списку",
+    "whatsNewStageTitle": "Начните с разговора",
+    "whatsNewStageBody": "Выберите, с чего начать, прочитав короткий диалог, и My построит карту для этой части.",
+    "whatsNewFixTitle": "Исправления, когда хотите",
+    "whatsNewFixBody": "Если в строке есть что исправить, под ней появляется небольшая метка. Нажмите, чтобы увидеть исправленную фразу."
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5072,7 +5100,11 @@
     "scriptPassed": "Lulus",
     "scriptAgain": "Belum — coba sekali lagi",
     "scriptRetry": "Ulangi",
-    "scriptBackToList": "Kembali ke daftar"
+    "scriptBackToList": "Kembali ke daftar",
+    "whatsNewStageTitle": "Mulai dari percakapan",
+    "whatsNewStageBody": "Pilih titik mulai dengan membaca percakapan singkat, lalu My membuat peta untuk bagian itu.",
+    "whatsNewFixTitle": "Perbaikan saat kamu mau",
+    "whatsNewFixBody": "Kalau ada yang perlu diperbaiki, label kecil muncul di bawah baris itu. Ketuk untuk melihat kalimat yang sudah diperbaiki."
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5654,7 +5686,11 @@
     "scriptPassed": "نجحت",
     "scriptAgain": "ليس بعد — مرة أخرى",
     "scriptRetry": "مرة أخرى",
-    "scriptBackToList": "العودة إلى القائمة"
+    "scriptBackToList": "العودة إلى القائمة",
+    "whatsNewStageTitle": "ابدأ من محادثة",
+    "whatsNewStageBody": "اختر من أين تبدأ بقراءة محادثة قصيرة، ثم يرسم My خريطتك لذلك الجزء.",
+    "whatsNewFixTitle": "التصحيح حين تريده",
+    "whatsNewFixBody": "إذا كان في السطر ما يحتاج إلى تصحيح تظهر تحته علامة صغيرة. اضغط عليها لترى الجملة المصحّحة."
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6236,7 +6272,11 @@
     "scriptPassed": "ผ่านแล้ว",
     "scriptAgain": "ยังไม่ผ่าน ลองอีกครั้ง",
     "scriptRetry": "อีกครั้ง",
-    "scriptBackToList": "กลับไปที่รายการ"
+    "scriptBackToList": "กลับไปที่รายการ",
+    "whatsNewStageTitle": "เริ่มจากบทสนทนา",
+    "whatsNewStageBody": "อ่านบทสนทนาสั้น ๆ เพื่อเลือกจุดเริ่ม แล้ว My จะวาดแผนที่สำหรับส่วนนั้น",
+    "whatsNewFixTitle": "ดูคำแก้เมื่ออยากดู",
+    "whatsNewFixBody": "ถ้าบรรทัดไหนมีจุดที่ต้องแก้ จะมีป้ายเล็ก ๆ ขึ้นด้านล่าง แตะเพื่อดูประโยคที่แก้แล้ว"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -6818,6 +6858,10 @@
     "scriptPassed": "पास हो गए",
     "scriptAgain": "अभी नहीं — एक बार और",
     "scriptRetry": "फिर से",
-    "scriptBackToList": "सूची पर वापस"
+    "scriptBackToList": "सूची पर वापस",
+    "whatsNewStageTitle": "बातचीत से शुरू करें",
+    "whatsNewStageBody": "एक छोटी बातचीत पढ़कर तय करें कि कहाँ से शुरू करना है, फिर My उस हिस्से का नक्शा बनाता है।",
+    "whatsNewFixTitle": "सुधार तब, जब आप चाहें",
+    "whatsNewFixBody": "जिस लाइन में कुछ सुधारना हो, उसके नीचे एक छोटा निशान आता है। दबाकर सुधरा वाक्य देखें।"
   }
 }

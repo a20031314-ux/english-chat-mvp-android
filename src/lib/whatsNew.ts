@@ -44,6 +44,16 @@ export type ReleaseNote = {
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    // 2.71(85): My를 대화 예시로 시작(단계 고르기 → Sonnet이 그 범위로 지도), 채팅 고친 문장은 눌러서 보기.
+    // 방 내 줄 교정·1:1 카메라는 사용법(Room·대화)에만(그림을 찍으려면 마이크·두 사람이 필요).
+    version: "2.71",
+    code: 85,
+    items: [
+      { id: "stage", title: "whatsNewStageTitle", body: "whatsNewStageBody", shot: "stage-start", tab: "map", guide: "my.start" },
+      { id: "fix", title: "whatsNewFixTitle", body: "whatsNewFixBody", shot: "chat-fix", tab: "chat", guide: "chat.talk" },
+    ],
+  },
+  {
     // 2.70(84): 2.69(83)는 Play에 올리지 않았다 — 2.68에서 오는 사람은 이 두 묶음을 같이 본다.
     version: "2.70",
     code: 84,
