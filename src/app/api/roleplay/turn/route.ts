@@ -40,6 +40,7 @@ import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
 import { recordMeets, recordTurn } from "@/lib/server/ledgerStore";
 import { readLearnerBrief } from "@/lib/server/learnerBrief";
+import { profileTurn, withProfileLine } from "@/lib/server/profileContext";
 import { recordGrowthTurn, recordStuck } from "@/lib/server/growthStore";
 import { quotedPhrases } from "@/lib/learner/stuck";
 import { writtenInLearningLanguage } from "@/lib/inputLanguage";
@@ -364,9 +365,12 @@ export async function POST(request: NextRequest) {
   // recur, learned phrases to bring back, whether to ease off or stretch
   // (learner/brief.ts). Cached for minutes, so a call does not rebuild it on
   // every turn. A scripted scene keeps to its script.
-  const brief = scenario.openEnded
-    ? (await readLearnerBrief(requestUserId(request), turn.targetLanguage)).prompt
-    : "";
+  // 로그인했으면 공부한 날(꾸준함 칸)을 남기고, 자유 대화면 관심사 한 줄도(server/profileContext.ts).
+  const [learnerBrief, profileLine] = await Promise.all([
+    scenario.openEnded ? readLearnerBrief(requestUserId(request), turn.targetLanguage) : null,
+    profileTurn(request),
+  ]);
+  const brief = learnerBrief ? withProfileLine(learnerBrief.prompt, profileLine) : "";
   // A pack turn: the tutor reacts and picks the pack's next question rather
   // than asking its own, so the practice brief's "ask the question a phrase
   // answers" would pull the other way and is left out (pack.ts packPrompt).

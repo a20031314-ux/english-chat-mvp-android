@@ -9,6 +9,7 @@ import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
 import { recordTurn } from "@/lib/server/ledgerStore";
 import { forgetLearnerBrief, readLearnerBrief } from "@/lib/server/learnerBrief";
+import { profileTurn, withProfileLine } from "@/lib/server/profileContext";
 import { recordGrowthTurn } from "@/lib/server/growthStore";
 import { nearlySame } from "@/lib/learner/growth";
 import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
@@ -1198,7 +1199,12 @@ export async function POST(request: NextRequest) {
     // What their own practice shows — mistakes that recur, learned phrases to
     // bring back, whether to ease off or stretch (learner/brief.ts). Built from
     // what is kept and cached for minutes; empty when there is nothing yet.
-    const brief = (await readLearnerBrief(userId, langs.targetLanguage)).prompt;
+    // 로그인했으면 관심사 한 줄(튜터 사용을 켰을 때)과 공부한 날(꾸준함 칸) — server/profileContext.ts.
+    const [learnerBrief, profileLine] = await Promise.all([
+      readLearnerBrief(userId, langs.targetLanguage),
+      profileTurn(request),
+    ]);
+    const brief = withProfileLine(learnerBrief.prompt, profileLine);
     const turnOptions: ChatTurnOptions = {
       conversationMode,
       imageDataUrl,

@@ -5,6 +5,8 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
 import { readAccount, readAccounts } from "@/lib/server/accountStore";
 import { readBlocked, readBlockedMany } from "@/lib/server/socialStore";
+import { readContrib } from "@/lib/server/contribStore";
+import { boardBoostMs, contribScore } from "@/lib/rooms/contribution";
 import {
   addComment,
   createPost,
@@ -109,7 +111,9 @@ export async function POST(request: NextRequest) {
     const images = (await Promise.all(wanted.map((id) => claimMedia(id, me, { kind: "board" })))).filter((ref): ref is MediaRef => ref !== null);
     if (images.length !== wanted.length) return bad(request, "BAD_IMAGE");
     if (!text && !images.length) return bad(request, "EMPTY");
-    return answer(request, await createPost({ author: me, language: body.language, text, images }), "post");
+    // 기여한 사람의 새 글은 처음 몇 시간 위쪽에(hub/drafts/profile-2026-10-23.md, 정렬만 — 비용 없음).
+    const boostMs = boardBoostMs(contribScore(await readContrib(me), Date.now()));
+    return answer(request, await createPost({ author: me, language: body.language, text, images, boostMs }), "post");
   }
 
   if (!isBoardId(body.postId)) return bad(request, "BAD_POST");

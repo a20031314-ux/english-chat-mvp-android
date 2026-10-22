@@ -7,6 +7,7 @@ import { forgetBoard } from "./boardStore.ts";
 import { forgetMedia } from "./mediaStore.ts";
 import { forgetRandom } from "./randomStore.ts";
 import { forgetOps } from "./opsStore.ts";
+import { forgetContrib } from "./contribStore.ts";
 import { isIdentified } from "./identity.ts";
 import {
   EMAIL_CODE_LENGTH,
@@ -14,6 +15,7 @@ import {
   type AccountProfile,
   type PublicAccount,
 } from "../account/shared.ts";
+import { factsOf, showOf, type ProfileFacts, type ProfileShow } from "../account/profileFacts.ts";
 
 /**
  * 계정 저장소 (KV).
@@ -46,7 +48,17 @@ export type AccountRecord = {
   username?: string | null;
   passwordHash?: string | null;
   /** hidden: 사람 목록에서 숨김(없으면 보임). */
-  profile: { nickname: string; bio: string; hasPhoto: boolean; updatedAt: string; hidden?: boolean };
+  profile: {
+    nickname: string;
+    bio: string;
+    hasPhoto: boolean;
+    updatedAt: string;
+    hidden?: boolean;
+    /** 나에 대한 사실(칩 id, account/profileFacts.ts). 예전 계정은 없음 = 빈 값. */
+    facts?: ProfileFacts;
+    /** 프로필에 보일 칸 켬/끔. 없으면 처음 값(DEFAULT_SHOW). */
+    show?: ProfileShow;
+  };
 };
 
 const accountKey = (id: string) => `account:v1:${id}`;
@@ -94,6 +106,8 @@ export async function toPublic(record: AccountRecord): Promise<PublicAccount> {
       bio: record.profile.bio,
       photo: record.profile.hasPhoto ? await readPhoto(record.id) : null,
       hidden: record.profile.hidden === true,
+      facts: factsOf(record.profile.facts),
+      show: showOf(record.profile.show),
     },
   };
 }
@@ -168,7 +182,7 @@ function defaultNickname(name: string | null): string {
 
 export async function saveProfile(
   record: AccountRecord,
-  next: { nickname: string; bio: string; photo?: string | null; hidden?: boolean },
+  next: { nickname: string; bio: string; photo?: string | null; hidden?: boolean; facts?: ProfileFacts; show?: ProfileShow },
   now: Date = new Date(),
 ): Promise<AccountRecord> {
   const updated: AccountRecord = {
@@ -179,6 +193,9 @@ export async function saveProfile(
       hasPhoto: next.photo === undefined ? record.profile.hasPhoto : next.photo !== null,
       updatedAt: now.toISOString(),
       hidden: next.hidden === undefined ? record.profile.hidden === true : next.hidden,
+      // 보내지 않은 칸은 그대로 — 예전 앱(사실·칸을 모름)이 저장해도 지워지지 않게.
+      ...((next.facts ?? record.profile.facts) ? { facts: next.facts ?? record.profile.facts } : {}),
+      ...((next.show ?? record.profile.show) ? { show: next.show ?? record.profile.show } : {}),
     },
   };
   if (next.photo === null) await kvDelete([photoKey(record.id)]);
@@ -212,6 +229,8 @@ export async function deleteAccount(record: AccountRecord): Promise<void> {
   await forgetRandom(record.id);
   // 운영자 정지 표시(lib/server/opsStore.ts).
   await forgetOps(record.id);
+  // 받은 도움됐어요·반영 의견·공부한 날 요약(lib/server/contribStore.ts).
+  await forgetContrib(record.id);
   await kvListPush(PURGE_QUEUE_KEY, [record.dataUserId], 400 * 24 * 60 * 60);
 }
 

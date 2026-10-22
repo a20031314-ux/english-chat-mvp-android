@@ -59,6 +59,7 @@
     "scriptprog:v1": { "feature": "지도 단계", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "글자·소리 기초에서 통과한 묶음(언어별)" },
     "selfcheck:v1": { "feature": "자라는 중", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "스스로 확인 기록(언어별)" },
     "simforget:v1": { "feature": "점검", "scope": "test", "onAccountDelete": "해당 없음", "what": "점검 데이터 지우기 하루 횟수" },
+    "contrib:v1": { "feature": "프로필 기여·꾸준함", "scope": "account", "onAccountDelete": "지움(요약, 나머지 중복 막기 표시는 2~120일 기한)", "what": "받은 도움됐어요 수·언어별 수·반영된 의견 수·최근 30일 기록(시각·무게)·도움됐어요를 준 계정과 시각·공부한 날 — 문장·질문 내용 없음" },
     "social:v1": { "feature": "사람·팔로우", "scope": "account", "onAccountDelete": "지움(일부: 접속 기록)", "what": "팔로우·차단·관계·신고·접속·도운 수" },
     "usage:calls": { "feature": "자유 통화", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "통화 횟수(평생)" },
     "usage:callsec": { "feature": "자유 통화", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "통화 초(월별)" },

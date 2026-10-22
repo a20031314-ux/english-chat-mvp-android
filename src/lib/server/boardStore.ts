@@ -25,6 +25,7 @@ import {
   type BoardComment,
   type BoardPost,
 } from "../rooms/board.ts";
+import { BOARD_BOOST_MAX_MS } from "../rooms/contribution.ts";
 
 /**
  * 게시판 저장(rooms/board.ts). KV:
@@ -78,7 +79,17 @@ export async function listPosts(input: { language?: string; offset?: number }): 
 
 export type WriteResult<T> = { ok: T } | { error: "LIMIT" | "NOT_FOUND" | "FORBIDDEN" | "FULL" };
 
-export async function createPost(input: { author: string; language: string; text: string; images?: MediaRef[] }): Promise<WriteResult<BoardPost>> {
+/**
+ * 새 글. `boostMs`는 쓴 사람의 기여 가산(rooms/contribution.ts boardBoostMs, 최대 3시간) — 목록 점수만
+ * 그만큼 앞으로 두어 처음 몇 시간 위쪽에 보이고, 시간이 지나면 다른 새 글에 밀린다. 글의 at은 그대로.
+ */
+export async function createPost(input: {
+  author: string;
+  language: string;
+  text: string;
+  images?: MediaRef[];
+  boostMs?: number;
+}): Promise<WriteResult<BoardPost>> {
   if ((await kvIncrBy(dayKey(input.author), 1, 2 * 24 * 60 * 60)) > BOARD_POSTS_PER_DAY) return { error: "LIMIT" };
   const post: BoardPost = {
     id: newBoardId(),
@@ -90,9 +101,10 @@ export async function createPost(input: { author: string; language: string; text
     ...(input.images?.length ? { images: input.images } : {}),
   };
   await kvSetJson(postKey(post.id), post);
+  const rank = post.at + Math.max(0, Math.min(input.boostMs ?? 0, BOARD_BOOST_MAX_MS));
   await Promise.all([
-    kvZAdd(ALL, post.at, post.id),
-    kvZAdd(langKey(post.language), post.at, post.id),
+    kvZAdd(ALL, rank, post.id),
+    kvZAdd(langKey(post.language), rank, post.id),
     kvZAdd(byKey(post.author), post.at, post.id),
   ]);
   return { ok: post };

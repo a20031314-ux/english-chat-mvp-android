@@ -5,8 +5,9 @@
  * 기록이 쌓이고, 로그인하면 서버가 그 기록을 계정에 묶어 다른 기기에서도
  * 같은 기록을 읽게 한다(server/accountStore.ts).
  *
- * 다른 모듈을 가져오지 않는다 — 테스트가 상대 경로만 풀기 때문.
+ * 다른 모듈은 상대 경로로만 가져온다 — 테스트가 상대 경로만 풀기 때문.
  */
+import type { ProfileFacts, ProfileShow } from "./profileFacts.ts";
 
 /** 앱이 로그인 토큰을 실어 보내는 헤더. cors.ts의 허용 목록에도 있어야 한다. */
 export const AUTH_TOKEN_HEADER = "x-auth-token";
@@ -43,6 +44,10 @@ export type AccountProfile = {
   photo: string | null;
   /** 사람 목록(말하는 방 → 사람)에서 나를 숨김. 기본은 보임. */
   hidden: boolean;
+  /** 나에 대한 사실(칩 id). 예전 서버 응답에는 없을 수 있다. */
+  facts?: ProfileFacts;
+  /** 프로필에 보일 칸 켬/끔. */
+  show?: ProfileShow;
 };
 
 /** 앱에 보여 주는 계정. 내부 id·데이터 id는 내보내지 않는다. */

@@ -18,6 +18,11 @@ import {
 import { cleanText, isRoomId } from "@/lib/rooms/protocol";
 import { PEOPLE_WINDOW_MS, type PersonCard, type PublicProfile } from "@/lib/rooms/social";
 import { suspendedResponse } from "@/lib/server/suspension";
+import { factsOf, sharedInterests, showOf } from "@/lib/account/profileFacts";
+import { badgesFor, contribScore, peopleBoostMs } from "@/lib/rooms/contribution";
+import { readContrib, readContribMany, recordThank, type ThankTarget } from "@/lib/server/contribStore";
+import { readSelfCheck } from "@/lib/server/selfCheckStore";
+import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 
 export const dynamic = "force-dynamic";
 
@@ -25,8 +30,25 @@ export const dynamic = "force-dynamic";
  * 사람 사이: 공개 프로필 보기, 사람 목록, 팔로우·언팔로우, 차단·풀기, 신고.
  * 프로필 보기만 로그인 없이도 되고(팔로우 여부는 false), 나머지는 로그인해야 한다.
  *
- * 공개 프로필에는 닉네임·자기소개·사진·가입 시기·숫자만 — 아이디·이메일은 내보내지 않는다.
+ * 공개 프로필에는 닉네임·자기소개·사진·가입 시기·숫자, 나에 대한 사실(칩), 켠 칸(기여·꾸준함·목표)만 —
+ * 아이디·이메일·학습 상태(실수·약점·레벨·문장)는 내보내지 않는다(hub/drafts/profile-2026-10-23.md).
+ *
+ * thank: "도움됐어요" — 질문한 사람만 그 답에(server/contribStore.ts findAnswerer).
  */
+
+const LANG = /^[a-z]{2}$/;
+
+/** 앱이 보낸 답 위치. 모양이 틀리면 null. */
+function thankTarget(body: Record<string, unknown>): ThankTarget | null {
+  const seq = typeof body.seq === "number" && Number.isInteger(body.seq) && body.seq >= 0 ? body.seq : null;
+  const id = (value: unknown) => (typeof value === "string" && /^[\w:.-]{1,80}$/.test(value) ? value : null);
+  if (body.kind === "room" && isRoomId(body.roomId) && seq !== null) return { kind: "room", roomId: body.roomId, seq };
+  if (body.kind === "dm" && id(body.threadId) && seq !== null) return { kind: "dm", threadId: id(body.threadId)!, seq };
+  if (body.kind === "board" && id(body.postId) && id(body.commentId)) {
+    return { kind: "board", postId: id(body.postId)!, commentId: id(body.commentId)! };
+  }
+  return null;
+}
 export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
 }
@@ -59,29 +81,68 @@ export async function POST(request: NextRequest) {
     const recent = (await recentPeople(200, Date.now() - PEOPLE_WINDOW_MS)).filter((row) => row.id !== me);
     const [mine, following] = await Promise.all([readBlocked(me), readFollowing(me)]);
     const candidates = recent.filter((row) => !mine.includes(row.id));
-    const [accounts, theirBlocks] = await Promise.all([
+    const [accounts, theirBlocks, contribs, meAccount] = await Promise.all([
       readAccounts(candidates.map((row) => row.id)),
       readBlockedMany(candidates.map((row) => row.id)),
+      readContribMany(candidates.map((row) => row.id)),
+      readAccount(me),
     ]);
-    const people: PersonCard[] = [];
+    const myInterests = factsOf(meAccount?.profile.facts).interests;
+    const now = Date.now();
+    // 정렬: 마지막으로 본 시각 + 기여 가산(최근 30일, 최대 6시간) + 관심사 겹침(하나에 20분, 최대 1시간).
+    // 14일 창은 그대로라 오래 안 온 사람이 기여만으로 위에 오지는 않는다.
+    const ranked: { card: PersonCard; rank: number }[] = [];
     candidates.forEach((row, index) => {
       const account = accounts.at(index);
       if (!account || account.profile.hidden === true) return;
       if (theirBlocks.at(index)?.includes(me)) return;
       const nickname = account.profile.nickname || account.username || "";
       if (!nickname) return;
-      people.push({
-        id: account.id,
-        nickname,
-        bio: Array.from(account.profile.bio).slice(0, 140).join(""),
-        hasPhoto: account.profile.hasPhoto,
-        ui: row.presence.ui,
-        learn: row.presence.learn,
-        lastSeen: row.presence.at,
-        isFollowing: following.includes(account.id),
+      const facts = factsOf(account.profile.facts);
+      const show = showOf(account.profile.show);
+      const contrib = contribs.at(index);
+      const shared = sharedInterests(myInterests, facts.interests);
+      const boost = contrib ? peopleBoostMs(contribScore(contrib, now)) : 0;
+      ranked.push({
+        rank: row.presence.at + boost + Math.min(shared, 3) * 20 * 60 * 1000,
+        card: {
+          id: account.id,
+          nickname,
+          bio: Array.from(account.profile.bio).slice(0, 140).join(""),
+          hasPhoto: account.profile.hasPhoto,
+          ui: row.presence.ui,
+          learn: row.presence.learn,
+          lastSeen: row.presence.at,
+          isFollowing: following.includes(account.id),
+          native: facts.native,
+          interests: facts.interests.slice(0, 3),
+          sharedInterests: shared,
+          ...(show.help && contrib && contrib.help > 0 ? { help: contrib.help } : {}),
+        },
       });
     });
-    return jsonWithCors(request, { people: people.slice(0, 60) });
+    ranked.sort((a, b) => b.rank - a.rank);
+    const people: PersonCard[] = ranked.slice(0, 60).map((row) => row.card);
+    return jsonWithCors(request, { people });
+  }
+
+  if (action === "thank") {
+    if (!me) return bad(request, "SIGNED_OUT", 401);
+    const stop = await suspendedResponse(request, me);
+    if (stop) return stop;
+    const target = thankTarget(body);
+    if (!target) return bad(request, "BAD_TARGET");
+    const result = await recordThank({
+      me,
+      target,
+      lang: typeof body.learn === "string" && LANG.test(body.learn) ? body.learn : null,
+      day: localDay(Date.now(), parseOffset(request.headers.get(TZ_OFFSET_HEADER))),
+    });
+    if ("error" in result) {
+      const status = result.error === "NOT_FOUND" ? 404 : result.error === "NOT_ASKER" ? 403 : 409;
+      return bad(request, result.error, status);
+    }
+    return jsonWithCors(request, result);
   }
 
   if (action === "mine") {
@@ -96,11 +157,16 @@ export async function POST(request: NextRequest) {
   if (action === "profile") {
     const account = await readAccount(target);
     if (!account) return bad(request, "NO_ACCOUNT", 404);
-    const [numbers, photo, following, blocked] = await Promise.all([
+    const show = showOf(account.profile.show);
+    const learn = typeof body.learn === "string" && LANG.test(body.learn) ? body.learn : null;
+    const [numbers, photo, following, blocked, contrib, check] = await Promise.all([
       counts(target),
       account.profile.hasPhoto ? readPhoto(target) : Promise.resolve(null),
       me ? readFollowing(me) : Promise.resolve([] as string[]),
       me ? readBlocked(me) : Promise.resolve([] as string[]),
+      readContrib(target),
+      // 목표 한 줄: 그 사람이 지금 배우는 언어(사람 목록에서 받은 learn)의 체크 답.
+      show.goal && learn ? readSelfCheck(account.dataUserId, learn) : Promise.resolve(null),
     ]);
     const profile: PublicProfile = {
       id: account.id,
@@ -112,6 +178,10 @@ export async function POST(request: NextRequest) {
       isMe: me === target,
       isFollowing: following.includes(target),
       blockedByMe: blocked.includes(target),
+      facts: factsOf(account.profile.facts),
+      badges: badgesFor(contrib, show, localDay(Date.now(), null)),
+      ...(check && learn ? { goal: { language: learn, use: check.use ?? null, focus: check.focus } } : {}),
+      ...(me === target ? { show } : {}),
     };
     return jsonWithCors(request, { profile });
   }

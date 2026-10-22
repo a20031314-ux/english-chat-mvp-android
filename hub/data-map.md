@@ -65,6 +65,7 @@
 | 포인트 | `points:rpcarry` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 통화 남은 초 이월(월별) | `entitlementStore.ts` |
 | 포인트 | `points:rplast` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 마지막 통화 차감 | `entitlementStore.ts` |
 | 포인트 | `points:rpsession` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 통화 세션별 차감 | `entitlementStore.ts` |
+| 프로필 기여·꾸준함 | `contrib:v1` | 계정 | 120일 · 2일 · 400일 | 지움(요약, 나머지 중복 막기 표시는 2~120일 기한) | 받은 도움됐어요 수·언어별 수·반영된 의견 수·최근 30일 기록(시각·무게)·도움됐어요를 준 계정과 시각·공부한 날 — 문장·질문 내용 없음 | `contribStore.ts` |
 | 학습 지표 | `lm:asr` | 학습자 한 명 | 5분 | 지움(주 1회 정리) | 받아쓰기 확신도를 턴과 잇는 잠깐의 기록 | `learnerMetrics.ts` |
 | 학습 지표 | `lm:events` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 턴마다 잰 값(말 없이, 월별) | `learnerMetrics.ts` |
 | 학습 지표 | `lm:lastturn` | 학습자 한 명 | 1시간 | 해당 없음 | 세션의 마지막 턴 시각 | `learnerMetrics.ts` |
