@@ -570,7 +570,16 @@
     "stageGoalTitle": "この部分を終えると",
     "stageProgress": "表現 {n}/{total}",
     "stageCanDo": "できるようになること",
-    "stageNext": "次の部分で新しい地図"
+    "stageNext": "次の部分で新しい地図",
+    "stageGrammarTitle": "この部分の文法",
+    "stageTry": "使ってみる",
+    "scriptEntry": "まずは文字と音",
+    "scriptStart": "練習する",
+    "scriptListen": "音を聞く",
+    "scriptPassed": "合格です",
+    "scriptAgain": "まだです — もう一度",
+    "scriptRetry": "もう一度",
+    "scriptBackToList": "一覧へ"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1143,7 +1152,16 @@
     "stageGoalTitle": "完成这一部分后",
     "stageProgress": "表达 {n}/{total}",
     "stageCanDo": "将能做到的事",
-    "stageNext": "下一部分的新地图"
+    "stageNext": "下一部分的新地图",
+    "stageGrammarTitle": "这一部分的语法",
+    "stageTry": "试一试",
+    "scriptEntry": "先学字母和发音",
+    "scriptStart": "练习",
+    "scriptListen": "听发音",
+    "scriptPassed": "通过了",
+    "scriptAgain": "还没有——再来一次",
+    "scriptRetry": "再来",
+    "scriptBackToList": "返回列表"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1718,7 +1736,16 @@
     "stageGoalTitle": "Khi xong phần này",
     "stageProgress": "{n}/{total} cách diễn đạt",
     "stageCanDo": "Những gì bạn sẽ làm được",
-    "stageNext": "Bản đồ mới cho phần tiếp theo"
+    "stageNext": "Bản đồ mới cho phần tiếp theo",
+    "stageGrammarTitle": "Ngữ pháp phần này",
+    "stageTry": "Thử dùng",
+    "scriptEntry": "Chữ và âm trước",
+    "scriptStart": "Luyện tập",
+    "scriptListen": "Nghe âm",
+    "scriptPassed": "Đã qua",
+    "scriptAgain": "Chưa — thử lại nhé",
+    "scriptRetry": "Làm lại",
+    "scriptBackToList": "Về danh sách"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2298,7 +2325,16 @@
     "stageGoalTitle": "À la fin de cette partie",
     "stageProgress": "{n}/{total} expressions",
     "stageCanDo": "Ce que tu sauras faire",
-    "stageNext": "Nouvelle carte pour la partie suivante"
+    "stageNext": "Nouvelle carte pour la partie suivante",
+    "stageGrammarTitle": "Grammaire de cette partie",
+    "stageTry": "Essayer",
+    "scriptEntry": "D'abord les lettres et les sons",
+    "scriptStart": "S'entraîner",
+    "scriptListen": "Écouter",
+    "scriptPassed": "Réussi",
+    "scriptAgain": "Pas encore — encore une fois",
+    "scriptRetry": "Recommencer",
+    "scriptBackToList": "Retour à la liste"
   },
   "it": {
     "archive": "Report",
@@ -3069,7 +3105,16 @@
     "stageGoalTitle": "Finita questa parte",
     "stageProgress": "{n}/{total} espressioni",
     "stageCanDo": "Cosa saprai fare",
-    "stageNext": "Nuova mappa per la parte successiva"
+    "stageNext": "Nuova mappa per la parte successiva",
+    "stageGrammarTitle": "Grammatica di questa parte",
+    "stageTry": "Prova",
+    "scriptEntry": "Prima lettere e suoni",
+    "scriptStart": "Esercitati",
+    "scriptListen": "Ascolta",
+    "scriptPassed": "Superato",
+    "scriptAgain": "Non ancora — ancora una volta",
+    "scriptRetry": "Di nuovo",
+    "scriptBackToList": "Torna all'elenco"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3652,7 +3697,16 @@
     "stageGoalTitle": "Ao terminar esta parte",
     "stageProgress": "{n}/{total} expressões",
     "stageCanDo": "O que você vai conseguir fazer",
-    "stageNext": "Novo mapa para a próxima parte"
+    "stageNext": "Novo mapa para a próxima parte",
+    "stageGrammarTitle": "Gramática desta parte",
+    "stageTry": "Experimentar",
+    "scriptEntry": "Primeiro letras e sons",
+    "scriptStart": "Praticar",
+    "scriptListen": "Ouvir",
+    "scriptPassed": "Passou",
+    "scriptAgain": "Ainda não — mais uma vez",
+    "scriptRetry": "De novo",
+    "scriptBackToList": "Voltar à lista"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4421,7 +4475,16 @@
     "stageGoalTitle": "Когда закончите эту часть",
     "stageProgress": "Выражения {n}/{total}",
     "stageCanDo": "Что вы сможете",
-    "stageNext": "Новая карта для следующей части"
+    "stageNext": "Новая карта для следующей части",
+    "stageGrammarTitle": "Грамматика этой части",
+    "stageTry": "Попробовать",
+    "scriptEntry": "Сначала буквы и звуки",
+    "scriptStart": "Тренироваться",
+    "scriptListen": "Послушать",
+    "scriptPassed": "Пройдено",
+    "scriptAgain": "Пока нет — ещё раз",
+    "scriptRetry": "Ещё раз",
+    "scriptBackToList": "К списку"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5000,7 +5063,16 @@
     "stageGoalTitle": "Setelah bagian ini selesai",
     "stageProgress": "{n}/{total} ungkapan",
     "stageCanDo": "Yang akan bisa kamu lakukan",
-    "stageNext": "Peta baru untuk bagian berikutnya"
+    "stageNext": "Peta baru untuk bagian berikutnya",
+    "stageGrammarTitle": "Tata bahasa bagian ini",
+    "stageTry": "Coba",
+    "scriptEntry": "Huruf dan bunyi dulu",
+    "scriptStart": "Latihan",
+    "scriptListen": "Dengar bunyi",
+    "scriptPassed": "Lulus",
+    "scriptAgain": "Belum — coba sekali lagi",
+    "scriptRetry": "Ulangi",
+    "scriptBackToList": "Kembali ke daftar"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5573,7 +5645,16 @@
     "stageGoalTitle": "عند إنهاء هذا الجزء",
     "stageProgress": "التعبيرات {n}/{total}",
     "stageCanDo": "ما ستتمكن من فعله",
-    "stageNext": "خريطة جديدة للجزء التالي"
+    "stageNext": "خريطة جديدة للجزء التالي",
+    "stageGrammarTitle": "قواعد هذا الجزء",
+    "stageTry": "جرّب",
+    "scriptEntry": "الحروف والأصوات أولًا",
+    "scriptStart": "تدرّب",
+    "scriptListen": "استمع",
+    "scriptPassed": "نجحت",
+    "scriptAgain": "ليس بعد — مرة أخرى",
+    "scriptRetry": "مرة أخرى",
+    "scriptBackToList": "العودة إلى القائمة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6146,7 +6227,16 @@
     "stageGoalTitle": "เมื่อจบส่วนนี้",
     "stageProgress": "สำนวน {n}/{total}",
     "stageCanDo": "สิ่งที่คุณจะทำได้",
-    "stageNext": "แผนที่ใหม่สำหรับส่วนถัดไป"
+    "stageNext": "แผนที่ใหม่สำหรับส่วนถัดไป",
+    "stageGrammarTitle": "ไวยากรณ์ของส่วนนี้",
+    "stageTry": "ลองใช้",
+    "scriptEntry": "เริ่มจากตัวอักษรและเสียง",
+    "scriptStart": "ฝึก",
+    "scriptListen": "ฟังเสียง",
+    "scriptPassed": "ผ่านแล้ว",
+    "scriptAgain": "ยังไม่ผ่าน ลองอีกครั้ง",
+    "scriptRetry": "อีกครั้ง",
+    "scriptBackToList": "กลับไปที่รายการ"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -6719,6 +6809,15 @@
     "stageGoalTitle": "यह हिस्सा पूरा होने पर",
     "stageProgress": "अभिव्यक्तियाँ {n}/{total}",
     "stageCanDo": "आप क्या कर पाएँगे",
-    "stageNext": "अगले हिस्से के लिए नया नक्शा"
+    "stageNext": "अगले हिस्से के लिए नया नक्शा",
+    "stageGrammarTitle": "इस हिस्से का व्याकरण",
+    "stageTry": "आज़माएँ",
+    "scriptEntry": "पहले अक्षर और ध्वनियाँ",
+    "scriptStart": "अभ्यास करें",
+    "scriptListen": "आवाज़ सुनें",
+    "scriptPassed": "पास हो गए",
+    "scriptAgain": "अभी नहीं — एक बार और",
+    "scriptRetry": "फिर से",
+    "scriptBackToList": "सूची पर वापस"
   }
 }

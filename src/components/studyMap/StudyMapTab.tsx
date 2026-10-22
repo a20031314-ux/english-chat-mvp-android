@@ -254,6 +254,7 @@ export function StudyMapTab({
           <>
             <GoalForm
               ui={ui}
+              locale={locale}
               targetLanguage={targetLanguage}
               isPremium={isPremium}
               drawing={drawing}
@@ -310,6 +311,7 @@ export function StudyMapTab({
                       ui={ui}
                       stage={mapStage}
                       current={stagesData?.current?.stageId === mapStage.id ? stagesData.current : null}
+                      script={{ targetLanguage, locale, isPremium }}
                       onNext={() => {
                         const next = stages?.find((stage) => stage.order === mapStage.order + 1);
                         setStartStage(next?.id ?? null);
@@ -416,6 +418,7 @@ type SelfCheckAnswer = { gaps: GapId[]; focus: FocusId[]; use?: UseId; stage?: s
  */
 function GoalForm({
   ui,
+  locale,
   targetLanguage,
   isPremium,
   drawing,
@@ -430,6 +433,7 @@ function GoalForm({
   onRestore,
 }: {
   ui: UICopy;
+  locale: string;
   targetLanguage: string;
   isPremium: boolean;
   drawing: boolean;
@@ -522,7 +526,7 @@ function GoalForm({
       }}
     >
       {stages?.length ? (
-        <StagePicker ui={ui} stages={stages} chosen={stageOk ? stage : null} onChoose={setStage} disabled={drawing} />
+        <StagePicker ui={ui} stages={stages} chosen={stageOk ? stage : null} onChoose={setStage} disabled={drawing} script={{ targetLanguage, locale, isPremium }} />
       ) : null}
       <fieldset className="flex flex-col gap-2" disabled={drawing}>
         <legend className="text-[15px] font-semibold text-slate-100">{ui.selfGapsTitle}</legend>

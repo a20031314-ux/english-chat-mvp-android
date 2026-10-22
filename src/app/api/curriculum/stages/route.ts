@@ -5,6 +5,8 @@ import { isIdentified } from "@/lib/server/identity";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { readSelfCheck } from "@/lib/server/selfCheckStore";
 import { readLedger } from "@/lib/server/ledgerStore";
+import { readLearnerProfile } from "@/lib/server/learnerProfileStore";
+import { statusOf } from "@/lib/learner/profile";
 import { stageViews } from "@/lib/server/stageCopy";
 import { STAGE_DONE_SHARE, stageById, stageProgress } from "@/lib/curriculum/stages";
 import { INTERFACE_LANGUAGE_LABELS, coerceLanguageCode } from "@/lib/learningLanguages";
@@ -17,7 +19,7 @@ export const maxDuration = 60;
  *
  * GET ?lang=<학습 언어>&ui=<앱 언어>
  *   { stages: StageView[] | null,                     — 범위가 없는 학습 언어는 null(예전 체크 그대로)
- *     current: { stageId, mastered, learned, total, share, done } | null }
+ *     current: { stageId, mastered, learned, total, share, done, grammarMastered } | null }
  *                                                     — 고른 단계와 표현 장부로 잰 진행(본인 것만)
  * 화면 글은 영어·한국어는 손으로 쓴 것, 다른 앱 언어는 처음 한 번 옮겨 저장(server/stageCopy.ts).
  */
@@ -41,6 +43,10 @@ export async function GET(request: NextRequest) {
     const stage = stageById(check?.stage);
     if (stage && stage.id.startsWith(`${language}-`)) {
       const progress = stageProgress(stage, await readLedger(userId, language));
+      // 영어 문법은 채팅 문장으로 숙지를 잰다(learner/constructions.ts) — 단계 문법 카드에 표시.
+      const constructionIds = stage.grammar.map((g) => g.constructionId).filter((id): id is string => Boolean(id));
+      const profile = constructionIds.length ? await readLearnerProfile(userId, language).catch(() => null) : null;
+      const grammarMastered = profile ? constructionIds.filter((id) => statusOf(profile.entries[id]) === "mastered") : [];
       current = {
         stageId: stage.id,
         mastered: progress.mastered,
@@ -48,6 +54,7 @@ export async function GET(request: NextRequest) {
         total: progress.total,
         share: Math.round(progress.share * 100) / 100,
         done: progress.share >= STAGE_DONE_SHARE,
+        grammarMastered,
       };
     }
   }

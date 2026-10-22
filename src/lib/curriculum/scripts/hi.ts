@@ -1,0 +1,211 @@
+import type { ScriptCourse } from "./types.ts";
+
+/** 힌디어 글자 기초: 데바나가리 모음·모음 기호(마트라)·자음 줄·유기음·권설음·콧소리·결합 자음. */
+export const HI_SCRIPT: ScriptCourse = {
+  language: "hi",
+  version: 1,
+  title: { en: "Devanagari letters and sounds", ko: "데바나가리 글자와 소리" },
+  groups: [
+    {
+      id: "hi-vowel-1",
+      title: { en: "Vowels (standalone)", ko: "모음 (홀로 쓰는 꼴)" },
+      note: {
+        en: "These forms are used at the start of a word. Short and long pairs (इ/ई, उ/ऊ) differ only in length.",
+        ko: "낱말 첫머리에 쓰는 꼴이다. 짧은 것과 긴 것(इ/ई, उ/ऊ)은 길이만 다르다.",
+      },
+      items: [
+        { char: "अ", reading: "a (short, like 'uh')", say: "अ", example: { word: "अनार", meaning: { en: "pomegranate", ko: "석류" } } },
+        { char: "आ", reading: "aa (long)", say: "आ", example: { word: "आम", meaning: { en: "mango", ko: "망고" } } },
+        { char: "इ", reading: "i (short)", say: "इ", example: { word: "इमली", meaning: { en: "tamarind", ko: "타마린드" } } },
+        { char: "ई", reading: "ii (long)", say: "ई", example: { word: "ईंट", meaning: { en: "brick", ko: "벽돌" } } },
+        { char: "उ", reading: "u (short)", say: "उ", example: { word: "उल्लू", meaning: { en: "owl", ko: "부엉이" } } },
+        { char: "ऊ", reading: "uu (long)", say: "ऊ", example: { word: "ऊन", meaning: { en: "wool", ko: "양털" } } },
+        { char: "ए", reading: "e", say: "ए", example: { word: "एक", meaning: { en: "one", ko: "하나" } } },
+        { char: "ऐ", reading: "ai (like 'ae')", say: "ऐ", example: { word: "ऐनक", meaning: { en: "glasses", ko: "안경" } } },
+        { char: "ओ", reading: "o", say: "ओ", example: { word: "ओस", meaning: { en: "dew", ko: "이슬" } } },
+        { char: "औ", reading: "au (like 'aw')", say: "औ", example: { word: "औरत", meaning: { en: "woman", ko: "여자" } } },
+      ],
+    },
+    {
+      id: "hi-matra-1",
+      title: { en: "Vowel signs on a consonant (matras)", ko: "자음에 붙는 모음 기호 (마트라)" },
+      note: {
+        en: "After a consonant a vowel is written as a sign. A bare consonant already has 'a': क = ka. Note ि is written before the letter but said after it.",
+        ko: "자음 뒤 모음은 기호로 붙인다. 기호 없는 자음엔 이미 'a'가 있다: क = ka. ि는 글자 앞에 쓰지만 소리는 뒤에 난다.",
+      },
+      items: [
+        { char: "का", reading: "kaa", say: "का", example: { word: "काम", meaning: { en: "work", ko: "일" } } },
+        { char: "कि", reading: "ki", say: "कि", example: { word: "किताब", meaning: { en: "book", ko: "책" } } },
+        { char: "की", reading: "kii", say: "की", example: { word: "कीड़ा", meaning: { en: "insect", ko: "벌레" } } },
+        { char: "कु", reading: "ku", say: "कु", example: { word: "कुत्ता", meaning: { en: "dog", ko: "개" } } },
+        { char: "कू", reading: "kuu", say: "कू", example: { word: "कूदना", meaning: { en: "to jump", ko: "뛰다" } } },
+        { char: "के", reading: "ke", say: "के", example: { word: "केला", meaning: { en: "banana", ko: "바나나" } } },
+        { char: "कै", reading: "kai (kae)", say: "कै", example: { word: "कैसे", meaning: { en: "how", ko: "어떻게" } } },
+        { char: "को", reading: "ko", say: "को", example: { word: "कोट", meaning: { en: "coat", ko: "코트" } } },
+        { char: "कौ", reading: "kau (kaw)", say: "कौ", example: { word: "कौआ", meaning: { en: "crow", ko: "까마귀" } } },
+        { char: "कृ", reading: "kri", say: "कृ", example: { word: "कृपया", meaning: { en: "please", ko: "부디, 제발" } } },
+      ],
+    },
+    {
+      id: "hi-cons-1",
+      title: { en: "Consonants: क and च rows", ko: "자음: क 줄과 च 줄" },
+      note: {
+        en: "Each row goes plain, breathy (h), voiced, voiced breathy: क ka, ख kha, ग ga, घ gha.",
+        ko: "한 줄은 보통 → 숨 섞임(h) → 울림 → 울림+숨 순서다: क ka, ख kha, ग ga, घ gha.",
+      },
+      items: [
+        { char: "क", reading: "ka", say: "क", example: { word: "कमरा", meaning: { en: "room", ko: "방" } } },
+        { char: "ख", reading: "kha", say: "ख", example: { word: "खाना", meaning: { en: "food", ko: "음식" } } },
+        { char: "ग", reading: "ga", say: "ग", example: { word: "गाय", meaning: { en: "cow", ko: "소" } } },
+        { char: "घ", reading: "gha", say: "घ", example: { word: "घर", meaning: { en: "house", ko: "집" } } },
+        { char: "च", reading: "cha", say: "च", example: { word: "चाय", meaning: { en: "tea", ko: "차" } } },
+        { char: "छ", reading: "chha", say: "छ", example: { word: "छाता", meaning: { en: "umbrella", ko: "우산" } } },
+        { char: "ज", reading: "ja", say: "ज", example: { word: "जूता", meaning: { en: "shoe", ko: "신발" } } },
+        { char: "झ", reading: "jha", say: "झ", example: { word: "झंडा", meaning: { en: "flag", ko: "깃발" } } },
+      ],
+    },
+    {
+      id: "hi-cons-2",
+      title: { en: "Consonants: ट row (tongue curled back)", ko: "자음: ट 줄 (혀를 뒤로 만다)" },
+      note: {
+        en: "Curl the tongue tip back to the roof of the mouth for this whole row.",
+        ko: "이 줄은 모두 혀끝을 입천장 쪽으로 말아 올려 낸다.",
+      },
+      items: [
+        { char: "ट", reading: "ṭa (curled t)", say: "ट", example: { word: "टमाटर", meaning: { en: "tomato", ko: "토마토" } } },
+        { char: "ठ", reading: "ṭha", say: "ठ", example: { word: "ठंडा", meaning: { en: "cold", ko: "차가운" } } },
+        { char: "ड", reading: "ḍa (curled d)", say: "ड", example: { word: "डिब्बा", meaning: { en: "box", ko: "상자" } } },
+        { char: "ढ", reading: "ḍha", say: "ढ", example: { word: "ढोल", meaning: { en: "drum", ko: "북" } } },
+        { char: "ण", reading: "ṇa (curled n)", say: "ण", example: { word: "गणित", meaning: { en: "maths", ko: "수학" } } },
+      ],
+    },
+    {
+      id: "hi-cons-3",
+      title: { en: "Consonants: त row (tongue on the teeth)", ko: "자음: त 줄 (혀끝을 이에 댄다)" },
+      note: {
+        en: "Touch the back of the upper teeth with the tongue tip. थ and ध are not the English 'th'.",
+        ko: "혀끝을 윗니 뒤에 댄다. थ·ध는 영어 'th' 소리가 아니다.",
+      },
+      items: [
+        { char: "त", reading: "ta (on teeth)", say: "त", example: { word: "तारा", meaning: { en: "star", ko: "별" } } },
+        { char: "थ", reading: "tha", say: "थ", example: { word: "थाली", meaning: { en: "plate", ko: "접시" } } },
+        { char: "द", reading: "da (on teeth)", say: "द", example: { word: "दाल", meaning: { en: "lentils", ko: "렌틸콩 요리" } } },
+        { char: "ध", reading: "dha", say: "ध", example: { word: "धन्यवाद", meaning: { en: "thank you", ko: "고맙습니다" } } },
+        { char: "न", reading: "na", say: "न", example: { word: "नाम", meaning: { en: "name", ko: "이름" } } },
+      ],
+    },
+    {
+      id: "hi-cons-4",
+      title: { en: "Consonants: प row (lips)", ko: "자음: प 줄 (입술)" },
+      items: [
+        { char: "प", reading: "pa", say: "प", example: { word: "पानी", meaning: { en: "water", ko: "물" } } },
+        { char: "फ", reading: "pha", say: "फ", example: { word: "फल", meaning: { en: "fruit", ko: "과일" } } },
+        { char: "ब", reading: "ba", say: "ब", example: { word: "बस", meaning: { en: "bus", ko: "버스" } } },
+        { char: "भ", reading: "bha", say: "भ", example: { word: "भाई", meaning: { en: "brother", ko: "형제" } } },
+        { char: "म", reading: "ma", say: "म", example: { word: "माँ", meaning: { en: "mother", ko: "엄마" } } },
+      ],
+    },
+    {
+      id: "hi-cons-5",
+      title: { en: "Consonants: य र ल व and श ष स ह", ko: "자음: य र ल व 와 श ष स ह" },
+      note: {
+        en: "श and ष both sound 'sh' in everyday Hindi. व is between v and w.",
+        ko: "श와 ष는 일상 힌디어에서 둘 다 'sh'로 난다. व는 v와 w 사이 소리다.",
+      },
+      items: [
+        { char: "य", reading: "ya", say: "य", example: { word: "याद", meaning: { en: "memory", ko: "기억" } } },
+        { char: "र", reading: "ra (tapped r)", say: "र", example: { word: "रात", meaning: { en: "night", ko: "밤" } } },
+        { char: "ल", reading: "la", say: "ल", example: { word: "लाल", meaning: { en: "red", ko: "빨간" } } },
+        { char: "व", reading: "va / wa", say: "व", example: { word: "वह", meaning: { en: "that, he, she", ko: "그것, 그 사람" } } },
+        { char: "श", reading: "sha", say: "श", example: { word: "शहर", meaning: { en: "city", ko: "도시" } } },
+        { char: "ष", reading: "sha", say: "ष", example: { word: "भाषा", meaning: { en: "language", ko: "언어" } } },
+        { char: "स", reading: "sa", say: "स", example: { word: "सात", meaning: { en: "seven", ko: "일곱" } } },
+        { char: "ह", reading: "ha", say: "ह", example: { word: "हाथ", meaning: { en: "hand", ko: "손" } } },
+      ],
+    },
+    {
+      id: "hi-dot-1",
+      title: { en: "Letters with a dot below", ko: "아래에 점이 붙은 글자" },
+      note: {
+        en: "A dot below changes the sound: ड़ and ढ़ are a quick flap of the curled tongue; ज़ फ़ ख़ are z, f and a throaty kh.",
+        ko: "아래 점은 소리를 바꾼다: ड़·ढ़는 만 혀를 튕기는 소리, ज़·फ़·ख़는 z·f·목에서 긁는 kh.",
+      },
+      items: [
+        { char: "ड़", reading: "ṛa (flap)", say: "लड़का", example: { word: "लड़का", meaning: { en: "boy", ko: "소년" } } },
+        { char: "ढ़", reading: "ṛha (breathy flap)", say: "पढ़ना", example: { word: "पढ़ना", meaning: { en: "to read, to study", ko: "읽다, 공부하다" } } },
+        { char: "ज़", reading: "za", say: "ज़रूर", example: { word: "ज़रूर", meaning: { en: "surely", ko: "꼭, 물론" } } },
+        { char: "फ़", reading: "fa", say: "फ़ोन", example: { word: "फ़ोन", meaning: { en: "phone", ko: "전화" } } },
+        { char: "ख़", reading: "kha (throaty, like German 'ch')", say: "ख़ुश", example: { word: "ख़ुश", meaning: { en: "happy", ko: "기쁜" } } },
+      ],
+    },
+    {
+      id: "hi-asp-1",
+      title: { en: "With and without a puff of air", ko: "숨을 내느냐 안 내느냐 (유기음)" },
+      note: {
+        en: "The letter with h is said with a puff of air; the other has none. The difference changes the word.",
+        ko: "h가 붙은 글자는 숨을 훅 내고, 다른 쪽은 숨 없이 낸다. 이 차이로 낱말이 바뀐다.",
+      },
+      items: [
+        { char: "क · ख", reading: "ka · kha", say: "काना, खाना", example: { word: "खाना", meaning: { en: "food", ko: "음식" } } },
+        { char: "ग · घ", reading: "ga · gha", say: "गाना, घर", example: { word: "गाना", meaning: { en: "song", ko: "노래" } } },
+        { char: "च · छ", reading: "cha · chha", say: "चार, छह", example: { word: "छह", meaning: { en: "six", ko: "여섯" } } },
+        { char: "ज · झ", reading: "ja · jha", say: "जल, झील", example: { word: "झील", meaning: { en: "lake", ko: "호수" } } },
+        { char: "त · थ", reading: "ta · tha", say: "तीन, थाली", example: { word: "तीन", meaning: { en: "three", ko: "셋" } } },
+        { char: "द · ध", reading: "da · dha", say: "दान, धान", example: { word: "धान", meaning: { en: "rice paddy", ko: "벼" } } },
+        { char: "प · फ", reading: "pa · pha", say: "पल, फल", example: { word: "पल", meaning: { en: "moment", ko: "순간" } } },
+        { char: "ब · भ", reading: "ba · bha", say: "बार, भार", example: { word: "भार", meaning: { en: "weight", ko: "무게" } } },
+      ],
+    },
+    {
+      id: "hi-retro-1",
+      title: { en: "Curled tongue vs tongue on teeth", ko: "혀 말기(권설음)와 혀를 이에 대기(치음)" },
+      note: {
+        en: "The first of each pair curls the tongue back; the second touches the teeth. Korean ㄷ/ㅌ sits between them.",
+        ko: "각 쌍의 앞 글자는 혀를 뒤로 말고, 뒤 글자는 혀끝을 이에 댄다. 한국어 ㄷ·ㅌ은 둘의 중간쯤이다.",
+      },
+      items: [
+        { char: "ट · त", reading: "ṭa · ta", say: "टोपी, तोता", example: { word: "टोपी", meaning: { en: "cap", ko: "모자" } } },
+        { char: "ठ · थ", reading: "ṭha · tha", say: "ठीक, थका", example: { word: "ठीक", meaning: { en: "fine, okay", ko: "괜찮은" } } },
+        { char: "ड · द", reading: "ḍa · da", say: "डाल, दाल", example: { word: "डाल", meaning: { en: "branch", ko: "나뭇가지" } } },
+        { char: "ढ · ध", reading: "ḍha · dha", say: "ढोल, धोबी", example: { word: "धोबी", meaning: { en: "washerman", ko: "세탁부" } } },
+        { char: "ण · न", reading: "ṇa · na", say: "गणित, नाम", example: { word: "नाम", meaning: { en: "name", ko: "이름" } } },
+      ],
+    },
+    {
+      id: "hi-nasal-1",
+      title: { en: "Nasal sounds: ं and ँ", ko: "콧소리: ं 와 ँ" },
+      note: {
+        en: "ँ (moon-dot) makes the vowel nasal without a full n. ं (dot) is also used for this, and before a consonant it sounds like n or m.",
+        ko: "ँ(달 점)는 n을 따로 내지 않고 모음을 콧소리로 만든다. ं(점)도 같은 일을 하고, 자음 앞에서는 n이나 m처럼 난다.",
+      },
+      items: [
+        { char: "हाँ", reading: "haa (nasal)", say: "हाँ", example: { word: "हाँ", meaning: { en: "yes", ko: "네" } } },
+        { char: "हूँ", reading: "huu (nasal)", say: "हूँ", example: { word: "मैं ठीक हूँ", meaning: { en: "I'm fine", ko: "저는 괜찮아요" } } },
+        { char: "माँ", reading: "maa (nasal)", say: "माँ", example: { word: "माँ", meaning: { en: "mother", ko: "엄마" } } },
+        { char: "गाँव", reading: "gaav (nasal aa)", say: "गाँव", example: { word: "गाँव", meaning: { en: "village", ko: "마을" } } },
+        { char: "में", reading: "me (nasal)", say: "में", example: { word: "घर में", meaning: { en: "at home", ko: "집에" } } },
+        { char: "नहीं", reading: "nahii (nasal)", say: "नहीं", example: { word: "नहीं", meaning: { en: "no, not", ko: "아니요" } } },
+        { char: "हिंदी", reading: "hindii (ं = n)", say: "हिंदी", example: { word: "हिंदी", meaning: { en: "Hindi", ko: "힌디어" } } },
+        { char: "अंगूर", reading: "anguur (ं = n)", say: "अंगूर", example: { word: "अंगूर", meaning: { en: "grapes", ko: "포도" } } },
+      ],
+    },
+    {
+      id: "hi-conj-1",
+      title: { en: "Halant and joined consonants", ko: "할란트(्)와 붙은 자음" },
+      note: {
+        en: "् (halant) removes the built-in 'a'. Two consonants with no vowel between them are often joined into one shape.",
+        ko: "्(할란트)는 자음에 든 'a'를 없앤다. 사이에 모음이 없는 두 자음은 흔히 한 모양으로 붙여 쓴다.",
+      },
+      items: [
+        { char: "क्", reading: "k (no vowel)", say: "पक्का", example: { word: "पक्का", meaning: { en: "sure, certain", ko: "확실한" } } },
+        { char: "स्त", reading: "sta", say: "नमस्ते", example: { word: "नमस्ते", meaning: { en: "hello", ko: "안녕하세요" } } },
+        { char: "प्र", reading: "pra", say: "प्रेम", example: { word: "प्रेम", meaning: { en: "love", ko: "사랑" } } },
+        { char: "र्म", reading: "rma (र above = r)", say: "गर्म", example: { word: "गर्म", meaning: { en: "hot", ko: "뜨거운" } } },
+        { char: "क्ष", reading: "ksha (k + sh)", say: "कक्षा", example: { word: "कक्षा", meaning: { en: "class, classroom", ko: "교실, 학급" } } },
+        { char: "त्र", reading: "tra (t + r)", say: "मित्र", example: { word: "मित्र", meaning: { en: "friend", ko: "친구" } } },
+        { char: "ज्ञ", reading: "gya (said 'gya' in Hindi)", say: "ज्ञान", example: { word: "ज्ञान", meaning: { en: "knowledge", ko: "지식" } } },
+        { char: "श्र", reading: "shra (sh + r)", say: "विश्राम", example: { word: "विश्राम", meaning: { en: "rest", ko: "휴식" } } },
+      ],
+    },
+  ],
+};

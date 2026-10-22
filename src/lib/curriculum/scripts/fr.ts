@@ -1,0 +1,172 @@
+import type { ScriptCourse } from "./types.ts";
+
+/** 프랑스어 글자·소리 기초: 철자-발음 규칙(모음·모음 묶음·비모음·자음·끝 글자·연음). */
+export const FR_SCRIPT: ScriptCourse = {
+  language: "fr",
+  version: 1,
+  title: { en: "French spelling and sounds", ko: "프랑스어 철자와 소리" },
+  groups: [
+    {
+      id: "fr-vow-1",
+      title: { en: "Single vowels", ko: "모음 한 글자" },
+      note: {
+        en: "An e at the end of a word is usually silent: table sounds like 'tabl'.",
+        ko: "낱말 끝의 e는 보통 소리 나지 않는다: table은 '타블'.",
+      },
+      items: [
+        { char: "a", reading: "a", say: "papa", example: { word: "papa", meaning: { en: "dad", ko: "아빠" } } },
+        { char: "e", reading: "eu (short, relaxed)", say: "le", example: { word: "le", meaning: { en: "the", ko: "그 (정관사)" } } },
+        { char: "i", reading: "i", say: "lit", example: { word: "lit", meaning: { en: "bed", ko: "침대" } } },
+        { char: "o", reading: "o", say: "moto", example: { word: "moto", meaning: { en: "motorbike", ko: "오토바이" } } },
+        { char: "u", reading: "ü (say i with rounded lips)", say: "tu", example: { word: "tu", meaning: { en: "you", ko: "너" } } },
+        { char: "y", reading: "i", say: "stylo", example: { word: "stylo", meaning: { en: "pen", ko: "펜" } } },
+        { char: "-e (end)", reading: "silent", say: "table", example: { word: "table", meaning: { en: "table", ko: "탁자" } } },
+      ],
+    },
+    {
+      id: "fr-acc-2",
+      title: { en: "Accents", ko: "악센트 기호" },
+      note: {
+        en: "é is a closed 'e', è and ê an open 'e'. ç is always 's'. The other accents rarely change the sound.",
+        ko: "é는 입을 좁힌 '에', è·ê는 입을 벌린 '에'. ç는 언제나 's'. 나머지 기호는 소리를 거의 바꾸지 않는다.",
+      },
+      items: [
+        { char: "é", reading: "e (closed)", say: "café", example: { word: "café", meaning: { en: "coffee", ko: "커피" } } },
+        { char: "è", reading: "è (open e)", say: "mère", example: { word: "mère", meaning: { en: "mother", ko: "어머니" } } },
+        { char: "ê", reading: "è (open e)", say: "tête", example: { word: "tête", meaning: { en: "head", ko: "머리" } } },
+        { char: "à", reading: "a", say: "voilà", example: { word: "voilà", meaning: { en: "here it is", ko: "여기 있어요" } } },
+        { char: "ù", reading: "u (as in ou)", say: "où", example: { word: "où", meaning: { en: "where", ko: "어디" } } },
+        { char: "ç", reading: "s", say: "ça", example: { word: "ça", meaning: { en: "that", ko: "그것" } } },
+        { char: "ô", reading: "o", say: "hôtel", example: { word: "hôtel", meaning: { en: "hotel", ko: "호텔" } } },
+        { char: "î", reading: "i", say: "île", example: { word: "île", meaning: { en: "island", ko: "섬" } } },
+        { char: "ë", reading: "è (said on its own)", say: "Noël", example: { word: "Noël", meaning: { en: "Christmas", ko: "크리스마스" } } },
+      ],
+    },
+    {
+      id: "fr-comb-3",
+      title: { en: "Vowel combinations", ko: "모음 묶음" },
+      note: {
+        en: "Two or three vowel letters together usually make one sound: eau is just 'o'.",
+        ko: "모음 글자 두세 개가 모이면 보통 소리 하나: eau는 그냥 '오'.",
+      },
+      items: [
+        { char: "ou", reading: "u", say: "vous", example: { word: "vous", meaning: { en: "you (polite)", ko: "당신" } } },
+        { char: "eu", reading: "ö (say e with rounded lips)", say: "deux", example: { word: "deux", meaning: { en: "two", ko: "둘" } } },
+        { char: "œu", reading: "ö (open)", say: "sœur", example: { word: "sœur", meaning: { en: "sister", ko: "자매" } } },
+        { char: "oi", reading: "wa", say: "moi", example: { word: "moi", meaning: { en: "me", ko: "나" } } },
+        { char: "au", reading: "o", say: "jaune", example: { word: "jaune", meaning: { en: "yellow", ko: "노란색" } } },
+        { char: "eau", reading: "o", say: "beau", example: { word: "beau", meaning: { en: "beautiful", ko: "아름다운" } } },
+        { char: "ai", reading: "è", say: "lait", example: { word: "lait", meaning: { en: "milk", ko: "우유" } } },
+        { char: "ei", reading: "è", say: "neige", example: { word: "neige", meaning: { en: "snow", ko: "눈" } } },
+      ],
+    },
+    {
+      id: "fr-u-4",
+      title: { en: "u vs ou", ko: "u와 ou 구별" },
+      note: {
+        en: "u: lips rounded, tongue forward (ü). ou: lips rounded, tongue back (u). Changing one changes the word.",
+        ko: "u는 입술을 둥글게 하고 혀를 앞으로(위에 가까움), ou는 혀를 뒤로('우'). 바뀌면 다른 낱말이 된다.",
+      },
+      items: [
+        { char: "tu", reading: "tü", say: "tu", example: { word: "tu", meaning: { en: "you", ko: "너" } } },
+        { char: "tout", reading: "tu", say: "tout", example: { word: "tout", meaning: { en: "all", ko: "모두" } } },
+        { char: "rue", reading: "rü", say: "rue", example: { word: "rue", meaning: { en: "street", ko: "거리" } } },
+        { char: "roue", reading: "ru", say: "roue", example: { word: "roue", meaning: { en: "wheel", ko: "바퀴" } } },
+        { char: "dessus", reading: "desü", say: "dessus", example: { word: "dessus", meaning: { en: "on top", ko: "위에" } } },
+        { char: "dessous", reading: "desu", say: "dessous", example: { word: "dessous", meaning: { en: "underneath", ko: "아래에" } } },
+      ],
+    },
+    {
+      id: "fr-nas-5",
+      title: { en: "Nasal vowels", ko: "비모음 (콧소리 모음)" },
+      note: {
+        en: "Vowel + n/m at the end or before a consonant is said through the nose, with no n sound. Before a vowel or a second n/m it is not nasal: bon vs bonne.",
+        ko: "모음 + n/m이 끝이나 자음 앞에 오면 n을 따로 내지 않고 코로 낸다. 모음이나 n/m이 하나 더 오면 콧소리 아님: bon(봉)과 bonne(본).",
+      },
+      items: [
+        { char: "an", reading: "ã (nasal a)", say: "blanc", example: { word: "blanc", meaning: { en: "white", ko: "흰색" } } },
+        { char: "en", reading: "ã (same as an)", say: "enfant", example: { word: "enfant", meaning: { en: "child", ko: "아이" } } },
+        { char: "am / em", reading: "ã", say: "chambre", example: { word: "chambre", meaning: { en: "bedroom", ko: "방" } } },
+        { char: "on", reading: "õ (nasal o)", say: "bon", example: { word: "bon", meaning: { en: "good", ko: "좋은" } } },
+        { char: "om", reading: "õ", say: "nom", example: { word: "nom", meaning: { en: "name", ko: "이름" } } },
+        { char: "in", reading: "ẽ (nasal open e)", say: "vin", example: { word: "vin", meaning: { en: "wine", ko: "와인" } } },
+        { char: "ain / ein", reading: "ẽ", say: "pain", example: { word: "pain", meaning: { en: "bread", ko: "빵" } } },
+        { char: "ien", reading: "yẽ", say: "bien", example: { word: "bien", meaning: { en: "well", ko: "잘" } } },
+        { char: "un", reading: "ẽ (often same as in)", say: "lundi", example: { word: "lundi", meaning: { en: "Monday", ko: "월요일" } } },
+      ],
+    },
+    {
+      id: "fr-cons-6",
+      title: { en: "Consonants that sound different", ko: "소리가 다른 자음" },
+      note: {
+        en: "The French r is made at the back of the throat, not rolled. h is never pronounced.",
+        ko: "프랑스어 r은 혀를 굴리지 않고 목 안쪽에서 낸다. h는 절대 소리 나지 않는다.",
+      },
+      items: [
+        { char: "r", reading: "r (throat, soft)", say: "rouge", example: { word: "rouge", meaning: { en: "red", ko: "빨간색" } } },
+        { char: "h", reading: "silent", say: "homme", example: { word: "homme", meaning: { en: "man", ko: "남자" } } },
+        { char: "ch", reading: "sh", say: "chat", example: { word: "chat", meaning: { en: "cat", ko: "고양이" } } },
+        { char: "j", reading: "zh (as in 'measure')", say: "jour", example: { word: "jour", meaning: { en: "day", ko: "날" } } },
+        { char: "gn", reading: "ny", say: "montagne", example: { word: "montagne", meaning: { en: "mountain", ko: "산" } } },
+        { char: "qu", reading: "k", say: "qui", example: { word: "qui", meaning: { en: "who", ko: "누구" } } },
+        { char: "ph", reading: "f", say: "photo", example: { word: "photo", meaning: { en: "photo", ko: "사진" } } },
+        { char: "th", reading: "t", say: "thé", example: { word: "thé", meaning: { en: "tea", ko: "차" } } },
+        { char: "ill", reading: "iy", say: "fille", example: { word: "fille", meaning: { en: "girl, daughter", ko: "소녀·딸" } } },
+      ],
+    },
+    {
+      id: "fr-cgs-7",
+      title: { en: "c, g and s", ko: "c·g·s 읽는 법" },
+      note: {
+        en: "c and g are soft before e, i, y (s, zh) and hard elsewhere (k, g). One s between vowels is z, ss is s.",
+        ko: "c·g는 e·i·y 앞에서 부드럽게(s·zh), 나머지 앞에서 딱딱하게(k·g). 모음 사이 s 하나는 z, ss는 s.",
+      },
+      items: [
+        { char: "ca / co / cu", reading: "k", say: "carte", example: { word: "carte", meaning: { en: "card, map", ko: "카드·지도" } } },
+        { char: "ce / ci", reading: "s", say: "merci", example: { word: "merci", meaning: { en: "thank you", ko: "고마워요" } } },
+        { char: "ga / go / gu", reading: "g", say: "gare", example: { word: "gare", meaning: { en: "station", ko: "기차역" } } },
+        { char: "ge / gi", reading: "zh", say: "orange", example: { word: "orange", meaning: { en: "orange", ko: "오렌지" } } },
+        { char: "gue / gui", reading: "g (u silent)", say: "guitare", example: { word: "guitare", meaning: { en: "guitar", ko: "기타" } } },
+        { char: "s (between vowels)", reading: "z", say: "rose", example: { word: "rose", meaning: { en: "rose, pink", ko: "장미·분홍" } } },
+        { char: "ss", reading: "s", say: "poisson", example: { word: "poisson", meaning: { en: "fish", ko: "생선" } } },
+      ],
+    },
+    {
+      id: "fr-fin-8",
+      title: { en: "Silent final letters", ko: "소리 나지 않는 끝 글자" },
+      note: {
+        en: "Final d, p, s, t, x, z and the verb ending -ent are usually silent. Final c, r, f, l are often said (think of 'careful').",
+        ko: "끝의 d·p·s·t·x·z와 동사 어미 -ent는 보통 소리 나지 않는다. 끝의 c·r·f·l은 흔히 소리 난다('careful'로 기억).",
+      },
+      items: [
+        { char: "petit", reading: "pti (t silent)", say: "petit", example: { word: "petit", meaning: { en: "small", ko: "작은" } } },
+        { char: "grand", reading: "grã (d silent)", say: "grand", example: { word: "grand", meaning: { en: "big", ko: "큰" } } },
+        { char: "trop", reading: "tro (p silent)", say: "trop", example: { word: "trop", meaning: { en: "too much", ko: "너무" } } },
+        { char: "amis", reading: "ami (s silent)", say: "amis", example: { word: "amis", meaning: { en: "friends", ko: "친구들" } } },
+        { char: "nez", reading: "ne (z silent)", say: "nez", example: { word: "nez", meaning: { en: "nose", ko: "코" } } },
+        { char: "ils parlent", reading: "il parl (-ent silent)", say: "ils parlent", example: { word: "ils parlent", meaning: { en: "they speak", ko: "그들은 말한다" } } },
+        { char: "-er (verbs)", reading: "e (r silent)", say: "parler", example: { word: "parler", meaning: { en: "to speak", ko: "말하다" } } },
+        { char: "avec", reading: "avek (c said)", say: "avec", example: { word: "avec", meaning: { en: "with", ko: "～와 함께" } } },
+        { char: "bonjour", reading: "bõzhur (r said)", say: "bonjour", example: { word: "bonjour", meaning: { en: "hello", ko: "안녕하세요" } } },
+      ],
+    },
+    {
+      id: "fr-liai-9",
+      title: { en: "Liaison and elision", ko: "연음과 축약" },
+      note: {
+        en: "A silent final consonant is said when the next word starts with a vowel (s and x sound z). Small words like le, je, de drop their vowel before a vowel and take an apostrophe.",
+        ko: "다음 낱말이 모음으로 시작하면 소리 없던 끝 자음을 이어 낸다(s·x는 z). le·je·de 같은 짧은 말은 모음 앞에서 모음을 빼고 '를 붙인다.",
+      },
+      items: [
+        { char: "les amis", reading: "le-zami", say: "les amis", example: { word: "les amis", meaning: { en: "the friends", ko: "친구들" } } },
+        { char: "vous avez", reading: "vu-zave", say: "vous avez", example: { word: "vous avez", meaning: { en: "you have", ko: "당신은 가지고 있다" } } },
+        { char: "deux ans", reading: "dö-zã", say: "deux ans", example: { word: "deux ans", meaning: { en: "two years", ko: "2년" } } },
+        { char: "un ami", reading: "ẽ-nami", say: "un ami", example: { word: "un ami", meaning: { en: "a friend", ko: "친구 한 명" } } },
+        { char: "ils ont / ils sont", reading: "il-zõ / il sõ", say: "ils ont, ils sont", example: { word: "ils ont", meaning: { en: "they have", ko: "그들은 가지고 있다" } } },
+        { char: "petit ami", reading: "pti-tami", say: "petit ami", example: { word: "petit ami", meaning: { en: "boyfriend", ko: "남자 친구" } } },
+        { char: "l'eau", reading: "lo (le + eau)", say: "l'eau", example: { word: "l'eau", meaning: { en: "the water", ko: "물" } } },
+        { char: "j'ai", reading: "zhè (je + ai)", say: "j'ai", example: { word: "j'ai", meaning: { en: "I have", ko: "나는 가지고 있다" } } },
+      ],
+    },
+  ],
+};

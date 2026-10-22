@@ -1,16 +1,30 @@
 /**
  * 단계 범위 고르기·진행 재기(순수 함수). 데이터는 언어별 파일(en·ja·ko), 모양은 types.ts.
- * 지금은 영어·일본어·한국어만 — 다른 학습 언어는 `ladderFor`가 null이고 예전 체크·지도가 그대로 쓰인다.
+ * 14개 학습 언어 모두(영·일·한 2026-10-22 오전, 나머지 11개 같은 날 오후). 목록에 없는 언어면 `ladderFor`가 null이고 예전 체크·지도.
  */
 import { ledgerKey, type Ledger } from "../../learner/ledger.ts";
+import { AR_LADDER } from "./ar.ts";
 import { EN_LADDER } from "./en.ts";
+import { ES_LADDER } from "./es.ts";
+import { FR_LADDER } from "./fr.ts";
+import { HI_LADDER } from "./hi.ts";
+import { ID_LADDER } from "./id.ts";
+import { IT_LADDER } from "./it.ts";
 import { JA_LADDER } from "./ja.ts";
 import { KO_LADDER } from "./ko.ts";
+import { PT_LADDER } from "./pt.ts";
+import { RU_LADDER } from "./ru.ts";
+import { TH_LADDER } from "./th.ts";
+import { VI_LADDER } from "./vi.ts";
+import { ZH_LADDER } from "./zh.ts";
 import type { Stage, StageLadder, StageText } from "./types.ts";
 
 export type { Stage, StageLadder, StageText, StageDialogue, StageLine } from "./types.ts";
 
-const LADDERS: Record<string, StageLadder> = { en: EN_LADDER, ja: JA_LADDER, ko: KO_LADDER };
+const LADDERS: Record<string, StageLadder> = {
+  ar: AR_LADDER, en: EN_LADDER, es: ES_LADDER, fr: FR_LADDER, hi: HI_LADDER, id: ID_LADDER, it: IT_LADDER,
+  ja: JA_LADDER, ko: KO_LADDER, pt: PT_LADDER, ru: RU_LADDER, th: TH_LADDER, vi: VI_LADDER, zh: ZH_LADDER,
+};
 
 export const STAGE_ID = /^[a-z]{2}-[1-9]$/;
 

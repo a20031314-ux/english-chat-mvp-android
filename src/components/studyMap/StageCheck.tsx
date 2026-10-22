@@ -9,11 +9,24 @@ import { useEffect, useState } from "react";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
+import { sendAppIntent } from "@/lib/appIntents";
+import { TTSButton } from "@/components/TTSButton";
+import { ScriptEntry } from "@/components/studyMap/ScriptPractice";
 
 export type StageLineView = { who: "A" | "B"; text: string; gloss: string };
 export type StageDialogueView = { setting: string; lines: StageLineView[] };
-export type StageView = { id: string; order: number; title: string; canDo: string[]; dialogues: StageDialogueView[] };
-export type StageCurrent = { stageId: string; mastered: number; learned: number; total: number; share: number; done: boolean };
+export type StageGrammarView = { name: string; example: string; constructionId?: string };
+export type StageView = { id: string; order: number; title: string; canDo: string[]; grammar?: StageGrammarView[]; dialogues: StageDialogueView[] };
+export type StageCurrent = {
+  stageId: string;
+  mastered: number;
+  learned: number;
+  total: number;
+  share: number;
+  done: boolean;
+  /** 영어만: 채팅 문장으로 숙지한 문법(구문 id). */
+  grammarMastered?: string[];
+};
 
 /** 단계 목록과 내 진행. 범위가 없는 언어는 stages null. */
 export function useStages(targetLanguage: string, locale: string, isPremium: boolean, refresh: string | number = 0) {
@@ -39,7 +52,7 @@ export function useStages(targetLanguage: string, locale: string, isPremium: boo
 
 export function DialogueCard({ dialogue }: { dialogue: StageDialogueView }) {
   return (
-    <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-3">
+    <div className="rounded-xl border border-line bg-white/5 px-3 py-3">
       {dialogue.setting ? <p className="text-caption text-slate-400">{dialogue.setting}</p> : null}
       <ol className="mt-2 flex flex-col gap-2">
         {dialogue.lines.map((line, index) => (
@@ -65,12 +78,15 @@ export function StagePicker({
   chosen,
   onChoose,
   disabled,
+  script,
 }: {
   ui: UICopy;
   stages: StageView[];
   chosen: string | null;
   onChoose: (stageId: string | null) => void;
   disabled?: boolean;
+  /** 첫 단계에서 시작하면 "글자·소리부터"를 같이 보인다. */
+  script?: { targetLanguage: string; locale: string; isPremium: boolean };
 }) {
   const [index, setIndex] = useState(0);
   const picked = stages.find((stage) => stage.id === chosen) ?? null;
@@ -81,6 +97,7 @@ export function StagePicker({
         <h3 className="text-chat font-semibold text-slate-100">{ui.stageStartTitle}</h3>
         <p className="text-note text-slate-200">{picked.title}</p>
         <DialogueCard dialogue={picked.dialogues[1] ?? picked.dialogues[0]!} />
+        {picked.order === 1 && script ? <ScriptEntry ui={ui} {...script} /> : null}
         <button
           type="button"
           disabled={disabled}
@@ -109,10 +126,10 @@ export function StagePicker({
         <button type="button" disabled={disabled} onClick={() => answer(true)} className="rounded-lg bg-white/15 px-3 py-1.5 text-note text-ink hover:bg-white/20">
           {ui.stageCan}
         </button>
-        <button type="button" disabled={disabled} onClick={() => answer(false)} className="rounded-lg border border-white/10 px-3 py-1.5 text-note text-slate-200 hover:bg-white/5">
+        <button type="button" disabled={disabled} onClick={() => answer(false)} className="rounded-lg border border-line px-3 py-1.5 text-note text-slate-200 hover:bg-white/5">
           {ui.stageAlmost}
         </button>
-        <button type="button" disabled={disabled} onClick={() => answer(false)} className="rounded-lg border border-white/10 px-3 py-1.5 text-note text-slate-200 hover:bg-white/5">
+        <button type="button" disabled={disabled} onClick={() => answer(false)} className="rounded-lg border border-line px-3 py-1.5 text-note text-slate-200 hover:bg-white/5">
           {ui.stageHard}
         </button>
       </div>
@@ -130,16 +147,18 @@ export function StageGoal({
   stage,
   current,
   onNext,
+  script,
 }: {
   ui: UICopy;
   stage: StageView;
   current: StageCurrent | null;
   onNext?: () => void;
+  script?: { targetLanguage: string; locale: string; isPremium: boolean };
 }) {
   const [open, setOpen] = useState(false);
   const share = current ? Math.max(0, Math.min(1, current.share)) : 0;
   return (
-    <section className="mt-3 flex flex-col gap-2 rounded-2xl border border-white/10 px-3 py-3">
+    <section className="mt-3 flex flex-col gap-2 rounded-2xl border border-line px-3 py-3">
       <div className="flex items-center justify-between gap-2">
         <h3 className="text-caption font-semibold text-slate-400">{ui.stageGoalTitle}</h3>
         {current ? (
@@ -167,6 +186,44 @@ export function StageGoal({
           ))}
         </ul>
       ) : null}
+      {stage.grammar?.length ? (
+        <div className="flex flex-col gap-1.5">
+          <h4 className="text-caption font-semibold text-slate-400">{ui.stageGrammarTitle}</h4>
+          <ul className="flex flex-col gap-1.5">
+            {stage.grammar.map((grammar, index) => {
+              const done = Boolean(grammar.constructionId && current?.grammarMastered?.includes(grammar.constructionId));
+              return (
+                <li key={index} className="rounded-xl border border-line px-3 py-2">
+                  <div className="flex items-center justify-between gap-2">
+                    <span className="text-note text-slate-100">
+                      {done ? <span className="me-1 text-good">✓</span> : null}
+                      {grammar.name}
+                    </span>
+                    <button
+                      type="button"
+                      onClick={() =>
+                        sendAppIntent("practice", {
+                          tab: "chat",
+                          goal: { mistake: grammar.name, phrases: [grammar.example] },
+                          title: grammar.name,
+                        })
+                      }
+                      className="shrink-0 rounded-lg border border-line px-2 py-1 text-caption text-slate-200 hover:bg-white/5"
+                    >
+                      {ui.stageTry}
+                    </button>
+                  </div>
+                  <div className="mt-1 flex items-center gap-1">
+                    <span dir="auto" className="min-w-0 flex-1 text-note text-slate-300">{grammar.example}</span>
+                    <TTSButton text={grammar.example} />
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      ) : null}
+      {script ? <ScriptEntry ui={ui} {...script} /> : null}
       {current?.done && onNext ? (
         <button type="button" onClick={onNext} className="rounded-lg bg-white/15 px-3 py-2 text-note text-ink hover:bg-white/20">
           {ui.stageNext}

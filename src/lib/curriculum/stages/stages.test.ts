@@ -10,7 +10,8 @@ import { textsOf, viewsFrom, withTexts } from "../../server/stageCopy.ts";
 
 const BANDS = ["A1", "A2", "B1", "B2", "C1"];
 
-for (const language of ["en", "ja", "ko"]) {
+const ALL = ["en", "ja", "ko", "es", "zh", "vi", "fr", "it", "pt", "ru", "id", "ar", "th", "hi"];
+for (const language of ALL) {
   test(`${language}: 다섯 단계, 대화 둘, 겹치지 않는 표현`, () => {
     const ladder = ladderFor(language);
     assert.ok(ladder);
@@ -40,13 +41,14 @@ for (const language of ["en", "ja", "ko"]) {
         if (grammar.constructionId) assert.equal(findConstruction(grammar.constructionId)?.band, stage.band, grammar.constructionId);
       }
       // 레벨 이름이 화면 글에 보이지 않게
+      for (const g of stage.grammar) assert.ok(g.name.en.trim() && g.example.trim(), stage.id);
       assert.doesNotMatch(`${stage.title.en} ${stage.title.ko ?? ""}`, /\b(A1|A2|B1|B2|C1|N[1-5]|TOPIK|beginner)\b|초급|중급|고급/);
     });
   });
 }
 
 test("범위가 없는 학습 언어는 null, 단계 id는 그 언어 것만", () => {
-  assert.equal(ladderFor("es"), null);
+  assert.equal(ladderFor("xx"), null);
   assert.equal(stageById("xx-1"), null);
   assert.equal(stageById("ja-9"), null);
   assert.equal(stageById("ja-2")?.order, 2);
@@ -133,4 +135,42 @@ test("영어 학습·다른 앱 언어: 옮길 원문에 뜻풀이가 비지 않
   const english = viewsFrom(ladderFor("en")!.stages, "en", "en", true);
   assert.ok(textsOf(english).every((text) => text.trim()));
   assert.equal(viewsFrom(ladderFor("en")!.stages, "en", "en")[0]!.dialogues[0]!.lines[0]!.gloss, "");
+});
+
+import { scriptFor, scriptProgress } from "../scripts/index.ts";
+import { scriptTextsOf, scriptViewFrom, withScriptTexts } from "../../server/stageCopy.ts";
+
+for (const language of ALL) {
+  test(`${language}: 글자·소리 기초 묶음`, () => {
+    const course = scriptFor(language);
+    assert.ok(course, language);
+    assert.ok(course.groups.length >= 6 && course.groups.length <= 14, `${language} ${course.groups.length}`);
+    const ids = new Set<string>();
+    for (const group of course.groups) {
+      assert.ok(group.id.startsWith(`${language}-`), group.id);
+      assert.ok(!ids.has(group.id), group.id);
+      ids.add(group.id);
+      assert.ok(group.items.length >= 4 && group.items.length <= 12, `${group.id} ${group.items.length}`);
+      for (const item of group.items) assert.ok(item.char.trim() && item.reading.trim() && item.say.trim(), group.id);
+    }
+    // 문제 보기는 읽는 법이 다른 것만 고르므로(같은 소리 b·v 같은 묶음이 있어서), 강좌 전체에 다른 읽는 법이 넉넉해야 한다.
+    const readings = new Set(course.groups.flatMap((group) => group.items.map((item) => item.reading.trim().toLowerCase())));
+    assert.ok(readings.size >= 8, language);
+    {
+    }
+  });
+}
+
+test("글자 기초 진행과 옮긴 글 순서", () => {
+  const course = scriptFor("ja")!;
+  const first = course.groups[0]!.id;
+  const progress = scriptProgress(course, { [first]: 1 });
+  assert.equal(progress.done, 1);
+  assert.equal(progress.next, course.groups[1]!.id);
+  assert.ok(!progress.finished);
+  const view = scriptViewFrom(course, "en");
+  const texts = scriptTextsOf(view);
+  const back = withScriptTexts(view, texts.map((t) => `#${t}`));
+  assert.equal(back!.groups[0]!.title, `#${view.groups[0]!.title}`);
+  assert.equal(withScriptTexts(view, texts.slice(1)), null);
 });
