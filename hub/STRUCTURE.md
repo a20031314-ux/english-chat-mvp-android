@@ -76,7 +76,7 @@
 - 화면: `AiConsentGate` · `AppHome` · `FeatureMap` · `FullScreenLayer` · `GuideSheet` · `LanguageSelector` · `LearningLanguageFlag` · `Providers` · `TabIcons` · `TargetLanguageSelector` · `UpdateNotice` · `WhatsNewSheet`
 - API: `guide` · `whats-new`
 - 웹 페이지: `/`
-- 다른 영역이 씀: `AppHome` ← 학습 기록 공통, 사람 탭, My 탭, 웹 전용 페이지 · `FullScreenLayer` ← 여러 영역 8곳 · `LanguageSelector` ← 웹 전용 페이지 · `LearningLanguageFlag` ← 사람 탭 · `TargetLanguageSelector` ← 웹 전용 페이지
+- 다른 영역이 씀: `AppHome` ← 학습 기록 공통, 사람 탭, My 탭, 웹 전용 페이지 · `FullScreenLayer` ← 여러 영역 8곳 · `LanguageSelector` ← 웹 전용 페이지 · `LearningLanguageFlag` ← 사람 탭, 계정·로그인 · `TargetLanguageSelector` ← 웹 전용 페이지
 
 ### 대화 탭 — AI 튜터 줄·1:1 메시지·단체방·팀 `talk`
 - 화면: `AiTutorRow` · `rooms/MateAsk` · `rooms/MessagesTab` · `rooms/RoomDm` · `rooms/RoomGroups` · `rooms/TeamSpace`
