@@ -598,6 +598,22 @@ const SCENES = [
     },
   },
   {
+    id: "messages-delete",
+    label: "메시지 — 1:1 줄 끝 ⋯ → [삭제][취소], 누르면 내 목록에서 빠짐",
+    async run({ page, wait, state, locale, rc: rt, shot }) {
+      await page.goto(`${BASE}/?screen=messages`, { waitUntil: "domcontentloaded" });
+      await wait(5000);
+      const row = page.locator("li", { hasText: state.friendNickname }).first();
+      await row.getByRole("button", { name: exactly(rt.boardDelete) }).first().click();
+      await wait(800);
+      await shot("confirm");
+      await row.getByRole("button", { name: exactly(rt.boardDelete) }).first().click();
+      await wait(4000);
+      state.deletedGone = (await page.locator("li", { hasText: state.friendNickname }).count()) === 0;
+      console.log(`  messages-delete ${locale}: 지운 줄 사라짐 = ${state.deletedGone}`);
+    },
+  },
+  {
     id: "dm-thread",
     label: "메시지 — 1:1 대화(집어 묻기·통화 기록)",
     async run({ page, wait, state }) {
