@@ -327,8 +327,8 @@ export const TH_LADDER: StageLadder = {
         ko: "빠른 말에서 줄어드는 말 알아듣기: อย่างไร → ยังไง, ไหม → มั้ย, ครับ → คับ, ค่ะ → ค่า.",
       },
       pronunciation: {
-        en: "Say clusters fully in formal speech even though friends drop the r or l: ประชุม (meeting), เปลี่ยน (change), ความ (-ness).",
-        ko: "친구끼리는 r·l을 빼고 말해도 격식 있는 자리에서는 겹자음을 다 낸다: ประชุม(회의), เปลี่ยน(바꾸다), ความ(～함).",
+        en: "Say clusters fully in formal speech even though friends drop the r or l: ประชุม (meeting), เปลี่ยน (change), ครู (teacher).",
+        ko: "친구끼리는 r·l을 빼고 말해도 격식 있는 자리에서는 겹자음을 다 낸다: ประชุม(회의), เปลี่ยน(바꾸다), ครู(선생님).",
       },
       dialogues: [
         {

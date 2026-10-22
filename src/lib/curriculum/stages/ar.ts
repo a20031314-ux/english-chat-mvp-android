@@ -154,8 +154,8 @@ export const AR_LADDER: StageLadder = {
         ko: "요일과 시간 알아듣기: الساعة الثانية(2시)와 الساعة الثامنة(8시), الثلاثاء(화요일)와 الثلاثين(30).",
       },
       pronunciation: {
-        en: "Double a letter that carries shadda: حمام with a long m, and تكلّم vs تكلم change meaning and rhythm.",
-        ko: "샷다가 붙은 글자는 두 번 길게: حمّام의 m을 길게, تكلّم(말했다)처럼 겹소리를 지켜야 뜻과 박자가 맞는다.",
+        en: "Double a letter that carries shadda: حمّام with a long m, and درس (studied) vs درّس (taught) differ only by the doubled r.",
+        ko: "샷다가 붙은 글자는 두 번 길게: حمّام의 m을 길게, درس(공부했다)와 درّس(가르쳤다)는 겹친 r 하나로 뜻이 갈린다.",
       },
       dialogues: [
         {
@@ -392,7 +392,7 @@ export const AR_LADDER: StageLadder = {
         "اللي فات مات",
         "يا سلام",
         "حط نفسك مكاني",
-        "لا تاخذها على صدرك",
+        "لا تاخذها على خاطرك",
         "مش هيك القصد",
         "بالمختصر المفيد",
         "إن جاز التعبير",
@@ -418,7 +418,7 @@ export const AR_LADDER: StageLadder = {
             { who: "A", text: "اسمحوا لي بكلمة قصيرة. لقد كان لي شرف العمل مع هالة خمس سنوات.", en: "Allow me a few words. I've had the honour of working with Hala for five years.", ko: "짧게 한마디 하겠습니다. 할라와 5년을 함께 일한 건 영광이었습니다." },
             { who: "B", text: "يا سلام، بدأنا بالخطابات الرسمية!", en: "Oh my, here come the formal speeches!", ko: "어머, 공식 연설이 시작됐네!" },
             { who: "A", text: "طبعا، المناسبة تستاهل. بصراحة يعني، الشركة بدونك مش رح تكون نفسها.", en: "Of course, the occasion deserves it. Honestly, the company won't be the same without you.", ko: "그럼, 그럴 만한 자리잖아. 솔직히 너 없으면 회사가 예전 같지 않을 거야." },
-            { who: "B", text: "كلامك على راسي. والله رح أشتاق لكم من القلب.", en: "Your words mean a lot. I'll truly miss you all, from the heart.", ko: "말만이라도 고마워. 정말 진심으로 다들 보고 싶을 거야." },
+            { who: "B", text: "كلامك على راسي. والله رح أشتاق لكم من القلب.", en: "Your words mean a lot. I'll truly miss you all, from the heart.", ko: "그렇게 말해 줘서 고마워. 정말 진심으로 다들 보고 싶을 거야." },
             { who: "A", text: "رب ضارة نافعة، وظيفتك الجديدة أحسن. بالتوفيق!", en: "Every cloud has a silver lining: your new job is better. Good luck!", ko: "전화위복이지, 새 직장이 더 좋잖아. 잘되길 바라!" },
           ],
         },

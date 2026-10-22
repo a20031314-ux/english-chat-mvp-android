@@ -25,7 +25,7 @@ export const RU_LADDER: StageLadder = {
         { en: "Meeting someone for the first time at a language exchange", ko: "언어 교환 모임에서 처음 만난 사람" },
         { en: "Buying water and a snack at a kiosk", ko: "가판대에서 물과 간식 사기" },
         { en: "Asking the way to the metro", ko: "지하철역 가는 길 묻기" },
-        { en: "Saying goodbye to a host family", ko: "홈스테이 가족과 인사하기" },
+        { en: "Saying goodbye to a host family", ko: "홈스테이 가족과 작별 인사하기" },
       ],
       grammar: [
         { name: { en: "No \"to be\" in the present: Я студент", ko: "현재형에 '이다' 동사가 없다: Я студент (나는 학생)" }, example: "Я студент, а она врач." },
@@ -167,7 +167,7 @@ export const RU_LADDER: StageLadder = {
           setting: { en: "Describing a sore throat at a pharmacy", ko: "약국에서 약사에게 증상 말하기" },
           lines: [
             { who: "A", text: "Здравствуйте, что случилось?", en: "Hello, what's the matter?", ko: "안녕하세요, 어디가 불편하세요?" },
-            { who: "B", text: "У меня болит горло и немного температура.", en: "I have a sore throat and a slight temperature.", ko: "목이 아프고 열이 조금 있어요." },
+            { who: "B", text: "У меня болит горло и небольшая температура.", en: "I have a sore throat and a slight temperature.", ko: "목이 아프고 열이 조금 있어요." },
             { who: "A", text: "Давно болеете?", en: "Have you been ill for long?", ko: "아프신 지 오래됐어요?" },
             { who: "B", text: "Со вчерашнего дня.", en: "Since yesterday.", ko: "어제부터요." },
             { who: "A", text: "Возьмите эти таблетки. Пейте три раза в день.", en: "Take these tablets. Take them three times a day.", ko: "이 약 드세요. 하루 세 번 드시면 돼요." },
@@ -371,7 +371,7 @@ export const RU_LADDER: StageLadder = {
         { name: { en: "Word order for emphasis", ko: "강조를 위한 어순" }, example: "Книгу эту я так и не дочитал." },
         { name: { en: "Particles же and ведь", ko: "소사 же와 ведь" }, example: "Я же тебе говорил, ведь так и вышло." },
         { name: { en: "Softening with -ка", ko: "-ка로 부드럽게" }, example: "Посмотри-ка, кто к нам пришёл." },
-        { name: { en: "Impersonal \"can't bring myself to\" (мне не спится)", ko: "무인칭 '…이 잘 안 된다' (мне не спится)" }, example: "Что-то мне сегодня не работается." },
+        { name: { en: "Impersonal \"can't seem to\" (мне не спится)", ko: "무인칭 '…이 잘 안 된다' (мне не спится)" }, example: "Что-то мне сегодня не работается." },
         { name: { en: "Wishes with хорошо бы / вот бы", ko: "хорошо бы / вот бы 바람" }, example: "Вот бы сейчас на море!" },
         { name: { en: "Official style: в связи с, в целях, осуществлять", ko: "공식체: в связи с, в целях, осуществлять" }, example: "В связи с ремонтом офис временно закрыт." },
         { name: { en: "Diminutives for warmth (чаёк, минутка)", ko: "다정한 지소형 (чаёк, минутка)" }, example: "Чайку не хочешь? Посиди минутку." },

@@ -328,7 +328,7 @@ export const ZH_LADDER: StageLadder = {
             { who: "A", text: "我觉得在家上班挺好的，省了每天两个小时通勤。", en: "I think working from home is great; it saves two hours of commuting a day.", ko: "재택근무 꽤 좋다고 생각해, 매일 출퇴근 두 시간이 아껴지잖아." },
             { who: "B", text: "话虽如此，可是一个人在家，很容易工作和生活分不开。", en: "That's true, but alone at home it's easy for work and life to blur.", ko: "그건 그렇지만, 혼자 집에 있으면 일과 생활이 쉽게 안 나뉘어." },
             { who: "A", text: "这倒是。不过只要自己管得住，问题不大。", en: "Fair point. But as long as you can manage yourself, it's not a big problem.", ko: "그건 맞아. 그래도 스스로 잘 관리하면 큰 문제는 아니야." },
-            { who: "B", text: "关键是不是每个人都管得住。团队沟通也会受影响。", en: "The point is not everyone can. Team communication suffers too.", ko: "문제는 모두가 관리할 수 있진 않다는 거지. 팀 소통에도 영향이 있고." },
+            { who: "B", text: "关键是，并不是每个人都管得住。团队沟通也会受影响。", en: "The point is not everyone can. Team communication suffers too.", ko: "문제는 모두가 관리할 수 있진 않다는 거지. 팀 소통에도 영향이 있고." },
             { who: "A", text: "那一周去公司两三天，你看怎么样？", en: "So what about going to the office two or three days a week?", ko: "그럼 일주일에 두세 번 출근하는 건 어때?" },
           ],
         },
@@ -409,7 +409,7 @@ export const ZH_LADDER: StageLadder = {
           setting: { en: "A business dinner with a partner company", ko: "협력사와의 비즈니스 식사 자리에서" },
           lines: [
             { who: "A", text: "李总，久仰大名！今天能请到您，真是我们的荣幸。", en: "Mr. Li, I've long heard of you! It's truly an honour to have you here today.", ko: "리 대표님, 말씀 많이 들었습니다! 오늘 모시게 되어 영광입니다." },
-            { who: "B", text: "哪里哪里，您太客气了。来，我敬您一杯。", en: "Oh, not at all, you're too kind. Here, let me toast you.", ko: "별말씀을요, 너무 겸손하십니다. 자, 제가 한 잔 올리겠습니다." },
+            { who: "B", text: "哪里哪里，您太客气了。来，我敬您一杯。", en: "Oh, not at all, you're too kind. Here, let me toast you.", ko: "별말씀을요, 과찬이십니다. 자, 제가 한 잔 올리겠습니다." },
             { who: "A", text: "不敢当，不敢当。我酒量不行，就以茶代酒吧。", en: "I couldn't possibly. I can't hold my drink, so let me toast with tea instead.", ko: "황송합니다. 제가 술이 약해서 차로 대신하겠습니다." },
             { who: "B", text: "没关系，心意到了就行。合作的事，咱们改天细谈。", en: "That's fine, it's the thought that counts. We'll go into the partnership another day.", ko: "괜찮습니다, 마음만 있으면 되죠. 협력 건은 다음에 자세히 이야기합시다." },
             { who: "A", text: "好，那就恭敬不如从命，我先干为敬！", en: "Then I'll gladly follow your lead. I'll drink first as a sign of respect!", ko: "좋습니다, 그럼 사양 않고 따르겠습니다. 제가 먼저 비우겠습니다!" },

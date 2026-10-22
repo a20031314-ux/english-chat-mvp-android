@@ -74,9 +74,9 @@ export const HI_LADDER: StageLadder = {
           lines: [
             { who: "A", text: "नमस्ते! मेरा नाम मिन-जी है।", en: "Hello! My name is Min-ji.", ko: "안녕하세요! 제 이름은 민지예요." },
             { who: "B", text: "नमस्ते! मैं राहुल हूँ।", en: "Hello! I'm Rahul.", ko: "안녕하세요! 저는 라훌이에요." },
-            { who: "A", text: "मैं कोरिया से हूँ। आप?", en: "I'm from Korea. And you?", ko: "저는 한국에서 왔어요. 당신은요?" },
-            { who: "B", text: "मैं दिल्ली से हूँ। आप छात्र हैं?", en: "I'm from Delhi. Are you a student?", ko: "저는 델리 출신이에요. 학생이세요?" },
-            { who: "A", text: "हाँ, मैं छात्र हूँ।", en: "Yes, I'm a student.", ko: "네, 학생이에요." },
+            { who: "A", text: "मैं कोरिया से हूँ। और आप?", en: "I'm from Korea. And you?", ko: "저는 한국에서 왔어요. 당신은요?" },
+            { who: "B", text: "मैं दिल्ली से हूँ। आप छात्रा हैं?", en: "I'm from Delhi. Are you a student?", ko: "저는 델리 출신이에요. 학생이세요?" },
+            { who: "A", text: "हाँ, मैं छात्रा हूँ।", en: "Yes, I'm a student.", ko: "네, 학생이에요." },
           ],
         },
         {
@@ -338,7 +338,7 @@ export const HI_LADDER: StageLadder = {
           setting: { en: "Negotiating rent renewal with a landlord", ko: "집주인과 집세 재계약을 협상하며" },
           lines: [
             { who: "A", text: "अगले साल से किराया दस प्रतिशत बढ़ेगा।", en: "From next year the rent will go up ten percent.", ko: "내년부터 집세가 10퍼센트 오릅니다." },
-            { who: "B", text: "यह थोड़ा ज़्यादा है। मैं तीन साल से यहाँ हूँ और हमेशा समय पर किराया दिया है।", en: "That's a bit much. I've been here three years and always paid on time.", ko: "좀 많네요. 3년째 살면서 늘 제때 냈잖아요." },
+            { who: "B", text: "यह थोड़ा ज़्यादा है। मैं तीन साल से यहाँ हूँ और मैंने हमेशा समय पर किराया दिया है।", en: "That's a bit much. I've been here three years and always paid on time.", ko: "좀 많네요. 3년째 살면서 늘 제때 냈잖아요." },
             { who: "A", text: "बात तो ठीक है, पर ख़र्चे भी बढ़ गए हैं।", en: "That's true, but costs have gone up too.", ko: "그건 맞는데, 비용도 올랐어요." },
             { who: "B", text: "मान लीजिए हम पाँच प्रतिशत पर तय करें, और मैं दो साल का करार कर लूँ?", en: "Suppose we settle on five percent, and I sign a two-year contract?", ko: "5퍼센트로 하고 제가 2년 계약을 하면 어떨까요?" },
             { who: "A", text: "हम्म, चलिए, इस पर सहमति है।", en: "Hmm, all right, we have a deal on that.", ko: "음, 좋아요, 그렇게 합시다." },

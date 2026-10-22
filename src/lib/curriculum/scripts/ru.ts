@@ -142,7 +142,7 @@ export const RU_SCRIPT: ScriptCourse = {
         { char: "год", reading: "got", say: "год", example: { word: "год", meaning: { en: "year", ko: "해, 년" } } },
         { char: "гараж", reading: "ga-RASH", say: "гараж", example: { word: "гараж", meaning: { en: "garage", ko: "차고" } } },
         { char: "любовь", reading: "lyu-BOF'", say: "любовь", example: { word: "любовь", meaning: { en: "love", ko: "사랑" } } },
-        { char: "его", reading: "ye-VO", say: "его", example: { word: "его", meaning: { en: "him, his", ko: "그를, 그의" } } },
+        { char: "его", reading: "yi-VO", say: "его", example: { word: "его", meaning: { en: "him, his", ko: "그를, 그의" } } },
         { char: "сегодня", reading: "si-VOD-nya", say: "сегодня", example: { word: "сегодня", meaning: { en: "today", ko: "오늘" } } },
         { char: "что", reading: "shto", say: "что", example: { word: "что", meaning: { en: "what", ko: "무엇" } } },
       ],

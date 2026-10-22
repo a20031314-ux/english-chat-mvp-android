@@ -242,7 +242,7 @@ export const VI_LADDER: StageLadder = {
             { who: "A", text: "Cuối tuần vừa rồi chị đi đâu thế?", en: "Where did you go last weekend?", ko: "지난 주말에 어디 갔어요?" },
             { who: "B", text: "Chị lên Đà Lạt. Lúc đầu định đi Sa Pa nhưng hết vé.", en: "I went up to Đà Lạt. At first I planned Sa Pa, but tickets were sold out.", ko: "달랏에 갔어. 처음엔 사파에 가려고 했는데 표가 다 팔렸더라." },
             { who: "A", text: "Thế à? Ở đấy có mát không?", en: "Really? Was it cool there?", ko: "그래요? 거기 시원했어요?" },
-            { who: "B", text: "Mát lắm, nhưng hôm thứ hai chị bị lạc đường.", en: "Very cool, but on the second day I got lost.", ko: "엄청 시원했어, 그런데 둘째 날 길을 잃었어." },
+            { who: "B", text: "Mát lắm, nhưng ngày thứ hai chị bị lạc đường.", en: "Very cool, but on the second day I got lost.", ko: "엄청 시원했어, 그런데 둘째 날 길을 잃었어." },
             { who: "A", text: "Ôi, rồi sao nữa?", en: "Oh no, then what?", ko: "어머, 그래서요?" },
             { who: "B", text: "May quá, có bác xe ôm chở chị về khách sạn.", en: "Luckily, a motorbike-taxi driver took me back to the hotel.", ko: "다행히 오토바이 택시 아저씨가 호텔까지 태워다 줬어." },
           ],
@@ -317,8 +317,8 @@ export const VI_LADDER: StageLadder = {
         ko: "진짜 답이 담긴 완곡한 말 듣기: cũng được·để xem đã·hơi khó는 흔히 예의 바른 거절이다.",
       },
       pronunciation: {
-        en: "Close final -c, -t, -p and -ch without releasing them, and keep -n vs -ng and -t vs -c apart: bán vs bang, mát vs mác.",
-        ko: "끝소리 -c·-t·-p·-ch는 터뜨리지 않고 닫고, -n과 -ng, -t와 -c를 구별한다: bán/bang, mát/mác.",
+        en: "Close final -c, -t, -p and -ch without releasing them, and keep -n vs -ng and -t vs -c apart: bàn vs bàng, mát vs mác.",
+        ko: "끝소리 -c·-t·-p·-ch는 터뜨리지 않고 닫고, -n과 -ng, -t와 -c를 구별한다: bàn/bàng, mát/mác.",
       },
       dialogues: [
         {
@@ -372,7 +372,7 @@ export const VI_LADDER: StageLadder = {
         { name: { en: "Rhetorical questions: sao lại …, có phải … đâu", ko: "반어 질문: sao lại … / có phải … đâu" }, example: "Có phải lỗi của em đâu." },
         { name: { en: "Formal written style: nhằm, đối với, trong bối cảnh", ko: "격식 문어체: nhằm·đối với·trong bối cảnh" }, example: "Đối với doanh nghiệp nhỏ, đây là một thách thức lớn." },
         { name: { en: "Concession for tact: không phải là … nhưng …", ko: "완곡한 양보: không phải là … nhưng …" }, example: "Không phải là em không muốn, nhưng thời gian không cho phép." },
-        { name: { en: "Reduplication for nuance: xinh xinh, đo đỏ, nhè nhẹ", ko: "겹말로 뉘앙스 주기: xinh xinh·đo đỏ·nhè nhẹ" }, example: "Trời hôm nay mưa lây phây." },
+        { name: { en: "Reduplication for nuance: xinh xinh, đo đỏ, nhè nhẹ", ko: "겹말로 뉘앙스 주기: xinh xinh·đo đỏ·nhè nhẹ" }, example: "Hôm nay trời lành lạnh, gió thổi nhè nhẹ." },
       ],
       expressions: [
         "nói thật lòng",

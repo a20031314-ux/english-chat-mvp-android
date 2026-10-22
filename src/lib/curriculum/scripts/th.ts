@@ -109,13 +109,13 @@ export const TH_SCRIPT: ScriptCourse = {
         { char: "แอ", reading: "aae (long ㅐ)", say: "แอ", example: { word: "แดง", meaning: { en: "red", ko: "빨갛다" } } },
         { char: "โอะ", reading: "o (short)", say: "โอะ", example: { word: "โต๊ะ", meaning: { en: "table", ko: "탁자" } } },
         { char: "โอ", reading: "oo (long)", say: "โอ", example: { word: "โมง", meaning: { en: "o'clock", ko: "～시" } } },
-        { char: "เอาะ", reading: "aw (short, open o like Korean ㅓ)", say: "เอาะ", example: { word: "เกาะ", meaning: { en: "island", ko: "섬" } } },
+        { char: "เอาะ", reading: "aw (short, open o — between Korean ㅗ and ㅓ)", say: "เอาะ", example: { word: "เกาะ", meaning: { en: "island", ko: "섬" } } },
         { char: "ออ", reading: "aaw (long open o)", say: "ออ", example: { word: "รอ", meaning: { en: "to wait", ko: "기다리다" } } },
       ],
     },
     {
       id: "th-vowel-7",
-      title: { en: "Vowel combinations (ไ ใ เา ำ เีย เือ ัว เอ)", ko: "합친 모음 (ไ ใ เา ำ เีย เือ ัว เอ)" },
+      title: { en: "Vowel combinations (ไ ใ เา ำ เีย เือ ัว เออ)", ko: "합친 모음 (ไ ใ เา ำ เีย เือ ัว เออ)" },
       note: {
         en: "ไ and ใ sound the same (ai); ใ appears in only about twenty words, such as ใจ and ใช่.",
         ko: "ไ와 ใ는 소리가 같다(ai). ใ는 ใจ·ใช่처럼 스무 낱말 정도에만 쓴다.",
