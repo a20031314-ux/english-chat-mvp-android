@@ -74,6 +74,7 @@ export async function send(input: {
   quote?: DmMessage["quote"];
   ask?: boolean;
   image?: DmMessage["image"];
+  icon?: DmMessage["icon"];
 }): Promise<SendResult> {
   const id = threadIdFor(input.from, input.to);
   const existing = await readThread(id);
@@ -101,9 +102,10 @@ export async function send(input: {
     ...(input.lines ? { lines: input.lines } : {}),
     ...(input.quote ? { quote: input.quote, ask: input.ask === true } : {}),
     ...(input.image ? { image: input.image } : {}),
+    ...(input.icon ? { icon: input.icon } : {}),
   };
   // 목록 미리보기: 사진만 보냈으면 📷(화면이 그 언어 "사진"으로 바꿔 보인다).
-  const preview = input.image ? (input.text ? `📷 ${input.text}` : "📷") : input.text;
+  const preview = input.image ? (input.text ? `📷 ${input.text}` : "📷") : input.icon && !input.text ? "🙂" : input.text;
   const members = [input.from, input.to].sort() as [string, string];
   const thread: DmThread = existing
     ? {

@@ -67,6 +67,8 @@ export const GUIDE_SECTION_IDS: Record<GuideTabId, string[]> = {
     "messages.dm",
     "messages.groups",
     "people.board",
+    // 아이콘 묶음(2026-10-23): 그 화면이 있는 빌드(`icons=1`)만 — 옛 빌드엔 서버가 뺀다(api/guide).
+    "people.icons",
   ],
   // 2.70 하단 탭(대화 목록): 따로 둔 키라 이 키를 모르는 옛 빌드의 채팅 안내에는 섞이지 않는다.
   talk: ["talk.list"],
@@ -86,7 +88,7 @@ export const GUIDE_CHAPTERS: GuideChapterSpec[] = [
   // 대화 목록(AI 튜터 + 사람): 사람 기능이 꺼진 빌드(iOS 1차)엔 목록이 없어 이 묶음째 안 보인다.
   { id: "messages", title: "{ui:homeTabTalk}", go: "talk", sections: ["talk.list", "messages.dm", "messages.groups"] },
   { id: "video", title: "{ui:homeTabVideo}", go: "video", sections: GUIDE_SECTION_IDS.video },
-  { id: "people", title: "{ui:homeTabPeople}", go: "people", sections: ["people.find", "people.invite", "people.rewards", "people.board"] },
+  { id: "people", title: "{ui:homeTabPeople}", go: "people", sections: ["people.find", "people.invite", "people.rewards", "people.board", "people.icons"] },
   { id: "rooms", title: "{ui:homeTabRooms}", go: "rooms", sections: ["room.find", "room.layouts", "room.quote", "room.stuck", "room.game", "room.mafia", "room.watch", "room.host"] },
   { id: "my", title: "{ui:homeTabProfile}", go: "map", sections: GUIDE_SECTION_IDS.map.filter((id) => id !== "my.notes") },
   { id: "notes", title: "{ui:notesTitle}", go: "notes", sections: ["my.notes", ...GUIDE_SECTION_IDS.vocab] },
@@ -508,6 +510,12 @@ export const GUIDE_KO: Guide = {
           "배우는 언어로 글을 올리고 댓글을 달아요. 고치고 지우는 건 쓴 사람만 할 수 있어요. 글 아래 ‘한국어로 보기’로 번역하고, 이름을 누르면 팔로우·메시지·신고."
         ],
         "shot": "r69-board"
+      },
+      {
+        "heading": "아이콘",
+        "body": [
+          "‘+ 새 묶음’으로 내가 만든 그림(움직이는 GIF도)을 올리면 바로 모두에게 공개돼요. 라이선스는 CC BY 4.0(출처 표시) 또는 CC0(조건 없음) 중에서 골라요. 남의 묶음은 ‘받기’를 누르면 메시지·단체방·댓글 입력칸의 🙂에서 골라 보낼 수 있어요."
+        ]
       }
     ]
   },
@@ -915,6 +923,12 @@ export const GUIDE_EN: Guide = {
           "Post in the language you’re learning and comment. Only the writer can edit or delete. “See in English” translates a post; tap a name to follow, message or report."
         ],
         "shot": "r69-board"
+      },
+      {
+        "heading": "Icons",
+        "body": [
+          "With “+ New pack”, upload images you made (animated GIFs too); they're public to everyone right away. Choose CC BY 4.0 (credit required) or CC0 (no conditions). Tap “Get” on someone's pack to send its icons from 🙂 in messages, group chats and comments."
+        ]
       }
     ]
   },

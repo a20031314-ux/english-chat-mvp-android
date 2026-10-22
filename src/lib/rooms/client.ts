@@ -545,8 +545,10 @@ export function dmSend(
   quote?: { seq: number; index?: number; ask: boolean; roomId?: string; focus?: string },
   /** 먼저 올린 사진(mediaClient uploadImage) — 이 대화에 한 번만 붙는다. */
   imageId?: string,
+  /** 받아 둔 묶음의 아이콘(rooms/icons.ts) — 서버가 묶음에서 채운다. */
+  icon?: { pack: string; id: string },
 ): Promise<{ thread: DmThread; message: DmMessage }> {
-  const image = imageId ? { imageId } : {};
+  const image = { ...(imageId ? { imageId } : {}), ...(icon ? { icon } : {}) };
   if (!quote) return dm("send", { target, text, ...image });
   // roomId가 있으면 쪽지: 방 자막 줄을 집은 것(서버가 방 기록에서 채움).
   const focus = quote.focus ? { quoteFocus: quote.focus } : {};
@@ -618,8 +620,14 @@ export function groupEndCall(groupId: string, roomId: string): Promise<{ logged:
   return groups("endCall", { groupId, roomId });
 }
 
-export function groupSend(groupId: string, text: string, quote?: { seq: number; ask: boolean; focus?: string }, imageId?: string): Promise<{ group: Group; message: GroupMessage }> {
-  const image = imageId ? { imageId } : {};
+export function groupSend(
+  groupId: string,
+  text: string,
+  quote?: { seq: number; ask: boolean; focus?: string },
+  imageId?: string,
+  icon?: { pack: string; id: string },
+): Promise<{ group: Group; message: GroupMessage }> {
+  const image = { ...(imageId ? { imageId } : {}), ...(icon ? { icon } : {}) };
   const focus = quote?.focus ? { quoteFocus: quote.focus } : {};
   return groups("send", quote ? { groupId, text, quoteSeq: quote.seq, ask: quote.ask, ...focus, ...image } : { groupId, text, ...image });
 }
@@ -679,8 +687,8 @@ export function boardLike(postId: string, on: boolean): Promise<{ like: { likes:
 export function boardDelete(postId: string): Promise<{ ok: true }> {
   return board("delete", { postId });
 }
-export function boardComment(postId: string, text: string, imageId?: string, replyTo?: string): Promise<{ comment: BoardComment }> {
-  return board("comment", { postId, text, ...(imageId ? { imageId } : {}), ...(replyTo ? { replyTo } : {}) });
+export function boardComment(postId: string, text: string, imageId?: string, replyTo?: string, icon?: { pack: string; id: string }): Promise<{ comment: BoardComment }> {
+  return board("comment", { postId, text, ...(imageId ? { imageId } : {}), ...(replyTo ? { replyTo } : {}), ...(icon ? { icon } : {}) });
 }
 export function boardEditComment(postId: string, commentId: string, text: string): Promise<{ comment: BoardComment }> {
   return board("editComment", { postId, commentId, text });

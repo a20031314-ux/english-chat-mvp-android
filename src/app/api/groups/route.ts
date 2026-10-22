@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { pickIcon } from "@/lib/server/iconPick";
 import { isMediaId } from "@/lib/rooms/media";
 import { claimMedia, deleteMedia } from "@/lib/server/mediaStore";
 import { withoutGone } from "@/lib/server/dmStore";
@@ -202,12 +203,15 @@ export async function POST(request: NextRequest) {
     // 사진: 이 단체방에 올린 내 사진만, 한 번(server/mediaStore.ts).
     const image = isMediaId(body.imageId) ? await claimMedia(body.imageId, me, { kind: "group", groupId: group.id }) : null;
     if (isMediaId(body.imageId) && !image) return bad(request, "BAD_IMAGE");
-    if (!text && !image) return bad(request, "NO_TEXT");
+    const icon = await pickIcon(me, body.icon);
+    if (body.icon && !icon) return bad(request, "BAD_ICON");
+    if (!text && !image && !icon) return bad(request, "NO_TEXT");
     const result = await sendToGroup({
       from: me,
       id: group.id,
       text,
       ...(image ? { image } : {}),
+      ...(icon ? { icon } : {}),
       ...(typeof body.quoteSeq === "number" ? { quoteSeq: body.quoteSeq, ask: body.ask === true, quoteFocus: body.quoteFocus } : {}),
     });
     if (!result.ok) return bad(request, result.error, result.error === "NO_QUOTE" ? 404 : 403);

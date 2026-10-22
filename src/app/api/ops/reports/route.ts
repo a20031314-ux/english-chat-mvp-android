@@ -1,4 +1,6 @@
 import { NextRequest } from "next/server";
+import { setPackHidden } from "@/lib/server/iconStore";
+import { isPackId } from "@/lib/rooms/icons";
 import { jsonWithCors } from "@/lib/server/cors";
 import { readAccounts } from "@/lib/server/accountStore";
 import { readReportRows, isAccountId } from "@/lib/server/socialStore";
@@ -64,6 +66,13 @@ export async function POST(request: NextRequest) {
     if (typeof body.id !== "string" || !/^[0-9a-f]{12}$/.test(body.id)) return bad(request, "BAD_ID");
     await markDone(body.id, body.done !== false, typeof body.note === "string" ? body.note : "");
     return jsonWithCors(request, { ok: true });
+  }
+
+  // 아이콘 묶음 내리기·되돌리기(저작권 등 신고, 줄에 "icon-pack:<id>"). 내리면 목록·보내기·그림 모두 막힌다.
+  if (action === "hideIconPack" || action === "showIconPack") {
+    if (!isPackId(body.packId)) return bad(request, "BAD_ID");
+    const found = await setPackHidden(body.packId, action === "hideIconPack");
+    return found ? jsonWithCors(request, { ok: true }) : bad(request, "NOT_FOUND", 404);
   }
 
   const target = body.target;

@@ -235,6 +235,7 @@ function ReportCard({
   act: (payload: Record<string, unknown>) => Promise<void>;
 }) {
   const person = data.people[report.target];
+  const iconPackId = report.lines.map((line) => /^icon-pack:(ip_[0-9a-z]+)$/.exec(line)?.[1]).find(Boolean) ?? null;
   return (
     <article className={`rounded-2xl border border-line px-4 py-3 ${report.done ? "bg-surface-sunk opacity-70" : "bg-surface"}`}>
       <div className="flex flex-wrap items-center gap-2 text-caption text-slate-400">
@@ -257,6 +258,27 @@ function ReportCard({
             </p>
           ))}
         </blockquote>
+      ) : null}
+      {/* 아이콘 묶음 신고(줄에 "icon-pack:<id>"): 묶음 그림을 보고 내리기·되돌리기. */}
+      {iconPackId ? (
+        <div className="mt-2 flex flex-wrap items-center gap-2">
+          <button
+            type="button"
+            disabled={busy}
+            onClick={() => void act({ action: "hideIconPack", packId: iconPackId })}
+            className="rounded-xl border border-bad/40 px-3 py-1.5 text-note text-bad disabled:opacity-40"
+          >
+            아이콘 묶음 내리기
+          </button>
+          <button
+            type="button"
+            disabled={busy}
+            onClick={() => void act({ action: "showIconPack", packId: iconPackId })}
+            className="rounded-xl border border-line px-3 py-1.5 text-note text-slate-200 disabled:opacity-40"
+          >
+            되돌리기
+          </button>
+        </div>
       ) : null}
       <div className="mt-3 rounded-xl bg-surface-sunk px-3 py-2">
         {person ? <PersonHead person={person} now={data.now} /> : <p className="text-note text-slate-400">신고된 사람 {report.target}</p>}

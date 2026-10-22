@@ -20,6 +20,7 @@ import { countryFlag, countryName } from "@/lib/account/countries";
 import type { MediaRef, MediaScope } from "@/lib/rooms/media";
 import { MediaError, uploadImage, type MediaUploadError } from "@/lib/rooms/mediaClient";
 import { isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
+import { IconButton } from "./IconPacks";
 
 /*
  * 말하는 방에서 여러 화면이 함께 쓰는 조각: 얼굴(프로필 사진), 프로필 시트,
@@ -388,6 +389,7 @@ export function Composer({
   onClearQuote,
   initialText,
   attach,
+  onSendIcon,
 }: {
   t: RoomCopy;
   placeholder?: string;
@@ -399,6 +401,8 @@ export function Composer({
   onSend: (text: string, image?: MediaRef) => Promise<void>;
   /** 사진 첨부(📷): 어디에 올릴 사진인지. 없으면 버튼을 안 보인다(말하는 방 채팅 등). */
   attach?: MediaScope | null;
+  /** 아이콘 보내기(🙂, rooms/icons.ts): 고르면 바로 보낸다. 없으면 버튼을 안 보인다. */
+  onSendIcon?: (icon: { pack: string; id: string }) => Promise<void>;
   /** 집은 남의 말(묻기·답하기). 부르는 쪽은 인용이 바뀔 때 key를 바꿔 initialText를 새로 채운다. */
   quote?: { nickname: string; text: string; ask: boolean; focus?: string } | null;
   onClearQuote?: () => void;
@@ -548,6 +552,19 @@ export function Composer({
               📷
             </button>
           </>
+        ) : null}
+        {onSendIcon ? (
+          <IconButton
+            locale={locale}
+            targetLanguage={targetLanguage}
+            disabled={disabled || busy}
+            onPick={(icon) => {
+              setBusy(true);
+              void onSendIcon(icon)
+                .catch(() => {})
+                .finally(() => setBusy(false));
+            }}
+          />
         ) : null}
         <input
           ref={input}

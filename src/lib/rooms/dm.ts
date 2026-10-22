@@ -10,6 +10,7 @@
  */
 
 import type { LineQuote } from "./quote.ts";
+import type { IconRef } from "./icons.ts";
 import type { MediaRef } from "./media.ts";
 
 /** 받는 사람이 답하기 전, 처음 보낸 사람이 보낼 수 있는 줄 수. */
@@ -53,6 +54,8 @@ export type DmMessage = {
   ask?: boolean;
   /** 붙인 사진(rooms/media.ts) — 글은 비어 있을 수 있다. */
   image?: MediaRef;
+  /** 보낸 아이콘(rooms/icons.ts, 서버가 묶음에서 채움) — 글은 비어 있을 수 있다. */
+  icon?: IconRef;
 };
 
 /** 목록에 보여 줄 한 줄: 상대·마지막 말·안 읽은 수, 요청인지. */

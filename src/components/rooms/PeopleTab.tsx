@@ -15,19 +15,22 @@ import { requestDm } from "@/lib/rooms/openDm";
 import { PeopleList } from "./RoomPeople";
 import { InviteButton } from "@/components/invite/InviteButton";
 import { BoardView } from "./BoardView";
+import { IconsView } from "./IconPacks";
+import { iconCopy } from "@/lib/rooms/iconCopy";
 
 /**
  * 하단 "사람" 탭: 최근에 앱을 쓴 사람들의 프로필 목록(RoomPeople.tsx).
  * 카드에서 팔로우·메시지, 누르면 프로필 시트. 메시지는 말하는 방과 같은 대화 화면(openDm.ts).
  * 로그인해야 보인다 — 안 했으면 My와 같은 계정 카드.
- * 보는 방식(2026-10-19): 사람 / 게시판(BoardView.tsx), 고른 것은 기기에(`peopleViewMode`).
+ * 보는 방식(2026-10-19): 사람 / 게시판(BoardView.tsx) / 아이콘(IconPacks.tsx, 2026-10-23), 고른 것은 기기에(`peopleViewMode`).
  */
-type PeopleView = "people" | "board";
+type PeopleView = "people" | "board" | "icons";
 const VIEW_KEY = "peopleViewMode";
 
 function readView(): PeopleView {
   try {
-    return localStorage.getItem(VIEW_KEY) === "board" ? "board" : "people";
+    const saved = localStorage.getItem(VIEW_KEY);
+    return saved === "board" || saved === "icons" ? saved : "people";
   } catch {
     return "people";
   }
@@ -94,7 +97,7 @@ export function PeopleTab({
               </section>
             ) : null}
             <div className="mb-3 flex gap-1" role="group">
-              {(["people", "board"] as const).map((mode) => (
+              {(["people", "board", "icons"] as const).map((mode) => (
                 <button
                   key={mode}
                   type="button"
@@ -102,12 +105,14 @@ export function PeopleTab({
                   onClick={() => choose(mode)}
                   className={`rounded-lg px-3 py-1.5 text-note ${view === mode ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
                 >
-                  {mode === "people" ? t.peopleViewList : t.boardTab}
+                  {mode === "people" ? t.peopleViewList : mode === "board" ? t.boardTab : iconCopy(locale).tab}
                 </button>
               ))}
             </div>
             {view === "board" ? (
               <BoardView t={t} locale={locale} targetLanguage={targetLanguage} />
+            ) : view === "icons" ? (
+              <IconsView locale={locale} targetLanguage={targetLanguage} />
             ) : (
               <PeopleList t={t} locale={locale} targetLanguage={targetLanguage} onMessage={requestDm} />
             )}

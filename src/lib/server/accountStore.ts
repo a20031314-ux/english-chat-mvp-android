@@ -8,6 +8,7 @@ import { forgetMedia } from "./mediaStore.ts";
 import { forgetRandom } from "./randomStore.ts";
 import { forgetOps } from "./opsStore.ts";
 import { forgetContrib } from "./contribStore.ts";
+import { forgetIcons } from "./iconStore.ts";
 import { isIdentified } from "./identity.ts";
 import {
   EMAIL_CODE_LENGTH,
@@ -231,6 +232,8 @@ export async function deleteAccount(record: AccountRecord): Promise<void> {
   await forgetOps(record.id);
   // 받은 도움됐어요·반영 의견·공부한 날 요약(lib/server/contribStore.ts).
   await forgetContrib(record.id);
+  // 만든 아이콘 묶음(파일까지)과 받아 둔 목록(lib/server/iconStore.ts).
+  await forgetIcons(record.id);
   await kvListPush(PURGE_QUEUE_KEY, [record.dataUserId], 400 * 24 * 60 * 60);
 }
 

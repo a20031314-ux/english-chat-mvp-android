@@ -38,6 +38,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   howToSayCard: 1,
   // 사람 사이 사진 한 장: 자동 검사 한 번(omni-moderation, 무료) + 저장.
   mediaUpload: 1,
+  /** 아이콘 하나 올리기: 검사 모델 프레임 1~3장(무료 모델, 호출 수만). */
+  iconUpload: 3,
   // 랜덤 영상(창구 Spin) 화면 한 장 검사(omni-moderation, 무료) — 3초에 한 번까지.
   randomFrame: 1,
   // The opening line of a conversation nobody has spoken in yet.

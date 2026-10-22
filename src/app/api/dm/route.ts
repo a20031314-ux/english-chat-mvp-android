@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { pickIcon } from "@/lib/server/iconPick";
 import { pollFrom } from "@/lib/server/lateRows";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
@@ -71,7 +72,10 @@ export async function POST(request: NextRequest) {
     // 사진: 이 대화에 올린 내 사진만, 한 번(server/mediaStore.ts).
     const image = isMediaId(body.imageId) ? await claimMedia(body.imageId, me, { kind: "dm", threadId: id }) : null;
     if (isMediaId(body.imageId) && !image) return bad(request, "BAD_IMAGE");
-    if (!text && !image) return bad(request, "NO_TEXT");
+    // 아이콘: 받아 둔(또는 공개) 묶음의 아이콘, 내려진 묶음은 안 됨(server/iconStore.ts).
+    const icon = await pickIcon(me, body.icon);
+    if (body.icon && !icon) return bad(request, "BAD_ICON");
+    if (!text && !image && !icon) return bad(request, "NO_TEXT");
     let quote: LineQuote | undefined = undefined;
     const roomQuote = body.roomQuote as { roomId?: unknown; seq?: unknown } | undefined;
     if (roomQuote && isRoomId(roomQuote.roomId) && typeof roomQuote.seq === "number") {
@@ -93,7 +97,7 @@ export async function POST(request: NextRequest) {
     // 줄 안에서 고른 부분(인용 글 안에 있을 때만).
     const focus = quote ? cleanFocus(quote.text, body.quoteFocus) : undefined;
     if (quote && focus) quote = { ...quote, focus };
-    const result = await send({ from: me, to: target, kind: "text", text, ...(quote ? { quote, ask: body.ask === true } : {}), ...(image ? { image } : {}) });
+    const result = await send({ from: me, to: target, kind: "text", text, ...(quote ? { quote, ask: body.ask === true } : {}), ...(image ? { image } : {}), ...(icon ? { icon } : {}) });
     if (!result.ok) return bad(request, result.error, 409);
     return jsonWithCors(request, { thread: result.thread, message: result.message });
   }

@@ -164,6 +164,7 @@ export async function addComment(input: {
   postId: string;
   text: string;
   image?: MediaRef;
+  icon?: BoardComment["icon"];
   /** 답글이면 답하는 댓글(맨 위든 답글이든 — 맨 위 댓글 아래로 붙는다). */
   replyTo?: string;
 }): Promise<WriteResult<BoardComment>> {
@@ -182,6 +183,7 @@ export async function addComment(input: {
     text: input.text,
     at: Date.now(),
     ...(input.image ? { image: input.image } : {}),
+    ...(input.icon ? { icon: input.icon } : {}),
     ...(parent ? { parent } : {}),
   };
   await kvListPush(commentsKey(post.id), [JSON.stringify(comment)], KEEP_SECONDS);

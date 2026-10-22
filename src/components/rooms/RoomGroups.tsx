@@ -25,6 +25,7 @@ import { askPhraseAbout, questionCount } from "@/lib/rooms/quote";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
 import { Composer, Face, LineActions, QuoteText, Unsendable, languagePair, useProfile } from "./RoomParts";
 import { MediaImage } from "./MediaImage";
+import { IconImage } from "./IconPacks";
 import { teamCopy, type TeamCopy } from "@/lib/rooms/teamCopy";
 import { TeamSpace } from "./TeamSpace";
 
@@ -475,6 +476,11 @@ function GroupBubble({
             {t.askedYou.replace("{name}", name)}
           </p>
         ) : null}
+        {message.icon ? (
+          <div className={`mb-1 flex ${mine ? "justify-end" : ""}`}>
+            <IconImage icon={message.icon} />
+          </div>
+        ) : null}
         {message.image ? (
           <div className={`mb-1 flex ${mine ? "justify-end" : ""}`}>
             <MediaImage image={message.image} t={t} />
@@ -877,6 +883,11 @@ export function GroupThreadView({
                 setGroup(body.group);
                 add([body.message]);
                 setQuoting(null);
+              }}
+              onSendIcon={async (icon) => {
+                const body = await groupSend(groupId, "", undefined, undefined, icon);
+                setGroup(body.group);
+                add([body.message]);
               }}
             />
           </footer>

@@ -71,6 +71,8 @@ export const OP_COST: Record<string, OpCost> = {
   howToSayCard: llm("howToSay"),
   // 검사 모델은 무료, 남는 것은 Blob 저장(150KB × 30일)과 전송 — 한 장 약 $0.00002 + 몇 번 보기.
   mediaUpload: { kind: "flat", usd: 0.00005, basis: "assumed" },
+  // 아이콘: 검사 무료 + 256px WebP 저장·변환(서버 CPU) — 사진과 같은 자리 값.
+  iconUpload: { kind: "flat", usd: 0.00005, basis: "assumed" },
   // 검사 모델은 무료, 남는 것은 서버 호출 한 번(저장 없음).
   randomFrame: { kind: "flat", usd: 0.000005, basis: "assumed" },
   chatStart: llm("chat"),

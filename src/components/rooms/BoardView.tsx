@@ -3,6 +3,7 @@
 import { Fragment, useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import { MediaImage, MediaThumb } from "./MediaImage";
+import { IconButton, IconImage } from "./IconPacks";
 import { MEDIA_PER_POST, type MediaRef, type MediaScope } from "@/lib/rooms/media";
 import { MediaError, uploadImage } from "@/lib/rooms/mediaClient";
 import { BodyLayer } from "@/components/FullScreenLayer";
@@ -403,6 +404,25 @@ function PostSheet({
     setTranslated((current) => ({ ...current, [key]: value || t.translateFailed }));
   };
 
+  /** 아이콘만 한 줄로(rooms/icons.ts). 답글 중이면 그 답글로. */
+  const sendIcon = async (icon: { pack: string; id: string }) => {
+    if (!post || busy) return;
+    setBusy(true);
+    setError("");
+    try {
+      const { comment } = await boardComment(post.id, "", undefined, replying?.id, icon);
+      setComments((current) => [...current, comment]);
+      const next = { ...post, comments: post.comments + 1 };
+      setPost(next);
+      onChanged(next);
+      setReplying(null);
+    } catch (caught) {
+      setError(errorText(t, caught));
+    } finally {
+      setBusy(false);
+    }
+  };
+
   const send = async () => {
     if (!post || (!draft.trim() && !commentPhoto.picks.length) || busy) return;
     setBusy(true);
@@ -497,6 +517,11 @@ function PostSheet({
             </button>
           ) : null}
         </div>
+        {comment.icon ? (
+          <div className="mt-1">
+            <IconImage icon={comment.icon} size={100} />
+          </div>
+        ) : null}
         {comment.image ? (
           <div className="mt-1">
             <MediaImage image={comment.image} t={t} maxWidth={200} />
@@ -644,6 +669,7 @@ function PostSheet({
           <PhotoPicks t={t} photos={commentPhoto} busy={busy} compact />
           <div className="flex items-end gap-2">
             <PhotoButton t={t} photos={commentPhoto} disabled={busy} />
+            <IconButton locale={locale} targetLanguage={targetLanguage} disabled={busy} onPick={(icon) => void sendIcon(icon)} />
             <textarea
               ref={inputRef}
               dir="auto"

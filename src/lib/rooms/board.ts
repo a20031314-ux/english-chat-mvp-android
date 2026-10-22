@@ -5,6 +5,7 @@
  */
 
 import type { MediaRef } from "./media.ts";
+import type { IconRef } from "./icons.ts";
 
 export const BOARD_POST_MAX_CHARS = 2000;
 export const BOARD_COMMENT_MAX_CHARS = 500;
@@ -38,6 +39,8 @@ export type BoardComment = {
   editedAt?: number;
   /** 사진 한 장. */
   image?: MediaRef;
+  /** 아이콘 하나(rooms/icons.ts). */
+  icon?: IconRef;
   /** 답글이면 맨 위 댓글 id(한 단계만 — 답글의 답글도 같은 맨 위 댓글 아래로, 2026-10-20). */
   parent?: string;
 };

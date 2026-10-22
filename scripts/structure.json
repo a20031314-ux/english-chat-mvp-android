@@ -101,9 +101,11 @@
     "components/rooms/PeopleTab": "people",
     "components/rooms/RoomPeople": "people",
     "components/rooms/BoardView": "people",
+    "components/rooms/IconPacks": "people",
     "components/rooms/MediaImage": "people",
     "api/social": "people",
     "api/board": "people",
+    "api/icons": "people",
     "api/media": "people",
 
     "components/rooms/RoomsScreen": "room",

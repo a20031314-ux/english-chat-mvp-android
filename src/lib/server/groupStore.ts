@@ -227,6 +227,8 @@ async function sendToGroupUnlocked(input: {
   quoteFocus?: unknown;
   /** 붙인 사진(부르는 쪽이 claimMedia로 확인한 것). */
   image?: MediaRef;
+  /** 보낸 아이콘(부르는 쪽이 takeIcon으로 확인한 것). */
+  icon?: GroupMessage["icon"];
 }): Promise<{ ok: true; group: Group; message: GroupMessage } | { ok: false; error: "NO_GROUP" | "NOT_MEMBER" | "NO_QUOTE" }> {
   const group = await readGroup(input.id);
   if (!group) return { ok: false, error: "NO_GROUP" };
@@ -245,6 +247,7 @@ async function sendToGroupUnlocked(input: {
     text: input.text,
     ...(quote ? { quote, ask: input.ask === true } : {}),
     ...(input.image ? { image: input.image } : {}),
+    ...(input.icon ? { icon: input.icon } : {}),
   });
   // 팀에서 "무슨 뜻이에요?"로 물은 줄은 워크스페이스 표현으로 남는다.
   if (group.team && quote && input.ask === true) {

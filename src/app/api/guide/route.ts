@@ -13,6 +13,8 @@ import chatBefore271 from "@/lib/guide/chatBefore271.json";
 export const runtime = "nodejs";
 
 const GAME_SECTIONS = ["room.game", "room.mafia", "room.watch"];
+/** 아이콘 묶음(2026-10-23) — 그 화면이 있는 빌드(`icons=1`)만. */
+const ICON_SECTIONS = ["people.icons"];
 
 /**
  * How to use each tab, in the language the app is read in.
@@ -32,10 +34,12 @@ export async function GET(request: NextRequest) {
   // 게임 칸(라이어 게임 room.game·마피아 room.mafia, 2026-10-23)은 게임이 있는 빌드(`game=1`)만. 옛 빌드는 칸 순서로 칸 이름을 붙이므로(GUIDE_SECTION_IDS)
   // 그 칸을 빼서 돌려준다 — 넣은 채로 주면 옛 앱에서 '방장이라면' 자리에 게임 글이 보인다.
   const withGame = request.nextUrl.searchParams.get("game") === "1";
-  const gameAt = GAME_SECTIONS.map((id) => GUIDE_SECTION_IDS.rooms.indexOf(id)).filter((index) => index >= 0);
-  const current: Guide = withGame
-    ? full
-    : { ...full, rooms: { ...full.rooms, sections: full.rooms.sections.filter((_, index) => !gameAt.includes(index)) } };
+  const withIcons = request.nextUrl.searchParams.get("icons") === "1";
+  const hiddenIds = [...(withGame ? [] : GAME_SECTIONS), ...(withIcons ? [] : ICON_SECTIONS)];
+  const hiddenAt = hiddenIds.map((id) => GUIDE_SECTION_IDS.rooms.indexOf(id)).filter((index) => index >= 0);
+  const current: Guide = hiddenAt.length
+    ? { ...full, rooms: { ...full.rooms, sections: full.rooms.sections.filter((_, index) => !hiddenAt.includes(index)) } }
+    : full;
   const language = asked === "ko" || asked === "en" || translated ? asked : "en";
   // 2.68 이하는 탭이 "사람·말하는 방"이고 단체방·자유 대화·참여 방식이 없다: `rooms=269`를
   // 보내지 않으면 그 빌드가 보던 말하는 방 안내(스냅숏)를 준다.
@@ -75,7 +79,7 @@ export async function GET(request: NextRequest) {
   // 옛 빌드는 묻지 않으니 `tabs`만 받는다.
   const chapters =
     request.nextUrl.searchParams.get("chapters") === "1"
-      ? guideChapters(full).map((chapter) => (withGame ? chapter : { ...chapter, sections: chapter.sections.filter((section) => !GAME_SECTIONS.includes(section.id)) }))
+      ? guideChapters(full).map((chapter) => ({ ...chapter, sections: chapter.sections.filter((section) => !hiddenIds.includes(section.id)) }))
       : undefined;
   return jsonWithCors(request, { version: GUIDE_VERSION, language, tabs, ...(chapters ? { chapters } : {}) });
 }

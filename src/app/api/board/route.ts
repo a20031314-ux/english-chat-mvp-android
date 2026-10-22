@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { pickIcon } from "@/lib/server/iconPick";
 import { isMediaId, MEDIA_PER_POST, type MediaRef } from "@/lib/rooms/media";
 import { claimMedia } from "@/lib/server/mediaStore";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
@@ -151,9 +152,15 @@ export async function POST(request: NextRequest) {
     const text = cleanBoardText(body.text, BOARD_COMMENT_MAX_CHARS);
     const image = isMediaId(body.imageId) ? await claimMedia(body.imageId, me, { kind: "board" }) : null;
     if (isMediaId(body.imageId) && !image) return bad(request, "BAD_IMAGE");
-    if (!text && !image) return bad(request, "EMPTY");
+    const icon = await pickIcon(me, body.icon);
+    if (body.icon && !icon) return bad(request, "BAD_ICON");
+    if (!text && !image && !icon) return bad(request, "EMPTY");
     const replyTo = isBoardId(body.replyTo) ? body.replyTo : undefined;
-    return answer(request, await addComment({ author: me, postId, text, ...(image ? { image } : {}), ...(replyTo ? { replyTo } : {}) }), "comment");
+    return answer(
+      request,
+      await addComment({ author: me, postId, text, ...(image ? { image } : {}), ...(icon ? { icon } : {}), ...(replyTo ? { replyTo } : {}) }),
+      "comment",
+    );
   }
 
   if (!isBoardId(body.commentId)) return bad(request, "BAD_COMMENT");

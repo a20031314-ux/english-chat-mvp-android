@@ -21,6 +21,7 @@ import { ThankButton } from "@/components/account/ProfileFacts";
 import type { RoomNote } from "@/lib/rooms/layout";
 import { Composer, Face, LineActions, QuoteText, Unsendable, useProfile } from "./RoomParts";
 import { MediaImage } from "./MediaImage";
+import { IconImage } from "./IconPacks";
 
 /*
  * 1:1 메시지(rooms/dm.ts). 목록(DmList)과 대화(DmThreadView).
@@ -388,6 +389,15 @@ export function DmThreadView({
                   throw error; // 입력창은 글을 남겨 둔다(Composer).
                 }
               }}
+              onSendIcon={async (icon) => {
+                try {
+                  const body = await dmSend(other, "", undefined, undefined, icon);
+                  setThread(body.thread);
+                  add([body.message]);
+                } catch (error) {
+                  setNotice(error instanceof RoomApiError && error.code === "PENDING_LIMIT" ? t.pendingLimit : t.error);
+                }
+              }}
             />
           </footer>
         </div>
@@ -512,6 +522,11 @@ function Bubble({
           <p className="mb-0.5 px-1 text-[11px] text-amber-200" dir="auto">
             {t.askedYou.replace("{name}", quoteName(null, ""))}
           </p>
+        ) : null}
+        {message.icon ? (
+          <div className={`mb-1 flex ${mine ? "justify-end" : ""}`}>
+            <IconImage icon={message.icon} />
+          </div>
         ) : null}
         {message.image ? (
           <div className={`mb-1 flex ${mine ? "justify-end" : ""}`}>

@@ -22,7 +22,7 @@
 │           ├ 단체방(팀이면 "대화 | 워크스페이스", 📞 단체방 통화 → 비공개 Room)
 │           └ 1:1 메시지(요청 → 열림, 📞 → 둘만의 비공개 Room)
 ├ 영상 학습 video ─ 이달의 영상 · 링크 넣기 · 학습 언어 자막 · 문장 바 → 문장분석 시트
-├ 사람 people ─ 칩 [사람 | 게시판] · 프로필 시트(팔로우·메시지·메이트 신청·차단·신고) · ➕ 친구 초대
+├ 사람 people ─ 칩 [사람 | 게시판 | 아이콘(묶음 만들기·받기)] · 프로필 시트(팔로우·메시지·메이트 신청·차단·신고) · ➕ 친구 초대
 ├ Room room ─ 로비(방 카드) → 방(자리 8칸·듣는 줄·자막·댓글) · 👥 이 방 사람들과 단체방 · 🎭 게임(방장: 라이어 게임·마피아)
 └ My my ─ 계정 카드 · 🎁 초대 보상 · 🤝 메이트·팀 줄 → 대화의 워크스페이스
           오늘 해볼 것 → 자라는 중 [망 | 그래프 | 지도] → 내 표현 → 노트(장 8 × 주제 3, 단어장 줄)
@@ -109,9 +109,9 @@
 - 다른 영역이 씀: `videoLearning/VideoLearningTab` ← 앱 틀
 
 ### 사람 탭 — 프로필 목록·게시판·사진 `people`
-- 화면: `SuspendedNotice` · `rooms/BoardView` · `rooms/MediaImage` · `rooms/PeopleTab` · `rooms/RoomPeople`
-- API: `board`(대화 탭, Room 탭, 계정·로그인) · `media`(Room 탭) · `social`(대화 탭, Room 탭, 계정·로그인)
-- 다른 영역이 씀: `SuspendedNotice` ← 앱 틀 · `rooms/MediaImage` ← 대화 탭 · `rooms/PeopleTab` ← 앱 틀
+- 화면: `SuspendedNotice` · `rooms/BoardView` · `rooms/IconPacks` · `rooms/MediaImage` · `rooms/PeopleTab` · `rooms/RoomPeople`
+- API: `board`(대화 탭, Room 탭, 계정·로그인) · `icons`(대화 탭, 계정·로그인) · `media`(Room 탭) · `social`(대화 탭, Room 탭, 계정·로그인)
+- 다른 영역이 씀: `SuspendedNotice` ← 앱 틀 · `rooms/IconPacks` ← 대화 탭, Room 탭 · `rooms/MediaImage` ← 대화 탭 · `rooms/PeopleTab` ← 앱 틀
 
 ### Room 탭 — 말하는 방 `room`
 - 화면: `rooms/RoomGame` · `rooms/RoomParts` · `rooms/RoomView` · `rooms/RoomsScreen` · `rooms/VideoStage`
