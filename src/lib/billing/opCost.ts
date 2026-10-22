@@ -14,26 +14,20 @@
  * 순수 파일: 스크립트가 바로 읽을 수 있게 "@/" 경로를 쓰지 않는다.
  */
 
-import {
-  CALL_TRANSCRIBE_USD_PER_MINUTE,
-  MINI_USD_PER_MTOK,
-  ROLEPLAY_TURN,
-  SUBTITLE_PASS_TOKENS,
-  TTS_USD_PER_MINUTE,
-  TUTOR_USD_PER_MTOK,
-} from "./cost.ts";
+import { ROLEPLAY_TURN, SUBTITLE_PASS_TOKENS, TTS_USD_PER_MINUTE } from "./cost.ts";
 import { MODEL_CALLS_PER_REQUEST } from "../server/modelCalls.ts";
+import { SPEECH_DEFAULTS, codeTextModel, codeTtsModel, type TextTask } from "../aiDefaults.ts";
+import { sttPerMinute, textPrice, ttsPerMinute } from "./modelPrices.ts";
 
-export type ModelName = "mini" | "4.1-mini" | "4.1" | "sonnet-5.5";
-
-/** 100만 토큰당 달러. 출처는 cost.ts PRICE_SOURCE. */
-export const MODEL_USD_PER_MTOK: Record<ModelName, { input: number; output: number }> = {
-  mini: MINI_USD_PER_MTOK, // gpt-4o-mini, chatModel() 기본값
-  "4.1-mini": TUTOR_USD_PER_MTOK,
-  "4.1": { input: 2, output: 8 },
-  // Claude Sonnet 5.5 (platform.claude.com pricing, 2026-10-21). 확인 모델(llm.ts high 등급, 결정 2026-10-21).
-  "sonnet-5.5": { input: 2, output: 10 },
-};
+/**
+ * 2026-10-22부터: op는 모델 이름이 아니라 **기능(task)**을 적는다. 그 기능이 지금 쓰는 모델은 `lib/aiDefaults.ts`(코드 기본값 —
+ * 서버 `llm.ts`가 쓰는 것과 같은 표)에서, 단가는 `modelPrices.ts`에서 읽는다. 그래서 기본 모델을 바꾸는 커밋 하나로
+ * 비용 표(hub/costs.md, CI가 main push마다 다시 계산)가 저절로 바뀐다. op의 기능이 그 op를 기록하는 경로가 실제로 부르는
+ * 기능인지는 `scripts/cost-coverage.mjs`가 확인한다.
+ */
+export function opModel(task: TextTask): string {
+  return codeTextModel(task);
+}
 
 export type Tokens = { input: number; output: number };
 
@@ -44,23 +38,24 @@ export const DEFAULT_CALL_TOKENS: Tokens = { input: 2000, output: 300 };
 export type Basis = "measured" | "assumed";
 
 export type OpCost =
-  /** 글 모델 호출. MODEL_CALLS_PER_REQUEST 횟수 × 호출당 토큰 값. */
-  | { kind: "model"; model: ModelName; tokens?: Tokens; basis: Basis }
-  /** 영상 자막 한 단계(cost.ts SUBTITLE_PASS_TOKENS, gpt-4o-mini) × 호출 횟수. */
+  /** 글 모델 호출 — 그 기능(task)의 코드 기본 모델 단가 × MODEL_CALLS_PER_REQUEST 횟수 × 호출당 토큰. */
+  | { kind: "llm"; task: TextTask; tokens?: Tokens; basis: Basis }
+  /** 영상 자막 한 단계(cost.ts SUBTITLE_PASS_TOKENS, "video" 기능 모델) × 호출 횟수. */
   | { kind: "subtitle"; basis: Basis }
-  /** 말 받아쓰기 한 번, 초 단위. */
-  | { kind: "transcribe"; seconds: number; basis: Basis }
-  /** 음성 합성 한 번, 초 단위. 캐시에서 나간 줄은 기록되지 않는다(tts route). */
+  /** 말 받아쓰기 한 번, 초 단위. stt: turn = 통화·방 한 마디, second = 방 교정의 두 번째 의견, video = 영상. */
+  | { kind: "transcribe"; seconds: number; stt: "turn" | "second" | "video"; basis: Basis }
+  /** 음성 합성 한 번, 초 단위(코드 기본 목소리 모델). 캐시에서 나간 줄은 기록되지 않는다(tts route). */
   | { kind: "tts"; seconds: number; basis: Basis }
   /** 한 번에 대략 이만큼(달러). 다른 방식으로 쪼개기 어려운 것. */
   | { kind: "flat"; usd: number; basis: Basis }
   /** 돈이 안 드는 기록(비율을 보려고 세는 것). 모델 호출 0번이어야 한다. */
   | { kind: "counter" };
 
-const mini = (tokens?: Tokens): OpCost => ({ kind: "model", model: "mini", tokens, basis: tokens ? "measured" : "assumed" });
+/** 잰 적 없는 기본 토큰(2000/300)으로. */
+const llm = (task: TextTask, tokens?: Tokens): OpCost => ({ kind: "llm", task, tokens, basis: tokens ? "measured" : "assumed" });
 /** 프롬프트 길이에서 어림한 토큰(잰 것은 아님) — 기본값 2000/300보다 훨씬 짧은 호출. */
-const estimated = (tokens: Tokens): OpCost => ({ kind: "model", model: "mini", tokens, basis: "assumed" });
-const tutor: OpCost = { kind: "model", model: "4.1-mini", basis: "assumed" };
+const estimated = (task: TextTask, tokens: Tokens): OpCost => ({ kind: "llm", task, tokens, basis: "assumed" });
+const listen = (stt: "turn" | "second" | "video"): OpCost => ({ kind: "transcribe", seconds: ROLEPLAY_TURN.learnerSpeakingSeconds, stt, basis: "assumed" });
 const counter: OpCost = { kind: "counter" };
 
 /**
@@ -68,86 +63,111 @@ const counter: OpCost = { kind: "counter" };
  * 빠지면 opCost.test.ts가 실패한다.
  */
 export const OP_COST: Record<string, OpCost> = {
-  chat: mini(),
-  chatReread: mini(),
+  chat: llm("chat"),
+  chatReread: llm("chat"),
   // 답만 쓰는 짧은 호출(교정 지시 없음) — 프롬프트 길이에서 어림.
-  chatReply: estimated({ input: 1400, output: 120 }),
-  howToSay: mini(),
-  howToSayCard: mini(),
-  roomHint: mini(),
+  chatReply: estimated("chat", { input: 1400, output: 120 }),
+  howToSay: llm("howToSay"),
+  howToSayCard: llm("howToSay"),
+  roomHint: llm("howToSay"),
   // 검사 모델은 무료, 남는 것은 Blob 저장(150KB × 30일)과 전송 — 한 장 약 $0.00002 + 몇 번 보기.
   mediaUpload: { kind: "flat", usd: 0.00005, basis: "assumed" },
   // 검사 모델은 무료, 남는 것은 서버 호출 한 번(저장 없음).
   randomFrame: { kind: "flat", usd: 0.000005, basis: "assumed" },
-  chatStart: mini(),
-  learnerAsk: mini(),
-  analysisInput: mini(),
-  analysisElement: mini(),
-  expressionInsight: mini(),
-  // 원문·고친 문장·설명만 보내는 짧은 확인(2026-10-21 어림). 기본 Sonnet 5.5(llm.ts DEFAULT_ROUTES, 2026-10-22), MODEL_ROUTES로 되돌림.
-  chatVerify: { kind: "model", model: "sonnet-5.5", tokens: { input: 900, output: 200 }, basis: "assumed" },
-  expressionAsk: tutor,
-  expressionAskRetry: tutor,
-  expressionAskQuick: tutor,
-  curriculumGenerate: mini(),
+  chatStart: llm("chat"),
+  learnerAsk: llm("learnerAsk"),
+  analysisInput: llm("analysis"),
+  analysisElement: llm("analysis"),
+  expressionInsight: llm("expression"),
+  // 원문·고친 문장·설명만 보내는 짧은 확인(2026-10-21 어림).
+  chatVerify: estimated("chatVerify", { input: 900, output: 200 }),
+  expressionAsk: llm("ask"),
+  expressionAskRetry: llm("ask"),
+  expressionAskQuick: llm("ask"),
+  curriculumGenerate: llm("curriculum"),
   // 단계 다섯 개 글(약 120줄) 한 번 옮기기, 학습 언어 × 앱 언어마다 한 번(2026-10-22 어림).
-  stageCopy: estimated({ input: 3500, output: 4500 }),
+  stageCopy: estimated("translate", { input: 3500, output: 4500 }),
   // 영어 구문 목록(38개) 분류 프롬프트 약 3,400자 + 문장 두 줄, 답은 max_tokens 150의 짧은 JSON(2026-10-21 어림).
-  learnerObserve: estimated({ input: 900, output: 80 }),
-  curriculumMissions: mini(),
-  learnerPick: { kind: "model", model: "4.1", basis: "assumed" },
-  notesPlace: mini(),
-  missionCheck: tutor,
+  learnerObserve: estimated("learnerRead", { input: 900, output: 80 }),
+  curriculumMissions: llm("curriculum"),
+  learnerPick: llm("curriculum"),
+  notesPlace: llm("notes"),
+  missionCheck: llm("mission"),
   // 실수 종류 프롬프트 약 1,100~2,200자(이미 아는 실수 30개까지) + 두 줄, 답 짧은 JSON(2026-10-21 어림).
-  weakRead: estimated({ input: 600, output: 80 }),
-  weakMission: mini(),
-  vocabGloss: mini(),
-  learningSpans: mini(),
-  translate: mini(),
+  weakRead: estimated("learnerRead", { input: 600, output: 80 }),
+  weakMission: llm("curriculum"),
+  vocabGloss: llm("vocab"),
+  learningSpans: llm("analysis"),
+  translate: llm("translate"),
   tts: { kind: "tts", seconds: 6, basis: "assumed" },
   videoPrepare: { kind: "subtitle", basis: "assumed" },
   videoWindow: { kind: "subtitle", basis: "assumed" },
-  videoGloss: mini(),
-  videoAnalyze: mini(),
+  videoGloss: llm("video"),
+  videoAnalyze: llm("video"),
   videoGlossKept: counter,
   translateKept: counter,
-  roleplayListen: { kind: "transcribe", seconds: ROLEPLAY_TURN.learnerSpeakingSeconds, basis: "assumed" },
-  roomListen: { kind: "transcribe", seconds: ROLEPLAY_TURN.learnerSpeakingSeconds, basis: "assumed" },
-  // 방 내 줄 교정: 교정 지시(약 2,400자) + 한 마디·앞 6줄, 답은 짧은 JSON(2026-10-22 어림). 실제 모델은 Haiku 5.5(채팅과 같이 아직 mini 단가로 셈).
-  roomFix: estimated({ input: 900, output: 120 }),
+  roleplayListen: listen("turn"),
+  roomListen: listen("turn"),
+  // 방 내 줄 교정: 교정 지시(약 2,400자) + 한 마디·앞 6줄, 답은 짧은 JSON(2026-10-22 어림).
+  roomFix: estimated("roomFix", { input: 900, output: 120 }),
   // 두 번째 받아쓰기는 확신이 어중간한 조각만(조각 하나 몇 초).
-  roomFixListen: { kind: "transcribe", seconds: ROLEPLAY_TURN.learnerSpeakingSeconds, basis: "assumed" },
-  roleplayCorrect: mini(),
-  roleplayTurn: { kind: "model", model: "4.1-mini", tokens: { input: ROLEPLAY_TURN.input, output: ROLEPLAY_TURN.output }, basis: "measured" },
-  roleplayContext: mini(),
-  roleplayReview: { kind: "flat", usd: 0.002, basis: "assumed" },
-  roleplayPractice: tutor,
+  roomFixListen: listen("second"),
+  roleplayCorrect: llm("roleplayTutor"),
+  roleplayTurn: { kind: "llm", task: "roleplayTutor", tokens: { input: ROLEPLAY_TURN.input, output: ROLEPLAY_TURN.output }, basis: "measured" },
+  roleplayContext: llm("roleplayContext"),
+  // 장면·대화 약 1,500토큰 + 이유 문장(추론 모델이면 생각 토큰 포함 약 800, 2026-10-22 어림 — 예전 정액 $0.002와 같은 규모).
+  roleplayReview: estimated("roleplayReview", { input: 1500, output: 800 }),
+  roleplayPractice: llm("roleplayPractice"),
   roleplayBankLine: counter,
   roleplayInventedLine: counter,
   roleplaySplitTurn: counter,
   roleplayReactionLine: counter,
   roleplaySession: counter,
-  expressionUnits: mini(),
-  vocabSearch: mini(),
-  contentDiscovery: mini(),
+  expressionUnits: llm("analysis"),
+  vocabSearch: llm("vocab"),
+  contentDiscovery: llm("video"),
 };
 
 export function callsPerRequest(op: string): number {
   return (MODEL_CALLS_PER_REQUEST as Record<string, number>)[op] ?? 1;
 }
 
-function tokensUsd(model: ModelName, tokens: Tokens): number {
-  const price = MODEL_USD_PER_MTOK[model];
+function tokensUsd(model: string, tokens: Tokens): number {
+  const price = textPrice(model);
   return (tokens.input * price.input + tokens.output * price.output) / 1_000_000;
+}
+
+const STT_MODEL = {
+  turn: () => SPEECH_DEFAULTS.turnTranscribe,
+  second: () => SPEECH_DEFAULTS.secondTranscribe,
+  video: () => SPEECH_DEFAULTS.videoTranscribe,
+} as const;
+
+/** 비용 표가 이 op에 매긴 모델(보고서에 보이려고). 모델이 없는 op는 null. */
+export function opPricedModel(op: string): string | null {
+  const spec = OP_COST[op];
+  if (!spec) return null;
+  switch (spec.kind) {
+    case "llm":
+      return opModel(spec.task);
+    case "subtitle":
+      return opModel("video");
+    case "transcribe":
+      return STT_MODEL[spec.stt]();
+    case "tts":
+      return codeTtsModel();
+    default:
+      return null;
+  }
 }
 
 /**
  * 기록 한 번(요청 한 번)의 달러.
  * `measured`는 서버가 잰 호출당 평균 토큰(usage:tok:*)으로, 있으면 표의 값보다 앞선다.
- * 표에 없는 op는 기본값(gpt-4o-mini 한 번)으로 계산하지만, 테스트가 그런 op를 막는다.
+ * 표에 없는 op는 기본값(채팅 모델 한 번)으로 계산하지만, 테스트가 그런 op를 막는다.
  */
 export function opUsd(op: string, measured?: Record<string, Tokens>): number {
-  const spec = OP_COST[op] ?? mini();
+  const spec = OP_COST[op] ?? llm("chat");
   const calls = callsPerRequest(op);
   switch (spec.kind) {
     case "counter":
@@ -155,13 +175,13 @@ export function opUsd(op: string, measured?: Record<string, Tokens>): number {
     case "flat":
       return spec.usd;
     case "transcribe":
-      return (spec.seconds / 60) * CALL_TRANSCRIBE_USD_PER_MINUTE;
+      return (spec.seconds / 60) * sttPerMinute(STT_MODEL[spec.stt]());
     case "tts":
-      return (spec.seconds / 60) * TTS_USD_PER_MINUTE;
+      return (spec.seconds / 60) * ttsPerMinute(codeTtsModel());
     case "subtitle":
-      return calls * tokensUsd("mini", SUBTITLE_PASS_TOKENS);
-    case "model":
-      return calls * tokensUsd(spec.model, measured?.[op] ?? spec.tokens ?? DEFAULT_CALL_TOKENS);
+      return calls * tokensUsd(opModel("video"), SUBTITLE_PASS_TOKENS);
+    case "llm":
+      return calls * tokensUsd(opModel(spec.task), measured?.[op] ?? spec.tokens ?? DEFAULT_CALL_TOKENS);
   }
 }
 

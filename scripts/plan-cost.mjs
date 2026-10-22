@@ -41,9 +41,12 @@ import {
   CHAT_FOLLOW_SHARE,
   chatMessageTypicalUsd,
   chatMessageUsd,
+  opPricedModel,
   opUsd,
   packUsd,
 } from "../src/lib/billing/opCost.ts";
+import { DEFAULT_ROUTES, OPENAI_TEXT_DEFAULTS, SPEECH_DEFAULTS, codeTextModel, codeTtsModel } from "../src/lib/aiDefaults.ts";
+import { STT_USD_PER_MINUTE, TEXT_USD_PER_MTOK, TTS_USD_PER_MINUTE_BY_MODEL } from "../src/lib/billing/modelPrices.ts";
 import { UNMETERED, scanRoutes } from "./cost-coverage.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -187,7 +190,7 @@ export function render() {
     "",
     "| 무엇 | 한 번 | 어떻게 |",
     "|---|---|---|",
-    `| 자유 통화 1분 | ${won1(krw(roleplayMinuteUsd()))} | 15초 턴 4번: 캐릭터 판단(4.1-mini) + 음성 합성 ${ROLEPLAY_TURN.tutorSpeakingSeconds}초 + 받아쓰기 ${ROLEPLAY_TURN.learnerSpeakingSeconds}초 |`,
+    `| 자유 통화 1분 | ${won1(krw(roleplayMinuteUsd()))} | 15초 턴 4번: 캐릭터 판단(${codeTextModel("roleplayTutor")}) + 음성 합성 ${ROLEPLAY_TURN.tutorSpeakingSeconds}초(${codeTtsModel()}) + 받아쓰기 ${ROLEPLAY_TURN.learnerSpeakingSeconds}초(${SPEECH_DEFAULTS.turnTranscribe}) |`,
     `| 오늘의 팩 1번 | ${won1(krw(packUsd()))} | ${PACK.items}문답 × (받아쓰기 + 판단) + 합성 ${pct(PACK.synthesisedShare)}만 (가정) |`,
     `| 채팅 1통(보통) | ${won1(krw(chatMessageTypicalUsd()))} | chat + 문장 읽기 ${pct(CHAT_FOLLOW_SHARE.learnerObserve)} + 실수 읽기 ${pct(CHAT_FOLLOW_SHARE.weakRead)} (가정 — 짧고 맞은 줄·영어 아닌 학습 언어는 문장 읽기 건너뜀) |`,
     `| 채팅 1통(최악) | ${won1(krw(chatMessageUsd()))} | ${CHAT_MESSAGE_OPS.join(" + ")} 모두(길고 틀린 문장) |`,
@@ -203,13 +206,13 @@ export function render() {
   const describe = (op) => {
     const c = OP_COST[op];
     switch (c.kind) {
-      case "model": {
+      case "llm": {
         const t = c.tokens ?? DEFAULT_CALL_TOKENS;
-        return `${c.model === "mini" ? "gpt-4o-mini" : `gpt-${c.model}`} ${t.input}/${t.output} 토큰`;
+        return `${opPricedModel(op)} ${t.input}/${t.output} 토큰 (기능 ${c.task})`;
       }
-      case "subtitle": return "자막 단계 gpt-4o-mini";
-      case "transcribe": return `받아쓰기 ${c.seconds}초`;
-      case "tts": return `음성 합성 ${c.seconds}초`;
+      case "subtitle": return `자막 단계 ${opPricedModel(op)}`;
+      case "transcribe": return `받아쓰기 ${c.seconds}초 ${opPricedModel(op)}`;
+      case "tts": return `음성 합성 ${c.seconds}초 ${opPricedModel(op)}`;
       case "flat": return "한 번 고정값";
       case "counter": return "돈 안 듦(비율용 기록)";
     }
@@ -220,6 +223,28 @@ export function render() {
     const basis = c.kind === "counter" ? "—" : c.basis === "measured" ? "잰 값" : "가정";
     push(`| ${op} | ${c.kind === "counter" ? "0원" : won1(krw(opUsd(op)))} | ${MODEL_CALLS_PER_REQUEST[op]} | ${describe(op)} | ${basis} |`);
   }
+  // 계산에 쓴 모델(코드 기본값). 기본값을 바꾸면 이 표와 위 숫자가 같이 바뀐다.
+  const usd = (n) => `$${n}`;
+  push(
+    "",
+    "## 계산에 쓴 모델 (코드 기본값, `src/lib/aiDefaults.ts`)",
+    "",
+    "기능마다 지금 코드 기본값이 고르는 모델과 그 단가(`src/lib/billing/modelPrices.ts`)로 위 숫자를 냈습니다. 기본 모델을 바꾸는 커밋을 main에 올리면 GitHub Actions(`cost`)가 이 파일을 다시 계산해 커밋합니다 — 손으로 고치지 않습니다.",
+    "Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운영은 그 모델을 쓰지만, 저장소에서는 볼 수 없어 이 표에 반영되지 않습니다.",
+    "",
+    "| 기능 | 모델 | 입력/출력 (100만 토큰당) | 출처 |",
+    "|---|---|---|---|",
+  );
+  for (const task of Object.keys(OPENAI_TEXT_DEFAULTS)) {
+    const model = codeTextModel(task);
+    const p = TEXT_USD_PER_MTOK[model];
+    push(`| ${task} | ${model}${DEFAULT_ROUTES[task] ? "" : " (OpenAI 기본)"} | ${usd(p.input)} / ${usd(p.output)} | ${p.source} |`);
+  }
+  const stt = (label, model) => push(`| ${label} | ${model} | 분당 ${usd(STT_USD_PER_MINUTE[model].usd)} | ${STT_USD_PER_MINUTE[model].source} |`);
+  stt("받아쓰기 — 통화·방 한 마디", SPEECH_DEFAULTS.turnTranscribe);
+  stt("받아쓰기 — 방 교정 두 번째 의견", SPEECH_DEFAULTS.secondTranscribe);
+  stt("받아쓰기 — 영상(자막 없을 때)", SPEECH_DEFAULTS.videoTranscribe);
+  push(`| 목소리 | ${codeTtsModel()} | 분당 ${usd(TTS_USD_PER_MINUTE_BY_MODEL[codeTtsModel()].usd)} | ${TTS_USD_PER_MINUTE_BY_MODEL[codeTtsModel()].source} |`);
   push(
     "",
     "## 포인트 묶음",
@@ -252,7 +277,8 @@ export function render() {
     "1. 모델을 부르는 route에 `meterRequest(request, \"<op>\")` — 빠지면 CI의 `cost-coverage`가 실패.",
     "2. op를 `src/lib/server/modelCalls.ts`(호출 횟수)와 `src/lib/billing/opCost.ts`(값 매기는 법)에 — 빠지면 `opCost.test.ts`가 실패.",
     "3. 요금 한도에 들어가는 기능이면(채팅 한 통에 따라붙는 호출 등) `opCost.ts`의 `CHAT_MESSAGE_OPS`·`PACK`이나 `scripts/plan-cost.mjs`에 반영.",
-    "4. push하면 이 파일이 저절로 다시 계산됩니다.",
+    "4. 모델을 바꿀 때는 `src/lib/aiDefaults.ts`(기능의 기본 모델)만 고치면 됩니다. 새 모델이면 `src/lib/billing/modelPrices.ts`에 단가 — 없으면 `opCost.test.ts`가 실패.",
+    "5. push하면 이 파일이 저절로 다시 계산됩니다.",
     "",
   );
   return lines.join("\n");

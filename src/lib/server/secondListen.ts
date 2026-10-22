@@ -2,6 +2,7 @@ import type OpenAI from "openai";
 import { toFile } from "openai";
 import { isNextGenTranscribe } from "./speechModels.ts";
 import { externalSttReady, isExternalStt, transcribeExternal } from "./sttProviders.ts";
+import { SPEECH_DEFAULTS } from "../aiDefaults.ts";
 
 /**
  * 두 번째 의견 받아쓰기 — 방 내 줄 교정에서 확신이 어중간한 조각만(2026-10-22, 사용자 결정 (나)).
@@ -15,7 +16,8 @@ const LEARNER_PROMPT =
   "A language learner speaking one short turn in a casual conversation. Write exactly what they say, mistakes included: wrong verb forms, missing words, words from another language. Do not correct it. If nobody speaks, or there is only noise, write nothing.";
 
 export function secondModelFor(primary: string): string {
-  if (primary !== "scribe_v2" && externalSttReady("scribe_v2")) return "scribe_v2";
+  const preferred = SPEECH_DEFAULTS.secondTranscribe;
+  if (primary !== preferred && isExternalStt(preferred) && externalSttReady(preferred)) return preferred;
   return primary === "gpt-transcribe" ? "gpt-4o-mini-transcribe" : "gpt-transcribe";
 }
 

@@ -1,4 +1,5 @@
 import OpenAI from "openai";
+import { OPENAI_TEXT_DEFAULTS, SPEECH_DEFAULTS } from "../aiDefaults.ts";
 
 /** Shared OpenAI client. Returns null when the key is unset so callers can degrade. */
 export function getOpenAIClient(): OpenAI | null {
@@ -8,9 +9,9 @@ export function getOpenAIClient(): OpenAI | null {
 }
 
 export function chatModel(): string {
-  return process.env.OPENAI_MODEL ?? "gpt-4o-mini";
+  return process.env.OPENAI_MODEL ?? OPENAI_TEXT_DEFAULTS.chat;
 }
 
 export function transcribeModel(): string {
-  return process.env.OPENAI_TRANSCRIBE_MODEL ?? "whisper-1";
+  return process.env.OPENAI_TRANSCRIBE_MODEL ?? SPEECH_DEFAULTS.videoTranscribe;
 }

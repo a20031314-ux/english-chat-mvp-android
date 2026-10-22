@@ -1,0 +1,86 @@
+/**
+ * 앱이 쓰는 AI 모델의 **코드 기본값** — 한 장(2026-10-22).
+ *
+ * 왜 따로: 모델을 고르는 서버 코드(`server/llm.ts`·`server/speechModels.ts`)와 비용 계산(`billing/cost.ts`·`opCost.ts` →
+ * `hub/costs.md`)이 같은 이름을 읽어야, 기본 모델을 바꾸는 커밋 하나로 비용 표도 저절로 따라온다(main push → CI가 다시 계산).
+ * 전에는 비용 쪽이 모델 이름을 따로 적고 있어서, 채팅을 Haiku로 바꾼 뒤에도 비용 표는 gpt-4o-mini 단가로 계산됐다.
+ *
+ * 순수 파일: 환경변수·서버 모듈을 읽지 않는다(앱 화면 쪽 `cost.ts`도 가져다 씀). Vercel 값(`MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE`)이
+ * 있으면 운영은 그것을 쓰지만 저장소에서는 볼 수 없어서, 비용 표는 이 기본값으로 계산한다고 적는다.
+ */
+
+/** 글 모델 기능 → 그 기능의 OpenAI 기본 모델(Vercel `OPENAI_*_MODEL`이 없을 때, Claude가 실패했을 때 되돌아가는 모델). */
+export const OPENAI_TEXT_DEFAULTS = {
+  chat: "gpt-4o-mini",
+  howToSay: "gpt-4o-mini",
+  roomFix: "gpt-4o-mini",
+  translate: "gpt-4o-mini",
+  vocab: "gpt-4o-mini",
+  analysis: "gpt-4o-mini",
+  expression: "gpt-4o-mini",
+  notes: "gpt-4o-mini",
+  learnerAsk: "gpt-4o-mini",
+  roleplayContext: "gpt-4o-mini",
+  video: "gpt-4o-mini",
+  vision: "gpt-4o-mini",
+  roleplayTutor: "gpt-4.1-mini",
+  roleplayPractice: "gpt-4.1-mini",
+  ask: "gpt-4.1-mini",
+  mission: "gpt-4.1-mini",
+  curriculum: "gpt-4.1",
+  learnerRead: "gpt-4.1-mini",
+  roleplayReview: "gpt-5-mini",
+  chatVerify: "gpt-4.1",
+} as const;
+
+export type TextTask = keyof typeof OPENAI_TEXT_DEFAULTS;
+
+/**
+ * 코드에 박은 기본 경로 — Vercel `MODEL_ROUTES`가 비어 있어도 이것을 쓴다(키가 없으면 OpenAI 기본).
+ * 우선순위: MODEL_ROUTES 기능 > MODEL_ROUTES 등급 > 여기 > 그 기능의 OpenAI 기본값.
+ * - 2026-10-22 사용자 결정: 채팅(교정 + 답)과 표현 카드를 Claude Haiku 5.5로(`hub/drafts/correction-models-2026-10-21.md`
+ *   "고친 뒤 다시 비교" — 큰 문제 6~10% → 4.5%, 답 2.0 → 1.7초). 되돌리기 Vercel `MODEL_ROUTES = {"chat":"openai: gpt-4o-mini","howToSay":"openai: gpt-4o-mini"}`.
+ * - 방 내 줄 교정은 채팅 교정과 같은 모델(2026-10-22).
+ * - 교정 확인 모델(위험한 줄만, 열 때)은 Sonnet 5.5 — 사용자 결정 2026-10-21, 코드 기본값으로 넣음 2026-10-22.
+ */
+export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
+  chat: "anthropic: claude-haiku-5-5",
+  howToSay: "anthropic: claude-haiku-5-5",
+  roomFix: "anthropic: claude-haiku-5-5",
+  chatVerify: "anthropic: claude-sonnet-5-5",
+};
+
+/** "제공자: 모델" → 모델 이름(틀린 모양이면 null). */
+export function routeModel(value: string | undefined): { provider: "openai" | "anthropic"; model: string } | null {
+  if (!value) return null;
+  const at = value.indexOf(":");
+  if (at <= 0) return null;
+  const provider = value.slice(0, at).trim();
+  const model = value.slice(at + 1).trim();
+  if (!model || (provider !== "openai" && provider !== "anthropic")) return null;
+  return { provider, model };
+}
+
+/** 기능이 코드 기본값으로 쓰는 모델(키가 다 있다고 보고 — 운영과 같음). 비용 표가 이 이름으로 단가를 찾는다. */
+export function codeTextModel(task: TextTask): string {
+  return routeModel(DEFAULT_ROUTES[task])?.model ?? OPENAI_TEXT_DEFAULTS[task];
+}
+
+/** 받아쓰기·목소리 기본값(`server/speechModels.ts`·`openai.ts`·`secondListen.ts`가 읽음). */
+export const SPEECH_DEFAULTS = {
+  /** 통화 학습·Room 자막의 한 마디(`OPENAI_TURN_TRANSCRIBE_MODEL`). */
+  turnTranscribe: "gpt-4o-mini-transcribe",
+  /** 방 내 줄 교정의 두 번째 의견(ElevenLabs 키가 있을 때 — 운영엔 있음, 없으면 다른 OpenAI 모델). */
+  secondTranscribe: "scribe_v2",
+  /** 영상에 자막이 없을 때(`OPENAI_TRANSCRIBE_MODEL`). */
+  videoTranscribe: "whisper-1",
+  /** 튜터 목소리 엔진(`TTS_ENGINE`): speech = /v1/audio/speech, realtime = Realtime으로 그대로 읽기. */
+  ttsEngine: "speech" as "speech" | "realtime",
+  speechTtsModel: "gpt-4o-mini-tts",
+  realtimeTtsModel: "gpt-realtime-2.1-mini",
+} as const;
+
+/** 지금 코드 기본값의 튜터 목소리 모델. */
+export function codeTtsModel(): string {
+  return SPEECH_DEFAULTS.ttsEngine === "realtime" ? SPEECH_DEFAULTS.realtimeTtsModel : SPEECH_DEFAULTS.speechTtsModel;
+}

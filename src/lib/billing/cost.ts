@@ -14,6 +14,8 @@
  */
 
 import { ROLEPLAY_POINT_SECONDS } from "./config.ts";
+import { SPEECH_DEFAULTS, codeTextModel, codeTtsModel } from "../aiDefaults.ts";
+import { sttPerMinute, textPrice, ttsPerMinute } from "./modelPrices.ts";
 
 /** Where the model prices came from, so the next person can check them. */
 export const PRICE_SOURCE = {
@@ -24,8 +26,11 @@ export const PRICE_SOURCE = {
 /** USD per 1M tokens, audio modality, gpt-realtime-2.1. */
 export const REALTIME_AUDIO_USD_PER_MTOK = { input: 32, output: 64 } as const;
 
-/** USD per minute, gpt-4o-mini-transcribe, which transcribes the learner. */
-export const CALL_TRANSCRIBE_USD_PER_MINUTE = 0.003;
+/**
+ * USD per minute of the model that transcribes the learner (call learning, rooms).
+ * 단가는 코드 기본 모델(`lib/aiDefaults.ts` SPEECH_DEFAULTS.turnTranscribe)에서 `modelPrices.ts`로 — 기본값을 바꾸면 따라온다(2026-10-22).
+ */
+export const CALL_TRANSCRIBE_USD_PER_MINUTE = sttPerMinute(SPEECH_DEFAULTS.turnTranscribe, 0.003);
 
 /**
  * Audio tokens a minute of speech comes to.
@@ -66,11 +71,11 @@ export function callMinuteUsd(): number {
   return input + output + CALL_TRANSCRIBE_USD_PER_MINUTE;
 }
 
-/** USD per 1M tokens, gpt-4o-mini, which every text pass in the app uses. */
-export const MINI_USD_PER_MTOK = { input: 0.15, output: 0.6 } as const;
+/** USD per 1M tokens of the model the video subtitle passes use (code default of the "video" task, `lib/aiDefaults.ts`). */
+export const MINI_USD_PER_MTOK = textPrice(codeTextModel("video"), { input: 0.15, output: 0.6 });
 
-/** USD per minute, whisper-1, used on video only when no caption track exists. */
-export const WHISPER_USD_PER_MINUTE = 0.006;
+/** USD per minute of the video transcriber (whisper-1 by default), used only when no caption track exists. */
+export const WHISPER_USD_PER_MINUTE = sttPerMinute(SPEECH_DEFAULTS.videoTranscribe, 0.006);
 
 /**
  * Tokens one subtitle pass moves.
@@ -122,8 +127,8 @@ export function videoPointCostUsd(options: { transcribed: boolean }): number {
   return passes * subtitlePassUsd() + whisper;
 }
 
-/** USD per 1M tokens, gpt-4.1-mini, which the call-learning character speaks through. */
-export const TUTOR_USD_PER_MTOK = { input: 0.4, output: 1.6 } as const;
+/** USD per 1M tokens of the model the call-learning character speaks through (code default of "roleplayTutor"). */
+export const TUTOR_USD_PER_MTOK = textPrice(codeTextModel("roleplayTutor"), { input: 0.4, output: 1.6 });
 
 /**
  * USD per minute of speech from gpt-4o-mini-tts.
@@ -134,7 +139,7 @@ export const TUTOR_USD_PER_MTOK = { input: 0.4, output: 1.6 } as const;
  * rate the scene actually speaks at, which is roughly a spoken minute per
  * seven hundred characters.
  */
-export const TTS_USD_PER_MINUTE = 0.015;
+export const TTS_USD_PER_MINUTE = ttsPerMinute(codeTtsModel(), 0.015);
 
 /**
  * A turn of call learning, measured rather than guessed.

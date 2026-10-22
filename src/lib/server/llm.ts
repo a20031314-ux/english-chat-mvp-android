@@ -1,5 +1,6 @@
 import { AsyncLocalStorage } from "async_hooks";
 import type OpenAI from "openai";
+import { DEFAULT_ROUTES, OPENAI_TEXT_DEFAULTS, routeModel, type TextTask } from "../aiDefaults.ts";
 import type {
   ChatCompletion,
   ChatCompletionCreateParamsNonStreaming,
@@ -28,10 +29,12 @@ export type Tier = "basic" | "high";
 export type Provider = "openai" | "anthropic";
 
 const env = (name: string) => process.env[name]?.trim() || undefined;
-const chatDefault = () => env("OPENAI_MODEL") ?? "gpt-4o-mini";
+const D = OPENAI_TEXT_DEFAULTS;
+const chatDefault = () => env("OPENAI_MODEL") ?? D.chat;
 
 /**
- * 기능 → 등급 + 지금 쓰는 OpenAI 모델(예전과 같은 환경 변수·기본값).
+ * 기능 → 등급 + 지금 쓰는 OpenAI 모델(예전과 같은 환경 변수·기본값). 기본 모델 이름은 `lib/aiDefaults.ts` 한 장에 있다
+ * (비용 표가 같은 이름을 읽음 — 기본값을 바꾸면 hub/costs.md도 저절로 따라온다).
  * basic = 자주 불리는 것(싸게), high = 드물지만 결과가 오래 남거나 틀리면 아픈 것.
  */
 export const TASKS = {
@@ -47,35 +50,22 @@ export const TASKS = {
   roleplayContext: { tier: "basic", openai: chatDefault, about: "통화 상황 만들기" },
   video: { tier: "basic", openai: chatDefault, about: "영상 자막·해석·찾기" },
   vision: { tier: "basic", openai: () => env("OPENAI_VISION_MODEL") ?? chatDefault(), about: "영상 장면 보기" },
-  roleplayTutor: { tier: "basic", openai: () => env("OPENAI_DIRECTOR_MODEL") ?? "gpt-4.1-mini", about: "AI 통화 튜터 턴" },
-  roleplayPractice: { tier: "basic", openai: () => env("OPENAI_PRACTICE_MODEL") ?? "gpt-4.1-mini", about: "통화 다시 말해보기 비교" },
-  ask: { tier: "high", openai: () => env("OPENAI_ASK_MODEL") ?? "gpt-4.1-mini", about: "표현 묻기(빠른·직접 질문)" },
-  mission: { tier: "high", openai: () => env("OPENAI_MISSION_MODEL") ?? "gpt-4.1-mini", about: "지도 미션 확인" },
-  curriculum: { tier: "high", openai: () => env("OPENAI_CURRICULUM_MODEL") ?? "gpt-4.1", about: "학습 지도 만들기·미션·고르기" },
-  learnerRead: { tier: "high", openai: () => env("OPENAI_LEARNER_MODEL") ?? "gpt-4.1-mini", about: "학습자 프로필·자주 틀리는 것 읽기" },
-  roleplayReview: { tier: "high", openai: () => env("OPENAI_REVIEW_MODEL") ?? "gpt-5-mini", about: "통화 돌아보기 평가" },
-  chatVerify: { tier: "high", openai: () => env("OPENAI_VERIFY_MODEL") ?? "gpt-4.1", about: "채팅 고친 문장 확인(위험한 줄만, 열 때)" },
-} satisfies Record<string, { tier: Tier; openai: () => string; about: string }>;
+  roleplayTutor: { tier: "basic", openai: () => env("OPENAI_DIRECTOR_MODEL") ?? D.roleplayTutor, about: "AI 통화 튜터 턴" },
+  roleplayPractice: { tier: "basic", openai: () => env("OPENAI_PRACTICE_MODEL") ?? D.roleplayPractice, about: "통화 다시 말해보기 비교" },
+  ask: { tier: "high", openai: () => env("OPENAI_ASK_MODEL") ?? D.ask, about: "표현 묻기(빠른·직접 질문)" },
+  mission: { tier: "high", openai: () => env("OPENAI_MISSION_MODEL") ?? D.mission, about: "지도 미션 확인" },
+  curriculum: { tier: "high", openai: () => env("OPENAI_CURRICULUM_MODEL") ?? D.curriculum, about: "학습 지도 만들기·미션·고르기" },
+  learnerRead: { tier: "high", openai: () => env("OPENAI_LEARNER_MODEL") ?? D.learnerRead, about: "학습자 프로필·자주 틀리는 것 읽기" },
+  roleplayReview: { tier: "high", openai: () => env("OPENAI_REVIEW_MODEL") ?? D.roleplayReview, about: "통화 돌아보기 평가" },
+  chatVerify: { tier: "high", openai: () => env("OPENAI_VERIFY_MODEL") ?? D.chatVerify, about: "채팅 고친 문장 확인(위험한 줄만, 열 때)" },
+} satisfies Record<TextTask, { tier: Tier; openai: () => string; about: string }>;
 
 export type Task = keyof typeof TASKS;
 
 export type Route = { provider: Provider; model: string; task: Task; tier: Tier };
 
-/**
- * 코드에 박은 기본 경로 — Vercel `MODEL_ROUTES`가 비어 있어도 이것을 쓴다(키가 없으면 OpenAI 기본).
- * 2026-10-22 사용자 결정: 채팅(교정 + 답)과 표현 카드를 Claude Haiku 5.5로(`hub/drafts/correction-models-2026-10-21.md`
- * "고친 뒤 다시 비교" — 큰 문제 6~10% → 4.5%, 답 2.0 → 1.7초). 나머지 기능은 아직 비교 전이라 그대로.
- * 되돌리기: Vercel `MODEL_ROUTES = {"chat":"openai: gpt-4o-mini","howToSay":"openai: gpt-4o-mini"}`(기능 이름이 이긴다).
- * 우선순위: MODEL_ROUTES 기능 > MODEL_ROUTES 등급 > 여기 > 그 기능의 OpenAI 기본값.
- */
-export const DEFAULT_ROUTES: Partial<Record<Task, string>> = {
-  chat: "anthropic: claude-haiku-5-5",
-  howToSay: "anthropic: claude-haiku-5-5",
-  // 방 내 줄 교정은 채팅 교정과 같은 모델로(2026-10-22, 채팅 Haiku 전환과 같은 근거).
-  roomFix: "anthropic: claude-haiku-5-5",
-  // 교정 확인 모델(위험한 줄만, 열 때)은 Sonnet 5.5 — 사용자 결정 2026-10-21, 코드 기본값으로 넣음 2026-10-22.
-  chatVerify: "anthropic: claude-sonnet-5-5",
-};
+/** 코드에 박은 기본 경로(`lib/aiDefaults.ts` — 결정·되돌리는 법도 거기). */
+export { DEFAULT_ROUTES };
 
 function parseRoutes(): Record<string, string> {
   const raw = env("MODEL_ROUTES");
@@ -94,14 +84,7 @@ function parseRoutes(): Record<string, string> {
   }
 }
 
-function parseTarget(value: string): { provider: Provider; model: string } | null {
-  const at = value.indexOf(":");
-  if (at <= 0) return null;
-  const provider = value.slice(0, at).trim();
-  const model = value.slice(at + 1).trim();
-  if (!model || (provider !== "openai" && provider !== "anthropic")) return null;
-  return { provider, model };
-}
+const parseTarget = (value: string) => routeModel(value);
 
 /**
  * 점검용 경로 바꾸기 — 가상 사용자(`simcheck-…`)의 요청에만, 헤더 `x-sim-model-routes`(MODEL_ROUTES와 같은 모양)로.

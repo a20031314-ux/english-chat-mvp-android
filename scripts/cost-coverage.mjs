@@ -11,6 +11,10 @@
  * 그 route 파일에 meterRequest( 가 있어야 한다. 일부러 안 세는 경로는 아래
  * UNMETERED에 이유와 함께 적는다.
  *
+ * 두 번째 검사(2026-10-22): opCost.ts의 op마다 적은 기능(task — 그 기능의 코드 기본 모델로 값을 매김)이, 그 op를 기록하는
+ * route가 실제로 부르는 기능(completeChat·routeFor·openaiModel의 첫 글자 인자) 중 하나인지. 틀리면 비용 표가 엉뚱한 모델 단가로
+ * 계산되므로 실패한다.
+ *
  * 실행: node scripts/cost-coverage.mjs        (빠진 곳이 있으면 실패)
  *       node scripts/cost-coverage.mjs --json (plan-cost.mjs가 읽음)
  */
@@ -77,6 +81,40 @@ export function scanRoutes() {
     });
 }
 
+const LLM_FILE = join(root, "src/lib/server/llm.ts");
+const TASK_CALL = /(?:completeChat|routeFor|openaiModel)\(\s*(?:[\w.]+,\s*)?["'](\w+)["']/g;
+const METER = /meterRequest\([^,]+,\s*(?:[^"'()]*\?\s*)?["'](\w+)["'](?:\s*:\s*["'](\w+)["'])?/g;
+
+/** opCost.ts에서 op → 기능(task). 글로 읽는다(이 스크립트는 .ts를 가져올 수 없음). */
+export function opTasks() {
+  const text = readFileSync(join(root, "src/lib/billing/opCost.ts"), "utf8");
+  const table = text.slice(text.indexOf("export const OP_COST"));
+  const out = {};
+  for (const m of table.matchAll(/^\s*(\w+):\s*(?:llm|estimated)\(\s*"(\w+)"/gm)) out[m[1]] = m[2];
+  for (const m of table.matchAll(/^\s*(\w+):\s*\{\s*kind:\s*"llm",\s*task:\s*"(\w+)"/gm)) out[m[1]] = m[2];
+  return out;
+}
+
+/** route마다 기록하는 op와 부르는 기능을 맞대어, op의 기능이 그 route에 없으면 { route, op, task, tasks }. */
+export function mismatchedOpTasks() {
+  const tasksOf = opTasks();
+  const out = [];
+  for (const file of routeFiles(join(root, "src/app/api")).sort()) {
+    const ops = [...new Set([...readFileSync(file, "utf8").matchAll(METER)].flatMap((m) => [m[1], m[2]].filter(Boolean)))];
+    const known = ops.filter((op) => tasksOf[op]);
+    if (!known.length) continue;
+    const tasks = new Set();
+    for (const f of closure(file)) {
+      if (f === LLM_FILE) continue;
+      for (const m of readFileSync(f, "utf8").matchAll(TASK_CALL)) tasks.add(m[1]);
+    }
+    for (const op of known) {
+      if (!tasks.has(tasksOf[op])) out.push({ route: relative(root, file), op, task: tasksOf[op], tasks: [...tasks] });
+    }
+  }
+  return out;
+}
+
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const rows = scanRoutes();
   if (process.argv.includes("--json")) {
@@ -87,6 +125,12 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
     for (const r of missing) {
       console.error(`빠짐: ${r.route} — 모델 호출 위치 ${r.via.slice(0, 3).join(", ")}`);
     }
+    const wrong = mismatchedOpTasks();
+    console.log(`op의 모델 기능: 어긋남 ${wrong.length}`);
+    for (const w of wrong) {
+      console.error(`어긋남: ${w.route} — op ${w.op}의 기능 "${w.task}"를 이 경로가 부르지 않음(부르는 기능: ${w.tasks.join(", ") || "없음"}). src/lib/billing/opCost.ts를 고치세요.`);
+    }
+    if (wrong.length) process.exitCode = 1;
     if (missing.length) {
       console.error(
         "\n이 경로에 meterRequest(request, \"<op>\")를 넣고, op를 src/lib/server/modelCalls.ts와 src/lib/billing/opCost.ts에 더하세요." +

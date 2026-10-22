@@ -50,7 +50,7 @@
 
 - iOS(`hub/drafts/ios-launch.md` "출시까지 남은 사람 일"): 정함(2026-10-20) — 번들 ID는 안드로이드와 같은 `com.yourname.englishchat`, 구독·포인트 상품 ID도 같게, 다른 스토어 구독자는 결제 막음.
   App Store Connect 구독 3·포인트 4, RevenueCat 아이폰 앱·권한·offering 패키지(lite·plus·premium) 설정 끝. 남은 것: GitHub ios 환경에 `NEXT_PUBLIC_REVENUECAT_IOS_API_KEY`, 상품 한국어 이름·심사 스크린샷, 아이콘, 유료 앱 계약.
-- 비용 표(`hub/costs.md`, 자동 계산, 2026-10-21 다시 계산): 한도까지 매일 다 쓰면 유료 요금 모두 손해(라이트 −741원 ~ 8,900원 −2,953원/월, 지금 프리미엄 −92원). 채팅 한 통은 보통 0.8원·최악 1.1원(전엔 2원 — 뒤따르는 두 호출 토큰을 프롬프트 길이로 다시 어림 + 짧고 맞은 줄 건너뛰기). 아직 가정이라 `cost-report.mjs` 실측(사용자 PC, KV 키)으로 확인할지.
+- 비용 표(`hub/costs.md`, 자동 계산 — 2026-10-22부터 **코드의 기본 모델에서 단가를 읽음**, `src/lib/aiDefaults.ts`·`modelPrices.ts`): 한도까지 매일 다 쓰면 유료 요금 모두 손해(라이트 −1,503원 ~ 8,900원 −5,494원/월, 지금 프리미엄 −2,633원). 채팅 한 통 보통 1.2원·최악 2원 — 문장·실수 읽기가 실제론 gpt-4.1-mini인데 mini로 잡혀 있던 것이 드러남(Haiku로 옮길 후보). 교체안: `hub/drafts/model-switch-2026-10-22.md`. 아직 가정이라 `cost-report.mjs` 실측(사용자 PC, KV 키)으로 확인할지.
   광고는 무료 사용자에게만 붙어(구독자 광고 없음) 유료 손해와는 별개 — 광고 수익·보상 원가는 `hub/costs.md` "광고" 절(2026-10-20부터 자동 계산).
 - 광고(`hub/drafts/ads-rewarded.md`): **넣음(2026-10-20)** — 서버 반영, 앱은 다음 빌드. 지금 값: **보상형 끔**(사용자 2026-10-20 "광고 보고 더 주는 건 거부감, 그냥 뜨고 건너뛰는 게 낫다"), 전면 채팅 2번 뒤·3분 간격, 앱 오프닝·배너·네이티브 켬 — Vercel `ADS_*`로 조정(보상형 다시 켜기 `ADS_REWARDED_DAILY_MAX=3`). 빌드를 Play에 올리기 전에 Play 광고·데이터 보안 신고(inbox store).
 - 제휴 상품 카드(`hub/drafts/coupang-affiliate.md`): **보류(2026-10-20)**. 한국 쿠팡 + 해외(Amazon·Rakuten·Shopee·Lazada·AliExpress·Mercado Livre·Noon) + 여행(Klook·Agoda·Airalo) 조사해 둠. 문서의 "꺼낼 때" 조건(학습 주제 카드 자리 생김, 한국어 무료 월 1,000명, 한 나라 설치 10%, AdMob 단가 낮음, 게시판 활발)이 보이면 **먼저 사용자에게 알린다**.

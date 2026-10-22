@@ -1,5 +1,6 @@
 import type { NextRequest } from "next/server";
 import { SIM_USER_MARK } from "./simData.ts";
+import { SPEECH_DEFAULTS } from "../aiDefaults.ts";
 
 /**
  * 음성 모델(받아쓰기·읽어 주기)을 한곳에서 고른다.
@@ -46,7 +47,7 @@ export function roomFixSecondAlways(request?: NextRequest): boolean {
 export function turnTranscribeModel(request?: NextRequest): string {
   const trial = trialHeader(request, "x-stt-model");
   if ((TRANSCRIBE_TRIAL_MODELS as readonly string[]).includes(trial)) return trial;
-  return process.env.OPENAI_TURN_TRANSCRIBE_MODEL?.trim() || "gpt-4o-mini-transcribe";
+  return process.env.OPENAI_TURN_TRANSCRIBE_MODEL?.trim() || SPEECH_DEFAULTS.turnTranscribe;
 }
 
 /**
@@ -61,13 +62,14 @@ export function ttsEngine(request?: NextRequest): TtsEngine {
   const trial = trialHeader(request, "x-tts-engine");
   if ((TTS_ENGINES as readonly string[]).includes(trial)) return trial as TtsEngine;
   const set = process.env.TTS_ENGINE?.trim();
-  return set === "realtime" ? "realtime" : "speech";
+  if (set === "realtime" || set === "speech") return set;
+  return SPEECH_DEFAULTS.ttsEngine;
 }
 
 export function speechTtsModel(): string {
-  return process.env.OPENAI_TTS_MODEL?.trim() || "gpt-4o-mini-tts";
+  return process.env.OPENAI_TTS_MODEL?.trim() || SPEECH_DEFAULTS.speechTtsModel;
 }
 
 export function realtimeTtsModel(): string {
-  return process.env.OPENAI_REALTIME_TTS_MODEL?.trim() || "gpt-realtime-2.1-mini";
+  return process.env.OPENAI_REALTIME_TTS_MODEL?.trim() || SPEECH_DEFAULTS.realtimeTtsModel;
 }

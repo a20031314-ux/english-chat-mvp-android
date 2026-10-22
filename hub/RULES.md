@@ -34,6 +34,7 @@
 9. **광고:** 광고 자리(`NativeAdSlot`·`maybeShowInterstitial`·배너 탭)나 `ADS_*` 설정을 바꾸면 `hub/ADS.md`를 먼저 보고, 새 전면 광고 순간은 `scripts/ads-map.mjs` `MOMENTS`에 설명 한 줄 → `npm run ads:map`(없으면 CI `ads-map` 실패). 손익은 `npm run sim:economics -- --write`.
 10. **비용:** 모델을 부르는 서버 경로는 `meterRequest(request, "<op>")`, op는 `modelCalls.ts`(호출 횟수)와 `billing/opCost.ts`(단가)에 — 빠지면 CI `cost`가 실패.
    요금 한도에 걸리는 기능(채팅 한 통에 따라붙는 호출 등)은 `opCost.ts` `CHAT_MESSAGE_OPS`·`PACK`에도. 결과는 push 뒤 `hub/costs.md`에 저절로.
+   op에는 모델 이름이 아니라 **기능(task)**을 적는다(`llm("chat")`) — 단가는 그 기능의 코드 기본 모델(`src/lib/aiDefaults.ts`)과 `modelPrices.ts`에서. 모델을 바꿀 땐 `aiDefaults.ts`만 고친다(2026-10-22).
 
 ## 커밋·푸시할 때 (브라우저 확인, AGENTS.md)
 - `npm run build:capacitor` 뒤 www를 띄우고 /api는 운영으로 프록시해서, 바뀐 흐름을 **실제 입력으로** 한 번씩.
