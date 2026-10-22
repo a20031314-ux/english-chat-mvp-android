@@ -11,6 +11,11 @@ name: "iOS: build to TestFlight"
 
 on:
   workflow_dispatch:
+    inputs:
+      diag:
+        description: "진단 상자 켜기(TestFlight 점검용). App Store 심사에 낼 빌드는 끔"
+        type: boolean
+        default: false
 
 concurrency: ios
 
@@ -54,8 +59,8 @@ jobs:
           NEXT_PUBLIC_REVENUECAT_IOS_API_KEY: ${{ secrets.NEXT_PUBLIC_REVENUECAT_IOS_API_KEY }}
           NEXT_PUBLIC_APP_STORE_URL: ${{ vars.NEXT_PUBLIC_APP_STORE_URL }}
           IOS_BUNDLE_ID: ${{ vars.IOS_BUNDLE_ID }}
-          # 통화 진단 상자(platform.ts turnDiagnosticsEnabled). App Store 심사에 낼 빌드 전에 "0"으로.
-          NEXT_PUBLIC_IOS_DIAG: "1"
+          # 통화·결제 진단(platform.ts turnDiagnosticsEnabled). Run workflow에서 "diag"를 체크할 때만 — 기본은 꺼짐(심사용).
+          NEXT_PUBLIC_IOS_DIAG: ${{ inputs.diag && '1' || '0' }}
         run: npm run build:ios
 
       - name: App Store Connect 키
