@@ -1679,7 +1679,7 @@ async function saveClip(all, locale, shot, events) {
 async function save(png, locale, shot) {
   if (STORE) {
     // The whole screen, tab bar included: the store frame shows the app as it is.
-    const dir = path.join(ROOT, "tmp", "store-raw", locale);
+    const dir = path.join(ROOT, "tmp", process.env.CAPTURE_IOS === "1" ? "store-raw-ios" : "store-raw", locale);
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, `${shot}.png`), png);
     return;
@@ -1711,11 +1711,33 @@ let failed = 0;
 for (const locale of only ?? Object.keys(copy)) {
   const ui = copy[locale];
   // The store frame expects a 20:9 phone (store-shots/frame.html).
-  const context = await browser.newContext({ viewport: { width: 412, height: STORE ? 915 : 860 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, ...(GUIDE_CALL || process.env.CAPTURE_MIC_WAV ? { permissions: ["microphone"] } : {}) });
+  // CAPTURE_IOS=1: App Store 스크린샷 — 6.9인치 아이폰(440×956, 3배 = 1320×2868), 앱이 iOS로 돎(사람 기능 없는 하단 탭·AI 동의 넘김),
+  // tmp/store-raw-ios/<locale>/. 앱 모드라 API를 운영 주소로 바로 부르므로 그 요청을 받아 CORS를 붙여 돌려준다.
+  const IOS = process.env.CAPTURE_IOS === "1";
+  const captureUser = `${process.env.CAPTURE_USER || `whats-new-capture-${day}${process.env.CAPTURE_RUN ? `-${process.env.CAPTURE_RUN}` : ""}`}-${locale}`;
+  const context = await browser.newContext({ viewport: IOS ? { width: 440, height: 956 } : { width: 412, height: STORE ? 915 : 860 }, deviceScaleFactor: IOS ? 3 : 2, isMobile: true, hasTouch: true, ...(GUIDE_CALL || process.env.CAPTURE_MIC_WAV ? { permissions: ["microphone"] } : {}) });
+  if (IOS) {
+    await context.addInitScript(() => {
+      window.CapacitorCustomPlatform = { name: "ios", plugins: {} };
+      try { localStorage.setItem("aiDataConsent", "capture"); } catch {}
+    });
+  }
   const page = await context.newPage();
   await page.route("**/api/**", (route) =>
-    route.continue({ headers: { ...route.request().headers(), "x-rc-user": `${process.env.CAPTURE_USER || `whats-new-capture-${day}${process.env.CAPTURE_RUN ? `-${process.env.CAPTURE_RUN}` : ""}`}-${locale}` } }),
+    route.continue({ headers: { ...route.request().headers(), "x-rc-user": captureUser } }),
   );
+  if (IOS) {
+    await page.route(`${API}/**`, async (route) => {
+      const cors = { "access-control-allow-origin": BASE, "access-control-allow-headers": "*", "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS" };
+      if (route.request().method() === "OPTIONS") return route.fulfill({ status: 204, headers: cors });
+      try {
+        const response = await route.fetch({ headers: { ...route.request().headers(), "x-rc-user": captureUser } });
+        await route.fulfill({ response, headers: { ...response.headers(), ...cors } });
+      } catch {
+        await route.abort();
+      }
+    });
+  }
   const wait = (ms) => page.waitForTimeout(ms);
   // 2.69 웹: 화면에 따라 주기적으로 묻는 요청이 이어져 networkidle이 안 올 때가 있다 — 15초 기다려 보고 넘어간다.
   const rawGoto = page.goto.bind(page);
