@@ -18,7 +18,6 @@ import { focusOf, pickTokens, questionCount } from "@/lib/rooms/quote";
 import { FactsView, ThankButton } from "@/components/account/ProfileFacts";
 import type { MediaRef, MediaScope } from "@/lib/rooms/media";
 import { MediaError, uploadImage, type MediaUploadError } from "@/lib/rooms/mediaClient";
-import { peekHint, type RoomHintMode } from "@/lib/rooms/layout";
 import { isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
 
 /*
@@ -691,10 +690,6 @@ export function Lines({
   big,
   allLines,
   emptyText,
-  hints,
-  hintMode,
-  onHintSend,
-  onHintClose,
   fixes,
   onFixOpen,
   onFixClose,
@@ -704,11 +699,6 @@ export function Lines({
   lines: RoomLine[];
   /** 지금 말하는 중(받아쓰는 중)인 사람 — 말을 시작하자마자 "…" 말풍선, 받아쓴 글이 오면 그 줄로 바뀐다. */
   composing?: { peerId: string; accountId: string | null; nickname: string }[];
-  /** 내 줄 번호 → 본인에게만 보이는 "이렇게 말해 보세요"(배우는 언어 문장). */
-  hints?: Record<number, string>;
-  hintMode?: RoomHintMode;
-  onHintSend?: (seq: number, text: string) => void;
-  onHintClose?: (seq: number) => void;
   /** 내 줄 번호 → 본인에게만 보이는 교정(접혀 있으면 칩, 열면 고친 문장·설명). 2026-10-22. */
   fixes?: Record<number, RoomLineFix>;
   onFixOpen?: (seq: number) => void;
@@ -745,7 +735,6 @@ export function Lines({
   const groups = useMemo(() => byPerson(lines), [lines]);
 
   // 💡 힌트가 오면 그 카드까지 보이게(내 마지막 줄 아래라 맨 아래로). "…" 말풍선이 생기거나 글이 이어 붙어도.
-  const hintCount = Object.keys(hints ?? {}).length;
   // 교정 칩이 생기거나 열려도 보이게.
   const fixKey = Object.entries(fixes ?? {}).map(([seq, fix]) => `${seq}${fix.open ? "o" : ""}`).join(",");
   const composingKey = (composing ?? []).map((row) => row.peerId).join(",");
@@ -754,7 +743,7 @@ export function Lines({
     if (view !== "timeline") return;
     const node = scroller.current;
     if (node) node.scrollTop = node.scrollHeight;
-  }, [ordered.length, view, hintCount, fixKey, composingKey, lastText]);
+  }, [ordered.length, view, fixKey, composingKey, lastText]);
 
   /** "…" 말풍선 한 개: 줄과 같은 자리(사진·이름)에 점 세 개가 깜박인다. */
   const composingRow = (row: { peerId: string; accountId: string | null; nickname: string }, showName: boolean) => (
@@ -884,16 +873,6 @@ export function Lines({
           </button>
           {answersMe && thankRoomId ? (
             <ThankButton locale={locale} target={{ kind: "room", roomId: thankRoomId, seq: line.seq }} learn={targetLanguage} />
-          ) : null}
-          {line.peerId === selfId && hints?.[line.seq] && hintMode !== "off" ? (
-            <HintCard
-              t={t}
-              text={hints[line.seq]}
-              language={targetLanguage}
-              peek={hintMode === "peek"}
-              onSend={onHintSend ? () => onHintSend(line.seq, hints[line.seq]) : undefined}
-              onClose={() => onHintClose?.(line.seq)}
-            />
           ) : null}
           {line.peerId === selfId && fixes?.[line.seq] ? (
             <FixCard t={t} fix={fixes[line.seq]} onOpen={() => onFixOpen?.(line.seq)} onClose={() => onFixClose?.(line.seq)} />
@@ -1044,33 +1023,6 @@ function FixCard({ t, fix, onOpen, onClose }: { t: RoomCopy; fix: RoomLineFix; o
   );
 }
 
-function HintCard({ t, text, language, peek, onSend, onClose }: { t: RoomCopy; text: string; language: string; peek: boolean; onSend?: () => void; onClose: () => void }) {
-  const [shown, setShown] = useState(!peek);
-  return (
-    <div className="mt-1 rounded-xl border border-emerald-300/30 bg-emerald-300/5 px-2.5 py-1.5">
-      <div className="flex items-center gap-2">
-        <p className="min-w-0 flex-1 text-meta text-emerald-200">💡 {t.hintTry}</p>
-        <button type="button" onClick={onClose} aria-label={t.hintClose} className="shrink-0 rounded-lg px-1.5 text-sm text-slate-400 hover:bg-white/10">
-          ×
-        </button>
-      </div>
-      {shown ? (
-        <p className="text-chat text-white" dir="auto">
-          {text}
-        </p>
-      ) : (
-        <button type="button" onClick={() => setShown(true)} className="block text-start text-chat text-white" dir="auto">
-          {peekHint(text, language)} <span className="text-meta text-emerald-200">· {t.hintReveal}</span>
-        </button>
-      )}
-      {shown && onSend ? (
-        <button type="button" onClick={onSend} className="mt-1 rounded-lg border border-emerald-300/40 px-2 py-0.5 text-xs text-emerald-100 hover:bg-emerald-300/10">
-          {t.sendThis}
-        </button>
-      ) : null}
-    </div>
-  );
-}
 
 
 /**

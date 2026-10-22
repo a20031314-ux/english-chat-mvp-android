@@ -36,8 +36,6 @@ export const MODEL_CALLS_PER_REQUEST = {
   // The same expression opened as a card under a line written in the
   // learner's own language — one call, no chat turn, not a counted chat.
   howToSayCard: 1,
-  // 말하는 방에서 편한 말로 한 줄 → 본인에게만 "이렇게 말해 보세요"(카드와 같은 길).
-  roomHint: 1,
   // 사람 사이 사진 한 장: 자동 검사 한 번(omni-moderation, 무료) + 저장.
   mediaUpload: 1,
   // 랜덤 영상(창구 Spin) 화면 한 장 검사(omni-moderation, 무료) — 3초에 한 번까지.

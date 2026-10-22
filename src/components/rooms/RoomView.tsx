@@ -17,7 +17,6 @@ import {
   sendSignal,
   fetchIceServers,
   transcribeUtterance,
-  howToSay,
   fixMyLine,
   verifyMyLine,
   type FixTrust,
@@ -52,7 +51,7 @@ import { useInbox } from "./RoomDm";
 import { VideoStage } from "./VideoStage";
 import { FrameGrabber, randomFrame } from "@/lib/random/client";
 import { RANDOM_FRAME_EVERY_MS } from "@/lib/random/protocol";
-import { CALL_LAYOUT_LINES, ROOM_HINT_MODES, ROOM_LAYOUTS, pendingNotes, readRoomHintMode, readRoomLayout, saveRoomHintMode, saveRoomLayout, type RoomHintMode, type RoomLayout, type RoomNote } from "@/lib/rooms/layout";
+import { CALL_LAYOUT_LINES, ROOM_LAYOUTS, pendingNotes, readRoomLayout, saveRoomLayout, type RoomLayout, type RoomNote } from "@/lib/rooms/layout";
 
 /**
  * 방 안. 위는 말하기 자리 8개(사진, 말하는 중이면 초록 테두리)와 듣는 사람 줄,
@@ -126,14 +125,7 @@ export function RoomView({
     linesRef.current = lines;
   }, [lines]);
   // 💡 힌트(본인만): 내 줄 번호 → 배우는 언어 문장. 화면에만 두고 저장하지 않는다.
-  const [hints, setHints] = useState<Record<number, string>>({});
-  const [hintMode, setHintModeState] = useState<RoomHintMode>(() => readRoomHintMode());
-  const hintModeRef = useRef(hintMode);
-  const setHintMode = (mode: RoomHintMode) => {
-    hintModeRef.current = mode;
-    setHintModeState(mode);
-    saveRoomHintMode(mode);
-  };
+
   const [role, setRole] = useState<RoomRole>("listener");
   const [hand, setHand] = useState(false);
   const [muted, setMuted] = useState(false);
@@ -459,20 +451,6 @@ export function RoomView({
         meshRef.current?.broadcast(JSON.stringify({ t: "line", line: mine }));
         const firstSeq = Math.min(firstSeqRef.current.get(uid) ?? mine.seq, mine.seq);
         firstSeqRef.current.set(uid, firstSeq);
-        // 편한 말이 든 줄이면 나에게만 "이렇게 말해 보세요"(앞 대화를 맥락으로). 실패·상한이면 조용히 없음.
-        // 조각은 한 말풍선으로 이어져 보이니, 힌트도 그 말풍선(첫 줄 번호)에 단다.
-        if (hintModeRef.current !== "off" && leansOnOwnLanguage(text, targetLanguage, locale)) {
-          const recent = timeline(joinParts(linesRef.current))
-            .filter((row) => row.seq !== firstSeq)
-            .slice(-6)
-            .map((row) => `${row.nickname}: ${row.text}`);
-          void howToSay({ message: text, recent, locale, targetLanguage, purpose: "roomHint" }).then(
-            (found) => {
-              if (found && aliveRef.current) setHints((have) => ({ ...have, [firstSeq]: found.expression }));
-            },
-            () => {},
-          );
-        }
       } catch (error) {
         if (error instanceof RoomApiError && error.code === "CAPTION_LIMIT") {
           // 옛 서버만(2026-10-22부터는 한도를 넘어도 자막을 준다).
@@ -1138,20 +1116,9 @@ export function RoomView({
             allLines={shownLines}
             lines={layout === "call" ? spoken.slice(-CALL_LAYOUT_LINES) : spoken}
             composing={composing}
-            hints={hints}
-            hintMode={hintMode}
             fixes={fixes}
             onFixOpen={openFix}
             onFixClose={(seq) => setFix(seq, (have) => ({ ...have, open: false }))}
-            onHintClose={(seq) => setHints((have) => withoutHint(have, seq))}
-            onHintSend={async (seq, text) => {
-              setHints((have) => withoutHint(have, seq));
-              try {
-                addMine(await postLine({ roomId: room.id, peerId, kind: "text", text, startedAt: Date.now() + offsetRef.current, endedAt: Date.now() + offsetRef.current }));
-              } catch {
-                // 못 보냈으면 그만(힌트는 다시 말해 보면 된다).
-              }
-            }}
             view={view}
             selfId={peerId}
             locale={locale}
@@ -1210,22 +1177,6 @@ export function RoomView({
             </button>
           ))}
         </div>
-        {role === "speaker" && !videoRoom ? (
-          <label className="flex items-center gap-1.5 text-meta text-slate-400">
-            💡 {t.hintMode}
-            <select
-              value={hintMode}
-              onChange={(event) => setHintMode(event.target.value as RoomHintMode)}
-              className="rounded-lg border border-white/15 bg-surface px-1.5 py-0.5 text-meta text-slate-200"
-            >
-              {ROOM_HINT_MODES.map((mode) => (
-                <option key={mode} value={mode}>
-                  {mode === "show" ? t.hintShow : mode === "peek" ? t.hintPeek : t.hintOff}
-                </option>
-              ))}
-            </select>
-          </label>
-        ) : null}
         {hideChat && !quoting ? null : layout === "call" && !composerOpen && !quoting ? (
           <button
             type="button"
@@ -1460,11 +1411,6 @@ export function RoomView({
   );
 }
 
-function withoutHint(hints: Record<number, string>, seq: number): Record<number, string> {
-  const next = { ...hints };
-  delete next[seq];
-  return next;
-}
 
 const VIDEO_SELF_BIG_KEY = "roomVideoSelfBig";
 

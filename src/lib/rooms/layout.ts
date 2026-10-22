@@ -1,5 +1,3 @@
-import { segmentWords } from "../wordSegments.ts";
-
 /**
  * 말하는 방을 보는 방식(사람마다 고름, 이 기기에 기억). 화면만 바뀌고 줄·질문·쪽지는
  * 모두 같은 방 기록을 쓴다 — 보는 건 각자, 학습은 다 같이.
@@ -55,33 +53,3 @@ export function pendingNotes<T extends { other: string; unread: number; thread: 
   );
 }
 
-/**
- * 말하는 방 힌트: 편한 말로 한 줄을 말하면 본인에게만 "이렇게 말해 보세요".
- * 바로 보기(show) / 살짝만(peek, 첫 단어만, 누르면 전체) / 끄기(off). 기기에 기억.
- */
-export const ROOM_HINT_MODES = ["show", "peek", "off"] as const;
-export type RoomHintMode = (typeof ROOM_HINT_MODES)[number];
-const HINT_KEY = "roomHintMode";
-
-export function readRoomHintMode(): RoomHintMode {
-  try {
-    const value = window.localStorage.getItem(HINT_KEY);
-    return (ROOM_HINT_MODES as readonly string[]).includes(value ?? "") ? (value as RoomHintMode) : "show";
-  } catch {
-    return "show";
-  }
-}
-
-export function saveRoomHintMode(mode: RoomHintMode): void {
-  try {
-    window.localStorage.setItem(HINT_KEY, mode);
-  } catch {
-    // 기억 못 해도 이번 방에서는 그대로.
-  }
-}
-
-/** 살짝만: 첫 낱말과 "…"(띄어쓰기 없는 말도 낱말로 자른다, wordSegments). */
-export function peekHint(expression: string, language?: string): string {
-  const first = segmentWords(expression.trim(), language)[0] ?? "";
-  return `${first} …`;
-}

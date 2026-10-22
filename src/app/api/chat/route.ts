@@ -2,7 +2,6 @@ import { completeChat, routeFor, simErrorDetail } from "@/lib/server/llm";
 import { chatBonusToday } from "@/lib/server/adChat";
 import { takeAiHelp } from "@/lib/server/aiHelp";
 import { meterRequest, recordTokens } from "@/lib/server/meterRequest";
-import { takeRoomHint } from "@/lib/server/roomHint";
 import { NextRequest, after } from "next/server";
 import { observeChatLines, observeChatTurn } from "@/lib/server/learnerProfileStore";
 import { observeMapUse } from "@/lib/server/curriculumStore";
@@ -1038,18 +1037,16 @@ export async function POST(request: NextRequest) {
   // what is counted is what the learner sends, whatever language it is in.
   const expressionOnly = mode === "how_to_say" && body.expressionOnly === true;
   if (expressionOnly) {
-    // 말하는 방 힌트(본인만 보는 "이렇게 말해 보세요"): 같은 카드지만 따로 세고 하루 상한.
-    const roomHint = body.purpose === "roomHint";
-    if (roomHint && !(await takeRoomHint(userId))) {
+    // 말하는 방 💡 힌트는 뺐다(2026-10-23, 사용자 "쓸 데 없다"). 옛 빌드(2.71 이하)가 아직 부르므로 모델 없이 바로
+    // HINT_LIMIT — 옛 앱은 이 답이면 힌트를 조용히 멈춘다(비용 0).
+    if (body.purpose === "roomHint") {
       return jsonWithCors(request, { error: "HINT_LIMIT" }, { status: 429 });
     }
-    // 표현 카드·다듬어 보기·학습 언어로(누를 때만 도는 AI 도움, server/aiHelp.ts). 방 힌트는 위의 자기 한도.
-    if (!roomHint) {
-      const help = await takeAiHelp(request, "help");
-      if (!help.ok) return jsonWithCors(request, { error: help.error, limit: help.limit }, { status: 429 });
-    }
+    // 표현 카드·다듬어 보기·학습 언어로(누를 때만 도는 AI 도움, server/aiHelp.ts).
+    const help = await takeAiHelp(request, "help");
+    if (!help.ok) return jsonWithCors(request, { error: help.error, limit: help.limit }, { status: 429 });
     try {
-      void meterRequest(request, roomHint ? "roomHint" : "howToSayCard");
+      void meterRequest(request, "howToSayCard");
       const card = await runHowToSayCard(openai, message, parseRecent(body.recent), langs, isPremium);
       return jsonWithCors(request, card);
     } catch (error) {

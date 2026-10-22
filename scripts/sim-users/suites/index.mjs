@@ -5,7 +5,7 @@
  * every = 몇 명 중 1명이 이 묶음을 도나(비싼 묶음일수록 크게). 196명 기준:
  *   chat 196 · map 28 · next 196 · ask 98 · sheet 98 · pack 49 · rooms(방·프로필·팔로우, 2명씩) 7
  *   roomsplus(방 새 기능) 14 · dm(1:1 메시지) 14 · groups(단체방) 14 · people(사람·친구 초대) 14 · notes(노트·업데이트 안내) 14
- *   roomhint(방 💡 힌트: 띄울지는 196 모두 요청 없이, 서버 힌트는 4명 중 1) · board(게시판) 14 · team(러닝메이트·팀) 14
+ *   board(게시판) 14 · team(러닝메이트·팀) 14
  *   tiers(문장 종류 8칸 1차 세분화, 한 사람이 한 칸) 196 — tiers-report.mjs로 칸별 기준
  *   사람 사이 묶음의 임시 계정은 숨김(사람 목록에 안 뜸)·끝에 삭제(accounts.mjs).
  * 한 사람 안에서 무료 하루 채팅 10번을 넘지 않게: 채팅 턴(≤6) + 미션 확인 2 + 직접 묻기 1.
@@ -22,12 +22,11 @@ import dm from "./dm.mjs";
 import groups from "./groups.mjs";
 import people from "./people.mjs";
 import notes from "./notes.mjs";
-import roomhint from "./roomhint.mjs";
 import board from "./board.mjs";
 import team from "./team.mjs";
 import tiers from "./tiers.mjs";
 
-export const SUITES = [chat, map, next, ask, sheet, pack, rooms, roomsplus, dm, groups, people, notes, roomhint, board, team, tiers];
+export const SUITES = [chat, map, next, ask, sheet, pack, rooms, roomsplus, dm, groups, people, notes, board, team, tiers];
 
 export function suiteById(id) {
   return SUITES.find((s) => s.id === id) ?? null;

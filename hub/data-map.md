@@ -27,7 +27,6 @@
 | 말하는 방 | `room:peers` | 방·대화 | 6시간 | 해당 없음 | 방 연결 목록 | `roomStore.ts` |
 | 말하는 방 | `room:seq` | 방·대화 | 6시간 | 해당 없음 | 줄 차례 번호 | `roomStore.ts` |
 | 말하는 방 | `room:sig` | 방·대화 | 2분 | 해당 없음 | 소리 연결 신호 | `roomStore.ts` |
-| 말하는 방 | `roomhint:v1` | 학습자 한 명 | 2일 | 해당 없음 | 💡 힌트 하루 횟수 | `roomHint.ts` |
 | 메시지(1:1) | `dm:v1` | 방·대화 | 30일 | 남음(30일 뒤 만료) | 1:1 대화·요청·차례 번호 | `dmStore.ts` |
 | 비용 | `usage:op` | 학습자 한 명 | 45일 | 지움(주 1회 정리) | 기능별 사용 횟수(비용 보고, 일별) | `entitlementStore.ts` |
 | 비용 | `usage:tok` | 운영 | 45일 | 해당 없음 | 기능별 잰 토큰(일별, 사람 없음) | `meterRequest.ts` |

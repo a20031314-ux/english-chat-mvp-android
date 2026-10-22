@@ -209,7 +209,6 @@ const STORE_TABS_ITEMS = [
   { shot: "quote" },
   { shot: "layouts" },
   { shot: "rooms-mini" },
-  { shot: "hint" },
   { shot: "host" },
   { shot: "account" },
 ];
