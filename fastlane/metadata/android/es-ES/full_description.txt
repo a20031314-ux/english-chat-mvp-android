@@ -2,7 +2,7 @@ languagebank te ayuda a hablar y escribir de verdad en el idioma que aprendes, c
 
 HABLA CON UN TUTOR IA
 • Chatea en el idioma que aprendes. ¿Te atascas? Escribe en tu idioma: el tutor sigue en el idioma que aprendes, y «Ver cómo se dice» pone la expresión justo debajo de esa línea.
-• Las correcciones aparecen justo debajo de tu frase, así ves qué arreglar.
+• Si una frase tiene un error, aparece debajo la etiqueta «Hay algo que corregir». Tócala para ver la frase corregida.
 • Llama al tutor IA y habla en voz alta. El paquete de hoy es una llamada corta con un objetivo, y al terminar puedes repasar lo que querías decir.
 
 PREGUNTA POR CUALQUIER FRASE
@@ -13,14 +13,16 @@ APRENDE CON VÍDEOS REALES
 
 VE LO QUE TE FALTA
 • Sin niveles. Cada frase muestra solo lo que estaba mal o faltaba, y lo que escribes muestra tus puntos débiles y qué hacer después.
-• Fija un objetivo y obtén un mapa de estudio con misiones. Las pistas se abren de una en una, para que lo intentes primero.
+• En Mi espacio empiezas con conversaciones cortas de ejemplo. Responde «Sí, puedo», «Casi» o «Todavía no», y tu mapa de estudio empieza donde estás: con la conversación que podrás tener, la gramática de esta parte y, si acabas de empezar, primero letras y sonidos.
+• Las pistas de las misiones se abren de una en una, para que lo intentes primero.
 • En Mi espacio: Prueba esto, Creciendo, Mis expresiones y Notas (con Vocabulario) reúnen lo que has usado y aprendido.
 
 APRENDE CON GENTE
-• Room: salas de voz con subtítulos en directo. Toca una línea para traducirla o elige solo las palabras por las que quieres preguntar. Una 💡 pista te dice qué decir en el idioma que aprendes.
+• Room: salas de voz con subtítulos en directo. Toca una línea para traducirla o elige solo las palabras por las que quieres preguntar. Una 💡 pista te dice qué decir en el idioma que aprendes, y en tus propias frases subtituladas puedes ver correcciones que solo ves tú.
 • Chats: grupos y mensajes 1:1, llamadas de voz y videollamadas 1:1, y espacios de equipo con compañeros de estudio.
 • Personas: encuentra gente que aprende tu idioma, síguela y publica en el tablón.
 • Invita a un amigo con un enlace.
+• Desactiva las funciones que no uses y la app solo muestra lo que necesitas.
 
 PLANES
 Empieza gratis, con límites diarios. El plan gratuito muestra anuncios. Las suscripciones añaden más chats, más ayuda de IA y tiempo de llamada diario, sin anuncios.

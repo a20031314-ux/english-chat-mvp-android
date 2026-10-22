@@ -2,7 +2,7 @@ languagebank membantumu benar-benar berbicara dan menulis dalam bahasa yang seda
 
 NGOBROL DENGAN TUTOR AI
 • Mengobrol dalam bahasa yang kamu pelajari. Buntu? Tulis dalam bahasamu sendiri: tutor tetap melanjutkan dalam bahasa yang kamu pelajari, dan "Lihat cara mengatakannya" menaruh ungkapannya tepat di bawah baris itu.
-• Koreksi muncul tepat di bawah kalimatmu, jadi kamu langsung tahu apa yang perlu diperbaiki.
+• Kalau kalimatmu ada yang salah, label "Ada yang perlu diperbaiki" muncul di bawahnya. Ketuk untuk melihat kalimat yang sudah diperbaiki.
 • Telepon tutor AI dan bicaralah dengan suara keras. Paket hari ini adalah panggilan singkat dengan tujuan, dan setelahnya kamu bisa melihat lagi apa yang ingin kamu katakan.
 
 TANYAKAN KALIMAT APA PUN
@@ -13,14 +13,16 @@ BELAJAR DARI VIDEO ASLI
 
 LIHAT APA YANG MASIH KURANG
 • Tanpa level. Setiap kalimat hanya menunjukkan apa yang salah atau kurang, dan tulisanmu memperlihatkan bagian yang lemah serta langkah berikutnya.
-• Tetapkan tujuan dan dapatkan peta belajar dengan misi. Petunjuk terbuka satu per satu, jadi kamu mencoba dulu.
+• Di Saya, kamu mulai dari contoh percakapan pendek. Jawab "Bisa", "Hampir", atau "Belum", dan peta belajarmu dimulai dari posisimu sekarang: dengan percakapan yang nanti bisa kamu lakukan, tata bahasa bagian ini, dan kalau baru mulai, huruf dan bunyi dulu.
+• Petunjuk misi terbuka satu per satu, jadi kamu mencoba dulu.
 • Di Saya: Coba ini, Sedang tumbuh, Ungkapanku, dan Catatan (dengan Kosakata) mengumpulkan apa yang sudah kamu pakai dan pelajari.
 
 BELAJAR BERSAMA ORANG LAIN
-• Room: ruang suara dengan subtitel langsung. Ketuk baris untuk menerjemahkannya, atau pilih hanya kata yang ingin kamu tanyakan. 💡 Petunjuk memberi tahu apa yang bisa kamu katakan dalam bahasa yang kamu pelajari.
+• Room: ruang suara dengan subtitel langsung. Ketuk baris untuk menerjemahkannya, atau pilih hanya kata yang ingin kamu tanyakan. 💡 Petunjuk memberi tahu apa yang bisa kamu katakan dalam bahasa yang kamu pelajari, dan baris yang kamu ucapkan sendiri bisa menampilkan koreksi yang hanya kamu lihat.
 • Obrolan: grup dan pesan 1:1, panggilan suara dan panggilan video 1:1, serta ruang tim bersama teman belajar.
 • Orang: temukan orang yang mempelajari bahasamu, ikuti mereka, dan posting di papan.
 • Undang teman dengan satu tautan.
+• Matikan fitur yang tidak kamu pakai, dan aplikasi hanya menampilkan yang kamu butuhkan.
 
 PAKET
 Mulai gratis, dengan batas harian. Paket gratis menampilkan iklan. Langganan menambah obrolan, bantuan AI, dan waktu panggilan harian, tanpa iklan.

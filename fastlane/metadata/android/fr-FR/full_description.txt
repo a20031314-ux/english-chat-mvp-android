@@ -2,7 +2,7 @@ languagebank vous aide à vraiment parler et écrire dans la langue que vous app
 
 DISCUTEZ AVEC UN TUTEUR IA
 • Discutez dans la langue que vous apprenez. Bloqué ? Écrivez dans votre langue : le tuteur continue dans la langue que vous apprenez, et « Voir comment le dire » place l'expression juste sous cette ligne.
-• Les corrections s'affichent juste sous votre phrase : vous voyez tout de suite quoi corriger.
+• Si une phrase contient une erreur, l'étiquette « Il y a quelque chose à corriger » apparaît dessous. Touchez-la pour voir la phrase corrigée.
 • Appelez le tuteur IA et parlez à voix haute. Le pack du jour est un court appel avec un objectif ; ensuite, vous pouvez revoir ce que vous vouliez dire.
 
 POSEZ DES QUESTIONS SUR N'IMPORTE QUELLE PHRASE
@@ -13,14 +13,16 @@ APPRENEZ AVEC DE VRAIES VIDÉOS
 
 VOYEZ CE QUI VOUS MANQUE
 • Pas de niveaux. Chaque phrase montre seulement ce qui était faux ou manquant, et ce que vous écrivez révèle vos points faibles et la suite à travailler.
-• Fixez un objectif et obtenez une carte d'apprentissage avec des missions. Les indices s'ouvrent un par un, pour essayer d'abord.
+• Dans Moi, commencez par de courtes conversations d'exemple. Répondez « Oui, je peux », « Presque » ou « Pas encore », et votre carte d'apprentissage commence là où vous en êtes : avec la conversation que vous saurez tenir, la grammaire de cette partie et, si vous débutez, d'abord les lettres et les sons.
+• Les indices des missions s'ouvrent un par un, pour essayer d'abord.
 • Dans Moi : À essayer, En croissance, Mes expressions et Notes (avec Vocabulaire) rassemblent ce que vous avez utilisé et appris.
 
 APPRENEZ AVEC D'AUTRES
-• Room : des salons vocaux avec sous-titres en direct. Touchez une ligne pour la traduire, ou choisissez seulement les mots sur lesquels vous voulez poser une question. Un 💡 indice vous dit quoi dire dans la langue que vous apprenez.
+• Room : des salons vocaux avec sous-titres en direct. Touchez une ligne pour la traduire, ou choisissez seulement les mots sur lesquels vous voulez poser une question. Un 💡 indice vous dit quoi dire dans la langue que vous apprenez, et vos propres lignes sous-titrées peuvent afficher des corrections visibles par vous seul.
 • Discussions : groupes et messages 1:1, appels vocaux et appels vidéo 1:1, et espaces d'équipe avec des partenaires d'étude.
 • Personnes : trouvez des gens qui apprennent votre langue, suivez-les et publiez sur le forum.
 • Invitez un ami avec un seul lien.
+• Désactivez les fonctions que vous n'utilisez pas : l'app n'affiche que ce dont vous avez besoin.
 
 FORMULES
 Gratuit pour commencer, avec des limites quotidiennes. La formule gratuite affiche des publicités. Les abonnements ajoutent plus de discussions, plus d'aide de l'IA et du temps d'appel chaque jour, sans publicité.

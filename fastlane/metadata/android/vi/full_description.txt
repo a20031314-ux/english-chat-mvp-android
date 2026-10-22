@@ -2,7 +2,7 @@ languagebank giúp bạn thực sự nói và viết bằng ngôn ngữ đang h�
 
 TRÒ CHUYỆN VỚI GIA SƯ AI
 • Nhắn tin bằng ngôn ngữ bạn đang học. Bí từ? Hãy viết bằng tiếng của bạn: gia sư vẫn tiếp tục bằng ngôn ngữ bạn đang học, và "Xem cách nói" đặt cách diễn đạt ngay dưới dòng đó.
-• Phần sửa hiện ngay dưới câu của bạn, nên bạn thấy rõ cần sửa gì.
+• Nếu câu có lỗi, nhãn "Có chỗ cần sửa" sẽ hiện bên dưới. Chạm vào để xem câu đã sửa.
 • Gọi gia sư AI và nói thành tiếng. Gói hôm nay là một cuộc gọi ngắn có mục tiêu, và sau đó bạn có thể xem lại điều mình định nói.
 
 HỎI VỀ BẤT KỲ CÂU NÀO
@@ -13,14 +13,16 @@ HỌC TỪ VIDEO THẬT
 
 THẤY ĐIỀU MÌNH CÒN THIẾU
 • Không có cấp độ. Mỗi câu chỉ chỉ ra chỗ sai hoặc còn thiếu, và những gì bạn viết cho thấy điểm yếu cùng việc nên làm tiếp theo.
-• Đặt mục tiêu và nhận bản đồ học tập có nhiệm vụ. Gợi ý mở từng cái một để bạn thử trước.
+• Trong Của tôi, bạn bắt đầu bằng vài đoạn hội thoại ví dụ ngắn. Chọn "Được", "Gần được" hoặc "Chưa được", bản đồ học tập sẽ bắt đầu từ chỗ bạn đang đứng: có đoạn hội thoại bạn sẽ nói được, ngữ pháp phần này, và nếu mới bắt đầu thì học chữ và âm trước.
+• Gợi ý của nhiệm vụ mở từng cái một để bạn thử trước.
 • Trong Của tôi: Thử cái này, Đang lớn, Cách nói của tôi và Ghi chú (có Từ) gom lại những gì bạn đã dùng và đã học.
 
 HỌC CÙNG MỌI NGƯỜI
-• Room: phòng thoại có phụ đề trực tiếp. Chạm vào một dòng để dịch, hoặc chỉ chọn những từ bạn muốn hỏi. 💡 Gợi ý cho bạn biết nên nói gì bằng ngôn ngữ đang học.
+• Room: phòng thoại có phụ đề trực tiếp. Chạm vào một dòng để dịch, hoặc chỉ chọn những từ bạn muốn hỏi. 💡 Gợi ý cho bạn biết nên nói gì bằng ngôn ngữ đang học, và những dòng chính bạn nói có thể hiện phần sửa chỉ mình bạn thấy.
 • Trò chuyện: nhóm và tin nhắn 1:1, gọi thoại và gọi video 1:1, cùng không gian nhóm với bạn học.
 • Mọi người: tìm người học ngôn ngữ của bạn, theo dõi họ và đăng bài lên bảng tin.
 • Mời bạn bè chỉ bằng một đường liên kết.
+• Tắt những tính năng bạn không dùng, ứng dụng chỉ hiện những gì bạn cần.
 
 GÓI
 Bắt đầu miễn phí, có giới hạn mỗi ngày. Gói miễn phí có quảng cáo. Gói đăng ký thêm lượt trò chuyện, trợ giúp AI và thời gian gọi mỗi ngày, không có quảng cáo.
