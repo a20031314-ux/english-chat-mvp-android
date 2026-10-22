@@ -10,6 +10,7 @@
 
 - **코드 기본값은 `src/lib/aiDefaults.ts` 한 장**(2026-10-22): 글 기능별 OpenAI 기본·`DEFAULT_ROUTES`(Claude)·받아쓰기·목소리. 서버와 비용 표(`hub/costs.md`)가 같은 이름을 읽어, 여기만 고치면 push 뒤 비용 표가 저절로 바뀐다. 새 모델이면 단가를 `src/lib/billing/modelPrices.ts`에(없으면 CI 실패).
 - 교체안(받아쓰기·목소리·통화 돌아보기): `hub/drafts/model-switch-2026-10-22.md`.
+- **2026-10-22 지금 운영(코드 기본값, 점검 사용자 `x-sim-models`로 확인):** 글 기능 대부분 Claude Haiku 5.5, 교정 확인·통화 돌아보기 Claude Sonnet 5.5. OpenAI로 남은 것: 지도·미션 쓰기(gpt-4.1)·미션 확인(gpt-4.1-mini)·통화 튜터(gpt-4.1-mini, 스트리밍)·받아쓰기·목소리. 아래 표의 OpenAI 모델은 그 기능의 "대체(실패 때)" 모델.
 
 - **글 모델**(아래 표의 받아쓰기·목소리·검사를 뺀 전부)은 `src/lib/server/llm.ts` 표(`TASKS`, 기능 18개 → 등급 basic·high)를 거칩니다.
   - Vercel `MODEL_ROUTES`로 기능별·등급별로 바꿉니다(예: `{"basic":"anthropic: claude-haiku-5-5","high":"anthropic: claude-sonnet-5-5"}`).

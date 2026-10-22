@@ -43,11 +43,32 @@ export type TextTask = keyof typeof OPENAI_TEXT_DEFAULTS;
  * - 방 내 줄 교정은 채팅 교정과 같은 모델(2026-10-22).
  * - 교정 확인 모델(위험한 줄만, 열 때)은 Sonnet 5.5 — 사용자 결정 2026-10-21, 코드 기본값으로 넣음 2026-10-22.
  */
+const HAIKU = "anthropic: claude-haiku-5-5";
+const SONNET = "anthropic: claude-sonnet-5-5";
+
 export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
-  chat: "anthropic: claude-haiku-5-5",
-  howToSay: "anthropic: claude-haiku-5-5",
-  roomFix: "anthropic: claude-haiku-5-5",
-  chatVerify: "anthropic: claude-sonnet-5-5",
+  chat: HAIKU,
+  howToSay: HAIKU,
+  roomFix: HAIKU,
+  chatVerify: SONNET,
+  // 2026-10-22 사용자 "나머지 기능도 다 옮겨줘" — 기본은 Haiku, 드물고 결과가 오래 남는 것만 Sonnet(사용자 원칙 2026-10-21).
+  // 표현 묻기(ask)·학습자 읽기(learnerRead)는 high 등급이지만 자주 불려(묻기 하루 30번, 읽기는 채팅마다) Haiku.
+  // 아직 옮기지 않은 것(가상 사용자 점검 근거, `hub/drafts/model-switch-2026-10-22.md` "전체 옮기기"):
+  // - 지도·미션 쓰기(curriculum)·미션 확인(mission): Sonnet으로 지도 8/14가 "map too thin" — OpenAI(gpt-4.1·4.1-mini, 2027-01-14 종료) 그대로.
+  // - 통화 튜터(roleplayTutor): 스트리밍이 OpenAI만이라(`openaiModel`) 옮겨도 소용없어 그대로 — 01-14 전에 Claude 스트리밍 길을 따로.
+  translate: HAIKU,
+  vocab: HAIKU,
+  analysis: HAIKU,
+  expression: HAIKU,
+  notes: HAIKU,
+  learnerAsk: HAIKU,
+  roleplayContext: HAIKU,
+  video: HAIKU,
+  vision: HAIKU,
+  roleplayPractice: HAIKU,
+  learnerRead: HAIKU,
+  ask: HAIKU,
+  roleplayReview: SONNET,
 };
 
 /** "제공자: 모델" → 모델 이름(틀린 모양이면 null). */

@@ -56,3 +56,18 @@
 
 - `src/lib/aiDefaults.ts`만: `DEFAULT_ROUTES.roleplayReview = "anthropic: claude-sonnet-5-5"`, `SPEECH_DEFAULTS.turnTranscribe = "scribe_v2"`, `SPEECH_DEFAULTS.ttsEngine = "realtime"`.
   비용 표는 push하면 저절로 바뀐다. 받아쓰기를 바꿀 때는 `speechConfidence.ts` 기준값(scribe_v2)이 이미 있음.
+
+## 전체 옮기기 (2026-10-22, 사용자 "나머지 기능도 다 옮겨줘")
+
+가상 사용자 점검(모든 묶음·seed 22 56명, map·sheet·ask·next·pack 28명 seed 23 세 번):
+
+| 점검 | 지금 경로 | Claude 경로 |
+|---|---|---|
+| 1차(모든 묶음) | 오류 7·경고 12 | 오류 15·경고 17 — 지도에 넣기 Sonnet 8/8 실패 |
+| 2차(출력 한도 여유 뒤) | 오류 1·경고 2 | 오류 21·경고 29 — Sonnet 지도·미션 끊김(앞 생각이 한도를 먹음) |
+| 3차(Sonnet 앞 생각 끔 뒤) | — | 오류 12·경고 8 — 거의 다 지도(Sonnet) "map too thin" 8/14, 미션 3. Haiku 기능(문장분석·묻기·번역·단어·팩)은 깨끗 |
+
+결정(사용자 원칙 + 점검): 글 기능은 Haiku, 교정 확인·통화 돌아보기는 Sonnet(돌아보기 앞 생각 끈 뒤 12/12, 3.6초), **지도·미션 쓰기·미션 확인은 OpenAI 그대로**(Sonnet 지도는 따로 손봐야 — 앞 생각을 켜면 45초·한도 끊김, 끄면 얇음).
+통화 튜터는 스트리밍이 OpenAI만이라 그대로. 둘 다 2027-01-14 전에.
+비용 표(최악, 한 달): 라이트 −1,503 → −714원, 플러스 −2,317 → −1,003원, 프리미엄(지금) −2,633 → −4원, 8,900원 −5,494 → −2,865원.
+

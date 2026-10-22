@@ -42,14 +42,18 @@ test("설정이 없으면 기능마다 예전 OpenAI 모델 그대로", () => {
   });
 });
 
-test("키가 있으면 채팅·표현 카드·방 교정은 Haiku, 확인 모델은 Sonnet, 나머지는 예전 그대로(2026-10-22)", () => {
+test("키가 있으면 글 기능은 Haiku, 확인·돌아보기는 Sonnet, 지도·미션·통화 튜터는 OpenAI 그대로(2026-10-22)", () => {
   withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
     assert.deepEqual(
       { ...routeFor("chat") },
       { provider: "anthropic", model: "claude-haiku-5-5", task: "chat", tier: "basic" },
     );
     assert.equal(routeFor("howToSay").model, "claude-haiku-5-5");
-    assert.equal(routeFor("translate").model, "gpt-4o-mini");
+    assert.equal(routeFor("translate").model, "claude-haiku-5-5");
+    assert.equal(routeFor("learnerRead").model, "claude-haiku-5-5");
+    assert.equal(routeFor("roleplayReview").model, "claude-sonnet-5-5");
+    assert.equal(routeFor("curriculum").model, "gpt-4.1");
+    assert.equal(routeFor("mission").model, "gpt-4.1-mini");
     assert.equal(routeFor("roleplayTutor").model, "gpt-4.1-mini");
     assert.equal(routeFor("roomFix").model, "claude-haiku-5-5");
     assert.deepEqual(
@@ -226,14 +230,14 @@ test("점검 사용자만 헤더로 모델 경로를 바꾼다(허용 모델만)
   );
   await inFreshContext(() =>
     withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
-      adoptSimRoutes("rc:real-user", JSON.stringify({ basic: "anthropic: claude-haiku-5-5" }));
-      assert.equal(routeFor("translate").model, "gpt-4o-mini");
+      adoptSimRoutes("rc:real-user", JSON.stringify({ high: "anthropic: claude-sonnet-5-5" }));
+      assert.equal(routeFor("curriculum").model, "gpt-4.1"); // 실제 사용자는 헤더가 안 먹음
     }),
   );
   await inFreshContext(() =>
     withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
       adoptSimRoutes("simcheck-x", "{nope");
-      assert.equal(routeFor("translate").model, "gpt-4o-mini");
+      assert.equal(routeFor("curriculum").model, "gpt-4.1");
     }),
   );
 });
