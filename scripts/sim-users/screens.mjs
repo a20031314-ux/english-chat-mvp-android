@@ -640,6 +640,80 @@ const SCENES = [
     },
   },
   {
+    id: "icons",
+    label: "사람 → 아이콘 — 묶음 목록·묶음 시트(시연용 묶음, 그림은 이 실행에서 만든 움직이는 WebP)",
+    async run({ page, wait, state, locale }) {
+      await prepareSocial(state);
+      const { iconCopy } = await import(`file://${path.join(ROOT, "src/lib/rooms/iconCopy.ts")}`);
+      const t = iconCopy(locale);
+      // 새 계정은 가입 7일 전엔 못 올려서(TOO_NEW) 목록·시트는 시연용 응답으로 그린다 — 실제 사용자 묶음이 찍히지 않게도.
+      const sharp = (await import("sharp")).default;
+      const colors = ["#f59e0b", "#22c55e", "#3b82f6", "#ec4899", "#a855f7", "#14b8a6"];
+      const face = (bg, mouth) =>
+        Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><circle cx="64" cy="64" r="60" fill="${bg}"/><circle cx="44" cy="52" r="9" fill="#111"/><circle cx="84" cy="52" r="9" fill="#111"/><path d="${mouth}" stroke="#111" stroke-width="8" fill="none" stroke-linecap="round"/></svg>`);
+      const images = new Map();
+      for (let i = 0; i < colors.length; i++) {
+        const frames = await Promise.all(["M36 82 Q64 108 92 82", "M36 90 Q64 96 92 90"].map((mouth) => sharp(face(colors[i], mouth)).png().toBuffer()));
+        images.set(`ic_demo0${i}`, await sharp(frames, { join: { animated: true } }).webp({ delay: [400, 400], loop: 0 }).toBuffer());
+      }
+      const phrases = { ko: "좋아!", ja: "いいね！", es: "¡Genial!", en: "Nice!" };
+      const pack = {
+        id: "ip_demopack1",
+        owner: state.me.account.id,
+        ownerName: state.me.account.profile?.nickname ?? "sim",
+        name: "Smile 😀",
+        license: "cc-by-4.0",
+        createdAt: Date.now(),
+        uses: 12,
+        added: false,
+        icons: [...images.keys()].map((id, index) => ({ id, w: 128, h: 128, animated: true, ...(index === 0 ? { phrase: { lang: "es", text: phrases.es } } : {}) })),
+      };
+      const other = { ...pack, id: "ip_demopack2", owner: state.host.account.id, ownerName: state.hostNickname, name: "Gatos 🐱", license: "cc0", uses: 5 };
+      await page.route("**/api/icons**", async (route) => {
+        const request = route.request();
+        if (request.method() === "GET") {
+          const icon = new URL(request.url()).searchParams.get("f")?.split(".")[1] ?? "";
+          const bytes = images.get(icon);
+          return bytes ? route.fulfill({ status: 200, contentType: "image/webp", body: bytes }) : route.fulfill({ status: 404, body: "" });
+        }
+        const body = request.postDataJSON?.() ?? {};
+        if (body.action === "list") return route.fulfill({ json: { packs: [pack, other], next: 2 } });
+        if (body.action === "mine") return route.fulfill({ json: { packs: [pack], own: [pack] } });
+        return route.continue({ headers: { ...request.headers(), "x-rc-user": state.uid } });
+      });
+      await page.evaluate(() => localStorage.setItem("peopleViewMode", "icons"));
+      await page.goto(`${BASE}/?screen=people`, { waitUntil: "domcontentloaded" });
+      await wait(4000);
+      state.iconCopy = t;
+    },
+  },
+  {
+    id: "icons-pack",
+    label: "사람 → 아이콘 — 남의 묶음 시트(받기·신고·라이선스)",
+    async run({ page, wait, state }) {
+      await page.getByText("Gatos 🐱").first().click();
+      await wait(2500);
+    },
+  },
+  {
+    id: "icons-create",
+    label: "사람 → 아이콘 — 새 묶음(라이선스 CC BY 4.0 / CC0·동의)",
+    async run({ page, wait, state }) {
+      const t = state.iconCopy;
+      await page.keyboard.press("Escape").catch(() => undefined);
+      await page.getByRole("button", { name: t.close }).first().click().catch(() => undefined);
+      await wait(800);
+      await page.getByRole("button", { name: t.newPack }).first().click();
+      await wait(800);
+      await page.getByRole("dialog").locator("input").first().fill("Mis memes");
+      await page.getByRole("dialog").getByText(t.cc0).click();
+      await page.getByRole("dialog").locator('input[type="checkbox"]').check();
+      await wait(1200);
+      await page.unroute("**/api/icons**").catch(() => undefined);
+      await page.evaluate(() => localStorage.setItem("peopleViewMode", "people"));
+    },
+  },
+  {
     id: "invite-welcome",
     label: "친구 초대 링크로 앱을 열면",
     async run({ page, wait, state }) {
