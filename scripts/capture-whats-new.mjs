@@ -1731,7 +1731,7 @@ for (const locale of only ?? Object.keys(copy)) {
       const cors = { "access-control-allow-origin": BASE, "access-control-allow-headers": "*", "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS" };
       if (route.request().method() === "OPTIONS") return route.fulfill({ status: 204, headers: cors });
       try {
-        const response = await route.fetch({ headers: { ...route.request().headers(), "x-rc-user": captureUser } });
+        const response = await route.fetch({ headers: { ...route.request().headers(), "x-rc-user": captureUser }, timeout: 120_000 }); // 지도 그리기(Sonnet)는 40초 넘게 걸림 — 기본 30초면 끊김
         await route.fulfill({ response, headers: { ...response.headers(), ...cors } });
       } catch {
         await route.abort();
