@@ -15,7 +15,7 @@ import { byPerson, contextBefore, overlapsPrevious, timeline, type RoomLine, typ
 import type { PublicProfile } from "@/lib/rooms/social";
 import type { HowToSayExpression } from "@/lib/howToSay";
 import { focusOf, pickTokens, questionCount } from "@/lib/rooms/quote";
-import { FactsView, ThankButton } from "@/components/account/ProfileFacts";
+import { FactsView, ProfilePosts, ThankButton } from "@/components/account/ProfileFacts";
 import { countryFlag, countryName } from "@/lib/account/countries";
 import type { MediaRef, MediaScope } from "@/lib/rooms/media";
 import { MediaError, uploadImage, type MediaUploadError } from "@/lib/rooms/mediaClient";
@@ -243,6 +243,7 @@ export function ProfileSheet({
           </p>
           {/* 나에 대한 사실(칩)과 켠 칸(도움·꾸준함·반영 의견·목표) — 학습 상태는 서버가 보내지 않는다. */}
           {profile ? <FactsView locale={locale} facts={profile.facts} badges={profile.badges} goal={profile.goal} /> : null}
+          {profile ? <ProfilePosts locale={locale} posts={profile.posts} /> : null}
           {profile ? (
             <dl className="mt-3 grid grid-cols-4 gap-1 text-center">
               {(

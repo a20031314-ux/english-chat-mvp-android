@@ -6,6 +6,8 @@ import { INTEREST_IDS, MEET_MODES, MEET_TIMES, WORK_IDS } from "./profileFacts.t
  * 화면 규칙(hub/DESIGN.md "안내 글"): 칸 이름·버튼·상태만 — 쓰는 법 설명은 사용법(?) 칸에.
  */
 const ko = {
+  posts: "올린 글",
+  like: "좋아요",
   aboutMe: "나에 대해",
   country: "국적",
   countryNone: "선택 안 함",
@@ -86,6 +88,8 @@ const ko = {
 type ProfileCopy = typeof ko;
 
 const en: ProfileCopy = {
+  posts: "Posts",
+  like: "Like",
   aboutMe: "About me",
   country: "Nationality",
   countryNone: "Not set",
@@ -165,6 +169,8 @@ const en: ProfileCopy = {
 
 const LOCALES: Record<string, ProfileCopy> = {
   es: {
+    posts: "Publicaciones",
+    like: "Me gusta",
     country: "Nacionalidad",
     countryNone: "Sin elegir",
     aboutMe: "Sobre mí",
@@ -242,6 +248,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Vocabulario",
   },
   ja: {
+    posts: "投稿",
+    like: "いいね",
     country: "国籍",
     countryNone: "未設定",
     aboutMe: "自分について",
@@ -319,6 +327,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "語彙",
   },
   zh: {
+    posts: "发布的帖子",
+    like: "点赞",
     country: "国籍",
     countryNone: "未选择",
     aboutMe: "关于我",
@@ -396,6 +406,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "词汇",
   },
   vi: {
+    posts: "Bài đã đăng",
+    like: "Thích",
     country: "Quốc tịch",
     countryNone: "Chưa chọn",
     aboutMe: "Về tôi",
@@ -473,6 +485,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Từ vựng",
   },
   fr: {
+    posts: "Publications",
+    like: "J’aime",
     country: "Nationalité",
     countryNone: "Non précisée",
     aboutMe: "À propos de moi",
@@ -550,6 +564,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Vocabulaire",
   },
   it: {
+    posts: "Post",
+    like: "Mi piace",
     country: "Nazionalità",
     countryNone: "Non indicata",
     aboutMe: "Su di me",
@@ -627,6 +643,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Lessico",
   },
   pt: {
+    posts: "Publicações",
+    like: "Curtir",
     country: "Nacionalidade",
     countryNone: "Não definida",
     aboutMe: "Sobre mim",
@@ -704,6 +722,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Vocabulário",
   },
   ru: {
+    posts: "Публикации",
+    like: "Нравится",
     country: "Гражданство",
     countryNone: "Не выбрано",
     aboutMe: "Обо мне",
@@ -781,6 +801,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Лексика",
   },
   id: {
+    posts: "Postingan",
+    like: "Suka",
     country: "Kewarganegaraan",
     countryNone: "Belum dipilih",
     aboutMe: "Tentang saya",
@@ -858,6 +880,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Kosakata",
   },
   ar: {
+    posts: "المنشورات",
+    like: "إعجاب",
     country: "الجنسية",
     countryNone: "غير محددة",
     aboutMe: "عنّي",
@@ -935,6 +959,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "المفردات",
   },
   th: {
+    posts: "โพสต์",
+    like: "ถูกใจ",
     country: "สัญชาติ",
     countryNone: "ยังไม่เลือก",
     aboutMe: "เกี่ยวกับฉัน",
@@ -1012,6 +1038,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "คำศัพท์",
   },
   hi: {
+    posts: "पोस्ट",
+    like: "पसंद",
     country: "नागरिकता",
     countryNone: "चुना नहीं",
     aboutMe: "मेरे बारे में",

@@ -601,6 +601,28 @@ const SCENES = [
     },
   },
   {
+    id: "board-likes",
+    label: "사람 → 게시판 — 글 아래 ♡/♥ 좋아요 (테스트 계정 글만 보이게 거름)",
+    async run({ page, wait, state, rc }) {
+      await prepareSocial(state);
+      // 실제 사용자의 글이 찍히지 않게: 목록 응답에서 이 실행의 테스트 계정 글만 남긴다.
+      const mine = new Set([state.me.account.id, state.host.account.id, state.friend.account.id]);
+      await page.route("**/api/board", async (route) => {
+        const body = route.request().postDataJSON?.() ?? {};
+        if (body.action !== "list") return route.continue();
+        const response = await route.fetch();
+        const json = await response.json();
+        json.posts = (json.posts ?? []).filter((post) => mine.has(post.author));
+        await route.fulfill({ response, json });
+      });
+      await page.goto(`${BASE}/?screen=people`, { waitUntil: "domcontentloaded" });
+      await wait(3000);
+      await page.getByText(rc.boardTab, { exact: true }).first().click();
+      await wait(3500);
+      await page.unroute("**/api/board").catch(() => undefined);
+    },
+  },
+  {
     id: "invite-welcome",
     label: "친구 초대 링크로 앱을 열면",
     async run({ page, wait, state }) {
@@ -741,6 +763,18 @@ async function prepareSocial(state) {
     { id: friend.account.id, nickname: state.friendNickname, bio: bank.mapGoal[locale], hasPhoto: true, ui: locale, learn: target, lastSeen: now - 3 * 3600_000, isFollowing: true, country: { ko: "KR", ja: "JP", ar: "SA", en: "CA" }[locale] ?? null, native: locale, interests: ["books"], sharedInterests: 0, meetModes: ["text"] },
   ];
   await api(me.uid, "/api/social", { action: "follow", target: friend.account.id }, me.token);
+  // 게시판: 방장이 글 둘(프로필 "올린 글"에 보임), 내가 하나에 좋아요(2026-10-23).
+  const board = (who, action, extra) => api(who.uid, "/api/board", { action, ...extra }, who.token);
+  state.boardPostIds = [];
+  for (const text of [say(9), bank.askGrowth[target]]) {
+    // 운영 게시판에 잠깐 보이니 [test]를 붙인다(실행 끝에 계정과 함께 지워짐).
+    const made = await board(host, "post", { language: target, text: `[test] ${text}` });
+    if (made.body?.post?.id) state.boardPostIds.push(made.body.post.id);
+  }
+  if (state.boardPostIds[0]) {
+    await board(me, "like", { postId: state.boardPostIds[0], on: true });
+    await board(friend, "like", { postId: state.boardPostIds[0], on: true });
+  }
   state.hostInvite = (await api(host.uid, "/api/invite", { action: "mine" }, host.token)).body?.code ?? "";
 }
 

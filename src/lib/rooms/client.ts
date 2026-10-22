@@ -666,6 +666,10 @@ export function boardWrite(language: string, text: string, imageIds: string[] = 
 export function boardEdit(postId: string, text: string): Promise<{ post: BoardPost }> {
   return board("edit", { postId, text });
 }
+/** 좋아요 켜기·끄기 → 지금 수와 내 상태. */
+export function boardLike(postId: string, on: boolean): Promise<{ like: { likes: number; liked: boolean } }> {
+  return board("like", { postId, on });
+}
 export function boardDelete(postId: string): Promise<{ ok: true }> {
   return board("delete", { postId });
 }

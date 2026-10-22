@@ -1,6 +1,7 @@
 /** 공개 프로필(api/social) — 앱과 서버가 함께 쓰는 모양. */
 import type { ProfileFacts } from "../account/profileFacts.ts";
 import type { ProfileBadges } from "./contribution.ts";
+import type { BoardPost } from "./board.ts";
 
 export type PublicProfile = {
   id: string;
@@ -24,6 +25,8 @@ export type PublicProfile = {
   badges?: ProfileBadges;
   /** 목표 한 줄의 재료(체크 답 id, 화면이 틀 문구로 문장을 만든다). 켰고 체크가 있을 때만. */
   goal?: { language: string; use: string | null; focus: string[] };
+  /** 게시판에 올린 최근 글(켰을 때만, 서로 차단이면 없음). 글은 앞부분만. */
+  posts?: BoardPost[];
   /** 본인 프로필이면 칸 켬/끔(편집 시트가 쓴다). */
   show?: Record<string, boolean>;
 };

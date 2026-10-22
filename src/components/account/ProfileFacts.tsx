@@ -17,7 +17,8 @@ import type { ProfileBadges } from "@/lib/rooms/contribution";
 import { SUPPORTED_LEARNING_LANGUAGES, getLearningLanguage, isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
 import { COUNTRY_CODES, countryFlag, countryName } from "@/lib/account/countries";
 import { LearningLanguageFlag } from "@/components/LearningLanguageFlag";
-import { RoomApiError, sendThank, type ThankTarget } from "@/lib/rooms/client";
+import { RoomApiError, boardLike, sendThank, type ThankTarget } from "@/lib/rooms/client";
+import type { BoardPost } from "@/lib/rooms/board";
 
 /**
  * 프로필 사실·칸·도움됐어요 화면 부품(hub/drafts/profile-2026-10-23.md, 서버는 1단계에 들어감).
@@ -195,6 +196,7 @@ export function ShowToggles({
     ["streak", t.showStreak],
     ["goal", t.showGoal],
     ["maker", t.showMaker],
+    ["posts", t.posts],
     ["tutor", t.showTutor],
   ];
   return (
@@ -354,5 +356,82 @@ export function ThankButton({ locale, target, learn }: { locale: string; target:
       {state === "today" ? <span className="text-meta text-slate-500">{t.thankToday}</span> : null}
       {state === "failed" ? <span className="text-meta text-rose-300">{t.thankFailed}</span> : null}
     </span>
+  );
+}
+
+/** 게시글 좋아요(♥ 수). 누르면 바로 바뀌고, 서버 답으로 맞춘다(실패하면 되돌림). */
+export function LikeButton({
+  locale,
+  postId,
+  likes,
+  liked,
+  onChange,
+}: {
+  locale: string;
+  postId: string;
+  likes: number;
+  liked: boolean;
+  onChange?: (next: { likes: number; liked: boolean }) => void;
+}) {
+  const t = profileCopy(locale);
+  const [state, setState] = useState({ likes, liked });
+  const [busy, setBusy] = useState(false);
+  const toggle = async () => {
+    if (busy) return;
+    const before = state;
+    const optimistic = { liked: !state.liked, likes: Math.max(0, state.likes + (state.liked ? -1 : 1)) };
+    setState(optimistic);
+    setBusy(true);
+    try {
+      const { like } = await boardLike(postId, optimistic.liked);
+      setState(like);
+      onChange?.(like);
+    } catch {
+      setState(before);
+    } finally {
+      setBusy(false);
+    }
+  };
+  return (
+    <button
+      type="button"
+      aria-pressed={state.liked}
+      aria-label={t.like}
+      onClick={() => void toggle()}
+      className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-meta ${state.liked ? "text-bad" : "text-slate-400 hover:text-slate-200"}`}
+    >
+      <span aria-hidden>{state.liked ? "♥" : "♡"}</span>
+      <span>{state.likes}</span>
+    </button>
+  );
+}
+
+/** 프로필 시트의 올린 글(최근 5개). 누르면 글 전체가 펼쳐지고, 좋아요는 그 자리에서. */
+export function ProfilePosts({ locale, posts }: { locale: string; posts?: BoardPost[] }) {
+  const t = profileCopy(locale);
+  const [open, setOpen] = useState<string | null>(null);
+  if (!posts?.length) return null;
+  const when = (at: number) => new Intl.DateTimeFormat(locale, { month: "short", day: "numeric" }).format(at);
+  return (
+    <div className="mt-3">
+      <p className="text-caption text-slate-400">{t.posts}</p>
+      <ul className="mt-1.5 space-y-1.5">
+        {posts.map((post) => (
+          <li key={post.id} className="rounded-xl bg-white/[0.04] px-3 py-2">
+            <button type="button" onClick={() => setOpen((id) => (id === post.id ? null : post.id))} className="block w-full text-start">
+              <span dir="auto" className={`block whitespace-pre-wrap text-note text-ink ${open === post.id ? "" : "line-clamp-2"}`}>
+                {post.text || (post.images?.length ? `📷 ${post.images.length}` : "")}
+              </span>
+            </button>
+            <span className="mt-1 flex items-center gap-2 text-meta text-slate-500">
+              <LikeButton locale={locale} postId={post.id} likes={post.likes ?? 0} liked={post.liked === true} />
+              <span>💬 {post.comments}</span>
+              {post.images?.length && post.text ? <span>📷 {post.images.length}</span> : null}
+              <span className="ms-auto">{when(post.at)}</span>
+            </span>
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

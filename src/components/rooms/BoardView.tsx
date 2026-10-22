@@ -7,7 +7,7 @@ import { MEDIA_PER_POST, type MediaRef, type MediaScope } from "@/lib/rooms/medi
 import { MediaError, uploadImage } from "@/lib/rooms/mediaClient";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
-import { ThankButton } from "@/components/account/ProfileFacts";
+import { LikeButton, ThankButton } from "@/components/account/ProfileFacts";
 import { BOARD_COMMENT_MAX_CHARS, BOARD_POST_MAX_CHARS, threadComments, withReplies, type BoardAuthor, type BoardComment, type BoardPost } from "@/lib/rooms/board";
 import {
   RoomApiError,
@@ -140,11 +140,11 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
                 <NativeAdSlot feedId="people-tab" slotKey="board-after-3" />
               </li>
             ) : null}
-            <li>
+            <li className="rounded-xl border border-line bg-surface">
               <button
                 type="button"
                 onClick={() => setOpenId(post.id)}
-                className="block w-full rounded-xl border border-line bg-surface p-3 text-start"
+                className="block w-full p-3 pb-1 text-start"
               >
                 <span className="flex items-center gap-2">
                   <Face accountId={post.author} name={names[post.author] ?? ""} size={24} />
@@ -162,12 +162,23 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
                     ))}
                   </span>
                 ) : null}
-                <span className="mt-2 block text-meta text-slate-500">
+              </button>
+              {/* 좋아요는 글 열기 버튼 밖에(버튼 안에 버튼을 두지 않게). */}
+              <div className="flex items-center gap-2 px-3 pb-2 text-meta text-slate-500">
+                <LikeButton
+                  key={`${post.id}:${post.likes ?? 0}:${post.liked ? 1 : 0}`}
+                  locale={locale}
+                  postId={post.id}
+                  likes={post.likes ?? 0}
+                  liked={post.liked === true}
+                  onChange={(like) => setPosts((list) => (list ?? []).map((item) => (item.id === post.id ? { ...item, ...like } : item)))}
+                />
+                <span>
                   {post.images?.length ? `📷 ${post.images.length} · ` : ""}
                   {t.boardComments.replace("{n}", String(post.comments))}
                   {post.editedAt ? ` · ${t.boardEdited}` : ""}
                 </span>
-              </button>
+              </div>
             </li>
             </Fragment>
           ))}
@@ -591,6 +602,20 @@ function PostSheet({
               </button>
             ) : null}
             {translated[post.id] ? <p className="mt-1 whitespace-pre-wrap text-note text-slate-300">{translated[post.id]}</p> : null}
+            <div className="mt-3">
+              <LikeButton
+                key={`${post.id}:${post.likes ?? 0}:${post.liked ? 1 : 0}`}
+                locale={locale}
+                postId={post.id}
+                likes={post.likes ?? 0}
+                liked={post.liked === true}
+                onChange={(like) => {
+                  const next = { ...post, ...like };
+                  setPost(next);
+                  onChanged(next);
+                }}
+              />
+            </div>
 
             <p className="mt-5 text-meta font-semibold tracking-wide text-slate-500">
               {t.boardComments.replace("{n}", String(comments.length))}
@@ -651,7 +676,7 @@ function PostSheet({
           onSubmit={async (text) => {
             if (editing.kind === "post") {
               const { post: next } = await boardEdit(post.id, text);
-              const kept = { ...next, comments: post.comments };
+              const kept = { ...next, comments: post.comments, likes: post.likes, liked: post.liked };
               setPost(kept);
               onChanged(kept);
             } else {

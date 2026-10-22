@@ -16,6 +16,8 @@ import {
   editPost,
   listPosts,
   readComments,
+  setLike,
+  withLikes,
   readPost,
   type WriteResult,
 } from "@/lib/server/boardStore";
@@ -85,7 +87,7 @@ export async function POST(request: NextRequest) {
   const action = body.action;
 
   // 운영자가 사람 기능을 정지한 계정은 쓰기만 막는다(opsStore.ts).
-  if (typeof action === "string" && ["post", "edit", "comment", "editComment"].includes(action)) {
+  if (typeof action === "string" && ["post", "edit", "comment", "editComment", "like"].includes(action)) {
     const stop = await suspendedResponse(request, me);
     if (stop) return stop;
   }
@@ -96,7 +98,7 @@ export async function POST(request: NextRequest) {
     const { authors, hidden } = await authorsOf(me, posts.map((post) => post.author));
     // 다음 쪽은 거르기 전 개수로 넘긴다(차단으로 빠진 글이 있어도 같은 자리부터).
     return jsonWithCors(request, {
-      posts: posts.filter((post) => !hidden.has(post.author)),
+      posts: await withLikes(me, posts.filter((post) => !hidden.has(post.author))),
       authors,
       next: offset + posts.length,
     });
@@ -125,8 +127,9 @@ export async function POST(request: NextRequest) {
     const comments = await readComments(postId);
     const { authors, hidden } = await authorsOf(me, [post.author, ...comments.map((comment) => comment.author)]);
     if (hidden.has(post.author) && post.author !== me) return bad(request, "NOT_FOUND", 404);
+    const [withCount] = await withLikes(me, [post]);
     return jsonWithCors(request, {
-      post,
+      post: withCount,
       comments: comments.filter((comment) => !hidden.has(comment.author)),
       authors,
     });
@@ -138,6 +141,11 @@ export async function POST(request: NextRequest) {
     return answer(request, await editPost(me, postId, text), "post");
   }
   if (action === "delete") return answer(request, await deletePost(me, postId), "ok");
+
+  // 좋아요 켜기·끄기(2026-10-23). 서로 차단한 사람의 글은 목록·열기에서 안 보이니 따로 막지 않는다.
+  if (action === "like") {
+    return answer(request, await setLike(me, postId, body.on !== false), "like");
+  }
 
   if (action === "comment") {
     const text = cleanBoardText(body.text, BOARD_COMMENT_MAX_CHARS);

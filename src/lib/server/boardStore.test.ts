@@ -10,8 +10,11 @@ import {
   editPost,
   forgetBoard,
   listPosts,
+  listPostsBy,
   readComments,
   readPost,
+  setLike,
+  withLikes,
 } from "./boardStore.ts";
 
 // KV 접속 정보 없이 메모리로(kv.ts).
@@ -108,4 +111,38 @@ test("부모가 안 보이는 답글(차단 등)은 맨 위로 보인다", () =>
     { id: "b_b00000", author: "y", text: "b", at: 2, parent: "b_hidden0" },
   ]);
   assert.deepEqual(rows.map((row) => row.comment.id), ["b_a00000", "b_b00000"]);
+});
+
+test("좋아요: 한 사람 한 번, 끄면 줄고, 보는 사람마다 내 상태, 글을 지우거나 계정을 지우면 정리", async () => {
+  const post = ok(await createPost({ author: "acc_likeauthor", language: "th", text: "ไปเที่ยวทะเลมา" }));
+  assert.deepEqual(ok(await setLike("acc_liker1", post.id, true)), { likes: 1, liked: true });
+  assert.deepEqual(ok(await setLike("acc_liker1", post.id, true)), { likes: 1, liked: true });
+  assert.deepEqual(ok(await setLike("acc_liker2", post.id, true)), { likes: 2, liked: true });
+  assert.deepEqual(ok(await setLike("acc_liker1", post.id, false)), { likes: 1, liked: false });
+  assert.deepEqual(ok(await setLike("acc_liker1", post.id, false)), { likes: 1, liked: false });
+  const [forTwo] = await withLikes("acc_liker2", [post]);
+  const [forOne] = await withLikes("acc_liker1", [post]);
+  assert.equal(forTwo?.likes, 1);
+  assert.equal(forTwo?.liked, true);
+  assert.equal(forOne?.liked, false);
+  assert.deepEqual(await setLike("acc_liker1", "b_nothing", true), { error: "NOT_FOUND" });
+
+  // 누른 사람이 계정을 지우면 수가 돌아간다.
+  await forgetBoard("acc_liker2");
+  assert.equal((await withLikes(null, [post]))[0]?.likes, 0);
+
+  // 글을 지우면 그 글의 좋아요도 없어진다.
+  ok(await setLike("acc_liker3", post.id, true));
+  ok(await deletePost("acc_likeauthor", post.id));
+  assert.equal((await withLikes("acc_liker3", [post]))[0]?.likes, 0);
+});
+
+test("한 사람의 최근 글은 최신 순으로 정한 수만", async () => {
+  const author = "acc_profileposts";
+  for (const text of ["primera", "segunda", "tercera"]) {
+    ok(await createPost({ author, language: "es", text }));
+    await new Promise((resolve) => setTimeout(resolve, 3)); // 같은 밀리초면 순서가 정해지지 않는다.
+  }
+  const posts = await listPostsBy(author, 2);
+  assert.deepEqual(posts.map((post) => post.text), ["tercera", "segunda"]);
 });

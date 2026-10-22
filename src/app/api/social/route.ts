@@ -22,6 +22,7 @@ import { factsOf, sharedInterests, showOf } from "@/lib/account/profileFacts";
 import { badgesFor, contribScore, peopleBoostMs } from "@/lib/rooms/contribution";
 import { readContrib, readContribMany, recordThank, type ThankTarget } from "@/lib/server/contribStore";
 import { readSelfCheck } from "@/lib/server/selfCheckStore";
+import { listPostsBy, withLikes } from "@/lib/server/boardStore";
 import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 
 export const dynamic = "force-dynamic";
@@ -37,6 +38,8 @@ export const dynamic = "force-dynamic";
  */
 
 const LANG = /^[a-z]{2}$/;
+/** 프로필에 보이는 올린 글 수. */
+const PROFILE_POSTS = 5;
 
 /** 앱이 보낸 답 위치. 모양이 틀리면 null. */
 function thankTarget(body: Record<string, unknown>): ThankTarget | null {
@@ -176,6 +179,12 @@ export async function POST(request: NextRequest) {
       // 목표 한 줄: 그 사람이 지금 배우는 언어(사람 목록에서 받은 learn)의 체크 답.
       show.goal && learn ? readSelfCheck(account.dataUserId, learn) : Promise.resolve(null),
     ]);
+    // 올린 글(켰을 때, 로그인한 사람에게만 — 게시판이 로그인해야 보이는 것과 같게). 서로 차단이면 보이지 않는다.
+    let posts: PublicProfile["posts"];
+    if (show.posts && me && !blocked.includes(target) && !(await readBlocked(target)).includes(me)) {
+      const recent = await withLikes(me, await listPostsBy(target, PROFILE_POSTS));
+      posts = recent.map((post) => ({ ...post, text: Array.from(post.text).slice(0, 300).join("") }));
+    }
     const profile: PublicProfile = {
       id: account.id,
       nickname: account.profile.nickname || account.username || "",
@@ -189,6 +198,7 @@ export async function POST(request: NextRequest) {
       facts: factsOf(account.profile.facts),
       badges: badgesFor(contrib, show, localDay(Date.now(), null)),
       ...(check && learn ? { goal: { language: learn, use: check.use ?? null, focus: check.focus } } : {}),
+      ...(posts ? { posts } : {}),
       ...(me === target ? { show } : {}),
     };
     return jsonWithCors(request, { profile });

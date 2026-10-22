@@ -25,6 +25,9 @@ export type BoardPost = {
   comments: number;
   /** 붙인 사진(최대 MEDIA_PER_POST장, rooms/media.ts). 글을 지우면 같이 지운다. */
   images?: MediaRef[];
+  /** 좋아요 수와 내가 눌렀는지 — 저장된 글에는 없고, 읽을 때 서버가 보는 사람 기준으로 채운다(2026-10-23). */
+  likes?: number;
+  liked?: boolean;
 };
 
 export type BoardComment = {

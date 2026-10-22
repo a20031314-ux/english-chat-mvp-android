@@ -4,7 +4,9 @@ import {
   kvDelete,
   kvGetJson,
   kvGetJsonMany,
+  kvGetNumbers,
   kvIncrBy,
+  kvSetJsonIfAbsent,
   kvListPush,
   kvListRange,
   kvSetJson,
@@ -35,6 +37,10 @@ import { BOARD_BOOST_MAX_MS } from "../rooms/contribution.ts";
  *   board:v1:lang:<언어>        ZSET 그 학습 언어 글
  *   board:v1:by:<계정>          ZSET 그 사람의 글 — 계정 삭제 때
  *   board:v1:commented:<계정>   ZSET 그 사람이 댓글 단 글 — 계정 삭제 때
+ *   board:v1:likes:<id>         좋아요 수(숫자)
+ *   board:v1:liked:<id>:<계정>  그 사람이 눌렀는지(있으면 누름)
+ *   board:v1:likers:<id>        ZSET 누른 사람 — 글을 지울 때 표시를 같이 지우려고
+ *   board:v1:likedby:<계정>     ZSET 내가 누른 글 — 계정 삭제 때 수를 되돌리려고
  */
 const postKey = (id: string) => `board:v1:post:${id}`;
 const commentsKey = (id: string) => `board:v1:c:${id}`;
@@ -42,6 +48,10 @@ const ALL = "board:v1:all";
 const langKey = (language: string) => `board:v1:lang:${language}`;
 const byKey = (account: string) => `board:v1:by:${account}`;
 const commentedKey = (account: string) => `board:v1:commented:${account}`;
+const likesKey = (id: string) => `board:v1:likes:${id}`;
+const likedKey = (id: string, account: string) => `board:v1:liked:${id}:${account}`;
+const likersKey = (id: string) => `board:v1:likers:${id}`;
+const likedByKey = (account: string) => `board:v1:likedby:${account}`;
 /** 댓글 목록은 기한 없이(글이 지워질 때 같이 지움) — 목록 쓰기에 기한이 꼭 필요해서 10년. */
 const KEEP_SECONDS = 10 * 365 * 24 * 60 * 60;
 const dayKey = (account: string) => `board:v1:n:${account}:${new Date().toISOString().slice(0, 10)}`;
@@ -126,6 +136,13 @@ async function removePost(post: BoardPost): Promise<void> {
   if (media.length) await deleteMedia(media);
   await kvDelete([postKey(post.id), commentsKey(post.id)]);
   await Promise.all([kvZRem(ALL, post.id), kvZRem(langKey(post.language), post.id), kvZRem(byKey(post.author), post.id)]);
+  // 좋아요: 누른 사람마다 표시와 "내가 누른 글"에서 빼고, 수·목록을 지운다.
+  const likers = await kvZRevRange(likersKey(post.id), 0, -1);
+  if (likers.length) {
+    await kvDelete(likers.map((row) => likedKey(post.id, row.member)));
+    await Promise.all(likers.map((row) => kvZRem(likedByKey(row.member), post.id)));
+  }
+  await kvDelete([likesKey(post.id), likersKey(post.id)]);
 }
 
 export async function deletePost(me: string, id: string): Promise<WriteResult<true>> {
@@ -218,5 +235,48 @@ export async function forgetBoard(account: string): Promise<void> {
     if (media.length) await deleteMedia(media);
     await writeComments(post, comments.filter((comment) => !gone.has(comment.id)));
   }
-  await kvDelete([byKey(account), commentedKey(account)]);
+  // 내가 누른 좋아요는 수를 되돌리고 표시를 지운다.
+  const liked = await kvZRevRange(likedByKey(account), 0, -1);
+  for (const row of liked) await setLike(account, row.member, false);
+  await kvDelete([byKey(account), commentedKey(account), likedByKey(account)]);
+}
+
+/**
+ * 좋아요 켜기·끄기(같은 값을 다시 보내도 수가 두 번 바뀌지 않음). 글이 없으면 NOT_FOUND.
+ * 내 글에도 누를 수 있게 막지 않는다(흔한 앱들과 같음) — 노출 가산(contribution)에는 넣지 않는다.
+ */
+export async function setLike(me: string, id: string, on: boolean): Promise<WriteResult<{ likes: number; liked: boolean }>> {
+  const post = await readPost(id);
+  if (!post && on) return { error: "NOT_FOUND" };
+  if (on) {
+    if (await kvSetJsonIfAbsent(likedKey(id, me), 1, KEEP_SECONDS)) {
+      await kvIncrBy(likesKey(id), 1, KEEP_SECONDS);
+      await Promise.all([kvZAdd(likersKey(id), Date.now(), me), kvZAdd(likedByKey(me), Date.now(), id)]);
+    }
+  } else if ((await kvGetJson<number>(likedKey(id, me))) !== null) {
+    await kvDelete([likedKey(id, me)]);
+    const left = await kvIncrBy(likesKey(id), -1, KEEP_SECONDS);
+    if (left < 0) await kvIncrBy(likesKey(id), -left, KEEP_SECONDS);
+    await Promise.all([kvZRem(likersKey(id), me), kvZRem(likedByKey(me), id)]);
+  }
+  const [likes] = await kvGetNumbers([likesKey(id)]);
+  return { ok: { likes: Math.max(0, likes ?? 0), liked: on } };
+}
+
+/** 보는 사람 기준으로 글마다 좋아요 수와 내가 눌렀는지를 채운다(목록·글 열기·프로필). */
+export async function withLikes(me: string | null, posts: BoardPost[]): Promise<BoardPost[]> {
+  if (!posts.length) return posts;
+  const [counts, mine] = await Promise.all([
+    kvGetNumbers(posts.map((post) => likesKey(post.id))),
+    me ? kvGetJsonMany<number>(posts.map((post) => likedKey(post.id, me))) : Promise.resolve(posts.map(() => null)),
+  ]);
+  return posts.map((post, index) => ({ ...post, likes: Math.max(0, counts.at(index) ?? 0), liked: mine.at(index) !== null }));
+}
+
+/** 한 사람의 최근 글(프로필에 보일 것, 최신 순). */
+export async function listPostsBy(author: string, limit: number): Promise<BoardPost[]> {
+  const rows = await kvZRevRange(byKey(author), 0, Math.max(0, limit - 1));
+  if (!rows.length) return [];
+  const posts = await kvGetJsonMany<BoardPost>(rows.map((row) => postKey(row.member)));
+  return posts.filter((post): post is BoardPost => post !== null);
 }

@@ -76,7 +76,7 @@ export const EMPTY_FACTS: ProfileFacts = {
  * 칸(도움·꾸준함·목표·함께 만든 사람)은 켬, 내 학습 내용이 드러나는 칸(주제·표현)은 끔.
  * `tutor`는 공개 칸이 아니라 "튜터가 내 관심사를 대화 소재로 써도 되는지"(본인만 보는 스위치).
  */
-export const SHOW_KEYS = ["help", "streak", "goal", "maker", "topics", "phrases", "tutor"] as const;
+export const SHOW_KEYS = ["help", "streak", "goal", "maker", "posts", "topics", "phrases", "tutor"] as const;
 export type ShowKey = (typeof SHOW_KEYS)[number];
 export type ProfileShow = Record<ShowKey, boolean>;
 
@@ -85,6 +85,8 @@ export const DEFAULT_SHOW: ProfileShow = {
   streak: true,
   goal: true,
   maker: true,
+  /** 게시판에 올린 글(이미 모두에게 보이는 글이라 처음엔 켬, 2026-10-23). */
+  posts: true,
   topics: false,
   phrases: false,
   tutor: true,
