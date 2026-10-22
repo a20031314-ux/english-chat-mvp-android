@@ -22,6 +22,7 @@ import {
   readLines,
   sendSignal,
   setRoomGame,
+  setRoomSeats,
 } from "@/lib/server/roomStore";
 import {
   MAX_LINE_CHARS,
@@ -235,6 +236,13 @@ export async function POST(request: NextRequest) {
     if (!isPeerId(body.target)) return bad(request, "BAD_TARGET");
     const result = await transferHost({ id: roomId, hostPeerId: peerId, target: body.target });
     return result === "ok" ? jsonWithCors(request, { ok: true }) : bad(request, result, result === "NOT_HOST" ? 403 : 409);
+  }
+
+  // 말하기 자리 수(방장만, 빈자리 막기·열기).
+  if (action === "seats") {
+    if (typeof body.seats !== "number" || !Number.isFinite(body.seats)) return bad(request, "BAD_SEATS");
+    const result = await setRoomSeats({ id: roomId, hostPeerId: peerId, seats: body.seats });
+    return result.ok ? jsonWithCors(request, { seats: result.seats }) : bad(request, result.error, result.error === "NOT_HOST" ? 403 : 409);
   }
 
   if (action === "pause") {

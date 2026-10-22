@@ -47,7 +47,7 @@ test("말하는 방: 여럿이 동시에 들어와도 정원(MAX_MEMBERS)을 넘
   const meta = await rooms.createRoom({ name: "[test] full", languages: ["en", "ko"], hostPeerId: "hostpeer01" });
   await rooms.joinRoom({ id: meta.id, peerId: "hostpeer01", nickname: "host", wantRole: "speaker" });
   const results = await Promise.all(
-    Array.from({ length: 30 }, (_, i) => rooms.joinRoom({ id: meta.id, peerId: `peer${String(i).padStart(6, "0")}`, nickname: `p${i}`, wantRole: "listener" })),
+    Array.from({ length: MAX_MEMBERS + 14 }, (_, i) => rooms.joinRoom({ id: meta.id, peerId: `peer${String(i).padStart(6, "0")}`, nickname: `p${i}`, wantRole: "listener" })),
   );
   const ok = results.filter((r) => r.ok).length;
   assert.equal(ok + 1, MAX_MEMBERS, "방장 + 들어온 사람 = 정원");

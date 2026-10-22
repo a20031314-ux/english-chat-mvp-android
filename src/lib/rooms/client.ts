@@ -146,6 +146,11 @@ export async function roomGame(
   return body.game ?? null;
 }
 
+/** 방장: 말하기 자리 수(2~8). 앉은 사람보다 적게는 못 막는다(SEATS_TAKEN). */
+export async function setRoomSeats(roomId: string, peerId: string, seats: number): Promise<number> {
+  return (await call<{ seats: number }>("seats", { roomId, peerId, seats })).seats;
+}
+
 export async function sendSignal(roomId: string, peerId: string, to: string, kind: SignalKind, data: string) {
   await call("signal", { roomId, peerId, to, kind, data });
 }

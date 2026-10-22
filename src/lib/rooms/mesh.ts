@@ -149,11 +149,17 @@ export class RoomMesh {
   }
 
   /** 지금 방에 있는 사람들. 새로 온 사람은 잇고, 나간 사람은 끊는다. */
-  sync(memberIds: string[]): void {
+  /**
+   * memberIds = 새로 이을 사람, keep = 이미 이어져 있으면 그대로 둘 사람(없으면 memberIds).
+   * 듣는 사람끼리는 새로 잇지 않지만(protocol.ts audioPeers), 예전 앱이 먼저 이어 온 연결은 끊지 않는다 —
+   * 끊으면 예전 앱이 1.5초마다 다시 청해 연결이 계속 오간다.
+   */
+  sync(memberIds: string[], keep: string[] = memberIds): void {
     if (this.closed) return;
     const wanted = new Set(memberIds.filter((id) => id !== this.selfId));
+    const kept = new Set([...keep, ...memberIds].filter((id) => id !== this.selfId));
     for (const id of [...this.peers.keys()]) {
-      if (!wanted.has(id)) this.drop(id);
+      if (!kept.has(id)) this.drop(id);
     }
     for (const id of wanted) {
       const existing = this.peers.get(id);

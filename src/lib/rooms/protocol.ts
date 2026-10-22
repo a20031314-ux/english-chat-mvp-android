@@ -16,8 +16,37 @@ import { joinPartTexts } from "./speechParts.ts";
 
 /** 말하기 자리. 음성이 사람끼리 직접 오가서(메시) 이보다 많으면 폰이 버겁다. */
 export const MAX_SPEAKERS = 8;
-/** 듣기만 하는 사람까지 합친 한 방의 최대 인원. */
-export const MAX_MEMBERS = 16;
+/**
+ * 듣기·채팅만·관전자까지 합친 한 방의 최대 인원(2026-10-23 16 → 40, 사용자 "관전자는 늘리고").
+ * 소리를 잇는 사람은 AUDIO_MEMBERS까지 — 말하는 폰이 듣는 사람 모두에게 소리를 직접 보내서, 그 뒤로 들어온 사람은 채팅만(자막·댓글·게임은 그대로).
+ */
+export const MAX_MEMBERS = 40;
+export const AUDIO_MEMBERS = 20;
+/** 방장이 막을 수 있는 말하기 자리의 최소(자리 수 2~8, 기본 8). */
+export const MIN_SEATS = 2;
+
+/** 이 방의 말하기 자리 수(방장이 막은 자리를 뺀 것). */
+export function roomSeats(meta: Pick<RoomMeta, "seats">): number {
+  const seats = typeof meta.seats === "number" && Number.isFinite(meta.seats) ? Math.round(meta.seats) : MAX_SPEAKERS;
+  return Math.min(MAX_SPEAKERS, Math.max(MIN_SEATS, seats));
+}
+
+/** 소리로 잇는 사람(채팅만이 아닌 사람) 수. */
+export function audioCount(members: RoomMember[]): number {
+  return members.filter((member) => !member.textOnly).length;
+}
+
+/**
+ * 누구와 소리를 이을까(양쪽이 같은 답을 내야 한다): 둘 다 채팅만이 아니고, 한쪽이라도 말하기 자리.
+ * 듣는 사람끼리는 보낼 소리가 없어 잇지 않는다(2026-10-23 — 관전자를 늘리면서 연결 수를 줄이려고).
+ */
+export function audioPeers(selfId: string, members: RoomMember[]): string[] {
+  const me = members.find((member) => member.peerId === selfId);
+  if (!me || me.textOnly) return [];
+  return members
+    .filter((member) => member.peerId !== selfId && !member.textOnly && (me.role === "speaker" || member.role === "speaker"))
+    .map((member) => member.peerId);
+}
 /** 이만큼 소식이 없으면 나간 것으로 본다(앱은 약 1.5초마다 묻는다). */
 export const MEMBER_STALE_MS = 12_000;
 /** 방 자체가 남는 시간. 마지막 활동 뒤로 연장된다. */
@@ -78,6 +107,8 @@ export type RoomMeta = {
   game?: string;
   /** 그 판의 게임(방 목록 카드의 "🎭 게임 중"). */
   gameKind?: "liar" | "mafia";
+  /** 말하기 자리 수(방장이 자리를 막으면 줄어든다, 2~8). 없으면 8. */
+  seats?: number;
   createdAt: number;
 };
 

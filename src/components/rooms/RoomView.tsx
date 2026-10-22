@@ -20,6 +20,7 @@ import {
   fixMyLine,
   verifyMyLine,
   roomGame,
+  setRoomSeats,
   type FixTrust,
   type RoomFixResult,
 } from "@/lib/rooms/client";
@@ -34,8 +35,11 @@ import {
   canSeatFreely,
   directLine,
   joinParts,
+  MIN_SEATS,
+  audioPeers,
   liveMembers,
   mergeLines,
+  roomSeats,
   raisedHands,
   timeline,
   type RoomLine,
@@ -79,7 +83,8 @@ type Notice =
   | "loginNeeded"
   | "becameHost"
   | "cameraDenied"
-  | "cameraPaused";
+  | "cameraPaused"
+  | "audioFull";
 
 export function RoomView({
   t,
@@ -243,6 +248,8 @@ export function RoomView({
   const [leaving, setLeaving] = useState<"" | "choose" | "pick">("");
   // 방장이 빈자리를 눌렀을 때 올릴 사람 고르기(참여 요청한 사람 먼저, 그다음 듣는 사람).
   const [seatPick, setSeatPick] = useState(false);
+  // 말하기 자리 수(방장이 빈자리를 막으면 줄어든다, 2~8). 방 물음이 방 정보로 알려 준다.
+  const [seatCount, setSeatCount] = useState(() => roomSeats(room));
   // 🎭 라이어 게임·마피아(2026-10-23): 판은 방 물음이 같이 돌려준다. 닫기(×)는 이 기기에서 끝난 판만 접는다.
   const [game, setGame] = useState<LiarView | MafiaView | null>(null);
   const [gameSheet, setGameSheet] = useState(false);
@@ -627,9 +634,22 @@ export function RoomView({
           await adoptRole(me.role, me.role === "speaker" ? "promoted" : "demoted");
         }
         // 💬 채팅만이면 아무와도 소리를 잇지 않고, 다른 사람의 채팅만 사람과도 잇지 않는다.
-        mesh.sync(textOnlyRef.current ? [] : live.filter((member) => !member.textOnly).map((member) => member.peerId));
+        // 소리 자리가 다 차서 서버가 채팅만으로 넣었으면 따른다(2026-10-23, 관전자 늘림).
+        if (me?.textOnly && !textOnlyRef.current) {
+          textOnlyRef.current = true;
+          setTextOnly(true);
+          setNotice("audioFull");
+        }
+        // 한쪽이라도 말하기 자리인 사람끼리만 새로 잇는다(듣는 사람끼리는 보낼 소리가 없음, protocol.ts audioPeers).
+        const audible = live.filter((member) => !member.textOnly).map((member) => member.peerId);
+        const selfRow = me ? { ...me, textOnly: textOnlyRef.current, role: roleRef.current } : null;
+        mesh.sync(
+          textOnlyRef.current || !selfRow ? [] : audioPeers(peerId, [...live.filter((member) => member.peerId !== peerId), selfRow]),
+          textOnlyRef.current ? [] : audible,
+        );
         for (const signal of result.signals) if (!textOnlyRef.current) await mesh.handle(signal);
         setGame(result.game ?? null);
+        setSeatCount(roomSeats(result.room));
         if (result.lines.length) {
           sinceRef.current = Math.max(sinceRef.current, ...result.lines.map((line) => line.seq));
           setLines((have) => mergeLines(have, result.lines));
@@ -817,6 +837,13 @@ export function RoomView({
       setNotice("error");
     }
   };
+  const changeSeats = async (next: number) => {
+    try {
+      setSeatCount(await setRoomSeats(room.id, peerId, next));
+    } catch {
+      setNotice("error");
+    }
+  };
   const gameErrorText = (error: unknown) =>
     error instanceof RoomApiError && error.code === "NOT_ENOUGH"
       ? t.gameNeedPlayers.replace("{n}", lastTriedRef.current === "mafia" ? "5" : "3")
@@ -917,7 +944,7 @@ export function RoomView({
               <p className="text-xs text-slate-400">
                 {room.free ? `🌐 ${t.freeTalk}` : languagePair(room.languages, locale)}
                 {room.free || room.languages.length ? " · " : ""}
-                {t.speakers} {speakers.length}/{MAX_SPEAKERS} · {t.listeners} {listeners.length}
+                {t.speakers} {speakers.length}/{seatCount} · {t.listeners} {listeners.length}
               </p>
             )}
           </div>
@@ -1040,6 +1067,22 @@ export function RoomView({
                     {member.peerId === hostPeerId ? <span aria-hidden>👑</span> : null}
                     <span className="truncate">{member.peerId === peerId ? t.you2 : member.nickname}</span>
                   </span>
+                </button>
+              </li>
+            ) : index >= seatCount ? (
+              <li key={`locked-${index}`}>
+                {/* 방장이 막은 자리: 방장이 누르면 다시 연다. */}
+                <button
+                  type="button"
+                  disabled={!isHostNow}
+                  onClick={() => void changeSeats(seatCount + 1)}
+                  aria-label={isHostNow ? t.seatUnlock : t.seatLocked}
+                  className="flex w-full flex-col items-center gap-1 disabled:cursor-default"
+                >
+                  <span className={`flex items-center justify-center rounded-full border border-white/10 bg-white/5 text-lg text-slate-500 ${layout === "call" ? "h-16 w-16" : "h-[52px] w-[52px]"}`}>
+                    🔒
+                  </span>
+                  <span className="text-meta text-slate-600">{t.seatLocked}</span>
                 </button>
               </li>
             ) : (
@@ -1398,6 +1441,18 @@ export function RoomView({
               ) : (
                 <p className="text-xs text-slate-400">{t.seatPickNone}</p>
               )}
+              {seatCount > Math.max(MIN_SEATS, speakers.length) ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSeatPick(false);
+                    void changeSeats(seatCount - 1);
+                  }}
+                  className="w-full rounded-xl border border-white/10 px-3 py-2 text-sm text-slate-200"
+                >
+                  🔒 {t.seatLock}
+                </button>
+              ) : null}
               <button type="button" onClick={() => setSeatPick(false)} className="w-full rounded-xl px-3 py-2 text-sm text-slate-400">
                 {t.cancel}
               </button>

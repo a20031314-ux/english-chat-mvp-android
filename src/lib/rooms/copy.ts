@@ -352,6 +352,10 @@ const ko = {
   specMyPick: "내 추리: {name}",
   lobbyLiar: "라이어 게임 중",
   lobbyMafia: "마피아 중",
+  seatLock: "이 자리 막기",
+  seatLocked: "막힘",
+  seatUnlock: "자리 열기",
+  audioFull: "사람이 많아 채팅만으로 함께해요(자막·게임은 그대로)",
 };
 
 type RoomCopy = typeof ko;
@@ -702,6 +706,10 @@ const en: RoomCopy = {
   specMyPick: "My guess: {name}",
   lobbyLiar: "Liar game on",
   lobbyMafia: "Mafia on",
+  seatLock: "Block this seat",
+  seatLocked: "Blocked",
+  seatUnlock: "Open seat",
+  audioFull: "The room is busy — you're in chat-only (captions and games still work)",
 };
 
 /** 앱 언어의 문구. 빠진 키는 영어로(copy.test.ts가 빠짐을 막는다). */

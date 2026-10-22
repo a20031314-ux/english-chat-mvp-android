@@ -341,7 +341,8 @@
         {
           "heading": "Si eres el anfitrión",
           "body": [
-            "Toca un asiento libre y elige a quién subir (primero las solicitudes, luego los oyentes), o “Subir” en “Solicitudes”; desde un perfil, “Bajar”, “Expulsar” o “Ceder anfitrión”. Con “Cerrar sala” eliges “Ceder y salir”, pausar o cerrar. Una sala en pausa vuelve con “Reabrir” encima de la lista."
+            "Toca un asiento libre y elige a quién subir (primero las solicitudes, luego los oyentes), o “Subir” en “Solicitudes”; desde un perfil, “Bajar”, “Expulsar” o “Ceder anfitrión”. Con “Cerrar sala” eliges “Ceder y salir”, pausar o cerrar. Una sala en pausa vuelve con “Reabrir” encima de la lista.",
+            "Toca un asiento vacío y «Bloquear este asiento» para dejar entre 2 y 8 asientos para hablar. Toca un asiento 🔒 para abrirlo de nuevo."
           ],
           "shot": "r69-host"
         },
@@ -746,7 +747,8 @@
         {
           "heading": "ホストなら",
           "body": [
-            "空いている席を押すと、上げる人を選べます（参加リクエストした人が先、次に聞いている人）。「参加リクエスト」の人は「上げる」、プロフィールから「下ろす」「退出させる」「ホストを渡す」。「ルームを閉じる」で「ホストを渡して退出」・一時停止・閉じるを選べます。一時停止したルームは一覧の上の「再開」で同じルームを開けます。"
+            "空いている席を押すと、上げる人を選べます（参加リクエストした人が先、次に聞いている人）。「参加リクエスト」の人は「上げる」、プロフィールから「下ろす」「退出させる」「ホストを渡す」。「ルームを閉じる」で「ホストを渡して退出」・一時停止・閉じるを選べます。一時停止したルームは一覧の上の「再開」で同じルームを開けます。",
+            "空いた席を押して「この席を閉じる」で、話す席を2〜8席に減らせます。🔒の席を押すとまた開きます。"
           ],
           "shot": "r69-host"
         },
@@ -1151,7 +1153,8 @@
         {
           "heading": "如果你是房主",
           "body": [
-            "点空座位可以选要请上来的人（先是申请的人，再是收听的人）；“上麦申请”里的人点“上麦”，在资料页可以“下麦”“移出”“转让房主”。点“关闭房间”可以选“转让房主并离开”、暂停或关闭。暂停的房间在列表上方点“重新开启”就能打开同一个房间。"
+            "点空座位可以选要请上来的人（先是申请的人，再是收听的人）；“上麦申请”里的人点“上麦”，在资料页可以“下麦”“移出”“转让房主”。点“关闭房间”可以选“转让房主并离开”、暂停或关闭。暂停的房间在列表上方点“重新开启”就能打开同一个房间。",
+            "点空座位再点「关闭这个座位」，可以把发言席减少到 2~8 个。点 🔒 座位即可重新打开。"
           ],
           "shot": "r69-host"
         },
@@ -1556,7 +1559,8 @@
         {
           "heading": "Nếu bạn là chủ phòng",
           "body": [
-            "Chạm ghế trống để chọn người mời lên (người xin tham gia trước, rồi người đang nghe), hoặc “Mời lên” trong “Yêu cầu tham gia”; trong hồ sơ có “Mời xuống”, “Mời ra” và “Nhường chủ phòng”. “Đóng phòng” cho bạn chọn “Nhường chủ phòng rồi rời đi”, tạm dừng hoặc đóng. Phòng tạm dừng mở lại bằng “Mở lại” phía trên danh sách."
+            "Chạm ghế trống để chọn người mời lên (người xin tham gia trước, rồi người đang nghe), hoặc “Mời lên” trong “Yêu cầu tham gia”; trong hồ sơ có “Mời xuống”, “Mời ra” và “Nhường chủ phòng”. “Đóng phòng” cho bạn chọn “Nhường chủ phòng rồi rời đi”, tạm dừng hoặc đóng. Phòng tạm dừng mở lại bằng “Mở lại” phía trên danh sách.",
+            "Nhấn ghế trống rồi “Khóa ghế này” để giảm ghế nói còn 2–8. Nhấn ghế 🔒 để mở lại."
           ],
           "shot": "r69-host"
         },
@@ -1961,7 +1965,8 @@
         {
           "heading": "Si vous êtes l’hôte",
           "body": [
-            "Touchez une place libre pour choisir qui faire monter (les demandes d’abord, puis les auditeurs), ou « Faire monter » dans « Demandes de participation » ; depuis un profil, « Faire descendre », « Exclure » ou « Céder l’animation ». « Fermer le salon » propose « Céder et partir », la pause ou la fermeture. Un salon en pause revient avec « Rouvrir » au-dessus de la liste."
+            "Touchez une place libre pour choisir qui faire monter (les demandes d’abord, puis les auditeurs), ou « Faire monter » dans « Demandes de participation » ; depuis un profil, « Faire descendre », « Exclure » ou « Céder l’animation ». « Fermer le salon » propose « Céder et partir », la pause ou la fermeture. Un salon en pause revient avec « Rouvrir » au-dessus de la liste.",
+            "Touchez une place vide puis « Bloquer cette place » pour réduire les places pour parler à 2–8. Touchez une place 🔒 pour la rouvrir."
           ],
           "shot": "r69-host"
         },
@@ -2366,7 +2371,8 @@
         {
           "heading": "Se sei l’host",
           "body": [
-            "Tocca un posto libero per scegliere chi far salire (prima le richieste, poi chi ascolta), oppure “Fai salire” in “Richieste di partecipare”; dal profilo “Fai scendere”, “Fai uscire” o “Passa il ruolo di host”. “Chiudi stanza” ti fa scegliere tra “Passa il ruolo ed esci”, pausa o chiusura. Una stanza in pausa torna con “Riapri” sopra l’elenco."
+            "Tocca un posto libero per scegliere chi far salire (prima le richieste, poi chi ascolta), oppure “Fai salire” in “Richieste di partecipare”; dal profilo “Fai scendere”, “Fai uscire” o “Passa il ruolo di host”. “Chiudi stanza” ti fa scegliere tra “Passa il ruolo ed esci”, pausa o chiusura. Una stanza in pausa torna con “Riapri” sopra l’elenco.",
+            "Tocca un posto vuoto e «Blocca questo posto» per ridurre i posti per parlare a 2–8. Tocca un posto 🔒 per riaprirlo."
           ],
           "shot": "r69-host"
         },
@@ -2771,7 +2777,8 @@
         {
           "heading": "Se for o anfitrião",
           "body": [
-            "Toque num lugar vazio para escolher quem chamar (primeiro os pedidos, depois quem está ouvindo), ou “Chamar” em “Pedidos para participar”; no perfil, “Tirar”, “Remover” ou “Passar anfitrião”. “Fechar sala” deixa escolher “Passar e sair”, pausar ou fechar. Uma sala em pausa volta com “Reabrir” acima da lista."
+            "Toque num lugar vazio para escolher quem chamar (primeiro os pedidos, depois quem está ouvindo), ou “Chamar” em “Pedidos para participar”; no perfil, “Tirar”, “Remover” ou “Passar anfitrião”. “Fechar sala” deixa escolher “Passar e sair”, pausar ou fechar. Uma sala em pausa volta com “Reabrir” acima da lista.",
+            "Toque num lugar vazio e em “Bloquear este lugar” para reduzir os lugares de fala para 2–8. Toque num lugar 🔒 para abrir de novo."
           ],
           "shot": "r69-host"
         },
@@ -3176,7 +3183,8 @@
         {
           "heading": "Если вы хост",
           "body": [
-            "Нажмите на свободное место и выберите, кого пригласить (сначала запросы, потом слушатели), или «Пригласить» в «Запросах на участие»; в профиле — «Снять», «Удалить» или «Передать роль хоста». «Закрыть комнату» предлагает «Передать и выйти», паузу или закрытие. Приостановленная комната возвращается кнопкой «Открыть снова» над списком."
+            "Нажмите на свободное место и выберите, кого пригласить (сначала запросы, потом слушатели), или «Пригласить» в «Запросах на участие»; в профиле — «Снять», «Удалить» или «Передать роль хоста». «Закрыть комнату» предлагает «Передать и выйти», паузу или закрытие. Приостановленная комната возвращается кнопкой «Открыть снова» над списком.",
+            "Нажмите на свободное место и «Закрыть это место», чтобы оставить от 2 до 8 мест для разговора. Нажмите на место 🔒, чтобы открыть его снова."
           ],
           "shot": "r69-host"
         },
@@ -3581,7 +3589,8 @@
         {
           "heading": "Kalau kamu host",
           "body": [
-            "Ketuk kursi kosong untuk memilih siapa yang dinaikkan (permintaan dulu, lalu pendengar), atau “Naikkan” di “Permintaan bergabung”; dari profil, “Turunkan”, “Keluarkan”, atau “Jadikan host”. “Tutup ruang” memberi pilihan “Serahkan lalu keluar”, jeda, atau tutup. Ruang yang dijeda dibuka lagi dengan “Buka lagi” di atas daftar."
+            "Ketuk kursi kosong untuk memilih siapa yang dinaikkan (permintaan dulu, lalu pendengar), atau “Naikkan” di “Permintaan bergabung”; dari profil, “Turunkan”, “Keluarkan”, atau “Jadikan host”. “Tutup ruang” memberi pilihan “Serahkan lalu keluar”, jeda, atau tutup. Ruang yang dijeda dibuka lagi dengan “Buka lagi” di atas daftar.",
+            "Ketuk kursi kosong lalu “Tutup kursi ini” untuk mengurangi kursi bicara jadi 2–8. Ketuk kursi 🔒 untuk membukanya lagi."
           ],
           "shot": "r69-host"
         },
@@ -3986,7 +3995,8 @@
         {
           "heading": "إن كنت المضيف",
           "body": [
-            "اضغط على مقعد فارغ لتختار من ترفعه (الطلبات أولًا ثم المستمعون)، أو «رفع» في «طلبات المشاركة»، ومن الملف الشخصي «إنزال» أو «إخراج» أو «تسليم الاستضافة». «إغلاق الغرفة» يتيح «سلّم الاستضافة وغادر» أو الإيقاف المؤقت أو الإغلاق. الغرفة الموقوفة تعود بـ«إعادة الفتح» فوق القائمة."
+            "اضغط على مقعد فارغ لتختار من ترفعه (الطلبات أولًا ثم المستمعون)، أو «رفع» في «طلبات المشاركة»، ومن الملف الشخصي «إنزال» أو «إخراج» أو «تسليم الاستضافة». «إغلاق الغرفة» يتيح «سلّم الاستضافة وغادر» أو الإيقاف المؤقت أو الإغلاق. الغرفة الموقوفة تعود بـ«إعادة الفتح» فوق القائمة.",
+            "اضغط مقعدًا فارغًا ثم «أغلق هذا المقعد» لتقليل مقاعد التحدث إلى 2–8. اضغط مقعد 🔒 لفتحه مرة أخرى."
           ],
           "shot": "r69-host"
         },
@@ -4391,7 +4401,8 @@
         {
           "heading": "ถ้าคุณเป็นโฮสต์",
           "body": [
-            "แตะที่นั่งว่างเพื่อเลือกคนที่จะเชิญขึ้น (คนที่ขอก่อน แล้วจึงผู้ฟัง) หรือ “เชิญขึ้น” ใน “คำขอร่วมพูด” ในโปรไฟล์มี “เชิญลง” “เชิญออก” และ “ให้เป็นโฮสต์” “ปิดห้อง” ให้เลือก “ส่งต่อโฮสต์แล้วออก” พักห้อง หรือปิด ห้องที่พักไว้เปิดได้อีกด้วย “เปิดอีกครั้ง” เหนือรายการ"
+            "แตะที่นั่งว่างเพื่อเลือกคนที่จะเชิญขึ้น (คนที่ขอก่อน แล้วจึงผู้ฟัง) หรือ “เชิญขึ้น” ใน “คำขอร่วมพูด” ในโปรไฟล์มี “เชิญลง” “เชิญออก” และ “ให้เป็นโฮสต์” “ปิดห้อง” ให้เลือก “ส่งต่อโฮสต์แล้วออก” พักห้อง หรือปิด ห้องที่พักไว้เปิดได้อีกด้วย “เปิดอีกครั้ง” เหนือรายการ",
+            "แตะที่นั่งว่างแล้วแตะ “ปิดที่นั่งนี้” เพื่อลดที่นั่งพูดเหลือ 2–8 ที่ แตะที่นั่ง 🔒 เพื่อเปิดอีกครั้ง"
           ],
           "shot": "r69-host"
         },
@@ -4796,7 +4807,8 @@
         {
           "heading": "अगर आप होस्ट हैं",
           "body": [
-            "खाली सीट दबाकर चुनें किसे ऊपर लाना है (पहले अनुरोध, फिर सुनने वाले), या “जुड़ने के अनुरोध” में “ऊपर लाएँ”; प्रोफ़ाइल से “नीचे भेजें”, “बाहर करें” या “होस्ट बनाएँ”। “रूम बंद करें” पर “होस्ट सौंपकर निकलें”, कुछ देर बंद करना या बंद करना चुनें। रोका गया रूम सूची के ऊपर “फिर खोलें” से वही रूम खुलता है।"
+            "खाली सीट दबाकर चुनें किसे ऊपर लाना है (पहले अनुरोध, फिर सुनने वाले), या “जुड़ने के अनुरोध” में “ऊपर लाएँ”; प्रोफ़ाइल से “नीचे भेजें”, “बाहर करें” या “होस्ट बनाएँ”। “रूम बंद करें” पर “होस्ट सौंपकर निकलें”, कुछ देर बंद करना या बंद करना चुनें। रोका गया रूम सूची के ऊपर “फिर खोलें” से वही रूम खुलता है।",
+            "खाली सीट दबाकर “यह सीट बंद करें” से बोलने की सीटें 2–8 तक कम करें। 🔒 सीट दबाने पर वह फिर खुल जाती है।"
           ],
           "shot": "r69-host"
         },

@@ -112,3 +112,17 @@ test("바로 앉기: 방장이거나 방장이 없을 때만, 손든 순서", ()
   assert.equal(canSeatFreely("b", "host", live.slice(1)), true);
   assert.deepEqual(raisedHands(live).map((row) => row.peerId), ["c", "b"]);
 });
+
+test("소리 잇기: 한쪽이라도 말하기 자리일 때만, 채팅만은 빼고", async () => {
+  const { audioPeers, roomSeats, audioCount } = await import("./protocol.ts");
+  const m = (peerId: string, role: "speaker" | "listener", textOnly = false) => ({ peerId, nickname: peerId, role, muted: false, hand: false, joinedAt: 0, lastSeen: 0, ...(textOnly ? { textOnly } : {}) });
+  const members = [m("s1", "speaker"), m("s2", "speaker"), m("l1", "listener"), m("l2", "listener"), m("c1", "listener", true)];
+  assert.deepEqual(audioPeers("s1", members), ["s2", "l1", "l2"]);
+  assert.deepEqual(audioPeers("l1", members), ["s1", "s2"]);
+  assert.deepEqual(audioPeers("c1", members), []);
+  assert.equal(audioCount(members), 4);
+  assert.equal(roomSeats({}), 8);
+  assert.equal(roomSeats({ seats: 4 }), 4);
+  assert.equal(roomSeats({ seats: 1 }), 2);
+  assert.equal(roomSeats({ seats: 20 }), 8);
+});

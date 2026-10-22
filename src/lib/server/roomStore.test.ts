@@ -253,3 +253,25 @@ test("영상통화 표시는 비공개 방에만 붙는다(1:1·러닝메이트 
   // 카메라 켬/끔 신호도 다른 신호처럼 상대에게 간다.
   await sendSignal(call.id, { from: "peer_video001", to: "peer_video009", kind: "cam", data: "on", at: Date.now() });
 });
+
+test("자리 막기: 방장만, 앉은 사람보다 적게는 못 막음, 막은 만큼 앉기 제한", async () => {
+  const { setRoomSeats } = await import("./roomStore.ts");
+  const room = await createRoom({ name: "seats", languages: ["en", "ko"], hostPeerId: "peer_seathost" });
+  await joinRoom({ id: room.id, peerId: "peer_seathost", nickname: "h", wantRole: "speaker" });
+  await joinRoom({ id: room.id, peerId: "peer_seatgst1", nickname: "g", wantRole: "listener" });
+  assert.deepEqual(await setRoomSeats({ id: room.id, hostPeerId: "peer_seatgst1", seats: 3 }), { ok: false, error: "NOT_HOST" });
+  assert.deepEqual(await setRoomSeats({ id: room.id, hostPeerId: "peer_seathost", seats: 1 }), { ok: true, seats: 2 });
+  assert.equal((await readMeta(room.id))?.seats, 2);
+  assert.equal(await grantRole({ id: room.id, hostPeerId: "peer_seathost", target: "peer_seatgst1", role: "speaker" }), "ok");
+});
+
+test("소리 자리가 차면 그 뒤로 들어온 사람은 채팅만, 돌아가려 해도 그대로", async () => {
+  const { AUDIO_MEMBERS } = await import("../rooms/protocol.ts");
+  const room = await createRoom({ name: "big", languages: ["en", "ko"], hostPeerId: "peer_bighost0" });
+  for (let i = 0; i < AUDIO_MEMBERS; i++) await joinRoom({ id: room.id, peerId: `peer_big${String(i).padStart(4, "0")}`, nickname: `l${i}`, wantRole: "listener" });
+  const late = await joinRoom({ id: room.id, peerId: "peer_biglate0", nickname: "late", wantRole: "listener" });
+  assert.equal(late.ok && late.member.textOnly, true);
+  const polled = await poll({ id: room.id, peerId: "peer_biglate0", since: 0, textOnly: false });
+  assert.ok(polled && polled !== "KICKED");
+  if (polled && polled !== "KICKED") assert.equal(polled.members.find((m) => m.peerId === "peer_biglate0")?.textOnly, true);
+});

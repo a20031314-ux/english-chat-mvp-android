@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-23d";
+export const GUIDE_VERSION = "2026-10-23e";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -461,7 +461,8 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "방장이라면",
         "body": [
-          "빈자리를 누르면 올릴 사람을 골라요(참여 요청한 사람 먼저, 그다음 듣는 사람). ‘참여 요청’에서 ‘올리기’도 돼요. 프로필에서 ‘내리기’·‘내보내기’·‘방장 넘기기’. ‘방 닫기’를 누르면 ‘방장 넘기고 나가기’·‘잠시 닫기’·‘방 닫기’ 중에 골라요. 잠시 닫은 방은 목록 위 ‘다시 열기’로 같은 방을 열어요."
+          "빈자리를 누르면 올릴 사람을 골라요(참여 요청한 사람 먼저, 그다음 듣는 사람). ‘참여 요청’에서 ‘올리기’도 돼요. 프로필에서 ‘내리기’·‘내보내기’·‘방장 넘기기’. ‘방 닫기’를 누르면 ‘방장 넘기고 나가기’·‘잠시 닫기’·‘방 닫기’ 중에 골라요. 잠시 닫은 방은 목록 위 ‘다시 열기’로 같은 방을 열어요.",
+          "빈자리를 누르고 ‘이 자리 막기’로 말하기 자리를 2~8칸으로 줄여요. 🔒 자리를 누르면 다시 열려요."
         ],
         "shot": "r69-host"
       },
@@ -867,7 +868,8 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "If you’re the host",
         "body": [
-          "Tap an empty seat to pick who to bring up (requests first, then listeners), or “Bring up” under “Requests to join”; from a profile, “Move down”, “Remove” or “Make host”. “Close room” lets you choose “Hand over and leave”, pause, or close. A paused room comes back with “Reopen” above the list."
+          "Tap an empty seat to pick who to bring up (requests first, then listeners), or “Bring up” under “Requests to join”; from a profile, “Move down”, “Remove” or “Make host”. “Close room” lets you choose “Hand over and leave”, pause, or close. A paused room comes back with “Reopen” above the list.",
+          "Tap an empty seat and “Block this seat” to cut talking seats down to 2–8. Tap a 🔒 seat to open it again."
         ],
         "shot": "r69-host"
       },

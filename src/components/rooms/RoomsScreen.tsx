@@ -22,7 +22,7 @@ import {
   peekRoom,
   newPeerId,
 } from "@/lib/rooms/client";
-import { MAX_ROOM_NAME_CHARS, MAX_SPEAKERS, type RoomMeta, type RoomRole, type RoomSummary } from "@/lib/rooms/protocol";
+import { MAX_ROOM_NAME_CHARS, roomSeats, type RoomMeta, type RoomRole, type RoomSummary } from "@/lib/rooms/protocol";
 import { SUPPORTED_LEARNING_LANGUAGES, isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
 import { ROOM_FILTER_STORAGE_KEY, filterLanguages, parseRoomFilter, type RoomFilter } from "@/lib/rooms/roomFilter";
 import { setMiniRoom } from "@/lib/rooms/miniRoom";
@@ -500,7 +500,7 @@ function Lobby({
                     </span>
                   </div>
                   <p className="mt-1.5 text-[11px] text-slate-400">
-                    {t.speakers} {room.speakers}/{MAX_SPEAKERS} · {t.listeners} {room.listeners}
+                    {t.speakers} {room.speakers}/{roomSeats(room)} · {t.listeners} {room.listeners}
                   </p>
                 </button>
                 <div className="mt-2 flex justify-end">

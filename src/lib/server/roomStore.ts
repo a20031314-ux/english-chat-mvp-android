@@ -12,9 +12,13 @@
 import { rowsAfter } from "./lateRows.ts";
 import { roomMatches } from "../rooms/roomFilter.ts";
 import {
+  AUDIO_MEMBERS,
   MAX_LINES_KEPT,
   MAX_MEMBERS,
   MAX_SPEAKERS,
+  MIN_SEATS,
+  audioCount,
+  roomSeats,
   ROOM_TTL_SECONDS,
   canSeatFreely,
   joinParts,
@@ -209,7 +213,9 @@ export async function joinRoom(input: {
   if (members.length >= MAX_MEMBERS) return { ok: false, error: "ROOM_FULL" };
   const speakers = members.filter((member) => member.role === "speaker").length;
   const free = meta.private || canSeatFreely(input.peerId, meta.hostPeerId, members);
-  const seated = input.wantRole === "speaker" && free && speakers < MAX_SPEAKERS;
+  const seated = input.wantRole === "speaker" && free && speakers < roomSeats(meta);
+  // 소리를 잇는 사람이 다 찼으면 채팅만으로(자막·댓글·게임은 그대로, 2026-10-23).
+  const textOnly = !seated && audioCount(members) >= AUDIO_MEMBERS;
   const role: RoomRole = seated ? "speaker" : "listener";
   const now = Date.now();
   const member: RoomMember = {
@@ -220,6 +226,7 @@ export async function joinRoom(input: {
     hand: input.wantRole === "speaker" && !seated,
     accountId: input.accountId ?? null,
     langs: (input.langs ?? []).slice(0, 2),
+    ...(textOnly ? { textOnly: true } : {}),
     joinedAt: now,
     lastSeen: now,
   };
@@ -261,7 +268,7 @@ export async function grantRole(input: {
   }
   if (input.role === "speaker") {
     const speakers = members.filter((member) => member.role === "speaker").length;
-    if (speakers >= MAX_SPEAKERS) return "SEATS_FULL";
+    if (speakers >= roomSeats(meta)) return "SEATS_FULL";
   }
   await kvSetJson(grantKey(input.id, input.target), input.role, GRANT_TTL_SECONDS);
   return "ok";
@@ -288,7 +295,7 @@ export async function poll(input: {
   let role = mine.role;
   const live = await readMembers(input.id);
   const others = live.filter((member) => member.peerId !== input.peerId);
-  const seatsLeft = others.filter((member) => member.role === "speaker").length < MAX_SPEAKERS;
+  const seatsLeft = others.filter((member) => member.role === "speaker").length < roomSeats(meta);
   const granted = await kvGetJson<Grant>(grantKey(input.id, input.peerId));
   if (granted) {
     // 방장의 결정이 앱이 바라는 것보다 먼저. 한 번 쓰고 지운다.
@@ -311,7 +318,12 @@ export async function poll(input: {
     role,
     muted: typeof input.muted === "boolean" ? input.muted : mine.muted,
     hand: role === "speaker" ? false : typeof input.hand === "boolean" ? input.hand : mine.hand,
-    ...(typeof input.textOnly === "boolean" ? { textOnly: input.textOnly && role !== "speaker" } : {}),
+    ...(typeof input.textOnly === "boolean"
+      ? {
+          // 소리 자리가 다 찼으면 채팅만에서 소리로 돌아오지 못한다(말하기 자리에 오르면 풀림).
+          textOnly: role !== "speaker" && (input.textOnly || (mine.textOnly === true && audioCount(others) >= AUDIO_MEMBERS)),
+        }
+      : {}),
     lastSeen: now,
   };
   await kvSetJson(memberKey(input.id, input.peerId), updated, MEMBER_TTL_SECONDS);
@@ -461,6 +473,19 @@ export async function reopenRoom(input: {
   if (parked.banned.length) await kvSetJson(banKey(meta.id), parked.banned, ROOM_TTL_SECONDS);
   await kvSetJson(parkedKey(input.accountId), all.filter((row) => row.id !== input.id), PARKED_TTL_SECONDS);
   return meta;
+}
+
+/**
+ * 방장이 말하기 자리 수를 정한다(빈자리 막기·열기, 2026-10-23). 2~8, 지금 앉은 사람 수보다 적게는 못 막는다.
+ */
+export async function setRoomSeats(input: { id: string; hostPeerId: string; seats: number }): Promise<{ ok: true; seats: number } | { ok: false; error: "NOT_HOST" | "SEATS_TAKEN" }> {
+  const meta = await readMeta(input.id);
+  if (!meta || meta.hostPeerId !== input.hostPeerId) return { ok: false, error: "NOT_HOST" };
+  const seated = (await readMembers(input.id)).filter((member) => member.role === "speaker").length;
+  const seats = Math.min(MAX_SPEAKERS, Math.max(MIN_SEATS, Math.round(input.seats)));
+  if (seats < seated) return { ok: false, error: "SEATS_TAKEN" };
+  await kvSetJson(metaKey(input.id), { ...meta, seats }, ROOM_TTL_SECONDS);
+  return { ok: true, seats };
 }
 
 /** 지금 하는 게임 판을 방 정보에 적거나(시작) 지운다(끝). 방 물음은 이 값이 있을 때만 판을 읽는다. */
