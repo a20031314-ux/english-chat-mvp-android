@@ -8,8 +8,8 @@
  * 카드는 화면 높이의 약 56%를 보여준다.
  */
 export const SHOTS = [
-  { id: "map", main: "mapview", details: [["mission", 0.08], ["weak", 0.12]] },
-  { id: "chat", main: "chat-expression", details: [["chat-correct", 0.06], ["links", 0.3]] },
+  { id: "map", main: "stage-start", details: [["mapview", 0.1], ["mission", 0.08]] },
+  { id: "chat", main: "chat-expression", details: [["chat-fix-open", 0.06], ["links", 0.3]] },
   { id: "ask", main: "chat-ask", details: [["chat-word", 0.0], ["pick", 0.4]] },
   { id: "my", main: "growth", details: [["myask", 0.44], ["ledger", 0.0]] },
   { id: "call", main: "meant", details: [["call-pack", 0.17], ["calltools", 0.4]] },
@@ -35,8 +35,8 @@ export const LISTINGS = [
 /** 장마다 [작은 제목, 큰 제목, 설명, [화면 이름: 큰 화면, 세부1, 세부2], [더 있는 기능 칩 셋]]. */
 export const COPY = {
   ko: {
-    map: ["My · 학습 지도", "목표만 정하면\n공부할 길이 보여요", "체크 몇 개로 상황·표현·어휘·발음 지도를 그려요", ["학습 지도", "할 일 연습", "자주 틀림"], ["힌트 3단계", "숙지·배운 것 표시", "복습하기"]],
-    chat: ["채팅", "막히면 한국어로.\n영어는 바로 아래", "친구처럼 대화하고 틀린 곳만 고쳐줘요", ["표현 카드", "교정", "영상에서 만난 표현"], ["해석", "먼저 말 걸기", "지난 대화"]],
+    map: ["My · 대화로 시작", "할 수 있는 대화부터\n내 자리에서 시작해요", "대화 예시를 고르면 거기서 학습 지도가 시작돼요", ["이런 대화, 할 수 있어요?", "학습 지도", "미션"], ["이 부분의 문법", "글자·소리부터", "힌트 3단계"]],
+    chat: ["채팅", "막히면 한국어로.\n영어는 바로 아래", "친구처럼 대화하고 틀린 곳만 고쳐줘요", ["표현 카드", "고칠 곳이 있어요", "영상에서 만난 표현"], ["해석", "먼저 말 걸기", "지난 대화"]],
     ask: ["문장분석", "궁금한 부분을 골라\n바로 물어보세요", "여기서 무슨 뜻인지 한국어로 알려줘요", ["빠른 질문", "단어 카드", "지도에 넣기"], ["왜 이런 형태야?", "비슷한 표현", "알아요·모르겠어요"]],
     my: ["My · 자라는 중", "대화할수록\n실력이 자라요", "여섯 갈래로 쌓이고, 물어보면 근거로 답해요", ["자라는 중", "직접 묻기", "내 표현"], ["망·그래프·지도 보기", "다음에 키울 곳", "오늘 해볼 것"]],
     call: ["통화", "AI 친구와\n소리 내서 말해요", "엉망으로 말해도 하려던 말을 찾아줘요", ["되살리기", "오늘의 팩 통화", "다시 말해보기"], ["막힐 때 도움말", "해석 접기·펴기", "내 문장 말해보기"]],
@@ -45,8 +45,8 @@ export const COPY = {
     people: ["사람 · 대화", "함께 배우는 친구를\n찾고 이어가요", "팔로우하고, 단체방과 1:1로 계속 대화해요", ["사람", "단체방에서 골라 묻기", "친구 초대"], ["게시판·답글", "메시지·통화", "1:1 영상통화"]],
   },
   en: {
-    map: ["MY · STUDY MAP", "Pick a goal.\nGet a map.", "A few ticks draw situations, phrases, words and sounds", ["Study map", "Missions", "Weak spots"], ["Three hints", "Learned vs. mastered", "Review"]],
-    chat: ["CHAT", "Stuck? Write in English.\nSee it in Spanish.", "Chat like friends; only the slips get fixed", ["Expression card", "Corrections", "Met in a video"], ["Translation", "Tutor starts", "Past chats"]],
+    map: ["MY · START FROM A CONVERSATION", "Start from what\nyou can already say", "Pick the conversations you can have; your map starts there", ["Could you have this conversation?", "Study map", "Missions"], ["Grammar in this part", "Letters and sounds first", "Three hints"]],
+    chat: ["CHAT", "Stuck? Write in English.\nSee it in Spanish.", "Chat like friends; only the slips get fixed", ["Expression card", "Something to fix", "Met in a video"], ["Translation", "Tutor starts", "Past chats"]],
     ask: ["SENTENCE TOOLS", "Pick any part.\nAsk right away.", "What it means here, in plain English", ["Quick question", "Word card", "Put on my map"], ["Why this form?", "Other ways to say it", "Know it / Don't"]],
     my: ["MY PROGRESS", "Talk more,\nwatch it grow", "Six branches that only grow, and answers from your record", ["Growing", "Ask about me", "My phrases"], ["Net, graph or map", "What to grow next", "Try today"]],
     call: ["CALLS", "Speak out loud\nwith an AI friend", "Said it wrong? It finds what you meant", ["What you meant", "Say your own line", "Say it again"], ["Help when stuck", "Show or hide translations", "Pause and pick up later"]],
@@ -55,8 +55,8 @@ export const COPY = {
     people: ["PEOPLE · CHATS", "Find study friends\nand keep going", "Follow, then keep talking in groups and one to one", ["People", "Ask in group chat", "Invite a friend"], ["Board & replies", "Messages and calls", "1:1 video calls"]],
   },
   ja: {
-    map: ["マイ · 学習マップ", "目標を決めるだけで\n学ぶ道が見える", "チェックだけで場面・表現・語彙・発音のマップに", ["学習マップ", "ミッション", "よくある間違い"], ["ヒント3段階", "習得・学習済み", "復習"]],
-    chat: ["チャット", "詰まったら日本語で。\n英語はすぐ下に", "友達のように話して、間違いだけ直してくれる", ["表現カード", "添削", "動画で出会った表現"], ["翻訳", "AIから話しかける", "過去の会話"]],
+    map: ["マイ · 会話から始める", "できる会話から\n自分の位置で始める", "会話の例を選ぶと、そこから学習マップが始まる", ["こんな会話、できますか？", "学習マップ", "ミッション"], ["この部分の文法", "まずは文字と音", "ヒント3段階"]],
+    chat: ["チャット", "詰まったら日本語で。\n英語はすぐ下に", "友達のように話して、間違いだけ直してくれる", ["表現カード", "直すところがあります", "動画で出会った表現"], ["翻訳", "AIから話しかける", "過去の会話"]],
     ask: ["文の分析", "気になる所を選んで\nすぐ質問", "ここでの意味を日本語で教えてくれる", ["クイック質問", "単語カード", "マップに追加"], ["なぜこの形?", "似た表現", "わかる・わからない"]],
     my: ["マイ · 成長", "話すほど\n力が育つ", "6つの枝で積み上がり、聞けば記録をもとに答える", ["成長中", "質問する", "マイ表現"], ["ネット・グラフ・マップ", "次に育てる所", "やってみよう"]],
     call: ["通話", "AIの友達と\n声に出して話す", "めちゃくちゃに話しても言いたいことを見つける", ["言いたかったこと", "今日のパック通話", "もう一度言う"], ["詰まった時のヒント", "翻訳の表示切替", "自分の文を言ってみる"]],
@@ -65,8 +65,8 @@ export const COPY = {
     people: ["人 · 会話", "一緒に学ぶ友達を\n見つけて続ける", "フォローして、グループや1対1で話し続ける", ["人", "グループで単語を質問", "友達を招待"], ["掲示板・返信", "メッセージ・通話", "1対1ビデオ通話"]],
   },
   zh: {
-    map: ["我的 · 学习地图", "定下目标\n学习路线一目了然", "勾选几项，画出场景、表达、词汇和发音地图", ["学习地图", "任务练习", "常犯错误"], ["三级提示", "已学·已掌握", "复习"]],
-    chat: ["聊天", "卡住了就用中文\n英语表达就在下面", "像朋友一样聊天，只改错的地方", ["表达卡片", "纠错", "视频里见过的表达"], ["翻译", "让AI先开口", "历史对话"]],
+    map: ["我的 · 从对话开始", "从能做到的对话\n在你的位置开始", "选几段对话示例，学习地图就从那里开始", ["这样的对话，你能做到吗？", "学习地图", "任务练习"], ["这一部分的语法", "先学字母和发音", "三级提示"]],
+    chat: ["聊天", "卡住了就用中文\n英语表达就在下面", "像朋友一样聊天，只改错的地方", ["表达卡片", "有需要修改的地方", "视频里见过的表达"], ["翻译", "让AI先开口", "历史对话"]],
     ask: ["句子分析", "选中想问的部分\n马上提问", "用中文告诉你这里是什么意思", ["快速提问", "单词卡片", "加入地图"], ["为什么这样用?", "类似表达", "知道·不知道"]],
     my: ["我的 · 成长", "越聊越多\n能力越长越大", "六个分支只增不减，问就根据记录回答", ["成长中", "直接问", "我的表达"], ["网·图表·地图", "下一步练什么", "今天试试"]],
     call: ["通话", "和AI朋友\n开口说", "说得再乱，也能找出你想说的", ["还原原意", "今日套餐通话", "再说一遍"], ["卡住时的提示", "翻译显示切换", "练自己的句子"]],
@@ -75,8 +75,8 @@ export const COPY = {
     people: ["人 · 对话", "找到学习伙伴\n一直聊下去", "关注后，在群聊和私聊里继续交流", ["人", "群聊里选词提问", "邀请朋友"], ["论坛·回复", "私信·通话", "一对一视频通话"]],
   },
   es: {
-    map: ["MI MAPA", "Elige una meta.\nVe tu camino.", "Unas marcas dibujan situaciones, frases, palabras y sonidos", ["Mapa", "Misiones", "Errores frecuentes"], ["Tres pistas", "Aprendido y dominado", "Repasar"]],
-    chat: ["CHAT", "¿Te atascas? En español.\nEl inglés, debajo.", "Charla como con amigos; solo corrige lo que falla", ["Tarjeta de expresión", "Corrección", "Visto en un vídeo"], ["Traducción", "El tutor empieza", "Chats anteriores"]],
+    map: ["MI ESPACIO · EMPIEZA CON UNA CONVERSACIÓN", "Empieza por lo que\nya sabes decir", "Elige las conversaciones que puedes tener; tu mapa empieza ahí", ["¿Podrías tener esta conversación?", "Mapa", "Misiones"], ["Gramática de esta parte", "Primero letras y sonidos", "Tres pistas"]],
+    chat: ["CHAT", "¿Te atascas? En español.\nEl inglés, debajo.", "Charla como con amigos; solo corrige lo que falla", ["Tarjeta de expresión", "Hay algo que corregir", "Visto en un vídeo"], ["Traducción", "El tutor empieza", "Chats anteriores"]],
     ask: ["ANÁLISIS DE FRASE", "Elige una parte.\nPregunta al momento.", "Qué significa aquí, en español", ["Pregunta rápida", "Tarjeta de palabra", "Al mapa"], ["¿Por qué esta forma?", "Otras formas", "Lo sé / No lo sé"]],
     my: ["MI PROGRESO", "Cuanto más hablas,\nmás creces", "Seis ramas que solo crecen, y respuestas con tu historial", ["Creciendo", "Pregunta", "Mis expresiones"], ["Red, gráfica o mapa", "Qué trabajar", "Prueba hoy"]],
     call: ["LLAMADAS", "Habla en voz alta\ncon un amigo IA", "¿Lo dijiste mal? Encuentra lo que querías decir", ["Lo que querías decir", "Llamada del día", "Dilo otra vez"], ["Ayuda si te atascas", "Mostrar traducciones", "Practica tu frase"]],
@@ -85,8 +85,8 @@ export const COPY = {
     people: ["PERSONAS · CHATS", "Encuentra compañeros\ny sigue hablando", "Sigue a gente y habla en grupos y en privado", ["Personas", "Pregunta en el grupo", "Invitar"], ["Tablón y respuestas", "Mensajes y llamadas", "Videollamadas 1:1"]],
   },
   hi: {
-    map: ["My · सीखने का नक्शा", "लक्ष्य चुनें,\nरास्ता दिख जाएगा", "कुछ टिक से स्थितियाँ, वाक्यांश, शब्द और उच्चारण का नक्शा", ["नक्शा", "मिशन", "बार-बार की गलती"], ["तीन संकेत", "सीखा·पक्का", "दोहराएँ"]],
-    chat: ["चैट", "अटक गए? हिंदी में लिखिए।\nअंग्रेज़ी ठीक नीचे", "दोस्त की तरह बात करें, सिर्फ़ गलती सुधरेगी", ["वाक्यांश कार्ड", "सुधार", "वीडियो में मिला"], ["अनुवाद", "ट्यूटर पहले बोले", "पिछली चैट"]],
+    map: ["मेरा · बातचीत से शुरू", "जो बातचीत कर सकते हैं\nवहीं से शुरू करें", "उदाहरण बातचीत चुनें, नक्शा वहीं से शुरू होगा", ["क्या आप ऐसी बातचीत कर सकते हैं?", "नक्शा", "मिशन"], ["इस हिस्से का व्याकरण", "पहले अक्षर और ध्वनियाँ", "तीन संकेत"]],
+    chat: ["चैट", "अटक गए? हिंदी में लिखिए।\nअंग्रेज़ी ठीक नीचे", "दोस्त की तरह बात करें, सिर्फ़ गलती सुधरेगी", ["वाक्यांश कार्ड", "कुछ सुधारना है", "वीडियो में मिला"], ["अनुवाद", "ट्यूटर पहले बोले", "पिछली चैट"]],
     ask: ["वाक्य विश्लेषण", "कोई भी हिस्सा चुनें,\nतुरंत पूछें", "यहाँ इसका मतलब, हिंदी में", ["तुरंत सवाल", "शब्द कार्ड", "नक्शे में डालें"], ["यह रूप क्यों?", "दूसरे तरीके", "आता है·नहीं आता"]],
     my: ["My · प्रगति", "जितनी बात करें,\nउतना आगे बढ़ें", "छह शाखाएँ जो बढ़ती ही हैं, और आपके रिकॉर्ड से जवाब", ["बढ़ रहा है", "सीधे पूछें", "मेरे वाक्यांश"], ["जाल·ग्राफ़·नक्शा", "आगे क्या बढ़ाएँ", "आज आज़माएँ"]],
     call: ["कॉल", "AI दोस्त से\nबोलकर बात करें", "गलत बोला? जो कहना था, वो मिल जाएगा", ["असली मतलब", "आज का पैक कॉल", "फिर से बोलें"], ["अटकने पर मदद", "अनुवाद दिखाएँ·छिपाएँ", "अपना वाक्य बोलें"]],

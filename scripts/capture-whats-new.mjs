@@ -165,6 +165,8 @@ const STORE = STORE_MY || STORE_TABS;
 const STORE_MY_ITEMS = [
   // The map, missions and weak spots sit in My's map view; growth in the network
   // view. The mission step draws the map when there is none yet.
+  // 2.71: 지도가 없을 때 맨 위 "이런 대화, 할 수 있어요?"(대화 예시로 시작 단계 고르기).
+  { shot: "stage-start" },
   { shot: "view-map", save: false },
   { shot: "mission" },
   { shot: "progress" },
@@ -177,7 +179,9 @@ const STORE_MY_ITEMS = [
   { shot: "mapview" },
 ];
 const STORE_TABS_ITEMS = [
+  // 2.71: 고친 문장은 눌러서 보는 칩. chat-correct와 같은 장면이라 그 뒤에 한 번 더 찍지 않고 칩을 연 모습도 남긴다.
   { shot: "chat-correct" },
+  { shot: "chat-fix-open" },
   { shot: "chat-expression" },
   { shot: "chat-ask" },
   { shot: "chat-word" },
@@ -1327,6 +1331,20 @@ const STEPS = {
   // 2.71 새로워진 점·사용법: 고친 문장 칩(눌러서 보기)이 보이는 같은 장면.
   async "chat-fix"(context) {
     await STEPS["chat-correct"](context);
+  },
+  async "chat-fix-open"({ page, ui, wait }) {
+    // chat-correct 다음: 마지막 고친 문장 칩을 눌러 펼친 모습.
+    const chip = page.getByRole("button", { name: new RegExp(escape(ui.chatCorrectionChip)) }).last();
+    if (await chip.count()) {
+      await chip.click();
+      // 확인 모델이 끝날 때까지("확인 중…" 칩이 사라질 때까지) 기다린다.
+      for (let i = 0; i < 40; i++) {
+        await wait(500);
+        const busy = await page.getByRole("button", { name: new RegExp(escape(ui.chatCorrectionChecking ?? "\u0000")) }).count();
+        if (!busy && i > 2) break;
+      }
+      await wait(800);
+    }
   },
   async "stage-start"({ page, ui, wait }) {
     await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
