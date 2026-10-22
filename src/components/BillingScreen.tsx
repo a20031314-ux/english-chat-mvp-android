@@ -1,6 +1,6 @@
 "use client";
 
-import { PRIVACY_POLICY_URL, subscriptionStoreName, subscriptionTermsUrl } from "@/lib/platform";
+import { PRIVACY_POLICY_URL, subscriptionStoreName, subscriptionTermsUrl, turnDiagnosticsEnabled } from "@/lib/platform";
 import {
   createContext,
   useCallback,
@@ -13,6 +13,7 @@ import {
 import { usePremium } from "@/contexts/PremiumContext";
 import { apiUrl } from "@/lib/apiBase";
 import {
+  billingDiagnostics,
   isLocalPlanDebugEnabled,
   OTHER_STORE_PREFIX,
   entitlementHeaders,
@@ -193,6 +194,18 @@ export function BillingScreen({
   const [isPurchasing, setIsPurchasing] = useState(false);
   const [isRestoring, setIsRestoring] = useState(false);
   const [notice, setNotice] = useState<string | null>(null);
+  // 진단(TestFlight 전용): 스토어가 실제로 내준 상품. 기술 값이라 번역하지 않는다.
+  const [storeDiag, setStoreDiag] = useState<string | null>(null);
+  useEffect(() => {
+    if (!isOpen || !turnDiagnosticsEnabled()) return;
+    let cancelled = false;
+    void billingDiagnostics().then((text) => {
+      if (!cancelled) setStoreDiag(text);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [isOpen]);
   const [dailyUsed, setDailyUsed] = useState(0);
   const [dailyLimit, setDailyLimit] = useState(FREE_DAILY_CHAT_LIMIT);
   const [offers, setOffers] = useState<PlanOffer[] | null>(null);
@@ -488,6 +501,11 @@ export function BillingScreen({
               there is a plan whose allowance can run out.
             */}
             {isPremium ? <PointStore ui={ui} /> : null}
+            {storeDiag ? (
+              <pre dir="ltr" className="whitespace-pre-wrap break-all rounded-lg bg-white/5 p-2 font-mono text-meta text-slate-400">
+                {storeDiag}
+              </pre>
+            ) : null}
           </div>
         </section>
       </div>

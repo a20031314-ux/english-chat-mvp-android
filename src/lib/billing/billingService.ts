@@ -926,3 +926,50 @@ export async function syncPurchasedPoints(): Promise<PointPurchaseResult> {
     return { status: "error", message: "SYNC_FAILED" };
   }
 }
+
+/**
+ * 진단(TestFlight 진단 상자가 켜졌을 때만 결제 화면에 보임, platform.ts turnDiagnosticsEnabled):
+ * 스토어가 실제로 내준 것 — current offering의 패키지·상품, 구독 3개, 포인트 4개.
+ * 아이폰에서 프리미엄만 오고 라이트·플러스·포인트가 안 오던 원인을 기기에서 보려고(2026-10-22).
+ */
+export async function billingDiagnostics(): Promise<string> {
+  if (!isBillingNativePlatform()) return "rc: not native";
+  if (!(await ensureConfigured())) return `rc: configure ${lastConfigureError ?? "failed"}`;
+  const plugin = getPurchasesPlugin();
+  if (!plugin) return "rc: no plugin";
+  const parts: string[] = [];
+  try {
+    const offerings = await withBillingTimeout("getOfferings", plugin.getOfferings(), BILLING_FETCH_TIMEOUT_MS);
+    const current = offerings.current;
+    parts.push(
+      `offering ${current?.identifier ?? "-"}: ` +
+        (current?.availablePackages ?? []).map((pkg) => `${pkg.identifier}=${pkg.product.identifier}`).join(", "),
+    );
+  } catch (error) {
+    parts.push(`offerings err ${formatBillingError(error)}`);
+  }
+  try {
+    const { products } = await withBillingTimeout(
+      "getProducts",
+      plugin.getProducts({ productIdentifiers: Object.values(PLAN_PRODUCT_IDS) }),
+      BILLING_FETCH_TIMEOUT_MS,
+    );
+    parts.push(`subs: ${products.map((item) => `${item.identifier} ${item.priceString}`).join(", ") || "none"}`);
+  } catch (error) {
+    parts.push(`subs err ${formatBillingError(error)}`);
+  }
+  try {
+    const { products } = await withBillingTimeout(
+      "getProducts",
+      plugin.getProducts({
+        productIdentifiers: POINT_BUNDLES.map((bundle) => bundle.productId),
+        type: PRODUCT_CATEGORY.NON_SUBSCRIPTION,
+      }),
+      BILLING_FETCH_TIMEOUT_MS,
+    );
+    parts.push(`points: ${products.map((item) => `${item.identifier} ${item.priceString}`).join(", ") || "none"}`);
+  } catch (error) {
+    parts.push(`points err ${formatBillingError(error)}`);
+  }
+  return parts.join("\n");
+}
