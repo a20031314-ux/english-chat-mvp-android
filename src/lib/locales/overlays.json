@@ -586,7 +586,13 @@
     "whatsNewFixBody": "直すところがある行の下に小さな表示が出ます。タップすると直した文が見えます。",
     "mapStepPlan": "トピックを考えています",
     "mapStepFill": "練習を作っています",
-    "mapStepSeconds": "{n}秒"
+    "mapStepSeconds": "{n}秒",
+    "featureViewMap": "構成図",
+    "featureViewList": "説明",
+    "featureMapTop": "上部バー",
+    "featureMapTabs": "下のタブ",
+    "featureMapPreview": "このように表示されます",
+    "featureMapDm": "1対1・グループの会話"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1175,7 +1181,13 @@
     "whatsNewFixBody": "需要修改的句子下面会出现一个小标记，点一下就能看到改好的句子。",
     "mapStepPlan": "正在规划主题",
     "mapStepFill": "正在编写练习",
-    "mapStepSeconds": "{n}秒"
+    "mapStepSeconds": "{n}秒",
+    "featureViewMap": "结构图",
+    "featureViewList": "说明",
+    "featureMapTop": "顶部栏",
+    "featureMapTabs": "底部标签",
+    "featureMapPreview": "会显示成这样",
+    "featureMapDm": "一对一和群聊"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1766,7 +1778,13 @@
     "whatsNewFixBody": "Dòng nào có chỗ cần sửa sẽ có một nhãn nhỏ bên dưới. Nhấn để xem câu đã sửa.",
     "mapStepPlan": "Đang lên chủ đề",
     "mapStepFill": "Đang soạn bài luyện",
-    "mapStepSeconds": "{n} giây"
+    "mapStepSeconds": "{n} giây",
+    "featureViewMap": "Sơ đồ",
+    "featureViewList": "Mô tả",
+    "featureMapTop": "Thanh trên cùng",
+    "featureMapTabs": "Thẻ phía dưới",
+    "featureMapPreview": "Sẽ trông như thế này",
+    "featureMapDm": "Trò chuyện 1:1 và nhóm"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2362,7 +2380,13 @@
     "whatsNewFixBody": "Quand une ligne a quelque chose à corriger, une petite étiquette apparaît dessous. Touche-la pour voir la phrase corrigée.",
     "mapStepPlan": "Préparation des thèmes",
     "mapStepFill": "Rédaction des exercices",
-    "mapStepSeconds": "{n} s"
+    "mapStepSeconds": "{n} s",
+    "featureViewMap": "Plan",
+    "featureViewList": "Détails",
+    "featureMapTop": "Barre du haut",
+    "featureMapTabs": "Onglets du bas",
+    "featureMapPreview": "Voici le résultat",
+    "featureMapDm": "Discussions privées et de groupe"
   },
   "it": {
     "archive": "Report",
@@ -3149,7 +3173,13 @@
     "whatsNewFixBody": "Se una riga ha qualcosa da correggere, sotto compare una piccola etichetta. Toccala per vedere la frase corretta.",
     "mapStepPlan": "Sto pianificando gli argomenti",
     "mapStepFill": "Sto scrivendo gli esercizi",
-    "mapStepSeconds": "{n} s"
+    "mapStepSeconds": "{n} s",
+    "featureViewMap": "Mappa",
+    "featureViewList": "Dettagli",
+    "featureMapTop": "Barra in alto",
+    "featureMapTabs": "Schede in basso",
+    "featureMapPreview": "Ecco come apparirà",
+    "featureMapDm": "Chat private e di gruppo"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3748,7 +3778,13 @@
     "whatsNewFixBody": "Quando uma linha tem algo para corrigir, aparece uma pequena etiqueta embaixo. Toque para ver a frase corrigida.",
     "mapStepPlan": "Planejando os temas",
     "mapStepFill": "Escrevendo os exercícios",
-    "mapStepSeconds": "{n} s"
+    "mapStepSeconds": "{n} s",
+    "featureViewMap": "Mapa",
+    "featureViewList": "Detalhes",
+    "featureMapTop": "Barra superior",
+    "featureMapTabs": "Abas inferiores",
+    "featureMapPreview": "Vai ficar assim",
+    "featureMapDm": "Conversas individuais e em grupo"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4533,7 +4569,13 @@
     "whatsNewFixBody": "Если в строке есть что исправить, под ней появляется небольшая метка. Нажмите, чтобы увидеть исправленную фразу.",
     "mapStepPlan": "Составляем темы",
     "mapStepFill": "Пишем упражнения",
-    "mapStepSeconds": "{n} с"
+    "mapStepSeconds": "{n} с",
+    "featureViewMap": "Схема",
+    "featureViewList": "Описание",
+    "featureMapTop": "Верхняя панель",
+    "featureMapTabs": "Нижние вкладки",
+    "featureMapPreview": "Так это будет выглядеть",
+    "featureMapDm": "Личные и групповые чаты"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5128,7 +5170,13 @@
     "whatsNewFixBody": "Kalau ada yang perlu diperbaiki, label kecil muncul di bawah baris itu. Ketuk untuk melihat kalimat yang sudah diperbaiki.",
     "mapStepPlan": "Menyusun topik",
     "mapStepFill": "Menulis latihan",
-    "mapStepSeconds": "{n} dtk"
+    "mapStepSeconds": "{n} dtk",
+    "featureViewMap": "Peta",
+    "featureViewList": "Penjelasan",
+    "featureMapTop": "Bilah atas",
+    "featureMapTabs": "Tab bawah",
+    "featureMapPreview": "Akan terlihat seperti ini",
+    "featureMapDm": "Obrolan 1:1 dan grup"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5717,7 +5765,13 @@
     "whatsNewFixBody": "إذا كان في السطر ما يحتاج إلى تصحيح تظهر تحته علامة صغيرة. اضغط عليها لترى الجملة المصحّحة.",
     "mapStepPlan": "جارٍ تخطيط الموضوعات",
     "mapStepFill": "جارٍ كتابة التمارين",
-    "mapStepSeconds": "{n} ث"
+    "mapStepSeconds": "{n} ث",
+    "featureViewMap": "المخطط",
+    "featureViewList": "الشرح",
+    "featureMapTop": "الشريط العلوي",
+    "featureMapTabs": "علامات التبويب السفلية",
+    "featureMapPreview": "هكذا سيبدو",
+    "featureMapDm": "المحادثات الفردية والجماعية"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6306,7 +6360,13 @@
     "whatsNewFixBody": "ถ้าบรรทัดไหนมีจุดที่ต้องแก้ จะมีป้ายเล็ก ๆ ขึ้นด้านล่าง แตะเพื่อดูประโยคที่แก้แล้ว",
     "mapStepPlan": "กำลังวางหัวข้อ",
     "mapStepFill": "กำลังเขียนแบบฝึก",
-    "mapStepSeconds": "{n} วินาที"
+    "mapStepSeconds": "{n} วินาที",
+    "featureViewMap": "แผนผัง",
+    "featureViewList": "คำอธิบาย",
+    "featureMapTop": "แถบด้านบน",
+    "featureMapTabs": "แท็บด้านล่าง",
+    "featureMapPreview": "จะแสดงแบบนี้",
+    "featureMapDm": "แชตตัวต่อตัวและแชตกลุ่ม"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -6895,6 +6955,12 @@
     "whatsNewFixBody": "जिस लाइन में कुछ सुधारना हो, उसके नीचे एक छोटा निशान आता है। दबाकर सुधरा वाक्य देखें।",
     "mapStepPlan": "विषय तय हो रहे हैं",
     "mapStepFill": "अभ्यास लिखे जा रहे हैं",
-    "mapStepSeconds": "{n} सेकंड"
+    "mapStepSeconds": "{n} सेकंड",
+    "featureViewMap": "नक्शा",
+    "featureViewList": "विवरण",
+    "featureMapTop": "ऊपर की पट्टी",
+    "featureMapTabs": "नीचे के टैब",
+    "featureMapPreview": "ऐसा दिखेगा",
+    "featureMapDm": "एक-से-एक और ग्रुप चैट"
   }
 }

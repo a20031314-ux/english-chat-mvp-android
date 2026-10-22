@@ -184,3 +184,19 @@ export function applyPreset(id: FeaturePresetId) {
 export function finishChoosing(skip = false) {
   save({ off: skip ? [] : current.off, chosen: true });
 }
+
+/** 하단 탭 id(AppHome `AppTab`과 같은 이름). */
+export type BottomTabId = "talk" | "chat" | "roleplay" | "video" | "people" | "rooms" | "map";
+
+/**
+ * 꺼 둔 기능으로 정해지는 하단 탭(창구 모드 제외). AppHome과 구조도 미리보기가 같이 쓴다.
+ * - social: 플랫폼에 사람 기능이 있는지(iOS 1차는 없음), callAvailable: 이 학습 언어에 통화가 있는지.
+ * 사람을 숨기면 iOS 1차 모양(채팅 · 통화 · 영상 · My).
+ */
+export function bottomTabs(off: readonly FeatureId[], { social, callAvailable }: { social: boolean; callAvailable: boolean }): BottomTabId[] {
+  const on = (feature: FeatureId) => isFeatureOn(off, feature);
+  if (social && on("people")) {
+    return ["talk", ...(on("video") ? (["video"] as const) : []), "people", ...(on("rooms") ? (["rooms"] as const) : []), "map"];
+  }
+  return ["chat", ...(callAvailable && on("call") ? (["roleplay"] as const) : []), ...(on("video") ? (["video"] as const) : []), "map"];
+}

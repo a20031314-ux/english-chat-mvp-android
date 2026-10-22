@@ -38,7 +38,7 @@ import { useGroups } from "@/components/rooms/RoomGroups";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { readMiniRoom, subscribeMiniRoom } from "@/lib/rooms/miniRoom";
 import { isIosApp, socialFeaturesEnabled } from "@/lib/platform";
-import { featureOfTab, isFeatureOn, matchingPreset, readFeatures, readFeaturesOnServer, subscribeFeatures, type FeatureId } from "@/lib/features";
+import { bottomTabs, featureOfTab, isFeatureOn, matchingPreset, readFeatures, readFeaturesOnServer, subscribeFeatures, type FeatureId } from "@/lib/features";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
 import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
@@ -296,6 +296,12 @@ function AppHomeInner({
       ? door.tabs.map((id) => socialTabItems.find((item) => item.id === id)).filter((item): item is { id: AppTab; label: string } => Boolean(item))
       : socialTabItems.filter((item) => item.id !== "random" && !tabHidden(item.id))
     : aiTabItems;
+  // 창구가 아니면 쓸 기능 고르기의 하단 탭(lib/features.ts bottomTabs — 구조도 미리보기와 같은 계산)을 따른다.
+  const featureTabs = bottomTabs(featureOff, { social: socialOn, callAvailable: roleplayAvailable });
+  const allItems = [...socialTabItems, ...aiTabItems.filter((item) => item.id === "chat" || item.id === "roleplay"), { id: "roleplay" as const, label: ui.homeTabCall }];
+  const shownItems = door
+    ? tabItems
+    : featureTabs.map((id) => allItems.find((item) => item.id === id)).filter((item): item is { id: AppTab; label: string } => Boolean(item));
   // 창구 모드면 브라우저 탭·홈 화면 이름도 그 창구. Next가 머리말 제목을 다시 쓰면 다시 맞춘다.
   useEffect(() => {
     if (!door) return;
@@ -534,7 +540,7 @@ function AppHomeInner({
               aria-label="Main"
             >
               <div className="mx-auto flex max-w-4xl gap-0.5">
-                {tabItems.map((item) => {
+                {shownItems.map((item) => {
                   const active = bottomTab === item.id;
                   const meta = TAB_ICON_META[item.id];
                   const Icon = meta.Icon;

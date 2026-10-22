@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
+import { FeatureMap } from "@/components/FeatureMap";
 import { apiUrl } from "@/lib/apiBase";
 import { onAppIntent } from "@/lib/appIntents";
 import type { Locale, UICopy } from "@/lib/copy";
@@ -171,6 +172,15 @@ function FeatureSwitch({ ui, feature, off }: { ui: UICopy; feature: FeatureId | 
   );
 }
 
+const PICK_VIEW_KEY = "featurePickView";
+function readPickView(): "map" | "list" {
+  try {
+    return globalThis.localStorage?.getItem(PICK_VIEW_KEY) === "list" ? "list" : "map";
+  } catch {
+    return "map";
+  }
+}
+
 export function GuideButton({
   ui,
   locale,
@@ -210,7 +220,19 @@ export function GuideButton({
   // 펼칠 곳: 묶음 id, 또는 칸 id(새로워진 점에서).
   const [target, setTarget] = useState<{ chapter: string; section?: string; hidden?: boolean; manage?: boolean }>({ chapter: "ai-chat" });
   const [oldTab, setOldTab] = useState<GuideTabId>("chat");
+  // 쓸 기능 고르기의 보는 방식: 구조도(체크) | 설명(장마다 그림). 이 기기에 기억(보는 방식 고르기, DESIGN.md).
+  const [pickView, setPickViewState] = useState<"map" | "list">(readPickView);
+  const setPickView = (next: "map" | "list") => {
+    setPickViewState(next);
+    try {
+      localStorage.setItem(PICK_VIEW_KEY, next);
+    } catch {
+      // 이번에만.
+    }
+  };
   const scroller = useRef<HTMLDivElement>(null);
+  // 구조도에서 누른 장: 설명 보기가 그려진 뒤 그 장으로 내린다.
+  const pendingJump = useRef<string | null>(null);
 
   const openAt = (next: { chapter?: string; section?: string; hidden?: boolean; manage?: boolean }) => {
     setTarget({ chapter: next.chapter ?? SCREEN_CHAPTER[tab] ?? "ai-chat", section: next.section, hidden: next.hidden, manage: next.manage });
@@ -254,6 +276,16 @@ export function GuideButton({
     if (element instanceof HTMLElement) element.scrollIntoView({ block: "start" });
   }, [open, chapters.length, focusChapter, target.section, picking, target.manage]);
 
+  useEffect(() => {
+    const chapterId = pendingJump.current;
+    if (!chapterId || pickView !== "list" || !chapters.length) return;
+    const element = scroller.current?.querySelector(`[data-guide-chapter="${chapterId}"]`);
+    if (element instanceof HTMLElement) {
+      element.scrollIntoView({ block: "start" });
+      pendingJump.current = null;
+    }
+  });
+
   const jump = (chapterId: string) => {
     const element = scroller.current?.querySelector(`[data-guide-chapter="${chapterId}"]`);
     if (element instanceof HTMLElement) element.scrollIntoView({ block: "start", behavior: "smooth" });
@@ -266,6 +298,34 @@ export function GuideButton({
   };
 
   const oldPage = shown?.tabs?.[oldTab];
+  const choosing = Boolean(features && (picking || target.manage));
+  const showMap = choosing && pickView === "map";
+  // 구조도에서 칸 이름을 누르면 설명 보기의 그 장으로.
+  const openChapterFromMap = (chapterId: string) => {
+    pendingJump.current = chapterId;
+    setPickView("list");
+    setTarget((prev) => ({ ...prev, chapter: chapterId }));
+  };
+  const pickTop = choosing ? (
+    <div className="flex flex-col gap-3">
+      {picking ? <p className="text-note leading-relaxed text-slate-300">{ui.featurePickHint}</p> : null}
+      <PresetRow ui={ui} off={off} />
+      <div role="radiogroup" aria-label={ui.featurePickTitle} className="flex gap-0.5 self-start rounded-xl border border-line p-0.5">
+        {(["map", "list"] as const).map((view) => (
+          <button
+            key={view}
+            type="button"
+            role="radio"
+            aria-checked={pickView === view}
+            onClick={() => setPickView(view)}
+            className={`rounded-lg px-3 py-1 text-caption ${pickView === view ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
+          >
+            {view === "map" ? ui.featureViewMap : ui.featureViewList}
+          </button>
+        ))}
+      </div>
+    </div>
+  ) : null;
 
   return (
     <>
@@ -332,14 +392,20 @@ export function GuideButton({
             </div>
           )}
           <div ref={scroller} className="min-h-0 flex-1 overflow-y-auto px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] pt-4">
-            {chapters.length ? (
+            {showMap ? (
+              <div className="mx-auto flex max-w-xl flex-col gap-4">
+                {pickTop}
+                <FeatureMap
+                  ui={ui}
+                  off={off}
+                  social={availableGo.includes("people")}
+                  callAvailable={availableGo.includes("roleplay")}
+                  onOpenChapter={openChapterFromMap}
+                />
+              </div>
+            ) : chapters.length ? (
               <div className={`mx-auto flex max-w-xl flex-col ${picking ? "gap-6" : "gap-10"}`}>
-                {features && (picking || target.manage) ? (
-                  <div className="flex flex-col gap-3">
-                    <p className="text-note leading-relaxed text-slate-300">{ui.featurePickHint}</p>
-                    <PresetRow ui={ui} off={off} />
-                  </div>
-                ) : null}
+                {pickTop}
                 {chapters.map((chapter) => {
                   const feature = featureOfGo(chapter.go);
                   const on = chapterOn(chapter);

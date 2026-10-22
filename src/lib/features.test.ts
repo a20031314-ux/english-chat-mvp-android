@@ -55,3 +55,14 @@ test("탭 → 기능: 채팅·My는 숨길 수 없다", () => {
   assert.equal(featureOfTab("messages"), "people");
   assert.equal(featureOfTab("vocab"), "notes");
 });
+
+test("하단 탭: 사람을 숨기면 채팅·통화 모양, Room은 사람과 같이, 통화 없는 언어는 통화 탭 없음", async () => {
+  const { bottomTabs } = await import("./features.ts");
+  const social = { social: true, callAvailable: true };
+  assert.deepEqual(bottomTabs([], social), ["talk", "video", "people", "rooms", "map"]);
+  assert.deepEqual(bottomTabs(presetOff("solo"), social), ["chat", "roleplay", "map"]);
+  assert.deepEqual(bottomTabs(presetOff("video"), social), ["chat", "video", "map"]);
+  assert.deepEqual(bottomTabs(presetOff("people"), social), ["talk", "people", "rooms", "map"]);
+  assert.deepEqual(bottomTabs(["call"], { social: false, callAvailable: true }), ["chat", "video", "map"]);
+  assert.deepEqual(bottomTabs([], { social: false, callAvailable: false }), ["chat", "video", "map"]);
+});

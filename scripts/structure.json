@@ -28,6 +28,7 @@
     "components/UpdateNotice": "shell",
     "components/WhatsNewSheet": "shell",
     "components/GuideSheet": "shell",
+    "components/FeatureMap": "shell",
     "components/AiConsentGate": "shell",
     "components/FullScreenLayer": "shell",
     "components/Providers": "shell",
