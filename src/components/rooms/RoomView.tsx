@@ -1133,6 +1133,7 @@ export function RoomView({
           {captionsOff ? <p className="shrink-0 px-4 pt-1 text-meta text-amber-200">{t.captionLimit}</p> : null}
           <Lines
             onNote={noteFor}
+            thankRoomId={room.id}
             t={t}
             allLines={shownLines}
             lines={layout === "call" ? spoken.slice(-CALL_LAYOUT_LINES) : spoken}
@@ -1169,6 +1170,7 @@ export function RoomView({
             <Lines
               big={layout === "chat"}
               onNote={noteFor}
+            thankRoomId={room.id}
               t={t}
               allLines={shownLines}
               lines={typed}

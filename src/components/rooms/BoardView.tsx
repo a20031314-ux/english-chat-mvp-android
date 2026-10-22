@@ -7,6 +7,7 @@ import { MEDIA_PER_POST, type MediaRef, type MediaScope } from "@/lib/rooms/medi
 import { MediaError, uploadImage } from "@/lib/rooms/mediaClient";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
+import { ThankButton } from "@/components/account/ProfileFacts";
 import { BOARD_COMMENT_MAX_CHARS, BOARD_POST_MAX_CHARS, threadComments, withReplies, type BoardAuthor, type BoardComment, type BoardPost } from "@/lib/rooms/board";
 import {
   RoomApiError,
@@ -437,6 +438,9 @@ function PostSheet({
 
   const renderComment = (comment: BoardComment, isReply: boolean) => {
     const own = me === comment.author;
+    // 내 글의 댓글, 또는 내 댓글 아래 답글이면 질문한 나에게 "도움됐어요"(서버가 다시 확인).
+    const parentAuthor = comment.parent ? comments.find((row) => row.id === comment.parent)?.author : undefined;
+    const canThank = Boolean(post && me && !own && (mine || parentAuthor === me));
     return (
       <li key={comment.id} className={`rounded-lg bg-white/[0.04] px-3 py-2 ${isReply ? "ms-6" : ""}`}>
         <div className="flex items-center gap-2">
@@ -495,6 +499,9 @@ function PostSheet({
             <span className="mt-1 block whitespace-pre-wrap text-caption text-slate-400">{translated[comment.id]}</span>
           ) : null}
         </button>
+        ) : null}
+        {canThank && post ? (
+          <ThankButton locale={locale} target={{ kind: "board", postId: post.id, commentId: comment.id }} learn={targetLanguage} />
         ) : null}
       </li>
     );

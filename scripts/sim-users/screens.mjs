@@ -500,6 +500,22 @@ const SCENES = [
     },
   },
   {
+    id: "account-facts",
+    label: "프로필 — 편집 시트의 나에 대해(칩)·프로필에 보일 것",
+    async run({ page, wait, ui }) {
+      if (!(await page.getByRole("dialog").count())) {
+        await page.getByText(ui.accountEdit, { exact: true }).first().click();
+        await wait(1500);
+      }
+      // 시트 안쪽 스크롤 칸을 관심사 칩까지 내린다.
+      await page.evaluate(() => {
+        const box = document.querySelector('[role="dialog"] .overflow-y-auto');
+        if (box) box.scrollTop = box.scrollHeight * 0.42;
+      });
+      await wait(800);
+    },
+  },
+  {
     id: "rooms-list",
     label: "말하는 방 — 열린 방 목록",
     async run({ page, wait, rc, state }) {
@@ -678,8 +694,9 @@ async function prepareSocial(state) {
   await dm(me, "send", { target: host.account.id, text: say(1) });
   const threadId = first.body?.thread?.id;
   const hostSeq = first.body?.message?.seq;
-  await dm(me, "send", { target: host.account.id, text: bank.askMeaning[target], quoteSeq: hostSeq, ask: true });
-  await dm(host, "send", { target: me.account.id, text: say(2) });
+  const asked = await dm(me, "send", { target: host.account.id, text: bank.askMeaning[target], quoteSeq: hostSeq, ask: true });
+  // 방장이 내 질문을 집어 답한다 — 질문한 나에게 "도움됐어요"가 보인다(2026-10-23).
+  await dm(host, "send", { target: me.account.id, text: say(2), quoteSeq: asked.body?.message?.seq });
   if (threadId) {
     const mePeer = `simme${shortId(me.uid)}`;
     const hostPeer = `simhd${shortId(host.uid)}`;
@@ -719,8 +736,8 @@ async function prepareSocial(state) {
   // 사람 목록 카드: 이 실행의 테스트 계정만.
   const now = Date.now();
   state.peopleCards = [
-    { id: host.account.id, nickname: state.hostNickname, bio: bank.askGrowth[target], hasPhoto: true, ui: target, learn: locale, lastSeen: now - 60_000, isFollowing: false },
-    { id: friend.account.id, nickname: state.friendNickname, bio: bank.mapGoal[locale], hasPhoto: true, ui: locale, learn: target, lastSeen: now - 3 * 3600_000, isFollowing: true },
+    { id: host.account.id, nickname: state.hostNickname, bio: bank.askGrowth[target], hasPhoto: true, ui: target, learn: locale, lastSeen: now - 60_000, isFollowing: false, native: target, interests: ["music", "anime", "cooking"], sharedInterests: 2, help: 12, meetModes: ["call"] },
+    { id: friend.account.id, nickname: state.friendNickname, bio: bank.mapGoal[locale], hasPhoto: true, ui: locale, learn: target, lastSeen: now - 3 * 3600_000, isFollowing: true, native: locale, interests: ["books"], sharedInterests: 0, meetModes: ["text"] },
   ];
   await api(me.uid, "/api/social", { action: "follow", target: friend.account.id }, me.token);
   state.hostInvite = (await api(host.uid, "/api/invite", { action: "mine" }, host.token)).body?.code ?? "";
@@ -754,11 +771,13 @@ for (const combo of COMBOS) {
     const me = await signup(uid, "a");
     people.push(me);
     // 모든 테스트 계정은 숨김 — 실제 사용자의 "사람" 목록에 뜨지 않게.
-    await api(uid, "/api/account/profile", { nickname: bank.nickname[locale], bio: bank.mapGoal[locale], photo: PHOTO, hidden: true }, me.token);
+    // 나에 대한 사실(칩, 2026-10-23) — 편집 시트·프로필에 보이게.
+    const meFacts = { native: locale, speaks: [target], interests: ["music", "travel", "cooking"], work: "student", meetModes: ["call", "text"], meetTimes: ["evening"] };
+    await api(uid, "/api/account/profile", { nickname: bank.nickname[locale], bio: bank.mapGoal[locale], photo: PHOTO, hidden: true, facts: meFacts }, me.token);
     const host = await signup(`${uid}-host`, "h");
     people.push(host);
     const hostNickname = `${bank.nickname[target]}✦`;
-    await api(host.uid, "/api/account/profile", { nickname: hostNickname, bio: bank.askGrowth[target], photo: PHOTO, hidden: true }, host.token);
+    await api(host.uid, "/api/account/profile", { nickname: hostNickname, bio: bank.askGrowth[target], photo: PHOTO, hidden: true, facts: { native: target, interests: ["music", "anime", "cooking"], work: "worker", meetModes: ["call"] } }, host.token);
     state.hostNickname = hostNickname;
     const friend = await signup(`${uid}-friend`, "f");
     people.push(friend);

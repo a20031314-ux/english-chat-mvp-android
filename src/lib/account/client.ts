@@ -1,3 +1,4 @@
+import type { ProfileFacts, ProfileShow } from "./profileFacts";
 import { Capacitor } from "@capacitor/core";
 import { googleLoginAvailable } from "@/lib/platform";
 import { apiUrl } from "@/lib/apiBase";
@@ -161,6 +162,9 @@ export async function saveProfile(next: {
   bio: string;
   photo?: string | null;
   hidden?: boolean;
+  /** 나에 대한 사실·프로필에 보일 칸(account/profileFacts.ts). 안 보내면 서버 값 그대로. */
+  facts?: ProfileFacts;
+  show?: Partial<ProfileShow>;
 }): Promise<PublicAccount> {
   const { account } = await call<{ account: PublicAccount }>("/api/account/profile", { body: next });
   saveAccount(account);

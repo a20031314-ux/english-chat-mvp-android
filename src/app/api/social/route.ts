@@ -2,7 +2,7 @@ import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
 import { readAccount, readAccounts, readPhoto } from "@/lib/server/accountStore";
-import { recentPeople, touchPresence } from "@/lib/server/presenceStore";
+import { readPresence, recentPeople, touchPresence } from "@/lib/server/presenceStore";
 import {
   addReport,
   block,
@@ -117,6 +117,7 @@ export async function POST(request: NextRequest) {
           native: facts.native,
           interests: facts.interests.slice(0, 3),
           sharedInterests: shared,
+          meetModes: facts.meetModes,
           ...(show.help && contrib && contrib.help > 0 ? { help: contrib.help } : {}),
         },
       });
@@ -158,7 +159,13 @@ export async function POST(request: NextRequest) {
     const account = await readAccount(target);
     if (!account) return bad(request, "NO_ACCOUNT", 404);
     const show = showOf(account.profile.show);
-    const learn = typeof body.learn === "string" && LANG.test(body.learn) ? body.learn : null;
+    // 목표 한 줄은 그 사람이 지금 배우는 언어의 체크 답 — 보낸 learn이 없으면 그 사람의 마지막 접속 언어.
+    const learn =
+      typeof body.learn === "string" && LANG.test(body.learn)
+        ? body.learn
+        : show.goal
+          ? ((await readPresence(target))?.learn ?? null)
+          : null;
     const [numbers, photo, following, blocked, contrib, check] = await Promise.all([
       counts(target),
       account.profile.hasPhoto ? readPhoto(target) : Promise.resolve(null),

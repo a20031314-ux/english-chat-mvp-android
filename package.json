@@ -42,7 +42,7 @@
     "check:data-map": "node scripts/data-map.mjs --check",
     "ads:map": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/ads-map.mjs",
     "check:cost": "node scripts/cost-coverage.mjs && node --experimental-strip-types scripts/plan-cost.mjs --check",
-    "test:account": "node --experimental-strip-types --test src/lib/server/account.test.ts src/lib/account/profileFacts.test.ts",
+    "test:account": "node --experimental-strip-types --test src/lib/server/account.test.ts src/lib/account/profileFacts.test.ts src/lib/account/profileCopy.test.ts",
     "account:purge": "node --experimental-strip-types scripts/account-purge.mjs",
     "learner:metrics": "node --experimental-strip-types scripts/learner-metrics.mjs",
     "sim:users": "node --experimental-strip-types --disable-warning=MODULE_TYPELESS_PACKAGE_JSON scripts/sim-users/run.mjs",

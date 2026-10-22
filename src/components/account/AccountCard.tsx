@@ -2,6 +2,9 @@
 
 import { useEffect, useRef, useState, useSyncExternalStore } from "react";
 import type { UICopy } from "@/lib/copy";
+import { FactsEditor, ShowToggles } from "./ProfileFacts";
+import { factsOf, showOf, type ProfileFacts, type ProfileShow } from "@/lib/account/profileFacts";
+import { profileCopy } from "@/lib/account/profileCopy";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
 import { pingPresence } from "@/lib/rooms/client";
@@ -135,6 +138,16 @@ export function AccountCard({ ui, locale }: { ui: UICopy; locale: string }) {
     if (signedIn && learning && socialFeaturesEnabled()) pingPresence({ learn: learning, ui: locale });
   }, [signedIn, learning, locale]);
 
+  // 로그인 직후 한 번: 로그인하려고 연 시트에서 계정이 생기면 나를 소개하는 칩 화면. 이미 사실을 정한 계정은 건너뛴다.
+  const [openedSignedOut, setOpenedSignedOut] = useState(false);
+  const [setupDone, setSetupDone] = useState<string | null>(null);
+  const setup = Boolean(
+    open && openedSignedOut && account && setupDone !== account.id && isEmptyFacts(factsOf(account.profile.facts)),
+  );
+  const setSetup = (value: false) => {
+    if (!value && account) setSetupDone(account.id);
+  };
+
   const canSignIn = Boolean(config && (config.password || config.googleClientId || config.email));
   // 로그인 방식이 하나도 켜지지 않았으면(서버 설정 전) 카드를 숨긴다.
   if (!account && !canSignIn) return null;
@@ -143,7 +156,10 @@ export function AccountCard({ ui, locale }: { ui: UICopy; locale: string }) {
     <>
       <button
         type="button"
-        onClick={() => setOpen(true)}
+        onClick={() => {
+          setOpenedSignedOut(!account);
+          setOpen(true);
+        }}
         className="flex w-full items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-3.5 py-3 text-start hover:bg-white/[0.06]"
       >
         <Avatar account={account} size={44} />
@@ -182,7 +198,11 @@ export function AccountCard({ ui, locale }: { ui: UICopy; locale: string }) {
               onClick={(event) => event.stopPropagation()}
             >
               {account ? (
-                <ProfileEditor ui={ui} account={account} onClose={() => setOpen(false)} />
+                setup ? (
+                  <FactsSetup locale={locale} account={account} onDone={() => setSetup(false)} />
+                ) : (
+                  <ProfileEditor ui={ui} locale={locale} account={account} onClose={() => setOpen(false)} />
+                )
               ) : (
                 <LoginPanel ui={ui} locale={locale} config={config} onClose={() => setOpen(false)} />
               )}
@@ -490,8 +510,10 @@ async function shrinkPhoto(file: File): Promise<string | null> {
   }
 }
 
-function ProfileEditor({ ui, account, onClose }: { ui: UICopy; account: PublicAccount; onClose: () => void }) {
+function ProfileEditor({ ui, locale, account, onClose }: { ui: UICopy; locale: string; account: PublicAccount; onClose: () => void }) {
   const [nickname, setNickname] = useState(account.profile.nickname);
+  const [facts, setFacts] = useState<ProfileFacts>(() => factsOf(account.profile.facts));
+  const [show, setShow] = useState<ProfileShow>(() => showOf(account.profile.show));
   const [bio, setBio] = useState(account.profile.bio);
   const [hidden, setHidden] = useState(account.profile.hidden === true);
   // undefined = 그대로, null = 빼기, 글자 = 새 사진
@@ -508,13 +530,15 @@ function ProfileEditor({ ui, account, onClose }: { ui: UICopy; account: PublicAc
     photo !== undefined ||
     cleanNickname(nickname) !== account.profile.nickname ||
     cleanBio(bio) !== account.profile.bio ||
-    hidden !== (account.profile.hidden === true);
+    hidden !== (account.profile.hidden === true) ||
+    JSON.stringify(facts) !== JSON.stringify(factsOf(account.profile.facts)) ||
+    JSON.stringify(show) !== JSON.stringify(showOf(account.profile.show));
 
   const save = async () => {
     setBusy(true);
     setError(null);
     try {
-      await saveProfile({ nickname, bio, hidden, ...(photo === undefined ? {} : { photo }) });
+      await saveProfile({ nickname, bio, hidden, facts, show, ...(photo === undefined ? {} : { photo }) });
       setPhoto(undefined);
       setSaved(true);
       setTimeout(() => setSaved(false), 2000);
@@ -622,12 +646,16 @@ function ProfileEditor({ ui, account, onClose }: { ui: UICopy; account: PublicAc
           />
         </label>
 
-        {socialFeaturesEnabled() ? (
-          <label className="mt-4 flex items-center gap-2 text-[13px] text-slate-300">
-            <input type="checkbox" checked={hidden} onChange={(event) => setHidden(event.target.checked)} className="accent-white" />
-            {ui.accountHideFromPeople}
-          </label>
-        ) : null}
+        <p className="mt-5 text-note font-semibold text-slate-200">{profileCopy(locale).aboutMe}</p>
+        <FactsEditor locale={locale} facts={facts} onChange={setFacts} />
+
+        {/* 프로필에 보일 칸 + 사람 목록에서 숨기기(있던 스위치를 이 묶음으로 옮김). 사람 기능이 없으면 숨기기 줄은 없다. */}
+        <ShowToggles
+          locale={locale}
+          show={show}
+          onShow={setShow}
+          {...(socialFeaturesEnabled() ? { hidden, onHidden: setHidden, hiddenLabel: ui.accountHideFromPeople } : {})}
+        />
 
         {message ? <p className="mt-3 text-[12px] text-rose-300">{message}</p> : null}
 
@@ -678,6 +706,53 @@ function ProfileEditor({ ui, account, onClose }: { ui: UICopy; account: PublicAc
             </div>
           )}
         </div>
+      </div>
+    </>
+  );
+}
+
+function isEmptyFacts(facts: ProfileFacts): boolean {
+  return !facts.native && facts.interests.length === 0 && facts.meetModes.length === 0 && facts.speaks.length === 0 && !facts.work;
+}
+
+/** 로그인 직후 한 번: 모국어·관심사·대화 방식만 고르는 화면. 건너뛰면 편집 시트로(언제든 편집에서 고칠 수 있음). */
+function FactsSetup({ locale, account, onDone }: { locale: string; account: PublicAccount; onDone: () => void }) {
+  const t = profileCopy(locale);
+  const [facts, setFacts] = useState<ProfileFacts>(() => factsOf(account.profile.facts));
+  const [busy, setBusy] = useState(false);
+  const done = async () => {
+    setBusy(true);
+    try {
+      await saveProfile({ nickname: account.profile.nickname, bio: account.profile.bio, facts });
+    } catch {
+      // 저장하지 못해도 편집 시트에서 다시 고를 수 있다.
+    } finally {
+      setBusy(false);
+      onDone();
+    }
+  };
+  return (
+    <>
+      <div className="flex shrink-0 items-center gap-2 border-b border-line px-3 py-2">
+        <button
+          type="button"
+          onClick={onDone}
+          className="rounded-lg border border-line bg-white/5 px-3 py-1.5 text-xs text-slate-200 hover:bg-white/10"
+        >
+          {t.setupSkip}
+        </button>
+        <h2 className="min-w-0 flex-1 truncate text-center text-sm font-semibold text-ink">{t.setupTitle}</h2>
+        <button
+          type="button"
+          onClick={() => void done()}
+          disabled={busy || isEmptyFacts(facts)}
+          className="rounded-lg bg-platinum px-3 py-1.5 text-xs font-medium text-black hover:bg-platinum-hover disabled:opacity-50"
+        >
+          {t.setupDone}
+        </button>
+      </div>
+      <div className="min-h-0 flex-1 overflow-y-auto px-4 pb-4">
+        <FactsEditor locale={locale} facts={facts} onChange={setFacts} compact />
       </div>
     </>
   );

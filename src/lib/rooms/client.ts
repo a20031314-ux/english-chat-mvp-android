@@ -444,6 +444,17 @@ export function fetchProfile(id: string, fresh = false): Promise<PublicProfile |
   return profiles.get(id)!;
 }
 
+/** 답 하나의 위치 — "도움됐어요"(질문한 사람만, 서버 contribStore.findAnswerer가 다시 확인). */
+export type ThankTarget =
+  | { kind: "room"; roomId: string; seq: number }
+  | { kind: "dm"; threadId: string; seq: number }
+  | { kind: "board"; postId: string; commentId: string };
+
+/** 도움됐어요. 이미 누른 답·오늘 이미 그 사람에게 누름은 오류 코드로(ALREADY·TODAY). */
+export async function sendThank(target: ThankTarget, learn: string): Promise<void> {
+  await social("thank", { ...target, learn });
+}
+
 export async function setFollow(target: string, on: boolean): Promise<void> {
   await social(on ? "follow" : "unfollow", { target });
 }

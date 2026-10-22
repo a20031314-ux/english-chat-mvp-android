@@ -15,6 +15,7 @@ import { byPerson, contextBefore, overlapsPrevious, timeline, type RoomLine, typ
 import type { PublicProfile } from "@/lib/rooms/social";
 import type { HowToSayExpression } from "@/lib/howToSay";
 import { focusOf, pickTokens, questionCount } from "@/lib/rooms/quote";
+import { FactsView, ThankButton } from "@/components/account/ProfileFacts";
 import type { MediaRef, MediaScope } from "@/lib/rooms/media";
 import { MediaError, uploadImage, type MediaUploadError } from "@/lib/rooms/mediaClient";
 import { peekHint, type RoomHintMode } from "@/lib/rooms/layout";
@@ -235,6 +236,8 @@ export function ProfileSheet({
           <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-slate-200" dir="auto">
             {profile?.bio || t.noBio}
           </p>
+          {/* 나에 대한 사실(칩)과 켠 칸(도움·꾸준함·반영 의견·목표) — 학습 상태는 서버가 보내지 않는다. */}
+          {profile ? <FactsView locale={locale} facts={profile.facts} badges={profile.badges} goal={profile.goal} /> : null}
           {profile ? (
             <dl className="mt-3 grid grid-cols-4 gap-1 text-center">
               {(
@@ -684,6 +687,7 @@ export function Lines({
   onPerson,
   onQuote,
   onNote,
+  thankRoomId,
   big,
   allLines,
   emptyText,
@@ -725,6 +729,8 @@ export function Lines({
   onQuote?: (line: RoomLine, ask: boolean, focus?: string) => void;
   /** 쪽지로 묻기(그 줄을 말한 사람에게 1:1). 계정이 있는 줄에만. */
   onNote?: (line: RoomLine, focus?: string) => void;
+  /** 있으면 내 ❓ 질문에 단 남의 답 아래 "도움됐어요"(서버가 질문한 사람인지 다시 확인). */
+  thankRoomId?: string;
   /** 채팅 위주 보기: 글자를 크게. */
   big?: boolean;
 }) {
@@ -811,6 +817,9 @@ export function Lines({
     // 누가 내 말을 물었으면 그 질문 줄을 눈에 띄게.
     const askedMe = Boolean(line.ask && line.quote?.peerId === selfId && others);
     const asked = questionCount(allLines ?? lines, line.seq);
+    // 내 ❓ 질문 줄을 집은 남의 답 — 질문한 나에게만 "도움됐어요".
+    const askLine = line.quote ? (allLines ?? lines).find((item) => item.seq === line.quote?.seq) : undefined;
+    const answersMe = Boolean(thankRoomId && others && line.accountId && askLine?.ask && askLine.peerId === selfId);
     return (
       <li key={line.seq} className="flex items-start gap-2">
         {showName ? (
@@ -873,6 +882,9 @@ export function Lines({
               </span>
             ) : null}
           </button>
+          {answersMe && thankRoomId ? (
+            <ThankButton locale={locale} target={{ kind: "room", roomId: thankRoomId, seq: line.seq }} learn={targetLanguage} />
+          ) : null}
           {line.peerId === selfId && hints?.[line.seq] && hintMode !== "off" ? (
             <HintCard
               t={t}

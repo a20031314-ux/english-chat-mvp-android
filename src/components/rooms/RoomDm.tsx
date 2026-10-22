@@ -17,6 +17,7 @@ import {
 import { DM_PENDING_LIMIT, type DmMessage, type DmSummary, type DmThread } from "@/lib/rooms/dm";
 import type { RoomMeta } from "@/lib/rooms/protocol";
 import { askPhraseAbout, questionCount } from "@/lib/rooms/quote";
+import { ThankButton } from "@/components/account/ProfileFacts";
 import type { RoomNote } from "@/lib/rooms/layout";
 import { Composer, Face, LineActions, QuoteText, Unsendable, useProfile } from "./RoomParts";
 import { MediaImage } from "./MediaImage";
@@ -324,6 +325,16 @@ export function DmThreadView({
                 quoteName={quoteName}
                 asked={questionCount(messages, message.seq)}
                 onQuote={(index, nickname, text, ask, focus) => setQuoting({ seq: message.seq, index, nickname, text, ask, focus })}
+                thankThreadId={
+                  // 내 질문 메시지를 집은 상대의 답 — 질문한 나에게만 "도움됐어요"(서버가 다시 확인).
+                  thread &&
+                  message.from !== me &&
+                  message.quote &&
+                  message.quote.index === undefined &&
+                  messages.some((item) => item.seq === message.quote?.seq && item.ask === true && item.from === me)
+                    ? thread.id
+                    : undefined
+                }
               />
               </Unsendable>
             ))}
@@ -398,9 +409,12 @@ function Bubble({
   quoteName,
   asked,
   onQuote,
+  thankThreadId,
 }: {
   t: RoomCopy;
   ended: boolean;
+  /** 있으면 이 메시지 아래 "도움됐어요"(내 질문에 단 답). */
+  thankThreadId?: string;
   quoteName: (accountId: string | null | undefined, fallback: string) => string;
   /** 이 메시지를 집어 물은 질문 수. */
   asked: number;
@@ -534,6 +548,9 @@ function Bubble({
             onAsk={(focus) => onQuote(undefined, "", message.text, true, focus)}
             onReply={(focus) => onQuote(undefined, "", message.text, false, focus)}
           />
+        ) : null}
+        {thankThreadId ? (
+          <ThankButton locale={locale} target={{ kind: "dm", threadId: thankThreadId, seq: message.seq }} learn={targetLanguage} />
         ) : null}
         <p className={`mt-0.5 px-1 text-[10px] text-slate-600 ${mine ? "text-end" : ""}`}>
           {time}

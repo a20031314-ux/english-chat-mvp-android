@@ -9,6 +9,7 @@ import { readEntryDoor } from "@/lib/doors";
 import { getLearningLanguage, isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
 import { LearningLanguageFlag } from "@/components/LearningLanguageFlag";
 import { Face, ProfileSheet, loadProfile } from "./RoomParts";
+import { chipLabel, fillCount, profileCopy } from "@/lib/account/profileCopy";
 
 /**
  * 사람 목록 (말하는 방 → 사람). 최근 2주 안에 앱을 쓴 사람이 최근 순으로 쭉 뜨고,
@@ -18,7 +19,10 @@ import { Face, ProfileSheet, loadProfile } from "./RoomParts";
  * 거르기는 화면에서만(서버는 최대 60명을 준다).
  */
 
-type Filter = "all" | "online" | "partners" | "same";
+type Filter = "all" | "online" | "partners" | "same" | "shared" | "call";
+
+/** 그 사람이 할 줄 아는 말: 정한 모국어, 없으면 예전처럼 앱 언어. */
+const speaksOf = (person: PersonCard) => person.native ?? person.ui;
 
 function activity(t: RoomCopy, lastSeen: number, now: number): { text: string; online: boolean } {
   if (now - lastSeen < ONLINE_WINDOW_MS) return { text: t.onlineNow, online: true };
@@ -86,8 +90,12 @@ export function PeopleList({
     }
     if (filter === "partners") return list.filter((person) => person.learn === locale);
     if (filter === "same") return list.filter((person) => person.learn === targetLanguage);
+    if (filter === "shared") return list.filter((person) => (person.sharedInterests ?? 0) > 0).sort((a, b) => (b.sharedInterests ?? 0) - (a.sharedInterests ?? 0));
+    if (filter === "call") return list.filter((person) => person.meetModes?.includes("call") || person.meetModes?.includes("video"));
     return list;
   }, [people, filter, locale, targetLanguage, now]);
+
+  const pc = profileCopy(locale);
 
   const toggleFollow = async (person: PersonCard) => {
     if (busy) return;
@@ -108,6 +116,8 @@ export function PeopleList({
     ["online", t.peopleOnline],
     ["partners", t.peoplePartners],
     ["same", t.peopleSame],
+    ["shared", pc.filterShared],
+    ["call", pc.filterCall],
   ];
 
   return (
@@ -154,10 +164,17 @@ export function PeopleList({
                       {person.nickname}
                     </p>
                     <div className="mt-1 flex flex-wrap items-center gap-1">
-                      <LangChip code={person.ui} locale={locale} learning={false} />
-                      {person.ui && person.learn && person.ui !== person.learn ? <span className="text-[11px] text-slate-500">⇄</span> : null}
-                      {person.learn !== person.ui ? <LangChip code={person.learn} locale={locale} learning /> : null}
+                      <LangChip code={speaksOf(person)} locale={locale} learning={false} />
+                      {speaksOf(person) && person.learn && speaksOf(person) !== person.learn ? <span className="text-meta text-slate-500">⇄</span> : null}
+                      {person.learn !== speaksOf(person) ? <LangChip code={person.learn} locale={locale} learning /> : null}
+                      {person.help ? <span className="ms-1 text-meta text-amber-200">🙌 {person.help}</span> : null}
                     </div>
+                    {person.interests?.length ? (
+                      <p className="mt-1 truncate text-caption text-slate-400">
+                        {person.interests.map((id) => chipLabel(pc, "i", id)).join(" · ")}
+                        {person.sharedInterests ? <span className="ms-1.5 text-violet-200">{fillCount(pc.shared, person.sharedInterests)}</span> : null}
+                      </p>
+                    ) : null}
                   </button>
                   <button
                     type="button"

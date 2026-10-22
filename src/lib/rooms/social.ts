@@ -48,6 +48,8 @@ export type PersonCard = {
   sharedInterests?: number;
   /** 받은 도움됐어요 수(켰을 때만). */
   help?: number;
+  /** 좋아하는 대화 방식(글·통화·영상) — "통화 좋아함" 거르기. */
+  meetModes?: string[];
 };
 
 /** 5분 안에 봤으면 "접속 중". */
