@@ -76,6 +76,8 @@ export type RoomMeta = {
   random?: boolean;
   /** 지금 하는 게임 판 번호(라이어 게임·마피아, rooms/liarGame.ts·mafiaGame.ts). 있을 때만 방 물음이 판을 읽어 `game`으로 돌려준다. */
   game?: string;
+  /** 그 판의 게임(방 목록 카드의 "🎭 게임 중"). */
+  gameKind?: "liar" | "mafia";
   createdAt: number;
 };
 

@@ -839,7 +839,7 @@ export function RoomView({
       setGameBusy(false);
     }
   };
-  const gameStep = async (input: { action: "next" | "end" } | { action: "vote"; target: string } | { action: "guess"; text: string }) => {
+  const gameStep = async (input: { action: "next" | "end" } | { action: "vote" | "predict"; target: string } | { action: "guess"; text: string }) => {
     setGameBusy(true);
     try {
       setGame(await roomGame({ ...input, roomId: room.id, peerId }));
@@ -1141,6 +1141,7 @@ export function RoomView({
             onNext={() => void gameStep({ action: "next" })}
             onVote={(target) => void gameStep({ action: "vote", target })}
             onGuess={(text) => void gameStep({ action: "guess", text })}
+            onPredict={(target) => void gameStep({ action: "predict", target })}
             onAgain={() => (lastStartRef.current ? void startGame(lastStartRef.current) : setGameSheet(true))}
             onEnd={() => void gameStep({ action: "end" })}
             onClose={() => setGameHidden(shownGame.id)}

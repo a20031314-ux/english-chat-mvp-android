@@ -1,3 +1,5 @@
+import type { SpectatorResult, WatchView } from "./spectators.ts";
+
 /**
  * 말하는 방 라이어 게임(2026-10-23, 사용자 요청 "룸에 라이어게임·마피아 같은 재미, 사회자는 AI나 방장").
  *
@@ -55,6 +57,8 @@ export type LiarGame = {
   guess?: string;
   winner?: "liar" | "players";
   reason?: LiarReason;
+  /** 판이 끝난 뒤 관전자 추리 결과(rooms/spectators.ts). */
+  spectatorResult?: SpectatorResult;
 };
 
 export function liarCurrent(game: LiarGame): LiarPlayer | null {
@@ -248,6 +252,8 @@ export type LiarView = {
   guess?: string;
   winner?: "liar" | "players";
   reason?: LiarReason;
+  /** 관전자 추리(방 물음이 붙임). */
+  watch?: WatchView;
 };
 
 export function liarView(game: LiarGame, viewer: string, votes: Record<string, string> = {}): LiarView {

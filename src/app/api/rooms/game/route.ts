@@ -14,9 +14,12 @@ import {
   recentWords,
   rememberWord,
   takeGameStart,
+  watchState,
   writeGame,
+  writePrediction,
   writeVote,
 } from "@/lib/server/roomGameStore";
+import { canPredict } from "@/lib/rooms/spectators";
 import { judgeLiarGuess, pickLiarWord, pickMafiaStory } from "@/lib/server/roomGame";
 import {
   LIAR_MAX_PLAYERS,
@@ -45,6 +48,7 @@ export const dynamic = "force-dynamic";
  * - next: 라이어 — 지금 차례인 사람("다 말했어요") 또는 방장("다음"). 마피아 — 방장이 낮 이야기를 끝내고 투표로.
  * - vote: 라이어 투표, 마피아 밤 행동(마피아·의사·경찰)과 낮 투표. 모두 고르면 방 물음이 바로 넘긴다.
  * - guess: 라이어 게임에서 뽑힌 라이어가 제시어를 맞힌다(글자로 안 맞으면 AI가 판정).
+ * - predict: 관전자(플레이어가 아닌 사람·마피아 탈락자)의 추리 — 플레이어 투표에 들어가지 않고, 누가 누구를 찍었는지는 끝나야 보인다(rooms/spectators.ts).
  * - end: 방장이 판을 치운다.
  * 판은 방 물음(`/api/rooms` poll)이 `game`으로 돌려준다 — 여기 답도 같은 모양.
  */
@@ -109,7 +113,7 @@ export async function POST(request: NextRequest) {
       }
       const game = newMafiaGame({ id: newRoomId(), mode, moderator: peerId, players, now: Date.now(), ...(story ? { story } : {}) });
       await writeGame(roomId, game);
-      await setRoomGame(roomId, game.id);
+      await setRoomGame(roomId, game.id, "mafia");
       return jsonWithCors(request, { game: gameView(game, peerId) });
     }
 
@@ -131,7 +135,7 @@ export async function POST(request: NextRequest) {
       now: Date.now(),
     });
     await writeGame(roomId, game);
-    await setRoomGame(roomId, game.id);
+    await setRoomGame(roomId, game.id, "liar");
     await rememberWord(roomId, pick.english);
     return jsonWithCors(request, { game: gameView(game, peerId) });
   }
@@ -172,6 +176,10 @@ export async function POST(request: NextRequest) {
       game = again.game;
       votes = moved ? again.votes : { ...again.votes, [peerId]: target };
     }
+  } else if (action === "predict") {
+    const target = body.target;
+    if (typeof target !== "string" || !canPredict(game, peerId, target)) return bad(request, "CANNOT_PREDICT", 409);
+    await writePrediction(roomId, game, { peerId, accountId: me.accountId ?? null, nickname: me.nickname }, target);
   } else if (action === "guess") {
     if (isMafia(game) || game.phase !== "guess" || game.liar !== peerId) return bad(request, "NOT_GUESSING", 409);
     const guess = cleanText(body.text, MAX_GUESS_CHARS);
@@ -188,5 +196,5 @@ export async function POST(request: NextRequest) {
   } else {
     return bad(request, "UNKNOWN_ACTION");
   }
-  return jsonWithCors(request, { game: gameView(game, peerId, votes) });
+  return jsonWithCors(request, { game: gameView(game, peerId, votes, await watchState(roomId, game, peerId)) });
 }

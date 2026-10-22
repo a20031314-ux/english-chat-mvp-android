@@ -130,7 +130,7 @@ export async function roomGame(
   input:
     | { action: "start"; roomId: string; peerId: string; game: "liar" | "mafia"; mode: LiarMode; topic: LiarTopic; laps: 1 | 2; word?: string }
     | { action: "next" | "end"; roomId: string; peerId: string }
-    | { action: "vote"; roomId: string; peerId: string; target: string }
+    | { action: "vote" | "predict"; roomId: string; peerId: string; target: string }
     | { action: "guess"; roomId: string; peerId: string; text: string },
 ): Promise<LiarView | MafiaView | null> {
   const response = await fetch(apiUrl("/api/rooms/game"), {

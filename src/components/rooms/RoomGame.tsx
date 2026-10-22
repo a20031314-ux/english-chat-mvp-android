@@ -5,6 +5,7 @@ import { BodyLayer } from "@/components/FullScreenLayer";
 import type { RoomCopy } from "@/lib/rooms/copy";
 import { LIAR_TOPICS, MAX_GUESS_CHARS, pickWord, type LiarMode, type LiarTopic, type LiarView } from "@/lib/rooms/liarGame";
 import type { MafiaRole, MafiaView } from "@/lib/rooms/mafiaGame";
+import type { WatchView } from "@/lib/rooms/spectators";
 import { Face } from "./RoomParts";
 
 /**
@@ -151,6 +152,7 @@ type GamePanelProps = {
   onNext: () => void;
   onVote: (target: string) => void;
   onGuess: (text: string) => void;
+  onPredict: (target: string) => void;
   onAgain: () => void;
   onEnd: () => void;
   onClose: () => void;
@@ -178,6 +180,7 @@ function LiarPanel({
   onNext,
   onVote,
   onGuess,
+  onPredict,
   onAgain,
   onEnd,
   onClose,
@@ -320,6 +323,7 @@ function LiarPanel({
         )
       ) : null}
 
+      <WatchBox t={t} watch={game.watch} candidates={game.players} selfId={selfId} busy={busy} kind="liar" done={done} onPredict={onPredict} />
       {done ? (
         <div className="mt-1.5 space-y-1">
           {game.winner ? (
@@ -382,6 +386,7 @@ function MafiaPanel({
   busy,
   onNext,
   onVote,
+  onPredict,
   onAgain,
   onEnd,
   onClose,
@@ -389,7 +394,8 @@ function MafiaPanel({
   const left = useSecondsLeft(game.endsAt, offsetMs);
   const name = (peerId: string | null | undefined) => game.players.find((player) => player.peerId === peerId)?.nickname ?? "";
   const roleText = (role: MafiaRole) => `${ROLE_ICON[role]} ${t[ROLE_LABEL[role]]}`;
-  const withRole = (peerId: string) => (game.roles[peerId] ? `${name(peerId)} (${t[ROLE_LABEL[game.roles[peerId]]]})` : name(peerId));
+  // 역할은 문장 뒤에(“Jisu (시민)님이…”처럼 이름 뒤에 괄호가 붙지 않게).
+  const roleTail = (peerId: string) => (game.roles[peerId] ? ` · ${roleText(game.roles[peerId])}` : "");
   const done = game.phase === "done";
   const alive = new Set(game.alive);
   const iAmIn = game.me === "player";
@@ -415,13 +421,13 @@ function MafiaPanel({
   if (game.phase === "day" || done) {
     const night = game.lastNight;
     if (night && night.round === game.round) {
-      news.push(night.killed ? `💀 ${fill(t.mafiaKilled, { name: withRole(night.killed) })}` : night.saved ? `🩺 ${t.mafiaSaved}` : `🌙 ${t.mafiaQuiet}`);
+      news.push(night.killed ? `💀 ${fill(t.mafiaKilled, { name: name(night.killed) })}${roleTail(night.killed)}` : night.saved ? `🩺 ${t.mafiaSaved}` : `🌙 ${t.mafiaQuiet}`);
     }
   }
   if ((game.phase === "night" || done) && game.lastVote && (game.phase !== "night" || game.lastVote.round === game.round - 1)) {
-    news.push(game.lastVote.out ? `🗳 ${fill(t.mafiaOut, { name: withRole(game.lastVote.out) })}` : `🗳 ${t.mafiaNoOut}`);
+    news.push(game.lastVote.out ? `🗳 ${fill(t.mafiaOut, { name: name(game.lastVote.out) })}${roleTail(game.lastVote.out)}` : `🗳 ${t.mafiaNoOut}`);
   }
-  for (const peer of game.left ?? []) news.push(`🚪 ${fill(t.mafiaLeft, { name: withRole(peer) })}`);
+  for (const peer of game.left ?? []) news.push(`🚪 ${fill(t.mafiaLeft, { name: name(peer) })}${roleTail(peer)}`);
   const lastCheck = game.role === "police" || game.me === "moderator" ? game.checks?.at(-1) : undefined;
 
   return (
@@ -478,9 +484,7 @@ function MafiaPanel({
 
       {/* 사회자(방장): 모든 역할 */}
       {game.me === "moderator" && !done ? (
-        <p className="mt-1 text-meta text-slate-400" dir="auto">
-          {game.players.map((player) => `${alive.has(player.peerId) ? "" : "💀"}${player.nickname} ${ROLE_ICON[game.roles[player.peerId]]}`).join(" · ")}
-        </p>
+        <RoleList game={game} alive={alive} className="mt-1 text-meta text-slate-400" />
       ) : null}
 
       {targets.length ? (
@@ -533,6 +537,7 @@ function MafiaPanel({
         </div>
       ) : null}
 
+      <WatchBox t={t} watch={game.watch} candidates={game.players.filter((player) => game.alive.includes(player.peerId))} selfId={selfId} busy={busy} kind="mafia" done={done} onPredict={onPredict} />
       {done ? (
         <div className="mt-1.5 space-y-1">
           {game.winner ? (
@@ -540,10 +545,7 @@ function MafiaPanel({
               {game.winner === "mafia" ? `🕶 ${t.mafiaMafiaWins}` : `🎉 ${t.mafiaTownWins}`}
             </p>
           ) : null}
-          <p className="text-meta text-slate-300" dir="auto">
-            {t.mafiaRoles}:{" "}
-            {game.players.map((player) => `${alive.has(player.peerId) ? "" : "💀"}${player.nickname} ${ROLE_ICON[game.roles[player.peerId]] ?? ""}`).join(" · ")}
-          </p>
+          <RoleList game={game} alive={alive} label={t.mafiaRoles} className="text-meta text-slate-300" />
           {isHost ? (
             <div className="flex gap-2 pt-0.5">
               <button type="button" disabled={busy} onClick={onAgain} className="flex-1 rounded-lg bg-emerald-400/90 px-3 py-1.5 text-sm font-medium text-black disabled:opacity-60">
@@ -563,5 +565,110 @@ function MafiaPanel({
         </div>
       ) : null}
     </section>
+  );
+}
+
+/** 역할 목록: 사람마다 따로 묶어(bdi) 오른쪽에서 쓰는 화면에서도 💀·이름·역할 순서가 섞이지 않게. */
+function RoleList({ game, alive, label, className }: { game: MafiaView; alive: Set<string>; label?: string; className: string }) {
+  return (
+    <p className={`flex flex-wrap gap-x-2 gap-y-0.5 ${className}`}>
+      {label ? <span>{label}:</span> : null}
+      {game.players.map((player) => (
+        <bdi key={player.peerId} className="whitespace-nowrap">
+          {alive.has(player.peerId) ? "" : "💀"}
+          {player.nickname} {game.roles[player.peerId] ? ROLE_ICON[game.roles[player.peerId]] : ""}
+        </bdi>
+      ))}
+    </p>
+  );
+}
+
+/**
+ * 관전자 추리(rooms/spectators.ts): 관전자는 찍고, 모두에게는 "관전자 n명 추리 중"만. 누가 누구를 찍었는지는 끝나야.
+ * 플레이어 투표와 섞이지 않는다 — 서버가 따로 저장하고 결과에도 넣지 않는다.
+ */
+function WatchBox({
+  t,
+  watch,
+  candidates,
+  selfId,
+  busy,
+  kind,
+  done,
+  onPredict,
+}: {
+  t: RoomCopy;
+  watch?: WatchView;
+  candidates: { peerId: string; accountId: string | null; nickname: string }[];
+  selfId: string;
+  busy: boolean;
+  kind: "liar" | "mafia";
+  done: boolean;
+  onPredict: (target: string) => void;
+}) {
+  if (!watch) return null;
+  const result = watch.result;
+  if (done) {
+    if (!result || !result.total) return null;
+    const meRight = result.right.some((row) => row.peerId === selfId);
+    return (
+      <div className="mt-1.5 rounded-lg border border-white/10 bg-white/5 px-2.5 py-1.5">
+        <p className="text-sm text-white">
+          🔮 {fill(t.specResult, { n: result.total, m: result.right.length })}
+          {meRight ? <span className="ms-1 text-emerald-200">{t.specYouRight}</span> : null}
+        </p>
+        {result.right.length ? (
+          <p className="text-meta text-slate-300" dir="auto">
+            {fill(t.specRight, {
+              names: result.right.map((row) => (row.round ? `${row.nickname} (${fill(t.specRound, { n: row.round })})` : row.nickname)).join(", "),
+            })}
+          </p>
+        ) : null}
+        {result.board.length ? (
+          <p className="text-meta text-slate-400" dir="auto">
+            🏆 {t.specBoard}: {result.board.map((row) => `${row.nickname} ${fill(t.specHits, { n: row.hits })}`).join(" · ")}
+          </p>
+        ) : null}
+      </div>
+    );
+  }
+  const pickable = candidates.filter((player) => player.peerId !== selfId);
+  const mine = candidates.find((player) => player.peerId === watch.mine);
+  return (
+    <div className="mt-1.5">
+      {watch.can ? (
+        <div className="rounded-lg border border-white/10 bg-white/5 px-2.5 py-1.5">
+          <p className="text-sm text-white">
+            🔮 {kind === "liar" ? t.specPickLiar : t.specPickMafia}
+            {watch.count ? <span className="ms-1 text-meta text-slate-400">{fill(t.specCount, { n: watch.count })}</span> : null}
+          </p>
+          <ul className="mt-1 flex flex-wrap gap-1.5">
+            {pickable.map((player) => (
+              <li key={player.peerId}>
+                <button
+                  type="button"
+                  disabled={busy}
+                  aria-pressed={watch.mine === player.peerId}
+                  onClick={() => onPredict(player.peerId)}
+                  className={`flex items-center gap-1.5 rounded-full border py-0.5 pe-2.5 ps-0.5 text-sm ${
+                    watch.mine === player.peerId ? "border-info/70 bg-info/15 text-white" : "border-white/15 text-slate-200"
+                  }`}
+                >
+                  <Face accountId={player.accountId} name={player.nickname} size={22} />
+                  <span dir="auto">{player.nickname}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : watch.spectator ? (
+        <p className="text-meta text-slate-400" dir="auto">
+          🔮 {t.specClosed}
+          {mine ? ` · ${fill(t.specMyPick, { name: mine.nickname })}` : ""}
+        </p>
+      ) : watch.count ? (
+        <p className="text-meta text-slate-400">🔮 {fill(t.specCount, { n: watch.count })}</p>
+      ) : null}
+    </div>
   );
 }

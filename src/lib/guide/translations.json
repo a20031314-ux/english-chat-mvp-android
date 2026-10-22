@@ -332,6 +332,13 @@
           ]
         },
         {
+          "heading": "Apuestas del público",
+          "body": [
+            "Quienes están en asientos para escuchar, solo en el chat o ya eliminados son espectadores. En 🔮 eligen quién creen que es el mentiroso o la mafia, y pueden cambiarlo. No cuenta en la votación de los jugadores y nadie ve quién eligió a quién hasta el final.",
+            "Al final se ve quién acertó y los mejores detectives de la sala. Las salas con un juego en marcha muestran «Juego del mentiroso en curso» o «Mafia en curso» en la lista."
+          ]
+        },
+        {
           "heading": "Si eres el anfitrión",
           "body": [
             "Toca un asiento libre y elige a quién subir (primero las solicitudes, luego los oyentes), o “Subir” en “Solicitudes”; desde un perfil, “Bajar”, “Expulsar” o “Ceder anfitrión”. Con “Cerrar sala” eliges “Ceder y salir”, pausar o cerrar. Una sala en pausa vuelve con “Reabrir” encima de la lista."
@@ -727,6 +734,13 @@
             "🎭で「マフィア」を選んで「スタート」。話す席に5人以上必要です（7人からマフィアは2人）。自分の役は自分にだけ見え、マフィア同士はお互いを知っています。",
             "夜はマフィアが狙う人、医者が守る人、警察が調べる人を選びます。昼は夜の出来事を見て学習中の言語で話し合い、投票で一人を追放します。",
             "マフィアが全員いなくなれば市民の勝ち、マフィアの数が残りの人数と同じになればマフィアの勝ち。司会がAIなら、最初に舞台のお話があります。"
+          ]
+        },
+        {
+          "heading": "観戦者の推理",
+          "body": [
+            "聞く席・チャットのみ・脱落した人は観戦者です。🔮でライアーやマフィアだと思う人を選び、変えることもできます。プレイヤーの投票には入らず、誰が誰を選んだかは終わるまで見えません。",
+            "終わると的中した人とこのルームの推理ランキングが出ます。ゲーム中のルームは一覧に「ライアーゲーム中」「マフィア中」と表示されます。"
           ]
         },
         {
@@ -1128,6 +1142,13 @@
           ]
         },
         {
+          "heading": "观众推理",
+          "body": [
+            "在听众席、只聊天或已出局的人是观众。可以在 🔮 里选出你认为的卧底或黑手党，也可以改。不算进玩家投票，谁选了谁要到结束才看得到。",
+            "结束后会显示猜中的人和这个房间的推理排行。正在游戏的房间在列表里显示「谁是卧底进行中」「黑手党进行中」。"
+          ]
+        },
+        {
           "heading": "如果你是房主",
           "body": [
             "点空座位可以选要请上来的人（先是申请的人，再是收听的人）；“上麦申请”里的人点“上麦”，在资料页可以“下麦”“移出”“转让房主”。点“关闭房间”可以选“转让房主并离开”、暂停或关闭。暂停的房间在列表上方点“重新开启”就能打开同一个房间。"
@@ -1523,6 +1544,13 @@
             "Trong 🎭, chọn “Ma sói” rồi nhấn “Bắt đầu”. Cần từ 5 người trở lên ở ghế nói (từ 7 người có 2 ma sói). Chỉ bạn thấy vai của mình, và ma sói biết nhau.",
             "Ban đêm ma sói chọn mục tiêu, bác sĩ chọn người bảo vệ, cảnh sát chọn người kiểm tra. Ban ngày, xem chuyện đã xảy ra, thảo luận bằng ngôn ngữ bạn đang học rồi bỏ phiếu loại một người.",
             "Dân làng thắng khi mọi ma sói bị loại; ma sói thắng khi số ma sói bằng số người còn lại. Khi người dẫn là AI, một câu chuyện ngắn mở đầu trò chơi."
+          ]
+        },
+        {
+          "heading": "Khán giả đoán",
+          "body": [
+            "Người ở ghế nghe, chỉ nhắn tin hoặc đã bị loại là khán giả. Trong 🔮 họ chọn người mình nghĩ là kẻ nói dối hoặc ma sói và có thể đổi. Không tính vào phiếu của người chơi, và không ai thấy ai chọn ai cho đến khi kết thúc.",
+            "Khi kết thúc sẽ thấy ai đoán đúng và bảng xếp hạng đoán của phòng. Phòng đang chơi hiện “Đang chơi kẻ nói dối” hoặc “Đang chơi ma sói” trong danh sách."
           ]
         },
         {
@@ -1924,6 +1952,13 @@
           ]
         },
         {
+          "heading": "Pronostics du public",
+          "body": [
+            "Les personnes aux places d'écoute, en chat seulement ou éliminées sont spectatrices. Dans 🔮, elles désignent qui est selon elles le menteur ou la mafia, et peuvent changer. Cela ne compte pas dans le vote des joueurs, et personne ne voit qui a choisi qui avant la fin.",
+            "À la fin, on voit qui a trouvé et les meilleurs détectives de la salle. Les salles en pleine partie affichent « Jeu du menteur en cours » ou « Mafia en cours » dans la liste."
+          ]
+        },
+        {
           "heading": "Si vous êtes l’hôte",
           "body": [
             "Touchez une place libre pour choisir qui faire monter (les demandes d’abord, puis les auditeurs), ou « Faire monter » dans « Demandes de participation » ; depuis un profil, « Faire descendre », « Exclure » ou « Céder l’animation ». « Fermer le salon » propose « Céder et partir », la pause ou la fermeture. Un salon en pause revient avec « Rouvrir » au-dessus de la liste."
@@ -2319,6 +2354,13 @@
             "In 🎭 scegli «Mafia» e tocca «Inizia». Servono almeno 5 persone ai posti per parlare (2 mafiosi da 7 in su). Solo tu vedi il tuo ruolo, e i mafiosi si conoscono.",
             "Di notte la mafia sceglie un bersaglio, il medico chi proteggere e la polizia chi controllare. Di giorno guardate cos'è successo, parlatene nella lingua che state imparando e votate per far uscire una persona.",
             "Vince il paese quando tutta la mafia è fuori; vince la mafia quando è numerosa quanto gli altri. Con l'IA come conduttore, una breve storia apre la partita."
+          ]
+        },
+        {
+          "heading": "Ipotesi del pubblico",
+          "body": [
+            "Chi è ai posti di ascolto, solo in chat o eliminato è spettatore. In 🔮 sceglie chi pensa sia il bugiardo o la mafia, e può cambiare. Non conta nel voto dei giocatori e nessuno vede chi ha scelto chi fino alla fine.",
+            "Alla fine si vede chi ha indovinato e i migliori detective della stanza. Le stanze con un gioco in corso mostrano «Gioco del bugiardo in corso» o «Mafia in corso» nell'elenco."
           ]
         },
         {
@@ -2720,6 +2762,13 @@
           ]
         },
         {
+          "heading": "Palpites do público",
+          "body": [
+            "Quem está nos lugares de ouvir, só no chat ou já eliminado é espectador. Em 🔮, escolhe quem acha que é o mentiroso ou da máfia, e pode mudar. Não conta na votação dos jogadores, e ninguém vê quem escolheu quem até o fim.",
+            "No fim aparece quem acertou e os melhores detetives da sala. Salas com jogo rolando mostram “Jogo do mentiroso rolando” ou “Máfia rolando” na lista."
+          ]
+        },
+        {
           "heading": "Se for o anfitrião",
           "body": [
             "Toque num lugar vazio para escolher quem chamar (primeiro os pedidos, depois quem está ouvindo), ou “Chamar” em “Pedidos para participar”; no perfil, “Tirar”, “Remover” ou “Passar anfitrião”. “Fechar sala” deixa escolher “Passar e sair”, pausar ou fechar. Uma sala em pausa volta com “Reabrir” acima da lista."
@@ -3115,6 +3164,13 @@
             "В 🎭 выберите «Мафия» и нажмите «Начать». Нужно 5 или больше человек на местах для разговора (с 7 человек — 2 мафии). Свою роль видите только вы, а мафия знает друг друга.",
             "Ночью мафия выбирает цель, доктор — кого защитить, комиссар — кого проверить. Днём посмотрите, что случилось, обсудите на языке, который изучаете, и голосованием выгоните одного.",
             "Мирные побеждают, когда вся мафия выбыла; мафия — когда её столько же, сколько остальных. Если ведущий — ИИ, игра начинается с короткой истории."
+          ]
+        },
+        {
+          "heading": "Догадки зрителей",
+          "body": [
+            "Слушатели, участники только в чате и выбывшие — зрители. В 🔮 они выбирают, кто, по их мнению, лжец или мафия, и могут передумать. Это не идёт в голосование игроков, и никто не видит, кто кого выбрал, до конца игры.",
+            "В конце видно, кто угадал, и лучших сыщиков комнаты. Комнаты, где идёт игра, в списке помечены «Идёт игра «Лжец»» или «Идёт мафия»."
           ]
         },
         {
@@ -3516,6 +3572,13 @@
           ]
         },
         {
+          "heading": "Tebakan penonton",
+          "body": [
+            "Orang di kursi dengar, yang hanya chat, atau yang sudah tersingkir adalah penonton. Di 🔮 mereka memilih siapa yang dikira pembohong atau mafia, dan bisa mengubahnya. Tidak dihitung dalam suara pemain, dan tidak ada yang melihat siapa memilih siapa sampai selesai.",
+            "Di akhir terlihat siapa yang benar dan penebak terbaik di ruangan. Ruangan yang sedang bermain tampil sebagai “Sedang main pembohong” atau “Sedang main mafia” di daftar."
+          ]
+        },
+        {
           "heading": "Kalau kamu host",
           "body": [
             "Ketuk kursi kosong untuk memilih siapa yang dinaikkan (permintaan dulu, lalu pendengar), atau “Naikkan” di “Permintaan bergabung”; dari profil, “Turunkan”, “Keluarkan”, atau “Jadikan host”. “Tutup ruang” memberi pilihan “Serahkan lalu keluar”, jeda, atau tutup. Ruang yang dijeda dibuka lagi dengan “Buka lagi” di atas daftar."
@@ -3911,6 +3974,13 @@
             "في 🎭 اختر «المافيا» واضغط «ابدأ». يلزم 5 أشخاص أو أكثر في مقاعد التحدث (من 7 أشخاص يصبح أفراد المافيا اثنين). لا يرى دورك غيرك، وأفراد المافيا يعرف بعضهم بعضًا.",
             "في الليل تختار المافيا هدفًا، ويختار الطبيب من يحميه، ويختار الشرطي من يفحصه. في النهار انظروا ما حدث، وتحدثوا باللغة التي تتعلمونها، ثم صوّتوا لإخراج شخص واحد.",
             "يفوز المواطنون عندما تخرج المافيا كلها، وتفوز المافيا عندما يتساوى عددها مع الباقين. إذا كان المقدّم الذكاء الاصطناعي، تبدأ اللعبة بقصة قصيرة."
+          ]
+        },
+        {
+          "heading": "تخمينات المشاهدين",
+          "body": [
+            "من في مقاعد الاستماع أو الدردشة فقط أو من خرج من اللعبة مشاهدون. في 🔮 يختارون من يظنونه الكاذب أو المافيا، ويمكنهم التغيير. لا يُحسب ذلك في تصويت اللاعبين، ولا يرى أحد من اختار من حتى النهاية.",
+            "في النهاية يظهر من أصاب وأفضل المخمّنين في الغرفة. الغرف التي فيها لعبة تظهر في القائمة بـ«لعبة الكاذب جارية» أو «المافيا جارية»."
           ]
         },
         {
@@ -4312,6 +4382,13 @@
           ]
         },
         {
+          "heading": "ผู้ชมทายผล",
+          "body": [
+            "คนในที่นั่งฟัง คนที่แชตอย่างเดียว และคนที่ตกรอบแล้วเป็นผู้ชม ใน 🔮 เลือกคนที่คิดว่าเป็นคนโกหกหรือมาเฟียได้ และเปลี่ยนได้ ไม่นับรวมในการโหวตของผู้เล่น และไม่มีใครเห็นว่าใครเลือกใครจนจบเกม",
+            "เมื่อจบจะเห็นคนที่ทายถูกและอันดับนักทายของห้อง ห้องที่กำลังเล่นเกมจะขึ้นในรายการว่า “กำลังเล่นเกมคนโกหก” หรือ “กำลังเล่นมาเฟีย”"
+          ]
+        },
+        {
           "heading": "ถ้าคุณเป็นโฮสต์",
           "body": [
             "แตะที่นั่งว่างเพื่อเลือกคนที่จะเชิญขึ้น (คนที่ขอก่อน แล้วจึงผู้ฟัง) หรือ “เชิญขึ้น” ใน “คำขอร่วมพูด” ในโปรไฟล์มี “เชิญลง” “เชิญออก” และ “ให้เป็นโฮสต์” “ปิดห้อง” ให้เลือก “ส่งต่อโฮสต์แล้วออก” พักห้อง หรือปิด ห้องที่พักไว้เปิดได้อีกด้วย “เปิดอีกครั้ง” เหนือรายการ"
@@ -4707,6 +4784,13 @@
             "🎭 में “माफ़िया” चुनें और “शुरू करें” दबाएँ। बोलने की सीटों पर 5 या ज़्यादा लोग चाहिए (7 लोगों से 2 माफ़िया)। आपकी भूमिका सिर्फ़ आपको दिखती है, और माफ़िया एक-दूसरे को जानते हैं।",
             "रात में माफ़िया निशाना चुनता है, डॉक्टर किसे बचाना है चुनता है और पुलिस किसे जाँचना है। दिन में देखें क्या हुआ, सीखी जा रही भाषा में बात करें, फिर वोट से एक व्यक्ति को बाहर करें।",
             "सारे माफ़िया बाहर हो जाएँ तो नागरिक जीतते हैं; माफ़िया की संख्या बाक़ी लोगों के बराबर हो जाए तो माफ़िया जीतता है। संचालक AI हो तो खेल एक छोटी कहानी से शुरू होता है।"
+          ]
+        },
+        {
+          "heading": "दर्शकों का अनुमान",
+          "body": [
+            "सुनने की सीटों पर बैठे, सिर्फ़ चैट करने वाले और बाहर हो चुके लोग दर्शक हैं। 🔮 में वे चुनते हैं कि झूठा या माफ़िया कौन है, और बदल भी सकते हैं। यह खिलाड़ियों के वोट में नहीं गिना जाता, और खेल ख़त्म होने तक कोई नहीं देखता कि किसने किसे चुना।",
+            "आख़िर में दिखता है किसने सही बताया और रूम के टॉप अनुमान लगाने वाले। जिन रूम में खेल चल रहा है वे सूची में “झूठा कौन खेल चल रहा है” या “माफ़िया चल रहा है” दिखाते हैं।"
           ]
         },
         {

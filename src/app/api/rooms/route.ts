@@ -21,6 +21,7 @@ import {
   readMeta,
   readLines,
   sendSignal,
+  setRoomGame,
 } from "@/lib/server/roomStore";
 import {
   MAX_LINE_CHARS,
@@ -38,7 +39,7 @@ import { readAccount } from "@/lib/server/accountStore";
 import { STUN_ONLY, iceServers } from "@/lib/server/turn";
 import { blockedEitherWay, noteHelped, noteHosted, readBlocked, readFollowing } from "@/lib/server/socialStore";
 import { suspendedResponse } from "@/lib/server/suspension";
-import { currentGame, gameView } from "@/lib/server/roomGameStore";
+import { currentGame, gameView, watchState } from "@/lib/server/roomGameStore";
 
 export const dynamic = "force-dynamic";
 
@@ -190,7 +191,10 @@ export async function POST(request: NextRequest) {
     // 게임 중이면 판을 넘기고(시간이 지난 단계) 이 사람에게 보일 것만 붙인다(api/rooms/game).
     if (result.room.game) {
       const found = await currentGame(roomId, result.room.game, new Set(result.members.map((member) => member.peerId)));
-      return jsonWithCors(request, { ...result, game: found ? gameView(found.game, peerId, found.votes) : null });
+      // 판이 시간이 지나 사라졌으면 방 정보의 표시도 지운다(방 목록의 "게임 중"이 남지 않게).
+      if (!found) await setRoomGame(roomId, null);
+      const watch = found ? await watchState(roomId, found.game, peerId) : undefined;
+      return jsonWithCors(request, { ...result, game: found ? gameView(found.game, peerId, found.votes, watch) : null });
     }
     return jsonWithCors(request, result);
   }

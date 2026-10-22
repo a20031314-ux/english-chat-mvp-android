@@ -464,12 +464,13 @@ export async function reopenRoom(input: {
 }
 
 /** 지금 하는 게임 판을 방 정보에 적거나(시작) 지운다(끝). 방 물음은 이 값이 있을 때만 판을 읽는다. */
-export async function setRoomGame(id: string, gameId: string | null): Promise<RoomMeta | null> {
+export async function setRoomGame(id: string, gameId: string | null, kind?: "liar" | "mafia"): Promise<RoomMeta | null> {
   const meta = await readMeta(id);
   if (!meta) return null;
-  const { game: _old, ...rest } = meta;
+  const { game: _old, gameKind: _oldKind, ...rest } = meta;
   void _old;
-  const next: RoomMeta = gameId ? { ...rest, game: gameId } : rest;
+  void _oldKind;
+  const next: RoomMeta = gameId ? { ...rest, game: gameId, ...(kind ? { gameKind: kind } : {}) } : rest;
   await kvSetJson(metaKey(id), next, ROOM_TTL_SECONDS);
   return next;
 }

@@ -1,6 +1,20 @@
 import { kvDelete, kvGetJson, kvGetJsonMany, kvIncrBy, kvListPush, kvListRange, kvListTrim, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
 import { liarStepKey, liarView, tickLiar, type LiarGame, type LiarView } from "../rooms/liarGame.ts";
 import { mafiaStepKey, mafiaView, tickMafia, type MafiaGame, type MafiaView } from "../rooms/mafiaGame.ts";
+import {
+  addToBoard,
+  isSpectator,
+  predictionRound,
+  scorePredictions,
+  topOfBoard,
+  withWatcher,
+  type Board,
+  type Prediction,
+  type SpectatorResult,
+  type Watcher,
+  type WatchView,
+} from "../rooms/spectators.ts";
+import { ROOM_TTL_SECONDS } from "../rooms/protocol.ts";
 
 /**
  * 말하는 방 게임의 저장·잠금(2026-10-23). 규칙은 `rooms/liarGame.ts`·`rooms/mafiaGame.ts`, AI는 `server/roomGame.ts`.
@@ -8,6 +22,8 @@ import { mafiaStepKey, mafiaView, tickMafia, type MafiaGame, type MafiaView } fr
  * - `room:game:<방>`: 지금 판 하나(2시간). 방 정보의 `game`에 그 판 번호가 있을 때만 방 물음이 읽는다(저장소 명령을 늘리지 않으려고).
  * - `room:gvote:<방>:<판>[:<단계>]:<사람>`: 한 사람의 표·밤 행동 — 사람마다 따로 써서 동시에 내도 덮어쓰지 않는다.
  * - `room:glock:<방>:<판>:<단계>`: 한 단계를 한 번만 넘기는 잠금(SET NX). 여러 사람의 물음이 동시에 넘기려 해도 하나만 쓴다.
+ * - `room:gspec:<방>:<판>`: 이 판에서 한 번이라도 찍은 관전자(이름표·이름), `room:gguess:<방>:<판>:<라운드>:<사람>`: 관전자 한 사람의 추리(라운드마다).
+ * - `room:gboard:<방>`: 그 방의 관전자 추리 순위(맞힌 횟수, 방이 열린 동안).
  * - `room:gwords:<방>`: 최근 제시어(영어) 20개 — 같은 방에서 같은 말이 또 나오지 않게.
  * - `roomgame:v1:<계정>:<날>`: 방장 한 명이 하루에 시작한 판 수(AI 호출 상한).
  * 학습자 문장은 저장하지 않는다 — 설명·토론은 자막 줄(방이 열린 동안만)로 남고, 라이어의 답은 판이 끝나면 판과 함께 사라진다.
@@ -115,9 +131,70 @@ export async function currentGame(
   return { game, votes: stepKey(game) === stepKey(stored) ? votes : await readVotes(roomId, game) };
 }
 
-/** 이 사람에게 보일 판. */
-export function gameView(game: RoomGame, viewer: string, votes: Record<string, string> = {}): RoomGameView {
-  return isMafia(game) ? mafiaView(game, viewer, votes) : liarView(game, viewer, game.phase === "vote" ? votes : {});
+/** 이 사람에게 보일 판(watch = 관전자 쪽, `watchState`). */
+export function gameView(game: RoomGame, viewer: string, votes: Record<string, string> = {}, watch?: WatchView): RoomGameView {
+  const view = isMafia(game) ? mafiaView(game, viewer, votes) : liarView(game, viewer, game.phase === "vote" ? votes : {});
+  return watch ? { ...view, watch } : view;
+}
+
+/* ───────── 관전자 추리 (rooms/spectators.ts) ───────── */
+
+const watchersKey = (room: string, game: string) => `room:gspec:${room}:${game}`;
+const guessKey = (room: string, game: string, round: number, peer: string) => `room:gguess:${room}:${game}:${round}:${peer}`;
+const boardKey = (room: string) => `room:gboard:${room}`;
+
+export async function readWatchers(roomId: string, gameId: string): Promise<Watcher[]> {
+  let watchers: Watcher[] = [];
+  for (const raw of await kvListRange(watchersKey(roomId, gameId))) {
+    try {
+      watchers = withWatcher(watchers, JSON.parse(raw) as Watcher);
+    } catch {
+      // 깨진 줄은 건너뛴다.
+    }
+  }
+  return watchers;
+}
+
+/** 관전자의 추리 하나(그 라운드에 덮어씀). 처음이면 관전자 목록에 이름을 남긴다. */
+export async function writePrediction(roomId: string, game: RoomGame, watcher: Watcher, target: string): Promise<void> {
+  const watchers = await readWatchers(roomId, game.id);
+  if (!watchers.some((row) => row.peerId === watcher.peerId)) {
+    await kvListPush(watchersKey(roomId, game.id), [JSON.stringify(watcher)], GAME_TTL_SECONDS);
+  }
+  await kvSetJson(guessKey(roomId, game.id, predictionRound(game), watcher.peerId), target, GAME_TTL_SECONDS);
+}
+
+/**
+ * 끝난 판의 관전자 결과를 한 번 셈해 판에 남기고 방 순위에 더한다(잠금 — 여러 물음이 동시에 와도 한 번만).
+ * 못 잡으면 다른 물음이 셈하는 중이니 다음 물음에서 받는다.
+ */
+async function settleWatchers(roomId: string, game: RoomGame, watchers: Watcher[]): Promise<SpectatorResult | undefined> {
+  if (game.spectatorResult) return game.spectatorResult;
+  const rounds = isMafia(game) ? Array.from({ length: game.round }, (_, index) => index + 1) : [0];
+  const keys = watchers.flatMap((watcher) => rounds.map((round) => ({ peerId: watcher.peerId, round, key: guessKey(roomId, game.id, round, watcher.peerId) })));
+  if (!(await kvSetJsonIfAbsent(lockKey(roomId, game.id, "spectators"), 1, GAME_TTL_SECONDS))) return undefined;
+  const rows = keys.length ? await kvGetJsonMany<string>(keys.map((row) => row.key)) : [];
+  const predictions: Prediction[] = [];
+  keys.forEach((row, index) => {
+    const target = rows[index];
+    if (typeof target === "string") predictions.push({ peerId: row.peerId, round: row.round, target });
+  });
+  const scored = scorePredictions(game, watchers, predictions);
+  const board = addToBoard((await kvGetJson<Board>(boardKey(roomId))) ?? {}, watchers, scored.hits);
+  await kvSetJson(boardKey(roomId), board, ROOM_TTL_SECONDS);
+  const result: SpectatorResult = { total: scored.total, right: scored.right, counts: scored.counts, board: topOfBoard(board) };
+  await writeGame(roomId, { ...game, spectatorResult: result } as RoomGame);
+  return result;
+}
+
+/** 이 사람에게 보일 관전자 쪽: 찍을 수 있나, 내 추리, 찍은 사람 수, (끝났으면) 결과. */
+export async function watchState(roomId: string, game: RoomGame, viewer: string): Promise<WatchView> {
+  const watchers = await readWatchers(roomId, game.id);
+  const spectator = isSpectator(game, viewer);
+  const open = spectator && game.phase !== "done" && (isMafia(game) || game.phase === "clue" || game.phase === "vote");
+  const mine = spectator && game.phase !== "done" ? await kvGetJson<string>(guessKey(roomId, game.id, predictionRound(game), viewer)) : null;
+  const result = game.phase === "done" ? await settleWatchers(roomId, game, watchers) : undefined;
+  return { can: open, spectator, count: watchers.length, ...(typeof mine === "string" ? { mine } : {}), ...(result ? { result } : {}) };
 }
 
 /** 방장이 오늘 시작할 수 있는 판이 남았나(하나 쓴다). */

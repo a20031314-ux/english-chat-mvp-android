@@ -44,3 +44,32 @@ test("마피아: 밤 행동은 단계마다 따로 저장, 다 고르면 방 물
   // 낮에는 고르는 것이 없다(밤의 표는 다음 단계에 보이지 않음)
   assert.deepEqual(day?.votes, {});
 });
+
+test("관전자 추리: 플레이어 표와 따로, 끝나면 한 번만 셈해 순위에 더함", async () => {
+  const { newLiarGame } = await import("../rooms/liarGame.ts");
+  const { readVotes, watchState, writePrediction, writeVote } = await import("./roomGameStore.ts");
+  const players = ["a", "b", "c"].map((id) => ({ peerId: `p_${id}`, accountId: `lb_${id}`, nickname: id.toUpperCase() }));
+  const g = { ...newLiarGame({ id: "sp1", mode: "ai", moderator: "p_a", players, topic: "food", topicNames: { en: "Food" }, words: { en: "apple" }, laps: 1, now: 0, random: () => 0.99 }), phase: "vote" as const };
+  await writeGame("rtest3", g);
+  await writePrediction("rtest3", g, { peerId: "p_x", accountId: "lb_x", nickname: "X" }, "p_c");
+  await writePrediction("rtest3", g, { peerId: "p_y", accountId: "lb_y", nickname: "Y" }, "p_b");
+  await writeVote("rtest3", g, "p_a", "p_b");
+  // 플레이어 표에 관전자 표가 섞이지 않는다
+  assert.deepEqual(await readVotes("rtest3", g), { p_a: "p_b" });
+  const during = await watchState("rtest3", g, "p_x");
+  assert.equal(during.can, true);
+  assert.equal(during.mine, "p_c");
+  assert.equal(during.count, 2);
+  assert.equal(during.result, undefined);
+  const forPlayer = await watchState("rtest3", g, "p_a");
+  assert.equal(forPlayer.spectator, false);
+  assert.equal(forPlayer.mine, undefined);
+  const done = { ...g, phase: "done" as const, winner: "players" as const };
+  await writeGame("rtest3", done);
+  const first = await watchState("rtest3", done, "p_y");
+  assert.deepEqual(first.result?.right.map((r) => r.nickname), ["X"]);
+  assert.deepEqual(first.result?.board, [{ nickname: "X", hits: 1 }]);
+  // 두 번째 물음은 다시 세지 않는다(판에 남은 결과)
+  const again = await watchState("rtest3", (await readGame("rtest3", "sp1"))!, "p_y");
+  assert.deepEqual(again.result?.board, [{ nickname: "X", hits: 1 }]);
+});

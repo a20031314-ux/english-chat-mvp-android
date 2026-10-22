@@ -12,7 +12,7 @@ import chatBefore271 from "@/lib/guide/chatBefore271.json";
 
 export const runtime = "nodejs";
 
-const GAME_SECTIONS = ["room.game", "room.mafia"];
+const GAME_SECTIONS = ["room.game", "room.mafia", "room.watch"];
 
 /**
  * How to use each tab, in the language the app is read in.

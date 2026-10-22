@@ -475,6 +475,12 @@ function Lobby({
                     {room.followed ? (
                       <span className="rounded-md bg-violet-500/30 px-1.5 py-0.5 text-[11px] text-violet-100">✓ {t.followedRoom}</span>
                     ) : null}
+                    {/* 게임 중인 방(2026-10-23): 들어가면 관전자로 추리할 수 있다. */}
+                    {room.game ? (
+                      <span className="rounded-lg bg-warn/20 px-1.5 py-0.5 text-meta text-amber-100">
+                        {room.gameKind === "mafia" ? `🌙 ${t.lobbyMafia}` : `🎭 ${t.lobbyLiar}`}
+                      </span>
+                    ) : null}
                   </div>
                   <p className="mt-1.5 truncate text-[16px] font-semibold text-white" dir="auto">
                     {room.name}

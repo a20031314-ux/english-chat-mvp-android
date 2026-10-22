@@ -10,6 +10,7 @@
  */
 
 import type { LiarMode, LiarPlayer } from "./liarGame.ts";
+import type { SpectatorResult, WatchView } from "./spectators.ts";
 
 export const MAFIA_MIN_PLAYERS = 5;
 export const MAFIA_MAX_PLAYERS = 8;
@@ -49,6 +50,8 @@ export type MafiaGame = {
   checks?: { round: number; target: string; mafia: boolean }[];
   story?: MafiaStory;
   winner?: MafiaWinner;
+  /** 판이 끝난 뒤 관전자 추리 결과(rooms/spectators.ts). */
+  spectatorResult?: SpectatorResult;
 };
 
 /** 사람 수 → 마피아 수. */
@@ -263,6 +266,8 @@ export type MafiaView = {
   checks?: MafiaGame["checks"];
   story?: MafiaStory;
   winner?: MafiaWinner;
+  /** 관전자 추리(방 물음이 붙임). */
+  watch?: WatchView;
 };
 
 export function mafiaView(game: MafiaGame, viewer: string, picks: Record<string, string> = {}): MafiaView {

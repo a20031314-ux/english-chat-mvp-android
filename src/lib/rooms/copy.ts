@@ -337,6 +337,21 @@ const ko = {
   mafiaMafiaWins: "마피아 승",
   mafiaTownWins: "시민 승",
   mafiaRoles: "역할",
+  specTitle: "관전자 추리",
+  specPickLiar: "누가 라이어일까요?",
+  specPickMafia: "누가 마피아일까요?",
+  specCount: "관전자 {n}명 추리 중",
+  specClosed: "추리 마감",
+  specResult: "관전자 {n}명 중 {m}명이 맞혔어요",
+  specRight: "맞힌 사람: {names}",
+  specRound: "{n}일째",
+  specYouRight: "🎯 맞혔어요!",
+  specYouWrong: "아쉽게 못 맞혔어요",
+  specBoard: "추리 순위",
+  specHits: "{n}번",
+  specMyPick: "내 추리: {name}",
+  lobbyLiar: "라이어 게임 중",
+  lobbyMafia: "마피아 중",
 };
 
 type RoomCopy = typeof ko;
@@ -672,6 +687,21 @@ const en: RoomCopy = {
   mafiaMafiaWins: "Mafia wins",
   mafiaTownWins: "Town wins",
   mafiaRoles: "Roles",
+  specTitle: "Spectator guesses",
+  specPickLiar: "Who's the liar?",
+  specPickMafia: "Who's mafia?",
+  specCount: "{n} spectators guessing",
+  specClosed: "Guessing closed",
+  specResult: "{m} of {n} spectators got it",
+  specRight: "Got it: {names}",
+  specRound: "day {n}",
+  specYouRight: "🎯 You got it!",
+  specYouWrong: "Not this time",
+  specBoard: "Top guessers",
+  specHits: "{n}×",
+  specMyPick: "My guess: {name}",
+  lobbyLiar: "Liar game on",
+  lobbyMafia: "Mafia on",
 };
 
 /** 앱 언어의 문구. 빠진 키는 영어로(copy.test.ts가 빠짐을 막는다). */
