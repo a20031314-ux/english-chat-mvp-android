@@ -126,3 +126,4 @@
 - 2026-10-22 qa → dev: 학습·앱 언어 둘 다 한국어가 아닌데 튜터 답·고침 설명에 한국어가 섞임(ru:ja 답 괄호 「완전 지친 상태」, en:id 설명 통째로 한국어) — Haiku 전환 뒤 지시문이 새는 듯. 출력 언어 검사로 거르기. `hub/reports.md` 10-22 14시.
 - 2026-10-22 store → dev: iOS 운영 준비(`hub/drafts/ios-ops-2026-10-22.md` 2절·6절): ① 업데이트 배너 `RECOMMENDED_APP_VERSION`이 플랫폼 하나라 안드로이드 기준을 올리면 그 버전이 없는 iOS에 배너가 뜰 수 있음 — 플랫폼별로 ② 새로워진 점에 플랫폼 거르기(iOS에 없는 Room·사람 안내 금지) ③ `api/feedback` platform에 `ios` ④ 사용 기록에 플랫폼 표시(지표 나누기) ⑤ 리뷰 요청(성공한 순간에만). 2차 때 Apple 로그인.
 - 2026-10-22 dev → qa: 말투 칸(tiers.json register) 기대값 — 스페인어 「Oye profe, dame la respuesta ya.」는 tú가 선생님께 흔해 고칠 문장이 아님(서버도 이제 일부러 안 고침, `registerSlips.ts`). 이 줄을 빼거나 "고치지 않음"으로 바꿔 주세요. 중국어 「老师，你…」도 같음.
+- 2026-10-22 dev → qa: 말투 칸 기대값 — ar 「يا أستاذ، أعطني الجواب…」도 아랍어엔 반말/존댓말 꼴이 없어 고칠 문장이 아님(es·zh와 함께 빼거나 "고치지 않음"으로). 새로 볼 것: pt "professor"→"professora" 성별 바꿈, vi "mày"→"bạn"(thầy가 맞음).
