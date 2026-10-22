@@ -258,6 +258,10 @@ export function toAnthropicRequest(model: string, params: Omit<CreateParams, "mo
     // 그 모델은 auto로 두고 지시로 부르게 한다. 도구를 안 쓰고 글로 답해도 아래에서 JSON만 뽑는다.
     if (/sonnet|opus/.test(model)) {
       body.tool_choice = { type: "auto" };
+      // Sonnet 5.5는 thinking을 안 적으면 먼저 생각(adaptive)하고, 그 토큰이 max_tokens를 먹는다 — 지도에 넣기·미션·지도가
+      // 짧은 한도에서 끊기고(점검 2026-10-22: pick 8/8, 미션 6, 지도 1 실패) 지도는 45초. JSON 하나를 내는 호출이라
+      // 앞 생각을 끈다("between_tools", disabled는 이 모델이 400). 문서: platform.claude.com build-with-claude/thinking.
+      body.thinking = { type: "between_tools" };
       body.system = [...system, `Answer by calling the ${RESPOND_TOOL.name} tool once with the JSON object as its input.`].join("\n\n");
     } else {
       body.tool_choice = { type: "tool", name: RESPOND_TOOL.name };

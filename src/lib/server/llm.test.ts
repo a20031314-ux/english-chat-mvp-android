@@ -253,3 +253,10 @@ test("Sonnet·Opus는 도구 강제 없이 auto(5.5 세대가 강제를 거절)"
   assert.deepEqual(body.tool_choice, { type: "auto" });
   assert.match(String(body.system), /calling the respond tool/);
 });
+
+test("Sonnet JSON 호출은 앞 생각을 끈다(between_tools), Haiku는 손대지 않는다", () => {
+  const sonnet = toAnthropicRequest("claude-sonnet-5-5", { messages: [{ role: "user", content: "x" }], response_format: { type: "json_object" } });
+  assert.deepEqual((sonnet.body as { thinking?: unknown }).thinking, { type: "between_tools" });
+  const haiku = toAnthropicRequest("claude-haiku-5-5", { messages: [{ role: "user", content: "x" }], response_format: { type: "json_object" } });
+  assert.equal((haiku.body as { thinking?: unknown }).thinking, undefined);
+});
