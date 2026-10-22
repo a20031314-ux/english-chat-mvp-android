@@ -24,6 +24,8 @@ import type OpenAI from "openai";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { targetLanguageFocusHints } from "@/lib/languageFocus";
 import { shouldKeepLearnerLine } from "@/lib/correctionGuard";
+import { registerSlipHint } from "@/lib/registerSlips";
+import { hangulIsStray, stripHangul } from "@/lib/strayHangul";
 import { explainFeelingSlips, promoteFeelingSlip } from "@/lib/feelingAdjectives";
 import { explainVerbObjectSlips, promoteVerbObjectSlip } from "@/lib/verbObjectSlips";
 import { findIrregularSlips, koreanSlipHint, repairIrregularSlips } from "@/lib/koreanSlips";
@@ -481,7 +483,8 @@ async function restateExplanation(
         restated,
         langs.interfaceLanguage,
         langs.targetLanguage,
-      )
+      ) &&
+      !hangulIsStray(restated, langs.interfaceLanguage, langs.targetLanguage)
     ) {
       return restated;
     }
@@ -556,7 +559,11 @@ async function runChat(
   const mixedHint = mixed.length
     ? `Words from another language in message: ${mixed.map((w) => `"${w}"`).join(", ")}. Unless one is a name of a person, place or brand, put the ${learningLanguageName(langs.targetLanguage)} word in corrected and name it in the explanation.`
     : "";
-  const noticed = [koHint, mixedHint].filter(Boolean).join(" ");
+  // 다른 학습 언어의 윗사람·손님께 반말(ja·fr·de·ru, registerSlips.ts) — 한국어의 casualToElder와 같은 일.
+  const registerHint = options.ownLanguage
+    ? ""
+    : registerSlipHint(message, langs.targetLanguage, learningLanguageName(langs.targetLanguage));
+  const noticed = [koHint, registerHint, mixedHint].filter(Boolean).join(" ");
   const payload = JSON.stringify({
     message,
     recent: recent.slice(-8),
@@ -656,11 +663,13 @@ async function runChat(
     normCompare(corrected) !== normCompare(message);
   if (
     explanation.trim() &&
-    explanationInLearningLanguage(
+    (explanationInLearningLanguage(
       explanation,
       langs.interfaceLanguage,
       langs.targetLanguage,
-    )
+    ) ||
+      // 한국어와 상관없는 대화의 설명에 한국어가 섞이면(2026-10-22 점검, Haiku) 앱 언어로 다시 쓰게.
+      hangulIsStray(explanation, langs.interfaceLanguage, langs.targetLanguage))
   ) {
     explanation = await restateExplanation(openai, explanation, langs);
   }
@@ -685,10 +694,16 @@ async function runChat(
   }
 
   return {
-    assistantMessage: reply,
-    spokenReply: spoken,
+    assistantMessage: withoutStrayHangul(reply, langs),
+    spokenReply: withoutStrayHangul(spoken, langs),
     correction: { corrected, natural, explanation },
   };
+}
+
+/** 한국어와 상관없는 대화의 답에 섞인 한글 덩어리를 뺀다(strayHangul.ts). 다 빠져 비면 원래 답을 둔다. */
+function withoutStrayHangul(text: string, langs: ChatLanguages): string {
+  if (!hangulIsStray(text, langs.interfaceLanguage, langs.targetLanguage)) return text;
+  return stripHangul(text) || text;
 }
 
 /** 새 앱 스트림의 답 호출: 교정 없이 답만(짧게 → 빨리). */
@@ -736,9 +751,11 @@ async function runChatReply(
   const assistantMessage = asText(parsed.assistantMessage).trim();
   if (!assistantMessage) throw new Error(`empty reply: ${raw.slice(0, 200)}`);
   return {
-    assistantMessage,
+    assistantMessage: withoutStrayHangul(assistantMessage, langs),
     spokenReply:
-      langs.interfaceLanguage === langs.targetLanguage ? "" : asText(parsed.spokenReply).trim(),
+      langs.interfaceLanguage === langs.targetLanguage
+        ? ""
+        : withoutStrayHangul(asText(parsed.spokenReply).trim(), langs),
   };
 }
 
