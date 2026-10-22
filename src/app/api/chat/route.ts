@@ -25,6 +25,7 @@ import { getOpenAIClient } from "@/lib/server/openai";
 import { targetLanguageFocusHints } from "@/lib/languageFocus";
 import { shouldKeepLearnerLine } from "@/lib/correctionGuard";
 import { explainFeelingSlips, promoteFeelingSlip } from "@/lib/feelingAdjectives";
+import { explainVerbObjectSlips, promoteVerbObjectSlip } from "@/lib/verbObjectSlips";
 import { findIrregularSlips, koreanSlipHint, repairIrregularSlips } from "@/lib/koreanSlips";
 import {
   getDailyUsed,
@@ -629,13 +630,23 @@ async function runChat(
     natural = shouldKeepLearnerLine(message, natural, langs.targetLanguage) ? message : natural;
     explanation = "";
   }
-  // 감정 형용사 -ing/-ed를 natural에서만 고친 줄 → corrected에도, 설명은 앱 언어로(2026-10-22, Haiku 운영 확인).
+  // natural에서만 고친 영어 단골 실수 → corrected에도, 설명은 앱 언어로(2026-10-22, Haiku 운영 확인):
+  // 감정 형용사 -ing/-ed, "explain me X"류 동사 꼴.
   if (langs.targetLanguage === "en" && !options.ownLanguage) {
+    const notes: string[] = [];
+    const wasUnchanged = normCompare(corrected) === normCompare(message);
     const feeling = promoteFeelingSlip(corrected, natural);
     if (feeling) {
-      const wasUnchanged = normCompare(corrected) === normCompare(message);
       corrected = feeling.corrected;
-      const note = explainFeelingSlips(feeling.slips, langs.interfaceLanguage);
+      notes.push(explainFeelingSlips(feeling.slips, langs.interfaceLanguage));
+    }
+    const verbObject = promoteVerbObjectSlip(corrected, natural);
+    if (verbObject) {
+      corrected = verbObject.corrected;
+      notes.push(explainVerbObjectSlips(verbObject.slips, langs.interfaceLanguage));
+    }
+    if (notes.length) {
+      const note = notes.join(" ");
       explanation = wasUnchanged || !explanation.trim() ? note : `${explanation} ${note}`;
     }
   }
