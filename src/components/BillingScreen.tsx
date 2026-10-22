@@ -196,8 +196,11 @@ export function BillingScreen({
   const [notice, setNotice] = useState<string | null>(null);
   // 진단(TestFlight 전용): 스토어가 실제로 내준 상품. 기술 값이라 번역하지 않는다.
   const [storeDiag, setStoreDiag] = useState<string | null>(null);
+  // 안드로이드·심사 빌드에서도 볼 수 있게: 위 요금 카드를 다섯 번 누르면 켜진다(숨은 점검, 2026-10-23 — 라이트·플러스가 안 뜨던 것).
+  const [diagTaps, setDiagTaps] = useState(0);
+  const showStoreDiag = turnDiagnosticsEnabled() || diagTaps >= 5;
   useEffect(() => {
-    if (!isOpen || !turnDiagnosticsEnabled()) return;
+    if (!isOpen || !showStoreDiag) return;
     let cancelled = false;
     void billingDiagnostics().then((text) => {
       if (!cancelled) setStoreDiag(text);
@@ -205,7 +208,7 @@ export function BillingScreen({
     return () => {
       cancelled = true;
     };
-  }, [isOpen]);
+  }, [isOpen, showStoreDiag]);
   const [dailyUsed, setDailyUsed] = useState(0);
   const [dailyLimit, setDailyLimit] = useState(FREE_DAILY_CHAT_LIMIT);
   const [offers, setOffers] = useState<PlanOffer[] | null>(null);
@@ -378,7 +381,10 @@ export function BillingScreen({
           aria-labelledby="billing-screen-title"
           lang={locale}
         >
-          <div className="rounded-2xl border border-white/10 bg-[#121212] px-4 py-4">
+          <div
+            className="rounded-2xl border border-white/10 bg-[#121212] px-4 py-4"
+            onClick={() => setDiagTaps((n) => n + 1)}
+          >
             <p className="text-[11px] font-semibold uppercase tracking-wide text-slate-500">
               {planName(tier, ui)}
             </p>
