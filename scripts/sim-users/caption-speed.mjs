@@ -3,7 +3,10 @@
  * 듣는 사람 화면에 "…" 말풍선과 글이 언제 뜨는지 잰다(받아쓰기 빠르게, 2026-10-20).
  *
  *   npm run build:capacitor
- *   NODE_USE_ENV_PROXY=1 node scripts/sim-users/caption-speed.mjs --audio <말소리.wav> [--ui ko] [--target en] [--expect "낱말1,낱말2"]
+ *   NODE_USE_ENV_PROXY=1 node scripts/sim-users/caption-speed.mjs --audio <말소리.wav> [--ui ko] [--target en] [--expect "낱말1,낱말2"] [--fix-check]
+ *
+ * --fix-check(내 줄 교정, 2026-10-22): 받아쓴 뒤 말하는 사람 화면에 "✎ 고칠 곳이 있어요" 칩이 뜨는지 → 눌러 고친 문장이 열리는지,
+ * 듣는 사람 화면에는 칩이 없는지 본다(틀린 문장을 녹음 파일로). speaker-fix.png·speaker-fix-open.png·listener.png.
  *
  * 녹음 파일: 앞에 조용함 → 말 → 짧은 쉼(0.6~1초) → 말 → 긴 조용함. 크롬 가짜 마이크는 파일을 되풀이하므로 첫 바퀴만 잰다.
  * 사람(숨김 임시 계정, 끝에 삭제): 말하는 사람(방장, 말하기 자리) · 듣는 사람(👂). 결과: tmp/sim-users/<실행>/caption-speed/ (화면·시간표 json).
@@ -22,6 +25,7 @@ if (!AUDIO || !fs.existsSync(AUDIO)) throw new Error("--audio <wav> 가 필요�
 const UI = value("ui", "ko");
 const TARGET = value("target", "en");
 const EXPECT = (value("expect", "") || "").split(",").map((w) => w.trim()).filter(Boolean);
+const FIX_CHECK = args.includes("--fix-check");
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), "../..");
 const WWW = path.join(ROOT, "www");
 const API = (process.env.API_BASE || "https://english-chat-mvp.vercel.app").replace(/\/$/, "");
@@ -168,6 +172,28 @@ try {
   await Promise.all([watch(sp, "speaker", 20_000), watch(lp, "listener", 20_000)]);
   await sp.screenshot({ path: path.join(OUT, "speaker.png") });
   await lp.screenshot({ path: path.join(OUT, "listener.png") });
+  if (FIX_CHECK) {
+    const tc = roomCopy(UI);
+    const chip = sp.getByRole("button", { name: new RegExp(tc.fixChip) }).first();
+    const shown = await chip.waitFor({ timeout: 20_000 }).then(() => true).catch(() => false);
+    console.log(`교정 칩(말하는 사람): ${shown ? "보임" : "안 보임"}`);
+    if (shown) {
+      await chip.scrollIntoViewIfNeeded().catch(() => undefined);
+      await sp.screenshot({ path: path.join(OUT, "speaker-fix.png") });
+      await chip.click();
+      const opened = await sp.getByText(tc.fixTitle).first().waitFor({ timeout: 15_000 }).then(() => true).catch(() => false);
+      await wait(500);
+      await sp.screenshot({ path: path.join(OUT, "speaker-fix-open.png") });
+      const card = await sp.evaluate((title) => {
+        const node = [...document.querySelectorAll("p")].find((p) => p.textContent?.includes(title));
+        return node?.parentElement?.parentElement?.textContent?.trim() ?? "";
+      }, tc.fixTitle);
+      console.log(`눌러 열기: ${opened ? "열림" : "안 열림"} · ${card}`);
+    }
+    const leaked = await lp.getByText(tc.fixChip).count();
+    console.log(`듣는 사람 화면의 교정 칩: ${leaked}개`);
+    await lp.screenshot({ path: path.join(OUT, "listener.png") });
+  }
 
   const rel = events.map((e) => ({ ...e, t: ((e.at - t0) / 1000).toFixed(1) }));
   fs.writeFileSync(path.join(OUT, "timeline.json"), JSON.stringify(rel, null, 2));
