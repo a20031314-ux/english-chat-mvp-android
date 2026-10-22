@@ -10,6 +10,7 @@ import { getLearningLanguage, isLearningLanguageCode, learningLanguageUiLabel } 
 import { LearningLanguageFlag } from "@/components/LearningLanguageFlag";
 import { Face, ProfileSheet, loadProfile } from "./RoomParts";
 import { chipLabel, fillCount, profileCopy } from "@/lib/account/profileCopy";
+import { countryFlag, countryName } from "@/lib/account/countries";
 
 /**
  * 사람 목록 (말하는 방 → 사람). 최근 2주 안에 앱을 쓴 사람이 최근 순으로 쭉 뜨고,
@@ -161,7 +162,13 @@ export function PeopleList({
                 <div className="flex items-start gap-2">
                   <button type="button" onClick={() => setOpen(person)} className="min-w-0 flex-1 text-start">
                     <p className="truncate text-[16px] font-semibold text-white" dir="auto">
-                      {person.nickname}
+                      {/* 이름은 따로 방향을 잡아(섞인 글자·아랍어) 국기가 이름 사이에 끼지 않게. */}
+                      <bdi>{person.nickname}</bdi>
+                      {person.country ? (
+                        <span className="ms-1.5 text-chat" title={countryName(person.country, locale)} aria-label={countryName(person.country, locale)}>
+                          {countryFlag(person.country)}
+                        </span>
+                      ) : null}
                     </p>
                     <div className="mt-1 flex flex-wrap items-center gap-1">
                       <LangChip code={speaksOf(person)} locale={locale} learning={false} />

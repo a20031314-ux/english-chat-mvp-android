@@ -7,6 +7,8 @@ import { INTEREST_IDS, MEET_MODES, MEET_TIMES, WORK_IDS } from "./profileFacts.t
  */
 const ko = {
   aboutMe: "나에 대해",
+  country: "국적",
+  countryNone: "선택 안 함",
   native: "모국어",
   speaks: "할 수 있는 언어",
   interests: "관심사",
@@ -85,6 +87,8 @@ type ProfileCopy = typeof ko;
 
 const en: ProfileCopy = {
   aboutMe: "About me",
+  country: "Nationality",
+  countryNone: "Not set",
   native: "Native language",
   speaks: "Languages I speak",
   interests: "Interests",
@@ -161,6 +165,8 @@ const en: ProfileCopy = {
 
 const LOCALES: Record<string, ProfileCopy> = {
   es: {
+    country: "Nacionalidad",
+    countryNone: "Sin elegir",
     aboutMe: "Sobre mí",
     native: "Lengua materna",
     speaks: "Idiomas que hablo",
@@ -236,6 +242,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Vocabulario",
   },
   ja: {
+    country: "国籍",
+    countryNone: "未設定",
     aboutMe: "自分について",
     native: "母語",
     speaks: "話せる言語",
@@ -311,6 +319,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "語彙",
   },
   zh: {
+    country: "国籍",
+    countryNone: "未选择",
     aboutMe: "关于我",
     native: "母语",
     speaks: "会说的语言",
@@ -386,6 +396,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "词汇",
   },
   vi: {
+    country: "Quốc tịch",
+    countryNone: "Chưa chọn",
     aboutMe: "Về tôi",
     native: "Tiếng mẹ đẻ",
     speaks: "Ngôn ngữ tôi nói được",
@@ -461,6 +473,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Từ vựng",
   },
   fr: {
+    country: "Nationalité",
+    countryNone: "Non précisée",
     aboutMe: "À propos de moi",
     native: "Langue maternelle",
     speaks: "Langues que je parle",
@@ -536,6 +550,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Vocabulaire",
   },
   it: {
+    country: "Nazionalità",
+    countryNone: "Non indicata",
     aboutMe: "Su di me",
     native: "Lingua madre",
     speaks: "Lingue che parlo",
@@ -611,6 +627,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Lessico",
   },
   pt: {
+    country: "Nacionalidade",
+    countryNone: "Não definida",
     aboutMe: "Sobre mim",
     native: "Língua materna",
     speaks: "Línguas que falo",
@@ -686,6 +704,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Vocabulário",
   },
   ru: {
+    country: "Гражданство",
+    countryNone: "Не выбрано",
     aboutMe: "Обо мне",
     native: "Родной язык",
     speaks: "Языки, на которых говорю",
@@ -761,6 +781,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Лексика",
   },
   id: {
+    country: "Kewarganegaraan",
+    countryNone: "Belum dipilih",
     aboutMe: "Tentang saya",
     native: "Bahasa ibu",
     speaks: "Bahasa yang saya kuasai",
@@ -836,6 +858,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "Kosakata",
   },
   ar: {
+    country: "الجنسية",
+    countryNone: "غير محددة",
     aboutMe: "عنّي",
     native: "اللغة الأم",
     speaks: "لغات أتحدثها",
@@ -911,6 +935,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "المفردات",
   },
   th: {
+    country: "สัญชาติ",
+    countryNone: "ยังไม่เลือก",
     aboutMe: "เกี่ยวกับฉัน",
     native: "ภาษาแม่",
     speaks: "ภาษาที่พูดได้",
@@ -986,6 +1012,8 @@ const LOCALES: Record<string, ProfileCopy> = {
     f_words: "คำศัพท์",
   },
   hi: {
+    country: "नागरिकता",
+    countryNone: "चुना नहीं",
     aboutMe: "मेरे बारे में",
     native: "मातृभाषा",
     speaks: "जो भाषाएँ बोलता/बोलती हूँ",

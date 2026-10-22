@@ -115,6 +115,7 @@ export async function POST(request: NextRequest) {
           lastSeen: row.presence.at,
           isFollowing: following.includes(account.id),
           native: facts.native,
+          country: facts.country,
           interests: facts.interests.slice(0, 3),
           sharedInterests: shared,
           meetModes: facts.meetModes,

@@ -5,8 +5,9 @@
  * 자유 글은 자기소개 하나뿐이다. 학습 상태(실수·약점·교정 비율·레벨·문장)는 여기에 없고,
  * 켜는 스위치도 만들지 않는다 — 남에게 해 준 것만 공개, 내 학습 상태는 숨김.
  *
- * 다른 모듈을 가져오지 않는다(account/shared.ts와 같은 이유 — 테스트가 상대 경로만 푼다). 순수.
+ * 다른 모듈은 상대 경로로만 가져온다(account/shared.ts와 같은 이유 — 테스트가 상대 경로만 푼다). 순수.
  */
+import { isCountryCode } from "./countries.ts";
 
 /** 관심사 칩. 순서가 화면 순서. 새 칩은 끝에 더하고, 있던 id는 바꾸지 않는다(저장된 값). */
 export const INTEREST_IDS = [
@@ -48,6 +49,8 @@ export const INTERESTS_MAX = 5;
 export const SPEAKS_MAX = 3;
 
 export type ProfileFacts = {
+  /** 국적(ISO 3166-1 두 글자, 화면은 국기로). 안 정했으면 null. */
+  country: string | null;
   /** 모국어(앱 언어와 따로). 모르면 null — 그때 화면은 예전처럼 앱 언어를 쓴다. */
   native: string | null;
   /** 할 수 있는 언어(수준 없음), 모국어 빼고 최대 3. */
@@ -59,6 +62,7 @@ export type ProfileFacts = {
 };
 
 export const EMPTY_FACTS: ProfileFacts = {
+  country: null,
   native: null,
   speaks: [],
   interests: [],
@@ -112,7 +116,9 @@ function pickLangs(value: unknown, max: number, except: string | null): string[]
 export function cleanFacts(value: unknown): ProfileFacts {
   const raw = value && typeof value === "object" ? (value as Record<string, unknown>) : {};
   const native = typeof raw.native === "string" && LANG.test(raw.native) ? raw.native : null;
+  const country = typeof raw.country === "string" ? raw.country.toUpperCase() : null;
   return {
+    country: isCountryCode(country) ? country : null,
     native,
     speaks: pickLangs(raw.speaks, SPEAKS_MAX, native),
     interests: pickIds(raw.interests, INTEREST_IDS, INTERESTS_MAX),

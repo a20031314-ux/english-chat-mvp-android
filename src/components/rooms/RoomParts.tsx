@@ -16,6 +16,7 @@ import type { PublicProfile } from "@/lib/rooms/social";
 import type { HowToSayExpression } from "@/lib/howToSay";
 import { focusOf, pickTokens, questionCount } from "@/lib/rooms/quote";
 import { FactsView, ThankButton } from "@/components/account/ProfileFacts";
+import { countryFlag, countryName } from "@/lib/account/countries";
 import type { MediaRef, MediaScope } from "@/lib/rooms/media";
 import { MediaError, uploadImage, type MediaUploadError } from "@/lib/rooms/mediaClient";
 import { isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
@@ -215,7 +216,12 @@ export function ProfileSheet({
             <Face accountId={accountId} name={name} size={64} />
             <div className="min-w-0 flex-1">
               <p className="truncate text-lg font-semibold text-white" dir="auto">
-                {name}
+                <bdi>{name}</bdi>
+                {profile?.facts?.country ? (
+                  <span className="ms-1.5" title={countryName(profile.facts.country, locale)} aria-label={countryName(profile.facts.country, locale)}>
+                    {countryFlag(profile.facts.country)}
+                  </span>
+                ) : null}
               </p>
               {member?.langs?.length ? (
                 <p className="text-xs text-slate-400">

@@ -61,3 +61,11 @@ test("튜터 줄: 관심사·하는 일이 있을 때만, 튜터 사용을 끄�
   assert.equal(factsPrompt(facts, { ...DEFAULT_SHOW, tutor: false }), "");
   assert.equal(factsPrompt(cleanFacts({ native: "ko" }), DEFAULT_SHOW), "");
 });
+
+test("국적: 두 글자 나라 코드만(소문자도 받아 대문자로), 역사 속·예약 코드는 버림", () => {
+  assert.equal(cleanFacts({ country: "kr" }).country, "KR");
+  assert.equal(cleanFacts({ country: "TH" }).country, "TH");
+  assert.equal(cleanFacts({ country: "SU" }).country, null);
+  assert.equal(cleanFacts({ country: "EU" }).country, null);
+  assert.equal(cleanFacts({ country: "Korea" }).country, null);
+});

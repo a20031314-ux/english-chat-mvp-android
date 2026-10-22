@@ -43,6 +43,8 @@ export type PersonCard = {
   isFollowing: boolean;
   /** 모국어(정했으면 — 화면은 ui 대신 이걸 "할 줄 아는 말"로). */
   native?: string | null;
+  /** 국적(ISO 두 글자, 화면은 국기). */
+  country?: string | null;
   /** 관심사 칩 앞 3개와 나와 겹치는 수. */
   interests?: string[];
   sharedInterests?: number;

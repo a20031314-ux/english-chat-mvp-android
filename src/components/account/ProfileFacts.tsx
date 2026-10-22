@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import {
   INTEREST_IDS,
   INTERESTS_MAX,
@@ -14,7 +14,9 @@ import {
 } from "@/lib/account/profileFacts";
 import { chipLabel, fillCount, profileCopy, type ProfileCopy } from "@/lib/account/profileCopy";
 import type { ProfileBadges } from "@/lib/rooms/contribution";
-import { SUPPORTED_LEARNING_LANGUAGES, learningLanguageUiLabel } from "@/lib/learningLanguages";
+import { SUPPORTED_LEARNING_LANGUAGES, getLearningLanguage, isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
+import { COUNTRY_CODES, countryFlag, countryName } from "@/lib/account/countries";
+import { LearningLanguageFlag } from "@/components/LearningLanguageFlag";
 import { RoomApiError, sendThank, type ThankTarget } from "@/lib/rooms/client";
 
 /**
@@ -69,8 +71,28 @@ export function FactsEditor({
 }) {
   const t = profileCopy(locale);
   const langs = SUPPORTED_LEARNING_LANGUAGES.map((language) => language.code);
+  // 나라 이름은 앱 언어로, 그 언어의 가나다(알파벳) 순.
+  const countries = useMemo(() => {
+    const collator = new Intl.Collator(locale);
+    return COUNTRY_CODES.map((code) => ({ code, name: countryName(code, locale) })).sort((a, b) => collator.compare(a.name, b.name));
+  }, [locale]);
   return (
     <div>
+      <Section title={t.country}>
+        <select
+          value={facts.country ?? ""}
+          onChange={(event) => onChange({ ...facts, country: event.target.value || null })}
+          aria-label={t.country}
+          className="w-full rounded-lg border border-line bg-surface-sunk px-3 py-2 text-body text-ink"
+        >
+          <option value="">{t.countryNone}</option>
+          {countries.map(({ code, name }) => (
+            <option key={code} value={code}>
+              {countryFlag(code)} {name}
+            </option>
+          ))}
+        </select>
+      </Section>
       <Section title={t.native}>
         {langs.map((code) => (
           <Chip
@@ -206,6 +228,17 @@ function goalText(t: ProfileCopy, goal: { use: string | null; focus: string[] })
   return parts.length ? `🎯 ${parts.join(" · ")}` : "";
 }
 
+/** 언어 이름 앞에 그 언어의 국기(사람 카드의 언어 칩과 같은 그림). */
+function LangFlagChip({ code, locale }: { code: string; locale: string }) {
+  if (!isLearningLanguageCode(code)) return null;
+  return (
+    <span className="inline-flex items-center gap-1 rounded-lg bg-white/[0.06] px-1.5 py-0.5 text-slate-200">
+      <LearningLanguageFlag language={getLearningLanguage(code)} className="h-3 w-4" />
+      {learningLanguageUiLabel(code, locale)}
+    </span>
+  );
+}
+
 /** 남의 프로필 시트에 붙는 사실·칸(켠 것만 서버가 보냄). 아무것도 없으면 그리지 않는다. */
 export function FactsView({
   locale,
@@ -226,24 +259,38 @@ export function FactsView({
   const goalLine = goal ? goalText(t, goal) : "";
   if (goalLine) lines.push(goalLine);
   const langs = facts ? [facts.native, ...facts.speaks].filter((code): code is string => Boolean(code)) : [];
+  const hasCountry = Boolean(facts?.country);
   const chips = facts ? [...facts.interests.map((id) => chipLabel(t, "i", id)), ...(facts.work ? [chipLabel(t, "w", facts.work)] : [])] : [];
   const meet = facts ? [...facts.meetModes.map((id) => chipLabel(t, "m", id)), ...facts.meetTimes.map((id) => chipLabel(t, "t", id))] : [];
-  if (!lines.length && !langs.length && !chips.length && !meet.length) return null;
+  if (!lines.length && !langs.length && !chips.length && !meet.length && !hasCountry) return null;
   return (
     <div className="mt-3 space-y-2">
-      {langs.length ? (
+      {facts?.country ? (
         <p className="text-caption text-slate-300">
+          <span className="text-slate-500">{t.country}</span>{" "}
+          <span className="text-body" aria-hidden>
+            {countryFlag(facts.country)}
+          </span>{" "}
+          {countryName(facts.country, locale)}
+        </p>
+      ) : null}
+      {langs.length ? (
+        <div className="flex flex-wrap items-center gap-1.5 text-caption text-slate-300">
           {facts?.native ? (
-            <span className="me-2">
-              <span className="text-slate-500">{t.native}</span> {learningLanguageUiLabel(facts.native, locale)}
-            </span>
+            <>
+              <span className="text-slate-500">{t.native}</span>
+              <LangFlagChip code={facts.native} locale={locale} />
+            </>
           ) : null}
           {facts && facts.speaks.length ? (
-            <span>
-              <span className="text-slate-500">{t.speaks}</span> {facts.speaks.map((code) => learningLanguageUiLabel(code, locale)).join(", ")}
-            </span>
+            <>
+              <span className="ms-1 text-slate-500">{t.speaks}</span>
+              {facts.speaks.map((code) => (
+                <LangFlagChip key={code} code={code} locale={locale} />
+              ))}
+            </>
           ) : null}
-        </p>
+        </div>
       ) : null}
       {chips.length ? (
         <div className="flex flex-wrap gap-1.5">

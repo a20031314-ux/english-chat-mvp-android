@@ -594,7 +594,8 @@ const SCENES = [
     id: "people-profile",
     label: "사람 — 프로필(팔로우·메시지)",
     async run({ page, wait, state }) {
-      await page.getByText(state.hostNickname, { exact: true }).first().click();
+      // 이름 옆에 국기가 붙어(2026-10-23) 글자가 이름과 딱 맞지 않는다 — 사진 버튼(aria-label = 이름)을 누른다.
+      await page.getByRole("button", { name: state.hostNickname, exact: true }).first().click();
       await wait(3000);
       await page.unroute("**/api/social").catch(() => undefined);
     },
@@ -736,8 +737,8 @@ async function prepareSocial(state) {
   // 사람 목록 카드: 이 실행의 테스트 계정만.
   const now = Date.now();
   state.peopleCards = [
-    { id: host.account.id, nickname: state.hostNickname, bio: bank.askGrowth[target], hasPhoto: true, ui: target, learn: locale, lastSeen: now - 60_000, isFollowing: false, native: target, interests: ["music", "anime", "cooking"], sharedInterests: 2, help: 12, meetModes: ["call"] },
-    { id: friend.account.id, nickname: state.friendNickname, bio: bank.mapGoal[locale], hasPhoto: true, ui: locale, learn: target, lastSeen: now - 3 * 3600_000, isFollowing: true, native: locale, interests: ["books"], sharedInterests: 0, meetModes: ["text"] },
+    { id: host.account.id, nickname: state.hostNickname, bio: bank.askGrowth[target], hasPhoto: true, ui: target, learn: locale, lastSeen: now - 60_000, isFollowing: false, country: { ja: "JP", en: "GB", es: "MX", ko: "KR" }[target] ?? null, native: target, interests: ["music", "anime", "cooking"], sharedInterests: 2, help: 12, meetModes: ["call"] },
+    { id: friend.account.id, nickname: state.friendNickname, bio: bank.mapGoal[locale], hasPhoto: true, ui: locale, learn: target, lastSeen: now - 3 * 3600_000, isFollowing: true, country: { ko: "KR", ja: "JP", ar: "SA", en: "CA" }[locale] ?? null, native: locale, interests: ["books"], sharedInterests: 0, meetModes: ["text"] },
   ];
   await api(me.uid, "/api/social", { action: "follow", target: friend.account.id }, me.token);
   state.hostInvite = (await api(host.uid, "/api/invite", { action: "mine" }, host.token)).body?.code ?? "";
@@ -772,12 +773,12 @@ for (const combo of COMBOS) {
     people.push(me);
     // 모든 테스트 계정은 숨김 — 실제 사용자의 "사람" 목록에 뜨지 않게.
     // 나에 대한 사실(칩, 2026-10-23) — 편집 시트·프로필에 보이게.
-    const meFacts = { native: locale, speaks: [target], interests: ["music", "travel", "cooking"], work: "student", meetModes: ["call", "text"], meetTimes: ["evening"] };
+    const meFacts = { country: { ko: "KR", ja: "JP", ar: "EG", en: "US" }[locale] ?? null, native: locale, speaks: [target], interests: ["music", "travel", "cooking"], work: "student", meetModes: ["call", "text"], meetTimes: ["evening"] };
     await api(uid, "/api/account/profile", { nickname: bank.nickname[locale], bio: bank.mapGoal[locale], photo: PHOTO, hidden: true, facts: meFacts }, me.token);
     const host = await signup(`${uid}-host`, "h");
     people.push(host);
     const hostNickname = `${bank.nickname[target]}✦`;
-    await api(host.uid, "/api/account/profile", { nickname: hostNickname, bio: bank.askGrowth[target], photo: PHOTO, hidden: true, facts: { native: target, interests: ["music", "anime", "cooking"], work: "worker", meetModes: ["call"] } }, host.token);
+    await api(host.uid, "/api/account/profile", { nickname: hostNickname, bio: bank.askGrowth[target], photo: PHOTO, hidden: true, facts: { country: { ja: "JP", en: "GB", es: "MX", ko: "KR" }[target] ?? null, native: target, interests: ["music", "anime", "cooking"], work: "worker", meetModes: ["call"] } }, host.token);
     state.hostNickname = hostNickname;
     const friend = await signup(`${uid}-friend`, "f");
     people.push(friend);
