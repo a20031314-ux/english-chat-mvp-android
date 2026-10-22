@@ -47,6 +47,7 @@ const sweepKey = (day: string) => `media:v1:sweep:${day}`;
 const BOARD_META_TTL = 365 * 24 * 60 * 60;
 const SWEEP_LIST_TTL = 40 * 24 * 60 * 60;
 
+/** Vercel Blob 연결 때 "Add a read-write token env var"를 체크해야 이 값이 생긴다(새 연결 방식은 기본으로 안 만듦, 2026-10-22). */
 export function blobConfigured(): boolean {
   return Boolean(process.env.BLOB_READ_WRITE_TOKEN?.trim());
 }
