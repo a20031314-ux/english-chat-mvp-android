@@ -42,13 +42,13 @@
 - Play 출시·서명은 사람이 한다. Claude는 파일과 PR까지 (`fastlane/STORE_AUTOMATION.md`).
 - 요금 개편 최종(2026-10-16, `hub/drafts/pricing-2026-10.md` "최종"·"구현", 서버 반영·앱 2.67): 3,900 / 5,500원 새 상품 + 기존 `premium_monthly`를 8,900원으로.
   매일 자유 통화 7 / 10 / 15분(오늘의 팩 별도, 하루 리셋·이월 없음), 넘으면 구매 포인트, 채팅 하루 10 / 30 / 50 / 100번,
-  8,900원만 이달의 영상 전체·추가 팩 2번. 8,900원 혜택 전환은 Play 가격 변경일에 `PREMIUM_DAILY_PLAN_FROM`(`src/lib/billing/plans.ts`)을 켠다 — 그때까지 프리미엄은 9,900원·80포인트 그대로.
+  8,900원만 이달의 영상 전체·추가 팩 2번. **프리미엄 하루 시간 방식 켬(2026-10-23, 사용자 "바꿔줘")** — `PREMIUM_DAILY_PLAN_FROM="2026-10-22"`(UTC), Play·App Store 프리미엄 가격 8,900원은 사람이 같은 날. 10월은 80포인트 유지, 11월부터 없음.
 
 - 스크린샷 모음(2026-10-20): https://claude.ai/artifact/VP562k9QhrFiybAYv4ggbW — 모든 채팅이 찍은 화면을 올리고(`hub/SHOTS.md`), 사용자가 사용법 칸에 넣을 그림을 고른다.
 
 ## 사용자에게 물어볼 것
 
-- **사람 설정 끝(사용자 2026-10-22):** Vercel `OPS_KEY`, Moyeo·Pingo Google OAuth 원본·서치 콘솔, AdSense 값, Play 광고·데이터 보안 신고, iOS RevenueCat 키. 남은 것은 프리미엄 8,900원 전환일(그날 `PREMIUM_DAILY_PLAN_FROM`)뿐 — 아래 줄의 "남은 사람 일"은 이 줄이 앞선다.
+- **사람 설정 끝(사용자 2026-10-22):** Vercel `OPS_KEY`, Moyeo·Pingo Google OAuth 원본·서치 콘솔, AdSense 값, Play 광고·데이터 보안 신고, iOS RevenueCat 키. 프리미엄 8,900원 전환도 켬(2026-10-23) — 아래 줄의 "남은 사람 일"은 이 줄이 앞선다.
 
 - **요금제(사용자 2026-10-22):** **Vercel Pro로 올림**(지출 상한은 Settings → Billing → Spend Management) · Upstash 종량제(10만 명령당 $0.2, 월 한도 없음 — 예산 상한을 걸면 닿을 때 느려지니 넉넉히, 초당 1만 명령이 한 DB의 상한: 부하 점검 기준 방에 동시 약 600명이면 닿음).
 - iOS(`hub/drafts/ios-launch.md` "출시까지 남은 사람 일"): 정함(2026-10-20) — 번들 ID는 안드로이드와 같은 `com.yourname.englishchat`, 구독·포인트 상품 ID도 같게, 다른 스토어 구독자는 결제 막음.

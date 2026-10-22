@@ -50,7 +50,7 @@ export const PLAN_PRODUCT_IDS: Record<Exclude<PlanTier, "free">, string> = {
  * they were given for a month they already paid for; the next month they are
  * gone and the daily minutes are the plan.
  */
-export const PREMIUM_DAILY_PLAN_FROM: string | null = null;
+export const PREMIUM_DAILY_PLAN_FROM: string | null = "2026-10-22"; // 사용자 결정 2026-10-23 03:26 KST(UTC 10-22): Play·App Store 가격 8,900원으로 같은 날
 
 /** Whether premium is on its daily terms at this moment, and whether this month still grants the old points. */
 export function premiumDailyAt(now: number, from: string | null = PREMIUM_DAILY_PLAN_FROM): { daily: boolean; keepGrant: boolean } {
