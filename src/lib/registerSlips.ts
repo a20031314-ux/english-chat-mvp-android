@@ -38,12 +38,6 @@ const RULES: Partial<Record<string, RegisterRule>> = {
     polite: /(?<![\p{L}])vous(?![\p{L}])/iu,
     fix: "vous (vouvoiement) — vous-forms of the verbs, votre/vos, and -moi → -moi with the vous imperative (e.g. a vous-form request)",
   },
-  de: {
-    addressee: /(?<![\p{L}])(Herr|Frau|Professor|Professorin|Doktor|Doktorin|Chef|Chefin)(?![\p{L}])/u,
-    casual: (text) => /(?<![\p{L}])(du|dich|dir|dein|deine|deinen|deinem|deiner|deines)(?![\p{L}])/iu.test(text),
-    polite: /(?<![\p{L}])(Sie|Ihnen|Ihr|Ihre|Ihren|Ihrem|Ihrer)(?![\p{L}])/u,
-    fix: "Sie (siezen) — Sie-forms of the verbs and Ihr/Ihre",
-  },
   ru: {
     addressee: ruWord(
       "профессор|учитель|учительница|доктор|начальник|начальница|директор|директриса|[А-ЯЁ][а-яё]+\\s+[А-ЯЁ][а-яё]+(?:ович|евич|ич|овна|евна|ична|инична)",

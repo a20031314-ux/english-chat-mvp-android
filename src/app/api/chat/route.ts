@@ -559,7 +559,7 @@ async function runChat(
   const mixedHint = mixed.length
     ? `Words from another language in message: ${mixed.map((w) => `"${w}"`).join(", ")}. Unless one is a name of a person, place or brand, put the ${learningLanguageName(langs.targetLanguage)} word in corrected and name it in the explanation.`
     : "";
-  // 다른 학습 언어의 윗사람·손님께 반말(ja·fr·de·ru, registerSlips.ts) — 한국어의 casualToElder와 같은 일.
+  // 다른 학습 언어의 윗사람·손님께 반말(ja·fr·ru, registerSlips.ts) — 한국어의 casualToElder와 같은 일.
   const registerHint = options.ownLanguage
     ? ""
     : registerSlipHint(message, langs.targetLanguage, learningLanguageName(langs.targetLanguage));
