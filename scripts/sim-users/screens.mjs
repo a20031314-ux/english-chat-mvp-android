@@ -70,6 +70,7 @@ async function loadCopy() {
 const copy = await loadCopy();
 
 // ── www + /api 프록시 ──
+const modelLog = [];
 const types = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", ".css": "text/css", ".json": "application/json", ".txt": "text/plain", ".svg": "image/svg+xml", ".png": "image/png", ".ico": "image/x-icon", ".woff2": "font/woff2", ".webp": "image/webp", ".mp3": "audio/mpeg" };
 const server = http.createServer(async (req, res) => {
   if (req.url.startsWith("/api/")) {
@@ -81,6 +82,9 @@ const server = http.createServer(async (req, res) => {
       if (MODEL_ROUTES) headers["x-sim-model-routes"] = MODEL_ROUTES;
       const upstream = await fetch(API + req.url, { method: req.method, headers, body: ["GET", "HEAD"].includes(req.method) ? undefined : Buffer.concat(chunks) });
       const type = upstream.headers.get("content-type") || "application/octet-stream";
+      // 서버가 점검 사용자에게만 알려 주는 "이 요청에서 실제로 부른 글 모델"(x-sim-models)을 모아 둔다.
+      const usedModels = upstream.headers.get("x-sim-models");
+      if (usedModels) modelLog.push({ path: req.url.split("?")[0], status: upstream.status, models: usedModels });
       res.writeHead(upstream.status, { "content-type": type });
       if (type.includes("ndjson") && upstream.body) {
         // 채팅 스트림(답 먼저 → 교정)은 받는 대로 흘려 보낸다 — 모아 보내면 앱에서 한 번에 뜬다.
@@ -775,6 +779,7 @@ ${sceneIds.map((scene) => `<h2>${esc(scene.label)}</h2><div class="row">${result
 </main></body></html>`;
 fs.writeFileSync(path.join(path.dirname(OUT), "screens.html"), html);
 fs.writeFileSync(path.join(path.dirname(OUT), "screens.json"), JSON.stringify(results, null, 2));
+if (modelLog.length) fs.writeFileSync(path.join(path.dirname(OUT), "models.json"), JSON.stringify(modelLog, null, 2));
 const fails = results.flatMap((r) => r.shots.filter((s) => !s.ok).map((s) => `${r.combo.target}:${r.combo.ui} ${s.id}`));
 console.log(`\n장면 ${results.reduce((n, r) => n + r.shots.length, 0)}장 · 막힘 ${fails.length}${fails.length ? ` (${fails.join(", ")})` : ""}`);
 console.log(`갤러리: ${path.relative(ROOT, path.join(path.dirname(OUT), "screens.html"))}`);
