@@ -21,8 +21,8 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
-- **🎭 Room 라이어 게임 (2026-10-23, 사용자 "만들어줘", 서버 바로 반영·앱 다음 빌드·웹 창구 바로):** 규칙 `rooms/liarGame.ts`(순수, 테스트 7), 저장·잠금 `server/roomGameStore.ts`, AI(제시어·판정) `server/roomGame.ts`(`roomGame` Haiku), `/api/rooms/game`, 방 물음이 `game`을 같이 돌려줌(방 정보 `game` 판 번호 있을 때만 읽음), 화면 `components/rooms/RoomGame.tsx`, 사용법 Room 장 `room.game` 칸(옛 빌드는 서버가 뺌 — `game=1`).
-  남은 것: 결과 문장에서 내가 뽑히면 "나님은…"(이름 자리에 '나' — 닉네임으로), 영어 주제 이름이 소문자("food"), 새로워진 점·사용법 그림(버전 자를 때), 마피아(5명+, 밤 단계·비밀 채널 — 사용자가 원하면), 게임 중 "학습 언어로만" 표시, 끝난 뒤 이 판에서 나온 표현 정리.
+- **🎭 Room 게임 — 라이어 게임·마피아 (2026-10-23, 사용자 "만들어줘"·"이어서해줘", 서버 바로 반영·앱 다음 빌드·웹 창구 바로):** 규칙 `rooms/liarGame.ts`·`rooms/mafiaGame.ts`(순수, 테스트 7+7), 저장·잠금 `server/roomGameStore.ts`(두 게임 같이, 표·밤 행동은 단계마다 키), AI `server/roomGame.ts`(라이어 제시어·판정, 마피아 배경 이야기 — `roomGame` Haiku), `/api/rooms/game`, 방 물음이 `game`을 같이 돌려줌, 화면 `components/rooms/RoomGame.tsx`(시작 창에서 게임 고름), 사용법 Room 장 `room.game`·`room.mafia`(옛 빌드는 서버가 뺌 — `game=1`).
+  남은 것: 마피아 소식 "Jisu (시민)님이…"(역할 괄호 뒤에 '님'), 아랍어 결과의 역할 목록에서 💀·이름 순서가 섞여 보임(RTL), 새로워진 점·사용법 그림(버전 자를 때), 게임 중 "학습 언어로만" 표시, 끝난 뒤 이 판에서 나온 표현 정리, AI가 빈자리에 플레이어로(사용자가 원하면).
 - **사용자 프로필 (2026-10-23, `hub/drafts/profile-2026-10-23.md`):** 사용자 "추천대로" — 결정 6개 모두 추천안. **1단계 서버 끝(바로 반영):** `account/profileFacts.ts`(칩·칸 켬/끔·튜터 줄), `rooms/contribution.ts`(도움됐어요 무게·30일 점수·가산·꾸준함), `server/contribStore.ts`(질문한 사람 확인·중복 막기·반영 의견·공부한 날), `/api/social` thank·people 정렬·profile 칸, 게시판 새 글 가산, 채팅·통화 튜터 관심사 줄(`server/profileContext.ts`), 반영 소식 받을 때 🛠 +1.
   **2단계 앱 끝(다음 빌드, 2026-10-23):** `components/account/ProfileFacts.tsx`(칩 편집·칸 스위치·프로필 보기·도움됐어요 버튼)·`account/profileCopy.ts`(14개 언어, Claude가 씀 — 원어민 확인 권장), 편집 시트·로그인 직후 소개 화면·사람 카드/거르기·프로필 시트·방/1:1/게시판 답 아래 도움됐어요. 서버: 카드에 meetModes·country, 프로필 목표는 그 사람 마지막 접속 언어로. 국적은 국기(🇰🇷, `account/countries.ts`)로 카드·시트 이름 옆. 프로필 "올린 글"(칸 `posts`)·게시글 좋아요(`board` `like`) 2026-10-23.
   남은 것: 💬 주제(기기 notesPlace 상위 3을 서버로)·✨ 표현(숙지 중 고르기) 칸 — 서버 저장부터, 3단계 "튜터가 알고 있는 것", 사용법(?) 칸·새로워진 점(버전 자를 때, inbox store), 아랍어 카드에서 관심사 줄 끝 "겹치는 관심사"가 잘림(truncate), 로그인 직후 소개 화면은 실제 로그인으로 못 찍음.
