@@ -149,7 +149,11 @@ export async function POST(request: NextRequest) {
     });
     if (!result) {
       console.error("[curriculum] map too thin to keep", { model: MODEL() });
-      return jsonWithCors(request, { error: "MAP_FAILED", ...simDetail(request, "map too thin") }, { status: 502 });
+      // 점검 사용자에게만: 무엇이 왔는지(어떤 모양이라 버려졌는지 보려고).
+      const shape = raw && typeof raw === "object" ? (raw as Record<string, unknown>) : {};
+      const topicsIn = Array.isArray(shape.topics) ? shape.topics : [];
+      const why = `map too thin: keys=${Object.keys(shape).join(",")} topics=${topicsIn.length} first=${JSON.stringify(topicsIn[0] ?? shape).slice(0, 220)}`;
+      return jsonWithCors(request, { error: "MAP_FAILED", ...simDetail(request, why) }, { status: 502 });
     }
     if (result.dropped.length) console.log("[curriculum] dropped", result.dropped);
     const record = await saveNewMap(userId, result.map);
