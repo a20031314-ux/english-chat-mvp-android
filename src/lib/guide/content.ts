@@ -307,7 +307,7 @@ export const GUIDE_KO: Guide = {
       {
         heading: "통화 시간",
         body: [
-          "무료는 처음에 20포인트(100분)를 드려요. 5분에 1포인트예요.",
+          "무료는 처음에 10포인트(50분)를 드려요. 5분에 1포인트예요.",
           "라이트는 매일 자유 통화 7분, 플러스는 10분이 있고, 다 쓰면 포인트로 이어서 해요. 프리미엄은 매달 80포인트를 받아요.",
           "통화 첫 화면에 오늘 남은 시간이 보여요. 오늘의 팩은 어느 요금이든 시간을 쓰지 않아요.",
         ],
@@ -692,7 +692,7 @@ export const GUIDE_EN: Guide = {
       {
         heading: "Call time",
         body: [
-          "Free gives you 20 points (100 minutes) to start. A point is five minutes.",
+          "Free gives you 10 points (50 minutes) to start. A point is five minutes.",
           "Lite gives 7 minutes of free calls every day and Plus 10; after that, points carry you on. Premium gives 80 points a month.",
           "The call screen shows today's time left. Today's pack uses no time on any plan.",
         ],

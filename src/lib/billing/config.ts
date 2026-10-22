@@ -162,7 +162,7 @@ export const ROLEPLAY_POINT_SECONDS = 5 * 60;
  * Lifetime rather than monthly because a monthly free grant has no ceiling: it
  * renews for everyone who never pays, and reinstalling renews it sooner.
  */
-export const FREE_LIFETIME_ROLEPLAY_POINTS = 20;
+export const FREE_LIFETIME_ROLEPLAY_POINTS = 10;
 
 /**
  * Sent by a build that understands being told it has run out.
