@@ -490,12 +490,17 @@ export function dmInbox(): Promise<{ threads: DmSummary[] }> {
   return dm("inbox", {});
 }
 
-export function dmOpen(target: string): Promise<{ thread: DmThread | null; messages: DmMessage[]; blocked: boolean }> {
+export function dmOpen(target: string): Promise<{ thread: DmThread | null; messages: DmMessage[]; blocked: boolean; gone?: number[] }> {
   return dm("open", { target });
 }
 
-export function dmPoll(threadId: string, since: number): Promise<{ thread: DmThread; messages: DmMessage[] }> {
+export function dmPoll(threadId: string, since: number): Promise<{ thread: DmThread; messages: DmMessage[]; gone?: number[] }> {
   return dm("poll", { threadId, since });
+}
+
+/** 보낸 줄 지우기 — 상대에게서도 사라진다(내 글·사진·통화 요청, 통화 기록은 둘 다). */
+export function dmUnsend(threadId: string, seq: number): Promise<{ ok: true }> {
+  return dm("unsend", { threadId, seq });
 }
 
 export function dmSend(
@@ -554,12 +559,17 @@ export function groupCreate(name: string, languages: string[], invite: string[])
   return groups("create", { name, languages, invite });
 }
 
-export function groupOpen(groupId: string): Promise<{ group: Group; messages: GroupMessage[]; call?: GroupCall }> {
+export function groupOpen(groupId: string): Promise<{ group: Group; messages: GroupMessage[]; call?: GroupCall; gone?: number[] }> {
   return groups("open", { groupId });
 }
 
-export function groupPoll(groupId: string, since: number): Promise<{ group: Group; messages: GroupMessage[]; call?: GroupCall }> {
+export function groupPoll(groupId: string, since: number): Promise<{ group: Group; messages: GroupMessage[]; call?: GroupCall; gone?: number[] }> {
   return groups("poll", { groupId, since });
+}
+
+/** 보낸 줄 지우기 — 모두에게서 사라진다(내 글·사진, 통화 기록은 남긴 사람이나 방장). */
+export function groupUnsend(groupId: string, seq: number): Promise<{ ok: true }> {
+  return groups("unsend", { groupId, seq });
 }
 
 /** 📞 단체방 통화: 열려 있으면 그 방, 없으면 새 비공개 방. */

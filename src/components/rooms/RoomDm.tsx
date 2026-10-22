@@ -11,13 +11,14 @@ import {
   dmOpen,
   dmPoll,
   dmSend,
+  dmUnsend,
   howToSay,
   translateLine, aiFailText } from "@/lib/rooms/client";
 import { DM_PENDING_LIMIT, type DmMessage, type DmSummary, type DmThread } from "@/lib/rooms/dm";
 import type { RoomMeta } from "@/lib/rooms/protocol";
 import { askPhraseAbout, questionCount } from "@/lib/rooms/quote";
 import type { RoomNote } from "@/lib/rooms/layout";
-import { Composer, Face, LineActions, QuoteText, useProfile } from "./RoomParts";
+import { Composer, Face, LineActions, QuoteText, Unsendable, useProfile } from "./RoomParts";
 import { MediaImage } from "./MediaImage";
 
 /*
@@ -185,6 +186,13 @@ export function DmThreadView({
     });
   }, []);
 
+  // 모두에게서 지운 줄(내가 지웠거나 상대가 지움)을 화면에서 뺀다.
+  const drop = useCallback((gone: number[] | undefined) => {
+    if (!gone?.length) return;
+    const set = new Set(gone);
+    setMessages((have) => (have.some((message) => set.has(message.seq)) ? have.filter((message) => !set.has(message.seq)) : have));
+  }, []);
+
   useEffect(() => {
     let alive = true;
     let timer = 0;
@@ -205,6 +213,7 @@ export function DmThreadView({
           if (!alive) return;
           setThread(body.thread);
           add(body.messages);
+          drop(body.gone);
         }
       } catch {
         // 다음 물음에서 다시.
@@ -287,8 +296,22 @@ export function DmThreadView({
 
           <div ref={scroller} className="min-h-0 flex-1 space-y-2 overflow-y-auto px-3 py-3">
             {messages.map((message) => (
-              <Bubble
+              <Unsendable
                 key={message.seq}
+                t={t}
+                enabled={Boolean(thread) && (message.kind === "callLog" || message.from === me)}
+                align={message.kind === "text" ? (message.from === me ? "end" : "start") : "center"}
+                onDelete={async () => {
+                  if (!thread) return;
+                  try {
+                    await dmUnsend(thread.id, message.seq);
+                    drop([message.seq]);
+                  } catch {
+                    setNotice(t.error);
+                  }
+                }}
+              >
+              <Bubble
                 t={t}
                 message={message}
                 mine={message.from === me}
@@ -302,6 +325,7 @@ export function DmThreadView({
                 asked={questionCount(messages, message.seq)}
                 onQuote={(index, nickname, text, ask, focus) => setQuoting({ seq: message.seq, index, nickname, text, ask, focus })}
               />
+              </Unsendable>
             ))}
           </div>
 

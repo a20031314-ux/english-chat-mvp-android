@@ -622,6 +622,26 @@ const SCENES = [
     },
   },
   {
+    id: "dm-unsend",
+    label: "메시지 — 내 줄을 길게 누르면 [삭제][취소], 지우면 사라짐",
+    async run({ page, wait, rc: rt, shot }) {
+      const mine = page.locator(".bg-violet-600\\/80").last();
+      const before = await page.locator(".bg-violet-600\\/80").count();
+      const box = await mine.boundingBox();
+      if (!box) return;
+      await page.mouse.move(box.x + box.width / 2, box.y + box.height / 2);
+      await page.mouse.down();
+      await wait(800);
+      await page.mouse.up();
+      await wait(500);
+      await shot("confirm");
+      await page.getByRole("button", { name: rt.boardDelete, exact: true }).last().click();
+      await wait(2500);
+      const after = await page.locator(".bg-violet-600\\/80").count();
+      console.log(`  dm-unsend: 내 줄 ${before} → ${after}`);
+    },
+  },
+  {
     id: "group-thread",
     label: "메시지 — 단체방 대화(집어 묻기)",
     async run({ page, wait, state }) {

@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { DM_PENDING_LIMIT, threadIdFor } from "../rooms/dm.ts";
-import { claimCallLog, decline, findQuote, hiddenUpTo, hideThread, inbox, markRead, readMessages, send } from "./dmStore.ts";
+import { claimCallLog, decline, findQuote, hiddenUpTo, hideThread, inbox, markRead, readGone, readMessages, readThread, send, unsend, withoutGone } from "./dmStore.ts";
 
 // KV 접속 정보 없이 메모리로(kv.ts).
 delete process.env.KV_REST_API_URL;
@@ -91,4 +91,23 @@ test("내 목록에서 지우기: 나에게만 빠지고, 새 줄이 오면 다�
   assert.equal((await inbox(D)).some((row) => row.thread.id === id), true);
   const visible = (await readMessages(id)).filter((row) => row.seq > before);
   assert.deepEqual(visible.map((row) => row.text), ["เจอกันกี่โมง"]);
+});
+
+test("보낸 줄 지우기: 내 글만, 상대에게서도 빠지고 인용 글은 비운다", async () => {
+  const F = "lb_" + "f".repeat(24);
+  const G = "lb_" + "g".repeat(24);
+  const first = await send({ from: F, to: G, kind: "text", text: "Hola, ¿qué tal?" });
+  await send({ from: G, to: F, kind: "text", text: "元気だよ" });
+  assert.ok(first.ok);
+  if (!first.ok) return;
+  const id = threadIdFor(F, G);
+  const quoting = await send({ from: G, to: F, kind: "text", text: "それって？", quote: { seq: first.message.seq, nickname: "", text: "Hola", accountId: F } });
+  assert.ok(quoting.ok);
+  assert.deepEqual(await unsend(G, id, first.message.seq), { ok: false, error: "NOT_YOURS" });
+  assert.equal((await unsend(F, id, first.message.seq)).ok, true);
+  const gone = await readGone(id);
+  const seen = withoutGone(await readMessages(id), gone);
+  assert.equal(seen.some((row) => row.seq === first.message.seq), false);
+  assert.equal(seen.find((row) => row.text === "それって？")?.quote?.text, "");
+  assert.equal((await readThread(id))?.lastText, "それって？");
 });

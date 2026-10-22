@@ -10,6 +10,7 @@ import {
   groupInvite,
   groupKick,
   groupLeave,
+  groupUnsend,
   groupMakeTeam,
   groupMine,
   groupOpen,
@@ -22,7 +23,7 @@ import { GROUP_MAX_MEMBERS, GROUP_MAX_NAME_CHARS, type Group, type GroupCall, ty
 import { requestGroupCall } from "@/lib/rooms/openDm";
 import { askPhraseAbout, questionCount } from "@/lib/rooms/quote";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
-import { Composer, Face, LineActions, QuoteText, languagePair, useProfile } from "./RoomParts";
+import { Composer, Face, LineActions, QuoteText, Unsendable, languagePair, useProfile } from "./RoomParts";
 import { MediaImage } from "./MediaImage";
 import { teamCopy, type TeamCopy } from "@/lib/rooms/teamCopy";
 import { TeamSpace } from "./TeamSpace";
@@ -674,6 +675,21 @@ export function GroupThreadView({
     });
   }, []);
 
+  // 모두에게서 지운 줄(내가 지웠거나 다른 사람이 지움)을 화면에서 뺀다.
+  const drop = useCallback((goneSeqs: number[] | undefined) => {
+    if (!goneSeqs?.length) return;
+    const set = new Set(goneSeqs);
+    setMessages((have) => (have.some((row) => set.has(row.seq)) ? have.filter((row) => !set.has(row.seq)) : have));
+  }, []);
+  const unsendRow = async (seq: number) => {
+    try {
+      await groupUnsend(groupId, seq);
+      drop([seq]);
+    } catch {
+      // 다음 새로고침에서 다시.
+    }
+  };
+
   const reload = useCallback(() => {
     void groupOpen(groupId).then(
       (body) => {
@@ -694,6 +710,7 @@ export function GroupThreadView({
         setGroup(body.group);
         setCall(body.call ?? null);
         add(body.messages);
+        drop(body.gone);
       } catch (error) {
         if (error instanceof RoomApiError && (error.status === 403 || error.status === 404)) {
           if (alive) setGone(error.code === "REMOVED" ? "removed" : "gone");
@@ -810,10 +827,24 @@ export function GroupThreadView({
                   onJoin={startCall}
                 />
               ) : message.kind === "callLog" ? (
-                <CallLogLine key={message.seq} t={t} me={me} message={message} locale={locale} targetLanguage={targetLanguage} />
-              ) : (
-                <GroupBubble
+                <Unsendable
                   key={message.seq}
+                  t={t}
+                  enabled={message.from === me || group?.owner === me}
+                  align="center"
+                  onDelete={() => unsendRow(message.seq)}
+                >
+                  <CallLogLine t={t} me={me} message={message} locale={locale} targetLanguage={targetLanguage} />
+                </Unsendable>
+              ) : (
+                <Unsendable
+                  key={message.seq}
+                  t={t}
+                  enabled={message.from === me}
+                  align="end"
+                  onDelete={() => unsendRow(message.seq)}
+                >
+                <GroupBubble
                   t={t}
                   me={me}
                   message={message}
@@ -823,6 +854,7 @@ export function GroupThreadView({
                   asked={questionCount(texts, message.seq)}
                   onQuote={(ask, focus, nickname) => setQuoting({ seq: message.seq, nickname, text: message.text, ask, focus })}
                 />
+                </Unsendable>
               ),
             )}
           </div>

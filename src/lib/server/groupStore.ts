@@ -31,7 +31,7 @@ import {
 } from "../rooms/group.ts";
 import { cleanFocus, clipQuote, type LineQuote } from "../rooms/quote.ts";
 import type { MediaRef } from "../rooms/media.ts";
-import { kvDelete, kvGetJson, kvIncrBy, kvListPush, kvListRange, kvListTrim, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
+import { kvDelete, kvGetJson, kvIncrBy, kvListPush, kvListRange, kvListRemove, kvListTrim, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
 import { rowsAfter } from "./lateRows.ts";
 
 const groupKey = (id: string) => `grp:v1:g:${id}`;
@@ -45,6 +45,8 @@ const DAYS_KEEP = 400;
 const BOX_KEEP = 100;
 
 const lockKey = (id: string) => `grp:v1:lock:${id}`;
+/** 모두에게서 지운 줄 번호들 — 이미 받아 둔 앱이 지우도록 poll에 같이 보낸다. */
+const goneKey = (id: string) => `grp:v1:gone:${id}`;
 
 /**
  * 한 단체방의 정보(사람·방장·마지막 줄)를 읽고 고쳐 쓰는 동작을 한 줄로 세운다. 둘이 동시에 초대를 받으면
@@ -272,6 +274,51 @@ export async function myGroups(account: string): Promise<GroupSummary[]> {
   return rows
     .filter((row): row is GroupSummary => row !== null)
     .sort((a, b) => Number(b.invite) - Number(a.invite) || b.group.lastAt - a.group.lastAt);
+}
+
+export async function readGroupGone(id: string): Promise<number[]> {
+  return (await kvGetJson<number[]>(goneKey(id))) ?? [];
+}
+
+export type GroupUnsendResult = { ok: true; message: GroupMessage } | { ok: false; error: "NOT_FOUND" | "NOT_YOURS" };
+
+/**
+ * 보낸 줄 지우기(2026-10-23): 내 글·사진은 내가, 통화 기록은 남긴 사람이나 방장이. 알림 줄(system)은 못 지움.
+ * 줄은 목록에서 바로 빼고(LREM), 번호는 gone에 남겨 이미 받아 둔 다른 사람 앱도 지운다. 사진 파일은 부르는 쪽이 지운다.
+ */
+export async function unsendGroupMessage(me: string, id: string, seq: number): Promise<GroupUnsendResult> {
+  return withGroupLock(id, async () => {
+    const group = await readGroup(id);
+    if (!group || !group.members.includes(me)) return { ok: false, error: "NOT_FOUND" } as const;
+    const raws = await kvListRange(msgsKey(id), -GROUP_MAX_KEPT, -1);
+    let raw: string | undefined;
+    let message: GroupMessage | undefined;
+    for (const row of raws) {
+      try {
+        const parsed = JSON.parse(row) as GroupMessage;
+        if (parsed.seq === seq) {
+          raw = row;
+          message = parsed;
+          break;
+        }
+      } catch {
+        // 깨진 줄은 건너뛴다.
+      }
+    }
+    if (!raw || !message || message.kind === "system") return { ok: false, error: "NOT_FOUND" } as const;
+    const allowed = message.from === me || (message.kind === "callLog" && group.owner === me);
+    if (!allowed) return { ok: false, error: "NOT_YOURS" } as const;
+    const ttl = groupTtl(group);
+    await kvListRemove(msgsKey(id), raw);
+    const gone = [...new Set([...(await readGroupGone(id)), seq])].slice(-200);
+    await kvSetJson(goneKey(id), gone, ttl);
+    const last = parse(await kvListRange(msgsKey(id), -GROUP_MAX_KEPT, -1))
+      .filter((row) => row.kind === "text")
+      .at(-1);
+    const preview = last ? (last.image ? (last.text ? `📷 ${last.text}` : "📷") : last.text) : "";
+    if (group.lastText !== preview) await saveGroup({ ...group, lastText: preview, ...(last ? { lastFrom: last.from } : {}) });
+    return { ok: true, message } as const;
+  });
 }
 
 /** 통화를 연 사람이 남기는 "통화 시작" 알림 줄과 방 번호. */

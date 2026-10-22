@@ -4,13 +4,13 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
 import { readAccount } from "@/lib/server/accountStore";
 import { blockedEitherWay, isAccountId } from "@/lib/server/socialStore";
-import { claimCallLog, decline, findQuote, hiddenUpTo, hideThread, inbox, markRead, readMessages, readThread, send } from "@/lib/server/dmStore";
+import { claimCallLog, decline, findQuote, hiddenUpTo, hideThread, inbox, markRead, readGone, readMessages, readThread, send, unsend, withoutGone } from "@/lib/server/dmStore";
 import { createRoom, isInviteCode, liveCount, readLines, readMeta } from "@/lib/server/roomStore";
 import { cleanFocus, clipQuote, type LineQuote } from "@/lib/rooms/quote";
 import { DM_MAX_CHARS, isThreadId, otherOf, threadIdFor } from "@/lib/rooms/dm";
 import { cleanText, isPeerId, isRoomId } from "@/lib/rooms/protocol";
 import { isMediaId } from "@/lib/rooms/media";
-import { claimMedia } from "@/lib/server/mediaStore";
+import { claimMedia, deleteMedia } from "@/lib/server/mediaStore";
 import { suspendedResponse } from "@/lib/server/suspension";
 
 export const dynamic = "force-dynamic";
@@ -61,9 +61,10 @@ export async function POST(request: NextRequest) {
     if (action === "open") {
       const thread = await readThread(id);
       const hidden = thread ? await hiddenUpTo(me, id) : 0;
-      const messages = thread ? (await readMessages(id)).filter((row) => row.seq > hidden) : [];
+      const gone = thread ? await readGone(id) : [];
+      const messages = thread ? withoutGone((await readMessages(id)).filter((row) => row.seq > hidden), gone) : [];
       if (thread?.lastSeq) await markRead(me, id, thread.lastSeq);
-      return jsonWithCors(request, { thread, messages, blocked });
+      return jsonWithCors(request, { thread, messages, blocked, gone });
     }
     if (blocked) return bad(request, "BLOCKED", 403);
     const text = cleanText(body.text, DM_MAX_CHARS);
@@ -128,10 +129,19 @@ export async function POST(request: NextRequest) {
 
   if (action === "poll") {
     const since = typeof body.since === "number" && Number.isFinite(body.since) ? body.since : 0;
-    const hidden = await hiddenUpTo(me, thread.id);
-    const messages = (await readMessages(thread.id, pollFrom(since))).filter((row) => row.seq > hidden);
+    const [hidden, gone] = await Promise.all([hiddenUpTo(me, thread.id), readGone(thread.id)]);
+    const messages = withoutGone((await readMessages(thread.id, pollFrom(since))).filter((row) => row.seq > hidden), gone);
     if (thread.lastSeq) await markRead(me, thread.id, thread.lastSeq);
-    return jsonWithCors(request, { thread, messages });
+    // gone: 모두에게서 지운 줄 — 이미 받아 둔 앱이 화면에서 뺀다.
+    return jsonWithCors(request, { thread, messages, gone });
+  }
+
+  if (action === "unsend") {
+    if (typeof body.seq !== "number" || !Number.isInteger(body.seq)) return bad(request, "BAD_SEQ");
+    const result = await unsend(me, thread.id, body.seq);
+    if (!result.ok) return bad(request, result.error, result.error === "NOT_YOURS" ? 403 : 404);
+    if (result.message.image) await deleteMedia([result.message.image.id]);
+    return jsonWithCors(request, { ok: true });
   }
 
   if (action === "hide") {

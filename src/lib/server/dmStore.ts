@@ -23,7 +23,7 @@ import {
   type SendDecision,
 } from "../rooms/dm.ts";
 import { clipQuote, type LineQuote } from "../rooms/quote.ts";
-import { kvGetJson, kvIncrBy, kvListPush, kvListRange, kvListTrim, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
+import { kvGetJson, kvIncrBy, kvListPush, kvListRange, kvListRemove, kvListTrim, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
 
 const threadKey = (id: string) => `dm:v1:t:${id}`;
 const msgsKey = (id: string) => `dm:v1:m:${id}`;
@@ -33,6 +33,9 @@ const readKey = (account: string, id: string) => `dm:v1:read:${account}:${id}`;
 const logKey = (roomId: string) => `dm:v1:log:${roomId}`;
 /** 내 목록에서 지운 대화: 지울 때의 마지막 번호. 그 뒤 새 줄이 오면 다시 보이고, 지우기 전 줄은 나에게만 안 보인다. */
 const hideKey = (account: string, id: string) => `dm:v1:hide:${account}:${id}`;
+/** 모두에게서 지운 줄 번호들 — 이미 받아 둔 앱이 지우도록 poll에 같이 보낸다. */
+const goneKey = (id: string) => `dm:v1:gone:${id}`;
+const GONE_KEEP = 200;
 const BOX_KEEP = 200;
 
 export async function readThread(id: string): Promise<DmThread | null> {
@@ -169,6 +172,62 @@ export async function decline(me: string, id: string): Promise<boolean> {
 export async function markRead(me: string, id: string, seq: number): Promise<void> {
   const have = (await kvGetJson<number>(readKey(me, id))) ?? 0;
   if (seq > have) await kvSetJson(readKey(me, id), seq, DM_TTL_SECONDS);
+}
+
+/** 이 대화에서 모두에게서 지운 줄 번호. */
+export async function readGone(id: string): Promise<number[]> {
+  return (await kvGetJson<number[]>(goneKey(id))) ?? [];
+}
+
+/** 지운 줄을 집은 인용은 글을 비운다(다른 줄 안에 남지 않게). 방에서 집은 인용은 그대로. */
+export function withoutGone<T extends { seq: number; quote?: LineQuote }>(rows: T[], gone: number[]): T[] {
+  if (!gone.length) return rows;
+  const set = new Set(gone);
+  return rows
+    .filter((row) => !set.has(row.seq))
+    .map((row) => (row.quote && !row.quote.roomId && set.has(row.quote.seq) ? { ...row, quote: { ...row.quote, text: "", focus: undefined } } : row));
+}
+
+export type UnsendResult = { ok: true; message: DmMessage } | { ok: false; error: "NOT_FOUND" | "NOT_YOURS" };
+
+/**
+ * 보낸 줄 지우기(2026-10-23, 사용자 "상대한테도 안 보이게"): 내 글·사진·통화 요청은 내가, 통화 기록은 둘 중 누구나.
+ * 줄은 목록에서 바로 빼고(LREM), 번호는 gone에 남겨 이미 받아 둔 상대 앱도 지운다. 사진 파일은 부르는 쪽이 지운다.
+ */
+export async function unsend(me: string, id: string, seq: number): Promise<UnsendResult> {
+  const thread = await readThread(id);
+  if (!thread || !thread.members.includes(me)) return { ok: false, error: "NOT_FOUND" };
+  const raws = await kvListRange(msgsKey(id), -DM_MAX_KEPT, -1);
+  let raw: string | undefined;
+  let message: DmMessage | undefined;
+  for (const row of raws) {
+    try {
+      const parsed = JSON.parse(row) as DmMessage;
+      if (parsed.seq === seq) {
+        raw = row;
+        message = parsed;
+        break;
+      }
+    } catch {
+      // 깨진 줄은 건너뛴다.
+    }
+  }
+  if (!raw || !message) return { ok: false, error: "NOT_FOUND" };
+  if (message.kind !== "callLog" && message.from !== me) return { ok: false, error: "NOT_YOURS" };
+  await kvListRemove(msgsKey(id), raw);
+  const gone = [...new Set([...(await readGone(id)), seq])].slice(-GONE_KEEP);
+  await kvSetJson(goneKey(id), gone, DM_TTL_SECONDS);
+  // 목록 미리보기: 남은 마지막 글로(없으면 비움).
+  const lastText = parse(await kvListRange(msgsKey(id), -DM_MAX_KEPT, -1))
+    .filter((row) => row.kind === "text")
+    .at(-1);
+  const preview = lastText ? (lastText.image ? (lastText.text ? `📷 ${lastText.text}` : "📷") : lastText.text) : "";
+  // 그 사이 새 줄이 왔으면 그 줄이 미리보기이므로 건드리지 않는다.
+  const fresh = await readThread(id);
+  if (fresh && fresh.lastSeq === thread.lastSeq && fresh.lastText !== preview) {
+    await kvSetJson(threadKey(id), { ...fresh, lastText: preview }, DM_TTL_SECONDS);
+  }
+  return { ok: true, message };
 }
 
 /** 이 대화에서 나에게 숨긴 마지막 번호(없으면 0). */

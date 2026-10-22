@@ -353,6 +353,23 @@ export async function kvListTrim(key: string, keep: number): Promise<void> {
 }
 
 /**
+ * Remove every row equal to `value` from a list (LREM) — one command, so a row
+ * pushed meanwhile is not lost the way a read-filter-rewrite would lose it.
+ */
+export async function kvListRemove(key: string, value: string): Promise<void> {
+  if (!credentials()) {
+    warnOnce();
+    const raw = memoryRead(key);
+    if (raw === null) return;
+    const all = JSON.parse(raw) as string[];
+    const row = memory().get(key);
+    memory().set(key, { value: JSON.stringify(all.filter((item) => item !== value)), expiresAt: row?.expiresAt ?? null });
+    return;
+  }
+  await attempt(`LREM ${key}`, async () => void (await command(["LREM", key, 0, value])), undefined);
+}
+
+/**
  * Read a list and remove exactly what was read — a mailbox.
  *
  * LRANGE then DEL would lose a row pushed between the two. Trimming off only

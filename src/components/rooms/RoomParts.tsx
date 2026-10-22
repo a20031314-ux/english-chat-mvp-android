@@ -1059,3 +1059,88 @@ function HintCard({ t, text, language, peek, onSend, onClose }: { t: RoomCopy; t
     </div>
   );
 }
+
+
+/**
+ * 길게 누르면 [삭제][취소] — 보낸 줄 지우기(2026-10-23, 1:1·단체방). 지우면 상대 화면에서도 사라진다.
+ * 길게 누른 뒤의 눌림(번역 열기 등)은 막는다. 끌어서 움직이면(목록 넘기기) 취소.
+ */
+export function Unsendable({
+  t,
+  enabled,
+  align,
+  onDelete,
+  children,
+}: {
+  t: RoomCopy;
+  enabled: boolean;
+  align: "start" | "end" | "center";
+  onDelete: () => Promise<void>;
+  children: ReactNode;
+}) {
+  const [asking, setAsking] = useState(false);
+  const [busy, setBusy] = useState(false);
+  const timer = useRef<number | null>(null);
+  const fired = useRef(false);
+  const origin = useRef<{ x: number; y: number } | null>(null);
+  if (!enabled) return <>{children}</>;
+  const stop = () => {
+    if (timer.current !== null) window.clearTimeout(timer.current);
+    timer.current = null;
+  };
+  return (
+    <div
+      onPointerDown={(event) => {
+        fired.current = false;
+        origin.current = { x: event.clientX, y: event.clientY };
+        stop();
+        timer.current = window.setTimeout(() => {
+          fired.current = true;
+          setAsking(true);
+          navigator.vibrate?.(15);
+        }, 500);
+      }}
+      onPointerMove={(event) => {
+        const from = origin.current;
+        if (from && Math.hypot(event.clientX - from.x, event.clientY - from.y) > 10) stop();
+      }}
+      onPointerUp={stop}
+      onPointerLeave={stop}
+      onPointerCancel={stop}
+      onContextMenu={(event) => {
+        event.preventDefault();
+        setAsking(true);
+      }}
+      onClickCapture={(event) => {
+        if (!fired.current) return;
+        fired.current = false;
+        event.stopPropagation();
+        event.preventDefault();
+      }}
+      style={{ WebkitTouchCallout: "none" }}
+    >
+      {children}
+      {asking ? (
+        <div className={`mt-1 flex gap-1.5 ${align === "end" ? "justify-end" : align === "center" ? "justify-center" : ""}`}>
+          <button
+            type="button"
+            disabled={busy}
+            onClick={() => {
+              setBusy(true);
+              void onDelete().finally(() => {
+                setBusy(false);
+                setAsking(false);
+              });
+            }}
+            className="rounded-lg bg-rose-500/80 px-2.5 py-1 text-xs font-medium text-white disabled:opacity-40"
+          >
+            {t.boardDelete}
+          </button>
+          <button type="button" onClick={() => setAsking(false)} className="rounded-lg px-2.5 py-1 text-xs text-slate-300">
+            {t.cancel}
+          </button>
+        </div>
+      ) : null}
+    </div>
+  );
+}

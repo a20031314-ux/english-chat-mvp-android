@@ -12,8 +12,10 @@ import {
   markGroupRead,
   myGroups,
   readGroup,
+  readGroupGone,
   readGroupMessages,
   sendToGroup,
+  unsendGroupMessage,
   transferGroup,
 } from "./groupStore.ts";
 
@@ -103,4 +105,22 @@ test("내보낸 사람은 kicked에 남고, 다시 초대하면 빠진다. 통�
   const tail = rows.slice(-2).map((row) => [row.kind, row.text, row.roomId]);
   assert.deepEqual(tail, [["system", "call", "abcdef"], ["callLog", "1", "abcdef"]]);
   assert.equal((await readGroup(group.id))?.callRoomId, undefined);
+});
+
+test("보낸 줄 지우기: 내 글만, 모두에게서 빠지고 gone에 남는다. 통화 기록은 방장도", async () => {
+  const group = await createGroup({ owner: MINJI, name: "unsend", languages: ["es", "th"], invite: [YUKI] });
+  await answerInvite(YUKI, group.id, true);
+  const mine = await sendToGroup({ from: YUKI, id: group.id, text: "¿Quedamos mañana?" });
+  const theirs = await sendToGroup({ from: MINJI, id: group.id, text: "พรุ่งนี้ได้เลย" });
+  assert.ok(mine.ok && theirs.ok);
+  if (!mine.ok || !theirs.ok) return;
+  assert.deepEqual(await unsendGroupMessage(YUKI, group.id, theirs.message.seq), { ok: false, error: "NOT_YOURS" });
+  const done = await unsendGroupMessage(YUKI, group.id, mine.message.seq);
+  assert.equal(done.ok, true);
+  assert.deepEqual((await readGroupMessages(group.id)).filter((row) => row.kind === "text").map((row) => row.text), ["พรุ่งนี้ได้เลย"]);
+  assert.deepEqual(await readGroupGone(group.id), [mine.message.seq]);
+  assert.equal((await readGroup(group.id))?.lastText, "พรุ่งนี้ได้เลย");
+  await logGroupCall((await readGroup(group.id))!, YUKI, "room01", [{ from: YUKI, nickname: "ゆき", text: "もしもし" }]);
+  const log = (await readGroupMessages(group.id)).find((row) => row.kind === "callLog")!;
+  assert.equal((await unsendGroupMessage(MINJI, group.id, log.seq)).ok, true); // 방장
 });

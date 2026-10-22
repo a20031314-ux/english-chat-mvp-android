@@ -1,6 +1,7 @@
 import { NextRequest } from "next/server";
 import { isMediaId } from "@/lib/rooms/media";
-import { claimMedia } from "@/lib/server/mediaStore";
+import { claimMedia, deleteMedia } from "@/lib/server/mediaStore";
+import { withoutGone } from "@/lib/server/dmStore";
 import { pollFrom } from "@/lib/server/lateRows";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
@@ -24,7 +25,9 @@ import {
   markGroupRead,
   myGroups,
   readGroup,
+  readGroupGone,
   readGroupMessages,
+  unsendGroupMessage,
   sendToGroup,
   transferGroup,
 } from "@/lib/server/groupStore";
@@ -132,9 +135,18 @@ export async function POST(request: NextRequest) {
 
   if (action === "open" || action === "poll") {
     const since = action === "poll" && typeof body.since === "number" && Number.isFinite(body.since) ? body.since : 0;
-    const [messages, call] = await Promise.all([readGroupMessages(group.id, pollFrom(since)), callStatus(group.callRoomId)]);
+    const [rows, call, gone] = await Promise.all([readGroupMessages(group.id, pollFrom(since)), callStatus(group.callRoomId), readGroupGone(group.id)]);
     if (group.lastSeq) await markGroupRead(me, group.id, group.lastSeq);
-    return jsonWithCors(request, { group, messages, call });
+    // gone: 모두에게서 지운 줄 — 이미 받아 둔 앱이 화면에서 뺀다.
+    return jsonWithCors(request, { group, messages: withoutGone(rows, gone), call, gone });
+  }
+
+  if (action === "unsend") {
+    if (typeof body.seq !== "number" || !Number.isInteger(body.seq)) return bad(request, "BAD_SEQ");
+    const result = await unsendGroupMessage(me, group.id, body.seq);
+    if (!result.ok) return bad(request, result.error, result.error === "NOT_YOURS" ? 403 : 404);
+    if (result.message.image) await deleteMedia([result.message.image.id]);
+    return jsonWithCors(request, { ok: true });
   }
 
   // 📞 단체방 통화: 열려 있으면 그 방(나도 들어갈 수 있게), 없으면 새 비공개 방 + "통화 시작" 줄.
