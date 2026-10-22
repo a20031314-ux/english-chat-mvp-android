@@ -50,7 +50,7 @@
 
 - **사람 설정 끝(사용자 2026-10-22):** Vercel `OPS_KEY`, Moyeo·Pingo Google OAuth 원본·서치 콘솔, AdSense 값, Play 광고·데이터 보안 신고, iOS RevenueCat 키. 남은 것은 프리미엄 8,900원 전환일(그날 `PREMIUM_DAILY_PLAN_FROM`)뿐 — 아래 줄의 "남은 사람 일"은 이 줄이 앞선다.
 
-- **요금제(사용자 2026-10-22):** Upstash 갱신형(무료 아님 — 월 명령 수 한도 없음, 종량제면 예산 상한에 닿으면 느려지고, 고정형이면 데이터 크기·전송량 상한) · **Vercel은 결제 안 함(Hobby)** — Hobby는 비상업용만이고(구독·광고가 있는 이 앱은 해당 안 됨), 월 함수 호출 100만·Active CPU 4시간 등을 넘으면 최대 30일 멈춤. **사용자 모으기 전에 Pro($20/월)로 올리기 권함**(2026-10-22 store 판단, `hub/log` 같은 날).
+- **요금제(사용자 2026-10-22):** **Vercel Pro로 올림**(지출 상한은 Settings → Billing → Spend Management) · Upstash 종량제(10만 명령당 $0.2, 월 한도 없음 — 예산 상한을 걸면 닿을 때 느려지니 넉넉히, 초당 1만 명령이 한 DB의 상한: 부하 점검 기준 방에 동시 약 600명이면 닿음).
 - iOS(`hub/drafts/ios-launch.md` "출시까지 남은 사람 일"): 정함(2026-10-20) — 번들 ID는 안드로이드와 같은 `com.yourname.englishchat`, 구독·포인트 상품 ID도 같게, 다른 스토어 구독자는 결제 막음.
   App Store Connect 구독 3·포인트 4, RevenueCat 아이폰 앱·권한·offering 패키지(lite·plus·premium) 설정 끝. 남은 것: GitHub ios 환경에 `NEXT_PUBLIC_REVENUECAT_IOS_API_KEY`, 상품 한국어 이름·심사 스크린샷, 아이콘, 유료 앱 계약.
 - 비용 표(`hub/costs.md`, 자동 계산 — 2026-10-22부터 **코드의 기본 모델에서 단가를 읽음**, `src/lib/aiDefaults.ts`·`modelPrices.ts`): 한도까지 매일 다 쓰면 유료 요금 모두 손해(라이트 −714원 ~ 8,900원 −2,865원/월, 지금 프리미엄 −4원 — 2026-10-22 글 기능 Haiku 이전 뒤). 채팅 한 통 보통 0.9원·최악 1.1원. 교체안: `hub/drafts/model-switch-2026-10-22.md`. 아직 가정이라 `cost-report.mjs` 실측(사용자 PC, KV 키)으로 확인할지.
