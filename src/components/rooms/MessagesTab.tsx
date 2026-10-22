@@ -6,6 +6,7 @@ import { AccountCard } from "@/components/account/AccountCard";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { roomCopy } from "@/lib/rooms/copy";
 import { onGroupRequest, requestDm } from "@/lib/rooms/openDm";
+import { dmHide } from "@/lib/rooms/client";
 import type { DmSummary } from "@/lib/rooms/dm";
 import type { GroupSummary } from "@/lib/rooms/group";
 import { DmList } from "./RoomDm";
@@ -25,6 +26,7 @@ export function MessagesTab({
   threads,
   groups,
   onGroupsChanged,
+  onThreadsChanged,
   title,
   top,
 }: {
@@ -34,6 +36,8 @@ export function MessagesTab({
   threads: DmSummary[];
   groups: GroupSummary[];
   onGroupsChanged: () => void;
+  /** 1:1 목록 다시 받기(대화를 지운 뒤). */
+  onThreadsChanged?: () => void;
   /** 머리 제목(없으면 "메시지"). */
   title?: string;
   /** 목록 맨 위에 늘 보이는 줄(AI 튜터). */
@@ -58,7 +62,19 @@ export function MessagesTab({
             <GroupList t={t} me={account.id} locale={locale} groups={groups} onOpen={setOpenGroup} onCreate={() => setCreating(true)} onChanged={onGroupsChanged} />
             {/* 목록 사이 네이티브 광고(무료·안드로이드만). 단체방 대화가 열리면 시트가 덮으므로 광고는 멈춘다. */}
             <NativeAdSlot feedId="talk-list" slotKey="talk-between-lists" active={!openGroup && !creating} />
-            <DmList t={t} threads={threads} onOpen={requestDm} />
+            <DmList
+              t={t}
+              threads={threads}
+              onOpen={requestDm}
+              onHide={async (threadId) => {
+                try {
+                  await dmHide(threadId);
+                } catch {
+                  // 다음 새로고침에서 다시.
+                }
+                onThreadsChanged?.();
+              }}
+            />
           </div>
         ) : (
           <div className="space-y-3">

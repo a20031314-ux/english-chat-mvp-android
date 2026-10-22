@@ -363,7 +363,6 @@ function Lobby({
                 </button>
               ))}
             </div>
-            {freeTalk ? <p className="text-meta text-slate-400">{t.freeTalkHint}</p> : null}
           </div>
           <button
             type="button"

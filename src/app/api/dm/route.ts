@@ -4,7 +4,7 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
 import { readAccount } from "@/lib/server/accountStore";
 import { blockedEitherWay, isAccountId } from "@/lib/server/socialStore";
-import { claimCallLog, decline, findQuote, inbox, markRead, readMessages, readThread, send } from "@/lib/server/dmStore";
+import { claimCallLog, decline, findQuote, hiddenUpTo, hideThread, inbox, markRead, readMessages, readThread, send } from "@/lib/server/dmStore";
 import { createRoom, isInviteCode, liveCount, readLines, readMeta } from "@/lib/server/roomStore";
 import { cleanFocus, clipQuote, type LineQuote } from "@/lib/rooms/quote";
 import { DM_MAX_CHARS, isThreadId, otherOf, threadIdFor } from "@/lib/rooms/dm";
@@ -60,7 +60,8 @@ export async function POST(request: NextRequest) {
     const id = threadIdFor(me, target);
     if (action === "open") {
       const thread = await readThread(id);
-      const messages = thread ? await readMessages(id) : [];
+      const hidden = thread ? await hiddenUpTo(me, id) : 0;
+      const messages = thread ? (await readMessages(id)).filter((row) => row.seq > hidden) : [];
       if (thread?.lastSeq) await markRead(me, id, thread.lastSeq);
       return jsonWithCors(request, { thread, messages, blocked });
     }
@@ -127,9 +128,14 @@ export async function POST(request: NextRequest) {
 
   if (action === "poll") {
     const since = typeof body.since === "number" && Number.isFinite(body.since) ? body.since : 0;
-    const messages = await readMessages(thread.id, pollFrom(since));
+    const hidden = await hiddenUpTo(me, thread.id);
+    const messages = (await readMessages(thread.id, pollFrom(since))).filter((row) => row.seq > hidden);
     if (thread.lastSeq) await markRead(me, thread.id, thread.lastSeq);
     return jsonWithCors(request, { thread, messages });
+  }
+
+  if (action === "hide") {
+    return (await hideThread(me, thread.id)) ? jsonWithCors(request, { ok: true }) : bad(request, "NO_THREAD", 404);
   }
 
   if (action === "decline") {

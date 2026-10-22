@@ -513,6 +513,11 @@ export function dmSend(
   return dm("send", { target, text, quoteSeq: quote.seq, quoteIndex: quote.index, ask: quote.ask, ...focus, ...image });
 }
 
+/** 내 목록에서 대화 지우기(상대 쪽은 그대로, 새 줄이 오면 다시 나옴). */
+export function dmHide(threadId: string): Promise<{ ok: true }> {
+  return dm("hide", { threadId });
+}
+
 export function dmDecline(threadId: string): Promise<{ ok: true }> {
   return dm("decline", { threadId });
 }

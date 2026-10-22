@@ -468,6 +468,7 @@ function AppHomeInner({
                   threads={inbox.threads}
                   groups={groups.groups}
                   onGroupsChanged={groups.refresh}
+                  onThreadsChanged={inbox.refresh}
                   title={ui.homeTabTalk}
                   top={
                     <AiTutorRow

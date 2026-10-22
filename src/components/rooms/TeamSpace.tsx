@@ -418,7 +418,6 @@ export function TeamSpace({
           </ul>
         )}
       </section>
-      <p className="text-meta text-slate-600">{tt.retention}</p>
     </div>
   );
 }

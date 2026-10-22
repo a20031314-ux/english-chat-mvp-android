@@ -1,7 +1,7 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import { DM_PENDING_LIMIT, threadIdFor } from "../rooms/dm.ts";
-import { claimCallLog, decline, findQuote, inbox, markRead, readMessages, send } from "./dmStore.ts";
+import { claimCallLog, decline, findQuote, hiddenUpTo, hideThread, inbox, markRead, readMessages, send } from "./dmStore.ts";
 
 // KV 접속 정보 없이 메모리로(kv.ts).
 delete process.env.KV_REST_API_URL;
@@ -74,4 +74,21 @@ test("집기: 글 메시지와 통화 기록의 한 줄만 인용, 인용 글은
   assert.equal(await findQuote(id, log.message.seq), null);
   assert.equal(await findQuote(id, log.message.seq, 5), null);
   assert.equal(await findQuote(id, 9999), null);
+});
+
+test("내 목록에서 지우기: 나에게만 빠지고, 새 줄이 오면 다시 나오며 지우기 전 줄은 숨긴다", async () => {
+  const D = "lb_" + "d".repeat(24);
+  const E = "lb_" + "e".repeat(24);
+  await send({ from: D, to: E, kind: "text", text: "¿Vamos al cine?" });
+  await send({ from: E, to: D, kind: "text", text: "いいよ" });
+  const id = threadIdFor(D, E);
+  assert.equal(await hideThread(C, id), false); // 대화에 없는 사람은 못 지움
+  assert.equal(await hideThread(D, id), true);
+  assert.equal((await inbox(D)).some((row) => row.thread.id === id), false);
+  assert.equal((await inbox(E)).some((row) => row.thread.id === id), true); // 상대 쪽은 그대로
+  const before = await hiddenUpTo(D, id);
+  await send({ from: E, to: D, kind: "text", text: "เจอกันกี่โมง" });
+  assert.equal((await inbox(D)).some((row) => row.thread.id === id), true);
+  const visible = (await readMessages(id)).filter((row) => row.seq > before);
+  assert.deepEqual(visible.map((row) => row.text), ["เจอกันกี่โมง"]);
 });

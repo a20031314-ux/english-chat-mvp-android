@@ -56,16 +56,30 @@ function preview(t: RoomCopy, thread: DmThread): string {
   return thread.lastText || t.callStarted;
 }
 
-export function DmList({ t, threads, onOpen }: { t: RoomCopy; threads: DmSummary[]; onOpen: (other: string) => void }) {
+export function DmList({
+  t,
+  threads,
+  onOpen,
+  onHide,
+}: {
+  t: RoomCopy;
+  threads: DmSummary[];
+  onOpen: (other: string) => void;
+  /** 내 목록에서 지우기(⋯ → 삭제). */
+  onHide?: (threadId: string) => Promise<void>;
+}) {
+  // ⋯를 누른 대화: 그 줄 끝에 [삭제][취소].
+  const [confirming, setConfirming] = useState<string | null>(null);
+  const [busy, setBusy] = useState("");
   const requests = threads.filter((row) => row.request);
   const rest = threads.filter((row) => !row.request);
   if (threads.length === 0) return <p className="text-sm text-slate-500">{t.noThreads}</p>;
   const row = (summary: DmSummary) => (
-    <li key={summary.thread.id}>
+    <li key={summary.thread.id} className="flex items-center gap-2">
       <button
         type="button"
         onClick={() => onOpen(summary.other)}
-        className="flex w-full items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-3 py-2.5 text-start hover:bg-white/[0.06]"
+        className="flex min-w-0 flex-1 items-center gap-3 rounded-2xl border border-white/10 bg-white/[0.03] px-3 py-2.5 text-start hover:bg-white/[0.06]"
       >
         <Face accountId={summary.other} name="" size={44} />
         <span className="min-w-0 flex-1">
@@ -81,6 +95,39 @@ export function DmList({ t, threads, onOpen }: { t: RoomCopy; threads: DmSummary
           <span className="shrink-0 rounded-full bg-violet-500 px-2 py-0.5 text-xs font-semibold text-white">{Math.min(summary.unread, 99)}</span>
         ) : null}
       </button>
+      {onHide ? (
+        confirming === summary.thread.id ? (
+          <span className="flex shrink-0 flex-col gap-1">
+            <button
+              type="button"
+              disabled={busy === summary.thread.id}
+              onClick={() => {
+                setBusy(summary.thread.id);
+                void onHide(summary.thread.id).finally(() => {
+                  setBusy("");
+                  setConfirming(null);
+                });
+              }}
+              className="rounded-lg bg-rose-500/80 px-2.5 py-1 text-xs font-medium text-white disabled:opacity-40"
+            >
+              {t.boardDelete}
+            </button>
+            <button type="button" onClick={() => setConfirming(null)} className="rounded-lg px-2.5 py-1 text-xs text-slate-300">
+              {t.cancel}
+            </button>
+          </span>
+        ) : (
+          <button
+            type="button"
+            aria-label={t.boardDelete}
+            title={t.boardDelete}
+            onClick={() => setConfirming(summary.thread.id)}
+            className="shrink-0 rounded-lg px-2 py-2 text-lg leading-none text-slate-500 hover:bg-white/10"
+          >
+            ⋯
+          </button>
+        )
+      ) : null}
     </li>
   );
   return (
@@ -92,7 +139,6 @@ export function DmList({ t, threads, onOpen }: { t: RoomCopy; threads: DmSummary
         </section>
       ) : null}
       <ul className="space-y-2">{rest.map(row)}</ul>
-      <p className="text-[11px] text-slate-600">{t.retention}</p>
     </div>
   );
 }

@@ -1208,7 +1208,6 @@ export function RoomView({
             </button>
           ))}
         </div>
-        {textOnly ? <p className="text-meta text-slate-500">{t.chatOnlyHint}</p> : null}
         {role === "speaker" && !videoRoom ? (
           <label className="flex items-center gap-1.5 text-meta text-slate-400">
             💡 {t.hintMode}

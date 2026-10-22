@@ -31,6 +31,8 @@ const seqKey = (id: string) => `dm:v1:seq:${id}`;
 const boxKey = (account: string) => `dm:v1:box:${account}`;
 const readKey = (account: string, id: string) => `dm:v1:read:${account}:${id}`;
 const logKey = (roomId: string) => `dm:v1:log:${roomId}`;
+/** 내 목록에서 지운 대화: 지울 때의 마지막 번호. 그 뒤 새 줄이 오면 다시 보이고, 지우기 전 줄은 나에게만 안 보인다. */
+const hideKey = (account: string, id: string) => `dm:v1:hide:${account}:${id}`;
 const BOX_KEEP = 200;
 
 export async function readThread(id: string): Promise<DmThread | null> {
@@ -169,6 +171,22 @@ export async function markRead(me: string, id: string, seq: number): Promise<voi
   if (seq > have) await kvSetJson(readKey(me, id), seq, DM_TTL_SECONDS);
 }
 
+/** 이 대화에서 나에게 숨긴 마지막 번호(없으면 0). */
+export async function hiddenUpTo(me: string, id: string): Promise<number> {
+  return (await kvGetJson<number>(hideKey(me, id))) ?? 0;
+}
+
+/**
+ * 내 목록에서 대화 지우기(2026-10-23, 사용자 "채팅창 삭제가 안 돼"). 상대 쪽은 그대로, 서버 기록은 원래대로 30일 뒤 만료.
+ * 새 줄이 오면 목록에 다시 나오고, 지우기 전 줄은 나에게 안 보인다.
+ */
+export async function hideThread(me: string, id: string): Promise<boolean> {
+  const thread = await readThread(id);
+  if (!thread || !thread.members.includes(me)) return false;
+  await kvSetJson(hideKey(me, id), thread.lastSeq ?? 0, DM_TTL_SECONDS);
+  return true;
+}
+
 /** 내 대화 목록. 거절한 요청은 받은 쪽 목록에서 뺀다. 최근 순. */
 export async function inbox(me: string): Promise<DmSummary[]> {
   const ids = [...new Set(await kvListRange(boxKey(me)))];
@@ -177,6 +195,8 @@ export async function inbox(me: string): Promise<DmSummary[]> {
       const thread = await readThread(id);
       if (!thread || !thread.members.includes(me)) return null;
       if (thread.status === "declined" && thread.starter !== me) return null;
+      const hidden = await hiddenUpTo(me, id);
+      if (hidden && (thread.lastSeq ?? 0) <= hidden) return null;
       const read = (await kvGetJson<number>(readKey(me, id))) ?? 0;
       return {
         thread,

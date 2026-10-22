@@ -89,7 +89,21 @@ export function GroupList({
   onChanged: () => void;
 }) {
   const [busy, setBusy] = useState("");
+  // ⋯를 누른 단체방: 그 줄 끝에 [나가기][취소](2026-10-23, 목록에서 바로 지우기).
+  const [confirming, setConfirming] = useState<string | null>(null);
   const tt = teamCopy(locale);
+  const leave = async (groupId: string) => {
+    setBusy(groupId);
+    try {
+      await groupLeave(groupId);
+      onChanged();
+    } catch {
+      // 다음 새로고침에서 다시.
+    } finally {
+      setBusy("");
+      setConfirming(null);
+    }
+  };
   const answer = async (groupId: string, accept: boolean) => {
     setBusy(groupId);
     try {
@@ -155,14 +169,40 @@ export function GroupList({
                     {t.declineRequest}
                   </button>
                 </span>
-              ) : unread > 0 ? (
-                <span className="shrink-0 rounded-full bg-violet-500 px-2 py-0.5 text-xs font-semibold text-white">{Math.min(unread, 99)}</span>
-              ) : null}
+              ) : confirming === group.id ? (
+                <span className="flex shrink-0 flex-col gap-1">
+                  <button
+                    type="button"
+                    disabled={busy === group.id}
+                    onClick={() => void leave(group.id)}
+                    className="rounded-lg bg-rose-500/80 px-2.5 py-1 text-xs font-medium text-white disabled:opacity-40"
+                  >
+                    {t.groupLeave}
+                  </button>
+                  <button type="button" onClick={() => setConfirming(null)} className="rounded-lg px-2.5 py-1 text-xs text-slate-300">
+                    {t.cancel}
+                  </button>
+                </span>
+              ) : (
+                <span className="flex shrink-0 items-center gap-1">
+                  {unread > 0 ? (
+                    <span className="rounded-full bg-violet-500 px-2 py-0.5 text-xs font-semibold text-white">{Math.min(unread, 99)}</span>
+                  ) : null}
+                  <button
+                    type="button"
+                    aria-label={t.groupLeave}
+                    title={t.groupLeave}
+                    onClick={() => setConfirming(group.id)}
+                    className="rounded-lg px-2 py-2 text-lg leading-none text-slate-500 hover:bg-white/10"
+                  >
+                    ⋯
+                  </button>
+                </span>
+              )}
             </div>
           </li>
         ))}
       </ul>
-      <p className="text-meta text-slate-600">{t.groupRetention}</p>
     </section>
   );
 }
@@ -578,10 +618,8 @@ function MembersSheet({
               >
                 🤝 {tt.makeTeam}
               </button>
-              <p className="text-caption text-slate-400">{tt.makeTeamHint}</p>
             </div>
           ) : null}
-          {group.team ? <p className="text-meta text-slate-500">{tt.retention}</p> : null}
           {notice ? <p className="text-xs text-rose-300">{notice}</p> : null}
           <button
             type="button"

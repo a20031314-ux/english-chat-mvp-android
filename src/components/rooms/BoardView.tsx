@@ -126,7 +126,6 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
           {t.boardWrite}
         </button>
       </div>
-      <p className="mt-2 text-meta text-slate-500">{t.boardKept}</p>
 
       {posts === null ? null : posts.length === 0 ? (
         <p className="mt-6 text-center text-note text-slate-400">{t.boardEmpty}</p>
@@ -297,7 +296,6 @@ function Composer({
           value={text}
           maxLength={max}
           onChange={(event) => setText(event.target.value)}
-          placeholder={t.boardPlaceholder}
           rows={7}
           autoFocus
           className="w-full resize-none rounded-lg border border-line bg-surface px-3 py-2 text-chat text-ink placeholder:text-slate-500"
