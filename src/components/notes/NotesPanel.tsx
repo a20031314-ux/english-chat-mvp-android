@@ -24,7 +24,8 @@ import {
   type Placements,
   type TopicNotes,
 } from "@/lib/notes/notes";
-import { SENTENCE_NOTES_STORAGE_KEY, parseNoteStore } from "@/lib/sentenceNotes";
+import { SENTENCE_NOTES_STORAGE_KEY, deleteAskThread, parseNoteStore } from "@/lib/sentenceNotes";
+import { sentenceFitsLanguage } from "@/lib/notes/sentenceFits";
 import { loadVocabulary } from "@/lib/vocabulary";
 
 /**
@@ -65,7 +66,10 @@ function writeJson(key: string, value: unknown) {
   }
 }
 
-function deviceEntries(language: string): NoteEntry[] {
+/** 질문을 지우면 노트가 다시 읽게 알리는 신호(질문 줄이 패널 깊은 곳에 있어서). */
+const NOTES_CHANGED = "notes:changed";
+
+function deviceEntries(language: string, uiLanguage: string): NoteEntry[] {
   const words: NoteEntry[] = loadVocabulary()
     .filter((entry) => entry.languageCode === language)
     .map((entry) => ({
@@ -84,6 +88,10 @@ function deviceEntries(language: string): NoteEntry[] {
   const questions: NoteEntry[] = [];
   for (const note of Object.values(store)) {
     if (note.language !== language) continue;
+    // 답은 물을 때의 앱 언어로 적혀 있다 — 지금 앱 언어로 물은 것만(다른 언어로 물은 건 그 언어로 바꾸면 다시 보인다).
+    if (note.uiLanguage !== uiLanguage) continue;
+    // 학습 언어가 아닌 문장(일본어 노트에 들어온 중국어 자막 등)은 보이지 않는다.
+    if (!sentenceFitsLanguage(note.sentence, language)) continue;
     for (const thread of note.threads) {
       for (const turn of thread.turns) {
         questions.push({
@@ -93,6 +101,9 @@ function deviceEntries(language: string): NoteEntry[] {
           question: turn.question,
           answer: turn.answer,
           at: turn.at,
+          threadId: thread.id,
+          language: note.language,
+          uiLanguage: note.uiLanguage,
         });
       }
     }
@@ -114,7 +125,7 @@ export function NotesPanel({
 }) {
   const ledger = useLedger(targetLanguage);
   // 이 패널은 지도를 불러온 뒤(브라우저에서만) 그려지므로 기기 저장소를 처음부터 읽는다.
-  const [device, setDevice] = useState<NoteEntry[]>(() => deviceEntries(targetLanguage));
+  const [device, setDevice] = useState<NoteEntry[]>(() => deviceEntries(targetLanguage, locale));
   const [placements, setPlacements] = useState<Placements>(() => readJson<Placements>(PLACE_KEY(targetLanguage), {}));
   /** 서버가 더 못 받는 날(하루 한도·오류): "찾는 중" 대신 "아직 자리 없음". */
   const [stalled, setStalled] = useState(false);
@@ -125,7 +136,11 @@ export function NotesPanel({
   const [wordsOpen, setWordsOpen] = useState(() => Boolean(takeAppIntent("openNotes")));
   const asked = useRef(new Set<string>());
 
-  const reloadDevice = useCallback(() => setDevice(deviceEntries(targetLanguage)), [targetLanguage]);
+  const reloadDevice = useCallback(() => setDevice(deviceEntries(targetLanguage, locale)), [targetLanguage, locale]);
+  useEffect(() => {
+    window.addEventListener(NOTES_CHANGED, reloadDevice);
+    return () => window.removeEventListener(NOTES_CHANGED, reloadDevice);
+  }, [reloadDevice]);
 
   useEffect(() => onAppIntent("openNotes", () => setWordsOpen(true)), []);
 
@@ -481,7 +496,7 @@ function TopicBody({
       {notes.questions.length ? (
         <Group label={ui.notesQuestions}>
           {notes.questions.map((row) => (
-            <QuestionRow key={`q:${row.text}:${row.at}`} entry={row} />
+            <QuestionRow key={`q:${row.text}:${row.at}`} ui={ui} entry={row} />
           ))}
         </Group>
       ) : null}
@@ -539,11 +554,26 @@ function PhraseRow({
   );
 }
 
-function QuestionRow({ entry }: { entry: NoteQuestion }) {
+function QuestionRow({ ui, entry }: { ui: UICopy; entry: NoteQuestion }) {
   const [open, setOpen] = useState(false);
+  const remove = () => {
+    if (!entry.threadId || !entry.language || !entry.uiLanguage) return;
+    deleteAskThread({ sentence: entry.text, language: entry.language, uiLanguage: entry.uiLanguage }, entry.threadId);
+    window.dispatchEvent(new Event(NOTES_CHANGED));
+  };
   return (
-    <li className="rounded-lg bg-white/[0.04] px-3 py-2">
-      <button type="button" onClick={() => setOpen((v) => !v)} className="block w-full text-start">
+    <li className="relative rounded-lg bg-white/[0.04] px-3 py-2">
+      {entry.threadId ? (
+        <button
+          type="button"
+          onClick={remove}
+          aria-label={ui.delete}
+          className="absolute end-1.5 top-1.5 rounded-lg px-1.5 text-caption text-slate-500 hover:bg-white/10 hover:text-slate-300"
+        >
+          ×
+        </button>
+      ) : null}
+      <button type="button" onClick={() => setOpen((v) => !v)} className="block w-full pe-6 text-start">
         <span dir="auto" className="block text-note text-slate-400">
           {entry.text}
         </span>

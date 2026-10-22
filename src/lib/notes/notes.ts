@@ -24,6 +24,10 @@ export type NoteQuestion = {
   question: string;
   answer: string;
   at: number;
+  /** 지우기용(문장분석의 그 질문 묶음). 기기 저장분에만 있다. */
+  threadId?: string;
+  language?: string;
+  uiLanguage?: string;
 };
 export type NoteEntry = NoteExpression | NoteWord | NoteQuestion;
 
