@@ -14,7 +14,7 @@ import type { CustomNode, FixCard, NotebookChapter, NotebookEdit } from "@/lib/n
  * 칸 이름 옆 숫자가 짚인 횟수 — 많은 칸이 위로 와서 "여기에 집중"이 된다. 설명 글은 두지 않는다(hub/DESIGN.md "안내 글").
  */
 
-type NodeView = { id: string; chapter: NotebookChapter; stage?: number; name: string; example?: string; note?: string };
+type NodeView = { id: string; chapter: NotebookChapter; stage?: number; name: string; example?: string; note?: string; ahead?: boolean };
 type Book = {
   stage: number;
   nodes: NodeView[];
@@ -98,7 +98,8 @@ export function NotebookSection({
   if (!book) return null;
   const nameOf = (id: string) =>
     book.custom.find((node) => node.id === id)?.name ?? book.renames[id] ?? book.nodes.find((node) => node.id === id)?.name ?? "";
-  const inChapter = (chapter: NotebookChapter) => book.nodes.filter((node) => node.chapter === chapter);
+  // 뒤 단계 문법은 카드가 들어온 칸만.
+  const inChapter = (chapter: NotebookChapter) => book.nodes.filter((node) => node.chapter === chapter && (!node.ahead || (counts[node.id] ?? 0) > 0));
   const sum = (ids: string[]) => ids.reduce((total, id) => total + (counts[id] ?? 0), 0);
   const rows: Array<{ key: Group; label: string; count: number; show: boolean }> = [
     { key: "script", label: ui.notebookScript, count: sum(inChapter("script").map((n) => n.id)), show: inChapter("script").length > 0 },
@@ -164,7 +165,7 @@ export function NotebookSection({
       {movingCard ? (
         <Sheet ui={ui} title={ui.notebookMoveTo} onClose={() => setMoving(null)}>
           <ul className="mt-2 space-y-1">
-            {[...book.nodes.map((node) => node.id), ...book.custom.map((node) => node.id)].map((id) => (
+            {[...book.nodes.filter((node) => !node.ahead).map((node) => node.id), ...book.custom.map((node) => node.id)].map((id) => (
               <li key={id}>
                 <button
                   type="button"

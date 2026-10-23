@@ -15,7 +15,8 @@ export const maxDuration = 60;
  * 노트의 뼈대와 짚은 장면 카드(notes/notebook.ts, 저장 server/notebookStore.ts).
  *
  * GET ?lang=<학습 언어>&ui=<앱 언어>
- *   { stage, nodes: [{ id, chapter, stage?, name, example?, note? }], custom, renames, memos, cards }
+ *   { stage, nodes: [{ id, chapter, stage?, name, example?, note?, ahead? }], custom, renames, memos, cards }
+ *   ahead = 지금 단계 뒤의 문법(앱은 카드가 든 칸만 보인다).
  *   칸 이름은 앱 언어(영어·한국어는 손으로 쓴 글, 다른 언어는 단계 글과 같은 옮긴 글 — server/stageCopy.ts).
  * POST { language, edit } — 카드 옮기기·메모·지우기, 칸 더하기·이름 바꾸기·지우기·메모, 제안 칸 받기 → { ok, cards, custom, renames, memos }
  */
@@ -23,7 +24,7 @@ export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
 }
 
-type NodeView = { id: string; chapter: SkeletonNode["chapter"]; stage?: number; name: string; example?: string; note?: string };
+type NodeView = { id: string; chapter: SkeletonNode["chapter"]; stage?: number; name: string; example?: string; note?: string; ahead?: boolean };
 
 export async function GET(request: NextRequest) {
   const userId = requestUserId(request);
@@ -35,7 +36,7 @@ export async function GET(request: NextRequest) {
   const onTranslate = () => void meterRequest(request, "stageCopy");
 
   const [stage, record] = await Promise.all([currentStageOrder(userId, language), readNotebook(userId, language)]);
-  const skeleton = skeletonFor(language, stage);
+  const skeleton = skeletonFor(language, stage, true);
   const [stages, script] = await Promise.all([
     skeleton.some((node) => node.chapter === "grammar") ? stageViews(language, ui, uiName, onTranslate) : Promise.resolve(null),
     skeleton.some((node) => node.chapter === "script") ? scriptView(language, ui, uiName, onTranslate) : Promise.resolve(null),
@@ -44,7 +45,14 @@ export async function GET(request: NextRequest) {
   const nodes: NodeView[] = skeleton.map((node) => {
     if (node.chapter === "grammar") {
       const view = stages?.find((s) => s.order === node.stage)?.grammar[node.index];
-      return { id: node.id, chapter: node.chapter, stage: node.stage, name: view?.name || english(node.name), ...(node.example ? { example: node.example } : {}) };
+      return {
+        id: node.id,
+        chapter: node.chapter,
+        stage: node.stage,
+        name: view?.name || english(node.name),
+        ...(node.example ? { example: node.example } : {}),
+        ...(node.ahead ? { ahead: true } : {}),
+      };
     }
     const group = script?.groups[node.index];
     const note = group?.note ?? (node.note ? english(node.note) : undefined);

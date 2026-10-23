@@ -39,6 +39,11 @@ test("뼈대: 글자·소리 + 지금 단계까지의 문법, 단계 범위가 �
   // 영어 1단계 be동사는 구문 id로 이름이 붙는다.
   assert.ok(skeletonFor("en", 1).some((n) => n.id === "g1-be-verb"));
   assert.equal(grammarNodeId(2, { name: { en: "Past simple: regular -ed" } }), "g2-past-simple-regular-ed");
+  // 칸 고르기 후보에는 뒤 단계 문법도(ahead).
+  const withAhead = skeletonFor("en", 1, true);
+  assert.ok(withAhead.some((n) => n.ahead && n.stage === 2));
+  assert.ok(!skeletonFor("en", 1).some((n) => n.ahead));
+  assert.match(placeOptions(withAhead, []), /grammar \(later\)/);
   assert.equal(stageOrderOf("ja-3"), 3);
   assert.equal(stageOrderOf(null), 1);
 });

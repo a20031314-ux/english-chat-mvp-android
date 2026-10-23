@@ -75,7 +75,7 @@ export async function fileFix(input: {
   const now = input.now ?? Date.now();
   try {
     const before = await readNotebook(input.userId, input.language);
-    const skeleton = skeletonFor(input.language, await currentStageOrder(input.userId, input.language));
+    const skeleton = skeletonFor(input.language, await currentStageOrder(input.userId, input.language), true);
     const known = new Set([...skeleton.map((node) => node.id), ...before.custom.map((node) => node.id)]);
     let placement = { node: null as string | null, note: input.explanation ?? "" } as ReturnType<typeof readPlacement>;
     const canAsk = input.openai && known.size > 0 && (await getDailyOpUsed(input.userId, "notebookFix")) < DAILY_FILES;

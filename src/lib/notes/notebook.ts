@@ -33,6 +33,8 @@ export type SkeletonNode = {
   note?: StageText;
   /** 영어 구문 목록 id(있으면). */
   constructionId?: string;
+  /** 지금 단계보다 뒤의 문법 — 카드가 들어온 칸만 화면에 보인다(틀린 것이 다음 단계 문법일 때). */
+  ahead?: boolean;
 };
 
 export type FixWhere = "chat" | "call" | "dm" | "room";
@@ -112,8 +114,9 @@ export function grammarNodeId(stage: number, grammar: { name: StageText; constru
 /**
  * 지금 단계까지의 뼈대. 단계 범위가 없는 언어면 문법이 비고, 글자 기초가 없는 언어면 글자·소리가 빈다.
  * 같은 id가 두 번 나오면(같은 문법이 두 단계에) 뒤의 것을 버린다.
+ * `withAhead`면 뒤 단계 문법도 `ahead`로 붙인다 — 칸 고르기 후보로(과거형을 틀린 1단계 학습자의 카드가 현재형 칸에 가지 않게).
  */
-export function skeletonFor(language: string, currentStage: number): SkeletonNode[] {
+export function skeletonFor(language: string, currentStage: number, withAhead = false): SkeletonNode[] {
   const nodes: SkeletonNode[] = [];
   const seen = new Set<string>();
   const course = scriptFor(language);
@@ -133,7 +136,7 @@ export function skeletonFor(language: string, currentStage: number): SkeletonNod
   const ladder = ladderFor(language);
   const upTo = Math.max(1, Math.min(currentStage, ladder?.stages.length ?? 1));
   for (const stage of ladder?.stages ?? []) {
-    if (stage.order > upTo) continue;
+    if (stage.order > upTo && !withAhead) continue;
     stage.grammar.forEach((grammar, index) => {
       const id = grammarNodeId(stage.order, grammar);
       if (seen.has(id)) return;
@@ -146,6 +149,7 @@ export function skeletonFor(language: string, currentStage: number): SkeletonNod
         name: grammar.name,
         example: grammar.example,
         ...(grammar.constructionId ? { constructionId: grammar.constructionId } : {}),
+        ...(stage.order > upTo ? { ahead: true } : {}),
       });
     });
   }
@@ -156,7 +160,7 @@ export function skeletonFor(language: string, currentStage: number): SkeletonNod
 export function placeOptions(skeleton: SkeletonNode[], custom: CustomNode[]): string {
   return [
     ...skeleton.map((node) =>
-      `${node.id} — ${node.chapter === "script" ? "letters/sounds" : "grammar"}: ${node.name.en}${node.example ? ` (e.g. ${node.example})` : ""}`,
+      `${node.id} — ${node.chapter === "script" ? "letters/sounds" : node.ahead ? "grammar (later)" : "grammar"}: ${node.name.en}${node.example ? ` (e.g. ${node.example})` : ""}`,
     ),
     ...custom.map((node) => `${node.id} — the learner's own section: ${node.name}`),
   ].join("\n");
@@ -168,7 +172,7 @@ export function placePrompt(input: { target: string; uiName: string; options: st
 Sections (id — what it is):
 ${input.options}
 
-- "node": the one section a learner would open to study this mistake — the grammar point or letters/sounds it is about. A mistake that is only a wrong word choice or a phrase goes to the closest grammar point it touches; if none fits at all, use "none".
+- "node": the one section a learner would open to study this mistake — the grammar point or letters/sounds it is about. Prefer the section that names exactly that point, even one marked "(later)"; never put it under a different point just because it is earlier. A mistake that is only a wrong word choice or a phrase goes to the grammar point it touches; if none fits, use "none".
 - "suggest": only when "node" is "none" — a short section name in ${input.uiName}, two to four words, naming the general point (never the learner's words).
 - "note": one short line in ${input.uiName} saying what was wrong and what the right form is, under 80 characters. Plain, no greeting, no praise. Words of ${input.target} may appear in quotes.
 - Never repeat or translate the learner's whole line.
