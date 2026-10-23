@@ -609,7 +609,15 @@
     "notebookDelete": "削除",
     "notebookSave": "保存",
     "notebookSuggest": "新しい項目 · {name}",
-    "notebookMake": "作成"
+    "notebookMake": "作成",
+    "notebookToday": "今日の学び",
+    "notebookPastDays": "前の日",
+    "notebookAddToNotes": "ノートに入れる",
+    "notebookWithScreen": "画面も一緒に",
+    "notebookScreen": "画面",
+    "notebookAgain": "また",
+    "notebookTypo": "打ち間違い",
+    "notebookMeant": "意味の推測"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1221,7 +1229,15 @@
     "notebookDelete": "删除",
     "notebookSave": "保存",
     "notebookSuggest": "新栏目 · {name}",
-    "notebookMake": "创建"
+    "notebookMake": "创建",
+    "notebookToday": "今天的学习",
+    "notebookPastDays": "之前几天",
+    "notebookAddToNotes": "加入笔记",
+    "notebookWithScreen": "附上画面",
+    "notebookScreen": "画面",
+    "notebookAgain": "又错",
+    "notebookTypo": "笔误",
+    "notebookMeant": "猜的意思"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1835,7 +1851,15 @@
     "notebookDelete": "Xóa",
     "notebookSave": "Lưu",
     "notebookSuggest": "Mục mới · {name}",
-    "notebookMake": "Tạo"
+    "notebookMake": "Tạo",
+    "notebookToday": "Học hôm nay",
+    "notebookPastDays": "Những ngày trước",
+    "notebookAddToNotes": "Thêm vào ghi chú",
+    "notebookWithScreen": "Kèm màn hình",
+    "notebookScreen": "Màn hình",
+    "notebookAgain": "Lại sai",
+    "notebookTypo": "Lỗi gõ",
+    "notebookMeant": "Đoán ý"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2454,7 +2478,15 @@
     "notebookDelete": "Supprimer",
     "notebookSave": "Enregistrer",
     "notebookSuggest": "Nouvelle rubrique · {name}",
-    "notebookMake": "Créer"
+    "notebookMake": "Créer",
+    "notebookToday": "Appris aujourd'hui",
+    "notebookPastDays": "Jours précédents",
+    "notebookAddToNotes": "Ajouter aux notes",
+    "notebookWithScreen": "Avec l'écran",
+    "notebookScreen": "Écran",
+    "notebookAgain": "Encore",
+    "notebookTypo": "Faute de frappe",
+    "notebookMeant": "Sens deviné"
   },
   "it": {
     "archive": "Report",
@@ -3264,7 +3296,15 @@
     "notebookDelete": "Elimina",
     "notebookSave": "Salva",
     "notebookSuggest": "Nuova sezione · {name}",
-    "notebookMake": "Crea"
+    "notebookMake": "Crea",
+    "notebookToday": "Imparato oggi",
+    "notebookPastDays": "Giorni precedenti",
+    "notebookAddToNotes": "Aggiungi alle note",
+    "notebookWithScreen": "Con schermata",
+    "notebookScreen": "Schermata",
+    "notebookAgain": "Di nuovo",
+    "notebookTypo": "Refuso",
+    "notebookMeant": "Senso intuito"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3886,7 +3926,15 @@
     "notebookDelete": "Apagar",
     "notebookSave": "Salvar",
     "notebookSuggest": "Nova seção · {name}",
-    "notebookMake": "Criar"
+    "notebookMake": "Criar",
+    "notebookToday": "Aprendizado de hoje",
+    "notebookPastDays": "Dias anteriores",
+    "notebookAddToNotes": "Adicionar às notas",
+    "notebookWithScreen": "Com a tela",
+    "notebookScreen": "Tela",
+    "notebookAgain": "De novo",
+    "notebookTypo": "Erro de digitação",
+    "notebookMeant": "Sentido deduzido"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4694,7 +4742,15 @@
     "notebookDelete": "Удалить",
     "notebookSave": "Сохранить",
     "notebookSuggest": "Новый раздел · {name}",
-    "notebookMake": "Создать"
+    "notebookMake": "Создать",
+    "notebookToday": "Сегодня",
+    "notebookPastDays": "Прошлые дни",
+    "notebookAddToNotes": "Добавить в заметки",
+    "notebookWithScreen": "Со снимком экрана",
+    "notebookScreen": "Экран",
+    "notebookAgain": "Снова",
+    "notebookTypo": "Опечатка",
+    "notebookMeant": "Угаданный смысл"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5312,7 +5368,15 @@
     "notebookDelete": "Hapus",
     "notebookSave": "Simpan",
     "notebookSuggest": "Bagian baru · {name}",
-    "notebookMake": "Buat"
+    "notebookMake": "Buat",
+    "notebookToday": "Belajar hari ini",
+    "notebookPastDays": "Hari sebelumnya",
+    "notebookAddToNotes": "Tambahkan ke catatan",
+    "notebookWithScreen": "Dengan layar",
+    "notebookScreen": "Layar",
+    "notebookAgain": "Lagi",
+    "notebookTypo": "Salah ketik",
+    "notebookMeant": "Tebakan makna"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -5924,7 +5988,15 @@
     "notebookDelete": "حذف",
     "notebookSave": "حفظ",
     "notebookSuggest": "قسم جديد · {name}",
-    "notebookMake": "إنشاء"
+    "notebookMake": "إنشاء",
+    "notebookToday": "تعلّم اليوم",
+    "notebookPastDays": "الأيام السابقة",
+    "notebookAddToNotes": "أضف إلى الملاحظات",
+    "notebookWithScreen": "مع الشاشة",
+    "notebookScreen": "الشاشة",
+    "notebookAgain": "مرة أخرى",
+    "notebookTypo": "خطأ كتابي",
+    "notebookMeant": "معنى مُخمَّن"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6536,7 +6608,15 @@
     "notebookDelete": "ลบ",
     "notebookSave": "บันทึก",
     "notebookSuggest": "หมวดใหม่ · {name}",
-    "notebookMake": "สร้าง"
+    "notebookMake": "สร้าง",
+    "notebookToday": "เรียนวันนี้",
+    "notebookPastDays": "วันก่อนๆ",
+    "notebookAddToNotes": "ใส่ในโน้ต",
+    "notebookWithScreen": "แนบหน้าจอ",
+    "notebookScreen": "หน้าจอ",
+    "notebookAgain": "อีกแล้ว",
+    "notebookTypo": "พิมพ์ผิด",
+    "notebookMeant": "เดาความหมาย"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7148,6 +7228,14 @@
     "notebookDelete": "मिटाएँ",
     "notebookSave": "सहेजें",
     "notebookSuggest": "नया खंड · {name}",
-    "notebookMake": "बनाएँ"
+    "notebookMake": "बनाएँ",
+    "notebookToday": "आज की पढ़ाई",
+    "notebookPastDays": "पिछले दिन",
+    "notebookAddToNotes": "नोट्स में जोड़ें",
+    "notebookWithScreen": "स्क्रीन के साथ",
+    "notebookScreen": "स्क्रीन",
+    "notebookAgain": "फिर से",
+    "notebookTypo": "टाइपो",
+    "notebookMeant": "अंदाज़ा लगाया अर्थ"
   }
 }

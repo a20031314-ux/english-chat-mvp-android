@@ -1,5 +1,6 @@
 "use client";
 
+import { captureSceneSoon } from "@/lib/notes/sceneShots";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { TurnDiagBox } from "@/components/roleplay/TurnDiagBox";
 import { turnDiagnosticsEnabled } from "@/lib/platform";
@@ -678,6 +679,8 @@ export function RoleplayScreen({
       const better = direction?.better ?? "";
       const meant = direction?.meant ?? "";
       const about = direction && direction.assessment !== "stuck" ? direction.note : "";
+      // 고쳐 준 줄은 이 기기에 그 순간 화면을 찍어 둔다(오늘의 학습 "화면 함께", lib/notes/sceneShots.ts).
+      if ((better || meant) && instruction.request.heard) captureSceneSoon(scenario.language, instruction.request.heard);
       if (better || meant || about) {
         setSaid((current) =>
           markAboutTheirLine(current, {

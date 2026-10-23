@@ -7,6 +7,7 @@ import { observeChatLines, observeChatTurn } from "@/lib/server/learnerProfileSt
 import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
 import { fileFix } from "@/lib/server/notebookStore";
+import { localDay as notebookDay, parseOffset as notebookOffset, TZ_OFFSET_HEADER as NOTEBOOK_TZ } from "@/lib/billing/plans";
 import { recordTurn } from "@/lib/server/ledgerStore";
 import { forgetLearnerBrief, readLearnerBrief } from "@/lib/server/learnerBrief";
 import { profileTurn, withProfileLine } from "@/lib/server/profileContext";
@@ -1172,6 +1173,7 @@ export async function POST(request: NextRequest) {
               right: data.correction?.corrected ?? "",
               explanation: data.correction?.explanation ?? "",
               where: "chat",
+              day: notebookDay(Date.now(), notebookOffset(request.headers.get(NOTEBOOK_TZ))),
               meter: (op) => void meterRequest(request, op),
             });
           });

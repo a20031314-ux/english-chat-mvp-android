@@ -6,12 +6,15 @@ import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
 import type { CustomNode, FixCard, NotebookChapter, NotebookEdit } from "@/lib/notes/notebook";
+import { sceneShotFor } from "@/lib/notes/sceneShots";
 
 /**
  * 노트의 뼈대 칸(글자·소리·문법)과 내가 만든 칸, 그 안의 짚은 장면 카드(notes/notebook.ts, /api/notebook).
  * 어휘·표현(예전 목차)은 NotesPanel이 그대로 그린다.
  *
  * 칸 이름 옆 숫자가 짚인 횟수 — 많은 칸이 위로 와서 "여기에 집중"이 된다. 설명 글은 두지 않는다(hub/DESIGN.md "안내 글").
+ * 맨 위 "오늘의 학습": 오늘 짚인 후보를 고르고(진짜 실수·또 틀린 것은 미리 체크), 기기에 찍어 둔 화면을 "화면 함께"로 붙여 노트에 넣는다.
+ * 지난 날 후보는 "지난 학습"(7일).
  */
 
 type NodeView = { id: string; chapter: NotebookChapter; stage?: number; name: string; example?: string; note?: string; ahead?: boolean };
@@ -22,8 +25,14 @@ type Book = {
   renames: Record<string, string>;
   memos: Record<string, string>;
   cards: FixCard[];
+  pending: FixCard[];
+  today: string;
 };
 type Group = NotebookChapter | "mine" | "loose";
+type PickGroup = "today" | "earlier";
+
+/** notes/notebook.ts `defaultPicked`와 같은 규칙(그 모듈은 뼈대 자료를 끌고 와서 화면에 들이지 않는다). */
+const picksByDefault = (card: FixCard) => card.again === true || (card.kind ?? "mistake") === "mistake";
 
 function newNodeId(): string {
   return `c-${Math.random().toString(36).slice(2, 10).padEnd(8, "0")}`;
@@ -52,6 +61,8 @@ export function NotebookSection({
   const [group, setGroup] = useState<Group | null>(null);
   const [nodeOpen, setNodeOpen] = useState<string | null>(null);
   const [moving, setMoving] = useState<string | null>(null);
+  const [picking, setPicking] = useState<PickGroup | null>(null);
+  const [viewShot, setViewShot] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -60,7 +71,7 @@ export function NotebookSection({
     })
       .then((response) => (response.ok ? response.json() : null))
       .then((body: Book | null) => {
-        if (!cancelled && body?.nodes) setBook(body);
+        if (!cancelled && body?.nodes) setBook({ ...body, pending: body.pending ?? [], today: body.today ?? "" });
       })
       .catch(() => undefined);
     return () => {
@@ -79,7 +90,16 @@ export function NotebookSection({
         const body = (await response.json().catch(() => null)) as Partial<Book> | null;
         if (response.ok && body?.cards) {
           setBook((current) =>
-            current ? { ...current, cards: body.cards!, custom: body.custom ?? current.custom, renames: body.renames ?? current.renames, memos: body.memos ?? current.memos } : current,
+            current
+              ? {
+                  ...current,
+                  cards: body.cards!,
+                  custom: body.custom ?? current.custom,
+                  renames: body.renames ?? current.renames,
+                  memos: body.memos ?? current.memos,
+                  pending: body.pending ?? current.pending,
+                }
+              : current,
           );
         }
       } catch {
@@ -87,6 +107,21 @@ export function NotebookSection({
       }
     },
     [language, isPremium],
+  );
+
+  /** 고른 후보를 노트로, 화면을 붙인 것은 그림을 올린다(그림이 실패해도 카드는 들어간다). */
+  const commit = useCallback(
+    async (ids: string[], shots: Record<string, string>) => {
+      await edit({ op: "commit", ids, shots: Object.keys(shots) });
+      for (const [id, image] of Object.entries(shots)) {
+        await fetch(apiUrl("/api/notebook"), {
+          method: "POST",
+          headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+          body: JSON.stringify({ language, shot: { id, image } }),
+        }).catch(() => undefined);
+      }
+    },
+    [edit, language, isPremium],
   );
 
   const counts = useMemo(() => {
@@ -107,11 +142,35 @@ export function NotebookSection({
     { key: "mine", label: ui.notebookMine, count: sum(book.custom.map((n) => n.id)), show: true },
     { key: "loose", label: ui.notesLoose, count: counts[""] ?? 0, show: (counts[""] ?? 0) > 0 },
   ];
+  const todayPending = book.pending.filter((card) => card.day === book.today);
+  const earlierPending = book.pending.filter((card) => card.day !== book.today);
   const openNode = nodeOpen ? { id: nodeOpen, name: nameOf(nodeOpen), view: book.nodes.find((node) => node.id === nodeOpen) } : null;
   const movingCard = moving ? book.cards.find((card) => card.id === moving) ?? null : null;
 
   return (
     <>
+      {todayPending.length || earlierPending.length ? (
+        <div className="mt-2 flex flex-wrap gap-1.5">
+          {todayPending.length ? (
+            <button
+              type="button"
+              onClick={() => setPicking("today")}
+              className="rounded-lg bg-status-learned/20 px-3 py-1.5 text-note font-semibold text-ink"
+            >
+              {ui.notebookToday} · {todayPending.length}
+            </button>
+          ) : null}
+          {earlierPending.length ? (
+            <button
+              type="button"
+              onClick={() => setPicking("earlier")}
+              className="rounded-lg border border-line px-3 py-1.5 text-caption text-slate-300"
+            >
+              {ui.notebookPastDays} · {earlierPending.length}
+            </button>
+          ) : null}
+        </div>
+      ) : null}
       <ul className="mt-2 divide-y divide-white/5">
         {rows
           .filter((row) => row.show)
@@ -135,6 +194,7 @@ export function NotebookSection({
               locale={locale}
               cards={book.cards.filter((card) => !card.node)}
               onMove={setMoving}
+              onShot={setViewShot}
               edit={edit}
             />
           ) : group === "mine" ? (
@@ -144,6 +204,24 @@ export function NotebookSection({
           )}
         </Sheet>
       ) : null}
+
+      {picking ? (
+        <Sheet ui={ui} title={picking === "today" ? ui.notebookToday : ui.notebookPastDays} onClose={() => setPicking(null)}>
+          <PickList
+            key={picking}
+            ui={ui}
+            language={language}
+            cards={picking === "today" ? todayPending : earlierPending}
+            nameOf={(id) => (id ? nameOf(id) : ui.notesLoose)}
+            onCommit={async (ids, shots) => {
+              await commit(ids, shots);
+              setPicking(null);
+            }}
+          />
+        </Sheet>
+      ) : null}
+
+      {viewShot ? <ShotSheet ui={ui} language={language} isPremium={isPremium} shotId={viewShot} onClose={() => setViewShot(null)} /> : null}
 
       {openNode ? (
         <Sheet ui={ui} title={openNode.name} onClose={() => setNodeOpen(null)}>
@@ -157,6 +235,7 @@ export function NotebookSection({
             memo={book.memos[openNode.id] ?? ""}
             cards={book.cards.filter((card) => card.node === openNode.id)}
             onMove={setMoving}
+            onShot={setViewShot}
             edit={edit}
           />
         </Sheet>
@@ -310,6 +389,7 @@ function NodeBody({
   memo,
   cards,
   onMove,
+  onShot,
   edit,
 }: {
   ui: UICopy;
@@ -320,6 +400,7 @@ function NodeBody({
   memo: string;
   cards: FixCard[];
   onMove: (card: string) => void;
+  onShot: (shotId: string) => void;
   edit: (change: NotebookEdit) => Promise<void>;
 }) {
   const [renaming, setRenaming] = useState(false);
@@ -390,7 +471,7 @@ function NodeBody({
         className="mt-3 w-full resize-y rounded-lg border border-line bg-surface px-3 py-2 text-note text-ink placeholder:text-slate-500"
       />
 
-      <CardList ui={ui} locale={locale} cards={cards} onMove={onMove} edit={edit} />
+      <CardList ui={ui} locale={locale} cards={cards} onMove={onMove} onShot={onShot} edit={edit} />
     </div>
   );
 }
@@ -400,12 +481,14 @@ function CardList({
   locale,
   cards,
   onMove,
+  onShot,
   edit,
 }: {
   ui: UICopy;
   locale: string;
   cards: FixCard[];
   onMove: (card: string) => void;
+  onShot: (shotId: string) => void;
   edit: (change: NotebookEdit) => Promise<void>;
 }) {
   const where: Record<FixCard["where"], string> = {
@@ -418,7 +501,7 @@ function CardList({
   return (
     <ul className="mt-3 space-y-2">
       {cards.map((card) => (
-        <FixCardRow key={card.id} ui={ui} locale={locale} card={card} where={where[card.where] ?? ""} onMove={onMove} edit={edit} />
+        <FixCardRow key={card.id} ui={ui} locale={locale} card={card} where={where[card.where] ?? ""} onMove={onMove} onShot={onShot} edit={edit} />
       ))}
     </ul>
   );
@@ -430,6 +513,7 @@ function FixCardRow({
   card,
   where,
   onMove,
+  onShot,
   edit,
 }: {
   ui: UICopy;
@@ -437,6 +521,7 @@ function FixCardRow({
   card: FixCard;
   where: string;
   onMove: (card: string) => void;
+  onShot: (shotId: string) => void;
   edit: (change: NotebookEdit) => Promise<void>;
 }) {
   const [memoOpen, setMemoOpen] = useState(false);
@@ -498,6 +583,11 @@ function FixCardRow({
         <span className="min-w-0 flex-1 truncate">
           {where} · {when(card.at, locale)}
         </span>
+        {card.shotId ? (
+          <button type="button" onClick={() => onShot(card.shotId!)} className="shrink-0 hover:text-slate-300">
+            {ui.notebookScreen}
+          </button>
+        ) : null}
         <button type="button" onClick={() => onMove(card.id)} className="shrink-0 hover:text-slate-300">
           {ui.notebookMove}
         </button>
@@ -509,6 +599,164 @@ function FixCardRow({
         </button>
       </div>
     </li>
+  );
+}
+
+function PickList({
+  ui,
+  language,
+  cards,
+  nameOf,
+  onCommit,
+}: {
+  ui: UICopy;
+  language: string;
+  cards: FixCard[];
+  nameOf: (id: string | null) => string;
+  onCommit: (ids: string[], shots: Record<string, string>) => Promise<void>;
+}) {
+  const [picked, setPicked] = useState<Set<string>>(() => new Set(cards.filter(picksByDefault).map((card) => card.id)));
+  const [withShot, setWithShot] = useState<Set<string>>(() => new Set());
+  const [shots, setShots] = useState<Record<string, string>>({});
+  const [busy, setBusy] = useState(false);
+
+  // 이 기기에 찍어 둔 화면이 있는 줄만 "화면 함께"를 보인다.
+  useEffect(() => {
+    let cancelled = false;
+    void (async () => {
+      const found: Record<string, string> = {};
+      for (const card of cards) {
+        const image = await sceneShotFor(language, card.wrong);
+        if (image) found[card.id] = image;
+      }
+      if (!cancelled) setShots(found);
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, [cards, language]);
+
+  const toggle = (set: Set<string>, id: string) => {
+    const next = new Set(set);
+    if (next.has(id)) next.delete(id);
+    else next.add(id);
+    return next;
+  };
+  // 칸별로 묶고, 많이 짚인 칸이 위로.
+  const groups = new Map<string, FixCard[]>();
+  for (const card of cards) {
+    const key = card.node ?? "";
+    groups.set(key, [...(groups.get(key) ?? []), card]);
+  }
+  const ordered = [...groups.entries()].sort((a, b) => b[1].length - a[1].length);
+  const tag = (card: FixCard) =>
+    [card.again ? ui.notebookAgain : "", card.kind === "typo" ? ui.notebookTypo : "", card.kind === "meant" ? ui.notebookMeant : ""].filter(Boolean);
+
+  return (
+    <div className="mt-2">
+      {ordered.map(([node, list]) => (
+        <section key={node || "loose"} className="mt-3 first:mt-0">
+          <p className="text-meta font-semibold tracking-wide text-slate-500">{nameOf(node || null)}</p>
+          <ul className="mt-1 space-y-1.5">
+            {list.map((card) => (
+              <li key={card.id} className="rounded-lg bg-white/[0.04] px-3 py-2">
+                <label className="flex items-start gap-2.5">
+                  <input
+                    type="checkbox"
+                    checked={picked.has(card.id)}
+                    onChange={() => setPicked((set) => toggle(set, card.id))}
+                    className="mt-1 h-4 w-4 shrink-0 accent-violet-400"
+                  />
+                  <span className="min-w-0 flex-1">
+                    <span dir="auto" className="block text-note text-slate-400 line-through decoration-rose-300/60">
+                      {card.wrong}
+                    </span>
+                    <span dir="auto" className="block text-note text-ink">
+                      {card.right}
+                    </span>
+                    {card.note ? (
+                      <span dir="auto" className="mt-0.5 block text-caption text-slate-300">
+                        {card.note}
+                      </span>
+                    ) : null}
+                    {tag(card).length ? (
+                      <span className="mt-1 flex flex-wrap gap-1">
+                        {tag(card).map((label) => (
+                          <span key={label} className="rounded-lg bg-white/10 px-1.5 py-0.5 text-meta text-slate-300">
+                            {label}
+                          </span>
+                        ))}
+                      </span>
+                    ) : null}
+                  </span>
+                </label>
+                {shots[card.id] && picked.has(card.id) ? (
+                  <label className="mt-1.5 flex items-center gap-2 ps-6 text-caption text-slate-300">
+                    <input
+                      type="checkbox"
+                      checked={withShot.has(card.id)}
+                      onChange={() => setWithShot((set) => toggle(set, card.id))}
+                      className="h-3.5 w-3.5 accent-sky-400"
+                    />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={shots[card.id]} alt="" className="h-10 w-auto rounded-lg border border-line" />
+                    <span>{ui.notebookWithScreen}</span>
+                  </label>
+                ) : null}
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+      <button
+        type="button"
+        disabled={busy || picked.size === 0}
+        onClick={async () => {
+          setBusy(true);
+          const ids = cards.filter((card) => picked.has(card.id)).map((card) => card.id);
+          const attach = Object.fromEntries(ids.filter((id) => withShot.has(id) && shots[id]).map((id) => [id, shots[id]!]));
+          await onCommit(ids, attach);
+          setBusy(false);
+        }}
+        className="tb-btn mt-4 w-full rounded-lg px-3 py-2 text-note font-semibold disabled:opacity-40"
+      >
+        {ui.notebookAddToNotes} · {picked.size}
+      </button>
+    </div>
+  );
+}
+
+function ShotSheet({
+  ui,
+  language,
+  isPremium,
+  shotId,
+  onClose,
+}: {
+  ui: UICopy;
+  language: string;
+  isPremium: boolean;
+  shotId: string;
+  onClose: () => void;
+}) {
+  const [image, setImage] = useState<string | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    fetch(apiUrl(`/api/notebook?lang=${encodeURIComponent(language)}&shot=${encodeURIComponent(shotId)}`), { headers: entitlementHeaders(isPremium) })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((body: { image?: string } | null) => {
+        if (!cancelled && body?.image) setImage(body.image);
+      })
+      .catch(() => undefined);
+    return () => {
+      cancelled = true;
+    };
+  }, [language, isPremium, shotId]);
+  return (
+    <Sheet ui={ui} title={ui.notebookScreen} onClose={onClose}>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      {image ? <img src={image} alt="" className="mt-2 w-full rounded-lg border border-line" /> : null}
+    </Sheet>
   );
 }
 

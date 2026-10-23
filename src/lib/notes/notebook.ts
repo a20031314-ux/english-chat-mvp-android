@@ -9,6 +9,8 @@
  *
  * 카드는 튜터가 짚은 한 줄: 내가 쓴 줄(틀린 것) → 고친 줄 + 한 줄 설명, 어디서·언제.
  * 어느 칸에 넣을지는 모델이 고르고(server/notebookStore.ts), 사용자가 옮긴 카드는 다시 옮기지 않는다.
+ * 짚인 줄은 바로 카드가 되지 않고 "오늘의 학습" 후보(`pending`)로 쌓인다 — 사용자가 고른 것만 노트에 들어가고(화면 함께 고르기),
+ * 안 고른 후보는 7일 뒤 사라진다(2026-10-24 사용자 결정). 진짜 실수·또 틀린 것은 미리 골라 둔다(`defaultPicked`).
  * 학습자 문장이 들어가는 유일한 저장소라 계정을 지우면 함께 지운다(STATE "노트 문장 저장").
  *
  * 순수.
@@ -57,7 +59,18 @@ export type FixCard = {
   /** 사용자가 옮겼으면 true — 다시 옮기지 않는다. */
   moved?: boolean;
   memo?: string;
+  /** 어떤 짚임인지: 진짜 실수 / 오타·철자 / 통화의 "이렇게 말하려던 거죠?"(뜻 짐작). 없으면 실수로 본다. */
+  kind?: FixKind;
+  /** 같은 칸에 2주 안에 짚인 게 또 있음(후보를 만들 때 정함). */
+  again?: boolean;
+  /** 후보가 생긴 날(사용자 시간대, YYYY-MM-DD). */
+  day?: string;
+  /** 노트에 넣을 때 붙인 화면의 id(그림은 따로 저장 — server/notebookStore.ts `shotKey`). */
+  shotId?: string;
 };
+
+export type FixKind = "mistake" | "typo" | "meant";
+export const FIX_KINDS: FixKind[] = ["mistake", "typo", "meant"];
 
 export type CustomNode = { id: string; name: string; at: number };
 
@@ -69,6 +82,8 @@ export type NotebookRecord = {
   renames: Record<string, string>;
   /** 칸마다 내 메모. */
   memos: Record<string, string>;
+  /** 오늘의 학습 후보(아직 노트에 안 넣은 짚임). 7일이 지나면 빠진다. */
+  pending: FixCard[];
 };
 
 export const MAX_CARDS = 400;
@@ -77,9 +92,12 @@ export const MAX_LINE = 300;
 export const MAX_NOTE = 160;
 export const MAX_NAME = 40;
 export const MAX_MEMO = 1000;
+export const MAX_PENDING = 200;
+export const PENDING_KEEP_MS = 7 * 24 * 60 * 60 * 1000;
+export const AGAIN_WINDOW_MS = 14 * 24 * 60 * 60 * 1000;
 
 export function emptyNotebook(): NotebookRecord {
-  return { v: 1, cards: [], custom: [], renames: {}, memos: {} };
+  return { v: 1, cards: [], custom: [], renames: {}, memos: {}, pending: [] };
 }
 
 const NODE_ID = /^(?:g\d-[a-z0-9-]{1,48}|s-[a-z0-9-]{1,48}|c-[a-z0-9]{4,24})$/;
@@ -175,16 +193,17 @@ ${input.options}
 - "node": the one section a learner would open to study this mistake — the grammar point or letters/sounds it is about. Prefer the section that names exactly that point, even one marked "(later)"; never put it under a different point just because it is earlier. A mistake that is only a wrong word choice or a phrase goes to the grammar point it touches; if none fits, use "none".
 - "suggest": only when "node" is "none" — a short section name in ${input.uiName}, two to four words, naming the general point (never the learner's words).
 - "note": one short line in ${input.uiName} saying what was wrong and what the right form is, under 80 characters. Plain, no greeting, no praise. Words of ${input.target} may appear in quotes.
+- "kind": "typo" when the only change is a slip of spelling or typing (a missing or swapped letter, a wrong accent mark, a misspelled word) that the learner clearly knows; otherwise "mistake" (grammar, word choice, word order, a missing word, a wrong form).
 - Never repeat or translate the learner's whole line.
 
-Return only json: {"node":"<id or none>","suggest":"...","note":"..."}`;
+Return only json: {"node":"<id or none>","suggest":"...","note":"...","kind":"mistake or typo"}`;
 }
 
 export function placeMessage(wrong: string, right: string, explanation: string): string {
   return JSON.stringify({ learner: wrong, corrected: right, ...(explanation ? { tutorNote: explanation.slice(0, 300) } : {}) });
 }
 
-export type Placement = { node: string | null; suggest?: string; note: string };
+export type Placement = { node: string | null; suggest?: string; note: string; kind?: FixKind };
 
 /** 모델 답 읽기. 모르는 칸은 null, 설명이 없으면 튜터 설명(있으면)으로. */
 export function readPlacement(raw: string, known: ReadonlySet<string>, fallbackNote: string): Placement {
@@ -198,7 +217,8 @@ export function readPlacement(raw: string, known: ReadonlySet<string>, fallbackN
   const node = typeof data.node === "string" && known.has(data.node) ? data.node : null;
   const suggest = node ? "" : clean(data.suggest, MAX_NAME);
   const note = clean(data.note, MAX_NOTE) || clean(fallbackNote, MAX_NOTE);
-  return { node, ...(suggest ? { suggest } : {}), note };
+  const kind = data.kind === "typo" ? "typo" : data.kind === "mistake" ? "mistake" : undefined;
+  return { node, ...(suggest ? { suggest } : {}), note, ...(kind ? { kind } : {}) };
 }
 
 function same(a: string, b: string): boolean {
@@ -222,6 +242,7 @@ export function parseNotebook(raw: unknown): NotebookRecord {
     custom: Array.isArray(row.custom) ? row.custom.filter((node) => node && isNodeId(node.id)) : [],
     renames: row.renames && typeof row.renames === "object" ? row.renames : {},
     memos: row.memos && typeof row.memos === "object" ? row.memos : {},
+    pending: Array.isArray(row.pending) ? row.pending.filter((card) => card && isCardId(card.id)) : [],
   };
 }
 
@@ -232,7 +253,8 @@ export function addCard(record: NotebookRecord, card: FixCard): NotebookRecord {
   if (!isRealFix(wrong, right) || !isCardId(card.id)) return record;
   const twin = record.cards.find((c) => same(c.wrong, wrong) && same(c.right, right));
   if (twin) {
-    return { ...record, cards: record.cards.map((c) => (c === twin ? { ...c, at: card.at } : c)) };
+    const shotId = card.shotId && isCardId(card.shotId) ? card.shotId : twin.shotId;
+    return { ...record, cards: record.cards.map((c) => (c === twin ? { ...c, at: card.at, ...(shotId ? { shotId } : {}) } : c)) };
   }
   const next: FixCard = {
     id: card.id,
@@ -243,9 +265,56 @@ export function addCard(record: NotebookRecord, card: FixCard): NotebookRecord {
     ...(card.suggest ? { suggest: clean(card.suggest, MAX_NAME) } : {}),
     where: FIX_WHERE.includes(card.where) ? card.where : "chat",
     at: card.at,
+    ...(card.kind && FIX_KINDS.includes(card.kind) ? { kind: card.kind } : {}),
+    ...(card.shotId && isCardId(card.shotId) ? { shotId: card.shotId } : {}),
   };
   const cards = [...record.cards, next].sort((a, b) => b.at - a.at).slice(0, MAX_CARDS);
   return { ...record, cards };
+}
+
+/** 7일 넘은 후보를 뺀다. */
+export function prunePending(record: NotebookRecord, now = Date.now()): NotebookRecord {
+  const pending = record.pending.filter((card) => now - card.at < PENDING_KEEP_MS);
+  return pending.length === record.pending.length ? record : { ...record, pending };
+}
+
+/**
+ * 짚인 줄을 오늘의 학습 후보로. 같은 틀림→고침 후보가 이미 있으면 시각만 새로.
+ * "또": 노트에 같은 줄이 있거나, 같은 칸에 2주 안의 카드·다른 날 후보가 있으면.
+ */
+export function addPending(record: NotebookRecord, card: FixCard, now = Date.now()): NotebookRecord {
+  const wrong = clean(card.wrong, MAX_LINE);
+  const right = clean(card.right, MAX_LINE);
+  if (!isRealFix(wrong, right) || !isCardId(card.id)) return record;
+  const base = prunePending(record, now);
+  const twin = base.pending.find((c) => same(c.wrong, wrong) && same(c.right, right));
+  if (twin) return { ...base, pending: base.pending.map((c) => (c === twin ? { ...c, at: card.at } : c)) };
+  const node = card.node && isNodeId(card.node) ? card.node : null;
+  const recent = (c: FixCard) => card.at - c.at < AGAIN_WINDOW_MS;
+  const again =
+    base.cards.some((c) => same(c.wrong, wrong) && same(c.right, right)) ||
+    (node !== null &&
+      (base.cards.some((c) => c.node === node && recent(c)) || base.pending.some((c) => c.node === node && c.day !== card.day && recent(c))));
+  const next: FixCard = {
+    id: card.id,
+    wrong,
+    right,
+    note: clean(card.note, MAX_NOTE),
+    node,
+    ...(card.suggest && !node ? { suggest: clean(card.suggest, MAX_NAME) } : {}),
+    where: FIX_WHERE.includes(card.where) ? card.where : "chat",
+    at: card.at,
+    kind: card.kind && FIX_KINDS.includes(card.kind) ? card.kind : "mistake",
+    ...(again ? { again: true } : {}),
+    ...(card.day && /^\d{4}-\d{2}-\d{2}$/.test(card.day) ? { day: card.day } : {}),
+  };
+  const pending = [next, ...base.pending].sort((a, b) => b.at - a.at).slice(0, MAX_PENDING);
+  return { ...base, pending };
+}
+
+/** 고르기 화면에서 처음부터 체크해 둘 것: 진짜 실수, 또 틀린 것. 오타·뜻 짐작은 비워 둔다. */
+export function defaultPicked(card: FixCard): boolean {
+  return card.again === true || (card.kind ?? "mistake") === "mistake";
 }
 
 export type NotebookEdit =
@@ -256,7 +325,12 @@ export type NotebookEdit =
   | { op: "renameNode"; node: string; name: string }
   | { op: "deleteNode"; node: string }
   | { op: "memoNode"; node: string; memo: string }
-  | { op: "acceptSuggest"; card: string; id: string };
+  | { op: "acceptSuggest"; card: string; id: string }
+  | { op: "commit"; ids: string[]; shots: string[] }
+  | { op: "dismiss"; ids: string[] };
+
+const idList = (value: unknown): string[] | null =>
+  Array.isArray(value) && value.length <= MAX_PENDING && value.every(isCardId) ? [...new Set(value as string[])] : null;
 
 /** 앱이 보낸 편집을 모양만 보고 받는다. 모르는 것은 null. */
 export function parseEdit(value: unknown): NotebookEdit | null {
@@ -278,6 +352,15 @@ export function parseEdit(value: unknown): NotebookEdit | null {
       return isNodeId(row.node) && typeof row.memo === "string" ? { op: "memoNode", node: row.node, memo: row.memo } : null;
     case "acceptSuggest":
       return isCardId(row.card) && isNodeId(row.id) && String(row.id).startsWith("c-") ? { op: "acceptSuggest", card: row.card, id: row.id } : null;
+    case "commit": {
+      const ids = idList(row.ids);
+      const shots = row.shots === undefined ? [] : idList(row.shots);
+      return ids && ids.length && shots ? { op: "commit", ids, shots: shots.filter((id) => ids.includes(id)) } : null;
+    }
+    case "dismiss": {
+      const ids = idList(row.ids);
+      return ids && ids.length ? { op: "dismiss", ids } : null;
+    }
     default:
       return null;
   }
@@ -345,6 +428,24 @@ export function applyEdit(record: NotebookRecord, edit: NotebookEdit, now = Date
       if (memo) memos[edit.node] = memo;
       else delete memos[edit.node];
       return { ...record, memos };
+    }
+    case "commit": {
+      // 고른 후보를 노트로(화면을 붙인 것은 shot 표시). 같은 줄이 이미 노트에 있으면 그 카드의 시각만 새로.
+      let next: NotebookRecord = record;
+      for (const id of edit.ids) {
+        const card = record.pending.find((c) => c.id === id);
+        if (!card) continue;
+        const { again: _a, day: _d, ...rest } = card;
+        void _a;
+        void _d;
+        next = addCard(next, { ...rest, at: now, ...(edit.shots.includes(id) ? { shotId: id } : {}) });
+      }
+      const picked = new Set(edit.ids);
+      return { ...next, pending: next.pending.filter((c) => !picked.has(c.id)) };
+    }
+    case "dismiss": {
+      const drop = new Set(edit.ids);
+      return { ...record, pending: record.pending.filter((c) => !drop.has(c.id)) };
     }
     case "acceptSuggest": {
       const card = cardAt(edit.card);

@@ -59,6 +59,7 @@ import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 import { ExpressionPeek } from "@/components/ExpressionPeek";
 import { compressChatImage } from "@/lib/chatImage";
 import { correctionRisk } from "@/lib/correctionRisk";
+import { captureSceneSoon } from "@/lib/notes/sceneShots";
 import {
   DEFAULT_CORRECTION_VIEW,
   readCorrectionView,
@@ -1133,6 +1134,8 @@ export function ChatWindow({
       setTurns((previous) =>
         previous.map((t) => (t.id === turnId ? { ...t, correctionResult } : t)),
       );
+      // 짚인 줄은 이 기기에 그 순간 화면을 찍어 둔다 — 오늘의 학습에서 "화면 함께"로 노트에 붙일 수 있게(lib/notes/sceneShots.ts).
+      if (!ownLanguage && correctionResult.hasError) captureSceneSoon(sessionLanguageCode, message);
       // "바로 보기"면 위험한 교정은 뒤에서 확인하고, 바뀌면 그 자리에서 고친다.
       if (correctionView === "auto" && !ownLanguage && correctionResult.hasError) {
         void verifyTurnCorrection(turnId, message, correctionResult);

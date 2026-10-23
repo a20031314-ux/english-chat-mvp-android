@@ -2,6 +2,10 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   addCard,
+  addPending,
+  defaultPicked,
+  prunePending,
+  PENDING_KEEP_MS,
   applyEdit,
   cardCounts,
   emptyNotebook,
@@ -105,4 +109,45 @@ test("제안 칸 받기: 새 칸을 만들고 그 카드를 옮긴다", () => {
   book = applyEdit(book, parseEdit({ op: "acceptSuggest", card: "abc123def456", id: "c-new0001" })!);
   assert.deepEqual(book.custom.map((n) => [n.id, n.name]), [["c-new0001", "Ser와 estar"]]);
   assert.equal(book.cards[0]!.node, "c-new0001");
+});
+
+test("모델 답: 짚임 종류(실수/오타)", () => {
+  const known = new Set(["g1-be-verb"]);
+  assert.equal(readPlacement('{"node":"g1-be-verb","note":"x","kind":"typo"}', known, "").kind, "typo");
+  assert.equal(readPlacement('{"node":"g1-be-verb","note":"x"}', known, "").kind, undefined);
+});
+
+test("오늘의 학습: 후보로 쌓이고, 또 틀린 것·진짜 실수는 미리 고름, 7일 뒤 빠짐", () => {
+  const day = (d: string, at: number, over: Partial<FixCard> = {}) => card({ day: d, at, ...over });
+  let book = addPending(emptyNotebook(), day("2026-10-23", 1000, { id: "p1aaaaaa" }), 1000);
+  assert.equal(book.cards.length, 0, "바로 노트에 들어가지 않는다");
+  assert.equal(book.pending.length, 1);
+  assert.equal(book.pending[0]!.again, undefined);
+  // 다음 날 같은 칸에 또 → again
+  book = addPending(book, day("2026-10-24", 2000, { id: "p2bbbbbb", wrong: "They is late.", right: "They are late." }), 2000);
+  assert.equal(book.pending[0]!.again, true);
+  // 같은 줄 후보는 한 장
+  book = addPending(book, day("2026-10-24", 3000, { id: "p3cccccc", wrong: "They is late.", right: "They are late." }), 3000);
+  assert.equal(book.pending.length, 2);
+  // 오타·뜻 짐작은 고르지 않은 채로
+  assert.equal(defaultPicked({ ...book.pending[1]!, kind: "typo", again: undefined }), false);
+  assert.equal(defaultPicked({ ...book.pending[1]!, kind: "meant", again: undefined }), false);
+  assert.equal(defaultPicked({ ...book.pending[1]!, kind: "typo", again: true }), true);
+  assert.equal(defaultPicked(book.pending[1]!), true);
+  // 7일 지나면 빠짐
+  assert.equal(prunePending(book, 3000 + PENDING_KEEP_MS).pending.length, 0);
+});
+
+test("오늘의 학습: 고른 것만 노트로(화면 붙인 것은 shotId), 버리기", () => {
+  let book = addPending(emptyNotebook(), card({ id: "p1aaaaaa", day: "2026-10-24" }), 1000);
+  book = addPending(book, card({ id: "p2bbbbbb", wrong: "私は学生じゃありますん。", right: "私は学生じゃありません。", node: null, kind: "typo", day: "2026-10-24" }), 1100);
+  book = applyEdit(book, parseEdit({ op: "commit", ids: ["p1aaaaaa"], shots: ["p1aaaaaa", "zzzzzzzz"] })!, 5000);
+  assert.equal(book.cards.length, 1);
+  assert.equal(book.cards[0]!.shotId, "p1aaaaaa");
+  assert.equal(book.cards[0]!.again, undefined);
+  assert.deepEqual(book.pending.map((c) => c.id), ["p2bbbbbb"]);
+  book = applyEdit(book, parseEdit({ op: "dismiss", ids: ["p2bbbbbb"] })!);
+  assert.equal(book.pending.length, 0);
+  assert.equal(parseEdit({ op: "commit", ids: [] }), null);
+  assert.equal(parseEdit({ op: "commit", ids: ["bad id!"] }), null);
 });

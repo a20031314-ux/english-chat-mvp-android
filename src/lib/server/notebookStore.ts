@@ -1,13 +1,14 @@
 import type OpenAI from "openai";
 import { randomBytes } from "node:crypto";
 import { completeChat } from "./llm.ts";
-import { kvGetJson, kvSetJson } from "./kv.ts";
+import { kvDelete, kvGetJson, kvSetJson } from "./kv.ts";
 import { isIdentified } from "./identity.ts";
 import { readSelfCheck } from "./selfCheckStore.ts";
 import { getDailyOpUsed } from "./entitlementStore.ts";
 import type { MeteredOp } from "./modelCalls.ts";
 import {
-  addCard,
+  addPending,
+  isCardId,
   isRealFix,
   parseNotebook,
   placeMessage,
@@ -16,6 +17,7 @@ import {
   readPlacement,
   skeletonFor,
   stageOrderOf,
+  type FixKind,
   type FixWhere,
   type NotebookRecord,
 } from "../notes/notebook.ts";
@@ -44,6 +46,37 @@ export async function saveNotebook(userId: string, language: string, record: Not
   await kvSetJson(notebookKey(userId, language), record, NOTEBOOK_TTL_SECONDS);
 }
 
+/** 카드에 붙인 화면(기기에서 찍은 JPEG data URL). 카드를 지우거나 계정을 지우면 함께 지운다. */
+export const MAX_SHOT_BYTES = 200_000;
+
+export function shotKey(userId: string, language: string, shotId: string): string {
+  return `notebookShot:v1:${userId}:${language}:${shotId}`;
+}
+
+export function isShotImage(value: unknown): value is string {
+  return typeof value === "string" && value.startsWith("data:image/jpeg;base64,") && value.length <= MAX_SHOT_BYTES * 1.37;
+}
+
+export async function readShot(userId: string, language: string, shotId: string): Promise<string | null> {
+  if (!isCardId(shotId)) return null;
+  const image = await kvGetJson<string>(shotKey(userId, language, shotId));
+  return isShotImage(image) ? image : null;
+}
+
+/** 노트 카드가 이 화면 id를 가리킬 때만 저장한다. */
+export async function saveShot(userId: string, language: string, shotId: string, image: string): Promise<boolean> {
+  if (!isCardId(shotId) || !isShotImage(image)) return false;
+  const record = await readNotebook(userId, language);
+  if (!record.cards.some((card) => card.shotId === shotId)) return false;
+  await kvSetJson(shotKey(userId, language, shotId), image, NOTEBOOK_TTL_SECONDS);
+  return true;
+}
+
+export async function deleteShots(userId: string, language: string, shotIds: string[]): Promise<void> {
+  const keys = shotIds.filter(isCardId).map((id) => shotKey(userId, language, id));
+  if (keys.length) await kvDelete(keys).catch(() => undefined);
+}
+
 /** 지금 단계(시작 단계 고르기에서 고른 것, 없으면 1). */
 export async function currentStageOrder(userId: string, language: string): Promise<number> {
   const check = await readSelfCheck(userId, language).catch(() => null);
@@ -56,8 +89,9 @@ export function newCardId(): string {
 }
 
 /**
- * 튜터가 고친 한 줄을 노트에 넣는다: 모델이 칸을 고르고 한 줄 설명을 쓴다. 답이 나간 뒤 돌고, 실패는 삼킨다.
- * 고친 데가 없는 줄(문장부호만 등)은 넣지 않는다.
+ * 튜터가 고친 한 줄을 오늘의 학습 후보로: 모델이 칸을 고르고 한 줄 설명·짚임 종류(실수/오타)를 쓴다.
+ * 노트에는 사용자가 고른 것만 들어간다(notes/notebook.ts `commit`). 답이 나간 뒤 돌고, 실패는 삼킨다.
+ * 고친 데가 없는 줄(문장부호만 등)은 넣지 않는다. `kind: "meant"`는 통화의 뜻 짐작(모델 판단보다 앞선다).
  */
 export async function fileFix(input: {
   openai: OpenAI | null;
@@ -68,6 +102,9 @@ export async function fileFix(input: {
   right: string;
   explanation?: string;
   where: FixWhere;
+  /** 사용자 시간대의 오늘(YYYY-MM-DD). */
+  day: string;
+  kind?: FixKind;
   meter?: (op: MeteredOp) => void;
   now?: number;
 }): Promise<void> {
@@ -102,7 +139,7 @@ export async function fileFix(input: {
     }
     // 모델을 부르는 동안 사용자가 편집했을 수 있어 다시 읽고 넣는다.
     const latest = await readNotebook(input.userId, input.language);
-    const after = addCard(latest, {
+    const after = addPending(latest, {
       id: newCardId(),
       wrong: input.wrong,
       right: input.right,
@@ -111,7 +148,9 @@ export async function fileFix(input: {
       ...(placement.suggest ? { suggest: placement.suggest } : {}),
       where: input.where,
       at: now,
-    });
+      kind: input.kind ?? placement.kind ?? "mistake",
+      day: input.day,
+    }, now);
     if (after !== latest) await saveNotebook(input.userId, input.language, after);
   } catch (error) {
     console.error("[notebook-file]", error);
