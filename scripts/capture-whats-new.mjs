@@ -1522,7 +1522,9 @@ const STEPS = {
     for (let i = 0; i < 30 && !(await page.locator("ul li [role=button]").count()); i++) await wait(500);
     await wait(1500);
     // Pick the second line so the card above shows a subtitle, as during playback.
-    await page.locator("ul li [role=button]").nth(1).click();
+    // 짧은 줄은 한 구간으로 묶일 수 있다(일본어·중국어): 줄이 하나뿐이면 그 줄을.
+    const rows = page.locator("ul li [role=button]");
+    await rows.nth((await rows.count()) > 1 ? 1 : 0).click();
     await wait(800);
     await page.evaluate((videoId) => {
       for (const frame of document.querySelectorAll("iframe")) {
