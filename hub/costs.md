@@ -6,11 +6,11 @@
 
 ## 주의
 
-- **라이트 3,900원**: 한도를 매일 꽉 채우면 한 달 714원 손해 (수수료 뺀 3,315원 < 비용 4,029원).
-- **플러스 5,500원**: 한도를 매일 꽉 채우면 한 달 1,003원 손해 (수수료 뺀 4,675원 < 비용 5,678원).
-- **프리미엄 9,900원 (지금, 월 80포인트)**: 한도를 매일 꽉 채우면 한 달 4원 손해 (수수료 뺀 8,415원 < 비용 8,419원).
-- **프리미엄 8,900원 (전환 후)**: 한도를 매일 꽉 채우면 한 달 2,865원 손해 (수수료 뺀 7,565원 < 비용 10,430원).
-- 최악은 구독자 모두가 매일 모든 한도를 다 쓰는 경우입니다. 최악의 채팅 한 통 1.1원(모든 문장이 길고 틀림, 보통은 0.9원)은 잰 값이 아닌 가정(chat, chatReply, learnerObserve, weakRead — 아래 "기능별 한 번 비용"의 토큰)이라, 실측 토큰이 쌓이면 `cost-report.mjs`로 다시 봐야 합니다.
+- **라이트 3,900원**: 한도를 매일 꽉 채우면 한 달 948원 손해 (수수료 뺀 3,315원 < 비용 4,263원).
+- **플러스 5,500원**: 한도를 매일 꽉 채우면 한 달 1,391원 손해 (수수료 뺀 4,675원 < 비용 6,066원).
+- **프리미엄 9,900원 (지금, 월 80포인트)**: 한도를 매일 꽉 채우면 한 달 781원 손해 (수수료 뺀 8,415원 < 비용 9,196원).
+- **프리미엄 8,900원 (전환 후)**: 한도를 매일 꽉 채우면 한 달 3,642원 손해 (수수료 뺀 7,565원 < 비용 11,207원).
+- 최악은 구독자 모두가 매일 모든 한도를 다 쓰는 경우입니다. 최악의 채팅 한 통 1.4원(모든 문장이 길고 틀림, 보통은 1원)은 잰 값이 아닌 가정(chat, chatReply, learnerObserve, weakRead, notebookFix — 아래 "기능별 한 번 비용"의 토큰)이라, 실측 토큰이 쌓이면 `cost-report.mjs`로 다시 봐야 합니다.
 
 ## 요금별 한 달 비용 (30일)
 
@@ -19,21 +19,21 @@
 
 | 요금 | 하루 한도 | 수수료 뺀 금액 | 최악 비용 | 최악 남는 돈 | 많이 쓰는 사용자 비용 | 그때 남는 돈 |
 |---|---|---|---|---|---|---|
-| 무료 | 팩 1번 · 통화 없음(처음 20포인트 별도) · 채팅 7번 | — | 959원 | — | 808원 | — |
-| 라이트 3,900원 | 팩 1번 · 통화 매일 7분 · 채팅 30번 | 3,315원 | 4,029원 | ⚠ -714원 (-22%) | 3,126원 | 189원 (6%) |
-| 플러스 5,500원 | 팩 1번 · 통화 매일 10분 · 채팅 50번 | 4,675원 | 5,678원 | ⚠ -1,003원 (-21%) | 3,159원 | 1,516원 (32%) |
-| 프리미엄 9,900원 (지금, 월 80포인트) | 팩 1번 · 월 80포인트 · 채팅 제한 없음(100번으로 계산) | 8,415원 | 8,419원 | ⚠ -4원 (0%) | 3,159원 | 5,256원 (62%) |
-| 프리미엄 8,900원 (전환 후) | 팩 3번 · 통화 매일 15분 · 채팅 100번 | 7,565원 | 10,430원 | ⚠ -2,865원 (-38%) | 3,159원 | 4,406원 (58%) |
+| 무료 | 팩 1번 · 통화 없음(처음 20포인트 별도) · 채팅 7번 | — | 1,013원 | — | 816원 | — |
+| 라이트 3,900원 | 팩 1번 · 통화 매일 7분 · 채팅 30번 | 3,315원 | 4,263원 | ⚠ -948원 (-29%) | 3,133원 | 182원 (5%) |
+| 플러스 5,500원 | 팩 1번 · 통화 매일 10분 · 채팅 50번 | 4,675원 | 6,066원 | ⚠ -1,391원 (-30%) | 3,166원 | 1,509원 (32%) |
+| 프리미엄 9,900원 (지금, 월 80포인트) | 팩 1번 · 월 80포인트 · 채팅 제한 없음(100번으로 계산) | 8,415원 | 9,196원 | ⚠ -781원 (-9%) | 3,166원 | 5,249원 (62%) |
+| 프리미엄 8,900원 (전환 후) | 팩 3번 · 통화 매일 15분 · 채팅 100번 | 7,565원 | 11,207원 | ⚠ -3,642원 (-48%) | 3,166원 | 4,399원 (58%) |
 
 최악 비용 내역:
 
 | 요금 | 팩 | 자유 통화 | 채팅 | 월 포인트 |
 |---|---|---|---|---|
-| 무료 | 729원 | 0원 | 229원 | 0원 |
-| 라이트 3,900원 | 729원 | 2,317원 | 983원 | 0원 |
-| 플러스 5,500원 | 729원 | 3,310원 | 1,638원 | 0원 |
-| 프리미엄 9,900원 (지금, 월 80포인트) | 729원 | 0원 | 3,276원 | 4,414원 |
-| 프리미엄 8,900원 (전환 후) | 2,188원 | 4,965원 | 3,276원 | 0원 |
+| 무료 | 729원 | 0원 | 284원 | 0원 |
+| 라이트 3,900원 | 729원 | 2,317원 | 1,216원 | 0원 |
+| 플러스 5,500원 | 729원 | 3,310원 | 2,027원 | 0원 |
+| 프리미엄 9,900원 (지금, 월 80포인트) | 729원 | 0원 | 4,053원 | 4,414원 |
+| 프리미엄 8,900원 (전환 후) | 2,188원 | 4,965원 | 4,053원 | 0원 |
 
 무료는 처음 한 번 10포인트(통화 50분, 약 552원)를 따로 씁니다. 이달의 영상(라이브러리)은 자막이 미리 만들어져 있어 비용에 넣지 않았습니다.
 
@@ -43,8 +43,8 @@
 
 | 무엇 | 원가 | 광고 수익(낮음~높음) | 남는 돈(낮음~높음) |
 |---|---|---|---|
-| 보상형 1회 = 채팅 3번 | 2.6원 | 11.2원 ~ 28원 | 8.6원 ~ 25.4원 |
-| 전면 1회(채팅 2번마다 기준, 무료 기본 채팅을 메움) | 1.8원 | 4.2원 ~ 14원 | 2.4원 ~ 12.2원 |
+| 보상형 1회 = 채팅 3번 | 2.9원 | 11.2원 ~ 28원 | 8.3원 ~ 25.1원 |
+| 전면 1회(채팅 2번마다 기준, 무료 기본 채팅을 메움) | 1.9원 | 4.2원 ~ 14원 | 2.3원 ~ 12.1원 |
 | 앱 오프닝 1회(주는 것 없음) | 0원 | 2.8원 ~ 11.2원 | 같음 |
 | 배너 노출 1회(약 60초마다, 주는 것 없음) | 0원 | 0.4원 ~ 1.4원 | 같음 |
 | 보상형 하루 0번을 매일(한 달) | 0원 | 0원 ~ 0원 | 0원 ~ 0원 |
@@ -57,8 +57,8 @@
 |---|---|---|
 | 자유 통화 1분 | 11원 | 15초 턴 4번: 캐릭터 판단(gpt-4.1-mini) + 음성 합성 5초(gpt-4o-mini-tts) + 받아쓰기 6초(gpt-4o-mini-transcribe) |
 | 오늘의 팩 1번 | 24.3원 | 12문답 × (받아쓰기 + 판단) + 합성 35%만 (가정) |
-| 채팅 1통(보통) | 0.9원 | chat + 문장 읽기 33% + 실수 읽기 33% (가정 — 짧고 맞은 줄·영어 아닌 학습 언어는 문장 읽기 건너뜀) |
-| 채팅 1통(최악) | 1.1원 | chat + chatReply + learnerObserve + weakRead 모두(길고 틀린 문장) |
+| 채팅 1통(보통) | 1원 | chat + 문장 읽기 33% + 실수 읽기 33% + 노트 칸 고르기 33% (가정 — 짧고 맞은 줄·영어 아닌 학습 언어는 문장 읽기 건너뜀) |
+| 채팅 1통(최악) | 1.4원 | chat + chatReply + learnerObserve + weakRead + notebookFix 모두(길고 틀린 문장) |
 | 포인트 1개 | 55.2원 | 통화 5분과 영상 3분 준비 중 비싼 쪽 |
 
 ## 기능별 한 번 비용 (요금 한도 밖 기능 포함)
@@ -109,6 +109,7 @@
 | roomListen | 0.4원 | 1 | 받아쓰기 6초 gpt-4o-mini-transcribe | 가정 |
 | roomGameStory | 0.4원 | 1 | claude-haiku-5-5 250/500 토큰 (기능 roomGame) | 가정 |
 | chatReply | 0.3원 | 1 | claude-haiku-5-5 1400/120 토큰 (기능 chat) | 가정 |
+| notebookFix | 0.3원 | 1 | claude-haiku-5-5 1400/90 토큰 (기능 notes) | 가정 |
 | roomFix | 0.2원 | 1 | claude-haiku-5-5 900/120 토큰 (기능 roomFix) | 가정 |
 | learnerObserve | 0.2원 | 1 | claude-haiku-5-5 900/80 토큰 (기능 learnerRead) | 가정 |
 | roomGameWord | 0.2원 | 1 | claude-haiku-5-5 450/160 토큰 (기능 roomGame) | 가정 |
@@ -171,14 +172,14 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 
 ## 기록 확인
 
-모델을 쓰는 서버 경로 37개 중 37개가 사용량을 기록합니다 (`scripts/cost-coverage.mjs`).
+모델을 쓰는 서버 경로 38개 중 38개가 사용량을 기록합니다 (`scripts/cost-coverage.mjs`).
 
 ## 가정 (믿기 어려운 숫자부터 확인)
 
 - 모델 단가: https://developers.openai.com/api/docs/pricing (2026-09-04 확인). 1달러 1400원(2026-09-04).
 - 음성 합성 분당 $0.015 — 통화 비용의 대부분, `cost.ts`에서 가장 약한 숫자.
 - 잰 적 없는 모델 호출 한 번 = 2000/300 토큰. 실측 보고서는 서버가 잰 토큰(`usage:tok:*`)이 20번 넘게 쌓인 기능부터 그 값을 씁니다.
-- 가정으로 값을 매기는 기능 49개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, iconUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, learnerObserve, curriculumMissions, learnerPick, notesPlace, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roomGameStory, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, expressionUnits, vocabSearch, contentDiscovery.
+- 가정으로 값을 매기는 기능 50개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, iconUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, learnerObserve, curriculumMissions, learnerPick, notesPlace, notebookFix, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roomGameStory, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, expressionUnits, vocabSearch, contentDiscovery.
 
 ## 새 기능을 넣을 때
 

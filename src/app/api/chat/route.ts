@@ -6,6 +6,7 @@ import { NextRequest, after } from "next/server";
 import { observeChatLines, observeChatTurn } from "@/lib/server/learnerProfileStore";
 import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
+import { fileFix } from "@/lib/server/notebookStore";
 import { recordTurn } from "@/lib/server/ledgerStore";
 import { forgetLearnerBrief, readLearnerBrief } from "@/lib/server/learnerBrief";
 import { profileTurn, withProfileLine } from "@/lib/server/profileContext";
@@ -1159,6 +1160,22 @@ export async function POST(request: NextRequest) {
             meter: (op) => void meterRequest(request, op),
           });
         });
+        // 고친 데가 있는 줄은 노트의 맞는 칸에 짚은 장면으로(notes/notebook.ts, 2026-10-23).
+        if (data.correction?.corrected) {
+          later(async () => {
+            await fileFix({
+              openai,
+              userId,
+              language: langs.targetLanguage,
+              ui: langs.interfaceLanguage,
+              wrong: message,
+              right: data.correction?.corrected ?? "",
+              explanation: data.correction?.explanation ?? "",
+              where: "chat",
+              meter: (op) => void meterRequest(request, op),
+            });
+          });
+        }
         later(async () => {
           await observeChatTurn({
             openai,

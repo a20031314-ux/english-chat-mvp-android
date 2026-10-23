@@ -192,7 +192,7 @@ export function render() {
     "|---|---|---|",
     `| 자유 통화 1분 | ${won1(krw(roleplayMinuteUsd()))} | 15초 턴 4번: 캐릭터 판단(${codeTextModel("roleplayTutor")}) + 음성 합성 ${ROLEPLAY_TURN.tutorSpeakingSeconds}초(${codeTtsModel()}) + 받아쓰기 ${ROLEPLAY_TURN.learnerSpeakingSeconds}초(${SPEECH_DEFAULTS.turnTranscribe}) |`,
     `| 오늘의 팩 1번 | ${won1(krw(packUsd()))} | ${PACK.items}문답 × (받아쓰기 + 판단) + 합성 ${pct(PACK.synthesisedShare)}만 (가정) |`,
-    `| 채팅 1통(보통) | ${won1(krw(chatMessageTypicalUsd()))} | chat + 문장 읽기 ${pct(CHAT_FOLLOW_SHARE.learnerObserve)} + 실수 읽기 ${pct(CHAT_FOLLOW_SHARE.weakRead)} (가정 — 짧고 맞은 줄·영어 아닌 학습 언어는 문장 읽기 건너뜀) |`,
+    `| 채팅 1통(보통) | ${won1(krw(chatMessageTypicalUsd()))} | chat + 문장 읽기 ${pct(CHAT_FOLLOW_SHARE.learnerObserve)} + 실수 읽기 ${pct(CHAT_FOLLOW_SHARE.weakRead)} + 노트 칸 고르기 ${pct(CHAT_FOLLOW_SHARE.notebookFix)} (가정 — 짧고 맞은 줄·영어 아닌 학습 언어는 문장 읽기 건너뜀) |`,
     `| 채팅 1통(최악) | ${won1(krw(chatMessageUsd()))} | ${CHAT_MESSAGE_OPS.join(" + ")} 모두(길고 틀린 문장) |`,
     `| 포인트 1개 | ${won1(krw(pointCostUsd()))} | 통화 5분과 영상 3분 준비 중 비싼 쪽 |`,
     "",

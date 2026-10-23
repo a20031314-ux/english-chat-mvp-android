@@ -126,6 +126,7 @@
     "api/curriculum": "my",
     "api/curriculum/": "my",
     "api/notes/": "my",
+    "api/notebook": "my",
     "api/video-index/": "my",
 
     "components/account/": "account",

@@ -38,6 +38,7 @@ import { parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 import { recordLearnerTurn } from "@/lib/server/learnerMetrics";
 import { observeMapUse } from "@/lib/server/curriculumStore";
 import { observeWeakPoints } from "@/lib/server/weakPointStore";
+import { fileFix } from "@/lib/server/notebookStore";
 import { recordMeets, recordTurn } from "@/lib/server/ledgerStore";
 import { readLearnerBrief } from "@/lib/server/learnerBrief";
 import { profileTurn, withProfileLine } from "@/lib/server/profileContext";
@@ -296,6 +297,19 @@ export async function POST(request: NextRequest) {
       corrected,
       meter: (op) => void meterRequest(request, op),
     });
+    // 고쳐 준 줄은 노트의 맞는 칸에 짚은 장면으로(notes/notebook.ts, 2026-10-23).
+    if (corrected) {
+      await fileFix({
+        openai: getOpenAIClient(),
+        userId: requestUserId(request),
+        language: turn.targetLanguage,
+        ui: turn.nativeLanguage,
+        wrong: turn.heard,
+        right: corrected,
+        where: "call",
+        meter: (op) => void meterRequest(request, op),
+      });
+    }
   });
 
   // Two clips only for a build that said it can play them. Everything on a

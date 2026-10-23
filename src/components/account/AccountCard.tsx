@@ -169,7 +169,7 @@ export function AccountCard({ ui, locale }: { ui: UICopy; locale: string }) {
               <span dir="auto" className="block truncate text-[15px] font-semibold text-white">
                 {account.profile.nickname || ui.accountNoNickname}
               </span>
-              {/* 자기소개가 없으면 비워 둔다("…써 보세요" 같은 안내 글 없음, 2026-10-23). */}
+              {/* No bio: leave it empty — no prompt text in its place (hub/DESIGN.md, 2026-10-23). */}
               {account.profile.bio ? (
                 <span dir="auto" className="mt-0.5 line-clamp-2 block whitespace-pre-line text-[12px] leading-relaxed text-slate-400">
                   {account.profile.bio}

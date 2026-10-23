@@ -48,8 +48,11 @@ test("팩 문답 수가 팩 코드와 같다", () => {
   assert.ok(packUsd() > 0 && packUsd() < 0.05);
 });
 
-test("채팅 한 통은 교정 + 답(새 앱) + 문장 읽기 + 실수 읽기", () => {
-  assert.equal(chatMessageUsd(), opUsd("chat") + opUsd("chatReply") + opUsd("learnerObserve") + opUsd("weakRead"));
+test("채팅 한 통은 교정 + 답(새 앱) + 문장 읽기 + 실수 읽기 + 노트 칸 고르기", () => {
+  assert.equal(
+    chatMessageUsd(),
+    opUsd("chat") + opUsd("chatReply") + opUsd("learnerObserve") + opUsd("weakRead") + opUsd("notebookFix"),
+  );
   assert.ok(chatMessageTypicalUsd() < chatMessageUsd() && chatMessageTypicalUsd() > opUsd("chat"));
   assert.ok(assumedOps().includes("chat"));
   assert.ok(!assumedOps().includes("roleplayTurn"));

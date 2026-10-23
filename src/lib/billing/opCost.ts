@@ -96,6 +96,7 @@ export const OP_COST: Record<string, OpCost> = {
   curriculumMissions: llm("curriculum"),
   learnerPick: llm("curriculum"),
   notesPlace: llm("notes"),
+  notebookFix: estimated("notes", { input: 1400, output: 90 }),
   missionCheck: llm("mission"),
   // 실수 종류 프롬프트 약 1,100~2,200자(이미 아는 실수 30개까지) + 두 줄, 답 짧은 JSON(2026-10-21 어림).
   weakRead: estimated("learnerRead", { input: 600, output: 80 }),
@@ -207,7 +208,7 @@ export function assumedOps(): string[] {
  * 새 앱(2026-10-22~)은 답만 쓰는 호출(chatReply)이 교정 호출과 나란히 늘 붙는다 — 옛 앱엔 없지만 넉넉히 넣어 센다.
  * 최악 계산은 넷 다(모든 문장이 길고 틀린 영어 학습자), 다시 쓰기(chatReread)는 옛 앱에서만·드물어 뺀다.
  */
-export const CHAT_MESSAGE_OPS = ["chat", "chatReply", "learnerObserve", "weakRead"] as const;
+export const CHAT_MESSAGE_OPS = ["chat", "chatReply", "learnerObserve", "weakRead", "notebookFix"] as const;
 
 export function chatMessageUsd(measured?: Record<string, Tokens>): number {
   return CHAT_MESSAGE_OPS.reduce((sum, op) => sum + opUsd(op, measured), 0);
@@ -217,16 +218,18 @@ export function chatMessageUsd(measured?: Record<string, Tokens>): number {
  * 보통 한 통: 따라붙는 호출이 도는 비율(가정, 2026-10-21).
  * - learnerObserve: 영어 학습자만(구문 목록이 영어뿐) + 짧고 맞은 줄은 건너뜀(learner/readGate.ts) → 셋에 하나꼴.
  * - weakRead: 지도가 있는 사람의 고칠 데 있는 줄만 → 셋에 하나꼴.
+ * - notebookFix: 고칠 데 있는 줄을 노트 칸에 넣기(2026-10-23, 지도 없어도) → 셋에 하나꼴.
  * 2026-10-21부터 두 기록은 실제로 부를 때만 세므로, cost-report.mjs의 op별 횟수 ÷ chat 횟수가 이 비율의 실측이다.
  */
-export const CHAT_FOLLOW_SHARE = { learnerObserve: 0.33, weakRead: 0.33, basis: "assumed" as Basis };
+export const CHAT_FOLLOW_SHARE = { learnerObserve: 0.33, weakRead: 0.33, notebookFix: 0.33, basis: "assumed" as Basis };
 
 export function chatMessageTypicalUsd(measured?: Record<string, Tokens>): number {
   return (
     opUsd("chat", measured) +
     opUsd("chatReply", measured) +
     CHAT_FOLLOW_SHARE.learnerObserve * opUsd("learnerObserve", measured) +
-    CHAT_FOLLOW_SHARE.weakRead * opUsd("weakRead", measured)
+    CHAT_FOLLOW_SHARE.weakRead * opUsd("weakRead", measured) +
+    CHAT_FOLLOW_SHARE.notebookFix * opUsd("notebookFix", measured)
   );
 }
 
