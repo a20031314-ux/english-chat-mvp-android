@@ -275,3 +275,17 @@ test("소리 자리가 차면 그 뒤로 들어온 사람은 채팅만, 돌아�
   assert.ok(polled && polled !== "KICKED");
   if (polled && polled !== "KICKED") assert.equal(polled.members.find((m) => m.peerId === "peer_biglate0")?.textOnly, true);
 });
+
+test("앱을 내려놓았다 돌아오기: 10분 안이면 같은 자리, 방장이 앱을 닫아도(soft) 방은 남는다", async () => {
+  const room = await createRoom({ name: "away", languages: ["en", "ko"], hostPeerId: "peer_awayhost", hostAccountId: "lb_awayhost" });
+  await joinRoom({ id: room.id, peerId: "peer_awayhost", nickname: "h", wantRole: "speaker", accountId: "lb_awayhost" });
+  // 물음이 멈춘 채(lastSeen이 오래됨) 다시 물어도 그 자리 그대로
+  const back = await poll({ id: room.id, peerId: "peer_awayhost", since: 0 });
+  assert.ok(back && back !== "KICKED" && back !== "NOT_IN_ROOM");
+  // 나가기 뒤의 물음은 "방에 없음"(방은 있음) — 앱이 다시 들어온다
+  await leaveRoom(room.id, "peer_awayhost");
+  assert.equal(await poll({ id: room.id, peerId: "peer_awayhost", since: 0 }), "NOT_IN_ROOM");
+  assert.ok(await readMeta(room.id));
+  const rejoined = await joinRoom({ id: room.id, peerId: "peer_awayhost", nickname: "h", wantRole: "speaker", accountId: "lb_awayhost" });
+  assert.ok(rejoined.ok && rejoined.meta.hostPeerId === "peer_awayhost" && rejoined.member.role === "speaker");
+});

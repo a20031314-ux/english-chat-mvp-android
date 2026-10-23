@@ -16,6 +16,7 @@ import {
   MAX_LINES_KEPT,
   MAX_MEMBERS,
   MAX_SPEAKERS,
+  MEMBER_STALE_MS,
   MIN_SEATS,
   audioCount,
   roomSeats,
@@ -45,7 +46,12 @@ import {
   kvGetJsonMany,
 } from "./kv.ts";
 
-const MEMBER_TTL_SECONDS = 30;
+/**
+ * 사람 정보가 남는 시간. 화면 목록·소리 연결은 lastSeen 12초(MEMBER_STALE_MS)로 가르고, 기록은 더 오래 둔다(2026-10-23 30초 → 10분):
+ * 폰에서 앱을 잠깐 내려놓으면 물음이 멈추는데, 30초면 돌아왔을 때 "방에 없음"이 되어 방이 닫힌 것처럼 보였다(방장도).
+ * 10분 안에 돌아오면 같은 자리(방장·말하기)로 이어진다.
+ */
+const MEMBER_TTL_SECONDS = 10 * 60;
 const SIGNAL_TTL_SECONDS = 120;
 const INDEX_KEY = "room:index";
 const INDEX_KEEP = 60;
@@ -286,11 +292,12 @@ export async function poll(input: {
   role?: RoomRole;
   hand?: boolean;
   textOnly?: boolean;
-}): Promise<PollResponse | null | "KICKED"> {
+}): Promise<PollResponse | null | "KICKED" | "NOT_IN_ROOM"> {
   const meta = await readMeta(input.id);
   if (!meta) return null;
   const mine = await kvGetJson<RoomMember>(memberKey(input.id, input.peerId));
-  if (!mine) return null;
+  // 방은 있는데 내 기록이 없다(오래 비웠거나 나가기 처리됨): 앱이 다시 들어온다.
+  if (!mine || mine.lastSeen <= 0) return "NOT_IN_ROOM";
   const now = Date.now();
   let role = mine.role;
   const live = await readMembers(input.id);
@@ -306,6 +313,9 @@ export async function poll(input: {
     }
     if (granted === "listener") role = "listener";
     else if (seatsLeft) role = "speaker";
+  } else if (role === "speaker" && now - mine.lastSeen > MEMBER_STALE_MS && !seatsLeft && input.peerId !== meta.hostPeerId) {
+    // 앱을 내려놓은 사이 내 말하기 자리가 다른 사람으로 찼다: 듣기로(방장은 그대로).
+    role = "listener";
   } else if (input.role === "listener" && input.peerId !== meta.hostPeerId) {
     // 방장은 말하기 자리에서 내려가지 않는다(조용히 하려면 마이크 끄기).
     role = "listener";

@@ -658,6 +658,30 @@ export function RoomView({
           setLines((have) => mergeLines(have, result.lines));
         }
       } catch (error) {
+        // 방은 있는데 내 자리가 없어졌다(앱을 오래 내려놓았거나 닫았다 다시 연 경우): 같은 이름표로 다시 들어온다 — 방장이면 다시 방장.
+        if (error instanceof RoomApiError && error.code === "NOT_IN_ROOM") {
+          try {
+            const again = await joinRoom({ roomId: room.id, peerId, nickname: nickname.trim(), role: roleRef.current, langs: [targetLanguage, locale] });
+            if (!aliveRef.current) return;
+            hostRef.current = again.room.hostPeerId;
+            setHostPeerId(again.room.hostPeerId);
+            if (again.member.role !== roleRef.current) await adoptRole(again.member.role, again.member.role === "speaker" ? "" : "demoted");
+            if (aliveRef.current) timer = window.setTimeout(() => void tick(), 300);
+            return;
+          } catch (rejoin) {
+            if (rejoin instanceof RoomApiError && rejoin.code === "BANNED") {
+              setNotice("banned");
+              setEnded("banned");
+              stopMic();
+              mesh.close();
+              return;
+            }
+            if (!(rejoin instanceof RoomApiError && rejoin.status === 404)) {
+              if (aliveRef.current) timer = window.setTimeout(() => void tick(), 3_000);
+              return;
+            }
+          }
+        }
         if (error instanceof RoomApiError && (error.status === 404 || error.code === "KICKED")) {
           setNotice(error.code === "KICKED" ? "kicked" : "roomGone");
           setEnded(error.code === "KICKED" ? "kicked" : "roomGone");
@@ -706,7 +730,8 @@ export function RoomView({
       }
     })();
 
-    const onHide = () => void leaveRoom(room.id, peerId);
+    // 앱을 닫거나 화면이 사라질 때는 자리만 비운다(방장이어도 방은 남음, 돌아오면 다시 방장). "방 닫기"·"나가기"만 방을 닫는다.
+    const onHide = () => void leaveRoom(room.id, peerId, true);
     window.addEventListener("pagehide", onHide);
     return () => {
       aliveRef.current = false;

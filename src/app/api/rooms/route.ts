@@ -188,7 +188,9 @@ export async function POST(request: NextRequest) {
       textOnly: typeof body.textOnly === "boolean" ? body.textOnly : undefined,
     });
     if (result === "KICKED") return bad(request, "KICKED", 403);
-    if (!result) return bad(request, "NOT_IN_ROOM", 404);
+    // 404 두 가지: 방이 없음(NO_ROOM) / 방은 있는데 내가 없음(NOT_IN_ROOM — 새 앱은 다시 들어온다, 예전 앱은 둘 다 닫힌 방으로 본다).
+    if (result === "NOT_IN_ROOM") return bad(request, "NOT_IN_ROOM", 404);
+    if (!result) return bad(request, "NO_ROOM", 404);
     // 게임 중이면 판을 넘기고(시간이 지난 단계) 이 사람에게 보일 것만 붙인다(api/rooms/game).
     if (result.room.game) {
       const found = await currentGame(roomId, result.room.game, new Set(result.members.map((member) => member.peerId)));
@@ -203,8 +205,9 @@ export async function POST(request: NextRequest) {
   if (action === "leave") {
     await leaveRoom(roomId, peerId);
     // 방장이 나가면 방을 닫는다(1:1 통화 방은 둘 다 나간 뒤 기록을 남겨야 해서 그대로).
+    // soft = 앱을 닫거나 화면이 사라질 때(pagehide): 자리만 비우고 방은 둔다 — 방장이 돌아오면 다시 방장(2026-10-23).
     const meta = await readMeta(roomId);
-    if (meta && !meta.private && meta.hostPeerId === peerId) {
+    if (meta && !meta.private && meta.hostPeerId === peerId && body.soft !== true) {
       await closeRoom(roomId);
       return jsonWithCors(request, { ok: true, closed: true });
     }

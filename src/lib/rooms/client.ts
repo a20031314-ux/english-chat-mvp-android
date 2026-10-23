@@ -224,9 +224,10 @@ export async function reopenRoom(roomId: string, peerId: string): Promise<RoomMe
   return (await call<{ room: RoomMeta }>("reopen", { roomId, peerId })).room;
 }
 
-export function leaveRoom(roomId: string, peerId: string): Promise<void> {
+/** soft: 앱을 닫거나 내려놓을 때 — 자리만 비우고, 방장이어도 방은 닫지 않는다. */
+export function leaveRoom(roomId: string, peerId: string, soft = false): Promise<void> {
   // 화면을 닫는 순간이라 부르는 쪽은 보통 기다리지 않는다(1:1 통화만 기다린 뒤 기록을 남긴다).
-  return call("leave", { roomId, peerId }).then(
+  return call("leave", { roomId, peerId, ...(soft ? { soft: true } : {}) }).then(
     () => undefined,
     () => undefined,
   );
