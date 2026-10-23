@@ -21,7 +21,9 @@ import {
   fetchPlanOffers,
   resetBillingConfigure,
   type PlanOffer,
+  fetchPointBalance,
 } from "@/lib/billing/billingService";
+import { formatPoints } from "@/lib/billing/points";
 import { FREE_CATALOG_TRIAL_COUNT, FREE_DAILY_CHAT_LIMIT } from "@/lib/billing/config";
 import { PAID_TIERS, termsFor, type PlanTier } from "@/lib/billing/plans";
 import { monthlyImportPoints } from "@/lib/billing/videoPrep";
@@ -112,9 +114,15 @@ function HeaderImportPoints({
 }) {
   const { isPremium, tier } = usePremium();
   const [used, setUsed] = useState(0);
+  // 유료면 서버 잔액(소수, 산 포인트 포함)을 보여 준다. 못 받으면 기기 기록(이번 달 지급분 - 쓴 것).
+  const [server, setServer] = useState<number | null>(null);
 
   useEffect(() => {
-    const refresh = () => setUsed(getImportPointsUsed());
+    const refresh = () => {
+      setUsed(getImportPointsUsed());
+      if (isPremium) void fetchPointBalance().then(setServer);
+      else setServer(null);
+    };
     refresh();
     window.addEventListener(IMPORT_QUOTA_CHANGED_EVENT, refresh);
     window.addEventListener("focus", refresh);
@@ -122,16 +130,16 @@ function HeaderImportPoints({
       window.removeEventListener(IMPORT_QUOTA_CHANGED_EVENT, refresh);
       window.removeEventListener("focus", refresh);
     };
-  }, []);
+  }, [isPremium]);
 
   // Only premium's old terms grant points each month (billing/plans.ts).
   const grant = tier === "premium" ? termsFor("premium").monthlyGrantPoints : monthlyImportPoints(false);
-  const remaining = Math.max(0, (isPremium ? grant : 0) - used);
+  const remaining = formatPoints(isPremium && server !== null ? server : Math.max(0, (isPremium ? grant : 0) - used));
   return (
     <button
       type="button"
       onClick={onOpen}
-      aria-label={ui.headerImportPoints.replace("{remaining}", String(remaining))}
+      aria-label={ui.headerImportPoints.replace("{remaining}", remaining)}
       className="inline-flex items-center gap-1 rounded-full border border-white/15 bg-white/5 px-2 py-1 text-[11px] font-medium text-slate-100 hover:bg-white/10"
     >
       <PointsIcon />

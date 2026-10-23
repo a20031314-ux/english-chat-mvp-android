@@ -3,8 +3,20 @@ import { pointsForProduct } from "@/lib/billing/cost";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import {
   creditPurchaseOnce,
+  getPointPart,
   getPurchasedPoints,
 } from "@/lib/server/entitlementStore";
+
+/**
+ * 보여 줄 구매 포인트(소수). 구독자는 꺼내 두고 남은 부분(쓴 만큼 깎기, entitlementStore spendMilli)을 더한다 —
+ * 남은 부분은 월 지급분에서 나왔을 수도 있지만 1포인트 미만이라 한 칸으로 보여 준다. 무료의 남은 부분은 평생 체험에서
+ * 나온 것이라 더하지 않는다.
+ */
+async function shownPurchased(userId: string, isPremium: boolean): Promise<number> {
+  const whole = await getPurchasedPoints(userId);
+  if (!isPremium) return whole;
+  return Math.floor((whole * 1000 + (await getPointPart(userId))) / 100) / 10;
+}
 import {
   resolveRequestEntitlement,
   revenueCatUserId,
@@ -38,7 +50,7 @@ export async function OPTIONS(request: NextRequest) {
  * point of a balance is that it cannot be granted by asking nicely.
  */
 export async function POST(request: NextRequest) {
-  const { userId } = await resolveRequestEntitlement(request);
+  const { userId, isPremium } = await resolveRequestEntitlement(request);
   const appUserId = revenueCatUserId(request);
 
   if (!appUserId) {
@@ -46,7 +58,7 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, {
       ok: true,
       credited: 0,
-      purchasedPoints: await getPurchasedPoints(userId),
+      purchasedPoints: await shownPurchased(userId, isPremium),
     });
   }
 
@@ -91,6 +103,6 @@ export async function POST(request: NextRequest) {
   return jsonWithCors(request, {
     ok: true,
     credited,
-    purchasedPoints: await getPurchasedPoints(userId),
+    purchasedPoints: await shownPurchased(userId, isPremium),
   });
 }

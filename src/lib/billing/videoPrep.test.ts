@@ -16,11 +16,12 @@ const trialIds = trialEligibleVideoIds(englishPack);
 const libraryId = trialIds[0] ?? "";
 const lockedLibraryId = englishPack?.clips[3]?.videoId ?? "";
 
-test("import points round up to 3-minute units", () => {
-  assert.equal(importPointsForDuration(1), 1);
+test("import points follow the video's length, in thousandths", () => {
+  // 쓴 만큼(2026-10-23): 3분 = 1포인트, 올림은 0.001 단위로만.
+  assert.equal(importPointsForDuration(1), 0.006);
   assert.equal(importPointsForDuration(180), 1);
-  assert.equal(importPointsForDuration(181), 2);
-  assert.equal(importPointsForDuration(12 * 60), 4);
+  assert.equal(importPointsForDuration(181), 1.006);
+  assert.equal(importPointsForDuration(7 * 60), 2.334);
   assert.equal(importPointsForDuration(15 * 60), 5);
 });
 
@@ -85,7 +86,7 @@ test("premium library clips cost zero points", () => {
   if (decision.ok) assert.equal(decision.billablePoints, 0);
 });
 
-test("premium custom import charges rounded points on first prepare only", () => {
+test("premium custom import charges its length on first prepare only", () => {
   const first = evaluateVideoAccess({
     isPremium: true,
     videoId: "dQw4w9wgGcQ",
@@ -96,7 +97,7 @@ test("premium custom import charges rounded points on first prepare only", () =>
     trialVideoIds: [],
   });
   assert.equal(first.ok, true);
-  if (first.ok) assert.equal(first.billablePoints, 2);
+  if (first.ok) assert.equal(first.billablePoints, 1.334);
 
   const replay = evaluateVideoAccess({
     isPremium: true,

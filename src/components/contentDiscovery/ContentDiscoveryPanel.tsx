@@ -22,6 +22,7 @@ import {
   type SavedDiscoveryChannel,
 } from "@/lib/contentDiscovery/savedChannels";
 import { importPointsForDuration } from "@/lib/billing/videoPrep";
+import { formatPoints } from "@/lib/billing/points";
 import { PointsIcon } from "@/components/PointsIcon";
 
 const INITIAL_VISIBLE = 8;
@@ -198,11 +199,11 @@ function DiscoveryResultMeta({
               className="inline-flex items-center gap-0.5 text-slate-200"
               aria-label={ui.discoverImportPoints.replace(
                 "{n}",
-                String(bit.points),
+                formatPoints(bit.points, "up"),
               )}
             >
               <PointsIcon />
-              <span className="tabular-nums">{bit.points}</span>
+              <span className="tabular-nums">{formatPoints(bit.points, "up")}</span>
             </span>
           ) : (
             bit

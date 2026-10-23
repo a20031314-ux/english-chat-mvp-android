@@ -433,6 +433,21 @@ export async function fetchPlanFromServer(): Promise<boolean> {
   return isPremium;
 }
 
+/**
+ * 서버가 아는 포인트 잔액(소수, 2026-10-23 쓴 만큼 깎기). 유료면 월 지급분 + 산 포인트 + 꺼내 두고 남은 부분,
+ * 무료면 평생 통화 체험분. 못 알아내면 null — 화면은 기기 기록으로 보여 준다.
+ */
+export async function fetchPointBalance(): Promise<number | null> {
+  try {
+    const response = await fetch(apiUrl("/api/entitlement"), { headers: entitlementHeaders(readCachedPremium()) });
+    if (!response.ok) return null;
+    const data = (await response.json()) as { callPointsLeft?: unknown };
+    return typeof data.callPointsLeft === "number" ? data.callPointsLeft : null;
+  } catch {
+    return null;
+  }
+}
+
 export async function fetchPremiumFromRevenueCat(): Promise<boolean> {
   if (!isBillingNativePlatform()) {
     return fetchPlanFromServer().catch(() => readCachedPremium());

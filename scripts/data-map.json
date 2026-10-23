@@ -40,6 +40,7 @@
     "points:bought": { "feature": "포인트", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "산 포인트" },
     "points:credited": { "feature": "포인트", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "이미 넣은 구매 거래(두 번 막기)" },
     "points:hold": { "feature": "포인트", "scope": "user", "onAccountDelete": "해당 없음", "what": "통화 중 잡아 둔 포인트" },
+    "points:part": { "feature": "포인트", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "꺼내 두고 남은 포인트 조각(1/1000, 쓴 만큼 깎기)" },
     "points:rpcarry": { "feature": "포인트", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "통화 남은 초 이월(월별)" },
     "points:rplast": { "feature": "포인트", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "마지막 통화 차감" },
     "points:rpsession": { "feature": "포인트", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "통화 세션별 차감" },

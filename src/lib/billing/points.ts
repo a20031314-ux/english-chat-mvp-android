@@ -115,3 +115,14 @@ export function planCallBlock(balance: PointBalance): {
   if (affordable <= 0) return null;
   return { points: affordable, seconds: callSecondsForPoints(affordable) };
 }
+
+/**
+ * 포인트를 화면에 쓸 때(2026-10-23부터 쓴 만큼 소수로 깎임): 소수 첫째 자리까지, ".0"은 뺀다.
+ * 잔액은 버림(실제보다 많아 보이지 않게), 드는 값은 올림(실제보다 싸 보이지 않게). 기기 언어의 소수점.
+ */
+export function formatPoints(value: number, round: "down" | "up" = "down"): string {
+  const safe = Number.isFinite(value) ? Math.max(0, value) : 0;
+  // 0.1 단위로 맞출 때 부동소수 오차(2.3 → 2.2999…)로 한 칸 어긋나지 않게 아주 작은 값을 더하고 뺀다.
+  const tenths = round === "up" ? Math.ceil(safe * 10 - 1e-9) : Math.floor(safe * 10 + 1e-9);
+  return (tenths / 10).toLocaleString(undefined, { maximumFractionDigits: 1 });
+}

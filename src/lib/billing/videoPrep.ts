@@ -28,10 +28,14 @@ export function videoPrepMinutes(seconds: number) {
   return Math.max(0, Math.round(seconds / 60));
 }
 
+/**
+ * 영상 길이만큼의 포인트(소수, 0.001 단위로 올림). 2026-10-23부터 3분 단위로 올리지 않고 쓴 만큼
+ * (hub/drafts/points-gauge-2026-10-23.md) — 7분 영상은 3이 아니라 2.334.
+ */
 export function importPointsForDuration(durationSeconds: number) {
   const duration = Math.max(0, Math.ceil(durationSeconds));
   if (duration <= 0) return 1;
-  return Math.ceil(duration / VIDEO_IMPORT_POINT_SECONDS);
+  return Math.ceil((duration * 1000) / VIDEO_IMPORT_POINT_SECONDS) / 1000;
 }
 
 /**
@@ -50,7 +54,8 @@ export function importPointsAvailable(
   if (!isPremium) return 0;
   return (
     Math.max(0, grant - Math.max(0, usedPoints)) +
-    Math.max(0, Math.floor(purchasedPoints))
+    // 소수: 꺼내 두고 남은 부분(서버 points:part)까지 더해 넘어온다.
+    Math.max(0, purchasedPoints)
   );
 }
 

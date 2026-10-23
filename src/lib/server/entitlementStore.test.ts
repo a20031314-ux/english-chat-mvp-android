@@ -22,6 +22,8 @@ import {
   readWrittenLines,
 } from "./entitlementStore.ts";
 import { SHARED_ANONYMOUS_ID } from "./identity.ts";
+import { kvIncrBy, kvSetJson } from "./kv.ts";
+import { getPointPart } from "./entitlementStore.ts";
 import { FREE_LIFETIME_ROLEPLAY_POINTS } from "../billing/config.ts";
 
 // 포인트로 통화하는 구독(옛 프리미엄 조건: 매달 80포인트) — 2026-10-22에 프리미엄이 하루 시간 방식으로 바뀌어
@@ -113,172 +115,124 @@ test("call seconds accumulate for the month and ignore junk", async () => {
 });
 
 const FIVE_MINUTES = 5 * 60 * 1000;
+const HALF_MINUTE = 30_000;
 
-test("call learning is free for its allowance and then is not", async () => {
-  // Written against the allowance rather than a number, because that number is
-  // a product decision and has already moved once: fifteen minutes turned out
-  // to be three conversations, the last of which ended against a wall.
+/** 같은 대화를 간격 `step`으로 `until`까지 이어 가며 쓴 포인트 합. */
+async function talk(user: string, plan: boolean | ReturnType<typeof termsFor>, session: string, start: number, until: number, step = HALF_MINUTE) {
+  let charged = 0;
+  let last: Awaited<ReturnType<typeof chargeRoleplayTurn>> | null = null;
+  for (let at = 0; at <= until; at += step) {
+    last = await chargeRoleplayTurn(user, plan, session, start + at);
+    charged += last.charged;
+    if (!last.ok) break;
+  }
+  return { charged, last: last! };
+}
+
+const close = (actual: number, expected: number, message?: string) =>
+  assert.ok(Math.abs(actual - expected) < 0.0015, `${message ?? ""} ${actual} != ${expected}`);
+
+test("call learning is charged by the talk, in fractions of a point", async () => {
+  // 쓴 만큼(2026-10-23): 첫 턴은 15초, 그다음은 지난 턴 뒤 흐른 시간. 1포인트 = 5분.
   const free = FREE_LIFETIME_ROLEPLAY_POINTS;
   const t0 = 1_700_000_000_000;
   const first = await chargeRoleplayTurn("rp-free", false, "s1", t0);
   assert.equal(first.ok, true);
-  assert.equal(first.charged, 1, "the first five minutes are bought, not accrued");
-  assert.equal(first.left, free - 1);
+  close(first.charged, 0.05, "the first turn counts fifteen seconds");
+  close(first.left, free - 0.05);
 
-  // Another turn inside the same block costs nothing.
-  const same = await chargeRoleplayTurn("rp-free", false, "s1", t0 + 60_000);
-  assert.equal(same.charged, 0);
-  assert.equal(same.left, free - 1);
-
-  // One block at a time until it is spent.
-  for (let block = 1; block < free; block += 1) {
-    const charge = await chargeRoleplayTurn("rp-free", false, "s1", t0 + block * FIVE_MINUTES);
-    assert.equal(charge.charged, 1, `block ${block} should cost one`);
-  }
-  const spent = await chargeRoleplayTurn("rp-free", false, "s1", t0 + (free - 1) * FIVE_MINUTES);
-  assert.equal(spent.left, 0);
-
-  const refused = await chargeRoleplayTurn("rp-free", false, "s1", t0 + free * FIVE_MINUTES);
-  assert.equal(refused.ok, false, "the minute after the allowance is not free");
-  assert.equal(refused.charged, 0);
+  const next = await chargeRoleplayTurn("rp-free", false, "s1", t0 + HALF_MINUTE);
+  close(next.charged, 0.1, "half a minute is a tenth of a point");
+  close(next.left, free - 0.15);
 });
 
-test("the free allowance does not come back with a new conversation", async () => {
-  // Each conversation runs its full five minutes, so nothing carries and every
-  // one buys a block. The allowance is for the life of the account.
+test("the free allowance runs to zero and then the call stops", async () => {
   const free = FREE_LIFETIME_ROLEPLAY_POINTS;
   const t0 = 1_700_000_000_000;
-  for (let conversation = 0; conversation < free; conversation += 1) {
-    const start = t0 + conversation * FIVE_MINUTES * 2;
-    const charge = await chargeRoleplayTurn("rp-lifetime", false, `s${conversation}`, start);
-    assert.equal(charge.ok, true, `conversation ${conversation} should still be affordable`);
-    assert.equal(charge.charged, 1, "a new conversation buys its first block");
-    await chargeRoleplayTurn("rp-lifetime", false, `s${conversation}`, start + FIVE_MINUTES - 1000);
-  }
-  const after = await chargeRoleplayTurn("rp-lifetime", false, "one-too-many", t0 + free * FIVE_MINUTES * 2);
+  const { charged, last } = await talk("rp-free-end", false, "long", t0, (free * 5 + 2) * 60_000);
+  assert.equal(last.ok, false, "the turn after the allowance is refused");
+  close(charged, free, "every bit of the allowance was used");
+  assert.equal(last.left, 0);
+  // A new conversation does not bring it back.
+  const after = await chargeRoleplayTurn("rp-free-end", false, "again", t0 + 24 * 60 * 60 * 1000);
   assert.equal(after.ok, false, "the allowance is for the life of the account");
 });
 
-test("a conversation is charged by its own clock, not by the last one's", async () => {
+test("the last fraction is spent rather than refused", async () => {
+  // 0.03 남았는데 턴이 0.1을 원하면 0.03을 쓰고 받는다 — 거절은 잔액이 0일 때만.
+  const t0 = 1_700_000_000_000;
+  await talk("rp-tail", false, "a", t0, (FREE_LIFETIME_ROLEPLAY_POINTS * 5 - 1) * 60_000 + 51_000, 1_000 * 51);
+  const before = await roleplayPointsLeft("rp-tail", false);
+  assert.ok(before > 0 && before < 1, String(before));
+  const last = await chargeRoleplayTurn("rp-tail", false, "a", t0 + 24 * 60 * 60 * 1000);
+  assert.equal(last.ok, true);
+  assert.equal(last.left, 0);
+});
+
+test("a pause counts at most a minute against points", async () => {
   const t0 = 1_700_000_000_000;
   await chargeRoleplayTurn("rp-clock", POINTS_PREMIUM, "one", t0);
-  // An hour later, a new conversation owes at most one block, not thirteen.
-  // Here it owes none: the first one used half a minute of the five it
-  // bought, and the rest waited for this one.
-  const later = await chargeRoleplayTurn("rp-clock", POINTS_PREMIUM, "two", t0 + 60 * 60 * 1000);
+  const later = await chargeRoleplayTurn("rp-clock", POINTS_PREMIUM, "one", t0 + 60 * 60 * 1000);
   assert.equal(later.ok, true);
-  assert.equal(later.charged, 0);
+  close(later.charged, 0.2, "an hour away is one minute");
 });
 
-test("three-minute calls cost three minutes each, not five", async () => {
-  // The case this exists for. Ten calls of three minutes, hung up each time:
-  // under whole blocks that was ten points for thirty minutes. With the unused
-  // part of each block carried to the next call it is the time actually used,
-  // half a minute of grace per call included, rounded up once at the end.
+test("three-minute calls cost three minutes each", async () => {
+  // 열 번의 3분 통화(15초 간격 턴). 각 통화: 첫 턴 15초 + 3분 = 3분 15초.
   const t0 = 1_700_000_000_000;
-  const THREE_MINUTES = 3 * 60 * 1000;
   let points = 0;
   for (let call = 0; call < 10; call += 1) {
-    const start = t0 + call * 60 * 60 * 1000;
-    for (let at = 0; at <= THREE_MINUTES; at += 15_000) {
-      const charge = await chargeRoleplayTurn("rp-short", POINTS_PREMIUM, `call-${call}`, start + at);
-      assert.equal(charge.ok, true);
-      points += charge.charged;
-    }
+    const { charged } = await talk("rp-short", POINTS_PREMIUM, `call-${call}`, t0 + call * 60 * 60 * 1000, 3 * 60_000, 15_000);
+    points += charged;
   }
-  // Used: 10 x (3:00 + 0:30) = 35 minutes = 7 blocks.
-  assert.ok(points <= 8, `ten three-minute calls took ${points} points`);
-  assert.ok(points >= 7, `ten three-minute calls took only ${points} points; time went unpaid`);
+  close(points, 10 * (3.25 / 5), "ten calls of 3:15 each");
 });
 
-test("every minute served was paid for before it was used", async () => {
-  // Carry only ever holds time some earlier block bought, so however the
-  // calls are cut, what was charged covers what was used.
-  const t0 = 1_700_000_000_000;
-  const lengths = [40_000, 7 * 60_000, 90_000, 4 * 60_000, 11 * 60_000, 20_000];
-  let points = 0;
-  let usedMs = 0;
-  for (const [call, length] of lengths.entries()) {
-    const start = t0 + call * 60 * 60 * 1000;
-    for (let at = 0; at <= length; at += 10_000) {
-      const charge = await chargeRoleplayTurn("rp-paid", POINTS_PREMIUM, `c${call}`, start + at);
-      assert.equal(charge.ok, true);
-      points += charge.charged;
-    }
-    usedMs += Math.floor(length / 10_000) * 10_000;
-  }
-  assert.ok(points * FIVE_MINUTES >= usedMs, `${points} points for ${usedMs / 60_000} minutes`);
-});
-
-test("a settled conversation that keeps going pays again rather than twice-refunded", async () => {
-  // Two conversations overlapping, on a phone and a tablet. Starting the
-  // second settles the first; if the first then goes on, it has nothing left
-  // in hand and its next minutes are paid for again.
-  const t0 = 1_700_000_000_000;
-  await chargeRoleplayTurn("rp-overlap", POINTS_PREMIUM, "phone", t0);
-  await chargeRoleplayTurn("rp-overlap", POINTS_PREMIUM, "phone", t0 + 60_000);
-  await chargeRoleplayTurn("rp-overlap", POINTS_PREMIUM, "tablet", t0 + 90_000);
-  // The tablet drew the phone's unused time. The phone, talking on, is now
-  // past what it kept and must buy more.
-  const phone = await chargeRoleplayTurn("rp-overlap", POINTS_PREMIUM, "phone", t0 + 120_000);
-  assert.equal(phone.charged, 1);
-});
-
-test("minutes carried from the last block are still usable once the points run out", async () => {
-  const free = FREE_LIFETIME_ROLEPLAY_POINTS;
-  const t0 = 1_700_000_000_000;
-  // Spend all but nothing: one long conversation that uses every block.
-  for (let block = 0; block < free; block += 1) {
-    await chargeRoleplayTurn("rp-broke", false, "long", t0 + block * FIVE_MINUTES);
-  }
-  // Leave it a minute into its last block, so four minutes go to the carry.
-  await chargeRoleplayTurn("rp-broke", false, "long", t0 + (free - 1) * FIVE_MINUTES + 30_000);
-  const next = t0 + free * FIVE_MINUTES + 60 * 60 * 1000;
-  const carried = await chargeRoleplayTurn("rp-broke", false, "after", next);
-  assert.equal(carried.ok, true, "the carried minutes are still there to use");
-  assert.equal(carried.charged, 0);
-  // Past them there is nothing left to pay with, and the conversation stops.
-  const refused = await chargeRoleplayTurn("rp-broke", false, "after", next + 10 * 60_000);
-  assert.equal(refused.ok, false);
-  assert.equal(await roleplayCarryMs("rp-broke", next), 0, "the carry was spent, not lost");
-});
-
-test("a subscriber spends the monthly grant rather than the free allowance", async () => {
+test("a subscriber opens whole points from the grant and keeps the rest as a fraction", async () => {
   const t0 = 1_700_000_000_000;
   const charge = await chargeRoleplayTurn("rp-premium", POINTS_PREMIUM, "s1", t0);
   assert.equal(charge.ok, true);
-  assert.equal(charge.charged, 1);
-  // Taken out of the same pool video imports draw on, which is the point of
-  // there being one currency.
+  close(charge.charged, 0.05);
+  // 정수 1포인트를 월 지급분에서 꺼냈고 0.95가 남아 있다.
   assert.equal(await getMonthlyImportPointsUsed("rp-premium"), 1);
-  assert.equal(await roleplayPointsLeft("rp-premium", POINTS_PREMIUM), 79);
-  // And the free lifetime allowance is untouched, so cancelling does not hand
-  // anyone a fresh fifteen minutes they already had.
-  assert.equal(
-    await roleplayPointsLeft("rp-premium", false),
-    FREE_LIFETIME_ROLEPLAY_POINTS,
-  );
+  close(await roleplayPointsLeft("rp-premium", POINTS_PREMIUM), 79.95);
+  // 무료 평생 체험은 건드리지 않았다(꺼내 둔 0.95는 어느 요금에서든 쓸 수 있는 몫).
+  close(await roleplayPointsLeft("rp-premium", false), FREE_LIFETIME_ROLEPLAY_POINTS + 0.95);
+});
+
+test("time an old five-minute block already bought is given back as a fraction", async () => {
+  // 배포 때 진행 중이던 예전 대화: 블록 하나(5분)를 사 두고 1분 썼다 → 남은 시간(유예 30초 뺀 3분 30초)이 0.7포인트로.
+  const t0 = 1_700_000_000_000;
+  const user = "rc:legacy-block";
+  await buyPoints(user, 2);
+  const lite = termsFor("lite", t0, null);
+  await kvSetJson(`points:rpsession:${user}:old`, { startedAt: t0, charged: 1, paidMs: FIVE_MINUTES, lastTurnAt: t0 + 60_000 }, 3600);
+  await kvSetJson(`points:rplast:${user}`, { sessionId: "old" }, 3600);
+  // 다음 날(오늘 무료 분 없음을 보려고 무료 분을 다 쓴 뒤가 아니라, 새 대화의 첫 턴만 본다).
+  const charge = await chargeRoleplayTurn(user, { ...lite, dailyCallMinutes: null }, "new", t0 + 10 * 60_000);
+  assert.equal(charge.ok, true);
+  close(charge.left, 2 + 0.7 - 0.05);
+});
+
+test("old carried minutes become part of the balance", async () => {
+  const t0 = Date.parse("2026-10-16T01:00:00Z");
+  const user = "rc:legacy-carry";
+  const month = "2026-10";
+  await kvIncrBy(`points:rpcarry:${user}:${month}`, 4 * 60_000, 3600);
+  const charge = await chargeRoleplayTurn(user, false, "x", t0);
+  close(charge.left, FREE_LIFETIME_ROLEPLAY_POINTS + 0.8 - 0.05);
+  assert.equal(await roleplayCarryMs(user, t0), 0, "the carry was moved, not lost");
 });
 
 test("nobody in particular is never charged", async () => {
-  // Every caller without a RevenueCat id shares one name, so an allowance keyed
-  // to it is one allowance for every install at once. A debug build spent it in
-  // three sessions and then refused a fourth — for a different phone, a
-  // different person, and no reason they could see.
   const t0 = 1_700_000_000_000;
   for (let session = 0; session < 6; session += 1) {
-    const charge = await chargeRoleplayTurn(
-      SHARED_ANONYMOUS_ID,
-      false,
-      `anon-${session}`,
-      t0 + session * 20 * 60 * 1000,
-    );
+    const charge = await chargeRoleplayTurn(SHARED_ANONYMOUS_ID, false, `anon-${session}`, t0 + session * 20 * 60 * 1000);
     assert.equal(charge.ok, true, `session ${session} should be served`);
     assert.equal(charge.charged, 0, "and nothing taken from anyone");
   }
-  // Someone with a name is still charged normally.
   const named = await chargeRoleplayTurn("rc:someone", false, "s1", t0);
-  assert.equal(named.charged, 1);
+  close(named.charged, 0.05);
 });
 
 test("a line the character wrote is kept, not only counted", async () => {
@@ -312,11 +266,18 @@ test("an empty line is not a line", async () => {
 test("video imports spend the monthly grant first, then purchased points", async () => {
   await addMonthlyImportPoints("import-buy-a", 78);
   await addPurchasedPoints("import-buy-a", 10);
-  const spend = await chargeImportPoints("import-buy-a", 5, "video-buy");
+  // 4.334포인트(13분 영상): 정수 5를 꺼내고 0.666이 남는다.
+  const spend = await chargeImportPoints("import-buy-a", 4.334, "video-buy");
   assert.deepEqual(spend, { fromGranted: 2, fromPurchased: 3 });
   assert.equal(await getMonthlyImportPointsUsed("import-buy-a"), 80);
   assert.equal(await getPurchasedPoints("import-buy-a"), 7);
+  assert.equal(await getPointPart("import-buy-a"), 666);
   assert.deepEqual(await getBilledImportVideoIds("import-buy-a"), ["video-buy"]);
+  // 다음 영상(0.5포인트)은 남은 부분에서 — 정수 포인트는 그대로.
+  const second = await chargeImportPoints("import-buy-a", 0.5, "video-two");
+  assert.deepEqual(second, { fromGranted: 0, fromPurchased: 0 });
+  assert.equal(await getPurchasedPoints("import-buy-a"), 7);
+  assert.equal(await getPointPart("import-buy-a"), 166);
 });
 
 test("a video import both pots cannot cover charges nothing", async () => {
@@ -358,12 +319,12 @@ test("a lite subscriber talks seven minutes a day free, then pays with bought po
   assert.equal(refused.ok, false);
   assert.equal(refused.todayLeftMs, 0);
 
-  // With points bought, it goes on and costs a block.
+  // With points bought, it goes on and costs what was talked (10초 = 0.034).
   await buyPoints(user, 3);
   const paid = await chargeRoleplayTurn(user, LITE, "d1", at + 40_000, 540);
   assert.equal(paid.ok, true);
-  assert.equal(paid.charged, 1);
-  assert.equal(paid.left, 2);
+  close(paid.charged, 0.034);
+  close(paid.left, 3 - 0.034);
 });
 
 test("a pause counts at most a minute, and tomorrow starts full", async () => {

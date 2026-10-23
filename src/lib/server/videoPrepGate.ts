@@ -10,6 +10,7 @@ import { parseYouTubeInput } from "@/lib/videoLearning";
 import {
   addCatalogTrialVideo,
   chargeImportPoints,
+  getPointPart,
   getBilledImportVideoIds,
   getCatalogTrialVideoIds,
   getMonthlyImportPointsUsed,
@@ -33,7 +34,8 @@ export async function videoPrepLimitsForRequest(request: NextRequest) {
   const { isPremium, userId, terms } = await resolveRequestEntitlement(request);
   const usedPoints = await getMonthlyImportPointsUsed(userId);
   // Only a subscriber can import, so only a subscriber's purchases count here.
-  const purchasedPoints = isPremium ? await getPurchasedPoints(userId) : 0;
+  // 꺼내 두고 남은 부분(소수)도 쓸 수 있는 몫이다(entitlementStore spendMilli).
+  const purchasedPoints = isPremium ? (await getPurchasedPoints(userId)) + (await getPointPart(userId)) / 1000 : 0;
   return {
     isPremium,
     userId,

@@ -9,6 +9,7 @@ import {
   type PointBundleOffer,
 } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
+import { formatPoints } from "@/lib/billing/points";
 
 /**
  * Buying points, and seeing how many are left.
@@ -78,7 +79,7 @@ export function PointStore({ ui }: { ui: UICopy }) {
         </h3>
         {balance === null ? null : (
           <span className="text-[12px] tabular-nums text-neutral-400">
-            {ui.pointsBalance.replace("{n}", String(balance))}
+            {ui.pointsBalance.replace("{n}", formatPoints(balance))}
           </span>
         )}
       </div>

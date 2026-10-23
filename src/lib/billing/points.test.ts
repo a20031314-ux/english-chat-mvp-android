@@ -125,3 +125,14 @@ test("the block is what bounds a lost report", () => {
 test("totals ignore a pot that has gone negative", () => {
   assert.equal(totalPoints(balance(-5, 10)), 10);
 });
+
+import { formatPoints } from "./points.ts";
+
+test("points are shown to one decimal, down for balances and up for costs", () => {
+  assert.equal(formatPoints(27.46).replace(",", "."), "27.4");
+  assert.equal(formatPoints(2.334, "up").replace(",", "."), "2.4");
+  assert.equal(formatPoints(80), "80");
+  assert.equal(formatPoints(2.3).replace(",", "."), "2.3");
+  assert.equal(formatPoints(-1), "0");
+  assert.equal(formatPoints(Number.NaN), "0");
+});

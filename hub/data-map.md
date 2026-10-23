@@ -70,6 +70,7 @@
 | 포인트 | `points:bought` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 산 포인트 | `entitlementStore.ts` |
 | 포인트 | `points:credited` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 이미 넣은 구매 거래(두 번 막기) | `entitlementStore.ts` |
 | 포인트 | `points:hold` | 학습자 한 명 | 6시간 | 해당 없음 | 통화 중 잡아 둔 포인트 | `entitlementStore.ts` |
+| 포인트 | `points:part` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 꺼내 두고 남은 포인트 조각(1/1000, 쓴 만큼 깎기) | `entitlementStore.ts` |
 | 포인트 | `points:rpcarry` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 통화 남은 초 이월(월별) | `entitlementStore.ts` |
 | 포인트 | `points:rplast` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 마지막 통화 차감 | `entitlementStore.ts` |
 | 포인트 | `points:rpsession` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 통화 세션별 차감 | `entitlementStore.ts` |

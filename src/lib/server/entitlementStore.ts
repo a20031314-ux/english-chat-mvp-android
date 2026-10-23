@@ -351,25 +351,21 @@ export async function chargeImportPoints(
   videoId?: string,
   grant: number = monthlyImportPoints(true),
 ): Promise<PointSpend | null> {
-  const balance = await readPointBalance(userId, grant);
-  const spend = splitSpend(balance, points);
-  if (!spend) return null;
-  const current = await readVideoPrep(userId);
-  await kvSetJson(
-    videoPrepKey(userId),
-    {
-      usedPoints: current.usedPoints + spend.fromGranted,
-      billedVideoIds:
-        videoId && !current.billedVideoIds.includes(videoId)
-          ? [...current.billedVideoIds, videoId]
-          : current.billedVideoIds,
-    } satisfies VideoPrepRecord,
-    MONTHLY_TTL_SECONDS,
-  );
-  if (spend.fromPurchased > 0) {
-    await kvIncrBy(purchasedPointsKey(userId), -spend.fromPurchased);
+  // 쓴 만큼(소수): 영상 길이만큼 정확히 깎는다(importPointsForDuration). 정수 포인트는 모자랄 때만 꺼낸다.
+  const paid = await spendMilli(userId, { free: false, grant }, Math.ceil(Math.max(0, points) * MILLI_PER_POINT - 1e-6));
+  if (!paid) return null;
+  // spendMilli가 월 지급분을 꺼냈으면 이미 usedPoints에 더했다(applySpend). 여기서는 영상 id만 남긴다.
+  if (videoId) {
+    const current = await readVideoPrep(userId);
+    if (!current.billedVideoIds.includes(videoId)) {
+      await kvSetJson(
+        videoPrepKey(userId),
+        { usedPoints: current.usedPoints, billedVideoIds: [...current.billedVideoIds, videoId] } satisfies VideoPrepRecord,
+        MONTHLY_TTL_SECONDS,
+      );
+    }
   }
-  return spend;
+  return paid.spend;
 }
 
 /** @deprecated Seconds view of import points, kept for the entitlement route. */
@@ -762,63 +758,154 @@ export async function readSentenceTally(
   return out;
 }
 
+/**
+ * 포인트를 쓴 만큼 소수로 깎는다(2026-10-23 사용자 결정 "A", hub/drafts/points-gauge-2026-10-23.md).
+ *
+ * 잔액(월 지급분·구매분·무료 평생 체험)은 예전처럼 정수 포인트로 둔다 — 구매 적립·초대 보상·환불 셈이
+ * 그대로 맞고 옮길 데이터가 없다. 그 위에 "이미 꺼낸 포인트 중 남은 부분"을 1/1000 단위(밀리)로 하나 둔다.
+ * 쓸 때는 남은 부분에서 먼저 깎고, 모자라면 정수 포인트를 필요한 만큼만 꺼내(월 지급분 먼저, splitSpend)
+ * 남는 부분에 더한다. 보여 주는 잔액 = 정수 포인트 + 남은 부분 / 1000.
+ *
+ * 남은 부분은 만료가 없다. 월 지급분에서 꺼낸 것이 달이 바뀌어도 남는 셈인데, 많아야 1포인트 미만이다.
+ */
+export const MILLI_PER_POINT = 1000;
+
+function pointPartKey(userId: string) {
+  return `points:part:${userId}`;
+}
+
+/** 꺼낸 포인트 중 아직 안 쓴 부분(밀리). */
+export async function getPointPart(userId: string): Promise<number> {
+  return Math.max(0, await kvGetNumber(pointPartKey(userId)));
+}
+
+/** 어디서 포인트를 꺼내는지: 무료는 평생 체험분, 유료는 이번 달 지급분 + 구매분. */
+type PointSource = { free: true } | { free: false; grant: number };
+
+function sourceOf(terms: PlanTerms): PointSource {
+  return terms.tier === "free" ? { free: true } : { free: false, grant: terms.monthlyGrantPoints };
+}
+
+/** 꺼낼 수 있는 정수 포인트. */
+async function wholePointsLeft(userId: string, source: PointSource): Promise<number> {
+  if (source.free) {
+    const used = await kvGetNumber(roleplayTrialKey(userId));
+    return Math.max(0, FREE_LIFETIME_ROLEPLAY_POINTS - used);
+  }
+  return totalPoints(await readPointBalance(userId, source.grant));
+}
+
+/** 쓸 수 있는 전부(밀리): 꺼낼 수 있는 정수 포인트 + 꺼내 두고 남은 부분. */
+export async function availableMilli(userId: string, source: PointSource): Promise<number> {
+  const [whole, part] = await Promise.all([wholePointsLeft(userId, source), getPointPart(userId)]);
+  return whole * MILLI_PER_POINT + part;
+}
+
+/**
+ * 밀리만큼 쓴다. 모자라면 아무것도 깎지 않고 null(`partial`이면 남은 만큼 다 쓰고 그만큼만).
+ * 꺼낸 정수 포인트가 어느 칸에서 나왔는지 돌려준다(영상 화면이 이번 달 지급분 쓴 양을 보여 줌).
+ */
+export async function spendMilli(
+  userId: string,
+  source: PointSource,
+  wanted: number,
+  options: { partial?: boolean } = {},
+): Promise<{ spentMilli: number; spend: PointSpend } | null> {
+  let milli = Math.max(0, Math.ceil(wanted));
+  const none: PointSpend = { fromGranted: 0, fromPurchased: 0 };
+  if (milli === 0) return { spentMilli: 0, spend: none };
+  const part = await getPointPart(userId);
+  if (part >= milli) {
+    await kvIncrBy(pointPartKey(userId), -milli);
+    return { spentMilli: milli, spend: none };
+  }
+  const whole = await wholePointsLeft(userId, source);
+  if (whole * MILLI_PER_POINT + part < milli) {
+    if (!options.partial) return null;
+    milli = whole * MILLI_PER_POINT + part;
+    if (milli === 0) return null;
+  }
+  const open = Math.ceil((milli - part) / MILLI_PER_POINT);
+  let spend = none;
+  if (open > 0) {
+    if (source.free) {
+      await kvIncrBy(roleplayTrialKey(userId), open);
+    } else {
+      const split = splitSpend(await readPointBalance(userId, source.grant), open);
+      // 확인과 꺼내기 사이에 다른 곳(다른 기기의 통화)이 썼다.
+      if (!split) return null;
+      await applySpend(userId, split, 1);
+      spend = split;
+    }
+  }
+  const delta = open * MILLI_PER_POINT - milli;
+  if (delta !== 0) await kvIncrBy(pointPartKey(userId), delta);
+  return { spentMilli: milli, spend };
+}
+
+/** 보여 줄 잔액(포인트, 소수 첫째 자리에서 버림 — 실제보다 많아 보이지 않게). */
+export function pointsForDisplay(milli: number): number {
+  return Math.floor(Math.max(0, milli) / 100) / 10;
+}
+
 type RoleplaySession = {
   startedAt: number;
-  /** Points this conversation has taken. */
+  /** Points this conversation has taken (예전 5분 블록 방식만). */
   charged: number;
-  /**
-   * Call time it has paid for, in milliseconds: its points' blocks plus any
-   * carry it drew. Absent on rows written before carry existed, where it is
-   * exactly the blocks.
-   */
+  /** 예전 블록 방식에서 이 대화가 미리 산 통화 시간(ms). */
   paidMs?: number;
-  /** When the server last saw a turn of it, which is what settling reads. */
+  /** When the server last saw a turn of it. */
   lastTurnAt?: number;
+  /** 2 = 쓴 만큼 깎는 방식. 없으면 예전 블록 방식 줄 — 처음 만날 때 남은 시간을 포인트 부분으로 돌려준다. */
+  v?: 2;
 };
 
 const BLOCK_MS = ROLEPLAY_POINT_SECONDS * 1000;
+
+/** 통화 시간(ms) → 밀리. 1포인트 = ROLEPLAY_POINT_SECONDS. */
+export function milliForCallMs(ms: number): number {
+  return Math.ceil((Math.max(0, ms) * MILLI_PER_POINT) / BLOCK_MS);
+}
 
 function paidMsOf(session: RoleplaySession): number {
   return session.paidMs ?? session.charged * BLOCK_MS;
 }
 
-/** Unused call time waiting for this person's next conversation, in milliseconds. */
+/** 예전 방식의 이월 시간(ms). 쓴 만큼 방식에서는 처음 깎을 때 포인트 부분으로 옮겨져 0이 된다. */
 export async function roleplayCarryMs(userId: string, now: number): Promise<number> {
   return Math.max(0, await kvGetNumber(roleplayCarryKey(userId, now)));
 }
 
+/** 예전 이월 시간을 포인트 부분으로 옮긴다(한 번). */
+async function moveCarryToPart(userId: string, now: number): Promise<void> {
+  const carry = await roleplayCarryMs(userId, now);
+  if (carry <= 0) return;
+  await kvIncrBy(roleplayCarryKey(userId, now), -carry, ROLEPLAY_CARRY_TTL_SECONDS);
+  await kvIncrBy(pointPartKey(userId), Math.floor((carry * MILLI_PER_POINT) / BLOCK_MS));
+}
+
 /**
- * Close the books on the conversation before this one.
- *
- * What it paid for and did not use goes to the carry, and what it paid for is
- * cut down to what it used. The second half is what keeps this honest when two
- * conversations overlap, on a phone and a tablet say: if the earlier one goes
- * on talking after it was settled, it has nothing left in hand and pays for
- * its next minutes again, out of the carry first, instead of having its time
- * both refunded and spent.
+ * 예전 블록 방식 대화가 미리 사 두고 안 쓴 시간을 포인트 부분으로 돌려준다(배포 때 진행 중이던 대화,
+ * 또는 그 뒤 처음 시작하는 대화가 만나는 직전 대화). 돌려준 뒤 그 줄은 쓴 만큼 방식(v2)이 된다.
  */
-async function settlePreviousRoleplaySession(
-  userId: string,
-  currentSessionId: string,
-  now: number,
-): Promise<void> {
+async function settleLegacySession(userId: string, key: string, session: RoleplaySession, usedUntil: number): Promise<void> {
+  if (session.v === 2) return;
+  const usedMs = Math.max(0, usedUntil - session.startedAt) + ROLEPLAY_SETTLE_GRACE_MS;
+  const unusedMs = Math.min(paidMsOf(session) - usedMs, ROLEPLAY_CARRY_MAX_MS);
+  await kvSetJson(key, { ...session, paidMs: undefined, v: 2 } satisfies RoleplaySession, ROLEPLAY_SESSION_TTL_SECONDS);
+  if (unusedMs > 0) await kvIncrBy(pointPartKey(userId), Math.floor((unusedMs * MILLI_PER_POINT) / BLOCK_MS));
+}
+
+/** 새 대화가 시작될 때 직전 대화가 예전 방식이면 남은 시간을 돌려준다. */
+async function settlePreviousRoleplaySession(userId: string, currentSessionId: string): Promise<void> {
   const pointer = roleplayLastSessionKey(userId);
   const previous = await kvGetJson<{ sessionId: string }>(pointer);
   await kvSetJson(pointer, { sessionId: currentSessionId }, ROLEPLAY_SESSION_TTL_SECONDS);
   if (!previous || previous.sessionId === currentSessionId) return;
-
   const key = roleplaySessionKey(userId, previous.sessionId);
   const session = await kvGetJson<RoleplaySession>(key);
   if (!session) return;
-  const lastTurnAt = session.lastTurnAt ?? session.startedAt;
-  const usedMs = Math.max(0, lastTurnAt - session.startedAt) + ROLEPLAY_SETTLE_GRACE_MS;
-  const unusedMs = paidMsOf(session) - usedMs;
-  if (unusedMs <= 0) return;
-
-  await kvSetJson(key, { ...session, paidMs: usedMs } satisfies RoleplaySession, ROLEPLAY_SESSION_TTL_SECONDS);
-  const carry = await roleplayCarryMs(userId, now);
-  const add = Math.min(unusedMs, Math.max(0, ROLEPLAY_CARRY_MAX_MS - carry));
-  if (add > 0) await kvIncrBy(roleplayCarryKey(userId, now), add, ROLEPLAY_CARRY_TTL_SECONDS);
+  await settleLegacySession(userId, key, session, session.lastTurnAt ?? session.startedAt);
 }
 
 /** Older callers pass whether the person has paid; paid then meant premium. */
@@ -826,18 +913,12 @@ function planTerms(plan: boolean | PlanTerms): PlanTerms {
   return typeof plan === "boolean" ? termsFor(plan ? "premium" : "free") : plan;
 }
 
-/** Points left for call learning: the free lifetime allowance, or the balance. */
+/** 통화에 쓸 수 있는 포인트(소수, 0.001 단위): 무료는 평생 체험분, 유료는 잔액 — 꺼내 두고 남은 부분 포함. */
 export async function roleplayPointsLeft(
   userId: string,
   plan: boolean | PlanTerms,
 ): Promise<number> {
-  const terms = planTerms(plan);
-  if (terms.tier === "free") {
-    const used = await kvGetNumber(roleplayTrialKey(userId));
-    return Math.max(0, FREE_LIFETIME_ROLEPLAY_POINTS - used);
-  }
-  const balance = await readPointBalance(userId, terms.monthlyGrantPoints);
-  return totalPoints(balance);
+  return (await availableMilli(userId, sourceOf(planTerms(plan)))) / MILLI_PER_POINT;
 }
 
 /**
@@ -866,27 +947,14 @@ export async function dailyCallLeftMs(
 }
 
 /**
- * Charge for the conversation so far, and say whether it may go on.
+ * 지금까지의 대화를 깎고, 이어 가도 되는지 말한다.
  *
- * Charged as it runs rather than held up front, which the realtime call had to
- * do because it could not see its own call: here every turn comes through the
- * server, so the clock can be read from the server's own first sighting of the
- * conversation and there is nothing to refund and nothing to take on trust.
+ * 쓴 만큼(2026-10-23): 턴마다 지난 턴 뒤로 흐른 시간을 깎는다 — 하루 무료 분과 같은 셈(턴 간격은 최대 1분,
+ * 대화 첫 턴은 15초)이라 찾아보느라 멈춘 시간은 깎이지 않는다. 오늘 무료 분이 먼저, 모자란 만큼만 포인트에서
+ * 소수로(1포인트 = ROLEPLAY_POINT_SECONDS). 포인트가 조금이라도 남아 있으면 그 턴은 받고 남은 만큼 다 쓴다.
+ * 하나도 없을 때만 거절해서, 대화가 끝나는 자리는 잔액 0이다.
  *
- * The first block is owed the moment the conversation starts — five minutes are
- * bought, not accrued — and each later block falls due as its five minutes
- * begin. A turn that cannot be paid for is refused, and the caller ends the
- * scene rather than leaving someone talking to a character that has stopped
- * answering.
- *
- * What a conversation bought and did not use is not lost. When the next one
- * starts, the last one is settled against the last turn the server saw, the
- * difference goes to a carry, and the new conversation spends the carry before
- * it spends a point. So three-minute calls cost three minutes each, not five,
- * while every minute is still paid for before it is used: a settlement that
- * goes wrong, or never happens, leaves the learner where they were before this
- * existed, paying for whole blocks, and never leaves the server serving time
- * nobody bought.
+ * `charged`는 이 턴에 쓴 포인트(소수), `left`는 남은 포인트(소수).
  */
 export async function chargeRoleplayTurn(
   userId: string,
@@ -897,101 +965,61 @@ export async function chargeRoleplayTurn(
   offsetMinutes: number | null = null,
 ): Promise<{ ok: boolean; charged: number; left: number; todayLeftMs: number | null }> {
   const terms = planTerms(plan);
-  // Nobody in particular is asking, so there is nobody to charge. Every caller
-  // without a RevenueCat id shares one name, and an allowance keyed to it is a
-  // single allowance for every such install at once — the first conversation
-  // anywhere would spend it and every other would be refused, which is what a
-  // debug build did within three sessions. Served rather than refused: the
-  // failure to identify someone is ours, not theirs.
+  const source = sourceOf(terms);
+  // Nobody in particular is asking, so there is nobody to charge (공유 익명 id 하나에 한도를 걸면
+  // 첫 대화가 모두의 몫을 써 버린다). The failure to identify someone is ours, not theirs.
   if (!isIdentified(userId)) {
     return { ok: true, charged: 0, left: FREE_LIFETIME_ROLEPLAY_POINTS, todayLeftMs: null };
   }
-
+  await moveCarryToPart(userId, now);
   const key = roleplaySessionKey(userId, sessionId);
   const stored = await kvGetJson<RoleplaySession>(key);
-  if (!stored) await settlePreviousRoleplaySession(userId, sessionId, now);
-  const session: RoleplaySession = stored ?? { startedAt: now, charged: 0, paidMs: 0 };
-  const elapsed = Math.max(0, now - session.startedAt);
-  let paidMs = paidMsOf(session);
+  if (!stored) await settlePreviousRoleplaySession(userId, sessionId);
+  else if (stored.v !== 2) await settleLegacySession(userId, key, stored, stored.lastTurnAt ?? stored.startedAt);
 
-  // Today's free talk comes before anything bought: it is gone at midnight,
-  // and points and carry are not. Time this conversation has already paid for
-  // is used first, so the day is not spent on minutes that were bought.
+  const sinceLast = stored ? now - (stored.lastTurnAt ?? stored.startedAt) : DAILY_CALL_FIRST_STEP_MS;
+  let stepMs = Math.min(DAILY_CALL_STEP_CAP_MS, Math.max(0, sinceLast));
+
+  // 오늘 무료 분이 먼저: 자정에 사라지고, 포인트는 남는다.
   const day = localDay(now, offsetMinutes);
-  const todayLeft = await dailyCallLeftMs(userId, terms, day);
-  if (todayLeft !== null && todayLeft > 0 && elapsed >= paidMs) {
-    const sinceLast = stored ? now - (stored.lastTurnAt ?? stored.startedAt) : DAILY_CALL_FIRST_STEP_MS;
-    const step = Math.min(DAILY_CALL_STEP_CAP_MS, Math.max(0, sinceLast));
-    const used = await kvIncrBy(dailyCallKey(userId, day), step, 2 * 24 * 60 * 60);
-    // Covered up to now, so when the day runs out the next turn pays from
-    // here, not for the whole conversation behind it.
-    await kvSetJson(
-      key,
-      { ...session, paidMs: Math.max(paidMs, elapsed), lastTurnAt: now } satisfies RoleplaySession,
-      ROLEPLAY_SESSION_TTL_SECONDS,
-    );
-    return {
-      ok: true,
-      charged: 0,
-      left: await roleplayPointsLeft(userId, terms),
-      todayLeftMs: Math.max(0, (terms.dailyCallMinutes ?? 0) * 60_000 - used),
-    };
+  let todayLeft = await dailyCallLeftMs(userId, terms, day);
+  let fromDay = 0;
+  if (todayLeft !== null && todayLeft > 0 && stepMs > 0) {
+    fromDay = Math.min(stepMs, todayLeft);
+    const used = await kvIncrBy(dailyCallKey(userId, day), fromDay, 2 * 24 * 60 * 60);
+    todayLeft = Math.max(0, (terms.dailyCallMinutes ?? 0) * 60_000 - used);
+    stepMs -= fromDay;
   }
 
-  // Time already paid for, by an earlier conversation that did not use it, is
-  // spent before a point is.
-  if (elapsed >= paidMs) {
-    const carry = await roleplayCarryMs(userId, now);
-    if (carry > 0) {
-      await kvIncrBy(roleplayCarryKey(userId, now), -carry, ROLEPLAY_CARRY_TTL_SECONDS);
-      paidMs += carry;
-    }
-  }
-
-  const owed = elapsed < paidMs ? 0 : Math.floor((elapsed - paidMs) / BLOCK_MS) + 1;
-
-  if (owed <= 0) {
-    // Nothing has fallen due since the last turn, which is most turns.
-    await kvSetJson(
+  const save = () =>
+    kvSetJson(
       key,
-      { ...session, paidMs, lastTurnAt: now } satisfies RoleplaySession,
+      { startedAt: stored?.startedAt ?? now, charged: 0, lastTurnAt: now, v: 2 } satisfies RoleplaySession,
       ROLEPLAY_SESSION_TTL_SECONDS,
     );
+
+  if (stepMs <= 0) {
+    await save();
     return { ok: true, charged: 0, left: await roleplayPointsLeft(userId, terms), todayLeftMs: todayLeft };
   }
-
-  // A refused turn hands back the carry it drew, so running out of points does
-  // not also cost the minutes that were waiting.
-  const refuse = async (left: number) => {
-    const drawn = paidMs - paidMsOf(session);
-    if (drawn > 0) await kvIncrBy(roleplayCarryKey(userId, now), drawn, ROLEPLAY_CARRY_TTL_SECONDS);
-    return { ok: false, charged: 0, left, todayLeftMs: todayLeft };
-  };
-
-  if (terms.tier === "free") {
-    const used = await kvGetNumber(roleplayTrialKey(userId));
-    if (used + owed > FREE_LIFETIME_ROLEPLAY_POINTS) {
-      return refuse(Math.max(0, FREE_LIFETIME_ROLEPLAY_POINTS - used));
-    }
-    await kvIncrBy(roleplayTrialKey(userId), owed);
-  } else {
-    const balance = await readPointBalance(userId, terms.monthlyGrantPoints);
-    const spend = splitSpend(balance, owed);
-    if (!spend) return refuse(totalPoints(balance));
-    await applySpend(userId, spend, 1);
+  const paid = await spendMilli(userId, source, milliForCallMs(stepMs), { partial: true });
+  // 오늘 무료 분이 이 턴을 일부라도 덮었으면 받는다(무료 분이 끝나는 턴). 다음 턴부터 포인트가 없으면 거절.
+  if (!paid && fromDay > 0) {
+    await save();
+    return { ok: true, charged: 0, left: 0, todayLeftMs: todayLeft };
   }
-
-  await kvSetJson(
-    key,
-    {
-      startedAt: session.startedAt,
-      charged: session.charged + owed,
-      paidMs: paidMs + owed * BLOCK_MS,
-      lastTurnAt: now,
-    } satisfies RoleplaySession,
-    ROLEPLAY_SESSION_TTL_SECONDS,
-  );
-  return { ok: true, charged: owed, left: await roleplayPointsLeft(userId, terms), todayLeftMs: todayLeft };
+  if (!paid) {
+    // 거절된 턴도 시각은 남긴다 — 포인트를 사러 간 동안이 다음 턴에 깎이지 않게.
+    await save();
+    return { ok: false, charged: 0, left: await roleplayPointsLeft(userId, terms), todayLeftMs: todayLeft };
+  }
+  await save();
+  return {
+    ok: true,
+    charged: paid.spentMilli / MILLI_PER_POINT,
+    left: await roleplayPointsLeft(userId, terms),
+    todayLeftMs: todayLeft,
+  };
 }
 
 function creditedPurchaseKey(userId: string, transactionId: string) {
