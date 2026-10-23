@@ -1,6 +1,7 @@
 "use client";
 
-import type { ReactNode } from "react";
+import { useState, type ReactNode } from "react";
+import { splitSentences } from "@/lib/splitSentences";
 import { TTSButton } from "@/components/TTSButton";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { useLearningLanguageOptional } from "@/contexts/LearningLanguageContext";
@@ -41,7 +42,18 @@ export function LineTools({
       ? "rounded-lg border border-slate-400 px-2 py-0.5 text-xs text-slate-800 hover:bg-black/5"
       : "rounded-lg border border-white/15 px-2 py-0.5 text-xs text-slate-300 hover:bg-white/10";
   const clean = text.trim();
+  // 여러 문장인 줄은 분석할 문장을 고른다(예전 문장마다 붙던 세로 막대의 몫).
+  const [choosing, setChoosing] = useState(false);
   if (!clean) return null;
+  const sentences = splitSentences(clean);
+  const analyze = (sentence: string) =>
+    analysis?.open({
+      selectedText: sentence,
+      contextSentence: sentence,
+      sourceType: "conversation",
+      language: lineLanguage!,
+      intent: "sentence",
+    });
   return (
     <div className="mt-2 flex flex-wrap items-center gap-1.5" onClick={(event) => event.stopPropagation()}>
       {listen ? <TTSButton
@@ -57,21 +69,29 @@ export function LineTools({
       {analyzeLabel && analysis && lineLanguage ? (
         <button
           type="button"
-          onClick={() =>
-            analysis.open({
-              selectedText: clean,
-              contextSentence: clean,
-              sourceType: "conversation",
-              language: lineLanguage,
-              intent: "sentence",
-            })
-          }
+          aria-expanded={sentences.length > 1 ? choosing : undefined}
+          onClick={() => (sentences.length > 1 ? setChoosing((open) => !open) : analyze(clean))}
           className={button}
         >
           {analyzeLabel}
         </button>
       ) : null}
       {extra}
+      {choosing && sentences.length > 1 ? (
+        <div className="flex w-full flex-col gap-1">
+          {sentences.map((sentence) => (
+            <button
+              key={sentence}
+              type="button"
+              dir="auto"
+              onClick={() => analyze(sentence)}
+              className={`${button} truncate text-start`}
+            >
+              {sentence}
+            </button>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }

@@ -43,14 +43,6 @@ async function send(page, ui, text) {
   await page.waitForTimeout(800);
 }
 
-/** The thin bar left of a sentence in a chat bubble; tapping it opens the sentence sheet. */
-function sentenceRail(page, sentence) {
-  return page
-    .getByText(sentence, { exact: true })
-    .first()
-    .locator("xpath=ancestor::span[button][1]/button");
-}
-
 export const SCENES = [
   {
     id: "map",
@@ -136,7 +128,11 @@ export const SCENES = [
 
       await page.goto(`${baseUrl}/?screen=chat`, { waitUntil: "networkidle" });
       await send(page, ui, scene.user);
-      await sentenceRail(page, scene.sentence).click({ force: true });
+      // 2026-10-23부터 말풍선을 누르면 할 일 한 줄(듣기·번역·분석) — 여러 문장이면 분석할 문장을 고른다.
+      await page.locator('[role="button"][aria-expanded="false"]').last().click();
+      await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).last().click();
+      const sentenceButton = page.getByRole("button", { name: scene.sentence, exact: true });
+      if (await sentenceButton.count()) await sentenceButton.last().click();
       await page.getByText(scene.sentenceTranslation).waitFor();
 
       // The part picker is a slider with one dot per word: press on the first
