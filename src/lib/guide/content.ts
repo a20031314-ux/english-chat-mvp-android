@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-23f";
+export const GUIDE_VERSION = "2026-10-24a";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -188,7 +188,8 @@ export const GUIDE_KO: Guide = {
         heading: "그 밖에",
         body: [
           "‘{ui:ledgerTitle}’에 모든 탭에서 만난 표현이 쌓여요. 목표가 바뀌면 ‘{ui:mapNewGoal}’. 배우는 언어마다 따로예요.",
-          "도움 없이 꺼내 쓴 표현만 숙지로 세요(레벨이 아니라 쓸 수 있게 된 표현 수). 부족한 부분은 채팅 문장과 튜터 말에서 막힌 곳으로만 보고, 문장 자체는 저장하지 않아요. 문장분석에서 표현을 표시하면 내 표현에 남고, 지도에 넣으면 그 표현으로 할 일이 생겨요.",
+          "도움 없이 꺼내 쓴 표현만 숙지로 세요(레벨이 아니라 쓸 수 있게 된 표현 수). 튜터가 고친 줄은 ‘{ui:notebookToday}’에서 고른 것만 노트에 남아요. 문장분석에서 표현을 표시하면 내 표현에 남고, 지도에 넣으면 그 표현으로 할 일이 생겨요.",
+          "‘{ui:feedbackOpen}’로 보낸 의견이 반영되면 중요도에 따라 5~50포인트를 드려요.",
         ],
       },
     ],
@@ -604,7 +605,8 @@ export const GUIDE_EN: Guide = {
         heading: "Also",
         body: [
           "‘{ui:ledgerTitle}’ gathers phrases from every tab. New goal? ‘{ui:mapNewGoal}’. Each learning language has its own.",
-          "Only phrases you produced without help count as mastered (not a level, just how many you can use). Gaps come only from your chat sentences and the tutor lines you got stuck on, and the sentences themselves aren't saved. Marking a phrase in sentence analysis keeps it in My phrases; adding it to the map makes a task for it.",
+          "Only phrases you produced without help count as mastered (not a level, just how many you can use). Of the lines the tutor corrected, only the ones you pick in ‘{ui:notebookToday}’ stay in your notes. Marking a phrase in sentence analysis keeps it in My phrases; adding it to the map makes a task for it.",
+          "If feedback you send with ‘{ui:feedbackOpen}’ is adopted, you get 5–50 points depending on how much it matters.",
         ],
       },
     ],

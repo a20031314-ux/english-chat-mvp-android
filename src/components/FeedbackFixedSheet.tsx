@@ -8,6 +8,7 @@ import { checkStoreUpdate, startUpdate } from "@/lib/appUpdate";
 import { ensureBillingReady, entitlementHeaders } from "@/lib/billing/billingService";
 import type { FeedbackNews } from "@/lib/feedbackFix";
 import { fixCopy } from "@/lib/feedbackFixCopy";
+import { PointsIcon } from "@/components/PointsIcon";
 
 /**
  * 앱을 열 때 한 번: "보내주신 의견이 반영됐어요" + 고치기 전·후 그림(앱 언어).
@@ -89,6 +90,12 @@ export function FeedbackFixedSheet({ locale }: { locale: string }) {
           {item.text ? (
             <p className="mt-1.5 text-body text-slate-200" dir="auto">
               {item.text}
+            </p>
+          ) : null}
+          {item.points ? (
+            <p className="mt-2 inline-flex items-center gap-1.5 rounded-full bg-status-learned/20 px-3 py-1 text-note font-semibold text-ink">
+              <PointsIcon />
+              {t.points.replace("{n}", String(item.points))}
             </p>
           ) : null}
           {item.before || item.after ? (

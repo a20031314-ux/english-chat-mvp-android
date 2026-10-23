@@ -99,3 +99,34 @@ test("언어 고르기: ja-JP → ja, 없는 언어는 영어 → 한국어 → 
   const noShots = newsFor({ ...fix("x"), shots: [] }, "ko", false);
   assert.equal(noShots.before, null);
 });
+
+test("반영 보상: 먼저 보낸 3명만, 업데이트를 기다려도 한 번만, 범위·월 상한", async () => {
+  const { clampReward, rewardWithinCap, REWARD_MONTHLY_CAP } = await import("../feedbackFix.ts");
+  assert.equal(clampReward(1), 5);
+  assert.equal(clampReward(80), 50);
+  assert.equal(clampReward(0), 0);
+  assert.equal(clampReward("x"), 0);
+  assert.equal(rewardWithinCap(50, 70), 30);
+  assert.equal(rewardWithinCap(20, REWARD_MONTHLY_CAP), 0);
+
+  const people = ["rc:r1", "rc:r2", "rc:r3", "rc:r4"];
+  const rewarded = { ...fix("reward-card", "2.80"), reward: 20 };
+  await announceFix(rewarded, people.slice(0, 2).map((id) => ({ sender: senderTag(id), uiLocale: "ko" })));
+  // 나중에 같은 의견을 보낸 두 사람: 세 번째 자리만 남아 있다.
+  await announceFix(rewarded, people.slice(2).map((id) => ({ sender: senderTag(id), uiLocale: "ko" })));
+  const given: Record<string, number> = {};
+  for (const id of people) {
+    const grant = async (points: number) => {
+      given[id] = (given[id] ?? 0) + points;
+      return points;
+    };
+    // 옛 빌드(2.79): "업데이트하면 보여요"로 한 번 + 보상
+    const first = await takeFeedbackNews({ userIds: [id], uiLocale: "ko", appVersion: "2.79", native: true, grant });
+    // 업데이트 뒤 다시 "반영됐어요" — 보상은 또 주지 않는다
+    const second = await takeFeedbackNews({ userIds: [id], uiLocale: "ko", appVersion: "2.80", native: true, grant });
+    assert.equal(first.length, 1);
+    assert.equal(second.length, 1);
+    assert.equal(second[0].points, undefined);
+  }
+  assert.deepEqual(given, { "rc:r1": 20, "rc:r2": 20, "rc:r3": 20 });
+});

@@ -1,10 +1,12 @@
 /**
  * "보내주신 의견이 반영됐어요" 시트 문구 — 14개 언어(feedbackFixCopy.test.ts가 빠짐을 막는다).
  * 한국어 밖은 Claude가 썼다(원어민 확인 권장). {v} 고친 것이 들어간 앱 버전.
+ * {n} 반영 보상으로 받은 포인트(2026-10-24).
  * 카드마다 다른 "무엇이 바뀌었나" 한 줄은 여기가 아니라 반영할 때 서버로 보낸다(feedbackFix.ts).
  */
 const ko = {
   title: "보내주신 의견이 반영됐어요",
+  points: "+{n} 포인트를 드렸어요",
   thanks: "의견 보내주셔서 고마워요.",
   before: "고치기 전",
   after: "고친 뒤",
@@ -17,6 +19,7 @@ type FixCopy = typeof ko;
 
 const en: FixCopy = {
   title: "We made the change you suggested",
+  points: "+{n} points added",
   thanks: "Thank you for your feedback.",
   before: "Before",
   after: "After",
@@ -28,6 +31,7 @@ const en: FixCopy = {
 const LOCALES: Record<string, FixCopy> = {
   es: {
     title: "Hicimos el cambio que sugeriste",
+    points: "+{n} puntos añadidos",
     thanks: "Gracias por tu comentario.",
     before: "Antes",
     after: "Después",
@@ -37,6 +41,7 @@ const LOCALES: Record<string, FixCopy> = {
   },
   ja: {
     title: "いただいたご意見を反映しました",
+    points: "+{n}ポイントを追加しました",
     thanks: "ご意見ありがとうございます。",
     before: "修正前",
     after: "修正後",
@@ -46,6 +51,7 @@ const LOCALES: Record<string, FixCopy> = {
   },
   zh: {
     title: "你的意见已经采纳",
+    points: "+{n} 积分已到账",
     thanks: "感谢你的反馈。",
     before: "修改前",
     after: "修改后",
@@ -55,6 +61,7 @@ const LOCALES: Record<string, FixCopy> = {
   },
   vi: {
     title: "Góp ý của bạn đã được áp dụng",
+    points: "Đã cộng +{n} điểm",
     thanks: "Cảm ơn bạn đã góp ý.",
     before: "Trước",
     after: "Sau",
@@ -64,6 +71,7 @@ const LOCALES: Record<string, FixCopy> = {
   },
   fr: {
     title: "Nous avons appliqué ta suggestion",
+    points: "+{n} points ajoutés",
     thanks: "Merci pour ton avis.",
     before: "Avant",
     after: "Après",
@@ -73,6 +81,7 @@ const LOCALES: Record<string, FixCopy> = {
   },
   it: {
     title: "Abbiamo applicato il tuo suggerimento",
+    points: "+{n} punti aggiunti",
     thanks: "Grazie per il tuo feedback.",
     before: "Prima",
     after: "Dopo",
@@ -82,6 +91,7 @@ const LOCALES: Record<string, FixCopy> = {
   },
   pt: {
     title: "Aplicamos a sua sugestão",
+    points: "+{n} pontos adicionados",
     thanks: "Obrigado pelo seu feedback.",
     before: "Antes",
     after: "Depois",
@@ -91,6 +101,7 @@ const LOCALES: Record<string, FixCopy> = {
   },
   ru: {
     title: "Мы учли ваш отзыв",
+    points: "Начислено +{n} баллов",
     thanks: "Спасибо за отзыв.",
     before: "До",
     after: "После",
@@ -100,6 +111,7 @@ const LOCALES: Record<string, FixCopy> = {
   },
   id: {
     title: "Masukanmu sudah kami terapkan",
+    points: "+{n} poin ditambahkan",
     thanks: "Terima kasih atas masukanmu.",
     before: "Sebelum",
     after: "Sesudah",
@@ -109,6 +121,7 @@ const LOCALES: Record<string, FixCopy> = {
   },
   ar: {
     title: "طبّقنا الاقتراح الذي أرسلته",
+    points: "أُضيفت +{n} نقطة",
     thanks: "شكرًا على ملاحظتك.",
     before: "قبل",
     after: "بعد",
@@ -118,6 +131,7 @@ const LOCALES: Record<string, FixCopy> = {
   },
   th: {
     title: "เราปรับตามความคิดเห็นของคุณแล้ว",
+    points: "เพิ่ม +{n} พอยต์แล้ว",
     thanks: "ขอบคุณสำหรับความคิดเห็น",
     before: "ก่อนแก้",
     after: "หลังแก้",
@@ -127,6 +141,7 @@ const LOCALES: Record<string, FixCopy> = {
   },
   hi: {
     title: "आपका सुझाव लागू कर दिया गया है",
+    points: "+{n} पॉइंट जोड़े गए",
     thanks: "अपनी राय भेजने के लिए धन्यवाद।",
     before: "पहले",
     after: "बाद में",

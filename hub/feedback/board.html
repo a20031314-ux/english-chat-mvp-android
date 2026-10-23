@@ -97,6 +97,9 @@ textarea {
 .empty b { color: var(--ink); }
 .note { font-size: 12px; color: var(--muted); }
 @media (prefers-reduced-motion: no-preference) { .card { transition: border-color .2s; } }
+.reward { display: flex; align-items: center; gap: 4px; margin-top: 8px; font-size: 13px; color: var(--muted, #667); }
+.reward input { width: 64px; padding: 4px 6px; border: 1px solid var(--line, #dde); border-radius: 6px; font: inherit; }
+.reward .hint { color: var(--muted, #889); }
 </style>
 
 <div class="wrap">
@@ -210,6 +213,23 @@ function card(c) {
     disabled: !canWrite || c.status === "done",
     onclick: () => decide(c.id, { decision: c.decision === v ? "" : v }),
   }, DECISION_LABEL[v]));
+  // 반영 보상(2026-10-24): 반영할 카드에 5~50포인트 — 먼저 보낸 3명까지, 한 사람 한 달 100포인트까지(서버가 지킴).
+  const rewardValue = Number(c.reward ?? c.rewardSuggest ?? 20);
+  const reward = c.decision === "apply" || c.status === "done"
+    ? el("label", { class: "reward" },
+        "반영 보상 ",
+        el("input", {
+          type: "number", min: 5, max: 50, step: 5, value: String(rewardValue),
+          disabled: !canWrite || c.status === "done",
+          onchange: (e) => {
+            const n = Math.min(50, Math.max(5, Math.round(Number(e.target.value) || 0)));
+            e.target.value = String(n);
+            decide(c.id, { reward: n });
+          },
+        }),
+        " P",
+        c.rewardSuggest ? el("span", { class: "hint" }, ` · AI 제안 ${c.rewardSuggest}`) : null)
+    : null;
   const metaParts = [];
   if (c.firstAt) metaParts.push(`처음 ${day(c.firstAt)} · 최근 ${day(c.lastAt)}`);
   const meta = el("div", { class: "meta" }, metaParts.join(" "));
@@ -228,6 +248,7 @@ function card(c) {
       el("a", { href: `/_blob/${id}`, target: "_blank", rel: "noopener" }, el("img", { src: `/_blob/${id}`, alt: "보낸 화면", loading: "lazy" })))) : null,
     c.proposal ? el("div", { class: "proposal" }, el("span", { class: "label" }, "고친다면"), el("p", {}, c.proposal)) : null,
     el("div", { class: "decide" }, buttons),
+    reward,
     memo,
     meta);
 }

@@ -18,7 +18,8 @@
 4. 카드 필드: `title`(한국어 한 줄, 증상 그대로), `summary`(무엇이 어떻게 불편한지 2~3문장, 한국어), `count`(건수), `people`(서로 다른 `sender` 수),
    `tabs`, `langs`(UI 언어/학습 언어, 예 "ja/ko"), `versions`, `examples`(최근 4개까지 `{note, at}` — 글은 원문 그대로, 길면 200자),
    `shots`(사진 asset id, 최대 6개), `firstAt`, `lastAt`, `updatedAt`, `proposal`(고친다면 무엇을 어디서 — 파일·화면 이름, 앱 빌드가 필요한지).
-   `senders`(묶인 의견을 보낸 사람 모두 `[{sender, ui}]` — `sender`는 의견의 16자 해시, `ui`는 그 사람의 가장 최근 `uiLocale`. 반영 소식을 보낼 곳, 페이지에는 보이지 않음).
+   `senders`(묶인 의견을 보낸 사람 모두 `[{sender, ui}]` — **의견을 처음 보낸 순서대로**, `sender`는 의견의 16자 해시, `ui`는 그 사람의 가장 최근 `uiLocale`. 반영 소식을 보낼 곳, 페이지에는 보이지 않음).
+   `rewardSuggest`(반영 보상 제안 5~50, 5 단위 — 중요도: 문구·작은 표시 5~10, 쓰기 불편·자주 겪는 문제 15~25, 기능을 못 쓰던 문제·결제·기록 손실·새 기능 아이디어 30~50). 사람이 페이지에서 `reward`로 정한다(없으면 제안값).
    사람이 쓴 `decision`·`decisionNote`는 절대 덮어쓰지 않는다(`update`로 내 필드만, `if_version` 고정).
    새 의견이 들어온 "보류"·"안 함" 카드는 결정을 그대로 두고 건수만 늘린다.
 5. 사진은 의견함에 asset으로 올리고(`Artifact` publish, `url`=의견함, `asset: true`, `file_paths`) 받은 id를 `shots`에 넣는다.
@@ -28,7 +29,7 @@
    카드에 `status: "in_progress"`, `pr`. PR이 머지된 카드는 `status: "done"`, `statusNote`(서버 반영/앱 빌드 필요).
 6-1. **반영 소식 보내기**(사용자 결정 2026-10-20): `done`이 됐고 `notifiedAt`이 없는 카드 → `tmp/feedback/notify-<카드>.json`(커밋 안 함)에
    `card`, `appVersion`(앱 빌드가 필요하면 그 수정이 들어갈 버전, 서버만이면 `""`), `texts`(senders의 ui 언어마다 바뀐 점 한 줄 — 그 언어로, 버튼 이름은 앱의 실제 문구),
-   `recipients`(= `senders`를 `{sender, uiLocale}`로)를 쓰고 `FEEDBACK_KEY=… node scripts/feedback-notify.mjs <파일>`. 카드에 `notifiedAt`, `statusNote`에 "n명에게 알림".
+   `recipients`(= `senders`를 보낸 순서 그대로 `{sender, uiLocale}`로), `reward`(카드의 `reward`, 없으면 `rewardSuggest` — 서버가 5~50으로 자르고 먼저 보낸 3명에게만, 한 사람 한 달 100포인트까지 준다)를 쓰고 `FEEDBACK_KEY=… node scripts/feedback-notify.mjs <파일>`. 카드에 `notifiedAt`, `statusNote`에 "n명에게 알림 · 보상 nP".
    그림이 운영에 아직 없으면(배포 전) 스크립트가 멈춘다 — 다음 정리 때 다시.
    **완료된 카드에 새 의견이 묶이면** 그 사람만 recipients로 다시 보낸다(이미 받은 사람은 서버가 건너뜀).
    `senders`가 없는 옛 카드(2026-10-20 전)는 `feedback-pull.mjs --all`(90일 안 의견)에서 그 카드에 묶였던 의견의 `sender`로 한 번 채운다 — 못 찾은 사람은 알림 없이 넘어간다.
