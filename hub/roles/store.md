@@ -60,4 +60,4 @@
   직접 올림(fastlane 밖) — 스크린샷이 바뀌면 사용자에게 알릴 것. 디자인 9장 현지화 세트는 `store-shots/canvas/`. 중국은 Play가 본토에서 안 돼 대만·홍콩(번체) 검토 필요.
   지도는 `store-shots/fixtures/`에 녹화한 지도로 찍으니, 지도 화면이 바뀌어도 그대로 따라감.
 - 맞춤 등록정보 5개는 2.71 스크린샷·설명으로 Console에 저장(2026-10-22, 사용자 PC 브라우저). 번역 13개(ja·zh·es·es-419·ar·fr·it·id·ru·th·vi·hi·pt-BR)만 새 글, nl·de·tr 등 14개는 옛 글. "검토를 위해 제출"은 사용자.
-- 맞춤 등록정보 세분화(2026-10-23, PR #16): 새 11개(나라 6·배우는 언어별 검색어 5) 그림·글 준비, Console 등록 대기. 그림 `store-shots/custom/`, 글 `store-shots/listings/`, 찍기 `CAPTURE_TARGET`.
+- 맞춤 등록정보 세분화(2026-10-23, PR #16): 새 11개(나라 6·배우는 언어별 검색어 5) Console 저장(2026-10-23), 제출은 사용자. 그림 `store-shots/custom/`, 글 `store-shots/listings/`, 찍기 `CAPTURE_TARGET`.
