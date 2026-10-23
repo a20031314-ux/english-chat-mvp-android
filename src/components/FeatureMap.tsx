@@ -191,10 +191,12 @@ export function FeatureMap({
             return (
               <div
                 key={id}
-                className={`flex min-h-[3.25rem] flex-1 basis-0 flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1 ${active ? meta.activeBg : meta.idleBg}`}
+                role="img"
+                aria-label={labels[id]}
+                title={labels[id]}
+                className={`flex min-h-[2.75rem] flex-1 basis-0 flex-col items-center justify-center rounded-xl px-1 py-1 ${active ? meta.activeBg : meta.idleBg}`}
               >
                 <Icon active={active} />
-                <span className={`max-w-full truncate text-meta ${active ? "text-ink" : "text-slate-400"}`}>{labels[id]}</span>
               </div>
             );
           })}

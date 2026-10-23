@@ -581,19 +581,14 @@ function AppHomeInner({
                       type="button"
                       onClick={() => openTab(item.id)}
                       aria-label={item.label}
+                      title={item.label}
                       aria-current={active ? "page" : undefined}
-                      className={`relative flex min-h-[3.5rem] flex-1 basis-0 flex-col items-center justify-center gap-0.5 rounded-xl px-1 py-1.5 transition ${
+                      className={`relative flex min-h-[3rem] flex-1 basis-0 flex-col items-center justify-center rounded-xl px-1 py-1.5 transition ${
                         active ? meta.activeBg : meta.idleBg
                       }`}
                     >
+                      {/* 아이콘만(사용자 2026-10-23) — 이름은 aria-label·title로만. */}
                       <Icon active={active} />
-                      <span
-                        className={`max-w-full truncate text-[10px] font-medium ${
-                          active ? "text-[#e4e4e0]" : "text-slate-400"
-                        }`}
-                      >
-                        {item.label}
-                      </span>
                       {item.id === "talk" && messagesUnread > 0 ? (
                         <span className="absolute end-[22%] top-1 min-w-[1.1rem] rounded-full bg-violet-500 px-1 text-center text-[10px] font-semibold leading-4 text-white">
                           {Math.min(messagesUnread, 99)}

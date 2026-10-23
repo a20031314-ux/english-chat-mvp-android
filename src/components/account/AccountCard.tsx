@@ -169,14 +169,16 @@ export function AccountCard({ ui, locale }: { ui: UICopy; locale: string }) {
               <span dir="auto" className="block truncate text-[15px] font-semibold text-white">
                 {account.profile.nickname || ui.accountNoNickname}
               </span>
-              <span dir="auto" className="mt-0.5 line-clamp-2 block whitespace-pre-line text-[12px] leading-relaxed text-slate-400">
-                {account.profile.bio || ui.accountNoBio}
-              </span>
+              {/* 자기소개가 없으면 비워 둔다("…써 보세요" 같은 안내 글 없음, 2026-10-23). */}
+              {account.profile.bio ? (
+                <span dir="auto" className="mt-0.5 line-clamp-2 block whitespace-pre-line text-[12px] leading-relaxed text-slate-400">
+                  {account.profile.bio}
+                </span>
+              ) : null}
             </>
           ) : (
             <>
               <span className="block text-[14px] font-semibold text-white">{ui.accountSignInTitle}</span>
-              <span className="mt-0.5 block text-[12px] leading-relaxed text-slate-400">{ui.accountSignInBody}</span>
             </>
           )}
         </span>

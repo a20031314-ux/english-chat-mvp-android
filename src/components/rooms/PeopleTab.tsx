@@ -119,7 +119,6 @@ export function PeopleTab({
           </>
         ) : (
           <div className="space-y-3">
-            <p className="text-sm text-slate-300">{t.loginNeeded}</p>
             <AccountCard ui={ui} locale={locale} />
           </div>
         )}

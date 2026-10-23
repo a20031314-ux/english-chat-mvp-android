@@ -154,7 +154,6 @@ export function RoomsScreen({
           />
         ) : (
           <div className="space-y-3">
-            <p className="text-sm text-slate-300">{t.loginNeeded}</p>
             {/* My 탭의 계정 카드 그대로 — 누르면 로그인 시트(z-85). */}
             <AccountCard ui={ui} locale={locale} />
           </div>
