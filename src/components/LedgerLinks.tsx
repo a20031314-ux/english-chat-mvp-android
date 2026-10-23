@@ -59,6 +59,7 @@ export function LedgerLinks({
   here,
   kind,
   className = "",
+  masteredOnly = false,
 }: {
   ui: UICopy;
   line: string;
@@ -66,6 +67,11 @@ export function LedgerLinks({
   here: LedgerTab;
   kind: "mine" | "heard";
   className?: string;
+  /**
+   * 대화 줄 아래에는 "숙지로 올라갔어요"(그 순간의 상태)만(2026-10-23, conversation-unify) — 다른 탭에서 만난 표현·아는 표현 칩은
+   * 줄마다 쌓여 화면을 덮어서 뺐다. 그 기록은 My(내 표현)에 그대로.
+   */
+  masteredOnly?: boolean;
 }) {
   const items = useLedger(language);
   const shown = useLinksShown();
@@ -74,8 +80,11 @@ export function LedgerLinks({
   const [now] = useState(() => Date.now());
   if (kind === "heard" && !shown) return null;
   const found = ledgerIn(items, line, language);
-  const chips =
-    kind === "mine"
+  const chips = masteredOnly
+    ? kind === "mine"
+      ? found.filter((item) => item.masteredAt && now - item.masteredAt < JUST_NOW_MS).slice(0, 2)
+      : []
+    : kind === "mine"
       ? found.filter((item) => (item.masteredAt && now - item.masteredAt < JUST_NOW_MS) || item.firstMet.tab !== here).slice(0, 2)
       : found.filter((item) => item.firstMet.tab !== here || item.state !== "met").slice(0, 3);
   if (chips.length === 0) return null;

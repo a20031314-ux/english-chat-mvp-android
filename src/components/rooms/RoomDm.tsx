@@ -12,14 +12,13 @@ import {
   dmPoll,
   dmSend,
   dmUnsend,
-  howToSay,
   translateLine, aiFailText } from "@/lib/rooms/client";
 import { DM_PENDING_LIMIT, type DmMessage, type DmSummary, type DmThread } from "@/lib/rooms/dm";
 import type { RoomMeta } from "@/lib/rooms/protocol";
 import { askPhraseAbout, questionCount } from "@/lib/rooms/quote";
 import { ThankButton } from "@/components/account/ProfileFacts";
 import type { RoomNote } from "@/lib/rooms/layout";
-import { Composer, Face, LineActions, QuoteText, Unsendable, useProfile } from "./RoomParts";
+import { Composer, Face, LineActions, MyLinePolish, QuoteText, Unsendable, useProfile } from "./RoomParts";
 import { MediaImage } from "./MediaImage";
 import { IconImage } from "./IconPacks";
 
@@ -443,24 +442,18 @@ function Bubble({
   const [logOpen, setLogOpen] = useState(false);
   const time = useMemo(() => new Date(message.at).toLocaleTimeString(locale, { hour: "2-digit", minute: "2-digit" }), [message.at, locale]);
 
-  // 상대 말은 번역, 내 말은 "다듬어 보기"(나에게만).
+  // 상대 말은 번역 + 줄 할 일, 내 말은 다듬은 문장(나에게만, MyLinePolish — AI 대화의 ✎ 고친 문장과 같은 모양).
   const toggle = async () => {
     if (open) {
       setOpen(false);
       return;
     }
     setOpen(true);
-    if (extra !== null) return;
+    if (mine || extra !== null) return;
     try {
-      if (mine) {
-        const found = await howToSay({ message: message.text, recent: context, locale, targetLanguage });
-        const better = found?.expression?.trim();
-        setExtra(better && better !== message.text.trim() ? `${t.polished}: ${better}` : "✓");
-      } else {
-        setExtra((await translateLine({ text: message.text, context, locale, targetLanguage })) || t.translateFailed);
-      }
+      setExtra((await translateLine({ text: message.text, context, locale, targetLanguage })) || t.translateFailed);
     } catch (error) {
-      setExtra(aiFailText({ ...t, translateFailed: mine ? t.howToSayFailed : t.translateFailed }, error));
+      setExtra(aiFailText(t, error));
     }
   };
 
@@ -553,9 +546,12 @@ function Bubble({
           </span>
         </button>
         ) : null}
-        {open ? (
-          <p className={`mt-1 px-1 text-[13px] ${mine ? "text-end text-emerald-200" : "text-slate-300"}`} dir="auto">
-            {extra ?? (mine ? t.howToSayLoading : t.translating)}
+        {open && mine && message.text ? (
+          <MyLinePolish t={t} text={message.text} context={context} locale={locale} targetLanguage={targetLanguage} />
+        ) : null}
+        {open && !mine ? (
+          <p className="mt-1 px-1 text-[13px] text-slate-300" dir="auto">
+            {extra ?? t.translating}
           </p>
         ) : null}
         {open && !mine ? (
@@ -564,6 +560,7 @@ function Bubble({
             text={message.text}
             onAsk={(focus) => onQuote(undefined, "", message.text, true, focus)}
             onReply={(focus) => onQuote(undefined, "", message.text, false, focus)}
+            study={{ locale, targetLanguage }}
           />
         ) : null}
         {thankThreadId ? (
@@ -624,7 +621,7 @@ function LogLine({
           </span>
         ) : null}
       </button>
-      {open && onAsk ? <LineActions t={t} text={line.text} onAsk={onAsk} /> : null}
+      {open && onAsk ? <LineActions t={t} text={line.text} onAsk={onAsk} study={{ locale, targetLanguage }} /> : null}
     </li>
   );
 }

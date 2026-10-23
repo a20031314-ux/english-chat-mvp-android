@@ -8,7 +8,7 @@ import {
   normalizeConversationSession,
   normalizeSavedItem,
   SavedItem,
-} from "./ArchivePanel";
+} from "@/lib/chatArchive";
 import { ChatHttpError, postChatStream } from "@/lib/chatStream";
 import { APP_LOCALE_STORAGE_KEY, isLocale, Locale } from "@/lib/copy";
 import { useUiCopy } from "@/hooks/useUiCopy";
@@ -21,6 +21,7 @@ import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howT
 import { noteUpdateLevel } from "@/lib/appUpdate";
 import { LedgerLinks } from "@/components/LedgerLinks";
 import { refreshLedgerSoon } from "@/lib/learner/ledgerClient";
+import { roomCopy } from "@/lib/rooms/copy";
 import { MessageBubble } from "./MessageBubble";
 import { ChatHistoryPanel } from "./ChatHistoryPanel";
 import { useBillingUi } from "./BillingScreen";
@@ -1754,6 +1755,7 @@ export function ChatWindow({
                   undefined;
             const assistantLabels = {
               listen: ui.listen,
+              analyze: ui.insightAnalyze,
               report: ui.reportContent,
               ...(assistantReading ? { reading: ui.chatReading } : {}),
             };
@@ -1812,6 +1814,7 @@ export function ChatWindow({
                     }
                     labels={{
                       listen: ui.listen,
+                      analyze: ui.insightAnalyze,
                     }}
                   />
                 ) : null}
@@ -1823,6 +1826,7 @@ export function ChatWindow({
                     <LedgerLinks
                       ui={ui}
                       kind="mine"
+                      masteredOnly
                       here="chat"
                       line={turn.correctionResult?.corrected?.trim() || turn.userMessage}
                       language={sessionLanguageCode}
@@ -1876,15 +1880,6 @@ export function ChatWindow({
                     />
                   )}
 
-                {turn.mode === "chat" && turn.assistantMessage ? (
-                  <LedgerLinks
-                    ui={ui}
-                    kind="heard"
-                    here="chat"
-                    line={turn.assistantMessage}
-                    language={sessionLanguageCode}
-                  />
-                ) : null}
 
                 {turn.mode === "how_to_say" && turn.assistantMessage ? (
                   <MessageBubble
@@ -1950,8 +1945,8 @@ export function ChatWindow({
                 value={input}
                 onChange={(event) => setInput(event.target.value)}
                 rows={2}
-                placeholder={ui.chatInputHint}
-                aria-label={ui.chatInputHint}
+                placeholder={roomCopy(locale).messagePlaceholder}
+                aria-label={roomCopy(locale).messagePlaceholder}
                 readOnly={isChatInputBlocked}
                 onFocus={() => {
                   if (isChatInputBlocked) {

@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { TTSButton } from "./TTSButton";
 import { SelectableEnglishText } from "./SelectableEnglishText";
 import { AnalyzableEnglish } from "./AnalyzableEnglish";
+import { CorrectionChip, LineTools } from "./conversation/LineTools";
 
 type MessageBubbleProps = {
   role: "user" | "assistant";
@@ -29,6 +29,8 @@ type MessageBubbleProps = {
     listen: string;
     reading?: string;
     report?: string;
+    /** 줄을 눌렀을 때 "분석"(학습 언어 줄만). */
+    analyze?: string;
   };
   /** Present on AI output only, so learners can flag what the model said. */
   onReport?: () => void;
@@ -60,6 +62,7 @@ function EnglishLine({
       tone={tone}
       className={className}
       translation={translation}
+      sentenceRail={false}
     >
       {pickMode && onWordClick ? (
         <SelectableEnglishText
@@ -94,6 +97,8 @@ export function MessageBubble({
   const isUser = role === "user";
   const readingText = reading?.replace(/\s+/g, " ").trim() || "";
   const [readingOpen, setReadingOpen] = useState(false);
+  // 줄을 누르면 할 일 한 줄(듣기·번역·분석·신고)이 열린다 — 말풍선에 버튼을 늘 달지 않는다(conversation/LineTools).
+  const [toolsOpen, setToolsOpen] = useState(false);
   const correctedLine = correction?.corrected.trim() || "";
   const showCorrection = Boolean(correctedLine);
   const listenText = showCorrection
@@ -112,7 +117,17 @@ export function MessageBubble({
   return (
     <div className={`flex w-full ${isUser ? "justify-end" : "justify-start"}`}>
       <div
-        className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm shadow-sm sm:max-w-[75%] ${
+        role="button"
+        tabIndex={0}
+        aria-expanded={toolsOpen}
+        onClick={() => setToolsOpen((open) => !open)}
+        onKeyDown={(event) => {
+          if (event.target !== event.currentTarget) return;
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          setToolsOpen((open) => !open);
+        }}
+        className={`max-w-[85%] cursor-pointer rounded-2xl px-4 py-3 text-sm shadow-sm sm:max-w-[75%] ${
           isUser
             ? "rounded-br-sm bg-[#e8e8e4] text-neutral-900 shadow-[0_0_18px_rgba(255,255,255,0.28)]"
             : "rounded-bl-sm border border-white/10 bg-[#161616] text-slate-50"
@@ -129,6 +144,7 @@ export function MessageBubble({
           <AnalyzableEnglish
             sentence={correction.original}
             tone={tone}
+            sentenceRail={false}
             diff={{
               original: correction.original,
               corrected: correction.corrected,
@@ -159,16 +175,13 @@ export function MessageBubble({
         )}
 
         {correctionChip && !showCorrection ? (
-          <button
-            type="button"
-            onClick={correctionChip.onOpen}
-            disabled={correctionChip.busy}
-            aria-busy={correctionChip.busy}
-            className="mt-2 inline-flex items-center gap-1 rounded-full border border-warn/50 bg-warn/25 px-2.5 py-0.5 text-caption text-slate-900 disabled:opacity-70"
-          >
-            <span aria-hidden="true">✎</span>
-            {correctionChip.busy ? correctionChip.busyLabel : correctionChip.label}
-          </button>
+          <CorrectionChip
+            label={correctionChip.label}
+            busyLabel={correctionChip.busyLabel}
+            busy={correctionChip.busy}
+            onOpen={correctionChip.onOpen}
+            tone={isUser ? "light" : "dark"}
+          />
         ) : null}
 
         {showCorrection && correction ? (
@@ -183,6 +196,7 @@ export function MessageBubble({
               className={`text-sm leading-relaxed ${
                 isUser ? "text-neutral-800" : ""
               }`}
+              sentenceRail={false}
               diff={{
                 original: correction.original,
                 corrected: correction.corrected,
@@ -224,44 +238,32 @@ export function MessageBubble({
           </p>
         ) : null}
 
-        <div className="mt-3 flex flex-wrap items-center gap-2">
-          {isUser ? (
-            <TTSButton
-              text={listenText}
-              ariaLabel={labels.listen}
-              className="border-slate-600 bg-slate-800 text-white hover:bg-slate-700"
-            />
-          ) : (
-            <TTSButton text={message} ariaLabel={labels.listen} />
-          )}
-
-          {readingText && labels.reading ? (
-            <button
-              type="button"
-              aria-expanded={readingOpen}
-              onClick={() => setReadingOpen((open) => !open)}
-              className={`rounded-md border px-2 py-1 text-xs transition ${
-                isUser
-                  ? "border-slate-600 bg-slate-800 text-white hover:bg-slate-700"
-                  : "border-white/10 bg-white/5 text-slate-200 hover:bg-white/10"
-              }`}
-            >
-              {labels.reading}
-            </button>
-          ) : null}
-
-          {!isUser && onReport && labels.report ? (
-            <button
-              type="button"
-              onClick={onReport}
-              aria-label={labels.report}
-              title={labels.report}
-              className="rounded-md border border-white/10 bg-white/5 px-2 py-1 text-xs text-slate-400 transition hover:bg-white/10 hover:text-slate-200"
-            >
-              ⚑
-            </button>
-          ) : null}
-        </div>
+        {toolsOpen ? (
+          <LineTools
+            text={listenText}
+            listenLabel={labels.listen}
+            analyzeLabel={analyzeMain || showCorrection || attachedEnglish?.trim() ? labels.analyze : undefined}
+            translation={
+              readingText && labels.reading
+                ? { label: labels.reading, shown: readingOpen, onToggle: () => setReadingOpen((open) => !open) }
+                : null
+            }
+            tone={isUser ? "light" : "dark"}
+            extra={
+              !isUser && onReport && labels.report ? (
+                <button
+                  type="button"
+                  onClick={onReport}
+                  aria-label={labels.report}
+                  title={labels.report}
+                  className="rounded-lg border border-white/15 px-2 py-0.5 text-xs text-slate-400 hover:bg-white/10"
+                >
+                  ⚑
+                </button>
+              ) : null
+            }
+          />
+        ) : null}
       </div>
     </div>
   );

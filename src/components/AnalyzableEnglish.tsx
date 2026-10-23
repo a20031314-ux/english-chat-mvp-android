@@ -407,6 +407,7 @@ export function AnalyzableEnglish({
               onAnalyze={onAnalyze}
               sourceType={sourceType}
               language={language}
+              sentenceRail={sentenceRail}
             />
           ))}
         </span>

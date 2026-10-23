@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import type { ConversationSession } from "@/components/ArchivePanel";
+import type { ConversationSession } from "@/lib/chatArchive";
 import type { Locale, UICopy } from "@/lib/copy";
 import { formatShortDate } from "@/lib/dateLabels";
 

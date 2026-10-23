@@ -242,7 +242,6 @@ export function PackRetroSheet({
                 ) : (
                   <p className="mt-1 text-[12px] leading-relaxed text-slate-300">{ui.packNothing}</p>
                 )}
-                <p className="mt-2 text-[11px] text-slate-400">{ui.packTomorrow}</p>
               </div>
 
               <div className="mt-4 flex gap-2">

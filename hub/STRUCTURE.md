@@ -84,9 +84,9 @@
 - 다른 영역이 씀: `AiTutorRow` ← 앱 틀 · `rooms/MateAsk` ← Room 탭 · `rooms/MessagesTab` ← 앱 틀 · `rooms/RoomDm` ← 앱 틀, Room 탭 · `rooms/RoomGroups` ← 앱 틀, 사람 탭
 
 ### AI 채팅 (대화 → AI 튜터 줄) `chat`
-- 화면: `ArchivePanel` · `ChatHistoryPanel` · `ChatWindow` · `ExpressionPeek` · `MessageBubble` · `ReportContentDialog`
+- 화면: `ChatHistoryPanel` · `ChatWindow` · `ExpressionPeek` · `MessageBubble` · `ReportContentDialog` · `conversation/LineTools`
 - API: `chat`(대화 탭, 사람 탭, Room 탭, 계정·로그인) · `chat/verify`(대화 탭, 사람 탭, Room 탭, 계정·로그인) · `report`
-- 다른 영역이 씀: `ChatWindow` ← 앱 틀
+- 다른 영역이 씀: `ChatWindow` ← 앱 틀 · `conversation/LineTools` ← AI 통화, Room 탭
 
 ### AI 통화 (대화 → AI 튜터 📞) · 오늘의 팩 `call`
 - 화면: `PackCard` · `RoleplayOwnLine` · `RoleplayPast` · `RoleplayReview` · `RoleplayScreen` · `RoleplayTab` · `roleplay/TurnDiagBox`

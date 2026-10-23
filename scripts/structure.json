@@ -46,10 +46,10 @@
     "api/groups": "talk",
 
     "components/ChatWindow": "chat",
+    "components/conversation/LineTools": "chat",
     "components/ExpressionPeek": "chat",
     "components/ReportContentDialog": "chat",
     "components/ChatHistoryPanel": "chat",
-    "components/ArchivePanel": "chat",
     "components/MessageBubble": "chat",
     "api/chat": "chat",
     "api/chat/verify": "chat",

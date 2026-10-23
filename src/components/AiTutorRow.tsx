@@ -30,7 +30,6 @@ export function AiTutorRow({
         </span>
         <span className="min-w-0">
           <span className="block truncate text-body font-semibold text-ink">{ui.talkAiTutor}</span>
-          <span className="block truncate text-caption text-slate-400">{ui.talkAiTutorSub}</span>
         </span>
       </button>
       {canCall ? (

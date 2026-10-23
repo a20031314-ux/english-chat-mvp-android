@@ -215,9 +215,12 @@ const SCENES = [
   },
   {
     id: "chat-reading",
-    label: "채팅 — 튜터 말 \"해석\"",
+    label: "채팅 — 튜터 말 누르기 → \"번역\"",
     async run({ page, ui, wait }) {
       const translated = page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 30000 }).catch(() => undefined);
+      // 2026-10-23부터 말풍선을 눌러야 줄 할 일(듣기·번역·분석)이 열린다.
+      await page.locator('[role="button"][aria-expanded="false"]').last().click();
+      await wait(300);
       await page.getByRole("button", { name: exactly(ui.chatReading) }).last().click();
       await translated;
       await wait(2000);

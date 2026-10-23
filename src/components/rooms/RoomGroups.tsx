@@ -23,7 +23,7 @@ import { GROUP_MAX_MEMBERS, GROUP_MAX_NAME_CHARS, type Group, type GroupCall, ty
 import { requestGroupCall } from "@/lib/rooms/openDm";
 import { askPhraseAbout, questionCount } from "@/lib/rooms/quote";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
-import { Composer, Face, LineActions, QuoteText, Unsendable, languagePair, useProfile } from "./RoomParts";
+import { Composer, Face, LineActions, MyLinePolish, QuoteText, Unsendable, languagePair, useProfile } from "./RoomParts";
 import { MediaImage } from "./MediaImage";
 import { IconImage } from "./IconPacks";
 import { teamCopy, type TeamCopy } from "@/lib/rooms/teamCopy";
@@ -452,8 +452,9 @@ function GroupBubble({
   const [open, setOpen] = useState(false);
   const [translation, setTranslation] = useState<string | null>(null);
   const toggle = () => {
-    if (mine) return;
     setOpen((value) => !value);
+    // 내 줄은 다듬은 문장(MyLinePolish, 열 때 한 번) — 1:1과 같다.
+    if (mine) return;
     if (translation === null) {
       void translateLine({ text: message.text, context, locale, targetLanguage }).then(
         (value) => setTranslation(value || t.translateFailed),
@@ -505,13 +506,22 @@ function GroupBubble({
           </span>
         </button>
         ) : null}
-        {open ? (
+        {open && mine && message.text ? (
+          <MyLinePolish t={t} text={message.text} context={context} locale={locale} targetLanguage={targetLanguage} />
+        ) : null}
+        {open && !mine ? (
           <p className="mt-1 px-1 text-note text-slate-300" dir="auto">
             {translation ?? t.translating}
           </p>
         ) : null}
-        {open ? (
-          <LineActions t={t} text={message.text} onAsk={(focus) => onQuote(true, focus, name)} onReply={(focus) => onQuote(false, focus, name)} />
+        {open && !mine ? (
+          <LineActions
+            t={t}
+            text={message.text}
+            onAsk={(focus) => onQuote(true, focus, name)}
+            onReply={(focus) => onQuote(false, focus, name)}
+            study={{ locale, targetLanguage }}
+          />
         ) : null}
         <p className={`mt-0.5 px-1 text-meta text-slate-600 ${mine ? "text-end" : ""}`}>
           {time}

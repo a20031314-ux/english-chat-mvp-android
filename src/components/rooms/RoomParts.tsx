@@ -21,6 +21,10 @@ import type { MediaRef, MediaScope } from "@/lib/rooms/media";
 import { MediaError, uploadImage, type MediaUploadError } from "@/lib/rooms/mediaClient";
 import { isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
 import { IconButton } from "./IconPacks";
+import { CorrectionCard, CorrectionChip, LineTools } from "@/components/conversation/LineTools";
+import { writtenInLearningLanguage } from "@/lib/inputLanguage";
+import type { Locale } from "@/lib/copy";
+import { useUiCopy } from "@/hooks/useUiCopy";
 
 /*
  * 말하는 방에서 여러 화면이 함께 쓰는 조각: 얼굴(프로필 사진), 프로필 시트,
@@ -626,6 +630,7 @@ export function LineActions({
   onAsk,
   onReply,
   extra,
+  study,
 }: {
   t: RoomCopy;
   text: string;
@@ -634,6 +639,11 @@ export function LineActions({
   onReply?: (focus?: string) => void;
   /** 그 밖의 버튼(✉ 쪽지로 묻기 등) — 고른 부분을 받는다. */
   extra?: (focus?: string) => ReactNode;
+  /**
+   * 학습 언어 줄이면 듣기·분석도(2026-10-23, AI 대화와 같은 줄 할 일 — conversation/LineTools).
+   * 모델을 부르지 않는다(분석은 누를 때 시트가 부름).
+   */
+  study?: { locale: string; targetLanguage: string };
 }) {
   const tokens = useMemo(() => pickTokens(text, language), [text, language]);
   const [pick, setPick] = useState<[number, number] | null>(null);
@@ -689,7 +699,58 @@ export function LineActions({
         ) : null}
         {extra?.(focus)}
       </div>
+      {study && writtenInLearningLanguage(text, study.targetLanguage, study.locale) ? (
+        <StudyTools text={text} locale={study.locale} />
+      ) : null}
     </div>
+  );
+}
+
+function StudyTools({ text, locale }: { text: string; locale: string }) {
+  const ui = useUiCopy(locale as Locale);
+  return <LineTools text={text} listenLabel={ui.listen} analyzeLabel={ui.insightAnalyze} />;
+}
+
+/**
+ * 내 줄을 눌렀을 때: 더 자연스러운 말(학습 언어로 다듬기, 나에게만) — AI 대화·Room의 ✎ 고친 문장과 같은 모양.
+ * 열 때 한 번 부른다(1:1·단체방 내 줄마다 미리 부르지 않음 — 비용).
+ */
+export function MyLinePolish({
+  t,
+  text,
+  context,
+  locale,
+  targetLanguage,
+}: {
+  t: RoomCopy;
+  text: string;
+  context: string[];
+  locale: string;
+  targetLanguage: string;
+}) {
+  const [state, setState] = useState<{ at: "loading" } | { at: "same" } | { at: "better"; text: string } | { at: "failed"; text: string }>({ at: "loading" });
+  useEffect(() => {
+    let live = true;
+    void howToSay({ message: text, recent: context, locale, targetLanguage })
+      .then((found) => {
+        if (!live) return;
+        const better = found?.expression?.trim();
+        setState(better && better !== text.trim() ? { at: "better", text: better } : { at: "same" });
+      })
+      .catch((error: unknown) => {
+        if (live) setState({ at: "failed", text: aiFailText({ ...t, translateFailed: t.howToSayFailed }, error) });
+      });
+    return () => {
+      live = false;
+    };
+    // 한 번만(열 때) — 문맥이 바뀌어도 다시 부르지 않는다.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+  if (state.at === "better") return <CorrectionCard title={t.polished} corrected={state.text} />;
+  return (
+    <p className="mt-1 px-1 text-end text-note text-emerald-200" dir="auto">
+      {state.at === "loading" ? t.howToSayLoading : state.at === "same" ? "✓" : state.text}
+    </p>
   );
 }
 
@@ -908,6 +969,7 @@ export function Lines({
               t={t}
               text={line.text}
               language={line.lang}
+              study={{ locale, targetLanguage }}
               onAsk={(focus) => onQuote(line, true, focus)}
               onReply={(focus) => onQuote(line, false, focus)}
               extra={
@@ -1015,41 +1077,23 @@ export type RoomLineFix = {
 };
 
 function FixCard({ t, fix, onOpen, onClose }: { t: RoomCopy; fix: RoomLineFix; onOpen: () => void; onClose: () => void }) {
+  // AI 채팅·통화·1:1과 같은 ✎ 칩·고친 문장 카드(conversation/LineTools, 2026-10-23).
   if (!fix.open) {
-    return (
-      <button
-        type="button"
-        onClick={onOpen}
-        disabled={fix.checking}
-        aria-busy={fix.checking}
-        className="mt-1 inline-flex items-center gap-1 rounded-full border border-warn/50 bg-warn/15 px-2.5 py-0.5 text-caption text-amber-100 disabled:opacity-70"
-      >
-        <span aria-hidden="true">✎</span>
-        {fix.checking ? t.fixChecking : t.fixChip}
-      </button>
-    );
+    return <CorrectionChip label={t.fixChip} busyLabel={t.fixChecking} busy={fix.checking} onOpen={onOpen} tone="dark" />;
   }
   return (
-    <div className="mt-1 rounded-xl border border-warn/40 bg-warn/10 px-2.5 py-1.5">
-      <div className="flex items-center gap-2">
-        <p className="min-w-0 flex-1 text-meta text-amber-200">✎ {t.fixTitle}</p>
+    <CorrectionCard
+      title={t.fixTitle}
+      corrected={fix.corrected}
+      note={fix.explanation || null}
+      extra={
         <button type="button" onClick={onClose} aria-label={t.hintClose} className="shrink-0 rounded-lg px-1.5 text-sm text-slate-400 hover:bg-white/10">
           ×
         </button>
-      </div>
-      <p className="text-chat text-white" dir="auto">
-        {fix.corrected}
-      </p>
-      {fix.explanation ? (
-        <p className="mt-0.5 text-sm text-slate-300" dir="auto">
-          {fix.explanation}
-        </p>
-      ) : null}
-    </div>
+      }
+    />
   );
 }
-
-
 
 /**
  * 길게 누르면 [삭제][취소] — 보낸 줄 지우기(2026-10-23, 1:1·단체방). 지우면 상대 화면에서도 사라진다.

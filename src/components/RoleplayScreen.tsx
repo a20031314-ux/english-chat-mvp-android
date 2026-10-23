@@ -1105,10 +1105,9 @@ export function RoleplayScreen({
                 An open conversation has no task, so what it says is interface
                 text and comes from the copy, which has fourteen languages —
                 written into the scene it reached every learner in Korean. */}
-            {instruction.goal || scenario.openEnded ? (
-              <p className="text-[13px] text-neutral-300">
-                {instruction.goal || ui.roleplayGoal}
-              </p>
+            {/* 열린 대화의 "편하게 아무 얘기나…"는 뺐다(화면 속 설명 금지, 2026-10-23). 대본 장면의 할 일만. */}
+            {instruction.goal ? (
+              <p className="text-[13px] text-neutral-300">{instruction.goal}</p>
             ) : null}
             {instruction.hint ? (
               <p className="text-[12px] text-neutral-500">{instruction.hint}</p>

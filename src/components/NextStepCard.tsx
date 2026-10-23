@@ -173,7 +173,7 @@ export function NextStepCard({
 
   if (!step) return null;
   const labelOk = !data?.labelLanguage || data.labelLanguage === locale;
-  const { title, why } = stepTexts(step, ui, labelOk);
+  const { title } = stepTexts(step, ui, labelOk);
   const preferred: "chat" | "roleplay" | "map" = step.tab === "roleplay" && !canCall ? "chat" : step.tab;
 
   const start = (tab: "chat" | "roleplay") => {
@@ -218,7 +218,6 @@ export function NextStepCard({
     >
       <p className="text-[11px] font-semibold tracking-wide text-slate-400">{ui.nextTitle}</p>
       <p className="mt-1 text-[14px] font-semibold leading-snug text-slate-100">{title}</p>
-      <p className="mt-0.5 text-[12px] leading-relaxed text-slate-400">{why}</p>
       {step.kind === "mistake" && step.mistakeLabel && labelOk ? (
         <p className="mt-1.5 inline-block rounded-full bg-rose-300/10 px-2 py-0.5 text-[11px] text-rose-200">
           {step.mistakeLabel}

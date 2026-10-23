@@ -3,6 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import { TTSButton } from "@/components/TTSButton";
 import { LedgerLinks } from "@/components/LedgerLinks";
+import { CorrectionChip, LineTools } from "@/components/conversation/LineTools";
+import { readCorrectionView } from "@/lib/correctionView";
 import { compareToTarget, type WordOutcome } from "@/lib/roleplay/practice";
 import type { Practice } from "@/lib/roleplay/practice";
 import type { Review, StuckTurn, TranscriptLine } from "@/lib/roleplay/review";
@@ -62,6 +64,18 @@ export function RoleplayLine({
 }) {
   const [revealed, setRevealed] = useState(false);
   const translationShown = showTranslation !== false || revealed;
+  // 줄을 누르면 할 일 한 줄(conversation/LineTools) — 채팅·1:1과 같은 문법(2026-10-23).
+  const [toolsOpen, setToolsOpen] = useState(false);
+  // 고친 문장은 채팅과 같은 설정(눌러서 보기 / 바로 보기, lib/correctionView.ts)을 따른다.
+  const [fixOpen, setFixOpen] = useState(() => readCorrectionView() === "auto");
+  const hasFix = Boolean(line.better || line.meant || line.about);
+  const tapLine = () => {
+    setToolsOpen((open) => !open);
+    if (line.who === "tutor" && !translationShown) {
+      setRevealed(true);
+      if (!line.translation) onTranslate?.(line.text);
+    }
+  };
   const [sayingAgain, setSayingAgain] = useState(false);
   const againRef = useRef<HTMLDivElement>(null);
   const sayTarget = (line.meant || line.better || line.text).trim();
@@ -69,7 +83,17 @@ export function RoleplayLine({
   return (
     <li className={`mb-2 flex ${line.who === "learner" ? "justify-end" : "justify-start"}`}>
       <div
-        className={`max-w-[80%] rounded-2xl px-3 py-2 ${
+        role="button"
+        tabIndex={0}
+        aria-expanded={toolsOpen}
+        onClick={tapLine}
+        onKeyDown={(event) => {
+          if (event.target !== event.currentTarget) return;
+          if (event.key !== "Enter" && event.key !== " ") return;
+          event.preventDefault();
+          tapLine();
+        }}
+        className={`max-w-[80%] cursor-pointer rounded-2xl px-3 py-2 ${
           line.who === "learner"
             ? "bg-white/10 text-neutral-200"
             : "bg-[#141414] text-neutral-100"
@@ -88,28 +112,20 @@ export function RoleplayLine({
             translation. In English the bank's own glosses covered most lines
             and hid the problem. A dotted underline says there is more here
             without needing a word in fourteen languages to say it. */}
-        {line.who === "tutor" &&
-        ((!line.translation && onTranslate) || (line.translation && !translationShown)) ? (
-          <button
-            type="button"
-            onClick={() => {
-              setRevealed(true);
-              if (!line.translation) onTranslate?.(line.text);
-            }}
-            dir="auto"
-            className="text-start text-[14px] leading-snug decoration-dotted decoration-neutral-500 underline-offset-4 [text-decoration-line:underline]"
-          >
-            {line.text}
-          </button>
-        ) : (
-          // What was said is in the language being learned: it keeps its own
-          // direction, so "Hi!" does not end up as "!Hi" under an Arabic app.
-          <p dir="auto" className="text-[14px] leading-snug">
-            {line.text}
-            {/* 받아쓰기가 확신이 낮은 내 말: 끝에 "?" 하나, 누르면 한 줄 설명. */}
-            {line.who === "learner" && line.unsure ? <UnsureMark text={ui.heardUnsure} /> : null}
-          </p>
-        )}
+        {/* 말한 글은 학습 언어 그대로의 방향(아랍어 앱에서도 "Hi!"가 "!Hi"가 되지 않게). 번역이 접혀 있는 튜터 줄은 점선 —
+            누르면 펼쳐진다는 표시(글자 없이, 14개 언어 문구 없이). */}
+        <p
+          dir="auto"
+          className={`text-[14px] leading-snug ${
+            line.who === "tutor" && !translationShown
+              ? "decoration-dotted decoration-neutral-500 underline-offset-4 [text-decoration-line:underline]"
+              : ""
+          }`}
+        >
+          {line.text}
+          {/* 받아쓰기가 확신이 낮은 내 말: 끝에 "?" 하나, 누르면 한 줄 설명. */}
+          {line.who === "learner" && line.unsure ? <UnsureMark text={ui.heardUnsure} /> : null}
+        </p>
         {line.translation && translationShown ? (
           <p className="mt-1 text-[12px] text-neutral-500">{line.translation}</p>
         ) : null}
@@ -124,8 +140,11 @@ export function RoleplayLine({
         {/* Read in the seconds after they stop talking, while they wait to be
             answered — the one moment in a spoken turn when their eyes are free.
             Never said aloud; the character does not know it is here. */}
-        {line.better || line.meant || line.about ? (
-          <div className="mt-1.5 border-t border-white/10 pt-1.5">
+        {hasFix && !fixOpen ? (
+          <CorrectionChip label={ui.chatCorrectionChip} onOpen={() => setFixOpen(true)} tone="dark" />
+        ) : null}
+        {hasFix && fixOpen ? (
+          <div onClick={(event) => event.stopPropagation()} className="mt-1.5 border-t border-white/10 pt-1.5">
             {/* What they were trying to say, when what came out was too
                 broken to just put right. Asked, not told: they know what they
                 meant, and it can be heard and said again. */}
@@ -166,48 +185,56 @@ export function RoleplayLine({
         {/* Stays on the turn for the rest of the scene. Pressing it is a
             decision the learner can take later, when they are not in the
             middle of being asked to speak. */}
-        {line.stuck || onAnalyze || canSayAgain ? (
+        {line.stuck ? (
           <div className="mt-1.5 flex flex-wrap gap-1.5">
-            {canSayAgain && !sayingAgain ? (
-              <button
-                type="button"
-                onClick={() => setSayingAgain(true)}
-                className="rounded-full border border-white/20 px-2.5 py-1 text-[11px] text-neutral-300 hover:bg-white/10"
-              >
-                {ui.roleplaySayAgain}
-              </button>
-            ) : null}
-            {line.stuck ? (
-              <button
-                type="button"
-                onClick={() => onReview(line.stuck!)}
-                className="rounded-full border border-white/20 px-2.5 py-1 text-[11px] text-neutral-300 hover:bg-white/10"
-              >
-                {ui.roleplayWhyStuck}
-              </button>
-            ) : null}
-            {onAnalyze ? (
-              <button
-                type="button"
-                onClick={() => onAnalyze(line.text)}
-                className="rounded-full border border-white/20 px-2.5 py-1 text-[11px] text-neutral-300 hover:bg-white/10"
-              >
-                {ui.insightAnalyze}
-              </button>
-            ) : null}
+            <button
+              type="button"
+              onClick={(event) => {
+                event.stopPropagation();
+                onReview(line.stuck!);
+              }}
+              className="rounded-full border border-white/20 px-2.5 py-1 text-[11px] text-neutral-300 hover:bg-white/10"
+            >
+              {ui.roleplayWhyStuck}
+            </button>
           </div>
         ) : null}
-        {ledgerLanguage && line.text.trim() && line.text !== "…" ? (
+        {toolsOpen && line.text.trim() && line.text !== "…" ? (
+          <LineTools
+            text={line.text}
+            listenLabel={ui.listen}
+            listen={Boolean(onAnalyze)}
+            analyzeLabel={onAnalyze ? ui.insightAnalyze : undefined}
+            translation={
+              line.who === "tutor" && line.translation
+                ? { label: ui.roleplayTranslations, shown: translationShown, onToggle: () => setRevealed((value) => !value) }
+                : null
+            }
+            extra={
+              canSayAgain && !sayingAgain ? (
+                <button
+                  type="button"
+                  onClick={() => setSayingAgain(true)}
+                  className="rounded-lg border border-white/15 px-2 py-0.5 text-xs text-slate-300 hover:bg-white/10"
+                >
+                  {ui.roleplaySayAgain}
+                </button>
+              ) : null
+            }
+          />
+        ) : null}
+        {ledgerLanguage && line.who === "learner" && line.text.trim() && line.text !== "…" ? (
           <LedgerLinks
             ui={ui}
-            kind={line.who === "learner" ? "mine" : "heard"}
+            kind="mine"
+            masteredOnly
             here="call"
             line={line.who === "learner" ? line.meant || line.better || line.text : line.text}
             language={ledgerLanguage}
           />
         ) : null}
         {canSayAgain && sayingAgain ? (
-          <div ref={againRef} className="mt-2 rounded-xl bg-black/30 p-2.5 text-left">
+          <div ref={againRef} onClick={(event) => event.stopPropagation()} className="mt-2 rounded-xl bg-black/30 p-2.5 text-left">
             <div className="flex items-start gap-2">
               <p dir="auto" className="min-w-0 flex-1 text-[13px] leading-snug text-neutral-100">
                 {sayTarget}
@@ -426,7 +453,10 @@ function UnsureMark({ text }: { text: string }) {
     <>
       <button
         type="button"
-        onClick={() => setOpen((was) => !was)}
+        onClick={(event) => {
+          event.stopPropagation();
+          setOpen((was) => !was);
+        }}
         aria-label={text}
         className="ms-1 align-middle text-meta font-semibold text-amber-300"
       >

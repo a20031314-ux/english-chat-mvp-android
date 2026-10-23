@@ -1351,6 +1351,9 @@ const STEPS = {
   async "chat-reading"({ page, ui, wait }) {
     const reading = page.getByRole("button", { name: exactly(ui.chatReading) });
     const translated = page.waitForResponse((r) => r.url().includes("/api/translate"), { timeout: 30000 }).catch(() => undefined);
+    // 2026-10-23부터 말풍선을 눌러야 줄 할 일(듣기·번역·분석)이 열린다.
+    await page.locator('[role="button"][aria-expanded="false"]').last().click();
+    await wait(300);
     await reading.last().click();
     await translated;
     await wait(2000);
