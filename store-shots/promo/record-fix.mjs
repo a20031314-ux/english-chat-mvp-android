@@ -151,7 +151,12 @@ try {
   await tap(chip.last());
   mark("chipTap");
   // 위험한 줄은 확인 모델이 한 번 더 본다(칩이 "확인 중"이 됨) — 칩이 사라지면 열린 것.
-  await page.waitForFunction((label) => ![...document.querySelectorAll("button")].some((b) => b.innerText.includes(label)), ui.chatCorrectionChip, { timeout: 90000 });
+  // "확인 중"인 칩도 아직 안 열린 것.
+  await page.waitForFunction(
+    ([label, busy]) => ![...document.querySelectorAll("button")].some((b) => b.innerText.includes(label) || b.innerText.includes(busy)),
+    [ui.chatCorrectionChip, ui.chatCorrectionChecking],
+    { timeout: 90000 },
+  );
   mark("open");
   await page.waitForTimeout(300);
   events.bubbleText = await page.locator("[data-promo-bubble]").last().innerText().catch(() => "");
