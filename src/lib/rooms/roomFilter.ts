@@ -1,19 +1,34 @@
 /**
- * 방 목록을 언어 조합으로 거르기(로비의 "전체 / 내 조합 / 언어로 찾기").
+ * 방 목록을 언어 조합으로 거르기(로비의 "전체 / 배우는 언어 / 내 조합 / 언어로 찾기").
  * 순서는 보지 않는다 — "영어 ↔ 한국어"를 찾으면 "한국어 ↔ 영어" 방도 나온다.
  * 하나만 고르면 그 언어가 들어간 방 전부.
+ *
+ * 사람 목록의 언어 칩과 같은 뜻(2026-10-23, lib/rooms/langMatch.ts): `learn` = 내가 배우는 언어가 들어간 방,
+ * `mine` = 배우는 언어 + 내 말(프로필 모국어, 없으면 앱 언어)이 둘 다 들어간 방.
  */
 
 import { isLearningLanguageCode } from "../learningLanguages.ts";
 
-export type RoomFilter = { kind: "all" } | { kind: "mine" } | { kind: "pick"; a: string | null; b: string | null };
+export type RoomFilter = { kind: "all" } | { kind: "learn" } | { kind: "mine" } | { kind: "pick"; a: string | null; b: string | null };
 
 export const ROOM_FILTER_STORAGE_KEY = "roomsFilter";
 
 /** 거를 언어들(중복·모르는 코드 빼고 최대 둘). 빈 배열이면 거르지 않음. */
-export function filterLanguages(filter: RoomFilter, targetLanguage: string, locale: string): string[] {
-  const picked = filter.kind === "mine" ? [targetLanguage, locale] : filter.kind === "pick" ? [filter.a, filter.b] : [];
+export function filterLanguages(filter: RoomFilter, targetLanguage: string, locale: string, native?: string | null): string[] {
+  const picked =
+    filter.kind === "learn"
+      ? [targetLanguage]
+      : filter.kind === "mine"
+        ? [targetLanguage, myLanguage(locale, native)]
+        : filter.kind === "pick"
+          ? [filter.a, filter.b]
+          : [];
   return cleanLanguages(picked);
+}
+
+/** "내 말": 프로필 모국어(앱 언어 목록에 있는 것), 없으면 앱 언어. 새 방의 언어 조합도 이걸 쓴다. */
+export function myLanguage(locale: string, native?: string | null): string {
+  return native && isLearningLanguageCode(native) ? native : locale;
 }
 
 export function cleanLanguages(values: unknown): string[] {
@@ -50,7 +65,7 @@ export function roomMatches(roomLanguages: readonly string[] | undefined, wanted
 export function parseRoomFilter(raw: string | null): RoomFilter {
   try {
     const value = raw ? (JSON.parse(raw) as RoomFilter) : null;
-    if (value?.kind === "mine") return value;
+    if (value?.kind === "mine" || value?.kind === "learn") return { kind: value.kind };
     if (value?.kind === "pick") {
       const [a = null, b = null] = cleanLanguages([value.a, value.b]);
       return { kind: "pick", a, b };

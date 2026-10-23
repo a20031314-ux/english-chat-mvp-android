@@ -46,15 +46,25 @@ export type MeetMode = (typeof MEET_MODES)[number];
 export type MeetTime = (typeof MEET_TIMES)[number];
 
 export const INTERESTS_MAX = 5;
-export const SPEAKS_MAX = 3;
+/**
+ * 할 수 있는 언어·배우는 언어는 사용자가 고르는 개수에 제한을 두지 않는다(사용자 결정 2026-10-23) —
+ * 고를 수 있는 건 앱의 언어 목록뿐이라 이 값은 이상한 요청을 자르는 안전선일 뿐, 화면에 보이지 않는다.
+ * (2.72 이하 앱은 할 수 있는 언어를 3개까지만 고르게 되어 있다.)
+ */
+export const LANGS_MAX = 20;
 
 export type ProfileFacts = {
   /** 국적(ISO 3166-1 두 글자, 화면은 국기로). 안 정했으면 null. */
   country: string | null;
   /** 모국어(앱 언어와 따로). 모르면 null — 그때 화면은 예전처럼 앱 언어를 쓴다. */
   native: string | null;
-  /** 할 수 있는 언어(수준 없음), 모국어 빼고 최대 3. */
+  /** 할 수 있는 언어(수준 없음), 모국어 빼고. 개수 제한 없음(2026-10-23, 그 전 앱은 3개까지). */
   speaks: string[];
+  /**
+   * 배우는 언어(2026-10-23, 개수 제한 없음). 사람 목록·게시판·Room의 "같은 언어를 배우는 사람" 거르기가 쓴다.
+   * 비어 있으면 그 사람이 마지막으로 앱에 둔 학습 언어(접속 기록)로 대신한다(`learnsOf`).
+   */
+  learns: string[];
   interests: InterestId[];
   work: WorkId | null;
   meetModes: MeetMode[];
@@ -65,6 +75,7 @@ export const EMPTY_FACTS: ProfileFacts = {
   country: null,
   native: null,
   speaks: [],
+  learns: [],
   interests: [],
   work: null,
   meetModes: [],
@@ -122,12 +133,37 @@ export function cleanFacts(value: unknown): ProfileFacts {
   return {
     country: isCountryCode(country) ? country : null,
     native,
-    speaks: pickLangs(raw.speaks, SPEAKS_MAX, native),
+    speaks: pickLangs(raw.speaks, LANGS_MAX, native),
+    learns: pickLangs(raw.learns, LANGS_MAX, native),
     interests: pickIds(raw.interests, INTEREST_IDS, INTERESTS_MAX),
     work: typeof raw.work === "string" && (WORK_IDS as readonly string[]).includes(raw.work) ? (raw.work as WorkId) : null,
     meetModes: pickIds(raw.meetModes, MEET_MODES, MEET_MODES.length),
     meetTimes: pickIds(raw.meetTimes, MEET_TIMES, MEET_TIMES.length),
   };
+}
+
+/**
+ * 앱이 보낸 사실을 저장할 모양으로. 배우는 언어 칸이 없는 예전 앱(2.72 이하)이 저장해도
+ * 이미 고른 배우는 언어는 그대로 남긴다.
+ */
+export function mergeFacts(value: unknown, stored: Partial<ProfileFacts> | undefined): ProfileFacts {
+  const next = cleanFacts(value);
+  const sent = value && typeof value === "object" && "learns" in (value as Record<string, unknown>);
+  if (sent || !stored) return next;
+  return { ...next, learns: factsOf(stored).learns.filter((code) => code !== next.native) };
+}
+
+/** 그 사람이 배우는 언어: 프로필에 고른 것, 없으면 접속 기록의 학습 언어. */
+export function learnsOf(facts: Pick<ProfileFacts, "learns">, fallback: string | null | undefined): string[] {
+  if (facts.learns.length) return facts.learns;
+  return fallback ? [fallback] : [];
+}
+
+/** 그 사람이 쓰는 말: 모국어 + 할 수 있는 언어, 둘 다 없으면 접속 기록의 앱 언어. */
+export function speaksOf(facts: Pick<ProfileFacts, "native" | "speaks">, fallback: string | null | undefined): string[] {
+  const own = [facts.native, ...facts.speaks].filter((code): code is string => Boolean(code));
+  if (own.length) return own;
+  return fallback ? [fallback] : [];
 }
 
 /** 칸 켬/끔. 보낸 칸만 바꾸고 나머지는 지금 값(없으면 처음 값). */

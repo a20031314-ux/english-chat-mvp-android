@@ -11,19 +11,42 @@ import { LearningLanguageFlag } from "@/components/LearningLanguageFlag";
 import { Face, ProfileSheet, loadProfile } from "./RoomParts";
 import { chipLabel, fillCount, profileCopy } from "@/lib/account/profileCopy";
 import { countryFlag, countryName } from "@/lib/account/countries";
+import { isLangMatch, type LangMatch } from "@/lib/rooms/langMatch";
 
 /**
  * 사람 목록 (말하는 방 → 사람). 최근 2주 안에 앱을 쓴 사람이 최근 순으로 쭉 뜨고,
  * 카드에서 바로 팔로우·메시지, 누르면 프로필 시트(차단·신고도 거기서).
  *
- * 언어는 그 사람의 앱 설정 그대로: 앱 언어 = 할 줄 아는 말, 학습 언어 = 배우는 말.
- * 거르기는 화면에서만(서버는 최대 60명을 준다).
+ * 언어는 프로필(모국어·할 수 있는 언어·배우는 언어), 비어 있으면 그 사람의 앱 설정(앱 언어·학습 언어).
+ * 언어 칩(같은 언어를 배우는 사람·배우는 언어와 쓰는 말이 같은 사람·내 언어를 배우는 사람)은 서버가 거르고
+ * (lib/rooms/langMatch.ts — 60명으로 자르기 전에), 나머지 칩은 화면에서만. 고른 칩은 이 기기에 기억한다.
  */
 
-type Filter = "all" | "online" | "partners" | "same" | "shared" | "call";
+type Filter = "all" | "online" | LangMatch | "shared" | "call";
+const FILTERS: Filter[] = ["all", "online", "learn", "both", "partners", "shared", "call"];
+const FILTER_KEY = "peopleFilter";
 
 /** 그 사람이 할 줄 아는 말: 정한 모국어, 없으면 예전처럼 앱 언어. */
 const speaksOf = (person: PersonCard) => person.native ?? person.ui;
+/** 그 사람이 배우는 언어(프로필, 없으면 앱의 학습 언어 하나). */
+const learnsOfCard = (person: PersonCard) => (person.learns?.length ? person.learns : person.learn ? [person.learn] : []);
+
+function readFilter(): Filter | null {
+  try {
+    const saved = window.localStorage.getItem(FILTER_KEY);
+    return saved && (FILTERS as string[]).includes(saved) ? (saved as Filter) : null;
+  } catch {
+    return null;
+  }
+}
+
+function saveFilter(filter: Filter): void {
+  try {
+    window.localStorage.setItem(FILTER_KEY, filter);
+  } catch {
+    // 기억하지 못해도 이번에는 그대로 거른다.
+  }
+}
 
 function activity(t: RoomCopy, lastSeen: number, now: number): { text: string; online: boolean } {
   if (now - lastSeen < ONLINE_WINDOW_MS) return { text: t.onlineNow, online: true };
@@ -58,21 +81,22 @@ export function PeopleList({
 }) {
   const [people, setPeople] = useState<PersonCard[] | null>(null);
   const [error, setError] = useState(false);
-  // 창구 Pingo(lib/doors.ts)로 오면 "지금 접속 중"으로 연다.
-  const [filter, setFilter] = useState<Filter>(() => readEntryDoor()?.peopleFilter ?? "all");
+  // 창구 Pingo(lib/doors.ts)로 오면 "지금 접속 중"으로, 아니면 마지막에 고른 칩(처음엔 전체)으로 연다.
+  const [filter, setFilter] = useState<Filter>(() => readEntryDoor()?.peopleFilter ?? readFilter() ?? "all");
+  const match = isLangMatch(filter) ? filter : undefined;
   const [open, setOpen] = useState<PersonCard | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
   const [now, setNow] = useState(() => Date.now());
 
   const refresh = useCallback(async () => {
     try {
-      setPeople(await listPeople({ learn: targetLanguage, ui: locale }));
+      setPeople(await listPeople({ learn: targetLanguage, ui: locale, ...(match ? { match } : {}) }));
       setNow(Date.now());
       setError(false);
     } catch {
       setError(true);
     }
-  }, [targetLanguage, locale]);
+  }, [targetLanguage, locale, match]);
 
   useEffect(() => {
     void refresh();
@@ -85,16 +109,14 @@ export function PeopleList({
     const list = people ?? [];
     if (filter === "online") {
       // 지금 접속한 사람 중 내 말을 배우는 사람(언어 교환 짝)이 먼저.
-      return list
-        .filter((person) => now - person.lastSeen < ONLINE_WINDOW_MS)
-        .sort((a, b) => Number(b.learn === locale) - Number(a.learn === locale));
+      const partner = (person: PersonCard) => Number(learnsOfCard(person).includes(locale));
+      return list.filter((person) => now - person.lastSeen < ONLINE_WINDOW_MS).sort((a, b) => partner(b) - partner(a));
     }
-    if (filter === "partners") return list.filter((person) => person.learn === locale);
-    if (filter === "same") return list.filter((person) => person.learn === targetLanguage);
+    // 언어 칩은 서버가 이미 걸렀다.
     if (filter === "shared") return list.filter((person) => (person.sharedInterests ?? 0) > 0).sort((a, b) => (b.sharedInterests ?? 0) - (a.sharedInterests ?? 0));
     if (filter === "call") return list.filter((person) => person.meetModes?.includes("call") || person.meetModes?.includes("video"));
     return list;
-  }, [people, filter, locale, targetLanguage, now]);
+  }, [people, filter, locale, now]);
 
   const pc = profileCopy(locale);
 
@@ -115,11 +137,19 @@ export function PeopleList({
   const filters: [Filter, string][] = [
     ["all", t.peopleAll],
     ["online", t.peopleOnline],
+    ["learn", t.peopleSame],
+    ["both", t.peopleSameBoth],
     ["partners", t.peoplePartners],
-    ["same", t.peopleSame],
     ["shared", pc.filterShared],
     ["call", pc.filterCall],
   ];
+  const choose = (value: Filter) => {
+    if (value === filter) return;
+    // 서버가 거르는 칩이 바뀌면 새 목록이 올 때까지 예전 목록을 비운다(다른 칩의 사람이 잠깐 보이지 않게).
+    if (isLangMatch(value) || isLangMatch(filter)) setPeople(null);
+    setFilter(value);
+    saveFilter(value);
+  };
 
   return (
     <section className="space-y-3">
@@ -128,7 +158,7 @@ export function PeopleList({
           <button
             key={value}
             type="button"
-            onClick={() => setFilter(value)}
+            onClick={() => choose(value)}
             className={`shrink-0 rounded-full px-3 py-1.5 text-[13px] ${
               filter === value ? "bg-white/90 font-medium text-black" : "bg-white/[0.06] text-slate-300"
             }`}
@@ -172,8 +202,20 @@ export function PeopleList({
                     </p>
                     <div className="mt-1 flex flex-wrap items-center gap-1">
                       <LangChip code={speaksOf(person)} locale={locale} learning={false} />
-                      {speaksOf(person) && person.learn && speaksOf(person) !== person.learn ? <span className="text-meta text-slate-500">⇄</span> : null}
-                      {person.learn !== speaksOf(person) ? <LangChip code={person.learn} locale={locale} learning /> : null}
+                      {(() => {
+                        const learning = learnsOfCard(person).filter((code) => code !== speaksOf(person));
+                        // 지금 배우는 언어를 맨 앞에, 많으면 셋까지 보이고 나머지는 +n.
+                        const ordered = [...learning].sort((a, b) => Number(b === targetLanguage) - Number(a === targetLanguage));
+                        return ordered.length ? (
+                          <>
+                            {speaksOf(person) ? <span className="text-meta text-slate-500">⇄</span> : null}
+                            {ordered.slice(0, 3).map((code) => (
+                              <LangChip key={code} code={code} locale={locale} learning />
+                            ))}
+                            {ordered.length > 3 ? <span className="text-meta text-slate-500">+{ordered.length - 3}</span> : null}
+                          </>
+                        ) : null;
+                      })()}
                       {person.help ? <span className="ms-1 text-meta text-amber-200">🙌 {person.help}</span> : null}
                     </div>
                     {person.interests?.length ? (

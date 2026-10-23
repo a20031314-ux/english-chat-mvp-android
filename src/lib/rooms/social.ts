@@ -46,6 +46,9 @@ export type PersonCard = {
   isFollowing: boolean;
   /** 모국어(정했으면 — 화면은 ui 대신 이걸 "할 줄 아는 말"로). */
   native?: string | null;
+  /** 배우는 언어·쓰는 말(프로필, 없으면 learn·ui 하나) — 2026-10-23부터 서버가 채움, 언어 칩 거르기. */
+  learns?: string[];
+  speaks?: string[];
   /** 국적(ISO 두 글자, 화면은 국기). */
   country?: string | null;
   /** 관심사 칩 앞 3개와 나와 겹치는 수. */

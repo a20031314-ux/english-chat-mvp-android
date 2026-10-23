@@ -3,7 +3,7 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { accountFromRequest, readJsonBody } from "@/lib/server/accountRequest";
 import { saveProfile, toPublic } from "@/lib/server/accountStore";
 import { cleanBio, cleanNickname, cleanPhoto } from "@/lib/account/shared";
-import { cleanFacts, cleanShow } from "@/lib/account/profileFacts";
+import { cleanShow, mergeFacts } from "@/lib/account/profileFacts";
 
 export const dynamic = "force-dynamic";
 
@@ -12,7 +12,7 @@ export const dynamic = "force-dynamic";
  *
  * POST { nickname, bio, photo?, hidden?, facts?, show? } — photo가 없으면 그대로, null이면 지움, data URL이면 바꿈.
  * facts(나에 대한 사실 칩)·show(프로필에 보일 칸)는 보냈을 때만 바꾼다 — 예전 앱이 저장해도 그대로 남는다
- * (account/profileFacts.ts, 모르는 칩은 버림).
+ * (account/profileFacts.ts, 모르는 칩은 버림). 배우는 언어(learns)가 없는 예전 앱의 facts는 저장된 배우는 언어를 지우지 않는다.
  * → { account } | { error: PHOTO_INVALID }
  */
 export async function OPTIONS(request: NextRequest) {
@@ -46,7 +46,7 @@ export async function POST(request: NextRequest) {
     bio: cleanBio(body.bio),
     photo,
     hidden: typeof body.hidden === "boolean" ? body.hidden : undefined,
-    facts: body.facts === undefined ? undefined : cleanFacts(body.facts),
+    facts: body.facts === undefined ? undefined : mergeFacts(body.facts, found.account.profile.facts),
     show: body.show === undefined ? undefined : cleanShow(body.show, found.account.profile.show),
   });
   return jsonWithCors(request, { account: await toPublic(updated) });

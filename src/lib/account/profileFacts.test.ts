@@ -7,7 +7,10 @@ import {
   factsOf,
   factsPrompt,
   INTERESTS_MAX,
+  learnsOf,
+  mergeFacts,
   sharedInterests,
+  speaksOf,
   showOf,
 } from "./profileFacts.ts";
 
@@ -21,7 +24,8 @@ test("모르는 칩·중복·한도를 넘는 것은 버리고, 모국어는 할
     meetTimes: ["night", 3],
   });
   assert.equal(facts.native, "th");
-  assert.deepEqual(facts.speaks, ["es", "ja", "ar"]);
+  // 할 수 있는 언어는 개수 제한 없음(2026-10-23, 그 전엔 3개).
+  assert.deepEqual(facts.speaks, ["es", "ja", "ar", "zh"]);
   assert.equal(facts.interests.length, INTERESTS_MAX);
   assert.deepEqual(facts.interests.slice(0, 2), ["music", "travel"]);
   assert.equal(facts.work, "student");
@@ -68,4 +72,24 @@ test("국적: 두 글자 나라 코드만(소문자도 받아 대문자로), 역
   assert.equal(cleanFacts({ country: "SU" }).country, null);
   assert.equal(cleanFacts({ country: "EU" }).country, null);
   assert.equal(cleanFacts({ country: "Korea" }).country, null);
+});
+
+test("배우는 언어: 개수 제한 없이, 모국어는 빼고, 예전 앱이 저장해도 지워지지 않는다", () => {
+  const many = ["ja", "zh", "th", "es", "fr", "it", "pt", "ru", "id", "ar", "hi", "vi", "en"];
+  const facts = cleanFacts({ native: "ko", learns: ["ko", ...many, "ja"] });
+  assert.deepEqual(facts.learns, many);
+  // 2.72 이하 앱은 learns 칸 없이 facts를 보낸다 → 저장된 배우는 언어를 남긴다(모국어가 바뀌면 그건 뺀다).
+  const kept = mergeFacts({ native: "ja", speaks: ["en"] }, { ...facts });
+  assert.deepEqual(kept.learns, many.filter((code) => code !== "ja"));
+  // 새 앱이 비운 목록을 보내면 비운다.
+  assert.deepEqual(mergeFacts({ native: "ko", learns: [] }, facts).learns, []);
+  assert.deepEqual(mergeFacts({ native: "ko" }, undefined).learns, []);
+});
+
+test("배우는 언어·쓰는 말: 프로필이 비면 접속 기록(앱 설정)으로 대신", () => {
+  assert.deepEqual(learnsOf({ learns: ["ar"] }, "ja"), ["ar"]);
+  assert.deepEqual(learnsOf({ learns: [] }, "ja"), ["ja"]);
+  assert.deepEqual(learnsOf({ learns: [] }, null), []);
+  assert.deepEqual(speaksOf({ native: "ko", speaks: ["en"] }, "ja"), ["ko", "en"]);
+  assert.deepEqual(speaksOf({ native: null, speaks: [] }, "es"), ["es"]);
 });

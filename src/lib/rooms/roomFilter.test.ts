@@ -18,6 +18,13 @@ test("내 조합 = 학습 언어 + 앱 언어, 모르는 코드·중복은 뺀�
   assert.deepEqual(cleanLanguages(["xx", "hi", "hi", "vi", "fr"]), ["hi", "vi"]);
 });
 
+test("배우는 언어 칩·내 조합은 프로필 모국어 기준(없으면 앱 언어)", () => {
+  assert.deepEqual(filterLanguages({ kind: "learn" }, "ar", "es", "pt"), ["ar"]);
+  assert.deepEqual(filterLanguages({ kind: "mine" }, "ja", "en", "ko"), ["ja", "ko"]);
+  assert.deepEqual(filterLanguages({ kind: "mine" }, "ja", "en", null), ["ja", "en"]);
+  assert.deepEqual(parseRoomFilter(JSON.stringify({ kind: "learn" })), { kind: "learn" });
+});
+
 test("저장한 값 읽기: 깨진 값·모르는 코드는 전체로", () => {
   assert.deepEqual(parseRoomFilter(null), { kind: "all" });
   assert.deepEqual(parseRoomFilter("{oops"), { kind: "all" });

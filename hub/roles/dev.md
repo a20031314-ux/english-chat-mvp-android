@@ -21,6 +21,10 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **언어 칩 — 같은 언어를 배우는 사람 / 배우는 언어·쓰는 말이 같은 사람 (2026-10-23, 사용자 "일단 만들어줘", 서버 바로 반영·화면 앱 다음 빌드):**
+  프로필 "배우는 언어" 칸(`profileFacts.ts` `learns`, 개수 제한 없음 — 할 수 있는 언어 3개 제한도 풂, 옛 앱 저장해도 남음 `mergeFacts`), 거르기 `lib/rooms/langMatch.ts`(learn·both·partners, 언어는 프로필 → 없으면 접속 기록),
+  사람 목록 `social` `people` `match`(60명 자르기 전 서버가 거름, 칩 기억 `peopleFilter`), 게시판 `list` `match: both`(글쓴이 모국어), Room 로비 [전체 | 배우는 언어 | 내 조합(모국어 기준) | 언어로 찾기], 새 방 언어도 모국어 기준.
+  남은 것: 2.73(또는 지금 main으로 빌드하는 판) 자를 때 사용법 사람 장·Room 장에 칩 설명·그림, 새로워진 점 한 장. "접속 중" 정렬은 아직 앱 언어 기준. Spin 랜덤 짝 맞추기에는 칩 없음.
 - **🎭 Room 게임 — 라이어 게임·마피아 (2026-10-23, 사용자 "만들어줘"·"이어서해줘", 서버 바로 반영·앱 다음 빌드·웹 창구 바로):** 규칙 `rooms/liarGame.ts`·`rooms/mafiaGame.ts`(순수, 테스트 7+7), 저장·잠금 `server/roomGameStore.ts`(두 게임 같이, 표·밤 행동은 단계마다 키), AI `server/roomGame.ts`(라이어 제시어·판정, 마피아 배경 이야기 — `roomGame` Haiku), `/api/rooms/game`, 방 물음이 `game`을 같이 돌려줌, 화면 `components/rooms/RoomGame.tsx`(시작 창에서 게임 고름), 사용법 Room 장 `room.game`·`room.mafia`(옛 빌드는 서버가 뺌 — `game=1`).
   **🔮 관전자 추리(2026-10-23):** `rooms/spectators.ts`(관전자 = 플레이어 아닌 사람·마피아 탈락자, 플레이어 투표와 따로, 끝나야 공개, 방 추리 순위 `room:gboard`), `/api/rooms/game` predict, 방 목록 "게임 중"(방 정보 `gameKind`).
   **인원(2026-10-23):** 한 방 40명·소리 20명(그 뒤 채팅만)·듣는 사람끼리 소리 안 이음·방장 빈자리 막기(2~8, `seats`). 여러 폰으로 소리 확인 필요.

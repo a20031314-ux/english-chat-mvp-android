@@ -1,5 +1,6 @@
 "use client";
 
+import type { LangMatch } from "./langMatch";
 import { apiUrl } from "@/lib/apiBase";
 import { noteSuspended } from "./suspended";
 import { entitlementHeaders } from "@/lib/billing/billingService";
@@ -493,7 +494,8 @@ export async function reportPerson(input: { target: string; reason: string; room
 }
 
 /** 사람 목록(최근에 앱을 쓴 사람). 부르는 것 자체가 "나도 지금 쓰는 중" 신호. */
-export async function listPeople(langs: { learn: string; ui: string }): Promise<PersonCard[]> {
+/** 사람 목록. `match`를 주면 서버가 언어 칩으로 거른 뒤 60명을 준다(lib/rooms/langMatch.ts). */
+export async function listPeople(langs: { learn: string; ui: string; match?: LangMatch }): Promise<PersonCard[]> {
   return (await social<{ people: PersonCard[] }>("people", langs)).people;
 }
 
@@ -668,7 +670,7 @@ async function board<T>(action: string, payload: Record<string, unknown>): Promi
   return body;
 }
 
-export function boardList(input: { language?: string; offset?: number }): Promise<{ posts: BoardPost[]; authors: BoardAuthor[]; next: number }> {
+export function boardList(input: { language?: string; offset?: number; match?: "both"; ui?: string }): Promise<{ posts: BoardPost[]; authors: BoardAuthor[]; next: number }> {
   return board("list", input);
 }
 export function boardOpen(postId: string): Promise<{ post: BoardPost; comments: BoardComment[]; authors: BoardAuthor[] }> {

@@ -6,7 +6,7 @@ import {
   INTERESTS_MAX,
   MEET_MODES,
   MEET_TIMES,
-  SPEAKS_MAX,
+  LANGS_MAX,
   WORK_IDS,
   type ProfileFacts,
   type ProfileShow,
@@ -60,7 +60,7 @@ function toggle<T extends string>(list: readonly T[], id: T, max: number): T[] {
   return list.length >= max ? [...list] : [...list, id];
 }
 
-/** 나에 대한 사실 고르기. `compact`면 로그인 직후 화면용(모국어·관심사·대화 방식만). */
+/** 나에 대한 사실 고르기. `compact`면 로그인 직후 화면용(나라·모국어·배우는 언어·관심사·대화 방식만). */
 export function FactsEditor({
   locale,
   facts,
@@ -107,13 +107,14 @@ export function FactsEditor({
                 ...facts,
                 native: facts.native === code ? null : code,
                 speaks: facts.speaks.filter((item) => item !== code),
+                learns: facts.learns.filter((item) => item !== code),
               })
             }
           />
         ))}
       </Section>
       {!compact ? (
-        <Section title={t.speaks} aside={fillCount(t.interestsLimit, SPEAKS_MAX)}>
+        <Section title={t.speaks}>
           {langs
             .filter((code) => code !== facts.native)
             .map((code) => (
@@ -121,12 +122,23 @@ export function FactsEditor({
                 key={code}
                 label={learningLanguageUiLabel(code, locale)}
                 on={facts.speaks.includes(code)}
-                disabled={facts.speaks.length >= SPEAKS_MAX}
-                onClick={() => onChange({ ...facts, speaks: toggle(facts.speaks, code, SPEAKS_MAX) })}
+                onClick={() => onChange({ ...facts, speaks: toggle(facts.speaks, code, LANGS_MAX) })}
               />
             ))}
         </Section>
       ) : null}
+      <Section title={t.learns}>
+        {langs
+          .filter((code) => code !== facts.native)
+          .map((code) => (
+            <Chip
+              key={code}
+              label={learningLanguageUiLabel(code, locale)}
+              on={facts.learns.includes(code)}
+              onClick={() => onChange({ ...facts, learns: toggle(facts.learns, code, LANGS_MAX) })}
+            />
+          ))}
+      </Section>
       <Section title={t.interests} aside={fillCount(t.interestsLimit, INTERESTS_MAX)}>
         {INTEREST_IDS.map((id) => (
           <Chip
@@ -262,7 +274,7 @@ export function FactsView({
   if (badges?.maker) lines.push(fillCount(t.badgeMaker, badges.maker.count));
   const goalLine = goal ? goalText(t, goal) : "";
   if (goalLine) lines.push(goalLine);
-  const langs = facts ? [facts.native, ...facts.speaks].filter((code): code is string => Boolean(code)) : [];
+  const langs = facts ? [facts.native, ...facts.speaks, ...facts.learns].filter((code): code is string => Boolean(code)) : [];
   const hasCountry = Boolean(facts?.country);
   const chips = facts ? [...facts.interests.map((id) => chipLabel(t, "i", id)), ...(facts.work ? [chipLabel(t, "w", facts.work)] : [])] : [];
   const meet = facts ? [...facts.meetModes.map((id) => chipLabel(t, "m", id)), ...facts.meetTimes.map((id) => chipLabel(t, "t", id))] : [];
@@ -290,6 +302,14 @@ export function FactsView({
             <>
               <span className="ms-1 text-slate-500">{t.speaks}</span>
               {facts.speaks.map((code) => (
+                <LangFlagChip key={code} code={code} locale={locale} />
+              ))}
+            </>
+          ) : null}
+          {facts && facts.learns.length ? (
+            <>
+              <span className="ms-1 text-slate-500">{t.learns}</span>
+              {facts.learns.map((code) => (
                 <LangFlagChip key={code} code={code} locale={locale} />
               ))}
             </>

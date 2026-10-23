@@ -24,7 +24,7 @@ import {
 } from "@/lib/rooms/client";
 import { MAX_ROOM_NAME_CHARS, roomSeats, type RoomMeta, type RoomRole, type RoomSummary } from "@/lib/rooms/protocol";
 import { SUPPORTED_LEARNING_LANGUAGES, isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
-import { ROOM_FILTER_STORAGE_KEY, filterLanguages, parseRoomFilter, type RoomFilter } from "@/lib/rooms/roomFilter";
+import { ROOM_FILTER_STORAGE_KEY, filterLanguages, myLanguage, parseRoomFilter, type RoomFilter } from "@/lib/rooms/roomFilter";
 import { setMiniRoom } from "@/lib/rooms/miniRoom";
 import type { RoomNote } from "@/lib/rooms/layout";
 import { Face, languagePair } from "./RoomParts";
@@ -277,7 +277,10 @@ function Lobby({
       // 기억 못 해도 이번에는 거른다.
     }
   };
-  const wanted = filterLanguages(filter, targetLanguage, locale);
+  // 내 말 = 프로필 모국어(없으면 앱 언어) — 사람 목록의 언어 칩과 같은 기준(lib/rooms/langMatch.ts).
+  const native = useSyncExternalStore(subscribeSession, () => readCachedAccount()?.profile.facts?.native ?? null, () => null);
+  const mySide = myLanguage(locale, native);
+  const wanted = filterLanguages(filter, targetLanguage, locale, native);
   const wantedKey = wanted.join(",");
 
   // 내가 잠시 닫아 둔 방(다시 열기). 못 읽으면 그냥 안 보인다.
@@ -302,7 +305,7 @@ function Lobby({
     if (!name.trim() || busy) return;
     setBusy(true);
     try {
-      const languages = [targetLanguage, locale].filter((code, index, all) => isLearningLanguageCode(code) && all.indexOf(code) === index);
+      const languages = [targetLanguage, mySide].filter((code, index, all) => isLearningLanguageCode(code) && all.indexOf(code) === index);
       const room = await createRoom(peerId, name.trim(), freeTalk ? [] : languages, freeTalk);
       onJoin(room, "speaker");
     } catch {
@@ -321,7 +324,7 @@ function Lobby({
           <p className="truncate text-[15px] font-semibold text-white" dir="auto">
             {me.nickname}
           </p>
-          <p className="text-[11px] text-slate-400">{languagePair([targetLanguage, locale], locale)}</p>
+          <p className="text-[11px] text-slate-400">{languagePair([targetLanguage, mySide], locale)}</p>
         </div>
         <button
           type="button"
@@ -348,7 +351,7 @@ function Lobby({
             <div className="flex flex-wrap gap-1.5 text-xs">
               {(
                 [
-                  [false, languagePair([targetLanguage, locale], locale)],
+                  [false, languagePair([targetLanguage, mySide], locale)],
                   [true, `🌐 ${t.freeTalk}`],
                 ] as const
               ).map(([free, label]) => (
@@ -415,7 +418,8 @@ function Lobby({
           {(
             [
               ["all", t.filterAll],
-              ["mine", `${t.filterMine} · ${languagePair([targetLanguage, locale], locale)}`],
+              ["learn", languagePair([targetLanguage], locale)],
+              ["mine", `${t.filterMine} · ${languagePair([targetLanguage, mySide], locale)}`],
               ["pick", `🔍 ${t.filterPick}`],
             ] as const
           ).map(([kind, label]) => (

@@ -18,7 +18,8 @@ import {
 import { cleanText, isRoomId } from "@/lib/rooms/protocol";
 import { PEOPLE_WINDOW_MS, type PersonCard, type PublicProfile } from "@/lib/rooms/social";
 import { suspendedResponse } from "@/lib/server/suspension";
-import { factsOf, sharedInterests, showOf } from "@/lib/account/profileFacts";
+import { factsOf, learnsOf, sharedInterests, showOf, speaksOf } from "@/lib/account/profileFacts";
+import { isLangMatch, langMatches } from "@/lib/rooms/langMatch";
 import { badgesFor, contribScore, peopleBoostMs } from "@/lib/rooms/contribution";
 import { readContrib, readContribMany, recordThank, type ThankTarget } from "@/lib/server/contribStore";
 import { readSelfCheck } from "@/lib/server/selfCheckStore";
@@ -78,6 +79,7 @@ export async function POST(request: NextRequest) {
   }
 
   // 사람 목록: 최근 14일 안에 앱을 쓴 사람, 최근 순. 나, 서로 차단한 사람, 숨긴 사람, 이름 없는 사람은 뺀다.
+  // match(2026-10-23, 2.73 앱부터): 언어 칩 — 60명으로 자르기 전에 서버에서 거른다(lib/rooms/langMatch.ts). 없으면 전체.
   if (action === "people") {
     if (!me) return bad(request, "SIGNED_OUT", 401);
     await touchPresence(me, { learn: body.learn, ui: body.ui });
@@ -90,7 +92,15 @@ export async function POST(request: NextRequest) {
       readContribMany(candidates.map((row) => row.id)),
       readAccount(me),
     ]);
-    const myInterests = factsOf(meAccount?.profile.facts).interests;
+    const myFacts = factsOf(meAccount?.profile.facts);
+    const myInterests = myFacts.interests;
+    const match = isLangMatch(body.match) ? body.match : null;
+    const myLangs = {
+      current: typeof body.learn === "string" && LANG.test(body.learn) ? body.learn : "",
+      native: myFacts.native,
+      learns: learnsOf(myFacts, typeof body.learn === "string" && LANG.test(body.learn) ? body.learn : null),
+      speaks: speaksOf(myFacts, typeof body.ui === "string" && LANG.test(body.ui) ? body.ui : null),
+    };
     const now = Date.now();
     // 정렬: 마지막으로 본 시각 + 기여 가산(최근 30일, 최대 6시간) + 관심사 겹침(하나에 20분, 최대 1시간).
     // 14일 창은 그대로라 오래 안 온 사람이 기여만으로 위에 오지는 않는다.
@@ -102,6 +112,9 @@ export async function POST(request: NextRequest) {
       const nickname = account.profile.nickname || account.username || "";
       if (!nickname) return;
       const facts = factsOf(account.profile.facts);
+      const learns = learnsOf(facts, row.presence.learn);
+      const speaks = speaksOf(facts, row.presence.ui);
+      if (match && !langMatches(match, { learns, speaks }, myLangs)) return;
       const show = showOf(account.profile.show);
       const contrib = contribs.at(index);
       const shared = sharedInterests(myInterests, facts.interests);
@@ -118,6 +131,8 @@ export async function POST(request: NextRequest) {
           lastSeen: row.presence.at,
           isFollowing: following.includes(account.id),
           native: facts.native,
+          learns,
+          speaks,
           country: facts.country,
           interests: facts.interests.slice(0, 3),
           sharedInterests: shared,

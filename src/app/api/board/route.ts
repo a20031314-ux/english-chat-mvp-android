@@ -31,13 +31,17 @@ import {
 } from "@/lib/rooms/board";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
 import { suspendedResponse } from "@/lib/server/suspension";
+import { factsOf, learnsOf, speaksOf } from "@/lib/account/profileFacts";
+import { langMatches } from "@/lib/rooms/langMatch";
 
 export const dynamic = "force-dynamic";
 
 /**
  * 게시판(rooms/board.ts). 로그인한 사람만 읽고 쓴다. 모델 호출 없음(번역은 /api/translate).
  *
- *   list { language?, offset? }                → { posts, authors }   서로 차단한 사람의 글은 뺀다
+ *   list { language?, offset?, match?, ui? }   → { posts, authors }   서로 차단한 사람의 글은 뺀다
+ *        match "both"(2026-10-23, language와 같이): 그 언어로 쓴 글 중 글쓴이가 내 모국어(없으면 내가 쓰는 말)를 쓰는 사람 것만
+ *        (lib/rooms/langMatch.ts — 글쓴이 언어는 프로필, 없으면 그 글의 언어를 배우는 사람으로 본다)
  *   open { postId }                            → { post, comments, authors }
  *   post { language, text }                    → { post }             하루 10개
  *   edit { postId, text } · delete { postId }  → 쓴 사람만
@@ -59,8 +63,12 @@ function answer<T>(request: NextRequest, result: WriteResult<T>, key: string) {
 }
 
 /** 글쓴이·댓글 단 사람의 이름. 계정이 없어진 사람은 빼고, 서로 차단한 사람도 뺀다. */
-async function authorsOf(me: string, ids: string[]): Promise<{ authors: BoardAuthor[]; hidden: Set<string> }> {
+async function authorsOf(
+  me: string,
+  ids: string[],
+): Promise<{ authors: BoardAuthor[]; hidden: Set<string>; speaks: Map<string, string[]> }> {
   const unique = [...new Set(ids)];
+  const speaks = new Map<string, string[]>();
   const [mine, accounts, theirs] = await Promise.all([readBlocked(me), readAccounts(unique), readBlockedMany(unique)]);
   const hidden = new Set<string>();
   const authors: BoardAuthor[] = [];
@@ -71,8 +79,9 @@ async function authorsOf(me: string, ids: string[]): Promise<{ authors: BoardAut
       return;
     }
     authors.push({ id, nickname: account.profile.nickname || account.username || "" });
+    speaks.set(id, speaksOf(factsOf(account.profile.facts), null));
   });
-  return { authors, hidden };
+  return { authors, hidden, speaks };
 }
 
 export async function POST(request: NextRequest) {
@@ -96,7 +105,15 @@ export async function POST(request: NextRequest) {
     const language = isLearningLanguageCode(body.language) ? body.language : undefined;
     const offset = typeof body.offset === "number" && Number.isFinite(body.offset) ? body.offset : 0;
     const posts = await listPosts({ language, offset });
-    const { authors, hidden } = await authorsOf(me, posts.map((post) => post.author));
+    const { authors, hidden, speaks } = await authorsOf(me, posts.map((post) => post.author));
+    if (language && body.match === "both") {
+      const myFacts = factsOf((await readAccount(me))?.profile.facts);
+      const ui = typeof body.ui === "string" && isLearningLanguageCode(body.ui) ? body.ui : null;
+      const mine = { current: language, native: myFacts.native, learns: learnsOf(myFacts, language), speaks: speaksOf(myFacts, ui) };
+      for (const post of posts) {
+        if (!langMatches("both", { learns: [post.language], speaks: speaks.get(post.author) ?? [] }, mine)) hidden.add(post.author);
+      }
+    }
     // 다음 쪽은 거르기 전 개수로 넘긴다(차단으로 빠진 글이 있어도 같은 자리부터).
     return jsonWithCors(request, {
       posts: await withLikes(me, posts.filter((post) => !hidden.has(post.author))),

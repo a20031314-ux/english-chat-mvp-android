@@ -27,7 +27,8 @@ import { requestDm } from "@/lib/rooms/openDm";
 import { Face, ProfileSheet, photoErrorText } from "./RoomParts";
 
 /**
- * 게시판(사람 탭의 "게시판" 보기, rooms/board.ts): 최신순 글, 전체 / 내 학습 언어,
+ * 게시판(사람 탭의 "게시판" 보기, rooms/board.ts): 최신순 글, 전체 / 같은 언어를 배우는 사람(내 학습 언어로 쓴 글)
+ * / 배우는 언어·쓰는 말이 같은 사람(그중 글쓴이가 내 모국어를 쓰는 글 — 서버가 거름, lib/rooms/langMatch.ts),
  * 글쓰기, 글을 누르면 시트(전체 글·내 언어로 보기·댓글). 고치기·지우기는 쓴 사람에게만 보인다
  * (서버도 같은 규칙). 글쓴이 이름을 누르면 프로필 시트 — 팔로우·메시지·차단·신고(글이 근거로 같이 감).
  */
@@ -36,9 +37,12 @@ type Names = Record<string, string>;
 
 const FILTER_KEY = "boardFilter";
 
-function readFilter(): "all" | "mine" {
+type BoardFilter = "all" | "mine" | "both";
+
+function readFilter(): BoardFilter {
   try {
-    return localStorage.getItem(FILTER_KEY) === "mine" ? "mine" : "all";
+    const saved = localStorage.getItem(FILTER_KEY);
+    return saved === "mine" || saved === "both" ? saved : "all";
   } catch {
     return "all";
   }
@@ -60,7 +64,7 @@ const merge = (names: Names, authors: BoardAuthor[]): Names => ({
 
 export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: string; targetLanguage: string }) {
   const me = useSyncExternalStore(subscribeSession, () => readCachedAccount()?.id ?? null, () => null);
-  const [filter, setFilter] = useState<"all" | "mine">(readFilter);
+  const [filter, setFilter] = useState<BoardFilter>(readFilter);
   const [posts, setPosts] = useState<BoardPost[] | null>(null);
   const [names, setNames] = useState<Names>({});
   const [next, setNext] = useState(0);
@@ -68,21 +72,22 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
   const [writing, setWriting] = useState(false);
   const [openId, setOpenId] = useState<string | null>(null);
 
-  const language = filter === "mine" ? targetLanguage : undefined;
+  const language = filter === "all" ? undefined : targetLanguage;
+  const both = filter === "both";
   const load = useCallback(
     async (offset: number) => {
-      const body = await boardList({ language, offset });
+      const body = await boardList({ language, offset, ...(both ? { match: "both" as const, ui: locale } : {}) });
       setNames((current) => merge(current, body.authors));
       setPosts((current) => (offset === 0 ? body.posts : [...(current ?? []), ...body.posts]));
       setNext(body.next);
       setMore(body.next - offset >= 20);
     },
-    [language],
+    [language, both, locale],
   );
 
   useEffect(() => {
     let cancelled = false;
-    void boardList({ language, offset: 0 })
+    void boardList({ language, offset: 0, ...(both ? { match: "both" as const, ui: locale } : {}) })
       .then((body) => {
         if (cancelled) return;
         setNames((current) => merge(current, body.authors));
@@ -96,9 +101,10 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
     return () => {
       cancelled = true;
     };
-  }, [language]);
+  }, [language, both, locale]);
 
-  const choose = (value: "all" | "mine") => {
+  const choose = (value: BoardFilter) => {
+    if (value !== filter) setPosts(null);
     setFilter(value);
     try {
       localStorage.setItem(FILTER_KEY, value);
@@ -110,21 +116,23 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
   return (
     <div>
       <div className="flex items-center gap-1">
-        {(["all", "mine"] as const).map((value) => (
+        <div className="flex min-w-0 gap-1 overflow-x-auto">
+        {(["all", "mine", "both"] as const).map((value) => (
           <button
             key={value}
             type="button"
             aria-pressed={filter === value}
             onClick={() => choose(value)}
-            className={`rounded-lg px-2.5 py-1 text-caption ${filter === value ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
+            className={`shrink-0 rounded-lg px-2.5 py-1 text-caption ${filter === value ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
           >
-            {value === "all" ? t.filterAll : t.boardMine}
+            {value === "all" ? t.filterAll : value === "mine" ? t.peopleSame : t.peopleSameBoth}
           </button>
         ))}
+        </div>
         <button
           type="button"
           onClick={() => setWriting(true)}
-          className="tb-btn ms-auto rounded-lg px-3 py-1.5 text-caption font-semibold"
+          className="tb-btn ms-auto shrink-0 rounded-lg px-3 py-1.5 text-caption font-semibold"
         >
           {t.boardWrite}
         </button>
