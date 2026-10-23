@@ -209,6 +209,8 @@ const STORE_TABS_ITEMS = [
   { shot: "quote" },
   { shot: "layouts" },
   { shot: "rooms-mini" },
+  // 💡 힌트(합성 Room 장의 세부 카드). 가짜 마이크 CAPTURE_MIC_WAV가 필요.
+  { shot: "hint" },
   { shot: "host" },
   { shot: "account" },
 ];
