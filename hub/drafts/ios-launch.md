@@ -143,3 +143,4 @@ App Store Connect API 키로 Xcode가 서명을 스스로 만들고(클라우드
 - 코드: `storeListingUrl()` 기본값을 실제 주소 `https://apps.apple.com/app/id6824542951`로(다음 iOS 빌드부터).
 - 심사 중 사람 일: Small Business Program 신청, RevenueCat App Store 서버 알림 URL, 한국어 현지화(설명·키워드·스크린샷 — 버전이 잠겨 다음 버전이나 제출 취소 뒤), 출시 방식(자동).
 - **심사 빌드는 85.10**(진단 끔, 2026-10-22 18:45 UTC 실행). 처음 제출한 85.9는 진단 켬(`NEXT_PUBLIC_IOS_DIAG=1`) — 결제 화면에 offering 글이 보임. 다시 제출할 때 빌드를 85.10으로 바꿈.
+- 2026-10-23 15:0x KST 다시 제출: 앱 버전 + 구독 그룹 + 구독 3 + 포인트 4(심사 정보 스크린샷 = 실제 아이폰 결제 화면). 첫 제출(05:12)은 개발자가 취소.

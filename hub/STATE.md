@@ -14,7 +14,7 @@
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
 | 다음 앱 버전 | 2.72 (versionCode 86) — **자름(2026-10-23, 가상 사용자 전체 점검 release272 뒤)**: 프로필 칩·국기·도움됐어요, Room 라이어 게임·마피아·관전자 추리·40명, 아이콘·짤 묶음, 보낸 줄 지우기·게시판 ♡, 아랍어 인용 줄 방향. 새로워진 점 3장, 출시 노트 86 PR. 빌드·Play 업로드는 사람(`npm run pc:build`). 2.71(85)은 Play에 올림(사용자 2026-10-23) | — |
-| iOS | **App Store 심사 제출(2026-10-23 05:12, 2.71 빌드 85.9, 앱 ID 6824542951)** — 사람 기능·광고 없는 1차. 심사 대기 중. 제출 목록에 인앱 상품이 없음(확인 필요). 남은 일 `hub/drafts/ios-launch.md` "심사 중" | `npm run build:ios`, `hub/drafts/ios-launch.md` |
+| iOS | **App Store 심사 다시 제출(2026-10-23 15:0x KST)** — 2.71 + 구독 그룹·구독 3·포인트 4 한 제출(처음 05:12 제출은 상품 빠짐·진단 빌드 85.9라 취소). 심사 대기 중. 앱 ID 6824542951. 남은 일 `hub/drafts/ios-launch.md` "심사 중" | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할
 
