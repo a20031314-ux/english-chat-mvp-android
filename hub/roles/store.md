@@ -9,6 +9,7 @@
   홍보 쇼츠는 반대로 한 편에 기능 하나만, 15초 안팎, 영어판을 먼저 만들고 다른 언어로 넓힌다(사용자 결정 2026-10-19). `store-shots/promo/`.
   목소리 대화판(`make.mjs talk <locale>`, Room 녹화 재사용): 사람마다 다른 TTS 목소리, 세부 기능은 확대 창으로 띄움(사용자 요청 2026-10-19).
   흐름은 기능마다 "내레이터 설명(UI 언어, 화면 멈춤) → 실제 대화"(사용자 요청 2026-10-19). 약 50초.
+  홍보 계획·시리즈·언어판(2026-10-24): `hub/drafts/marketing-videos.md` — AI 학습(채팅·분석·오류교정·통화) / 사용자 간(단체방), 언어판 8개는 `store-shots/promo/combos.mjs`.
 - 앱 안 업데이트 배너 기준 `RECOMMENDED_APP_VERSION` — Play에 실제로 공개된 뒤에만 올린다.
 - 사용자가 PC에서 빌드할 때 막히면 돕는다 (`npm run build:android` → Sync → Signed Bundle).
 
@@ -42,6 +43,7 @@
 | 2.72 | 86 | 프로필 사실 칩·국기·도움됐어요·올린 글, Room 라이어 게임·마피아·관전자 추리·40명·자리 막기, 아이콘·짤 묶음, 보낸 줄 지우기·대화 목록 ⋯, 게시판 ♡·목록 사진, 아랍어 인용 줄 방향. 새로워진 점 3장(profile-facts·room-game·icons, 14개 언어 그림), 사용법 3칸 새 글(2.71 이하는 `roomsBefore272.json`), 사람 사용법 그림 다시, 출시 노트 86 PR | — (Play 공개 뒤) |
 
 ## 열린 일
+- **홍보 쇼츠 (2026-10-24, `hub/drafts/marketing-videos.md`):** 오류교정 편(`record-fix.mjs` → `make.mjs fix`) 8개 언어 만듦. 다음: 분석·통화·단체방 편, 채팅 편을 새 조합·지금 화면으로 다시, 옛 room·people·talk 편은 💡 힌트(10-23 뺌)가 나와 쓰지 않음. 2.72 공개 뒤 다시 찍기. 채널(언어별)·올리기 버튼은 사람이 채널 만든 뒤.
 - **iOS 운영 방향(사용자 2026-10-22, `hub/drafts/ios-ops-2026-10-22.md`):** 기간 없이 — AI 학습은 안드로이드와 같게(AI 학습이 바뀐 안드로이드 버전은 같은 버전을 iOS에도), 사람 기능은 안드로이드에서 안정 기준(문서 1절 5가지)을 넘으면 iOS에. 랜덤 연결은 iOS에 안 넣음.
 - **iOS 1차 (2026-10-18, `hub/drafts/ios-launch.md`):** 코드 준비 끝(`ios/`, 방·메시지·Google 로그인 없음). 사용자: 아이폰·개발자 계정 있음, 빌드는 클라우드.
   `.github/workflows/ios-testflight.yml`(사람이 누름, API 키 클라우드 서명 → TestFlight) 있음 — 사람이 "클라우드 빌드 설정" 8단계(번들 ID·App ID·앱·API 키·팀 ID·GitHub environment `ios`) 뒤 첫 실행.

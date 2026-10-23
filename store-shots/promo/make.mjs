@@ -13,6 +13,7 @@ import { execFileSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { chromium } from "playwright";
+import { FONT, LEARN, RTL, SPEECH, STORE_LINE } from "./combos.mjs";
 
 const args = process.argv.slice(2);
 const story = args.length > 1 ? args[0] : "chat";
@@ -23,7 +24,8 @@ const SRC = story === "talk" ? "room" : story;
 const DIR = story === "chat" ? path.join(ROOT, "tmp", "promo", locale) : path.join(ROOT, "tmp", "promo", SRC, locale);
 const API = process.env.API_BASE || "https://english-chat-mvp.vercel.app";
 const ev = JSON.parse(fs.readFileSync(path.join(DIR, "events.json"), "utf8"));
-const target = locale === "en" ? "es" : "en";
+// 오류교정(fix)부터는 combos.mjs의 학습 조합, 옛 이야기는 예전 조합(en → es, 나머지 → en).
+const target = story === "fix" ? LEARN[locale] : locale === "en" ? "es" : "en";
 
 /** 자막(장면 키마다)과 끝 화면 문구, 이야기마다. */
 const COPY = {
@@ -87,9 +89,19 @@ COPY.invite = {
   es: { i1: "¿Estudias solo?\nTrae a un amigo.", i2: "Un enlace\ny ya está dentro", i3: "Tu propio\nequipo de estudio", i4: "Días juntos,\nquedadas fijas", i5: "Metas y frases\ncompartidas", endTitle: "Aprende con amigos,\nno solo", endSub: "Invitaciones, compañeros y espacios de equipo" },
   hi: { i1: "अकेले पढ़ाई?\nदोस्त को बुलाएँ", i2: "एक लिंक,\nऔर वे अंदर", i3: "आपकी अपनी\nस्टडी टीम", i4: "साथ बिताए दिन,\nतय मुलाक़ातें", i5: "लक्ष्य और वाक्यांश\nसाथ में", endTitle: "दोस्तों के साथ सीखें,\nअकेले नहीं", endSub: "दोस्त बुलाएँ · लर्निंग मेट · टीम स्पेस" },
 };
-const FONT = { ko: "'Noto Sans CJK KR', sans-serif", ja: "'Noto Sans CJK JP', sans-serif", zh: "'Noto Sans CJK SC', sans-serif", hi: "'Noto Sans Devanagari', 'Noto Sans', sans-serif" };
-const STORE_LINE = { ko: "Google Play에서 만나요", en: "Get it on Google Play", ja: "Google Playで配信中", zh: "在 Google Play 下载", es: "Disponible en Google Play", hi: "Google Play पर पाएँ" };
 COPY.talk = COPY.room;
+// 오류교정: 학습 언어로 틀린 문장 → 내 줄 아래 ✎ 칩 → 고친 문장(녹화: record-fix.mjs). 학습 조합은 combos.mjs LEARN.
+COPY.fix = {
+  en: { hook: "Is my Korean\nright?", type: "Just write it.\nMistakes are fine.", chip: "Something off?\nIt's marked under your line", fixed: "The fix sits\nright below yours", endTitle: "Write first.\nGet fixed right below.", endSub: "Learn languages by chatting with AI" },
+  es: { hook: "¿Está bien\nmi inglés?", type: "Escribe sin miedo.\nEquivocarse vale.", chip: "¿Algo falla?\nSe marca bajo tu frase", fixed: "La corrección,\njusto debajo", endTitle: "Escribe primero.\nCorrige justo debajo.", endSub: "Aprende idiomas conversando con IA" },
+  ar: { hook: "هل إنجليزيتي\nصحيحة؟", type: "اكتب فقط.\nالخطأ مسموح.", chip: "هناك خطأ؟\nتظهر علامة تحت جملتك", fixed: "الجملة المصحّحة\nتحت جملتك مباشرة", endTitle: "اكتب أولاً،\nوالتصحيح تحتها مباشرة", endSub: "تعلّم اللغات بالمحادثة مع الذكاء الاصطناعي" },
+  id: { hook: "Bahasa Inggrisku\nsudah benar?", type: "Tulis saja.\nSalah itu wajar.", chip: "Ada yang salah?\nAda tanda di bawah kalimatmu", fixed: "Kalimat yang benar\nlangsung di bawahnya", endTitle: "Tulis dulu,\nkoreksi langsung di bawahnya", endSub: "Belajar bahasa dengan mengobrol bersama AI" },
+  vi: { hook: "Câu tiếng Anh này\nđúng chưa?", type: "Cứ viết đi.\nSai cũng không sao.", chip: "Có lỗi?\nCó dấu ngay dưới câu của bạn", fixed: "Câu đã sửa\nngay bên dưới", endTitle: "Viết trước,\nsửa ngay bên dưới", endSub: "Học ngoại ngữ bằng cách trò chuyện với AI" },
+  th: { hook: "ภาษาอังกฤษของฉัน\nถูกไหม?", type: "พิมพ์ไปเลย\nผิดได้ไม่เป็นไร", chip: "มีจุดผิด?\nมีป้ายขึ้นใต้ประโยค", fixed: "ประโยคที่แก้แล้ว\nอยู่ใต้ประโยคของคุณ", endTitle: "เขียนก่อน\nแล้วแก้ให้ใต้ประโยคเลย", endSub: "เรียนภาษาด้วยการคุยกับ AI" },
+  ko: { hook: "일본어로 쓴 이 문장,\n맞을까?", type: "틀려도 괜찮아요\n그냥 써 보세요", chip: "고칠 곳이 있으면\n내 문장 아래 표시", fixed: "고친 문장은\n바로 아래에", endTitle: "먼저 써 보고,\n바로 아래서 고쳐요", endSub: "AI와 대화하며 배우는 언어 앱" },
+  ja: { hook: "この韓国語、\n合ってる？", type: "間違えてもOK\nまず書いてみて", chip: "直すところがあれば\n文の下に表示", fixed: "直した文は\nすぐ下に", endTitle: "まず書いて、\nすぐ下で直す", endSub: "AIと話して学ぶ語学アプリ" },
+};
+const DIR_ATTR = RTL.has(locale) ? ' dir="rtl"' : "";
 const C = { font: FONT[locale] ?? "'Noto Sans', sans-serif", store: STORE_LINE[locale] ?? STORE_LINE.en, ...(COPY[story]?.[locale] ?? {}) };
 if (!COPY[story]?.[locale]) throw new Error(`no promo copy for ${story}/${locale}`);
 
@@ -230,11 +242,33 @@ STORIES.talk = () => {
     endNarr: tts(N.end, ui, NARRATOR, 1.12),
   };
 };
+// 오류교정: 칩 장면부터 내 줄(말풍선)을 확대해 고친 문장까지 이어 보여 주고, 고친 문장을 학습 언어 목소리로.
+STORIES.fix = () => {
+  const b = ev.bubbleBox ?? { x: 0.1, y: 0.2, w: 0.8, h: 0.12 };
+  const by = 0.3;
+  // 말풍선 가운데가 창 가운데 오게: 확대한 화면에서 잘라 낼 위치(0~1).
+  const at = (c) => Math.min(1, Math.max(0, (c * (1 + by) - 0.5) / by));
+  const zoom = { by, x: +at(b.x + b.w / 2).toFixed(3), y: +at(b.y + b.h / 2).toFixed(3) };
+  const lines = String(ev.bubbleText ?? "").split("\n").map((l) => l.trim()).filter(Boolean);
+  const chipStart = ev.chip - 0.2;
+  const chipEnd = ev.chipTap + 0.1;
+  return {
+    segs: [
+      [Math.max(0, ev.typeStart - 1.6), ev.typeStart + 0.1, 1, "hook"],
+      [ev.typeStart + 0.1, ev.sentAt + 0.2, 1.6, "type"],
+      [ev.sentAt + 0.2, chipStart, Math.max(1, (chipStart - ev.sentAt - 0.2) / 1.2), "type"],
+      [chipStart, chipEnd, 1, "chip", zoom],
+      [chipEnd, ev.end - 0.2, 1, "fixed", zoom],
+    ],
+    voice: lines.at(-1) ?? "",
+    voiceIn: chipEnd - chipStart + 0.5,
+  };
+};
 const plan = STORIES[story]();
 
 // ── 1. 장면 자르기(원본 시각) ──
 const segs = plan.segs;
-const END_CARD = plan.endNarr ? Math.max(2.6, plan.endNarr.len + 1.0) : story === "chat" || story === "people" ? 2.6 : 2.2;
+const END_CARD = plan.endNarr ? Math.max(2.6, plan.endNarr.len + 1.0) : story === "chat" || story === "people" || story === "fix" ? 2.6 : 2.2;
 let out = 0;
 const timeline = segs.map(([a, b, speed, cap, zoom, extra]) => {
   const dur = (b - a) / speed;
@@ -269,14 +303,14 @@ const PALETTE = ["#FF8A6B", "#7CC4FF", "#C6F25A", "#FFD15C"];
 const accent = Object.fromEntries(capKeys.map((k, i) => [k, PALETTE[i % PALETTE.length]]));
 for (const key of capKeys) {
   await png(path.join(DIR, `cap-${key}.png`), `
-    <div style="position:absolute;top:96px;left:0;right:0;text-align:center">
+    <div${DIR_ATTR} style="position:absolute;top:96px;left:0;right:0;text-align:center">
       <div style="display:inline-block;width:56px;height:8px;border-radius:4px;background:${accent[key]};margin-bottom:26px"></div>
       <h1 style="margin:0;font-size:88px;line-height:1.14;font-weight:900;letter-spacing:-.02em;white-space:pre-line">${esc(C[key])}</h1>
     </div>`);
 }
 const icon = fs.readFileSync(path.join(ROOT, "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png")).toString("base64");
 await png(path.join(DIR, "end.png"), `
-  <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0">
+  <div${DIR_ATTR} style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:0">
     <img src="data:image/png;base64,${icon}" style="width:220px;height:220px;border-radius:50%">
     <div style="margin-top:40px;font-size:64px;font-weight:800;letter-spacing:-.01em">languagebank</div>
     <h1 style="margin:46px 0 0;font-size:84px;line-height:1.16;font-weight:900;white-space:pre-line">${esc(C.endTitle)}</h1>
@@ -307,7 +341,7 @@ for (const s of timeline) if (s.narr) voiceTracks.push({ ...s.narr, at: s.at + 0
 if (plan.endNarr) voiceTracks.push({ ...plan.endNarr, at: phoneDur + 0.35 });
 if (plan.voice) {
   // curl: 작업 공간 프록시에서 Node fetch가 끊길 때가 있다.
-  const url = `${API}/api/tts?text=${encodeURIComponent(plan.voice)}&lang=${target === "en" ? "en-US" : "es-ES"}`;
+  const url = `${API}/api/tts?text=${encodeURIComponent(plan.voice)}&lang=${SPEECH[target] ?? "en-US"}`;
   try {
     execFileSync("curl", ["-sSf", "-o", path.join(DIR, "voice.pcm"), "-H", `x-rc-user: promo-voice-${locale}`, url]);
     execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-f", "s16le", "-ar", "24000", "-ac", "1", "-i", path.join(DIR, "voice.pcm"), path.join(DIR, "voice.wav")]);
