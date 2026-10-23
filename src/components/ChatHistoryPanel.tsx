@@ -16,6 +16,10 @@ type ChatHistoryPanelProps = {
   onDeleteSession: (id: string) => void;
   onClearSessions: () => void;
   onStartNewChat: () => void;
+  /** 지난 AI 통화(예전 통화 첫 화면의 "지난 대화" — 2026-10-23부터 여기와 대화 안 카드). */
+  calls?: { id: string; title: string; at: number }[];
+  onOpenCall?: (id: string) => void;
+  onDeleteCall?: (id: string) => void;
 };
 
 export function ChatHistoryPanel({
@@ -29,6 +33,9 @@ export function ChatHistoryPanel({
   onDeleteSession,
   onClearSessions,
   onStartNewChat,
+  calls = [],
+  onOpenCall,
+  onDeleteCall,
 }: ChatHistoryPanelProps) {
   useEffect(() => {
     if (!isOpen || typeof document === "undefined") {
@@ -150,6 +157,32 @@ export function ChatHistoryPanel({
               })}
             </div>
           )}
+          {calls.length > 0 ? (
+            <div className="mt-5">
+              <p className="mb-2 text-xs font-semibold text-slate-200">{ui.homeTabCall}</p>
+              <div className="space-y-2">
+                {calls.map((call) => (
+                  <article key={call.id} className="flex items-center gap-2 rounded-lg border border-white/10 bg-[#121212] p-3 text-xs">
+                    <button type="button" onClick={() => onOpenCall?.(call.id)} className="min-w-0 flex-1 text-start">
+                      <p dir="auto" className="truncate font-medium leading-snug text-slate-100">
+                        {call.title}
+                      </p>
+                      <p className="mt-1 text-slate-500">{formatShortDate(call.at, locale)}</p>
+                    </button>
+                    {onDeleteCall ? (
+                      <button
+                        type="button"
+                        onClick={() => onDeleteCall(call.id)}
+                        className="shrink-0 rounded-md border border-white/15 px-2 py-1 text-[11px] text-slate-200 hover:bg-white/10"
+                      >
+                        {ui.delete}
+                      </button>
+                    ) : null}
+                  </article>
+                ))}
+              </div>
+            </div>
+          ) : null}
         </div>
       </aside>
     </div>

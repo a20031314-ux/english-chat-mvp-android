@@ -32,6 +32,15 @@ export type AppIntents = {
     /** For today's pack: questions already answered in an earlier call, so its count carries on. */
     packAnswered?: number;
   };
+  /**
+   * AI 튜터와 통화(2026-10-23, conversation-unify 3단계 — 통화 첫 화면 없이 📞로 바로). `resumeId`면 멈춘 그 통화를 이어서.
+   * CallHost가 받는다(앱 어디서나 떠 있는 통화 화면).
+   */
+  startCall: { resumeId?: string };
+  /** 저장된 통화 하나를 돌아보기로 연다(대화 안 🗒 통화 기록 카드·지난 대화 서랍에서). */
+  openCall: { id: string };
+  /** 내 문장 말해보기(예전 통화 첫 화면 → AI 대화 ⋮ 메뉴). */
+  sayOwnLine: Record<string, never>;
   /** Open a topic of the study map, for its tasks. */
   openTopic: { topicId: string };
   /** 노트(My)의 한 부분을 연다 — 단어장 탭이 노트로 들어온 뒤 "단어장으로" 가던 곳. */

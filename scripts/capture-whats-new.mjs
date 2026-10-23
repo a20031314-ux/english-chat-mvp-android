@@ -1656,8 +1656,8 @@ const STEPS = {
     await wait(800);
   },
   async "call-pack"({ page, ui, wait }) {
-    // The call tab can keep a request open, so "networkidle" may never come.
-    await page.goto(`${BASE}/?screen=roleplay`, { waitUntil: "domcontentloaded" });
+    // 2026-10-23부터 오늘의 팩은 대화 목록 AI 튜터 아래(통화 첫 화면 없음). 사람 기능이 없는 빌드면 AI 대화의 빈 화면.
+    await page.goto(`${BASE}/?screen=talk`, { waitUntil: "domcontentloaded" });
     const card = page.getByText(exactly(ui.packTitle)).first();
     for (let i = 0; i < 40 && !(await card.count()); i++) await wait(500);
     if (!(await card.count())) throw new Error("no pack card");
@@ -1675,12 +1675,14 @@ const STEPS = {
     await STEPS.calltools({ page, ui, locale, wait, target });
   },
   async "call-ownline"({ page, ui, wait, target }) {
-    await page.goto(`${BASE}/?screen=roleplay`, { waitUntil: "domcontentloaded" });
-    const open = page.getByRole("button", { name: exactly(ui.roleplayOwnLineOpen) });
-    for (let i = 0; i < 40 && !(await open.count()); i++) await wait(500);
-    await open.first().click();
+    // 2026-10-23부터 AI 대화 ⋮ → "내 문장 말해보기"(시트).
+    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
+    const menu = page.getByRole("button", { name: exactly(ui.sessionMenu) });
+    for (let i = 0; i < 40 && !(await menu.count()); i++) await wait(500);
+    await menu.first().click();
+    await page.getByRole("button", { name: exactly(ui.roleplayOwnLineOpen) }).first().click();
     await wait(800);
-    const field = page.getByPlaceholder(ui.roleplayOwnLinePlaceholder);
+    const field = page.getByLabel(ui.roleplayOwnLinePlaceholder);
     await field.fill(OWN_LINE[target] ?? OWN_LINE.en);
     await field.scrollIntoViewIfNeeded();
     await page.mouse.wheel(0, 200);
@@ -1819,9 +1821,12 @@ const STEPS = {
       }];
       localStorage.setItem("roleplayConversations", JSON.stringify(saved));
     }, [lines ?? PAST_CALL[target], target, now]);
-    // The call tab can keep a request open, so "networkidle" may never come.
-    await page.goto(`${BASE}/?screen=roleplay`, { waitUntil: "domcontentloaded" });
-    await wait(4000);
+    // 2026-10-23부터 지난 통화는 AI 대화 ⋮ → 채팅 기록의 "통화" 목록(과 대화 안 🗒 카드).
+    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
+    await wait(3000);
+    await page.getByRole("button", { name: exactly(ui.sessionMenu) }).first().click();
+    await page.getByRole("button", { name: exactly(ui.chatHistoryTitle) }).first().click();
+    await wait(800);
     await page.getByRole("button", { name: new RegExp(escape(PAST_CALL[target][1].text)) }).first().click();
     await wait(1500);
   },

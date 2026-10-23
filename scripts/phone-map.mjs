@@ -34,7 +34,7 @@ const OPEN = {
   feedback: `${APP}/?screen=talk`,
   talk: `${APP}/?screen=talk`,
   chat: `${APP}/?screen=chat`,
-  call: `${APP}/?screen=roleplay`,
+  call: `${APP}/?screen=chat`,
   dm: `${APP}/?screen=talk`,
   groups: `${APP}/?screen=talk`,
   video: `${APP}/?screen=video`,
@@ -78,7 +78,7 @@ const modes = {
   },
   ios: {
     label: "iOS 1차",
-    tabs: ["chat", "roleplay", "video", "map"].map((t) => ({ tab: t, node: TAB_NODE[t], label: TAB_LABEL[t], icon: TAB_ICON[t], open: `${APP}/?screen=${t}` })),
+    tabs: ["chat", "video", "map"].map((t) => ({ tab: t, node: TAB_NODE[t], label: TAB_LABEL[t], icon: TAB_ICON[t], open: `${APP}/?screen=${t}` })),
   },
 };
 

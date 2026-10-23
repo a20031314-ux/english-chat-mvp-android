@@ -12,7 +12,9 @@ import { TAB_ICON_META } from "@/components/TabIcons";
 import { TargetLanguageSelector } from "@/components/TargetLanguageSelector";
 import { UpdateNotice } from "@/components/UpdateNotice";
 import { WhatsNewSheet } from "@/components/WhatsNewSheet";
-import { RoleplayTab, hasRoleplay } from "@/components/RoleplayTab";
+import { CallHost, hasRoleplay } from "@/components/CallHost";
+import { PackCard } from "@/components/PackCard";
+import { readCalls, readCallsOnServer, subscribeCalls } from "@/lib/roleplay/callStore";
 import { StudyMapTab } from "@/components/studyMap/StudyMapTab";
 import { onAppIntent, sendAppIntent } from "@/lib/appIntents";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
@@ -84,6 +86,8 @@ function resolveTab(raw: string | null | undefined): AppTab {
   if (raw === "watch" || raw === "youtube") return "video";
   // 단어장 탭은 My의 노트로 들어갔다(2026-10-19).
   if (raw === "vocab") return "map";
+  // AI 통화는 탭이 아니다(2026-10-23): 옛 링크는 AI 대화로(마이크는 사람이 📞를 눌렀을 때만 연다).
+  if (raw === "roleplay") return "chat";
   if (isAppTab(raw)) return raw;
   return "chat";
 }
@@ -162,10 +166,14 @@ function AppHomeInner({
       stopWatching();
     };
   }, []);
-  // 통화·말하는 방에서는 앱 오프닝 광고를 띄우지 않는다.
+  // 통화·말하는 방에서는 앱 오프닝 광고를 띄우지 않는다. AI 통화는 탭이 아니라 어디서나 떠 있는 층(CallHost)이라 따로 받는다.
+  const [callActive, setCallActive] = useState(false);
+  // 통화가 끝나 저장되면 오늘의 팩 카드를 다시 읽는다.
+  const savedCalls = useSyncExternalStore(subscribeCalls, readCalls, readCallsOnServer);
+  const callsVersion = savedCalls.reduce((latest, call) => Math.max(latest, call.updatedAt), 0);
   useEffect(() => {
-    setAppOpenAllowedHere(!NO_APP_OPEN_TABS.includes(shownTab));
-  }, [shownTab]);
+    setAppOpenAllowedHere(!callActive && !NO_APP_OPEN_TABS.includes(shownTab));
+  }, [shownTab, callActive]);
   // 배너는 둘러보는 화면에만, 하단 탭 바로 위에.
   const navRef = useRef<HTMLElement | null>(null);
   useEffect(() => {
@@ -245,6 +253,11 @@ function AppHomeInner({
         sendAppIntent("openGuide", { chapter: FEATURE_CHAPTER[hidden], hidden: true });
         return;
       }
+      // AI 통화는 탭이 아니다(2026-10-23): 📞·"통화 해보기"는 바로 통화(CallHost), 화면은 그대로.
+      if (requested === "roleplay") {
+        sendAppIntent("startCall", {});
+        return;
+      }
       // 단어장은 탭이 아니라 My 노트 안에 있다: My로 가서 단어장을 연다.
       const next: AppTab = requested === "vocab" ? "map" : requested;
       if (requested === "vocab") sendAppIntent("openNotes", { section: "words" });
@@ -258,7 +271,18 @@ function AppHomeInner({
   useEffect(() => onAppIntent("openTab", ({ tab: next }) => openTab(next)), [openTab]);
   // A conversation to practise something goes to the tab it is held in; the
   // tab starts it (appIntents.ts). A map topic opens on the map.
-  useEffect(() => onAppIntent("practice", ({ tab: next }) => openTab(next)), [openTab]);
+  useEffect(
+    () =>
+      onAppIntent("practice", ({ tab: next }) => {
+        // 통화로 하는 연습은 CallHost가 그 자리에서 연다. 통화를 숨겼으면 사용법의 그 장으로.
+        if (next === "roleplay") {
+          if (offList.split(",").includes("call")) sendAppIntent("openGuide", { chapter: FEATURE_CHAPTER.call, hidden: true });
+          return;
+        }
+        openTab(next);
+      }),
+    [openTab, offList],
+  );
   useEffect(() => onAppIntent("openTopic", () => openTab("map")), [openTab]);
 
   useEffect(() => {
@@ -297,7 +321,7 @@ function AppHomeInner({
       : socialTabItems.filter((item) => item.id !== "random" && !tabHidden(item.id))
     : aiTabItems;
   // 창구가 아니면 쓸 기능 고르기의 하단 탭(lib/features.ts bottomTabs — 구조도 미리보기와 같은 계산)을 따른다.
-  const featureTabs = bottomTabs(featureOff, { social: socialOn, callAvailable: roleplayAvailable });
+  const featureTabs = bottomTabs(featureOff, { social: socialOn });
   const allItems = [...socialTabItems, ...aiTabItems.filter((item) => item.id === "chat" || item.id === "roleplay"), { id: "roleplay" as const, label: ui.homeTabCall }];
   const shownItems = door
     ? tabItems
@@ -386,7 +410,7 @@ function AppHomeInner({
             <FeedbackFixedSheet locale={locale} />
             {/* 운영자가 사람 기능을 정지한 계정이 쓰려 할 때(lib/rooms/suspended.ts). */}
             <SuspendedNotice locale={locale} />
-            {insideTalk ? (
+            {insideTalk && shownTab !== "chat" ? (
               <div className="shrink-0 px-2 pt-1.5 sm:px-4">
                 {/* 채팅·통화는 대화 목록 안의 화면: 목록으로 돌아가는 길. */}
                 <button
@@ -415,7 +439,15 @@ function AppHomeInner({
                 }
                 aria-hidden={shownTab !== "chat"}
               >
-                <ChatWindow tabMode locale={locale} />
+                <ChatWindow
+                  tabMode
+                  locale={locale}
+                  back={insideTalk ? { label: ui.homeTabTalk, unread: messagesUnread, onBack: () => openTab("talk") } : null}
+                  onCall={callOn ? () => openTab("roleplay") : null}
+                  callLabel={ui.talkAiCall}
+                  menuItems={[{ label: ui.roleplayOwnLineOpen, onSelect: () => sendAppIntent("sayOwnLine", {}) }]}
+                  showPack={callOn && !socialLayout}
+                />
               </div>
 
               <div
@@ -433,28 +465,6 @@ function AppHomeInner({
                   active={shownTab === "video"}
                 />
               </div>
-
-              {shownTab === "roleplay" ? (
-                <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
-                  <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
-                    <h1 className="text-base font-semibold text-white">
-                      {ui.roleplayTitle}
-                    </h1>
-                  </header>
-                  <div className="min-h-0 flex-1 overflow-hidden">
-                    <RoleplayTab
-                      targetLanguage={targetLanguage}
-                      nativeLanguage={
-                        isLearningLanguageCode(locale)
-                          ? locale
-                          : DEFAULT_LEARNING_LANGUAGE_CODE
-                      }
-                      locale={locale}
-                      ui={ui}
-                    />
-                  </div>
-                </div>
-              ) : null}
 
               {shownTab === "map" ? (
                 <StudyMapTab
@@ -477,12 +487,25 @@ function AppHomeInner({
                   onThreadsChanged={inbox.refresh}
                   title={ui.homeTabTalk}
                   top={
-                    <AiTutorRow
-                      ui={ui}
-                      canCall={callOn}
-                      onChat={() => openTab("chat")}
-                      onCall={() => openTab("roleplay")}
-                    />
+                    <>
+                      <AiTutorRow
+                        ui={ui}
+                        canCall={callOn}
+                        onChat={() => openTab("chat")}
+                        onCall={() => openTab("roleplay")}
+                      />
+                      {/* 오늘의 팩: 예전 통화 첫 화면 맨 위 → 대화 목록 AI 튜터 바로 아래(2026-10-23). */}
+                      {callOn ? (
+                        <div className="mt-2">
+                          <PackCard
+                            ui={ui}
+                            targetLanguage={targetLanguage}
+                            onStart={(request) => sendAppIntent("practice", request)}
+                            refreshKey={String(callsVersion)}
+                          />
+                        </div>
+                      ) : null}
+                    </>
                   }
                 />
               ) : null}
@@ -506,6 +529,14 @@ function AppHomeInner({
               {socialOn ? (
                 <RoomsScreen ui={ui} locale={locale} targetLanguage={targetLanguage} visible={shownTab === "rooms"} />
               ) : null}
+              {/* AI 튜터와 통화: 어디서나 떠 있는 층(📞·오늘의 팩·지도의 말로 하기). */}
+              <CallHost
+                targetLanguage={targetLanguage}
+                nativeLanguage={isLearningLanguageCode(locale) ? locale : DEFAULT_LEARNING_LANGUAGE_CODE}
+                ui={ui}
+                enabled={Boolean(door) ? roleplayAvailable : callOn}
+                onActiveChange={setCallActive}
+              />
               {/* 초대 링크로 열었을 때 한 번(설치 직후 첫 실행 포함). */}
               {/* 처음 설치면 기능 고르기를 마친 뒤에. */}
               {socialOn && (door || features.chosen) ? <InviteWelcome ui={ui} locale={locale} onOpenTab={openTab} /> : null}

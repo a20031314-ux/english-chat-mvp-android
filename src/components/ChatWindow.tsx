@@ -1,6 +1,6 @@
 "use client";
 
-import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { FormEvent, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import {
   ARCHIVE_STORAGE_KEY,
   ChatMessage,
@@ -51,6 +51,9 @@ import {
 } from "@/lib/conversationMode";
 import { onAppIntent, sendAppIntent, takeAppIntent } from "@/lib/appIntents";
 import { NextStepCard, PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
+import { PackCard } from "@/components/PackCard";
+import { discardCall, readCalls, readCallsOnServer, subscribeCalls } from "@/lib/roleplay/callStore";
+import { isUnfinished, type SavedConversation } from "@/lib/roleplay/saved";
 import { saidPhrase } from "@/lib/learner/practice";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 import { ExpressionPeek } from "@/components/ExpressionPeek";
@@ -685,11 +688,63 @@ function buildExpressionSavedItem(
 type ChatWindowProps = {
   tabMode?: boolean;
   locale?: Locale;
+  /**
+   * 대화 목록 안의 화면일 때: 머리 맨 앞 "‹ 대화"(1:1 대화와 같은 자리, 2026-10-23 conversation-unify).
+   * `unread`는 다른 대화의 안 읽음 수.
+   */
+  back?: { label: string; unread: number; onBack: () => void } | null;
+  /** 머리의 📞(AI 튜터와 통화). 없으면 두지 않는다(통화 없는 언어·통화를 숨김). */
+  onCall?: (() => void) | null;
+  callLabel?: string;
+  /** ⋮ 메뉴에 더할 것(내 문장 말해보기 등). */
+  menuItems?: { label: string; onSelect: () => void }[];
+  /** 빈 대화에 오늘의 팩 카드(대화 목록이 없는 화면 — iOS 1차·사람을 숨김). 대화 목록이 있으면 목록 맨 위에. */
+  showPack?: boolean;
 };
+
+/**
+ * 이 대화 안에서 건 AI 통화 — 1:1 대화의 🗒 통화 기록 카드와 같은 자리(2026-10-23, conversation-unify 3단계).
+ * 멈춘 통화는 "이어서 하기", 끝난 통화는 "돌아보기"(CallHost가 연다).
+ */
+function CallRecordCard({ call, ui, locale }: { call: SavedConversation; ui: ReturnType<typeof useUiCopy>; locale: string }) {
+  const unfinished = isUnfinished(call);
+  const time = new Date(call.updatedAt).toLocaleTimeString(locale, { hour: "2-digit", minute: "2-digit" });
+  return (
+    <div className="flex justify-center">
+      <div className="flex w-full max-w-sm items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.03] px-3 py-2 text-sm text-slate-200">
+        <span className="shrink-0">🗒 {ui.homeTabCall}</span>
+        <span className="min-w-0 flex-1 truncate text-meta text-slate-500">
+          <bdi>{call.title}</bdi> · {time}
+        </span>
+        {unfinished ? (
+          <button
+            type="button"
+            onClick={() => sendAppIntent("startCall", { resumeId: call.id })}
+            className="shrink-0 rounded-lg bg-emerald-500 px-2.5 py-1 text-xs font-medium text-black"
+          >
+            {ui.roleplayResume}
+          </button>
+        ) : null}
+        <button
+          type="button"
+          onClick={() => sendAppIntent("openCall", { id: call.id })}
+          className="shrink-0 rounded-lg border border-white/15 px-2.5 py-1 text-xs text-slate-200 hover:bg-white/10"
+        >
+          {ui.packSeeRetro}
+        </button>
+      </div>
+    </div>
+  );
+}
 
 export function ChatWindow({
   tabMode = false,
   locale: localeProp,
+  back = null,
+  onCall = null,
+  callLabel,
+  menuItems = [],
+  showPack = false,
 }: ChatWindowProps) {
   const { isPremium, isBillingReady } = usePremium();
   const billing = useBillingUi();
@@ -1562,6 +1617,19 @@ export function ChatWindow({
     }
   };
 
+  // 이 대화가 시작된 뒤 건 AI 통화는 대화 안에 시간 순서대로 🗒 카드로(턴 id는 보낸 시각).
+  const calls = useSyncExternalStore(subscribeCalls, readCalls, readCallsOnServer);
+  const callsVersion = calls.reduce((latest, call) => Math.max(latest, call.updatedAt), 0);
+  const timeline = useMemo(() => {
+    const here = calls.filter((call) => call.language === sessionLanguageCode && call.startedAt >= currentSessionCreatedAt);
+    const items: ({ kind: "turn"; at: number; turn: ChatTurn } | { kind: "call"; at: number; call: SavedConversation })[] = [
+      ...turns.map((turn) => ({ kind: "turn" as const, at: Number.parseInt(turn.id, 10) || 0, turn })),
+      ...here.map((call) => ({ kind: "call" as const, at: call.startedAt, call })),
+    ];
+    // 시각을 모르는 턴(옛 저장분)은 제자리에 둔다: 안정 정렬 + 통화만 시각으로 끼워 넣음.
+    return here.length ? items.sort((a, b) => (a.at && b.at ? a.at - b.at : 0)) : items;
+  }, [calls, turns, sessionLanguageCode, currentSessionCreatedAt]);
+
   const handlePickPhoto = async (
     event: React.ChangeEvent<HTMLInputElement>,
   ) => {
@@ -1583,100 +1651,120 @@ export function ChatWindow({
           tabMode ? "h-full max-w-none" : "h-[92vh] max-w-3xl"
         }`}
       >
-        <header className="border-b border-white/10 bg-white/5 px-3 py-2">
-          <div className="flex items-center gap-2">
-            <div className="relative shrink-0" ref={sessionMenuRef}>
-              <button
-                type="button"
-                aria-label={ui.sessionMenu}
-                aria-expanded={sessionMenuOpen}
-                onClick={() => setSessionMenuOpen((open) => !open)}
-                className="inline-flex h-7 w-7 items-center justify-center rounded-md border border-white/15 bg-white/5 text-slate-200 hover:bg-white/10"
-              >
-                <svg viewBox="0 0 24 24" fill="currentColor" className="h-3.5 w-3.5" aria-hidden>
-                  <circle cx="12" cy="6" r="1.6" />
-                  <circle cx="12" cy="12" r="1.6" />
-                  <circle cx="12" cy="18" r="1.6" />
-                </svg>
-              </button>
-              {sessionMenuOpen ? (
-                <div className="absolute left-0 top-full z-30 mt-1 w-40 overflow-hidden rounded-xl border border-white/10 bg-[#121212] py-1 shadow-2xl">
+        {/* 1:1 대화와 같은 머리(2026-10-23): ‹ 대화 · 튜터 · 📞 · ⋮. 모드 칩·세션 종료는 뺐다. */}
+        <header className="flex items-center gap-2 border-b border-white/10 bg-white/5 px-2 py-2">
+          {back ? (
+            <button
+              type="button"
+              onClick={back.onBack}
+              className="flex shrink-0 items-center gap-1 rounded-lg px-2 py-1 text-note text-slate-300 hover:bg-white/10"
+            >
+              <span aria-hidden className="rtl:rotate-180">‹</span>
+              {back.label}
+              {back.unread > 0 ? (
+                <span className="ms-1 rounded-full bg-violet-500 px-1.5 text-meta font-semibold text-white">{Math.min(back.unread, 99)}</span>
+              ) : null}
+            </button>
+          ) : null}
+          <span className="flex min-w-0 flex-1 items-center gap-2">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={`/flags/${partner.flagCountry}.png`} alt="" className="h-4 w-6 shrink-0 rounded-[2px] object-cover" />
+            <span className="truncate text-body font-semibold text-ink">{partner.givenName}</span>
+          </span>
+          {onCall ? (
+            <button
+              type="button"
+              onClick={onCall}
+              aria-label={callLabel}
+              title={callLabel}
+              className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-line text-body hover:bg-white/10"
+            >
+              <span aria-hidden>📞</span>
+            </button>
+          ) : null}
+          <div className="relative shrink-0" ref={sessionMenuRef}>
+            <button
+              type="button"
+              aria-label={ui.sessionMenu}
+              aria-expanded={sessionMenuOpen}
+              onClick={() => setSessionMenuOpen((open) => !open)}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-line text-slate-200 hover:bg-white/10"
+            >
+              <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4" aria-hidden>
+                <circle cx="12" cy="6" r="1.6" />
+                <circle cx="12" cy="12" r="1.6" />
+                <circle cx="12" cy="18" r="1.6" />
+              </svg>
+            </button>
+            {sessionMenuOpen ? (
+              <div className="absolute end-0 top-full z-30 mt-1 w-44 overflow-hidden rounded-xl border border-white/10 bg-[#121212] py-1 shadow-2xl">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSessionMenuOpen(false);
+                    endCurrentSession();
+                  }}
+                  className="block w-full px-3 py-2 text-start text-xs text-slate-100 hover:bg-white/10"
+                >
+                  {ui.chatHistoryNew}
+                </button>
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSessionMenuOpen(false);
+                    snapshotCurrentChat();
+                    setConversationSessions(loadConversationSessions());
+                    setIsChatHistoryOpen(true);
+                  }}
+                  className="block w-full px-3 py-2 text-start text-xs text-slate-100 hover:bg-white/10"
+                >
+                  {ui.chatHistoryTitle}
+                </button>
+                {menuItems.map((item) => (
                   <button
+                    key={item.label}
                     type="button"
                     onClick={() => {
                       setSessionMenuOpen(false);
-                      snapshotCurrentChat();
-                      setConversationSessions(loadConversationSessions());
-                      setIsChatHistoryOpen(true);
+                      item.onSelect();
                     }}
-                    className="block w-full px-3 py-2 text-left text-xs text-slate-100 hover:bg-white/10"
+                    className="block w-full px-3 py-2 text-start text-xs text-slate-100 hover:bg-white/10"
                   >
-                    {ui.chatHistoryTitle}
+                    {item.label}
                   </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSessionMenuOpen(false);
-                      endCurrentSession();
-                    }}
-                    className="block w-full px-3 py-2 text-left text-xs text-slate-100 hover:bg-white/10"
-                  >
-                    {ui.endSession}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setSessionMenuOpen(false);
-                      setReportTarget({ surface: "chat", excerpt: "" });
-                    }}
-                    className="block w-full px-3 py-2 text-left text-xs text-slate-100 hover:bg-white/10"
-                  >
-                    {ui.reportTitle}
-                  </button>
-                  <div className="border-t border-line px-3 py-2">
-                    <p className="text-meta text-slate-400">{ui.chatCorrectionView}</p>
-                    <div className="mt-1 flex flex-col gap-1" role="group" aria-label={ui.chatCorrectionView}>
-                      {(["tap", "auto"] as const).map((view) => (
-                        <button
-                          key={view}
-                          type="button"
-                          aria-pressed={correctionView === view}
-                          onClick={() => chooseCorrectionView(view)}
-                          className={`rounded-lg px-2 py-1 text-left text-xs ${
-                            correctionView === view
-                              ? "bg-platinum text-slate-900"
-                              : "text-slate-200 hover:bg-white/10"
-                          }`}
-                        >
-                          {view === "tap" ? ui.chatCorrectionViewTap : ui.chatCorrectionViewAuto}
-                        </button>
-                      ))}
-                    </div>
+                ))}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setSessionMenuOpen(false);
+                    setReportTarget({ surface: "chat", excerpt: "" });
+                  }}
+                  className="block w-full px-3 py-2 text-start text-xs text-slate-100 hover:bg-white/10"
+                >
+                  {ui.reportTitle}
+                </button>
+                <div className="border-t border-line px-3 py-2">
+                  <p className="text-meta text-slate-400">{ui.chatCorrectionView}</p>
+                  <div className="mt-1 flex flex-col gap-1" role="group" aria-label={ui.chatCorrectionView}>
+                    {(["tap", "auto"] as const).map((view) => (
+                      <button
+                        key={view}
+                        type="button"
+                        aria-pressed={correctionView === view}
+                        onClick={() => chooseCorrectionView(view)}
+                        className={`rounded-lg px-2 py-1 text-start text-xs ${
+                          correctionView === view
+                            ? "bg-platinum text-slate-900"
+                            : "text-slate-200 hover:bg-white/10"
+                        }`}
+                      >
+                        {view === "tap" ? ui.chatCorrectionViewTap : ui.chatCorrectionViewAuto}
+                      </button>
+                    ))}
                   </div>
                 </div>
-              ) : null}
-            </div>
-            <div className="flex min-w-0 flex-1 items-center gap-2">
-              <span className="inline-flex min-w-0 items-center gap-1 text-[11px] text-slate-300">
-                <img
-                  src={`/flags/${partner.flagCountry}.png`}
-                  alt=""
-                  className="h-3.5 w-5 rounded-[2px] object-cover"
-                />
-                <span className="truncate">{partner.givenName}</span>
-              </span>
-              <span
-                className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-medium ${
-                  conversationMode === "tutor"
-                    ? "bg-amber-500/20 text-amber-100"
-                    : "bg-white/10 text-slate-200"
-                }`}
-              >
-                {conversationMode === "tutor"
-                  ? ui.chatTutorMode
-                  : ui.chatNativeMode}
-              </span>
-            </div>
+              </div>
+            ) : null}
           </div>
         </header>
 
@@ -1689,15 +1777,6 @@ export function ChatWindow({
                   : ui.paywallLimitBanner.replace("{limit}", String(dailyLimit))}
               </p>
               <div className="mt-2 flex flex-wrap gap-2">
-                {turns.length > 0 ? (
-                  <button
-                    type="button"
-                    onClick={endCurrentSession}
-                    className="rounded-lg border border-white/15 bg-white/5 px-3 py-1.5 text-xs font-medium text-amber-100 hover:bg-white/10"
-                  >
-                    {ui.endSession}
-                  </button>
-                ) : null}
                 {!isPremium && adOffer ? (
                   <button
                     type="button"
@@ -1735,6 +1814,15 @@ export function ChatWindow({
               onStop={() => setPractice(null)}
             />
           ) : turns.length === 0 && !isSending ? (
+            <>
+            {showPack ? (
+              <PackCard
+                ui={ui}
+                targetLanguage={targetLanguage}
+                onStart={(request) => sendAppIntent("practice", request)}
+                refreshKey={String(callsVersion)}
+              />
+            ) : null}
             <NextStepCard
               ui={ui}
               locale={locale}
@@ -1745,8 +1833,13 @@ export function ChatWindow({
                 else sendAppIntent("practice", request);
               }}
             />
+            </>
           ) : null}
-          {turns.map((turn) => {
+          {timeline.map((item) => {
+            if (item.kind === "call") {
+              return <CallRecordCard key={`call-${item.call.id}`} call={item.call} ui={ui} locale={locale} />;
+            }
+            const turn = item.turn;
             const assistantReading =
               locale === sessionLanguageCode
                 ? undefined
@@ -2114,6 +2207,14 @@ export function ChatWindow({
           snapshotCurrentChat();
           startNewChat();
         }}
+        calls={calls
+          .filter((call) => call.language === sessionLanguageCode)
+          .map((call) => ({ id: call.id, title: call.title, at: call.startedAt }))}
+        onOpenCall={(id) => {
+          setIsChatHistoryOpen(false);
+          sendAppIntent("openCall", { id });
+        }}
+        onDeleteCall={(id) => discardCall(id)}
       />
 
       {reportTarget ? (

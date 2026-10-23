@@ -96,7 +96,7 @@ async function combination({ name, target, ui, latinUi, chatLine }) {
     localStorage.setItem("appUiLocale", u);
   }, [target, ui]);
   const found = { name, dir: "", latinLeft: [], sheetWords: null, problems: [] };
-  for (const screen of ["map", "chat", "roleplay", "video", "vocab"]) {
+  for (const screen of ["map", "chat", "video", "vocab"]) {
     await page.goto(`${BASE}/?screen=${screen}`, { waitUntil: "networkidle" });
     await page.waitForTimeout(1200);
     found.dir = await page.evaluate(() => document.documentElement.dir);

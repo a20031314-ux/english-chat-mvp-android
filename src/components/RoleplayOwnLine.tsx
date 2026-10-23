@@ -56,13 +56,16 @@ export function RoleplayOwnLine({
   nativeLanguage,
   isPremium,
   ui,
+  onClose,
 }: {
   targetLanguage: LearningLanguageCode;
   nativeLanguage: LearningLanguageCode;
   isPremium: boolean;
   ui: UICopy;
+  /** 시트로 열 때(AI 대화 ⋮ "내 문장 말해보기"): 처음부터 펼치고, ✕는 시트를 닫는다. */
+  onClose?: () => void;
 }) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(Boolean(onClose));
   const [draft, setDraft] = useState("");
   const [target, setTarget] = useState("");
 
@@ -87,6 +90,10 @@ export function RoleplayOwnLine({
         <button
           type="button"
           onClick={() => {
+            if (onClose) {
+              onClose();
+              return;
+            }
             setOpen(false);
             setTarget("");
           }}
@@ -108,7 +115,6 @@ export function RoleplayOwnLine({
           value={draft}
           onChange={(event) => setDraft(event.target.value.slice(0, 200))}
           rows={2}
-          placeholder={ui.roleplayOwnLinePlaceholder}
           aria-label={ui.roleplayOwnLinePlaceholder}
           className="min-w-0 flex-1 resize-none rounded-xl border border-white/10 bg-black/30 px-3 py-2 text-[14px] text-neutral-100 placeholder:text-neutral-500 focus:border-white/30 focus:outline-none"
         />

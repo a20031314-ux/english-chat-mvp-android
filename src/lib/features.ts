@@ -186,17 +186,17 @@ export function finishChoosing(skip = false) {
 }
 
 /** 하단 탭 id(AppHome `AppTab`과 같은 이름). */
-export type BottomTabId = "talk" | "chat" | "roleplay" | "video" | "people" | "rooms" | "map";
+export type BottomTabId = "talk" | "chat" | "video" | "people" | "rooms" | "map";
 
 /**
  * 꺼 둔 기능으로 정해지는 하단 탭(창구 모드 제외). AppHome과 구조도 미리보기가 같이 쓴다.
- * - social: 플랫폼에 사람 기능이 있는지(iOS 1차는 없음), callAvailable: 이 학습 언어에 통화가 있는지.
- * 사람을 숨기면 iOS 1차 모양(채팅 · 통화 · 영상 · My).
+ * - social: 플랫폼에 사람 기능이 있는지(iOS 1차는 없음).
+ * 사람을 숨기면 iOS 1차 모양(채팅 · 영상 · My). AI 통화는 탭이 아니라 AI 대화의 📞(2026-10-23, conversation-unify).
  */
-export function bottomTabs(off: readonly FeatureId[], { social, callAvailable }: { social: boolean; callAvailable: boolean }): BottomTabId[] {
+export function bottomTabs(off: readonly FeatureId[], { social }: { social: boolean }): BottomTabId[] {
   const on = (feature: FeatureId) => isFeatureOn(off, feature);
   if (social && on("people")) {
     return ["talk", ...(on("video") ? (["video"] as const) : []), "people", ...(on("rooms") ? (["rooms"] as const) : []), "map"];
   }
-  return ["chat", ...(callAvailable && on("call") ? (["roleplay"] as const) : []), ...(on("video") ? (["video"] as const) : []), "map"];
+  return ["chat", ...(on("video") ? (["video"] as const) : []), "map"];
 }

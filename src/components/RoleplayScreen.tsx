@@ -13,6 +13,8 @@ import {
 } from "@/components/RoleplayReview";
 import { useEnglishAnalysisOptional } from "@/contexts/EnglishAnalysisContext";
 import { usePremium } from "@/contexts/PremiumContext";
+import { entitlementHeaders } from "@/lib/billing/billingService";
+import { apiUrl } from "@/lib/apiBase";
 import {
   learningLanguageSpeechTag,
   type LearningLanguageCode,
@@ -224,6 +226,34 @@ export function RoleplayScreen({
   practice?: PracticeRequest | null;
 }) {
   const { isPremium } = usePremium();
+  // 남은 통화 시간: 예전 통화 첫 화면의 줄 → 통화 머리의 상태 한 줄(2026-10-23, conversation-unify 3단계). 서버가 답을 못 하면 뺀다.
+  const [timeLine, setTimeLine] = useState<string | null>(null);
+  useEffect(() => {
+    let live = true;
+    void fetch(apiUrl("/api/entitlement"), { headers: entitlementHeaders(isPremium) })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data: { callPointsLeft?: unknown; callCarrySeconds?: unknown; callPointSeconds?: unknown; callTodayLeftSeconds?: unknown; callDailyMinutes?: unknown } | null) => {
+        if (!live || !data) return;
+        if (typeof data.callTodayLeftSeconds === "number" && typeof data.callDailyMinutes === "number") {
+          setTimeLine(
+            ui.roleplayTodayLeft
+              .replace("{minutes}", String(Math.ceil(data.callTodayLeftSeconds / 60)))
+              .replace("{daily}", String(data.callDailyMinutes)),
+          );
+          return;
+        }
+        if (typeof data.callPointsLeft === "number" && typeof data.callPointSeconds === "number") {
+          const carry = typeof data.callCarrySeconds === "number" ? data.callCarrySeconds : 0;
+          setTimeLine(ui.roleplayTimeLeft.replace("{minutes}", String(Math.floor((data.callPointsLeft * data.callPointSeconds + carry) / 60))));
+        }
+      })
+      .catch(() => undefined);
+    return () => {
+      live = false;
+    };
+    // 통화를 열 때 한 번.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   const scenario = findScenario(scenarioId);
   const analysis = useEnglishAnalysisOptional();
   const [state, setState] = useState<SessionState | null>(null);
@@ -995,7 +1025,7 @@ export function RoleplayScreen({
       <header className="flex shrink-0 items-center justify-between border-b border-white/10 px-4 py-3">
         <div>
           <h2 className="text-sm font-semibold text-white">{scenario.title}</h2>
-          <p className="text-[11px] text-neutral-500">{scenario.tutorRole}</p>
+          <p className="text-[11px] text-neutral-500">{timeLine ?? scenario.tutorRole}</p>
         </div>
         {/* A conversation that is still going is put down, not shut. It is
             written down as it happens, so leaving here loses nothing and the
@@ -1105,7 +1135,7 @@ export function RoleplayScreen({
                 An open conversation has no task, so what it says is interface
                 text and comes from the copy, which has fourteen languages —
                 written into the scene it reached every learner in Korean. */}
-            {/* 열린 대화의 "편하게 아무 얘기나…"는 뺐다(화면 속 설명 금지, 2026-10-23). 대본 장면의 할 일만. */}
+            {/* 열린 대화의 목표 안내 글은 뺐다(화면 속 설명 금지, 2026-10-23). 대본 장면의 할 일만. */}
             {instruction.goal ? (
               <p className="text-[13px] text-neutral-300">{instruction.goal}</p>
             ) : null}

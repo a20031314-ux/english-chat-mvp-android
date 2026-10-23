@@ -444,9 +444,9 @@ const SCENES = [
   },
   {
     id: "call-home",
-    label: "통화 — 첫 화면(오늘의 팩·오늘 해볼 것)",
+    label: "대화 목록 — AI 튜터·오늘의 팩(통화 첫 화면은 2026-10-23에 없앰)",
     async run({ page, wait }) {
-      await page.goto(`${BASE}/?screen=roleplay`, { waitUntil: "domcontentloaded" });
+      await page.goto(`${BASE}/?screen=talk`, { waitUntil: "domcontentloaded" });
       await wait(5000);
     },
   },

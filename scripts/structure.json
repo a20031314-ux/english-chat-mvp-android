@@ -55,7 +55,7 @@
     "api/chat/verify": "chat",
     "api/report": "chat",
 
-    "components/RoleplayTab": "call",
+    "components/CallHost": "call",
     "components/RoleplayScreen": "call",
     "components/RoleplayPast": "call",
     "components/RoleplayReview": "call",

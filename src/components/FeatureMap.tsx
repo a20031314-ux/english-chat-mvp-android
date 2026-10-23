@@ -147,8 +147,8 @@ export function FeatureMap({
         my,
       ]
     : [
-        { key: "chat", label: ui.homeTabChat, feature: null, chapter: "ai-chat", icon: "chat" },
-        ...(callAvailable ? [{ key: "call", label: ui.homeTabCall, feature: "call" as const, chapter: "ai-call", icon: "roleplay" as const }] : []),
+        // AI 통화는 채팅 머리의 📞(2026-10-23) — 채팅 아래 칸.
+        { key: "chat", label: ui.homeTabChat, feature: null, chapter: "ai-chat", icon: "chat", children: call },
         { key: "video", label: ui.homeTabVideo, feature: "video", chapter: "video", icon: "video" },
         my,
       ];
@@ -156,13 +156,12 @@ export function FeatureMap({
   const labels: Record<BottomTabId, string> = {
     talk: ui.homeTabTalk,
     chat: ui.homeTabChat,
-    roleplay: ui.homeTabCall,
     video: ui.homeTabVideo,
     people: ui.homeTabPeople,
     rooms: ui.homeTabRooms,
     map: ui.homeTabProfile,
   };
-  const preview = bottomTabs(off, { social, callAvailable });
+  const preview = bottomTabs(off, { social });
 
   return (
     <div className="flex flex-col gap-3" data-feature-map>
