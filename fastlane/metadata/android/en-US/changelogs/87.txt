@@ -1,0 +1,4 @@
+• Notes: today's lines the tutor corrected gather in “Today's learning”. Pick the ones to keep and they go into the right section (letters, sounds, grammar), with that moment's screen if you like.
+• People: show only “Learning the same language” or “Same learning & spoken language”.
+• Call the AI tutor straight from 📞 in the chat; a finished call stays there as a 🗒 card.
+• The tab bar shows icons only.

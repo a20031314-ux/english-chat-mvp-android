@@ -1,0 +1,4 @@
+• Notes : les phrases corrigées aujourd’hui par le tuteur se regroupent dans « Appris aujourd'hui ». Choisissez celles à garder : elles vont dans la bonne section (lettres, sons, grammaire), avec l’écran du moment si vous voulez.
+• Personnes : n’affichez que « Apprennent la même langue » ou « Même langue apprise et parlée ».
+• Appelez le tuteur IA avec 📞 depuis le chat ; l’appel terminé y reste en carte 🗒.
+• La barre d’onglets n’affiche plus que des icônes.
