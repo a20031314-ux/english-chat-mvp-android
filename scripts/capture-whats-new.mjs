@@ -2058,6 +2058,8 @@ for (const locale of only ?? Object.keys(copy)) {
     const onlyShots = process.env.CAPTURE_SHOTS?.split(",");
     for (const item of note.items) {
       if (onlyShots && !onlyShots.includes(item.shot)) continue;
+      // 오늘의 팩은 영어·일본어 학습만 있다(pack/questions.ts): 다른 배우는 언어는 팩 장면을 건너뛴다.
+      if (STORE && ["call-pack", "call-talk"].includes(item.shot) && !["en", "ja"].includes(target)) continue;
       const step = STEPS[item.step ?? item.shot];
       if (!step) throw new Error(`no capture step for "${item.shot}"`);
       const recording = (PROMO || (GUIDE && item.clip)) && cdp;
