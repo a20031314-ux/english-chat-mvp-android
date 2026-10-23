@@ -1,7 +1,7 @@
 {
  "_": "서비스 지도 갱신 기록. scripts/service-map.mjs가 쓴다(손으로 고치지 않음). 칸이 바뀐 날만 history에 한 줄.",
- "checkedAt": "2026-10-23 23:30",
- "commit": "4d55a7c2",
+ "checkedAt": "2026-10-24 06:55",
+ "commit": "ca4ddd5b",
  "nodes": {
   "moyeo": {
    "title": "Moyeo",
@@ -26,8 +26,8 @@
   },
   "webapp": {
    "title": "웹 앱",
-   "text": "43d4cf541a8b",
-   "shots": "43cf47dc3a90",
+   "text": "912c3c030f94",
+   "shots": "59b17f7545f6",
    "links": "7a94184479dc",
    "code": "1eaf68ce2bb4"
   },
@@ -75,15 +75,15 @@
   },
   "chat": {
    "title": "AI 채팅",
-   "text": "fb1b0a014f5b",
-   "shots": "577653181a1b",
+   "text": "c97d6898bccd",
+   "shots": "53ad23a3e4bc",
    "links": "ca6f7f7fc811",
    "code": "412738069f93"
   },
   "call": {
    "title": "AI 통화 · 오늘의 팩",
-   "text": "f091ebd137e7",
-   "shots": "f969a4d2c5e5",
+   "text": "306b15d5dfbf",
+   "shots": "7a863eec87f4",
    "links": "82e45a80c680",
    "code": "8b30cac308c3"
   },
@@ -110,8 +110,8 @@
   },
   "people": {
    "title": "사람",
-   "text": "bc5892223385",
-   "shots": "eff137a2913d",
+   "text": "d9a3bdcf76a5",
+   "shots": "cc944e7657e5",
    "links": "73f18aa06e4c",
    "code": "1e36dbce467c"
   },
@@ -138,24 +138,24 @@
   },
   "my": {
    "title": "My",
-   "text": "36fec5ce3f59",
-   "shots": "33b97ddb035f",
+   "text": "a63d46a35bd1",
+   "shots": "8370e20fe11f",
    "links": "bc7ccaf1382e",
-   "code": "29b76f381952"
+   "code": "a8f0317dc07a"
   },
   "growth": {
    "title": "자라는 중 · 지도",
    "text": "5f347e439874",
    "shots": "14c037cc9e79",
    "links": "d558e5cc6ea2",
-   "code": "29b76f381952"
+   "code": "a8f0317dc07a"
   },
   "notes": {
    "title": "노트 · 단어장",
-   "text": "81c5e7af9465",
-   "shots": "72b41bef2512",
+   "text": "c93b146bd6f1",
+   "shots": "9e2898a71d9a",
    "links": "fbb882eac87e",
-   "code": "29b76f381952"
+   "code": "a8f0317dc07a"
   },
   "sheet": {
    "title": "문장분석 · 표현 시트",
@@ -173,6 +173,47 @@
   }
  },
  "history": [
+  {
+   "at": "2026-10-24 06:55",
+   "commit": "ca4ddd5b",
+   "changes": [
+    {
+     "id": "webapp",
+     "title": "웹 앱",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "chat",
+     "title": "AI 채팅",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "call",
+     "title": "AI 통화 · 오늘의 팩",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "people",
+     "title": "사람",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "my",
+     "title": "My",
+     "what": "설명 · 그림 · 코드 영역"
+    },
+    {
+     "id": "growth",
+     "title": "자라는 중 · 지도",
+     "what": "코드 영역"
+    },
+    {
+     "id": "notes",
+     "title": "노트 · 단어장",
+     "what": "설명 · 그림 · 코드 영역"
+    }
+   ]
+  },
   {
    "at": "2026-10-23 23:30",
    "commit": "4d55a7c2",
