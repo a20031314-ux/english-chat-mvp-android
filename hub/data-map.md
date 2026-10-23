@@ -21,7 +21,7 @@
 | 말하는 방 | `room:grant` | 방·대화 | 1분 | 해당 없음 | 말하기 자리 올리기 신호 | `roomStore.ts` |
 | 말하는 방 | `room:index` | 방·대화 | 6시간 | 해당 없음 | 열린 방 목록 | `roomStore.ts` |
 | 말하는 방 | `room:lines` | 방·대화 | 6시간 | 해당 없음 | 방 자막 줄(최근 300) | `roomStore.ts` |
-| 말하는 방 | `room:m` | 방·대화 | 30초 · 5초 | 해당 없음 | 방에 있는 사람(30초마다 갱신) | `roomStore.ts` |
+| 말하는 방 | `room:m` | 방·대화 | 10분 · 5초 | 해당 없음 | 방에 있는 사람(30초마다 갱신) | `roomStore.ts` |
 | 말하는 방 | `room:meta` | 방·대화 | 6시간 | 해당 없음 | 방 정보 | `roomStore.ts` |
 | 말하는 방 | `room:parked` | 방·대화 | 30일 | 해당 없음 | 잠시 닫은 방(다시 열기용) | `roomStore.ts` |
 | 말하는 방 | `room:peers` | 방·대화 | 6시간 | 해당 없음 | 방 연결 목록 | `roomStore.ts` |
