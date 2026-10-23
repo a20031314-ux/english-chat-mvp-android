@@ -6,7 +6,7 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { heardInAny, heardOrNothing } from "@/lib/roleplay/transcript";
-import { cleanLanguages } from "@/lib/rooms/roomFilter";
+import { cleanSpokenLanguages } from "@/lib/rooms/roomFilter";
 import { learningLanguageName } from "@/lib/learningLanguages";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { confidenceFromLogprobs, noteRecognition } from "@/lib/server/learnerMetrics";
@@ -103,8 +103,9 @@ export async function POST(request: NextRequest) {
       : "";
 
   // A room says which languages are spoken in it (two, usually). One is a hint;
-  // two are named in the prompt instead, and the answer must be in one of them.
-  const roomLanguages = forRoom ? cleanLanguages(body.languages) : [];
+  // two or more are named in the prompt instead, and the answer must be in one of them.
+  // 자유 대화방은 말하는 사람의 언어들(배우는 언어·앱 언어 + 프로필의 모국어·할 수 있는 언어, 최대 5 — 2026-10-23).
+  const roomLanguages = forRoom ? cleanSpokenLanguages(body.languages) : [];
   const hint = roomLanguages.length === 1 ? roomLanguages[0] : language;
   const spoken =
     roomLanguages.length > 1 ? ` They speak ${roomLanguages.map((code) => learningLanguageName(code)).join(" or ")}.` : "";

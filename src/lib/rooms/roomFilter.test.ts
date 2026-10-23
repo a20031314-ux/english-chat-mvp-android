@@ -30,3 +30,10 @@ test("자유 대화방은 어떤 언어로 찾든 나온다", () => {
   assert.equal(roomMatches([], ["th"], true), true);
   assert.equal(roomMatches([], ["ja"]), false);
 });
+
+test("말하는 언어(자유 대화방 받아쓰기): 겹치지 않게 최대 5, 모르는 코드는 버림", async () => {
+  const { cleanSpokenLanguages } = await import("./roomFilter.ts");
+  assert.deepEqual(cleanSpokenLanguages(["en", "ko", "ja", null, "ko", "th", "es", "xx", "ar"]), ["en", "ko", "ja", "th", "es"]);
+  assert.deepEqual(cleanSpokenLanguages(["es"]), ["es"]);
+  assert.deepEqual(cleanSpokenLanguages("en"), []);
+});

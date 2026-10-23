@@ -25,6 +25,22 @@ export function cleanLanguages(values: unknown): string[] {
   return out.slice(0, 2);
 }
 
+/** 자유 대화방에서 한 사람이 말할 수 있는 언어 수(배우는 언어·앱 언어 + 프로필의 모국어·할 수 있는 언어). */
+export const MAX_SPOKEN_LANGUAGES = 5;
+
+/**
+ * 받아쓰기에 알려 줄 "이 사람이 말하는 언어"(2026-10-23, 사용자 "프로필의 사용 언어를 참고"): 순서대로, 겹치지 않게, 최대 5.
+ * 첫 언어가 방의 중심 언어(다시 받아쓸 때 쓰는 언어)라 배우는 언어를 맨 앞에 둔다.
+ */
+export function cleanSpokenLanguages(values: unknown, max = MAX_SPOKEN_LANGUAGES): string[] {
+  if (!Array.isArray(values)) return [];
+  const out: string[] = [];
+  for (const value of values) {
+    if (typeof value === "string" && isLearningLanguageCode(value) && !out.includes(value)) out.push(value);
+  }
+  return out.slice(0, max);
+}
+
 /** 자유 대화방(`free`)은 언어를 정하지 않아 어떤 언어로 찾든 함께 나온다. */
 export function roomMatches(roomLanguages: readonly string[] | undefined, wanted: readonly string[], free = false): boolean {
   if (free) return true;

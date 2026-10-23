@@ -48,7 +48,8 @@ import {
   type RoomRole,
 } from "@/lib/rooms/protocol";
 import { askPhraseAbout } from "@/lib/rooms/quote";
-import { cleanLanguages } from "@/lib/rooms/roomFilter";
+import { cleanSpokenLanguages } from "@/lib/rooms/roomFilter";
+import { readCachedAccount } from "@/lib/account/session";
 import { leansOnOwnLanguage, whichLanguage } from "@/lib/roleplay/transcript";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { Composer, Face, Lines, ProfileSheet, languagePair, type RoomLineFix } from "./RoomParts";
@@ -328,10 +329,12 @@ export function RoomView({
   }, [videoRoom, stopCamera]);
 
   const addMine = useCallback((line: RoomLine) => setLines((have) => mergeLines(have, [line])), []);
-  const speakerLanguages = useMemo(
-    () => cleanLanguages([targetLanguage, locale]),
-    [targetLanguage, locale],
-  );
+  // 자유 대화방에서 내가 말할 수 있는 언어: 배우는 언어·앱 언어 + 프로필의 모국어·할 수 있는 언어(2026-10-23, 사용자 "프로필 사용 언어 참고").
+  // 그 밖의 글자로 나온 자막은 받아쓰기가 지어낸 것으로 보고 버린다(서버 heardInAny) — 프로필에 언어를 넣으면 그 언어도 자막이 뜬다.
+  const speakerLanguages = useMemo(() => {
+    const facts = readCachedAccount()?.profile.facts;
+    return cleanSpokenLanguages([targetLanguage, locale, facts?.native, ...(facts?.speaks ?? [])]);
+  }, [targetLanguage, locale]);
 
   const setFix = useCallback((seq: number, change: ((fix: RoomLineFix) => RoomLineFix | null) | null) => {
     setFixes((have) => {
