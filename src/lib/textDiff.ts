@@ -147,6 +147,76 @@ export function correctedHighlightParts(
     }));
 }
 
+export type TokenDiffMarks = {
+  /** 화면 낱말 순번 → 표시(원문: 틀린 곳, 고친 문장: 새로 들어간 곳). */
+  marks: Map<number, "error" | "added">;
+  /** 원문 쪽만: 이 낱말 뒤에 붙일 "빠진 말"(-1 = 맨 앞). */
+  gapsAfter: Map<number, string>;
+};
+
+/**
+ * 고친 곳을 화면 낱말에 맞춘다. diffWords는 한·중·일 글자를 한 글자씩 비교하는데
+ * 화면은 낱말(조사 붙은 "친구가", "見ます")로 그려서, 순번으로 맞추면 표시가 밀린다(2026-10-24 홍보 쇼츠에서 발견).
+ * 그래서 문장 안 글자 위치로 맞춘다: 틀린 글자가 하나라도 든 낱말에 표시, 빠진 말은 그 위치가 든 낱말 뒤에.
+ * tokens를 이어 붙인 글이 문장과 다르면 맞출 수 없어 표시 없이 돌려준다.
+ */
+export function tokenDiffMarks(
+  tokens: string[],
+  original: string,
+  corrected: string,
+  side: "original" | "corrected",
+): TokenDiffMarks {
+  const marks = new Map<number, "error" | "added">();
+  const gapsAfter = new Map<number, string>();
+  const sentence = side === "original" ? original : corrected;
+  if (tokens.join("") !== sentence) return { marks, gapsAfter };
+
+  const ranges: [number, number][] = [];
+  const gaps: { at: number; text: string }[] = [];
+  let at = 0;
+  if (side === "original") {
+    for (const part of originalHighlightParts(original, corrected)) {
+      if (part.missingHint) {
+        gaps.push({ at, text: part.missingHint });
+        continue;
+      }
+      if (part.error && part.text.trim()) ranges.push([at, at + part.text.length]);
+      at += part.text.length;
+    }
+  } else {
+    for (const part of correctedHighlightParts(original, corrected)) {
+      if (part.added && part.text.trim()) ranges.push([at, at + part.text.length]);
+      at += part.text.length;
+    }
+  }
+
+  const starts: number[] = [];
+  let offset = 0;
+  for (const token of tokens) {
+    starts.push(offset);
+    offset += token.length;
+  }
+  tokens.forEach((token, index) => {
+    if (!token.trim()) return;
+    const start = starts[index];
+    const end = start + token.length;
+    if (ranges.some(([a, b]) => a < end && b > start)) {
+      marks.set(index, side === "original" ? "error" : "added");
+    }
+  });
+  for (const gap of gaps) {
+    // 위치 바로 앞 글자가 든 낱말(공백이면 그 앞 낱말) 뒤에.
+    let owner = -1;
+    for (let i = 0; i < tokens.length; i++) {
+      if (starts[i] < gap.at && tokens[i].trim()) owner = i;
+      if (starts[i] >= gap.at) break;
+    }
+    const prev = gapsAfter.get(owner);
+    gapsAfter.set(owner, prev ? `${prev} ${gap.text}` : gap.text);
+  }
+  return { marks, gapsAfter };
+}
+
 function isCjkLetterToken(text: string) {
   return /^[\u3040-\u30ff\u3400-\u9fff\uac00-\ud7af]$/u.test(text);
 }

@@ -27,8 +27,7 @@ import { isWordToken, tokenize } from "@/lib/textTokens";
 import { prefetchExpressionUnits } from "@/lib/requestExpressionUnits";
 import { prefetchLearningSpans, loadLearningSpans } from "@/lib/requestLearningSpans";
 import {
-  correctedHighlightParts,
-  originalHighlightParts,
+  tokenDiffMarks,
 } from "@/lib/textDiff";
 import { normalizeVocabHeadword } from "@/lib/vocabulary";
 
@@ -76,29 +75,6 @@ function rangeText(tokens: string[], start: number, end: number) {
 }
 
 const TAP_MOVE_PX = 24;
-
-function tokenDiffMarks(diff: {
-  original: string;
-  corrected: string;
-  side: "original" | "corrected";
-}) {
-  const marks = new Map<number, "error" | "added">();
-  if (diff.side === "original") {
-    let index = 0;
-    for (const part of originalHighlightParts(diff.original, diff.corrected)) {
-      if (part.missingHint) continue;
-      if (part.error) marks.set(index, "error");
-      index += 1;
-    }
-    return marks;
-  }
-  let index = 0;
-  for (const part of correctedHighlightParts(diff.original, diff.corrected)) {
-    if (part.added) marks.set(index, "added");
-    index += 1;
-  }
-  return marks;
-}
 
 const diffMarkClass = {
   default: {
@@ -417,7 +393,9 @@ export function AnalyzableEnglish({
 
   const sentenceLabel = label ?? "sentence";
 
-  const marks = diff ? tokenDiffMarks(diff) : null;
+  // 고친 곳은 글자 위치로 낱말에 맞춘다(한·중·일은 글자 단위로 비교해 순번이 어긋남, textDiff.tokenDiffMarks).
+  const diffMarks = diff ? tokenDiffMarks(tokens, diff.original, diff.corrected, diff.side) : null;
+  const marks = diffMarks?.marks ?? null;
   const markStyles = diffMarkClass[tone];
   const renderToken = (token: string, index: number) => {
     if (!isWordToken(token)) {
@@ -470,31 +448,19 @@ export function AnalyzableEnglish({
     if (!diff || diff.side !== "original") {
       return tokens.map((token, index) => renderToken(token, index));
     }
-    const parts = originalHighlightParts(diff.original, diff.corrected);
+    const gapNode = (index: number, hint: string) => (
+      <span key={`gap-${index}`} className={markStyles.gap} title={hint}>
+        +{hint}
+      </span>
+    );
     const nodes: ReactNode[] = [];
-    let tokenIndex = 0;
-    parts.forEach((part, partIndex) => {
-      if (part.missingHint) {
-        nodes.push(
-          <span
-            key={`gap-${partIndex}`}
-            className={markStyles.gap}
-            title={part.missingHint}
-          >
-            +{part.missingHint}
-          </span>,
-        );
-        return;
-      }
-      const token = tokens[tokenIndex];
-      if (token === undefined) return;
-      nodes.push(renderToken(token, tokenIndex));
-      tokenIndex += 1;
+    const lead = diffMarks?.gapsAfter.get(-1);
+    if (lead) nodes.push(gapNode(-1, lead));
+    tokens.forEach((token, index) => {
+      nodes.push(renderToken(token, index));
+      const hint = diffMarks?.gapsAfter.get(index);
+      if (hint) nodes.push(gapNode(index, hint));
     });
-    while (tokenIndex < tokens.length) {
-      nodes.push(renderToken(tokens[tokenIndex], tokenIndex));
-      tokenIndex += 1;
-    }
     return nodes;
   })();
 
