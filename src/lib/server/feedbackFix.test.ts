@@ -102,15 +102,15 @@ test("언어 고르기: ja-JP → ja, 없는 언어는 영어 → 한국어 → 
 
 test("반영 보상: 먼저 보낸 3명만, 업데이트를 기다려도 한 번만, 범위·월 상한", async () => {
   const { clampReward, rewardWithinCap, REWARD_MONTHLY_CAP } = await import("../feedbackFix.ts");
-  assert.equal(clampReward(1), 5);
-  assert.equal(clampReward(80), 50);
+  assert.equal(clampReward(1), 3);
+  assert.equal(clampReward(80), 20);
   assert.equal(clampReward(0), 0);
   assert.equal(clampReward("x"), 0);
-  assert.equal(rewardWithinCap(50, 70), 30);
+  assert.equal(rewardWithinCap(20, 30), 10);
   assert.equal(rewardWithinCap(20, REWARD_MONTHLY_CAP), 0);
 
   const people = ["rc:r1", "rc:r2", "rc:r3", "rc:r4"];
-  const rewarded = { ...fix("reward-card", "2.80"), reward: 20 };
+  const rewarded = { ...fix("reward-card", "2.80"), reward: 10 };
   await announceFix(rewarded, people.slice(0, 2).map((id) => ({ sender: senderTag(id), uiLocale: "ko" })));
   // 나중에 같은 의견을 보낸 두 사람: 세 번째 자리만 남아 있다.
   await announceFix(rewarded, people.slice(2).map((id) => ({ sender: senderTag(id), uiLocale: "ko" })));
@@ -128,5 +128,5 @@ test("반영 보상: 먼저 보낸 3명만, 업데이트를 기다려도 한 번
     assert.equal(second.length, 1);
     assert.equal(second[0].points, undefined);
   }
-  assert.deepEqual(given, { "rc:r1": 20, "rc:r2": 20, "rc:r3": 20 });
+  assert.deepEqual(given, { "rc:r1": 10, "rc:r2": 10, "rc:r3": 10 });
 });

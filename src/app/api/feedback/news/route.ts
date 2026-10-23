@@ -25,7 +25,7 @@ export async function OPTIONS(request: NextRequest) {
  * server/contribStore.ts). 업데이트를 기다리는 소식("업데이트하면 보여요")도 반영은 된 것이라 센다.
  *
  * 반영 보상(2026-10-24 사용자 결정, lib/feedbackFix.ts): 소식에 보상이 붙어 있으면 이 요청의 사람(계정이면 계정의 학습 id)에게
- * 구매 포인트로 준다 — 한 달 100포인트까지. 받은 포인트는 소식의 `points`로 앱이 보여 준다.
+ * 구매 포인트로 준다 — 한 달 40포인트까지. 받은 포인트는 소식의 `points`로 앱이 보여 준다.
  */
 const REWARD_MONTH_KEY = (userId: string, month: string) => `feedback:v1:reward:${userId}:${month}`;
 const REWARD_MONTH_TTL = 40 * 24 * 60 * 60;

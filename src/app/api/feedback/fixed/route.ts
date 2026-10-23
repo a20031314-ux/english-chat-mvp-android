@@ -23,7 +23,7 @@ export async function OPTIONS(request: NextRequest) {
  * POST — 의견함 카드가 반영·완료됐다. 앱을 운영하는 사람(의견함 정리 예약 작업)만,
  * 헤더 x-feedback-key. 묶인 사람마다 소식을 하나 쌓는다(같은 카드는 한 사람에게 한 번).
  *
- * body: { card, appVersion, texts: {ko: "…", ja: "…"}, shots: ["ko","ja"], reward?: 5~50,
+ * body: { card, appVersion, texts: {ko: "…", ja: "…"}, shots: ["ko","ja"], reward?: 3~20,
  *         recipients: [{ sender: "<16자 해시>", uiLocale: "ja" }] }   — recipients는 의견을 보낸 순서대로(먼저 보낸 3명만 보상)
  * 그림(public/feedback-fix/<card>/<언어>/{before,after}.webp)은 PR로 먼저 배포돼 있어야 한다.
  */

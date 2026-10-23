@@ -9,19 +9,19 @@
  * 그림은 `public/feedback-fix/<카드>/<UI 언어>/{before,after}.webp`(웹사이트가 내주고
  * 앱 묶음에서는 뺀다). 만드는 법: scripts/capture-feedback-fix.mjs, 절차: hub/feedback/README.md.
  *
- * 반영 보상(사용자 결정 2026-10-24): 반영된 의견에 운영자가 중요도에 따라 5~50포인트를 정한다(의견함 카드 `reward`).
- * 같은 의견을 여러 명이 보냈으면 먼저 보낸 3명까지, 한 사람이 한 달에 받는 반영 보상은 100포인트까지.
+ * 반영 보상(사용자 결정 2026-10-24): 반영된 의견에 운영자가 중요도에 따라 3~20포인트를 정한다(2026-10-24 범위 낮춤, 처음 5~50)(의견함 카드 `reward`).
+ * 같은 의견을 여러 명이 보냈으면 먼저 보낸 3명까지, 한 사람이 한 달에 받는 반영 보상은 40포인트까지.
  * 사용자에게는 범위만 사용법(?)에 알리고, 받을 때 실제 포인트를 보여 준다(소식 `points`).
  *
  * 서버(라우트·저장소)와 앱(시트)이 같이 쓴다.
  */
 
-export const REWARD_MIN = 5;
-export const REWARD_MAX = 50;
+export const REWARD_MIN = 3;
+export const REWARD_MAX = 20;
 /** 같은 카드에서 포인트를 받는 사람 수(보낸 순서대로). */
 export const REWARD_FIRST = 3;
 /** 한 사람이 한 달(UTC 달)에 받는 반영 보상 상한. */
-export const REWARD_MONTHLY_CAP = 100;
+export const REWARD_MONTHLY_CAP = 40;
 
 /** 운영자가 정한 포인트를 범위 안으로. 0·없음은 보상 없음. */
 export function clampReward(value: unknown): number {
@@ -48,7 +48,7 @@ export type FeedbackFix = {
   texts: Partial<Record<FixLocale, string>>;
   /** 전·후 그림이 있는 UI 언어. */
   shots: FixLocale[];
-  /** 반영 보상(받는 사람마다, 5~50). 없으면 보상 없음. */
+  /** 반영 보상(받는 사람마다, 3~20). 없으면 보상 없음. */
   reward?: number;
 };
 

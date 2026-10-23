@@ -21,7 +21,7 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
-- **의견 반영 보상 (2026-10-24, 사용자 "진행해줘", 서버 바로·시트 +P 다음 빌드):** 의견함 "반영 보상" 칸(5~50, AI 제안 `rewardSuggest`) → `feedback-notify.mjs`의 `reward` → `/api/feedback/fixed` → 카드마다 보상 자리 3개(`feedback:v1:rewardslot`) → 소식을 받을 때 `/api/feedback/news`가 구매 포인트로(한 달 100P, `feedback:v1:reward:<id>:<달>`). 사용법 My "그 밖에"에 범위 한 줄(14개 언어).
+- **의견 반영 보상 (2026-10-24, 사용자 "진행해줘", 서버 바로·시트 +P 다음 빌드):** 의견함 "반영 보상" 칸(3~20, AI 제안 `rewardSuggest`) → `feedback-notify.mjs`의 `reward` → `/api/feedback/fixed` → 카드마다 보상 자리 3개(`feedback:v1:rewardslot`) → 소식을 받을 때 `/api/feedback/news`가 구매 포인트로(한 달 40P, `feedback:v1:reward:<id>:<달>`). 사용법 My "그 밖에"에 범위 한 줄(14개 언어).
   남은 것: 예약 작업 "의견함 정리"가 README의 `rewardSuggest`·`reward`를 실제로 쓰는지 다음 실행에서 확인. 운영에서 실제 반영 카드로 한 번 끝까지(아직 반영 끝 카드 없음).
 - **노트 = 언어별 뼈대 + 짚은 장면 (2026-10-23, 사용자 "만들어줘", `hub/drafts/notebook-2026-10-23.md`, 서버 바로·화면 다음 빌드):** 1단계 끝 — `lib/notes/notebook.ts`(뼈대: 글자 기초 묶음 + 단계 문법 지금 단계까지, 카드·편집 순수), `server/notebookStore.ts`(`notebook:v1`, `fileFix` = Haiku 칸 고르기 + 한 줄 설명, 하루 60), `/api/notebook`(GET 뼈대·카드, POST 편집), 채팅 교정·통화 고친 줄 → 카드, `components/notes/NotebookSection.tsx`(노트 맨 위 [글자·소리 · 문법 · 내가 만든 칸 · 아직 자리 없음]). 처리방침·RULES 학습자 문장 예외.
   **오늘의 학습·화면 함께(2026-10-24, 사용자 "한번에 만들어줘"):** 짚인 줄은 후보(`pending`, 7일) → 노트 맨 위 [오늘의 학습 · n]/[지난 학습 · n] → 칸별 체크(진짜 실수·또는 미리 체크, 오타·뜻 짐작은 비움) → [노트에 넣기]. AI 대화·통화에서 교정이 붙을 때 기기에 화면 캡처(`lib/notes/sceneShots.ts`, IndexedDB 7일·60장), "화면 함께" 켠 것만 올림(`notebookShot:v1`).

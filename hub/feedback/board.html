@@ -213,16 +213,16 @@ function card(c) {
     disabled: !canWrite || c.status === "done",
     onclick: () => decide(c.id, { decision: c.decision === v ? "" : v }),
   }, DECISION_LABEL[v]));
-  // 반영 보상(2026-10-24): 반영할 카드에 5~50포인트 — 먼저 보낸 3명까지, 한 사람 한 달 100포인트까지(서버가 지킴).
-  const rewardValue = Number(c.reward ?? c.rewardSuggest ?? 20);
+  // 반영 보상(2026-10-24): 반영할 카드에 3~20포인트 — 먼저 보낸 3명까지, 한 사람 한 달 40포인트까지(서버가 지킴).
+  const rewardValue = Number(c.reward ?? c.rewardSuggest ?? 10);
   const reward = c.decision === "apply" || c.status === "done"
     ? el("label", { class: "reward" },
         "반영 보상 ",
         el("input", {
-          type: "number", min: 5, max: 50, step: 5, value: String(rewardValue),
+          type: "number", min: 3, max: 20, step: 1, value: String(rewardValue),
           disabled: !canWrite || c.status === "done",
           onchange: (e) => {
-            const n = Math.min(50, Math.max(5, Math.round(Number(e.target.value) || 0)));
+            const n = Math.min(20, Math.max(3, Math.round(Number(e.target.value) || 0)));
             e.target.value = String(n);
             decide(c.id, { reward: n });
           },

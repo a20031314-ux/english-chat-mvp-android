@@ -66,7 +66,7 @@
           "body": [
             "«{ui:ledgerTitle}» reúne expresiones de todas las pestañas. ¿Nuevo objetivo? «{ui:mapNewGoal}». Cada idioma tiene lo suyo.",
             "Solo cuentan como dominadas las expresiones que usaste sin ayuda (no es un nivel, sino cuántas puedes usar). De las frases que corrigió el tutor, solo quedan en tus notas las que eliges en «{ui:notebookToday}». Si marcas una expresión en el análisis de frases, se queda en Mis expresiones; si la añades al mapa, se crea una tarea con ella.",
-            "Si se aplica una opinión que enviaste con «{ui:feedbackOpen}», recibes de 5 a 50 puntos según su importancia."
+            "Si se aplica una opinión que enviaste con «{ui:feedbackOpen}», recibes de 3 a 20 puntos según su importancia."
           ]
         }
       ]
@@ -482,7 +482,7 @@
           "body": [
             "「{ui:ledgerTitle}」に全タブで出会った表現がたまります。目標が変わったら「{ui:mapNewGoal}」。学習言語ごとに別です。",
             "手助けなしで使えた表現だけを習得と数えます(レベルではなく、使えるようになった表現の数)。チューターが直した文は「{ui:notebookToday}」で選んだものだけがノートに残ります。文の分析で表現に印をつけると自分の表現に残り、マップに入れるとその表現のタスクができます。",
-            "「{ui:feedbackOpen}」で送ったご意見が反映されると、重要度に応じて5〜50ポイントを差し上げます。"
+            "「{ui:feedbackOpen}」で送ったご意見が反映されると、重要度に応じて3〜20ポイントを差し上げます。"
           ]
         }
       ]
@@ -898,7 +898,7 @@
           "body": [
             "“{ui:ledgerTitle}”汇集了各个标签页遇到的表达。目标变了就点“{ui:mapNewGoal}”。每种学习语言各自独立。",
             "只有不靠帮助说出的表达才算掌握(不是等级，而是你能用的表达数量)。导师改过的句子，只有在“{ui:notebookToday}”里选中的才会留在笔记里。在句子分析里标记表达会留在我的表达里，加到地图上就会生成相关任务。",
-            "通过“{ui:feedbackOpen}”发送的意见被采纳后，会按重要程度给你5到50积分。"
+            "通过“{ui:feedbackOpen}”发送的意见被采纳后，会按重要程度给你3到20积分。"
           ]
         }
       ]
@@ -1314,7 +1314,7 @@
           "body": [
             "“{ui:ledgerTitle}” gom cách nói từ mọi tab. Đổi mục tiêu? “{ui:mapNewGoal}”. Mỗi ngôn ngữ học có phần riêng.",
             "Chỉ những cách nói bạn tự dùng được mà không cần trợ giúp mới được tính là thành thạo (không phải cấp độ, mà là số cách nói bạn dùng được). Trong các câu gia sư đã sửa, chỉ những câu bạn chọn ở “{ui:notebookToday}” mới được giữ trong ghi chú. Đánh dấu một cách nói trong phân tích câu sẽ lưu nó vào cách nói của tôi; thêm vào bản đồ sẽ tạo nhiệm vụ cho nó.",
-            "Nếu góp ý bạn gửi qua “{ui:feedbackOpen}” được áp dụng, bạn nhận 5–50 điểm tùy mức độ quan trọng."
+            "Nếu góp ý bạn gửi qua “{ui:feedbackOpen}” được áp dụng, bạn nhận 3–20 điểm tùy mức độ quan trọng."
           ]
         }
       ]
@@ -1730,7 +1730,7 @@
           "body": [
             "« {ui:ledgerTitle} » rassemble les expressions de tous les onglets. Nouvel objectif ? « {ui:mapNewGoal} ». Chaque langue a les siens.",
             "Seules les expressions produites sans aide comptent comme maîtrisées (pas un niveau, juste combien vous savez utiliser). Parmi les lignes corrigées par le tuteur, seules celles que vous choisissez dans « {ui:notebookToday} » restent dans vos notes. Marquer une expression dans l'analyse de phrase la garde dans Mes expressions ; l'ajouter à la carte crée une tâche.",
-            "Si un avis envoyé avec « {ui:feedbackOpen} » est retenu, vous recevez 5 à 50 points selon son importance."
+            "Si un avis envoyé avec « {ui:feedbackOpen} » est retenu, vous recevez 3 à 20 points selon son importance."
           ]
         }
       ]
@@ -2146,7 +2146,7 @@
           "body": [
             "«{ui:ledgerTitle}» raccoglie le espressioni di tutte le schede. Nuovo obiettivo? «{ui:mapNewGoal}». Ogni lingua ha i suoi.",
             "Contano come padroneggiate solo le espressioni usate senza aiuto (non è un livello, ma quante ne sai usare). Delle frasi corrette dal tutor restano nelle note solo quelle che scegli in «{ui:notebookToday}». Se segni un'espressione nell'analisi della frase resta in Le mie espressioni; se la aggiungi alla mappa nasce un compito.",
-            "Se un parere inviato con «{ui:feedbackOpen}» viene applicato, ricevi da 5 a 50 punti in base all'importanza."
+            "Se un parere inviato con «{ui:feedbackOpen}» viene applicato, ricevi da 3 a 20 punti in base all'importanza."
           ]
         }
       ]
@@ -2562,7 +2562,7 @@
           "body": [
             "“{ui:ledgerTitle}” reúne expressões de todas as abas. Novo objetivo? “{ui:mapNewGoal}”. Cada idioma tem o seu.",
             "Só contam como dominadas as expressões que você usou sem ajuda (não é um nível, só quantas você consegue usar). Das frases que o tutor corrigiu, só ficam nas notas as que você escolhe em “{ui:notebookToday}”. Marcar uma expressão na análise de frases a guarda em Minhas expressões; adicioná-la ao mapa cria uma tarefa.",
-            "Se uma opinião enviada por “{ui:feedbackOpen}” for aplicada, você recebe de 5 a 50 pontos conforme a importância."
+            "Se uma opinião enviada por “{ui:feedbackOpen}” for aplicada, você recebe de 3 a 20 pontos conforme a importância."
           ]
         }
       ]
@@ -2978,7 +2978,7 @@
           "body": [
             "«{ui:ledgerTitle}» собирает выражения со всех вкладок. Новая цель? «{ui:mapNewGoal}». У каждого языка своё.",
             "Освоенными считаются только выражения, которые вы использовали без подсказки (это не уровень, а сколько выражений вы умеете применять). Из исправленных репетитором строк в заметках остаются только те, что вы выбрали в «{ui:notebookToday}». Отмеченное в разборе предложения выражение сохраняется в Моих выражениях, а добавленное на карту становится заданием.",
-            "Если отзыв, отправленный через «{ui:feedbackOpen}», учтут, вы получите от 5 до 50 баллов в зависимости от его важности."
+            "Если отзыв, отправленный через «{ui:feedbackOpen}», учтут, вы получите от 3 до 20 баллов в зависимости от его важности."
           ]
         }
       ]
@@ -3394,7 +3394,7 @@
           "body": [
             "“{ui:ledgerTitle}” mengumpulkan ungkapan dari semua tab. Ganti tujuan? “{ui:mapNewGoal}”. Tiap bahasa punya sendiri.",
             "Hanya ungkapan yang kamu pakai tanpa bantuan yang dihitung dikuasai (bukan level, hanya berapa yang bisa kamu pakai). Dari kalimat yang dikoreksi tutor, hanya yang kamu pilih di “{ui:notebookToday}” yang tersimpan di catatan. Menandai ungkapan di analisis kalimat menyimpannya di Ungkapanku; menambahkannya ke peta membuat tugas untuknya.",
-            "Jika masukan yang kamu kirim lewat “{ui:feedbackOpen}” diterapkan, kamu mendapat 5–50 poin sesuai tingkat pentingnya."
+            "Jika masukan yang kamu kirim lewat “{ui:feedbackOpen}” diterapkan, kamu mendapat 3–20 poin sesuai tingkat pentingnya."
           ]
         }
       ]
@@ -3810,7 +3810,7 @@
           "body": [
             "«{ui:ledgerTitle}» يجمع التعابير من كل التبويبات. هدف جديد؟ «{ui:mapNewGoal}». لكل لغة ما يخصّها.",
             "لا تُحسب متقنة إلا العبارات التي استخدمتها دون مساعدة (ليست مستوى، بل كم عبارة تستطيع استخدامها). من الجمل التي صحّحها المعلّم لا يبقى في ملاحظاتك إلا ما تختاره في «{ui:notebookToday}». وضع علامة على عبارة في تحليل الجملة يحفظها في عباراتي، وإضافتها إلى الخريطة تُنشئ مهمة لها.",
-            "إذا اعتُمد رأي أرسلته عبر «{ui:feedbackOpen}» تحصل على 5 إلى 50 نقطة حسب أهميته."
+            "إذا اعتُمد رأي أرسلته عبر «{ui:feedbackOpen}» تحصل على 3 إلى 20 نقطة حسب أهميته."
           ]
         }
       ]
@@ -4226,7 +4226,7 @@
           "body": [
             "“{ui:ledgerTitle}” รวบรวมสำนวนจากทุกแท็บ เปลี่ยนเป้าหมาย? “{ui:mapNewGoal}” แต่ละภาษาแยกกัน",
             "นับเป็นคล่องแล้วเฉพาะสำนวนที่ใช้ได้เองโดยไม่ต้องช่วย (ไม่ใช่ระดับ แต่เป็นจำนวนสำนวนที่ใช้ได้) ประโยคที่ติวเตอร์แก้ จะเก็บในโน้ตเฉพาะที่คุณเลือกใน “{ui:notebookToday}” ทำเครื่องหมายสำนวนในการวิเคราะห์ประโยคจะเก็บไว้ในสำนวนของฉัน เพิ่มลงแผนที่จะได้งานสำหรับสำนวนนั้น",
-            "ถ้าความเห็นที่ส่งผ่าน “{ui:feedbackOpen}” ถูกนำไปใช้ คุณจะได้ 5–50 พอยต์ตามความสำคัญ"
+            "ถ้าความเห็นที่ส่งผ่าน “{ui:feedbackOpen}” ถูกนำไปใช้ คุณจะได้ 3–20 พอยต์ตามความสำคัญ"
           ]
         }
       ]
@@ -4642,7 +4642,7 @@
           "body": [
             "“{ui:ledgerTitle}” में हर टैब की अभिव्यक्तियाँ जमा होती हैं। नया लक्ष्य? “{ui:mapNewGoal}”। हर भाषा का अपना अलग है।",
             "सिर्फ़ वही भाव महारत में गिने जाते हैं जो आपने बिना मदद के इस्तेमाल किए (यह स्तर नहीं, बस कितने भाव आप इस्तेमाल कर पाते हैं)। ट्यूटर ने जो वाक्य सुधारे, उनमें से सिर्फ़ वही नोट्स में रहते हैं जिन्हें आप ‘{ui:notebookToday}’ में चुनते हैं। वाक्य विश्लेषण में भाव पर निशान लगाने से वह मेरे भाव में रहता है, और नक्शे में जोड़ने से उसका काम बनता है।",
-            "‘{ui:feedbackOpen}’ से भेजा गया आपका सुझाव लागू होने पर, उसकी अहमियत के हिसाब से 5–50 पॉइंट मिलते हैं।"
+            "‘{ui:feedbackOpen}’ से भेजा गया आपका सुझाव लागू होने पर, उसकी अहमियत के हिसाब से 3–20 पॉइंट मिलते हैं।"
           ]
         }
       ]
