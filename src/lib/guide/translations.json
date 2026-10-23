@@ -57,9 +57,10 @@
         {
           "heading": "8. Notas",
           "body": [
-            "‘{ui:notesTitle}’ reúne tus expresiones, palabras y preguntas del análisis de frases en 8 capítulos por tema. Abre un capítulo para ‘{ui:notesPractice}’, busca arriba y toca ‘{ui:homeTabVocab}’ para ver tu vocabulario."
+            "«{ui:notebookToday}», arriba, reúne las frases que el tutor corrigió hoy. Marca las que quieras guardar y pulsa «{ui:notebookAddToNotes}»; con «{ui:notebookWithScreen}» se adjunta la pantalla de ese momento.",
+            "El número junto a las secciones de «{ui:notebookScript}» y «{ui:notebookGrammar}» indica cuántas veces te corrigieron ahí. Abre una sección para mover o anotar tarjetas, cambiarle el nombre o añadir las tuyas en «{ui:notebookMine}». Abajo, «{ui:notebookVocab}» reúne tus expresiones, palabras y preguntas por tema, y «{ui:homeTabVocab}» abre la lista de palabras."
           ],
-          "shot": "notes"
+          "shot": "notebook-today"
         },
         {
           "heading": "Además",
@@ -161,14 +162,14 @@
           "body": [
             "El tutor habla primero. Cuando dejas de hablar, tu turno termina solo.",
             "En el paquete, la franja de arriba muestra en qué pregunta vas, y al terminar {ui:packSeeRetro} muestra qué mejoró hoy.",
-            "Para hablar de lo que quieras, toca {ui:roleplayStart}."
+            "Para hablar de lo que quieras, toca 📞 arriba en el chat con la IA. La llamada empieza enseguida."
           ]
         },
         {
           "heading": "Revisa una llamada terminada",
           "shot": "call-review",
           "body": [
-            "Las llamadas terminadas quedan en {ui:roleplayPast}. Debajo de tus frases verás la frase corregida y lo que querías decir.",
+            "Una llamada terminada queda en ese chat como tarjeta 🗒 {ui:homeTabCall}, y también en ⋮ {ui:chatHistoryTitle}. {ui:packSeeRetro} muestra bajo tus frases la frase corregida y lo que querías decir.",
             "{ui:roleplaySayAgain} te reproduce esa frase para que la repitas y muestra qué palabras se oyeron distinto.",
             "En los turnos donde te atascaste queda el botón {ui:roleplayWhyStuck}."
           ]
@@ -184,14 +185,14 @@
         {
           "heading": "Pausa y continúa",
           "body": [
-            "{ui:roleplayPause} guarda la conversación. La próxima vez, {ui:roleplayResume} la retoma."
+            "{ui:roleplayPause} guarda la conversación. La próxima vez, {ui:roleplayResume} en la tarjeta 🗒 la retoma."
           ]
         },
         {
           "heading": "Tiempo de llamada",
           "body": [
             "El plan gratis te da 10 puntos (50 minutos) para empezar. Un punto son cinco minutos.",
-            "Lite da 7 minutos de llamada gratis cada día y Plus 10; después, sigues con puntos. Premium da 80 puntos al mes.",
+            "Lite da 7 minutos de llamadas gratis al día, Plus 10 y Premium 15; después, sigues con puntos.",
             "La pantalla de llamada muestra el tiempo que te queda hoy. El paquete de hoy no gasta tiempo en ningún plan."
           ]
         }
@@ -352,9 +353,10 @@
           "body": [
             "Perfiles de quienes estuvieron hace poco. Toca una foto para abrir el perfil y síguelo o escríbele.",
             "También puedes bloquear o denunciar desde el perfil.",
-            "En tu perfil elige con etiquetas tu nacionalidad, lengua materna e intereses, y activa o desactiva lo que ven los demás. Toca «🙌 Me ayudó» a quien respondió tu pregunta; «Ver en español» traduce presentaciones y publicaciones."
+            "En tu perfil elige con etiquetas tu nacionalidad, lengua materna e intereses, y activa o desactiva lo que ven los demás. Toca «🙌 Me ayudó» a quien respondió tu pregunta; «Ver en español» traduce presentaciones y publicaciones.",
+            "El chip «Aprenden el mismo idioma» muestra a quienes aprenden el idioma que estudias ahora; «Aprenden y hablan como yo», solo a los que además hablan tu lengua materna. Los idiomas salen del perfil: idiomas que aprendes, lengua materna e idiomas que hablas."
           ],
-          "shot": "r69-people"
+          "shot": "people-lang"
         },
         {
           "heading": "Invitar amigos",
@@ -473,9 +475,10 @@
         {
           "heading": "8. ノート",
           "body": [
-            "「{ui:notesTitle}」に表現・単語・文の分析で聞いたことが8章のテーマごとに集まります。章を開くとテーマごとに「{ui:notesPractice}」、上の検索欄で探せて、「{ui:homeTabVocab}」で単語帳が開きます。"
+            "いちばん上の「{ui:notebookToday}」に、今日チューターが直した文が集まります。残すものだけチェックして「{ui:notebookAddToNotes}」。「{ui:notebookWithScreen}」をオンにすると、そのときの画面も付きます。",
+            "「{ui:notebookScript}」「{ui:notebookGrammar}」の項目の横の数字は、そこで直された回数です。項目を開くとカードを移動・メモでき、名前を変えたり「{ui:notebookMine}」に項目を足したりできます。下の「{ui:notebookVocab}」には表現・単語・質問がテーマ別に集まり、「{ui:homeTabVocab}」の行は単語帳です。"
           ],
-          "shot": "notes"
+          "shot": "notebook-today"
         },
         {
           "heading": "そのほか",
@@ -577,14 +580,14 @@
           "body": [
             "チューターが先に話します。話し終えると自動で自分の番が終わります。",
             "パックでは上の帯に何問目かが出て、終わったら{ui:packSeeRetro}で今日伸びたところを見られます。",
-            "テーマなしで話したいときは{ui:roleplayStart}を押します。"
+            "テーマなしで話したいときは、AIチャットの上の📞を押します。すぐに通話が始まります。"
           ]
         },
         {
           "heading": "終わった通話を振り返る",
           "shot": "call-review",
           "body": [
-            "終わった通話は{ui:roleplayPast}に残ります。自分の文の下に、直した文と言いたかったことが出ます。",
+            "終わった通話はそのAIチャットの中に🗒 {ui:homeTabCall}カードとして残り、⋮ {ui:chatHistoryTitle}にも入ります。{ui:packSeeRetro}を押すと、自分の文の下に直した文と言いたかったことが出ます。",
             "{ui:roleplaySayAgain}を押すとその文を聞いて言い直せて、違って聞こえた単語を教えてくれます。",
             "詰まった番には{ui:roleplayWhyStuck}ボタンが残ります。"
           ]
@@ -600,14 +603,14 @@
         {
           "heading": "止めて続きから",
           "body": [
-            "{ui:roleplayPause}を押すと会話が保存されます。次は{ui:roleplayResume}で続けられます。"
+            "{ui:roleplayPause}を押すと会話が保存されます。次は🗒カードの{ui:roleplayResume}で続けられます。"
           ]
         },
         {
           "heading": "通話時間",
           "body": [
             "無料プランは最初に10ポイント（50分）あります。1ポイントで5分です。",
-            "ライトは毎日7分、プラスは10分の無料通話があり、使い切ったらポイントで続けます。プレミアムは毎月80ポイントです。",
+            "ライトは毎日7分、プラスは10分、プレミアムは15分の無料通話があり、使い切ったらポイントで続けます。",
             "通話の画面に今日の残り時間が出ます。今日のパックはどのプランでも時間を使いません。"
           ]
         }
@@ -768,9 +771,10 @@
           "body": [
             "最近来た学習者のプロフィールが並びます。写真をタップするとプロフィールが開き、フォローやメッセージができます。",
             "ブロックや報告もプロフィールからできます。",
-            "プロフィールで国籍・母語・興味をチップで選び、ほかの人に見せる欄をオン・オフできます。質問に答えてくれた人には「🙌 助かった」、ほかの人の自己紹介や投稿は「日本語で見る」で翻訳します。"
+            "プロフィールで国籍・母語・興味をチップで選び、ほかの人に見せる欄をオン・オフできます。質問に答えてくれた人には「🙌 助かった」、ほかの人の自己紹介や投稿は「日本語で見る」で翻訳します。",
+            "上のチップ「同じ言語を学ぶ人」は今学んでいる言語が同じ人、「学ぶ言語も話す言語も同じ人」はさらに自分の母語も話す人だけを表示します。言語はプロフィールの学んでいる言語・母語・話せる言語で合わせます。"
           ],
-          "shot": "r69-people"
+          "shot": "people-lang"
         },
         {
           "heading": "友だちを招待",
@@ -889,9 +893,10 @@
         {
           "heading": "8. 笔记",
           "body": [
-            "“{ui:notesTitle}”把你的表达、单词和句子分析里问过的问题按 8 章主题汇总。打开一章，每个主题都有“{ui:notesPractice}”；用上方搜索框查找，点“{ui:homeTabVocab}”打开单词本。"
+            "最上面的“{ui:notebookToday}”汇集了今天导师改过的句子。勾选想留下的，点“{ui:notebookAddToNotes}”；打开“{ui:notebookWithScreen}”会附上当时的画面。",
+            "“{ui:notebookScript}”“{ui:notebookGrammar}”栏目旁的数字是在那里被纠正的次数。打开栏目可以移动卡片、写备注、改名，或在“{ui:notebookMine}”里加栏目。下面的“{ui:notebookVocab}”按主题汇集你的表达、单词和提问，“{ui:homeTabVocab}”一行是单词本。"
           ],
-          "shot": "notes"
+          "shot": "notebook-today"
         },
         {
           "heading": "其他",
@@ -993,14 +998,14 @@
           "body": [
             "导师先说话。你停下来，你这一轮就自动结束。",
             "练习包里，上方的条显示正在第几题，结束后用 {ui:packSeeRetro} 看看今天哪里进步了。",
-            "想随便聊，点 {ui:roleplayStart}。"
+            "想随便聊聊时，点 AI 对话顶部的 📞，通话马上开始。"
           ]
         },
         {
           "heading": "回顾结束的通话",
           "shot": "call-review",
           "body": [
-            "结束的通话保存在 {ui:roleplayPast}。你说的每句下面会显示改好的句子和你原本想说的意思。",
+            "结束的通话会以 🗒 {ui:homeTabCall} 卡片留在那段 AI 对话里，也会收在 ⋮ {ui:chatHistoryTitle} 中。点 {ui:packSeeRetro}，你的句子下方会显示改正后的句子和你本来想说的话。",
             "点 {ui:roleplaySayAgain} 会播放那句话让你跟着说，并告诉你哪些词听起来不一样。",
             "卡住的那一轮会留下 {ui:roleplayWhyStuck} 按钮。"
           ]
@@ -1016,14 +1021,14 @@
         {
           "heading": "暂停后继续",
           "body": [
-            "点 {ui:roleplayPause} 会保存对话。下次点 {ui:roleplayResume} 接着聊。"
+            "点 {ui:roleplayPause} 会保存对话。下次点 🗒 卡片上的 {ui:roleplayResume} 继续。"
           ]
         },
         {
           "heading": "通话时间",
           "body": [
             "免费版一开始有 10 积分（50 分钟），1 积分是 5 分钟。",
-            "轻享版每天有 7 分钟免费通话，进阶版 10 分钟，用完后用积分继续。高级版每月 80 积分。",
+            "轻享每天有 7 分钟免费通话，Plus 10 分钟，高级 15 分钟；用完后用积分继续。",
             "通话画面会显示今天剩下的时间。今日练习包在任何方案下都不占时间。"
           ]
         }
@@ -1184,9 +1189,10 @@
           "body": [
             "这里是最近来过的学习者的资料。点头像打开资料，可以关注或发消息。",
             "拉黑和举报也在资料页。",
-            "在个人资料里用标签选择国籍、母语和兴趣，并开关别人能看到的栏目。回答了你问题的人，可以点“🙌 有帮助”；别人的自我介绍和帖子可以用“用中文查看”翻译。"
+            "在个人资料里用标签选择国籍、母语和兴趣，并开关别人能看到的栏目。回答了你问题的人，可以点“🙌 有帮助”；别人的自我介绍和帖子可以用“用中文查看”翻译。",
+            "上面的“在学同一种语言”显示和你现在学同一种语言的人，“学的和说的语言都相同”只显示其中也会说你母语的人。语言按个人资料里的在学语言、母语和会说的语言来匹配。"
           ],
-          "shot": "r69-people"
+          "shot": "people-lang"
         },
         {
           "heading": "邀请朋友",
@@ -1305,9 +1311,10 @@
         {
           "heading": "8. Ghi chú",
           "body": [
-            "“{ui:notesTitle}” gom cụm từ, từ vựng và câu hỏi khi phân tích câu thành 8 chương theo chủ đề. Mở một chương để “{ui:notesPractice}”, tìm ở ô phía trên, chạm “{ui:homeTabVocab}” để mở sổ từ."
+            "“{ui:notebookToday}” ở trên cùng gom các câu gia sư đã sửa hôm nay. Đánh dấu câu muốn giữ rồi nhấn “{ui:notebookAddToNotes}”; bật “{ui:notebookWithScreen}” để kèm màn hình lúc đó.",
+            "Con số cạnh các mục “{ui:notebookScript}” và “{ui:notebookGrammar}” là số lần bạn bị sửa ở đó. Mở một mục để chuyển hoặc ghi chú thẻ, đổi tên, hay thêm mục riêng ở “{ui:notebookMine}”. Bên dưới, “{ui:notebookVocab}” gom cách nói, từ và câu hỏi theo chủ đề, còn dòng “{ui:homeTabVocab}” mở sổ từ."
           ],
-          "shot": "notes"
+          "shot": "notebook-today"
         },
         {
           "heading": "Ngoài ra",
@@ -1409,14 +1416,14 @@
           "body": [
             "Gia sư nói trước. Khi bạn ngừng nói, lượt của bạn tự kết thúc.",
             "Trong gói, dải phía trên cho biết bạn đang ở câu hỏi thứ mấy, và khi xong {ui:packSeeRetro} cho thấy hôm nay bạn tiến bộ ở đâu.",
-            "Muốn nói chuyện tự do, chạm {ui:roleplayStart}."
+            "Muốn nói chuyện tự do, chạm 📞 ở đầu cuộc trò chuyện với AI. Cuộc gọi bắt đầu ngay."
           ]
         },
         {
           "heading": "Xem lại cuộc gọi đã xong",
           "shot": "call-review",
           "body": [
-            "Cuộc gọi đã xong nằm trong {ui:roleplayPast}. Dưới câu của bạn có câu đã sửa và điều bạn định nói.",
+            "Cuộc gọi đã xong nằm lại trong cuộc trò chuyện AI đó dưới dạng thẻ 🗒 {ui:homeTabCall}, và cả trong ⋮ {ui:chatHistoryTitle}. {ui:packSeeRetro} cho thấy câu đã sửa và điều bạn định nói dưới câu của bạn.",
             "{ui:roleplaySayAgain} phát câu đó để bạn nói theo và cho biết từ nào nghe khác đi.",
             "Lượt bạn bị bí sẽ có nút {ui:roleplayWhyStuck}."
           ]
@@ -1432,14 +1439,14 @@
         {
           "heading": "Tạm dừng và tiếp tục",
           "body": [
-            "{ui:roleplayPause} lưu cuộc trò chuyện. Lần sau, {ui:roleplayResume} để nói tiếp."
+            "{ui:roleplayPause} lưu cuộc trò chuyện. Lần sau, {ui:roleplayResume} trên thẻ 🗒 để tiếp tục."
           ]
         },
         {
           "heading": "Thời gian gọi",
           "body": [
             "Gói miễn phí cho bạn 10 điểm (50 phút) lúc đầu. Một điểm là năm phút.",
-            "Lite có 7 phút gọi miễn phí mỗi ngày, Plus có 10 phút; hết thì tiếp tục bằng điểm. Premium nhận 80 điểm mỗi tháng.",
+            "Lite có 7 phút gọi miễn phí mỗi ngày, Plus 10 phút và Premium 15 phút; hết thì tiếp tục bằng điểm.",
             "Màn hình gọi hiển thị thời gian còn lại hôm nay. Gói hôm nay không tốn thời gian ở mọi gói cước."
           ]
         }
@@ -1600,9 +1607,10 @@
           "body": [
             "Hồ sơ của những người học vừa ghé. Chạm ảnh để mở hồ sơ, rồi theo dõi hoặc nhắn tin.",
             "Chặn và báo cáo cũng ở hồ sơ.",
-            "Trong hồ sơ, chọn quốc tịch, tiếng mẹ đẻ và sở thích bằng các thẻ, rồi bật hoặc tắt phần người khác thấy. Bấm “🙌 Hữu ích” cho người đã trả lời câu hỏi của bạn; “Xem bằng tiếng Việt” dịch phần giới thiệu và bài đăng của người khác."
+            "Trong hồ sơ, chọn quốc tịch, tiếng mẹ đẻ và sở thích bằng các thẻ, rồi bật hoặc tắt phần người khác thấy. Bấm “🙌 Hữu ích” cho người đã trả lời câu hỏi của bạn; “Xem bằng tiếng Việt” dịch phần giới thiệu và bài đăng của người khác.",
+            "Chip “Học cùng ngôn ngữ” hiện những người đang học cùng ngôn ngữ với bạn; “Cùng học, cùng nói một ngôn ngữ” chỉ hiện những người còn nói tiếng mẹ đẻ của bạn. Ngôn ngữ lấy từ hồ sơ: ngôn ngữ đang học, tiếng mẹ đẻ và ngôn ngữ nói được."
           ],
-          "shot": "r69-people"
+          "shot": "people-lang"
         },
         {
           "heading": "Mời bạn bè",
@@ -1721,9 +1729,10 @@
         {
           "heading": "8. Notes",
           "body": [
-            "« {ui:notesTitle} » regroupe vos expressions, mots et questions d'analyse de phrase en 8 chapitres par thème. Ouvrez un chapitre pour « {ui:notesPractice} », cherchez en haut, et touchez « {ui:homeTabVocab} » pour la liste de mots."
+            "« {ui:notebookToday} », en haut, réunit les lignes corrigées par le tuteur aujourd'hui. Cochez celles à garder puis « {ui:notebookAddToNotes} » ; avec « {ui:notebookWithScreen} », l'écran de ce moment est joint.",
+            "Le chiffre à côté des rubriques « {ui:notebookScript} » et « {ui:notebookGrammar} » indique combien de fois vous y avez été corrigé. Ouvrez une rubrique pour déplacer ou annoter des cartes, la renommer, ou ajouter les vôtres dans « {ui:notebookMine} ». En dessous, « {ui:notebookVocab} » regroupe vos expressions, mots et questions par thème, et « {ui:homeTabVocab} » ouvre la liste de mots."
           ],
-          "shot": "notes"
+          "shot": "notebook-today"
         },
         {
           "heading": "Aussi",
@@ -1825,14 +1834,14 @@
           "body": [
             "Le tuteur parle en premier. Quand vous vous arrêtez de parler, votre tour se termine tout seul.",
             "Dans le pack, le bandeau du haut indique la question en cours, et à la fin {ui:packSeeRetro} montre ce qui a progressé aujourd’hui.",
-            "Pour parler librement, touchez {ui:roleplayStart}."
+            "Pour parler librement, touchez 📞 en haut du chat avec l’IA. L’appel démarre aussitôt."
           ]
         },
         {
           "heading": "Revoir un appel terminé",
           "shot": "call-review",
           "body": [
-            "Les appels terminés restent dans {ui:roleplayPast}. Sous vos phrases, vous voyez la phrase corrigée et ce que vous vouliez dire.",
+            "Un appel terminé reste dans ce chat sous forme de carte 🗒 {ui:homeTabCall}, et aussi dans ⋮ {ui:chatHistoryTitle}. {ui:packSeeRetro} montre sous vos phrases la phrase corrigée et ce que vous vouliez dire.",
             "{ui:roleplaySayAgain} vous fait écouter la phrase pour la répéter et indique les mots entendus autrement.",
             "Un tour où vous avez bloqué garde un bouton {ui:roleplayWhyStuck}."
           ]
@@ -1848,14 +1857,14 @@
         {
           "heading": "Faire une pause et reprendre",
           "body": [
-            "{ui:roleplayPause} enregistre la conversation. La prochaine fois, {ui:roleplayResume} la reprend."
+            "{ui:roleplayPause} enregistre la conversation. La prochaine fois, {ui:roleplayResume} sur la carte 🗒 la reprend."
           ]
         },
         {
           "heading": "Temps d’appel",
           "body": [
             "La formule gratuite donne 10 points (50 minutes) au départ. Un point vaut cinq minutes.",
-            "Lite offre 7 minutes d’appels gratuits par jour et Plus 10 ; ensuite, les points prennent le relais. Premium donne 80 points par mois.",
+            "Lite offre 7 minutes d’appels gratuits par jour, Plus 10 et Premium 15 ; ensuite, les points prennent le relais.",
             "L’écran d’appel affiche le temps restant aujourd’hui. Le pack du jour n’utilise pas de temps, quelle que soit la formule."
           ]
         }
@@ -2016,9 +2025,10 @@
           "body": [
             "Les profils des personnes passées récemment. Touchez une photo pour ouvrir le profil, puis suivez ou écrivez.",
             "Bloquer et signaler se font aussi depuis le profil.",
-            "Dans votre profil, choisissez en étiquettes votre nationalité, votre langue maternelle et vos centres d’intérêt, et activez ou non ce que les autres voient. Touchez « 🙌 Utile » pour qui a répondu à votre question ; « Voir en français » traduit les présentations et les posts."
+            "Dans votre profil, choisissez en étiquettes votre nationalité, votre langue maternelle et vos centres d’intérêt, et activez ou non ce que les autres voient. Touchez « 🙌 Utile » pour qui a répondu à votre question ; « Voir en français » traduit les présentations et les posts.",
+            "La puce « Apprennent la même langue » montre les personnes qui apprennent la langue que vous apprenez ; « Même langue apprise et parlée » ne garde que celles qui parlent aussi votre langue maternelle. Les langues viennent du profil : langues apprises, langue maternelle, langues parlées."
           ],
-          "shot": "r69-people"
+          "shot": "people-lang"
         },
         {
           "heading": "Inviter des amis",
@@ -2137,9 +2147,10 @@
         {
           "heading": "8. Note",
           "body": [
-            "“{ui:notesTitle}” raccoglie espressioni, parole e domande dell'analisi della frase in 8 capitoli per argomento. Apri un capitolo per “{ui:notesPractice}”, cerca dalla casella in alto e tocca “{ui:homeTabVocab}” per le parole."
+            "«{ui:notebookToday}», in alto, raccoglie le frasi corrette oggi dal tutor. Spunta quelle da tenere e premi «{ui:notebookAddToNotes}»; con «{ui:notebookWithScreen}» si allega la schermata di quel momento.",
+            "Il numero accanto alle sezioni di «{ui:notebookScript}» e «{ui:notebookGrammar}» indica quante volte sei stato corretto lì. Apri una sezione per spostare o annotare le schede, rinominarla o aggiungerne di tue in «{ui:notebookMine}». Sotto, «{ui:notebookVocab}» raccoglie espressioni, parole e domande per tema, e «{ui:homeTabVocab}» apre l'elenco di parole."
           ],
-          "shot": "notes"
+          "shot": "notebook-today"
         },
         {
           "heading": "Inoltre",
@@ -2241,14 +2252,14 @@
           "body": [
             "Il tutor parla per primo. Quando smetti di parlare, il tuo turno finisce da solo.",
             "Nel pacchetto, la fascia in alto mostra a che domanda sei, e alla fine {ui:packSeeRetro} mostra cosa è cresciuto oggi.",
-            "Per parlare liberamente, tocca {ui:roleplayStart}."
+            "Per parlare liberamente, tocca 📞 in alto nella chat con l’IA. La chiamata parte subito."
           ]
         },
         {
           "heading": "Rivedi una chiamata finita",
           "shot": "call-review",
           "body": [
-            "Le chiamate finite restano in {ui:roleplayPast}. Sotto le tue frasi vedi la frase corretta e ciò che volevi dire.",
+            "Una chiamata finita resta in quella chat come scheda 🗒 {ui:homeTabCall}, e anche in ⋮ {ui:chatHistoryTitle}. {ui:packSeeRetro} mostra sotto le tue frasi la frase corretta e ciò che volevi dire.",
             "{ui:roleplaySayAgain} ti fa ascoltare la frase da ripetere e mostra quali parole sono arrivate diverse.",
             "Un turno in cui ti sei bloccato conserva il pulsante {ui:roleplayWhyStuck}."
           ]
@@ -2264,14 +2275,14 @@
         {
           "heading": "Metti in pausa e riprendi",
           "body": [
-            "{ui:roleplayPause} salva la conversazione. La prossima volta, {ui:roleplayResume} la riprende."
+            "{ui:roleplayPause} salva la conversazione. La volta dopo, {ui:roleplayResume} sulla scheda 🗒 la riprende."
           ]
         },
         {
           "heading": "Tempo di chiamata",
           "body": [
             "Il piano gratuito dà 10 punti (50 minuti) per iniziare. Un punto vale cinque minuti.",
-            "Lite dà 7 minuti di chiamate gratis al giorno e Plus 10; poi continui con i punti. Premium dà 80 punti al mese.",
+            "Lite dà 7 minuti di chiamate gratis al giorno, Plus 10 e Premium 15; poi si continua con i punti.",
             "La schermata della chiamata mostra il tempo rimasto oggi. Il pacchetto di oggi non usa tempo con nessun piano."
           ]
         }
@@ -2432,9 +2443,10 @@
           "body": [
             "I profili di chi è passato di recente. Tocca una foto per aprire il profilo, poi segui o scrivi.",
             "Blocca e segnala dal profilo.",
-            "Nel profilo scegli con le etichette nazionalità, lingua madre e interessi, e attiva o disattiva ciò che vedono gli altri. Tocca «🙌 Utile» per chi ha risposto alla tua domanda; «Vedi in italiano» traduce presentazioni e post."
+            "Nel profilo scegli con le etichette nazionalità, lingua madre e interessi, e attiva o disattiva ciò che vedono gli altri. Tocca «🙌 Utile» per chi ha risposto alla tua domanda; «Vedi in italiano» traduce presentazioni e post.",
+            "Il chip «Imparano la stessa lingua» mostra chi studia la tua stessa lingua; «Stessa lingua studiata e parlata» solo chi parla anche la tua lingua madre. Le lingue vengono dal profilo: lingue che studi, lingua madre e lingue che parli."
           ],
-          "shot": "r69-people"
+          "shot": "people-lang"
         },
         {
           "heading": "Invita amici",
@@ -2553,9 +2565,10 @@
         {
           "heading": "8. Notas",
           "body": [
-            "“{ui:notesTitle}” reúne expressões, palavras e perguntas da análise de frases em 8 capítulos por tema. Abra um capítulo para “{ui:notesPractice}”, pesquise no topo e toque em “{ui:homeTabVocab}” para ver as palavras."
+            "“{ui:notebookToday}”, no topo, reúne as frases que o tutor corrigiu hoje. Marque as que quer guardar e toque em “{ui:notebookAddToNotes}”; com “{ui:notebookWithScreen}” a tela daquele momento vai junto.",
+            "O número ao lado das seções de “{ui:notebookScript}” e “{ui:notebookGrammar}” mostra quantas vezes você foi corrigido ali. Abra uma seção para mover ou anotar cartões, renomeá-la ou criar as suas em “{ui:notebookMine}”. Abaixo, “{ui:notebookVocab}” reúne expressões, palavras e perguntas por tema, e “{ui:homeTabVocab}” abre a lista de palavras."
           ],
-          "shot": "notes"
+          "shot": "notebook-today"
         },
         {
           "heading": "Além disso",
@@ -2657,14 +2670,14 @@
           "body": [
             "O tutor fala primeiro. Quando você para de falar, sua vez termina sozinha.",
             "No pacote, a faixa de cima mostra em que pergunta você está, e no fim {ui:packSeeRetro} mostra o que cresceu hoje.",
-            "Para falar sobre qualquer coisa, toque em {ui:roleplayStart}."
+            "Para falar sobre qualquer coisa, toque em 📞 no topo do chat com a IA. A chamada começa na hora."
           ]
         },
         {
           "heading": "Reveja uma chamada encerrada",
           "shot": "call-review",
           "body": [
-            "As chamadas encerradas ficam em {ui:roleplayPast}. Sob as suas frases aparecem a frase corrigida e o que você queria dizer.",
+            "Uma chamada terminada fica nesse chat como cartão 🗒 {ui:homeTabCall}, e também em ⋮ {ui:chatHistoryTitle}. {ui:packSeeRetro} mostra sob as suas frases a frase corrigida e o que você queria dizer.",
             "{ui:roleplaySayAgain} toca a frase para você repetir e mostra quais palavras soaram diferente.",
             "Uma vez em que você travou fica com o botão {ui:roleplayWhyStuck}."
           ]
@@ -2680,14 +2693,14 @@
         {
           "heading": "Pause e continue",
           "body": [
-            "{ui:roleplayPause} salva a conversa. Da próxima vez, {ui:roleplayResume} retoma."
+            "{ui:roleplayPause} salva a conversa. Da próxima vez, {ui:roleplayResume} no cartão 🗒 continua de onde parou."
           ]
         },
         {
           "heading": "Tempo de chamada",
           "body": [
             "O plano grátis dá 10 pontos (50 minutos) para começar. Um ponto são cinco minutos.",
-            "Lite dá 7 minutos de chamada grátis por dia e Plus 10; depois, você continua com pontos. Premium dá 80 pontos por mês.",
+            "O Lite dá 7 minutos de chamadas grátis por dia, o Plus 10 e o Premium 15; depois, você continua com pontos.",
             "A tela da chamada mostra o tempo que resta hoje. O pacote de hoje não usa tempo em nenhum plano."
           ]
         }
@@ -2848,9 +2861,10 @@
           "body": [
             "Perfis de quem esteve aqui há pouco. Toque numa foto para abrir o perfil e siga ou envie mensagem.",
             "Bloquear e denunciar também é no perfil.",
-            "No perfil, escolha em etiquetas sua nacionalidade, língua materna e interesses, e ative ou desative o que os outros veem. Toque em “🙌 Ajudou” para quem respondeu sua pergunta; “Ver em português” traduz apresentações e posts."
+            "No perfil, escolha em etiquetas sua nacionalidade, língua materna e interesses, e ative ou desative o que os outros veem. Toque em “🙌 Ajudou” para quem respondeu sua pergunta; “Ver em português” traduz apresentações e posts.",
+            "O chip “Aprendem o mesmo idioma” mostra quem aprende o mesmo idioma que você; “Aprendem e falam como eu” só quem também fala a sua língua materna. Os idiomas vêm do perfil: línguas que aprende, língua materna e línguas que fala."
           ],
-          "shot": "r69-people"
+          "shot": "people-lang"
         },
         {
           "heading": "Convidar amigos",
@@ -2969,9 +2983,10 @@
         {
           "heading": "8. Заметки",
           "body": [
-            "«{ui:notesTitle}» собирают ваши выражения, слова и вопросы из разбора предложений в 8 глав по темам. Откройте главу — у каждой темы есть «{ui:notesPractice}»; ищите в поле сверху, а «{ui:homeTabVocab}» откроет словарь."
+            "Наверху «{ui:notebookToday}» собирает строки, которые репетитор исправил сегодня. Отметьте нужные и нажмите «{ui:notebookAddToNotes}»; с «{ui:notebookWithScreen}» прикрепится экран того момента.",
+            "Число рядом с разделами «{ui:notebookScript}» и «{ui:notebookGrammar}» — сколько раз вас там поправили. Откройте раздел, чтобы переносить карточки, писать заметки, переименовать его или добавить свой в «{ui:notebookMine}». Ниже «{ui:notebookVocab}» собирает выражения, слова и вопросы по темам, а строка «{ui:homeTabVocab}» открывает словарь."
           ],
-          "shot": "notes"
+          "shot": "notebook-today"
         },
         {
           "heading": "Ещё",
@@ -3073,14 +3088,14 @@
           "body": [
             "Первым говорит репетитор. Когда вы замолкаете, ваш ход заканчивается сам.",
             "В наборе полоса вверху показывает, на каком вы вопросе, а в конце {ui:packSeeRetro} показывает, что выросло сегодня.",
-            "Чтобы поговорить о чём угодно, нажмите {ui:roleplayStart}."
+            "Чтобы поговорить о чём угодно, нажмите 📞 вверху чата с ИИ. Звонок начнётся сразу."
           ]
         },
         {
           "heading": "Разбор законченного звонка",
           "shot": "call-review",
           "body": [
-            "Законченные звонки остаются в {ui:roleplayPast}. Под вашими фразами видно исправленный вариант и то, что вы хотели сказать.",
+            "Законченный звонок остаётся в этом чате карточкой 🗒 {ui:homeTabCall}, а также в ⋮ {ui:chatHistoryTitle}. {ui:packSeeRetro} покажет под вашими фразами исправленное предложение и то, что вы хотели сказать.",
             "{ui:roleplaySayAgain} проигрывает фразу, чтобы вы её повторили, и показывает, какие слова прозвучали иначе.",
             "Там, где вы застряли, остаётся кнопка {ui:roleplayWhyStuck}."
           ]
@@ -3096,14 +3111,14 @@
         {
           "heading": "Пауза и продолжение",
           "body": [
-            "{ui:roleplayPause} сохраняет разговор. В следующий раз {ui:roleplayResume} продолжит его."
+            "{ui:roleplayPause} сохраняет разговор. В следующий раз нажмите {ui:roleplayResume} на карточке 🗒, чтобы продолжить."
           ]
         },
         {
           "heading": "Время звонков",
           "body": [
             "Бесплатный тариф даёт для начала 10 баллов (50 минут). Один балл — пять минут.",
-            "Lite даёт 7 минут бесплатных звонков в день, Plus — 10; дальше можно продолжать за баллы. Premium даёт 80 баллов в месяц.",
+            "В Lite каждый день 7 минут бесплатных звонков, в Plus 10, в Premium 15; дальше можно продолжать за баллы.",
             "На экране звонка видно, сколько времени осталось сегодня. Набор на сегодня не тратит время ни на одном тарифе."
           ]
         }
@@ -3264,9 +3279,10 @@
           "body": [
             "Профили тех, кто заходил недавно. Нажмите на фото, чтобы открыть профиль, подписаться или написать.",
             "Заблокировать и пожаловаться тоже можно в профиле.",
-            "В профиле выберите метками гражданство, родной язык и интересы и включайте или скрывайте то, что видят другие. Нажмите «🙌 Помогло» тому, кто ответил на ваш вопрос; «Перевести на русский» переводит чужие описания и посты."
+            "В профиле выберите метками гражданство, родной язык и интересы и включайте или скрывайте то, что видят другие. Нажмите «🙌 Помогло» тому, кто ответил на ваш вопрос; «Перевести на русский» переводит чужие описания и посты.",
+            "Чип «Учат тот же язык» показывает тех, кто учит тот же язык, что и вы; «Учат и говорят как я» — только тех, кто ещё и говорит на вашем родном языке. Языки берутся из профиля: изучаемые, родной и те, на которых вы говорите."
           ],
-          "shot": "r69-people"
+          "shot": "people-lang"
         },
         {
           "heading": "Пригласить друзей",
@@ -3385,9 +3401,10 @@
         {
           "heading": "8. Catatan",
           "body": [
-            "“{ui:notesTitle}” mengumpulkan ungkapan, kata, dan pertanyaan analisis kalimat ke 8 bab per topik. Buka bab untuk “{ui:notesPractice}”, cari dari kotak di atas, dan ketuk “{ui:homeTabVocab}” untuk daftar kata."
+            "“{ui:notebookToday}” di atas mengumpulkan kalimat yang dikoreksi tutor hari ini. Centang yang ingin disimpan lalu “{ui:notebookAddToNotes}”; nyalakan “{ui:notebookWithScreen}” untuk melampirkan layar saat itu.",
+            "Angka di samping bagian “{ui:notebookScript}” dan “{ui:notebookGrammar}” adalah berapa kali kamu dikoreksi di sana. Buka bagian untuk memindahkan atau memberi catatan pada kartu, mengganti nama, atau menambah bagian sendiri di “{ui:notebookMine}”. Di bawahnya, “{ui:notebookVocab}” mengumpulkan ungkapan, kata, dan pertanyaan per topik, dan baris “{ui:homeTabVocab}” membuka daftar kata."
           ],
-          "shot": "notes"
+          "shot": "notebook-today"
         },
         {
           "heading": "Lainnya",
@@ -3489,14 +3506,14 @@
           "body": [
             "Tutor bicara lebih dulu. Saat kamu berhenti bicara, giliranmu selesai sendiri.",
             "Di paket, pita di atas menunjukkan kamu di pertanyaan ke berapa, dan setelah selesai {ui:packSeeRetro} menunjukkan apa yang berkembang hari ini.",
-            "Untuk ngobrol bebas, ketuk {ui:roleplayStart}."
+            "Untuk bicara bebas, ketuk 📞 di atas chat AI. Panggilan langsung dimulai."
           ]
         },
         {
           "heading": "Tinjau panggilan yang selesai",
           "shot": "call-review",
           "body": [
-            "Panggilan yang selesai tersimpan di {ui:roleplayPast}. Di bawah kalimatmu ada kalimat yang sudah diperbaiki dan maksud yang ingin kamu sampaikan.",
+            "Panggilan yang selesai tetap ada di chat AI itu sebagai kartu 🗒 {ui:homeTabCall}, dan juga di ⋮ {ui:chatHistoryTitle}. {ui:packSeeRetro} menampilkan kalimat yang diperbaiki dan maksudmu di bawah kalimatmu.",
             "{ui:roleplaySayAgain} memutar kalimat itu untuk kamu ulangi dan menunjukkan kata mana yang terdengar berbeda.",
             "Giliran saat kamu buntu menyimpan tombol {ui:roleplayWhyStuck}."
           ]
@@ -3512,14 +3529,14 @@
         {
           "heading": "Jeda dan lanjutkan",
           "body": [
-            "{ui:roleplayPause} menyimpan percakapan. Lain kali, {ui:roleplayResume} melanjutkannya."
+            "{ui:roleplayPause} menyimpan percakapan. Lain kali, {ui:roleplayResume} di kartu 🗒 melanjutkannya."
           ]
         },
         {
           "heading": "Waktu panggilan",
           "body": [
             "Paket gratis memberi 10 poin (50 menit) di awal. Satu poin lima menit.",
-            "Lite memberi 7 menit panggilan gratis tiap hari dan Plus 10; setelah habis, lanjut dengan poin. Premium memberi 80 poin per bulan.",
+            "Lite memberi 7 menit panggilan gratis setiap hari, Plus 10, dan Premium 15; setelah habis, lanjutkan dengan poin.",
             "Layar panggilan menunjukkan sisa waktu hari ini. Paket hari ini tidak memakai waktu di paket langganan mana pun."
           ]
         }
@@ -3680,9 +3697,10 @@
           "body": [
             "Profil pelajar yang baru mampir. Ketuk foto untuk membuka profil, lalu ikuti atau kirim pesan.",
             "Blokir dan laporkan juga dari profil.",
-            "Di profil, pilih kewarganegaraan, bahasa ibu, dan minat lewat chip, lalu nyalakan atau matikan bagian yang dilihat orang lain. Ketuk “🙌 Membantu” untuk orang yang menjawab pertanyaanmu; “Lihat dalam bahasa Indonesia” menerjemahkan perkenalan dan postingan orang lain."
+            "Di profil, pilih kewarganegaraan, bahasa ibu, dan minat lewat chip, lalu nyalakan atau matikan bagian yang dilihat orang lain. Ketuk “🙌 Membantu” untuk orang yang menjawab pertanyaanmu; “Lihat dalam bahasa Indonesia” menerjemahkan perkenalan dan postingan orang lain.",
+            "Chip “Belajar bahasa yang sama” menampilkan orang yang belajar bahasa yang sama denganmu; “Sama bahasa belajar & bicara” hanya yang juga berbicara bahasa ibumu. Bahasa diambil dari profil: bahasa yang dipelajari, bahasa ibu, dan bahasa yang dikuasai."
           ],
-          "shot": "r69-people"
+          "shot": "people-lang"
         },
         {
           "heading": "Undang teman",
@@ -3801,9 +3819,10 @@
         {
           "heading": "8. الملاحظات",
           "body": [
-            "تجمع «{ui:notesTitle}» عباراتك وكلماتك وأسئلة تحليل الجمل في 8 فصول حسب الموضوع. افتح فصلًا لتجد «{ui:notesPractice}» لكل موضوع، وابحث من الخانة في الأعلى، واضغط «{ui:homeTabVocab}» لقائمة الكلمات."
+            "في الأعلى يجمع «{ui:notebookToday}» الجمل التي صحّحها المعلّم اليوم. ضع علامة على ما تريد الاحتفاظ به ثم «{ui:notebookAddToNotes}»، وشغّل «{ui:notebookWithScreen}» لإرفاق شاشة تلك اللحظة.",
+            "الرقم بجانب أقسام «{ui:notebookScript}» و«{ui:notebookGrammar}» هو عدد مرات تصحيحك هناك. افتح القسم لنقل البطاقات أو كتابة ملاحظة أو إعادة التسمية، أو أضف قسمك في «{ui:notebookMine}». وفي الأسفل يجمع «{ui:notebookVocab}» عباراتك وكلماتك وأسئلتك حسب الموضوع، وسطر «{ui:homeTabVocab}» يفتح قائمة الكلمات."
           ],
-          "shot": "notes"
+          "shot": "notebook-today"
         },
         {
           "heading": "أيضًا",
@@ -3905,14 +3924,14 @@
           "body": [
             "يتحدث المعلّم أولًا. عندما تتوقف عن الكلام ينتهي دورك تلقائيًا.",
             "في الباقة يُظهر الشريط في الأعلى رقم السؤال الذي وصلت إليه، وعند الانتهاء يُريك {ui:packSeeRetro} ما تحسّن اليوم.",
-            "للحديث في أي موضوع، اضغط {ui:roleplayStart}."
+            "للحديث بحرية، اضغط 📞 أعلى محادثة الذكاء الاصطناعي. تبدأ المكالمة فورًا."
           ]
         },
         {
           "heading": "راجع مكالمة منتهية",
           "shot": "call-review",
           "body": [
-            "تبقى المكالمات المنتهية في {ui:roleplayPast}. تحت جملك ترى الجملة المصحّحة وما كنت تقصد قوله.",
+            "تبقى المكالمة المنتهية داخل تلك المحادثة كبطاقة 🗒 {ui:homeTabCall}، وأيضًا في ⋮ {ui:chatHistoryTitle}. يعرض {ui:packSeeRetro} تحت جملك الجملة المصحّحة وما كنت تقصده.",
             "يُشغّل {ui:roleplaySayAgain} الجملة لتعيدها، ويُريك الكلمات التي سُمعت بشكل مختلف.",
             "يبقى زر {ui:roleplayWhyStuck} عند الدور الذي تعثّرت فيه."
           ]
@@ -3928,14 +3947,14 @@
         {
           "heading": "توقّف ثم تابع",
           "body": [
-            "يحفظ {ui:roleplayPause} المحادثة. في المرة القادمة يتابعها {ui:roleplayResume}."
+            "يحفظ {ui:roleplayPause} المحادثة. في المرة القادمة اضغط {ui:roleplayResume} على بطاقة 🗒 لتكمل."
           ]
         },
         {
           "heading": "وقت المكالمات",
           "body": [
             "تمنحك الخطة المجانية 10 نقطة (50 دقيقة) في البداية. النقطة خمس دقائق.",
-            "تمنح لايت 7 دقائق مكالمات مجانية يوميًا وبلس 10، وبعدها تتابع بالنقاط. يمنح الاشتراك المميز 80 نقطة شهريًا.",
+            "تمنح Lite سبع دقائق مكالمات مجانية يوميًا، وPlus عشرًا، وPremium خمس عشرة؛ بعدها تكمل بالنقاط.",
             "تُظهر شاشة المكالمة الوقت المتبقي اليوم. لا تستهلك باقة اليوم وقتًا في أي خطة."
           ]
         }
@@ -4096,9 +4115,10 @@
           "body": [
             "ملفات من زاروا مؤخرًا. اضغط على الصورة لفتح الملف الشخصي، ثم تابِع أو راسل.",
             "الحظر والإبلاغ من الملف الشخصي أيضًا.",
-            "في ملفك الشخصي اختر بالرقاقات جنسيتك ولغتك الأم واهتماماتك، وشغّل أو أخفِ ما يراه الآخرون. اضغط «🙌 مفيد» لمن أجاب عن سؤالك، و«عرض باللغة العربية» يترجم تعريفات الآخرين ومنشوراتهم."
+            "في ملفك الشخصي اختر بالرقاقات جنسيتك ولغتك الأم واهتماماتك، وشغّل أو أخفِ ما يراه الآخرون. اضغط «🙌 مفيد» لمن أجاب عن سؤالك، و«عرض باللغة العربية» يترجم تعريفات الآخرين ومنشوراتهم.",
+            "شريحة «يتعلّمون اللغة نفسها» تعرض من يتعلّمون اللغة التي تتعلّمها الآن، و«يتعلّمون ويتحدّثون مثلي» تعرض منهم فقط من يتحدّث لغتك الأم أيضًا. تُؤخذ اللغات من الملف الشخصي: اللغات التي تتعلّمها ولغتك الأم واللغات التي تتحدّثها."
           ],
-          "shot": "r69-people"
+          "shot": "people-lang"
         },
         {
           "heading": "دعوة الأصدقاء",
@@ -4217,9 +4237,10 @@
         {
           "heading": "8. โน้ต",
           "body": [
-            "“{ui:notesTitle}” รวมสำนวน คำศัพท์ และคำถามจากการวิเคราะห์ประโยคไว้ 8 บทตามหัวข้อ เปิดบทเพื่อ “{ui:notesPractice}” ค้นหาจากช่องด้านบน และแตะ “{ui:homeTabVocab}” เพื่อเปิดคำศัพท์"
+            "“{ui:notebookToday}” ด้านบนรวมประโยคที่ติวเตอร์แก้วันนี้ ติ๊กเฉพาะที่จะเก็บแล้วกด “{ui:notebookAddToNotes}” เปิด “{ui:notebookWithScreen}” เพื่อแนบหน้าจอตอนนั้น",
+            "ตัวเลขข้างหมวด “{ui:notebookScript}” และ “{ui:notebookGrammar}” คือจำนวนครั้งที่ถูกแก้ตรงนั้น เปิดหมวดเพื่อย้ายหรือจดโน้ตการ์ด เปลี่ยนชื่อ หรือเพิ่มหมวดเองใน “{ui:notebookMine}” ด้านล่าง “{ui:notebookVocab}” รวมสำนวน คำ และคำถามตามหัวข้อ ส่วนแถว “{ui:homeTabVocab}” คือสมุดคำศัพท์"
           ],
-          "shot": "notes"
+          "shot": "notebook-today"
         },
         {
           "heading": "อื่นๆ",
@@ -4321,14 +4342,14 @@
           "body": [
             "ติวเตอร์พูดก่อน เมื่อคุณหยุดพูด ตาของคุณจะจบเอง",
             "ในแพ็ก แถบด้านบนบอกว่าอยู่คำถามที่เท่าไร และเมื่อจบ {ui:packSeeRetro} จะบอกว่าวันนี้อะไรดีขึ้น",
-            "ถ้าอยากคุยเรื่องอะไรก็ได้ แตะ {ui:roleplayStart}"
+            "อยากคุยเรื่องอะไรก็ได้ แตะ 📞 ด้านบนของแชตกับ AI การโทรจะเริ่มทันที"
           ]
         },
         {
           "heading": "ทบทวนการโทรที่จบแล้ว",
           "shot": "call-review",
           "body": [
-            "การโทรที่จบแล้วอยู่ใน {ui:roleplayPast} ใต้ประโยคของคุณจะเห็นประโยคที่แก้แล้วและสิ่งที่คุณตั้งใจจะพูด",
+            "การโทรที่จบแล้วจะอยู่ในแชต AI นั้นเป็นการ์ด 🗒 {ui:homeTabCall} และอยู่ใน ⋮ {ui:chatHistoryTitle} ด้วย แตะ {ui:packSeeRetro} จะเห็นประโยคที่แก้แล้วและสิ่งที่ตั้งใจจะพูดใต้ประโยคของคุณ",
             "{ui:roleplaySayAgain} จะเล่าประโยคนั้นให้คุณพูดตาม และบอกว่าคำไหนได้ยินต่างไป",
             "ตาที่คุณติดจะมีปุ่ม {ui:roleplayWhyStuck} อยู่"
           ]
@@ -4344,14 +4365,14 @@
         {
           "heading": "หยุดแล้วทำต่อ",
           "body": [
-            "{ui:roleplayPause} จะบันทึกบทสนทนา ครั้งหน้าแตะ {ui:roleplayResume} เพื่อคุยต่อ"
+            "{ui:roleplayPause} จะบันทึกบทสนทนาไว้ ครั้งหน้าแตะ {ui:roleplayResume} บนการ์ด 🗒 เพื่อคุยต่อ"
           ]
         },
         {
           "heading": "เวลาโทร",
           "body": [
             "แพ็กเกจฟรีให้ 10 พอยต์ (50 นาที) ตอนเริ่ม หนึ่งพอยต์คือห้านาที",
-            "Lite มีเวลาโทรฟรีวันละ 7 นาที Plus วันละ 10 นาที ใช้หมดแล้วคุยต่อด้วยพอยต์ Premium ได้ 80 พอยต์ต่อเดือน",
+            "Lite มีโทรฟรีวันละ 7 นาที Plus 10 นาที และ Premium 15 นาที ใช้หมดแล้วต่อด้วยพอยต์",
             "หน้าจอโทรจะแสดงเวลาที่เหลือของวันนี้ แพ็กวันนี้ไม่ใช้เวลาในทุกแพ็กเกจ"
           ]
         }
@@ -4512,9 +4533,10 @@
           "body": [
             "โปรไฟล์ของผู้เรียนที่เพิ่งเข้ามา แตะรูปเพื่อเปิดโปรไฟล์ แล้วติดตามหรือส่งข้อความได้",
             "บล็อกและรายงานได้จากโปรไฟล์",
-            "ในโปรไฟล์ เลือกสัญชาติ ภาษาแม่ และความสนใจเป็นชิป แล้วเปิดหรือปิดส่วนที่คนอื่นเห็น กด “🙌 ช่วยได้” ให้คนที่ตอบคำถามของคุณ และ “ดูเป็นภาษาไทย” แปลคำแนะนำตัวและโพสต์ของคนอื่น"
+            "ในโปรไฟล์ เลือกสัญชาติ ภาษาแม่ และความสนใจเป็นชิป แล้วเปิดหรือปิดส่วนที่คนอื่นเห็น กด “🙌 ช่วยได้” ให้คนที่ตอบคำถามของคุณ และ “ดูเป็นภาษาไทย” แปลคำแนะนำตัวและโพสต์ของคนอื่น",
+            "ชิป “เรียนภาษาเดียวกัน” แสดงคนที่เรียนภาษาเดียวกับที่คุณเรียนอยู่ ส่วน “เรียนและพูดภาษาเดียวกัน” แสดงเฉพาะคนที่พูดภาษาแม่ของคุณด้วย ภาษามาจากโปรไฟล์: ภาษาที่กำลังเรียน ภาษาแม่ และภาษาที่พูดได้"
           ],
-          "shot": "r69-people"
+          "shot": "people-lang"
         },
         {
           "heading": "ชวนเพื่อน",
@@ -4633,9 +4655,10 @@
         {
           "heading": "8. नोट्स",
           "body": [
-            "“{ui:notesTitle}” आपकी अभिव्यक्तियाँ, शब्द और वाक्य-विश्लेषण के सवाल 8 अध्यायों में विषय के हिसाब से जोड़ते हैं। अध्याय खोलें और हर विषय पर “{ui:notesPractice}”, ऊपर के बॉक्स से खोजें, और शब्दों के लिए “{ui:homeTabVocab}” दबाएँ।"
+            "सबसे ऊपर ‘{ui:notebookToday}’ में आज ट्यूटर के सुधारे वाक्य जमा होते हैं। जो रखने हैं उन्हें चुनें और ‘{ui:notebookAddToNotes}’; ‘{ui:notebookWithScreen}’ चालू करने पर उस पल की स्क्रीन भी जुड़ जाती है।",
+            "‘{ui:notebookScript}’ और ‘{ui:notebookGrammar}’ खंडों के पास की संख्या बताती है कि वहाँ आपको कितनी बार सुधारा गया। खंड खोलकर कार्ड ले जाएँ या नोट लिखें, नाम बदलें, या ‘{ui:notebookMine}’ में अपना खंड जोड़ें। नीचे ‘{ui:notebookVocab}’ में आपके भाव, शब्द और सवाल विषय के हिसाब से जमा होते हैं, और ‘{ui:homeTabVocab}’ पंक्ति शब्द-सूची खोलती है।"
           ],
-          "shot": "notes"
+          "shot": "notebook-today"
         },
         {
           "heading": "और",
@@ -4737,14 +4760,14 @@
           "body": [
             "ट्यूटर पहले बोलता है। आप बोलना रोकते हैं तो आपकी बारी अपने-आप खत्म हो जाती है।",
             "पैक में ऊपर की पट्टी बताती है कि आप कौन-से सवाल पर हैं, और खत्म होने पर {ui:packSeeRetro} दिखाता है कि आज क्या बढ़ा।",
-            "किसी भी बारे में बात करनी हो तो {ui:roleplayStart} दबाएँ।"
+            "किसी भी बारे में बात करनी हो तो AI चैट के ऊपर 📞 दबाएँ। कॉल तुरंत शुरू हो जाती है।"
           ]
         },
         {
           "heading": "खत्म हुई कॉल दोबारा देखें",
           "shot": "call-review",
           "body": [
-            "खत्म हुई कॉल्स {ui:roleplayPast} में रहती हैं। आपकी पंक्तियों के नीचे सुधरा हुआ वाक्य और आप जो कहना चाहते थे, दिखता है।",
+            "खत्म हुई कॉल उसी AI चैट में 🗒 {ui:homeTabCall} कार्ड के रूप में रहती है, और ⋮ {ui:chatHistoryTitle} में भी। {ui:packSeeRetro} आपकी पंक्तियों के नीचे सुधरा वाक्य और आप जो कहना चाहते थे, दिखाता है।",
             "{ui:roleplaySayAgain} वह वाक्य सुनाता है ताकि आप दोहराएँ, और बताता है कि कौन-से शब्द अलग सुनाई दिए।",
             "जहाँ आप अटके थे, वहाँ {ui:roleplayWhyStuck} बटन रहता है।"
           ]
@@ -4760,14 +4783,14 @@
         {
           "heading": "रोकें और फिर जारी रखें",
           "body": [
-            "{ui:roleplayPause} बातचीत सहेज लेता है। अगली बार {ui:roleplayResume} से जारी रखें।"
+            "{ui:roleplayPause} बातचीत सहेज लेता है। अगली बार 🗒 कार्ड पर {ui:roleplayResume} से आगे बढ़ें।"
           ]
         },
         {
           "heading": "कॉल का समय",
           "body": [
             "मुफ़्त प्लान शुरू में 10 पॉइंट (50 मिनट) देता है। एक पॉइंट पाँच मिनट का है।",
-            "लाइट रोज़ 7 मिनट और प्लस 10 मिनट मुफ़्त कॉल देता है; उसके बाद पॉइंट्स से जारी रखें। प्रीमियम हर महीने 80 पॉइंट देता है।",
+            "Lite में हर दिन 7 मिनट मुफ़्त कॉल, Plus में 10 और Premium में 15; उसके बाद पॉइंट से जारी रखें।",
             "कॉल स्क्रीन पर आज का बचा समय दिखता है। आज का पैक किसी भी प्लान में समय नहीं लेता।"
           ]
         }
@@ -4928,9 +4951,10 @@
           "body": [
             "हाल में आए सीखने वालों की प्रोफ़ाइल। फ़ोटो पर टैप करके प्रोफ़ाइल खोलें, फिर फ़ॉलो करें या मैसेज भेजें।",
             "ब्लॉक और रिपोर्ट भी प्रोफ़ाइल से होते हैं।",
-            "प्रोफ़ाइल में चिप से अपनी राष्ट्रीयता, मातृभाषा और रुचियाँ चुनें, और दूसरों को दिखने वाले हिस्से चालू या बंद करें। जिसने आपके सवाल का जवाब दिया उसे “🙌 मदद मिली” दें; “हिन्दी में देखें” दूसरों के परिचय और पोस्ट का अनुवाद करता है।"
+            "प्रोफ़ाइल में चिप से अपनी राष्ट्रीयता, मातृभाषा और रुचियाँ चुनें, और दूसरों को दिखने वाले हिस्से चालू या बंद करें। जिसने आपके सवाल का जवाब दिया उसे “🙌 मदद मिली” दें; “हिन्दी में देखें” दूसरों के परिचय और पोस्ट का अनुवाद करता है।",
+            "चिप ‘वही भाषा सीख रहे हैं’ उन लोगों को दिखाती है जो वही भाषा सीख रहे हैं जो आप सीख रहे हैं; ‘सीखने और बोलने की भाषा एक जैसी’ उनमें से सिर्फ़ उन्हें जो आपकी मातृभाषा भी बोलते हैं। भाषाएँ प्रोफ़ाइल से ली जाती हैं: सीखी जा रही भाषाएँ, मातृभाषा और बोली जाने वाली भाषाएँ।"
           ],
-          "shot": "r69-people"
+          "shot": "people-lang"
         },
         {
           "heading": "दोस्तों को बुलाएँ",

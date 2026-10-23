@@ -10,6 +10,7 @@ import roomsBefore270 from "@/lib/guide/roomsBefore270.json";
 import roomsBefore272 from "@/lib/guide/roomsBefore272.json";
 import mapBefore269 from "@/lib/guide/mapBefore269.json";
 import chatBefore271 from "@/lib/guide/chatBefore271.json";
+import notesBefore273 from "@/lib/guide/notesBefore273.json";
 
 export const runtime = "nodejs";
 
@@ -37,15 +38,27 @@ export async function GET(request: NextRequest) {
   const before272 = request.nextUrl.searchParams.get("r272") === "1"
     ? undefined
     : (roomsBefore272 as Partial<Record<string, Record<string, Guide["rooms"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
-  const full: Guide = before272
+  // 2.73(`r273=1`)부터: 노트 뼈대·오늘의 학습. 그 전 빌드는 노트·그 밖에·사람 찾기(언어 칩)·통화(📞 바로·🗒 카드) 칸을 예전 글로(통화 시간 칸은 요금이 서버 기준이라 모두 새 글)(스냅숏, notesBefore273.json).
+  const before273 = request.nextUrl.searchParams.get("r273") === "1"
+    ? undefined
+    : (notesBefore273 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  const withNotes: Guide = before273
     ? {
         ...newest,
-        rooms: {
-          ...newest.rooms,
-          sections: newest.rooms.sections.map((section, index) => before272[GUIDE_SECTION_IDS.rooms[index]] ?? section),
-        },
+        map: { ...newest.map, sections: newest.map.sections.map((section, index) => before273[GUIDE_SECTION_IDS.map[index]] ?? section) },
+        rooms: { ...newest.rooms, sections: newest.rooms.sections.map((section, index) => before273[GUIDE_SECTION_IDS.rooms[index]] ?? section) },
+        roleplay: { ...newest.roleplay, sections: newest.roleplay.sections.map((section, index) => before273[GUIDE_SECTION_IDS.roleplay[index]] ?? section) },
       }
     : newest;
+  const full: Guide = before272
+    ? {
+        ...withNotes,
+        rooms: {
+          ...withNotes.rooms,
+          sections: withNotes.rooms.sections.map((section, index) => before272[GUIDE_SECTION_IDS.rooms[index]] ?? section),
+        },
+      }
+    : withNotes;
   // 게임 칸(라이어 게임 room.game·마피아 room.mafia, 2026-10-23)은 게임이 있는 빌드(`game=1`)만. 옛 빌드는 칸 순서로 칸 이름을 붙이므로(GUIDE_SECTION_IDS)
   // 그 칸을 빼서 돌려준다 — 넣은 채로 주면 옛 앱에서 '방장이라면' 자리에 게임 글이 보인다.
   const withGame = request.nextUrl.searchParams.get("game") === "1";

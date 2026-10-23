@@ -44,6 +44,16 @@ export type ReleaseNote = {
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    // 2.73(87): 노트 뼈대·오늘의 학습(고른 것만, 화면 함께), 사람 언어 칩.
+    // AI 대화 📞 바로 통화·🗒 통화 기록 카드, 하단 탭 아이콘만, 줄 분석 문장 고르기, 의견 반영 포인트는 사용법(통화·대화·My)에만.
+    version: "2.73",
+    code: 87,
+    items: [
+      { id: "notebook", title: "whatsNewNotebookTitle", body: "whatsNewNotebookBody", shot: "notebook-today", tab: "map", guide: "my.notes" },
+      { id: "lang-chips", title: "whatsNewLangChipsTitle", body: "whatsNewLangChipsBody", shot: "people-lang", tab: "people", guide: "people.find" },
+    ],
+  },
+  {
     // 2.72(86): 프로필 칩·국기·도움됐어요, Room 라이어 게임·마피아·관전자 추리, 아이콘·짤 묶음.
     // 보낸 줄 지우기·대화 목록 ⋯·게시판 ♡·방 40명/자리 막기는 사용법(사람·대화·Room)에만.
     version: "2.72",

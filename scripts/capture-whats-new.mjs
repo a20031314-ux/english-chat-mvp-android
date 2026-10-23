@@ -577,6 +577,28 @@ const DM_LINES = {
   ko: { hi: "안녕하세요! 방에서 같이 얘기해 줘서 고마워요.", reply: "재밌었어요! 내일 또 연습할래요?" },
 };
 // 2.69 노트 장면: 쌓인 표현(장부, 고정 응답)·단어장 한 개·문장분석 질문 하나, 자리는 미리 정해 둠(서버 안 부름).
+// 2.73 오늘의 학습 장면: 배우는 언어의 틀린 줄·고친 줄·뼈대 칸(notes/notebook.ts skeletonFor id). 셋째 줄은 오타.
+const NOTEBOOK_LINES = {
+  en: [["I go to the park yesterday.", "I went to the park yesterday.", "g2-past-simple"], ["She don't like coffee.", "She doesn't like coffee.", "g1-present-simple"], ["I'm so exited!", "I'm so excited!"]],
+  es: [["Ayer voy al parque.", "Ayer fui al parque.", "g2-common-irregular-preterites-fui-hice-tuv"], ["Ella no le gusta el café.", "A ella no le gusta el café.", "g2-gustar-and-encantar"], ["Tengo hanbre.", "Tengo hambre."]],
+};
+// 첫 카드의 한 줄 설명(앱 언어) — 서버가 카드에 붙이는 note와 같은 자리.
+const NOTEBOOK_NOTE = {
+  ko: "어제 일이라 과거형 went를 써요.",
+  en: "Ayer is about the past, so ir becomes fui.",
+  es: "Es algo de ayer, así que va en pasado: went.",
+  ja: "昨日のことなので過去形のwentを使います。",
+  zh: "说的是昨天的事，要用过去式 went。",
+  vi: "Chuyện hôm qua nên dùng thì quá khứ went.",
+  fr: "C’est hier, donc au passé : went.",
+  it: "È successo ieri, quindi al passato: went.",
+  pt: "Foi ontem, então vai no passado: went.",
+  ru: "Это было вчера, поэтому прошедшее время: went.",
+  id: "Kejadiannya kemarin, jadi pakai bentuk lampau went.",
+  ar: "الحدث أمس، لذا نستخدم الماضي went.",
+  th: "เป็นเรื่องเมื่อวาน จึงใช้รูปอดีต went",
+  hi: "बात कल की है, इसलिए भूतकाल went आता है।",
+};
 const NOTES_DATA = {
   en: {
     phrases: [["Could I get the bill?", "mastered", "out.shops"], ["Where is the nearest station?", "learned", "out.transport"], ["Sorry I'm late", "learned", "help.sorry"],
@@ -1154,6 +1176,68 @@ const STEPS = {
     await wait(2500);
     await page.getByRole("button", { name: "Yuki", exact: true }).first().click();
     await wait(2500);
+  },
+  async "people-lang"({ page, ui, locale, wait, target }) {
+    // 2.73: 사람 탭 언어 칩 "배우는 언어·쓰는 말이 같은 사람"을 고른 목록(고정 응답 — 서버가 거른 것처럼 내 모국어를 쓰고 같은 언어를 배우는 사람만).
+    await socialMocks(page, target, ui);
+    await page.route("**/api/social", (route) => {
+      const body = JSON.parse(route.request().postData() || "{}");
+      if (body.action !== "people" || body.match !== "both") return route.fallback();
+      const seen = (minutes) => Date.now() - minutes * 60_000;
+      const both = (key, minutes, extra) => ({ id: PEOPLE[key].id, nickname: PEOPLE[key].nickname, bio: "", hasPhoto: true, ui: locale, learn: target, learns: [target], native: locale, lastSeen: seen(minutes), isFollowing: false, ...extra });
+      return route.fulfill({
+        status: 200,
+        contentType: "application/json",
+        body: JSON.stringify({ people: [both("yuki", 2, { bio: "☕ 🎧 ✈️", interests: ["travel", "cafe"], sharedInterests: 1, help: 4 }), both("lucia", 35, { bio: "📚 🎬", interests: ["books"], help: 1 }), both("omar", 60 * 5, { bio: "⚽ 🎮", interests: ["sports", "games"] })] }),
+      });
+    });
+    await page.evaluate(() => {
+      localStorage.setItem("peopleViewMode", "people");
+      localStorage.setItem("peopleFilter", "both");
+    });
+    await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
+    await wait(2500);
+    await page.evaluate(() => localStorage.setItem("peopleFilter", "all"));
+  },
+  async "notebook-today"({ page, locale, wait, target }) {
+    // 2.73: My → 노트 → "오늘의 학습" 시트(오늘 튜터가 고친 줄 셋, 하나는 그때 화면이 이 기기에 있음).
+    // 칸 이름은 운영 응답(앱 언어로 옮긴 단계 글) 그대로, 후보만 바꿔 끼운다.
+    const lines = NOTEBOOK_LINES[target] ?? NOTEBOOK_LINES.en;
+    const note = NOTEBOOK_NOTE[locale] ?? NOTEBOOK_NOTE.en;
+    await page.route("**/api/notebook?*", async (route) => {
+      if (route.request().method() !== "GET") return route.fallback();
+      const response = await route.fetch({ headers: { ...route.request().headers(), "x-rc-user": `whats-new-capture-notebook-${locale}` }, timeout: 60_000 });
+      const book = await response.json();
+      const at = Date.now();
+      const card = (index, [wrong, right, node], extra) => ({ id: `fx_capture${index}`, wrong, right, node, at: at - (3 - index) * 600_000, day: book.today, kind: "mistake", ...extra });
+      book.cards = [];
+      book.pending = [card(0, lines[0], { note }), card(1, lines[1], { again: true }), card(2, lines[2], { kind: "typo", node: null })];
+      return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(book) });
+    });
+    // 그때 화면(기기 안 IndexedDB, notes/sceneShots.ts와 같은 열쇠).
+    const shot = await sharp(Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="360" height="640"><rect width="360" height="640" fill="#0b1020"/><rect x="0" y="0" width="360" height="56" fill="#111827"/><rect x="150" y="120" width="190" height="56" rx="18" fill="#6d28d9"/><rect x="20" y="200" width="230" height="74" rx="18" fill="#1f2937"/><rect x="150" y="300" width="190" height="40" rx="18" fill="#6d28d9"/><rect x="170" y="352" width="150" height="22" rx="11" fill="#7f1d1d"/><rect x="20" y="400" width="250" height="90" rx="18" fill="#1f2937"/><rect x="12" y="586" width="336" height="42" rx="21" fill="#1f2937"/></svg>`)).jpeg({ quality: 70 }).toBuffer();
+    await page.evaluate(([key, language, image]) => new Promise((resolve) => {
+      const request = indexedDB.open("notebookShots", 1);
+      request.onupgradeneeded = () => request.result.createObjectStore("shots", { keyPath: "key" });
+      request.onsuccess = () => {
+        const tx = request.result.transaction("shots", "readwrite");
+        tx.objectStore("shots").put({ key, language, at: Date.now(), image });
+        tx.oncomplete = () => resolve(null);
+        tx.onerror = () => resolve(null);
+      };
+      request.onerror = () => resolve(null);
+    }), [`${target}|${lines[0][0].normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{M}\p{N}]/gu, "").slice(0, 300)}`, target, `data:image/jpeg;base64,${shot.toString("base64")}`]);
+    await page.evaluate(() => localStorage.setItem("notesViewMode", "\"outline\""));
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    await wait(3000);
+    const today = page.locator("button", { hasText: new RegExp(`${escape(copy[locale].notebookToday)} · 3`) }).first();
+    await today.evaluate((el) => el.scrollIntoView({ block: "center" }));
+    await today.click();
+    await wait(1500);
+    // 첫 줄의 "화면 함께"를 켠 모습.
+    const withScreen = page.getByText(copy[locale].notebookWithScreen, { exact: true }).first();
+    if (await withScreen.count()) await withScreen.click();
+    await wait(800);
   },
   async "room-game"({ page, ui, locale, wait, target }) {
     // 2.72: 내가 말하기 자리에 있는 방에서 라이어 게임 판(Yuki 차례, 제시어 피자) — 고정 응답.

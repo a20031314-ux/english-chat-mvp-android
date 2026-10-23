@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment, useCallback, useEffect, useMemo, useState } from "react";
+import { Fragment, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { NativeAdSlot } from "@/components/NativeAdSlot";
 import type { RoomCopy } from "@/lib/rooms/copy";
 import { listPeople, setFollow } from "@/lib/rooms/client";
@@ -87,6 +87,11 @@ export function PeopleList({
   const [open, setOpen] = useState<PersonCard | null>(null);
   const [busy, setBusy] = useState<string | null>(null);
   const [now, setNow] = useState(() => Date.now());
+  // 고른 칩이 가로 줄 밖이면(긴 언어 이름) 보이게 당겨 온다 — 기억해 둔 칩으로 열 때도.
+  const chipRow = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    chipRow.current?.querySelector<HTMLElement>('[aria-pressed="true"]')?.scrollIntoView({ block: "nearest", inline: "nearest" });
+  }, [filter]);
 
   const refresh = useCallback(async () => {
     try {
@@ -153,11 +158,12 @@ export function PeopleList({
 
   return (
     <section className="space-y-3">
-      <div className="flex gap-1.5 overflow-x-auto pb-0.5">
+      <div ref={chipRow} className="flex gap-1.5 overflow-x-auto pb-0.5">
         {filters.map(([value, label]) => (
           <button
             key={value}
             type="button"
+            aria-pressed={filter === value}
             onClick={() => choose(value)}
             className={`shrink-0 rounded-full px-3 py-1.5 text-[13px] ${
               filter === value ? "bg-white/90 font-medium text-black" : "bg-white/[0.06] text-slate-300"

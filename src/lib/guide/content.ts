@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-24b";
+export const GUIDE_VERSION = "2026-10-24d";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -180,9 +180,10 @@ export const GUIDE_KO: Guide = {
       {
         heading: "8. 노트",
         body: [
-          "‘{ui:notesTitle}’에 내 표현·단어·문장분석에서 물은 것이 8개 장 주제별로 모여요. 장을 누르면 주제마다 ‘{ui:notesPractice}’, 위 검색칸으로 찾고, ‘{ui:homeTabVocab}’ 줄을 누르면 단어장이 열려요.",
+          "맨 위 ‘{ui:notebookToday}’에 오늘 튜터가 고친 줄이 모여요. 남길 것만 체크하고 ‘{ui:notebookAddToNotes}’, ‘{ui:notebookWithScreen}’를 켜면 그때 화면도 붙어요.",
+          "‘{ui:notebookScript}’·‘{ui:notebookGrammar}’ 칸 옆 숫자는 짚인 횟수예요. 칸을 열어 카드를 옮기거나 메모하고, 이름을 바꾸거나 ‘{ui:notebookMine}’에 칸을 더해요. 아래 ‘{ui:notebookVocab}’에는 내 표현·단어·물은 것이 주제별로 모이고, ‘{ui:homeTabVocab}’ 줄은 단어장이에요.",
         ],
-        shot: "notes",
+        shot: "notebook-today",
       },
       {
         heading: "그 밖에",
@@ -283,14 +284,14 @@ export const GUIDE_KO: Guide = {
         body: [
           "튜터가 먼저 말하고, 내가 말을 멈추면 자동으로 내 차례가 끝나요.",
           "팩에서는 위 띠에 몇 번째 질문인지 보이고, 끝나면 ‘{ui:packSeeRetro}’로 오늘 무엇이 늘었는지 봐요.",
-          "주제 없이 말하고 싶으면 ‘{ui:roleplayStart}’를 눌러요.",
+          "주제 없이 말하고 싶으면 AI 대화 머리의 📞를 눌러요. 바로 통화가 시작돼요.",
         ],
         shot: "call-talk",
       },
       {
         heading: "끝난 대화 돌아보기",
         body: [
-          "끝난 대화는 ‘{ui:roleplayPast}’에 남아요. 내 줄 아래에 고친 문장과 원래 하려던 말이 보여요.",
+          "끝난 통화는 그 AI 대화 안에 🗒 {ui:homeTabCall} 카드로 남고, ⋮ {ui:chatHistoryTitle}에도 모여요. {ui:packSeeRetro}를 누르면 내 줄 아래에 고친 문장과 원래 하려던 말이 보여요.",
           "‘{ui:roleplaySayAgain}’를 누르면 그 문장을 듣고 따라 말해, 다르게 들린 단어를 알려줘요.",
           "막혔던 차례에는 ‘{ui:roleplayWhyStuck}’ 버튼이 남아요.",
         ],
@@ -307,14 +308,14 @@ export const GUIDE_KO: Guide = {
       {
         heading: "멈추고 이어서 하기",
         body: [
-          "‘{ui:roleplayPause}’을 누르면 대화가 저장돼요. 다음에 ‘{ui:roleplayResume}’로 계속해요.",
+          "‘{ui:roleplayPause}’을 누르면 대화가 저장돼요. 다음에 🗒 카드의 ‘{ui:roleplayResume}’로 계속해요.",
         ],
       },
       {
         heading: "통화 시간",
         body: [
           "무료는 처음에 10포인트(50분)를 드려요. 5분에 1포인트예요.",
-          "라이트는 매일 자유 통화 7분, 플러스는 10분이 있고, 다 쓰면 포인트로 이어서 해요. 프리미엄은 매달 80포인트를 받아요.",
+          "라이트는 매일 자유 통화 7분, 플러스는 10분, 프리미엄은 15분이 있고, 다 쓰면 포인트로 이어서 해요.",
           "통화 첫 화면에 오늘 남은 시간이 보여요. 오늘의 팩은 어느 요금이든 시간을 쓰지 않아요.",
         ],
       },
@@ -474,9 +475,10 @@ export const GUIDE_KO: Guide = {
         "body": [
           "최근에 온 학습자의 프로필이 보여요. 사진을 누르면 프로필이 열리고, 팔로우하거나 메시지를 보낼 수 있어요.",
           "차단·신고도 프로필에서 해요.",
-          "프로필에서 국적·모국어·관심사를 칩으로 고르고, 다른 사람에게 보일 칸을 켜고 꺼요. 내 질문에 답해 준 사람에게는 ‘🙌 도움됐어요’, 남의 소개·올린 글은 ‘한국어로 보기’로 번역해요."
+          "프로필에서 국적·모국어·관심사를 칩으로 고르고, 다른 사람에게 보일 칸을 켜고 꺼요. 내 질문에 답해 준 사람에게는 ‘🙌 도움됐어요’, 남의 소개·올린 글은 ‘한국어로 보기’로 번역해요.",
+          "위 칩 ‘같은 언어를 배우는 사람’은 지금 배우는 언어가 같은 사람, ‘배우는 언어·쓰는 말이 같은 사람’는 거기에 내 모국어도 쓰는 사람만 보여요. 언어는 프로필의 배우는 언어·모국어·할 수 있는 언어로 맞춰요."
         ],
-        "shot": "r69-people"
+        "shot": "people-lang"
       },
       {
         "heading": "친구 초대",
@@ -597,9 +599,10 @@ export const GUIDE_EN: Guide = {
       {
         heading: "8. Notes",
         body: [
-          "‘{ui:notesTitle}’ gathers your phrases, words and the questions you asked in sentence analysis into 8 chapters of topics. Open a chapter for ‘{ui:notesPractice}’, search from the box at the top, and tap ‘{ui:homeTabVocab}’ for the word list.",
+          "‘{ui:notebookToday}’ at the top gathers today's lines the tutor corrected. Tick the ones to keep and ‘{ui:notebookAddToNotes}’; turn on ‘{ui:notebookWithScreen}’ to attach that moment's screen.",
+          "The number beside ‘{ui:notebookScript}’ and ‘{ui:notebookGrammar}’ sections is how often you were corrected there. Open a section to move or annotate cards, rename it, or add your own in ‘{ui:notebookMine}’. Below, ‘{ui:notebookVocab}’ gathers your phrases, words and questions by topic, and ‘{ui:homeTabVocab}’ opens the word list.",
         ],
-        shot: "notes",
+        shot: "notebook-today",
       },
       {
         heading: "Also",
@@ -700,14 +703,14 @@ export const GUIDE_EN: Guide = {
         body: [
           "The tutor speaks first. When you stop speaking, your turn ends by itself.",
           "In a pack, the band at the top shows which question you're on, and when it ends {ui:packSeeRetro} shows what grew today.",
-          "To talk about anything, tap {ui:roleplayStart}.",
+          "To talk about anything, tap 📞 at the top of the AI chat. The call starts right away.",
         ],
         shot: "call-talk",
       },
       {
         heading: "Look back at a finished call",
         body: [
-          "Finished calls stay in {ui:roleplayPast}. Under your lines you'll see the corrected sentence and what you meant to say.",
+          "A finished call stays in that AI chat as a 🗒 {ui:homeTabCall} card, and also in ⋮ {ui:chatHistoryTitle}. {ui:packSeeRetro} shows the corrected sentence and what you meant to say under your lines.",
           "{ui:roleplaySayAgain} plays that sentence for you to repeat, and shows which words came through differently.",
           "A turn where you got stuck keeps a {ui:roleplayWhyStuck} button.",
         ],
@@ -724,14 +727,14 @@ export const GUIDE_EN: Guide = {
       {
         heading: "Pause and carry on",
         body: [
-          "{ui:roleplayPause} saves the conversation. Next time, {ui:roleplayResume} picks it up again.",
+          "{ui:roleplayPause} saves the conversation. Next time, {ui:roleplayResume} on the 🗒 card picks it up again.",
         ],
       },
       {
         heading: "Call time",
         body: [
           "Free gives you 10 points (50 minutes) to start. A point is five minutes.",
-          "Lite gives 7 minutes of free calls every day and Plus 10; after that, points carry you on. Premium gives 80 points a month.",
+          "Lite gives 7 minutes of free calls every day, Plus 10 and Premium 15; after that, points carry you on.",
           "The call screen shows today's time left. Today's pack uses no time on any plan.",
         ],
       },
@@ -891,9 +894,10 @@ export const GUIDE_EN: Guide = {
         "body": [
           "Profiles of learners who were here lately. Tap a photo to open a profile, then follow or send a message.",
           "Blocking and reporting are on the profile too.",
-          "In your profile, pick your nationality, native language and interests as chips, and turn on or off what others see. Tap “🙌 Helpful” for someone who answered your question; “See in English” translates others’ intros and posts."
+          "In your profile, pick your nationality, native language and interests as chips, and turn on or off what others see. Tap “🙌 Helpful” for someone who answered your question; “See in English” translates others’ intros and posts.",
+          "The chip “Learning the same language” shows people learning the language you're learning now; “Same learning & spoken language” narrows it to those who also speak your native language. Languages come from the profile's languages you learn, native language and languages you speak."
         ],
-        "shot": "r69-people"
+        "shot": "people-lang"
       },
       {
         "heading": "Invite friends",

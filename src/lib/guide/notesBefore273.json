@@ -1,0 +1,688 @@
+{
+  "ko": {
+    "my.notes": {
+      "heading": "8. 노트",
+      "body": [
+        "‘{ui:notesTitle}’에 내 표현·단어·문장분석에서 물은 것이 8개 장 주제별로 모여요. 장을 누르면 주제마다 ‘{ui:notesPractice}’, 위 검색칸으로 찾고, ‘{ui:homeTabVocab}’ 줄을 누르면 단어장이 열려요."
+      ],
+      "shot": "notes"
+    },
+    "my.more": {
+      "heading": "그 밖에",
+      "body": [
+        "‘{ui:ledgerTitle}’에 모든 탭에서 만난 표현이 쌓여요. 목표가 바뀌면 ‘{ui:mapNewGoal}’. 배우는 언어마다 따로예요.",
+        "도움 없이 꺼내 쓴 표현만 숙지로 세요(레벨이 아니라 쓸 수 있게 된 표현 수). 부족한 부분은 채팅 문장과 튜터 말에서 막힌 곳으로만 보고, 문장 자체는 저장하지 않아요. 문장분석에서 표현을 표시하면 내 표현에 남고, 지도에 넣으면 그 표현으로 할 일이 생겨요."
+      ]
+    },
+    "people.find": {
+      "heading": "사람 찾기",
+      "body": [
+        "최근에 온 학습자의 프로필이 보여요. 사진을 누르면 프로필이 열리고, 팔로우하거나 메시지를 보낼 수 있어요.",
+        "차단·신고도 프로필에서 해요.",
+        "프로필에서 국적·모국어·관심사를 칩으로 고르고, 다른 사람에게 보일 칸을 켜고 꺼요. 내 질문에 답해 준 사람에게는 ‘🙌 도움됐어요’, 남의 소개·올린 글은 ‘한국어로 보기’로 번역해요."
+      ],
+      "shot": "r69-people"
+    },
+    "call.talk": {
+      "heading": "말로 대화하기",
+      "body": [
+        "튜터가 먼저 말하고, 내가 말을 멈추면 자동으로 내 차례가 끝나요.",
+        "팩에서는 위 띠에 몇 번째 질문인지 보이고, 끝나면 ‘{ui:packSeeRetro}’로 오늘 무엇이 늘었는지 봐요.",
+        "주제 없이 말하고 싶으면 ‘{ui:roleplayStart}’를 눌러요."
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "끝난 대화 돌아보기",
+      "body": [
+        "끝난 대화는 ‘{ui:roleplayPast}’에 남아요. 내 줄 아래에 고친 문장과 원래 하려던 말이 보여요.",
+        "‘{ui:roleplaySayAgain}’를 누르면 그 문장을 듣고 따라 말해, 다르게 들린 단어를 알려줘요.",
+        "막혔던 차례에는 ‘{ui:roleplayWhyStuck}’ 버튼이 남아요."
+      ],
+      "shot": "call-review"
+    },
+    "call.pause": {
+      "heading": "멈추고 이어서 하기",
+      "body": [
+        "‘{ui:roleplayPause}’을 누르면 대화가 저장돼요. 다음에 ‘{ui:roleplayResume}’로 계속해요."
+      ]
+    }
+  },
+  "en": {
+    "my.notes": {
+      "heading": "8. Notes",
+      "body": [
+        "‘{ui:notesTitle}’ gathers your phrases, words and the questions you asked in sentence analysis into 8 chapters of topics. Open a chapter for ‘{ui:notesPractice}’, search from the box at the top, and tap ‘{ui:homeTabVocab}’ for the word list."
+      ],
+      "shot": "notes"
+    },
+    "my.more": {
+      "heading": "Also",
+      "body": [
+        "‘{ui:ledgerTitle}’ gathers phrases from every tab. New goal? ‘{ui:mapNewGoal}’. Each learning language has its own.",
+        "Only phrases you produced without help count as mastered (not a level, just how many you can use). Gaps come only from your chat sentences and the tutor lines you got stuck on, and the sentences themselves aren't saved. Marking a phrase in sentence analysis keeps it in My phrases; adding it to the map makes a task for it."
+      ]
+    },
+    "people.find": {
+      "heading": "Find people",
+      "body": [
+        "Profiles of learners who were here lately. Tap a photo to open a profile, then follow or send a message.",
+        "Blocking and reporting are on the profile too.",
+        "In your profile, pick your nationality, native language and interests as chips, and turn on or off what others see. Tap “🙌 Helpful” for someone who answered your question; “See in English” translates others’ intros and posts."
+      ],
+      "shot": "r69-people"
+    },
+    "call.talk": {
+      "heading": "Talk out loud",
+      "body": [
+        "The tutor speaks first. When you stop speaking, your turn ends by itself.",
+        "In a pack, the band at the top shows which question you're on, and when it ends {ui:packSeeRetro} shows what grew today.",
+        "To talk about anything, tap {ui:roleplayStart}."
+      ],
+      "shot": "call-talk"
+    },
+    "call.review": {
+      "heading": "Look back at a finished call",
+      "body": [
+        "Finished calls stay in {ui:roleplayPast}. Under your lines you'll see the corrected sentence and what you meant to say.",
+        "{ui:roleplaySayAgain} plays that sentence for you to repeat, and shows which words came through differently.",
+        "A turn where you got stuck keeps a {ui:roleplayWhyStuck} button."
+      ],
+      "shot": "call-review"
+    },
+    "call.pause": {
+      "heading": "Pause and carry on",
+      "body": [
+        "{ui:roleplayPause} saves the conversation. Next time, {ui:roleplayResume} picks it up again."
+      ]
+    }
+  },
+  "es": {
+    "my.notes": {
+      "heading": "8. Notas",
+      "body": [
+        "‘{ui:notesTitle}’ reúne tus expresiones, palabras y preguntas del análisis de frases en 8 capítulos por tema. Abre un capítulo para ‘{ui:notesPractice}’, busca arriba y toca ‘{ui:homeTabVocab}’ para ver tu vocabulario."
+      ],
+      "shot": "notes"
+    },
+    "my.more": {
+      "heading": "Además",
+      "body": [
+        "«{ui:ledgerTitle}» reúne expresiones de todas las pestañas. ¿Nuevo objetivo? «{ui:mapNewGoal}». Cada idioma tiene lo suyo.",
+        "Solo cuentan como dominadas las expresiones que usaste sin ayuda (no es un nivel, sino cuántas puedes usar). Lo que te falta sale solo de tus frases del chat y de lo que no entendiste del tutor, y las frases no se guardan. Si marcas una expresión en el análisis, queda en Mis expresiones; si la añades al mapa, se crea una tarea con ella."
+      ]
+    },
+    "people.find": {
+      "heading": "Buscar personas",
+      "body": [
+        "Perfiles de quienes estuvieron hace poco. Toca una foto para abrir el perfil y síguelo o escríbele.",
+        "También puedes bloquear o denunciar desde el perfil.",
+        "En tu perfil elige con etiquetas tu nacionalidad, lengua materna e intereses, y activa o desactiva lo que ven los demás. Toca «🙌 Me ayudó» a quien respondió tu pregunta; «Ver en español» traduce presentaciones y publicaciones."
+      ],
+      "shot": "r69-people"
+    },
+    "call.talk": {
+      "heading": "Habla en voz alta",
+      "shot": "call-talk",
+      "body": [
+        "El tutor habla primero. Cuando dejas de hablar, tu turno termina solo.",
+        "En el paquete, la franja de arriba muestra en qué pregunta vas, y al terminar {ui:packSeeRetro} muestra qué mejoró hoy.",
+        "Para hablar de lo que quieras, toca {ui:roleplayStart}."
+      ]
+    },
+    "call.review": {
+      "heading": "Revisa una llamada terminada",
+      "shot": "call-review",
+      "body": [
+        "Las llamadas terminadas quedan en {ui:roleplayPast}. Debajo de tus frases verás la frase corregida y lo que querías decir.",
+        "{ui:roleplaySayAgain} te reproduce esa frase para que la repitas y muestra qué palabras se oyeron distinto.",
+        "En los turnos donde te atascaste queda el botón {ui:roleplayWhyStuck}."
+      ]
+    },
+    "call.pause": {
+      "heading": "Pausa y continúa",
+      "body": [
+        "{ui:roleplayPause} guarda la conversación. La próxima vez, {ui:roleplayResume} la retoma."
+      ]
+    }
+  },
+  "ja": {
+    "my.notes": {
+      "heading": "8. ノート",
+      "body": [
+        "「{ui:notesTitle}」に表現・単語・文の分析で聞いたことが8章のテーマごとに集まります。章を開くとテーマごとに「{ui:notesPractice}」、上の検索欄で探せて、「{ui:homeTabVocab}」で単語帳が開きます。"
+      ],
+      "shot": "notes"
+    },
+    "my.more": {
+      "heading": "そのほか",
+      "body": [
+        "「{ui:ledgerTitle}」に全タブで出会った表現がたまります。目標が変わったら「{ui:mapNewGoal}」。学習言語ごとに別です。",
+        "手助けなしで使えた表現だけを習得と数えます(レベルではなく、使えるようになった表現の数)。足りないところはチャットの文とチューターの言葉でつまずいた所だけで判断し、文そのものは保存しません。文の分析で表現に印をつけると自分の表現に残り、マップに入れるとその表現のタスクができます。"
+      ]
+    },
+    "people.find": {
+      "heading": "人を探す",
+      "body": [
+        "最近来た学習者のプロフィールが並びます。写真をタップするとプロフィールが開き、フォローやメッセージができます。",
+        "ブロックや報告もプロフィールからできます。",
+        "プロフィールで国籍・母語・興味をチップで選び、ほかの人に見せる欄をオン・オフできます。質問に答えてくれた人には「🙌 助かった」、ほかの人の自己紹介や投稿は「日本語で見る」で翻訳します。"
+      ],
+      "shot": "r69-people"
+    },
+    "call.talk": {
+      "heading": "声で話す",
+      "shot": "call-talk",
+      "body": [
+        "チューターが先に話します。話し終えると自動で自分の番が終わります。",
+        "パックでは上の帯に何問目かが出て、終わったら{ui:packSeeRetro}で今日伸びたところを見られます。",
+        "テーマなしで話したいときは{ui:roleplayStart}を押します。"
+      ]
+    },
+    "call.review": {
+      "heading": "終わった通話を振り返る",
+      "shot": "call-review",
+      "body": [
+        "終わった通話は{ui:roleplayPast}に残ります。自分の文の下に、直した文と言いたかったことが出ます。",
+        "{ui:roleplaySayAgain}を押すとその文を聞いて言い直せて、違って聞こえた単語を教えてくれます。",
+        "詰まった番には{ui:roleplayWhyStuck}ボタンが残ります。"
+      ]
+    },
+    "call.pause": {
+      "heading": "止めて続きから",
+      "body": [
+        "{ui:roleplayPause}を押すと会話が保存されます。次は{ui:roleplayResume}で続けられます。"
+      ]
+    }
+  },
+  "zh": {
+    "my.notes": {
+      "heading": "8. 笔记",
+      "body": [
+        "“{ui:notesTitle}”把你的表达、单词和句子分析里问过的问题按 8 章主题汇总。打开一章，每个主题都有“{ui:notesPractice}”；用上方搜索框查找，点“{ui:homeTabVocab}”打开单词本。"
+      ],
+      "shot": "notes"
+    },
+    "my.more": {
+      "heading": "其他",
+      "body": [
+        "“{ui:ledgerTitle}”汇集了各个标签页遇到的表达。目标变了就点“{ui:mapNewGoal}”。每种学习语言各自独立。",
+        "只有不靠帮助说出来的表达才算掌握（不是等级，而是你能用的表达数量）。不足的地方只根据聊天里写的句子和听不懂的导师话判断，句子本身不保存。在句子分析里标记表达会留在我的表达里，放进地图就会生成用这个表达的任务。"
+      ]
+    },
+    "people.find": {
+      "heading": "找人",
+      "body": [
+        "这里是最近来过的学习者的资料。点头像打开资料，可以关注或发消息。",
+        "拉黑和举报也在资料页。",
+        "在个人资料里用标签选择国籍、母语和兴趣，并开关别人能看到的栏目。回答了你问题的人，可以点“🙌 有帮助”；别人的自我介绍和帖子可以用“用中文查看”翻译。"
+      ],
+      "shot": "r69-people"
+    },
+    "call.talk": {
+      "heading": "开口说",
+      "shot": "call-talk",
+      "body": [
+        "导师先说话。你停下来，你这一轮就自动结束。",
+        "练习包里，上方的条显示正在第几题，结束后用 {ui:packSeeRetro} 看看今天哪里进步了。",
+        "想随便聊，点 {ui:roleplayStart}。"
+      ]
+    },
+    "call.review": {
+      "heading": "回顾结束的通话",
+      "shot": "call-review",
+      "body": [
+        "结束的通话保存在 {ui:roleplayPast}。你说的每句下面会显示改好的句子和你原本想说的意思。",
+        "点 {ui:roleplaySayAgain} 会播放那句话让你跟着说，并告诉你哪些词听起来不一样。",
+        "卡住的那一轮会留下 {ui:roleplayWhyStuck} 按钮。"
+      ]
+    },
+    "call.pause": {
+      "heading": "暂停后继续",
+      "body": [
+        "点 {ui:roleplayPause} 会保存对话。下次点 {ui:roleplayResume} 接着聊。"
+      ]
+    }
+  },
+  "vi": {
+    "my.notes": {
+      "heading": "8. Ghi chú",
+      "body": [
+        "“{ui:notesTitle}” gom cụm từ, từ vựng và câu hỏi khi phân tích câu thành 8 chương theo chủ đề. Mở một chương để “{ui:notesPractice}”, tìm ở ô phía trên, chạm “{ui:homeTabVocab}” để mở sổ từ."
+      ],
+      "shot": "notes"
+    },
+    "my.more": {
+      "heading": "Ngoài ra",
+      "body": [
+        "“{ui:ledgerTitle}” gom cách nói từ mọi tab. Đổi mục tiêu? “{ui:mapNewGoal}”. Mỗi ngôn ngữ học có phần riêng.",
+        "Chỉ những cách nói bạn tự dùng không cần trợ giúp mới tính là thành thạo (không phải cấp độ, mà là số cách nói bạn dùng được). Phần còn thiếu chỉ dựa trên câu bạn viết trong trò chuyện và chỗ bạn vướng ở lời gia sư, câu không được lưu. Đánh dấu cách nói trong phân tích câu thì nó ở lại trong Cách nói của tôi; thêm vào bản đồ thì có nhiệm vụ cho nó."
+      ]
+    },
+    "people.find": {
+      "heading": "Tìm người",
+      "body": [
+        "Hồ sơ của những người học vừa ghé. Chạm ảnh để mở hồ sơ, rồi theo dõi hoặc nhắn tin.",
+        "Chặn và báo cáo cũng ở hồ sơ.",
+        "Trong hồ sơ, chọn quốc tịch, tiếng mẹ đẻ và sở thích bằng các thẻ, rồi bật hoặc tắt phần người khác thấy. Bấm “🙌 Hữu ích” cho người đã trả lời câu hỏi của bạn; “Xem bằng tiếng Việt” dịch phần giới thiệu và bài đăng của người khác."
+      ],
+      "shot": "r69-people"
+    },
+    "call.talk": {
+      "heading": "Nói thành tiếng",
+      "shot": "call-talk",
+      "body": [
+        "Gia sư nói trước. Khi bạn ngừng nói, lượt của bạn tự kết thúc.",
+        "Trong gói, dải phía trên cho biết bạn đang ở câu hỏi thứ mấy, và khi xong {ui:packSeeRetro} cho thấy hôm nay bạn tiến bộ ở đâu.",
+        "Muốn nói chuyện tự do, chạm {ui:roleplayStart}."
+      ]
+    },
+    "call.review": {
+      "heading": "Xem lại cuộc gọi đã xong",
+      "shot": "call-review",
+      "body": [
+        "Cuộc gọi đã xong nằm trong {ui:roleplayPast}. Dưới câu của bạn có câu đã sửa và điều bạn định nói.",
+        "{ui:roleplaySayAgain} phát câu đó để bạn nói theo và cho biết từ nào nghe khác đi.",
+        "Lượt bạn bị bí sẽ có nút {ui:roleplayWhyStuck}."
+      ]
+    },
+    "call.pause": {
+      "heading": "Tạm dừng và tiếp tục",
+      "body": [
+        "{ui:roleplayPause} lưu cuộc trò chuyện. Lần sau, {ui:roleplayResume} để nói tiếp."
+      ]
+    }
+  },
+  "fr": {
+    "my.notes": {
+      "heading": "8. Notes",
+      "body": [
+        "« {ui:notesTitle} » regroupe vos expressions, mots et questions d'analyse de phrase en 8 chapitres par thème. Ouvrez un chapitre pour « {ui:notesPractice} », cherchez en haut, et touchez « {ui:homeTabVocab} » pour la liste de mots."
+      ],
+      "shot": "notes"
+    },
+    "my.more": {
+      "heading": "Aussi",
+      "body": [
+        "« {ui:ledgerTitle} » rassemble les expressions de tous les onglets. Nouvel objectif ? « {ui:mapNewGoal} ». Chaque langue a les siens.",
+        "Seules les expressions produites sans aide comptent comme maîtrisées (ce n’est pas un niveau, juste combien vous savez en utiliser). Les manques viennent uniquement de vos phrases du chat et des répliques du tuteur où vous avez bloqué ; les phrases ne sont pas enregistrées. Marquer une expression dans l’analyse la garde dans Mes expressions ; l’ajouter à la carte crée une tâche."
+      ]
+    },
+    "people.find": {
+      "heading": "Trouver des gens",
+      "body": [
+        "Les profils des personnes passées récemment. Touchez une photo pour ouvrir le profil, puis suivez ou écrivez.",
+        "Bloquer et signaler se font aussi depuis le profil.",
+        "Dans votre profil, choisissez en étiquettes votre nationalité, votre langue maternelle et vos centres d’intérêt, et activez ou non ce que les autres voient. Touchez « 🙌 Utile » pour qui a répondu à votre question ; « Voir en français » traduit les présentations et les posts."
+      ],
+      "shot": "r69-people"
+    },
+    "call.talk": {
+      "heading": "Parler à voix haute",
+      "shot": "call-talk",
+      "body": [
+        "Le tuteur parle en premier. Quand vous vous arrêtez de parler, votre tour se termine tout seul.",
+        "Dans le pack, le bandeau du haut indique la question en cours, et à la fin {ui:packSeeRetro} montre ce qui a progressé aujourd’hui.",
+        "Pour parler librement, touchez {ui:roleplayStart}."
+      ]
+    },
+    "call.review": {
+      "heading": "Revoir un appel terminé",
+      "shot": "call-review",
+      "body": [
+        "Les appels terminés restent dans {ui:roleplayPast}. Sous vos phrases, vous voyez la phrase corrigée et ce que vous vouliez dire.",
+        "{ui:roleplaySayAgain} vous fait écouter la phrase pour la répéter et indique les mots entendus autrement.",
+        "Un tour où vous avez bloqué garde un bouton {ui:roleplayWhyStuck}."
+      ]
+    },
+    "call.pause": {
+      "heading": "Faire une pause et reprendre",
+      "body": [
+        "{ui:roleplayPause} enregistre la conversation. La prochaine fois, {ui:roleplayResume} la reprend."
+      ]
+    }
+  },
+  "it": {
+    "my.notes": {
+      "heading": "8. Note",
+      "body": [
+        "“{ui:notesTitle}” raccoglie espressioni, parole e domande dell'analisi della frase in 8 capitoli per argomento. Apri un capitolo per “{ui:notesPractice}”, cerca dalla casella in alto e tocca “{ui:homeTabVocab}” per le parole."
+      ],
+      "shot": "notes"
+    },
+    "my.more": {
+      "heading": "Inoltre",
+      "body": [
+        "«{ui:ledgerTitle}» raccoglie le espressioni di tutte le schede. Nuovo obiettivo? «{ui:mapNewGoal}». Ogni lingua ha i suoi.",
+        "Contano come padroneggiate solo le espressioni usate senza aiuto (non è un livello, ma quante sai usare). Le lacune vengono solo dalle tue frasi in chat e dalle battute del tutor dove ti sei bloccato; le frasi non vengono salvate. Segnare un’espressione nell’analisi la tiene in Le mie espressioni; aggiungerla alla mappa crea un compito."
+      ]
+    },
+    "people.find": {
+      "heading": "Trovare persone",
+      "body": [
+        "I profili di chi è passato di recente. Tocca una foto per aprire il profilo, poi segui o scrivi.",
+        "Blocca e segnala dal profilo.",
+        "Nel profilo scegli con le etichette nazionalità, lingua madre e interessi, e attiva o disattiva ciò che vedono gli altri. Tocca «🙌 Utile» per chi ha risposto alla tua domanda; «Vedi in italiano» traduce presentazioni e post."
+      ],
+      "shot": "r69-people"
+    },
+    "call.talk": {
+      "heading": "Parla ad alta voce",
+      "shot": "call-talk",
+      "body": [
+        "Il tutor parla per primo. Quando smetti di parlare, il tuo turno finisce da solo.",
+        "Nel pacchetto, la fascia in alto mostra a che domanda sei, e alla fine {ui:packSeeRetro} mostra cosa è cresciuto oggi.",
+        "Per parlare liberamente, tocca {ui:roleplayStart}."
+      ]
+    },
+    "call.review": {
+      "heading": "Rivedi una chiamata finita",
+      "shot": "call-review",
+      "body": [
+        "Le chiamate finite restano in {ui:roleplayPast}. Sotto le tue frasi vedi la frase corretta e ciò che volevi dire.",
+        "{ui:roleplaySayAgain} ti fa ascoltare la frase da ripetere e mostra quali parole sono arrivate diverse.",
+        "Un turno in cui ti sei bloccato conserva il pulsante {ui:roleplayWhyStuck}."
+      ]
+    },
+    "call.pause": {
+      "heading": "Metti in pausa e riprendi",
+      "body": [
+        "{ui:roleplayPause} salva la conversazione. La prossima volta, {ui:roleplayResume} la riprende."
+      ]
+    }
+  },
+  "pt": {
+    "my.notes": {
+      "heading": "8. Notas",
+      "body": [
+        "“{ui:notesTitle}” reúne expressões, palavras e perguntas da análise de frases em 8 capítulos por tema. Abra um capítulo para “{ui:notesPractice}”, pesquise no topo e toque em “{ui:homeTabVocab}” para ver as palavras."
+      ],
+      "shot": "notes"
+    },
+    "my.more": {
+      "heading": "Além disso",
+      "body": [
+        "“{ui:ledgerTitle}” reúne expressões de todas as abas. Novo objetivo? “{ui:mapNewGoal}”. Cada idioma tem o seu.",
+        "Só contam como dominadas as expressões que você usou sem ajuda (não é um nível, é quantas você consegue usar). O que falta vem só das suas frases no chat e das falas do tutor em que você travou; as frases não são salvas. Marcar uma expressão na análise a guarda em Minhas expressões; colocá-la no mapa cria uma tarefa."
+      ]
+    },
+    "people.find": {
+      "heading": "Encontrar pessoas",
+      "body": [
+        "Perfis de quem esteve aqui há pouco. Toque numa foto para abrir o perfil e siga ou envie mensagem.",
+        "Bloquear e denunciar também é no perfil.",
+        "No perfil, escolha em etiquetas sua nacionalidade, língua materna e interesses, e ative ou desative o que os outros veem. Toque em “🙌 Ajudou” para quem respondeu sua pergunta; “Ver em português” traduz apresentações e posts."
+      ],
+      "shot": "r69-people"
+    },
+    "call.talk": {
+      "heading": "Fale em voz alta",
+      "shot": "call-talk",
+      "body": [
+        "O tutor fala primeiro. Quando você para de falar, sua vez termina sozinha.",
+        "No pacote, a faixa de cima mostra em que pergunta você está, e no fim {ui:packSeeRetro} mostra o que cresceu hoje.",
+        "Para falar sobre qualquer coisa, toque em {ui:roleplayStart}."
+      ]
+    },
+    "call.review": {
+      "heading": "Reveja uma chamada encerrada",
+      "shot": "call-review",
+      "body": [
+        "As chamadas encerradas ficam em {ui:roleplayPast}. Sob as suas frases aparecem a frase corrigida e o que você queria dizer.",
+        "{ui:roleplaySayAgain} toca a frase para você repetir e mostra quais palavras soaram diferente.",
+        "Uma vez em que você travou fica com o botão {ui:roleplayWhyStuck}."
+      ]
+    },
+    "call.pause": {
+      "heading": "Pause e continue",
+      "body": [
+        "{ui:roleplayPause} salva a conversa. Da próxima vez, {ui:roleplayResume} retoma."
+      ]
+    }
+  },
+  "ru": {
+    "my.notes": {
+      "heading": "8. Заметки",
+      "body": [
+        "«{ui:notesTitle}» собирают ваши выражения, слова и вопросы из разбора предложений в 8 глав по темам. Откройте главу — у каждой темы есть «{ui:notesPractice}»; ищите в поле сверху, а «{ui:homeTabVocab}» откроет словарь."
+      ],
+      "shot": "notes"
+    },
+    "my.more": {
+      "heading": "Ещё",
+      "body": [
+        "«{ui:ledgerTitle}» собирает выражения со всех вкладок. Новая цель? «{ui:mapNewGoal}». У каждого языка своё.",
+        "Усвоенными считаются только выражения, которые вы использовали без помощи (это не уровень, а сколько вы умеете применять). Пробелы определяются только по вашим фразам в чате и репликам репетитора, где вы застряли; сами фразы не сохраняются. Отметка выражения в разборе оставляет его в «Моих выражениях», а добавление на карту создаёт задание."
+      ]
+    },
+    "people.find": {
+      "heading": "Найти людей",
+      "body": [
+        "Профили тех, кто заходил недавно. Нажмите на фото, чтобы открыть профиль, подписаться или написать.",
+        "Заблокировать и пожаловаться тоже можно в профиле.",
+        "В профиле выберите метками гражданство, родной язык и интересы и включайте или скрывайте то, что видят другие. Нажмите «🙌 Помогло» тому, кто ответил на ваш вопрос; «Перевести на русский» переводит чужие описания и посты."
+      ],
+      "shot": "r69-people"
+    },
+    "call.talk": {
+      "heading": "Говорите вслух",
+      "shot": "call-talk",
+      "body": [
+        "Первым говорит репетитор. Когда вы замолкаете, ваш ход заканчивается сам.",
+        "В наборе полоса вверху показывает, на каком вы вопросе, а в конце {ui:packSeeRetro} показывает, что выросло сегодня.",
+        "Чтобы поговорить о чём угодно, нажмите {ui:roleplayStart}."
+      ]
+    },
+    "call.review": {
+      "heading": "Разбор законченного звонка",
+      "shot": "call-review",
+      "body": [
+        "Законченные звонки остаются в {ui:roleplayPast}. Под вашими фразами видно исправленный вариант и то, что вы хотели сказать.",
+        "{ui:roleplaySayAgain} проигрывает фразу, чтобы вы её повторили, и показывает, какие слова прозвучали иначе.",
+        "Там, где вы застряли, остаётся кнопка {ui:roleplayWhyStuck}."
+      ]
+    },
+    "call.pause": {
+      "heading": "Пауза и продолжение",
+      "body": [
+        "{ui:roleplayPause} сохраняет разговор. В следующий раз {ui:roleplayResume} продолжит его."
+      ]
+    }
+  },
+  "id": {
+    "my.notes": {
+      "heading": "8. Catatan",
+      "body": [
+        "“{ui:notesTitle}” mengumpulkan ungkapan, kata, dan pertanyaan analisis kalimat ke 8 bab per topik. Buka bab untuk “{ui:notesPractice}”, cari dari kotak di atas, dan ketuk “{ui:homeTabVocab}” untuk daftar kata."
+      ],
+      "shot": "notes"
+    },
+    "my.more": {
+      "heading": "Lainnya",
+      "body": [
+        "“{ui:ledgerTitle}” mengumpulkan ungkapan dari semua tab. Ganti tujuan? “{ui:mapNewGoal}”. Tiap bahasa punya sendiri.",
+        "Hanya ungkapan yang kamu pakai tanpa bantuan yang dihitung dikuasai (bukan level, tapi berapa banyak yang bisa kamu pakai). Kekurangan dilihat hanya dari kalimatmu di obrolan dan ucapan tutor yang membuatmu bingung; kalimatnya tidak disimpan. Menandai ungkapan di analisis kalimat menyimpannya di Ungkapanku; memasukkannya ke peta membuat tugas untuknya."
+      ]
+    },
+    "people.find": {
+      "heading": "Cari orang",
+      "body": [
+        "Profil pelajar yang baru mampir. Ketuk foto untuk membuka profil, lalu ikuti atau kirim pesan.",
+        "Blokir dan laporkan juga dari profil.",
+        "Di profil, pilih kewarganegaraan, bahasa ibu, dan minat lewat chip, lalu nyalakan atau matikan bagian yang dilihat orang lain. Ketuk “🙌 Membantu” untuk orang yang menjawab pertanyaanmu; “Lihat dalam bahasa Indonesia” menerjemahkan perkenalan dan postingan orang lain."
+      ],
+      "shot": "r69-people"
+    },
+    "call.talk": {
+      "heading": "Bicara langsung",
+      "shot": "call-talk",
+      "body": [
+        "Tutor bicara lebih dulu. Saat kamu berhenti bicara, giliranmu selesai sendiri.",
+        "Di paket, pita di atas menunjukkan kamu di pertanyaan ke berapa, dan setelah selesai {ui:packSeeRetro} menunjukkan apa yang berkembang hari ini.",
+        "Untuk ngobrol bebas, ketuk {ui:roleplayStart}."
+      ]
+    },
+    "call.review": {
+      "heading": "Tinjau panggilan yang selesai",
+      "shot": "call-review",
+      "body": [
+        "Panggilan yang selesai tersimpan di {ui:roleplayPast}. Di bawah kalimatmu ada kalimat yang sudah diperbaiki dan maksud yang ingin kamu sampaikan.",
+        "{ui:roleplaySayAgain} memutar kalimat itu untuk kamu ulangi dan menunjukkan kata mana yang terdengar berbeda.",
+        "Giliran saat kamu buntu menyimpan tombol {ui:roleplayWhyStuck}."
+      ]
+    },
+    "call.pause": {
+      "heading": "Jeda dan lanjutkan",
+      "body": [
+        "{ui:roleplayPause} menyimpan percakapan. Lain kali, {ui:roleplayResume} melanjutkannya."
+      ]
+    }
+  },
+  "ar": {
+    "my.notes": {
+      "heading": "8. الملاحظات",
+      "body": [
+        "تجمع «{ui:notesTitle}» عباراتك وكلماتك وأسئلة تحليل الجمل في 8 فصول حسب الموضوع. افتح فصلًا لتجد «{ui:notesPractice}» لكل موضوع، وابحث من الخانة في الأعلى، واضغط «{ui:homeTabVocab}» لقائمة الكلمات."
+      ],
+      "shot": "notes"
+    },
+    "my.more": {
+      "heading": "أيضًا",
+      "body": [
+        "«{ui:ledgerTitle}» يجمع التعابير من كل التبويبات. هدف جديد؟ «{ui:mapNewGoal}». لكل لغة ما يخصّها.",
+        "لا تُحسب متقنة إلا العبارات التي استخدمتها دون مساعدة (ليست مستوى، بل كم عبارة تستطيع استخدامها). تُحدَّد النواقص فقط من جملك في الدردشة ومن كلام المعلّم الذي تعثّرت عنده، ولا تُحفظ الجمل نفسها. وضع علامة على عبارة في تحليل الجملة يبقيها في «عباراتي»، وإضافتها إلى الخريطة تنشئ لها مهمة."
+      ]
+    },
+    "people.find": {
+      "heading": "البحث عن أشخاص",
+      "body": [
+        "ملفات من زاروا مؤخرًا. اضغط على الصورة لفتح الملف الشخصي، ثم تابِع أو راسل.",
+        "الحظر والإبلاغ من الملف الشخصي أيضًا.",
+        "في ملفك الشخصي اختر بالرقاقات جنسيتك ولغتك الأم واهتماماتك، وشغّل أو أخفِ ما يراه الآخرون. اضغط «🙌 مفيد» لمن أجاب عن سؤالك، و«عرض باللغة العربية» يترجم تعريفات الآخرين ومنشوراتهم."
+      ],
+      "shot": "r69-people"
+    },
+    "call.talk": {
+      "heading": "تحدّث بصوتك",
+      "shot": "call-talk",
+      "body": [
+        "يتحدث المعلّم أولًا. عندما تتوقف عن الكلام ينتهي دورك تلقائيًا.",
+        "في الباقة يُظهر الشريط في الأعلى رقم السؤال الذي وصلت إليه، وعند الانتهاء يُريك {ui:packSeeRetro} ما تحسّن اليوم.",
+        "للحديث في أي موضوع، اضغط {ui:roleplayStart}."
+      ]
+    },
+    "call.review": {
+      "heading": "راجع مكالمة منتهية",
+      "shot": "call-review",
+      "body": [
+        "تبقى المكالمات المنتهية في {ui:roleplayPast}. تحت جملك ترى الجملة المصحّحة وما كنت تقصد قوله.",
+        "يُشغّل {ui:roleplaySayAgain} الجملة لتعيدها، ويُريك الكلمات التي سُمعت بشكل مختلف.",
+        "يبقى زر {ui:roleplayWhyStuck} عند الدور الذي تعثّرت فيه."
+      ]
+    },
+    "call.pause": {
+      "heading": "توقّف ثم تابع",
+      "body": [
+        "يحفظ {ui:roleplayPause} المحادثة. في المرة القادمة يتابعها {ui:roleplayResume}."
+      ]
+    }
+  },
+  "th": {
+    "my.notes": {
+      "heading": "8. โน้ต",
+      "body": [
+        "“{ui:notesTitle}” รวมสำนวน คำศัพท์ และคำถามจากการวิเคราะห์ประโยคไว้ 8 บทตามหัวข้อ เปิดบทเพื่อ “{ui:notesPractice}” ค้นหาจากช่องด้านบน และแตะ “{ui:homeTabVocab}” เพื่อเปิดคำศัพท์"
+      ],
+      "shot": "notes"
+    },
+    "my.more": {
+      "heading": "อื่นๆ",
+      "body": [
+        "“{ui:ledgerTitle}” รวบรวมสำนวนจากทุกแท็บ เปลี่ยนเป้าหมาย? “{ui:mapNewGoal}” แต่ละภาษาแยกกัน",
+        "นับเป็นคล่องแล้วเฉพาะสำนวนที่คุณใช้ได้เองโดยไม่ต้องช่วย (ไม่ใช่ระดับ แต่เป็นจำนวนสำนวนที่ใช้ได้) จุดที่ยังขาดดูจากประโยคที่คุณเขียนในแชตและคำพูดของติวเตอร์ที่คุณติดเท่านั้น และไม่เก็บตัวประโยค ทำเครื่องหมายสำนวนในการวิเคราะห์ประโยคแล้วจะอยู่ในสำนวนของฉัน ใส่ลงแผนที่แล้วจะมีงานสำหรับสำนวนนั้น"
+      ]
+    },
+    "people.find": {
+      "heading": "หาคน",
+      "body": [
+        "โปรไฟล์ของผู้เรียนที่เพิ่งเข้ามา แตะรูปเพื่อเปิดโปรไฟล์ แล้วติดตามหรือส่งข้อความได้",
+        "บล็อกและรายงานได้จากโปรไฟล์",
+        "ในโปรไฟล์ เลือกสัญชาติ ภาษาแม่ และความสนใจเป็นชิป แล้วเปิดหรือปิดส่วนที่คนอื่นเห็น กด “🙌 ช่วยได้” ให้คนที่ตอบคำถามของคุณ และ “ดูเป็นภาษาไทย” แปลคำแนะนำตัวและโพสต์ของคนอื่น"
+      ],
+      "shot": "r69-people"
+    },
+    "call.talk": {
+      "heading": "พูดออกเสียง",
+      "shot": "call-talk",
+      "body": [
+        "ติวเตอร์พูดก่อน เมื่อคุณหยุดพูด ตาของคุณจะจบเอง",
+        "ในแพ็ก แถบด้านบนบอกว่าอยู่คำถามที่เท่าไร และเมื่อจบ {ui:packSeeRetro} จะบอกว่าวันนี้อะไรดีขึ้น",
+        "ถ้าอยากคุยเรื่องอะไรก็ได้ แตะ {ui:roleplayStart}"
+      ]
+    },
+    "call.review": {
+      "heading": "ทบทวนการโทรที่จบแล้ว",
+      "shot": "call-review",
+      "body": [
+        "การโทรที่จบแล้วอยู่ใน {ui:roleplayPast} ใต้ประโยคของคุณจะเห็นประโยคที่แก้แล้วและสิ่งที่คุณตั้งใจจะพูด",
+        "{ui:roleplaySayAgain} จะเล่าประโยคนั้นให้คุณพูดตาม และบอกว่าคำไหนได้ยินต่างไป",
+        "ตาที่คุณติดจะมีปุ่ม {ui:roleplayWhyStuck} อยู่"
+      ]
+    },
+    "call.pause": {
+      "heading": "หยุดแล้วทำต่อ",
+      "body": [
+        "{ui:roleplayPause} จะบันทึกบทสนทนา ครั้งหน้าแตะ {ui:roleplayResume} เพื่อคุยต่อ"
+      ]
+    }
+  },
+  "hi": {
+    "my.notes": {
+      "heading": "8. नोट्स",
+      "body": [
+        "“{ui:notesTitle}” आपकी अभिव्यक्तियाँ, शब्द और वाक्य-विश्लेषण के सवाल 8 अध्यायों में विषय के हिसाब से जोड़ते हैं। अध्याय खोलें और हर विषय पर “{ui:notesPractice}”, ऊपर के बॉक्स से खोजें, और शब्दों के लिए “{ui:homeTabVocab}” दबाएँ।"
+      ],
+      "shot": "notes"
+    },
+    "my.more": {
+      "heading": "और",
+      "body": [
+        "“{ui:ledgerTitle}” में हर टैब की अभिव्यक्तियाँ जमा होती हैं। नया लक्ष्य? “{ui:mapNewGoal}”। हर भाषा का अपना अलग है।",
+        "सिर्फ़ वही भाव महारत में गिने जाते हैं जो आपने बिना मदद के इस्तेमाल किए (यह स्तर नहीं, बस कितने भाव आप इस्तेमाल कर पाते हैं)। कमियाँ सिर्फ़ चैट के आपके वाक्यों और ट्यूटर की उन बातों से देखी जाती हैं जहाँ आप अटके; वाक्य सहेजे नहीं जाते। वाक्य विश्लेषण में भाव पर निशान लगाने से वह मेरे भाव में रहता है, मैप में डालने से उसके लिए टास्क बनता है।"
+      ]
+    },
+    "people.find": {
+      "heading": "लोग ढूँढें",
+      "body": [
+        "हाल में आए सीखने वालों की प्रोफ़ाइल। फ़ोटो पर टैप करके प्रोफ़ाइल खोलें, फिर फ़ॉलो करें या मैसेज भेजें।",
+        "ब्लॉक और रिपोर्ट भी प्रोफ़ाइल से होते हैं।",
+        "प्रोफ़ाइल में चिप से अपनी राष्ट्रीयता, मातृभाषा और रुचियाँ चुनें, और दूसरों को दिखने वाले हिस्से चालू या बंद करें। जिसने आपके सवाल का जवाब दिया उसे “🙌 मदद मिली” दें; “हिन्दी में देखें” दूसरों के परिचय और पोस्ट का अनुवाद करता है।"
+      ],
+      "shot": "r69-people"
+    },
+    "call.talk": {
+      "heading": "बोलकर बात करें",
+      "shot": "call-talk",
+      "body": [
+        "ट्यूटर पहले बोलता है। आप बोलना रोकते हैं तो आपकी बारी अपने-आप खत्म हो जाती है।",
+        "पैक में ऊपर की पट्टी बताती है कि आप कौन-से सवाल पर हैं, और खत्म होने पर {ui:packSeeRetro} दिखाता है कि आज क्या बढ़ा।",
+        "किसी भी बारे में बात करनी हो तो {ui:roleplayStart} दबाएँ।"
+      ]
+    },
+    "call.review": {
+      "heading": "खत्म हुई कॉल दोबारा देखें",
+      "shot": "call-review",
+      "body": [
+        "खत्म हुई कॉल्स {ui:roleplayPast} में रहती हैं। आपकी पंक्तियों के नीचे सुधरा हुआ वाक्य और आप जो कहना चाहते थे, दिखता है।",
+        "{ui:roleplaySayAgain} वह वाक्य सुनाता है ताकि आप दोहराएँ, और बताता है कि कौन-से शब्द अलग सुनाई दिए।",
+        "जहाँ आप अटके थे, वहाँ {ui:roleplayWhyStuck} बटन रहता है।"
+      ]
+    },
+    "call.pause": {
+      "heading": "रोकें और फिर जारी रखें",
+      "body": [
+        "{ui:roleplayPause} बातचीत सहेज लेता है। अगली बार {ui:roleplayResume} से जारी रखें।"
+      ]
+    }
+  }
+}

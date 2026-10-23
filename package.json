@@ -1,6 +1,6 @@
 {
   "name": "languagebank",
-  "version": "2.72.0",
+  "version": "2.73.0",
   "private": true,
   "scripts": {
     "service-map": "node scripts/service-map.mjs",
