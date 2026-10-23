@@ -266,12 +266,45 @@ const VIDEO_SESSION = {
       "Por eso, romperlas exige algo más que fuerza de voluntad.",
     ],
   },
+  ja: {
+    videoId: "cS8oEgJ9CXU",
+    summary: "悪い癖をやめるのが難しい理由と、脳が習慣を覚える仕組みを紹介する短いアニメ授業。",
+    lines: [
+      "爪をかむ癖をやめようとしたことはありますか？",
+      "世界中で何十億人もの人が、悪い癖に悩んでいます。",
+      "問題は、脳が気づかないうちに習慣を覚えてしまうことです。",
+      "だから、やめるには意志の力だけでは足りないのです。",
+    ],
+  },
+  zh: {
+    videoId: "pamsHFJzKvo",
+    summary: "一节简短的动画课：为什么改掉坏习惯这么难，大脑又是怎样学会习惯的。",
+    lines: [
+      "你有没有试过改掉咬指甲的习惯？",
+      "全世界有几十亿人都在和坏习惯作斗争。",
+      "问题在于，大脑会在我们不知不觉中学会这些习惯。",
+      "所以，要改掉它们，光靠意志力是不够的。",
+    ],
+  },
+  ko: {
+    videoId: "xkGCgVqAwSo",
+    summary: "베어링이 어떻게 마찰을 줄여 기계를 부드럽게 돌게 하는지 보여 주는 짧은 애니메이션 강의.",
+    lines: [
+      "바퀴가 처음 발명됐을 때 가장 큰 문제는 마찰이었어요.",
+      "두 표면이 맞닿아 미끄러지면 열이 나고 금방 닳아요.",
+      "베어링은 그 사이에 작은 공을 넣어 굴러가게 만들어요.",
+      "덕분에 자전거부터 비행기까지 훨씬 부드럽게 움직여요.",
+    ],
+  },
 };
 
 /** A line with one everyday mistake, in the language being learned. */
 const SLIPPED_LINE = {
   en: "Yesterday I go to the beach with my friends and we swim a lot.",
   es: "Ayer yo voy a la playa con mis amigos y nadamos mucho.",
+  ja: "昨日、友達と海に行くて、たくさん泳ぎました。",
+  zh: "昨天我跟朋友去海边，我们游泳了很多。",
+  ko: "어제 친구들이랑 바다에 가요. 그리고 수영을 많이 해요.",
 };
 
 /** "give up", typed in each interface language: the vocabulary search goes from your language. */
@@ -325,6 +358,12 @@ const REPEATED_MISTAKE = {
   // One kind of mistake only (ser for estar); "Ayer yo soy…" also changed the
   // tense and was read as a different kind.
   es: ["Hoy yo soy muy cansado después del trabajo.", "Mi hermana es enferma desde el lunes.", "Ahora yo soy muy contento con mi trabajo."],
+  // 조사 하나(に会う → を会う)만 틀린다.
+  ja: ["昨日、駅で友達を会いました。", "週末、先生を会って少し話しました。", "明日、母を会う予定です。"],
+  // 양사 하나(个)만 틀린다.
+  zh: ["我昨天买了一个书。", "她家有三个猫。", "我想喝一个咖啡。"],
+  // 목적격 조사(을/를 → 이/가) 하나만 틀린다.
+  ko: ["저는 아침마다 커피가 마셔요.", "어제 친구랑 영화가 봤어요.", "주말에 책이 읽었어요."],
 };
 
 /** A call already had, read back, with one sentence rebuilt into what was meant. */
@@ -356,6 +395,24 @@ const PAST_CALL = {
     { who: "learner", text: "Sí, mucha gente. Yo esperé mucho tiempo", better: "Sí, había mucha gente. Esperé mucho tiempo." },
     { who: "tutor", text: "¡Es el precio de un buen café!" },
   ],
+  zh: [
+    { who: "tutor", text: "嗨！周末过得怎么样？" },
+    { who: "learner", text: "昨天我去咖啡店喝很多咖啡了", meant: "昨天我去了咖啡店，喝了很多咖啡。" },
+    { who: "tutor", text: "不错！你去的是哪家咖啡店？" },
+    { who: "learner", text: "我公司附近新开的那家。" },
+    { who: "tutor", text: "听说那家挺不错的。人多吗？" },
+    { who: "learner", text: "对，人很多。我等很长时间", better: "对，人特别多。我等了很长时间。" },
+    { who: "tutor", text: "好咖啡就是值得等嘛！" },
+  ],
+  ko: [
+    { who: "tutor", text: "안녕! 주말 어떻게 보냈어?" },
+    { who: "learner", text: "어제 카페 가요 커피 많이 마셔요", meant: "어제 카페에 가서 커피를 많이 마셨어요." },
+    { who: "tutor", text: "좋다! 어느 카페에 갔어?" },
+    { who: "learner", text: "회사 근처에 새로 생긴 곳이요." },
+    { who: "tutor", text: "거기 괜찮다고 들었어. 사람 많았어?" },
+    { who: "learner", text: "네, 사람 아주 많아요. 오래 기다려요", better: "네, 사람이 정말 많았어요. 오래 기다렸어요." },
+    { who: "tutor", text: "맛있는 커피를 위해서라면 어쩔 수 없지!" },
+  ],
 };
 
 /**
@@ -365,23 +422,32 @@ const PAST_CALL = {
 const LEDGER_SEED = {
   en: [["catch up", "video"], ["on the same page", "vocab"], ["make it up to you", "chat"], ["no worries", "roleplay"], ["stood me up", "video"]],
   es: [["ponerse al día", "video"], ["estar en la misma onda", "vocab"], ["no pasa nada", "roleplay"], ["me dejó plantado", "video"]],
+  ja: [["久しぶり", "video"], ["気が合う", "vocab"], ["埋め合わせする", "chat"], ["気にしないで", "roleplay"], ["すっぽかされた", "video"]],
+  zh: [["好久不见", "video"], ["想到一块儿去了", "vocab"], ["补偿你", "chat"], ["没关系", "roleplay"], ["放我鸽子", "video"]],
+  ko: [["오랜만이야", "video"], ["말이 잘 통하다", "vocab"], ["다음에 꼭 갚을게", "chat"], ["괜찮아", "roleplay"], ["바람맞았어", "video"]],
 };
 
 /** A line using a phrase met in a video, so the chat says where it came from. */
 const LINK_LINE = {
   en: "My friend stood me up again last night, so I had dinner alone.",
   es: "Mi amigo me dejó plantado otra vez anoche y cené solo.",
+  ja: "昨日の夜、また友達にすっぽかされたから、一人で晩ご飯を食べた。",
+  zh: "昨晚朋友又放我鸽子了，所以我一个人吃了晚饭。",
+  ko: "어젯밤에 친구한테 또 바람맞았어. 그래서 혼자 저녁 먹었어.",
 };
 
 /** Lines with nothing to correct, so the My tab's network has grown a little. */
 const CLEAN_LINES = {
   en: ["I usually walk to work when the weather is nice.", "We had dinner at a small Italian place last night.", "Could you send me the file before the meeting?"],
   es: ["Normalmente voy andando al trabajo cuando hace buen tiempo.", "Anoche cenamos en un restaurante italiano pequeño.", "¿Me puedes mandar el archivo antes de la reunión?"],
+  ja: ["天気がいい日は、たいてい歩いて会社に行きます。", "昨日の夜、小さなイタリアンのお店で晩ご飯を食べました。", "会議の前にファイルを送ってもらえますか？"],
+  zh: ["天气好的时候，我一般走路去上班。", "昨天晚上我们在一家小意大利餐厅吃了晚饭。", "你能在开会前把文件发给我吗？"],
+  ko: ["날씨가 좋으면 보통 걸어서 출근해요.", "어젯밤에 작은 이탈리안 식당에서 저녁을 먹었어요.", "회의 전에 파일 좀 보내 줄 수 있어요?"],
 };
 
 /** "Try saying:", for the help shown when a learner was stuck in a call. */
 /** A sentence typed into "say a sentence of your own", in the language learned. */
-const OWN_LINE = { en: "Could you say that one more time, please?", ja: "もう一度言ってもらえますか？", es: "¿Me lo puedes repetir, por favor?" };
+const OWN_LINE = { en: "Could you say that one more time, please?", ja: "もう一度言ってもらえますか？", es: "¿Me lo puedes repetir, por favor?", zh: "你能再说一遍吗？", ko: "한 번만 더 말해 줄 수 있어요?" };
 
 const TIP_LEAD = {
   ko: "이렇게 말해 보세요:", en: "Try saying:", es: "Prueba a decir:", ja: "こう言ってみましょう:", zh: "可以这样说：",
@@ -470,9 +536,27 @@ const ROOM_LINES = {
     ["yuki", "Sí, tomé helado de matcha. Estaba buenísimo."],
     ["omar", "Algún día quiero ir a Japón.", "text"],
   ],
+  ja: [
+    ["yuki", "先週末、京都に行ったんです。お寺がすごくきれいでした。"],
+    ["lucia", "いいですね！地元の料理は食べましたか？"],
+    ["yuki", "はい、抹茶アイスを食べました。本当においしかったです。"],
+    ["omar", "いつか日本に行ってみたいです。", "text"],
+  ],
+  zh: [
+    ["yuki", "上个周末我去了京都，寺庙特别漂亮。"],
+    ["lucia", "真好！你尝了当地的美食吗？"],
+    ["yuki", "尝了，我吃了抹茶冰淇淋，特别好吃。"],
+    ["omar", "我也想有一天去日本。", "text"],
+  ],
+  ko: [
+    ["yuki", "지난 주말에 교토에 갔어요. 절이 정말 예뻤어요."],
+    ["lucia", "좋네요! 현지 음식도 먹어 봤어요?"],
+    ["yuki", "네, 말차 아이스크림을 먹었어요. 진짜 맛있었어요."],
+    ["omar", "언젠가 일본에 가 보고 싶어요.", "text"],
+  ],
 };
 // 2.69 힌트 장면: 상대가 나이를 묻고, 나는 편한 말로 "어.. 스물둘.."(받아쓰기는 고정 응답, 힌트는 운영 /api/chat).
-const HINT_QUESTION = { en: "How old are you?", es: "¿Cuántos años tienes?" };
+const HINT_QUESTION = { en: "How old are you?", es: "¿Cuántos años tienes?", ja: "何歳ですか？", zh: "你多大了？", ko: "몇 살이에요?" };
 const HINT_FRAGMENT = {
   ko: "어.. 스물둘..", en: "uh... I'm twenty-two", es: "eh… veintidós", ja: "えっと…にじゅうに", zh: "呃…二十二", vi: "ờ… hai mươi hai", fr: "euh… vingt-deux",
   it: "ehm… ventidue", pt: "é… vinte e dois", ru: "э-э… двадцать два", id: "eh… dua puluh dua", ar: "اممم… اثنان وعشرون", th: "อืม... ยี่สิบสอง", hi: "उम्म… बाईस",
@@ -481,10 +565,16 @@ const HINT_FRAGMENT = {
 const GROUP_LINES = {
   en: { name: "Study buddies ☕", a: "Who wants to practice tonight?", b: "Me! After dinner works for me.", c: "Let’s call at 9." },
   es: { name: "Compañeros ☕", a: "¿Quién quiere practicar esta noche?", b: "¡Yo! Después de cenar me va bien.", c: "Llamamos a las nueve." },
+  ja: { name: "勉強仲間 ☕", a: "今夜、練習したい人いる？", b: "はい！晩ご飯のあとなら大丈夫です。", c: "9時に通話しよう。" },
+  zh: { name: "学习搭子 ☕", a: "今晚谁想一起练习？", b: "我！吃完晚饭以后可以。", c: "九点打电话吧。" },
+  ko: { name: "공부 친구들 ☕", a: "오늘 밤에 같이 연습할 사람?", b: "저요! 저녁 먹고 나서 괜찮아요.", c: "9시에 통화해요." },
 };
 const DM_LINES = {
   en: { hi: "Hi! Thanks for the chat in the room.", reply: "It was fun! Do you want to practice again tomorrow?" },
   es: { hi: "¡Hola! Gracias por la charla en la sala.", reply: "¡Fue divertido! ¿Practicamos otra vez mañana?" },
+  ja: { hi: "こんにちは！ルームでの会話、ありがとうございました。", reply: "楽しかったです！明日もまた練習しませんか？" },
+  zh: { hi: "你好！谢谢你在房间里跟我聊天。", reply: "很开心！明天还要一起练习吗？" },
+  ko: { hi: "안녕하세요! 방에서 같이 얘기해 줘서 고마워요.", reply: "재밌었어요! 내일 또 연습할래요?" },
 };
 // 2.69 노트 장면: 쌓인 표현(장부, 고정 응답)·단어장 한 개·문장분석 질문 하나, 자리는 미리 정해 둠(서버 안 부름).
 const NOTES_DATA = {
@@ -500,6 +590,24 @@ const NOTES_DATA = {
       ["¿Me lo puedo probar?", "met", "out.shops"], ["Normalmente me levanto a las siete", "learned", "day.routine"]],
     word: ["madrugar", "day.routine"], ask: { sentence: "Mañana tengo que madrugar.", selected: "madrugar", topic: "day.routine" },
   },
+  ja: {
+    phrases: [["お会計お願いします", "mastered", "out.shops"], ["一番近い駅はどこですか？", "learned", "out.transport"], ["遅れてすみません", "learned", "help.sorry"],
+      ["先週末、ハイキングに行きました", "met", "past.yesterday"], ["お仕事は何をしていますか？", "mastered", "people.job"], ["楽しみにしています", "met", "future.plans"],
+      ["試着してもいいですか？", "met", "out.shops"], ["たいてい7時に起きます", "learned", "day.routine"]],
+    word: ["通勤", "day.routine"], ask: { sentence: "いつも電車で通勤しています。", selected: "通勤", topic: "day.routine" },
+  },
+  zh: {
+    phrases: [["买单", "mastered", "out.shops"], ["最近的地铁站在哪儿？", "learned", "out.transport"], ["不好意思，我来晚了", "learned", "help.sorry"],
+      ["上周末我去爬山了", "met", "past.yesterday"], ["你是做什么工作的？", "mastered", "people.job"], ["我很期待", "met", "future.plans"],
+      ["可以试一下吗？", "met", "out.shops"], ["我一般七点起床", "learned", "day.routine"]],
+    word: ["通勤", "day.routine"], ask: { sentence: "我平时坐地铁通勤。", selected: "通勤", topic: "day.routine" },
+  },
+  ko: {
+    phrases: [["계산서 주세요", "mastered", "out.shops"], ["가장 가까운 역이 어디예요?", "learned", "out.transport"], ["늦어서 미안해요", "learned", "help.sorry"],
+      ["지난 주말에 등산 갔어요", "met", "past.yesterday"], ["무슨 일 하세요?", "mastered", "people.job"], ["기대돼요", "met", "future.plans"],
+      ["입어 봐도 돼요?", "met", "out.shops"], ["보통 7시에 일어나요", "learned", "day.routine"]],
+    word: ["출근", "day.routine"], ask: { sentence: "저는 보통 지하철로 출근해요.", selected: "출근", topic: "day.routine" },
+  },
 };
 // 2.69 게시판 장면: 학습 언어로 쓴 글 셋(고정 응답).
 const BOARD_POSTS = {
@@ -513,22 +621,48 @@ const BOARD_POSTS = {
     ["lucia", "Pregunta: ¿se dice «pedí» o «pidí»? Siempre lo confundo.", 7],
     ["omar", "Busco a alguien para practicar los sábados. Soy principiante pero practico cada día.", 2],
   ],
+  ja: [
+    ["lucia", "今日はじめて日本語でコーヒーを注文しました！店員さんに通じました 😊", 4],
+    ["omar", "質問です：「行ってきます」と「行きます」はどう違いますか？", 7],
+    ["yuki", "土曜日に一緒に話す練習をしませんか？日本語なら手伝えます。", 2],
+  ],
+  zh: [
+    ["yuki", "今天第一次用中文点了咖啡！店员听懂了 😊", 4],
+    ["lucia", "请问：“再”和“又”有什么区别？我总是搞混。", 7],
+    ["omar", "想找人周六一起练口语。我是初学者，但每天都在练习。", 2],
+  ],
+  ko: [
+    ["yuki", "오늘 처음으로 한국어로 커피를 주문했어요! 직원분이 알아들으셨어요 😊", 4],
+    ["lucia", "질문: '-아서'랑 '-니까'는 어떻게 달라요? 자꾸 헷갈려요.", 7],
+    ["omar", "토요일마다 같이 스몰토크 연습할 사람 찾아요. 초보지만 매일 연습해요.", 2],
+  ],
 };
 // 2.69 러닝메이트·팀 장면: 단체방을 팀으로 올린 워크스페이스(고정 응답) — 목표·정기 모임·같이 한 날·쌓인 것.
 const TEAM_SPACE = {
   en: { goal: "Each of us tells one story from the weekend", phrase: "It was a piece of cake.", share: ["catch up", "to talk after not seeing each other"], call: ["How was your weekend?", "I went hiking with my sister.", "Nice! Where did you go?"] },
   es: { goal: "Cada uno cuenta una historia del fin de semana", phrase: "Fue pan comido.", share: ["ponerse al día", "hablar después de no verse"], call: ["¿Qué tal tu fin de semana?", "Fui de excursión con mi hermana.", "¡Qué bien! ¿Adónde fuisteis?"] },
+  ja: { goal: "週末にあったことを一人一つ話す", phrase: "朝飯前だったよ。", share: ["近況を話す", "しばらく会っていなかった人と話すこと"], call: ["週末はどうだった？", "姉とハイキングに行ったよ。", "いいね！どこに行ったの？"] },
+  zh: { goal: "每人讲一个周末的故事", phrase: "小菜一碟。", share: ["叙叙旧", "好久没见后聊聊近况"], call: ["周末过得怎么样？", "我和姐姐去爬山了。", "不错！去哪儿了？"] },
+  ko: { goal: "주말 이야기 하나씩 하기", phrase: "식은 죽 먹기였어.", share: ["근황 토크", "한동안 못 본 사람과 요즘 얘기 나누기"], call: ["주말 어떻게 보냈어?", "언니랑 등산 갔어.", "좋다! 어디로 갔어?"] },
 };
 // 2.72 라이어 게임 장면의 주제·제시어(14개 언어 — 앱 언어·학습 언어 어느 쪽이든 보이게).
 const GAME_TOPIC = { ko: "음식", en: "food", es: "comida", ja: "食べ物", zh: "食物", vi: "đồ ăn", fr: "nourriture", it: "cibo", pt: "comida", ru: "еда", id: "makanan", ar: "طعام", th: "อาหาร", hi: "खाना" };
 const GAME_WORD = { ko: "피자", en: "pizza", es: "pizza", ja: "ピザ", zh: "披萨", vi: "pizza", fr: "pizza", it: "pizza", pt: "pizza", ru: "пицца", id: "pizza", ar: "بيتزا", th: "พิซซ่า", hi: "पिज़्ज़ा" };
+/** 방 이름(학습 언어 ↔ 상대 언어). 상대 언어는 일본어, 일본어를 배우면 한국어. */
+const ROOM_NAME = { en: "English ↔ 日本語", es: "Español ↔ 日本語", ja: "日本語 ↔ 한국어", zh: "中文 ↔ 日本語", ko: "한국어 ↔ 日本語" };
+const FREE_ROOM = { en: "🌍 Friday chat", es: "🌍 Charla de los viernes", ja: "🌍 金曜日のおしゃべり", zh: "🌍 周五闲聊", ko: "🌍 금요일 수다" };
+const otherLang = (target) => (target === "ja" ? "ko" : "ja");
+const roomNameFor = (target) => ROOM_NAME[target] ?? ROOM_NAME.en;
+// 방·단체방 줄에서 골라 물을 구절(pickPhrase가 낱말 칩에서 찾는다).
+const QUOTE_PICK = { en: "last weekend", es: "fin de semana", ja: "先週末", zh: "上个周末", ko: "지난 주말" };
+const GROUP_PICK = { en: "works for me", es: "me va bien", ja: "大丈夫", zh: "吃完晚饭", ko: "먹고 나서" };
 function socialMocks(page, target, ui) {
   const now = Date.now();
   // 2.69 host 장면: 내가 방장이 된 것처럼(물을 때마다 읽음).
   page.__social = page.__social ?? { hostMe: false };
-  const roomName = target === "es" ? "Español ↔ 日本語" : "English ↔ 日本語";
-  const baseRoom = { id: "capt01", name: roomName, languages: [target, "ja"], hostPeerId: "p_yukiyukiyuki", hostAccountId: PEOPLE.yuki.id, hostNickname: "Yuki", createdAt: now - 600_000 };
-  const member = (key, peerId, role, extra = {}) => ({ peerId, nickname: PEOPLE[key].nickname, role, muted: false, hand: false, accountId: PEOPLE[key].id, langs: [target, "ja"], joinedAt: now - 500_000, lastSeen: Date.now(), ...extra }); // 응답 때마다 지금: 오래되면 앱이 나간 사람으로 지운다
+  const roomName = roomNameFor(target);
+  const baseRoom = { id: "capt01", name: roomName, languages: [target, otherLang(target)], hostPeerId: "p_yukiyukiyuki", hostAccountId: PEOPLE.yuki.id, hostNickname: "Yuki", createdAt: now - 600_000 };
+  const member = (key, peerId, role, extra = {}) => ({ peerId, nickname: PEOPLE[key].nickname, role, muted: false, hand: false, accountId: PEOPLE[key].id, langs: [target, otherLang(target)], joinedAt: now - 500_000, lastSeen: Date.now(), ...extra }); // 응답 때마다 지금: 오래되면 앱이 나간 사람으로 지운다
   const peers = { yuki: "p_yukiyukiyuki", lucia: "p_lucialucialu", omar: "p_omaromaromar" };
   // 홍보 녹화(live): Yuki·Lucía가 말하고 Yuki가 묻는 세 줄만, page.__social.shown만큼 한 줄씩 보인다.
   const source = page.__social.live
@@ -559,7 +693,7 @@ function socialMocks(page, target, ui) {
     ...(key === "yuki"
       ? {
           bio: "🇯🇵 → 🌏 ☕ 🎧",
-          facts: { country: "JP", native: "ja", speaks: [target === "es" ? "es" : "en"], interests: ["travel", "cafe", "music", "photo"], work: "worker", meetModes: ["call", "text"], meetTimes: ["evening"] },
+          facts: { country: "JP", native: "ja", speaks: [target === "ja" ? "ko" : target], interests: ["travel", "cafe", "music", "photo"], work: "worker", meetModes: ["call", "text"], meetTimes: ["evening"] },
           badges: { help: { count: 9, lang: target }, streak: { week: 5, run: 3 } },
           posts: [{ id: "bp_capture1", author: PEOPLE.yuki.id, language: target, text: BOARD_POSTS[target][0][1], at: now - 3_600_000, comments: 4, likes: 6, liked: false }],
         }
@@ -575,7 +709,7 @@ function socialMocks(page, target, ui) {
       const room = hostMe ? { ...baseRoom, hostPeerId: mePeer, hostAccountId: PEOPLE.me.id, hostNickname: "Minji" } : baseRoom;
       const faces = members.map((m) => ({ accountId: m.accountId, nickname: m.nickname }));
       // 2.69 자유 대화 장면: 목록 맨 위에 🌐 방 하나.
-      const free = { id: "capt03", name: target === "es" ? "🌍 Charla de los viernes" : "🌍 Friday chat", languages: [], free: true, hostPeerId: peers.lucia, hostAccountId: PEOPLE.lucia.id, hostNickname: "Lucía", createdAt: now - 300_000, speakers: 3, listeners: 1, faces: [faces[1], faces[0], faces[2]] };
+      const free = { id: "capt03", name: FREE_ROOM[target] ?? FREE_ROOM.en, languages: [], free: true, hostPeerId: peers.lucia, hostAccountId: PEOPLE.lucia.id, hostNickname: "Lucía", createdAt: now - 300_000, speakers: 3, listeners: 1, faces: [faces[1], faces[0], faces[2]] };
       if (body.action === "list") return json(route, { rooms: [...(page.__social.free ? [free] : []), { ...room, speakers: 2, listeners: 2, faces, followed: true, ...(page.__social.game ? { gameKind: "liar" } : {}) }] });
       if (body.action === "join") return json(route, { member: members[3], room, now: Date.now() });
       if (body.action === "poll" && page.__social.live) {
@@ -610,7 +744,7 @@ function socialMocks(page, target, ui) {
         return json(route, {
           people: [
             // 2.72: 국적(국기)·모국어·관심사 칩·도움됐어요 수(프로필 사실, account/profileFacts.ts).
-            { id: PEOPLE.yuki.id, nickname: "Yuki", bio: "🇯🇵 → 🌏 ☕ 🎧", hasPhoto: true, ui: "ja", learn: target, lastSeen: seen(1), isFollowing: true, country: "JP", native: "ja", interests: ["travel", "cafe", "music"], sharedInterests: 2, help: 9, meetModes: ["call"] },
+            { id: PEOPLE.yuki.id, nickname: "Yuki", bio: "🇯🇵 → 🌏 ☕ 🎧", hasPhoto: true, ui: "ja", learn: target === "ja" ? "ko" : target, lastSeen: seen(1), isFollowing: true, country: "JP", native: "ja", interests: ["travel", "cafe", "music"], sharedInterests: 2, help: 9, meetModes: ["call"] },
             { id: PEOPLE.lucia.id, nickname: "Lucía", bio: "🇪🇸 → 🇯🇵 🍣 📚", hasPhoto: true, ui: "es", learn: "ja", lastSeen: seen(40), isFollowing: false, country: "ES", native: "es", interests: ["food", "books", "anime"], sharedInterests: 1, help: 3 },
             { id: PEOPLE.omar.id, nickname: "Omar", bio: "🇪🇬 → 🌍 ⚽", hasPhoto: true, ui: "ar", learn: target, lastSeen: seen(60 * 26), isFollowing: false, country: "EG", native: "ar", interests: ["sports", "games"] },
           ],
@@ -639,7 +773,7 @@ function socialMocks(page, target, ui) {
     page.route("**/api/groups", (route) => {
       const body = JSON.parse(route.request().postData() || "{}");
       const g = GROUP_LINES[target];
-      const group = { id: "g_capturegrp", name: g.name, languages: [target, "ja"], owner: PEOPLE.me.id, members: [PEOPLE.me.id, PEOPLE.yuki.id, PEOPLE.lucia.id, PEOPLE.omar.id], invited: [], callRoomId: "capt04", createdAt: now - 86_400_000, lastAt: now - 60_000, lastText: g.c, lastFrom: PEOPLE.lucia.id, lastSeq: 6 };
+      const group = { id: "g_capturegrp", name: g.name, languages: [target, otherLang(target)], owner: PEOPLE.me.id, members: [PEOPLE.me.id, PEOPLE.yuki.id, PEOPLE.lucia.id, PEOPLE.omar.id], invited: [], callRoomId: "capt04", createdAt: now - 86_400_000, lastAt: now - 60_000, lastText: g.c, lastFrom: PEOPLE.lucia.id, lastSeq: 6 };
       const messages = [
         { seq: 1, from: PEOPLE.yuki.id, kind: "text", text: g.a, at: now - 3_600_000 },
         { seq: 2, from: PEOPLE.omar.id, kind: "text", text: g.b, at: now - 3_500_000 },
@@ -705,6 +839,25 @@ async function pickWords(page, [from, to], wait) {
   await wait(500);
 }
 
+/** 낱말 칩에서 구절이 시작·끝나는 칩을 찾아 누른다(띄어쓰기 없는 언어도 칩을 이어 붙여 맞춘다). */
+async function pickPhrase(page, phrase, wait) {
+  const chips = page.locator("div.flex.flex-wrap.gap-1 > button[aria-pressed]").filter({ visible: true });
+  const words = (await chips.allInnerTexts()).map((w) => w.trim());
+  const flat = (x) => x.replace(/\s+/g, "");
+  const want = flat(phrase);
+  for (let i = 0; i < words.length; i++) {
+    let joined = "";
+    for (let j = i; j < words.length; j++) {
+      joined += flat(words[j]);
+      if (!want.startsWith(joined) && !joined.startsWith(want)) break;
+      if (joined.length >= want.length) return pickWords(page, [i, j], wait);
+    }
+  }
+  // 못 찾으면 줄 가운데 두 낱말.
+  const mid = Math.max(0, Math.floor(words.length / 2) - 1);
+  if (words.length > 1) await pickWords(page, [mid, mid + 1], wait);
+}
+
 const STEPS = {
   async "promo-room"({ page, ui, locale, wait, target, mark }) {
     // 목소리를 입히는 쇼츠: 줄마다 시각과 글자를 남기고, 말이 끝날 만큼 기다린다(make.mjs room이 TTS로 입힌다).
@@ -726,7 +879,7 @@ const STEPS = {
     await wait(700);
     mark("rooms");
     await wait(700);
-    await tapAt(page, page.locator("li", { hasText: target === "es" ? "Español ↔ 日本語" : "English ↔ 日本語" }).first().locator("button").first());
+    await tapAt(page, page.locator("li", { hasText: roomNameFor(target) }).first().locator("button").first());
     mark("join");
     await wait(2000);
     reveal(1);
@@ -830,7 +983,7 @@ const STEPS = {
     await wait(1600);
     mark("rooms");
     await wait(900);
-    await tapAt(page, page.locator("li", { hasText: target === "es" ? "Español ↔ 日本語" : "English ↔ 日本語" }).first().locator("button").first());
+    await tapAt(page, page.locator("li", { hasText: roomNameFor(target) }).first().locator("button").first());
     mark("join");
     await wait(2600);
     // 3. 상대가 말하는 대로 자막이 한 줄씩.
@@ -1033,7 +1186,7 @@ const STEPS = {
       const frames = await Promise.all(["M36 82 Q64 108 92 82", "M40 88 Q64 96 88 88"].map((mouth) => sharp(face(colors[i], mouth)).png().toBuffer()));
       images.set(`ic_capture0${i}`, await sharp(frames, { join: { animated: true } }).webp({ delay: [400, 400], loop: 0 }).toBuffer());
     }
-    const phrase = { en: "Nice!", es: "¡Genial!" }[target];
+    const phrase = { en: "Nice!", es: "¡Genial!", ja: "いいね！", zh: "太棒了！", ko: "좋아요!" }[target];
     const pack = (id, owner, ownerName, name, license, uses, n) => ({
       id, owner, ownerName, name, license, uses, added: false, createdAt: Date.now(),
       icons: [...images.keys()].slice(0, n).map((icon, index) => ({ id: icon, w: 128, h: 128, animated: true, ...(index === 0 ? { phrase: { lang: target, text: phrase } } : {}) })),
@@ -1097,7 +1250,7 @@ const STEPS = {
     page.__social.hintText = HINT_FRAGMENT[locale];
     await page.goto(`${BASE}/?screen=rooms`, { waitUntil: "networkidle" });
     await wait(2000);
-    await page.locator("li", { hasText: target === "es" ? "Español ↔ 日本語" : "English ↔ 日本語" }).first().locator("button").first().click();
+    await page.locator("li", { hasText: roomNameFor(target) }).first().locator("button").first().click();
     const card = page.getByText(t.hintTry);
     for (let i = 0; i < 60 && !(await card.count()); i++) await wait(1000);
     if (!(await card.count())) throw new Error("no hint card");
@@ -1128,7 +1281,7 @@ const STEPS = {
     await translated;
     await wait(1200);
     // 줄 안 낱말 골라 묻기: 두 낱말을 누르면 그 사이가 구절로(en "last weekend", es "fin de semana").
-    await pickWords(page, target === "es" ? [1, 3] : [4, 5], wait);
+    await pickPhrase(page, QUOTE_PICK[target], wait);
   },
   async "group-pick"({ page, wait, target }) {
     // 단체방에서 남의 줄을 눌러 번역 + 낱말 골라 묻기(en "works for me", es "me va bien" — ¡Yo! 뒤라 한 칸 밀림).
@@ -1136,7 +1289,7 @@ const STEPS = {
     await page.getByText(GROUP_LINES[target].b, { exact: true }).filter({ visible: true }).last().click();
     await translated;
     await wait(1200);
-    await pickWords(page, target === "es" ? [4, 6] : [3, 5], wait);
+    await pickPhrase(page, GROUP_PICK[target], wait);
   },
   async layouts({ page, locale, wait }) {
     // 2.69(다시 자름): 채팅 위주 — 자막 칸·채팅 칸과 아래 참여 방식이 같이 보인다.
@@ -1765,11 +1918,17 @@ async function saveClip(all, locale, shot, events) {
   fs.rmSync(path.join(ROOT, "tmp", "clip", locale, "frames"), { recursive: true, force: true });
 }
 
+// CAPTURE_TARGET=ja: 배우는 언어를 바꿔 찍는다(맞춤 등록정보 "배우는 언어별 검색어"). 결과는 tmp/store-raw/<앱 언어>-<배우는 언어>/.
+const TARGET_OVERRIDE = process.env.CAPTURE_TARGET || "";
+function TARGET_FOR(locale) {
+  return TARGET_OVERRIDE || (locale === "en" ? (GUIDE_CALL ? "ja" : "es") : "en");
+}
+
 /** Without the header and the tab bar, which say nothing about the change. */
 async function save(png, locale, shot) {
   if (STORE) {
     // The whole screen, tab bar included: the store frame shows the app as it is.
-    const dir = path.join(ROOT, "tmp", process.env.CAPTURE_IOS === "1" ? "store-raw-ios" : "store-raw", locale);
+    const dir = path.join(ROOT, "tmp", process.env.CAPTURE_IOS === "1" ? "store-raw-ios" : "store-raw", TARGET_OVERRIDE ? `${locale}-${TARGET_OVERRIDE}` : locale);
     fs.mkdirSync(dir, { recursive: true });
     fs.writeFileSync(path.join(dir, `${shot}.png`), png);
     return;
@@ -1804,7 +1963,7 @@ for (const locale of only ?? Object.keys(copy)) {
   // CAPTURE_IOS=1: App Store 스크린샷 — 6.9인치 아이폰(440×956, 3배 = 1320×2868), 앱이 iOS로 돎(사람 기능 없는 하단 탭·AI 동의 넘김),
   // tmp/store-raw-ios/<locale>/. 앱 모드라 API를 운영 주소로 바로 부르므로 그 요청을 받아 CORS를 붙여 돌려준다.
   const IOS = process.env.CAPTURE_IOS === "1";
-  const captureUser = `${process.env.CAPTURE_USER || `whats-new-capture-${day}${process.env.CAPTURE_RUN ? `-${process.env.CAPTURE_RUN}` : ""}`}-${locale}`;
+  const captureUser = `${process.env.CAPTURE_USER || `whats-new-capture-${day}${process.env.CAPTURE_RUN ? `-${process.env.CAPTURE_RUN}` : ""}`}-${locale}${TARGET_OVERRIDE ? `-${TARGET_OVERRIDE}` : ""}`;
   const context = await browser.newContext({ viewport: IOS ? { width: 440, height: 956 } : { width: 412, height: STORE ? 915 : 860 }, deviceScaleFactor: IOS ? 3 : 2, isMobile: true, hasTouch: true, ...(GUIDE_CALL || process.env.CAPTURE_MIC_WAV ? { permissions: ["microphone"] } : {}) });
   if (IOS) {
     await context.addInitScript(() => {
@@ -1891,8 +2050,8 @@ for (const locale of only ?? Object.keys(copy)) {
       localStorage.setItem("chatOwnLanguageTipSeen", "1");
       localStorage.setItem("whatsNewSeenVersion", "999");
       localStorage.setItem("callDataNoticeSeen.v1", "1");
-    }, [locale === "en" ? (GUIDE_CALL ? "ja" : "es") : "en", locale]);
-    const target = locale === "en" ? (GUIDE_CALL ? "ja" : "es") : "en";
+    }, [TARGET_FOR(locale), locale]);
+    const target = TARGET_FOR(locale);
     // CAPTURE_SHOTS=chat,pick retakes only those, for a language whose run stopped partway.
     const onlyShots = process.env.CAPTURE_SHOTS?.split(",");
     for (const item of note.items) {
