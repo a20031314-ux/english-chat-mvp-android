@@ -33,7 +33,7 @@ function html(L, shot, i, files) {
     return `<figure class="detail"><figcaption><span class="dot" style="background:${accent}"></span>${esc(labels[k + 1])}</figcaption>
       <div class="card"><img src="${files[scene]}" style="transform:translateY(-${y}px)"></div></figure>`;
   };
-  return `<!doctype html><html lang="${L.lang}"><head><meta charset="utf-8"><style>
+  return `<!doctype html><html lang="${L.lang}" dir="${L.dir ?? "ltr"}"><head><meta charset="utf-8"><style>
   html,body{margin:0}
   body{width:1080px;height:1920px;overflow:hidden;background:#15161A;color:#fff;font-family:${L.font};box-sizing:border-box;padding:88px 48px 0}
   .kicker{font-size:30px;font-weight:700;letter-spacing:.06em;color:${accent};text-align:center}
@@ -66,12 +66,16 @@ function html(L, shot, i, files) {
 </body></html>`;
 }
 
-rmSync(out, { recursive: true, force: true });
+// COMBO_ONLY=pt,ko-ja: 그 등록정보만 다시 만든다(나머지 폴더는 그대로).
+const only = process.env.COMBO_ONLY?.split(",");
+const targets = LISTINGS.filter((L) => !only || only.includes(L.locale));
+if (!only) rmSync(out, { recursive: true, force: true });
 const browser = await chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
 const problems = [];
-for (const L of LISTINGS) {
+for (const L of targets) {
   const dir = path.join(out, L.folder);
+  rmSync(dir, { recursive: true, force: true });
   mkdirSync(dir, { recursive: true });
   for (const [i, base] of SHOTS.entries()) {
     const shot = { ...base, ...(OVERRIDES[L.locale]?.[base.id] ?? {}) };

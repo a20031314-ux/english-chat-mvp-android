@@ -14,13 +14,18 @@ export const SHOTS = [
   { id: "my", main: "growth", details: [["myask", 0.44], ["ledger", 0.0]] },
   { id: "call", main: "meant", details: [["call-pack", 0.17], ["calltools", 0.4]] },
   { id: "video", main: "video-study", details: [["video-ask", 0.0], ["vocab-search", 0.04]] },
-  { id: "room", main: "quote", details: [["hint", 0.22], ["rooms-mini", 0.44]] },
+  { id: "room", main: "quote", details: [["freetalk", 0.45], ["rooms-mini", 0.44]] },
   { id: "people", main: "people", details: [["group-pick", 0.0], ["invite", 0.46]] },
 ];
 
 /** 등록정보마다 바꾸는 장면. 오늘의 팩은 영어·일본어 학습만 있어 영어 앱(스페인어 학습)은 내 문장 말해보기로. */
 export const OVERRIDES = {
   en: { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
+  // 오늘의 팩이 없는 배우는 언어(중국어·스페인어·한국어).
+  "ko-zh": { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
+  "ko-es": { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
+  "en-ko": { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
+  "ja-ko": { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
 };
 
 export const LISTINGS = [
@@ -30,6 +35,19 @@ export const LISTINGS = [
   { folder: "3_china", locale: "zh", lang: "zh", font: "'Noto Sans CJK SC', sans-serif" },
   { folder: "4_spain", locale: "es", lang: "es", font: "'Noto Sans', sans-serif" },
   { folder: "5_india", locale: "hi", lang: "hi", font: "'Noto Sans Devanagari', 'Noto Sans', sans-serif" },
+  // 나라 더 쪼개기(2026-10-23): 영어를 배우는 앱 언어별.
+  { folder: "6_brazil", locale: "pt", lang: "pt-BR", font: "'Noto Sans', sans-serif" },
+  { folder: "7_vietnam", locale: "vi", lang: "vi", font: "'Noto Sans', sans-serif" },
+  { folder: "8_thailand", locale: "th", lang: "th", font: "'Noto Sans Thai', 'Noto Sans', sans-serif" },
+  { folder: "9_indonesia", locale: "id", lang: "id", font: "'Noto Sans', sans-serif" },
+  { folder: "10_arabic", locale: "ar", lang: "ar", dir: "rtl", font: "'Noto Naskh Arabic', 'Noto Sans', sans-serif" },
+  { folder: "11_france", locale: "fr", lang: "fr", font: "'Noto Sans', sans-serif" },
+  // 배우는 언어별 검색어 등록정보: locale = <앱 언어>-<배우는 언어>.
+  { folder: "k1_ko-learn-ja", locale: "ko-ja", lang: "ko", font: "'Noto Sans CJK KR', sans-serif" },
+  { folder: "k2_ko-learn-zh", locale: "ko-zh", lang: "ko", font: "'Noto Sans CJK KR', sans-serif" },
+  { folder: "k3_ko-learn-es", locale: "ko-es", lang: "ko", font: "'Noto Sans CJK KR', sans-serif" },
+  { folder: "k4_en-learn-ko", locale: "en-ko", lang: "en", font: "'Noto Sans', 'Noto Sans CJK KR', sans-serif" },
+  { folder: "k5_ja-learn-ko", locale: "ja-ko", lang: "ja", font: "'Noto Sans CJK JP', sans-serif" },
 ];
 
 /** 장마다 [작은 제목, 큰 제목, 설명, [화면 이름: 큰 화면, 세부1, 세부2], [더 있는 기능 칩 셋]]. */
@@ -94,4 +112,109 @@ export const COPY = {
     room: ["Room", "साथ सीखने वालों से\nबोलकर बात करें", "बोलते ही सबटाइटल, टैप करें तो हिंदी में", ["शब्द चुनकर पूछें", "💡 संकेत", "छोटा करें"], ["🌐 खुली बातचीत", "जुड़ने का अनुरोध", "चैट वाला दृश्य"]],
     people: ["लोग · बातचीत", "साथ सीखने वाले दोस्त\nढूँढें और जुड़े रहें", "फ़ॉलो करें, फिर ग्रुप और निजी बातचीत", ["लोग", "ग्रुप में शब्द पूछें", "दोस्त को बुलाएँ"], ["बोर्ड और जवाब", "संदेश·कॉल", "1:1 वीडियो कॉल"]],
   },
+  pt: {
+    map: ["MEU ESPAÇO · COMECE POR UMA CONVERSA", "Comece pelo que\nvocê já consegue dizer", "Escolha as conversas que você consegue ter; seu mapa começa daí", ["Você conseguiria ter esta conversa?", "Mapa de estudo", "Missões"], ["Gramática desta parte", "Primeiro letras e sons", "Três dicas"]],
+    chat: ["CHAT", "Travou? Escreva em português.\nO inglês vem logo abaixo", "Converse como amigos; só os erros são corrigidos", ["Cartão de expressão", "Algo para corrigir", "Visto em um vídeo"], ["Tradução", "O tutor começa", "Conversas anteriores"]],
+    ask: ["ANÁLISE DE FRASE", "Escolha qualquer parte.\nPergunte na hora.", "O que significa aqui, em português", ["Pergunta rápida", "Cartão de palavra", "Pôr no mapa"], ["Por que essa forma?", "Outras formas de dizer", "Sei / Não sei"]],
+    my: ["MEU PROGRESSO", "Quanto mais você fala,\nmais você cresce", "Seis ramos que só crescem, e respostas com base no seu histórico", ["Crescendo", "Pergunte sobre mim", "Minhas expressões"], ["Rede, gráfico ou mapa", "O que melhorar", "Tente hoje"]],
+    call: ["CHAMADAS", "Fale em voz alta\ncom um amigo de IA", "Falou errado? Ele encontra o que você quis dizer", ["O que você quis dizer", "Chamada do dia", "Diga de novo"], ["Ajuda quando travar", "Mostrar ou ocultar traduções", "Pratique sua frase"]],
+    video: ["VÍDEOS", "Vídeos reais,\nfrase por frase", "Toque numa linha para repetir e pergunte sobre qualquer legenda", ["Dividir em frases", "Perguntar sobre a linha", "Vocabulário"], ["Juntar ou dividir", "Salvar", "Encontrar cenas"]],
+    room: ["ROOM", "Fale em voz alta com\noutros estudantes", "Legendas ao vivo enquanto você fala, toque para traduzir", ["Escolha palavras e pergunte", "💡 Dicas", "Minimizar"], ["🌐 Conversa livre", "Pedir para entrar", "Visão de chat"]],
+    people: ["PESSOAS · CONVERSAS", "Encontre parceiros de estudo\ne continue", "Siga pessoas e converse em grupos e no privado", ["Pessoas", "Pergunte no grupo", "Convidar um amigo"], ["Mural e respostas", "Mensagens e chamadas", "Videochamada 1:1"]],
+  },
+  fr: {
+    map: ["MON ESPACE · PARTEZ D'UNE CONVERSATION", "Commencez par ce que\nvous savez déjà dire", "Choisissez les conversations que vous pouvez tenir ; votre carte part de là", ["Pourriez-vous tenir cette conversation ?", "Carte d'apprentissage", "Missions"], ["La grammaire de cette partie", "D'abord les lettres et les sons", "Trois indices"]],
+    chat: ["CHAT", "Bloqué ? Écrivez en français.\nL'anglais juste en dessous", "Discutez comme entre amis ; seules les erreurs sont corrigées", ["Carte d'expression", "Quelque chose à corriger", "Vu dans une vidéo"], ["Traduction", "Le tuteur commence", "Anciennes discussions"]],
+    ask: ["ANALYSE DE PHRASE", "Choisissez un passage.\nPosez votre question.", "Ce que ça veut dire ici, en français", ["Question rapide", "Carte de mot", "Ajouter à ma carte"], ["Pourquoi cette forme ?", "Autres façons de dire", "Je sais / Je ne sais pas"]],
+    my: ["MES PROGRÈS", "Plus vous parlez,\nplus vous progressez", "Six branches qui ne font que grandir, et des réponses tirées de votre parcours", ["En progression", "Me poser une question", "Mes expressions"], ["Réseau, graphique ou carte", "Quoi travailler ensuite", "À essayer aujourd'hui"]],
+    call: ["APPELS", "Parlez à voix haute\navec un ami IA", "Mal dit ? Il retrouve ce que vous vouliez dire", ["Ce que vous vouliez dire", "Appel du jour", "Redites-le"], ["De l'aide si vous bloquez", "Afficher ou masquer la traduction", "Dites votre propre phrase"]],
+    video: ["VIDÉOS", "De vraies vidéos,\nphrase par phrase", "Touchez une ligne pour la réécouter, et questionnez un sous-titre", ["Découper en phrases", "Question sur une ligne", "Vocabulaire"], ["Fusionner ou couper", "Enregistrer", "Trouver des scènes"]],
+    room: ["ROOM", "Parlez à voix haute avec\nd'autres apprenants", "Sous-titres en direct, touchez pour traduire", ["Choisir des mots et demander", "💡 Indices", "Réduire"], ["🌐 Discussion libre", "Demander à rejoindre", "Vue chat"]],
+    people: ["PERSONNES · DISCUSSIONS", "Trouvez des partenaires\net continuez", "Suivez, puis discutez en groupe et en privé", ["Personnes", "Demander dans le groupe", "Inviter un ami"], ["Forum et réponses", "Messages et appels", "Appels vidéo 1:1"]],
+  },
+  vi: {
+    map: ["CỦA TÔI · BẮT ĐẦU TỪ HỘI THOẠI", "Bắt đầu từ những gì\nbạn đã nói được", "Chọn các đoạn hội thoại bạn làm được, bản đồ học bắt đầu từ đó", ["Bạn có nói được đoạn này không?", "Bản đồ học", "Nhiệm vụ"], ["Ngữ pháp phần này", "Chữ cái và âm trước", "Ba gợi ý"]],
+    chat: ["TRÒ CHUYỆN", "Bí từ? Viết bằng tiếng Việt.\nTiếng Anh ngay bên dưới", "Trò chuyện như bạn bè, chỉ sửa chỗ sai", ["Thẻ diễn đạt", "Có chỗ cần sửa", "Gặp trong video"], ["Bản dịch", "Gia sư mở lời", "Cuộc trò chuyện cũ"]],
+    ask: ["PHÂN TÍCH CÂU", "Chọn chỗ muốn hỏi,\nhỏi ngay", "Nghĩa ở đây là gì, giải thích bằng tiếng Việt", ["Hỏi nhanh", "Thẻ từ", "Thêm vào bản đồ"], ["Sao lại dùng thế này?", "Cách nói khác", "Biết / Chưa biết"]],
+    my: ["CỦA TÔI · TIẾN BỘ", "Nói càng nhiều,\ntiến bộ càng rõ", "Sáu nhánh chỉ có lớn lên, hỏi là trả lời dựa trên dữ liệu của bạn", ["Đang lớn", "Hỏi trực tiếp", "Cụm từ của tôi"], ["Mạng, biểu đồ, bản đồ", "Cần luyện gì tiếp", "Thử hôm nay"]],
+    call: ["GỌI ĐIỆN", "Nói thành tiếng\nvới bạn AI", "Nói sai cũng không sao, AI tìm ra ý bạn muốn nói", ["Ý bạn muốn nói", "Cuộc gọi hôm nay", "Nói lại"], ["Trợ giúp khi bí", "Hiện/ẩn bản dịch", "Luyện câu của bạn"]],
+    video: ["HỌC QUA VIDEO", "Video thật,\nchia theo từng câu", "Chạm vào câu để nghe lại, hỏi ngay về phụ đề", ["Chia câu", "Hỏi về phụ đề", "Sổ từ vựng"], ["Gộp hoặc tách câu", "Lưu", "Tìm cảnh"]],
+    room: ["ROOM", "Nói chuyện bằng giọng nói\nvới người cùng học", "Phụ đề hiện khi bạn nói, chạm để dịch", ["Chọn từ để hỏi", "💡 Gợi ý", "Thu nhỏ"], ["🌐 Phòng nói tự do", "Xin lên nói", "Xem dạng chat"]],
+    people: ["MỌI NGƯỜI · TRÒ CHUYỆN", "Tìm bạn cùng học\nvà trò chuyện tiếp", "Theo dõi, rồi nói chuyện trong nhóm và nhắn riêng", ["Mọi người", "Hỏi trong nhóm", "Mời bạn bè"], ["Bảng tin và trả lời", "Tin nhắn và cuộc gọi", "Gọi video 1:1"]],
+  },
+  id: {
+    map: ["SAYA · MULAI DARI PERCAKAPAN", "Mulai dari yang\nsudah bisa kamu ucapkan", "Pilih percakapan yang bisa kamu lakukan, peta belajarmu mulai dari situ", ["Bisakah kamu melakukan percakapan ini?", "Peta belajar", "Misi"], ["Tata bahasa bagian ini", "Huruf dan bunyi dulu", "Tiga petunjuk"]],
+    chat: ["CHAT", "Buntu? Tulis pakai bahasa Indonesia.\nBahasa Inggrisnya di bawah", "Ngobrol seperti teman, hanya yang salah yang dibetulkan", ["Kartu ungkapan", "Ada yang perlu diperbaiki", "Ditemui di video"], ["Terjemahan", "Tutor menyapa duluan", "Obrolan lama"]],
+    ask: ["ANALISIS KALIMAT", "Pilih bagian mana saja,\nlangsung tanya", "Artinya di sini, dijelaskan dalam bahasa Indonesia", ["Pertanyaan cepat", "Kartu kata", "Masukkan ke peta"], ["Kenapa bentuknya begini?", "Cara lain mengatakannya", "Tahu / Belum tahu"]],
+    my: ["PROGRES SAYA", "Makin sering ngobrol,\nmakin berkembang", "Enam cabang yang terus tumbuh, dan jawaban berdasarkan catatanmu", ["Sedang tumbuh", "Tanya langsung", "Ungkapanku"], ["Jaring, grafik, peta", "Yang perlu dilatih", "Coba hari ini"]],
+    call: ["PANGGILAN", "Bicara langsung\ndengan teman AI", "Salah ucap? Dia menemukan maksudmu", ["Maksud sebenarnya", "Panggilan hari ini", "Ucapkan lagi"], ["Bantuan saat buntu", "Tampilkan/sembunyikan terjemahan", "Latih kalimatmu"]],
+    video: ["BELAJAR DARI VIDEO", "Video asli,\ndipotong per kalimat", "Ketuk kalimat untuk memutar ulang, tanya soal subtitle kapan saja", ["Bagi per kalimat", "Tanya soal kalimat", "Bank kata"], ["Gabung atau pisah", "Simpan", "Cari adegan"]],
+    room: ["ROOM", "Ngobrol pakai suara dengan\nsesama pelajar", "Subtitle langsung saat bicara, ketuk untuk menerjemahkan", ["Pilih kata untuk bertanya", "💡 Petunjuk", "Kecilkan"], ["🌐 Obrolan bebas", "Minta ikut bicara", "Tampilan chat"]],
+    people: ["ORANG · OBROLAN", "Temukan teman belajar\ndan terus ngobrol", "Ikuti, lalu ngobrol di grup dan secara pribadi", ["Orang", "Tanya di grup", "Undang teman"], ["Papan dan balasan", "Pesan dan panggilan", "Video call 1:1"]],
+  },
+  th: {
+    map: ["ของฉัน · เริ่มจากบทสนทนา", "เริ่มจากสิ่งที่\nคุณพูดได้แล้ว", "เลือกบทสนทนาที่คุณพูดได้ แผนที่การเรียนจะเริ่มจากตรงนั้น", ["คุณพูดบทสนทนานี้ได้ไหม?", "แผนที่การเรียน", "ภารกิจ"], ["ไวยากรณ์ของส่วนนี้", "เริ่มจากตัวอักษรและเสียง", "คำใบ้ 3 ขั้น"]],
+    chat: ["แชท", "ติดอยู่? พิมพ์เป็นภาษาไทย\nภาษาอังกฤษอยู่ข้างล่าง", "คุยเหมือนเพื่อน แก้ให้เฉพาะจุดที่ผิด", ["การ์ดสำนวน", "มีจุดที่ควรแก้", "เจอในวิดีโอ"], ["คำแปล", "ให้ติวเตอร์เริ่มก่อน", "แชทก่อนหน้า"]],
+    ask: ["วิเคราะห์ประโยค", "เลือกส่วนที่สงสัย\nถามได้ทันที", "บอกความหมายตรงนี้เป็นภาษาไทย", ["ถามด่วน", "การ์ดคำศัพท์", "ใส่ในแผนที่"], ["ทำไมใช้รูปนี้?", "สำนวนคล้ายกัน", "รู้แล้ว / ยังไม่รู้"]],
+    my: ["ของฉัน · พัฒนาการ", "ยิ่งคุย\nยิ่งเก่งขึ้น", "หกสาขาที่มีแต่เติบโต ถามแล้วตอบจากบันทึกของคุณ", ["กำลังเติบโต", "ถามตรงๆ", "สำนวนของฉัน"], ["เครือข่าย กราฟ แผนที่", "ฝึกอะไรต่อ", "ลองวันนี้"]],
+    call: ["โทร", "พูดออกเสียง\nกับเพื่อน AI", "พูดผิดไม่เป็นไร AI หาสิ่งที่คุณตั้งใจพูดให้", ["สิ่งที่ตั้งใจพูด", "คอลประจำวัน", "พูดอีกครั้ง"], ["ตัวช่วยเมื่อติด", "แสดง/ซ่อนคำแปล", "ฝึกประโยคของคุณ"]],
+    video: ["เรียนจากวิดีโอ", "วิดีโอจริง\nแบ่งทีละประโยค", "แตะประโยคเพื่อฟังซ้ำ ถามเรื่องซับได้ทันที", ["แบ่งประโยค", "ถามเรื่องซับ", "คลังคำศัพท์"], ["รวมหรือแยกประโยค", "บันทึก", "หาฉาก"]],
+    room: ["ROOM", "คุยด้วยเสียงกับ\nคนที่เรียนภาษาเดียวกัน", "พูดแล้วขึ้นซับทันที แตะเพื่อแปล", ["เลือกคำเพื่อถาม", "💡 คำใบ้", "ย่อหน้าต่าง"], ["🌐 ห้องคุยอิสระ", "ขอขึ้นพูด", "ดูแบบแชท"]],
+    people: ["ผู้คน · แชท", "หาเพื่อนเรียน\nแล้วคุยกันต่อ", "ติดตาม แล้วคุยต่อในกลุ่มและแชทส่วนตัว", ["ผู้คน", "ถามในกลุ่ม", "ชวนเพื่อน"], ["บอร์ดและคำตอบ", "ข้อความและโทร", "วิดีโอคอล 1:1"]],
+  },
+  ar: {
+    map: ["مساحتي · ابدأ من محادثة", "ابدأ بما\nتستطيع قوله الآن", "اختر المحادثات التي تستطيع إجراءها، ومن هناك تبدأ خريطتك", ["هل تستطيع إجراء هذه المحادثة؟", "خريطة التعلّم", "مهام"], ["قواعد هذا الجزء", "الحروف والأصوات أولًا", "ثلاثة تلميحات"]],
+    chat: ["الدردشة", "تعثّرت؟ اكتب بالعربية.\nوالإنجليزية تحتها مباشرة", "دردش كما مع صديق، ويُصحَّح الخطأ فقط", ["بطاقة التعبير", "هناك ما يُصحَّح", "صادفته في فيديو"], ["الترجمة", "المعلّم يبدأ", "محادثات سابقة"]],
+    ask: ["تحليل الجملة", "اختر أي جزء\nواسأل فورًا", "معناه هنا، بالعربية", ["سؤال سريع", "بطاقة الكلمة", "أضِف إلى الخريطة"], ["لماذا هذه الصيغة؟", "تعابير مشابهة", "أعرفها / لا أعرفها"]],
+    my: ["تقدّمي", "كلما تحدّثت أكثر\nتقدّمت أكثر", "ستة فروع لا تتوقف عن النمو، وإجابات من سجلّك", ["في نموّ", "اسأل مباشرة", "تعابيري"], ["شبكة أو رسم أو خريطة", "ما الذي تطوّره بعدها", "جرّب اليوم"]],
+    call: ["المكالمات", "تحدّث بصوتك\nمع صديق ذكي", "أخطأت في الكلام؟ يجد ما كنت تقصده", ["ما قصدته", "مكالمة اليوم", "قلها مرة أخرى"], ["مساعدة عند التعثّر", "إظهار الترجمة أو إخفاؤها", "تدرّب على جملتك"]],
+    video: ["التعلّم بالفيديو", "فيديوهات حقيقية\nجملةً جملة", "المس السطر لإعادته، واسأل عن أي ترجمة", ["تقسيم إلى جمل", "اسأل عن السطر", "بنك الكلمات"], ["دمج أو تقسيم", "حفظ", "ابحث عن مشاهد"]],
+    room: ["Room", "تحدّث بصوتك مع\nمتعلّمين آخرين", "ترجمة نصية مباشرة أثناء الكلام، المس للترجمة", ["اختر كلمات واسأل", "💡 تلميحات", "تصغير"], ["🌐 دردشة حرّة", "طلب الانضمام", "عرض الدردشة"]],
+    people: ["الأشخاص · المحادثات", "اعثر على رفاق تعلّم\nوواصل الحديث", "تابِع، ثم تحدّث في المجموعات وعلى انفراد", ["الأشخاص", "اسأل في المجموعة", "ادعُ صديقًا"], ["لوحة النقاش والردود", "الرسائل والمكالمات", "مكالمة فيديو 1:1"]],
+  },
 };
+
+// 배우는 언어별 검색어 등록정보(2026-10-23): 앱 언어의 문구를 그대로 쓰고, 배우는 언어가 드러나는 곳만 바꾼다.
+// 화면은 tmp/store-raw/<앱 언어>-<배우는 언어>/ (capture-whats-new.mjs CAPTURE_TARGET).
+const withChanges = (base, changes) => Object.fromEntries(Object.entries(base).map(([k, v]) => [k, changes[k] ? changes[k](structuredClone(v)) : v]));
+const ownLineKo = (v) => { v[3] = ["되살리기", "내 문장 말해보기", "다시 말해보기"]; v[4] = ["막힐 때 도움말", "해석 접기·펴기", "나중에 이어서"]; return v; };
+COPY["ko-ja"] = withChanges(COPY.ko, {
+  map: (v) => { v[0] = "일본어 · 대화로 시작"; return v; },
+  chat: (v) => { v[1] = "막히면 한국어로.\n일본어는 바로 아래"; return v; },
+  room: (v) => { v[1] = "일본어 배우는 사람들과\n목소리로 대화해요"; return v; },
+});
+COPY["ko-zh"] = withChanges(COPY.ko, {
+  map: (v) => { v[0] = "중국어 · 대화로 시작"; return v; },
+  chat: (v) => { v[1] = "막히면 한국어로.\n중국어는 바로 아래"; return v; },
+  call: ownLineKo,
+  room: (v) => { v[1] = "중국어 배우는 사람들과\n목소리로 대화해요"; return v; },
+});
+COPY["ko-es"] = withChanges(COPY.ko, {
+  map: (v) => { v[0] = "스페인어 · 대화로 시작"; return v; },
+  chat: (v) => { v[1] = "막히면 한국어로.\n스페인어는 바로 아래"; return v; },
+  call: ownLineKo,
+  room: (v) => { v[1] = "스페인어 배우는 사람들과\n목소리로 대화해요"; return v; },
+});
+COPY["en-ko"] = withChanges(COPY.en, {
+  map: (v) => { v[0] = "KOREAN · START FROM A CONVERSATION"; return v; },
+  chat: (v) => { v[1] = "Stuck? Write in English.\nSee it in Korean."; return v; },
+  room: (v) => { v[1] = "Talk out loud with\nKorean learners"; return v; },
+});
+COPY["ja-ko"] = withChanges(COPY.ja, {
+  map: (v) => { v[0] = "韓国語 · 会話から始める"; return v; },
+  chat: (v) => { v[1] = "詰まったら日本語で。\n韓国語はすぐ下に"; return v; },
+  call: (v) => { v[3] = ["言いたかったこと", "自分の文を言ってみる", "もう一度言う"]; v[4] = ["詰まった時のヒント", "翻訳の表示切替", "あとで続きから"]; return v; },
+  room: (v) => { v[1] = "韓国語を学ぶ人と\n声で話そう"; return v; },
+});
+
+// 2.72에서 Room 💡 힌트가 빠짐(2026-10-23, 사용자) — 세부 카드는 🌐 자유 대화방, 칩 자리에는 단체방으로 이어가기.
+const ROOM_GROUP_CHIP = {
+  ko: "이 방 사람들과 단체방", en: "Group chat with the room", ja: "この部屋の人とグループ", zh: "和房间里的人建群", es: "Grupo con la sala", hi: "कमरे वालों का ग्रुप",
+  pt: "Grupo com a sala", fr: "Groupe avec la salle", vi: "Nhóm với người trong phòng", id: "Grup dengan orang di ruang", th: "ตั้งกลุ่มกับคนในห้อง", ar: "مجموعة مع أهل الغرفة",
+};
+for (const [key, copy] of Object.entries(COPY)) {
+  const room = copy.room;
+  const free = room[4][0];
+  room[3] = [room[3][0], free, room[3][2]];
+  room[4] = [ROOM_GROUP_CHIP[key.split("-")[0]], room[4][1], room[4][2]];
+}
