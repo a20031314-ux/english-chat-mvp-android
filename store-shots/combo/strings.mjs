@@ -14,7 +14,7 @@ export const SHOTS = [
   { id: "my", main: "growth", details: [["myask", 0.44], ["ledger", 0.0]] },
   { id: "call", main: "meant", details: [["call-pack", 0.17], ["calltools", 0.4]] },
   { id: "video", main: "video-study", details: [["video-ask", 0.0], ["vocab-search", 0.04]] },
-  { id: "room", main: "quote", details: [["hint", 0.22], ["rooms-mini", 0.44]] },
+  { id: "room", main: "quote", details: [["freetalk", 0.45], ["rooms-mini", 0.44]] },
   { id: "people", main: "people", details: [["group-pick", 0.0], ["invite", 0.46]] },
 ];
 
@@ -206,3 +206,15 @@ COPY["ja-ko"] = withChanges(COPY.ja, {
   call: (v) => { v[3] = ["言いたかったこと", "自分の文を言ってみる", "もう一度言う"]; v[4] = ["詰まった時のヒント", "翻訳の表示切替", "あとで続きから"]; return v; },
   room: (v) => { v[1] = "韓国語を学ぶ人と\n声で話そう"; return v; },
 });
+
+// 2.72에서 Room 💡 힌트가 빠짐(2026-10-23, 사용자) — 세부 카드는 🌐 자유 대화방, 칩 자리에는 단체방으로 이어가기.
+const ROOM_GROUP_CHIP = {
+  ko: "이 방 사람들과 단체방", en: "Group chat with the room", ja: "この部屋の人とグループ", zh: "和房间里的人建群", es: "Grupo con la sala", hi: "कमरे वालों का ग्रुप",
+  pt: "Grupo com a sala", fr: "Groupe avec la salle", vi: "Nhóm với người trong phòng", id: "Grup dengan orang di ruang", th: "ตั้งกลุ่มกับคนในห้อง", ar: "مجموعة مع أهل الغرفة",
+};
+for (const [key, copy] of Object.entries(COPY)) {
+  const room = copy.room;
+  const free = room[4][0];
+  room[3] = [room[3][0], free, room[3][2]];
+  room[4] = [ROOM_GROUP_CHIP[key.split("-")[0]], room[4][1], room[4][2]];
+}

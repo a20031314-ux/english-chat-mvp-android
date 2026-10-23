@@ -209,8 +209,6 @@ const STORE_TABS_ITEMS = [
   { shot: "quote" },
   { shot: "layouts" },
   { shot: "rooms-mini" },
-  // 💡 힌트(합성 Room 장의 세부 카드). 가짜 마이크 CAPTURE_MIC_WAV가 필요.
-  { shot: "hint" },
   { shot: "host" },
   { shot: "account" },
 ];
@@ -2088,7 +2086,7 @@ for (const locale of only ?? Object.keys(copy)) {
   } catch (error) {
     await page.screenshot({ path: path.join(ROOT, "tmp", `capture-failed-${locale}.png`) }).catch(() => undefined);
     failed += 1;
-    console.log(`${locale} FAILED: ${String(error).slice(0, 300)}`);
+    console.log(`${locale} FAILED: ${String(error?.stack ?? error).slice(0, 900)}`);
   }
   await context.close();
 }
