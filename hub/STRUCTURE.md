@@ -174,7 +174,7 @@
 | `openCall` | AI 채팅 | AI 통화 |
 | `sayOwnLine` | 앱 틀 | AI 통화 |
 | `openTopic` | 학습 기록 공통 | 앱 틀, My 탭 |
-| `openNotes` | 앱 틀 | My 탭 |
+| `openNotes` | 앱 틀, My 탭 | My 탭 |
 | `openGuide` | 앱 틀, My 탭 | 앱 틀 |
 
 ## 자동: 쓰지 않는 것 (지울지 확인)
