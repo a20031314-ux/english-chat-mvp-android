@@ -107,7 +107,8 @@ export type NotebookRecord = {
   phrases: Record<string, PhrasePlace>;
 };
 
-export type PhrasePlace = { node: string | null; at: number; moved?: boolean };
+/** note: "My에서 찾기"로 찾았을 때의 한 줄 설명(앱 언어) — 같은 표현을 다시 찾으면 모델 없이 이것을. */
+export type PhrasePlace = { node: string | null; at: number; moved?: boolean; note?: string; noteUi?: string };
 export const MAX_PHRASES = 800;
 /** 한 번에 칸을 고르는 표현 수. */
 export const PHRASES_PER_CALL = 30;
@@ -281,7 +282,13 @@ function cleanPhrases(value: unknown): Record<string, PhrasePlace> {
   const out: Record<string, PhrasePlace> = {};
   for (const [key, place] of Object.entries(value as Record<string, PhrasePlace>)) {
     if (!isPhraseKey(key) || !place || typeof place !== "object") continue;
-    out[key] = { node: place.node && isNodeId(place.node) ? place.node : null, at: Number(place.at) || 0, ...(place.moved ? { moved: true } : {}) };
+    const note = clean(place.note, MAX_NOTE);
+    out[key] = {
+      node: place.node && isNodeId(place.node) ? place.node : null,
+      at: Number(place.at) || 0,
+      ...(place.moved ? { moved: true } : {}),
+      ...(note && typeof place.noteUi === "string" ? { note, noteUi: place.noteUi.slice(0, 8) } : {}),
+    };
   }
   return out;
 }
@@ -291,12 +298,13 @@ export function isPhraseKey(value: unknown): value is string {
 }
 
 /** 칸을 고른 표현을 넣는다(옮긴 것은 그대로). 넘치면 오래된 것부터. */
-export function placePhrases(record: NotebookRecord, placed: Array<{ key: string; node: string | null }>, now = Date.now()): NotebookRecord {
+export function placePhrases(record: NotebookRecord, placed: Array<{ key: string; node: string | null; note?: string; noteUi?: string }>, now = Date.now()): NotebookRecord {
   if (!placed.length) return record;
   const phrases = { ...record.phrases };
-  for (const { key, node } of placed) {
+  for (const { key, node, note, noteUi } of placed) {
     if (!isPhraseKey(key) || phrases[key]?.moved) continue;
-    phrases[key] = { node: node && isNodeId(node) ? node : null, at: now };
+    const keep = note && noteUi ? { note: clean(note, MAX_NOTE), noteUi } : phrases[key]?.note ? { note: phrases[key]!.note, noteUi: phrases[key]!.noteUi } : {};
+    phrases[key] = { node: node && isNodeId(node) ? node : null, at: now, ...keep };
   }
   const keys = Object.keys(phrases);
   if (keys.length > MAX_PHRASES) {

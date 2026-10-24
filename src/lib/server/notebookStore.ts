@@ -247,8 +247,11 @@ export async function locatePart(input: {
   const skeleton = skeletonFor(input.language, await currentStageOrder(input.userId, input.language), true);
   const stageOf = (node: string | null) => skeleton.find((n) => n.id === node)?.stage;
   const known = new Set([...skeleton.map((node) => node.id), ...record.custom.map((node) => node.id)]);
-  const cached = record.phrases[key]?.node;
-  if (cached && known.has(cached)) return { node: cached, ...(stageOf(cached) ? { stage: stageOf(cached) } : {}), note: "" };
+  // 이미 찾은 표현(같은 앱 언어 설명까지 있으면)은 모델 없이.
+  const cached = record.phrases[key];
+  if (cached?.node && known.has(cached.node) && cached.note && cached.noteUi === input.ui) {
+    return { node: cached.node, ...(stageOf(cached.node) ? { stage: stageOf(cached.node) } : {}), note: cached.note };
+  }
   if (!input.openai || (await getDailyOpUsed(input.userId, "notebookLocate")) >= DAILY_LOCATES) return { node: null, note: "" };
   input.meter?.("notebookLocate");
   const completion = await completeChat(input.openai, "notes", {
@@ -266,7 +269,7 @@ export async function locatePart(input: {
   const placed = readPlacement(completion.choices[0]?.message?.content ?? "", known, "");
   if (placed.node) {
     const fresh = await readNotebook(input.userId, input.language);
-    await saveNotebook(input.userId, input.language, placePhrases(fresh, [{ key, node: placed.node }], now));
+    await saveNotebook(input.userId, input.language, placePhrases(fresh, [{ key, node: placed.node, note: placed.note, noteUi: input.ui }], now));
     if (isLedgerText(input.text, input.language)) await recordMeets(input.userId, input.language, [{ kind: "ask", text: input.text, tab: input.tab }], now).catch(() => undefined);
   }
   return { node: placed.node, ...(stageOf(placed.node) ? { stage: stageOf(placed.node) } : {}), note: placed.note };
