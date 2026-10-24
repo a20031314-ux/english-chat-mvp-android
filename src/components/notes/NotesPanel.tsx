@@ -132,7 +132,7 @@ export function NotesPanel({
   /** 서버가 더 못 받는 날(하루 한도·오류): "찾는 중" 대신 "아직 자리 없음". */
   const [stalled, setStalled] = useState(false);
   const [query, setQuery] = useState("");
-  const [view, setView] = useState<ViewMode>(() => (readJson<ViewMode>(VIEW_KEY, "outline") === "all" ? "all" : "outline"));
+  const [savedView, setView] = useState<ViewMode>(() => (readJson<ViewMode>(VIEW_KEY, "outline") === "all" ? "all" : "outline"));
   const [chapterOpen, setChapterOpen] = useState<string | null>(null);
   const [looseOpen, setLooseOpen] = useState(false);
   const [wordsOpen, setWordsOpen] = useState(() => Boolean(takeAppIntent("openNotes")));
@@ -213,6 +213,8 @@ export function NotesPanel({
 
   const hits = useMemo(() => searchNotes(book, query, locale), [book, query, locale]);
   const total = entries.length;
+  // 보기 버튼은 쌓인 게 있을 때만 보이니, 비어 있으면(다른 학습 언어로 바꿨을 때 등) 기억한 "모두"에 갇히지 않게 목차로.
+  const view: ViewMode = total > 0 ? savedView : "outline";
   const looseCount = topicCount(book.loose);
   const wordCount = device.filter((entry) => entry.kind === "word").length;
 
@@ -269,7 +271,10 @@ export function NotesPanel({
           onOpenLoose={() => setLooseOpen(true)}
         />
       ) : view === "all" ? (
+        <>
+        <NotebookSection ui={ui} locale={locale} language={targetLanguage} isPremium={isPremium} />
         <AllList ui={ui} locale={locale} language={targetLanguage} book={book} />
+        </>
       ) : (
         <>
         <NotebookSection ui={ui} locale={locale} language={targetLanguage} isPremium={isPremium} />
