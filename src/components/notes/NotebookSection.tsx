@@ -29,8 +29,23 @@ type Book = {
   today: string;
   /** 단계 사다리(번호·이름, 앱 언어) — 옛 서버면 비어 있다. */
   stages: { order: number; title: string }[];
+  /** 습득한 표현(장부 배움·숙지)이 든 칸(2026-10-24). */
+  phrases: PhraseView[];
 };
+type PhraseView = { key: string; text: string; state: "learned" | "mastered"; node: string };
 type Group = NotebookChapter | "mine" | "loose";
+
+/** 관용·세부 고정 칸 이름은 앱 문구로(서버는 영어·한국어 기본만 준다). */
+const fixedName = (ui: UICopy, id: string): string | undefined =>
+  ({
+    "i-idiom": ui.notebookNodeIdiom,
+    "i-together": ui.notebookNodeTogether,
+    "i-set": ui.notebookNodeSet,
+    "d-word": ui.notebookNodeWord,
+    "d-register": ui.notebookNodeRegister,
+    "d-spelling": ui.notebookNodeSpelling,
+    "d-nuance": ui.notebookNodeNuance,
+  })[id];
 type PickGroup = "today" | "earlier";
 
 /** notes/notebook.ts `defaultPicked`와 같은 규칙(그 모듈은 뼈대 자료를 끌고 와서 화면에 들이지 않는다). */
@@ -77,6 +92,7 @@ export function NotebookSection({
   const [moving, setMoving] = useState<string | null>(null);
   const [picking, setPicking] = useState<PickGroup | null>(null);
   const [viewShot, setViewShot] = useState<string | null>(null);
+  const [movingPhrase, setMovingPhrase] = useState<string | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -85,7 +101,7 @@ export function NotebookSection({
     })
       .then((response) => (response.ok ? response.json() : null))
       .then((body: Book | null) => {
-        if (!cancelled && body?.nodes) setBook({ ...body, pending: body.pending ?? [], today: body.today ?? "", stages: body.stages ?? [] });
+        if (!cancelled && body?.nodes) setBook({ ...body, pending: body.pending ?? [], today: body.today ?? "", stages: body.stages ?? [], phrases: body.phrases ?? [] });
       })
       .catch(() => undefined);
     return () => {
@@ -138,15 +154,36 @@ export function NotebookSection({
     [edit, language, isPremium],
   );
 
+  // 칸 옆 숫자 = 짚은 장면 카드 + 습득한 표현.
   const counts = useMemo(() => {
     const out: Record<string, number> = {};
     for (const card of book?.cards ?? []) out[card.node ?? ""] = (out[card.node ?? ""] ?? 0) + 1;
+    for (const phrase of book?.phrases ?? []) out[phrase.node] = (out[phrase.node] ?? 0) + 1;
+    return out;
+  }, [book]);
+  /** 칸이 "채워졌는지": 숙지 > 배움 > 카드만 > 빈 칸(점 색). */
+  const fill = useMemo(() => {
+    const out: Record<string, "mastered" | "learned"> = {};
+    for (const phrase of book?.phrases ?? []) if (out[phrase.node] !== "mastered") out[phrase.node] = phrase.state;
     return out;
   }, [book]);
 
+  /** 표현 옮기기: 화면은 바로, 서버는 뒤에(node null = 노트의 어휘·표현으로). */
+  const movePhrase = useCallback(
+    (key: string, node: string | null) => {
+      setBook((current) =>
+        current
+          ? { ...current, phrases: node ? current.phrases.map((p) => (p.key === key ? { ...p, node } : p)) : current.phrases.filter((p) => p.key !== key) }
+          : current,
+      );
+      void edit({ op: "movePhrase", phrase: key, node });
+    },
+    [edit],
+  );
+
   if (!book) return null;
   const nameOf = (id: string) =>
-    book.custom.find((node) => node.id === id)?.name ?? book.renames[id] ?? book.nodes.find((node) => node.id === id)?.name ?? "";
+    book.custom.find((node) => node.id === id)?.name ?? book.renames[id] ?? fixedName(ui, id) ?? book.nodes.find((node) => node.id === id)?.name ?? "";
   // 뒤 단계 문법은 카드가 들어온 칸만.
   const inChapter = (chapter: NotebookChapter) => book.nodes.filter((node) => node.chapter === chapter && (!node.ahead || (counts[node.id] ?? 0) > 0));
   const sum = (ids: string[]) => ids.reduce((total, id) => total + (counts[id] ?? 0), 0);
@@ -154,6 +191,8 @@ export function NotebookSection({
     { key: "script", label: ui.notebookScript, count: sum(inChapter("script").map((n) => n.id)), show: inChapter("script").length > 0 },
     // 문법은 아래 단계 틀(StageFrame)로 펼쳐 보인다. 옛 서버(단계 사다리 없음)면 예전처럼 한 줄.
     { key: "grammar", label: ui.notebookGrammar, count: sum(inChapter("grammar").map((n) => n.id)), show: inChapter("grammar").length > 0 && book.stages.length === 0 },
+    { key: "idiom", label: ui.notebookIdioms, count: sum(inChapter("idiom").map((n) => n.id)), show: inChapter("idiom").length > 0 },
+    { key: "detail", label: ui.notebookDetails, count: sum(inChapter("detail").map((n) => n.id)), show: inChapter("detail").length > 0 },
     { key: "mine", label: ui.notebookMine, count: sum(book.custom.map((n) => n.id)), show: true },
     { key: "loose", label: ui.notesLoose, count: counts[""] ?? 0, show: (counts[""] ?? 0) > 0 },
   ];
@@ -193,6 +232,7 @@ export function NotebookSection({
           current={book.stage}
           nodes={book.nodes.filter((node) => node.chapter === "grammar")}
           counts={counts}
+          fill={fill}
           nameOf={nameOf}
           onOpen={setNodeOpen}
           detail={stageDetail}
@@ -263,6 +303,8 @@ export function NotebookSection({
             view={openNode.view}
             memo={book.memos[openNode.id] ?? ""}
             cards={book.cards.filter((card) => card.node === openNode.id)}
+            phrases={book.phrases.filter((phrase) => phrase.node === openNode.id)}
+            onMovePhrase={setMovingPhrase}
             onMove={setMoving}
             onShot={setViewShot}
             edit={edit}
@@ -275,6 +317,28 @@ export function NotebookSection({
                 : undefined
             }
           />
+        </Sheet>
+      ) : null}
+
+      {movingPhrase ? (
+        <Sheet ui={ui} title={ui.notebookMoveTo} onClose={() => setMovingPhrase(null)}>
+          <ul className="mt-2 space-y-1">
+            {[...book.nodes.filter((node) => !node.ahead).map((node) => node.id), ...book.custom.map((node) => node.id), ""].map((id) => (
+              <li key={id || "vocab"}>
+                <button
+                  type="button"
+                  disabled={book.phrases.find((p) => p.key === movingPhrase)?.node === id}
+                  onClick={() => {
+                    movePhrase(movingPhrase, id || null);
+                    setMovingPhrase(null);
+                  }}
+                  className="w-full rounded-lg px-3 py-2 text-start text-note text-slate-200 hover:bg-white/10 disabled:opacity-40"
+                >
+                  {id ? nameOf(id) : ui.notebookVocab}
+                </button>
+              </li>
+            ))}
+          </ul>
         </Sheet>
       ) : null}
 
@@ -315,6 +379,7 @@ function StageFrame({
   current,
   nodes,
   counts,
+  fill,
   nameOf,
   onOpen,
   detail,
@@ -325,6 +390,7 @@ function StageFrame({
   current: number;
   nodes: NodeView[];
   counts: Record<string, number>;
+  fill: Record<string, "mastered" | "learned">;
   nameOf: (id: string) => string;
   onOpen: (id: string) => void;
   detail?: (order: number) => ReactNode;
@@ -333,7 +399,9 @@ function StageFrame({
   const now = Math.max(1, Math.min(current, stages.length));
   const [shown, setShown] = useState(now);
   const inStage = (order: number) => nodes.filter((node) => (node.stage ?? 1) === order);
-  const filledIn = (order: number) => inStage(order).filter((node) => (counts[node.id] ?? 0) > 0).length;
+  // 채운 칸 = 습득한 표현이 들었거나 숙지(✓)한 문법. 짚은 장면 카드만 든 칸은 아직 채운 게 아니다(점은 옅게).
+  const filledOf = (node: NodeView) => Boolean(fill[node.id]) || Boolean(masteredOf?.(node.stage ?? 1, node.index ?? -1));
+  const filledIn = (order: number) => inStage(order).filter(filledOf).length;
   const list = inStage(shown);
   const filled = filledIn(shown);
   const title = stages.find((stage) => stage.order === shown)?.title ?? "";
@@ -390,7 +458,15 @@ function StageFrame({
               <button type="button" onClick={() => onOpen(node.id)} className="flex w-full items-center gap-3 py-2 text-start">
                 <span
                   aria-hidden
-                  className={`h-2.5 w-2.5 shrink-0 rounded-full ${count ? "bg-status-learned" : "border border-line"}`}
+                  className={`h-2.5 w-2.5 shrink-0 rounded-full ${
+                    fill[node.id] === "mastered" || masteredOf?.(node.stage ?? 1, node.index ?? -1)
+                      ? "bg-status-mastered"
+                      : fill[node.id] === "learned"
+                        ? "bg-status-learned"
+                        : count
+                          ? "bg-status-pending"
+                          : "border border-line"
+                  }`}
                 />
                 <span className="min-w-0 flex-1">
                   <span className={`block text-note ${shown > now && !count ? "text-slate-400" : "text-ink"}`}>{nameOf(node.id)}</span>
@@ -538,12 +614,16 @@ function NodeBody({
   onShot,
   edit,
   onTry,
+  phrases = [],
+  onMovePhrase,
 }: {
   ui: UICopy;
   locale: string;
   id: string;
   name: string;
   onTry?: () => void;
+  phrases?: PhraseView[];
+  onMovePhrase?: (key: string) => void;
   view?: NodeView;
   memo: string;
   cards: FixCard[];
@@ -624,6 +704,25 @@ function NodeBody({
         className="mt-3 w-full resize-y rounded-lg border border-line bg-surface px-3 py-2 text-note text-ink placeholder:text-slate-500"
       />
 
+      {phrases.length ? (
+        <ul className="mt-3 space-y-1">
+          {[...phrases]
+            .sort((a, b) => (a.state === b.state ? 0 : a.state === "mastered" ? -1 : 1))
+            .map((phrase) => (
+              <li key={phrase.key} className="flex items-center gap-2 rounded-lg bg-white/[0.04] px-3 py-1.5">
+                <span aria-hidden className={`h-2 w-2 shrink-0 rounded-full ${phrase.state === "mastered" ? "bg-status-mastered" : "bg-status-learned"}`} />
+                <span dir="auto" className="min-w-0 flex-1 text-note text-ink">
+                  {phrase.text}
+                </span>
+                {onMovePhrase ? (
+                  <button type="button" onClick={() => onMovePhrase(phrase.key)} className="shrink-0 text-caption text-slate-400 hover:text-slate-200">
+                    {ui.notebookMove}
+                  </button>
+                ) : null}
+              </li>
+            ))}
+        </ul>
+      ) : null}
       <CardList ui={ui} locale={locale} cards={cards} onMove={onMove} onShot={onShot} edit={edit} />
     </div>
   );

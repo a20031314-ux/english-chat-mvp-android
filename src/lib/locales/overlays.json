@@ -622,7 +622,16 @@
     "whatsNewNotebookBody": "チューターが直した文が1日ごとに集まります。残したいものだけ選ぶとノートの合う項目に入り、そのときの画面も付けられます。",
     "whatsNewLangChipsTitle": "同じ言語を学ぶ人どうし",
     "whatsNewLangChipsBody": "人タブで、同じ言語を学ぶ人や、母語まで同じ人だけを表示できます。",
-    "myOpenStage": "ステージで見る"
+    "myOpenStage": "ステージで見る",
+    "notebookIdioms": "慣用表現",
+    "notebookDetails": "細かいところ",
+    "notebookNodeIdiom": "慣用句",
+    "notebookNodeTogether": "よく一緒に使う言葉",
+    "notebookNodeSet": "決まり文句",
+    "notebookNodeWord": "言葉選び",
+    "notebookNodeRegister": "話し方・敬語",
+    "notebookNodeSpelling": "表記・つづり",
+    "notebookNodeNuance": "ニュアンス"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1247,7 +1256,16 @@
     "whatsNewNotebookBody": "导师改过的句子按天汇总。只选要留下的，就会放进笔记里对应的部分，还能附上当时的画面。",
     "whatsNewLangChipsTitle": "学同一种语言的人",
     "whatsNewLangChipsBody": "在“人”里可以只看学同一种语言的人，或连母语也相同的人。",
-    "myOpenStage": "在阶段中查看"
+    "myOpenStage": "在阶段中查看",
+    "notebookIdioms": "惯用表达",
+    "notebookDetails": "细节",
+    "notebookNodeIdiom": "惯用语",
+    "notebookNodeTogether": "常见搭配",
+    "notebookNodeSet": "固定说法",
+    "notebookNodeWord": "选词",
+    "notebookNodeRegister": "语气·敬语",
+    "notebookNodeSpelling": "拼写·书写",
+    "notebookNodeNuance": "语感"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1874,7 +1892,16 @@
     "whatsNewNotebookBody": "Những câu gia sư sửa được gom theo ngày. Chọn câu muốn giữ, chúng sẽ vào đúng mục trong sổ, kèm ảnh màn hình lúc đó nếu muốn.",
     "whatsNewLangChipsTitle": "Người học cùng ngôn ngữ",
     "whatsNewLangChipsBody": "Trong Mọi người, chỉ hiện người học cùng ngôn ngữ, hoặc người có cả cùng tiếng mẹ đẻ.",
-    "myOpenStage": "Xem trong Giai đoạn"
+    "myOpenStage": "Xem trong Giai đoạn",
+    "notebookIdioms": "Cách diễn đạt",
+    "notebookDetails": "Chi tiết",
+    "notebookNodeIdiom": "Thành ngữ",
+    "notebookNodeTogether": "Từ hay đi cùng",
+    "notebookNodeSet": "Câu cố định",
+    "notebookNodeWord": "Chọn từ",
+    "notebookNodeRegister": "Cách nói·kính ngữ",
+    "notebookNodeSpelling": "Chính tả",
+    "notebookNodeNuance": "Sắc thái"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2506,7 +2533,16 @@
     "whatsNewNotebookBody": "Les phrases corrigées par le tuteur sont regroupées par jour. Choisissez celles à garder : elles vont dans la bonne section de vos notes, avec l’écran du moment si vous voulez.",
     "whatsNewLangChipsTitle": "Ceux qui apprennent votre langue",
     "whatsNewLangChipsBody": "Dans Personnes, n’affichez que ceux qui apprennent la même langue, ou qui partagent aussi votre langue maternelle.",
-    "myOpenStage": "Voir dans Étapes"
+    "myOpenStage": "Voir dans Étapes",
+    "notebookIdioms": "Expressions",
+    "notebookDetails": "Détails",
+    "notebookNodeIdiom": "Expressions idiomatiques",
+    "notebookNodeTogether": "Mots qui vont ensemble",
+    "notebookNodeSet": "Formules toutes faites",
+    "notebookNodeWord": "Choix du mot",
+    "notebookNodeRegister": "Registre et politesse",
+    "notebookNodeSpelling": "Orthographe",
+    "notebookNodeNuance": "Nuances"
   },
   "it": {
     "archive": "Report",
@@ -3329,7 +3365,16 @@
     "whatsNewNotebookBody": "Le frasi corrette dal tutor si raccolgono per giorno. Scegli quelle da tenere: finiscono nella sezione giusta delle note, anche con la schermata di quel momento.",
     "whatsNewLangChipsTitle": "Chi impara la tua lingua",
     "whatsNewLangChipsBody": "In Persone mostra solo chi impara la stessa lingua, o chi ha anche la tua stessa lingua madre.",
-    "myOpenStage": "Vedi in Fasi"
+    "myOpenStage": "Vedi in Fasi",
+    "notebookIdioms": "Espressioni",
+    "notebookDetails": "Dettagli",
+    "notebookNodeIdiom": "Modi di dire",
+    "notebookNodeTogether": "Parole che vanno insieme",
+    "notebookNodeSet": "Frasi fatte",
+    "notebookNodeWord": "Scelta della parola",
+    "notebookNodeRegister": "Registro e cortesia",
+    "notebookNodeSpelling": "Ortografia",
+    "notebookNodeNuance": "Sfumature"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3964,7 +4009,16 @@
     "whatsNewNotebookBody": "As frases que o tutor corrigiu se juntam por dia. Escolha as que quer guardar e elas vão para a seção certa das notas, com a tela daquele momento se quiser.",
     "whatsNewLangChipsTitle": "Quem aprende o seu idioma",
     "whatsNewLangChipsBody": "Em Pessoas, mostre só quem aprende o mesmo idioma, ou quem também tem a sua língua materna.",
-    "myOpenStage": "Ver em Etapas"
+    "myOpenStage": "Ver em Etapas",
+    "notebookIdioms": "Expressões",
+    "notebookDetails": "Detalhes",
+    "notebookNodeIdiom": "Expressões idiomáticas",
+    "notebookNodeTogether": "Palavras que andam juntas",
+    "notebookNodeSet": "Frases feitas",
+    "notebookNodeWord": "Escolha da palavra",
+    "notebookNodeRegister": "Registro e cortesia",
+    "notebookNodeSpelling": "Ortografia",
+    "notebookNodeNuance": "Nuances"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4785,7 +4839,16 @@
     "whatsNewNotebookBody": "Фразы, которые исправил наставник, собираются по дням. Выберите, что оставить, — они попадут в нужный раздел заметок, при желании вместе с экраном того момента.",
     "whatsNewLangChipsTitle": "Те, кто учит ваш язык",
     "whatsNewLangChipsBody": "В разделе «Люди» можно показать только тех, кто учит тот же язык, или тех, у кого ещё и тот же родной язык.",
-    "myOpenStage": "Открыть в «Этапах»"
+    "myOpenStage": "Открыть в «Этапах»",
+    "notebookIdioms": "Выражения",
+    "notebookDetails": "Детали",
+    "notebookNodeIdiom": "Идиомы",
+    "notebookNodeTogether": "Устойчивые сочетания",
+    "notebookNodeSet": "Готовые фразы",
+    "notebookNodeWord": "Выбор слова",
+    "notebookNodeRegister": "Стиль и вежливость",
+    "notebookNodeSpelling": "Орфография",
+    "notebookNodeNuance": "Оттенки"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5416,7 +5479,16 @@
     "whatsNewNotebookBody": "Kalimat yang diperbaiki tutor terkumpul per hari. Pilih yang mau disimpan, lalu masuk ke bagian catatan yang pas, bisa juga dengan layar saat itu.",
     "whatsNewLangChipsTitle": "Orang yang belajar bahasa yang sama",
     "whatsNewLangChipsBody": "Di Orang, tampilkan hanya yang belajar bahasa yang sama, atau yang juga punya bahasa ibu sama.",
-    "myOpenStage": "Lihat di Tahap"
+    "myOpenStage": "Lihat di Tahap",
+    "notebookIdioms": "Ungkapan",
+    "notebookDetails": "Detail",
+    "notebookNodeIdiom": "Idiom",
+    "notebookNodeTogether": "Kata yang sering berpasangan",
+    "notebookNodeSet": "Frasa baku",
+    "notebookNodeWord": "Pilihan kata",
+    "notebookNodeRegister": "Gaya dan kesopanan",
+    "notebookNodeSpelling": "Ejaan",
+    "notebookNodeNuance": "Nuansa"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6041,7 +6113,16 @@
     "whatsNewNotebookBody": "تُجمع الجمل التي صحّحها المعلّم يومًا بيوم. اختر ما تريد الاحتفاظ به فيدخل القسم المناسب من ملاحظاتك، مع شاشة تلك اللحظة إن شئت.",
     "whatsNewLangChipsTitle": "من يتعلّمون لغتك",
     "whatsNewLangChipsBody": "في الأشخاص، اعرض فقط من يتعلّمون اللغة نفسها، أو من يشاركونك لغتك الأم أيضًا.",
-    "myOpenStage": "اعرض في المراحل"
+    "myOpenStage": "اعرض في المراحل",
+    "notebookIdioms": "التعابير",
+    "notebookDetails": "التفاصيل",
+    "notebookNodeIdiom": "التعابير الاصطلاحية",
+    "notebookNodeTogether": "كلمات تأتي معًا",
+    "notebookNodeSet": "عبارات جاهزة",
+    "notebookNodeWord": "اختيار الكلمة",
+    "notebookNodeRegister": "الأسلوب والتأدّب",
+    "notebookNodeSpelling": "الإملاء",
+    "notebookNodeNuance": "الفروق الدقيقة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6666,7 +6747,16 @@
     "whatsNewNotebookBody": "ประโยคที่ติวเตอร์แก้จะรวมไว้ทีละวัน เลือกเฉพาะที่อยากเก็บ แล้วจะเข้าไปอยู่ในหัวข้อที่ตรงกันในโน้ต แนบหน้าจอตอนนั้นได้ด้วย",
     "whatsNewLangChipsTitle": "คนที่เรียนภาษาเดียวกัน",
     "whatsNewLangChipsBody": "ในแท็บผู้คน เลือกดูเฉพาะคนที่เรียนภาษาเดียวกัน หรือคนที่มีภาษาแม่เดียวกันด้วยได้",
-    "myOpenStage": "ดูในขั้น"
+    "myOpenStage": "ดูในขั้น",
+    "notebookIdioms": "สำนวน",
+    "notebookDetails": "รายละเอียด",
+    "notebookNodeIdiom": "สำนวนเปรียบ",
+    "notebookNodeTogether": "คำที่มักใช้คู่กัน",
+    "notebookNodeSet": "วลีสำเร็จรูป",
+    "notebookNodeWord": "การเลือกคำ",
+    "notebookNodeRegister": "ระดับภาษา·ความสุภาพ",
+    "notebookNodeSpelling": "การสะกด",
+    "notebookNodeNuance": "ความหมายแฝง"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7291,6 +7381,15 @@
     "whatsNewNotebookBody": "ट्यूटर की सुधारी पंक्तियाँ दिन के हिसाब से जमा होती हैं। जो रखनी हैं उन्हें चुनें, वे नोट्स के सही हिस्से में चली जाती हैं, चाहें तो उस पल की स्क्रीन के साथ।",
     "whatsNewLangChipsTitle": "आपकी भाषा सीखने वाले लोग",
     "whatsNewLangChipsBody": "लोग में सिर्फ़ वही भाषा सीखने वालों को, या जिनकी मातृभाषा भी आपकी जैसी है उन्हें देखें।",
-    "myOpenStage": "चरण में देखें"
+    "myOpenStage": "चरण में देखें",
+    "notebookIdioms": "अभिव्यक्तियाँ",
+    "notebookDetails": "बारीकियाँ",
+    "notebookNodeIdiom": "मुहावरे",
+    "notebookNodeTogether": "साथ आने वाले शब्द",
+    "notebookNodeSet": "तय वाक्यांश",
+    "notebookNodeWord": "शब्द चुनना",
+    "notebookNodeRegister": "लहजा और शिष्टता",
+    "notebookNodeSpelling": "वर्तनी",
+    "notebookNodeNuance": "भाव का फ़र्क"
   }
 }

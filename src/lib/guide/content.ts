@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-24e";
+export const GUIDE_VERSION = "2026-10-24f";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -174,7 +174,7 @@ export const GUIDE_KO: Guide = {
         heading: "7. 단계로 보기",
         body: [
           "‘{ui:myViewMap}’에는 단계가 1부터 5까지 이어져 있어요. 지금 단계가 칠해져 있고, 번호를 누르면 그 단계의 목표 대화와 문법 칸을 미리 봐요.",
-          "노트에 넣은 장면은 맞는 칸을 채워요(점·횟수). 위 숫자는 채운 칸, 숙지한 문법에는 ✓. 칸을 열어 ‘{ui:stageTry}’로 바로 연습해요.",
+          "쓸 수 있게 된 표현과 노트에 넣은 장면이 맞는 칸을 채워요. 관용구·자주 붙는 말은 ‘{ui:notebookIdioms}’, 말투·철자 같은 건 ‘{ui:notebookDetails}’ 칸으로. 점 색은 숙지·배움, 위 숫자는 채운 칸, 숙지한 문법에는 ✓. 칸을 열어 ‘{ui:stageTry}’로 바로 연습하고, 표현은 다른 칸으로 옮길 수 있어요.",
           "아래에는 목표로 그린 주제가 있어요. 주제에서 ‘{ui:missionStart}’ — 할 일은 정답을 숨기고 써 보게 하고, 힌트 없이 맞히면 숙지로 올라가요.",
         ],
         shot: "mapview",
@@ -595,7 +595,7 @@ export const GUIDE_EN: Guide = {
         heading: "7. See it in stages",
         body: [
           "‘{ui:myViewMap}’ lines up stages 1 to 5. Your current stage is filled in; tap a number to preview that stage's target conversation and grammar sections.",
-          "Scenes you add to your notes fill the matching section (dot and count). The number above is how many sections are filled; grammar you've mastered gets ✓. Open a section and ‘{ui:stageTry}’ to practise it right away.",
+          "Phrases you can now use and scenes you add to your notes fill the matching section. Idioms and word pairings go to ‘{ui:notebookIdioms}’, things like politeness or spelling to ‘{ui:notebookDetails}’. The dot colour is mastered or learned, the number above is filled sections, and mastered grammar gets ✓. Open a section to ‘{ui:stageTry}’ right away, or move a phrase elsewhere.",
           "Below are the topics drawn from your goal. In a topic, ‘{ui:missionStart}’ — a task hides the answer and has you write it, and getting it right without hints moves it to mastered.",
         ],
         shot: "mapview",

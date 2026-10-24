@@ -9,6 +9,11 @@ import type { MeteredOp } from "./modelCalls.ts";
 import {
   addPending,
   isCardId,
+  phraseMessage,
+  phrasePrompt,
+  placePhrases,
+  readPhrasePlaces,
+  PHRASES_PER_CALL,
   isRealFix,
   parseNotebook,
   placeMessage,
@@ -22,6 +27,8 @@ import {
   type NotebookRecord,
 } from "../notes/notebook.ts";
 import { INTERFACE_LANGUAGE_LABELS, learningLanguageName } from "../learningLanguages.ts";
+import type { LedgerItem } from "../learner/ledger.ts";
+import { ledgerKey } from "../learner/ledger.ts";
 
 /**
  * 노트(notes/notebook.ts)의 계정 저장소 — 짚은 장면 카드·내가 만든 칸·이름 바꾸기·메모.
@@ -154,5 +161,57 @@ export async function fileFix(input: {
     if (after !== latest) await saveNotebook(input.userId, input.language, after);
   } catch (error) {
     console.error("[notebook-file]", error);
+  }
+}
+
+/** 하루에 습득한 표현의 칸을 고르는 모델 호출 수(한 번에 PHRASES_PER_CALL개). */
+export const DAILY_PHRASE_CALLS = 6;
+
+/**
+ * 습득한 표현(장부의 배움·숙지)을 틀의 칸에 넣는다(2026-10-24 사용자 "습득한 표현은 웬만하면 틀 안에").
+ * 아직 칸이 없는 것만, 최근 것부터 한 번에 PHRASES_PER_CALL개. 노트를 열 때 답이 나간 뒤 돌고(/api/notebook GET), 실패는 삼킨다.
+ * 처음 열면 그동안 쌓인 것을 하루 DAILY_PHRASE_CALLS번까지 나눠 넣는다.
+ */
+export async function placeLearnedPhrases(input: {
+  openai: OpenAI | null;
+  userId: string;
+  language: string;
+  items: LedgerItem[];
+  meter?: (op: MeteredOp) => void;
+  now?: number;
+}): Promise<number> {
+  if (!input.openai || !isIdentified(input.userId)) return 0;
+  const now = input.now ?? Date.now();
+  try {
+    const before = await readNotebook(input.userId, input.language);
+    const todo = input.items
+      .filter((item) => item.state !== "met")
+      .map((item) => ({ key: ledgerKey(item.text), text: item.text, at: item.lastAt ?? 0 }))
+      .filter((item) => item.key && !before.phrases[item.key])
+      .sort((a, b) => b.at - a.at)
+      .slice(0, PHRASES_PER_CALL);
+    if (!todo.length) return 0;
+    if ((await getDailyOpUsed(input.userId, "notebookPhrases")) >= DAILY_PHRASE_CALLS) return 0;
+    const skeleton = skeletonFor(input.language, await currentStageOrder(input.userId, input.language), true);
+    const known = new Set([...skeleton.map((node) => node.id), ...before.custom.map((node) => node.id)]);
+    input.meter?.("notebookPhrases");
+    const completion = await completeChat(input.openai, "notes", {
+      temperature: 0,
+      max_tokens: 1200,
+      response_format: { type: "json_object" },
+      messages: [
+        { role: "system", content: phrasePrompt({ target: learningLanguageName(input.language), options: placeOptions(skeleton, before.custom) }) },
+        { role: "user", content: phraseMessage(todo.map((item) => item.text)) },
+      ],
+    });
+    const places = readPhrasePlaces(completion.choices[0]?.message?.content ?? "", todo.length, known);
+    const placed = todo.flatMap((item, index) => (places[index] === undefined ? [] : [{ key: item.key, node: places[index] ?? null }]));
+    if (!placed.length) return 0;
+    // 모델을 부르는 동안 사용자가 편집했을 수 있어 다시 읽고 넣는다.
+    const fresh = await readNotebook(input.userId, input.language);
+    await saveNotebook(input.userId, input.language, placePhrases(fresh, placed, now));
+    return placed.length;
+  } catch {
+    return 0;
   }
 }

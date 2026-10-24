@@ -1,9 +1,11 @@
-import { NextRequest } from "next/server";
+import { NextRequest, after } from "next/server";
+import { readLedger } from "@/lib/server/ledgerStore";
+import { getOpenAIClient } from "@/lib/server/openai";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
 import { meterRequest } from "@/lib/server/meterRequest";
-import { currentStageOrder, deleteShots, readNotebook, readShot, saveNotebook, saveShot } from "@/lib/server/notebookStore";
+import { currentStageOrder, deleteShots, placeLearnedPhrases, readNotebook, readShot, saveNotebook, saveShot } from "@/lib/server/notebookStore";
 import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 import { scriptView, stageViews } from "@/lib/server/stageCopy";
 import { applyEdit, parseEdit, prunePending, skeletonFor, type SkeletonNode } from "@/lib/notes/notebook";
@@ -19,7 +21,8 @@ export const maxDuration = 60;
  *   { stage, nodes: [{ id, chapter, stage?, name, example?, note?, ahead? }], custom, renames, memos, cards }
  *   ahead = 지금 단계 뒤의 문법(앱은 카드가 든 칸만 보인다).
  *   칸 이름은 앱 언어(영어·한국어는 손으로 쓴 글, 다른 언어는 단계 글과 같은 옮긴 글 — server/stageCopy.ts).
- *   + pending(오늘의 학습 후보, 7일), today(사용자 시간대의 오늘), stages(단계 사다리 [{ order, title }]).
+ *   + pending(오늘의 학습 후보, 7일), today(사용자 시간대의 오늘), stages(단계 사다리 [{ order, title }]),
+ *   phrases(습득한 표현이 든 칸 [{ key, text, state, node }] — 칸 없는 것은 이 요청 뒤 모델이 고른다).
  * GET ?lang=&shot=<화면 id> → { image } — 카드에 붙인 화면.
  * POST { language, edit } — 카드 옮기기·메모·지우기, 칸 더하기·이름 바꾸기·지우기·메모, 제안 칸 받기,
  *   후보 넣기(commit: ids, shots)·버리기(dismiss) → { ok, cards, custom, renames, memos, pending }
@@ -45,7 +48,11 @@ export async function GET(request: NextRequest) {
   const uiName = INTERFACE_LANGUAGE_LABELS[ui] ?? "Korean";
   const onTranslate = () => void meterRequest(request, "stageCopy");
 
-  const [stage, record] = await Promise.all([currentStageOrder(userId, language), readNotebook(userId, language)]);
+  const [stage, record, ledger] = await Promise.all([
+    currentStageOrder(userId, language),
+    readNotebook(userId, language),
+    readLedger(userId, language).catch(() => null),
+  ]);
   const skeleton = skeletonFor(language, stage, true);
   const [stages, script] = await Promise.all([
     skeleton.some((node) => node.chapter === "grammar") ? stageViews(language, ui, uiName, onTranslate) : Promise.resolve(null),
@@ -66,6 +73,8 @@ export async function GET(request: NextRequest) {
         ...(node.ahead ? { ahead: true } : {}),
       };
     }
+    // 관용·세부 고정 칸: 이름은 앱이 자기 문구로(copy.ts notebookNode*), 여기는 영어·한국어 기본만.
+    if (node.chapter === "idiom" || node.chapter === "detail") return { id: node.id, chapter: node.chapter, name: english(node.name) };
     const group = script?.groups[node.index];
     const note = group?.note ?? (node.note ? english(node.note) : undefined);
     return {
@@ -76,6 +85,23 @@ export async function GET(request: NextRequest) {
       ...(note ? { note } : {}),
     };
   });
+  // 습득한 표현(장부 배움·숙지) 중 칸이 정해진 것 — 지금 상태와 함께. 칸이 없는 것은 답이 나간 뒤 모델이 고른다(다음에 열면 보임).
+  const items = Object.entries(ledger?.items ?? {});
+  const phrases = items.flatMap(([key, item]) => {
+    const place = record.phrases[key];
+    return place?.node && item.state !== "met" ? [{ key, text: item.text, state: item.state, node: place.node }] : [];
+  });
+  if (ledger && items.some(([key, item]) => item.state !== "met" && !record.phrases[key])) {
+    after(() =>
+      placeLearnedPhrases({
+        openai: getOpenAIClient(),
+        userId,
+        language,
+        items: items.map(([, item]) => item),
+        meter: (op) => void meterRequest(request, op),
+      }),
+    );
+  }
   // 수준별 틀: 단계 사다리(번호·이름, 앱 언어). 화면이 지금 단계를 가운데 두고 앞뒤 단계를 넘겨 본다.
   const ladder = stages?.map((s) => ({ order: s.order, title: s.title })) ?? [];
   return jsonWithCors(request, {
@@ -83,6 +109,7 @@ export async function GET(request: NextRequest) {
     stage,
     stages: ladder,
     nodes,
+    phrases,
     custom: record.custom,
     renames: record.renames,
     memos: record.memos,

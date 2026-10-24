@@ -1,6 +1,10 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  isNodeId,
+  phrasePrompt,
+  placePhrases,
+  readPhrasePlaces,
   addCard,
   addPending,
   defaultPicked,
@@ -37,7 +41,8 @@ test("뼈대: 글자·소리 + 지금 단계까지의 문법, 단계 범위가 �
     assert.ok(one.some((n) => n.chapter === "grammar"), `${language} 문법`);
     assert.ok(three.filter((n) => n.chapter === "grammar").length > one.filter((n) => n.chapter === "grammar").length, `${language} 단계가 오르면 칸이 는다`);
     assert.equal(new Set(three.map((n) => n.id)).size, three.length, `${language} id 겹침 없음`);
-    for (const node of three) assert.match(node.id, /^(g\d-|s-)/);
+    for (const node of three) assert.match(node.id, /^(g\d-|s-|i-|d-)/);
+    assert.ok(three.some((n) => n.id === "i-idiom") && three.some((n) => n.id === "d-register"), `${language} 관용·세부 고정 칸`);
   }
   assert.ok(skeletonFor("ja", 1).some((n) => n.chapter === "script"), "일본어는 가나 칸");
   // 영어 1단계 be동사는 구문 id로 이름이 붙는다.
@@ -150,4 +155,19 @@ test("오늘의 학습: 고른 것만 노트로(화면 붙인 것은 shotId), �
   assert.equal(book.pending.length, 0);
   assert.equal(parseEdit({ op: "commit", ids: [] }), null);
   assert.equal(parseEdit({ op: "commit", ids: ["bad id!"] }), null);
+});
+
+test("습득한 표현: 칸 고르기 답 읽기·넣기·옮긴 것은 그대로", () => {
+  const known = new Set(["g1-be-verb", "i-idiom", "d-word"]);
+  const raw = JSON.stringify({ places: [{ i: 0, node: "i-idiom" }, { i: 1, node: "vocab" }, { i: 2, node: "g9-nope" }, { i: 7, node: "d-word" }] });
+  assert.deepEqual(readPhrasePlaces(raw, 3, known), ["i-idiom", null, undefined]);
+  assert.deepEqual(readPhrasePlaces("not json", 2, known), [undefined, undefined]);
+  assert.ok(isNodeId("i-together") && isNodeId("d-nuance"));
+  let book = placePhrases(emptyNotebook(), [{ key: "break the ice", node: "i-idiom" }, { key: "猫", node: null }], 10);
+  assert.equal(book.phrases["break the ice"]?.node, "i-idiom");
+  assert.equal(book.phrases["猫"]?.node, null);
+  book = applyEdit(book, parseEdit({ op: "movePhrase", phrase: "break the ice", node: "d-word" })!, 20);
+  book = placePhrases(book, [{ key: "break the ice", node: "i-idiom" }], 30);
+  assert.equal(book.phrases["break the ice"]?.node, "d-word", "사용자가 옮긴 것은 다시 고르지 않음");
+  assert.match(phrasePrompt({ target: "Spanish", options: "i-idiom — x" }), /"vocab"/);
 });

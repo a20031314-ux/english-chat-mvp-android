@@ -76,6 +76,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   notesPlace: 1,
   // 노트: 튜터가 고친 한 줄을 어느 칸에 넣을지 + 한 줄 설명(server/notebookStore.ts), 답이 나간 뒤.
   notebookFix: 1,
+  // 노트: 습득한 표현(장부 배움·숙지) 최대 30개를 틀의 칸에 한 번에(/api/notebook GET 뒤, 하루 6번까지).
+  notebookPhrases: 1,
   // One mission answer checked: verdict, correction and the other person's reply.
   missionCheck: 1,
   // A corrected chat or call line read for the kind of mistake it was

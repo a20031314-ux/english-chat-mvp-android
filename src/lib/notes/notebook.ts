@@ -20,7 +20,22 @@ import { ladderFor } from "../curriculum/stages/index.ts";
 import type { StageText } from "../curriculum/stages/types.ts";
 import { scriptFor } from "../curriculum/scripts/index.ts";
 
-export type NotebookChapter = "script" | "grammar";
+export type NotebookChapter = "script" | "grammar" | "idiom" | "detail";
+
+/**
+ * 모든 학습 언어에 같은 고정 칸(2026-10-24 사용자 "습득한 표현은 웬만하면 틀 안에"):
+ * 관용 표현 셋(관용구·자주 붙는 말·정해진 말)과 세부 넷(단어 고르기·말투·철자·뉘앙스).
+ * 화면 이름은 앱 문구(copy.ts notebookNode*), 여기 이름은 모델에게 주는 설명과 영어·한국어 기본.
+ */
+export const FIXED_NODES: { id: string; chapter: "idiom" | "detail"; name: StageText; hint: string }[] = [
+  { id: "i-idiom", chapter: "idiom", name: { en: "Idioms and sayings", ko: "관용구" }, hint: "idioms, sayings, figurative expressions whose meaning is not the sum of the words" },
+  { id: "i-together", chapter: "idiom", name: { en: "Words that go together", ko: "자주 붙는 말" }, hint: "collocations, phrasal verbs, fixed word pairs (make a decision, look forward to)" },
+  { id: "i-set", chapter: "idiom", name: { en: "Set phrases", ko: "정해진 말" }, hint: "greetings, thanks, apologies, reactions, fillers said as a whole" },
+  { id: "d-word", chapter: "detail", name: { en: "Choosing the right word", ko: "단어 고르기" }, hint: "picking between similar words, false friends, the word that fits" },
+  { id: "d-register", chapter: "detail", name: { en: "Register and politeness", ko: "말투·높임" }, hint: "polite or casual forms, honorifics, formal vs spoken" },
+  { id: "d-spelling", chapter: "detail", name: { en: "Spelling and writing", ko: "철자·표기" }, hint: "spelling, accents, characters, punctuation, spacing" },
+  { id: "d-nuance", chapter: "detail", name: { en: "Nuance", ko: "뉘앙스" }, hint: "shades of meaning, tone, what sounds natural vs odd" },
+];
 
 export type SkeletonNode = {
   id: string;
@@ -84,7 +99,17 @@ export type NotebookRecord = {
   memos: Record<string, string>;
   /** 오늘의 학습 후보(아직 노트에 안 넣은 짚임). 7일이 지나면 빠진다. */
   pending: FixCard[];
+  /**
+   * 습득한 표현(장부에서 배움·숙지)을 넣은 칸 — 열쇠는 장부 열쇠(learner/ledger.ts ledgerKey).
+   * node null = 틀이 아니라 노트의 어휘·표현으로(그냥 낱말). 사용자가 옮겼으면 moved(다시 고르지 않음).
+   */
+  phrases: Record<string, PhrasePlace>;
 };
+
+export type PhrasePlace = { node: string | null; at: number; moved?: boolean };
+export const MAX_PHRASES = 800;
+/** 한 번에 칸을 고르는 표현 수. */
+export const PHRASES_PER_CALL = 30;
 
 export const MAX_CARDS = 400;
 export const MAX_CUSTOM = 40;
@@ -97,10 +122,10 @@ export const PENDING_KEEP_MS = 7 * 24 * 60 * 60 * 1000;
 export const AGAIN_WINDOW_MS = 14 * 24 * 60 * 60 * 1000;
 
 export function emptyNotebook(): NotebookRecord {
-  return { v: 1, cards: [], custom: [], renames: {}, memos: {}, pending: [] };
+  return { v: 1, cards: [], custom: [], renames: {}, memos: {}, pending: [], phrases: {} };
 }
 
-const NODE_ID = /^(?:g\d-[a-z0-9-]{1,48}|s-[a-z0-9-]{1,48}|c-[a-z0-9]{4,24})$/;
+const NODE_ID = /^(?:g\d-[a-z0-9-]{1,48}|s-[a-z0-9-]{1,48}|c-[a-z0-9]{4,24}|[id]-[a-z]{2,16})$/;
 const CARD_ID = /^[a-z0-9]{6,24}$/;
 
 export function isNodeId(value: unknown): value is string {
@@ -171,6 +196,7 @@ export function skeletonFor(language: string, currentStage: number, withAhead = 
       });
     });
   }
+  FIXED_NODES.forEach((node, index) => nodes.push({ id: node.id, chapter: node.chapter, index, name: node.name }));
   return nodes;
 }
 
@@ -178,7 +204,9 @@ export function skeletonFor(language: string, currentStage: number, withAhead = 
 export function placeOptions(skeleton: SkeletonNode[], custom: CustomNode[]): string {
   return [
     ...skeleton.map((node) =>
-      `${node.id} — ${node.chapter === "script" ? "letters/sounds" : node.ahead ? "grammar (later)" : "grammar"}: ${node.name.en}${node.example ? ` (e.g. ${node.example})` : ""}`,
+      node.chapter === "idiom" || node.chapter === "detail"
+        ? `${node.id} — ${node.chapter === "idiom" ? "expressions" : "detail"}: ${node.name.en} (${FIXED_NODES.find((fixed) => fixed.id === node.id)?.hint ?? ""})`
+        : `${node.id} — ${node.chapter === "script" ? "letters/sounds" : node.ahead ? "grammar (later)" : "grammar"}: ${node.name.en}${node.example ? ` (e.g. ${node.example})` : ""}`,
     ),
     ...custom.map((node) => `${node.id} — the learner's own section: ${node.name}`),
   ].join("\n");
@@ -190,7 +218,7 @@ export function placePrompt(input: { target: string; uiName: string; options: st
 Sections (id — what it is):
 ${input.options}
 
-- "node": the one section a learner would open to study this mistake — the grammar point or letters/sounds it is about. Prefer the section that names exactly that point, even one marked "(later)"; never put it under a different point just because it is earlier. A mistake that is only a wrong word choice or a phrase goes to the grammar point it touches; if none fits, use "none".
+- "node": the one section a learner would open to study this mistake — the grammar point or letters/sounds it is about. Prefer the section that names exactly that point, even one marked "(later)"; never put it under a different point just because it is earlier. A mistake about word choice, politeness, spelling or nuance goes to the matching detail section; one about an idiom or a word pairing to the matching expressions section; if none fits, use "none".
 - "suggest": only when "node" is "none" — a short section name in ${input.uiName}, two to four words, naming the general point (never the learner's words).
 - "note": one short line in ${input.uiName} saying what was wrong and what the right form is, under 80 characters. Plain, no greeting, no praise. Words of ${input.target} may appear in quotes.
 - "kind": "typo" when the only change is a slip of spelling or typing (a missing or swapped letter, a wrong accent mark, a misspelled word) that the learner clearly knows; otherwise "mistake" (grammar, word choice, word order, a missing word, a wrong form).
@@ -243,7 +271,77 @@ export function parseNotebook(raw: unknown): NotebookRecord {
     renames: row.renames && typeof row.renames === "object" ? row.renames : {},
     memos: row.memos && typeof row.memos === "object" ? row.memos : {},
     pending: Array.isArray(row.pending) ? row.pending.filter((card) => card && isCardId(card.id)) : [],
+    phrases: cleanPhrases(row.phrases),
   };
+}
+
+function cleanPhrases(value: unknown): Record<string, PhrasePlace> {
+  if (!value || typeof value !== "object") return {};
+  const out: Record<string, PhrasePlace> = {};
+  for (const [key, place] of Object.entries(value as Record<string, PhrasePlace>)) {
+    if (!isPhraseKey(key) || !place || typeof place !== "object") continue;
+    out[key] = { node: place.node && isNodeId(place.node) ? place.node : null, at: Number(place.at) || 0, ...(place.moved ? { moved: true } : {}) };
+  }
+  return out;
+}
+
+export function isPhraseKey(value: unknown): value is string {
+  return typeof value === "string" && value.length > 0 && value.length <= 200 && value === value.trim();
+}
+
+/** 칸을 고른 표현을 넣는다(옮긴 것은 그대로). 넘치면 오래된 것부터. */
+export function placePhrases(record: NotebookRecord, placed: Array<{ key: string; node: string | null }>, now = Date.now()): NotebookRecord {
+  if (!placed.length) return record;
+  const phrases = { ...record.phrases };
+  for (const { key, node } of placed) {
+    if (!isPhraseKey(key) || phrases[key]?.moved) continue;
+    phrases[key] = { node: node && isNodeId(node) ? node : null, at: now };
+  }
+  const keys = Object.keys(phrases);
+  if (keys.length > MAX_PHRASES) {
+    for (const key of keys.sort((a, b) => phrases[a]!.at - phrases[b]!.at).slice(0, keys.length - MAX_PHRASES)) delete phrases[key];
+  }
+  return { ...record, phrases };
+}
+
+/** 습득한 표현의 칸 고르기(여러 개를 한 번에). */
+export function phrasePrompt(input: { target: string; options: string }): string {
+  return `A learner of ${input.target} has picked up the phrases below. File each into the learner's notebook so the notebook grows by level.
+
+Sections (id — what it is):
+${input.options}
+
+For each phrase pick one:
+- a grammar section when the phrase is a clear example of that grammar point (prefer the exact point, even one marked "(later)");
+- "i-idiom", "i-together" or "i-set" when it is an idiom, a collocation or phrasal verb, or a set phrase said as a whole;
+- a letters/sounds or detail section only when the phrase is really about that;
+- a learner's own section when its name fits;
+- "vocab" when it is just a word or a plain phrase with nothing above to learn from it (it stays in the word list).
+
+Return only json: {"places":[{"i":<index>,"node":"<id or vocab>"}]} with one entry per phrase.`;
+}
+
+export function phraseMessage(texts: string[]): string {
+  return JSON.stringify({ phrases: texts.map((text, i) => ({ i, text })) });
+}
+
+/** 모델 답 → 표현 순서대로 칸(null = 어휘). 답이 없거나 모르는 칸이면 undefined(다음에 다시). */
+export function readPhrasePlaces(raw: string, count: number, known: ReadonlySet<string>): Array<string | null | undefined> {
+  const out: Array<string | null | undefined> = Array.from({ length: count }, () => undefined);
+  let rows: unknown = [];
+  try {
+    rows = (JSON.parse(raw) as { places?: unknown })?.places ?? [];
+  } catch {
+    rows = [];
+  }
+  if (!Array.isArray(rows)) return out;
+  for (const row of rows as Array<{ i?: unknown; node?: unknown }>) {
+    const i = typeof row?.i === "number" ? row.i : -1;
+    if (i < 0 || i >= count || !Number.isInteger(i)) continue;
+    if (row.node === "vocab") out[i] = null;
+    else if (typeof row.node === "string" && known.has(row.node)) out[i] = row.node;
+  }
+  return out;
 }
 
 /** 새 카드. 같은 칸에 같은 틀림→고침이 이미 있으면 시각만 새로(같은 실수를 또 한 것). 오래된 것부터 넘친다. */
@@ -327,7 +425,8 @@ export type NotebookEdit =
   | { op: "memoNode"; node: string; memo: string }
   | { op: "acceptSuggest"; card: string; id: string }
   | { op: "commit"; ids: string[]; shots: string[] }
-  | { op: "dismiss"; ids: string[] };
+  | { op: "dismiss"; ids: string[] }
+  | { op: "movePhrase"; phrase: string; node: string | null };
 
 const idList = (value: unknown): string[] | null =>
   Array.isArray(value) && value.length <= MAX_PENDING && value.every(isCardId) ? [...new Set(value as string[])] : null;
@@ -361,6 +460,8 @@ export function parseEdit(value: unknown): NotebookEdit | null {
       const ids = idList(row.ids);
       return ids && ids.length ? { op: "dismiss", ids } : null;
     }
+    case "movePhrase":
+      return isPhraseKey(row.phrase) && (row.node === null || isNodeId(row.node)) ? { op: "movePhrase", phrase: row.phrase, node: row.node as string | null } : null;
     default:
       return null;
   }
@@ -454,6 +555,8 @@ export function applyEdit(record: NotebookRecord, edit: NotebookEdit, now = Date
       if (added === record && !customIds.has(edit.id)) return record;
       return applyEdit(added, { op: "move", card: edit.card, node: edit.id }, now);
     }
+    case "movePhrase":
+      return { ...record, phrases: { ...record.phrases, [edit.phrase]: { node: edit.node, at: now, moved: true } } };
   }
 }
 

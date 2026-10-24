@@ -51,7 +51,7 @@
           "heading": "7. Verlo por etapas",
           "body": [
             "«{ui:myViewMap}» muestra las etapas del 1 al 5. La actual está coloreada; toca un número para ver la conversación objetivo y la gramática de esa etapa.",
-            "Las escenas que guardas en tus notas llenan la sección que corresponde (punto y número). El número de arriba son las secciones llenas, y la gramática dominada lleva ✓. Abre una sección y toca «{ui:stageTry}» para practicarla.",
+            "Las expresiones que ya sabes usar y las escenas que guardas llenan la sección que corresponde. Modismos y combinaciones van a «{ui:notebookIdioms}»; formalidad u ortografía, a «{ui:notebookDetails}». El color del punto indica dominada o aprendida, el número de arriba las secciones llenas, y la gramática dominada lleva ✓. Abre una sección para «{ui:stageTry}» o mover una expresión.",
             "Debajo están los temas de tu objetivo. En un tema, «{ui:missionStart}»: la tarea oculta la respuesta y te pide escribirla; si aciertas sin pistas, pasa a dominada."
           ],
           "shot": "mapview"
@@ -471,7 +471,7 @@
           "heading": "7. ステージで見る",
           "body": [
             "「{ui:myViewMap}」にはステージ1〜5が並びます。今のステージに色が付き、番号を押すとそのステージの目標の会話と文法の項目を先に見られます。",
-            "ノートに入れた場面は合う項目を埋めます（点と回数）。上の数字は埋まった項目、身についた文法には✓。項目を開いて「{ui:stageTry}」ですぐ練習できます。",
+            "使えるようになった表現とノートに入れた場面が、合う項目を埋めます。慣用句やよく一緒に使う言葉は「{ui:notebookIdioms}」、話し方や表記などは「{ui:notebookDetails}」へ。点の色は習得・学習中、上の数字は埋まった項目、身についた文法には✓。項目を開いて「{ui:stageTry}」ですぐ練習したり、表現を別の項目に移したりできます。",
             "下には目標から作ったテーマがあります。テーマで「{ui:missionStart}」。タスクは答えを隠して書かせ、ヒントなしで正解すると習得になります。"
           ],
           "shot": "mapview"
@@ -891,7 +891,7 @@
           "heading": "7. 按阶段查看",
           "body": [
             "“{ui:myViewMap}”里排着第 1 到第 5 阶段。当前阶段会被填上颜色，点数字可以先看那个阶段的目标对话和语法部分。",
-            "放进笔记的场景会填进对应的部分（圆点和次数）。上面的数字是已填的部分，已掌握的语法有 ✓。打开部分，点“{ui:stageTry}”马上练习。",
+            "会用的表达和放进笔记的场景会填进对应的部分。惯用语、常见搭配放在“{ui:notebookIdioms}”，语气、拼写之类放在“{ui:notebookDetails}”。圆点颜色表示已掌握或在学，上面的数字是已填的部分，已掌握的语法有 ✓。打开部分可以点“{ui:stageTry}”马上练习，也能把表达移到别处。",
             "下面是按目标生成的主题。在主题里点“{ui:missionStart}”——任务会把答案藏起来让你写，不靠提示写对就算掌握。"
           ],
           "shot": "mapview"
@@ -1311,7 +1311,7 @@
           "heading": "7. Xem theo giai đoạn",
           "body": [
             "«{ui:myViewMap}» xếp các giai đoạn từ 1 đến 5. Giai đoạn hiện tại được tô màu; chạm vào một số để xem trước hội thoại mục tiêu và các mục ngữ pháp của giai đoạn đó.",
-            "Cảnh bạn đưa vào sổ sẽ lấp đầy mục tương ứng (chấm và số lần). Số ở trên là số mục đã lấp, ngữ pháp đã nắm có ✓. Mở một mục và chạm «{ui:stageTry}» để luyện ngay.",
+            "Những cách nói bạn đã dùng được và cảnh đưa vào sổ sẽ lấp đầy mục tương ứng. Thành ngữ, từ hay đi cùng vào «{ui:notebookIdioms}»; cách nói, chính tả vào «{ui:notebookDetails}». Màu chấm là đã nắm hay đang học, số ở trên là mục đã lấp, ngữ pháp đã nắm có ✓. Mở một mục để «{ui:stageTry}» ngay hoặc chuyển cách nói sang mục khác.",
             "Bên dưới là các chủ đề vẽ từ mục tiêu. Trong chủ đề, chạm «{ui:missionStart}» — bài tập giấu đáp án để bạn tự viết, viết đúng không cần gợi ý thì thành đã nắm."
           ],
           "shot": "mapview"
@@ -1731,7 +1731,7 @@
           "heading": "7. Voir par étapes",
           "body": [
             "« {ui:myViewMap} » aligne les étapes 1 à 5. L’étape actuelle est colorée ; touchez un numéro pour voir la conversation visée et les sections de grammaire de cette étape.",
-            "Les scènes ajoutées à vos notes remplissent la section correspondante (point et nombre). Le nombre du haut indique les sections remplies, la grammaire maîtrisée a un ✓. Ouvrez une section et « {ui:stageTry} » pour vous entraîner tout de suite.",
+            "Les expressions que vous savez utiliser et les scènes ajoutées à vos notes remplissent la section correspondante. Expressions idiomatiques et associations vont dans « {ui:notebookIdioms} », registre ou orthographe dans « {ui:notebookDetails} ». La couleur du point indique maîtrisé ou appris, le nombre du haut les sections remplies, la grammaire maîtrisée a un ✓. Ouvrez une section pour « {ui:stageTry} » ou déplacer une expression.",
             "En dessous, les thèmes tirés de votre objectif. Dans un thème, « {ui:missionStart} » : la tâche cache la réponse et vous la fait écrire ; juste sans indice, elle passe en maîtrisée."
           ],
           "shot": "mapview"
@@ -2151,7 +2151,7 @@
           "heading": "7. Vedere per fasi",
           "body": [
             "«{ui:myViewMap}» mette in fila le fasi da 1 a 5. La fase attuale è colorata; tocca un numero per vedere la conversazione obiettivo e le sezioni di grammatica di quella fase.",
-            "Le scene che metti nelle note riempiono la sezione giusta (punto e numero). Il numero in alto indica le sezioni riempite, la grammatica padroneggiata ha ✓. Apri una sezione e tocca «{ui:stageTry}» per esercitarti subito.",
+            "Le espressioni che sai usare e le scene che metti nelle note riempiono la sezione giusta. Modi di dire e parole che vanno insieme in «{ui:notebookIdioms}», registro o ortografia in «{ui:notebookDetails}». Il colore del punto indica padroneggiata o imparata, il numero in alto le sezioni riempite, la grammatica padroneggiata ha ✓. Apri una sezione per «{ui:stageTry}» o spostare un’espressione.",
             "Sotto ci sono i temi tratti dal tuo obiettivo. In un tema, «{ui:missionStart}»: il compito nasconde la risposta e te la fa scrivere; se la azzecchi senza suggerimenti diventa padroneggiata."
           ],
           "shot": "mapview"
@@ -2571,7 +2571,7 @@
           "heading": "7. Ver por etapas",
           "body": [
             "«{ui:myViewMap}» mostra as etapas de 1 a 5. A etapa atual fica colorida; toque num número para ver a conversa-alvo e as secções de gramática dessa etapa.",
-            "As cenas que guarda nas notas preenchem a secção certa (ponto e número). O número em cima são as secções preenchidas, e a gramática dominada tem ✓. Abra uma secção e toque «{ui:stageTry}» para praticar já.",
+            "As expressões que já consegue usar e as cenas que guarda nas notas preenchem a secção certa. Expressões idiomáticas e combinações vão para «{ui:notebookIdioms}»; registo ou ortografia, para «{ui:notebookDetails}». A cor do ponto indica dominada ou aprendida, o número em cima as secções preenchidas, e a gramática dominada tem ✓. Abra uma secção para «{ui:stageTry}» ou mover uma expressão.",
             "Por baixo ficam os temas do seu objetivo. Num tema, «{ui:missionStart}»: a tarefa esconde a resposta e pede que a escreva; se acertar sem dicas, passa a dominada."
           ],
           "shot": "mapview"
@@ -2991,7 +2991,7 @@
           "heading": "7. Смотреть по этапам",
           "body": [
             "В «{ui:myViewMap}» этапы с 1 по 5 идут подряд. Текущий закрашен; нажмите номер, чтобы заранее увидеть целевой диалог и разделы грамматики этого этапа.",
-            "Сцены, добавленные в заметки, заполняют нужный раздел (точка и число). Число сверху — сколько разделов заполнено, у освоенной грамматики ✓. Откройте раздел и нажмите «{ui:stageTry}», чтобы сразу потренироваться.",
+            "Выражения, которыми вы уже пользуетесь, и сцены из заметок заполняют нужный раздел. Идиомы и устойчивые сочетания идут в «{ui:notebookIdioms}», стиль и орфография — в «{ui:notebookDetails}». Цвет точки — освоено или изучается, число сверху — заполненные разделы, у освоенной грамматики ✓. Откройте раздел, чтобы «{ui:stageTry}» или перенести выражение.",
             "Ниже — темы, составленные по вашей цели. В теме «{ui:missionStart}»: задание прячет ответ и просит написать его; без подсказок верно — и фраза становится освоенной."
           ],
           "shot": "mapview"
@@ -3411,7 +3411,7 @@
           "heading": "7. Lihat per tahap",
           "body": [
             "«{ui:myViewMap}» menjajarkan tahap 1 sampai 5. Tahap sekarang diwarnai; ketuk angka untuk melihat percakapan tujuan dan bagian tata bahasa tahap itu.",
-            "Adegan yang kamu masukkan ke catatan mengisi bagian yang cocok (titik dan jumlah). Angka di atas adalah bagian yang terisi, tata bahasa yang dikuasai diberi ✓. Buka bagian lalu ketuk «{ui:stageTry}» untuk langsung berlatih.",
+            "Ungkapan yang sudah bisa kamu pakai dan adegan yang kamu masukkan ke catatan mengisi bagian yang cocok. Idiom dan kata yang berpasangan masuk ke «{ui:notebookIdioms}», gaya bahasa atau ejaan ke «{ui:notebookDetails}». Warna titik berarti dikuasai atau dipelajari, angka di atas adalah bagian yang terisi, tata bahasa yang dikuasai diberi ✓. Buka bagian untuk «{ui:stageTry}» atau memindah ungkapan.",
             "Di bawahnya ada topik dari tujuanmu. Di topik, ketuk «{ui:missionStart}» — tugas menyembunyikan jawaban dan memintamu menulisnya; benar tanpa petunjuk berarti dikuasai."
           ],
           "shot": "mapview"
@@ -3831,7 +3831,7 @@
           "heading": "7. اعرضه بالمراحل",
           "body": [
             "تصطفّ في «{ui:myViewMap}» المراحل من 1 إلى 5. المرحلة الحالية ملوّنة، واضغط رقمًا لترى مسبقًا محادثة الهدف وأقسام القواعد في تلك المرحلة.",
-            "المشاهد التي تضيفها إلى ملاحظاتك تملأ القسم المناسب (نقطة وعدد). الرقم في الأعلى هو الأقسام الممتلئة، والقواعد التي أتقنتها عليها ✓. افتح القسم واضغط «{ui:stageTry}» لتتدرّب فورًا.",
+            "التعابير التي صرت تستعملها والمشاهد التي تضيفها إلى ملاحظاتك تملأ القسم المناسب. التعابير الاصطلاحية والكلمات المتلازمة تذهب إلى «{ui:notebookIdioms}»، والأسلوب أو الإملاء إلى «{ui:notebookDetails}». لون النقطة يعني متقن أو قيد التعلّم، والرقم في الأعلى هو الأقسام الممتلئة، والقواعد المتقنة عليها ✓. افتح القسم لـ«{ui:stageTry}» أو لنقل تعبير إلى قسم آخر.",
             "في الأسفل المواضيع المرسومة من هدفك. في الموضوع اضغط «{ui:missionStart}»: المهمة تخفي الإجابة وتطلب منك كتابتها، وإذا أصبت دون تلميح تصبح متقنة."
           ],
           "shot": "mapview"
@@ -4251,7 +4251,7 @@
           "heading": "7. ดูเป็นขั้น",
           "body": [
             "«{ui:myViewMap}» เรียงขั้น 1 ถึง 5 ไว้ ขั้นปัจจุบันจะมีสี แตะตัวเลขเพื่อดูบทสนทนาเป้าหมายและหัวข้อไวยากรณ์ของขั้นนั้นล่วงหน้า",
-            "ฉากที่ใส่ลงโน้ตจะเติมหัวข้อที่ตรงกัน (จุดและจำนวนครั้ง) ตัวเลขด้านบนคือหัวข้อที่เติมแล้ว ไวยากรณ์ที่คล่องแล้วมี ✓ เปิดหัวข้อแล้วแตะ «{ui:stageTry}» เพื่อฝึกทันที",
+            "สำนวนที่ใช้ได้แล้วและฉากที่ใส่ลงโน้ตจะเติมหัวข้อที่ตรงกัน สำนวนและคำที่ใช้คู่กันไปที่ «{ui:notebookIdioms}» ส่วนระดับภาษาหรือการสะกดไปที่ «{ui:notebookDetails}» สีจุดบอกว่าคล่องแล้วหรือกำลังเรียน ตัวเลขด้านบนคือหัวข้อที่เติมแล้ว ไวยากรณ์ที่คล่องมี ✓ เปิดหัวข้อเพื่อ «{ui:stageTry}» หรือย้ายสำนวนไปหัวข้ออื่น",
             "ด้านล่างคือหัวข้อที่สร้างจากเป้าหมาย ในหัวข้อแตะ «{ui:missionStart}» งานจะซ่อนคำตอบให้คุณเขียนเอง ถ้าเขียนถูกโดยไม่ใช้คำใบ้จะนับว่าคล่องแล้ว"
           ],
           "shot": "mapview"
@@ -4671,7 +4671,7 @@
           "heading": "7. चरणों में देखें",
           "body": [
             "«{ui:myViewMap}» में चरण 1 से 5 तक क्रम से हैं। अभी का चरण रंगा होता है; किसी अंक को दबाकर उस चरण की लक्ष्य बातचीत और व्याकरण के हिस्से पहले से देखें।",
-            "नोट्स में डाले दृश्य सही हिस्से को भरते हैं (बिंदु और गिनती)। ऊपर की संख्या भरे हुए हिस्से हैं, और सीखे हुए व्याकरण पर ✓ होता है। हिस्सा खोलकर «{ui:stageTry}» से तुरंत अभ्यास करें।",
+            "जो वाक्यांश अब आप इस्तेमाल कर पाते हैं और नोट्स में डाले दृश्य सही हिस्से को भरते हैं। मुहावरे और साथ आने वाले शब्द «{ui:notebookIdioms}» में, लहजा या वर्तनी «{ui:notebookDetails}» में जाते हैं। बिंदु का रंग सीखा हुआ या सीख रहे बताता है, ऊपर की संख्या भरे हिस्से है, और सीखे व्याकरण पर ✓ है। हिस्सा खोलकर «{ui:stageTry}» करें या वाक्यांश दूसरी जगह ले जाएँ।",
             "नीचे आपके लक्ष्य से बने विषय हैं। विषय में «{ui:missionStart}» — काम जवाब छिपाकर आपसे लिखवाता है, बिना संकेत सही लिखने पर वह सीखा हुआ बन जाता है।"
           ],
           "shot": "mapview"
