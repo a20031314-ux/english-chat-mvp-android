@@ -723,7 +723,7 @@ function socialMocks(page, target, ui) {
     ...(key === "yuki"
       ? {
           bio: "🇯🇵 → 🌏 ☕ 🎧",
-          facts: { country: "JP", native: "ja", speaks: [target === "ja" ? "ko" : target], interests: ["travel", "cafe", "music", "photo"], work: "worker", meetModes: ["call", "text"], meetTimes: ["evening"] },
+          facts: { country: "JP", native: "ja", speaks: [target === "ja" ? "ko" : target], learns: [target === "ja" ? "ko" : target], interests: ["travel", "cafe", "music", "photo"], work: "worker", meetModes: ["call", "text"], meetTimes: ["evening"] },
           badges: { help: { count: 9, lang: target }, streak: { week: 5, run: 3 } },
           posts: [{ id: "bp_capture1", author: PEOPLE.yuki.id, language: target, text: BOARD_POSTS[target][0][1], at: now - 3_600_000, comments: 4, likes: 6, liked: false }],
         }

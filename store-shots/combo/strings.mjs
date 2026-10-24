@@ -14,8 +14,8 @@ export const SHOTS = [
   { id: "my", main: "growth", details: [["myask", 0.44], ["notebook-today", 0.45]] },
   { id: "call", main: "meant", details: [["call-pack", 0.17], ["calltools", 0.4]] },
   { id: "video", main: "video-study", details: [["video-ask", 0.0], ["vocab-search", 0.04]] },
-  { id: "room", main: "quote", details: [["room-game", 0.3], ["rooms-mini", 0.44]] },
-  { id: "people", main: "people-lang", details: [["profile-facts", 0.2], ["icons", 0.3]] },
+  { id: "room", main: "quote", details: [["room-game", 0.28], ["rooms-mini", 0.44]] },
+  { id: "people", main: "people-lang", details: [["profile-facts", 0.26], ["icons", 1.0]] },
 ];
 
 /** 등록정보마다 바꾸는 장면. 오늘의 팩은 영어·일본어 학습만 있어 영어 앱(스페인어 학습)은 내 문장 말해보기로. */
