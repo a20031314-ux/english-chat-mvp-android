@@ -3,24 +3,26 @@ O languagebank ajuda você a falar e escrever de verdade no idioma que está apr
 CONVERSE COM UM TUTOR DE IA
 • Converse no idioma que você está aprendendo. Travou? Escreva em português: o tutor continua no idioma que você aprende e «Ver como se diz» mostra a expressão logo abaixo dessa linha.
 • Se uma frase tiver um erro, aparece embaixo a etiqueta «Há algo para corrigir». Toque nela para ver a frase corrigida.
-• Ligue para o tutor de IA e fale em voz alta. O pacote do dia é uma chamada curta com um objetivo e, no final, você pode rever o que queria dizer.
+• Toque em 📞 no topo da conversa para ligar para o tutor e falar em voz alta. Cada chamada fica na conversa como um cartão 🗒, para continuar ou rever. O pacote do dia é uma chamada curta com um objetivo.
 
 PERGUNTE SOBRE QUALQUER FRASE
-• Abra a análise de frase em uma linha das conversas, chamadas, vídeos ou notas. Escolha a parte que você não entendeu e pergunte o que significa. A resposta vem em português.
+• Abra a análise de frase em uma linha das conversas, chamadas, vídeos ou notas. Escolha a parte que você não entendeu e pergunte o que significa. A resposta vem em português, e «Encontrar em Meu espaço» mostra onde ela se encaixa nas suas etapas.
 
 APRENDA COM VÍDEOS REAIS
 • Os vídeos são divididos em frases, com legendas no idioma que você aprende. Toque em uma frase para ouvir de novo e pergunte sobre qualquer linha.
 
 VEJA O QUE FALTA
-• Sem níveis. Cada frase mostra só o que estava errado ou faltando, e o que você escreve revela seus pontos fracos e o que estudar em seguida.
-• Em Meu espaço, você começa com conversas curtas de exemplo. Responda «Sim, consigo», «Quase» ou «Ainda não», e seu mapa de estudo começa de onde você está: com a conversa que você vai conseguir ter, a gramática desta parte e, se estiver começando, primeiro letras e sons.
+• Sem pontuação. Cada frase mostra só o que estava errado ou faltando, e o que você escreve revela seus pontos fracos e o que estudar em seguida.
+• Em Meu espaço, você começa com conversas curtas de exemplo. Responda «Sim, consigo», «Quase» ou «Ainda não», e você começa na etapa certa para você.
 • As dicas das missões abrem uma de cada vez, para você tentar primeiro.
-• Em Meu espaço: Experimente isto, Crescendo, Minhas expressões e Notas (com Vocabulário) reúnem o que você usou e aprendeu.
+• «Etapas» em Meu espaço: uma escada de 1 a 5, cada etapa com sua gramática, a conversa que você vai conseguir ter e o que vai saber fazer, e primeiro letras e sons se estiver começando. As frases corrigidas e as expressões aprendidas vão para o lugar certo.
+• «Aprendizado de hoje»: as frases que o tutor corrigiu hoje. Fique com as que quiser e elas vão para o lugar certo, com a tela daquele momento se quiser.
 
 APRENDA COM PESSOAS
-• Room: salas de voz com legendas em tempo real. Toque em uma linha para traduzir ou escolha só as palavras que quer perguntar. Uma 💡 dica diz o que falar no idioma que você aprende, e nas suas próprias linhas você vê correções que só você enxerga.
+• Room: salas de voz com legendas em tempo real, até 40 pessoas. Toque em uma linha para traduzir ou escolha só as palavras que quer perguntar. Nas suas próprias linhas você vê correções que só você enxerga. O anfitrião pode começar com 🎭 os jogos do Mentiroso e da Máfia.
 • Conversas: grupos e mensagens 1:1, chamadas de voz e videochamadas 1:1, e espaços de equipe com parceiros de estudo.
-• Pessoas: encontre quem aprende o mesmo idioma, siga e publique no mural.
+• Pessoas: mostre só quem aprende o mesmo idioma, ou quem também fala o seu; siga e publique no mural. Os perfis mostram país, idiomas e interesses, e você pode enviar «🙌 Ajudou» para quem te respondeu.
+• Ícones: crie seus próprios pacotes de ícones (também animados) e envie em mensagens e comentários.
 • Convide um amigo com um só link.
 • Desative as funções que você não usa e o app mostra só o que precisa.
 
