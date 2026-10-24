@@ -27,6 +27,8 @@ type Book = {
   cards: FixCard[];
   pending: FixCard[];
   today: string;
+  /** 단계 사다리(번호·이름, 앱 언어) — 옛 서버면 비어 있다. */
+  stages: { order: number; title: string }[];
 };
 type Group = NotebookChapter | "mine" | "loose";
 type PickGroup = "today" | "earlier";
@@ -71,7 +73,7 @@ export function NotebookSection({
     })
       .then((response) => (response.ok ? response.json() : null))
       .then((body: Book | null) => {
-        if (!cancelled && body?.nodes) setBook({ ...body, pending: body.pending ?? [], today: body.today ?? "" });
+        if (!cancelled && body?.nodes) setBook({ ...body, pending: body.pending ?? [], today: body.today ?? "", stages: body.stages ?? [] });
       })
       .catch(() => undefined);
     return () => {
@@ -138,7 +140,8 @@ export function NotebookSection({
   const sum = (ids: string[]) => ids.reduce((total, id) => total + (counts[id] ?? 0), 0);
   const rows: Array<{ key: Group; label: string; count: number; show: boolean }> = [
     { key: "script", label: ui.notebookScript, count: sum(inChapter("script").map((n) => n.id)), show: inChapter("script").length > 0 },
-    { key: "grammar", label: ui.notebookGrammar, count: sum(inChapter("grammar").map((n) => n.id)), show: inChapter("grammar").length > 0 },
+    // 문법은 아래 단계 틀(StageFrame)로 펼쳐 보인다. 옛 서버(단계 사다리 없음)면 예전처럼 한 줄.
+    { key: "grammar", label: ui.notebookGrammar, count: sum(inChapter("grammar").map((n) => n.id)), show: inChapter("grammar").length > 0 && book.stages.length === 0 },
     { key: "mine", label: ui.notebookMine, count: sum(book.custom.map((n) => n.id)), show: true },
     { key: "loose", label: ui.notesLoose, count: counts[""] ?? 0, show: (counts[""] ?? 0) > 0 },
   ];
@@ -170,6 +173,17 @@ export function NotebookSection({
             </button>
           ) : null}
         </div>
+      ) : null}
+      {book.stages.length ? (
+        <StageFrame
+          ui={ui}
+          stages={book.stages}
+          current={book.stage}
+          nodes={book.nodes.filter((node) => node.chapter === "grammar")}
+          counts={counts}
+          nameOf={nameOf}
+          onOpen={setNodeOpen}
+        />
       ) : null}
       <ul className="mt-2 divide-y divide-white/5">
         {rows
@@ -263,6 +277,109 @@ export function NotebookSection({
         </Sheet>
       ) : null}
     </>
+  );
+}
+
+/**
+ * 수준별 틀(2026-10-24 사용자: "수준별 학습틀, 학습한 걸 틀에 넣어 키워가는 흐름이 보여야"):
+ * 단계 사다리(1 2 3 4 5 — 지나온 단계·지금·다음), 고른 단계의 문법 칸이 바로 펼쳐지고,
+ * 짚인 장면이 든 칸은 채워진 점 + 횟수, 위에 "채운 칸 / 이 단계 칸". 다음 단계도 눌러 미리 본다.
+ * 설명 글 없이 번호·이름·숫자만(hub/DESIGN.md "안내 글").
+ */
+function StageFrame({
+  ui,
+  stages,
+  current,
+  nodes,
+  counts,
+  nameOf,
+  onOpen,
+}: {
+  ui: UICopy;
+  stages: { order: number; title: string }[];
+  current: number;
+  nodes: NodeView[];
+  counts: Record<string, number>;
+  nameOf: (id: string) => string;
+  onOpen: (id: string) => void;
+}) {
+  const now = Math.max(1, Math.min(current, stages.length));
+  const [shown, setShown] = useState(now);
+  const inStage = (order: number) => nodes.filter((node) => (node.stage ?? 1) === order);
+  const filledIn = (order: number) => inStage(order).filter((node) => (counts[node.id] ?? 0) > 0).length;
+  const list = inStage(shown);
+  const filled = filledIn(shown);
+  const title = stages.find((stage) => stage.order === shown)?.title ?? "";
+  return (
+    <div className="mt-3">
+      <p className="text-meta font-semibold tracking-wide text-slate-500">{ui.notebookGrammar}</p>
+      <ol className="mt-2 flex items-center">
+        {stages.map((stage, index) => {
+          const done = stage.order < now;
+          const here = stage.order === now;
+          const picked = stage.order === shown;
+          return (
+            <li key={stage.order} className={`flex items-center ${index ? "flex-1" : ""}`}>
+              {index ? <span aria-hidden className={`h-px flex-1 ${stage.order <= now ? "bg-status-learned/60" : "bg-white/10"}`} /> : null}
+              <button
+                type="button"
+                aria-pressed={picked}
+                aria-label={`${stage.order}. ${stage.title}`}
+                title={stage.title}
+                onClick={() => setShown(stage.order)}
+                className={`relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-caption tabular-nums ${
+                  here
+                    ? "bg-status-learned font-semibold text-black"
+                    : done
+                      ? "bg-status-learned/30 text-ink"
+                      : "border border-line text-slate-500"
+                } ${picked ? "ring-2 ring-white/70 ring-offset-2 ring-offset-black" : ""}`}
+              >
+                {stage.order}
+                {filledIn(stage.order) ? (
+                  <span className="absolute -top-1 -end-1 rounded-full bg-white/90 px-1 text-meta leading-tight text-black">{filledIn(stage.order)}</span>
+                ) : null}
+              </button>
+            </li>
+          );
+        })}
+      </ol>
+      <div className="mt-3 flex items-baseline gap-2">
+        <p className={`min-w-0 flex-1 truncate text-note font-semibold ${shown > now ? "text-slate-400" : "text-ink"}`}>
+          {shown}. {title}
+        </p>
+        <span className="shrink-0 text-caption tabular-nums text-slate-400">
+          {filled}/{list.length}
+        </span>
+      </div>
+      <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
+        <div className="h-full rounded-full bg-status-learned" style={{ width: `${list.length ? Math.round((filled / list.length) * 100) : 0}%` }} />
+      </div>
+      <ul className="mt-1 divide-y divide-white/5">
+        {list.map((node) => {
+          const count = counts[node.id] ?? 0;
+          return (
+            <li key={node.id}>
+              <button type="button" onClick={() => onOpen(node.id)} className="flex w-full items-center gap-3 py-2 text-start">
+                <span
+                  aria-hidden
+                  className={`h-2.5 w-2.5 shrink-0 rounded-full ${count ? "bg-status-learned" : "border border-line"}`}
+                />
+                <span className="min-w-0 flex-1">
+                  <span className={`block text-note ${shown > now && !count ? "text-slate-400" : "text-ink"}`}>{nameOf(node.id)}</span>
+                  {node.example ? (
+                    <span dir="auto" className="block truncate text-meta text-slate-500">
+                      {node.example}
+                    </span>
+                  ) : null}
+                </span>
+                <span className="w-7 shrink-0 text-end text-caption tabular-nums text-slate-400">{count || ""}</span>
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
   );
 }
 
