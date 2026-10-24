@@ -21,6 +21,7 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **습득한 표현도 노트 틀에 (2026-10-24, 서버 바로·화면 다음 빌드):** `notebook.ts` FIXED_NODES(관용 3·세부 4)·`phrases`·`phrasePrompt`, `notebookStore.placeLearnedPhrases`(GET 뒤 after), 화면 관용 표현·세부 줄·칸 시트 표현·옮기기. 운영 확인 en·ja·es 칸 맞음(과거형 → 과거 칸, 관용구·연어·정해진 말). 남은 것: 실제 사용자 몇 명 장부로 칸 맞음 비율 보기(qa), 숙지 ✓가 영어만인 것.
 - **아이콘 기본 묶음 Noto (2026-10-24, 서버 바로):** 48개 두 묶음, `rooms/builtinIcons.ts`·`public/icons/noto`·`scripts/noto-icons.mjs`. 남은 것: 다음 빌드에서 기본 묶음 시트 받기·신고 버튼이 빠졌는지, 1:1·단체방·댓글 🙂에서 보내지는지 기기 확인(qa). 더 넣을 때 한 묶음 24개 한도.
 - **My "단계" 보기 = 지도 + 노트 틀 (2026-10-24, 사용자 "만들어줘", 서버 바로·화면 다음 빌드):** 자라는 중 [망 | 그래프 | 단계], 단계 = 사다리·문법 칸(카드·✓·해보기)·목표 대화·글자·소리·내가 만든 칸·목표 주제. 오늘의 학습은 자라는 중 맨 위. 사용법 My 3칸 새 글(`r274=1`, 옛 빌드 `mapBefore274.json`). 남은 것: 다음 버전 자를 때 새로워진 점 한 장·사용법 그림 `mapview`·`element`·`notebook-today` 다시 찍기(지금 그림은 예전 지도 화면), 단계 올리기(③ 미리 보기·승인·되돌리기), 글자·소리도 사다리 모양으로 할지.
 - **의견 반영 보상 (2026-10-24, 사용자 "진행해줘", 서버 바로·시트 +P 다음 빌드):** 의견함 "반영 보상" 칸(3~20, AI 제안 `rewardSuggest`) → `feedback-notify.mjs`의 `reward` → `/api/feedback/fixed` → 카드마다 보상 자리 3개(`feedback:v1:rewardslot`) → 소식을 받을 때 `/api/feedback/news`가 구매 포인트로(한 달 40P, `feedback:v1:reward:<id>:<달>`). 사용법 My "그 밖에"에 범위 한 줄(14개 언어).
