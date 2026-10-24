@@ -3,20 +3,20 @@ Hello App Review team,
 Thank you for reviewing Languagebank. A screen recording made on a physical iPhone (latest iOS) is attached. It starts from launching the app and shows the typical flow, account sign-up and deletion, the in-app report button, and the subscription and point purchase screens. Answers to your questions follow.
 
 1. Screen recording
-Attached. It shows: launch -> AI data consent -> AI chat (correction and "Show how to say it") -> AI voice call -> monthly videos -> My (study map) -> Plan & billing (subscription titles, monthly length, prices, Terms of Use (EULA) and Privacy Policy links, Restore purchases) -> email sign-up -> account deletion (My > account > Delete account) -> reporting an AI reply with the flag button.
+Attached. It shows: launch -> AI data consent -> AI chat (correction and "Show how to say it") -> AI voice call -> monthly videos -> My (study map) -> Plan & billing (subscription titles, monthly length, prices, Terms of Use (EULA) and Privacy Policy links, Restore purchases) -> optional sign-up (username and password) -> account deletion (My > account > Delete account) -> reporting an AI reply with the flag button.
 There is no content created by other users in this version. Chat between users, voice rooms, profiles and the board are turned off on iOS. The only generated content is AI replies, and every AI reply has a report (flag) button.
 
 2. Purpose and audience
 Languagebank is a language-learning app for adults and teens aged 14 and older who want to actually speak and write a new language. Learners chat and talk out loud with an AI tutor in the language they are learning. When they are stuck they can write in their own language and see how to say it, and each sentence they write is corrected. They can also learn from short curated videos with sentence-by-sentence subtitles. There are no levels: the app shows only what was wrong or missing, and a study map built from what the learner has written. 14 learning languages and 14 app languages are supported.
 
 3. Setup and access
-No login is required. All main features (Chat, Call, Video, My) work right after launch, once the user accepts the AI data consent screen. Creating an account is optional and only keeps progress across devices (My > "Sign in to keep your progress" > email). No demo account or sample files are needed.
+No login is required. All main features (Chat, Call, Video, My) work right after launch, once the user accepts the AI data consent screen. Creating an account is optional and only keeps progress across devices (My > Sign in > create a username and password, or use an email code). Only this app's own accounts are offered; there is no third-party login on iOS. No demo account or sample files are needed.
 
 4. External services
 - Anthropic (Claude) and OpenAI: AI tutor replies, corrections, explanations and translations; OpenAI also provides speech-to-text and the tutor's voice during calls. The user agrees to this on the first-launch consent screen, and it is described in the Privacy Policy.
 - AssemblyAI / ElevenLabs: backup speech-to-text providers used only if the primary transcription service is unavailable.
 - RevenueCat with Apple In-App Purchase: subscriptions and point purchases. All payments go through Apple.
-- Resend: sends the verification email for optional account sign-up.
+- Resend: sends the sign-in code when a user chooses email sign-in.
 - Vercel (server hosting) and Upstash (database): store account data and learned expressions.
 - YouTube: the monthly videos play in the official YouTube embedded player.
 
