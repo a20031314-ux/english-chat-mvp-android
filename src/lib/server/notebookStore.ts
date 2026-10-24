@@ -11,6 +11,7 @@ import {
   isCardId,
   locateMessage,
   locatePrompt,
+  noteFitsUi,
   phraseMessage,
   phrasePrompt,
   placePhrases,
@@ -146,6 +147,8 @@ export async function fileFix(input: {
         ],
       });
       placement = readPlacement(completion.choices[0]?.message?.content ?? "", known, input.explanation ?? "");
+      // 설명이 앱 언어가 아니면 튜터 설명(앱 언어)으로.
+      if (placement.note && !noteFitsUi(placement.note, input.ui)) placement = { ...placement, note: input.explanation ?? "" };
     }
     // 모델을 부르는 동안 사용자가 편집했을 수 있어 다시 읽고 넣는다.
     const latest = await readNotebook(input.userId, input.language);
@@ -253,20 +256,26 @@ export async function locatePart(input: {
     return { node: cached.node, ...(stageOf(cached.node) ? { stage: stageOf(cached.node) } : {}), note: cached.note };
   }
   if (!input.openai || (await getDailyOpUsed(input.userId, "notebookLocate")) >= DAILY_LOCATES) return { node: null, note: "" };
-  input.meter?.("notebookLocate");
-  const completion = await completeChat(input.openai, "notes", {
-    temperature: 0,
-    max_tokens: 250,
-    response_format: { type: "json_object" },
-    messages: [
-      {
-        role: "system",
-        content: locatePrompt({ target: learningLanguageName(input.language), uiName: INTERFACE_LANGUAGE_LABELS[input.ui] ?? "English", options: placeOptions(skeleton, record.custom) }),
-      },
-      { role: "user", content: locateMessage(input.text, input.sentence) },
-    ],
-  });
-  const placed = readPlacement(completion.choices[0]?.message?.content ?? "", known, "");
+  const uiName = INTERFACE_LANGUAGE_LABELS[input.ui] ?? "English";
+  const ask = async (nudge: boolean) => {
+    input.meter?.("notebookLocate");
+    const completion = await completeChat(input.openai!, "notes", {
+      temperature: 0,
+      max_tokens: 250,
+      response_format: { type: "json_object" },
+      messages: [
+        { role: "system", content: locatePrompt({ target: learningLanguageName(input.language), uiName, options: placeOptions(skeleton, record.custom) }) },
+        { role: "user", content: locateMessage(input.text, input.sentence) + (nudge ? `\nWrite "note" in ${uiName}.` : "") },
+      ],
+    });
+    return readPlacement(completion.choices[0]?.message?.content ?? "", known, "");
+  };
+  // 설명이 앱 언어가 아니면 한 번 더 묻고, 그래도 아니면 설명 없이(칸은 쓴다).
+  let placed = await ask(false);
+  if (placed.note && !noteFitsUi(placed.note, input.ui)) {
+    const again = await ask(true).catch(() => null);
+    placed = again && (!again.note || noteFitsUi(again.note, input.ui)) ? { ...again, node: again.node ?? placed.node } : { ...placed, note: "" };
+  }
   if (placed.node) {
     const fresh = await readNotebook(input.userId, input.language);
     await saveNotebook(input.userId, input.language, placePhrases(fresh, [{ key, node: placed.node, note: placed.note, noteUi: input.ui }], now));

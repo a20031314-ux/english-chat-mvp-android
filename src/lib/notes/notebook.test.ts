@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import {
+  noteFitsUi,
   isNodeId,
   phrasePrompt,
   placePhrases,
@@ -183,4 +184,14 @@ test("궁금한 장면 카드: 사람끼리 대화는 문장·화면을 남기�
   assert.equal(book.cards[0]?.kind, "question");
   assert.equal(book.cards[0]?.right, "break the ice");
   assert.equal(parseEdit({ op: "addQuestion", id: "bad id", text: "x", node: null }), null);
+});
+
+test("설명 글자 확인: 앱 언어 글자인지(인용 속 학습 언어 낱말은 뺌)", () => {
+  assert.ok(noteFitsUi('"Il y a" का मतलब "है" — यहाँ कैफ़े की बात है।', "hi"));
+  assert.ok(!noteFitsUi('"Il y a" означает "есть"', "hi"));
+  assert.ok(noteFitsUi('"fui" هو الماضي من ir', "ar"));
+  assert.ok(!noteFitsUi('"Fui" es pretérito de ir', "ar"));
+  assert.ok(noteFitsUi('"have been to" is the present perfect', "en"));
+  assert.ok(!noteFitsUi("「ても」は許可を求める形です", "es"));
+  assert.ok(noteFitsUi("", "ko"));
 });

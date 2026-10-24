@@ -343,6 +343,29 @@ ${input.options}
 Return only json: {"node":"<id or none>","note":"..."}`;
 }
 
+const UI_SCRIPT: Record<string, RegExp> = {
+  ko: /[\uac00-\ud7a3]/gu,
+  ja: /[\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Han}]/gu,
+  zh: /\p{Script=Han}/gu,
+  th: /\p{Script=Thai}/gu,
+  ru: /\p{Script=Cyrillic}/gu,
+  ar: /\p{Script=Arabic}/gu,
+  hi: /\p{Script=Devanagari}/gu,
+};
+
+/**
+ * 설명이 앱 언어 글자로 쓰였는지(인용부호 안 학습 언어 낱말은 빼고 본다) — 힌디어 앱에 러시아어 설명이 온 적 있음(2026-10-24).
+ * 라틴 글자 언어는 글자의 절반 이상이 라틴이면 된다(같은 글자끼리는 가르지 못함).
+ */
+export function noteFitsUi(note: string, ui: string): boolean {
+  const bare = note.replace(/["“”«»「」『』'‘’][^"“”«»「」『』'‘’]*["“”«»「」『』'‘’]/gu, " ");
+  const letters = (bare.match(/\p{L}/gu) ?? []).length;
+  if (!letters) return true;
+  const script = UI_SCRIPT[ui];
+  const hits = (bare.match(script ?? /\p{Script=Latin}/gu) ?? []).length;
+  return script ? hits >= Math.min(3, letters) : hits * 2 >= letters;
+}
+
 export function locateMessage(text: string, sentence: string): string {
   return JSON.stringify({ part: text, ...(sentence && sentence !== text ? { sentence } : {}) });
 }
