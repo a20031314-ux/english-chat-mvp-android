@@ -16,7 +16,7 @@
     "bank:last": { "feature": "통화·오늘의 팩(문장 은행)", "scope": "shared", "onAccountDelete": "해당 없음", "what": "은행 문장이 마지막으로 쓰인 날(언어별)" },
     "bank:said": { "feature": "통화·오늘의 팩(문장 은행)", "scope": "shared", "onAccountDelete": "해당 없음", "what": "은행 문장이 쓰인 횟수(언어별, 평생)" },
     "bank:written": { "feature": "통화·오늘의 팩(문장 은행)", "scope": "shared", "onAccountDelete": "해당 없음", "what": "모델이 새로 쓴 대사 모음(나중에 은행 후보)" },
-    "board:v1": { "feature": "게시판", "scope": "shared", "onAccountDelete": "지움", "what": "글·댓글·글쓴이별 하루/시간 횟수, 좋아요 수·누른 사람·내가 누른 글(계정 지우면 내 좋아요를 되돌림)" },
+    "board:v1": { "feature": "게시판", "scope": "shared", "onAccountDelete": "지움", "what": "글(주제·붙인 방/단체방 id)·언어×주제 목록·댓글·글쓴이별 하루/시간 횟수, 좋아요 수·누른 사람·내가 누른 글(계정 지우면 내 좋아요를 되돌림)" },
     "brief:v1": { "feature": "채팅", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "튜터에게 주는 학습자 요약(짧게 캐시)" },
     "curriculum:": { "feature": "지도·미션", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "학습 지도·이전 지도·미션·약점(언어별)" },
     "dm:v1": { "feature": "메시지(1:1)", "scope": "room", "onAccountDelete": "남음(30일 뒤 만료)", "what": "1:1 대화·요청·차례 번호" },

@@ -146,3 +146,31 @@ test("한 사람의 최근 글은 최신 순으로 정한 수만", async () => {
   const posts = await listPostsBy(author, 2);
   assert.deepEqual(posts.map((post) => post.text), ["tercera", "segunda"]);
 });
+
+test("posts split by topic inside each learning language; old posts count as free", async () => {
+  // 주제 칸이 생기기 전 글(주제 없음) — 그 언어를 처음 주제로 열 때 "자유"에 들어간다.
+  const old = ok(await createPost({ author: "acc_topic1", language: "th", text: "สวัสดีครับ ผมเรียนภาษาไทย" }));
+  const mate = ok(await createPost({ author: "acc_topic2", language: "th", text: "หาเพื่อนเรียนตอนเย็น", topic: "mate" }));
+  const question = ok(await createPost({ author: "acc_topic2", language: "th", text: "¿Cómo se dice 'gracias'?", topic: "question" }));
+  const other = ok(await createPost({ author: "acc_topic2", language: "es", text: "Busco compañero", topic: "mate" }));
+  assert.equal(mate.topic, "mate");
+  assert.equal(old.topic, undefined);
+
+  const ids = async (topic: Parameters<typeof listPosts>[0]["topic"], language = "th") =>
+    (await listPosts({ language, topic })).map((post) => post.id);
+  assert.deepEqual(await ids("mate"), [mate.id]);
+  assert.deepEqual(await ids("question"), [question.id]);
+  assert.ok((await ids("free")).includes(old.id));
+  assert.ok(!(await ids("free")).includes(mate.id));
+  assert.deepEqual(await ids("mate", "es"), [other.id]);
+  // 주제 없이 열면 그 언어 전부.
+  assert.ok((await ids(undefined)).includes(mate.id) && (await ids(undefined)).includes(old.id));
+
+  // 붙일 것은 그 주제일 때만 남는다.
+  const room = ok(await createPost({ author: "acc_topic2", language: "th", text: "x", topic: "room", roomId: "r_abc", groupId: "g_nope" }));
+  assert.equal(room.roomId, "r_abc");
+  assert.equal(room.groupId, undefined);
+
+  ok(await deletePost("acc_topic2", mate.id));
+  assert.deepEqual(await ids("mate"), []);
+});

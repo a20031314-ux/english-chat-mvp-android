@@ -115,7 +115,7 @@ export function PeopleTab({
               ))}
             </div>
             {view === "board" ? (
-              <BoardView t={t} locale={locale} targetLanguage={targetLanguage} />
+              <BoardView t={t} locale={locale} targetLanguage={targetLanguage} onOpenGroup={onOpenGroup} />
             ) : view === "icons" ? (
               <IconsView locale={locale} targetLanguage={targetLanguage} />
             ) : (

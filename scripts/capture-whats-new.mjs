@@ -1145,7 +1145,7 @@ const STEPS = {
     });
     await page.evaluate(() => {
       localStorage.setItem("peopleViewMode", "board");
-      localStorage.setItem("boardFilter", "all");
+      localStorage.setItem("boardTopic", "all");
     });
     await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
     await wait(2500);

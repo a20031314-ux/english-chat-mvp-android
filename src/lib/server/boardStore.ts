@@ -23,6 +23,8 @@ import {
   canEditPost,
   newBoardId,
   replyRoot,
+  topicOf,
+  type BoardTopic,
   withReplies,
   type BoardComment,
   type BoardPost,
@@ -35,6 +37,8 @@ import { BOARD_BOOST_MAX_MS } from "../rooms/contribution.ts";
  *   board:v1:c:<id>             댓글 목록(JSON 줄, 고치거나 지우면 목록을 다시 씀)
  *   board:v1:all                ZSET 모든 글(점수 = 올린 시각)
  *   board:v1:lang:<언어>        ZSET 그 학습 언어 글
+ *   board:v1:lang:<언어>:t:<주제> ZSET 그 언어·주제 글(2026-10-25). 옛 글(주제 없음)은 그 언어를 처음 주제로 열 때 "free"에 넣는다
+ *   board:v1:tidx:<언어>        그 언어의 옛 글을 주제 목록에 넣었는지(있으면 넣음)
  *   board:v1:by:<계정>          ZSET 그 사람의 글 — 계정 삭제 때
  *   board:v1:commented:<계정>   ZSET 그 사람이 댓글 단 글 — 계정 삭제 때
  *   board:v1:likes:<id>         좋아요 수(숫자)
@@ -46,6 +50,8 @@ const postKey = (id: string) => `board:v1:post:${id}`;
 const commentsKey = (id: string) => `board:v1:c:${id}`;
 const ALL = "board:v1:all";
 const langKey = (language: string) => `board:v1:lang:${language}`;
+const topicKey = (language: string, topic: BoardTopic) => `board:v1:lang:${language}:t:${topic}`;
+const topicIndexedKey = (language: string) => `board:v1:tidx:${language}`;
 const byKey = (account: string) => `board:v1:by:${account}`;
 const commentedKey = (account: string) => `board:v1:commented:${account}`;
 const likesKey = (id: string) => `board:v1:likes:${id}`;
@@ -78,10 +84,29 @@ export async function readComments(id: string): Promise<BoardComment[]> {
   return parseComments(await kvListRange(commentsKey(id), 0, -1));
 }
 
-/** 최신순 한 쪽. before를 주면 그보다 오래된 것부터(더 보기). */
-export async function listPosts(input: { language?: string; offset?: number }): Promise<BoardPost[]> {
+/**
+ * 주제 목록이 생기기 전(2026-10-25) 글은 주제 목록에 없다 — 그 언어를 처음 주제로 열 때 한 번 "free"에 넣는다
+ * (새 글은 올릴 때 바로 들어간다. 겹쳐 넣어도 ZSET이라 하나).
+ */
+async function ensureTopicIndex(language: string): Promise<void> {
+  if (!(await kvSetJsonIfAbsent(topicIndexedKey(language), 1, KEEP_SECONDS))) return;
+  const rows = await kvZRevRange(langKey(language), 0, -1);
+  if (!rows.length) return;
+  const posts = await kvGetJsonMany<BoardPost>(rows.map((row) => postKey(row.member)));
+  await Promise.all(
+    posts.map((post, index) => (post ? kvZAdd(topicKey(language, topicOf(post)), rows[index]!.score, post.id) : Promise.resolve())),
+  );
+}
+
+/** 최신순 한 쪽(offset부터 BOARD_PAGE개). 주제는 언어와 같이 줄 때만(언어마다 게시판 하나). */
+export async function listPosts(input: { language?: string; topic?: BoardTopic; offset?: number }): Promise<BoardPost[]> {
   const offset = Math.max(0, Math.floor(input.offset ?? 0));
-  const rows = await kvZRevRange(input.language ? langKey(input.language) : ALL, offset, offset + BOARD_PAGE - 1);
+  let key = input.language ? langKey(input.language) : ALL;
+  if (input.language && input.topic) {
+    await ensureTopicIndex(input.language);
+    key = topicKey(input.language, input.topic);
+  }
+  const rows = await kvZRevRange(key, offset, offset + BOARD_PAGE - 1);
   if (!rows.length) return [];
   const posts = await kvGetJsonMany<BoardPost>(rows.map((row) => postKey(row.member)));
   return posts.filter((post): post is BoardPost => post !== null);
@@ -99,6 +124,10 @@ export async function createPost(input: {
   text: string;
   images?: MediaRef[];
   boostMs?: number;
+  /** 주제(없으면 자유). 보이스룸·단체방은 붙일 것을 라우트가 확인한 뒤 넘긴다. */
+  topic?: BoardTopic;
+  roomId?: string;
+  groupId?: string;
 }): Promise<WriteResult<BoardPost>> {
   if ((await kvIncrBy(dayKey(input.author), 1, 2 * 24 * 60 * 60)) > BOARD_POSTS_PER_DAY) return { error: "LIMIT" };
   const post: BoardPost = {
@@ -109,12 +138,16 @@ export async function createPost(input: {
     at: Date.now(),
     comments: 0,
     ...(input.images?.length ? { images: input.images } : {}),
+    ...(input.topic && input.topic !== "free" ? { topic: input.topic } : {}),
+    ...(input.topic === "room" && input.roomId ? { roomId: input.roomId } : {}),
+    ...(input.topic === "group" && input.groupId ? { groupId: input.groupId } : {}),
   };
   await kvSetJson(postKey(post.id), post);
   const rank = post.at + Math.max(0, Math.min(input.boostMs ?? 0, BOARD_BOOST_MAX_MS));
   await Promise.all([
     kvZAdd(ALL, rank, post.id),
     kvZAdd(langKey(post.language), rank, post.id),
+    kvZAdd(topicKey(post.language, topicOf(post)), rank, post.id),
     kvZAdd(byKey(post.author), post.at, post.id),
   ]);
   return { ok: post };
@@ -135,7 +168,12 @@ async function removePost(post: BoardPost): Promise<void> {
   const media = [...(post.images ?? []).map((image) => image.id), ...comments.flatMap((comment) => (comment.image ? [comment.image.id] : []))];
   if (media.length) await deleteMedia(media);
   await kvDelete([postKey(post.id), commentsKey(post.id)]);
-  await Promise.all([kvZRem(ALL, post.id), kvZRem(langKey(post.language), post.id), kvZRem(byKey(post.author), post.id)]);
+  await Promise.all([
+    kvZRem(ALL, post.id),
+    kvZRem(langKey(post.language), post.id),
+    kvZRem(topicKey(post.language, topicOf(post)), post.id),
+    kvZRem(byKey(post.author), post.id),
+  ]);
   // 좋아요: 누른 사람마다 표시와 "내가 누른 글"에서 빼고, 수·목록을 지운다.
   const likers = await kvZRevRange(likersKey(post.id), 0, -1);
   if (likers.length) {

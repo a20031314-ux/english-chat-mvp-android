@@ -10,13 +10,32 @@ import { BodyLayer } from "@/components/FullScreenLayer";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { LikeButton, ThankButton } from "@/components/account/ProfileFacts";
 import { seeInLanguage } from "@/lib/account/profileCopy";
-import { BOARD_COMMENT_MAX_CHARS, BOARD_POST_MAX_CHARS, threadComments, withReplies, type BoardAuthor, type BoardComment, type BoardPost } from "@/lib/rooms/board";
+import {
+  BOARD_COMMENT_MAX_CHARS,
+  BOARD_POST_MAX_CHARS,
+  BOARD_TOPICS,
+  isBoardTopic,
+  threadComments,
+  topicOf,
+  withReplies,
+  type BoardAuthor,
+  type BoardComment,
+  type BoardPost,
+  type BoardTopic,
+} from "@/lib/rooms/board";
+import { MateButton } from "./MateAsk";
+import { requestRoom } from "@/lib/rooms/openDm";
+import type { RoomSummary } from "@/lib/rooms/protocol";
+import type { GroupSummary } from "@/lib/rooms/group";
 import {
   RoomApiError,
   boardComment,
   boardDelete,
   boardDeleteComment,
   boardEdit,
+  boardJoinGroup,
+  groupMine,
+  listRooms,
   boardEditComment,
   boardList,
   boardOpen,
@@ -27,25 +46,37 @@ import { requestDm } from "@/lib/rooms/openDm";
 import { Face, ProfileSheet, photoErrorText } from "./RoomParts";
 
 /**
- * 게시판(사람 탭의 "게시판" 보기, rooms/board.ts): 최신순 글, 전체 / 같은 언어를 배우는 사람(내 학습 언어로 쓴 글)
- * / 배우는 언어·쓰는 말이 같은 사람(그중 글쓴이가 내 모국어를 쓰는 글 — 서버가 거름, lib/rooms/langMatch.ts),
+ * 게시판(사람 탭의 "게시판" 보기, rooms/board.ts): 학습 언어마다 하나(상단바 언어 = 커뮤니티, 2026-10-25),
+ * 그 안을 주제 칩으로 — 전체 · 💬 자유 · ❓ 질문 · 🤝 메이트 · 🎙 보이스룸 · 👥 단체방. 최신순.
  * 글쓰기, 글을 누르면 시트(전체 글·내 언어로 보기·댓글). 고치기·지우기는 쓴 사람에게만 보인다
  * (서버도 같은 규칙). 글쓴이 이름을 누르면 프로필 시트 — 팔로우·메시지·차단·신고(글이 근거로 같이 감).
+ * 메이트 글은 메이트 신청, 보이스룸 글은 글쓴이의 방에 들어가기, 단체방 글은 참여하기(서버 boardLinks.ts).
  */
 
 type Names = Record<string, string>;
 
-const FILTER_KEY = "boardFilter";
+const TOPIC_KEY = "boardTopic";
+const TOPIC_EMOJI: Record<BoardTopic, string> = { free: "💬", question: "❓", mate: "🤝", room: "🎙", group: "👥" };
 
-type BoardFilter = "all" | "mine" | "both";
+type BoardFilter = "all" | BoardTopic;
 
 function readFilter(): BoardFilter {
   try {
-    const saved = localStorage.getItem(FILTER_KEY);
-    return saved === "mine" || saved === "both" ? saved : "all";
+    const saved = localStorage.getItem(TOPIC_KEY);
+    return isBoardTopic(saved) ? saved : "all";
   } catch {
     return "all";
   }
+}
+
+function topicName(t: RoomCopy, topic: BoardTopic): string {
+  return {
+    free: t.boardTopicFree,
+    question: t.boardTopicQuestion,
+    mate: t.boardTopicMate,
+    room: t.boardTopicRoom,
+    group: t.boardTopicGroup,
+  }[topic];
 }
 
 function when(at: number, locale: string): string {
@@ -62,7 +93,18 @@ const merge = (names: Names, authors: BoardAuthor[]): Names => ({
   ...Object.fromEntries(authors.map((author) => [author.id, author.nickname])),
 });
 
-export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: string; targetLanguage: string }) {
+export function BoardView({
+  t,
+  locale,
+  targetLanguage,
+  onOpenGroup,
+}: {
+  t: RoomCopy;
+  locale: string;
+  targetLanguage: string;
+  /** 단체방 글에서 참여한 뒤 "단체방 열기" — 대화 탭에서 그 단체방(AppHome). */
+  onOpenGroup?: (groupId: string) => void;
+}) {
   const me = useSyncExternalStore(subscribeSession, () => readCachedAccount()?.id ?? null, () => null);
   const [filter, setFilter] = useState<BoardFilter>(readFilter);
   const [posts, setPosts] = useState<BoardPost[] | null>(null);
@@ -72,22 +114,21 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
   const [writing, setWriting] = useState(false);
   const [openId, setOpenId] = useState<string | null>(null);
 
-  const language = filter === "all" ? undefined : targetLanguage;
-  const both = filter === "both";
+  const topic = filter === "all" ? undefined : filter;
   const load = useCallback(
     async (offset: number) => {
-      const body = await boardList({ language, offset, ...(both ? { match: "both" as const, ui: locale } : {}) });
+      const body = await boardList({ language: targetLanguage, offset, ...(topic ? { topic } : {}) });
       setNames((current) => merge(current, body.authors));
       setPosts((current) => (offset === 0 ? body.posts : [...(current ?? []), ...body.posts]));
       setNext(body.next);
       setMore(body.next - offset >= 20);
     },
-    [language, both, locale],
+    [targetLanguage, topic],
   );
 
   useEffect(() => {
     let cancelled = false;
-    void boardList({ language, offset: 0, ...(both ? { match: "both" as const, ui: locale } : {}) })
+    void boardList({ language: targetLanguage, offset: 0, ...(topic ? { topic } : {}) })
       .then((body) => {
         if (cancelled) return;
         setNames((current) => merge(current, body.authors));
@@ -101,13 +142,13 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
     return () => {
       cancelled = true;
     };
-  }, [language, both, locale]);
+  }, [targetLanguage, topic]);
 
   const choose = (value: BoardFilter) => {
     if (value !== filter) setPosts(null);
     setFilter(value);
     try {
-      localStorage.setItem(FILTER_KEY, value);
+      localStorage.setItem(TOPIC_KEY, value);
     } catch {
       // Kept for this session only.
     }
@@ -117,7 +158,7 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
     <div>
       <div className="flex items-center gap-1">
         <div className="flex min-w-0 gap-1 overflow-x-auto">
-        {(["all", "mine", "both"] as const).map((value) => (
+        {(["all", ...BOARD_TOPICS] as const).map((value) => (
           <button
             key={value}
             type="button"
@@ -125,7 +166,7 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
             onClick={() => choose(value)}
             className={`shrink-0 rounded-lg px-2.5 py-1 text-caption ${filter === value ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
           >
-            {value === "all" ? t.filterAll : value === "mine" ? t.peopleSame : t.peopleSameBoth}
+            {value === "all" ? t.filterAll : `${TOPIC_EMOJI[value]} ${topicName(t, value)}`}
           </button>
         ))}
         </div>
@@ -159,6 +200,11 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
                 <span className="flex items-center gap-2">
                   <Face accountId={post.author} name={names[post.author] ?? ""} size={24} />
                   <span className="min-w-0 flex-1 truncate text-caption text-slate-200">{names[post.author] || "?"}</span>
+                  {filter === "all" && topicOf(post) !== "free" ? (
+                    <span className="shrink-0 text-meta text-slate-400">
+                      {TOPIC_EMOJI[topicOf(post)]} {topicName(t, topicOf(post))}
+                    </span>
+                  ) : null}
                   <span className="shrink-0 text-meta text-slate-500">{when(post.at, locale)}</span>
                 </span>
                 <span dir="auto" className="mt-2 line-clamp-4 block whitespace-pre-wrap text-chat text-ink">
@@ -173,6 +219,10 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
                   </span>
                 ) : null}
               </button>
+              {/* 붙인 방·단체방, 메이트 신청 — 글 열기 버튼 밖에(버튼 안에 버튼을 두지 않게). */}
+              <div className="px-3 pb-1 empty:hidden">
+                <PostLink t={t} locale={locale} me={me} post={post} onOpenGroup={onOpenGroup} onChanged={(next) => setPosts((list) => (list ?? []).map((item) => (item.id === next.id ? next : item)))} />
+              </div>
               {/* 좋아요는 글 열기 버튼 밖에(버튼 안에 버튼을 두지 않게). */}
               <div className="flex items-center gap-2 px-3 pb-2 text-meta text-slate-500">
                 <LikeButton
@@ -212,11 +262,14 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
           max={BOARD_POST_MAX_CHARS}
           submitLabel={t.boardPost}
           maxPhotos={MEDIA_PER_POST}
+          topic={topic ?? "free"}
           onClose={() => setWriting(false)}
-          onSubmit={async (text, images) => {
-            const { post } = await boardWrite(targetLanguage, text, images.map((image) => image.id));
+          onSubmit={async (text, images, link) => {
+            const { post } = await boardWrite(targetLanguage, text, images.map((image) => image.id), link);
             if (me) setNames((current) => ({ ...current, [me]: current[me] ?? readCachedAccount()?.profile?.nickname ?? "" }));
-            setPosts((current) => [post, ...(current ?? [])]);
+            // 다른 주제 칩을 보고 있었으면 그 글이 보이도록 그 주제로.
+            if (topic && topicOf(post) !== topic) choose(topicOf(post));
+            else setPosts((current) => [post, ...(current ?? [])]);
             setWriting(false);
           }}
         />
@@ -229,6 +282,7 @@ export function BoardView({ t, locale, targetLanguage }: { t: RoomCopy; locale: 
           targetLanguage={targetLanguage}
           me={me}
           postId={openId}
+          onOpenGroup={onOpenGroup}
           onClose={() => setOpenId(null)}
           onChanged={(post) =>
             setPosts((current) =>
@@ -278,6 +332,7 @@ function Composer({
   onClose,
   onSubmit,
   maxPhotos = 0,
+  topic: initialTopic,
 }: {
   t: RoomCopy;
   title: string;
@@ -285,11 +340,15 @@ function Composer({
   max: number;
   submitLabel: string;
   onClose: () => void;
-  /** images: 붙인 사진(올린 뒤). 고치기 창은 사진을 안 받는다(maxPhotos 0). */
-  onSubmit: (text: string, images: MediaRef[]) => Promise<void>;
+  /** images: 붙인 사진(올린 뒤). 고치기 창은 사진을 안 받는다(maxPhotos 0). link: 새 글의 주제와 붙인 방·단체방. */
+  onSubmit: (text: string, images: MediaRef[], link: { topic: BoardTopic; roomId?: string; groupId?: string }) => Promise<void>;
   maxPhotos?: number;
+  /** 새 글이면 처음 주제(지금 보고 있는 칩) — 있으면 주제 칩과 붙일 것을 고른다. 고치기 창은 없음. */
+  topic?: BoardTopic;
 }) {
   const [text, setText] = useState(initial);
+  const [topic, setTopic] = useState<BoardTopic>(initialTopic ?? "free");
+  const [linkId, setLinkId] = useState("");
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const photos = usePhotoPicks(maxPhotos);
@@ -306,7 +365,11 @@ function Composer({
       return;
     }
     try {
-      await onSubmit(text.trim(), images);
+      await onSubmit(text.trim(), images, {
+        topic,
+        ...(topic === "room" && linkId ? { roomId: linkId } : {}),
+        ...(topic === "group" && linkId ? { groupId: linkId } : {}),
+      });
     } catch (caught) {
       setError(errorText(t, caught));
       setBusy(false);
@@ -321,6 +384,27 @@ function Composer({
         </button>
       </div>
       <div className="p-4">
+        {initialTopic ? (
+          <>
+            <div className="mb-2 flex gap-1 overflow-x-auto">
+              {BOARD_TOPICS.map((value) => (
+                <button
+                  key={value}
+                  type="button"
+                  aria-pressed={topic === value}
+                  onClick={() => {
+                    setTopic(value);
+                    setLinkId("");
+                  }}
+                  className={`shrink-0 rounded-lg px-2.5 py-1 text-caption ${topic === value ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
+                >
+                  {TOPIC_EMOJI[value]} {topicName(t, value)}
+                </button>
+              ))}
+            </div>
+            {topic === "room" || topic === "group" ? <LinkPicker t={t} kind={topic} value={linkId} onChange={setLinkId} /> : null}
+          </>
+        ) : null}
         <textarea
           dir="auto"
           value={text}
@@ -358,6 +442,7 @@ function PostSheet({
   postId,
   onClose,
   onChanged,
+  onOpenGroup,
 }: {
   t: RoomCopy;
   locale: string;
@@ -365,6 +450,7 @@ function PostSheet({
   me: string | null;
   postId: string;
   onClose: () => void;
+  onOpenGroup?: (groupId: string) => void;
   /** 고쳤으면 새 글, 지웠으면 null. */
   onChanged: (post: BoardPost | null) => void;
 }) {
@@ -629,6 +715,23 @@ function PostSheet({
                 ))}
               </div>
             ) : null}
+            <div className="mt-3 empty:hidden">
+              <PostLink
+                t={t}
+                locale={locale}
+                me={me}
+                post={post}
+                onOpenGroup={(id) => {
+                  onClose();
+                  onOpenGroup?.(id);
+                }}
+                onJoinRoom={onClose}
+                onChanged={(next) => {
+                  setPost(next);
+                  onChanged(next);
+                }}
+              />
+            </div>
             {/* 앱 언어로 쓴 글을 같은 언어로 번역하면 말투만 바뀌어 나온다 — 그때는 버튼을 숨긴다. */}
             {post.language !== locale ? (
               <button type="button" onClick={() => void translate(post.id, post.text)} className="mt-2 text-caption text-info">
@@ -711,7 +814,7 @@ function PostSheet({
           onSubmit={async (text) => {
             if (editing.kind === "post") {
               const { post: next } = await boardEdit(post.id, text);
-              const kept = { ...next, comments: post.comments, likes: post.likes, liked: post.liked };
+              const kept = { ...next, comments: post.comments, likes: post.likes, liked: post.liked, room: post.room, group: post.group };
               setPost(kept);
               onChanged(kept);
             } else {
@@ -827,4 +930,148 @@ function PhotoPicks({ t, photos, busy, compact = false }: { t: RoomCopy; photos:
       ))}
     </div>
   );
+}
+
+/**
+ * 글쓰기에서 붙일 것 고르기: 보이스룸이면 지금 열어 둔 내 방, 단체방이면 내가 있는 단체방(메이트 방 빼고).
+ * 없으면 "안 붙임"만 — 글은 그대로 올라간다.
+ */
+function LinkPicker({ t, kind, value, onChange }: { t: RoomCopy; kind: "room" | "group"; value: string; onChange: (id: string) => void }) {
+  const [choices, setChoices] = useState<{ id: string; name: string }[] | null>(null);
+  useEffect(() => {
+    let cancelled = false;
+    const load =
+      kind === "room"
+        ? listRooms().then((rooms: RoomSummary[]) => rooms.filter((room) => room.mine && !room.private).map((room) => ({ id: room.id, name: room.name })))
+        : groupMine().then(({ groups }: { groups: GroupSummary[] }) =>
+            groups.filter((row) => !row.invite && row.group.team?.kind !== "mate").map((row) => ({ id: row.group.id, name: row.group.name })),
+          );
+    void load
+      .then((rows) => {
+        if (cancelled) return;
+        setChoices(rows);
+        // 하나뿐이면 미리 골라 둔다.
+        if (rows.length === 1) onChange(rows[0]!.id);
+      })
+      .catch(() => {
+        if (!cancelled) setChoices([]);
+      });
+    return () => {
+      cancelled = true;
+    };
+    // onChange는 부모 setState라 바뀌지 않는다.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [kind]);
+  return (
+    <div className="mb-2 flex items-center gap-1 overflow-x-auto">
+      <span className="shrink-0 text-meta text-slate-500">{kind === "room" ? t.boardAttachRoom : t.boardAttachGroup}</span>
+      {[{ id: "", name: t.boardAttachNone }, ...(choices ?? [])].map((choice) => (
+        <button
+          key={choice.id || "none"}
+          type="button"
+          aria-pressed={value === choice.id}
+          onClick={() => onChange(choice.id)}
+          className={`max-w-[12rem] shrink-0 truncate rounded-lg border px-2.5 py-1 text-caption ${value === choice.id ? "border-info/50 bg-info/15 text-ink" : "border-line text-slate-400"}`}
+        >
+          {choice.id ? `${kind === "room" ? TOPIC_EMOJI.room : TOPIC_EMOJI.group} ` : ""}
+          <bdi>{choice.name}</bdi>
+        </button>
+      ))}
+    </div>
+  );
+}
+
+/**
+ * 글에 붙은 것과 그 버튼(목록 카드·글 시트 같이): 메이트 글 → 메이트 신청, 보이스룸 → 들어가기(닫혔으면 표시만),
+ * 단체방 → 참여하기 / 단체방 열기(참여했으면) / 찼음·끝남. 내 글에는 상태만.
+ */
+function PostLink({
+  t,
+  locale,
+  me,
+  post,
+  onOpenGroup,
+  onJoinRoom,
+  onChanged,
+}: {
+  t: RoomCopy;
+  locale: string;
+  me: string | null;
+  post: BoardPost;
+  onOpenGroup?: (groupId: string) => void;
+  onJoinRoom?: () => void;
+  onChanged: (post: BoardPost) => void;
+}) {
+  const [busy, setBusy] = useState(false);
+  const [error, setError] = useState("");
+  const mine = Boolean(me && post.author === me);
+  const topic = topicOf(post);
+  if (topic === "mate") return mine || !me ? null : <MateButton accountId={post.author} locale={locale} />;
+  const row = "flex items-center gap-2 rounded-lg border border-line bg-white/[0.04] px-3 py-2";
+  const button = "tb-btn shrink-0 rounded-lg px-3 py-1.5 text-caption font-semibold disabled:opacity-40";
+  if (topic === "room" && post.room) {
+    const room = post.room;
+    return (
+      <div className={row}>
+        <span className="min-w-0 flex-1 truncate text-caption text-ink">
+          {TOPIC_EMOJI.room} <bdi>{room.name || "?"}</bdi>
+          <span className="ms-1 text-meta text-slate-500">{room.open ? t.groupMembers.replace("{n}", String(room.people)) : t.boardRoomClosed}</span>
+        </span>
+        {room.open ? (
+          <button
+            type="button"
+            className={button}
+            onClick={() => {
+              onJoinRoom?.();
+              requestRoom(room.id);
+            }}
+          >
+            {t.boardJoinRoom}
+          </button>
+        ) : null}
+      </div>
+    );
+  }
+  if (topic === "group" && post.group) {
+    const group = post.group;
+    const status = group.gone ? t.boardGroupEnded : `${group.members}/${group.max}`;
+    return (
+      <div>
+        <div className={row}>
+          <span className="min-w-0 flex-1 truncate text-caption text-ink">
+            {TOPIC_EMOJI.group} <bdi>{group.name || "?"}</bdi>
+            <span className="ms-1 text-meta text-slate-500">{status}</span>
+          </span>
+          {group.joined && onOpenGroup ? (
+            <button type="button" className={button} onClick={() => onOpenGroup(group.id)}>
+              {t.boardOpenGroup}
+            </button>
+          ) : !mine && !group.gone && !group.joined ? (
+            <button
+              type="button"
+              disabled={busy || group.full}
+              className={button}
+              onClick={async () => {
+                setBusy(true);
+                setError("");
+                try {
+                  const { group: next } = await boardJoinGroup(post.id);
+                  onChanged({ ...post, group: next });
+                } catch (caught) {
+                  const code = caught instanceof RoomApiError ? caught.code : "";
+                  setError(code === "FULL" ? t.boardGroupFull : code === "GONE" ? t.boardGroupEnded : code === "FORBIDDEN" ? t.groupRemoved : errorText(t, caught));
+                } finally {
+                  setBusy(false);
+                }
+              }}
+            >
+              {group.full ? t.boardGroupFull : t.boardJoinGroup}
+            </button>
+          ) : null}
+        </div>
+        {error ? <p className="mt-1 text-caption text-bad">{error}</p> : null}
+      </div>
+    );
+  }
+  return null;
 }
