@@ -641,8 +641,8 @@
     "whatsNewFindInMyBody": "文の分析で、その部分がどの項目かを探してすぐ開き、そのときの画面と一緒に残せます。",
     "whatsNewNotoTitle": "動く基本アイコン",
     "whatsNewNotoBody": "動く Noto 絵文字の2パックが最初から入っています。Room のチャットでも送れます。",
-    "whatsNewIconSaleTitle": "アイコンを販売",
-    "whatsNewIconSaleBody": "自分で作ったアイコンパックに2〜30Pの価格をつけて販売できます。ポイントの70%は作った人に入ります。"
+    "whatsNewIconSaleTitle": "アイコンを作って販売",
+    "whatsNewIconSaleBody": "「✏️ つくる」で写真・文字・スタンプを重ねて動くアイコンを作り、パックを2〜30Pで販売できます。よく使われるパックには🔥。"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1286,8 +1286,8 @@
     "whatsNewFindInMyBody": "在句子分析里找到这部分属于哪个部分并马上打开，还能连同当时的画面一起保存。",
     "whatsNewNotoTitle": "会动的基础图标",
     "whatsNewNotoBody": "两包 Noto 动态表情一开始就有，在 Room 聊天里也能发送。",
-    "whatsNewIconSaleTitle": "出售你的图标",
-    "whatsNewIconSaleBody": "可以给自己做的图标包定 2–30P 的价格出售。积分的 70% 归制作者。"
+    "whatsNewIconSaleTitle": "制作并出售图标",
+    "whatsNewIconSaleBody": "用“✏️ 制作”把照片、文字、贴纸叠成动态图标，图标包可定价 2–30P 出售。热门包带 🔥。"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1933,8 +1933,8 @@
     "whatsNewFindInMyBody": "Từ phân tích câu, tìm phần đó thuộc mục nào, mở ngay và lưu kèm ảnh màn hình lúc đó.",
     "whatsNewNotoTitle": "Biểu tượng động cơ bản",
     "whatsNewNotoBody": "Hai gói biểu tượng cảm xúc động Noto có sẵn từ đầu. Bạn cũng gửi được trong trò chuyện Room.",
-    "whatsNewIconSaleTitle": "Bán biểu tượng của bạn",
-    "whatsNewIconSaleBody": "Đặt giá 2–30P cho gói biểu tượng bạn tự làm. 70% số điểm thuộc về người tạo."
+    "whatsNewIconSaleTitle": "Tạo và bán biểu tượng",
+    "whatsNewIconSaleBody": "Ghép ảnh, chữ, nhãn dán thành biểu tượng động với «✏️ Tạo», và bán gói giá 2–30P. Gói được dùng nhiều có 🔥."
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2585,8 +2585,8 @@
     "whatsNewFindInMyBody": "Depuis l’analyse de phrase, trouvez la section d’une partie, ouvrez-la et gardez-la avec l’écran du moment.",
     "whatsNewNotoTitle": "Icônes animées de base",
     "whatsNewNotoBody": "Deux packs d’emoji animés Noto sont là dès le départ. Vous pouvez aussi les envoyer dans le chat des salons.",
-    "whatsNewIconSaleTitle": "Vendez vos icônes",
-    "whatsNewIconSaleBody": "Fixez un prix de 2 à 30P pour un pack d'icônes que vous avez créé. 70 % des points vous reviennent."
+    "whatsNewIconSaleTitle": "Créez et vendez des icônes",
+    "whatsNewIconSaleBody": "Superposez photos, texte et stickers en icônes animées avec « ✏️ Créer », et vendez vos packs de 2 à 30P. Les packs très utilisés ont un 🔥."
   },
   "it": {
     "archive": "Report",
@@ -3428,8 +3428,8 @@
     "whatsNewFindInMyBody": "Dall’analisi della frase trova a quale sezione appartiene una parte, aprila e salvala con la schermata di quel momento.",
     "whatsNewNotoTitle": "Icone animate di base",
     "whatsNewNotoBody": "Due pacchetti di emoji animate Noto ci sono fin dall’inizio. Puoi inviarli anche nella chat delle stanze.",
-    "whatsNewIconSaleTitle": "Vendi le tue icone",
-    "whatsNewIconSaleBody": "Metti un prezzo da 2 a 30P a un pacchetto di icone che hai creato. Il 70% dei punti va a te."
+    "whatsNewIconSaleTitle": "Crea e vendi icone",
+    "whatsNewIconSaleBody": "Unisci foto, testo e sticker in icone animate con «✏️ Crea» e vendi i pacchetti a 2–30P. I più usati hanno un 🔥."
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4083,8 +4083,8 @@
     "whatsNewFindInMyBody": "Na análise da frase, encontre a secção de uma parte, abra-a e guarde-a com o ecrã desse momento.",
     "whatsNewNotoTitle": "Ícones animados básicos",
     "whatsNewNotoBody": "Dois pacotes de emojis animados Noto vêm incluídos. Também pode enviá-los no chat das salas.",
-    "whatsNewIconSaleTitle": "Venda seus ícones",
-    "whatsNewIconSaleBody": "Coloque um preço de 2 a 30P num pacote de ícones que você criou. 70% dos pontos ficam com você."
+    "whatsNewIconSaleTitle": "Crie e venda ícones",
+    "whatsNewIconSaleBody": "Junte fotos, texto e figurinhas em ícones animados com «✏️ Criar» e venda pacotes por 2–30P. Os mais usados ganham 🔥."
   },
   "ru": {
     "archive": "Отчёты",
@@ -4924,8 +4924,8 @@
     "whatsNewFindInMyBody": "Из разбора предложения найдите раздел для этой части, откройте его и сохраните вместе с экраном того момента.",
     "whatsNewNotoTitle": "Анимированные базовые значки",
     "whatsNewNotoBody": "Два набора анимированных эмодзи Noto есть сразу. Их можно отправлять и в чате Room.",
-    "whatsNewIconSaleTitle": "Продавайте свои иконки",
-    "whatsNewIconSaleBody": "Назначьте цену от 2 до 30P набору иконок, который вы сделали. 70% баллов получаете вы."
+    "whatsNewIconSaleTitle": "Создавайте и продавайте иконки",
+    "whatsNewIconSaleBody": "В «✏️ Создать» соберите движущуюся иконку из фото, текста и стикеров и продавайте наборы за 2–30P. У популярных — 🔥."
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5575,8 +5575,8 @@
     "whatsNewFindInMyBody": "Dari analisis kalimat, temukan bagian mana yang cocok, buka langsung, dan simpan bersama layar saat itu.",
     "whatsNewNotoTitle": "Ikon animasi dasar",
     "whatsNewNotoBody": "Dua paket emoji animasi Noto sudah ada sejak awal. Bisa dikirim juga di obrolan Room.",
-    "whatsNewIconSaleTitle": "Jual ikonmu",
-    "whatsNewIconSaleBody": "Beri harga 2–30P untuk paket ikon buatanmu. 70% poinnya untukmu."
+    "whatsNewIconSaleTitle": "Buat dan jual ikon",
+    "whatsNewIconSaleBody": "Tumpuk foto, teks, dan stiker jadi ikon bergerak dengan «✏️ Buat», lalu jual paket 2–30P. Paket populer diberi 🔥."
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6220,8 +6220,8 @@
     "whatsNewFindInMyBody": "من تحليل الجملة، اعرف القسم الذي ينتمي إليه الجزء، وافتحه واحفظه مع شاشة تلك اللحظة.",
     "whatsNewNotoTitle": "أيقونات أساسية متحركة",
     "whatsNewNotoBody": "حزمتان من رموز Noto المتحركة موجودتان من البداية، ويمكنك إرسالها في دردشة الغرف أيضًا.",
-    "whatsNewIconSaleTitle": "بِع أيقوناتك",
-    "whatsNewIconSaleBody": "ضع سعرًا من 2 إلى 30P لحزمة أيقونات صنعتها. تحصل على 70% من النقاط."
+    "whatsNewIconSaleTitle": "اصنع أيقوناتك وبِعها",
+    "whatsNewIconSaleBody": "اجمع الصور والنص والملصقات في أيقونات متحركة عبر «✏️ اصنع»، وبِع الحزم بـ 2–30P. الحزم الرائجة تحمل 🔥."
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6865,8 +6865,8 @@
     "whatsNewFindInMyBody": "จากการวิเคราะห์ประโยค หาว่าส่วนนั้นอยู่หัวข้อไหน เปิดทันที และเก็บไว้พร้อมหน้าจอตอนนั้น",
     "whatsNewNotoTitle": "ไอคอนพื้นฐานแบบเคลื่อนไหว",
     "whatsNewNotoBody": "มีแพ็กอีโมจิเคลื่อนไหว Noto สองแพ็กตั้งแต่แรก และส่งในแชต Room ได้ด้วย",
-    "whatsNewIconSaleTitle": "ขายไอคอนของคุณ",
-    "whatsNewIconSaleBody": "ตั้งราคา 2–30P ให้แพ็กไอคอนที่คุณทำเอง 70% ของพอยต์เป็นของผู้สร้าง"
+    "whatsNewIconSaleTitle": "สร้างและขายไอคอน",
+    "whatsNewIconSaleBody": "ซ้อนรูป ข้อความ และสติกเกอร์เป็นไอคอนเคลื่อนไหวด้วย «✏️ สร้าง» แล้วขายแพ็ก 2–30P แพ็กยอดนิยมจะมี 🔥"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7510,7 +7510,7 @@
     "whatsNewFindInMyBody": "वाक्य विश्लेषण से पता करें कि वह हिस्सा किस भाग का है, तुरंत खोलें और उस पल की स्क्रीन के साथ रखें।",
     "whatsNewNotoTitle": "चलते-फिरते बुनियादी आइकन",
     "whatsNewNotoBody": "Noto के चलते-फिरते इमोजी के दो पैक शुरू से हैं। Room चैट में भी भेज सकते हैं।",
-    "whatsNewIconSaleTitle": "अपने आइकन बेचें",
-    "whatsNewIconSaleBody": "अपने बनाए आइकन पैक की कीमत 2–30P रखें। 70% पॉइंट आपको मिलते हैं।"
+    "whatsNewIconSaleTitle": "आइकन बनाएँ और बेचें",
+    "whatsNewIconSaleBody": "«✏️ बनाएँ» से फ़ोटो, अक्षर और स्टिकर जोड़कर चलते आइकन बनाएँ, और पैक 2–30P में बेचें। लोकप्रिय पैक पर 🔥।"
   }
 }
