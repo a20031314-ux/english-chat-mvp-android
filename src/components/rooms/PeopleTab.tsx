@@ -26,6 +26,7 @@ import { iconCopy } from "@/lib/rooms/iconCopy";
  */
 type PeopleView = "people" | "board" | "icons";
 const VIEW_KEY = "peopleViewMode";
+const VIEW_EMOJI = { people: "👥", board: "📋", icons: "🙂" } as const;
 
 function readView(): PeopleView {
   try {
@@ -62,19 +63,20 @@ export function PeopleTab({
       // Kept for this session only.
     }
   };
+  const VIEW_NAME: Record<PeopleView, string> = { people: t.peopleViewList, board: t.boardTab, icons: iconCopy(locale).tab };
   return (
     <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
         <h1 className="text-base font-semibold text-white">{ui.homeTabPeople}</h1>
         {/* 앱이 없는 친구도: 링크 → Play → 로그인·이름 정하고 입장(lib/invite, 팔로우 없음). */}
-        {account ? <InviteButton locale={locale} /> : null}
+        {/* 친구 초대 보상 카드는 버튼을 누르면 뜨는 시트 안에(2026-10-24 사용자 — 목록 위에서 뺌). */}
+        {account ? <InviteButton locale={locale} sheet={<InviteRewardsCard ui={ui} locale={locale} />} /> : null}
       </header>
       {/* Pingo에서만: 랜덤이 켜져 있으면 랜덤 창구 Spin으로 가는 길(골라서 요청하는 Pingo와 랜덤은 떨어뜨려 둔다). */}
       <SpinLink locale={locale} label={t.randomTitle} />
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         {account ? (
           <>
-            <InviteRewardsCard ui={ui} locale={locale} />
             {teams.length && onOpenGroup ? (
               <section className="mb-4">
                 <h2 className="mb-2 text-sm font-semibold text-slate-300">🤝 {tt.myTeams}</h2>
@@ -96,16 +98,19 @@ export function PeopleTab({
                 </div>
               </section>
             ) : null}
+            {/* 보기 칩은 이모지만(이름은 aria-label·title, 2026-10-24 사용자). */}
             <div className="mb-3 flex gap-1" role="group">
               {(["people", "board", "icons"] as const).map((mode) => (
                 <button
                   key={mode}
                   type="button"
                   aria-pressed={view === mode}
+                  aria-label={VIEW_NAME[mode]}
+                  title={VIEW_NAME[mode]}
                   onClick={() => choose(mode)}
-                  className={`rounded-lg px-3 py-1.5 text-note ${view === mode ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"}`}
+                  className={`rounded-lg px-3 py-1.5 text-body ${view === mode ? "bg-white/15" : "opacity-60 hover:bg-white/10"}`}
                 >
-                  {mode === "people" ? t.peopleViewList : mode === "board" ? t.boardTab : iconCopy(locale).tab}
+                  <span aria-hidden>{VIEW_EMOJI[mode]}</span>
                 </button>
               ))}
             </div>
