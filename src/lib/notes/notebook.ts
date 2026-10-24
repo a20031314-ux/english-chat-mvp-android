@@ -312,7 +312,7 @@ Sections (id — what it is):
 ${input.options}
 
 For each phrase pick one:
-- a grammar section when the phrase is a clear example of that grammar point (prefer the exact point, even one marked "(later)");
+- a grammar section when the phrase is a clear example of that grammar point — match the form the phrase actually uses (its tense, aspect, comparison, mood…), and take the exact point even when it is marked "(later)"; a past-tense phrase never goes under a present-tense point;
 - "i-idiom", "i-together" or "i-set" when it is an idiom, a collocation or phrasal verb, or a set phrase said as a whole;
 - a letters/sounds or detail section only when the phrase is really about that;
 - a learner's own section when its name fits;
