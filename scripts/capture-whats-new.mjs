@@ -1794,8 +1794,13 @@ const STEPS = {
     await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
     const menu = page.getByRole("button", { name: exactly(ui.sessionMenu) });
     for (let i = 0; i < 40 && !(await menu.count()); i++) await wait(500);
-    await menu.first().click();
-    await page.getByRole("button", { name: exactly(ui.roleplayOwnLineOpen) }).first().click();
+    await wait(2500);
+    const own = page.getByRole("button", { name: exactly(ui.roleplayOwnLineOpen) });
+    for (let i = 0; i < 4 && !(await own.count()); i++) {
+      await menu.first().click();
+      await wait(1200);
+    }
+    await own.first().click();
     await wait(800);
     const field = page.getByLabel(ui.roleplayOwnLinePlaceholder);
     await field.fill(OWN_LINE[target] ?? OWN_LINE.en);
