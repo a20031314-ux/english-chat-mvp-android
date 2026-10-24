@@ -774,9 +774,9 @@ function socialMocks(page, target, ui) {
         return json(route, {
           people: [
             // 2.72: 국적(국기)·모국어·관심사 칩·도움됐어요 수(프로필 사실, account/profileFacts.ts).
-            { id: PEOPLE.yuki.id, nickname: "Yuki", bio: "🇯🇵 → 🌏 ☕ 🎧", hasPhoto: true, ui: "ja", learn: target === "ja" ? "ko" : target, lastSeen: seen(1), isFollowing: true, country: "JP", native: "ja", interests: ["travel", "cafe", "music"], sharedInterests: 2, help: 9, meetModes: ["call"] },
-            { id: PEOPLE.lucia.id, nickname: "Lucía", bio: "🇪🇸 → 🇯🇵 🍣 📚", hasPhoto: true, ui: "es", learn: "ja", lastSeen: seen(40), isFollowing: false, country: "ES", native: "es", interests: ["food", "books", "anime"], sharedInterests: 1, help: 3 },
-            { id: PEOPLE.omar.id, nickname: "Omar", bio: "🇪🇬 → 🌍 ⚽", hasPhoto: true, ui: "ar", learn: target, lastSeen: seen(60 * 26), isFollowing: false, country: "EG", native: "ar", interests: ["sports", "games"] },
+            { id: PEOPLE.yuki.id, nickname: "Yuki", bio: "🇯🇵 → 🌏 ☕ 🎧", hasPhoto: true, ui: "ja", learn: target === "ja" ? "ko" : target, learns: [target === "ja" ? "ko" : target], lastSeen: seen(1), isFollowing: true, country: "JP", native: "ja", interests: ["travel", "cafe", "music"], sharedInterests: 2, help: 9, meetModes: ["call"] },
+            { id: PEOPLE.lucia.id, nickname: "Lucía", bio: "🇪🇸 → 🇯🇵 🍣 📚", hasPhoto: true, ui: "es", learn: "ja", learns: ["ja"], lastSeen: seen(40), isFollowing: false, country: "ES", native: "es", interests: ["food", "books", "anime"], sharedInterests: 1, help: 3 },
+            { id: PEOPLE.omar.id, nickname: "Omar", bio: "🇪🇬 → 🌍 ⚽", hasPhoto: true, ui: "ar", learn: target, learns: [target], lastSeen: seen(60 * 26), isFollowing: false, country: "EG", native: "ar", interests: ["sports", "games"] },
           ],
         });
       }
