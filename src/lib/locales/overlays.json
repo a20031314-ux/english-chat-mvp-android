@@ -631,7 +631,10 @@
     "notebookNodeWord": "言葉選び",
     "notebookNodeRegister": "話し方・敬語",
     "notebookNodeSpelling": "表記・つづり",
-    "notebookNodeNuance": "ニュアンス"
+    "notebookNodeNuance": "ニュアンス",
+    "findInMy": "マイで探す",
+    "findInMyBusy": "探しています…",
+    "notebookQuestionAdd": "この場面を入れる"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1265,7 +1268,10 @@
     "notebookNodeWord": "选词",
     "notebookNodeRegister": "语气·敬语",
     "notebookNodeSpelling": "拼写·书写",
-    "notebookNodeNuance": "语感"
+    "notebookNodeNuance": "语感",
+    "findInMy": "在“我的”里查找",
+    "findInMyBusy": "正在查找…",
+    "notebookQuestionAdd": "加入这个场景"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1901,7 +1907,10 @@
     "notebookNodeWord": "Chọn từ",
     "notebookNodeRegister": "Cách nói·kính ngữ",
     "notebookNodeSpelling": "Chính tả",
-    "notebookNodeNuance": "Sắc thái"
+    "notebookNodeNuance": "Sắc thái",
+    "findInMy": "Tìm trong Của tôi",
+    "findInMyBusy": "Đang tìm…",
+    "notebookQuestionAdd": "Thêm khoảnh khắc này"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2542,7 +2551,10 @@
     "notebookNodeWord": "Choix du mot",
     "notebookNodeRegister": "Registre et politesse",
     "notebookNodeSpelling": "Orthographe",
-    "notebookNodeNuance": "Nuances"
+    "notebookNodeNuance": "Nuances",
+    "findInMy": "Trouver dans Moi",
+    "findInMyBusy": "Recherche…",
+    "notebookQuestionAdd": "Ajouter ce moment"
   },
   "it": {
     "archive": "Report",
@@ -3374,7 +3386,10 @@
     "notebookNodeWord": "Scelta della parola",
     "notebookNodeRegister": "Registro e cortesia",
     "notebookNodeSpelling": "Ortografia",
-    "notebookNodeNuance": "Sfumature"
+    "notebookNodeNuance": "Sfumature",
+    "findInMy": "Trova in Io",
+    "findInMyBusy": "Ricerca…",
+    "notebookQuestionAdd": "Aggiungi questo momento"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4018,7 +4033,10 @@
     "notebookNodeWord": "Escolha da palavra",
     "notebookNodeRegister": "Registro e cortesia",
     "notebookNodeSpelling": "Ortografia",
-    "notebookNodeNuance": "Nuances"
+    "notebookNodeNuance": "Nuances",
+    "findInMy": "Encontrar em Meu espaço",
+    "findInMyBusy": "Procurando…",
+    "notebookQuestionAdd": "Adicionar este momento"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4848,7 +4866,10 @@
     "notebookNodeWord": "Выбор слова",
     "notebookNodeRegister": "Стиль и вежливость",
     "notebookNodeSpelling": "Орфография",
-    "notebookNodeNuance": "Оттенки"
+    "notebookNodeNuance": "Оттенки",
+    "findInMy": "Найти в «Моё»",
+    "findInMyBusy": "Ищем…",
+    "notebookQuestionAdd": "Добавить этот момент"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5488,7 +5509,10 @@
     "notebookNodeWord": "Pilihan kata",
     "notebookNodeRegister": "Gaya dan kesopanan",
     "notebookNodeSpelling": "Ejaan",
-    "notebookNodeNuance": "Nuansa"
+    "notebookNodeNuance": "Nuansa",
+    "findInMy": "Cari di Saya",
+    "findInMyBusy": "Mencari…",
+    "notebookQuestionAdd": "Tambahkan momen ini"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6122,7 +6146,10 @@
     "notebookNodeWord": "اختيار الكلمة",
     "notebookNodeRegister": "الأسلوب والتأدّب",
     "notebookNodeSpelling": "الإملاء",
-    "notebookNodeNuance": "الفروق الدقيقة"
+    "notebookNodeNuance": "الفروق الدقيقة",
+    "findInMy": "ابحث في «أنا»",
+    "findInMyBusy": "جارٍ البحث…",
+    "notebookQuestionAdd": "أضف هذه اللحظة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6756,7 +6783,10 @@
     "notebookNodeWord": "การเลือกคำ",
     "notebookNodeRegister": "ระดับภาษา·ความสุภาพ",
     "notebookNodeSpelling": "การสะกด",
-    "notebookNodeNuance": "ความหมายแฝง"
+    "notebookNodeNuance": "ความหมายแฝง",
+    "findInMy": "หาในของฉัน",
+    "findInMyBusy": "กำลังหา…",
+    "notebookQuestionAdd": "เพิ่มฉากนี้"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7390,6 +7420,9 @@
     "notebookNodeWord": "शब्द चुनना",
     "notebookNodeRegister": "लहजा और शिष्टता",
     "notebookNodeSpelling": "वर्तनी",
-    "notebookNodeNuance": "भाव का फ़र्क"
+    "notebookNodeNuance": "भाव का फ़र्क",
+    "findInMy": "मेरा में खोजें",
+    "findInMyBusy": "खोज रहे हैं…",
+    "notebookQuestionAdd": "यह पल जोड़ें"
   }
 }

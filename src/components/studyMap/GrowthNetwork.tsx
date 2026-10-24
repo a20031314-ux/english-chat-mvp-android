@@ -9,6 +9,7 @@ import type { UICopy } from "@/lib/copy";
 import type { ElementId, ElementView, GrowthView } from "@/lib/learner/growth";
 import { GAP_STEP } from "@/lib/learner/next";
 import { learningLanguageTextDir } from "@/lib/learningLanguages";
+import { onLocate } from "@/lib/notes/locateHandoff";
 
 /**
  * The My tab's picture of a learner's language: six elements around "me",
@@ -136,6 +137,8 @@ export function GrowthNetwork({
     }
   };
   const [open, setOpen] = useState<ElementId | null>(null);
+  // 문장분석 시트 "My에서 찾기"로 오면 "단계" 보기로(이미 열려 있을 때 — 처음 열 때는 handOffLocate가 기억한 보기).
+  useEffect(() => onLocate(() => setModeState("map")), []);
 
   useEffect(() => {
     let cancelled = false;

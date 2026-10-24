@@ -1,5 +1,6 @@
 "use client";
 
+import { FindInMy } from "@/components/FindInMy";
 import { useEffect, useRef, useState } from "react";
 import type { UICopy } from "@/lib/copy";
 import type {
@@ -59,7 +60,8 @@ export function EnglishAnalysisViewer({
   };
 
   return (
-    <div className="fixed inset-0 z-[90] flex items-start justify-center bg-slate-900/40 p-3 pt-4 sm:items-center sm:pt-3">
+    // data-scene-skip: "My에서 찾기"가 뒤 화면을 찍을 때 이 시트는 빼고(lib/notes/sceneShots.ts snapScene).
+    <div data-scene-skip="1" className="fixed inset-0 z-[90] flex items-start justify-center bg-slate-900/40 p-3 pt-4 sm:items-center sm:pt-3">
       <button
         type="button"
         className="absolute inset-0 cursor-default"
@@ -115,6 +117,7 @@ export function EnglishAnalysisViewer({
               ui={ui}
               locale={locale}
               onRange={onRange}
+              onDone={closeAll}
             />
           )}
         </div>
@@ -128,11 +131,13 @@ function SentenceTab({
   ui,
   locale,
   onRange,
+  onDone,
 }: {
   session: EnglishAnalysisSession;
   ui: UICopy;
   locale: string;
   onRange: (start: number, end: number) => void;
+  onDone: () => void;
 }) {
   const analysisApi = useEnglishAnalysisOptional();
   const learningLanguage = useLearningLanguageOptional();
@@ -456,6 +461,7 @@ function SentenceTab({
           return last ? { question: last.question, answer: last.answer } : undefined;
         })()}
       />
+      <FindInMy key={`find-${askWords}`} ui={ui} text={askWords} sentence={sentence} language={targetLanguage} locale={locale} onDone={onDone} />
       <SentenceAskThreads
         ui={ui}
         note={note}

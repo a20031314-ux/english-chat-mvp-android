@@ -99,6 +99,8 @@ export const OP_COST: Record<string, OpCost> = {
   notebookFix: estimated("notes", { input: 1400, output: 90 }),
   // 칸 목록(지금·뒤 단계 문법 + 고정 칸 약 60줄) + 표현 30개, 답은 30줄 JSON(2026-10-24 어림).
   notebookPhrases: estimated("notes", { input: 2600, output: 600 }),
+  // 칸 목록 + 고른 부분·문장, 답은 칸 id + 한 줄 설명(2026-10-24 어림).
+  notebookLocate: estimated("notes", { input: 2400, output: 80 }),
   missionCheck: llm("mission"),
   // 실수 종류 프롬프트 약 1,100~2,200자(이미 아는 실수 30개까지) + 두 줄, 답 짧은 JSON(2026-10-21 어림).
   weakRead: estimated("learnerRead", { input: 600, output: 80 }),

@@ -171,3 +171,16 @@ test("습득한 표현: 칸 고르기 답 읽기·넣기·옮긴 것은 그대�
   assert.equal(book.phrases["break the ice"]?.node, "d-word", "사용자가 옮긴 것은 다시 고르지 않음");
   assert.match(phrasePrompt({ target: "Spanish", options: "i-idiom — x" }), /"vocab"/);
 });
+
+test("궁금한 장면 카드: 사람끼리 대화는 문장·화면을 남기지 않음, 같은 id는 한 번", () => {
+  const chat = parseEdit({ op: "addQuestion", id: "q1aaaaaaaa", text: "break the ice", sentence: "Let's break the ice.", note: "어색함을 깨다", node: "i-idiom", where: "chat", shotId: "q1aaaaaaaa" });
+  assert.ok(chat && chat.op === "addQuestion" && chat.sentence && chat.shotId);
+  const dm = parseEdit({ op: "addQuestion", id: "q2aaaaaaaa", text: "no worries", sentence: "남의 문장 전체", note: "", node: null, where: "dm", shotId: "q2aaaaaaaa" });
+  assert.ok(dm && dm.op === "addQuestion" && dm.sentence === "" && !("shotId" in dm && dm.shotId));
+  let book = applyEdit(emptyNotebook(), chat!, 5);
+  book = applyEdit(book, chat!, 6);
+  assert.equal(book.cards.length, 1);
+  assert.equal(book.cards[0]?.kind, "question");
+  assert.equal(book.cards[0]?.right, "break the ice");
+  assert.equal(parseEdit({ op: "addQuestion", id: "bad id", text: "x", node: null }), null);
+});

@@ -1,5 +1,6 @@
 "use client";
 
+import { enterScene } from "@/lib/notes/sceneShots";
 import { FormEvent, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import {
   ARCHIVE_STORAGE_KEY,
@@ -747,6 +748,8 @@ export function ChatWindow({
   menuItems = [],
   showPack = false,
 }: ChatWindowProps) {
+  // "My에서 찾기"가 화면을 찍어도 되는 곳인지(lib/notes/sceneShots.ts — 사람끼리 대화는 안 찍음).
+  useEffect(() => enterScene("chat"), []);
   const { isPremium, isBillingReady } = usePremium();
   const billing = useBillingUi();
   const learningLanguage = useLearningLanguageOptional();

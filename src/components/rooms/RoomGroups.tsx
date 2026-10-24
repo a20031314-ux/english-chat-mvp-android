@@ -1,5 +1,6 @@
 "use client";
 
+import { enterScene } from "@/lib/notes/sceneShots";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import type { RoomCopy } from "@/lib/rooms/copy";
@@ -671,6 +672,8 @@ export function GroupThreadView({
   targetLanguage: string;
   onClose: () => void;
 }) {
+  // "My에서 찾기"가 화면을 찍어도 되는 곳인지(lib/notes/sceneShots.ts — 사람끼리 대화는 안 찍음).
+  useEffect(() => enterScene("dm"), []);
   const [group, setGroup] = useState<Group | null>(null);
   const [messages, setMessages] = useState<GroupMessage[]>([]);
   const [members, setMembers] = useState(false);

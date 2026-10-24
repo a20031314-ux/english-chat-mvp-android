@@ -1,5 +1,6 @@
 "use client";
 
+import { enterScene } from "@/lib/notes/sceneShots";
 import { InviteButton } from "@/components/invite/InviteButton";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import type { RoomCopy } from "@/lib/rooms/copy";
@@ -122,6 +123,8 @@ export function RoomView({
   /** 접혀 있는 동안(영상 방이면 카메라를 끈다 — 소리는 그대로). */
   minimized?: boolean;
 }) {
+  // "My에서 찾기"가 화면을 찍어도 되는 곳인지(lib/notes/sceneShots.ts — 사람끼리 대화는 안 찍음).
+  useEffect(() => enterScene("room"), []);
   const onLeftRef = useRef(onLeft);
   useEffect(() => {
     onLeftRef.current = onLeft;

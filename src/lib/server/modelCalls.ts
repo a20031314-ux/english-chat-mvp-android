@@ -78,6 +78,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   notebookFix: 1,
   // 노트: 습득한 표현(장부 배움·숙지) 최대 30개를 틀의 칸에 한 번에(/api/notebook GET 뒤, 하루 6번까지).
   notebookPhrases: 1,
+  // 노트: 문장분석 시트 "My에서 찾기" — 궁금한 부분 하나의 칸 + 한 줄 설명(이미 칸이 있으면 안 부름, 하루 40번).
+  notebookLocate: 1,
   // One mission answer checked: verdict, correction and the other person's reply.
   missionCheck: 1,
   // A corrected chat or call line read for the kind of mistake it was

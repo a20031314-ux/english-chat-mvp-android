@@ -9,6 +9,8 @@ import type { MeteredOp } from "./modelCalls.ts";
 import {
   addPending,
   isCardId,
+  locateMessage,
+  locatePrompt,
   phraseMessage,
   phrasePrompt,
   placePhrases,
@@ -28,7 +30,8 @@ import {
 } from "../notes/notebook.ts";
 import { INTERFACE_LANGUAGE_LABELS, learningLanguageName } from "../learningLanguages.ts";
 import type { LedgerItem } from "../learner/ledger.ts";
-import { ledgerKey } from "../learner/ledger.ts";
+import { ledgerKey, isLedgerText, type LedgerTab } from "../learner/ledger.ts";
+import { recordMeets } from "./ledgerStore.ts";
 
 /**
  * 노트(notes/notebook.ts)의 계정 저장소 — 짚은 장면 카드·내가 만든 칸·이름 바꾸기·메모.
@@ -214,4 +217,57 @@ export async function placeLearnedPhrases(input: {
   } catch {
     return 0;
   }
+}
+
+/** 하루에 "My에서 찾기"로 모델을 부르는 수. 넘으면 이미 칸이 있는 것만 찾는다. */
+export const DAILY_LOCATES = 40;
+
+export type LocateResult = { node: string | null; stage?: number; note: string };
+
+/**
+ * 문장분석 시트에서 궁금한 부분 → 틀의 칸(2026-10-24 사용자 "모르는 부분이 My 어디에 있는지 찾아 학습").
+ * 이미 칸이 있는 표현이면 모델 없이 그 칸(설명은 빈 칸). 찾은 칸은 노트의 표현 자리에 남기고(만남), 장부에도 "물어봄"으로.
+ */
+export async function locatePart(input: {
+  openai: OpenAI | null;
+  userId: string;
+  language: string;
+  ui: string;
+  text: string;
+  sentence: string;
+  tab: LedgerTab;
+  meter?: (op: MeteredOp) => void;
+  now?: number;
+}): Promise<LocateResult | null> {
+  if (!isIdentified(input.userId)) return null;
+  const now = input.now ?? Date.now();
+  const key = ledgerKey(input.text);
+  if (!key) return null;
+  const record = await readNotebook(input.userId, input.language);
+  const skeleton = skeletonFor(input.language, await currentStageOrder(input.userId, input.language), true);
+  const stageOf = (node: string | null) => skeleton.find((n) => n.id === node)?.stage;
+  const known = new Set([...skeleton.map((node) => node.id), ...record.custom.map((node) => node.id)]);
+  const cached = record.phrases[key]?.node;
+  if (cached && known.has(cached)) return { node: cached, ...(stageOf(cached) ? { stage: stageOf(cached) } : {}), note: "" };
+  if (!input.openai || (await getDailyOpUsed(input.userId, "notebookLocate")) >= DAILY_LOCATES) return { node: null, note: "" };
+  input.meter?.("notebookLocate");
+  const completion = await completeChat(input.openai, "notes", {
+    temperature: 0,
+    max_tokens: 250,
+    response_format: { type: "json_object" },
+    messages: [
+      {
+        role: "system",
+        content: locatePrompt({ target: learningLanguageName(input.language), uiName: INTERFACE_LANGUAGE_LABELS[input.ui] ?? "English", options: placeOptions(skeleton, record.custom) }),
+      },
+      { role: "user", content: locateMessage(input.text, input.sentence) },
+    ],
+  });
+  const placed = readPlacement(completion.choices[0]?.message?.content ?? "", known, "");
+  if (placed.node) {
+    const fresh = await readNotebook(input.userId, input.language);
+    await saveNotebook(input.userId, input.language, placePhrases(fresh, [{ key, node: placed.node }], now));
+    if (isLedgerText(input.text, input.language)) await recordMeets(input.userId, input.language, [{ kind: "ask", text: input.text, tab: input.tab }], now).catch(() => undefined);
+  }
+  return { node: placed.node, ...(stageOf(placed.node) ? { stage: stageOf(placed.node) } : {}), note: placed.note };
 }

@@ -69,6 +69,7 @@
     "components/EnglishAnalysisViewer": "sheet",
     "components/SentenceAskPanel": "sheet",
     "components/MarkForMap": "sheet",
+    "components/FindInMy": "sheet",
     "components/ExpressionInsightProvider": "sheet",
     "components/ExpressionInsightSheet": "sheet",
     "components/AnalyzableEnglish": "sheet",

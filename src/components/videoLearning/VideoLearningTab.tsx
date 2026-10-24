@@ -1,5 +1,6 @@
 "use client";
 
+import { enterScene } from "@/lib/notes/sceneShots";
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { maybeShowInterstitial } from "@/lib/ads";
 import { videoImportAvailable } from "@/lib/platform";
@@ -105,6 +106,8 @@ export function VideoLearningTab({
   ui: UICopy;
   active?: boolean;
 }) {
+  // "My에서 찾기"가 화면을 찍어도 되는 곳인지(lib/notes/sceneShots.ts — 사람끼리 대화는 안 찍음).
+  useEffect(() => (active ? enterScene("video") : undefined), [active]);
   const learningLanguage = useLearningLanguageOptional();
   const { isPremium, tier } = usePremium();
   // Every library video is premium's (billing/plans.ts); 3,900 and 5,500 won

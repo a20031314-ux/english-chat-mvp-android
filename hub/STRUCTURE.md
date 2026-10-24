@@ -30,6 +30,7 @@
           망·그래프의 부분 → "단계에서 보기"(표현 폭은 단어장). 지도가 없으면 체크 화면(대화 예시로 시작 단계 고르기 + 체크 3질문) 아래 같은 자라는 중
 
 어디서나 열림  문장분석 시트 sheet (채팅·통화 돌아보기·영상·노트의 문장 → "분석") · 표현 시트 · 결제 화면
+               └ 🔎 My에서 찾기(FindInMy) → 서버가 틀의 칸 → My 단계 보기 그 단계·칸 시트 + "이 장면 넣기"(화면 함께, lib/notes/locateHandoff.ts — AI 대화·통화·영상만 화면, 사람 대화는 고른 부분만)
 ```
 
 - **사람 기능이 꺼지면**(iOS 1차, `src/lib/platform.ts` `socialFeaturesEnabled`): 하단은 채팅 │ 영상 학습 │ My(통화는 채팅 머리 📞), 대화·사람·Room·메시지·단체방 전부 없음.
@@ -98,7 +99,7 @@
 - 다른 영역이 씀: `CallHost` ← 앱 틀 · `PackCard` ← 앱 틀, AI 채팅
 
 ### 문장분석·표현 시트 (여러 화면에서 열림) `sheet`
-- 화면: `AnalyzableEnglish` · `EnglishAnalysisProvider` · `EnglishAnalysisViewer` · `ExpressionInsightProvider` · `ExpressionInsightSheet` · `MarkForMap` · `SelectableEnglishText` · `SentenceAskPanel` · `TTSButton` · `VocabPreviewProvider` · `VocabSenseList` · `VocabWordPreview`
+- 화면: `AnalyzableEnglish` · `EnglishAnalysisProvider` · `EnglishAnalysisViewer` · `ExpressionInsightProvider` · `ExpressionInsightSheet` · `FindInMy` · `MarkForMap` · `SelectableEnglishText` · `SentenceAskPanel` · `TTSButton` · `VocabPreviewProvider` · `VocabSenseList` · `VocabWordPreview`
 - API: `english-analysis/element` · `english-analysis/input` · `expression-ask` · `expression-insight` · `expression-units` · `learning-spans` · `translate`(대화 탭, AI 통화, 사람 탭, Room 탭, 계정·로그인) · `tts`(AI 통화, My 탭) · `vocab/gloss` · `vocab`(My 탭)
 - 다른 영역이 씀: `AnalyzableEnglish` ← AI 채팅, 영상 학습 탭, My 탭, 웹 전용 페이지 · `EnglishAnalysisProvider` ← 앱 틀, 웹 전용 페이지 · `ExpressionInsightProvider` ← 앱 틀, 웹 전용 페이지 · `SelectableEnglishText` ← AI 채팅 · `TTSButton` ← AI 채팅, AI 통화, My 탭 · `VocabSenseList` ← My 탭
 
@@ -129,7 +130,7 @@
 
 ### My 탭 — 계정 카드·자라는 중·지도·노트·단어장 `my`
 - 화면: `CharacterGuidePanel` · `VocabularyPanel` · `notes/NotebookSection` · `notes/NotesPanel` · `studyMap/GrowthNetwork` · `studyMap/LearnerPanel` · `studyMap/LedgerPanel` · `studyMap/MissionScreen` · `studyMap/ScriptPractice` · `studyMap/StageCheck` · `studyMap/StudyMapTab` · `studyMap/TopicItems`
-- API: `curriculum/generate`(학습 기록 공통) · `curriculum/mission-check`(학습 기록 공통) · `curriculum/mission-seen`(학습 기록 공통) · `curriculum/missions`(학습 기록 공통) · `curriculum/pick`(문장분석·표현 시트) · `curriculum/progress`(학습 기록 공통) · `curriculum/restore`(학습 기록 공통) · `curriculum/review`(학습 기록 공통) · `curriculum`(문장분석·표현 시트, 학습 기록 공통) · `curriculum/script` · `curriculum/stages` · `notebook` · `notes/place` · `video-index/find`(학습 기록 공통)
+- API: `curriculum/generate`(학습 기록 공통) · `curriculum/mission-check`(학습 기록 공통) · `curriculum/mission-seen`(학습 기록 공통) · `curriculum/missions`(학습 기록 공통) · `curriculum/pick`(문장분석·표현 시트) · `curriculum/progress`(학습 기록 공통) · `curriculum/restore`(학습 기록 공통) · `curriculum/review`(학습 기록 공통) · `curriculum`(문장분석·표현 시트, 학습 기록 공통) · `curriculum/script` · `curriculum/stages` · `notebook`(문장분석·표현 시트) · `notes/place` · `video-index/find`(학습 기록 공통)
 - 다른 영역이 씀: `studyMap/GrowthNetwork` ← AI 통화 · `studyMap/StudyMapTab` ← 앱 틀
 
 ### 계정·로그인 `account`

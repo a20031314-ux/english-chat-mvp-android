@@ -1,5 +1,6 @@
 "use client";
 
+import { enterScene } from "@/lib/notes/sceneShots";
 import { captureSceneSoon } from "@/lib/notes/sceneShots";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { TurnDiagBox } from "@/components/roleplay/TurnDiagBox";
@@ -226,6 +227,8 @@ export function RoleplayScreen({
    */
   practice?: PracticeRequest | null;
 }) {
+  // "My에서 찾기"가 화면을 찍어도 되는 곳인지(lib/notes/sceneShots.ts — 사람끼리 대화는 안 찍음).
+  useEffect(() => enterScene("call"), []);
   const { isPremium } = usePremium();
   // 남은 통화 시간: 예전 통화 첫 화면의 줄 → 통화 머리의 상태 한 줄(2026-10-23, conversation-unify 3단계). 서버가 답을 못 하면 뺀다.
   const [timeLine, setTimeLine] = useState<string | null>(null);

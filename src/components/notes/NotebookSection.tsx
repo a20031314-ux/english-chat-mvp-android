@@ -7,6 +7,7 @@ import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
 import type { CustomNode, FixCard, NotebookChapter, NotebookEdit } from "@/lib/notes/notebook";
 import { sceneShotFor } from "@/lib/notes/sceneShots";
+import { onLocate, takeLocate, type LocateHandoff } from "@/lib/notes/locateHandoff";
 
 /**
  * 노트의 뼈대 칸(글자·소리·문법)과 내가 만든 칸, 그 안의 짚은 장면 카드(notes/notebook.ts, /api/notebook).
@@ -32,7 +33,7 @@ type Book = {
   /** 습득한 표현(장부 배움·숙지)이 든 칸(2026-10-24). */
   phrases: PhraseView[];
 };
-type PhraseView = { key: string; text: string; state: "learned" | "mastered"; node: string };
+type PhraseView = { key: string; text: string; state: "met" | "learned" | "mastered"; node: string };
 type Group = NotebookChapter | "mine" | "loose";
 
 /** 관용·세부 고정 칸 이름은 앱 문구로(서버는 영어·한국어 기본만 준다). */
@@ -93,6 +94,22 @@ export function NotebookSection({
   const [picking, setPicking] = useState<PickGroup | null>(null);
   const [viewShot, setViewShot] = useState<string | null>(null);
   const [movingPhrase, setMovingPhrase] = useState<string | null>(null);
+  // 문장분석 시트 "My에서 찾기"로 넘어온 궁금한 장면(lib/notes/locateHandoff.ts) — 그 칸을 열고 "이 장면 넣기".
+  const [question, setQuestion] = useState<LocateHandoff | null>(null);
+  const [focusStage, setFocusStage] = useState<number | null>(null);
+  const loaded = Boolean(book);
+  useEffect(() => {
+    if (!loaded) return;
+    const take = () => {
+      const handed = takeLocate(language);
+      if (!handed) return;
+      setQuestion(handed);
+      if (handed.stage) setFocusStage(handed.stage);
+      if (handed.node) setNodeOpen(handed.node);
+    };
+    take();
+    return onLocate(take);
+  }, [loaded, language]);
 
   useEffect(() => {
     let cancelled = false;
@@ -154,6 +171,24 @@ export function NotebookSection({
     [edit, language, isPremium],
   );
 
+  /** 궁금한 장면을 카드로(화면 함께면 그림도 올린다). */
+  const addQuestion = useCallback(
+    async (q: LocateHandoff, withShot: boolean) => {
+      const id = newCardIdClient();
+      const shot = withShot && q.shot ? q.shot : null;
+      await edit({ op: "addQuestion", id, text: q.text, sentence: q.sentence, note: q.note, node: q.node, where: q.where, ...(shot ? { shotId: id } : {}) });
+      if (shot) {
+        await fetch(apiUrl("/api/notebook"), {
+          method: "POST",
+          headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+          body: JSON.stringify({ language, shot: { id, image: shot } }),
+        }).catch(() => undefined);
+      }
+      setQuestion(null);
+    },
+    [edit, language, isPremium],
+  );
+
   // 칸 옆 숫자 = 짚은 장면 카드 + 습득한 표현.
   const counts = useMemo(() => {
     const out: Record<string, number> = {};
@@ -164,7 +199,10 @@ export function NotebookSection({
   /** 칸이 "채워졌는지": 숙지 > 배움 > 카드만 > 빈 칸(점 색). */
   const fill = useMemo(() => {
     const out: Record<string, "mastered" | "learned"> = {};
-    for (const phrase of book?.phrases ?? []) if (out[phrase.node] !== "mastered") out[phrase.node] = phrase.state;
+    for (const phrase of book?.phrases ?? []) {
+      if (phrase.state === "met" || out[phrase.node] === "mastered") continue;
+      out[phrase.node] = phrase.state;
+    }
     return out;
   }, [book]);
 
@@ -225,6 +263,9 @@ export function NotebookSection({
           ) : null}
         </div>
       ) : null}
+      {question && !question.node ? (
+        <QuestionBox ui={ui} question={question} onAdd={(withShot) => void addQuestion(question, withShot)} onClose={() => setQuestion(null)} />
+      ) : null}
       {frame && book.stages.length ? (
         <StageFrame
           ui={ui}
@@ -237,6 +278,7 @@ export function NotebookSection({
           onOpen={setNodeOpen}
           detail={stageDetail}
           masteredOf={masteredOf}
+          focus={focusStage}
         />
       ) : null}
       {frame ? (
@@ -304,6 +346,11 @@ export function NotebookSection({
             memo={book.memos[openNode.id] ?? ""}
             cards={book.cards.filter((card) => card.node === openNode.id)}
             phrases={book.phrases.filter((phrase) => phrase.node === openNode.id)}
+            top={
+              question && question.node === openNode.id ? (
+                <QuestionBox ui={ui} question={question} onAdd={(withShot) => void addQuestion(question, withShot)} onClose={() => setQuestion(null)} />
+              ) : null
+            }
             onMovePhrase={setMovingPhrase}
             onMove={setMoving}
             onShot={setViewShot}
@@ -384,6 +431,7 @@ function StageFrame({
   onOpen,
   detail,
   masteredOf,
+  focus,
 }: {
   ui: UICopy;
   stages: { order: number; title: string }[];
@@ -395,9 +443,15 @@ function StageFrame({
   onOpen: (id: string) => void;
   detail?: (order: number) => ReactNode;
   masteredOf?: (stage: number, index: number) => boolean;
+  /** 이 단계를 펼쳐 보인다("My에서 찾기"로 온 칸의 단계). */
+  focus?: number | null;
 }) {
   const now = Math.max(1, Math.min(current, stages.length));
-  const [shown, setShown] = useState(now);
+  const [shown, setShown] = useState(focus ?? now);
+  useEffect(() => {
+    // eslint-disable-next-line react-hooks/set-state-in-effect -- 밖에서 고른 단계(찾기)로 옮겨 간다
+    if (focus) setShown(focus);
+  }, [focus]);
   const inStage = (order: number) => nodes.filter((node) => (node.stage ?? 1) === order);
   // 채운 칸 = 습득한 표현이 들었거나 숙지(✓)한 문법. 짚은 장면 카드만 든 칸은 아직 채운 게 아니다(점은 옅게).
   const filledOf = (node: NodeView) => Boolean(fill[node.id]) || Boolean(masteredOf?.(node.stage ?? 1, node.index ?? -1));
@@ -616,6 +670,7 @@ function NodeBody({
   onTry,
   phrases = [],
   onMovePhrase,
+  top,
 }: {
   ui: UICopy;
   locale: string;
@@ -624,6 +679,7 @@ function NodeBody({
   onTry?: () => void;
   phrases?: PhraseView[];
   onMovePhrase?: (key: string) => void;
+  top?: ReactNode;
   view?: NodeView;
   memo: string;
   cards: FixCard[];
@@ -637,6 +693,7 @@ function NodeBody({
   const custom = id.startsWith("c-");
   return (
     <div className="mt-2">
+      {top}
       {view?.example ? (
         <p dir="auto" className="text-note text-slate-200">
           {view.example}
@@ -710,7 +767,7 @@ function NodeBody({
             .sort((a, b) => (a.state === b.state ? 0 : a.state === "mastered" ? -1 : 1))
             .map((phrase) => (
               <li key={phrase.key} className="flex items-center gap-2 rounded-lg bg-white/[0.04] px-3 py-1.5">
-                <span aria-hidden className={`h-2 w-2 shrink-0 rounded-full ${phrase.state === "mastered" ? "bg-status-mastered" : "bg-status-learned"}`} />
+                <span aria-hidden className={`h-2 w-2 shrink-0 rounded-full ${phrase.state === "mastered" ? "bg-status-mastered" : phrase.state === "learned" ? "bg-status-learned" : "bg-status-pending"}`} />
                 <span dir="auto" className="min-w-0 flex-1 text-note text-ink">
                   {phrase.text}
                 </span>
@@ -748,6 +805,7 @@ function CardList({
     call: ui.homeTabCall,
     dm: ui.homeTabMessages,
     room: ui.homeTabRooms,
+    video: ui.homeTabVideo,
   };
   if (!cards.length) return null;
   return (
@@ -780,14 +838,31 @@ function FixCardRow({
   const [memo, setMemo] = useState(card.memo ?? "");
   return (
     <li className="rounded-lg bg-white/[0.04] px-3 py-2.5">
-      <p dir="auto" className="flex gap-1.5 text-note text-slate-400">
-        <span aria-hidden className="shrink-0 text-rose-300">✗</span>
-        <span className="min-w-0 line-through decoration-rose-300/60">{card.wrong}</span>
-      </p>
-      <p dir="auto" className="mt-0.5 flex gap-1.5 text-note text-ink">
-        <span aria-hidden className="shrink-0 text-emerald-300">✓</span>
-        <span className="min-w-0">{card.right}</span>
-      </p>
+      {card.kind === "question" ? (
+        // 궁금했던 장면: 고른 부분(크게) + 그 문장(사람 대화면 없음).
+        <>
+          <p dir="auto" className="flex gap-1.5 text-note font-semibold text-ink">
+            <span aria-hidden className="shrink-0 text-info">❓</span>
+            <span className="min-w-0">{card.right}</span>
+          </p>
+          {card.wrong ? (
+            <p dir="auto" className="mt-0.5 ps-5 text-caption text-slate-400">
+              {card.wrong}
+            </p>
+          ) : null}
+        </>
+      ) : (
+        <>
+          <p dir="auto" className="flex gap-1.5 text-note text-slate-400">
+            <span aria-hidden className="shrink-0 text-rose-300">✗</span>
+            <span className="min-w-0 line-through decoration-rose-300/60">{card.wrong}</span>
+          </p>
+          <p dir="auto" className="mt-0.5 flex gap-1.5 text-note text-ink">
+            <span aria-hidden className="shrink-0 text-emerald-300">✓</span>
+            <span className="min-w-0">{card.right}</span>
+          </p>
+        </>
+      )}
       {card.note ? (
         <p dir="auto" className="mt-1 text-caption text-slate-300">
           {card.note}
@@ -1033,5 +1108,68 @@ function Sheet({ ui, title, onClose, children }: { ui: UICopy; title: string; on
         </div>
       </div>
     </BodyLayer>
+  );
+}
+
+function newCardIdClient(): string {
+  const bytes = new Uint8Array(8);
+  crypto.getRandomValues(bytes);
+  return Array.from(bytes, (b) => b.toString(16).padStart(2, "0")).join("");
+}
+
+/** 궁금한 장면 넣기: 고른 부분·문장·한 줄 설명, 그 순간 화면(있으면 "화면 함께"). */
+function QuestionBox({
+  ui,
+  question,
+  onAdd,
+  onClose,
+}: {
+  ui: UICopy;
+  question: LocateHandoff;
+  onAdd: (withShot: boolean) => void;
+  onClose: () => void;
+}) {
+  const [withShot, setWithShot] = useState(Boolean(question.shot));
+  const [busy, setBusy] = useState(false);
+  return (
+    <div className="mb-3 mt-2 rounded-xl border border-info/40 bg-info/10 p-3">
+      <div className="flex items-start gap-2">
+        <p dir="auto" className="min-w-0 flex-1 text-note font-semibold text-ink">
+          ❓ {question.text}
+        </p>
+        <button type="button" onClick={onClose} aria-label={ui.insightClose} className="shrink-0 rounded-lg px-1.5 text-caption text-slate-400 hover:bg-white/10">
+          ✕
+        </button>
+      </div>
+      {question.sentence && question.sentence !== question.text ? (
+        <p dir="auto" className="mt-0.5 text-caption text-slate-400">
+          {question.sentence}
+        </p>
+      ) : null}
+      {question.note ? (
+        <p dir="auto" className="mt-1 text-caption text-slate-200">
+          {question.note}
+        </p>
+      ) : null}
+      {question.shot ? (
+        <label className="mt-2 flex items-center gap-2 text-caption text-slate-300">
+          <input type="checkbox" checked={withShot} onChange={() => setWithShot((on) => !on)} className="h-3.5 w-3.5 accent-sky-400" />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={question.shot} alt="" className="h-14 w-auto rounded-lg border border-line" />
+          <span>{ui.notebookWithScreen}</span>
+        </label>
+      ) : null}
+      <button
+        type="button"
+        disabled={busy}
+        onClick={() => {
+          setBusy(true);
+          onAdd(withShot);
+        }}
+        className="tb-btn mt-2 w-full rounded-lg px-3 py-2 text-note font-semibold disabled:opacity-50"
+      >
+        {ui.notebookQuestionAdd}
+      </button>
+    </div>
   );
 }

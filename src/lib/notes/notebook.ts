@@ -54,8 +54,8 @@ export type SkeletonNode = {
   ahead?: boolean;
 };
 
-export type FixWhere = "chat" | "call" | "dm" | "room";
-export const FIX_WHERE: FixWhere[] = ["chat", "call", "dm", "room"];
+export type FixWhere = "chat" | "call" | "dm" | "room" | "video";
+export const FIX_WHERE: FixWhere[] = ["chat", "call", "dm", "room", "video"];
 
 export type FixCard = {
   id: string;
@@ -84,8 +84,9 @@ export type FixCard = {
   shotId?: string;
 };
 
-export type FixKind = "mistake" | "typo" | "meant";
-export const FIX_KINDS: FixKind[] = ["mistake", "typo", "meant"];
+/** question = 궁금했던 장면(2026-10-24): wrong 자리에 그 문장(사람 대화면 빈 칸), right 자리에 고른 부분. */
+export type FixKind = "mistake" | "typo" | "meant" | "question";
+export const FIX_KINDS: FixKind[] = ["mistake", "typo", "meant", "question"];
 
 export type CustomNode = { id: string; name: string; at: number };
 
@@ -321,6 +322,23 @@ For each phrase pick one:
 Return only json: {"places":[{"i":<index>,"node":"<id or vocab>"}]} with one entry per phrase.`;
 }
 
+/** 궁금한 부분 하나가 틀의 어느 칸인지 + 앱 언어 한 줄 설명(문장분석 시트 "My에서 찾기"). */
+export function locatePrompt(input: { target: string; uiName: string; options: string }): string {
+  return `A learner of ${input.target} did not understand part of a sentence and wants to find where it belongs in their level-based notebook.
+
+Sections (id — what it is):
+${input.options}
+
+- "node": the one section where this part is studied — the grammar point it shows (match its actual form; take a "(later)" one when that is the point), or "i-idiom"/"i-together"/"i-set" for an idiom, a word pairing or a set phrase, or a detail section, or a learner's own section. "none" only for a plain single word with nothing to study but its meaning.
+- "note": one short line in ${input.uiName} that explains the part in this sentence — what it means and what it does — under 90 characters. Plain, no greeting. Words of ${input.target} may appear in quotes.
+
+Return only json: {"node":"<id or none>","note":"..."}`;
+}
+
+export function locateMessage(text: string, sentence: string): string {
+  return JSON.stringify({ part: text, ...(sentence && sentence !== text ? { sentence } : {}) });
+}
+
 export function phraseMessage(texts: string[]): string {
   return JSON.stringify({ phrases: texts.map((text, i) => ({ i, text })) });
 }
@@ -426,7 +444,8 @@ export type NotebookEdit =
   | { op: "acceptSuggest"; card: string; id: string }
   | { op: "commit"; ids: string[]; shots: string[] }
   | { op: "dismiss"; ids: string[] }
-  | { op: "movePhrase"; phrase: string; node: string | null };
+  | { op: "movePhrase"; phrase: string; node: string | null }
+  | { op: "addQuestion"; id: string; text: string; sentence: string; note: string; node: string | null; where: FixWhere; shotId?: string };
 
 const idList = (value: unknown): string[] | null =>
   Array.isArray(value) && value.length <= MAX_PENDING && value.every(isCardId) ? [...new Set(value as string[])] : null;
@@ -462,6 +481,23 @@ export function parseEdit(value: unknown): NotebookEdit | null {
     }
     case "movePhrase":
       return isPhraseKey(row.phrase) && (row.node === null || isNodeId(row.node)) ? { op: "movePhrase", phrase: row.phrase, node: row.node as string | null } : null;
+    case "addQuestion": {
+      const text = clean(row.text, MAX_LINE);
+      if (!isCardId(row.id) || !text || !(row.node === null || isNodeId(row.node))) return null;
+      const where = FIX_WHERE.includes(row.where as FixWhere) ? (row.where as FixWhere) : "chat";
+      // 사람끼리 대화(1:1·단체방·Room)는 남의 문장 전체를 남기지 않는다 — 고른 부분만.
+      const sentence = where === "dm" || where === "room" ? "" : clean(row.sentence, MAX_LINE);
+      return {
+        op: "addQuestion",
+        id: row.id,
+        text,
+        sentence,
+        note: clean(row.note, MAX_NOTE),
+        node: row.node as string | null,
+        where,
+        ...(isCardId(row.shotId) && where !== "dm" && where !== "room" ? { shotId: row.shotId } : {}),
+      };
+    }
     default:
       return null;
   }
@@ -557,6 +593,21 @@ export function applyEdit(record: NotebookRecord, edit: NotebookEdit, now = Date
     }
     case "movePhrase":
       return { ...record, phrases: { ...record.phrases, [edit.phrase]: { node: edit.node, at: now, moved: true } } };
+    case "addQuestion": {
+      if (record.cards.some((card) => card.id === edit.id)) return record;
+      const card: FixCard = {
+        id: edit.id,
+        wrong: edit.sentence,
+        right: edit.text,
+        note: edit.note,
+        node: edit.node,
+        where: edit.where,
+        at: now,
+        kind: "question",
+        ...(edit.shotId ? { shotId: edit.shotId } : {}),
+      };
+      return { ...record, cards: [card, ...record.cards].slice(0, MAX_CARDS) };
+    }
   }
 }
 

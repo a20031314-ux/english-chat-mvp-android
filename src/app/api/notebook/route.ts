@@ -5,7 +5,8 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
 import { meterRequest } from "@/lib/server/meterRequest";
-import { currentStageOrder, deleteShots, placeLearnedPhrases, readNotebook, readShot, saveNotebook, saveShot } from "@/lib/server/notebookStore";
+import { currentStageOrder, deleteShots, locatePart, placeLearnedPhrases, readNotebook, readShot, saveNotebook, saveShot } from "@/lib/server/notebookStore";
+import { isLedgerTab } from "@/lib/learner/ledger";
 import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 import { scriptView, stageViews } from "@/lib/server/stageCopy";
 import { applyEdit, parseEdit, prunePending, skeletonFor, type SkeletonNode } from "@/lib/notes/notebook";
@@ -26,6 +27,7 @@ export const maxDuration = 60;
  * GET ?lang=&shot=<화면 id> → { image } — 카드에 붙인 화면.
  * POST { language, edit } — 카드 옮기기·메모·지우기, 칸 더하기·이름 바꾸기·지우기·메모, 제안 칸 받기,
  *   후보 넣기(commit: ids, shots)·버리기(dismiss) → { ok, cards, custom, renames, memos, pending }
+ * POST { language, locate: { text, sentence, ui, tab } } — 문장분석 시트 "My에서 찾기" → { node, stage?, note }
  * POST { language, shot: { id, image } } — 노트에 넣은 카드의 화면(기기에서 찍은 JPEG, 20만 바이트까지) → { ok }
  */
 export async function OPTIONS(request: NextRequest) {
@@ -89,7 +91,8 @@ export async function GET(request: NextRequest) {
   const items = Object.entries(ledger?.items ?? {});
   const phrases = items.flatMap(([key, item]) => {
     const place = record.phrases[key];
-    return place?.node && item.state !== "met" ? [{ key, text: item.text, state: item.state, node: place.node }] : [];
+    // 만남(met)은 "My에서 찾기"로 칸이 정해진 것만 — 칸에 옅은 점으로.
+    return place?.node ? [{ key, text: item.text, state: item.state, node: place.node }] : [];
   });
   if (ledger && items.some(([key, item]) => item.state !== "met" && !record.phrases[key])) {
     after(() =>
@@ -135,6 +138,24 @@ export async function POST(request: NextRequest) {
   if (shot && typeof shot === "object") {
     const ok = typeof shot.id === "string" && (await saveShot(userId, language, shot.id, String(shot.image ?? "")));
     return jsonWithCors(request, { ok }, { status: ok ? 200 : 400 });
+  }
+  // 문장분석 시트 "My에서 찾기": 궁금한 부분이 틀의 어느 칸인지 + 한 줄 설명.
+  const locate = body.locate as { text?: unknown; sentence?: unknown; ui?: unknown; tab?: unknown } | undefined;
+  if (locate && typeof locate === "object") {
+    const text = typeof locate.text === "string" ? locate.text.replace(/\s+/g, " ").trim().slice(0, 120) : "";
+    if (!text) return jsonWithCors(request, { error: "NO_TEXT" }, { status: 400 });
+    const ui = typeof locate.ui === "string" && INTERFACE_LANGUAGE_LABELS[locate.ui] ? locate.ui : "en";
+    const found = await locatePart({
+      openai: getOpenAIClient(),
+      userId,
+      language,
+      ui,
+      text,
+      sentence: typeof locate.sentence === "string" ? locate.sentence.slice(0, 300) : "",
+      tab: isLedgerTab(locate.tab) ? locate.tab : "chat",
+      meter: (op) => void meterRequest(request, op),
+    }).catch(() => null);
+    return found ? jsonWithCors(request, found) : jsonWithCors(request, { error: "FAILED" }, { status: 502 });
   }
   const edit = parseEdit(body.edit);
   if (!edit) return jsonWithCors(request, { error: "BAD_EDIT" }, { status: 400 });
