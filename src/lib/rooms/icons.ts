@@ -74,6 +74,9 @@ export const COLLECTION_MAX = 60;
 export const PACK_NAME_MAX = 30;
 export const ICON_PHRASE_MAX = 40;
 export const ICON_PAGE = 20;
+/** 🔥 많이 쓰는 묶음 표시(사용자 2026-10-25): 인기 순 위쪽 HOT_PACK_TOP개 중 쓰인 수가 HOT_PACK_MIN_USES 이상. 쓰인 수는 한 사람 하루 한 번. */
+export const HOT_PACK_TOP = 10;
+export const HOT_PACK_MIN_USES = 30;
 
 export type IconItem = {
   id: string;
@@ -101,6 +104,8 @@ export type IconPack = {
   ownerName?: string;
   added?: boolean;
   bought?: boolean;
+  /** 🔥 많이 쓰는 묶음(읽을 때 채움, HOT_PACK_*). */
+  hot?: boolean;
 };
 
 /** 메시지·댓글에 붙는 아이콘(보낼 때 서버가 묶음에서 채움). */

@@ -100,8 +100,15 @@ function PackCard({ pack, t, onOpen, mineView = false }: { pack: IconPack; t: Ic
     <li>
       <button type="button" onClick={onOpen} className="block w-full rounded-xl border border-line bg-surface px-3 py-2.5 text-start">
         <span className="flex items-baseline justify-between gap-2">
-          <span className="min-w-0 truncate text-note font-semibold text-ink" dir="auto">
-            {pack.name}
+          <span className="flex min-w-0 items-baseline gap-1">
+            {pack.hot ? (
+              <span className="shrink-0" role="img" aria-label={t.hot} title={t.hot}>
+                🔥
+              </span>
+            ) : null}
+            <span className="min-w-0 truncate text-note font-semibold text-ink" dir="auto">
+              {pack.name}
+            </span>
           </span>
           <span className="shrink-0 text-meta text-slate-400">{fill(t.uses, { n: pack.uses ?? 0 })}</span>
         </span>
@@ -417,6 +424,7 @@ function PackSheet({
   return (
     <Sheet title={pack.name} onClose={onClose} closeLabel={t.close}>
       <p className="-mt-2 mb-3 text-meta text-slate-400">
+        {pack.hot ? <bdi className="me-1 text-warn">🔥 {t.hot} ·</bdi> : null}
         <bdi>{fill(t.by, { name: pack.ownerName || "?" })}</bdi> ·{" "}
         {pack.license === "app" ? (
           <bdi>{t.appOnly}</bdi>

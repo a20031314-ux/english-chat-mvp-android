@@ -1,6 +1,8 @@
 import { del, get, put } from "@vercel/blob";
 import {
   COLLECTION_MAX,
+  HOT_PACK_MIN_USES,
+  HOT_PACK_TOP,
   ICON_PAGE,
   ICON_UPLOADS_PER_DAY,
   ICONS_PER_PACK,
@@ -94,7 +96,8 @@ export async function readPack(id: string): Promise<IconPack | null> {
 }
 
 async function writePack(pack: IconPack): Promise<void> {
-  const { uses: _uses, ownerName: _ownerName, added: _added, bought: _bought, ...stored } = pack;
+  const { uses: _uses, ownerName: _ownerName, added: _added, bought: _bought, hot: _hot, ...stored } = pack;
+  void _hot;
   void _uses;
   void _ownerName;
   void _added;
@@ -105,17 +108,25 @@ async function writePack(pack: IconPack): Promise<void> {
 /** 읽는 사람 기준으로 쓰인 수·내가 받아 뒀는지를 채운다. 이름은 부르는 쪽이 계정에서 채운다. */
 export async function decorate(packs: IconPack[], me: string | null): Promise<IconPack[]> {
   if (!packs.length) return packs;
-  const [uses, mine, bought] = await Promise.all([
+  const [uses, mine, bought, hot] = await Promise.all([
     kvGetNumbers(packs.map((pack) => usesKey(pack.id))),
     me ? readCollection(me) : Promise.resolve([]),
     me && packs.some(isPaidPack) ? readBought(me) : Promise.resolve([]),
+    hotPackIds(),
   ]);
   return packs.map((pack, index) => ({
     ...pack,
     uses: Math.max(0, uses.at(index) ?? 0),
     added: isBuiltinPack(pack.id) || mine.includes(pack.id),
     ...(isPaidPack(pack) ? { bought: bought.includes(pack.id) } : {}),
+    ...(hot.has(pack.id) ? { hot: true } : {}),
   }));
+}
+
+/** 🔥 많이 쓰는 묶음: 인기 순 위쪽 HOT_PACK_TOP개 중 쓰인 수 HOT_PACK_MIN_USES 이상(기본 묶음은 쓰인 수를 세지 않아 빠짐). */
+export async function hotPackIds(): Promise<Set<string>> {
+  const rows = await kvZRevRange(POPULAR, 0, HOT_PACK_TOP - 1);
+  return new Set(rows.filter((row) => row.score >= HOT_PACK_MIN_USES).map((row) => row.member));
 }
 
 export type PackError = "LIMIT" | "NOT_FOUND" | "FORBIDDEN" | "FULL" | "HIDDEN" | "NOT_BOUGHT" | "NOT_FOR_SALE" | "NO_POINTS" | "BUSY" | "EMPTY";

@@ -245,3 +245,22 @@ test("편집기 움직임: 정지 PNG → 움직이는 WebP(프레임 10, 256), 
   const gif = new Uint8Array(await sharp(frames, { join: { animated: true } }).gif().toBuffer());
   assert.equal(await animateStill(gif, "bounce"), gif);
 });
+
+test("🔥 많이 쓰는 묶음: 인기 위쪽이면서 쓰인 수 30 이상만", async () => {
+  const { hotPackIds } = await import("./iconStore.ts");
+  const { HOT_PACK_MIN_USES } = await import("../rooms/icons.ts");
+  const { kvZAdd } = await import("./kv.ts");
+  const files = memoryFiles();
+  const owner = `acct_hot_${Date.now().toString(36)}`;
+  const made = await createPack({ owner, name: "ホット · caliente", license: "cc0" });
+  assert.ok("ok" in made);
+  if (!("ok" in made)) return;
+  await addIcon({ me: owner, packId: made.ok.id, webp, w: 64, h: 64, animated: false, files });
+  assert.equal((await hotPackIds()).has(made.ok.id), false);
+  await kvZAdd("icon:v1:popular", HOT_PACK_MIN_USES + 5, made.ok.id);
+  assert.ok((await hotPackIds()).has(made.ok.id));
+  const [shown] = await decorate([made.ok], null);
+  assert.equal(shown.hot, true);
+  await forgetIcons(owner, files);
+  assert.equal((await hotPackIds()).has(made.ok.id), false);
+});

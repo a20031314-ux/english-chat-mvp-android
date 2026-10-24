@@ -78,6 +78,7 @@ const ko = {
   motionPulse: "두근",
   motionWobble: "살랑",
   saveIcon: "올리기",
+  hot: "많이 쓰는 묶음",
 };
 
 type IconCopy = typeof ko;
@@ -155,6 +156,7 @@ const en: IconCopy = {
   motionPulse: "Pulse",
   motionWobble: "Wobble",
   saveIcon: "Upload",
+  hot: "Popular pack",
 };
 
 const LOCALES: Record<string, IconCopy> = {
@@ -231,6 +233,7 @@ const LOCALES: Record<string, IconCopy> = {
     motionPulse: "Latido",
     motionWobble: "Balanceo",
     saveIcon: "Subir",
+    hot: "Paquete muy usado",
   },
   ja: {
     tab: "アイコン",
@@ -305,6 +308,7 @@ const LOCALES: Record<string, IconCopy> = {
     motionPulse: "どきどき",
     motionWobble: "ゆらゆら",
     saveIcon: "追加",
+    hot: "よく使われるパック",
   },
   zh: {
     tab: "表情",
@@ -379,6 +383,7 @@ const LOCALES: Record<string, IconCopy> = {
     motionPulse: "心跳",
     motionWobble: "摇摆",
     saveIcon: "上传",
+    hot: "热门图标包",
   },
   vi: {
     tab: "Biểu tượng",
@@ -453,6 +458,7 @@ const LOCALES: Record<string, IconCopy> = {
     motionPulse: "Nhịp",
     motionWobble: "Lắc lư",
     saveIcon: "Tải lên",
+    hot: "Gói được dùng nhiều",
   },
   fr: {
     tab: "Icônes",
@@ -527,6 +533,7 @@ const LOCALES: Record<string, IconCopy> = {
     motionPulse: "Battement",
     motionWobble: "Balancement",
     saveIcon: "Publier",
+    hot: "Pack très utilisé",
   },
   it: {
     tab: "Icone",
@@ -601,6 +608,7 @@ const LOCALES: Record<string, IconCopy> = {
     motionPulse: "Battito",
     motionWobble: "Dondolio",
     saveIcon: "Carica",
+    hot: "Pacchetto molto usato",
   },
   pt: {
     tab: "Ícones",
@@ -675,6 +683,7 @@ const LOCALES: Record<string, IconCopy> = {
     motionPulse: "Pulsar",
     motionWobble: "Balanço",
     saveIcon: "Enviar",
+    hot: "Pacote muito usado",
   },
   ru: {
     tab: "Иконки",
@@ -749,6 +758,7 @@ const LOCALES: Record<string, IconCopy> = {
     motionPulse: "Пульс",
     motionWobble: "Качание",
     saveIcon: "Загрузить",
+    hot: "Популярный набор",
   },
   id: {
     tab: "Ikon",
@@ -823,6 +833,7 @@ const LOCALES: Record<string, IconCopy> = {
     motionPulse: "Denyut",
     motionWobble: "Ayun",
     saveIcon: "Unggah",
+    hot: "Paket populer",
   },
   ar: {
     tab: "أيقونات",
@@ -897,6 +908,7 @@ const LOCALES: Record<string, IconCopy> = {
     motionPulse: "نبض",
     motionWobble: "تمايل",
     saveIcon: "رفع",
+    hot: "حزمة رائجة",
   },
   th: {
     tab: "ไอคอน",
@@ -971,6 +983,7 @@ const LOCALES: Record<string, IconCopy> = {
     motionPulse: "เต้น",
     motionWobble: "โยก",
     saveIcon: "อัปโหลด",
+    hot: "แพ็กยอดนิยม",
   },
   hi: {
     tab: "आइकन",
@@ -1045,6 +1058,7 @@ const LOCALES: Record<string, IconCopy> = {
     motionPulse: "धड़कन",
     motionWobble: "झूलना",
     saveIcon: "अपलोड",
+    hot: "लोकप्रिय पैक",
   },
 };
 
