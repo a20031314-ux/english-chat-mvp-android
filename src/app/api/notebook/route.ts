@@ -110,6 +110,8 @@ export async function GET(request: NextRequest) {
     stages: ladder,
     nodes,
     phrases,
+    // 칸을 고른 표현 수(어휘로 둔 것 포함) — 점검이 "아직"과 "어휘로 둠"을 가른다.
+    filed: Object.keys(record.phrases).length,
     custom: record.custom,
     renames: record.renames,
     memos: record.memos,
