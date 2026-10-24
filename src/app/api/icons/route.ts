@@ -144,7 +144,7 @@ export async function POST(request: NextRequest) {
   }
   const me = requestAuth(request)?.accountId ?? null;
   const action = body.action;
-  // 2.74 이하 앱은 판매 묶음 화면이 없어(가격·사기 없음, 라이선스를 CC BY로 잘못 보임) 목록에서 뺀다.
+  // 판매 화면이 없는 앱(2.73 이하 — 2.74(88)부터 있음)은 판매 묶음 화면이 없어(가격·사기 없음, 라이선스를 CC BY로 잘못 보임) 목록에서 뺀다.
   const knowsSale = body.sale === 1;
   const forBuild = (packs: IconPack[]) => (knowsSale ? packs : packs.filter((pack) => !isPaidPack(pack)));
 

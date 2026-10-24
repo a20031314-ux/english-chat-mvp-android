@@ -48,7 +48,7 @@ export async function GET(request: NextRequest) {
   const before274 = request.nextUrl.searchParams.get("r274") === "1"
     ? undefined
     : (mapBefore274 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
-  // 2.75(`r275=1`)부터: 아이콘 판매(가격·판매 신청·사기). 그 전 빌드는 아이콘 칸을 2.74 글로(iconsBefore275.json).
+  // 아이콘 판매가 있는 빌드(`r275=1` — 이름과 달리 2.74(88)부터, 판매를 2.74에 같이 넣음 2026-10-25): 가격·판매 신청·사기. 그 전 빌드는 아이콘 칸을 판매 줄 없는 글로(iconsBefore275.json).
   const before275 = request.nextUrl.searchParams.get("r275") === "1"
     ? undefined
     : (iconsBefore275 as Partial<Record<string, Record<string, Guide["rooms"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];

@@ -1353,6 +1353,41 @@ const STEPS = {
     await wait(2000);
     await page.evaluate(() => localStorage.setItem("peopleViewMode", "people"));
   },
+  async "icon-sale"({ page, ui, wait, target }) {
+    // 2.74: 판매 묶음 시트(가격·"이 앱에서 산 사람만"·"nP로 사기") — 고정 응답, 그림은 여기서 만든 움직이는 WebP.
+    await socialMocks(page, target, ui);
+    const sharp = (await import("sharp")).default;
+    const colors = ["#f59e0b", "#22c55e", "#3b82f6", "#ec4899", "#a855f7", "#14b8a6", "#ef4444", "#eab308"];
+    const face = (bg, mouth) =>
+      Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><circle cx="64" cy="64" r="60" fill="${bg}"/><circle cx="44" cy="52" r="9" fill="#111"/><circle cx="84" cy="52" r="9" fill="#111"/><path d="${mouth}" stroke="#111" stroke-width="8" fill="none" stroke-linecap="round"/></svg>`);
+    const images = new Map();
+    for (let i = 0; i < colors.length; i++) {
+      const frames = await Promise.all(["M36 82 Q64 108 92 82", "M40 88 Q64 96 88 88"].map((mouth) => sharp(face(colors[i], mouth)).png().toBuffer()));
+      images.set(`ic_capture0${i}`, await sharp(frames, { join: { animated: true } }).webp({ delay: [400, 400], loop: 0 }).toBuffer());
+    }
+    const phrase = { en: "Nice!", es: "¡Genial!", ja: "いいね！", zh: "太棒了！", ko: "좋아요!" }[target];
+    const icons = [...images.keys()].map((icon, index) => ({ id: icon, w: 128, h: 128, animated: true, ...(index === 0 && phrase ? { phrase: { lang: target, text: phrase } } : {}) }));
+    const sale = { id: "ip_capture02", owner: PEOPLE.lucia.id, ownerName: "Lucía", name: "Gatos 🐱", license: "app", price: 5, sale: "approved", bought: false, uses: 54, added: false, createdAt: Date.now(), icons };
+    const free = { id: "ip_capture01", owner: PEOPLE.yuki.id, ownerName: "Yuki", name: "Smile 😀", license: "cc-by-4.0", uses: 128, added: false, createdAt: Date.now(), icons: icons.slice(0, 6) };
+    await page.route("**/api/icons**", async (route) => {
+      const request = route.request();
+      if (request.method() === "GET") {
+        const icon = new URL(request.url()).searchParams.get("f")?.split(".")[1] ?? "";
+        const bytes = images.get(icon);
+        return bytes ? route.fulfill({ status: 200, contentType: "image/webp", body: bytes }) : route.fulfill({ status: 404, body: "" });
+      }
+      const body = JSON.parse(request.postData() || "{}");
+      if (body.action === "list") return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ packs: [sale, free], next: 2 }) });
+      if (body.action === "mine") return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify({ packs: [], own: [] }) });
+      return route.fulfill({ status: 200, contentType: "application/json", body: "{}" });
+    });
+    await page.evaluate(() => localStorage.setItem("peopleViewMode", "icons"));
+    await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
+    await wait(2500);
+    await page.getByText("Gatos 🐱").first().click();
+    await wait(2000);
+    await page.evaluate(() => localStorage.setItem("peopleViewMode", "people"));
+  },
   async invite({ page, wait }) {
     // 초대 링크로 연 것처럼(?invite=) — "Yuki님이 초대했어요" 시트(고정 응답).
     await page.goto(`${BASE}/?screen=people&invite=capture01`, { waitUntil: "networkidle" });

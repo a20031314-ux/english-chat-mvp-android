@@ -44,7 +44,8 @@ export type ReleaseNote = {
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
-    // 2.74(88): My "단계"(지도 + 노트 틀, 습득한 표현·관용·세부 칸), 문장분석 "My에서 찾기"(❓ 장면 카드), 아이콘 기본 묶음 Noto·Room 🙂.
+    // 2.74(88): My "단계"(지도 + 노트 틀, 습득한 표현·관용·세부 칸), 문장분석 "My에서 찾기"(❓ 장면 카드), 아이콘 기본 묶음 Noto·Room 🙂,
+    // 아이콘 판매(2~30P 직접 입력, 만든 사람 70%, 사용자 "2.74로 버전 올려줘" 2026-10-25에 같이 넣음).
     // 사람 탭 칩 이모지·초대 보상 시트, 노트 "모두" 보기 고침은 사용법(사람·My)에만.
     version: "2.74",
     code: 88,
@@ -52,6 +53,7 @@ export const RELEASE_NOTES: ReleaseNote[] = [
       { id: "stage-board", title: "whatsNewStageBoardTitle", body: "whatsNewStageBoardBody", shot: "stage-board", tab: "map", guide: "my.map" },
       { id: "find-in-my", title: "whatsNewFindInMyTitle", body: "whatsNewFindInMyBody", shot: "find-in-my", tab: "map", guide: "my.notes" },
       { id: "noto", title: "whatsNewNotoTitle", body: "whatsNewNotoBody", shot: "noto-icons", tab: "people", guide: "people.icons" },
+      { id: "icon-sale", title: "whatsNewIconSaleTitle", body: "whatsNewIconSaleBody", shot: "icon-sale", tab: "people", guide: "people.icons" },
     ],
   },
   {

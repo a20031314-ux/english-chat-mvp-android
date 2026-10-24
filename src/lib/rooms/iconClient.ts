@@ -22,7 +22,7 @@ async function icons<T>(action: string, payload: Record<string, unknown> = {}): 
     response = await fetch(apiUrl("/api/icons"), {
       method: "POST",
       headers: { "Content-Type": "application/json", ...entitlementHeaders() },
-      // sale: 판매 묶음(가격·사기)을 아는 빌드 — 없으면(2.74 이하) 서버가 목록에서 판매 묶음을 뺀다.
+      // sale: 판매 묶음(가격·사기)을 아는 빌드 — 없으면(2.73 이하) 서버가 목록에서 판매 묶음을 뺀다.
       body: JSON.stringify({ action, sale: 1, ...payload }),
     });
   } catch {
