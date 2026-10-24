@@ -316,7 +316,7 @@ For each phrase pick one:
 - "i-idiom", "i-together" or "i-set" when it is an idiom, a collocation or phrasal verb, or a set phrase said as a whole;
 - a letters/sounds or detail section only when the phrase is really about that;
 - a learner's own section when its name fits;
-- "vocab" when it is just a word or a plain phrase with nothing above to learn from it (it stays in the word list).
+- "vocab" only for a single word or a short noun phrase with no verb (it stays in the word list). A whole sentence or question never goes to "vocab": put it under the grammar point it uses, or under "i-set" when it is said as a whole.
 
 Return only json: {"places":[{"i":<index>,"node":"<id or vocab>"}]} with one entry per phrase.`;
 }
