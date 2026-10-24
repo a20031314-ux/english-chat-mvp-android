@@ -36,6 +36,17 @@
 
 ## 새 보고
 
+### 2026-10-24 · 가상 사용자 화면 점검 · 172장 · 실제 화면 문제 새로 없음 · 단계 예문·대화 예시가 앱 언어와 상관없이 "한국에서 왔어요"
+- 무엇을: 지금 main(2.74 화면) `sim:screens` 43장면 × ja:ko·en:ja·es:ar·en:ko = 172장(`screens-20261024`), 조합별로 이어 붙여 직접 봄.
+- 결과: 막힘 16 — 모두 점검 쪽(**장면 갱신 필요**): `sentence-ask`·`word-card` 4조합(10-23부터 여러 문장 줄의 "분석"이 문장 고르기 목록을 먼저 띄움 — 점검이 고르기를 안 눌러 시트가 안 열림, 직접 띄워 확인), `board-likes` 4조합(사람 칩이 이모지만이 되어 게시판 글자 칩을 못 찾음), `map` 4조합(10-23과 같음, `map-leave`가 먼저 그림).
+  10-23 ②(es:ar 1:1 인용 줄 문장부호 뒤집힘)는 고쳐진 대로 정상. 글자 잘림·겹침·다른 언어 문구·빈 화면·오류 안내 없음(품사 영어 표기·무료 채팅 다 씀 안내는 알려진 것).
+  새로(작음): My 단계 보기·체크 화면의 고정 예문이 학습자가 한국 사람이라고 전제 — es 1단계 ser 예문 「Soy Min-ji y soy de Corea.」(아랍어 앱), en 체크 대화 예시 「I'm from Korea. I live in Busan.」(일본어 앱에도). `src/lib/curriculum/stages/*.ts` 14개 언어 모두에 Korea·Corea 류가 있음.
+- 제안: dev — 단계 예문·대화 예시의 출신·이름을 나라 중립(또는 앱 언어 나라)으로(AGENTS.md "Content per language"), 앱 빌드 필요 여부 확인. 점검 쪽: `sentence-ask`가 고르기 목록의 첫 문장을 누르게, `board-likes`는 📋 칩으로, `map`은 `map-leave` 뒤 건너뛰기.
+- 장면: `es:ar map`
+- 장면: `en:ja selfcheck`
+- 링크: 로컬 `tmp/sim-users/screens-20261024/screens.html`(정상 종료, 점검 데이터 106키 지움, 남은 임시 계정 없음)
+- 결정:
+
 ### 2026-10-25 · 가상 사용자 기능 점검 · 오류 0 · 노트 틀에 습득한 표현이 pt·th 학습에서만 한 칸도 안 들어감(재현 2/2)
 - 무엇을: 운영 API(앱 2.74.0), 사람 사이 9묶음(rooms·roomsplus·dm·groups·people·notes·board·team·next) 196명 4,125요청 188초(seed 20261025). `roomhint`는 지워진 묶음이라 뺌(qa.md).
 - 결과: 오류 0·500대 없음. 경고 3 모두 새 점검(10-24 더함) `notes` 노트 틀 — 표현 저장 뒤 32초 기다려 다시 열어도 `phrases` 0개: p015 th:it(0/3)·p029 pt:ko(0/2)·p071 pt:en(0/2). 같은 묶음 다른 11명(hi·es·zh·it·vi·ar·ru·id·ko)은 「주말 어땠어」류가 i-set·문법 칸에 들어감 — pt 「Como foi o seu fim de semana」·th 「สุดสัปดาห์เป็นยังไงบ้างคะ」만 안 들어감. p029·p015 `--persona` 다시 돌려 2/2 같음(확정). `placeLearnedPhrases`가 실패를 삼켜서 모델 실패인지 "어휘로 둠"인지 밖에서 안 보임.

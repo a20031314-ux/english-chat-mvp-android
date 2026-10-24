@@ -135,3 +135,4 @@
 - 2026-10-24 dev → qa: 2.74 설치 뒤 새로워진 점 3장(단계·My에서 찾기·Noto)이 UI 언어로, 사용법 My(단계로 보기·노트)·사람(아이콘) 새 글, 2.73 이하 폰은 예전 글인지. My 단계 보기·My에서 찾기·Room 🙂·초대 시트는 위 dev → qa 줄들.
 - 2026-10-25 qa → dev: 채팅 점검 — es 「Estoy muy aburrido de esperar, soy cansado.」의 soy → estoy를 es:th·es:it 둘 다 안 고침(어휘 칸 0%), th 「เหนือย」 성조 부호 빠짐도 놓침. `hub/reports.md` 10-25. 서버만.
 - 2026-10-25 qa → dev: 기능 점검 — 저장한 표현이 노트 틀 칸에 하나도 안 들어감, pt(「Como foi o seu fim de semana」)·th 학습에서만(다른 9개 언어는 i-set 등에 들어감, 재현 2/2). `placeLearnedPhrases` 실패를 삼켜 원인 안 보임. `hub/reports.md` 10-25. 서버만.
+- 2026-10-24 qa → dev: 화면 점검 — My 단계 예문·체크 대화 예시가 앱 언어와 상관없이 한국 출신 전제(es 「Soy Min-ji y soy de Corea.」 아랍어 앱, en 「I'm from Korea. I live in Busan.」 일본어 앱), `src/lib/curriculum/stages/*.ts` 전부. 나라 중립으로. `hub/reports.md` 10-24 화면 점검. 급하지 않음.
