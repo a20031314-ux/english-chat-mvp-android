@@ -3,24 +3,26 @@ languagebank ti aiuta a parlare e scrivere davvero nella lingua che stai imparan
 PARLA CON UN TUTOR IA
 • Chatta nella lingua che stai imparando. Ti blocchi? Scrivi nella tua lingua: il tutor continua nella lingua che stai imparando e «Vedi come si dice» mette l'espressione proprio sotto quella riga.
 • Se una frase contiene un errore, sotto compare l'etichetta «C'è qualcosa da correggere». Toccala per vedere la frase corretta.
-• Chiama il tutor IA e parla ad alta voce. Il pacchetto di oggi è una breve chiamata con un obiettivo; dopo puoi rivedere cosa volevi dire.
+• Tocca 📞 in alto nella chat per chiamare il tutor e parlare ad alta voce. Ogni chiamata resta nella chat come scheda 🗒, da continuare o rivedere. Il pacchetto di oggi è una breve chiamata con un obiettivo.
 
 CHIEDI DI QUALSIASI FRASE
-• Apri l'analisi della frase su una riga di chat, chiamate, video o note. Scegli la parte che non capisci e chiedi cosa significa. La risposta arriva nella tua lingua.
+• Apri l'analisi della frase su una riga di chat, chiamate, video o note. Scegli la parte che non capisci e chiedi cosa significa. La risposta arriva nella tua lingua, e «Trova in Io» mostra dove si colloca nelle tue fasi.
 
 IMPARA CON VIDEO VERI
 • I video sono divisi in frasi, con sottotitoli nella lingua che stai imparando. Tocca una frase per riascoltarla e fai domande su qualsiasi riga.
 
 VEDI COSA TI MANCA
-• Niente livelli. Ogni frase mostra solo cosa era sbagliato o mancava, e ciò che scrivi rivela i tuoi punti deboli e cosa fare dopo.
-• In Io inizi con brevi conversazioni di esempio. Rispondi «Sì, ci riesco», «Quasi» o «Non ancora» e la tua mappa di studio parte da dove sei: con la conversazione che saprai fare, la grammatica di questa parte e, se sei all'inizio, prima lettere e suoni.
+• Niente punteggi. Ogni frase mostra solo cosa era sbagliato o mancava, e ciò che scrivi rivela i tuoi punti deboli e cosa fare dopo.
+• In Io inizi con brevi conversazioni di esempio. Rispondi «Sì, ci riesco», «Quasi» o «Non ancora» e parti dalla fase giusta per te.
 • Gli indizi delle missioni si aprono uno alla volta, così provi prima tu.
-• In Io: Prova questo, In crescita, Le mie espressioni e Note (con Vocabolario) raccolgono ciò che hai usato e imparato.
+• «Fasi» in Io: una scala da 1 a 5, ogni fase con la sua grammatica, la conversazione che saprai fare e cosa saprai fare, e prima lettere e suoni se sei all'inizio. Le righe corrette e le espressioni imparate finiscono al posto giusto.
+• «Imparato oggi»: le righe che il tutor ha corretto oggi. Tieni quelle che vuoi e vanno al posto giusto, anche con la schermata di quel momento.
 
 IMPARA CON LE PERSONE
-• Room: stanze vocali con sottotitoli in tempo reale. Tocca una riga per tradurla o scegli solo le parole su cui vuoi fare una domanda. Un 💡 indizio ti dice cosa dire nella lingua che stai imparando, e le tue righe sottotitolate possono mostrare correzioni che vedi solo tu.
+• Room: stanze vocali con sottotitoli in tempo reale, fino a 40 persone. Tocca una riga per tradurla o scegli solo le parole su cui vuoi fare una domanda. Le tue righe possono mostrare correzioni che vedi solo tu. L'host può avviare con 🎭 i giochi del Bugiardo e della Mafia.
 • Chat: gruppi e messaggi 1:1, chiamate vocali e videochiamate 1:1, e spazi di squadra con compagni di studio.
-• Persone: trova chi impara la tua lingua, seguilo e scrivi nella bacheca.
+• Persone: mostra solo chi impara la stessa lingua, o chi parla anche la tua lingua; seguili e scrivi nella bacheca. I profili mostrano paese, lingue e interessi, e puoi inviare «🙌 Utile» a chi ti ha risposto.
+• Icone: crea i tuoi pacchetti di icone (anche animate) e inviali nei messaggi e nei commenti.
 • Invita un amico con un solo link.
 • Disattiva le funzioni che non usi e l'app mostra solo quello che ti serve.
 

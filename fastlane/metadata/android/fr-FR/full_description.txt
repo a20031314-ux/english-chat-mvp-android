@@ -3,24 +3,26 @@ languagebank vous aide à vraiment parler et écrire dans la langue que vous app
 DISCUTEZ AVEC UN TUTEUR IA
 • Discutez dans la langue que vous apprenez. Bloqué ? Écrivez dans votre langue : le tuteur continue dans la langue que vous apprenez, et « Voir comment le dire » place l'expression juste sous cette ligne.
 • Si une phrase contient une erreur, l'étiquette « Il y a quelque chose à corriger » apparaît dessous. Touchez-la pour voir la phrase corrigée.
-• Appelez le tuteur IA et parlez à voix haute. Le pack du jour est un court appel avec un objectif ; ensuite, vous pouvez revoir ce que vous vouliez dire.
+• Touchez 📞 en haut de la discussion pour appeler le tuteur et parler à voix haute. Chaque appel reste dans la discussion sous forme de carte 🗒, à reprendre ou revoir. Le pack du jour est un court appel avec un objectif.
 
 POSEZ DES QUESTIONS SUR N'IMPORTE QUELLE PHRASE
-• Ouvrez l'analyse de phrase sur une ligne de discussion, d'appel, de vidéo ou de vos notes. Choisissez la partie que vous ne comprenez pas et demandez ce qu'elle veut dire. La réponse arrive dans votre langue.
+• Ouvrez l'analyse de phrase sur une ligne de discussion, d'appel, de vidéo ou de vos notes. Choisissez la partie que vous ne comprenez pas et demandez ce qu'elle veut dire. La réponse arrive dans votre langue, et « Trouver dans Moi » montre où elle se place dans vos étapes.
 
 APPRENEZ AVEC DE VRAIES VIDÉOS
 • Les vidéos sont découpées en phrases, avec des sous-titres dans la langue que vous apprenez. Touchez une phrase pour la réécouter et posez une question sur n'importe quelle ligne.
 
 VOYEZ CE QUI VOUS MANQUE
-• Pas de niveaux. Chaque phrase montre seulement ce qui était faux ou manquant, et ce que vous écrivez révèle vos points faibles et la suite à travailler.
-• Dans Moi, commencez par de courtes conversations d'exemple. Répondez « Oui, je peux », « Presque » ou « Pas encore », et votre carte d'apprentissage commence là où vous en êtes : avec la conversation que vous saurez tenir, la grammaire de cette partie et, si vous débutez, d'abord les lettres et les sons.
+• Pas de notes. Chaque phrase montre seulement ce qui était faux ou manquant, et ce que vous écrivez révèle vos points faibles et la suite à travailler.
+• Dans Moi, commencez par de courtes conversations d'exemple. Répondez « Oui, je peux », « Presque » ou « Pas encore », et vous démarrez à l'étape qui vous correspond.
 • Les indices des missions s'ouvrent un par un, pour essayer d'abord.
-• Dans Moi : À essayer, En croissance, Mes expressions et Notes (avec Vocabulaire) rassemblent ce que vous avez utilisé et appris.
+• « Étapes » dans Moi : une échelle de 1 à 5, chaque étape avec sa grammaire, la conversation que vous saurez tenir et ce que vous saurez faire, et d'abord les lettres et les sons si vous débutez. Les lignes corrigées et les expressions apprises viennent à leur place.
+• « Appris aujourd'hui » : les lignes que le tuteur a corrigées aujourd'hui. Gardez celles que vous voulez, elles vont à leur place, avec l'écran du moment si vous le souhaitez.
 
 APPRENEZ AVEC D'AUTRES
-• Room : des salons vocaux avec sous-titres en direct. Touchez une ligne pour la traduire, ou choisissez seulement les mots sur lesquels vous voulez poser une question. Un 💡 indice vous dit quoi dire dans la langue que vous apprenez, et vos propres lignes sous-titrées peuvent afficher des corrections visibles par vous seul.
+• Room : des salons vocaux avec sous-titres en direct, jusqu'à 40 personnes. Touchez une ligne pour la traduire, ou choisissez seulement les mots sur lesquels vous voulez poser une question. Vos propres lignes peuvent afficher des corrections visibles par vous seul. L'hôte peut lancer avec 🎭 les jeux du Menteur et de la Mafia.
 • Discussions : groupes et messages 1:1, appels vocaux et appels vidéo 1:1, et espaces d'équipe avec des partenaires d'étude.
-• Personnes : trouvez des gens qui apprennent votre langue, suivez-les et publiez sur le forum.
+• Personnes : n'affichez que ceux qui apprennent la même langue, ou ceux qui parlent aussi votre langue ; suivez-les et publiez sur le forum. Les profils montrent pays, langues et centres d'intérêt, et vous pouvez envoyer « 🙌 Utile » à qui vous a répondu.
+• Icônes : créez vos propres packs d'icônes (animées aussi) et envoyez-les en message ou en commentaire.
 • Invitez un ami avec un seul lien.
 • Désactivez les fonctions que vous n'utilisez pas : l'app n'affiche que ce dont vous avez besoin.
 

@@ -11,11 +11,11 @@ export const SHOTS = [
   { id: "map", main: "stage-start", details: [["mapview", 0.1], ["mission", 0.08]] },
   { id: "chat", main: "chat-expression", details: [["chat-fix-open", 0.06], ["links", 0.3]] },
   { id: "ask", main: "chat-ask", details: [["chat-word", 0.0], ["pick", 0.4]] },
-  { id: "my", main: "growth", details: [["myask", 0.44], ["ledger", 0.0]] },
+  { id: "my", main: "growth", details: [["myask", 0.44], ["notebook-today", 0.45]] },
   { id: "call", main: "meant", details: [["call-pack", 0.17], ["calltools", 0.4]] },
   { id: "video", main: "video-study", details: [["video-ask", 0.0], ["vocab-search", 0.04]] },
-  { id: "room", main: "quote", details: [["freetalk", 0.45], ["rooms-mini", 0.44]] },
-  { id: "people", main: "people", details: [["group-pick", 0.0], ["invite", 0.46]] },
+  { id: "room", main: "quote", details: [["room-game", 0.28], ["rooms-mini", 0.44]] },
+  { id: "people", main: "people-lang", details: [["profile-facts", 0.26], ["icons", 1.0]] },
 ];
 
 /** 등록정보마다 바꾸는 장면. 오늘의 팩은 영어·일본어 학습만 있어 영어 앱(스페인어 학습)은 내 문장 말해보기로. */
@@ -217,4 +217,40 @@ for (const [key, copy] of Object.entries(COPY)) {
   const free = room[4][0];
   room[3] = [room[3][0], free, room[3][2]];
   room[4] = [ROOM_GROUP_CHIP[key.split("-")[0]], room[4][1], room[4][2]];
+}
+
+// 2.73(2026-10-24): My "단계" 보기·오늘의 학습·My에서 찾기, Room 게임, 사람 언어 칩·프로필·아이콘.
+// 앱 문구(단계·오늘의 학습·My에서 찾기)는 앱의 실제 이름 그대로(copy.ts / overlays.json).
+const NEW273 = {
+  ko: { stage: "단계", today: "오늘의 학습", find: "My에서 찾기", view: "망·그래프·단계 보기", game: "🎭 라이어 게임·마피아", p40: "최대 40명", lang: "언어로 골라 보기", profile: "프로필·🙌 도움됐어요", icons: "아이콘 묶음" },
+  en: { stage: "Stages", today: "Today's learning", find: "Find in My", view: "Net, graph or stages", game: "🎭 Liar & Mafia games", p40: "Up to 40 people", lang: "Filter by language", profile: "Profiles · 🙌 Helpful", icons: "Icon packs" },
+  ja: { stage: "ステージ", today: "今日の学び", find: "マイで探す", view: "ネット・グラフ・ステージ", game: "🎭 ワードウルフ・マフィア", p40: "最大40人", lang: "言語で絞り込み", profile: "プロフィール・🙌 助かった", icons: "アイコンセット" },
+  zh: { stage: "阶段", today: "今天的学习", find: "在“我的”里查找", view: "网·图表·阶段", game: "🎭 谁是卧底·狼人杀", p40: "最多 40 人", lang: "按语言筛选", profile: "个人资料·🙌 有帮助", icons: "图标包" },
+  es: { stage: "Etapas", today: "Lo de hoy", find: "Buscar en Mi espacio", view: "Red, gráfica o etapas", game: "🎭 Mentiroso y Mafia", p40: "Hasta 40 personas", lang: "Filtrar por idioma", profile: "Perfil · 🙌 Me ayudó", icons: "Paquetes de iconos" },
+  hi: { stage: "चरण", today: "आज की पढ़ाई", find: "मेरा में खोजें", view: "जाल·ग्राफ़·चरण", game: "🎭 झूठा और माफ़िया", p40: "40 लोगों तक", lang: "भाषा से चुनें", profile: "प्रोफ़ाइल·🙌 मदद मिली", icons: "आइकन पैक" },
+  pt: { stage: "Etapas", today: "Aprendizado de hoje", find: "Encontrar em Meu espaço", view: "Rede, gráfico ou etapas", game: "🎭 Mentiroso e Máfia", p40: "Até 40 pessoas", lang: "Filtrar por idioma", profile: "Perfil · 🙌 Ajudou", icons: "Pacotes de ícones" },
+  fr: { stage: "Étapes", today: "Appris aujourd'hui", find: "Trouver dans Moi", view: "Réseau, graphique ou étapes", game: "🎭 Menteur et Mafia", p40: "Jusqu'à 40 personnes", lang: "Filtrer par langue", profile: "Profil · 🙌 Utile", icons: "Packs d'icônes" },
+  vi: { stage: "Giai đoạn", today: "Học hôm nay", find: "Tìm trong Của tôi", view: "Mạng, biểu đồ, giai đoạn", game: "🎭 Kẻ nói dối · Ma sói", p40: "Tối đa 40 người", lang: "Lọc theo ngôn ngữ", profile: "Hồ sơ · 🙌 Hữu ích", icons: "Bộ biểu tượng" },
+  id: { stage: "Tahap", today: "Belajar hari ini", find: "Cari di Saya", view: "Jaring, grafik, tahap", game: "🎭 Pembohong & Mafia", p40: "Sampai 40 orang", lang: "Saring per bahasa", profile: "Profil · 🙌 Membantu", icons: "Paket ikon" },
+  th: { stage: "ขั้น", today: "เรียนวันนี้", find: "หาในของฉัน", view: "เครือข่าย กราฟ ขั้น", game: "🎭 คนโกหก·มาเฟีย", p40: "สูงสุด 40 คน", lang: "เลือกตามภาษา", profile: "โปรไฟล์·🙌 ช่วยได้", icons: "ชุดไอคอน" },
+  ar: { stage: "المراحل", today: "تعلّم اليوم", find: "ابحث في «أنا»", view: "شبكة أو رسم أو مراحل", game: "🎭 الكاذب والمافيا", p40: "حتى 40 شخصًا", lang: "تصفية حسب اللغة", profile: "الملف · 🙌 مفيد", icons: "حزم الأيقونات" },
+};
+const done273 = new WeakSet(); // 검색어 세트는 앱 언어 문구 배열을 같이 쓴다 — 한 번만 바꾼다.
+for (const [key, copy] of Object.entries(COPY)) {
+  const n = NEW273[key.split("-")[0]];
+  copy.map[3] = [copy.map[3][0], n.stage, copy.map[3][2]];
+  copy.my[3] = [copy.my[3][0], copy.my[3][1], n.today];
+  copy.my[4] = [n.view, n.find, copy.my[4][2]];
+  const room = copy.room;
+  if (!done273.has(room)) {
+    room[4] = [room[3][1], room[4][0], n.p40];
+    room[3] = [room[3][0], n.game, room[3][2]];
+  }
+  const people = copy.people;
+  if (!done273.has(people)) {
+    people[4] = [people[3][1], people[3][2], people[4][2]];
+    people[3] = [n.lang, n.profile, n.icons];
+  }
+  done273.add(people);
+  done273.add(room);
 }

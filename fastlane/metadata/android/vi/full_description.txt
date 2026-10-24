@@ -3,24 +3,26 @@ languagebank giúp bạn thực sự nói và viết bằng ngôn ngữ đang h�
 TRÒ CHUYỆN VỚI GIA SƯ AI
 • Nhắn tin bằng ngôn ngữ bạn đang học. Bí từ? Hãy viết bằng tiếng của bạn: gia sư vẫn tiếp tục bằng ngôn ngữ bạn đang học, và "Xem cách nói" đặt cách diễn đạt ngay dưới dòng đó.
 • Nếu câu có lỗi, nhãn "Có chỗ cần sửa" sẽ hiện bên dưới. Chạm vào để xem câu đã sửa.
-• Gọi gia sư AI và nói thành tiếng. Gói hôm nay là một cuộc gọi ngắn có mục tiêu, và sau đó bạn có thể xem lại điều mình định nói.
+• Chạm 📞 ở đầu cuộc trò chuyện để gọi ngay cho gia sư và nói thành tiếng. Mỗi cuộc gọi nằm lại trong trò chuyện dưới dạng thẻ 🗒 để nói tiếp hoặc xem lại. Gói hôm nay là một cuộc gọi ngắn có mục tiêu.
 
 HỎI VỀ BẤT KỲ CÂU NÀO
-• Mở phân tích câu trên một dòng trong trò chuyện, cuộc gọi, video hoặc ghi chú. Chọn phần bạn chưa hiểu và hỏi nghĩa của nó. Câu trả lời bằng tiếng của bạn.
+• Mở phân tích câu trên một dòng trong trò chuyện, cuộc gọi, video hoặc ghi chú. Chọn phần bạn chưa hiểu và hỏi nghĩa của nó. Câu trả lời bằng tiếng của bạn, và "Tìm trong Của tôi" cho biết nó nằm ở ô nào trong các giai đoạn của bạn.
 
 HỌC TỪ VIDEO THẬT
 • Video được chia thành từng câu, kèm phụ đề bằng ngôn ngữ bạn đang học. Chạm vào một câu để nghe lại và hỏi về bất kỳ dòng nào.
 
 THẤY ĐIỀU MÌNH CÒN THIẾU
-• Không có cấp độ. Mỗi câu chỉ chỉ ra chỗ sai hoặc còn thiếu, và những gì bạn viết cho thấy điểm yếu cùng việc nên làm tiếp theo.
-• Trong Của tôi, bạn bắt đầu bằng vài đoạn hội thoại ví dụ ngắn. Chọn "Được", "Gần được" hoặc "Chưa được", bản đồ học tập sẽ bắt đầu từ chỗ bạn đang đứng: có đoạn hội thoại bạn sẽ nói được, ngữ pháp phần này, và nếu mới bắt đầu thì học chữ và âm trước.
+• Không chấm điểm. Mỗi câu chỉ chỉ ra chỗ sai hoặc còn thiếu, và những gì bạn viết cho thấy điểm yếu cùng việc nên làm tiếp theo.
+• Trong Của tôi, bạn bắt đầu bằng vài đoạn hội thoại ví dụ ngắn. Chọn "Được", "Gần được" hoặc "Chưa được" là bạn bắt đầu từ giai đoạn phù hợp.
 • Gợi ý của nhiệm vụ mở từng cái một để bạn thử trước.
-• Trong Của tôi: Thử cái này, Đang lớn, Cách nói của tôi và Ghi chú (có Từ) gom lại những gì bạn đã dùng và đã học.
+• "Giai đoạn" trong Của tôi: bậc thang từ 1 đến 5, mỗi giai đoạn có ngữ pháp, đoạn hội thoại bạn sẽ nói được và việc bạn làm được; mới bắt đầu thì học chữ và âm trước. Các dòng được sửa và cách nói đã học sẽ vào đúng ô.
+• "Học hôm nay": những dòng gia sư sửa hôm nay. Chỉ giữ những dòng bạn muốn là chúng vào đúng ô, có thể kèm màn hình lúc đó.
 
 HỌC CÙNG MỌI NGƯỜI
-• Room: phòng thoại có phụ đề trực tiếp. Chạm vào một dòng để dịch, hoặc chỉ chọn những từ bạn muốn hỏi. 💡 Gợi ý cho bạn biết nên nói gì bằng ngôn ngữ đang học, và những dòng chính bạn nói có thể hiện phần sửa chỉ mình bạn thấy.
+• Room: phòng thoại có phụ đề trực tiếp, tối đa 40 người. Chạm vào một dòng để dịch, hoặc chỉ chọn những từ bạn muốn hỏi. Những dòng chính bạn nói có thể hiện phần sửa chỉ mình bạn thấy. Chủ phòng có thể bắt đầu trò Kẻ nói dối và Ma sói bằng 🎭.
 • Trò chuyện: nhóm và tin nhắn 1:1, gọi thoại và gọi video 1:1, cùng không gian nhóm với bạn học.
-• Mọi người: tìm người học ngôn ngữ của bạn, theo dõi họ và đăng bài lên bảng tin.
+• Mọi người: chỉ xem người học cùng ngôn ngữ, hoặc người còn nói cùng tiếng với bạn; theo dõi họ và đăng bài lên bảng tin. Hồ sơ hiện quốc gia, ngôn ngữ và sở thích, và bạn có thể gửi "🙌 Hữu ích" cho người đã trả lời mình.
+• Biểu tượng: tự tạo bộ biểu tượng (cả ảnh động) và gửi trong tin nhắn, bình luận.
 • Mời bạn bè chỉ bằng một đường liên kết.
 • Tắt những tính năng bạn không dùng, ứng dụng chỉ hiện những gì bạn cần.
 

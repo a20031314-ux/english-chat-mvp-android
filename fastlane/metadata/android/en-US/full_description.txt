@@ -3,24 +3,26 @@ languagebank helps you actually speak and write in the language you're learning 
 TALK WITH AN AI TUTOR
 • Chat in the language you're learning. Stuck? Write in your own language: the tutor keeps going in the language you're learning, and "Show how to say it" puts the expression right under that line.
 • When a sentence has a mistake, a "Something to fix" chip appears under it. Tap it to see the corrected sentence.
-• Call the AI tutor and just talk out loud. Today's pack gives you a short call with a goal, and afterwards you can look back at what you meant to say.
+• Tap 📞 at the top of the chat to call the tutor and talk out loud. Each call stays in the chat as a 🗒 card you can continue or look back on. Today's pack is a short call with a goal.
 
 ASK ABOUT ANY SENTENCE
-• Open sentence analysis on a line from chat, calls, videos or your notes. Pick the part you don't get and ask what it means. Answers come in your own language.
+• Open sentence analysis on a line from chat, calls, videos or your notes. Pick the part you don't get and ask what it means. Answers come in your own language, and "Find in My" shows where it fits in your stages.
 
 LEARN FROM REAL VIDEOS
 • Videos are split into sentences with subtitles in the language you're learning. Tap a sentence to replay it, and ask about any line.
 
 SEE WHAT YOU'RE MISSING
-• No levels. Each sentence shows only what was wrong or missing, and what you've written shows where you're weak and what to do next.
-• Start in My with short example conversations. Answer "Yes, I can", "Almost" or "Not yet", and your study map starts where you are, with the conversation you'll be able to have, the grammar in this part and, if you're just beginning, letters and sounds first.
+• No scores. Each sentence shows only what was wrong or missing, and what you've written shows where you're weak and what to do next.
+• Start in My with short example conversations. Answer "Yes, I can", "Almost" or "Not yet", and you begin at the stage that fits you.
 • Missions open hints one at a time, so you try first.
-• In My: Try this, Growing, My phrases and Notes (with Vocab) gather what you've used and learned.
+• "Stages" in My: a ladder from 1 to 5, each with its grammar, the conversation you'll be able to have and what you can do, plus letters and sounds first if you're just beginning. Fixed lines and phrases you've learned fill the right places.
+• "Today's learning": the lines your tutor fixed today. Keep the ones you want and they go into the right place, with the screen from that moment if you like.
 
 LEARN WITH PEOPLE
-• Room: voice rooms with live captions. Tap a line to translate it, or pick just the words you want to ask about. A 💡 hint shows you what to say in the language you're learning, and your own captioned lines can show corrections only you see.
+• Room: voice rooms with live captions, up to 40 people. Tap a line to translate it, or pick just the words you want to ask about. Your own lines can show corrections only you see. Hosts can start Liar and Mafia games with 🎭.
 • Chats: group chats and 1:1 messages, voice calls and 1:1 video calls, and team spaces with study mates.
-• People: find people learning your language, follow them and post on the board.
+• People: show only people "Learning the same language", or those with the "Same learning & spoken language"; follow them and post on the board. Profiles show country, languages and interests, and you can send "🙌 Helpful" to someone who answered you.
+• Icons: make your own icon packs (animated too) and send them in messages and comments.
 • Invite a friend with one link.
 • Turn off the features you don't use, and the app shows only what you need.
 
