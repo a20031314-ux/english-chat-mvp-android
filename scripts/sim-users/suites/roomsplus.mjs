@@ -94,6 +94,17 @@ export default {
       qIssues.push(...expectError(P, speechAsListener, "NOT_SPEAKER", "듣는 사람이 말 줄 쓰기"));
       step({ title: "줄 집어 \"무슨 뜻이에요?\"", input: bank.askMeaning[persona.ui], status: asked.status, ms: asked.ms, outputs: [{ label: "인용", text: q ? `${q.nickname}: ${q.text}` : "" }], issues: qIssues });
 
+      // 아이콘(🙂, 2026-10-24): 기본 묶음 Noto로 채팅 줄. 글 없이도 되고, 옛 앱용 자리표 글이 붙는다. 틀린 아이콘은 BAD_ICON.
+      const iconLine = await acc.room(B, "line", { roomId, kind: "text", text: "", icon: { pack: "ip_notofaces", id: "ic_noto1f600" } });
+      const iIssues = checkHttp(P, iconLine);
+      if (iconLine.status === 200) {
+        if (iconLine.body?.line?.icon?.pack !== "ip_notofaces") iIssues.push(issue("error", "rooms_logic", "아이콘 줄에 icon이 없음"));
+        if (!iconLine.body?.line?.text) iIssues.push(issue("error", "rooms_logic", "아이콘만 보낸 줄에 자리표 글이 없음(옛 앱이 빈 줄)"));
+      }
+      const badIcon = await acc.room(B, "line", { roomId, kind: "text", text: "", icon: { pack: "ip_notofaces", id: "ic_nope000" } });
+      iIssues.push(...expectError(P, badIcon, "BAD_ICON", "없는 아이콘 보내기"));
+      step({ title: "방 채팅 아이콘 🙂", status: iconLine.status, ms: iconLine.ms, outputs: [{ label: "줄", text: `${iconLine.body?.line?.text ?? ""} · ${iconLine.body?.line?.icon?.id ?? "-"}` }], issues: iIssues });
+
       const note = await acc.dm(B, "send", { target: A.id, text: bank.askMeaning[persona.ui], roomQuote: { roomId, seq }, ask: true });
       const nIssues = checkHttp(P, note);
       if (note.status === 200 && note.body?.message?.quote?.roomId !== roomId) nIssues.push(issue("error", "rooms_logic", "쪽지에 방 인용이 없음"));
