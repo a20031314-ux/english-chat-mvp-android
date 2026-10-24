@@ -5,6 +5,9 @@
  * - 올릴 때 라이선스를 고르고 동의한다: CC BY 4.0(출처 표시) 또는 CC0(조건 없음). 묶음에는 만든 사람이 늘 따라간다.
  * - 올리자마자 공개(사용자 결정 2026-10-23). 대신 자동 검사(프레임 여러 장)·신고(저작권 포함)·운영자 내리기.
  * - 서버가 긴 쪽 ICON_MAX_SIDE로 줄여 WebP로 바꿔 저장한다(움직임 유지). 모두에게 공개라 오래 캐시해 보낸다.
+ * - 판매(사용자 2026-10-24 "사용자 제작 아이콘은 선택적으로 포인트판매", 가격은 "선택이 아니라 입력"): 무료 또는
+ *   ICON_PRICE_MIN~ICON_PRICE_MAX 포인트를 직접 넣는다. 판매 묶음은 라이선스 "app"(이 앱에서 산 사람만), /ops 승인 뒤 목록,
+ *   만든 사람에게 ICON_CREATOR_SHARE를 포인트로. 내리거나 지우면 산 사람에게 돌려준다. 기본 묶음(Noto)은 늘 무료.
  *
  * 순수.
  */
@@ -18,16 +21,17 @@ export const ICON_LICENSE_URL: Record<(typeof ICON_LICENSES)[number], string> = 
   cc0: "https://creativecommons.org/publicdomain/zero/1.0/",
 };
 
-/** 판매 가격(포인트). 0 = 무료. */
-export const ICON_PRICES = [0, 3, 5, 10] as const;
-export type IconPrice = (typeof ICON_PRICES)[number];
+/** 판매 가격(포인트, 만든 사람이 직접 넣음). 0 = 무료. 최소 2P — 1P면 만든 사람 몫(70% 내림)이 0이라. 최대는 포인트 상점 묶음(30P) 값. */
+export const ICON_PRICE_MIN = 2;
+export const ICON_PRICE_MAX = 30;
+export type IconPrice = number;
 /** 만든 사람 몫(산 포인트 중). */
 export const ICON_CREATOR_SHARE = 0.7;
 /** 판매 상태: 신청 전·승인 기다림·승인·거절. 무료 묶음은 없음. */
 export type IconSale = "draft" | "pending" | "approved" | "rejected";
 
 export function isIconPrice(value: unknown): value is IconPrice {
-  return typeof value === "number" && (ICON_PRICES as readonly number[]).includes(value);
+  return typeof value === "number" && Number.isInteger(value) && (value === 0 || (value >= ICON_PRICE_MIN && value <= ICON_PRICE_MAX));
 }
 export function creatorCut(price: number): number {
   return Math.floor(price * ICON_CREATOR_SHARE);

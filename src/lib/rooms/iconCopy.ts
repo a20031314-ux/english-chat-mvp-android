@@ -3,6 +3,8 @@
  * 한국어·영어 밖은 Claude가 썼다(원어민 확인 권장). {n} 숫자, {name} 만든 사람.
  * 화면 규칙(hub/DESIGN.md "안내 글"): 칸 이름·버튼·상태·오류만. 동의 글(agree)은 누르기 직전 결과가 달라지는 것이라 화면에 둔다.
  */
+import { ICON_PRICE_MAX, ICON_PRICE_MIN } from "./icons.ts";
+
 const ko = {
   tab: "아이콘",
   popular: "인기",
@@ -54,6 +56,8 @@ const ko = {
   getPoints: "포인트 보기",
   emptyFirst: "아이콘을 먼저 올려 주세요",
   notBought: "사야 쓸 수 있어요",
+  forSale: "판매",
+  badPrice: "{min}~{max}P로 넣어 주세요",
 };
 
 type IconCopy = typeof ko;
@@ -109,6 +113,8 @@ const en: IconCopy = {
   getPoints: "See points",
   emptyFirst: "Upload an icon first",
   notBought: "Buy it to use it",
+  forSale: "For sale",
+  badPrice: "Enter {min}–{max}P",
 };
 
 const LOCALES: Record<string, IconCopy> = {
@@ -163,6 +169,8 @@ const LOCALES: Record<string, IconCopy> = {
     getPoints: "Ver puntos",
     emptyFirst: "Sube un icono primero",
     notBought: "Cómpralo para usarlo",
+    forSale: "En venta",
+    badPrice: "Pon entre {min} y {max}P",
   },
   ja: {
     tab: "アイコン",
@@ -215,6 +223,8 @@ const LOCALES: Record<string, IconCopy> = {
     getPoints: "ポイントを見る",
     emptyFirst: "先にアイコンを追加してください",
     notBought: "買うと使えます",
+    forSale: "販売",
+    badPrice: "{min}〜{max}Pで入力してください",
   },
   zh: {
     tab: "表情",
@@ -267,6 +277,8 @@ const LOCALES: Record<string, IconCopy> = {
     getPoints: "查看积分",
     emptyFirst: "请先上传图标",
     notBought: "购买后才能使用",
+    forSale: "出售",
+    badPrice: "请输入 {min}–{max}P",
   },
   vi: {
     tab: "Biểu tượng",
@@ -319,6 +331,8 @@ const LOCALES: Record<string, IconCopy> = {
     getPoints: "Xem điểm",
     emptyFirst: "Hãy tải biểu tượng lên trước",
     notBought: "Mua để dùng",
+    forSale: "Bán",
+    badPrice: "Nhập {min}–{max}P",
   },
   fr: {
     tab: "Icônes",
@@ -371,6 +385,8 @@ const LOCALES: Record<string, IconCopy> = {
     getPoints: "Voir les points",
     emptyFirst: "Ajoutez d'abord une icône",
     notBought: "Achetez-le pour l'utiliser",
+    forSale: "En vente",
+    badPrice: "Saisissez {min} à {max}P",
   },
   it: {
     tab: "Icone",
@@ -423,6 +439,8 @@ const LOCALES: Record<string, IconCopy> = {
     getPoints: "Vedi punti",
     emptyFirst: "Carica prima un'icona",
     notBought: "Compralo per usarlo",
+    forSale: "In vendita",
+    badPrice: "Inserisci da {min} a {max}P",
   },
   pt: {
     tab: "Ícones",
@@ -475,6 +493,8 @@ const LOCALES: Record<string, IconCopy> = {
     getPoints: "Ver pontos",
     emptyFirst: "Envie um ícone primeiro",
     notBought: "Compre para usar",
+    forSale: "À venda",
+    badPrice: "Digite de {min} a {max}P",
   },
   ru: {
     tab: "Иконки",
@@ -527,6 +547,8 @@ const LOCALES: Record<string, IconCopy> = {
     getPoints: "Баллы",
     emptyFirst: "Сначала загрузите иконку",
     notBought: "Купите, чтобы использовать",
+    forSale: "Продажа",
+    badPrice: "Введите от {min} до {max}P",
   },
   id: {
     tab: "Ikon",
@@ -579,6 +601,8 @@ const LOCALES: Record<string, IconCopy> = {
     getPoints: "Lihat poin",
     emptyFirst: "Unggah ikon dulu",
     notBought: "Beli untuk memakainya",
+    forSale: "Dijual",
+    badPrice: "Masukkan {min}–{max}P",
   },
   ar: {
     tab: "أيقونات",
@@ -631,6 +655,8 @@ const LOCALES: Record<string, IconCopy> = {
     getPoints: "عرض النقاط",
     emptyFirst: "ارفع أيقونة أولًا",
     notBought: "اشترِها لتستخدمها",
+    forSale: "للبيع",
+    badPrice: "أدخل من {min} إلى {max}P",
   },
   th: {
     tab: "ไอคอน",
@@ -683,6 +709,8 @@ const LOCALES: Record<string, IconCopy> = {
     getPoints: "ดูพอยต์",
     emptyFirst: "อัปโหลดไอคอนก่อน",
     notBought: "ซื้อเพื่อใช้",
+    forSale: "ขาย",
+    badPrice: "ใส่ {min}–{max}P",
   },
   hi: {
     tab: "आइकन",
@@ -735,6 +763,8 @@ const LOCALES: Record<string, IconCopy> = {
     getPoints: "पॉइंट देखें",
     emptyFirst: "पहले एक आइकन अपलोड करें",
     notBought: "इस्तेमाल के लिए ख़रीदें",
+    forSale: "बिक्री",
+    badPrice: "{min}–{max}P डालें",
   },
 };
 
@@ -759,6 +789,7 @@ export function iconErrorText(t: IconCopy, code: string): string {
     NO_POINTS: t.noPoints,
     EMPTY: t.emptyFirst,
     NOT_BOUGHT: t.notBought,
+    BAD_PRICE: t.badPrice.replace("{min}", String(ICON_PRICE_MIN)).replace("{max}", String(ICON_PRICE_MAX)),
   };
   return map[code] ?? t.failed;
 }

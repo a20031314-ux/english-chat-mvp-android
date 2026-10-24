@@ -163,7 +163,11 @@ test("판매 묶음: 승인 전엔 목록에 없고, 사면 포인트가 깎이�
   const sellerData = `data:${seller}`;
   const buyerData = `data:${buyer}`;
   assert.ok(isIconPrice(5));
-  assert.equal(isIconPrice(7), false);
+  assert.ok(isIconPrice(17));
+  assert.ok(isIconPrice(0));
+  assert.equal(isIconPrice(1), false);
+  assert.equal(isIconPrice(31), false);
+  assert.equal(isIconPrice(4.5), false);
   assert.equal(creatorCut(10), 7);
   assert.equal(creatorCut(3), 2);
 

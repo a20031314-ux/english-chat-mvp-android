@@ -54,7 +54,7 @@ export const runtime = "nodejs";
  *     mine                                 내가 만든 묶음 + 받아 둔 묶음(보낼 때 고르기)
  *     by { owner }                         그 사람이 만든 공개 묶음
  *     create { name, license, price?, agree } 새 묶음(라이선스 CC BY 4.0·CC0, 동의 필수, 가입 7일 뒤).
- *                                          price 3·5·10이면 판매 묶음(라이선스 "app", 승인 뒤 목록)
+ *                                          price 2~30(정수)이면 판매 묶음(라이선스 "app", 승인 뒤 목록)
  *     sell { id }                          판매 신청(만든 사람, 아이콘 1개 이상) → 운영자 신고함에 "icon-sale:<id>"
  *     buy { id }                           사기(포인트, 만든 사람에게 70%) → { pack, spent }
  *     rename { id, name }

@@ -51,7 +51,7 @@ export function iconPacksBy(owner: string): Promise<{ packs: IconPack[] }> {
 export function myIconPacks(): Promise<{ packs: IconPack[]; own: IconPack[] }> {
   return icons("mine");
 }
-/** price 0 = 무료(라이선스 고름), 3·5·10 = 판매 묶음(라이선스는 서버가 "app"). */
+/** price 0 = 무료(라이선스 고름), 2~30 = 판매 묶음(라이선스는 서버가 "app"). */
 export function createIconPack(name: string, license: IconLicense, price: IconPrice = 0): Promise<{ pack: IconPack }> {
   return icons("create", { name, license, agree: true, ...(price ? { price } : {}) });
 }

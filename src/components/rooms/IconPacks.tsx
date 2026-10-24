@@ -23,14 +23,15 @@ import {
 import {
   ICON_LICENSES,
   ICON_LICENSE_URL,
-  ICON_PRICES,
+  ICON_PRICE_MAX,
+  ICON_PRICE_MIN,
   ICONS_PER_PACK,
   PACK_NAME_MAX,
   ICON_PHRASE_MAX,
+  isIconPrice,
   isPaidPack,
   type IconLicense,
   type IconPack,
-  type IconPrice,
   type IconRef,
 } from "@/lib/rooms/icons";
 
@@ -259,12 +260,16 @@ function Sheet({ title, onClose, closeLabel, children }: { title: string; onClos
 function CreatePackSheet({ t, onClose, onCreated }: { t: IconCopy; onClose: () => void; onCreated: (pack: IconPack) => void }) {
   const [name, setName] = useState("");
   const [license, setLicense] = useState<IconLicense>("cc-by-4.0");
-  const [price, setPrice] = useState<IconPrice>(0);
+  // 가격은 직접 넣는다(사용자 2026-10-24 "선택이 아니라 입력"): 무료 | 판매 → 판매면 숫자 칸.
+  const [selling, setSelling] = useState(false);
+  const [priceText, setPriceText] = useState("");
+  const price = selling ? Number(priceText) : 0;
+  const priceOk = !selling || (priceText.trim() !== "" && isIconPrice(price) && price > 0);
   const [agree, setAgree] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState("");
   const create = async () => {
-    if (!name.trim() || !agree || busy) return;
+    if (!name.trim() || !agree || !priceOk || busy) return;
     setBusy(true);
     setError("");
     try {
@@ -290,27 +295,46 @@ function CreatePackSheet({ t, onClose, onCreated }: { t: IconCopy; onClose: () =
       <fieldset className="mt-3">
         <legend className="text-caption text-slate-400">{t.price}</legend>
         <div className="mt-1 flex gap-1.5">
-          {ICON_PRICES.map((value) => (
+          {[false, true].map((value) => (
             <button
-              key={value}
+              key={String(value)}
               type="button"
-              aria-pressed={price === value}
+              aria-pressed={selling === value}
               onClick={() => {
                 // 무료 ↔ 판매를 바꾸면 동의 글이 달라져 다시 체크하게.
-                if (value > 0 !== price > 0) setAgree(false);
-                setPrice(value);
+                if (value !== selling) setAgree(false);
+                setSelling(value);
               }}
-              className={`flex-1 rounded-lg border px-2 py-2 text-note ${price === value ? "border-white/40 bg-white/10 text-ink" : "border-line text-slate-200"}`}
+              className={`flex-1 rounded-lg border px-2 py-2 text-note ${selling === value ? "border-white/40 bg-white/10 text-ink" : "border-line text-slate-200"}`}
             >
-              <bdi>{value ? `${value}P` : t.free}</bdi>
+              {value ? t.forSale : t.free}
             </button>
           ))}
         </div>
+        {selling ? (
+          // 숫자와 P는 아랍어 앱에서도 "12 … P" 순서로(dir ltr).
+          <label dir="ltr" className="mt-1.5 flex items-center gap-2 rounded-lg border border-line bg-surface-sunk px-3 py-2 focus-within:border-white/40">
+            <input
+              type="number"
+              inputMode="numeric"
+              min={ICON_PRICE_MIN}
+              max={ICON_PRICE_MAX}
+              step={1}
+              value={priceText}
+              onChange={(event) => setPriceText(event.target.value.replace(/[^0-9]/g, "").slice(0, 3))}
+              placeholder={`${ICON_PRICE_MIN}–${ICON_PRICE_MAX}`}
+              aria-label={t.price}
+              className="min-w-0 flex-1 bg-transparent text-note text-ink outline-none placeholder:text-slate-500"
+            />
+            <span className="shrink-0 text-note text-slate-300">P</span>
+          </label>
+        ) : null}
+        {selling && priceText.trim() !== "" && !priceOk ? <p className="mt-1 text-caption text-bad">{fill(t.badPrice, { min: ICON_PRICE_MIN, max: ICON_PRICE_MAX })}</p> : null}
       </fieldset>
       <fieldset className="mt-3">
         <legend className="text-caption text-slate-400">{t.license}</legend>
-        {price > 0 ? <p className="mt-1 rounded-lg border border-white/40 bg-white/10 px-3 py-2 text-note text-ink">{t.appOnly}</p> : null}
-        <div className={`mt-1 space-y-1 ${price > 0 ? "hidden" : ""}`}>
+        {selling ? <p className="mt-1 rounded-lg border border-white/40 bg-white/10 px-3 py-2 text-note text-ink">{t.appOnly}</p> : null}
+        <div className={`mt-1 space-y-1 ${selling ? "hidden" : ""}`}>
           {ICON_LICENSES.map((value) => (
             <label key={value} className={`flex items-center gap-2 rounded-lg border px-3 py-2 text-note ${license === value ? "border-white/40 bg-white/10 text-ink" : "border-line text-slate-200"}`}>
               <input type="radio" name="icon-license" checked={license === value} onChange={() => setLicense(value)} />
@@ -324,10 +348,10 @@ function CreatePackSheet({ t, onClose, onCreated }: { t: IconCopy; onClose: () =
       </fieldset>
       <label className="mt-3 flex items-start gap-2 text-caption text-slate-200">
         <input type="checkbox" checked={agree} onChange={(event) => setAgree(event.target.checked)} className="mt-0.5" />
-        <span>{price > 0 ? t.agreeSale : t.agree}</span>
+        <span>{selling ? t.agreeSale : t.agree}</span>
       </label>
       {error ? <p className="mt-2 text-caption text-bad">{error}</p> : null}
-      <button type="button" disabled={!name.trim() || !agree || busy} onClick={() => void create()} className="mt-3 w-full rounded-lg bg-platinum py-2.5 text-note font-semibold text-black hover:bg-platinum-hover disabled:opacity-40">
+      <button type="button" disabled={!name.trim() || !agree || !priceOk || busy} onClick={() => void create()} className="mt-3 w-full rounded-lg bg-platinum py-2.5 text-note font-semibold text-black hover:bg-platinum-hover disabled:opacity-40">
         {t.create}
       </button>
     </Sheet>
