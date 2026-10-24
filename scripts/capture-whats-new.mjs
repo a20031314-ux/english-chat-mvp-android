@@ -177,6 +177,8 @@ const STORE_MY_ITEMS = [
   { shot: "element" },
   { shot: "myask" },
   { shot: "mapview" },
+  // 2.73: 노트 "오늘의 학습"(고정 응답으로 후보만 바꿔 끼움 — 맨 끝에).
+  { shot: "notebook-today" },
 ];
 const STORE_TABS_ITEMS = [
   // 2.71: 고친 문장은 눌러서 보는 칩. chat-correct와 같은 장면이라 그 뒤에 한 번 더 찍지 않고 칩을 연 모습도 남긴다.
@@ -202,6 +204,10 @@ const STORE_TABS_ITEMS = [
   // 사람과 학습(2.68~2.69): 사람·초대·단체방·Room(자유 대화·줄 번역·채팅 위주·작게 접기·💡 힌트·방장).
   // 방·메시지는 고정 응답, 번역·힌트만 운영. 고정 응답이 /api를 가로채니 맨 끝에. 힌트는 CAPTURE_MIC_WAV가 필요.
   { shot: "people" },
+  // 2.72~2.73: 언어 칩으로 거른 목록·프로필 칩·아이콘 묶음.
+  { shot: "people-lang" },
+  { shot: "profile-facts" },
+  { shot: "icons" },
   { shot: "invite" },
   { shot: "groups" },
   { shot: "group-pick" },
@@ -209,6 +215,8 @@ const STORE_TABS_ITEMS = [
   { shot: "quote" },
   { shot: "layouts" },
   { shot: "rooms-mini" },
+  // 2.72: Room 라이어 게임 판.
+  { shot: "room-game" },
   { shot: "host" },
   { shot: "account" },
 ];
@@ -720,7 +728,7 @@ function socialMocks(page, target, ui) {
     ...(key === "yuki"
       ? {
           bio: "🇯🇵 → 🌏 ☕ 🎧",
-          facts: { country: "JP", native: "ja", speaks: [target === "ja" ? "ko" : target], interests: ["travel", "cafe", "music", "photo"], work: "worker", meetModes: ["call", "text"], meetTimes: ["evening"] },
+          facts: { country: "JP", native: "ja", speaks: [target === "ja" ? "ko" : target], learns: [target === "ja" ? "ko" : target], interests: ["travel", "cafe", "music", "photo"], work: "worker", meetModes: ["call", "text"], meetTimes: ["evening"] },
           badges: { help: { count: 9, lang: target }, streak: { week: 5, run: 3 } },
           posts: [{ id: "bp_capture1", author: PEOPLE.yuki.id, language: target, text: BOARD_POSTS[target][0][1], at: now - 3_600_000, comments: 4, likes: 6, liked: false }],
         }
@@ -771,9 +779,9 @@ function socialMocks(page, target, ui) {
         return json(route, {
           people: [
             // 2.72: 국적(국기)·모국어·관심사 칩·도움됐어요 수(프로필 사실, account/profileFacts.ts).
-            { id: PEOPLE.yuki.id, nickname: "Yuki", bio: "🇯🇵 → 🌏 ☕ 🎧", hasPhoto: true, ui: "ja", learn: target === "ja" ? "ko" : target, lastSeen: seen(1), isFollowing: true, country: "JP", native: "ja", interests: ["travel", "cafe", "music"], sharedInterests: 2, help: 9, meetModes: ["call"] },
-            { id: PEOPLE.lucia.id, nickname: "Lucía", bio: "🇪🇸 → 🇯🇵 🍣 📚", hasPhoto: true, ui: "es", learn: "ja", lastSeen: seen(40), isFollowing: false, country: "ES", native: "es", interests: ["food", "books", "anime"], sharedInterests: 1, help: 3 },
-            { id: PEOPLE.omar.id, nickname: "Omar", bio: "🇪🇬 → 🌍 ⚽", hasPhoto: true, ui: "ar", learn: target, lastSeen: seen(60 * 26), isFollowing: false, country: "EG", native: "ar", interests: ["sports", "games"] },
+            { id: PEOPLE.yuki.id, nickname: "Yuki", bio: "🇯🇵 → 🌏 ☕ 🎧", hasPhoto: true, ui: "ja", learn: target === "ja" ? "ko" : target, learns: [target === "ja" ? "ko" : target], lastSeen: seen(1), isFollowing: true, country: "JP", native: "ja", interests: ["travel", "cafe", "music"], sharedInterests: 2, help: 9, meetModes: ["call"] },
+            { id: PEOPLE.lucia.id, nickname: "Lucía", bio: "🇪🇸 → 🇯🇵 🍣 📚", hasPhoto: true, ui: "es", learn: "ja", learns: ["ja"], lastSeen: seen(40), isFollowing: false, country: "ES", native: "es", interests: ["food", "books", "anime"], sharedInterests: 1, help: 3 },
+            { id: PEOPLE.omar.id, nickname: "Omar", bio: "🇪🇬 → 🌍 ⚽", hasPhoto: true, ui: "ar", learn: target, learns: [target], lastSeen: seen(60 * 26), isFollowing: false, country: "EG", native: "ar", interests: ["sports", "games"] },
           ],
         });
       }
@@ -883,6 +891,29 @@ async function pickPhrase(page, phrase, wait) {
   // 못 찾으면 줄 가운데 두 낱말.
   const mid = Math.max(0, Math.floor(words.length / 2) - 1);
   if (words.length > 1) await pickWords(page, [mid, mid + 1], wait);
+}
+
+/** AI 대화의 튜터 말풍선(누르면 할 일 한 줄이 열리는 줄, MessageBubble). */
+function tutorLines(page) {
+  return page.locator("div[role=button][aria-expanded].rounded-bl-sm");
+}
+
+/** 마지막 튜터 줄을 눌러 분석을 연다. 여러 문장이면 가장 긴 문장을 고른다. */
+async function openLineAnalysis(page, ui, wait) {
+  const analyze = page.getByRole("button", { name: exactly(ui.insightAnalyze) });
+  if (!(await analyze.count())) {
+    await tutorLines(page).last().click();
+    await wait(700);
+  }
+  await analyze.last().click();
+  await wait(700);
+  if ((await analyze.last().getAttribute("aria-expanded")) === "true") {
+    const options = analyze.last().locator("xpath=following-sibling::div[1]/button");
+    const texts = await options.allInnerTexts();
+    let best = 0;
+    texts.forEach((text, i) => { if (text.length > texts[best].length) best = i; });
+    await options.nth(best).click();
+  }
 }
 
 const STEPS = {
@@ -1504,12 +1535,12 @@ const STEPS = {
   async "chat-correct"({ page, ui, wait, target }) {
     await page.goto(`${BASE}/?screen=chat`, { waitUntil: "networkidle" });
     await wait(1500);
-    const before = await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count();
+    const before = await tutorLines(page).count();
     await page.locator("textarea:visible").first().fill(SLIPPED_LINE[target]);
     await page.getByRole("button", { name: exactly(ui.send) }).click();
     for (let i = 0; i < 60; i++) {
       await wait(500);
-      if ((await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count()) > before + 1) break;
+      if ((await tutorLines(page).count()) > before) break;
     }
     await wait(2500);
   },
@@ -1619,12 +1650,12 @@ const STEPS = {
     await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
     await wait(4000);
     for (const line of CLEAN_LINES[target]) {
-      const before = await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count();
+      const before = await tutorLines(page).count();
       await page.locator("textarea:visible").first().fill(line);
       await page.getByRole("button", { name: exactly(ui.send) }).click();
       for (let i = 0; i < 60; i++) {
         await wait(500);
-        if ((await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count()) > before) break;
+        if ((await tutorLines(page).count()) > before) break;
       }
       await wait(1500);
     }
@@ -1806,12 +1837,12 @@ const STEPS = {
   async links({ page, ui, wait, target }) {
     await page.goto(`${BASE}/?screen=chat`, { waitUntil: "networkidle" });
     await wait(2000);
-    const before = await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count();
+    const before = await tutorLines(page).count();
     await page.locator("textarea:visible").first().fill(LINK_LINE[target]);
     await page.getByRole("button", { name: exactly(ui.send) }).click();
     for (let i = 0; i < 60; i++) {
       await wait(500);
-      if ((await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count()) > before) break;
+      if ((await tutorLines(page).count()) > before) break;
     }
     await wait(2500);
     const link = ui.linkMetIn.split("{place}")[1]?.trim() || ui.linkMetIn.split("{place}")[0].trim();
@@ -1856,8 +1887,13 @@ const STEPS = {
     await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
     const menu = page.getByRole("button", { name: exactly(ui.sessionMenu) });
     for (let i = 0; i < 40 && !(await menu.count()); i++) await wait(500);
-    await menu.first().click();
-    await page.getByRole("button", { name: exactly(ui.roleplayOwnLineOpen) }).first().click();
+    await wait(2500);
+    const own = page.getByRole("button", { name: exactly(ui.roleplayOwnLineOpen) });
+    for (let i = 0; i < 4 && !(await own.count()); i++) {
+      await menu.first().click();
+      await wait(1200);
+    }
+    await own.first().click();
     await wait(800);
     const field = page.getByLabel(ui.roleplayOwnLinePlaceholder);
     await field.fill(OWN_LINE[target] ?? OWN_LINE.en);
@@ -1871,7 +1907,11 @@ const STEPS = {
       i === 5 ? { ...line, tip: `${TIP_LEAD[locale]} “${line.better.split(". ").pop()}”` } : line,
     );
     await STEPS.meant({ page, ui, wait, target, said });
-    await page.getByRole("button", { name: exactly(ui.roleplaySayAgain) }).first().scrollIntoViewIfNeeded();
+    // 막혔을 때 도움말 + 다시 말해보기(있으면) — 둘째 줄의 칩도 연다.
+    const chips = page.locator('div[class*="z-[70]"]').last().getByRole("button", { name: exactly(ui.chatCorrectionChip) });
+    if ((await chips.count()) > 0) await chips.last().click().catch(() => undefined);
+    await wait(1200);
+    await page.getByRole("button", { name: exactly(ui.roleplaySayAgain) }).first().scrollIntoViewIfNeeded({ timeout: 3000 }).catch(() => undefined);
     await wait(800);
   },
   async chat({ page, ui, locale, wait }) {
@@ -1889,7 +1929,8 @@ const STEPS = {
   },
   async ask({ page, ui, wait, mark = () => {} }) {
     // Continues from the chat step: the tutor's reply is the sentence asked about.
-    await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).last().click();
+    // 2026-10-23부터 줄을 눌러야 분석 버튼이 열리고, 여러 문장이면 고른다(conversation/LineTools) — 가장 긴 문장.
+    await openLineAnalysis(page, ui, wait);
     await wait(4500);
     const slider = page.locator("[role=slider]");
     const box = await slider.boundingBox();
@@ -1964,12 +2005,12 @@ const STEPS = {
     await page.goto(`${BASE}/?screen=chat`, { waitUntil: "networkidle" });
     await wait(1200);
     for (const line of REPEATED_MISTAKE[target]) {
-      const before = await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count();
+      const before = await tutorLines(page).count();
       await page.locator("textarea:visible").first().fill(line);
       await page.getByRole("button", { name: exactly(ui.send) }).click();
       for (let i = 0; i < 60; i++) {
         await wait(500);
-        if ((await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).count()) > before) break;
+        if ((await tutorLines(page).count()) > before) break;
       }
       await wait(1500);
     }
@@ -2006,6 +2047,12 @@ const STEPS = {
     await wait(800);
     await page.getByRole("button", { name: new RegExp(escape(PAST_CALL[target][1].text)) }).first().click();
     await wait(1500);
+    // 2026-10-23부터 돌아보기는 줄 아래 ✎ 칩(눌러야 하려던 말 카드) — 첫 칩을 연다.
+    const chip = page.locator('div[class*="z-[70]"]').last().getByRole("button", { name: exactly(ui.chatCorrectionChip) });
+    if (await chip.count()) {
+      await chip.first().click({ timeout: 5000 }).catch(() => undefined);
+      await wait(1500);
+    }
   },
 };
 
