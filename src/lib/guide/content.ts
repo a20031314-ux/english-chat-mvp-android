@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-24f";
+export const GUIDE_VERSION = "2026-10-24g";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -184,6 +184,7 @@ export const GUIDE_KO: Guide = {
         body: [
           "튜터가 고친 줄은 자라는 중 맨 위 ‘{ui:notebookToday}’에 모여요. 남길 것만 체크하고 ‘{ui:notebookAddToNotes}’, ‘{ui:notebookWithScreen}’를 켜면 그때 화면도 붙고, 카드는 ‘{ui:myViewMap}’의 맞는 칸에 들어가요.",
           "칸을 열어 카드를 옮기거나 메모하고, 이름을 바꾸거나 ‘{ui:notebookMine}’에 칸을 더해요. 노트에는 내 표현·단어·물은 것이 주제별로 모이고, ‘{ui:homeTabVocab}’ 줄은 단어장이에요.",
+          "문장분석에서 ‘{ui:findInMy}’를 누르면 그 부분이 틀의 어느 칸인지 찾아 그 칸을 열어요. ‘{ui:notebookQuestionAdd}’로 한 줄 설명과 그때 화면을 ❓ 카드로 남겨요(사람끼리 대화는 화면 없이).",
         ],
         shot: "notebook-today",
       },
@@ -605,6 +606,7 @@ export const GUIDE_EN: Guide = {
         body: [
           "Lines the tutor corrected gather in ‘{ui:notebookToday}’ at the top of Growing. Tick the ones to keep and ‘{ui:notebookAddToNotes}’; turn on ‘{ui:notebookWithScreen}’ to attach that moment's screen. Cards go into the matching section of ‘{ui:myViewMap}’.",
           "Open a section to move or annotate cards, rename it, or add your own in ‘{ui:notebookMine}’. Notes gather your phrases, words and questions by topic, and ‘{ui:homeTabVocab}’ opens the word list.",
+          "In sentence analysis, ‘{ui:findInMy}’ finds which section that part belongs to and opens it. ‘{ui:notebookQuestionAdd}’ keeps a ❓ card with a one-line explanation and that moment's screen (no screen for chats with people).",
         ],
         shot: "notebook-today",
       },

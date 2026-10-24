@@ -60,7 +60,8 @@
           "heading": "8. Notas",
           "body": [
             "Las frases que corrigió el tutor se juntan en «{ui:notebookToday}», arriba en En crecimiento. Marca las que quieres guardar y toca «{ui:notebookAddToNotes}»; activa «{ui:notebookWithScreen}» para adjuntar la pantalla. Las tarjetas van a la sección que corresponde en «{ui:myViewMap}».",
-            "Abre una sección para mover tarjetas o anotarlas, cambiarle el nombre o añadir la tuya en «{ui:notebookMine}». En las notas se juntan tus expresiones, palabras y preguntas por tema, y la fila «{ui:homeTabVocab}» abre tu vocabulario."
+            "Abre una sección para mover tarjetas o anotarlas, cambiarle el nombre o añadir la tuya en «{ui:notebookMine}». En las notas se juntan tus expresiones, palabras y preguntas por tema, y la fila «{ui:homeTabVocab}» abre tu vocabulario.",
+            "En el análisis de frase, «{ui:findInMy}» busca a qué sección pertenece esa parte y la abre. «{ui:notebookQuestionAdd}» guarda una tarjeta ❓ con una explicación breve y la pantalla de ese momento (sin pantalla en chats con personas)."
           ],
           "shot": "notebook-today"
         },
@@ -480,7 +481,8 @@
           "heading": "8. ノート",
           "body": [
             "チューターが直した文は、伸びているところのいちばん上の「{ui:notebookToday}」に集まります。残すものだけチェックして「{ui:notebookAddToNotes}」。「{ui:notebookWithScreen}」をオンにするとそのときの画面も付き、カードは「{ui:myViewMap}」の合う項目に入ります。",
-            "項目を開くとカードを移動・メモでき、名前を変えたり「{ui:notebookMine}」に項目を足したりできます。ノートには表現・単語・質問がテーマ別に集まり、「{ui:homeTabVocab}」の行は単語帳です。"
+            "項目を開くとカードを移動・メモでき、名前を変えたり「{ui:notebookMine}」に項目を足したりできます。ノートには表現・単語・質問がテーマ別に集まり、「{ui:homeTabVocab}」の行は単語帳です。",
+            "文の分析で「{ui:findInMy}」を押すと、その部分がどの項目に入るかを探して開きます。「{ui:notebookQuestionAdd}」で一行の説明とそのときの画面を❓カードとして残せます（人とのチャットは画面なし）。"
           ],
           "shot": "notebook-today"
         },
@@ -900,7 +902,8 @@
           "heading": "8. 笔记",
           "body": [
             "导师改过的句子汇总在“成长中”顶部的“{ui:notebookToday}”里。只勾选要留下的，点“{ui:notebookAddToNotes}”；打开“{ui:notebookWithScreen}”还能附上当时的画面，卡片会放进“{ui:myViewMap}”里对应的部分。",
-            "打开部分可以移动卡片、写备注、改名，或在“{ui:notebookMine}”里新增部分。笔记按主题汇总你的表达、单词和提问，“{ui:homeTabVocab}”一行是单词本。"
+            "打开部分可以移动卡片、写备注、改名，或在“{ui:notebookMine}”里新增部分。笔记按主题汇总你的表达、单词和提问，“{ui:homeTabVocab}”一行是单词本。",
+            "在句子分析里点“{ui:findInMy}”，会找到这部分属于哪个部分并打开。点“{ui:notebookQuestionAdd}”可把一句说明和当时的画面存成 ❓ 卡片（和真人聊天时不附画面）。"
           ],
           "shot": "notebook-today"
         },
@@ -1320,7 +1323,8 @@
           "heading": "8. Ghi chú",
           "body": [
             "Những câu gia sư sửa được gom ở «{ui:notebookToday}» ở đầu Đang lớn. Chọn câu muốn giữ rồi chạm «{ui:notebookAddToNotes}»; bật «{ui:notebookWithScreen}» để kèm ảnh màn hình lúc đó. Thẻ sẽ vào đúng mục trong «{ui:myViewMap}».",
-            "Mở một mục để chuyển hoặc ghi chú thẻ, đổi tên, hoặc thêm mục của bạn ở «{ui:notebookMine}». Sổ gom biểu đạt, từ và câu hỏi của bạn theo chủ đề, dòng «{ui:homeTabVocab}» mở sổ từ."
+            "Mở một mục để chuyển hoặc ghi chú thẻ, đổi tên, hoặc thêm mục của bạn ở «{ui:notebookMine}». Sổ gom biểu đạt, từ và câu hỏi của bạn theo chủ đề, dòng «{ui:homeTabVocab}» mở sổ từ.",
+            "Trong phân tích câu, «{ui:findInMy}» tìm phần đó thuộc mục nào và mở ra. «{ui:notebookQuestionAdd}» lưu thẻ ❓ với một dòng giải thích và ảnh màn hình lúc đó (trò chuyện với người thì không có ảnh)."
           ],
           "shot": "notebook-today"
         },
@@ -1740,7 +1744,8 @@
           "heading": "8. Notes",
           "body": [
             "Les phrases corrigées par le tuteur se regroupent dans « {ui:notebookToday} », en haut de En progrès. Cochez celles à garder puis « {ui:notebookAddToNotes} » ; activez « {ui:notebookWithScreen} » pour joindre l’écran du moment. Les cartes vont dans la bonne section de « {ui:myViewMap} ».",
-            "Ouvrez une section pour déplacer ou annoter les cartes, la renommer, ou ajouter la vôtre dans « {ui:notebookMine} ». Les notes regroupent vos expressions, mots et questions par thème, et « {ui:homeTabVocab} » ouvre la liste de mots."
+            "Ouvrez une section pour déplacer ou annoter les cartes, la renommer, ou ajouter la vôtre dans « {ui:notebookMine} ». Les notes regroupent vos expressions, mots et questions par thème, et « {ui:homeTabVocab} » ouvre la liste de mots.",
+            "Dans l’analyse de phrase, « {ui:findInMy} » trouve la section de cette partie et l’ouvre. « {ui:notebookQuestionAdd} » garde une carte ❓ avec une explication courte et l’écran du moment (sans écran pour les discussions avec des personnes)."
           ],
           "shot": "notebook-today"
         },
@@ -2160,7 +2165,8 @@
           "heading": "8. Note",
           "body": [
             "Le frasi corrette dal tutor si raccolgono in «{ui:notebookToday}», in cima a In crescita. Spunta quelle da tenere e tocca «{ui:notebookAddToNotes}»; attiva «{ui:notebookWithScreen}» per allegare la schermata. Le schede vanno nella sezione giusta di «{ui:myViewMap}».",
-            "Apri una sezione per spostare o annotare le schede, rinominarla o aggiungerne una tua in «{ui:notebookMine}». Le note raccolgono espressioni, parole e domande per tema, e la riga «{ui:homeTabVocab}» apre il vocabolario."
+            "Apri una sezione per spostare o annotare le schede, rinominarla o aggiungerne una tua in «{ui:notebookMine}». Le note raccolgono espressioni, parole e domande per tema, e la riga «{ui:homeTabVocab}» apre il vocabolario.",
+            "Nell’analisi della frase, «{ui:findInMy}» trova la sezione di quella parte e la apre. «{ui:notebookQuestionAdd}» salva una scheda ❓ con una spiegazione breve e la schermata di quel momento (niente schermata nelle chat con persone)."
           ],
           "shot": "notebook-today"
         },
@@ -2580,7 +2586,8 @@
           "heading": "8. Notas",
           "body": [
             "As frases que o tutor corrigiu juntam-se em «{ui:notebookToday}», no topo de A crescer. Marque as que quer guardar e toque «{ui:notebookAddToNotes}»; ligue «{ui:notebookWithScreen}» para anexar o ecrã desse momento. Os cartões vão para a secção certa de «{ui:myViewMap}».",
-            "Abra uma secção para mover ou anotar cartões, mudar o nome ou criar a sua em «{ui:notebookMine}». As notas juntam expressões, palavras e perguntas por tema, e a linha «{ui:homeTabVocab}» abre o vocabulário."
+            "Abra uma secção para mover ou anotar cartões, mudar o nome ou criar a sua em «{ui:notebookMine}». As notas juntam expressões, palavras e perguntas por tema, e a linha «{ui:homeTabVocab}» abre o vocabulário.",
+            "Na análise da frase, «{ui:findInMy}» encontra a secção dessa parte e abre-a. «{ui:notebookQuestionAdd}» guarda um cartão ❓ com uma explicação curta e o ecrã desse momento (sem ecrã em conversas com pessoas)."
           ],
           "shot": "notebook-today"
         },
@@ -3000,7 +3007,8 @@
           "heading": "8. Заметки",
           "body": [
             "Фразы, исправленные наставником, собираются в «{ui:notebookToday}» вверху блока «Растёт». Отметьте нужные и нажмите «{ui:notebookAddToNotes}»; включите «{ui:notebookWithScreen}», чтобы приложить экран. Карточки попадают в нужный раздел «{ui:myViewMap}».",
-            "Откройте раздел, чтобы перенести карточки, добавить заметку, переименовать его или создать свой в «{ui:notebookMine}». В заметках по темам собраны ваши выражения, слова и вопросы, а строка «{ui:homeTabVocab}» открывает словарь."
+            "Откройте раздел, чтобы перенести карточки, добавить заметку, переименовать его или создать свой в «{ui:notebookMine}». В заметках по темам собраны ваши выражения, слова и вопросы, а строка «{ui:homeTabVocab}» открывает словарь.",
+            "В разборе предложения «{ui:findInMy}» находит раздел, к которому относится эта часть, и открывает его. «{ui:notebookQuestionAdd}» сохраняет карточку ❓ с кратким объяснением и экраном того момента (в переписке с людьми — без экрана)."
           ],
           "shot": "notebook-today"
         },
@@ -3420,7 +3428,8 @@
           "heading": "8. Catatan",
           "body": [
             "Kalimat yang diperbaiki tutor terkumpul di «{ui:notebookToday}» di bagian atas Sedang tumbuh. Centang yang mau disimpan lalu ketuk «{ui:notebookAddToNotes}»; nyalakan «{ui:notebookWithScreen}» untuk melampirkan layar saat itu. Kartu masuk ke bagian yang cocok di «{ui:myViewMap}».",
-            "Buka bagian untuk memindah atau memberi memo pada kartu, mengganti nama, atau menambah bagianmu di «{ui:notebookMine}». Catatan mengumpulkan ungkapan, kata, dan pertanyaanmu per topik, dan baris «{ui:homeTabVocab}» membuka daftar kata."
+            "Buka bagian untuk memindah atau memberi memo pada kartu, mengganti nama, atau menambah bagianmu di «{ui:notebookMine}». Catatan mengumpulkan ungkapan, kata, dan pertanyaanmu per topik, dan baris «{ui:homeTabVocab}» membuka daftar kata.",
+            "Di analisis kalimat, «{ui:findInMy}» mencari bagian itu masuk ke mana lalu membukanya. «{ui:notebookQuestionAdd}» menyimpan kartu ❓ berisi penjelasan singkat dan layar saat itu (tanpa layar untuk obrolan dengan orang)."
           ],
           "shot": "notebook-today"
         },
@@ -3840,7 +3849,8 @@
           "heading": "8. الملاحظات",
           "body": [
             "تُجمع الجمل التي صحّحها المعلّم في «{ui:notebookToday}» أعلى «ينمو». ضع علامة على ما تريد الاحتفاظ به ثم «{ui:notebookAddToNotes}»، وشغّل «{ui:notebookWithScreen}» لإرفاق شاشة تلك اللحظة. تدخل البطاقات القسم المناسب في «{ui:myViewMap}».",
-            "افتح القسم لنقل البطاقات أو كتابة ملاحظة أو إعادة التسمية، أو أضف قسمك في «{ui:notebookMine}». تجمع الملاحظات عباراتك وكلماتك وأسئلتك حسب الموضوع، وسطر «{ui:homeTabVocab}» يفتح قائمة الكلمات."
+            "افتح القسم لنقل البطاقات أو كتابة ملاحظة أو إعادة التسمية، أو أضف قسمك في «{ui:notebookMine}». تجمع الملاحظات عباراتك وكلماتك وأسئلتك حسب الموضوع، وسطر «{ui:homeTabVocab}» يفتح قائمة الكلمات.",
+            "في تحليل الجملة، يبحث «{ui:findInMy}» عن القسم الذي ينتمي إليه هذا الجزء ويفتحه. ويحفظ «{ui:notebookQuestionAdd}» بطاقة ❓ فيها شرح قصير وشاشة تلك اللحظة (بلا شاشة في المحادثات مع الأشخاص)."
           ],
           "shot": "notebook-today"
         },
@@ -4260,7 +4270,8 @@
           "heading": "8. โน้ต",
           "body": [
             "ประโยคที่ติวเตอร์แก้จะรวมอยู่ใน «{ui:notebookToday}» ด้านบนของ กำลังเติบโต เลือกเฉพาะที่อยากเก็บแล้วแตะ «{ui:notebookAddToNotes}» เปิด «{ui:notebookWithScreen}» เพื่อแนบหน้าจอตอนนั้น การ์ดจะเข้าไปอยู่ในหัวข้อที่ตรงกันใน «{ui:myViewMap}»",
-            "เปิดหัวข้อเพื่อย้ายหรือจดโน้ตการ์ด เปลี่ยนชื่อ หรือเพิ่มหัวข้อของคุณใน «{ui:notebookMine}» โน้ตรวบรวมสำนวน คำ และคำถามของคุณตามหัวข้อ และแถว «{ui:homeTabVocab}» คือสมุดคำศัพท์"
+            "เปิดหัวข้อเพื่อย้ายหรือจดโน้ตการ์ด เปลี่ยนชื่อ หรือเพิ่มหัวข้อของคุณใน «{ui:notebookMine}» โน้ตรวบรวมสำนวน คำ และคำถามของคุณตามหัวข้อ และแถว «{ui:homeTabVocab}» คือสมุดคำศัพท์",
+            "ในการวิเคราะห์ประโยค «{ui:findInMy}» จะหาว่าส่วนนั้นอยู่หัวข้อไหนแล้วเปิดให้ «{ui:notebookQuestionAdd}» เก็บเป็นการ์ด ❓ พร้อมคำอธิบายสั้นๆ และหน้าจอตอนนั้น (แชตกับคนไม่มีหน้าจอ)"
           ],
           "shot": "notebook-today"
         },
@@ -4680,7 +4691,8 @@
           "heading": "8. नोट्स",
           "body": [
             "ट्यूटर की सुधारी पंक्तियाँ «बढ़ रहा है» में सबसे ऊपर «{ui:notebookToday}» में जमा होती हैं। जो रखनी हैं उन्हें चुनकर «{ui:notebookAddToNotes}» दबाएँ; «{ui:notebookWithScreen}» चालू करें तो उस पल की स्क्रीन भी जुड़ती है। कार्ड «{ui:myViewMap}» के सही हिस्से में जाते हैं।",
-            "हिस्सा खोलकर कार्ड हटाएँ या नोट लिखें, नाम बदलें, या «{ui:notebookMine}» में अपना हिस्सा जोड़ें। नोट्स में आपके वाक्यांश, शब्द और सवाल विषय के हिसाब से जमा होते हैं, और «{ui:homeTabVocab}» पंक्ति शब्दसूची खोलती है।"
+            "हिस्सा खोलकर कार्ड हटाएँ या नोट लिखें, नाम बदलें, या «{ui:notebookMine}» में अपना हिस्सा जोड़ें। नोट्स में आपके वाक्यांश, शब्द और सवाल विषय के हिसाब से जमा होते हैं, और «{ui:homeTabVocab}» पंक्ति शब्दसूची खोलती है।",
+            "वाक्य विश्लेषण में «{ui:findInMy}» दबाने पर वह हिस्सा किस भाग में आता है, यह खोजकर खोलता है। «{ui:notebookQuestionAdd}» एक पंक्ति की व्याख्या और उस पल की स्क्रीन के साथ ❓ कार्ड रखता है (लोगों से चैट में स्क्रीन नहीं)।"
           ],
           "shot": "notebook-today"
         },
