@@ -13,6 +13,7 @@ import {
   type IconPack,
   type IconRef,
 } from "../rooms/icons.ts";
+import { BUILTIN_PACKS, builtinPack, isBuiltinPack } from "../rooms/builtinIcons.ts";
 import {
   kvDelete,
   kvGetJson,
@@ -74,7 +75,8 @@ export const blobIconFiles: IconFiles = {
 };
 
 export async function readPack(id: string): Promise<IconPack | null> {
-  return kvGetJson<IconPack>(packKey(id));
+  // 기본 묶음(Noto)은 코드에만 있다(rooms/builtinIcons.ts).
+  return builtinPack(id) ?? kvGetJson<IconPack>(packKey(id));
 }
 
 async function writePack(pack: IconPack): Promise<void> {
@@ -89,7 +91,7 @@ async function writePack(pack: IconPack): Promise<void> {
 export async function decorate(packs: IconPack[], me: string | null): Promise<IconPack[]> {
   if (!packs.length) return packs;
   const [uses, mine] = await Promise.all([kvGetNumbers(packs.map((pack) => usesKey(pack.id))), me ? readCollection(me) : Promise.resolve([])]);
-  return packs.map((pack, index) => ({ ...pack, uses: Math.max(0, uses.at(index) ?? 0), added: mine.includes(pack.id) }));
+  return packs.map((pack, index) => ({ ...pack, uses: Math.max(0, uses.at(index) ?? 0), added: isBuiltinPack(pack.id) || mine.includes(pack.id) }));
 }
 
 export type PackError = "LIMIT" | "NOT_FOUND" | "FORBIDDEN" | "FULL" | "HIDDEN";
@@ -179,6 +181,7 @@ export async function deletePack(me: string, id: string, files: IconFiles = blob
 
 /** 운영자 내리기·되돌리기(저작권 신고 등). 내리면 목록·보내기·그림이 모두 막힌다. */
 export async function setPackHidden(id: string, hidden: boolean): Promise<boolean> {
+  if (isBuiltinPack(id)) return false;
   const pack = await readPack(id);
   if (!pack) return false;
   await writePack({ ...pack, hidden });
@@ -214,6 +217,8 @@ export async function readCollection(me: string): Promise<string[]> {
 /** 받아 두기·빼기. 내 묶음은 받아 두지 않아도 늘 내 목록에 있다. */
 export async function setCollected(me: string, packId: string, on: boolean): Promise<{ ok: string[] } | { error: PackError }> {
   const mine = await readCollection(me);
+  // 기본 묶음은 늘 내 목록에 있어 받기·빼기가 없다.
+  if (isBuiltinPack(packId)) return { ok: mine };
   if (on) {
     const pack = await readPack(packId);
     if (!pack) return { error: "NOT_FOUND" };
@@ -232,9 +237,14 @@ export async function setCollected(me: string, packId: string, on: boolean): Pro
 /** 내 아이콘 고르기 목록: 내가 만든 묶음 + 받아 둔 묶음(없어졌거나 내려진 것은 빠진다). */
 export async function myPacks(me: string): Promise<IconPack[]> {
   const [own, ids] = await Promise.all([listPacksBy(me), readCollection(me)]);
-  const others = ids.filter((id) => !own.some((pack) => pack.id === id));
+  const others = ids.filter((id) => !own.some((pack) => pack.id === id) && !isBuiltinPack(id));
   const collected = others.length ? await kvGetJsonMany<IconPack>(others.map(packKey)) : [];
-  return [...own.filter((pack) => pack.icons.length > 0), ...collected.filter((pack): pack is IconPack => pack !== null && !pack.hidden && pack.icons.length > 0)];
+  return [
+    ...own.filter((pack) => pack.icons.length > 0),
+    ...collected.filter((pack): pack is IconPack => pack !== null && !pack.hidden && pack.icons.length > 0),
+    // 기본 묶음(Noto)은 받지 않아도 늘 — 내가 만든·받은 것 뒤에.
+    ...BUILTIN_PACKS,
+  ];
 }
 
 /**
@@ -246,7 +256,7 @@ export async function takeIcon(me: string, packId: string, iconId: string, now =
   if (!pack) return null;
   const ref = iconRefOf(pack, iconId);
   if (!ref) return null;
-  if (pack.owner !== me && (await kvSetJsonIfAbsent(usedKey(me, packId, utcDay(now)), 1, SHORT_SECONDS))) {
+  if (pack.owner !== me && !isBuiltinPack(packId) && (await kvSetJsonIfAbsent(usedKey(me, packId, utcDay(now)), 1, SHORT_SECONDS))) {
     const uses = await kvIncrBy(usesKey(packId), 1, KEEP_SECONDS);
     await kvZAdd(POPULAR, uses, packId);
   }

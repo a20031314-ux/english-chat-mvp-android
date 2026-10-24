@@ -1,5 +1,6 @@
 "use client";
 
+import { isBuiltinPack } from "@/lib/rooms/builtinIcons";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { readCachedAccount } from "@/lib/account/session";
@@ -404,7 +405,7 @@ function PackSheet({
             </button>
           </div>
         </div>
-      ) : me ? (
+      ) : me && !isBuiltinPack(pack.id) ? (
         <div className="mt-4 space-y-2">
           <button
             type="button"

@@ -1,3 +1,4 @@
+import { isBuiltinPack } from "../rooms/builtinIcons.ts";
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import sharp from "sharp";
@@ -105,7 +106,8 @@ test("묶음: 첫 아이콘에서 공개·받아 두기·쓰인 수는 하루 �
   assert.ok((await listPacks({ sort: "new" })).some((row) => row.id === pack.id), "올리자마자 공개");
 
   assert.deepEqual(await setCollected("acct_iconB", pack.id, true), { ok: [pack.id] });
-  assert.deepEqual((await myPacks("acct_iconB")).map((row) => row.id), [pack.id]);
+  // 기본 묶음(Noto)은 늘 뒤에 붙는다.
+  assert.deepEqual((await myPacks("acct_iconB")).map((row) => row.id), [pack.id, "ip_notofaces", "ip_notohands"]);
 
   const ref = await takeIcon("acct_iconB", pack.id, icon.id);
   assert.deepEqual(ref, iconRefOf(added.ok, icon.id));
@@ -123,7 +125,7 @@ test("묶음: 첫 아이콘에서 공개·받아 두기·쓰인 수는 하루 �
   assert.equal(await takeIcon("acct_iconB", pack.id, icon.id), null);
   assert.equal((await listPacks({ sort: "new" })).some((row) => row.id === pack.id), false);
   assert.deepEqual(await setCollected("acct_iconC", pack.id, true), { error: "HIDDEN" });
-  assert.deepEqual(await myPacks("acct_iconB"), []);
+  assert.deepEqual((await myPacks("acct_iconB")).filter((row) => !isBuiltinPack(row.id)), []);
   await setPackHidden(pack.id, false);
   assert.ok((await listPacks({ sort: "new" })).some((row) => row.id === pack.id), "되돌리면 다시 목록에");
 
@@ -146,5 +148,5 @@ test("계정 지우기: 만든 묶음·파일·받아 둔 목록이 사라진다
   await forgetIcons("acct_iconGone", files);
   assert.equal(await readPack(made.ok.id), null);
   assert.equal(files.saved.size, 0);
-  assert.deepEqual(await myPacks("acct_iconGone"), []);
+  assert.deepEqual((await myPacks("acct_iconGone")).filter((row) => !isBuiltinPack(row.id)), []);
 });

@@ -173,7 +173,8 @@ cpSync(outDir, wwwDir, { recursive: true });
  * come in one set per interface language, and the app fetches only its own.
  * Next copies everything in public/ into the export, so they are taken out.
  */
-for (const served of ["whats-new", "guide", "feedback-fix"]) {
+// icons: 기본 아이콘 묶음(Noto, rooms/builtinIcons.ts) — 앱은 /api/icons로 받아 웹의 정적 파일로 넘어간다.
+for (const served of ["whats-new", "guide", "feedback-fix", "icons"]) {
   rmSync(path.join(wwwDir, served), { recursive: true, force: true });
 }
 

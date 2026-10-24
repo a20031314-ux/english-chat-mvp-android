@@ -1,4 +1,5 @@
 import { NextRequest } from "next/server";
+import { BUILTIN_OWNER, BUILTIN_OWNER_NAME, BUILTIN_PACKS, builtinIconFile } from "@/lib/rooms/builtinIcons";
 import { corsHeaders, corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -79,10 +80,10 @@ async function framesAllowed(frames: string[]): Promise<boolean> {
 
 async function withNames(packs: IconPack[], me: string | null): Promise<IconPack[]> {
   const decorated = await decorate(packs, me);
-  const owners = [...new Set(decorated.map((pack) => pack.owner))];
+  const owners = [...new Set(decorated.map((pack) => pack.owner))].filter((owner) => owner !== BUILTIN_OWNER);
   const accounts = await readAccounts(owners);
   const names = new Map(owners.map((id, index) => [id, accounts.at(index)?.profile.nickname || accounts.at(index)?.username || ""]));
-  return decorated.map((pack) => ({ ...pack, ownerName: names.get(pack.owner) ?? "" }));
+  return decorated.map((pack) => ({ ...pack, ownerName: pack.owner === BUILTIN_OWNER ? BUILTIN_OWNER_NAME : (names.get(pack.owner) ?? "") }));
 }
 
 function parseUpload(value: unknown): Uint8Array | null {
@@ -95,6 +96,14 @@ export async function GET(request: NextRequest) {
   const file = request.nextUrl.searchParams.get("f") ?? "";
   const [packId, iconId] = file.split(".");
   if (!isPackId(packId) || !isIconId(iconId)) return bad(request, "BAD_ID");
+  // 기본 묶음(Noto)은 정적 파일(public/icons/noto) — 그리로 넘긴다. 바뀌지 않으니 오래 캐시.
+  const builtin = builtinIconFile(packId, iconId);
+  if (builtin) {
+    return new Response(null, {
+      status: 308,
+      headers: { ...corsHeaders(request), location: new URL(builtin, request.nextUrl.origin).toString(), "cache-control": "public, max-age=2592000, immutable" },
+    });
+  }
   const stream = await openIcon(packId, iconId).catch(() => null);
   if (!stream) return bad(request, "NOT_FOUND", 404);
   return new Response(stream, {
@@ -121,7 +130,9 @@ export async function POST(request: NextRequest) {
     const sort = body.sort === "popular" ? "popular" : "new";
     const offset = typeof body.offset === "number" && Number.isFinite(body.offset) ? body.offset : 0;
     const packs = await listPacks({ sort, offset });
-    return jsonWithCors(request, { packs: await withNames(packs, me), next: offset + packs.length });
+    // 기본 묶음(Noto)은 첫 쪽 맨 앞에. 다음 쪽 위치(next)는 저장된 묶음만 센다.
+    const shown = offset === 0 ? [...BUILTIN_PACKS, ...packs] : packs;
+    return jsonWithCors(request, { packs: await withNames(shown, me), next: offset + packs.length });
   }
   if (action === "pack") {
     if (!isPackId(body.id)) return bad(request, "BAD_ID");
