@@ -845,7 +845,7 @@ function FixCardRow({
             <span aria-hidden className="shrink-0 text-info">❓</span>
             <span className="min-w-0">{card.right}</span>
           </p>
-          {card.wrong ? (
+          {card.wrong && card.wrong.replace(/[\s.!?。！？]+$/u, "") !== card.right.replace(/[\s.!?。！？]+$/u, "") ? (
             <p dir="auto" className="mt-0.5 ps-5 text-caption text-slate-400">
               {card.wrong}
             </p>

@@ -338,7 +338,7 @@ Sections (id — what it is):
 ${input.options}
 
 - "node": the one section where this part is studied — the grammar point it shows (match its actual form; take a "(later)" one when that is the point), or "i-idiom"/"i-together"/"i-set" for an idiom, a word pairing or a set phrase, or a detail section, or a learner's own section. "none" only for a plain single word with nothing to study but its meaning.
-- "note": one short line in ${input.uiName} that explains the part in this sentence — what it means and what it does — under 90 characters. Plain, no greeting. Words of ${input.target} may appear in quotes.
+- "note": one short line written in ${input.uiName} (the learner's own language — never in ${input.target}) that explains the part in this sentence — what it means and what it does — under 90 characters. Plain, no greeting. Words of ${input.target} may appear only in quotes.
 
 Return only json: {"node":"<id or none>","note":"..."}`;
 }
