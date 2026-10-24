@@ -199,6 +199,8 @@ export async function postLine(input: {
   part?: number;
   /** 받아쓰기가 확신이 낮았음 — 말풍선 끝에 "?". */
   unsure?: boolean;
+  /** 채팅 줄에 붙일 아이콘(🙂). 글이 비어도 된다. */
+  icon?: { pack: string; id: string };
 }): Promise<RoomLine> {
   return (await call<{ line: RoomLine }>("line", input)).line;
 }

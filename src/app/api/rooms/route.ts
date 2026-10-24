@@ -1,4 +1,6 @@
 import { NextRequest } from "next/server";
+import { pickIcon } from "@/lib/server/iconPick";
+import { ICON_ONLY_TEXT } from "@/lib/rooms/protocol";
 import { pollFrom } from "@/lib/server/lateRows";
 import { cleanFocus, clipQuote, type LineQuote } from "@/lib/rooms/quote";
 import { cleanLanguages } from "@/lib/rooms/roomFilter";
@@ -257,7 +259,10 @@ export async function POST(request: NextRequest) {
     // 받아쓴 말은 말하기 자리에서만, 손으로 쓴 댓글은 누구나(듣는 사람도).
     const kind = body.kind === "text" ? "text" : "speech";
     if (kind === "speech" && me.role !== "speaker") return bad(request, "NOT_SPEAKER", 403);
-    const text = cleanText(body.text, MAX_LINE_CHARS);
+    // 채팅 줄의 아이콘(🙂): 공개 묶음·기본 묶음 아무거나. 아이콘만 보내면 글은 한 마디 또는 자리표(옛 앱용).
+    const icon = kind === "text" && body.icon && me.accountId ? await pickIcon(me.accountId, body.icon) : null;
+    if (kind === "text" && body.icon && !icon) return bad(request, "BAD_ICON");
+    const text = cleanText(body.text, MAX_LINE_CHARS) || (icon ? icon.phrase?.text || ICON_ONLY_TEXT : "");
     if (!text) return bad(request, "NO_TEXT");
     const now = Date.now();
     const startedAt = clampTime(body.startedAt, now);
@@ -280,6 +285,7 @@ export async function POST(request: NextRequest) {
       startedAt,
       endedAt,
       ...(quote ? { quote, ask: body.ask === true } : {}),
+      ...(icon ? { icon } : {}),
       // 받아쓴 말의 언어(앱이 글자로 가른 것). 모르는 코드는 버린다.
       ...(kind === "speech" && typeof body.lang === "string" && isLearningLanguageCode(body.lang) ? { lang: body.lang } : {}),
       ...(kind === "speech" && body.unsure === true ? { unsure: true } : {}),

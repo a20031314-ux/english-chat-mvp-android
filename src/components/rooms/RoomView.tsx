@@ -1371,6 +1371,21 @@ export function RoomView({
             );
             setQuoting(null);
           }}
+          onSendIcon={async (icon) => {
+            addMine(
+              await postLine({
+                roomId: room.id,
+                peerId,
+                kind: "text",
+                text: "",
+                icon,
+                startedAt: Date.now() + offsetRef.current,
+                endedAt: Date.now() + offsetRef.current,
+                ...(quoting ? { quoteSeq: quoting.line.seq, ask: quoting.ask, ...(quoting.focus ? { quoteFocus: quoting.focus } : {}) } : {}),
+              }),
+            );
+            setQuoting(null);
+          }}
         />
         )}
         {/* 상태만(연결 중·받아쓰는 중). 쓰는 법 설명은 사용법(?) 창에(2026-10-22 사용자). */}

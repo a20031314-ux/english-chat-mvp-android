@@ -11,7 +11,7 @@ import {
   setBlock,
   setFollow,
   translateLine, aiFailText, RoomApiError } from "@/lib/rooms/client";
-import { byPerson, contextBefore, overlapsPrevious, timeline, type RoomLine, type RoomMember } from "@/lib/rooms/protocol";
+import { ICON_ONLY_TEXT, byPerson, contextBefore, overlapsPrevious, timeline, type RoomLine, type RoomMember } from "@/lib/rooms/protocol";
 import type { PublicProfile } from "@/lib/rooms/social";
 import type { HowToSayExpression } from "@/lib/howToSay";
 import { focusOf, pickTokens, questionCount } from "@/lib/rooms/quote";
@@ -20,7 +20,7 @@ import { countryFlag, countryName } from "@/lib/account/countries";
 import type { MediaRef, MediaScope } from "@/lib/rooms/media";
 import { MediaError, uploadImage, type MediaUploadError } from "@/lib/rooms/mediaClient";
 import { isLearningLanguageCode, learningLanguageUiLabel } from "@/lib/learningLanguages";
-import { IconButton } from "./IconPacks";
+import { IconButton, IconImage } from "./IconPacks";
 import { CorrectionCard, CorrectionChip, LineTools } from "@/components/conversation/LineTools";
 import { writtenInLearningLanguage } from "@/lib/inputLanguage";
 import type { Locale } from "@/lib/copy";
@@ -856,6 +856,8 @@ export function Lines({
   );
 
   const toggle = async (line: RoomLine) => {
+    // 아이콘만 보낸 줄은 옮길 글이 없다.
+    if (line.icon && line.text === ICON_ONLY_TEXT) return;
     if (line.seq in open) {
       setOpen((have) => {
         const next = { ...have };
@@ -938,6 +940,12 @@ export function Lines({
                 ↪ {line.quote.nickname}: <QuoteText text={line.quote.text} focus={line.quote.focus} />
               </span>
             ) : null}
+            {line.icon ? (
+              <span className="mt-1 block">
+                <IconImage icon={{ ...line.icon, phrase: undefined }} size={96} />
+              </span>
+            ) : null}
+            {line.icon && line.text === ICON_ONLY_TEXT ? null : (
             <span className={`block leading-snug text-white ${big ? "text-title" : typed ? "text-sm" : "text-chat"}`} dir="auto">
               {typed ? line.text : <RevealText text={line.text} fresh={!knownSeqs.current.has(line.seq)} />}
               {/* 받아쓰기가 확신이 낮은 줄: 끝에 "?" 하나. 눌러 열면 아래에 한 줄 설명(따로 알림은 없음). */}
@@ -947,6 +955,7 @@ export function Lines({
                 </span>
               ) : null}
             </span>
+            )}
             {isOpen && !typed && line.unsure ? (
               <span className="mt-1 block text-meta text-amber-200" dir="auto">
                 {t.unsureLine}

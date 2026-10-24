@@ -1,4 +1,5 @@
 import type { LineQuote } from "./quote.ts";
+import type { IconRef } from "./icons.ts";
 import type { LiarView } from "./liarGame.ts";
 import type { MafiaView } from "./mafiaGame.ts";
 import { joinPartTexts } from "./speechParts.ts";
@@ -152,7 +153,12 @@ export type RoomLine = {
   part?: number;
   /** 받아쓰기가 확신이 낮았던 줄(speechConfidence.ts) — 말풍선 끝에 "?". 조각 중 하나라도 그러면 말풍선 전체. */
   unsure?: boolean;
+  /** 채팅 줄에 붙인 아이콘(🙂, rooms/icons.ts — 2026-10-24). 아이콘만 보내면 text는 한 마디 또는 ICON_ONLY_TEXT(옛 앱이 이 글로 보인다). */
+  icon?: IconRef;
 };
+
+/** 아이콘만 보낸 채팅 줄의 글 — 아이콘을 모르는 옛 앱에 보이는 자리표. 새 앱은 그림만 보이고 이 글은 숨긴다. */
+export const ICON_ONLY_TEXT = "🙂";
 
 /** cam = 영상 방에서 내 카메라 켬/끔("on"/"off"). 예전 앱은 모르는 신호를 그냥 넘긴다. */
 export type SignalKind = "offer" | "answer" | "ice" | "bye" | "cam";
