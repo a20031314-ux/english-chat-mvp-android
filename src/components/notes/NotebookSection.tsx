@@ -382,7 +382,6 @@ function StageFrame({
       <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
         <div className="h-full rounded-full bg-status-learned" style={{ width: `${list.length ? Math.round((filled / list.length) * 100) : 0}%` }} />
       </div>
-      {detail?.(shown)}
       <ul className="mt-1 divide-y divide-white/5">
         {list.map((node) => {
           const count = counts[node.id] ?? 0;
@@ -408,6 +407,7 @@ function StageFrame({
           );
         })}
       </ul>
+      {detail?.(shown)}
     </div>
   );
 }
