@@ -1809,7 +1809,11 @@ const STEPS = {
       i === 5 ? { ...line, tip: `${TIP_LEAD[locale]} “${line.better.split(". ").pop()}”` } : line,
     );
     await STEPS.meant({ page, ui, wait, target, said });
-    await page.getByRole("button", { name: exactly(ui.roleplaySayAgain) }).first().scrollIntoViewIfNeeded();
+    // 막혔을 때 도움말 + 다시 말해보기(있으면) — 둘째 줄의 칩도 연다.
+    const chips = page.getByRole("button", { name: new RegExp(escape(ui.chatCorrectionChip)) });
+    if ((await chips.count()) > 0) await chips.last().click().catch(() => undefined);
+    await wait(1200);
+    await page.getByRole("button", { name: exactly(ui.roleplaySayAgain) }).first().scrollIntoViewIfNeeded({ timeout: 3000 }).catch(() => undefined);
     await wait(800);
   },
   async chat({ page, ui, locale, wait }) {
@@ -1945,6 +1949,12 @@ const STEPS = {
     await wait(800);
     await page.getByRole("button", { name: new RegExp(escape(PAST_CALL[target][1].text)) }).first().click();
     await wait(1500);
+    // 2026-10-23부터 돌아보기는 줄 아래 ✎ 칩(눌러야 하려던 말 카드) — 첫 칩을 연다.
+    const chip = page.getByRole("button", { name: new RegExp(escape(ui.chatCorrectionChip)) });
+    if (await chip.count()) {
+      await chip.first().click();
+      await wait(1500);
+    }
   },
 };
 
