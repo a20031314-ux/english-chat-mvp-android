@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-25a";
+export const GUIDE_VERSION = "2026-10-25b";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -525,7 +525,8 @@ export const GUIDE_KO: Guide = {
         "body": [
           "‘+ 새 묶음’으로 내가 만든 그림(움직이는 GIF도)을 올리면 바로 모두에게 공개돼요. 라이선스는 CC BY 4.0(출처 표시) 또는 CC0(조건 없음) 중에서 골라요. 남의 묶음은 ‘받기’를 누르면 메시지·단체방·댓글 입력칸의 🙂에서 골라 보낼 수 있어요.",
           "기본 묶음 ‘Noto 😀’·‘Noto 👍’(Google Noto 움직이는 이모지)은 받지 않아도 늘 있어요. Room 채팅의 🙂에서도 보낼 수 있어요.",
-          "‘가격’에서 ‘판매’를 고르고 2~30P를 넣으면 판매 묶음이 돼요(이 앱에서 산 사람만 씀). 아이콘을 올리고 ‘판매 신청’을 누르면 운영자가 확인한 뒤 목록에 떠요. 산 포인트의 70%는 만든 사람에게 포인트로 가고, 묶음이 내려지면 산 사람에게 돌려줘요. 사지 않은 판매 묶음은 그림만 볼 수 있어요."
+          "‘가격’에서 ‘판매’를 고르고 2~30P를 넣으면 판매 묶음이 돼요(이 앱에서 산 사람만 씀). 아이콘을 올리고 ‘판매 신청’을 누르면 운영자가 확인한 뒤 목록에 떠요. 산 포인트의 70%는 만든 사람에게 포인트로 가고, 묶음이 내려지면 산 사람에게 돌려줘요. 사지 않은 판매 묶음은 그림만 볼 수 있어요.",
+          "‘✏️ 만들기’로 사진·글자·스티커·펜·배경을 겹쳐 아이콘을 만들고, ‘움직임’(통통·흔들·두근·살랑)을 고르면 움직이는 아이콘이 돼요. 내 묶음에서 ‘빼기’를 누르면 아이콘마다 ‘편집’이 나와요."
         ]
       }
     ]
@@ -949,7 +950,8 @@ export const GUIDE_EN: Guide = {
         "body": [
           "With “+ New pack”, upload images you made (animated GIFs too); they're public to everyone right away. Choose CC BY 4.0 (credit required) or CC0 (no conditions). Tap “Get” on someone's pack to send its icons from 🙂 in messages, group chats and comments.",
           "The basic packs “Noto 😀” and “Noto 👍” (Google’s animated Noto emoji) are always there without getting them. You can also send icons from 🙂 in Room chat.",
-          "Under “Price”, choose “For sale” and enter 2–30P to sell a pack (only buyers in this app can use it). Upload icons and tap “Request sale”; it appears in the list once we approve it. 70% of the points paid go to the creator as points, and buyers get their points back if the pack is taken down. Packs for sale you haven't bought can only be previewed."
+          "Under “Price”, choose “For sale” and enter 2–30P to sell a pack (only buyers in this app can use it). Upload icons and tap “Request sale”; it appears in the list once we approve it. 70% of the points paid go to the creator as points, and buyers get their points back if the pack is taken down. Packs for sale you haven't bought can only be previewed.",
+          "With “✏️ Make”, layer a photo, text, stickers, pen and a background into an icon; pick a “Motion” (Bounce, Shake, Pulse, Wobble) to make it move. In your pack, tap “Remove” to get “Edit” on each icon."
         ]
       }
     ]

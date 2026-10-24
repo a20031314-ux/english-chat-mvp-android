@@ -227,3 +227,21 @@ test("판매 묶음: 승인 전엔 목록에 없고, 사면 포인트가 깎이�
   assert.equal(await getPurchasedPoints(buyerData), 10);
   await forgetIcons(buyer, files);
 });
+
+test("편집기 움직임: 정지 PNG → 움직이는 WebP(프레임 10, 256), 이미 움직이는 그림은 그대로", async () => {
+  const { animateStill, poseAt } = await import("./iconMotion.ts");
+  const png = await sharp({ create: { width: 300, height: 200, channels: 4, background: "#22c55e" } }).png().toBuffer();
+  for (const motion of ["bounce", "shake", "pulse", "wobble"] as const) {
+    const out = await animateStill(new Uint8Array(png), motion);
+    const meta = await sharp(out, { animated: true }).metadata();
+    assert.equal(meta.format, "webp");
+    assert.ok((meta.pages ?? 1) >= 4, `${motion} ${meta.pages}`); // 같은 프레임은 WebP가 합친다
+    assert.equal(meta.width, ICON_MAX_SIDE);
+    const prepared = await prepareIcon(out);
+    assert.ok(prepared.ok && prepared.icon.animated, motion);
+  }
+  assert.equal(poseAt("pulse", 0).scale, 1);
+  const frames = await Promise.all(["#f00", "#0f0"].map((background) => sharp({ create: { width: 32, height: 32, channels: 3, background } }).png().toBuffer()));
+  const gif = new Uint8Array(await sharp(frames, { join: { animated: true } }).gif().toBuffer());
+  assert.equal(await animateStill(gif, "bounce"), gif);
+});

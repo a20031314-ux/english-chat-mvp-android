@@ -21,6 +21,13 @@ export const ICON_LICENSE_URL: Record<(typeof ICON_LICENSES)[number], string> = 
   cc0: "https://creativecommons.org/publicdomain/zero/1.0/",
 };
 
+/** 편집기 "움직임": 정지 그림 한 장을 서버가 움직이는 WebP로(server/iconMotion.ts). */
+export const ICON_MOTIONS = ["bounce", "shake", "pulse", "wobble"] as const;
+export type IconMotion = (typeof ICON_MOTIONS)[number];
+export function isIconMotion(value: unknown): value is IconMotion {
+  return typeof value === "string" && (ICON_MOTIONS as readonly string[]).includes(value);
+}
+
 /** 판매 가격(포인트, 만든 사람이 직접 넣음). 0 = 무료. 최소 2P — 1P면 만든 사람 몫(70% 내림)이 0이라. 최대는 포인트 상점 묶음(30P) 값. */
 export const ICON_PRICE_MIN = 2;
 export const ICON_PRICE_MAX = 30;

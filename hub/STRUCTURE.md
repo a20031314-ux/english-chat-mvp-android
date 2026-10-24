@@ -114,7 +114,7 @@
 - 다른 영역이 씀: `videoLearning/VideoLearningTab` ← 앱 틀
 
 ### 사람 탭 — 프로필 목록·게시판·사진 `people`
-- 화면: `SuspendedNotice` · `rooms/BoardView` · `rooms/IconPacks` · `rooms/MediaImage` · `rooms/PeopleTab` · `rooms/RoomPeople`
+- 화면: `SuspendedNotice` · `rooms/BoardView` · `rooms/IconEditor` · `rooms/IconPacks` · `rooms/MediaImage` · `rooms/PeopleTab` · `rooms/RoomPeople`
 - API: `board`(대화 탭, Room 탭, 계정·로그인) · `icons`(대화 탭, Room 탭, 계정·로그인) · `media`(Room 탭) · `social`(대화 탭, Room 탭, 계정·로그인)
 - 다른 영역이 씀: `SuspendedNotice` ← 앱 틀 · `rooms/IconPacks` ← 대화 탭, Room 탭 · `rooms/MediaImage` ← 대화 탭 · `rooms/PeopleTab` ← 앱 틀
 

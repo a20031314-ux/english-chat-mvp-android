@@ -103,6 +103,7 @@
     "components/rooms/RoomPeople": "people",
     "components/rooms/BoardView": "people",
     "components/rooms/IconPacks": "people",
+    "components/rooms/IconEditor": "people",
     "components/rooms/MediaImage": "people",
     "api/social": "people",
     "api/board": "people",

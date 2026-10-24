@@ -8,7 +8,7 @@
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { noteSuspended } from "./suspended";
-import { ICON_UPLOAD_MAX_BYTES, iconPath, type IconLicense, type IconPack, type IconPrice } from "./icons";
+import { ICON_UPLOAD_MAX_BYTES, iconPath, type IconLicense, type IconMotion, type IconPack, type IconPrice } from "./icons";
 
 export class IconApiError extends Error {
   constructor(readonly code: string, readonly status: number) {
@@ -95,4 +95,9 @@ export async function uploadIcon(id: string, file: File, phrase?: { lang: string
   if (file.size > ICON_UPLOAD_MAX_BYTES) throw new IconApiError("TOO_BIG", 0);
   const dataUrl = await readDataUrl(file);
   return icons("upload", { id, dataUrl, ...(phrase?.text.trim() ? { phrase } : {}) });
+}
+
+/** 편집기에서 만든 그림(PNG data URL) 올리기. motion이면 서버가 움직이는 아이콘으로 만든다. */
+export function uploadEditedIcon(id: string, dataUrl: string, phrase?: { lang: string; text: string }, motion?: IconMotion | null): Promise<{ pack: IconPack }> {
+  return icons("upload", { id, dataUrl, ...(phrase?.text.trim() ? { phrase } : {}), ...(motion ? { motion } : {}) });
 }

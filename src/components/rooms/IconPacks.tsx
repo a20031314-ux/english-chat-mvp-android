@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { readCachedAccount } from "@/lib/account/session";
 import { useBillingUiOptional } from "@/components/BillingScreen";
+import { IconEditor } from "@/components/rooms/IconEditor";
 import { iconCopy, iconErrorText, type IconCopy } from "@/lib/rooms/iconCopy";
 import {
   IconApiError,
@@ -18,6 +19,7 @@ import {
   removeIconFromPack,
   reportIconPack,
   sellIconPack,
+  uploadEditedIcon,
   uploadIcon,
 } from "@/lib/rooms/iconClient";
 import {
@@ -383,6 +385,9 @@ function PackSheet({
   const [editing, setEditing] = useState(false);
   const picker = useRef<HTMLInputElement>(null);
   const billing = useBillingUiOptional();
+  // 편집기(IconEditor): undefined = 닫힘, null = 새로, {iconId} = 내 아이콘 고치기(올린 뒤 예전 것은 뺀다).
+  const [editor, setEditor] = useState<{ iconId: string } | null | undefined>(undefined);
+  const [editorError, setEditorError] = useState("");
   const [short, setShort] = useState(false);
   const paid = isPaidPack(pack);
   // 판매 묶음은 사야(또는 내 것이어야) 받아 두고 보낸다. 안 산 사람은 그림 미리 보기만.
@@ -433,9 +438,23 @@ function PackSheet({
                 </span>
               ) : null}
               {own && editing ? (
-                <button type="button" disabled={busy} onClick={() => void run(async () => update((await removeIconFromPack(pack.id, icon.id)).pack))} className="text-meta text-bad">
-                  {t.remove}
-                </button>
+                <span className="flex gap-2">
+                  <button
+                    type="button"
+                    disabled={busy}
+                    onClick={() => {
+                      setEditorError("");
+                      setPhrase(icon.phrase?.text ?? "");
+                      setEditor({ iconId: icon.id });
+                    }}
+                    className="text-meta text-info"
+                  >
+                    {t.editIcon}
+                  </button>
+                  <button type="button" disabled={busy} onClick={() => void run(async () => update((await removeIconFromPack(pack.id, icon.id)).pack))} className="text-meta text-bad">
+                    {t.remove}
+                  </button>
+                </span>
               ) : null}
             </li>
           ))}
@@ -505,9 +524,22 @@ function PackSheet({
                   });
                 }}
               />
-              <button type="button" disabled={busy} onClick={() => picker.current?.click()} className="w-full rounded-lg bg-platinum py-2.5 text-note font-semibold text-black hover:bg-platinum-hover disabled:opacity-40">
-                {busy ? t.uploading : t.addIcon}
-              </button>
+              <div className="flex gap-2">
+                <button type="button" disabled={busy} onClick={() => picker.current?.click()} className="flex-1 rounded-lg bg-platinum py-2.5 text-note font-semibold text-black hover:bg-platinum-hover disabled:opacity-40">
+                  {busy ? t.uploading : t.addIcon}
+                </button>
+                <button
+                  type="button"
+                  disabled={busy}
+                  onClick={() => {
+                    setEditorError("");
+                    setEditor(null);
+                  }}
+                  className="flex-1 rounded-lg border border-line py-2.5 text-note font-semibold text-ink disabled:opacity-40"
+                >
+                  {t.make}
+                </button>
+              </div>
             </>
           ) : (
             <p className="text-caption text-slate-400">{t.full}</p>
@@ -587,6 +619,34 @@ function PackSheet({
             </button>
           )}
         </div>
+      ) : null}
+      {editor !== undefined ? (
+        <IconEditor
+          t={t}
+          start={editor ? iconSrc(pack.id, editor.iconId) : null}
+          busy={busy}
+          error={editorError}
+          onClose={() => setEditor(undefined)}
+          onSave={(dataUrl, motion) => {
+            if (busy) return;
+            setBusy(true);
+            setEditorError("");
+            void (async () => {
+              try {
+                let next = (await uploadEditedIcon(pack.id, dataUrl, { lang: targetLanguage, text: phrase }, motion)).pack;
+                // 고친 것이면 예전 아이콘을 뺀다(새 것은 묶음 끝에 붙음).
+                if (editor) next = (await removeIconFromPack(pack.id, editor.iconId)).pack;
+                update(next);
+                setPhrase("");
+                setEditor(undefined);
+              } catch (caught) {
+                setEditorError(errorOf(t, caught));
+              } finally {
+                setBusy(false);
+              }
+            })();
+          }}
+        />
       ) : null}
     </Sheet>
   );

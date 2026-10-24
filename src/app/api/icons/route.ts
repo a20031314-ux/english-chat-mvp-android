@@ -8,6 +8,7 @@ import { readAccount, readAccounts } from "@/lib/server/accountStore";
 import { addReport } from "@/lib/server/socialStore";
 import { suspendedResponse } from "@/lib/server/suspension";
 import { prepareIcon } from "@/lib/server/iconImage";
+import { animateStill } from "@/lib/server/iconMotion";
 import {
   addIcon,
   buyPack,
@@ -33,6 +34,7 @@ import {
   cleanShortText,
   isIconId,
   isIconLicense,
+  isIconMotion,
   isIconPrice,
   isListedSale,
   isPackId,
@@ -58,7 +60,8 @@ export const runtime = "nodejs";
  *     sell { id }                          판매 신청(만든 사람, 아이콘 1개 이상) → 운영자 신고함에 "icon-sale:<id>"
  *     buy { id }                           사기(포인트, 만든 사람에게 70%) → { pack, spent }
  *     rename { id, name }
- *     upload { id, dataUrl, phrase? }      아이콘 하나(서버가 256px WebP로 줄이고 프레임 검사, 올리자마자 공개)
+ *     upload { id, dataUrl, phrase?, motion? } 아이콘 하나(서버가 256px WebP로 줄이고 프레임 검사, 올리자마자 공개).
+ *                                          motion(편집기): 정지 그림을 bounce·shake·pulse·wobble로 움직이게(iconMotion.ts)
  *     removeIcon { id, iconId } · deletePack { id }
  *     collect { id, on }                   받아 두기·빼기
  *     report { id, reason }                신고(저작권 포함) → 운영자 신고함
@@ -217,7 +220,9 @@ export async function POST(request: NextRequest) {
     const pack = await readPack(id);
     if (!pack) return bad(request, "NOT_FOUND", 404);
     if (pack.owner !== me) return bad(request, "FORBIDDEN", 403);
-    const prepared = await prepareIcon(bytes);
+    // 편집기의 "움직임": 정지 그림이면 여기서 움직이는 WebP로 만든 뒤 같은 길(줄이기·검사)로.
+    const source = isIconMotion(body.motion) ? await animateStill(bytes, body.motion).catch(() => bytes) : bytes;
+    const prepared = await prepareIcon(source);
     if (!prepared.ok) return bad(request, prepared.error, 413);
     void meterRequest(request, "iconUpload");
     if (!(await framesAllowed(prepared.icon.frames))) return bad(request, "REJECTED", 422);
