@@ -142,7 +142,7 @@
 - 화면: `BillingScreen` · `NativeAdSlot` · `PointStore` · `PointsIcon` · `WebAdSlot`
 - API: `ads/config`(여러 영역 6곳) · `ads/ssv` · `ads/txt` · `entitlement`(여러 영역 14곳) · `points/sync`(여러 영역 14곳)
 - 웹 페이지: `/subscribe`
-- 다른 영역이 씀: `BillingScreen` ← 앱 틀, AI 채팅, 영상 학습 탭 · `NativeAdSlot` ← 대화 탭, 영상 학습 탭, 사람 탭, Room 탭 · `PointsIcon` ← 영상 학습 탭, 의견 보내기·반영 소식
+- 다른 영역이 씀: `BillingScreen` ← 앱 틀, AI 채팅, 영상 학습 탭, 사람 탭 · `NativeAdSlot` ← 대화 탭, 영상 학습 탭, 사람 탭, Room 탭 · `PointsIcon` ← 영상 학습 탭, 의견 보내기·반영 소식
 
 ### 친구 초대·보상 `invite`
 - 화면: `invite/InviteButton` · `invite/InviteRewards` · `invite/InviteWelcome`

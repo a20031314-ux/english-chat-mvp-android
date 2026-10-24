@@ -12,6 +12,7 @@ import mapBefore269 from "@/lib/guide/mapBefore269.json";
 import chatBefore271 from "@/lib/guide/chatBefore271.json";
 import notesBefore273 from "@/lib/guide/notesBefore273.json";
 import mapBefore274 from "@/lib/guide/mapBefore274.json";
+import iconsBefore275 from "@/lib/guide/iconsBefore275.json";
 
 export const runtime = "nodejs";
 
@@ -47,13 +48,20 @@ export async function GET(request: NextRequest) {
   const before274 = request.nextUrl.searchParams.get("r274") === "1"
     ? undefined
     : (mapBefore274 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  // 2.75(`r275=1`)부터: 아이콘 판매(가격·판매 신청·사기). 그 전 빌드는 아이콘 칸을 2.74 글로(iconsBefore275.json).
+  const before275 = request.nextUrl.searchParams.get("r275") === "1"
+    ? undefined
+    : (iconsBefore275 as Partial<Record<string, Record<string, Guide["rooms"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  const withSale: Guide = before275
+    ? { ...newest, rooms: { ...newest.rooms, sections: newest.rooms.sections.map((section, index) => before275[GUIDE_SECTION_IDS.rooms[index]] ?? section) } }
+    : newest;
   const latest: Guide = before274
     ? {
-        ...newest,
-        map: { ...newest.map, sections: newest.map.sections.map((section, index) => before274[GUIDE_SECTION_IDS.map[index]] ?? section) },
-        rooms: { ...newest.rooms, sections: newest.rooms.sections.map((section, index) => before274[GUIDE_SECTION_IDS.rooms[index]] ?? section) },
+        ...withSale,
+        map: { ...withSale.map, sections: withSale.map.sections.map((section, index) => before274[GUIDE_SECTION_IDS.map[index]] ?? section) },
+        rooms: { ...withSale.rooms, sections: withSale.rooms.sections.map((section, index) => before274[GUIDE_SECTION_IDS.rooms[index]] ?? section) },
       }
-    : newest;
+    : withSale;
   const withNotes: Guide = before273
     ? {
         ...latest,

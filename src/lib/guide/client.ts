@@ -36,7 +36,7 @@ const inFlight = new Map<string, Promise<GuideData | null>>();
 export function loadGuide(locale: string): Promise<GuideData | null> {
   const running = inFlight.get(locale);
   if (running) return running;
-  const request = fetch(apiUrl(`/api/guide?lang=${encodeURIComponent(locale)}&my=1&rooms=269&seat=1&chapters=1&game=1&icons=1&r272=1&r273=1&r274=1`))
+  const request = fetch(apiUrl(`/api/guide?lang=${encodeURIComponent(locale)}&my=1&rooms=269&seat=1&chapters=1&game=1&icons=1&r272=1&r273=1&r274=1&r275=1`))
     .then((response) => (response.ok ? response.json() : null))
     .then((data: Partial<GuideData> | null) => {
       if (!data?.tabs) return null;

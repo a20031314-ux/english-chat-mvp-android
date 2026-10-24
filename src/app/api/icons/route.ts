@@ -1,7 +1,7 @@
 import { NextRequest } from "next/server";
 import { BUILTIN_OWNER, BUILTIN_OWNER_NAME, BUILTIN_PACKS, builtinIconFile } from "@/lib/rooms/builtinIcons";
 import { corsHeaders, corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
-import { requestAuth } from "@/lib/server/premiumRequest";
+import { requestAuth, resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
 import { readAccount, readAccounts } from "@/lib/server/accountStore";
@@ -10,6 +10,7 @@ import { suspendedResponse } from "@/lib/server/suspension";
 import { prepareIcon } from "@/lib/server/iconImage";
 import {
   addIcon,
+  buyPack,
   createPack,
   decorate,
   deletePack,
@@ -20,6 +21,7 @@ import {
   readPack,
   removeIcon,
   renamePack,
+  requestSale,
   setCollected,
   type PackError,
 } from "@/lib/server/iconStore";
@@ -31,7 +33,10 @@ import {
   cleanShortText,
   isIconId,
   isIconLicense,
+  isIconPrice,
+  isListedSale,
   isPackId,
+  isPaidPack,
   type IconPack,
 } from "@/lib/rooms/icons";
 import { isAccountId } from "@/lib/server/socialStore";
@@ -48,7 +53,10 @@ export const runtime = "nodejs";
  *     pack { id }                          묶음 하나
  *     mine                                 내가 만든 묶음 + 받아 둔 묶음(보낼 때 고르기)
  *     by { owner }                         그 사람이 만든 공개 묶음
- *     create { name, license, agree }      새 묶음(라이선스 CC BY 4.0·CC0, 동의 필수, 가입 7일 뒤)
+ *     create { name, license, price?, agree } 새 묶음(라이선스 CC BY 4.0·CC0, 동의 필수, 가입 7일 뒤).
+ *                                          price 3·5·10이면 판매 묶음(라이선스 "app", 승인 뒤 목록)
+ *     sell { id }                          판매 신청(만든 사람, 아이콘 1개 이상) → 운영자 신고함에 "icon-sale:<id>"
+ *     buy { id }                           사기(포인트, 만든 사람에게 70%) → { pack, spent }
  *     rename { id, name }
  *     upload { id, dataUrl, phrase? }      아이콘 하나(서버가 256px WebP로 줄이고 프레임 검사, 올리자마자 공개)
  *     removeIcon { id, iconId } · deletePack { id }
@@ -60,7 +68,18 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 const bad = (request: NextRequest, error: string, status = 400) => jsonWithCors(request, { error }, { status });
-const STATUS: Record<PackError, number> = { LIMIT: 429, NOT_FOUND: 404, FORBIDDEN: 403, FULL: 409, HIDDEN: 410 };
+const STATUS: Record<PackError, number> = {
+  LIMIT: 429,
+  NOT_FOUND: 404,
+  FORBIDDEN: 403,
+  FULL: 409,
+  HIDDEN: 410,
+  NOT_BOUGHT: 402,
+  NOT_FOR_SALE: 409,
+  NO_POINTS: 402,
+  BUSY: 409,
+  EMPTY: 409,
+};
 
 /** 검사(OpenAI moderation, 이미지·무료). 프레임 하나라도 걸리거나 물어보지 못하면 거절. */
 async function framesAllowed(frames: string[]): Promise<boolean> {
@@ -125,13 +144,16 @@ export async function POST(request: NextRequest) {
   }
   const me = requestAuth(request)?.accountId ?? null;
   const action = body.action;
+  // 2.74 이하 앱은 판매 묶음 화면이 없어(가격·사기 없음, 라이선스를 CC BY로 잘못 보임) 목록에서 뺀다.
+  const knowsSale = body.sale === 1;
+  const forBuild = (packs: IconPack[]) => (knowsSale ? packs : packs.filter((pack) => !isPaidPack(pack)));
 
   if (action === "list") {
     const sort = body.sort === "popular" ? "popular" : "new";
     const offset = typeof body.offset === "number" && Number.isFinite(body.offset) ? body.offset : 0;
     const packs = await listPacks({ sort, offset });
     // 기본 묶음(Noto)은 첫 쪽 맨 앞에. 다음 쪽 위치(next)는 저장된 묶음만 센다.
-    const shown = offset === 0 ? [...BUILTIN_PACKS, ...packs] : packs;
+    const shown = forBuild(offset === 0 ? [...BUILTIN_PACKS, ...packs] : packs);
     return jsonWithCors(request, { packs: await withNames(shown, me), next: offset + packs.length });
   }
   if (action === "pack") {
@@ -143,7 +165,8 @@ export async function POST(request: NextRequest) {
   }
   if (action === "by") {
     if (!isAccountId(body.owner)) return bad(request, "BAD_TARGET");
-    const packs = (await listPacksBy(body.owner)).filter((pack) => (!pack.hidden && pack.icons.length > 0) || pack.owner === me);
+    // 판매 묶음은 승인된 것만(내 것은 모두).
+    const packs = forBuild((await listPacksBy(body.owner)).filter((pack) => pack.owner === me || (!pack.hidden && pack.icons.length > 0 && isListedSale(pack))));
     return jsonWithCors(request, { packs: await withNames(packs, me) });
   }
 
@@ -155,7 +178,7 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { packs: await withNames(packs, me), own: await withNames(own, me) });
   }
 
-  if (typeof action === "string" && ["create", "rename", "upload", "collect", "report"].includes(action)) {
+  if (typeof action === "string" && ["create", "rename", "upload", "collect", "report", "sell", "buy"].includes(action)) {
     const stop = await suspendedResponse(request, me);
     if (stop) return stop;
   }
@@ -169,10 +192,13 @@ export async function POST(request: NextRequest) {
   if (action === "create") {
     const name = cleanShortText(body.name, PACK_NAME_MAX);
     if (!name) return bad(request, "NO_NAME");
-    if (!isIconLicense(body.license)) return bad(request, "BAD_LICENSE");
+    const price = body.price === undefined ? 0 : body.price;
+    if (!isIconPrice(price)) return bad(request, "BAD_PRICE");
+    // 판매 묶음은 라이선스를 고르지 않는다("app" — 이 앱에서 산 사람만).
+    if (price === 0 && !isIconLicense(body.license)) return bad(request, "BAD_LICENSE");
     // 라이선스 동의 없이 만들지 않는다(화면의 동의 체크).
     if (body.agree !== true) return bad(request, "NOT_AGREED");
-    const result = await createPack({ owner: me, name, license: body.license });
+    const result = await createPack({ owner: me, name, license: isIconLicense(body.license) ? body.license : "cc-by-4.0", price });
     return "error" in result ? bad(request, result.error, STATUS[result.error]) : jsonWithCors(request, { pack: result.ok });
   }
 
@@ -211,6 +237,35 @@ export async function POST(request: NextRequest) {
   if (action === "collect") {
     const result = await setCollected(me, id, body.on !== false);
     return "error" in result ? bad(request, result.error, STATUS[result.error]) : jsonWithCors(request, { collection: result.ok });
+  }
+  if (action === "sell") {
+    const before = await readPack(id);
+    const result = await requestSale(me, id);
+    if ("error" in result) return bad(request, result.error, STATUS[result.error]);
+    // 새로 신청했을 때만 운영자 신고함에(줄 "icon-sale:<id>" → /ops에서 승인·거절).
+    if (before?.sale !== "pending" && result.ok.sale === "pending") {
+      await addReport({
+        at: new Date().toISOString(),
+        reporter: me,
+        target: me,
+        reason: `[아이콘 판매 신청] ${result.ok.price}P`,
+        roomId: null,
+        lines: [`icon-sale:${result.ok.id}`, result.ok.name, `${result.ok.icons.length}개`],
+      });
+    }
+    const [decorated] = await withNames([result.ok], me);
+    return jsonWithCors(request, { pack: decorated });
+  }
+  if (action === "buy") {
+    const pack = await readPack(id);
+    if (!pack) return bad(request, "NOT_FOUND", 404);
+    const [{ userId, terms, verified, tier }, owner] = await Promise.all([resolveRequestEntitlement(request), readAccount(pack.owner)]);
+    // 이번 달 지급분은 확인된 구독만(앱이 말한 등급만으로 지급분을 쓰지 않게).
+    const grant = verified && tier !== "free" ? terms.monthlyGrantPoints : 0;
+    const result = await buyPack({ me, payer: userId, grant, creator: owner?.dataUserId ?? null, packId: id });
+    if ("error" in result) return bad(request, result.error, STATUS[result.error]);
+    const [decorated] = await withNames([result.ok], me);
+    return jsonWithCors(request, { pack: decorated, spent: result.spent });
   }
   if (action === "report") {
     const pack = await readPack(id);

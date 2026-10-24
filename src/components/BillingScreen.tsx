@@ -80,6 +80,11 @@ function planLines(terms: PlanSummary, ui: UICopy): string[] {
   return lines;
 }
 
+/** 결제 화면 틀 밖에서도 쓰는 곳(아이콘 사기 등): 없으면 null. */
+export function useBillingUiOptional(): BillingUiValue | null {
+  return useContext(BillingUiContext);
+}
+
 export function useBillingUi() {
   const value = useContext(BillingUiContext);
   if (!value) {

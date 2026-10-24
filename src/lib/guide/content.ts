@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-24h";
+export const GUIDE_VERSION = "2026-10-24i";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -524,7 +524,8 @@ export const GUIDE_KO: Guide = {
         "heading": "아이콘",
         "body": [
           "‘+ 새 묶음’으로 내가 만든 그림(움직이는 GIF도)을 올리면 바로 모두에게 공개돼요. 라이선스는 CC BY 4.0(출처 표시) 또는 CC0(조건 없음) 중에서 골라요. 남의 묶음은 ‘받기’를 누르면 메시지·단체방·댓글 입력칸의 🙂에서 골라 보낼 수 있어요.",
-          "기본 묶음 ‘Noto 😀’·‘Noto 👍’(Google Noto 움직이는 이모지)은 받지 않아도 늘 있어요. Room 채팅의 🙂에서도 보낼 수 있어요."
+          "기본 묶음 ‘Noto 😀’·‘Noto 👍’(Google Noto 움직이는 이모지)은 받지 않아도 늘 있어요. Room 채팅의 🙂에서도 보낼 수 있어요.",
+          "‘가격’을 3P·5P·10P로 정하면 판매 묶음이 돼요(이 앱에서 산 사람만 씀). 아이콘을 올리고 ‘판매 신청’을 누르면 운영자가 확인한 뒤 목록에 떠요. 산 포인트의 70%는 만든 사람에게 포인트로 가고, 묶음이 내려지면 산 사람에게 돌려줘요. 사지 않은 판매 묶음은 그림만 볼 수 있어요."
         ]
       }
     ]
@@ -947,7 +948,8 @@ export const GUIDE_EN: Guide = {
         "heading": "Icons",
         "body": [
           "With “+ New pack”, upload images you made (animated GIFs too); they're public to everyone right away. Choose CC BY 4.0 (credit required) or CC0 (no conditions). Tap “Get” on someone's pack to send its icons from 🙂 in messages, group chats and comments.",
-          "The basic packs “Noto 😀” and “Noto 👍” (Google’s animated Noto emoji) are always there without getting them. You can also send icons from 🙂 in Room chat."
+          "The basic packs “Noto 😀” and “Noto 👍” (Google’s animated Noto emoji) are always there without getting them. You can also send icons from 🙂 in Room chat.",
+          "Set “Price” to 3P, 5P or 10P to make a pack for sale (only buyers in this app can use it). Upload icons and tap “Request sale”; it appears in the list once we approve it. 70% of the points paid go to the creator as points, and buyers get their points back if the pack is taken down. Packs for sale you haven't bought can only be previewed."
         ]
       }
     ]

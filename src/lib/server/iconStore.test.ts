@@ -2,8 +2,10 @@ import { isBuiltinPack } from "../rooms/builtinIcons.ts";
 import { test } from "node:test";
 import assert from "node:assert/strict";
 import sharp from "sharp";
+import { addPurchasedPoints, getPurchasedPoints } from "./entitlementStore.ts";
 import {
   addIcon,
+  buyPack,
   createPack,
   decorate,
   deletePack,
@@ -12,15 +14,18 @@ import {
   listPacks,
   myPacks,
   openIcon,
+  readBought,
   readPack,
   removeIcon,
+  requestSale,
+  setSaleStatus,
   setCollected,
   setPackHidden,
   takeIcon,
   type IconFiles,
 } from "./iconStore.ts";
 import { framesToCheck, prepareIcon } from "./iconImage.ts";
-import { ICON_MAX_SIDE, cleanPhrase, cleanShortText, iconPath, iconRefOf, isIconLicense, isPackId, newPackId } from "../rooms/icons.ts";
+import { ICON_MAX_SIDE, creatorCut, isIconPrice, cleanPhrase, cleanShortText, iconPath, iconRefOf, isIconLicense, isPackId, newPackId } from "../rooms/icons.ts";
 
 function memoryFiles(): IconFiles & { saved: Map<string, Buffer> } {
   const saved = new Map<string, Buffer>();
@@ -149,4 +154,72 @@ test("계정 지우기: 만든 묶음·파일·받아 둔 목록이 사라진다
   assert.equal(await readPack(made.ok.id), null);
   assert.equal(files.saved.size, 0);
   assert.deepEqual((await myPacks("acct_iconGone")).filter((row) => !isBuiltinPack(row.id)), []);
+});
+
+test("판매 묶음: 승인 전엔 목록에 없고, 사면 포인트가 깎이고 만든 사람에게 70%, 내리면 돌려준다", async () => {
+  const files = memoryFiles();
+  const seller = `acct_sale_${Date.now().toString(36)}`;
+  const buyer = `acct_buy_${Date.now().toString(36)}`;
+  const sellerData = `data:${seller}`;
+  const buyerData = `data:${buyer}`;
+  assert.ok(isIconPrice(5));
+  assert.equal(isIconPrice(7), false);
+  assert.equal(creatorCut(10), 7);
+  assert.equal(creatorCut(3), 2);
+
+  const made = await createPack({ owner: seller, name: "ねこ · gatos", license: "cc0", price: 5 });
+  assert.ok("ok" in made);
+  if (!("ok" in made)) return;
+  assert.equal(made.ok.license, "app");
+  assert.equal(made.ok.sale, "draft");
+  // 아이콘 없이 신청 못 함.
+  assert.deepEqual(await requestSale(seller, made.ok.id), { error: "EMPTY" });
+  const added = await addIcon({ me: seller, packId: made.ok.id, webp, w: 64, h: 64, animated: false, phrase: { lang: "ja", text: "にゃー" }, files });
+  assert.ok("ok" in added);
+  assert.equal((await listPacks({ sort: "new" })).some((pack) => pack.id === made.ok.id), false);
+  const asked = await requestSale(seller, made.ok.id);
+  assert.ok("ok" in asked && asked.ok.sale === "pending");
+  // 승인 전: 살 수 없고, 안 산 사람은 받아 두기·보내기 못 함, 만든 사람은 보냄.
+  assert.deepEqual(await buyPack({ me: buyer, payer: buyerData, grant: 0, creator: sellerData, packId: made.ok.id }), { error: "NOT_FOR_SALE" });
+  const iconId = "ok" in added ? added.ok.icons[0].id : "";
+  assert.equal(await takeIcon(buyer, made.ok.id, iconId), null);
+  assert.ok(await takeIcon(seller, made.ok.id, iconId));
+  assert.deepEqual(await setCollected(buyer, made.ok.id, true), { error: "NOT_BOUGHT" });
+
+  assert.ok(await setSaleStatus(made.ok.id, "approved"));
+  assert.ok((await listPacks({ sort: "new" })).some((pack) => pack.id === made.ok.id));
+  // 포인트 모자람 → 아무것도 안 깎임.
+  await addPurchasedPoints(buyerData, 4);
+  assert.deepEqual(await buyPack({ me: buyer, payer: buyerData, grant: 0, creator: sellerData, packId: made.ok.id }), { error: "NO_POINTS" });
+  assert.equal(await getPurchasedPoints(buyerData), 4);
+  await addPurchasedPoints(buyerData, 6);
+  const sellerBefore = await getPurchasedPoints(sellerData);
+  const bought = await buyPack({ me: buyer, payer: buyerData, grant: 0, creator: sellerData, packId: made.ok.id });
+  assert.ok("ok" in bought && bought.spent === 5);
+  assert.equal(await getPurchasedPoints(buyerData), 5);
+  assert.equal((await getPurchasedPoints(sellerData)) - sellerBefore, 3);
+  // 두 번 사도 한 번만 깎인다.
+  const again = await buyPack({ me: buyer, payer: buyerData, grant: 0, creator: sellerData, packId: made.ok.id });
+  assert.ok("ok" in again && again.spent === 0);
+  assert.equal(await getPurchasedPoints(buyerData), 5);
+  assert.ok(await takeIcon(buyer, made.ok.id, iconId));
+  assert.ok((await myPacks(buyer)).some((pack) => pack.id === made.ok.id));
+  const [shown] = await decorate([made.ok], buyer);
+  assert.equal(shown.bought, true);
+
+  // 운영자가 내리면 산 포인트를 돌려받고, 만든 사람 몫은 거둔다. 다시 올려도 다시 사야 한다.
+  assert.ok(await setPackHidden(made.ok.id, true));
+  assert.equal(await getPurchasedPoints(buyerData), 10);
+  assert.equal(await getPurchasedPoints(sellerData), sellerBefore);
+  assert.deepEqual(await readBought(buyer), []);
+  assert.ok(await setPackHidden(made.ok.id, false));
+  assert.equal(await takeIcon(buyer, made.ok.id, iconId), null);
+  assert.equal((await myPacks(buyer)).some((pack) => pack.id === made.ok.id), false);
+
+  // 다시 사고 만든 사람이 지우면 또 돌려준다.
+  assert.ok("ok" in (await buyPack({ me: buyer, payer: buyerData, grant: 0, creator: sellerData, packId: made.ok.id })));
+  assert.equal(await getPurchasedPoints(buyerData), 5);
+  assert.deepEqual(await deletePack(seller, made.ok.id, files), { ok: true });
+  assert.equal(await getPurchasedPoints(buyerData), 10);
+  await forgetIcons(buyer, files);
 });

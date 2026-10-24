@@ -9,13 +9,41 @@
  * 순수.
  */
 
+/** 무료 묶음이 고르는 라이선스. 판매 묶음은 늘 "app". */
 export const ICON_LICENSES = ["cc-by-4.0", "cc0"] as const;
-export type IconLicense = (typeof ICON_LICENSES)[number];
+export type IconLicense = (typeof ICON_LICENSES)[number] | "app";
 
-export const ICON_LICENSE_URL: Record<IconLicense, string> = {
+export const ICON_LICENSE_URL: Record<(typeof ICON_LICENSES)[number], string> = {
   "cc-by-4.0": "https://creativecommons.org/licenses/by/4.0/",
   cc0: "https://creativecommons.org/publicdomain/zero/1.0/",
 };
+
+/** 판매 가격(포인트). 0 = 무료. */
+export const ICON_PRICES = [0, 3, 5, 10] as const;
+export type IconPrice = (typeof ICON_PRICES)[number];
+/** 만든 사람 몫(산 포인트 중). */
+export const ICON_CREATOR_SHARE = 0.7;
+/** 판매 상태: 신청 전·승인 기다림·승인·거절. 무료 묶음은 없음. */
+export type IconSale = "draft" | "pending" | "approved" | "rejected";
+
+export function isIconPrice(value: unknown): value is IconPrice {
+  return typeof value === "number" && (ICON_PRICES as readonly number[]).includes(value);
+}
+export function creatorCut(price: number): number {
+  return Math.floor(price * ICON_CREATOR_SHARE);
+}
+/** 판매 묶음인지(가격이 있으면). */
+export function isPaidPack(pack: Pick<IconPack, "price">): boolean {
+  return (pack.price ?? 0) > 0;
+}
+/** 공개 목록에 뜰 수 있는지: 무료이거나 승인된 판매 묶음. */
+export function isListedSale(pack: Pick<IconPack, "price" | "sale">): boolean {
+  return !isPaidPack(pack) || pack.sale === "approved";
+}
+/** 이 사람이 보낼 수 있는지: 무료·내 묶음·산 묶음. */
+export function canUsePack(pack: Pick<IconPack, "price" | "owner">, me: string, bought: boolean): boolean {
+  return !isPaidPack(pack) || pack.owner === me || bought;
+}
 
 /** 저장하는 아이콘 긴 쪽(px). */
 export const ICON_MAX_SIDE = 256;
@@ -54,10 +82,14 @@ export type IconPack = {
   createdAt: number;
   /** 운영자가 내렸으면(저작권 등) 목록·보내기·그림 모두 막힌다. */
   hidden?: boolean;
-  /** 읽을 때 채움: 쓰인 수, 만든 사람 이름, 내가 받아 뒀는지. */
+  /** 판매 가격(포인트, 없거나 0이면 무료)과 판매 상태. */
+  price?: number;
+  sale?: IconSale;
+  /** 읽을 때 채움: 쓰인 수, 만든 사람 이름, 내가 받아 뒀는지, 내가 샀는지. */
   uses?: number;
   ownerName?: string;
   added?: boolean;
+  bought?: boolean;
 };
 
 /** 메시지·댓글에 붙는 아이콘(보낼 때 서버가 묶음에서 채움). */
@@ -72,7 +104,8 @@ export function isPackId(value: unknown): value is string {
 export function isIconId(value: unknown): value is string {
   return typeof value === "string" && ICON_ID.test(value);
 }
-export function isIconLicense(value: unknown): value is IconLicense {
+/** 무료 묶음을 만들 때 고를 수 있는 라이선스(판매 묶음의 "app"은 서버가 정한다). */
+export function isIconLicense(value: unknown): value is (typeof ICON_LICENSES)[number] {
   return typeof value === "string" && (ICON_LICENSES as readonly string[]).includes(value);
 }
 

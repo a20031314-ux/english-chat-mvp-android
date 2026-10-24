@@ -5,14 +5,20 @@ import {
   ICON_UPLOADS_PER_DAY,
   ICONS_PER_PACK,
   PACKS_PER_ACCOUNT,
+  canUsePack,
+  creatorCut,
   iconRefOf,
+  isListedSale,
+  isPaidPack,
   newIconId,
   newPackId,
   type IconItem,
   type IconLicense,
   type IconPack,
   type IconRef,
+  type IconSale,
 } from "../rooms/icons.ts";
+import { MILLI_PER_POINT, addPurchasedPoints, spendMilli } from "./entitlementStore.ts";
 import { BUILTIN_PACKS, builtinPack, isBuiltinPack } from "../rooms/builtinIcons.ts";
 import {
   kvDelete,
@@ -20,6 +26,8 @@ import {
   kvGetJsonMany,
   kvGetNumbers,
   kvIncrBy,
+  kvListPush,
+  kvListRange,
   kvSetJson,
   kvSetJsonIfAbsent,
   kvZAdd,
@@ -37,6 +45,9 @@ import {
  *   icon:v1:uses:<묶음>            쓰인 수
  *   icon:v1:used:<계정>:<묶음>:<날짜> 같은 사람은 하루 한 번만 셈(2일)
  *   icon:v1:n:<계정>:<날짜>         오늘 올린 아이콘 수(2일)
+ *   icon:v1:bought:<계정>          내가 산 판매 묶음 id 목록(JSON)
+ *   icon:v1:buyers:<묶음>          LIST 산 사람(JSON 줄: 계정·포인트 id·낸 포인트·만든 사람 몫) — 내리거나 지울 때 돌려주기
+ *   icon:v1:buying:<계정>:<묶음>     사는 중 잠금(30초, 두 번 눌러 두 번 깎이지 않게)
  * 파일: Vercel Blob(private 저장소) `icons/<묶음>/<아이콘>.webp`, 서버가 공개 캐시로 보낸다(/api/icons).
  * 묶음은 만든 사람이 지우거나 계정을 지울 때까지(기한 없음 — KV 쓰기에 기한이 필요해 10년).
  */
@@ -48,6 +59,9 @@ const mineKey = (account: string) => `icon:v1:mine:${account}`;
 const usesKey = (id: string) => `icon:v1:uses:${id}`;
 const usedKey = (account: string, pack: string, day: string) => `icon:v1:used:${account}:${pack}:${day}`;
 const dayKey = (account: string, day: string) => `icon:v1:n:${account}:${day}`;
+const boughtKey = (account: string) => `icon:v1:bought:${account}`;
+const buyersKey = (id: string) => `icon:v1:buyers:${id}`;
+const buyingKey = (account: string, pack: string) => `icon:v1:buying:${account}:${pack}`;
 const KEEP_SECONDS = 10 * 365 * 24 * 60 * 60;
 const SHORT_SECONDS = 2 * 24 * 60 * 60;
 
@@ -80,27 +94,47 @@ export async function readPack(id: string): Promise<IconPack | null> {
 }
 
 async function writePack(pack: IconPack): Promise<void> {
-  const { uses: _uses, ownerName: _ownerName, added: _added, ...stored } = pack;
+  const { uses: _uses, ownerName: _ownerName, added: _added, bought: _bought, ...stored } = pack;
   void _uses;
   void _ownerName;
   void _added;
+  void _bought;
   await kvSetJson(packKey(pack.id), stored, KEEP_SECONDS);
 }
 
 /** 읽는 사람 기준으로 쓰인 수·내가 받아 뒀는지를 채운다. 이름은 부르는 쪽이 계정에서 채운다. */
 export async function decorate(packs: IconPack[], me: string | null): Promise<IconPack[]> {
   if (!packs.length) return packs;
-  const [uses, mine] = await Promise.all([kvGetNumbers(packs.map((pack) => usesKey(pack.id))), me ? readCollection(me) : Promise.resolve([])]);
-  return packs.map((pack, index) => ({ ...pack, uses: Math.max(0, uses.at(index) ?? 0), added: isBuiltinPack(pack.id) || mine.includes(pack.id) }));
+  const [uses, mine, bought] = await Promise.all([
+    kvGetNumbers(packs.map((pack) => usesKey(pack.id))),
+    me ? readCollection(me) : Promise.resolve([]),
+    me && packs.some(isPaidPack) ? readBought(me) : Promise.resolve([]),
+  ]);
+  return packs.map((pack, index) => ({
+    ...pack,
+    uses: Math.max(0, uses.at(index) ?? 0),
+    added: isBuiltinPack(pack.id) || mine.includes(pack.id),
+    ...(isPaidPack(pack) ? { bought: bought.includes(pack.id) } : {}),
+  }));
 }
 
-export type PackError = "LIMIT" | "NOT_FOUND" | "FORBIDDEN" | "FULL" | "HIDDEN";
+export type PackError = "LIMIT" | "NOT_FOUND" | "FORBIDDEN" | "FULL" | "HIDDEN" | "NOT_BOUGHT" | "NOT_FOR_SALE" | "NO_POINTS" | "BUSY" | "EMPTY";
 
-export async function createPack(input: { owner: string; name: string; license: IconLicense; now?: number }): Promise<{ ok: IconPack } | { error: PackError }> {
+/** 새 묶음. price > 0이면 판매 묶음: 라이선스 "app", 아이콘을 올린 뒤 판매 신청 → 운영자 승인. */
+export async function createPack(input: { owner: string; name: string; license: IconLicense; price?: number; now?: number }): Promise<{ ok: IconPack } | { error: PackError }> {
   const mine = await kvZRevRange(byKey(input.owner), 0, PACKS_PER_ACCOUNT);
   if (mine.length >= PACKS_PER_ACCOUNT) return { error: "LIMIT" };
   const now = input.now ?? Date.now();
-  const pack: IconPack = { id: newPackId(), owner: input.owner, name: input.name, license: input.license, icons: [], createdAt: now };
+  const price = Math.max(0, Math.floor(input.price ?? 0));
+  const pack: IconPack = {
+    id: newPackId(),
+    owner: input.owner,
+    name: input.name,
+    license: price > 0 ? "app" : input.license,
+    icons: [],
+    createdAt: now,
+    ...(price > 0 ? { price, sale: "draft" as const } : {}),
+  };
   await writePack(pack);
   await kvZAdd(byKey(input.owner), now, pack.id);
   return { ok: pack };
@@ -145,7 +179,8 @@ export async function addIcon(input: {
   const fresh = (await readPack(pack.id)) ?? pack;
   const next = { ...fresh, icons: [...fresh.icons, icon].slice(0, ICONS_PER_PACK) };
   await writePack(next);
-  if (fresh.icons.length === 0) {
+  // 판매 묶음은 승인될 때 목록에 넣는다(setSaleStatus).
+  if (fresh.icons.length === 0 && isListedSale(fresh)) {
     await kvZAdd(NEW, now, pack.id);
     await kvZAdd(POPULAR, 0, pack.id);
   }
@@ -165,8 +200,10 @@ export async function removeIcon(me: string, packId: string, iconId: string, fil
 }
 
 async function dropPack(pack: IconPack, files: IconFiles): Promise<void> {
+  // 판매 묶음이 없어지면 산 사람에게 돌려준다(쓸 수 없게 되므로).
+  if (isPaidPack(pack)) await refundBuyers(pack);
   await files.remove(pack.icons.map((icon) => iconFilePath(pack.id, icon.id)));
-  await kvDelete([packKey(pack.id), usesKey(pack.id)]);
+  await kvDelete([packKey(pack.id), usesKey(pack.id), buyersKey(pack.id)]);
   await Promise.all([kvZRem(NEW, pack.id), kvZRem(POPULAR, pack.id), kvZRem(byKey(pack.owner), pack.id)]);
 }
 
@@ -185,8 +222,11 @@ export async function setPackHidden(id: string, hidden: boolean): Promise<boolea
   const pack = await readPack(id);
   if (!pack) return false;
   await writePack({ ...pack, hidden });
-  if (hidden) await Promise.all([kvZRem(NEW, id), kvZRem(POPULAR, id)]);
-  else if (pack.icons.length) {
+  if (hidden) {
+    await Promise.all([kvZRem(NEW, id), kvZRem(POPULAR, id)]);
+    // 판매 묶음을 내리면 산 사람에게 포인트를 돌려준다(되돌려도 다시 사야 함).
+    if (isPaidPack(pack)) await refundBuyers(pack);
+  } else if (pack.icons.length && isListedSale(pack)) {
     await kvZAdd(NEW, pack.createdAt, id);
     const [uses] = await kvGetNumbers([usesKey(id)]);
     await kvZAdd(POPULAR, uses ?? 0, id);
@@ -200,7 +240,8 @@ export async function listPacks(input: { sort: "new" | "popular"; offset?: numbe
   const rows = await kvZRevRange(input.sort === "popular" ? POPULAR : NEW, offset, offset + ICON_PAGE - 1);
   if (!rows.length) return [];
   const packs = await kvGetJsonMany<IconPack>(rows.map((row) => packKey(row.member)));
-  return packs.filter((pack): pack is IconPack => pack !== null && !pack.hidden && pack.icons.length > 0);
+  // 판매 묶음은 승인된 뒤에만.
+  return packs.filter((pack): pack is IconPack => pack !== null && !pack.hidden && pack.icons.length > 0 && isListedSale(pack));
 }
 
 export async function listPacksBy(owner: string): Promise<IconPack[]> {
@@ -223,6 +264,8 @@ export async function setCollected(me: string, packId: string, on: boolean): Pro
     const pack = await readPack(packId);
     if (!pack) return { error: "NOT_FOUND" };
     if (pack.hidden) return { error: "HIDDEN" };
+    // 판매 묶음은 사야(또는 내 것이어야) 받아 둔다.
+    if (!canUsePack(pack, me, (await readBought(me)).includes(packId))) return { error: "NOT_BOUGHT" };
     if (mine.includes(packId)) return { ok: mine };
     if (mine.length >= COLLECTION_MAX) return { error: "LIMIT" };
     const next = [packId, ...mine];
@@ -236,12 +279,13 @@ export async function setCollected(me: string, packId: string, on: boolean): Pro
 
 /** 내 아이콘 고르기 목록: 내가 만든 묶음 + 받아 둔 묶음(없어졌거나 내려진 것은 빠진다). */
 export async function myPacks(me: string): Promise<IconPack[]> {
-  const [own, ids] = await Promise.all([listPacksBy(me), readCollection(me)]);
+  const [own, ids, bought] = await Promise.all([listPacksBy(me), readCollection(me), readBought(me)]);
   const others = ids.filter((id) => !own.some((pack) => pack.id === id) && !isBuiltinPack(id));
   const collected = others.length ? await kvGetJsonMany<IconPack>(others.map(packKey)) : [];
   return [
     ...own.filter((pack) => pack.icons.length > 0),
-    ...collected.filter((pack): pack is IconPack => pack !== null && !pack.hidden && pack.icons.length > 0),
+    // 판매 묶음은 산 것만(돌려받은 묶음은 받아 둔 목록에 남아 있어도 빠진다).
+    ...collected.filter((pack): pack is IconPack => pack !== null && !pack.hidden && pack.icons.length > 0 && canUsePack(pack, me, bought.includes(pack.id))),
     // 기본 묶음(Noto)은 받지 않아도 늘 — 내가 만든·받은 것 뒤에.
     ...BUILTIN_PACKS,
   ];
@@ -256,6 +300,8 @@ export async function takeIcon(me: string, packId: string, iconId: string, now =
   if (!pack) return null;
   const ref = iconRefOf(pack, iconId);
   if (!ref) return null;
+  // 판매 묶음은 산 사람·만든 사람만 보낸다(안 산 사람은 미리 보기만).
+  if (isPaidPack(pack) && pack.owner !== me && !(await readBought(me)).includes(packId)) return null;
   if (pack.owner !== me && !isBuiltinPack(packId) && (await kvSetJsonIfAbsent(usedKey(me, packId, utcDay(now)), 1, SHORT_SECONDS))) {
     const uses = await kvIncrBy(usesKey(packId), 1, KEEP_SECONDS);
     await kvZAdd(POPULAR, uses, packId);
@@ -273,5 +319,108 @@ export async function openIcon(packId: string, iconId: string, files: IconFiles 
 /** 계정을 지울 때: 만든 묶음(파일까지)과 받아 둔 목록. */
 export async function forgetIcons(account: string, files: IconFiles = blobIconFiles): Promise<void> {
   for (const pack of await listPacksBy(account)) await dropPack(pack, files);
-  await kvDelete([byKey(account), mineKey(account)]);
+  await kvDelete([byKey(account), mineKey(account), boughtKey(account)]);
+}
+
+// ── 판매 ────────────────────────────────────────────────────────────────
+
+export async function readBought(me: string): Promise<string[]> {
+  return (await kvGetJson<string[]>(boughtKey(me))) ?? [];
+}
+
+/** 산 사람 한 줄(LIST). 계정(a)·포인트 id(d)·낸 포인트(p)·만든 사람 포인트 id(c)·준 몫(cut). */
+type BuyerRow = { a: string; d: string; p: number; c: string | null; cut: number; at: number };
+
+/**
+ * 판매 신청(만든 사람): 아이콘이 하나 이상 있어야. 승인 기다림이 되고, 부르는 쪽이 운영자 신고함에 줄을 넣는다.
+ * 이미 승인된 묶음은 그대로.
+ */
+export async function requestSale(me: string, id: string): Promise<{ ok: IconPack } | { error: PackError }> {
+  const pack = await readPack(id);
+  if (!pack) return { error: "NOT_FOUND" };
+  if (pack.owner !== me) return { error: "FORBIDDEN" };
+  if (!isPaidPack(pack)) return { error: "NOT_FOR_SALE" };
+  if (pack.hidden) return { error: "HIDDEN" };
+  if (!pack.icons.length) return { error: "EMPTY" };
+  if (pack.sale === "approved" || pack.sale === "pending") return { ok: pack };
+  const next = { ...pack, sale: "pending" as const };
+  await writePack(next);
+  return { ok: next };
+}
+
+/** 운영자 승인·거절(/ops). 승인하면 공개 목록에 뜬다. */
+export async function setSaleStatus(id: string, sale: Extract<IconSale, "approved" | "rejected">): Promise<boolean> {
+  const pack = await readPack(id);
+  if (!pack || !isPaidPack(pack) || isBuiltinPack(id)) return false;
+  await writePack({ ...pack, sale });
+  if (sale === "approved" && !pack.hidden && pack.icons.length) {
+    await kvZAdd(NEW, Date.now(), id);
+    const [uses] = await kvGetNumbers([usesKey(id)]);
+    await kvZAdd(POPULAR, uses ?? 0, id);
+  } else if (sale === "rejected") {
+    await Promise.all([kvZRem(NEW, id), kvZRem(POPULAR, id)]);
+  }
+  return true;
+}
+
+/**
+ * 사기: 승인된 판매 묶음만. 이미 샀거나 내 묶음이면 깎지 않고 그대로.
+ * 포인트(이번 달 지급분 → 산 포인트)를 깎고, 산 목록·받아 둔 목록(한도와 상관없이)에 넣고, 만든 사람에게 몫을 포인트로.
+ * `payer` = 산 사람의 포인트 id(계정의 dataUserId), `creator` = 만든 사람의 포인트 id(없으면 몫 없음).
+ */
+export async function buyPack(input: {
+  me: string;
+  payer: string;
+  grant: number;
+  creator: string | null;
+  packId: string;
+  now?: number;
+}): Promise<{ ok: IconPack; spent: number } | { error: PackError }> {
+  const pack = await readPack(input.packId);
+  if (!pack) return { error: "NOT_FOUND" };
+  if (pack.hidden) return { error: "HIDDEN" };
+  if (!isPaidPack(pack) || pack.sale !== "approved") return { error: "NOT_FOR_SALE" };
+  if (pack.owner === input.me) return { ok: pack, spent: 0 };
+  if ((await readBought(input.me)).includes(pack.id)) return { ok: pack, spent: 0 };
+  if (!(await kvSetJsonIfAbsent(buyingKey(input.me, pack.id), 1, 30))) return { error: "BUSY" };
+  try {
+    const price = pack.price ?? 0;
+    const paid = await spendMilli(input.payer, { free: false, grant: Math.max(0, input.grant) }, price * MILLI_PER_POINT);
+    if (!paid) return { error: "NO_POINTS" };
+    const bought = await readBought(input.me);
+    await kvSetJson(boughtKey(input.me), [pack.id, ...bought.filter((id) => id !== pack.id)], KEEP_SECONDS);
+    const mine = await readCollection(input.me);
+    if (!mine.includes(pack.id)) await kvSetJson(mineKey(input.me), [pack.id, ...mine], KEEP_SECONDS);
+    const cut = input.creator && input.creator !== input.payer ? creatorCut(price) : 0;
+    if (cut > 0 && input.creator) await addPurchasedPoints(input.creator, cut);
+    const row: BuyerRow = { a: input.me, d: input.payer, p: price, c: cut > 0 ? input.creator : null, cut, at: input.now ?? Date.now() };
+    await kvListPush(buyersKey(pack.id), [JSON.stringify(row)], KEEP_SECONDS);
+    return { ok: pack, spent: price };
+  } finally {
+    await kvDelete([buyingKey(input.me, pack.id)]);
+  }
+}
+
+/**
+ * 돌려주기(내리거나 지울 때): 산 사람마다 낸 포인트를 산 포인트로 돌려주고 산 목록에서 뺀다.
+ * 만든 사람 몫은 남아 있는 만큼만 거둔다(이미 썼으면 그대로 — 산 사람이 먼저). 목록은 비운다(두 번 돌려주지 않게).
+ */
+export async function refundBuyers(pack: IconPack): Promise<number> {
+  const rows = (await kvListRange(buyersKey(pack.id), 0, -1))
+    .map((raw) => {
+      try {
+        return JSON.parse(raw) as BuyerRow;
+      } catch {
+        return null;
+      }
+    })
+    .filter((row): row is BuyerRow => row !== null);
+  await kvDelete([buyersKey(pack.id)]);
+  for (const row of rows) {
+    if (row.p > 0) await addPurchasedPoints(row.d, row.p);
+    const bought = await readBought(row.a);
+    if (bought.includes(pack.id)) await kvSetJson(boughtKey(row.a), bought.filter((id) => id !== pack.id), KEEP_SECONDS);
+    if (row.c && row.cut > 0) await spendMilli(row.c, { free: false, grant: 0 }, row.cut * MILLI_PER_POINT).catch(() => null);
+  }
+  return rows.length;
 }
