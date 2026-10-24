@@ -43,12 +43,16 @@ export async function GET(request: NextRequest) {
   const before273 = request.nextUrl.searchParams.get("r273") === "1"
     ? undefined
     : (notesBefore273 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
-  // 2.74(`r274=1`)부터: My "단계" 보기(예전 지도 + 노트 틀). 그 전 빌드는 눌러서 보기·지도로 보기·노트 칸을 2.73 글로(mapBefore274.json).
+  // 2.74(`r274=1`)부터: My "단계" 보기(예전 지도 + 노트 틀). 그 전 빌드는 눌러서 보기·지도로 보기·노트·아이콘(기본 묶음·Room 🙂) 칸을 2.73 글로(mapBefore274.json).
   const before274 = request.nextUrl.searchParams.get("r274") === "1"
     ? undefined
     : (mapBefore274 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
   const latest: Guide = before274
-    ? { ...newest, map: { ...newest.map, sections: newest.map.sections.map((section, index) => before274[GUIDE_SECTION_IDS.map[index]] ?? section) } }
+    ? {
+        ...newest,
+        map: { ...newest.map, sections: newest.map.sections.map((section, index) => before274[GUIDE_SECTION_IDS.map[index]] ?? section) },
+        rooms: { ...newest.rooms, sections: newest.rooms.sections.map((section, index) => before274[GUIDE_SECTION_IDS.rooms[index]] ?? section) },
+      }
     : newest;
   const withNotes: Guide = before273
     ? {

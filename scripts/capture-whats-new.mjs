@@ -577,6 +577,11 @@ const DM_LINES = {
   ko: { hi: "안녕하세요! 방에서 같이 얘기해 줘서 고마워요.", reply: "재밌었어요! 내일 또 연습할래요?" },
 };
 // 2.69 노트 장면: 쌓인 표현(장부, 고정 응답)·단어장 한 개·문장분석 질문 하나, 자리는 미리 정해 둠(서버 안 부름).
+// 2.74 단계 보기 장면: 습득한 표현 6개(1단계 문법 셋·2단계 하나·정해진 말·관용구) + 고친 장면 하나.
+const STAGE_PHRASES = {
+  en: ["My sister is a nurse", "She works from home", "Do you like coffee?", "I went to the beach", "Nice to meet you", "break the ice", ["I has two cats", "I have two cats"]],
+  es: ["Soy de Corea", "Me llamo Jun", "¿Dónde vives?", "Ayer fui al cine", "Mucho gusto", "echar de menos", ["Yo es estudiante", "Yo soy estudiante"]],
+};
 // 2.73 오늘의 학습 장면: 배우는 언어의 틀린 줄·고친 줄·뼈대 칸(notes/notebook.ts skeletonFor id). 셋째 줄은 오타.
 const NOTEBOOK_LINES = {
   en: [["I go to the park yesterday.", "I went to the park yesterday.", "g2-past-simple"], ["She don't like coffee.", "She doesn't like coffee.", "g1-present-simple"], ["I'm so exited!", "I'm so excited!"]],
@@ -1176,6 +1181,59 @@ const STEPS = {
     await wait(2500);
     await page.getByRole("button", { name: "Yuki", exact: true }).first().click();
     await wait(2500);
+  },
+  async "stage-board"({ page, locale, wait, target }) {
+    // 2.74: My 자라는 중 "단계" — 사다리·1단계 문법 칸(습득한 표현·숙지·고친 장면)·관용 표현 줄. 칸 이름은 운영 응답, 표현·카드만 끼운다.
+    await page.route("**/api/notebook?*", async (route) => {
+      if (route.request().method() !== "GET" || route.request().url().includes("shot=")) return route.fallback();
+      const response = await route.fetch({ headers: { ...route.request().headers(), "x-rc-user": `whats-new-capture-notebook-${locale}` }, timeout: 60_000 });
+      const book = await response.json();
+      const grammar = (book.nodes ?? []).filter((n) => n.chapter === "grammar");
+      const s1 = grammar.filter((n) => n.stage === 1);
+      const s2 = grammar.filter((n) => n.stage === 2);
+      const lines = STAGE_PHRASES[target] ?? STAGE_PHRASES.en;
+      const pick = [[s1[0], lines[0], "mastered"], [s1[1], lines[1], "learned"], [s1[3], lines[2], "learned"], [s2[0], lines[3], "learned"], [{ id: "i-set" }, lines[4], "mastered"], [{ id: "i-idiom" }, lines[5], "learned"]].filter(([n]) => n);
+      book.phrases = pick.map(([node, text, state], i) => ({ key: `k${i}`, text, state, node: node.id }));
+      book.cards = s1[2] ? [{ id: "fxcapture01", wrong: lines[6][0], right: lines[6][1], note: "", node: s1[2].id, where: "chat", at: Date.now(), kind: "mistake" }] : [];
+      book.pending = [];
+      return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(book) });
+    });
+    await page.evaluate(() => localStorage.setItem("myViewMode", "map"));
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    const ladder = page.locator('ol button[aria-pressed]');
+    for (let i = 0; i < 40 && !(await ladder.count()); i++) await wait(500);
+    await ladder.first().evaluate((el) => el.closest("section")?.scrollIntoView({ block: "start" }));
+    await page.mouse.wheel(0, -60);
+    await wait(1200);
+  },
+  async "find-in-my"({ page, ui, wait, target }) {
+    // 2.74: 실제 채팅 한 줄 → 튜터 줄 분석 → 🔎 My에서 찾기 → My 단계 그 칸 + ❓ 상자(화면 함께).
+    const line = { en: "I have been to Japan twice.", es: "Ayer fui al cine con mis amigos.", ja: "写真を撮ってもいいですか。" }[target] ?? "I have been to Japan twice.";
+    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "networkidle" });
+    await wait(1500);
+    await page.locator("textarea:visible").first().fill(line);
+    await page.getByRole("button", { name: exactly(ui.send) }).click();
+    for (let i = 0; i < 40 && (await page.locator('[role="button"][aria-expanded="false"]').count()) < 2; i++) await wait(500);
+    await wait(3000);
+    await page.locator('[role="button"][aria-expanded="false"]').first().click();
+    await wait(500);
+    await page.getByRole("button", { name: exactly(ui.insightAnalyze) }).first().click();
+    await wait(4000);
+    await page.getByRole("button", { name: new RegExp(escape(ui.findInMy)) }).first().click();
+    const add = page.getByRole("button", { name: exactly(ui.notebookQuestionAdd) });
+    for (let i = 0; i < 60 && !(await add.count()); i++) await wait(500);
+    await wait(1200);
+  },
+  async "noto-icons"({ page, ui, wait, target }) {
+    // 2.74: 사람 탭 🙂 아이콘 → 기본 묶음 Noto 😀 시트(목록·그림은 운영 — 기본 묶음은 로그인 없이도 첫 쪽 맨 앞).
+    await socialMocks(page, target, ui);
+    await page.evaluate(() => localStorage.setItem("peopleViewMode", "icons"));
+    await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
+    const pack = page.getByText("Noto 😀").first();
+    for (let i = 0; i < 40 && !(await pack.count()); i++) await wait(500);
+    await pack.click();
+    await wait(4000);
+    await page.evaluate(() => localStorage.setItem("peopleViewMode", "people"));
   },
   async "people-lang"({ page, ui, locale, wait, target }) {
     // 2.73: 사람 탭 언어 칩 "배우는 언어·쓰는 말이 같은 사람"을 고른 목록(고정 응답 — 서버가 거른 것처럼 내 모국어를 쓰고 같은 언어를 배우는 사람만).

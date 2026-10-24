@@ -44,6 +44,17 @@ export type ReleaseNote = {
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    // 2.74(88): My "단계"(지도 + 노트 틀, 습득한 표현·관용·세부 칸), 문장분석 "My에서 찾기"(❓ 장면 카드), 아이콘 기본 묶음 Noto·Room 🙂.
+    // 사람 탭 칩 이모지·초대 보상 시트, 노트 "모두" 보기 고침은 사용법(사람·My)에만.
+    version: "2.74",
+    code: 88,
+    items: [
+      { id: "stage-board", title: "whatsNewStageBoardTitle", body: "whatsNewStageBoardBody", shot: "stage-board", tab: "map", guide: "my.map" },
+      { id: "find-in-my", title: "whatsNewFindInMyTitle", body: "whatsNewFindInMyBody", shot: "find-in-my", tab: "map", guide: "my.notes" },
+      { id: "noto", title: "whatsNewNotoTitle", body: "whatsNewNotoBody", shot: "noto-icons", tab: "people", guide: "people.icons" },
+    ],
+  },
+  {
     // 2.73(87): 노트 뼈대·오늘의 학습(고른 것만, 화면 함께), 사람 언어 칩.
     // AI 대화 📞 바로 통화·🗒 통화 기록 카드, 하단 탭 아이콘만, 줄 분석 문장 고르기, 의견 반영 포인트는 사용법(통화·대화·My)에만.
     version: "2.73",

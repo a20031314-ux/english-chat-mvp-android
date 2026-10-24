@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-24g";
+export const GUIDE_VERSION = "2026-10-24h";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -177,7 +177,7 @@ export const GUIDE_KO: Guide = {
           "쓸 수 있게 된 표현과 노트에 넣은 장면이 맞는 칸을 채워요. 관용구·자주 붙는 말은 ‘{ui:notebookIdioms}’, 말투·철자 같은 건 ‘{ui:notebookDetails}’ 칸으로. 점 색은 숙지·배움, 위 숫자는 채운 칸, 숙지한 문법에는 ✓. 칸을 열어 ‘{ui:stageTry}’로 바로 연습하고, 표현은 다른 칸으로 옮길 수 있어요.",
           "아래에는 목표로 그린 주제가 있어요. 주제에서 ‘{ui:missionStart}’ — 할 일은 정답을 숨기고 써 보게 하고, 힌트 없이 맞히면 숙지로 올라가요.",
         ],
-        shot: "mapview",
+        shot: "stage-board",
       },
       {
         heading: "8. 노트",
@@ -523,7 +523,8 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "아이콘",
         "body": [
-          "‘+ 새 묶음’으로 내가 만든 그림(움직이는 GIF도)을 올리면 바로 모두에게 공개돼요. 라이선스는 CC BY 4.0(출처 표시) 또는 CC0(조건 없음) 중에서 골라요. 남의 묶음은 ‘받기’를 누르면 메시지·단체방·댓글 입력칸의 🙂에서 골라 보낼 수 있어요."
+          "‘+ 새 묶음’으로 내가 만든 그림(움직이는 GIF도)을 올리면 바로 모두에게 공개돼요. 라이선스는 CC BY 4.0(출처 표시) 또는 CC0(조건 없음) 중에서 골라요. 남의 묶음은 ‘받기’를 누르면 메시지·단체방·댓글 입력칸의 🙂에서 골라 보낼 수 있어요.",
+          "기본 묶음 ‘Noto 😀’·‘Noto 👍’(Google Noto 움직이는 이모지)은 받지 않아도 늘 있어요. Room 채팅의 🙂에서도 보낼 수 있어요."
         ]
       }
     ]
@@ -599,7 +600,7 @@ export const GUIDE_EN: Guide = {
           "Phrases you can now use and scenes you add to your notes fill the matching section. Idioms and word pairings go to ‘{ui:notebookIdioms}’, things like politeness or spelling to ‘{ui:notebookDetails}’. The dot colour is mastered or learned, the number above is filled sections, and mastered grammar gets ✓. Open a section to ‘{ui:stageTry}’ right away, or move a phrase elsewhere.",
           "Below are the topics drawn from your goal. In a topic, ‘{ui:missionStart}’ — a task hides the answer and has you write it, and getting it right without hints moves it to mastered.",
         ],
-        shot: "mapview",
+        shot: "stage-board",
       },
       {
         heading: "8. Notes",
@@ -945,7 +946,8 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Icons",
         "body": [
-          "With “+ New pack”, upload images you made (animated GIFs too); they're public to everyone right away. Choose CC BY 4.0 (credit required) or CC0 (no conditions). Tap “Get” on someone's pack to send its icons from 🙂 in messages, group chats and comments."
+          "With “+ New pack”, upload images you made (animated GIFs too); they're public to everyone right away. Choose CC BY 4.0 (credit required) or CC0 (no conditions). Tap “Get” on someone's pack to send its icons from 🙂 in messages, group chats and comments.",
+          "The basic packs “Noto 😀” and “Noto 👍” (Google’s animated Noto emoji) are always there without getting them. You can also send icons from 🙂 in Room chat."
         ]
       }
     ]

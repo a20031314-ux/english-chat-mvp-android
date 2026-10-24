@@ -634,7 +634,13 @@
     "notebookNodeNuance": "ニュアンス",
     "findInMy": "マイで探す",
     "findInMyBusy": "探しています…",
-    "notebookQuestionAdd": "この場面を入れる"
+    "notebookQuestionAdd": "この場面を入れる",
+    "whatsNewStageBoardTitle": "ステージごとに育つ",
+    "whatsNewStageBoardBody": "マイの「ステージ」で段階ごとの文法項目が見え、使えるようになった表現や直された場面が合う項目を埋めます。",
+    "whatsNewFindInMyTitle": "わからない所をマイで探す",
+    "whatsNewFindInMyBody": "文の分析で、その部分がどの項目かを探してすぐ開き、そのときの画面と一緒に残せます。",
+    "whatsNewNotoTitle": "動く基本アイコン",
+    "whatsNewNotoBody": "動く Noto 絵文字の2パックが最初から入っています。Room のチャットでも送れます。"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1271,7 +1277,13 @@
     "notebookNodeNuance": "语感",
     "findInMy": "在“我的”里查找",
     "findInMyBusy": "正在查找…",
-    "notebookQuestionAdd": "加入这个场景"
+    "notebookQuestionAdd": "加入这个场景",
+    "whatsNewStageBoardTitle": "按阶段成长",
+    "whatsNewStageBoardBody": "“我的”里的“阶段”显示每个阶段的语法部分，会用的表达和改过的场景会填进对应部分。",
+    "whatsNewFindInMyTitle": "在“我的”里查找",
+    "whatsNewFindInMyBody": "在句子分析里找到这部分属于哪个部分并马上打开，还能连同当时的画面一起保存。",
+    "whatsNewNotoTitle": "会动的基础图标",
+    "whatsNewNotoBody": "两包 Noto 动态表情一开始就有，在 Room 聊天里也能发送。"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1910,7 +1922,13 @@
     "notebookNodeNuance": "Sắc thái",
     "findInMy": "Tìm trong Của tôi",
     "findInMyBusy": "Đang tìm…",
-    "notebookQuestionAdd": "Thêm khoảnh khắc này"
+    "notebookQuestionAdd": "Thêm khoảnh khắc này",
+    "whatsNewStageBoardTitle": "Lớn lên theo giai đoạn",
+    "whatsNewStageBoardBody": "Giai đoạn trong Của tôi hiện ngữ pháp từng cấp, và cách nói đã dùng được cùng cảnh được sửa sẽ lấp đúng mục.",
+    "whatsNewFindInMyTitle": "Tìm trong Của tôi",
+    "whatsNewFindInMyBody": "Từ phân tích câu, tìm phần đó thuộc mục nào, mở ngay và lưu kèm ảnh màn hình lúc đó.",
+    "whatsNewNotoTitle": "Biểu tượng động cơ bản",
+    "whatsNewNotoBody": "Hai gói biểu tượng cảm xúc động Noto có sẵn từ đầu. Bạn cũng gửi được trong trò chuyện Room."
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2554,7 +2572,13 @@
     "notebookNodeNuance": "Nuances",
     "findInMy": "Trouver dans Moi",
     "findInMyBusy": "Recherche…",
-    "notebookQuestionAdd": "Ajouter ce moment"
+    "notebookQuestionAdd": "Ajouter ce moment",
+    "whatsNewStageBoardTitle": "Progresser par étapes",
+    "whatsNewStageBoardBody": "Les étapes de Moi montrent la grammaire de chaque niveau ; les expressions maîtrisées et les scènes corrigées remplissent la bonne section.",
+    "whatsNewFindInMyTitle": "Trouver dans Moi",
+    "whatsNewFindInMyBody": "Depuis l’analyse de phrase, trouvez la section d’une partie, ouvrez-la et gardez-la avec l’écran du moment.",
+    "whatsNewNotoTitle": "Icônes animées de base",
+    "whatsNewNotoBody": "Deux packs d’emoji animés Noto sont là dès le départ. Vous pouvez aussi les envoyer dans le chat des salons."
   },
   "it": {
     "archive": "Report",
@@ -3389,7 +3413,13 @@
     "notebookNodeNuance": "Sfumature",
     "findInMy": "Trova in Io",
     "findInMyBusy": "Ricerca…",
-    "notebookQuestionAdd": "Aggiungi questo momento"
+    "notebookQuestionAdd": "Aggiungi questo momento",
+    "whatsNewStageBoardTitle": "Crescere per fasi",
+    "whatsNewStageBoardBody": "Le fasi in Io mostrano la grammatica di ogni livello; le espressioni che sai usare e le scene corrette riempiono la sezione giusta.",
+    "whatsNewFindInMyTitle": "Trova in Io",
+    "whatsNewFindInMyBody": "Dall’analisi della frase trova a quale sezione appartiene una parte, aprila e salvala con la schermata di quel momento.",
+    "whatsNewNotoTitle": "Icone animate di base",
+    "whatsNewNotoBody": "Due pacchetti di emoji animate Noto ci sono fin dall’inizio. Puoi inviarli anche nella chat delle stanze."
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4036,7 +4066,13 @@
     "notebookNodeNuance": "Nuances",
     "findInMy": "Encontrar em Meu espaço",
     "findInMyBusy": "Procurando…",
-    "notebookQuestionAdd": "Adicionar este momento"
+    "notebookQuestionAdd": "Adicionar este momento",
+    "whatsNewStageBoardTitle": "Crescer por etapas",
+    "whatsNewStageBoardBody": "As etapas em Meu espaço mostram a gramática de cada nível, e as expressões que já usa e as cenas corrigidas preenchem a secção certa.",
+    "whatsNewFindInMyTitle": "Encontrar em Meu espaço",
+    "whatsNewFindInMyBody": "Na análise da frase, encontre a secção de uma parte, abra-a e guarde-a com o ecrã desse momento.",
+    "whatsNewNotoTitle": "Ícones animados básicos",
+    "whatsNewNotoBody": "Dois pacotes de emojis animados Noto vêm incluídos. Também pode enviá-los no chat das salas."
   },
   "ru": {
     "archive": "Отчёты",
@@ -4869,7 +4905,13 @@
     "notebookNodeNuance": "Оттенки",
     "findInMy": "Найти в «Моё»",
     "findInMyBusy": "Ищем…",
-    "notebookQuestionAdd": "Добавить этот момент"
+    "notebookQuestionAdd": "Добавить этот момент",
+    "whatsNewStageBoardTitle": "Растём по этапам",
+    "whatsNewStageBoardBody": "Этапы в «Моё» показывают грамматику каждого уровня, а освоенные выражения и исправленные сцены заполняют нужный раздел.",
+    "whatsNewFindInMyTitle": "Найти в «Моё»",
+    "whatsNewFindInMyBody": "Из разбора предложения найдите раздел для этой части, откройте его и сохраните вместе с экраном того момента.",
+    "whatsNewNotoTitle": "Анимированные базовые значки",
+    "whatsNewNotoBody": "Два набора анимированных эмодзи Noto есть сразу. Их можно отправлять и в чате Room."
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5512,7 +5554,13 @@
     "notebookNodeNuance": "Nuansa",
     "findInMy": "Cari di Saya",
     "findInMyBusy": "Mencari…",
-    "notebookQuestionAdd": "Tambahkan momen ini"
+    "notebookQuestionAdd": "Tambahkan momen ini",
+    "whatsNewStageBoardTitle": "Tumbuh per tahap",
+    "whatsNewStageBoardBody": "Tahap di Saya menampilkan tata bahasa tiap tingkat, dan ungkapan yang sudah bisa dipakai serta adegan yang diperbaiki mengisi bagian yang cocok.",
+    "whatsNewFindInMyTitle": "Cari di Saya",
+    "whatsNewFindInMyBody": "Dari analisis kalimat, temukan bagian mana yang cocok, buka langsung, dan simpan bersama layar saat itu.",
+    "whatsNewNotoTitle": "Ikon animasi dasar",
+    "whatsNewNotoBody": "Dua paket emoji animasi Noto sudah ada sejak awal. Bisa dikirim juga di obrolan Room."
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6149,7 +6197,13 @@
     "notebookNodeNuance": "الفروق الدقيقة",
     "findInMy": "ابحث في «أنا»",
     "findInMyBusy": "جارٍ البحث…",
-    "notebookQuestionAdd": "أضف هذه اللحظة"
+    "notebookQuestionAdd": "أضف هذه اللحظة",
+    "whatsNewStageBoardTitle": "تنمو حسب المراحل",
+    "whatsNewStageBoardBody": "تعرض المراحل في «أنا» قواعد كل مستوى، وتملأ التعابير التي صرت تستعملها والمشاهد المصحّحة القسم المناسب.",
+    "whatsNewFindInMyTitle": "ابحث في «أنا»",
+    "whatsNewFindInMyBody": "من تحليل الجملة، اعرف القسم الذي ينتمي إليه الجزء، وافتحه واحفظه مع شاشة تلك اللحظة.",
+    "whatsNewNotoTitle": "أيقونات أساسية متحركة",
+    "whatsNewNotoBody": "حزمتان من رموز Noto المتحركة موجودتان من البداية، ويمكنك إرسالها في دردشة الغرف أيضًا."
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6786,7 +6840,13 @@
     "notebookNodeNuance": "ความหมายแฝง",
     "findInMy": "หาในของฉัน",
     "findInMyBusy": "กำลังหา…",
-    "notebookQuestionAdd": "เพิ่มฉากนี้"
+    "notebookQuestionAdd": "เพิ่มฉากนี้",
+    "whatsNewStageBoardTitle": "เติบโตทีละขั้น",
+    "whatsNewStageBoardBody": "ขั้นในของฉันแสดงไวยากรณ์แต่ละระดับ สำนวนที่ใช้ได้แล้วและฉากที่ถูกแก้จะเติมหัวข้อที่ตรงกัน",
+    "whatsNewFindInMyTitle": "หาในของฉัน",
+    "whatsNewFindInMyBody": "จากการวิเคราะห์ประโยค หาว่าส่วนนั้นอยู่หัวข้อไหน เปิดทันที และเก็บไว้พร้อมหน้าจอตอนนั้น",
+    "whatsNewNotoTitle": "ไอคอนพื้นฐานแบบเคลื่อนไหว",
+    "whatsNewNotoBody": "มีแพ็กอีโมจิเคลื่อนไหว Noto สองแพ็กตั้งแต่แรก และส่งในแชต Room ได้ด้วย"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7423,6 +7483,12 @@
     "notebookNodeNuance": "भाव का फ़र्क",
     "findInMy": "मेरा में खोजें",
     "findInMyBusy": "खोज रहे हैं…",
-    "notebookQuestionAdd": "यह पल जोड़ें"
+    "notebookQuestionAdd": "यह पल जोड़ें",
+    "whatsNewStageBoardTitle": "चरणों में बढ़ें",
+    "whatsNewStageBoardBody": "मेरा के चरण में हर स्तर का व्याकरण दिखता है, और जो वाक्यांश आप इस्तेमाल कर पाते हैं व सुधरे दृश्य सही हिस्से भरते हैं।",
+    "whatsNewFindInMyTitle": "मेरा में खोजें",
+    "whatsNewFindInMyBody": "वाक्य विश्लेषण से पता करें कि वह हिस्सा किस भाग का है, तुरंत खोलें और उस पल की स्क्रीन के साथ रखें।",
+    "whatsNewNotoTitle": "चलते-फिरते बुनियादी आइकन",
+    "whatsNewNotoBody": "Noto के चलते-फिरते इमोजी के दो पैक शुरू से हैं। Room चैट में भी भेज सकते हैं।"
   }
 }

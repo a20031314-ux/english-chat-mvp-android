@@ -54,7 +54,7 @@
             "Las expresiones que ya sabes usar y las escenas que guardas llenan la sección que corresponde. Modismos y combinaciones van a «{ui:notebookIdioms}»; formalidad u ortografía, a «{ui:notebookDetails}». El color del punto indica dominada o aprendida, el número de arriba las secciones llenas, y la gramática dominada lleva ✓. Abre una sección para «{ui:stageTry}» o mover una expresión.",
             "Debajo están los temas de tu objetivo. En un tema, «{ui:missionStart}»: la tarea oculta la respuesta y te pide escribirla; si aciertas sin pistas, pasa a dominada."
           ],
-          "shot": "mapview"
+          "shot": "stage-board"
         },
         {
           "heading": "8. Notas",
@@ -401,7 +401,8 @@
         {
           "heading": "Iconos",
           "body": [
-            "Con «+ Nuevo paquete» sube imágenes que hiciste (también GIF animados); quedan públicas para todos al instante. Elige CC BY 4.0 (con atribución) o CC0 (sin condiciones). Toca «Obtener» en un paquete para enviar sus iconos desde 🙂 en mensajes, grupos y comentarios."
+            "Con «+ Nuevo paquete» sube imágenes que hiciste (también GIF animados); quedan públicas para todos al instante. Elige CC BY 4.0 (con atribución) o CC0 (sin condiciones). Toca «Obtener» en un paquete para enviar sus iconos desde 🙂 en mensajes, grupos y comentarios.",
+            "Los paquetes básicos «Noto 😀» y «Noto 👍» (emojis animados Noto de Google) están siempre, sin tener que conseguirlos. También puedes enviar iconos desde 🙂 en el chat de las salas."
           ]
         }
       ]
@@ -475,7 +476,7 @@
             "使えるようになった表現とノートに入れた場面が、合う項目を埋めます。慣用句やよく一緒に使う言葉は「{ui:notebookIdioms}」、話し方や表記などは「{ui:notebookDetails}」へ。点の色は習得・学習中、上の数字は埋まった項目、身についた文法には✓。項目を開いて「{ui:stageTry}」ですぐ練習したり、表現を別の項目に移したりできます。",
             "下には目標から作ったテーマがあります。テーマで「{ui:missionStart}」。タスクは答えを隠して書かせ、ヒントなしで正解すると習得になります。"
           ],
-          "shot": "mapview"
+          "shot": "stage-board"
         },
         {
           "heading": "8. ノート",
@@ -822,7 +823,8 @@
         {
           "heading": "アイコン",
           "body": [
-            "「+ 新しいパック」で自分が作った画像（動くGIFも）をアップロードすると、すぐに全員に公開されます。ライセンスはCC BY 4.0（クレジット表示）かCC0（条件なし）から選びます。ほかの人のパックは「もらう」を押すと、メッセージ・グループ・コメントの🙂から送れます。"
+            "「+ 新しいパック」で自分が作った画像（動くGIFも）をアップロードすると、すぐに全員に公開されます。ライセンスはCC BY 4.0（クレジット表示）かCC0（条件なし）から選びます。ほかの人のパックは「もらう」を押すと、メッセージ・グループ・コメントの🙂から送れます。",
+            "基本パック「Noto 😀」「Noto 👍」（Google の動く Noto 絵文字）は受け取らなくてもいつも使えます。Room のチャットの🙂からも送れます。"
           ]
         }
       ]
@@ -896,7 +898,7 @@
             "会用的表达和放进笔记的场景会填进对应的部分。惯用语、常见搭配放在“{ui:notebookIdioms}”，语气、拼写之类放在“{ui:notebookDetails}”。圆点颜色表示已掌握或在学，上面的数字是已填的部分，已掌握的语法有 ✓。打开部分可以点“{ui:stageTry}”马上练习，也能把表达移到别处。",
             "下面是按目标生成的主题。在主题里点“{ui:missionStart}”——任务会把答案藏起来让你写，不靠提示写对就算掌握。"
           ],
-          "shot": "mapview"
+          "shot": "stage-board"
         },
         {
           "heading": "8. 笔记",
@@ -1243,7 +1245,8 @@
         {
           "heading": "表情",
           "body": [
-            "用“+ 新表情包”上传自己做的图片（也可以是动图GIF），上传后立即向所有人公开。许可协议可选 CC BY 4.0（需署名）或 CC0（无条件）。别人的表情包点“添加”后，就能在私信、群聊和评论输入框的 🙂 里选来发送。"
+            "用“+ 新表情包”上传自己做的图片（也可以是动图GIF），上传后立即向所有人公开。许可协议可选 CC BY 4.0（需署名）或 CC0（无条件）。别人的表情包点“添加”后，就能在私信、群聊和评论输入框的 🙂 里选来发送。",
+            "基础包“Noto 😀”“Noto 👍”（Google 的 Noto 动态表情）不用领取就一直在。在 Room 聊天的 🙂 里也能发送。"
           ]
         }
       ]
@@ -1317,7 +1320,7 @@
             "Những cách nói bạn đã dùng được và cảnh đưa vào sổ sẽ lấp đầy mục tương ứng. Thành ngữ, từ hay đi cùng vào «{ui:notebookIdioms}»; cách nói, chính tả vào «{ui:notebookDetails}». Màu chấm là đã nắm hay đang học, số ở trên là mục đã lấp, ngữ pháp đã nắm có ✓. Mở một mục để «{ui:stageTry}» ngay hoặc chuyển cách nói sang mục khác.",
             "Bên dưới là các chủ đề vẽ từ mục tiêu. Trong chủ đề, chạm «{ui:missionStart}» — bài tập giấu đáp án để bạn tự viết, viết đúng không cần gợi ý thì thành đã nắm."
           ],
-          "shot": "mapview"
+          "shot": "stage-board"
         },
         {
           "heading": "8. Ghi chú",
@@ -1664,7 +1667,8 @@
         {
           "heading": "Biểu tượng",
           "body": [
-            "Với “+ Bộ mới”, tải lên hình bạn tự làm (cả GIF động); hình được công khai cho mọi người ngay. Chọn CC BY 4.0 (ghi nguồn) hoặc CC0 (không điều kiện). Bấm “Lấy” ở bộ của người khác để gửi biểu tượng từ 🙂 trong tin nhắn, nhóm và bình luận."
+            "Với “+ Bộ mới”, tải lên hình bạn tự làm (cả GIF động); hình được công khai cho mọi người ngay. Chọn CC BY 4.0 (ghi nguồn) hoặc CC0 (không điều kiện). Bấm “Lấy” ở bộ của người khác để gửi biểu tượng từ 🙂 trong tin nhắn, nhóm và bình luận.",
+            "Gói cơ bản «Noto 😀» và «Noto 👍» (biểu tượng cảm xúc động Noto của Google) luôn có sẵn, không cần nhận. Bạn cũng gửi được từ 🙂 trong trò chuyện Room."
           ]
         }
       ]
@@ -1738,7 +1742,7 @@
             "Les expressions que vous savez utiliser et les scènes ajoutées à vos notes remplissent la section correspondante. Expressions idiomatiques et associations vont dans « {ui:notebookIdioms} », registre ou orthographe dans « {ui:notebookDetails} ». La couleur du point indique maîtrisé ou appris, le nombre du haut les sections remplies, la grammaire maîtrisée a un ✓. Ouvrez une section pour « {ui:stageTry} » ou déplacer une expression.",
             "En dessous, les thèmes tirés de votre objectif. Dans un thème, « {ui:missionStart} » : la tâche cache la réponse et vous la fait écrire ; juste sans indice, elle passe en maîtrisée."
           ],
-          "shot": "mapview"
+          "shot": "stage-board"
         },
         {
           "heading": "8. Notes",
@@ -2085,7 +2089,8 @@
         {
           "heading": "Icônes",
           "body": [
-            "Avec « + Nouveau pack », envoyez des images que vous avez créées (GIF animés compris) ; elles sont publiques tout de suite. Choisissez CC BY 4.0 (attribution) ou CC0 (sans condition). Touchez « Obtenir » sur un pack pour envoyer ses icônes depuis 🙂 dans les messages, groupes et commentaires."
+            "Avec « + Nouveau pack », envoyez des images que vous avez créées (GIF animés compris) ; elles sont publiques tout de suite. Choisissez CC BY 4.0 (attribution) ou CC0 (sans condition). Touchez « Obtenir » sur un pack pour envoyer ses icônes depuis 🙂 dans les messages, groupes et commentaires.",
+            "Les packs de base « Noto 😀 » et « Noto 👍 » (emoji animés Noto de Google) sont toujours là, sans les récupérer. Vous pouvez aussi envoyer des icônes depuis 🙂 dans le chat des salons."
           ]
         }
       ]
@@ -2159,7 +2164,7 @@
             "Le espressioni che sai usare e le scene che metti nelle note riempiono la sezione giusta. Modi di dire e parole che vanno insieme in «{ui:notebookIdioms}», registro o ortografia in «{ui:notebookDetails}». Il colore del punto indica padroneggiata o imparata, il numero in alto le sezioni riempite, la grammatica padroneggiata ha ✓. Apri una sezione per «{ui:stageTry}» o spostare un’espressione.",
             "Sotto ci sono i temi tratti dal tuo obiettivo. In un tema, «{ui:missionStart}»: il compito nasconde la risposta e te la fa scrivere; se la azzecchi senza suggerimenti diventa padroneggiata."
           ],
-          "shot": "mapview"
+          "shot": "stage-board"
         },
         {
           "heading": "8. Note",
@@ -2506,7 +2511,8 @@
         {
           "heading": "Icone",
           "body": [
-            "Con «+ Nuovo pacchetto» carica immagini fatte da te (anche GIF animate): sono subito pubbliche per tutti. Scegli CC BY 4.0 (con attribuzione) o CC0 (nessuna condizione). Tocca «Prendi» su un pacchetto per inviarne le icone da 🙂 in messaggi, gruppi e commenti."
+            "Con «+ Nuovo pacchetto» carica immagini fatte da te (anche GIF animate): sono subito pubbliche per tutti. Scegli CC BY 4.0 (con attribuzione) o CC0 (nessuna condizione). Tocca «Prendi» su un pacchetto per inviarne le icone da 🙂 in messaggi, gruppi e commenti.",
+            "I pacchetti base «Noto 😀» e «Noto 👍» (emoji animate Noto di Google) ci sono sempre, senza doverli prendere. Puoi inviare icone anche da 🙂 nella chat delle stanze."
           ]
         }
       ]
@@ -2580,7 +2586,7 @@
             "As expressões que já consegue usar e as cenas que guarda nas notas preenchem a secção certa. Expressões idiomáticas e combinações vão para «{ui:notebookIdioms}»; registo ou ortografia, para «{ui:notebookDetails}». A cor do ponto indica dominada ou aprendida, o número em cima as secções preenchidas, e a gramática dominada tem ✓. Abra uma secção para «{ui:stageTry}» ou mover uma expressão.",
             "Por baixo ficam os temas do seu objetivo. Num tema, «{ui:missionStart}»: a tarefa esconde a resposta e pede que a escreva; se acertar sem dicas, passa a dominada."
           ],
-          "shot": "mapview"
+          "shot": "stage-board"
         },
         {
           "heading": "8. Notas",
@@ -2927,7 +2933,8 @@
         {
           "heading": "Ícones",
           "body": [
-            "Em “+ Novo pacote”, envie imagens que você fez (GIFs animados também); elas ficam públicas na hora. Escolha CC BY 4.0 (com atribuição) ou CC0 (sem condições). Toque em “Pegar” num pacote para enviar os ícones pelo 🙂 em mensagens, grupos e comentários."
+            "Em “+ Novo pacote”, envie imagens que você fez (GIFs animados também); elas ficam públicas na hora. Escolha CC BY 4.0 (com atribuição) ou CC0 (sem condições). Toque em “Pegar” num pacote para enviar os ícones pelo 🙂 em mensagens, grupos e comentários.",
+            "Os pacotes básicos «Noto 😀» e «Noto 👍» (emojis animados Noto da Google) estão sempre disponíveis, sem precisar de os obter. Também pode enviar ícones a partir de 🙂 no chat das salas."
           ]
         }
       ]
@@ -3001,7 +3008,7 @@
             "Выражения, которыми вы уже пользуетесь, и сцены из заметок заполняют нужный раздел. Идиомы и устойчивые сочетания идут в «{ui:notebookIdioms}», стиль и орфография — в «{ui:notebookDetails}». Цвет точки — освоено или изучается, число сверху — заполненные разделы, у освоенной грамматики ✓. Откройте раздел, чтобы «{ui:stageTry}» или перенести выражение.",
             "Ниже — темы, составленные по вашей цели. В теме «{ui:missionStart}»: задание прячет ответ и просит написать его; без подсказок верно — и фраза становится освоенной."
           ],
-          "shot": "mapview"
+          "shot": "stage-board"
         },
         {
           "heading": "8. Заметки",
@@ -3348,7 +3355,8 @@
         {
           "heading": "Иконки",
           "body": [
-            "Через «+ Новый набор» загрузите свои картинки (и анимированные GIF) — они сразу видны всем. Выберите CC BY 4.0 (с указанием автора) или CC0 (без условий). Нажмите «Взять» в чужом наборе, чтобы отправлять его иконки через 🙂 в сообщениях, группах и комментариях."
+            "Через «+ Новый набор» загрузите свои картинки (и анимированные GIF) — они сразу видны всем. Выберите CC BY 4.0 (с указанием автора) или CC0 (без условий). Нажмите «Взять» в чужом наборе, чтобы отправлять его иконки через 🙂 в сообщениях, группах и комментариях.",
+            "Базовые наборы «Noto 😀» и «Noto 👍» (анимированные эмодзи Noto от Google) есть всегда, их не нужно добавлять. Значки можно отправлять и из 🙂 в чате Room."
           ]
         }
       ]
@@ -3422,7 +3430,7 @@
             "Ungkapan yang sudah bisa kamu pakai dan adegan yang kamu masukkan ke catatan mengisi bagian yang cocok. Idiom dan kata yang berpasangan masuk ke «{ui:notebookIdioms}», gaya bahasa atau ejaan ke «{ui:notebookDetails}». Warna titik berarti dikuasai atau dipelajari, angka di atas adalah bagian yang terisi, tata bahasa yang dikuasai diberi ✓. Buka bagian untuk «{ui:stageTry}» atau memindah ungkapan.",
             "Di bawahnya ada topik dari tujuanmu. Di topik, ketuk «{ui:missionStart}» — tugas menyembunyikan jawaban dan memintamu menulisnya; benar tanpa petunjuk berarti dikuasai."
           ],
-          "shot": "mapview"
+          "shot": "stage-board"
         },
         {
           "heading": "8. Catatan",
@@ -3769,7 +3777,8 @@
         {
           "heading": "Ikon",
           "body": [
-            "Dengan “+ Paket baru”, unggah gambar buatanmu (GIF bergerak juga); langsung publik untuk semua orang. Pilih CC BY 4.0 (cantumkan sumber) atau CC0 (tanpa syarat). Ketuk “Ambil” di paket orang lain untuk mengirim ikonnya dari 🙂 di pesan, grup, dan komentar."
+            "Dengan “+ Paket baru”, unggah gambar buatanmu (GIF bergerak juga); langsung publik untuk semua orang. Pilih CC BY 4.0 (cantumkan sumber) atau CC0 (tanpa syarat). Ketuk “Ambil” di paket orang lain untuk mengirim ikonnya dari 🙂 di pesan, grup, dan komentar.",
+            "Paket dasar «Noto 😀» dan «Noto 👍» (emoji animasi Noto dari Google) selalu ada tanpa perlu diambil. Ikon juga bisa dikirim dari 🙂 di obrolan Room."
           ]
         }
       ]
@@ -3843,7 +3852,7 @@
             "التعابير التي صرت تستعملها والمشاهد التي تضيفها إلى ملاحظاتك تملأ القسم المناسب. التعابير الاصطلاحية والكلمات المتلازمة تذهب إلى «{ui:notebookIdioms}»، والأسلوب أو الإملاء إلى «{ui:notebookDetails}». لون النقطة يعني متقن أو قيد التعلّم، والرقم في الأعلى هو الأقسام الممتلئة، والقواعد المتقنة عليها ✓. افتح القسم لـ«{ui:stageTry}» أو لنقل تعبير إلى قسم آخر.",
             "في الأسفل المواضيع المرسومة من هدفك. في الموضوع اضغط «{ui:missionStart}»: المهمة تخفي الإجابة وتطلب منك كتابتها، وإذا أصبت دون تلميح تصبح متقنة."
           ],
-          "shot": "mapview"
+          "shot": "stage-board"
         },
         {
           "heading": "8. الملاحظات",
@@ -4190,7 +4199,8 @@
         {
           "heading": "أيقونات",
           "body": [
-            "بزر «+ حزمة جديدة» ارفع صورًا صنعتها (والصور المتحركة GIF أيضًا)؛ تصبح متاحة للجميع فورًا. اختر CC BY 4.0 (مع نسب العمل) أو CC0 (بلا شروط). اضغط «إضافة» على حزمة شخص آخر لترسل أيقوناتها من 🙂 في الرسائل والمجموعات والتعليقات."
+            "بزر «+ حزمة جديدة» ارفع صورًا صنعتها (والصور المتحركة GIF أيضًا)؛ تصبح متاحة للجميع فورًا. اختر CC BY 4.0 (مع نسب العمل) أو CC0 (بلا شروط). اضغط «إضافة» على حزمة شخص آخر لترسل أيقوناتها من 🙂 في الرسائل والمجموعات والتعليقات.",
+            "الحزمتان الأساسيتان «Noto 😀» و«Noto 👍» (رموز Noto المتحركة من Google) موجودتان دائمًا دون أن تأخذهما. ويمكنك أيضًا إرسال الأيقونات من 🙂 في دردشة الغرف."
           ]
         }
       ]
@@ -4264,7 +4274,7 @@
             "สำนวนที่ใช้ได้แล้วและฉากที่ใส่ลงโน้ตจะเติมหัวข้อที่ตรงกัน สำนวนและคำที่ใช้คู่กันไปที่ «{ui:notebookIdioms}» ส่วนระดับภาษาหรือการสะกดไปที่ «{ui:notebookDetails}» สีจุดบอกว่าคล่องแล้วหรือกำลังเรียน ตัวเลขด้านบนคือหัวข้อที่เติมแล้ว ไวยากรณ์ที่คล่องมี ✓ เปิดหัวข้อเพื่อ «{ui:stageTry}» หรือย้ายสำนวนไปหัวข้ออื่น",
             "ด้านล่างคือหัวข้อที่สร้างจากเป้าหมาย ในหัวข้อแตะ «{ui:missionStart}» งานจะซ่อนคำตอบให้คุณเขียนเอง ถ้าเขียนถูกโดยไม่ใช้คำใบ้จะนับว่าคล่องแล้ว"
           ],
-          "shot": "mapview"
+          "shot": "stage-board"
         },
         {
           "heading": "8. โน้ต",
@@ -4611,7 +4621,8 @@
         {
           "heading": "ไอคอน",
           "body": [
-            "กด “+ ชุดใหม่” แล้วอัปโหลดรูปที่ทำเอง (GIF เคลื่อนไหวก็ได้) รูปจะเป็นสาธารณะทันที เลือกสัญญาอนุญาต CC BY 4.0 (ระบุที่มา) หรือ CC0 (ไม่มีเงื่อนไข) กด “รับ” ที่ชุดของคนอื่นเพื่อส่งไอคอนจาก 🙂 ในข้อความ กลุ่ม และความคิดเห็น"
+            "กด “+ ชุดใหม่” แล้วอัปโหลดรูปที่ทำเอง (GIF เคลื่อนไหวก็ได้) รูปจะเป็นสาธารณะทันที เลือกสัญญาอนุญาต CC BY 4.0 (ระบุที่มา) หรือ CC0 (ไม่มีเงื่อนไข) กด “รับ” ที่ชุดของคนอื่นเพื่อส่งไอคอนจาก 🙂 ในข้อความ กลุ่ม และความคิดเห็น",
+            "แพ็กพื้นฐาน «Noto 😀» และ «Noto 👍» (อีโมจิเคลื่อนไหว Noto ของ Google) มีอยู่เสมอโดยไม่ต้องรับ และส่งไอคอนจาก 🙂 ในแชต Room ได้ด้วย"
           ]
         }
       ]
@@ -4685,7 +4696,7 @@
             "जो वाक्यांश अब आप इस्तेमाल कर पाते हैं और नोट्स में डाले दृश्य सही हिस्से को भरते हैं। मुहावरे और साथ आने वाले शब्द «{ui:notebookIdioms}» में, लहजा या वर्तनी «{ui:notebookDetails}» में जाते हैं। बिंदु का रंग सीखा हुआ या सीख रहे बताता है, ऊपर की संख्या भरे हिस्से है, और सीखे व्याकरण पर ✓ है। हिस्सा खोलकर «{ui:stageTry}» करें या वाक्यांश दूसरी जगह ले जाएँ।",
             "नीचे आपके लक्ष्य से बने विषय हैं। विषय में «{ui:missionStart}» — काम जवाब छिपाकर आपसे लिखवाता है, बिना संकेत सही लिखने पर वह सीखा हुआ बन जाता है।"
           ],
-          "shot": "mapview"
+          "shot": "stage-board"
         },
         {
           "heading": "8. नोट्स",
@@ -5032,7 +5043,8 @@
         {
           "heading": "आइकन",
           "body": [
-            "“+ नया पैक” से अपनी बनाई तस्वीरें (एनिमेटेड GIF भी) अपलोड करें; वे तुरंत सबके लिए सार्वजनिक हो जाती हैं। CC BY 4.0 (श्रेय ज़रूरी) या CC0 (कोई शर्त नहीं) चुनें। किसी और के पैक पर “लें” दबाएँ और संदेश, ग्रुप व टिप्पणियों में 🙂 से उसके आइकन भेजें।"
+            "“+ नया पैक” से अपनी बनाई तस्वीरें (एनिमेटेड GIF भी) अपलोड करें; वे तुरंत सबके लिए सार्वजनिक हो जाती हैं। CC BY 4.0 (श्रेय ज़रूरी) या CC0 (कोई शर्त नहीं) चुनें। किसी और के पैक पर “लें” दबाएँ और संदेश, ग्रुप व टिप्पणियों में 🙂 से उसके आइकन भेजें।",
+            "बुनियादी पैक «Noto 😀» और «Noto 👍» (Google के चलते-फिरते Noto इमोजी) बिना लिए हमेशा मौजूद हैं। Room चैट में 🙂 से भी आइकन भेज सकते हैं।"
           ]
         }
       ]
