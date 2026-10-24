@@ -142,6 +142,11 @@ const IOS_MIN_SPEECH_RMS = 0.004;
 const CALIBRATION_MS = 400;
 /** 말한 뒤에는 그 턴에서 가장 큰 소리의 이 비율 아래를 쉼으로 본다(아이폰 원음은 방 소리가 그대로 남음). */
 const IOS_PAUSE_OF_PEAK = 0.12;
+/**
+ * 기준의 위 끝. 0.02로 두었더니 방이 조금 시끄러우면(처음 0.4초 중간값 0.007 이상) 기준이 0.02에 붙고,
+ * 원음 마이크로 보통 크기로 말한 소리(0.017)가 한 번도 넘지 못해 턴마다 "…"로 끝났다(TestFlight 85.9 진단, 2026-10-25).
+ */
+const IOS_MAX_SPEECH_RMS = 0.014;
 
 export type LevelScaler = {
   scale: (level: number, sinceStart: number) => number;
@@ -163,7 +168,7 @@ export function makeLevelScaler(ios: boolean): LevelScaler {
     if (calibration.length === 0) return;
     const sorted = [...calibration].sort((a, b) => a - b);
     const floor = sorted[Math.floor(sorted.length / 2)];
-    threshold = Math.min(0.02, Math.max(IOS_MIN_SPEECH_RMS, floor * 3));
+    threshold = Math.min(IOS_MAX_SPEECH_RMS, Math.max(IOS_MIN_SPEECH_RMS, floor * 3));
   };
   return {
     scale: (level, sinceStart) => {
@@ -177,4 +182,13 @@ export function makeLevelScaler(ios: boolean): LevelScaler {
     },
     threshold: () => threshold,
   };
+}
+
+/**
+ * 기다림이 다 지나도록 "말"로 볼 만큼 큰 소리가 없던 턴이라도, 기준 가까이까지 올라간 소리가 있었으면
+ * 받아쓰기에 보낸다 — 작게 말한 목소리를 통째로 버리지 않게. 방 소리만 있던 턴(기준의 절반 아래)은 보내지 않는다
+ * (받아쓰기가 정적에서 문장을 지어냄).
+ */
+export function quietVoiceWorthSending(peak: number, threshold: number): boolean {
+  return peak >= 0.008 && peak >= threshold * 0.6;
 }

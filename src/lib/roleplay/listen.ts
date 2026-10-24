@@ -1,5 +1,5 @@
 import type { PracticeGoal } from "@/lib/learner/practice";
-import { TURN_NOT_STARTED, hearFrame, makeLevelScaler } from "./hearFrame.ts";
+import { TURN_NOT_STARTED, hearFrame, makeLevelScaler, quietVoiceWorthSending } from "./hearFrame.ts";
 import { isIosApp, turnDiagnosticsEnabled } from "@/lib/platform";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
@@ -434,7 +434,7 @@ export async function listenForTurn(input: {
             // have go to the store yesterday"), which went out as their turn.
             // Only when the wait ran out — a turn they ended themselves is
             // still sent, in case the meter missed a quiet voice.
-            if (watch.heardNothing()) {
+            if (watch.heardNothing() && !(isIosApp() && quietVoiceWorthSending(watch.peak(), watch.threshold()))) {
               diag.status = "silent";
               finish("");
               return;
