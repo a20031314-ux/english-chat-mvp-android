@@ -1,0 +1,4 @@
+• Note: le frasi corrette oggi dal tutor si raccolgono in «Imparato oggi». Scegli quelle da tenere e finiscono nella sezione giusta (lettere, suoni, grammatica), anche con la schermata di quel momento.
+• Persone: mostra solo «Imparano la stessa lingua» o «Stessa lingua studiata e parlata».
+• Chiama il tutor IA con 📞 dalla chat; la chiamata finita resta lì come scheda 🗒.
+• La barra delle schede mostra solo icone.

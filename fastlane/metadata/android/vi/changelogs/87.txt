@@ -1,0 +1,4 @@
+• Ghi chú: những câu gia sư sửa hôm nay được gom vào “Học hôm nay”. Chọn câu muốn giữ, chúng vào đúng mục (chữ, âm, ngữ pháp), kèm ảnh màn hình lúc đó nếu muốn.
+• Mọi người: chỉ hiện “Học cùng ngôn ngữ” hoặc “Cùng học, cùng nói một ngôn ngữ”.
+• Gọi gia sư AI ngay bằng 📞 trong cuộc trò chuyện; cuộc gọi xong nằm lại đó dưới dạng thẻ 🗒.
+• Thanh tab giờ chỉ hiện biểu tượng.
