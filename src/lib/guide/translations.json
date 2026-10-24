@@ -35,7 +35,8 @@
         {
           "heading": "5. Toca para ver más",
           "body": [
-            "Toca una parte para ver cómo crece, las últimas dos semanas y las expresiones que la hicieron crecer; «{ui:myGrowIt}» empieza a practicar."
+            "Toca una parte para ver cómo crece, las últimas dos semanas y las expresiones que la hicieron crecer; «{ui:myGrowIt}» empieza a practicar.",
+            "«{ui:myOpenStage}» muestra las secciones ligadas a esa parte. La amplitud de expresión lleva a tu vocabulario."
           ],
           "shot": "element"
         },
@@ -47,18 +48,19 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Verlo como mapa",
+          "heading": "7. Verlo por etapas",
           "body": [
-            "Toca «{ui:myViewMap}» para ver los temas de tu objetivo; en un tema, «{ui:missionStart}».",
-            "Una tarea oculta la respuesta y te hace escribirla. Corrige lo que escribes y, si aciertas sin pistas, pasa a dominado."
+            "«{ui:myViewMap}» muestra las etapas del 1 al 5. La actual está coloreada; toca un número para ver la conversación objetivo y la gramática de esa etapa.",
+            "Las escenas que guardas en tus notas llenan la sección que corresponde (punto y número). El número de arriba son las secciones llenas, y la gramática dominada lleva ✓. Abre una sección y toca «{ui:stageTry}» para practicarla.",
+            "Debajo están los temas de tu objetivo. En un tema, «{ui:missionStart}»: la tarea oculta la respuesta y te pide escribirla; si aciertas sin pistas, pasa a dominada."
           ],
           "shot": "mapview"
         },
         {
           "heading": "8. Notas",
           "body": [
-            "«{ui:notebookToday}», arriba, reúne las frases que el tutor corrigió hoy. Marca las que quieras guardar y pulsa «{ui:notebookAddToNotes}»; con «{ui:notebookWithScreen}» se adjunta la pantalla de ese momento.",
-            "El número junto a las secciones de «{ui:notebookScript}» y «{ui:notebookGrammar}» indica cuántas veces te corrigieron ahí. Abre una sección para mover o anotar tarjetas, cambiarle el nombre o añadir las tuyas en «{ui:notebookMine}». Abajo, «{ui:notebookVocab}» reúne tus expresiones, palabras y preguntas por tema, y «{ui:homeTabVocab}» abre la lista de palabras."
+            "Las frases que corrigió el tutor se juntan en «{ui:notebookToday}», arriba en En crecimiento. Marca las que quieres guardar y toca «{ui:notebookAddToNotes}»; activa «{ui:notebookWithScreen}» para adjuntar la pantalla. Las tarjetas van a la sección que corresponde en «{ui:myViewMap}».",
+            "Abre una sección para mover tarjetas o anotarlas, cambiarle el nombre o añadir la tuya en «{ui:notebookMine}». En las notas se juntan tus expresiones, palabras y preguntas por tema, y la fila «{ui:homeTabVocab}» abre tu vocabulario."
           ],
           "shot": "notebook-today"
         },
@@ -453,7 +455,8 @@
         {
           "heading": "5. タップして見る",
           "body": [
-            "部分を押すと、育ち方・最近2週間・育てた表現が見え、「{ui:myGrowIt}」ですぐ練習できます。"
+            "部分を押すと、育ち方・最近2週間・育てた表現が見え、「{ui:myGrowIt}」ですぐ練習できます。",
+            "「{ui:myOpenStage}」を押すと、その部分につながる項目をステージで見られます。表現の幅は単語帳へ。"
           ],
           "shot": "element"
         },
@@ -465,18 +468,19 @@
           "shot": "myask"
         },
         {
-          "heading": "7. マップで見る",
+          "heading": "7. ステージで見る",
           "body": [
-            "「{ui:myViewMap}」を押すと目標から作ったテーマが見え、テーマで「{ui:missionStart}」。",
-            "タスクは答えを隠して書かせます。書くと直してくれて、ヒントなしで正解すると習得になります。"
+            "「{ui:myViewMap}」にはステージ1〜5が並びます。今のステージに色が付き、番号を押すとそのステージの目標の会話と文法の項目を先に見られます。",
+            "ノートに入れた場面は合う項目を埋めます（点と回数）。上の数字は埋まった項目、身についた文法には✓。項目を開いて「{ui:stageTry}」ですぐ練習できます。",
+            "下には目標から作ったテーマがあります。テーマで「{ui:missionStart}」。タスクは答えを隠して書かせ、ヒントなしで正解すると習得になります。"
           ],
           "shot": "mapview"
         },
         {
           "heading": "8. ノート",
           "body": [
-            "いちばん上の「{ui:notebookToday}」に、今日チューターが直した文が集まります。残すものだけチェックして「{ui:notebookAddToNotes}」。「{ui:notebookWithScreen}」をオンにすると、そのときの画面も付きます。",
-            "「{ui:notebookScript}」「{ui:notebookGrammar}」の項目の横の数字は、そこで直された回数です。項目を開くとカードを移動・メモでき、名前を変えたり「{ui:notebookMine}」に項目を足したりできます。下の「{ui:notebookVocab}」には表現・単語・質問がテーマ別に集まり、「{ui:homeTabVocab}」の行は単語帳です。"
+            "チューターが直した文は、伸びているところのいちばん上の「{ui:notebookToday}」に集まります。残すものだけチェックして「{ui:notebookAddToNotes}」。「{ui:notebookWithScreen}」をオンにするとそのときの画面も付き、カードは「{ui:myViewMap}」の合う項目に入ります。",
+            "項目を開くとカードを移動・メモでき、名前を変えたり「{ui:notebookMine}」に項目を足したりできます。ノートには表現・単語・質問がテーマ別に集まり、「{ui:homeTabVocab}」の行は単語帳です。"
           ],
           "shot": "notebook-today"
         },
@@ -871,7 +875,8 @@
         {
           "heading": "5. 点开查看",
           "body": [
-            "点开一个部分，可以看到成长方式、最近两周和让它成长的表达，用“{ui:myGrowIt}”马上练习。"
+            "点开一个部分，可以看到成长方式、最近两周和让它成长的表达，用“{ui:myGrowIt}”马上练习。",
+            "点“{ui:myOpenStage}”，可以在阶段里看到和这一项相关的部分。表达广度会打开单词本。"
           ],
           "shot": "element"
         },
@@ -883,18 +888,19 @@
           "shot": "myask"
         },
         {
-          "heading": "7. 用地图看",
+          "heading": "7. 按阶段查看",
           "body": [
-            "点“{ui:myViewMap}”能看到根据目标生成的主题，在主题里点“{ui:missionStart}”。",
-            "任务会把答案藏起来让你写。写了就帮你改，不看提示答对就算掌握。"
+            "“{ui:myViewMap}”里排着第 1 到第 5 阶段。当前阶段会被填上颜色，点数字可以先看那个阶段的目标对话和语法部分。",
+            "放进笔记的场景会填进对应的部分（圆点和次数）。上面的数字是已填的部分，已掌握的语法有 ✓。打开部分，点“{ui:stageTry}”马上练习。",
+            "下面是按目标生成的主题。在主题里点“{ui:missionStart}”——任务会把答案藏起来让你写，不靠提示写对就算掌握。"
           ],
           "shot": "mapview"
         },
         {
           "heading": "8. 笔记",
           "body": [
-            "最上面的“{ui:notebookToday}”汇集了今天导师改过的句子。勾选想留下的，点“{ui:notebookAddToNotes}”；打开“{ui:notebookWithScreen}”会附上当时的画面。",
-            "“{ui:notebookScript}”“{ui:notebookGrammar}”栏目旁的数字是在那里被纠正的次数。打开栏目可以移动卡片、写备注、改名，或在“{ui:notebookMine}”里加栏目。下面的“{ui:notebookVocab}”按主题汇集你的表达、单词和提问，“{ui:homeTabVocab}”一行是单词本。"
+            "导师改过的句子汇总在“成长中”顶部的“{ui:notebookToday}”里。只勾选要留下的，点“{ui:notebookAddToNotes}”；打开“{ui:notebookWithScreen}”还能附上当时的画面，卡片会放进“{ui:myViewMap}”里对应的部分。",
+            "打开部分可以移动卡片、写备注、改名，或在“{ui:notebookMine}”里新增部分。笔记按主题汇总你的表达、单词和提问，“{ui:homeTabVocab}”一行是单词本。"
           ],
           "shot": "notebook-today"
         },
@@ -1289,7 +1295,8 @@
         {
           "heading": "5. Chạm để xem",
           "body": [
-            "Chạm vào một phần để xem cách nó lớn, hai tuần qua và các cách nói giúp nó lớn; “{ui:myGrowIt}” để luyện ngay."
+            "Chạm vào một phần để xem cách nó lớn, hai tuần qua và các cách nói giúp nó lớn; “{ui:myGrowIt}” để luyện ngay.",
+            "«{ui:myOpenStage}» cho xem các mục liên quan đến phần đó. Độ rộng biểu đạt mở sổ từ."
           ],
           "shot": "element"
         },
@@ -1301,18 +1308,19 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Xem dạng bản đồ",
+          "heading": "7. Xem theo giai đoạn",
           "body": [
-            "Chạm “{ui:myViewMap}” để xem các chủ đề từ mục tiêu; trong chủ đề, chạm “{ui:missionStart}”.",
-            "Nhiệm vụ giấu đáp án và để bạn tự viết. Viết xong sẽ được sửa, đúng mà không cần gợi ý thì lên mức thành thạo."
+            "«{ui:myViewMap}» xếp các giai đoạn từ 1 đến 5. Giai đoạn hiện tại được tô màu; chạm vào một số để xem trước hội thoại mục tiêu và các mục ngữ pháp của giai đoạn đó.",
+            "Cảnh bạn đưa vào sổ sẽ lấp đầy mục tương ứng (chấm và số lần). Số ở trên là số mục đã lấp, ngữ pháp đã nắm có ✓. Mở một mục và chạm «{ui:stageTry}» để luyện ngay.",
+            "Bên dưới là các chủ đề vẽ từ mục tiêu. Trong chủ đề, chạm «{ui:missionStart}» — bài tập giấu đáp án để bạn tự viết, viết đúng không cần gợi ý thì thành đã nắm."
           ],
           "shot": "mapview"
         },
         {
           "heading": "8. Ghi chú",
           "body": [
-            "“{ui:notebookToday}” ở trên cùng gom các câu gia sư đã sửa hôm nay. Đánh dấu câu muốn giữ rồi nhấn “{ui:notebookAddToNotes}”; bật “{ui:notebookWithScreen}” để kèm màn hình lúc đó.",
-            "Con số cạnh các mục “{ui:notebookScript}” và “{ui:notebookGrammar}” là số lần bạn bị sửa ở đó. Mở một mục để chuyển hoặc ghi chú thẻ, đổi tên, hay thêm mục riêng ở “{ui:notebookMine}”. Bên dưới, “{ui:notebookVocab}” gom cách nói, từ và câu hỏi theo chủ đề, còn dòng “{ui:homeTabVocab}” mở sổ từ."
+            "Những câu gia sư sửa được gom ở «{ui:notebookToday}» ở đầu Đang lớn. Chọn câu muốn giữ rồi chạm «{ui:notebookAddToNotes}»; bật «{ui:notebookWithScreen}» để kèm ảnh màn hình lúc đó. Thẻ sẽ vào đúng mục trong «{ui:myViewMap}».",
+            "Mở một mục để chuyển hoặc ghi chú thẻ, đổi tên, hoặc thêm mục của bạn ở «{ui:notebookMine}». Sổ gom biểu đạt, từ và câu hỏi của bạn theo chủ đề, dòng «{ui:homeTabVocab}» mở sổ từ."
           ],
           "shot": "notebook-today"
         },
@@ -1707,7 +1715,8 @@
         {
           "heading": "5. Touche pour voir",
           "body": [
-            "Touche une partie pour voir comment elle grandit, les deux dernières semaines et les expressions qui l'ont fait grandir ; « {ui:myGrowIt} » lance la pratique."
+            "Touche une partie pour voir comment elle grandit, les deux dernières semaines et les expressions qui l'ont fait grandir ; « {ui:myGrowIt} » lance la pratique.",
+            "« {ui:myOpenStage} » montre les sections liées à cette partie. L’étendue d’expression ouvre la liste de mots."
           ],
           "shot": "element"
         },
@@ -1719,18 +1728,19 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Voir en carte",
+          "heading": "7. Voir par étapes",
           "body": [
-            "Touche « {ui:myViewMap} » pour les thèmes tirés de ton objectif ; dans un thème, « {ui:missionStart} ».",
-            "Une tâche cache la réponse et vous la fait écrire. Elle corrige ce que vous écrivez ; réussie sans indice, l’expression passe en maîtrisée."
+            "« {ui:myViewMap} » aligne les étapes 1 à 5. L’étape actuelle est colorée ; touchez un numéro pour voir la conversation visée et les sections de grammaire de cette étape.",
+            "Les scènes ajoutées à vos notes remplissent la section correspondante (point et nombre). Le nombre du haut indique les sections remplies, la grammaire maîtrisée a un ✓. Ouvrez une section et « {ui:stageTry} » pour vous entraîner tout de suite.",
+            "En dessous, les thèmes tirés de votre objectif. Dans un thème, « {ui:missionStart} » : la tâche cache la réponse et vous la fait écrire ; juste sans indice, elle passe en maîtrisée."
           ],
           "shot": "mapview"
         },
         {
           "heading": "8. Notes",
           "body": [
-            "« {ui:notebookToday} », en haut, réunit les lignes corrigées par le tuteur aujourd'hui. Cochez celles à garder puis « {ui:notebookAddToNotes} » ; avec « {ui:notebookWithScreen} », l'écran de ce moment est joint.",
-            "Le chiffre à côté des rubriques « {ui:notebookScript} » et « {ui:notebookGrammar} » indique combien de fois vous y avez été corrigé. Ouvrez une rubrique pour déplacer ou annoter des cartes, la renommer, ou ajouter les vôtres dans « {ui:notebookMine} ». En dessous, « {ui:notebookVocab} » regroupe vos expressions, mots et questions par thème, et « {ui:homeTabVocab} » ouvre la liste de mots."
+            "Les phrases corrigées par le tuteur se regroupent dans « {ui:notebookToday} », en haut de En progrès. Cochez celles à garder puis « {ui:notebookAddToNotes} » ; activez « {ui:notebookWithScreen} » pour joindre l’écran du moment. Les cartes vont dans la bonne section de « {ui:myViewMap} ».",
+            "Ouvrez une section pour déplacer ou annoter les cartes, la renommer, ou ajouter la vôtre dans « {ui:notebookMine} ». Les notes regroupent vos expressions, mots et questions par thème, et « {ui:homeTabVocab} » ouvre la liste de mots."
           ],
           "shot": "notebook-today"
         },
@@ -2125,7 +2135,8 @@
         {
           "heading": "5. Tocca per vedere",
           "body": [
-            "Tocca una parte per vedere come cresce, le ultime due settimane e le espressioni che l'hanno fatta crescere; «{ui:myGrowIt}» avvia la pratica."
+            "Tocca una parte per vedere come cresce, le ultime due settimane e le espressioni che l'hanno fatta crescere; «{ui:myGrowIt}» avvia la pratica.",
+            "«{ui:myOpenStage}» mostra le sezioni legate a quella parte. L’ampiezza d’espressione apre il vocabolario."
           ],
           "shot": "element"
         },
@@ -2137,18 +2148,19 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Vederlo come mappa",
+          "heading": "7. Vedere per fasi",
           "body": [
-            "Tocca «{ui:myViewMap}» per i temi del tuo obiettivo; in un tema, «{ui:missionStart}».",
-            "Un compito nasconde la risposta e te la fa scrivere. Corregge ciò che scrivi e, se indovini senza suggerimenti, passa a padroneggiata."
+            "«{ui:myViewMap}» mette in fila le fasi da 1 a 5. La fase attuale è colorata; tocca un numero per vedere la conversazione obiettivo e le sezioni di grammatica di quella fase.",
+            "Le scene che metti nelle note riempiono la sezione giusta (punto e numero). Il numero in alto indica le sezioni riempite, la grammatica padroneggiata ha ✓. Apri una sezione e tocca «{ui:stageTry}» per esercitarti subito.",
+            "Sotto ci sono i temi tratti dal tuo obiettivo. In un tema, «{ui:missionStart}»: il compito nasconde la risposta e te la fa scrivere; se la azzecchi senza suggerimenti diventa padroneggiata."
           ],
           "shot": "mapview"
         },
         {
           "heading": "8. Note",
           "body": [
-            "«{ui:notebookToday}», in alto, raccoglie le frasi corrette oggi dal tutor. Spunta quelle da tenere e premi «{ui:notebookAddToNotes}»; con «{ui:notebookWithScreen}» si allega la schermata di quel momento.",
-            "Il numero accanto alle sezioni di «{ui:notebookScript}» e «{ui:notebookGrammar}» indica quante volte sei stato corretto lì. Apri una sezione per spostare o annotare le schede, rinominarla o aggiungerne di tue in «{ui:notebookMine}». Sotto, «{ui:notebookVocab}» raccoglie espressioni, parole e domande per tema, e «{ui:homeTabVocab}» apre l'elenco di parole."
+            "Le frasi corrette dal tutor si raccolgono in «{ui:notebookToday}», in cima a In crescita. Spunta quelle da tenere e tocca «{ui:notebookAddToNotes}»; attiva «{ui:notebookWithScreen}» per allegare la schermata. Le schede vanno nella sezione giusta di «{ui:myViewMap}».",
+            "Apri una sezione per spostare o annotare le schede, rinominarla o aggiungerne una tua in «{ui:notebookMine}». Le note raccolgono espressioni, parole e domande per tema, e la riga «{ui:homeTabVocab}» apre il vocabolario."
           ],
           "shot": "notebook-today"
         },
@@ -2543,7 +2555,8 @@
         {
           "heading": "5. Toque para ver",
           "body": [
-            "Toque numa parte para ver como cresce, as últimas duas semanas e as expressões que a fizeram crescer; “{ui:myGrowIt}” começa a praticar."
+            "Toque numa parte para ver como cresce, as últimas duas semanas e as expressões que a fizeram crescer; “{ui:myGrowIt}” começa a praticar.",
+            "«{ui:myOpenStage}» mostra as secções ligadas a essa parte. A amplitude de expressão abre o vocabulário."
           ],
           "shot": "element"
         },
@@ -2555,18 +2568,19 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Ver como mapa",
+          "heading": "7. Ver por etapas",
           "body": [
-            "Toque “{ui:myViewMap}” para ver os temas do seu objetivo; num tema, “{ui:missionStart}”.",
-            "A tarefa esconde a resposta e pede que você escreva. Ela corrige o que você escreve e, acertando sem dicas, a expressão vira dominada."
+            "«{ui:myViewMap}» mostra as etapas de 1 a 5. A etapa atual fica colorida; toque num número para ver a conversa-alvo e as secções de gramática dessa etapa.",
+            "As cenas que guarda nas notas preenchem a secção certa (ponto e número). O número em cima são as secções preenchidas, e a gramática dominada tem ✓. Abra uma secção e toque «{ui:stageTry}» para praticar já.",
+            "Por baixo ficam os temas do seu objetivo. Num tema, «{ui:missionStart}»: a tarefa esconde a resposta e pede que a escreva; se acertar sem dicas, passa a dominada."
           ],
           "shot": "mapview"
         },
         {
           "heading": "8. Notas",
           "body": [
-            "“{ui:notebookToday}”, no topo, reúne as frases que o tutor corrigiu hoje. Marque as que quer guardar e toque em “{ui:notebookAddToNotes}”; com “{ui:notebookWithScreen}” a tela daquele momento vai junto.",
-            "O número ao lado das seções de “{ui:notebookScript}” e “{ui:notebookGrammar}” mostra quantas vezes você foi corrigido ali. Abra uma seção para mover ou anotar cartões, renomeá-la ou criar as suas em “{ui:notebookMine}”. Abaixo, “{ui:notebookVocab}” reúne expressões, palavras e perguntas por tema, e “{ui:homeTabVocab}” abre a lista de palavras."
+            "As frases que o tutor corrigiu juntam-se em «{ui:notebookToday}», no topo de A crescer. Marque as que quer guardar e toque «{ui:notebookAddToNotes}»; ligue «{ui:notebookWithScreen}» para anexar o ecrã desse momento. Os cartões vão para a secção certa de «{ui:myViewMap}».",
+            "Abra uma secção para mover ou anotar cartões, mudar o nome ou criar a sua em «{ui:notebookMine}». As notas juntam expressões, palavras e perguntas por tema, e a linha «{ui:homeTabVocab}» abre o vocabulário."
           ],
           "shot": "notebook-today"
         },
@@ -2961,7 +2975,8 @@
         {
           "heading": "5. Нажмите, чтобы посмотреть",
           "body": [
-            "Нажмите на часть: как она растёт, последние две недели и выражения, которые помогли; «{ui:myGrowIt}» запускает практику."
+            "Нажмите на часть: как она растёт, последние две недели и выражения, которые помогли; «{ui:myGrowIt}» запускает практику.",
+            "«{ui:myOpenStage}» показывает разделы, связанные с этой частью. Широта выражения ведёт в словарь."
           ],
           "shot": "element"
         },
@@ -2973,18 +2988,19 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Посмотреть картой",
+          "heading": "7. Смотреть по этапам",
           "body": [
-            "Нажмите «{ui:myViewMap}» — темы по вашей цели; в теме нажмите «{ui:missionStart}».",
-            "Задание скрывает ответ и просит написать самому. Оно исправляет написанное, а если ответить без подсказок, выражение становится усвоенным."
+            "В «{ui:myViewMap}» этапы с 1 по 5 идут подряд. Текущий закрашен; нажмите номер, чтобы заранее увидеть целевой диалог и разделы грамматики этого этапа.",
+            "Сцены, добавленные в заметки, заполняют нужный раздел (точка и число). Число сверху — сколько разделов заполнено, у освоенной грамматики ✓. Откройте раздел и нажмите «{ui:stageTry}», чтобы сразу потренироваться.",
+            "Ниже — темы, составленные по вашей цели. В теме «{ui:missionStart}»: задание прячет ответ и просит написать его; без подсказок верно — и фраза становится освоенной."
           ],
           "shot": "mapview"
         },
         {
           "heading": "8. Заметки",
           "body": [
-            "Наверху «{ui:notebookToday}» собирает строки, которые репетитор исправил сегодня. Отметьте нужные и нажмите «{ui:notebookAddToNotes}»; с «{ui:notebookWithScreen}» прикрепится экран того момента.",
-            "Число рядом с разделами «{ui:notebookScript}» и «{ui:notebookGrammar}» — сколько раз вас там поправили. Откройте раздел, чтобы переносить карточки, писать заметки, переименовать его или добавить свой в «{ui:notebookMine}». Ниже «{ui:notebookVocab}» собирает выражения, слова и вопросы по темам, а строка «{ui:homeTabVocab}» открывает словарь."
+            "Фразы, исправленные наставником, собираются в «{ui:notebookToday}» вверху блока «Растёт». Отметьте нужные и нажмите «{ui:notebookAddToNotes}»; включите «{ui:notebookWithScreen}», чтобы приложить экран. Карточки попадают в нужный раздел «{ui:myViewMap}».",
+            "Откройте раздел, чтобы перенести карточки, добавить заметку, переименовать его или создать свой в «{ui:notebookMine}». В заметках по темам собраны ваши выражения, слова и вопросы, а строка «{ui:homeTabVocab}» открывает словарь."
           ],
           "shot": "notebook-today"
         },
@@ -3379,7 +3395,8 @@
         {
           "heading": "5. Ketuk untuk melihat",
           "body": [
-            "Ketuk satu bagian untuk melihat cara tumbuhnya, dua minggu terakhir, dan ungkapan yang menumbuhkannya; “{ui:myGrowIt}” untuk langsung berlatih."
+            "Ketuk satu bagian untuk melihat cara tumbuhnya, dua minggu terakhir, dan ungkapan yang menumbuhkannya; “{ui:myGrowIt}” untuk langsung berlatih.",
+            "«{ui:myOpenStage}» menampilkan bagian yang terkait dengan unsur itu. Keluasan ungkapan membuka daftar kata."
           ],
           "shot": "element"
         },
@@ -3391,18 +3408,19 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Lihat sebagai peta",
+          "heading": "7. Lihat per tahap",
           "body": [
-            "Ketuk “{ui:myViewMap}” untuk topik dari tujuanmu; di topik, ketuk “{ui:missionStart}”.",
-            "Tugas menyembunyikan jawaban dan memintamu menulis. Tulisanmu dikoreksi, dan jika benar tanpa petunjuk, ungkapan itu jadi dikuasai."
+            "«{ui:myViewMap}» menjajarkan tahap 1 sampai 5. Tahap sekarang diwarnai; ketuk angka untuk melihat percakapan tujuan dan bagian tata bahasa tahap itu.",
+            "Adegan yang kamu masukkan ke catatan mengisi bagian yang cocok (titik dan jumlah). Angka di atas adalah bagian yang terisi, tata bahasa yang dikuasai diberi ✓. Buka bagian lalu ketuk «{ui:stageTry}» untuk langsung berlatih.",
+            "Di bawahnya ada topik dari tujuanmu. Di topik, ketuk «{ui:missionStart}» — tugas menyembunyikan jawaban dan memintamu menulisnya; benar tanpa petunjuk berarti dikuasai."
           ],
           "shot": "mapview"
         },
         {
           "heading": "8. Catatan",
           "body": [
-            "“{ui:notebookToday}” di atas mengumpulkan kalimat yang dikoreksi tutor hari ini. Centang yang ingin disimpan lalu “{ui:notebookAddToNotes}”; nyalakan “{ui:notebookWithScreen}” untuk melampirkan layar saat itu.",
-            "Angka di samping bagian “{ui:notebookScript}” dan “{ui:notebookGrammar}” adalah berapa kali kamu dikoreksi di sana. Buka bagian untuk memindahkan atau memberi catatan pada kartu, mengganti nama, atau menambah bagian sendiri di “{ui:notebookMine}”. Di bawahnya, “{ui:notebookVocab}” mengumpulkan ungkapan, kata, dan pertanyaan per topik, dan baris “{ui:homeTabVocab}” membuka daftar kata."
+            "Kalimat yang diperbaiki tutor terkumpul di «{ui:notebookToday}» di bagian atas Sedang tumbuh. Centang yang mau disimpan lalu ketuk «{ui:notebookAddToNotes}»; nyalakan «{ui:notebookWithScreen}» untuk melampirkan layar saat itu. Kartu masuk ke bagian yang cocok di «{ui:myViewMap}».",
+            "Buka bagian untuk memindah atau memberi memo pada kartu, mengganti nama, atau menambah bagianmu di «{ui:notebookMine}». Catatan mengumpulkan ungkapan, kata, dan pertanyaanmu per topik, dan baris «{ui:homeTabVocab}» membuka daftar kata."
           ],
           "shot": "notebook-today"
         },
@@ -3797,7 +3815,8 @@
         {
           "heading": "5. اضغط لترى",
           "body": [
-            "اضغط على جزء لترى كيف ينمو وآخر أسبوعين والتعابير التي أنمته؛ «{ui:myGrowIt}» يبدأ التدريب."
+            "اضغط على جزء لترى كيف ينمو وآخر أسبوعين والتعابير التي أنمته؛ «{ui:myGrowIt}» يبدأ التدريب.",
+            "«{ui:myOpenStage}» يعرض الأقسام المرتبطة بهذا الجزء. اتساع التعبير يفتح قائمة الكلمات."
           ],
           "shot": "element"
         },
@@ -3809,18 +3828,19 @@
           "shot": "myask"
         },
         {
-          "heading": "7. اعرضه كخريطة",
+          "heading": "7. اعرضه بالمراحل",
           "body": [
-            "اضغط «{ui:myViewMap}» لترى المواضيع المرسومة من هدفك؛ وفي الموضوع اضغط «{ui:missionStart}».",
-            "المهمة تخفي الإجابة وتطلب منك كتابتها. تصحّح ما تكتبه، وإذا أصبت دون تلميح تنتقل العبارة إلى «متقنة»."
+            "تصطفّ في «{ui:myViewMap}» المراحل من 1 إلى 5. المرحلة الحالية ملوّنة، واضغط رقمًا لترى مسبقًا محادثة الهدف وأقسام القواعد في تلك المرحلة.",
+            "المشاهد التي تضيفها إلى ملاحظاتك تملأ القسم المناسب (نقطة وعدد). الرقم في الأعلى هو الأقسام الممتلئة، والقواعد التي أتقنتها عليها ✓. افتح القسم واضغط «{ui:stageTry}» لتتدرّب فورًا.",
+            "في الأسفل المواضيع المرسومة من هدفك. في الموضوع اضغط «{ui:missionStart}»: المهمة تخفي الإجابة وتطلب منك كتابتها، وإذا أصبت دون تلميح تصبح متقنة."
           ],
           "shot": "mapview"
         },
         {
           "heading": "8. الملاحظات",
           "body": [
-            "في الأعلى يجمع «{ui:notebookToday}» الجمل التي صحّحها المعلّم اليوم. ضع علامة على ما تريد الاحتفاظ به ثم «{ui:notebookAddToNotes}»، وشغّل «{ui:notebookWithScreen}» لإرفاق شاشة تلك اللحظة.",
-            "الرقم بجانب أقسام «{ui:notebookScript}» و«{ui:notebookGrammar}» هو عدد مرات تصحيحك هناك. افتح القسم لنقل البطاقات أو كتابة ملاحظة أو إعادة التسمية، أو أضف قسمك في «{ui:notebookMine}». وفي الأسفل يجمع «{ui:notebookVocab}» عباراتك وكلماتك وأسئلتك حسب الموضوع، وسطر «{ui:homeTabVocab}» يفتح قائمة الكلمات."
+            "تُجمع الجمل التي صحّحها المعلّم في «{ui:notebookToday}» أعلى «ينمو». ضع علامة على ما تريد الاحتفاظ به ثم «{ui:notebookAddToNotes}»، وشغّل «{ui:notebookWithScreen}» لإرفاق شاشة تلك اللحظة. تدخل البطاقات القسم المناسب في «{ui:myViewMap}».",
+            "افتح القسم لنقل البطاقات أو كتابة ملاحظة أو إعادة التسمية، أو أضف قسمك في «{ui:notebookMine}». تجمع الملاحظات عباراتك وكلماتك وأسئلتك حسب الموضوع، وسطر «{ui:homeTabVocab}» يفتح قائمة الكلمات."
           ],
           "shot": "notebook-today"
         },
@@ -4215,7 +4235,8 @@
         {
           "heading": "5. แตะเพื่อดู",
           "body": [
-            "แตะส่วนหนึ่งเพื่อดูวิธีเติบโต สองสัปดาห์ล่าสุด และสำนวนที่ช่วยให้เติบโต แล้วฝึกทันทีด้วย “{ui:myGrowIt}”"
+            "แตะส่วนหนึ่งเพื่อดูวิธีเติบโต สองสัปดาห์ล่าสุด และสำนวนที่ช่วยให้เติบโต แล้วฝึกทันทีด้วย “{ui:myGrowIt}”",
+            "«{ui:myOpenStage}» จะแสดงหัวข้อที่เชื่อมกับส่วนนั้น ความกว้างของสำนวนจะเปิดสมุดคำศัพท์"
           ],
           "shot": "element"
         },
@@ -4227,18 +4248,19 @@
           "shot": "myask"
         },
         {
-          "heading": "7. ดูเป็นแผนที่",
+          "heading": "7. ดูเป็นขั้น",
           "body": [
-            "แตะ “{ui:myViewMap}” เพื่อดูหัวข้อจากเป้าหมาย ในหัวข้อแตะ “{ui:missionStart}”",
-            "งานจะซ่อนคำตอบไว้ให้คุณลองเขียนเอง เขียนแล้วจะช่วยแก้ ถ้าตอบถูกโดยไม่ดูคำใบ้จะขึ้นเป็นคล่องแล้ว"
+            "«{ui:myViewMap}» เรียงขั้น 1 ถึง 5 ไว้ ขั้นปัจจุบันจะมีสี แตะตัวเลขเพื่อดูบทสนทนาเป้าหมายและหัวข้อไวยากรณ์ของขั้นนั้นล่วงหน้า",
+            "ฉากที่ใส่ลงโน้ตจะเติมหัวข้อที่ตรงกัน (จุดและจำนวนครั้ง) ตัวเลขด้านบนคือหัวข้อที่เติมแล้ว ไวยากรณ์ที่คล่องแล้วมี ✓ เปิดหัวข้อแล้วแตะ «{ui:stageTry}» เพื่อฝึกทันที",
+            "ด้านล่างคือหัวข้อที่สร้างจากเป้าหมาย ในหัวข้อแตะ «{ui:missionStart}» งานจะซ่อนคำตอบให้คุณเขียนเอง ถ้าเขียนถูกโดยไม่ใช้คำใบ้จะนับว่าคล่องแล้ว"
           ],
           "shot": "mapview"
         },
         {
           "heading": "8. โน้ต",
           "body": [
-            "“{ui:notebookToday}” ด้านบนรวมประโยคที่ติวเตอร์แก้วันนี้ ติ๊กเฉพาะที่จะเก็บแล้วกด “{ui:notebookAddToNotes}” เปิด “{ui:notebookWithScreen}” เพื่อแนบหน้าจอตอนนั้น",
-            "ตัวเลขข้างหมวด “{ui:notebookScript}” และ “{ui:notebookGrammar}” คือจำนวนครั้งที่ถูกแก้ตรงนั้น เปิดหมวดเพื่อย้ายหรือจดโน้ตการ์ด เปลี่ยนชื่อ หรือเพิ่มหมวดเองใน “{ui:notebookMine}” ด้านล่าง “{ui:notebookVocab}” รวมสำนวน คำ และคำถามตามหัวข้อ ส่วนแถว “{ui:homeTabVocab}” คือสมุดคำศัพท์"
+            "ประโยคที่ติวเตอร์แก้จะรวมอยู่ใน «{ui:notebookToday}» ด้านบนของ กำลังเติบโต เลือกเฉพาะที่อยากเก็บแล้วแตะ «{ui:notebookAddToNotes}» เปิด «{ui:notebookWithScreen}» เพื่อแนบหน้าจอตอนนั้น การ์ดจะเข้าไปอยู่ในหัวข้อที่ตรงกันใน «{ui:myViewMap}»",
+            "เปิดหัวข้อเพื่อย้ายหรือจดโน้ตการ์ด เปลี่ยนชื่อ หรือเพิ่มหัวข้อของคุณใน «{ui:notebookMine}» โน้ตรวบรวมสำนวน คำ และคำถามของคุณตามหัวข้อ และแถว «{ui:homeTabVocab}» คือสมุดคำศัพท์"
           ],
           "shot": "notebook-today"
         },
@@ -4633,7 +4655,8 @@
         {
           "heading": "5. छूकर देखें",
           "body": [
-            "किसी हिस्से को छुएँ: वह कैसे बढ़ता है, पिछले दो हफ़्ते और जिन अभिव्यक्तियों से बढ़ा; “{ui:myGrowIt}” से तुरंत अभ्यास।"
+            "किसी हिस्से को छुएँ: वह कैसे बढ़ता है, पिछले दो हफ़्ते और जिन अभिव्यक्तियों से बढ़ा; “{ui:myGrowIt}” से तुरंत अभ्यास।",
+            "«{ui:myOpenStage}» उस हिस्से से जुड़े भाग दिखाता है। अभिव्यक्ति का दायरा शब्दसूची खोलता है।"
           ],
           "shot": "element"
         },
@@ -4645,18 +4668,19 @@
           "shot": "myask"
         },
         {
-          "heading": "7. नक्शे में देखें",
+          "heading": "7. चरणों में देखें",
           "body": [
-            "“{ui:myViewMap}” दबाएँ, लक्ष्य से बने विषय दिखेंगे; विषय में “{ui:missionStart}”।",
-            "टास्क जवाब छिपाकर आपसे लिखवाता है। लिखा हुआ सुधारता है, और बिना संकेत सही करने पर भाव 'महारत' में चला जाता है।"
+            "«{ui:myViewMap}» में चरण 1 से 5 तक क्रम से हैं। अभी का चरण रंगा होता है; किसी अंक को दबाकर उस चरण की लक्ष्य बातचीत और व्याकरण के हिस्से पहले से देखें।",
+            "नोट्स में डाले दृश्य सही हिस्से को भरते हैं (बिंदु और गिनती)। ऊपर की संख्या भरे हुए हिस्से हैं, और सीखे हुए व्याकरण पर ✓ होता है। हिस्सा खोलकर «{ui:stageTry}» से तुरंत अभ्यास करें।",
+            "नीचे आपके लक्ष्य से बने विषय हैं। विषय में «{ui:missionStart}» — काम जवाब छिपाकर आपसे लिखवाता है, बिना संकेत सही लिखने पर वह सीखा हुआ बन जाता है।"
           ],
           "shot": "mapview"
         },
         {
           "heading": "8. नोट्स",
           "body": [
-            "सबसे ऊपर ‘{ui:notebookToday}’ में आज ट्यूटर के सुधारे वाक्य जमा होते हैं। जो रखने हैं उन्हें चुनें और ‘{ui:notebookAddToNotes}’; ‘{ui:notebookWithScreen}’ चालू करने पर उस पल की स्क्रीन भी जुड़ जाती है।",
-            "‘{ui:notebookScript}’ और ‘{ui:notebookGrammar}’ खंडों के पास की संख्या बताती है कि वहाँ आपको कितनी बार सुधारा गया। खंड खोलकर कार्ड ले जाएँ या नोट लिखें, नाम बदलें, या ‘{ui:notebookMine}’ में अपना खंड जोड़ें। नीचे ‘{ui:notebookVocab}’ में आपके भाव, शब्द और सवाल विषय के हिसाब से जमा होते हैं, और ‘{ui:homeTabVocab}’ पंक्ति शब्द-सूची खोलती है।"
+            "ट्यूटर की सुधारी पंक्तियाँ «बढ़ रहा है» में सबसे ऊपर «{ui:notebookToday}» में जमा होती हैं। जो रखनी हैं उन्हें चुनकर «{ui:notebookAddToNotes}» दबाएँ; «{ui:notebookWithScreen}» चालू करें तो उस पल की स्क्रीन भी जुड़ती है। कार्ड «{ui:myViewMap}» के सही हिस्से में जाते हैं।",
+            "हिस्सा खोलकर कार्ड हटाएँ या नोट लिखें, नाम बदलें, या «{ui:notebookMine}» में अपना हिस्सा जोड़ें। नोट्स में आपके वाक्यांश, शब्द और सवाल विषय के हिसाब से जमा होते हैं, और «{ui:homeTabVocab}» पंक्ति शब्दसूची खोलती है।"
           ],
           "shot": "notebook-today"
         },

@@ -39,6 +39,7 @@ import { TopicItems, ItemBar } from "@/components/studyMap/TopicItems";
 import { LearnerPanel } from "@/components/studyMap/LearnerPanel";
 import { LedgerPanel } from "@/components/studyMap/LedgerPanel";
 import { NotesPanel } from "@/components/notes/NotesPanel";
+import { NotebookSection } from "@/components/notes/NotebookSection";
 import { NextStepCard } from "@/components/NextStepCard";
 import { GrowthNetwork } from "@/components/studyMap/GrowthNetwork";
 import { StageGoal, StagePicker, useStages, type StageView } from "@/components/studyMap/StageCheck";
@@ -256,6 +257,51 @@ export function StudyMapTab({
     setAskedTopic(null);
   };
 
+  // 수준별 틀(2026-10-24, 사용자 "망·그래프 구조를 노트에 통합"): 예전 "지도" 보기의 단계 목표와 노트 뼈대를 한 틀로.
+  // 사다리에서 고른 단계의 목표 대화·할 수 있는 것(StageGoal bare) + 문법 칸(짚은 장면·숙지 ✓·해보기). 망·그래프에서는 오늘의 학습만.
+  const stageByOrder = (order: number) => stages?.find((stage) => stage.order === order) ?? null;
+  const board = (inBoard: boolean) => (
+    <NotebookSection
+      ui={ui}
+      locale={locale}
+      language={targetLanguage}
+      isPremium={isPremium}
+      frame={inBoard}
+      stageDetail={(order) => {
+        const stage = stageByOrder(order);
+        if (!stage) return null;
+        const isMapStage = mapStage?.id === stage.id;
+        return (
+          <StageGoal
+            ui={ui}
+            stage={stage}
+            bare
+            current={stagesData?.current?.stageId === stage.id ? stagesData.current : null}
+            script={isMapStage ? { targetLanguage, locale, isPremium } : undefined}
+            onNext={
+              isMapStage
+                ? () => {
+                    const next = stageByOrder(stage.order + 1);
+                    setStartStage(next?.id ?? null);
+                    setEditing(true);
+                  }
+                : undefined
+            }
+          />
+        );
+      }}
+      masteredOf={(order, index) => {
+        const stage = stageByOrder(order);
+        const id = stage?.grammar?.[index]?.constructionId;
+        return Boolean(id && stagesData?.current?.stageId === stage?.id && stagesData.current?.grammarMastered?.includes(id));
+      }}
+      onTry={(order, index) => {
+        const grammar = stageByOrder(order)?.grammar?.[index];
+        if (grammar) sendAppIntent("practice", { tab: "chat", goal: { mistake: grammar.name, phrases: [grammar.example] }, title: grammar.name });
+      }}
+    />
+  );
+
   return (
     <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
@@ -310,7 +356,7 @@ export function StudyMapTab({
             />
             {!map ? (
               <div className="mx-auto mt-6 max-w-md">
-                <GrowthNetwork ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
+                <GrowthNetwork ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} board={board} />
                 <div className="mt-3">
                   <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
                 </div>
@@ -340,25 +386,14 @@ export function StudyMapTab({
               targetLanguage={targetLanguage}
               isPremium={isPremium}
               refreshKey={map.id}
+              board={board}
               mapSlot={
                 <>
                   <div className="px-1">
                     <p className="text-[11px] font-semibold tracking-wide text-slate-400">{ui.profileGoalTitle}</p>
                     <p className="mt-0.5 truncate text-[14px] font-medium text-slate-100">{map.title}</p>
                   </div>
-                  {mapStage ? (
-                    <StageGoal
-                      ui={ui}
-                      stage={mapStage}
-                      current={stagesData?.current?.stageId === mapStage.id ? stagesData.current : null}
-                      script={{ targetLanguage, locale, isPremium }}
-                      onNext={() => {
-                        const next = stages?.find((stage) => stage.order === mapStage.order + 1);
-                        setStartStage(next?.id ?? null);
-                        setEditing(true);
-                      }}
-                    />
-                  ) : null}
+
                   <div className="mt-3">
                     <LearnerPanel
                       ui={ui}

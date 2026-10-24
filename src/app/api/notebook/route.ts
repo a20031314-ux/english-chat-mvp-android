@@ -29,7 +29,7 @@ export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
 }
 
-type NodeView = { id: string; chapter: SkeletonNode["chapter"]; stage?: number; name: string; example?: string; note?: string; ahead?: boolean };
+type NodeView = { id: string; chapter: SkeletonNode["chapter"]; stage?: number; index?: number; name: string; example?: string; note?: string; ahead?: boolean };
 
 export async function GET(request: NextRequest) {
   const userId = requestUserId(request);
@@ -59,6 +59,8 @@ export async function GET(request: NextRequest) {
         id: node.id,
         chapter: node.chapter,
         stage: node.stage,
+        // 단계 자료(curriculum/stages)의 몇 번째 문법인지 — My "단계" 보기가 숙지(✓)·해보기를 이 칸에 붙인다.
+        index: node.index,
         name: view?.name || english(node.name),
         ...(node.example ? { example: node.example } : {}),
         ...(node.ahead ? { ahead: true } : {}),

@@ -95,9 +95,10 @@ const VIEW_KEY = "myViewMode";
 function readViewMode(): MyViewMode {
   try {
     const saved = localStorage.getItem(VIEW_KEY);
-    return saved === "graph" || saved === "map" ? saved : "net";
+    // 2026-10-24: "단계"(예전 지도 + 노트 틀)가 처음 보기. 고른 적 있으면 그대로.
+    return saved === "graph" || saved === "net" ? saved : "map";
   } catch {
-    return "net";
+    return "map";
   }
 }
 
@@ -108,6 +109,7 @@ export function GrowthNetwork({
   isPremium,
   refreshKey,
   mapSlot,
+  board,
 }: {
   ui: UICopy;
   /** The interface language, which answers to questions are written in. */
@@ -117,6 +119,11 @@ export function GrowthNetwork({
   refreshKey?: string | null;
   /** The goal's topics, shown when the learner looks at their record as a map; none before a map is drawn. */
   mapSlot?: ReactNode;
+  /**
+   * 수준별 틀(노트 뼈대, 2026-10-24 사용자 "망·그래프 구조를 노트에 통합"): "단계" 보기에서는 단계 사다리·칸 전체를,
+   * 망·그래프에서는 오늘의 학습 버튼만(인자 false) 그린다. mapSlot(목표 주제)은 틀 아래.
+   */
+  board?: (inBoard: boolean) => ReactNode;
 }) {
   const [view, setView] = useState<GrowthView | null>(null);
   const [mode, setModeState] = useState<MyViewMode>(readViewMode);
@@ -178,10 +185,14 @@ export function GrowthNetwork({
         </div>
       </div>
       {mode !== "map" && total === 0 ? <p className="mt-1 px-1 text-[11px] text-slate-500">{ui.myStart}</p> : null}
+      {mode !== "map" && board ? <div className="px-1">{board(false)}</div> : null}
       {mode === "graph" ? (
         <GrowthGraph ui={ui} view={view} onOpen={setOpen} />
       ) : mode === "map" ? (
-        <div className="mt-2">{mapSlot ?? <p className="px-1 py-6 text-center text-[12px] text-slate-400">{ui.myViewMapEmpty}</p>}</div>
+        <div className="mt-2">
+          {board ? <div className="px-1">{board(true)}</div> : null}
+          {mapSlot ? <div className={board ? "mt-4" : ""}>{mapSlot}</div> : board ? null : <p className="px-1 py-6 text-center text-[12px] text-slate-400">{ui.myViewMapEmpty}</p>}
+        </div>
       ) : (
       <svg viewBox={`0 0 ${W} ${H}`} className="mt-1 w-full" role="group" aria-label={ui.myNetworkTitle}>
         {view.elements.map((e) => (
@@ -269,6 +280,16 @@ export function GrowthNetwork({
           isNext={view.next === opened.id}
           targetLanguage={targetLanguage}
           onClose={() => setOpen(null)}
+          onStages={
+            board
+              ? () => {
+                  // 표현 폭은 노트의 어휘·표현(단어장), 나머지는 단계 틀(문법·글자·소리 칸에 짚인 장면).
+                  if (opened.id === "words") sendAppIntent("openNotes", { section: "words" });
+                  else setMode("map");
+                  setOpen(null);
+                }
+              : undefined
+          }
         />
       ) : null}
     </section>
@@ -454,12 +475,14 @@ function ElementSheet({
   isNext,
   targetLanguage,
   onClose,
+  onStages,
 }: {
   ui: UICopy;
   element: ElementView;
   isNext: boolean;
   targetLanguage: string;
   onClose: () => void;
+  onStages?: () => void;
 }) {
   const name = elementNames(ui)[element.id];
   const fact = factLine(element, ui);
@@ -540,6 +563,15 @@ function ElementSheet({
           >
             {ui.myGrowIt}
           </button>
+          {onStages ? (
+            <button
+              type="button"
+              onClick={onStages}
+              className="mt-2 w-full rounded-xl border border-line px-4 py-2.5 text-note text-slate-200 hover:bg-white/5"
+            >
+              {element.id === "words" ? ui.homeTabVocab : ui.myOpenStage}
+            </button>
+          ) : null}
         </div>
       </div>
     </BodyLayer>

@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-24d";
+export const GUIDE_VERSION = "2026-10-24e";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -159,6 +159,7 @@ export const GUIDE_KO: Guide = {
         heading: "5. 눌러서 보기",
         body: [
           "부분을 누르면 자라는 방법·최근 2주·키운 표현이 보이고, ‘{ui:myGrowIt}’로 바로 연습해요.",
+          "‘{ui:myOpenStage}’를 누르면 그 부분과 이어진 칸을 단계에서 봐요. 표현 폭은 단어장으로 가요.",
         ],
         shot: "element",
       },
@@ -170,18 +171,19 @@ export const GUIDE_KO: Guide = {
         shot: "myask",
       },
       {
-        heading: "7. 지도로 보기",
+        heading: "7. 단계로 보기",
         body: [
-          "‘{ui:myViewMap}’을 누르면 목표로 그린 주제가 보이고, 주제에서 ‘{ui:missionStart}’로 연습해요.",
-          "할 일은 정답을 숨기고 써 보게 해요. 쓰면 고쳐 주고, 힌트 없이 맞히면 숙지로 올라가요.",
+          "‘{ui:myViewMap}’에는 단계가 1부터 5까지 이어져 있어요. 지금 단계가 칠해져 있고, 번호를 누르면 그 단계의 목표 대화와 문법 칸을 미리 봐요.",
+          "노트에 넣은 장면은 맞는 칸을 채워요(점·횟수). 위 숫자는 채운 칸, 숙지한 문법에는 ✓. 칸을 열어 ‘{ui:stageTry}’로 바로 연습해요.",
+          "아래에는 목표로 그린 주제가 있어요. 주제에서 ‘{ui:missionStart}’ — 할 일은 정답을 숨기고 써 보게 하고, 힌트 없이 맞히면 숙지로 올라가요.",
         ],
         shot: "mapview",
       },
       {
         heading: "8. 노트",
         body: [
-          "맨 위 ‘{ui:notebookToday}’에 오늘 튜터가 고친 줄이 모여요. 남길 것만 체크하고 ‘{ui:notebookAddToNotes}’, ‘{ui:notebookWithScreen}’를 켜면 그때 화면도 붙어요.",
-          "‘{ui:notebookScript}’·‘{ui:notebookGrammar}’ 칸 옆 숫자는 짚인 횟수예요. 칸을 열어 카드를 옮기거나 메모하고, 이름을 바꾸거나 ‘{ui:notebookMine}’에 칸을 더해요. 아래 ‘{ui:notebookVocab}’에는 내 표현·단어·물은 것이 주제별로 모이고, ‘{ui:homeTabVocab}’ 줄은 단어장이에요.",
+          "튜터가 고친 줄은 자라는 중 맨 위 ‘{ui:notebookToday}’에 모여요. 남길 것만 체크하고 ‘{ui:notebookAddToNotes}’, ‘{ui:notebookWithScreen}’를 켜면 그때 화면도 붙고, 카드는 ‘{ui:myViewMap}’의 맞는 칸에 들어가요.",
+          "칸을 열어 카드를 옮기거나 메모하고, 이름을 바꾸거나 ‘{ui:notebookMine}’에 칸을 더해요. 노트에는 내 표현·단어·물은 것이 주제별로 모이고, ‘{ui:homeTabVocab}’ 줄은 단어장이에요.",
         ],
         shot: "notebook-today",
       },
@@ -578,6 +580,7 @@ export const GUIDE_EN: Guide = {
         heading: "5. Tap to look closer",
         body: [
           "Tap a part for how it grows, the last two weeks and the phrases that grew it; ‘{ui:myGrowIt}’ starts practising.",
+          "‘{ui:myOpenStage}’ shows the sections linked to that part. Range of expression goes to the word list.",
         ],
         shot: "element",
       },
@@ -589,18 +592,19 @@ export const GUIDE_EN: Guide = {
         shot: "myask",
       },
       {
-        heading: "7. See it as a map",
+        heading: "7. See it in stages",
         body: [
-          "Tap ‘{ui:myViewMap}’ for the topics drawn from your goal; in a topic, ‘{ui:missionStart}’.",
-          "A task hides the answer and has you write it. It corrects what you write, and getting it right without hints moves it to mastered.",
+          "‘{ui:myViewMap}’ lines up stages 1 to 5. Your current stage is filled in; tap a number to preview that stage's target conversation and grammar sections.",
+          "Scenes you add to your notes fill the matching section (dot and count). The number above is how many sections are filled; grammar you've mastered gets ✓. Open a section and ‘{ui:stageTry}’ to practise it right away.",
+          "Below are the topics drawn from your goal. In a topic, ‘{ui:missionStart}’ — a task hides the answer and has you write it, and getting it right without hints moves it to mastered.",
         ],
         shot: "mapview",
       },
       {
         heading: "8. Notes",
         body: [
-          "‘{ui:notebookToday}’ at the top gathers today's lines the tutor corrected. Tick the ones to keep and ‘{ui:notebookAddToNotes}’; turn on ‘{ui:notebookWithScreen}’ to attach that moment's screen.",
-          "The number beside ‘{ui:notebookScript}’ and ‘{ui:notebookGrammar}’ sections is how often you were corrected there. Open a section to move or annotate cards, rename it, or add your own in ‘{ui:notebookMine}’. Below, ‘{ui:notebookVocab}’ gathers your phrases, words and questions by topic, and ‘{ui:homeTabVocab}’ opens the word list.",
+          "Lines the tutor corrected gather in ‘{ui:notebookToday}’ at the top of Growing. Tick the ones to keep and ‘{ui:notebookAddToNotes}’; turn on ‘{ui:notebookWithScreen}’ to attach that moment's screen. Cards go into the matching section of ‘{ui:myViewMap}’.",
+          "Open a section to move or annotate cards, rename it, or add your own in ‘{ui:notebookMine}’. Notes gather your phrases, words and questions by topic, and ‘{ui:homeTabVocab}’ opens the word list.",
         ],
         shot: "notebook-today",
       },

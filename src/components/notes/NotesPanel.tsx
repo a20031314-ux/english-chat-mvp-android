@@ -3,7 +3,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { BodyLayer, FullScreenLayer } from "@/components/FullScreenLayer";
 import { VocabularyPanel } from "@/components/VocabularyPanel";
-import { NotebookSection } from "./NotebookSection";
 import { WordLedgerLine } from "@/components/LedgerLinks";
 import { apiUrl } from "@/lib/apiBase";
 import { onAppIntent, sendAppIntent, takeAppIntent } from "@/lib/appIntents";
@@ -35,7 +34,7 @@ import { loadVocabulary } from "@/lib/vocabulary";
  * 받아 기기에 기억한다. 단어장 탭은 여기로 들어왔다(전체 기능은 "단어장" 줄에서 그대로).
  *
  * 보는 방식: 목차(장 → 주제) / 모두(한 줄씩, 최근 순). 고른 것은 기기에 기억.
- * 목차 위에는 학습 언어별 뼈대(글자·소리·문법)와 내가 만든 칸, 튜터가 짚은 장면 카드(NotebookSection, 2026-10-23).
+ * 학습 언어별 뼈대(글자·소리·문법)·짚은 장면 카드(NotebookSection)는 2026-10-24부터 My "자라는 중"의 "단계" 보기로 옮겼다(수준별 틀).
  */
 
 type ViewMode = "outline" | "all";
@@ -271,13 +270,9 @@ export function NotesPanel({
           onOpenLoose={() => setLooseOpen(true)}
         />
       ) : view === "all" ? (
-        <>
-        <NotebookSection ui={ui} locale={locale} language={targetLanguage} isPremium={isPremium} />
         <AllList ui={ui} locale={locale} language={targetLanguage} book={book} />
-        </>
       ) : (
         <>
-        <NotebookSection ui={ui} locale={locale} language={targetLanguage} isPremium={isPremium} />
         <ul className="mt-1 divide-y divide-white/5">
           {NOTE_OUTLINE.map((chapter, index) => {
             const count = chapter.topics.reduce((sum, topic) => sum + topicCount(book.byTopic[topic.id]!), 0);

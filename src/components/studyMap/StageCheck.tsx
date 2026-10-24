@@ -148,17 +148,20 @@ export function StageGoal({
   current,
   onNext,
   script,
+  bare = false,
 }: {
   ui: UICopy;
   stage: StageView;
   current: StageCurrent | null;
   onNext?: () => void;
   script?: { targetLanguage: string; locale: string; isPremium: boolean };
+  /** My "단계" 보기 안(NotebookSection 틀): 제목·문법 목록은 틀이 그리니 목표 대화·할 수 있는 것·진행만. */
+  bare?: boolean;
 }) {
   const [open, setOpen] = useState(false);
   const share = current ? Math.max(0, Math.min(1, current.share)) : 0;
   return (
-    <section className="mt-3 flex flex-col gap-2 rounded-2xl border border-line px-3 py-3">
+    <section className={bare ? "mt-2 flex flex-col gap-2" : "mt-3 flex flex-col gap-2 rounded-2xl border border-line px-3 py-3"}>
       <div className="flex items-center justify-between gap-2">
         <h3 className="text-caption font-semibold text-slate-400">{ui.stageGoalTitle}</h3>
         {current ? (
@@ -167,7 +170,7 @@ export function StageGoal({
           </span>
         ) : null}
       </div>
-      <p className="text-note text-slate-200">{stage.title}</p>
+      {bare ? null : <p className="text-note text-slate-200">{stage.title}</p>}
       {current ? (
         <div className="h-1.5 w-full overflow-hidden rounded-full bg-white/10" aria-hidden>
           <div className="h-full rounded-full bg-white/60" style={{ width: `${Math.round(share * 100)}%` }} />
@@ -186,7 +189,7 @@ export function StageGoal({
           ))}
         </ul>
       ) : null}
-      {stage.grammar?.length ? (
+      {stage.grammar?.length && !bare ? (
         <div className="flex flex-col gap-1.5">
           <h4 className="text-caption font-semibold text-slate-400">{ui.stageGrammarTitle}</h4>
           <ul className="flex flex-col gap-1.5">

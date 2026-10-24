@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState, type ReactNode } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
@@ -17,7 +17,7 @@ import { sceneShotFor } from "@/lib/notes/sceneShots";
  * 지난 날 후보는 "지난 학습"(7일).
  */
 
-type NodeView = { id: string; chapter: NotebookChapter; stage?: number; name: string; example?: string; note?: string; ahead?: boolean };
+type NodeView = { id: string; chapter: NotebookChapter; stage?: number; index?: number; name: string; example?: string; note?: string; ahead?: boolean };
 type Book = {
   stage: number;
   nodes: NodeView[];
@@ -53,11 +53,23 @@ export function NotebookSection({
   locale,
   language,
   isPremium,
+  frame = true,
+  stageDetail,
+  masteredOf,
+  onTry,
 }: {
   ui: UICopy;
   locale: string;
   language: string;
   isPremium: boolean;
+  /** false면 "오늘의 학습" 버튼과 시트만(My 망·그래프 보기 위). 틀(단계 사다리·칸)은 "단계" 보기에서. */
+  frame?: boolean;
+  /** 고른 단계의 목표 대화·할 수 있는 것(My가 StageGoal로 그림) — 사다리 아래, 문법 칸 위. */
+  stageDetail?: (order: number) => ReactNode;
+  /** 단계 자료의 그 문법을 숙지했는지(✓). */
+  masteredOf?: (stage: number, index: number) => boolean;
+  /** 그 문법으로 바로 연습(채팅). */
+  onTry?: (stage: number, index: number) => void;
 }) {
   const [book, setBook] = useState<Book | null>(null);
   const [group, setGroup] = useState<Group | null>(null);
@@ -174,7 +186,7 @@ export function NotebookSection({
           ) : null}
         </div>
       ) : null}
-      {book.stages.length ? (
+      {frame && book.stages.length ? (
         <StageFrame
           ui={ui}
           stages={book.stages}
@@ -183,8 +195,11 @@ export function NotebookSection({
           counts={counts}
           nameOf={nameOf}
           onOpen={setNodeOpen}
+          detail={stageDetail}
+          masteredOf={masteredOf}
         />
       ) : null}
+      {frame ? (
       <ul className="mt-2 divide-y divide-white/5">
         {rows
           .filter((row) => row.show)
@@ -198,7 +213,7 @@ export function NotebookSection({
             </li>
           ))}
       </ul>
-      <p className="mt-3 text-meta font-semibold tracking-wide text-slate-500">{ui.notebookVocab}</p>
+      ) : null}
 
       {group ? (
         <Sheet ui={ui} title={rows.find((row) => row.key === group)?.label ?? ""} onClose={() => setGroup(null)}>
@@ -251,6 +266,14 @@ export function NotebookSection({
             onMove={setMoving}
             onShot={setViewShot}
             edit={edit}
+            onTry={
+              onTry && openNode.view?.chapter === "grammar" && openNode.view.stage !== undefined && openNode.view.index !== undefined
+                ? () => {
+                    onTry(openNode.view!.stage!, openNode.view!.index!);
+                    setNodeOpen(null);
+                  }
+                : undefined
+            }
           />
         </Sheet>
       ) : null}
@@ -294,6 +317,8 @@ function StageFrame({
   counts,
   nameOf,
   onOpen,
+  detail,
+  masteredOf,
 }: {
   ui: UICopy;
   stages: { order: number; title: string }[];
@@ -302,6 +327,8 @@ function StageFrame({
   counts: Record<string, number>;
   nameOf: (id: string) => string;
   onOpen: (id: string) => void;
+  detail?: (order: number) => ReactNode;
+  masteredOf?: (stage: number, index: number) => boolean;
 }) {
   const now = Math.max(1, Math.min(current, stages.length));
   const [shown, setShown] = useState(now);
@@ -355,6 +382,7 @@ function StageFrame({
       <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
         <div className="h-full rounded-full bg-status-learned" style={{ width: `${list.length ? Math.round((filled / list.length) * 100) : 0}%` }} />
       </div>
+      {detail?.(shown)}
       <ul className="mt-1 divide-y divide-white/5">
         {list.map((node) => {
           const count = counts[node.id] ?? 0;
@@ -373,6 +401,7 @@ function StageFrame({
                     </span>
                   ) : null}
                 </span>
+                {masteredOf?.(node.stage ?? 1, node.index ?? -1) ? <span className="shrink-0 text-caption text-good">✓</span> : null}
                 <span className="w-7 shrink-0 text-end text-caption tabular-nums text-slate-400">{count || ""}</span>
               </button>
             </li>
@@ -508,11 +537,13 @@ function NodeBody({
   onMove,
   onShot,
   edit,
+  onTry,
 }: {
   ui: UICopy;
   locale: string;
   id: string;
   name: string;
+  onTry?: () => void;
   view?: NodeView;
   memo: string;
   cards: FixCard[];
@@ -532,6 +563,11 @@ function NodeBody({
         </p>
       ) : null}
       {view?.note ? <p className="mt-1 text-caption text-slate-400">{view.note}</p> : null}
+      {onTry ? (
+        <button type="button" onClick={onTry} className="tb-btn mt-2 rounded-lg px-3 py-1.5 text-caption font-semibold">
+          {ui.stageTry}
+        </button>
+      ) : null}
 
       <div className="mt-2 flex flex-wrap gap-1.5">
         <button
