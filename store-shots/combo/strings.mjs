@@ -27,6 +27,8 @@ export const OVERRIDES = {
   "ko-es": { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
   "en-ko": { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
   "ja-ko": { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
+  "en-zh": { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
+  "en-ja": { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
 };
 
 export const LISTINGS = [
@@ -49,6 +51,9 @@ export const LISTINGS = [
   { folder: "k3_ko-learn-es", locale: "ko-es", lang: "ko", font: "'Noto Sans CJK KR', sans-serif" },
   { folder: "k4_en-learn-ko", locale: "en-ko", lang: "en", font: "'Noto Sans', 'Noto Sans CJK KR', sans-serif" },
   { folder: "k5_ja-learn-ko", locale: "ja-ko", lang: "ja", font: "'Noto Sans CJK JP', sans-serif" },
+  // 틱톡 영어 계정용(2026-10-26, 사용자 "배우는 언어는 다양하게"): 영어 앱으로 일본어·중국어 배우기. 스토어에는 올리지 않는다.
+  { folder: "t1_en-learn-ja", locale: "en-ja", lang: "en", font: "'Noto Sans', 'Noto Sans CJK JP', sans-serif" },
+  { folder: "t2_en-learn-zh", locale: "en-zh", lang: "en", font: "'Noto Sans', 'Noto Sans CJK SC', sans-serif" },
 ];
 
 /** 장마다 [작은 제목, 큰 제목, 설명, [화면 이름: 큰 화면, 세부1, 세부2], [더 있는 기능 칩 셋]]. */
@@ -200,6 +205,17 @@ COPY["en-ko"] = withChanges(COPY.en, {
   map: (v) => { v[0] = "KOREAN · START FROM A CONVERSATION"; return v; },
   chat: (v) => { v[1] = "Stuck? Write in English.\nSee it in Korean."; return v; },
   room: (v) => { v[1] = "Talk out loud with\nKorean learners"; return v; },
+});
+COPY["en-ja"] = withChanges(COPY.en, {
+  map: (v) => { v[0] = "JAPANESE · START FROM A CONVERSATION"; return v; },
+  chat: (v) => { v[1] = "Stuck? Write in English.\nSee it in Japanese."; return v; },
+  room: (v) => { v[1] = "Talk out loud with\nJapanese learners"; return v; },
+});
+COPY["en-zh"] = withChanges(COPY.en, {
+  map: (v) => { v[0] = "CHINESE · START FROM A CONVERSATION"; return v; },
+  chat: (v) => { v[1] = "Stuck? Write in English.\nSee it in Chinese."; return v; },
+  call: (v) => { v[3] = ["What you meant", "Say your own line", "Say it again"]; v[4] = ["Help when stuck", "Show or hide translations", "Pause and pick up later"]; return v; },
+  room: (v) => { v[1] = "Talk out loud with\nChinese learners"; return v; },
 });
 COPY["ja-ko"] = withChanges(COPY.ja, {
   map: (v) => { v[0] = "韓国語 · 会話から始める"; return v; },
