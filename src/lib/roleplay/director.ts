@@ -270,6 +270,28 @@ export function inTargetLanguage(
   return evidence.learning > evidence.ui;
 }
 
+/**
+ * Whether a note quotes the character's own line rather than the learner's words:
+ * a run of three words or more that is in what the character says and not in
+ * what they said. Words are compared lowercased, letters and digits only, so the
+ * check works for any script that separates words with spaces; for the ones that
+ * do not (ja/zh/th) a run of eight characters stands in for three words.
+ */
+export function quotesOwnLine(note: string, spoken: readonly string[], heard: string): boolean {
+  const words = (value: string) => value.toLowerCase().match(/[\p{L}\p{M}\p{N}']+/gu) ?? [];
+  const runs = (value: string): Set<string> => {
+    const list = words(value);
+    const out = new Set<string>();
+    for (let i = 0; i + 3 <= list.length; i++) out.add(list.slice(i, i + 3).join(" "));
+    // Scripts without spaces: one "word" can be a whole clause, so use character runs.
+    for (const word of list) if (word.length >= 8) for (let i = 0; i + 8 <= word.length; i++) out.add(word.slice(i, i + 8));
+    return out;
+  };
+  const theirs = runs(heard);
+  const inNote = runs(note);
+  return spoken.some((line) => [...runs(line)].some((run) => inNote.has(run) && !theirs.has(run)));
+}
+
 export function givesThemWords(
   note: string,
   request: Pick<DirectorRequest, "targetLanguage" | "nativeLanguage">,
@@ -555,7 +577,7 @@ How to answer them:
 - If they answered, just not in the words you expected, take it and move on.
 - If they are stuck — silence, the wrong words — help the way a real ${role} would: ask again more simply, or say the choices out loud. Put the phrase they could use in "note", in ${target}, explained in ${native}.
 - A sentence that stops on a word like "and", "but", "because" or "the" was cut off while they were still thinking, not abandoned. Do not finish it for them. Answer what they did say and leave them room to go on ("And…?", "Go on"). That is on_track, not stuck.
-- "note" is never a translation of your own line. It is about their words: what they could say.
+- "note" is never a translation or an explanation of your own line, or of the question you ask next. It is about their words: what they could say.
 - If they asked or said something else, answer it briefly, like a person would.
 - One or two short sentences. Teaching never goes in what you say out loud; it is written, not spoken, and there are two places for it that do not overlap. "note" is for a moment they could not get through: the words they needed, so they can go on. "better" is their sentence, put right. Use whichever fits; both are read, and both are shown under the words they are about — never said aloud.
 - "better" is their own last sentence written the way someone who grew up with ${target} would say it. It is shown under their words, not said aloud, and you never refer to it.
@@ -895,7 +917,13 @@ export function parseDirection(
     typeof record.note === "string"
       ? record.note.trim().replace(/^note\s*:\s*/i, "").slice(0, 300)
       : "";
-  const note = givesThemWords(written, request) ? written : "";
+  // A note that quotes the character's own line is about that line, not about
+  // their words — seen in a call (2026-10-25): "I am lying on the bed." came
+  // back with a note explaining "Are you watching something?", the question the
+  // character was about to ask, shown under the learner's sentence.
+  const spoken = [text, bank[openId]?.text ?? "", bank[followId]?.text ?? "", bank[id]?.text ?? ""].filter(Boolean);
+  // When they were stuck the note may well repeat the character's choices ("Card, or cash?") — that is the help.
+  const note = givesThemWords(written, request) && (assessment === "stuck" || !quotesOwnLine(written, spoken, request.heard)) ? written : "";
 
   // Learner steps in the order the scene walks them.
   const order = scriptSteps(scenario).map((step) => step.id);

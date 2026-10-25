@@ -1177,3 +1177,30 @@ test("a rewrite of another line is not shown under this one", async () => {
   // Spanish, a Latin script other than English.
   assert.equal(rewritesThis("Ayer fui a la playa con mis amigos.", "Ayer voy a la playa con mis amigos."), true);
 });
+
+test("a note that explains the character's own next line is not shown under theirs", () => {
+  // Seen in a call (2026-10-25): their line got a note about the question the character was about to ask.
+  const direction = parse(
+    {
+      assessment: "on_track",
+      say: { text: "Sounds relaxing! Are you watching or reading something from bed?", translation: "" },
+      note: '누워 있으면서 보는 것에 대해 말할 때 사용하는 표현이에요. 예: "Are you watching something?" 또는 "Are you reading something?"',
+      next: "free",
+    },
+    { heard: "I am lying on the bed." },
+  );
+  assert.equal(direction?.note, "");
+  // A note about their own words, quoting them, stays.
+  const theirs = parse(
+    { assessment: "on_track", say: { text: "Nice one.", translation: "" }, note: '"lying on the bed"보다 "lying in bed"가 자연스러워요.', next: "free" },
+    { heard: "I am lying on the bed." },
+  );
+  assert.ok(theirs?.note);
+});
+
+test("quotesOwnLine: spaced and spaceless scripts", async () => {
+  const { quotesOwnLine } = await import("./director.ts");
+  assert.equal(quotesOwnLine('Di "¿qué estás haciendo ahora?"', ["¿Qué estás haciendo ahora?"], "Estoy en casa"), true);
+  assert.equal(quotesOwnLine('"estoy en casa" está bien', ["¿Qué haces?"], "Estoy en casa"), false);
+  assert.equal(quotesOwnLine("「今何をしていますか」と聞いています", ["今何をしていますか？"], "家にいます"), true);
+});
