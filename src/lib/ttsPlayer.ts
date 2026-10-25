@@ -90,6 +90,17 @@ function getAudioContext(): AudioContext {
   return audioCtx;
 }
 
+/**
+ * 마이크 권한을 처음 받은 직후: 그 전에 만든 소리 장치는 아이폰 오디오 세션이 바뀌면서 멈춘 채 남을 수 있어
+ * 버리고 다음 재생 때 새로 만든다.
+ */
+export function resetTtsAudio(): void {
+  stopSources();
+  if (audioCtx) void audioCtx.close().catch(() => undefined);
+  audioCtx = null;
+  unlocked = false;
+}
+
 /** 진단용: 튜터 목소리를 내는 오디오 컨텍스트 상태. */
 export function ttsContextState(): string {
   return (audioCtx?.state as string | undefined) ?? "none";

@@ -38,6 +38,7 @@ import {
   isOutOfPoints,
   listenForTurn,
   listenOnce,
+  primeMicrophone,
   reportTutorDiag,
   type Recorder,
   heardUnsure,
@@ -364,6 +365,10 @@ export function RoleplayScreen({
 
   useEffect(() => {
     if (!scenario) return;
+    let cancelled = false;
+    // 아이폰은 마이크 권한부터(처음 한 번, listen.ts primeMicrophone) — 그다음 첫마디.
+    void primeMicrophone().then(() => {
+    if (cancelled) return;
     // Carrying one on, or starting one. A resumed conversation comes back
     // where it can be spoken to: the queue and the turn in flight are the
     // middle of a moment that did not survive the screen going away.
@@ -391,6 +396,10 @@ export function RoleplayScreen({
       globalThis.crypto?.randomUUID?.() ?? `${Date.now()}-${Math.random()}`;
     folding.current = false;
     sessionRef.current += 1;
+    });
+    return () => {
+      cancelled = true;
+    };
     // The bank is derived from the scenario, so it moves with it. `resume` is
     // read once, on the way in: the caller hands back every row this saves, and
     // reacting to that would restart the conversation on its own first turn.

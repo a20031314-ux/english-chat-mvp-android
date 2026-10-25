@@ -1,4 +1,5 @@
 import type { PracticeGoal } from "@/lib/learner/practice";
+import { resetTtsAudio } from "../ttsPlayer.ts";
 import { TURN_NOT_STARTED, hearFrame, makeLevelScaler, quietVoiceWorthSending } from "./hearFrame.ts";
 import { isIosApp, turnDiagnosticsEnabled } from "@/lib/platform";
 import { apiUrl } from "@/lib/apiBase";
@@ -122,6 +123,40 @@ function preferredMimeType(): string {
     }
   }
   return "";
+}
+
+const MIC_PRIMED_KEY = "micPrimed.v1";
+
+/**
+ * 아이폰: 통화를 열기 전에 마이크 권한을 먼저 받아 둔다. 통화 도중(튜터 첫마디가 나오는 사이) 권한 창이 뜨면
+ * 오디오 세션이 바뀌면서 그 통화의 소리·마이크가 멈춰, 앱을 껐다 켜야 됐다(TestFlight 85.13, 2026-10-26 사용자).
+ * 처음 한 번만 — 받은 뒤에는 바로 돌아온다. 거절해도 통화 화면은 열린다(마이크 오류는 거기서 보여 줌).
+ */
+export async function primeMicrophone(): Promise<void> {
+  if (!isIosApp() || typeof navigator === "undefined" || !navigator.mediaDevices?.getUserMedia) return;
+  try {
+    if (globalThis.localStorage?.getItem(MIC_PRIMED_KEY) === "1") return;
+  } catch {
+    // 저장소가 막혀 있으면 매번 묻는 쪽으로
+  }
+  try {
+    const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+    for (const track of stream.getTracks()) track.stop();
+    try {
+      globalThis.localStorage?.setItem(MIC_PRIMED_KEY, "1");
+    } catch {
+      // 다음에 한 번 더 물을 뿐
+    }
+    resetTtsAudio();
+    if (analysisCtx) {
+      void analysisCtx.close().catch(() => undefined);
+      analysisCtx = null;
+    }
+    // 권한 창이 닫히며 바뀐 오디오 세션이 자리 잡을 때까지.
+    await new Promise((resolve) => window.setTimeout(resolve, 600));
+  } catch {
+    // 거절·실패: 통화 화면이 마이크 오류를 보여 준다.
+  }
 }
 
 async function toBase64(blob: Blob): Promise<string> {

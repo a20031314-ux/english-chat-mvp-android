@@ -34,7 +34,8 @@ export function socialFeaturesEnabled(): boolean {
  * 막히는 일이 기기에서만 나서(재현 못 함, hub/drafts/ios-launch.md) 고칠 때까지 통화 탭·📞·"말로"를 숨긴다.
  */
 export function voiceCallAvailable(): boolean {
-  return !isIosApp();
+  // 진단 빌드(TestFlight diag)에서는 켠다 — 아이폰 통화를 고치며 확인하는 빌드.
+  return !isIosApp() || turnDiagnosticsEnabled();
 }
 
 /**
