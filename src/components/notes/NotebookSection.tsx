@@ -608,13 +608,13 @@ function StageFrame({
           );
         })}
       </ol>
-      {/* 단계 = 말하는 힘의 크기(상황 이름이 아님, 2026-10-25). 제목은 "2단계", 할 수 있게 되는 것 한 줄은 작게. */}
+      {/* 단계 = 말하는 힘의 크기(상황 이름이 아님, 2026-10-25). 제목은 단계 번호(stageNumber), 할 수 있게 되는 것 한 줄은 작게. */}
       <p className={`mt-3 text-note font-semibold ${shown > now ? "text-slate-400" : "text-ink"}`}>{ui.stageNumber.replace("{n}", String(shown))}</p>
       {title ? <p className="truncate text-caption text-slate-500">{title}</p> : null}
 
       {stageParts ? (
         <>
-          {/* 다음 단계 조건: 지금 단계에서만. 다 찼으면 "다음 단계로", 아니면 가장 모자란 갈래 + 연습. */}
+          {/* 다음 단계 조건: 지금 단계에서만. 다 찼으면 partReady 버튼, 아니면 가장 모자란 갈래 + 연습. */}
           {shown === now ? (
             readyOf(shown) && onNextStage && shown < stages.length ? (
               <button

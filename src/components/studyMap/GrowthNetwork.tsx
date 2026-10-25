@@ -204,7 +204,7 @@ export function GrowthNetwork({
       ) : mode === "map" ? (
         <div className="mt-2">
           {board ? <div className="px-1">{board(true)}</div> : null}
-          {/* 예전 목표 지도(상황·미션)는 틀과 섞이지 않게 접어 둔다(2026-10-25 사용자 "예전 탭 구조랑 같이 집어넣으니 난잡"). */}
+          {/* 예전 목표 지도(상황·미션)는 틀과 섞이지 않게 접어 둔다(2026-10-25 사용자: 예전 구조와 섞이면 난잡하다). */}
           {mapSlot ? (
             board ? (
               <>
