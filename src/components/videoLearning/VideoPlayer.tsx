@@ -1,5 +1,6 @@
 "use client";
 
+import { videoMuteAllowed } from "@/lib/platform";
 import {
   forwardRef,
   useCallback,
@@ -174,7 +175,8 @@ export const VideoPlayer = forwardRef<
    * runs 20 times a second, and calling mute/unMute on every one of them made
    * the audio stutter on and off around the clip's start.
    */
-  const applyMute = useCallback((shouldMute: boolean) => {
+  const applyMute = useCallback((requested: boolean) => {
+    const shouldMute = requested && videoMuteAllowed();
     if (mutedRef.current === shouldMute) return;
     mutedRef.current = shouldMute;
     try {

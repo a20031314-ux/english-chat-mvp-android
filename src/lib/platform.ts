@@ -38,6 +38,15 @@ export function voiceCallAvailable(): boolean {
 }
 
 /**
+ * 영상 플레이어를 잠깐 음소거해도 되는지(문장 다시 듣기의 앞부분을 소리 없이 넘길 때).
+ * iOS 웹뷰는 사용자가 누르지 않은 때(타이머)에 보낸 unMute를 무시해서, 문장을 한 번 눌러 들은 뒤부터
+ * 영상이 끝까지 소리 없이 재생됐다(2026-10-25 사용자: "특정 부분부터 화면은 나오는데 소리가 안 나"). iOS는 음소거하지 않는다.
+ */
+export function videoMuteAllowed(): boolean {
+  return !isIosApp();
+}
+
+/**
  * Google 로그인. iOS에서 Google을 띄우면 애플이 "Apple로 로그인"도 같이 요구한다
  * (심사 지침 4.8). iOS 1차는 아이디·비밀번호와 이메일 코드만 둔다.
  */
