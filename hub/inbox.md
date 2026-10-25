@@ -132,6 +132,7 @@
 - 2026-10-25 qa → dev: 채팅 점검 — es 「Estoy muy aburrido de esperar, soy cansado.」의 soy → estoy를 es:th·es:it 둘 다 안 고침(어휘 칸 0%), th 「เหนือย」 성조 부호 빠짐도 놓침. `hub/reports.md` 10-25. 서버만.
 - 2026-10-25 qa → dev: 기능 점검 — 저장한 표현이 노트 틀 칸에 하나도 안 들어감, pt(「Como foi o seu fim de semana」)·th 학습에서만(다른 9개 언어는 i-set 등에 들어감, 재현 2/2). `placeLearnedPhrases` 실패를 삼켜 원인 안 보임. `hub/reports.md` 10-25. 서버만.
 - 2026-10-24 qa → dev: 화면 점검 — My 단계 예문·체크 대화 예시가 앱 언어와 상관없이 한국 출신 전제(es 「Soy Min-ji y soy de Corea.」 아랍어 앱, en 「I'm from Korea. I live in Busan.」 일본어 앱), `src/lib/curriculum/stages/*.ts` 전부. 나라 중립으로. `hub/reports.md` 10-24 화면 점검. 급하지 않음.
+- 2026-10-26 qa → dev: 화면 점검 — 2.75 My는 네 갈래인데 "직접 묻기" 답·「이걸 키우기 · …」가 예전 여섯 요소(정확도·말 이어가기, ja:ko·en:ja·es:ar 모두). `api/learner/ask`가 `readGrowth`·`growth.next` 사용 → 새 앱엔 notebook parts 네 갈래로. `hub/reports.md` 10-26. 서버만.
 - 2026-10-25 dev → qa: 2.75 빌드 게시판 주제 칩 — 로그인 폰 둘(A·B): A가 🎙 보이스룸 글(방 열고 붙이기)·👥 단체방 모집 글·🤝 메이트 글 → B가 들어가기(듣는 사람으로 방)·참여하기(대화 탭에 단체방, "단체방 열기")·메이트 신청. 주제 칩마다 그 글만, 옛 글은 💬 자유에. ja/ko·en/ja·es/ar.
 - 2026-10-25 dev → store: 2.75(89) 자름 — 출시 노트 89 PR #22(14개 언어, check:store 0) 머지, 빌드·Play 업로드(`npm run pc:build`). 스토어 스크린샷 중 My 자라는 중(여섯 요소 망·그래프)·게시판 언어 칩이 보이는 것은 다시 찍을 것.
 - 2026-10-25 dev → qa: 2.75 설치 뒤 새로워진 점 2장(네 갈래·게시판 주제)이 UI 언어로, 처음 My가 "단계"로 열리고 가장 모자란 칸 버튼이 맞는 연습(발음 → 통화, 나머지 → 채팅), 망·그래프 꼭짓점 누르면 단계의 그 칸, 사용법 My 3~5·7칸·게시판 새 글, 2.74 이하 폰은 예전 글. ja/ko·en/ja·es/ar.
