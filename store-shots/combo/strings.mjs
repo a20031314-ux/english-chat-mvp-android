@@ -8,14 +8,15 @@
  * 카드는 화면 높이의 약 56%를 보여준다.
  */
 export const SHOTS = [
-  { id: "map", main: "stage-start", details: [["mapview", 0.1], ["mission", 0.08]] },
+  // 2026-10-25 사용자: 로그인·아이콘·프로필 세부 같은 자잘한 건 빼고 핵심 기능 위주로.
+  { id: "map", main: "mapview", details: [["stage-start", 0.36], ["mission", 0.08]] },
   { id: "chat", main: "chat-expression", details: [["chat-fix-open", 0.06], ["links", 0.3]] },
   { id: "ask", main: "chat-ask", details: [["chat-word", 0.0], ["pick", 0.4]] },
   { id: "my", main: "growth", details: [["myask", 0.44], ["notebook-today", 0.45]] },
   { id: "call", main: "meant", details: [["call-pack", 0.17], ["calltools", 0.4]] },
   { id: "video", main: "video-study", details: [["video-ask", 0.0], ["vocab-search", 0.04]] },
-  { id: "room", main: "quote", details: [["room-game", 0.28], ["rooms-mini", 0.44]] },
-  { id: "people", main: "people-lang", details: [["profile-facts", 0.26], ["icons", 1.0]] },
+  { id: "room", main: "quote", details: [["room-game", 0.28], ["freetalk", 0.2]] },
+  { id: "people", main: "group-pick", details: [["people-lang", 0.18], ["layouts", 0.22]] },
 ];
 
 /** 등록정보마다 바꾸는 장면. 오늘의 팩은 영어·일본어 학습만 있어 영어 앱(스페인어 학습)은 내 문장 말해보기로. */
@@ -235,21 +236,44 @@ const NEW273 = {
   th: { stage: "ขั้น", today: "เรียนวันนี้", find: "หาในของฉัน", view: "เครือข่าย กราฟ ขั้น", game: "🎭 คนโกหก·มาเฟีย", p40: "สูงสุด 40 คน", lang: "เลือกตามภาษา", profile: "โปรไฟล์·🙌 ช่วยได้", icons: "ชุดไอคอน" },
   ar: { stage: "المراحل", today: "تعلّم اليوم", find: "ابحث في «أنا»", view: "شبكة أو رسم أو مراحل", game: "🎭 الكاذب والمافيا", p40: "حتى 40 شخصًا", lang: "تصفية حسب اللغة", profile: "الملف · 🙌 مفيد", icons: "حزم الأيقونات" },
 };
+const CHAT_VIEW = {
+  ko: "방에서 채팅으로 보기", en: "Rooms in chat view", ja: "ルームをチャット表示で", zh: "语音房聊天视图", es: "Salas en vista de chat",
+  hi: "कमरे चैट व्यू में", pt: "Salas em modo chat", fr: "Salons en vue chat", vi: "Phòng ở chế độ chat", id: "Ruang dalam tampilan chat",
+  th: "ห้องแบบแชต", ar: "الغرف بعرض الدردشة",
+};
+const MAP_CORE = {
+  ko: ["My · 단계", "1단계부터 5단계까지\n내 길이 보여요", "단계마다 문법·목표 대화·할 수 있는 것, 시작은 대화 예시로"],
+  en: ["MY · STAGES", "See your path\nfrom stage 1 to 5", "Grammar, target conversations and goals for each stage"],
+  ja: ["マイ · ステージ", "1から5まで\n自分の道が見える", "ステージごとに文法・目標の会話・できること"],
+  zh: ["我的 · 阶段", "从第 1 到第 5 阶段\n路线一目了然", "每个阶段的语法、目标对话和能做到的事"],
+  es: ["MI ESPACIO · ETAPAS", "Tu camino,\nde la etapa 1 a la 5", "Gramática, conversaciones meta y objetivos en cada etapa"],
+  hi: ["मेरा · चरण", "चरण 1 से 5 तक\nअपना रास्ता देखें", "हर चरण का व्याकरण, लक्ष्य बातचीत और आप क्या कर पाएँगे"],
+  pt: ["MEU ESPAÇO · ETAPAS", "Seu caminho,\nda etapa 1 à 5", "Gramática, conversas-alvo e metas em cada etapa"],
+  fr: ["MOI · ÉTAPES", "Votre parcours,\nde l'étape 1 à 5", "Grammaire, conversations visées et objectifs à chaque étape"],
+  vi: ["CỦA TÔI · GIAI ĐOẠN", "Lộ trình của bạn\ntừ giai đoạn 1 đến 5", "Ngữ pháp, hội thoại mục tiêu và việc làm được ở mỗi giai đoạn"],
+  id: ["SAYA · TAHAP", "Jalurmu jelas,\ndari tahap 1 sampai 5", "Tata bahasa, percakapan target, dan tujuan di tiap tahap"],
+  th: ["ของฉัน · ขั้น", "เห็นเส้นทางของคุณ\nตั้งแต่ขั้น 1 ถึง 5", "ไวยากรณ์ บทสนทนาเป้าหมาย และสิ่งที่ทำได้ในแต่ละขั้น"],
+  ar: ["أنا · المراحل", "طريقك واضح\nمن المرحلة 1 إلى 5", "القواعد والمحادثات المستهدفة وما ستقدر عليه في كل مرحلة"],
+};
 const done273 = new WeakSet(); // 검색어 세트는 앱 언어 문구 배열을 같이 쓴다 — 한 번만 바꾼다.
 for (const [key, copy] of Object.entries(COPY)) {
   const n = NEW273[key.split("-")[0]];
-  copy.map[3] = [copy.map[3][0], n.stage, copy.map[3][2]];
+  copy.map[3] = [n.stage, copy.map[3][0], copy.map[3][2]];
+  const m = MAP_CORE[key.split("-")[0]];
+  copy.map[0] = m[0]; copy.map[1] = m[1]; copy.map[2] = m[2];
   copy.my[3] = [copy.my[3][0], copy.my[3][1], n.today];
   copy.my[4] = [n.view, n.find, copy.my[4][2]];
   const room = copy.room;
   if (!done273.has(room)) {
-    room[4] = [room[3][1], room[4][0], n.p40];
-    room[3] = [room[3][0], n.game, room[3][2]];
+    room.mini = room[3][2];
+    const free = room[3][1];
+    room[4] = [room[4][0], n.p40];
+    room[3] = [room[3][0], n.game, free];
   }
   const people = copy.people;
   if (!done273.has(people)) {
-    people[4] = [people[3][1], people[3][2], people[4][2]];
-    people[3] = [n.lang, n.profile, n.icons];
+    // 단체방에서 골라 묻기 · 방을 접고 대화 · 언어로 골라 보기. 칩은 게시판·메시지·1:1 영상통화 그대로.
+    people[3] = [people[3][1], n.lang, CHAT_VIEW[key.split("-")[0]]];
   }
   done273.add(people);
   done273.add(room);
