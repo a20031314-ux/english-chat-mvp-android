@@ -1,5 +1,6 @@
 "use client";
 
+import { voiceCallAvailable } from "@/lib/platform";
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { usePremium } from "@/contexts/PremiumContext";
 import { onAppIntent, sendAppIntent, takeAppIntent } from "@/lib/appIntents";
@@ -294,6 +295,13 @@ export function StudyMapTab({
         const stage = stageByOrder(order);
         const id = stage?.grammar?.[index]?.constructionId;
         return Boolean(id && stagesData?.current?.stageId === stage?.id && stagesData.current?.grammarMastered?.includes(id));
+      }}
+      canSpeak={voiceCallAvailable() && scenariosForLanguage(targetLanguage).length > 0}
+      onNextStage={(order) => {
+        // 다음 단계 고르기(예전 "다음 단계" 흐름 그대로 — 단계 고르기·지도 다시 그리기, 사용자가 확인).
+        const next = stageByOrder(order + 1);
+        setStartStage(next?.id ?? null);
+        setEditing(true);
       }}
       onTry={(order, index) => {
         const grammar = stageByOrder(order)?.grammar?.[index];

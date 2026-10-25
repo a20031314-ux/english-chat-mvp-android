@@ -11,6 +11,11 @@ import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 import { scriptView, stageViews } from "@/lib/server/stageCopy";
 import { applyEdit, parseEdit, prunePending, skeletonFor, type SkeletonNode } from "@/lib/notes/notebook";
 import { INTERFACE_LANGUAGE_LABELS, coerceLanguageCode } from "@/lib/learningLanguages";
+import { ladderFor } from "@/lib/curriculum/stages";
+import { stageParts, vocabScore, vocabWords } from "@/lib/notes/stageParts";
+import { readGrowthRecord } from "@/lib/server/growthStore";
+import { readLearnerProfile } from "@/lib/server/learnerProfileStore";
+import { statusOf } from "@/lib/learner/profile";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -24,6 +29,8 @@ export const maxDuration = 60;
  *   칸 이름은 앱 언어(영어·한국어는 손으로 쓴 글, 다른 언어는 단계 글과 같은 옮긴 글 — server/stageCopy.ts).
  *   + pending(오늘의 학습 후보, 7일), today(사용자 시간대의 오늘), stages(단계 사다리 [{ order, title }]),
  *   phrases(습득한 표현이 든 칸 [{ key, text, state, node }] — 칸 없는 것은 이 요청 뒤 모델이 고른다).
+ *   + parts(단계마다 어휘·문법·표현·발음 [{ order, parts, ready, weakest, expressions }], notes/stageParts.ts),
+ *     words(어휘 갈래 목록), pronunciationNotes({ [단계]: 앱 언어 한 줄 }) — 2026-10-25 My 네 갈래.
  * GET ?lang=&shot=<화면 id> → { image } — 카드에 붙인 화면.
  * POST { language, edit } — 카드 옮기기·메모·지우기, 칸 더하기·이름 바꾸기·지우기·메모, 제안 칸 받기,
  *   후보 넣기(commit: ids, shots)·버리기(dismiss) → { ok, cards, custom, renames, memos, pending }
@@ -107,12 +114,30 @@ export async function GET(request: NextRequest) {
   }
   // 수준별 틀: 단계 사다리(번호·이름, 앱 언어). 화면이 지금 단계를 가운데 두고 앞뒤 단계를 넘겨 본다.
   const ladder = stages?.map((s) => ({ order: s.order, title: s.title })) ?? [];
+  // 네 갈래(어휘·문법·표현·발음)와 다음 단계 조건 — 단계마다(사다리에서 넘겨 봐도 그 단계 것).
+  const source = ladderFor(language);
+  let parts: ReturnType<typeof stageParts>[] = [];
+  if (source && stages) {
+    const constructionIds = source.stages.flatMap((s) => s.grammar.map((g) => g.constructionId)).filter((id): id is string => Boolean(id));
+    const [growth, profile] = await Promise.all([
+      readGrowthRecord(userId, language).catch(() => null),
+      constructionIds.length ? readLearnerProfile(userId, language).catch(() => null) : Promise.resolve(null),
+    ]);
+    const mastered = new Set(profile ? constructionIds.filter((id) => statusOf(profile.entries[id]) === "mastered") : []);
+    const pronunciation = { points: growth?.counts.pronunciation ?? 0, tries: growth?.tries?.pronunciation ?? 0 };
+    const vocab = vocabScore(ledger, language);
+    parts = source.stages.map((s) => stageParts({ stage: s, language, ledger, phrases: record.phrases, constructionsMastered: mastered, pronunciation, vocab }));
+  }
+  const pronunciationNotes = Object.fromEntries((stages ?? []).map((s) => [s.order, s.pronunciation ?? ""]));
   return jsonWithCors(request, {
     language,
     stage,
     stages: ladder,
     nodes,
     phrases,
+    parts,
+    words: vocabWords(ledger, language),
+    pronunciationNotes,
     // 칸을 고른 표현 수(어휘로 둔 것 포함) — 점검이 "아직"과 "어휘로 둠"을 가른다.
     filed: Object.keys(record.phrases).length,
     custom: record.custom,

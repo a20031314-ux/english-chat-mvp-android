@@ -146,6 +146,7 @@ export function GrowthNetwork({
     }
   };
   const [open, setOpen] = useState<ElementId | null>(null);
+  const [goalMapOpen, setGoalMapOpen] = useState(false);
   // 문장분석 시트 "My에서 찾기"로 오면 "단계" 보기로(이미 열려 있을 때 — 처음 열 때는 handOffLocate가 기억한 보기).
   useEffect(() => onLocate(() => setModeState("map")), []);
 
@@ -203,7 +204,27 @@ export function GrowthNetwork({
       ) : mode === "map" ? (
         <div className="mt-2">
           {board ? <div className="px-1">{board(true)}</div> : null}
-          {mapSlot ? <div className={board ? "mt-4" : ""}>{mapSlot}</div> : board ? null : <p className="px-1 py-6 text-center text-[12px] text-slate-400">{ui.myViewMapEmpty}</p>}
+          {/* 예전 목표 지도(상황·미션)는 틀과 섞이지 않게 접어 둔다(2026-10-25 사용자 "예전 탭 구조랑 같이 집어넣으니 난잡"). */}
+          {mapSlot ? (
+            board ? (
+              <>
+                <button
+                  type="button"
+                  aria-expanded={goalMapOpen}
+                  onClick={() => setGoalMapOpen((value) => !value)}
+                  className="mt-1 flex w-full items-center justify-between border-t border-white/5 px-1 py-2.5 text-start text-note text-slate-200"
+                >
+                  <span>{ui.partGoalMap}</span>
+                  <span aria-hidden className={`text-caption text-slate-500 ${goalMapOpen ? "rotate-90" : "rtl:rotate-180"}`}>›</span>
+                </button>
+                {goalMapOpen ? <div className="mt-2">{mapSlot}</div> : null}
+              </>
+            ) : (
+              mapSlot
+            )
+          ) : board ? null : (
+            <p className="px-1 py-6 text-center text-[12px] text-slate-400">{ui.myViewMapEmpty}</p>
+          )}
         </div>
       ) : (
       <svg viewBox={`0 0 ${W} ${H}`} className="mt-1 w-full" role="group" aria-label={ui.myNetworkTitle}>

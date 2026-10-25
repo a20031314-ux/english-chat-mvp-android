@@ -642,7 +642,15 @@
     "whatsNewNotoTitle": "動く基本アイコン",
     "whatsNewNotoBody": "動く Noto 絵文字の2パックが最初から入っています。Room のチャットでも送れます。",
     "whatsNewIconSaleTitle": "アイコンを作って販売",
-    "whatsNewIconSaleBody": "「✏️ つくる」で写真・文字・スタンプを重ねて動くアイコンを作り、パックを2〜30Pで販売できます。よく使われるパックには🔥。"
+    "whatsNewIconSaleBody": "「✏️ つくる」で写真・文字・スタンプを重ねて動くアイコンを作り、パックを2〜30Pで販売できます。よく使われるパックには🔥。",
+    "partVocab": "語彙",
+    "partGrammar": "文法",
+    "partExpression": "表現",
+    "partPronunciation": "発音",
+    "partToNext": "次の段階まで：{part}",
+    "partReady": "次の段階へ",
+    "partGoal": "この段階の目標",
+    "partGoalMap": "目標マップ"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1287,7 +1295,15 @@
     "whatsNewNotoTitle": "会动的基础图标",
     "whatsNewNotoBody": "两包 Noto 动态表情一开始就有，在 Room 聊天里也能发送。",
     "whatsNewIconSaleTitle": "制作并出售图标",
-    "whatsNewIconSaleBody": "用“✏️ 制作”把照片、文字、贴纸叠成动态图标，图标包可定价 2–30P 出售。热门包带 🔥。"
+    "whatsNewIconSaleBody": "用“✏️ 制作”把照片、文字、贴纸叠成动态图标，图标包可定价 2–30P 出售。热门包带 🔥。",
+    "partVocab": "词汇",
+    "partGrammar": "语法",
+    "partExpression": "表达",
+    "partPronunciation": "发音",
+    "partToNext": "进入下一阶段前：{part}",
+    "partReady": "进入下一阶段",
+    "partGoal": "本阶段目标",
+    "partGoalMap": "目标地图"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1934,7 +1950,15 @@
     "whatsNewNotoTitle": "Biểu tượng động cơ bản",
     "whatsNewNotoBody": "Hai gói biểu tượng cảm xúc động Noto có sẵn từ đầu. Bạn cũng gửi được trong trò chuyện Room.",
     "whatsNewIconSaleTitle": "Tạo và bán biểu tượng",
-    "whatsNewIconSaleBody": "Ghép ảnh, chữ, nhãn dán thành biểu tượng động với «✏️ Tạo», và bán gói giá 2–30P. Gói được dùng nhiều có 🔥."
+    "whatsNewIconSaleBody": "Ghép ảnh, chữ, nhãn dán thành biểu tượng động với «✏️ Tạo», và bán gói giá 2–30P. Gói được dùng nhiều có 🔥.",
+    "partVocab": "Từ vựng",
+    "partGrammar": "Ngữ pháp",
+    "partExpression": "Cách diễn đạt",
+    "partPronunciation": "Phát âm",
+    "partToNext": "Trước giai đoạn tiếp theo: {part}",
+    "partReady": "Giai đoạn tiếp theo",
+    "partGoal": "Mục tiêu giai đoạn này",
+    "partGoalMap": "Bản đồ mục tiêu"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2586,7 +2610,15 @@
     "whatsNewNotoTitle": "Icônes animées de base",
     "whatsNewNotoBody": "Deux packs d’emoji animés Noto sont là dès le départ. Vous pouvez aussi les envoyer dans le chat des salons.",
     "whatsNewIconSaleTitle": "Créez et vendez des icônes",
-    "whatsNewIconSaleBody": "Superposez photos, texte et stickers en icônes animées avec « ✏️ Créer », et vendez vos packs de 2 à 30P. Les packs très utilisés ont un 🔥."
+    "whatsNewIconSaleBody": "Superposez photos, texte et stickers en icônes animées avec « ✏️ Créer », et vendez vos packs de 2 à 30P. Les packs très utilisés ont un 🔥.",
+    "partVocab": "Vocabulaire",
+    "partGrammar": "Grammaire",
+    "partExpression": "Expressions",
+    "partPronunciation": "Prononciation",
+    "partToNext": "Avant l’étape suivante : {part}",
+    "partReady": "Étape suivante",
+    "partGoal": "Objectif de cette étape",
+    "partGoalMap": "Carte de l’objectif"
   },
   "it": {
     "archive": "Report",
@@ -3429,7 +3461,15 @@
     "whatsNewNotoTitle": "Icone animate di base",
     "whatsNewNotoBody": "Due pacchetti di emoji animate Noto ci sono fin dall’inizio. Puoi inviarli anche nella chat delle stanze.",
     "whatsNewIconSaleTitle": "Crea e vendi icone",
-    "whatsNewIconSaleBody": "Unisci foto, testo e sticker in icone animate con «✏️ Crea» e vendi i pacchetti a 2–30P. I più usati hanno un 🔥."
+    "whatsNewIconSaleBody": "Unisci foto, testo e sticker in icone animate con «✏️ Crea» e vendi i pacchetti a 2–30P. I più usati hanno un 🔥.",
+    "partVocab": "Vocabolario",
+    "partGrammar": "Grammatica",
+    "partExpression": "Espressioni",
+    "partPronunciation": "Pronuncia",
+    "partToNext": "Prima della fase successiva: {part}",
+    "partReady": "Fase successiva",
+    "partGoal": "Obiettivo di questa fase",
+    "partGoalMap": "Mappa dell’obiettivo"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4084,7 +4124,15 @@
     "whatsNewNotoTitle": "Ícones animados básicos",
     "whatsNewNotoBody": "Dois pacotes de emojis animados Noto vêm incluídos. Também pode enviá-los no chat das salas.",
     "whatsNewIconSaleTitle": "Crie e venda ícones",
-    "whatsNewIconSaleBody": "Junte fotos, texto e figurinhas em ícones animados com «✏️ Criar» e venda pacotes por 2–30P. Os mais usados ganham 🔥."
+    "whatsNewIconSaleBody": "Junte fotos, texto e figurinhas em ícones animados com «✏️ Criar» e venda pacotes por 2–30P. Os mais usados ganham 🔥.",
+    "partVocab": "Vocabulário",
+    "partGrammar": "Gramática",
+    "partExpression": "Expressões",
+    "partPronunciation": "Pronúncia",
+    "partToNext": "Antes da próxima etapa: {part}",
+    "partReady": "Próxima etapa",
+    "partGoal": "Meta desta etapa",
+    "partGoalMap": "Mapa da meta"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4925,7 +4973,15 @@
     "whatsNewNotoTitle": "Анимированные базовые значки",
     "whatsNewNotoBody": "Два набора анимированных эмодзи Noto есть сразу. Их можно отправлять и в чате Room.",
     "whatsNewIconSaleTitle": "Создавайте и продавайте иконки",
-    "whatsNewIconSaleBody": "В «✏️ Создать» соберите движущуюся иконку из фото, текста и стикеров и продавайте наборы за 2–30P. У популярных — 🔥."
+    "whatsNewIconSaleBody": "В «✏️ Создать» соберите движущуюся иконку из фото, текста и стикеров и продавайте наборы за 2–30P. У популярных — 🔥.",
+    "partVocab": "Словарь",
+    "partGrammar": "Грамматика",
+    "partExpression": "Выражения",
+    "partPronunciation": "Произношение",
+    "partToNext": "До следующего этапа: {part}",
+    "partReady": "Следующий этап",
+    "partGoal": "Цель этапа",
+    "partGoalMap": "Карта цели"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5576,7 +5632,15 @@
     "whatsNewNotoTitle": "Ikon animasi dasar",
     "whatsNewNotoBody": "Dua paket emoji animasi Noto sudah ada sejak awal. Bisa dikirim juga di obrolan Room.",
     "whatsNewIconSaleTitle": "Buat dan jual ikon",
-    "whatsNewIconSaleBody": "Tumpuk foto, teks, dan stiker jadi ikon bergerak dengan «✏️ Buat», lalu jual paket 2–30P. Paket populer diberi 🔥."
+    "whatsNewIconSaleBody": "Tumpuk foto, teks, dan stiker jadi ikon bergerak dengan «✏️ Buat», lalu jual paket 2–30P. Paket populer diberi 🔥.",
+    "partVocab": "Kosakata",
+    "partGrammar": "Tata bahasa",
+    "partExpression": "Ungkapan",
+    "partPronunciation": "Pelafalan",
+    "partToNext": "Sebelum tahap berikutnya: {part}",
+    "partReady": "Tahap berikutnya",
+    "partGoal": "Tujuan tahap ini",
+    "partGoalMap": "Peta tujuan"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6221,7 +6285,15 @@
     "whatsNewNotoTitle": "أيقونات أساسية متحركة",
     "whatsNewNotoBody": "حزمتان من رموز Noto المتحركة موجودتان من البداية، ويمكنك إرسالها في دردشة الغرف أيضًا.",
     "whatsNewIconSaleTitle": "اصنع أيقوناتك وبِعها",
-    "whatsNewIconSaleBody": "اجمع الصور والنص والملصقات في أيقونات متحركة عبر «✏️ اصنع»، وبِع الحزم بـ 2–30P. الحزم الرائجة تحمل 🔥."
+    "whatsNewIconSaleBody": "اجمع الصور والنص والملصقات في أيقونات متحركة عبر «✏️ اصنع»، وبِع الحزم بـ 2–30P. الحزم الرائجة تحمل 🔥.",
+    "partVocab": "المفردات",
+    "partGrammar": "القواعد",
+    "partExpression": "التعابير",
+    "partPronunciation": "النطق",
+    "partToNext": "قبل المرحلة التالية: {part}",
+    "partReady": "المرحلة التالية",
+    "partGoal": "هدف هذه المرحلة",
+    "partGoalMap": "خريطة الهدف"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6866,7 +6938,15 @@
     "whatsNewNotoTitle": "ไอคอนพื้นฐานแบบเคลื่อนไหว",
     "whatsNewNotoBody": "มีแพ็กอีโมจิเคลื่อนไหว Noto สองแพ็กตั้งแต่แรก และส่งในแชต Room ได้ด้วย",
     "whatsNewIconSaleTitle": "สร้างและขายไอคอน",
-    "whatsNewIconSaleBody": "ซ้อนรูป ข้อความ และสติกเกอร์เป็นไอคอนเคลื่อนไหวด้วย «✏️ สร้าง» แล้วขายแพ็ก 2–30P แพ็กยอดนิยมจะมี 🔥"
+    "whatsNewIconSaleBody": "ซ้อนรูป ข้อความ และสติกเกอร์เป็นไอคอนเคลื่อนไหวด้วย «✏️ สร้าง» แล้วขายแพ็ก 2–30P แพ็กยอดนิยมจะมี 🔥",
+    "partVocab": "คำศัพท์",
+    "partGrammar": "ไวยากรณ์",
+    "partExpression": "สำนวน",
+    "partPronunciation": "การออกเสียง",
+    "partToNext": "ก่อนขั้นถัดไป: {part}",
+    "partReady": "ไปขั้นถัดไป",
+    "partGoal": "เป้าหมายขั้นนี้",
+    "partGoalMap": "แผนที่เป้าหมาย"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7511,6 +7591,14 @@
     "whatsNewNotoTitle": "चलते-फिरते बुनियादी आइकन",
     "whatsNewNotoBody": "Noto के चलते-फिरते इमोजी के दो पैक शुरू से हैं। Room चैट में भी भेज सकते हैं।",
     "whatsNewIconSaleTitle": "आइकन बनाएँ और बेचें",
-    "whatsNewIconSaleBody": "«✏️ बनाएँ» से फ़ोटो, अक्षर और स्टिकर जोड़कर चलते आइकन बनाएँ, और पैक 2–30P में बेचें। लोकप्रिय पैक पर 🔥।"
+    "whatsNewIconSaleBody": "«✏️ बनाएँ» से फ़ोटो, अक्षर और स्टिकर जोड़कर चलते आइकन बनाएँ, और पैक 2–30P में बेचें। लोकप्रिय पैक पर 🔥।",
+    "partVocab": "शब्दावली",
+    "partGrammar": "व्याकरण",
+    "partExpression": "अभिव्यक्तियाँ",
+    "partPronunciation": "उच्चारण",
+    "partToNext": "अगले चरण से पहले: {part}",
+    "partReady": "अगला चरण",
+    "partGoal": "इस चरण का लक्ष्य",
+    "partGoalMap": "लक्ष्य नक्शा"
   }
 }
