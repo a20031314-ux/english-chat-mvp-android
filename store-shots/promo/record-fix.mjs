@@ -87,7 +87,7 @@ const context = await browser.newContext({ viewport: { width: 412, height: 915 }
 const events = { locale, target, sent: line };
 const mark = (name) => (events[name] = Date.now() / 1000);
 const day = new Date().toISOString().slice(0, 10).replace(/-/g, "");
-await context.route("**/api/**", (route) => route.continue({ headers: { ...route.request().headers(), "x-rc-user": `promo-fix-${day}-${locale}` } }));
+await context.route("**/api/**", (route) => route.continue({ headers: { ...route.request().headers(), "x-rc-user": `promo-fix-${day}-${locale}-${process.pid}` } }));
 await context.addInitScript(([t, l]) => {
   localStorage.setItem("appTargetLanguage", t);
   localStorage.setItem("appUiLocale", l);
@@ -176,6 +176,44 @@ try {
   const box2 = await page.locator("[data-promo-bubble]").last().boundingBox().catch(() => null);
   if (box2) events.bubbleBox = { x: box2.x / 412, y: box2.y / 915, w: box2.width / 412, h: box2.height / 915 };
   await page.waitForTimeout(3600);
+  mark("fixedEnd");
+  // My로 이어짐(사용자 2026-10-26 "my탭과 연결되는 장면"): 고친 줄이 My "오늘의 학습"에 후보로 → 골라 노트에 넣기.
+  if (process.env.PROMO_MY !== "0") {
+    const startsWith = (t) => new RegExp(`^\\s*${t.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`);
+    const myTab = page.getByRole("button", { name: exactly(ui.homeTabProfile) }).or(page.getByRole("link", { name: exactly(ui.homeTabProfile) })).or(page.locator(`[aria-label="${ui.homeTabProfile}"]`));
+    const today = page.getByRole("button", { name: startsWith(ui.notebookToday) });
+    // 후보는 서버가 교정 뒤 따로 만든다 — 생길 때까지 My를 다시 연다(최대 약 40초, 화면 밖에서).
+    let found = false;
+    for (let i = 0; i < 8 && !found; i++) {
+      await tap(myTab.first());
+      if (i === 0) mark("myTap");
+      found = await today.first().waitFor({ timeout: 5000 }).then(() => true, () => false);
+      if (!found) {
+        await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
+        await page.locator("textarea:visible").first().waitFor();
+      }
+    }
+    if (found) {
+      await today.first().scrollIntoViewIfNeeded();
+      await page.waitForTimeout(400);
+      mark("myShown");
+      events.myBox = await today.first().boundingBox().then((b) => (b ? { x: b.x / 412, y: b.y / 915, w: b.width / 412, h: b.height / 915 } : null));
+      await page.waitForTimeout(1800);
+      await tap(today.first());
+      mark("todayTap");
+      const add = page.getByRole("button", { name: startsWith(ui.notebookAddToNotes) });
+      await add.first().waitFor({ timeout: 20000 });
+      await page.waitForTimeout(500);
+      mark("todaySheet");
+      events.todayText = (await page.locator('[role="dialog"]').last().innerText().catch(() => "")).slice(0, 500);
+      await page.waitForTimeout(2600);
+      await tap(add.first());
+      mark("added");
+      await page.waitForTimeout(3200);
+    } else {
+      events.myMissing = true;
+    }
+  }
   mark("end");
   await page.screenshot({ path: path.join(OUT, "final.png") });
 } finally {

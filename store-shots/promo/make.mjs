@@ -134,9 +134,20 @@ COPY.analyze.ko = { hook: "이 일본어 문장,\n무슨 뜻일까?", reply: "�
 NARR.fix.ko = { hook: "일본어로 쓴 문장, 맞는지 헷갈리죠?", type: "틀려도 괜찮아요. 일단 써 보세요.", chip: "고칠 곳이 있으면, 내 문장 아래에 표시가 떠요.", fixed: "누르면 고친 문장이 바로 아래에 나와요.", end: "먼저 써 보고, 바로 아래서 고쳐요. 랭귀지뱅크." };
 NARR.chat.ko = { hook: "일본어로 대화하다가 말문이 막혔나요?", type: "하고 싶은 말을 그냥 한국어로 쓰세요.", reply: "유키는 일본어로 대화를 계속 이어가요. 대화가 끊기지 않아요.", card: "'표현 보기'를 누르면, 일본어로 어떻게 말하는지 바로 보여줘요.", use: "그다음 그 표현으로 직접 말해 보세요.", end: "막히면 편한 말로, 대화는 계속. 랭귀지뱅크." };
 NARR.analyze.ko = { hook: "일본어로 대화하는데, 답장이 정확히 무슨 뜻인지 모르겠다면?", reply: "유키는 일본 친구처럼 자연스럽게 답해요.", tap: "그 줄을 누르고 '분석'을 고르면, 뜻과 함께 문장을 보여줘요.", why: "'왜 이런 형태야?'를 누르면, 문법을 한국어로 설명해 줘요.", end: "문장마다 이해하며 배워요. 랭귀지뱅크." };
+
+// 2026-10-26 사용자 "목소리는 빼고 자막과 음악, 문장 일부 고르기·구체적 질문·틀린 문장 고치기·My로 이어지기".
+Object.assign(COPY.fix.en, { my: "Your fixed lines\nwait in My", note: "Pick them.\nThey become your notes." });
+Object.assign(COPY.fix.es, { my: "Tus frases corregidas\nte esperan en Mi espacio", note: "Elígelas.\nSe vuelven tus apuntes." });
+Object.assign(COPY.fix.ko, { my: "고친 문장은\nMy에 모여요", note: "골라 담으면\n내 노트가 돼요" });
+COPY.analyze2 = {
+  en: { hook: "What does that\nKorean line mean?", tap: "Tap a line\nto break it down", pick: "Drag to pick\njust the part you want", ask: "Ask exactly\nwhat you need", answer: "A straight answer,\nin English", my: "It lands in My,\nright where it belongs", endTitle: "Understand every\nline you read", endSub: "Learn languages by chatting with AI" },
+  es: { hook: "¿Qué significa\nesa frase en inglés?", tap: "Toca una frase\npara analizarla", pick: "Desliza y elige\nsolo la parte que quieras", ask: "Pregunta justo\nlo que necesitas", answer: "Una respuesta clara,\nen español", my: "Y se guarda en Mi espacio,\nen su lugar", endTitle: "Entiende cada frase\nque lees", endSub: "Aprende idiomas conversando con IA" },
+  ko: { hook: "이 일본어 문장,\n무슨 뜻일까?", tap: "줄을 누르면\n문장을 뜯어봐요", pick: "궁금한 부분만\n끌어서 골라요", ask: "궁금한 걸\n그대로 물어보세요", answer: "한국어로\n바로 답해줘요", my: "My의 제자리에\n쏙 담겨요", endTitle: "읽는 문장마다\n이해하며 배워요", endSub: "AI와 대화하며 배우는 언어 앱" },
+};
 const DIR_ATTR = RTL.has(locale) ? ' dir="rtl"' : "";
-const C = { font: FONT[locale] ?? "'Noto Sans', sans-serif", store: STORE_LINE[locale] ?? STORE_LINE.en, ...(COPY[story]?.[locale] ?? {}) };
-if (!COPY[story]?.[locale]) throw new Error(`no promo copy for ${story}/${locale}`);
+const COPY_KEY = story === "analyze" && ev.pickStart != null ? "analyze2" : story;
+const C = { font: FONT[locale] ?? "'Noto Sans', sans-serif", store: STORE_LINE[locale] ?? STORE_LINE.en, ...(COPY[COPY_KEY]?.[locale] ?? {}) };
+if (!COPY[COPY_KEY]?.[locale]) throw new Error(`no promo copy for ${story}/${locale}`);
 
 /**
  * 장면 자르기(원본 시각): [시작, 끝, 속도, 자막 키, 확대]. 확대 = { by, x, y }(창 위치 비율),
@@ -287,6 +298,7 @@ STORIES.fix = () => {
   const lines = String(ev.bubbleText ?? "").split("\n").map((l) => l.trim()).filter(Boolean);
   // 칩이 뜬 뒤에서 멈춘다(그 전 프레임은 말풍선이 아직 다시 그려지는 중일 때가 있음, es).
   const chipStart = ev.chip + 0.15;
+  const withMy = ev.added != null && Boolean(COPY.fix[locale]?.my);
   const chipEnd = ev.chipTap + 0.1;
   return {
     segs: [
@@ -296,7 +308,15 @@ STORIES.fix = () => {
       [chipStart, chipEnd, 1, "chip", zoom],
       // 위험한 줄은 확인 모델이 한 번 더 본다("확인하는 중…") — 그 기다림은 빠르게, "고친 문장" 칸은 열린 뒤부터.
       ...(ev.open > chipEnd + 0.4 ? [[chipEnd, ev.open + 0.2, Math.max(1, (ev.open - chipEnd) / 1.2), "chip", zoom]] : []),
-      [Math.max(chipEnd, ev.open + 0.2), ev.end - 0.2, 1, "fixed", zoom],
+      [Math.max(chipEnd, ev.open + 0.2), (withMy ? ev.fixedEnd : ev.end) - 0.2, 1, "fixed", zoom],
+      ...(withMy
+        ? [
+            [ev.fixedEnd - 0.2, ev.myShown + 0.2, Math.max(1, (ev.myShown - ev.fixedEnd) / 1.2), "my"],
+            [ev.myShown + 0.2, ev.todayTap + 0.1, 1, "my"],
+            [ev.todayTap + 0.1, ev.added + 0.3, 1, "note"],
+            [ev.added + 0.3, ev.end - 0.2, 1.4, "note"],
+          ]
+        : []),
     ],
     voice: lines.at(-1) ?? "",
     voiceIn: chipEnd - chipStart + 0.5,
@@ -304,7 +324,19 @@ STORIES.fix = () => {
 };
 
 // 문장 뜯어보기: 학습 언어 한 줄 → 튜터 답 → 줄 누르기·분석 → "왜 이런 꼴?" 설명(녹화: record-analyze.mjs).
-STORIES.analyze = () => ({
+STORIES.analyze = () => ev.pickStart != null ? {
+  segs: [
+    [Math.max(0, ev.typeStart - 1.2), ev.sentAt + 0.2, 2.2, "hook"],
+    [ev.sentAt + 0.2, ev.lineTap - 0.2, Math.max(1, (ev.lineTap - ev.sentAt) / 2.5), "hook"],
+    [ev.lineTap - 0.2, ev.loaded + 0.4, Math.max(1, (ev.loaded - ev.lineTap) / 3), "tap"],
+    [ev.pickStart - 0.5, ev.picked + 1.4, 1, "pick"],
+    [ev.askType - 0.3, ev.askTap + 0.3, 1.6, "ask"],
+    [ev.askTap + 0.3, ev.answer, Math.max(1, (ev.answer - ev.askTap) / 1.5), "ask"],
+    [ev.answer, ev.findShown, 1, "answer"],
+    [ev.findShown - 0.2, ev.myShown + 0.2, Math.max(1, (ev.myShown - ev.findShown) / 1.5), "my"],
+    [ev.myShown + 0.2, ev.end - 0.2, 1, "my"],
+  ],
+} : ({
   segs: [
     [Math.max(0, ev.typeStart - 1.2), ev.sentAt + 0.2, 2.2, "hook"],
     [ev.sentAt + 0.2, ev.lineTap - 0.2, Math.max(1, (ev.lineTap - ev.sentAt) / 2.5), "reply"],
@@ -316,8 +348,14 @@ STORIES.analyze = () => ({
   voiceSrc: ev.sheet + 0.6,
 });
 const plan = STORIES[story]();
+// 목소리는 기본으로 뺀다(사용자 2026-10-26 "목소리는 빼고 자막과 음악") — 넣으려면 PROMO_VOICE=1.
+const VOICE_ON = process.env.PROMO_VOICE === "1";
+if (!VOICE_ON) {
+  plan.voice = null;
+  plan.voices = [];
+}
 // 설명 목소리가 있는 편: 칸마다 멈춤 + 설명, 학습 언어 문장은 그 자리에서 멈추고 읽는다.
-if (NARR[story]?.[locale] && process.env.PROMO_NARRATE !== "0") {
+if (VOICE_ON && NARR[story]?.[locale] && process.env.PROMO_NARRATE !== "0") {
   const N = NARR[story][locale];
   const uiLang = SPEECH[locale] ?? "en-US";
   const pause = (src, cap, zoom, said) => {
@@ -517,10 +555,23 @@ if (voiceTracks.length) {
   });
   mix += `;${labels.join("")}amix=inputs=${labels.length}:normalize=0:duration=longest,atrim=0:${total.toFixed(3)}[a]`;
 }
-const filter = [...parts, concat, phoneScale, chain].join(";") + audio + mix;
+// 배경음(직접 만든 루프, music.mjs): 반복해 깔고 앞뒤를 부드럽게. 목소리가 있으면 그 아래로 작게.
+const MUSIC = path.join(ROOT, "tmp", "promo", "music.wav");
+if (process.env.PROMO_MUSIC !== "0" && !fs.existsSync(MUSIC)) execFileSync("node", [path.join(ROOT, "store-shots", "promo", "music.mjs"), MUSIC]);
+let music = "";
+let audioOut = voice || voiceTracks.length ? "[a]" : null;
+if (process.env.PROMO_MUSIC !== "0") {
+  const mi = inputs.filter((x) => x === "-i").length;
+  inputs.push("-stream_loop", "-1", "-i", MUSIC);
+  const vol = audioOut ? 0.22 : 0.6;
+  music = `;[${mi}:a]volume=${vol},atrim=0:${total.toFixed(3)},afade=t=in:d=0.6,afade=t=out:st=${Math.max(0, total - 1.6).toFixed(3)}:d=1.6[m]`;
+  if (audioOut) music += `;[a][m]amix=inputs=2:normalize=0:duration=first[am]`;
+  audioOut = audioOut ? "[am]" : "[m]";
+}
+const filter = [...parts, concat, phoneScale, chain].join(";") + audio + mix + music;
 const file = path.join(DIR, `promo-${story}-${locale}.mp4`);
 execFileSync("ffmpeg", ["-loglevel", "error", "-y", ...inputs, "-filter_complex", filter, "-map", "[v]",
-  ...(voice || voiceTracks.length ? ["-map", "[a]", "-c:a", "aac", "-b:a", "160k"] : []),
+  ...(audioOut ? ["-map", audioOut, "-c:a", "aac", "-b:a", "160k"] : []),
   "-t", total.toFixed(3), "-r", "30", "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-pix_fmt", "yuv420p", "-movflags", "+faststart", file]);
 console.log(`${file}  ${total.toFixed(1)}초`);
 for (const v of voiceTracks) console.log(`목소리 ${v.at.toFixed(1)}s +${v.len.toFixed(1)}s  ${v.text}`);

@@ -20,13 +20,24 @@ const OPENER = {
   es: "Anoche fui a un concierto y fue increíble.",
 };
 const line = process.env.PROMO_LINE || OPENER[target];
+/** 고른 부분에 대해 직접 묻는 질문 — 실제로 궁금할 법한, 고른 말이 무엇이든 통하는 것(말투·쓰임). */
+const QUESTION = {
+  en: "Can I say this to my boss?",
+  es: "¿Puedo usar esto en un correo formal?",
+  ko: "이거 선배한테 써도 돼?",
+  ja: "これ、先輩に使っても大丈夫？",
+  ar: "هل أستطيع قول هذا لمديري؟",
+  id: "Boleh aku pakai ini ke atasan?",
+  vi: "Mình nói câu này với sếp được không?",
+  th: "พูดแบบนี้กับหัวหน้าได้ไหม",
+};
 const ui = (await loadCopy(ROOT))[locale];
 const day = new Date().toISOString().slice(0, 10).replace(/-/g, "");
 
 const events = await record({
   root: ROOT,
   out: path.join(ROOT, "tmp", "promo", "analyze", locale),
-  user: `promo-analyze-${day}-${locale}`,
+  user: `promo-analyze-${day}-${locale}-${process.pid}`,
   locale,
   target,
   port: 4293,
@@ -100,9 +111,33 @@ const events = await record({
     const box = await dialog.boundingBox();
     if (box) events.sheetBox = { x: box.x / 412, y: box.y / 915, w: box.width / 412, h: box.height / 915 };
     await page.waitForTimeout(1500);
-    // "왜 이런 꼴이에요?" → 설명이 다 올 때까지(글이 2초 그대로).
-    const ask = dialog.getByRole("button", { name: exactly(ui.quickAskForm) });
-    await tap(ask.first());
+    // 문장 일부 고르기(사용자 2026-10-26): 점 줄을 끌어 끝부분 두세 낱말(어미·조사가 모이는 곳)을 고른다.
+    const slider = dialog.locator('[role="slider"]').first();
+    const count = Number(await slider.getAttribute("aria-valuemax")) + 1;
+    const sb = await slider.boundingBox();
+    const endIdx = Math.max(0, count - (count > 4 ? 2 : 1));
+    const startIdx = Math.max(0, endIdx - (count > 6 ? 2 : 1));
+    const dotX = (k) => sb.x + ((k + 0.5) / count) * sb.width;
+    const y = sb.y + sb.height / 2;
+    await page.mouse.move(dotX(startIdx), y);
+    mark("pickStart");
+    await page.mouse.down();
+    for (let k = 1; k <= 12; k++) {
+      await page.mouse.move(dotX(startIdx) + ((dotX(endIdx) - dotX(startIdx)) * k) / 12, y);
+      await page.waitForTimeout(45);
+    }
+    await page.mouse.up();
+    mark("picked");
+    await page.waitForTimeout(1600);
+    events.pickedText = (await dialog.innerText()).slice(0, 300);
+    // 구체적인 질문을 직접 쓴다.
+    const askBox = dialog.locator("textarea").first();
+    await askBox.scrollIntoViewIfNeeded();
+    await tap(askBox);
+    mark("askType");
+    await page.keyboard.type(QUESTION[locale] ?? QUESTION.en, { delay: 55 });
+    await page.waitForTimeout(500);
+    await tap(dialog.getByRole("button", { name: exactly(ui.askSend) }).first());
     mark("askTap");
     const before = await dialog.innerText();
     let text = before;
@@ -110,19 +145,44 @@ const events = await record({
     for (let i = 0; i < 120 && steady < 4; i++) {
       await page.waitForTimeout(500);
       const now = await dialog.innerText();
-      if (now === before) continue;
+      if (now === before || now.includes(ui.askLoading)) continue;
       steady = now === text ? steady + 1 : 0;
       text = now;
     }
     mark("answer");
-    events.answerText = text.slice(0, 900);
-    // 설명이 시트 아래로 넘치면 천천히 내린다.
+    events.answerText = text.slice(0, 1200);
     await page.mouse.move(206, 600);
-    for (let i = 0; i < 8; i++) {
+    for (let i = 0; i < 6; i++) {
       await page.mouse.wheel(0, 60);
       await page.waitForTimeout(150);
     }
-    mark("scrolled");
+    await page.waitForTimeout(2600);
+    // My로 이어짐: 🔎 My에서 찾기 → My 단계 보기의 그 칸.
+    const find = dialog.getByRole("button", { name: new RegExp(ui.findInMy.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")) }).first();
+    await find.scrollIntoViewIfNeeded();
+    await page.waitForTimeout(700);
+    mark("findShown");
+    await tap(find);
+    mark("findTap");
+    // 찾는 중… → My 화면의 칸 시트. 화면이 2초 그대로면 도착.
+    let shot = "";
+    steady = 0;
+    for (let i = 0; i < 60 && steady < 4; i++) {
+      await page.waitForTimeout(500);
+      const now = await page.locator("body").innerText();
+      if (now.includes(ui.findInMyBusy)) continue;
+      steady = now === shot ? steady + 1 : 0;
+      shot = now;
+    }
+    mark("myShown");
+    events.myText = (await page.locator('[role="dialog"]').last().innerText().catch(() => "")).slice(0, 400);
+    await page.waitForTimeout(2200);
+    // 이 장면 넣기 → 그 칸에 카드로 남는다.
+    const addMoment = page.getByRole("button", { name: exactly(ui.notebookQuestionAdd) }).first();
+    if (await addMoment.isVisible().catch(() => false)) {
+      await tap(addMoment);
+      mark("momentAdded");
+    }
     await page.waitForTimeout(3000);
   },
 });
