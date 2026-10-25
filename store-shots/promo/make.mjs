@@ -127,6 +127,13 @@ const NARR = {
     es: { hook: "¿Chateas en inglés pero no entiendes del todo la respuesta?", reply: "El tutor responde como lo haría un amigo nativo.", tap: "Toca la frase, elige Analizar, y mírala con su significado.", why: "Luego pregunta por qué se dice así, y te explica la gramática en español.", end: "Entiende cada frase. languagebank." },
   },
 };
+
+// 한국어판(일본어 배우기, 튜터 Yuki — combos.mjs ko→ja, 2026-10-25 사용자 "같은 내용으로 한국어 영상").
+COPY.chat.ko = { hook: "일본어로 뭐라고\n할지 막힐 때", type: "그냥 한국어로\n쓰세요", reply: "튜터는 일본어로\n대화를 이어가요", card: "하고 싶던 말은\n일본어로 바로 아래", use: "그 표현으로\n바로 말해보기", endTitle: "막히면 편한 말로,\n대화는 계속 일본어로", endSub: "AI와 대화하며 배우는 언어 앱" };
+COPY.analyze.ko = { hook: "이 일본어 문장,\n무슨 뜻일까?", reply: "유키는 진짜\n일본어로 답해요", tap: "줄을 누르면\n문장을 뜯어봐요", why: "왜 이렇게 쓰는지\n물어보세요", endTitle: "읽는 문장마다\n이해하며 배워요", endSub: "AI와 대화하며 배우는 언어 앱" };
+NARR.fix.ko = { hook: "일본어로 쓴 문장, 맞는지 헷갈리죠?", type: "틀려도 괜찮아요. 일단 써 보세요.", chip: "고칠 곳이 있으면, 내 문장 아래에 표시가 떠요.", fixed: "누르면 고친 문장이 바로 아래에 나와요.", end: "먼저 써 보고, 바로 아래서 고쳐요. 랭귀지뱅크." };
+NARR.chat.ko = { hook: "일본어로 대화하다가 말문이 막혔나요?", type: "하고 싶은 말을 그냥 한국어로 쓰세요.", reply: "유키는 일본어로 대화를 계속 이어가요. 대화가 끊기지 않아요.", card: "'표현 보기'를 누르면, 일본어로 어떻게 말하는지 바로 보여줘요.", use: "그다음 그 표현으로 직접 말해 보세요.", end: "막히면 편한 말로, 대화는 계속. 랭귀지뱅크." };
+NARR.analyze.ko = { hook: "일본어로 대화하는데, 답장이 정확히 무슨 뜻인지 모르겠다면?", reply: "유키는 일본 친구처럼 자연스럽게 답해요.", tap: "그 줄을 누르고 '분석'을 고르면, 뜻과 함께 문장을 보여줘요.", why: "'왜 이런 형태야?'를 누르면, 문법을 한국어로 설명해 줘요.", end: "문장마다 이해하며 배워요. 랭귀지뱅크." };
 const DIR_ATTR = RTL.has(locale) ? ' dir="rtl"' : "";
 const C = { font: FONT[locale] ?? "'Noto Sans', sans-serif", store: STORE_LINE[locale] ?? STORE_LINE.en, ...(COPY[story]?.[locale] ?? {}) };
 if (!COPY[story]?.[locale]) throw new Error(`no promo copy for ${story}/${locale}`);
@@ -287,7 +294,9 @@ STORIES.fix = () => {
       [ev.typeStart + 0.1, ev.sentAt + 0.2, 1.6, "type"],
       [ev.sentAt + 0.2, chipStart, Math.max(1, (chipStart - ev.sentAt - 0.2) / 1.2), "type"],
       [chipStart, chipEnd, 1, "chip", zoom],
-      [chipEnd, ev.end - 0.2, 1, "fixed", zoom],
+      // 위험한 줄은 확인 모델이 한 번 더 본다("확인하는 중…") — 그 기다림은 빠르게, "고친 문장" 칸은 열린 뒤부터.
+      ...(ev.open > chipEnd + 0.4 ? [[chipEnd, ev.open + 0.2, Math.max(1, (ev.open - chipEnd) / 1.2), "chip", zoom]] : []),
+      [Math.max(chipEnd, ev.open + 0.2), ev.end - 0.2, 1, "fixed", zoom],
     ],
     voice: lines.at(-1) ?? "",
     voiceIn: chipEnd - chipStart + 0.5,

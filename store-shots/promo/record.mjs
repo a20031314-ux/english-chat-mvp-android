@@ -98,6 +98,19 @@ await context.addInitScript(([t, l]) => {
   localStorage.setItem("chatOwnLanguageTipSeen", "1");
   localStorage.setItem("whatsNewSeenVersion", "999");
   // 누른 곳에 손가락 원: 보는 사람이 어디를 눌렀는지 알게.
+    // 화면 전송은 바뀐 프레임만 보낸다 — 가끔 멈춰 마지막 장면(열린 교정)이 안 찍혔다(ko). 보이지 않는 점을 매 프레임 바꿔 계속 받는다.
+    addEventListener("DOMContentLoaded", () => {
+      const dot = document.createElement("div");
+      dot.style.cssText = "position:fixed;left:0;top:0;width:1px;height:1px;z-index:99998;pointer-events:none;background:#000";
+      document.body.appendChild(dot);
+      let on = false;
+      const tick = () => {
+        on = !on;
+        dot.style.opacity = on ? "0.011" : "0.012";
+        requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
   addEventListener("pointerdown", (e) => {
     const dot = document.createElement("div");
     dot.style.cssText = `position:fixed;left:${e.clientX - 22}px;top:${e.clientY - 22}px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.35);border:2px solid rgba(255,255,255,.8);z-index:99999;pointer-events:none;transition:transform .45s ease-out,opacity .45s ease-out`;
