@@ -142,3 +142,21 @@ test("작게 말한 턴은 받아쓰기에 보내고, 방 소리만 있던 턴�
   assert.equal(quietVoiceWorthSending(0.006, 0.014), false);
   assert.equal(quietVoiceWorthSending(0.009, 0.02), false);
 });
+
+test("iOS: 처음이 아주 조용해 기준이 바닥이어도, 말이 끝나면 방 소리(0.005) 속에서 턴이 끝난다 (85.9 진단 2026-10-25)", async () => {
+  const { makeLevelScaler, hearFrame: frame, TURN_NOT_STARTED: start } = await import("./hearFrame.ts");
+  const scaler = makeLevelScaler(true);
+  let turn = start;
+  let endedAt: number | null = null;
+  for (let t = 0; t <= 20000; t += 60) {
+    const raw = t < 400 ? 0.001 : t >= 1000 && t < 2500 ? 0.031 - ((t / 60) % 4) * 0.004 : 0.004 + ((t / 60) % 3) * 0.0008;
+    const heard = frame(turn, scaler.scale(raw, t), t);
+    turn = heard.turn;
+    if (heard.finished) {
+      endedAt = t;
+      break;
+    }
+  }
+  assert.ok(turn.spoke, "speech was heard");
+  assert.ok(endedAt !== null && endedAt < 2500 + 2500, `ended at ${endedAt}`);
+});

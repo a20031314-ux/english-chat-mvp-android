@@ -141,7 +141,7 @@ export function hearFrame(
 const IOS_MIN_SPEECH_RMS = 0.004;
 const CALIBRATION_MS = 400;
 /** 말한 뒤에는 그 턴에서 가장 큰 소리의 이 비율 아래를 쉼으로 본다(아이폰 원음은 방 소리가 그대로 남음). */
-const IOS_PAUSE_OF_PEAK = 0.12;
+const IOS_PAUSE_OF_PEAK = 0.2;
 /**
  * 기준의 위 끝. 0.02로 두었더니 방이 조금 시끄러우면(처음 0.4초 중간값 0.007 이상) 기준이 0.02에 붙고,
  * 원음 마이크로 보통 크기로 말한 소리(0.017)가 한 번도 넘지 못해 턴마다 "…"로 끝났다(TestFlight 85.9 진단, 2026-10-25).
@@ -177,7 +177,9 @@ export function makeLevelScaler(ios: boolean): LevelScaler {
         update();
       }
       if (level >= threshold && level > peak) peak = level;
-      if (peak > 0 && level < peak * IOS_PAUSE_OF_PEAK) return 0;
+      // 쉼: 가장 큰 소리의 비율 아래, 또는 기준의 1.5배 아래. 처음 0.4초가 아주 조용해 기준이 바닥(0.004)에
+      // 붙으면 0.12배(0.0037)보다 방 소리가 커서 턴이 20초 끝까지 안 끝났다(85.9 진단 2026-10-25: thr 0.004 · peak 0.031 · turn 19.7s).
+      if (peak > 0 && level < Math.max(peak * IOS_PAUSE_OF_PEAK, Math.min(threshold * 1.5, peak * 0.5))) return 0;
       return level * (0.02 / threshold);
     },
     threshold: () => threshold,
