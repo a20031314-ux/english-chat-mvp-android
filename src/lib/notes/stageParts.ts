@@ -141,3 +141,50 @@ export function stageParts(input: {
 
   return { order: stage.order, parts, ready, weakest, expressions };
 }
+
+export const HISTORY_DAYS = 14;
+
+/**
+ * 갈래마다 최근 14일 하루하루 늘어난 양(그래프 보기, 2026-10-25). 오래된 날 → 오늘.
+ * - 어휘·표현: 낱말·그 단계 핵심 표현이 배움이 된 날(첫 사용) ½, 숙지가 된 날 ½.
+ * - 문법: 그 단계 문법 칸에 표현이 들어온 날 ½.
+ * - 발음: growth의 날마다 점수(맞게 다시 말한 줄).
+ * `dayOf`는 사용자 시간대의 YYYY-MM-DD(billing/plans localDay).
+ */
+export function partHistory(input: {
+  stage: Stage;
+  language: string;
+  ledger: Ledger | null;
+  phrases: Record<string, PhrasePlace>;
+  pronunciationDays: Record<string, number>;
+  now: number;
+  dayOf: (at: number) => string;
+}): Record<PartId, number[]> {
+  const days = Array.from({ length: HISTORY_DAYS }, (_, i) => input.dayOf(input.now - (HISTORY_DAYS - 1 - i) * 24 * 60 * 60 * 1000));
+  const index = new Map(days.map((day, i) => [day, i]));
+  const out: Record<PartId, number[]> = { vocab: days.map(() => 0), grammar: days.map(() => 0), expression: days.map(() => 0), pronunciation: days.map(() => 0) };
+  const bump = (part: PartId, at: number | undefined, amount: number) => {
+    if (!at) return;
+    const i = index.get(input.dayOf(at));
+    if (i !== undefined) out[part][i]! += amount;
+  };
+  const stageKeys = new Set(input.stage.expressions.map((text) => ledgerKey(text)).filter(Boolean));
+  for (const [key, item] of Object.entries(input.ledger?.items ?? {})) {
+    if (item.state === "met") continue;
+    const part: PartId | null = stageKeys.has(key) ? "expression" : isWordish(item.text, input.language) ? "vocab" : null;
+    if (!part) continue;
+    bump(part, item.outputs[0]?.at ?? item.firstMet?.at, 0.5);
+    if (item.state === "mastered") bump(part, item.masteredAt, 0.5);
+  }
+  const grammarNodes = new Set(input.stage.grammar.map((g) => grammarNodeId(input.stage.order, g)));
+  for (const [key, place] of Object.entries(input.phrases)) {
+    if (!place.node || !grammarNodes.has(place.node)) continue;
+    const state = input.ledger?.items[key]?.state;
+    if (!state || state === "met") continue;
+    bump("grammar", place.at, 0.5);
+  }
+  days.forEach((day, i) => {
+    out.pronunciation[i] = input.pronunciationDays[day] ?? 0;
+  });
+  return out;
+}

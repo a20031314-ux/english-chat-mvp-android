@@ -62,3 +62,18 @@ test("어휘 목록: 낱말만, 만남 빼고", () => {
   const ledger = ledgerWith("ja", [["コーヒー", "learned"], ["駅", "mastered"], ["駅はどこですか", "mastered"], ["水", "met"]]);
   assert.deepEqual(vocabWords(ledger, "ja").map((w) => w.text).sort(), ["コーヒー", "駅"].sort());
 });
+
+test("갈래 2주 기록: 숙지된 날·칸에 들어온 날·발음 날마다(띄어쓰기 없는 말 포함)", async () => {
+  const { partHistory, HISTORY_DAYS } = await import("./stageParts.ts");
+  const stage = ladderFor("ja")!.stages[0]!;
+  const now = Date.UTC(2026, 9, 25, 12);
+  const day = (at: number) => new Date(at).toISOString().slice(0, 10);
+  const ledger = ledgerWith("ja", [["駅", "mastered"], [stage.expressions[0]!, "learned"]]);
+  ledger.items[ledgerKey("駅")]!.masteredAt = now;
+  const node = grammarNodeId(1, stage.grammar[0]!);
+  const out = partHistory({ stage, language: "ja", ledger, phrases: { k: { node, at: now - 86_400_000 } }, pronunciationDays: { [day(now)]: 2 }, now, dayOf: day });
+  assert.equal(out.vocab.length, HISTORY_DAYS);
+  assert.equal(out.vocab.at(-1), 1); // 처음 쓴 날(첫 만남 = 같은 날) ½ + 숙지된 날 ½
+  assert.equal(out.pronunciation.at(-1), 2);
+  assert.equal(out.grammar.at(-2), 0); // 열쇠 k는 장부에 없음 → 세지 않음
+});
