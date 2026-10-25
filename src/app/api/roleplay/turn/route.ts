@@ -392,7 +392,7 @@ export async function POST(request: NextRequest) {
   // A pack turn: the tutor reacts and picks the pack's next question rather
   // than asking its own, so the practice brief's "ask the question a phrase
   // answers" would pull the other way and is left out (pack.ts packPrompt).
-  const packOptions: Candidate[] = playingPack ? candidates(playingPack) : [];
+  const packOptions: Candidate[] = playingPack ? candidates(playingPack, turn.heard) : [];
   let packChoice: Candidate | null = null;
   const model = tutorModel();
   // Reasoning models spend hidden tokens before answering and take their cap

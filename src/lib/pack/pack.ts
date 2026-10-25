@@ -312,7 +312,16 @@ export type Candidate = {
  * follow-up that fits the same opener, and the start of the next exchange.
  * Empty when every question has been asked.
  */
-export function candidates(pack: Pack): Candidate[] {
+/**
+ * 학습자의 줄이 튜터에게 묻는 말인지(물음표로 끝남). 그 뒤엔 "그 사람이 한 말에 대한 꼬리 질문"을 고를 수 없다 —
+ * 튜터가 꼬리 질문을 하려고 자기가 한 말을 학습자가 한 것처럼 물었다("When did you start?" → "the new series you said you began",
+ * 2026-10-26 사용자 폰).
+ */
+export function asksBack(heard: string | undefined): boolean {
+  return /[?？؟]\s*["'”’」)]*\s*$/u.test((heard ?? "").trim());
+}
+
+export function candidates(pack: Pack, heard?: string): Candidate[] {
   const item = pack.items[pack.cursor];
   if (!item) return [];
   const out: Candidate[] = [];
@@ -338,7 +347,7 @@ export function candidates(pack: Pack): Candidate[] {
   const followed = pack.turns.filter((turn) => turn.followed).length;
   const last = pack.turns[pack.turns.length - 1];
   // Not after the greeting, which is small talk on its way to the first question.
-  if (pack.cursor > 0 && followed < PACK_FOLLOWS && !last?.followed) {
+  if (pack.cursor > 0 && followed < PACK_FOLLOWS && !last?.followed && !asksBack(heard)) {
     out.push({ slot: out.length + 1, index: pack.cursor, text: "", translation: "", follow: true });
   }
   return out;
@@ -451,9 +460,9 @@ export function packPrompt(pack: Pack, options: Candidate[]): string {
   }
   const listed = options.map((option) =>
     option.follow
-      ? `${option.slot}. (a short follow-up question of your own about something they just told you — only when their answer opened something worth asking about)`
+      ? `${option.slot}. (a short follow-up question of your own about something they just told you in their own last line — only when their answer opened something worth asking about; never about anything you said yourself)`
       : option.free
-        ? `${option.slot}. (a short question of your own that gives them a natural chance to say "${option.free}" — do not say it or hint at it yourself)`
+        ? `${option.slot}. (a short question of your own about a moment where "${option.free}" is what a person would naturally say in answer — think of when people actually use it and ask about that kind of moment; a question they could answer just as well without it does not count; do not say it or hint at it yourself, and do not tell a story of your own first)`
         : `${option.slot}. "${option.text}"`,
   );
   return [

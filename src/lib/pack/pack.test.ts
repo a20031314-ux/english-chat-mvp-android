@@ -5,6 +5,7 @@ import type { Direction } from "../roleplay/director.ts";
 import {
   PACK_ITEMS,
   advance,
+  asksBack,
   candidates,
   chooseFocus,
   composePack,
@@ -304,4 +305,15 @@ test("the tutor may follow up on what they said: the planned question waits, nev
     pack = advance(pack, turn, pick);
   }
   assert.ok(pack.turns.filter((t) => t.followed).length <= 3);
+});
+
+test("they asked the tutor something: no follow-up of the tutor's own is offered (it asked about its own story as theirs, 2026-10-26)", () => {
+  let pack = compose({ centre: "accuracy", side: "words" });
+  pack = advance(pack, { at: NOW, latencyMs: 2000, attempts: 1, corrected: false, stuck: false, used: [] }, candidates(pack)[0]!);
+  assert.ok(candidates(pack, "I watched it with my sister.").some((c) => c.follow));
+  for (const heard of ["What did you watch?", "¿Y tú qué viste?", "何を見ましたか？", "ماذا شاهدت؟"]) {
+    assert.ok(!candidates(pack, heard).some((c) => c.follow), heard);
+    assert.ok(asksBack(heard), heard);
+  }
+  assert.equal(asksBack("I don't know."), false);
 });
