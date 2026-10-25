@@ -1199,7 +1199,7 @@ test("a note that explains the character's own next line is not shown under thei
 });
 
 test("quotesOwnLine: spaced and spaceless scripts", async () => {
-  const { quotesOwnLine } = await import("./director.ts");
+  const { quotesOwnLine } = await import("./noteCheck.ts");
   assert.equal(quotesOwnLine('Di "¿qué estás haciendo ahora?"', ["¿Qué estás haciendo ahora?"], "Estoy en casa"), true);
   assert.equal(quotesOwnLine('"estoy en casa" está bien', ["¿Qué haces?"], "Estoy en casa"), false);
   assert.equal(quotesOwnLine("「今何をしていますか」と聞いています", ["今何をしていますか？"], "家にいます"), true);

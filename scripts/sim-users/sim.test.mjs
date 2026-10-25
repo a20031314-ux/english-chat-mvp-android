@@ -173,3 +173,12 @@ test("언어 가리기: 괄호 풀이·로마자 이름·짧은 라틴 글은 �
 test("사람 사이 묶음이 모두 등록돼 있다", () => {
   for (const id of ["rooms", "roomsplus", "dm", "groups", "people", "notes"]) assert.ok(suiteById(id), id);
 });
+
+test("내 줄 아래 설명이 상대 말을 설명하면 잡는다(2026-10-25 통화 팁)", async () => {
+  const { checkAboutTheirLine } = await import("./detect.mjs");
+  const off = checkAboutTheirLine("call", { tip: '누워 있으면서 보는 것 예: "Are you watching something?"', heard: "I am lying on the bed.", otherSaid: ["Sounds relaxing! Are you watching or reading something from bed?"] });
+  assert.equal(off[0]?.kind, "call_tip_offtopic");
+  assert.deepEqual(checkAboutTheirLine("call", { tip: '"lying in bed"가 자연스러워요', heard: "I am lying on the bed.", otherSaid: ["Nice!"] }), []);
+  // 띄어쓰기 없는 말
+  assert.equal(checkAboutTheirLine("explanation", { tip: "「今何をしていますか」の意味です", heard: "家にいます", otherSaid: ["今何をしていますか？"] }).length, 1);
+});
