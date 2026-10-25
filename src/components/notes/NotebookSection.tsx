@@ -8,7 +8,7 @@ import type { UICopy } from "@/lib/copy";
 import type { CustomNode, FixCard, NotebookChapter, NotebookEdit } from "@/lib/notes/notebook";
 import { sceneShotFor } from "@/lib/notes/sceneShots";
 import { onLocate, takeLocate, type LocateHandoff } from "@/lib/notes/locateHandoff";
-import { shareOf, type PartId, type StageParts } from "@/lib/notes/stageParts";
+import { PART_IDS, shareOf, type PartId, type StageParts } from "@/lib/notes/stageParts";
 import { sendAppIntent } from "@/lib/appIntents";
 
 /**
@@ -38,6 +38,8 @@ type Book = {
   parts?: StageParts[];
   words?: { text: string; state: "met" | "learned" | "mastered" }[];
   pronunciationNotes?: Record<string, string>;
+  /** 지금 단계 갈래별 최근 14일(그래프 보기). */
+  partDays?: Record<PartId, number[]> | null;
 };
 type PhraseView = { key: string; text: string; state: "met" | "learned" | "mastered"; node: string };
 type Group = NotebookChapter | "mine" | "loose";
@@ -81,6 +83,9 @@ export function NotebookSection({
   onTry,
   onNextStage,
   canSpeak = false,
+  view,
+  part: focusPart = null,
+  onPart,
 }: {
   ui: UICopy;
   locale: string;
@@ -98,6 +103,11 @@ export function NotebookSection({
   onNextStage?: (order: number) => void;
   /** AI 통화로 말해 볼 수 있는지(발음 연습 버튼). */
   canSpeak?: boolean;
+  /** 틀 밖(frame false)에서 그릴 보기: 망 = 네 꼭짓점, 그래프 = 갈래별 2주. 갈래를 누르면 onPart(→ 단계 보기). */
+  view?: "net" | "graph" | "map";
+  /** 단계 보기에서 처음 열 갈래(망·그래프에서 누른 것). */
+  part?: PartId | null;
+  onPart?: (part: PartId) => void;
 }) {
   const [book, setBook] = useState<Book | null>(null);
   const [group, setGroup] = useState<Group | null>(null);
@@ -300,7 +310,11 @@ export function NotebookSection({
           onTry={onTry}
           onNextStage={onNextStage}
           canSpeak={canSpeak}
+          focusPart={focusPart}
         />
+      ) : null}
+      {!frame && (view === "net" || view === "graph") && book.parts?.length ? (
+        <PartsOverview ui={ui} view={view} parts={book.parts.find((row) => row.order === book.stage) ?? book.parts[0]!} days={book.partDays ?? null} onPart={onPart} />
       ) : null}
       {frame ? (
       <ul className="mt-2 divide-y divide-white/5">
@@ -441,6 +455,115 @@ export function NotebookSection({
  * 짚인 장면이 든 칸은 채워진 점 + 횟수, 위에 "채운 칸 / 이 단계 칸". 다음 단계도 눌러 미리 본다.
  * 설명 글 없이 번호·이름·숫자만(hub/DESIGN.md "안내 글").
  */
+function partLabels(ui: UICopy): Record<PartId, string> {
+  return { vocab: ui.partVocab, grammar: ui.partGrammar, expression: ui.partExpression, pronunciation: ui.partPronunciation };
+}
+
+/**
+ * 망·그래프 보기(2026-10-25 사용자 "망, 그래프도 변경 내용에 맞게 통합" → 1번): 단계 보기와 같은 네 갈래.
+ * 망 = 지금 단계에서 찬 정도(꼭짓점, 점선 = 다음 단계 기준 70%), 그래프 = 갈래마다 최근 14일 막대. 갈래를 누르면 단계 보기의 그 갈래.
+ */
+function PartsOverview({
+  ui,
+  view,
+  parts,
+  days,
+  onPart,
+}: {
+  ui: UICopy;
+  view: "net" | "graph";
+  parts: StageParts;
+  days: Record<PartId, number[]> | null;
+  onPart?: (part: PartId) => void;
+}) {
+  const label = partLabels(ui);
+  const byId = new Map(parts.parts.map((row) => [row.id, row]));
+  const head = (
+    <p className="mt-2 text-caption text-slate-400">
+      <span className="font-semibold text-ink">{ui.stageNumber.replace("{n}", String(parts.order))}</span>
+      {parts.ready ? <> · {ui.partReady}</> : parts.weakest ? <> · {ui.partToNext.replace("{part}", label[parts.weakest])}</> : null}
+    </p>
+  );
+  if (view === "graph") {
+    const top = Math.max(1, ...PART_IDS.flatMap((id) => days?.[id] ?? []));
+    return (
+      <div>
+        {head}
+        <ul className="mt-2 space-y-1">
+          {PART_IDS.map((id) => {
+            const row = byId.get(id);
+            const list = days?.[id] ?? [];
+            const sum = list.reduce((a, b) => a + b, 0);
+            const weakest = parts.weakest === id;
+            return (
+              <li key={id}>
+                <button type="button" onClick={() => onPart?.(id)} className="flex w-full items-center gap-3 rounded-lg px-2 py-2 text-start hover:bg-white/5">
+                  <span className={`w-20 shrink-0 text-note ${weakest ? "font-semibold text-warn" : "text-ink"}`}>{label[id]}</span>
+                  <span dir="ltr" className="flex h-8 min-w-0 flex-1 items-end gap-0.5">
+                    {list.map((value, index) => (
+                      <span
+                        key={index}
+                        className={`min-w-0 flex-1 rounded-sm ${value ? (weakest ? "bg-warn" : "bg-status-learned") : "bg-white/[0.06]"}`}
+                        style={{ height: `${value ? Math.max(12, Math.round((value / top) * 100)) : 8}%` }}
+                      />
+                    ))}
+                  </span>
+                  <span className="w-12 shrink-0 text-end text-caption tabular-nums text-slate-400">
+                    {row && !row.measured ? "–" : sum ? `+${Math.round(sum * 10) / 10}` : ""}
+                  </span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  }
+  // 망: 위 어휘 · 오른쪽 문법 · 아래 표현 · 왼쪽 발음.
+  const W = 280;
+  const C = 140;
+  const R = 92;
+  const dir: Record<PartId, [number, number]> = { vocab: [0, -1], grammar: [1, 0], expression: [0, 1], pronunciation: [-1, 0] };
+  const at = (id: PartId, share: number): [number, number] => [C + dir[id][0] * R * share, C + dir[id][1] * R * share];
+  const shape = (share: (id: PartId) => number) => PART_IDS.map((id) => at(id, share(id)).join(",")).join(" ");
+  const shareFor = (id: PartId) => {
+    const row = byId.get(id);
+    return row && row.measured ? Math.max(0.04, shareOf(row)) : 0.04;
+  };
+  return (
+    <div>
+      {head}
+      <div className="relative mx-auto mt-2 aspect-square w-full max-w-[18rem]" dir="ltr">
+        <svg viewBox={`0 0 ${W} ${W}`} className="absolute inset-0 h-full w-full" aria-hidden>
+          <polygon points={shape(() => 1)} className="fill-white/[0.03] stroke-white/10" />
+          <polygon points={shape(() => 0.7)} className="fill-none stroke-white/30" strokeDasharray="4 4" />
+          {PART_IDS.map((id) => (
+            <line key={id} x1={C} y1={C} x2={at(id, 1)[0]} y2={at(id, 1)[1]} className="stroke-white/10" />
+          ))}
+          <polygon points={shape(shareFor)} className="fill-status-learned/30 stroke-status-learned" strokeWidth={2} />
+        </svg>
+        {PART_IDS.map((id) => {
+          const row = byId.get(id);
+          const weakest = parts.weakest === id;
+          const pos =
+            id === "vocab" ? "left-1/2 top-0 -translate-x-1/2" : id === "grammar" ? "right-0 top-1/2 -translate-y-1/2" : id === "expression" ? "bottom-0 left-1/2 -translate-x-1/2" : "left-0 top-1/2 -translate-y-1/2";
+          return (
+            <button
+              key={id}
+              type="button"
+              onClick={() => onPart?.(id)}
+              className={`absolute ${pos} rounded-lg bg-surface/80 px-2 py-1 text-center text-caption ${weakest ? "text-warn" : "text-ink"}`}
+            >
+              <span className="block font-semibold">{label[id]}</span>
+              <span className="block tabular-nums text-slate-400">{row?.measured ? `${Math.round(row.done)}/${row.total}` : ui.myNoData}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
 /** 갈래마다 노트 고정 칸(그 갈래를 열면 아래에 칸 줄로). 문법은 단계 칸, 발음은 글자·소리 칸. */
 const PART_NODES: Record<PartId, readonly string[]> = {
   vocab: ["d-word", "d-spelling"],
@@ -473,6 +596,7 @@ function StageFrame({
   onTry,
   onNextStage,
   canSpeak,
+  focusPart = null,
 }: {
   ui: UICopy;
   stages: { order: number; title: string }[];
@@ -493,6 +617,8 @@ function StageFrame({
   onTry?: (stage: number, index: number) => void;
   onNextStage?: (order: number) => void;
   canSpeak: boolean;
+  /** 망·그래프에서 누른 갈래 — 지금 단계의 그 갈래를 연다. */
+  focusPart?: PartId | null;
 }) {
   const now = Math.max(1, Math.min(current, stages.length));
   const [shown, setShown] = useState(focus ?? now);
@@ -502,7 +628,7 @@ function StageFrame({
   }, [focus]);
   const stageParts = parts.find((row) => row.order === shown) ?? null;
   // 고른 갈래: 처음엔 가장 모자란 갈래(없으면 문법). "My에서 찾기"로 온 문법 칸이면 문법.
-  const [picked, setPicked] = useState<PartId | null>(null);
+  const [picked, setPicked] = useState<PartId | null>(focusPart);
   const part: PartId = picked ?? (focus ? "grammar" : (stageParts?.weakest ?? "grammar"));
   const inStage = (order: number) => nodes.filter((node) => (node.stage ?? 1) === order);
   const filledOf = (node: NodeView) => Boolean(fill[node.id]) || Boolean(masteredOf?.(node.stage ?? 1, node.index ?? -1));

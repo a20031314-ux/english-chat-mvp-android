@@ -3,39 +3,18 @@
 import { useEffect, useState, type ReactNode } from "react";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
-import { sendAppIntent } from "@/lib/appIntents";
-import { BodyLayer } from "@/components/FullScreenLayer";
 import type { UICopy } from "@/lib/copy";
-import type { ElementId, ElementView, GrowthView } from "@/lib/learner/growth";
-import { GAP_STEP } from "@/lib/learner/next";
-import { learningLanguageTextDir } from "@/lib/learningLanguages";
+import type { ElementId } from "@/lib/learner/growth";
 import { onLocate } from "@/lib/notes/locateHandoff";
+import { sendAppIntent } from "@/lib/appIntents";
+import { GAP_STEP } from "@/lib/learner/next";
+import type { PartId } from "@/lib/notes/stageParts";
 
 /**
- * The My tab's picture of a learner's language: six elements around "me",
- * each as big as it has grown (learner/growth.ts). Leaves are the phrases that
- * grew it; one small element carries "grow this next". Tapping an element
- * opens what grew it, the last two weeks, and a way to grow it now.
- * (hub/drafts/my-growth-network.md)
+ * My "자라는 중": 보기 칩 [망 | 그래프 | 단계]와 그 아래 노트 틀(NotebookSection이 그림), 내 학습에 대해 묻기.
+ * 2026-10-25부터 세 보기 모두 같은 네 갈래(어휘·문법·표현·발음, notes/stageParts.ts) — 예전 여섯 요소(learner/growth.ts)는
+ * 화면에서 빠지고 계산(오늘 해볼 것·튜터 요약)에만 남는다. elementNames는 팩 카드가 쓴다.
  */
-
-const W = 360;
-const H = 300;
-const CX = W / 2;
-const CY = 140;
-/** Where each element sits, clockwise from the top left. */
-const PLACE: Record<ElementId, { x: number; y: number }> = {
-  words: { x: CX - 95, y: CY - 78 },
-  listening: { x: CX + 95, y: CY - 78 },
-  natural: { x: CX + 128, y: CY + 22 },
-  pronunciation: { x: CX + 62, y: CY + 108 },
-  speaking: { x: CX - 62, y: CY + 108 },
-  accuracy: { x: CX - 128, y: CY + 22 },
-};
-
-function radius(stage: number): number {
-  return 13 + (Math.max(1, Math.min(6, stage)) - 1) * 5.5;
-}
 
 export function elementNames(ui: UICopy): Record<ElementId, string> {
   return {
@@ -48,38 +27,10 @@ export function elementNames(ui: UICopy): Record<ElementId, string> {
   };
 }
 
-function facts(ui: UICopy): Record<ElementId, string> {
-  return {
-    speaking: ui.myFactSpeaking,
-    accuracy: ui.myFactAccuracy,
-    words: ui.myFactWords,
-    listening: ui.myFactListening,
-    pronunciation: ui.myFactPronunciation,
-    natural: ui.myFactNatural,
-  };
-}
-
-function hows(ui: UICopy): Record<ElementId, string> {
-  return {
-    speaking: ui.myHowSpeaking,
-    accuracy: ui.myHowAccuracy,
-    words: ui.myHowWords,
-    listening: ui.myHowListening,
-    pronunciation: ui.myHowPronunciation.replace("{button}", ui.roleplaySayAgain),
-    natural: ui.myHowNatural,
-  };
-}
-
-function factLine(element: ElementView, ui: UICopy): string {
-  if (!element.measured) return ui.myNoData;
-  if (element.resting) return ui.myResting;
-  if (element.points === 0) return "";
-  return facts(ui)[element.id].replace("{n}", String(element.points));
-}
-
-/** The words a practice conversation for an element opens with, as "try this" calls it. */
-function growTitle(id: ElementId, ui: UICopy): string {
-  return {
+/** "내 학습에 대해 묻기" 답이 짚은 요소로 바로 연습. */
+function growElement(id: ElementId, ui: UICopy) {
+  const step = GAP_STEP[id];
+  const title = {
     speaking: ui.nextGapSpeaking,
     accuracy: ui.nextGapAccuracy,
     words: ui.nextGapWords,
@@ -87,6 +38,7 @@ function growTitle(id: ElementId, ui: UICopy): string {
     pronunciation: ui.nextGapPronunciation,
     natural: ui.nextGapNatural,
   }[id];
+  sendAppIntent("practice", { tab: step.tab, goal: { situation: step.situation }, title });
 }
 
 /** How the learner chose to look at their record; remembered on this device. */
@@ -112,12 +64,15 @@ function readViewMode(): MyViewMode {
   }
 }
 
+export type BoardMode = MyViewMode;
+/** 세 보기가 같은 네 갈래(어휘·문법·표현·발음)를 그린다 — 망·그래프에서 갈래를 누르면 단계 보기의 그 갈래로. */
+export type BoardOptions = { part: PartId | null; onPart: (part: PartId) => void };
+
 export function GrowthNetwork({
   ui,
   locale,
   targetLanguage,
   isPremium,
-  refreshKey,
   mapSlot,
   board,
 }: {
@@ -130,13 +85,14 @@ export function GrowthNetwork({
   /** The goal's topics, shown when the learner looks at their record as a map; none before a map is drawn. */
   mapSlot?: ReactNode;
   /**
-   * 수준별 틀(노트 뼈대, 2026-10-24 사용자 "망·그래프 구조를 노트에 통합"): "단계" 보기에서는 단계 사다리·칸 전체를,
-   * 망·그래프에서는 오늘의 학습 버튼만(인자 false) 그린다. mapSlot(목표 주제)은 틀 아래.
+   * 수준별 틀(2026-10-25 사용자 "망, 그래프도 변경 내용에 맞게 통합" → 1번): 세 보기 모두 노트 틀의 네 갈래.
+   * 망 = 네 꼭짓점(지금 단계에서 찬 정도), 그래프 = 갈래마다 최근 2주, 단계 = 사다리·갈래·칸·대화 예시.
    */
-  board?: (inBoard: boolean) => ReactNode;
+  board?: (mode: BoardMode, options: BoardOptions) => ReactNode;
 }) {
-  const [view, setView] = useState<GrowthView | null>(null);
   const [mode, setModeState] = useState<MyViewMode>(readViewMode);
+  const [part, setPart] = useState<PartId | null>(null);
+  const [goalMapOpen, setGoalMapOpen] = useState(false);
   const setMode = (next: MyViewMode) => {
     setModeState(next);
     try {
@@ -145,31 +101,15 @@ export function GrowthNetwork({
       // Back to the web next time; nothing lost.
     }
   };
-  const [open, setOpen] = useState<ElementId | null>(null);
-  const [goalMapOpen, setGoalMapOpen] = useState(false);
   // 문장분석 시트 "My에서 찾기"로 오면 "단계" 보기로(이미 열려 있을 때 — 처음 열 때는 handOffLocate가 기억한 보기).
   useEffect(() => onLocate(() => setModeState("map")), []);
-
-  useEffect(() => {
-    let cancelled = false;
-    const tz = -new Date().getTimezoneOffset();
-    void fetch(apiUrl(`/api/learner/growth?lang=${encodeURIComponent(targetLanguage)}&tz=${tz}`), {
-      headers: entitlementHeaders(isPremium),
-    })
-      .then((response) => (response.ok ? response.json() : null))
-      .then((data: GrowthView | null) => {
-        if (!cancelled && data && Array.isArray(data.elements)) setView(data);
-      })
-      .catch(() => undefined);
-    return () => {
-      cancelled = true;
-    };
-  }, [targetLanguage, isPremium, refreshKey]);
-
-  if (!view) return null;
-  const names = elementNames(ui);
-  const total = view.elements.reduce((sum, e) => sum + e.points, 0);
-  const opened = open ? view.elements.find((e) => e.id === open) ?? null : null;
+  const options: BoardOptions = {
+    part,
+    onPart: (next) => {
+      setPart(next);
+      setMode("map");
+    },
+  };
 
   return (
     <section aria-label={ui.myNetworkTitle} className="mt-3 rounded-2xl border border-white/10 px-3 pb-3 pt-3">
@@ -197,15 +137,11 @@ export function GrowthNetwork({
           ))}
         </div>
       </div>
-      {mode !== "map" && total === 0 ? <p className="mt-1 px-1 text-[11px] text-slate-500">{ui.myStart}</p> : null}
-      {mode !== "map" && board ? <div className="px-1">{board(false)}</div> : null}
-      {mode === "graph" ? (
-        <GrowthGraph ui={ui} view={view} onOpen={setOpen} />
-      ) : mode === "map" ? (
-        <div className="mt-2">
-          {board ? <div className="px-1">{board(true)}</div> : null}
-          {/* 예전 목표 지도(상황·미션)는 틀과 섞이지 않게 접어 둔다(2026-10-25 사용자: 예전 구조와 섞이면 난잡하다). */}
-          {mapSlot ? (
+      <div className="mt-2">
+        {board ? <div className="px-1">{board(mode, options)}</div> : null}
+        {mode === "map" ? (
+          /* 예전 목표 지도(상황·미션)는 틀과 섞이지 않게 접어 둔다(2026-10-25 사용자: 예전 구조와 섞이면 난잡하다). */
+          mapSlot ? (
             board ? (
               <>
                 <button
@@ -224,163 +160,12 @@ export function GrowthNetwork({
             )
           ) : board ? null : (
             <p className="px-1 py-6 text-center text-[12px] text-slate-400">{ui.myViewMapEmpty}</p>
-          )}
-        </div>
-      ) : (
-      <svg viewBox={`0 0 ${W} ${H}`} className="mt-1 w-full" role="group" aria-label={ui.myNetworkTitle}>
-        {view.elements.map((e) => (
-          <line
-            key={`l-${e.id}`}
-            x1={CX}
-            y1={CY}
-            x2={PLACE[e.id].x}
-            y2={PLACE[e.id].y}
-            className="stroke-white/15"
-            strokeWidth={1}
-          />
-        ))}
-        <circle cx={CX} cy={CY} r={15} className="fill-white/10 stroke-white/25" />
-        <text x={CX} y={CY + 4} textAnchor="middle" className="fill-slate-200 text-[11px]">
-          {ui.myCenter}
-        </text>
-        {view.elements.map((e) => {
-          const { x, y } = PLACE[e.id];
-          const r = radius(e.stage);
-          const isNext = view.next === e.id;
-          const leaves = e.leaves.slice(0, 5);
-          const out = Math.atan2(y - CY, x - CX);
-          const fact = factLine(e, ui);
-          return (
-            <g
-              key={e.id}
-              role="button"
-              tabIndex={0}
-              aria-label={`${names[e.id]}${fact ? ` · ${fact}` : ""}${isNext ? ` · ${ui.myNext}` : ""}`}
-              onClick={() => setOpen(e.id)}
-              onKeyDown={(event) => {
-                if (event.key === "Enter" || event.key === " ") {
-                  event.preventDefault();
-                  setOpen(e.id);
-                }
-              }}
-              className={`cursor-pointer outline-none ${e.resting ? "opacity-45" : ""}`}
-            >
-              {leaves.map((_, i) => {
-                const angle = out + (i - (leaves.length - 1) / 2) * 0.42;
-                const lx = x + Math.cos(angle) * (r + 12);
-                const ly = y + Math.sin(angle) * (r + 12);
-                return (
-                  <g key={i}>
-                    <line x1={x} y1={y} x2={lx} y2={ly} className="stroke-emerald-300/30" strokeWidth={1} />
-                    <circle cx={lx} cy={ly} r={3.5} className="fill-emerald-300/70" />
-                  </g>
-                );
-              })}
-              {isNext ? (
-                <circle cx={x} cy={y} r={r + 6} fill="none" className="stroke-rose-300" strokeWidth={1.5} strokeDasharray="3 3" />
-              ) : null}
-              <circle
-                cx={x}
-                cy={y}
-                r={r}
-                className={e.measured ? "fill-emerald-400/25 stroke-emerald-300/70" : "fill-transparent stroke-slate-500"}
-                strokeWidth={1.2}
-                strokeDasharray={e.measured ? undefined : "3 3"}
-              />
-              <circle cx={x} cy={y} r={Math.max(r, 22)} fill="transparent" />
-              <text x={x} y={y + r + 13} textAnchor="middle" className="fill-slate-100 text-[11px] font-medium">
-                {names[e.id]}
-              </text>
-              {isNext ? (
-                <text x={x} y={y + r + 26} textAnchor="middle" className="fill-rose-300 text-[10.5px]">
-                  {ui.myNext}
-                </text>
-              ) : fact ? (
-                <text x={x} y={y + r + 26} textAnchor="middle" className="fill-slate-400 text-[10.5px]">
-                  {fact}
-                </text>
-              ) : null}
-            </g>
-          );
-        })}
-      </svg>
-      )}
+          )
+        ) : null}
+      </div>
       <AskBox ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
-      {opened ? (
-        <ElementSheet
-          ui={ui}
-          element={opened}
-          isNext={view.next === opened.id}
-          targetLanguage={targetLanguage}
-          onClose={() => setOpen(null)}
-          onStages={
-            board
-              ? () => {
-                  // 표현 폭은 노트의 어휘·표현(단어장), 나머지는 단계 틀(문법·글자·소리 칸에 짚인 장면).
-                  if (opened.id === "words") sendAppIntent("openNotes", { section: "words" });
-                  else setMode("map");
-                  setOpen(null);
-                }
-              : undefined
-          }
-        />
-      ) : null}
     </section>
   );
-}
-
-/**
- * The same record as rows: each element's last fourteen days as bars, all on
- * one scale so a busy element and a quiet one can be told apart at a glance.
- */
-function GrowthGraph({ ui, view, onOpen }: { ui: UICopy; view: GrowthView; onOpen: (id: ElementId) => void }) {
-  const names = elementNames(ui);
-  const top = Math.max(1, ...view.elements.flatMap((e) => e.daily));
-  return (
-    <div className="mt-2 space-y-1">
-      {view.elements.map((e) => {
-        const isNext = view.next === e.id;
-        const fact = factLine(e, ui);
-        return (
-          <button
-            key={e.id}
-            type="button"
-            onClick={() => onOpen(e.id)}
-            aria-label={`${names[e.id]}${fact ? ` · ${fact}` : ""}${isNext ? ` · ${ui.myNext}` : ""}`}
-            className={`flex w-full items-center gap-3 rounded-xl px-2 py-2 text-start hover:bg-white/[0.04] ${
-              isNext ? "ring-1 ring-rose-300/50" : ""
-            } ${e.resting ? "opacity-45" : ""}`}
-          >
-            <span className="w-24 shrink-0">
-              <span className="block truncate text-[12.5px] font-medium text-slate-100">{names[e.id]}</span>
-              <span className={`block truncate text-[10.5px] ${isNext ? "text-rose-300" : "text-slate-400"}`}>
-                {isNext ? ui.myNext : fact || (e.measured ? "" : ui.myNoData)}
-              </span>
-            </span>
-            <span aria-hidden className="flex h-8 min-w-0 flex-1 items-end gap-[3px]">
-              {e.daily.map((n, i) => (
-                <span
-                  key={i}
-                  className={`flex-1 rounded-sm ${n > 0 ? "bg-emerald-400/80" : "bg-white/[0.06]"}`}
-                  style={{ height: n > 0 ? `${Math.max(18, (n / top) * 100)}%` : "18%" }}
-                />
-              ))}
-            </span>
-            <span className="w-10 shrink-0 text-end text-[11px] text-emerald-300">{e.week > 0 ? `+${e.week}` : ""}</span>
-          </button>
-        );
-      })}
-      <p className="flex justify-between px-2 pt-1 text-[10px] text-slate-500">
-        <span>{ui.myDaily}</span>
-      </p>
-    </div>
-  );
-}
-
-/** Start the conversation that grows an element, as "try this" would. */
-function growElement(id: ElementId, ui: UICopy) {
-  const step = GAP_STEP[id];
-  sendAppIntent("practice", { tab: step.tab, goal: { situation: step.situation }, title: growTitle(id, ui) });
 }
 
 /**
@@ -499,114 +284,5 @@ function AskBox({
         </div>
       ) : null}
     </div>
-  );
-}
-
-function ElementSheet({
-  ui,
-  element,
-  isNext,
-  targetLanguage,
-  onClose,
-  onStages,
-}: {
-  ui: UICopy;
-  element: ElementView;
-  isNext: boolean;
-  targetLanguage: string;
-  onClose: () => void;
-  onStages?: () => void;
-}) {
-  const name = elementNames(ui)[element.id];
-  const fact = factLine(element, ui);
-  const peak = Math.max(1, ...element.daily);
-  const grow = () => {
-    growElement(element.id, ui);
-    onClose();
-  };
-  return (
-    <BodyLayer>
-      <div className="fixed inset-0 z-[80] flex flex-col justify-end bg-black/60 p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-[max(0.5rem,env(safe-area-inset-top))] sm:items-center sm:justify-center">
-        <button type="button" className="absolute inset-0 cursor-default" aria-label={ui.billingClose} onClick={onClose} />
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label={name}
-          className="relative z-10 max-h-full w-full max-w-md overflow-y-auto overscroll-contain rounded-2xl border border-white/10 bg-[#0e0e0e] p-4"
-        >
-          <div className="flex items-start gap-2">
-            <div className="min-w-0 flex-1">
-              {isNext ? <p className="text-[11px] font-semibold text-rose-300">{ui.myNext}</p> : null}
-              <h3 className="text-base font-semibold text-white">{name}</h3>
-              {fact ? <p className="mt-0.5 text-[13px] text-slate-300">{fact}</p> : null}
-            </div>
-            <button
-              type="button"
-              onClick={onClose}
-              aria-label={ui.billingClose}
-              className="shrink-0 rounded-lg px-2 py-1 text-sm text-slate-400 hover:bg-white/10"
-            >
-              ✕
-            </button>
-          </div>
-          <p className="mt-2 text-[12px] leading-relaxed text-slate-400">{hows(ui)[element.id]}</p>
-
-          {element.measured ? (
-            <div className="mt-4">
-              <div className="flex items-baseline justify-between">
-                <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.myDaily}</p>
-                {element.week > 0 ? (
-                  <p className="text-[11px] text-emerald-300">{ui.myWeek.replace("{n}", String(element.week))}</p>
-                ) : null}
-              </div>
-              <div className="mt-2 flex h-16 items-end gap-1" aria-hidden>
-                {element.daily.map((n, i) => (
-                  <div key={i} className="flex h-full flex-1 flex-col justify-end rounded-sm bg-white/[0.06]">
-                    <div
-                      className="w-full rounded-sm bg-emerald-400/60"
-                      style={{ height: `${n ? Math.max(8, (n / peak) * 100) : 0}%` }}
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          ) : null}
-
-          {element.leaves.length ? (
-            <div className="mt-4">
-              <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.myLeaves}</p>
-              <div className="mt-1.5 flex flex-wrap gap-1.5">
-                {element.leaves.map((leaf) => (
-                  <span
-                    key={leaf}
-                    dir={learningLanguageTextDir(targetLanguage)}
-                    className="rounded-full bg-white/10 px-2 py-0.5 text-[12px] text-slate-100"
-                  >
-                    {leaf}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ) : null}
-
-          <button
-            type="button"
-            onClick={grow}
-            className="mt-5 w-full rounded-xl bg-[#e8e8e4] px-4 py-3 text-[14px] font-semibold text-neutral-900 hover:bg-white"
-          >
-            {ui.myGrowIt}
-          </button>
-          {onStages ? (
-            <button
-              type="button"
-              onClick={onStages}
-              className="mt-2 w-full rounded-xl border border-line px-4 py-2.5 text-note text-slate-200 hover:bg-white/5"
-            >
-              {element.id === "words" ? ui.homeTabVocab : ui.myOpenStage}
-            </button>
-          ) : null}
-        </div>
-      </div>
-    </BodyLayer>
   );
 }
