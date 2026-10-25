@@ -363,9 +363,10 @@ STORIES.analyze = () => ev.pickStart != null ? {
 STORIES.call = () => {
   const parts = (process.env.PROMO_PARTS || "hook,say,fix,more").split(",");
   const segs = [];
-  if (parts.includes("hook")) segs.push([Math.max(0, ev.callTap - 1.0), ev.transTap + 0.3, 1, "hook"]);
+  // 통화 화면만(사용자 2026-10-26 "통화기능만") — 채팅에서 📞 누르는 장면은 빼고, 첫 편은 튜터 인사 위에 hook.
+  if (parts.includes("hook")) segs.push([ev.transTap + 0.6, ev.said1 - 0.3, Math.max(1, (ev.said1 - ev.transTap) / 3.5), "hook"]);
   if (parts.includes("say")) {
-    segs.push([parts.includes("hook") ? ev.transTap + 0.3 : Math.max(0, ev.said1 - 4), ev.said1 - 0.3, parts.includes("hook") ? Math.max(1, (ev.said1 - ev.transTap) / 4) : 2, "say"]);
+    if (!parts.includes("hook")) segs.push([Math.max(ev.transTap + 0.6, ev.said1 - 4), ev.said1 - 0.3, 2, "say"]);
     segs.push([ev.said1 - 0.3, ev.chip + 0.6, 1, "say"]);
   }
   if (parts.includes("fix")) {
