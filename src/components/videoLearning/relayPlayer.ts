@@ -1,6 +1,7 @@
 "use client";
 
 import { getApiBase } from "@/lib/apiBase";
+import { turnDiagnosticsEnabled } from "@/lib/platform";
 
 /**
  * A YouTube player that lives one frame further away, for the iOS app.
@@ -51,6 +52,8 @@ export class RelayPlayer {
     url.searchParams.set("v", options.videoId);
     url.searchParams.set("autoplay", options.autoplay ? "1" : "0");
     url.searchParams.set("parent", window.location.origin);
+    // 진단 빌드(TestFlight diag)에서는 중계 페이지가 재생 시간·음소거·음량을 화면 아래에 보여 준다.
+    if (turnDiagnosticsEnabled()) url.searchParams.set("diag", "1");
 
     const frame = document.createElement("iframe");
     frame.src = url.toString();

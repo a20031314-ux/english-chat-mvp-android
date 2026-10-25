@@ -87,9 +87,18 @@
             try { t = player.getCurrentTime(); s = player.getPlayerState(); dur = player.getDuration(); } catch (e) {}
             send({ lbYt: "tick", time: t, state: s, duration: dur });
           }, 250);
+          // 진단(?diag=1): 재생 중에도 시간·상태·음소거·음량을 계속 보여 준다 — "화면은 나오는데 소리만 없음"을
+          // 플레이어가 음소거된 것인지(muted yes / vol 0), 아이폰 소리 길이 끊긴 것인지(muted no · vol 100) 가르려고.
+          if (statusEl) setInterval(function () {
+            var line = "";
+            try {
+              line = "t " + player.getCurrentTime().toFixed(1) + " · st " + player.getPlayerState() +
+                " · muted " + (player.isMuted() ? "yes" : "no") + " · vol " + player.getVolume();
+            } catch (e) { line = "status err"; }
+            status(line);
+          }, 1000);
         },
         onStateChange: function (e) {
-          if (e.data === 1 && statusEl) statusEl.style.display = "none";
           send({ lbYt: "state", state: e.data });
         },
         onError: function (e) { status("error " + (e && e.data)); send({ lbYt: "error", code: e && e.data }); }
