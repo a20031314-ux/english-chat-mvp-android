@@ -1,6 +1,6 @@
 "use client";
 
-import { PRIVACY_POLICY_URL, subscriptionStoreName, subscriptionTermsUrl, turnDiagnosticsEnabled } from "@/lib/platform";
+import { PRIVACY_POLICY_URL, subscriptionStoreName, subscriptionTermsUrl, turnDiagnosticsEnabled, voiceCallAvailable } from "@/lib/platform";
 import {
   createContext,
   useCallback,
@@ -8,8 +8,15 @@ import {
   useEffect,
   useMemo,
   useState,
+  useSyncExternalStore,
   type ReactNode,
 } from "react";
+
+const noSubscribe = () => () => {};
+/** 통화가 없는 빌드(iOS 1차)에서는 통화 시간·포인트·추가 팩(모두 통화에 쓰임)을 보이지도 팔지도 않는다. */
+function useCallBuilt(): boolean {
+  return useSyncExternalStore(noSubscribe, voiceCallAvailable, () => true);
+}
 import { usePremium } from "@/contexts/PremiumContext";
 import { apiUrl } from "@/lib/apiBase";
 import {
@@ -60,12 +67,12 @@ type PlanSummary = {
 };
 
 /** What a plan gives, one short line each, from the server's terms. */
-function planLines(terms: PlanSummary, ui: UICopy): string[] {
+function planLines(terms: PlanSummary, ui: UICopy, callBuilt = true): string[] {
   const lines: string[] = [];
-  if (terms.dailyCallMinutes !== null) {
+  if (callBuilt && terms.dailyCallMinutes !== null) {
     lines.push(ui.planLineCall.replace("{minutes}", String(terms.dailyCallMinutes)));
   }
-  if (terms.monthlyGrantPoints > 0) {
+  if (callBuilt && terms.monthlyGrantPoints > 0) {
     lines.push(ui.planLinePoints.replace("{points}", String(terms.monthlyGrantPoints)));
   }
   lines.push(
@@ -76,7 +83,7 @@ function planLines(terms: PlanSummary, ui: UICopy): string[] {
       ? ui.planLineLibrary
       : ui.planLineLibraryTrial.replace("{n}", String(FREE_CATALOG_TRIAL_COUNT)),
   );
-  if (terms.extraPacks > 0) lines.push(ui.planLineExtraPacks.replace("{n}", String(terms.extraPacks)));
+  if (callBuilt && terms.extraPacks > 0) lines.push(ui.planLineExtraPacks.replace("{n}", String(terms.extraPacks)));
   return lines;
 }
 
@@ -96,9 +103,10 @@ export function useBillingUi() {
 export function BillingOpenButton({ ui }: { ui: UICopy }) {
   const { openBilling } = useBillingUi();
   const { isPremium, tier } = usePremium();
+  const callBuilt = useCallBuilt();
   return (
     <div className="ml-auto flex items-center gap-2">
-      <HeaderImportPoints ui={ui} onOpen={openBilling} />
+      {callBuilt ? <HeaderImportPoints ui={ui} onOpen={openBilling} /> : null}
       <button
         type="button"
         onClick={openBilling}
@@ -194,6 +202,7 @@ export function BillingScreen({
   ui: UICopy;
   onClose: () => void;
 }) {
+  const callBuilt = useCallBuilt();
   const {
     isPremium,
     tier,
@@ -290,6 +299,11 @@ export function BillingScreen({
           .replace("{used}", String(dailyUsed))
           .replace("{limit}", String(current.dailyChat))
       : ui.planPremium.replace("{limit}", String(current.monthlyGrantPoints));
+  // 통화가 없는 빌드: 남은 통화 시간·가져오기 포인트 대신 플랜 이름과 오늘 채팅 수만.
+  const shownStatus =
+    isPremium && !callBuilt
+      ? `${planName(tier, ui)} · ${dailyUsed}/${current.dailyChat ?? "∞"}`
+      : statusText;
 
   const purchaseErrorMessage = (message?: string) => {
     if (!message) return ui.paywallPurchaseFailed;
@@ -402,16 +416,18 @@ export function BillingScreen({
               {planName(tier, ui)}
             </p>
             <p className="mt-1 text-sm leading-relaxed text-slate-200">
-              {statusText}
+              {shownStatus}
             </p>
           </div>
 
           <h2 className="mt-6 text-lg font-semibold text-white">
             {ui.paywallTitle}
           </h2>
-          <p className="mt-2 text-sm leading-relaxed text-slate-300">
-            {ui.planSubtitle}
-          </p>
+          {callBuilt ? (
+            <p className="mt-2 text-sm leading-relaxed text-slate-300">
+              {ui.planSubtitle}
+            </p>
+          ) : null}
 
           {/* Cheapest first, the plan in use marked. A plan the store does not
               sell yet is not listed (billingService.fetchPlanOffers). */}
@@ -428,7 +444,7 @@ export function BillingScreen({
                 >
                   <p className="text-sm font-semibold text-white">{name}</p>
                   <ul className="mt-1.5 space-y-1 text-[13px] text-slate-300">
-                    {planLines(termsOf(offer.tier), ui).map((line) => (
+                    {planLines(termsOf(offer.tier), ui, callBuilt).map((line) => (
                       <li key={line} className="flex gap-2">
                         <span className="text-slate-500" aria-hidden>
                           ·
@@ -455,7 +471,7 @@ export function BillingScreen({
               );
             })}
           </div>
-          <p className="mt-3 text-[12px] leading-relaxed text-slate-500">{ui.planFootnote}</p>
+          {callBuilt ? <p className="mt-3 text-[12px] leading-relaxed text-slate-500">{ui.planFootnote}</p> : null}
           {/* 구독 안내(애플 심사 3.1.2): 자동 갱신·해지 방법, 이용약관(iOS는 애플 표준 EULA)·개인정보처리방침. */}
           <p className="mt-2 text-meta leading-relaxed text-slate-500">
             {ui.paywallAutoRenew.replace("{store}", subscriptionStoreName())}
@@ -519,7 +535,7 @@ export function BillingScreen({
               Below the subscription, because a top-up only makes sense once
               there is a plan whose allowance can run out.
             */}
-            {isPremium ? <PointStore ui={ui} /> : null}
+            {isPremium && callBuilt ? <PointStore ui={ui} /> : null}
             {storeDiag ? (
               <pre dir="ltr" className="whitespace-pre-wrap break-all rounded-lg bg-white/5 p-2 font-mono text-meta text-slate-400">
                 {storeDiag}
