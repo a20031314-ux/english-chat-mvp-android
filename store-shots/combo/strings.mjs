@@ -9,10 +9,10 @@
  */
 export const SHOTS = [
   // 2026-10-25 사용자: 로그인·아이콘·프로필 세부 같은 자잘한 건 빼고 핵심 기능 위주로.
-  { id: "map", main: "mapview", details: [["stage-start", 0.36], ["mission", 0.08]] },
+  { id: "map", main: "stage-next", details: [["stage-parts", 0.4], ["stage-start", 0.36]] },
   { id: "chat", main: "chat-expression", details: [["chat-fix-open", 0.06], ["links", 0.3]] },
   { id: "ask", main: "chat-ask", details: [["chat-word", 0.0], ["pick", 0.4]] },
-  { id: "my", main: "growth", details: [["myask", 0.44], ["notebook-today", 0.45]] },
+  { id: "my", main: "parts-net", details: [["parts-graph", 0.1], ["notebook-today", 0.45]] },
   { id: "call", main: "meant", details: [["call-pack", 0.17], ["calltools", 0.4]] },
   { id: "video", main: "video-study", details: [["video-ask", 0.0], ["vocab-search", 0.04]] },
   { id: "room", main: "quote", details: [["room-game", 0.28], ["freetalk", 0.2]] },
@@ -241,6 +241,80 @@ const CHAT_VIEW = {
   hi: "कमरे चैट व्यू में", pt: "Salas em modo chat", fr: "Salons en vue chat", vi: "Phòng ở chế độ chat", id: "Ruang dalam tampilan chat",
   th: "ห้องแบบแชต", ar: "الغرف بعرض الدردشة",
 };
+const PARTS275 = {
+"ko": [
+"어휘·문법·표현·발음 네 갈래, 가장 모자란 곳부터 바로 연습",
+"어휘·문법·표현·발음이 쌓이는 게 보이고, 물어보면 기록으로 답해요",
+"이 단계의 표현",
+"최근 2주"
+],
+"en": [
+"Vocabulary, grammar, expressions, pronunciation — practise the weakest first",
+"Watch vocabulary, grammar, expressions and pronunciation fill up",
+"Expressions for this stage",
+"Last two weeks"
+],
+"ja": [
+"語彙・文法・表現・発音の4つ、いちばん足りない所からすぐ練習",
+"語彙・文法・表現・発音がたまるのが見え、聞けば記録で答える",
+"このステージの表現",
+"最近2週間"
+],
+"zh": [
+"词汇·语法·表达·发音四个方面，从最弱的开始马上练",
+"看着词汇、语法、表达、发音一点点积累，问了就按记录回答",
+"本阶段的表达",
+"最近两周"
+],
+"es": [
+"Vocabulario, gramática, expresiones y pronunciación: practica primero lo más flojo",
+"Mira cómo crecen vocabulario, gramática, expresiones y pronunciación",
+"Expresiones de esta etapa",
+"Últimas dos semanas"
+],
+"hi": [
+"शब्द, व्याकरण, अभिव्यक्ति, उच्चारण — सबसे कमज़ोर हिस्से से अभ्यास",
+"शब्द, व्याकरण, अभिव्यक्ति और उच्चारण बढ़ते हुए देखें",
+"इस चरण की अभिव्यक्तियाँ",
+"पिछले दो हफ़्ते"
+],
+"pt": [
+"Vocabulário, gramática, expressões e pronúncia: pratique primeiro o mais fraco",
+"Veja vocabulário, gramática, expressões e pronúncia crescerem",
+"Expressões desta etapa",
+"Últimas duas semanas"
+],
+"fr": [
+"Vocabulaire, grammaire, expressions, prononciation : travaillez d'abord le point faible",
+"Voyez progresser vocabulaire, grammaire, expressions et prononciation",
+"Expressions de l'étape",
+"Deux dernières semaines"
+],
+"vi": [
+"Từ vựng, ngữ pháp, cách diễn đạt, phát âm — luyện chỗ yếu nhất trước",
+"Thấy từ vựng, ngữ pháp, diễn đạt, phát âm lớn dần",
+"Cách diễn đạt của giai đoạn",
+"Hai tuần qua"
+],
+"id": [
+"Kosakata, tata bahasa, ungkapan, pelafalan — latih yang paling lemah dulu",
+"Lihat kosakata, tata bahasa, ungkapan, dan pelafalan bertambah",
+"Ungkapan tahap ini",
+"Dua minggu terakhir"
+],
+"th": [
+"คำศัพท์ ไวยากรณ์ สำนวน การออกเสียง — ฝึกส่วนที่อ่อนที่สุดก่อน",
+"เห็นคำศัพท์ ไวยากรณ์ สำนวน การออกเสียงเพิ่มขึ้น",
+"สำนวนของขั้นนี้",
+"สองสัปดาห์ล่าสุด"
+],
+"ar": [
+"المفردات والقواعد والتعابير والنطق — تدرّب على الأضعف أولًا",
+"شاهد المفردات والقواعد والتعابير والنطق تنمو",
+"تعابير هذه المرحلة",
+"آخر أسبوعين"
+]
+};
 const MAP_CORE = {
   ko: ["My · 단계", "1단계부터 5단계까지\n내 길이 보여요", "단계마다 문법·목표 대화·할 수 있는 것, 시작은 대화 예시로"],
   en: ["MY · STAGES", "See your path\nfrom stage 1 to 5", "Grammar, target conversations and goals for each stage"],
@@ -260,7 +334,11 @@ for (const [key, copy] of Object.entries(COPY)) {
   const n = NEW273[key.split("-")[0]];
   copy.map[3] = [n.stage, copy.map[3][0], copy.map[3][2]];
   const m = MAP_CORE[key.split("-")[0]];
-  copy.map[0] = m[0]; copy.map[1] = m[1]; copy.map[2] = m[2];
+  const q = PARTS275[key.split("-")[0]];
+  copy.map[0] = m[0]; copy.map[1] = m[1]; copy.map[2] = q[0];
+  copy.map[3] = [n.stage, q[2], copy.map[3][1]];
+  copy.my[2] = q[1];
+  copy.my[3] = [copy.my[3][0], q[3], n.today];
   copy.my[3] = [copy.my[3][0], copy.my[3][1], n.today];
   copy.my[4] = [n.view, n.find, copy.my[4][2]];
   const room = copy.room;

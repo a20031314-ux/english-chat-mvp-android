@@ -87,6 +87,7 @@ const PART_WORDS = {
   es: ["café", "billete", "semana", "estación", "ayer", "cansado", "barato", "temprano", "ocupado", "película", "cena", "amigo"],
   ja: ["コーヒー", "切符", "週末", "駅", "昨日", "疲れた", "安い", "早い", "忙しい", "映画", "夕ご飯", "友達"],
   ko: ["커피", "표", "주말", "역", "어제", "피곤해요", "싸요", "일찍", "바빠요", "영화", "저녁", "친구"],
+  zh: ["咖啡", "票", "周末", "车站", "昨天", "累", "便宜", "早", "忙", "电影", "晚饭", "朋友"],
 };
 function partsFor(target) {
   const ladder = ladderFor(target);
@@ -229,6 +230,11 @@ const STORE_MY_ITEMS = [
   { shot: "mapview" },
   // 2.73: 노트 "오늘의 학습"(고정 응답으로 후보만 바꿔 끼움 — 맨 끝에).
   { shot: "notebook-today" },
+  // 2.75: 네 갈래(어휘·문법·표현·발음) — 망·그래프·단계 맨 위·표현 갈래를 연 모습(기록은 끼움).
+  { shot: "parts-net" },
+  { shot: "parts-graph" },
+  { shot: "stage-next" },
+  { shot: "stage-parts" },
 ];
 const STORE_TABS_ITEMS = [
   // 2.71: 고친 문장은 눌러서 보는 칩. chat-correct와 같은 장면이라 그 뒤에 한 번 더 찍지 않고 칩을 연 모습도 남긴다.
