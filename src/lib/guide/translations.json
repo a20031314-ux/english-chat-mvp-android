@@ -394,10 +394,12 @@
         {
           "heading": "Tablón",
           "body": [
+            "Cada idioma que aprendes tiene su propio tablón. Con los chips de arriba ves solo 💬 Charla, ❓ Preguntas, 🤝 Compañeros, 🎙 Salas de voz o 👥 Grupos.",
+            "A una publicación de sala de voz puedes unir tu sala abierta, y a una de grupo, tu grupo. Quien la lee entra con «Entrar» o «Unirme», y en una de compañeros 🤝 envía la solicitud.",
             "Publica en el idioma que aprendes y comenta. Solo quien escribe puede editar o borrar. “Ver en español” traduce; toca un nombre para seguir, escribir o denunciar.",
             "Toca ♡ Me gusta en cualquier publicación. Las fotos que adjuntes también se ven pequeñas en la lista."
           ],
-          "shot": "r69-board"
+          "shot": "board-topics"
         },
         {
           "heading": "Iconos",
@@ -819,10 +821,12 @@
         {
           "heading": "掲示板",
           "body": [
+            "学ぶ言語ごとに掲示板が分かれています。上のチップで 💬 雑談・❓ 質問・🤝 勉強仲間・🎙 ボイスルーム・👥 グループ の投稿だけを見られます。",
+            "ボイスルームの投稿には自分の公開ルームを、グループの投稿には自分のグループを付けられます。読む人は投稿の中の「入る」「参加する」ですぐ行け、仲間の投稿では 🤝 で仲間申請できます。",
             "学んでいる言語で投稿・コメントできます。編集・削除は書いた人だけ。「日本語で見る」で翻訳、名前を押すとフォロー・メッセージ・通報。",
             "投稿ごとに♡いいねを押せます。写真を付けると一覧にも小さく表示されます。"
           ],
-          "shot": "r69-board"
+          "shot": "board-topics"
         },
         {
           "heading": "アイコン",
@@ -1244,10 +1248,12 @@
         {
           "heading": "论坛",
           "body": [
+            "每种学习语言有自己的留言板。用上面的标签只看 💬 闲聊、❓ 提问、🤝 学习伙伴、🎙 语音房或 👥 群组 的帖子。",
+            "语音房帖子可以附上你的公开房间，群组帖子可以附上你的群组。读者点帖子里的“进入”“加入”直接过去，学习伙伴帖子点 🤝 发送伙伴申请。",
             "用在学的语言发帖、评论。只有作者能编辑或删除。“用中文查看”可翻译，点名字可关注、发消息或举报。",
             "每篇帖子都可以点 ♡ 点赞。附上的照片在列表里也会小图显示。"
           ],
-          "shot": "r69-board"
+          "shot": "board-topics"
         },
         {
           "heading": "表情",
@@ -1669,10 +1675,12 @@
         {
           "heading": "Bảng tin",
           "body": [
+            "Mỗi ngôn ngữ bạn học có bảng tin riêng. Dùng các chip phía trên để chỉ xem 💬 Trò chuyện, ❓ Hỏi đáp, 🤝 Bạn học, 🎙 Phòng nói hoặc 👥 Nhóm.",
+            "Bài phòng nói có thể gắn phòng công khai của bạn, bài nhóm có thể gắn nhóm của bạn. Người đọc vào ngay bằng “Vào” hoặc “Tham gia”, và ở bài bạn học thì bấm 🤝 để gửi lời mời.",
             "Đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết mới sửa hoặc xóa được. “Xem bằng tiếng Việt” để dịch; chạm vào tên để theo dõi, nhắn tin hoặc báo cáo.",
             "Bấm ♡ Thích ở mỗi bài. Ảnh bạn đính kèm cũng hiện nhỏ trong danh sách."
           ],
-          "shot": "r69-board"
+          "shot": "board-topics"
         },
         {
           "heading": "Biểu tượng",
@@ -2094,10 +2102,12 @@
         {
           "heading": "Forum",
           "body": [
+            "Chaque langue apprise a son propre forum. Les puces en haut affichent seulement 💬 Discussion, ❓ Questions, 🤝 Partenaires, 🎙 Salons vocaux ou 👥 Groupes.",
+            "Un message de salon vocal peut porter votre salon ouvert, un message de groupe votre groupe. Les lecteurs y vont avec « Entrer » ou « Rejoindre », et sur un message de partenaires 🤝 envoie la demande.",
             "Publiez dans la langue apprise et commentez. Seul l'auteur peut modifier ou supprimer. « Voir en français » traduit ; touchez un nom pour suivre, écrire ou signaler.",
             "Touchez ♡ J’aime sur un post. Les photos jointes s’affichent aussi en petit dans la liste."
           ],
-          "shot": "r69-board"
+          "shot": "board-topics"
         },
         {
           "heading": "Icônes",
@@ -2519,10 +2529,12 @@
         {
           "heading": "Bacheca",
           "body": [
+            "Ogni lingua che studi ha la sua bacheca. Con i chip in alto vedi solo 💬 Chiacchiere, ❓ Domande, 🤝 Compagni, 🎙 Stanze vocali o 👥 Gruppi.",
+            "A un post di stanza vocale puoi collegare la tua stanza aperta, a uno di gruppo il tuo gruppo. Chi legge entra con «Entra» o «Unisciti», e su un post di compagni 🤝 invia la richiesta.",
             "Pubblica nella lingua che impari e commenta. Solo chi scrive può modificare o eliminare. “Vedi in italiano” traduce; tocca un nome per seguire, scrivere o segnalare.",
             "Tocca ♡ Mi piace su qualsiasi post. Le foto allegate si vedono piccole anche nell’elenco."
           ],
-          "shot": "r69-board"
+          "shot": "board-topics"
         },
         {
           "heading": "Icone",
@@ -2944,10 +2956,12 @@
         {
           "heading": "Mural",
           "body": [
+            "Cada idioma que você aprende tem seu próprio mural. Com os chips no topo você vê só 💬 Conversa, ❓ Perguntas, 🤝 Parceiros, 🎙 Salas de voz ou 👥 Grupos.",
+            "Um post de sala de voz pode levar sua sala aberta, e um de grupo, seu grupo. Quem lê entra direto com “Entrar” ou “Participar”, e num post de parceiros 🤝 envia o pedido.",
             "Publique no idioma que você aprende e comente. Só quem escreveu pode editar ou excluir. “Ver em português” traduz; toque num nome para seguir, mandar mensagem ou denunciar.",
             "Toque em ♡ Curtir em qualquer post. As fotos anexadas também aparecem pequenas na lista."
           ],
-          "shot": "r69-board"
+          "shot": "board-topics"
         },
         {
           "heading": "Ícones",
@@ -3369,10 +3383,12 @@
         {
           "heading": "Доска",
           "body": [
+            "У каждого изучаемого языка своя доска. Кнопки сверху показывают только 💬 Общение, ❓ Вопросы, 🤝 Напарники, 🎙 Голосовые комнаты или 👥 Группы.",
+            "К посту голосовой комнаты можно прикрепить свою открытую комнату, к посту группы — свою группу. Читатели заходят через «Войти» или «Вступить», а в посте напарников 🤝 отправляет запрос.",
             "Публикуйте на изучаемом языке и комментируйте. Изменять и удалять может только автор. «Перевести на русский» переводит; нажмите на имя, чтобы подписаться, написать или пожаловаться.",
             "Нажимайте ♡ Нравится под постами. Прикреплённые фото видны маленькими и в списке."
           ],
-          "shot": "r69-board"
+          "shot": "board-topics"
         },
         {
           "heading": "Иконки",
@@ -3794,10 +3810,12 @@
         {
           "heading": "Papan",
           "body": [
+            "Tiap bahasa yang kamu pelajari punya papan sendiri. Pakai chip di atas untuk melihat hanya 💬 Ngobrol, ❓ Pertanyaan, 🤝 Teman belajar, 🎙 Ruang suara, atau 👥 Grup.",
+            "Postingan ruang suara bisa membawa ruang terbukamu, postingan grup membawa grupmu. Pembaca langsung masuk dengan “Masuk” atau “Gabung”, dan di postingan teman belajar 🤝 mengirim permintaan.",
             "Tulis dalam bahasa yang dipelajari dan berkomentar. Hanya penulis yang bisa mengubah atau menghapus. “Lihat dalam bahasa Indonesia” menerjemahkan; ketuk nama untuk mengikuti, mengirim pesan, atau melapor.",
             "Ketuk ♡ Suka di postingan mana pun. Foto yang dilampirkan juga tampil kecil di daftar."
           ],
-          "shot": "r69-board"
+          "shot": "board-topics"
         },
         {
           "heading": "Ikon",
@@ -4219,10 +4237,12 @@
         {
           "heading": "اللوحة",
           "body": [
+            "لكل لغة تتعلمها لوحة خاصة. استخدم الأزرار في الأعلى لترى فقط 💬 دردشة أو ❓ أسئلة أو 🤝 شركاء تعلّم أو 🎙 غرف صوتية أو 👥 مجموعات.",
+            "يمكن أن تحمل منشورات الغرف الصوتية غرفتك المفتوحة، ومنشورات المجموعات مجموعتك. يدخل القارئ مباشرة بـ«دخول» أو «انضمام»، وفي منشور الشركاء يرسل 🤝 طلب الشراكة.",
             "انشر باللغة التي تتعلمها وعلّق. الكاتب وحده يعدّل أو يحذف. «عرض باللغة العربية» يترجم المنشور، واضغط الاسم للمتابعة أو المراسلة أو الإبلاغ.",
             "اضغط ♡ إعجاب على أي منشور. الصور المرفقة تظهر صغيرة في القائمة أيضًا."
           ],
-          "shot": "r69-board"
+          "shot": "board-topics"
         },
         {
           "heading": "أيقونات",
@@ -4644,10 +4664,12 @@
         {
           "heading": "กระดาน",
           "body": [
+            "แต่ละภาษาที่เรียนมีบอร์ดของตัวเอง ใช้ชิปด้านบนเพื่อดูเฉพาะ 💬 คุยเล่น ❓ คำถาม 🤝 เพื่อนเรียน 🎙 ห้องเสียง หรือ 👥 กลุ่ม",
+            "โพสต์ห้องเสียงแนบห้องสาธารณะของคุณได้ โพสต์กลุ่มแนบกลุ่มของคุณได้ คนอ่านเข้าได้ทันทีด้วย “เข้าห้อง” หรือ “เข้าร่วม” และในโพสต์เพื่อนเรียนกด 🤝 เพื่อส่งคำขอ",
             "โพสต์เป็นภาษาที่เรียนและแสดงความคิดเห็น แก้ไขหรือลบได้เฉพาะคนเขียน “ดูเป็นภาษาไทย” ช่วยแปล แตะชื่อเพื่อติดตาม ส่งข้อความ หรือรายงาน",
             "กด ♡ ถูกใจ ได้ทุกโพสต์ รูปที่แนบจะแสดงเล็กๆ ในรายการด้วย"
           ],
-          "shot": "r69-board"
+          "shot": "board-topics"
         },
         {
           "heading": "ไอคอน",
@@ -5069,10 +5091,12 @@
         {
           "heading": "बोर्ड",
           "body": [
+            "हर सीखी जा रही भाषा का अपना बोर्ड है। ऊपर के चिप से सिर्फ़ 💬 बातचीत, ❓ सवाल, 🤝 पढ़ाई के साथी, 🎙 वॉइस रूम या 👥 ग्रुप वाली पोस्ट देखें।",
+            "वॉइस रूम पोस्ट में अपना खुला रूम, ग्रुप पोस्ट में अपना ग्रुप जोड़ सकते हैं। पढ़ने वाले पोस्ट के “शामिल हों” या “ग्रुप में जुड़ें” से सीधे जाते हैं, और साथी वाली पोस्ट में 🤝 से साथी अनुरोध भेजते हैं।",
             "सीखी जा रही भाषा में पोस्ट व टिप्पणी करें। सिर्फ़ लिखने वाला बदल या हटा सकता है। “हिन्दी में देखें” अनुवाद करता है; नाम दबाकर फ़ॉलो, मैसेज या रिपोर्ट करें।",
             "हर पोस्ट पर ♡ पसंद दबा सकते हैं। लगाई गई फ़ोटो सूची में भी छोटी दिखती है।"
           ],
-          "shot": "r69-board"
+          "shot": "board-topics"
         },
         {
           "heading": "आइकन",

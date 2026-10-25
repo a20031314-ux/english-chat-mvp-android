@@ -3,17 +3,17 @@
 > 모든 채팅이 시작할 때 자동으로 읽는 한 장입니다. 역할별 자세한 내용은
 > `hub/roles/`, 역할 사이에 넘긴 일은 `hub/inbox.md`, 지난 기록은 `hub/log/`.
 > 새 채팅이면 `hub/HANDOFF.md`(직전 채팅의 인계 노트)부터. 자동 실행이 남긴 보고·결정 대기는 `hub/reports.md`.
-> 허브 쓰는 법: `hub/README.md`. 서비스 지도(구조도 + 화면 그림): https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y. 마지막 갱신: 2026-10-25(2.74에 아이콘 만들기·판매·🔥 더함).
+> 허브 쓰는 법: `hub/README.md`. 서비스 지도(구조도 + 화면 그림): https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y. 마지막 갱신: 2026-10-25(2.75 자름).
 
 ## 버전
 
 | 항목 | 값 | 어디서 바꾸나 |
 |---|---|---|
-| Play에 올라간 앱 | 2.71 (versionCode 85) — 사용자 "올렸어" 2026-10-23(트랙·공개 여부는 확인 필요) | `package.json` + `android/app/build.gradle` (둘이 같아야 빌드됨) |
+| Play에 올라간 앱 | 2.74 (versionCode 88) — 사용자 폰 Play 앱 정보 "2.74, 2026.10.24 업데이트"(2026-10-25 화면) | `package.json` + `android/app/build.gradle` (둘이 같아야 빌드됨) |
 | 서버 | main에 push하면 Vercel이 바로 배포 | — |
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
-| 다음 앱 버전 | 2.74 (versionCode 88) — **자름(2026-10-24, 사용자 "2.74로 잘라줘")**: My "단계" 보기(지도 + 노트 틀, 습득한 표현·관용·세부 칸), 문장분석 "My에서 찾기"(❓ 장면 카드·화면 함께), 아이콘 기본 묶음 Noto·Room 🙂, 아이콘 판매(2~30P)·만들기 편집기·🔥 많이 쓰는 묶음(10-25 추가), 사람 탭 이모지 칩·초대 보상 시트, 노트 "모두" 갇힘 고침. 새로워진 점 4장, 출시 노트 88 PR. 빌드·Play 업로드는 사람(`npm run pc:build`). 2.72(86)·2.73(87)은 자르기만 — Play에 안 올렸으면 2.74만 올려도 됨(새로워진 점은 2.72~2.74 묶음이 같이 뜸) | — |
+| 다음 앱 버전 | 2.75 (versionCode 89) — **자름(2026-10-25, 사용자 "일단 2.75로 잘라줘")**: My 네 갈래(어휘·문법·표현·발음, 가장 모자란 칸 바로 연습, 모두 70%면 다음 단계, 단계별 대화 예시, 망·그래프도 같은 네 갈래), 게시판 주제 칩·글 속 들어가기·참여하기, 통화 기록 카드 ×. 새로워진 점 2장, 출시 노트 89 PR #22. 빌드·Play 업로드는 사람(`npm run pc:build`) | — |
 | iOS | **App Store 심사 다시 제출(2026-10-23 15:0x KST)** — 2.71 + 구독 그룹·구독 3·포인트 4 한 제출(처음 05:12 제출은 상품 빠짐·진단 빌드 85.9라 취소). 심사 대기 중. 앱 ID 6824542951. 남은 일 `hub/drafts/ios-launch.md` "심사 중" | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할

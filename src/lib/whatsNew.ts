@@ -44,11 +44,14 @@ export type ReleaseNote = {
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
-    // 2.75(89): My 네 갈래(어휘·문법·표현·발음, 70%면 다음 단계, 단계별 대화 예시) — 망·그래프·단계 세 보기가 같은 네 갈래.
+    // 2.75(89): My 네 갈래(어휘·문법·표현·발음, 70%면 다음 단계, 단계별 대화 예시) — 망·그래프·단계 세 보기가 같은 네 갈래. 게시판 주제 칩·글 속 들어가기·참여하기.
     // 통화 기록 카드 ×(지우기)는 사용법(대화)에만, 통화 "고칠 곳" 팁이 내 줄 이야기만 하는 것은 서버라 빌드와 상관없음.
     version: "2.75",
     code: 89,
-    items: [{ id: "stage-parts", title: "whatsNewStagePartsTitle", body: "whatsNewStagePartsBody", shot: "stage-parts", tab: "map", guide: "my.map" }],
+    items: [
+      { id: "stage-parts", title: "whatsNewStagePartsTitle", body: "whatsNewStagePartsBody", shot: "stage-parts", tab: "map", guide: "my.map" },
+      { id: "board-topics", title: "whatsNewBoardTopicsTitle", body: "whatsNewBoardTopicsBody", shot: "board-topics", tab: "people", guide: "people.board" },
+    ],
   },
   {
     // 2.74(88): My "단계"(지도 + 노트 틀, 습득한 표현·관용·세부 칸), 문장분석 "My에서 찾기"(❓ 장면 카드), 아이콘 기본 묶음 Noto·Room 🙂,

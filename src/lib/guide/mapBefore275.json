@@ -30,6 +30,14 @@
         "Debajo están los temas de tu objetivo. En un tema, «{ui:missionStart}»: la tarea oculta la respuesta y te pide escribirla; si aciertas sin pistas, pasa a dominada."
       ],
       "shot": "stage-board"
+    },
+    "people.board": {
+      "heading": "Tablón",
+      "body": [
+        "Publica en el idioma que aprendes y comenta. Solo quien escribe puede editar o borrar. “Ver en español” traduce; toca un nombre para seguir, escribir o denunciar.",
+        "Toca ♡ Me gusta en cualquier publicación. Las fotos que adjuntes también se ven pequeñas en la lista."
+      ],
+      "shot": "r69-board"
     }
   },
   "ja": {
@@ -63,6 +71,14 @@
         "下には目標から作ったテーマがあります。テーマで「{ui:missionStart}」。タスクは答えを隠して書かせ、ヒントなしで正解すると習得になります。"
       ],
       "shot": "stage-board"
+    },
+    "people.board": {
+      "heading": "掲示板",
+      "body": [
+        "学んでいる言語で投稿・コメントできます。編集・削除は書いた人だけ。「日本語で見る」で翻訳、名前を押すとフォロー・メッセージ・通報。",
+        "投稿ごとに♡いいねを押せます。写真を付けると一覧にも小さく表示されます。"
+      ],
+      "shot": "r69-board"
     }
   },
   "zh": {
@@ -96,6 +112,14 @@
         "下面是按目标生成的主题。在主题里点“{ui:missionStart}”——任务会把答案藏起来让你写，不靠提示写对就算掌握。"
       ],
       "shot": "stage-board"
+    },
+    "people.board": {
+      "heading": "论坛",
+      "body": [
+        "用在学的语言发帖、评论。只有作者能编辑或删除。“用中文查看”可翻译，点名字可关注、发消息或举报。",
+        "每篇帖子都可以点 ♡ 点赞。附上的照片在列表里也会小图显示。"
+      ],
+      "shot": "r69-board"
     }
   },
   "vi": {
@@ -129,6 +153,14 @@
         "Bên dưới là các chủ đề vẽ từ mục tiêu. Trong chủ đề, chạm «{ui:missionStart}» — bài tập giấu đáp án để bạn tự viết, viết đúng không cần gợi ý thì thành đã nắm."
       ],
       "shot": "stage-board"
+    },
+    "people.board": {
+      "heading": "Bảng tin",
+      "body": [
+        "Đăng bài bằng ngôn ngữ đang học và bình luận. Chỉ người viết mới sửa hoặc xóa được. “Xem bằng tiếng Việt” để dịch; chạm vào tên để theo dõi, nhắn tin hoặc báo cáo.",
+        "Bấm ♡ Thích ở mỗi bài. Ảnh bạn đính kèm cũng hiện nhỏ trong danh sách."
+      ],
+      "shot": "r69-board"
     }
   },
   "fr": {
@@ -162,6 +194,14 @@
         "En dessous, les thèmes tirés de votre objectif. Dans un thème, « {ui:missionStart} » : la tâche cache la réponse et vous la fait écrire ; juste sans indice, elle passe en maîtrisée."
       ],
       "shot": "stage-board"
+    },
+    "people.board": {
+      "heading": "Forum",
+      "body": [
+        "Publiez dans la langue apprise et commentez. Seul l'auteur peut modifier ou supprimer. « Voir en français » traduit ; touchez un nom pour suivre, écrire ou signaler.",
+        "Touchez ♡ J’aime sur un post. Les photos jointes s’affichent aussi en petit dans la liste."
+      ],
+      "shot": "r69-board"
     }
   },
   "it": {
@@ -195,6 +235,14 @@
         "Sotto ci sono i temi tratti dal tuo obiettivo. In un tema, «{ui:missionStart}»: il compito nasconde la risposta e te la fa scrivere; se la azzecchi senza suggerimenti diventa padroneggiata."
       ],
       "shot": "stage-board"
+    },
+    "people.board": {
+      "heading": "Bacheca",
+      "body": [
+        "Pubblica nella lingua che impari e commenta. Solo chi scrive può modificare o eliminare. “Vedi in italiano” traduce; tocca un nome per seguire, scrivere o segnalare.",
+        "Tocca ♡ Mi piace su qualsiasi post. Le foto allegate si vedono piccole anche nell’elenco."
+      ],
+      "shot": "r69-board"
     }
   },
   "pt": {
@@ -228,6 +276,14 @@
         "Por baixo ficam os temas do seu objetivo. Num tema, «{ui:missionStart}»: a tarefa esconde a resposta e pede que a escreva; se acertar sem dicas, passa a dominada."
       ],
       "shot": "stage-board"
+    },
+    "people.board": {
+      "heading": "Mural",
+      "body": [
+        "Publique no idioma que você aprende e comente. Só quem escreveu pode editar ou excluir. “Ver em português” traduz; toque num nome para seguir, mandar mensagem ou denunciar.",
+        "Toque em ♡ Curtir em qualquer post. As fotos anexadas também aparecem pequenas na lista."
+      ],
+      "shot": "r69-board"
     }
   },
   "ru": {
@@ -261,6 +317,14 @@
         "Ниже — темы, составленные по вашей цели. В теме «{ui:missionStart}»: задание прячет ответ и просит написать его; без подсказок верно — и фраза становится освоенной."
       ],
       "shot": "stage-board"
+    },
+    "people.board": {
+      "heading": "Доска",
+      "body": [
+        "Публикуйте на изучаемом языке и комментируйте. Изменять и удалять может только автор. «Перевести на русский» переводит; нажмите на имя, чтобы подписаться, написать или пожаловаться.",
+        "Нажимайте ♡ Нравится под постами. Прикреплённые фото видны маленькими и в списке."
+      ],
+      "shot": "r69-board"
     }
   },
   "id": {
@@ -294,6 +358,14 @@
         "Di bawahnya ada topik dari tujuanmu. Di topik, ketuk «{ui:missionStart}» — tugas menyembunyikan jawaban dan memintamu menulisnya; benar tanpa petunjuk berarti dikuasai."
       ],
       "shot": "stage-board"
+    },
+    "people.board": {
+      "heading": "Papan",
+      "body": [
+        "Tulis dalam bahasa yang dipelajari dan berkomentar. Hanya penulis yang bisa mengubah atau menghapus. “Lihat dalam bahasa Indonesia” menerjemahkan; ketuk nama untuk mengikuti, mengirim pesan, atau melapor.",
+        "Ketuk ♡ Suka di postingan mana pun. Foto yang dilampirkan juga tampil kecil di daftar."
+      ],
+      "shot": "r69-board"
     }
   },
   "ar": {
@@ -327,6 +399,14 @@
         "في الأسفل المواضيع المرسومة من هدفك. في الموضوع اضغط «{ui:missionStart}»: المهمة تخفي الإجابة وتطلب منك كتابتها، وإذا أصبت دون تلميح تصبح متقنة."
       ],
       "shot": "stage-board"
+    },
+    "people.board": {
+      "heading": "اللوحة",
+      "body": [
+        "انشر باللغة التي تتعلمها وعلّق. الكاتب وحده يعدّل أو يحذف. «عرض باللغة العربية» يترجم المنشور، واضغط الاسم للمتابعة أو المراسلة أو الإبلاغ.",
+        "اضغط ♡ إعجاب على أي منشور. الصور المرفقة تظهر صغيرة في القائمة أيضًا."
+      ],
+      "shot": "r69-board"
     }
   },
   "th": {
@@ -360,6 +440,14 @@
         "ด้านล่างคือหัวข้อที่สร้างจากเป้าหมาย ในหัวข้อแตะ «{ui:missionStart}» งานจะซ่อนคำตอบให้คุณเขียนเอง ถ้าเขียนถูกโดยไม่ใช้คำใบ้จะนับว่าคล่องแล้ว"
       ],
       "shot": "stage-board"
+    },
+    "people.board": {
+      "heading": "กระดาน",
+      "body": [
+        "โพสต์เป็นภาษาที่เรียนและแสดงความคิดเห็น แก้ไขหรือลบได้เฉพาะคนเขียน “ดูเป็นภาษาไทย” ช่วยแปล แตะชื่อเพื่อติดตาม ส่งข้อความ หรือรายงาน",
+        "กด ♡ ถูกใจ ได้ทุกโพสต์ รูปที่แนบจะแสดงเล็กๆ ในรายการด้วย"
+      ],
+      "shot": "r69-board"
     }
   },
   "hi": {
@@ -393,6 +481,14 @@
         "नीचे आपके लक्ष्य से बने विषय हैं। विषय में «{ui:missionStart}» — काम जवाब छिपाकर आपसे लिखवाता है, बिना संकेत सही लिखने पर वह सीखा हुआ बन जाता है।"
       ],
       "shot": "stage-board"
+    },
+    "people.board": {
+      "heading": "बोर्ड",
+      "body": [
+        "सीखी जा रही भाषा में पोस्ट व टिप्पणी करें। सिर्फ़ लिखने वाला बदल या हटा सकता है। “हिन्दी में देखें” अनुवाद करता है; नाम दबाकर फ़ॉलो, मैसेज या रिपोर्ट करें।",
+        "हर पोस्ट पर ♡ पसंद दबा सकते हैं। लगाई गई फ़ोटो सूची में भी छोटी दिखती है।"
+      ],
+      "shot": "r69-board"
     }
   },
   "ko": {
@@ -426,6 +522,14 @@
         "아래에는 목표로 그린 주제가 있어요. 주제에서 ‘{ui:missionStart}’ — 할 일은 정답을 숨기고 써 보게 하고, 힌트 없이 맞히면 숙지로 올라가요."
       ],
       "shot": "stage-board"
+    },
+    "people.board": {
+      "heading": "게시판",
+      "body": [
+        "배우는 언어로 글을 올리고 댓글을 달아요. 고치고 지우는 건 쓴 사람만 할 수 있어요. 글 아래 ‘한국어로 보기’로 번역하고, 이름을 누르면 팔로우·메시지·신고.",
+        "글마다 ♡ 좋아요를 누를 수 있어요. 사진을 붙이면 목록에도 작게 보여요."
+      ],
+      "shot": "r69-board"
     }
   },
   "en": {
@@ -459,6 +563,14 @@
         "Below are the topics drawn from your goal. In a topic, ‘{ui:missionStart}’ — a task hides the answer and has you write it, and getting it right without hints moves it to mastered."
       ],
       "shot": "stage-board"
+    },
+    "people.board": {
+      "heading": "Board",
+      "body": [
+        "Post in the language you’re learning and comment. Only the writer can edit or delete. “See in English” translates a post; tap a name to follow, message or report.",
+        "Tap ♡ Like on any post. Photos you attach also show small in the list."
+      ],
+      "shot": "r69-board"
     }
   }
 }

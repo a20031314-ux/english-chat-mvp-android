@@ -77,6 +77,51 @@ const { roomCopy: roomCopyFor } = await import(`file://${path.join(ROOT, "src/li
 const { teamCopy: teamCopyFor } = await import(`file://${path.join(ROOT, "src/lib/rooms/teamCopy.ts").replace(/\\/g, "/")}`);
 const { inviteCopy: inviteCopyFor } = await import(`file://${path.join(ROOT, "src/lib/invite/copy.ts").replace(/\\/g, "/")}`);
 const { askPhrase } = await import(`file://${path.join(ROOT, "src/lib/rooms/quote.ts").replace(/\\/g, "/")}`);
+// 2.75: My 네 갈래(어휘·문법·표현·발음)를 찍을 때 끼우는 기록 — 2단계에서 문법·표현은 거의 찼고 발음이 가장 모자란 사람.
+const { ladderFor } = await import(`file://${path.join(ROOT, "src/lib/curriculum/stages/index.ts").replace(/\\/g, "/")}`);
+const { emptyLedger, ledgerKey } = await import(`file://${path.join(ROOT, "src/lib/learner/ledger.ts").replace(/\\/g, "/")}`);
+const { stageParts, vocabScore, vocabWords } = await import(`file://${path.join(ROOT, "src/lib/notes/stageParts.ts").replace(/\\/g, "/")}`);
+const { grammarNodeId } = await import(`file://${path.join(ROOT, "src/lib/notes/notebook.ts").replace(/\\/g, "/")}`);
+const PART_WORDS = {
+  en: ["coffee", "ticket", "weekend", "station", "yesterday", "tired", "cheap", "early", "busy", "movie", "dinner", "friend"],
+  es: ["café", "billete", "semana", "estación", "ayer", "cansado", "barato", "temprano", "ocupado", "película", "cena", "amigo"],
+  ja: ["コーヒー", "切符", "週末", "駅", "昨日", "疲れた", "安い", "早い", "忙しい", "映画", "夕ご飯", "友達"],
+  ko: ["커피", "표", "주말", "역", "어제", "피곤해요", "싸요", "일찍", "바빠요", "영화", "저녁", "친구"],
+};
+function partsFor(target) {
+  const ladder = ladderFor(target);
+  const now = Date.now();
+  const ledger = emptyLedger(target, now);
+  const add = (text, state) => {
+    ledger.items[ledgerKey(text)] = { text, state, firstMet: { tab: "chat", at: now }, met: [], outputs: [], helpAt: now, slips: 0, heard: 0 };
+  };
+  const words = PART_WORDS[target] ?? PART_WORDS.en;
+  for (let i = 0; i < 58; i++) add(words[i % words.length] + (i >= words.length ? ` ${i}` : ""), i % 3 ? "mastered" : "learned");
+  const phrases = {};
+  for (const stage of ladder.stages) {
+    const share = stage.order === 1 ? 1 : stage.order === 2 ? 0.75 : 0;
+    stage.expressions.slice(0, Math.round(stage.expressions.length * share)).forEach((text) => add(text, "mastered"));
+    stage.grammar.slice(0, Math.round(stage.grammar.length * (stage.order === 1 ? 1 : stage.order === 2 ? 0.6 : 0))).forEach((g) => {
+      [g.example, `${g.example} (2)`].forEach((text) => {
+        add(text, "learned");
+        phrases[ledgerKey(text)] = { node: grammarNodeId(stage.order, g), at: now };
+      });
+    });
+  }
+  const pronunciation = { points: 2, tries: 6 };
+  const vocab = vocabScore(ledger, target);
+  return {
+    parts: ladder.stages.map((stage) => stageParts({ stage, language: target, ledger, phrases, pronunciation, vocab })),
+    words: vocabWords(ledger, target),
+    phrases: Object.entries(phrases).map(([key, place]) => ({ key, text: ledger.items[key].text, state: ledger.items[key].state, node: place.node })),
+  };
+}
+const PART_DAYS = {
+  vocab: [0, 1, 2, 0, 3, 1, 0, 2, 4, 1, 0, 2, 3, 1],
+  grammar: [0, 0, 0.5, 0, 0, 1, 0, 0, 0.5, 0, 0, 0.5, 0, 1],
+  expression: [1, 0, 1, 2, 0, 0, 1, 0, 1, 1, 0, 2, 1, 0],
+  pronunciation: [0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0],
+};
 /**
  * `guide` instead of a version takes the pictures for the map's how-to
  * (src/lib/guide/content.ts, sections with a `shot`) into public/guide/<locale>/.
@@ -111,19 +156,24 @@ const GUIDE_SOCIAL_ITEMS = [
   { shot: "talk-list" },
   { shot: "invite-rewards" },
 ];
-const GUIDE = VERSION === "guide" || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
+const GUIDE_PARTS = VERSION === "guide-parts";
+const GUIDE = VERSION === "guide" || GUIDE_PARTS || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
 const GUIDE_ITEMS = [
   // 2.71: My 첫 화면 맨 위 "이런 대화, 할 수 있어요?"(단계 고르기, 사용법 my.start).
   { shot: "stage-start" },
   { shot: "goal" },
   { shot: "next" },
-  { shot: "growth" },
-  { shot: "graph" },
-  { shot: "element" },
+  // 2.75: 네 갈래(기록은 끼움). myask는 앞의 채팅 기록이 있어야 답이 나와 growth(채팅 몇 줄)를 그림 없이 먼저.
+  { shot: "growth", save: false },
   { shot: "myask" },
-  { shot: "mapview" },
+  { shot: "parts-net" },
+  { shot: "parts-graph" },
+  { shot: "stage-next" },
+  { shot: "stage-parts" },
   { shot: "chatnext" },
 ];
+// `guide-parts`: 2.75 네 갈래·게시판 주제 칩 그림만 다시(채팅을 쓰지 않음).
+const GUIDE_PARTS_ITEMS = [{ shot: "parts-net" }, { shot: "parts-graph" }, { shot: "stage-next" }, { shot: "stage-parts" }, { shot: "board-topics" }];
 const GUIDE_VIDEO_ITEMS = [
   { shot: "video-library" },
   { shot: "video-study" },
@@ -243,6 +293,8 @@ const note = PROMO
   ? { version: "guide", items: GUIDE_VIDEO_ITEMS }
   : GUIDE_SOCIAL
   ? { version: "guide", items: GUIDE_SOCIAL_ITEMS }
+  : GUIDE_PARTS
+  ? { version: "guide", items: GUIDE_PARTS_ITEMS }
   : GUIDE ? { version: "guide", items: GUIDE_ITEMS } : RELEASE_NOTES.find((entry) => entry.version === VERSION);
 if (!note) {
   console.error(`No release note for ${VERSION} in src/lib/whatsNew.ts.`);
@@ -916,6 +968,41 @@ async function openLineAnalysis(page, ui, wait) {
   }
 }
 
+/** 2.75 네 갈래 장면: 노트 응답에 기록(partsFor)을 끼우고 My를 그 보기로 연다. `open`이면 그 갈래를 누른다. */
+async function partsScene({ page, locale, wait, target }, mode, open) {
+  await page.route("**/api/notebook?*", async (route) => {
+    if (route.request().method() !== "GET" || route.request().url().includes("shot=")) return route.fallback();
+    // 장면이 끝나 페이지가 닫힌 뒤 늦게 온 요청은 버린다(닫힌 뒤 fetch가 실행 전체를 멈추게 했음).
+    const response = await route.fetch({ headers: { ...route.request().headers(), "x-rc-user": `whats-new-capture-notebook-${locale}` }, timeout: 60_000 }).catch(() => null);
+    if (!response) return;
+    const book = await response.json();
+    const made = partsFor(target);
+    book.stage = 2;
+    book.parts = made.parts;
+    book.words = made.words;
+    book.phrases = made.phrases;
+    book.partDays = PART_DAYS;
+    book.cards = [];
+    book.pending = [];
+    return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(book) }).catch(() => undefined);
+  });
+  await page.evaluate((view) => {
+    localStorage.setItem("myViewMode", view);
+    localStorage.setItem("myViewMode.stageShown", "1");
+  }, mode);
+  await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+  const chips = page.locator('section[aria-label] div[role="group"]');
+  for (let i = 0; i < 40 && !(await chips.count()); i++) await wait(500);
+  await wait(2500);
+  if (open) {
+    await page.locator("section[aria-label] button").filter({ hasText: new RegExp(`^${escape(open)}`) }).first().click();
+    await wait(1500);
+  }
+  await chips.first().evaluate((el) => el.closest("section")?.scrollIntoView({ block: "start" }));
+  await page.mouse.wheel(0, -60);
+  await wait(1500);
+}
+
 const STEPS = {
   async "promo-room"({ page, ui, locale, wait, target, mark }) {
     // 목소리를 입히는 쇼츠: 줄마다 시각과 글자를 남기고, 말이 끝날 만큼 기다린다(make.mjs room이 TTS로 입힌다).
@@ -1167,7 +1254,7 @@ const STEPS = {
   async board({ page, ui, wait, target }) {
     await socialMocks(page, target, ui);
     const now = Date.now();
-    const posts = BOARD_POSTS[target].map(([who, text, comments], index) => ({ id: `b_capture${index}`, author: PEOPLE[who].id, language: target, text, at: now - (index + 1) * 2_400_000, comments }));
+    const posts = BOARD_POSTS[target].map(([who, text, comments], index) => ({ id: `b_capture${index}`, author: PEOPLE[who].id, language: target, topic: ["free", "question", "mate"][index], text, at: now - (index + 1) * 2_400_000, comments }));
     await page.route("**/api/board", (route) => {
       const body = JSON.parse(route.request().postData() || "{}");
       const authors = Object.values(PEOPLE).map((p) => ({ id: p.id, nickname: p.nickname }));
@@ -1212,6 +1299,26 @@ const STEPS = {
     await wait(2500);
     await page.getByRole("button", { name: "Yuki", exact: true }).first().click();
     await wait(2500);
+  },
+  async "board-topics"(ctx) {
+    // 2.75: 게시판 주제 칩(자유·질문·메이트 글, 고정 응답).
+    await STEPS.board(ctx);
+  },
+  async "parts-net"(ctx) {
+    // 2.75: My 자라는 중 "망" — 네 갈래 꼭짓점과 70% 점선(기록은 끼움, 칸 이름·발음 글은 운영 응답).
+    await partsScene(ctx, "net");
+  },
+  async "parts-graph"(ctx) {
+    // 2.75: "그래프" — 네 갈래의 최근 2주.
+    await partsScene(ctx, "graph");
+  },
+  async "stage-next"(ctx) {
+    // 2.75: "단계" 맨 위 — 사다리·"다음 단계까지: 발음"·네 갈래 막대.
+    await partsScene(ctx, "map");
+  },
+  async "stage-parts"(ctx) {
+    // 2.75: "단계"에서 표현 갈래를 연 모습(핵심 표현 칩) — 새로워진 점과 사용법 my.map.
+    await partsScene(ctx, "map", ctx.ui.partExpression);
   },
   async "stage-board"({ page, locale, wait, target }) {
     // 2.74: My 자라는 중 "단계" — 사다리·1단계 문법 칸(습득한 표현·숙지·고친 장면)·관용 표현 줄. 칸 이름은 운영 응답, 표현·카드만 끼운다.
@@ -1672,7 +1779,9 @@ const STEPS = {
     await wait(1500);
   },
   async myask({ page, ui, wait }) {
-    await page.locator("[role=dialog]").getByRole("button", { name: ui.billingClose }).first().click();
+    // 2.75부터 앞 장면이 시트를 열지 않는다 — 열려 있을 때만 닫는다.
+    const close = page.locator("[role=dialog]").getByRole("button", { name: ui.billingClose });
+    if (await close.count()) await close.first().click();
     await wait(600);
     await page.getByRole("button", { name: exactly(ui.myAskQuick1) }).first().click();
     await wait(1000);

@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-25d";
+export const GUIDE_VERSION = "2026-10-25e";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -516,10 +516,12 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "게시판",
         "body": [
+          "배우는 언어마다 게시판이 따로예요. 위 칩으로 💬 자유·❓ 질문·🤝 메이트·🎙 보이스룸·👥 단체방 글만 골라 봐요.",
+          "보이스룸 글에는 내 공개 방을, 단체방 글에는 내 단체방을 붙일 수 있어요. 읽는 사람은 글 속 ‘들어가기’·‘참여하기’로 바로 가고, 메이트 글에서는 🤝로 메이트 신청을 해요.",
           "배우는 언어로 글을 올리고 댓글을 달아요. 고치고 지우는 건 쓴 사람만 할 수 있어요. 글 아래 ‘한국어로 보기’로 번역하고, 이름을 누르면 팔로우·메시지·신고.",
           "글마다 ♡ 좋아요를 누를 수 있어요. 사진을 붙이면 목록에도 작게 보여요."
         ],
-        "shot": "r69-board"
+        "shot": "board-topics"
       },
       {
         "heading": "아이콘",
@@ -942,10 +944,12 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Board",
         "body": [
+          "Each language you learn has its own board. Use the chips at the top to see only 💬 Chat, ❓ Questions, 🤝 Study mates, 🎙 Voice rooms or 👥 Groups.",
+          "A voice-room post can carry your open room, a group post your group. Readers go straight in with “Join” or “Join group”, and on a mate post 🤝 sends a mate request.",
           "Post in the language you’re learning and comment. Only the writer can edit or delete. “See in English” translates a post; tap a name to follow, message or report.",
           "Tap ♡ Like on any post. Photos you attach also show small in the list."
         ],
-        "shot": "r69-board"
+        "shot": "board-topics"
       },
       {
         "heading": "Icons",

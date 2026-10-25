@@ -21,9 +21,11 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **My 네 갈래 (2026-10-25, 사용자 "어휘, 문법, 표현, 발음", 서버 바로·화면 2.75 빌드):** `notes/stageParts.ts`(stageParts·partHistory, 70% `STAGE_DONE_SHARE`), `/api/notebook` parts·partDays·words·pronunciationNotes, `NotebookSection` StageFrame·PartsOverview(망·그래프), `StageCheck` StageExamples, `GrowthNetwork` 칩만·목표 지도 접기.
+  남은 것: 어휘는 앱이 보여 준 낱말 수만(단계별 목록 아님), 영어 밖 문법은 모델이 칸에 넣은 표현에 기댐, 발음은 통화(다시 말해보기)만 재료, 낱말·표현 칩은 아직 눌러도 아무것도 안 함(사용자에게 제안만). 옛 `/api/learner/growth` 화면용은 최소 지원 2.75 이상 때 지움.
 - **게시판 = 학습 언어별 + 주제 칩 (2026-10-25, 사용자 "학습 언어 × 주제, 버튼까지", 서버 바로·화면 2.75 빌드):** 칩 전체·💬 자유·❓ 질문·🤝 메이트·🎙 보이스룸·👥 단체방(`boardTopic`), 예전 언어 칩 3개는 뺌(서버 `match: both`는 옛 앱용).
   `rooms/board.ts` `BoardTopic`·`topicOf`, `boardStore` 언어×주제 목록(`board:v1:lang:<언어>:t:<주제>`, 옛 글은 처음 열 때 자유로 — `tidx`), `server/boardLinks.ts`(붙일 방·단체방 확인, 읽을 때 상태, `joinGroup` = 글쓴이 이름으로 초대 + 바로 참여), 글 속 버튼(메이트 신청·들어가기·참여하기·단체방 열기), 문구 14개 × 14개 언어(Claude가 씀).
-  남은 것: 2.75 자를 때 사용법(?) 사람 장 "게시판" 글·그림 14개 언어 + 새로워진 점 1장, 운영에서 실제 단체방 참여 한 번(로그인 계정 둘), 보이스룸 예약 글("○시에 열어요")에 알림은 없음, 주제 바꾸기(고치기는 글만).
+  남은 것(사용법 게시판 글·그림·새로워진 점은 2.75 자를 때 넣음): 운영에서 실제 단체방 참여 한 번(로그인 계정 둘), 보이스룸 예약 글("○시에 열어요")에 알림은 없음, 주제 바꾸기(고치기는 글만).
 - **My에서 찾기 + 궁금한 장면 카드 (2026-10-24, 서버 바로·화면 다음 빌드):** `FindInMy`(문장분석 시트), `sceneShots.enterScene/snapScene`(사람 대화는 안 찍음), `locateHandoff` → `GrowthNetwork`·`NotebookSection` 그 단계·칸 + `QuestionBox`, 서버 `locatePart`(`/api/notebook` locate, op `notebookLocate`)·편집 `addQuestion`·설명 글자 확인 `noteFitsUi`. 처리방침 en/ko 고침. 남은 것: 실제 폰에서 html-to-image 화면 찍기 속도·화질, 영상 화면은 플레이어(iframe)가 빠져 검게 찍힘(정상 — 자막 칸은 보임).
 - **습득한 표현도 노트 틀에 (2026-10-24, 서버 바로·화면 다음 빌드):** `notebook.ts` FIXED_NODES(관용 3·세부 4)·`phrases`·`phrasePrompt`, `notebookStore.placeLearnedPhrases`(GET 뒤 after), 화면 관용 표현·세부 줄·칸 시트 표현·옮기기. 운영 확인 en·ja·es 칸 맞음(과거형 → 과거 칸, 관용구·연어·정해진 말). 남은 것: 실제 사용자 몇 명 장부로 칸 맞음 비율 보기(qa), 숙지 ✓가 영어만인 것.
 - **아이콘 만들기 편집기 (2026-10-25, 2.74 빌드):** `IconEditor`·`iconMotion`. 다음 후보: ② 배경 지우기 ③ AI 생성(비용·판매 허용 결정 필요). 기기에서 사진 큰 것·움직임 결과 확인(qa).
