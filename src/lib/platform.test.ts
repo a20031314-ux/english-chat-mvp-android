@@ -10,6 +10,7 @@ import {
   STORE_WORDING_KEYS,
   subscriptionTermsUrl,
   videoImportAvailable,
+  voiceCallAvailable,
 } from "./platform.ts";
 
 const overlays = JSON.parse(readFileSync(new URL("./locales/overlays.json", import.meta.url), "utf8"));
@@ -68,4 +69,8 @@ test("iOS 심사 항목: 약관 링크·AI 동의·영상 가져오기", () => {
   assert.equal(aiConsentRequired("android"), false);
   assert.equal(videoImportAvailable("ios"), false);
   assert.equal(videoImportAvailable("android"), true);
+});
+
+test("iOS에서는 AI 음성 통화를 숨긴다(1차 심사, 기기 소리 막힘 고칠 때까지)", () => {
+  assert.equal(voiceCallAvailable(), true); // 테스트 환경 = 웹
 });

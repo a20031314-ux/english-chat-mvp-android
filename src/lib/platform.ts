@@ -30,6 +30,14 @@ export function socialFeaturesEnabled(): boolean {
 }
 
 /**
+ * AI 음성 통화. iOS 1차 심사(2026-10-25 사용자 결정): 아이폰에서 통화를 열면 마이크가 열리는 순간 폰 소리 전체가
+ * 막히는 일이 기기에서만 나서(재현 못 함, hub/drafts/ios-launch.md) 고칠 때까지 통화 탭·📞·"말로"를 숨긴다.
+ */
+export function voiceCallAvailable(): boolean {
+  return !isIosApp();
+}
+
+/**
  * Google 로그인. iOS에서 Google을 띄우면 애플이 "Apple로 로그인"도 같이 요구한다
  * (심사 지침 4.8). iOS 1차는 아이디·비밀번호와 이메일 코드만 둔다.
  */
