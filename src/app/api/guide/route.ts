@@ -13,6 +13,7 @@ import chatBefore271 from "@/lib/guide/chatBefore271.json";
 import notesBefore273 from "@/lib/guide/notesBefore273.json";
 import mapBefore274 from "@/lib/guide/mapBefore274.json";
 import iconsBefore275 from "@/lib/guide/iconsBefore275.json";
+import mapBefore275 from "@/lib/guide/mapBefore275.json";
 
 export const runtime = "nodejs";
 
@@ -52,9 +53,16 @@ export async function GET(request: NextRequest) {
   const before275 = request.nextUrl.searchParams.get("r275") === "1"
     ? undefined
     : (iconsBefore275 as Partial<Record<string, Record<string, Guide["rooms"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
-  const withSale: Guide = before275
-    ? { ...newest, rooms: { ...newest.rooms, sections: newest.rooms.sections.map((section, index) => before275[GUIDE_SECTION_IDS.rooms[index]] ?? section) } }
+  // 2.75(`r276=1`)부터: My 네 갈래(어휘·문법·표현·발음). 그 전 빌드는 자라는 중·그래프·눌러서 보기·단계 칸을 2.74 글로(mapBefore275.json).
+  const before276 = request.nextUrl.searchParams.get("r276") === "1"
+    ? undefined
+    : (mapBefore275 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  const withParts: Guide = before276
+    ? { ...newest, map: { ...newest.map, sections: newest.map.sections.map((section, index) => before276[GUIDE_SECTION_IDS.map[index]] ?? section) } }
     : newest;
+  const withSale: Guide = before275
+    ? { ...withParts, rooms: { ...withParts.rooms, sections: withParts.rooms.sections.map((section, index) => before275[GUIDE_SECTION_IDS.rooms[index]] ?? section) } }
+    : withParts;
   const latest: Guide = before274
     ? {
         ...withSale,

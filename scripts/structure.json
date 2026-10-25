@@ -177,6 +177,7 @@
     "api/feedback/image": "의견함 정리(scripts/feedback-pull.mjs)",
     "api/simcheck/forget": "가상 사용자 점검이 끝날 때",
     "api/video-subtitles/window": "옛 앱 2.48~2.57이 영상 해석에 씀 — 최소 지원 버전을 2.58 이상으로 올리면 지움",
+    "api/learner/growth": "옛 앱 2.48~2.74가 My 망·그래프(여섯 요소)에 씀 — 2.75부터 화면은 네 갈래(/api/notebook parts), 최소 지원 버전을 2.75 이상으로 올리면 화면용으로는 지움(점검 스크립트는 씀)",
     "api/english-analysis/input": "옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움",
     "api/english-analysis/element": "옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움",
     "api/learner/brief": "가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀"

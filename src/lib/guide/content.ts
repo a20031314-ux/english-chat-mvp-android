@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-25c";
+export const GUIDE_VERSION = "2026-10-25d";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -144,24 +144,25 @@ export const GUIDE_KO: Guide = {
       {
         heading: "3. 자라는 중",
         body: [
-          "여섯 부분이 쓸수록 커지고 줄지 않아요. 테두리 친 곳이 ‘{ui:myNext}’이에요.",
+          "‘{ui:partVocab}’·‘{ui:partGrammar}’·‘{ui:partExpression}’·‘{ui:partPronunciation}’ 네 칸이 지금 단계에서 얼마나 찼는지 보여요. 점선이 다음 단계 기준이고, 가장 부족한 칸은 노란 글씨예요.",
+          "칸을 누르면 ‘{ui:myViewMap}’에서 그 칸을 열어요.",
         ],
-        shot: "growth",
+        shot: "parts-net",
       },
       {
         heading: "4. 그래프로 보기",
         body: [
-          "‘{ui:myViewGraph}’을 누르면 부분마다 최근 2주가 막대로 보여요. 고른 보기는 다음에도 그대로예요.",
+          "‘{ui:myViewGraph}’을 누르면 네 칸이 최근 2주 하루하루 얼마나 늘었는지 막대로 보여요. 고른 보기는 다음에도 그대로예요.",
         ],
-        shot: "graph",
+        shot: "parts-graph",
       },
       {
-        heading: "5. 눌러서 보기",
+        heading: "5. 다음 단계로",
         body: [
-          "부분을 누르면 자라는 방법·최근 2주·키운 표현이 보이고, ‘{ui:myGrowIt}’로 바로 연습해요.",
-          "‘{ui:myOpenStage}’를 누르면 그 부분과 이어진 칸을 단계에서 봐요. 표현 폭은 단어장으로 가요.",
+          "‘{ui:myViewMap}’ 맨 위에 가장 부족한 칸이 보여요. 옆 버튼으로 바로 연습해요 — ‘{ui:partPronunciation}’은 ‘{ui:nextByCall}’, 나머지는 ‘{ui:nextByChat}’.",
+          "네 칸이 모두 70%를 넘으면 ‘{ui:partReady}’가 켜져요. 다시 말해보기를 한 번도 안 했으면 ‘{ui:partPronunciation}’은 ‘{ui:myNoData}’로 두고 셈에서 빼요.",
         ],
-        shot: "element",
+        shot: "stage-next",
       },
       {
         heading: "6. 직접 묻기",
@@ -173,11 +174,11 @@ export const GUIDE_KO: Guide = {
       {
         heading: "7. 단계로 보기",
         body: [
-          "‘{ui:myViewMap}’에는 단계가 1부터 5까지 이어져 있어요. 지금 단계가 칠해져 있고, 번호를 누르면 그 단계의 목표 대화와 문법 칸을 미리 봐요.",
-          "쓸 수 있게 된 표현과 노트에 넣은 장면이 맞는 칸을 채워요. 관용구·자주 붙는 말은 ‘{ui:notebookIdioms}’, 말투·철자 같은 건 ‘{ui:notebookDetails}’ 칸으로. 점 색은 숙지·배움, 위 숫자는 채운 칸, 숙지한 문법에는 ✓. 칸을 열어 ‘{ui:stageTry}’로 바로 연습하고, 표현은 다른 칸으로 옮길 수 있어요.",
-          "아래에는 목표로 그린 주제가 있어요. 주제에서 ‘{ui:missionStart}’ — 할 일은 정답을 숨기고 써 보게 하고, 힌트 없이 맞히면 숙지로 올라가요.",
+          "‘{ui:myViewMap}’에는 단계가 1부터 5까지 이어져 있어요. 번호를 누르면 그 단계를 미리 봐요.",
+          "칸을 누르면 펼쳐져요. ‘{ui:partVocab}’은 익힌 낱말과 단어장, ‘{ui:partGrammar}’은 그 단계 문법 칸(✓·‘{ui:stageTry}’), ‘{ui:partExpression}’은 핵심 표현과 ‘{ui:notebookIdioms}’ 칸, ‘{ui:partPronunciation}’은 그 단계 발음 포인트와 글자·소리 칸. 쓸 수 있게 된 표현과 노트에 넣은 장면이 맞는 칸을 채워요.",
+          "아래 ‘{ui:stageExamplesTitle}’에서 그 단계로 되는 대화를 보고 ‘{ui:stageTry}’로 해 봐요. 예전 목표 주제와 할 일은 ‘{ui:partGoalMap}’에 접혀 있어요.",
         ],
-        shot: "stage-board",
+        shot: "stage-parts",
       },
       {
         heading: "8. 노트",
@@ -569,24 +570,25 @@ export const GUIDE_EN: Guide = {
       {
         heading: "3. Growing",
         body: [
-          "Six parts grow as you use the language and never shrink. The ringed one is ‘{ui:myNext}’.",
+          "Four parts — ‘{ui:partVocab}’, ‘{ui:partGrammar}’, ‘{ui:partExpression}’ and ‘{ui:partPronunciation}’ — show how full they are at your stage. The dotted line is what the next stage needs, and the weakest part is in yellow.",
+          "Tap a part to open it in ‘{ui:myViewMap}’.",
         ],
-        shot: "growth",
+        shot: "parts-net",
       },
       {
-        heading: "4. See it as a graph",
+        heading: "4. As a graph",
         body: [
-          "Tap ‘{ui:myViewGraph}’ to see each part's last two weeks as bars. The view you pick stays next time.",
+          "Tap ‘{ui:myViewGraph}’ to see how much each part grew each day over the last two weeks. The view you pick stays next time.",
         ],
-        shot: "graph",
+        shot: "parts-graph",
       },
       {
-        heading: "5. Tap to look closer",
+        heading: "5. To the next stage",
         body: [
-          "Tap a part for how it grows, the last two weeks and the phrases that grew it; ‘{ui:myGrowIt}’ starts practising.",
-          "‘{ui:myOpenStage}’ shows the sections linked to that part. Range of expression goes to the word list.",
+          "The top of ‘{ui:myViewMap}’ shows your weakest part. Practise it right away with the button next to it — ‘{ui:nextByCall}’ for ‘{ui:partPronunciation}’, ‘{ui:nextByChat}’ for the rest.",
+          "When all four pass 70%, ‘{ui:partReady}’ turns on. If you have never tried saying a line again, ‘{ui:partPronunciation}’ shows ‘{ui:myNoData}’ and is left out.",
         ],
-        shot: "element",
+        shot: "stage-next",
       },
       {
         heading: "6. Ask",
@@ -596,13 +598,13 @@ export const GUIDE_EN: Guide = {
         shot: "myask",
       },
       {
-        heading: "7. See it in stages",
+        heading: "7. Stages",
         body: [
-          "‘{ui:myViewMap}’ lines up stages 1 to 5. Your current stage is filled in; tap a number to preview that stage's target conversation and grammar sections.",
-          "Phrases you can now use and scenes you add to your notes fill the matching section. Idioms and word pairings go to ‘{ui:notebookIdioms}’, things like politeness or spelling to ‘{ui:notebookDetails}’. The dot colour is mastered or learned, the number above is filled sections, and mastered grammar gets ✓. Open a section to ‘{ui:stageTry}’ right away, or move a phrase elsewhere.",
-          "Below are the topics drawn from your goal. In a topic, ‘{ui:missionStart}’ — a task hides the answer and has you write it, and getting it right without hints moves it to mastered.",
+          "‘{ui:myViewMap}’ runs from stage 1 to 5. Tap a number to look at that stage.",
+          "Tap a part to open it: ‘{ui:partVocab}’ has the words you’ve learned and your word list, ‘{ui:partGrammar}’ the stage’s grammar (✓ and ‘{ui:stageTry}’), ‘{ui:partExpression}’ its key phrases and the ‘{ui:notebookIdioms}’ sections, ‘{ui:partPronunciation}’ the stage’s sound point and the letter-and-sound sections. Phrases you can use and scenes you saved fill the matching section.",
+          "Below, ‘{ui:stageExamplesTitle}’ shows conversations this stage makes possible; try one with ‘{ui:stageTry}’. Your old goal topics and tasks are folded under ‘{ui:partGoalMap}’.",
         ],
-        shot: "stage-board",
+        shot: "stage-parts",
       },
       {
         heading: "8. Notes",

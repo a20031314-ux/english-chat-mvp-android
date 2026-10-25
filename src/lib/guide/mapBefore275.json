@@ -1,0 +1,464 @@
+{
+  "es": {
+    "my.growth": {
+      "heading": "3. Creciendo",
+      "body": [
+        "Seis partes crecen a medida que usas el idioma y nunca se encogen. La que tiene un aro es «{ui:myNext}»."
+      ],
+      "shot": "growth"
+    },
+    "my.graph": {
+      "heading": "4. Verlo como gráfico",
+      "body": [
+        "Toca «{ui:myViewGraph}» para ver las últimas dos semanas de cada parte en barras. La vista que elijas se queda para la próxima vez."
+      ],
+      "shot": "graph"
+    },
+    "my.element": {
+      "heading": "5. Toca para ver más",
+      "body": [
+        "Toca una parte para ver cómo crece, las últimas dos semanas y las expresiones que la hicieron crecer; «{ui:myGrowIt}» empieza a practicar.",
+        "«{ui:myOpenStage}» muestra las secciones ligadas a esa parte. La amplitud de expresión lleva a tu vocabulario."
+      ],
+      "shot": "element"
+    },
+    "my.map": {
+      "heading": "7. Verlo por etapas",
+      "body": [
+        "«{ui:myViewMap}» muestra las etapas del 1 al 5. La actual está coloreada; toca un número para ver la conversación objetivo y la gramática de esa etapa.",
+        "Las expresiones que ya sabes usar y las escenas que guardas llenan la sección que corresponde. Modismos y combinaciones van a «{ui:notebookIdioms}»; formalidad u ortografía, a «{ui:notebookDetails}». El color del punto indica dominada o aprendida, el número de arriba las secciones llenas, y la gramática dominada lleva ✓. Abre una sección para «{ui:stageTry}» o mover una expresión.",
+        "Debajo están los temas de tu objetivo. En un tema, «{ui:missionStart}»: la tarea oculta la respuesta y te pide escribirla; si aciertas sin pistas, pasa a dominada."
+      ],
+      "shot": "stage-board"
+    }
+  },
+  "ja": {
+    "my.growth": {
+      "heading": "3. 成長中",
+      "body": [
+        "6つの部分は使うほど大きくなり、小さくはなりません。輪がついているのが「{ui:myNext}」です。"
+      ],
+      "shot": "growth"
+    },
+    "my.graph": {
+      "heading": "4. グラフで見る",
+      "body": [
+        "「{ui:myViewGraph}」を押すと、部分ごとの最近2週間が棒で見えます。選んだ表示は次回もそのままです。"
+      ],
+      "shot": "graph"
+    },
+    "my.element": {
+      "heading": "5. タップして見る",
+      "body": [
+        "部分を押すと、育ち方・最近2週間・育てた表現が見え、「{ui:myGrowIt}」ですぐ練習できます。",
+        "「{ui:myOpenStage}」を押すと、その部分につながる項目をステージで見られます。表現の幅は単語帳へ。"
+      ],
+      "shot": "element"
+    },
+    "my.map": {
+      "heading": "7. ステージで見る",
+      "body": [
+        "「{ui:myViewMap}」にはステージ1〜5が並びます。今のステージに色が付き、番号を押すとそのステージの目標の会話と文法の項目を先に見られます。",
+        "使えるようになった表現とノートに入れた場面が、合う項目を埋めます。慣用句やよく一緒に使う言葉は「{ui:notebookIdioms}」、話し方や表記などは「{ui:notebookDetails}」へ。点の色は習得・学習中、上の数字は埋まった項目、身についた文法には✓。項目を開いて「{ui:stageTry}」ですぐ練習したり、表現を別の項目に移したりできます。",
+        "下には目標から作ったテーマがあります。テーマで「{ui:missionStart}」。タスクは答えを隠して書かせ、ヒントなしで正解すると習得になります。"
+      ],
+      "shot": "stage-board"
+    }
+  },
+  "zh": {
+    "my.growth": {
+      "heading": "3. 成长中",
+      "body": [
+        "六个部分越用越大，不会变小。带圈的是“{ui:myNext}”。"
+      ],
+      "shot": "growth"
+    },
+    "my.graph": {
+      "heading": "4. 用图表看",
+      "body": [
+        "点“{ui:myViewGraph}”，每个部分最近两周以柱状显示。选好的方式下次也保持。"
+      ],
+      "shot": "graph"
+    },
+    "my.element": {
+      "heading": "5. 点开查看",
+      "body": [
+        "点开一个部分，可以看到成长方式、最近两周和让它成长的表达，用“{ui:myGrowIt}”马上练习。",
+        "点“{ui:myOpenStage}”，可以在阶段里看到和这一项相关的部分。表达广度会打开单词本。"
+      ],
+      "shot": "element"
+    },
+    "my.map": {
+      "heading": "7. 按阶段查看",
+      "body": [
+        "“{ui:myViewMap}”里排着第 1 到第 5 阶段。当前阶段会被填上颜色，点数字可以先看那个阶段的目标对话和语法部分。",
+        "会用的表达和放进笔记的场景会填进对应的部分。惯用语、常见搭配放在“{ui:notebookIdioms}”，语气、拼写之类放在“{ui:notebookDetails}”。圆点颜色表示已掌握或在学，上面的数字是已填的部分，已掌握的语法有 ✓。打开部分可以点“{ui:stageTry}”马上练习，也能把表达移到别处。",
+        "下面是按目标生成的主题。在主题里点“{ui:missionStart}”——任务会把答案藏起来让你写，不靠提示写对就算掌握。"
+      ],
+      "shot": "stage-board"
+    }
+  },
+  "vi": {
+    "my.growth": {
+      "heading": "3. Đang lớn",
+      "body": [
+        "Sáu phần lớn dần khi bạn dùng và không bao giờ nhỏ lại. Phần có vòng tròn là “{ui:myNext}”."
+      ],
+      "shot": "growth"
+    },
+    "my.graph": {
+      "heading": "4. Xem dạng biểu đồ",
+      "body": [
+        "Chạm “{ui:myViewGraph}” để xem hai tuần qua của từng phần dưới dạng cột. Cách xem bạn chọn sẽ được giữ cho lần sau."
+      ],
+      "shot": "graph"
+    },
+    "my.element": {
+      "heading": "5. Chạm để xem",
+      "body": [
+        "Chạm vào một phần để xem cách nó lớn, hai tuần qua và các cách nói giúp nó lớn; “{ui:myGrowIt}” để luyện ngay.",
+        "«{ui:myOpenStage}» cho xem các mục liên quan đến phần đó. Độ rộng biểu đạt mở sổ từ."
+      ],
+      "shot": "element"
+    },
+    "my.map": {
+      "heading": "7. Xem theo giai đoạn",
+      "body": [
+        "«{ui:myViewMap}» xếp các giai đoạn từ 1 đến 5. Giai đoạn hiện tại được tô màu; chạm vào một số để xem trước hội thoại mục tiêu và các mục ngữ pháp của giai đoạn đó.",
+        "Những cách nói bạn đã dùng được và cảnh đưa vào sổ sẽ lấp đầy mục tương ứng. Thành ngữ, từ hay đi cùng vào «{ui:notebookIdioms}»; cách nói, chính tả vào «{ui:notebookDetails}». Màu chấm là đã nắm hay đang học, số ở trên là mục đã lấp, ngữ pháp đã nắm có ✓. Mở một mục để «{ui:stageTry}» ngay hoặc chuyển cách nói sang mục khác.",
+        "Bên dưới là các chủ đề vẽ từ mục tiêu. Trong chủ đề, chạm «{ui:missionStart}» — bài tập giấu đáp án để bạn tự viết, viết đúng không cần gợi ý thì thành đã nắm."
+      ],
+      "shot": "stage-board"
+    }
+  },
+  "fr": {
+    "my.growth": {
+      "heading": "3. En croissance",
+      "body": [
+        "Six parties grandissent quand tu pratiques et ne rapetissent jamais. Celle entourée est « {ui:myNext} »."
+      ],
+      "shot": "growth"
+    },
+    "my.graph": {
+      "heading": "4. Voir en graphique",
+      "body": [
+        "Touche « {ui:myViewGraph} » pour voir les deux dernières semaines de chaque partie en barres. L'affichage choisi est gardé pour la prochaine fois."
+      ],
+      "shot": "graph"
+    },
+    "my.element": {
+      "heading": "5. Touche pour voir",
+      "body": [
+        "Touche une partie pour voir comment elle grandit, les deux dernières semaines et les expressions qui l'ont fait grandir ; « {ui:myGrowIt} » lance la pratique.",
+        "« {ui:myOpenStage} » montre les sections liées à cette partie. L’étendue d’expression ouvre la liste de mots."
+      ],
+      "shot": "element"
+    },
+    "my.map": {
+      "heading": "7. Voir par étapes",
+      "body": [
+        "« {ui:myViewMap} » aligne les étapes 1 à 5. L’étape actuelle est colorée ; touchez un numéro pour voir la conversation visée et les sections de grammaire de cette étape.",
+        "Les expressions que vous savez utiliser et les scènes ajoutées à vos notes remplissent la section correspondante. Expressions idiomatiques et associations vont dans « {ui:notebookIdioms} », registre ou orthographe dans « {ui:notebookDetails} ». La couleur du point indique maîtrisé ou appris, le nombre du haut les sections remplies, la grammaire maîtrisée a un ✓. Ouvrez une section pour « {ui:stageTry} » ou déplacer une expression.",
+        "En dessous, les thèmes tirés de votre objectif. Dans un thème, « {ui:missionStart} » : la tâche cache la réponse et vous la fait écrire ; juste sans indice, elle passe en maîtrisée."
+      ],
+      "shot": "stage-board"
+    }
+  },
+  "it": {
+    "my.growth": {
+      "heading": "3. In crescita",
+      "body": [
+        "Sei parti crescono man mano che usi la lingua e non si rimpiccioliscono mai. Quella cerchiata è «{ui:myNext}»."
+      ],
+      "shot": "growth"
+    },
+    "my.graph": {
+      "heading": "4. Vederlo come grafico",
+      "body": [
+        "Tocca «{ui:myViewGraph}» per vedere le ultime due settimane di ogni parte a barre. La vista scelta resta per la prossima volta."
+      ],
+      "shot": "graph"
+    },
+    "my.element": {
+      "heading": "5. Tocca per vedere",
+      "body": [
+        "Tocca una parte per vedere come cresce, le ultime due settimane e le espressioni che l'hanno fatta crescere; «{ui:myGrowIt}» avvia la pratica.",
+        "«{ui:myOpenStage}» mostra le sezioni legate a quella parte. L’ampiezza d’espressione apre il vocabolario."
+      ],
+      "shot": "element"
+    },
+    "my.map": {
+      "heading": "7. Vedere per fasi",
+      "body": [
+        "«{ui:myViewMap}» mette in fila le fasi da 1 a 5. La fase attuale è colorata; tocca un numero per vedere la conversazione obiettivo e le sezioni di grammatica di quella fase.",
+        "Le espressioni che sai usare e le scene che metti nelle note riempiono la sezione giusta. Modi di dire e parole che vanno insieme in «{ui:notebookIdioms}», registro o ortografia in «{ui:notebookDetails}». Il colore del punto indica padroneggiata o imparata, il numero in alto le sezioni riempite, la grammatica padroneggiata ha ✓. Apri una sezione per «{ui:stageTry}» o spostare un’espressione.",
+        "Sotto ci sono i temi tratti dal tuo obiettivo. In un tema, «{ui:missionStart}»: il compito nasconde la risposta e te la fa scrivere; se la azzecchi senza suggerimenti diventa padroneggiata."
+      ],
+      "shot": "stage-board"
+    }
+  },
+  "pt": {
+    "my.growth": {
+      "heading": "3. Crescendo",
+      "body": [
+        "Seis partes crescem conforme você usa o idioma e nunca diminuem. A que tem um anel é “{ui:myNext}”."
+      ],
+      "shot": "growth"
+    },
+    "my.graph": {
+      "heading": "4. Ver como gráfico",
+      "body": [
+        "Toque “{ui:myViewGraph}” para ver as últimas duas semanas de cada parte em barras. A visualização escolhida fica para a próxima vez."
+      ],
+      "shot": "graph"
+    },
+    "my.element": {
+      "heading": "5. Toque para ver",
+      "body": [
+        "Toque numa parte para ver como cresce, as últimas duas semanas e as expressões que a fizeram crescer; “{ui:myGrowIt}” começa a praticar.",
+        "«{ui:myOpenStage}» mostra as secções ligadas a essa parte. A amplitude de expressão abre o vocabulário."
+      ],
+      "shot": "element"
+    },
+    "my.map": {
+      "heading": "7. Ver por etapas",
+      "body": [
+        "«{ui:myViewMap}» mostra as etapas de 1 a 5. A etapa atual fica colorida; toque num número para ver a conversa-alvo e as secções de gramática dessa etapa.",
+        "As expressões que já consegue usar e as cenas que guarda nas notas preenchem a secção certa. Expressões idiomáticas e combinações vão para «{ui:notebookIdioms}»; registo ou ortografia, para «{ui:notebookDetails}». A cor do ponto indica dominada ou aprendida, o número em cima as secções preenchidas, e a gramática dominada tem ✓. Abra uma secção para «{ui:stageTry}» ou mover uma expressão.",
+        "Por baixo ficam os temas do seu objetivo. Num tema, «{ui:missionStart}»: a tarefa esconde a resposta e pede que a escreva; se acertar sem dicas, passa a dominada."
+      ],
+      "shot": "stage-board"
+    }
+  },
+  "ru": {
+    "my.growth": {
+      "heading": "3. Растёт",
+      "body": [
+        "Шесть частей растут по мере практики и никогда не уменьшаются. Обведённая — «{ui:myNext}»."
+      ],
+      "shot": "growth"
+    },
+    "my.graph": {
+      "heading": "4. Посмотреть графиком",
+      "body": [
+        "Нажмите «{ui:myViewGraph}» — последние две недели каждой части в виде столбиков. Выбранный вид сохранится."
+      ],
+      "shot": "graph"
+    },
+    "my.element": {
+      "heading": "5. Нажмите, чтобы посмотреть",
+      "body": [
+        "Нажмите на часть: как она растёт, последние две недели и выражения, которые помогли; «{ui:myGrowIt}» запускает практику.",
+        "«{ui:myOpenStage}» показывает разделы, связанные с этой частью. Широта выражения ведёт в словарь."
+      ],
+      "shot": "element"
+    },
+    "my.map": {
+      "heading": "7. Смотреть по этапам",
+      "body": [
+        "В «{ui:myViewMap}» этапы с 1 по 5 идут подряд. Текущий закрашен; нажмите номер, чтобы заранее увидеть целевой диалог и разделы грамматики этого этапа.",
+        "Выражения, которыми вы уже пользуетесь, и сцены из заметок заполняют нужный раздел. Идиомы и устойчивые сочетания идут в «{ui:notebookIdioms}», стиль и орфография — в «{ui:notebookDetails}». Цвет точки — освоено или изучается, число сверху — заполненные разделы, у освоенной грамматики ✓. Откройте раздел, чтобы «{ui:stageTry}» или перенести выражение.",
+        "Ниже — темы, составленные по вашей цели. В теме «{ui:missionStart}»: задание прячет ответ и просит написать его; без подсказок верно — и фраза становится освоенной."
+      ],
+      "shot": "stage-board"
+    }
+  },
+  "id": {
+    "my.growth": {
+      "heading": "3. Sedang tumbuh",
+      "body": [
+        "Enam bagian tumbuh saat kamu memakai bahasanya dan tidak pernah mengecil. Yang dilingkari adalah “{ui:myNext}”."
+      ],
+      "shot": "growth"
+    },
+    "my.graph": {
+      "heading": "4. Lihat sebagai grafik",
+      "body": [
+        "Ketuk “{ui:myViewGraph}” untuk melihat dua minggu terakhir tiap bagian dalam batang. Tampilan yang kamu pilih tetap untuk lain kali."
+      ],
+      "shot": "graph"
+    },
+    "my.element": {
+      "heading": "5. Ketuk untuk melihat",
+      "body": [
+        "Ketuk satu bagian untuk melihat cara tumbuhnya, dua minggu terakhir, dan ungkapan yang menumbuhkannya; “{ui:myGrowIt}” untuk langsung berlatih.",
+        "«{ui:myOpenStage}» menampilkan bagian yang terkait dengan unsur itu. Keluasan ungkapan membuka daftar kata."
+      ],
+      "shot": "element"
+    },
+    "my.map": {
+      "heading": "7. Lihat per tahap",
+      "body": [
+        "«{ui:myViewMap}» menjajarkan tahap 1 sampai 5. Tahap sekarang diwarnai; ketuk angka untuk melihat percakapan tujuan dan bagian tata bahasa tahap itu.",
+        "Ungkapan yang sudah bisa kamu pakai dan adegan yang kamu masukkan ke catatan mengisi bagian yang cocok. Idiom dan kata yang berpasangan masuk ke «{ui:notebookIdioms}», gaya bahasa atau ejaan ke «{ui:notebookDetails}». Warna titik berarti dikuasai atau dipelajari, angka di atas adalah bagian yang terisi, tata bahasa yang dikuasai diberi ✓. Buka bagian untuk «{ui:stageTry}» atau memindah ungkapan.",
+        "Di bawahnya ada topik dari tujuanmu. Di topik, ketuk «{ui:missionStart}» — tugas menyembunyikan jawaban dan memintamu menulisnya; benar tanpa petunjuk berarti dikuasai."
+      ],
+      "shot": "stage-board"
+    }
+  },
+  "ar": {
+    "my.growth": {
+      "heading": "3. ينمو",
+      "body": [
+        "ستة أجزاء تكبر كلما استخدمت اللغة ولا تصغر أبدًا. الجزء المحاط بدائرة هو «{ui:myNext}»."
+      ],
+      "shot": "growth"
+    },
+    "my.graph": {
+      "heading": "4. اعرضه كرسم بياني",
+      "body": [
+        "اضغط «{ui:myViewGraph}» لترى آخر أسبوعين لكل جزء على شكل أعمدة. تبقى طريقة العرض التي تختارها للمرة القادمة."
+      ],
+      "shot": "graph"
+    },
+    "my.element": {
+      "heading": "5. اضغط لترى",
+      "body": [
+        "اضغط على جزء لترى كيف ينمو وآخر أسبوعين والتعابير التي أنمته؛ «{ui:myGrowIt}» يبدأ التدريب.",
+        "«{ui:myOpenStage}» يعرض الأقسام المرتبطة بهذا الجزء. اتساع التعبير يفتح قائمة الكلمات."
+      ],
+      "shot": "element"
+    },
+    "my.map": {
+      "heading": "7. اعرضه بالمراحل",
+      "body": [
+        "تصطفّ في «{ui:myViewMap}» المراحل من 1 إلى 5. المرحلة الحالية ملوّنة، واضغط رقمًا لترى مسبقًا محادثة الهدف وأقسام القواعد في تلك المرحلة.",
+        "التعابير التي صرت تستعملها والمشاهد التي تضيفها إلى ملاحظاتك تملأ القسم المناسب. التعابير الاصطلاحية والكلمات المتلازمة تذهب إلى «{ui:notebookIdioms}»، والأسلوب أو الإملاء إلى «{ui:notebookDetails}». لون النقطة يعني متقن أو قيد التعلّم، والرقم في الأعلى هو الأقسام الممتلئة، والقواعد المتقنة عليها ✓. افتح القسم لـ«{ui:stageTry}» أو لنقل تعبير إلى قسم آخر.",
+        "في الأسفل المواضيع المرسومة من هدفك. في الموضوع اضغط «{ui:missionStart}»: المهمة تخفي الإجابة وتطلب منك كتابتها، وإذا أصبت دون تلميح تصبح متقنة."
+      ],
+      "shot": "stage-board"
+    }
+  },
+  "th": {
+    "my.growth": {
+      "heading": "3. กำลังเติบโต",
+      "body": [
+        "หกส่วนจะใหญ่ขึ้นเมื่อคุณใช้ภาษาและไม่มีวันเล็กลง ส่วนที่มีวงล้อมคือ “{ui:myNext}”"
+      ],
+      "shot": "growth"
+    },
+    "my.graph": {
+      "heading": "4. ดูเป็นกราฟ",
+      "body": [
+        "แตะ “{ui:myViewGraph}” เพื่อดูสองสัปดาห์ล่าสุดของแต่ละส่วนเป็นแท่ง มุมมองที่เลือกจะคงไว้ครั้งหน้า"
+      ],
+      "shot": "graph"
+    },
+    "my.element": {
+      "heading": "5. แตะเพื่อดู",
+      "body": [
+        "แตะส่วนหนึ่งเพื่อดูวิธีเติบโต สองสัปดาห์ล่าสุด และสำนวนที่ช่วยให้เติบโต แล้วฝึกทันทีด้วย “{ui:myGrowIt}”",
+        "«{ui:myOpenStage}» จะแสดงหัวข้อที่เชื่อมกับส่วนนั้น ความกว้างของสำนวนจะเปิดสมุดคำศัพท์"
+      ],
+      "shot": "element"
+    },
+    "my.map": {
+      "heading": "7. ดูเป็นขั้น",
+      "body": [
+        "«{ui:myViewMap}» เรียงขั้น 1 ถึง 5 ไว้ ขั้นปัจจุบันจะมีสี แตะตัวเลขเพื่อดูบทสนทนาเป้าหมายและหัวข้อไวยากรณ์ของขั้นนั้นล่วงหน้า",
+        "สำนวนที่ใช้ได้แล้วและฉากที่ใส่ลงโน้ตจะเติมหัวข้อที่ตรงกัน สำนวนและคำที่ใช้คู่กันไปที่ «{ui:notebookIdioms}» ส่วนระดับภาษาหรือการสะกดไปที่ «{ui:notebookDetails}» สีจุดบอกว่าคล่องแล้วหรือกำลังเรียน ตัวเลขด้านบนคือหัวข้อที่เติมแล้ว ไวยากรณ์ที่คล่องมี ✓ เปิดหัวข้อเพื่อ «{ui:stageTry}» หรือย้ายสำนวนไปหัวข้ออื่น",
+        "ด้านล่างคือหัวข้อที่สร้างจากเป้าหมาย ในหัวข้อแตะ «{ui:missionStart}» งานจะซ่อนคำตอบให้คุณเขียนเอง ถ้าเขียนถูกโดยไม่ใช้คำใบ้จะนับว่าคล่องแล้ว"
+      ],
+      "shot": "stage-board"
+    }
+  },
+  "hi": {
+    "my.growth": {
+      "heading": "3. बढ़ रहा है",
+      "body": [
+        "छह हिस्से भाषा इस्तेमाल करने के साथ बढ़ते हैं और कभी छोटे नहीं होते। घेरे वाला हिस्सा “{ui:myNext}” है।"
+      ],
+      "shot": "growth"
+    },
+    "my.graph": {
+      "heading": "4. ग्राफ़ में देखें",
+      "body": [
+        "“{ui:myViewGraph}” दबाएँ, हर हिस्से के पिछले दो हफ़्ते बार में दिखेंगे। चुना हुआ तरीका अगली बार भी रहेगा।"
+      ],
+      "shot": "graph"
+    },
+    "my.element": {
+      "heading": "5. छूकर देखें",
+      "body": [
+        "किसी हिस्से को छुएँ: वह कैसे बढ़ता है, पिछले दो हफ़्ते और जिन अभिव्यक्तियों से बढ़ा; “{ui:myGrowIt}” से तुरंत अभ्यास।",
+        "«{ui:myOpenStage}» उस हिस्से से जुड़े भाग दिखाता है। अभिव्यक्ति का दायरा शब्दसूची खोलता है।"
+      ],
+      "shot": "element"
+    },
+    "my.map": {
+      "heading": "7. चरणों में देखें",
+      "body": [
+        "«{ui:myViewMap}» में चरण 1 से 5 तक क्रम से हैं। अभी का चरण रंगा होता है; किसी अंक को दबाकर उस चरण की लक्ष्य बातचीत और व्याकरण के हिस्से पहले से देखें।",
+        "जो वाक्यांश अब आप इस्तेमाल कर पाते हैं और नोट्स में डाले दृश्य सही हिस्से को भरते हैं। मुहावरे और साथ आने वाले शब्द «{ui:notebookIdioms}» में, लहजा या वर्तनी «{ui:notebookDetails}» में जाते हैं। बिंदु का रंग सीखा हुआ या सीख रहे बताता है, ऊपर की संख्या भरे हिस्से है, और सीखे व्याकरण पर ✓ है। हिस्सा खोलकर «{ui:stageTry}» करें या वाक्यांश दूसरी जगह ले जाएँ।",
+        "नीचे आपके लक्ष्य से बने विषय हैं। विषय में «{ui:missionStart}» — काम जवाब छिपाकर आपसे लिखवाता है, बिना संकेत सही लिखने पर वह सीखा हुआ बन जाता है।"
+      ],
+      "shot": "stage-board"
+    }
+  },
+  "ko": {
+    "my.growth": {
+      "heading": "3. 자라는 중",
+      "body": [
+        "여섯 부분이 쓸수록 커지고 줄지 않아요. 테두리 친 곳이 ‘{ui:myNext}’이에요."
+      ],
+      "shot": "growth"
+    },
+    "my.graph": {
+      "heading": "4. 그래프로 보기",
+      "body": [
+        "‘{ui:myViewGraph}’을 누르면 부분마다 최근 2주가 막대로 보여요. 고른 보기는 다음에도 그대로예요."
+      ],
+      "shot": "graph"
+    },
+    "my.element": {
+      "heading": "5. 눌러서 보기",
+      "body": [
+        "부분을 누르면 자라는 방법·최근 2주·키운 표현이 보이고, ‘{ui:myGrowIt}’로 바로 연습해요.",
+        "‘{ui:myOpenStage}’를 누르면 그 부분과 이어진 칸을 단계에서 봐요. 표현 폭은 단어장으로 가요."
+      ],
+      "shot": "element"
+    },
+    "my.map": {
+      "heading": "7. 단계로 보기",
+      "body": [
+        "‘{ui:myViewMap}’에는 단계가 1부터 5까지 이어져 있어요. 지금 단계가 칠해져 있고, 번호를 누르면 그 단계의 목표 대화와 문법 칸을 미리 봐요.",
+        "쓸 수 있게 된 표현과 노트에 넣은 장면이 맞는 칸을 채워요. 관용구·자주 붙는 말은 ‘{ui:notebookIdioms}’, 말투·철자 같은 건 ‘{ui:notebookDetails}’ 칸으로. 점 색은 숙지·배움, 위 숫자는 채운 칸, 숙지한 문법에는 ✓. 칸을 열어 ‘{ui:stageTry}’로 바로 연습하고, 표현은 다른 칸으로 옮길 수 있어요.",
+        "아래에는 목표로 그린 주제가 있어요. 주제에서 ‘{ui:missionStart}’ — 할 일은 정답을 숨기고 써 보게 하고, 힌트 없이 맞히면 숙지로 올라가요."
+      ],
+      "shot": "stage-board"
+    }
+  },
+  "en": {
+    "my.growth": {
+      "heading": "3. Growing",
+      "body": [
+        "Six parts grow as you use the language and never shrink. The ringed one is ‘{ui:myNext}’."
+      ],
+      "shot": "growth"
+    },
+    "my.graph": {
+      "heading": "4. See it as a graph",
+      "body": [
+        "Tap ‘{ui:myViewGraph}’ to see each part's last two weeks as bars. The view you pick stays next time."
+      ],
+      "shot": "graph"
+    },
+    "my.element": {
+      "heading": "5. Tap to look closer",
+      "body": [
+        "Tap a part for how it grows, the last two weeks and the phrases that grew it; ‘{ui:myGrowIt}’ starts practising.",
+        "‘{ui:myOpenStage}’ shows the sections linked to that part. Range of expression goes to the word list."
+      ],
+      "shot": "element"
+    },
+    "my.map": {
+      "heading": "7. See it in stages",
+      "body": [
+        "‘{ui:myViewMap}’ lines up stages 1 to 5. Your current stage is filled in; tap a number to preview that stage's target conversation and grammar sections.",
+        "Phrases you can now use and scenes you add to your notes fill the matching section. Idioms and word pairings go to ‘{ui:notebookIdioms}’, things like politeness or spelling to ‘{ui:notebookDetails}’. The dot colour is mastered or learned, the number above is filled sections, and mastered grammar gets ✓. Open a section to ‘{ui:stageTry}’ right away, or move a phrase elsewhere.",
+        "Below are the topics drawn from your goal. In a topic, ‘{ui:missionStart}’ — a task hides the answer and has you write it, and getting it right without hints moves it to mastered."
+      ],
+      "shot": "stage-board"
+    }
+  }
+}

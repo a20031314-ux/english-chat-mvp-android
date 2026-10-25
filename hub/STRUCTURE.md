@@ -26,8 +26,9 @@
 ├ Room room ─ 로비(방 카드) → 방(자리 8칸·듣는 줄·자막·댓글) · 👥 이 방 사람들과 단체방 · 🎭 게임(방장: 라이어 게임·마피아)
 └ My my ─ 계정 카드 · 🎁 초대 보상 · 🤝 메이트·팀 줄 → 대화의 워크스페이스
           오늘 해볼 것 → 자라는 중 [망 | 그래프 | 단계] → 내 표현 → 노트(어휘·표현 장 8 × 주제 3, 단어장 줄)
-          자라는 중 맨 위 "오늘의 학습"(튜터가 고친 줄 고르기). 단계 = 수준별 틀(2026-10-24, 예전 지도 + 노트 뼈대): 단계 사다리 1~5 → 고른 단계의 문법 칸(짚은 장면 카드·숙지 ✓·해보기) → 목표 대화·할 수 있는 것 → 글자·소리·내가 만든 칸 → 목표 주제(지도·미션)
-          망·그래프의 부분 → "단계에서 보기"(표현 폭은 단어장). 지도가 없으면 체크 화면(대화 예시로 시작 단계 고르기 + 체크 3질문) 아래 같은 자라는 중
+          자라는 중 맨 위 "오늘의 학습"(튜터가 고친 줄 고르기). 세 보기 모두 같은 네 갈래 어휘·문법·표현·발음(2026-10-25, lib/notes/stageParts.ts, /api/notebook parts):
+          단계 = 사다리 1~5 → "n단계" → 다음 단계까지: 가장 모자란 갈래 + 연습(다 70%면 "다음 단계로" → 단계 고르기) → 네 갈래 막대 → 고른 갈래의 칸·목록 → "이 단계에선 이런 대화가 돼요"(대화 예시 2·써 보기) → 목표 지도 ›(접힘, 예전 상황·미션)
+          망 = 네 꼭짓점(찬 정도, 점선 70%) · 그래프 = 갈래별 최근 14일 — 갈래를 누르면 단계 보기의 그 갈래. 지도가 없으면 체크 화면(대화 예시로 시작 단계 고르기 + 체크 3질문) 아래 같은 자라는 중
 
 어디서나 열림  문장분석 시트 sheet (채팅·통화 돌아보기·영상·노트의 문장 → "분석") · 표현 시트 · 결제 화면
                └ 🔎 My에서 찾기(FindInMy) → 서버가 틀의 칸 → My 단계 보기 그 단계·칸 시트 + "이 장면 넣기"(화면 함께, lib/notes/locateHandoff.ts — AI 대화·통화·영상만 화면, 사람 대화는 고른 부분만)
@@ -105,7 +106,7 @@
 
 ### 학습 기록 공통 — 오늘 해볼 것·표현 장부 (여러 화면이 같이 씀) `learner`
 - 화면: `LedgerLinks` · `NextStepCard`
-- API: `learner/ask`(My 탭) · `learner/brief` · `learner/comprehension`(문장분석·표현 시트, 영상 학습 탭) · `learner/growth`(My 탭) · `learner/ledger`(대화 탭, AI 채팅, AI 통화, 문장분석·표현 시트, My 탭) · `learner/next` · `learner/profile`(My 탭) · `learner/self-check`(My 탭)
+- API: `learner/ask`(My 탭) · `learner/brief` · `learner/comprehension`(문장분석·표현 시트, 영상 학습 탭) · `learner/growth` · `learner/ledger`(대화 탭, AI 채팅, AI 통화, 문장분석·표현 시트, My 탭) · `learner/next` · `learner/profile`(My 탭) · `learner/self-check`(My 탭)
 - 다른 영역이 씀: `LedgerLinks` ← AI 채팅, AI 통화, 영상 학습 탭, My 탭 · `NextStepCard` ← AI 채팅, AI 통화, My 탭
 
 ### 영상 학습 탭 `video`
@@ -183,6 +184,6 @@
 
 - 아무도 안 가져다 쓰는 화면 코드: 없음
 - 앱·스크립트 어디서도 안 부르는 API: 없음
-- 밖에서 부르는 API: `ops/reports` 운영자 신고함 페이지 /ops(운영자 키) · `ads/ssv` AdMob 서버가 보상 확인으로 부름 · `ads/txt` AdSense가 /ads.txt로 읽음(next.config.ts rewrites) · `account/purge` Vercel 예약 작업(vercel.json) · `media/sweep` Vercel 예약 작업(vercel.json) · `feedback/fixed` 의견함 예약 작업(scripts/feedback-notify.mjs) · `feedback/image` 의견함 정리(scripts/feedback-pull.mjs) · `simcheck/forget` 가상 사용자 점검이 끝날 때 · `video-subtitles/window` 옛 앱 2.48~2.57이 영상 해석에 씀 — 최소 지원 버전을 2.58 이상으로 올리면 지움 · `english-analysis/input` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `english-analysis/element` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `learner/brief` 가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀
+- 밖에서 부르는 API: `ops/reports` 운영자 신고함 페이지 /ops(운영자 키) · `ads/ssv` AdMob 서버가 보상 확인으로 부름 · `ads/txt` AdSense가 /ads.txt로 읽음(next.config.ts rewrites) · `account/purge` Vercel 예약 작업(vercel.json) · `media/sweep` Vercel 예약 작업(vercel.json) · `feedback/fixed` 의견함 예약 작업(scripts/feedback-notify.mjs) · `feedback/image` 의견함 정리(scripts/feedback-pull.mjs) · `simcheck/forget` 가상 사용자 점검이 끝날 때 · `video-subtitles/window` 옛 앱 2.48~2.57이 영상 해석에 씀 — 최소 지원 버전을 2.58 이상으로 올리면 지움 · `learner/growth` 옛 앱 2.48~2.74가 My 망·그래프(여섯 요소)에 씀 — 2.75부터 화면은 네 갈래(/api/notebook parts), 최소 지원 버전을 2.75 이상으로 올리면 화면용으로는 지움(점검 스크립트는 씀) · `english-analysis/input` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `english-analysis/element` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `learner/brief` 가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀
 
 <!-- 자동 끝 -->

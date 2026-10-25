@@ -652,7 +652,9 @@
     "partGoal": "この段階の目標",
     "partGoalMap": "目標マップ",
     "stageNumber": "ステージ{n}",
-    "stageExamplesTitle": "この段階ではこんな会話ができます"
+    "stageExamplesTitle": "この段階ではこんな会話ができます",
+    "whatsNewStagePartsTitle": "語彙・文法・表現・発音で見る段階",
+    "whatsNewStagePartsBody": "Myが語彙・文法・表現・発音の4つに分かれました。いちばん足りない項目をすぐ練習でき、4つとも70%を超えたら「次の段階へ」。段階ごとにできる会話の例もあります。"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1307,7 +1309,9 @@
     "partGoal": "本阶段目标",
     "partGoalMap": "目标地图",
     "stageNumber": "第{n}阶段",
-    "stageExamplesTitle": "这个阶段能进行这样的对话"
+    "stageExamplesTitle": "这个阶段能进行这样的对话",
+    "whatsNewStagePartsTitle": "按词汇、语法、表达、发音看阶段",
+    "whatsNewStagePartsBody": "My 现在把每个阶段分成词汇、语法、表达、发音四项。最薄弱的一项可以马上练习，四项都超过70%就能“进入下一阶段”。每个阶段还有能进行的对话示例。"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1964,7 +1968,9 @@
     "partGoal": "Mục tiêu giai đoạn này",
     "partGoalMap": "Bản đồ mục tiêu",
     "stageNumber": "Giai đoạn {n}",
-    "stageExamplesTitle": "Ở giai đoạn này bạn nói được thế này"
+    "stageExamplesTitle": "Ở giai đoạn này bạn nói được thế này",
+    "whatsNewStagePartsTitle": "Giai đoạn theo Từ vựng, Ngữ pháp, Cách diễn đạt, Phát âm",
+    "whatsNewStagePartsBody": "My giờ chia mỗi giai đoạn thành Từ vựng, Ngữ pháp, Cách diễn đạt và Phát âm. Luyện ngay phần yếu nhất; khi cả bốn vượt 70% là “Giai đoạn tiếp theo”. Mỗi giai đoạn có ví dụ hội thoại bạn làm được."
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2626,7 +2632,9 @@
     "partGoal": "Objectif de cette étape",
     "partGoalMap": "Carte de l’objectif",
     "stageNumber": "Étape {n}",
-    "stageExamplesTitle": "À cette étape, vous pouvez parler comme ça"
+    "stageExamplesTitle": "À cette étape, vous pouvez parler comme ça",
+    "whatsNewStagePartsTitle": "Étapes en vocabulaire, grammaire, expressions et prononciation",
+    "whatsNewStagePartsBody": "Mon espace divise chaque étape en Vocabulaire, Grammaire, Expressions et Prononciation. Entraînez tout de suite la partie la plus faible ; quand les quatre dépassent 70 %, « Étape suivante ». Chaque étape montre des conversations possibles."
   },
   "it": {
     "archive": "Report",
@@ -3479,7 +3487,9 @@
     "partGoal": "Obiettivo di questa fase",
     "partGoalMap": "Mappa dell’obiettivo",
     "stageNumber": "Fase {n}",
-    "stageExamplesTitle": "In questa fase puoi parlare così"
+    "stageExamplesTitle": "In questa fase puoi parlare così",
+    "whatsNewStagePartsTitle": "Fasi per vocabolario, grammatica, espressioni e pronuncia",
+    "whatsNewStagePartsBody": "Il mio spazio divide ogni fase in Vocabolario, Grammatica, Espressioni e Pronuncia. Esercita subito la parte più debole; quando tutte e quattro superano il 70%, «Fase successiva». Ogni fase mostra conversazioni che puoi fare."
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4144,7 +4154,9 @@
     "partGoal": "Meta desta etapa",
     "partGoalMap": "Mapa da meta",
     "stageNumber": "Etapa {n}",
-    "stageExamplesTitle": "Nesta etapa você consegue conversar assim"
+    "stageExamplesTitle": "Nesta etapa você consegue conversar assim",
+    "whatsNewStagePartsTitle": "Etapas por vocabulário, gramática, expressões e pronúncia",
+    "whatsNewStagePartsBody": "Meu espaço divide cada etapa em Vocabulário, Gramática, Expressões e Pronúncia. Pratique na hora a parte mais fraca; quando as quatro passam de 70%, “Próxima etapa”. Cada etapa mostra conversas que você já consegue ter."
   },
   "ru": {
     "archive": "Отчёты",
@@ -4995,7 +5007,9 @@
     "partGoal": "Цель этапа",
     "partGoalMap": "Карта цели",
     "stageNumber": "Этап {n}",
-    "stageExamplesTitle": "На этом этапе вы можете говорить так"
+    "stageExamplesTitle": "На этом этапе вы можете говорить так",
+    "whatsNewStagePartsTitle": "Этапы: словарь, грамматика, выражения, произношение",
+    "whatsNewStagePartsBody": "В «Моём» каждый этап теперь делится на Словарь, Грамматику, Выражения и Произношение. Тренируйте самую слабую часть сразу; когда все четыре больше 70%, «Следующий этап». На каждом этапе есть примеры разговоров."
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5656,7 +5670,9 @@
     "partGoal": "Tujuan tahap ini",
     "partGoalMap": "Peta tujuan",
     "stageNumber": "Tahap {n}",
-    "stageExamplesTitle": "Di tahap ini kamu bisa bercakap seperti ini"
+    "stageExamplesTitle": "Di tahap ini kamu bisa bercakap seperti ini",
+    "whatsNewStagePartsTitle": "Tahap menurut kosakata, tata bahasa, ungkapan, pelafalan",
+    "whatsNewStagePartsBody": "My kini membagi tiap tahap menjadi Kosakata, Tata bahasa, Ungkapan, dan Pelafalan. Latih bagian terlemah langsung; saat keempatnya lewat 70%, “Tahap berikutnya”. Tiap tahap punya contoh percakapan yang bisa kamu lakukan."
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6311,7 +6327,9 @@
     "partGoal": "هدف هذه المرحلة",
     "partGoalMap": "خريطة الهدف",
     "stageNumber": "المرحلة {n}",
-    "stageExamplesTitle": "في هذه المرحلة يمكنك أن تتحدث هكذا"
+    "stageExamplesTitle": "في هذه المرحلة يمكنك أن تتحدث هكذا",
+    "whatsNewStagePartsTitle": "المراحل بالمفردات والقواعد والتعابير والنطق",
+    "whatsNewStagePartsBody": "صار «My» يقسم كل مرحلة إلى المفردات والقواعد والتعابير والنطق. تدرّب فورًا على الجزء الأضعف، وعندما تتجاوز الأربعة 70% اضغط «المرحلة التالية». في كل مرحلة أمثلة لمحادثات تستطيع إجراءها."
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6966,7 +6984,9 @@
     "partGoal": "เป้าหมายขั้นนี้",
     "partGoalMap": "แผนที่เป้าหมาย",
     "stageNumber": "ขั้นที่ {n}",
-    "stageExamplesTitle": "ขั้นนี้คุณคุยแบบนี้ได้"
+    "stageExamplesTitle": "ขั้นนี้คุณคุยแบบนี้ได้",
+    "whatsNewStagePartsTitle": "ขั้นตามคำศัพท์ ไวยากรณ์ สำนวน การออกเสียง",
+    "whatsNewStagePartsBody": "My แบ่งแต่ละขั้นเป็นคำศัพท์ ไวยากรณ์ สำนวน และการออกเสียง ฝึกส่วนที่อ่อนที่สุดได้ทันที เมื่อทั้งสี่เกิน 70% กด “ไปขั้นถัดไป” แต่ละขั้นมีตัวอย่างบทสนทนาที่ทำได้"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7621,6 +7641,8 @@
     "partGoal": "इस चरण का लक्ष्य",
     "partGoalMap": "लक्ष्य नक्शा",
     "stageNumber": "चरण {n}",
-    "stageExamplesTitle": "इस चरण में आप ऐसी बातचीत कर सकते हैं"
+    "stageExamplesTitle": "इस चरण में आप ऐसी बातचीत कर सकते हैं",
+    "whatsNewStagePartsTitle": "शब्दावली, व्याकरण, अभिव्यक्ति और उच्चारण से चरण",
+    "whatsNewStagePartsBody": "My अब हर चरण को शब्दावली, व्याकरण, अभिव्यक्तियाँ और उच्चारण में बाँटता है। सबसे कमज़ोर हिस्से का तुरंत अभ्यास करें; चारों 70% पार करें तो “अगला चरण”। हर चरण में होने वाली बातचीत के उदाहरण हैं।"
   }
 }

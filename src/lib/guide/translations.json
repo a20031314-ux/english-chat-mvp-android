@@ -21,24 +21,25 @@
         {
           "heading": "3. Creciendo",
           "body": [
-            "Seis partes crecen a medida que usas el idioma y nunca se encogen. La que tiene un aro es «{ui:myNext}»."
+            "Cuatro partes — «{ui:partVocab}», «{ui:partGrammar}», «{ui:partExpression}» y «{ui:partPronunciation}» — muestran cuánto llevas en tu etapa. La línea punteada es lo que pide la siguiente etapa y la parte más floja va en amarillo.",
+            "Toca una parte para abrirla en «{ui:myViewMap}»."
           ],
-          "shot": "growth"
+          "shot": "parts-net"
         },
         {
-          "heading": "4. Verlo como gráfico",
+          "heading": "4. En gráfica",
           "body": [
-            "Toca «{ui:myViewGraph}» para ver las últimas dos semanas de cada parte en barras. La vista que elijas se queda para la próxima vez."
+            "Toca «{ui:myViewGraph}» para ver cuánto creció cada parte día a día en las últimas dos semanas. La vista que elijas se queda."
           ],
-          "shot": "graph"
+          "shot": "parts-graph"
         },
         {
-          "heading": "5. Toca para ver más",
+          "heading": "5. A la siguiente etapa",
           "body": [
-            "Toca una parte para ver cómo crece, las últimas dos semanas y las expresiones que la hicieron crecer; «{ui:myGrowIt}» empieza a practicar.",
-            "«{ui:myOpenStage}» muestra las secciones ligadas a esa parte. La amplitud de expresión lleva a tu vocabulario."
+            "Arriba en «{ui:myViewMap}» verás tu parte más floja. Practícala con el botón de al lado: «{ui:nextByCall}» para «{ui:partPronunciation}», «{ui:nextByChat}» para lo demás.",
+            "Cuando las cuatro pasan del 70 %, se activa «{ui:partReady}». Si nunca has probado a repetir una frase, «{ui:partPronunciation}» queda en «{ui:myNoData}» y no cuenta."
           ],
-          "shot": "element"
+          "shot": "stage-next"
         },
         {
           "heading": "6. Pregunta",
@@ -48,13 +49,13 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Verlo por etapas",
+          "heading": "7. Etapas",
           "body": [
-            "«{ui:myViewMap}» muestra las etapas del 1 al 5. La actual está coloreada; toca un número para ver la conversación objetivo y la gramática de esa etapa.",
-            "Las expresiones que ya sabes usar y las escenas que guardas llenan la sección que corresponde. Modismos y combinaciones van a «{ui:notebookIdioms}»; formalidad u ortografía, a «{ui:notebookDetails}». El color del punto indica dominada o aprendida, el número de arriba las secciones llenas, y la gramática dominada lleva ✓. Abre una sección para «{ui:stageTry}» o mover una expresión.",
-            "Debajo están los temas de tu objetivo. En un tema, «{ui:missionStart}»: la tarea oculta la respuesta y te pide escribirla; si aciertas sin pistas, pasa a dominada."
+            "«{ui:myViewMap}» va de la etapa 1 a la 5. Toca un número para ver esa etapa.",
+            "Toca una parte para abrirla: «{ui:partVocab}» con tus palabras y la lista de palabras, «{ui:partGrammar}» con la gramática de la etapa (✓ y «{ui:stageTry}»), «{ui:partExpression}» con sus expresiones clave y las secciones de «{ui:notebookIdioms}», «{ui:partPronunciation}» con el punto de sonido de la etapa y las secciones de letras y sonidos. Lo que ya sabes usar y las escenas guardadas llenan su sección.",
+            "Abajo, «{ui:stageExamplesTitle}» muestra conversaciones posibles en esta etapa; prueba una con «{ui:stageTry}». Tus temas y tareas de antes están en «{ui:partGoalMap}»."
           ],
-          "shot": "stage-board"
+          "shot": "stage-parts"
         },
         {
           "heading": "8. Notas",
@@ -445,24 +446,25 @@
         {
           "heading": "3. 成長中",
           "body": [
-            "6つの部分は使うほど大きくなり、小さくはなりません。輪がついているのが「{ui:myNext}」です。"
+            "「{ui:partVocab}」「{ui:partGrammar}」「{ui:partExpression}」「{ui:partPronunciation}」の4つが、今の段階でどれだけ埋まったかを表します。点線が次の段階の基準で、いちばん足りない項目は黄色です。",
+            "項目を押すと「{ui:myViewMap}」でその項目を開きます。"
           ],
-          "shot": "growth"
+          "shot": "parts-net"
         },
         {
           "heading": "4. グラフで見る",
           "body": [
-            "「{ui:myViewGraph}」を押すと、部分ごとの最近2週間が棒で見えます。選んだ表示は次回もそのままです。"
+            "「{ui:myViewGraph}」を押すと、4つの項目が最近2週間に毎日どれだけ伸びたかが棒で見えます。選んだ表示は次回もそのままです。"
           ],
-          "shot": "graph"
+          "shot": "parts-graph"
         },
         {
-          "heading": "5. タップして見る",
+          "heading": "5. 次の段階へ",
           "body": [
-            "部分を押すと、育ち方・最近2週間・育てた表現が見え、「{ui:myGrowIt}」ですぐ練習できます。",
-            "「{ui:myOpenStage}」を押すと、その部分につながる項目をステージで見られます。表現の幅は単語帳へ。"
+            "「{ui:myViewMap}」のいちばん上に、いちばん足りない項目が出ます。横のボタンですぐ練習できます。「{ui:partPronunciation}」は「{ui:nextByCall}」、ほかは「{ui:nextByChat}」です。",
+            "4つとも70%を超えると「{ui:partReady}」が押せます。言い直しを一度もしていなければ「{ui:partPronunciation}」は「{ui:myNoData}」になり、数えません。"
           ],
-          "shot": "element"
+          "shot": "stage-next"
         },
         {
           "heading": "6. 聞いてみる",
@@ -474,11 +476,11 @@
         {
           "heading": "7. ステージで見る",
           "body": [
-            "「{ui:myViewMap}」にはステージ1〜5が並びます。今のステージに色が付き、番号を押すとそのステージの目標の会話と文法の項目を先に見られます。",
-            "使えるようになった表現とノートに入れた場面が、合う項目を埋めます。慣用句やよく一緒に使う言葉は「{ui:notebookIdioms}」、話し方や表記などは「{ui:notebookDetails}」へ。点の色は習得・学習中、上の数字は埋まった項目、身についた文法には✓。項目を開いて「{ui:stageTry}」ですぐ練習したり、表現を別の項目に移したりできます。",
-            "下には目標から作ったテーマがあります。テーマで「{ui:missionStart}」。タスクは答えを隠して書かせ、ヒントなしで正解すると習得になります。"
+            "「{ui:myViewMap}」には段階1〜5が並びます。番号を押すとその段階を先に見られます。",
+            "項目を押すと開きます。「{ui:partVocab}」は覚えた単語と単語帳、「{ui:partGrammar}」はその段階の文法の項目（✓・「{ui:stageTry}」）、「{ui:partExpression}」は大事な表現と「{ui:notebookIdioms}」の項目、「{ui:partPronunciation}」はその段階の発音のポイントと文字・音の項目。使えるようになった表現とノートに入れた場面が合う項目を埋めます。",
+            "下の「{ui:stageExamplesTitle}」でその段階でできる会話を見て、「{ui:stageTry}」で試せます。前の目標テーマとタスクは「{ui:partGoalMap}」にたたんであります。"
           ],
-          "shot": "stage-board"
+          "shot": "stage-parts"
         },
         {
           "heading": "8. ノート",
@@ -869,24 +871,25 @@
         {
           "heading": "3. 成长中",
           "body": [
-            "六个部分越用越大，不会变小。带圈的是“{ui:myNext}”。"
+            "“{ui:partVocab}”“{ui:partGrammar}”“{ui:partExpression}”“{ui:partPronunciation}”四项显示在当前阶段完成了多少。虚线是进入下一阶段的标准，最薄弱的一项是黄色。",
+            "点一项，就在“{ui:myViewMap}”里打开它。"
           ],
-          "shot": "growth"
+          "shot": "parts-net"
         },
         {
-          "heading": "4. 用图表看",
+          "heading": "4. 图表",
           "body": [
-            "点“{ui:myViewGraph}”，每个部分最近两周以柱状显示。选好的方式下次也保持。"
+            "点“{ui:myViewGraph}”，可以看到四项在最近两周每天增长了多少。选的视图下次还在。"
           ],
-          "shot": "graph"
+          "shot": "parts-graph"
         },
         {
-          "heading": "5. 点开查看",
+          "heading": "5. 进入下一阶段",
           "body": [
-            "点开一个部分，可以看到成长方式、最近两周和让它成长的表达，用“{ui:myGrowIt}”马上练习。",
-            "点“{ui:myOpenStage}”，可以在阶段里看到和这一项相关的部分。表达广度会打开单词本。"
+            "“{ui:myViewMap}”最上面会显示最薄弱的一项，用旁边的按钮马上练习：“{ui:partPronunciation}”用“{ui:nextByCall}”，其他用“{ui:nextByChat}”。",
+            "四项都超过70%时，“{ui:partReady}”就能点了。如果从没试过重说一句，“{ui:partPronunciation}”显示“{ui:myNoData}”，不计算在内。"
           ],
-          "shot": "element"
+          "shot": "stage-next"
         },
         {
           "heading": "6. 提问",
@@ -896,13 +899,13 @@
           "shot": "myask"
         },
         {
-          "heading": "7. 按阶段查看",
+          "heading": "7. 按阶段看",
           "body": [
-            "“{ui:myViewMap}”里排着第 1 到第 5 阶段。当前阶段会被填上颜色，点数字可以先看那个阶段的目标对话和语法部分。",
-            "会用的表达和放进笔记的场景会填进对应的部分。惯用语、常见搭配放在“{ui:notebookIdioms}”，语气、拼写之类放在“{ui:notebookDetails}”。圆点颜色表示已掌握或在学，上面的数字是已填的部分，已掌握的语法有 ✓。打开部分可以点“{ui:stageTry}”马上练习，也能把表达移到别处。",
-            "下面是按目标生成的主题。在主题里点“{ui:missionStart}”——任务会把答案藏起来让你写，不靠提示写对就算掌握。"
+            "“{ui:myViewMap}”里是第1到第5阶段，点数字可以先看那个阶段。",
+            "点一项会展开：“{ui:partVocab}”是学会的词和单词本，“{ui:partGrammar}”是这个阶段的语法项（✓、“{ui:stageTry}”），“{ui:partExpression}”是核心表达和“{ui:notebookIdioms}”项，“{ui:partPronunciation}”是这个阶段的发音要点和字母·发音项。会用的表达和存进笔记的场景会填进对应的项。",
+            "下面的“{ui:stageExamplesTitle}”展示这个阶段能进行的对话，用“{ui:stageTry}”试一试。以前的目标主题和任务收在“{ui:partGoalMap}”里。"
           ],
-          "shot": "stage-board"
+          "shot": "stage-parts"
         },
         {
           "heading": "8. 笔记",
@@ -1293,24 +1296,25 @@
         {
           "heading": "3. Đang lớn",
           "body": [
-            "Sáu phần lớn dần khi bạn dùng và không bao giờ nhỏ lại. Phần có vòng tròn là “{ui:myNext}”."
+            "Bốn phần “{ui:partVocab}”, “{ui:partGrammar}”, “{ui:partExpression}” và “{ui:partPronunciation}” cho thấy bạn đã lấp đầy bao nhiêu ở giai đoạn hiện tại. Đường chấm là mức cần cho giai đoạn sau, phần yếu nhất có chữ vàng.",
+            "Chạm một phần để mở nó trong “{ui:myViewMap}”."
           ],
-          "shot": "growth"
+          "shot": "parts-net"
         },
         {
-          "heading": "4. Xem dạng biểu đồ",
+          "heading": "4. Xem biểu đồ",
           "body": [
-            "Chạm “{ui:myViewGraph}” để xem hai tuần qua của từng phần dưới dạng cột. Cách xem bạn chọn sẽ được giữ cho lần sau."
+            "Chạm “{ui:myViewGraph}” để xem mỗi phần tăng bao nhiêu mỗi ngày trong hai tuần qua. Kiểu xem bạn chọn sẽ được giữ lại."
           ],
-          "shot": "graph"
+          "shot": "parts-graph"
         },
         {
-          "heading": "5. Chạm để xem",
+          "heading": "5. Sang giai đoạn tiếp theo",
           "body": [
-            "Chạm vào một phần để xem cách nó lớn, hai tuần qua và các cách nói giúp nó lớn; “{ui:myGrowIt}” để luyện ngay.",
-            "«{ui:myOpenStage}» cho xem các mục liên quan đến phần đó. Độ rộng biểu đạt mở sổ từ."
+            "Trên cùng của “{ui:myViewMap}” là phần yếu nhất. Luyện ngay bằng nút bên cạnh: “{ui:nextByCall}” cho “{ui:partPronunciation}”, “{ui:nextByChat}” cho phần còn lại.",
+            "Khi cả bốn phần vượt 70%, “{ui:partReady}” sẽ bật. Nếu bạn chưa từng thử nói lại một câu, “{ui:partPronunciation}” hiện “{ui:myNoData}” và không được tính."
           ],
-          "shot": "element"
+          "shot": "stage-next"
         },
         {
           "heading": "6. Hỏi",
@@ -1322,11 +1326,11 @@
         {
           "heading": "7. Xem theo giai đoạn",
           "body": [
-            "«{ui:myViewMap}» xếp các giai đoạn từ 1 đến 5. Giai đoạn hiện tại được tô màu; chạm vào một số để xem trước hội thoại mục tiêu và các mục ngữ pháp của giai đoạn đó.",
-            "Những cách nói bạn đã dùng được và cảnh đưa vào sổ sẽ lấp đầy mục tương ứng. Thành ngữ, từ hay đi cùng vào «{ui:notebookIdioms}»; cách nói, chính tả vào «{ui:notebookDetails}». Màu chấm là đã nắm hay đang học, số ở trên là mục đã lấp, ngữ pháp đã nắm có ✓. Mở một mục để «{ui:stageTry}» ngay hoặc chuyển cách nói sang mục khác.",
-            "Bên dưới là các chủ đề vẽ từ mục tiêu. Trong chủ đề, chạm «{ui:missionStart}» — bài tập giấu đáp án để bạn tự viết, viết đúng không cần gợi ý thì thành đã nắm."
+            "“{ui:myViewMap}” có các giai đoạn từ 1 đến 5. Chạm số để xem trước giai đoạn đó.",
+            "Chạm một phần để mở: “{ui:partVocab}” có từ đã học và sổ từ, “{ui:partGrammar}” có ngữ pháp của giai đoạn (✓ và “{ui:stageTry}”), “{ui:partExpression}” có các cách nói chính và mục “{ui:notebookIdioms}”, “{ui:partPronunciation}” có điểm phát âm của giai đoạn và mục chữ cái·âm. Cách nói bạn dùng được và cảnh bạn lưu sẽ lấp vào mục phù hợp.",
+            "Bên dưới, “{ui:stageExamplesTitle}” cho thấy những cuộc trò chuyện giai đoạn này làm được; thử bằng “{ui:stageTry}”. Chủ đề và nhiệm vụ cũ nằm gọn trong “{ui:partGoalMap}”."
           ],
-          "shot": "stage-board"
+          "shot": "stage-parts"
         },
         {
           "heading": "8. Ghi chú",
@@ -1715,26 +1719,27 @@
           "shot": "next"
         },
         {
-          "heading": "3. En croissance",
+          "heading": "3. En progrès",
           "body": [
-            "Six parties grandissent quand tu pratiques et ne rapetissent jamais. Celle entourée est « {ui:myNext} »."
+            "Quatre parties — « {ui:partVocab} », « {ui:partGrammar} », « {ui:partExpression} » et « {ui:partPronunciation} » — montrent où vous en êtes à votre étape. La ligne pointillée est ce qu’il faut pour l’étape suivante, la partie la plus faible est en jaune.",
+            "Touchez une partie pour l’ouvrir dans « {ui:myViewMap} »."
           ],
-          "shot": "growth"
+          "shot": "parts-net"
         },
         {
-          "heading": "4. Voir en graphique",
+          "heading": "4. En graphique",
           "body": [
-            "Touche « {ui:myViewGraph} » pour voir les deux dernières semaines de chaque partie en barres. L'affichage choisi est gardé pour la prochaine fois."
+            "Touchez « {ui:myViewGraph} » pour voir combien chaque partie a progressé chaque jour ces deux dernières semaines. La vue choisie est gardée."
           ],
-          "shot": "graph"
+          "shot": "parts-graph"
         },
         {
-          "heading": "5. Touche pour voir",
+          "heading": "5. Vers l’étape suivante",
           "body": [
-            "Touche une partie pour voir comment elle grandit, les deux dernières semaines et les expressions qui l'ont fait grandir ; « {ui:myGrowIt} » lance la pratique.",
-            "« {ui:myOpenStage} » montre les sections liées à cette partie. L’étendue d’expression ouvre la liste de mots."
+            "En haut de « {ui:myViewMap} » s’affiche votre partie la plus faible. Entraînez-vous tout de suite avec le bouton à côté : « {ui:nextByCall} » pour « {ui:partPronunciation} », « {ui:nextByChat} » pour le reste.",
+            "Quand les quatre dépassent 70 %, « {ui:partReady} » s’active. Si vous n’avez jamais essayé de redire une phrase, « {ui:partPronunciation} » indique « {ui:myNoData} » et n’est pas compté."
           ],
-          "shot": "element"
+          "shot": "stage-next"
         },
         {
           "heading": "6. Pose une question",
@@ -1744,13 +1749,13 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Voir par étapes",
+          "heading": "7. Par étapes",
           "body": [
-            "« {ui:myViewMap} » aligne les étapes 1 à 5. L’étape actuelle est colorée ; touchez un numéro pour voir la conversation visée et les sections de grammaire de cette étape.",
-            "Les expressions que vous savez utiliser et les scènes ajoutées à vos notes remplissent la section correspondante. Expressions idiomatiques et associations vont dans « {ui:notebookIdioms} », registre ou orthographe dans « {ui:notebookDetails} ». La couleur du point indique maîtrisé ou appris, le nombre du haut les sections remplies, la grammaire maîtrisée a un ✓. Ouvrez une section pour « {ui:stageTry} » ou déplacer une expression.",
-            "En dessous, les thèmes tirés de votre objectif. Dans un thème, « {ui:missionStart} » : la tâche cache la réponse et vous la fait écrire ; juste sans indice, elle passe en maîtrisée."
+            "« {ui:myViewMap} » va de l’étape 1 à 5. Touchez un numéro pour voir cette étape.",
+            "Touchez une partie pour l’ouvrir : « {ui:partVocab} » avec vos mots et la liste de mots, « {ui:partGrammar} » avec la grammaire de l’étape (✓ et « {ui:stageTry} »), « {ui:partExpression} » avec ses expressions clés et les sections « {ui:notebookIdioms} », « {ui:partPronunciation} » avec le point de prononciation de l’étape et les sections lettres et sons. Ce que vous savez utiliser et les scènes enregistrées remplissent la bonne section.",
+            "En bas, « {ui:stageExamplesTitle} » montre des conversations possibles à cette étape ; essayez-en une avec « {ui:stageTry} ». Vos anciens thèmes et tâches sont repliés sous « {ui:partGoalMap} »."
           ],
-          "shot": "stage-board"
+          "shot": "stage-parts"
         },
         {
           "heading": "8. Notes",
@@ -2141,24 +2146,25 @@
         {
           "heading": "3. In crescita",
           "body": [
-            "Sei parti crescono man mano che usi la lingua e non si rimpiccioliscono mai. Quella cerchiata è «{ui:myNext}»."
+            "Quattro parti — «{ui:partVocab}», «{ui:partGrammar}», «{ui:partExpression}» e «{ui:partPronunciation}» — mostrano quanto hai riempito nella tua fase. La linea tratteggiata è ciò che serve per la fase successiva, la parte più debole è in giallo.",
+            "Tocca una parte per aprirla in «{ui:myViewMap}»."
           ],
-          "shot": "growth"
+          "shot": "parts-net"
         },
         {
-          "heading": "4. Vederlo come grafico",
+          "heading": "4. Come grafico",
           "body": [
-            "Tocca «{ui:myViewGraph}» per vedere le ultime due settimane di ogni parte a barre. La vista scelta resta per la prossima volta."
+            "Tocca «{ui:myViewGraph}» per vedere quanto è cresciuta ogni parte giorno per giorno nelle ultime due settimane. La vista scelta resta."
           ],
-          "shot": "graph"
+          "shot": "parts-graph"
         },
         {
-          "heading": "5. Tocca per vedere",
+          "heading": "5. Alla fase successiva",
           "body": [
-            "Tocca una parte per vedere come cresce, le ultime due settimane e le espressioni che l'hanno fatta crescere; «{ui:myGrowIt}» avvia la pratica.",
-            "«{ui:myOpenStage}» mostra le sezioni legate a quella parte. L’ampiezza d’espressione apre il vocabolario."
+            "In cima a «{ui:myViewMap}» vedi la parte più debole. Esercitala subito con il pulsante accanto: «{ui:nextByCall}» per «{ui:partPronunciation}», «{ui:nextByChat}» per il resto.",
+            "Quando tutte e quattro superano il 70%, si attiva «{ui:partReady}». Se non hai mai provato a ripetere una frase, «{ui:partPronunciation}» resta su «{ui:myNoData}» e non conta."
           ],
-          "shot": "element"
+          "shot": "stage-next"
         },
         {
           "heading": "6. Chiedi",
@@ -2168,13 +2174,13 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Vedere per fasi",
+          "heading": "7. Per fasi",
           "body": [
-            "«{ui:myViewMap}» mette in fila le fasi da 1 a 5. La fase attuale è colorata; tocca un numero per vedere la conversazione obiettivo e le sezioni di grammatica di quella fase.",
-            "Le espressioni che sai usare e le scene che metti nelle note riempiono la sezione giusta. Modi di dire e parole che vanno insieme in «{ui:notebookIdioms}», registro o ortografia in «{ui:notebookDetails}». Il colore del punto indica padroneggiata o imparata, il numero in alto le sezioni riempite, la grammatica padroneggiata ha ✓. Apri una sezione per «{ui:stageTry}» o spostare un’espressione.",
-            "Sotto ci sono i temi tratti dal tuo obiettivo. In un tema, «{ui:missionStart}»: il compito nasconde la risposta e te la fa scrivere; se la azzecchi senza suggerimenti diventa padroneggiata."
+            "«{ui:myViewMap}» va dalla fase 1 alla 5. Tocca un numero per vedere quella fase.",
+            "Tocca una parte per aprirla: «{ui:partVocab}» con le parole imparate e il vocabolario, «{ui:partGrammar}» con la grammatica della fase (✓ e «{ui:stageTry}»), «{ui:partExpression}» con le espressioni chiave e le sezioni «{ui:notebookIdioms}», «{ui:partPronunciation}» con il punto di pronuncia della fase e le sezioni lettere e suoni. Ciò che sai usare e le scene salvate riempiono la sezione giusta.",
+            "Sotto, «{ui:stageExamplesTitle}» mostra conversazioni possibili in questa fase; provane una con «{ui:stageTry}». I vecchi temi e compiti sono raccolti in «{ui:partGoalMap}»."
           ],
-          "shot": "stage-board"
+          "shot": "stage-parts"
         },
         {
           "heading": "8. Note",
@@ -2565,24 +2571,25 @@
         {
           "heading": "3. Crescendo",
           "body": [
-            "Seis partes crescem conforme você usa o idioma e nunca diminuem. A que tem um anel é “{ui:myNext}”."
+            "Quatro partes — “{ui:partVocab}”, “{ui:partGrammar}”, “{ui:partExpression}” e “{ui:partPronunciation}” — mostram quanto você já preencheu na sua etapa. A linha pontilhada é o que a próxima etapa pede, e a parte mais fraca fica em amarelo.",
+            "Toque numa parte para abri-la em “{ui:myViewMap}”."
           ],
-          "shot": "growth"
+          "shot": "parts-net"
         },
         {
-          "heading": "4. Ver como gráfico",
+          "heading": "4. Em gráfico",
           "body": [
-            "Toque “{ui:myViewGraph}” para ver as últimas duas semanas de cada parte em barras. A visualização escolhida fica para a próxima vez."
+            "Toque em “{ui:myViewGraph}” para ver quanto cada parte cresceu a cada dia nas últimas duas semanas. A visão escolhida fica salva."
           ],
-          "shot": "graph"
+          "shot": "parts-graph"
         },
         {
-          "heading": "5. Toque para ver",
+          "heading": "5. Para a próxima etapa",
           "body": [
-            "Toque numa parte para ver como cresce, as últimas duas semanas e as expressões que a fizeram crescer; “{ui:myGrowIt}” começa a praticar.",
-            "«{ui:myOpenStage}» mostra as secções ligadas a essa parte. A amplitude de expressão abre o vocabulário."
+            "No topo de “{ui:myViewMap}” aparece sua parte mais fraca. Pratique na hora com o botão ao lado: “{ui:nextByCall}” para “{ui:partPronunciation}”, “{ui:nextByChat}” para o resto.",
+            "Quando as quatro passam de 70%, “{ui:partReady}” fica ativo. Se você nunca tentou repetir uma frase, “{ui:partPronunciation}” mostra “{ui:myNoData}” e não entra na conta."
           ],
-          "shot": "element"
+          "shot": "stage-next"
         },
         {
           "heading": "6. Pergunte",
@@ -2592,13 +2599,13 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Ver por etapas",
+          "heading": "7. Por etapas",
           "body": [
-            "«{ui:myViewMap}» mostra as etapas de 1 a 5. A etapa atual fica colorida; toque num número para ver a conversa-alvo e as secções de gramática dessa etapa.",
-            "As expressões que já consegue usar e as cenas que guarda nas notas preenchem a secção certa. Expressões idiomáticas e combinações vão para «{ui:notebookIdioms}»; registo ou ortografia, para «{ui:notebookDetails}». A cor do ponto indica dominada ou aprendida, o número em cima as secções preenchidas, e a gramática dominada tem ✓. Abra uma secção para «{ui:stageTry}» ou mover uma expressão.",
-            "Por baixo ficam os temas do seu objetivo. Num tema, «{ui:missionStart}»: a tarefa esconde a resposta e pede que a escreva; se acertar sem dicas, passa a dominada."
+            "“{ui:myViewMap}” vai da etapa 1 à 5. Toque num número para ver essa etapa.",
+            "Toque numa parte para abri-la: “{ui:partVocab}” com as palavras aprendidas e o vocabulário, “{ui:partGrammar}” com a gramática da etapa (✓ e “{ui:stageTry}”), “{ui:partExpression}” com as expressões-chave e as seções de “{ui:notebookIdioms}”, “{ui:partPronunciation}” com o ponto de pronúncia da etapa e as seções de letras e sons. O que você já sabe usar e as cenas salvas preenchem a seção certa.",
+            "Embaixo, “{ui:stageExamplesTitle}” mostra conversas possíveis nesta etapa; experimente uma com “{ui:stageTry}”. Os temas e tarefas antigos ficam em “{ui:partGoalMap}”."
           ],
-          "shot": "stage-board"
+          "shot": "stage-parts"
         },
         {
           "heading": "8. Notas",
@@ -2987,26 +2994,27 @@
           "shot": "next"
         },
         {
-          "heading": "3. Растёт",
+          "heading": "3. Рост",
           "body": [
-            "Шесть частей растут по мере практики и никогда не уменьшаются. Обведённая — «{ui:myNext}»."
+            "Четыре части — «{ui:partVocab}», «{ui:partGrammar}», «{ui:partExpression}» и «{ui:partPronunciation}» — показывают, насколько заполнен ваш этап. Пунктир — то, что нужно для следующего этапа, самая слабая часть выделена жёлтым.",
+            "Нажмите на часть, чтобы открыть её в «{ui:myViewMap}»."
           ],
-          "shot": "growth"
+          "shot": "parts-net"
         },
         {
-          "heading": "4. Посмотреть графиком",
+          "heading": "4. График",
           "body": [
-            "Нажмите «{ui:myViewGraph}» — последние две недели каждой части в виде столбиков. Выбранный вид сохранится."
+            "Нажмите «{ui:myViewGraph}», чтобы увидеть, на сколько выросла каждая часть за каждый день последних двух недель. Выбранный вид сохранится."
           ],
-          "shot": "graph"
+          "shot": "parts-graph"
         },
         {
-          "heading": "5. Нажмите, чтобы посмотреть",
+          "heading": "5. К следующему этапу",
           "body": [
-            "Нажмите на часть: как она растёт, последние две недели и выражения, которые помогли; «{ui:myGrowIt}» запускает практику.",
-            "«{ui:myOpenStage}» показывает разделы, связанные с этой частью. Широта выражения ведёт в словарь."
+            "Наверху «{ui:myViewMap}» видна самая слабая часть. Тренируйте её сразу кнопкой рядом: «{ui:nextByCall}» для «{ui:partPronunciation}», «{ui:nextByChat}» для остального.",
+            "Когда все четыре больше 70%, включается «{ui:partReady}». Если вы ни разу не пробовали повторить фразу, у «{ui:partPronunciation}» стоит «{ui:myNoData}», и она не учитывается."
           ],
-          "shot": "element"
+          "shot": "stage-next"
         },
         {
           "heading": "6. Спросите",
@@ -3016,13 +3024,13 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Смотреть по этапам",
+          "heading": "7. По этапам",
           "body": [
-            "В «{ui:myViewMap}» этапы с 1 по 5 идут подряд. Текущий закрашен; нажмите номер, чтобы заранее увидеть целевой диалог и разделы грамматики этого этапа.",
-            "Выражения, которыми вы уже пользуетесь, и сцены из заметок заполняют нужный раздел. Идиомы и устойчивые сочетания идут в «{ui:notebookIdioms}», стиль и орфография — в «{ui:notebookDetails}». Цвет точки — освоено или изучается, число сверху — заполненные разделы, у освоенной грамматики ✓. Откройте раздел, чтобы «{ui:stageTry}» или перенести выражение.",
-            "Ниже — темы, составленные по вашей цели. В теме «{ui:missionStart}»: задание прячет ответ и просит написать его; без подсказок верно — и фраза становится освоенной."
+            "В «{ui:myViewMap}» этапы с 1 по 5. Нажмите номер, чтобы посмотреть этот этап.",
+            "Нажмите часть, чтобы раскрыть её: «{ui:partVocab}» — выученные слова и словарь, «{ui:partGrammar}» — грамматика этапа (✓ и «{ui:stageTry}»), «{ui:partExpression}» — ключевые выражения и разделы «{ui:notebookIdioms}», «{ui:partPronunciation}» — главное в произношении этапа и разделы букв и звуков. То, что вы уже умеете использовать, и сохранённые сцены заполняют нужный раздел.",
+            "Ниже «{ui:stageExamplesTitle}» показывает, какие разговоры доступны на этом этапе; попробуйте с «{ui:stageTry}». Старые темы и задания свёрнуты в «{ui:partGoalMap}»."
           ],
-          "shot": "stage-board"
+          "shot": "stage-parts"
         },
         {
           "heading": "8. Заметки",
@@ -3411,26 +3419,27 @@
           "shot": "next"
         },
         {
-          "heading": "3. Sedang tumbuh",
+          "heading": "3. Bertumbuh",
           "body": [
-            "Enam bagian tumbuh saat kamu memakai bahasanya dan tidak pernah mengecil. Yang dilingkari adalah “{ui:myNext}”."
+            "Empat bagian — “{ui:partVocab}”, “{ui:partGrammar}”, “{ui:partExpression}”, dan “{ui:partPronunciation}” — menunjukkan seberapa penuh tahapmu sekarang. Garis putus-putus adalah batas untuk tahap berikutnya, bagian paling lemah berwarna kuning.",
+            "Ketuk satu bagian untuk membukanya di “{ui:myViewMap}”."
           ],
-          "shot": "growth"
+          "shot": "parts-net"
         },
         {
-          "heading": "4. Lihat sebagai grafik",
+          "heading": "4. Sebagai grafik",
           "body": [
-            "Ketuk “{ui:myViewGraph}” untuk melihat dua minggu terakhir tiap bagian dalam batang. Tampilan yang kamu pilih tetap untuk lain kali."
+            "Ketuk “{ui:myViewGraph}” untuk melihat seberapa banyak tiap bagian bertambah setiap hari dalam dua minggu terakhir. Tampilan yang kamu pilih tetap tersimpan."
           ],
-          "shot": "graph"
+          "shot": "parts-graph"
         },
         {
-          "heading": "5. Ketuk untuk melihat",
+          "heading": "5. Ke tahap berikutnya",
           "body": [
-            "Ketuk satu bagian untuk melihat cara tumbuhnya, dua minggu terakhir, dan ungkapan yang menumbuhkannya; “{ui:myGrowIt}” untuk langsung berlatih.",
-            "«{ui:myOpenStage}» menampilkan bagian yang terkait dengan unsur itu. Keluasan ungkapan membuka daftar kata."
+            "Di atas “{ui:myViewMap}” terlihat bagian paling lemah. Latih langsung dengan tombol di sebelahnya: “{ui:nextByCall}” untuk “{ui:partPronunciation}”, “{ui:nextByChat}” untuk yang lain.",
+            "Saat keempatnya lewat 70%, “{ui:partReady}” menyala. Kalau kamu belum pernah mencoba mengulang kalimat, “{ui:partPronunciation}” tertulis “{ui:myNoData}” dan tidak dihitung."
           ],
-          "shot": "element"
+          "shot": "stage-next"
         },
         {
           "heading": "6. Bertanya",
@@ -3440,13 +3449,13 @@
           "shot": "myask"
         },
         {
-          "heading": "7. Lihat per tahap",
+          "heading": "7. Per tahap",
           "body": [
-            "«{ui:myViewMap}» menjajarkan tahap 1 sampai 5. Tahap sekarang diwarnai; ketuk angka untuk melihat percakapan tujuan dan bagian tata bahasa tahap itu.",
-            "Ungkapan yang sudah bisa kamu pakai dan adegan yang kamu masukkan ke catatan mengisi bagian yang cocok. Idiom dan kata yang berpasangan masuk ke «{ui:notebookIdioms}», gaya bahasa atau ejaan ke «{ui:notebookDetails}». Warna titik berarti dikuasai atau dipelajari, angka di atas adalah bagian yang terisi, tata bahasa yang dikuasai diberi ✓. Buka bagian untuk «{ui:stageTry}» atau memindah ungkapan.",
-            "Di bawahnya ada topik dari tujuanmu. Di topik, ketuk «{ui:missionStart}» — tugas menyembunyikan jawaban dan memintamu menulisnya; benar tanpa petunjuk berarti dikuasai."
+            "“{ui:myViewMap}” berisi tahap 1 sampai 5. Ketuk angka untuk melihat tahap itu.",
+            "Ketuk satu bagian untuk membukanya: “{ui:partVocab}” berisi kata yang sudah dipelajari dan daftar kata, “{ui:partGrammar}” tata bahasa tahap itu (✓ dan “{ui:stageTry}”), “{ui:partExpression}” ungkapan utama dan bagian “{ui:notebookIdioms}”, “{ui:partPronunciation}” poin pelafalan tahap itu dan bagian huruf·bunyi. Ungkapan yang sudah bisa kamu pakai dan adegan yang disimpan mengisi bagian yang cocok.",
+            "Di bawah, “{ui:stageExamplesTitle}” menunjukkan percakapan yang bisa dilakukan di tahap ini; coba dengan “{ui:stageTry}”. Topik dan tugas lama ada di “{ui:partGoalMap}”."
           ],
-          "shot": "stage-board"
+          "shot": "stage-parts"
         },
         {
           "heading": "8. Catatan",
@@ -3837,24 +3846,25 @@
         {
           "heading": "3. ينمو",
           "body": [
-            "ستة أجزاء تكبر كلما استخدمت اللغة ولا تصغر أبدًا. الجزء المحاط بدائرة هو «{ui:myNext}»."
+            "تُظهر الأجزاء الأربعة «{ui:partVocab}» و«{ui:partGrammar}» و«{ui:partExpression}» و«{ui:partPronunciation}» كم امتلأت في مرحلتك الحالية. الخط المنقط هو ما تحتاجه المرحلة التالية، والجزء الأضعف باللون الأصفر.",
+            "اضغط على جزء لفتحه في «{ui:myViewMap}»."
           ],
-          "shot": "growth"
+          "shot": "parts-net"
         },
         {
-          "heading": "4. اعرضه كرسم بياني",
+          "heading": "4. كرسم بياني",
           "body": [
-            "اضغط «{ui:myViewGraph}» لترى آخر أسبوعين لكل جزء على شكل أعمدة. تبقى طريقة العرض التي تختارها للمرة القادمة."
+            "اضغط «{ui:myViewGraph}» لترى كم نما كل جزء يومًا بيوم خلال الأسبوعين الأخيرين. يبقى العرض الذي تختاره في المرة القادمة."
           ],
-          "shot": "graph"
+          "shot": "parts-graph"
         },
         {
-          "heading": "5. اضغط لترى",
+          "heading": "5. إلى المرحلة التالية",
           "body": [
-            "اضغط على جزء لترى كيف ينمو وآخر أسبوعين والتعابير التي أنمته؛ «{ui:myGrowIt}» يبدأ التدريب.",
-            "«{ui:myOpenStage}» يعرض الأقسام المرتبطة بهذا الجزء. اتساع التعبير يفتح قائمة الكلمات."
+            "أعلى «{ui:myViewMap}» يظهر الجزء الأضعف. تدرّب عليه فورًا بالزر المجاور: «{ui:nextByCall}» لـ«{ui:partPronunciation}»، و«{ui:nextByChat}» للبقية.",
+            "عندما تتجاوز الأجزاء الأربعة 70% يتفعّل «{ui:partReady}». إن لم تجرّب إعادة قول جملة من قبل، يظهر «{ui:partPronunciation}» بـ«{ui:myNoData}» ولا يُحسب."
           ],
-          "shot": "element"
+          "shot": "stage-next"
         },
         {
           "heading": "6. اسأل",
@@ -3864,13 +3874,13 @@
           "shot": "myask"
         },
         {
-          "heading": "7. اعرضه بالمراحل",
+          "heading": "7. حسب المراحل",
           "body": [
-            "تصطفّ في «{ui:myViewMap}» المراحل من 1 إلى 5. المرحلة الحالية ملوّنة، واضغط رقمًا لترى مسبقًا محادثة الهدف وأقسام القواعد في تلك المرحلة.",
-            "التعابير التي صرت تستعملها والمشاهد التي تضيفها إلى ملاحظاتك تملأ القسم المناسب. التعابير الاصطلاحية والكلمات المتلازمة تذهب إلى «{ui:notebookIdioms}»، والأسلوب أو الإملاء إلى «{ui:notebookDetails}». لون النقطة يعني متقن أو قيد التعلّم، والرقم في الأعلى هو الأقسام الممتلئة، والقواعد المتقنة عليها ✓. افتح القسم لـ«{ui:stageTry}» أو لنقل تعبير إلى قسم آخر.",
-            "في الأسفل المواضيع المرسومة من هدفك. في الموضوع اضغط «{ui:missionStart}»: المهمة تخفي الإجابة وتطلب منك كتابتها، وإذا أصبت دون تلميح تصبح متقنة."
+            "في «{ui:myViewMap}» المراحل من 1 إلى 5. اضغط على رقم لترى تلك المرحلة.",
+            "اضغط على جزء لفتحه: «{ui:partVocab}» فيه الكلمات التي تعلمتها وقائمة الكلمات، و«{ui:partGrammar}» قواعد المرحلة (✓ و«{ui:stageTry}»)، و«{ui:partExpression}» تعابيرها الأساسية وأقسام «{ui:notebookIdioms}»، و«{ui:partPronunciation}» نقطة النطق في المرحلة وأقسام الحروف والأصوات. ما صرت تستطيع استخدامه والمشاهد التي حفظتها تملأ القسم المناسب.",
+            "في الأسفل يعرض «{ui:stageExamplesTitle}» محادثات تصبح ممكنة في هذه المرحلة؛ جرّب واحدة بـ«{ui:stageTry}». موضوعاتك ومهامك السابقة مطويّة في «{ui:partGoalMap}»."
           ],
-          "shot": "stage-board"
+          "shot": "stage-parts"
         },
         {
           "heading": "8. الملاحظات",
@@ -4261,24 +4271,25 @@
         {
           "heading": "3. กำลังเติบโต",
           "body": [
-            "หกส่วนจะใหญ่ขึ้นเมื่อคุณใช้ภาษาและไม่มีวันเล็กลง ส่วนที่มีวงล้อมคือ “{ui:myNext}”"
+            "สี่ส่วน “{ui:partVocab}” “{ui:partGrammar}” “{ui:partExpression}” และ “{ui:partPronunciation}” แสดงว่าขั้นตอนตอนนี้เต็มแค่ไหน เส้นประคือเกณฑ์ของขั้นถัดไป ส่วนที่อ่อนที่สุดเป็นตัวสีเหลือง",
+            "แตะส่วนใดเพื่อเปิดใน “{ui:myViewMap}”"
           ],
-          "shot": "growth"
+          "shot": "parts-net"
         },
         {
           "heading": "4. ดูเป็นกราฟ",
           "body": [
-            "แตะ “{ui:myViewGraph}” เพื่อดูสองสัปดาห์ล่าสุดของแต่ละส่วนเป็นแท่ง มุมมองที่เลือกจะคงไว้ครั้งหน้า"
+            "แตะ “{ui:myViewGraph}” เพื่อดูว่าแต่ละส่วนเพิ่มขึ้นเท่าไรในแต่ละวันช่วงสองสัปดาห์ที่ผ่านมา มุมมองที่เลือกจะคงไว้ครั้งหน้า"
           ],
-          "shot": "graph"
+          "shot": "parts-graph"
         },
         {
-          "heading": "5. แตะเพื่อดู",
+          "heading": "5. ไปขั้นถัดไป",
           "body": [
-            "แตะส่วนหนึ่งเพื่อดูวิธีเติบโต สองสัปดาห์ล่าสุด และสำนวนที่ช่วยให้เติบโต แล้วฝึกทันทีด้วย “{ui:myGrowIt}”",
-            "«{ui:myOpenStage}» จะแสดงหัวข้อที่เชื่อมกับส่วนนั้น ความกว้างของสำนวนจะเปิดสมุดคำศัพท์"
+            "ด้านบนของ “{ui:myViewMap}” จะเห็นส่วนที่อ่อนที่สุด ฝึกได้ทันทีด้วยปุ่มข้างๆ “{ui:partPronunciation}” ใช้ “{ui:nextByCall}” ส่วนอื่นใช้ “{ui:nextByChat}”",
+            "เมื่อทั้งสี่ส่วนเกิน 70% ปุ่ม “{ui:partReady}” จะเปิด ถ้ายังไม่เคยลองพูดประโยคซ้ำ “{ui:partPronunciation}” จะเป็น “{ui:myNoData}” และไม่นับ"
           ],
-          "shot": "element"
+          "shot": "stage-next"
         },
         {
           "heading": "6. ถาม",
@@ -4288,13 +4299,13 @@
           "shot": "myask"
         },
         {
-          "heading": "7. ดูเป็นขั้น",
+          "heading": "7. ดูตามขั้น",
           "body": [
-            "«{ui:myViewMap}» เรียงขั้น 1 ถึง 5 ไว้ ขั้นปัจจุบันจะมีสี แตะตัวเลขเพื่อดูบทสนทนาเป้าหมายและหัวข้อไวยากรณ์ของขั้นนั้นล่วงหน้า",
-            "สำนวนที่ใช้ได้แล้วและฉากที่ใส่ลงโน้ตจะเติมหัวข้อที่ตรงกัน สำนวนและคำที่ใช้คู่กันไปที่ «{ui:notebookIdioms}» ส่วนระดับภาษาหรือการสะกดไปที่ «{ui:notebookDetails}» สีจุดบอกว่าคล่องแล้วหรือกำลังเรียน ตัวเลขด้านบนคือหัวข้อที่เติมแล้ว ไวยากรณ์ที่คล่องมี ✓ เปิดหัวข้อเพื่อ «{ui:stageTry}» หรือย้ายสำนวนไปหัวข้ออื่น",
-            "ด้านล่างคือหัวข้อที่สร้างจากเป้าหมาย ในหัวข้อแตะ «{ui:missionStart}» งานจะซ่อนคำตอบให้คุณเขียนเอง ถ้าเขียนถูกโดยไม่ใช้คำใบ้จะนับว่าคล่องแล้ว"
+            "“{ui:myViewMap}” มีขั้นที่ 1 ถึง 5 แตะตัวเลขเพื่อดูขั้นนั้นก่อน",
+            "แตะส่วนใดจะเปิดออก “{ui:partVocab}” มีคำที่เรียนแล้วและสมุดคำศัพท์ “{ui:partGrammar}” มีไวยากรณ์ของขั้น (✓ และ “{ui:stageTry}”) “{ui:partExpression}” มีสำนวนหลักและช่อง “{ui:notebookIdioms}” “{ui:partPronunciation}” มีจุดออกเสียงของขั้นและช่องตัวอักษร·เสียง สำนวนที่ใช้ได้แล้วและฉากที่เก็บไว้จะเติมช่องที่ตรงกัน",
+            "ด้านล่าง “{ui:stageExamplesTitle}” แสดงบทสนทนาที่ทำได้ในขั้นนี้ ลองด้วย “{ui:stageTry}” หัวข้อและงานเดิมพับไว้ใน “{ui:partGoalMap}”"
           ],
-          "shot": "stage-board"
+          "shot": "stage-parts"
         },
         {
           "heading": "8. โน้ต",
@@ -4685,24 +4696,25 @@
         {
           "heading": "3. बढ़ रहा है",
           "body": [
-            "छह हिस्से भाषा इस्तेमाल करने के साथ बढ़ते हैं और कभी छोटे नहीं होते। घेरे वाला हिस्सा “{ui:myNext}” है।"
+            "चार हिस्से — “{ui:partVocab}”, “{ui:partGrammar}”, “{ui:partExpression}” और “{ui:partPronunciation}” — दिखाते हैं कि अभी के चरण में कितना भर गया है। बिंदुदार रेखा अगले चरण की ज़रूरत है, और सबसे कमज़ोर हिस्सा पीले अक्षरों में है।",
+            "किसी हिस्से को दबाएँ तो वह “{ui:myViewMap}” में खुलता है।"
           ],
-          "shot": "growth"
+          "shot": "parts-net"
         },
         {
           "heading": "4. ग्राफ़ में देखें",
           "body": [
-            "“{ui:myViewGraph}” दबाएँ, हर हिस्से के पिछले दो हफ़्ते बार में दिखेंगे। चुना हुआ तरीका अगली बार भी रहेगा।"
+            "“{ui:myViewGraph}” दबाएँ तो पिछले दो हफ़्तों में हर हिस्सा रोज़ कितना बढ़ा, वह बार में दिखता है। चुना हुआ व्यू अगली बार भी रहता है।"
           ],
-          "shot": "graph"
+          "shot": "parts-graph"
         },
         {
-          "heading": "5. छूकर देखें",
+          "heading": "5. अगले चरण की ओर",
           "body": [
-            "किसी हिस्से को छुएँ: वह कैसे बढ़ता है, पिछले दो हफ़्ते और जिन अभिव्यक्तियों से बढ़ा; “{ui:myGrowIt}” से तुरंत अभ्यास।",
-            "«{ui:myOpenStage}» उस हिस्से से जुड़े भाग दिखाता है। अभिव्यक्ति का दायरा शब्दसूची खोलता है।"
+            "“{ui:myViewMap}” में सबसे ऊपर सबसे कमज़ोर हिस्सा दिखता है। बगल के बटन से तुरंत अभ्यास करें — “{ui:partPronunciation}” के लिए “{ui:nextByCall}”, बाकी के लिए “{ui:nextByChat}”।",
+            "चारों 70% पार करें तो “{ui:partReady}” चालू हो जाता है। अगर आपने कभी कोई वाक्य दोबारा बोलकर नहीं देखा, तो “{ui:partPronunciation}” में “{ui:myNoData}” रहता है और वह गिना नहीं जाता।"
           ],
-          "shot": "element"
+          "shot": "stage-next"
         },
         {
           "heading": "6. पूछें",
@@ -4714,11 +4726,11 @@
         {
           "heading": "7. चरणों में देखें",
           "body": [
-            "«{ui:myViewMap}» में चरण 1 से 5 तक क्रम से हैं। अभी का चरण रंगा होता है; किसी अंक को दबाकर उस चरण की लक्ष्य बातचीत और व्याकरण के हिस्से पहले से देखें।",
-            "जो वाक्यांश अब आप इस्तेमाल कर पाते हैं और नोट्स में डाले दृश्य सही हिस्से को भरते हैं। मुहावरे और साथ आने वाले शब्द «{ui:notebookIdioms}» में, लहजा या वर्तनी «{ui:notebookDetails}» में जाते हैं। बिंदु का रंग सीखा हुआ या सीख रहे बताता है, ऊपर की संख्या भरे हिस्से है, और सीखे व्याकरण पर ✓ है। हिस्सा खोलकर «{ui:stageTry}» करें या वाक्यांश दूसरी जगह ले जाएँ।",
-            "नीचे आपके लक्ष्य से बने विषय हैं। विषय में «{ui:missionStart}» — काम जवाब छिपाकर आपसे लिखवाता है, बिना संकेत सही लिखने पर वह सीखा हुआ बन जाता है।"
+            "“{ui:myViewMap}” में चरण 1 से 5 तक हैं। नंबर दबाकर वह चरण पहले से देखें।",
+            "हिस्सा दबाएँ तो खुलता है: “{ui:partVocab}” में सीखे शब्द और शब्दकोश, “{ui:partGrammar}” में उस चरण का व्याकरण (✓ और “{ui:stageTry}”), “{ui:partExpression}” में मुख्य अभिव्यक्तियाँ और “{ui:notebookIdioms}” के खाने, “{ui:partPronunciation}” में उस चरण की उच्चारण बात और अक्षर·ध्वनि के खाने। जो आप इस्तेमाल कर पाते हैं और सहेजे गए दृश्य सही खाने में भरते हैं।",
+            "नीचे “{ui:stageExamplesTitle}” में इस चरण में होने वाली बातचीत दिखती है; “{ui:stageTry}” से आज़माएँ। पुराने लक्ष्य विषय और काम “{ui:partGoalMap}” में मुड़े हुए हैं।"
           ],
-          "shot": "stage-board"
+          "shot": "stage-parts"
         },
         {
           "heading": "8. नोट्स",
