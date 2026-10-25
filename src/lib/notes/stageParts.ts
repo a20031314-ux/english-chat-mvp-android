@@ -11,6 +11,10 @@
  * 잰 갈래가 모두 STAGE_DONE_SHARE(70%) 이상이면 다음 단계로 갈 수 있다(넘기는 것은 사용자가 고른다).
  * 아니면 가장 모자란 갈래를 "다음 단계까지" 하나로 짚는다. 레벨 이름은 없다(단계 번호만).
  *
+ * 요소 태그(2026-10-26 사용자 "그렇게 해줘" — 한 문장에 여러 학습 요소): 습득한 표현은 주 칸 밖에 함께 보여 준 문법 칸(`also`)도
+ * 채우고, 튜터가 고친 줄은 걸친 갈래(`parts`)마다 "최근 짚임"으로 센다. 짚임은 채우지 않는다(틀린 것이라) —
+ * 70% 아래 갈래 가운데 최근 2주에 MISTAKE_FOCUS번 이상 짚인 갈래가 있으면 그것을 "다음 단계까지"로 먼저 짚는다.
+ *
  * 순수.
  */
 import { STAGE_DONE_SHARE, stageProgress } from "../curriculum/stages/index.ts";
@@ -18,7 +22,7 @@ import type { Stage } from "../curriculum/stages/types.ts";
 import type { Ledger, LedgerState } from "../learner/ledger.ts";
 import { ledgerKey } from "../learner/ledger.ts";
 import { segmentWords } from "../wordSegments.ts";
-import { grammarNodeId, type PhrasePlace } from "./notebook.ts";
+import { grammarNodeId, type FixCard, type PhrasePlace } from "./notebook.ts";
 
 export const PART_IDS = ["vocab", "grammar", "expression", "pronunciation"] as const;
 export type PartId = (typeof PART_IDS)[number];
@@ -89,6 +93,8 @@ export function stageParts(input: {
   pronunciation: { points: number; tries: number };
   /** 미리 잰 낱말 점수(단계마다 다시 세지 않게). */
   vocab?: number;
+  /** 갈래마다 최근 2주에 튜터가 짚은 수(recentMistakes). */
+  mistakes?: Partial<Record<PartId, number>>;
 }): StageParts {
   const { stage, ledger } = input;
   const index = Math.max(0, Math.min(stage.order, VOCAB_TARGETS.length) - 1);
@@ -100,8 +106,8 @@ export function stageParts(input: {
   const inNode = new Map<string, number>();
   for (const [key, place] of Object.entries(input.phrases)) {
     const state = ledger?.items[key]?.state;
-    if (!place.node || !state || state === "met") continue;
-    inNode.set(place.node, (inNode.get(place.node) ?? 0) + 1);
+    if (!state || state === "met") continue;
+    for (const node of nodesOf(place)) inNode.set(node, (inNode.get(node) ?? 0) + 1);
   }
   let grammarDone = 0;
   for (const grammar of stage.grammar) {
@@ -128,7 +134,11 @@ export function stageParts(input: {
   const parts = [vocab, grammar, expression, pronunciation];
   const measured = parts.filter((part) => part.measured);
   const ready = measured.length > 0 && measured.every((part) => shareOf(part) >= STAGE_DONE_SHARE);
-  const weakest = ready ? null : (measured.slice().sort((a, b) => shareOf(a) - shareOf(b))[0]?.id ?? null);
+  const below = measured.filter((part) => shareOf(part) < STAGE_DONE_SHARE);
+  const focus = below
+    .filter((part) => (input.mistakes?.[part.id] ?? 0) >= MISTAKE_FOCUS)
+    .sort((a, b) => (input.mistakes?.[b.id] ?? 0) - (input.mistakes?.[a.id] ?? 0) || shareOf(a) - shareOf(b))[0];
+  const weakest = ready ? null : (focus?.id ?? measured.slice().sort((a, b) => shareOf(a) - shareOf(b))[0]?.id ?? null);
 
   const items = Object.values(ledger?.items ?? {});
   const expressions = stage.expressions.map((text) => {
@@ -140,6 +150,41 @@ export function stageParts(input: {
   });
 
   return { order: stage.order, parts, ready, weakest, expressions };
+}
+
+/** 표현이 채우는 칸: 주 칸 + 함께 걸친 문법 칸. */
+function nodesOf(place: PhrasePlace): string[] {
+  return [...(place.node ? [place.node] : []), ...(place.also ?? []).filter((id) => id !== place.node)];
+}
+
+/** "다음 단계까지"를 짚임 쪽으로 돌리는 최근 짚임 수. */
+export const MISTAKE_FOCUS = 3;
+const MISTAKE_WINDOW_MS = 14 * 24 * 60 * 60 * 1000;
+
+/** 태그가 없는 옛 카드는 칸으로 갈래를 짐작한다(문법 칸 → 문법, 관용·말투·뉘앙스 → 표현, 낱말·철자 → 어휘, 글자·소리 → 발음). */
+export function partsOfCard(card: Pick<FixCard, "parts" | "node">): PartId[] {
+  if (card.parts?.length) return card.parts;
+  const node = card.node ?? "";
+  if (/^g\d-/.test(node)) return ["grammar"];
+  if (node.startsWith("i-") || node === "d-register" || node === "d-nuance") return ["expression"];
+  if (node === "d-word" || node === "d-spelling") return ["vocab"];
+  // 글자·소리 칸은 화면에서 발음 갈래 아래에 있다(NotebookSection PART_NODES).
+  if (node.startsWith("s-")) return ["pronunciation"];
+  return [];
+}
+
+/** 갈래마다 최근 2주의 진짜 실수 수(노트 카드 + 오늘의 학습 후보, 같은 줄은 한 번). 오타·뜻 짐작·궁금한 장면은 빼고. */
+export function recentMistakes(cards: FixCard[], now: number): Record<PartId, number> {
+  const out: Record<PartId, number> = { vocab: 0, grammar: 0, expression: 0, pronunciation: 0 };
+  const seen = new Set<string>();
+  for (const card of cards) {
+    if ((card.kind ?? "mistake") !== "mistake" || now - card.at > MISTAKE_WINDOW_MS) continue;
+    const key = `${card.wrong}\u0000${card.right}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    for (const part of partsOfCard(card)) out[part] += 1;
+  }
+  return out;
 }
 
 export const HISTORY_DAYS = 14;
@@ -178,7 +223,7 @@ export function partHistory(input: {
   }
   const grammarNodes = new Set(input.stage.grammar.map((g) => grammarNodeId(input.stage.order, g)));
   for (const [key, place] of Object.entries(input.phrases)) {
-    if (!place.node || !grammarNodes.has(place.node)) continue;
+    if (!nodesOf(place).some((node) => grammarNodes.has(node))) continue;
     const state = input.ledger?.items[key]?.state;
     if (!state || state === "met") continue;
     bump("grammar", place.at, 0.5);

@@ -15,6 +15,7 @@ import {
   phraseMessage,
   phrasePrompt,
   placePhrases,
+  readPhraseAlso,
   readPhrasePlaces,
   PHRASES_PER_CALL,
   isRealFix,
@@ -163,6 +164,8 @@ export async function fileFix(input: {
       at: now,
       kind: input.kind ?? placement.kind ?? "mistake",
       day: input.day,
+      ...(placement.parts ? { parts: placement.parts } : {}),
+      ...(placement.also ? { also: placement.also } : {}),
     }, now);
     if (after !== latest) await saveNotebook(input.userId, input.language, after);
   } catch (error) {
@@ -203,15 +206,17 @@ export async function placeLearnedPhrases(input: {
     input.meter?.("notebookPhrases");
     const completion = await completeChat(input.openai, "notes", {
       temperature: 0,
-      max_tokens: 1200,
+      max_tokens: 1800,
       response_format: { type: "json_object" },
       messages: [
         { role: "system", content: phrasePrompt({ target: learningLanguageName(input.language), options: placeOptions(skeleton, before.custom) }) },
         { role: "user", content: phraseMessage(todo.map((item) => item.text)) },
       ],
     });
-    const places = readPhrasePlaces(completion.choices[0]?.message?.content ?? "", todo.length, known);
-    const placed = todo.flatMap((item, index) => (places[index] === undefined ? [] : [{ key: item.key, node: places[index] ?? null }]));
+    const raw = completion.choices[0]?.message?.content ?? "";
+    const places = readPhrasePlaces(raw, todo.length, known);
+    const also = readPhraseAlso(raw, todo.length, known, places);
+    const placed = todo.flatMap((item, index) => (places[index] === undefined ? [] : [{ key: item.key, node: places[index] ?? null, also: also[index] }]));
     if (!placed.length) return 0;
     // 모델을 부르는 동안 사용자가 편집했을 수 있어 다시 읽고 넣는다.
     const fresh = await readNotebook(input.userId, input.language);

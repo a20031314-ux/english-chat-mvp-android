@@ -12,7 +12,7 @@ import { scriptView, stageViews } from "@/lib/server/stageCopy";
 import { applyEdit, parseEdit, prunePending, skeletonFor, type SkeletonNode } from "@/lib/notes/notebook";
 import { INTERFACE_LANGUAGE_LABELS, coerceLanguageCode } from "@/lib/learningLanguages";
 import { ladderFor } from "@/lib/curriculum/stages";
-import { partHistory, stageParts, vocabScore, vocabWords } from "@/lib/notes/stageParts";
+import { partHistory, recentMistakes, stageParts, vocabScore, vocabWords } from "@/lib/notes/stageParts";
 import { readGrowthRecord } from "@/lib/server/growthStore";
 import { readLearnerProfile } from "@/lib/server/learnerProfileStore";
 import { statusOf } from "@/lib/learner/profile";
@@ -127,7 +127,9 @@ export async function GET(request: NextRequest) {
     const mastered = new Set(profile ? constructionIds.filter((id) => statusOf(profile.entries[id]) === "mastered") : []);
     const pronunciation = { points: growth?.counts.pronunciation ?? 0, tries: growth?.tries?.pronunciation ?? 0 };
     const vocab = vocabScore(ledger, language);
-    parts = source.stages.map((s) => stageParts({ stage: s, language, ledger, phrases: record.phrases, constructionsMastered: mastered, pronunciation, vocab }));
+    // 요소 태그: 튜터가 최근 2주에 짚은 갈래(노트 카드 + 오늘의 학습 후보) — "다음 단계까지"를 자주 짚이는 갈래로.
+    const mistakes = recentMistakes([...record.cards, ...record.pending], Date.now());
+    parts = source.stages.map((s) => stageParts({ stage: s, language, ledger, phrases: record.phrases, constructionsMastered: mastered, pronunciation, vocab, mistakes }));
     // 그래프 보기: 지금 단계 네 갈래의 최근 14일(사용자 시간대).
     const here = source.stages.find((s) => s.order === stage) ?? source.stages[0];
     const offset = parseOffset(request.headers.get(TZ_OFFSET_HEADER));

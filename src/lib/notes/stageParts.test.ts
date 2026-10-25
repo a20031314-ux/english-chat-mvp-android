@@ -2,8 +2,8 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { ladderFor } from "../curriculum/stages/index.ts";
 import { emptyLedger, ledgerKey, type LedgerItem, type LedgerState } from "../learner/ledger.ts";
-import { grammarNodeId } from "./notebook.ts";
-import { isWordish, stageParts, vocabWords, VOCAB_TARGETS, PRON_TARGETS } from "./stageParts.ts";
+import { grammarNodeId, type FixCard } from "./notebook.ts";
+import { isWordish, partsOfCard, recentMistakes, stageParts, vocabWords, VOCAB_TARGETS, PRON_TARGETS } from "./stageParts.ts";
 
 const T0 = Date.UTC(2026, 9, 25);
 function ledgerWith(language: string, rows: Array<[string, LedgerState]>) {
@@ -76,4 +76,51 @@ test("갈래 2주 기록: 숙지된 날·칸에 들어온 날·발음 날마다(
   assert.equal(out.vocab.at(-1), 1); // 처음 쓴 날(첫 만남 = 같은 날) ½ + 숙지된 날 ½
   assert.equal(out.pronunciation.at(-1), 2);
   assert.equal(out.grammar.at(-2), 0); // 열쇠 k는 장부에 없음 → 세지 않음
+});
+
+test("요소 태그: 한 표현이 함께 보여 준 문법 칸도 채움(일본어·스페인어)", () => {
+  for (const language of ["ja", "es"]) {
+    const stage = ladderFor(language)!.stages[0]!;
+    const [a, b] = [grammarNodeId(1, stage.grammar[0]!), grammarNodeId(1, stage.grammar[1]!)];
+    const text = language === "ja" ? "昨日は友達と映画を見ました" : "Ayer fui al cine con mis amigos";
+    const ledger = ledgerWith(language, [[text, "mastered"], [`${text} 2`, "learned"]]);
+    const only = stageParts({ stage, language, ledger, phrases: { [ledgerKey(text)]: { node: a, at: T0 } }, pronunciation: { points: 0, tries: 0 } });
+    const both = stageParts({
+      stage,
+      language,
+      ledger,
+      phrases: { [ledgerKey(text)]: { node: a, at: T0, also: [b] }, [ledgerKey(`${text} 2`)]: { node: b, at: T0 } },
+      pronunciation: { points: 0, tries: 0 },
+    });
+    const grammar = (p: ReturnType<typeof stageParts>) => p.parts.find((row) => row.id === "grammar")!.done;
+    assert.equal(grammar(only), 0.5, language);
+    // a: 표현 하나(½) + b: 주 칸 하나 + 함께 걸친 것 하나(1)
+    assert.equal(grammar(both), 1.5, language);
+  }
+});
+
+test("요소 태그: 최근 자주 짚인 갈래를 '다음 단계까지'로, 옛 카드는 칸으로 짐작, 오타·2주 지난 것은 빼고", () => {
+  const now = T0;
+  const card = (over: Partial<FixCard>): FixCard => ({ id: `fx${Math.random().toString(36).slice(2, 12)}`, wrong: "a", right: "b", note: "", node: null, where: "chat", at: now, ...over });
+  const cards = [
+    card({ wrong: "x1", parts: ["vocab", "grammar"] }),
+    card({ wrong: "x2", node: "d-word" }),
+    card({ wrong: "x3", parts: ["vocab"] }),
+    card({ wrong: "x3", parts: ["vocab"] }), // 같은 줄은 한 번
+    card({ wrong: "x4", parts: ["vocab"], kind: "typo" }),
+    card({ wrong: "x5", parts: ["vocab"], at: now - 15 * 24 * 60 * 60 * 1000 }),
+    card({ wrong: "x6", node: "i-set" }),
+  ];
+  const counts = recentMistakes(cards, now);
+  assert.deepEqual(counts, { vocab: 3, grammar: 1, expression: 1, pronunciation: 0 });
+  assert.deepEqual(partsOfCard({ node: "g1-past" }), ["grammar"]);
+
+  const stage = ladderFor("es")!.stages[0]!;
+  const ledger = ledgerWith("es", Array.from({ length: 20 }, (_, i): [string, LedgerState] => [`palabra${i}`, "mastered"]));
+  const plain = stageParts({ stage, language: "es", ledger, phrases: {}, pronunciation: { points: 0, tries: 0 } });
+  assert.equal(plain.weakest, "grammar"); // 0%가 가장 모자람
+  const steered = stageParts({ stage, language: "es", ledger, phrases: {}, pronunciation: { points: 0, tries: 0 }, mistakes: counts });
+  assert.equal(steered.weakest, "vocab"); // 70% 아래이고 3번 짚임
+  const few = stageParts({ stage, language: "es", ledger, phrases: {}, pronunciation: { points: 0, tries: 0 }, mistakes: { vocab: 2 } });
+  assert.equal(few.weakest, "grammar");
 });
