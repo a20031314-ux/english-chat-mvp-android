@@ -1,4 +1,4 @@
 • Mi espacio: cada etapa se divide en Vocabulario, Gramática, Expresiones y Pronunciación. Practica la más floja al momento; cuando las cuatro pasan del 70 %, «Siguiente etapa».
 • Cada etapa muestra conversaciones de ejemplo que ya puedes tener, con «Probar».
-• Las vistas de red y gráfica muestran las mismas cuatro partes.
+• Tablón: temas Charla, Preguntas, Compañeros, Salas de voz y Grupos; entra desde la publicación con «Entrar» o «Unirme».
 • Los registros de llamada en el chat con la IA se borran con ×.

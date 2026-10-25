@@ -1,4 +1,4 @@
 • My: each stage is now split into Vocabulary, Grammar, Phrases and Pronunciation. Practise the weakest one right away; when all four pass 70%, go to “Next stage”.
 • Each stage shows example conversations you can have, with “Try it”.
-• The web and graph views show the same four parts.
+• Board: topic chips (Chat, Questions, Study mates, Voice rooms, Groups); join a room or group right from a post.
 • Call records in AI chat can be deleted with ×.
