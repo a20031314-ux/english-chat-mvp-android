@@ -18,6 +18,8 @@ export type StageView = {
   title: string;
   canDo: string[];
   grammar: StageGrammarView[];
+  /** 이 단계 발음 짚을 점(앱 언어, 2026-10-25 My 네 갈래의 발음). */
+  pronunciation: string;
   dialogues: StageDialogueView[];
 };
 
@@ -38,6 +40,7 @@ export function viewsFrom(stages: Stage[], language: string, ui: string, keepGlo
     title: t(stage.title),
     canDo: stage.canDo.map(t),
     grammar: stage.grammar.map((g) => ({ name: t(g.name), example: g.example, ...(g.constructionId ? { constructionId: g.constructionId } : {}) })),
+    pronunciation: t(stage.pronunciation),
     dialogues: stage.dialogues.map((dialogue) => ({
       setting: t(dialogue.setting),
       lines: dialogue.lines.map((line) => ({
@@ -55,6 +58,7 @@ export function textsOf(views: StageView[]): string[] {
     view.title,
     ...view.canDo,
     ...view.grammar.map((g) => g.name),
+    view.pronunciation,
     ...view.dialogues.flatMap((dialogue) => [dialogue.setting, ...dialogue.lines.map((line) => line.gloss)]),
   ]);
 }
@@ -68,6 +72,7 @@ export function withTexts(views: StageView[], texts: string[]): StageView[] | nu
     title: next(),
     canDo: view.canDo.map(() => next()),
     grammar: view.grammar.map((g) => ({ ...g, name: next() })),
+    pronunciation: next(),
     dialogues: view.dialogues.map((dialogue) => ({
       setting: next(),
       lines: dialogue.lines.map((line) => ({ ...line, gloss: next() })),
@@ -216,8 +221,8 @@ export async function stageViews(
   if (ui === "en" || ui === "ko" || ui === language) return viewsFrom(ladder.stages, language, ui);
   // 옮길 원문: 영어 학습이어도 뜻풀이(영어)를 남겨야 다른 앱 언어로 옮길 수 있다(2026-10-22, en·ja에서 뜻이 비고 영어로 떨어졌음).
   const english = viewsFrom(ladder.stages, language, "en", true);
-  // stages3: 2026-10-22 학습 언어로 잘못 옮겨 저장된 것(stages2)을 버림.
-  const texts = await translated(textsOf(english), ui, uiName, `stagecopy:v1:stages3:${language}:${ladder.version}:${ui}`, onTranslate);
+  // stages3: 2026-10-22 학습 언어로 잘못 옮겨 저장된 것(stages2)을 버림. stages4: 2026-10-25 발음 줄 더함(글 수가 바뀜).
+  const texts = await translated(textsOf(english), ui, uiName, `stagecopy:v1:stages4:${language}:${ladder.version}:${ui}`, onTranslate);
   return (texts && withTexts(english, texts)) ?? english;
 }
 
