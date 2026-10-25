@@ -66,4 +66,4 @@
   지도는 `store-shots/fixtures/`에 녹화한 지도로 찍으니, 지도 화면이 바뀌어도 그대로 따라감.
 - 맞춤 등록정보 5개는 2.71 스크린샷·설명으로 Console에 저장(2026-10-22, 사용자 PC 브라우저). 번역 13개(ja·zh·es·es-419·ar·fr·it·id·ru·th·vi·hi·pt-BR)만 새 글, nl·de·tr 등 14개는 옛 글. "검토를 위해 제출"은 사용자.
 - 맞춤 등록정보 세분화(2026-10-23, PR #16): 새 11개(나라 6·배우는 언어별 검색어 5) Console 저장(2026-10-23), 제출은 사용자. 그림 `store-shots/custom/`, 글 `store-shots/listings/`, 찍기 `CAPTURE_TARGET`.
-- 2.73 등록정보(2026-10-25, PR #20): 설명 14개 언어·스크린샷 17벌 새 화면으로. Console: 기본 언어 en-US로 바꾸려면 **구독 3·상품 4에 en-US 이름이 먼저 있어야 함**(사람이 Console 수익 창출에서 넣기 — 자동 저장은 막힘). 맞춤 16개 교체 진행: korea·일본어 저장, 나머지는 PC 연결 끊겨 멈춤(`store-shots/custom/`·`store-listings/`, Console 헬퍼 localStorage `__helpers3` `__doL`).
+- 2.73 등록정보(2026-10-26, PR #20 머지·#21): 설명 14개 언어 + 스크린샷 17벌을 **핵심 기능 위주**로(사용자: 로그인·아이콘·프로필 세부 빼기 — 1장 단계 사다리, 8장 단체방 골라 묻기). 맞춤 16개 중 15개 새 그림·글로 Console 저장, **ja-ko(검색: 韓国語)는 PC 연결이 끊겨 저장 확인 못 함**. 기본 언어 en-US는 구독 3·상품 4에 en-US 이름이 먼저 있어야 함(사람 일 — 자동 저장 막힘). Console 헬퍼 localStorage `__helpers3` `__doL`.
