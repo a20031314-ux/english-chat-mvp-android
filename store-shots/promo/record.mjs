@@ -12,13 +12,15 @@ import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
 import { chromium } from "playwright";
+import { LEARN } from "./combos.mjs";
 
 const locale = process.argv[2] || "ko";
 const ROOT = process.cwd();
 const WWW = path.join(ROOT, "www");
 const API = process.env.API_BASE || "https://english-chat-mvp.vercel.app";
 const OUT = path.join(ROOT, "tmp", "promo", locale);
-const target = locale === "en" ? "es" : "en";
+// 학습 조합은 combos.mjs(2026-10-24): en 앱은 한국어, es 앱은 영어 …
+const target = LEARN[locale] ?? (locale === "en" ? "es" : "en");
 
 /** 막혔을 때 실제로 쓸 법한 한 줄(캡처 스크립트와 같은 문장). */
 const STUCK_LINE = {
@@ -148,12 +150,13 @@ try {
   await use.last().waitFor();
   mark("card");
   // 카드의 표현 글자(목소리로 읽어 줄 것): "이 표현으로 말해보기" 버튼이 든 카드의 첫 줄.
-  events.expression = await use.last().evaluate((btn) => {
+  events.expression = await use.last().evaluate((btn, target) => {
     let el = btn;
     for (let i = 0; i < 5 && el.parentElement; i++) el = el.parentElement;
     const lines = el.innerText.split("\n").map((s) => s.trim()).filter(Boolean);
-    return lines.find((l) => /[A-Za-z]{3,}/.test(l) && l.split(" ").length >= 3) ?? "";
-  });
+    const script = { ko: /[\uac00-\ud7af]/, ja: /[\u3040-\u30ff\u4e00-\u9fff]/, zh: /[\u4e00-\u9fff]/ }[target];
+    return lines.find((l) => (script ? script.test(l) && l.length >= 4 : /[A-Za-z]{3,}/.test(l) && l.split(" ").length >= 3)) ?? "";
+  }, target);
   await page.waitForTimeout(2600);
   await tap(use.last());
   mark("use");

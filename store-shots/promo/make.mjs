@@ -92,7 +92,7 @@ COPY.invite = {
 COPY.talk = COPY.room;
 // 오류교정: 학습 언어로 틀린 문장 → 내 줄 아래 ✎ 칩 → 고친 문장(녹화: record-fix.mjs). 학습 조합은 combos.mjs LEARN.
 COPY.fix = {
-  en: { hook: "Is my Korean\nright?", type: "Just write it.\nMistakes are fine.", chip: "Something off?\nIt's marked under your line", fixed: "The fix sits\nright below yours", endTitle: "Write first.\nGet fixed right below.", endSub: "Learn languages by chatting with AI" },
+  en: { hook: "Is my Korean\nright?", type: "Just write it.\nMistakes are fine.", chip: "Something off?\nYou'll see a mark", fixed: "The fix sits\nright below yours", endTitle: "Write first.\nGet fixed right below.", endSub: "Learn languages by chatting with AI" },
   es: { hook: "¿Está bien\nmi inglés?", type: "Escribe sin miedo.\nEquivocarse vale.", chip: "¿Algo falla?\nSe marca bajo tu frase", fixed: "La corrección,\njusto debajo", endTitle: "Escribe primero.\nCorrige justo debajo.", endSub: "Aprende idiomas conversando con IA" },
   ar: { hook: "هل إنجليزيتي\nصحيحة؟", type: "اكتب فقط.\nالخطأ مسموح.", chip: "هناك خطأ؟\nتظهر علامة تحت جملتك", fixed: "الجملة المصحّحة\nتحت جملتك مباشرة", endTitle: "اكتب أولاً،\nوالتصحيح تحتها مباشرة", endSub: "تعلّم اللغات بالمحادثة مع الذكاء الاصطناعي" },
   id: { hook: "Bahasa Inggrisku\nsudah benar?", type: "Tulis saja.\nSalah itu wajar.", chip: "Ada yang salah?\nAda tanda di bawah kalimatmu", fixed: "Kalimat yang benar\nlangsung di bawahnya", endTitle: "Tulis dulu,\nkoreksi langsung di bawahnya", endSub: "Belajar bahasa dengan mengobrol bersama AI" },
@@ -100,6 +100,32 @@ COPY.fix = {
   th: { hook: "ภาษาอังกฤษของฉัน\nถูกไหม?", type: "พิมพ์ไปเลย\nผิดได้ไม่เป็นไร", chip: "มีจุดผิด?\nมีป้ายขึ้นใต้ประโยค", fixed: "ประโยคที่แก้แล้ว\nอยู่ใต้ประโยคของคุณ", endTitle: "เขียนก่อน\nแล้วแก้ให้ใต้ประโยคเลย", endSub: "เรียนภาษาด้วยการคุยกับ AI" },
   ko: { hook: "일본어로 쓴 이 문장,\n맞을까?", type: "틀려도 괜찮아요\n그냥 써 보세요", chip: "고칠 곳이 있으면\n내 문장 아래 표시", fixed: "고친 문장은\n바로 아래에", endTitle: "먼저 써 보고,\n바로 아래서 고쳐요", endSub: "AI와 대화하며 배우는 언어 앱" },
   ja: { hook: "この韓国語、\n合ってる？", type: "間違えてもOK\nまず書いてみて", chip: "直すところがあれば\n文の下に表示", fixed: "直した文は\nすぐ下に", endTitle: "まず書いて、\nすぐ下で直す", endSub: "AIと話して学ぶ語学アプリ" },
+};
+
+// 막히면 편한 말로(chat)·문장 뜯어보기(analyze) 영어·스페인어 자막(2026-10-25, 학습 조합은 combos.mjs).
+COPY.chat.en = { hook: "Don't know how\nto say it in Korean?", type: "Just type it\nin English", reply: "Minjun keeps going\nin Korean", card: "What you meant,\nin Korean", use: "Now say it\nyourself", endTitle: "Stuck? Use your words.\nKeep talking in Korean.", endSub: "Learn languages by chatting with AI" };
+COPY.chat.es = { hook: "¿No sabes cómo\ndecirlo en inglés?", type: "Escríbelo\nen español", reply: "El tutor sigue\nen inglés", card: "Lo que querías decir,\nen inglés", use: "Ahora dilo\ntú", endTitle: "¿Te atascas? Usa tus palabras.\nSigue hablando en inglés.", endSub: "Aprende idiomas conversando con IA" };
+COPY.analyze = {
+  en: { hook: "What does that\nKorean line mean?", reply: "Minjun replies\nin real Korean", tap: "Tap any line\nto break it down", why: "Ask why.\nGet the grammar.", endTitle: "Understand every\nline you read", endSub: "Learn languages by chatting with AI" },
+  es: { hook: "¿Qué significa\nesa frase en inglés?", reply: "El tutor responde\nen inglés real", tap: "Toca una frase\npara analizarla", why: "Pregunta por qué.\nEntiende la gramática.", endTitle: "Entiende cada frase\nque lees", endSub: "Aprende idiomas conversando con IA" },
+};
+/**
+ * 설명 목소리(UI 언어, 2026-10-25 사용자 "보이스로 설명도"): 자막 칸이 처음 나올 때 화면을 멈추고 읽는다 → 그다음 실제 동작.
+ * 버튼 이름은 그 언어 앱의 실제 버튼 문구로.
+ */
+const NARR = {
+  fix: {
+    en: { hook: "Not sure if your Korean is right?", type: "Just write it. Mistakes are part of learning.", chip: "If something's off, a small mark shows up under your line.", fixed: "Tap it, and the corrected sentence appears right below yours.", end: "Write first. Get fixed right below. languagebank." },
+    es: { hook: "¿No sabes si tu inglés está bien?", type: "Escríbelo sin miedo. Equivocarse es parte de aprender.", chip: "Si algo falla, aparece una marca debajo de tu frase.", fixed: "Tócala, y la frase corregida aparece justo debajo de la tuya.", end: "Escribe primero. Corrige justo debajo. languagebank." },
+  },
+  chat: {
+    en: { hook: "Stuck in the middle of a Korean conversation?", type: "Just type what you mean, in English.", reply: "Minjun keeps the conversation going in Korean, so you never drop out.", card: "Tap 'Show how to say it', and see exactly how to say it in Korean.", use: "Then send it yourself.", end: "Stuck? Use your own words, and keep talking. languagebank." },
+    es: { hook: "¿Te quedas en blanco en medio de una conversación en inglés?", type: "Escribe lo que quieres decir, en español.", reply: "El tutor sigue la conversación en inglés, así nunca te quedas fuera.", card: "Toca 'Ver cómo se dice', y verás exactamente cómo se dice en inglés.", use: "Y luego lo envías tú.", end: "¿Te atascas? Usa tus palabras y sigue hablando. languagebank." },
+  },
+  analyze: {
+    en: { hook: "Chatting in Korean, but not sure what the reply really means?", reply: "Minjun answers the way a Korean friend would.", tap: "Tap the line, choose Analyze, and see it with its meaning.", why: "Then ask why it's written this way, and get the grammar explained in English.", end: "Understand every line. languagebank." },
+    es: { hook: "¿Chateas en inglés pero no entiendes del todo la respuesta?", reply: "El tutor responde como lo haría un amigo nativo.", tap: "Toca la frase, elige Analizar, y mírala con su significado.", why: "Luego pregunta por qué se dice así, y te explica la gramática en español.", end: "Entiende cada frase. languagebank." },
+  },
 };
 const DIR_ATTR = RTL.has(locale) ? ' dir="rtl"' : "";
 const C = { font: FONT[locale] ?? "'Noto Sans', sans-serif", store: STORE_LINE[locale] ?? STORE_LINE.en, ...(COPY[story]?.[locale] ?? {}) };
@@ -245,10 +271,12 @@ STORIES.talk = () => {
 // 오류교정: 칩 장면부터 내 줄(말풍선)을 확대해 고친 문장까지 이어 보여 주고, 고친 문장을 학습 언어 목소리로.
 STORIES.fix = () => {
   const b = ev.bubbleBox ?? { x: 0.1, y: 0.2, w: 0.8, h: 0.12 };
-  const by = 0.3;
+  const by = 0.16;
   // 말풍선 가운데가 창 가운데 오게: 확대한 화면에서 잘라 낼 위치(0~1).
   const at = (c) => Math.min(1, Math.max(0, (c * (1 + by) - 0.5) / by));
-  const zoom = { by, x: +at(b.x + b.w / 2).toFixed(3), y: +at(b.y + b.h / 2).toFixed(3) };
+  // 오른쪽에 붙은 말풍선(내 줄)은 창을 오른쪽 끝에, 왼쪽(아랍어 앱)은 왼쪽 끝에 — 가운데로 맞추면 끝이 잘린다.
+  const zx = b.x + b.w > 0.9 ? 1 : b.x < 0.1 ? 0 : +at(b.x + b.w / 2).toFixed(3);
+  const zoom = { by, x: zx, y: +at(b.y + b.h / 2).toFixed(3) };
   const lines = String(ev.bubbleText ?? "").split("\n").map((l) => l.trim()).filter(Boolean);
   const chipStart = ev.chip - 0.2;
   const chipEnd = ev.chipTap + 0.1;
@@ -264,7 +292,53 @@ STORIES.fix = () => {
     voiceIn: chipEnd - chipStart + 0.5,
   };
 };
+
+// 문장 뜯어보기: 학습 언어 한 줄 → 튜터 답 → 줄 누르기·분석 → "왜 이런 꼴?" 설명(녹화: record-analyze.mjs).
+STORIES.analyze = () => ({
+  segs: [
+    [Math.max(0, ev.typeStart - 1.2), ev.sentAt + 0.2, 2.2, "hook"],
+    [ev.sentAt + 0.2, ev.lineTap - 0.2, Math.max(1, (ev.lineTap - ev.sentAt) / 2.5), "reply"],
+    [ev.lineTap - 0.2, ev.loaded + 0.4, Math.max(1, (ev.loaded - ev.lineTap) / 3), "tap"],
+    [ev.askTap - 0.6, ev.answer + 0.3, Math.max(1, (ev.answer - ev.askTap) / 2), "why"],
+    [ev.answer + 0.3, ev.end - 0.2, 1, "why"],
+  ],
+  voice: ev.picked || String(ev.reply ?? "").split("\n")[0],
+  voiceSrc: ev.sheet + 0.6,
+});
 const plan = STORIES[story]();
+// 설명 목소리가 있는 편: 칸마다 멈춤 + 설명, 학습 언어 문장은 그 자리에서 멈추고 읽는다.
+if (NARR[story]?.[locale] && process.env.PROMO_NARRATE !== "0") {
+  const N = NARR[story][locale];
+  const uiLang = SPEECH[locale] ?? "en-US";
+  const pause = (src, cap, zoom, said) => {
+    const dur = said.len + 0.5;
+    return [src, src + 0.04, 0.04 / dur, cap, zoom, { narr: said }];
+  };
+  let segsN = plan.segs.map((x) => [...x]);
+  // 학습 언어 문장: 그 시각에서 장면을 나눠 멈추고 읽는다(설명과 겹치지 않게).
+  const learnSrc = plan.voiceSrc ?? (story === "fix" ? ev.open + 0.8 : story === "chat" ? ev.card + 0.3 : null);
+  if (plan.voice && learnSrc != null) {
+    const i = segsN.findIndex(([a, b]) => learnSrc > a && learnSrc < b - 0.05);
+    if (i >= 0) {
+      const [a, b, speed, cap, zoom] = segsN[i];
+      const said = tts(plan.voice, SPEECH[target] ?? "en-US", "nova");
+      segsN.splice(i, 1, [a, learnSrc, speed, cap, zoom], pause(learnSrc, cap, zoom, said), [learnSrc + 0.04, b, speed, cap, zoom]);
+      plan.voice = null;
+    }
+  }
+  const seen = new Set();
+  const out = [];
+  for (const seg of segsN) {
+    const key = seg[3];
+    if (N[key] && !seen.has(key) && !seg[5]) {
+      seen.add(key);
+      out.push(pause(seg[0], key, seg[4], tts(N[key], uiLang, NARRATOR, 1.08)));
+    }
+    out.push(seg);
+  }
+  plan.segs = out;
+  if (N.end) plan.endNarr = tts(N.end, uiLang, NARRATOR, 1.08);
+}
 
 // ── 1. 장면 자르기(원본 시각) ──
 const segs = plan.segs;
@@ -288,6 +362,21 @@ async function png(file, body, { transparent = true } = {}) {
     html,body{margin:0;width:1080px;height:1920px;overflow:hidden;background:${transparent ? "transparent" : "#15161A"};font-family:${C.font};color:#fff}
   </style></head><body>${body}</body></html>`, { waitUntil: "load" });
   await page.evaluate(() => document.fonts.ready);
+  // 자막은 줄을 꺾지 않고, 가로 1000px을 넘으면 글자를 줄인다(세 줄로 넘쳐 휴대폰을 가리던 것).
+  await page.evaluate(() => {
+    for (const h of document.querySelectorAll("h1[data-fit]")) {
+      let size = parseFloat(getComputedStyle(h).fontSize);
+      const width = () => {
+        const r = document.createRange();
+        r.selectNodeContents(h);
+        return r.getBoundingClientRect().width;
+      };
+      while (width() > 1000 && size > 40) {
+        size -= 2;
+        h.style.fontSize = `${size}px`;
+      }
+    }
+  });
   await page.screenshot({ path: file, omitBackground: transparent });
 }
 const PHONE = { x: 210, y: 400, w: 660 }; // 824×1830 → 660×1466
@@ -305,7 +394,7 @@ for (const key of capKeys) {
   await png(path.join(DIR, `cap-${key}.png`), `
     <div${DIR_ATTR} style="position:absolute;top:96px;left:0;right:0;text-align:center">
       <div style="display:inline-block;width:56px;height:8px;border-radius:4px;background:${accent[key]};margin-bottom:26px"></div>
-      <h1 style="margin:0;font-size:88px;line-height:1.14;font-weight:900;letter-spacing:-.02em;white-space:pre-line">${esc(C[key])}</h1>
+      <h1 data-fit style="margin:0;display:block;font-size:88px;line-height:1.14;font-weight:900;letter-spacing:-.02em;white-space:pre">${esc(C[key])}</h1>
     </div>`);
 }
 const icon = fs.readFileSync(path.join(ROOT, "android/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png")).toString("base64");
@@ -354,12 +443,16 @@ if (plan.voice) {
 // ── 4. ffmpeg: 장면 → 이어 붙이기 → 확대 → 프레임·자막·끝 화면·목소리 ──
 const sameZoom = (a, b) => !a?.zoom?.pop && a?.zoom && b?.zoom && JSON.stringify(a.zoom) === JSON.stringify(b.zoom);
 const parts = timeline.map((s, i) => {
-  let f = `[0:v]trim=start=${s.a.toFixed(3)}:end=${s.b.toFixed(3)},setpts=(PTS-STARTPTS)/${s.speed}`;
+  // 멈춘 장면(설명)은 프레임을 먼저 늘려야 확대가 그 동안 움직인다.
+  let f = s.narr
+    ? `[0:v]trim=start=${s.a.toFixed(3)}:end=${(s.a + 0.04).toFixed(3)},setpts=PTS-STARTPTS,tpad=stop_mode=clone:stop_duration=${s.dur.toFixed(3)},trim=duration=${s.dur.toFixed(3)},fps=25`
+    : `[0:v]trim=start=${s.a.toFixed(3)}:end=${s.b.toFixed(3)},setpts=(PTS-STARTPTS)/${s.speed}`;
   if (s.zoom && !s.zoom.pop) {
     // 0.5초 동안 by배만큼 확대, 창은 zoom.x·zoom.y 비율 위치.
     const z = s.zoom;
     // 들어갈 때 0.5초 확대, 장면 끝 0.4초에 다시 원래대로.
-    f += `,scale=w='trunc(824*(1+${z.by}*max(0,min(${sameZoom(timeline[i - 1], s) ? "1" : "min(1,t/0.5)"},${sameZoom(s, timeline[i + 1]) ? "1" : `(${s.dur.toFixed(3)}-t)/0.4`})))/2)*2':h=-2:eval=frame,crop=824:1830:x='(in_w-824)*${z.x}':y='(in_h-1830)*${z.y}'`;
+    // 확대는 장면 내내 같은 배율(crop은 첫 프레임 크기로 정해져 배율이 바뀌면 창이 어긋남).
+    f += `,scale=w=${Math.round(824 * (1 + z.by) / 2) * 2}:h=-2,crop=824:1830:x='(in_w-824)*${z.x}':y='(in_h-1830)*${z.y}'`;
   }
   return `${f},fps=25,setsar=1[p${i}]`;
 });
