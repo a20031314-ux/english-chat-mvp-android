@@ -507,7 +507,6 @@ function StageFrame({
   const inStage = (order: number) => nodes.filter((node) => (node.stage ?? 1) === order);
   const filledOf = (node: NodeView) => Boolean(fill[node.id]) || Boolean(masteredOf?.(node.stage ?? 1, node.index ?? -1));
   const filledIn = (order: number) => inStage(order).filter(filledOf).length;
-  const title = stages.find((stage) => stage.order === shown)?.title ?? "";
   const label: Record<PartId, string> = { vocab: ui.partVocab, grammar: ui.partGrammar, expression: ui.partExpression, pronunciation: ui.partPronunciation };
   const readyOf = (order: number) => parts.find((row) => row.order === order)?.ready ?? false;
 
@@ -589,8 +588,7 @@ function StageFrame({
               <button
                 type="button"
                 aria-pressed={on}
-                aria-label={`${stage.order}. ${stage.title}`}
-                title={stage.title}
+                aria-label={ui.stageNumber.replace("{n}", String(stage.order))}
                 onClick={() => {
                   setShown(stage.order);
                   setPicked(null);
@@ -608,9 +606,8 @@ function StageFrame({
           );
         })}
       </ol>
-      {/* 단계 = 말하는 힘의 크기(상황 이름이 아님, 2026-10-25). 제목은 단계 번호(stageNumber), 할 수 있게 되는 것 한 줄은 작게. */}
+      {/* 단계 = 말하는 힘의 크기(상황 이름이 아님, 2026-10-25). 제목은 단계 번호(stageNumber)만 — 상황처럼 읽히는 단계 제목은 뺌(사용자 "지워줘"). */}
       <p className={`mt-3 text-note font-semibold ${shown > now ? "text-slate-400" : "text-ink"}`}>{ui.stageNumber.replace("{n}", String(shown))}</p>
-      {title ? <p className="truncate text-caption text-slate-500">{title}</p> : null}
 
       {stageParts ? (
         <>
