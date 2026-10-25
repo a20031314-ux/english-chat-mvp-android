@@ -278,7 +278,8 @@ STORIES.fix = () => {
   const zx = b.x + b.w > 0.9 ? 1 : b.x < 0.1 ? 0 : +at(b.x + b.w / 2).toFixed(3);
   const zoom = { by, x: zx, y: +at(b.y + b.h / 2).toFixed(3) };
   const lines = String(ev.bubbleText ?? "").split("\n").map((l) => l.trim()).filter(Boolean);
-  const chipStart = ev.chip - 0.2;
+  // 칩이 뜬 뒤에서 멈춘다(그 전 프레임은 말풍선이 아직 다시 그려지는 중일 때가 있음, es).
+  const chipStart = ev.chip + 0.15;
   const chipEnd = ev.chipTap + 0.1;
   return {
     segs: [

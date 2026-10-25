@@ -150,13 +150,14 @@ try {
   await use.last().waitFor();
   mark("card");
   // 카드의 표현 글자(목소리로 읽어 줄 것): "이 표현으로 말해보기" 버튼이 든 카드의 첫 줄.
-  events.expression = await use.last().evaluate((btn, target) => {
+  events.expression = await use.last().evaluate((btn, [target, typed]) => {
     let el = btn;
     for (let i = 0; i < 5 && el.parentElement; i++) el = el.parentElement;
     const lines = el.innerText.split("\n").map((s) => s.trim()).filter(Boolean);
     const script = { ko: /[\uac00-\ud7af]/, ja: /[\u3040-\u30ff\u4e00-\u9fff]/, zh: /[\u4e00-\u9fff]/ }[target];
-    return lines.find((l) => (script ? script.test(l) && l.length >= 4 : /[A-Za-z]{3,}/.test(l) && l.split(" ").length >= 3)) ?? "";
-  }, target);
+    // 카드 첫 줄 = 학습 언어 표현. 위에 있는 내 줄(편한 말)은 빼고 — 스페인어 줄도 라틴 글자라 걸렸다.
+    return lines.find((l) => l !== typed && (script ? script.test(l) && l.length >= 4 : /[A-Za-z]{3,}/.test(l) && l.split(" ").length >= 3)) ?? "";
+  }, [target, STUCK_LINE[locale]]);
   await page.waitForTimeout(2600);
   await tap(use.last());
   mark("use");
