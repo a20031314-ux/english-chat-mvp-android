@@ -650,7 +650,9 @@
     "partToNext": "次の段階まで：{part}",
     "partReady": "次の段階へ",
     "partGoal": "この段階の目標",
-    "partGoalMap": "目標マップ"
+    "partGoalMap": "目標マップ",
+    "stageNumber": "ステージ{n}",
+    "stageExamplesTitle": "この段階ではこんな会話ができます"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1303,7 +1305,9 @@
     "partToNext": "进入下一阶段前：{part}",
     "partReady": "进入下一阶段",
     "partGoal": "本阶段目标",
-    "partGoalMap": "目标地图"
+    "partGoalMap": "目标地图",
+    "stageNumber": "第{n}阶段",
+    "stageExamplesTitle": "这个阶段能进行这样的对话"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1958,7 +1962,9 @@
     "partToNext": "Trước giai đoạn tiếp theo: {part}",
     "partReady": "Giai đoạn tiếp theo",
     "partGoal": "Mục tiêu giai đoạn này",
-    "partGoalMap": "Bản đồ mục tiêu"
+    "partGoalMap": "Bản đồ mục tiêu",
+    "stageNumber": "Giai đoạn {n}",
+    "stageExamplesTitle": "Ở giai đoạn này bạn nói được thế này"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2618,7 +2624,9 @@
     "partToNext": "Avant l’étape suivante : {part}",
     "partReady": "Étape suivante",
     "partGoal": "Objectif de cette étape",
-    "partGoalMap": "Carte de l’objectif"
+    "partGoalMap": "Carte de l’objectif",
+    "stageNumber": "Étape {n}",
+    "stageExamplesTitle": "À cette étape, vous pouvez parler comme ça"
   },
   "it": {
     "archive": "Report",
@@ -3469,7 +3477,9 @@
     "partToNext": "Prima della fase successiva: {part}",
     "partReady": "Fase successiva",
     "partGoal": "Obiettivo di questa fase",
-    "partGoalMap": "Mappa dell’obiettivo"
+    "partGoalMap": "Mappa dell’obiettivo",
+    "stageNumber": "Fase {n}",
+    "stageExamplesTitle": "In questa fase puoi parlare così"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4132,7 +4142,9 @@
     "partToNext": "Antes da próxima etapa: {part}",
     "partReady": "Próxima etapa",
     "partGoal": "Meta desta etapa",
-    "partGoalMap": "Mapa da meta"
+    "partGoalMap": "Mapa da meta",
+    "stageNumber": "Etapa {n}",
+    "stageExamplesTitle": "Nesta etapa você consegue conversar assim"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4981,7 +4993,9 @@
     "partToNext": "До следующего этапа: {part}",
     "partReady": "Следующий этап",
     "partGoal": "Цель этапа",
-    "partGoalMap": "Карта цели"
+    "partGoalMap": "Карта цели",
+    "stageNumber": "Этап {n}",
+    "stageExamplesTitle": "На этом этапе вы можете говорить так"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5640,7 +5654,9 @@
     "partToNext": "Sebelum tahap berikutnya: {part}",
     "partReady": "Tahap berikutnya",
     "partGoal": "Tujuan tahap ini",
-    "partGoalMap": "Peta tujuan"
+    "partGoalMap": "Peta tujuan",
+    "stageNumber": "Tahap {n}",
+    "stageExamplesTitle": "Di tahap ini kamu bisa bercakap seperti ini"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6293,7 +6309,9 @@
     "partToNext": "قبل المرحلة التالية: {part}",
     "partReady": "المرحلة التالية",
     "partGoal": "هدف هذه المرحلة",
-    "partGoalMap": "خريطة الهدف"
+    "partGoalMap": "خريطة الهدف",
+    "stageNumber": "المرحلة {n}",
+    "stageExamplesTitle": "في هذه المرحلة يمكنك أن تتحدث هكذا"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6946,7 +6964,9 @@
     "partToNext": "ก่อนขั้นถัดไป: {part}",
     "partReady": "ไปขั้นถัดไป",
     "partGoal": "เป้าหมายขั้นนี้",
-    "partGoalMap": "แผนที่เป้าหมาย"
+    "partGoalMap": "แผนที่เป้าหมาย",
+    "stageNumber": "ขั้นที่ {n}",
+    "stageExamplesTitle": "ขั้นนี้คุณคุยแบบนี้ได้"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7599,6 +7619,8 @@
     "partToNext": "अगले चरण से पहले: {part}",
     "partReady": "अगला चरण",
     "partGoal": "इस चरण का लक्ष्य",
-    "partGoalMap": "लक्ष्य नक्शा"
+    "partGoalMap": "लक्ष्य नक्शा",
+    "stageNumber": "चरण {n}",
+    "stageExamplesTitle": "इस चरण में आप ऐसी बातचीत कर सकते हैं"
   }
 }

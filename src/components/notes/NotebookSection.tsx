@@ -496,7 +496,6 @@ function StageFrame({
 }) {
   const now = Math.max(1, Math.min(current, stages.length));
   const [shown, setShown] = useState(focus ?? now);
-  const [goalOpen, setGoalOpen] = useState(false);
   useEffect(() => {
     // eslint-disable-next-line react-hooks/set-state-in-effect -- 밖에서 고른 단계(찾기)로 옮겨 간다
     if (focus) setShown(focus);
@@ -609,9 +608,9 @@ function StageFrame({
           );
         })}
       </ol>
-      <p className={`mt-3 truncate text-note font-semibold ${shown > now ? "text-slate-400" : "text-ink"}`}>
-        {shown}. {title}
-      </p>
+      {/* 단계 = 말하는 힘의 크기(상황 이름이 아님, 2026-10-25). 제목은 "2단계", 할 수 있게 되는 것 한 줄은 작게. */}
+      <p className={`mt-3 text-note font-semibold ${shown > now ? "text-slate-400" : "text-ink"}`}>{ui.stageNumber.replace("{n}", String(shown))}</p>
+      {title ? <p className="truncate text-caption text-slate-500">{title}</p> : null}
 
       {stageParts ? (
         <>
@@ -715,20 +714,7 @@ function StageFrame({
         <div className="mt-1">{nodeRows(inStage(shown))}</div>
       )}
 
-      {detail ? (
-        <>
-          <button
-            type="button"
-            aria-expanded={goalOpen}
-            onClick={() => setGoalOpen((value) => !value)}
-            className="mt-3 flex w-full items-center justify-between border-t border-white/5 py-2.5 text-start text-note text-slate-200"
-          >
-            <span>{ui.partGoal}</span>
-            <span aria-hidden className={`text-caption text-slate-500 ${goalOpen ? "rotate-90" : "rtl:rotate-180"}`}>›</span>
-          </button>
-          {goalOpen ? detail(shown) : null}
-        </>
-      ) : null}
+      {detail?.(shown)}
     </div>
   );
 }

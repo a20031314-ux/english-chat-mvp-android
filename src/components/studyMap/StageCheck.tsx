@@ -141,6 +141,49 @@ export function StagePicker({
   );
 }
 
+/**
+ * My "단계" 보기: 이 단계에선 이런 대화가 된다 — 대화 예시 몇 개(사용자 2026-10-25 "상황은 이 단계에선 이 정도 대화가 가능하다 정도의 예시").
+ * 단계는 말하는 힘(어휘·문법·표현·발음), 상황은 그 힘으로 되는 대화의 예. 예시마다 "써 보기" = 그 장면으로 채팅. 할 수 있게 되는 것은 접어 둔다.
+ */
+export function StageExamples({ ui, stage }: { ui: UICopy; stage: StageView }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <section className="mt-3 flex flex-col gap-2">
+      <h3 className="text-caption font-semibold text-slate-400">{ui.stageExamplesTitle}</h3>
+      {stage.dialogues.map((dialogue, index) => (
+        <div key={index} className="flex flex-col gap-1.5">
+          <DialogueCard dialogue={dialogue} />
+          <button
+            type="button"
+            onClick={() =>
+              sendAppIntent("practice", {
+                tab: "chat",
+                goal: { situation: dialogue.setting, phrases: dialogue.lines.slice(0, 3).map((line) => line.text) },
+                title: dialogue.setting,
+              })
+            }
+            className="self-end rounded-lg border border-line px-2.5 py-1 text-caption text-slate-200 hover:bg-white/5"
+          >
+            {ui.stageTry}
+          </button>
+        </div>
+      ))}
+      <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} className="self-start text-caption text-slate-400 underline-offset-4 hover:underline">
+        {ui.stageCanDo}
+      </button>
+      {open ? (
+        <ul className="flex flex-col gap-1 ps-4 text-note text-slate-200">
+          {stage.canDo.map((line, index) => (
+            <li key={index} className="list-disc">
+              {line}
+            </li>
+          ))}
+        </ul>
+      ) : null}
+    </section>
+  );
+}
+
 /** 지도 위: 이 단계를 마치면 할 수 있는 대화 + 표현 숙지 막대. 다 오면 다음 단계로 새 지도. */
 export function StageGoal({
   ui,
