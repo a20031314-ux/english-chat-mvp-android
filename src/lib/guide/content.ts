@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-25e";
+export const GUIDE_VERSION = "2026-10-26a";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -160,6 +160,7 @@ export const GUIDE_KO: Guide = {
         heading: "5. 다음 단계로",
         body: [
           "‘{ui:myViewMap}’ 맨 위에 가장 부족한 칸이 보여요. 옆 버튼으로 바로 연습해요 — ‘{ui:partPronunciation}’은 ‘{ui:nextByCall}’, 나머지는 ‘{ui:nextByChat}’.",
+          "튜터가 최근 2주에 같은 칸을 세 번 이상 고쳤으면 그 칸이 먼저 나와요(고친 줄은 칸을 채우지 않아요). 한 표현이 여러 문법을 함께 쓰면 그 칸들이 같이 차요.",
           "네 칸이 모두 70%를 넘으면 ‘{ui:partReady}’가 켜져요. 다시 말해보기를 한 번도 안 했으면 ‘{ui:partPronunciation}’은 ‘{ui:myNoData}’로 두고 셈에서 빼요.",
         ],
         shot: "stage-next",
@@ -588,6 +589,7 @@ export const GUIDE_EN: Guide = {
         heading: "5. To the next stage",
         body: [
           "The top of ‘{ui:myViewMap}’ shows your weakest part. Practise it right away with the button next to it — ‘{ui:nextByCall}’ for ‘{ui:partPronunciation}’, ‘{ui:nextByChat}’ for the rest.",
+          "If the tutor corrected the same part three times or more in the last two weeks, that part comes first (corrections don’t fill a part). A phrase that uses several grammar points fills each of them.",
           "When all four pass 70%, ‘{ui:partReady}’ turns on. If you have never tried saying a line again, ‘{ui:partPronunciation}’ shows ‘{ui:myNoData}’ and is left out.",
         ],
         shot: "stage-next",

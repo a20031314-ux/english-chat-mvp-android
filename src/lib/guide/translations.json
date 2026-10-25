@@ -37,6 +37,7 @@
           "heading": "5. A la siguiente etapa",
           "body": [
             "Arriba en «{ui:myViewMap}» verás tu parte más floja. Practícala con el botón de al lado: «{ui:nextByCall}» para «{ui:partPronunciation}», «{ui:nextByChat}» para lo demás.",
+            "Si el tutor corrigió la misma parte tres veces o más en las últimas dos semanas, esa parte sale primero (las correcciones no llenan). Una expresión que usa varios puntos de gramática llena cada uno.",
             "Cuando las cuatro pasan del 70 %, se activa «{ui:partReady}». Si nunca has probado a repetir una frase, «{ui:partPronunciation}» queda en «{ui:myNoData}» y no cuenta."
           ],
           "shot": "stage-next"
@@ -464,6 +465,7 @@
           "heading": "5. 次の段階へ",
           "body": [
             "「{ui:myViewMap}」のいちばん上に、いちばん足りない項目が出ます。横のボタンですぐ練習できます。「{ui:partPronunciation}」は「{ui:nextByCall}」、ほかは「{ui:nextByChat}」です。",
+            "この2週間でチューターが同じ項目を3回以上直していたら、その項目が先に出ます（直された文は項目を埋めません）。1つの表現が複数の文法を使っていれば、その項目すべてが埋まります。",
             "4つとも70%を超えると「{ui:partReady}」が押せます。言い直しを一度もしていなければ「{ui:partPronunciation}」は「{ui:myNoData}」になり、数えません。"
           ],
           "shot": "stage-next"
@@ -891,6 +893,7 @@
           "heading": "5. 进入下一阶段",
           "body": [
             "“{ui:myViewMap}”最上面会显示最薄弱的一项，用旁边的按钮马上练习：“{ui:partPronunciation}”用“{ui:nextByCall}”，其他用“{ui:nextByChat}”。",
+            "如果最近两周导师纠正同一项三次以上，那一项会先出现（被纠正的句子不计入进度）。一个表达同时用到几个语法点，这几个项都会增加。",
             "四项都超过70%时，“{ui:partReady}”就能点了。如果从没试过重说一句，“{ui:partPronunciation}”显示“{ui:myNoData}”，不计算在内。"
           ],
           "shot": "stage-next"
@@ -1318,6 +1321,7 @@
           "heading": "5. Sang giai đoạn tiếp theo",
           "body": [
             "Trên cùng của “{ui:myViewMap}” là phần yếu nhất. Luyện ngay bằng nút bên cạnh: “{ui:nextByCall}” cho “{ui:partPronunciation}”, “{ui:nextByChat}” cho phần còn lại.",
+            "Nếu gia sư sửa cùng một phần từ ba lần trở lên trong hai tuần qua, phần đó hiện ra trước (câu bị sửa không làm đầy phần). Một cách nói dùng nhiều điểm ngữ pháp sẽ làm đầy từng điểm.",
             "Khi cả bốn phần vượt 70%, “{ui:partReady}” sẽ bật. Nếu bạn chưa từng thử nói lại một câu, “{ui:partPronunciation}” hiện “{ui:myNoData}” và không được tính."
           ],
           "shot": "stage-next"
@@ -1745,6 +1749,7 @@
           "heading": "5. Vers l’étape suivante",
           "body": [
             "En haut de « {ui:myViewMap} » s’affiche votre partie la plus faible. Entraînez-vous tout de suite avec le bouton à côté : « {ui:nextByCall} » pour « {ui:partPronunciation} », « {ui:nextByChat} » pour le reste.",
+            "Si le tuteur a corrigé la même partie trois fois ou plus ces deux dernières semaines, elle passe en premier (les corrections ne remplissent pas). Une expression qui utilise plusieurs points de grammaire les remplit tous.",
             "Quand les quatre dépassent 70 %, « {ui:partReady} » s’active. Si vous n’avez jamais essayé de redire une phrase, « {ui:partPronunciation} » indique « {ui:myNoData} » et n’est pas compté."
           ],
           "shot": "stage-next"
@@ -2172,6 +2177,7 @@
           "heading": "5. Alla fase successiva",
           "body": [
             "In cima a «{ui:myViewMap}» vedi la parte più debole. Esercitala subito con il pulsante accanto: «{ui:nextByCall}» per «{ui:partPronunciation}», «{ui:nextByChat}» per il resto.",
+            "Se il tutor ha corretto la stessa parte tre volte o più nelle ultime due settimane, quella parte viene prima (le correzioni non riempiono). Un’espressione che usa più punti di grammatica li riempie tutti.",
             "Quando tutte e quattro superano il 70%, si attiva «{ui:partReady}». Se non hai mai provato a ripetere una frase, «{ui:partPronunciation}» resta su «{ui:myNoData}» e non conta."
           ],
           "shot": "stage-next"
@@ -2599,6 +2605,7 @@
           "heading": "5. Para a próxima etapa",
           "body": [
             "No topo de “{ui:myViewMap}” aparece sua parte mais fraca. Pratique na hora com o botão ao lado: “{ui:nextByCall}” para “{ui:partPronunciation}”, “{ui:nextByChat}” para o resto.",
+            "Se o tutor corrigiu a mesma parte três vezes ou mais nas últimas duas semanas, ela aparece primeiro (correções não preenchem). Uma expressão que usa vários pontos de gramática preenche cada um.",
             "Quando as quatro passam de 70%, “{ui:partReady}” fica ativo. Se você nunca tentou repetir uma frase, “{ui:partPronunciation}” mostra “{ui:myNoData}” e não entra na conta."
           ],
           "shot": "stage-next"
@@ -3026,6 +3033,7 @@
           "heading": "5. К следующему этапу",
           "body": [
             "Наверху «{ui:myViewMap}» видна самая слабая часть. Тренируйте её сразу кнопкой рядом: «{ui:nextByCall}» для «{ui:partPronunciation}», «{ui:nextByChat}» для остального.",
+            "Если за последние две недели тьютор исправил одну и ту же часть три раза или больше, она идёт первой (исправления не заполняют часть). Выражение, в котором несколько грамматических тем, заполняет каждую.",
             "Когда все четыре больше 70%, включается «{ui:partReady}». Если вы ни разу не пробовали повторить фразу, у «{ui:partPronunciation}» стоит «{ui:myNoData}», и она не учитывается."
           ],
           "shot": "stage-next"
@@ -3453,6 +3461,7 @@
           "heading": "5. Ke tahap berikutnya",
           "body": [
             "Di atas “{ui:myViewMap}” terlihat bagian paling lemah. Latih langsung dengan tombol di sebelahnya: “{ui:nextByCall}” untuk “{ui:partPronunciation}”, “{ui:nextByChat}” untuk yang lain.",
+            "Kalau tutor mengoreksi bagian yang sama tiga kali atau lebih dalam dua minggu terakhir, bagian itu muncul duluan (koreksi tidak mengisi bagian). Ungkapan yang memakai beberapa poin tata bahasa mengisi semuanya.",
             "Saat keempatnya lewat 70%, “{ui:partReady}” menyala. Kalau kamu belum pernah mencoba mengulang kalimat, “{ui:partPronunciation}” tertulis “{ui:myNoData}” dan tidak dihitung."
           ],
           "shot": "stage-next"
@@ -3880,6 +3889,7 @@
           "heading": "5. إلى المرحلة التالية",
           "body": [
             "أعلى «{ui:myViewMap}» يظهر الجزء الأضعف. تدرّب عليه فورًا بالزر المجاور: «{ui:nextByCall}» لـ«{ui:partPronunciation}»، و«{ui:nextByChat}» للبقية.",
+            "إذا صحّح المعلّم الجزء نفسه ثلاث مرات أو أكثر في الأسبوعين الأخيرين، يظهر ذلك الجزء أولًا (التصحيحات لا تملأ الأجزاء). والتعبير الذي يستخدم عدة نقاط نحوية يملأها كلها.",
             "عندما تتجاوز الأجزاء الأربعة 70% يتفعّل «{ui:partReady}». إن لم تجرّب إعادة قول جملة من قبل، يظهر «{ui:partPronunciation}» بـ«{ui:myNoData}» ولا يُحسب."
           ],
           "shot": "stage-next"
@@ -4307,6 +4317,7 @@
           "heading": "5. ไปขั้นถัดไป",
           "body": [
             "ด้านบนของ “{ui:myViewMap}” จะเห็นส่วนที่อ่อนที่สุด ฝึกได้ทันทีด้วยปุ่มข้างๆ “{ui:partPronunciation}” ใช้ “{ui:nextByCall}” ส่วนอื่นใช้ “{ui:nextByChat}”",
+            "ถ้าติวเตอร์แก้ส่วนเดียวกันสามครั้งขึ้นไปในสองสัปดาห์ที่ผ่านมา ส่วนนั้นจะขึ้นก่อน (ประโยคที่ถูกแก้ไม่เติมส่วน) สำนวนที่ใช้ไวยากรณ์หลายจุดจะเติมทุกจุด",
             "เมื่อทั้งสี่ส่วนเกิน 70% ปุ่ม “{ui:partReady}” จะเปิด ถ้ายังไม่เคยลองพูดประโยคซ้ำ “{ui:partPronunciation}” จะเป็น “{ui:myNoData}” และไม่นับ"
           ],
           "shot": "stage-next"
@@ -4734,6 +4745,7 @@
           "heading": "5. अगले चरण की ओर",
           "body": [
             "“{ui:myViewMap}” में सबसे ऊपर सबसे कमज़ोर हिस्सा दिखता है। बगल के बटन से तुरंत अभ्यास करें — “{ui:partPronunciation}” के लिए “{ui:nextByCall}”, बाकी के लिए “{ui:nextByChat}”।",
+            "अगर ट्यूटर ने पिछले दो हफ़्तों में एक ही हिस्सा तीन या ज़्यादा बार सुधारा है, तो वही हिस्सा पहले आता है (सुधारे गए वाक्य हिस्सा नहीं भरते)। जो अभिव्यक्ति कई व्याकरण बिंदु एक साथ इस्तेमाल करती है, वह सभी भरती है।",
             "चारों 70% पार करें तो “{ui:partReady}” चालू हो जाता है। अगर आपने कभी कोई वाक्य दोबारा बोलकर नहीं देखा, तो “{ui:partPronunciation}” में “{ui:myNoData}” रहता है और वह गिना नहीं जाता।"
           ],
           "shot": "stage-next"
