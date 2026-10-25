@@ -1,5 +1,5 @@
 import { NextRequest } from "next/server";
-import { setPackHidden } from "@/lib/server/iconStore";
+import { setPackHidden, setSaleStatus } from "@/lib/server/iconStore";
 import { isPackId } from "@/lib/rooms/icons";
 import { jsonWithCors } from "@/lib/server/cors";
 import { readAccounts } from "@/lib/server/accountStore";
@@ -18,6 +18,8 @@ export const dynamic = "force-dynamic";
  * - suspend {target, days: 1|7|30|null(풀 때까지), note} / unsuspend {target}: 사람 기능 정지(학습 기능은 그대로)
  * - randomPause {target, hours: 24|168} / randomUnpause, randomOff / randomOn {target}: 랜덤(Spin)만
  * - done {id, done, note}: 처리함 표시
+ * - hideIconPack / showIconPack {packId}: 아이콘 묶음 내리기(판매 묶음이면 산 사람에게 포인트 돌려줌)·되돌리기
+ * - approveIconSale / rejectIconSale {packId}: 판매 신청(줄 "icon-sale:<id>") 승인 → 목록에 뜸 · 거절
  */
 const bad = (request: NextRequest, error: string, status = 400) => jsonWithCors(request, { error }, { status });
 
@@ -72,6 +74,13 @@ export async function POST(request: NextRequest) {
   if (action === "hideIconPack" || action === "showIconPack") {
     if (!isPackId(body.packId)) return bad(request, "BAD_ID");
     const found = await setPackHidden(body.packId, action === "hideIconPack");
+    return found ? jsonWithCors(request, { ok: true }) : bad(request, "NOT_FOUND", 404);
+  }
+
+  // 아이콘 판매 신청 승인·거절(줄에 "icon-sale:<id>").
+  if (action === "approveIconSale" || action === "rejectIconSale") {
+    if (!isPackId(body.packId)) return bad(request, "BAD_ID");
+    const found = await setSaleStatus(body.packId, action === "approveIconSale" ? "approved" : "rejected");
     return found ? jsonWithCors(request, { ok: true }) : bad(request, "NOT_FOUND", 404);
   }
 

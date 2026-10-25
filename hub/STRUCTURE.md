@@ -22,12 +22,13 @@
 │           ├ 단체방(팀이면 "대화 | 워크스페이스", 📞 단체방 통화 → 비공개 Room)
 │           └ 1:1 메시지(요청 → 열림, 📞 → 둘만의 비공개 Room)
 ├ 영상 학습 video ─ 이달의 영상 · 링크 넣기 · 학습 언어 자막 · 문장 바 → 문장분석 시트
-├ 사람 people ─ 칩 [👥 사람 | 📋 게시판 | 🙂 아이콘(묶음 만들기·받기)](이모지만) · 프로필 시트(팔로우·메시지·메이트 신청·차단·신고) · ➕ 친구 초대 → 시트(🎁 초대 보상 카드 + 공유)
+├ 사람 people ─ 칩 [👥 사람 | 📋 게시판(학습 언어별, 주제 칩 자유·질문·메이트·보이스룸·단체방 → 메이트 신청·방 들어가기·단체방 참여) | 🙂 아이콘(묶음 만들기·받기)](이모지만) · 프로필 시트(팔로우·메시지·메이트 신청·차단·신고) · ➕ 친구 초대 → 시트(🎁 초대 보상 카드 + 공유)
 ├ Room room ─ 로비(방 카드) → 방(자리 8칸·듣는 줄·자막·댓글) · 👥 이 방 사람들과 단체방 · 🎭 게임(방장: 라이어 게임·마피아)
 └ My my ─ 계정 카드 · 🎁 초대 보상 · 🤝 메이트·팀 줄 → 대화의 워크스페이스
           오늘 해볼 것 → 자라는 중 [망 | 그래프 | 단계] → 내 표현 → 노트(어휘·표현 장 8 × 주제 3, 단어장 줄)
-          자라는 중 맨 위 "오늘의 학습"(튜터가 고친 줄 고르기). 단계 = 수준별 틀(2026-10-24, 예전 지도 + 노트 뼈대): 단계 사다리 1~5 → 고른 단계의 문법 칸(짚은 장면 카드·숙지 ✓·해보기) → 목표 대화·할 수 있는 것 → 글자·소리·내가 만든 칸 → 목표 주제(지도·미션)
-          망·그래프의 부분 → "단계에서 보기"(표현 폭은 단어장). 지도가 없으면 체크 화면(대화 예시로 시작 단계 고르기 + 체크 3질문) 아래 같은 자라는 중
+          자라는 중 맨 위 "오늘의 학습"(튜터가 고친 줄 고르기). 세 보기 모두 같은 네 갈래 어휘·문법·표현·발음(2026-10-25, lib/notes/stageParts.ts, /api/notebook parts):
+          단계 = 사다리 1~5 → "n단계" → 다음 단계까지: 가장 모자란 갈래 + 연습(다 70%면 "다음 단계로" → 단계 고르기) → 네 갈래 막대 → 고른 갈래의 칸·목록 → "이 단계에선 이런 대화가 돼요"(대화 예시 2·써 보기) → 목표 지도 ›(접힘, 예전 상황·미션)
+          망 = 네 꼭짓점(찬 정도, 점선 70%) · 그래프 = 갈래별 최근 14일 — 갈래를 누르면 단계 보기의 그 갈래. 지도가 없으면 체크 화면(대화 예시로 시작 단계 고르기 + 체크 3질문) 아래 같은 자라는 중
 
 어디서나 열림  문장분석 시트 sheet (채팅·통화 돌아보기·영상·노트의 문장 → "분석") · 표현 시트 · 결제 화면
                └ 🔎 My에서 찾기(FindInMy) → 서버가 틀의 칸 → My 단계 보기 그 단계·칸 시트 + "이 장면 넣기"(화면 함께, lib/notes/locateHandoff.ts — AI 대화·통화·영상만 화면, 사람 대화는 고른 부분만)
@@ -86,7 +87,7 @@
 ### 대화 탭 — AI 튜터 줄·1:1 메시지·단체방·팀 `talk`
 - 화면: `AiTutorRow` · `rooms/MateAsk` · `rooms/MessagesTab` · `rooms/RoomDm` · `rooms/RoomGroups` · `rooms/TeamSpace`
 - API: `dm`(사람 탭, Room 탭, 계정·로그인) · `groups`(사람 탭, Room 탭, 계정·로그인)
-- 다른 영역이 씀: `AiTutorRow` ← 앱 틀 · `rooms/MateAsk` ← Room 탭 · `rooms/MessagesTab` ← 앱 틀 · `rooms/RoomDm` ← 앱 틀, Room 탭 · `rooms/RoomGroups` ← 앱 틀, 사람 탭
+- 다른 영역이 씀: `AiTutorRow` ← 앱 틀 · `rooms/MateAsk` ← 사람 탭, Room 탭 · `rooms/MessagesTab` ← 앱 틀 · `rooms/RoomDm` ← 앱 틀, Room 탭 · `rooms/RoomGroups` ← 앱 틀, 사람 탭
 
 ### AI 채팅 (대화 → AI 튜터 줄) `chat`
 - 화면: `ChatHistoryPanel` · `ChatWindow` · `ExpressionPeek` · `MessageBubble` · `ReportContentDialog` · `conversation/LineTools`
@@ -105,7 +106,7 @@
 
 ### 학습 기록 공통 — 오늘 해볼 것·표현 장부 (여러 화면이 같이 씀) `learner`
 - 화면: `LedgerLinks` · `NextStepCard`
-- API: `learner/ask`(My 탭) · `learner/brief` · `learner/comprehension`(문장분석·표현 시트, 영상 학습 탭) · `learner/growth`(My 탭) · `learner/ledger`(대화 탭, AI 채팅, AI 통화, 문장분석·표현 시트, My 탭) · `learner/next` · `learner/profile`(My 탭) · `learner/self-check`(My 탭)
+- API: `learner/ask`(My 탭) · `learner/brief` · `learner/comprehension`(문장분석·표현 시트, 영상 학습 탭) · `learner/growth` · `learner/ledger`(대화 탭, AI 채팅, AI 통화, 문장분석·표현 시트, My 탭) · `learner/next` · `learner/profile`(My 탭) · `learner/self-check`(My 탭)
 - 다른 영역이 씀: `LedgerLinks` ← AI 채팅, AI 통화, 영상 학습 탭, My 탭 · `NextStepCard` ← AI 채팅, AI 통화, My 탭
 
 ### 영상 학습 탭 `video`
@@ -114,7 +115,7 @@
 - 다른 영역이 씀: `videoLearning/VideoLearningTab` ← 앱 틀
 
 ### 사람 탭 — 프로필 목록·게시판·사진 `people`
-- 화면: `SuspendedNotice` · `rooms/BoardView` · `rooms/IconPacks` · `rooms/MediaImage` · `rooms/PeopleTab` · `rooms/RoomPeople`
+- 화면: `SuspendedNotice` · `rooms/BoardView` · `rooms/IconEditor` · `rooms/IconPacks` · `rooms/MediaImage` · `rooms/PeopleTab` · `rooms/RoomPeople`
 - API: `board`(대화 탭, Room 탭, 계정·로그인) · `icons`(대화 탭, Room 탭, 계정·로그인) · `media`(Room 탭) · `social`(대화 탭, Room 탭, 계정·로그인)
 - 다른 영역이 씀: `SuspendedNotice` ← 앱 틀 · `rooms/IconPacks` ← 대화 탭, Room 탭 · `rooms/MediaImage` ← 대화 탭 · `rooms/PeopleTab` ← 앱 틀
 
@@ -142,7 +143,7 @@
 - 화면: `BillingScreen` · `NativeAdSlot` · `PointStore` · `PointsIcon` · `WebAdSlot`
 - API: `ads/config`(여러 영역 6곳) · `ads/ssv` · `ads/txt` · `entitlement`(여러 영역 14곳) · `points/sync`(여러 영역 14곳)
 - 웹 페이지: `/subscribe`
-- 다른 영역이 씀: `BillingScreen` ← 앱 틀, AI 채팅, 영상 학습 탭 · `NativeAdSlot` ← 대화 탭, 영상 학습 탭, 사람 탭, Room 탭 · `PointsIcon` ← 영상 학습 탭, 의견 보내기·반영 소식
+- 다른 영역이 씀: `BillingScreen` ← 앱 틀, AI 채팅, 영상 학습 탭, 사람 탭 · `NativeAdSlot` ← 대화 탭, 영상 학습 탭, 사람 탭, Room 탭 · `PointsIcon` ← 영상 학습 탭, 의견 보내기·반영 소식
 
 ### 친구 초대·보상 `invite`
 - 화면: `invite/InviteButton` · `invite/InviteRewards` · `invite/InviteWelcome`
@@ -183,6 +184,6 @@
 
 - 아무도 안 가져다 쓰는 화면 코드: 없음
 - 앱·스크립트 어디서도 안 부르는 API: 없음
-- 밖에서 부르는 API: `ops/reports` 운영자 신고함 페이지 /ops(운영자 키) · `ads/ssv` AdMob 서버가 보상 확인으로 부름 · `ads/txt` AdSense가 /ads.txt로 읽음(next.config.ts rewrites) · `account/purge` Vercel 예약 작업(vercel.json) · `media/sweep` Vercel 예약 작업(vercel.json) · `feedback/fixed` 의견함 예약 작업(scripts/feedback-notify.mjs) · `feedback/image` 의견함 정리(scripts/feedback-pull.mjs) · `simcheck/forget` 가상 사용자 점검이 끝날 때 · `video-subtitles/window` 옛 앱 2.48~2.57이 영상 해석에 씀 — 최소 지원 버전을 2.58 이상으로 올리면 지움 · `english-analysis/input` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `english-analysis/element` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `learner/brief` 가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀
+- 밖에서 부르는 API: `ops/reports` 운영자 신고함 페이지 /ops(운영자 키) · `ads/ssv` AdMob 서버가 보상 확인으로 부름 · `ads/txt` AdSense가 /ads.txt로 읽음(next.config.ts rewrites) · `account/purge` Vercel 예약 작업(vercel.json) · `media/sweep` Vercel 예약 작업(vercel.json) · `feedback/fixed` 의견함 예약 작업(scripts/feedback-notify.mjs) · `feedback/image` 의견함 정리(scripts/feedback-pull.mjs) · `simcheck/forget` 가상 사용자 점검이 끝날 때 · `video-subtitles/window` 옛 앱 2.48~2.57이 영상 해석에 씀 — 최소 지원 버전을 2.58 이상으로 올리면 지움 · `learner/growth` 옛 앱 2.48~2.74가 My 망·그래프(여섯 요소)에 씀 — 2.75부터 화면은 네 갈래(/api/notebook parts), 최소 지원 버전을 2.75 이상으로 올리면 화면용으로는 지움(점검 스크립트는 씀) · `english-analysis/input` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `english-analysis/element` 옛 앱 2.48~2.62가 문장분석에 씀 — 최소 지원 버전을 2.63 이상으로 올리면 지움 · `learner/brief` 가상 사용자 점검(next·map 묶음)이 튜터 요약 확인에 씀
 
 <!-- 자동 끝 -->

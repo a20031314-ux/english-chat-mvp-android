@@ -16,6 +16,7 @@
  * 순수.
  */
 
+import type { PartId } from "./stageParts.ts";
 import { ladderFor } from "../curriculum/stages/index.ts";
 import type { StageText } from "../curriculum/stages/types.ts";
 import { scriptFor } from "../curriculum/scripts/index.ts";
@@ -82,6 +83,10 @@ export type FixCard = {
   day?: string;
   /** 노트에 넣을 때 붙인 화면의 id(그림은 따로 저장 — server/notebookStore.ts `shotKey`). */
   shotId?: string;
+  /** 이 짚임이 걸친 갈래(어휘·문법·표현·발음, 한 줄에 여럿 — 2026-10-26 "요소 태그"). 없으면 칸으로 짐작. */
+  parts?: PartId[];
+  /** node 밖에 이 짚임이 함께 걸친 문법 칸(2개까지). */
+  also?: string[];
 };
 
 /** question = 궁금했던 장면(2026-10-24): wrong 자리에 그 문장(사람 대화면 빈 칸), right 자리에 고른 부분. */
@@ -108,7 +113,10 @@ export type NotebookRecord = {
 };
 
 /** note: "My에서 찾기"로 찾았을 때의 한 줄 설명(앱 언어) — 같은 표현을 다시 찾으면 모델 없이 이것을. */
-export type PhrasePlace = { node: string | null; at: number; moved?: boolean; note?: string; noteUi?: string };
+/** also: node 밖에 이 표현이 함께 보여 주는 문법 칸(2개까지, 2026-10-26) — 문법 갈래를 셀 때 같이 센다. */
+export type PhrasePlace = { node: string | null; at: number; moved?: boolean; note?: string; noteUi?: string; also?: string[] };
+export const MAX_ALSO = 2;
+export const PART_TAGS: PartId[] = ["vocab", "grammar", "expression", "pronunciation"];
 export const MAX_PHRASES = 800;
 /** 한 번에 칸을 고르는 표현 수. */
 export const PHRASES_PER_CALL = 30;
@@ -224,16 +232,18 @@ ${input.options}
 - "suggest": only when "node" is "none" — a short section name in ${input.uiName}, two to four words, naming the general point (never the learner's words).
 - "note": one short line in ${input.uiName} saying what was wrong and what the right form is, under 80 characters. Plain, no greeting, no praise. Words of ${input.target} may appear in quotes.
 - "kind": "typo" when the only change is a slip of spelling or typing (a missing or swapped letter, a wrong accent mark, a misspelled word) that the learner clearly knows; otherwise "mistake" (grammar, word choice, word order, a missing word, a wrong form).
+- "parts": every part of the language this correction is about — "grammar" (forms, endings, particles, word order, agreement), "vocab" (a wrong or missing word, a word's meaning or spelling), "expression" (a set phrase, a word pairing, politeness or what people actually say), "pronunciation" (only when the change is about how it sounds, e.g. a misheard word in a call). One line can be about several.
+- "also": other grammar section ids (not "node") this same correction clearly also involves — at most two; [] when none.
 - Never repeat or translate the learner's whole line.
 
-Return only json: {"node":"<id or none>","suggest":"...","note":"...","kind":"mistake or typo"}`;
+Return only json: {"node":"<id or none>","suggest":"...","note":"...","kind":"mistake or typo","parts":["grammar"],"also":[]}`;
 }
 
 export function placeMessage(wrong: string, right: string, explanation: string): string {
   return JSON.stringify({ learner: wrong, corrected: right, ...(explanation ? { tutorNote: explanation.slice(0, 300) } : {}) });
 }
 
-export type Placement = { node: string | null; suggest?: string; note: string; kind?: FixKind };
+export type Placement = { node: string | null; suggest?: string; note: string; kind?: FixKind; parts?: PartId[]; also?: string[] };
 
 /** 모델 답 읽기. 모르는 칸은 null, 설명이 없으면 튜터 설명(있으면)으로. */
 export function readPlacement(raw: string, known: ReadonlySet<string>, fallbackNote: string): Placement {
@@ -248,7 +258,32 @@ export function readPlacement(raw: string, known: ReadonlySet<string>, fallbackN
   const suggest = node ? "" : clean(data.suggest, MAX_NAME);
   const note = clean(data.note, MAX_NOTE) || clean(fallbackNote, MAX_NOTE);
   const kind = data.kind === "typo" ? "typo" : data.kind === "mistake" ? "mistake" : undefined;
-  return { node, ...(suggest ? { suggest } : {}), note, ...(kind ? { kind } : {}) };
+  const parts = readParts(data.parts);
+  const also = readAlso(data.also, known, node);
+  return { node, ...(suggest ? { suggest } : {}), note, ...(kind ? { kind } : {}), ...(parts.length ? { parts } : {}), ...(also.length ? { also } : {}) };
+}
+
+/** 모델이 준 갈래 태그(모르는 이름은 버림, 겹치면 하나). */
+export function readParts(value: unknown): PartId[] {
+  if (!Array.isArray(value)) return [];
+  return PART_TAGS.filter((part) => value.includes(part));
+}
+
+/** 함께 걸친 문법 칸: 아는 문법 칸만, 주 칸과 겹치지 않게, 2개까지. */
+export function readAlso(value: unknown, known: ReadonlySet<string>, node: string | null): string[] {
+  if (!Array.isArray(value)) return [];
+  const out: string[] = [];
+  for (const id of value) {
+    if (typeof id !== "string" || !/^g\d-/.test(id) || !known.has(id) || id === node || out.includes(id)) continue;
+    out.push(id);
+    if (out.length >= MAX_ALSO) break;
+  }
+  return out;
+}
+
+function cleanAlso(value: unknown, node: string | null): string[] {
+  if (!Array.isArray(value)) return [];
+  return value.filter((id, i): id is string => typeof id === "string" && isNodeId(id) && id !== node && value.indexOf(id) === i).slice(0, MAX_ALSO);
 }
 
 function same(a: string, b: string): boolean {
@@ -283,11 +318,14 @@ function cleanPhrases(value: unknown): Record<string, PhrasePlace> {
   for (const [key, place] of Object.entries(value as Record<string, PhrasePlace>)) {
     if (!isPhraseKey(key) || !place || typeof place !== "object") continue;
     const note = clean(place.note, MAX_NOTE);
+    const node = place.node && isNodeId(place.node) ? place.node : null;
+    const also = cleanAlso(place.also, node);
     out[key] = {
-      node: place.node && isNodeId(place.node) ? place.node : null,
+      node,
       at: Number(place.at) || 0,
       ...(place.moved ? { moved: true } : {}),
       ...(note && typeof place.noteUi === "string" ? { note, noteUi: place.noteUi.slice(0, 8) } : {}),
+      ...(also.length ? { also } : {}),
     };
   }
   return out;
@@ -298,13 +336,19 @@ export function isPhraseKey(value: unknown): value is string {
 }
 
 /** 칸을 고른 표현을 넣는다(옮긴 것은 그대로). 넘치면 오래된 것부터. */
-export function placePhrases(record: NotebookRecord, placed: Array<{ key: string; node: string | null; note?: string; noteUi?: string }>, now = Date.now()): NotebookRecord {
+export function placePhrases(
+  record: NotebookRecord,
+  placed: Array<{ key: string; node: string | null; note?: string; noteUi?: string; also?: string[] }>,
+  now = Date.now(),
+): NotebookRecord {
   if (!placed.length) return record;
   const phrases = { ...record.phrases };
-  for (const { key, node, note, noteUi } of placed) {
+  for (const { key, node, note, noteUi, also } of placed) {
     if (!isPhraseKey(key) || phrases[key]?.moved) continue;
     const keep = note && noteUi ? { note: clean(note, MAX_NOTE), noteUi } : phrases[key]?.note ? { note: phrases[key]!.note, noteUi: phrases[key]!.noteUi } : {};
-    phrases[key] = { node: node && isNodeId(node) ? node : null, at: now, ...keep };
+    const at = node && isNodeId(node) ? node : null;
+    const extra = cleanAlso(also ?? phrases[key]?.also, at);
+    phrases[key] = { node: at, at: now, ...keep, ...(extra.length ? { also: extra } : {}) };
   }
   const keys = Object.keys(phrases);
   if (keys.length > MAX_PHRASES) {
@@ -327,7 +371,9 @@ For each phrase pick one:
 - a learner's own section when its name fits;
 - "vocab" only for a single word or a short noun phrase with no verb (it stays in the word list). A whole sentence or question never goes to "vocab": put it under the grammar point it uses, or under "i-set" when it is said as a whole.
 
-Return only json: {"places":[{"i":<index>,"node":"<id or vocab>"}]} with one entry per phrase.`;
+"also": other grammar section ids (not "node") the phrase clearly also shows in its actual form — at most two; [] when none. A phrase can use more than one point at once (a past tense and a comparison, a particle and a polite ending).
+
+Return only json: {"places":[{"i":<index>,"node":"<id or vocab>","also":[]}]} with one entry per phrase.`;
 }
 
 /** 궁금한 부분 하나가 틀의 어느 칸인지 + 앱 언어 한 줄 설명(문장분석 시트 "My에서 찾기"). */
@@ -393,6 +439,24 @@ export function readPhrasePlaces(raw: string, count: number, known: ReadonlySet<
   return out;
 }
 
+/** 모델 답 → 표현 순서대로 함께 걸친 문법 칸(readPhrasePlaces와 같은 답에서). */
+export function readPhraseAlso(raw: string, count: number, known: ReadonlySet<string>, nodes: Array<string | null | undefined>): string[][] {
+  const out: string[][] = Array.from({ length: count }, () => []);
+  let rows: unknown = [];
+  try {
+    rows = (JSON.parse(raw) as { places?: unknown })?.places ?? [];
+  } catch {
+    rows = [];
+  }
+  if (!Array.isArray(rows)) return out;
+  for (const row of rows as Array<{ i?: unknown; also?: unknown }>) {
+    const i = typeof row?.i === "number" ? row.i : -1;
+    if (i < 0 || i >= count || !Number.isInteger(i)) continue;
+    out[i] = readAlso(row.also, known, nodes[i] ?? null);
+  }
+  return out;
+}
+
 /** 새 카드. 같은 칸에 같은 틀림→고침이 이미 있으면 시각만 새로(같은 실수를 또 한 것). 오래된 것부터 넘친다. */
 export function addCard(record: NotebookRecord, card: FixCard): NotebookRecord {
   const wrong = clean(card.wrong, MAX_LINE);
@@ -414,6 +478,8 @@ export function addCard(record: NotebookRecord, card: FixCard): NotebookRecord {
     at: card.at,
     ...(card.kind && FIX_KINDS.includes(card.kind) ? { kind: card.kind } : {}),
     ...(card.shotId && isCardId(card.shotId) ? { shotId: card.shotId } : {}),
+    ...(card.parts?.length ? { parts: readParts(card.parts) } : {}),
+    ...(cleanAlso(card.also, card.node ?? null).length ? { also: cleanAlso(card.also, card.node ?? null) } : {}),
   };
   const cards = [...record.cards, next].sort((a, b) => b.at - a.at).slice(0, MAX_CARDS);
   return { ...record, cards };
@@ -454,6 +520,8 @@ export function addPending(record: NotebookRecord, card: FixCard, now = Date.now
     kind: card.kind && FIX_KINDS.includes(card.kind) ? card.kind : "mistake",
     ...(again ? { again: true } : {}),
     ...(card.day && /^\d{4}-\d{2}-\d{2}$/.test(card.day) ? { day: card.day } : {}),
+    ...(card.parts?.length ? { parts: readParts(card.parts) } : {}),
+    ...(cleanAlso(card.also, card.node ?? null).length ? { also: cleanAlso(card.also, card.node ?? null) } : {}),
   };
   const pending = [next, ...base.pending].sort((a, b) => b.at - a.at).slice(0, MAX_PENDING);
   return { ...base, pending };

@@ -8,6 +8,8 @@ import type { UICopy } from "@/lib/copy";
 import type { CustomNode, FixCard, NotebookChapter, NotebookEdit } from "@/lib/notes/notebook";
 import { sceneShotFor } from "@/lib/notes/sceneShots";
 import { onLocate, takeLocate, type LocateHandoff } from "@/lib/notes/locateHandoff";
+import { PART_IDS, shareOf, type PartId, type StageParts } from "@/lib/notes/stageParts";
+import { sendAppIntent } from "@/lib/appIntents";
 
 /**
  * 노트의 뼈대 칸(글자·소리·문법)과 내가 만든 칸, 그 안의 짚은 장면 카드(notes/notebook.ts, /api/notebook).
@@ -32,6 +34,12 @@ type Book = {
   stages: { order: number; title: string }[];
   /** 습득한 표현(장부 배움·숙지)이 든 칸(2026-10-24). */
   phrases: PhraseView[];
+  /** 단계마다 네 갈래(어휘·문법·표현·발음)와 다음 단계 조건(2026-10-25) — 옛 서버면 없다. */
+  parts?: StageParts[];
+  words?: { text: string; state: "met" | "learned" | "mastered" }[];
+  pronunciationNotes?: Record<string, string>;
+  /** 지금 단계 갈래별 최근 14일(그래프 보기). */
+  partDays?: Record<PartId, number[]> | null;
 };
 type PhraseView = { key: string; text: string; state: "met" | "learned" | "mastered"; node: string };
 type Group = NotebookChapter | "mine" | "loose";
@@ -73,6 +81,11 @@ export function NotebookSection({
   stageDetail,
   masteredOf,
   onTry,
+  onNextStage,
+  canSpeak = false,
+  view,
+  part: focusPart = null,
+  onPart,
 }: {
   ui: UICopy;
   locale: string;
@@ -86,6 +99,15 @@ export function NotebookSection({
   masteredOf?: (stage: number, index: number) => boolean;
   /** 그 문법으로 바로 연습(채팅). */
   onTry?: (stage: number, index: number) => void;
+  /** 네 갈래가 다 차면 "다음 단계로"(My가 단계 고르기를 연다). */
+  onNextStage?: (order: number) => void;
+  /** AI 통화로 말해 볼 수 있는지(발음 연습 버튼). */
+  canSpeak?: boolean;
+  /** 틀 밖(frame false)에서 그릴 보기: 망 = 네 꼭짓점, 그래프 = 갈래별 2주. 갈래를 누르면 onPart(→ 단계 보기). */
+  view?: "net" | "graph" | "map";
+  /** 단계 보기에서 처음 열 갈래(망·그래프에서 누른 것). */
+  part?: PartId | null;
+  onPart?: (part: PartId) => void;
 }) {
   const [book, setBook] = useState<Book | null>(null);
   const [group, setGroup] = useState<Group | null>(null);
@@ -225,12 +247,14 @@ export function NotebookSection({
   // 뒤 단계 문법은 카드가 들어온 칸만.
   const inChapter = (chapter: NotebookChapter) => book.nodes.filter((node) => node.chapter === chapter && (!node.ahead || (counts[node.id] ?? 0) > 0));
   const sum = (ids: string[]) => ids.reduce((total, id) => total + (counts[id] ?? 0), 0);
+  // 네 갈래 틀이 있으면 글자·소리(발음)·관용 표현(표현)·세부(어휘·표현)는 그 갈래 안에서 — 아래 줄에는 내가 만든 칸·자리 없음만.
+  const inParts = frame && book.stages.length > 0 && (book.parts?.length ?? 0) > 0;
   const rows: Array<{ key: Group; label: string; count: number; show: boolean }> = [
-    { key: "script", label: ui.notebookScript, count: sum(inChapter("script").map((n) => n.id)), show: inChapter("script").length > 0 },
+    { key: "script", label: ui.notebookScript, count: sum(inChapter("script").map((n) => n.id)), show: !inParts && inChapter("script").length > 0 },
     // 문법은 아래 단계 틀(StageFrame)로 펼쳐 보인다. 옛 서버(단계 사다리 없음)면 예전처럼 한 줄.
     { key: "grammar", label: ui.notebookGrammar, count: sum(inChapter("grammar").map((n) => n.id)), show: inChapter("grammar").length > 0 && book.stages.length === 0 },
-    { key: "idiom", label: ui.notebookIdioms, count: sum(inChapter("idiom").map((n) => n.id)), show: inChapter("idiom").length > 0 },
-    { key: "detail", label: ui.notebookDetails, count: sum(inChapter("detail").map((n) => n.id)), show: inChapter("detail").length > 0 },
+    { key: "idiom", label: ui.notebookIdioms, count: sum(inChapter("idiom").map((n) => n.id)), show: !inParts && inChapter("idiom").length > 0 },
+    { key: "detail", label: ui.notebookDetails, count: sum(inChapter("detail").map((n) => n.id)), show: !inParts && inChapter("detail").length > 0 },
     { key: "mine", label: ui.notebookMine, count: sum(book.custom.map((n) => n.id)), show: true },
     { key: "loose", label: ui.notesLoose, count: counts[""] ?? 0, show: (counts[""] ?? 0) > 0 },
   ];
@@ -272,6 +296,7 @@ export function NotebookSection({
           stages={book.stages}
           current={book.stage}
           nodes={book.nodes.filter((node) => node.chapter === "grammar")}
+          allNodes={book.nodes.filter((node) => !node.ahead)}
           counts={counts}
           fill={fill}
           nameOf={nameOf}
@@ -279,7 +304,17 @@ export function NotebookSection({
           detail={stageDetail}
           masteredOf={masteredOf}
           focus={focusStage}
+          parts={book.parts ?? []}
+          words={book.words ?? []}
+          pronunciationNotes={book.pronunciationNotes ?? {}}
+          onTry={onTry}
+          onNextStage={onNextStage}
+          canSpeak={canSpeak}
+          focusPart={focusPart}
         />
+      ) : null}
+      {!frame && (view === "net" || view === "graph") && book.parts?.length ? (
+        <PartsOverview ui={ui} view={view} parts={book.parts.find((row) => row.order === book.stage) ?? book.parts[0]!} days={book.partDays ?? null} onPart={onPart} />
       ) : null}
       {frame ? (
       <ul className="mt-2 divide-y divide-white/5">
@@ -420,11 +455,134 @@ export function NotebookSection({
  * 짚인 장면이 든 칸은 채워진 점 + 횟수, 위에 "채운 칸 / 이 단계 칸". 다음 단계도 눌러 미리 본다.
  * 설명 글 없이 번호·이름·숫자만(hub/DESIGN.md "안내 글").
  */
+function partLabels(ui: UICopy): Record<PartId, string> {
+  return { vocab: ui.partVocab, grammar: ui.partGrammar, expression: ui.partExpression, pronunciation: ui.partPronunciation };
+}
+
+/**
+ * 망·그래프 보기(2026-10-25 사용자 "망, 그래프도 변경 내용에 맞게 통합" → 1번): 단계 보기와 같은 네 갈래.
+ * 망 = 지금 단계에서 찬 정도(꼭짓점, 점선 = 다음 단계 기준 70%), 그래프 = 갈래마다 최근 14일 막대. 갈래를 누르면 단계 보기의 그 갈래.
+ */
+function PartsOverview({
+  ui,
+  view,
+  parts,
+  days,
+  onPart,
+}: {
+  ui: UICopy;
+  view: "net" | "graph";
+  parts: StageParts;
+  days: Record<PartId, number[]> | null;
+  onPart?: (part: PartId) => void;
+}) {
+  const label = partLabels(ui);
+  const byId = new Map(parts.parts.map((row) => [row.id, row]));
+  const head = (
+    <p className="mt-2 text-caption text-slate-400">
+      <span className="font-semibold text-ink">{ui.stageNumber.replace("{n}", String(parts.order))}</span>
+      {parts.ready ? <> · {ui.partReady}</> : parts.weakest ? <> · {ui.partToNext.replace("{part}", label[parts.weakest])}</> : null}
+    </p>
+  );
+  if (view === "graph") {
+    const top = Math.max(1, ...PART_IDS.flatMap((id) => days?.[id] ?? []));
+    return (
+      <div>
+        {head}
+        <ul className="mt-2 space-y-1">
+          {PART_IDS.map((id) => {
+            const row = byId.get(id);
+            const list = days?.[id] ?? [];
+            const sum = list.reduce((a, b) => a + b, 0);
+            const weakest = parts.weakest === id;
+            return (
+              <li key={id}>
+                <button type="button" onClick={() => onPart?.(id)} className="flex w-full items-center gap-3 rounded-lg px-2 py-2 text-start hover:bg-white/5">
+                  <span className={`w-20 shrink-0 text-note ${weakest ? "font-semibold text-warn" : "text-ink"}`}>{label[id]}</span>
+                  <span dir="ltr" className="flex h-8 min-w-0 flex-1 items-end gap-0.5">
+                    {list.map((value, index) => (
+                      <span
+                        key={index}
+                        className={`min-w-0 flex-1 rounded-sm ${value ? (weakest ? "bg-warn" : "bg-status-learned") : "bg-white/[0.06]"}`}
+                        style={{ height: `${value ? Math.max(12, Math.round((value / top) * 100)) : 8}%` }}
+                      />
+                    ))}
+                  </span>
+                  <span className="w-12 shrink-0 text-end text-caption tabular-nums text-slate-400">
+                    {row && !row.measured ? "–" : sum ? `+${Math.round(sum * 10) / 10}` : ""}
+                  </span>
+                </button>
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  }
+  // 망: 위 어휘 · 오른쪽 문법 · 아래 표현 · 왼쪽 발음.
+  const W = 280;
+  const C = 140;
+  const R = 92;
+  const dir: Record<PartId, [number, number]> = { vocab: [0, -1], grammar: [1, 0], expression: [0, 1], pronunciation: [-1, 0] };
+  const at = (id: PartId, share: number): [number, number] => [C + dir[id][0] * R * share, C + dir[id][1] * R * share];
+  const shape = (share: (id: PartId) => number) => PART_IDS.map((id) => at(id, share(id)).join(",")).join(" ");
+  const shareFor = (id: PartId) => {
+    const row = byId.get(id);
+    return row && row.measured ? Math.max(0.04, shareOf(row)) : 0.04;
+  };
+  return (
+    <div>
+      {head}
+      <div className="relative mx-auto mt-2 aspect-square w-full max-w-[18rem]" dir="ltr">
+        <svg viewBox={`0 0 ${W} ${W}`} className="absolute inset-0 h-full w-full" aria-hidden>
+          <polygon points={shape(() => 1)} className="fill-white/[0.03] stroke-white/10" />
+          <polygon points={shape(() => 0.7)} className="fill-none stroke-white/30" strokeDasharray="4 4" />
+          {PART_IDS.map((id) => (
+            <line key={id} x1={C} y1={C} x2={at(id, 1)[0]} y2={at(id, 1)[1]} className="stroke-white/10" />
+          ))}
+          <polygon points={shape(shareFor)} className="fill-status-learned/30 stroke-status-learned" strokeWidth={2} />
+        </svg>
+        {PART_IDS.map((id) => {
+          const row = byId.get(id);
+          const weakest = parts.weakest === id;
+          const pos =
+            id === "vocab" ? "left-1/2 top-0 -translate-x-1/2" : id === "grammar" ? "right-0 top-1/2 -translate-y-1/2" : id === "expression" ? "bottom-0 left-1/2 -translate-x-1/2" : "left-0 top-1/2 -translate-y-1/2";
+          return (
+            <button
+              key={id}
+              type="button"
+              onClick={() => onPart?.(id)}
+              className={`absolute ${pos} rounded-lg bg-surface/80 px-2 py-1 text-center text-caption ${weakest ? "text-warn" : "text-ink"}`}
+            >
+              <span className="block font-semibold">{label[id]}</span>
+              <span className="block tabular-nums text-slate-400">{row?.measured ? `${Math.round(row.done)}/${row.total}` : ui.myNoData}</span>
+            </button>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+/** 갈래마다 노트 고정 칸(그 갈래를 열면 아래에 칸 줄로). 문법은 단계 칸, 발음은 글자·소리 칸. */
+const PART_NODES: Record<PartId, readonly string[]> = {
+  vocab: ["d-word", "d-spelling"],
+  grammar: [],
+  expression: ["i-idiom", "i-together", "i-set", "d-register", "d-nuance"],
+  pronunciation: [],
+};
+
+/**
+ * 수준별 틀(2026-10-25 사용자 "어휘, 문법, 표현, 발음 이런 식으로 나눠서 … 발음이 부족하면 발음을 향상해서 다음 단계로"):
+ * 단계 사다리 → 그 단계의 네 갈래(막대) → 가장 모자란 갈래 "다음 단계까지" + 연습 → 고른 갈래의 칸·목록 → 이 단계 목표(접힘).
+ * 네 갈래가 다 차면(잰 것만, 70%) "다음 단계로". 옛 서버(parts 없음)면 예전처럼 문법 칸만.
+ */
 function StageFrame({
   ui,
   stages,
   current,
   nodes,
+  allNodes,
   counts,
   fill,
   nameOf,
@@ -432,11 +590,19 @@ function StageFrame({
   detail,
   masteredOf,
   focus,
+  parts,
+  words,
+  pronunciationNotes,
+  onTry,
+  onNextStage,
+  canSpeak,
+  focusPart = null,
 }: {
   ui: UICopy;
   stages: { order: number; title: string }[];
   current: number;
   nodes: NodeView[];
+  allNodes: NodeView[];
   counts: Record<string, number>;
   fill: Record<string, "mastered" | "learned">;
   nameOf: (id: string) => string;
@@ -445,6 +611,14 @@ function StageFrame({
   masteredOf?: (stage: number, index: number) => boolean;
   /** 이 단계를 펼쳐 보인다("My에서 찾기"로 온 칸의 단계). */
   focus?: number | null;
+  parts: StageParts[];
+  words: { text: string; state: "met" | "learned" | "mastered" }[];
+  pronunciationNotes: Record<string, string>;
+  onTry?: (stage: number, index: number) => void;
+  onNextStage?: (order: number) => void;
+  canSpeak: boolean;
+  /** 망·그래프에서 누른 갈래 — 지금 단계의 그 갈래를 연다. */
+  focusPart?: PartId | null;
 }) {
   const now = Math.max(1, Math.min(current, stages.length));
   const [shown, setShown] = useState(focus ?? now);
@@ -452,40 +626,105 @@ function StageFrame({
     // eslint-disable-next-line react-hooks/set-state-in-effect -- 밖에서 고른 단계(찾기)로 옮겨 간다
     if (focus) setShown(focus);
   }, [focus]);
+  const stageParts = parts.find((row) => row.order === shown) ?? null;
+  // 고른 갈래: 처음엔 가장 모자란 갈래(없으면 문법). "My에서 찾기"로 온 문법 칸이면 문법.
+  const [picked, setPicked] = useState<PartId | null>(focusPart);
+  const part: PartId = picked ?? (focus ? "grammar" : (stageParts?.weakest ?? "grammar"));
   const inStage = (order: number) => nodes.filter((node) => (node.stage ?? 1) === order);
-  // 채운 칸 = 습득한 표현이 들었거나 숙지(✓)한 문법. 짚은 장면 카드만 든 칸은 아직 채운 게 아니다(점은 옅게).
   const filledOf = (node: NodeView) => Boolean(fill[node.id]) || Boolean(masteredOf?.(node.stage ?? 1, node.index ?? -1));
   const filledIn = (order: number) => inStage(order).filter(filledOf).length;
-  const list = inStage(shown);
-  const filled = filledIn(shown);
-  const title = stages.find((stage) => stage.order === shown)?.title ?? "";
+  const label: Record<PartId, string> = { vocab: ui.partVocab, grammar: ui.partGrammar, expression: ui.partExpression, pronunciation: ui.partPronunciation };
+  const readyOf = (order: number) => parts.find((row) => row.order === order)?.ready ?? false;
+
+  const dot = (node: NodeView) =>
+    fill[node.id] === "mastered" || masteredOf?.(node.stage ?? 1, node.index ?? -1)
+      ? "bg-status-mastered"
+      : fill[node.id] === "learned"
+        ? "bg-status-learned"
+        : (counts[node.id] ?? 0)
+          ? "bg-status-pending"
+          : "border border-line";
+  const stateDot = (state: "met" | "learned" | "mastered" | null) =>
+    state === "mastered" ? "bg-status-mastered" : state === "learned" ? "bg-status-learned" : state === "met" ? "bg-status-pending" : "border border-line";
+  const nodeRows = (list: NodeView[]) => (
+    <ul className="divide-y divide-white/5">
+      {list.map((node) => {
+        const count = counts[node.id] ?? 0;
+        return (
+          <li key={node.id}>
+            <button type="button" onClick={() => onOpen(node.id)} className="flex w-full items-center gap-3 py-2 text-start">
+              <span aria-hidden className={`h-2.5 w-2.5 shrink-0 rounded-full ${dot(node)}`} />
+              <span className="min-w-0 flex-1">
+                <span className={`block text-note ${shown > now && !count ? "text-slate-400" : "text-ink"}`}>{nameOf(node.id)}</span>
+                {node.example ? (
+                  <span dir="auto" className="block truncate text-meta text-slate-500">
+                    {node.example}
+                  </span>
+                ) : null}
+              </span>
+              {masteredOf?.(node.stage ?? 1, node.index ?? -1) ? <span className="shrink-0 text-caption text-good">✓</span> : null}
+              <span className="w-7 shrink-0 text-end text-caption tabular-nums text-slate-400">{count || ""}</span>
+            </button>
+          </li>
+        );
+      })}
+    </ul>
+  );
+  const chips = (list: { text: string; state: "met" | "learned" | "mastered" | null }[]) => (
+    <ul className="flex flex-wrap gap-1.5 py-2">
+      {list.map((item) => (
+        <li key={item.text} className="flex items-center gap-1.5 rounded-lg bg-white/[0.04] px-2 py-1 text-caption text-slate-200">
+          <span aria-hidden className={`h-2 w-2 shrink-0 rounded-full ${stateDot(item.state)}`} />
+          <span dir="auto">{item.text}</span>
+        </li>
+      ))}
+    </ul>
+  );
+
+  /** 그 갈래 연습: 문법 = 아직 안 찬 첫 칸으로 채팅, 표현·어휘 = 아직인 것 셋으로 채팅, 발음 = 통화. */
+  const practice = (id: PartId) => {
+    if (id === "grammar") {
+      const open = inStage(shown).find((node) => !filledOf(node)) ?? inStage(shown)[0];
+      if (open) onTry?.(shown, open.index ?? 0);
+      return;
+    }
+    if (id === "vocab" && !words.some((word) => word.state === "learned")) {
+      sendAppIntent("openNotes", { section: "words" });
+      return;
+    }
+    const phrases =
+      id === "vocab"
+        ? words.filter((word) => word.state === "learned").slice(0, 3).map((word) => word.text)
+        : (stageParts?.expressions ?? []).filter((item) => item.state !== "mastered").slice(0, 3).map((item) => item.text);
+    sendAppIntent("practice", { tab: id === "pronunciation" ? "roleplay" : "chat", goal: { phrases }, title: label[id] });
+  };
+  const practiceLabel = (id: PartId) => (id === "pronunciation" ? ui.nextByCall : ui.nextByChat);
+  const canPractice = (id: PartId) => id !== "pronunciation" || canSpeak;
+
   return (
     <div className="mt-3">
-      <p className="text-meta font-semibold tracking-wide text-slate-500">{ui.notebookGrammar}</p>
-      <ol className="mt-2 flex items-center">
+      <ol className="flex items-center">
         {stages.map((stage, index) => {
           const done = stage.order < now;
           const here = stage.order === now;
-          const picked = stage.order === shown;
+          const on = stage.order === shown;
           return (
             <li key={stage.order} className={`flex items-center ${index ? "flex-1" : ""}`}>
               {index ? <span aria-hidden className={`h-px flex-1 ${stage.order <= now ? "bg-status-learned/60" : "bg-white/10"}`} /> : null}
               <button
                 type="button"
-                aria-pressed={picked}
-                aria-label={`${stage.order}. ${stage.title}`}
-                title={stage.title}
-                onClick={() => setShown(stage.order)}
+                aria-pressed={on}
+                aria-label={ui.stageNumber.replace("{n}", String(stage.order))}
+                onClick={() => {
+                  setShown(stage.order);
+                  setPicked(null);
+                }}
                 className={`relative flex h-8 w-8 shrink-0 items-center justify-center rounded-full text-caption tabular-nums ${
-                  here
-                    ? "bg-status-learned font-semibold text-black"
-                    : done
-                      ? "bg-status-learned/30 text-ink"
-                      : "border border-line text-slate-500"
-                } ${picked ? "ring-2 ring-white/70 ring-offset-2 ring-offset-black" : ""}`}
+                  here ? "bg-status-learned font-semibold text-black" : done ? "bg-status-learned/30 text-ink" : "border border-line text-slate-500"
+                } ${on ? "ring-2 ring-white/70 ring-offset-2 ring-offset-black" : ""}`}
               >
                 {stage.order}
-                {filledIn(stage.order) ? (
+                {!parts.length && filledIn(stage.order) ? (
                   <span className="absolute -top-1 -end-1 rounded-full bg-white/90 px-1 text-meta leading-tight text-black">{filledIn(stage.order)}</span>
                 ) : null}
               </button>
@@ -493,50 +732,111 @@ function StageFrame({
           );
         })}
       </ol>
-      <div className="mt-3 flex items-baseline gap-2">
-        <p className={`min-w-0 flex-1 truncate text-note font-semibold ${shown > now ? "text-slate-400" : "text-ink"}`}>
-          {shown}. {title}
-        </p>
-        <span className="shrink-0 text-caption tabular-nums text-slate-400">
-          {filled}/{list.length}
-        </span>
-      </div>
-      <div className="mt-1.5 h-1.5 overflow-hidden rounded-full bg-white/[0.06]">
-        <div className="h-full rounded-full bg-status-learned" style={{ width: `${list.length ? Math.round((filled / list.length) * 100) : 0}%` }} />
-      </div>
-      <ul className="mt-1 divide-y divide-white/5">
-        {list.map((node) => {
-          const count = counts[node.id] ?? 0;
-          return (
-            <li key={node.id}>
-              <button type="button" onClick={() => onOpen(node.id)} className="flex w-full items-center gap-3 py-2 text-start">
-                <span
-                  aria-hidden
-                  className={`h-2.5 w-2.5 shrink-0 rounded-full ${
-                    fill[node.id] === "mastered" || masteredOf?.(node.stage ?? 1, node.index ?? -1)
-                      ? "bg-status-mastered"
-                      : fill[node.id] === "learned"
-                        ? "bg-status-learned"
-                        : count
-                          ? "bg-status-pending"
-                          : "border border-line"
-                  }`}
-                />
-                <span className="min-w-0 flex-1">
-                  <span className={`block text-note ${shown > now && !count ? "text-slate-400" : "text-ink"}`}>{nameOf(node.id)}</span>
-                  {node.example ? (
-                    <span dir="auto" className="block truncate text-meta text-slate-500">
-                      {node.example}
-                    </span>
-                  ) : null}
-                </span>
-                {masteredOf?.(node.stage ?? 1, node.index ?? -1) ? <span className="shrink-0 text-caption text-good">✓</span> : null}
-                <span className="w-7 shrink-0 text-end text-caption tabular-nums text-slate-400">{count || ""}</span>
+      {/* 단계 = 말하는 힘의 크기(상황 이름이 아님, 2026-10-25). 제목은 단계 번호(stageNumber)만 — 상황처럼 읽히는 단계 제목은 뺌(사용자 요청 2026-10-25). */}
+      <p className={`mt-3 text-note font-semibold ${shown > now ? "text-slate-400" : "text-ink"}`}>{ui.stageNumber.replace("{n}", String(shown))}</p>
+
+      {stageParts ? (
+        <>
+          {/* 다음 단계 조건: 지금 단계에서만. 다 찼으면 partReady 버튼, 아니면 가장 모자란 갈래 + 연습. */}
+          {shown === now ? (
+            readyOf(shown) && onNextStage && shown < stages.length ? (
+              <button
+                type="button"
+                onClick={() => onNextStage(shown)}
+                className="mt-2 w-full rounded-xl bg-status-learned py-2.5 text-note font-semibold text-black"
+              >
+                {ui.partReady} ›
               </button>
-            </li>
-          );
-        })}
-      </ul>
+            ) : stageParts.weakest ? (
+              <div className="mt-2 flex items-center gap-2 rounded-xl border border-warn/40 bg-warn/10 px-3 py-2">
+                <span className="min-w-0 flex-1 text-note text-ink">{ui.partToNext.replace("{part}", label[stageParts.weakest])}</span>
+                {canPractice(stageParts.weakest) ? (
+                  <button
+                    type="button"
+                    onClick={() => practice(stageParts.weakest!)}
+                    className="shrink-0 rounded-lg bg-platinum px-3 py-1.5 text-caption font-semibold text-black"
+                  >
+                    {practiceLabel(stageParts.weakest)}
+                  </button>
+                ) : null}
+              </div>
+            ) : null
+          ) : null}
+
+          <ul className="mt-2 space-y-1" role="group">
+            {stageParts.parts.map((row) => {
+              const share = shareOf(row);
+              const on = row.id === part;
+              const weakest = shown === now && row.id === stageParts.weakest;
+              return (
+                <li key={row.id}>
+                  <button
+                    type="button"
+                    aria-pressed={on}
+                    onClick={() => setPicked(row.id)}
+                    className={`flex w-full items-center gap-3 rounded-lg px-2 py-2 text-start ${on ? "bg-white/10" : "hover:bg-white/5"}`}
+                  >
+                    <span className={`w-20 shrink-0 text-note ${weakest ? "font-semibold text-warn" : "text-ink"}`}>{label[row.id]}</span>
+                    {row.measured ? (
+                      <>
+                        <span className="h-2 min-w-0 flex-1 overflow-hidden rounded-full bg-white/[0.06]">
+                          <span
+                            className={`block h-full rounded-full ${share >= 0.7 ? "bg-status-mastered" : weakest ? "bg-warn" : "bg-status-learned"}`}
+                            style={{ width: `${Math.round(share * 100)}%` }}
+                          />
+                        </span>
+                        <span className="w-14 shrink-0 text-end text-caption tabular-nums text-slate-400">
+                          {Math.round(row.done)}/{row.total}
+                        </span>
+                      </>
+                    ) : (
+                      <span className="min-w-0 flex-1 text-caption text-slate-500">{ui.myNoData}</span>
+                    )}
+                  </button>
+                </li>
+              );
+            })}
+          </ul>
+
+          {/* 고른 갈래의 칸·목록. */}
+          <div className="mt-2 rounded-xl bg-surface-sunk px-3 py-1">
+            {part === "grammar" ? nodeRows(inStage(shown)) : null}
+            {part === "expression" ? (
+              <>
+                {chips(stageParts.expressions)}
+                {nodeRows(allNodes.filter((node) => PART_NODES.expression.includes(node.id)))}
+              </>
+            ) : null}
+            {part === "vocab" ? (
+              <>
+                {words.length ? chips(words) : null}
+                <button type="button" onClick={() => sendAppIntent("openNotes", { section: "words" })} className="flex w-full items-center justify-between py-2 text-start text-note text-ink">
+                  <span>{ui.homeTabVocab}</span>
+                  <span aria-hidden className="text-caption text-slate-500 rtl:rotate-180">›</span>
+                </button>
+                {nodeRows(allNodes.filter((node) => PART_NODES.vocab.includes(node.id)))}
+              </>
+            ) : null}
+            {part === "pronunciation" ? (
+              <>
+                {pronunciationNotes[String(shown)] ? <p dir="auto" className="py-2 text-note text-slate-200">{pronunciationNotes[String(shown)]}</p> : null}
+                {nodeRows(allNodes.filter((node) => node.chapter === "script"))}
+              </>
+            ) : null}
+            {part !== "pronunciation" || canSpeak ? (
+              <div className="flex justify-end py-2">
+                <button type="button" onClick={() => practice(part)} className="rounded-lg border border-line px-3 py-1.5 text-caption text-slate-200 hover:bg-white/10">
+                  {practiceLabel(part)}
+                </button>
+              </div>
+            ) : null}
+          </div>
+        </>
+      ) : (
+        // 옛 서버: 문법 칸만(예전 틀).
+        <div className="mt-1">{nodeRows(inStage(shown))}</div>
+      )}
+
       {detail?.(shown)}
     </div>
   );

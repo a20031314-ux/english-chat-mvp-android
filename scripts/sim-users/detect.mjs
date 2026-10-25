@@ -12,6 +12,7 @@
 import { languageEvidence } from "../../src/lib/inputLanguage.ts";
 import { explanationInLearningLanguage } from "../../src/lib/languageLearningAnalysis.ts";
 import { learningLanguageScript } from "../../src/lib/learningLanguages.ts";
+import { quotesOwnLine } from "../../src/lib/roleplay/noteCheck.ts";
 
 export const SLOW_WARN_MS = 10_000;
 export const SLOW_ERROR_MS = 25_000;
@@ -182,6 +183,8 @@ export function detectTurn({ persona, turn, response, previousReplies = [] }) {
       if (explanation && target !== ui && explanationInLearningLanguage(explanation, ui, target)) {
         out.push(issue("warn", "explanation_language", `설명이 앱 언어(${ui})가 아니라 학습 언어 위주`, { sample: explanation.slice(0, 100) }));
       }
+      // 고친 이유는 내 문장에 대한 것(튜터의 이번 답·앞 답을 설명하면 warn) — 사용자 2026-10-25.
+      for (const found of checkAboutTheirLine("explanation", { tip: explanation, heard: `${turn.text} ${corrected} ${String(correction.natural ?? "")}`, otherSaid: [reply, previousReplies.at(-1) ?? ""], label: "고친 이유" })) out.push(found);
       const fused = fusedScriptTokens(explanation);
       if (fused.length > 0) {
         out.push(issue("warn", "explanation_mixed_script", `설명에 문자가 뒤섞인 낱말: ${fused.slice(0, 3).join(", ")}`, { sample: explanation.slice(0, 100) }));
@@ -297,6 +300,20 @@ export function checkShape(prefix, body, fields, label = "응답") {
     return v === undefined || v === null || (Array.isArray(v) && v.length === 0) || v === "";
   });
   return missing.length ? [issue("error", `${prefix}_shape`, `${label}에 ${missing.join(", ")} 없음`)] : [];
+}
+
+/**
+ * 내 줄 아래 설명(통화 팁·고친 이유·도움말)이 **내 줄에 대한 것인지**(사용자 2026-10-25: "가상 사용자 돌릴 때 저런 것도 확인하라고 명시").
+ * 실제로 본 것: "I am lying on the bed." 아래에 튜터가 다음에 물을 "Are you watching something?"을 설명한 팁.
+ * 튜터(상대) 말을 3단어 이상(띄어쓰기 없는 말은 8글자) 그대로 따오는데 그 말이 내 줄에 없으면 warn.
+ * 막혔을 때(stuck) 상대가 내민 선택지를 보여 주는 도움말은 정상이라 빼고 부른다.
+ */
+export function checkAboutTheirLine(prefix, { tip, heard, otherSaid = [], label = "설명" }) {
+  const value = typeof tip === "string" ? tip.trim() : "";
+  if (!value || !String(heard ?? "").trim()) return [];
+  const lines = otherSaid.filter((line) => typeof line === "string" && line.trim());
+  if (!lines.length || !quotesOwnLine(value, lines, String(heard))) return [];
+  return [issue("warn", `${prefix}_tip_offtopic`, `${label}: 내 말이 아니라 상대 말을 설명함`, { sample: value.slice(0, 120) })];
 }
 
 export { issue };

@@ -11,7 +11,7 @@ import type { LiarMode, LiarTopic, LiarView } from "./liarGame";
 import type { MafiaView } from "./mafiaGame";
 import type { DmMessage, DmSummary, DmThread } from "./dm";
 import type { Group, GroupCall, GroupMessage, GroupSummary, SpaceItem, TeamSchedule, TeamSpace } from "./group";
-import type { BoardAuthor, BoardComment, BoardPost } from "./board";
+import type { BoardAuthor, BoardComment, BoardGroupView, BoardPost, BoardTopic } from "./board";
 import { normalizeHowToSayExpression, type HowToSayExpression } from "@/lib/howToSay";
 
 /** 방(시험 기능)의 기기 저장값. 모두 이 기기에만 있다. */
@@ -673,14 +673,23 @@ async function board<T>(action: string, payload: Record<string, unknown>): Promi
   return body;
 }
 
-export function boardList(input: { language?: string; offset?: number; match?: "both"; ui?: string }): Promise<{ posts: BoardPost[]; authors: BoardAuthor[]; next: number }> {
+export function boardList(input: { language?: string; topic?: BoardTopic; offset?: number; match?: "both"; ui?: string }): Promise<{ posts: BoardPost[]; authors: BoardAuthor[]; next: number }> {
   return board("list", input);
 }
 export function boardOpen(postId: string): Promise<{ post: BoardPost; comments: BoardComment[]; authors: BoardAuthor[] }> {
   return board("open", { postId });
 }
-export function boardWrite(language: string, text: string, imageIds: string[] = []): Promise<{ post: BoardPost }> {
-  return board("post", { language, text, ...(imageIds.length ? { imageIds } : {}) });
+export function boardWrite(
+  language: string,
+  text: string,
+  imageIds: string[] = [],
+  link: { topic?: BoardTopic; roomId?: string; groupId?: string } = {},
+): Promise<{ post: BoardPost }> {
+  return board("post", { language, text, ...(imageIds.length ? { imageIds } : {}), ...link });
+}
+/** 단체방 모집 글에서 참여하기(글쓴이 이름으로 초대되고 바로 참여). */
+export function boardJoinGroup(postId: string): Promise<{ group: BoardGroupView }> {
+  return board("joinGroup", { postId });
 }
 export function boardEdit(postId: string, text: string): Promise<{ post: BoardPost }> {
   return board("edit", { postId, text });

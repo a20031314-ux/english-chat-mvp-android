@@ -22,6 +22,12 @@
         "El número junto a las secciones de «{ui:notebookScript}» y «{ui:notebookGrammar}» indica cuántas veces te corrigieron ahí. Abre una sección para mover o anotar tarjetas, cambiarle el nombre o añadir las tuyas en «{ui:notebookMine}». Abajo, «{ui:notebookVocab}» reúne tus expresiones, palabras y preguntas por tema, y «{ui:homeTabVocab}» abre la lista de palabras."
       ],
       "shot": "notebook-today"
+    },
+    "people.icons": {
+      "heading": "Iconos",
+      "body": [
+        "Con «+ Nuevo paquete» sube imágenes que hiciste (también GIF animados); quedan públicas para todos al instante. Elige CC BY 4.0 (con atribución) o CC0 (sin condiciones). Toca «Obtener» en un paquete para enviar sus iconos desde 🙂 en mensajes, grupos y comentarios."
+      ]
     }
   },
   "ja": {
@@ -47,6 +53,12 @@
         "「{ui:notebookScript}」「{ui:notebookGrammar}」の項目の横の数字は、そこで直された回数です。項目を開くとカードを移動・メモでき、名前を変えたり「{ui:notebookMine}」に項目を足したりできます。下の「{ui:notebookVocab}」には表現・単語・質問がテーマ別に集まり、「{ui:homeTabVocab}」の行は単語帳です。"
       ],
       "shot": "notebook-today"
+    },
+    "people.icons": {
+      "heading": "アイコン",
+      "body": [
+        "「+ 新しいパック」で自分が作った画像（動くGIFも）をアップロードすると、すぐに全員に公開されます。ライセンスはCC BY 4.0（クレジット表示）かCC0（条件なし）から選びます。ほかの人のパックは「もらう」を押すと、メッセージ・グループ・コメントの🙂から送れます。"
+      ]
     }
   },
   "zh": {
@@ -72,6 +84,12 @@
         "“{ui:notebookScript}”“{ui:notebookGrammar}”栏目旁的数字是在那里被纠正的次数。打开栏目可以移动卡片、写备注、改名，或在“{ui:notebookMine}”里加栏目。下面的“{ui:notebookVocab}”按主题汇集你的表达、单词和提问，“{ui:homeTabVocab}”一行是单词本。"
       ],
       "shot": "notebook-today"
+    },
+    "people.icons": {
+      "heading": "表情",
+      "body": [
+        "用“+ 新表情包”上传自己做的图片（也可以是动图GIF），上传后立即向所有人公开。许可协议可选 CC BY 4.0（需署名）或 CC0（无条件）。别人的表情包点“添加”后，就能在私信、群聊和评论输入框的 🙂 里选来发送。"
+      ]
     }
   },
   "vi": {
@@ -97,6 +115,12 @@
         "Con số cạnh các mục “{ui:notebookScript}” và “{ui:notebookGrammar}” là số lần bạn bị sửa ở đó. Mở một mục để chuyển hoặc ghi chú thẻ, đổi tên, hay thêm mục riêng ở “{ui:notebookMine}”. Bên dưới, “{ui:notebookVocab}” gom cách nói, từ và câu hỏi theo chủ đề, còn dòng “{ui:homeTabVocab}” mở sổ từ."
       ],
       "shot": "notebook-today"
+    },
+    "people.icons": {
+      "heading": "Biểu tượng",
+      "body": [
+        "Với “+ Bộ mới”, tải lên hình bạn tự làm (cả GIF động); hình được công khai cho mọi người ngay. Chọn CC BY 4.0 (ghi nguồn) hoặc CC0 (không điều kiện). Bấm “Lấy” ở bộ của người khác để gửi biểu tượng từ 🙂 trong tin nhắn, nhóm và bình luận."
+      ]
     }
   },
   "fr": {
@@ -122,6 +146,12 @@
         "Le chiffre à côté des rubriques « {ui:notebookScript} » et « {ui:notebookGrammar} » indique combien de fois vous y avez été corrigé. Ouvrez une rubrique pour déplacer ou annoter des cartes, la renommer, ou ajouter les vôtres dans « {ui:notebookMine} ». En dessous, « {ui:notebookVocab} » regroupe vos expressions, mots et questions par thème, et « {ui:homeTabVocab} » ouvre la liste de mots."
       ],
       "shot": "notebook-today"
+    },
+    "people.icons": {
+      "heading": "Icônes",
+      "body": [
+        "Avec « + Nouveau pack », envoyez des images que vous avez créées (GIF animés compris) ; elles sont publiques tout de suite. Choisissez CC BY 4.0 (attribution) ou CC0 (sans condition). Touchez « Obtenir » sur un pack pour envoyer ses icônes depuis 🙂 dans les messages, groupes et commentaires."
+      ]
     }
   },
   "it": {
@@ -147,6 +177,12 @@
         "Il numero accanto alle sezioni di «{ui:notebookScript}» e «{ui:notebookGrammar}» indica quante volte sei stato corretto lì. Apri una sezione per spostare o annotare le schede, rinominarla o aggiungerne di tue in «{ui:notebookMine}». Sotto, «{ui:notebookVocab}» raccoglie espressioni, parole e domande per tema, e «{ui:homeTabVocab}» apre l'elenco di parole."
       ],
       "shot": "notebook-today"
+    },
+    "people.icons": {
+      "heading": "Icone",
+      "body": [
+        "Con «+ Nuovo pacchetto» carica immagini fatte da te (anche GIF animate): sono subito pubbliche per tutti. Scegli CC BY 4.0 (con attribuzione) o CC0 (nessuna condizione). Tocca «Prendi» su un pacchetto per inviarne le icone da 🙂 in messaggi, gruppi e commenti."
+      ]
     }
   },
   "pt": {
@@ -172,6 +208,12 @@
         "O número ao lado das seções de “{ui:notebookScript}” e “{ui:notebookGrammar}” mostra quantas vezes você foi corrigido ali. Abra uma seção para mover ou anotar cartões, renomeá-la ou criar as suas em “{ui:notebookMine}”. Abaixo, “{ui:notebookVocab}” reúne expressões, palavras e perguntas por tema, e “{ui:homeTabVocab}” abre a lista de palavras."
       ],
       "shot": "notebook-today"
+    },
+    "people.icons": {
+      "heading": "Ícones",
+      "body": [
+        "Em “+ Novo pacote”, envie imagens que você fez (GIFs animados também); elas ficam públicas na hora. Escolha CC BY 4.0 (com atribuição) ou CC0 (sem condições). Toque em “Pegar” num pacote para enviar os ícones pelo 🙂 em mensagens, grupos e comentários."
+      ]
     }
   },
   "ru": {
@@ -197,6 +239,12 @@
         "Число рядом с разделами «{ui:notebookScript}» и «{ui:notebookGrammar}» — сколько раз вас там поправили. Откройте раздел, чтобы переносить карточки, писать заметки, переименовать его или добавить свой в «{ui:notebookMine}». Ниже «{ui:notebookVocab}» собирает выражения, слова и вопросы по темам, а строка «{ui:homeTabVocab}» открывает словарь."
       ],
       "shot": "notebook-today"
+    },
+    "people.icons": {
+      "heading": "Иконки",
+      "body": [
+        "Через «+ Новый набор» загрузите свои картинки (и анимированные GIF) — они сразу видны всем. Выберите CC BY 4.0 (с указанием автора) или CC0 (без условий). Нажмите «Взять» в чужом наборе, чтобы отправлять его иконки через 🙂 в сообщениях, группах и комментариях."
+      ]
     }
   },
   "id": {
@@ -222,6 +270,12 @@
         "Angka di samping bagian “{ui:notebookScript}” dan “{ui:notebookGrammar}” adalah berapa kali kamu dikoreksi di sana. Buka bagian untuk memindahkan atau memberi catatan pada kartu, mengganti nama, atau menambah bagian sendiri di “{ui:notebookMine}”. Di bawahnya, “{ui:notebookVocab}” mengumpulkan ungkapan, kata, dan pertanyaan per topik, dan baris “{ui:homeTabVocab}” membuka daftar kata."
       ],
       "shot": "notebook-today"
+    },
+    "people.icons": {
+      "heading": "Ikon",
+      "body": [
+        "Dengan “+ Paket baru”, unggah gambar buatanmu (GIF bergerak juga); langsung publik untuk semua orang. Pilih CC BY 4.0 (cantumkan sumber) atau CC0 (tanpa syarat). Ketuk “Ambil” di paket orang lain untuk mengirim ikonnya dari 🙂 di pesan, grup, dan komentar."
+      ]
     }
   },
   "ar": {
@@ -247,6 +301,12 @@
         "الرقم بجانب أقسام «{ui:notebookScript}» و«{ui:notebookGrammar}» هو عدد مرات تصحيحك هناك. افتح القسم لنقل البطاقات أو كتابة ملاحظة أو إعادة التسمية، أو أضف قسمك في «{ui:notebookMine}». وفي الأسفل يجمع «{ui:notebookVocab}» عباراتك وكلماتك وأسئلتك حسب الموضوع، وسطر «{ui:homeTabVocab}» يفتح قائمة الكلمات."
       ],
       "shot": "notebook-today"
+    },
+    "people.icons": {
+      "heading": "أيقونات",
+      "body": [
+        "بزر «+ حزمة جديدة» ارفع صورًا صنعتها (والصور المتحركة GIF أيضًا)؛ تصبح متاحة للجميع فورًا. اختر CC BY 4.0 (مع نسب العمل) أو CC0 (بلا شروط). اضغط «إضافة» على حزمة شخص آخر لترسل أيقوناتها من 🙂 في الرسائل والمجموعات والتعليقات."
+      ]
     }
   },
   "th": {
@@ -272,6 +332,12 @@
         "ตัวเลขข้างหมวด “{ui:notebookScript}” และ “{ui:notebookGrammar}” คือจำนวนครั้งที่ถูกแก้ตรงนั้น เปิดหมวดเพื่อย้ายหรือจดโน้ตการ์ด เปลี่ยนชื่อ หรือเพิ่มหมวดเองใน “{ui:notebookMine}” ด้านล่าง “{ui:notebookVocab}” รวมสำนวน คำ และคำถามตามหัวข้อ ส่วนแถว “{ui:homeTabVocab}” คือสมุดคำศัพท์"
       ],
       "shot": "notebook-today"
+    },
+    "people.icons": {
+      "heading": "ไอคอน",
+      "body": [
+        "กด “+ ชุดใหม่” แล้วอัปโหลดรูปที่ทำเอง (GIF เคลื่อนไหวก็ได้) รูปจะเป็นสาธารณะทันที เลือกสัญญาอนุญาต CC BY 4.0 (ระบุที่มา) หรือ CC0 (ไม่มีเงื่อนไข) กด “รับ” ที่ชุดของคนอื่นเพื่อส่งไอคอนจาก 🙂 ในข้อความ กลุ่ม และความคิดเห็น"
+      ]
     }
   },
   "hi": {
@@ -297,6 +363,12 @@
         "‘{ui:notebookScript}’ और ‘{ui:notebookGrammar}’ खंडों के पास की संख्या बताती है कि वहाँ आपको कितनी बार सुधारा गया। खंड खोलकर कार्ड ले जाएँ या नोट लिखें, नाम बदलें, या ‘{ui:notebookMine}’ में अपना खंड जोड़ें। नीचे ‘{ui:notebookVocab}’ में आपके भाव, शब्द और सवाल विषय के हिसाब से जमा होते हैं, और ‘{ui:homeTabVocab}’ पंक्ति शब्द-सूची खोलती है।"
       ],
       "shot": "notebook-today"
+    },
+    "people.icons": {
+      "heading": "आइकन",
+      "body": [
+        "“+ नया पैक” से अपनी बनाई तस्वीरें (एनिमेटेड GIF भी) अपलोड करें; वे तुरंत सबके लिए सार्वजनिक हो जाती हैं। CC BY 4.0 (श्रेय ज़रूरी) या CC0 (कोई शर्त नहीं) चुनें। किसी और के पैक पर “लें” दबाएँ और संदेश, ग्रुप व टिप्पणियों में 🙂 से उसके आइकन भेजें।"
+      ]
     }
   },
   "ko": {
@@ -322,6 +394,12 @@
         "‘{ui:notebookScript}’·‘{ui:notebookGrammar}’ 칸 옆 숫자는 짚인 횟수예요. 칸을 열어 카드를 옮기거나 메모하고, 이름을 바꾸거나 ‘{ui:notebookMine}’에 칸을 더해요. 아래 ‘{ui:notebookVocab}’에는 내 표현·단어·물은 것이 주제별로 모이고, ‘{ui:homeTabVocab}’ 줄은 단어장이에요."
       ],
       "shot": "notebook-today"
+    },
+    "people.icons": {
+      "heading": "아이콘",
+      "body": [
+        "‘+ 새 묶음’으로 내가 만든 그림(움직이는 GIF도)을 올리면 바로 모두에게 공개돼요. 라이선스는 CC BY 4.0(출처 표시) 또는 CC0(조건 없음) 중에서 골라요. 남의 묶음은 ‘받기’를 누르면 메시지·단체방·댓글 입력칸의 🙂에서 골라 보낼 수 있어요."
+      ]
     }
   },
   "en": {
@@ -347,6 +425,12 @@
         "The number beside ‘{ui:notebookScript}’ and ‘{ui:notebookGrammar}’ sections is how often you were corrected there. Open a section to move or annotate cards, rename it, or add your own in ‘{ui:notebookMine}’. Below, ‘{ui:notebookVocab}’ gathers your phrases, words and questions by topic, and ‘{ui:homeTabVocab}’ opens the word list."
       ],
       "shot": "notebook-today"
+    },
+    "people.icons": {
+      "heading": "Icons",
+      "body": [
+        "With “+ New pack”, upload images you made (animated GIFs too); they're public to everyone right away. Choose CC BY 4.0 (credit required) or CC0 (no conditions). Tap “Get” on someone's pack to send its icons from 🙂 in messages, group chats and comments."
+      ]
     }
   }
 }

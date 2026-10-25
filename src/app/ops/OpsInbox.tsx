@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { RANDOM_PAUSE_HOURS, SUSPEND_DAYS, type OpsList, type OpsPerson, type OpsReport } from "@/lib/ops/reports";
+import { iconPath, type IconPack } from "@/lib/rooms/icons";
 
 /**
  * 운영자 신고함(api/ops/reports). 운영자만 보는 화면이라 한국어만.
@@ -223,6 +224,71 @@ export function OpsInbox() {
   );
 }
 
+/** 판매 신청 묶음 그림(공개 그림 주소) + 승인·거절·내리기. */
+function IconSaleReview({ packId, busy, act }: { packId: string; busy: boolean; act: (payload: Record<string, unknown>) => Promise<void> }) {
+  const [pack, setPack] = useState<IconPack | null | undefined>(undefined);
+  useEffect(() => {
+    let alive = true;
+    void fetch("/api/icons", { method: "POST", headers: { "content-type": "application/json" }, body: JSON.stringify({ action: "pack", id: packId }) })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((body: { pack?: IconPack } | null) => {
+        if (alive) setPack(body?.pack ?? null);
+      })
+      .catch(() => alive && setPack(null));
+    return () => {
+      alive = false;
+    };
+  }, [packId]);
+  return (
+    <div className="mt-2 space-y-2">
+      {pack === undefined ? (
+        <p className="text-caption text-slate-500">…</p>
+      ) : pack === null ? (
+        <p className="text-caption text-slate-500">묶음 없음(지워졌거나 내려짐)</p>
+      ) : (
+        <>
+          <p className="text-caption text-slate-300">
+            {pack.price}P · {pack.icons.length}개 · 상태 {pack.sale ?? "-"}
+            {pack.hidden ? " · 내려짐" : ""}
+          </p>
+          <div className="flex flex-wrap gap-1.5">
+            {pack.icons.map((icon) => (
+              // eslint-disable-next-line @next/next/no-img-element -- 운영자 확인용 미리 보기(움직이는 WebP 그대로).
+              <img key={icon.id} src={iconPath(pack.id, icon.id)} alt={icon.phrase?.text ?? ""} className="h-16 w-16 rounded-lg bg-white/5 object-contain" />
+            ))}
+          </div>
+        </>
+      )}
+      <div className="flex flex-wrap items-center gap-2">
+        <button
+          type="button"
+          disabled={busy}
+          onClick={() => void act({ action: "approveIconSale", packId })}
+          className="rounded-xl border border-good/40 px-3 py-1.5 text-note text-good disabled:opacity-40"
+        >
+          판매 승인
+        </button>
+        <button
+          type="button"
+          disabled={busy}
+          onClick={() => void act({ action: "rejectIconSale", packId })}
+          className="rounded-xl border border-bad/40 px-3 py-1.5 text-note text-bad disabled:opacity-40"
+        >
+          거절
+        </button>
+        <button
+          type="button"
+          disabled={busy}
+          onClick={() => void act({ action: "hideIconPack", packId })}
+          className="rounded-xl border border-line px-3 py-1.5 text-note text-slate-200 disabled:opacity-40"
+        >
+          묶음 내리기(산 사람 환불)
+        </button>
+      </div>
+    </div>
+  );
+}
+
 function ReportCard({
   report,
   data,
@@ -236,6 +302,7 @@ function ReportCard({
 }) {
   const person = data.people[report.target];
   const iconPackId = report.lines.map((line) => /^icon-pack:(ip_[0-9a-z]+)$/.exec(line)?.[1]).find(Boolean) ?? null;
+  const salePackId = report.lines.map((line) => /^icon-sale:(ip_[0-9a-z]+)$/.exec(line)?.[1]).find(Boolean) ?? null;
   return (
     <article className={`rounded-2xl border border-line px-4 py-3 ${report.done ? "bg-surface-sunk opacity-70" : "bg-surface"}`}>
       <div className="flex flex-wrap items-center gap-2 text-caption text-slate-400">
@@ -259,6 +326,8 @@ function ReportCard({
           ))}
         </blockquote>
       ) : null}
+      {/* 아이콘 판매 신청(줄에 "icon-sale:<id>"): 그림을 보고 승인(목록에 뜸)·거절. 승인 뒤에 내리면 산 사람에게 돌려준다. */}
+      {salePackId ? <IconSaleReview packId={salePackId} busy={busy} act={act} /> : null}
       {/* 아이콘 묶음 신고(줄에 "icon-pack:<id>"): 묶음 그림을 보고 내리기·되돌리기. */}
       {iconPackId ? (
         <div className="mt-2 flex flex-wrap items-center gap-2">

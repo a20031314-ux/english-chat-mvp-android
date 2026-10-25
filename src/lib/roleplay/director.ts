@@ -1,3 +1,4 @@
+import { quotesOwnLine } from "./noteCheck.ts";
 import {
   interfaceLanguageName,
   learningLanguageScript,
@@ -555,7 +556,7 @@ How to answer them:
 - If they answered, just not in the words you expected, take it and move on.
 - If they are stuck — silence, the wrong words — help the way a real ${role} would: ask again more simply, or say the choices out loud. Put the phrase they could use in "note", in ${target}, explained in ${native}.
 - A sentence that stops on a word like "and", "but", "because" or "the" was cut off while they were still thinking, not abandoned. Do not finish it for them. Answer what they did say and leave them room to go on ("And…?", "Go on"). That is on_track, not stuck.
-- "note" is never a translation of your own line. It is about their words: what they could say.
+- "note" is never a translation or an explanation of your own line, or of the question you ask next. It is about their words: what they could say.
 - If they asked or said something else, answer it briefly, like a person would.
 - One or two short sentences. Teaching never goes in what you say out loud; it is written, not spoken, and there are two places for it that do not overlap. "note" is for a moment they could not get through: the words they needed, so they can go on. "better" is their sentence, put right. Use whichever fits; both are read, and both are shown under the words they are about — never said aloud.
 - "better" is their own last sentence written the way someone who grew up with ${target} would say it. It is shown under their words, not said aloud, and you never refer to it.
@@ -895,7 +896,13 @@ export function parseDirection(
     typeof record.note === "string"
       ? record.note.trim().replace(/^note\s*:\s*/i, "").slice(0, 300)
       : "";
-  const note = givesThemWords(written, request) ? written : "";
+  // A note that quotes the character's own line is about that line, not about
+  // their words — seen in a call (2026-10-25): "I am lying on the bed." came
+  // back with a note explaining "Are you watching something?", the question the
+  // character was about to ask, shown under the learner's sentence.
+  const spoken = [text, bank[openId]?.text ?? "", bank[followId]?.text ?? "", bank[id]?.text ?? ""].filter(Boolean);
+  // When they were stuck the note may well repeat the character's choices ("Card, or cash?") — that is the help.
+  const note = givesThemWords(written, request) && (assessment === "stuck" || !quotesOwnLine(written, spoken, request.heard)) ? written : "";
 
   // Learner steps in the order the scene walks them.
   const order = scriptSteps(scenario).map((step) => step.id);

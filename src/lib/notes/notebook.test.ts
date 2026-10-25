@@ -6,6 +6,8 @@ import {
   phrasePrompt,
   placePhrases,
   readPhrasePlaces,
+  readPhraseAlso,
+  parseNotebook,
   addCard,
   addPending,
   defaultPicked,
@@ -194,4 +196,27 @@ test("설명 글자 확인: 앱 언어 글자인지(인용 속 학습 언어 낱
   assert.ok(noteFitsUi('"have been to" is the present perfect', "en"));
   assert.ok(!noteFitsUi("「ても」は許可を求める形です", "es"));
   assert.ok(noteFitsUi("", "ko"));
+});
+
+test("요소 태그 읽기: 갈래는 아는 이름만, 함께 걸친 칸은 아는 문법 칸·주 칸 빼고 2개까지", () => {
+  const known = new Set(["g1-past", "g1-te", "g2-compare", "i-set", "d-word"]);
+  const placed = readPlacement(
+    JSON.stringify({ node: "g1-past", note: "과거형", kind: "mistake", parts: ["grammar", "vocab", "spelling", "grammar"], also: ["g1-past", "i-set", "g1-te", "g2-compare", "g9-x"] }),
+    known,
+    "",
+  );
+  assert.deepEqual(placed.parts, ["vocab", "grammar"]);
+  assert.deepEqual(placed.also, ["g1-te", "g2-compare"]);
+  const raw = JSON.stringify({ places: [{ i: 0, node: "g1-te", also: ["g1-past"] }, { i: 1, node: "vocab", also: ["d-word"] }] });
+  const nodes = readPhrasePlaces(raw, 2, known);
+  assert.deepEqual(readPhraseAlso(raw, 2, known, nodes), [["g1-past"], []]);
+  let book = placePhrases(emptyNotebook(), [{ key: "映画を見ました", node: "g1-te", also: ["g1-past", "g1-te"] }], 10);
+  assert.deepEqual(book.phrases["映画を見ました"]?.also, ["g1-past"]);
+  book = parseNotebook(JSON.parse(JSON.stringify(book)));
+  assert.deepEqual(book.phrases["映画を見ました"]?.also, ["g1-past"]);
+  const pend = addPending(emptyNotebook(), { id: "fxtagtest01", wrong: "Ayer voy", right: "Ayer fui", note: "", node: "g1-past", where: "chat", at: 10, parts: ["grammar"], also: ["g1-te"] }, 10);
+  assert.deepEqual(pend.pending[0]?.parts, ["grammar"]);
+  assert.deepEqual(pend.pending[0]?.also, ["g1-te"]);
+  const kept = addCard(emptyNotebook(), pend.pending[0]!);
+  assert.deepEqual(kept.cards[0]?.parts, ["grammar"]);
 });

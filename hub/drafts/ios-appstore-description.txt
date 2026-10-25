@@ -1,0 +1,53 @@
+=== English (US) ===
+languagebank helps you actually write and speak in the language you're learning, with an AI tutor and real videos. Learn any of 14 languages, with the app in any of 14 languages.
+
+CHAT WITH AN AI TUTOR
+• Chat in the language you're learning. Stuck? Write in your own language: the tutor keeps going in the language you're learning, and "Show how to say it" puts the expression right under that line.
+• When a sentence has a mistake, a "Something to fix" chip appears under it. Tap it to see the corrected sentence.
+• Tap the speaker to hear any line read aloud.
+
+ASK ABOUT ANY SENTENCE
+• Open sentence analysis on a line from chat, videos or your notes. Pick the part you don't get and ask what it means. Answers come in your own language.
+
+LEARN FROM REAL VIDEOS
+• This month's videos are split into sentences with subtitles in the language you're learning. Tap a sentence to replay it, and ask about any line.
+
+SEE WHAT YOU'RE MISSING
+• No levels. Each sentence shows only what was wrong or missing, and what you've written shows where you're weak and what to do next.
+• Start in My with short example conversations, and your study map starts where you are.
+• My gathers what you've used and learned: Try this, Growing, My phrases and Notes.
+
+PLANS
+Free to start, with daily limits. Subscriptions (Lite, Plus, Premium) add more chats a day, and Premium opens the full monthly video library. Subscriptions renew automatically unless cancelled at least 24 hours before the end of the period, and can be managed in your App Store account settings.
+
+Terms of Use: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://www.languagebank.net/privacy
+
+=== 한국어 ===
+languagebank는 배우는 언어로 직접 쓰고 말하게 해 주는 앱이에요. AI 튜터와 진짜 영상으로요. 14개 언어를 14개 앱 언어로 배울 수 있어요.
+
+AI 튜터와 채팅
+• 배우는 언어로 채팅해요. 막히면 한국어로 써도 튜터는 배우는 언어로 대화를 이어가고, "표현 보기"를 누르면 그 줄 바로 아래에 하고 싶던 말이 나와요.
+• 틀린 곳이 있으면 문장 아래 "고칠 곳이 있어요" 칩이 떠요. 누르면 고친 문장을 볼 수 있어요.
+• 스피커를 누르면 어떤 줄이든 소리 내어 읽어 줘요.
+
+어떤 문장이든 물어보기
+• 채팅·영상·노트의 문장에서 문장 분석을 열어요. 모르는 부분만 골라 무슨 뜻인지 물으면 한국어로 답해 줘요.
+
+진짜 영상으로 배우기
+• 이달의 영상을 문장 단위로 나누고 배우는 언어 자막을 붙여요. 문장을 누르면 그 부분만 다시 듣고, 어떤 줄이든 물어볼 수 있어요.
+
+부족한 부분이 보여요
+• 레벨은 없어요. 문장마다 틀린 점·부족한 점만 짚고, 쓴 문장이 쌓이면 약한 부분과 다음에 할 공부를 보여 줘요.
+• My에서 짧은 대화 예시로 시작하면 지금 자리에서 학습 지도가 시작돼요.
+• My에 오늘 해볼 것·자라는 중·내 표현·노트가 모여요.
+
+요금
+무료로 시작하고 하루 한도가 있어요. 구독(라이트·플러스·프리미엄)하면 하루 채팅이 늘어나고, 프리미엄은 이달의 영상 전체를 볼 수 있어요. 구독은 기간이 끝나기 24시간 전까지 해지하지 않으면 자동으로 갱신되고, App Store 계정 설정에서 관리할 수 있어요.
+
+이용약관: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+개인정보 처리방침: https://www.languagebank.net/privacy
+
+=== 프로모션 텍스트 ===
+EN: Chat with an AI tutor in the language you're learning. Stuck? Write in your own language and see how to say it, right under the line.
+KO: 배우는 언어로 AI 튜터와 채팅해요. 막히면 한국어로 써도 그 줄 바로 아래에 하고 싶던 말이 나와요.

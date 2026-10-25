@@ -22,6 +22,9 @@
   무료 채팅은 하루 10번이라 같은 사용자로 오래 돌리면 막힌다.
 - 스크린샷은 `tmp/verify/YYYY-MM-DD/`에 (git에 안 올라감).
 - **영어↔한국어 집중**(2026-10-21): `--suite tiers --full --only en:ko,ko:en --users 196`을 씨앗 두 개(끝자리 하나 차이)로 — 한 씨앗은 칸마다 한 조합에만 걸린다. 결과·남은 것 `hub/drafts/sim-judge-enko-2026-10-21.md`.
+- **줄 아래 설명이 그 줄 것인지 늘 본다**(사용자 2026-10-25 "가상 사용자 돌릴 때 저런 것도 확인하라고 명시"): 채팅의 고친 이유·통화 팁·도움말·표현 카드가
+  학습자 줄이 아니라 튜터 말(이번 답·다음 질문)을 설명하면 문제(실제: "I am lying on the bed." 아래 "Are you watching something?" 설명). 자동 검사 `detect.mjs checkAboutTheirLine`
+  (`*_tip_offtopic`, 채팅·통화 묶음), Claude 평가는 `judge-rubric.md` "줄 아래 설명은 그 줄 것"(major). 보고에 이 종류는 따로 센다. 브라우저·기기 점검에서도 줄 아래 글을 읽어 본다.
 - **가상 사용자 점검** `npm run sim:users` (`scripts/sim-users/`): 속성 조합 페르소나(언어 배경·수준·약점·태도·입력·이상 행동, pairwise 46행)가
   14×14 학습 조합에 운영 API로 앱 기능을 써 본다. **기능 묶음**(`--suite`, `--list`): chat(채팅·표현 카드, 전원) · map(지도·미션, 7명 중 1명, gpt-4.1이라 비쌈) ·
   next(오늘 해볼 것·요약·자라는 중·내 표현, 전원, 모델 없음) · ask(직접 묻기, 2명 중 1) · sheet(해석·문장분석·표현 자세히·빠른 질문·단위·단어장, 2명 중 1) ·

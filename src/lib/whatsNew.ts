@@ -44,6 +44,29 @@ export type ReleaseNote = {
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    // 2.75(89): My 네 갈래(어휘·문법·표현·발음, 70%면 다음 단계, 단계별 대화 예시) — 망·그래프·단계 세 보기가 같은 네 갈래. 게시판 주제 칩·글 속 들어가기·참여하기.
+    // 통화 기록 카드 ×(지우기)는 사용법(대화)에만, 통화 "고칠 곳" 팁이 내 줄 이야기만 하는 것은 서버라 빌드와 상관없음.
+    version: "2.75",
+    code: 89,
+    items: [
+      { id: "stage-parts", title: "whatsNewStagePartsTitle", body: "whatsNewStagePartsBody", shot: "stage-parts", tab: "map", guide: "my.map" },
+      { id: "board-topics", title: "whatsNewBoardTopicsTitle", body: "whatsNewBoardTopicsBody", shot: "board-topics", tab: "people", guide: "people.board" },
+    ],
+  },
+  {
+    // 2.74(88): My "단계"(지도 + 노트 틀, 습득한 표현·관용·세부 칸), 문장분석 "My에서 찾기"(❓ 장면 카드), 아이콘 기본 묶음 Noto·Room 🙂,
+    // 아이콘 만들기 편집기·판매(2~30P, 만든 사람 70%)·🔥 많이 쓰는 묶음 — 사용자 "2.74로 버전 올려줘"(2026-10-25 두 번)로 같이 넣음, 한 장(icon-sale).
+    // 사람 탭 칩 이모지·초대 보상 시트, 노트 "모두" 보기 고침은 사용법(사람·My)에만.
+    version: "2.74",
+    code: 88,
+    items: [
+      { id: "stage-board", title: "whatsNewStageBoardTitle", body: "whatsNewStageBoardBody", shot: "stage-board", tab: "map", guide: "my.map" },
+      { id: "find-in-my", title: "whatsNewFindInMyTitle", body: "whatsNewFindInMyBody", shot: "find-in-my", tab: "map", guide: "my.notes" },
+      { id: "noto", title: "whatsNewNotoTitle", body: "whatsNewNotoBody", shot: "noto-icons", tab: "people", guide: "people.icons" },
+      { id: "icon-sale", title: "whatsNewIconSaleTitle", body: "whatsNewIconSaleBody", shot: "icon-sale", tab: "people", guide: "people.icons" },
+    ],
+  },
+  {
     // 2.73(87): 노트 뼈대·오늘의 학습(고른 것만, 화면 함께), 사람 언어 칩.
     // AI 대화 📞 바로 통화·🗒 통화 기록 카드, 하단 탭 아이콘만, 줄 분석 문장 고르기, 의견 반영 포인트는 사용법(통화·대화·My)에만.
     version: "2.73",

@@ -8,7 +8,7 @@
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { noteSuspended } from "./suspended";
-import { ICON_UPLOAD_MAX_BYTES, iconPath, type IconLicense, type IconPack } from "./icons";
+import { ICON_UPLOAD_MAX_BYTES, iconPath, type IconLicense, type IconMotion, type IconPack, type IconPrice } from "./icons";
 
 export class IconApiError extends Error {
   constructor(readonly code: string, readonly status: number) {
@@ -22,7 +22,8 @@ async function icons<T>(action: string, payload: Record<string, unknown> = {}): 
     response = await fetch(apiUrl("/api/icons"), {
       method: "POST",
       headers: { "Content-Type": "application/json", ...entitlementHeaders() },
-      body: JSON.stringify({ action, ...payload }),
+      // sale: 판매 묶음(가격·사기)을 아는 빌드 — 없으면(2.73 이하) 서버가 목록에서 판매 묶음을 뺀다.
+      body: JSON.stringify({ action, sale: 1, ...payload }),
     });
   } catch {
     throw new IconApiError("FAILED", 0);
@@ -50,8 +51,17 @@ export function iconPacksBy(owner: string): Promise<{ packs: IconPack[] }> {
 export function myIconPacks(): Promise<{ packs: IconPack[]; own: IconPack[] }> {
   return icons("mine");
 }
-export function createIconPack(name: string, license: IconLicense): Promise<{ pack: IconPack }> {
-  return icons("create", { name, license, agree: true });
+/** price 0 = 무료(라이선스 고름), 2~30 = 판매 묶음(라이선스는 서버가 "app"). */
+export function createIconPack(name: string, license: IconLicense, price: IconPrice = 0): Promise<{ pack: IconPack }> {
+  return icons("create", { name, license, agree: true, ...(price ? { price } : {}) });
+}
+/** 판매 신청(운영자 승인 뒤 목록에). */
+export function sellIconPack(id: string): Promise<{ pack: IconPack }> {
+  return icons("sell", { id });
+}
+/** 사기(포인트). 모자라면 IconApiError("NO_POINTS"). */
+export function buyIconPack(id: string): Promise<{ pack: IconPack; spent: number }> {
+  return icons("buy", { id });
 }
 export function renameIconPack(id: string, name: string): Promise<{ pack: IconPack }> {
   return icons("rename", { id, name });
@@ -85,4 +95,9 @@ export async function uploadIcon(id: string, file: File, phrase?: { lang: string
   if (file.size > ICON_UPLOAD_MAX_BYTES) throw new IconApiError("TOO_BIG", 0);
   const dataUrl = await readDataUrl(file);
   return icons("upload", { id, dataUrl, ...(phrase?.text.trim() ? { phrase } : {}) });
+}
+
+/** 편집기에서 만든 그림(PNG data URL) 올리기. motion이면 서버가 움직이는 아이콘으로 만든다. */
+export function uploadEditedIcon(id: string, dataUrl: string, phrase?: { lang: string; text: string }, motion?: IconMotion | null): Promise<{ pack: IconPack }> {
+  return icons("upload", { id, dataUrl, ...(phrase?.text.trim() ? { phrase } : {}), ...(motion ? { motion } : {}) });
 }

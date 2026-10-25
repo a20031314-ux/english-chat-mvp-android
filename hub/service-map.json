@@ -1,7 +1,7 @@
 {
  "_": "서비스 지도 갱신 기록. scripts/service-map.mjs가 쓴다(손으로 고치지 않음). 칸이 바뀐 날만 history에 한 줄.",
- "checkedAt": "2026-10-24 06:55",
- "commit": "ca4ddd5b",
+ "checkedAt": "2026-10-25 06:54",
+ "commit": "cee38a25",
  "nodes": {
   "moyeo": {
    "title": "Moyeo",
@@ -68,15 +68,15 @@
   },
   "talk": {
    "title": "대화",
-   "text": "8c96b57d6df7",
-   "shots": "853e68955220",
+   "text": "3e11ff90744b",
+   "shots": "157757cf2264",
    "links": "69ce588dafa2",
    "code": "3b6619968834"
   },
   "chat": {
    "title": "AI 채팅",
-   "text": "c97d6898bccd",
-   "shots": "53ad23a3e4bc",
+   "text": "7d54e52b3108",
+   "shots": "9df9e6393e6f",
    "links": "ca6f7f7fc811",
    "code": "412738069f93"
   },
@@ -89,8 +89,8 @@
   },
   "dm": {
    "title": "1:1 메시지",
-   "text": "b8f2bc88f5e3",
-   "shots": "1bf24ac00c1c",
+   "text": "45fbdb965177",
+   "shots": "9d690b6219a5",
    "links": "f564ad3fc247",
    "code": "3b6619968834"
   },
@@ -110,17 +110,17 @@
   },
   "people": {
    "title": "사람",
-   "text": "d9a3bdcf76a5",
-   "shots": "cc944e7657e5",
+   "text": "74a44f82d1c0",
+   "shots": "6da072484bd1",
    "links": "73f18aa06e4c",
-   "code": "1e36dbce467c"
+   "code": "97435a5dca23"
   },
   "board": {
    "title": "게시판",
    "text": "ff5af6758e42",
    "shots": "fae5f04db3b0",
    "links": "da2e1c5ce392",
-   "code": "1e36dbce467c"
+   "code": "97435a5dca23"
   },
   "rewards": {
    "title": "친구 초대 · 보상",
@@ -131,8 +131,8 @@
   },
   "room": {
    "title": "Room",
-   "text": "5e4cf9389314",
-   "shots": "00824f912867",
+   "text": "a53711fc6b26",
+   "shots": "171d57882336",
    "links": "8e1776db4308",
    "code": "555eb584be24"
   },
@@ -145,14 +145,14 @@
   },
   "growth": {
    "title": "자라는 중 · 지도",
-   "text": "5f347e439874",
-   "shots": "14c037cc9e79",
+   "text": "1454d23c4b43",
+   "shots": "549f3e303b95",
    "links": "d558e5cc6ea2",
    "code": "a8f0317dc07a"
   },
   "notes": {
    "title": "노트 · 단어장",
-   "text": "c93b146bd6f1",
+   "text": "6be92b597786",
    "shots": "9e2898a71d9a",
    "links": "fbb882eac87e",
    "code": "a8f0317dc07a"
@@ -162,7 +162,7 @@
    "text": "4d819e98271e",
    "shots": "38df95165730",
    "links": "585c6d8b35ab",
-   "code": "e138274c17e9"
+   "code": "3fc886465269"
   },
   "learner": {
    "title": "오늘 해볼 것 · 표현 장부",
@@ -173,6 +173,57 @@
   }
  },
  "history": [
+  {
+   "at": "2026-10-25 06:54",
+   "commit": "cee38a25",
+   "changes": [
+    {
+     "id": "talk",
+     "title": "대화",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "chat",
+     "title": "AI 채팅",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "dm",
+     "title": "1:1 메시지",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "people",
+     "title": "사람",
+     "what": "설명 · 그림 · 코드 영역"
+    },
+    {
+     "id": "board",
+     "title": "게시판",
+     "what": "코드 영역"
+    },
+    {
+     "id": "room",
+     "title": "Room",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "growth",
+     "title": "자라는 중 · 지도",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "notes",
+     "title": "노트 · 단어장",
+     "what": "설명"
+    },
+    {
+     "id": "sheet",
+     "title": "문장분석 · 표현 시트",
+     "what": "코드 영역"
+    }
+   ]
+  },
   {
    "at": "2026-10-24 06:55",
    "commit": "ca4ddd5b",

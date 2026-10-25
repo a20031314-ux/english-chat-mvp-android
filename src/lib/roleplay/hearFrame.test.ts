@@ -116,3 +116,47 @@ test("Android levels are untouched by the scaler", async () => {
   const scaler = makeLevelScaler(false);
   assert.equal(scaler.scale(0.013, 100), 0.013);
 });
+
+test("iOS: 조금 시끄러운 방에서 보통 크기로 말한 목소리(0.017)도 말로 듣는다 (85.9 진단 2026-10-25)", async () => {
+  const { makeLevelScaler, hearFrame: frame, TURN_NOT_STARTED: start } = await import("./hearFrame.ts");
+  const scaler = makeLevelScaler(true);
+  let turn = start;
+  let endedAt: number | null = null;
+  for (let t = 0; t <= 9000; t += 60) {
+    const speaking = t >= 1200 && t < 3200;
+    const raw = speaking ? 0.017 : 0.007 + ((t / 60) % 3) * 0.0004; // 방 소리 중간값 약 0.0074 → 예전 기준 0.02
+    const heard = frame(turn, scaler.scale(raw, t), t);
+    turn = heard.turn;
+    if (heard.finished) {
+      endedAt = t;
+      break;
+    }
+  }
+  assert.ok(turn.spoke, `speech was heard (threshold ${scaler.threshold()})`);
+  assert.ok(endedAt !== null && endedAt < 3200 + 2500, `ended at ${endedAt}`);
+});
+
+test("작게 말한 턴은 받아쓰기에 보내고, 방 소리만 있던 턴은 보내지 않는다", async () => {
+  const { quietVoiceWorthSending } = await import("./hearFrame.ts");
+  assert.equal(quietVoiceWorthSending(0.017, 0.02), true);
+  assert.equal(quietVoiceWorthSending(0.006, 0.014), false);
+  assert.equal(quietVoiceWorthSending(0.009, 0.02), false);
+});
+
+test("iOS: 처음이 아주 조용해 기준이 바닥이어도, 말이 끝나면 방 소리(0.005) 속에서 턴이 끝난다 (85.9 진단 2026-10-25)", async () => {
+  const { makeLevelScaler, hearFrame: frame, TURN_NOT_STARTED: start } = await import("./hearFrame.ts");
+  const scaler = makeLevelScaler(true);
+  let turn = start;
+  let endedAt: number | null = null;
+  for (let t = 0; t <= 20000; t += 60) {
+    const raw = t < 400 ? 0.001 : t >= 1000 && t < 2500 ? 0.031 - ((t / 60) % 4) * 0.004 : 0.004 + ((t / 60) % 3) * 0.0008;
+    const heard = frame(turn, scaler.scale(raw, t), t);
+    turn = heard.turn;
+    if (heard.finished) {
+      endedAt = t;
+      break;
+    }
+  }
+  assert.ok(turn.spoke, "speech was heard");
+  assert.ok(endedAt !== null && endedAt < 2500 + 2500, `ended at ${endedAt}`);
+});

@@ -706,7 +706,7 @@ type ChatWindowProps = {
 
 /**
  * 이 대화 안에서 건 AI 통화 — 1:1 대화의 🗒 통화 기록 카드와 같은 자리(2026-10-23, conversation-unify 3단계).
- * 멈춘 통화는 "이어서 하기", 끝난 통화는 "돌아보기"(CallHost가 연다).
+ * 멈춘 통화는 "이어서 하기", 끝난 통화는 "돌아보기"(CallHost가 연다). × = 이 기록 지우기(폰에만 있는 기록).
  */
 function CallRecordCard({ call, ui, locale }: { call: SavedConversation; ui: ReturnType<typeof useUiCopy>; locale: string }) {
   const unfinished = isUnfinished(call);
@@ -733,6 +733,16 @@ function CallRecordCard({ call, ui, locale }: { call: SavedConversation; ui: Ret
           className="shrink-0 rounded-lg border border-white/15 px-2.5 py-1 text-xs text-slate-200 hover:bg-white/10"
         >
           {ui.packSeeRetro}
+        </button>
+        {/* 카드에서 바로 지우기(2026-10-25 사용자: 아이폰에서 통화 기록이 안 지워진다 — 지우기가 ⋮ 지난 대화 서랍에만 있었음). */}
+        <button
+          type="button"
+          onClick={() => discardCall(call.id)}
+          aria-label={ui.delete}
+          title={ui.delete}
+          className="-me-1 shrink-0 rounded-full px-1.5 text-title leading-none text-slate-500 hover:bg-white/10 hover:text-slate-200"
+        >
+          ×
         </button>
       </div>
     </div>

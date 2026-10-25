@@ -15,11 +15,41 @@ export const BOARD_POSTS_PER_DAY = 10;
 export const BOARD_COMMENTS_PER_HOUR = 60;
 export const BOARD_PAGE = 20;
 
+/**
+ * 글 주제(2026-10-25, 사용자 "학습 언어로 커뮤니티를 나누고 메이트 구인·보이스룸·단체방 초대 탭으로").
+ * 게시판은 학습 언어마다 하나(상단바 언어 = 커뮤니티)이고, 그 안을 주제 칩으로 나눈다. 주제가 없는 옛 글은 자유.
+ * 메이트는 글쓴이에게 메이트 신청, 보이스룸은 글쓴이가 연 공개 방에 들어가기, 단체방은 글쓴이의 단체방에 참여.
+ */
+export const BOARD_TOPICS = ["free", "question", "mate", "room", "group"] as const;
+export type BoardTopic = (typeof BOARD_TOPICS)[number];
+
+export function isBoardTopic(value: unknown): value is BoardTopic {
+  return typeof value === "string" && (BOARD_TOPICS as readonly string[]).includes(value);
+}
+
+export function topicOf(post: Pick<BoardPost, "topic">): BoardTopic {
+  return post.topic ?? "free";
+}
+
+/** 글에 붙인 보이스룸 — 읽을 때 서버가 지금 상태로 채운다(닫혔으면 open false). */
+export type BoardRoomView = { id: string; name: string; open: boolean; people: number };
+/** 글에 붙인 단체방 — 읽을 때 서버가 보는 사람 기준으로 채운다. */
+export type BoardGroupView = { id: string; name: string; members: number; max: number; joined: boolean; full: boolean; gone: boolean };
+
 export type BoardPost = {
   id: string;
   author: string;
-  /** 글을 올릴 때의 학습 언어 — 목록 거르기("내 학습 언어"). */
+  /** 글을 올릴 때의 학습 언어 — 이 언어의 게시판(커뮤니티)에 보인다. */
   language: string;
+  /** 주제(없으면 자유). */
+  topic?: BoardTopic;
+  /** 보이스룸 글: 글쓴이가 연 공개 방. */
+  roomId?: string;
+  /** 단체방 모집 글: 글쓴이가 있는 단체방(메이트 방은 안 됨). */
+  groupId?: string;
+  /** 읽을 때 채움(저장 안 함). */
+  room?: BoardRoomView;
+  group?: BoardGroupView;
   text: string;
   at: number;
   editedAt?: number;

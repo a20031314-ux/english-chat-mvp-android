@@ -12,6 +12,8 @@ import mapBefore269 from "@/lib/guide/mapBefore269.json";
 import chatBefore271 from "@/lib/guide/chatBefore271.json";
 import notesBefore273 from "@/lib/guide/notesBefore273.json";
 import mapBefore274 from "@/lib/guide/mapBefore274.json";
+import iconsBefore275 from "@/lib/guide/iconsBefore275.json";
+import mapBefore275 from "@/lib/guide/mapBefore275.json";
 
 export const runtime = "nodejs";
 
@@ -43,13 +45,35 @@ export async function GET(request: NextRequest) {
   const before273 = request.nextUrl.searchParams.get("r273") === "1"
     ? undefined
     : (notesBefore273 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
-  // 2.74(`r274=1`)부터: My "단계" 보기(예전 지도 + 노트 틀). 그 전 빌드는 눌러서 보기·지도로 보기·노트 칸을 2.73 글로(mapBefore274.json).
+  // 2.74(`r274=1`)부터: My "단계" 보기(예전 지도 + 노트 틀). 그 전 빌드는 눌러서 보기·지도로 보기·노트·아이콘(기본 묶음·Room 🙂) 칸을 2.73 글로(mapBefore274.json).
   const before274 = request.nextUrl.searchParams.get("r274") === "1"
     ? undefined
     : (mapBefore274 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
-  const latest: Guide = before274
-    ? { ...newest, map: { ...newest.map, sections: newest.map.sections.map((section, index) => before274[GUIDE_SECTION_IDS.map[index]] ?? section) } }
+  // 아이콘 판매가 있는 빌드(`r275=1` — 이름과 달리 2.74(88)부터, 판매를 2.74에 같이 넣음 2026-10-25): 가격·판매 신청·사기. 그 전 빌드는 아이콘 칸을 판매 줄 없는 글로(iconsBefore275.json).
+  const before275 = request.nextUrl.searchParams.get("r275") === "1"
+    ? undefined
+    : (iconsBefore275 as Partial<Record<string, Record<string, Guide["rooms"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  // 2.75(`r276=1`)부터: My 네 갈래(어휘·문법·표현·발음). 게시판 주제 칩. 그 전 빌드는 자라는 중·그래프·눌러서 보기·단계·게시판 칸을 2.74 글로(mapBefore275.json).
+  const before276 = request.nextUrl.searchParams.get("r276") === "1"
+    ? undefined
+    : (mapBefore275 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  const withParts: Guide = before276
+    ? {
+        ...newest,
+        map: { ...newest.map, sections: newest.map.sections.map((section, index) => before276[GUIDE_SECTION_IDS.map[index]] ?? section) },
+        rooms: { ...newest.rooms, sections: newest.rooms.sections.map((section, index) => before276[GUIDE_SECTION_IDS.rooms[index]] ?? section) },
+      }
     : newest;
+  const withSale: Guide = before275
+    ? { ...withParts, rooms: { ...withParts.rooms, sections: withParts.rooms.sections.map((section, index) => before275[GUIDE_SECTION_IDS.rooms[index]] ?? section) } }
+    : withParts;
+  const latest: Guide = before274
+    ? {
+        ...withSale,
+        map: { ...withSale.map, sections: withSale.map.sections.map((section, index) => before274[GUIDE_SECTION_IDS.map[index]] ?? section) },
+        rooms: { ...withSale.rooms, sections: withSale.rooms.sections.map((section, index) => before274[GUIDE_SECTION_IDS.rooms[index]] ?? section) },
+      }
+    : withSale;
   const withNotes: Guide = before273
     ? {
         ...latest,

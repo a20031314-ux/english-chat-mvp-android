@@ -1,5 +1,5 @@
 import type { PracticeGoal } from "@/lib/learner/practice";
-import { TURN_NOT_STARTED, hearFrame, makeLevelScaler } from "./hearFrame.ts";
+import { TURN_NOT_STARTED, hearFrame, makeLevelScaler, quietVoiceWorthSending } from "./hearFrame.ts";
 import { isIosApp, turnDiagnosticsEnabled } from "@/lib/platform";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
@@ -113,7 +113,10 @@ const MIN_AUDIO_BYTES = 1200;
 function preferredMimeType(): string {
   // Chrome and the Android WebView give webm/opus; Safari gives mp4. Asking for
   // something unsupported makes MediaRecorder throw rather than fall back.
-  for (const type of ["audio/webm;codecs=opus", "audio/webm", "audio/mp4"]) {
+  // 아이폰은 mp4를 먼저: 새 iOS가 webm/opus도 녹음한다고 답하지만, 조각(250ms)으로 받으면 첫 단어 뒤가
+  // "iiiii"처럼 끊겨 되풀이되는 소리로 남아 받아쓰기가 첫 단어만 적었다(TestFlight 진단 2026-10-25). mp4는 10-20에 확인한 길.
+  const order = isIosApp() ? ["audio/mp4", "audio/webm;codecs=opus", "audio/webm"] : ["audio/webm;codecs=opus", "audio/webm", "audio/mp4"];
+  for (const type of order) {
     if (typeof MediaRecorder !== "undefined" && MediaRecorder.isTypeSupported(type)) {
       return type;
     }
@@ -434,7 +437,7 @@ export async function listenForTurn(input: {
             // have go to the store yesterday"), which went out as their turn.
             // Only when the wait ran out — a turn they ended themselves is
             // still sent, in case the meter missed a quiet voice.
-            if (watch.heardNothing()) {
+            if (watch.heardNothing() && !(isIosApp() && quietVoiceWorthSending(watch.peak(), watch.threshold()))) {
               diag.status = "silent";
               finish("");
               return;

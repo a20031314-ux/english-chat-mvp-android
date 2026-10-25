@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-24g";
+export const GUIDE_VERSION = "2026-10-25e";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -144,24 +144,25 @@ export const GUIDE_KO: Guide = {
       {
         heading: "3. 자라는 중",
         body: [
-          "여섯 부분이 쓸수록 커지고 줄지 않아요. 테두리 친 곳이 ‘{ui:myNext}’이에요.",
+          "‘{ui:partVocab}’·‘{ui:partGrammar}’·‘{ui:partExpression}’·‘{ui:partPronunciation}’ 네 칸이 지금 단계에서 얼마나 찼는지 보여요. 점선이 다음 단계 기준이고, 가장 부족한 칸은 노란 글씨예요.",
+          "칸을 누르면 ‘{ui:myViewMap}’에서 그 칸을 열어요.",
         ],
-        shot: "growth",
+        shot: "parts-net",
       },
       {
         heading: "4. 그래프로 보기",
         body: [
-          "‘{ui:myViewGraph}’을 누르면 부분마다 최근 2주가 막대로 보여요. 고른 보기는 다음에도 그대로예요.",
+          "‘{ui:myViewGraph}’을 누르면 네 칸이 최근 2주 하루하루 얼마나 늘었는지 막대로 보여요. 고른 보기는 다음에도 그대로예요.",
         ],
-        shot: "graph",
+        shot: "parts-graph",
       },
       {
-        heading: "5. 눌러서 보기",
+        heading: "5. 다음 단계로",
         body: [
-          "부분을 누르면 자라는 방법·최근 2주·키운 표현이 보이고, ‘{ui:myGrowIt}’로 바로 연습해요.",
-          "‘{ui:myOpenStage}’를 누르면 그 부분과 이어진 칸을 단계에서 봐요. 표현 폭은 단어장으로 가요.",
+          "‘{ui:myViewMap}’ 맨 위에 가장 부족한 칸이 보여요. 옆 버튼으로 바로 연습해요 — ‘{ui:partPronunciation}’은 ‘{ui:nextByCall}’, 나머지는 ‘{ui:nextByChat}’.",
+          "네 칸이 모두 70%를 넘으면 ‘{ui:partReady}’가 켜져요. 다시 말해보기를 한 번도 안 했으면 ‘{ui:partPronunciation}’은 ‘{ui:myNoData}’로 두고 셈에서 빼요.",
         ],
-        shot: "element",
+        shot: "stage-next",
       },
       {
         heading: "6. 직접 묻기",
@@ -173,11 +174,11 @@ export const GUIDE_KO: Guide = {
       {
         heading: "7. 단계로 보기",
         body: [
-          "‘{ui:myViewMap}’에는 단계가 1부터 5까지 이어져 있어요. 지금 단계가 칠해져 있고, 번호를 누르면 그 단계의 목표 대화와 문법 칸을 미리 봐요.",
-          "쓸 수 있게 된 표현과 노트에 넣은 장면이 맞는 칸을 채워요. 관용구·자주 붙는 말은 ‘{ui:notebookIdioms}’, 말투·철자 같은 건 ‘{ui:notebookDetails}’ 칸으로. 점 색은 숙지·배움, 위 숫자는 채운 칸, 숙지한 문법에는 ✓. 칸을 열어 ‘{ui:stageTry}’로 바로 연습하고, 표현은 다른 칸으로 옮길 수 있어요.",
-          "아래에는 목표로 그린 주제가 있어요. 주제에서 ‘{ui:missionStart}’ — 할 일은 정답을 숨기고 써 보게 하고, 힌트 없이 맞히면 숙지로 올라가요.",
+          "‘{ui:myViewMap}’에는 단계가 1부터 5까지 이어져 있어요. 번호를 누르면 그 단계를 미리 봐요.",
+          "칸을 누르면 펼쳐져요. ‘{ui:partVocab}’은 익힌 낱말과 단어장, ‘{ui:partGrammar}’은 그 단계 문법 칸(✓·‘{ui:stageTry}’), ‘{ui:partExpression}’은 핵심 표현과 ‘{ui:notebookIdioms}’ 칸, ‘{ui:partPronunciation}’은 그 단계 발음 포인트와 글자·소리 칸. 쓸 수 있게 된 표현과 노트에 넣은 장면이 맞는 칸을 채워요.",
+          "아래 ‘{ui:stageExamplesTitle}’에서 그 단계로 되는 대화를 보고 ‘{ui:stageTry}’로 해 봐요. 예전 목표 주제와 할 일은 ‘{ui:partGoalMap}’에 접혀 있어요.",
         ],
-        shot: "mapview",
+        shot: "stage-parts",
       },
       {
         heading: "8. 노트",
@@ -515,15 +516,20 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "게시판",
         "body": [
+          "배우는 언어마다 게시판이 따로예요. 위 칩으로 💬 자유·❓ 질문·🤝 메이트·🎙 보이스룸·👥 단체방 글만 골라 봐요.",
+          "보이스룸 글에는 내 공개 방을, 단체방 글에는 내 단체방을 붙일 수 있어요. 읽는 사람은 글 속 ‘들어가기’·‘참여하기’로 바로 가고, 메이트 글에서는 🤝로 메이트 신청을 해요.",
           "배우는 언어로 글을 올리고 댓글을 달아요. 고치고 지우는 건 쓴 사람만 할 수 있어요. 글 아래 ‘한국어로 보기’로 번역하고, 이름을 누르면 팔로우·메시지·신고.",
           "글마다 ♡ 좋아요를 누를 수 있어요. 사진을 붙이면 목록에도 작게 보여요."
         ],
-        "shot": "r69-board"
+        "shot": "board-topics"
       },
       {
         "heading": "아이콘",
         "body": [
-          "‘+ 새 묶음’으로 내가 만든 그림(움직이는 GIF도)을 올리면 바로 모두에게 공개돼요. 라이선스는 CC BY 4.0(출처 표시) 또는 CC0(조건 없음) 중에서 골라요. 남의 묶음은 ‘받기’를 누르면 메시지·단체방·댓글 입력칸의 🙂에서 골라 보낼 수 있어요."
+          "‘+ 새 묶음’으로 내가 만든 그림(움직이는 GIF도)을 올리면 바로 모두에게 공개돼요. 라이선스는 CC BY 4.0(출처 표시) 또는 CC0(조건 없음) 중에서 골라요. 남의 묶음은 ‘받기’를 누르면 메시지·단체방·댓글 입력칸의 🙂에서 골라 보낼 수 있어요.",
+          "기본 묶음 ‘Noto 😀’·‘Noto 👍’(Google Noto 움직이는 이모지)은 받지 않아도 늘 있어요. Room 채팅의 🙂에서도 보낼 수 있어요.",
+          "‘가격’에서 ‘판매’를 고르고 2~30P를 넣으면 판매 묶음이 돼요(이 앱에서 산 사람만 씀). 아이콘을 올리고 ‘판매 신청’을 누르면 운영자가 확인한 뒤 목록에 떠요. 산 포인트의 70%는 만든 사람에게 포인트로 가고, 묶음이 내려지면 산 사람에게 돌려줘요. 사지 않은 판매 묶음은 그림만 볼 수 있어요.",
+          "‘✏️ 만들기’로 사진·글자·스티커·펜·배경을 겹쳐 아이콘을 만들고, ‘움직임’(통통·흔들·두근·살랑)을 고르면 움직이는 아이콘이 돼요. 내 묶음에서 ‘빼기’를 누르면 아이콘마다 ‘편집’이 나와요. 많이 쓰이는 묶음에는 🔥가 붙어요."
         ]
       }
     ]
@@ -566,24 +572,25 @@ export const GUIDE_EN: Guide = {
       {
         heading: "3. Growing",
         body: [
-          "Six parts grow as you use the language and never shrink. The ringed one is ‘{ui:myNext}’.",
+          "Four parts — ‘{ui:partVocab}’, ‘{ui:partGrammar}’, ‘{ui:partExpression}’ and ‘{ui:partPronunciation}’ — show how full they are at your stage. The dotted line is what the next stage needs, and the weakest part is in yellow.",
+          "Tap a part to open it in ‘{ui:myViewMap}’.",
         ],
-        shot: "growth",
+        shot: "parts-net",
       },
       {
-        heading: "4. See it as a graph",
+        heading: "4. As a graph",
         body: [
-          "Tap ‘{ui:myViewGraph}’ to see each part's last two weeks as bars. The view you pick stays next time.",
+          "Tap ‘{ui:myViewGraph}’ to see how much each part grew each day over the last two weeks. The view you pick stays next time.",
         ],
-        shot: "graph",
+        shot: "parts-graph",
       },
       {
-        heading: "5. Tap to look closer",
+        heading: "5. To the next stage",
         body: [
-          "Tap a part for how it grows, the last two weeks and the phrases that grew it; ‘{ui:myGrowIt}’ starts practising.",
-          "‘{ui:myOpenStage}’ shows the sections linked to that part. Range of expression goes to the word list.",
+          "The top of ‘{ui:myViewMap}’ shows your weakest part. Practise it right away with the button next to it — ‘{ui:nextByCall}’ for ‘{ui:partPronunciation}’, ‘{ui:nextByChat}’ for the rest.",
+          "When all four pass 70%, ‘{ui:partReady}’ turns on. If you have never tried saying a line again, ‘{ui:partPronunciation}’ shows ‘{ui:myNoData}’ and is left out.",
         ],
-        shot: "element",
+        shot: "stage-next",
       },
       {
         heading: "6. Ask",
@@ -593,13 +600,13 @@ export const GUIDE_EN: Guide = {
         shot: "myask",
       },
       {
-        heading: "7. See it in stages",
+        heading: "7. Stages",
         body: [
-          "‘{ui:myViewMap}’ lines up stages 1 to 5. Your current stage is filled in; tap a number to preview that stage's target conversation and grammar sections.",
-          "Phrases you can now use and scenes you add to your notes fill the matching section. Idioms and word pairings go to ‘{ui:notebookIdioms}’, things like politeness or spelling to ‘{ui:notebookDetails}’. The dot colour is mastered or learned, the number above is filled sections, and mastered grammar gets ✓. Open a section to ‘{ui:stageTry}’ right away, or move a phrase elsewhere.",
-          "Below are the topics drawn from your goal. In a topic, ‘{ui:missionStart}’ — a task hides the answer and has you write it, and getting it right without hints moves it to mastered.",
+          "‘{ui:myViewMap}’ runs from stage 1 to 5. Tap a number to look at that stage.",
+          "Tap a part to open it: ‘{ui:partVocab}’ has the words you’ve learned and your word list, ‘{ui:partGrammar}’ the stage’s grammar (✓ and ‘{ui:stageTry}’), ‘{ui:partExpression}’ its key phrases and the ‘{ui:notebookIdioms}’ sections, ‘{ui:partPronunciation}’ the stage’s sound point and the letter-and-sound sections. Phrases you can use and scenes you saved fill the matching section.",
+          "Below, ‘{ui:stageExamplesTitle}’ shows conversations this stage makes possible; try one with ‘{ui:stageTry}’. Your old goal topics and tasks are folded under ‘{ui:partGoalMap}’.",
         ],
-        shot: "mapview",
+        shot: "stage-parts",
       },
       {
         heading: "8. Notes",
@@ -937,15 +944,20 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Board",
         "body": [
+          "Each language you learn has its own board. Use the chips at the top to see only 💬 Chat, ❓ Questions, 🤝 Study mates, 🎙 Voice rooms or 👥 Groups.",
+          "A voice-room post can carry your open room, a group post your group. Readers go straight in with “Join” or “Join group”, and on a mate post 🤝 sends a mate request.",
           "Post in the language you’re learning and comment. Only the writer can edit or delete. “See in English” translates a post; tap a name to follow, message or report.",
           "Tap ♡ Like on any post. Photos you attach also show small in the list."
         ],
-        "shot": "r69-board"
+        "shot": "board-topics"
       },
       {
         "heading": "Icons",
         "body": [
-          "With “+ New pack”, upload images you made (animated GIFs too); they're public to everyone right away. Choose CC BY 4.0 (credit required) or CC0 (no conditions). Tap “Get” on someone's pack to send its icons from 🙂 in messages, group chats and comments."
+          "With “+ New pack”, upload images you made (animated GIFs too); they're public to everyone right away. Choose CC BY 4.0 (credit required) or CC0 (no conditions). Tap “Get” on someone's pack to send its icons from 🙂 in messages, group chats and comments.",
+          "The basic packs “Noto 😀” and “Noto 👍” (Google’s animated Noto emoji) are always there without getting them. You can also send icons from 🙂 in Room chat.",
+          "Under “Price”, choose “For sale” and enter 2–30P to sell a pack (only buyers in this app can use it). Upload icons and tap “Request sale”; it appears in the list once we approve it. 70% of the points paid go to the creator as points, and buyers get their points back if the pack is taken down. Packs for sale you haven't bought can only be previewed.",
+          "With “✏️ Make”, layer a photo, text, stickers, pen and a background into an icon; pick a “Motion” (Bounce, Shake, Pulse, Wobble) to make it move. In your pack, tap “Remove” to get “Edit” on each icon. Packs many people use get a 🔥."
         ]
       }
     ]

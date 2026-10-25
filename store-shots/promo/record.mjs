@@ -12,13 +12,15 @@ import http from "node:http";
 import fs from "node:fs";
 import path from "node:path";
 import { chromium } from "playwright";
+import { LEARN } from "./combos.mjs";
 
 const locale = process.argv[2] || "ko";
 const ROOT = process.cwd();
 const WWW = path.join(ROOT, "www");
 const API = process.env.API_BASE || "https://english-chat-mvp.vercel.app";
 const OUT = path.join(ROOT, "tmp", "promo", locale);
-const target = locale === "en" ? "es" : "en";
+// 학습 조합은 combos.mjs(2026-10-24): en 앱은 한국어, es 앱은 영어 …
+const target = LEARN[locale] ?? (locale === "en" ? "es" : "en");
 
 /** 막혔을 때 실제로 쓸 법한 한 줄(캡처 스크립트와 같은 문장). */
 const STUCK_LINE = {
@@ -96,6 +98,19 @@ await context.addInitScript(([t, l]) => {
   localStorage.setItem("chatOwnLanguageTipSeen", "1");
   localStorage.setItem("whatsNewSeenVersion", "999");
   // 누른 곳에 손가락 원: 보는 사람이 어디를 눌렀는지 알게.
+    // 화면 전송은 바뀐 프레임만 보낸다 — 가끔 멈춰 마지막 장면(열린 교정)이 안 찍혔다(ko). 보이지 않는 점을 매 프레임 바꿔 계속 받는다.
+    addEventListener("DOMContentLoaded", () => {
+      const dot = document.createElement("div");
+      dot.style.cssText = "position:fixed;left:0;top:0;width:1px;height:1px;z-index:99998;pointer-events:none;background:#000";
+      document.body.appendChild(dot);
+      let on = false;
+      const tick = () => {
+        on = !on;
+        dot.style.opacity = on ? "0.011" : "0.012";
+        requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+    });
   addEventListener("pointerdown", (e) => {
     const dot = document.createElement("div");
     dot.style.cssText = `position:fixed;left:${e.clientX - 22}px;top:${e.clientY - 22}px;width:44px;height:44px;border-radius:50%;background:rgba(255,255,255,.35);border:2px solid rgba(255,255,255,.8);z-index:99999;pointer-events:none;transition:transform .45s ease-out,opacity .45s ease-out`;
@@ -148,12 +163,14 @@ try {
   await use.last().waitFor();
   mark("card");
   // 카드의 표현 글자(목소리로 읽어 줄 것): "이 표현으로 말해보기" 버튼이 든 카드의 첫 줄.
-  events.expression = await use.last().evaluate((btn) => {
+  events.expression = await use.last().evaluate((btn, [target, typed]) => {
     let el = btn;
     for (let i = 0; i < 5 && el.parentElement; i++) el = el.parentElement;
     const lines = el.innerText.split("\n").map((s) => s.trim()).filter(Boolean);
-    return lines.find((l) => /[A-Za-z]{3,}/.test(l) && l.split(" ").length >= 3) ?? "";
-  });
+    const script = { ko: /[\uac00-\ud7af]/, ja: /[\u3040-\u30ff\u4e00-\u9fff]/, zh: /[\u4e00-\u9fff]/ }[target];
+    // 카드 첫 줄 = 학습 언어 표현. 위에 있는 내 줄(편한 말)은 빼고 — 스페인어 줄도 라틴 글자라 걸렸다.
+    return lines.find((l) => l !== typed && (script ? script.test(l) && l.length >= 4 : /[A-Za-z]{3,}/.test(l) && l.split(" ").length >= 3)) ?? "";
+  }, [target, STUCK_LINE[locale]]);
   await page.waitForTimeout(2600);
   await tap(use.last());
   mark("use");
