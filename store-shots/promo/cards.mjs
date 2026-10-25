@@ -18,11 +18,12 @@ const opt = (name, def) => {
   return v;
 };
 const lang = opt("lang", "en");
+const endKey = opt("end", lang);
 const ROOT = process.cwd();
 const OUTFILE = path.resolve(opt("out", path.join(ROOT, "tmp", "promo", "cards", `promo-cards-${lang}.mp4`)));
 const cards = args.flatMap((a) =>
   fs.statSync(a).isDirectory()
-    ? fs.readdirSync(a).filter((f) => f.endsWith(".png")).sort().map((f) => path.join(a, f))
+    ? fs.readdirSync(a).filter((f) => f.endsWith(".png") || f.endsWith(".mp4")).sort().map((f) => path.join(a, f))
     : [a],
 );
 if (!cards.length) throw new Error("카드 png가 없어요");
@@ -31,11 +32,12 @@ fs.mkdirSync(WORK, { recursive: true });
 
 const END = {
   en: { title: "Write. Speak.\nGet fixed right below.", sub: "With an AI tutor and real learners" },
+  "en-call": { title: "Speak out loud,\nin any language", sub: "An AI friend that waits, listens and helps" },
   ko: { title: "쓰고, 말하고,\n바로 아래서 고쳐요", sub: "AI 튜터와 진짜 학습자들과 함께" },
   es: { title: "Escribe. Habla.\nCorrige justo debajo.", sub: "Con un tutor de IA y estudiantes reales" },
   ja: { title: "書いて、話して、\nすぐ下で直す", sub: "AIチューターと、本物の学習者と" },
 };
-const C = END[lang] ?? END.en;
+const C = END[endKey] ?? END[lang] ?? END.en;
 
 const CARD = 3.6; // 카드 하나(초)
 const FADE = 0.45;
@@ -64,7 +66,10 @@ await browser.close();
 
 // 카드마다 클립: 0~25% 그대로(헤드라인 읽기), 그다음 부드럽게 휴대폰 쪽으로 확대. 홀수 장은 왼쪽 큰 화면, 짝수 장은 오른쪽 위 카드.
 const N = Math.round(CARD * FPS);
+// mp4는 이미 만든 장면(예: 통화 편 언어별)이라 그대로 쓴다 — 길이는 그 파일 길이.
+const lenOf = (f) => Number(execFileSync("ffprobe", ["-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", f]).toString());
 const clips = cards.map((card, i) => {
+  if (card.endsWith(".mp4")) return card;
   const [fx, fy] = i % 2 === 0 ? [0.29, 0.6] : [0.76, 0.43];
   const p = `(min(1,max(0,(on/${N}-0.25)/0.75)))`;
   const s = `(${p}*${p}*(3-2*${p}))`;
@@ -82,7 +87,7 @@ execFileSync("ffmpeg", ["-loglevel", "error", "-y", "-loop", "1", "-t", String(E
 
 // 이어 붙이기(겹쳐 넘김) + 배경음.
 const all = [...clips, endClip];
-const lens = [...clips.map(() => CARD), ENDLEN];
+const lens = [...clips.map((c) => (c.endsWith(".mp4") && cards.includes(c) ? lenOf(c) : CARD)), ENDLEN];
 let chain = "";
 let last = "[0:v]";
 let offset = 0;

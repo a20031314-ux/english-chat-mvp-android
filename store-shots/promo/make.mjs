@@ -21,7 +21,9 @@ const locale = args.length > 1 ? args[1] : args[0] || "ko";
 const ROOT = process.cwd();
 // talk = room 녹화에 목소리(줄마다 다른 사람)를 입힌 판.
 const SRC = story === "talk" ? "room" : story;
-const DIR = story === "chat" ? path.join(ROOT, "tmp", "promo", locale) : path.join(ROOT, "tmp", "promo", SRC, locale);
+// 통화 편은 앱 언어 + 배우는 언어로 폴더가 나뉜다(record-call.mjs, 학습 언어 여러 개 — 사용자 2026-10-26).
+const CALL_TARGET = process.env.PROMO_TARGET || "ko";
+const DIR = story === "chat" ? path.join(ROOT, "tmp", "promo", locale) : story === "call" ? path.join(ROOT, "tmp", "promo", "call", `${locale}-${CALL_TARGET}`) : path.join(ROOT, "tmp", "promo", SRC, locale);
 const API = process.env.API_BASE || "https://english-chat-mvp.vercel.app";
 const ev = JSON.parse(fs.readFileSync(path.join(DIR, "events.json"), "utf8"));
 // 오류교정(fix)부터는 combos.mjs의 학습 조합, 옛 이야기는 예전 조합(en → es, 나머지 → en).
@@ -144,6 +146,15 @@ COPY.analyze2 = {
   es: { hook: "¿Qué significa\nesa frase en inglés?", tap: "Toca una frase\npara analizarla", pick: "Desliza y elige\nsolo la parte que quieras", ask: "Pregunta justo\nlo que necesitas", answer: "Una respuesta clara,\nen español", my: "Y se guarda en Mi espacio,\nen su lugar", endTitle: "Entiende cada frase\nque lees", endSub: "Aprende idiomas conversando con IA" },
   ko: { hook: "이 일본어 문장,\n무슨 뜻일까?", tap: "줄을 누르면\n문장을 뜯어봐요", pick: "궁금한 부분만\n끌어서 골라요", ask: "궁금한 걸\n그대로 물어보세요", answer: "한국어로\n바로 답해줘요", my: "My의 제자리에\n쏙 담겨요", endTitle: "읽는 문장마다\n이해하며 배워요", endSub: "AI와 대화하며 배우는 언어 앱" },
 };
+
+// 통화 편 자막(배우는 언어 이름을 넣는다). 장면은 PROMO_PARTS로 고른다(여러 언어를 이어 붙일 때 첫 편만 hook).
+const LANG_NAME = { en: { ko: "Korean", es: "Spanish", ja: "Japanese", fr: "French", zh: "Chinese", en: "English" } };
+{
+  const n = LANG_NAME[locale]?.[CALL_TARGET] ?? CALL_TARGET;
+  COPY.call = {
+    en: { hook: "Speak out loud\nwith an AI friend", say: `${n}\nSay it, mistakes and all`, fix: `${n}\nIt shows what you could say`, more: `${n}\nAnd the talk keeps going`, endTitle: "Speak out loud,\nin any language", endSub: "Learn languages by talking with AI" },
+  };
+}
 const DIR_ATTR = RTL.has(locale) ? ' dir="rtl"' : "";
 const COPY_KEY = story === "analyze" && ev.pickStart != null ? "analyze2" : story;
 const C = { font: FONT[locale] ?? "'Noto Sans', sans-serif", store: STORE_LINE[locale] ?? STORE_LINE.en, ...(COPY[COPY_KEY]?.[locale] ?? {}) };
@@ -347,6 +358,26 @@ STORIES.analyze = () => ev.pickStart != null ? {
   voice: ev.picked || String(ev.reply ?? "").split("\n")[0],
   voiceSrc: ev.sheet + 0.6,
 });
+
+// 통화: 📞 → 튜터가 먼저 인사 → 틀리게 말함 → ✎ → "이렇게 말해도 돼요" → 한 마디 더(녹화: record-call.mjs).
+STORIES.call = () => {
+  const parts = (process.env.PROMO_PARTS || "hook,say,fix,more").split(",");
+  const segs = [];
+  if (parts.includes("hook")) segs.push([Math.max(0, ev.callTap - 1.0), ev.transTap + 0.3, 1, "hook"]);
+  if (parts.includes("say")) {
+    segs.push([parts.includes("hook") ? ev.transTap + 0.3 : Math.max(0, ev.said1 - 4), ev.said1 - 0.3, parts.includes("hook") ? Math.max(1, (ev.said1 - ev.transTap) / 4) : 2, "say"]);
+    segs.push([ev.said1 - 0.3, ev.chip + 0.6, 1, "say"]);
+  }
+  if (parts.includes("fix")) {
+    segs.push([ev.chip + 0.6, ev.chipTap - 0.2, Math.max(1, (ev.chipTap - ev.chip) / 1.2), "fix"]);
+    segs.push([ev.chipTap - 0.2, ev.open + 2.4, 1, "fix"]);
+  }
+  if (parts.includes("more")) {
+    segs.push([ev.open + 2.4, ev.said2 + 0.2, Math.max(1, (ev.said2 - ev.open) / 4), "more"]);
+    segs.push([ev.said2 + 0.2, ev.reply2 + 0.4, Math.max(1, (ev.reply2 - ev.said2) / 2), "more"]);
+  }
+  return { segs };
+};
 const plan = STORIES[story]();
 // 목소리는 기본으로 뺀다(사용자 2026-10-26 "목소리는 빼고 자막과 음악") — 넣으려면 PROMO_VOICE=1.
 const VOICE_ON = process.env.PROMO_VOICE === "1";
@@ -569,10 +600,10 @@ if (process.env.PROMO_MUSIC !== "0") {
   audioOut = audioOut ? "[am]" : "[m]";
 }
 const filter = [...parts, concat, phoneScale, chain].join(";") + audio + mix + music;
-const file = path.join(DIR, `promo-${story}-${locale}.mp4`);
+const file = process.env.PROMO_OUT || path.join(DIR, `promo-${story}-${locale}.mp4`);
 execFileSync("ffmpeg", ["-loglevel", "error", "-y", ...inputs, "-filter_complex", filter, "-map", "[v]",
   ...(audioOut ? ["-map", audioOut, "-c:a", "aac", "-b:a", "160k"] : []),
-  "-t", total.toFixed(3), "-r", "30", "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-pix_fmt", "yuv420p", "-movflags", "+faststart", file]);
+  "-t", (process.env.PROMO_NOEND === "1" ? phoneDur : total).toFixed(3), "-r", "30", "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-pix_fmt", "yuv420p", "-movflags", "+faststart", file]);
 console.log(`${file}  ${total.toFixed(1)}초`);
 for (const v of voiceTracks) console.log(`목소리 ${v.at.toFixed(1)}s +${v.len.toFixed(1)}s  ${v.text}`);
 console.log(timeline.map((s) => `${s.cap.padEnd(6)} ${s.at.toFixed(1)}–${(s.at + s.dur).toFixed(1)}s x${s.speed}${s.zoom ? " 확대" : ""}`).join("\n"));

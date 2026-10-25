@@ -29,7 +29,7 @@ const TYPES = { ".html": "text/html; charset=utf-8", ".js": "text/javascript", "
  * 녹화 하나. scene(page, { tap, mark, events })에서 앱을 조작한다.
  * 결과: <out>/raw.mp4, events.json(장면 시각은 녹화 시작부터 초), final.png.
  */
-export async function record({ root, out, user, locale, target, port = 4292, scene }) {
+export async function record({ root, out, user, locale, target, port = 4292, scene, micWav, routes }) {
   const api = process.env.API_BASE || "https://english-chat-mvp.vercel.app";
   const www = path.join(root, "www");
   const server = http.createServer(async (req, res) => {
@@ -61,11 +61,14 @@ export async function record({ root, out, user, locale, target, port = 4292, sce
 
   fs.rmSync(out, { recursive: true, force: true });
   fs.mkdirSync(out, { recursive: true });
-  const browser = await chromium.launch();
-  const context = await browser.newContext({ viewport: { width: 412, height: 915 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true });
+  // micWav: 가짜 마이크로 틀 녹음(통화 편). Chrome이 파일을 반복해 튼다.
+  const browser = await chromium.launch(micWav ? { args: ["--use-fake-ui-for-media-stream", "--use-fake-device-for-media-stream", "--autoplay-policy=no-user-gesture-required", `--use-file-for-fake-audio-capture=${micWav}`] } : {});
+  const context = await browser.newContext({ viewport: { width: 412, height: 915 }, deviceScaleFactor: 2, isMobile: true, hasTouch: true, ...(micWav ? { permissions: ["microphone"] } : {}) });
   const events = { locale, target };
   const mark = (name) => (events[name] = Date.now() / 1000);
   await context.route("**/api/**", (route) => route.continue({ headers: { ...route.request().headers(), "x-rc-user": user } }));
+  // 편마다 정해 둔 응답(예: 통화 받아쓰기) — 나중에 단 route가 먼저 받는다.
+  if (routes) await routes(context);
   await context.addInitScript(([t, l]) => {
     localStorage.setItem("appTargetLanguage", t);
     localStorage.setItem("appUiLocale", l);
