@@ -43,7 +43,7 @@ import { NotesPanel } from "@/components/notes/NotesPanel";
 import { NotebookSection } from "@/components/notes/NotebookSection";
 import { NextStepCard } from "@/components/NextStepCard";
 import { GrowthNetwork } from "@/components/studyMap/GrowthNetwork";
-import { StageGoal, StagePicker, useStages, type StageView } from "@/components/studyMap/StageCheck";
+import { StageExamples, StagePicker, useStages, type StageView } from "@/components/studyMap/StageCheck";
 import { FOCUS_IDS, GAP_IDS, USE_IDS, type FocusId, type GapId, type UseId } from "@/lib/learner/selfCheck";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
 import { AccountCard } from "@/components/account/AccountCard";
@@ -259,7 +259,7 @@ export function StudyMapTab({
   };
 
   // 수준별 틀(2026-10-24, 사용자 "망·그래프 구조를 노트에 통합"): 예전 "지도" 보기의 단계 목표와 노트 뼈대를 한 틀로.
-  // 사다리에서 고른 단계의 목표 대화·할 수 있는 것(StageGoal bare) + 문법 칸(짚은 장면·숙지 ✓·해보기). 망·그래프에서는 오늘의 학습만.
+  // 사다리에서 고른 단계의 네 갈래(어휘·문법·표현·발음) + 이 단계 대화 예시(StageExamples). 망·그래프에서는 오늘의 학습만.
   const stageByOrder = (order: number) => stages?.find((stage) => stage.order === order) ?? null;
   const board = (inBoard: boolean) => (
     <NotebookSection
@@ -270,26 +270,7 @@ export function StudyMapTab({
       frame={inBoard}
       stageDetail={(order) => {
         const stage = stageByOrder(order);
-        if (!stage) return null;
-        const isMapStage = mapStage?.id === stage.id;
-        return (
-          <StageGoal
-            ui={ui}
-            stage={stage}
-            bare
-            current={stagesData?.current?.stageId === stage.id ? stagesData.current : null}
-            script={isMapStage ? { targetLanguage, locale, isPremium } : undefined}
-            onNext={
-              isMapStage
-                ? () => {
-                    const next = stageByOrder(stage.order + 1);
-                    setStartStage(next?.id ?? null);
-                    setEditing(true);
-                  }
-                : undefined
-            }
-          />
-        );
+        return stage ? <StageExamples ui={ui} stage={stage} /> : null;
       }}
       masteredOf={(order, index) => {
         const stage = stageByOrder(order);
