@@ -606,7 +606,7 @@ function StageFrame({
           );
         })}
       </ol>
-      {/* 단계 = 말하는 힘의 크기(상황 이름이 아님, 2026-10-25). 제목은 단계 번호(stageNumber)만 — 상황처럼 읽히는 단계 제목은 뺌(사용자 "지워줘"). */}
+      {/* 단계 = 말하는 힘의 크기(상황 이름이 아님, 2026-10-25). 제목은 단계 번호(stageNumber)만 — 상황처럼 읽히는 단계 제목은 뺌(사용자 요청 2026-10-25). */}
       <p className={`mt-3 text-note font-semibold ${shown > now ? "text-slate-400" : "text-ink"}`}>{ui.stageNumber.replace("{n}", String(shown))}</p>
 
       {stageParts ? (
