@@ -920,6 +920,7 @@ for (const combo of COMBOS) {
     await page.goto(BASE + "/", { waitUntil: "domcontentloaded" });
     await page.evaluate(([t, l, token, acct, code]) => {
       localStorage.setItem("appTargetLanguage", t);
+      localStorage.setItem("myViewMode.stageShown", "1"); // 장면이 고른 My 보기를 첫 열기 "단계"가 덮지 않게
       localStorage.setItem("appUiLocale", l);
       localStorage.setItem("chatOwnLanguageTipSeen", "1");
       localStorage.setItem("whatsNewSeenVersion", "999");

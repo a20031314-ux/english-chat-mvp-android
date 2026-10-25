@@ -93,8 +93,17 @@ function growTitle(id: ElementId, ui: UICopy): string {
 export type MyViewMode = "net" | "graph" | "map";
 const VIEW_KEY = "myViewMode";
 
+/** "단계" 보기를 한 번 보여 줬는지(2026-10-25 사용자: 2.74를 깔았는데 My가 예전과 같다 — 전에 고른 "그래프"가 남아 단계가 안 보였음). */
+const STAGE_SHOWN_KEY = "myViewMode.stageShown";
+
 function readViewMode(): MyViewMode {
   try {
+    // 처음 한 번은 전에 고른 보기와 상관없이 "단계"로 연다. 그 뒤로는 고른 것을 그대로.
+    if (!localStorage.getItem(STAGE_SHOWN_KEY)) {
+      localStorage.setItem(STAGE_SHOWN_KEY, "1");
+      localStorage.setItem(VIEW_KEY, "map");
+      return "map";
+    }
     const saved = localStorage.getItem(VIEW_KEY);
     // 2026-10-24: "단계"(예전 지도 + 노트 틀)가 처음 보기. 고른 적 있으면 그대로.
     return saved === "graph" || saved === "net" ? saved : "map";

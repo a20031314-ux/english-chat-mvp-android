@@ -2284,6 +2284,7 @@ for (const locale of only ?? Object.keys(copy)) {
       localStorage.setItem("chatOwnLanguageTipSeen", "1");
       localStorage.setItem("whatsNewSeenVersion", "999");
       localStorage.setItem("callDataNoticeSeen.v1", "1");
+      localStorage.setItem("myViewMode.stageShown", "1"); // 장면이 고른 My 보기를 첫 열기 "단계"가 덮지 않게
     }, [TARGET_FOR(locale), locale]);
     const target = TARGET_FOR(locale);
     // CAPTURE_SHOTS=chat,pick retakes only those, for a language whose run stopped partway.
