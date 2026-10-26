@@ -838,6 +838,7 @@ ${spokenRule}
 Write 1–2 spoken ${targetName} lines as assistantMessage. Sound like texting a friend, not greeting a class.
 A question is fine if it feels natural — not required, and not a study prompt.
 Vary the topic. Do not reuse questions from RECENT.
+${practice ? "" : `Talk as yourself, to them as they are. You know nothing about them yet, so never give them a role or a back story: do not cast them as a coworker, a new team member, a customer, a classmate or anyone in a scene, and do not say what happened to them (a meeting, a trip, a new job). Say something about your own day or ask about theirs.`}
 ${practice ? `\n${practiceOpeningPrompt(practice, targetName)}\nThis comes before "vary the topic": the situation decides what you open with.\n` : ""}
 Return ONLY JSON:
 {"assistantMessage":"...","spokenReply":"..."}`,
