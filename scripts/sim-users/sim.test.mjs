@@ -182,3 +182,18 @@ test("내 줄 아래 설명이 상대 말을 설명하면 잡는다(2026-10-25 �
   // 띄어쓰기 없는 말
   assert.equal(checkAboutTheirLine("explanation", { tip: "「今何をしていますか」の意味です", heard: "家にいます", otherSaid: ["今何をしていますか？"] }).length, 1);
 });
+
+test("끊긴 말·맥락과 무관한 말·잘려 온 줄(사용자 2026-10-27)", async () => {
+  const { checkCutOff, checkDelivered, checkOffContext } = await import("./detect.mjs");
+  assert.equal(checkCutOff("reply", "I went to the park and", { lang: "en" }).length, 1);
+  assert.equal(checkCutOff("reply", "昨日は公園に行って、", { lang: "ja" }).length, 1);
+  assert.equal(checkCutOff("reply", "Ayer fui al cine con mis amigos", { lang: "es" }).length, 0);
+  assert.equal(checkCutOff("reply", "Nice! What did you do there?", { lang: "en" }).length, 0);
+  const flip = checkOffContext("reply", { reply: "Hey! Yeah, that's me, I joined the team last week.", heard: "Hi", tutorLines: ["Hey, you're the new person on the team, right? Did they say anything about Thursday?"] });
+  assert.equal(flip.length, 1);
+  const own = checkOffContext("reply", { reply: "I meant the new series you said you began watching last week.", heard: "Start what?", tutorLines: ["I started a new series last week, and now I can't stop watching it."] });
+  assert.equal(own.length, 1);
+  assert.equal(checkOffContext("reply", { reply: "Oh, you said you like rain? Me too.", heard: "I like rain a lot.", tutorLines: ["Do you like rainy days?"] }).length, 0);
+  assert.equal(checkDelivered("rooms", "Hola, ¿cómo estás?", "Hola, ¿cómo").length, 1);
+  assert.equal(checkDelivered("rooms", "こんにちは", "こんにちは").length, 0);
+});

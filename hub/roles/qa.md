@@ -25,6 +25,10 @@
 - **줄 아래 설명이 그 줄 것인지 늘 본다**(사용자 2026-10-25 "가상 사용자 돌릴 때 저런 것도 확인하라고 명시"): 채팅의 고친 이유·통화 팁·도움말·표현 카드가
   학습자 줄이 아니라 튜터 말(이번 답·다음 질문)을 설명하면 문제(실제: "I am lying on the bed." 아래 "Are you watching something?" 설명). 자동 검사 `detect.mjs checkAboutTheirLine`
   (`*_tip_offtopic`, 채팅·통화 묶음), Claude 평가는 `judge-rubric.md` "줄 아래 설명은 그 줄 것"(major). 보고에 이 종류는 따로 센다. 브라우저·기기 점검에서도 줄 아래 글을 읽어 본다.
+- **말이 끊기지 않는지·맥락에 맞는지 늘 본다**(사용자 2026-10-27 "튜터, 다른 사용자의 발화가 끊기지 않는지, 맥락과 무관한 발화를 하는지 체크하라고 명시"):
+  튜터(채팅·통화)의 말이 중간에 끊기거나, 자기 말을 학습자 말로 받거나("the new series you said you began"), 자기가 연 질문에 자기가 답해 역할이 뒤바뀌면(“you're the new person?” → "Hi" → "Yeah, that's me") 문제.
+  다른 사용자(1:1·방)의 줄은 보낸 그대로 다 와야 한다. 자동 검사 `detect.mjs` `checkCutOff`(`*_cut_off`)·`checkOffContext`(`*_own_line_as_theirs`·`*_role_flip`, 채팅·통화 묶음)·`checkDelivered`(`rooms_line_cut`·`dm_line_cut`, 방·1:1 묶음),
+  Claude 평가는 `judge-rubric.md` "말이 끊기지 않고, 맥락에 맞는가"(major). 보고에 이 종류는 따로 센다. 소리로 끊기는 것(통화에서 튜터 목소리가 안 나옴, 방 자막이 중간에 잘림)은 가상 사용자가 못 잡으니 기기·브라우저 점검에서 듣고 본다.
 - **가상 사용자 점검** `npm run sim:users` (`scripts/sim-users/`): 속성 조합 페르소나(언어 배경·수준·약점·태도·입력·이상 행동, pairwise 46행)가
   14×14 학습 조합에 운영 API로 앱 기능을 써 본다. **기능 묶음**(`--suite`, `--list`): chat(채팅·표현 카드, 전원) · map(지도·미션, 7명 중 1명, gpt-4.1이라 비쌈) ·
   next(오늘 해볼 것·요약·자라는 중·내 표현, 전원, 모델 없음) · ask(직접 묻기, 2명 중 1) · sheet(해석·문장분석·표현 자세히·빠른 질문·단위·단어장, 2명 중 1) ·

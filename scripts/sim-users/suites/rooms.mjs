@@ -10,7 +10,7 @@
  * 2026-10-18부터 방 만들기·들어가기는 로그인한 사람만. 모델 호출 없음. 28명 중 1명.
  * 입장 코드는 ROOM_INVITE_CODE 환경변수, 없으면 기본값.
  */
-import { checkHttp, issue } from "../detect.mjs";
+import { checkDelivered, checkHttp, issue } from "../detect.mjs";
 
 const CODE = process.env.ROOM_INVITE_CODE ?? "LB2026";
 // 2×2 PNG — 프로필 사진 저장·읽기 확인용.
@@ -145,8 +145,10 @@ export default {
         const line = await room(B, "line", { roomId, text, kind: "text" });
         const lnIssues = checkHttp(P, line);
         const aRead = await room(A, "poll", { roomId, since: 0 });
-        const got = (aRead.body?.lines ?? []).find((l) => l.text === text);
+        // 같은 글로 찾지 않고 B의 마지막 줄로 — 잘려 온 줄도 잡는다(사용자 2026-10-27 "다른 사용자의 발화가 끊기지 않는지").
+        const got = (aRead.body?.lines ?? []).filter((l) => l.nickname === bJoin.body?.member?.nickname).at(-1);
         if (aRead.status === 200 && !got) lnIssues.push(issue("error", "rooms_logic", "B 댓글이 방장에게 안 보임"));
+        if (got) lnIssues.push(...checkDelivered("rooms", text, got.text, { label: "방장이 받은 B 댓글" }));
         if (got && got.nickname !== bJoin.body?.member?.nickname) lnIssues.push(issue("warn", "rooms_logic", `댓글 이름이 B 이름이 아님: ${got.nickname}`));
         step({ title: "B 댓글 → A가 받기", input: text, status: line.status, ms: line.ms, outputs: [{ label: "받은 줄", text: got ? `${got.nickname}: ${got.text}` : "" }], issues: lnIssues });
 

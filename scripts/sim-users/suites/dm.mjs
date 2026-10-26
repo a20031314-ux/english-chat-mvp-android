@@ -7,7 +7,7 @@
  *
  * 계정은 숨김·끝에 삭제. 모델 호출 없음. 14명 중 1명.
  */
-import { checkHttp, checkText, issue } from "../detect.mjs";
+import { checkDelivered, checkHttp, checkText, issue } from "../detect.mjs";
 import { expectError, makeAccounts } from "../accounts.mjs";
 
 export default {
@@ -64,6 +64,9 @@ export default {
       const aPoll = await acc.dm(A, "poll", { threadId, since: 0 });
       const count = (aPoll.body?.messages ?? []).filter((m) => m.kind === "text").length;
       if (aPoll.status === 200 && count !== 5) oIssues.push(issue("error", "dm_logic", `메시지가 ${count}개(5개여야)`));
+      // B가 보낸 답이 A에게 잘리지 않고 다 갔는지(사용자 2026-10-27 "다른 사용자의 발화가 끊기지 않는지").
+      const bLast = (aPoll.body?.messages ?? []).filter((m) => m.from === B.id && m.kind === "text").at(-1);
+      if (bLast) oIssues.push(...checkDelivered("dm", say(4), bLast.text, { label: "A가 받은 B 답" }));
       step({ title: "B가 답하면 대화 열림", input: say(4), status: reply.status, ms: reply.ms, outputs: [{ label: "대화", text: `${reply.body?.thread?.status} · 메시지 ${count}` }], issues: oIssues });
 
       // ── 집어 묻기 ──

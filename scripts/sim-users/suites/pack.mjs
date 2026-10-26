@@ -5,7 +5,7 @@
  * 포인트 헤더를 보내지 않아 무료 통화 시간·포인트가 줄지 않는다. 튜터가 지어낸 문장이 문장 은행 후보 저장소에
  * 쌓이므로(noteSentenceWritten) 4명 중 1명만.
  */
-import { checkAboutTheirLine, checkHttp, checkText, issue } from "../detect.mjs";
+import { checkAboutTheirLine, checkCutOff, checkHttp, checkOffContext, checkText, issue } from "../detect.mjs";
 
 function kstDay() {
   return new Date(Date.now() + 9 * 3600_000).toISOString().slice(0, 10);
@@ -72,6 +72,9 @@ export default {
         if (d.note && d.assessment !== "stuck") issues.push(...checkAboutTheirLine(P, { tip: d.note, heard: lines[i], otherSaid: [say, history.at(-1)?.text ?? ""], label: "통화 팁" }));
         if (d.better) issues.push(...checkText(P, persona, typeof d.better === "string" ? d.better : d.better?.text, { lang: "target", label: "더 나은 말" }));
         if (says.includes(say) && say) issues.push(issue("error", "call_repeat", "앞 턴과 같은 튜터 말", { sample: say.slice(0, 80) }));
+        // 끊긴 말·맥락과 무관한 말(자기 말을 학습자 말로, 역할 뒤바뀜) — 사용자 2026-10-27.
+        issues.push(...checkCutOff(P, say, { label: "통화 튜터 말", lang }));
+        issues.push(...checkOffContext(P, { reply: say, heard: lines[i], tutorLines: says, label: "통화 튜터 말" }));
         if (d.next?.end && i < lines.length - 1) issues.push(issue("warn", "call_logic", "몇 턴 만에 통화가 끝남", { sample: say.slice(0, 80) }));
       }
       step({ title: `통화 턴 ${i + 1}${practice ? " (팩)" : ""}`, input: lines[i], status: res.status, ms: res.ms, outputs: [{ label: "튜터", text: say }, { label: "팁", text: d.note }, { label: "더 나은 말", text: typeof d.better === "string" ? d.better : d.better?.text }], issues });

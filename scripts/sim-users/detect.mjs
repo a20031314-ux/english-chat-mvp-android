@@ -165,6 +165,10 @@ export function detectTurn({ persona, turn, response, previousReplies = [] }) {
   const rude = RUDE[target];
   if (rude && rude.test(reply)) out.push(issue("error", "rude_reply", "튜터 답에 거친 말", { sample: reply.slice(0, 80) }));
 
+  // 끊긴 답·맥락과 무관한 답(자기 말을 학습자 말로, 역할 뒤바뀜) — 사용자 2026-10-27.
+  out.push(...checkCutOff("reply", reply, { label: "튜터 답", lang: target }));
+  out.push(...checkOffContext("reply", { reply, heard: turn.text, tutorLines: previousReplies }));
+
   // 같은 답 반복
   if (previousReplies.some((prev) => norm(prev) === norm(reply))) {
     out.push(issue("error", "repeated_reply", "앞 턴과 같은 답", { sample: reply.slice(0, 80) }));
@@ -314,6 +318,47 @@ export function checkAboutTheirLine(prefix, { tip, heard, otherSaid = [], label 
   const lines = otherSaid.filter((line) => typeof line === "string" && line.trim());
   if (!lines.length || !quotesOwnLine(value, lines, String(heard))) return [];
   return [issue("warn", `${prefix}_tip_offtopic`, `${label}: 내 말이 아니라 상대 말을 설명함`, { sample: value.slice(0, 120) })];
+}
+
+/**
+ * 말이 중간에 끊겼는가(사용자 2026-10-27 "튜터·다른 사용자의 발화가 끊기지 않는지"): 쉼표·쌍점·줄표로 끝나거나
+ * 영어에서 and·but·the 같은 낱말로 끝나면 문장이 잘린 것으로 본다. 채팅은 끝 문장부호를 빼도 되므로 그것만으로는 보지 않는다.
+ */
+const DANGLING_EN = /\b(?:and|but|because|so|or|the|a|an|to|of|with|for|my|your|that|which)\s*$/i;
+export function checkCutOff(prefix, text, { label = "말", lang = null } = {}) {
+  const value = typeof text === "string" ? text.trim() : "";
+  if (!value) return [];
+  const cut = /[,、，:;：；—–-]$/u.test(value) || ((lang === "en" || lang === null) && DANGLING_EN.test(value));
+  return cut ? [issue("warn", `${prefix}_cut_off`, `${label}이 중간에 끊김`, { sample: value.slice(-80) })] : [];
+}
+
+/** 보낸 줄이 상대에게 다 갔는가(사람끼리 대화·방): 받은 줄이 보낸 줄과 다르면(짧아지면) error. */
+export function checkDelivered(prefix, sent, got, { label = "받은 줄" } = {}) {
+  if (typeof got !== "string" || typeof sent !== "string") return [];
+  const n = (t) => t.normalize("NFKC").replace(/\s+/g, " ").trim();
+  if (n(got) === n(sent)) return [];
+  return [issue("error", `${prefix}_line_cut`, `${label}이 보낸 줄과 다름(잘림·바뀜)`, { sample: `${sent.slice(0, 60)} → ${got.slice(0, 60)}` })];
+}
+
+/**
+ * 맥락과 무관한 말(사용자 2026-10-27): 튜터가 자기 말을 학습자 말로 받거나(“you said you began…”이 튜터 자기 이야기),
+ * 자기가 연 질문에 자기가 답해 역할이 뒤바뀜(“Hey, you're the new person?” → 학습자 "Hi" → 튜터 "Yeah, that's me").
+ */
+const ATTRIBUTE_RE = /\byou (?:said|mentioned|told me|began|started|were saying)\b/i;
+const ROLE_FLIP_RE = /\b(?:yeah|yes|yep)[,!.]?\s+(?:that'?s|that is|it'?s) me\b|\bthat'?s me\b/i;
+export function checkOffContext(prefix, { reply, heard, tutorLines = [], label = "튜터 말" }) {
+  const value = typeof reply === "string" ? reply.trim() : "";
+  if (!value) return [];
+  const own = tutorLines.filter((line) => typeof line === "string" && line.trim());
+  const out = [];
+  if (ATTRIBUTE_RE.test(value) && own.length && quotesOwnLine(value, own, String(heard ?? ""))) {
+    out.push(issue("warn", `${prefix}_own_line_as_theirs`, `${label}: 자기가 한 말을 학습자가 한 말로 받음`, { sample: value.slice(0, 120) }));
+  }
+  const asked = own.at(-1) ?? "";
+  if (ROLE_FLIP_RE.test(value) && /\byou(?:'re| are)\b[^?]*\?/i.test(asked) && !/\byou(?:'re| are)\b/i.test(String(heard ?? ""))) {
+    out.push(issue("warn", `${prefix}_role_flip`, `${label}: 자기가 물은 말에 자기가 답함(역할 뒤바뀜)`, { sample: `${asked.slice(0, 60)} → ${value.slice(0, 60)}` }));
+  }
+  return out;
 }
 
 export { issue };
