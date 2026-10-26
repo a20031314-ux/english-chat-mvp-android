@@ -284,7 +284,6 @@ function AppHomeInner({
       }),
     [openTab, offList],
   );
-  useEffect(() => onAppIntent("openTopic", () => openTab("map")), [openTab]);
 
   useEffect(() => {
     const onPopState = (event: PopStateEvent) => {

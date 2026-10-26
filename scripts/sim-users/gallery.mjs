@@ -21,7 +21,7 @@ const results = JSON.parse(fs.readFileSync(path.join(dir, "screens.json"), "utf8
 const GROUPS = [
   { name: "채팅", ids: ["chat-correct", "chat-expression", "chat-reading", "sentence-ask", "word-card"] },
   { name: "단어장", ids: ["vocab-search"] },
-  { name: "My · 지도", ids: ["selfcheck", "map", "mission", "today", "growth", "element", "myask", "ledger"] },
+  { name: "My · 지도", ids: ["selfcheck", "map", "growth", "ledger"] },
   { name: "통화 · 영상", ids: ["call-home", "video-library"] },
   { name: "프로필", ids: ["account", "account-edit"] },
   { name: "노트", ids: ["notes", "notes-words"] },

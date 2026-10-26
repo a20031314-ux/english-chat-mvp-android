@@ -121,7 +121,6 @@ export function NextStepCard({
   targetLanguage,
   canCall: languageHasCall,
   onStart,
-  onOpenTopic,
   refreshKey,
 }: {
   ui: UICopy;
@@ -131,7 +130,6 @@ export function NextStepCard({
   canCall: boolean;
   /** Start here instead of sending a request to another tab. */
   onStart?: (request: PracticeRequest) => void;
-  onOpenTopic?: (topicId: string) => void;
   /** Changes when what the steps are made from changes (a new map), so they are read again. */
   refreshKey?: string | null;
 }) {
@@ -159,7 +157,8 @@ export function NextStepCard({
   const steps = useMemo(
     () =>
       (data?.steps ?? []).filter(
-        (step) => (passes[step.key] ?? 0) < 3 && (step.tab !== "roleplay" || canCall || step.goal),
+        // 지도 할 일(미션)은 새 앱에 화면이 없다(2026-10-27 My 예전 목표 지도 뺌) — 서버는 2.74 이하 앱에 그대로 준다.
+        (step) => step.tab !== "map" && (passes[step.key] ?? 0) < 3 && (step.tab !== "roleplay" || canCall || step.goal),
       ),
     [data, passes, canCall],
   );
@@ -176,7 +175,7 @@ export function NextStepCard({
   if (!step) return null;
   const labelOk = !data?.labelLanguage || data.labelLanguage === locale;
   const { title } = stepTexts(step, ui, labelOk);
-  const preferred: "chat" | "roleplay" | "map" = step.tab === "roleplay" && !canCall ? "chat" : step.tab;
+  const preferred: "chat" | "roleplay" = step.tab === "roleplay" && !canCall ? "chat" : step.tab === "roleplay" ? "roleplay" : "chat";
 
   const start = (tab: "chat" | "roleplay") => {
     if (!step.goal) return;
@@ -189,19 +188,8 @@ export function NextStepCard({
     if (onStart) onStart(request);
     else sendAppIntent("practice", request);
   };
-  const openTopic = () => {
-    if (!step.topicId) return;
-    if (onOpenTopic) onOpenTopic(step.topicId);
-    else {
-      sendAppIntent("openTopic", { topicId: step.topicId });
-      sendAppIntent("openTab", { tab: "map" });
-    }
-  };
-
   const buttons: Array<{ label: string; act: () => void; primary: boolean }> = [];
-  if (preferred === "map") {
-    buttons.push({ label: ui.nextOnMap, act: openTopic, primary: true });
-  } else {
+  {
     const order: Array<"chat" | "roleplay"> = preferred === "roleplay" ? ["roleplay", "chat"] : ["chat", "roleplay"];
     for (const tab of order) {
       if (tab === "roleplay" && !canCall) continue;

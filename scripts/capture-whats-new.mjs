@@ -164,10 +164,7 @@ const GUIDE_ITEMS = [
   // 2.71: My 첫 화면 맨 위 "이런 대화, 할 수 있어요?"(단계 고르기, 사용법 my.start).
   { shot: "stage-start" },
   { shot: "goal" },
-  { shot: "next" },
-  // 2.75: 네 갈래(기록은 끼움). myask는 앞의 채팅 기록이 있어야 답이 나와 growth(채팅 몇 줄)를 그림 없이 먼저.
-  { shot: "growth", save: false },
-  { shot: "myask" },
+  // 2.75: 네 갈래(기록은 끼움). 직접 묻기·My의 오늘 해볼 것은 2026-10-27에 뺐다.
   { shot: "parts-net" },
   { shot: "parts-graph" },
   { shot: "stage-next" },
@@ -215,20 +212,13 @@ const STORE_MY = VERSION === "store-my";
 const STORE_TABS = VERSION === "store-tabs";
 const STORE = STORE_MY || STORE_TABS;
 const STORE_MY_ITEMS = [
-  // The map, missions and weak spots sit in My's map view; growth in the network
-  // view. The mission step draws the map when there is none yet.
+  // My: 단계 시작·내 표현·자라는 중·오늘의 학습(예전 지도·미션·직접 묻기는 2026-10-27에 뺐다).
   // 2.71: 지도가 없을 때 맨 위 "이런 대화, 할 수 있어요?"(대화 예시로 시작 단계 고르기).
   { shot: "stage-start" },
   { shot: "view-map", save: false },
-  { shot: "mission" },
-  { shot: "progress" },
   { shot: "ledger" },
-  { shot: "weak" },
   { shot: "view-net", save: false },
   { shot: "growth" },
-  { shot: "element" },
-  { shot: "myask" },
-  { shot: "mapview" },
   // 2.73: 노트 "오늘의 학습"(고정 응답으로 후보만 바꿔 끼움 — 맨 끝에).
   { shot: "notebook-today" },
 ];
@@ -411,23 +401,6 @@ const GOAL = {
   ar: "أريد أن أتحدث بشكل طبيعي مع زملائي على العشاء خلال رحلة عمل",
   th: "อยากคุยเล่นกับเพื่อนร่วมงานได้อย่างเป็นธรรมชาติตอนกินข้าวเย็นระหว่างไปทำงานต่างประเทศ",
   hi: "बिज़नेस ट्रिप पर डिनर के दौरान सहकर्मियों से सहज होकर बातचीत करना चाहता हूँ",
-};
-
-/**
- * The same kind of mistake twice, in the language being learned (English, or
- * Spanish for the English interface), so the map takes it in as a weak spot.
- */
-const REPEATED_MISTAKE = {
-  en: ["Yesterday I go to the office early and eat breakfast there.", "Last weekend I meet my friends and we watch a movie."],
-  // One kind of mistake only (ser for estar); "Ayer yo soy…" also changed the
-  // tense and was read as a different kind.
-  es: ["Hoy yo soy muy cansado después del trabajo.", "Mi hermana es enferma desde el lunes.", "Ahora yo soy muy contento con mi trabajo."],
-  // 조사 하나(に会う → を会う)만 틀린다.
-  ja: ["昨日、駅で友達を会いました。", "週末、先生を会って少し話しました。", "明日、母を会う予定です。"],
-  // 양사 하나(个)만 틀린다.
-  zh: ["我昨天买了一个书。", "她家有三个猫。", "我想喝一个咖啡。"],
-  // 목적격 조사(을/를 → 이/가) 하나만 틀린다.
-  ko: ["저는 아침마다 커피가 마셔요.", "어제 친구랑 영화가 봤어요.", "주말에 책이 읽었어요."],
 };
 
 /** A call already had, read back, with one sentence rebuilt into what was meant. */
@@ -1749,14 +1722,6 @@ const STEPS = {
     await page.getByRole("button", { name: exactly(ui.vocabTabCharacters) }).first().click();
     await wait(2000);
   },
-  async next({ page, ui, locale, wait }) {
-    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
-    await wait(1500);
-    if (await page.getByRole("button", { name: ui.mapDraw }).count()) await STEPS.map({ page, ui, locale, wait });
-    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
-    for (let i = 0; i < 30 && !(await page.getByRole("button", { name: ui.nextByChat }).count()); i++) await wait(500);
-    await wait(1200);
-  },
   async growth({ page, ui, wait, target }) {
     await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
     await wait(4000);
@@ -1778,34 +1743,9 @@ const STEPS = {
     await page.mouse.wheel(0, -90);
     await wait(800);
   },
-  async element({ page, ui, wait }) {
-    await page.locator(`[aria-label^="${ui.myElAccuracy}"]`).first().click();
-    await wait(1500);
-  },
-  async myask({ page, ui, wait }) {
-    // 2.75부터 앞 장면이 시트를 열지 않는다 — 열려 있을 때만 닫는다.
-    const close = page.locator("[role=dialog]").getByRole("button", { name: ui.billingClose });
-    if (await close.count()) await close.first().click();
-    await wait(600);
-    await page.getByRole("button", { name: exactly(ui.myAskQuick1) }).first().click();
-    await wait(1000);
-    for (let i = 0; i < 45 && (await page.getByText(ui.myAskThinking).count()); i++) await wait(1000);
-    await wait(800);
-    await page.getByRole("button", { name: new RegExp(escape(ui.myGrowIt)) }).first().scrollIntoViewIfNeeded().catch(() => undefined);
-    await page.mouse.wheel(0, 120);
-    await wait(800);
-  },
   async graph({ page, ui, wait }) {
     await page.getByRole("button", { name: exactly(ui.myViewGraph) }).first().click();
     await wait(1200);
-    await page.locator(`section[aria-label="${ui.myNetworkTitle}"]`).first().evaluate((el) => el.scrollIntoView({ block: "start" }));
-    await page.mouse.wheel(0, -90);
-    await wait(800);
-  },
-  async mapview({ page, ui, wait }) {
-    const toggle = page.getByRole("button", { name: exactly(ui.myViewMap) }).first();
-    await toggle.click();
-    await wait(1800);
     await page.locator(`section[aria-label="${ui.myNetworkTitle}"]`).first().evaluate((el) => el.scrollIntoView({ block: "start" }));
     await page.mouse.wheel(0, -90);
     await wait(800);
@@ -1965,15 +1905,9 @@ const STEPS = {
   async pick({ page, ui, wait }) {
     // Continues from the links step: a phrase from the tutor's reply.
     await STEPS.ask({ page, ui, wait });
+    // "지도에 넣기"는 2026-10-27에 뺐다 — 알아요/모르겠어요 표시만.
     await page.getByRole("button", { name: exactly(ui.markUnknown) }).first().click();
-    await wait(800);
-    await page.getByRole("button", { name: exactly(ui.markToMap) }).first().click();
-    const done = ui.markedToMap.split("{topic}")[0].trim();
-    for (let i = 0; i < 60; i++) {
-      await wait(1000);
-      if (done && (await page.locator("[role=dialog]").innerText()).includes(done)) break;
-    }
-    await page.getByRole("button", { name: exactly(ui.markOpenMap) }).first().scrollIntoViewIfNeeded().catch(() => undefined);
+    await page.getByRole("button", { name: exactly(ui.markUnknown) }).first().scrollIntoViewIfNeeded().catch(() => undefined);
     await wait(800);
   },
   async "call-pack"({ page, ui, wait }) {
@@ -2081,64 +2015,6 @@ const STEPS = {
     }
     await wait(1200);
   },
-  async mission({ page, ui, locale, wait }) {
-    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
-    await wait(1500);
-    if (await page.getByRole("button", { name: ui.mapDraw }).count()) await STEPS.map({ page, ui, locale, wait });
-    await page.getByRole("button", { name: new RegExp(escape(ui.mapContinue)) }).first().click();
-    await wait(1000);
-    const missions = page.waitForResponse((r) => r.url().includes("/api/curriculum/missions"), { timeout: 90000 });
-    await page.getByRole("button", { name: new RegExp(escape(ui.missionStart)) }).first().click();
-    const data = await (await missions).json();
-    const order = [...data.missions.filter((m) => m.weak), ...data.missions.filter((m) => !m.weak)];
-    await wait(1200);
-    await page.getByRole("button", { name: exactly(ui.missionHint) }).click();
-    await wait(500);
-    await page.locator("textarea:visible").last().fill(withSlip(order[0].answer));
-    await page.getByRole("button", { name: exactly(ui.missionCheck) }).click();
-    const checking = ui.missionChecking.replace("…", "");
-    for (let i = 0; i < 45; i++) {
-      await wait(1000);
-      if (!(await page.locator("body").innerText()).includes(checking)) break;
-    }
-    await wait(1500);
-  },
-  async progress({ page, ui, wait }) {
-    // Continues from the mission: back on the map, the topic's phrases by state.
-    // 정확히 "닫기"만: 이름에 같은 낱말이 든 다른 버튼(스페인어 Cerrar…)을 누르지 않게.
-    await page.getByRole("button", { name: exactly(ui.billingClose) }).first().click();
-    // The map reloads its counts when the task screen closes.
-    await page.waitForResponse((r) => r.url().includes("/api/curriculum?"), { timeout: 30000 }).catch(() => undefined);
-    await wait(2000);
-    await page.getByRole("button", { name: new RegExp(escape(ui.mapContinue)) }).first().click();
-    for (let i = 0; i < 20 && !(await page.getByText(ui.topicItemsTitle).count()); i++) await wait(500);
-    await wait(1200);
-  },
-  async weak({ page, ui, wait, target }) {
-    await page.goto(`${BASE}/?screen=chat`, { waitUntil: "networkidle" });
-    await wait(1200);
-    for (const line of REPEATED_MISTAKE[target]) {
-      const before = await tutorLines(page).count();
-      await page.locator("textarea:visible").first().fill(line);
-      await page.getByRole("button", { name: exactly(ui.send) }).click();
-      for (let i = 0; i < 60; i++) {
-        await wait(500);
-        if ((await tutorLines(page).count()) > before) break;
-      }
-      await wait(1500);
-    }
-    // The map takes the mistake in after the reply has gone out.
-    const chip = ui.mapWeakChip.split("{n}")[0].trim();
-    for (let i = 0; i < 24; i++) {
-      await wait(5000);
-      await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
-      await wait(1500);
-      if ((await page.locator("body").innerText()).includes(chip)) break;
-    }
-    await page.getByText(ui.mapOrderTitle).first().scrollIntoViewIfNeeded();
-    await page.mouse.wheel(0, -260);
-    await wait(800);
-  },
   async meant({ page, ui, wait, target, said: lines }) {
     const now = Date.now();
     await page.evaluate(([said, language, at]) => {
@@ -2193,12 +2069,8 @@ const SPOTS = {
   "stage-start": ({ page, ui }) => page.getByRole("button", { name: exactly(ui.stageCan) }).locator(".."),
   goal: ({ page, ui }) => page.getByRole("button", { name: ui.mapDraw }),
   "chat-fix": ({ page, ui }) => page.getByRole("button", { name: new RegExp(escape(ui.chatCorrectionChip)) }).last(),
-  next: ({ page, ui }) => page.getByRole("button", { name: ui.nextByChat }),
   growth: ({ page, ui }) => page.getByText(ui.myNext, { exact: true }),
   graph: ({ page, ui }) => exactLabel(page, ui.myViewGraph),
-  element: ({ page, ui }) => page.locator("[role=dialog]").getByRole("button", { name: new RegExp(escape(ui.myGrowIt)) }),
-  myask: ({ page, ui }) => page.getByRole("button", { name: new RegExp(escape(ui.myGrowIt)) }),
-  mapview: ({ page, ui }) => exactLabel(page, ui.myViewMap),
   chatnext: ({ page, ui }) => page.getByText(ui.practiceNow, { exact: true }),
   "chat-expression": ({ page, ui }) => exactLabel(page, ui.chatUseExpression).last(),
   "chat-reading": ({ page, ui }) => exactLabel(page, ui.chatReading).last(),

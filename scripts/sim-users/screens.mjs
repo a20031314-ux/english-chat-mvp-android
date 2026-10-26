@@ -348,43 +348,6 @@ const SCENES = [
     },
   },
   {
-    id: "mission",
-    label: "지도 — 미션을 써 보면 확인·교정",
-    async run({ page, ui, wait, state }) {
-      await page.getByRole("button", { name: new RegExp(escape(ui.mapContinue)) }).first().click();
-      await wait(1000);
-      const missions = page.waitForResponse((r) => r.url().includes("/api/curriculum/missions"), { timeout: 90000 });
-      await page.getByRole("button", { name: new RegExp(escape(ui.missionStart)) }).first().click();
-      const data = await (await missions).json();
-      state.mission = data.missions?.[0];
-      await wait(1200);
-      await page.getByRole("button", { name: exactly(ui.missionHint) }).click();
-      await wait(500);
-      // 예시 답에서 한 낱말을 빼서 고칠 거리를 남긴다.
-      const words = String(state.mission?.answer ?? "").split(" ");
-      const answer = words.length > 3 ? [words[0], ...words.slice(2)].join(" ") : String(state.mission?.answer ?? "");
-      await page.locator("textarea:visible").last().fill(answer);
-      await page.getByRole("button", { name: exactly(ui.missionCheck) }).click();
-      const checking = ui.missionChecking.replace("…", "");
-      for (let i = 0; i < 45; i++) {
-        await wait(1000);
-        if (!(await page.locator("body").innerText()).includes(checking)) break;
-      }
-      await wait(1500);
-    },
-  },
-  {
-    id: "today",
-    label: "My — \"오늘 해볼 것\" 카드",
-    async run({ page, ui, wait }) {
-      await page.goto(`${BASE}/?screen=map`, { waitUntil: "domcontentloaded" });
-      for (let i = 0; i < 30 && !(await page.getByRole("button", { name: ui.nextByChat }).count()); i++) await wait(500);
-      await page.getByRole("button", { name: ui.nextByChat }).first().scrollIntoViewIfNeeded();
-      await page.mouse.wheel(0, -200);
-      await wait(1200);
-    },
-  },
-  {
     id: "growth",
     label: "My — 맞게 쓴 줄을 보낸 뒤 \"자라는 중\"",
     async run({ page, ui, wait, target }) {
@@ -406,29 +369,6 @@ const SCENES = [
       await wait(5000);
       await page.locator(`section[aria-label="${ui.myNetworkTitle}"]`).first().evaluate((el) => el.scrollIntoView({ block: "start" }));
       await page.mouse.wheel(0, -90);
-      await wait(800);
-    },
-  },
-  {
-    id: "element",
-    label: "My — 요소(정확도)를 누르면 시트",
-    async run({ page, ui, wait }) {
-      await page.locator(`[aria-label^="${ui.myElAccuracy}"]`).first().click();
-      await wait(1500);
-    },
-  },
-  {
-    id: "myask",
-    label: "My — 직접 묻기 답",
-    async run({ page, ui, wait }) {
-      await page.locator("[role=dialog]").getByRole("button", { name: ui.billingClose }).first().click().catch(() => undefined);
-      await wait(600);
-      await page.getByRole("button", { name: exactly(ui.myAskQuick1) }).first().click();
-      await wait(1000);
-      for (let i = 0; i < 45 && (await page.getByText(ui.myAskThinking).count()); i++) await wait(1000);
-      await wait(800);
-      await page.getByRole("button", { name: new RegExp(escape(ui.myGrowIt)) }).first().scrollIntoViewIfNeeded().catch(() => undefined);
-      await page.mouse.wheel(0, 120);
       await wait(800);
     },
   },
@@ -561,7 +501,7 @@ const SCENES = [
   },
   {
     id: "notes",
-    label: "My — 노트(장·주제 목차에 모인 표현·단어)",
+    label: "My — 노트(단어장·모은 표현·질문)",
     async run({ page, ui, wait }) {
       await page.goto(`${BASE}/?screen=map`, { waitUntil: "domcontentloaded" });
       await wait(5000);

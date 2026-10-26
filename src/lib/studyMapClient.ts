@@ -1,13 +1,7 @@
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { StudyMap, TopicStatus } from "@/lib/curriculum/map";
-import type {
-  Mission,
-  MissionCheck,
-  MissionResult,
-  TopicCounts,
-  TopicMissions,
-} from "@/lib/curriculum/missions";
+import type { TopicCounts } from "@/lib/curriculum/missions";
 
 /** What the curriculum routes answer with: the map and how far through it. */
 export type MapRecord = {
@@ -218,31 +212,6 @@ export function finishStudyMapDraw(targetLanguage: string, entry: PendingDraw): 
   if (pendingDraws.get(targetLanguage) === entry) pendingDraws.delete(targetLanguage);
 }
 
-export async function saveTopicStatus(input: {
-  language: string;
-  mapId: string;
-  topicId: string;
-  status: TopicStatus;
-  isPremium: boolean;
-}): Promise<MapRecord | null> {
-  try {
-    const response = await fetch(apiUrl("/api/curriculum/progress"), {
-      method: "POST",
-      headers: { "Content-Type": "application/json", ...entitlementHeaders(input.isPremium) },
-      body: JSON.stringify({
-        language: input.language,
-        mapId: input.mapId,
-        topicId: input.topicId,
-        status: input.status,
-      }),
-    });
-    if (!response.ok) return null;
-    return asRecord(await readJson(response));
-  } catch {
-    return null;
-  }
-}
-
 export async function restorePreviousStudyMap(
   language: string,
   isPremium: boolean,
@@ -276,124 +245,4 @@ export async function findScenes(
   } catch {
     return null;
   }
-}
-
-export type MissionError = "identity" | "limit" | "changed" | "failed";
-
-function missionErrorOf(response: Response): MissionError {
-  if (response.status === 401) return "identity";
-  if (response.status === 403 || response.status === 429) return "limit";
-  if (response.status === 409) return "changed";
-  return "failed";
-}
-
-/** A topic's missions, written on the first visit (api/curriculum/missions). */
-export async function fetchMissions(input: {
-  language: string;
-  mapId: string;
-  topicId: string;
-  isPremium: boolean;
-}): Promise<{ ok: true; topic: TopicMissions } | { ok: false; error: MissionError }> {
-  try {
-    const response = await fetch(apiUrl("/api/curriculum/missions"), {
-      method: "POST",
-      headers: { "Content-Type": "application/json", ...entitlementHeaders(input.isPremium) },
-      body: JSON.stringify({ language: input.language, mapId: input.mapId, topicId: input.topicId }),
-      signal: AbortSignal.timeout(60000),
-    });
-    if (!response.ok) return { ok: false, error: missionErrorOf(response) };
-    const data = await readJson(response);
-    if (!Array.isArray(data.missions)) return { ok: false, error: "failed" };
-    return {
-      ok: true,
-      topic: {
-        missions: data.missions as TopicMissions["missions"],
-        results: (data.results as TopicMissions["results"]) ?? {},
-        ...(data.seen && typeof data.seen === "object" ? { seen: data.seen as TopicMissions["seen"] } : {}),
-      },
-    };
-  } catch {
-    return { ok: false, error: "failed" };
-  }
-}
-
-/** Check one answer. A try counts as a sent chat. */
-export async function checkMission(input: {
-  language: string;
-  mapId: string;
-  topicId: string;
-  missionId: string;
-  answer: string;
-  hints: number;
-  tries: number;
-  isPremium: boolean;
-  /** A review asks a learned item again; producing it then masters it. */
-  mode?: "mission" | "review";
-}): Promise<
-  | {
-      ok: true;
-      check: MissionCheck;
-      results?: Record<string, MissionResult>;
-      status?: TopicStatus;
-    }
-  | { ok: false; error: MissionError }
-> {
-  try {
-    const { isPremium, ...body } = input;
-    const response = await fetch(apiUrl("/api/curriculum/mission-check"), {
-      method: "POST",
-      headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
-      body: JSON.stringify(body),
-      signal: AbortSignal.timeout(45000),
-    });
-    if (!response.ok) return { ok: false, error: missionErrorOf(response) };
-    const data = await readJson(response);
-    if (!data.check || typeof data.check !== "object") return { ok: false, error: "failed" };
-    return {
-      ok: true,
-      check: data.check as MissionCheck,
-      ...(data.results ? { results: data.results as Record<string, MissionResult> } : {}),
-      ...(typeof data.status === "string" ? { status: data.status as TopicStatus } : {}),
-    };
-  } catch {
-    return { ok: false, error: "failed" };
-  }
-}
-
-export type DueItem = { topicId: string; topicTitle: string; mission: Mission };
-
-/** Learned phrases ready to be produced from memory (api/curriculum/review). */
-export async function fetchDueItems(
-  language: string,
-  isPremium: boolean,
-): Promise<{ mapId: string | null; items: DueItem[] } | null> {
-  try {
-    const response = await fetch(apiUrl(`/api/curriculum/review?lang=${encodeURIComponent(language)}`), {
-      headers: entitlementHeaders(isPremium),
-    });
-    if (!response.ok) return null;
-    const data = await readJson(response);
-    return {
-      mapId: typeof data.mapId === "string" ? data.mapId : null,
-      items: Array.isArray(data.items) ? (data.items as DueItem[]) : [],
-    };
-  } catch {
-    return null;
-  }
-}
-
-/** The example answer was opened: a mark beside the item, not progress. */
-export function markMissionSeen(input: {
-  language: string;
-  mapId: string;
-  topicId: string;
-  missionId: string;
-  isPremium: boolean;
-}): void {
-  const { isPremium, ...body } = input;
-  void fetch(apiUrl("/api/curriculum/mission-seen"), {
-    method: "POST",
-    headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
-    body: JSON.stringify(body),
-  }).catch(() => undefined);
 }

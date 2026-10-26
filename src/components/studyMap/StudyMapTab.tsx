@@ -1,47 +1,26 @@
 "use client";
 
 import { voiceCallAvailable } from "@/lib/platform";
-import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { usePremium } from "@/contexts/PremiumContext";
-import { onAppIntent, sendAppIntent, takeAppIntent } from "@/lib/appIntents";
+import { sendAppIntent } from "@/lib/appIntents";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
-import {
-  connectionsOf,
-  listenForPhrases,
-  type MapActivity,
-  type MapTopic,
-  type StudyMap,
-  type TopicStatus,
-} from "@/lib/curriculum/map";
 import {
   finishStudyMapDraw,
   pendingStudyMapDraw,
   startStudyMapDraw,
   subscribeStudyMapDraw,
   type DrawResult,
-  fetchDueItems,
   fetchStudyMap,
-  findScenes,
   restorePreviousStudyMap,
-  saveTopicStatus,
-  type DueItem,
   type MapError,
   type MapRecord,
-  type SceneMatch,
 } from "@/lib/studyMapClient";
-import type { TopicCounts } from "@/lib/curriculum/missions";
-import { recommendedNext, recommendedOrder } from "@/lib/curriculum/recommend";
-import { normalizeYouTubeWatchUrl } from "@/lib/videoLearning";
-import { BodyLayer } from "@/components/FullScreenLayer";
-import { MissionScreen } from "@/components/studyMap/MissionScreen";
-import { TopicItems, ItemBar } from "@/components/studyMap/TopicItems";
-import { LearnerPanel } from "@/components/studyMap/LearnerPanel";
 import { LedgerPanel } from "@/components/studyMap/LedgerPanel";
 import { NotesPanel } from "@/components/notes/NotesPanel";
 import { NotebookSection } from "@/components/notes/NotebookSection";
-import { NextStepCard } from "@/components/NextStepCard";
 import { GrowthNetwork, type BoardMode, type BoardOptions } from "@/components/studyMap/GrowthNetwork";
 import { StageExamples, StagePicker, useStages, type StageView } from "@/components/studyMap/StageCheck";
 import { FOCUS_IDS, GAP_IDS, USE_IDS, type FocusId, type GapId, type UseId } from "@/lib/learner/selfCheck";
@@ -53,30 +32,10 @@ import { readEntryDoor } from "@/lib/doors";
 const noSubscribe = () => () => {};
 
 /**
- * 학습 지도: a learner's goal drawn as topics in four sectors, in an order,
- * with the reasons they connect — and every topic a door into the tab where it
- * is practised.
- *
- * The map itself is made and kept by the server (api/curriculum, lib/curriculum
- * /map.ts); this screen draws it, keeps the learner's place in it, and sends
- * them off: a chat with the first line already typed, a call, the word list, or
- * — the part that is new — the scene in a video where the topic's expressions
- * are actually said (api/video-index/find).
+ * My 탭: 계정 카드 → 자라는 중(네 갈래 어휘·문법·표현·발음 — 망·그래프·단계, NotebookSection) → 내 표현 → 노트(단어장·모은 것).
+ * 지도 기록(api/curriculum)은 단계(stageId)와 체크를 들고 있어 남는다 — "새 목표"·"다음 단계로"가 체크 화면(GoalForm)으로 다시 그린다.
+ * 예전 목표 지도 화면(주제·미션·복습)은 2026-10-27에 뺐다. 서버 API는 2.74 이하 앱이 쓴다.
  */
-
-
-type Clip = { videoId: string; title: string; durationSeconds?: number };
-
-function formatTime(seconds: number): string {
-  const s = Math.max(0, Math.floor(seconds));
-  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
-}
-
-function statusOf(record: MapRecord | null, topicId: string): TopicStatus {
-  return record?.status[topicId] ?? "todo";
-}
-
-
 export function StudyMapTab({
   ui,
   locale,
@@ -106,22 +65,6 @@ export function StudyMapTab({
     };
   }, []);
   const [editing, setEditing] = useState(() => Boolean(pendingStudyMapDraw(targetLanguage)));
-  const [openTopicId, setOpenTopicId] = useState<string | null>(null);
-  const [lastOpenedId, setLastOpenedId] = useState<string | null>(null);
-  const [clips, setClips] = useState<Clip[]>([]);
-  const [missionTopicId, setMissionTopicId] = useState<string | null>(null);
-  const [reviewItems, setReviewItems] = useState<DueItem[] | null>(null);
-
-  // After practice or review the server has moved items along; read it again.
-  const reload = useCallback(async () => {
-    const result = await fetchStudyMap(targetLanguage, isPremium);
-    if (result.ok) setRecord(result.record);
-  }, [targetLanguage, isPremium]);
-
-  const startReview = useCallback(async () => {
-    const due = await fetchDueItems(targetLanguage, isPremium);
-    setReviewItems(due?.items ?? []);
-  }, [targetLanguage, isPremium]);
 
   useEffect(() => {
     let cancelled = false;
@@ -135,12 +78,6 @@ export function StudyMapTab({
         setError(result.error);
       }
     });
-    void fetch(apiUrl(`/api/video-library?language=${encodeURIComponent(targetLanguage)}`))
-      .then((response) => (response.ok ? response.json() : null))
-      .then((data: { clips?: Clip[] } | null) => {
-        if (!cancelled && Array.isArray(data?.clips)) setClips(data.clips);
-      })
-      .catch(() => undefined);
     return () => {
       cancelled = true;
     };
@@ -151,7 +88,6 @@ export function StudyMapTab({
   // 단계 범위(영어·일본어·한국어): 대화 예시로 시작 단계 고르기·지도 위 목표 대화. 지도가 바뀌면 진행을 다시 읽는다.
   const stagesData = useStages(targetLanguage, locale, isPremium, map ? `${map.id}:${Object.keys(record?.missions ?? {}).length}` : "");
   const stages = stagesData?.stages ?? null;
-  const mapStage = map?.stageId ? (stages?.find((stage) => stage.id === map.stageId) ?? null) : null;
   const [startStage, setStartStage] = useState<string | null>(null);
 
   const applyDraw = useCallback((result: DrawResult) => {
@@ -164,8 +100,6 @@ export function StudyMapTab({
     setRecord(result.record);
     setEditing(false);
     setStartStage(null);
-    setOpenTopicId(null);
-    setLastOpenedId(null);
   }, []);
 
   // 그리는 동안 화면을 떠났다 돌아왔으면: 아직 도는 요청을 다시 기다리거나, 그사이 끝난 결과를 받는다.
@@ -211,51 +145,6 @@ export function StudyMapTab({
       setRecord({ ...restored, hasPrevious: true });
       setEditing(false);
     }
-  };
-
-  const setStatus = useCallback(
-    async (topicId: string, status: TopicStatus) => {
-      if (!map) return;
-      // Shown at once; the server's answer replaces it when it comes.
-      setRecord((current) =>
-        current ? { ...current, status: { ...current.status, [topicId]: status } } : current,
-      );
-      const saved = await saveTopicStatus({
-        language: targetLanguage,
-        mapId: map.id,
-        topicId,
-        status,
-        isPremium,
-      });
-      if (saved)
-        setRecord((current) => ({ ...saved, hasPrevious: current?.hasPrevious, missions: current?.missions }));
-    },
-    [map, targetLanguage, isPremium],
-  );
-
-  // "Try this" in another tab can send a learner to a topic's tasks. This tab
-  // mounts only when shown, so that request arrives first: hold it until the
-  // map has loaded, then open the topic (appIntents.ts).
-  const [askedTopic, setAskedTopic] = useState<string | null>(() => takeAppIntent("openTopic")?.topicId ?? null);
-  const openTopic = (topicId: string) => {
-    setOpenTopicId(topicId);
-    setLastOpenedId(topicId);
-    setAskedTopic(null);
-  };
-
-  useEffect(
-    () =>
-      onAppIntent("openTopic", ({ topicId }) => {
-        takeAppIntent("openTopic");
-        setAskedTopic(topicId);
-      }),
-    [],
-  );
-  const sheetTopicId =
-    openTopicId ?? (askedTopic && map?.topics.some((topic) => topic.id === askedTopic) ? askedTopic : null);
-  const closeSheet = () => {
-    setOpenTopicId(null);
-    setAskedTopic(null);
   };
 
   // 수준별 틀(2026-10-24, 사용자 "망·그래프 구조를 노트에 통합"): 예전 "지도" 보기의 단계 목표와 노트 뼈대를 한 틀로.
@@ -309,9 +198,8 @@ export function StudyMapTab({
         ) : null}
       </header>
 
-      {/* A profile, not a map: what to try next, what has piled up, and the
-          goal's map folded underneath for whoever wants it. A learner with no
-          map starts from the ticks, with nothing empty above them. */}
+      {/* Profile: growth (four parts — net, graph, stage) → my expressions → notes. With no map yet, the ticks first.
+          The old goal map (topics, missions), asking about progress, My's "try today" card and the notes index left on 2026-10-27. */}
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-4">
         <div className="mx-auto mb-4 max-w-2xl">
           <AccountCard ui={ui} locale={locale} />
@@ -348,13 +236,13 @@ export function StudyMapTab({
             />
             {!map ? (
               <div className="mx-auto mt-6 max-w-md">
-                <GrowthNetwork ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} board={board} />
+                <GrowthNetwork ui={ui} board={board} />
                 <div className="mt-3">
                   <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
                 </div>
                 {notesOn ? (
                   <div className="mt-3">
-                    <NotesPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
+                    <NotesPanel ui={ui} locale={locale} targetLanguage={targetLanguage} />
                   </div>
                 ) : null}
               </div>
@@ -362,115 +250,19 @@ export function StudyMapTab({
           </>
         ) : map ? (
           <div className="mx-auto max-w-2xl">
-            <div className="mb-3">
-              <NextStepCard
-                ui={ui}
-                locale={locale}
-                targetLanguage={targetLanguage}
-                canCall={scenariosForLanguage(targetLanguage).length > 0}
-                onOpenTopic={openTopic}
-                refreshKey={map.id}
-              />
-            </div>
-            <GrowthNetwork
-              ui={ui}
-              locale={locale}
-              targetLanguage={targetLanguage}
-              isPremium={isPremium}
-              refreshKey={map.id}
-              board={board}
-              mapSlot={
-                <>
-                  <div className="px-1">
-                    <p className="text-[11px] font-semibold tracking-wide text-slate-400">{ui.profileGoalTitle}</p>
-                    <p className="mt-0.5 truncate text-[14px] font-medium text-slate-100">{map.title}</p>
-                  </div>
-
-                  <div className="mt-3">
-                    <LearnerPanel
-                      ui={ui}
-                      locale={locale}
-                      targetLanguage={targetLanguage}
-                      isPremium={isPremium}
-                      onRedraw={() => setEditing(true)}
-                    />
-                  </div>
-                  <div className="mt-3">
-                    <MapView
-                      ui={ui}
-                      locale={locale}
-                      onRedraw={() => setEditing(true)}
-                      map={map}
-                      record={record}
-                      lastOpenedId={lastOpenedId}
-                      onOpenTopic={openTopic}
-                      onReview={() => void startReview()}
-                    />
-                  </div>
-                </>
-              }
-            />
+            <GrowthNetwork ui={ui} board={board} />
             <div className="mt-3">
               <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
             </div>
             {notesOn ? (
               <div className="mt-3">
-                <NotesPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
+                <NotesPanel ui={ui} locale={locale} targetLanguage={targetLanguage} />
               </div>
             ) : null}
           </div>
         ) : null}
       </div>
 
-      {map && sheetTopicId ? (
-        <TopicSheet
-          ui={ui}
-          map={map}
-          topic={map.topics.find((topic) => topic.id === sheetTopicId) ?? null}
-          status={statusOf(record, sheetTopicId)}
-          clips={clips}
-          targetLanguage={targetLanguage}
-          onStatus={(status) => void setStatus(sheetTopicId, status)}
-          onOpenTopic={openTopic}
-          onClose={closeSheet}
-          missions={record?.missions?.[sheetTopicId]}
-          onPractise={() => {
-            setMissionTopicId(sheetTopicId);
-            closeSheet();
-          }}
-        />
-      ) : null}
-
-      {map && missionTopicId ? (() => {
-        const topic = map.topics.find((entry) => entry.id === missionTopicId);
-        return topic ? (
-          <MissionScreen
-            ui={ui}
-            map={map}
-            topic={topic}
-            targetLanguage={targetLanguage}
-            isPremium={isPremium}
-            onClose={() => {
-              setMissionTopicId(null);
-              void reload();
-            }}
-          />
-        ) : null;
-      })() : null}
-
-      {map && reviewItems ? (
-        <MissionScreen
-          ui={ui}
-          map={map}
-          review={reviewItems}
-          targetLanguage={targetLanguage}
-          isPremium={isPremium}
-          onClose={() => {
-            setReviewItems(null);
-            void reload();
-          }}
-        />
-      ) : null}
     </div>
   );
 }
@@ -675,582 +467,6 @@ function GoalForm({
   );
 }
 
-const STATUS_DOT: Record<TopicStatus, string> = {
-  todo: "bg-white/20",
-  doing: "bg-amber-300",
-  done: "bg-emerald-400",
-};
-
-function MapView({
-  ui,
-  locale,
-  onRedraw,
-  map,
-  record,
-  lastOpenedId,
-  onOpenTopic,
-  onReview,
-}: {
-  ui: UICopy;
-  locale: string;
-  onRedraw: () => void;
-  map: StudyMap;
-  record: MapRecord | null;
-  lastOpenedId: string | null;
-  onOpenTopic: (id: string) => void;
-  onReview: () => void;
-}) {
-  const status = record?.status ?? {};
-  // The order recommended now: what they keep getting wrong first, then what
-  // they started, then the drawn order (curriculum/recommend.ts).
-  const recommended = useMemo(
-    () => recommendedOrder(map, record?.status ?? {}, record?.missions ?? {}),
-    [map, record],
-  );
-  const placeOf = useMemo(
-    () => new Map(recommended.map((row) => [row.topic.id, row])),
-    [recommended],
-  );
-  const ordered = useMemo(() => [...map.topics].sort((a, b) => a.order - b.order), [map]);
-  const done = map.topics.filter((topic) => status[topic.id] === "done").length;
-  // Where the map's phrases stand, from what the learner has produced.
-  const items = Object.values(record?.missions ?? {}).reduce(
-    (sum, c) => ({
-      mastered: sum.mastered + c.mastered,
-      learned: sum.learned + c.learned,
-      toLearn: sum.toLearn + c.toLearn,
-      due: sum.due + c.due,
-    }),
-    { mastered: 0, learned: 0, toLearn: 0, due: 0 },
-  );
-  const anyItems = items.mastered + items.learned + items.toLearn > 0;
-  const nextRow = recommendedNext(recommended);
-  const next = nextRow?.topic ?? null;
-  // After a topic is closed, the ones it connects to stay lit.
-  const lit = new Set(
-    lastOpenedId ? connectionsOf(map, lastOpenedId).map((entry) => entry.topic.id) : [],
-  );
-
-  return (
-    <div className="mx-auto flex max-w-2xl flex-col gap-5">
-      {/* A map is written in the language the app was in when it was drawn.
-          Switched to another, its topics would read in the old one. */}
-      {map.uiLanguage && map.uiLanguage !== locale ? (
-        <div className="rounded-xl border border-amber-200/30 bg-amber-200/5 px-3 py-2.5">
-          <p className="text-[12px] leading-relaxed text-amber-100">{ui.mapOtherLanguage}</p>
-          <button
-            type="button"
-            onClick={onRedraw}
-            className="mt-1.5 text-[12px] font-medium text-amber-50 underline underline-offset-4"
-          >
-            {ui.mapRedrawHere}
-          </button>
-        </div>
-      ) : null}
-      <section>
-        <h2 className="text-lg font-semibold text-white">{map.title}</h2>
-        <p className="mt-1 text-[12px] text-slate-500">{map.goal}</p>
-        {map.summary ? (
-          <p className="mt-2 text-[13px] leading-relaxed text-slate-300">{map.summary}</p>
-        ) : null}
-        <div className="mt-3 flex items-center gap-3">
-          <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-white/10">
-            <div
-              className="h-full rounded-full bg-emerald-400"
-              style={{ width: `${map.topics.length ? (done / map.topics.length) * 100 : 0}%` }}
-            />
-          </div>
-          <span className="shrink-0 text-[12px] text-slate-400">
-            {ui.mapProgress.replace("{done}", String(done)).replace("{total}", String(map.topics.length))}
-          </span>
-        </div>
-        {anyItems ? (
-          <div className="mt-3 rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2.5">
-            <ItemBar counts={items} />
-            <p className="mt-1.5 text-[12px] tabular-nums text-slate-300">
-              {ui.mapItemsSummary
-                .replace("{mastered}", String(items.mastered))
-                .replace("{learned}", String(items.learned))
-                .replace("{toLearn}", String(items.toLearn))}
-            </p>
-            {items.due > 0 ? (
-              <button
-                type="button"
-                onClick={onReview}
-                className="mt-2 rounded-lg border border-emerald-400/40 bg-emerald-400/10 px-3 py-1.5 text-[13px] font-medium text-emerald-100"
-              >
-                {ui.reviewStart.replace("{n}", String(items.due))}
-              </button>
-            ) : null}
-          </div>
-        ) : null}
-        {next ? (
-          <button
-            type="button"
-            onClick={() => onOpenTopic(next.id)}
-            className="mt-3 w-full rounded-xl bg-[#e8e8e4] px-4 py-3 text-left text-sm font-medium text-neutral-900 hover:bg-[#f5f5f3]"
-          >
-            {ui.mapContinue}
-            <span className="ms-2 font-normal text-neutral-600">
-              {nextRow?.place}. {next.title}
-            </span>
-            {nextRow?.picked ? (
-              <span className="ms-2 inline-block whitespace-nowrap rounded-full bg-violet-500/15 px-2 py-0.5 text-[11px] font-normal text-violet-700">
-                {ui.mapPickedChip.replace("{n}", String(nextRow.picked))}
-              </span>
-            ) : null}
-            {nextRow?.weak ? (
-              <span className="ms-2 inline-block whitespace-nowrap rounded-full bg-rose-500/15 px-2 py-0.5 text-[11px] font-normal text-rose-700">
-                {ui.mapWeakChip.replace("{n}", String(nextRow.weak))}
-              </span>
-            ) : null}
-          </button>
-        ) : null}
-      </section>
-
-      <section>
-        <p className="text-[11px] font-semibold tracking-wide text-slate-500">{ui.mapOrderTitle}</p>
-        <p className="mt-0.5 text-[11px] text-slate-600">{ui.mapOrderAdaptive}</p>
-        <ol className="mt-2 flex gap-1.5 overflow-x-auto pb-1">
-          {recommended.map(({ topic, place, weak, picked }) => (
-            <li key={topic.id} className="shrink-0">
-              <button
-                type="button"
-                onClick={() => onOpenTopic(topic.id)}
-                className={`flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-[12px] text-slate-300 hover:bg-white/10 ${
-                  picked ? "border-violet-300/40" : weak ? "border-rose-300/40" : "border-white/10"
-                }`}
-              >
-                <span className={`h-1.5 w-1.5 rounded-full ${STATUS_DOT[status[topic.id] ?? "todo"]}`} />
-                {place}. {topic.title}
-                {picked ? (
-                  <span className="whitespace-nowrap text-[11px] text-violet-200">{ui.mapPickedChip.replace("{n}", String(picked))}</span>
-                ) : null}
-                {weak ? (
-                  <span className="whitespace-nowrap text-[11px] text-rose-200">{ui.mapWeakChip.replace("{n}", String(weak))}</span>
-                ) : null}
-              </button>
-            </li>
-          ))}
-        </ol>
-      </section>
-
-      {map.sectors.map((sector) => {
-        const topics = ordered.filter((topic) => topic.sector === sector.id);
-        if (topics.length === 0) return null;
-        return (
-          <section key={sector.id}>
-            <p className="text-[13px] font-semibold text-slate-100">
-              <span className="mr-1.5 text-slate-500">{sector.id}</span>
-              {sector.title}
-            </p>
-            {sector.description ? (
-              <p className="mt-0.5 text-[12px] leading-relaxed text-slate-500">{sector.description}</p>
-            ) : null}
-            <ul className="mt-2 grid grid-cols-2 gap-2">
-              {topics.map((topic) => (
-                <li key={topic.id}>
-                  <button
-                    type="button"
-                    onClick={() => onOpenTopic(topic.id)}
-                    className={`h-full w-full rounded-xl border px-3 py-2.5 text-left transition hover:bg-white/10 ${
-                      lit.has(topic.id)
-                        ? "border-amber-200/50 bg-amber-200/5"
-                        : topic.id === lastOpenedId
-                          ? "border-white/40 bg-white/5"
-                          : "border-white/10 bg-white/[0.03]"
-                    }`}
-                  >
-                    <span className="flex items-center gap-1.5 text-[11px] text-slate-500">
-                      <span className={`h-1.5 w-1.5 rounded-full ${STATUS_DOT[status[topic.id] ?? "todo"]}`} />
-                      {placeOf.get(topic.id)?.place ?? topic.order}
-                    </span>
-                    {placeOf.get(topic.id)?.picked ? (
-                      <span className="me-1 mt-1 inline-block rounded-full bg-violet-300/10 px-1.5 py-0.5 text-[10px] text-violet-200">
-                        {ui.mapPickedChip.replace("{n}", String(placeOf.get(topic.id)!.picked))}
-                      </span>
-                    ) : null}
-                    {placeOf.get(topic.id)?.weak ? (
-                      <span className="mt-1 inline-block rounded-full bg-rose-300/10 px-1.5 py-0.5 text-[10px] text-rose-200">
-                        {ui.mapWeakChip.replace("{n}", String(placeOf.get(topic.id)!.weak))}
-                      </span>
-                    ) : null}
-                    <span className="mt-1 block text-[13px] font-medium leading-snug text-slate-100">
-                      {topic.title}
-                    </span>
-                    {record?.missions?.[topic.id]?.total ? (
-                      <span className="mt-2 block">
-                        <ItemBar counts={record.missions[topic.id]!} />
-                      </span>
-                    ) : null}
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </section>
-        );
-      })}
-    </div>
-  );
-}
-
-function TopicSheet({
-  ui,
-  map,
-  topic,
-  status,
-  clips,
-  targetLanguage,
-  onStatus,
-  onOpenTopic,
-  onClose,
-  missions,
-  onPractise,
-}: {
-  ui: UICopy;
-  map: StudyMap;
-  topic: MapTopic | null;
-  status: TopicStatus;
-  clips: Clip[];
-  targetLanguage: string;
-  onStatus: (status: TopicStatus) => void;
-  onOpenTopic: (id: string) => void;
-  onClose: () => void;
-  missions?: TopicCounts;
-  onPractise: () => void;
-}) {
-  if (!topic) return null;
-  const sector = map.sectors.find((entry) => entry.id === topic.sector);
-  const connections = connectionsOf(map, topic.id);
-
-  // Going to practise counts as starting the topic.
-  const startPractice = () => {
-    if (status === "todo") onStatus("doing");
-  };
-
-  return (
-    <BodyLayer>
-    <div className="fixed inset-0 z-[80] flex flex-col justify-end bg-black/60 p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-[max(0.5rem,env(safe-area-inset-top))] sm:items-center sm:justify-center">
-      <button type="button" className="absolute inset-0 cursor-default" aria-label={ui.billingClose} onClick={onClose} />
-      <div
-        role="dialog"
-        aria-modal="true"
-        aria-labelledby="map-topic-title"
-        className="relative z-10 max-h-full w-full max-w-md overflow-y-auto overscroll-contain rounded-2xl border border-white/10 bg-[#0e0e0e] p-4"
-      >
-        <div className="flex items-start gap-2">
-          <div className="min-w-0 flex-1">
-            <p className="text-[11px] text-slate-500">
-              {sector?.title}
-            </p>
-            <h3 id="map-topic-title" className="mt-0.5 text-base font-semibold text-white">
-              {topic.title}
-            </h3>
-          </div>
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label={ui.billingClose}
-            className="shrink-0 rounded-lg px-2 py-1 text-sm text-slate-400 hover:bg-white/10"
-          >
-            ✕
-          </button>
-        </div>
-        {topic.summary ? (
-          <p className="mt-2 text-[13px] leading-relaxed text-slate-300">{topic.summary}</p>
-        ) : null}
-
-        <div className="mt-3 flex gap-1.5">
-          {(
-            [
-              ["doing", ui.mapMarkDoing],
-              ["done", ui.mapMarkDone],
-            ] as const
-          ).map(([value, label]) => (
-            <button
-              key={value}
-              type="button"
-              onClick={() => onStatus(status === value ? "todo" : value)}
-              aria-pressed={status === value}
-              className={`rounded-full border px-3 py-1 text-[12px] ${
-                status === value
-                  ? value === "done"
-                    ? "border-emerald-400/60 bg-emerald-400/15 text-emerald-200"
-                    : "border-amber-300/60 bg-amber-300/10 text-amber-100"
-                  : "border-white/15 text-slate-400 hover:bg-white/10"
-              }`}
-            >
-              {label}
-            </button>
-          ))}
-        </div>
-
-        {/* The way in that asks the learner to produce something: a task at a
-            time, checked, with the answer held back until they ask for it. */}
-        <button
-          type="button"
-          onClick={onPractise}
-          className="mt-4 w-full rounded-xl bg-[#e8e8e4] px-4 py-3 text-left text-neutral-900 hover:bg-white"
-        >
-          <span className="flex items-center justify-between gap-2">
-            <span className="text-[14px] font-semibold">{ui.missionStart}</span>
-            {missions && missions.total > 0 ? (
-              <span className="text-[12px] tabular-nums text-neutral-600">
-                {ui.missionProgress.replace("{done}", String(missions.done)).replace("{total}", String(missions.total))}
-              </span>
-            ) : null}
-          </span>
-        </button>
-
-        {missions && missions.total > 0 ? (
-          <TopicItems
-            ui={ui}
-            mapId={map.id}
-            topicId={topic.id}
-            targetLanguage={targetLanguage}
-          />
-        ) : null}
-
-        <p className="mt-5 text-[11px] font-semibold tracking-wide text-slate-500">{ui.mapPractice}</p>
-        <ul className="mt-2 space-y-2">
-          {topic.activities.map((activity, index) => (
-            <li key={`${activity.tab}-${index}`}>
-              <ActivityCard
-                ui={ui}
-                topic={topic}
-                activity={activity}
-                clips={clips}
-                targetLanguage={targetLanguage}
-                onGo={() => {
-                  startPractice();
-                  onClose();
-                }}
-              />
-            </li>
-          ))}
-        </ul>
-
-        {connections.length ? (
-          <>
-            <p className="mt-5 text-[11px] font-semibold tracking-wide text-slate-500">
-              {ui.mapConnections}
-            </p>
-            <ul className="mt-2 space-y-1.5">
-              {connections.map(({ topic: other, why }) => (
-                <li key={other.id}>
-                  <button
-                    type="button"
-                    onClick={() => onOpenTopic(other.id)}
-                    className="w-full rounded-lg bg-white/5 px-3 py-2 text-left hover:bg-white/10"
-                  >
-                    <span className="text-[13px] font-medium text-slate-100">
-                      {other.title}
-                    </span>
-                    <span className="mt-0.5 block text-[12px] leading-relaxed text-slate-400">{why}</span>
-                  </button>
-                </li>
-              ))}
-            </ul>
-          </>
-        ) : null}
-      </div>
-    </div>
-    </BodyLayer>
-  );
-}
-
-function ActivityCard({
-  ui,
-  topic,
-  activity,
-  clips,
-  targetLanguage,
-  onGo,
-}: {
-  ui: UICopy;
-  topic: MapTopic;
-  activity: MapActivity;
-  clips: Clip[];
-  targetLanguage: string;
-  onGo: () => void;
-}) {
-  const tabLabel: Record<MapActivity["tab"], string> = {
-    chat: ui.homeTabChat,
-    roleplay: ui.homeTabCall,
-    video: ui.homeTabVideo,
-    vocab: ui.homeTabVocab,
-  };
-
-  // Chat and calls start a conversation that already knows the topic: the
-  // tutor speaks first in it (learner/practice.ts). The word list has nothing
-  // to start, so it only opens.
-  const go = () => {
-    if (activity.tab === "chat" || activity.tab === "roleplay") {
-      sendAppIntent("practice", {
-        tab: activity.tab,
-        goal: { situation: `${topic.title}. ${activity.task}` },
-        title: topic.title,
-      });
-    } else {
-      sendAppIntent("openTab", { tab: activity.tab });
-    }
-    onGo();
-  };
-
-  return (
-    <div className="rounded-xl border border-white/10 bg-white/[0.03] p-3">
-      <p className="text-[11px] font-semibold text-slate-500">{tabLabel[activity.tab]}</p>
-      <p className="mt-1 text-[13px] leading-relaxed text-slate-200">{activity.task}</p>
-      {activity.tab === "chat" && activity.starter ? (
-        <p dir="auto" className="mt-1.5 rounded-lg bg-black/30 px-2.5 py-1.5 text-start text-[13px] text-slate-100">
-          {activity.starter}
-        </p>
-      ) : null}
-      {activity.tab === "video" ? (
-        <VideoActivity ui={ui} activity={activity} clips={clips} targetLanguage={targetLanguage} onGo={onGo} />
-      ) : (
-        <button
-          type="button"
-          onClick={go}
-          className="mt-2 rounded-lg bg-white/15 px-3 py-1.5 text-[12px] text-slate-100 hover:bg-white/20"
-        >
-          {ui.mapGoTo.replace("{tab}", tabLabel[activity.tab])}
-        </button>
-      )}
-    </div>
-  );
-}
-
-function VideoActivity({
-  ui,
-  activity,
-  clips,
-  targetLanguage,
-  onGo,
-}: {
-  ui: UICopy;
-  activity: MapActivity;
-  clips: Clip[];
-  targetLanguage: string;
-  onGo: () => void;
-}) {
-  const phrases = listenForPhrases(activity);
-  const clip = activity.videoId ? clips.find((entry) => entry.videoId === activity.videoId) : undefined;
-  const [scenes, setScenes] = useState<SceneMatch[] | null>(null);
-  const [searching, setSearching] = useState(false);
-  const [failed, setFailed] = useState(false);
-
-  const openVideo = (videoId: string, startSeconds?: number, durationSeconds?: number) => {
-    sendAppIntent("openTab", { tab: "video" });
-    sendAppIntent("openVideo", {
-      url: normalizeYouTubeWatchUrl(videoId),
-      ...(startSeconds != null ? { startSeconds: Math.max(0, startSeconds - 1) } : {}),
-      ...(durationSeconds ? { durationSeconds } : {}),
-    });
-    onGo();
-  };
-
-  const search = async () => {
-    setSearching(true);
-    setFailed(false);
-    const found = await findScenes(targetLanguage, phrases);
-    setSearching(false);
-    if (found === null) setFailed(true);
-    setScenes(found ?? []);
-  };
-
-  return (
-    <div className="mt-2 space-y-2">
-      {phrases.length ? (
-        <div>
-          <p className="text-[11px] text-slate-500">{ui.mapListenFor}</p>
-          <div className="mt-1 flex flex-wrap gap-1.5">
-            {phrases.map((phrase) => (
-              <span key={phrase} className="rounded-full bg-white/10 px-2 py-0.5 text-[12px] text-slate-100">
-                {phrase}
-              </span>
-            ))}
-          </div>
-        </div>
-      ) : null}
-
-      <div className="flex flex-wrap gap-1.5">
-        {phrases.length ? (
-          <button
-            type="button"
-            onClick={() => void search()}
-            disabled={searching}
-            className="rounded-lg bg-white/15 px-3 py-1.5 text-[12px] text-slate-100 hover:bg-white/20 disabled:opacity-50"
-          >
-            {searching ? ui.mapScenesLoading : ui.mapFindScenes}
-          </button>
-        ) : null}
-        {clip ? (
-          <button
-            type="button"
-            onClick={() => openVideo(clip.videoId, undefined, clip.durationSeconds)}
-            className="rounded-lg border border-white/15 px-3 py-1.5 text-left text-[12px] text-slate-300 hover:bg-white/10"
-          >
-            {ui.mapLibraryClip}: <bdi>{clip.title}</bdi>
-          </button>
-        ) : null}
-      </div>
-
-      {scenes ? (
-        scenes.length === 0 ? (
-          <div className="rounded-lg bg-black/30 px-3 py-2">
-            <p className="text-[12px] leading-relaxed text-slate-400">
-              {failed ? ui.mapScenesFailed : ui.mapScenesEmpty}
-            </p>
-            <button
-              type="button"
-              onClick={() => {
-                sendAppIntent("openTab", { tab: "video" });
-                onGo();
-              }}
-              className="mt-1.5 text-[12px] text-slate-200 underline underline-offset-4"
-            >
-              {ui.mapGoTo.replace("{tab}", ui.homeTabVideo)}
-            </button>
-          </div>
-        ) : (
-          <ul className="space-y-2">
-            {scenes.map((match) => (
-              <li key={match.videoId} className="rounded-lg bg-black/30 px-3 py-2">
-                <p className="text-[12px] font-medium text-slate-200">
-                  {match.title || match.videoId}
-                </p>
-                <ul className="mt-1 space-y-1">
-                  {match.found.flatMap((entry) =>
-                    entry.hits.map((hit) => (
-                      <li key={`${entry.expression}-${hit.start}`}>
-                        <button
-                          type="button"
-                          onClick={() => openVideo(match.videoId, hit.start, match.durationSeconds)}
-                          className="w-full rounded-md px-1 py-1 text-left hover:bg-white/10"
-                        >
-                          <span className="mr-1.5 text-[11px] font-semibold text-amber-200/90">
-                            ▶ {formatTime(hit.start)}
-                          </span>
-                          <span className="text-[12px] leading-relaxed text-slate-300">{hit.text}</span>
-                        </button>
-                      </li>
-                    )),
-                  )}
-                </ul>
-              </li>
-            ))}
-          </ul>
-        )
-      ) : null}
-    </div>
-  );
-}
-
-/**
- * My 탭 생성 중 진행(2026-10-23 사용자 "오래 걸려 — 진행 상태를 바로"): 주제 짜기 → 연습 채우기 n/m, 지난 초,
- * 뼈대가 오면 주제 목록을 순서대로 먼저 보여 준다. 진행은 studyMapClient의 그리는 요청에 있어 다른 탭에 갔다 와도 이어진다.
- */
 function MapDrawProgress({ ui, targetLanguage }: { ui: UICopy; targetLanguage: string }) {
   const progress = useSyncExternalStore(
     (listener) => subscribeStudyMapDraw(targetLanguage, listener),

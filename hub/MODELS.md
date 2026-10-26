@@ -21,6 +21,8 @@
 - 주의: Claude가 실패했을 때 다시 시도하는 OpenAI 모델도 종료일이 지나면 같이 꺼집니다. 통화 돌아보기(`roleplayReview`)의 대비 모델 gpt-5-mini는 **2026-12-11** 종료라, 그 전에 Claude로 옮기거나 `OPENAI_REVIEW_MODEL`을 바꿔야 합니다.
 - **받아쓰기·목소리·통화 턴 스트리밍**은 OpenAI만 씁니다(`llm.ts` 밖). 대체할 모델은 아래 표에 있습니다.
 
+- **2026-10-27 확인(코드 기본값 `aiDefaults.ts`):** Claude로 안 옮긴 글 기능 셋 — 통화 튜터 `roleplayTutor`(gpt-4.1-mini, 스트리밍이 OpenAI만), 미션 쓰기·지도에 넣기·약점 미션 `curriculum`(gpt-4.1), 미션 확인 `mission`(gpt-4.1-mini). 셋 다 **2027-01-14** 종료. 미션·지도에 넣기는 같은 날 새 앱 화면에서 뺐다(2.74 이하 앱만 씀). 목소리·받아쓰기는 사용자 결정 대기 그대로.
+
 ## 1. OpenAI 모델 (글 기능은 Claude가 실패했을 때의 대비·`MODEL_ROUTES` 없을 때, 받아쓰기·목소리는 기본 — 키 `OPENAI_API_KEY`)
 
 | 쓰는 곳 | 환경변수 | 기본 모델 | OpenAI 종료일 | OpenAI가 권하는 대체 |

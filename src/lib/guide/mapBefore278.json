@@ -1,0 +1,394 @@
+{
+  "ko": {
+    "my.map": {
+      "heading": "7. 단계로 보기",
+      "body": [
+        "‘{ui:myViewMap}’에는 단계가 1부터 5까지 이어져 있어요. 번호를 누르면 그 단계를 미리 봐요.",
+        "칸을 누르면 펼쳐져요. ‘{ui:partVocab}’은 익힌 낱말과 단어장, ‘{ui:partGrammar}’은 그 단계 문법 칸(✓·‘{ui:stageTry}’), ‘{ui:partExpression}’은 핵심 표현과 ‘{ui:notebookIdioms}’ 칸, ‘{ui:partPronunciation}’은 그 단계 발음 포인트와 글자·소리 칸. 쓸 수 있게 된 표현과 노트에 넣은 장면이 맞는 칸을 채워요.",
+        "아래 ‘{ui:stageExamplesTitle}’에서 그 단계로 되는 대화를 보고 ‘{ui:stageTry}’로 해 봐요. 예전 목표 주제와 할 일은 ‘{ui:partGoalMap}’에 접혀 있어요."
+      ],
+      "shot": "stage-parts"
+    },
+    "my.notes": {
+      "heading": "8. 노트",
+      "body": [
+        "튜터가 고친 줄은 자라는 중 맨 위 ‘{ui:notebookToday}’에 모여요. 남길 것만 체크하고 ‘{ui:notebookAddToNotes}’, ‘{ui:notebookWithScreen}’를 켜면 그때 화면도 붙고, 카드는 ‘{ui:myViewMap}’의 맞는 칸에 들어가요.",
+        "칸을 열어 카드를 옮기거나 메모하고, 이름을 바꾸거나 ‘{ui:notebookMine}’에 칸을 더해요. 노트에는 내 표현·단어·물은 것이 주제별로 모이고, ‘{ui:homeTabVocab}’ 줄은 단어장이에요.",
+        "문장분석에서 ‘{ui:findInMy}’를 누르면 그 부분이 틀의 어느 칸인지 찾아 그 칸을 열어요. ‘{ui:notebookQuestionAdd}’로 한 줄 설명과 그때 화면을 ❓ 카드로 남겨요(사람끼리 대화는 화면 없이)."
+      ],
+      "shot": "notebook-today"
+    },
+    "my.more": {
+      "heading": "그 밖에",
+      "body": [
+        "‘{ui:ledgerTitle}’에 모든 탭에서 만난 표현이 쌓여요. 목표가 바뀌면 ‘{ui:mapNewGoal}’. 배우는 언어마다 따로예요.",
+        "도움 없이 꺼내 쓴 표현만 숙지로 세요(레벨이 아니라 쓸 수 있게 된 표현 수). 튜터가 고친 줄은 ‘{ui:notebookToday}’에서 고른 것만 노트에 남아요. 문장분석에서 표현을 표시하면 내 표현에 남고, 지도에 넣으면 그 표현으로 할 일이 생겨요.",
+        "‘{ui:feedbackOpen}’로 보낸 의견이 반영되면 중요도에 따라 3~20포인트를 드려요."
+      ]
+    }
+  },
+  "en": {
+    "my.map": {
+      "heading": "7. Stages",
+      "body": [
+        "‘{ui:myViewMap}’ runs from stage 1 to 5. Tap a number to look at that stage.",
+        "Tap a part to open it: ‘{ui:partVocab}’ has the words you’ve learned and your word list, ‘{ui:partGrammar}’ the stage’s grammar (✓ and ‘{ui:stageTry}’), ‘{ui:partExpression}’ its key phrases and the ‘{ui:notebookIdioms}’ sections, ‘{ui:partPronunciation}’ the stage’s sound point and the letter-and-sound sections. Phrases you can use and scenes you saved fill the matching section.",
+        "Below, ‘{ui:stageExamplesTitle}’ shows conversations this stage makes possible; try one with ‘{ui:stageTry}’. Your old goal topics and tasks are folded under ‘{ui:partGoalMap}’."
+      ],
+      "shot": "stage-parts"
+    },
+    "my.notes": {
+      "heading": "8. Notes",
+      "body": [
+        "Lines the tutor corrected gather in ‘{ui:notebookToday}’ at the top of Growing. Tick the ones to keep and ‘{ui:notebookAddToNotes}’; turn on ‘{ui:notebookWithScreen}’ to attach that moment's screen. Cards go into the matching section of ‘{ui:myViewMap}’.",
+        "Open a section to move or annotate cards, rename it, or add your own in ‘{ui:notebookMine}’. Notes gather your phrases, words and questions by topic, and ‘{ui:homeTabVocab}’ opens the word list.",
+        "In sentence analysis, ‘{ui:findInMy}’ finds which section that part belongs to and opens it. ‘{ui:notebookQuestionAdd}’ keeps a ❓ card with a one-line explanation and that moment's screen (no screen for chats with people)."
+      ],
+      "shot": "notebook-today"
+    },
+    "my.more": {
+      "heading": "Also",
+      "body": [
+        "‘{ui:ledgerTitle}’ gathers phrases from every tab. New goal? ‘{ui:mapNewGoal}’. Each learning language has its own.",
+        "Only phrases you produced without help count as mastered (not a level, just how many you can use). Of the lines the tutor corrected, only the ones you pick in ‘{ui:notebookToday}’ stay in your notes. Marking a phrase in sentence analysis keeps it in My phrases; adding it to the map makes a task for it.",
+        "If feedback you send with ‘{ui:feedbackOpen}’ is adopted, you get 3–20 points depending on how much it matters."
+      ]
+    }
+  },
+  "es": {
+    "my.map": {
+      "heading": "7. Etapas",
+      "body": [
+        "«{ui:myViewMap}» va de la etapa 1 a la 5. Toca un número para ver esa etapa.",
+        "Toca una parte para abrirla: «{ui:partVocab}» con tus palabras y la lista de palabras, «{ui:partGrammar}» con la gramática de la etapa (✓ y «{ui:stageTry}»), «{ui:partExpression}» con sus expresiones clave y las secciones de «{ui:notebookIdioms}», «{ui:partPronunciation}» con el punto de sonido de la etapa y las secciones de letras y sonidos. Lo que ya sabes usar y las escenas guardadas llenan su sección.",
+        "Abajo, «{ui:stageExamplesTitle}» muestra conversaciones posibles en esta etapa; prueba una con «{ui:stageTry}». Tus temas y tareas de antes están en «{ui:partGoalMap}»."
+      ],
+      "shot": "stage-parts"
+    },
+    "my.notes": {
+      "heading": "8. Notas",
+      "body": [
+        "Las frases que corrigió el tutor se juntan en «{ui:notebookToday}», arriba en En crecimiento. Marca las que quieres guardar y toca «{ui:notebookAddToNotes}»; activa «{ui:notebookWithScreen}» para adjuntar la pantalla. Las tarjetas van a la sección que corresponde en «{ui:myViewMap}».",
+        "Abre una sección para mover tarjetas o anotarlas, cambiarle el nombre o añadir la tuya en «{ui:notebookMine}». En las notas se juntan tus expresiones, palabras y preguntas por tema, y la fila «{ui:homeTabVocab}» abre tu vocabulario.",
+        "En el análisis de frase, «{ui:findInMy}» busca a qué sección pertenece esa parte y la abre. «{ui:notebookQuestionAdd}» guarda una tarjeta ❓ con una explicación breve y la pantalla de ese momento (sin pantalla en chats con personas)."
+      ],
+      "shot": "notebook-today"
+    },
+    "my.more": {
+      "heading": "Además",
+      "body": [
+        "«{ui:ledgerTitle}» reúne expresiones de todas las pestañas. ¿Nuevo objetivo? «{ui:mapNewGoal}». Cada idioma tiene lo suyo.",
+        "Solo cuentan como dominadas las expresiones que usaste sin ayuda (no es un nivel, sino cuántas puedes usar). De las frases que corrigió el tutor, solo quedan en tus notas las que eliges en «{ui:notebookToday}». Si marcas una expresión en el análisis de frases, se queda en Mis expresiones; si la añades al mapa, se crea una tarea con ella.",
+        "Si se aplica una opinión que enviaste con «{ui:feedbackOpen}», recibes de 3 a 20 puntos según su importancia."
+      ]
+    }
+  },
+  "ja": {
+    "my.map": {
+      "heading": "7. ステージで見る",
+      "body": [
+        "「{ui:myViewMap}」には段階1〜5が並びます。番号を押すとその段階を先に見られます。",
+        "項目を押すと開きます。「{ui:partVocab}」は覚えた単語と単語帳、「{ui:partGrammar}」はその段階の文法の項目（✓・「{ui:stageTry}」）、「{ui:partExpression}」は大事な表現と「{ui:notebookIdioms}」の項目、「{ui:partPronunciation}」はその段階の発音のポイントと文字・音の項目。使えるようになった表現とノートに入れた場面が合う項目を埋めます。",
+        "下の「{ui:stageExamplesTitle}」でその段階でできる会話を見て、「{ui:stageTry}」で試せます。前の目標テーマとタスクは「{ui:partGoalMap}」にたたんであります。"
+      ],
+      "shot": "stage-parts"
+    },
+    "my.notes": {
+      "heading": "8. ノート",
+      "body": [
+        "チューターが直した文は、伸びているところのいちばん上の「{ui:notebookToday}」に集まります。残すものだけチェックして「{ui:notebookAddToNotes}」。「{ui:notebookWithScreen}」をオンにするとそのときの画面も付き、カードは「{ui:myViewMap}」の合う項目に入ります。",
+        "項目を開くとカードを移動・メモでき、名前を変えたり「{ui:notebookMine}」に項目を足したりできます。ノートには表現・単語・質問がテーマ別に集まり、「{ui:homeTabVocab}」の行は単語帳です。",
+        "文の分析で「{ui:findInMy}」を押すと、その部分がどの項目に入るかを探して開きます。「{ui:notebookQuestionAdd}」で一行の説明とそのときの画面を❓カードとして残せます（人とのチャットは画面なし）。"
+      ],
+      "shot": "notebook-today"
+    },
+    "my.more": {
+      "heading": "そのほか",
+      "body": [
+        "「{ui:ledgerTitle}」に全タブで出会った表現がたまります。目標が変わったら「{ui:mapNewGoal}」。学習言語ごとに別です。",
+        "手助けなしで使えた表現だけを習得と数えます(レベルではなく、使えるようになった表現の数)。チューターが直した文は「{ui:notebookToday}」で選んだものだけがノートに残ります。文の分析で表現に印をつけると自分の表現に残り、マップに入れるとその表現のタスクができます。",
+        "「{ui:feedbackOpen}」で送ったご意見が反映されると、重要度に応じて3〜20ポイントを差し上げます。"
+      ]
+    }
+  },
+  "zh": {
+    "my.map": {
+      "heading": "7. 按阶段看",
+      "body": [
+        "“{ui:myViewMap}”里是第1到第5阶段，点数字可以先看那个阶段。",
+        "点一项会展开：“{ui:partVocab}”是学会的词和单词本，“{ui:partGrammar}”是这个阶段的语法项（✓、“{ui:stageTry}”），“{ui:partExpression}”是核心表达和“{ui:notebookIdioms}”项，“{ui:partPronunciation}”是这个阶段的发音要点和字母·发音项。会用的表达和存进笔记的场景会填进对应的项。",
+        "下面的“{ui:stageExamplesTitle}”展示这个阶段能进行的对话，用“{ui:stageTry}”试一试。以前的目标主题和任务收在“{ui:partGoalMap}”里。"
+      ],
+      "shot": "stage-parts"
+    },
+    "my.notes": {
+      "heading": "8. 笔记",
+      "body": [
+        "导师改过的句子汇总在“成长中”顶部的“{ui:notebookToday}”里。只勾选要留下的，点“{ui:notebookAddToNotes}”；打开“{ui:notebookWithScreen}”还能附上当时的画面，卡片会放进“{ui:myViewMap}”里对应的部分。",
+        "打开部分可以移动卡片、写备注、改名，或在“{ui:notebookMine}”里新增部分。笔记按主题汇总你的表达、单词和提问，“{ui:homeTabVocab}”一行是单词本。",
+        "在句子分析里点“{ui:findInMy}”，会找到这部分属于哪个部分并打开。点“{ui:notebookQuestionAdd}”可把一句说明和当时的画面存成 ❓ 卡片（和真人聊天时不附画面）。"
+      ],
+      "shot": "notebook-today"
+    },
+    "my.more": {
+      "heading": "其他",
+      "body": [
+        "“{ui:ledgerTitle}”汇集了各个标签页遇到的表达。目标变了就点“{ui:mapNewGoal}”。每种学习语言各自独立。",
+        "只有不靠帮助说出的表达才算掌握(不是等级，而是你能用的表达数量)。导师改过的句子，只有在“{ui:notebookToday}”里选中的才会留在笔记里。在句子分析里标记表达会留在我的表达里，加到地图上就会生成相关任务。",
+        "通过“{ui:feedbackOpen}”发送的意见被采纳后，会按重要程度给你3到20积分。"
+      ]
+    }
+  },
+  "vi": {
+    "my.map": {
+      "heading": "7. Xem theo giai đoạn",
+      "body": [
+        "“{ui:myViewMap}” có các giai đoạn từ 1 đến 5. Chạm số để xem trước giai đoạn đó.",
+        "Chạm một phần để mở: “{ui:partVocab}” có từ đã học và sổ từ, “{ui:partGrammar}” có ngữ pháp của giai đoạn (✓ và “{ui:stageTry}”), “{ui:partExpression}” có các cách nói chính và mục “{ui:notebookIdioms}”, “{ui:partPronunciation}” có điểm phát âm của giai đoạn và mục chữ cái·âm. Cách nói bạn dùng được và cảnh bạn lưu sẽ lấp vào mục phù hợp.",
+        "Bên dưới, “{ui:stageExamplesTitle}” cho thấy những cuộc trò chuyện giai đoạn này làm được; thử bằng “{ui:stageTry}”. Chủ đề và nhiệm vụ cũ nằm gọn trong “{ui:partGoalMap}”."
+      ],
+      "shot": "stage-parts"
+    },
+    "my.notes": {
+      "heading": "8. Ghi chú",
+      "body": [
+        "Những câu gia sư sửa được gom ở «{ui:notebookToday}» ở đầu Đang lớn. Chọn câu muốn giữ rồi chạm «{ui:notebookAddToNotes}»; bật «{ui:notebookWithScreen}» để kèm ảnh màn hình lúc đó. Thẻ sẽ vào đúng mục trong «{ui:myViewMap}».",
+        "Mở một mục để chuyển hoặc ghi chú thẻ, đổi tên, hoặc thêm mục của bạn ở «{ui:notebookMine}». Sổ gom biểu đạt, từ và câu hỏi của bạn theo chủ đề, dòng «{ui:homeTabVocab}» mở sổ từ.",
+        "Trong phân tích câu, «{ui:findInMy}» tìm phần đó thuộc mục nào và mở ra. «{ui:notebookQuestionAdd}» lưu thẻ ❓ với một dòng giải thích và ảnh màn hình lúc đó (trò chuyện với người thì không có ảnh)."
+      ],
+      "shot": "notebook-today"
+    },
+    "my.more": {
+      "heading": "Ngoài ra",
+      "body": [
+        "“{ui:ledgerTitle}” gom cách nói từ mọi tab. Đổi mục tiêu? “{ui:mapNewGoal}”. Mỗi ngôn ngữ học có phần riêng.",
+        "Chỉ những cách nói bạn tự dùng được mà không cần trợ giúp mới được tính là thành thạo (không phải cấp độ, mà là số cách nói bạn dùng được). Trong các câu gia sư đã sửa, chỉ những câu bạn chọn ở “{ui:notebookToday}” mới được giữ trong ghi chú. Đánh dấu một cách nói trong phân tích câu sẽ lưu nó vào cách nói của tôi; thêm vào bản đồ sẽ tạo nhiệm vụ cho nó.",
+        "Nếu góp ý bạn gửi qua “{ui:feedbackOpen}” được áp dụng, bạn nhận 3–20 điểm tùy mức độ quan trọng."
+      ]
+    }
+  },
+  "fr": {
+    "my.map": {
+      "heading": "7. Par étapes",
+      "body": [
+        "« {ui:myViewMap} » va de l’étape 1 à 5. Touchez un numéro pour voir cette étape.",
+        "Touchez une partie pour l’ouvrir : « {ui:partVocab} » avec vos mots et la liste de mots, « {ui:partGrammar} » avec la grammaire de l’étape (✓ et « {ui:stageTry} »), « {ui:partExpression} » avec ses expressions clés et les sections « {ui:notebookIdioms} », « {ui:partPronunciation} » avec le point de prononciation de l’étape et les sections lettres et sons. Ce que vous savez utiliser et les scènes enregistrées remplissent la bonne section.",
+        "En bas, « {ui:stageExamplesTitle} » montre des conversations possibles à cette étape ; essayez-en une avec « {ui:stageTry} ». Vos anciens thèmes et tâches sont repliés sous « {ui:partGoalMap} »."
+      ],
+      "shot": "stage-parts"
+    },
+    "my.notes": {
+      "heading": "8. Notes",
+      "body": [
+        "Les phrases corrigées par le tuteur se regroupent dans « {ui:notebookToday} », en haut de En progrès. Cochez celles à garder puis « {ui:notebookAddToNotes} » ; activez « {ui:notebookWithScreen} » pour joindre l’écran du moment. Les cartes vont dans la bonne section de « {ui:myViewMap} ».",
+        "Ouvrez une section pour déplacer ou annoter les cartes, la renommer, ou ajouter la vôtre dans « {ui:notebookMine} ». Les notes regroupent vos expressions, mots et questions par thème, et « {ui:homeTabVocab} » ouvre la liste de mots.",
+        "Dans l’analyse de phrase, « {ui:findInMy} » trouve la section de cette partie et l’ouvre. « {ui:notebookQuestionAdd} » garde une carte ❓ avec une explication courte et l’écran du moment (sans écran pour les discussions avec des personnes)."
+      ],
+      "shot": "notebook-today"
+    },
+    "my.more": {
+      "heading": "Aussi",
+      "body": [
+        "« {ui:ledgerTitle} » rassemble les expressions de tous les onglets. Nouvel objectif ? « {ui:mapNewGoal} ». Chaque langue a les siens.",
+        "Seules les expressions produites sans aide comptent comme maîtrisées (pas un niveau, juste combien vous savez utiliser). Parmi les lignes corrigées par le tuteur, seules celles que vous choisissez dans « {ui:notebookToday} » restent dans vos notes. Marquer une expression dans l'analyse de phrase la garde dans Mes expressions ; l'ajouter à la carte crée une tâche.",
+        "Si un avis envoyé avec « {ui:feedbackOpen} » est retenu, vous recevez 3 à 20 points selon son importance."
+      ]
+    }
+  },
+  "it": {
+    "my.map": {
+      "heading": "7. Per fasi",
+      "body": [
+        "«{ui:myViewMap}» va dalla fase 1 alla 5. Tocca un numero per vedere quella fase.",
+        "Tocca una parte per aprirla: «{ui:partVocab}» con le parole imparate e il vocabolario, «{ui:partGrammar}» con la grammatica della fase (✓ e «{ui:stageTry}»), «{ui:partExpression}» con le espressioni chiave e le sezioni «{ui:notebookIdioms}», «{ui:partPronunciation}» con il punto di pronuncia della fase e le sezioni lettere e suoni. Ciò che sai usare e le scene salvate riempiono la sezione giusta.",
+        "Sotto, «{ui:stageExamplesTitle}» mostra conversazioni possibili in questa fase; provane una con «{ui:stageTry}». I vecchi temi e compiti sono raccolti in «{ui:partGoalMap}»."
+      ],
+      "shot": "stage-parts"
+    },
+    "my.notes": {
+      "heading": "8. Note",
+      "body": [
+        "Le frasi corrette dal tutor si raccolgono in «{ui:notebookToday}», in cima a In crescita. Spunta quelle da tenere e tocca «{ui:notebookAddToNotes}»; attiva «{ui:notebookWithScreen}» per allegare la schermata. Le schede vanno nella sezione giusta di «{ui:myViewMap}».",
+        "Apri una sezione per spostare o annotare le schede, rinominarla o aggiungerne una tua in «{ui:notebookMine}». Le note raccolgono espressioni, parole e domande per tema, e la riga «{ui:homeTabVocab}» apre il vocabolario.",
+        "Nell’analisi della frase, «{ui:findInMy}» trova la sezione di quella parte e la apre. «{ui:notebookQuestionAdd}» salva una scheda ❓ con una spiegazione breve e la schermata di quel momento (niente schermata nelle chat con persone)."
+      ],
+      "shot": "notebook-today"
+    },
+    "my.more": {
+      "heading": "Inoltre",
+      "body": [
+        "«{ui:ledgerTitle}» raccoglie le espressioni di tutte le schede. Nuovo obiettivo? «{ui:mapNewGoal}». Ogni lingua ha i suoi.",
+        "Contano come padroneggiate solo le espressioni usate senza aiuto (non è un livello, ma quante ne sai usare). Delle frasi corrette dal tutor restano nelle note solo quelle che scegli in «{ui:notebookToday}». Se segni un'espressione nell'analisi della frase resta in Le mie espressioni; se la aggiungi alla mappa nasce un compito.",
+        "Se un parere inviato con «{ui:feedbackOpen}» viene applicato, ricevi da 3 a 20 punti in base all'importanza."
+      ]
+    }
+  },
+  "pt": {
+    "my.map": {
+      "heading": "7. Por etapas",
+      "body": [
+        "“{ui:myViewMap}” vai da etapa 1 à 5. Toque num número para ver essa etapa.",
+        "Toque numa parte para abri-la: “{ui:partVocab}” com as palavras aprendidas e o vocabulário, “{ui:partGrammar}” com a gramática da etapa (✓ e “{ui:stageTry}”), “{ui:partExpression}” com as expressões-chave e as seções de “{ui:notebookIdioms}”, “{ui:partPronunciation}” com o ponto de pronúncia da etapa e as seções de letras e sons. O que você já sabe usar e as cenas salvas preenchem a seção certa.",
+        "Embaixo, “{ui:stageExamplesTitle}” mostra conversas possíveis nesta etapa; experimente uma com “{ui:stageTry}”. Os temas e tarefas antigos ficam em “{ui:partGoalMap}”."
+      ],
+      "shot": "stage-parts"
+    },
+    "my.notes": {
+      "heading": "8. Notas",
+      "body": [
+        "As frases que o tutor corrigiu juntam-se em «{ui:notebookToday}», no topo de A crescer. Marque as que quer guardar e toque «{ui:notebookAddToNotes}»; ligue «{ui:notebookWithScreen}» para anexar o ecrã desse momento. Os cartões vão para a secção certa de «{ui:myViewMap}».",
+        "Abra uma secção para mover ou anotar cartões, mudar o nome ou criar a sua em «{ui:notebookMine}». As notas juntam expressões, palavras e perguntas por tema, e a linha «{ui:homeTabVocab}» abre o vocabulário.",
+        "Na análise da frase, «{ui:findInMy}» encontra a secção dessa parte e abre-a. «{ui:notebookQuestionAdd}» guarda um cartão ❓ com uma explicação curta e o ecrã desse momento (sem ecrã em conversas com pessoas)."
+      ],
+      "shot": "notebook-today"
+    },
+    "my.more": {
+      "heading": "Além disso",
+      "body": [
+        "“{ui:ledgerTitle}” reúne expressões de todas as abas. Novo objetivo? “{ui:mapNewGoal}”. Cada idioma tem o seu.",
+        "Só contam como dominadas as expressões que você usou sem ajuda (não é um nível, só quantas você consegue usar). Das frases que o tutor corrigiu, só ficam nas notas as que você escolhe em “{ui:notebookToday}”. Marcar uma expressão na análise de frases a guarda em Minhas expressões; adicioná-la ao mapa cria uma tarefa.",
+        "Se uma opinião enviada por “{ui:feedbackOpen}” for aplicada, você recebe de 3 a 20 pontos conforme a importância."
+      ]
+    }
+  },
+  "ru": {
+    "my.map": {
+      "heading": "7. По этапам",
+      "body": [
+        "В «{ui:myViewMap}» этапы с 1 по 5. Нажмите номер, чтобы посмотреть этот этап.",
+        "Нажмите часть, чтобы раскрыть её: «{ui:partVocab}» — выученные слова и словарь, «{ui:partGrammar}» — грамматика этапа (✓ и «{ui:stageTry}»), «{ui:partExpression}» — ключевые выражения и разделы «{ui:notebookIdioms}», «{ui:partPronunciation}» — главное в произношении этапа и разделы букв и звуков. То, что вы уже умеете использовать, и сохранённые сцены заполняют нужный раздел.",
+        "Ниже «{ui:stageExamplesTitle}» показывает, какие разговоры доступны на этом этапе; попробуйте с «{ui:stageTry}». Старые темы и задания свёрнуты в «{ui:partGoalMap}»."
+      ],
+      "shot": "stage-parts"
+    },
+    "my.notes": {
+      "heading": "8. Заметки",
+      "body": [
+        "Фразы, исправленные наставником, собираются в «{ui:notebookToday}» вверху блока «Растёт». Отметьте нужные и нажмите «{ui:notebookAddToNotes}»; включите «{ui:notebookWithScreen}», чтобы приложить экран. Карточки попадают в нужный раздел «{ui:myViewMap}».",
+        "Откройте раздел, чтобы перенести карточки, добавить заметку, переименовать его или создать свой в «{ui:notebookMine}». В заметках по темам собраны ваши выражения, слова и вопросы, а строка «{ui:homeTabVocab}» открывает словарь.",
+        "В разборе предложения «{ui:findInMy}» находит раздел, к которому относится эта часть, и открывает его. «{ui:notebookQuestionAdd}» сохраняет карточку ❓ с кратким объяснением и экраном того момента (в переписке с людьми — без экрана)."
+      ],
+      "shot": "notebook-today"
+    },
+    "my.more": {
+      "heading": "Ещё",
+      "body": [
+        "«{ui:ledgerTitle}» собирает выражения со всех вкладок. Новая цель? «{ui:mapNewGoal}». У каждого языка своё.",
+        "Освоенными считаются только выражения, которые вы использовали без подсказки (это не уровень, а сколько выражений вы умеете применять). Из исправленных репетитором строк в заметках остаются только те, что вы выбрали в «{ui:notebookToday}». Отмеченное в разборе предложения выражение сохраняется в Моих выражениях, а добавленное на карту становится заданием.",
+        "Если отзыв, отправленный через «{ui:feedbackOpen}», учтут, вы получите от 3 до 20 баллов в зависимости от его важности."
+      ]
+    }
+  },
+  "id": {
+    "my.map": {
+      "heading": "7. Per tahap",
+      "body": [
+        "“{ui:myViewMap}” berisi tahap 1 sampai 5. Ketuk angka untuk melihat tahap itu.",
+        "Ketuk satu bagian untuk membukanya: “{ui:partVocab}” berisi kata yang sudah dipelajari dan daftar kata, “{ui:partGrammar}” tata bahasa tahap itu (✓ dan “{ui:stageTry}”), “{ui:partExpression}” ungkapan utama dan bagian “{ui:notebookIdioms}”, “{ui:partPronunciation}” poin pelafalan tahap itu dan bagian huruf·bunyi. Ungkapan yang sudah bisa kamu pakai dan adegan yang disimpan mengisi bagian yang cocok.",
+        "Di bawah, “{ui:stageExamplesTitle}” menunjukkan percakapan yang bisa dilakukan di tahap ini; coba dengan “{ui:stageTry}”. Topik dan tugas lama ada di “{ui:partGoalMap}”."
+      ],
+      "shot": "stage-parts"
+    },
+    "my.notes": {
+      "heading": "8. Catatan",
+      "body": [
+        "Kalimat yang diperbaiki tutor terkumpul di «{ui:notebookToday}» di bagian atas Sedang tumbuh. Centang yang mau disimpan lalu ketuk «{ui:notebookAddToNotes}»; nyalakan «{ui:notebookWithScreen}» untuk melampirkan layar saat itu. Kartu masuk ke bagian yang cocok di «{ui:myViewMap}».",
+        "Buka bagian untuk memindah atau memberi memo pada kartu, mengganti nama, atau menambah bagianmu di «{ui:notebookMine}». Catatan mengumpulkan ungkapan, kata, dan pertanyaanmu per topik, dan baris «{ui:homeTabVocab}» membuka daftar kata.",
+        "Di analisis kalimat, «{ui:findInMy}» mencari bagian itu masuk ke mana lalu membukanya. «{ui:notebookQuestionAdd}» menyimpan kartu ❓ berisi penjelasan singkat dan layar saat itu (tanpa layar untuk obrolan dengan orang)."
+      ],
+      "shot": "notebook-today"
+    },
+    "my.more": {
+      "heading": "Lainnya",
+      "body": [
+        "“{ui:ledgerTitle}” mengumpulkan ungkapan dari semua tab. Ganti tujuan? “{ui:mapNewGoal}”. Tiap bahasa punya sendiri.",
+        "Hanya ungkapan yang kamu pakai tanpa bantuan yang dihitung dikuasai (bukan level, hanya berapa yang bisa kamu pakai). Dari kalimat yang dikoreksi tutor, hanya yang kamu pilih di “{ui:notebookToday}” yang tersimpan di catatan. Menandai ungkapan di analisis kalimat menyimpannya di Ungkapanku; menambahkannya ke peta membuat tugas untuknya.",
+        "Jika masukan yang kamu kirim lewat “{ui:feedbackOpen}” diterapkan, kamu mendapat 3–20 poin sesuai tingkat pentingnya."
+      ]
+    }
+  },
+  "ar": {
+    "my.map": {
+      "heading": "7. حسب المراحل",
+      "body": [
+        "في «{ui:myViewMap}» المراحل من 1 إلى 5. اضغط على رقم لترى تلك المرحلة.",
+        "اضغط على جزء لفتحه: «{ui:partVocab}» فيه الكلمات التي تعلمتها وقائمة الكلمات، و«{ui:partGrammar}» قواعد المرحلة (✓ و«{ui:stageTry}»)، و«{ui:partExpression}» تعابيرها الأساسية وأقسام «{ui:notebookIdioms}»، و«{ui:partPronunciation}» نقطة النطق في المرحلة وأقسام الحروف والأصوات. ما صرت تستطيع استخدامه والمشاهد التي حفظتها تملأ القسم المناسب.",
+        "في الأسفل يعرض «{ui:stageExamplesTitle}» محادثات تصبح ممكنة في هذه المرحلة؛ جرّب واحدة بـ«{ui:stageTry}». موضوعاتك ومهامك السابقة مطويّة في «{ui:partGoalMap}»."
+      ],
+      "shot": "stage-parts"
+    },
+    "my.notes": {
+      "heading": "8. الملاحظات",
+      "body": [
+        "تُجمع الجمل التي صحّحها المعلّم في «{ui:notebookToday}» أعلى «ينمو». ضع علامة على ما تريد الاحتفاظ به ثم «{ui:notebookAddToNotes}»، وشغّل «{ui:notebookWithScreen}» لإرفاق شاشة تلك اللحظة. تدخل البطاقات القسم المناسب في «{ui:myViewMap}».",
+        "افتح القسم لنقل البطاقات أو كتابة ملاحظة أو إعادة التسمية، أو أضف قسمك في «{ui:notebookMine}». تجمع الملاحظات عباراتك وكلماتك وأسئلتك حسب الموضوع، وسطر «{ui:homeTabVocab}» يفتح قائمة الكلمات.",
+        "في تحليل الجملة، يبحث «{ui:findInMy}» عن القسم الذي ينتمي إليه هذا الجزء ويفتحه. ويحفظ «{ui:notebookQuestionAdd}» بطاقة ❓ فيها شرح قصير وشاشة تلك اللحظة (بلا شاشة في المحادثات مع الأشخاص)."
+      ],
+      "shot": "notebook-today"
+    },
+    "my.more": {
+      "heading": "أيضًا",
+      "body": [
+        "«{ui:ledgerTitle}» يجمع التعابير من كل التبويبات. هدف جديد؟ «{ui:mapNewGoal}». لكل لغة ما يخصّها.",
+        "لا تُحسب متقنة إلا العبارات التي استخدمتها دون مساعدة (ليست مستوى، بل كم عبارة تستطيع استخدامها). من الجمل التي صحّحها المعلّم لا يبقى في ملاحظاتك إلا ما تختاره في «{ui:notebookToday}». وضع علامة على عبارة في تحليل الجملة يحفظها في عباراتي، وإضافتها إلى الخريطة تُنشئ مهمة لها.",
+        "إذا اعتُمد رأي أرسلته عبر «{ui:feedbackOpen}» تحصل على 3 إلى 20 نقطة حسب أهميته."
+      ]
+    }
+  },
+  "th": {
+    "my.map": {
+      "heading": "7. ดูตามขั้น",
+      "body": [
+        "“{ui:myViewMap}” มีขั้นที่ 1 ถึง 5 แตะตัวเลขเพื่อดูขั้นนั้นก่อน",
+        "แตะส่วนใดจะเปิดออก “{ui:partVocab}” มีคำที่เรียนแล้วและสมุดคำศัพท์ “{ui:partGrammar}” มีไวยากรณ์ของขั้น (✓ และ “{ui:stageTry}”) “{ui:partExpression}” มีสำนวนหลักและช่อง “{ui:notebookIdioms}” “{ui:partPronunciation}” มีจุดออกเสียงของขั้นและช่องตัวอักษร·เสียง สำนวนที่ใช้ได้แล้วและฉากที่เก็บไว้จะเติมช่องที่ตรงกัน",
+        "ด้านล่าง “{ui:stageExamplesTitle}” แสดงบทสนทนาที่ทำได้ในขั้นนี้ ลองด้วย “{ui:stageTry}” หัวข้อและงานเดิมพับไว้ใน “{ui:partGoalMap}”"
+      ],
+      "shot": "stage-parts"
+    },
+    "my.notes": {
+      "heading": "8. โน้ต",
+      "body": [
+        "ประโยคที่ติวเตอร์แก้จะรวมอยู่ใน «{ui:notebookToday}» ด้านบนของ กำลังเติบโต เลือกเฉพาะที่อยากเก็บแล้วแตะ «{ui:notebookAddToNotes}» เปิด «{ui:notebookWithScreen}» เพื่อแนบหน้าจอตอนนั้น การ์ดจะเข้าไปอยู่ในหัวข้อที่ตรงกันใน «{ui:myViewMap}»",
+        "เปิดหัวข้อเพื่อย้ายหรือจดโน้ตการ์ด เปลี่ยนชื่อ หรือเพิ่มหัวข้อของคุณใน «{ui:notebookMine}» โน้ตรวบรวมสำนวน คำ และคำถามของคุณตามหัวข้อ และแถว «{ui:homeTabVocab}» คือสมุดคำศัพท์",
+        "ในการวิเคราะห์ประโยค «{ui:findInMy}» จะหาว่าส่วนนั้นอยู่หัวข้อไหนแล้วเปิดให้ «{ui:notebookQuestionAdd}» เก็บเป็นการ์ด ❓ พร้อมคำอธิบายสั้นๆ และหน้าจอตอนนั้น (แชตกับคนไม่มีหน้าจอ)"
+      ],
+      "shot": "notebook-today"
+    },
+    "my.more": {
+      "heading": "อื่นๆ",
+      "body": [
+        "“{ui:ledgerTitle}” รวบรวมสำนวนจากทุกแท็บ เปลี่ยนเป้าหมาย? “{ui:mapNewGoal}” แต่ละภาษาแยกกัน",
+        "นับเป็นคล่องแล้วเฉพาะสำนวนที่ใช้ได้เองโดยไม่ต้องช่วย (ไม่ใช่ระดับ แต่เป็นจำนวนสำนวนที่ใช้ได้) ประโยคที่ติวเตอร์แก้ จะเก็บในโน้ตเฉพาะที่คุณเลือกใน “{ui:notebookToday}” ทำเครื่องหมายสำนวนในการวิเคราะห์ประโยคจะเก็บไว้ในสำนวนของฉัน เพิ่มลงแผนที่จะได้งานสำหรับสำนวนนั้น",
+        "ถ้าความเห็นที่ส่งผ่าน “{ui:feedbackOpen}” ถูกนำไปใช้ คุณจะได้ 3–20 พอยต์ตามความสำคัญ"
+      ]
+    }
+  },
+  "hi": {
+    "my.map": {
+      "heading": "7. चरणों में देखें",
+      "body": [
+        "“{ui:myViewMap}” में चरण 1 से 5 तक हैं। नंबर दबाकर वह चरण पहले से देखें।",
+        "हिस्सा दबाएँ तो खुलता है: “{ui:partVocab}” में सीखे शब्द और शब्दकोश, “{ui:partGrammar}” में उस चरण का व्याकरण (✓ और “{ui:stageTry}”), “{ui:partExpression}” में मुख्य अभिव्यक्तियाँ और “{ui:notebookIdioms}” के खाने, “{ui:partPronunciation}” में उस चरण की उच्चारण बात और अक्षर·ध्वनि के खाने। जो आप इस्तेमाल कर पाते हैं और सहेजे गए दृश्य सही खाने में भरते हैं।",
+        "नीचे “{ui:stageExamplesTitle}” में इस चरण में होने वाली बातचीत दिखती है; “{ui:stageTry}” से आज़माएँ। पुराने लक्ष्य विषय और काम “{ui:partGoalMap}” में मुड़े हुए हैं।"
+      ],
+      "shot": "stage-parts"
+    },
+    "my.notes": {
+      "heading": "8. नोट्स",
+      "body": [
+        "ट्यूटर की सुधारी पंक्तियाँ «बढ़ रहा है» में सबसे ऊपर «{ui:notebookToday}» में जमा होती हैं। जो रखनी हैं उन्हें चुनकर «{ui:notebookAddToNotes}» दबाएँ; «{ui:notebookWithScreen}» चालू करें तो उस पल की स्क्रीन भी जुड़ती है। कार्ड «{ui:myViewMap}» के सही हिस्से में जाते हैं।",
+        "हिस्सा खोलकर कार्ड हटाएँ या नोट लिखें, नाम बदलें, या «{ui:notebookMine}» में अपना हिस्सा जोड़ें। नोट्स में आपके वाक्यांश, शब्द और सवाल विषय के हिसाब से जमा होते हैं, और «{ui:homeTabVocab}» पंक्ति शब्दसूची खोलती है।",
+        "वाक्य विश्लेषण में «{ui:findInMy}» दबाने पर वह हिस्सा किस भाग में आता है, यह खोजकर खोलता है। «{ui:notebookQuestionAdd}» एक पंक्ति की व्याख्या और उस पल की स्क्रीन के साथ ❓ कार्ड रखता है (लोगों से चैट में स्क्रीन नहीं)।"
+      ],
+      "shot": "notebook-today"
+    },
+    "my.more": {
+      "heading": "और",
+      "body": [
+        "“{ui:ledgerTitle}” में हर टैब की अभिव्यक्तियाँ जमा होती हैं। नया लक्ष्य? “{ui:mapNewGoal}”। हर भाषा का अपना अलग है।",
+        "सिर्फ़ वही भाव महारत में गिने जाते हैं जो आपने बिना मदद के इस्तेमाल किए (यह स्तर नहीं, बस कितने भाव आप इस्तेमाल कर पाते हैं)। ट्यूटर ने जो वाक्य सुधारे, उनमें से सिर्फ़ वही नोट्स में रहते हैं जिन्हें आप ‘{ui:notebookToday}’ में चुनते हैं। वाक्य विश्लेषण में भाव पर निशान लगाने से वह मेरे भाव में रहता है, और नक्शे में जोड़ने से उसका काम बनता है।",
+        "‘{ui:feedbackOpen}’ से भेजा गया आपका सुझाव लागू होने पर, उसकी अहमियत के हिसाब से 3–20 पॉइंट मिलते हैं।"
+      ]
+    }
+  }
+}

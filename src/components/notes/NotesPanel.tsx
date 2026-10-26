@@ -1,71 +1,30 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { BodyLayer, FullScreenLayer } from "@/components/FullScreenLayer";
+import { useCallback, useEffect, useMemo, useState } from "react";
+import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { VocabularyPanel } from "@/components/VocabularyPanel";
 import { WordLedgerLine } from "@/components/LedgerLinks";
-import { apiUrl } from "@/lib/apiBase";
-import { onAppIntent, sendAppIntent, takeAppIntent } from "@/lib/appIntents";
-import { entitlementHeaders } from "@/lib/billing/billingService";
+import { onAppIntent, takeAppIntent } from "@/lib/appIntents";
 import type { Locale, UICopy } from "@/lib/copy";
 import type { LedgerState } from "@/lib/learner/ledger";
 import { useLedger } from "@/lib/learner/ledgerClient";
-import { MAX_PRACTICE_PHRASES } from "@/lib/learner/practice";
-import { NOTE_OUTLINE, chapterOf, noteName, topicById, type NoteChapter } from "@/lib/notes/outline";
-import {
-  buildNotes,
-  placeKey,
-  searchNotes,
-  topicCount,
-  topicStates,
-  type NoteEntry,
-  type NoteQuestion,
-  type NotesBook,
-  type Placements,
-  type TopicNotes,
-} from "@/lib/notes/notes";
+import type { NoteEntry, NoteQuestion, TopicNotes } from "@/lib/notes/notes";
 import { SENTENCE_NOTES_STORAGE_KEY, deleteAskThread, parseNoteStore } from "@/lib/sentenceNotes";
 import { sentenceFitsLanguage } from "@/lib/notes/sentenceFits";
 import { loadVocabulary } from "@/lib/vocabulary";
 
 /**
- * 노트(My): 모두 같은 목차(장 8 × 주제 3)에 내가 쓰고 듣고 저장한 것이 모인다 — 내 표현(장부),
- * 단어장, 문장분석에서 묻고 받은 답. 어느 주제에 들어갈지는 서버의 공유 답(/api/notes/place)을
- * 받아 기기에 기억한다. 단어장 탭은 여기로 들어왔다(전체 기능은 "단어장" 줄에서 그대로).
- *
- * 보는 방식: 목차(장 → 주제) / 모두(한 줄씩, 최근 순). 고른 것은 기기에 기억.
- * 학습 언어별 뼈대(글자·소리·문법)·짚은 장면 카드(NotebookSection)는 2026-10-24부터 My "자라는 중"의 "단계" 보기로 옮겼다(수준별 틀).
+ * 노트(My): 내가 쓰고 듣고 저장한 것을 한 줄씩 — 내 표현(장부), 단어장 단어, 문장분석에서 묻고 받은 답(최근 순).
+ * 검색칸 하나(기기 안). 단어장 탭은 여기로 들어왔다(전체 기능은 "단어장" 줄에서 그대로).
+ * 예전 목차(장 8 × 주제 3, /api/notes/place로 자리 받기)와 목차/모두 보기는 2026-10-27에 뺐다(사용자 "예전 기능은 다 지워줘") —
+ * 서버 API는 2.74 이하 앱이 쓴다. 학습 언어별 틀(글자·소리·문법)·짚은 장면 카드는 My "자라는 중"의 "단계" 보기(NotebookSection).
  */
-
-type ViewMode = "outline" | "all";
-const VIEW_KEY = "notesViewMode";
-const PLACE_KEY = (language: string) => `notesPlace:v1:${language}`;
-/** 한 번 열 때 서버에 묻는 묶음 수(묶음당 60개). 나머지는 다음에 열 때. */
-const BATCHES_PER_OPEN = 4;
-const BATCH = 60;
 
 const DOT: Record<LedgerState, string> = {
   mastered: "bg-status-mastered",
   learned: "bg-status-learned",
   met: "bg-status-pending",
 };
-
-function readJson<T>(key: string, fallback: T): T {
-  try {
-    const raw = localStorage.getItem(key);
-    return raw ? (JSON.parse(raw) as T) : fallback;
-  } catch {
-    return fallback;
-  }
-}
-
-function writeJson(key: string, value: unknown) {
-  try {
-    localStorage.setItem(key, JSON.stringify(value));
-  } catch {
-    // Kept for this session only.
-  }
-}
 
 /** 질문을 지우면 노트가 다시 읽게 알리는 신호(질문 줄이 패널 깊은 곳에 있어서). */
 const NOTES_CHANGED = "notes:changed";
@@ -117,25 +76,16 @@ export function NotesPanel({
   ui,
   locale,
   targetLanguage,
-  isPremium,
 }: {
   ui: UICopy;
   locale: string;
   targetLanguage: string;
-  isPremium: boolean;
 }) {
   const ledger = useLedger(targetLanguage);
-  // 이 패널은 지도를 불러온 뒤(브라우저에서만) 그려지므로 기기 저장소를 처음부터 읽는다.
+  // 이 패널은 브라우저에서만 그려지므로 기기 저장소를 처음부터 읽는다.
   const [device, setDevice] = useState<NoteEntry[]>(() => deviceEntries(targetLanguage, locale));
-  const [placements, setPlacements] = useState<Placements>(() => readJson<Placements>(PLACE_KEY(targetLanguage), {}));
-  /** 서버가 더 못 받는 날(하루 한도·오류): "찾는 중" 대신 "아직 자리 없음". */
-  const [stalled, setStalled] = useState(false);
   const [query, setQuery] = useState("");
-  const [savedView, setView] = useState<ViewMode>(() => (readJson<ViewMode>(VIEW_KEY, "outline") === "all" ? "all" : "outline"));
-  const [chapterOpen, setChapterOpen] = useState<string | null>(null);
-  const [looseOpen, setLooseOpen] = useState(false);
   const [wordsOpen, setWordsOpen] = useState(() => Boolean(takeAppIntent("openNotes")));
-  const asked = useRef(new Set<string>());
 
   const reloadDevice = useCallback(() => setDevice(deviceEntries(targetLanguage, locale)), [targetLanguage, locale]);
   useEffect(() => {
@@ -145,102 +95,27 @@ export function NotesPanel({
 
   useEffect(() => onAppIntent("openNotes", () => setWordsOpen(true)), []);
 
-  const entries = useMemo<NoteEntry[]>(
-    () => [
-      ...device,
-      ...ledger.map((item) => ({ kind: "expression" as const, text: item.text, state: item.state })),
-    ],
-    [device, ledger],
-  );
-  const book = useMemo(() => buildNotes(entries, placements), [entries, placements]);
-  const stateOf = useMemo(() => {
-    const map = new Map(ledger.map((item) => [placeKey(item.text), item.state] as const));
-    return (text: string) => map.get(placeKey(text)) ?? null;
-  }, [ledger]);
-
-  // 자리 받기: 아직 못 받은 것만, 한 번 열 때 몇 묶음까지.
-  // 묻는 중에 자리가 들어오면 목록이 바뀌어 다시 돈다 — 이미 물은 것은 건너뛴다(묶음마다 표시).
-  const toPlaceKey = book.toPlace.join("\n");
-  useEffect(() => {
-    const texts = toPlaceKey
-      .split("\n")
-      .filter((text) => text && !asked.current.has(placeKey(text)))
-      .slice(0, BATCH * BATCHES_PER_OPEN - asked.current.size);
-    if (!texts.length) return;
-    let cancelled = false;
-    void (async () => {
-      for (let i = 0; i < texts.length && !cancelled; i += BATCH) {
-        const batch = texts.slice(i, i + BATCH);
-        batch.forEach((text) => asked.current.add(placeKey(text)));
-        try {
-          const response = await fetch(apiUrl("/api/notes/place"), {
-            method: "POST",
-            headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
-            body: JSON.stringify({ language: targetLanguage, texts: batch }),
-          });
-          if (!response.ok) {
-            setStalled(true);
-            break;
-          }
-          const body = (await response.json().catch(() => null)) as { places?: Placements; limited?: boolean } | null;
-          if (body?.places && Object.keys(body.places).length) {
-            setPlacements((current) => {
-              const next = { ...current, ...body.places };
-              writeJson(PLACE_KEY(targetLanguage), next);
-              return next;
-            });
-          }
-          if (body?.limited) {
-            setStalled(true);
-            break;
-          }
-        } catch {
-          setStalled(true);
-          break;
-        }
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [toPlaceKey, targetLanguage, isPremium]);
-
-  const chooseView = (mode: ViewMode) => {
-    setView(mode);
-    writeJson(VIEW_KEY, mode);
-  };
-
-  const hits = useMemo(() => searchNotes(book, query, locale), [book, query, locale]);
-  const total = entries.length;
-  // 보기 버튼은 쌓인 게 있을 때만 보이니, 비어 있으면(다른 학습 언어로 바꿨을 때 등) 기억한 "모두"에 갇히지 않게 목차로.
-  const view: ViewMode = total > 0 ? savedView : "outline";
-  const looseCount = topicCount(book.loose);
+  const notes = useMemo<TopicNotes>(() => {
+    const q = query.trim().toLocaleLowerCase(locale);
+    const hit = (...texts: Array<string | undefined>) =>
+      !q || texts.some((text) => text?.toLocaleLowerCase(locale).includes(q));
+    const all: TopicNotes = { expressions: [], words: [], questions: [] };
+    for (const item of ledger) {
+      if (hit(item.text)) all.expressions.push({ kind: "expression", text: item.text, state: item.state });
+    }
+    for (const entry of device) {
+      if (entry.kind === "word" && hit(entry.text, entry.gloss, entry.reading)) all.words.push(entry);
+      if (entry.kind === "question" && hit(entry.text, entry.selected, entry.question, entry.answer)) all.questions.push(entry);
+    }
+    all.questions.sort((a, b) => b.at - a.at);
+    return all;
+  }, [ledger, device, query, locale]);
   const wordCount = device.filter((entry) => entry.kind === "word").length;
+  const shown = notes.expressions.length + notes.words.length + notes.questions.length;
 
   return (
     <section className="mb-2 rounded-xl border border-line bg-surface p-3">
-      <div className="flex items-start gap-2">
-        <div className="min-w-0 flex-1">
-          <h2 className="text-body font-semibold text-ink">{ui.notesTitle}</h2>
-        </div>
-        {total > 0 ? (
-          <div className="flex shrink-0 gap-1">
-            {(["outline", "all"] as ViewMode[]).map((mode) => (
-              <button
-                key={mode}
-                type="button"
-                aria-pressed={view === mode}
-                onClick={() => chooseView(mode)}
-                className={`rounded-lg px-2 py-1 text-caption ${
-                  view === mode ? "bg-white/15 text-ink" : "text-slate-400 hover:bg-white/10"
-                }`}
-              >
-                {mode === "outline" ? ui.notesViewOutline : ui.notesViewAll}
-              </button>
-            ))}
-          </div>
-        ) : null}
-      </div>
+      <h2 className="text-body font-semibold text-ink">{ui.notesTitle}</h2>
 
       <input
         type="search"
@@ -261,74 +136,12 @@ export function NotesPanel({
         <span aria-hidden className="text-caption text-slate-500">›</span>
       </button>
 
-      {query.trim() ? (
-        <SearchResults
-          ui={ui}
-          locale={locale}
-          hits={hits}
-          onOpenTopic={(topicId) => setChapterOpen(chapterOf(topicId)?.id ?? null)}
-          onOpenLoose={() => setLooseOpen(true)}
-        />
-      ) : view === "all" ? (
-        <AllList ui={ui} locale={locale} language={targetLanguage} book={book} />
+      {shown ? (
+        <TopicBody ui={ui} locale={locale} language={targetLanguage} notes={notes} onLeave={() => undefined} />
       ) : (
-        <>
-        <ul className="mt-1 divide-y divide-white/5">
-          {NOTE_OUTLINE.map((chapter, index) => {
-            const count = chapter.topics.reduce((sum, topic) => sum + topicCount(book.byTopic[topic.id]!), 0);
-            const states = chapter.topics
-              .map((topic) => topicStates(book.byTopic[topic.id]!, stateOf))
-              .reduce((a, b) => ({ mastered: a.mastered + b.mastered, learned: a.learned + b.learned, met: a.met + b.met }));
-            return (
-              <li key={chapter.id}>
-                <button
-                  type="button"
-                  onClick={() => setChapterOpen(chapter.id)}
-                  className="flex w-full items-center gap-3 py-2.5 text-start"
-                >
-                  <span className="w-5 shrink-0 text-caption tabular-nums text-slate-500">{index + 1}</span>
-                  <span className="min-w-0 flex-1">
-                    <span className="block text-note text-ink">{noteName(chapter.name, locale)}</span>
-                    <span className="block truncate text-meta text-slate-500">
-                      {chapter.topics.map((topic) => noteName(topic.name, locale)).join(" · ")}
-                    </span>
-                  </span>
-                  <StateDots states={states} />
-                  <span className="w-7 shrink-0 text-end text-caption tabular-nums text-slate-400">{count || ""}</span>
-                </button>
-              </li>
-            );
-          })}
-          {looseCount > 0 ? (
-            <li>
-              <button type="button" onClick={() => setLooseOpen(true)} className="flex w-full items-center gap-3 py-2.5 text-start">
-                <span className="w-5 shrink-0" />
-                <span className="min-w-0 flex-1 text-note text-slate-400">
-                  {book.toPlace.length && !stalled ? ui.notesFiling : ui.notesLoose}
-                </span>
-                <span className="w-7 shrink-0 text-end text-caption tabular-nums text-slate-500">{looseCount}</span>
-              </button>
-            </li>
-          ) : null}
-        </ul>
-        </>
+        <p className="mt-3 text-caption text-slate-500">{query.trim() ? ui.notesNoHits : ui.ledgerEmptyShort}</p>
       )}
 
-      {chapterOpen ? (
-        <ChapterSheet
-          ui={ui}
-          locale={locale}
-          language={targetLanguage}
-          chapter={NOTE_OUTLINE.find((chapter) => chapter.id === chapterOpen)!}
-          book={book}
-          onClose={() => setChapterOpen(null)}
-        />
-      ) : null}
-      {looseOpen ? (
-        <NoteSheet ui={ui} title={ui.notesLoose} onClose={() => setLooseOpen(false)}>
-          <TopicBody ui={ui} locale={locale} language={targetLanguage} notes={book.loose} onLeave={() => setLooseOpen(false)} />
-        </NoteSheet>
-      ) : null}
       {wordsOpen ? (
         <FullScreenLayer>
           <header className="flex shrink-0 items-center gap-2 border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]">
@@ -351,112 +164,6 @@ export function NotesPanel({
         </FullScreenLayer>
       ) : null}
     </section>
-  );
-}
-
-function StateDots({ states }: { states: { mastered: number; learned: number; met: number } }) {
-  const total = states.mastered + states.learned + states.met;
-  if (!total) return null;
-  return (
-    <span className="flex h-1.5 w-12 shrink-0 overflow-hidden rounded-full bg-white/5" aria-hidden>
-      <span className="bg-status-mastered" style={{ width: `${(states.mastered / total) * 100}%` }} />
-      <span className="bg-status-learned" style={{ width: `${(states.learned / total) * 100}%` }} />
-      <span className="bg-status-pending" style={{ width: `${(states.met / total) * 100}%` }} />
-    </span>
-  );
-}
-
-function NoteSheet({
-  ui,
-  title,
-  onClose,
-  children,
-}: {
-  ui: UICopy;
-  title: string;
-  onClose: () => void;
-  children: React.ReactNode;
-}) {
-  return (
-    <BodyLayer>
-      <div className="fixed inset-0 z-[80] flex flex-col justify-end bg-black/60 p-2 pb-[max(0.5rem,env(safe-area-inset-bottom))] pt-[max(0.5rem,env(safe-area-inset-top))] sm:items-center sm:justify-center">
-        <button type="button" className="absolute inset-0 cursor-default" aria-label={ui.billingClose} onClick={onClose} />
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label={title}
-          className="relative z-10 max-h-full w-full max-w-md overflow-y-auto overscroll-contain rounded-2xl border border-line bg-surface-sunk p-4"
-        >
-          <div className="flex items-start gap-2">
-            <h3 className="min-w-0 flex-1 text-title font-semibold text-ink">{title}</h3>
-            <button
-              type="button"
-              onClick={onClose}
-              aria-label={ui.billingClose}
-              className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10"
-            >
-              ✕
-            </button>
-          </div>
-          {children}
-        </div>
-      </div>
-    </BodyLayer>
-  );
-}
-
-function ChapterSheet({
-  ui,
-  locale,
-  language,
-  chapter,
-  book,
-  onClose,
-}: {
-  ui: UICopy;
-  locale: string;
-  language: string;
-  chapter: NoteChapter;
-  book: NotesBook;
-  onClose: () => void;
-}) {
-  return (
-    <NoteSheet ui={ui} title={noteName(chapter.name, locale)} onClose={onClose}>
-      {chapter.topics.map((topic) => {
-        const notes = book.byTopic[topic.id]!;
-        const name = noteName(topic.name, locale);
-        const phrases = [...notes.expressions.map((row) => row.text), ...notes.words.map((row) => row.text)].slice(
-          0,
-          MAX_PRACTICE_PHRASES,
-        );
-        return (
-          <section key={topic.id} className="mt-4 border-t border-line pt-3 first-of-type:border-t-0">
-            <div className="flex items-center gap-2">
-              <h4 className="min-w-0 flex-1 text-body font-semibold text-ink">{name}</h4>
-              <button
-                type="button"
-                onClick={() => {
-                  onClose();
-                  sendAppIntent("practice", {
-                    tab: "chat",
-                    goal: { situation: `${noteName(chapter.name, locale)}: ${name}`, ...(phrases.length ? { phrases } : {}) },
-                    title: name,
-                  });
-                }}
-                className="shrink-0 rounded-lg border border-line px-2 py-1 text-caption text-slate-200 hover:bg-white/10"
-              >
-                {ui.notesPractice}
-              </button>
-            </div>
-            {topicCount(notes) === 0 ? (
-              <p className="mt-1 text-caption text-slate-500">{ui.notesEmptyTopic}</p>
-            ) : (
-              <TopicBody ui={ui} locale={locale} language={language} notes={notes} onLeave={onClose} />
-            )}
-          </section>
-        );
-      })}
-    </NoteSheet>
   );
 }
 
@@ -592,72 +299,4 @@ function QuestionRow({ ui, entry }: { ui: UICopy; entry: NoteQuestion }) {
       </p>
     </li>
   );
-}
-
-function SearchResults({
-  ui,
-  locale,
-  hits,
-  onOpenTopic,
-  onOpenLoose,
-}: {
-  ui: UICopy;
-  locale: string;
-  hits: ReturnType<typeof searchNotes>;
-  onOpenTopic: (topicId: string) => void;
-  onOpenLoose: () => void;
-}) {
-  if (!hits.length) return <p className="mt-3 text-caption text-slate-500">{ui.notesNoHits}</p>;
-  const where = (topicId: string | null) => (topicId ? noteName(topicById(topicId)!.name, locale) : ui.notesLoose);
-  return (
-    <ul className="mt-2 space-y-1">
-      {hits.map((hit, index) => {
-        const topicId = hit.topicId;
-        const label =
-          hit.kind === "topic"
-            ? hit.label
-            : hit.kind === "question"
-              ? `${hit.entry.selected} — ${hit.entry.question}`
-              : hit.entry.text;
-        const sub =
-          hit.kind === "topic"
-            ? noteName(chapterOf(hit.topicId)!.name, locale)
-            : hit.kind === "word"
-              ? `${hit.entry.gloss} · ${where(topicId)}`
-              : where(topicId);
-        return (
-          <li key={`${hit.kind}:${index}`}>
-            <button
-              type="button"
-              onClick={() => (topicId ? onOpenTopic(topicId) : onOpenLoose())}
-              className="flex w-full items-start gap-2 rounded-lg bg-white/[0.04] px-3 py-2 text-start"
-            >
-              <span aria-hidden className="mt-0.5 w-4 shrink-0 text-caption text-slate-500">
-                {hit.kind === "topic" ? "#" : hit.kind === "question" ? "?" : "·"}
-              </span>
-              <span className="min-w-0 flex-1">
-                <span dir="auto" className="block truncate text-note text-ink">
-                  {label}
-                </span>
-                <span className="block truncate text-meta text-slate-500">{sub}</span>
-              </span>
-            </button>
-          </li>
-        );
-      })}
-    </ul>
-  );
-}
-
-/** 모두: 주제 구분 없이 한 줄씩 — 질문은 최근 순, 표현·단어는 그 뒤. */
-function AllList({ ui, locale, language, book }: { ui: UICopy; locale: string; language: string; book: NotesBook }) {
-  const merged: TopicNotes = { expressions: [], words: [], questions: [] };
-  for (const notes of [...Object.values(book.byTopic), book.loose]) {
-    merged.expressions.push(...notes.expressions);
-    merged.words.push(...notes.words);
-    merged.questions.push(...notes.questions);
-  }
-  merged.questions.sort((a, b) => b.at - a.at);
-  if (!topicCount(merged)) return <p className="mt-3 text-caption text-slate-500">{ui.ledgerEmptyShort}</p>;
-  return <TopicBody ui={ui} locale={locale} language={language} notes={merged} onLeave={() => undefined} />;
 }
