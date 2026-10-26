@@ -37,6 +37,7 @@
     "page:/": "shell",
 
     "components/AiTutorRow": "talk",
+    "components/AiTutorProfile": "people",
     "components/rooms/MessagesTab": "talk",
     "components/rooms/RoomDm": "talk",
     "components/rooms/RoomGroups": "talk",

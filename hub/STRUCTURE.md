@@ -17,13 +17,13 @@
 │        └ 업데이트 배너
 하단 탭  대화 │ 영상 학습 │ 사람 │ Room │ My        (첫 화면: 대화)
 │
-├ 대화 talk ─ AI 튜터 줄(맨 위 고정) + AI 튜터와 통화 줄 + 오늘의 팩 카드 ─ 튜터 줄 → AI 대화 chat(머리 ‹ 대화 · 튜터 · 📞 · ⋮, 하단은 "대화"가 켜진 채)
+├ 대화 talk ─ AI 튜터와의 대화 줄(맨 위 고정, 이름·국기 — 사람 대화처럼) + 오늘의 팩 카드 ─ 줄 → AI 대화 chat(머리 ‹ 대화 · 튜터 · 📞 · ⋮, 하단은 "대화"가 켜진 채)
 │           │                      ├ 📞 → AI 통화 call(탭 아님 — 어디서나 떠 있는 층 CallHost)
-│           │                      └ 통화 줄·AI 대화 ⋮ "통화 기록" → CallList(채팅과 따로, 2026-10-27: 이어서 하기·돌아보기·×, 이 폰에만)
+│           │                      └ AI 튜터 프로필·AI 대화 ⋮ "통화 기록" → CallList(채팅과 따로, 2026-10-27: 이어서 하기·돌아보기·×, 이 폰에만)
 │           ├ 단체방(팀이면 "대화 | 워크스페이스", 📞 단체방 통화 → 비공개 Room)
 │           └ 1:1 메시지(요청 → 열림, 📞 → 둘만의 비공개 Room)
 ├ 영상 학습 video ─ 이달의 영상 · 링크 넣기 · 학습 언어 자막 · 문장 바 → 문장분석 시트
-├ 사람 people ─ 칩 [👥 사람 | 📋 게시판(학습 언어별, 주제 칩 자유·질문·메이트·보이스룸·단체방 → 메이트 신청·방 들어가기·단체방 참여) | 🙂 아이콘(묶음 만들기·받기)](이모지만) · 프로필 시트(팔로우·메시지·메이트 신청·차단·신고) · ➕ 친구 초대 → 시트(🎁 초대 보상 카드 + 공유)
+├ 사람 people ─ 맨 위 AI 튜터(사람 카드처럼, 로그인 없이도 — AiTutorProfile: 프로필 시트 💬 메시지 → AI 대화 · 📞 통화 · 통화 기록, 2026-10-27 "AI 튜터를 사람들과 통합") · 칩 [👥 사람 | 📋 게시판(학습 언어별, 주제 칩 자유·질문·메이트·보이스룸·단체방 → 메이트 신청·방 들어가기·단체방 참여) | 🙂 아이콘(묶음 만들기·받기)](이모지만) · 프로필 시트(팔로우·메시지·메이트 신청·차단·신고) · ➕ 친구 초대 → 시트(🎁 초대 보상 카드 + 공유)
 ├ Room room ─ 로비(방 카드) → 방(자리 8칸·듣는 줄·자막·댓글) · 👥 이 방 사람들과 단체방 · 🎭 게임(방장: 라이어 게임·마피아)
 └ My my ─ 계정 카드 · 🎁 초대 보상 · 🤝 메이트·팀 줄 → 대화의 워크스페이스
           오늘 해볼 것 → 자라는 중 [망 | 그래프 | 단계] → 내 표현 → 노트(어휘·표현 장 8 × 주제 3, 단어장 줄)
@@ -116,9 +116,9 @@
 - 다른 영역이 씀: `videoLearning/VideoLearningTab` ← 앱 틀
 
 ### 사람 탭 — 프로필 목록·게시판·사진 `people`
-- 화면: `SuspendedNotice` · `rooms/BoardView` · `rooms/IconEditor` · `rooms/IconPacks` · `rooms/MediaImage` · `rooms/PeopleTab` · `rooms/RoomPeople`
+- 화면: `AiTutorProfile` · `SuspendedNotice` · `rooms/BoardView` · `rooms/IconEditor` · `rooms/IconPacks` · `rooms/MediaImage` · `rooms/PeopleTab` · `rooms/RoomPeople`
 - API: `board`(대화 탭, Room 탭, 계정·로그인) · `icons`(대화 탭, Room 탭, 계정·로그인) · `media`(Room 탭) · `social`(대화 탭, Room 탭, 계정·로그인)
-- 다른 영역이 씀: `SuspendedNotice` ← 앱 틀 · `rooms/IconPacks` ← 대화 탭, Room 탭 · `rooms/MediaImage` ← 대화 탭 · `rooms/PeopleTab` ← 앱 틀
+- 다른 영역이 씀: `AiTutorProfile` ← 대화 탭 · `SuspendedNotice` ← 앱 틀 · `rooms/IconPacks` ← 대화 탭, Room 탭 · `rooms/MediaImage` ← 대화 탭 · `rooms/PeopleTab` ← 앱 틀
 
 ### Room 탭 — 말하는 방 `room`
 - 화면: `rooms/RoomGame` · `rooms/RoomParts` · `rooms/RoomView` · `rooms/RoomsScreen` · `rooms/VideoStage`
@@ -170,12 +170,12 @@
 
 | 신호 | 보내는 영역 | 받는 영역 |
 |---|---|---|
-| `openTab` | 여러 영역 6곳 | 앱 틀 |
+| `openTab` | 여러 영역 7곳 | 앱 틀 |
 | `chatDraft` | 여러 영역 6곳 | AI 채팅 |
 | `openVideo` | 여러 영역 6곳 | 영상 학습 탭 |
 | `practice` | 앱 틀, AI 채팅, 학습 기록 공통, My 탭 | 앱 틀, AI 채팅, AI 통화 |
-| `startCall` | 앱 틀, AI 통화 | AI 통화 |
-| `openCall` | 앱 틀, AI 통화 | AI 통화 |
+| `startCall` | 앱 틀, AI 통화, 사람 탭 | AI 통화 |
+| `openCall` | 앱 틀, AI 통화, 사람 탭 | AI 통화 |
 | `sayOwnLine` | 앱 틀 | AI 통화 |
 | `openTopic` | 학습 기록 공통 | 앱 틀, My 탭 |
 | `openNotes` | 앱 틀, My 탭 | My 탭 |

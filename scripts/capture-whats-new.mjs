@@ -298,7 +298,7 @@ const note = PROMO
   : GUIDE_PARTS
   ? { version: "guide", items: GUIDE_PARTS_ITEMS }
   : GUIDE_CALLS
-  ? { version: "guide", items: [{ shot: "talk-calls", step: "talk-list" }] }
+  ? { version: "guide", items: [{ shot: "talk-calls", step: "talk-list" }, { shot: "people-ai", step: "people-lang" }] }
   : GUIDE ? { version: "guide", items: GUIDE_ITEMS } : RELEASE_NOTES.find((entry) => entry.version === VERSION);
 if (!note) {
   console.error(`No release note for ${VERSION} in src/lib/whatsNew.ts.`);

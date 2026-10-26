@@ -356,12 +356,13 @@
         {
           "heading": "Buscar personas",
           "body": [
+            "El tutor IA está arriba. Abre su perfil como el de cualquiera para escribirle o llamarlo ({ui:talkAiCall}); ahí también está {ui:callRecordsTitle}, sin iniciar sesión.",
             "Perfiles de quienes estuvieron hace poco. Toca una foto para abrir el perfil y síguelo o escríbele.",
             "También puedes bloquear o denunciar desde el perfil.",
             "En tu perfil elige con etiquetas tu nacionalidad, lengua materna e intereses, y activa o desactiva lo que ven los demás. Toca «🙌 Me ayudó» a quien respondió tu pregunta; «Ver en español» traduce presentaciones y publicaciones.",
             "El chip «Aprenden el mismo idioma» muestra a quienes aprenden el idioma que estudias ahora; «Aprenden y hablan como yo», solo a los que además hablan tu lengua materna. Los idiomas salen del perfil: idiomas que aprendes, lengua materna e idiomas que hablas."
           ],
-          "shot": "people-lang"
+          "shot": "people-ai"
         },
         {
           "heading": "Invitar amigos",
@@ -419,7 +420,7 @@
         {
           "heading": "Tus chats",
           "body": [
-            "El tutor IA está arriba. Toca la fila para chatear; la fila {ui:talkAiCall} de abajo abre {ui:callRecordsTitle}, y 📞 llama al momento. Los chats y las llamadas se guardan por separado.",
+            "Tu chat con el tutor IA está arriba. Toca la fila para chatear o 📞 para llamar al momento. {ui:callRecordsTitle} se guarda aparte de los chats; ábrelo desde el perfil del tutor IA en la pestaña de personas o desde ⋮ en el chat con la IA.",
             "Debajo siguen los grupos y los mensajes uno a uno, con cuántos no has leído."
           ],
           "shot": "talk-calls"
@@ -784,12 +785,13 @@
         {
           "heading": "人を探す",
           "body": [
+            "いちばん上はAIチューターです。ほかの人と同じようにプロフィールを開いてメッセージや通話（{ui:talkAiCall}）ができ、{ui:callRecordsTitle}もそこで見られます（ログイン不要）。",
             "最近来た学習者のプロフィールが並びます。写真をタップするとプロフィールが開き、フォローやメッセージができます。",
             "ブロックや報告もプロフィールからできます。",
             "プロフィールで国籍・母語・興味をチップで選び、ほかの人に見せる欄をオン・オフできます。質問に答えてくれた人には「🙌 助かった」、ほかの人の自己紹介や投稿は「日本語で見る」で翻訳します。",
             "上のチップ「同じ言語を学ぶ人」は今学んでいる言語が同じ人、「学ぶ言語も話す言語も同じ人」はさらに自分の母語も話す人だけを表示します。言語はプロフィールの学んでいる言語・母語・話せる言語で合わせます。"
           ],
-          "shot": "people-lang"
+          "shot": "people-ai"
         },
         {
           "heading": "友だちを招待",
@@ -847,7 +849,7 @@
         {
           "heading": "会話リスト",
           "body": [
-            "いちばん上はAIチューターです。行をタップするとチャット、その下の{ui:talkAiCall}の行で{ui:callRecordsTitle}、📞ですぐ通話できます。チャットと通話の記録は別々に残ります。",
+            "いちばん上はAIチューターとの会話です。行をタップするとチャット、📞ですぐ通話できます。{ui:callRecordsTitle}はチャットとは別に残り、人タブのAIチューターのプロフィールかAIチャットの⋮から開けます。",
             "その下にグループと1対1のメッセージが並び、未読の数も出ます。"
           ],
           "shot": "talk-calls"
@@ -1212,12 +1214,13 @@
         {
           "heading": "找人",
           "body": [
+            "最上面是 AI 导师。像别人一样打开它的资料，就能发消息或通话（{ui:talkAiCall}），{ui:callRecordsTitle}也在那里（不用登录）。",
             "这里是最近来过的学习者的资料。点头像打开资料，可以关注或发消息。",
             "拉黑和举报也在资料页。",
             "在个人资料里用标签选择国籍、母语和兴趣，并开关别人能看到的栏目。回答了你问题的人，可以点“🙌 有帮助”；别人的自我介绍和帖子可以用“用中文查看”翻译。",
             "上面的“在学同一种语言”显示和你现在学同一种语言的人，“学的和说的语言都相同”只显示其中也会说你母语的人。语言按个人资料里的在学语言、母语和会说的语言来匹配。"
           ],
-          "shot": "people-lang"
+          "shot": "people-ai"
         },
         {
           "heading": "邀请朋友",
@@ -1275,7 +1278,7 @@
         {
           "heading": "对话列表",
           "body": [
-            "最上面是 AI 导师。点这一行开始聊天；点下面的 {ui:talkAiCall} 一行打开{ui:callRecordsTitle}，点 📞 直接通话。聊天和通话记录分开保存。",
+            "最上面是和 AI 导师的对话。点这一行开始聊天，点 📞 直接通话。{ui:callRecordsTitle}和聊天分开保存，可以在人页的 AI 导师资料或 AI 对话的 ⋮ 里打开。",
             "下面是群聊和一对一消息，还会显示未读数量。"
           ],
           "shot": "talk-calls"
@@ -1640,12 +1643,13 @@
         {
           "heading": "Tìm người",
           "body": [
+            "Gia sư AI ở trên cùng. Mở hồ sơ như với mọi người để nhắn tin hoặc gọi ({ui:talkAiCall}); {ui:callRecordsTitle} cũng ở đó, không cần đăng nhập.",
             "Hồ sơ của những người học vừa ghé. Chạm ảnh để mở hồ sơ, rồi theo dõi hoặc nhắn tin.",
             "Chặn và báo cáo cũng ở hồ sơ.",
             "Trong hồ sơ, chọn quốc tịch, tiếng mẹ đẻ và sở thích bằng các thẻ, rồi bật hoặc tắt phần người khác thấy. Bấm “🙌 Hữu ích” cho người đã trả lời câu hỏi của bạn; “Xem bằng tiếng Việt” dịch phần giới thiệu và bài đăng của người khác.",
             "Chip “Học cùng ngôn ngữ” hiện những người đang học cùng ngôn ngữ với bạn; “Cùng học, cùng nói một ngôn ngữ” chỉ hiện những người còn nói tiếng mẹ đẻ của bạn. Ngôn ngữ lấy từ hồ sơ: ngôn ngữ đang học, tiếng mẹ đẻ và ngôn ngữ nói được."
           ],
-          "shot": "people-lang"
+          "shot": "people-ai"
         },
         {
           "heading": "Mời bạn bè",
@@ -1703,7 +1707,7 @@
         {
           "heading": "Danh sách trò chuyện",
           "body": [
-            "Gia sư AI ở trên cùng. Chạm vào dòng để chat; dòng {ui:talkAiCall} bên dưới mở {ui:callRecordsTitle}, còn 📞 gọi ngay. Chat và cuộc gọi được lưu riêng.",
+            "Cuộc trò chuyện với gia sư AI ở trên cùng. Chạm vào dòng để chat, hoặc 📞 để gọi ngay. {ui:callRecordsTitle} được lưu riêng với chat; mở từ hồ sơ gia sư AI ở tab mọi người hoặc ⋮ trong chat với AI.",
             "Bên dưới là nhóm chat và tin nhắn 1:1, kèm số tin chưa đọc."
           ],
           "shot": "talk-calls"
@@ -2068,12 +2072,13 @@
         {
           "heading": "Trouver des gens",
           "body": [
+            "Le tuteur IA est en haut. Ouvrez son profil comme celui de n’importe qui pour lui écrire ou l’appeler ({ui:talkAiCall}) ; {ui:callRecordsTitle} s’y trouve aussi, sans connexion.",
             "Les profils des personnes passées récemment. Touchez une photo pour ouvrir le profil, puis suivez ou écrivez.",
             "Bloquer et signaler se font aussi depuis le profil.",
             "Dans votre profil, choisissez en étiquettes votre nationalité, votre langue maternelle et vos centres d’intérêt, et activez ou non ce que les autres voient. Touchez « 🙌 Utile » pour qui a répondu à votre question ; « Voir en français » traduit les présentations et les posts.",
             "La puce « Apprennent la même langue » montre les personnes qui apprennent la langue que vous apprenez ; « Même langue apprise et parlée » ne garde que celles qui parlent aussi votre langue maternelle. Les langues viennent du profil : langues apprises, langue maternelle, langues parlées."
           ],
-          "shot": "people-lang"
+          "shot": "people-ai"
         },
         {
           "heading": "Inviter des amis",
@@ -2131,7 +2136,7 @@
         {
           "heading": "Vos discussions",
           "body": [
-            "Le tuteur IA est en haut. Touchez la ligne pour discuter ; la ligne {ui:talkAiCall} en dessous ouvre {ui:callRecordsTitle}, et 📞 appelle tout de suite. Les chats et les appels sont gardés à part.",
+            "Votre chat avec le tuteur IA est en haut. Touchez la ligne pour discuter, ou 📞 pour appeler tout de suite. {ui:callRecordsTitle} est gardé à part des chats ; ouvrez-le depuis le profil du tuteur IA dans l’onglet personnes ou depuis ⋮ dans le chat IA.",
             "En dessous viennent les groupes et les messages privés, avec le nombre de non-lus."
           ],
           "shot": "talk-calls"
@@ -2496,12 +2501,13 @@
         {
           "heading": "Trovare persone",
           "body": [
+            "Il tutor IA è in cima. Apri il suo profilo come quello di chiunque per scrivergli o chiamarlo ({ui:talkAiCall}); lì trovi anche {ui:callRecordsTitle}, senza accesso.",
             "I profili di chi è passato di recente. Tocca una foto per aprire il profilo, poi segui o scrivi.",
             "Blocca e segnala dal profilo.",
             "Nel profilo scegli con le etichette nazionalità, lingua madre e interessi, e attiva o disattiva ciò che vedono gli altri. Tocca «🙌 Utile» per chi ha risposto alla tua domanda; «Vedi in italiano» traduce presentazioni e post.",
             "Il chip «Imparano la stessa lingua» mostra chi studia la tua stessa lingua; «Stessa lingua studiata e parlata» solo chi parla anche la tua lingua madre. Le lingue vengono dal profilo: lingue che studi, lingua madre e lingue che parli."
           ],
-          "shot": "people-lang"
+          "shot": "people-ai"
         },
         {
           "heading": "Invita amici",
@@ -2559,7 +2565,7 @@
         {
           "heading": "Le tue chat",
           "body": [
-            "Il tutor IA è in cima. Tocca la riga per chattare; la riga {ui:talkAiCall} sotto apre {ui:callRecordsTitle}, e 📞 chiama subito. Chat e chiamate sono salvate a parte.",
+            "La chat con il tutor IA è in cima. Tocca la riga per chattare o 📞 per chiamare subito. {ui:callRecordsTitle} è salvata a parte dalle chat; aprila dal profilo del tutor IA nella scheda persone o da ⋮ nella chat con l’IA.",
             "Sotto ci sono i gruppi e i messaggi uno a uno, con quanti non hai letto."
           ],
           "shot": "talk-calls"
@@ -2924,12 +2930,13 @@
         {
           "heading": "Encontrar pessoas",
           "body": [
+            "O tutor de IA está no topo. Abre o perfil dele como o de qualquer pessoa para mandar mensagem ou ligar ({ui:talkAiCall}); {ui:callRecordsTitle} também está lá, sem iniciar sessão.",
             "Perfis de quem esteve aqui há pouco. Toque numa foto para abrir o perfil e siga ou envie mensagem.",
             "Bloquear e denunciar também é no perfil.",
             "No perfil, escolha em etiquetas sua nacionalidade, língua materna e interesses, e ative ou desative o que os outros veem. Toque em “🙌 Ajudou” para quem respondeu sua pergunta; “Ver em português” traduz apresentações e posts.",
             "O chip “Aprendem o mesmo idioma” mostra quem aprende o mesmo idioma que você; “Aprendem e falam como eu” só quem também fala a sua língua materna. Os idiomas vêm do perfil: línguas que aprende, língua materna e línguas que fala."
           ],
-          "shot": "people-lang"
+          "shot": "people-ai"
         },
         {
           "heading": "Convidar amigos",
@@ -2987,7 +2994,7 @@
         {
           "heading": "Suas conversas",
           "body": [
-            "O tutor de IA fica no topo. Toque na linha para conversar; a linha {ui:talkAiCall} abaixo abre {ui:callRecordsTitle}, e 📞 liga na hora. Chats e chamadas ficam guardados separadamente.",
+            "A conversa com o tutor de IA está no topo. Toca na linha para conversar ou em 📞 para ligar na hora. {ui:callRecordsTitle} fica separado dos chats; abre-o no perfil do tutor de IA no separador de pessoas ou pelo ⋮ no chat com a IA.",
             "Abaixo vêm os grupos e as mensagens individuais, com quantas não foram lidas."
           ],
           "shot": "talk-calls"
@@ -3352,12 +3359,13 @@
         {
           "heading": "Найти людей",
           "body": [
+            "ИИ-репетитор вверху. Откройте его профиль, как у любого человека, чтобы написать или позвонить ({ui:talkAiCall}); там же {ui:callRecordsTitle} — без входа.",
             "Профили тех, кто заходил недавно. Нажмите на фото, чтобы открыть профиль, подписаться или написать.",
             "Заблокировать и пожаловаться тоже можно в профиле.",
             "В профиле выберите метками гражданство, родной язык и интересы и включайте или скрывайте то, что видят другие. Нажмите «🙌 Помогло» тому, кто ответил на ваш вопрос; «Перевести на русский» переводит чужие описания и посты.",
             "Чип «Учат тот же язык» показывает тех, кто учит тот же язык, что и вы; «Учат и говорят как я» — только тех, кто ещё и говорит на вашем родном языке. Языки берутся из профиля: изучаемые, родной и те, на которых вы говорите."
           ],
-          "shot": "people-lang"
+          "shot": "people-ai"
         },
         {
           "heading": "Пригласить друзей",
@@ -3415,7 +3423,7 @@
         {
           "heading": "Ваши чаты",
           "body": [
-            "ИИ-репетитор вверху. Нажмите на строку, чтобы переписываться; строка {ui:talkAiCall} ниже открывает {ui:callRecordsTitle}, а 📞 сразу звонит. Чаты и звонки хранятся отдельно.",
+            "Ваш чат с ИИ-репетитором вверху. Нажмите на строку, чтобы переписываться, или на 📞, чтобы сразу позвонить. {ui:callRecordsTitle} хранится отдельно от чатов; откройте её из профиля ИИ-репетитора во вкладке людей или через ⋮ в чате с ИИ.",
             "Ниже — группы и личные сообщения с числом непрочитанных."
           ],
           "shot": "talk-calls"
@@ -3780,12 +3788,13 @@
         {
           "heading": "Cari orang",
           "body": [
+            "Tutor AI ada di paling atas. Buka profilnya seperti orang lain untuk mengirim pesan atau menelepon ({ui:talkAiCall}); {ui:callRecordsTitle} juga ada di sana, tanpa masuk.",
             "Profil pelajar yang baru mampir. Ketuk foto untuk membuka profil, lalu ikuti atau kirim pesan.",
             "Blokir dan laporkan juga dari profil.",
             "Di profil, pilih kewarganegaraan, bahasa ibu, dan minat lewat chip, lalu nyalakan atau matikan bagian yang dilihat orang lain. Ketuk “🙌 Membantu” untuk orang yang menjawab pertanyaanmu; “Lihat dalam bahasa Indonesia” menerjemahkan perkenalan dan postingan orang lain.",
             "Chip “Belajar bahasa yang sama” menampilkan orang yang belajar bahasa yang sama denganmu; “Sama bahasa belajar & bicara” hanya yang juga berbicara bahasa ibumu. Bahasa diambil dari profil: bahasa yang dipelajari, bahasa ibu, dan bahasa yang dikuasai."
           ],
-          "shot": "people-lang"
+          "shot": "people-ai"
         },
         {
           "heading": "Undang teman",
@@ -3843,7 +3852,7 @@
         {
           "heading": "Daftar obrolan",
           "body": [
-            "Tutor AI ada di paling atas. Ketuk barisnya untuk chat; baris {ui:talkAiCall} di bawahnya membuka {ui:callRecordsTitle}, dan 📞 langsung menelepon. Chat dan panggilan disimpan terpisah.",
+            "Obrolanmu dengan tutor AI ada di paling atas. Ketuk barisnya untuk chat, atau 📞 untuk langsung menelepon. {ui:callRecordsTitle} disimpan terpisah dari chat; buka dari profil tutor AI di tab orang atau dari ⋮ di chat AI.",
             "Di bawahnya ada grup dan pesan pribadi, beserta jumlah yang belum dibaca."
           ],
           "shot": "talk-calls"
@@ -4208,12 +4217,13 @@
         {
           "heading": "البحث عن أشخاص",
           "body": [
+            "المعلّم الذكي في الأعلى. افتح ملفه مثل أي شخص لتراسله أو تتصل به ({ui:talkAiCall})، وستجد {ui:callRecordsTitle} هناك أيضًا، دون تسجيل دخول.",
             "ملفات من زاروا مؤخرًا. اضغط على الصورة لفتح الملف الشخصي، ثم تابِع أو راسل.",
             "الحظر والإبلاغ من الملف الشخصي أيضًا.",
             "في ملفك الشخصي اختر بالرقاقات جنسيتك ولغتك الأم واهتماماتك، وشغّل أو أخفِ ما يراه الآخرون. اضغط «🙌 مفيد» لمن أجاب عن سؤالك، و«عرض باللغة العربية» يترجم تعريفات الآخرين ومنشوراتهم.",
             "شريحة «يتعلّمون اللغة نفسها» تعرض من يتعلّمون اللغة التي تتعلّمها الآن، و«يتعلّمون ويتحدّثون مثلي» تعرض منهم فقط من يتحدّث لغتك الأم أيضًا. تُؤخذ اللغات من الملف الشخصي: اللغات التي تتعلّمها ولغتك الأم واللغات التي تتحدّثها."
           ],
-          "shot": "people-lang"
+          "shot": "people-ai"
         },
         {
           "heading": "دعوة الأصدقاء",
@@ -4271,7 +4281,7 @@
         {
           "heading": "محادثاتك",
           "body": [
-            "المعلّم الذكي في الأعلى. اضغط السطر للمحادثة؛ سطر {ui:talkAiCall} تحته يفتح {ui:callRecordsTitle}، و📞 يتصل فورًا. تُحفظ المحادثات والمكالمات منفصلة.",
+            "محادثتك مع المعلّم الذكي في الأعلى. اضغط السطر للمحادثة، أو 📞 للاتصال فورًا. يُحفظ {ui:callRecordsTitle} منفصلًا عن المحادثات؛ افتحه من ملف المعلّم الذكي في تبويب الأشخاص أو من ⋮ في محادثة الذكاء الاصطناعي.",
             "تحته المجموعات والرسائل الفردية، مع عدد غير المقروء."
           ],
           "shot": "talk-calls"
@@ -4636,12 +4646,13 @@
         {
           "heading": "หาคน",
           "body": [
+            "ติวเตอร์ AI อยู่บนสุด เปิดโปรไฟล์ได้เหมือนคนอื่นเพื่อส่งข้อความหรือโทร ({ui:talkAiCall}) และดู{ui:callRecordsTitle}ได้ที่นั่น ไม่ต้องเข้าสู่ระบบ",
             "โปรไฟล์ของผู้เรียนที่เพิ่งเข้ามา แตะรูปเพื่อเปิดโปรไฟล์ แล้วติดตามหรือส่งข้อความได้",
             "บล็อกและรายงานได้จากโปรไฟล์",
             "ในโปรไฟล์ เลือกสัญชาติ ภาษาแม่ และความสนใจเป็นชิป แล้วเปิดหรือปิดส่วนที่คนอื่นเห็น กด “🙌 ช่วยได้” ให้คนที่ตอบคำถามของคุณ และ “ดูเป็นภาษาไทย” แปลคำแนะนำตัวและโพสต์ของคนอื่น",
             "ชิป “เรียนภาษาเดียวกัน” แสดงคนที่เรียนภาษาเดียวกับที่คุณเรียนอยู่ ส่วน “เรียนและพูดภาษาเดียวกัน” แสดงเฉพาะคนที่พูดภาษาแม่ของคุณด้วย ภาษามาจากโปรไฟล์: ภาษาที่กำลังเรียน ภาษาแม่ และภาษาที่พูดได้"
           ],
-          "shot": "people-lang"
+          "shot": "people-ai"
         },
         {
           "heading": "ชวนเพื่อน",
@@ -4699,7 +4710,7 @@
         {
           "heading": "รายการแชต",
           "body": [
-            "ติวเตอร์ AI อยู่บนสุด แตะแถวเพื่อแชต แถว {ui:talkAiCall} ด้านล่างเปิด{ui:callRecordsTitle} และ 📞 โทรได้ทันที แชตกับการโทรเก็บแยกกัน",
+            "แชตกับติวเตอร์ AI อยู่บนสุด แตะแถวเพื่อแชต หรือแตะ 📞 เพื่อโทรทันที {ui:callRecordsTitle}เก็บแยกจากแชต เปิดได้จากโปรไฟล์ติวเตอร์ AI ในแท็บผู้คนหรือ ⋮ ในแชต AI",
             "ด้านล่างเป็นกลุ่มแชตและข้อความส่วนตัว พร้อมจำนวนที่ยังไม่ได้อ่าน"
           ],
           "shot": "talk-calls"
@@ -5064,12 +5075,13 @@
         {
           "heading": "लोग ढूँढें",
           "body": [
+            "सबसे ऊपर AI ट्यूटर है। किसी और की तरह उसकी प्रोफ़ाइल खोलकर संदेश भेजें या कॉल करें ({ui:talkAiCall}); {ui:callRecordsTitle} भी वहीं है, बिना लॉग इन।",
             "हाल में आए सीखने वालों की प्रोफ़ाइल। फ़ोटो पर टैप करके प्रोफ़ाइल खोलें, फिर फ़ॉलो करें या मैसेज भेजें।",
             "ब्लॉक और रिपोर्ट भी प्रोफ़ाइल से होते हैं।",
             "प्रोफ़ाइल में चिप से अपनी राष्ट्रीयता, मातृभाषा और रुचियाँ चुनें, और दूसरों को दिखने वाले हिस्से चालू या बंद करें। जिसने आपके सवाल का जवाब दिया उसे “🙌 मदद मिली” दें; “हिन्दी में देखें” दूसरों के परिचय और पोस्ट का अनुवाद करता है।",
             "चिप ‘वही भाषा सीख रहे हैं’ उन लोगों को दिखाती है जो वही भाषा सीख रहे हैं जो आप सीख रहे हैं; ‘सीखने और बोलने की भाषा एक जैसी’ उनमें से सिर्फ़ उन्हें जो आपकी मातृभाषा भी बोलते हैं। भाषाएँ प्रोफ़ाइल से ली जाती हैं: सीखी जा रही भाषाएँ, मातृभाषा और बोली जाने वाली भाषाएँ।"
           ],
-          "shot": "people-lang"
+          "shot": "people-ai"
         },
         {
           "heading": "दोस्तों को बुलाएँ",
@@ -5127,7 +5139,7 @@
         {
           "heading": "आपकी बातचीत",
           "body": [
-            "सबसे ऊपर AI ट्यूटर है। पंक्ति पर टैप करके चैट करें; नीचे की {ui:talkAiCall} पंक्ति {ui:callRecordsTitle} खोलती है, और 📞 तुरंत कॉल करता है। चैट और कॉल अलग-अलग सहेजे जाते हैं।",
+            "AI ट्यूटर से आपकी बातचीत सबसे ऊपर है। पंक्ति पर टैप करके चैट करें, या 📞 से तुरंत कॉल करें। {ui:callRecordsTitle} चैट से अलग रहता है; इसे लोग टैब में AI ट्यूटर की प्रोफ़ाइल या AI चैट के ⋮ से खोलें।",
             "नीचे ग्रुप और एक-से-एक मैसेज हैं, साथ में बिना पढ़े संदेशों की गिनती।"
           ],
           "shot": "talk-calls"

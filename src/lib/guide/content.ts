@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-27a";
+export const GUIDE_VERSION = "2026-10-27b";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -478,12 +478,13 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "사람 찾기",
         "body": [
+          "맨 위는 AI 튜터예요. 사람처럼 프로필을 열어 {ui:talkAiCall}·메시지를 걸고, {ui:callRecordsTitle}도 거기서 봐요(로그인 없이도).",
           "최근에 온 학습자의 프로필이 보여요. 사진을 누르면 프로필이 열리고, 팔로우하거나 메시지를 보낼 수 있어요.",
           "차단·신고도 프로필에서 해요.",
           "프로필에서 국적·모국어·관심사를 칩으로 고르고, 다른 사람에게 보일 칸을 켜고 꺼요. 내 질문에 답해 준 사람에게는 ‘🙌 도움됐어요’, 남의 소개·올린 글은 ‘한국어로 보기’로 번역해요.",
           "위 칩 ‘같은 언어를 배우는 사람’은 지금 배우는 언어가 같은 사람, ‘배우는 언어·쓰는 말이 같은 사람’는 거기에 내 모국어도 쓰는 사람만 보여요. 언어는 프로필의 배우는 언어·모국어·할 수 있는 언어로 맞춰요."
         ],
-        "shot": "people-lang"
+        "shot": "people-ai"
       },
       {
         "heading": "친구 초대",
@@ -541,7 +542,7 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "대화 목록",
         "body": [
-          "맨 위가 AI 튜터예요. 줄을 누르면 채팅이고, 그 아래 {ui:talkAiCall} 줄을 누르면 {ui:callRecordsTitle}, 📞를 누르면 바로 통화해요. 채팅과 통화 기록은 따로 남아요.",
+          "맨 위가 AI 튜터와의 대화예요. 줄을 누르면 채팅, 📞를 누르면 바로 통화해요. {ui:callRecordsTitle}은 채팅과 따로 남고, 사람 탭의 AI 튜터 프로필이나 AI 대화 ⋮에서 열어요.",
           "그 아래에 단체방과 1:1 메시지가 이어지고, 안 읽은 메시지 수도 같이 보여요."
         ],
         "shot": "talk-calls"
@@ -907,12 +908,13 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Find people",
         "body": [
+          "The AI tutor is at the top. Open its profile like anyone's to message it or call it ({ui:talkAiCall}), and find {ui:callRecordsTitle} there too — no sign-in needed.",
           "Profiles of learners who were here lately. Tap a photo to open a profile, then follow or send a message.",
           "Blocking and reporting are on the profile too.",
           "In your profile, pick your nationality, native language and interests as chips, and turn on or off what others see. Tap “🙌 Helpful” for someone who answered your question; “See in English” translates others’ intros and posts.",
           "The chip “Learning the same language” shows people learning the language you're learning now; “Same learning & spoken language” narrows it to those who also speak your native language. Languages come from the profile's languages you learn, native language and languages you speak."
         ],
-        "shot": "people-lang"
+        "shot": "people-ai"
       },
       {
         "heading": "Invite friends",
@@ -970,7 +972,7 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Your chats",
         "body": [
-          "The AI tutor is at the top. Tap the row to chat; tap the {ui:talkAiCall} row below it for {ui:callRecordsTitle}, or 📞 to call right away. Chats and calls are kept separately.",
+          "Your chat with the AI tutor is at the top. Tap the row to chat, or 📞 to call right away. {ui:callRecordsTitle} is kept apart from your chats; open it from the AI tutor's profile in the people tab or from ⋮ in the AI chat.",
           "Group chats and one-to-one messages follow below, with how many are unread."
         ],
         "shot": "talk-calls"

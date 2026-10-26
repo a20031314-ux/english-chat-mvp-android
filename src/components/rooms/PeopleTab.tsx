@@ -17,6 +17,7 @@ import { InviteButton } from "@/components/invite/InviteButton";
 import { BoardView } from "./BoardView";
 import { IconsView } from "./IconPacks";
 import { iconCopy } from "@/lib/rooms/iconCopy";
+import { AiTutorPerson } from "@/components/AiTutorProfile";
 
 /**
  * 하단 "사람" 탭: 최근에 앱을 쓴 사람들의 프로필 목록(RoomPeople.tsx).
@@ -43,6 +44,7 @@ export function PeopleTab({
   targetLanguage,
   teams = [],
   onOpenGroup,
+  canCall = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -50,6 +52,8 @@ export function PeopleTab({
   /** 내 러닝메이트·팀(AppHome의 단체방 목록에서). 누르면 메시지 탭에서 그 워크스페이스. */
   teams?: GroupSummary[];
   onOpenGroup?: (groupId: string) => void;
+  /** AI 튜터 통화가 되는지(이 학습 언어에 통화가 있고 숨기지 않음). */
+  canCall?: boolean;
 }) {
   const tt = teamCopy(locale);
   const t = roomCopy(locale);
@@ -119,11 +123,19 @@ export function PeopleTab({
             ) : view === "icons" ? (
               <IconsView locale={locale} targetLanguage={targetLanguage} />
             ) : (
-              <PeopleList t={t} locale={locale} targetLanguage={targetLanguage} onMessage={requestDm} />
+              <>
+                {/* AI 튜터도 사람 중 하나로 맨 위에(2026-10-27). */}
+                <div className="mb-3">
+                  <AiTutorPerson ui={ui} targetLanguage={targetLanguage} canCall={canCall} messageLabel={t.message} />
+                </div>
+                <PeopleList t={t} locale={locale} targetLanguage={targetLanguage} onMessage={requestDm} />
+              </>
             )}
           </>
         ) : (
           <div className="space-y-3">
+            {/* AI 튜터는 로그인 없이도(AI 기능은 로그인 없이). */}
+            <AiTutorPerson ui={ui} targetLanguage={targetLanguage} canCall={canCall} messageLabel={t.message} />
             <AccountCard ui={ui} locale={locale} />
           </div>
         )}

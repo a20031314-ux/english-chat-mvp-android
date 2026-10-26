@@ -497,7 +497,7 @@ function AppHomeInner({
                         canCall={callOn}
                         onChat={() => openTab("chat")}
                         onCall={() => openTab("roleplay")}
-                        onCalls={() => sendAppIntent("openCall", {})}
+                        targetLanguage={targetLanguage}
                       />
                       {/* 오늘의 팩: 예전 통화 첫 화면 맨 위 → 대화 목록 AI 튜터 바로 아래(2026-10-23). */}
                       {callOn ? (
@@ -521,6 +521,7 @@ function AppHomeInner({
                   locale={locale}
                   targetLanguage={targetLanguage}
                   teams={groups.groups.filter((row) => row.group.team && !row.invite)}
+                  canCall={callOn}
                   onOpenGroup={(groupId) => {
                     openTab("talk");
                     requestGroup(groupId);

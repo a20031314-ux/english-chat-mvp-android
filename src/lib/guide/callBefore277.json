@@ -22,6 +22,16 @@
       "body": [
         "{ui:roleplayPause} guarda la conversación. La próxima vez, {ui:roleplayResume} en la tarjeta 🗒 la retoma."
       ]
+    },
+    "people.find": {
+      "heading": "Buscar personas",
+      "body": [
+        "Perfiles de quienes estuvieron hace poco. Toca una foto para abrir el perfil y síguelo o escríbele.",
+        "También puedes bloquear o denunciar desde el perfil.",
+        "En tu perfil elige con etiquetas tu nacionalidad, lengua materna e intereses, y activa o desactiva lo que ven los demás. Toca «🙌 Me ayudó» a quien respondió tu pregunta; «Ver en español» traduce presentaciones y publicaciones.",
+        "El chip «Aprenden el mismo idioma» muestra a quienes aprenden el idioma que estudias ahora; «Aprenden y hablan como yo», solo a los que además hablan tu lengua materna. Los idiomas salen del perfil: idiomas que aprendes, lengua materna e idiomas que hablas."
+      ],
+      "shot": "people-lang"
     }
   },
   "ja": {
@@ -47,6 +57,16 @@
       "body": [
         "{ui:roleplayPause}を押すと会話が保存されます。次は🗒カードの{ui:roleplayResume}で続けられます。"
       ]
+    },
+    "people.find": {
+      "heading": "人を探す",
+      "body": [
+        "最近来た学習者のプロフィールが並びます。写真をタップするとプロフィールが開き、フォローやメッセージができます。",
+        "ブロックや報告もプロフィールからできます。",
+        "プロフィールで国籍・母語・興味をチップで選び、ほかの人に見せる欄をオン・オフできます。質問に答えてくれた人には「🙌 助かった」、ほかの人の自己紹介や投稿は「日本語で見る」で翻訳します。",
+        "上のチップ「同じ言語を学ぶ人」は今学んでいる言語が同じ人、「学ぶ言語も話す言語も同じ人」はさらに自分の母語も話す人だけを表示します。言語はプロフィールの学んでいる言語・母語・話せる言語で合わせます。"
+      ],
+      "shot": "people-lang"
     }
   },
   "zh": {
@@ -72,6 +92,16 @@
       "body": [
         "点 {ui:roleplayPause} 会保存对话。下次点 🗒 卡片上的 {ui:roleplayResume} 继续。"
       ]
+    },
+    "people.find": {
+      "heading": "找人",
+      "body": [
+        "这里是最近来过的学习者的资料。点头像打开资料，可以关注或发消息。",
+        "拉黑和举报也在资料页。",
+        "在个人资料里用标签选择国籍、母语和兴趣，并开关别人能看到的栏目。回答了你问题的人，可以点“🙌 有帮助”；别人的自我介绍和帖子可以用“用中文查看”翻译。",
+        "上面的“在学同一种语言”显示和你现在学同一种语言的人，“学的和说的语言都相同”只显示其中也会说你母语的人。语言按个人资料里的在学语言、母语和会说的语言来匹配。"
+      ],
+      "shot": "people-lang"
     }
   },
   "vi": {
@@ -97,6 +127,16 @@
       "body": [
         "{ui:roleplayPause} lưu cuộc trò chuyện. Lần sau, {ui:roleplayResume} trên thẻ 🗒 để tiếp tục."
       ]
+    },
+    "people.find": {
+      "heading": "Tìm người",
+      "body": [
+        "Hồ sơ của những người học vừa ghé. Chạm ảnh để mở hồ sơ, rồi theo dõi hoặc nhắn tin.",
+        "Chặn và báo cáo cũng ở hồ sơ.",
+        "Trong hồ sơ, chọn quốc tịch, tiếng mẹ đẻ và sở thích bằng các thẻ, rồi bật hoặc tắt phần người khác thấy. Bấm “🙌 Hữu ích” cho người đã trả lời câu hỏi của bạn; “Xem bằng tiếng Việt” dịch phần giới thiệu và bài đăng của người khác.",
+        "Chip “Học cùng ngôn ngữ” hiện những người đang học cùng ngôn ngữ với bạn; “Cùng học, cùng nói một ngôn ngữ” chỉ hiện những người còn nói tiếng mẹ đẻ của bạn. Ngôn ngữ lấy từ hồ sơ: ngôn ngữ đang học, tiếng mẹ đẻ và ngôn ngữ nói được."
+      ],
+      "shot": "people-lang"
     }
   },
   "fr": {
@@ -122,6 +162,16 @@
       "body": [
         "{ui:roleplayPause} enregistre la conversation. La prochaine fois, {ui:roleplayResume} sur la carte 🗒 la reprend."
       ]
+    },
+    "people.find": {
+      "heading": "Trouver des gens",
+      "body": [
+        "Les profils des personnes passées récemment. Touchez une photo pour ouvrir le profil, puis suivez ou écrivez.",
+        "Bloquer et signaler se font aussi depuis le profil.",
+        "Dans votre profil, choisissez en étiquettes votre nationalité, votre langue maternelle et vos centres d’intérêt, et activez ou non ce que les autres voient. Touchez « 🙌 Utile » pour qui a répondu à votre question ; « Voir en français » traduit les présentations et les posts.",
+        "La puce « Apprennent la même langue » montre les personnes qui apprennent la langue que vous apprenez ; « Même langue apprise et parlée » ne garde que celles qui parlent aussi votre langue maternelle. Les langues viennent du profil : langues apprises, langue maternelle, langues parlées."
+      ],
+      "shot": "people-lang"
     }
   },
   "it": {
@@ -147,6 +197,16 @@
       "body": [
         "{ui:roleplayPause} salva la conversazione. La volta dopo, {ui:roleplayResume} sulla scheda 🗒 la riprende."
       ]
+    },
+    "people.find": {
+      "heading": "Trovare persone",
+      "body": [
+        "I profili di chi è passato di recente. Tocca una foto per aprire il profilo, poi segui o scrivi.",
+        "Blocca e segnala dal profilo.",
+        "Nel profilo scegli con le etichette nazionalità, lingua madre e interessi, e attiva o disattiva ciò che vedono gli altri. Tocca «🙌 Utile» per chi ha risposto alla tua domanda; «Vedi in italiano» traduce presentazioni e post.",
+        "Il chip «Imparano la stessa lingua» mostra chi studia la tua stessa lingua; «Stessa lingua studiata e parlata» solo chi parla anche la tua lingua madre. Le lingue vengono dal profilo: lingue che studi, lingua madre e lingue che parli."
+      ],
+      "shot": "people-lang"
     }
   },
   "pt": {
@@ -172,6 +232,16 @@
       "body": [
         "{ui:roleplayPause} salva a conversa. Da próxima vez, {ui:roleplayResume} no cartão 🗒 continua de onde parou."
       ]
+    },
+    "people.find": {
+      "heading": "Encontrar pessoas",
+      "body": [
+        "Perfis de quem esteve aqui há pouco. Toque numa foto para abrir o perfil e siga ou envie mensagem.",
+        "Bloquear e denunciar também é no perfil.",
+        "No perfil, escolha em etiquetas sua nacionalidade, língua materna e interesses, e ative ou desative o que os outros veem. Toque em “🙌 Ajudou” para quem respondeu sua pergunta; “Ver em português” traduz apresentações e posts.",
+        "O chip “Aprendem o mesmo idioma” mostra quem aprende o mesmo idioma que você; “Aprendem e falam como eu” só quem também fala a sua língua materna. Os idiomas vêm do perfil: línguas que aprende, língua materna e línguas que fala."
+      ],
+      "shot": "people-lang"
     }
   },
   "ru": {
@@ -197,6 +267,16 @@
       "body": [
         "{ui:roleplayPause} сохраняет разговор. В следующий раз нажмите {ui:roleplayResume} на карточке 🗒, чтобы продолжить."
       ]
+    },
+    "people.find": {
+      "heading": "Найти людей",
+      "body": [
+        "Профили тех, кто заходил недавно. Нажмите на фото, чтобы открыть профиль, подписаться или написать.",
+        "Заблокировать и пожаловаться тоже можно в профиле.",
+        "В профиле выберите метками гражданство, родной язык и интересы и включайте или скрывайте то, что видят другие. Нажмите «🙌 Помогло» тому, кто ответил на ваш вопрос; «Перевести на русский» переводит чужие описания и посты.",
+        "Чип «Учат тот же язык» показывает тех, кто учит тот же язык, что и вы; «Учат и говорят как я» — только тех, кто ещё и говорит на вашем родном языке. Языки берутся из профиля: изучаемые, родной и те, на которых вы говорите."
+      ],
+      "shot": "people-lang"
     }
   },
   "id": {
@@ -222,6 +302,16 @@
       "body": [
         "{ui:roleplayPause} menyimpan percakapan. Lain kali, {ui:roleplayResume} di kartu 🗒 melanjutkannya."
       ]
+    },
+    "people.find": {
+      "heading": "Cari orang",
+      "body": [
+        "Profil pelajar yang baru mampir. Ketuk foto untuk membuka profil, lalu ikuti atau kirim pesan.",
+        "Blokir dan laporkan juga dari profil.",
+        "Di profil, pilih kewarganegaraan, bahasa ibu, dan minat lewat chip, lalu nyalakan atau matikan bagian yang dilihat orang lain. Ketuk “🙌 Membantu” untuk orang yang menjawab pertanyaanmu; “Lihat dalam bahasa Indonesia” menerjemahkan perkenalan dan postingan orang lain.",
+        "Chip “Belajar bahasa yang sama” menampilkan orang yang belajar bahasa yang sama denganmu; “Sama bahasa belajar & bicara” hanya yang juga berbicara bahasa ibumu. Bahasa diambil dari profil: bahasa yang dipelajari, bahasa ibu, dan bahasa yang dikuasai."
+      ],
+      "shot": "people-lang"
     }
   },
   "ar": {
@@ -247,6 +337,16 @@
       "body": [
         "يحفظ {ui:roleplayPause} المحادثة. في المرة القادمة اضغط {ui:roleplayResume} على بطاقة 🗒 لتكمل."
       ]
+    },
+    "people.find": {
+      "heading": "البحث عن أشخاص",
+      "body": [
+        "ملفات من زاروا مؤخرًا. اضغط على الصورة لفتح الملف الشخصي، ثم تابِع أو راسل.",
+        "الحظر والإبلاغ من الملف الشخصي أيضًا.",
+        "في ملفك الشخصي اختر بالرقاقات جنسيتك ولغتك الأم واهتماماتك، وشغّل أو أخفِ ما يراه الآخرون. اضغط «🙌 مفيد» لمن أجاب عن سؤالك، و«عرض باللغة العربية» يترجم تعريفات الآخرين ومنشوراتهم.",
+        "شريحة «يتعلّمون اللغة نفسها» تعرض من يتعلّمون اللغة التي تتعلّمها الآن، و«يتعلّمون ويتحدّثون مثلي» تعرض منهم فقط من يتحدّث لغتك الأم أيضًا. تُؤخذ اللغات من الملف الشخصي: اللغات التي تتعلّمها ولغتك الأم واللغات التي تتحدّثها."
+      ],
+      "shot": "people-lang"
     }
   },
   "th": {
@@ -272,6 +372,16 @@
       "body": [
         "{ui:roleplayPause} จะบันทึกบทสนทนาไว้ ครั้งหน้าแตะ {ui:roleplayResume} บนการ์ด 🗒 เพื่อคุยต่อ"
       ]
+    },
+    "people.find": {
+      "heading": "หาคน",
+      "body": [
+        "โปรไฟล์ของผู้เรียนที่เพิ่งเข้ามา แตะรูปเพื่อเปิดโปรไฟล์ แล้วติดตามหรือส่งข้อความได้",
+        "บล็อกและรายงานได้จากโปรไฟล์",
+        "ในโปรไฟล์ เลือกสัญชาติ ภาษาแม่ และความสนใจเป็นชิป แล้วเปิดหรือปิดส่วนที่คนอื่นเห็น กด “🙌 ช่วยได้” ให้คนที่ตอบคำถามของคุณ และ “ดูเป็นภาษาไทย” แปลคำแนะนำตัวและโพสต์ของคนอื่น",
+        "ชิป “เรียนภาษาเดียวกัน” แสดงคนที่เรียนภาษาเดียวกับที่คุณเรียนอยู่ ส่วน “เรียนและพูดภาษาเดียวกัน” แสดงเฉพาะคนที่พูดภาษาแม่ของคุณด้วย ภาษามาจากโปรไฟล์: ภาษาที่กำลังเรียน ภาษาแม่ และภาษาที่พูดได้"
+      ],
+      "shot": "people-lang"
     }
   },
   "hi": {
@@ -297,6 +407,16 @@
       "body": [
         "{ui:roleplayPause} बातचीत सहेज लेता है। अगली बार 🗒 कार्ड पर {ui:roleplayResume} से आगे बढ़ें।"
       ]
+    },
+    "people.find": {
+      "heading": "लोग ढूँढें",
+      "body": [
+        "हाल में आए सीखने वालों की प्रोफ़ाइल। फ़ोटो पर टैप करके प्रोफ़ाइल खोलें, फिर फ़ॉलो करें या मैसेज भेजें।",
+        "ब्लॉक और रिपोर्ट भी प्रोफ़ाइल से होते हैं।",
+        "प्रोफ़ाइल में चिप से अपनी राष्ट्रीयता, मातृभाषा और रुचियाँ चुनें, और दूसरों को दिखने वाले हिस्से चालू या बंद करें। जिसने आपके सवाल का जवाब दिया उसे “🙌 मदद मिली” दें; “हिन्दी में देखें” दूसरों के परिचय और पोस्ट का अनुवाद करता है।",
+        "चिप ‘वही भाषा सीख रहे हैं’ उन लोगों को दिखाती है जो वही भाषा सीख रहे हैं जो आप सीख रहे हैं; ‘सीखने और बोलने की भाषा एक जैसी’ उनमें से सिर्फ़ उन्हें जो आपकी मातृभाषा भी बोलते हैं। भाषाएँ प्रोफ़ाइल से ली जाती हैं: सीखी जा रही भाषाएँ, मातृभाषा और बोली जाने वाली भाषाएँ।"
+      ],
+      "shot": "people-lang"
     }
   },
   "ko": {
@@ -322,6 +442,16 @@
       "body": [
         "‘{ui:roleplayPause}’을 누르면 대화가 저장돼요. 다음에 🗒 카드의 ‘{ui:roleplayResume}’로 계속해요."
       ]
+    },
+    "people.find": {
+      "heading": "사람 찾기",
+      "body": [
+        "최근에 온 학습자의 프로필이 보여요. 사진을 누르면 프로필이 열리고, 팔로우하거나 메시지를 보낼 수 있어요.",
+        "차단·신고도 프로필에서 해요.",
+        "프로필에서 국적·모국어·관심사를 칩으로 고르고, 다른 사람에게 보일 칸을 켜고 꺼요. 내 질문에 답해 준 사람에게는 ‘🙌 도움됐어요’, 남의 소개·올린 글은 ‘한국어로 보기’로 번역해요.",
+        "위 칩 ‘같은 언어를 배우는 사람’은 지금 배우는 언어가 같은 사람, ‘배우는 언어·쓰는 말이 같은 사람’는 거기에 내 모국어도 쓰는 사람만 보여요. 언어는 프로필의 배우는 언어·모국어·할 수 있는 언어로 맞춰요."
+      ],
+      "shot": "people-lang"
     }
   },
   "en": {
@@ -347,6 +477,16 @@
       "body": [
         "{ui:roleplayPause} saves the conversation. Next time, {ui:roleplayResume} on the 🗒 card picks it up again."
       ]
+    },
+    "people.find": {
+      "heading": "Find people",
+      "body": [
+        "Profiles of learners who were here lately. Tap a photo to open a profile, then follow or send a message.",
+        "Blocking and reporting are on the profile too.",
+        "In your profile, pick your nationality, native language and interests as chips, and turn on or off what others see. Tap “🙌 Helpful” for someone who answered your question; “See in English” translates others’ intros and posts.",
+        "The chip “Learning the same language” shows people learning the language you're learning now; “Same learning & spoken language” narrows it to those who also speak your native language. Languages come from the profile's languages you learn, native language and languages you speak."
+      ],
+      "shot": "people-lang"
     }
   }
 }
