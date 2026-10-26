@@ -184,6 +184,9 @@ function markStuck(lines: Spoken[], turn: Omit<StuckTurn, "asked">): Spoken[] {
  * not read as the app having hung.
  */
 const STALLED_AUDIO_MS = 8000;
+/** 타이머가 이만큼 넘게 늦게 깨면 화면이 멈춰 있었던 것 — 한 번 더 기다린다. */
+const LATE_TIMER_MS = 1500;
+const STALL_GRACE_MS = 4000;
 
 /** How long to wait for the rest of a sentence the pause cut off. */
 const REST_OF_SENTENCE_MS = 3500;
@@ -324,6 +327,8 @@ export function RoleplayScreen({
   const [directing, setDirecting] = useState(false);
   const recorderRef = useRef<Recorder | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  /** 고친 줄의 화면 찍기 — 다음 튜터 줄을 다 말한 뒤에(오늘의 학습 "화면 함께"). */
+  const sceneShotRef = useRef<{ language: string; heard: string } | null>(null);
   // The tutor's notes on what has left its verbatim view (memory.ts). Kept out
   // of the session state on purpose: a fold lands whenever its request comes
   // back, and every other update here replaces the session state wholesale from
@@ -489,6 +494,22 @@ export function RoleplayScreen({
     warmNextLine(scenario, state);
     let advanced = false;
     let watchdog = 0;
+    /**
+     * 기다림 타이머. 화면이 멈춰 있던 동안(무거운 일 — 예: 고친 줄의 화면 찍기) 늦게 깨면 한 번 더 기다린다.
+     * 늦게 깬 타이머가 막 도착한 소리보다 먼저 돌아 줄을 소리 없이 넘기던 것(2026-10-27 사용자: "고칠 곳이 있어요"가
+     * 뜰 때 간헐적으로 튜터 말이 안 들리고 글만 올라옴).
+     */
+    const arm = (ms: number, why: "stall" | "long", retried = false) => {
+      window.clearTimeout(watchdog);
+      const due = Date.now() + ms;
+      watchdog = window.setTimeout(() => {
+        if (!retried && Date.now() - due > LATE_TIMER_MS) {
+          arm(STALL_GRACE_MS, why, true);
+          return;
+        }
+        advance(why);
+      }, ms);
+    };
     // 진단(iOS TestFlight): 이 줄이 파일로/합성으로 나왔는지, 소리가 시작됐는지, 무엇으로 끝났는지.
     const lineStartedAt = Date.now();
     let lineSource: "file" | "tts" = instruction.audioPath ? "file" : "tts";
@@ -517,6 +538,10 @@ export function RoleplayScreen({
       // is about three per cent of what a minute costs, which is not a reason
       // to make somebody press something to find out what they just heard.
       if (!gloss) translateLine(instruction.text);
+      // 고친 줄의 화면은 튜터 말이 끝난 뒤에 찍는다(찍는 동안 화면이 멈춰 소리가 밀림).
+      const shot = sceneShotRef.current;
+      sceneShotRef.current = null;
+      if (shot) captureSceneSoon(shot.language, shot.heard);
       const moved = afterSaying(scenario, bank, state, Date.now());
       setState(moved.state);
       setInstruction(moved.instruction);
@@ -565,7 +590,7 @@ export function RoleplayScreen({
        * on and the scene moves, and one that has begun is allowed to finish.
        */
       lineSource = "tts";
-      watchdog = window.setTimeout(() => advance("stall"), STALLED_AUDIO_MS);
+      arm(STALLED_AUDIO_MS, "stall");
       void playTts(
         instruction.text,
         learningLanguageSpeechTag(scenario.language),
@@ -573,7 +598,7 @@ export function RoleplayScreen({
         () => {
           lineStarted = true;
           window.clearTimeout(watchdog);
-          watchdog = window.setTimeout(() => advance("long"), GENERATED_AUDIO_MS);
+          arm(GENERATED_AUDIO_MS, "long");
         },
       ).then(() => advance("ended"), advance);
     };
@@ -597,7 +622,7 @@ export function RoleplayScreen({
      * no way forward. The text has already been shown by this point, so going
      * on without the voice is a worse lesson but not a dead one.
      */
-    watchdog = window.setTimeout(() => advance("stall"), STALLED_AUDIO_MS);
+    arm(STALLED_AUDIO_MS, "stall");
     audio.addEventListener("playing", () => {
       lineStarted = true;
     }, { once: true });
@@ -607,7 +632,7 @@ export function RoleplayScreen({
         if (!Number.isFinite(audio.duration)) return;
         window.clearTimeout(watchdog);
         // Its own length plus a moment, once that length is actually known.
-        watchdog = window.setTimeout(() => advance("long"), audio.duration * 1000 + 2000);
+        arm(audio.duration * 1000 + 2000, "long");
       },
       { once: true },
     );
@@ -692,7 +717,7 @@ export function RoleplayScreen({
       const meant = direction?.meant ?? "";
       const about = direction && direction.assessment !== "stuck" ? direction.note : "";
       // 고쳐 준 줄은 이 기기에 그 순간 화면을 찍어 둔다(오늘의 학습 "화면 함께", lib/notes/sceneShots.ts).
-      if ((better || meant) && instruction.request.heard) captureSceneSoon(scenario.language, instruction.request.heard);
+      if ((better || meant) && instruction.request.heard) sceneShotRef.current = { language: scenario.language, heard: instruction.request.heard };
       if (better || meant || about) {
         setSaid((current) =>
           markAboutTheirLine(current, {
