@@ -5,7 +5,7 @@
     "capacitor://localhost", "data:image/jpeg;base64,", "http://localhost", "https:", "https://localhost", "https://accounts.google.com", "https://api.openai.com/v1/realtime/calls",
     "https://api.resend.com/emails", "https://api.revenuecat.com/v1/subscribers", "https://english-chat-mvp-android.vercel.app", "https://english-chat-mvp.vercel.app",
     "https://languagebank.net", "https://oauth2.googleapis.com/tokeninfo?id_token=", "https://www.gstatic.com/admob/reward/verifier-keys.json", "https://www.languagebank.net",
-    "stun:stun.l.google.com", "stun:stun1.l.google.com", "icon-pack:", "icon-pack:<id>", "icon-sale:", "icon-sale:<id>", "data:image/png;base64,", "https://rtc.live.cloudflare.com/v1/turn/keys/"
+    "stun:stun.l.google.com", "stun:stun1.l.google.com", "icon-pack:", "icon-pack:<id>", "icon-sale:", "icon-sale:<id>", "you:", "learner:", "me:", "data:image/png;base64,", "https://rtc.live.cloudflare.com/v1/turn/keys/"
   ],
   "groups": {
     "icon:v1": { "feature": "사용자 아이콘·짤 묶음", "scope": "account", "onAccountDelete": "지움(만든 묶음·그림·받아 둔 목록·산 목록, 판매 묶음을 지우면 산 사람에게 포인트를 돌려줌, 쓰인 날 표시는 2일 기한)", "what": "묶음(만든 사람·이름·라이선스 CC BY 4.0/CC0/앱 안 판매·가격·판매 상태·아이콘 크기·붙인 한 마디)·새/인기 목록·만든 사람별 목록·받아 둔 묶음·산 묶음·판매 묶음을 산 사람(계정·포인트 id·낸 포인트·만든 사람 몫)·쓰인 수·하루 올린 수 — 그림은 Vercel Blob(private) icons/<묶음>/<아이콘>.webp, 모두에게 공개" },
