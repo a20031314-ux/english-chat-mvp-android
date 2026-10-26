@@ -521,8 +521,9 @@ Return ONLY JSON: {"assistantMessage":"...","spokenReply":"..."}`,
         content: JSON.stringify({
           corrected,
           recent,
+          ...(answeringPart(recent).answering ? { answering: answeringPart(recent).answering } : {}),
           instruction:
-            "Reply to corrected. Use recent only if this turn still refers to it.",
+            "Reply to corrected. Use recent only if this turn still refers to it." + answeringPart(recent).instructionTail,
         }),
       },
     ],
@@ -569,8 +570,9 @@ async function runChat(
   const payload = JSON.stringify({
     message,
     recent: recent.slice(-8),
+    ...(answeringPart(recent).answering ? { answering: answeringPart(recent).answering } : {}),
     instruction:
-      "Reply to message. Use recent only if this turn still refers to it.",
+      "Reply to message. Use recent only if this turn still refers to it." + answeringPart(recent).instructionTail,
     ...(noticed ? { noticed } : {}),
     hasImage: Boolean(options.imageDataUrl),
   });
@@ -719,7 +721,8 @@ async function runChatReply(
   const payload = JSON.stringify({
     message,
     recent: recent.slice(-8),
-    instruction: "Reply to message. Use recent only if this turn still refers to it.",
+    ...(answeringPart(recent).answering ? { answering: answeringPart(recent).answering } : {}),
+    instruction: "Reply to message. Use recent only if this turn still refers to it." + answeringPart(recent).instructionTail,
     hasImage: Boolean(options.imageDataUrl),
   });
   const userContent = options.imageDataUrl
@@ -871,6 +874,20 @@ Return ONLY JSON:
  */
 export function relabelRecent(line: string): string {
   return line.replace(/^me:\s*/i, "learner: ").replace(/^other:\s*/i, "you: ");
+}
+
+/**
+ * 마지막 지난 줄이 튜터 것이면 그 줄을 따로 짚어 준다: 이번 말은 그 줄에 대한 학습자의 대답이고, 그 줄을 한 건 튜터 자신.
+ * 이름만 바꿔서는 Haiku가 여전히 튜터가 연 말("새로 온 분이죠?")에 자기가 답했다(2026-10-27 운영 5번 중 4번).
+ */
+function answeringPart(recent: string[]): { answering?: string; instructionTail: string } {
+  const last = recent.at(-1) ?? "";
+  if (!last.startsWith("you: ")) return { instructionTail: "" };
+  return {
+    answering: last.slice(5),
+    instructionTail:
+      ' "answering" is the line YOU said just before — your own words, in your own role. Their message is their answer to it: reply to them as the person who said it, never as if they had said it to you.',
+  };
 }
 
 function parseRecent(raw: unknown, limit = 8): string[] {
