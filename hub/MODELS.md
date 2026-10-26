@@ -23,6 +23,24 @@
 
 - **2026-10-27 확인(코드 기본값 `aiDefaults.ts`):** Claude로 안 옮긴 글 기능 셋 — 통화 튜터 `roleplayTutor`(gpt-4.1-mini, 스트리밍이 OpenAI만), 미션 쓰기·지도에 넣기·약점 미션 `curriculum`(gpt-4.1), 미션 확인 `mission`(gpt-4.1-mini). 셋 다 **2027-01-14** 종료. 미션·지도에 넣기는 같은 날 새 앱 화면에서 뺐다(2.74 이하 앱만 씀). 목소리·받아쓰기는 사용자 결정 대기 그대로.
 
+## 0-1. 남은 GPT와 대체안 (2026-10-27 정리 — 사용자 "GPT 대체모델 제시해줘")
+
+흩어져 있던 것(아래 표·`drafts/model-switch-2026-10-22.md`·`drafts/speech-models-2026-10-21.md`)을 한 표로. 바꾸는 곳은 모두 `src/lib/aiDefaults.ts`(통화 튜터만 코드 길 추가).
+
+| 남은 GPT | 쓰는 곳 | 종료 | 제안 | 근거·할 일 |
+|---|---|---|---|---|
+| gpt-5-mini | 통화 돌아보기 **대비**(기본은 Sonnet) | **2026-12-11** | gpt-5.6-terra(OpenAI 권장) 또는 대비 없이 Haiku | 가장 급함. `OPENAI_TEXT_DEFAULTS.roleplayReview` 한 줄 |
+| gpt-4.1-mini | 통화 튜터 말(스트리밍) | 2027-01-14 | **1안 gpt-6-luna**(같은 길, 모델 이름만, 더 쌈) · 2안 Haiku 스트리밍 길 새로 | 1안은 응답 첫 글자 시간·말투를 가상 사용자 통화로 비교 뒤. `turn/route.ts` 추론 모델 판별(`/^(gpt-5\|o\d)/`)에 새 이름이 맞는지 확인 |
+| gpt-4.1 | 미션 쓰기·지도에 넣기·약점 미션(`curriculum`) | 2027-01-14 | 새 앱(2.75~)은 화면 없음 → **약점 미션은 새 앱 사용자에게 안 씀**, 옛 앱용은 gpt-6-luna 또는 01-14에 끔 | 약점 미션은 채팅·통화마다 서버가 지도 있는 사람 모두에게 써서 지금도 돈이 나감(보이지 않는 할 일) |
+| gpt-4.1-mini | 미션 확인(`mission`) | 2027-01-14 | 옛 앱만 → gpt-6-luna 또는 01-14에 끔 | Haiku 시도는 점검에서 실패가 많았음(10-22) |
+| gpt-4o-mini·4.1·4.1-mini | 나머지 글 기능의 **대비**(Claude 실패 때) | 2027-01-14 | gpt-6-luna 하나로 | `OPENAI_TEXT_DEFAULTS` 값만. 대비라 품질 시험은 짧게 |
+| gpt-4o-mini-tts | 튜터 목소리 | **2027-01-06** | gpt-realtime-2.1-mini("그대로 읽기") | 비교 끝(충실도 같음, 비용 1.8배 — 통화 1분 11 → 16.7원). **사용자 샘플 청취 OK만 남음**. 다른 후보 ElevenLabs(키 있음, 안 들어 봄) |
+| gpt-4o-mini-transcribe | 통화·Room 한 마디 받아쓰기 | 2027-02-26 | **Scribe v2**(ElevenLabs) | 학습자 영어 낱말 오류 25% → 17%, 분당 $0.0036. 실패 때 gpt-transcribe |
+| whisper-1 | 영상 받아쓰기(자막 없을 때) | 2027-02-26 | Scribe v2 일괄 | 낱말 시간 필요 — 코드 작업 |
+| gpt-realtime-2.1 | 비용 계산에만 | 공지 없음 | — | — |
+
+후보 가격(100만 토큰): gpt-6-luna $0.10/$0.50(지금 gpt-4o-mini $0.15/$0.60), gpt-5.6-terra는 OpenAI 권장 대체(가격은 다음 "AI 모델 살피기"에서 확인).
+
 ## 1. OpenAI 모델 (글 기능은 Claude가 실패했을 때의 대비·`MODEL_ROUTES` 없을 때, 받아쓰기·목소리는 기본 — 키 `OPENAI_API_KEY`)
 
 | 쓰는 곳 | 환경변수 | 기본 모델 | OpenAI 종료일 | OpenAI가 권하는 대체 |
