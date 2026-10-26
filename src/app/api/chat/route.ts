@@ -267,7 +267,7 @@ conversationMode is native. Talk like a person on a messenger. Do not teach, qui
   const ownLanguageBlock = options.ownLanguage
     ? `
 This turn they wrote in ${explanationLanguage}, their own language, because they did not know how to say it in ${targetName}. Understand it and reply in ${targetName} as yourself, carrying the conversation on — as a friend who speaks both would. Do not translate their message back to them and do not teach. Correction does not apply to this turn: set corrected and natural to their message unchanged and explanation to "".
-If it is a question to you — most often what a word or phrase YOU just used means (look at your last "other:" line in recent) — answer that question: name the word from your last line and explain it simply in ${targetName}, adding its meaning in ${explanationLanguage} in parentheses right after the word. Never answer by translating their question itself ("that word means 'what does that word mean'"), and never switch to English or any third language. If you cannot tell which word, ask which one, in ${targetName}.
+If it is a question to you — most often what a word or phrase YOU just used means (look at your last "you:" line in recent) — answer that question: name the word from your last line and explain it simply in ${targetName}, adding its meaning in ${explanationLanguage} in parentheses right after the word. Never answer by translating their question itself ("that word means 'what does that word mean'"), and never switch to English or any third language. If you cannot tell which word, ask which one, in ${targetName}.
 If they ask about their own learning — what they have improved at, what to practise next — it is about THEM, not you and not the world: answer as someone who has been chatting with them, from what recent (and any brief about their practice) shows, honestly saying when there is little to go on, and name one concrete thing to practise.`
     : "";
   const imageBlock = options.imageDataUrl
@@ -283,7 +283,7 @@ ${tutorBlock}
 ${ownLanguageBlock}
 ${imageBlock}
 
-The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only).
+The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only — "you:" lines are what you yourself said earlier, "learner:" lines are what they said; never take a line of yours as theirs).
 Their message may have mistakes (wrong word, wrong ending, a word from another language mixed in). Reply to what they clearly meant, the way a friend would who understood them.
 
 ${voice}
@@ -301,7 +301,7 @@ ${tutorBlock}
 ${ownLanguageBlock}
 ${imageBlock}
 
-The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only). It may also have "noticed": something a rule checker already found in message — trust it, fix it in corrected and explain it.
+The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only — "you:" lines are what you yourself said earlier, "learner:" lines are what they said; never take a line of yours as theirs). It may also have "noticed": something a rule checker already found in message — trust it, fix it in corrected and explain it.
 
 ${voice}
 ${spoken}
@@ -324,7 +324,7 @@ ${tutorBlock}
 ${ownLanguageBlock}
 ${imageBlock}
 
-The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only). It may also have "noticed": mistakes a rule checker already found in message — trust it, fix them in corrected and explain them.
+The user JSON has "message" (the current turn — reply to THIS) and optional "recent" lines (background only — "you:" lines are what you yourself said earlier, "learner:" lines are what they said; never take a line of yours as theirs). It may also have "noticed": mistakes a rule checker already found in message — trust it, fix them in corrected and explain them.
 
 ${voice}
 ${spoken}
@@ -864,11 +864,20 @@ Return ONLY JSON:
   return { assistantMessage, spokenReply };
 }
 
+/**
+ * 앱이 보내는 지난 줄은 "me:"(학습자)·"other:"(튜터)인데, 모델에게 "me"는 자기 자신으로 읽힌다 — 튜터가 연 말
+ * ("새로 온 분이죠?")에 학습자가 "Hi"라고 하자 튜터가 그 새 사람인 것처럼 답했다(2026-10-27 사용자 폰).
+ * 그래서 모델 쪽 이름으로 바꿔 넘긴다: 학습자 = "learner:", 튜터(모델 자신) = "you:".
+ */
+export function relabelRecent(line: string): string {
+  return line.replace(/^me:\s*/i, "learner: ").replace(/^other:\s*/i, "you: ");
+}
+
 function parseRecent(raw: unknown, limit = 8): string[] {
   if (!Array.isArray(raw)) return [];
   return raw
     .filter((item): item is string => typeof item === "string")
-    .map((item) => item.trim())
+    .map((item) => relabelRecent(item.trim()))
     .filter(Boolean)
     .slice(-limit);
 }
