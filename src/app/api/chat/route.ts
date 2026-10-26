@@ -516,6 +516,7 @@ Do not lecture, correct their language, or thank them unless they complimented y
 
 Return ONLY JSON: {"assistantMessage":"...","spokenReply":"..."}`,
       },
+      ...historyTurns(recent),
       {
         role: "user",
         content: JSON.stringify({
@@ -597,6 +598,7 @@ async function runChat(
             },
           ]
         : []),
+      ...historyTurns(recent),
       {
         role: "user",
         content: userContent,
@@ -743,6 +745,7 @@ async function runChatReply(
             },
           ]
         : []),
+      ...historyTurns(recent),
       { role: "user", content: userContent },
     ],
     response_format: { type: "json_object" },
@@ -888,6 +891,18 @@ function answeringPart(recent: string[]): { answering?: string; instructionTail:
     instructionTail:
       ' "answering" is the line YOU said just before — your own words, in your own role. Their message is their answer to it: reply to them as the person who said it, never as if they had said it to you.',
   };
+}
+
+/**
+ * 지난 줄을 실제 대화 차례로도 넘긴다: 튜터 줄은 assistant, 학습자 줄은 user. 글 안의 "recent" 목록만으로는
+ * 튜터가 연 말("Hey, you're the new person…?")을 자기에게 한 말로 읽고 그 새 사람 행세를 했다(2026-10-27, 이름 바꾸기·answering으로도 5번 중 5번).
+ */
+function historyTurns(recent: string[]): { role: "user" | "assistant"; content: string }[] {
+  return recent.slice(-6).flatMap((line): { role: "user" | "assistant"; content: string }[] => {
+    if (line.startsWith("you: ")) return [{ role: "assistant", content: JSON.stringify({ assistantMessage: line.slice(5) }) }];
+    if (line.startsWith("learner: ")) return [{ role: "user", content: JSON.stringify({ message: line.slice(9) }) }];
+    return [];
+  });
 }
 
 function parseRecent(raw: unknown, limit = 8): string[] {
