@@ -21,7 +21,7 @@
 - 주의: Claude가 실패했을 때 다시 시도하는 OpenAI 모델도 종료일이 지나면 같이 꺼집니다. 통화 돌아보기(`roleplayReview`)의 대비 모델 gpt-5-mini는 **2026-12-11** 종료라, 그 전에 Claude로 옮기거나 `OPENAI_REVIEW_MODEL`을 바꿔야 합니다.
 - **받아쓰기·목소리·통화 턴 스트리밍**은 OpenAI만 씁니다(`llm.ts` 밖). 대체할 모델은 아래 표에 있습니다.
 
-## 1. AI 모델 (지금 기본값은 전부 OpenAI, 키 `OPENAI_API_KEY`)
+## 1. OpenAI 모델 (글 기능은 Claude가 실패했을 때의 대비·`MODEL_ROUTES` 없을 때, 받아쓰기·목소리는 기본 — 키 `OPENAI_API_KEY`)
 
 | 쓰는 곳 | 환경변수 | 기본 모델 | OpenAI 종료일 | OpenAI가 권하는 대체 |
 |---|---|---|---|---|
@@ -33,7 +33,7 @@
 | 통화 튜터(디렉터) | `OPENAI_DIRECTOR_MODEL` | gpt-4.1-mini | **2027-01-14** | gpt-6-luna |
 | 통화 다시 말해보기 | `OPENAI_PRACTICE_MODEL` | gpt-4.1-mini | **2027-01-14** | gpt-6-luna |
 | 지도 만들기·미션 쓰기·지도에 넣기·약점 미션 | `OPENAI_CURRICULUM_MODEL` | gpt-4.1 | **2027-01-14** | gpt-6-luna |
-| 통화 돌아보기 | `OPENAI_REVIEW_MODEL` | gpt-5-mini | **2026-12-11 (가장 먼저)** | gpt-5.6-terra |
+| 통화 돌아보기(기본은 Sonnet 5.5, 이건 실패 때 대비) | `OPENAI_REVIEW_MODEL` | gpt-5-mini | **2026-12-11 (가장 먼저, 2026-10-26 기준 46일)** | gpt-5.6-terra |
 | 통화·방 받아쓰기 | `OPENAI_TURN_TRANSCRIBE_MODEL` | gpt-4o-mini-transcribe | **2027-02-26** | gpt-transcribe 또는 gpt-live-transcribe |
 | 영상 받아쓰기 | `OPENAI_TRANSCRIBE_MODEL` | whisper-1 | **2027-02-26** | gpt-transcribe 또는 gpt-live-transcribe |
 | 튜터 목소리(TTS) | `OPENAI_TTS_MODEL` | gpt-4o-mini-tts | **2027-01-06** | gpt-realtime-2.1-mini |
@@ -52,8 +52,10 @@
 | **gpt-6-luna** (2026-09-22 출시) | $0.10 / $0.50 | OpenAI 공식 대체이고 지금보다 쌉니다. 교정 품질은 아직 시험하지 않았습니다. |
 | gpt-5.6-luna | $0.20 / $1.20 | gpt-4.1-nano의 대체 |
 | Claude Haiku 5.5 | 한 턴 약 0.49원(지금 0.67원) | 10-21 시험에서 교정 큰 문제 영어 1·한국어 2(지금은 2·6). **10-22 실제 API·196명 14개 언어: 큰 문제 9/630(1.4%) vs 지금 52/630(8.3%)**, 대신 섞은 낱말 안 바꿈·응답 2.8배 느림(`hub/drafts/haiku-live-2026-10-22.md`). |
-| Gemini 2.5 Flash-Lite / 3.1 Flash-Lite | $0.10/$0.40 · $0.25/$1.50 | 품질은 시험하지 않았습니다(키 없음). 3.6·3.7 Flash는 2027-01-01부터 가격이 두 배가 됩니다. |
+| Gemini 2.5 Flash-Lite / 3.1 Flash-Lite | $0.10/$0.40 · $0.25/$1.50 | 품질은 시험하지 않았습니다(키 없음). 3.6·3.7 Flash는 2027-01-01부터 가격이 두 배가 됩니다. 2026-10-08 3.7·3.5 Flash 종료 → 3.8 Flash로 자동 연결(가격 확인 못 함). |
 | gpt-live-transcribe | 분당 $0.017 | 받아쓰기 대체 후보. 지금(whisper 분당 약 $0.006, mini-transcribe 약 $0.003)보다 비쌀 수 있어 비용 표와 같이 봐야 합니다. |
+| Voxtral Mini Transcribe 3 (Mistral, 2026-10-20) | 분당 $0.0035(일괄)·$0.004(Small)·$0.008(실시간) | 받아쓰기 후보. 50개 언어 — 14개 중 th는 일괄만, 실시간은 zh·th·vi 빠짐. 학습자 발음 품질은 시험 안 함. TTS(Mini TTS 3)는 100만 글자 $13, id·th 목록에 없음. |
+| Speechmatics Melia (2026-06-17, 미리보기) | 분당 약 $0.0022(시간당 $0.129부터) | 55개 언어·섞어 말하기, 일괄만(실시간 예정). 시험 안 함. |
 | gpt-realtime-2.1-mini | 글 $0.60 / $2.40, 오디오 $10 / $20 (1M 토큰) | 목소리 대체. `/v1/audio/speech`로는 안 되고 Realtime으로 — `server/realtimeSpeech.ts`로 만들고 비교함(6초 약 3.7원, 지금 1.8배, `hub/drafts/speech-models-2026-10-21.md`). |
 
 ## 2. 바깥 서비스·도구
@@ -81,6 +83,8 @@
 | Next.js | 웹·API 틀 | — | `next` |
 
 ## 3. 새 소식 (예약 작업이 위에 더함)
+
+- 2026-10-26 · 종료일 바뀐 것 없음(OpenAI 종료 목록 10-14 공지가 마지막). 통화 돌아보기 대비 gpt-5-mini가 12-11까지 46일 — 기본은 Sonnet이지만 실패 때 꺼진 모델로 감, `OPENAI_TEXT_DEFAULTS.roleplayReview`(또는 Vercel `OPENAI_REVIEW_MODEL`)를 gpt-6-luna 등으로. 새 후보: Mistral Voxtral 3 받아쓰기 분당 $0.0035(10-20), Gemini 3.8 Flash(3.7·3.5 Flash 종료, 가격 확인 못 함), OpenAI 12시간 프롬프트 캐시(쓰기 2.5배). Claude 가격 변화 없음(Haiku 5.5 $0.10/$0.50, 제3자 기준 — 공식 페이지 열기 실패) — [OpenAI 종료](https://developers.openai.com/api/docs/deprecations) · [OpenAI 변경](https://developers.openai.com/api/docs/changelog) · [Voxtral 3](https://mistral.ai/news/voxtral-3/) · [Gemini 변경](https://ai.google.dev/gemini-api/docs/changelog)
 
 - 2026-10-22 · Anthropic·ElevenLabs·AssemblyAI 키 운영에서 실제 호출 확인(점검 사용자로만). 실제 사용자는 아직 예전 모델 그대로.
 

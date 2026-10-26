@@ -36,6 +36,13 @@
 
 ## 새 보고
 
+### 2026-10-26 · AI 모델 살피기 · 급함: 통화 돌아보기 대비 모델 gpt-5-mini가 12-11 종료(46일) — 대비를 바꿔야 함, 새 받아쓰기 후보 Voxtral 3
+- 무엇을: OpenAI 종료 목록·변경 기록, Claude·Gemini 가격, 받아쓰기·TTS 새 모델 조사(공식 페이지 우선). 코드 기본값(`src/lib/aiDefaults.ts`)과 MODELS.md 대조.
+- 결과: 종료일 새로 잡히거나 앞당겨진 것 없음(마지막 공지 10-14 GPT-4 계열 01-14). 통화 돌아보기는 기본 Sonnet 5.5지만 Claude가 실패하면 `OPENAI_TEXT_DEFAULTS.roleplayReview = gpt-5-mini`로 가는데 이게 **12-11 종료** — 그 뒤엔 실패 때 오류. 새 후보: Mistral Voxtral Mini Transcribe 3(10-20) 분당 $0.0035 — 지금 whisper-1 약 $0.006·대체 gpt-transcribe $0.0045보다 쌈, 14개 언어 중 th 일괄만·실시간은 zh·th·vi 빠짐, 학습자 발음 품질은 시험 안 함. Gemini 3.8 Flash(3.7·3.5 Flash 종료, 가격 확인 못 함). Claude Haiku 5.5·Sonnet 5.5 가격 변화 없음(제3자 기준).
+- 제안: ① gpt-5-mini 대비를 gpt-6-luna(또는 OpenAI 권장 gpt-5.6-terra)로 — Vercel `OPENAI_REVIEW_MODEL`이면 코드 필요 없음, 코드면 `aiDefaults.ts` 한 줄 + `modelPrices.ts`. 서버만, 앱 빌드 불필요. 어차피 01-14 전에 다른 OpenAI 대비 모델도 전부 gpt-6-luna로 옮겨야 해서 함께 하는 게 나음. ② 영상 받아쓰기(whisper-1, 02-26) 대체 비교에 Voxtral 3를 후보로 추가할지(시험엔 Mistral 키 필요).
+- 링크: `hub/MODELS.md` "새 소식" 2026-10-26
+- 결정:
+
 ### 2026-10-26 · 잊힌 일 알림 · 급함: iOS 심사 2.1 회신·실기기 녹화 기록이 아직 없음(1일) — 안드로이드 2.75(89) 빌드·Play 업로드도 사람
 - 무엇을: `hub/forgotten.md` 다시 만들고 어제 목록과 비교, 3일 넘은 inbox 줄을 hub/log·git log·코드로 가림 — 끝난 게 확실한 줄이 없어 지운 줄 0.
 - 결과(사용자가 할 일, 급한 순):
