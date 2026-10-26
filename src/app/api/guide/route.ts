@@ -14,6 +14,7 @@ import notesBefore273 from "@/lib/guide/notesBefore273.json";
 import mapBefore274 from "@/lib/guide/mapBefore274.json";
 import iconsBefore275 from "@/lib/guide/iconsBefore275.json";
 import mapBefore275 from "@/lib/guide/mapBefore275.json";
+import callBefore277 from "@/lib/guide/callBefore277.json";
 
 export const runtime = "nodejs";
 
@@ -57,13 +58,24 @@ export async function GET(request: NextRequest) {
   const before276 = request.nextUrl.searchParams.get("r276") === "1"
     ? undefined
     : (mapBefore275 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
-  const withParts: Guide = before276
+  // 통화 기록을 채팅과 따로(`r277=1`, CallList, 2026-10-27): 그 전 빌드는 대화 목록·끝난 통화·멈추고 이어서 칸을 예전 글로(callBefore277.json — 🗒 카드).
+  const before277 = request.nextUrl.searchParams.get("r277") === "1"
+    ? undefined
+    : (callBefore277 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  const withCalls: Guide = before277
     ? {
         ...newest,
-        map: { ...newest.map, sections: newest.map.sections.map((section, index) => before276[GUIDE_SECTION_IDS.map[index]] ?? section) },
-        rooms: { ...newest.rooms, sections: newest.rooms.sections.map((section, index) => before276[GUIDE_SECTION_IDS.rooms[index]] ?? section) },
+        talk: { ...newest.talk, sections: newest.talk.sections.map((section, index) => before277[GUIDE_SECTION_IDS.talk[index]] ?? section) },
+        roleplay: { ...newest.roleplay, sections: newest.roleplay.sections.map((section, index) => before277[GUIDE_SECTION_IDS.roleplay[index]] ?? section) },
       }
     : newest;
+  const withParts: Guide = before276
+    ? {
+        ...withCalls,
+        map: { ...withCalls.map, sections: withCalls.map.sections.map((section, index) => before276[GUIDE_SECTION_IDS.map[index]] ?? section) },
+        rooms: { ...withCalls.rooms, sections: withCalls.rooms.sections.map((section, index) => before276[GUIDE_SECTION_IDS.rooms[index]] ?? section) },
+      }
+    : withCalls;
   const withSale: Guide = before275
     ? { ...withParts, rooms: { ...withParts.rooms, sections: withParts.rooms.sections.map((section, index) => before275[GUIDE_SECTION_IDS.rooms[index]] ?? section) } }
     : withParts;

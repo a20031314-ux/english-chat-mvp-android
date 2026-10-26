@@ -446,7 +446,10 @@ function AppHomeInner({
                   back={insideTalk ? { label: ui.homeTabTalk, unread: messagesUnread, onBack: () => openTab("talk") } : null}
                   onCall={callOn ? () => openTab("roleplay") : null}
                   callLabel={ui.talkAiCall}
-                  menuItems={[{ label: ui.roleplayOwnLineOpen, onSelect: () => sendAppIntent("sayOwnLine", {}) }]}
+                  menuItems={[
+                    ...(callOn ? [{ label: ui.callRecordsTitle, onSelect: () => sendAppIntent("openCall", {}) }] : []),
+                    { label: ui.roleplayOwnLineOpen, onSelect: () => sendAppIntent("sayOwnLine", {}) },
+                  ]}
                   showPack={callOn && !socialLayout}
                 />
               </div>
@@ -494,6 +497,7 @@ function AppHomeInner({
                         canCall={callOn}
                         onChat={() => openTab("chat")}
                         onCall={() => openTab("roleplay")}
+                        onCalls={() => sendAppIntent("openCall", {})}
                       />
                       {/* 오늘의 팩: 예전 통화 첫 화면 맨 위 → 대화 목록 AI 튜터 바로 아래(2026-10-23). */}
                       {callOn ? (

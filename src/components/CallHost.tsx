@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { BodyLayer } from "@/components/FullScreenLayer";
+import { CallList } from "@/components/CallList";
 import { RoleplayOwnLine } from "@/components/RoleplayOwnLine";
 import { RoleplayPast } from "@/components/RoleplayPast";
 import { RoleplayScreen } from "@/components/RoleplayScreen";
@@ -19,7 +20,7 @@ import type { SavedConversation } from "@/lib/roleplay/saved";
  *
  * 예전 통화 탭의 첫 화면(팩·오늘 해볼 것·안내·남은 시간·내 문장 말해보기·지난 대화)을 없애고, 1:1처럼 📞를 누르면 바로 통화.
  * - 시작: `startCall`(AI 튜터 줄·AI 대화 머리의 📞), `practice`(tab roleplay — 오늘의 팩·오늘 해볼 것·지도).
- * - 끝나면 통화는 그 대화 안에 🗒 통화 기록 카드로 남는다(`callStore` → ChatWindow). 카드·지난 대화 서랍 → `openCall`(돌아보기).
+ * - 끝나면 통화는 통화 기록 목록(CallList)에만 남는다 — 채팅과 따로(2026-10-27). `openCall` id 없음 = 목록, id = 돌아보기.
  * - 마이크는 사람이 누른 뒤에만 연다(링크 `?screen=roleplay`는 통화를 열지 않고 AI 대화로).
  */
 export function hasRoleplay(targetLanguage: LearningLanguageCode): boolean {
@@ -49,6 +50,7 @@ export function CallHost({
   const [resuming, setResuming] = useState<SavedConversation | null>(null);
   const [reading, setReading] = useState<SavedConversation | null>(null);
   const [ownLine, setOwnLine] = useState(false);
+  const [listing, setListing] = useState(false);
   const { isPremium } = usePremium();
 
   useEffect(() => {
@@ -80,6 +82,10 @@ export function CallHost({
   useEffect(
     () =>
       onAppIntent("openCall", ({ id }) => {
+        if (!id) {
+          setListing(true);
+          return;
+        }
         const row = readCalls().find((call) => call.id === id);
         if (row) setReading(row);
       }),
@@ -104,6 +110,9 @@ export function CallHost({
             setPractice(null);
           }}
         />
+      ) : null}
+      {listing ? (
+        <CallList ui={ui} locale={nativeLanguage} language={targetLanguage} canCall={enabled && Boolean(openTalk)} onClose={() => setListing(false)} />
       ) : null}
       {reading ? (
         <RoleplayPast saved={reading} ui={ui} onClose={() => setReading(null)} nativeLanguage={nativeLanguage} isPremium={isPremium} />

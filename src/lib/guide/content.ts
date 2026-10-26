@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-26a";
+export const GUIDE_VERSION = "2026-10-27a";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -296,7 +296,7 @@ export const GUIDE_KO: Guide = {
       {
         heading: "끝난 대화 돌아보기",
         body: [
-          "끝난 통화는 그 AI 대화 안에 🗒 {ui:homeTabCall} 카드로 남고, ⋮ {ui:chatHistoryTitle}에도 모여요. {ui:packSeeRetro}를 누르면 내 줄 아래에 고친 문장과 원래 하려던 말이 보여요.",
+          "끝난 통화는 채팅과 따로 {ui:callRecordsTitle}에 모여요. 대화 탭의 {ui:talkAiCall} 줄이나 AI 대화 ⋮에서 열어요. {ui:packSeeRetro}를 누르면 내 줄 아래에 고친 문장과 원래 하려던 말이 보여요.",
           "‘{ui:roleplaySayAgain}’를 누르면 그 문장을 듣고 따라 말해, 다르게 들린 단어를 알려줘요.",
           "막혔던 차례에는 ‘{ui:roleplayWhyStuck}’ 버튼이 남아요.",
         ],
@@ -313,7 +313,7 @@ export const GUIDE_KO: Guide = {
       {
         heading: "멈추고 이어서 하기",
         body: [
-          "‘{ui:roleplayPause}’을 누르면 대화가 저장돼요. 다음에 🗒 카드의 ‘{ui:roleplayResume}’로 계속해요.",
+          "‘{ui:roleplayPause}’을 누르면 대화가 저장돼요. 다음에 {ui:callRecordsTitle}의 ‘{ui:roleplayResume}’로 계속해요.",
         ],
       },
       {
@@ -541,10 +541,10 @@ export const GUIDE_KO: Guide = {
       {
         "heading": "대화 목록",
         "body": [
-          "맨 위가 AI 튜터예요. 줄을 누르면 채팅, 📞를 누르면 통화로 연습해요.",
+          "맨 위가 AI 튜터예요. 줄을 누르면 채팅이고, 그 아래 {ui:talkAiCall} 줄을 누르면 {ui:callRecordsTitle}, 📞를 누르면 바로 통화해요. 채팅과 통화 기록은 따로 남아요.",
           "그 아래에 단체방과 1:1 메시지가 이어지고, 안 읽은 메시지 수도 같이 보여요."
         ],
-        "shot": "talk-list"
+        "shot": "talk-calls"
       }
     ]
   },
@@ -725,7 +725,7 @@ export const GUIDE_EN: Guide = {
       {
         heading: "Look back at a finished call",
         body: [
-          "A finished call stays in that AI chat as a 🗒 {ui:homeTabCall} card, and also in ⋮ {ui:chatHistoryTitle}. {ui:packSeeRetro} shows the corrected sentence and what you meant to say under your lines.",
+          "Finished calls are kept apart from your chats, in {ui:callRecordsTitle}. Open it from the {ui:talkAiCall} row in the chats tab or from ⋮ in the AI chat. {ui:packSeeRetro} shows the corrected sentence and what you meant to say under your lines.",
           "{ui:roleplaySayAgain} plays that sentence for you to repeat, and shows which words came through differently.",
           "A turn where you got stuck keeps a {ui:roleplayWhyStuck} button.",
         ],
@@ -742,7 +742,7 @@ export const GUIDE_EN: Guide = {
       {
         heading: "Pause and carry on",
         body: [
-          "{ui:roleplayPause} saves the conversation. Next time, {ui:roleplayResume} on the 🗒 card picks it up again.",
+          "{ui:roleplayPause} saves the conversation. Next time, {ui:roleplayResume} in {ui:callRecordsTitle} picks it up again.",
         ],
       },
       {
@@ -970,10 +970,10 @@ export const GUIDE_EN: Guide = {
       {
         "heading": "Your chats",
         "body": [
-          "The AI tutor is always at the top. Tap the row to chat, or 📞 to practise by call.",
+          "The AI tutor is at the top. Tap the row to chat; tap the {ui:talkAiCall} row below it for {ui:callRecordsTitle}, or 📞 to call right away. Chats and calls are kept separately.",
           "Group chats and one-to-one messages follow below, with how many are unread."
         ],
-        "shot": "talk-list"
+        "shot": "talk-calls"
       }
     ]
   },

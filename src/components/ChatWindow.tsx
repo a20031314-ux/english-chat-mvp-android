@@ -704,51 +704,6 @@ type ChatWindowProps = {
   showPack?: boolean;
 };
 
-/**
- * 이 대화 안에서 건 AI 통화 — 1:1 대화의 🗒 통화 기록 카드와 같은 자리(2026-10-23, conversation-unify 3단계).
- * 멈춘 통화는 "이어서 하기", 끝난 통화는 "돌아보기"(CallHost가 연다). × = 이 기록 지우기(폰에만 있는 기록).
- */
-function CallRecordCard({ call, ui, locale }: { call: SavedConversation; ui: ReturnType<typeof useUiCopy>; locale: string }) {
-  const unfinished = isUnfinished(call);
-  const time = new Date(call.updatedAt).toLocaleTimeString(locale, { hour: "2-digit", minute: "2-digit" });
-  return (
-    <div className="flex justify-center">
-      <div className="flex w-full max-w-sm items-center gap-2 rounded-2xl border border-white/10 bg-white/[0.03] px-3 py-2 text-sm text-slate-200">
-        <span className="shrink-0">🗒 {ui.homeTabCall}</span>
-        <span className="min-w-0 flex-1 truncate text-meta text-slate-500">
-          <bdi>{call.title}</bdi> · {time}
-        </span>
-        {unfinished ? (
-          <button
-            type="button"
-            onClick={() => sendAppIntent("startCall", { resumeId: call.id })}
-            className="shrink-0 rounded-lg bg-emerald-500 px-2.5 py-1 text-xs font-medium text-black"
-          >
-            {ui.roleplayResume}
-          </button>
-        ) : null}
-        <button
-          type="button"
-          onClick={() => sendAppIntent("openCall", { id: call.id })}
-          className="shrink-0 rounded-lg border border-white/15 px-2.5 py-1 text-xs text-slate-200 hover:bg-white/10"
-        >
-          {ui.packSeeRetro}
-        </button>
-        {/* 카드에서 바로 지우기(2026-10-25 사용자: 아이폰에서 통화 기록이 안 지워진다 — 지우기가 ⋮ 지난 대화 서랍에만 있었음). */}
-        <button
-          type="button"
-          onClick={() => discardCall(call.id)}
-          aria-label={ui.delete}
-          title={ui.delete}
-          className="-me-1 shrink-0 rounded-full px-1.5 text-title leading-none text-slate-500 hover:bg-white/10 hover:text-slate-200"
-        >
-          ×
-        </button>
-      </div>
-    </div>
-  );
-}
-
 export function ChatWindow({
   tabMode = false,
   locale: localeProp,
@@ -1633,18 +1588,10 @@ export function ChatWindow({
     }
   };
 
-  // 이 대화가 시작된 뒤 건 AI 통화는 대화 안에 시간 순서대로 🗒 카드로(턴 id는 보낸 시각).
+  // AI 통화는 채팅과 따로 통화 기록 목록에만(2026-10-27, CallList). 대화에는 턴만 — 통화가 바뀐 것은 오늘의 팩 카드를 새로 고칠 때만 본다.
   const calls = useSyncExternalStore(subscribeCalls, readCalls, readCallsOnServer);
   const callsVersion = calls.reduce((latest, call) => Math.max(latest, call.updatedAt), 0);
-  const timeline = useMemo(() => {
-    const here = calls.filter((call) => call.language === sessionLanguageCode && call.startedAt >= currentSessionCreatedAt);
-    const items: ({ kind: "turn"; at: number; turn: ChatTurn } | { kind: "call"; at: number; call: SavedConversation })[] = [
-      ...turns.map((turn) => ({ kind: "turn" as const, at: Number.parseInt(turn.id, 10) || 0, turn })),
-      ...here.map((call) => ({ kind: "call" as const, at: call.startedAt, call })),
-    ];
-    // 시각을 모르는 턴(옛 저장분)은 제자리에 둔다: 안정 정렬 + 통화만 시각으로 끼워 넣음.
-    return here.length ? items.sort((a, b) => (a.at && b.at ? a.at - b.at : 0)) : items;
-  }, [calls, turns, sessionLanguageCode, currentSessionCreatedAt]);
+  const timeline = useMemo(() => turns.map((turn) => ({ kind: "turn" as const, turn })), [turns]);
 
   const handlePickPhoto = async (
     event: React.ChangeEvent<HTMLInputElement>,
@@ -1852,9 +1799,6 @@ export function ChatWindow({
             </>
           ) : null}
           {timeline.map((item) => {
-            if (item.kind === "call") {
-              return <CallRecordCard key={`call-${item.call.id}`} call={item.call} ui={ui} locale={locale} />;
-            }
             const turn = item.turn;
             const assistantReading =
               locale === sessionLanguageCode
@@ -2223,14 +2167,6 @@ export function ChatWindow({
           snapshotCurrentChat();
           startNewChat();
         }}
-        calls={calls
-          .filter((call) => call.language === sessionLanguageCode)
-          .map((call) => ({ id: call.id, title: call.title, at: call.startedAt }))}
-        onOpenCall={(id) => {
-          setIsChatHistoryOpen(false);
-          sendAppIntent("openCall", { id });
-        }}
-        onDeleteCall={(id) => discardCall(id)}
       />
 
       {reportTarget ? (

@@ -153,11 +153,13 @@ const GUIDE_SOCIAL_ITEMS = [
   { shot: "r69-groups", step: "groups" },
   { shot: "r69-free", step: "freetalk" },
   // 2.70: 대화 목록(맨 위 AI 튜터)과 친구 초대 보상 카드.
-  { shot: "talk-list" },
+  { shot: "talk-calls", step: "talk-list" },
   { shot: "invite-rewards" },
 ];
+// `guide-calls`: 통화 기록을 채팅과 따로(2026-10-27) — 대화 목록에 "AI 튜터와 통화" 줄이 생겨 talk-list 대신 talk-calls.
+const GUIDE_CALLS = VERSION === "guide-calls";
 const GUIDE_PARTS = VERSION === "guide-parts";
-const GUIDE = VERSION === "guide" || GUIDE_PARTS || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
+const GUIDE = VERSION === "guide" || GUIDE_PARTS || GUIDE_CALLS || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
 const GUIDE_ITEMS = [
   // 2.71: My 첫 화면 맨 위 "이런 대화, 할 수 있어요?"(단계 고르기, 사용법 my.start).
   { shot: "stage-start" },
@@ -295,6 +297,8 @@ const note = PROMO
   ? { version: "guide", items: GUIDE_SOCIAL_ITEMS }
   : GUIDE_PARTS
   ? { version: "guide", items: GUIDE_PARTS_ITEMS }
+  : GUIDE_CALLS
+  ? { version: "guide", items: [{ shot: "talk-calls", step: "talk-list" }] }
   : GUIDE ? { version: "guide", items: GUIDE_ITEMS } : RELEASE_NOTES.find((entry) => entry.version === VERSION);
 if (!note) {
   console.error(`No release note for ${VERSION} in src/lib/whatsNew.ts.`);
