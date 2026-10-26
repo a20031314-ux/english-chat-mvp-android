@@ -1,7 +1,7 @@
 {
  "_": "서비스 지도 갱신 기록. scripts/service-map.mjs가 쓴다(손으로 고치지 않음). 칸이 바뀐 날만 history에 한 줄.",
- "checkedAt": "2026-10-26 06:55",
- "commit": "f41c8610",
+ "checkedAt": "2026-10-27 06:56",
+ "commit": "68d24222",
  "nodes": {
   "moyeo": {
    "title": "Moyeo",
@@ -68,24 +68,24 @@
   },
   "talk": {
    "title": "대화",
-   "text": "3e11ff90744b",
-   "shots": "157757cf2264",
+   "text": "eb0091da100c",
+   "shots": "06f17850cb77",
    "links": "69ce588dafa2",
    "code": "3b6619968834"
   },
   "chat": {
    "title": "AI 채팅",
-   "text": "217b096db382",
-   "shots": "b7dd85bbe7e9",
+   "text": "c97d6898bccd",
+   "shots": "53ad23a3e4bc",
    "links": "ca6f7f7fc811",
    "code": "412738069f93"
   },
   "call": {
    "title": "AI 통화 · 오늘의 팩",
-   "text": "306b15d5dfbf",
+   "text": "a963ac1139bc",
    "shots": "7a863eec87f4",
    "links": "82e45a80c680",
-   "code": "8b30cac308c3"
+   "code": "a32dcc91e062"
   },
   "dm": {
    "title": "1:1 메시지",
@@ -173,6 +173,27 @@
   }
  },
  "history": [
+  {
+   "at": "2026-10-27 06:56",
+   "commit": "68d24222",
+   "changes": [
+    {
+     "id": "talk",
+     "title": "대화",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "chat",
+     "title": "AI 채팅",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "call",
+     "title": "AI 통화 · 오늘의 팩",
+     "what": "설명 · 코드 영역"
+    }
+   ]
+  },
   {
    "at": "2026-10-26 06:55",
    "commit": "f41c8610",
