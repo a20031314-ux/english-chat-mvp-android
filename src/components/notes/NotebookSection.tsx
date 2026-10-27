@@ -710,7 +710,7 @@ function StageFrame({
   /** 그 갈래 연습: 문법 = 아직 안 찬 첫 칸으로 채팅, 표현 = 아직인 표현이 든 대본(없으면 채팅), 어휘 = 아직인 것 셋으로 채팅, 발음 = 통화. */
   const practice = (id: PartId) => {
     if (id === "expression" && expressionScript) {
-      setOpenScript({ id: expressionScript, at: Date.now() });
+      setOpenScript((current) => ({ id: expressionScript, at: (current?.at ?? 0) + 1 }));
       return;
     }
     if (id === "grammar") {

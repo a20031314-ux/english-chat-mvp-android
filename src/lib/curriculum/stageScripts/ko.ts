@@ -1,6 +1,6 @@
 import type { StageScript } from "../stageScripts.ts";
 
-/** ko 단계 대본(curriculum/stageScripts.ts) — Claude가 쓰고 한 번 다시 고침, 원어민 확인 전. */
+/** ko 단계 대본(curriculum/stageScripts.ts) — 상황 대본 + 표현 대본(x), 대본마다 쓰는 핵심 표현. Claude가 쓰고 한 번 다시 고침, 원어민 확인 전. */
 export const KO: StageScript[] = [
   {
     "id": "ko-1-1",
@@ -67,6 +67,10 @@ export const KO: StageScript[] = [
           "en": "Yes, it's fun. But it's a little hard."
         }
       }
+    ],
+    "expressions": [
+      "만나서 반가워요",
+      "아니요"
     ]
   },
   {
@@ -101,9 +105,9 @@ export const KO: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "이거하고 물 한 병 주세요.",
+        "text": "이거 주세요. 그리고 물 한 병도 주세요.",
         "gloss": {
-          "en": "This and a bottle of water, please."
+          "en": "This one, please. And a bottle of water too."
         }
       },
       {
@@ -134,6 +138,16 @@ export const KO: StageScript[] = [
           "en": "Yes, please. Thank you. Goodbye."
         }
       }
+    ],
+    "expressions": [
+      "안녕하세요",
+      "얼마예요",
+      "이거 주세요",
+      "아니요",
+      "괜찮아요",
+      "여기요",
+      "감사합니다",
+      "안녕히 계세요"
     ]
   },
   {
@@ -201,6 +215,11 @@ export const KO: StageScript[] = [
           "en": "Oh, I'm taking it out. Thank you."
         }
       }
+    ],
+    "expressions": [
+      "아니요",
+      "천천히 말해 주세요",
+      "감사합니다"
     ]
   },
   {
@@ -266,6 +285,128 @@ export const KO: StageScript[] = [
         "text": "아, 네. 감사합니다. 안녕히 계세요.",
         "gloss": {
           "en": "Ah, okay. Thank you. Goodbye."
+        }
+      }
+    ],
+    "expressions": [
+      "잠깐만요",
+      "화장실 어디예요",
+      "감사합니다",
+      "죄송합니다",
+      "다시 한번 말해 주세요",
+      "안녕히 계세요"
+    ]
+  },
+  {
+    "id": "ko-1-x1",
+    "stage": 1,
+    "setting": {
+      "en": "Trying street food at a market stall",
+      "ko": "시장 노점에서 길거리 음식 고르기"
+    },
+    "expressions": [
+      "이거 뭐예요",
+      "네 맞아요",
+      "잘 모르겠어요"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "어서 오세요. 맛있는 거 많아요.",
+        "gloss": {
+          "en": "Welcome. We have lots of tasty things."
+        }
+      },
+      {
+        "who": "me",
+        "text": "안녕하세요. 이거 뭐예요?",
+        "gloss": {
+          "en": "Hello. What is this?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "호떡이에요. 안에 설탕하고 견과류가 있어요. 처음 먹어요?",
+        "gloss": {
+          "en": "It's hotteok. There's sugar and nuts inside. Is this your first time eating it?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "네, 맞아요. 처음 먹어요.",
+        "gloss": {
+          "en": "Yes, that's right. It's my first time."
+        }
+      },
+      {
+        "who": "them",
+        "text": "떡볶이도 맛있어요. 매운 거 잘 먹어요?",
+        "gloss": {
+          "en": "The tteokbokki is good too. Can you handle spicy food?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "음, 잘 모르겠어요. 오늘은 호떡 하나 주세요.",
+        "gloss": {
+          "en": "Hmm, I'm not sure. Just one hotteok today, please."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-1-x2",
+    "stage": 1,
+    "setting": {
+      "en": "Meeting a new neighbor at the door",
+      "ko": "새로 이사 온 이웃과 현관에서 인사하기"
+    },
+    "expressions": [
+      "처음 뵙겠습니다",
+      "한국어 조금 해요",
+      "안녕히 가세요"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "안녕하세요. 옆집에 이사 왔어요. 저는 박민수예요.",
+        "gloss": {
+          "en": "Hello. I just moved in next door. I'm Park Minsu."
+        }
+      },
+      {
+        "who": "me",
+        "text": "아, 안녕하세요. 처음 뵙겠습니다. 저는 안나예요.",
+        "gloss": {
+          "en": "Oh, hello. Nice to meet you. I'm Anna."
+        }
+      },
+      {
+        "who": "them",
+        "text": "와, 한국어 잘하시네요!",
+        "gloss": {
+          "en": "Wow, you speak Korean well!"
+        }
+      },
+      {
+        "who": "me",
+        "text": "아니에요. 한국어 조금 해요.",
+        "gloss": {
+          "en": "Not really. I speak a little Korean."
+        }
+      },
+      {
+        "who": "them",
+        "text": "이거 떡이에요. 맛있게 드세요.",
+        "gloss": {
+          "en": "These are rice cakes. Enjoy."
+        }
+      },
+      {
+        "who": "me",
+        "text": "와, 감사합니다. 안녕히 가세요.",
+        "gloss": {
+          "en": "Oh, thank you. Goodbye."
         }
       }
     ]
@@ -344,11 +485,15 @@ export const KO: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "와, 대박! 그럼 토요일에 봐요.",
+        "text": "와, 대박! 그럼 그때 봐요.",
         "gloss": {
-          "en": "Wow, awesome! See you on Saturday then."
+          "en": "Wow, awesome! See you then."
         }
       }
+    ],
+    "expressions": [
+      "그때 봐요",
+      "대박"
     ]
   },
   {
@@ -430,6 +575,9 @@ export const KO: StageScript[] = [
           "en": "Here's my card. Have a good one!"
         }
       }
+    ],
+    "expressions": [
+      "카드 돼요"
     ]
   },
   {
@@ -506,11 +654,16 @@ export const KO: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "음, 좀 비싸요. 조금만 깎아 주세요. 그럼 오늘 살 거예요.",
+        "text": "음, 생각보다 비싸요. 좀 깎아 주세요. 그럼 오늘 살 거예요.",
         "gloss": {
-          "en": "Hmm, it's a bit expensive. Please give me a small discount. Then I'll buy it today."
+          "en": "Hmm, it's more expensive than I thought. Please give me a discount. Then I'll buy it today."
         }
       }
+    ],
+    "expressions": [
+      "입어 봐도 돼요",
+      "다른 색 있어요",
+      "좀 깎아 주세요"
     ]
   },
   {
@@ -531,9 +684,9 @@ export const KO: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "머리가 아파요. 그리고 목도 좀 아파요.",
+        "text": "머리가 아파요. 그리고 목도 좀 아파요. 약 있어요?",
         "gloss": {
-          "en": "I have a headache. And my throat hurts a bit too."
+          "en": "I have a headache. And my throat hurts a bit too. Do you have any medicine?"
         }
       },
       {
@@ -590,6 +743,240 @@ export const KO: StageScript[] = [
         "text": "네, 알겠어요. 카드 돼요?",
         "gloss": {
           "en": "Okay, got it. Do you take cards?"
+        }
+      }
+    ],
+    "expressions": [
+      "머리가 아파요",
+      "약 있어요",
+      "카드 돼요"
+    ]
+  },
+  {
+    "id": "ko-2-x1",
+    "stage": 2,
+    "setting": {
+      "en": "Monday morning chat with a classmate",
+      "ko": "월요일 아침 반 친구와 주말 이야기"
+    },
+    "expressions": [
+      "재미있었어요",
+      "주말에 뭐 했어요",
+      "진짜요",
+      "다음에 같이 가요"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "마크 씨, 주말 잘 보냈어요?",
+        "gloss": {
+          "en": "Mark, did you have a good weekend?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "네! 친구하고 한강에서 자전거 탔어요. 진짜 재미있었어요. 수진 씨는 주말에 뭐 했어요?",
+        "gloss": {
+          "en": "Yes! I rode bikes by the Han River with a friend. It was really fun. What did you do on the weekend, Sujin?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "저는 남산타워에 처음 가 봤어요.",
+        "gloss": {
+          "en": "I went to Namsan Tower for the first time."
+        }
+      },
+      {
+        "who": "me",
+        "text": "진짜요? 저는 아직 못 가 봤어요.",
+        "gloss": {
+          "en": "Really? I haven't been there yet."
+        }
+      },
+      {
+        "who": "them",
+        "text": "밤에 가면 야경이 정말 예뻐요.",
+        "gloss": {
+          "en": "If you go at night, the night view is really beautiful."
+        }
+      },
+      {
+        "who": "me",
+        "text": "와, 다음에 같이 가요!",
+        "gloss": {
+          "en": "Wow, let's go together next time!"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-2-x2",
+    "stage": 2,
+    "setting": {
+      "en": "Planning a café visit with a classmate",
+      "ko": "반 친구와 카페 갈 약속 잡기"
+    },
+    "expressions": [
+      "언제 시간 있어요",
+      "몇 시에 만날까요",
+      "연락할게요",
+      "힘내요"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "학교 앞에 새 카페 생겼어요. 케이크가 진짜 맛있대요.",
+        "gloss": {
+          "en": "A new café opened in front of school. They say the cake is really good."
+        }
+      },
+      {
+        "who": "me",
+        "text": "와, 가 보고 싶어요. 언제 시간 있어요?",
+        "gloss": {
+          "en": "Oh, I want to go. When are you free?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "이번 주는 시험이 있어서 좀 바빠요. 다음 주 월요일 어때요?",
+        "gloss": {
+          "en": "I have exams this week, so I'm a bit busy. How about next Monday?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "좋아요. 몇 시에 만날까요?",
+        "gloss": {
+          "en": "Sounds good. What time should we meet?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "음, 아직 잘 모르겠어요. 시험 끝나고 얘기해요.",
+        "gloss": {
+          "en": "Hmm, I'm not sure yet. Let's talk after my exams."
+        }
+      },
+      {
+        "who": "me",
+        "text": "네, 그럼 제가 연락할게요. 시험 힘내요!",
+        "gloss": {
+          "en": "Okay, then I'll get in touch. Good luck with your exams!"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-2-x3",
+    "stage": 2,
+    "setting": {
+      "en": "Arriving late to meet a friend",
+      "ko": "친구와의 약속에 늦게 도착하기"
+    },
+    "expressions": [
+      "늦어서 미안해요",
+      "피곤해요",
+      "배고파요"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "어, 왔어요? 한참 기다렸어요.",
+        "gloss": {
+          "en": "Oh, you're here? I've been waiting a while."
+        }
+      },
+      {
+        "who": "me",
+        "text": "늦어서 미안해요. 버스를 잘못 탔어요.",
+        "gloss": {
+          "en": "Sorry I'm late. I got on the wrong bus."
+        }
+      },
+      {
+        "who": "them",
+        "text": "괜찮아요. 근데 얼굴이 좀 안 좋아 보여요.",
+        "gloss": {
+          "en": "It's okay. But you don't look so good."
+        }
+      },
+      {
+        "who": "me",
+        "text": "어제 잠을 잘 못 자서 좀 피곤해요.",
+        "gloss": {
+          "en": "I didn't sleep well last night, so I'm a bit tired."
+        }
+      },
+      {
+        "who": "them",
+        "text": "그럼 빨리 밥 먹으러 가요.",
+        "gloss": {
+          "en": "Then let's hurry and go eat."
+        }
+      },
+      {
+        "who": "me",
+        "text": "좋아요. 저 진짜 배고파요.",
+        "gloss": {
+          "en": "Sounds good. I'm really hungry."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-2-x4",
+    "stage": 2,
+    "setting": {
+      "en": "Taking a taxi to a market",
+      "ko": "택시 타고 시장 가기"
+    },
+    "expressions": [
+      "어디서 내려요",
+      "여기서 세워 주세요"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "어서 오세요. 어디로 가세요?",
+        "gloss": {
+          "en": "Hello. Where are you headed?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "남대문시장이요. 그런데 시장은 어디서 내려요?",
+        "gloss": {
+          "en": "Namdaemun Market. But where should I get off for the market?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "정문 앞이 제일 가까워요. 거기서 내려 드릴게요.",
+        "gloss": {
+          "en": "The main gate is closest. I'll drop you off there."
+        }
+      },
+      {
+        "who": "me",
+        "text": "좋아요. 오래 걸려요?",
+        "gloss": {
+          "en": "Great. Will it take long?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "아니요, 금방 가요. …자, 다 왔어요. 그런데 정문 앞에 차가 너무 많네요.",
+        "gloss": {
+          "en": "No, we'll be there soon. …Okay, we're here. But there are too many cars by the main gate."
+        }
+      },
+      {
+        "who": "me",
+        "text": "괜찮아요. 여기서 세워 주세요.",
+        "gloss": {
+          "en": "That's fine. Please stop here."
         }
       }
     ]
@@ -733,6 +1120,10 @@ export const KO: StageScript[] = [
           "en": "Deal! Then I'll bring the beer."
         }
       }
+    ],
+    "expressions": [
+      "어떻게 생각해요",
+      "그럴 수도 있죠"
     ]
   },
   {
@@ -753,9 +1144,9 @@ export const KO: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "안녕하세요, 이백삼 호인데요. 에어컨이 안 돼요.",
+        "text": "안녕하세요, 이백삼 호인데요. 문제가 생겼어요. 에어컨이 안 돼요.",
         "gloss": {
-          "en": "Hello, this is room two-oh-three. The air conditioner isn't working."
+          "en": "Hello, this is room two-oh-three. Something's gone wrong. The air conditioner isn't working."
         }
       },
       {
@@ -874,6 +1265,9 @@ export const KO: StageScript[] = [
           "en": "Oh, that would be great. Thank you."
         }
       }
+    ],
+    "expressions": [
+      "문제가 생겼어요"
     ]
   },
   {
@@ -1015,6 +1409,10 @@ export const KO: StageScript[] = [
           "en": "Sure, from next week I'll stay until closing. Thanks for everything!"
         }
       }
+    ],
+    "expressions": [
+      "잘 부탁드립니다",
+      "아 그렇구나"
     ]
   },
   {
@@ -1150,6 +1548,239 @@ export const KO: StageScript[] = [
           "en": "Okay, got it. Then I'll leave it by the door tomorrow. Thank you."
         }
       }
+    ],
+    "expressions": [
+      "교환하고 싶은데요",
+      "환불 가능해요"
+    ]
+  },
+  {
+    "id": "ko-3-x1",
+    "stage": 3,
+    "setting": {
+      "en": "Begging a friend for drama spoilers",
+      "ko": "친구한테 드라마 내용 물어보기"
+    },
+    "expressions": [
+      "스포 하지 마",
+      "그래서 어떻게 됐어",
+      "말도 안 돼",
+      "다음 화 언제 나와"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "너 그 드라마 어제 거 봤어? 대박이었는데.",
+        "gloss": {
+          "en": "Did you watch yesterday's episode of that drama? It was insane."
+        }
+      },
+      {
+        "who": "me",
+        "text": "아니, 아직 못 봤어. 스포 하지 마!",
+        "gloss": {
+          "en": "No, I haven't seen it yet. No spoilers!"
+        }
+      },
+      {
+        "who": "them",
+        "text": "알았어, 알았어. 근데 마지막 장면은 진짜 꼭 봐야 돼.",
+        "gloss": {
+          "en": "Okay, okay. But you really have to see the last scene."
+        }
+      },
+      {
+        "who": "me",
+        "text": "아, 궁금해 죽겠네. 그냥 말해 줘. 그래서 어떻게 됐어?",
+        "gloss": {
+          "en": "Ugh, I'm dying to know. Just tell me. So what happened?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "주인공 형이 사실 범인이었어.",
+        "gloss": {
+          "en": "The main character's brother was actually the culprit."
+        }
+      },
+      {
+        "who": "me",
+        "text": "헐, 말도 안 돼! 다음 화 언제 나와?",
+        "gloss": {
+          "en": "No way, that can't be! When does the next episode come out?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-3-x2",
+    "stage": 3,
+    "setting": {
+      "en": "Classmates choosing a place for the end-of-term party",
+      "ko": "종강 파티 장소 정하기"
+    },
+    "expressions": [
+      "그건 좀",
+      "완전 공감해요",
+      "제 생각에는"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "종강 파티 어디서 할지 들었어요? 반장이 노래방 가자고 하던데요.",
+        "gloss": {
+          "en": "Did you hear where the end-of-term party is? The class rep wants to go to karaoke."
+        }
+      },
+      {
+        "who": "me",
+        "text": "노래방이요? 음, 그건 좀… 노래 시키면 너무 부담스러워요.",
+        "gloss": {
+          "en": "Karaoke? Hmm, that's a bit… It's so much pressure when they make you sing."
+        }
+      },
+      {
+        "who": "them",
+        "text": "맞아요. 저도 마이크만 잡으면 얼굴이 빨개져요.",
+        "gloss": {
+          "en": "Right. My face turns red the moment I hold a mic."
+        }
+      },
+      {
+        "who": "me",
+        "text": "완전 공감해요. 그리고 노래방에서는 얘기도 잘 못 하잖아요.",
+        "gloss": {
+          "en": "I totally get that. And you can't really talk at karaoke, either."
+        }
+      },
+      {
+        "who": "them",
+        "text": "그럼 어디가 좋을까요? 다들 의견이 달라서요.",
+        "gloss": {
+          "en": "Then where would be good? Everyone has a different opinion."
+        }
+      },
+      {
+        "who": "me",
+        "text": "제 생각에는 학교 앞 고깃집이 제일 좋을 것 같아요. 노래방은 끝나고 가고 싶은 사람만 가고요.",
+        "gloss": {
+          "en": "In my opinion, the barbecue place in front of school would be best. Then only people who want to can go to karaoke after."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-3-x3",
+    "stage": 3,
+    "setting": {
+      "en": "Dropping formal speech with a coworker after an event",
+      "ko": "행사 끝나고 동료와 말 놓기"
+    },
+    "expressions": [
+      "그러니까요",
+      "수고하셨습니다",
+      "말 놓을까요",
+      "편하게 말해"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "드디어 끝났네요. 오늘 진짜 정신없었어요.",
+        "gloss": {
+          "en": "It's finally over. Today was really hectic."
+        }
+      },
+      {
+        "who": "me",
+        "text": "그러니까요. 그래도 잘 끝나서 다행이에요. 수고하셨습니다!",
+        "gloss": {
+          "en": "Tell me about it. Still, I'm glad it went well. Thanks for your hard work!"
+        }
+      },
+      {
+        "who": "them",
+        "text": "수고하셨어요. 근데 우리 동갑이라면서요? 매니저님한테 들었어요.",
+        "gloss": {
+          "en": "You too. But I heard we're the same age? The manager told me."
+        }
+      },
+      {
+        "who": "me",
+        "text": "아, 그래요? 그럼 우리 말 놓을까요?",
+        "gloss": {
+          "en": "Oh, really? Then shall we drop the formal speech?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "좋아요! 아, 근데 갑자기 반말하려니까 좀 어색하네요.",
+        "gloss": {
+          "en": "Sure! Oh, but switching to casual all of a sudden feels a little awkward."
+        }
+      },
+      {
+        "who": "me",
+        "text": "괜찮아, 편하게 말해. 다음 주에도 잘 부탁해!",
+        "gloss": {
+          "en": "It's fine, talk to me casually. Looking forward to working with you next week too!"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-3-x4",
+    "stage": 3,
+    "setting": {
+      "en": "Asking a senior to look over your slides",
+      "ko": "선배에게 발표 자료 봐 달라고 부탁하기"
+    },
+    "expressions": [
+      "혹시 시간 괜찮으세요",
+      "확인해 보겠습니다"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "어, 서연 씨. 무슨 일이에요?",
+        "gloss": {
+          "en": "Oh, Seoyeon. What's up?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "선배님, 혹시 시간 괜찮으세요? 발표 자료 좀 봐 주셨으면 해서요.",
+        "gloss": {
+          "en": "Do you happen to have a moment? I was hoping you could look over my presentation slides."
+        }
+      },
+      {
+        "who": "them",
+        "text": "아, 그거요. 근데 어제 보낸 파일이 안 열리던데요?",
+        "gloss": {
+          "en": "Oh, those. But the file you sent yesterday wouldn't open."
+        }
+      },
+      {
+        "who": "me",
+        "text": "정말요? 죄송합니다. 바로 확인해 보겠습니다.",
+        "gloss": {
+          "en": "Really? I'm sorry. I'll check it right away."
+        }
+      },
+      {
+        "who": "them",
+        "text": "네, 다시 보내 주면 점심 먹고 볼게요.",
+        "gloss": {
+          "en": "Okay, if you resend it, I'll look after lunch."
+        }
+      },
+      {
+        "who": "me",
+        "text": "감사합니다. 지금 바로 다시 보내 드릴게요.",
+        "gloss": {
+          "en": "Thank you. I'll send it again right now."
+        }
+      }
     ]
   },
   {
@@ -1242,9 +1873,9 @@ export const KO: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "네, 저도 그 부분은 말씀드렸거든요. 그런데 이번에 다른 업체 견적도 받았다고 하시더라고요.",
+        "text": "네, 그 부분은요, 저도 말씀드렸거든요. 그런데 이번에 다른 업체 견적도 받았다고 하시더라고요.",
         "gloss": {
-          "en": "Yes, I mentioned that to them too. But I found out they've also gotten a quote from another company this time."
+          "en": "Yes, as for that, I mentioned it to them too. But I found out they've also gotten a quote from another company this time."
         }
       },
       {
@@ -1313,6 +1944,12 @@ export const KO: StageScript[] = [
           "en": "Yes, understood. I'll proceed as you said."
         }
       }
+    ],
+    "expressions": [
+      "말씀하신 대로",
+      "확인 부탁드립니다",
+      "일정 조율해 볼게요",
+      "그 부분은요"
     ]
   },
   {
@@ -1476,6 +2113,12 @@ export const KO: StageScript[] = [
           "en": "Of course. Today's on me. I'm really sorry."
         }
       }
+    ],
+    "expressions": [
+      "말도 마",
+      "하마터면",
+      "그러게 말이야",
+      "내가 쏠게"
     ]
   },
   {
@@ -1633,7 +2276,8 @@ export const KO: StageScript[] = [
           "en": "Thank you. Then please text me once it's on its way."
         }
       }
-    ]
+    ],
+    "expressions": []
   },
   {
     "id": "ko-4-4",
@@ -1790,6 +2434,196 @@ export const KO: StageScript[] = [
           "en": "Sounds good! But next time it's on me."
         }
       }
+    ],
+    "expressions": [
+      "제가 알기로는",
+      "솔직히 말하면",
+      "아무튼"
+    ]
+  },
+  {
+    "id": "ko-4-x1",
+    "stage": 4,
+    "setting": {
+      "en": "Running into an old friend on the street",
+      "ko": "길에서 오랜만에 친구 만나기"
+    },
+    "expressions": [
+      "오랜만이야",
+      "별일 없지",
+      "그럴 줄 알았어",
+      "그건 그렇고"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "어? 너 여기서 뭐 해?",
+        "gloss": {
+          "en": "Huh? What are you doing here?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "와, 진짜 오랜만이야! 졸업하고 처음 보는 거지? 별일 없지?",
+        "gloss": {
+          "en": "Wow, it's been ages! First time since graduation, right? Everything okay with you?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "응, 그냥 그렇지 뭐. 아, 나 지난달에 결국 회사 옮겼어.",
+        "gloss": {
+          "en": "Yeah, same old. Oh, I finally switched companies last month."
+        }
+      },
+      {
+        "who": "me",
+        "text": "그럴 줄 알았어. 너 전부터 거기 힘들다고 했잖아.",
+        "gloss": {
+          "en": "I knew it. You'd been saying it was rough there for a while."
+        }
+      },
+      {
+        "who": "them",
+        "text": "맞아. 지금은 훨씬 편해. 너는 아직 그 동네 살아?",
+        "gloss": {
+          "en": "Yeah. It's way easier now. Do you still live in that neighborhood?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "응, 그대로야. 그건 그렇고, 너 번호 안 바뀌었지? 우리 언제 밥 한번 먹자.",
+        "gloss": {
+          "en": "Yeah, same place. Anyway, your number's still the same, right? Let's grab a meal sometime."
+        }
+      },
+      {
+        "who": "them",
+        "text": "그대로야. 이번엔 진짜 연락할게.",
+        "gloss": {
+          "en": "Same number. This time I'll actually call."
+        }
+      },
+      {
+        "who": "me",
+        "text": "약속했다! 연락 기다릴게.",
+        "gloss": {
+          "en": "You promised! I'll be waiting."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-4-x2",
+    "stage": 4,
+    "setting": {
+      "en": "Feedback on a design draft from a team leader",
+      "ko": "팀장에게 디자인 시안 피드백 받기"
+    },
+    "expressions": [
+      "듣고 보니",
+      "검토해 보겠습니다",
+      "어쩔 수 없죠"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "지수 씨, 어제 보낸 시안 봤어요. 근데 색이 좀 어둡다는 의견이 있었어요.",
+        "gloss": {
+          "en": "Jisu, I saw the draft you sent yesterday. But some people felt the colors were a bit dark."
+        }
+      },
+      {
+        "who": "me",
+        "text": "아, 그래요? 저는 차분해서 괜찮다고 생각했는데요.",
+        "gloss": {
+          "en": "Oh, really? I thought it was fine because it felt calm."
+        }
+      },
+      {
+        "who": "them",
+        "text": "저도 처음엔 그랬는데, 휴대폰 화면으로 보니까 글씨가 잘 안 보이더라고요.",
+        "gloss": {
+          "en": "I thought so too at first, but on a phone screen the text was hard to read."
+        }
+      },
+      {
+        "who": "me",
+        "text": "듣고 보니 그렇네요. 휴대폰 화면 기준으로 다시 검토해 보겠습니다.",
+        "gloss": {
+          "en": "Now that you mention it, you're right. I'll go over it again with phone screens in mind."
+        }
+      },
+      {
+        "who": "them",
+        "text": "고마워요. 다만 수정하면 발표 날짜는 좀 미뤄야 할 것 같아요.",
+        "gloss": {
+          "en": "Thanks. Though if we revise it, we'll probably have to push back the presentation date a bit."
+        }
+      },
+      {
+        "who": "me",
+        "text": "어쩔 수 없죠. 제대로 하는 게 더 중요하니까요.",
+        "gloss": {
+          "en": "It can't be helped. Doing it right matters more."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-4-x3",
+    "stage": 4,
+    "setting": {
+      "en": "Reassuring a friend after a tense meeting",
+      "ko": "회의 뒤 걱정하는 친구 달래기"
+    },
+    "expressions": [
+      "신경 쓰지 마",
+      "그 말이 맞네"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "아까 회의에서 내가 한 말 때문에 팀장님 기분 상하신 것 같아.",
+        "gloss": {
+          "en": "I think the team leader got upset because of what I said in the meeting earlier."
+        }
+      },
+      {
+        "who": "me",
+        "text": "에이, 신경 쓰지 마. 팀장님 원래 표정이 그래.",
+        "gloss": {
+          "en": "Come on, don't worry about it. That's just how the team leader's face always looks."
+        }
+      },
+      {
+        "who": "them",
+        "text": "그래도 내가 좀 세게 말하긴 했어. 따로 말씀드리는 게 낫겠지?",
+        "gloss": {
+          "en": "Still, I did say it pretty harshly. It'd be better to talk to him separately, right?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "그 말이 맞네. 그러면 너도 마음이 편할 거야.",
+        "gloss": {
+          "en": "You're right. That way you'll feel better too."
+        }
+      },
+      {
+        "who": "them",
+        "text": "그래, 점심 먹고 잠깐 찾아가 봐야겠다.",
+        "gloss": {
+          "en": "Okay, I'll stop by for a minute after lunch."
+        }
+      },
+      {
+        "who": "me",
+        "text": "응, 잘될 거야. 너무 걱정하지 마.",
+        "gloss": {
+          "en": "Yeah, it'll go fine. Don't worry too much."
+        }
+      }
     ]
   },
   {
@@ -1917,6 +2751,11 @@ export const KO: StageScript[] = [
           "en": "Will do, thank you. Be sure to tell me how the expo went on Monday."
         }
       }
+    ],
+    "expressions": [
+      "사정이 좀 있어서",
+      "마음은 굴뚝같은데",
+      "마음에 걸려요"
     ]
   },
   {
@@ -2044,6 +2883,14 @@ export const KO: StageScript[] = [
           "en": "No way, I can't let an unemployed person treat me. Tonight's on me."
         }
       }
+    ],
+    "expressions": [
+      "고생 많았어",
+      "그럴 만도 하지",
+      "시원섭섭하다",
+      "괜히 했다",
+      "말이 나온 김에",
+      "한잔해"
     ]
   },
   {
@@ -2082,9 +2929,9 @@ export const KO: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "처음엔 정신이 없었는데, 하다 보니 이제 조금 감이 잡히는 것 같아요. 다 선배님들 덕분이죠.",
+        "text": "처음엔 정신이 없었는데, 선배님들 덕분에 이제 조금 감이 잡히는 것 같아요.",
         "gloss": {
-          "en": "It was hectic at first, but as I've kept at it, I think I'm getting the hang of it. It's all thanks to everyone here."
+          "en": "It was hectic at first, but thanks to all of you, I think I'm starting to get the hang of it."
         }
       },
       {
@@ -2171,6 +3018,9 @@ export const KO: StageScript[] = [
           "en": "Thank you, sir! Let me pour you a drink first."
         }
       }
+    ],
+    "expressions": [
+      "선배님 덕분에"
     ]
   },
   {
@@ -2237,9 +3087,9 @@ export const KO: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "그렇지! 결과도 안 나왔는데 혼자 신난 사람한테 하는 말이야.",
+        "text": "그렇지! 눈치가 빠르네. 결과도 안 나왔는데 혼자 신난 사람한테 하는 말이야. 친구끼리는 그냥 '김칫국 마시지 마' 이렇게도 많이 해.",
         "gloss": {
-          "en": "Exactly! It's what you say to someone who's excited before the results are even in."
+          "en": "Exactly! You catch on fast. It's what you say to someone who's excited before the results are even in. Between friends people also just say \"don't drink the kimchi soup.\""
         }
       },
       {
@@ -2296,6 +3146,234 @@ export const KO: StageScript[] = [
         "text": "나도 처음엔 하나도 몰랐어. 근데 예능을 매일 보다 보니까 저절로 귀가 트이더라.",
         "gloss": {
           "en": "I didn't get any of it at first either. But after watching variety shows every day, my ear just opened up on its own."
+        }
+      }
+    ],
+    "expressions": [
+      "눈치가 빠르네",
+      "김칫국 마시지 마"
+    ]
+  },
+  {
+    "id": "ko-5-x1",
+    "stage": 5,
+    "setting": {
+      "en": "Hearing about a friend's housewarming party",
+      "ko": "친구 집들이 이야기 듣기"
+    },
+    "expressions": [
+      "발이 넓다",
+      "손이 크다"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "어제 수진이 집들이 갔다며? 사람 많았어?",
+        "gloss": {
+          "en": "I heard you went to Sujin's housewarming yesterday? Were there a lot of people?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "응, 엄청 많았어. 수진이가 발이 넓잖아. 회사 사람에 동네 친구까지 다 왔더라.",
+        "gloss": {
+          "en": "Yeah, tons. Sujin knows everybody. Coworkers, neighborhood friends, everyone came."
+        }
+      },
+      {
+        "who": "them",
+        "text": "음식은? 수진이 요리 잘하잖아.",
+        "gloss": {
+          "en": "What about the food? Sujin's a great cook."
+        }
+      },
+      {
+        "who": "me",
+        "text": "말도 마. 손이 커서 음식을 산더미처럼 해 놨어. 다들 싸 가지고 갔어.",
+        "gloss": {
+          "en": "Don't even ask. She's so generous she made mountains of food. Everyone took some home."
+        }
+      },
+      {
+        "who": "them",
+        "text": "역시. 나도 갈 걸 그랬다.",
+        "gloss": {
+          "en": "Of course. I should have gone too."
+        }
+      },
+      {
+        "who": "me",
+        "text": "다음에 또 한대. 그때는 꼭 같이 가자.",
+        "gloss": {
+          "en": "She says she'll do it again. Let's definitely go together then."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-5-x2",
+    "stage": 5,
+    "setting": {
+      "en": "Turning down a gym membership offer",
+      "ko": "헬스장 등록 권유 정중하게 거절하기"
+    },
+    "expressions": [
+      "생각 좀 해 볼게요",
+      "다음 기회에"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "회원님, 오늘 등록하시면 개인 레슨을 무료로 드려요. 오늘까지만 하는 이벤트예요.",
+        "gloss": {
+          "en": "If you sign up today, you get personal training sessions for free. The promotion ends today."
+        }
+      },
+      {
+        "who": "me",
+        "text": "아, 좋긴 한데요… 금액이 커서 생각 좀 해 볼게요.",
+        "gloss": {
+          "en": "Oh, it sounds good, but… it's a big amount, so I'll think about it."
+        }
+      },
+      {
+        "who": "them",
+        "text": "그럼 오늘 한 번 체험해 보시는 건 어떠세요?",
+        "gloss": {
+          "en": "Then how about trying a session today?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "오늘은 약속이 있어서요. 다음 기회에 할게요.",
+        "gloss": {
+          "en": "I have plans today. I'll do it another time."
+        }
+      },
+      {
+        "who": "them",
+        "text": "아쉽네요. 그럼 연락처 남겨 주시면 이벤트 있을 때 알려 드릴게요.",
+        "gloss": {
+          "en": "That's a shame. If you leave your number, we'll let you know about promotions."
+        }
+      },
+      {
+        "who": "me",
+        "text": "네, 그렇게 해 주세요. 감사합니다.",
+        "gloss": {
+          "en": "Sure, please do. Thank you."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-5-x3",
+    "stage": 5,
+    "setting": {
+      "en": "A friend shares a secret",
+      "ko": "친구가 비밀 털어놓기"
+    },
+    "expressions": [
+      "입이 무겁다",
+      "눈치 보지 마"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "나 너한테만 말하는 건데… 다음 달에 회사 그만둘 거야.",
+        "gloss": {
+          "en": "I'm only telling you this… I'm quitting my job next month."
+        }
+      },
+      {
+        "who": "me",
+        "text": "진짜? 걱정 마. 나 입이 무거운 거 알잖아.",
+        "gloss": {
+          "en": "Really? Don't worry. You know I can keep a secret."
+        }
+      },
+      {
+        "who": "them",
+        "text": "응, 그래서 너한테 말하는 거야. 근데 팀장님한테는 아직 말을 못 했어. 다들 바쁜 때라서.",
+        "gloss": {
+          "en": "Yeah, that's why I'm telling you. But I haven't told my team leader yet. Everyone's so busy right now."
+        }
+      },
+      {
+        "who": "me",
+        "text": "눈치 보지 마. 네 인생인데 네가 정하는 거지.",
+        "gloss": {
+          "en": "Don't worry about what others think. It's your life, it's your call."
+        }
+      },
+      {
+        "who": "them",
+        "text": "그렇긴 한데, 괜히 미안하더라고.",
+        "gloss": {
+          "en": "I know, but I still feel kind of guilty."
+        }
+      },
+      {
+        "who": "me",
+        "text": "그 마음은 알아. 그래도 말할 거면 빨리 하는 게 서로 편해.",
+        "gloss": {
+          "en": "I get that. But if you're going to tell them, sooner is easier for everyone."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-5-x4",
+    "stage": 5,
+    "setting": {
+      "en": "A friend stands up to a line-cutter",
+      "ko": "새치기한 사람 이야기"
+    },
+    "expressions": [
+      "어이가 없네",
+      "속이 시원하다"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "아까 편의점에서 어떤 아저씨가 줄 다 무시하고 맨 앞에 끼어들었어.",
+        "gloss": {
+          "en": "Earlier at the convenience store, some guy ignored the whole line and cut right to the front."
+        }
+      },
+      {
+        "who": "me",
+        "text": "뭐? 어이가 없네. 그래서 가만히 있었어?",
+        "gloss": {
+          "en": "What? Unbelievable. So did you just let it go?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "아니, 내가 \"뒤에 줄 있어요\" 했지. 그랬더니 뒤에 있던 사람들도 다 한마디씩 하더라.",
+        "gloss": {
+          "en": "No, I said, \"There's a line back here.\" Then everyone behind me chimed in too."
+        }
+      },
+      {
+        "who": "me",
+        "text": "잘했다! 듣기만 해도 속이 시원하다.",
+        "gloss": {
+          "en": "Good for you! Just hearing it makes me feel so much better."
+        }
+      },
+      {
+        "who": "them",
+        "text": "결국 그 아저씨가 민망했는지 맨 뒤로 가더라.",
+        "gloss": {
+          "en": "In the end he must have been embarrassed, because he went to the back."
+        }
+      },
+      {
+        "who": "me",
+        "text": "당연하지. 그런 건 누가 한 번은 말해 줘야 돼.",
+        "gloss": {
+          "en": "Of course. Someone has to say something to people like that."
         }
       }
     ]
