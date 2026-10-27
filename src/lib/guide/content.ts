@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-27d";
+export const GUIDE_VERSION = "2026-10-27e";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -178,6 +178,7 @@ export const GUIDE_KO: Guide = {
           "‘{ui:myViewMap}’에는 단계가 1부터 5까지 이어져 있어요. 번호를 누르면 그 단계를 미리 봐요.",
           "칸을 누르면 펼쳐져요. ‘{ui:partVocab}’은 익힌 낱말과 단어장, ‘{ui:partGrammar}’은 그 단계 문법 칸(✓·‘{ui:stageTry}’), ‘{ui:partExpression}’은 핵심 표현과 ‘{ui:notebookIdioms}’ 칸, ‘{ui:partPronunciation}’은 그 단계 발음 포인트와 글자·소리 칸. 쓸 수 있게 된 표현과 노트에 넣은 장면이 맞는 칸을 채워요.",
           "아래 ‘{ui:stageExamplesTitle}’에서 그 단계로 되는 대화를 보고 ‘{ui:stageTry}’로 해 봐요.",
+          "‘{ui:stageScriptsTitle}’에서 대본을 들으면 내 줄에서 멈춰요. ‘{ui:scriptModeShadow}’·‘{ui:scriptModeHint}’·‘{ui:scriptModeHide}’ 중 하나를 고르고 🎤로 말하면 낱말마다 맞았는지 보여요(지금은 한국어·일본어·스페인어 1~2단계).",
         ],
         shot: "stage-parts",
       },
@@ -609,6 +610,7 @@ export const GUIDE_EN: Guide = {
           "‘{ui:myViewMap}’ runs from stage 1 to 5. Tap a number to look at that stage.",
           "Tap a part to open it: ‘{ui:partVocab}’ has the words you’ve learned and your word list, ‘{ui:partGrammar}’ the stage’s grammar (✓ and ‘{ui:stageTry}’), ‘{ui:partExpression}’ its key phrases and the ‘{ui:notebookIdioms}’ sections, ‘{ui:partPronunciation}’ the stage’s sound point and the letter-and-sound sections. Phrases you can use and scenes you saved fill the matching section.",
           "Below, ‘{ui:stageExamplesTitle}’ shows conversations this stage makes possible; try one with ‘{ui:stageTry}’.",
+          "In ‘{ui:stageScriptsTitle}’ the script plays and stops at your line. Pick ‘{ui:scriptModeShadow}’, ‘{ui:scriptModeHint}’ or ‘{ui:scriptModeHide}’, say it with 🎤, and each word shows whether it came through (for now Korean, Japanese and Spanish, stages 1–2).",
         ],
         shot: "stage-parts",
       },

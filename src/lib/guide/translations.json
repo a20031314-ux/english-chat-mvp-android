@@ -54,7 +54,8 @@
           "body": [
             "«{ui:myViewMap}» va de la etapa 1 a la 5. Toca un número para ver esa etapa.",
             "Toca una parte para abrirla: «{ui:partVocab}» con tus palabras y la lista de palabras, «{ui:partGrammar}» con la gramática de la etapa (✓ y «{ui:stageTry}»), «{ui:partExpression}» con sus expresiones clave y las secciones de «{ui:notebookIdioms}», «{ui:partPronunciation}» con el punto de sonido de la etapa y las secciones de letras y sonidos. Lo que ya sabes usar y las escenas guardadas llenan su sección.",
-            "Abajo, «{ui:stageExamplesTitle}» muestra conversaciones posibles en esta etapa; prueba una con «{ui:stageTry}»."
+            "Abajo, «{ui:stageExamplesTitle}» muestra conversaciones posibles en esta etapa; prueba una con «{ui:stageTry}».",
+            "En «{ui:stageScriptsTitle}» el guion suena y se detiene en tu frase. Elige «{ui:scriptModeShadow}», «{ui:scriptModeHint}» u «{ui:scriptModeHide}», dila con 🎤 y verás palabra por palabra si se entendió (por ahora coreano, japonés y español, etapas 1–2)."
           ],
           "shot": "stage-parts"
         },
@@ -484,7 +485,8 @@
           "body": [
             "「{ui:myViewMap}」には段階1〜5が並びます。番号を押すとその段階を先に見られます。",
             "項目を押すと開きます。「{ui:partVocab}」は覚えた単語と単語帳、「{ui:partGrammar}」はその段階の文法の項目（✓・「{ui:stageTry}」）、「{ui:partExpression}」は大事な表現と「{ui:notebookIdioms}」の項目、「{ui:partPronunciation}」はその段階の発音のポイントと文字・音の項目。使えるようになった表現とノートに入れた場面が合う項目を埋めます。",
-            "下の「{ui:stageExamplesTitle}」でその段階でできる会話を見て、「{ui:stageTry}」で試せます。"
+            "下の「{ui:stageExamplesTitle}」でその段階でできる会話を見て、「{ui:stageTry}」で試せます。",
+            "「{ui:stageScriptsTitle}」では台本が流れ、自分のセリフで止まります。「{ui:scriptModeShadow}」「{ui:scriptModeHint}」「{ui:scriptModeHide}」から選んで🎤で話すと、単語ごとに伝わったかが出ます(今は韓国語・日本語・スペイン語の1〜2段階)。"
           ],
           "shot": "stage-parts"
         },
@@ -914,7 +916,8 @@
           "body": [
             "“{ui:myViewMap}”里是第1到第5阶段，点数字可以先看那个阶段。",
             "点一项会展开：“{ui:partVocab}”是学会的词和单词本，“{ui:partGrammar}”是这个阶段的语法项（✓、“{ui:stageTry}”），“{ui:partExpression}”是核心表达和“{ui:notebookIdioms}”项，“{ui:partPronunciation}”是这个阶段的发音要点和字母·发音项。会用的表达和存进笔记的场景会填进对应的项。",
-            "下面的“{ui:stageExamplesTitle}”展示这个阶段能进行的对话，用“{ui:stageTry}”试一试。"
+            "下面的“{ui:stageExamplesTitle}”展示这个阶段能进行的对话，用“{ui:stageTry}”试一试。",
+            "在“{ui:stageScriptsTitle}”里剧本会播放，到你的台词时停下。选择“{ui:scriptModeShadow}”“{ui:scriptModeHint}”或“{ui:scriptModeHide}”，用🎤说出来，每个词是否听清都会显示（目前限韩语、日语、西班牙语第1–2阶段）。"
           ],
           "shot": "stage-parts"
         },
@@ -1344,7 +1347,8 @@
           "body": [
             "“{ui:myViewMap}” có các giai đoạn từ 1 đến 5. Chạm số để xem trước giai đoạn đó.",
             "Chạm một phần để mở: “{ui:partVocab}” có từ đã học và sổ từ, “{ui:partGrammar}” có ngữ pháp của giai đoạn (✓ và “{ui:stageTry}”), “{ui:partExpression}” có các cách nói chính và mục “{ui:notebookIdioms}”, “{ui:partPronunciation}” có điểm phát âm của giai đoạn và mục chữ cái·âm. Cách nói bạn dùng được và cảnh bạn lưu sẽ lấp vào mục phù hợp.",
-            "Bên dưới, “{ui:stageExamplesTitle}” cho thấy những cuộc trò chuyện giai đoạn này làm được; thử bằng “{ui:stageTry}”."
+            "Bên dưới, “{ui:stageExamplesTitle}” cho thấy những cuộc trò chuyện giai đoạn này làm được; thử bằng “{ui:stageTry}”.",
+            "Trong “{ui:stageScriptsTitle}”, kịch bản phát và dừng ở câu của bạn. Chọn “{ui:scriptModeShadow}”, “{ui:scriptModeHint}” hoặc “{ui:scriptModeHide}”, nói bằng 🎤 và từng từ sẽ hiện có nghe rõ không (hiện có tiếng Hàn, Nhật, Tây Ban Nha giai đoạn 1–2)."
           ],
           "shot": "stage-parts"
         },
@@ -1774,7 +1778,8 @@
           "body": [
             "« {ui:myViewMap} » va de l’étape 1 à 5. Touchez un numéro pour voir cette étape.",
             "Touchez une partie pour l’ouvrir : « {ui:partVocab} » avec vos mots et la liste de mots, « {ui:partGrammar} » avec la grammaire de l’étape (✓ et « {ui:stageTry} »), « {ui:partExpression} » avec ses expressions clés et les sections « {ui:notebookIdioms} », « {ui:partPronunciation} » avec le point de prononciation de l’étape et les sections lettres et sons. Ce que vous savez utiliser et les scènes enregistrées remplissent la bonne section.",
-            "En bas, « {ui:stageExamplesTitle} » montre des conversations possibles à cette étape ; essayez-en une avec « {ui:stageTry} »."
+            "En bas, « {ui:stageExamplesTitle} » montre des conversations possibles à cette étape ; essayez-en une avec « {ui:stageTry} ».",
+            "Dans « {ui:stageScriptsTitle} », le dialogue se lit et s’arrête à votre réplique. Choisissez « {ui:scriptModeShadow} », « {ui:scriptModeHint} » ou « {ui:scriptModeHide} », dites-la avec 🎤 et chaque mot indique s’il est bien passé (pour l’instant coréen, japonais et espagnol, étapes 1–2)."
           ],
           "shot": "stage-parts"
         },
@@ -2204,7 +2209,8 @@
           "body": [
             "«{ui:myViewMap}» va dalla fase 1 alla 5. Tocca un numero per vedere quella fase.",
             "Tocca una parte per aprirla: «{ui:partVocab}» con le parole imparate e il vocabolario, «{ui:partGrammar}» con la grammatica della fase (✓ e «{ui:stageTry}»), «{ui:partExpression}» con le espressioni chiave e le sezioni «{ui:notebookIdioms}», «{ui:partPronunciation}» con il punto di pronuncia della fase e le sezioni lettere e suoni. Ciò che sai usare e le scene salvate riempiono la sezione giusta.",
-            "Sotto, «{ui:stageExamplesTitle}» mostra conversazioni possibili in questa fase; provane una con «{ui:stageTry}»."
+            "Sotto, «{ui:stageExamplesTitle}» mostra conversazioni possibili in questa fase; provane una con «{ui:stageTry}».",
+            "In «{ui:stageScriptsTitle}» il copione parte e si ferma alla tua battuta. Scegli «{ui:scriptModeShadow}», «{ui:scriptModeHint}» o «{ui:scriptModeHide}», dilla con 🎤 e vedi parola per parola se è arrivata (per ora coreano, giapponese e spagnolo, fasi 1–2)."
           ],
           "shot": "stage-parts"
         },
@@ -2634,7 +2640,8 @@
           "body": [
             "“{ui:myViewMap}” vai da etapa 1 à 5. Toque num número para ver essa etapa.",
             "Toque numa parte para abri-la: “{ui:partVocab}” com as palavras aprendidas e o vocabulário, “{ui:partGrammar}” com a gramática da etapa (✓ e “{ui:stageTry}”), “{ui:partExpression}” com as expressões-chave e as seções de “{ui:notebookIdioms}”, “{ui:partPronunciation}” com o ponto de pronúncia da etapa e as seções de letras e sons. O que você já sabe usar e as cenas salvas preenchem a seção certa.",
-            "Embaixo, “{ui:stageExamplesTitle}” mostra conversas possíveis nesta etapa; experimente uma com “{ui:stageTry}”."
+            "Embaixo, “{ui:stageExamplesTitle}” mostra conversas possíveis nesta etapa; experimente uma com “{ui:stageTry}”.",
+            "Em “{ui:stageScriptsTitle}” o roteiro toca e para na sua fala. Escolha “{ui:scriptModeShadow}”, “{ui:scriptModeHint}” ou “{ui:scriptModeHide}”, diga com 🎤 e cada palavra mostra se foi entendida (por enquanto coreano, japonês e espanhol, etapas 1–2)."
           ],
           "shot": "stage-parts"
         },
@@ -3064,7 +3071,8 @@
           "body": [
             "В «{ui:myViewMap}» этапы с 1 по 5. Нажмите номер, чтобы посмотреть этот этап.",
             "Нажмите часть, чтобы раскрыть её: «{ui:partVocab}» — выученные слова и словарь, «{ui:partGrammar}» — грамматика этапа (✓ и «{ui:stageTry}»), «{ui:partExpression}» — ключевые выражения и разделы «{ui:notebookIdioms}», «{ui:partPronunciation}» — главное в произношении этапа и разделы букв и звуков. То, что вы уже умеете использовать, и сохранённые сцены заполняют нужный раздел.",
-            "Ниже «{ui:stageExamplesTitle}» показывает, какие разговоры доступны на этом этапе; попробуйте с «{ui:stageTry}»."
+            "Ниже «{ui:stageExamplesTitle}» показывает, какие разговоры доступны на этом этапе; попробуйте с «{ui:stageTry}».",
+            "В «{ui:stageScriptsTitle}» сценарий звучит и останавливается на вашей реплике. Выберите «{ui:scriptModeShadow}», «{ui:scriptModeHint}» или «{ui:scriptModeHide}», скажите её через 🎤 — по каждому слову будет видно, услышано ли оно (пока корейский, японский и испанский, этапы 1–2)."
           ],
           "shot": "stage-parts"
         },
@@ -3494,7 +3502,8 @@
           "body": [
             "“{ui:myViewMap}” berisi tahap 1 sampai 5. Ketuk angka untuk melihat tahap itu.",
             "Ketuk satu bagian untuk membukanya: “{ui:partVocab}” berisi kata yang sudah dipelajari dan daftar kata, “{ui:partGrammar}” tata bahasa tahap itu (✓ dan “{ui:stageTry}”), “{ui:partExpression}” ungkapan utama dan bagian “{ui:notebookIdioms}”, “{ui:partPronunciation}” poin pelafalan tahap itu dan bagian huruf·bunyi. Ungkapan yang sudah bisa kamu pakai dan adegan yang disimpan mengisi bagian yang cocok.",
-            "Di bawah, “{ui:stageExamplesTitle}” menunjukkan percakapan yang bisa dilakukan di tahap ini; coba dengan “{ui:stageTry}”."
+            "Di bawah, “{ui:stageExamplesTitle}” menunjukkan percakapan yang bisa dilakukan di tahap ini; coba dengan “{ui:stageTry}”.",
+            "Di “{ui:stageScriptsTitle}”, naskah diputar dan berhenti di kalimatmu. Pilih “{ui:scriptModeShadow}”, “{ui:scriptModeHint}”, atau “{ui:scriptModeHide}”, ucapkan dengan 🎤, lalu tiap kata menunjukkan apakah terdengar (sementara bahasa Korea, Jepang, dan Spanyol tahap 1–2)."
           ],
           "shot": "stage-parts"
         },
@@ -3924,7 +3933,8 @@
           "body": [
             "في «{ui:myViewMap}» المراحل من 1 إلى 5. اضغط على رقم لترى تلك المرحلة.",
             "اضغط على جزء لفتحه: «{ui:partVocab}» فيه الكلمات التي تعلمتها وقائمة الكلمات، و«{ui:partGrammar}» قواعد المرحلة (✓ و«{ui:stageTry}»)، و«{ui:partExpression}» تعابيرها الأساسية وأقسام «{ui:notebookIdioms}»، و«{ui:partPronunciation}» نقطة النطق في المرحلة وأقسام الحروف والأصوات. ما صرت تستطيع استخدامه والمشاهد التي حفظتها تملأ القسم المناسب.",
-            "في الأسفل يعرض «{ui:stageExamplesTitle}» محادثات تصبح ممكنة في هذه المرحلة؛ جرّب واحدة بـ«{ui:stageTry}»."
+            "في الأسفل يعرض «{ui:stageExamplesTitle}» محادثات تصبح ممكنة في هذه المرحلة؛ جرّب واحدة بـ«{ui:stageTry}».",
+            "في «{ui:stageScriptsTitle}» يُشغَّل النص ويتوقف عند جملتك. اختر «{ui:scriptModeShadow}» أو «{ui:scriptModeHint}» أو «{ui:scriptModeHide}»، وقلها بـ🎤 فيظهر لكل كلمة هل سُمعت (حاليًا الكورية واليابانية والإسبانية، المرحلتان 1–2)."
           ],
           "shot": "stage-parts"
         },
@@ -4354,7 +4364,8 @@
           "body": [
             "“{ui:myViewMap}” มีขั้นที่ 1 ถึง 5 แตะตัวเลขเพื่อดูขั้นนั้นก่อน",
             "แตะส่วนใดจะเปิดออก “{ui:partVocab}” มีคำที่เรียนแล้วและสมุดคำศัพท์ “{ui:partGrammar}” มีไวยากรณ์ของขั้น (✓ และ “{ui:stageTry}”) “{ui:partExpression}” มีสำนวนหลักและช่อง “{ui:notebookIdioms}” “{ui:partPronunciation}” มีจุดออกเสียงของขั้นและช่องตัวอักษร·เสียง สำนวนที่ใช้ได้แล้วและฉากที่เก็บไว้จะเติมช่องที่ตรงกัน",
-            "ด้านล่าง “{ui:stageExamplesTitle}” แสดงบทสนทนาที่ทำได้ในขั้นนี้ ลองด้วย “{ui:stageTry}”"
+            "ด้านล่าง “{ui:stageExamplesTitle}” แสดงบทสนทนาที่ทำได้ในขั้นนี้ ลองด้วย “{ui:stageTry}”",
+            "ใน “{ui:stageScriptsTitle}” บทจะเล่นและหยุดที่ประโยคของคุณ เลือก “{ui:scriptModeShadow}” “{ui:scriptModeHint}” หรือ “{ui:scriptModeHide}” แล้วพูดด้วย 🎤 จะเห็นทีละคำว่าได้ยินถูกไหม (ตอนนี้มีเกาหลี ญี่ปุ่น สเปน ขั้น 1–2)"
           ],
           "shot": "stage-parts"
         },
@@ -4784,7 +4795,8 @@
           "body": [
             "“{ui:myViewMap}” में चरण 1 से 5 तक हैं। नंबर दबाकर वह चरण पहले से देखें।",
             "हिस्सा दबाएँ तो खुलता है: “{ui:partVocab}” में सीखे शब्द और शब्दकोश, “{ui:partGrammar}” में उस चरण का व्याकरण (✓ और “{ui:stageTry}”), “{ui:partExpression}” में मुख्य अभिव्यक्तियाँ और “{ui:notebookIdioms}” के खाने, “{ui:partPronunciation}” में उस चरण की उच्चारण बात और अक्षर·ध्वनि के खाने। जो आप इस्तेमाल कर पाते हैं और सहेजे गए दृश्य सही खाने में भरते हैं।",
-            "नीचे “{ui:stageExamplesTitle}” में इस चरण में होने वाली बातचीत दिखती है; “{ui:stageTry}” से आज़माएँ।"
+            "नीचे “{ui:stageExamplesTitle}” में इस चरण में होने वाली बातचीत दिखती है; “{ui:stageTry}” से आज़माएँ।",
+            "“{ui:stageScriptsTitle}” में स्क्रिप्ट चलती है और आपकी पंक्ति पर रुकती है। “{ui:scriptModeShadow}”, “{ui:scriptModeHint}” या “{ui:scriptModeHide}” चुनें, 🎤 से बोलें — हर शब्द दिखेगा कि सही सुना गया या नहीं (अभी कोरियाई, जापानी और स्पेनिश, चरण 1–2)।"
           ],
           "shot": "stage-parts"
         },

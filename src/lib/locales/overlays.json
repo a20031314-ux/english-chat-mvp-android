@@ -659,7 +659,17 @@
     "whatsNewBoardTopicsTitle": "掲示板のテーマ",
     "whatsNewBoardTopicsBody": "学ぶ言語の掲示板を雑談・質問・勉強仲間・ボイスルーム・グループで選んで見られます。投稿の「入る」「参加する」ですぐ行けます。",
     "callRecordsTitle": "通話履歴",
-    "aiTutorBio": "人ではなくAIのチューターです。いつでもすぐ返事をします。学んでいる言語でチャットや通話ができ、書いた文を直したり、言いたいことの言い方を教えたりします。"
+    "aiTutorBio": "人ではなくAIのチューターです。いつでもすぐ返事をします。学んでいる言語でチャットや通話ができ、書いた文を直したり、言いたいことの言い方を教えたりします。",
+    "stageScriptsTitle": "台本で練習",
+    "scriptModeShadow": "まねして言う",
+    "scriptModeHint": "最初の文字だけ",
+    "scriptModeHide": "隠す",
+    "scriptSay": "🎤 話す",
+    "scriptNext": "次へ",
+    "scriptClean": "よく聞き取れました",
+    "scriptDone": "最後までできました",
+    "scriptReveal": "原文を見る",
+    "scriptRestart": "最初から"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1321,7 +1331,17 @@
     "whatsNewBoardTopicsTitle": "留言板主题",
     "whatsNewBoardTopicsBody": "按闲聊、提问、学习伙伴、语音房、群组查看学习语言的留言板。在帖子里点“进入”“加入”直接过去。",
     "callRecordsTitle": "通话记录",
-    "aiTutorBio": "这是 AI 导师，不是真人，随时回复。用你在学的语言聊天或通话；它会改正你写的句子，并告诉你想说的话怎么说。"
+    "aiTutorBio": "这是 AI 导师，不是真人，随时回复。用你在学的语言聊天或通话；它会改正你写的句子，并告诉你想说的话怎么说。",
+    "stageScriptsTitle": "用剧本练习",
+    "scriptModeShadow": "跟着说",
+    "scriptModeHint": "只看首字母",
+    "scriptModeHide": "隐藏",
+    "scriptSay": "🎤 说出来",
+    "scriptNext": "下一句",
+    "scriptClean": "听得很清楚",
+    "scriptDone": "整段练完了",
+    "scriptReveal": "看原句",
+    "scriptRestart": "从头开始"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1985,7 +2005,17 @@
     "whatsNewBoardTopicsTitle": "Chủ đề bảng tin",
     "whatsNewBoardTopicsBody": "Xem bảng tin ngôn ngữ bạn học theo Trò chuyện, Hỏi đáp, Bạn học, Phòng nói hoặc Nhóm. Vào ngay từ bài viết bằng “Vào” hoặc “Tham gia”.",
     "callRecordsTitle": "Lịch sử cuộc gọi",
-    "aiTutorBio": "Đây là gia sư AI, không phải người — trả lời bất cứ lúc nào. Chat hoặc gọi bằng ngôn ngữ bạn học; gia sư sửa câu bạn viết và chỉ cách nói điều bạn muốn."
+    "aiTutorBio": "Đây là gia sư AI, không phải người — trả lời bất cứ lúc nào. Chat hoặc gọi bằng ngôn ngữ bạn học; gia sư sửa câu bạn viết và chỉ cách nói điều bạn muốn.",
+    "stageScriptsTitle": "Luyện theo kịch bản",
+    "scriptModeShadow": "Nói theo",
+    "scriptModeHint": "Chỉ chữ đầu",
+    "scriptModeHide": "Ẩn",
+    "scriptSay": "🎤 Nói",
+    "scriptNext": "Tiếp",
+    "scriptClean": "Nghe rõ rồi",
+    "scriptDone": "Bạn đã xong kịch bản",
+    "scriptReveal": "Xem câu",
+    "scriptRestart": "Từ đầu"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2654,7 +2684,17 @@
     "whatsNewBoardTopicsTitle": "Thèmes du forum",
     "whatsNewBoardTopicsBody": "Parcourez le forum de votre langue par Discussion, Questions, Partenaires, Salons vocaux ou Groupes. Depuis un message, « Entrer » ou « Rejoindre ».",
     "callRecordsTitle": "Historique des appels",
-    "aiTutorBio": "Un tuteur IA, pas une personne : il répond à tout moment. Discutez ou appelez dans la langue que vous apprenez ; il corrige ce que vous écrivez et vous dit comment exprimer ce que vous voulez."
+    "aiTutorBio": "Un tuteur IA, pas une personne : il répond à tout moment. Discutez ou appelez dans la langue que vous apprenez ; il corrige ce que vous écrivez et vous dit comment exprimer ce que vous voulez.",
+    "stageScriptsTitle": "S’entraîner avec un dialogue",
+    "scriptModeShadow": "Répéter",
+    "scriptModeHint": "Premières lettres",
+    "scriptModeHide": "Masqué",
+    "scriptSay": "🎤 Dites-le",
+    "scriptNext": "Suivant",
+    "scriptClean": "Bien entendu",
+    "scriptDone": "Dialogue terminé",
+    "scriptReveal": "Voir la phrase",
+    "scriptRestart": "Depuis le début"
   },
   "it": {
     "archive": "Report",
@@ -3514,7 +3554,17 @@
     "whatsNewBoardTopicsTitle": "Temi della bacheca",
     "whatsNewBoardTopicsBody": "Guarda la bacheca della tua lingua per Chiacchiere, Domande, Compagni, Stanze vocali o Gruppi. Da un post entri con «Entra» o «Unisciti».",
     "callRecordsTitle": "Cronologia chiamate",
-    "aiTutorBio": "Un tutor IA, non una persona: risponde in qualsiasi momento. Chatta o chiama nella lingua che studi; corregge ciò che scrivi e ti dice come dire quello che vuoi."
+    "aiTutorBio": "Un tutor IA, non una persona: risponde in qualsiasi momento. Chatta o chiama nella lingua che studi; corregge ciò che scrivi e ti dice come dire quello che vuoi.",
+    "stageScriptsTitle": "Esercitati con un copione",
+    "scriptModeShadow": "Ripeti",
+    "scriptModeHint": "Prime lettere",
+    "scriptModeHide": "Nascosto",
+    "scriptSay": "🎤 Dillo",
+    "scriptNext": "Avanti",
+    "scriptClean": "Sentito bene",
+    "scriptDone": "Copione finito",
+    "scriptReveal": "Mostra frase",
+    "scriptRestart": "Dall’inizio"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4186,7 +4236,17 @@
     "whatsNewBoardTopicsTitle": "Temas do mural",
     "whatsNewBoardTopicsBody": "Veja o mural do seu idioma por Conversa, Perguntas, Parceiros, Salas de voz ou Grupos. De um post, entre com “Entrar” ou “Participar”.",
     "callRecordsTitle": "Histórico de chamadas",
-    "aiTutorBio": "Um tutor de IA, não uma pessoa: responde a qualquer hora. Conversa ou liga na língua que estás a aprender; corrige o que escreves e diz-te como dizer o que queres."
+    "aiTutorBio": "Um tutor de IA, não uma pessoa: responde a qualquer hora. Conversa ou liga na língua que estás a aprender; corrige o que escreves e diz-te como dizer o que queres.",
+    "stageScriptsTitle": "Praticar com um roteiro",
+    "scriptModeShadow": "Repetir",
+    "scriptModeHint": "Primeiras letras",
+    "scriptModeHide": "Oculto",
+    "scriptSay": "🎤 Fale",
+    "scriptNext": "Próxima",
+    "scriptClean": "Ouvido com clareza",
+    "scriptDone": "Você terminou o roteiro",
+    "scriptReveal": "Ver frase",
+    "scriptRestart": "Do começo"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5044,7 +5104,17 @@
     "whatsNewBoardTopicsTitle": "Темы доски",
     "whatsNewBoardTopicsBody": "Смотрите доску своего языка по темам: Общение, Вопросы, Напарники, Голосовые комнаты, Группы. Из поста — сразу «Войти» или «Вступить».",
     "callRecordsTitle": "История звонков",
-    "aiTutorBio": "Это ИИ-репетитор, а не человек — отвечает в любое время. Переписывайтесь или звоните на изучаемом языке; он исправляет написанное и подсказывает, как сказать то, что вы хотите."
+    "aiTutorBio": "Это ИИ-репетитор, а не человек — отвечает в любое время. Переписывайтесь или звоните на изучаемом языке; он исправляет написанное и подсказывает, как сказать то, что вы хотите.",
+    "stageScriptsTitle": "Практика по сценарию",
+    "scriptModeShadow": "Повторить",
+    "scriptModeHint": "Первые буквы",
+    "scriptModeHide": "Скрыто",
+    "scriptSay": "🎤 Сказать",
+    "scriptNext": "Дальше",
+    "scriptClean": "Хорошо слышно",
+    "scriptDone": "Сценарий пройден",
+    "scriptReveal": "Показать фразу",
+    "scriptRestart": "Сначала"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5712,7 +5782,17 @@
     "whatsNewBoardTopicsTitle": "Topik papan",
     "whatsNewBoardTopicsBody": "Lihat papan bahasamu menurut Ngobrol, Pertanyaan, Teman belajar, Ruang suara, atau Grup. Dari postingan, langsung “Masuk” atau “Gabung”.",
     "callRecordsTitle": "Riwayat panggilan",
-    "aiTutorBio": "Ini tutor AI, bukan orang — menjawab kapan saja. Chat atau telepon dalam bahasa yang kamu pelajari; ia membetulkan tulisanmu dan memberi tahu cara mengatakan maksudmu."
+    "aiTutorBio": "Ini tutor AI, bukan orang — menjawab kapan saja. Chat atau telepon dalam bahasa yang kamu pelajari; ia membetulkan tulisanmu dan memberi tahu cara mengatakan maksudmu.",
+    "stageScriptsTitle": "Latihan dengan naskah",
+    "scriptModeShadow": "Ulangi",
+    "scriptModeHint": "Huruf pertama",
+    "scriptModeHide": "Disembunyikan",
+    "scriptSay": "🎤 Ucapkan",
+    "scriptNext": "Berikutnya",
+    "scriptClean": "Terdengar jelas",
+    "scriptDone": "Naskah selesai",
+    "scriptReveal": "Lihat kalimat",
+    "scriptRestart": "Dari awal"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6374,7 +6454,17 @@
     "whatsNewBoardTopicsTitle": "مواضيع اللوحة",
     "whatsNewBoardTopicsBody": "تصفّح لوحة لغتك حسب دردشة أو أسئلة أو شركاء تعلّم أو غرف صوتية أو مجموعات. ومن المنشور ادخل مباشرة بـ«دخول» أو «انضمام».",
     "callRecordsTitle": "سجل المكالمات",
-    "aiTutorBio": "هذا معلّم ذكاء اصطناعي، وليس شخصًا — يرد في أي وقت. راسله أو اتصل به باللغة التي تتعلمها؛ يصحّح ما تكتبه ويخبرك كيف تقول ما تريد."
+    "aiTutorBio": "هذا معلّم ذكاء اصطناعي، وليس شخصًا — يرد في أي وقت. راسله أو اتصل به باللغة التي تتعلمها؛ يصحّح ما تكتبه ويخبرك كيف تقول ما تريد.",
+    "stageScriptsTitle": "تدرّب بنصّ حواري",
+    "scriptModeShadow": "كرّر بعده",
+    "scriptModeHint": "الحرف الأول فقط",
+    "scriptModeHide": "مخفي",
+    "scriptSay": "🎤 قُلها",
+    "scriptNext": "التالي",
+    "scriptClean": "سُمعت بوضوح",
+    "scriptDone": "أنهيت النص",
+    "scriptReveal": "اعرض الجملة",
+    "scriptRestart": "من البداية"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7036,7 +7126,17 @@
     "whatsNewBoardTopicsTitle": "หัวข้อบอร์ด",
     "whatsNewBoardTopicsBody": "ดูบอร์ดภาษาที่เรียนตามคุยเล่น คำถาม เพื่อนเรียน ห้องเสียง หรือกลุ่ม จากโพสต์เข้าได้ทันทีด้วย “เข้าห้อง” หรือ “เข้าร่วม”",
     "callRecordsTitle": "ประวัติการโทร",
-    "aiTutorBio": "นี่คือติวเตอร์ AI ไม่ใช่คน ตอบได้ทุกเมื่อ แชตหรือโทรด้วยภาษาที่คุณเรียน ติวเตอร์จะแก้ประโยคที่คุณเขียนและบอกวิธีพูดสิ่งที่คุณอยากพูด"
+    "aiTutorBio": "นี่คือติวเตอร์ AI ไม่ใช่คน ตอบได้ทุกเมื่อ แชตหรือโทรด้วยภาษาที่คุณเรียน ติวเตอร์จะแก้ประโยคที่คุณเขียนและบอกวิธีพูดสิ่งที่คุณอยากพูด",
+    "stageScriptsTitle": "ฝึกด้วยบทสนทนา",
+    "scriptModeShadow": "พูดตาม",
+    "scriptModeHint": "แค่ตัวแรก",
+    "scriptModeHide": "ซ่อน",
+    "scriptSay": "🎤 พูด",
+    "scriptNext": "ต่อไป",
+    "scriptClean": "ได้ยินชัดเจน",
+    "scriptDone": "จบบทแล้ว",
+    "scriptReveal": "ดูประโยค",
+    "scriptRestart": "เริ่มใหม่"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7698,6 +7798,16 @@
     "whatsNewBoardTopicsTitle": "बोर्ड के विषय",
     "whatsNewBoardTopicsBody": "अपनी सीखने की भाषा का बोर्ड बातचीत, सवाल, पढ़ाई के साथी, वॉइस रूम या ग्रुप के हिसाब से देखें। पोस्ट से सीधे “शामिल हों” या “ग्रुप में जुड़ें”।",
     "callRecordsTitle": "कॉल इतिहास",
-    "aiTutorBio": "यह AI ट्यूटर है, इंसान नहीं — कभी भी जवाब देता है। सीखी जा रही भाषा में चैट या कॉल करें; यह आपका लिखा सुधारता है और बताता है कि जो कहना है, कैसे कहें।"
+    "aiTutorBio": "यह AI ट्यूटर है, इंसान नहीं — कभी भी जवाब देता है। सीखी जा रही भाषा में चैट या कॉल करें; यह आपका लिखा सुधारता है और बताता है कि जो कहना है, कैसे कहें।",
+    "stageScriptsTitle": "स्क्रिप्ट से अभ्यास",
+    "scriptModeShadow": "दोहराएँ",
+    "scriptModeHint": "सिर्फ़ पहला अक्षर",
+    "scriptModeHide": "छिपा हुआ",
+    "scriptSay": "🎤 बोलें",
+    "scriptNext": "अगला",
+    "scriptClean": "साफ़ सुनाई दिया",
+    "scriptDone": "स्क्रिप्ट पूरी हुई",
+    "scriptReveal": "वाक्य देखें",
+    "scriptRestart": "शुरू से"
   }
 }

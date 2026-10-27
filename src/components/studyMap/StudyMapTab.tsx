@@ -162,7 +162,7 @@ export function StudyMapTab({
       onPart={options.onPart}
       stageDetail={(order) => {
         const stage = stageByOrder(order);
-        return stage ? <StageExamples ui={ui} stage={stage} /> : null;
+        return stage ? <StageExamples ui={ui} stage={stage} locale={locale} /> : null;
       }}
       masteredOf={(order, index) => {
         const stage = stageByOrder(order);

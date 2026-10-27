@@ -179,6 +179,8 @@ One exception, and it matters: if the word it heard sounds the same as the word 
 
 Be plain about scale. A word or two out of a short sentence is normal and worth one specific tip. Everything coming through is worth saying so in one line and nothing more.
 
+The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage} (2026-10-27: a Japanese line got a note in Japanese for a Korean reader). Quote words of the sentence only where you must.
+
 Reply as JSON only, writing in ${input.nativeLanguage}, politely and in one consistent level of politeness:
 {"good": true or false, "note": "<one or two sentences>"}
 

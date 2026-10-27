@@ -268,7 +268,7 @@ export function RoleplayLine({
  * turned into which is arithmetic the learner can check against their own ears,
  * and it stands whether or not the sentence explaining it ever arrives.
  */
-function Attempt({ outcomes, ui }: { outcomes: WordOutcome[]; ui: UICopy }) {
+export function Attempt({ outcomes, ui }: { outcomes: WordOutcome[]; ui: UICopy }) {
   return (
     <div className="mt-3 rounded-xl bg-white/5 p-3">
       <p className="text-[11px] text-neutral-500">{ui.roleplayPracticeHeard}</p>
