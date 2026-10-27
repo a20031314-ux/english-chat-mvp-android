@@ -2645,6 +2645,76 @@ export const ES_FRAMES: Frame[] = [
     ]
   },
   {
+    "id": "es-f2-20",
+    "stage": 2,
+    "fn": "permission",
+    "pattern": "¿Se puede ___?",
+    "core": [
+      "Se puede",
+      "se puede"
+    ],
+    "meaning": {
+      "en": "Asking if something is allowed: Can you / Is it OK to ___?",
+      "ko": "되는지 묻기: ___해도 돼요?"
+    },
+    "grammar": [
+      4
+    ],
+    "expressions": [
+      "se puede"
+    ],
+    "examples": [
+      {
+        "text": "¿Se puede salir antes hoy?",
+        "slot": "salir antes hoy",
+        "cue": {
+          "en": "leave early today",
+          "ko": "오늘 일찍 나가다"
+        },
+        "gloss": {
+          "en": "Is it OK to leave early today?",
+          "ko": "오늘 일찍 나가도 돼요?"
+        }
+      },
+      {
+        "text": "¿Se puede pagar con tarjeta?",
+        "slot": "pagar con tarjeta",
+        "cue": {
+          "en": "pay by card",
+          "ko": "카드로 내다"
+        },
+        "gloss": {
+          "en": "Can you pay by card?",
+          "ko": "카드로 계산돼요?"
+        }
+      },
+      {
+        "text": "¿Se puede entrar con el perro?",
+        "slot": "entrar con el perro",
+        "cue": {
+          "en": "go in with the dog",
+          "ko": "개를 데리고 들어가다"
+        },
+        "gloss": {
+          "en": "Can you go in with the dog?",
+          "ko": "개 데리고 들어가도 돼요?"
+        }
+      },
+      {
+        "text": "¿Se puede sacar fotos aquí?",
+        "slot": "sacar fotos aquí",
+        "cue": {
+          "en": "take photos here",
+          "ko": "여기서 사진을 찍다"
+        },
+        "gloss": {
+          "en": "Is it OK to take photos here?",
+          "ko": "여기서 사진 찍어도 돼요?"
+        }
+      }
+    ]
+  },
+  {
     "id": "es-f3-01",
     "stage": 3,
     "fn": "opinion",

@@ -15,7 +15,8 @@ import { ladderFor } from "@/lib/curriculum/stages";
 import { partHistory, recentMistakes, stageParts, vocabScore, vocabWords, withScripts } from "@/lib/notes/stageParts";
 import { hasScripts } from "@/lib/curriculum/stageScripts";
 import { pickScript } from "@/lib/curriculum/scriptPick";
-import { readPassedScripts } from "@/lib/server/stageScriptStore";
+import { readPassedScripts, readRedoDone } from "@/lib/server/stageScriptStore";
+import { framesToRedo, type RedoItem } from "@/lib/curriculum/frameRedo";
 import { readGrowthRecord } from "@/lib/server/growthStore";
 import { readLearnerProfile } from "@/lib/server/learnerProfileStore";
 import { statusOf } from "@/lib/learner/profile";
@@ -36,6 +37,7 @@ export const maxDuration = 60;
  *     words(어휘 갈래 목록), pronunciationNotes({ [단계]: 앱 언어 한 줄 }), partDays(지금 단계 갈래별 최근 14일) — 2026-10-25 My 네 갈래.
  *   + scripts=1(2.76부터): parts[].scripts { done, total, passed } 그리고 ready에 대본 통과가 더해짐(대본이 있는 언어만),
  *     recommend { stage, id, why } — 오늘의 대본(curriculum/scriptPick.ts).
+ *     redo [{ frame, count, card }] — 14일에 두 번 짚인 틀 다시 연습(curriculum/frameRedo.ts, 두 개까지).
  * GET ?lang=&shot=<화면 id> → { image } — 카드에 붙인 화면.
  * POST { language, edit } — 카드 옮기기·메모·지우기, 칸 더하기·이름 바꾸기·지우기·메모, 제안 칸 받기,
  *   후보 넣기(commit: ids, shots)·버리기(dismiss) → { ok, cards, custom, renames, memos, pending }
@@ -123,6 +125,7 @@ export async function GET(request: NextRequest) {
   const source = ladderFor(language);
   let parts: ReturnType<typeof stageParts>[] = [];
   let partDays: ReturnType<typeof partHistory> | null = null;
+  let redo: RedoItem[] = [];
   let recommend: { stage: number; id: string; why: { kind: "grammar" | "expression"; items: string[] } | { kind: "next" } } | null = null;
   if (source && stages) {
     const constructionIds = source.stages.flatMap((s) => s.grammar.map((g) => g.constructionId)).filter((id): id is string => Boolean(id));
@@ -138,8 +141,9 @@ export async function GET(request: NextRequest) {
     parts = source.stages.map((s) => stageParts({ stage: s, language, ledger, phrases: record.phrases, constructionsMastered: mastered, pronunciation, vocab, mistakes }));
     // 대본이 있는 언어: 다음 단계 = 네 갈래 + 그 단계 대본 모두 통과(2026-10-27). 옛 앱은 scripts=1을 안 보내 예전 조건 그대로.
     if (request.nextUrl.searchParams.get("scripts") === "1" && hasScripts(language)) {
-      const passed = await readPassedScripts(userId, language);
+      const [passed, redoDone] = await Promise.all([readPassedScripts(userId, language), readRedoDone(userId, language)]);
       parts = withScripts(parts, language, passed);
+      redo = framesToRedo([...record.cards, ...record.pending], redoDone);
       // 오늘의 대본(curriculum/scriptPick.ts, 2026-10-28): 지금 단계에서 최근 짚인 문법·아직인 표현·안 한 대본으로 하나.
       const here = source.stages.find((s) => s.order === stage);
       if (here) {
@@ -204,6 +208,7 @@ export async function GET(request: NextRequest) {
     parts,
     partDays,
     ...(recommend ? { recommend } : {}),
+    ...(redo.length ? { redo } : {}),
     words: vocabWords(ledger, language),
     pronunciationNotes,
     // 칸을 고른 표현 수(어휘로 둔 것 포함) — 점검이 "아직"과 "어휘로 둠"을 가른다.

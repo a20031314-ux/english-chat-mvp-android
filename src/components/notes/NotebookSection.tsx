@@ -11,6 +11,7 @@ import { onLocate, takeLocate, type LocateHandoff } from "@/lib/notes/locateHand
 import { PART_IDS, shareOf, type PartId, type StageParts } from "@/lib/notes/stageParts";
 import { sendAppIntent } from "@/lib/appIntents";
 import { StageScripts, type ScriptRecommend } from "@/components/studyMap/StageScripts";
+import type { RedoItem } from "@/lib/curriculum/frameRedo";
 import { scriptForExpressions } from "@/lib/curriculum/stageScripts";
 
 /**
@@ -44,6 +45,8 @@ type Book = {
   partDays?: Record<PartId, number[]> | null;
   /** 오늘의 대본(서버 curriculum/scriptPick.ts, scripts=1). */
   recommend?: ScriptRecommend;
+  /** 틀린 틀 다시 연습(서버 curriculum/frameRedo.ts, scripts=1). */
+  redo?: RedoItem[];
 };
 type PhraseView = { key: string; text: string; state: "met" | "learned" | "mastered"; node: string };
 type Group = NotebookChapter | "mine" | "loose";
@@ -328,6 +331,11 @@ export function NotebookSection({
               expressionStates={Object.fromEntries((row?.expressions ?? []).map((item) => [item.text, item.state]))}
               openFor={openFor}
               recommended={book.recommend && book.recommend.stage === order ? book.recommend : null}
+              redo={order === book.stage ? (book.redo ?? []) : []}
+              onRedoDone={(id) => {
+                setBook((current) => (current ? { ...current, redo: (current.redo ?? []).filter((item) => item.frame !== id) } : current));
+                setReload((n) => n + 1);
+              }}
             />
           )}
           scriptFor={(order, open) => scriptForExpressions(language, order, open)?.id ?? null}

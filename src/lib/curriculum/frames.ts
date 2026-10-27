@@ -9,7 +9,7 @@
 import { ES_FRAMES } from "./frames/es.ts";
 import { JA_FRAMES } from "./frames/ja.ts";
 import { KO_FRAMES } from "./frames/ko.ts";
-import { scriptsFor, type ScriptGloss, type StageScript, type StageScriptLine } from "./stageScripts.ts";
+import { scriptsFor, swapName, usableName, type ScriptGloss, type StageScript, type StageScriptLine } from "./stageScripts.ts";
 
 export type FrameExample = {
   /** 온전한 문장(학습 언어). */
@@ -47,6 +47,41 @@ export function framesFor(language: string, stage: number): Frame[] {
 
 export function frameById(language: string, id: string): Frame | null {
   return (ALL[language] ?? []).find((frame) => frame.id === id) ?? null;
+}
+
+const NAME_CUE = /\s*\(your name\)\s*$/;
+const NAME_CUE_KO = /\s*\(내 이름\)\s*$/;
+
+/** 예문이 학습자 이름 자리인지(뜻 "… (your name)"). */
+export function isNameExample(example: FrameExample): boolean {
+  return NAME_CUE.test(example.cue.en);
+}
+
+/**
+ * 이름 자리 예문(뜻 "루카스 (your name)")을 사용자 닉네임으로 — 대본(personalize)처럼, 한국어는 뒤 조사(이에요/예요)까지 맞춘다.
+ * 닉네임이 없거나 쓸 수 없으면 그대로.
+ */
+export function personalizeFrame(frame: Frame, language: string, nickname: string | null | undefined): Frame {
+  const name = usableName(nickname);
+  if (!name || !frame.examples.some(isNameExample)) return frame;
+  return {
+    ...frame,
+    examples: frame.examples.map((example) => {
+      if (!isNameExample(example)) return example;
+      const en = example.cue.en.replace(NAME_CUE, "");
+      const ko = example.cue.ko?.replace(NAME_CUE_KO, "");
+      const text = swapName(example.text, [example.slot], name, language === "ko");
+      return {
+        text,
+        slot: name,
+        cue: { en: `${name} (your name)`, ...(example.cue.ko !== undefined ? { ko: `${name}(내 이름)` } : {}) },
+        gloss: {
+          en: swapName(example.gloss.en, [en], name, false),
+          ...(example.gloss.ko !== undefined ? { ko: ko ? swapName(example.gloss.ko, [ko], name, true) : example.gloss.ko } : {}),
+        },
+      };
+    }),
+  };
 }
 
 /** 틀 줄의 모양: 빈칸 자리를 지운 문장("写真を撮っ___"이 아니라 틀 그대로 + 빈칸 뜻). */

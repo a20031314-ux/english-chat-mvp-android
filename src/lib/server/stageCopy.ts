@@ -8,6 +8,8 @@ import { completeChat } from "./llm.ts";
 import { getOpenAIClient } from "./openai.ts";
 import { ladderFor, stageText, type Stage, type StageText } from "../curriculum/stages/index.ts";
 import { scriptFor, type ScriptCourse } from "../curriculum/scripts/index.ts";
+import { scriptsFor } from "../curriculum/stageScripts.ts";
+import { framesFor } from "../curriculum/frames.ts";
 
 export type StageLineView = { who: "A" | "B"; text: string; gloss: string };
 export type StageDialogueView = { setting: string; lines: StageLineView[] };
@@ -234,4 +236,60 @@ export async function scriptView(language: string, ui: string, uiName: string, o
   const english = scriptViewFrom(course, "en");
   const texts = await translated(scriptTextsOf(english), ui, uiName, `stagecopy:v1:script2:${language}:${course.version}:${ui}`, onTranslate);
   return (texts && withScriptTexts(english, texts)) ?? english;
+}
+
+/** 단계 대본·틀의 뜻풀이 원문(영어, 겹침 없이 차례대로) — 앱 언어가 영어·한국어가 아니면 이걸 옮긴다. */
+export function scriptGlossTexts(language: string, stage: number): string[] {
+  const out: string[] = [];
+  const seen = new Set<string>();
+  const add = (gloss: { en: string } | undefined) => {
+    const text = gloss?.en?.trim();
+    if (text && !seen.has(text)) {
+      seen.add(text);
+      out.push(text);
+    }
+  };
+  for (const script of scriptsFor(language, stage)) {
+    add(script.setting);
+    add(script.goal);
+    for (const line of script.lines) {
+      add(line.gloss);
+      for (const variant of line.alt ?? []) add(variant.gloss);
+    }
+  }
+  for (const frame of framesFor(language, stage)) {
+    add(frame.meaning);
+    for (const example of frame.examples) {
+      add(example.cue);
+      add(example.gloss);
+    }
+  }
+  return out;
+}
+
+/** 글 묶음이 바뀌면 다시 옮기도록 열쇠에 붙이는 짧은 지문. */
+export function textsFingerprint(texts: string[]): string {
+  let hash = 5381;
+  for (const char of texts.join("\n")) hash = ((hash * 33) ^ char.codePointAt(0)!) >>> 0;
+  return `${texts.length}-${hash.toString(36)}`;
+}
+
+/**
+ * 단계 대본·틀 뜻풀이를 앱 언어로(2026-10-28 "어긋난 점": ja·ar 앱에서 영어로 보였음). 영어 원문 → 옮긴 글.
+ * 영어·한국어 앱은 데이터에 손으로 쓴 글이라 빈 표. 학습 언어 × 단계 × 앱 언어 × 글 지문마다 한 번 옮겨 저장(사람마다가 아님).
+ * 실패하면 빈 표 — 화면은 영어로.
+ */
+export async function scriptGlosses(
+  language: string,
+  stage: number,
+  ui: string,
+  uiName: string,
+  onTranslate?: () => void,
+): Promise<Record<string, string>> {
+  if (ui === "en" || ui === "ko") return {};
+  const source = scriptGlossTexts(language, stage);
+  if (!source.length) return {};
+  const texts = await translated(source, ui, uiName, `stagecopy:v1:scriptgloss:${language}:${stage}:${textsFingerprint(source)}:${ui}`, onTranslate);
+  if (!texts) return {};
+  return Object.fromEntries(source.map((text, index) => [text, texts[index]!]));
 }

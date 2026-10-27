@@ -23,6 +23,7 @@ import {
   placeMessage,
   placeOptions,
   placePrompt,
+  frameOptions,
   readPlacement,
   skeletonFor,
   stageOrderOf,
@@ -34,6 +35,15 @@ import { INTERFACE_LANGUAGE_LABELS, learningLanguageName } from "../learningLang
 import type { LedgerItem } from "../learner/ledger.ts";
 import { ledgerKey, isLedgerText, type LedgerTab } from "../learner/ledger.ts";
 import { recordMeets } from "./ledgerStore.ts";
+import { framesFor, type Frame } from "../curriculum/frames.ts";
+
+/** 교정을 어느 틀에 걸지 고를 때 줄 틀: 지금 단계 다음 단계까지(틀은 1~3단계에만 있음). */
+export function framesForFix(language: string, stage: number): Frame[] {
+  const upTo = Math.min(3, Math.max(1, stage) + 1);
+  const out: Frame[] = [];
+  for (let order = 1; order <= upTo; order += 1) out.push(...framesFor(language, order));
+  return out;
+}
 
 /**
  * 노트(notes/notebook.ts)의 계정 저장소 — 짚은 장면 카드·내가 만든 칸·이름 바꾸기·메모.
@@ -124,7 +134,9 @@ export async function fileFix(input: {
   const now = input.now ?? Date.now();
   try {
     const before = await readNotebook(input.userId, input.language);
-    const skeleton = skeletonFor(input.language, await currentStageOrder(input.userId, input.language), true);
+    const stageOrder = await currentStageOrder(input.userId, input.language);
+    const skeleton = skeletonFor(input.language, stageOrder, true);
+    const frames = framesForFix(input.language, stageOrder);
     const known = new Set([...skeleton.map((node) => node.id), ...before.custom.map((node) => node.id)]);
     let placement = { node: null as string | null, note: input.explanation ?? "" } as ReturnType<typeof readPlacement>;
     const canAsk = input.openai && known.size > 0 && (await getDailyOpUsed(input.userId, "notebookFix")) < DAILY_FILES;
@@ -142,12 +154,13 @@ export async function fileFix(input: {
               target: learningLanguageName(input.language),
               uiName,
               options: placeOptions(skeleton, before.custom),
+              ...(frames.length ? { frames: frameOptions(frames) } : {}),
             }),
           },
           { role: "user", content: placeMessage(input.wrong, input.right, input.explanation ?? "") },
         ],
       });
-      placement = readPlacement(completion.choices[0]?.message?.content ?? "", known, input.explanation ?? "");
+      placement = readPlacement(completion.choices[0]?.message?.content ?? "", known, input.explanation ?? "", new Set(frames.map((frame) => frame.id)));
       // 설명이 앱 언어가 아니면 튜터 설명(앱 언어)으로.
       if (placement.note && !noteFitsUi(placement.note, input.ui)) placement = { ...placement, note: input.explanation ?? "" };
     }
@@ -166,6 +179,7 @@ export async function fileFix(input: {
       day: input.day,
       ...(placement.parts ? { parts: placement.parts } : {}),
       ...(placement.also ? { also: placement.also } : {}),
+      ...(placement.frame ? { frame: placement.frame } : {}),
     }, now);
     if (after !== latest) await saveNotebook(input.userId, input.language, after);
   } catch (error) {

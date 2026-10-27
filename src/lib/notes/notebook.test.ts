@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   noteFitsUi,
+  placePrompt,
   isNodeId,
   phrasePrompt,
   placePhrases,
@@ -219,4 +220,20 @@ test("요소 태그 읽기: 갈래는 아는 이름만, 함께 걸친 칸은 아
   assert.deepEqual(pend.pending[0]?.also, ["g1-te"]);
   const kept = addCard(emptyNotebook(), pend.pending[0]!);
   assert.deepEqual(kept.cards[0]?.parts, ["grammar"]);
+});
+
+
+test("틀 다시 연습: 교정 칸 고르기가 틀 id도 받고 카드에 남김", () => {
+  const prompt = placePrompt({ target: "Japanese", uiName: "Korean", options: "g1-0 — grammar: x", frames: "ja-f1-05 — ___てください (asking)" });
+  assert.ok(prompt.includes("ja-f1-05") && prompt.includes('"frame"'));
+  assert.ok(!placePrompt({ target: "Japanese", uiName: "Korean", options: "g1-0 — grammar: x" }).includes('"frame"'));
+  const known = new Set(["g1-0"]);
+  const frames = new Set(["ja-f1-05"]);
+  assert.equal(readPlacement('{"node":"g1-0","note":"n","frame":"ja-f1-05"}', known, "", frames).frame, "ja-f1-05");
+  assert.equal(readPlacement('{"node":"g1-0","note":"n","frame":"ja-f1-99"}', known, "", frames).frame, undefined);
+  assert.equal(readPlacement('{"node":"g1-0","note":"n","frame":"none"}', known, "", frames).frame, undefined);
+  const card = { id: "0123456789abcdef", wrong: "たべるください", right: "たべてください", note: "n", node: null, where: "chat" as const, at: 1, frame: "ja-f1-05" };
+  assert.equal(addPending(emptyNotebook(), card, 2).pending[0]!.frame, "ja-f1-05");
+  assert.equal(addCard(emptyNotebook(), card).cards[0]!.frame, "ja-f1-05");
+  assert.equal(addCard(emptyNotebook(), { ...card, frame: "bad id" }).cards[0]!.frame, undefined);
 });

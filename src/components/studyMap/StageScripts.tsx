@@ -2,7 +2,9 @@
 
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
-import { StageFrames } from "@/components/studyMap/StageFrames";
+import { FrameRedoCards, StageFrames } from "@/components/studyMap/StageFrames";
+import type { RedoItem } from "@/lib/curriculum/frameRedo";
+import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { Attempt } from "@/components/RoleplayReview";
 import { sayLine } from "@/components/RoleplayOwnLine";
 import { TTSButton } from "@/components/TTSButton";
@@ -74,6 +76,8 @@ export function StageScripts({
   expressionStates = {},
   openFor = null,
   recommended = null,
+  redo = [],
+  onRedoDone,
 }: {
   ui: UICopy;
   locale: string;
@@ -88,9 +92,14 @@ export function StageScripts({
   openFor?: { id: string; at: number } | null;
   /** 이 단계의 오늘의 대본(맨 위 카드). */
   recommended?: ScriptRecommend | null;
+  /** 틀린 틀 다시 연습(/api/notebook redo, 지금 단계에서만 넘김). */
+  redo?: readonly RedoItem[];
+  onRedoDone?: (frameId: string) => void;
 }) {
   const scripts = scriptsFor(language, stage);
   const [open, setOpen] = useState<StageScript | null>(null);
+  // 영어·한국어 밖 앱 언어: 뜻풀이를 옮긴 표를 받아 둔다(받으면 다시 그림).
+  useStageGlosses(language, stage, locale);
   // 대본의 학습자 이름 자리에 로그인한 사용자의 닉네임(없으면 대본 이름 그대로).
   const nickname = useSyncExternalStore(subscribeSession, () => readCachedAccount()?.profile.nickname ?? null, () => null);
   // 같은 대본이면 같은 객체(재생 effect가 다시 돌지 않게).
@@ -150,6 +159,17 @@ export function StageScripts({
         : ui.scriptWhyNext;
   return (
     <section className="mt-3 flex flex-col gap-2">
+      {redo.length ? (
+        <FrameRedoCards
+          ui={ui}
+          locale={locale}
+          language={language}
+          redo={redo}
+          passed={passed}
+          onDone={(id) => onRedoDone?.(id)}
+          onOpenScript={setOpen}
+        />
+      ) : null}
       {picked ? (
         <button
           type="button"
@@ -186,7 +206,7 @@ export function StageScripts({
           {extras.map(row)}
         </>
       ) : null}
-      <StageFrames ui={ui} locale={locale} language={language} stage={stage} passed={passed} onPassed={onPassed} onOpenScript={setOpen} />
+      <StageFrames ui={ui} locale={locale} language={language} stage={stage} passed={passed} redo={redo} onPassed={onPassed} onOpenScript={setOpen} />
       {open ? (
         <ScriptPlayer
           ui={ui}

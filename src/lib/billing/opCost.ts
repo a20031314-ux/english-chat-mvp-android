@@ -96,7 +96,8 @@ export const OP_COST: Record<string, OpCost> = {
   curriculumMissions: llm("curriculum"),
   learnerPick: llm("curriculum"),
   notesPlace: llm("notes"),
-  notebookFix: estimated("notes", { input: 1500, output: 110 }),
+  // 틀 목록(1~3단계 최대 약 60줄, 2026-10-28 "다시 연습")이 더해져 약 800토큰 늘었다.
+  notebookFix: estimated("notes", { input: 2300, output: 120 }),
   // 칸 목록(지금·뒤 단계 문법 + 고정 칸 약 60줄) + 표현 30개, 답은 30줄 JSON(2026-10-24 어림).
   notebookPhrases: estimated("notes", { input: 2700, output: 900 }),
   // 칸 목록 + 고른 부분·문장, 답은 칸 id + 한 줄 설명(2026-10-24 어림).

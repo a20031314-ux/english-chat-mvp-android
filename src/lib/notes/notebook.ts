@@ -87,6 +87,8 @@ export type FixCard = {
   parts?: PartId[];
   /** node 밖에 이 짚임이 함께 걸친 문법 칸(2개까지). */
   also?: string[];
+  /** 이 짚임이 걸친 문장 틀 id(curriculum/frames.ts, 2026-10-28 "다시 연습") — 같은 틀이 14일에 두 번이면 다시 권한다. */
+  frame?: string;
 };
 
 /** question = 궁금했던 장면(2026-10-24): wrong 자리에 그 문장(사람 대화면 빈 칸), right 자리에 고른 부분. */
@@ -222,7 +224,17 @@ export function placeOptions(skeleton: SkeletonNode[], custom: CustomNode[]): st
   ].join("\n");
 }
 
-export function placePrompt(input: { target: string; uiName: string; options: string }): string {
+/** 틀 id 모양(curriculum/frames.ts "ko-f1-01"). */
+export function isFrameId(value: unknown): value is string {
+  return typeof value === "string" && /^[a-z]{2}-f\d-\d{2}$/.test(value);
+}
+
+/** 모델에게 줄 틀 목록(id — 틀). */
+export function frameOptions(frames: ReadonlyArray<{ id: string; pattern: string; meaning: { en: string } }>): string {
+  return frames.map((frame) => `${frame.id} — ${frame.pattern} (${frame.meaning.en})`).join("\n");
+}
+
+export function placePrompt(input: { target: string; uiName: string; options: string; frames?: string }): string {
   return `A learner of ${input.target} wrote a line and a tutor corrected it. File the correction into the learner's notebook.
 
 Sections (id — what it is):
@@ -235,18 +247,22 @@ ${input.options}
 - "parts": every part of the language this correction is about — "grammar" (forms, endings, particles, word order, agreement), "vocab" (a wrong or missing word, a word's meaning or spelling), "expression" (a set phrase, a word pairing, politeness or what people actually say), "pronunciation" (only when the change is about how it sounds, e.g. a misheard word in a call). One line can be about several.
 - "also": other grammar section ids (not "node") this same correction clearly also involves — at most two; [] when none.
 - Never repeat or translate the learner's whole line.
+${input.frames ? `- "frame": the one sentence pattern below that this correction is about — the learner tried to use it and got its form wrong, or the corrected line uses it where the learner said something that does not work. "none" when the change is only a word, a spelling or something no pattern covers. A pattern only counts when the corrected part is in it.
 
-Return only json: {"node":"<id or none>","suggest":"...","note":"...","kind":"mistake or typo","parts":["grammar"],"also":[]}`;
+Sentence patterns (id — pattern, ___ is the part that changes):
+${input.frames}
+` : ""}
+Return only json: {"node":"<id or none>","suggest":"...","note":"...","kind":"mistake or typo","parts":["grammar"],"also":[]${input.frames ? ',"frame":"<id or none>"' : ""}}`;
 }
 
 export function placeMessage(wrong: string, right: string, explanation: string): string {
   return JSON.stringify({ learner: wrong, corrected: right, ...(explanation ? { tutorNote: explanation.slice(0, 300) } : {}) });
 }
 
-export type Placement = { node: string | null; suggest?: string; note: string; kind?: FixKind; parts?: PartId[]; also?: string[] };
+export type Placement = { node: string | null; suggest?: string; note: string; kind?: FixKind; parts?: PartId[]; also?: string[]; frame?: string };
 
 /** 모델 답 읽기. 모르는 칸은 null, 설명이 없으면 튜터 설명(있으면)으로. */
-export function readPlacement(raw: string, known: ReadonlySet<string>, fallbackNote: string): Placement {
+export function readPlacement(raw: string, known: ReadonlySet<string>, fallbackNote: string, frames: ReadonlySet<string> = new Set()): Placement {
   let data: Record<string, unknown> = {};
   try {
     const parsed = JSON.parse(raw);
@@ -260,7 +276,8 @@ export function readPlacement(raw: string, known: ReadonlySet<string>, fallbackN
   const kind = data.kind === "typo" ? "typo" : data.kind === "mistake" ? "mistake" : undefined;
   const parts = readParts(data.parts);
   const also = readAlso(data.also, known, node);
-  return { node, ...(suggest ? { suggest } : {}), note, ...(kind ? { kind } : {}), ...(parts.length ? { parts } : {}), ...(also.length ? { also } : {}) };
+  const frame = isFrameId(data.frame) && frames.has(data.frame) ? data.frame : null;
+  return { node, ...(suggest ? { suggest } : {}), note, ...(kind ? { kind } : {}), ...(parts.length ? { parts } : {}), ...(also.length ? { also } : {}), ...(frame ? { frame } : {}) };
 }
 
 /** 모델이 준 갈래 태그(모르는 이름은 버림, 겹치면 하나). */
@@ -489,6 +506,7 @@ export function addCard(record: NotebookRecord, card: FixCard): NotebookRecord {
     ...(card.shotId && isCardId(card.shotId) ? { shotId: card.shotId } : {}),
     ...(card.parts?.length ? { parts: readParts(card.parts) } : {}),
     ...(cleanAlso(card.also, card.node ?? null).length ? { also: cleanAlso(card.also, card.node ?? null) } : {}),
+    ...(isFrameId(card.frame) ? { frame: card.frame } : {}),
   };
   const cards = [...record.cards, next].sort((a, b) => b.at - a.at).slice(0, MAX_CARDS);
   return { ...record, cards };
@@ -531,6 +549,7 @@ export function addPending(record: NotebookRecord, card: FixCard, now = Date.now
     ...(card.day && /^\d{4}-\d{2}-\d{2}$/.test(card.day) ? { day: card.day } : {}),
     ...(card.parts?.length ? { parts: readParts(card.parts) } : {}),
     ...(cleanAlso(card.also, card.node ?? null).length ? { also: cleanAlso(card.also, card.node ?? null) } : {}),
+    ...(isFrameId(card.frame) ? { frame: card.frame } : {}),
   };
   const pending = [next, ...base.pending].sort((a, b) => b.at - a.at).slice(0, MAX_PENDING);
   return { ...base, pending };

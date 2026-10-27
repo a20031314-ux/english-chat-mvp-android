@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { blankOf, frameById, frameModes, framesFor, framesOfScript, scriptsWithFrame } from "./frames.ts";
+import { blankOf, frameById, frameModes, framesFor, framesOfScript, isNameExample, personalizeFrame, scriptsWithFrame } from "./frames.ts";
 import { FUNCTIONS, functionById } from "./functions.ts";
 import { scriptsFor } from "./stageScripts.ts";
 import { ladderFor } from "./stages/index.ts";
@@ -91,4 +91,18 @@ test("틀 화면 방식: 1~2단계 따라·틀만, 3단계부터 내 말로", ()
   assert.deepEqual(frameModes(1), ["shadow", "blank"]);
   assert.deepEqual(frameModes(2), ["shadow", "blank"]);
   assert.deepEqual(frameModes(3), ["shadow", "blank", "own"]);
+});
+
+test("이름 자리 예문은 닉네임으로(한국어 조사까지)", () => {
+  const ko = framesFor("ko", 1).find((frame) => frame.examples.some(isNameExample))!;
+  const mine = personalizeFrame(ko, "ko", "민준");
+  const example = mine.examples.find(isNameExample)!;
+  assert.ok(example.text.includes("민준이에요"), example.text);
+  assert.equal(example.slot, "민준");
+  assert.ok(example.cue.en.startsWith("민준"));
+  assert.ok(!blankOf(example).includes("민준"));
+  assert.ok(personalizeFrame(ko, "ko", "지아").examples.find(isNameExample)!.text.includes("지아예요"));
+  assert.equal(personalizeFrame(ko, "ko", ""), ko);
+  const ja = framesFor("ja", 1).find((frame) => frame.examples.some(isNameExample))!;
+  assert.ok(personalizeFrame(ja, "ja", "Omar").examples.find(isNameExample)!.text.includes("Omar"));
 });

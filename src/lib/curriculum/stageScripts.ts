@@ -190,7 +190,21 @@ export function scriptVoice(who: StageScriptLine["who"], text: string, learnerNa
 
 /** 앱 언어로 된 뜻. 한국어 앱은 ko(없으면 en), 나머지는 지금 en. */
 export function glossFor(gloss: ScriptGloss, uiLanguage: string): string {
-  return uiLanguage === "ko" ? (gloss.ko ?? gloss.en) : gloss.en;
+  if (uiLanguage === "ko") return gloss.ko ?? gloss.en;
+  if (uiLanguage === "en") return gloss.en;
+  return TRANSLATED.get(uiLanguage)?.get(gloss.en.trim()) ?? gloss.en;
+}
+
+/**
+ * 영어·한국어 밖 앱 언어의 뜻풀이(2026-10-28): 서버가 처음 한 번 옮겨 저장한 표(/api/curriculum/scripts?glosses=1, server/stageCopy.ts)를
+ * 앱이 받아 여기에 둔다 — glossFor가 찾고, 없으면 영어. 닉네임으로 바꾼 줄은 원문이 달라 영어로 남는다.
+ */
+const TRANSLATED = new Map<string, Map<string, string>>();
+
+export function rememberGlosses(uiLanguage: string, glosses: Readonly<Record<string, string>>): void {
+  const map = TRANSLATED.get(uiLanguage) ?? new Map<string, string>();
+  for (const [en, text] of Object.entries(glosses)) if (typeof text === "string" && text) map.set(en, text);
+  TRANSLATED.set(uiLanguage, map);
 }
 
 /** 상황 대본인지(다음 단계 조건에 드는 것). 표현 대본은 표현 갈래를 채우는 연습. */

@@ -688,7 +688,9 @@
     "scriptWhyNext": "まだやっていない台本",
     "framesTitle": "型で言いかえ",
     "frameModeBlank": "型だけ",
-    "frameScriptsTitle": "この型が出てくる台本"
+    "frameScriptsTitle": "この型が出てくる台本",
+    "frameRedo": "もう一度練習",
+    "frameRedoScript": "台本では"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1379,7 +1381,9 @@
     "scriptWhyNext": "还没做过的剧本",
     "framesTitle": "句型替换练习",
     "frameModeBlank": "只看句型",
-    "frameScriptsTitle": "用到这个句型的剧本"
+    "frameScriptsTitle": "用到这个句型的剧本",
+    "frameRedo": "再练一次",
+    "frameRedoScript": "剧本里"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2072,7 +2076,9 @@
     "scriptWhyNext": "Kịch bản bạn chưa làm",
     "framesTitle": "Đổi mẫu câu",
     "frameModeBlank": "Chỉ mẫu câu",
-    "frameScriptsTitle": "Kịch bản có mẫu câu này"
+    "frameScriptsTitle": "Kịch bản có mẫu câu này",
+    "frameRedo": "Luyện lại",
+    "frameRedoScript": "Trong kịch bản"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2770,7 +2776,9 @@
     "scriptWhyNext": "Un dialogue pas encore fait",
     "framesTitle": "Changer la structure",
     "frameModeBlank": "Structure seule",
-    "frameScriptsTitle": "Dialogues avec cette structure"
+    "frameScriptsTitle": "Dialogues avec cette structure",
+    "frameRedo": "Retravailler",
+    "frameRedoScript": "Dans un dialogue"
   },
   "it": {
     "archive": "Report",
@@ -3659,7 +3667,9 @@
     "scriptWhyNext": "Un copione non ancora fatto",
     "framesTitle": "Cambia lo schema",
     "frameModeBlank": "Solo lo schema",
-    "frameScriptsTitle": "Copioni con questo schema"
+    "frameScriptsTitle": "Copioni con questo schema",
+    "frameRedo": "Riprova",
+    "frameRedoScript": "Nel copione"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4360,7 +4370,9 @@
     "scriptWhyNext": "Um roteiro que você ainda não fez",
     "framesTitle": "Troque a estrutura",
     "frameModeBlank": "Só a estrutura",
-    "frameScriptsTitle": "Roteiros com esta estrutura"
+    "frameScriptsTitle": "Roteiros com esta estrutura",
+    "frameRedo": "Praticar de novo",
+    "frameRedoScript": "No roteiro"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5247,7 +5259,9 @@
     "scriptWhyNext": "Сценарий, который вы ещё не прошли",
     "framesTitle": "Подставь в шаблон",
     "frameModeBlank": "Только шаблон",
-    "frameScriptsTitle": "Сценарии с этим шаблоном"
+    "frameScriptsTitle": "Сценарии с этим шаблоном",
+    "frameRedo": "Повторить",
+    "frameRedoScript": "В сценарии"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5944,7 +5958,9 @@
     "scriptWhyNext": "Naskah yang belum kamu kerjakan",
     "framesTitle": "Ganti pola kalimat",
     "frameModeBlank": "Pola saja",
-    "frameScriptsTitle": "Naskah dengan pola ini"
+    "frameScriptsTitle": "Naskah dengan pola ini",
+    "frameRedo": "Latih lagi",
+    "frameRedoScript": "Di naskah"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6635,7 +6651,9 @@
     "scriptWhyNext": "نص لم تجربه بعد",
     "framesTitle": "بدّل في القالب",
     "frameModeBlank": "القالب فقط",
-    "frameScriptsTitle": "نصوص فيها هذا القالب"
+    "frameScriptsTitle": "نصوص فيها هذا القالب",
+    "frameRedo": "تدرّب مجددًا",
+    "frameRedoScript": "في النص"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7326,7 +7344,9 @@
     "scriptWhyNext": "บทที่ยังไม่ได้ทำ",
     "framesTitle": "เปลี่ยนคำในแพตเทิร์น",
     "frameModeBlank": "แพตเทิร์นอย่างเดียว",
-    "frameScriptsTitle": "บทที่มีแพตเทิร์นนี้"
+    "frameScriptsTitle": "บทที่มีแพตเทิร์นนี้",
+    "frameRedo": "ฝึกอีกครั้ง",
+    "frameRedoScript": "ในบทสนทนา"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8017,6 +8037,8 @@
     "scriptWhyNext": "जो स्क्रिप्ट अभी नहीं की",
     "framesTitle": "ढाँचे में बदलकर बोलें",
     "frameModeBlank": "सिर्फ़ ढाँचा",
-    "frameScriptsTitle": "इस ढाँचे वाली स्क्रिप्ट"
+    "frameScriptsTitle": "इस ढाँचे वाली स्क्रिप्ट",
+    "frameRedo": "फिर से अभ्यास",
+    "frameRedoScript": "स्क्रिप्ट में"
   }
 }

@@ -1168,7 +1168,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "It depends. Is it possible to leave early today?",
           "ko": "상황 봐서. 오늘 일찍 나가도 되나?"
-        }
+        },
+        "frames": [
+          "es-f2-20"
+        ]
       },
       {
         "who": "them",
