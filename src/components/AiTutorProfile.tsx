@@ -10,15 +10,26 @@ import { chatPartnerForLanguage } from "@/lib/chatPartner";
  * AI 튜터도 사람 중 하나(2026-10-27 사용자 "AI 튜터를 아예 사람들과 통합해줘. 프로필 탭에 가면 AI 튜터가 있고 대화를 걸 수 있는 흐름으로").
  * 사람 탭 목록 맨 위에 사람 카드처럼 한 줄, 누르면 프로필 시트 — 💬 메시지(AI 대화) · 📞 통화 · 통화 기록.
  * 이름·국기는 학습 언어별 튜터(lib/chatPartner.ts — AI 대화 머리와 같은 사람). 로그인 없이도 보인다(AI 기능은 로그인 없이).
+ * 소개 글 `aiTutorBio` — 사람이 아니라 AI 튜터임과 할 수 있는 것(사용자가 이 화면에 넣으라고 함, DESIGN.md "안내 글" 예외).
+ */
+/**
+ * AI 튜터 그림(2026-10-27 사용자 "AI 아이콘으로 이미지와 프로필을 만들어 넣어줘. 사람처럼 만들 필요는 없고"):
+ * 사람 얼굴 대신 말풍선 + 반짝임. 색은 토큰(info)에서 — currentColor.
  */
 export function AiAvatar({ size = 60 }: { size?: number }) {
   return (
     <span
       aria-hidden
       style={{ width: size, height: size }}
-      className="flex shrink-0 items-center justify-center rounded-full border border-info/40 bg-info/15 text-caption font-semibold text-info"
+      className="flex shrink-0 items-center justify-center rounded-full border border-info/40 bg-info/15 text-info"
     >
-      AI
+      <svg viewBox="0 0 48 48" width={Math.round(size * 0.6)} height={Math.round(size * 0.6)} fill="none" stroke="currentColor" strokeWidth={2.6} strokeLinecap="round" strokeLinejoin="round">
+        {/* 말풍선 */}
+        <path d="M9 12.5A5.5 5.5 0 0 1 14.5 7h19A5.5 5.5 0 0 1 39 12.5v13A5.5 5.5 0 0 1 33.5 31H22l-8 7v-7h0.5A5.5 5.5 0 0 1 9 25.5z" />
+        {/* 반짝임(큰 별 + 작은 별) */}
+        <path d="M23 12.5l1.6 4.2 4.2 1.6-4.2 1.6L23 24.1l-1.6-4.2-4.2-1.6 4.2-1.6z" fill="currentColor" stroke="none" />
+        <path d="M31.5 21.5l0.8 2 2 0.8-2 0.8-0.8 2-0.8-2-2-0.8 2-0.8z" fill="currentColor" stroke="none" />
+      </svg>
     </span>
   );
 }
@@ -49,6 +60,7 @@ export function AiTutorPerson({ ui, targetLanguage, canCall, messageLabel }: { u
           <button type="button" onClick={() => setOpen(true)} className="block w-full text-start">
             <TutorName targetLanguage={targetLanguage} className="text-body font-semibold text-white" />
             <span className="mt-1 inline-block rounded-full bg-info/15 px-2 py-0.5 text-meta text-info">{ui.talkAiTutor}</span>
+            <p className="mt-1.5 line-clamp-2 text-note leading-relaxed text-slate-300">{ui.aiTutorBio}</p>
           </button>
           <div className="mt-1.5 flex items-center justify-end gap-2">
             {canCall ? (
@@ -108,6 +120,7 @@ export function AiTutorSheet({
               ×
             </button>
           </div>
+          <p className="mt-4 text-body leading-relaxed text-slate-200">{ui.aiTutorBio}</p>
           <div className="mt-5 grid grid-cols-2 gap-2">
             <button type="button" onClick={go(openChat)} className="rounded-xl bg-violet-500 px-3 py-2.5 text-body font-medium text-white">
               💬 {messageLabel}

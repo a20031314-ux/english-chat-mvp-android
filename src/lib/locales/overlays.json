@@ -657,7 +657,8 @@
     "whatsNewStagePartsBody": "Myが語彙・文法・表現・発音の4つに分かれました。いちばん足りない項目をすぐ練習でき、4つとも70%を超えたら「次の段階へ」。段階ごとにできる会話の例もあります。",
     "whatsNewBoardTopicsTitle": "掲示板のテーマ",
     "whatsNewBoardTopicsBody": "学ぶ言語の掲示板を雑談・質問・勉強仲間・ボイスルーム・グループで選んで見られます。投稿の「入る」「参加する」ですぐ行けます。",
-    "callRecordsTitle": "通話履歴"
+    "callRecordsTitle": "通話履歴",
+    "aiTutorBio": "人ではなくAIのチューターです。いつでもすぐ返事をします。学んでいる言語でチャットや通話ができ、書いた文を直したり、言いたいことの言い方を教えたりします。"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1317,7 +1318,8 @@
     "whatsNewStagePartsBody": "My 现在把每个阶段分成词汇、语法、表达、发音四项。最薄弱的一项可以马上练习，四项都超过70%就能“进入下一阶段”。每个阶段还有能进行的对话示例。",
     "whatsNewBoardTopicsTitle": "留言板主题",
     "whatsNewBoardTopicsBody": "按闲聊、提问、学习伙伴、语音房、群组查看学习语言的留言板。在帖子里点“进入”“加入”直接过去。",
-    "callRecordsTitle": "通话记录"
+    "callRecordsTitle": "通话记录",
+    "aiTutorBio": "这是 AI 导师，不是真人，随时回复。用你在学的语言聊天或通话；它会改正你写的句子，并告诉你想说的话怎么说。"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1979,7 +1981,8 @@
     "whatsNewStagePartsBody": "My giờ chia mỗi giai đoạn thành Từ vựng, Ngữ pháp, Cách diễn đạt và Phát âm. Luyện ngay phần yếu nhất; khi cả bốn vượt 70% là “Giai đoạn tiếp theo”. Mỗi giai đoạn có ví dụ hội thoại bạn làm được.",
     "whatsNewBoardTopicsTitle": "Chủ đề bảng tin",
     "whatsNewBoardTopicsBody": "Xem bảng tin ngôn ngữ bạn học theo Trò chuyện, Hỏi đáp, Bạn học, Phòng nói hoặc Nhóm. Vào ngay từ bài viết bằng “Vào” hoặc “Tham gia”.",
-    "callRecordsTitle": "Lịch sử cuộc gọi"
+    "callRecordsTitle": "Lịch sử cuộc gọi",
+    "aiTutorBio": "Đây là gia sư AI, không phải người — trả lời bất cứ lúc nào. Chat hoặc gọi bằng ngôn ngữ bạn học; gia sư sửa câu bạn viết và chỉ cách nói điều bạn muốn."
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2646,7 +2649,8 @@
     "whatsNewStagePartsBody": "Mon espace divise chaque étape en Vocabulaire, Grammaire, Expressions et Prononciation. Entraînez tout de suite la partie la plus faible ; quand les quatre dépassent 70 %, « Étape suivante ». Chaque étape montre des conversations possibles.",
     "whatsNewBoardTopicsTitle": "Thèmes du forum",
     "whatsNewBoardTopicsBody": "Parcourez le forum de votre langue par Discussion, Questions, Partenaires, Salons vocaux ou Groupes. Depuis un message, « Entrer » ou « Rejoindre ».",
-    "callRecordsTitle": "Historique des appels"
+    "callRecordsTitle": "Historique des appels",
+    "aiTutorBio": "Un tuteur IA, pas une personne : il répond à tout moment. Discutez ou appelez dans la langue que vous apprenez ; il corrige ce que vous écrivez et vous dit comment exprimer ce que vous voulez."
   },
   "it": {
     "archive": "Report",
@@ -3504,7 +3508,8 @@
     "whatsNewStagePartsBody": "Il mio spazio divide ogni fase in Vocabolario, Grammatica, Espressioni e Pronuncia. Esercita subito la parte più debole; quando tutte e quattro superano il 70%, «Fase successiva». Ogni fase mostra conversazioni che puoi fare.",
     "whatsNewBoardTopicsTitle": "Temi della bacheca",
     "whatsNewBoardTopicsBody": "Guarda la bacheca della tua lingua per Chiacchiere, Domande, Compagni, Stanze vocali o Gruppi. Da un post entri con «Entra» o «Unisciti».",
-    "callRecordsTitle": "Cronologia chiamate"
+    "callRecordsTitle": "Cronologia chiamate",
+    "aiTutorBio": "Un tutor IA, non una persona: risponde in qualsiasi momento. Chatta o chiama nella lingua che studi; corregge ciò che scrivi e ti dice come dire quello che vuoi."
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4174,7 +4179,8 @@
     "whatsNewStagePartsBody": "Meu espaço divide cada etapa em Vocabulário, Gramática, Expressões e Pronúncia. Pratique na hora a parte mais fraca; quando as quatro passam de 70%, “Próxima etapa”. Cada etapa mostra conversas que você já consegue ter.",
     "whatsNewBoardTopicsTitle": "Temas do mural",
     "whatsNewBoardTopicsBody": "Veja o mural do seu idioma por Conversa, Perguntas, Parceiros, Salas de voz ou Grupos. De um post, entre com “Entrar” ou “Participar”.",
-    "callRecordsTitle": "Histórico de chamadas"
+    "callRecordsTitle": "Histórico de chamadas",
+    "aiTutorBio": "Um tutor de IA, não uma pessoa: responde a qualquer hora. Conversa ou liga na língua que estás a aprender; corrige o que escreves e diz-te como dizer o que queres."
   },
   "ru": {
     "archive": "Отчёты",
@@ -5030,7 +5036,8 @@
     "whatsNewStagePartsBody": "В «Моём» каждый этап теперь делится на Словарь, Грамматику, Выражения и Произношение. Тренируйте самую слабую часть сразу; когда все четыре больше 70%, «Следующий этап». На каждом этапе есть примеры разговоров.",
     "whatsNewBoardTopicsTitle": "Темы доски",
     "whatsNewBoardTopicsBody": "Смотрите доску своего языка по темам: Общение, Вопросы, Напарники, Голосовые комнаты, Группы. Из поста — сразу «Войти» или «Вступить».",
-    "callRecordsTitle": "История звонков"
+    "callRecordsTitle": "История звонков",
+    "aiTutorBio": "Это ИИ-репетитор, а не человек — отвечает в любое время. Переписывайтесь или звоните на изучаемом языке; он исправляет написанное и подсказывает, как сказать то, что вы хотите."
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5696,7 +5703,8 @@
     "whatsNewStagePartsBody": "My kini membagi tiap tahap menjadi Kosakata, Tata bahasa, Ungkapan, dan Pelafalan. Latih bagian terlemah langsung; saat keempatnya lewat 70%, “Tahap berikutnya”. Tiap tahap punya contoh percakapan yang bisa kamu lakukan.",
     "whatsNewBoardTopicsTitle": "Topik papan",
     "whatsNewBoardTopicsBody": "Lihat papan bahasamu menurut Ngobrol, Pertanyaan, Teman belajar, Ruang suara, atau Grup. Dari postingan, langsung “Masuk” atau “Gabung”.",
-    "callRecordsTitle": "Riwayat panggilan"
+    "callRecordsTitle": "Riwayat panggilan",
+    "aiTutorBio": "Ini tutor AI, bukan orang — menjawab kapan saja. Chat atau telepon dalam bahasa yang kamu pelajari; ia membetulkan tulisanmu dan memberi tahu cara mengatakan maksudmu."
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6356,7 +6364,8 @@
     "whatsNewStagePartsBody": "صار «My» يقسم كل مرحلة إلى المفردات والقواعد والتعابير والنطق. تدرّب فورًا على الجزء الأضعف، وعندما تتجاوز الأربعة 70% اضغط «المرحلة التالية». في كل مرحلة أمثلة لمحادثات تستطيع إجراءها.",
     "whatsNewBoardTopicsTitle": "مواضيع اللوحة",
     "whatsNewBoardTopicsBody": "تصفّح لوحة لغتك حسب دردشة أو أسئلة أو شركاء تعلّم أو غرف صوتية أو مجموعات. ومن المنشور ادخل مباشرة بـ«دخول» أو «انضمام».",
-    "callRecordsTitle": "سجل المكالمات"
+    "callRecordsTitle": "سجل المكالمات",
+    "aiTutorBio": "هذا معلّم ذكاء اصطناعي، وليس شخصًا — يرد في أي وقت. راسله أو اتصل به باللغة التي تتعلمها؛ يصحّح ما تكتبه ويخبرك كيف تقول ما تريد."
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7016,7 +7025,8 @@
     "whatsNewStagePartsBody": "My แบ่งแต่ละขั้นเป็นคำศัพท์ ไวยากรณ์ สำนวน และการออกเสียง ฝึกส่วนที่อ่อนที่สุดได้ทันที เมื่อทั้งสี่เกิน 70% กด “ไปขั้นถัดไป” แต่ละขั้นมีตัวอย่างบทสนทนาที่ทำได้",
     "whatsNewBoardTopicsTitle": "หัวข้อบอร์ด",
     "whatsNewBoardTopicsBody": "ดูบอร์ดภาษาที่เรียนตามคุยเล่น คำถาม เพื่อนเรียน ห้องเสียง หรือกลุ่ม จากโพสต์เข้าได้ทันทีด้วย “เข้าห้อง” หรือ “เข้าร่วม”",
-    "callRecordsTitle": "ประวัติการโทร"
+    "callRecordsTitle": "ประวัติการโทร",
+    "aiTutorBio": "นี่คือติวเตอร์ AI ไม่ใช่คน ตอบได้ทุกเมื่อ แชตหรือโทรด้วยภาษาที่คุณเรียน ติวเตอร์จะแก้ประโยคที่คุณเขียนและบอกวิธีพูดสิ่งที่คุณอยากพูด"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7676,6 +7686,7 @@
     "whatsNewStagePartsBody": "My अब हर चरण को शब्दावली, व्याकरण, अभिव्यक्तियाँ और उच्चारण में बाँटता है। सबसे कमज़ोर हिस्से का तुरंत अभ्यास करें; चारों 70% पार करें तो “अगला चरण”। हर चरण में होने वाली बातचीत के उदाहरण हैं।",
     "whatsNewBoardTopicsTitle": "बोर्ड के विषय",
     "whatsNewBoardTopicsBody": "अपनी सीखने की भाषा का बोर्ड बातचीत, सवाल, पढ़ाई के साथी, वॉइस रूम या ग्रुप के हिसाब से देखें। पोस्ट से सीधे “शामिल हों” या “ग्रुप में जुड़ें”।",
-    "callRecordsTitle": "कॉल इतिहास"
+    "callRecordsTitle": "कॉल इतिहास",
+    "aiTutorBio": "यह AI ट्यूटर है, इंसान नहीं — कभी भी जवाब देता है। सीखी जा रही भाषा में चैट या कॉल करें; यह आपका लिखा सुधारता है और बताता है कि जो कहना है, कैसे कहें।"
   }
 }
