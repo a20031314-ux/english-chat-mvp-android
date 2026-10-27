@@ -41,6 +41,29 @@ export type Frame = {
 
 const ALL: Partial<Record<string, Frame[]>> = { ja: JA_FRAMES, ko: KO_FRAMES, es: ES_FRAMES };
 
+/** 이 학습 언어의 틀 전부(앱에 없는 언어를 서버가 보낼 때). */
+export function allFramesFor(language: string): Frame[] {
+  return ALL[language] ?? [];
+}
+
+/** 앱에 없는 언어의 틀을 서버에서 받아 넣는다(registerScripts와 같이). */
+export function registerFrames(language: string, frames: unknown): boolean {
+  if (ALL[language]?.length || !Array.isArray(frames)) return false;
+  const ok = frames.filter(
+    (frame): frame is Frame =>
+      Boolean(frame) &&
+      typeof frame.id === "string" &&
+      typeof frame.stage === "number" &&
+      typeof frame.pattern === "string" &&
+      Array.isArray(frame.core) &&
+      Array.isArray(frame.examples) &&
+      frame.examples.length > 0,
+  );
+  if (!ok.length) return false;
+  ALL[language] = ok;
+  return true;
+}
+
 export function framesFor(language: string, stage: number): Frame[] {
   return (ALL[language] ?? []).filter((frame) => frame.stage === stage);
 }

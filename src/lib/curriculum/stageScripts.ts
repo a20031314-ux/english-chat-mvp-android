@@ -70,6 +70,31 @@ export function hasScripts(language: string): boolean {
   return Boolean(ALL[language]?.length);
 }
 
+/** 이 학습 언어의 대본 전부(서버가 앱에 없는 언어를 보낼 때, /api/curriculum/scripts?pack=1). */
+export function allScriptsFor(language: string): StageScript[] {
+  return ALL[language] ?? [];
+}
+
+/**
+ * 앱에 없는 언어의 대본을 서버에서 받아 넣는다(2026-10-28 "2.76 자르고 다른 언어도 추가" — 2.76 이후 더한 언어를 빌드 없이).
+ * 이미 앱에 든 언어는 바꾸지 않는다. 모양이 맞는 것만.
+ */
+export function registerScripts(language: string, scripts: unknown): boolean {
+  if (ALL[language]?.length || !Array.isArray(scripts)) return false;
+  const ok = scripts.filter(
+    (script): script is StageScript =>
+      Boolean(script) &&
+      typeof script.id === "string" &&
+      typeof script.stage === "number" &&
+      Array.isArray(script.lines) &&
+      Array.isArray(script.expressions) &&
+      script.setting && typeof script.setting.en === "string",
+  );
+  if (!ok.length) return false;
+  ALL[language] = ok;
+  return true;
+}
+
 /** 그 단계에서 고를 수 있는 보는 방식(앞 단계는 첫 글자 힌트, 뒤 단계는 내 말로). */
 export function modesFor(stage: number): ScriptMode[] {
   return stage <= 2 ? ["shadow", "hint", "hide"] : ["shadow", "hide", "own"];

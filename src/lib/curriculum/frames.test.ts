@@ -106,3 +106,18 @@ test("이름 자리 예문은 닉네임으로(한국어 조사까지)", () => {
   const ja = framesFor("ja", 1).find((frame) => frame.examples.some(isNameExample))!;
   assert.ok(personalizeFrame(ja, "ja", "Omar").examples.find(isNameExample)!.text.includes("Omar"));
 });
+
+test("앱에 없는 언어: 서버가 보낸 대본·틀을 넣고, 앱에 든 언어는 안 바꿈", async () => {
+  const { registerScripts, scriptsFor: scripts, allScriptsFor } = await import("./stageScripts.ts");
+  const { registerFrames, allFramesFor } = await import("./frames.ts");
+  const ko = allScriptsFor("ko");
+  assert.equal(registerScripts("ko", [{ id: "x", stage: 1, lines: [], expressions: [], setting: { en: "x" } }]), false);
+  assert.equal(allScriptsFor("ko"), ko);
+  assert.equal(registerScripts("zz", "nope"), false);
+  assert.equal(registerScripts("zz", [{ id: "zz-1-1", stage: 1, situation: 0, lines: [], expressions: [], setting: { en: "x" } }, { bad: 1 }]), true);
+  assert.equal(scripts("zz", 1).length, 1);
+  const frame = framesFor("es", 1)[0]!;
+  assert.equal(registerFrames("zz", [{ ...frame, id: "zz-f1-01" }, null]), true);
+  assert.equal(allFramesFor("zz").length, 1);
+  assert.equal(registerFrames("es", [frame]), false);
+});

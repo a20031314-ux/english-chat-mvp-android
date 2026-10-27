@@ -12,6 +12,7 @@ import { PART_IDS, shareOf, type PartId, type StageParts } from "@/lib/notes/sta
 import { sendAppIntent } from "@/lib/appIntents";
 import { StageScripts, type ScriptRecommend } from "@/components/studyMap/StageScripts";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
+import { useScriptPack } from "@/lib/curriculum/useScriptPack";
 import { scriptForExpressions } from "@/lib/curriculum/stageScripts";
 
 /**
@@ -116,6 +117,8 @@ export function NotebookSection({
   part?: PartId | null;
   onPart?: (part: PartId) => void;
 }) {
+  // 앱에 없는 학습 언어의 대본·틀은 서버에서(2.76 이후 더한 언어).
+  useScriptPack(language);
   const [book, setBook] = useState<Book | null>(null);
   const [group, setGroup] = useState<Group | null>(null);
   const [nodeOpen, setNodeOpen] = useState<string | null>(null);

@@ -3,8 +3,8 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
-import { scriptById } from "@/lib/curriculum/stageScripts";
-import { frameById } from "@/lib/curriculum/frames";
+import { allScriptsFor, scriptById } from "@/lib/curriculum/stageScripts";
+import { allFramesFor, frameById } from "@/lib/curriculum/frames";
 import { markRedoDone, markScriptPassed, readPassedScripts } from "@/lib/server/stageScriptStore";
 import { scriptGlosses } from "@/lib/server/stageCopy";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -18,6 +18,7 @@ export const maxDuration = 60;
 /**
  * 단계 대본 통과(My 단계 보기 "대본으로 연습", 2026-10-27).
  * GET ?lang= → { passed: [id] }
+ * GET ?lang=&pack=1 → { scripts, frames } — 그 언어 대본·틀 전부(앱에 없는 언어를 2.76 앱이 받아 씀, curriculum/useScriptPack.ts). 로그인 없이.
  * GET ?lang=&stage=&ui=&glosses=1 → { glosses: {영어 원문: 앱 언어} } — 대본·틀 뜻풀이(영어·한국어 앱은 빈 표, 다른 앱 언어는 처음 한 번 옮겨 저장, server/stageCopy.ts). 로그인 없이.
  * POST { language, id, redo: true } — 틀린 틀 "다시 연습"을 끝냄(/api/notebook redo에서 3일 빠짐).
  * POST { language, id, outcome? } → { passed: [id] } — id는 대본 또는 틀(frames.ts) — 앱이 내 줄을 모두 통과 방식으로 맞혔을 때만 보낸다(curriculum/stageScripts.ts runPasses).
@@ -30,6 +31,10 @@ export async function OPTIONS(request: NextRequest) {
 
 export async function GET(request: NextRequest) {
   const params = request.nextUrl.searchParams;
+  if (params.get("pack") === "1") {
+    const language = coerceLanguageCode(params.get("lang"));
+    return jsonWithCors(request, { scripts: allScriptsFor(language), frames: allFramesFor(language) });
+  }
   if (params.get("glosses") === "1") {
     const language = coerceLanguageCode(params.get("lang"));
     const stage = Number(params.get("stage"));
