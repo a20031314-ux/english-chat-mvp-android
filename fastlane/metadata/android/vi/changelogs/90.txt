@@ -1,4 +1,4 @@
 • My: mỗi giai đoạn giờ có kịch bản cho từng tình huống. Nghe, nói lời của bạn và vượt qua tất cả để mở giai đoạn tiếp theo. “Kịch bản hôm nay” chọn sẵn một bài.
-• “Đổi mẫu câu”: nói một mẫu câu với từ khác nhau. Mẫu nào gia sư sửa hai lần sẽ quay lại trong “Luyện lại”.
+• “Đổi trong cấu trúc câu”: nói một cấu trúc câu với từ khác nhau. Cấu trúc nào gia sư sửa hai lần sẽ quay lại trong “Luyện lại”.
 • Kịch bản theo giai đoạn miễn phí cho mọi người; “Gói kịch bản” mới thêm cuộc gọi ngắn ba ngày một lần và trò chuyện.
 • Gia sư AI giờ ở đầu tab Mọi người, lịch sử cuộc gọi tách riêng khỏi trò chuyện.
