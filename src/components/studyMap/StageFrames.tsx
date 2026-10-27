@@ -435,7 +435,9 @@ function FramePlayer({
                   result.clean ? (
                     <>
                       <p className="mt-1.5 text-caption text-emerald-300">✓ {ui.scriptClean}</p>
-                      {own && result.practice ? <p className="mt-1 text-note text-slate-200">{result.practice.note}</p> : null}
+                      {result.practice && (own || (stepMode !== "shadow" && !compareToTarget(example.text, result.heard).clean)) ? (
+                        <p className="mt-1 text-note text-slate-200">{result.practice.note}</p>
+                      ) : null}
                     </>
                   ) : (
                     <>

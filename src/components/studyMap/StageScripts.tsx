@@ -471,10 +471,16 @@ function ScriptPlayer({
                 ) : null}
                 {result ? (
                   result.clean ? (
+                    <>
                     <p className="mt-1.5 text-caption text-emerald-300">
                       ✓ {ui.scriptClean}
                       {countsForPass(script.stage, result.mode) && !revealed[i] ? null : <span className="text-slate-500"> · {modeLabel[result.mode]}</span>}
                     </p>
+                    {/* 맞게 바꿔 말해 통과(낱말이 대본과 다름): 대본은 어떻게 말하는지 한 줄(2026-10-28). */}
+                    {result.mode !== "shadow" && result.practice?.note && !compareToTarget(line.text, result.heard).clean ? (
+                      <p className="mt-1 text-note text-slate-200">{result.practice.note}</p>
+                    ) : null}
+                    </>
                   ) : ownResult ? (
                     <>
                       <div className="mt-3 rounded-xl bg-white/5 p-3">
