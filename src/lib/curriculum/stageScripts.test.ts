@@ -28,7 +28,7 @@ test("ko·ja·es: 단계 상황마다 대본 하나(줄 수는 단계마다 늘�
         if (situation) assert.equal(script.lines.length, LINES[stage.order - 1], `${script.id} 줄 수`);
         else {
           assert.ok(script.lines.length === 6 || script.lines.length === 8, `${script.id} 표현 대본 줄 수`);
-          assert.ok(script.expressions.length >= 1, `${script.id} 표현 대본인데 표현 없음`);
+          assert.ok(script.expressions.length >= 1 || (script.grammar ?? []).length >= 1, `${script.id} 표현·문법 대본인데 둘 다 없음`);
         }
         script.lines.forEach((line, i) => {
           assert.equal(line.who, i % 2 === 0 ? "them" : "me", `${script.id} ${i}`);
@@ -158,6 +158,16 @@ test("문법 태그: 그 단계 문법 번호 안, 앞 단계는 더 낮은 단�
           assert.ok(earlier && s! < stage.order && i! >= 0 && i! < earlier.grammar.length, `${script.id} ${tag}`);
         }
       }
+    }
+  }
+});
+
+test("단계 문법은 모두 어느 대본엔가(내 줄에서) — 오늘의 대본이 짚인 문법으로 고를 수 있게", () => {
+  for (const language of ["ko", "ja", "es"]) {
+    for (const stage of ladderFor(language)!.stages) {
+      const covered = new Set(scriptsFor(language, stage.order).flatMap((script) => script.grammar ?? []));
+      const missing = stage.grammar.map((_, i) => i).filter((i) => !covered.has(i));
+      assert.deepEqual(missing, [], `${language}-${stage.order} 대본 없는 문법`);
     }
   }
 });
