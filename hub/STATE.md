@@ -13,7 +13,7 @@
 | 서버 | main에 push하면 Vercel이 바로 배포 | — |
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
-| 다음 앱 버전 | 2.76 (versionCode 90) — 아직 안 자름. 2.75 뒤 main에 들어간 앱 빌드 변경(10-27: aa93caff AI 튜터 사람 탭 통합, dd47d3de 통화 기록을 채팅과 따로, 883d9920 My 예전 기능 지우기)이 여기 실림 — 자를 때 버전·새로워진 점·출시 노트 90 | — |
+| 다음 앱 버전 | **2.76 (versionCode 90) 자름(2026-10-28)** — 단계 대본·틀·다시 연습·대본 플랜·AI 튜터 사람 탭·통화 기록 따로·My 예전 기능 뺌. 출시 노트 90은 PR. PC에서 `npm run pc:build` → Signed Bundle(사람). 이후 더하는 학습 언어 대본·틀은 서버에서 받아 빌드 없이 보임 | — |
 | iOS | **App Store 심사 다시 제출(2026-10-23 15:0x KST)** — 2.71 + 구독 그룹·구독 3·포인트 4 한 제출(처음 05:12 제출은 상품 빠짐·진단 빌드 85.9라 취소). 심사 대기 중. 앱 ID 6824542951. 남은 일 `hub/drafts/ios-launch.md` "심사 중" | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할

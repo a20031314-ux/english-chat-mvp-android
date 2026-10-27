@@ -980,6 +980,13 @@ async function partsScene({ page, locale, wait, target }, mode, open) {
   await wait(1500);
 }
 
+/** 2.76 다시 연습 그림: 학습 언어마다 틀 하나와 그 틀을 틀린 줄·고친 줄(카드는 끼움). */
+const REDO_CARDS = {
+  es: { frame: "es-f2-20", wrong: "¿Se puede pago con tarjeta?", right: "¿Se puede pagar con tarjeta?" },
+  ja: { frame: "ja-f2-01", wrong: "ここで座るもいいですか？", right: "ここに座ってもいいですか？" },
+  ko: { frame: "ko-f1-01", wrong: "저는 학생예요.", right: "저는 학생이에요." },
+};
+
 const STEPS = {
   async "promo-room"({ page, ui, locale, wait, target, mark }) {
     // 목소리를 입히는 쇼츠: 줄마다 시각과 글자를 남기고, 말이 끝날 만큼 기다린다(make.mjs room이 TTS로 입힌다).
@@ -1275,6 +1282,55 @@ const STEPS = {
     await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
     await wait(2500);
     await page.getByRole("button", { name: "Yuki", exact: true }).first().click();
+    await wait(2500);
+  },
+  async "ai-tutor"({ page, ui, wait, target }) {
+    // 2.76: 사람 탭 맨 위 AI 튜터 → 프로필 시트(메시지·통화·통화 기록, 사람은 고정 응답).
+    await socialMocks(page, target, ui);
+    await page.evaluate(() => localStorage.setItem("peopleViewMode", "people"));
+    await page.goto(`${BASE}/?screen=people`, { waitUntil: "networkidle" });
+    await wait(2500);
+    await page.getByRole("button", { name: ui.talkAiTutor }).first().click();
+    await wait(2000);
+  },
+  async "stage-scripts"({ page, ui, locale, wait }) {
+    // 2.76: My 단계 보기 — 오늘의 대본 카드 + "대본으로 연습"(상황마다 ●○, 핵심 표현 칩). 운영 응답 그대로(새 사용자 1단계).
+    await page.route("**/api/notebook?*", async (route) => {
+      if (route.request().method() !== "GET" || route.request().url().includes("shot=")) return route.fallback();
+      const response = await route.fetch({ headers: { ...route.request().headers(), "x-rc-user": `whats-new-capture-notebook-${locale}` }, timeout: 60_000 }).catch(() => null);
+      if (!response) return;
+      return route.fulfill({ status: 200, contentType: "application/json", body: await response.text() }).catch(() => undefined);
+    });
+    await page.evaluate(() => {
+      localStorage.setItem("myViewMode", "map");
+      localStorage.setItem("myViewMode.stageShown", "1");
+    });
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    const title = page.getByText(ui.scriptTodayTitle, { exact: true }).first();
+    for (let i = 0; i < 60 && !(await title.count()); i++) await wait(500);
+    await title.evaluate((el) => el.closest("button")?.scrollIntoView({ block: "start" }));
+    await page.mouse.wheel(0, -40);
+    await wait(1500);
+  },
+  async "frames-redo"({ page, ui, locale, wait, target }) {
+    // 2.76: 대본 목록 맨 위 ◐ 다시 연습 카드(튜터가 같은 틀을 두 번 고친 줄은 끼움) → 연 화면(내가 쓴 줄·고친 줄·대본에서).
+    const card = REDO_CARDS[target] ?? REDO_CARDS.en;
+    await page.route("**/api/notebook?*", async (route) => {
+      if (route.request().method() !== "GET" || route.request().url().includes("shot=")) return route.fallback();
+      const response = await route.fetch({ headers: { ...route.request().headers(), "x-rc-user": `whats-new-capture-notebook-${locale}` }, timeout: 60_000 }).catch(() => null);
+      if (!response) return;
+      const book = await response.json();
+      book.redo = [{ frame: card.frame, count: 2, card: { id: "fxcaptureredo01", wrong: card.wrong, right: card.right, note: "", where: "chat", at: Date.now() } }];
+      return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(book) }).catch(() => undefined);
+    });
+    await page.evaluate(() => {
+      localStorage.setItem("myViewMode", "map");
+      localStorage.setItem("myViewMode.stageShown", "1");
+    });
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    const redo = page.getByRole("button", { name: new RegExp(escape(ui.frameRedo)) }).first();
+    for (let i = 0; i < 60 && !(await redo.count()); i++) await wait(500);
+    await redo.click();
     await wait(2500);
   },
   async "board-topics"(ctx) {

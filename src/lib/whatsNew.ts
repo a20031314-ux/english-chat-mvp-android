@@ -44,6 +44,17 @@ export type ReleaseNote = {
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    // 2.76(90): My 단계 대본(상황마다, 통과해야 다음 단계)·오늘의 대본, 틀 바꿔 말하기(ko·ja·es 1~3, 3단계 내 말로)·틀린 틀 다시 연습,
+    // AI 튜터를 사람 탭으로(프로필 시트 메시지·통화·통화 기록). 무료 = 대본·대본 플랜·팩 뺌, 통화 기록을 채팅과 따로, My 예전 기능 뺌은 사용법·출시 노트에만.
+    version: "2.76",
+    code: 90,
+    items: [
+      { id: "stage-scripts", title: "whatsNewScriptsTitle", body: "whatsNewScriptsBody", shot: "stage-scripts", tab: "map", guide: "my.map" },
+      { id: "frames", title: "whatsNewFramesTitle", body: "whatsNewFramesBody", shot: "frames-redo", tab: "map", guide: "my.map" },
+      { id: "ai-tutor", title: "whatsNewAiTutorTitle", body: "whatsNewAiTutorBody", shot: "ai-tutor", tab: "people", guide: "people.find" },
+    ],
+  },
+  {
     // 2.75(89): My 네 갈래(어휘·문법·표현·발음, 70%면 다음 단계, 단계별 대화 예시) — 망·그래프·단계 세 보기가 같은 네 갈래. 게시판 주제 칩·글 속 들어가기·참여하기.
     // 통화 기록 카드 ×(지우기)는 사용법(대화)에만, 통화 "고칠 곳" 팁이 내 줄 이야기만 하는 것은 서버라 빌드와 상관없음.
     version: "2.75",
