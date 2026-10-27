@@ -122,7 +122,7 @@ function ScriptPlayer({ ui, locale, language, script, onClose }: { ui: UICopy; l
   return (
     <FullScreenLayer>
       <header className="flex shrink-0 items-center gap-2 border-b border-line px-4 pb-3 pt-[max(0.75rem,env(safe-area-inset-top))]">
-        <h2 className="min-w-0 flex-1 truncate text-body font-semibold text-ink">{glossFor(script.setting, locale)}</h2>
+        <h2 dir="auto" className="min-w-0 flex-1 truncate text-body font-semibold text-ink">{glossFor(script.setting, locale)}</h2>
         <button type="button" onClick={onClose} aria-label={ui.billingClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
           ✕
         </button>
@@ -158,7 +158,7 @@ function ScriptPlayer({ ui, locale, language, script, onClose }: { ui: UICopy; l
                     <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">{line.text}</p>
                     <TTSButton text={line.text} lang={tag} className="shrink-0" />
                   </div>
-                  <p className="mt-0.5 text-caption text-slate-500">{gloss}</p>
+                  <p dir="auto" className="mt-0.5 text-caption text-slate-500">{gloss}</p>
                 </div>
               </li>
             );
@@ -169,7 +169,7 @@ function ScriptPlayer({ ui, locale, language, script, onClose }: { ui: UICopy; l
           return (
             <li key={i} className="mb-2 flex justify-end">
               <div className={`max-w-[88%] rounded-2xl px-3 py-2 ${current ? "border border-amber-300/40 bg-amber-300/[0.06]" : "bg-white/[0.09]"}`}>
-                <p className="text-caption text-slate-400">{gloss}</p>
+                <p dir="auto" className="text-caption text-slate-400">{gloss}</p>
                 <div className="mt-1 flex items-start gap-2">
                   <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
                     {show ? line.text : mode === "hint" ? hintOf(line.text, language) : "· · ·"}
