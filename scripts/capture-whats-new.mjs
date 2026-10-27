@@ -169,6 +169,8 @@ const GUIDE_ITEMS = [
   { shot: "parts-graph" },
   { shot: "stage-next" },
   { shot: "stage-parts" },
+  // 2.76: 사용법 my.map 그림은 대본 목록(새로워진 점과 같은 장면).
+  { shot: "stage-scripts" },
   { shot: "chatnext" },
 ];
 // `guide-parts`: 2.75 네 갈래·게시판 주제 칩 그림만 다시(채팅을 쓰지 않음).

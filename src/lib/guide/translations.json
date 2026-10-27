@@ -57,7 +57,7 @@
             "Abajo, «{ui:stageExamplesTitle}» muestra conversaciones posibles en esta etapa; prueba una con «{ui:stageTry}».",
             "«{ui:stageScriptsTitle}», arriba en cada etapa: el guion suena y se detiene en tu frase. Elige cómo verla («{ui:scriptModeShadow}», «{ui:scriptModeHint}», «{ui:scriptModeHide}», «{ui:scriptModeOwn}») y dila con 🎤. Si aciertas todas tus frases de cualquier forma menos repitiendo, superas el guion; la siguiente etapa se abre con las cuatro áreas al 70 % y todos los guiones de la etapa superados. En las etapas 3–4 la otra persona cambia un poco cada vez; en la 5, «{ui:scriptCall}» lleva la misma situación a una llamada. Cada guion muestra las expresiones clave de la etapa que usa; al superarlo se suman al área de expresiones. Las que no salen en ningún guion de situación tienen guiones cortos en «{ui:scriptsByExpression}». «{ui:scriptTodayTitle}», arriba, se elige según la gramática que el tutor te corrigió hace poco y las expresiones que aún no aprendiste. Abajo, «{ui:framesTitle}» da estructuras con un hueco. Di cuatro frases cambiando solo el hueco; acértalas todas en «{ui:frameModeBlank}» para superarla y luego sigue con guiones que la usan Desde la etapa 3, «{ui:scriptModeOwn}» te deja llenar el hueco con tu propia historia (etapas 1–3). Si el tutor corrige la misma estructura dos veces en dos semanas, arriba de los guiones aparece la tarjeta ◐ «{ui:frameRedo}»: ves tu frase y la corrección, y vuelves a decir la estructura."
           ],
-          "shot": "stage-parts"
+          "shot": "stage-scripts"
         },
         {
           "heading": "8. Notas",
@@ -487,7 +487,7 @@
             "下の「{ui:stageExamplesTitle}」でその段階でできる会話を見て、「{ui:stageTry}」で試せます。",
             "各段階のいちばん上の「{ui:stageScriptsTitle}」:台本が流れ、自分のセリフで止まります。見せ方(「{ui:scriptModeShadow}」「{ui:scriptModeHint}」「{ui:scriptModeHide}」「{ui:scriptModeOwn}」)を選んで🎤で話します。リピート以外の方法で自分のセリフを全部言えたらその台本はクリア。次の段階は4つの分野が70%になり、その段階の台本をすべてクリアすると開きます。3〜4段階は相手のセリフが毎回少し変わり、5段階は「{ui:scriptCall}」で同じ場面を通話で。各台本にはその段階の重要表現が付いていて、クリアすると表現の分野に積み上がります。場面の台本に出てこない表現は下の「{ui:scriptsByExpression}」の短い台本で。いちばん上の「{ui:scriptTodayTitle}」は、最近チューターに直された文法とまだ覚えていない表現から選んだ台本です。下の「{ui:framesTitle}」は空欄が一つある文の型です。空欄だけ変えて4回言い、「{ui:frameModeBlank}」で全部言えたらクリア。そのあとその型が出てくる台本へ進めます3段階からは「{ui:scriptModeOwn}」で空欄に自分のことを入れて言います(1〜3段階)。2週間のうちに同じ型を2回直されると、台本一覧のいちばん上に◐「{ui:frameRedo}」カードが出ます。自分の文と直した文を見て、その型をもう一度言います。"
           ],
-          "shot": "stage-parts"
+          "shot": "stage-scripts"
         },
         {
           "heading": "8. ノート",
@@ -917,7 +917,7 @@
             "下面的“{ui:stageExamplesTitle}”展示这个阶段能进行的对话，用“{ui:stageTry}”试一试。",
             "每个阶段最上方的“{ui:stageScriptsTitle}”：剧本播放，到你的台词时停下。选择显示方式（“{ui:scriptModeShadow}”“{ui:scriptModeHint}”“{ui:scriptModeHide}”“{ui:scriptModeOwn}”），用🎤说出来。用跟读以外的方式把自己的台词全部说对，这个剧本就通过了——四个方面达到70%并通过本阶段的全部剧本后，下一阶段才会开启。第3–4阶段对方的话每次略有不同；第5阶段可用“{ui:scriptCall}”把同一情境变成通话。每个剧本都标出它用到的本阶段关键表达，通过后这些表达会计入“表达”方面。情境剧本里没有的表达，放在下面“{ui:scriptsByExpression}”的短剧本里。最上面的“{ui:scriptTodayTitle}”是根据最近被老师纠正的语法和还没学会的表达挑选的剧本。下面的“{ui:framesTitle}”是带一个空格的句型。只换空格说四句，用“{ui:frameModeBlank}”全部说对就算通过，之后可以接着练用到这个句型的剧本从第3阶段起，可用“{ui:scriptModeOwn}”在空格里填上自己的事（第1–3阶段）。如果两周内老师两次纠正同一个句型，剧本列表最上方会出现◐“{ui:frameRedo}”卡片：看看自己的句子和改正后的句子，再把这个句型说一遍。"
           ],
-          "shot": "stage-parts"
+          "shot": "stage-scripts"
         },
         {
           "heading": "8. 笔记",
@@ -1347,7 +1347,7 @@
             "Bên dưới, “{ui:stageExamplesTitle}” cho thấy những cuộc trò chuyện giai đoạn này làm được; thử bằng “{ui:stageTry}”.",
             "“{ui:stageScriptsTitle}” ở đầu mỗi giai đoạn: kịch bản phát và dừng ở câu của bạn. Chọn cách xem (“{ui:scriptModeShadow}”, “{ui:scriptModeHint}”, “{ui:scriptModeHide}”, “{ui:scriptModeOwn}”) rồi nói bằng 🎤. Nói đúng hết các câu của bạn bằng cách nào khác ngoài nói theo là qua kịch bản — giai đoạn tiếp mở khi bốn mảng đạt 70% và qua hết các kịch bản của giai đoạn. Giai đoạn 3–4 lời người kia đổi chút mỗi lần; giai đoạn 5 có “{ui:scriptCall}” để gọi theo cùng tình huống. Mỗi kịch bản ghi các cách nói chính của giai đoạn mà nó dùng; qua kịch bản thì chúng được cộng vào mảng cách nói. Cách nói nào chưa có trong kịch bản tình huống thì có kịch bản ngắn ở “{ui:scriptsByExpression}”. “{ui:scriptTodayTitle}” ở trên cùng được chọn theo ngữ pháp gia sư vừa sửa và các cách nói bạn chưa học. Bên dưới, “{ui:framesTitle}” là các mẫu câu có một chỗ trống. Nói bốn câu chỉ đổi chỗ trống; nói đúng hết ở “{ui:frameModeBlank}” là qua, rồi tiếp tục với kịch bản có mẫu đó Từ giai đoạn 3, “{ui:scriptModeOwn}” cho bạn điền chỗ trống bằng chuyện của mình (giai đoạn 1–3). Nếu gia sư sửa cùng một mẫu câu hai lần trong hai tuần, thẻ ◐ “{ui:frameRedo}” hiện ở đầu danh sách kịch bản: xem câu của bạn và câu đã sửa, rồi nói lại mẫu đó."
           ],
-          "shot": "stage-parts"
+          "shot": "stage-scripts"
         },
         {
           "heading": "8. Ghi chú",
@@ -1777,7 +1777,7 @@
             "En bas, « {ui:stageExamplesTitle} » montre des conversations possibles à cette étape ; essayez-en une avec « {ui:stageTry} ».",
             "« {ui:stageScriptsTitle} », en haut de chaque étape : le dialogue se lit et s’arrête à votre réplique. Choisissez l’affichage (« {ui:scriptModeShadow} », « {ui:scriptModeHint} », « {ui:scriptModeHide} », « {ui:scriptModeOwn} ») et dites-la avec 🎤. Réussissez toutes vos répliques autrement qu’en répétant et le dialogue est validé — l’étape suivante s’ouvre quand les quatre domaines atteignent 70 % et que tous les dialogues de l’étape sont validés. Aux étapes 3–4, l’autre personne change un peu ses répliques ; à l’étape 5, « {ui:scriptCall} » rejoue la situation en appel. Chaque dialogue indique les expressions clés de l’étape qu’il utilise ; le réussir les ajoute au domaine des expressions. Celles qu’aucun dialogue de situation n’utilise ont de courts dialogues dans « {ui:scriptsByExpression} ». « {ui:scriptTodayTitle} », en haut, est choisi d’après la grammaire que le tuteur a corrigée récemment et les expressions pas encore apprises. Plus bas, « {ui:framesTitle} » propose des structures à un trou. Dites quatre phrases en ne changeant que le trou ; réussissez-les toutes en « {ui:frameModeBlank} » pour valider, puis enchaînez sur les dialogues qui l’utilisent Dès l’étape 3, « {ui:scriptModeOwn} » vous fait remplir le trou avec votre propre histoire (étapes 1–3). Si le tuteur corrige la même structure deux fois en deux semaines, une carte ◐ « {ui:frameRedo} » apparaît en haut des dialogues : voyez votre phrase et la correction, puis redites la structure."
           ],
-          "shot": "stage-parts"
+          "shot": "stage-scripts"
         },
         {
           "heading": "8. Notes",
@@ -2207,7 +2207,7 @@
             "Sotto, «{ui:stageExamplesTitle}» mostra conversazioni possibili in questa fase; provane una con «{ui:stageTry}».",
             "«{ui:stageScriptsTitle}», in cima a ogni fase: il copione parte e si ferma alla tua battuta. Scegli come vederla («{ui:scriptModeShadow}», «{ui:scriptModeHint}», «{ui:scriptModeHide}», «{ui:scriptModeOwn}») e dilla con 🎤. Se azzecchi tutte le tue battute in un modo diverso dal ripetere, il copione è superato: la fase successiva si apre con le quattro aree al 70% e tutti i copioni della fase superati. Nelle fasi 3–4 l’altra persona cambia un po’ ogni volta; nella 5, «{ui:scriptCall}» porta la stessa situazione in chiamata. Ogni copione indica le espressioni chiave della fase che usa; superarlo le aggiunge all’area delle espressioni. Quelle che nessun copione di situazione usa hanno copioni brevi in «{ui:scriptsByExpression}». «{ui:scriptTodayTitle}», in cima, è scelto in base alla grammatica corretta di recente dal tutor e alle espressioni non ancora imparate. Sotto, «{ui:framesTitle}» propone schemi con uno spazio vuoto. Di’ quattro frasi cambiando solo lo spazio; azzeccale tutte in «{ui:frameModeBlank}» per superarlo, poi continua con i copioni che lo usano Dalla fase 3, «{ui:scriptModeOwn}» ti fa riempire lo spazio con la tua storia (fasi 1–3). Se il tutor corregge lo stesso schema due volte in due settimane, in cima ai copioni compare la scheda ◐ «{ui:frameRedo}»: vedi la tua frase e la correzione, poi ripeti lo schema."
           ],
-          "shot": "stage-parts"
+          "shot": "stage-scripts"
         },
         {
           "heading": "8. Note",
@@ -2637,7 +2637,7 @@
             "Embaixo, “{ui:stageExamplesTitle}” mostra conversas possíveis nesta etapa; experimente uma com “{ui:stageTry}”.",
             "“{ui:stageScriptsTitle}”, no topo de cada etapa: o roteiro toca e para na sua fala. Escolha como ver (“{ui:scriptModeShadow}”, “{ui:scriptModeHint}”, “{ui:scriptModeHide}”, “{ui:scriptModeOwn}”) e diga com 🎤. Acertando todas as suas falas de qualquer jeito que não seja repetindo, o roteiro está aprovado — a próxima etapa abre com as quatro áreas em 70% e todos os roteiros da etapa aprovados. Nas etapas 3–4 a outra pessoa muda um pouco a cada vez; na 5, “{ui:scriptCall}” leva a mesma situação para uma chamada. Cada roteiro mostra as expressões-chave da etapa que usa; ao ser aprovado, elas entram na área de expressões. As que nenhum roteiro de situação usa têm roteiros curtos em “{ui:scriptsByExpression}”. “{ui:scriptTodayTitle}”, no topo, é escolhido pela gramática que o tutor corrigiu recentemente e pelas expressões que você ainda não aprendeu. Abaixo, “{ui:framesTitle}” traz estruturas com uma lacuna. Diga quatro frases trocando só a lacuna; acerte todas em “{ui:frameModeBlank}” para passar e depois siga para roteiros que a usam A partir da etapa 3, “{ui:scriptModeOwn}” deixa você preencher a lacuna com a sua história (etapas 1–3). Se o tutor corrigir a mesma estrutura duas vezes em duas semanas, aparece no topo dos roteiros o cartão ◐ “{ui:frameRedo}”: veja sua frase e a correção e diga a estrutura de novo."
           ],
-          "shot": "stage-parts"
+          "shot": "stage-scripts"
         },
         {
           "heading": "8. Notas",
@@ -3067,7 +3067,7 @@
             "Ниже «{ui:stageExamplesTitle}» показывает, какие разговоры доступны на этом этапе; попробуйте с «{ui:stageTry}».",
             "«{ui:stageScriptsTitle}» вверху каждого этапа: сценарий звучит и останавливается на вашей реплике. Выберите вид («{ui:scriptModeShadow}», «{ui:scriptModeHint}», «{ui:scriptModeHide}», «{ui:scriptModeOwn}») и скажите её через 🎤. Скажите все свои реплики верно любым способом, кроме повтора, — и сценарий пройден; следующий этап откроется, когда четыре области дойдут до 70 % и все сценарии этапа будут пройдены. На этапах 3–4 собеседник каждый раз говорит немного иначе, на этапе 5 «{ui:scriptCall}» переносит ту же ситуацию в звонок. У каждого сценария указаны ключевые выражения этапа, которые в нём звучат; пройденный сценарий добавляет их в область выражений. Для выражений, которых нет в сценариях ситуаций, есть короткие сценарии в «{ui:scriptsByExpression}». «{ui:scriptTodayTitle}» вверху подбирается по грамматике, которую репетитор недавно исправлял, и по ещё не выученным выражениям. Ниже «{ui:framesTitle}» — шаблоны фраз с одним пропуском. Скажите четыре фразы, меняя только пропуск; скажите все верно в режиме «{ui:frameModeBlank}» — и шаблон пройден, дальше сценарии с ним С этапа 3 в режиме «{ui:scriptModeOwn}» пропуск заполняете своей историей (этапы 1–3). Если репетитор дважды за две недели исправит один и тот же шаблон, вверху сценариев появится карточка ◐ «{ui:frameRedo}»: посмотрите свою фразу и исправление и скажите шаблон снова."
           ],
-          "shot": "stage-parts"
+          "shot": "stage-scripts"
         },
         {
           "heading": "8. Заметки",
@@ -3497,7 +3497,7 @@
             "Di bawah, “{ui:stageExamplesTitle}” menunjukkan percakapan yang bisa dilakukan di tahap ini; coba dengan “{ui:stageTry}”.",
             "“{ui:stageScriptsTitle}” di atas tiap tahap: naskah diputar dan berhenti di kalimatmu. Pilih cara melihat (“{ui:scriptModeShadow}”, “{ui:scriptModeHint}”, “{ui:scriptModeHide}”, “{ui:scriptModeOwn}”) lalu ucapkan dengan 🎤. Benar di semua kalimatmu dengan cara selain menirukan berarti naskah lulus — tahap berikutnya terbuka saat empat bagian mencapai 70% dan semua naskah tahap itu lulus. Di tahap 3–4 ucapan lawan bicara sedikit berubah tiap kali; di tahap 5, “{ui:scriptCall}” membawa situasi yang sama ke panggilan. Setiap naskah mencantumkan ungkapan kunci tahap itu yang dipakainya; lulus naskah menambahkannya ke bagian ungkapan. Ungkapan yang tidak ada di naskah situasi punya naskah pendek di “{ui:scriptsByExpression}”. “{ui:scriptTodayTitle}” di atas dipilih dari tata bahasa yang baru dikoreksi tutor dan ungkapan yang belum kamu pelajari. Di bawah, “{ui:framesTitle}” berisi pola kalimat dengan satu bagian kosong. Ucapkan empat kalimat dengan mengganti bagian kosong saja; benar semua di “{ui:frameModeBlank}” berarti lulus, lalu lanjut ke naskah yang memakai pola itu Mulai tahap 3, “{ui:scriptModeOwn}” membuat Anda mengisi bagian kosong dengan cerita sendiri (tahap 1–3). Jika tutor membetulkan pola yang sama dua kali dalam dua minggu, kartu ◐ “{ui:frameRedo}” muncul di atas daftar naskah: lihat kalimat Anda dan perbaikannya, lalu ucapkan pola itu lagi."
           ],
-          "shot": "stage-parts"
+          "shot": "stage-scripts"
         },
         {
           "heading": "8. Catatan",
@@ -3927,7 +3927,7 @@
             "في الأسفل يعرض «{ui:stageExamplesTitle}» محادثات تصبح ممكنة في هذه المرحلة؛ جرّب واحدة بـ«{ui:stageTry}».",
             "«{ui:stageScriptsTitle}» أعلى كل مرحلة: يُشغَّل النص ويتوقف عند جملتك. اختر طريقة العرض («{ui:scriptModeShadow}» أو «{ui:scriptModeHint}» أو «{ui:scriptModeHide}» أو «{ui:scriptModeOwn}») وقلها بـ🎤. إذا أصبت كل جملك بأي طريقة غير الترديد اجتزت النص — وتُفتح المرحلة التالية حين تبلغ الجوانب الأربعة 70% وتجتاز كل نصوص المرحلة. في المرحلتين 3–4 يتغير كلام الطرف الآخر قليلًا كل مرة، وفي المرحلة 5 ينقل «{ui:scriptCall}» الموقف نفسه إلى مكالمة. كل نص يذكر عبارات المرحلة الأساسية التي يستخدمها، واجتيازه يضيفها إلى جانب العبارات. والعبارات التي لا تظهر في أي نص موقف لها نصوص قصيرة في «{ui:scriptsByExpression}». «{ui:scriptTodayTitle}» في الأعلى يُختار حسب القواعد التي صحّحها المعلم مؤخرًا والعبارات التي لم تتعلمها بعد. في الأسفل «{ui:framesTitle}»: قوالب جمل فيها فراغ واحد. قل أربع جمل تغيّر فيها الفراغ فقط؛ وإذا أصبتها كلها في «{ui:frameModeBlank}» اجتزت القالب، ثم تنتقل إلى النصوص التي تستخدمه ومن المرحلة 3 يتيح لك «{ui:scriptModeOwn}» ملء الفراغ بقصتك أنت (المراحل 1–3). وإذا صحّح المعلم القالب نفسه مرتين خلال أسبوعين تظهر بطاقة ◐ «{ui:frameRedo}» أعلى قائمة النصوص: ترى جملتك والتصحيح ثم تقول القالب من جديد."
           ],
-          "shot": "stage-parts"
+          "shot": "stage-scripts"
         },
         {
           "heading": "8. الملاحظات",
@@ -4357,7 +4357,7 @@
             "ด้านล่าง “{ui:stageExamplesTitle}” แสดงบทสนทนาที่ทำได้ในขั้นนี้ ลองด้วย “{ui:stageTry}”",
             "“{ui:stageScriptsTitle}” บนสุดของแต่ละขั้น: บทจะเล่นและหยุดที่ประโยคของคุณ เลือกวิธีดู (“{ui:scriptModeShadow}” “{ui:scriptModeHint}” “{ui:scriptModeHide}” “{ui:scriptModeOwn}”) แล้วพูดด้วย 🎤 พูดถูกทุกประโยคด้วยวิธีอื่นที่ไม่ใช่พูดตาม ถือว่าผ่านบทนั้น — ขั้นถัดไปจะเปิดเมื่อสี่ด้านถึง 70% และผ่านบททั้งหมดของขั้นนั้น ขั้น 3–4 อีกฝ่ายพูดต่างไปเล็กน้อยทุกครั้ง ขั้น 5 กด “{ui:scriptCall}” เพื่อเล่นสถานการณ์เดียวกันเป็นการโทร แต่ละบทแสดงสำนวนหลักของขั้นที่ใช้ในบท ผ่านบทแล้วสำนวนเหล่านั้นจะเข้าไปในด้านสำนวน สำนวนที่ไม่มีในบทสถานการณ์มีบทสั้นๆ ใน “{ui:scriptsByExpression}” “{ui:scriptTodayTitle}” ด้านบนเลือกจากไวยากรณ์ที่ติวเตอร์แก้ให้ช่วงนี้และสำนวนที่ยังไม่ได้เรียน ด้านล่าง “{ui:framesTitle}” คือแพตเทิร์นประโยคที่มีช่องว่างหนึ่งช่อง พูดสี่ประโยคโดยเปลี่ยนแค่ช่องว่าง พูดถูกทั้งหมดใน “{ui:frameModeBlank}” ถือว่าผ่าน แล้วไปต่อที่บทที่มีแพตเทิร์นนั้น ตั้งแต่ขั้น 3 ใช้ “{ui:scriptModeOwn}” เติมช่องว่างด้วยเรื่องของตัวเอง (ขั้น 1–3) ถ้าติวเตอร์แก้แพตเทิร์นเดียวกันสองครั้งในสองสัปดาห์ การ์ด ◐ “{ui:frameRedo}” จะขึ้นบนสุดของรายการบท ดูประโยคของคุณกับประโยคที่แก้แล้ว แล้วพูดแพตเทิร์นนั้นอีกครั้ง"
           ],
-          "shot": "stage-parts"
+          "shot": "stage-scripts"
         },
         {
           "heading": "8. โน้ต",
@@ -4787,7 +4787,7 @@
             "नीचे “{ui:stageExamplesTitle}” में इस चरण में होने वाली बातचीत दिखती है; “{ui:stageTry}” से आज़माएँ।",
             "हर चरण में सबसे ऊपर “{ui:stageScriptsTitle}”: स्क्रिप्ट चलती है और आपकी पंक्ति पर रुकती है। देखने का तरीका चुनें (“{ui:scriptModeShadow}”, “{ui:scriptModeHint}”, “{ui:scriptModeHide}”, “{ui:scriptModeOwn}”) और 🎤 से बोलें। दोहराने के अलावा किसी भी तरीके से अपनी सारी पंक्तियाँ सही बोलें तो स्क्रिप्ट पास — अगला चरण तब खुलता है जब चारों हिस्से 70% पर हों और उस चरण की सारी स्क्रिप्ट पास हों। चरण 3–4 में सामने वाले की बातें हर बार थोड़ी बदलती हैं; चरण 5 में “{ui:scriptCall}” वही स्थिति कॉल पर ले जाता है। हर स्क्रिप्ट में उस चरण की मुख्य अभिव्यक्तियाँ दिखती हैं जो उसमें आती हैं; पास करने पर वे अभिव्यक्ति वाले हिस्से में जुड़ जाती हैं। जो किसी स्थिति-स्क्रिप्ट में नहीं हैं, उनके लिए “{ui:scriptsByExpression}” में छोटी स्क्रिप्ट हैं। सबसे ऊपर “{ui:scriptTodayTitle}” हाल में ट्यूटर के सुधारे व्याकरण और अभी न सीखी अभिव्यक्तियों से चुनी जाती है। नीचे “{ui:framesTitle}” में एक खाली जगह वाले वाक्य-ढाँचे हैं। सिर्फ़ खाली जगह बदलकर चार वाक्य बोलें; “{ui:frameModeBlank}” में सब सही हों तो पास, फिर उस ढाँचे वाली स्क्रिप्ट पर आगे बढ़ें चरण 3 से “{ui:scriptModeOwn}” में खाली जगह अपनी बात से भरें (चरण 1–3)। अगर ट्यूटर दो हफ़्तों में एक ही ढाँचा दो बार सुधारे, तो स्क्रिप्ट सूची के ऊपर ◐ “{ui:frameRedo}” कार्ड आता है: अपना वाक्य और सुधार देखें, फिर वह ढाँचा दोबारा बोलें।"
           ],
-          "shot": "stage-parts"
+          "shot": "stage-scripts"
         },
         {
           "heading": "8. नोट्स",
