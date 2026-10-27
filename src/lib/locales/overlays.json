@@ -696,7 +696,11 @@
     "whatsNewFramesTitle": "型で言いかえ・もう一度練習",
     "whatsNewFramesBody": "文の型を空欄だけ変えて4回言います。チューターが同じ型を2回直すと「もう一度練習」に戻ってきます。",
     "whatsNewAiTutorTitle": "AIチューターは「人」タブに",
-    "whatsNewAiTutorBody": "AIチューターは「人」タブのいちばん上。プロフィールからメッセージ・通話・通話の記録を開けます。"
+    "whatsNewAiTutorBody": "AIチューターは「人」タブのいちばん上。プロフィールからメッセージ・通話・通話の記録を開けます。",
+    "scriptAmountTitle": "台本で身についたこと",
+    "amountFrames": "型",
+    "amountLines": "言った文",
+    "canDoTitle": "できること"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1395,7 +1399,11 @@
     "whatsNewFramesTitle": "换空格说句型·再练一次",
     "whatsNewFramesBody": "一个句型只换空格说四遍。老师两次纠正同一个句型时，它会以“再练一次”回来。",
     "whatsNewAiTutorTitle": "AI 老师在“人”标签",
-    "whatsNewAiTutorBody": "AI 老师在“人”标签最上方：在资料页发消息、通话或看通话记录。"
+    "whatsNewAiTutorBody": "AI 老师在“人”标签最上方：在资料页发消息、通话或看通话记录。",
+    "scriptAmountTitle": "通过剧本学到的",
+    "amountFrames": "句型",
+    "amountLines": "说过的句子",
+    "canDoTitle": "能做到的事"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2096,7 +2104,11 @@
     "whatsNewFramesTitle": "Đổi chỗ trống, luyện lại",
     "whatsNewFramesBody": "Nói một mẫu câu bốn lần, chỉ đổi chỗ trống. Khi gia sư sửa cùng một mẫu hai lần, nó quay lại thành “Luyện lại”.",
     "whatsNewAiTutorTitle": "Gia sư AI ở tab Mọi người",
-    "whatsNewAiTutorBody": "Gia sư AI ở đầu tab Mọi người: nhắn tin, gọi hoặc xem cuộc gọi cũ từ hồ sơ."
+    "whatsNewAiTutorBody": "Gia sư AI ở đầu tab Mọi người: nhắn tin, gọi hoặc xem cuộc gọi cũ từ hồ sơ.",
+    "scriptAmountTitle": "Học được qua kịch bản",
+    "amountFrames": "Mẫu câu",
+    "amountLines": "Câu đã nói",
+    "canDoTitle": "Việc bạn làm được"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2802,7 +2814,11 @@
     "whatsNewFramesTitle": "Changer le trou, retravailler",
     "whatsNewFramesBody": "Dites une structure quatre fois en ne changeant que le trou. Si le tuteur corrige deux fois la même structure, elle revient en « Retravailler ».",
     "whatsNewAiTutorTitle": "Le tuteur IA dans Personnes",
-    "whatsNewAiTutorBody": "Le tuteur IA est en haut de Personnes : depuis son profil, écrivez-lui, appelez-le ou revoyez vos appels."
+    "whatsNewAiTutorBody": "Le tuteur IA est en haut de Personnes : depuis son profil, écrivez-lui, appelez-le ou revoyez vos appels.",
+    "scriptAmountTitle": "Acquis avec les dialogues",
+    "amountFrames": "Structures",
+    "amountLines": "Phrases dites",
+    "canDoTitle": "Ce que vous savez faire"
   },
   "it": {
     "archive": "Report",
@@ -3699,7 +3715,11 @@
     "whatsNewFramesTitle": "Cambia lo spazio, riprova",
     "whatsNewFramesBody": "Di’ uno schema quattro volte cambiando solo lo spazio. Se il tutor corregge due volte lo stesso schema, torna come «Riprova».",
     "whatsNewAiTutorTitle": "Il tutor IA in Persone",
-    "whatsNewAiTutorBody": "Il tutor IA è in cima a Persone: dal suo profilo puoi scrivergli, chiamarlo o rivedere le chiamate."
+    "whatsNewAiTutorBody": "Il tutor IA è in cima a Persone: dal suo profilo puoi scrivergli, chiamarlo o rivedere le chiamate.",
+    "scriptAmountTitle": "Imparato con i copioni",
+    "amountFrames": "Schemi",
+    "amountLines": "Frasi dette",
+    "canDoTitle": "Cosa sai fare"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4408,7 +4428,11 @@
     "whatsNewFramesTitle": "Trocar a lacuna, praticar de novo",
     "whatsNewFramesBody": "Diga uma estrutura quatro vezes trocando só a lacuna. Se o tutor corrigir a mesma estrutura duas vezes, ela volta como “Praticar de novo”.",
     "whatsNewAiTutorTitle": "Tutor de IA em Pessoas",
-    "whatsNewAiTutorBody": "O tutor de IA fica no topo de Pessoas: no perfil, mande mensagem, ligue ou veja chamadas anteriores."
+    "whatsNewAiTutorBody": "O tutor de IA fica no topo de Pessoas: no perfil, mande mensagem, ligue ou veja chamadas anteriores.",
+    "scriptAmountTitle": "Aprendido com roteiros",
+    "amountFrames": "Estruturas",
+    "amountLines": "Frases ditas",
+    "canDoTitle": "O que você já consegue"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5303,7 +5327,11 @@
     "whatsNewFramesTitle": "Меняйте пропуск, повторяйте",
     "whatsNewFramesBody": "Скажите шаблон четыре раза, меняя только пропуск. Если репетитор дважды исправит один шаблон, он вернётся как «Повторить».",
     "whatsNewAiTutorTitle": "ИИ-репетитор в «Людях»",
-    "whatsNewAiTutorBody": "ИИ-репетитор вверху вкладки «Люди»: из профиля можно написать, позвонить или посмотреть прошлые звонки."
+    "whatsNewAiTutorBody": "ИИ-репетитор вверху вкладки «Люди»: из профиля можно написать, позвонить или посмотреть прошлые звонки.",
+    "scriptAmountTitle": "Освоено по сценариям",
+    "amountFrames": "Шаблоны",
+    "amountLines": "Сказано фраз",
+    "canDoTitle": "Что вы умеете"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6008,7 +6036,11 @@
     "whatsNewFramesTitle": "Ganti bagian kosong, latih lagi",
     "whatsNewFramesBody": "Ucapkan satu pola empat kali dengan mengganti bagian kosong saja. Jika tutor membetulkan pola yang sama dua kali, pola itu kembali sebagai “Latih lagi”.",
     "whatsNewAiTutorTitle": "Tutor AI di tab Orang",
-    "whatsNewAiTutorBody": "Tutor AI ada di atas tab Orang: dari profilnya, kirim pesan, telepon, atau lihat panggilan sebelumnya."
+    "whatsNewAiTutorBody": "Tutor AI ada di atas tab Orang: dari profilnya, kirim pesan, telepon, atau lihat panggilan sebelumnya.",
+    "scriptAmountTitle": "Dipelajari lewat naskah",
+    "amountFrames": "Pola",
+    "amountLines": "Kalimat diucapkan",
+    "canDoTitle": "Yang sudah bisa kamu lakukan"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6707,7 +6739,11 @@
     "whatsNewFramesTitle": "بدّل الفراغ وتدرّب مجددًا",
     "whatsNewFramesBody": "قل قالب جملة أربع مرات مغيّرًا الفراغ فقط. وإذا صحّح المعلم القالب نفسه مرتين يعود إليك في «تدرّب مجددًا».",
     "whatsNewAiTutorTitle": "المعلم الذكي في «الأشخاص»",
-    "whatsNewAiTutorBody": "المعلم الذكي في أعلى تبويب «الأشخاص»: من ملفه راسله أو اتصل به أو راجع مكالماتك السابقة."
+    "whatsNewAiTutorBody": "المعلم الذكي في أعلى تبويب «الأشخاص»: من ملفه راسله أو اتصل به أو راجع مكالماتك السابقة.",
+    "scriptAmountTitle": "ما تعلّمته بالنصوص",
+    "amountFrames": "القوالب",
+    "amountLines": "جمل قلتها",
+    "canDoTitle": "ما تستطيع فعله"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7406,7 +7442,11 @@
     "whatsNewFramesTitle": "เปลี่ยนช่องว่าง ฝึกอีกครั้ง",
     "whatsNewFramesBody": "พูดแพตเทิร์นประโยคสี่ครั้งโดยเปลี่ยนแค่ช่องว่าง ถ้าติวเตอร์แก้แพตเทิร์นเดิมสองครั้ง มันจะกลับมาเป็น “ฝึกอีกครั้ง”",
     "whatsNewAiTutorTitle": "ติวเตอร์ AI อยู่ในแท็บคน",
-    "whatsNewAiTutorBody": "ติวเตอร์ AI อยู่บนสุดของแท็บคน จากโปรไฟล์ ส่งข้อความ โทร หรือดูประวัติการโทรได้"
+    "whatsNewAiTutorBody": "ติวเตอร์ AI อยู่บนสุดของแท็บคน จากโปรไฟล์ ส่งข้อความ โทร หรือดูประวัติการโทรได้",
+    "scriptAmountTitle": "สิ่งที่ได้จากบท",
+    "amountFrames": "แพตเทิร์น",
+    "amountLines": "ประโยคที่พูด",
+    "canDoTitle": "สิ่งที่ทำได้"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8105,6 +8145,10 @@
     "whatsNewFramesTitle": "खाली जगह बदलें, फिर से अभ्यास",
     "whatsNewFramesBody": "एक वाक्य-ढाँचा चार बार बोलें, सिर्फ़ खाली जगह बदलकर। ट्यूटर एक ही ढाँचा दो बार सुधारे तो वह “फिर से अभ्यास” में लौटता है।",
     "whatsNewAiTutorTitle": "लोग टैब में AI ट्यूटर",
-    "whatsNewAiTutorBody": "AI ट्यूटर लोग टैब में सबसे ऊपर है: प्रोफ़ाइल से संदेश भेजें, कॉल करें या पुरानी कॉल देखें।"
+    "whatsNewAiTutorBody": "AI ट्यूटर लोग टैब में सबसे ऊपर है: प्रोफ़ाइल से संदेश भेजें, कॉल करें या पुरानी कॉल देखें।",
+    "scriptAmountTitle": "स्क्रिप्ट से सीखा",
+    "amountFrames": "ढाँचे",
+    "amountLines": "बोले गए वाक्य",
+    "canDoTitle": "आप क्या कर सकते हैं"
   }
 }

@@ -123,3 +123,26 @@ test("앱에 없는 언어: 서버가 보낸 대본·틀을 넣고, 앱에 든 �
   assert.equal(allFramesFor("zz").length, 1);
   assert.equal(registerFrames("es", [frame]), false);
 });
+
+test("대본으로 익힌 양: 통과한 대본·틀만, 할 수 있는 일은 틀을 하나 통과하면 켜짐", async () => {
+  const { scriptAmount } = await import("./scriptAmount.ts");
+  const { allScriptsFor } = await import("./stageScripts.ts");
+  for (const language of Object.keys(FRAMED)) {
+    const none = scriptAmount(language, new Set())!;
+    assert.equal(none.expressions.done, 0);
+    assert.equal(none.lines, 0);
+    assert.ok(none.canDo.length >= 20 && none.canDo.every((item) => !item.done), `${language} 할 수 있는 일`);
+    const all = new Set([...allScriptsFor(language).map((s) => s.id), ...framesFor(language, 1).map((f) => f.id), ...framesFor(language, 2).map((f) => f.id), ...framesFor(language, 3).map((f) => f.id)]);
+    const full = scriptAmount(language, all)!;
+    assert.equal(full.expressions.done, full.expressions.total, `${language} 표현 모두`);
+    assert.equal(full.grammar.done, full.grammar.total, `${language} 문법 모두`);
+    assert.equal(full.frames.done, full.frames.total);
+    assert.ok(full.canDo.every((item) => item.done));
+    assert.ok(full.lines > 100);
+  }
+  const frame = framesFor("ko", 1)[0]!;
+  const one = scriptAmount("ko", new Set([frame.id]))!;
+  assert.equal(one.frames.done, 1);
+  assert.equal(one.canDo.filter((item) => item.done).map((item) => item.fn.id).join(), frame.fn);
+  assert.equal(scriptAmount("xx", new Set()), null);
+});

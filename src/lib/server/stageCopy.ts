@@ -10,6 +10,7 @@ import { ladderFor, stageText, type Stage, type StageText } from "../curriculum/
 import { scriptFor, type ScriptCourse } from "../curriculum/scripts/index.ts";
 import { scriptsFor } from "../curriculum/stageScripts.ts";
 import { framesFor } from "../curriculum/frames.ts";
+import { FUNCTIONS } from "../curriculum/functions.ts";
 
 export type StageLineView = { who: "A" | "B"; text: string; gloss: string };
 export type StageDialogueView = { setting: string; lines: StageLineView[] };
@@ -264,6 +265,8 @@ export function scriptGlossTexts(language: string, stage: number): string[] {
       add(example.gloss);
     }
   }
+  // "할 수 있는 일" 칸 이름(공통 기능, 그 단계 것) — 맨 뒤에 붙여 앞 묶음의 저장을 그대로 쓴다.
+  for (const fn of FUNCTIONS) if (fn.stage === stage) add(fn.name);
   return out;
 }
 
