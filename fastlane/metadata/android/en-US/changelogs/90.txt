@@ -1,0 +1,4 @@
+• My: every stage now has scripts for its situations. Listen, say your lines, and pass them all to open the next stage. “Today's script” picks one for you.
+• “Swap the pattern”: say one sentence pattern with different words. A pattern the tutor corrects twice comes back as “Practise again”.
+• Stage scripts are free for everyone; the new “Scripts” plan adds a short call every three days and chat.
+• The AI tutor is now at the top of People, and call history is kept apart from chat.
