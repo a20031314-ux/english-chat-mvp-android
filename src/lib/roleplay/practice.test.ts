@@ -156,3 +156,14 @@ test("a Japanese line is compared word by word, not as one word", () => {
   assert.ok(outcomes.some((o) => o.kind === "changed" && o.word === "店" && o.heardAs === "駅"));
   assert.ok(outcomes.filter((o) => o.kind === "kept").length >= 3);
 });
+
+test("a word heard in two pieces is reported as one, glued without spaces in spaceless scripts", () => {
+  const ja = compareToTarget("はじめまして。キムです。", "初めまして キムです");
+  const first = ja.outcomes[0]!;
+  assert.equal(first.kind, "changed");
+  assert.equal(first.kind === "changed" && first.heardAs, "初めまして");
+  assert.deepEqual(ja.added, []);
+  const es = compareToTarget("Quiero un café", "Quiero un ca fe");
+  const last = es.outcomes.at(-1)!;
+  assert.equal(last.kind === "changed" && last.heardAs, "ca fe");
+});
