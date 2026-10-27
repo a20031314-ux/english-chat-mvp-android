@@ -306,7 +306,8 @@ test("추론 모델(gpt-5·gpt-6·o)에는 temperature를 빼고 상한 이름�
   assert.equal(made.max_tokens, undefined);
   assert.equal(made.max_completion_tokens, 1324);
   assert.equal(made.reasoning_effort, "none");
-  assert.equal((forOpenAIModel("gpt-5.6-terra", { messages: [] }) as Record<string, unknown>).reasoning_effort, "minimal");
+  assert.equal((forOpenAIModel("gpt-5.6-terra", { messages: [] }) as Record<string, unknown>).reasoning_effort, "none");
+  assert.equal((forOpenAIModel("gpt-5-mini", { messages: [] }) as Record<string, unknown>).reasoning_effort, "minimal");
   assert.equal(made.model, "gpt-6-luna");
   const kept = forOpenAIModel("gpt-4o-mini", { temperature: 0.2, max_tokens: 50, messages: [] }) as Record<string, unknown>;
   assert.equal(kept.temperature, 0.2);

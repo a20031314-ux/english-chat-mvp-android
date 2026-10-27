@@ -193,10 +193,11 @@ export function isReasoningModel(model: string): boolean {
 
 /**
  * 가장 짧게 생각하는 값 — 계열마다 이름이 다르다(2026-10-27 운영: gpt-6-luna는 'minimal'을 거절, none·low·medium·high·xhigh만).
- * gpt-5 계열·o 시리즈는 'minimal'.
+ * 옛 gpt-5·gpt-5-mini·o 시리즈는 'minimal'.
  */
 export function fastestEffort(model: string): string {
-  return /^gpt-6/.test(model) ? "none" : "minimal";
+  // gpt-5.6-terra도 'none'(같은 날 운영). 옛 gpt-5·gpt-5-mini·o 시리즈만 'minimal'.
+  return /^gpt-(6|5\.[5-9])/.test(model) ? "none" : "minimal";
 }
 
 /**
