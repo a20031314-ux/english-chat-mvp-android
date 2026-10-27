@@ -669,7 +669,10 @@
     "scriptClean": "よく聞き取れました",
     "scriptDone": "最後までできました",
     "scriptReveal": "原文を見る",
-    "scriptRestart": "最初から"
+    "scriptRestart": "最初から",
+    "scriptModeOwn": "自分の言葉で",
+    "scriptCall": "通話でやってみる",
+    "scriptsToNext": "次の段階まで:台本あと{n}つ"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1341,7 +1344,10 @@
     "scriptClean": "听得很清楚",
     "scriptDone": "整段练完了",
     "scriptReveal": "看原句",
-    "scriptRestart": "从头开始"
+    "scriptRestart": "从头开始",
+    "scriptModeOwn": "用自己的话",
+    "scriptCall": "通话试试",
+    "scriptsToNext": "距下一阶段：还有{n}个剧本"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2015,7 +2021,10 @@
     "scriptClean": "Nghe rõ rồi",
     "scriptDone": "Bạn đã xong kịch bản",
     "scriptReveal": "Xem câu",
-    "scriptRestart": "Từ đầu"
+    "scriptRestart": "Từ đầu",
+    "scriptModeOwn": "Bằng lời của bạn",
+    "scriptCall": "Thử qua cuộc gọi",
+    "scriptsToNext": "Đến giai đoạn tiếp: còn {n} kịch bản"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2694,7 +2703,10 @@
     "scriptClean": "Bien entendu",
     "scriptDone": "Dialogue terminé",
     "scriptReveal": "Voir la phrase",
-    "scriptRestart": "Depuis le début"
+    "scriptRestart": "Depuis le début",
+    "scriptModeOwn": "Avec vos mots",
+    "scriptCall": "Essayer en appel",
+    "scriptsToNext": "Jusqu’à l’étape suivante : {n} dialogues"
   },
   "it": {
     "archive": "Report",
@@ -3564,7 +3576,10 @@
     "scriptClean": "Sentito bene",
     "scriptDone": "Copione finito",
     "scriptReveal": "Mostra frase",
-    "scriptRestart": "Dall’inizio"
+    "scriptRestart": "Dall’inizio",
+    "scriptModeOwn": "Con parole tue",
+    "scriptCall": "Prova in chiamata",
+    "scriptsToNext": "Alla fase successiva: {n} copioni"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4246,7 +4261,10 @@
     "scriptClean": "Ouvido com clareza",
     "scriptDone": "Você terminou o roteiro",
     "scriptReveal": "Ver frase",
-    "scriptRestart": "Do começo"
+    "scriptRestart": "Do começo",
+    "scriptModeOwn": "Com suas palavras",
+    "scriptCall": "Testar numa chamada",
+    "scriptsToNext": "Para a próxima etapa: {n} roteiros"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5114,7 +5132,10 @@
     "scriptClean": "Хорошо слышно",
     "scriptDone": "Сценарий пройден",
     "scriptReveal": "Показать фразу",
-    "scriptRestart": "Сначала"
+    "scriptRestart": "Сначала",
+    "scriptModeOwn": "Своими словами",
+    "scriptCall": "Попробовать в звонке",
+    "scriptsToNext": "До следующего этапа: сценариев — {n}"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5792,7 +5813,10 @@
     "scriptClean": "Terdengar jelas",
     "scriptDone": "Naskah selesai",
     "scriptReveal": "Lihat kalimat",
-    "scriptRestart": "Dari awal"
+    "scriptRestart": "Dari awal",
+    "scriptModeOwn": "Dengan kata sendiri",
+    "scriptCall": "Coba lewat panggilan",
+    "scriptsToNext": "Ke tahap berikutnya: {n} naskah lagi"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6464,7 +6488,10 @@
     "scriptClean": "سُمعت بوضوح",
     "scriptDone": "أنهيت النص",
     "scriptReveal": "اعرض الجملة",
-    "scriptRestart": "من البداية"
+    "scriptRestart": "من البداية",
+    "scriptModeOwn": "بكلماتك",
+    "scriptCall": "جرّبها في مكالمة",
+    "scriptsToNext": "حتى المرحلة التالية: {n} نصوص"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7136,7 +7163,10 @@
     "scriptClean": "ได้ยินชัดเจน",
     "scriptDone": "จบบทแล้ว",
     "scriptReveal": "ดูประโยค",
-    "scriptRestart": "เริ่มใหม่"
+    "scriptRestart": "เริ่มใหม่",
+    "scriptModeOwn": "พูดด้วยคำของคุณ",
+    "scriptCall": "ลองในการโทร",
+    "scriptsToNext": "ถึงขั้นถัดไป: อีก {n} บท"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7808,6 +7838,9 @@
     "scriptClean": "साफ़ सुनाई दिया",
     "scriptDone": "स्क्रिप्ट पूरी हुई",
     "scriptReveal": "वाक्य देखें",
-    "scriptRestart": "शुरू से"
+    "scriptRestart": "शुरू से",
+    "scriptModeOwn": "अपने शब्दों में",
+    "scriptCall": "कॉल पर आज़माएँ",
+    "scriptsToNext": "अगले चरण तक: {n} स्क्रिप्ट"
   }
 }

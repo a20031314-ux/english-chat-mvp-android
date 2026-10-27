@@ -5,7 +5,6 @@
  * 레벨 이름·숫자는 보이지 않는다 — 대화와 "할 수 있게 되는 것"만.
  * 단계 데이터: /api/curriculum/stages (영어·일본어·한국어. 다른 학습 언어는 null이라 이 화면이 안 나옴).
  */
-import { StageScripts } from "@/components/studyMap/StageScripts";
 import { useEffect, useState } from "react";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
@@ -146,7 +145,7 @@ export function StagePicker({
  * My "단계" 보기: 이 단계에선 이런 대화가 된다 — 대화 예시 몇 개(사용자 2026-10-25 "상황은 이 단계에선 이 정도 대화가 가능하다 정도의 예시").
  * 단계는 말하는 힘(어휘·문법·표현·발음), 상황은 그 힘으로 되는 대화의 예. 예시마다 "써 보기" = 그 장면으로 채팅. 할 수 있게 되는 것은 접어 둔다.
  */
-export function StageExamples({ ui, stage, locale }: { ui: UICopy; stage: StageView; locale?: string }) {
+export function StageExamples({ ui, stage }: { ui: UICopy; stage: StageView }) {
   const [open, setOpen] = useState(false);
   return (
     <section className="mt-3 flex flex-col gap-2">
@@ -169,7 +168,6 @@ export function StageExamples({ ui, stage, locale }: { ui: UICopy; stage: StageV
           </button>
         </div>
       ))}
-      {locale ? <StageScripts ui={ui} locale={locale} language={stage.id.split("-")[0]!} stage={stage.order} /> : null}
       <button type="button" onClick={() => setOpen(!open)} aria-expanded={open} className="self-start text-caption text-slate-400 underline-offset-4 hover:underline">
         {ui.stageCanDo}
       </button>

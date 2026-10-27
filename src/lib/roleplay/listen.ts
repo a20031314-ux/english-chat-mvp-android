@@ -873,6 +873,9 @@ export async function fetchPractice(input: {
   heard: string;
   nativeLanguage: string;
   isPremium: boolean;
+  /** "내 말로": 보여 준 뜻과 바로 앞 상대 줄 — 있으면 낱말 비교 대신 뜻이 통하는지 본다. */
+  meaning?: string;
+  before?: string;
 }): Promise<Practice | null> {
   try {
     const response = await fetch(apiUrl("/api/roleplay/practice"), {
@@ -886,6 +889,7 @@ export async function fetchPractice(input: {
         target: input.target,
         heard: input.heard,
         nativeLanguage: input.nativeLanguage,
+        ...(input.meaning ? { meaning: input.meaning, before: input.before ?? "" } : {}),
       }),
     });
     if (!response.ok) {
