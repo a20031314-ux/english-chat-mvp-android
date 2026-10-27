@@ -5,7 +5,8 @@ import { recordPronunciation } from "@/lib/server/growthStore";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { coerceLanguageCode, interfaceLanguageName } from "@/lib/learningLanguages";
 import { findScenario } from "@/lib/roleplay/catalog";
-import { compareToTarget, parsePractice, practicePrompt } from "@/lib/roleplay/practice";
+import { compareToTarget, parsePractice, practicePrompt, type Practice } from "@/lib/roleplay/practice";
+import { noteFitsUi } from "@/lib/notes/notebook";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
@@ -71,25 +72,33 @@ export async function POST(request: NextRequest) {
   try {
     const model = practiceModel();
     const reasoning = isReasoningModel(model);
-    const completion = await completeChat(client, "roleplayPractice", {
-      messages: [
-        {
-          role: "system",
-          content: practicePrompt({
-            target,
-            heard,
-            comparison,
-            targetLanguage: interfaceLanguageName(scenario.language),
-            nativeLanguage: interfaceLanguageName(coerceLanguageCode(body.nativeLanguage)),
-          }),
-        },
-      ],
-      response_format: { type: "json_object" },
-      ...(reasoning
-        ? { max_completion_tokens: 2000, reasoning_effort: fastestEffort(model) as "minimal" }
-        : { max_tokens: 300 }),
-    });
-    const practice = parsePractice(completion.choices[0]?.message?.content ?? "");
+    const nativeCode = coerceLanguageCode(body.nativeLanguage);
+    const ask = () =>
+      completeChat(client, "roleplayPractice", {
+        messages: [
+          {
+            role: "system",
+            content: practicePrompt({
+              target,
+              heard,
+              comparison,
+              targetLanguage: interfaceLanguageName(scenario.language),
+              nativeLanguage: interfaceLanguageName(coerceLanguageCode(body.nativeLanguage)),
+            }),
+          },
+        ],
+        response_format: { type: "json_object" },
+        ...(reasoning
+          ? { max_completion_tokens: 2000, reasoning_effort: fastestEffort(model) as "minimal" }
+          : { max_tokens: 300 }),
+      });
+    // The note sometimes comes back in the learning language (2026-10-27: a Japanese note for a Korean reader); ask once more when it is not in the interface script.
+    let practice: Practice | null = null;
+    for (let attempt = 0; attempt < 2; attempt += 1) {
+      const completion = await ask();
+      practice = parsePractice(completion.choices[0]?.message?.content ?? "");
+      if (!practice || noteFitsUi(practice.note, nativeCode)) break;
+    }
     if (!practice) {
       return jsonWithCors(request, { error: "NO_PRACTICE" }, { status: 502 });
     }
