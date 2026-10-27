@@ -4,6 +4,17 @@ import type { StageScript } from "../stageScripts.ts";
 export const ES: StageScript[] = [
   {
     "id": "es-1-1",
+    "name": {
+      "text": [
+        "Ji-woo"
+      ],
+      "en": [
+        "Ji-woo"
+      ],
+      "ko": [
+        "지우"
+      ]
+    },
     "stage": 1,
     "situation": 0,
     "setting": {
@@ -253,6 +264,20 @@ export const ES: StageScript[] = [
   },
   {
     "id": "es-1-4",
+    "name": {
+      "text": [
+        "Daniel Kim",
+        "Daniel"
+      ],
+      "en": [
+        "Daniel Kim",
+        "Daniel"
+      ],
+      "ko": [
+        "다니엘 김",
+        "다니엘"
+      ]
+    },
     "stage": 1,
     "situation": 3,
     "setting": {
@@ -1263,6 +1288,17 @@ export const ES: StageScript[] = [
   },
   {
     "id": "es-3-3",
+    "name": {
+      "text": [
+        "Andrea Park"
+      ],
+      "en": [
+        "Andrea Park"
+      ],
+      "ko": [
+        "안드레아 박"
+      ]
+    },
     "stage": 3,
     "situation": 2,
     "setting": {
@@ -3125,6 +3161,17 @@ export const ES: StageScript[] = [
   },
   {
     "id": "es-5-4",
+    "name": {
+      "text": [
+        "Hye-jin Choi"
+      ],
+      "en": [
+        "Hye-jin Choi"
+      ],
+      "ko": [
+        "최혜진"
+      ]
+    },
     "stage": 5,
     "situation": 3,
     "setting": {

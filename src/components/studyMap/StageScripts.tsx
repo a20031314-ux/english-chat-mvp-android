@@ -1,23 +1,27 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { Attempt } from "@/components/RoleplayReview";
 import { sayLine } from "@/components/RoleplayOwnLine";
 import { TTSButton } from "@/components/TTSButton";
 import { usePremium } from "@/contexts/PremiumContext";
+import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { apiUrl } from "@/lib/apiBase";
 import { sendAppIntent } from "@/lib/appIntents";
 import type { UICopy } from "@/lib/copy";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import {
+  cleanBesidesName,
   countsForPass,
   glossFor,
   isSituationScript,
   passOutcome,
   hintOf,
   modesFor,
+  personalize,
   runPasses,
+  usableName,
   scriptsFor,
   variantOf,
   type LineRun,
@@ -75,6 +79,10 @@ export function StageScripts({
 }) {
   const scripts = scriptsFor(language, stage);
   const [open, setOpen] = useState<StageScript | null>(null);
+  // 대본의 학습자 이름 자리에 로그인한 사용자의 닉네임(없으면 대본 이름 그대로).
+  const nickname = useSyncExternalStore(subscribeSession, () => readCachedAccount()?.profile.nickname ?? null, () => null);
+  // 같은 대본이면 같은 객체(재생 effect가 다시 돌지 않게).
+  const shown = useMemo(() => (open ? personalize(open, language, nickname) : null), [open, language, nickname]);
   const [handled, setHandled] = useState(0);
   if (openFor && openFor.at !== handled) {
     // 밖에서 고른 대본을 연다(렌더 중 한 번 — 같은 at은 다시 안 연다).
@@ -145,7 +153,8 @@ export function StageScripts({
           ui={ui}
           locale={locale}
           language={language}
-          script={open}
+          script={shown ?? open}
+          learnerName={open.name ? usableName(nickname) : null}
           passed={passed.includes(open.id)}
           onPassed={onPassed}
           onClose={() => setOpen(null)}
@@ -163,11 +172,14 @@ function ScriptPlayer({
   passed,
   onPassed,
   onClose,
+  learnerName = null,
 }: {
   ui: UICopy;
   locale: string;
   language: string;
   script: StageScript;
+  /** 대본에 넣은 사용자 이름 — 받아쓰기가 이름을 다르게 적어도 그 낱말은 셈에서 뺀다. */
+  learnerName?: string | null;
   passed: boolean;
   onPassed?: (id: string) => void;
   onClose: () => void;
@@ -260,7 +272,10 @@ function ScriptPlayer({
     setListening(false);
     // 원문 방식: 낱말이 다 맞거나, 받아쓰기가 같은 소리를 다른 글자로 적은 것(はじめ ↔ 初め)을 확인 한마디가 good으로 볼 때.
     // 내 말로: 뜻이 통한다고 볼 때만.
-    const clean = Boolean(heard) && (own ? practice?.good === true : compareToTarget(line.text, heard).clean || practice?.good === true);
+    const compared = compareToTarget(line.text, heard);
+    const named = Boolean(learnerName) && line.text.includes(learnerName!);
+    const exact = compared.clean || (named && cleanBesidesName(compared.outcomes, learnerName));
+    const clean = Boolean(heard) && (own ? practice?.good === true : exact || practice?.good === true);
     setResults((current) => ({ ...current, [index]: { heard, practice, clean, mode: own ? "own" : mode } }));
   };
 

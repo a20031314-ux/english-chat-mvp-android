@@ -4,6 +4,17 @@ import type { StageScript } from "../stageScripts.ts";
 export const JA: StageScript[] = [
   {
     "id": "ja-1-1",
+    "name": {
+      "text": [
+        "マリア"
+      ],
+      "en": [
+        "Maria"
+      ],
+      "ko": [
+        "마리아"
+      ]
+    },
     "stage": 1,
     "situation": 0,
     "setting": {
@@ -1278,6 +1289,17 @@ export const JA: StageScript[] = [
   },
   {
     "id": "ja-3-2",
+    "name": {
+      "text": [
+        "パク"
+      ],
+      "en": [
+        "Park"
+      ],
+      "ko": [
+        "박"
+      ]
+    },
     "stage": 3,
     "situation": 1,
     "setting": {
@@ -2105,6 +2127,17 @@ export const JA: StageScript[] = [
   },
   {
     "id": "ja-4-1",
+    "name": {
+      "text": [
+        "チェン"
+      ],
+      "en": [
+        "Chen"
+      ],
+      "ko": [
+        "첸"
+      ]
+    },
     "stage": 4,
     "situation": 0,
     "setting": {

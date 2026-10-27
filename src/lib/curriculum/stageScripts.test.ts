@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { glossFor, hintOf, isSituationScript, modesFor, passOutcome, runPasses, scriptForExpressions, scriptsFor, variantOf, type LineRun, type StageScript } from "./stageScripts.ts";
+import { cleanBesidesName, glossFor, hintOf, isSituationScript, personalize, scriptById, swapName, usableName, modesFor, passOutcome, runPasses, scriptForExpressions, scriptsFor, variantOf, type LineRun, type StageScript } from "./stageScripts.ts";
 import { ladderFor } from "./stages/index.ts";
 import { withScripts, type StageParts } from "../notes/stageParts.ts";
 
@@ -117,4 +117,31 @@ test("첫 글자만: 스페인어는 낱말마다, 일본어는 낱말 덩어리
   assert.ok(ja.endsWith("。"));
   assert.equal(glossFor({ en: "Hi", ko: "안녕" }, "ko"), "안녕");
   assert.equal(glossFor({ en: "Hi", ko: "안녕" }, "ar"), "Hi");
+});
+
+test("학습자 이름 자리: 닉네임으로 바꾸고, 한국어는 조사를 받침에 맞춘다", () => {
+  assert.equal(swapName("저는 루카스예요. 루카스 씨는요?", ["루카스"], "준", true), "저는 준이에요. 준 씨는요?");
+  assert.equal(swapName("저는 루카스예요.", ["루카스"], "민지", true), "저는 민지예요.");
+  assert.equal(swapName("제 이름은 다니엘 김이에요.", ["다니엘 김", "다니엘"], "Maria", true), "제 이름은 Maria예요.");
+  assert.equal(swapName("Sí, me llamo Daniel Kim.", ["Daniel Kim", "Daniel"], "Jun", false), "Sí, me llamo Jun.");
+  const ja = personalize(scriptById("ja", "ja-1-1")!, "ja", "민지");
+  assert.ok(ja.lines.some((line) => line.text.includes("민지です")));
+  assert.ok(ja.lines.every((line) => !line.text.includes("マリア") && !line.gloss.en.includes("Maria") && !(line.gloss.ko ?? "").includes("마리아")));
+  // 닉네임이 없거나 쓸 수 없으면 그대로
+  assert.equal(personalize(scriptById("ja", "ja-1-1")!, "ja", null), scriptById("ja", "ja-1-1"));
+  assert.equal(usableName("🙂🙂"), null);
+  assert.equal(usableName("  Ana   María "), "Ana María");
+  // 이름 낱말은 받아쓰기가 다르게 적어도 맞음
+  assert.equal(cleanBesidesName([{ kind: "changed", word: "민지です" }, { kind: "kept", word: "よろしく" }], "민지"), true);
+  assert.equal(cleanBesidesName([{ kind: "changed", word: "よろしく" }], "민지"), false);
+  // 이름을 표시한 대본은 그 모양이 실제로 글에 있다
+  for (const language of ["ko", "ja", "es"]) {
+    for (const stage of [1, 2, 3, 4, 5]) {
+      for (const script of scriptsFor(language, stage)) {
+        if (!script.name) continue;
+        const all = script.lines.map((line) => line.text).join(" ");
+        assert.ok(script.name.text.some((form) => all.includes(form)), `${script.id} 이름 모양`);
+      }
+    }
+  }
 });

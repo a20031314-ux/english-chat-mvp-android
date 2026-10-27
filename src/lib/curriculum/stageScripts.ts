@@ -38,6 +38,11 @@ export type StageScript = {
   setting: ScriptGloss;
   /** 5단계: 이 대화에서 해낼 것. */
   goal?: ScriptGloss;
+  /**
+   * 학습자 역할의 이름이 나오는 대본: 그 이름의 모양들(긴 것부터) — 학습 언어 글(text)·영어 뜻(en)·한국어 뜻(ko).
+   * 로그인한 사용자의 닉네임으로 바꿔 보인다(personalize, 2026-10-28 사용자 "마리아는 사용자 이름이야?" → "그렇게 해줘").
+   */
+  name?: { text: string[]; en: string[]; ko?: string[] };
   lines: StageScriptLine[];
 };
 
@@ -85,6 +90,85 @@ export function runPasses(script: StageScript, runs: Record<number, LineRun>): b
 export function variantOf(line: StageScriptLine, pick: number): ScriptVariant {
   const all: ScriptVariant[] = [{ text: line.text, gloss: line.gloss }, ...(line.alt ?? [])];
   return all[Math.abs(pick) % all.length]!;
+}
+
+/** 대본에 넣어도 되는 닉네임인지(글자가 있고 짧은 것). 아니면 대본의 이름 그대로. */
+export function usableName(nickname: string | null | undefined): string | null {
+  const name = (nickname ?? "").replace(/\s+/g, " ").trim();
+  if (!name || [...name].length > 20 || !/\p{L}/u.test(name)) return null;
+  return name;
+}
+
+/** 한국어 이름 뒤 조사: 받침이 있으면 앞, 없으면 뒤(이에요/예요 등). */
+const KO_PARTICLES: [string, string][] = [
+  ["이에요", "예요"],
+  ["이라고", "라고"],
+  ["이랑", "랑"],
+  ["이야", "야"],
+  ["이고", "고"],
+  ["은", "는"],
+  ["을", "를"],
+  ["과", "와"],
+  ["이", "가"],
+];
+
+function hasBatchim(name: string): boolean {
+  const last = [...name].pop() ?? "";
+  const code = last.charCodeAt(0) - 0xac00;
+  if (code >= 0 && code < 11172) return code % 28 !== 0;
+  // 라틴 글자 이름은 읽는 소리로: 자음으로 끝나면 받침처럼(Jun이에요, Maria예요).
+  return /[b-df-hj-np-tv-xz]$/i.test(last);
+}
+
+function escapeRegExp(text: string): string {
+  return text.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/** 글 안의 이름 모양들을 새 이름으로. korean이면 바로 뒤 조사를 새 이름의 받침에 맞춘다. */
+export function swapName(text: string, forms: readonly string[], name: string, korean: boolean): string {
+  let out = text;
+  for (const form of forms) {
+    if (!form || !out.includes(form)) continue;
+    if (!korean) {
+      out = out.split(form).join(name);
+      continue;
+    }
+    const batchim = hasBatchim(name);
+    const pattern = new RegExp(`${escapeRegExp(form)}(${KO_PARTICLES.flat().map(escapeRegExp).join("|")})?`, "g");
+    out = out.replace(pattern, (_match, particle?: string) => {
+      if (!particle) return name;
+      const pair = KO_PARTICLES.find(([a, b]) => a === particle || b === particle);
+      return name + (pair ? (batchim ? pair[0] : pair[1]) : particle);
+    });
+  }
+  return out;
+}
+
+/** 대본의 학습자 이름을 사용자 닉네임으로(이름이 없거나 쓸 수 없으면 그대로). */
+export function personalize(script: StageScript, language: string, nickname: string | null | undefined): StageScript {
+  const name = usableName(nickname);
+  if (!name || !script.name) return script;
+  const forms = script.name;
+  const text = (value: string) => swapName(value, forms.text, name, language === "ko");
+  const gloss = (value: ScriptGloss): ScriptGloss => ({
+    en: swapName(value.en, forms.en, name, false),
+    ...(value.ko !== undefined ? { ko: swapName(value.ko, forms.ko ?? [], name, true) } : {}),
+  });
+  return {
+    ...script,
+    lines: script.lines.map((line) => ({
+      ...line,
+      text: text(line.text),
+      gloss: gloss(line.gloss),
+      ...(line.alt ? { alt: line.alt.map((variant) => ({ text: text(variant.text), gloss: gloss(variant.gloss) })) } : {}),
+    })),
+  };
+}
+
+/** 이름이 든 줄: 이름 낱말은 받아쓰기가 어떻게 적든(ミンジ·민지·Minji) 셈에서 뺀다. 나머지 낱말이 다 맞으면 맞음. */
+export function cleanBesidesName(outcomes: readonly { kind: string; word: string }[], name: string | null): boolean {
+  const parts = (name ?? "").split(/[\s\-·・]+/).filter(Boolean);
+  return outcomes.every((outcome) => outcome.kind === "kept" || (parts.length > 0 && parts.some((part) => outcome.word.includes(part))));
 }
 
 /** 앱 언어로 된 뜻. 한국어 앱은 ko(없으면 en), 나머지는 지금 en. */

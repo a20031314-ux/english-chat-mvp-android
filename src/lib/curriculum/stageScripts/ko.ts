@@ -4,6 +4,14 @@ import type { StageScript } from "../stageScripts.ts";
 export const KO: StageScript[] = [
   {
     "id": "ko-1-1",
+    "name": {
+      "text": [
+        "루카스"
+      ],
+      "en": [
+        "Lucas"
+      ]
+    },
     "stage": 1,
     "situation": 0,
     "setting": {
@@ -356,6 +364,14 @@ export const KO: StageScript[] = [
   },
   {
     "id": "ko-1-x2",
+    "name": {
+      "text": [
+        "안나"
+      ],
+      "en": [
+        "Anna"
+      ]
+    },
     "stage": 1,
     "setting": {
       "en": "Meeting a new neighbor at the door",
@@ -1272,6 +1288,14 @@ export const KO: StageScript[] = [
   },
   {
     "id": "ko-3-3",
+    "name": {
+      "text": [
+        "리사"
+      ],
+      "en": [
+        "Lisa"
+      ]
+    },
     "stage": 3,
     "situation": 2,
     "setting": {
@@ -1417,6 +1441,14 @@ export const KO: StageScript[] = [
   },
   {
     "id": "ko-3-4",
+    "name": {
+      "text": [
+        "마이클 리"
+      ],
+      "en": [
+        "Michael Lee"
+      ]
+    },
     "stage": 3,
     "situation": 3,
     "setting": {
