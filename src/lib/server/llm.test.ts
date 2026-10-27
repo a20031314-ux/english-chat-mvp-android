@@ -30,15 +30,15 @@ test("설정이 없으면 기능마다 예전 OpenAI 모델 그대로", () => {
   withEnv({}, () => {
     assert.deepEqual(
       { ...routeFor("chat") },
-      { provider: "openai", model: "gpt-4o-mini", task: "chat", tier: "basic" },
+      { provider: "openai", model: "gpt-6-luna", task: "chat", tier: "basic" },
     );
-    assert.equal(routeFor("curriculum").model, "gpt-4.1");
-    assert.equal(routeFor("mission").model, "gpt-4.1-mini");
-    assert.equal(routeFor("ask").model, "gpt-4.1-mini");
-    assert.equal(routeFor("learnerRead").model, "gpt-4.1-mini");
-    assert.equal(routeFor("roleplayReview").model, "gpt-5-mini");
-    assert.equal(routeFor("roleplayTutor").model, "gpt-4.1-mini");
-    assert.equal(routeFor("vision").model, "gpt-4o-mini");
+    assert.equal(routeFor("curriculum").model, "gpt-6-luna");
+    assert.equal(routeFor("mission").model, "gpt-6-luna");
+    assert.equal(routeFor("ask").model, "gpt-6-luna");
+    assert.equal(routeFor("learnerRead").model, "gpt-6-luna");
+    assert.equal(routeFor("roleplayReview").model, "gpt-5.6-terra");
+    assert.equal(routeFor("roleplayTutor").model, "gpt-6-luna");
+    assert.equal(routeFor("vision").model, "gpt-6-luna");
   });
 });
 
@@ -52,9 +52,9 @@ test("키가 있으면 글 기능은 Haiku, 확인·돌아보기는 Sonnet, 지�
     assert.equal(routeFor("translate").model, "claude-haiku-5-5");
     assert.equal(routeFor("learnerRead").model, "claude-haiku-5-5");
     assert.equal(routeFor("roleplayReview").model, "claude-sonnet-5-5");
-    assert.equal(routeFor("curriculum").model, "gpt-4.1");
-    assert.equal(routeFor("mission").model, "gpt-4.1-mini");
-    assert.equal(routeFor("roleplayTutor").model, "gpt-4.1-mini");
+    assert.equal(routeFor("curriculum").model, "gpt-6-luna");
+    assert.equal(routeFor("mission").model, "gpt-6-luna");
+    assert.equal(routeFor("roleplayTutor").model, "gpt-6-luna");
     assert.equal(routeFor("roomFix").model, "claude-haiku-5-5");
     assert.deepEqual(
       { ...routeFor("chatVerify") },
@@ -110,17 +110,17 @@ test("Anthropic 키가 없으면 OpenAI 기본으로", () => {
   withEnv({ MODEL_ROUTES: JSON.stringify({ basic: "anthropic:claude-haiku-5-5" }) }, () => {
     assert.deepEqual(
       { provider: routeFor("chat").provider, model: routeFor("chat").model },
-      { provider: "openai", model: "gpt-4o-mini" },
+      { provider: "openai", model: "gpt-6-luna" },
     );
   });
 });
 
 test("잘못된 MODEL_ROUTES는 무시", () => {
   withEnv({ MODEL_ROUTES: "{not json" }, () => {
-    assert.equal(routeFor("chat").model, "gpt-4o-mini");
+    assert.equal(routeFor("chat").model, "gpt-6-luna");
   });
   withEnv({ MODEL_ROUTES: JSON.stringify({ chat: "gemini:x" }) }, () => {
-    assert.equal(routeFor("chat").model, "gpt-4o-mini");
+    assert.equal(routeFor("chat").model, "gpt-6-luna");
   });
 });
 
@@ -133,7 +133,7 @@ test("부르는 쪽이 모델 이름을 주면 그것(지도 엔진)", () => {
 
 test("스트리밍 길은 표가 Anthropic이어도 OpenAI 모델", () => {
   withEnv({ ANTHROPIC_API_KEY: "k", MODEL_ROUTES: JSON.stringify({ basic: "anthropic:claude-haiku-5-5" }) }, () => {
-    assert.equal(openaiModel("roleplayTutor"), "gpt-4.1-mini");
+    assert.equal(openaiModel("roleplayTutor"), "gpt-6-luna");
   });
   withEnv({ MODEL_ROUTES: JSON.stringify({ roleplayTutor: "openai:gpt-z" }) }, () => {
     assert.equal(openaiModel("roleplayTutor"), "gpt-z");
@@ -219,7 +219,7 @@ test("점검 사용자만 헤더로 모델 경로를 바꾼다(허용 모델만)
     withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
       adoptSimRoutes("simcheck-run-p001", JSON.stringify({ basic: "anthropic: claude-haiku-5-5", high: "anthropic: claude-opus-5-5" }));
       assert.equal(routeFor("chat").model, "claude-haiku-5-5");
-      assert.equal(routeFor("mission").model, "gpt-4.1-mini"); // opus는 허용 목록 밖
+      assert.equal(routeFor("mission").model, "gpt-6-luna"); // opus는 허용 목록 밖
     }),
   );
   await inFreshContext(() =>
@@ -231,13 +231,13 @@ test("점검 사용자만 헤더로 모델 경로를 바꾼다(허용 모델만)
   await inFreshContext(() =>
     withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
       adoptSimRoutes("rc:real-user", JSON.stringify({ high: "anthropic: claude-sonnet-5-5" }));
-      assert.equal(routeFor("curriculum").model, "gpt-4.1"); // 실제 사용자는 헤더가 안 먹음
+      assert.equal(routeFor("curriculum").model, "gpt-6-luna"); // 실제 사용자는 헤더가 안 먹음
     }),
   );
   await inFreshContext(() =>
     withEnv({ ANTHROPIC_API_KEY: "k" }, () => {
       adoptSimRoutes("simcheck-x", "{nope");
-      assert.equal(routeFor("curriculum").model, "gpt-4.1");
+      assert.equal(routeFor("curriculum").model, "gpt-6-luna");
     }),
   );
 });
@@ -294,4 +294,20 @@ test("도구 호출 문법이 값 안으로 새면 잘라 내고 뒤 칸을 채�
   assert.equal(fixed.assistantMessage, "哈哈，你想说什么？");
   const kept = parseStringifiedValues({ spokenReply: "plain", correction: { corrected: "a" } });
   assert.deepEqual(kept, { spokenReply: "plain", correction: { corrected: "a" } });
+});
+
+test("추론 모델(gpt-5·gpt-6·o)에는 temperature를 빼고 상한 이름을 바꾼다(2026-10-27 운영 400)", async () => {
+  const { forOpenAIModel, isReasoningModel } = await import("./llm.ts");
+  assert.equal(isReasoningModel("gpt-6-luna"), true);
+  assert.equal(isReasoningModel("gpt-5.6-terra"), true);
+  assert.equal(isReasoningModel("gpt-4o-mini"), false);
+  const made = forOpenAIModel("gpt-6-luna", { temperature: 0.9, max_tokens: 300, messages: [] }) as Record<string, unknown>;
+  assert.equal(made.temperature, undefined);
+  assert.equal(made.max_tokens, undefined);
+  assert.equal(made.max_completion_tokens, 1324);
+  assert.equal(made.reasoning_effort, "minimal");
+  assert.equal(made.model, "gpt-6-luna");
+  const kept = forOpenAIModel("gpt-4o-mini", { temperature: 0.2, max_tokens: 50, messages: [] }) as Record<string, unknown>;
+  assert.equal(kept.temperature, 0.2);
+  assert.equal(kept.max_tokens, 50);
 });

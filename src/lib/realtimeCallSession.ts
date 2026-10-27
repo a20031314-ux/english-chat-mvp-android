@@ -18,7 +18,7 @@ export const REALTIME_CALL_MODEL =
  * will again; this should not need a deploy to follow it.
  */
 export const CALL_TRANSCRIBE_MODEL =
-  process.env.OPENAI_REALTIME_TRANSCRIBE_MODEL ?? "gpt-4o-mini-transcribe";
+  process.env.OPENAI_REALTIME_TRANSCRIBE_MODEL ?? "gpt-live-transcribe"; // 2026-10-27: gpt-4o-mini-transcribe 2027-02-26 종료
 
 const VOICE_BY_LANGUAGE: Partial<Record<LearningLanguageCode, string>> = {
   en: "ash",

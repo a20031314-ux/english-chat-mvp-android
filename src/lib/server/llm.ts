@@ -171,7 +171,7 @@ export async function completeChat(
   const route = routeFor(task, override);
   noteSimModel(`${task}=${route.provider}:${route.model}`);
   if (route.provider === "openai") {
-    return client.chat.completions.create({ ...rest, model: route.model });
+    return client.chat.completions.create(forOpenAIModel(route.model, rest));
   }
   try {
     return await anthropicComplete(route.model, rest, options);
@@ -179,8 +179,38 @@ export async function completeChat(
     if (env("MODEL_FALLBACK") === "off" || simRoutes.getStore()) throw error;
     console.error(`[llm] ${task} on ${route.model} failed — falling back to OpenAI`, error);
     noteSimModel(`${task}=openai:${TASKS[task].openai()}(대체)`);
-    return client.chat.completions.create({ ...rest, model: TASKS[task].openai() });
+    return client.chat.completions.create(forOpenAIModel(TASKS[task].openai(), rest));
   }
+}
+
+/**
+ * 추론 모델(gpt-5·gpt-6 계열·o 시리즈) — 2027-01 OpenAI 대체 모델(gpt-6-luna·gpt-5.6-terra)이 모두 여기 든다(2026-10-27 운영 확인:
+ * temperature 0.9를 주면 400 "Only the default (1) value is supported"). 숨은 생각 토큰을 쓰고 상한 이름이 다르다.
+ */
+export function isReasoningModel(model: string): boolean {
+  return /^(gpt-5|gpt-6|o\d)/.test(model);
+}
+
+/**
+ * 예전 모델(gpt-4o-mini·gpt-4.1)에 맞춰 쓴 인자를 그 모델이 받는 모양으로. 부르는 쪽은 그대로 두고 여기서만 바꾼다:
+ * temperature·top_p 같은 샘플링 값은 빼고, max_tokens는 max_completion_tokens(생각 몫을 얹어서)로, 생각은 가장 짧게.
+ */
+export function forOpenAIModel<T extends Record<string, unknown>>(model: string, params: T): T & { model: string } {
+  if (!isReasoningModel(model)) return { ...params, model };
+  const { temperature: _t, top_p: _p, presence_penalty: _pp, frequency_penalty: _fp, logprobs: _l, top_logprobs: _tl, max_tokens, ...rest } = params as Record<string, unknown>;
+  void _t; void _p; void _pp; void _fp; void _l; void _tl;
+  const cap =
+    typeof rest.max_completion_tokens === "number"
+      ? rest.max_completion_tokens
+      : typeof max_tokens === "number"
+        ? Math.max(max_tokens * 2, max_tokens + 1024)
+        : undefined;
+  return {
+    ...rest,
+    ...(cap ? { max_completion_tokens: cap } : {}),
+    reasoning_effort: (rest.reasoning_effort as string | undefined) ?? "minimal",
+    model,
+  } as unknown as T & { model: string };
 }
 
 /* ───────── Anthropic Messages API (fetch, SDK 없이) ───────── */

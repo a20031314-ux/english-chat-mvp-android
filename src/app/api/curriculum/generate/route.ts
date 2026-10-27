@@ -1,3 +1,4 @@
+import { OPENAI_TEXT_DEFAULTS } from "@/lib/aiDefaults";
 import { completeChat } from "@/lib/server/llm";
 import { NextRequest } from "next/server";
 import { getOpenAIClient } from "@/lib/server/openai";
@@ -41,7 +42,7 @@ export const maxDuration = 120;
  * The goal is kept, with the map, because the map is about it and the screen
  * shows it back. Nothing else the learner has said is sent.
  */
-const MODEL = () => process.env.OPENAI_CURRICULUM_MODEL?.trim() || "gpt-4.1";
+const MODEL = () => process.env.OPENAI_CURRICULUM_MODEL?.trim() || OPENAI_TEXT_DEFAULTS.curriculumMap;
 const MAX_GOAL_CHARS = 300;
 /**
  * 나눠 그리기 운영 스위치(Vercel MAP_SPLIT=0이면 예전 한 번에). 기본 켬(2026-10-23 운영 비교:

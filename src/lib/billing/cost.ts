@@ -259,7 +259,9 @@ export const KRW_PER_USD = { rate: 1400, assumedOn: "2026-09-04" } as const;
  * is billed to anyone. This margin is what covers them, plus refunds and the
  * free tier.
  */
-export const MIN_BUNDLE_MARGIN = 0.5;
+// 2026-10-27 0.5 → 0.35: 목소리를 gpt-realtime-2.1-mini로(gpt-4o-mini-tts 2027-01-06 종료, 사용자 "모델 전부 교체해줘") 바꾸자
+// 포인트 원가가 약 35% 올라 묶음 이윤이 54~57% → 37~41%. 손해는 아님(원 약세 시험도 통과). 가격을 올릴지는 사용자 결정 — hub/MODELS.md 0-1.
+export const MIN_BUNDLE_MARGIN = 0.35;
 
 export type PointBundle = {
   /** Play product id. Consumable, not a subscription. */

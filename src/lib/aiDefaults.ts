@@ -9,31 +9,36 @@
  * 있으면 운영은 그것을 쓰지만 저장소에서는 볼 수 없어서, 비용 표는 이 기본값으로 계산한다고 적는다.
  */
 
-/** 글 모델 기능 → 그 기능의 OpenAI 기본 모델(Vercel `OPENAI_*_MODEL`이 없을 때, Claude가 실패했을 때 되돌아가는 모델). */
+/**
+ * 글 모델 기능 → 그 기능의 OpenAI 기본 모델(Vercel `OPENAI_*_MODEL`이 없을 때, Claude가 실패했을 때 되돌아가는 모델).
+ * 2026-10-27 사용자 "모델 전부 교체해줘": 2027-01-14에 끝나는 gpt-4o-mini·gpt-4.1·gpt-4.1-mini → gpt-6-luna(OpenAI 공식 대체),
+ * 2026-12-11에 끝나는 gpt-5-mini → gpt-5.6-terra. 둘 다 추론 모델 — 인자는 `server/llm.ts` `forOpenAIModel`이 맞춘다.
+ * 그대로 OpenAI를 기본으로 쓰는 기능: 통화 튜터(roleplayTutor, 스트리밍)·미션 쓰기(curriculum)·미션 확인(mission).
+ */
 export const OPENAI_TEXT_DEFAULTS = {
-  chat: "gpt-4o-mini",
-  howToSay: "gpt-4o-mini",
-  roomFix: "gpt-4o-mini",
-  roomGame: "gpt-4o-mini",
-  translate: "gpt-4o-mini",
-  vocab: "gpt-4o-mini",
-  analysis: "gpt-4o-mini",
-  expression: "gpt-4o-mini",
-  notes: "gpt-4o-mini",
-  learnerAsk: "gpt-4o-mini",
-  roleplayContext: "gpt-4o-mini",
-  video: "gpt-4o-mini",
-  vision: "gpt-4o-mini",
-  roleplayTutor: "gpt-4.1-mini",
-  roleplayPractice: "gpt-4.1-mini",
-  ask: "gpt-4.1-mini",
-  mission: "gpt-4.1-mini",
-  curriculum: "gpt-4.1",
-  curriculumMap: "gpt-4.1",
-  curriculumMapFill: "gpt-4.1",
-  learnerRead: "gpt-4.1-mini",
-  roleplayReview: "gpt-5-mini",
-  chatVerify: "gpt-4.1",
+  chat: "gpt-6-luna",
+  howToSay: "gpt-6-luna",
+  roomFix: "gpt-6-luna",
+  roomGame: "gpt-6-luna",
+  translate: "gpt-6-luna",
+  vocab: "gpt-6-luna",
+  analysis: "gpt-6-luna",
+  expression: "gpt-6-luna",
+  notes: "gpt-6-luna",
+  learnerAsk: "gpt-6-luna",
+  roleplayContext: "gpt-6-luna",
+  video: "gpt-6-luna",
+  vision: "gpt-6-luna",
+  roleplayTutor: "gpt-6-luna",
+  roleplayPractice: "gpt-6-luna",
+  ask: "gpt-6-luna",
+  mission: "gpt-6-luna",
+  curriculum: "gpt-6-luna",
+  curriculumMap: "gpt-6-luna",
+  curriculumMapFill: "gpt-6-luna",
+  learnerRead: "gpt-6-luna",
+  roleplayReview: "gpt-5.6-terra",
+  chatVerify: "gpt-6-luna",
 } as const;
 
 export type TextTask = keyof typeof OPENAI_TEXT_DEFAULTS;
@@ -101,13 +106,16 @@ export function codeTextModel(task: TextTask): string {
 /** 받아쓰기·목소리 기본값(`server/speechModels.ts`·`openai.ts`·`secondListen.ts`가 읽음). */
 export const SPEECH_DEFAULTS = {
   /** 통화 학습·Room 자막의 한 마디(`OPENAI_TURN_TRANSCRIBE_MODEL`). */
-  turnTranscribe: "gpt-4o-mini-transcribe",
+  turnTranscribe: "scribe_v2",
   /** 방 내 줄 교정의 두 번째 의견(ElevenLabs 키가 있을 때 — 운영엔 있음, 없으면 다른 OpenAI 모델). */
   secondTranscribe: "scribe_v2",
   /** 영상에 자막이 없을 때(`OPENAI_TRANSCRIBE_MODEL`). */
-  videoTranscribe: "whisper-1",
+  videoTranscribe: "scribe_v2",
   /** 튜터 목소리 엔진(`TTS_ENGINE`): speech = /v1/audio/speech, realtime = Realtime으로 그대로 읽기. */
-  ttsEngine: "speech" as "speech" | "realtime",
+  ttsEngine: "realtime" as "speech" | "realtime",
+  /** 바깥 받아쓰기(Scribe v2)가 실패했을 때 OpenAI로 한 번 더 — gpt-4o-mini-transcribe·whisper-1(2027-02-26 종료)의 대체. */
+  openaiTranscribe: "gpt-transcribe",
+  /** realtime 목소리가 첫 소리 전에 실패했을 때만(2027-01-06 종료 — 그 뒤엔 대비 없음). */
   speechTtsModel: "gpt-4o-mini-tts",
   realtimeTtsModel: "gpt-realtime-2.1-mini",
 } as const;

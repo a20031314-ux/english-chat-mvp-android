@@ -11,16 +11,16 @@ const ask = (user: string, extra: Record<string, string> = {}) =>
   new NextRequest("https://example.test/api/tts", { headers: { "x-rc-user": user, ...extra } });
 
 test("점검 사용자만 머리글로 모델을 고른다", () => {
-  const trial = { "x-stt-model": "gpt-transcribe", "x-tts-engine": "realtime", "x-speech-trial-report": "1" };
+  const trial = { "x-stt-model": "gpt-transcribe", "x-tts-engine": "speech", "x-speech-trial-report": "1" };
   assert.equal(turnTranscribeModel(ask("simcheck-speechx-a", trial)), "gpt-transcribe");
-  assert.equal(ttsEngine(ask("simcheck-speechx-a", trial)), "realtime");
+  assert.equal(ttsEngine(ask("simcheck-speechx-a", trial)), "speech");
   assert.equal(wantsTrialReport(ask("simcheck-speechx-a", trial)), true);
   // 실제 사용자는 같은 머리글을 보내도 기본값
-  assert.equal(turnTranscribeModel(ask("real-user-1", trial)), "gpt-4o-mini-transcribe");
-  assert.equal(ttsEngine(ask("real-user-1", trial)), "speech");
+  assert.equal(turnTranscribeModel(ask("real-user-1", trial)), "scribe_v2");
+  assert.equal(ttsEngine(ask("real-user-1", trial)), "realtime");
   assert.equal(wantsTrialReport(ask("real-user-1", trial)), false);
   // 목록 밖 모델 이름은 무시
-  assert.equal(turnTranscribeModel(ask("simcheck-speechx-a", { "x-stt-model": "whatever" })), "gpt-4o-mini-transcribe");
+  assert.equal(turnTranscribeModel(ask("simcheck-speechx-a", { "x-stt-model": "whatever" })), "scribe_v2");
 });
 
 test("Vercel 값이 기본값을 바꾼다", () => {

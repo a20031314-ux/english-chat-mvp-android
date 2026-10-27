@@ -1,3 +1,4 @@
+import { isReasoningModel } from "@/lib/server/llm";
 import { openaiModel } from "@/lib/server/llm";
 import { NextRequest, after } from "next/server";
 import { coerceLanguageCode, learningLanguageName } from "@/lib/learningLanguages";
@@ -398,7 +399,7 @@ export async function POST(request: NextRequest) {
   // Reasoning models spend hidden tokens before answering and take their cap
   // under another name. Minimal effort: this is one spoken line, and every
   // second of thinking is a second of silence in a conversation.
-  const reasoning = /^(gpt-5|o\d)/.test(model);
+  const reasoning = isReasoningModel(model);
   const ask = {
     model,
     messages: [

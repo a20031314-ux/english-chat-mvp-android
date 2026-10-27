@@ -1,6 +1,7 @@
 import type { NextRequest } from "next/server";
 import { SIM_USER_MARK } from "./simData.ts";
 import { SPEECH_DEFAULTS } from "../aiDefaults.ts";
+import { EXTERNAL_STT_MODELS } from "./sttProviders.ts";
 
 /**
  * 음성 모델(받아쓰기·읽어 주기)을 한곳에서 고른다.
@@ -8,7 +9,7 @@ import { SPEECH_DEFAULTS } from "../aiDefaults.ts";
  * OpenAI가 지금 쓰는 음성 모델을 모두 끝낸다(공식 종료 표, 2026-10-21 확인):
  * - gpt-4o-mini-tts·tts-1 → 2027-01-06, 대체는 Realtime API의 gpt-realtime-2.1-mini(같은 /v1/audio/speech로는 안 됨)
  * - gpt-4o-mini-transcribe·gpt-4o-transcribe·whisper-1 → 2027-02-26, 대체는 gpt-transcribe(파일)·gpt-live-transcribe(실시간)
- * 기본값은 아직 예전 모델 — 운영 비교(`scripts/speech-trial.mjs`)가 끝나면 여기서 바꾼다. Vercel 값이 있으면 그것이 먼저.
+ * 기본값(2026-10-27 교체): 한 마디·영상 받아쓰기 Scribe v2, 목소리 realtime(gpt-realtime-2.1-mini). Vercel 값이 있으면 그것이 먼저.
  *
  * 점검 사용자(x-rc-user: simcheck-…)만 머리글로 다른 모델을 골라 볼 수 있다 — 실제 사용자는 언제나 기본값.
  */
@@ -48,6 +49,15 @@ export function turnTranscribeModel(request?: NextRequest): string {
   const trial = trialHeader(request, "x-stt-model");
   if ((TRANSCRIBE_TRIAL_MODELS as readonly string[]).includes(trial)) return trial;
   return process.env.OPENAI_TURN_TRANSCRIBE_MODEL?.trim() || SPEECH_DEFAULTS.turnTranscribe;
+}
+
+/**
+ * 바깥 받아쓰기(Scribe v2)가 실패했을 때 다시 물을 OpenAI 모델. Vercel 값이 OpenAI 모델이면 그것, 아니면 gpt-transcribe
+ * (2026-10-27 — 예전 대비 gpt-4o-mini-transcribe는 2027-02-26 종료).
+ */
+export function openaiTurnTranscribeModel(): string {
+  const set = process.env.OPENAI_TURN_TRANSCRIBE_MODEL?.trim();
+  return set && !(EXTERNAL_STT_MODELS as readonly string[]).includes(set) ? set : SPEECH_DEFAULTS.openaiTranscribe;
 }
 
 /**

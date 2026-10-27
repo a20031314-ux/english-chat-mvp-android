@@ -1,3 +1,4 @@
+import { isReasoningModel } from "@/lib/server/llm";
 import { completeChat, routeFor } from "@/lib/server/llm";
 import { NextRequest, after } from "next/server";
 import { coerceLanguageCode, interfaceLanguageName } from "@/lib/learningLanguages";
@@ -90,7 +91,7 @@ export async function POST(request: NextRequest) {
 
   try {
     const model = reviewModel();
-    const reasoning = /^(gpt-5|o\d)/.test(model);
+    const reasoning = isReasoningModel(model);
     const completion = await completeChat(client, "roleplayReview", {
       messages: [
         {

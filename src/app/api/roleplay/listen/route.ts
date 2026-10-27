@@ -11,7 +11,7 @@ import { learningLanguageName } from "@/lib/learningLanguages";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { confidenceFromLogprobs, noteRecognition } from "@/lib/server/learnerMetrics";
 import { toFile } from "openai";
-import { isNextGenTranscribe, roomFixSecondAlways, turnTranscribeModel, wantsTrialReport } from "@/lib/server/speechModels";
+import { isNextGenTranscribe, roomFixSecondAlways, turnTranscribeModel, openaiTurnTranscribeModel, wantsTrialReport } from "@/lib/server/speechModels";
 import { externalSttReady, isExternalStt, transcribeExternal } from "@/lib/server/sttProviders";
 import { confidenceOfLogprobs, confidenceOfWords, fixTrust, isUnsure, type FixTrust, type SpeechConfidence } from "@/lib/speechConfidence";
 
@@ -112,7 +112,7 @@ export async function POST(request: NextRequest) {
 
   const model = turnTranscribeModel(request);
   // 바깥 받아쓰기가 실패하면 OpenAI로 다시 — 그때 쓸 모델(Vercel 값 또는 기본값).
-  const openaiModel = isExternalStt(model) ? turnTranscribeModel() : model;
+  const openaiModel = isExternalStt(model) ? openaiTurnTranscribeModel() : model;
   const nextGen = isNextGenTranscribe(openaiModel);
   const started = Date.now();
   // gpt-transcribe는 language 대신 languages(배열)를 받고 temperature는 문서에 없다. 방의 두 언어를 그대로 넘길 수 있다.
@@ -122,7 +122,7 @@ export async function POST(request: NextRequest) {
       ? { language: hint }
       : {};
   const asked = {
-    model: isExternalStt(openaiModel) ? "gpt-4o-mini-transcribe" : openaiModel,
+    model: openaiModel,
     ...(nextGen ? {} : { temperature: 0 }),
     ...languageHint,
     // Says what kind of audio this is, which is most of what stops a model

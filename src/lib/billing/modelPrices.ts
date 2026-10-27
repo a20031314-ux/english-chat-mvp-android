@@ -13,6 +13,7 @@ export const TEXT_USD_PER_MTOK: Record<string, { input: number; output: number; 
   "gpt-4.1": { input: 2, output: 8, source: "OpenAI pricing" },
   "gpt-5-mini": { input: 0.25, output: 2, source: "OpenAI pricing" },
   "gpt-6-luna": { input: 0.1, output: 0.5, source: "hub/MODELS.md 2026-10-21 조사" },
+  "gpt-5.6-terra": { input: 2, output: 12, source: "anotherwrapper.com LLM pricing 2026-10-27 (통화 돌아보기 대비 — 기본은 Sonnet)" },
   "claude-haiku-5-5": { input: 0.1, output: 0.5, source: "platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트)" },
   "claude-sonnet-5-5": { input: 2, output: 10, source: "platform.claude.com pricing 2026-10-22" },
   "claude-opus-5-5": { input: 4, output: 20, source: "platform.claude.com pricing 2026-10-22" },

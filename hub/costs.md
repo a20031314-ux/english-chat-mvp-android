@@ -6,10 +6,10 @@
 
 ## 주의
 
-- **라이트 3,900원**: 한도를 매일 꽉 채우면 한 달 973원 손해 (수수료 뺀 3,315원 < 비용 4,288원).
-- **플러스 5,500원**: 한도를 매일 꽉 채우면 한 달 1,433원 손해 (수수료 뺀 4,675원 < 비용 6,108원).
-- **프리미엄 9,900원 (지금, 월 80포인트)**: 한도를 매일 꽉 채우면 한 달 865원 손해 (수수료 뺀 8,415원 < 비용 9,280원).
-- **프리미엄 8,900원 (전환 후)**: 한도를 매일 꽉 채우면 한 달 3,726원 손해 (수수료 뺀 7,565원 < 비용 11,291원).
+- **라이트 3,900원**: 한도를 매일 꽉 채우면 한 달 1,847원 손해 (수수료 뺀 3,315원 < 비용 5,162원).
+- **플러스 5,500원**: 한도를 매일 꽉 채우면 한 달 2,661원 손해 (수수료 뺀 4,675원 < 비용 7,336원).
+- **프리미엄 9,900원 (지금, 월 80포인트)**: 한도를 매일 꽉 채우면 한 달 2,484원 손해 (수수료 뺀 8,415원 < 비용 10,899원).
+- **프리미엄 8,900원 (전환 후)**: 한도를 매일 꽉 채우면 한 달 5,644원 손해 (수수료 뺀 7,565원 < 비용 13,209원).
 - 최악은 구독자 모두가 매일 모든 한도를 다 쓰는 경우입니다. 최악의 채팅 한 통 1.4원(모든 문장이 길고 틀림, 보통은 1원)은 잰 값이 아닌 가정(chat, chatReply, learnerObserve, weakRead, notebookFix — 아래 "기능별 한 번 비용"의 토큰)이라, 실측 토큰이 쌓이면 `cost-report.mjs`로 다시 봐야 합니다.
 
 ## 요금별 한 달 비용 (30일)
@@ -19,23 +19,23 @@
 
 | 요금 | 하루 한도 | 수수료 뺀 금액 | 최악 비용 | 최악 남는 돈 | 많이 쓰는 사용자 비용 | 그때 남는 돈 |
 |---|---|---|---|---|---|---|
-| 무료 | 팩 1번 · 통화 없음(처음 20포인트 별도) · 채팅 7번 | — | 1,019원 | — | 817원 | — |
-| 라이트 3,900원 | 팩 1번 · 통화 매일 7분 · 채팅 30번 | 3,315원 | 4,288원 | ⚠ -973원 (-29%) | 3,134원 | 181원 (5%) |
-| 플러스 5,500원 | 팩 1번 · 통화 매일 10분 · 채팅 50번 | 4,675원 | 6,108원 | ⚠ -1,433원 (-31%) | 3,167원 | 1,508원 (32%) |
-| 프리미엄 9,900원 (지금, 월 80포인트) | 팩 1번 · 월 80포인트 · 채팅 제한 없음(100번으로 계산) | 8,415원 | 9,280원 | ⚠ -865원 (-10%) | 3,167원 | 5,248원 (62%) |
-| 프리미엄 8,900원 (전환 후) | 팩 3번 · 통화 매일 15분 · 채팅 100번 | 7,565원 | 11,291원 | ⚠ -3,726원 (-49%) | 3,167원 | 4,398원 (58%) |
+| 무료 | 팩 1번 · 통화 없음(처음 20포인트 별도) · 채팅 7번 | — | 1,071원 | — | 869원 | — |
+| 라이트 3,900원 | 팩 1번 · 통화 매일 7분 · 채팅 30번 | 3,315원 | 5,162원 | ⚠ -1,847원 (-56%) | 4,009원 | ⚠ -694원 (-21%) |
+| 플러스 5,500원 | 팩 1번 · 통화 매일 10분 · 채팅 50번 | 4,675원 | 7,336원 | ⚠ -2,661원 (-57%) | 4,054원 | 621원 (13%) |
+| 프리미엄 9,900원 (지금, 월 80포인트) | 팩 1번 · 월 80포인트 · 채팅 제한 없음(100번으로 계산) | 8,415원 | 10,899원 | ⚠ -2,484원 (-30%) | 4,054원 | 4,361원 (52%) |
+| 프리미엄 8,900원 (전환 후) | 팩 3번 · 통화 매일 15분 · 채팅 100번 | 7,565원 | 13,209원 | ⚠ -5,644원 (-75%) | 4,054원 | 3,511원 (46%) |
 
 최악 비용 내역:
 
 | 요금 | 팩 | 자유 통화 | 채팅 | 월 포인트 |
 |---|---|---|---|---|
-| 무료 | 729원 | 0원 | 290원 | 0원 |
-| 라이트 3,900원 | 729원 | 2,317원 | 1,241원 | 0원 |
-| 플러스 5,500원 | 729원 | 3,310원 | 2,069원 | 0원 |
-| 프리미엄 9,900원 (지금, 월 80포인트) | 729원 | 0원 | 4,137원 | 4,414원 |
-| 프리미엄 8,900원 (전환 후) | 2,188원 | 4,965원 | 4,137원 | 0원 |
+| 무료 | 781원 | 0원 | 290원 | 0원 |
+| 라이트 3,900원 | 781원 | 3,140원 | 1,241원 | 0원 |
+| 플러스 5,500원 | 781원 | 4,486원 | 2,069원 | 0원 |
+| 프리미엄 9,900원 (지금, 월 80포인트) | 781원 | 0원 | 4,137원 | 5,981원 |
+| 프리미엄 8,900원 (전환 후) | 2,344원 | 6,729원 | 4,137원 | 0원 |
 
-무료는 처음 한 번 10포인트(통화 50분, 약 552원)를 따로 씁니다. 이달의 영상(라이브러리)은 자막이 미리 만들어져 있어 비용에 넣지 않았습니다.
+무료는 처음 한 번 10포인트(통화 50분, 약 748원)를 따로 씁니다. 이달의 영상(라이브러리)은 자막이 미리 만들어져 있어 비용에 넣지 않았습니다.
 
 ## 광고 (무료·안드로이드만)
 
@@ -55,11 +55,11 @@
 
 | 무엇 | 한 번 | 어떻게 |
 |---|---|---|
-| 자유 통화 1분 | 11원 | 15초 턴 4번: 캐릭터 판단(gpt-4.1-mini) + 음성 합성 5초(gpt-4o-mini-tts) + 받아쓰기 6초(gpt-4o-mini-transcribe) |
-| 오늘의 팩 1번 | 24.3원 | 12문답 × (받아쓰기 + 판단) + 합성 35%만 (가정) |
+| 자유 통화 1분 | 15원 | 15초 턴 4번: 캐릭터 판단(gpt-6-luna) + 음성 합성 5초(gpt-realtime-2.1-mini) + 받아쓰기 6초(scribe_v2) |
+| 오늘의 팩 1번 | 26원 | 12문답 × (받아쓰기 + 판단) + 합성 35%만 (가정) |
 | 채팅 1통(보통) | 1원 | chat + 문장 읽기 33% + 실수 읽기 33% + 노트 칸 고르기 33% (가정 — 짧고 맞은 줄·영어 아닌 학습 언어는 문장 읽기 건너뜀) |
 | 채팅 1통(최악) | 1.4원 | chat + chatReply + learnerObserve + weakRead + notebookFix 모두(길고 틀린 문장) |
-| 포인트 1개 | 55.2원 | 통화 5분과 영상 3분 준비 중 비싼 쪽 |
+| 포인트 1개 | 74.8원 | 통화 5분과 영상 3분 준비 중 비싼 쪽 |
 
 ## 기능별 한 번 비용 (요금 한도 밖 기능 포함)
 
@@ -70,26 +70,23 @@
 | curriculumGenerate | 65.8원 | 1 | claude-sonnet-5-5 3500/4000 토큰 (기능 curriculumMap) | 가정 |
 | curriculumMapFill | 36.4원 | 1 | claude-sonnet-5-5 4000/1800 토큰 (기능 curriculumMapFill) | 가정 |
 | roleplayReview | 15.4원 | 1 | claude-sonnet-5-5 1500/800 토큰 (기능 roleplayReview) | 가정 |
-| curriculumMissions | 9원 | 1 | gpt-4.1 2000/300 토큰 (기능 curriculum) | 가정 |
-| learnerPick | 9원 | 1 | gpt-4.1 2000/300 토큰 (기능 curriculum) | 가정 |
-| weakMission | 9원 | 1 | gpt-4.1 2000/300 토큰 (기능 curriculum) | 가정 |
 | chatVerify | 5.3원 | 1 | claude-sonnet-5-5 900/200 토큰 (기능 chatVerify) | 가정 |
+| tts | 3.7원 | 1 | 음성 합성 6초 gpt-realtime-2.1-mini | 가정 |
 | stageCopy | 3.6원 | 1 | claude-haiku-5-5 3500/4500 토큰 (기능 translate) | 가정 |
 | analysisInput | 2.5원 | 5 | claude-haiku-5-5 2000/300 토큰 (기능 analysis) | 가정 |
-| tts | 2.1원 | 1 | 음성 합성 6초 gpt-4o-mini-tts | 가정 |
-| missionCheck | 1.8원 | 1 | gpt-4.1-mini 2000/300 토큰 (기능 mission) | 가정 |
-| roleplayCorrect | 1.8원 | 1 | gpt-4.1-mini 2000/300 토큰 (기능 roleplayTutor) | 가정 |
 | contentDiscovery | 1.5원 | 3 | claude-haiku-5-5 2000/300 토큰 (기능 video) | 가정 |
 | videoPrepare | 1.5원 | 3 | 자막 단계 claude-haiku-5-5 | 가정 |
 | videoWindow | 1.5원 | 3 | 자막 단계 claude-haiku-5-5 | 가정 |
 | notebookPhrases | 1원 | 1 | claude-haiku-5-5 2700/900 토큰 (기능 notes) | 가정 |
 | videoGloss | 1원 | 2 | claude-haiku-5-5 2000/300 토큰 (기능 video) | 가정 |
-| roleplayTurn | 0.6원 | 1 | gpt-4.1-mini 851/50 토큰 (기능 roleplayTutor) | 잰 값 |
+| roleplayListen | 0.5원 | 1 | 받아쓰기 6초 scribe_v2 | 가정 |
 | roomFixListen | 0.5원 | 1 | 받아쓰기 6초 scribe_v2 | 가정 |
+| roomListen | 0.5원 | 1 | 받아쓰기 6초 scribe_v2 | 가정 |
 | analysisElement | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 analysis) | 가정 |
 | chat | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 chat) | 가정 |
 | chatReread | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 chat) | 가정 |
 | chatStart | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 chat) | 가정 |
+| curriculumMissions | 0.5원 | 1 | gpt-6-luna 2000/300 토큰 (기능 curriculum) | 가정 |
 | expressionAsk | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 ask) | 가정 |
 | expressionAskQuick | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 ask) | 가정 |
 | expressionAskRetry | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 ask) | 가정 |
@@ -98,16 +95,18 @@
 | howToSay | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 howToSay) | 가정 |
 | howToSayCard | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 howToSay) | 가정 |
 | learnerAsk | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 learnerAsk) | 가정 |
+| learnerPick | 0.5원 | 1 | gpt-6-luna 2000/300 토큰 (기능 curriculum) | 가정 |
 | learningSpans | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 analysis) | 가정 |
+| missionCheck | 0.5원 | 1 | gpt-6-luna 2000/300 토큰 (기능 mission) | 가정 |
 | notesPlace | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 notes) | 가정 |
 | roleplayContext | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 roleplayContext) | 가정 |
+| roleplayCorrect | 0.5원 | 1 | gpt-6-luna 2000/300 토큰 (기능 roleplayTutor) | 가정 |
 | roleplayPractice | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 roleplayPractice) | 가정 |
 | translate | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 translate) | 가정 |
 | videoAnalyze | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 video) | 가정 |
 | vocabGloss | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 vocab) | 가정 |
 | vocabSearch | 0.5원 | 1 | claude-haiku-5-5 2000/300 토큰 (기능 vocab) | 가정 |
-| roleplayListen | 0.4원 | 1 | 받아쓰기 6초 gpt-4o-mini-transcribe | 가정 |
-| roomListen | 0.4원 | 1 | 받아쓰기 6초 gpt-4o-mini-transcribe | 가정 |
+| weakMission | 0.5원 | 1 | gpt-6-luna 2000/300 토큰 (기능 curriculum) | 가정 |
 | notebookLocate | 0.4원 | 1 | claude-haiku-5-5 2400/80 토큰 (기능 notes) | 가정 |
 | roomGameStory | 0.4원 | 1 | claude-haiku-5-5 250/500 토큰 (기능 roomGame) | 가정 |
 | notebookFix | 0.3원 | 1 | claude-haiku-5-5 1500/110 토큰 (기능 notes) | 가정 |
@@ -115,6 +114,7 @@
 | roomFix | 0.2원 | 1 | claude-haiku-5-5 900/120 토큰 (기능 roomFix) | 가정 |
 | learnerObserve | 0.2원 | 1 | claude-haiku-5-5 900/80 토큰 (기능 learnerRead) | 가정 |
 | roomGameWord | 0.2원 | 1 | claude-haiku-5-5 450/160 토큰 (기능 roomGame) | 가정 |
+| roleplayTurn | 0.2원 | 1 | gpt-6-luna 851/50 토큰 (기능 roleplayTutor) | 잰 값 |
 | weakRead | 0.1원 | 1 | claude-haiku-5-5 600/80 토큰 (기능 learnerRead) | 가정 |
 | iconUpload | 0.1원 | 3 | 한 번 고정값 | 가정 |
 | mediaUpload | 0.1원 | 1 | 한 번 고정값 | 가정 |
@@ -148,29 +148,29 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 | roleplayContext | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | video | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | vision | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
-| roleplayTutor | gpt-4.1-mini (OpenAI 기본) | $0.4 / $1.6 | OpenAI pricing |
+| roleplayTutor | gpt-6-luna (OpenAI 기본) | $0.1 / $0.5 | hub/MODELS.md 2026-10-21 조사 |
 | roleplayPractice | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | ask | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
-| mission | gpt-4.1-mini (OpenAI 기본) | $0.4 / $1.6 | OpenAI pricing |
-| curriculum | gpt-4.1 (OpenAI 기본) | $2 / $8 | OpenAI pricing |
+| mission | gpt-6-luna (OpenAI 기본) | $0.1 / $0.5 | hub/MODELS.md 2026-10-21 조사 |
+| curriculum | gpt-6-luna (OpenAI 기본) | $0.1 / $0.5 | hub/MODELS.md 2026-10-21 조사 |
 | curriculumMap | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
 | curriculumMapFill | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
 | learnerRead | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | roleplayReview | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
 | chatVerify | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
-| 받아쓰기 — 통화·방 한 마디 | gpt-4o-mini-transcribe | 분당 $0.003 | OpenAI pricing |
+| 받아쓰기 — 통화·방 한 마디 | scribe_v2 | 분당 $0.0036 | hub/drafts/speech-models-2026-10-21.md (한 줄 6초 약 0.5원) |
 | 받아쓰기 — 방 교정 두 번째 의견 | scribe_v2 | 분당 $0.0036 | hub/drafts/speech-models-2026-10-21.md (한 줄 6초 약 0.5원) |
-| 받아쓰기 — 영상(자막 없을 때) | whisper-1 | 분당 $0.006 | OpenAI pricing |
-| 목소리 | gpt-4o-mini-tts | 분당 $0.015 | OpenAI pricing — cost.ts에서 가장 약한 숫자 |
+| 받아쓰기 — 영상(자막 없을 때) | scribe_v2 | 분당 $0.0036 | hub/drafts/speech-models-2026-10-21.md (한 줄 6초 약 0.5원) |
+| 목소리 | gpt-realtime-2.1-mini | 분당 $0.0264 | hub/drafts/speech-models-2026-10-21.md 어림 |
 
 ## 포인트 묶음
 
 | 상품 | 포인트 | 가격 | 수수료 뺀 금액 | 비용 | 남는 비율 |
 |---|---|---|---|---|---|
-| points_30 | 30 | 4,500원 | 3,825원 | 1,655원 | 57% |
-| points_60 | 60 | 8,900원 | 7,565원 | 3,310원 | 56% |
-| points_200 | 200 | 28,900원 | 24,565원 | 11,034원 | 55% |
-| points_500 | 500 | 69,900원 | 59,415원 | 27,586원 | 54% |
+| points_30 | 30 | 4,500원 | 3,825원 | 2,243원 | 41% |
+| points_60 | 60 | 8,900원 | 7,565원 | 4,486원 | 41% |
+| points_200 | 200 | 28,900원 | 24,565원 | 14,953원 | 39% |
+| points_500 | 500 | 69,900원 | 59,415원 | 37,381원 | 37% |
 
 ## 기록 확인
 
@@ -179,7 +179,7 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 ## 가정 (믿기 어려운 숫자부터 확인)
 
 - 모델 단가: https://developers.openai.com/api/docs/pricing (2026-09-04 확인). 1달러 1400원(2026-09-04).
-- 음성 합성 분당 $0.015 — 통화 비용의 대부분, `cost.ts`에서 가장 약한 숫자.
+- 음성 합성 분당 $0.0264 — 통화 비용의 대부분, `cost.ts`에서 가장 약한 숫자.
 - 잰 적 없는 모델 호출 한 번 = 2000/300 토큰. 실측 보고서는 서버가 잰 토큰(`usage:tok:*`)이 20번 넘게 쌓인 기능부터 그 값을 씁니다.
 - 가정으로 값을 매기는 기능 52개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, iconUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, learnerObserve, curriculumMissions, learnerPick, notesPlace, notebookFix, notebookPhrases, notebookLocate, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roomGameStory, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, expressionUnits, vocabSearch, contentDiscovery.
 

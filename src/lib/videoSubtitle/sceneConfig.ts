@@ -23,4 +23,4 @@ export const SCENE_MAX_FIRST_PASS = Number(
 export const VISION_MODEL =
   process.env.OPENAI_VISION_MODEL?.trim() ||
   process.env.OPENAI_MODEL?.trim() ||
-  "gpt-4o-mini";
+  "gpt-6-luna";

@@ -18,7 +18,8 @@ const LEARNER_PROMPT =
 export function secondModelFor(primary: string): string {
   const preferred = SPEECH_DEFAULTS.secondTranscribe;
   if (primary !== preferred && isExternalStt(preferred) && externalSttReady(preferred)) return preferred;
-  return primary === "gpt-transcribe" ? "gpt-4o-mini-transcribe" : "gpt-transcribe";
+  // 2026-10-27: gpt-4o-mini-transcribe(2027-02-26 종료)는 더 쓰지 않는다 — Scribe 키가 없고 화면도 gpt-transcribe면 같은 모델로 한 번 더.
+  return SPEECH_DEFAULTS.openaiTranscribe;
 }
 
 export async function transcribeOnce(
