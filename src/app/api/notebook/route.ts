@@ -9,11 +9,12 @@ import { currentStageOrder, deleteShots, locatePart, placeLearnedPhrases, readNo
 import { isLedgerTab } from "@/lib/learner/ledger";
 import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 import { scriptView, stageViews } from "@/lib/server/stageCopy";
-import { applyEdit, parseEdit, prunePending, skeletonFor, type SkeletonNode } from "@/lib/notes/notebook";
+import { applyEdit, grammarNodeId, parseEdit, prunePending, skeletonFor, type SkeletonNode } from "@/lib/notes/notebook";
 import { INTERFACE_LANGUAGE_LABELS, coerceLanguageCode } from "@/lib/learningLanguages";
 import { ladderFor } from "@/lib/curriculum/stages";
 import { partHistory, recentMistakes, stageParts, vocabScore, vocabWords, withScripts } from "@/lib/notes/stageParts";
 import { hasScripts } from "@/lib/curriculum/stageScripts";
+import { pickScript } from "@/lib/curriculum/scriptPick";
 import { readPassedScripts } from "@/lib/server/stageScriptStore";
 import { readGrowthRecord } from "@/lib/server/growthStore";
 import { readLearnerProfile } from "@/lib/server/learnerProfileStore";
@@ -33,7 +34,8 @@ export const maxDuration = 60;
  *   phrases(습득한 표현이 든 칸 [{ key, text, state, node }] — 칸 없는 것은 이 요청 뒤 모델이 고른다).
  *   + parts(단계마다 어휘·문법·표현·발음 [{ order, parts, ready, weakest, expressions }], notes/stageParts.ts),
  *     words(어휘 갈래 목록), pronunciationNotes({ [단계]: 앱 언어 한 줄 }), partDays(지금 단계 갈래별 최근 14일) — 2026-10-25 My 네 갈래.
- *   + scripts=1(2.76부터): parts[].scripts { done, total, passed } 그리고 ready에 대본 통과가 더해짐(대본이 있는 언어만).
+ *   + scripts=1(2.76부터): parts[].scripts { done, total, passed } 그리고 ready에 대본 통과가 더해짐(대본이 있는 언어만),
+ *     recommend { stage, id, why } — 오늘의 대본(curriculum/scriptPick.ts).
  * GET ?lang=&shot=<화면 id> → { image } — 카드에 붙인 화면.
  * POST { language, edit } — 카드 옮기기·메모·지우기, 칸 더하기·이름 바꾸기·지우기·메모, 제안 칸 받기,
  *   후보 넣기(commit: ids, shots)·버리기(dismiss) → { ok, cards, custom, renames, memos, pending }
@@ -121,6 +123,7 @@ export async function GET(request: NextRequest) {
   const source = ladderFor(language);
   let parts: ReturnType<typeof stageParts>[] = [];
   let partDays: ReturnType<typeof partHistory> | null = null;
+  let recommend: { stage: number; id: string; why: { kind: "grammar" | "expression"; items: string[] } | { kind: "next" } } | null = null;
   if (source && stages) {
     const constructionIds = source.stages.flatMap((s) => s.grammar.map((g) => g.constructionId)).filter((id): id is string => Boolean(id));
     const [growth, profile] = await Promise.all([
@@ -135,7 +138,46 @@ export async function GET(request: NextRequest) {
     parts = source.stages.map((s) => stageParts({ stage: s, language, ledger, phrases: record.phrases, constructionsMastered: mastered, pronunciation, vocab, mistakes }));
     // 대본이 있는 언어: 다음 단계 = 네 갈래 + 그 단계 대본 모두 통과(2026-10-27). 옛 앱은 scripts=1을 안 보내 예전 조건 그대로.
     if (request.nextUrl.searchParams.get("scripts") === "1" && hasScripts(language)) {
-      parts = withScripts(parts, language, await readPassedScripts(userId, language));
+      const passed = await readPassedScripts(userId, language);
+      parts = withScripts(parts, language, passed);
+      // 오늘의 대본(curriculum/scriptPick.ts, 2026-10-28): 지금 단계에서 최근 짚인 문법·아직인 표현·안 한 대본으로 하나.
+      const here = source.stages.find((s) => s.order === stage);
+      if (here) {
+        const nodeIndex = new Map(here.grammar.map((g, i) => [grammarNodeId(here.order, g), i] as const));
+        const grammarMistakes = new Map<number, number>();
+        const seen = new Set<string>();
+        const now = Date.now();
+        for (const card of [...record.cards, ...record.pending]) {
+          if ((card.kind ?? "mistake") !== "mistake" || now - card.at > 14 * 24 * 60 * 60 * 1000) continue;
+          const key = `${card.wrong}\u0000${card.right}`;
+          if (seen.has(key)) continue;
+          seen.add(key);
+          for (const node of [card.node, ...(card.also ?? [])]) {
+            const index = node ? nodeIndex.get(node) : undefined;
+            if (index !== undefined) grammarMistakes.set(index, (grammarMistakes.get(index) ?? 0) + 1);
+          }
+        }
+        const row = parts.find((p) => p.order === stage);
+        const pick = pickScript({
+          language,
+          stage,
+          passed,
+          expressionStates: Object.fromEntries((row?.expressions ?? []).map((item) => [item.text, item.state])),
+          grammarMistakes,
+          weakest: row?.weakest ?? null,
+        });
+        if (pick) {
+          const names = stages?.find((s) => s.order === stage)?.grammar;
+          recommend = {
+            stage,
+            id: pick.id,
+            why:
+              pick.why.kind === "grammar"
+                ? { kind: "grammar" as const, items: pick.why.items.map((i) => names?.[i]?.name || here.grammar[i]!.name.en) }
+                : pick.why,
+          };
+        }
+      }
     }
     // 그래프 보기: 지금 단계 네 갈래의 최근 14일(사용자 시간대).
     const here = source.stages.find((s) => s.order === stage) ?? source.stages[0];
@@ -161,6 +203,7 @@ export async function GET(request: NextRequest) {
     phrases,
     parts,
     partDays,
+    ...(recommend ? { recommend } : {}),
     words: vocabWords(ledger, language),
     pronunciationNotes,
     // 칸을 고른 표현 수(어휘로 둔 것 포함) — 점검이 "아직"과 "어휘로 둠"을 가른다.

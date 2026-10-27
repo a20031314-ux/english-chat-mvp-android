@@ -145,3 +145,19 @@ test("학습자 이름 자리: 닉네임으로 바꾸고, 한국어는 조사를
     }
   }
 });
+
+test("문법 태그: 그 단계 문법 번호 안, 앞 단계는 더 낮은 단계", () => {
+  for (const language of ["ko", "ja", "es"]) {
+    const ladder = ladderFor(language)!;
+    for (const stage of ladder.stages) {
+      for (const script of scriptsFor(language, stage.order)) {
+        for (const index of script.grammar ?? []) assert.ok(index >= 0 && index < stage.grammar.length, `${script.id} ${index}`);
+        for (const tag of script.earlierGrammar ?? []) {
+          const [s, i] = tag.split(":").map(Number);
+          const earlier = ladder.stages.find((one) => one.order === s);
+          assert.ok(earlier && s! < stage.order && i! >= 0 && i! < earlier.grammar.length, `${script.id} ${tag}`);
+        }
+      }
+    }
+  }
+});

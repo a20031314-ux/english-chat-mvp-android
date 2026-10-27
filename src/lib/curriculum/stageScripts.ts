@@ -35,6 +35,10 @@ export type StageScript = {
   situation?: number;
   /** 학습자가 내 줄에서 쓰는 그 단계 핵심 표현(stages expressions 글 그대로) — 통과하면 장부에 오른다(2026-10-28 "표현연결"). */
   expressions: string[];
+  /** 학습자가 내 줄에서 쓰는 그 단계 문법(stages grammar 번호, 0부터) — "오늘의 대본"이 최근 짚인 문법으로 고른다(curriculum/scriptPick.ts). */
+  grammar?: number[];
+  /** 앞 단계 문법("단계:번호", 2개까지). */
+  earlierGrammar?: string[];
   setting: ScriptGloss;
   /** 5단계: 이 대화에서 해낼 것. */
   goal?: ScriptGloss;

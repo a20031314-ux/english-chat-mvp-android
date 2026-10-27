@@ -26,6 +26,9 @@ export const JA: StageScript[] = [
       "よろしくお願いします",
       "ありがとうございます"
     ],
+    "grammar": [
+      0
+    ],
     "lines": [
       {
         "who": "them",
@@ -106,6 +109,12 @@ export const JA: StageScript[] = [
       "これください",
       "いくらですか",
       "お願いします"
+    ],
+    "grammar": [
+      1,
+      4,
+      5,
+      7
     ],
     "lines": [
       {
@@ -189,6 +198,12 @@ export const JA: StageScript[] = [
       "トイレはどこですか",
       "ありがとうございます"
     ],
+    "grammar": [
+      1,
+      2,
+      4,
+      6
+    ],
     "lines": [
       {
         "who": "them",
@@ -270,6 +285,11 @@ export const JA: StageScript[] = [
       "大丈夫です",
       "ごちそうさまでした"
     ],
+    "grammar": [
+      0,
+      1,
+      4
+    ],
     "lines": [
       {
         "who": "them",
@@ -349,6 +369,10 @@ export const JA: StageScript[] = [
       "わかりません",
       "ちょっと待ってください"
     ],
+    "grammar": [
+      2,
+      7
+    ],
     "lines": [
       {
         "who": "them",
@@ -412,6 +436,7 @@ export const JA: StageScript[] = [
       "そうです",
       "じゃあね"
     ],
+    "grammar": [],
     "lines": [
       {
         "who": "them",
@@ -474,6 +499,15 @@ export const JA: StageScript[] = [
     "expressions": [
       "いいですね",
       "楽しみです"
+    ],
+    "grammar": [
+      3,
+      5,
+      7
+    ],
+    "earlierGrammar": [
+      "1:7",
+      "1:1"
     ],
     "lines": [
       {
@@ -570,6 +604,13 @@ export const JA: StageScript[] = [
       "何がおすすめですか",
       "写真を撮ってもいいですか"
     ],
+    "grammar": [
+      4
+    ],
+    "earlierGrammar": [
+      "1:5",
+      "1:1"
+    ],
     "lines": [
       {
         "who": "them",
@@ -665,6 +706,14 @@ export const JA: StageScript[] = [
       "頭が痛いです",
       "少しだけ"
     ],
+    "grammar": [
+      0,
+      2
+    ],
+    "earlierGrammar": [
+      "1:5",
+      "1:1"
+    ],
     "lines": [
       {
         "who": "them",
@@ -759,6 +808,14 @@ export const JA: StageScript[] = [
     "expressions": [
       "お疲れさまです",
       "まだです"
+    ],
+    "grammar": [
+      1,
+      5
+    ],
+    "earlierGrammar": [
+      "1:2",
+      "1:1"
     ],
     "lines": [
       {
@@ -856,6 +913,13 @@ export const JA: StageScript[] = [
       "本当ですか",
       "一緒に行きませんか"
     ],
+    "grammar": [
+      5
+    ],
+    "earlierGrammar": [
+      "1:1",
+      "1:3"
+    ],
     "lines": [
       {
         "who": "them",
@@ -920,6 +984,13 @@ export const JA: StageScript[] = [
       "気をつけて",
       "また明日"
     ],
+    "grammar": [
+      0,
+      1
+    ],
+    "earlierGrammar": [
+      "1:2"
+    ],
     "lines": [
       {
         "who": "them",
@@ -981,6 +1052,13 @@ export const JA: StageScript[] = [
     "expressions": [
       "道に迷いました",
       "何時にしますか"
+    ],
+    "grammar": [
+      0
+    ],
+    "earlierGrammar": [
+      "1:7",
+      "1:1"
     ],
     "lines": [
       {
@@ -1045,6 +1123,14 @@ export const JA: StageScript[] = [
       "残念です",
       "頑張ってください"
     ],
+    "grammar": [
+      0,
+      1,
+      2
+    ],
+    "earlierGrammar": [
+      "1:1"
+    ],
     "lines": [
       {
         "who": "them",
@@ -1107,6 +1193,18 @@ export const JA: StageScript[] = [
     "expressions": [
       "遅れてごめん",
       "実は"
+    ],
+    "grammar": [
+      0,
+      1,
+      4,
+      5,
+      6,
+      7
+    ],
+    "earlierGrammar": [
+      "2:7",
+      "2:2"
     ],
     "lines": [
       {
@@ -1309,6 +1407,15 @@ export const JA: StageScript[] = [
     "expressions": [
       "助かる"
     ],
+    "grammar": [
+      1,
+      2,
+      4,
+      6
+    ],
+    "earlierGrammar": [
+      "2:3"
+    ],
     "lines": [
       {
         "who": "them",
@@ -1498,6 +1605,15 @@ export const JA: StageScript[] = [
     },
     "expressions": [
       "そういえば"
+    ],
+    "grammar": [
+      0,
+      3,
+      4,
+      7
+    ],
+    "earlierGrammar": [
+      "2:2"
     ],
     "lines": [
       {
@@ -1693,6 +1809,17 @@ export const JA: StageScript[] = [
       "なるほど",
       "とりあえず"
     ],
+    "grammar": [
+      1,
+      2,
+      4,
+      6,
+      7
+    ],
+    "earlierGrammar": [
+      "2:7",
+      "2:0"
+    ],
     "lines": [
       {
         "who": "them",
@@ -1885,6 +2012,13 @@ export const JA: StageScript[] = [
       "そうなんだ",
       "無理しないで"
     ],
+    "grammar": [
+      0,
+      1,
+      2,
+      4,
+      7
+    ],
     "lines": [
       {
         "who": "them",
@@ -1947,6 +2081,9 @@ export const JA: StageScript[] = [
       "どうしよう",
       "間に合った",
       "確かに"
+    ],
+    "grammar": [
+      0
     ],
     "lines": [
       {
@@ -2011,6 +2148,11 @@ export const JA: StageScript[] = [
       "仕方ない",
       "気にしないで"
     ],
+    "grammar": [
+      0,
+      1,
+      7
+    ],
     "lines": [
       {
         "who": "them",
@@ -2073,6 +2215,16 @@ export const JA: StageScript[] = [
       "考えとく",
       "やっぱり",
       "せっかくだから"
+    ],
+    "grammar": [
+      0,
+      1,
+      3,
+      4,
+      7
+    ],
+    "earlierGrammar": [
+      "2:3"
     ],
     "lines": [
       {
@@ -2152,6 +2304,11 @@ export const JA: StageScript[] = [
       "かしこまりました",
       "後ほどご連絡します",
       "失礼いたします"
+    ],
+    "grammar": [
+      0,
+      1,
+      5
     ],
     "lines": [
       {
@@ -2376,6 +2533,15 @@ export const JA: StageScript[] = [
       "おっしゃる通りです",
       "承知しました"
     ],
+    "grammar": [
+      0,
+      3,
+      4,
+      6
+    ],
+    "earlierGrammar": [
+      "3:3"
+    ],
     "lines": [
       {
         "who": "them",
@@ -2598,6 +2764,14 @@ export const JA: StageScript[] = [
     "expressions": [
       "承知しました",
       "念のため"
+    ],
+    "grammar": [
+      1,
+      2
+    ],
+    "earlierGrammar": [
+      "2:4",
+      "3:2"
     ],
     "lines": [
       {
@@ -2822,6 +2996,13 @@ export const JA: StageScript[] = [
       "恐れ入りますが",
       "承知しました"
     ],
+    "grammar": [
+      1
+    ],
+    "earlierGrammar": [
+      "3:1",
+      "3:4"
+    ],
     "lines": [
       {
         "who": "them",
@@ -3044,6 +3225,12 @@ export const JA: StageScript[] = [
       "少々お待ちください",
       "差し支えなければ"
     ],
+    "grammar": [
+      1
+    ],
+    "earlierGrammar": [
+      "2:4"
+    ],
     "lines": [
       {
         "who": "them",
@@ -3124,6 +3311,10 @@ export const JA: StageScript[] = [
       "検討いたします",
       "今後ともよろしくお願いいたします"
     ],
+    "grammar": [
+      0,
+      1
+    ],
     "lines": [
       {
         "who": "them",
@@ -3202,6 +3393,12 @@ export const JA: StageScript[] = [
       "お手数ですが",
       "ご確認ください",
       "結構です"
+    ],
+    "grammar": [
+      1
+    ],
+    "earlierGrammar": [
+      "2:4"
     ],
     "lines": [
       {
@@ -3287,6 +3484,13 @@ export const JA: StageScript[] = [
       "ちょっと難しいかもです",
       "とんでもないです",
       "お言葉に甘えて"
+    ],
+    "grammar": [
+      0
+    ],
+    "earlierGrammar": [
+      "4:5",
+      "3:3"
     ],
     "lines": [
       {
@@ -3439,6 +3643,13 @@ export const JA: StageScript[] = [
       "一理ある",
       "痛いところを突かれた"
     ],
+    "grammar": [
+      5
+    ],
+    "earlierGrammar": [
+      "4:3",
+      "3:3"
+    ],
     "lines": [
       {
         "who": "them",
@@ -3586,6 +3797,15 @@ export const JA: StageScript[] = [
       "一理ある",
       "正直なところ"
     ],
+    "grammar": [
+      1,
+      3,
+      7
+    ],
+    "earlierGrammar": [
+      "4:6",
+      "4:3"
+    ],
     "lines": [
       {
         "who": "them",
@@ -3732,6 +3952,11 @@ export const JA: StageScript[] = [
     "expressions": [
       "考えすぎだよ"
     ],
+    "grammar": [],
+    "earlierGrammar": [
+      "4:3",
+      "3:3"
+    ],
     "lines": [
       {
         "who": "them",
@@ -3876,6 +4101,11 @@ export const JA: StageScript[] = [
       "前向きに検討します",
       "ご無理のない範囲で"
     ],
+    "grammar": [],
+    "earlierGrammar": [
+      "4:2",
+      "4:1"
+    ],
     "lines": [
       {
         "who": "them",
@@ -3955,6 +4185,11 @@ export const JA: StageScript[] = [
       "ここだけの話",
       "それはそれとして"
     ],
+    "grammar": [],
+    "earlierGrammar": [
+      "4:3",
+      "3:3"
+    ],
     "lines": [
       {
         "who": "them",
@@ -4033,6 +4268,11 @@ export const JA: StageScript[] = [
       "気が進まない",
       "悪くはないけど",
       "今さら言っても"
+    ],
+    "grammar": [],
+    "earlierGrammar": [
+      "4:4",
+      "4:3"
     ],
     "lines": [
       {

@@ -93,6 +93,13 @@ export const ES: StageScript[] = [
       "me llamo",
       "soy de Corea",
       "sí, claro"
+    ],
+    "grammar": [
+      0,
+      1,
+      2,
+      3,
+      4
     ]
   },
   {
@@ -178,6 +185,10 @@ export const ES: StageScript[] = [
       "no entiendo",
       "más despacio",
       "vale"
+    ],
+    "grammar": [
+      3,
+      4
     ]
   },
   {
@@ -260,6 +271,12 @@ export const ES: StageScript[] = [
       "perdón",
       "otra vez",
       "adiós"
+    ],
+    "grammar": [
+      3,
+      4,
+      5,
+      6
     ]
   },
   {
@@ -359,6 +376,12 @@ export const ES: StageScript[] = [
       "dónde está el baño",
       "sí, claro",
       "vale"
+    ],
+    "grammar": [
+      1,
+      3,
+      4,
+      5
     ]
   },
   {
@@ -373,6 +396,10 @@ export const ES: StageScript[] = [
       "de nada",
       "lo siento",
       "hasta luego"
+    ],
+    "grammar": [
+      3,
+      4
     ],
     "lines": [
       {
@@ -522,6 +549,14 @@ export const ES: StageScript[] = [
       "me viene bien",
       "tengo que",
       "me gusta mucho"
+    ],
+    "grammar": [
+      3,
+      4,
+      5
+    ],
+    "earlierGrammar": [
+      "1:3"
     ]
   },
   {
@@ -619,6 +654,14 @@ export const ES: StageScript[] = [
       "qué me recomienda",
       "para mí",
       "la cuenta"
+    ],
+    "grammar": [
+      3,
+      4
+    ],
+    "earlierGrammar": [
+      "1:3",
+      "1:4"
     ]
   },
   {
@@ -715,6 +758,16 @@ export const ES: StageScript[] = [
       "tengo que",
       "tengo fiebre",
       "estoy cansado"
+    ],
+    "grammar": [
+      1,
+      5,
+      6,
+      7
+    ],
+    "earlierGrammar": [
+      "1:7",
+      "1:3"
     ]
   },
   {
@@ -811,6 +864,15 @@ export const ES: StageScript[] = [
       "este fin de semana",
       "qué buena idea",
       "voy a"
+    ],
+    "grammar": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "earlierGrammar": [
+      "1:3"
     ]
   },
   {
@@ -824,6 +886,14 @@ export const ES: StageScript[] = [
       "ayer fui",
       "quieres venir",
       "claro que sí"
+    ],
+    "grammar": [
+      1,
+      4
+    ],
+    "earlierGrammar": [
+      "1:6",
+      "1:3"
     ],
     "lines": [
       {
@@ -888,6 +958,13 @@ export const ES: StageScript[] = [
       "se puede",
       "un momento",
       "depende"
+    ],
+    "grammar": [
+      4,
+      6
+    ],
+    "earlierGrammar": [
+      "1:2"
     ],
     "lines": [
       {
@@ -1118,6 +1195,14 @@ export const ES: StageScript[] = [
       "tengo un problema con",
       "no funciona",
       "menos mal"
+    ],
+    "grammar": [
+      1,
+      4
+    ],
+    "earlierGrammar": [
+      "2:4",
+      "1:7"
     ]
   },
   {
@@ -1284,6 +1369,17 @@ export const ES: StageScript[] = [
       "me encantaría",
       "de hecho",
       "al final"
+    ],
+    "grammar": [
+      0,
+      1,
+      4,
+      5,
+      6
+    ],
+    "earlierGrammar": [
+      "2:3",
+      "2:0"
     ]
   },
   {
@@ -1458,6 +1554,15 @@ export const ES: StageScript[] = [
     "expressions": [
       "creo que",
       "sin embargo"
+    ],
+    "grammar": [
+      0,
+      1,
+      3,
+      4
+    ],
+    "earlierGrammar": [
+      "2:3"
     ]
   },
   {
@@ -1631,6 +1736,16 @@ export const ES: StageScript[] = [
       "no estoy seguro",
       "por cierto",
       "te acuerdas de"
+    ],
+    "grammar": [
+      0,
+      2,
+      3,
+      4,
+      5
+    ],
+    "earlierGrammar": [
+      "2:4"
     ]
   },
   {
@@ -1644,6 +1759,14 @@ export const ES: StageScript[] = [
       "podría cambiarlo",
       "qué pena",
       "a ver"
+    ],
+    "grammar": [
+      2,
+      4
+    ],
+    "earlierGrammar": [
+      "2:0",
+      "2:3"
     ],
     "lines": [
       {
@@ -1706,6 +1829,12 @@ export const ES: StageScript[] = [
     "expressions": [
       "estoy de acuerdo",
       "alguna vez"
+    ],
+    "grammar": [
+      1
+    ],
+    "earlierGrammar": [
+      "2:1"
     ],
     "lines": [
       {
@@ -1961,6 +2090,15 @@ export const ES: StageScript[] = [
       "por un lado",
       "por otro lado",
       "ojalá"
+    ],
+    "grammar": [
+      0,
+      1,
+      2,
+      6
+    ],
+    "earlierGrammar": [
+      "3:3"
     ]
   },
   {
@@ -2159,6 +2297,14 @@ export const ES: StageScript[] = [
       "por un lado",
       "me da igual",
       "lo bueno es que"
+    ],
+    "grammar": [
+      1,
+      2,
+      6
+    ],
+    "earlierGrammar": [
+      "3:3"
     ]
   },
   {
@@ -2373,6 +2519,17 @@ export const ES: StageScript[] = [
       "habría que",
       "a no ser que",
       "en resumen"
+    ],
+    "grammar": [
+      1,
+      2,
+      3,
+      5,
+      6
+    ],
+    "earlierGrammar": [
+      "3:3",
+      "3:0"
     ]
   },
   {
@@ -2566,6 +2723,17 @@ export const ES: StageScript[] = [
       "en cuanto a",
       "lo bueno es que",
       "me di cuenta de"
+    ],
+    "grammar": [
+      0,
+      1,
+      2,
+      4,
+      5
+    ],
+    "earlierGrammar": [
+      "3:0",
+      "2:2"
     ]
   },
   {
@@ -2579,6 +2747,12 @@ export const ES: StageScript[] = [
       "a pesar de",
       "no es para tanto",
       "estaría bien"
+    ],
+    "grammar": [
+      6
+    ],
+    "earlierGrammar": [
+      "2:0"
     ],
     "lines": [
       {
@@ -2657,6 +2831,13 @@ export const ES: StageScript[] = [
     "expressions": [
       "por lo tanto",
       "tiene sentido"
+    ],
+    "grammar": [
+      6
+    ],
+    "earlierGrammar": [
+      "3:1",
+      "2:7"
     ],
     "lines": [
       {
@@ -2859,6 +3040,15 @@ export const ES: StageScript[] = [
       "dicho sea de paso",
       "a grandes rasgos",
       "no me cabe duda"
+    ],
+    "grammar": [
+      1,
+      2,
+      5,
+      6
+    ],
+    "earlierGrammar": [
+      "3:1"
     ]
   },
   {
@@ -3007,6 +3197,15 @@ export const ES: StageScript[] = [
       "qué va",
       "tomar el pelo",
       "estar en las nubes"
+    ],
+    "grammar": [
+      0,
+      2,
+      5
+    ],
+    "earlierGrammar": [
+      "2:4",
+      "4:2"
     ]
   },
   {
@@ -3157,6 +3356,14 @@ export const ES: StageScript[] = [
       "a lo mejor",
       "o sea",
       "sin ir más lejos"
+    ],
+    "grammar": [
+      2,
+      6
+    ],
+    "earlierGrammar": [
+      "3:3",
+      "3:1"
     ]
   },
   {
@@ -3315,6 +3522,14 @@ export const ES: StageScript[] = [
     "expressions": [
       "cabe destacar",
       "le agradecería que"
+    ],
+    "grammar": [
+      1,
+      4
+    ],
+    "earlierGrammar": [
+      "3:4",
+      "3:1"
     ]
   },
   {
@@ -3328,6 +3543,11 @@ export const ES: StageScript[] = [
       "me saca de quicio",
       "quedarse de piedra",
       "no pasa nada"
+    ],
+    "grammar": [],
+    "earlierGrammar": [
+      "4:3",
+      "2:1"
     ],
     "lines": [
       {
@@ -3406,6 +3626,11 @@ export const ES: StageScript[] = [
     "expressions": [
       "ir al grano",
       "echar una mano"
+    ],
+    "grammar": [],
+    "earlierGrammar": [
+      "3:4",
+      "3:1"
     ],
     "lines": [
       {

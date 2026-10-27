@@ -10,7 +10,7 @@ import { sceneShotFor } from "@/lib/notes/sceneShots";
 import { onLocate, takeLocate, type LocateHandoff } from "@/lib/notes/locateHandoff";
 import { PART_IDS, shareOf, type PartId, type StageParts } from "@/lib/notes/stageParts";
 import { sendAppIntent } from "@/lib/appIntents";
-import { StageScripts } from "@/components/studyMap/StageScripts";
+import { StageScripts, type ScriptRecommend } from "@/components/studyMap/StageScripts";
 import { scriptForExpressions } from "@/lib/curriculum/stageScripts";
 
 /**
@@ -42,6 +42,8 @@ type Book = {
   pronunciationNotes?: Record<string, string>;
   /** 지금 단계 갈래별 최근 14일(그래프 보기). */
   partDays?: Record<PartId, number[]> | null;
+  /** 오늘의 대본(서버 curriculum/scriptPick.ts, scripts=1). */
+  recommend?: ScriptRecommend;
 };
 type PhraseView = { key: string; text: string; state: "met" | "learned" | "mastered"; node: string };
 type Group = NotebookChapter | "mine" | "loose";
@@ -325,6 +327,7 @@ export function NotebookSection({
               onPassed={() => setReload((n) => n + 1)}
               expressionStates={Object.fromEntries((row?.expressions ?? []).map((item) => [item.text, item.state]))}
               openFor={openFor}
+              recommended={book.recommend && book.recommend.stage === order ? book.recommend : null}
             />
           )}
           scriptFor={(order, open) => scriptForExpressions(language, order, open)?.id ?? null}

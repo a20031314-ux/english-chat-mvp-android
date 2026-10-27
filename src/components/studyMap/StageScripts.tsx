@@ -44,6 +44,13 @@ import { playTts, stopTts } from "@/lib/ttsPlayer";
  */
 
 const MODE_KEY = "stageScriptMode";
+
+/** 오늘의 대본(서버가 고름): 문법 이름은 앱 언어, 표현은 학습 언어. */
+export type ScriptRecommend = {
+  stage: number;
+  id: string;
+  why: { kind: "grammar" | "expression"; items: string[] } | { kind: "next" };
+};
 type Result = { heard: string; practice: Practice | null; clean: boolean; mode: ScriptMode };
 
 function readMode(stage: number): ScriptMode {
@@ -65,6 +72,7 @@ export function StageScripts({
   onPassed,
   expressionStates = {},
   openFor = null,
+  recommended = null,
 }: {
   ui: UICopy;
   locale: string;
@@ -77,6 +85,8 @@ export function StageScripts({
   expressionStates?: Record<string, LedgerState | null>;
   /** "다음 단계까지: 표현" 연습 → 이 대본을 연다(at = 누른 때, 같은 대본을 다시 열 수 있게). */
   openFor?: { id: string; at: number } | null;
+  /** 이 단계의 오늘의 대본(맨 위 카드). */
+  recommended?: ScriptRecommend | null;
 }) {
   const scripts = scriptsFor(language, stage);
   const [open, setOpen] = useState<StageScript | null>(null);
@@ -129,8 +139,34 @@ export function StageScripts({
       </button>
     );
   };
+  const picked = recommended ? scripts.find((script) => script.id === recommended.id) ?? null : null;
+  const reason = !recommended
+    ? ""
+    : recommended.why.kind === "grammar"
+      ? ui.scriptWhyGrammar.replace("{items}", recommended.why.items.join(" · "))
+      : recommended.why.kind === "expression"
+        ? ui.scriptWhyExpression.replace("{items}", recommended.why.items.join(" · "))
+        : ui.scriptWhyNext;
   return (
     <section className="mt-3 flex flex-col gap-2">
+      {picked ? (
+        <button
+          type="button"
+          onClick={() => setOpen(picked)}
+          className="flex items-center gap-3 rounded-xl border border-status-learned/50 bg-status-learned/10 px-3 py-3 text-start hover:bg-status-learned/15"
+        >
+          <span className="min-w-0 flex-1">
+            <span className="block text-caption font-semibold text-status-learned">{ui.scriptTodayTitle}</span>
+            <span dir="auto" className="mt-0.5 block text-note text-ink">
+              {glossFor(picked.setting, locale)}
+            </span>
+            <span dir="auto" className="mt-0.5 block text-meta text-slate-300">
+              {reason}
+            </span>
+          </span>
+          <span aria-hidden className="text-caption text-slate-400 rtl:rotate-180">›</span>
+        </button>
+      ) : null}
       <div className="flex items-center gap-2">
         <h3 className="min-w-0 flex-1 text-caption font-semibold text-slate-300">{ui.stageScriptsTitle}</h3>
         <span aria-hidden className="flex gap-1">

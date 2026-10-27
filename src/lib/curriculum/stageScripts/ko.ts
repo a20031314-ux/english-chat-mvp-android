@@ -79,6 +79,12 @@ export const KO: StageScript[] = [
     "expressions": [
       "만나서 반가워요",
       "아니요"
+    ],
+    "grammar": [
+      0,
+      1,
+      2,
+      3
     ]
   },
   {
@@ -156,6 +162,11 @@ export const KO: StageScript[] = [
       "여기요",
       "감사합니다",
       "안녕히 계세요"
+    ],
+    "grammar": [
+      0,
+      3,
+      6
     ]
   },
   {
@@ -228,6 +239,14 @@ export const KO: StageScript[] = [
       "아니요",
       "천천히 말해 주세요",
       "감사합니다"
+    ],
+    "grammar": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
     ]
   },
   {
@@ -303,6 +322,10 @@ export const KO: StageScript[] = [
       "죄송합니다",
       "다시 한번 말해 주세요",
       "안녕히 계세요"
+    ],
+    "grammar": [
+      0,
+      5
     ]
   },
   {
@@ -316,6 +339,12 @@ export const KO: StageScript[] = [
       "이거 뭐예요",
       "네 맞아요",
       "잘 모르겠어요"
+    ],
+    "grammar": [
+      0,
+      2,
+      3,
+      6
     ],
     "lines": [
       {
@@ -381,6 +410,11 @@ export const KO: StageScript[] = [
       "처음 뵙겠습니다",
       "한국어 조금 해요",
       "안녕히 가세요"
+    ],
+    "grammar": [
+      0,
+      2,
+      3
     ],
     "lines": [
       {
@@ -510,6 +544,18 @@ export const KO: StageScript[] = [
     "expressions": [
       "그때 봐요",
       "대박"
+    ],
+    "grammar": [
+      0,
+      2,
+      3,
+      4,
+      6,
+      7
+    ],
+    "earlierGrammar": [
+      "1:5",
+      "1:2"
     ]
   },
   {
@@ -594,6 +640,14 @@ export const KO: StageScript[] = [
     ],
     "expressions": [
       "카드 돼요"
+    ],
+    "grammar": [
+      3,
+      5,
+      7
+    ],
+    "earlierGrammar": [
+      "1:0"
     ]
   },
   {
@@ -680,6 +734,14 @@ export const KO: StageScript[] = [
       "입어 봐도 돼요",
       "다른 색 있어요",
       "좀 깎아 주세요"
+    ],
+    "grammar": [
+      1,
+      2
+    ],
+    "earlierGrammar": [
+      "1:4",
+      "1:5"
     ]
   },
   {
@@ -766,6 +828,14 @@ export const KO: StageScript[] = [
       "머리가 아파요",
       "약 있어요",
       "카드 돼요"
+    ],
+    "grammar": [
+      0,
+      2
+    ],
+    "earlierGrammar": [
+      "1:5",
+      "1:4"
     ]
   },
   {
@@ -780,6 +850,13 @@ export const KO: StageScript[] = [
       "주말에 뭐 했어요",
       "진짜요",
       "다음에 같이 가요"
+    ],
+    "grammar": [
+      0,
+      7
+    ],
+    "earlierGrammar": [
+      "1:2"
     ],
     "lines": [
       {
@@ -839,6 +916,13 @@ export const KO: StageScript[] = [
       "연락할게요",
       "힘내요"
     ],
+    "grammar": [
+      2,
+      6
+    ],
+    "earlierGrammar": [
+      "1:5"
+    ],
     "lines": [
       {
         "who": "them",
@@ -896,6 +980,12 @@ export const KO: StageScript[] = [
       "피곤해요",
       "배고파요"
     ],
+    "grammar": [
+      0
+    ],
+    "earlierGrammar": [
+      "1:4"
+    ],
     "lines": [
       {
         "who": "them",
@@ -951,6 +1041,13 @@ export const KO: StageScript[] = [
     "expressions": [
       "어디서 내려요",
       "여기서 세워 주세요"
+    ],
+    "grammar": [
+      7
+    ],
+    "earlierGrammar": [
+      "1:2",
+      "1:3"
     ],
     "lines": [
       {
@@ -1140,6 +1237,19 @@ export const KO: StageScript[] = [
     "expressions": [
       "어떻게 생각해요",
       "그럴 수도 있죠"
+    ],
+    "grammar": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "earlierGrammar": [
+      "2:1",
+      "2:0"
     ]
   },
   {
@@ -1284,6 +1394,15 @@ export const KO: StageScript[] = [
     ],
     "expressions": [
       "문제가 생겼어요"
+    ],
+    "grammar": [
+      1,
+      2,
+      3
+    ],
+    "earlierGrammar": [
+      "2:3",
+      "2:0"
     ]
   },
   {
@@ -1437,6 +1556,17 @@ export const KO: StageScript[] = [
     "expressions": [
       "잘 부탁드립니다",
       "아 그렇구나"
+    ],
+    "grammar": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "earlierGrammar": [
+      "2:3",
+      "2:7"
     ]
   },
   {
@@ -1584,6 +1714,16 @@ export const KO: StageScript[] = [
     "expressions": [
       "교환하고 싶은데요",
       "환불 가능해요"
+    ],
+    "grammar": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "earlierGrammar": [
+      "2:2",
+      "2:0"
     ]
   },
   {
@@ -1598,6 +1738,12 @@ export const KO: StageScript[] = [
       "그래서 어떻게 됐어",
       "말도 안 돼",
       "다음 화 언제 나와"
+    ],
+    "grammar": [
+      7
+    ],
+    "earlierGrammar": [
+      "2:0"
     ],
     "lines": [
       {
@@ -1655,6 +1801,13 @@ export const KO: StageScript[] = [
       "그건 좀",
       "완전 공감해요",
       "제 생각에는"
+    ],
+    "grammar": [
+      3
+    ],
+    "earlierGrammar": [
+      "2:7",
+      "2:2"
     ],
     "lines": [
       {
@@ -1714,6 +1867,13 @@ export const KO: StageScript[] = [
       "말 놓을까요",
       "편하게 말해"
     ],
+    "grammar": [
+      1,
+      7
+    ],
+    "earlierGrammar": [
+      "2:6"
+    ],
     "lines": [
       {
         "who": "them",
@@ -1769,6 +1929,10 @@ export const KO: StageScript[] = [
     "expressions": [
       "혹시 시간 괜찮으세요",
       "확인해 보겠습니다"
+    ],
+    "grammar": [
+      1,
+      4
     ],
     "lines": [
       {
@@ -1982,6 +2146,16 @@ export const KO: StageScript[] = [
       "확인 부탁드립니다",
       "일정 조율해 볼게요",
       "그 부분은요"
+    ],
+    "grammar": [
+      0,
+      1,
+      2,
+      4
+    ],
+    "earlierGrammar": [
+      "3:4",
+      "3:2"
     ]
   },
   {
@@ -2151,6 +2325,16 @@ export const KO: StageScript[] = [
       "하마터면",
       "그러게 말이야",
       "내가 쏠게"
+    ],
+    "grammar": [
+      2,
+      4,
+      5,
+      6
+    ],
+    "earlierGrammar": [
+      "3:7",
+      "3:3"
     ]
   },
   {
@@ -2309,7 +2493,16 @@ export const KO: StageScript[] = [
         }
       }
     ],
-    "expressions": []
+    "expressions": [],
+    "grammar": [
+      0,
+      3,
+      4
+    ],
+    "earlierGrammar": [
+      "3:2",
+      "3:1"
+    ]
   },
   {
     "id": "ko-4-4",
@@ -2471,6 +2664,16 @@ export const KO: StageScript[] = [
       "제가 알기로는",
       "솔직히 말하면",
       "아무튼"
+    ],
+    "grammar": [
+      1,
+      2,
+      4,
+      7
+    ],
+    "earlierGrammar": [
+      "3:2",
+      "3:0"
     ]
   },
   {
@@ -2485,6 +2688,13 @@ export const KO: StageScript[] = [
       "별일 없지",
       "그럴 줄 알았어",
       "그건 그렇고"
+    ],
+    "grammar": [
+      3
+    ],
+    "earlierGrammar": [
+      "3:4",
+      "3:7"
     ],
     "lines": [
       {
@@ -2557,6 +2767,11 @@ export const KO: StageScript[] = [
       "검토해 보겠습니다",
       "어쩔 수 없죠"
     ],
+    "grammar": [],
+    "earlierGrammar": [
+      "3:2",
+      "3:0"
+    ],
     "lines": [
       {
         "who": "them",
@@ -2612,6 +2827,11 @@ export const KO: StageScript[] = [
     "expressions": [
       "신경 쓰지 마",
       "그 말이 맞네"
+    ],
+    "grammar": [],
+    "earlierGrammar": [
+      "3:7",
+      "2:1"
     ],
     "lines": [
       {
@@ -2788,6 +3008,13 @@ export const KO: StageScript[] = [
       "사정이 좀 있어서",
       "마음은 굴뚝같은데",
       "마음에 걸려요"
+    ],
+    "grammar": [
+      7
+    ],
+    "earlierGrammar": [
+      "4:4",
+      "4:0"
     ]
   },
   {
@@ -2923,6 +3150,13 @@ export const KO: StageScript[] = [
       "괜히 했다",
       "말이 나온 김에",
       "한잔해"
+    ],
+    "grammar": [
+      5
+    ],
+    "earlierGrammar": [
+      "4:3",
+      "4:0"
     ]
   },
   {
@@ -3053,6 +3287,14 @@ export const KO: StageScript[] = [
     ],
     "expressions": [
       "선배님 덕분에"
+    ],
+    "grammar": [
+      1,
+      3
+    ],
+    "earlierGrammar": [
+      "4:0",
+      "3:2"
     ]
   },
   {
@@ -3184,6 +3426,14 @@ export const KO: StageScript[] = [
     "expressions": [
       "눈치가 빠르네",
       "김칫국 마시지 마"
+    ],
+    "grammar": [
+      0,
+      5
+    ],
+    "earlierGrammar": [
+      "4:4",
+      "4:1"
     ]
   },
   {
@@ -3196,6 +3446,11 @@ export const KO: StageScript[] = [
     "expressions": [
       "발이 넓다",
       "손이 크다"
+    ],
+    "grammar": [],
+    "earlierGrammar": [
+      "4:3",
+      "4:2"
     ],
     "lines": [
       {
@@ -3253,6 +3508,13 @@ export const KO: StageScript[] = [
       "생각 좀 해 볼게요",
       "다음 기회에"
     ],
+    "grammar": [
+      3
+    ],
+    "earlierGrammar": [
+      "3:1",
+      "3:4"
+    ],
     "lines": [
       {
         "who": "them",
@@ -3309,6 +3571,11 @@ export const KO: StageScript[] = [
       "입이 무겁다",
       "눈치 보지 마"
     ],
+    "grammar": [],
+    "earlierGrammar": [
+      "4:3",
+      "3:2"
+    ],
     "lines": [
       {
         "who": "them",
@@ -3364,6 +3631,10 @@ export const KO: StageScript[] = [
     "expressions": [
       "어이가 없네",
       "속이 시원하다"
+    ],
+    "grammar": [],
+    "earlierGrammar": [
+      "3:7"
     ],
     "lines": [
       {
