@@ -10,6 +10,7 @@
  * 통과한 대본 id만 계정에 남는다(server/stageScriptStore.ts) — 말한 문장은 남지 않는다.
  */
 import { ES } from "./stageScripts/es.ts";
+import { TH } from "./stageScripts/th.ts";
 import { VI } from "./stageScripts/vi.ts";
 import { ID } from "./stageScripts/id.ts";
 import { EN } from "./stageScripts/en.ts";
@@ -58,7 +59,7 @@ export type StageScript = {
 
 export type ScriptMode = "shadow" | "hint" | "hide" | "own";
 
-const ALL: Partial<Record<string, StageScript[]>> = { ko: KO, ja: JA, es: ES, zh: ZH, en: EN, id: ID, vi: VI };
+const ALL: Partial<Record<string, StageScript[]>> = { ko: KO, ja: JA, es: ES, zh: ZH, en: EN, id: ID, vi: VI, th: TH };
 
 /** 이 학습 언어·단계의 대본(없으면 빈 목록 — 아직 대본이 없는 언어). */
 export function scriptsFor(language: string, stage: number): StageScript[] {
@@ -271,8 +272,13 @@ export function scriptForExpressions(language: string, stage: number, open: read
  * 낱말 나누기는 Intl.Segmenter — 띄어쓰기 없는 말(ja·zh·th)도 낱말 덩어리마다 첫 글자가 남는다.
  */
 export function hintOf(text: string, language: string): string {
+  // 글자 단위는 소리 덩어리(grapheme)로 — 태국어·힌디어 모음 부호가 따로 남아 "ส_ั__" 같이 흩어지지 않게(2026-10-28).
+  const clusters = (word: string): string[] =>
+    typeof Intl !== "undefined" && "Segmenter" in Intl
+      ? [...new Intl.Segmenter(language, { granularity: "grapheme" }).segment(word)].map((part) => part.segment)
+      : [...word];
   const mask = (word: string) => {
-    const chars = [...word];
+    const chars = clusters(word);
     return chars[0] + chars.slice(1).map((ch) => (/[\p{L}\p{N}]/u.test(ch) ? "_" : ch)).join("");
   };
   if (typeof Intl === "undefined" || !("Segmenter" in Intl)) return text.replace(/[\p{L}\p{N}]+/gu, mask);

@@ -117,6 +117,9 @@ test("첫 글자만: 스페인어는 낱말마다, 일본어는 낱말 덩어리
   assert.ok(ja.startsWith("昨"));
   assert.ok(ja.includes("_"));
   assert.ok(ja.endsWith("。"));
+  const th = hintOf("สวัสดีครับ", "th");
+  assert.ok(th.startsWith("ส") && !/[\u0E31\u0E34-\u0E3A\u0E47-\u0E4E]/.test(th), th);
+  assert.equal(hintOf("नमस्ते दोस्त", "hi"), "न__ दो_");
   assert.equal(glossFor({ en: "Hi", ko: "안녕" }, "ko"), "안녕");
   assert.equal(glossFor({ en: "Hi", ko: "안녕" }, "ar"), "Hi");
 });
