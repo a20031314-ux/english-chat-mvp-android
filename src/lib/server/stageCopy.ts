@@ -289,7 +289,23 @@ export async function scriptGlosses(
   if (ui === "en" || ui === "ko") return {};
   const source = scriptGlossTexts(language, stage);
   if (!source.length) return {};
-  const texts = await translated(source, ui, uiName, `stagecopy:v1:scriptgloss:${language}:${stage}:${textsFingerprint(source)}:${ui}`, onTranslate);
-  if (!texts) return {};
-  return Object.fromEntries(source.map((text, index) => [text, texts[index]!]));
+  // 한 단계 글이 200~300줄이라 묶음마다 따로 저장하고 함께 옮긴다(차례로 옮기면 60초를 넘음, 2026-10-28 운영). 실패한 묶음만 영어.
+  const parts: string[][] = [];
+  for (let start = 0; start < source.length; start += CHUNK) parts.push(source.slice(start, start + CHUNK));
+  let metered = false;
+  const results = await Promise.all(
+    parts.map((part) =>
+      translated(part, ui, uiName, `stagecopy:v1:scriptgloss:${language}:${stage}:${textsFingerprint(part)}:${ui}`, () => {
+        if (metered) return;
+        metered = true;
+        onTranslate?.();
+      }),
+    ),
+  );
+  const out: Record<string, string> = {};
+  parts.forEach((part, i) => {
+    const texts = results[i];
+    if (texts) part.forEach((text, index) => (out[text] = texts[index]!));
+  });
+  return out;
 }
