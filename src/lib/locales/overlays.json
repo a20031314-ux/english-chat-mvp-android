@@ -673,7 +673,8 @@
     "scriptModeOwn": "自分の言葉で",
     "scriptCall": "通話でやってみる",
     "scriptsToNext": "次の段階まで:台本あと{n}つ",
-    "scriptsByExpression": "表現で練習"
+    "scriptsByExpression": "表現で練習",
+    "scriptSayPrompt": "「{line}」と言ってみましょう。"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1349,7 +1350,8 @@
     "scriptModeOwn": "用自己的话",
     "scriptCall": "通话试试",
     "scriptsToNext": "距下一阶段：还有{n}个剧本",
-    "scriptsByExpression": "按表达练习"
+    "scriptsByExpression": "按表达练习",
+    "scriptSayPrompt": "请说：“{line}”"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2027,7 +2029,8 @@
     "scriptModeOwn": "Bằng lời của bạn",
     "scriptCall": "Thử qua cuộc gọi",
     "scriptsToNext": "Đến giai đoạn tiếp: còn {n} kịch bản",
-    "scriptsByExpression": "Luyện theo cách nói"
+    "scriptsByExpression": "Luyện theo cách nói",
+    "scriptSayPrompt": "Hãy nói: “{line}”"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2710,7 +2713,8 @@
     "scriptModeOwn": "Avec vos mots",
     "scriptCall": "Essayer en appel",
     "scriptsToNext": "Jusqu’à l’étape suivante : {n} dialogues",
-    "scriptsByExpression": "S’entraîner par expression"
+    "scriptsByExpression": "S’entraîner par expression",
+    "scriptSayPrompt": "Dites : « {line} »"
   },
   "it": {
     "archive": "Report",
@@ -3584,7 +3588,8 @@
     "scriptModeOwn": "Con parole tue",
     "scriptCall": "Prova in chiamata",
     "scriptsToNext": "Alla fase successiva: {n} copioni",
-    "scriptsByExpression": "Esercitati per espressione"
+    "scriptsByExpression": "Esercitati per espressione",
+    "scriptSayPrompt": "Di’: «{line}»"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4270,7 +4275,8 @@
     "scriptModeOwn": "Com suas palavras",
     "scriptCall": "Testar numa chamada",
     "scriptsToNext": "Para a próxima etapa: {n} roteiros",
-    "scriptsByExpression": "Praticar por expressão"
+    "scriptsByExpression": "Praticar por expressão",
+    "scriptSayPrompt": "Diga: “{line}”"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5142,7 +5148,8 @@
     "scriptModeOwn": "Своими словами",
     "scriptCall": "Попробовать в звонке",
     "scriptsToNext": "До следующего этапа: сценариев — {n}",
-    "scriptsByExpression": "Тренировка по выражениям"
+    "scriptsByExpression": "Тренировка по выражениям",
+    "scriptSayPrompt": "Скажите: «{line}»"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5824,7 +5831,8 @@
     "scriptModeOwn": "Dengan kata sendiri",
     "scriptCall": "Coba lewat panggilan",
     "scriptsToNext": "Ke tahap berikutnya: {n} naskah lagi",
-    "scriptsByExpression": "Latihan per ungkapan"
+    "scriptsByExpression": "Latihan per ungkapan",
+    "scriptSayPrompt": "Ucapkan: “{line}”"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6500,7 +6508,8 @@
     "scriptModeOwn": "بكلماتك",
     "scriptCall": "جرّبها في مكالمة",
     "scriptsToNext": "حتى المرحلة التالية: {n} نصوص",
-    "scriptsByExpression": "تدرّب حسب العبارة"
+    "scriptsByExpression": "تدرّب حسب العبارة",
+    "scriptSayPrompt": "قل: «{line}»"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7176,7 +7185,8 @@
     "scriptModeOwn": "พูดด้วยคำของคุณ",
     "scriptCall": "ลองในการโทร",
     "scriptsToNext": "ถึงขั้นถัดไป: อีก {n} บท",
-    "scriptsByExpression": "ฝึกตามสำนวน"
+    "scriptsByExpression": "ฝึกตามสำนวน",
+    "scriptSayPrompt": "ลองพูดว่า “{line}”"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7852,6 +7862,7 @@
     "scriptModeOwn": "अपने शब्दों में",
     "scriptCall": "कॉल पर आज़माएँ",
     "scriptsToNext": "अगले चरण तक: {n} स्क्रिप्ट",
-    "scriptsByExpression": "अभिव्यक्ति से अभ्यास"
+    "scriptsByExpression": "अभिव्यक्ति से अभ्यास",
+    "scriptSayPrompt": "कहिए: “{line}”"
   }
 }

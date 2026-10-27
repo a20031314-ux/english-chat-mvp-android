@@ -351,15 +351,24 @@ function ScriptPlayer({
           return (
             <li key={i} className="mb-2 flex justify-end">
               <div className={`max-w-[88%] rounded-2xl px-3 py-2 ${current ? "border border-amber-300/40 bg-amber-300/[0.06]" : "bg-white/[0.09]"}`}>
-                <p dir="auto" className="text-caption text-slate-400">
-                  {glossFor(line.gloss, locale)}
-                </p>
-                <div className="mt-1 flex items-start gap-2">
-                  <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
-                    {show ? line.text : mode === "hint" ? hintOf(line.text, language) : "· · ·"}
+                {/* The line to say now: its meaning framed as an instruction (scriptSayPrompt, user request 2026-10-28). */}
+                {current && !result ? (
+                  <p dir="auto" className="text-note text-slate-200">
+                    {ui.scriptSayPrompt.replace("{line}", glossFor(line.gloss, locale))}
                   </p>
-                  {show ? <TTSButton text={line.text} lang={tag} className="shrink-0" /> : null}
-                </div>
+                ) : (
+                  <p dir="auto" className="text-caption text-slate-400">
+                    {glossFor(line.gloss, locale)}
+                  </p>
+                )}
+                {show || mode === "hint" ? (
+                  <div className="mt-1 flex items-start gap-2">
+                    <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
+                      {show ? line.text : hintOf(line.text, language)}
+                    </p>
+                    {show ? <TTSButton text={line.text} lang={tag} className="shrink-0" /> : null}
+                  </div>
+                ) : null}
                 {result ? (
                   result.clean ? (
                     <p className="mt-1.5 text-caption text-emerald-300">
