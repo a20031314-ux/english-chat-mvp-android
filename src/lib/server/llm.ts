@@ -192,6 +192,14 @@ export function isReasoningModel(model: string): boolean {
 }
 
 /**
+ * 가장 짧게 생각하는 값 — 계열마다 이름이 다르다(2026-10-27 운영: gpt-6-luna는 'minimal'을 거절, none·low·medium·high·xhigh만).
+ * gpt-5 계열·o 시리즈는 'minimal'.
+ */
+export function fastestEffort(model: string): string {
+  return /^gpt-6/.test(model) ? "none" : "minimal";
+}
+
+/**
  * 예전 모델(gpt-4o-mini·gpt-4.1)에 맞춰 쓴 인자를 그 모델이 받는 모양으로. 부르는 쪽은 그대로 두고 여기서만 바꾼다:
  * temperature·top_p 같은 샘플링 값은 빼고, max_tokens는 max_completion_tokens(생각 몫을 얹어서)로, 생각은 가장 짧게.
  */
@@ -208,7 +216,10 @@ export function forOpenAIModel<T extends Record<string, unknown>>(model: string,
   return {
     ...rest,
     ...(cap ? { max_completion_tokens: cap } : {}),
-    reasoning_effort: (rest.reasoning_effort as string | undefined) ?? "minimal",
+    reasoning_effort:
+      rest.reasoning_effort === undefined || rest.reasoning_effort === "minimal" || rest.reasoning_effort === "none"
+        ? fastestEffort(model)
+        : rest.reasoning_effort,
     model,
   } as unknown as T & { model: string };
 }

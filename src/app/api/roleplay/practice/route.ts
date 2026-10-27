@@ -1,4 +1,4 @@
-import { isReasoningModel } from "@/lib/server/llm";
+import { fastestEffort, isReasoningModel } from "@/lib/server/llm";
 import { completeChat, routeFor } from "@/lib/server/llm";
 import { NextRequest, after } from "next/server";
 import { recordPronunciation } from "@/lib/server/growthStore";
@@ -86,7 +86,7 @@ export async function POST(request: NextRequest) {
       ],
       response_format: { type: "json_object" },
       ...(reasoning
-        ? { max_completion_tokens: 2000, reasoning_effort: "minimal" as const }
+        ? { max_completion_tokens: 2000, reasoning_effort: fastestEffort(model) as "minimal" }
         : { max_tokens: 300 }),
     });
     const practice = parsePractice(completion.choices[0]?.message?.content ?? "");
