@@ -489,6 +489,72 @@ export const JA: StageScript[] = [
     ]
   },
   {
+    "id": "ja-1-x3",
+    "stage": 1,
+    "setting": {
+      "en": "Showing a classmate photos on your phone",
+      "ko": "같은 반 친구에게 휴대폰 사진 보여 주기"
+    },
+    "expressions": [
+      "そうです"
+    ],
+    "grammar": [
+      0,
+      3,
+      4
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "キムさん、それは何の写真ですか。",
+        "gloss": {
+          "en": "Kim, what's that a photo of?",
+          "ko": "김 씨, 그건 무슨 사진이에요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "わたしの家族の写真です。",
+        "gloss": {
+          "en": "It's a photo of my family.",
+          "ko": "제 가족 사진이에요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "この人はお姉さんですか。",
+        "gloss": {
+          "en": "Is this your older sister?",
+          "ko": "이 사람은 언니예요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "はい、そうです。姉は大阪の大学の先生です。",
+        "gloss": {
+          "en": "Yes, that's right. My sister is a teacher at a university in Osaka.",
+          "ko": "네, 맞아요. 언니는 오사카에 있는 대학 선생님이에요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "この犬もキムさんの犬ですか。",
+        "gloss": {
+          "en": "Is this dog yours too, Kim?",
+          "ko": "이 개도 김 씨 개예요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "いいえ、これは隣の家の犬です。",
+        "gloss": {
+          "en": "No, this is the neighbors' dog.",
+          "ko": "아니요, 이건 옆집 개예요."
+        }
+      }
+    ]
+  },
+  {
     "id": "ja-2-1",
     "stage": 2,
     "situation": 0,
@@ -1178,6 +1244,73 @@ export const JA: StageScript[] = [
         "gloss": {
           "en": "Good luck next year. I'll be cheering for you.",
           "ko": "내년에는 힘내세요. 응원할게요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-2-x5",
+    "stage": 2,
+    "setting": {
+      "en": "Dinner at an izakaya with a coworker",
+      "ko": "동료와 이자카야에서 저녁"
+    },
+    "expressions": [
+      "少しだけ",
+      "まだです",
+      "いいですね",
+      "楽しみです"
+    ],
+    "grammar": [
+      6
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "これ、納豆です。食べたことがありますか。",
+        "gloss": {
+          "en": "This is natto. Have you ever had it?",
+          "ko": "이거 낫토예요. 먹어 본 적 있어요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "いいえ、一度も食べたことがありません。少しだけください。",
+        "gloss": {
+          "en": "No, I've never had it. Just a little, please.",
+          "ko": "아니요, 한 번도 먹어 본 적 없어요. 조금만 주세요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "どうですか。ほかに日本の料理は何を食べたことがありますか。",
+        "gloss": {
+          "en": "How is it? What other Japanese food have you tried?",
+          "ko": "어때요? 다른 일본 요리는 뭘 먹어 봤어요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "おいしいです。すしとラーメンは食べたことがありますが、お好み焼きはまだです。",
+        "gloss": {
+          "en": "It's good. I've had sushi and ramen, but not okonomiyaki yet.",
+          "ko": "맛있어요. 초밥이랑 라멘은 먹어 본 적 있는데, 오코노미야키는 아직이에요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "じゃあ、今度一緒にお好み焼きを食べに行きませんか。",
+        "gloss": {
+          "en": "Then shall we go have okonomiyaki together sometime?",
+          "ko": "그럼 다음에 같이 오코노미야키 먹으러 갈래요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "いいですね。楽しみです。",
+        "gloss": {
+          "en": "Sounds good. I'm looking forward to it.",
+          "ko": "좋네요. 기대돼요."
         }
       }
     ]
@@ -3468,6 +3601,88 @@ export const JA: StageScript[] = [
     ]
   },
   {
+    "id": "ja-4-x4",
+    "stage": 4,
+    "setting": {
+      "en": "Choosing an apartment with a real estate agent",
+      "ko": "부동산 직원과 집 고르기"
+    },
+    "expressions": [
+      "念のため"
+    ],
+    "grammar": [
+      1,
+      6,
+      7
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "本日ご覧いただいた三つの物件の中で、お気に召したものはございましたか。",
+        "gloss": {
+          "en": "Of the three places you saw today, was there one you liked?",
+          "ko": "오늘 보신 세 집 중에 마음에 드신 곳이 있으셨나요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "どれもよかったんですが、見れば見るほど迷ってしまいまして。",
+        "gloss": {
+          "en": "They were all good, but the more I look, the harder it is to decide.",
+          "ko": "다 좋았는데, 보면 볼수록 고민이 돼서요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "お気持ち、よく分かります。一番重視されているのはどんな点でしょうか。",
+        "gloss": {
+          "en": "I understand completely. What matters most to you?",
+          "ko": "그 마음 잘 압니다. 가장 중요하게 보시는 점은 무엇인가요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "通勤ですね。ただ、駅に近ければ近いほど、家賃も高くなりますよね。",
+        "gloss": {
+          "en": "The commute. But the closer to the station, the higher the rent, right?",
+          "ko": "출퇴근이요. 다만 역에 가까울수록 월세도 비싸지잖아요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "おっしゃる通りです。駅から少し歩けば、同じ広さでも一万円ほど安くなりますよ。",
+        "gloss": {
+          "en": "Exactly. If you walk a bit farther from the station, the same size is about ten thousand yen cheaper.",
+          "ko": "맞습니다. 역에서 조금만 걸으면 같은 넓이라도 만 엔 정도 싸져요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "なるほど。部屋は広ければ広いほどいいというわけではないので、念のため、二つ目の物件をもう一度見せていただけますか。",
+        "gloss": {
+          "en": "I see. It's not that bigger is always better, so just to be sure, could I see the second place once more?",
+          "ko": "그렇군요. 방은 넓을수록 좋은 것만은 아니니까, 혹시 모르니 두 번째 집을 한 번 더 보여 주시겠어요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "かしこまりました。では、明日の午前中はいかがでしょうか。",
+        "gloss": {
+          "en": "Certainly. Then how about tomorrow morning?",
+          "ko": "알겠습니다. 그럼 내일 오전은 어떠세요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "ありがとうございます。では、明日の十時に伺います。",
+        "gloss": {
+          "en": "Thank you. Then I'll come by at ten tomorrow.",
+          "ko": "감사합니다. 그럼 내일 열 시에 찾아뵙겠습니다."
+        }
+      }
+    ]
+  },
+  {
     "id": "ja-5-1",
     "stage": 5,
     "situation": 0,
@@ -4337,6 +4552,247 @@ export const JA: StageScript[] = [
         "gloss": {
           "en": "That sounds good. Let's do that.",
           "ko": "그거 좋다. 그렇게 하자."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-5-x4",
+    "stage": 5,
+    "setting": {
+      "en": "Talking with a friend about news of four-day work weeks",
+      "ko": "주 4일 근무 뉴스를 두고 친구와 이야기하기"
+    },
+    "expressions": [
+      "正直なところ"
+    ],
+    "grammar": [
+      2
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "ニュース見た？週休三日制を導入する会社が増えてるんだって。",
+        "gloss": {
+          "en": "Did you see the news? More companies are bringing in a four-day work week.",
+          "ko": "뉴스 봤어? 주 4일 근무를 도입하는 회사가 늘고 있대."
+        }
+      },
+      {
+        "who": "me",
+        "text": "見た見た。休みが増えるのはうれしいよね。とはいえ、その分一日に働く時間が長くなるらしいよ。",
+        "gloss": {
+          "en": "Yeah, I saw it. More days off is nice. That said, apparently each workday gets longer to make up for it.",
+          "ko": "봤어. 쉬는 날이 느는 건 좋지. 그렇다고는 해도 그만큼 하루에 일하는 시간이 길어진대."
+        }
+      },
+      {
+        "who": "them",
+        "text": "え、そうなの？それじゃ、あんまり意味なくない？",
+        "gloss": {
+          "en": "What, really? Then isn't it kind of pointless?",
+          "ko": "어, 그래? 그럼 별 의미 없지 않아?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "そう思うよね。でも、子育てや介護をしている人には、まとまった休みがあるのは大きいみたい。",
+        "gloss": {
+          "en": "You'd think so. But for people raising kids or caring for family, a block of days off seems to make a big difference.",
+          "ko": "그렇게 생각하지. 근데 육아나 간병하는 사람한테는 쉬는 날이 몰려 있는 게 크대."
+        }
+      },
+      {
+        "who": "them",
+        "text": "確かに。通勤が一日減るだけでも楽だしね。うちの会社でもやってくれないかな。",
+        "gloss": {
+          "en": "True. Even one less day of commuting is easier. I wish my company would do it.",
+          "ko": "확실히. 출근이 하루 주는 것만으로도 편하고. 우리 회사도 해 주면 좋겠다."
+        }
+      },
+      {
+        "who": "me",
+        "text": "でも、制度ができたとはいえ、実際に使える雰囲気かどうかは別の話だけどね。",
+        "gloss": {
+          "en": "But even if the system exists, whether people actually feel free to use it is another story.",
+          "ko": "근데 제도가 생겼다고 해도, 실제로 쓸 수 있는 분위기인지는 또 다른 얘기지."
+        }
+      },
+      {
+        "who": "them",
+        "text": "それ、すごく分かる。結局、上の人が率先して休まないとね。",
+        "gloss": {
+          "en": "I totally get that. In the end, the people at the top have to take the days off first.",
+          "ko": "그거 완전 공감. 결국 윗사람이 먼저 쉬어야지."
+        }
+      },
+      {
+        "who": "me",
+        "text": "正直なところ、そこが一番難しいんだろうな。",
+        "gloss": {
+          "en": "Honestly, that's probably the hardest part.",
+          "ko": "솔직히 그게 제일 어려운 부분이겠지."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-5-x5",
+    "stage": 5,
+    "setting": {
+      "en": "A friend asks how your new job is going",
+      "ko": "친구가 새 직장 생활을 물어봄"
+    },
+    "expressions": [
+      "気が進まない",
+      "言われてみれば"
+    ],
+    "grammar": [
+      4
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "新しい会社、もう慣れた？",
+        "gloss": {
+          "en": "Have you gotten used to the new company yet?",
+          "ko": "새 회사, 이제 좀 익숙해졌어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "うーん、転職したものの、正直まだ前の会社のやり方が抜けなくて。",
+        "gloss": {
+          "en": "Hmm, I did change jobs, but honestly I still can't shake how my old company did things.",
+          "ko": "음, 이직은 했지만 솔직히 아직 전 회사 방식이 몸에서 안 빠져서."
+        }
+      },
+      {
+        "who": "them",
+        "text": "まだ一か月でしょ？そんなもんだよ。",
+        "gloss": {
+          "en": "It's only been a month, right? That's normal.",
+          "ko": "아직 한 달이잖아? 다 그래."
+        }
+      },
+      {
+        "who": "me",
+        "text": "分かってはいるんだけどね。研修では分かったつもりでも、実際の仕事になると知らないことだらけで。",
+        "gloss": {
+          "en": "I know that. Even if I thought I got it in training, the actual work is full of things I don't know.",
+          "ko": "알고는 있는데. 연수 때는 안다고 생각해도 막상 실제 일에서는 모르는 것투성이라."
+        }
+      },
+      {
+        "who": "them",
+        "text": "周りの人には聞けてる？",
+        "gloss": {
+          "en": "Are you able to ask the people around you?",
+          "ko": "주변 사람들한테는 물어보고 있어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "聞こうとは思うものの、みんな忙しそうで、なんか気が進まないんだよね。",
+        "gloss": {
+          "en": "I mean to ask, but everyone looks busy, so somehow I don't feel like it.",
+          "ko": "물어보려고는 하는데, 다들 바빠 보여서 왠지 내키지가 않아."
+        }
+      },
+      {
+        "who": "them",
+        "text": "考えすぎだよ。新人なんだから、聞いて当たり前だって。",
+        "gloss": {
+          "en": "You're overthinking it. You're new, so asking is only natural.",
+          "ko": "너무 생각이 많다. 신입이니까 물어보는 게 당연하지."
+        }
+      },
+      {
+        "who": "me",
+        "text": "言われてみれば、そうだね。明日、思い切って先輩に聞いてみる。",
+        "gloss": {
+          "en": "Now that you say it, you're right. Tomorrow I'll just go ahead and ask a senior colleague.",
+          "ko": "듣고 보니 그렇네. 내일 용기 내서 선배한테 물어볼게."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-5-x6",
+    "stage": 5,
+    "setting": {
+      "en": "A friend is about to travel abroad alone for the first time",
+      "ko": "처음으로 혼자 해외여행 가는 친구에게 조언하기"
+    },
+    "expressions": [
+      "考えすぎだよ"
+    ],
+    "grammar": [
+      6
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "来月、初めて一人で海外に行くんだけど、何か準備しといたほうがいいことある？",
+        "gloss": {
+          "en": "Next month I'm going abroad alone for the first time. Is there anything I should prepare?",
+          "ko": "다음 달에 처음으로 혼자 해외 가는데, 뭐 준비해 두면 좋은 거 있어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "そうだね、まずは保険かな。何も起きないに越したことはないけど、入っておけば安心だから。",
+        "gloss": {
+          "en": "Let's see, insurance first. It's best if nothing happens, of course, but you'll feel safer if you have it.",
+          "ko": "글쎄, 우선 보험이려나. 아무 일 없는 게 제일이지만, 들어 두면 안심되니까."
+        }
+      },
+      {
+        "who": "them",
+        "text": "そっか。両替は現地でしたほうが安いって聞いたけど。",
+        "gloss": {
+          "en": "I see. I heard exchanging money there is cheaper, though.",
+          "ko": "그렇구나. 환전은 현지에서 하는 게 싸다고 들었는데."
+        }
+      },
+      {
+        "who": "me",
+        "text": "それもそうなんだけど、着いてすぐ使うお金もあるし、少しは日本で替えておくに越したことはないよ。",
+        "gloss": {
+          "en": "That's true, but you'll need money as soon as you land, so it's best to exchange a little in Japan.",
+          "ko": "그것도 맞긴 한데, 도착하자마자 쓸 돈도 있으니까 조금은 일본에서 바꿔 두는 게 좋아."
+        }
+      },
+      {
+        "who": "them",
+        "text": "なるほどね。荷物はなるべく少なくしたいんだけど。",
+        "gloss": {
+          "en": "Got it. I want to pack as light as possible, though.",
+          "ko": "그렇구나. 짐은 되도록 적게 하고 싶은데."
+        }
+      },
+      {
+        "who": "me",
+        "text": "いいと思う。ただ、いつも飲んでる薬だけは持っていきなよ。現地で探すのは意外と大変だから。",
+        "gloss": {
+          "en": "Good idea. Just make sure to bring the medicine you usually take. Finding it there is harder than you'd think.",
+          "ko": "좋다고 생각해. 다만 평소 먹는 약만은 챙겨 가. 현지에서 찾는 게 의외로 힘들거든."
+        }
+      },
+      {
+        "who": "them",
+        "text": "確かに。いろいろ考えてたら、なんか緊張してきた。",
+        "gloss": {
+          "en": "True. Thinking about all this is making me nervous.",
+          "ko": "그렇네. 이것저것 생각하니까 왠지 긴장된다."
+        }
+      },
+      {
+        "who": "me",
+        "text": "考えすぎだよ。それだけ準備しておけば大丈夫だって。楽しんできてね。",
+        "gloss": {
+          "en": "You're overthinking it. With that much preparation you'll be fine. Have fun.",
+          "ko": "너무 걱정한다. 그만큼 준비해 두면 괜찮아. 재밌게 놀다 와."
         }
       }
     ]

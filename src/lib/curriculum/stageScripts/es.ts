@@ -453,6 +453,73 @@ export const ES: StageScript[] = [
     ]
   },
   {
+    "id": "es-1-x2",
+    "stage": 1,
+    "setting": {
+      "en": "A classmate looks at a family photo on your phone",
+      "ko": "같은 반 친구가 휴대폰 속 가족사진을 봄"
+    },
+    "expressions": [
+      "gracias",
+      "sí, claro"
+    ],
+    "grammar": [
+      1,
+      4,
+      7
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "¿Es tu familia? ¡Qué foto tan bonita!",
+        "gloss": {
+          "en": "Is that your family? What a lovely photo!",
+          "ko": "너희 가족이야? 사진 정말 예쁘다!"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Sí, gracias. Tengo un hermano y una hermana.",
+        "gloss": {
+          "en": "Yes, thanks. I have a brother and a sister.",
+          "ko": "응, 고마워. 남동생 하나랑 여동생 하나 있어."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Y cuántos años tiene tu hermana?",
+        "gloss": {
+          "en": "And how old is your sister?",
+          "ko": "여동생은 몇 살이야?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Tiene veinte años. Mi hermano tiene doce.",
+        "gloss": {
+          "en": "She's twenty. My brother is twelve.",
+          "ko": "스무 살이야. 남동생은 열두 살이고."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Y el perro también es de tu familia?",
+        "gloss": {
+          "en": "And is the dog part of your family too?",
+          "ko": "강아지도 너희 가족이야?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Sí, claro. Se llama Toto y tiene tres años.",
+        "gloss": {
+          "en": "Yes, of course. His name is Toto and he's three.",
+          "ko": "응, 당연하지. 이름은 토토고 세 살이야."
+        }
+      }
+    ]
+  },
+  {
     "id": "es-2-1",
     "stage": 2,
     "situation": 0,
@@ -3679,6 +3746,89 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Around ten. And if you could tell your cousin, who has a van, that would be perfect.",
           "ko": "열 시쯤. 그리고 승합차 있는 네 사촌한테도 말해 주면 완벽하고."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-5-x3",
+    "stage": 5,
+    "setting": {
+      "en": "Telling a friend what kind of flatmate you are looking for",
+      "ko": "친구에게 어떤 룸메이트를 찾는지 이야기하기"
+    },
+    "expressions": [
+      "qué va",
+      "o sea",
+      "echar una mano"
+    ],
+    "grammar": [
+      3,
+      6
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "¿Qué tal la búsqueda de compañero de piso? ¿Has encontrado a alguien?",
+        "gloss": {
+          "en": "How's the flatmate search going? Have you found anyone?",
+          "ko": "룸메이트 찾는 건 어때? 누구 구했어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Qué va. Busco a alguien que sea ordenado y que no fume, y parece que es mucho pedir.",
+        "gloss": {
+          "en": "Not at all. I'm looking for someone who's tidy and doesn't smoke, and apparently that's asking a lot.",
+          "ko": "전혀. 깔끔하고 담배 안 피우는 사람을 찾는데, 그게 무리한 요구인가 봐."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Hombre, tampoco es tan raro. ¿No has puesto un anuncio?",
+        "gloss": {
+          "en": "Come on, that's not so unusual. Haven't you put up an ad?",
+          "ko": "에이, 그렇게 드문 것도 아니잖아. 광고는 안 올렸어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Sí, pero entre los que me han escrito no hay ni uno que pueda pagar a tiempo. O sea, un desastre.",
+        "gloss": {
+          "en": "Yes, but among the people who've written to me there isn't a single one who can pay on time. In other words, a disaster.",
+          "ko": "올렸지. 근데 연락 온 사람 중에 제때 낼 수 있는 사람이 한 명도 없어. 한마디로 엉망이야."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Pues a lo mejor te puedo ayudar. Mi prima se muda aquí en enero.",
+        "gloss": {
+          "en": "Well, maybe I can help. My cousin is moving here in January.",
+          "ko": "그럼 내가 도와줄 수 있을지도. 사촌이 일월에 여기로 이사 오거든."
+        }
+      },
+      {
+        "who": "me",
+        "text": "¿En serio? Mira, me vale cualquier persona que friegue los platos sin que se lo pida.",
+        "gloss": {
+          "en": "Really? Look, anyone who does the dishes without being asked is fine by me.",
+          "ko": "진짜? 있잖아, 말 안 해도 설거지하는 사람이면 누구든 좋아."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Ja, ja. Es la persona más limpia que conozco, te lo aseguro. Le digo que te escriba.",
+        "gloss": {
+          "en": "Ha ha. She's the cleanest person I know, I promise. I'll tell her to write to you.",
+          "ko": "하하. 내가 아는 사람 중에 제일 깔끔해, 장담해. 너한테 연락하라고 할게."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Genial, me echas una mano enorme. Dile que me llame cuando quiera.",
+        "gloss": {
+          "en": "Great, you're a huge help. Tell her to call me whenever she likes.",
+          "ko": "좋아, 정말 큰 도움이야. 편할 때 아무 때나 전화하라고 해 줘."
         }
       }
     ]
