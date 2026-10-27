@@ -23,6 +23,22 @@
 
 - **2026-10-27 확인(코드 기본값 `aiDefaults.ts`):** Claude로 안 옮긴 글 기능 셋 — 통화 튜터 `roleplayTutor`(gpt-4.1-mini, 스트리밍이 OpenAI만), 미션 쓰기·지도에 넣기·약점 미션 `curriculum`(gpt-4.1), 미션 확인 `mission`(gpt-4.1-mini). 셋 다 **2027-01-14** 종료. 미션·지도에 넣기는 같은 날 새 앱 화면에서 뺐다(2.74 이하 앱만 씀). 목소리·받아쓰기는 사용자 결정 대기 그대로.
 
+## 0-0. 2026-10-27 전부 교체함 (사용자 "모델 전부 교체해줘", 서버만 — 앱 빌드 필요 없음)
+
+| 무엇 | 예전 | 지금(코드 기본값 `aiDefaults.ts`) | 운영 확인 |
+|---|---|---|---|
+| 통화 튜터 | gpt-4.1-mini | **gpt-6-luna** | 점검 14명×3턴×4번: 오류 0(예전 4), 턴 중앙 1.1 → 1.7~2.1초, 팩 진행 4턴에 1.6 → 1.2문항(뒤따르는 질문을 더 고름) |
+| 미션 쓰기·지도에 넣기·약점 미션·미션 확인 | gpt-4.1 / gpt-4.1-mini | **gpt-6-luna** | 오류 1(지도에 넣기 1/13), 미션 2~3초 → 3~4.5초. 2.74 이하 앱만 화면이 있음 |
+| Claude 실패 때 대비(글 기능 전부) | gpt-4o-mini·4.1·4.1-mini | **gpt-6-luna** | 채팅 한 통 교정·답 정상 |
+| 통화 돌아보기 대비 | gpt-5-mini(12-11 종료) | **gpt-5.6-terra** | 채팅으로 확인 정상 |
+| 튜터 목소리 | gpt-4o-mini-tts | **gpt-realtime-2.1-mini**(realtime 엔진) | en·ja·es·th·ko 정상. 첫 소리 전 실패하면 예전 모델(01-06까지) |
+| 통화·Room 받아쓰기 | gpt-4o-mini-transcribe | **Scribe v2**, 실패하면 gpt-transcribe | ElevenLabs가 429 system_busy를 몇 분씩 냄(5번 중 5번, 2분 뒤 정상) → 429·5xx면 1분 쉬고 바로 gpt-transcribe |
+| 영상 받아쓰기 | whisper-1 | **Scribe v2 일괄**(낱말 시간 → 줄 나누기 `tokensToLines`), 실패하면 gpt-transcribe(시간 없이 한 줄) | en Scribe로 줄·낱말 시간 정상, 나머지 4개 언어는 429로 gpt-transcribe 대비 정상 |
+
+- 새 OpenAI 모델은 모두 **추론 모델**: temperature를 받지 않고(400), 생각 값은 gpt-6·gpt-5.5+는 `none`, 옛 gpt-5·o는 `minimal` — `server/llm.ts` `forOpenAIModel`·`fastestEffort`가 맞춘다.
+- **비용:** 목소리 원가가 1.8배라 포인트 원가 약 35%↑ — 묶음 이윤 54~57% → 37~41%(하한 50 → 35%로 낮춤, 손해는 아님). 한도를 매일 다 쓰는 최악: 라이트 −973 → −1,847원, 8,900원 −3,726 → −5,644원/월(`hub/costs.md`). 포인트·요금 값 올릴지는 사용자 결정.
+- 남은 OpenAI 기본: 실시간 통화(gpt-realtime-2.1, 비용 계산만), 화면 검사(omni-moderation). 점검 스크립트의 평가 모델(gpt-4.1-mini, 앱 밖)은 그대로.
+
 ## 0-1. 남은 GPT와 대체안 (2026-10-27 정리 — 사용자 "GPT 대체모델 제시해줘")
 
 흩어져 있던 것(아래 표·`drafts/model-switch-2026-10-22.md`·`drafts/speech-models-2026-10-21.md`)을 한 표로. 바꾸는 곳은 모두 `src/lib/aiDefaults.ts`(통화 튜터만 코드 길 추가).
