@@ -178,10 +178,7 @@ function ScriptPlayer({ ui, locale, language, script, onClose }: { ui: UICopy; l
                 </div>
                 {result ? (
                   result.clean ? (
-                    <>
-                      <p className="mt-1.5 text-caption text-emerald-300">✓ {ui.scriptClean}</p>
-                      {result.practice && !compareToTarget(line.text, result.heard).clean ? <p className="mt-1 text-caption text-slate-400">{result.practice.note}</p> : null}
-                    </>
+                    <p className="mt-1.5 text-caption text-emerald-300">✓ {ui.scriptClean}</p>
                   ) : (
                     <>
                       <Attempt outcomes={compareToTarget(line.text, result.heard).outcomes} ui={ui} />
