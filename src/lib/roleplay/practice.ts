@@ -209,7 +209,7 @@ ${input.before ? `The other person had just said: "${input.before}"\n` : ""}The 
 One way a native speaker might say it (not the only right answer): "${input.reference}"
 What the recogniser heard: "${input.heard || "(nothing)"}"
 
-"good" is true when what they said gets that meaning across, fits as a reply at this point, and a native listener would accept it without stumbling — different words from the native line are fine. It is false when the meaning is lost or changed, when a mistake would confuse or sound wrong to a native, or when nothing usable came through. A recogniser slip that sounds the same is not their mistake.
+"good" is true when what they said gets that meaning across, fits as a reply at this point, and a native listener would accept it without stumbling — different words from the native line are fine. It is false when the meaning is lost or changed, when a mistake would confuse or sound wrong to a native, or when nothing usable came through. A recogniser slip that sounds the same is not their mistake, and the recogniser often drops punctuation and the rise of a question — a statement-shaped transcript of something that works as a question at this point is fine. Bring up politeness only when it clearly clashes with the relationship the conversation shows; match the speech level the native line uses.
 
 The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is false, say in one sentence what did not come across or what sounds wrong, and how to fix it. When "good" is true, one short line on what worked; if the native line has a more natural turn worth knowing, mention it.
 
