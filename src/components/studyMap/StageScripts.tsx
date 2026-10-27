@@ -27,7 +27,7 @@ import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 
 /**
- * My 단계 보기의 "대본으로 연습" — 단계마다 상황 다섯 개의 대본(curriculum/stageScripts.ts), 맨 위에 둔다.
+ * My 단계 보기의 "대본으로 연습" — 단계마다 상황별 대본(curriculum/stageScripts.ts), 맨 위에 둔다.
  * 상대 줄은 소리로 나오고 내 줄에서 멈춘다. 보는 방식은 단계마다(modesFor): 1~2 따라 말하기·첫 글자만·가리기, 3~5 따라 말하기·가리기·내 말로.
  * 🎤 → 원문 방식은 낱말 비교(roleplay/practice.ts) + 한 줄, "내 말로"는 뜻이 통하는지(모델). 내 줄을 모두 통과 방식으로 맞히면
  * /api/curriculum/scripts에 통과를 남긴다 — 다음 단계 = 네 갈래 70% + 그 단계 대본 모두 통과.

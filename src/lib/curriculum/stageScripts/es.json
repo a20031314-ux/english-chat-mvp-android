@@ -1,0 +1,2673 @@
+[
+  {
+    "id": "es-1-1",
+    "stage": 1,
+    "situation": 0,
+    "setting": {
+      "en": "First day of a Spanish course: chatting with Sofía, a classmate",
+      "ko": "스페인어 수업 첫날, 같은 반 친구 소피아와"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "¡Hola! ¿Qué tal? Me llamo Sofía.",
+        "gloss": {
+          "en": "Hi! How's it going? My name is Sofía.",
+          "ko": "안녕! 잘 지내? 나는 소피아야."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Hola, Sofía. Me llamo Ji-woo. Mucho gusto.",
+        "gloss": {
+          "en": "Hi, Sofía. My name is Ji-woo. Nice to meet you.",
+          "ko": "안녕, 소피아. 나는 지우야. 반가워."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Igualmente. ¿De dónde eres?",
+        "gloss": {
+          "en": "Likewise. Where are you from?",
+          "ko": "나도 반가워. 어디서 왔어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Soy de Corea, de Busan. ¿Y tú?",
+        "gloss": {
+          "en": "I'm from Korea, from Busan. And you?",
+          "ko": "한국, 부산에서 왔어. 너는?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Soy de Italia. ¿Y qué haces? ¿Estudias?",
+        "gloss": {
+          "en": "I'm from Italy. And what do you do? Do you study?",
+          "ko": "나는 이탈리아에서 왔어. 너는 뭐 해? 학생이야?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "No, trabajo en un hotel. Soy recepcionista.",
+        "gloss": {
+          "en": "No, I work in a hotel. I'm a receptionist.",
+          "ko": "아니, 호텔에서 일해. 프런트 직원이야."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡Qué bien! Oye, ¿tienes un bolígrafo? No tengo.",
+        "gloss": {
+          "en": "Nice! Hey, do you have a pen? I don't have one.",
+          "ko": "좋다! 저기, 볼펜 있어? 나 없어서."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Sí, claro. Aquí tienes.",
+        "gloss": {
+          "en": "Yes, of course. Here you go.",
+          "ko": "응, 물론이지. 여기 있어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-1-2",
+    "stage": 1,
+    "situation": 1,
+    "setting": {
+      "en": "Buying fruit from a vendor at a market stall",
+      "ko": "시장 과일 가판대에서 상인에게 과일 사기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "Buenos días. ¿Qué va a llevar?",
+        "gloss": {
+          "en": "Good morning. What would you like?",
+          "ko": "안녕하세요. 뭘 드릴까요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Buenos días. ¿Cuánto cuestan las manzanas?",
+        "gloss": {
+          "en": "Good morning. How much are the apples?",
+          "ko": "안녕하세요. 사과 얼마예요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Dos euros el kilo.",
+        "gloss": {
+          "en": "Two euros a kilo.",
+          "ko": "1킬로에 2유로예요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Un kilo, por favor. ¿Y las naranjas?",
+        "gloss": {
+          "en": "One kilo, please. And the oranges?",
+          "ko": "1킬로 주세요. 오렌지는요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Las naranjas están a tres euros el kilo.",
+        "gloss": {
+          "en": "The oranges are three euros a kilo.",
+          "ko": "오렌지는 1킬로에 3유로예요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Perdón, no entiendo. Más despacio, por favor.",
+        "gloss": {
+          "en": "Sorry, I don't understand. More slowly, please.",
+          "ko": "죄송해요, 못 알아들었어요. 천천히 말해 주세요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Tres euros. Un kilo, tres euros.",
+        "gloss": {
+          "en": "Three euros. One kilo, three euros.",
+          "ko": "3유로요. 1킬로에 3유로."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Vale, gracias. Un kilo de naranjas también.",
+        "gloss": {
+          "en": "OK, thanks. A kilo of oranges too.",
+          "ko": "네, 감사해요. 오렌지도 1킬로 주세요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-1-3",
+    "stage": 1,
+    "situation": 2,
+    "setting": {
+      "en": "Asking a passer-by the way to the metro",
+      "ko": "길에서 지나가는 사람에게 지하철역 가는 길 묻기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "Hola, ¿necesita ayuda?",
+        "gloss": {
+          "en": "Hello, do you need help?",
+          "ko": "안녕하세요, 도와드릴까요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Sí, por favor. ¿Dónde está el metro?",
+        "gloss": {
+          "en": "Yes, please. Where is the metro?",
+          "ko": "네, 부탁해요. 지하철역이 어디예요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Está cerca. Todo recto y luego a la derecha.",
+        "gloss": {
+          "en": "It's close. Straight ahead and then to the right.",
+          "ko": "가까워요. 쭉 가다가 오른쪽으로요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Perdón, otra vez, por favor.",
+        "gloss": {
+          "en": "Sorry, once more, please.",
+          "ko": "죄송해요, 한 번 더 말해 주세요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Todo recto... y después, a la derecha.",
+        "gloss": {
+          "en": "Straight ahead... and then, to the right.",
+          "ko": "쭉 가서... 그다음에 오른쪽이요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Gracias. ¿Hay un supermercado por aquí?",
+        "gloss": {
+          "en": "Thank you. Is there a supermarket around here?",
+          "ko": "고마워요. 이 근처에 슈퍼마켓 있어요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Sí, hay uno al lado del metro.",
+        "gloss": {
+          "en": "Yes, there's one next to the metro.",
+          "ko": "네, 지하철역 옆에 하나 있어요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Muchas gracias. ¡Adiós!",
+        "gloss": {
+          "en": "Thank you very much. Goodbye!",
+          "ko": "정말 고마워요. 안녕히 계세요!"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-1-4",
+    "stage": 1,
+    "situation": 3,
+    "setting": {
+      "en": "Checking into a small hostel",
+      "ko": "작은 호스텔에 체크인하기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "¡Hola, buenas tardes! ¿Tienes una reserva?",
+        "gloss": {
+          "en": "Hi, good afternoon! Do you have a reservation?",
+          "ko": "안녕하세요! 예약하셨어요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Hola. Sí, me llamo Daniel Kim.",
+        "gloss": {
+          "en": "Hi. Yes, my name is Daniel Kim.",
+          "ko": "안녕하세요. 네, 제 이름은 다니엘 김이에요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Perfecto, Daniel. Una cama para dos noches, ¿verdad?",
+        "gloss": {
+          "en": "Perfect, Daniel. One bed for two nights, right?",
+          "ko": "좋아요, 다니엘. 침대 하나에 2박, 맞죠?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Sí. ¿Cuánto cuesta la noche?",
+        "gloss": {
+          "en": "Yes. How much is it per night?",
+          "ko": "네. 1박에 얼마예요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Quince euros por noche. ¿Tienes el pasaporte?",
+        "gloss": {
+          "en": "Fifteen euros per night. Do you have your passport?",
+          "ko": "1박에 15유로예요. 여권 있어요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Sí, claro. Aquí está.",
+        "gloss": {
+          "en": "Yes, of course. Here it is.",
+          "ko": "네, 물론이죠. 여기요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Gracias. Tu habitación es la doce, en el segundo piso.",
+        "gloss": {
+          "en": "Thanks. Your room is number twelve, on the second floor.",
+          "ko": "고마워요. 방은 12호, 2층이에요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Vale, gracias. ¿Y dónde está el baño?",
+        "gloss": {
+          "en": "OK, thanks. And where is the bathroom?",
+          "ko": "네, 고마워요. 그리고 화장실은 어디예요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-2-1",
+    "stage": 2,
+    "situation": 0,
+    "setting": {
+      "en": "Messaging a friend, Javi, to make weekend plans",
+      "ko": "친구 하비와 메시지로 주말 약속 잡기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "¡Hola! ¿Qué vas a hacer este fin de semana?",
+        "gloss": {
+          "en": "Hi! What are you doing this weekend?",
+          "ko": "안녕! 이번 주말에 뭐 할 거야?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "No sé todavía. El sábado por la mañana tengo que trabajar.",
+        "gloss": {
+          "en": "I don't know yet. On Saturday morning I have to work.",
+          "ko": "아직 모르겠어. 토요일 오전에는 일해야 해."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Y por la tarde? Hay un concierto en el parque. ¿Quieres venir?",
+        "gloss": {
+          "en": "And in the afternoon? There's a concert in the park. Do you want to come?",
+          "ko": "오후는? 공원에서 콘서트가 있어. 같이 갈래?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "¡Qué buena idea! Me gusta mucho la música en vivo. ¿A qué hora es?",
+        "gloss": {
+          "en": "What a great idea! I really like live music. What time is it?",
+          "ko": "좋은 생각이다! 라이브 음악 정말 좋아해. 몇 시야?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Empieza a las siete. Antes podemos cenar algo.",
+        "gloss": {
+          "en": "It starts at seven. We can grab dinner before.",
+          "ko": "7시에 시작해. 그 전에 저녁 먹어도 되고."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Me viene bien. ¿Dónde nos vemos?",
+        "gloss": {
+          "en": "That works for me. Where shall we meet?",
+          "ko": "나 좋아. 어디서 만나?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "En la entrada del parque, a las seis. ¿Vale?",
+        "gloss": {
+          "en": "At the park entrance, at six. OK?",
+          "ko": "공원 입구에서 6시에. 괜찮아?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Perfecto. ¿Puedo invitar a Marta también?",
+        "gloss": {
+          "en": "Perfect. Can I invite Marta too?",
+          "ko": "완벽해. 마르타도 불러도 돼?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡Claro que sí! Cuantos más, mejor.",
+        "gloss": {
+          "en": "Of course! The more the merrier.",
+          "ko": "당연하지! 많을수록 좋아."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Genial. Nos vemos el sábado.",
+        "gloss": {
+          "en": "Great. See you on Saturday.",
+          "ko": "좋아. 토요일에 봐."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-2-2",
+    "stage": 2,
+    "situation": 1,
+    "setting": {
+      "en": "Ordering the set lunch at a restaurant",
+      "ko": "식당에서 점심 메뉴 주문하기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "Buenas tardes. ¿Ya sabe qué va a pedir?",
+        "gloss": {
+          "en": "Good afternoon. Do you know what you'd like to order?",
+          "ko": "안녕하세요. 뭐 드실지 정하셨어요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Todavía no. ¿Qué me recomienda?",
+        "gloss": {
+          "en": "Not yet. What do you recommend?",
+          "ko": "아직요. 뭘 추천하세요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "El menú del día está muy bien. Hoy hay sopa o ensalada, y de segundo, pollo o pescado.",
+        "gloss": {
+          "en": "The set menu is very good. Today there's soup or salad, and for the main course, chicken or fish.",
+          "ko": "오늘의 메뉴가 좋아요. 오늘은 수프나 샐러드, 메인은 닭고기나 생선이에요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Para mí, la sopa y el pescado, por favor.",
+        "gloss": {
+          "en": "For me, the soup and the fish, please.",
+          "ko": "저는 수프랑 생선으로 주세요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Muy bien. ¿Y para beber?",
+        "gloss": {
+          "en": "Very good. And to drink?",
+          "ko": "알겠습니다. 음료는요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Agua sin gas, por favor. Ah, ¿el pescado es picante? No me gusta mucho el picante.",
+        "gloss": {
+          "en": "Still water, please. Oh, is the fish spicy? I don't really like spicy food.",
+          "ko": "탄산 없는 물 주세요. 아, 생선 매워요? 매운 걸 별로 안 좋아해서요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "No, no se preocupe. Es a la plancha, con limón.",
+        "gloss": {
+          "en": "No, don't worry. It's grilled, with lemon.",
+          "ko": "아니요, 걱정 마세요. 레몬 곁들인 구이예요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Perfecto, gracias.",
+        "gloss": {
+          "en": "Perfect, thank you.",
+          "ko": "좋아요, 감사합니다."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Qué tal todo? ¿Quiere un café o algo de postre?",
+        "gloss": {
+          "en": "How was everything? Would you like a coffee or some dessert?",
+          "ko": "식사 어떠셨어요? 커피나 디저트 드릴까요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Todo muy rico, gracias. Un café y la cuenta, por favor.",
+        "gloss": {
+          "en": "Everything was delicious, thank you. A coffee and the bill, please.",
+          "ko": "다 정말 맛있었어요. 커피 한 잔이랑 계산서 주세요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-2-3",
+    "stage": 2,
+    "situation": 2,
+    "setting": {
+      "en": "Describing a cold to a pharmacist",
+      "ko": "약국에서 약사에게 감기 증상 말하기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "Hola, buenos días. ¿En qué le puedo ayudar?",
+        "gloss": {
+          "en": "Hello, good morning. How can I help you?",
+          "ko": "안녕하세요. 무엇을 도와드릴까요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Buenos días. Creo que tengo un resfriado. Me duele la garganta y tengo tos.",
+        "gloss": {
+          "en": "Good morning. I think I have a cold. My throat hurts and I have a cough.",
+          "ko": "안녕하세요. 감기에 걸린 것 같아요. 목이 아프고 기침이 나요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Desde cuándo está así?",
+        "gloss": {
+          "en": "How long have you been like this?",
+          "ko": "언제부터 그러셨어요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Desde ayer por la noche. Y hoy estoy muy cansado.",
+        "gloss": {
+          "en": "Since last night. And today I'm very tired.",
+          "ko": "어젯밤부터요. 그리고 오늘은 너무 피곤해요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Tiene fiebre?",
+        "gloss": {
+          "en": "Do you have a fever?",
+          "ko": "열이 있으세요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Un poco, creo. Esta mañana tuve treinta y siete y medio.",
+        "gloss": {
+          "en": "A little, I think. This morning I had thirty-seven and a half.",
+          "ko": "조금요, 아마. 오늘 아침에 37.5도였어요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Vale. Le recomiendo este jarabe para la tos y paracetamol para la fiebre.",
+        "gloss": {
+          "en": "OK. I recommend this cough syrup and paracetamol for the fever.",
+          "ko": "네. 기침에는 이 시럽, 열에는 파라세타몰을 권해 드려요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "¿Cuántas veces al día lo tengo que tomar?",
+        "gloss": {
+          "en": "How many times a day do I have to take it?",
+          "ko": "하루에 몇 번 먹어야 해요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "El jarabe, tres veces al día. Y beba mucha agua y descanse.",
+        "gloss": {
+          "en": "The syrup, three times a day. And drink lots of water and rest.",
+          "ko": "시럽은 하루 세 번이요. 물 많이 드시고 푹 쉬세요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Muy bien, gracias. ¿Cuánto es todo?",
+        "gloss": {
+          "en": "Very good, thank you. How much is everything?",
+          "ko": "알겠습니다, 고마워요. 전부 얼마예요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-2-4",
+    "stage": 2,
+    "situation": 3,
+    "setting": {
+      "en": "Monday morning: telling a coworker about your weekend",
+      "ko": "월요일 아침, 동료에게 주말 이야기하기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "¡Buenos días! ¿Qué tal el fin de semana?",
+        "gloss": {
+          "en": "Good morning! How was the weekend?",
+          "ko": "좋은 아침! 주말 어땠어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Muy bien, gracias. El sábado fui a la playa con unos amigos.",
+        "gloss": {
+          "en": "Very good, thanks. On Saturday I went to the beach with some friends.",
+          "ko": "아주 좋았어, 고마워. 토요일에 친구들이랑 바다에 갔어."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡Qué envidia! ¿Hizo buen tiempo?",
+        "gloss": {
+          "en": "I'm so jealous! Was the weather good?",
+          "ko": "부럽다! 날씨 좋았어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Sí, hizo mucho sol. Nadamos y comimos pescado en un restaurante pequeño.",
+        "gloss": {
+          "en": "Yes, it was very sunny. We swam and ate fish at a small restaurant.",
+          "ko": "응, 햇볕이 쨍쨍했어. 수영하고 작은 식당에서 생선 먹었어."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡Qué rico! ¿Y el domingo?",
+        "gloss": {
+          "en": "Yum! And on Sunday?",
+          "ko": "맛있었겠다! 일요일은?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "El domingo no hice nada especial. Vi una película en casa.",
+        "gloss": {
+          "en": "On Sunday I didn't do anything special. I watched a film at home.",
+          "ko": "일요일엔 별거 안 했어. 집에서 영화 봤어."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Yo tuve que trabajar todo el sábado. ¡Qué aburrido!",
+        "gloss": {
+          "en": "I had to work all Saturday. How boring!",
+          "ko": "나는 토요일 내내 일해야 했어. 너무 지루했어!"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Uf, lo siento. ¿Y este fin de semana vas a descansar?",
+        "gloss": {
+          "en": "Ugh, sorry. And are you going to rest this weekend?",
+          "ko": "아이고, 안됐다. 이번 주말엔 쉴 거야?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Sí, voy a ir a la montaña con mi familia.",
+        "gloss": {
+          "en": "Yes, I'm going to the mountains with my family.",
+          "ko": "응, 가족이랑 산에 갈 거야."
+        }
+      },
+      {
+        "who": "me",
+        "text": "¡Qué buena idea! Te va a encantar.",
+        "gloss": {
+          "en": "What a great idea! You're going to love it.",
+          "ko": "좋은 생각이다! 정말 좋을 거야."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-3-1",
+    "stage": 3,
+    "situation": 0,
+    "setting": {
+      "en": "At hotel reception at night, complaining about problems in your room",
+      "ko": "밤에 호텔 프런트에서 방 문제를 항의하기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "Buenas noches. ¿En qué puedo ayudarle?",
+        "gloss": {
+          "en": "Good evening. How can I help you?",
+          "ko": "안녕하세요. 무엇을 도와드릴까요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Buenas noches. Tengo un problema con mi habitación, la trescientos doce.",
+        "gloss": {
+          "en": "Good evening. I have a problem with my room, three hundred twelve.",
+          "ko": "안녕하세요. 제 방, 312호에 문제가 있어요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Vaya, lo siento. ¿Qué le pasa?",
+        "gloss": {
+          "en": "Oh, I'm sorry. What's wrong with it?",
+          "ko": "어머, 죄송합니다. 무슨 문제인가요?"
+        },
+        "alt": [
+          {
+            "text": "¿Qué ocurre exactamente?",
+            "gloss": {
+              "en": "What exactly is the matter?",
+              "ko": "정확히 어떤 문제인가요?"
+            }
+          },
+          {
+            "text": "Dígame, ¿cuál es el problema?",
+            "gloss": {
+              "en": "Tell me, what's the problem?",
+              "ko": "말씀해 주세요, 어떤 문제죠?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "El aire acondicionado no funciona. Lo he intentado todo, pero sigue haciendo muchísimo calor.",
+        "gloss": {
+          "en": "The air conditioning doesn't work. I've tried everything, but it's still really hot.",
+          "ko": "에어컨이 안 돼요. 다 해 봤는데 여전히 너무 더워요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Ha probado a cambiarle las pilas al mando? A veces es eso.",
+        "gloss": {
+          "en": "Have you tried changing the batteries in the remote? Sometimes that's it.",
+          "ko": "리모컨 건전지는 바꿔 보셨어요? 가끔 그게 문제라서요."
+        },
+        "alt": [
+          {
+            "text": "¿Ha comprobado que la ventana esté bien cerrada? Si está abierta, se apaga solo.",
+            "gloss": {
+              "en": "Have you checked the window is fully closed? If it's open, it switches itself off.",
+              "ko": "창문이 잘 닫혔는지 확인하셨어요? 열려 있으면 저절로 꺼지거든요."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Sí, ya lo he probado. Y lo que pasa es que la ducha tampoco tiene agua caliente.",
+        "gloss": {
+          "en": "Yes, I've already tried that. And the thing is, the shower has no hot water either.",
+          "ko": "네, 이미 해 봤어요. 그리고 문제는 샤워기에서 뜨거운 물도 안 나온다는 거예요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Lo siento mucho. Mañana por la mañana puede subir el técnico.",
+        "gloss": {
+          "en": "I'm very sorry. The technician can come up tomorrow morning.",
+          "ko": "정말 죄송합니다. 내일 아침에 기사님이 올라가실 수 있어요."
+        },
+        "alt": [
+          {
+            "text": "Disculpe las molestias. Mañana temprano le envío a alguien de mantenimiento.",
+            "gloss": {
+              "en": "Sorry for the trouble. I'll send someone from maintenance early tomorrow.",
+              "ko": "불편을 드려 죄송합니다. 내일 일찍 시설 담당자를 보내 드릴게요."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Me parece que eso es un poco tarde. ¿Podría cambiarme de habitación esta noche?",
+        "gloss": {
+          "en": "I think that's a bit late. Could you move me to another room tonight?",
+          "ko": "그건 좀 늦은 것 같아요. 오늘 밤에 방을 바꿔 주실 수 있을까요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "A ver... Tenemos una libre en el quinto piso, pero es un poco más pequeña.",
+        "gloss": {
+          "en": "Let's see... We have one free on the fifth floor, but it's a bit smaller.",
+          "ko": "어디 보자... 5층에 빈방이 하나 있는데, 조금 더 작아요."
+        },
+        "alt": [
+          {
+            "text": "Déjeme mirar... Me queda una en el quinto, aunque es más pequeña que la suya.",
+            "gloss": {
+              "en": "Let me check... I have one left on the fifth, though it's smaller than yours.",
+              "ko": "확인해 볼게요... 5층에 하나 남았는데, 지금 방보다 작아요."
+            }
+          },
+          {
+            "text": "Un momento, lo compruebo. Hay una disponible, pero da a la calle y hay algo de ruido.",
+            "gloss": {
+              "en": "One moment, I'll check. There's one available, but it faces the street and it's a bit noisy.",
+              "ko": "잠시만요, 확인할게요. 하나 있긴 한데 길가 쪽이라 좀 시끄러워요."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "No importa. Prefiero eso a pasar otra noche con este calor.",
+        "gloss": {
+          "en": "That's fine. I'd rather that than spend another night in this heat.",
+          "ko": "괜찮아요. 이 더위에 하룻밤 더 보내는 것보다는 그게 나아요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Perfecto. Aquí tiene la llave de la quinientos cuatro. Y disculpe las molestias.",
+        "gloss": {
+          "en": "Perfect. Here's the key to five hundred four. And sorry for the inconvenience.",
+          "ko": "알겠습니다. 504호 열쇠 여기 있어요. 불편을 드려 죄송합니다."
+        },
+        "alt": [
+          {
+            "text": "Muy bien. Le doy la tarjeta de la quinientos cuatro. Le pedimos disculpas.",
+            "gloss": {
+              "en": "Very good. Here's the key card for five hundred four. We apologise.",
+              "ko": "네. 504호 카드키 드릴게요. 사과드립니다."
+            }
+          },
+          {
+            "text": "Listo, es la quinientos cuatro. Si necesita ayuda con las maletas, avíseme.",
+            "gloss": {
+              "en": "Done, it's five hundred four. If you need help with your bags, let me know.",
+              "ko": "됐습니다, 504호예요. 짐 옮기는 데 도움이 필요하면 말씀하세요."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Muchas gracias. Menos mal que tenían una libre.",
+        "gloss": {
+          "en": "Thank you very much. Thank goodness you had one free.",
+          "ko": "정말 감사합니다. 빈방이 있어서 다행이네요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-3-2",
+    "stage": 3,
+    "situation": 1,
+    "setting": {
+      "en": "Telling friends over drinks about a trip to Lisbon that went wrong",
+      "ko": "친구들에게 꼬여 버린 리스본 여행 이야기하기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "¡Bueno, cuéntanos! ¿Qué tal el viaje a Lisboa?",
+        "gloss": {
+          "en": "So, tell us! How was the trip to Lisbon?",
+          "ko": "자, 얘기해 봐! 리스본 여행 어땠어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Uf, al final fue un desastre. Bueno, casi.",
+        "gloss": {
+          "en": "Ugh, in the end it was a disaster. Well, almost.",
+          "ko": "휴, 결국 엉망이었어. 뭐, 거의."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿En serio? ¿Qué pasó?",
+        "gloss": {
+          "en": "Seriously? What happened?",
+          "ko": "진짜? 무슨 일 있었어?"
+        },
+        "alt": [
+          {
+            "text": "¡No me digas! ¿Por qué?",
+            "gloss": {
+              "en": "No way! Why?",
+              "ko": "설마! 왜?"
+            }
+          },
+          {
+            "text": "¿Un desastre? Pero si tenías muchísimas ganas.",
+            "gloss": {
+              "en": "A disaster? But you were so looking forward to it.",
+              "ko": "엉망이었다고? 엄청 기대했잖아."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Pues cuando llegamos al aeropuerto, mi maleta no estaba.",
+        "gloss": {
+          "en": "Well, when we arrived at the airport, my suitcase wasn't there.",
+          "ko": "공항에 도착했는데 내 캐리어가 없었어."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡Qué horror! ¿Y la encontraron?",
+        "gloss": {
+          "en": "How awful! And did they find it?",
+          "ko": "끔찍하다! 그래서 찾았어?"
+        },
+        "alt": [
+          {
+            "text": "¡Qué mala suerte! ¿Y te la devolvieron?",
+            "gloss": {
+              "en": "What bad luck! And did they give it back to you?",
+              "ko": "운도 없다! 그래서 돌려받았어?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Sí, pero tardaron tres días en traérmela. Mientras tanto, llevaba la misma ropa todo el tiempo.",
+        "gloss": {
+          "en": "Yes, but it took them three days to bring it to me. Meanwhile, I was wearing the same clothes the whole time.",
+          "ko": "응, 그런데 갖다주는 데 사흘이나 걸렸어. 그동안 계속 같은 옷만 입었지."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Y por qué no te compraste algo?",
+        "gloss": {
+          "en": "And why didn't you buy yourself something?",
+          "ko": "왜 뭐라도 안 샀어?"
+        },
+        "alt": [
+          {
+            "text": "¿Y no te compraste nada de ropa?",
+            "gloss": {
+              "en": "And you didn't buy any clothes?",
+              "ko": "옷은 하나도 안 샀어?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Compré una camiseta, pero lo que pasa es que al día siguiente empezó a llover y no tenía chaqueta.",
+        "gloss": {
+          "en": "I bought a T-shirt, but the thing is, the next day it started raining and I didn't have a jacket.",
+          "ko": "티셔츠는 하나 샀는데, 문제는 다음 날 비가 오기 시작했는데 재킷이 없었다는 거야."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡Pobre! ¿Y al menos te gustó la ciudad?",
+        "gloss": {
+          "en": "You poor thing! And did you at least like the city?",
+          "ko": "불쌍해라! 그래도 도시는 마음에 들었어?"
+        },
+        "alt": [
+          {
+            "text": "Madre mía. ¿Pero la ciudad te gustó, por lo menos?",
+            "gloss": {
+              "en": "Oh my goodness. But did you like the city, at least?",
+              "ko": "세상에. 그래도 도시는 좋았지?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Sí, me encantó. De hecho, me pareció más bonita que Barcelona.",
+        "gloss": {
+          "en": "Yes, I loved it. In fact, I thought it was prettier than Barcelona.",
+          "ko": "응, 정말 좋았어. 사실 바르셀로나보다 더 예쁜 것 같았어."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Has estado alguna vez en Oporto? Está bastante cerca.",
+        "gloss": {
+          "en": "Have you ever been to Porto? It's pretty close.",
+          "ko": "포르투는 가 본 적 있어? 꽤 가까운데."
+        },
+        "alt": [
+          {
+            "text": "Pues tienes que volver. ¿Conoces Oporto?",
+            "gloss": {
+              "en": "Well, you have to go back. Do you know Porto?",
+              "ko": "그럼 다시 가야지. 포르투는 가 봤어?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "No, nunca he estado. Pero la próxima vez me encantaría ir... con maleta, a ser posible.",
+        "gloss": {
+          "en": "No, I've never been. But next time I'd love to go... with a suitcase, if possible.",
+          "ko": "아니, 가 본 적 없어. 다음엔 꼭 가 보고 싶어... 되도록 캐리어랑 같이."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-3-3",
+    "stage": 3,
+    "situation": 2,
+    "setting": {
+      "en": "A job interview for a marketing position",
+      "ko": "마케팅 직무 면접 보기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "Buenos días. Siéntese, por favor. Cuénteme un poco sobre usted.",
+        "gloss": {
+          "en": "Good morning. Please, have a seat. Tell me a little about yourself.",
+          "ko": "안녕하세요. 앉으세요. 자기소개를 조금 해 주시겠어요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Buenos días. Me llamo Andrea Park y he trabajado cuatro años en marketing digital.",
+        "gloss": {
+          "en": "Good morning. My name is Andrea Park and I've worked in digital marketing for four years.",
+          "ko": "안녕하세요. 저는 안드레아 박이고, 디지털 마케팅 분야에서 4년 일했습니다."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Y qué hacía en su último trabajo?",
+        "gloss": {
+          "en": "And what did you do in your last job?",
+          "ko": "직전 직장에서는 어떤 일을 하셨나요?"
+        },
+        "alt": [
+          {
+            "text": "Muy bien. ¿Cuáles eran sus tareas principales allí?",
+            "gloss": {
+              "en": "Very good. What were your main tasks there?",
+              "ko": "좋습니다. 그곳에서 주로 맡은 일은 뭐였나요?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Me encargaba de las redes sociales de la empresa y preparaba un informe cada semana.",
+        "gloss": {
+          "en": "I was in charge of the company's social media and prepared a report every week.",
+          "ko": "회사 소셜 미디어를 담당했고, 매주 보고서를 작성했습니다."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Ha trabajado alguna vez con equipos de otros países?",
+        "gloss": {
+          "en": "Have you ever worked with teams from other countries?",
+          "ko": "다른 나라 팀과 일해 본 적 있으세요?"
+        },
+        "alt": [
+          {
+            "text": "¿Tiene experiencia con equipos internacionales?",
+            "gloss": {
+              "en": "Do you have experience with international teams?",
+              "ko": "해외 팀과 일한 경험이 있으세요?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Sí. El año pasado lanzamos una campaña con la oficina de México y salió muy bien.",
+        "gloss": {
+          "en": "Yes. Last year we launched a campaign with the Mexico office and it went very well.",
+          "ko": "네. 작년에 멕시코 지사와 캠페인을 진행했는데 아주 잘됐습니다."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Y por qué quiere dejar su empresa actual?",
+        "gloss": {
+          "en": "And why do you want to leave your current company?",
+          "ko": "지금 회사는 왜 그만두려고 하세요?"
+        },
+        "alt": [
+          {
+            "text": "¿Y qué le hace buscar un cambio ahora?",
+            "gloss": {
+              "en": "And what makes you look for a change now?",
+              "ko": "지금 이직을 생각하게 된 이유가 뭔가요?"
+            }
+          },
+          {
+            "text": "¿Por qué le interesa este puesto?",
+            "gloss": {
+              "en": "Why are you interested in this position?",
+              "ko": "이 자리에 관심을 갖게 된 이유는요?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Me gusta mi trabajo, pero me gustaría tener más responsabilidad, y creo que aquí podría crecer.",
+        "gloss": {
+          "en": "I like my job, but I'd like to have more responsibility, and I think I could grow here.",
+          "ko": "지금 일도 좋지만 더 큰 책임을 맡고 싶고, 여기서 성장할 수 있을 것 같습니다."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Cuál cree que es su mayor punto débil?",
+        "gloss": {
+          "en": "What do you think is your biggest weakness?",
+          "ko": "본인의 가장 큰 약점은 뭐라고 생각하세요?"
+        },
+        "alt": [
+          {
+            "text": "¿Hay algo que le gustaría mejorar de su forma de trabajar?",
+            "gloss": {
+              "en": "Is there anything you'd like to improve about the way you work?",
+              "ko": "본인의 일하는 방식에서 고치고 싶은 점이 있나요?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "A veces soy demasiado perfeccionista. Sin embargo, estoy aprendiendo a delegar más.",
+        "gloss": {
+          "en": "Sometimes I'm too much of a perfectionist. However, I'm learning to delegate more.",
+          "ko": "가끔 지나치게 완벽주의적입니다. 하지만 일을 더 나눠 맡기는 법을 배우고 있어요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Muy bien. ¿Tiene alguna pregunta para nosotros?",
+        "gloss": {
+          "en": "Very good. Do you have any questions for us?",
+          "ko": "좋습니다. 저희에게 궁금한 점 있으세요?"
+        },
+        "alt": [
+          {
+            "text": "Perfecto. Para terminar, ¿quiere preguntarnos algo?",
+            "gloss": {
+              "en": "Perfect. To finish, is there anything you'd like to ask us?",
+              "ko": "좋아요. 마지막으로 저희에게 묻고 싶은 게 있나요?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Sí. ¿Podría contarme cómo es un día normal en el equipo?",
+        "gloss": {
+          "en": "Yes. Could you tell me what a normal day on the team is like?",
+          "ko": "네. 팀의 평범한 하루가 어떤지 말씀해 주실 수 있을까요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-3-4",
+    "stage": 3,
+    "situation": 3,
+    "setting": {
+      "en": "Chatting with a friend about a legal drama series you're both watching",
+      "ko": "친구와 둘 다 보고 있는 법정 드라마 이야기하기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "Oye, ¿sigues viendo la serie esa de abogados?",
+        "gloss": {
+          "en": "Hey, are you still watching that lawyer series?",
+          "ko": "야, 그 변호사 드라마 아직 보고 있어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Sí, anoche vi tres capítulos seguidos. No podía parar.",
+        "gloss": {
+          "en": "Yes, last night I watched three episodes in a row. I couldn't stop.",
+          "ko": "응, 어젯밤에 세 편 연달아 봤어. 멈출 수가 없었어."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Y qué te parece hasta ahora?",
+        "gloss": {
+          "en": "And what do you think so far?",
+          "ko": "지금까지 어때?"
+        },
+        "alt": [
+          {
+            "text": "¿Y qué tal? ¿Te está gustando?",
+            "gloss": {
+              "en": "So how is it? Are you enjoying it?",
+              "ko": "그래서 어때? 재밌어?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Me parece que está muy bien escrita. Pero creo que la segunda temporada es más lenta que la primera.",
+        "gloss": {
+          "en": "I think it's really well written. But I think the second season is slower than the first.",
+          "ko": "대본이 정말 잘 쓰인 것 같아. 근데 시즌 2가 시즌 1보다 느린 것 같아."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Tú crees? A mí me gusta más la segunda.",
+        "gloss": {
+          "en": "You think so? I like the second one more.",
+          "ko": "그래? 난 시즌 2가 더 좋던데."
+        },
+        "alt": [
+          {
+            "text": "¿En serio? Yo no creo que sea más lenta.",
+            "gloss": {
+              "en": "Really? I don't think it's slower.",
+              "ko": "진짜? 난 더 느린 것 같지 않은데."
+            }
+          },
+          {
+            "text": "No estoy de acuerdo, para mí es la mejor.",
+            "gloss": {
+              "en": "I don't agree, for me it's the best.",
+              "ko": "난 동의 못 해, 나한텐 그게 최고야."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Bueno, no estoy seguro. Por cierto, ¿te acuerdas de la abogada nueva, la del pelo corto?",
+        "gloss": {
+          "en": "Well, I'm not sure. By the way, do you remember the new lawyer, the one with short hair?",
+          "ko": "글쎄, 잘 모르겠어. 그건 그렇고, 그 새로 온 변호사 기억나? 머리 짧은 사람."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡Claro! Es mi personaje favorito.",
+        "gloss": {
+          "en": "Of course! She's my favourite character.",
+          "ko": "당연하지! 내가 제일 좋아하는 캐릭터야."
+        },
+        "alt": [
+          {
+            "text": "¿La que trabajaba antes con el juez? Sí, me encanta.",
+            "gloss": {
+              "en": "The one who used to work with the judge? Yes, I love her.",
+              "ko": "전에 판사랑 일하던 사람? 응, 완전 좋아."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Pues yo no creo que sea tan buena como parece. Creo que esconde algo.",
+        "gloss": {
+          "en": "Well, I don't think she's as good as she seems. I think she's hiding something.",
+          "ko": "근데 난 그 사람이 보이는 것만큼 착한 것 같지 않아. 뭔가 숨기는 것 같아."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡Uy, no me hagas spoiler! Todavía no he visto el capítulo seis.",
+        "gloss": {
+          "en": "Whoa, no spoilers! I haven't seen episode six yet.",
+          "ko": "어, 스포하지 마! 나 아직 6화 안 봤어."
+        },
+        "alt": [
+          {
+            "text": "¡Calla, calla, que voy por el capítulo cinco!",
+            "gloss": {
+              "en": "Shh, stop, I'm only on episode five!",
+              "ko": "쉿, 그만! 나 아직 5화 보는 중이야!"
+            }
+          },
+          {
+            "text": "¡Para! No me cuentes nada, que voy más atrasado.",
+            "gloss": {
+              "en": "Stop! Don't tell me anything, I'm further behind.",
+              "ko": "그만! 아무 말도 하지 마, 나 더 뒤처져 있어."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Vale, vale, no digo nada. Solo que el final de la temporada es increíble.",
+        "gloss": {
+          "en": "OK, OK, I won't say anything. Only that the season finale is amazing.",
+          "ko": "알았어, 알았어, 아무 말 안 할게. 시즌 마지막 회가 대박이라는 것만."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Pues esta noche la termino. ¿Y qué vas a ver después?",
+        "gloss": {
+          "en": "Then I'll finish it tonight. And what are you going to watch next?",
+          "ko": "그럼 오늘 밤에 끝내야지. 다음엔 뭐 볼 거야?"
+        },
+        "alt": [
+          {
+            "text": "Vale, esta noche sigo. ¿Y luego qué vas a ver tú?",
+            "gloss": {
+              "en": "OK, I'll keep going tonight. And what are you going to watch afterwards?",
+              "ko": "좋아, 오늘 밤에 이어서 볼게. 넌 그다음에 뭐 볼 거야?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "No sé. Me gustaría ver algo más ligero, como una comedia. ¿Me recomiendas alguna?",
+        "gloss": {
+          "en": "I don't know. I'd like to watch something lighter, like a comedy. Can you recommend one?",
+          "ko": "모르겠어. 좀 더 가벼운 거, 코미디 같은 걸 보고 싶어. 추천해 줄 거 있어?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-4-1",
+    "stage": 4,
+    "situation": 0,
+    "setting": {
+      "en": "Negotiating a report deadline with your manager, Laura",
+      "ko": "상사 라우라와 보고서 마감 협상하기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "Oye, ¿tienes un momento? Necesito el informe del proyecto para el jueves.",
+        "gloss": {
+          "en": "Hey, have you got a moment? I need the project report for Thursday.",
+          "ko": "저기, 잠깐 시간 있어요? 목요일까지 프로젝트 보고서가 필요해요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Claro. Justo quería hablar contigo de eso. Me temo que el jueves va a ser complicado.",
+        "gloss": {
+          "en": "Sure. I actually wanted to talk to you about that. I'm afraid Thursday is going to be tricky.",
+          "ko": "그럼요. 마침 그 얘기를 하려던 참이었어요. 목요일은 좀 어려울 것 같아요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Complicado? ¿Por qué?",
+        "gloss": {
+          "en": "Tricky? Why?",
+          "ko": "어렵다고요? 왜요?"
+        },
+        "alt": [
+          {
+            "text": "Vaya. ¿Qué ha pasado?",
+            "gloss": {
+              "en": "Oh dear. What's happened?",
+              "ko": "이런. 무슨 일 있어요?"
+            }
+          },
+          {
+            "text": "¿Y eso? Pensaba que ibas bien.",
+            "gloss": {
+              "en": "How come? I thought you were on track.",
+              "ko": "왜요? 잘 진행되는 줄 알았는데."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Por un lado, el cliente cambió los requisitos la semana pasada. Por otro, Ana lleva unos días enferma y me toca hacer su parte.",
+        "gloss": {
+          "en": "On the one hand, the client changed the requirements last week. On the other, Ana has been ill for a few days and I've got to do her part.",
+          "ko": "한편으로는 고객이 지난주에 요구 사항을 바꿨고요. 또 아나가 며칠째 아파서 그 부분까지 제가 해야 해요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Ya, pero la dirección quiere verlo antes de la reunión del viernes.",
+        "gloss": {
+          "en": "I know, but management wants to see it before Friday's meeting.",
+          "ko": "알아요, 그래도 경영진이 금요일 회의 전에 보고 싶어 해요."
+        },
+        "alt": [
+          {
+            "text": "Entiendo, pero el director dijo que lo necesitaba sí o sí antes del viernes.",
+            "gloss": {
+              "en": "I understand, but the director said he needed it before Friday, no matter what.",
+              "ko": "이해는 하는데, 이사님이 금요일 전에는 무조건 필요하다고 하셨어요."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Lo entiendo. Pero aunque trabaje hasta tarde, no creo que pueda terminarlo bien para el jueves.",
+        "gloss": {
+          "en": "I understand. But even if I work late, I don't think I can finish it properly by Thursday.",
+          "ko": "이해해요. 하지만 늦게까지 일하더라도 목요일까지 제대로 끝낼 수 있을 것 같지 않아요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Y qué propones?",
+        "gloss": {
+          "en": "So what do you suggest?",
+          "ko": "그럼 어떻게 하자는 거예요?"
+        },
+        "alt": [
+          {
+            "text": "¿Entonces qué hacemos?",
+            "gloss": {
+              "en": "So what do we do?",
+              "ko": "그럼 어떻게 하죠?"
+            }
+          },
+          {
+            "text": "Vale, ¿qué alternativa ves?",
+            "gloss": {
+              "en": "OK, what alternative do you see?",
+              "ko": "알겠어요, 다른 방법이 있어요?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Si me dieras hasta el lunes, podría entregarte algo mucho más completo.",
+        "gloss": {
+          "en": "If you gave me until Monday, I could hand you something much more complete.",
+          "ko": "월요일까지 시간을 주시면 훨씬 완성도 있는 걸 드릴 수 있어요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "El lunes es demasiado tarde. Como mucho, el viernes a primera hora.",
+        "gloss": {
+          "en": "Monday is too late. At the very most, first thing Friday.",
+          "ko": "월요일은 너무 늦어요. 길어 봐야 금요일 아침 일찍이에요."
+        },
+        "alt": [
+          {
+            "text": "Hasta el lunes no puedo esperar. Lo máximo sería el viernes por la mañana.",
+            "gloss": {
+              "en": "I can't wait until Monday. The latest would be Friday morning.",
+              "ko": "월요일까지는 못 기다려요. 최대한 금요일 오전이에요."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Vale. Entonces, ¿qué te parece si el jueves te mando un resumen con los datos principales y el viernes la versión completa?",
+        "gloss": {
+          "en": "OK. Then how about I send you a summary with the main figures on Thursday and the full version on Friday?",
+          "ko": "알겠어요. 그럼 목요일에 핵심 수치만 담은 요약을 보내고, 금요일에 전체본을 드리면 어떨까요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Mmm, tiene sentido. Así tengo algo para preparar la reunión.",
+        "gloss": {
+          "en": "Hmm, that makes sense. That way I have something to prepare the meeting with.",
+          "ko": "음, 그게 맞겠네요. 그럼 회의 준비할 거리가 생기니까요."
+        },
+        "alt": [
+          {
+            "text": "Me parece razonable, siempre que el resumen incluya las cifras.",
+            "gloss": {
+              "en": "That seems reasonable, as long as the summary includes the figures.",
+              "ko": "요약에 수치만 들어간다면 괜찮은 것 같아요."
+            }
+          },
+          {
+            "text": "Bueno, eso podría funcionar.",
+            "gloss": {
+              "en": "Well, that could work.",
+              "ko": "음, 그럼 될 수도 있겠네요."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Exacto. Y si surge cualquier duda, me lo dices y lo reviso enseguida.",
+        "gloss": {
+          "en": "Exactly. And if any question comes up, just tell me and I'll look at it right away.",
+          "ko": "맞아요. 그리고 궁금한 게 생기면 말씀만 하세요, 바로 확인할게요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Perfecto. Pero que no se retrase más, ¿eh?",
+        "gloss": {
+          "en": "Perfect. But don't let it slip any further, OK?",
+          "ko": "좋아요. 대신 더는 미루면 안 돼요, 알겠죠?"
+        },
+        "alt": [
+          {
+            "text": "De acuerdo. Pero el viernes sin falta, ¿vale?",
+            "gloss": {
+              "en": "All right. But Friday without fail, OK?",
+              "ko": "좋아요. 대신 금요일엔 꼭이요, 알겠죠?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Te lo prometo. Ojalá el cliente no cambie nada más...",
+        "gloss": {
+          "en": "I promise. Let's hope the client doesn't change anything else...",
+          "ko": "약속할게요. 고객이 더는 아무것도 안 바꾸길 바랄 뿐이에요..."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-4-2",
+    "stage": 4,
+    "situation": 1,
+    "setting": {
+      "en": "Debating remote work with friends over dinner",
+      "ko": "저녁 자리에서 친구들과 재택근무 토론하기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "Yo no entiendo a la gente que quiere volver a la oficina. En casa se trabaja mucho mejor.",
+        "gloss": {
+          "en": "I don't get people who want to go back to the office. You work much better at home.",
+          "ko": "사무실로 돌아가고 싶어 하는 사람들이 이해가 안 돼. 집에서 일하는 게 훨씬 낫잖아."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Bueno, depende. Por un lado, no pierdes tiempo en el transporte. Por otro, a mí me cuesta desconectar.",
+        "gloss": {
+          "en": "Well, it depends. On the one hand, you don't waste time commuting. On the other, I find it hard to switch off.",
+          "ko": "글쎄, 경우에 따라 달라. 한편으론 출퇴근 시간이 안 들지. 그런데 난 일에서 벗어나기가 힘들어."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Desconectar? Pero si puedes cerrar el portátil y ya está.",
+        "gloss": {
+          "en": "Switch off? But you can just close your laptop and that's it.",
+          "ko": "벗어나기가 힘들다고? 노트북 덮으면 끝이잖아."
+        },
+        "alt": [
+          {
+            "text": "¿Cómo que te cuesta? Apagas y listo.",
+            "gloss": {
+              "en": "What do you mean it's hard? You switch off and done.",
+              "ko": "뭐가 힘들어? 끄면 끝인데."
+            }
+          },
+          {
+            "text": "¿En serio? Yo termino a las seis y me olvido de todo.",
+            "gloss": {
+              "en": "Really? I finish at six and forget about everything.",
+              "ko": "진짜? 난 6시에 끝나면 다 잊어버리는데."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "En teoría, sí. Pero cuando la oficina es tu salón, siempre acabas mirando el correo a las diez de la noche.",
+        "gloss": {
+          "en": "In theory, yes. But when your office is your living room, you always end up checking email at ten at night.",
+          "ko": "이론상으론 그렇지. 근데 사무실이 거실이면 결국 밤 10시에 메일을 보게 돼."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Eso es cuestión de disciplina.",
+        "gloss": {
+          "en": "That's a matter of discipline.",
+          "ko": "그건 자기 관리 문제지."
+        },
+        "alt": [
+          {
+            "text": "Ya, pero eso le pasa a quien no sabe organizarse.",
+            "gloss": {
+              "en": "Sure, but that happens to people who can't organise themselves.",
+              "ko": "그렇긴 한데, 그건 정리 못 하는 사람한테나 생기는 일이지."
+            }
+          },
+          {
+            "text": "Eso no es culpa del teletrabajo, ¿eh?",
+            "gloss": {
+              "en": "That's not remote work's fault, you know.",
+              "ko": "그건 재택근무 탓이 아니잖아."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Puede ser, pero aunque tengas disciplina, cuando vives solo es muy fácil aislarte.",
+        "gloss": {
+          "en": "Maybe, but even if you're disciplined, when you live alone it's very easy to isolate yourself.",
+          "ko": "그럴 수도 있지. 하지만 자기 관리를 해도 혼자 살면 고립되기 쉬워."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Hombre, para eso estamos los amigos. Por eso quedamos.",
+        "gloss": {
+          "en": "Come on, that's what friends are for. That's why we meet up.",
+          "ko": "에이, 그러라고 친구가 있는 거지. 그래서 이렇게 만나잖아."
+        },
+        "alt": [
+          {
+            "text": "Bueno, para eso nos tienes a nosotros, ¿no?",
+            "gloss": {
+              "en": "Well, that's what you've got us for, right?",
+              "ko": "뭐, 그러라고 우리가 있는 거 아냐?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Ja, ja, ya. Pero no es lo mismo. En la oficina aprendes muchísimo de los compañeros, sobre todo al principio.",
+        "gloss": {
+          "en": "Ha ha, sure. But it's not the same. At the office you learn a lot from colleagues, especially at the beginning.",
+          "ko": "하하, 그렇지. 근데 그거랑은 달라. 사무실에서는 동료들한테 정말 많이 배우잖아, 특히 처음엔."
+        }
+      },
+      {
+        "who": "them",
+        "text": "En eso tienes razón. Mi hermana empezó a trabajar en remoto y dice que se sentía perdida.",
+        "gloss": {
+          "en": "You're right about that. My sister started working remotely and says she felt lost.",
+          "ko": "그건 맞아. 우리 언니도 재택으로 일을 시작했는데 길을 잃은 기분이었대."
+        },
+        "alt": [
+          {
+            "text": "Eso es verdad. Dicen que los nuevos lo pasan peor.",
+            "gloss": {
+              "en": "That's true. They say new people have a harder time.",
+              "ko": "그건 그래. 신입들이 더 힘들다고들 하더라."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "¿Ves? Por eso no creo que la solución sea todo en casa o todo en la oficina.",
+        "gloss": {
+          "en": "See? That's why I don't think the answer is all at home or all at the office.",
+          "ko": "봐. 그래서 난 전부 재택이나 전부 출근이 답이라고 생각하지 않아."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Y si te dejaran elegir a ti, qué harías?",
+        "gloss": {
+          "en": "And if they let you choose, what would you do?",
+          "ko": "그럼 너한테 고르라고 하면 어떻게 할 건데?"
+        },
+        "alt": [
+          {
+            "text": "Vale, pero si fuera tu decisión, ¿cómo lo harías?",
+            "gloss": {
+              "en": "OK, but if it were your decision, how would you do it?",
+              "ko": "좋아, 근데 네가 정한다면 어떻게 할 거야?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Si pudiera elegir, iría a la oficina dos días por semana. Lo bueno es que así ves a la gente sin perder toda la semana en el metro.",
+        "gloss": {
+          "en": "If I could choose, I'd go to the office two days a week. The good thing is that way you see people without losing the whole week on the metro.",
+          "ko": "고를 수 있다면 일주일에 이틀은 출근할 거야. 그러면 일주일 내내 지하철에서 시간 버리지 않고 사람들도 볼 수 있다는 게 좋지."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Pues mira, a lo mejor tienes razón... pero yo sigo prefiriendo trabajar en pijama.",
+        "gloss": {
+          "en": "Well, maybe you're right... but I still prefer working in my pyjamas.",
+          "ko": "음, 네 말이 맞을지도... 그래도 난 잠옷 입고 일하는 게 좋아."
+        },
+        "alt": [
+          {
+            "text": "Bueno, no es mala idea. Aun así, yo no cambio mi pijama por nada.",
+            "gloss": {
+              "en": "Well, it's not a bad idea. Still, I wouldn't trade my pyjamas for anything.",
+              "ko": "뭐, 나쁘지 않은 생각이네. 그래도 난 내 잠옷은 절대 포기 못 해."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Ja, ja. Me da igual, mientras no enciendas la cámara.",
+        "gloss": {
+          "en": "Ha ha. I don't mind, as long as you don't turn the camera on.",
+          "ko": "하하. 상관없어, 카메라만 안 켠다면."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-4-3",
+    "stage": 4,
+    "situation": 2,
+    "setting": {
+      "en": "Guest on a podcast, discussing news that a city will close its centre to cars",
+      "ko": "팟캐스트 게스트로 '도심 차량 금지' 뉴스 이야기하기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "Bienvenidos a un nuevo episodio. Hoy hablamos de la noticia de la semana: la ciudad que va a cerrar el centro a los coches. ¿Qué opinas tú?",
+        "gloss": {
+          "en": "Welcome to a new episode. Today we're talking about the news of the week: the city that's going to close its centre to cars. What do you think?",
+          "ko": "새 에피소드에 오신 걸 환영합니다. 오늘은 이번 주 뉴스, 도심에 차량 통행을 막겠다는 도시 이야기예요. 어떻게 보세요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Pues me parece una medida valiente. Según el artículo, se espera que la contaminación baje casi un treinta por ciento.",
+        "gloss": {
+          "en": "Well, I think it's a bold measure. According to the article, pollution is expected to drop by almost thirty percent.",
+          "ko": "용기 있는 조치라고 생각해요. 기사에 따르면 오염이 30% 가까이 줄 거라고 해요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Ya, pero muchos comerciantes dicen que van a perder clientes.",
+        "gloss": {
+          "en": "Right, but a lot of shop owners say they're going to lose customers.",
+          "ko": "그렇죠, 그런데 상인들은 손님이 줄 거라고 많이들 말해요."
+        },
+        "alt": [
+          {
+            "text": "Sin embargo, los comerciantes del centro están bastante preocupados.",
+            "gloss": {
+              "en": "However, the shopkeepers in the centre are quite worried.",
+              "ko": "하지만 도심 상인들은 꽤 걱정하고 있어요."
+            }
+          },
+          {
+            "text": "Bueno, pero no todo el mundo está contento, ¿eh? Las tiendas se quejan.",
+            "gloss": {
+              "en": "Well, not everyone is happy, you know. The shops are complaining.",
+              "ko": "그래도 다들 반기는 건 아니잖아요. 가게들은 불만이에요."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Es verdad. El alcalde dijo que habría ayudas para las tiendas durante el primer año, aunque no explicó de cuánto dinero.",
+        "gloss": {
+          "en": "That's true. The mayor said there would be support for shops during the first year, although he didn't explain how much money.",
+          "ko": "맞아요. 시장은 첫해 동안 가게에 지원금을 주겠다고 했는데, 얼마인지는 밝히지 않았어요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Y tú te lo crees?",
+        "gloss": {
+          "en": "And do you believe it?",
+          "ko": "그 말을 믿으세요?"
+        },
+        "alt": [
+          {
+            "text": "¿Y crees que lo van a cumplir?",
+            "gloss": {
+              "en": "And do you think they'll keep that promise?",
+              "ko": "그 약속을 지킬 거라고 보세요?"
+            }
+          },
+          {
+            "text": "Eso suena muy bien en un titular, ¿no?",
+            "gloss": {
+              "en": "That sounds great in a headline, doesn't it?",
+              "ko": "기사 제목으로는 그럴듯하죠?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Sinceramente, no creo que esas ayudas sean suficientes. En cambio, si mejoraran el transporte público, la gente seguiría yendo al centro.",
+        "gloss": {
+          "en": "Honestly, I don't think that support will be enough. On the other hand, if they improved public transport, people would keep going to the centre.",
+          "ko": "솔직히 그 지원으로는 부족할 것 같아요. 반면에 대중교통을 개선하면 사람들은 계속 도심에 올 거예요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Ahí está la clave, ¿no? Porque ahora mismo los autobuses son un desastre.",
+        "gloss": {
+          "en": "That's the key, isn't it? Because right now the buses are a disaster.",
+          "ko": "그게 핵심이죠? 지금 버스가 엉망이거든요."
+        },
+        "alt": [
+          {
+            "text": "Totalmente. Hoy en día, ir al centro en autobús es una odisea.",
+            "gloss": {
+              "en": "Totally. These days, going downtown by bus is an odyssey.",
+              "ko": "완전히요. 요즘 버스로 도심 가는 건 대모험이에요."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Exacto. En otras ciudades se hizo lo mismo y al principio hubo muchas quejas, pero después nadie quería volver atrás.",
+        "gloss": {
+          "en": "Exactly. Other cities did the same thing, and at first there were lots of complaints, but afterwards nobody wanted to go back.",
+          "ko": "맞아요. 다른 도시들도 똑같이 했는데, 처음엔 불만이 많았지만 나중엔 아무도 예전으로 돌아가길 원하지 않았어요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Tienes algún ejemplo concreto?",
+        "gloss": {
+          "en": "Do you have a specific example?",
+          "ko": "구체적인 예가 있나요?"
+        },
+        "alt": [
+          {
+            "text": "¿Por ejemplo?",
+            "gloss": {
+              "en": "For example?",
+              "ko": "예를 들면요?"
+            }
+          },
+          {
+            "text": "¿Como cuál?",
+            "gloss": {
+              "en": "Like which one?",
+              "ko": "어떤 곳이요?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Pontevedra, en Galicia. Cerraron el centro a los coches hace años y hoy se considera un modelo.",
+        "gloss": {
+          "en": "Pontevedra, in Galicia. They closed the centre to cars years ago and today it's considered a model.",
+          "ko": "갈리시아의 폰테베드라요. 몇 년 전에 도심 차량 통행을 막았는데 지금은 본보기로 꼽혀요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Interesante. Entonces, ¿tú votarías a favor?",
+        "gloss": {
+          "en": "Interesting. So, would you vote in favour?",
+          "ko": "흥미롭네요. 그럼 찬성표를 던지시겠어요?"
+        },
+        "alt": [
+          {
+            "text": "O sea, que tú estás a favor.",
+            "gloss": {
+              "en": "So you're in favour.",
+              "ko": "그러니까 찬성이시군요."
+            }
+          },
+          {
+            "text": "Entonces, ¿lo apoyas?",
+            "gloss": {
+              "en": "So, do you support it?",
+              "ko": "그럼 지지하시는 거예요?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Sí, a no ser que lo hagan de golpe. Habría que hacerlo poco a poco y escuchar a los vecinos.",
+        "gloss": {
+          "en": "Yes, unless they do it all at once. It should be done gradually, listening to the residents.",
+          "ko": "네, 한꺼번에 밀어붙이지만 않는다면요. 주민 의견을 들으면서 조금씩 해야 해요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Muy bien. Para terminar, ¿nos haces un resumen para quien acaba de conectarse?",
+        "gloss": {
+          "en": "Very good. To wrap up, could you give us a summary for anyone who's just tuned in?",
+          "ko": "좋습니다. 마지막으로 지금 막 들어오신 분들을 위해 정리해 주시겠어요?"
+        },
+        "alt": [
+          {
+            "text": "Vamos cerrando. ¿Cómo lo resumirías en una frase?",
+            "gloss": {
+              "en": "Let's wrap up. How would you sum it up in one sentence?",
+              "ko": "슬슬 마무리하죠. 한 문장으로 정리하면요?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "En resumen: la idea vale la pena, pero solo funcionará si hay alternativas reales al coche.",
+        "gloss": {
+          "en": "In short: the idea is worth it, but it will only work if there are real alternatives to the car.",
+          "ko": "정리하면, 해 볼 만한 아이디어지만 차를 대신할 현실적인 수단이 있어야만 성공할 거예요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-4-4",
+    "stage": 4,
+    "situation": 3,
+    "setting": {
+      "en": "Advising your friend Clara, who has a job offer in Berlin",
+      "ko": "베를린에서 일자리 제안을 받은 친구 클라라에게 조언하기"
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "Oye, tengo que contarte algo. Me han ofrecido un trabajo en Berlín y no sé qué hacer.",
+        "gloss": {
+          "en": "Hey, I have to tell you something. I've been offered a job in Berlin and I don't know what to do.",
+          "ko": "있잖아, 할 얘기가 있어. 베를린에서 일자리 제안을 받았는데 어떻게 해야 할지 모르겠어."
+        }
+      },
+      {
+        "who": "me",
+        "text": "¡Qué noticia! ¿Y qué es lo que te frena?",
+        "gloss": {
+          "en": "What news! And what's holding you back?",
+          "ko": "대박 소식이다! 그런데 뭐가 망설여져?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Pues de todo un poco. No hablo alemán y me da miedo estar sola.",
+        "gloss": {
+          "en": "A bit of everything. I don't speak German and I'm scared of being alone.",
+          "ko": "이것저것 다. 독일어도 못하고 혼자 지내는 게 무서워."
+        },
+        "alt": [
+          {
+            "text": "Muchas cosas. El idioma, el frío, estar lejos de todos...",
+            "gloss": {
+              "en": "Lots of things. The language, the cold, being far from everyone...",
+              "ko": "여러 가지. 언어, 추위, 다들 멀리 있는 거..."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Te entiendo. En cuanto al idioma, en muchas empresas de allí se trabaja en inglés, ¿no?",
+        "gloss": {
+          "en": "I get it. As for the language, a lot of companies there work in English, right?",
+          "ko": "이해해. 언어 문제라면, 거기 회사들은 영어로 일하는 데가 많지 않아?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Sí, en la mía todo es en inglés, pero para la vida diaria...",
+        "gloss": {
+          "en": "Yes, at mine everything's in English, but for daily life...",
+          "ko": "응, 내가 갈 회사는 다 영어야. 근데 일상생활은..."
+        },
+        "alt": [
+          {
+            "text": "En la oficina sí, pero fuera de ahí no tengo ni idea.",
+            "gloss": {
+              "en": "At the office, yes, but outside of it I haven't got a clue.",
+              "ko": "회사에선 그렇지, 근데 밖에선 하나도 모르겠어."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Bueno, cuando llegues, puedes inscribirte en clases. Si yo fuera tú, empezaría ya con una aplicación.",
+        "gloss": {
+          "en": "Well, when you get there, you can sign up for classes. If I were you, I'd start with an app right now.",
+          "ko": "가서 수업 등록하면 되지. 나라면 지금 당장 앱으로 시작하겠어."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Y si no me adapto? Dejarlo todo aquí me da mucha pena.",
+        "gloss": {
+          "en": "And what if I don't adapt? Leaving everything here makes me really sad.",
+          "ko": "적응 못 하면 어떡해? 여기 있는 걸 다 두고 가는 게 너무 아쉬워."
+        },
+        "alt": [
+          {
+            "text": "Ya, pero ¿y si me arrepiento?",
+            "gloss": {
+              "en": "Sure, but what if I regret it?",
+              "ko": "그렇긴 한데, 후회하면 어떡해?"
+            }
+          },
+          {
+            "text": "Lo que más me preocupa es echar de menos a mi familia.",
+            "gloss": {
+              "en": "What worries me most is missing my family.",
+              "ko": "가족이 그리울까 봐 그게 제일 걱정이야."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Es normal que te dé miedo. Pero no es para siempre: si no te gusta, siempre puedes volver.",
+        "gloss": {
+          "en": "It's normal to be scared. But it's not forever: if you don't like it, you can always come back.",
+          "ko": "무서운 게 당연해. 근데 평생 가는 것도 아니잖아. 싫으면 언제든 돌아오면 돼."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Mi madre dice que estoy loca, que aquí tengo un buen trabajo.",
+        "gloss": {
+          "en": "My mum says I'm crazy, that I have a good job here.",
+          "ko": "엄마는 내가 미쳤대. 여기서 좋은 직장 다니고 있다고."
+        },
+        "alt": [
+          {
+            "text": "Mis padres dicen que es una locura dejar un trabajo fijo.",
+            "gloss": {
+              "en": "My parents say it's madness to leave a permanent job.",
+              "ko": "부모님은 정규직을 그만두는 건 미친 짓이래."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Ya, pero lo bueno es que eres joven y no tienes hipoteca. Además, una experiencia así vale la pena aunque salga mal.",
+        "gloss": {
+          "en": "Sure, but the good thing is you're young and don't have a mortgage. Besides, an experience like that is worth it even if it goes wrong.",
+          "ko": "그렇긴 한데, 다행인 건 넌 젊고 대출도 없잖아. 게다가 그런 경험은 잘 안 풀려도 해 볼 만해."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Visto así... Pero ¿cómo lo hiciste tú cuando te fuiste a Canadá?",
+        "gloss": {
+          "en": "Put like that... But how did you manage when you went to Canada?",
+          "ko": "그렇게 보면... 근데 넌 캐나다 갔을 때 어떻게 했어?"
+        },
+        "alt": [
+          {
+            "text": "Tú lo hiciste, ¿no? ¿Cómo fue al principio?",
+            "gloss": {
+              "en": "You did it, didn't you? What was it like at first?",
+              "ko": "너도 해 봤잖아? 처음엔 어땠어?"
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Al principio fue duro, la verdad. Me di cuenta de que necesitaba crear rutinas: el gimnasio, un grupo de intercambio, cosas así.",
+        "gloss": {
+          "en": "At first it was hard, honestly. I realised I needed to build routines: the gym, a language exchange group, things like that.",
+          "ko": "처음엔 솔직히 힘들었어. 루틴을 만들어야 한다는 걸 깨달았지. 헬스장, 언어 교환 모임, 그런 거."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Vale, me lo voy a pensar en serio. Gracias por escucharme.",
+        "gloss": {
+          "en": "OK, I'm going to think about it seriously. Thanks for listening to me.",
+          "ko": "알았어, 진지하게 생각해 볼게. 들어 줘서 고마워."
+        },
+        "alt": [
+          {
+            "text": "Me has ayudado mucho. Creo que voy a decir que sí.",
+            "gloss": {
+              "en": "You've helped me a lot. I think I'm going to say yes.",
+              "ko": "정말 도움 됐어. 아무래도 수락할 것 같아."
+            }
+          }
+        ]
+      },
+      {
+        "who": "me",
+        "text": "Para eso están los amigos. Decidas lo que decidas, ojalá te salga genial. ¡Y si te vas, voy a verte!",
+        "gloss": {
+          "en": "That's what friends are for. Whatever you decide, I hope it goes brilliantly. And if you go, I'm coming to visit!",
+          "ko": "친구 좋다는 게 뭐야. 뭘 결정하든 잘되길 바라. 그리고 가면 놀러 갈게!"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-5-1",
+    "stage": 5,
+    "situation": 0,
+    "setting": {
+      "en": "Your colleague Nuria asks what you thought of her campaign proposal",
+      "ko": "동료 누리아가 자기 캠페인 제안서를 어떻게 봤는지 묻는다"
+    },
+    "goal": {
+      "en": "Point out the budget problem without discouraging your colleague, praise what works, and agree on a next step.",
+      "ko": "동료의 기를 꺾지 않고 예산 문제를 짚고, 잘된 점을 칭찬하며, 다음 할 일을 함께 정한다."
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "Oye, ¿has podido echarle un ojo a mi propuesta para la campaña?",
+        "gloss": {
+          "en": "Hey, have you had a chance to look over my campaign proposal?",
+          "ko": "저기, 내 캠페인 제안서 좀 봤어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Sí, sí, anoche la leí con calma. A grandes rasgos, me parece muy buena, la verdad.",
+        "gloss": {
+          "en": "Yes, yes, I read it carefully last night. Broadly speaking, I think it's really good, honestly.",
+          "ko": "응, 어젯밤에 찬찬히 읽어 봤어. 큰 틀에서는 정말 좋은 것 같아, 진짜로."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Pero...? Te conozco, algo hay.",
+        "gloss": {
+          "en": "But...? I know you, there's something.",
+          "ko": "근데...? 너 잘 알지, 뭔가 있지?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Ja, ja, no se te escapa una. Quería comentarte una cosita sobre el presupuesto, nada grave.",
+        "gloss": {
+          "en": "Ha ha, nothing gets past you. I wanted to mention a little thing about the budget, nothing serious.",
+          "ko": "하하, 하나도 안 놓치네. 예산 관련해서 사소한 거 하나 얘기하고 싶었어, 별건 아니고."
+        }
+      },
+      {
+        "who": "them",
+        "text": "A ver, dispara.",
+        "gloss": {
+          "en": "Go on, fire away.",
+          "ko": "그래, 말해 봐."
+        }
+      },
+      {
+        "who": "me",
+        "text": "O sea, con lo de los vídeos con creadores has dado en el clavo, pero lo que me preocupa un poquito es que se come casi la mitad del presupuesto.",
+        "gloss": {
+          "en": "I mean, you've hit the nail on the head with the creator videos, but what worries me a tiny bit is that they eat up almost half the budget.",
+          "ko": "그러니까, 크리에이터 영상 아이디어는 정말 딱 맞았는데, 조금 걱정되는 건 그게 예산의 거의 절반을 잡아먹는다는 거야."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Ya, lo sé. Pero es lo que mejor funciona ahora mismo.",
+        "gloss": {
+          "en": "Yeah, I know. But it's what works best right now.",
+          "ko": "응, 알아. 근데 요즘 제일 잘 먹히는 게 그거잖아."
+        }
+      },
+      {
+        "who": "me",
+        "text": "No me cabe duda. Yo diría que, a lo mejor, podríamos probar primero con dos o tres creadores y ver cómo responde la gente antes de ir con todo.",
+        "gloss": {
+          "en": "I don't doubt it for a second. I'd say that maybe we could try two or three creators first and see how people respond before going all in.",
+          "ko": "그건 의심의 여지가 없지. 내 생각엔 먼저 크리에이터 두세 명으로 시험해 보고, 반응을 본 다음에 전력을 쏟아도 될 것 같아."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Mmm. Me da miedo que, si lo hacemos a medias, no se note.",
+        "gloss": {
+          "en": "Hmm. I'm worried that if we do it halfway, nobody will notice.",
+          "ko": "음. 어중간하게 하면 티도 안 날까 봐 걱정돼."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Te entiendo perfectamente. En todo caso, si funciona, ampliamos el segundo mes. Y si no, no habremos tirado medio presupuesto.",
+        "gloss": {
+          "en": "I completely understand. Anyway, if it works, we scale up in the second month. And if it doesn't, we won't have thrown away half the budget.",
+          "ko": "충분히 이해해. 어쨌든 잘되면 둘째 달에 늘리면 되고, 안 되면 예산 절반을 날리진 않은 거잖아."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Visto así... Pero el director quería algo con impacto, ¿eh?",
+        "gloss": {
+          "en": "Put like that... But the director wanted something with impact, you know.",
+          "ko": "그렇게 보면... 근데 이사님은 임팩트 있는 걸 원하셨잖아."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Claro, y lo va a tener. Dicho sea de paso, la parte del análisis de público es lo mejor que he visto en meses. Eso yo lo dejaría tal cual.",
+        "gloss": {
+          "en": "Of course, and he'll get it. By the way, the audience analysis section is the best thing I've seen in months. I'd leave that exactly as it is.",
+          "ko": "물론이지, 그건 충분히 있을 거야. 그건 그렇고, 타깃 분석 부분은 몇 달 만에 본 것 중 최고야. 그건 그대로 두는 게 좋겠어."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡Gracias! Me costó un montón. Oye, ¿me echas una mano para rehacer los números?",
+        "gloss": {
+          "en": "Thanks! That took me ages. Hey, will you give me a hand redoing the numbers?",
+          "ko": "고마워! 그거 엄청 힘들었어. 저기, 숫자 다시 짜는 거 좀 도와줄래?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Por supuesto. ¿Te viene bien mañana a primera hora? Así lo tenemos listo antes de la reunión del jueves.",
+        "gloss": {
+          "en": "Of course. Does first thing tomorrow work for you? That way we'll have it ready before Thursday's meeting.",
+          "ko": "당연하지. 내일 아침 일찍 괜찮아? 그러면 목요일 회의 전에 준비해 둘 수 있어."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Perfecto. Y gracias por decírmelo así, de verdad.",
+        "gloss": {
+          "en": "Perfect. And thanks for telling me like this, really.",
+          "ko": "좋아. 그리고 이렇게 말해 줘서 정말 고마워."
+        }
+      },
+      {
+        "who": "me",
+        "text": "No hay de qué. La propuesta es tuya; yo solo le doy un retoquito.",
+        "gloss": {
+          "en": "Don't mention it. The proposal is yours; I'm just giving it a little touch-up.",
+          "ko": "별말을. 제안서는 네 거고, 난 살짝 손만 보는 거야."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-5-2",
+    "stage": 5,
+    "situation": 1,
+    "setting": {
+      "en": "Sunday dinner at your friend Pablo's house with his parents",
+      "ko": "친구 파블로네 집에서 부모님과 일요일 저녁 식사"
+    },
+    "goal": {
+      "en": "Join the family's banter, take a joke about yourself with good humour, and compliment the cooking naturally.",
+      "ko": "가족의 수다에 끼어들고, 나를 놀리는 농담을 웃으며 받아치고, 음식을 자연스럽게 칭찬한다."
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "¡Venga, siéntate, que se enfría! ¿Te sirvo un poquito más de guiso?",
+        "gloss": {
+          "en": "Come on, sit down, it's getting cold! Shall I give you a bit more stew?",
+          "ko": "자, 앉아, 식겠다! 스튜 조금 더 줄까?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Ay, sí, por favor, aunque sea un poquito. Está riquísimo, de verdad. ¿Cuál es el secreto?",
+        "gloss": {
+          "en": "Oh, yes please, even just a little. It's absolutely delicious, really. What's the secret?",
+          "ko": "아, 네, 조금만 주세요. 정말 너무 맛있어요. 비법이 뭐예요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "El secreto es la paciencia: tres horas a fuego lento. Y un chorrito de vino, que no se entere el médico.",
+        "gloss": {
+          "en": "The secret is patience: three hours on a low heat. And a splash of wine, but don't tell the doctor.",
+          "ko": "비법은 인내지. 약불에 세 시간. 그리고 와인 살짝, 의사 선생님한텐 비밀이야."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Ja, ja, soy una tumba. Si lo hubiera sabido, habría venido con más hambre.",
+        "gloss": {
+          "en": "Ha ha, my lips are sealed. If I'd known, I'd have come hungrier.",
+          "ko": "하하, 무덤까지 가져갈게요. 알았으면 배를 더 비우고 올 걸 그랬어요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Oye, y Pablo nos ha contado que el otro día te perdiste en el metro y acabaste en la otra punta de la ciudad.",
+        "gloss": {
+          "en": "Hey, and Pablo told us that the other day you got lost on the metro and ended up on the other side of the city.",
+          "ko": "그런데 파블로가 그러던데, 며칠 전에 지하철에서 길을 잃어서 도시 반대편 끝까지 갔다며?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "¡Qué va! Eso es lo que dice él. Yo prefiero llamarlo turismo alternativo.",
+        "gloss": {
+          "en": "No way! That's his version. I prefer to call it alternative tourism.",
+          "ko": "아니에요! 그건 파블로 얘기고요. 저는 '대안 관광'이라고 부르고 싶어요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡Ja, ja! Turismo alternativo, dice. ¿Y cuánto tardaste en volver?",
+        "gloss": {
+          "en": "Ha ha! Alternative tourism, he says. And how long did it take you to get back?",
+          "ko": "하하! 대안 관광이래. 그래서 돌아오는 데 얼마나 걸렸어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Una horita de nada... Bueno, dos. Es que estaba en las nubes, escuchando un pódcast.",
+        "gloss": {
+          "en": "Just a little hour... Well, two. I was off in the clouds, listening to a podcast.",
+          "ko": "한 시간밖에 안 걸렸어요... 음, 두 시간. 팟캐스트 들으면서 딴생각을 하고 있었거든요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Pablo es igual. Una vez se dejó la mochila en el autobús con las llaves de casa dentro.",
+        "gloss": {
+          "en": "Pablo's the same. Once he left his backpack on the bus with the house keys inside.",
+          "ko": "파블로도 똑같아. 한번은 집 열쇠 든 가방을 버스에 두고 내렸다니까."
+        }
+      },
+      {
+        "who": "me",
+        "text": "¿En serio? Ahora entiendo por qué siempre me pide que lleve yo las llaves.",
+        "gloss": {
+          "en": "Seriously? Now I understand why he always asks me to carry the keys.",
+          "ko": "진짜요? 이제야 왜 맨날 저보고 열쇠를 챙기라는지 알겠네요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡Oye, que estoy aquí! Ya veo que esta noche me toca a mí.",
+        "gloss": {
+          "en": "Hey, I'm right here! I can see it's my turn tonight.",
+          "ko": "야, 나 여기 있거든! 오늘 밤은 내가 놀림감이구나."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Tranquilo, que es con cariño. Además, sin ti me habría perdido muchas más veces.",
+        "gloss": {
+          "en": "Relax, it's with affection. Besides, without you I'd have got lost many more times.",
+          "ko": "진정해, 다 애정이야. 게다가 너 없었으면 훨씬 더 자주 길을 잃었을 거야."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Bueno, ¿y qué tal el español? Porque lo hablas mejor que mi sobrino, que es de aquí.",
+        "gloss": {
+          "en": "So, how's the Spanish going? Because you speak it better than my nephew, and he's from here.",
+          "ko": "그건 그렇고, 스페인어는 어때? 여기 토박이인 내 조카보다 잘하는데."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Ay, muchas gracias, pero me está tomando el pelo. Todavía me cuesta el subjuntivo.",
+        "gloss": {
+          "en": "Oh, thank you so much, but you're pulling my leg. I still struggle with the subjunctive.",
+          "ko": "아, 정말 감사해요. 그런데 놀리시는 거죠? 아직 접속법이 어려워요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡Qué va, qué va! Bueno, ¿quién quiere postre? Hay flan casero.",
+        "gloss": {
+          "en": "Not at all, not at all! Right, who wants dessert? There's homemade flan.",
+          "ko": "무슨 소리, 무슨 소리! 자, 디저트 먹을 사람? 직접 만든 플란이 있어."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Yo, sin duda. Si sigue cocinando así, voy a tener que venir todos los domingos.",
+        "gloss": {
+          "en": "Me, without a doubt. If you keep cooking like this, I'm going to have to come every Sunday.",
+          "ko": "저요, 당연하죠. 계속 이렇게 요리해 주시면 일요일마다 와야겠어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-5-3",
+    "stage": 5,
+    "situation": 2,
+    "setting": {
+      "en": "Leaving the cinema with your friend Irene, arguing about the film's ending",
+      "ko": "친구 이레네와 영화관을 나서며 결말을 두고 토론하기"
+    },
+    "goal": {
+      "en": "Defend your reading of the ending with evidence while acknowledging your friend's view, and land on common ground.",
+      "ko": "근거를 들어 결말에 대한 내 해석을 지키면서 친구의 관점도 인정하고, 서로 맞는 지점을 찾는다."
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "Bueno, ¿qué? No has abierto la boca desde que hemos salido. ¿No te ha gustado?",
+        "gloss": {
+          "en": "So, what? You haven't said a word since we came out. Didn't you like it?",
+          "ko": "그래서, 어땠어? 나온 뒤로 한마디도 안 하네. 별로였어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Al contrario, me ha encantado. Lo que pasa es que todavía le estoy dando vueltas al final.",
+        "gloss": {
+          "en": "On the contrary, I loved it. It's just that I'm still mulling over the ending.",
+          "ko": "오히려 너무 좋았어. 그냥 결말을 아직 곱씹고 있는 중이야."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿El final? Si está clarísimo: ella se queda en el pueblo porque se rinde.",
+        "gloss": {
+          "en": "The ending? But it's crystal clear: she stays in the village because she gives up.",
+          "ko": "결말? 너무 뻔하잖아. 포기해서 마을에 남은 거지."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Mmm, no sé yo. A lo mejor es al revés. O sea, no creo que se rinda; creo que por fin elige ella, y no su familia.",
+        "gloss": {
+          "en": "Hmm, I'm not so sure. Maybe it's the other way round. I mean, I don't think she gives up; I think she finally chooses for herself, not her family.",
+          "ko": "음, 글쎄. 오히려 반대일 수도 있어. 그러니까 포기한 게 아니라, 드디어 가족이 아니라 자기가 선택한 것 같아."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Hombre, pero si en toda la película solo quiere irse. ¿Cómo va a ser una elección?",
+        "gloss": {
+          "en": "Come on, the whole film she just wants to leave. How can it be a choice?",
+          "ko": "에이, 영화 내내 떠나고 싶어만 했잖아. 그게 어떻게 선택이야?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Justo por eso. Lo que me ha llamado la atención es que en la última escena es la primera vez que nadie le dice qué hacer.",
+        "gloss": {
+          "en": "That's exactly why. What caught my attention is that the last scene is the first time nobody tells her what to do.",
+          "ko": "바로 그래서야. 내 눈에 띈 건, 마지막 장면에서 처음으로 아무도 그녀에게 뭘 하라고 하지 않는다는 거야."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Ya, bueno, pero eso puede ser casualidad. Le estás dando demasiadas vueltas.",
+        "gloss": {
+          "en": "Yeah, well, that could be a coincidence. You're overthinking it.",
+          "ko": "응, 근데 그건 우연일 수도 있잖아. 너무 깊게 생각하는 거야."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Puede ser, ¿eh? Pero dudo que una directora tan cuidadosa deje algo así al azar. Sin ir más lejos, fíjate en los colores: toda la película es gris y al final sale el sol.",
+        "gloss": {
+          "en": "Could be, sure. But I doubt such a careful director would leave something like that to chance. Just look at the colours: the whole film is grey and at the end the sun comes out.",
+          "ko": "그럴 수도 있지. 근데 그렇게 꼼꼼한 감독이 그런 걸 우연에 맡겼을 것 같진 않아. 당장 색만 봐도 그래. 영화 내내 회색이다가 마지막에 해가 나잖아."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Anda, pues en eso no me había fijado.",
+        "gloss": {
+          "en": "Oh, I hadn't noticed that.",
+          "ko": "어머, 그건 못 봤네."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Y luego está lo del padre. Es él quien le da las llaves de la tienda, ¿no? Para mí eso lo cambia todo.",
+        "gloss": {
+          "en": "And then there's the father. He's the one who gives her the keys to the shop, isn't he? For me that changes everything.",
+          "ko": "그리고 아버지 장면도 있잖아. 가게 열쇠를 건네는 게 바로 아버지잖아? 나한텐 그게 모든 걸 바꿔."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Sí, pero yo lo vi como otra forma de atarla. Como diciendo: ahora te toca a ti cargar con esto.",
+        "gloss": {
+          "en": "Yes, but I saw it as another way of tying her down. As if saying: now it's your turn to carry this.",
+          "ko": "응, 근데 난 그걸 또 다른 방식으로 그녀를 묶어 두는 걸로 봤어. '이제 네가 이 짐을 질 차례야' 하는 것처럼."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Uf, esa lectura también tiene sentido, la verdad. A lo mejor la gracia está en que se puede leer de las dos maneras.",
+        "gloss": {
+          "en": "Ooh, that reading makes sense too, honestly. Maybe the beauty of it is that it can be read both ways.",
+          "ko": "와, 그 해석도 일리가 있다, 진짜. 어쩌면 두 가지로 읽힌다는 게 이 영화의 묘미인지도 몰라."
+        }
+      },
+      {
+        "who": "them",
+        "text": "O sea, que en el fondo me estás dando la razón.",
+        "gloss": {
+          "en": "So, deep down, you're agreeing with me.",
+          "ko": "그러니까 결국 내 말이 맞다는 거네."
+        }
+      },
+      {
+        "who": "me",
+        "text": "¡Ni de broma! Digamos que los dos tenemos un poco de razón. A fin de cuentas, una buena película es la que te deja discutiendo en la puerta del cine.",
+        "gloss": {
+          "en": "No way! Let's say we're both a bit right. At the end of the day, a good film is one that leaves you arguing at the cinema door.",
+          "ko": "절대 아니지! 우리 둘 다 조금씩 맞다고 하자. 결국 좋은 영화란 극장 앞에서 계속 토론하게 만드는 영화잖아."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Ja, ja, qué diplomacia. ¿Vamos a tomar algo y seguimos con el debate?",
+        "gloss": {
+          "en": "Ha ha, how diplomatic. Shall we go for a drink and carry on the debate?",
+          "ko": "하하, 외교관 납셨네. 한잔하면서 토론 계속할까?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Venga, vamos. Pero aviso: a la segunda ronda vuelvo a la carga con lo del sol.",
+        "gloss": {
+          "en": "Come on, let's go. But I'm warning you: by the second round I'm coming back at you with the sun thing.",
+          "ko": "좋아, 가자. 근데 미리 말해 두는데, 두 번째 잔쯤에 해 얘기로 다시 공격할 거야."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-5-4",
+    "stage": 5,
+    "situation": 3,
+    "setting": {
+      "en": "Phoning a university office after your formal email about a scholarship went unanswered",
+      "ko": "장학금 관련 격식 이메일에 답이 없어 대학 사무실에 전화하기"
+    },
+    "goal": {
+      "en": "Politely follow up on your unanswered email, find out what is missing, and get the office to accept your submission as on time.",
+      "ko": "답이 없던 이메일을 정중하게 다시 확인하고, 무엇이 빠졌는지 알아낸 뒤, 기한 내 제출로 인정받는다."
+    },
+    "lines": [
+      {
+        "who": "them",
+        "text": "Secretaría de la Facultad de Ciencias, buenos días. Le atiende Rocío.",
+        "gloss": {
+          "en": "Faculty of Science office, good morning. Rocío speaking.",
+          "ko": "이과대학 행정실입니다, 안녕하세요. 로시오입니다."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Buenos días. Le llamo porque la semana pasada les envié un correo y todavía no he recibido respuesta. Quería consultar el estado de mi solicitud de beca.",
+        "gloss": {
+          "en": "Good morning. I'm calling because I sent you an email last week and still haven't had a reply. I wanted to ask about the status of my scholarship application.",
+          "ko": "안녕하세요. 지난주에 이메일을 보냈는데 아직 답을 못 받아서 전화드렸습니다. 장학금 신청 진행 상황을 여쭤보고 싶어서요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Por supuesto. ¿Me podría facilitar su nombre completo y su número de expediente?",
+        "gloss": {
+          "en": "Of course. Could you give me your full name and your student file number?",
+          "ko": "물론이죠. 성함과 학번을 알려 주시겠어요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Sí, claro. Me llamo Hye-jin Choi, y el número es dos, cuatro, siete, ocho, uno.",
+        "gloss": {
+          "en": "Yes, of course. My name is Hye-jin Choi, and the number is two, four, seven, eight, one.",
+          "ko": "네. 최혜진이고, 번호는 2, 4, 7, 8, 1입니다."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Un momentito, que lo busco... Vale, aquí está. Pues mire, su solicitud está incompleta: falta el certificado de notas traducido.",
+        "gloss": {
+          "en": "Just a moment while I look it up... OK, here it is. Well, your application is incomplete: the translated transcript is missing.",
+          "ko": "잠시만요, 찾아볼게요... 네, 여기 있네요. 그런데 신청서가 미완성이에요. 번역된 성적증명서가 빠져 있어요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Disculpe, pero me extraña, porque lo adjunté al correo. ¿Sería posible que lo comprobara de nuevo?",
+        "gloss": {
+          "en": "Excuse me, but that surprises me, because I attached it to the email. Would it be possible for you to check again?",
+          "ko": "죄송하지만 이상하네요, 이메일에 첨부했거든요. 다시 한번 확인해 주실 수 있을까요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Sí, lo veo en el correo, pero el archivo no se abre. Parece que llegó dañado.",
+        "gloss": {
+          "en": "Yes, I can see it in the email, but the file won't open. It looks like it arrived corrupted.",
+          "ko": "네, 메일에는 보이는데 파일이 안 열려요. 손상된 채로 온 것 같아요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Entiendo. En ese caso, le agradecería que me indicara cómo puedo enviarlo de nuevo para que no vuelva a pasar.",
+        "gloss": {
+          "en": "I see. In that case, I'd be grateful if you could tell me how I can send it again so that it doesn't happen again.",
+          "ko": "알겠습니다. 그렇다면 같은 일이 없도록 어떻게 다시 보내면 되는지 알려 주시면 감사하겠습니다."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Lo mejor es que lo suba directamente a la plataforma de la universidad, en el apartado de documentación pendiente.",
+        "gloss": {
+          "en": "The best thing is to upload it directly to the university platform, in the pending documents section.",
+          "ko": "대학 시스템의 '미제출 서류' 메뉴에 직접 올리시는 게 가장 좋아요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Perfecto, así lo haré. Y, si no es mucha molestia, quería preguntarle otra cosa: el plazo termina este viernes, ¿no es así?",
+        "gloss": {
+          "en": "Perfect, I'll do that. And, if it's not too much trouble, I wanted to ask you something else: the deadline is this Friday, isn't it?",
+          "ko": "네, 그렇게 하겠습니다. 그리고 번거롭지 않으시다면 하나 더 여쭤봐도 될까요? 마감이 이번 주 금요일 맞죠?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Así es. Si el documento no está el viernes, lamentablemente la solicitud queda excluida.",
+        "gloss": {
+          "en": "That's right. If the document isn't in by Friday, unfortunately the application is excluded.",
+          "ko": "맞아요. 금요일까지 서류가 없으면 안타깝지만 신청이 제외돼요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Lo comprendo. Cabe destacar, eso sí, que lo envié dentro del plazo; simplemente llegó dañado. ¿No habría manera de tenerlo en cuenta?",
+        "gloss": {
+          "en": "I understand. It's worth pointing out, though, that I sent it within the deadline; it simply arrived damaged. Would there be any way to take that into account?",
+          "ko": "이해합니다. 다만 짚어 드리고 싶은 건, 기한 안에 보냈는데 파일이 손상돼서 도착했을 뿐이라는 점이에요. 그 점을 감안해 주실 방법은 없을까요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Tiene razón. Como el correo consta con fecha de la semana pasada, puedo anotar que la entrega fue en plazo. Eso sí, súbalo cuanto antes.",
+        "gloss": {
+          "en": "You're right. Since the email is on record with last week's date, I can note that it was submitted on time. But do upload it as soon as possible.",
+          "ko": "맞는 말씀이에요. 메일이 지난주 날짜로 남아 있으니 기한 내 제출로 기록해 둘게요. 대신 최대한 빨리 올려 주세요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Se lo agradezco muchísimo. Lo subo hoy mismo. ¿Me podría confirmar por correo que queda anotado, para tenerlo por escrito?",
+        "gloss": {
+          "en": "Thank you very much. I'll upload it today. Could you confirm by email that it's been noted, so I have it in writing?",
+          "ko": "정말 감사합니다. 오늘 바로 올리겠습니다. 기록해 두셨다는 걸 메일로 확인해 주실 수 있을까요? 서면으로 남겨 두고 싶어서요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Sin problema, ahora mismo se lo envío. ¿Necesita algo más?",
+        "gloss": {
+          "en": "No problem, I'll send it to you right now. Do you need anything else?",
+          "ko": "그럼요, 지금 바로 보내 드릴게요. 더 필요한 게 있으세요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "No, eso es todo. Ha sido muy amable. Que tenga un buen día.",
+        "gloss": {
+          "en": "No, that's all. You've been very kind. Have a good day.",
+          "ko": "아니요, 그거면 됐습니다. 정말 친절하셨어요. 좋은 하루 보내세요."
+        }
+      }
+    ]
+  }
+]
