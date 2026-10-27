@@ -10,6 +10,12 @@
  * 통과한 대본 id만 계정에 남는다(server/stageScriptStore.ts) — 말한 문장은 남지 않는다.
  */
 import { ES } from "./stageScripts/es.ts";
+import { HI } from "./stageScripts/hi.ts";
+import { AR } from "./stageScripts/ar.ts";
+import { RU } from "./stageScripts/ru.ts";
+import { PT } from "./stageScripts/pt.ts";
+import { IT } from "./stageScripts/it.ts";
+import { FR } from "./stageScripts/fr.ts";
 import { TH } from "./stageScripts/th.ts";
 import { VI } from "./stageScripts/vi.ts";
 import { ID } from "./stageScripts/id.ts";
@@ -59,7 +65,7 @@ export type StageScript = {
 
 export type ScriptMode = "shadow" | "hint" | "hide" | "own";
 
-const ALL: Partial<Record<string, StageScript[]>> = { ko: KO, ja: JA, es: ES, zh: ZH, en: EN, id: ID, vi: VI, th: TH };
+const ALL: Partial<Record<string, StageScript[]>> = { ko: KO, ja: JA, es: ES, zh: ZH, en: EN, id: ID, vi: VI, th: TH, fr: FR, it: IT, pt: PT, ru: RU, ar: AR, hi: HI };
 
 /** 이 학습 언어·단계의 대본(없으면 빈 목록 — 아직 대본이 없는 언어). */
 export function scriptsFor(language: string, stage: number): StageScript[] {
