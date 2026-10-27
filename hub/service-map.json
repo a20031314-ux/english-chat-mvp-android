@@ -1,7 +1,7 @@
 {
  "_": "서비스 지도 갱신 기록. scripts/service-map.mjs가 쓴다(손으로 고치지 않음). 칸이 바뀐 날만 history에 한 줄.",
- "checkedAt": "2026-10-27 06:56",
- "commit": "68d24222",
+ "checkedAt": "2026-10-28 06:57",
+ "commit": "b58f950c",
  "nodes": {
   "moyeo": {
    "title": "Moyeo",
@@ -54,8 +54,8 @@
   },
   "billing": {
    "title": "결제 · 포인트 · 광고",
-   "text": "3e8fad964fcd",
-   "shots": "97d170e1550e",
+   "text": "079af1abca3c",
+   "shots": "f79dc0fad480",
    "links": "34ab1dcb8541",
    "code": "f0d805475e47"
   },
@@ -68,21 +68,21 @@
   },
   "talk": {
    "title": "대화",
-   "text": "eb0091da100c",
-   "shots": "06f17850cb77",
+   "text": "9a7b8f9aba3b",
+   "shots": "1a5e9cb3abe9",
    "links": "69ce588dafa2",
    "code": "3b6619968834"
   },
   "chat": {
    "title": "AI 채팅",
-   "text": "c97d6898bccd",
-   "shots": "53ad23a3e4bc",
+   "text": "8366b47ac76e",
+   "shots": "609656d0f08e",
    "links": "ca6f7f7fc811",
    "code": "412738069f93"
   },
   "call": {
    "title": "AI 통화 · 오늘의 팩",
-   "text": "a963ac1139bc",
+   "text": "649f464a7d36",
    "shots": "7a863eec87f4",
    "links": "82e45a80c680",
    "code": "a32dcc91e062"
@@ -110,17 +110,17 @@
   },
   "people": {
    "title": "사람",
-   "text": "14eaae33edb4",
-   "shots": "06e4e258b156",
+   "text": "2a499ee21ce8",
+   "shots": "7b05a8ed2c8a",
    "links": "73f18aa06e4c",
-   "code": "97435a5dca23"
+   "code": "aa98d9849777"
   },
   "board": {
    "title": "게시판",
    "text": "f07a8aa5c175",
    "shots": "34e5a13656ed",
    "links": "da2e1c5ce392",
-   "code": "97435a5dca23"
+   "code": "aa98d9849777"
   },
   "rewards": {
    "title": "친구 초대 · 보상",
@@ -138,24 +138,24 @@
   },
   "my": {
    "title": "My",
-   "text": "beffa8da28fb",
+   "text": "853096642123",
    "shots": "6f09d4f3f022",
    "links": "bc7ccaf1382e",
-   "code": "a8f0317dc07a"
+   "code": "9425e135a3a8"
   },
   "growth": {
    "title": "자라는 중 · 지도",
-   "text": "357e0ba1be0d",
-   "shots": "5aeb07686f98",
+   "text": "438e0754d019",
+   "shots": "007c59bca51d",
    "links": "d558e5cc6ea2",
-   "code": "a8f0317dc07a"
+   "code": "9425e135a3a8"
   },
   "notes": {
    "title": "노트 · 단어장",
-   "text": "1ad7923331f5",
+   "text": "26501af83010",
    "shots": "407d775ed342",
    "links": "fbb882eac87e",
-   "code": "a8f0317dc07a"
+   "code": "9425e135a3a8"
   },
   "sheet": {
    "title": "문장분석 · 표현 시트",
@@ -173,6 +173,68 @@
   }
  },
  "history": [
+  {
+   "at": "2026-10-28 06:57",
+   "commit": "b58f950c",
+   "changes": [
+    {
+     "id": "my",
+     "title": "My",
+     "what": "설명"
+    }
+   ]
+  },
+  {
+   "at": "2026-10-28 06:57",
+   "commit": "b58f950c",
+   "changes": [
+    {
+     "id": "billing",
+     "title": "결제 · 포인트 · 광고",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "talk",
+     "title": "대화",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "chat",
+     "title": "AI 채팅",
+     "what": "설명 · 그림"
+    },
+    {
+     "id": "call",
+     "title": "AI 통화 · 오늘의 팩",
+     "what": "설명"
+    },
+    {
+     "id": "people",
+     "title": "사람",
+     "what": "설명 · 그림 · 코드 영역"
+    },
+    {
+     "id": "board",
+     "title": "게시판",
+     "what": "코드 영역"
+    },
+    {
+     "id": "my",
+     "title": "My",
+     "what": "설명 · 코드 영역"
+    },
+    {
+     "id": "growth",
+     "title": "자라는 중 · 지도",
+     "what": "설명 · 그림 · 코드 영역"
+    },
+    {
+     "id": "notes",
+     "title": "노트 · 단어장",
+     "what": "설명 · 코드 영역"
+    }
+   ]
+  },
   {
    "at": "2026-10-27 06:56",
    "commit": "68d24222",
