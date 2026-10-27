@@ -3680,5 +3680,221 @@ export const KO: StageScript[] = [
         }
       }
     ]
+  },
+  {
+    "id": "ko-5-x5",
+    "stage": 5,
+    "setting": {
+      "en": "Missing out on concert tickets",
+      "ko": "콘서트 예매 놓친 이야기"
+    },
+    "expressions": [
+      "괜히 했다"
+    ],
+    "grammar": [
+      2,
+      3
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "콘서트 표는 구했어? 오늘 예매 열린다며.",
+        "gloss": {
+          "en": "Did you get concert tickets? I heard booking opened today."
+        }
+      },
+      {
+        "who": "me",
+        "text": "말도 마. 깜빡하고 늦게 들어갔는데 벌써 매진이었어. 알람이라도 맞춰 놓을 걸 그랬어.",
+        "gloss": {
+          "en": "Don't even ask. I forgot and logged in late, and it was already sold out. I should have at least set an alarm."
+        }
+      },
+      {
+        "who": "them",
+        "text": "아이고. 얼마나 늦었는데?",
+        "gloss": {
+          "en": "Oh no. How late were you?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "한 오 분? 그것도 회사 와이파이가 느려서 계속 멈추더라. 그냥 집에서 할 걸 그랬어.",
+        "gloss": {
+          "en": "About five minutes? And the office Wi-Fi was so slow it kept freezing. I should have just done it at home."
+        }
+      },
+      {
+        "who": "them",
+        "text": "아쉽겠다. 그래도 취소표 나올 수도 있잖아.",
+        "gloss": {
+          "en": "That's a shame. Still, some canceled tickets might come up."
+        }
+      },
+      {
+        "who": "me",
+        "text": "그렇긴 한데 기대는 안 하려고. 벌써 응원봉까지 사 놨거든. 그건 괜히 했다 싶어.",
+        "gloss": {
+          "en": "That's true, but I'm trying not to get my hopes up. I already bought a light stick, too. I kind of regret that."
+        }
+      },
+      {
+        "who": "them",
+        "text": "응원봉이야 다음 공연 때 쓰면 되지. 취소표 뜨면 내가 바로 알려 줄게.",
+        "gloss": {
+          "en": "You can just use the light stick at the next show. If a canceled ticket pops up, I'll tell you right away."
+        }
+      },
+      {
+        "who": "me",
+        "text": "고마워. 처음부터 너한테 같이 해 달라고 부탁할 걸 그랬다.",
+        "gloss": {
+          "en": "Thanks. I should have asked you to try with me from the start."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-5-x6",
+    "stage": 5,
+    "setting": {
+      "en": "Admitting you didn't follow a meeting",
+      "ko": "회의 내용 못 알아들은 이야기"
+    },
+    "expressions": [],
+    "grammar": [
+      4,
+      7
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "아까 회의 때 부장님 말씀 다 알아들었어?",
+        "gloss": {
+          "en": "Did you understand everything the department head said in the meeting earlier?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "아니, 거의 못 알아들었어. 그냥 알아듣는 척하면서 고개만 끄덕였어.",
+        "gloss": {
+          "en": "No, I barely understood any of it. I just pretended to follow and kept nodding."
+        }
+      },
+      {
+        "who": "them",
+        "text": "나도 그랬어. 다들 아는 척하는 분위기라 물어보기가 좀 그렇더라.",
+        "gloss": {
+          "en": "Me too. Everyone was acting like they knew, so it felt awkward to ask."
+        }
+      },
+      {
+        "who": "me",
+        "text": "맞아. 괜히 나만 모르는 사람 될까 봐 바쁜 척 노트만 계속 썼어.",
+        "gloss": {
+          "en": "Right. I was worried I'd be the only one who didn't get it, so I pretended to be busy taking notes."
+        }
+      },
+      {
+        "who": "them",
+        "text": "근데 부장님 눈치 빠르시잖아. 다 아셨을걸.",
+        "gloss": {
+          "en": "But the department head is sharp. He probably noticed everything."
+        }
+      },
+      {
+        "who": "me",
+        "text": "그러니까. 나랑 눈 마주쳤을 때 웃으시더라. 아시면서도 모르는 척해 주신 것 같아.",
+        "gloss": {
+          "en": "Exactly. He smiled when our eyes met. I think he knew but pretended not to notice."
+        }
+      },
+      {
+        "who": "them",
+        "text": "그럼 이따가 같이 가서 다시 여쭤볼까?",
+        "gloss": {
+          "en": "Then should we go together later and ask him again?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "그래, 그게 낫겠다. 계속 아는 척하다가는 나중에 더 큰일 나겠어.",
+        "gloss": {
+          "en": "Yeah, that's better. If I keep pretending to know, it'll turn into a bigger problem later."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ko-5-x7",
+    "stage": 5,
+    "setting": {
+      "en": "Catching up on a friend who changed jobs",
+      "ko": "회사 옮긴 친구 근황 나누기"
+    },
+    "expressions": [
+      "말이 나온 김에"
+    ],
+    "grammar": [
+      6
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "민수 요즘 어때? 회사 옮기고 나서 연락이 뜸하네.",
+        "gloss": {
+          "en": "How's Minsu doing these days? He hasn't been in touch much since he changed jobs."
+        }
+      },
+      {
+        "who": "me",
+        "text": "처음엔 힘들다고 매일 투덜대더니 요즘은 일이 재밌대.",
+        "gloss": {
+          "en": "At first he complained every day that it was hard, but now he says he enjoys the work."
+        }
+      },
+      {
+        "who": "them",
+        "text": "다행이다. 걔 원래 적응은 빠르잖아.",
+        "gloss": {
+          "en": "That's a relief. He's always been quick to adjust."
+        }
+      },
+      {
+        "who": "me",
+        "text": "응. 게다가 지난달에 갑자기 운동을 시작하더니 살이 쏙 빠졌더라.",
+        "gloss": {
+          "en": "Yeah. Plus he suddenly started working out last month, and he's lost a lot of weight."
+        }
+      },
+      {
+        "who": "them",
+        "text": "진짜? 맨날 운동은 귀찮다고 하던 애가?",
+        "gloss": {
+          "en": "Really? The guy who always said working out was too much of a hassle?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "그러니까. 몇 달을 고민하더니 결국 잘 옮긴 것 같아.",
+        "gloss": {
+          "en": "I know. He agonized over it for months, and it looks like moving was the right call."
+        }
+      },
+      {
+        "who": "them",
+        "text": "부럽다. 나도 얼굴 한번 보고 싶네.",
+        "gloss": {
+          "en": "I'm jealous. I'd like to see him too."
+        }
+      },
+      {
+        "who": "me",
+        "text": "말이 나온 김에 이번 주말에 셋이 보자. 내가 연락해 볼게.",
+        "gloss": {
+          "en": "Since we're on the subject, let's all three meet this weekend. I'll reach out to him."
+        }
+      }
+    ]
   }
 ];
