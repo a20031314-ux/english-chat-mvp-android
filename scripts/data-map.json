@@ -23,6 +23,7 @@
     "feedback:v1": { "feature": "의견 보내기", "scope": "system", "onAccountDelete": "남음(90일)", "what": "사용자가 보낸 의견·그림·반영 카드" },
     "notebook:v1": { "feature": "노트(짚은 장면)", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "튜터가 고친 줄(내가 쓴 줄·고친 줄·한 줄 설명·칸·어디서·언제) — 사용자가 고른 카드와 오늘의 학습 후보(안 고르면 7일 뒤 빠짐), 내가 만든 칸·칸 이름 바꾸기·메모(언어별). 학습자 문장이 남는 유일한 곳(2026-10-23 사용자 결정)" },
     "notebookShot:v1": { "feature": "노트(짚은 장면)", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "노트 카드에 \"화면 함께\"로 붙인 그 순간 화면(기기에서 찍은 JPEG, 20만 바이트까지) — 카드를 지우면 함께" },
+    "script:daily": { "feature": "My 단계 대본", "scope": "user", "onAccountDelete": "그대로(사흘 뒤 저절로 사라짐)", "what": "오늘 대본에서 확인받은 내 줄 수(요금별 하루 한도) — 숫자 하나" },
     "stageScripts:v1": { "feature": "My 단계 대본", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "통과한 단계 대본 id와 통과한 때(언어별) — 말한 문장은 남기지 않음" },
     "growth:v1": { "feature": "자라는 중", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "표현별 자라는 기록(언어별)" },
     "grp:v1": { "feature": "단체방·팀", "scope": "room", "onAccountDelete": "지움(나가기)", "what": "단체방·팀·초대·줄·잠금" },

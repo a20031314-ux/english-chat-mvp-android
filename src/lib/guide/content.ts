@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-28a";
+export const GUIDE_VERSION = "2026-10-28b";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -269,7 +269,7 @@ export const GUIDE_KO: Guide = {
         body: [
           "무슨 말을 할지 모르겠으면 ‘{ui:chatStartCta}’를 누르세요. 튜터가 대화를 시작해요.",
           "+ 버튼으로 사진을 보내면 사진을 보며 대화할 수 있어요.",
-          "무료로는 하루 7번까지 보낼 수 있어요. 구독하면 요금에 따라 더 많이 보낼 수 있어요.",
+          "채팅은 구독하면 할 수 있어요. 대본 플랜은 하루 20번, 라이트 30번, 플러스 50번, 프리미엄 100번이에요.",
         ],
       },
     ],
@@ -290,7 +290,6 @@ export const GUIDE_KO: Guide = {
         body: [
           "튜터가 먼저 말하고, 내가 말을 멈추면 자동으로 내 차례가 끝나요.",
           "내 말은 고칠 곳이 있을 때만 보여요. 전부 보려면 ‘{ui:roleplayMyLines}’을 켜요.",
-          "팩에서는 위 띠에 몇 번째 질문인지 보이고, 끝나면 ‘{ui:packSeeRetro}’로 오늘 무엇이 늘었는지 봐요.",
           "주제 없이 말하고 싶으면 AI 대화 머리의 📞를 눌러요. 바로 통화가 시작돼요.",
         ],
         shot: "call-talk",
@@ -321,9 +320,9 @@ export const GUIDE_KO: Guide = {
       {
         heading: "통화 시간",
         body: [
-          "무료는 처음에 10포인트(50분)를 드려요. 5분에 1포인트예요.",
-          "라이트는 매일 자유 통화 7분, 플러스는 10분, 프리미엄은 15분이 있고, 다 쓰면 포인트로 이어서 해요.",
-          "통화 첫 화면에 오늘 남은 시간이 보여요. 오늘의 팩은 어느 요금이든 시간을 쓰지 않아요.",
+          "무료는 통화가 없어요. My 단계 대본으로 말하기를 연습해요.",
+          "대본 플랜은 사흘마다 자유 통화 5분, 라이트는 매일 7분, 플러스는 10분, 프리미엄은 15분이 있고, 다 쓰면 포인트로 이어서 해요.",
+          "통화 첫 화면에 남은 시간이 보여요.",
         ],
       },
     ],
@@ -701,7 +700,7 @@ export const GUIDE_EN: Guide = {
         body: [
           "Not sure what to say? Tap {ui:chatStartCta} and the tutor will begin.",
           "Use + to send a photo and talk about it.",
-          "Free accounts can send 7 messages a day. Subscriptions give you more, depending on the plan.",
+          "Chat comes with a subscription: 20 messages a day on Scripts, 30 on Lite, 50 on Plus and 100 on Premium.",
         ],
       },
     ],
@@ -722,7 +721,6 @@ export const GUIDE_EN: Guide = {
         body: [
           "The tutor speaks first. When you stop speaking, your turn ends by itself.",
           "Your own lines show only when there's something to fix. To see them all, turn on ‘{ui:roleplayMyLines}’.",
-          "In a pack, the band at the top shows which question you're on, and when it ends {ui:packSeeRetro} shows what grew today.",
           "To talk about anything, tap 📞 at the top of the AI chat. The call starts right away.",
         ],
         shot: "call-talk",
@@ -753,9 +751,9 @@ export const GUIDE_EN: Guide = {
       {
         heading: "Call time",
         body: [
-          "Free gives you 10 points (50 minutes) to start. A point is five minutes.",
-          "Lite gives 7 minutes of free calls every day, Plus 10 and Premium 15; after that, points carry you on.",
-          "The call screen shows today's time left. Today's pack uses no time on any plan.",
+          "Free has no calls; practise speaking with the stage scripts in My.",
+          "Scripts gives 5 minutes of free calls every three days, Lite 7 a day, Plus 10 and Premium 15; after that, points carry you on.",
+          "The call screen shows the time you have left.",
         ],
       },
     ],

@@ -57,7 +57,13 @@ const DAYS = 30;
  * "많이 쓰는 사용자" 하루. scripts/cost-report.mjs 실측(2026-10-16, 최근 30일,
  * 실제 사용자 50명)의 상위 10%. 실측을 다시 돌리면 여기를 고친다.
  */
-export const HEAVY_DAY = { callMinutes: 7.1, chat: 3, packs: 1, source: "cost-report.mjs 실측 2026-10-16, 상위 10%" };
+export const HEAVY_DAY = { callMinutes: 7.1, chat: 3, packs: 1, scriptLines: 12, source: "cost-report.mjs 실측 2026-10-16, 상위 10%" };
+
+/**
+ * My 단계 대본(2026-10-28, 모든 요금 — 무료는 이것만): 내 줄 한 번 = 받아쓰기 + 확인 한마디. 최악은 요금의 하루 한도(dailyScriptLines)를 다 씀.
+ * 대본 소리는 공유 캐시(앱이 쓴 줄, 한 번 만들면 모두가 씀)라 넣지 않는다.
+ */
+const scriptLineUsd = () => opUsd("roleplayListen") + opUsd("roleplayPractice");
 
 const krw = (usd) => usd * KRW_PER_USD.rate;
 const won = (n) => `${Math.round(n).toLocaleString("ko-KR")}원`;
@@ -66,8 +72,12 @@ const pct = (n) => `${Math.round(n * 100)}%`;
 
 /** 요금 하나의 한 달(30일) 비용. `day`는 하루 쓰는 양, null이면 한도 꽉. */
 export function monthCost(terms, day = null) {
-  const packs = day ? Math.min(day.packs, 1 + terms.extraPacks) : 1 + terms.extraPacks;
-  const callMinutes = day ? Math.min(day.callMinutes, terms.dailyCallMinutes ?? (terms.monthlyGrantPoints ? day.callMinutes : 0)) : terms.dailyCallMinutes ?? 0;
+  // 팩이 없는 요금(대본 앱의 무료·대본 플랜, packDaysPerWeek 0)은 0.
+  const packCap = terms.packDaysPerWeek === 0 ? 0 : 1 + terms.extraPacks;
+  const packs = day ? Math.min(day.packs, packCap) : packCap;
+  // 통화 분이 여러 날에 걸린 요금(대본 플랜: 사흘마다 5분)은 하루로 나눈다.
+  const dailyMinutes = terms.dailyCallMinutes === null ? null : terms.dailyCallMinutes / (terms.callWindowDays ?? 1);
+  const callMinutes = day ? Math.min(day.callMinutes, dailyMinutes ?? (terms.monthlyGrantPoints ? day.callMinutes : 0)) : dailyMinutes ?? 0;
   const chats = day ? Math.min(day.chat, terms.dailyChat ?? day.chat) : terms.dailyChat ?? 100;
   // 월 포인트(옛 프리미엄)는 한도 꽉이면 전부, 보통 사용이면 쓴 통화 분만큼만(위 callMinutes에 들어감).
   const grantUsd = day ? 0 : terms.monthlyGrantPoints * pointCostUsd();
@@ -77,8 +87,9 @@ export function monthCost(terms, day = null) {
     // 한도 꽉(최악)은 모든 문장이 길고 틀린 경우, 실제 사용 하루는 보통 한 통으로.
     chat: chats * (day ? chatMessageTypicalUsd() : chatMessageUsd()) * DAYS,
     grant: grantUsd,
+    script: (day ? Math.min(day.scriptLines, terms.dailyScriptLines) : terms.dailyScriptLines) * scriptLineUsd() * DAYS,
   };
-  const totalUsd = parts.pack + parts.call + parts.chat + parts.grant;
+  const totalUsd = parts.pack + parts.call + parts.chat + parts.grant + parts.script;
   const netKrw = terms.priceKrw ? terms.priceKrw * (1 - STORE_FEE_SHARE) : 0;
   const totalKrw = krw(totalUsd);
   return {
@@ -92,7 +103,9 @@ export function monthCost(terms, day = null) {
 }
 
 const PLANS = [
-  { name: "무료", terms: termsFor("free") },
+  { name: "무료(2.75 이하 앱)", terms: termsFor("free") },
+  { name: "무료(2.76~ 대본 앱)", terms: termsFor("free", Date.now(), undefined, { scriptsApp: true }) },
+  { name: "대본 플랜 2,900원", terms: termsFor("script") },
   { name: "라이트 3,900원", terms: termsFor("lite") },
   { name: "플러스 5,500원", terms: termsFor("plus") },
   { name: "프리미엄 9,900원 (지금, 월 80포인트)", terms: termsFor("premium", Date.now(), null) },
@@ -100,9 +113,11 @@ const PLANS = [
 ];
 
 function limitsLine(terms) {
-  const call = terms.dailyCallMinutes !== null ? `통화 매일 ${terms.dailyCallMinutes}분` : terms.monthlyGrantPoints ? `월 ${terms.monthlyGrantPoints}포인트` : "통화 없음(처음 20포인트 별도)";
+  const every = (terms.callWindowDays ?? 1) > 1 ? `${terms.callWindowDays}일마다` : "매일";
+  const call = terms.dailyCallMinutes !== null ? `통화 ${every} ${terms.dailyCallMinutes}분` : terms.monthlyGrantPoints ? `월 ${terms.monthlyGrantPoints}포인트` : terms.freeTrialPoints ? `통화 없음(처음 ${terms.freeTrialPoints}포인트 별도)` : "통화 없음";
   const chat = terms.dailyChat !== null ? `채팅 ${terms.dailyChat}번` : "채팅 제한 없음(100번으로 계산)";
-  return `팩 ${1 + terms.extraPacks}번 · ${call} · ${chat}`;
+  const pack = terms.packDaysPerWeek === 0 ? "팩 없음" : `팩 ${1 + terms.extraPacks}번`;
+  return `대본 ${terms.dailyScriptLines}줄 · ${pack} · ${call} · ${chat}`;
 }
 
 export function render() {
@@ -138,7 +153,7 @@ export function render() {
   push(
     "## 요금별 한 달 비용 (30일)",
     "",
-    `- **최악**: 매일 한도를 꽉 채움. **많이 쓰는 사용자**: ${HEAVY_DAY.source} — 하루 통화 ${HEAVY_DAY.callMinutes}분 · 채팅 ${HEAVY_DAY.chat}번 · 팩 ${HEAVY_DAY.packs}번(요금 한도 안에서).`,
+    `- **최악**: 매일 한도를 꽉 채움(대본은 요금별 하루 내 줄 한도). **많이 쓰는 사용자**: ${HEAVY_DAY.source} — 하루 통화 ${HEAVY_DAY.callMinutes}분 · 채팅 ${HEAVY_DAY.chat}번 · 팩 ${HEAVY_DAY.packs}번 · 대본 내 줄 ${HEAVY_DAY.scriptLines}번(가정, 요금 한도 안에서).`,
     `- 남는 돈 = 가격 − Play 수수료 ${pct(STORE_FEE_SHARE)} − 비용. 구매 포인트·포인트 묶음은 따로 팔리므로 빼고 계산.`,
     "",
     "| 요금 | 하루 한도 | 수수료 뺀 금액 | 최악 비용 | 최악 남는 돈 | 많이 쓰는 사용자 비용 | 그때 남는 돈 |",
@@ -152,10 +167,10 @@ export function render() {
     "",
     "최악 비용 내역:",
     "",
-    "| 요금 | 팩 | 자유 통화 | 채팅 | 월 포인트 |",
-    "|---|---|---|---|---|",
+    "| 요금 | 대본 | 팩 | 자유 통화 | 채팅 | 월 포인트 |",
+    "|---|---|---|---|---|---|",
   );
-  for (const r of rows) push(`| ${r.name} | ${won(r.worst.parts.pack)} | ${won(r.worst.parts.call)} | ${won(r.worst.parts.chat)} | ${won(r.worst.parts.grant)} |`);
+  for (const r of rows) push(`| ${r.name} | ${won(r.worst.parts.script)} | ${won(r.worst.parts.pack)} | ${won(r.worst.parts.call)} | ${won(r.worst.parts.chat)} | ${won(r.worst.parts.grant)} |`);
   push(
     "",
     `무료는 처음 한 번 ${FREE_LIFETIME_ROLEPLAY_POINTS}포인트(통화 ${FREE_LIFETIME_ROLEPLAY_POINTS * 5}분, 약 ${won(krw(FREE_LIFETIME_ROLEPLAY_POINTS * pointCostUsd()))})를 따로 씁니다. 이달의 영상(라이브러리)은 자막이 미리 만들어져 있어 비용에 넣지 않았습니다.`,

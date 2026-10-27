@@ -1,0 +1,394 @@
+{
+  "ko": {
+    "call.talk": {
+      "heading": "말로 대화하기",
+      "body": [
+        "튜터가 먼저 말하고, 내가 말을 멈추면 자동으로 내 차례가 끝나요.",
+        "내 말은 고칠 곳이 있을 때만 보여요. 전부 보려면 ‘{ui:roleplayMyLines}’을 켜요.",
+        "팩에서는 위 띠에 몇 번째 질문인지 보이고, 끝나면 ‘{ui:packSeeRetro}’로 오늘 무엇이 늘었는지 봐요.",
+        "주제 없이 말하고 싶으면 AI 대화 머리의 📞를 눌러요. 바로 통화가 시작돼요."
+      ],
+      "shot": "call-talk"
+    },
+    "call.time": {
+      "heading": "통화 시간",
+      "body": [
+        "무료는 처음에 10포인트(50분)를 드려요. 5분에 1포인트예요.",
+        "라이트는 매일 자유 통화 7분, 플러스는 10분, 프리미엄은 15분이 있고, 다 쓰면 포인트로 이어서 해요.",
+        "통화 첫 화면에 오늘 남은 시간이 보여요. 오늘의 팩은 어느 요금이든 시간을 쓰지 않아요."
+      ]
+    },
+    "chat.more": {
+      "heading": "그 밖에",
+      "body": [
+        "무슨 말을 할지 모르겠으면 ‘{ui:chatStartCta}’를 누르세요. 튜터가 대화를 시작해요.",
+        "+ 버튼으로 사진을 보내면 사진을 보며 대화할 수 있어요.",
+        "무료로는 하루 7번까지 보낼 수 있어요. 구독하면 요금에 따라 더 많이 보낼 수 있어요."
+      ]
+    }
+  },
+  "en": {
+    "call.talk": {
+      "heading": "Talk out loud",
+      "body": [
+        "The tutor speaks first. When you stop speaking, your turn ends by itself.",
+        "Your own lines show only when there's something to fix. To see them all, turn on ‘{ui:roleplayMyLines}’.",
+        "In a pack, the band at the top shows which question you're on, and when it ends {ui:packSeeRetro} shows what grew today.",
+        "To talk about anything, tap 📞 at the top of the AI chat. The call starts right away."
+      ],
+      "shot": "call-talk"
+    },
+    "call.time": {
+      "heading": "Call time",
+      "body": [
+        "Free gives you 10 points (50 minutes) to start. A point is five minutes.",
+        "Lite gives 7 minutes of free calls every day, Plus 10 and Premium 15; after that, points carry you on.",
+        "The call screen shows today's time left. Today's pack uses no time on any plan."
+      ]
+    },
+    "chat.more": {
+      "heading": "Also",
+      "body": [
+        "Not sure what to say? Tap {ui:chatStartCta} and the tutor will begin.",
+        "Use + to send a photo and talk about it.",
+        "Free accounts can send 7 messages a day. Subscriptions give you more, depending on the plan."
+      ]
+    }
+  },
+  "es": {
+    "call.talk": {
+      "heading": "Habla en voz alta",
+      "shot": "call-talk",
+      "body": [
+        "El tutor habla primero. Cuando dejas de hablar, tu turno termina solo.",
+        "Tus frases solo aparecen cuando hay algo que corregir. Para verlas todas, activa «{ui:roleplayMyLines}».",
+        "En el paquete, la franja de arriba muestra en qué pregunta vas, y al terminar {ui:packSeeRetro} muestra qué mejoró hoy.",
+        "Para hablar de lo que quieras, toca 📞 arriba en el chat con la IA. La llamada empieza enseguida."
+      ]
+    },
+    "call.time": {
+      "heading": "Tiempo de llamada",
+      "body": [
+        "El plan gratis te da 10 puntos (50 minutos) para empezar. Un punto son cinco minutos.",
+        "Lite da 7 minutos de llamadas gratis al día, Plus 10 y Premium 15; después, sigues con puntos.",
+        "La pantalla de llamada muestra el tiempo que te queda hoy. El paquete de hoy no gasta tiempo en ningún plan."
+      ]
+    },
+    "chat.more": {
+      "heading": "Más opciones",
+      "body": [
+        "¿No sabes qué decir? Toca {ui:chatStartCta} y el tutor empezará la conversación.",
+        "Usa + para enviar una foto y hablar sobre ella.",
+        "Con la cuenta gratis puedes enviar 7 mensajes al día. Con una suscripción tienes más, según el plan."
+      ]
+    }
+  },
+  "ja": {
+    "call.talk": {
+      "heading": "声で話す",
+      "shot": "call-talk",
+      "body": [
+        "チューターが先に話します。話し終えると自動で自分の番が終わります。",
+        "自分の発言は直すところがあるときだけ出ます。全部見るには「{ui:roleplayMyLines}」をオンにします。",
+        "パックでは上の帯に何問目かが出て、終わったら{ui:packSeeRetro}で今日伸びたところを見られます。",
+        "テーマなしで話したいときは、AIチャットの上の📞を押します。すぐに通話が始まります。"
+      ]
+    },
+    "call.time": {
+      "heading": "通話時間",
+      "body": [
+        "無料プランは最初に10ポイント（50分）あります。1ポイントで5分です。",
+        "ライトは毎日7分、プラスは10分、プレミアムは15分の無料通話があり、使い切ったらポイントで続けます。",
+        "通話の画面に今日の残り時間が出ます。今日のパックはどのプランでも時間を使いません。"
+      ]
+    },
+    "chat.more": {
+      "heading": "その他の機能",
+      "body": [
+        "何を書けばいいか迷ったら「{ui:chatStartCta}」を押すと、チューターが会話を始めてくれます。",
+        "+ボタンで写真を送って、それについて話すこともできます。",
+        "無料では1日7回まで送れます。サブスクリプションではプランに応じてもっと送れます。"
+      ]
+    }
+  },
+  "zh": {
+    "call.talk": {
+      "heading": "开口说",
+      "shot": "call-talk",
+      "body": [
+        "导师先说话。你停下来，你这一轮就自动结束。",
+        "你说的话只有需要改的时候才会显示。想全部看到，打开“{ui:roleplayMyLines}”。",
+        "练习包里，上方的条显示正在第几题，结束后用 {ui:packSeeRetro} 看看今天哪里进步了。",
+        "想随便聊聊时，点 AI 对话顶部的 📞，通话马上开始。"
+      ]
+    },
+    "call.time": {
+      "heading": "通话时间",
+      "body": [
+        "免费版一开始有 10 积分（50 分钟），1 积分是 5 分钟。",
+        "轻享每天有 7 分钟免费通话，Plus 10 分钟，高级 15 分钟；用完后用积分继续。",
+        "通话画面会显示今天剩下的时间。今日练习包在任何方案下都不占时间。"
+      ]
+    },
+    "chat.more": {
+      "heading": "更多功能",
+      "body": [
+        "不知道说什么时，点{ui:chatStartCta}让导师先开场。",
+        "点击+可以发送照片，一起聊图片。",
+        "免费账户每天可以发 7 条。订阅后可按方案发更多。"
+      ]
+    }
+  },
+  "vi": {
+    "call.talk": {
+      "heading": "Nói thành tiếng",
+      "shot": "call-talk",
+      "body": [
+        "Gia sư nói trước. Khi bạn ngừng nói, lượt của bạn tự kết thúc.",
+        "Câu của bạn chỉ hiện khi có chỗ cần sửa. Muốn xem hết, bật “{ui:roleplayMyLines}”.",
+        "Trong gói, dải phía trên cho biết bạn đang ở câu hỏi thứ mấy, và khi xong {ui:packSeeRetro} cho thấy hôm nay bạn tiến bộ ở đâu.",
+        "Muốn nói chuyện tự do, chạm 📞 ở đầu cuộc trò chuyện với AI. Cuộc gọi bắt đầu ngay."
+      ]
+    },
+    "call.time": {
+      "heading": "Thời gian gọi",
+      "body": [
+        "Gói miễn phí cho bạn 10 điểm (50 phút) lúc đầu. Một điểm là năm phút.",
+        "Lite có 7 phút gọi miễn phí mỗi ngày, Plus 10 phút và Premium 15 phút; hết thì tiếp tục bằng điểm.",
+        "Màn hình gọi hiển thị thời gian còn lại hôm nay. Gói hôm nay không tốn thời gian ở mọi gói cước."
+      ]
+    },
+    "chat.more": {
+      "heading": "Lưu ý khác",
+      "body": [
+        "Không biết bắt đầu thế nào? Nhấn {ui:chatStartCta} để trợ lý bắt đầu cuộc trò chuyện.",
+        "Dùng dấu + để gửi ảnh và trò chuyện về ảnh đó.",
+        "Tài khoản miễn phí gửi được 7 tin nhắn mỗi ngày. Đăng ký thì được nhiều hơn, tùy gói."
+      ]
+    }
+  },
+  "fr": {
+    "call.talk": {
+      "heading": "Parler à voix haute",
+      "shot": "call-talk",
+      "body": [
+        "Le tuteur parle en premier. Quand vous vous arrêtez de parler, votre tour se termine tout seul.",
+        "Vos phrases n’apparaissent que s’il y a quelque chose à corriger. Pour toutes les voir, activez « {ui:roleplayMyLines} ».",
+        "Dans le pack, le bandeau du haut indique la question en cours, et à la fin {ui:packSeeRetro} montre ce qui a progressé aujourd’hui.",
+        "Pour parler librement, touchez 📞 en haut du chat avec l’IA. L’appel démarre aussitôt."
+      ]
+    },
+    "call.time": {
+      "heading": "Temps d’appel",
+      "body": [
+        "La formule gratuite donne 10 points (50 minutes) au départ. Un point vaut cinq minutes.",
+        "Lite offre 7 minutes d’appels gratuits par jour, Plus 10 et Premium 15 ; ensuite, les points prennent le relais.",
+        "L’écran d’appel affiche le temps restant aujourd’hui. Le pack du jour n’utilise pas de temps, quelle que soit la formule."
+      ]
+    },
+    "chat.more": {
+      "heading": "Astuces",
+      "body": [
+        "Vous ne savez pas quoi dire ? Touchez {ui:chatStartCta} et le tuteur lancera la conversation.",
+        "Utilisez + pour envoyer une photo et en discuter.",
+        "Le compte gratuit permet 7 messages par jour. Un abonnement en donne plus, selon la formule."
+      ]
+    }
+  },
+  "it": {
+    "call.talk": {
+      "heading": "Parla ad alta voce",
+      "shot": "call-talk",
+      "body": [
+        "Il tutor parla per primo. Quando smetti di parlare, il tuo turno finisce da solo.",
+        "Le tue frasi compaiono solo quando c’è qualcosa da correggere. Per vederle tutte, attiva «{ui:roleplayMyLines}».",
+        "Nel pacchetto, la fascia in alto mostra a che domanda sei, e alla fine {ui:packSeeRetro} mostra cosa è cresciuto oggi.",
+        "Per parlare liberamente, tocca 📞 in alto nella chat con l’IA. La chiamata parte subito."
+      ]
+    },
+    "call.time": {
+      "heading": "Tempo di chiamata",
+      "body": [
+        "Il piano gratuito dà 10 punti (50 minuti) per iniziare. Un punto vale cinque minuti.",
+        "Lite dà 7 minuti di chiamate gratis al giorno, Plus 10 e Premium 15; poi si continua con i punti.",
+        "La schermata della chiamata mostra il tempo rimasto oggi. Il pacchetto di oggi non usa tempo con nessun piano."
+      ]
+    },
+    "chat.more": {
+      "heading": "Altre funzioni",
+      "body": [
+        "Non sai cosa scrivere? Tocca {ui:chatStartCta} e il tutor inizierà la conversazione.",
+        "Con il + puoi inviare una foto e parlarne insieme.",
+        "Con l’account gratuito puoi inviare 7 messaggi al giorno. Con un abbonamento ne hai di più, in base al piano."
+      ]
+    }
+  },
+  "pt": {
+    "call.talk": {
+      "heading": "Fale em voz alta",
+      "shot": "call-talk",
+      "body": [
+        "O tutor fala primeiro. Quando você para de falar, sua vez termina sozinha.",
+        "Suas frases só aparecem quando há algo a corrigir. Para ver todas, ative “{ui:roleplayMyLines}”.",
+        "No pacote, a faixa de cima mostra em que pergunta você está, e no fim {ui:packSeeRetro} mostra o que cresceu hoje.",
+        "Para falar sobre qualquer coisa, toque em 📞 no topo do chat com a IA. A chamada começa na hora."
+      ]
+    },
+    "call.time": {
+      "heading": "Tempo de chamada",
+      "body": [
+        "O plano grátis dá 10 pontos (50 minutos) para começar. Um ponto são cinco minutos.",
+        "O Lite dá 7 minutos de chamadas grátis por dia, o Plus 10 e o Premium 15; depois, você continua com pontos.",
+        "A tela da chamada mostra o tempo que resta hoje. O pacote de hoje não usa tempo em nenhum plano."
+      ]
+    },
+    "chat.more": {
+      "heading": "Outras dicas",
+      "body": [
+        "Não sabe o que dizer? Toque em {ui:chatStartCta} e o tutor começa a conversa.",
+        "Use o + para enviar uma foto e conversar sobre ela.",
+        "A conta grátis envia 7 mensagens por dia. Com assinatura você tem mais, conforme o plano."
+      ]
+    }
+  },
+  "ru": {
+    "call.talk": {
+      "heading": "Говорите вслух",
+      "shot": "call-talk",
+      "body": [
+        "Первым говорит репетитор. Когда вы замолкаете, ваш ход заканчивается сам.",
+        "Ваши фразы видны, только если в них есть что исправить. Чтобы видеть все, включите «{ui:roleplayMyLines}».",
+        "В наборе полоса вверху показывает, на каком вы вопросе, а в конце {ui:packSeeRetro} показывает, что выросло сегодня.",
+        "Чтобы поговорить о чём угодно, нажмите 📞 вверху чата с ИИ. Звонок начнётся сразу."
+      ]
+    },
+    "call.time": {
+      "heading": "Время звонков",
+      "body": [
+        "Бесплатный тариф даёт для начала 10 баллов (50 минут). Один балл — пять минут.",
+        "В Lite каждый день 7 минут бесплатных звонков, в Plus 10, в Premium 15; дальше можно продолжать за баллы.",
+        "На экране звонка видно, сколько времени осталось сегодня. Набор на сегодня не тратит время ни на одном тарифе."
+      ]
+    },
+    "chat.more": {
+      "heading": "Дополнительно",
+      "body": [
+        "Не знаете, с чего начать? Жмите {ui:chatStartCta} — тьютор начнёт разговор.",
+        "Через + можно отправить фото и обсудить его.",
+        "Бесплатно — 7 сообщений в день. С подпиской — больше, в зависимости от тарифа."
+      ]
+    }
+  },
+  "id": {
+    "call.talk": {
+      "heading": "Bicara langsung",
+      "shot": "call-talk",
+      "body": [
+        "Tutor bicara lebih dulu. Saat kamu berhenti bicara, giliranmu selesai sendiri.",
+        "Kalimatmu hanya muncul kalau ada yang perlu diperbaiki. Untuk melihat semuanya, nyalakan “{ui:roleplayMyLines}”.",
+        "Di paket, pita di atas menunjukkan kamu di pertanyaan ke berapa, dan setelah selesai {ui:packSeeRetro} menunjukkan apa yang berkembang hari ini.",
+        "Untuk bicara bebas, ketuk 📞 di atas chat AI. Panggilan langsung dimulai."
+      ]
+    },
+    "call.time": {
+      "heading": "Waktu panggilan",
+      "body": [
+        "Paket gratis memberi 10 poin (50 menit) di awal. Satu poin lima menit.",
+        "Lite memberi 7 menit panggilan gratis setiap hari, Plus 10, dan Premium 15; setelah habis, lanjutkan dengan poin.",
+        "Layar panggilan menunjukkan sisa waktu hari ini. Paket hari ini tidak memakai waktu di paket langganan mana pun."
+      ]
+    },
+    "chat.more": {
+      "heading": "Lainnya",
+      "body": [
+        "Bingung mau mulai dari mana? Ketuk {ui:chatStartCta} dan tutor akan memulai percakapan.",
+        "Gunakan + untuk kirim foto dan ngobrol tentangnya.",
+        "Akun gratis bisa kirim 7 pesan per hari. Dengan langganan kamu dapat lebih banyak, tergantung paketnya."
+      ]
+    }
+  },
+  "ar": {
+    "call.talk": {
+      "heading": "تحدّث بصوتك",
+      "shot": "call-talk",
+      "body": [
+        "يتحدث المعلّم أولًا. عندما تتوقف عن الكلام ينتهي دورك تلقائيًا.",
+        "لا تظهر جملك إلا عندما يكون فيها ما يُصحَّح. لرؤيتها كلها، فعّل «{ui:roleplayMyLines}».",
+        "في الباقة يُظهر الشريط في الأعلى رقم السؤال الذي وصلت إليه، وعند الانتهاء يُريك {ui:packSeeRetro} ما تحسّن اليوم.",
+        "للحديث بحرية، اضغط 📞 أعلى محادثة الذكاء الاصطناعي. تبدأ المكالمة فورًا."
+      ]
+    },
+    "call.time": {
+      "heading": "وقت المكالمات",
+      "body": [
+        "تمنحك الخطة المجانية 10 نقطة (50 دقيقة) في البداية. النقطة خمس دقائق.",
+        "تمنح Lite سبع دقائق مكالمات مجانية يوميًا، وPlus عشرًا، وPremium خمس عشرة؛ بعدها تكمل بالنقاط.",
+        "تُظهر شاشة المكالمة الوقت المتبقي اليوم. لا تستهلك باقة اليوم وقتًا في أي خطة."
+      ]
+    },
+    "chat.more": {
+      "heading": "ملاحظات أخرى",
+      "body": [
+        "لا تعرف ماذا تقول؟ اضغط {ui:chatStartCta} وسيبدأ المعلم الحديث.",
+        "استخدم + لإرسال صورة والدردشة عنها.",
+        "الحساب المجاني يسمح بإرسال 7 رسائل يومياً. الاشتراك يمنحك أكثر حسب الخطة."
+      ]
+    }
+  },
+  "th": {
+    "call.talk": {
+      "heading": "พูดออกเสียง",
+      "shot": "call-talk",
+      "body": [
+        "ติวเตอร์พูดก่อน เมื่อคุณหยุดพูด ตาของคุณจะจบเอง",
+        "ประโยคของคุณจะขึ้นเฉพาะเมื่อมีจุดที่ต้องแก้ ถ้าอยากเห็นทั้งหมด ให้เปิด “{ui:roleplayMyLines}”",
+        "ในแพ็ก แถบด้านบนบอกว่าอยู่คำถามที่เท่าไร และเมื่อจบ {ui:packSeeRetro} จะบอกว่าวันนี้อะไรดีขึ้น",
+        "อยากคุยเรื่องอะไรก็ได้ แตะ 📞 ด้านบนของแชตกับ AI การโทรจะเริ่มทันที"
+      ]
+    },
+    "call.time": {
+      "heading": "เวลาโทร",
+      "body": [
+        "แพ็กเกจฟรีให้ 10 พอยต์ (50 นาที) ตอนเริ่ม หนึ่งพอยต์คือห้านาที",
+        "Lite มีโทรฟรีวันละ 7 นาที Plus 10 นาที และ Premium 15 นาที ใช้หมดแล้วต่อด้วยพอยต์",
+        "หน้าจอโทรจะแสดงเวลาที่เหลือของวันนี้ แพ็กวันนี้ไม่ใช้เวลาในทุกแพ็กเกจ"
+      ]
+    },
+    "chat.more": {
+      "heading": "เพิ่มเติม",
+      "body": [
+        "ไม่รู้จะเริ่มยังไง? กด {ui:chatStartCta} ให้ติวเตอร์เริ่มบทสนทนาให้",
+        "กด + เพื่อส่งรูปภาพแล้วคุยเกี่ยวกับรูปได้",
+        "บัญชีฟรีส่งข้อความได้วันละ 7 ข้อความ สมัครสมาชิกแล้วส่งได้มากขึ้นตามแพ็กเกจ"
+      ]
+    }
+  },
+  "hi": {
+    "call.talk": {
+      "heading": "बोलकर बात करें",
+      "shot": "call-talk",
+      "body": [
+        "ट्यूटर पहले बोलता है। आप बोलना रोकते हैं तो आपकी बारी अपने-आप खत्म हो जाती है।",
+        "आपकी बातें तभी दिखती हैं जब उनमें सुधारने को कुछ हो। सब देखने के लिए “{ui:roleplayMyLines}” चालू करें।",
+        "पैक में ऊपर की पट्टी बताती है कि आप कौन-से सवाल पर हैं, और खत्म होने पर {ui:packSeeRetro} दिखाता है कि आज क्या बढ़ा।",
+        "किसी भी बारे में बात करनी हो तो AI चैट के ऊपर 📞 दबाएँ। कॉल तुरंत शुरू हो जाती है।"
+      ]
+    },
+    "call.time": {
+      "heading": "कॉल का समय",
+      "body": [
+        "मुफ़्त प्लान शुरू में 10 पॉइंट (50 मिनट) देता है। एक पॉइंट पाँच मिनट का है।",
+        "Lite में हर दिन 7 मिनट मुफ़्त कॉल, Plus में 10 और Premium में 15; उसके बाद पॉइंट से जारी रखें।",
+        "कॉल स्क्रीन पर आज का बचा समय दिखता है। आज का पैक किसी भी प्लान में समय नहीं लेता।"
+      ]
+    },
+    "chat.more": {
+      "heading": "अन्य बातें",
+      "body": [
+        "क्या लिखें समझ नहीं आ रहा? {ui:chatStartCta} दबाएँ — ट्यूटर शुरुआत करेगा।",
+        "+ से फोटो भेजें और उस पर बात करें।",
+        "फ़्री खाते से दिन में 7 संदेश भेज सकते हैं। सब्सक्रिप्शन में प्लान के हिसाब से ज़्यादा मिलते हैं।"
+      ]
+    }
+  }
+}

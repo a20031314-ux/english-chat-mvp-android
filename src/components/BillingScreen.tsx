@@ -52,6 +52,7 @@ const BillingUiContext = createContext<BillingUiValue | null>(null);
 
 /** A plan's name in the interface language. */
 export function planName(tier: PlanTier, ui: UICopy): string {
+  if (tier === "script") return ui.planScriptName;
   if (tier === "lite") return ui.planLiteName;
   if (tier === "plus") return ui.planPlusName;
   if (tier === "premium") return ui.billingPremiumLabel;
@@ -60,6 +61,8 @@ export function planName(tier: PlanTier, ui: UICopy): string {
 
 type PlanSummary = {
   dailyCallMinutes: number | null;
+  /** 통화 분이 걸린 날 수(대본 플랜 = 3). 옛 서버는 안 보냄 = 1. */
+  callWindowDays?: number;
   dailyChat: number | null;
   libraryOpen: boolean;
   extraPacks: number;
@@ -67,10 +70,17 @@ type PlanSummary = {
 };
 
 /** What a plan gives, one short line each, from the server's terms. */
-function planLines(terms: PlanSummary, ui: UICopy, callBuilt = true): string[] {
+function planLines(terms: PlanSummary, ui: UICopy, callBuilt = true, tier?: PlanTier): string[] {
   const lines: string[] = [];
+  // 대본 플랜: 대본은 모두 무료라는 것을 먼저(이 플랜이 더하는 것은 그 표현을 써 보는 대화).
+  if (tier === "script") lines.push(ui.planLineScripts);
   if (callBuilt && terms.dailyCallMinutes !== null) {
-    lines.push(ui.planLineCall.replace("{minutes}", String(terms.dailyCallMinutes)));
+    const days = terms.callWindowDays ?? 1;
+    lines.push(
+      days > 1
+        ? ui.planLineCallEvery.replace("{minutes}", String(terms.dailyCallMinutes)).replace("{days}", String(days))
+        : ui.planLineCall.replace("{minutes}", String(terms.dailyCallMinutes)),
+    );
   }
   if (callBuilt && terms.monthlyGrantPoints > 0) {
     lines.push(ui.planLinePoints.replace("{points}", String(terms.monthlyGrantPoints)));
@@ -291,7 +301,9 @@ export function BillingScreen({
   const termsOf = (one: PlanTier): PlanSummary => plans[one] ?? termsFor(one);
   const current = termsOf(tier);
   const statusText = !isPremium
-    ? ui.planFree.replace("{used}", String(dailyUsed)).replace("{limit}", String(dailyLimit))
+    ? dailyLimit === 0
+      ? ui.planFreeScripts
+      : ui.planFree.replace("{used}", String(dailyUsed)).replace("{limit}", String(dailyLimit))
     : todayLeftSeconds !== null && current.dailyChat !== null
       ? ui.planStatusDaily
           .replace("{plan}", planName(tier, ui))
@@ -444,7 +456,7 @@ export function BillingScreen({
                 >
                   <p className="text-sm font-semibold text-white">{name}</p>
                   <ul className="mt-1.5 space-y-1 text-[13px] text-slate-300">
-                    {planLines(termsOf(offer.tier), ui, callBuilt).map((line) => (
+                    {planLines(termsOf(offer.tier), ui, callBuilt, offer.tier).map((line) => (
                       <li key={line} className="flex gap-2">
                         <span className="text-slate-500" aria-hidden>
                           ·

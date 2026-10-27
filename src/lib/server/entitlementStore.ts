@@ -43,7 +43,7 @@ import {
   type PointSpend,
 } from "../billing/points.ts";
 import { monthlyImportPoints } from "../billing/videoPrep.ts";
-import { localDay, termsFor, type PlanTerms } from "../billing/plans.ts";
+import { callWindowStart, localDay, termsFor, type PlanTerms } from "../billing/plans.ts";
 import { isIdentified } from "./identity.ts";
 
 /** Long enough that a day's counter outlives the day in every timezone. */
@@ -265,6 +265,18 @@ export async function takeFixMarks(userId: string, utterance: string, parts: num
   const marks = await kvGetJsonMany<FixMark>(keys);
   await kvDelete(keys).catch(() => {});
   return marks;
+}
+
+/**
+ * My 단계 대본에서 오늘 확인받은 내 줄 수(plans.ts dailyScriptLines, 사용자 시간대의 날). 한도 안이면 하나 올리고 true.
+ * 모르는 사람(공유 익명 id)은 세지 않는다 — 한 사람의 한도를 모두가 나눠 쓰게 되므로.
+ */
+export async function takeScriptLine(userId: string, limit: number, day: string): Promise<boolean> {
+  if (!isIdentified(userId)) return true;
+  const key = `script:daily:${userId}:${day}`;
+  if ((await kvGetNumber(key)) >= limit) return false;
+  await kvIncrBy(key, 1, DAILY_TTL_SECONDS);
+  return true;
 }
 
 export async function getDailyUsed(userId: string): Promise<number> {
@@ -780,17 +792,17 @@ export async function getPointPart(userId: string): Promise<number> {
 }
 
 /** 어디서 포인트를 꺼내는지: 무료는 평생 체험분, 유료는 이번 달 지급분 + 구매분. */
-type PointSource = { free: true } | { free: false; grant: number };
+type PointSource = { free: true; trial: number } | { free: false; grant: number };
 
 function sourceOf(terms: PlanTerms): PointSource {
-  return terms.tier === "free" ? { free: true } : { free: false, grant: terms.monthlyGrantPoints };
+  return terms.tier === "free" ? { free: true, trial: terms.freeTrialPoints } : { free: false, grant: terms.monthlyGrantPoints };
 }
 
 /** 꺼낼 수 있는 정수 포인트. */
 async function wholePointsLeft(userId: string, source: PointSource): Promise<number> {
   if (source.free) {
     const used = await kvGetNumber(roleplayTrialKey(userId));
-    return Math.max(0, FREE_LIFETIME_ROLEPLAY_POINTS - used);
+    return Math.max(0, source.trial - used);
   }
   return totalPoints(await readPointBalance(userId, source.grant));
 }
@@ -942,7 +954,7 @@ export async function dailyCallLeftMs(
   day: string,
 ): Promise<number | null> {
   if (!plan.dailyCallMinutes) return null;
-  const used = Math.max(0, await kvGetNumber(dailyCallKey(userId, day)));
+  const used = Math.max(0, await kvGetNumber(dailyCallKey(userId, callWindowStart(day, plan.callWindowDays))));
   return Math.max(0, plan.dailyCallMinutes * 60_000 - used);
 }
 
@@ -986,7 +998,7 @@ export async function chargeRoleplayTurn(
   let fromDay = 0;
   if (todayLeft !== null && todayLeft > 0 && stepMs > 0) {
     fromDay = Math.min(stepMs, todayLeft);
-    const used = await kvIncrBy(dailyCallKey(userId, day), fromDay, 2 * 24 * 60 * 60);
+    const used = await kvIncrBy(dailyCallKey(userId, callWindowStart(day, terms.callWindowDays)), fromDay, (terms.callWindowDays + 1) * 24 * 60 * 60);
     todayLeft = Math.max(0, (terms.dailyCallMinutes ?? 0) * 60_000 - used);
     stepMs -= fromDay;
   }

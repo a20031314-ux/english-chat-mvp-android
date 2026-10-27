@@ -12,7 +12,7 @@
  * the key is provisioned.
  */
 
-import { planFromSubscriber, type PlanTier } from "@/lib/billing/plans";
+import { isPlanTier, planFromSubscriber, type PlanTier } from "@/lib/billing/plans";
 import { kvGetJson, kvSetJson } from "@/lib/server/kv";
 
 /** Long enough to keep a busy session off the API, short enough that a
@@ -65,7 +65,7 @@ export async function planInRevenueCat(appUserId: string): Promise<PlanTier | nu
 
   const cacheKey = `rc:plan:${appUserId}`;
   const cached = await kvGetJson<PlanTier>(cacheKey);
-  if (cached === "free" || cached === "lite" || cached === "plus" || cached === "premium") return cached;
+  if (isPlanTier(cached)) return cached;
 
   try {
     const response = await fetch(

@@ -7,6 +7,7 @@
  * and never carry over, which also keeps the worst case of what a subscriber
  * can cost known in advance.
  *
+ *   2,900 won  script_monthly   5 minutes every 3 days   20 chats   (stage scripts are free for everyone)
  *   3,900 won  lite_monthly     7 minutes a day   30 chats   library trial
  *   5,500 won  plus_monthly    10 minutes a day   50 chats   library trial
  *   8,900 won  premium_monthly 15 minutes a day  100 chats   whole library, 2 extra packs
@@ -22,18 +23,20 @@
 
 import {
   FREE_DAILY_CHAT_LIMIT,
+  FREE_LIFETIME_ROLEPLAY_POINTS,
   FREE_PACK_DAYS_PER_WEEK,
   PREMIUM_ENTITLEMENT_ID,
   PREMIUM_MONTHLY_IMPORT_POINTS,
   PREMIUM_MONTHLY_PRODUCT_ID,
 } from "./config.ts";
 
-export type PlanTier = "free" | "lite" | "plus" | "premium";
+export type PlanTier = "free" | "script" | "lite" | "plus" | "premium";
 
-export const PAID_TIERS: readonly Exclude<PlanTier, "free">[] = ["lite", "plus", "premium"];
+export const PAID_TIERS: readonly Exclude<PlanTier, "free">[] = ["script", "lite", "plus", "premium"];
 
 /** Play product ids, without the base plan RevenueCat may add after a colon. */
 export const PLAN_PRODUCT_IDS: Record<Exclude<PlanTier, "free">, string> = {
+  script: "script_monthly",
   lite: "lite_monthly",
   plus: "plus_monthly",
   premium: PREMIUM_MONTHLY_PRODUCT_ID,
@@ -64,6 +67,10 @@ export type PlanTerms = {
   tier: PlanTier;
   /** Free-talk minutes a day before points are spent. Null where there is no daily allowance. */
   dailyCallMinutes: number | null;
+  /** The minutes above last this many days: 1 = a day, 3 = the script plan's "5 minutes every three days". */
+  callWindowDays: number;
+  /** 무료의 평생 통화 체험 포인트(유료는 0 — 지급분·구매분을 씀). 대본 앱(2.76~)의 무료는 통화 없음 = 0. */
+  freeTrialPoints: number;
   /** Points granted each month. Only the old premium terms have any. */
   monthlyGrantPoints: number;
   /** Chat messages a day; null for no limit. */
@@ -85,32 +92,58 @@ export type PlanTerms = {
   dailyCaptionLines: number;
   /** 오늘의 팩을 7일 동안 며칠까지. null이면 매일. */
   packDaysPerWeek: number | null;
+  /** My 단계 대본에서 하루에 확인받을 수 있는 내 줄 수(받아쓰기 + 확인 한마디, 줄당 약 1원). 하루 대본 하나는 다시 하기까지 넉넉히. */
+  dailyScriptLines: number;
 };
 
 /**
  * 요금별 AI 도움·방 자막 한도(흑자 구조 2026-10-20). 듣기(TTS)는 통화가 같은 길로 소리를 내서 한도를 두지 않는다.
  */
 const HELP_LIMITS = {
-  free: { dailyAiHelp: 20, dailyCaptionLines: 100 },
-  lite: { dailyAiHelp: 100, dailyCaptionLines: 300 },
-  plus: { dailyAiHelp: 150, dailyCaptionLines: 600 },
-  premium: { dailyAiHelp: 300, dailyCaptionLines: 1200 },
+  free: { dailyAiHelp: 20, dailyCaptionLines: 100, dailyScriptLines: 25 },
+  script: { dailyAiHelp: 60, dailyCaptionLines: 100, dailyScriptLines: 25 },
+  lite: { dailyAiHelp: 100, dailyCaptionLines: 300, dailyScriptLines: 25 },
+  plus: { dailyAiHelp: 150, dailyCaptionLines: 600, dailyScriptLines: 25 },
+  premium: { dailyAiHelp: 300, dailyCaptionLines: 1200, dailyScriptLines: 40 },
 } as const;
 
-export function termsFor(tier: PlanTier, now = Date.now(), from: string | null = PREMIUM_DAILY_PLAN_FROM): PlanTerms {
+/**
+ * 대본 앱(2.76~, 2026-10-28 사용자 "무료는 스크립트만, 저가구독은 B"): 무료는 채팅·자유 통화 없이 My 단계 대본만,
+ * 대본 플랜(2,900원)은 사흘마다 통화 5분 + 채팅 하루 20번. 옛 앱의 무료는 예전 그대로(채팅 7·팩 주 2번·통화 체험 10포인트).
+ */
+export type TermsOptions = { scriptsApp?: boolean };
+
+export function termsFor(tier: PlanTier, now = Date.now(), from: string | null = PREMIUM_DAILY_PLAN_FROM, options: TermsOptions = {}): PlanTerms {
   const premium = premiumDailyAt(now, from);
+  const daily = { callWindowDays: 1, freeTrialPoints: 0 };
   switch (tier) {
+    case "script":
+      return { tier, dailyCallMinutes: 5, callWindowDays: 3, freeTrialPoints: 0, monthlyGrantPoints: 0, dailyChat: 20, libraryOpen: false, extraPacks: 0, canImport: true, priceKrw: 2900, ...HELP_LIMITS.script, packDaysPerWeek: 0 };
     case "lite":
-      return { tier, dailyCallMinutes: 7, monthlyGrantPoints: 0, dailyChat: 30, libraryOpen: false, extraPacks: 0, canImport: true, priceKrw: 3900, ...HELP_LIMITS.lite, packDaysPerWeek: null };
+      return { tier, dailyCallMinutes: 7, ...daily, monthlyGrantPoints: 0, dailyChat: 30, libraryOpen: false, extraPacks: 0, canImport: true, priceKrw: 3900, ...HELP_LIMITS.lite, packDaysPerWeek: null };
     case "plus":
-      return { tier, dailyCallMinutes: 10, monthlyGrantPoints: 0, dailyChat: 50, libraryOpen: false, extraPacks: 0, canImport: true, priceKrw: 5500, ...HELP_LIMITS.plus, packDaysPerWeek: null };
+      return { tier, dailyCallMinutes: 10, ...daily, monthlyGrantPoints: 0, dailyChat: 50, libraryOpen: false, extraPacks: 0, canImport: true, priceKrw: 5500, ...HELP_LIMITS.plus, packDaysPerWeek: null };
     case "premium":
       return premium.daily
-        ? { tier, dailyCallMinutes: 15, monthlyGrantPoints: premium.keepGrant ? PREMIUM_MONTHLY_IMPORT_POINTS : 0, dailyChat: 100, libraryOpen: true, extraPacks: 2, canImport: true, priceKrw: 8900, ...HELP_LIMITS.premium, packDaysPerWeek: null }
-        : { tier, dailyCallMinutes: null, monthlyGrantPoints: PREMIUM_MONTHLY_IMPORT_POINTS, dailyChat: null, libraryOpen: true, extraPacks: 0, canImport: true, priceKrw: 9900, ...HELP_LIMITS.premium, packDaysPerWeek: null };
+        ? { tier, dailyCallMinutes: 15, ...daily, monthlyGrantPoints: premium.keepGrant ? PREMIUM_MONTHLY_IMPORT_POINTS : 0, dailyChat: 100, libraryOpen: true, extraPacks: 2, canImport: true, priceKrw: 8900, ...HELP_LIMITS.premium, packDaysPerWeek: null }
+        : { tier, dailyCallMinutes: null, ...daily, monthlyGrantPoints: PREMIUM_MONTHLY_IMPORT_POINTS, dailyChat: null, libraryOpen: true, extraPacks: 0, canImport: true, priceKrw: 9900, ...HELP_LIMITS.premium, packDaysPerWeek: null };
     default:
-      return { tier: "free", dailyCallMinutes: null, monthlyGrantPoints: 0, dailyChat: FREE_DAILY_CHAT_LIMIT, libraryOpen: false, extraPacks: 0, canImport: false, priceKrw: null, ...HELP_LIMITS.free, packDaysPerWeek: FREE_PACK_DAYS_PER_WEEK };
+      return options.scriptsApp
+        ? { tier: "free", dailyCallMinutes: null, callWindowDays: 1, freeTrialPoints: 0, monthlyGrantPoints: 0, dailyChat: 0, libraryOpen: false, extraPacks: 0, canImport: false, priceKrw: null, ...HELP_LIMITS.free, packDaysPerWeek: 0 }
+        : { tier: "free", dailyCallMinutes: null, callWindowDays: 1, freeTrialPoints: FREE_LIFETIME_ROLEPLAY_POINTS, monthlyGrantPoints: 0, dailyChat: FREE_DAILY_CHAT_LIMIT, libraryOpen: false, extraPacks: 0, canImport: false, priceKrw: null, ...HELP_LIMITS.free, packDaysPerWeek: FREE_PACK_DAYS_PER_WEEK };
   }
+}
+
+/**
+ * 통화 분이 걸린 기간의 첫날(YYYY-MM-DD): 하루짜리면 그날, 사흘짜리면 1970-01-01부터 사흘씩 끊은 칸의 첫날.
+ * 사용자 시간대의 날(localDay)을 받는다 — 칸은 모두에게 같은 경계.
+ */
+export function callWindowStart(day: string, windowDays: number): string {
+  if (windowDays <= 1) return day;
+  const n = Math.floor(Date.parse(`${day}T00:00:00Z`) / 86_400_000);
+  if (!Number.isFinite(n)) return day;
+  const start = n - (((n % windowDays) + windowDays) % windowDays);
+  return new Date(start * 86_400_000).toISOString().slice(0, 10);
 }
 
 /** The plan a store product belongs to. RevenueCat names Play subscriptions "product:base-plan". */
@@ -122,7 +155,7 @@ export function tierForProduct(productId: string | null | undefined): Exclude<Pl
 }
 
 export function isPlanTier(value: unknown): value is PlanTier {
-  return value === "free" || value === "lite" || value === "plus" || value === "premium";
+  return value === "free" || value === "script" || value === "lite" || value === "plus" || value === "premium";
 }
 
 /** As much of RevenueCat's subscriber record as telling the plan needs. */
@@ -153,7 +186,7 @@ export function planFromSubscriber(body: SubscriberEntitlements, now = Date.now(
 
 /** The highest of several plans, for someone who somehow holds two. */
 export function bestTier(tiers: PlanTier[]): PlanTier {
-  const order: PlanTier[] = ["free", "lite", "plus", "premium"];
+  const order: PlanTier[] = ["free", "script", "lite", "plus", "premium"];
   return tiers.reduce<PlanTier>((best, tier) => (order.indexOf(tier) > order.indexOf(best) ? tier : best), "free");
 }
 

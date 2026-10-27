@@ -2,6 +2,9 @@ import { fastestEffort, isReasoningModel } from "@/lib/server/llm";
 import { completeChat, routeFor } from "@/lib/server/llm";
 import { NextRequest, after } from "next/server";
 import { recordPronunciation } from "@/lib/server/growthStore";
+import { takeScriptLine } from "@/lib/server/entitlementStore";
+import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
+import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { coerceLanguageCode, interfaceLanguageName } from "@/lib/learningLanguages";
 import { findScenario } from "@/lib/roleplay/catalog";
@@ -57,6 +60,15 @@ export async function POST(request: NextRequest) {
   const heard = typeof body.heard === "string" ? body.heard.trim().slice(0, 200) : "";
   if (!target) {
     return jsonWithCors(request, { error: "nothing to say back" }, { status: 400 });
+  }
+
+  // My 단계 대본의 줄(scriptId): 요금별 하루 한도(plans.ts dailyScriptLines) — 무료는 이것만 쓰므로 원가의 끝이 여기.
+  if (typeof body.scriptId === "string" && body.scriptId) {
+    const { userId, terms } = await resolveRequestEntitlement(request);
+    const day = localDay(Date.now(), parseOffset(request.headers.get(TZ_OFFSET_HEADER)));
+    if (!(await takeScriptLine(userId, terms.dailyScriptLines, day))) {
+      return jsonWithCors(request, { error: "SCRIPT_LIMIT", limit: terms.dailyScriptLines }, { status: 429 });
+    }
   }
 
   await meterRequest(request, "roleplayPractice");

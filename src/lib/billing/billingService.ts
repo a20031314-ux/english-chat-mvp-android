@@ -653,7 +653,7 @@ export async function fetchPlanOffers(): Promise<PlanOffer[]> {
     const offerings = await withBillingTimeout("getOfferings", plugin.getOfferings(), BILLING_FETCH_TIMEOUT_MS);
     const packages = offeredPackages(offerings);
     const offers: PlanOffer[] = [];
-    for (const tier of ["lite", "plus"] as const) {
+    for (const tier of ["script", "lite", "plus"] as const) {
       const pkg = packageForTier(packages, tier);
       if (pkg) {
         offers.push({ tier, priceLabel: pkg.product.priceString || null });

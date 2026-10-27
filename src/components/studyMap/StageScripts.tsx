@@ -23,6 +23,7 @@ import {
   runPasses,
   usableName,
   scriptsFor,
+  scriptVoice,
   variantOf,
   type LineRun,
   type ScriptMode,
@@ -194,6 +195,8 @@ function ScriptPlayer({
   const [picks, setPicks] = useState<Record<number, number>>(() => freshPicks(script));
   const [listening, setListening] = useState(false);
   const [justPassed, setJustPassed] = useState(false);
+  // 오늘 대본 말하기 한도(plans.ts dailyScriptLines)에 닿으면 🎤를 닫는다.
+  const [limited, setLimited] = useState(false);
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
   const run = useRef(0);
   const sent = useRef(false);
@@ -220,11 +223,11 @@ function ScriptPlayer({
     if (!line) return;
     const token = ++run.current;
     if (line.who === "them") {
-      void playTts(textAt(index), tag).finally(() => {
+      void playTts(textAt(index), tag, scriptVoice("them", textAt(index), learnerName)).finally(() => {
         if (run.current === token) setIndex((current) => (current === index ? current + 1 : current));
       });
     } else if (mode === "shadow") {
-      void playTts(line.text, tag);
+      void playTts(line.text, tag, scriptVoice("me", line.text, learnerName));
     }
     bottom.current?.scrollIntoView({ block: "end", behavior: "smooth" });
     // textAt은 picks로 정해진다 — picks가 바뀌는 건 처음부터 다시 할 때뿐.
@@ -267,6 +270,8 @@ function ScriptPlayer({
       targetLanguage: language as LearningLanguageCode,
       nativeLanguage: locale as LearningLanguageCode,
       isPremium,
+      scriptId: script.id,
+      onLimit: () => setLimited(true),
       ...(own ? { meaning: glossFor(line.gloss, locale), before } : {}),
     });
     setListening(false);
@@ -295,6 +300,14 @@ function ScriptPlayer({
     const setting = glossFor(script.setting, locale);
     const goal = script.goal ? glossFor(script.goal, locale) : "";
     sendAppIntent("practice", { tab: "roleplay", goal: { situation: goal ? `${setting} — ${goal}` : setting }, title: setting });
+  };
+
+  // 배운 표현을 자유 대화에서(2026-10-28 사용자 "주기적으로 자유대화에서 적용"): 그 대본의 핵심 표현으로 AI 통화. 통화 분이 없는 요금은 통화 쪽이 구독 안내를 띄운다.
+  const applyCall = () => {
+    stopTts();
+    onClose();
+    const setting = glossFor(script.setting, locale);
+    sendAppIntent("practice", { tab: "roleplay", goal: { situation: setting, phrases: script.expressions.slice(0, 3) }, title: setting });
   };
 
   const modeLabel: Record<ScriptMode, string> = {
@@ -350,7 +363,7 @@ function ScriptPlayer({
                     <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
                       {variant.text}
                     </p>
-                    <TTSButton text={variant.text} lang={tag} className="shrink-0" />
+                    <TTSButton text={variant.text} lang={tag} voice={scriptVoice("them", variant.text, learnerName)} className="shrink-0" />
                   </div>
                   <p dir="auto" className="mt-0.5 text-caption text-slate-500">
                     {glossFor(variant.gloss, locale)}
@@ -391,7 +404,7 @@ function ScriptPlayer({
                     <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
                       {show ? line.text : hintOf(line.text, language)}
                     </p>
-                    {show ? <TTSButton text={line.text} lang={tag} className="shrink-0" /> : null}
+                    {show ? <TTSButton text={line.text} lang={tag} voice={scriptVoice("me", line.text, learnerName)} className="shrink-0" /> : null}
                   </div>
                 ) : null}
                 {result ? (
@@ -418,7 +431,8 @@ function ScriptPlayer({
                   )
                 ) : null}
                 {result?.clean && ownResult && result.practice ? <p className="mt-1 text-caption text-slate-400">{result.practice.note}</p> : null}
-                {current ? (
+                {current && limited ? <p className="mt-2 text-caption text-warn">{ui.scriptLimit}</p> : null}
+                {current && !limited ? (
                   <div className="mt-2 flex flex-wrap justify-end gap-1.5">
                     {!show ? (
                       <button type="button" onClick={() => setRevealed((r) => ({ ...r, [i]: true }))} className="rounded-full border border-line px-3 py-1.5 text-caption text-slate-300 hover:bg-white/10">
@@ -457,6 +471,10 @@ function ScriptPlayer({
               {script.goal ? (
                 <button type="button" onClick={call} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
                   📞 {ui.scriptCall}
+                </button>
+              ) : script.expressions.length ? (
+                <button type="button" onClick={applyCall} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
+                  📞 {ui.scriptApplyCall}
                 </button>
               ) : null}
             </div>

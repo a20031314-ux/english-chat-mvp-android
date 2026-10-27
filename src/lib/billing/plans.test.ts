@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { bestTier, localDay, parseOffset, planFromSubscriber, premiumDailyAt, termsFor, tierForProduct } from "./plans.ts";
+import { bestTier, callWindowStart, localDay, parseOffset, planFromSubscriber, premiumDailyAt, termsFor, tierForProduct } from "./plans.ts";
+import { isScriptsApp } from "../appVersion.ts";
 import { evaluateVideoAccess } from "./videoPrep.ts";
 
 const OCT_16 = Date.parse("2026-10-16T03:00:00Z");
@@ -95,4 +96,42 @@ test("only a plan with the library open gets every library video; imports use bo
   assert.equal(bought.ok, true);
   // The old premium terms still import from the monthly grant.
   assert.equal(evaluateVideoAccess({ ...base, purchasedPoints: 0 }).ok, true);
+});
+
+test("대본 플랜(2,900원): 사흘마다 통화 5분·채팅 20, 무료는 대본 앱(2.76~)에서 채팅·통화 없음", () => {
+  const script = termsFor("script", Date.parse("2026-10-28T00:00:00Z"));
+  assert.equal(script.priceKrw, 2900);
+  assert.equal(script.dailyCallMinutes, 5);
+  assert.equal(script.callWindowDays, 3);
+  assert.equal(script.dailyChat, 20);
+  assert.equal(tierForProduct("script_monthly:monthly"), "script");
+  assert.equal(bestTier(["script", "free"]), "script");
+  assert.equal(bestTier(["script", "lite"]), "lite");
+  const oldFree = termsFor("free");
+  assert.equal(oldFree.dailyChat, 7);
+  assert.ok(oldFree.freeTrialPoints > 0);
+  const newFree = termsFor("free", Date.now(), null, { scriptsApp: true });
+  assert.equal(newFree.dailyChat, 0);
+  assert.equal(newFree.freeTrialPoints, 0);
+  assert.equal(newFree.packDaysPerWeek, 0);
+  // 사흘 칸: 같은 칸의 날은 같은 첫날, 칸이 바뀌면 다음 첫날
+  const days = ["2026-10-27", "2026-10-28", "2026-10-29", "2026-10-30", "2026-10-31"].map((day) => callWindowStart(day, 3));
+  assert.equal(callWindowStart("2026-10-28", 1), "2026-10-28");
+  const starts = new Set(days);
+  for (const start of starts) assert.equal(callWindowStart(start, 3), start);
+  assert.ok(starts.size >= 2 && starts.size <= 3);
+  // 첫날에서 사흘 안은 모두 같은 칸
+  const first = [...starts][1]!;
+  const plus = (n: number) => new Date(Date.parse(`${first}T00:00:00Z`) + n * 86_400_000).toISOString().slice(0, 10);
+  assert.deepEqual([0, 1, 2].map((n) => callWindowStart(plus(n), 3)), [first, first, first]);
+  assert.notEqual(callWindowStart(plus(3), 3), first);
+});
+
+test("대본 앱 판정: 2.76부터, 모르는 빌드는 옛 앱", () => {
+  assert.equal(isScriptsApp("2.76"), true);
+  assert.equal(isScriptsApp("2.76.0"), true);
+  assert.equal(isScriptsApp("2.80"), true);
+  assert.equal(isScriptsApp("2.75.0"), false);
+  assert.equal(isScriptsApp("unknown"), false);
+  assert.equal(isScriptsApp(null), false);
 });

@@ -60,7 +60,7 @@ export async function GET(request: NextRequest) {
     plans: Object.fromEntries(
       PAID_TIERS.map((one) => {
         const t = termsFor(one);
-        return [one, { dailyCallMinutes: t.dailyCallMinutes, dailyChat: t.dailyChat, libraryOpen: t.libraryOpen, extraPacks: t.extraPacks, monthlyGrantPoints: t.monthlyGrantPoints }];
+        return [one, { dailyCallMinutes: t.dailyCallMinutes, callWindowDays: t.callWindowDays, dailyChat: t.dailyChat, libraryOpen: t.libraryOpen, extraPacks: t.extraPacks, monthlyGrantPoints: t.monthlyGrantPoints }];
       }),
     ),
     videoPrepUsedMinutes: videoPrepMinutes(

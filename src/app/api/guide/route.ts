@@ -16,12 +16,15 @@ import iconsBefore275 from "@/lib/guide/iconsBefore275.json";
 import mapBefore275 from "@/lib/guide/mapBefore275.json";
 import mapBefore278 from "@/lib/guide/mapBefore278.json";
 import callBefore277 from "@/lib/guide/callBefore277.json";
+import callBefore279 from "@/lib/guide/callBefore279.json";
 
 export const runtime = "nodejs";
 
 const GAME_SECTIONS = ["room.game", "room.mafia", "room.watch"];
 /** My 예전 기능(오늘 해볼 것·직접 묻기)을 뺀 빌드(`r278=1`, 2026-10-27)에는 그 두 칸을 빼고 번호를 다시 매긴다. */
 const RETIRED_MY_SECTIONS = ["my.next", "my.ask"];
+/** 오늘의 팩을 뺀 빌드(`r279=1`, 2.76 — 무료는 대본만·대본 플랜, 2026-10-28)에는 팩 칸을 뺀다. */
+const RETIRED_PACK_SECTIONS = ["call.pack"];
 /** 아이콘 묶음(2026-10-23) — 그 화면이 있는 빌드(`icons=1`)만. */
 const ICON_SECTIONS = ["people.icons"];
 
@@ -71,11 +74,23 @@ export async function GET(request: NextRequest) {
   const before278 = r278
     ? undefined
     : (mapBefore278 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  // 팩을 뺀 빌드(`r279=1`): 그 전 빌드는 말로 대화하기(팩 띠 줄)·통화 시간(무료 체험·팩)·채팅 그 밖에(무료 7번) 칸을 예전 글로(callBefore279.json).
+  const r279 = request.nextUrl.searchParams.get("r279") === "1";
+  const before279 = r279
+    ? undefined
+    : (callBefore279 as Partial<Record<string, Record<string, Guide["roleplay"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  const base: Guide = before279
+    ? {
+        ...newest,
+        roleplay: { ...newest.roleplay, sections: newest.roleplay.sections.map((section, index) => before279[GUIDE_SECTION_IDS.roleplay[index]] ?? section) },
+        chat: { ...newest.chat, sections: newest.chat.sections.map((section, index) => before279[GUIDE_SECTION_IDS.chat[index]] ?? section) },
+      }
+    : newest;
   const withMy: Guide = before278
-    ? { ...newest, map: { ...newest.map, sections: newest.map.sections.map((section, index) => before278[GUIDE_SECTION_IDS.map[index]] ?? section) } }
+    ? { ...base, map: { ...base.map, sections: base.map.sections.map((section, index) => before278[GUIDE_SECTION_IDS.map[index]] ?? section) } }
     : r278
-      ? { ...newest, map: { ...newest.map, sections: renumberMy(newest.map.sections) } }
-      : newest;
+      ? { ...base, map: { ...base.map, sections: renumberMy(base.map.sections) } }
+      : base;
   const withCalls: Guide = before277
     ? {
         ...withMy,
@@ -124,7 +139,7 @@ export async function GET(request: NextRequest) {
   const withIcons = request.nextUrl.searchParams.get("icons") === "1";
   const hiddenIds = [...(withGame ? [] : GAME_SECTIONS), ...(withIcons ? [] : ICON_SECTIONS)];
   // 묶음(chapters)에서만 뺀다 — `tabs`는 칸 순서가 옛 빌드와 같아야 해서 그대로 둔다.
-  const chapterHidden = r278 ? [...hiddenIds, ...RETIRED_MY_SECTIONS] : hiddenIds;
+  const chapterHidden = [...hiddenIds, ...(r278 ? RETIRED_MY_SECTIONS : []), ...(r279 ? RETIRED_PACK_SECTIONS : [])];
   const hiddenAt = hiddenIds.map((id) => GUIDE_SECTION_IDS.rooms.indexOf(id)).filter((index) => index >= 0);
   const current: Guide = hiddenAt.length
     ? { ...full, rooms: { ...full.rooms, sections: full.rooms.sections.filter((_, index) => !hiddenAt.includes(index)) } }

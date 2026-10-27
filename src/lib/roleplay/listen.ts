@@ -876,6 +876,10 @@ export async function fetchPractice(input: {
   /** "내 말로": 보여 준 뜻과 바로 앞 상대 줄 — 있으면 낱말 비교 대신 뜻이 통하는지 본다. */
   meaning?: string;
   before?: string;
+  /** My 단계 대본의 줄이면 그 대본 id — 서버가 요금별 하루 한도를 센다. */
+  scriptId?: string;
+  /** 오늘 대본 한도에 닿았을 때(429 SCRIPT_LIMIT). */
+  onLimit?: () => void;
 }): Promise<Practice | null> {
   try {
     const response = await fetch(apiUrl("/api/roleplay/practice"), {
@@ -890,8 +894,14 @@ export async function fetchPractice(input: {
         heard: input.heard,
         nativeLanguage: input.nativeLanguage,
         ...(input.meaning ? { meaning: input.meaning, before: input.before ?? "" } : {}),
+        ...(input.scriptId ? { scriptId: input.scriptId } : {}),
       }),
     });
+    if (response.status === 429) {
+      const body = (await response.json().catch(() => null)) as { error?: string } | null;
+      if (body?.error === "SCRIPT_LIMIT") input.onLimit?.();
+      return null;
+    }
     if (!response.ok) {
       console.error("[roleplay] practice failed with", response.status);
       return null;

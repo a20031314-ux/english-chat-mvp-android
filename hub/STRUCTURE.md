@@ -17,7 +17,7 @@
 │        └ 업데이트 배너
 하단 탭  대화 │ 영상 학습 │ 사람 │ Room │ My        (첫 화면: 대화)
 │
-├ 대화 talk ─ AI 튜터와의 대화 줄(맨 위 고정, 이름·국기 — 사람 대화처럼) + 오늘의 팩 카드 ─ 줄 → AI 대화 chat(머리 ‹ 대화 · 튜터 · 📞 · ⋮, 하단은 "대화"가 켜진 채)
+├ 대화 talk ─ AI 튜터와의 대화 줄(맨 위 고정, 이름·국기 — 사람 대화처럼, 오늘의 팩 카드는 2.76에서 뺌) ─ 줄 → AI 대화 chat(머리 ‹ 대화 · 튜터 · 📞 · ⋮, 하단은 "대화"가 켜진 채)
 │           │                      ├ 📞 → AI 통화 call(탭 아님 — 어디서나 떠 있는 층 CallHost)
 │           │                      └ AI 튜터 프로필·AI 대화 ⋮ "통화 기록" → CallList(채팅과 따로, 2026-10-27: 이어서 하기·돌아보기·×, 이 폰에만)
 │           ├ 단체방(팀이면 "대화 | 워크스페이스", 📞 단체방 통화 → 비공개 Room)
@@ -100,7 +100,7 @@
 ### AI 통화 (대화 → AI 튜터 📞) · 오늘의 팩 `call`
 - 화면: `CallHost` · `CallList` · `PackCard` · `RoleplayOwnLine` · `RoleplayPast` · `RoleplayReview` · `RoleplayScreen` · `roleplay/TurnDiagBox`
 - API: `pack/finish` · `pack/today` · `roleplay/context` · `roleplay/listen`(대화 탭, 사람 탭, Room 탭, 계정·로그인) · `roleplay/practice` · `roleplay/review` · `roleplay/turn`
-- 다른 영역이 씀: `CallHost` ← 앱 틀 · `PackCard` ← 앱 틀, AI 채팅 · `RoleplayOwnLine` ← My 탭 · `RoleplayReview` ← My 탭
+- 다른 영역이 씀: `CallHost` ← 앱 틀 · `RoleplayOwnLine` ← My 탭 · `RoleplayReview` ← My 탭
 
 ### 문장분석·표현 시트 (여러 화면에서 열림) `sheet`
 - 화면: `AnalyzableEnglish` · `EnglishAnalysisProvider` · `EnglishAnalysisViewer` · `ExpressionInsightProvider` · `ExpressionInsightSheet` · `FindInMy` · `MarkForMap` · `SelectableEnglishText` · `SentenceAskPanel` · `TTSButton` · `VocabPreviewProvider` · `VocabSenseList` · `VocabWordPreview`
@@ -175,7 +175,7 @@
 | `openTab` | 여러 영역 7곳 | 앱 틀 |
 | `chatDraft` | 여러 영역 6곳 | AI 채팅 |
 | `openVideo` | 여러 영역 6곳 | 영상 학습 탭 |
-| `practice` | 앱 틀, AI 채팅, 학습 기록 공통, My 탭 | 앱 틀, AI 채팅, AI 통화 |
+| `practice` | AI 채팅, 학습 기록 공통, My 탭 | 앱 틀, AI 채팅, AI 통화 |
 | `startCall` | 앱 틀, AI 통화, 사람 탭 | AI 통화 |
 | `openCall` | 앱 틀, AI 통화, 사람 탭 | AI 통화 |
 | `sayOwnLine` | 앱 틀 | AI 통화 |

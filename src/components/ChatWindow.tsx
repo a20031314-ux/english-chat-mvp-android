@@ -1,7 +1,7 @@
 "use client";
 
 import { enterScene } from "@/lib/notes/sceneShots";
-import { FormEvent, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { FormEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   ARCHIVE_STORAGE_KEY,
   ChatMessage,
@@ -52,8 +52,6 @@ import {
 } from "@/lib/conversationMode";
 import { onAppIntent, sendAppIntent, takeAppIntent } from "@/lib/appIntents";
 import { NextStepCard, PracticeBanner, type PracticeRequest } from "@/components/NextStepCard";
-import { PackCard } from "@/components/PackCard";
-import { discardCall, readCalls, readCallsOnServer, subscribeCalls } from "@/lib/roleplay/callStore";
 import { isUnfinished, type SavedConversation } from "@/lib/roleplay/saved";
 import { saidPhrase } from "@/lib/learner/practice";
 import { scenariosForLanguage } from "@/lib/roleplay/catalog";
@@ -700,8 +698,6 @@ type ChatWindowProps = {
   callLabel?: string;
   /** ⋮ 메뉴에 더할 것(내 문장 말해보기 등). */
   menuItems?: { label: string; onSelect: () => void }[];
-  /** 빈 대화에 오늘의 팩 카드(대화 목록이 없는 화면 — iOS 1차·사람을 숨김). 대화 목록이 있으면 목록 맨 위에. */
-  showPack?: boolean;
 };
 
 export function ChatWindow({
@@ -711,7 +707,6 @@ export function ChatWindow({
   onCall = null,
   callLabel,
   menuItems = [],
-  showPack = false,
 }: ChatWindowProps) {
   // "My에서 찾기"가 화면을 찍어도 되는 곳인지(lib/notes/sceneShots.ts — 사람끼리 대화는 안 찍음).
   useEffect(() => enterScene("chat"), []);
@@ -1588,9 +1583,7 @@ export function ChatWindow({
     }
   };
 
-  // AI 통화는 채팅과 따로 통화 기록 목록에만(2026-10-27, CallList). 대화에는 턴만 — 통화가 바뀐 것은 오늘의 팩 카드를 새로 고칠 때만 본다.
-  const calls = useSyncExternalStore(subscribeCalls, readCalls, readCallsOnServer);
-  const callsVersion = calls.reduce((latest, call) => Math.max(latest, call.updatedAt), 0);
+  // AI 통화는 채팅과 따로 통화 기록 목록에만(2026-10-27, CallList). 대화에는 턴만.
   const timeline = useMemo(() => turns.map((turn) => ({ kind: "turn" as const, turn })), [turns]);
 
   const handlePickPhoto = async (
@@ -1737,7 +1730,9 @@ export function ChatWindow({
               <p className="leading-relaxed">
                 {isPremium
                   ? ui.chatDailyUsedUp.replace("{limit}", String(dailyLimit))
-                  : ui.paywallLimitBanner.replace("{limit}", String(dailyLimit))}
+                  : dailyLimit === 0
+                    ? ui.chatNeedsPlan
+                    : ui.paywallLimitBanner.replace("{limit}", String(dailyLimit))}
               </p>
               <div className="mt-2 flex flex-wrap gap-2">
                 {!isPremium && adOffer ? (
@@ -1778,14 +1773,6 @@ export function ChatWindow({
             />
           ) : turns.length === 0 && !isSending ? (
             <>
-            {showPack ? (
-              <PackCard
-                ui={ui}
-                targetLanguage={targetLanguage}
-                onStart={(request) => sendAppIntent("practice", request)}
-                refreshKey={String(callsVersion)}
-              />
-            ) : null}
             <NextStepCard
               ui={ui}
               locale={locale}

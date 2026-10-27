@@ -389,7 +389,7 @@
     "roleplayOutOfToday": "今日の無料通話時間を使い切りました。明日また補充されます。ポイントがあれば今すぐ続けられます。",
     "planLiteName": "ライト",
     "planPlusName": "プラス",
-    "planSubtitle": "今日のパックは誰でも毎日無料。購読すると、好きな会話を毎日もっとできます。",
+    "planSubtitle": "段階別の台本練習は誰でも無料。購読すると、チャットと自由通話で覚えた表現を使えます。",
     "planLineCall": "毎日 自由通話{minutes}分",
     "planLinePoints": "毎月{points}ポイント（通話・自分の動画の取り込み）",
     "planLineChat": "チャット 1日{n}回",
@@ -674,7 +674,14 @@
     "scriptCall": "通話でやってみる",
     "scriptsToNext": "次の段階まで:台本あと{n}つ",
     "scriptsByExpression": "表現で練習",
-    "scriptSayPrompt": "「{line}」と言ってみましょう。"
+    "scriptSayPrompt": "「{line}」と言ってみましょう。",
+    "planScriptName": "台本プラン",
+    "planLineCallEvery": "{days}日ごとに自由通話{minutes}分",
+    "planLineScripts": "段階別の台本練習(どなたも無料)",
+    "planFreeScripts": "無料プラン · 台本練習",
+    "chatNeedsPlan": "チャットはサブスクで使えます",
+    "scriptLimit": "今日の台本練習はここまでです。明日また使えます。",
+    "scriptApplyCall": "覚えた表現で通話"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1066,7 +1073,7 @@
     "roleplayOutOfToday": "今天的免费通话时间已用完。明天会重新补满，有积分的话现在就能继续。",
     "planLiteName": "轻享版",
     "planPlusName": "进阶版",
-    "planSubtitle": "今日练习包每天对所有人免费。订阅后，每天还能进行更多你想要的对话。",
+    "planSubtitle": "分阶段剧本练习对所有人免费。订阅后可以用聊天和自由通话来用学到的表达。",
     "planLineCall": "每天自由通话{minutes}分钟",
     "planLinePoints": "每月{points}积分（通话与导入自己的视频）",
     "planLineChat": "每天聊天{n}次",
@@ -1351,7 +1358,14 @@
     "scriptCall": "通话试试",
     "scriptsToNext": "距下一阶段：还有{n}个剧本",
     "scriptsByExpression": "按表达练习",
-    "scriptSayPrompt": "请说：“{line}”"
+    "scriptSayPrompt": "请说：“{line}”",
+    "planScriptName": "剧本套餐",
+    "planLineCallEvery": "每{days}天自由通话{minutes}分钟",
+    "planLineScripts": "分阶段剧本练习（所有人免费）",
+    "planFreeScripts": "免费套餐 · 剧本练习",
+    "chatNeedsPlan": "订阅后可以聊天",
+    "scriptLimit": "今天的剧本口语练习到此为止，明天会重新补满。",
+    "scriptApplyCall": "用学到的表达通话"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -1745,7 +1759,7 @@
     "roleplayOutOfToday": "Bạn đã dùng hết thời gian gọi miễn phí hôm nay. Ngày mai sẽ được nạp lại, còn nếu có điểm thì bạn có thể tiếp tục ngay.",
     "planLiteName": "Lite",
     "planPlusName": "Plus",
-    "planSubtitle": "Gói hôm nay miễn phí cho mọi người, mỗi ngày. Khi đăng ký, mỗi ngày bạn có thêm những cuộc trò chuyện mình muốn.",
+    "planSubtitle": "Luyện kịch bản theo giai đoạn miễn phí cho mọi người. Đăng ký để có trò chuyện và cuộc gọi tự do, dùng những gì bạn đã học.",
     "planLineCall": "{minutes} phút gọi tự do mỗi ngày",
     "planLinePoints": "{points} điểm mỗi tháng (gọi và nhập video của bạn)",
     "planLineChat": "{n} lượt chat mỗi ngày",
@@ -2030,7 +2044,14 @@
     "scriptCall": "Thử qua cuộc gọi",
     "scriptsToNext": "Đến giai đoạn tiếp: còn {n} kịch bản",
     "scriptsByExpression": "Luyện theo cách nói",
-    "scriptSayPrompt": "Hãy nói: “{line}”"
+    "scriptSayPrompt": "Hãy nói: “{line}”",
+    "planScriptName": "Gói kịch bản",
+    "planLineCallEvery": "{minutes} phút gọi tự do mỗi {days} ngày",
+    "planLineScripts": "Luyện kịch bản theo giai đoạn (miễn phí cho mọi người)",
+    "planFreeScripts": "Gói miễn phí · luyện kịch bản",
+    "chatNeedsPlan": "Trò chuyện có trong gói đăng ký",
+    "scriptLimit": "Hôm nay luyện nói kịch bản đến đây thôi. Ngày mai sẽ được nạp lại.",
+    "scriptApplyCall": "Gọi với cách nói vừa học"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2429,7 +2450,7 @@
     "roleplayOutOfToday": "Vous avez utilisé le temps d’appel gratuit d’aujourd’hui. Il se recharge demain, et avec des points vous pouvez continuer tout de suite.",
     "planLiteName": "Lite",
     "planPlusName": "Plus",
-    "planSubtitle": "Le pack du jour est gratuit pour tous, chaque jour. Avec un abonnement, vous avez en plus chaque jour les conversations de votre choix.",
+    "planSubtitle": "Les dialogues par étape sont gratuits pour tous. L’abonnement ajoute le chat et des appels libres pour utiliser ce que vous avez appris.",
     "planLineCall": "{minutes} min d’appels libres chaque jour",
     "planLinePoints": "{points} points par mois (appels et vos propres vidéos)",
     "planLineChat": "{n} messages de chat par jour",
@@ -2714,7 +2735,14 @@
     "scriptCall": "Essayer en appel",
     "scriptsToNext": "Jusqu’à l’étape suivante : {n} dialogues",
     "scriptsByExpression": "S’entraîner par expression",
-    "scriptSayPrompt": "Dites : « {line} »"
+    "scriptSayPrompt": "Dites : « {line} »",
+    "planScriptName": "Dialogues",
+    "planLineCallEvery": "{minutes} min d’appel libre tous les {days} jours",
+    "planLineScripts": "Dialogues par étape (gratuits pour tous)",
+    "planFreeScripts": "Offre gratuite · dialogues par étape",
+    "chatNeedsPlan": "Le chat est inclus dans un abonnement",
+    "scriptLimit": "C’est tout pour les dialogues aujourd’hui. Ça se recharge demain.",
+    "scriptApplyCall": "Appeler avec ces expressions"
   },
   "it": {
     "archive": "Report",
@@ -3304,7 +3332,7 @@
     "roleplayOutOfToday": "Hai usato il tempo di chiamata gratuito di oggi. Si ricarica domani, e con i punti puoi continuare subito.",
     "planLiteName": "Lite",
     "planPlusName": "Plus",
-    "planSubtitle": "Il pacchetto di oggi è gratuito per tutti, ogni giorno. Con l’abbonamento hai in più, ogni giorno, le conversazioni che scegli tu.",
+    "planSubtitle": "I copioni per fase sono gratis per tutti. Con l’abbonamento hai chat e chiamate libere per usare ciò che hai imparato.",
     "planLineCall": "{minutes} min di chiamate libere ogni giorno",
     "planLinePoints": "{points} punti al mese (chiamate e i tuoi video)",
     "planLineChat": "{n} chat al giorno",
@@ -3589,7 +3617,14 @@
     "scriptCall": "Prova in chiamata",
     "scriptsToNext": "Alla fase successiva: {n} copioni",
     "scriptsByExpression": "Esercitati per espressione",
-    "scriptSayPrompt": "Di’: «{line}»"
+    "scriptSayPrompt": "Di’: «{line}»",
+    "planScriptName": "Copioni",
+    "planLineCallEvery": "{minutes} min di chiamata libera ogni {days} giorni",
+    "planLineScripts": "Copioni per fase (gratis per tutti)",
+    "planFreeScripts": "Piano gratuito · copioni per fase",
+    "chatNeedsPlan": "La chat è inclusa con un abbonamento",
+    "scriptLimit": "Per oggi i copioni finiscono qui. Domani si ricarica.",
+    "scriptApplyCall": "Chiama usando queste espressioni"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -3991,7 +4026,7 @@
     "roleplayOutOfToday": "Você usou o tempo de chamada grátis de hoje. Ele recarrega amanhã, e com pontos você pode continuar agora.",
     "planLiteName": "Lite",
     "planPlusName": "Plus",
-    "planSubtitle": "O pacote de hoje é grátis para todos, todos os dias. Com a assinatura, você tem a mais, todos os dias, as conversas que escolher.",
+    "planSubtitle": "Os roteiros por etapa são grátis para todos. A assinatura acrescenta chat e chamadas livres para usar o que você aprendeu.",
     "planLineCall": "{minutes} min de chamadas livres por dia",
     "planLinePoints": "{points} pontos por mês (chamadas e seus próprios vídeos)",
     "planLineChat": "{n} chats por dia",
@@ -4276,7 +4311,14 @@
     "scriptCall": "Testar numa chamada",
     "scriptsToNext": "Para a próxima etapa: {n} roteiros",
     "scriptsByExpression": "Praticar por expressão",
-    "scriptSayPrompt": "Diga: “{line}”"
+    "scriptSayPrompt": "Diga: “{line}”",
+    "planScriptName": "Roteiros",
+    "planLineCallEvery": "{minutes} min de chamada livre a cada {days} dias",
+    "planLineScripts": "Roteiros por etapa (grátis para todos)",
+    "planFreeScripts": "Plano grátis · roteiros por etapa",
+    "chatNeedsPlan": "O chat vem com uma assinatura",
+    "scriptLimit": "Os roteiros de hoje acabaram. Amanhã renova.",
+    "scriptApplyCall": "Ligar usando essas expressões"
   },
   "ru": {
     "archive": "Отчёты",
@@ -4864,7 +4906,7 @@
     "roleplayOutOfToday": "Бесплатное время звонков на сегодня закончилось. Завтра оно пополнится, а с баллами можно продолжить прямо сейчас.",
     "planLiteName": "Lite",
     "planPlusName": "Plus",
-    "planSubtitle": "Набор на сегодня бесплатен для всех каждый день. С подпиской каждый день добавляются разговоры, которые вы выбираете сами.",
+    "planSubtitle": "Сценарии по этапам бесплатны для всех. Подписка добавляет чат и свободные звонки, чтобы применять выученное.",
     "planLineCall": "{minutes} мин свободных звонков каждый день",
     "planLinePoints": "{points} баллов в месяц (звонки и свои видео)",
     "planLineChat": "{n} сообщений в чате в день",
@@ -5149,7 +5191,14 @@
     "scriptCall": "Попробовать в звонке",
     "scriptsToNext": "До следующего этапа: сценариев — {n}",
     "scriptsByExpression": "Тренировка по выражениям",
-    "scriptSayPrompt": "Скажите: «{line}»"
+    "scriptSayPrompt": "Скажите: «{line}»",
+    "planScriptName": "Сценарии",
+    "planLineCallEvery": "{minutes} мин свободного звонка раз в {days} дня",
+    "planLineScripts": "Сценарии по этапам (бесплатно для всех)",
+    "planFreeScripts": "Бесплатный план · сценарии",
+    "chatNeedsPlan": "Чат доступен по подписке",
+    "scriptLimit": "На сегодня сценарии всё. Завтра лимит обновится.",
+    "scriptApplyCall": "Позвонить с этими выражениями"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5547,7 +5596,7 @@
     "roleplayOutOfToday": "Waktu panggilan gratis hari ini sudah habis. Besok terisi lagi, dan dengan poin kamu bisa lanjut sekarang.",
     "planLiteName": "Lite",
     "planPlusName": "Plus",
-    "planSubtitle": "Paket hari ini gratis untuk semua orang, setiap hari. Dengan berlangganan, setiap hari kamu dapat tambahan percakapan yang kamu pilih.",
+    "planSubtitle": "Latihan naskah per tahap gratis untuk semua. Langganan menambah chat dan panggilan bebas untuk memakai yang sudah dipelajari.",
     "planLineCall": "{minutes} menit panggilan bebas setiap hari",
     "planLinePoints": "{points} poin per bulan (panggilan dan video milikmu)",
     "planLineChat": "{n} chat per hari",
@@ -5832,7 +5881,14 @@
     "scriptCall": "Coba lewat panggilan",
     "scriptsToNext": "Ke tahap berikutnya: {n} naskah lagi",
     "scriptsByExpression": "Latihan per ungkapan",
-    "scriptSayPrompt": "Ucapkan: “{line}”"
+    "scriptSayPrompt": "Ucapkan: “{line}”",
+    "planScriptName": "Paket naskah",
+    "planLineCallEvery": "{minutes} menit panggilan bebas tiap {days} hari",
+    "planLineScripts": "Latihan naskah per tahap (gratis untuk semua)",
+    "planFreeScripts": "Paket gratis · latihan naskah",
+    "chatNeedsPlan": "Chat tersedia dengan langganan",
+    "scriptLimit": "Latihan naskah hari ini sudah habis. Besok terisi lagi.",
+    "scriptApplyCall": "Telepon pakai ungkapan ini"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6224,7 +6280,7 @@
     "roleplayOutOfToday": "استخدمت وقت المكالمات المجانية لليوم. يُعاد شحنه غدًا، ويمكنك المتابعة الآن بالنقاط.",
     "planLiteName": "لايت",
     "planPlusName": "بلس",
-    "planSubtitle": "باقة اليوم مجانية للجميع كل يوم. مع الاشتراك تحصل كل يوم أيضًا على المحادثات التي تختارها.",
+    "planSubtitle": "النصوص الحوارية لكل مرحلة مجانية للجميع. ويضيف الاشتراك الدردشة والمكالمات الحرة لتستخدم ما تعلمته.",
     "planLineCall": "{minutes} دقيقة مكالمات حرة كل يوم",
     "planLinePoints": "{points} نقطة شهريًا (المكالمات وفيديوهاتك الخاصة)",
     "planLineChat": "{n} رسالة دردشة يوميًا",
@@ -6509,7 +6565,14 @@
     "scriptCall": "جرّبها في مكالمة",
     "scriptsToNext": "حتى المرحلة التالية: {n} نصوص",
     "scriptsByExpression": "تدرّب حسب العبارة",
-    "scriptSayPrompt": "قل: «{line}»"
+    "scriptSayPrompt": "قل: «{line}»",
+    "planScriptName": "باقة النصوص",
+    "planLineCallEvery": "{minutes} دقائق مكالمة حرة كل {days} أيام",
+    "planLineScripts": "نصوص حوارية لكل مرحلة (مجانًا للجميع)",
+    "planFreeScripts": "الخطة المجانية · النصوص الحوارية",
+    "chatNeedsPlan": "الدردشة متاحة مع الاشتراك",
+    "scriptLimit": "انتهى تدريب النصوص لهذا اليوم، ويتجدد غدًا.",
+    "scriptApplyCall": "اتصل مستخدمًا هذه العبارات"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -6901,7 +6964,7 @@
     "roleplayOutOfToday": "ใช้เวลาคุยฟรีของวันนี้หมดแล้ว พรุ่งนี้จะเติมให้ใหม่ และถ้ามีพอยต์ก็คุยต่อได้เลย",
     "planLiteName": "Lite",
     "planPlusName": "Plus",
-    "planSubtitle": "แพ็กวันนี้ฟรีสำหรับทุกคนทุกวัน สมัครสมาชิกแล้วจะคุยเรื่องที่อยากคุยได้เพิ่มทุกวัน",
+    "planSubtitle": "ฝึกบทตามขั้นฟรีสำหรับทุกคน สมัครสมาชิกเพื่อแชตและโทรอิสระ ใช้สิ่งที่เรียนมา",
     "planLineCall": "คุยอิสระวันละ {minutes} นาที",
     "planLinePoints": "{points} พอยต์ต่อเดือน (โทรและนำเข้าวิดีโอของคุณเอง)",
     "planLineChat": "แชตวันละ {n} ครั้ง",
@@ -7186,7 +7249,14 @@
     "scriptCall": "ลองในการโทร",
     "scriptsToNext": "ถึงขั้นถัดไป: อีก {n} บท",
     "scriptsByExpression": "ฝึกตามสำนวน",
-    "scriptSayPrompt": "ลองพูดว่า “{line}”"
+    "scriptSayPrompt": "ลองพูดว่า “{line}”",
+    "planScriptName": "แพ็กบท",
+    "planLineCallEvery": "โทรอิสระ {minutes} นาทีทุก {days} วัน",
+    "planLineScripts": "ฝึกบทตามขั้น (ฟรีสำหรับทุกคน)",
+    "planFreeScripts": "แพ็กฟรี · ฝึกบท",
+    "chatNeedsPlan": "แชตใช้ได้เมื่อสมัครสมาชิก",
+    "scriptLimit": "วันนี้ฝึกพูดบทได้แค่นี้ พรุ่งนี้จะเติมใหม่",
+    "scriptApplyCall": "โทรโดยใช้สำนวนที่เรียน"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7578,7 +7648,7 @@
     "roleplayOutOfToday": "आज का मुफ़्त कॉल समय खत्म हो गया। कल यह फिर भर जाएगा, और पॉइंट्स हों तो अभी जारी रख सकते हैं।",
     "planLiteName": "लाइट",
     "planPlusName": "प्लस",
-    "planSubtitle": "आज का पैक हर किसी के लिए रोज़ मुफ़्त है। सदस्यता लेने पर हर दिन अपनी पसंद की और बातचीत कर सकते हैं।",
+    "planSubtitle": "चरण-वार स्क्रिप्ट सबके लिए मुफ़्त हैं। सदस्यता से चैट और मुफ़्त कॉल मिलती है, ताकि सीखा हुआ इस्तेमाल कर सकें।",
     "planLineCall": "हर दिन {minutes} मिनट खुली कॉल",
     "planLinePoints": "हर महीने {points} पॉइंट्स (कॉल और अपने वीडियो)",
     "planLineChat": "रोज़ {n} चैट",
@@ -7863,6 +7933,13 @@
     "scriptCall": "कॉल पर आज़माएँ",
     "scriptsToNext": "अगले चरण तक: {n} स्क्रिप्ट",
     "scriptsByExpression": "अभिव्यक्ति से अभ्यास",
-    "scriptSayPrompt": "कहिए: “{line}”"
+    "scriptSayPrompt": "कहिए: “{line}”",
+    "planScriptName": "स्क्रिप्ट प्लान",
+    "planLineCallEvery": "हर {days} दिन में {minutes} मिनट मुफ़्त कॉल",
+    "planLineScripts": "चरण-वार स्क्रिप्ट अभ्यास (सबके लिए मुफ़्त)",
+    "planFreeScripts": "मुफ़्त प्लान · स्क्रिप्ट अभ्यास",
+    "chatNeedsPlan": "चैट सदस्यता के साथ मिलती है",
+    "scriptLimit": "आज का स्क्रिप्ट अभ्यास यहीं तक। कल फिर से भर जाएगा।",
+    "scriptApplyCall": "सीखी अभिव्यक्तियों से कॉल करें"
   }
 }

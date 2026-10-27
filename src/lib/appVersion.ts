@@ -71,6 +71,18 @@ export const MIN_SUPPORTED_APP_VERSION = "2.48";
  */
 export const RECOMMENDED_APP_VERSION = "2.66";
 
+/**
+ * 대본 앱: My 단계 대본이 있는 첫 빌드(2.76). 이 빌드부터 무료는 채팅·통화 없이 대본만(billing/plans.ts termsFor scriptsApp),
+ * 그 전 빌드의 무료는 예전 그대로 — 그 화면에는 대본이 없으니까. 웹은 package.json 버전을 보내므로 2.76을 자른 뒤부터.
+ */
+export const SCRIPTS_APP_VERSION = "2.76";
+
+export function isScriptsApp(version: string | null | undefined): boolean {
+  const value = version?.trim();
+  if (!value || value === "unknown") return false;
+  return compareVersions(value, SCRIPTS_APP_VERSION) >= 0;
+}
+
 /** -1, 0 or 1. Missing parts count as zero, so "2.49" and "2.49.0" are equal. */
 export function compareVersions(a: string, b: string): number {
   const read = (value: string) =>

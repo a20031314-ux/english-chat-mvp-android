@@ -14,9 +14,11 @@ type TTSButtonProps = {
   ariaLabel?: string;
   /** Override BCP-47 speech language (defaults to current learning language). */
   lang?: string;
+  /** A scene voice (roleplay/voices.ts): lines the app wrote, cached once for everyone. Leave out for anything a learner wrote. */
+  voice?: string;
 };
 
-export function TTSButton({ text, className, ariaLabel, lang }: TTSButtonProps) {
+export function TTSButton({ text, className, ariaLabel, lang, voice }: TTSButtonProps) {
   const [busy, setBusy] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const learningLanguage = useLearningLanguageOptional();
@@ -37,7 +39,7 @@ export function TTSButton({ text, className, ariaLabel, lang }: TTSButtonProps) 
     const queue = () => {
       window.clearTimeout(debounce);
       debounce = window.setTimeout(() => {
-        if (visible) prefetchTts(trimmed, speechLang);
+        if (visible) prefetchTts(trimmed, speechLang, voice);
       }, 400);
     };
 
@@ -59,7 +61,7 @@ export function TTSButton({ text, className, ariaLabel, lang }: TTSButtonProps) 
       observer.disconnect();
       window.clearTimeout(debounce);
     };
-  }, [text, speechLang]);
+  }, [text, speechLang, voice]);
 
   const handleSpeak = async () => {
     const trimmed = text.trim();
@@ -69,7 +71,7 @@ export function TTSButton({ text, className, ariaLabel, lang }: TTSButtonProps) 
 
     setBusy(true);
     try {
-      await playTts(trimmed, speechLang);
+      await playTts(trimmed, speechLang, voice);
     } catch (error) {
       console.error("TTS failed:", error);
     } finally {
@@ -83,7 +85,7 @@ export function TTSButton({ text, className, ariaLabel, lang }: TTSButtonProps) 
       type="button"
       onPointerDown={() => {
         const trimmed = text.trim();
-        if (trimmed) prefetchTts(trimmed, speechLang);
+        if (trimmed) prefetchTts(trimmed, speechLang, voice);
       }}
       onClick={() => {
         void handleSpeak();

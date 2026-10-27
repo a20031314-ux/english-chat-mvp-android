@@ -55,7 +55,7 @@
 | 의견 보내기 | `feedback:v1` | 운영 | 120일 · 2일 · 40일 · 90일 | 남음(90일) | 사용자가 보낸 의견·그림·반영 카드 | `api/feedback/news/route.ts` `feedbackFixStore.ts` `feedbackStore.ts` |
 | 자라는 중 | `growth:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 표현별 자라는 기록(언어별) | `growthStore.ts` |
 | 자라는 중 | `selfcheck:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 스스로 확인 기록(언어별) | `selfCheckStore.ts` |
-| 자유 통화 | `rp:daily` | 학습자 한 명 | 2일 | 해당 없음 | 오늘 쓴 자유 통화 분 | `entitlementStore.ts` |
+| 자유 통화 | `rp:daily` | 학습자 한 명 | 계산((terms.callWindowDays + 1) * 2) | 해당 없음 | 오늘 쓴 자유 통화 분 | `entitlementStore.ts` |
 | 자유 통화 | `usage:calls` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 통화 횟수(평생) | `entitlementStore.ts` |
 | 자유 통화 | `usage:callsec` | 학습자 한 명 | 70일 | 지움(주 1회 정리) | 통화 초(월별) | `entitlementStore.ts` |
 | 자유 통화 | `usage:rptrial` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 처음 20포인트 체험 쓴 양 | `entitlementStore.ts` |
@@ -85,6 +85,7 @@
 | 학습 지표 | `lm:text` | 학습자 한 명 | 365일 | 지움(주 1회 정리) | 문장 원문 — LEARNER_TEXT_STORE=on일 때만(지금 꺼짐) | `learnerMetrics.ts` |
 | 학습자 프로필 | `learnerComprehension:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 이해한 표현 기록(언어별) | `learnerProfileStore.ts` |
 | 학습자 프로필 | `learnerProfile:v1` | 학습자 한 명 | 400일 | 지움(주 1회 정리) | 실수 경향·턴 결과(언어별) | `learnerProfileStore.ts` |
+| My 단계 대본 | `script:daily` | 학습자 한 명 | 3일 · 6시간 · 90일 · 영구 | 그대로(사흘 뒤 저절로 사라짐) | 오늘 대본에서 확인받은 내 줄 수(요금별 하루 한도) — 숫자 하나 | `entitlementStore.ts` |
 | My 단계 대본 | `stageScripts:v1` | 학습자 한 명 | ?(코드에서 못 읽음) | 지움(주 1회 정리) | 통과한 단계 대본 id와 통과한 때(언어별) — 말한 문장은 남기지 않음 | `stageScriptStore.ts` |
 
 ## 읽는 법

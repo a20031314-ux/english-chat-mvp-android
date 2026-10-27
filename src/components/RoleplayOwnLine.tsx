@@ -32,7 +32,15 @@ import type { Practice } from "@/lib/roleplay/practice";
  */
 export async function sayLine(
   line: string,
-  input: { targetLanguage: LearningLanguageCode; nativeLanguage: LearningLanguageCode; isPremium: boolean; meaning?: string; before?: string },
+  input: {
+    targetLanguage: LearningLanguageCode;
+    nativeLanguage: LearningLanguageCode;
+    isPremium: boolean;
+    meaning?: string;
+    before?: string;
+    scriptId?: string;
+    onLimit?: () => void;
+  },
 ): Promise<{ heard: string; practice: Practice | null }> {
   try {
     const { heard } = await listenOnce({ language: input.targetLanguage, isPremium: input.isPremium });
@@ -45,6 +53,8 @@ export async function sayLine(
       isPremium: input.isPremium,
       meaning: input.meaning,
       before: input.before,
+      scriptId: input.scriptId,
+      onLimit: input.onLimit,
     });
     return { heard, practice };
   } catch {

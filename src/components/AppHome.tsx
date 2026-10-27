@@ -13,8 +13,6 @@ import { TargetLanguageSelector } from "@/components/TargetLanguageSelector";
 import { UpdateNotice } from "@/components/UpdateNotice";
 import { WhatsNewSheet } from "@/components/WhatsNewSheet";
 import { CallHost, hasRoleplay } from "@/components/CallHost";
-import { PackCard } from "@/components/PackCard";
-import { readCalls, readCallsOnServer, subscribeCalls } from "@/lib/roleplay/callStore";
 import { StudyMapTab } from "@/components/studyMap/StudyMapTab";
 import { onAppIntent, sendAppIntent } from "@/lib/appIntents";
 import { VideoLearningTab } from "@/components/videoLearning/VideoLearningTab";
@@ -169,9 +167,6 @@ function AppHomeInner({
   }, []);
   // 통화·말하는 방에서는 앱 오프닝 광고를 띄우지 않는다. AI 통화는 탭이 아니라 어디서나 떠 있는 층(CallHost)이라 따로 받는다.
   const [callActive, setCallActive] = useState(false);
-  // 통화가 끝나 저장되면 오늘의 팩 카드를 다시 읽는다.
-  const savedCalls = useSyncExternalStore(subscribeCalls, readCalls, readCallsOnServer);
-  const callsVersion = savedCalls.reduce((latest, call) => Math.max(latest, call.updatedAt), 0);
   useEffect(() => {
     setAppOpenAllowedHere(!callActive && !NO_APP_OPEN_TABS.includes(shownTab));
   }, [shownTab, callActive]);
@@ -449,7 +444,6 @@ function AppHomeInner({
                     ...(callOn ? [{ label: ui.callRecordsTitle, onSelect: () => sendAppIntent("openCall", {}) }] : []),
                     { label: ui.roleplayOwnLineOpen, onSelect: () => sendAppIntent("sayOwnLine", {}) },
                   ]}
-                  showPack={callOn && !socialLayout}
                 />
               </div>
 
@@ -498,17 +492,6 @@ function AppHomeInner({
                         onCall={() => openTab("roleplay")}
                         targetLanguage={targetLanguage}
                       />
-                      {/* 오늘의 팩: 예전 통화 첫 화면 맨 위 → 대화 목록 AI 튜터 바로 아래(2026-10-23). */}
-                      {callOn ? (
-                        <div className="mt-2">
-                          <PackCard
-                            ui={ui}
-                            targetLanguage={targetLanguage}
-                            onStart={(request) => sendAppIntent("practice", request)}
-                            refreshKey={String(callsVersion)}
-                          />
-                        </div>
-                      ) : null}
                     </>
                   }
                 />

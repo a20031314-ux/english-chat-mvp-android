@@ -171,6 +171,17 @@ export function cleanBesidesName(outcomes: readonly { kind: string; word: string
   return outcomes.every((outcome) => outcome.kind === "kept" || (parts.length > 0 && parts.some((part) => outcome.word.includes(part))));
 }
 
+/**
+ * 대본 줄의 목소리(roleplay/voices.ts): 앱이 쓴 줄이라 공유 캐시로 한 번 만들어 모두가 쓴다(2026-10-28 저가 구독 원가).
+ * 상대와 나는 다른 목소리. 사용자 닉네임이 든 줄은 그 사람 것이라 공유하지 않는다(undefined = 개인 캐시).
+ */
+export const SCRIPT_VOICES = { them: "coral", me: "ash" } as const;
+
+export function scriptVoice(who: StageScriptLine["who"], text: string, learnerName: string | null): string | undefined {
+  if (learnerName && text.includes(learnerName)) return undefined;
+  return SCRIPT_VOICES[who];
+}
+
 /** 앱 언어로 된 뜻. 한국어 앱은 ko(없으면 en), 나머지는 지금 en. */
 export function glossFor(gloss: ScriptGloss, uiLanguage: string): string {
   return uiLanguage === "ko" ? (gloss.ko ?? gloss.en) : gloss.en;
