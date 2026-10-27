@@ -7,6 +7,8 @@
  * 틀의 핵심 표현이 장부에 배움으로. 그 틀(core)이 내 줄에 든 대본을 이어서 보여 준다 — 같은 틀을 다른 장면에서.
  */
 import { ES_FRAMES } from "./frames/es.ts";
+import { VI_FRAMES } from "./frames/vi.ts";
+import { ID_FRAMES } from "./frames/id.ts";
 import { EN_FRAMES } from "./frames/en.ts";
 import { ZH_FRAMES } from "./frames/zh.ts";
 import { JA_FRAMES } from "./frames/ja.ts";
@@ -41,7 +43,7 @@ export type Frame = {
   examples: FrameExample[];
 };
 
-const ALL: Partial<Record<string, Frame[]>> = { ja: JA_FRAMES, ko: KO_FRAMES, es: ES_FRAMES, zh: ZH_FRAMES, en: EN_FRAMES };
+const ALL: Partial<Record<string, Frame[]>> = { ja: JA_FRAMES, ko: KO_FRAMES, es: ES_FRAMES, zh: ZH_FRAMES, en: EN_FRAMES, id: ID_FRAMES, vi: VI_FRAMES };
 
 /** 이 학습 언어의 틀 전부(앱에 없는 언어를 서버가 보낼 때). */
 export function allFramesFor(language: string): Frame[] {

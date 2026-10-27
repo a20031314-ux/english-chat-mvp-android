@@ -982,6 +982,7 @@ async function partsScene({ page, locale, wait, target }, mode, open) {
 
 /** 2.76 다시 연습 그림: 학습 언어마다 틀 하나와 그 틀을 틀린 줄·고친 줄(카드는 끼움). */
 const REDO_CARDS = {
+  en: { frame: "en-f2-01", wrong: "Last night I watch a movie with my sister.", right: "Last night I watched a movie with my sister." },
   es: { frame: "es-f2-20", wrong: "¿Se puede pago con tarjeta?", right: "¿Se puede pagar con tarjeta?" },
   ja: { frame: "ja-f2-01", wrong: "ここで座るもいいですか？", right: "ここに座ってもいいですか？" },
   ko: { frame: "ko-f1-01", wrong: "저는 학생예요.", right: "저는 학생이에요." },
@@ -1330,8 +1331,10 @@ const STEPS = {
     await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
     const redo = page.getByRole("button", { name: new RegExp(escape(ui.frameRedo)) }).first();
     for (let i = 0; i < 60 && !(await redo.count()); i++) await wait(500);
-    await redo.click();
-    await wait(2500);
+    // 목록 맨 위 ◐ 카드와 그 아래 오늘의 대본·대본 목록이 함께 보이게(연 화면은 사용법 글로).
+    await redo.evaluate((el) => el.scrollIntoView({ block: "start" }));
+    await page.mouse.wheel(0, -90);
+    await wait(1500);
   },
   async "board-topics"(ctx) {
     // 2.75: 게시판 주제 칩(자유·질문·메이트 글, 고정 응답).
