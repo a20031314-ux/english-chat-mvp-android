@@ -36,7 +36,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Hi, Sofía. My name is Ji-woo. Nice to meet you.",
           "ko": "안녕, 소피아. 나는 지우야. 반가워."
-        }
+        },
+        "frames": [
+          "es-f1-01"
+        ]
       },
       {
         "who": "them",
@@ -52,7 +55,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "I'm from Korea, from Busan. And you?",
           "ko": "한국, 부산에서 왔어. 너는?"
-        }
+        },
+        "frames": [
+          "es-f1-02"
+        ]
       },
       {
         "who": "them",
@@ -68,7 +74,11 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "No, I work in a hotel. I'm a receptionist.",
           "ko": "아니, 호텔에서 일해. 프런트 직원이야."
-        }
+        },
+        "frames": [
+          "es-f1-04",
+          "es-f1-03"
+        ]
       },
       {
         "who": "them",
@@ -125,7 +135,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Good morning. How much are the apples?",
           "ko": "안녕하세요. 사과 얼마예요?"
-        }
+        },
+        "frames": [
+          "es-f1-08"
+        ]
       },
       {
         "who": "them",
@@ -141,7 +154,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "One kilo, please. And the oranges?",
           "ko": "1킬로 주세요. 오렌지는요?"
-        }
+        },
+        "frames": [
+          "es-f1-11"
+        ]
       },
       {
         "who": "them",
@@ -214,7 +230,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Yes, please. Where is the metro?",
           "ko": "네, 부탁해요. 지하철역이 어디예요?"
-        }
+        },
+        "frames": [
+          "es-f1-09"
+        ]
       },
       {
         "who": "them",
@@ -246,7 +265,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Thank you. Is there a supermarket around here?",
           "ko": "고마워요. 이 근처에 슈퍼마켓 있어요?"
-        }
+        },
+        "frames": [
+          "es-f1-10"
+        ]
       },
       {
         "who": "them",
@@ -316,7 +338,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Hi, good afternoon. Yes, my name is Daniel Kim.",
           "ko": "안녕하세요. 네, 제 이름은 다니엘 김이에요."
-        }
+        },
+        "frames": [
+          "es-f1-01"
+        ]
       },
       {
         "who": "them",
@@ -332,7 +357,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Yes. How much is it per night?",
           "ko": "네. 1박에 얼마예요?"
-        }
+        },
+        "frames": [
+          "es-f1-08"
+        ]
       },
       {
         "who": "them",
@@ -364,7 +392,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "OK, thanks. And where is the bathroom?",
           "ko": "네, 고마워요. 그리고 화장실은 어디예요?"
-        }
+        },
+        "frames": [
+          "es-f1-09"
+        ]
       }
     ],
     "expressions": [
@@ -432,7 +463,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Sorry, I don't know. I'm new in the neighbourhood.",
           "ko": "미안해요, 잘 몰라요. 동네에 처음 왔거든요."
-        }
+        },
+        "frames": [
+          "es-f1-03"
+        ]
       },
       {
         "who": "them",
@@ -448,7 +482,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "You're welcome. See you later!",
           "ko": "천만에요. 나중에 봐요!"
-        }
+        },
+        "frames": [
+          "es-f1-06"
+        ]
       }
     ]
   },
@@ -483,7 +520,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Yes, thanks. I have a brother and a sister.",
           "ko": "응, 고마워. 남동생 하나랑 여동생 하나 있어."
-        }
+        },
+        "frames": [
+          "es-f1-13"
+        ]
       },
       {
         "who": "them",
@@ -499,7 +539,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "She's twenty. My brother is twelve.",
           "ko": "스무 살이야. 남동생은 열두 살이고."
-        }
+        },
+        "frames": [
+          "es-f1-14"
+        ]
       },
       {
         "who": "them",
@@ -515,7 +558,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Yes, of course. His name is Toto and he's three.",
           "ko": "응, 당연하지. 이름은 토토고 세 살이야."
-        }
+        },
+        "frames": [
+          "es-f1-14"
+        ]
       }
     ]
   },
@@ -542,7 +588,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "I don't know yet. On Saturday morning I have to work.",
           "ko": "아직 모르겠어. 토요일 오전에는 일해야 해."
-        }
+        },
+        "frames": [
+          "es-f2-13"
+        ]
       },
       {
         "who": "them",
@@ -558,7 +607,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "What a great idea! I really like live music. What time is it?",
           "ko": "좋은 생각이다! 라이브 음악 정말 좋아해. 몇 시야?"
-        }
+        },
+        "frames": [
+          "es-f2-06"
+        ]
       },
       {
         "who": "them",
@@ -590,7 +642,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Perfect. Can I invite Marta too?",
           "ko": "완벽해. 마르타도 불러도 돼?"
-        }
+        },
+        "frames": [
+          "es-f2-11"
+        ]
       },
       {
         "who": "them",
@@ -606,7 +661,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Great. See you on Saturday.",
           "ko": "좋아. 토요일에 봐."
-        }
+        },
+        "frames": [
+          "es-f2-19"
+        ]
       }
     ],
     "expressions": [
@@ -649,7 +707,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Not yet. What do you recommend?",
           "ko": "아직요. 뭘 추천하세요?"
-        }
+        },
+        "frames": [
+          "es-f2-17"
+        ]
       },
       {
         "who": "them",
@@ -665,7 +726,11 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "For me, the soup and the fish, please.",
           "ko": "저는 수프랑 생선으로 주세요."
-        }
+        },
+        "frames": [
+          "es-f2-15",
+          "es-f1-11"
+        ]
       },
       {
         "who": "them",
@@ -681,7 +746,11 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Still water, please. Oh, is the fish spicy? I don't really like spicy food.",
           "ko": "탄산 없는 물 주세요. 아, 생선 매워요? 매운 걸 별로 안 좋아해서요."
-        }
+        },
+        "frames": [
+          "es-f1-11",
+          "es-f2-07"
+        ]
       },
       {
         "who": "them",
@@ -713,7 +782,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Everything was delicious, thank you. A coffee and the bill, please.",
           "ko": "다 정말 맛있었어요. 커피 한 잔이랑 계산서 주세요."
-        }
+        },
+        "frames": [
+          "es-f1-11"
+        ]
       }
     ],
     "expressions": [
@@ -754,7 +826,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Good morning. I think I have a cold. My throat hurts and I have a cough.",
           "ko": "안녕하세요. 감기에 걸린 것 같아요. 목이 아프고 기침이 나요."
-        }
+        },
+        "frames": [
+          "es-f2-14"
+        ]
       },
       {
         "who": "them",
@@ -770,7 +845,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Since last night. And today I'm very tired.",
           "ko": "어젯밤부터요. 그리고 오늘은 너무 피곤해요."
-        }
+        },
+        "frames": [
+          "es-f2-18"
+        ]
       },
       {
         "who": "them",
@@ -786,7 +864,11 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Yes, I have a fever, but not much. This morning I had thirty-seven and a half.",
           "ko": "네, 열이 있는데 많이는 아니에요. 오늘 아침에 37.5도였어요."
-        }
+        },
+        "frames": [
+          "es-f2-03",
+          "es-f1-13"
+        ]
       },
       {
         "who": "them",
@@ -802,7 +884,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "How many times a day do I have to take it?",
           "ko": "하루에 몇 번 먹어야 해요?"
-        }
+        },
+        "frames": [
+          "es-f2-13"
+        ]
       },
       {
         "who": "them",
@@ -860,7 +945,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Very good, thanks. On Saturday I went to the beach with some friends.",
           "ko": "아주 좋았어, 고마워. 토요일에 친구들이랑 바다에 갔어."
-        }
+        },
+        "frames": [
+          "es-f2-02"
+        ]
       },
       {
         "who": "them",
@@ -908,7 +996,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Ugh, sorry. And are you going to rest this weekend?",
           "ko": "아이고, 안됐다. 이번 주말엔 쉴 거야?"
-        }
+        },
+        "frames": [
+          "es-f2-05"
+        ]
       },
       {
         "who": "them",
@@ -977,7 +1068,11 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Good. Yesterday I went to the new cinema in the centre. It's really nice!",
           "ko": "좋아. 어제 시내에 새로 생긴 영화관에 갔는데 정말 예뻐!"
-        }
+        },
+        "frames": [
+          "es-f2-02",
+          "es-f2-01"
+        ]
       },
       {
         "who": "them",
@@ -993,7 +1088,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "A Spanish comedy. There's another one tonight. Do you want to come with me?",
           "ko": "스페인 코미디. 오늘 밤에 다른 거 하나 해. 같이 갈래?"
-        }
+        },
+        "frames": [
+          "es-f2-10"
+        ]
       },
       {
         "who": "them",
@@ -1009,7 +1107,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Of course! See you at eight at the entrance.",
           "ko": "당연하지! 여덟 시에 입구에서 보자."
-        }
+        },
+        "frames": [
+          "es-f2-19"
+        ]
       }
     ]
   },
@@ -1048,7 +1149,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Not really. I've had a headache since this morning.",
           "ko": "별로. 아침부터 머리가 아파."
-        }
+        },
+        "frames": [
+          "es-f2-14"
+        ]
       },
       {
         "who": "them",
@@ -1107,7 +1211,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Good evening. I have a problem with my room, three hundred twelve.",
           "ko": "안녕하세요. 제 방, 312호에 문제가 있어요."
-        }
+        },
+        "frames": [
+          "es-f3-16"
+        ]
       },
       {
         "who": "them",
@@ -1139,7 +1246,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "The air conditioning doesn't work. I've tried everything, but it's still really hot.",
           "ko": "에어컨이 안 돼요. 다 해 봤는데 여전히 너무 더워요."
-        }
+        },
+        "frames": [
+          "es-f3-17"
+        ]
       },
       {
         "who": "them",
@@ -1164,7 +1274,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Yes, I've already tried that. And the thing is, the shower has no hot water either.",
           "ko": "네, 이미 해 봤어요. 그리고 문제는 샤워기에서 뜨거운 물도 안 나온다는 거예요."
-        }
+        },
+        "frames": [
+          "es-f3-18"
+        ]
       },
       {
         "who": "them",
@@ -1189,7 +1302,11 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "I think that's a bit late. Could you move me to another room tonight?",
           "ko": "그건 좀 늦은 것 같아요. 오늘 밤에 방을 바꿔 주실 수 있을까요?"
-        }
+        },
+        "frames": [
+          "es-f3-04",
+          "es-f3-12"
+        ]
       },
       {
         "who": "them",
@@ -1221,7 +1338,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "That's fine. I'd rather that than spend another night in this heat.",
           "ko": "괜찮아요. 이 더위에 하룻밤 더 보내는 것보다는 그게 나아요."
-        }
+        },
+        "frames": [
+          "es-f2-09"
+        ]
       },
       {
         "who": "them",
@@ -1295,7 +1415,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Ugh, in the end it was a disaster. Well, almost.",
           "ko": "휴, 결국 엉망이었어. 뭐, 거의."
-        }
+        },
+        "frames": [
+          "es-f3-09"
+        ]
       },
       {
         "who": "them",
@@ -1327,7 +1450,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Well, when we arrived at the airport, my suitcase wasn't there.",
           "ko": "공항에 도착했는데 내 캐리어가 없었어."
-        }
+        },
+        "frames": [
+          "es-f3-07"
+        ]
       },
       {
         "who": "them",
@@ -1377,7 +1503,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "I bought a T-shirt, but the thing is, the next day it started raining and I didn't have a jacket.",
           "ko": "티셔츠는 하나 샀는데, 문제는 다음 날 비가 오기 시작했는데 재킷이 없었다는 거야."
-        }
+        },
+        "frames": [
+          "es-f3-18"
+        ]
       },
       {
         "who": "them",
@@ -1427,7 +1556,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "No, I've never been. But next time I'd love to go... with a suitcase, if possible.",
           "ko": "아니, 가 본 적 없어. 다음엔 꼭 가 보고 싶어... 되도록 캐리어랑 같이."
-        }
+        },
+        "frames": [
+          "es-f3-06"
+        ]
       }
     ],
     "expressions": [
@@ -1483,7 +1615,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Good morning. My name is Andrea Park and I've worked in digital marketing for four years.",
           "ko": "안녕하세요. 저는 안드레아 박이고, 디지털 마케팅 분야에서 4년 일했습니다."
-        }
+        },
+        "frames": [
+          "es-f1-01"
+        ]
       },
       {
         "who": "them",
@@ -1565,7 +1700,12 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "I like my job, but I'd like to have more responsibility, and I think I could grow here.",
           "ko": "지금 일도 좋지만 더 큰 책임을 맡고 싶고, 여기서 성장할 수 있을 것 같습니다."
-        }
+        },
+        "frames": [
+          "es-f2-06",
+          "es-f3-13",
+          "es-f3-01"
+        ]
       },
       {
         "who": "them",
@@ -1615,7 +1755,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Yes. Could you tell me what a normal day on the team is like?",
           "ko": "네. 팀의 평범한 하루가 어떤지 말씀해 주실 수 있을까요?"
-        }
+        },
+        "frames": [
+          "es-f3-12"
+        ]
       }
     ],
     "expressions": [
@@ -1680,7 +1823,12 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "In my opinion, it's really well written. But I think the second season is slower than the first.",
           "ko": "내 생각엔 대본이 정말 잘 쓰였어. 근데 시즌 2가 시즌 1보다 느린 것 같아."
-        }
+        },
+        "frames": [
+          "es-f3-03",
+          "es-f3-01",
+          "es-f3-14"
+        ]
       },
       {
         "who": "them",
@@ -1712,7 +1860,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Well, I'm not sure. By the way, do you remember the new lawyer, the one with short hair?",
           "ko": "글쎄, 잘 모르겠어. 그건 그렇고, 그 새로 온 변호사 기억나? 머리 짧은 사람."
-        }
+        },
+        "frames": [
+          "es-f3-11"
+        ]
       },
       {
         "who": "them",
@@ -1737,7 +1888,11 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "Well, I don't think she's as good as she seems. I think she's hiding something.",
           "ko": "근데 난 그 사람이 보이는 것만큼 착한 것 같지 않아. 뭔가 숨기는 것 같아."
-        }
+        },
+        "frames": [
+          "es-f3-02",
+          "es-f3-01"
+        ]
       },
       {
         "who": "them",
@@ -1794,7 +1949,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "I don't know. I'd like to watch something lighter, like a comedy. Can you recommend one?",
           "ko": "모르겠어. 좀 더 가벼운 거, 코미디 같은 걸 보고 싶어. 추천해 줄 거 있어?"
-        }
+        },
+        "frames": [
+          "es-f3-13"
+        ]
       }
     ],
     "expressions": [
@@ -1850,7 +2008,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "I bought this coat last week, but it's too small for me. Could you exchange it for a bigger size?",
           "ko": "지난주에 이 코트를 샀는데 작아요. 한 치수 큰 걸로 바꿔 주실 수 있을까요?"
-        }
+        },
+        "frames": [
+          "es-f3-12"
+        ]
       },
       {
         "who": "them",
@@ -1882,7 +2043,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "What a shame! I really like the blue one. Well, I'll try on the black one.",
           "ko": "아쉽네요! 파란색이 정말 마음에 들었는데. 그럼 검은색을 입어 볼게요."
-        }
+        },
+        "frames": [
+          "es-f2-06"
+        ]
       }
     ]
   },
@@ -1918,7 +2082,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "How nice! Have you ever been there?",
           "ko": "좋다! 거기 가 본 적 있어?"
-        }
+        },
+        "frames": [
+          "es-f3-05"
+        ]
       },
       {
         "who": "them",
@@ -1934,7 +2101,10 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "I agree with him. I was there two years ago and didn't have time for everything.",
           "ko": "나도 그 말에 동의해. 이 년 전에 가 봤는데 다 볼 시간이 없었어."
-        }
+        },
+        "frames": [
+          "es-f3-19"
+        ]
       },
       {
         "who": "them",

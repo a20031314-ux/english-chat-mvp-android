@@ -38,6 +38,7 @@ export async function sayLine(
     isPremium: boolean;
     meaning?: string;
     before?: string;
+    frame?: string;
     scriptId?: string;
     onLimit?: () => void;
   },
@@ -53,6 +54,7 @@ export async function sayLine(
       isPremium: input.isPremium,
       meaning: input.meaning,
       before: input.before,
+      frame: input.frame,
       scriptId: input.scriptId,
       onLimit: input.onLimit,
     });

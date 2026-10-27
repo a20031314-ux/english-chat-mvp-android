@@ -1,10 +1,11 @@
 import type { Frame } from "../frames.ts";
 
-/** 일본어 1~2단계 틀(curriculum/frames.ts) — Claude가 쓰고 다시 고침, 원어민 확인 전. */
+/** 일본어 1~3단계 틀(curriculum/frames.ts) — 기능 id(fn)는 curriculum/functions.ts. Claude가 쓰고 다시 고침, 원어민 확인 전. */
 export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-01",
     "stage": 1,
+    "fn": "introduce",
     "pattern": "わたしは___です。",
     "core": [
       "わたしは"
@@ -71,6 +72,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-02",
     "stage": 1,
+    "fn": "origin",
     "pattern": "___から来ました。",
     "core": [
       "から来ました"
@@ -135,6 +137,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-03",
     "stage": 1,
+    "fn": "ask-what",
     "pattern": "___は何ですか。",
     "core": [
       "は何ですか"
@@ -203,6 +206,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-04",
     "stage": 1,
+    "fn": "ask-price",
     "pattern": "___はいくらですか。",
     "core": [
       "いくらですか"
@@ -272,6 +276,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-05",
     "stage": 1,
+    "fn": "request-thing",
     "pattern": "___をください。",
     "core": [
       "をください"
@@ -339,6 +344,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-06",
     "stage": 1,
+    "fn": "ask-where",
     "pattern": "___はどこですか。",
     "core": [
       "はどこですか"
@@ -407,6 +413,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-07",
     "stage": 1,
+    "fn": "future-plan",
     "pattern": "明日、___に行きます。",
     "core": [
       "に行きます"
@@ -474,6 +481,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-08",
     "stage": 1,
+    "fn": "ask-have",
     "pattern": "___はありますか。",
     "core": [
       "はありますか"
@@ -541,6 +549,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-09",
     "stage": 1,
+    "fn": "location-now",
     "pattern": "今、___にいます。",
     "core": [
       "にいます"
@@ -607,6 +616,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-10",
     "stage": 1,
+    "fn": "like",
     "pattern": "___が好きです。",
     "core": [
       "が好きです"
@@ -671,6 +681,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-11",
     "stage": 1,
+    "fn": "possession",
     "pattern": "これはわたしの___です。",
     "core": [
       "わたしの"
@@ -739,6 +750,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-12",
     "stage": 1,
+    "fn": "ask-what",
     "pattern": "___はどれですか。",
     "core": [
       "はどれですか"
@@ -806,6 +818,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-13",
     "stage": 1,
+    "fn": "request-thing",
     "pattern": "___でお願いします。",
     "core": [
       "でお願いします"
@@ -872,6 +885,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-14",
     "stage": 1,
+    "fn": "not-understand",
     "pattern": "___がわかりません。",
     "core": [
       "がわかりません"
@@ -940,6 +954,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-15",
     "stage": 1,
+    "fn": "dislike",
     "pattern": "___は食べません。",
     "core": [
       "は食べません"
@@ -1006,6 +1021,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f1-16",
     "stage": 1,
+    "fn": "thank",
     "pattern": "___をありがとうございます。",
     "core": [
       "をありがとうございます"
@@ -1072,6 +1088,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-01",
     "stage": 2,
+    "fn": "permission",
     "pattern": "___てもいいですか。",
     "core": [
       "てもいいですか"
@@ -1140,6 +1157,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-02",
     "stage": 2,
+    "fn": "request-action",
     "pattern": "___てください。",
     "core": [
       "てください"
@@ -1206,6 +1224,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-03",
     "stage": 2,
+    "fn": "want",
     "pattern": "___たいです。",
     "core": [
       "たいです"
@@ -1272,6 +1291,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-04",
     "stage": 2,
+    "fn": "invite",
     "pattern": "一緒に___ませんか。",
     "core": [
       "一緒に",
@@ -1339,6 +1359,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-05",
     "stage": 2,
+    "fn": "suggest-time",
     "pattern": "___で会いましょう。",
     "core": [
       "で会いましょう"
@@ -1405,6 +1426,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-06",
     "stage": 2,
+    "fn": "suggest-time",
     "pattern": "じゃあ、___にしましょう。",
     "core": [
       "にしましょう"
@@ -1471,6 +1493,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-07",
     "stage": 2,
+    "fn": "experience",
     "pattern": "___たことがあります。",
     "core": [
       "たことがあります"
@@ -1537,6 +1560,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-08",
     "stage": 2,
+    "fn": "experience",
     "pattern": "___たことがありますか。",
     "core": [
       "たことがありますか"
@@ -1603,6 +1627,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-09",
     "stage": 2,
+    "fn": "reason",
     "pattern": "___から、先に帰ります。",
     "core": [
       "から、先に帰ります"
@@ -1670,6 +1695,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-10",
     "stage": 2,
+    "fn": "decline",
     "pattern": "すみません、___はちょっと…。",
     "core": [
       "はちょっと"
@@ -1734,6 +1760,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-11",
     "stage": 2,
+    "fn": "ongoing",
     "pattern": "今、___ています。",
     "core": [
       "ています"
@@ -1800,6 +1827,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-12",
     "stage": 2,
+    "fn": "live-where",
     "pattern": "___に住んでいます。",
     "core": [
       "に住んでいます"
@@ -1866,6 +1894,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-13",
     "stage": 2,
+    "fn": "past-did",
     "pattern": "昨日、___ました。",
     "core": [
       "昨日",
@@ -1933,6 +1962,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-14",
     "stage": 2,
+    "fn": "look-forward",
     "pattern": "___が楽しみです。",
     "core": [
       "が楽しみです"
@@ -1999,6 +2029,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-15",
     "stage": 2,
+    "fn": "ask-opinion-simple",
     "pattern": "___はどうでしたか。",
     "core": [
       "はどうでしたか"
@@ -2065,6 +2096,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-16",
     "stage": 2,
+    "fn": "suggest-time",
     "pattern": "___はどうですか。",
     "core": [
       "はどうですか"
@@ -2129,6 +2161,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-17",
     "stage": 2,
+    "fn": "symptom",
     "pattern": "___が痛いです。",
     "core": [
       "が痛いです"
@@ -2195,6 +2228,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-18",
     "stage": 2,
+    "fn": "lost-problem",
     "pattern": "___をなくしました。",
     "core": [
       "をなくしました"
@@ -2261,6 +2295,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-19",
     "stage": 2,
+    "fn": "past-did",
     "pattern": "もう___ましたか。",
     "core": [
       "もう",
@@ -2328,6 +2363,7 @@ export const JA_FRAMES: Frame[] = [
   {
     "id": "ja-f2-20",
     "stage": 2,
+    "fn": "recommend-ask",
     "pattern": "___は何がおすすめですか。",
     "core": [
       "何がおすすめですか"
@@ -2387,6 +2423,1382 @@ export const JA_FRAMES: Frame[] = [
         "gloss": {
           "en": "What dessert do you recommend?",
           "ko": "디저트는 뭐가 좋아요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-01",
+    "stage": 3,
+    "fn": "apologize-late",
+    "pattern": "実は、___んです。",
+    "core": [
+      "実は"
+    ],
+    "meaning": {
+      "en": "Explaining what happened: Actually, ___.",
+      "ko": "사정 설명하기: 실은 ___거든요."
+    },
+    "grammar": [
+      1,
+      0
+    ],
+    "expressions": [
+      "実は"
+    ],
+    "examples": [
+      {
+        "text": "実は、寝坊したんです。",
+        "slot": "寝坊した",
+        "cue": {
+          "en": "oversleep",
+          "ko": "늦잠 자다"
+        },
+        "gloss": {
+          "en": "Actually, I overslept.",
+          "ko": "실은 늦잠을 잤거든요."
+        }
+      },
+      {
+        "text": "実は、電車が止まっていたんです。",
+        "slot": "電車が止まっていた",
+        "cue": {
+          "en": "the trains are stopped",
+          "ko": "전철이 멈춰 있다"
+        },
+        "gloss": {
+          "en": "Actually, the trains had stopped.",
+          "ko": "실은 전철이 멈춰 있었거든요."
+        }
+      },
+      {
+        "text": "実は、来月引っ越すんです。",
+        "slot": "来月引っ越す",
+        "cue": {
+          "en": "move house next month",
+          "ko": "다음 달에 이사하다"
+        },
+        "gloss": {
+          "en": "Actually, I'm moving next month.",
+          "ko": "실은 다음 달에 이사하거든요."
+        }
+      },
+      {
+        "text": "実は、昨日から熱があるんです。",
+        "slot": "昨日から熱がある",
+        "cue": {
+          "en": "have had a fever since yesterday",
+          "ko": "어제부터 열이 있다"
+        },
+        "gloss": {
+          "en": "Actually, I've had a fever since yesterday.",
+          "ko": "실은 어제부터 열이 있거든요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-02",
+    "stage": 3,
+    "fn": "complain",
+    "pattern": "すみません、___ないんです。",
+    "core": [
+      "ないんです"
+    ],
+    "meaning": {
+      "en": "Reporting a problem politely: Excuse me, ___ isn't working.",
+      "ko": "문제 알리기: 저기요, ___이 안 돼요."
+    },
+    "grammar": [
+      1,
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "すみません、お湯が出ないんです。",
+        "slot": "お湯が出",
+        "cue": {
+          "en": "hot water comes out",
+          "ko": "뜨거운 물이 나오다"
+        },
+        "gloss": {
+          "en": "Excuse me, there's no hot water.",
+          "ko": "저기요, 뜨거운 물이 안 나와요."
+        }
+      },
+      {
+        "text": "すみません、エアコンがつかないんです。",
+        "slot": "エアコンがつか",
+        "cue": {
+          "en": "the air conditioner turns on",
+          "ko": "에어컨이 켜지다"
+        },
+        "gloss": {
+          "en": "Excuse me, the air conditioner won't turn on.",
+          "ko": "저기요, 에어컨이 안 켜져요."
+        }
+      },
+      {
+        "text": "すみません、部屋の鍵が開かないんです。",
+        "slot": "部屋の鍵が開か",
+        "cue": {
+          "en": "the room door unlocks",
+          "ko": "방 문이 열리다"
+        },
+        "gloss": {
+          "en": "Excuse me, my room door won't unlock.",
+          "ko": "저기요, 방 문이 안 열려요."
+        }
+      },
+      {
+        "text": "すみません、Wi-Fiがつながらないんです。",
+        "slot": "Wi-Fiがつながら",
+        "cue": {
+          "en": "the Wi-Fi connects",
+          "ko": "와이파이가 연결되다"
+        },
+        "gloss": {
+          "en": "Excuse me, the Wi-Fi won't connect.",
+          "ko": "저기요, 와이파이가 연결이 안 돼요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-03",
+    "stage": 3,
+    "fn": "condition",
+    "pattern": "___たら言ってね。",
+    "core": [
+      "たら言って"
+    ],
+    "meaning": {
+      "en": "Saying what to do if something happens: If ___, let me know.",
+      "ko": "조건 말하기: ___(으)면 말해."
+    },
+    "grammar": [
+      2,
+      0,
+      7
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "何かあったら言ってね。",
+        "slot": "何かあっ",
+        "cue": {
+          "en": "something comes up",
+          "ko": "무슨 일이 있다"
+        },
+        "gloss": {
+          "en": "If anything comes up, let me know.",
+          "ko": "무슨 일 있으면 말해."
+        }
+      },
+      {
+        "text": "手伝えることがあったら言ってね。",
+        "slot": "手伝えることがあっ",
+        "cue": {
+          "en": "there is something I can help with",
+          "ko": "도울 일이 있다"
+        },
+        "gloss": {
+          "en": "If there's anything I can help with, let me know.",
+          "ko": "도울 일 있으면 말해."
+        }
+      },
+      {
+        "text": "駅に着いたら言ってね。",
+        "slot": "駅に着い",
+        "cue": {
+          "en": "arrive at the station",
+          "ko": "역에 도착하다"
+        },
+        "gloss": {
+          "en": "Let me know when you get to the station.",
+          "ko": "역에 도착하면 말해."
+        }
+      },
+      {
+        "text": "疲れたら言ってね。",
+        "slot": "疲れ",
+        "cue": {
+          "en": "get tired",
+          "ko": "피곤하다"
+        },
+        "gloss": {
+          "en": "If you get tired, let me know.",
+          "ko": "피곤하면 말해."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-04",
+    "stage": 3,
+    "fn": "polite-request",
+    "pattern": "よかったら、___てもらえますか。",
+    "core": [
+      "てもらえますか"
+    ],
+    "meaning": {
+      "en": "Asking more politely: If you don't mind, could you ___?",
+      "ko": "더 공손하게 부탁하기: 괜찮으면 ___ 주실 수 있어요?"
+    },
+    "grammar": [
+      4,
+      2
+    ],
+    "expressions": [
+      "よかったら"
+    ],
+    "examples": [
+      {
+        "text": "よかったら、見てもらえますか。",
+        "slot": "見",
+        "cue": {
+          "en": "take a look",
+          "ko": "봐 주다"
+        },
+        "gloss": {
+          "en": "If you don't mind, could you take a look?",
+          "ko": "괜찮으면 좀 봐 주실 수 있어요?"
+        }
+      },
+      {
+        "text": "よかったら、手伝ってもらえますか。",
+        "slot": "手伝っ",
+        "cue": {
+          "en": "help",
+          "ko": "돕다"
+        },
+        "gloss": {
+          "en": "If you don't mind, could you help me?",
+          "ko": "괜찮으면 좀 도와주실 수 있어요?"
+        }
+      },
+      {
+        "text": "よかったら、写真を撮ってもらえますか。",
+        "slot": "写真を撮っ",
+        "cue": {
+          "en": "take a photo",
+          "ko": "사진을 찍다"
+        },
+        "gloss": {
+          "en": "If you don't mind, could you take a photo of us?",
+          "ko": "괜찮으면 사진 좀 찍어 주실 수 있어요?"
+        }
+      },
+      {
+        "text": "よかったら、駅まで送ってもらえますか。",
+        "slot": "駅まで送っ",
+        "cue": {
+          "en": "take me to the station",
+          "ko": "역까지 데려다주다"
+        },
+        "gloss": {
+          "en": "If you don't mind, could you take me to the station?",
+          "ko": "괜찮으면 역까지 데려다주실 수 있어요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-05",
+    "stage": 3,
+    "fn": "opinion",
+    "pattern": "___と思うよ。",
+    "core": [
+      "と思う"
+    ],
+    "meaning": {
+      "en": "Giving your opinion: I think ___.",
+      "ko": "내 생각 말하기: ___ 것 같아."
+    },
+    "grammar": [
+      3,
+      0,
+      7
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "それ、すごくいいと思うよ。",
+        "slot": "すごくいい",
+        "cue": {
+          "en": "really good",
+          "ko": "정말 좋다"
+        },
+        "gloss": {
+          "en": "I think that's really good.",
+          "ko": "그거 정말 좋은 것 같아."
+        }
+      },
+      {
+        "text": "明日は晴れると思うよ。",
+        "slot": "明日は晴れる",
+        "cue": {
+          "en": "it will be sunny tomorrow",
+          "ko": "내일은 맑다"
+        },
+        "gloss": {
+          "en": "I think it'll be sunny tomorrow.",
+          "ko": "내일은 맑을 것 같아."
+        }
+      },
+      {
+        "text": "あの店はまだ開いてると思うよ。",
+        "slot": "まだ開いてる",
+        "cue": {
+          "en": "still be open",
+          "ko": "아직 열려 있다"
+        },
+        "gloss": {
+          "en": "I think that shop is still open.",
+          "ko": "그 가게 아직 열려 있을 것 같아."
+        }
+      },
+      {
+        "text": "田中さんならきっと大丈夫だと思うよ。",
+        "slot": "きっと大丈夫だ",
+        "cue": {
+          "en": "surely be fine",
+          "ko": "분명 괜찮다"
+        },
+        "gloss": {
+          "en": "I'm sure Tanaka will be fine.",
+          "ko": "다나카 씨라면 분명 괜찮을 거야."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-06",
+    "stage": 3,
+    "fn": "guess",
+    "pattern": "___かもしれません。",
+    "core": [
+      "かもしれません",
+      "かも"
+    ],
+    "meaning": {
+      "en": "Saying something may happen: ___ maybe.",
+      "ko": "짐작하기: ___(으)ㄹ지도 몰라요."
+    },
+    "grammar": [
+      3
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "明日は雨が降るかもしれません。",
+        "slot": "明日は雨が降る",
+        "cue": {
+          "en": "it rains tomorrow",
+          "ko": "내일 비가 오다"
+        },
+        "gloss": {
+          "en": "It might rain tomorrow.",
+          "ko": "내일 비가 올지도 몰라요."
+        }
+      },
+      {
+        "text": "少し遅れるかもしれません。",
+        "slot": "少し遅れる",
+        "cue": {
+          "en": "be a little late",
+          "ko": "조금 늦다"
+        },
+        "gloss": {
+          "en": "I might be a little late.",
+          "ko": "조금 늦을지도 몰라요."
+        }
+      },
+      {
+        "text": "電車が混んでいるかもしれません。",
+        "slot": "電車が混んでいる",
+        "cue": {
+          "en": "the train is crowded",
+          "ko": "전철이 붐비다"
+        },
+        "gloss": {
+          "en": "The train might be crowded.",
+          "ko": "전철이 붐빌지도 몰라요."
+        }
+      },
+      {
+        "text": "道を間違えたかもしれません。",
+        "slot": "道を間違えた",
+        "cue": {
+          "en": "take the wrong way",
+          "ko": "길을 잘못 들다"
+        },
+        "gloss": {
+          "en": "I might have taken the wrong way.",
+          "ko": "길을 잘못 든 것 같아요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-07",
+    "stage": 3,
+    "fn": "guess",
+    "pattern": "___そうだね。",
+    "core": [
+      "そうだね"
+    ],
+    "meaning": {
+      "en": "Saying how something looks: It looks ___.",
+      "ko": "보고 짐작하기: ___아/어 보이네."
+    },
+    "grammar": [
+      6,
+      7
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "このケーキ、おいしそうだね。",
+        "slot": "おいし",
+        "cue": {
+          "en": "delicious",
+          "ko": "맛있다"
+        },
+        "gloss": {
+          "en": "This cake looks delicious.",
+          "ko": "이 케이크 맛있어 보이네."
+        }
+      },
+      {
+        "text": "今日は雨が降りそうだね。",
+        "slot": "雨が降り",
+        "cue": {
+          "en": "rain",
+          "ko": "비가 오다"
+        },
+        "gloss": {
+          "en": "Looks like it's going to rain today.",
+          "ko": "오늘 비가 올 것 같네."
+        }
+      },
+      {
+        "text": "その仕事、大変そうだね。",
+        "slot": "大変",
+        "cue": {
+          "en": "tough",
+          "ko": "힘들다"
+        },
+        "gloss": {
+          "en": "That job looks tough.",
+          "ko": "그 일 힘들어 보이네."
+        }
+      },
+      {
+        "text": "あの映画、面白そうだね。",
+        "slot": "面白",
+        "cue": {
+          "en": "interesting",
+          "ko": "재미있다"
+        },
+        "gloss": {
+          "en": "That movie looks interesting.",
+          "ko": "그 영화 재미있어 보이네."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-08",
+    "stage": 3,
+    "fn": "routine",
+    "pattern": "___ようにしています。",
+    "core": [
+      "ようにして"
+    ],
+    "meaning": {
+      "en": "Saying what you make a point of doing: I try to ___.",
+      "ko": "하려고 신경 쓰는 일 말하기: ___도록 하고 있어요."
+    },
+    "grammar": [
+      5
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "毎日少しずつ単語を覚えるようにしています。",
+        "slot": "毎日少しずつ単語を覚える",
+        "cue": {
+          "en": "learn a few words every day",
+          "ko": "매일 조금씩 단어를 외우다"
+        },
+        "gloss": {
+          "en": "I try to learn a few words every day.",
+          "ko": "매일 조금씩 단어를 외우도록 하고 있어요."
+        }
+      },
+      {
+        "text": "夜は早く寝るようにしています。",
+        "slot": "夜は早く寝る",
+        "cue": {
+          "en": "go to bed early at night",
+          "ko": "밤에 일찍 자다"
+        },
+        "gloss": {
+          "en": "I try to go to bed early.",
+          "ko": "밤에는 일찍 자도록 하고 있어요."
+        }
+      },
+      {
+        "text": "できるだけ階段を使うようにしています。",
+        "slot": "できるだけ階段を使う",
+        "cue": {
+          "en": "take the stairs as much as possible",
+          "ko": "되도록 계단을 이용하다"
+        },
+        "gloss": {
+          "en": "I try to take the stairs as much as I can.",
+          "ko": "되도록 계단을 이용하도록 하고 있어요."
+        }
+      },
+      {
+        "text": "毎朝日本語のニュースを聞くようにしています。",
+        "slot": "毎朝日本語のニュースを聞く",
+        "cue": {
+          "en": "listen to the news in Japanese every morning",
+          "ko": "매일 아침 일본어 뉴스를 듣다"
+        },
+        "gloss": {
+          "en": "I try to listen to the news in Japanese every morning.",
+          "ko": "매일 아침 일본어 뉴스를 듣도록 하고 있어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-09",
+    "stage": 3,
+    "fn": "plan-intent",
+    "pattern": "次からは___ようにするね。",
+    "core": [
+      "ようにする"
+    ],
+    "meaning": {
+      "en": "Promising to do better: From now on I'll make sure to ___.",
+      "ko": "다짐하기: 다음부터는 ___도록 할게."
+    },
+    "grammar": [
+      5,
+      0,
+      7
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "次からは早めに家を出るようにするね。",
+        "slot": "早めに家を出る",
+        "cue": {
+          "en": "leave home early",
+          "ko": "일찍 집을 나서다"
+        },
+        "gloss": {
+          "en": "From now on I'll make sure to leave home early.",
+          "ko": "다음부터는 일찍 집에서 나오도록 할게."
+        }
+      },
+      {
+        "text": "次からはちゃんと連絡するようにするね。",
+        "slot": "ちゃんと連絡する",
+        "cue": {
+          "en": "let you know properly",
+          "ko": "제대로 연락하다"
+        },
+        "gloss": {
+          "en": "From now on I'll make sure to let you know.",
+          "ko": "다음부터는 꼭 연락하도록 할게."
+        }
+      },
+      {
+        "text": "次からはアラームを二つかけるようにするね。",
+        "slot": "アラームを二つかける",
+        "cue": {
+          "en": "set two alarms",
+          "ko": "알람을 두 개 맞추다"
+        },
+        "gloss": {
+          "en": "From now on I'll set two alarms.",
+          "ko": "다음부터는 알람을 두 개 맞추도록 할게."
+        }
+      },
+      {
+        "text": "次からは時間をよく確認するようにするね。",
+        "slot": "時間をよく確認する",
+        "cue": {
+          "en": "check the time carefully",
+          "ko": "시간을 잘 확인하다"
+        },
+        "gloss": {
+          "en": "From now on I'll check the time carefully.",
+          "ko": "다음부터는 시간을 잘 확인하도록 할게."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-10",
+    "stage": 3,
+    "fn": "changed",
+    "pattern": "やっと___ようになったよ。",
+    "core": [
+      "ようになった"
+    ],
+    "meaning": {
+      "en": "Saying you can finally do something: I can finally ___.",
+      "ko": "할 수 있게 된 것 말하기: 드디어 ___ 수 있게 됐어."
+    },
+    "grammar": [
+      4,
+      0,
+      7
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "やっと日本語で電話できるようになったよ。",
+        "slot": "日本語で電話できる",
+        "cue": {
+          "en": "make phone calls in Japanese",
+          "ko": "일본어로 전화하다"
+        },
+        "gloss": {
+          "en": "I can finally make phone calls in Japanese.",
+          "ko": "드디어 일본어로 전화할 수 있게 됐어."
+        }
+      },
+      {
+        "text": "やっとパンがうまく焼けるようになったよ。",
+        "slot": "パンがうまく焼ける",
+        "cue": {
+          "en": "bake bread well",
+          "ko": "빵을 잘 굽다"
+        },
+        "gloss": {
+          "en": "I can finally bake bread properly.",
+          "ko": "드디어 빵을 잘 구울 수 있게 됐어."
+        }
+      },
+      {
+        "text": "やっと一人で料理が作れるようになったよ。",
+        "slot": "一人で料理が作れる",
+        "cue": {
+          "en": "cook on my own",
+          "ko": "혼자 요리하다"
+        },
+        "gloss": {
+          "en": "I can finally cook on my own.",
+          "ko": "드디어 혼자 요리할 수 있게 됐어."
+        }
+      },
+      {
+        "text": "やっと自転車に乗れるようになったよ。",
+        "slot": "自転車に乗れる",
+        "cue": {
+          "en": "ride a bicycle",
+          "ko": "자전거를 타다"
+        },
+        "gloss": {
+          "en": "I can finally ride a bike.",
+          "ko": "드디어 자전거를 탈 수 있게 됐어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-11",
+    "stage": 3,
+    "fn": "cannot",
+    "pattern": "ごめん、___なかったんだ。",
+    "core": [
+      "なかったんだ"
+    ],
+    "meaning": {
+      "en": "Saying what you couldn't do: Sorry, I couldn't ___.",
+      "ko": "못 한 일 말하기: 미안, ___ 수 없었어."
+    },
+    "grammar": [
+      4,
+      1,
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "ごめん、連絡できなかったんだ。",
+        "slot": "連絡でき",
+        "cue": {
+          "en": "get in touch",
+          "ko": "연락하다"
+        },
+        "gloss": {
+          "en": "Sorry, I couldn't get in touch.",
+          "ko": "미안, 연락을 못 했어."
+        }
+      },
+      {
+        "text": "ごめん、朝起きられなかったんだ。",
+        "slot": "朝起きられ",
+        "cue": {
+          "en": "get up in the morning",
+          "ko": "아침에 일어나다"
+        },
+        "gloss": {
+          "en": "Sorry, I couldn't get up this morning.",
+          "ko": "미안, 아침에 못 일어났어."
+        }
+      },
+      {
+        "text": "ごめん、電話に出られなかったんだ。",
+        "slot": "電話に出られ",
+        "cue": {
+          "en": "answer the phone",
+          "ko": "전화를 받다"
+        },
+        "gloss": {
+          "en": "Sorry, I couldn't answer the phone.",
+          "ko": "미안, 전화를 못 받았어."
+        }
+      },
+      {
+        "text": "ごめん、チケットが取れなかったんだ。",
+        "slot": "チケットが取れ",
+        "cue": {
+          "en": "get tickets",
+          "ko": "표를 구하다"
+        },
+        "gloss": {
+          "en": "Sorry, I couldn't get the tickets.",
+          "ko": "미안, 표를 못 구했어."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-12",
+    "stage": 3,
+    "fn": "agree",
+    "pattern": "確かに、___ね。",
+    "core": [
+      "確かに"
+    ],
+    "meaning": {
+      "en": "Agreeing: True, ___.",
+      "ko": "맞장구치기: 확실히 ___네."
+    },
+    "grammar": [
+      7,
+      0
+    ],
+    "expressions": [
+      "確かに"
+    ],
+    "examples": [
+      {
+        "text": "確かに、ちょっと高いね。",
+        "slot": "ちょっと高い",
+        "cue": {
+          "en": "a bit expensive",
+          "ko": "좀 비싸다"
+        },
+        "gloss": {
+          "en": "True, it's a bit expensive.",
+          "ko": "확실히 좀 비싸네."
+        }
+      },
+      {
+        "text": "確かに、そのほうが便利だね。",
+        "slot": "そのほうが便利だ",
+        "cue": {
+          "en": "that way is more convenient",
+          "ko": "그게 더 편하다"
+        },
+        "gloss": {
+          "en": "True, that's more convenient.",
+          "ko": "확실히 그게 더 편하네."
+        }
+      },
+      {
+        "text": "確かに、今日は寒いね。",
+        "slot": "今日は寒い",
+        "cue": {
+          "en": "it's cold today",
+          "ko": "오늘은 춥다"
+        },
+        "gloss": {
+          "en": "True, it's cold today.",
+          "ko": "확실히 오늘은 춥네."
+        }
+      },
+      {
+        "text": "確かに、駅から遠いね。",
+        "slot": "駅から遠い",
+        "cue": {
+          "en": "far from the station",
+          "ko": "역에서 멀다"
+        },
+        "gloss": {
+          "en": "True, it's far from the station.",
+          "ko": "확실히 역에서 머네."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-13",
+    "stage": 3,
+    "fn": "clarify",
+    "pattern": "___よね？",
+    "core": [
+      "よね？"
+    ],
+    "meaning": {
+      "en": "Checking something: ___, right?",
+      "ko": "확인하기: ___ 맞지?"
+    },
+    "grammar": [
+      7,
+      0
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "明日の集合は駅だよね？",
+        "slot": "明日の集合は駅だ",
+        "cue": {
+          "en": "we meet at the station tomorrow",
+          "ko": "내일 모이는 곳은 역이다"
+        },
+        "gloss": {
+          "en": "We're meeting at the station tomorrow, right?",
+          "ko": "내일 모이는 곳 역 맞지?"
+        }
+      },
+      {
+        "text": "会議は三時からだよね？",
+        "slot": "会議は三時からだ",
+        "cue": {
+          "en": "the meeting starts at three",
+          "ko": "회의는 세 시부터다"
+        },
+        "gloss": {
+          "en": "The meeting starts at three, right?",
+          "ko": "회의 세 시부터 맞지?"
+        }
+      },
+      {
+        "text": "チケットはもう買ったよね？",
+        "slot": "チケットはもう買った",
+        "cue": {
+          "en": "already bought the tickets",
+          "ko": "표는 벌써 샀다"
+        },
+        "gloss": {
+          "en": "You already bought the tickets, right?",
+          "ko": "표는 벌써 샀지?"
+        }
+      },
+      {
+        "text": "今日は休みだよね？",
+        "slot": "今日は休みだ",
+        "cue": {
+          "en": "today is a day off",
+          "ko": "오늘은 쉬는 날이다"
+        },
+        "gloss": {
+          "en": "Today's a day off, right?",
+          "ko": "오늘 쉬는 날 맞지?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-14",
+    "stage": 3,
+    "fn": "advice-ask",
+    "pattern": "どうすれば___ますか。",
+    "core": [
+      "どうすれば"
+    ],
+    "meaning": {
+      "en": "Asking for advice: What should I do to ___?",
+      "ko": "조언 구하기: 어떻게 하면 ___(으)ㄹ 수 있어요?"
+    },
+    "grammar": [
+      2,
+      4
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "どうすれば日本語が上手になりますか。",
+        "slot": "日本語が上手になり",
+        "cue": {
+          "en": "get good at Japanese",
+          "ko": "일본어를 잘하게 되다"
+        },
+        "gloss": {
+          "en": "How can I get better at Japanese?",
+          "ko": "어떻게 하면 일본어를 잘하게 될까요?"
+        }
+      },
+      {
+        "text": "どうすれば見やすくなりますか。",
+        "slot": "見やすくなり",
+        "cue": {
+          "en": "become easier to read",
+          "ko": "보기 쉬워지다"
+        },
+        "gloss": {
+          "en": "How can I make it easier to read?",
+          "ko": "어떻게 하면 보기 쉬워질까요?"
+        }
+      },
+      {
+        "text": "どうすれば早く覚えられますか。",
+        "slot": "早く覚えられ",
+        "cue": {
+          "en": "remember quickly",
+          "ko": "빨리 외우다"
+        },
+        "gloss": {
+          "en": "How can I memorize things faster?",
+          "ko": "어떻게 하면 빨리 외울 수 있어요?"
+        }
+      },
+      {
+        "text": "どうすれば空港まで行けますか。",
+        "slot": "空港まで行け",
+        "cue": {
+          "en": "get to the airport",
+          "ko": "공항까지 가다"
+        },
+        "gloss": {
+          "en": "How can I get to the airport?",
+          "ko": "어떻게 하면 공항까지 갈 수 있어요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-15",
+    "stage": 3,
+    "fn": "advice-give",
+    "pattern": "___たらいいよ。",
+    "core": [
+      "たらいいよ"
+    ],
+    "meaning": {
+      "en": "Giving advice: You could ___.",
+      "ko": "조언하기: ___(으)면 돼."
+    },
+    "grammar": [
+      2,
+      7
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "先生に聞いたらいいよ。",
+        "slot": "先生に聞い",
+        "cue": {
+          "en": "ask the teacher",
+          "ko": "선생님께 묻다"
+        },
+        "gloss": {
+          "en": "You could ask the teacher.",
+          "ko": "선생님께 물어보면 돼."
+        }
+      },
+      {
+        "text": "フロントに電話したらいいよ。",
+        "slot": "フロントに電話し",
+        "cue": {
+          "en": "call the front desk",
+          "ko": "프런트에 전화하다"
+        },
+        "gloss": {
+          "en": "You could call the front desk.",
+          "ko": "프런트에 전화하면 돼."
+        }
+      },
+      {
+        "text": "今日は早めに寝たらいいよ。",
+        "slot": "今日は早めに寝",
+        "cue": {
+          "en": "go to bed early today",
+          "ko": "오늘은 일찍 자다"
+        },
+        "gloss": {
+          "en": "You should get to bed early today.",
+          "ko": "오늘은 일찍 자면 돼."
+        }
+      },
+      {
+        "text": "駅の近くで探したらいいよ。",
+        "slot": "駅の近くで探し",
+        "cue": {
+          "en": "look near the station",
+          "ko": "역 근처에서 찾다"
+        },
+        "gloss": {
+          "en": "You could look near the station.",
+          "ko": "역 근처에서 찾아보면 돼."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-16",
+    "stage": 3,
+    "fn": "sympathy",
+    "pattern": "___なら、仕方ないね。",
+    "core": [
+      "仕方ない"
+    ],
+    "meaning": {
+      "en": "Showing understanding: If it's ___, it can't be helped.",
+      "ko": "이해해 주기: ___(이)면 어쩔 수 없지."
+    },
+    "grammar": [
+      0,
+      7
+    ],
+    "expressions": [
+      "仕方ない"
+    ],
+    "examples": [
+      {
+        "text": "仕事なら、仕方ないね。",
+        "slot": "仕事",
+        "cue": {
+          "en": "work",
+          "ko": "일"
+        },
+        "gloss": {
+          "en": "If it's work, it can't be helped.",
+          "ko": "일이면 어쩔 수 없지."
+        }
+      },
+      {
+        "text": "雨なら、仕方ないね。",
+        "slot": "雨",
+        "cue": {
+          "en": "rain",
+          "ko": "비"
+        },
+        "gloss": {
+          "en": "If it's raining, it can't be helped.",
+          "ko": "비가 오면 어쩔 수 없지."
+        }
+      },
+      {
+        "text": "熱があるなら、仕方ないね。",
+        "slot": "熱がある",
+        "cue": {
+          "en": "have a fever",
+          "ko": "열이 있다"
+        },
+        "gloss": {
+          "en": "If you have a fever, it can't be helped.",
+          "ko": "열이 있으면 어쩔 수 없지."
+        }
+      },
+      {
+        "text": "電車が止まったなら、仕方ないね。",
+        "slot": "電車が止まった",
+        "cue": {
+          "en": "the train stopped",
+          "ko": "전철이 멈췄다"
+        },
+        "gloss": {
+          "en": "If the train stopped, there's nothing you can do.",
+          "ko": "전철이 멈췄으면 어쩔 수 없지."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-17",
+    "stage": 3,
+    "fn": "wish",
+    "pattern": "せっかくだから、___たいな。",
+    "core": [
+      "せっかくだから"
+    ],
+    "meaning": {
+      "en": "Saying what you'd like to do while you can: Since we're here, I'd like to ___.",
+      "ko": "바람 말하기: 모처럼이니까 ___고 싶다."
+    },
+    "grammar": [
+      0
+    ],
+    "expressions": [
+      "せっかくだから"
+    ],
+    "examples": [
+      {
+        "text": "せっかくだから、温泉にも入りたいな。",
+        "slot": "温泉にも入り",
+        "cue": {
+          "en": "go in the hot spring too",
+          "ko": "온천에도 들어가다"
+        },
+        "gloss": {
+          "en": "Since we're here, I'd like to try the hot spring too.",
+          "ko": "모처럼이니까 온천에도 들어가고 싶다."
+        }
+      },
+      {
+        "text": "せっかくだから、地元の料理を食べたいな。",
+        "slot": "地元の料理を食べ",
+        "cue": {
+          "en": "eat the local food",
+          "ko": "그 지역 음식을 먹다"
+        },
+        "gloss": {
+          "en": "Since we're here, I'd like to eat the local food.",
+          "ko": "모처럼이니까 그 지역 음식을 먹고 싶다."
+        }
+      },
+      {
+        "text": "せっかくだから、写真をたくさん撮りたいな。",
+        "slot": "写真をたくさん撮り",
+        "cue": {
+          "en": "take lots of photos",
+          "ko": "사진을 많이 찍다"
+        },
+        "gloss": {
+          "en": "Since we're here, I want to take lots of photos.",
+          "ko": "모처럼이니까 사진을 많이 찍고 싶다."
+        }
+      },
+      {
+        "text": "せっかくだから、もう一日泊まりたいな。",
+        "slot": "もう一日泊まり",
+        "cue": {
+          "en": "stay one more night",
+          "ko": "하루 더 묵다"
+        },
+        "gloss": {
+          "en": "Since we're here, I'd like to stay one more night.",
+          "ko": "모처럼이니까 하루 더 묵고 싶다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-18",
+    "stage": 3,
+    "fn": "invite",
+    "pattern": "時間があったら、一緒に___よ。",
+    "core": [
+      "時間があったら"
+    ],
+    "meaning": {
+      "en": "Inviting casually: If you have time, let's ___ together.",
+      "ko": "편하게 같이 하자고 하기: 시간 있으면 같이 ___자."
+    },
+    "grammar": [
+      2,
+      0,
+      7
+    ],
+    "expressions": [],
+    "examples": [
+      {
+        "text": "時間があったら、一緒に行こうよ。",
+        "slot": "行こう",
+        "cue": {
+          "en": "go",
+          "ko": "가다"
+        },
+        "gloss": {
+          "en": "If you have time, let's go together.",
+          "ko": "시간 있으면 같이 가자."
+        }
+      },
+      {
+        "text": "時間があったら、一緒にご飯食べようよ。",
+        "slot": "ご飯食べよう",
+        "cue": {
+          "en": "have a meal",
+          "ko": "밥을 먹다"
+        },
+        "gloss": {
+          "en": "If you have time, let's grab a meal together.",
+          "ko": "시간 있으면 같이 밥 먹자."
+        }
+      },
+      {
+        "text": "時間があったら、一緒に映画見ようよ。",
+        "slot": "映画見よう",
+        "cue": {
+          "en": "watch a movie",
+          "ko": "영화를 보다"
+        },
+        "gloss": {
+          "en": "If you have time, let's watch a movie together.",
+          "ko": "시간 있으면 같이 영화 보자."
+        }
+      },
+      {
+        "text": "時間があったら、一緒に練習しようよ。",
+        "slot": "練習しよう",
+        "cue": {
+          "en": "practise",
+          "ko": "연습하다"
+        },
+        "gloss": {
+          "en": "If you have time, let's practise together.",
+          "ko": "시간 있으면 같이 연습하자."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-19",
+    "stage": 3,
+    "fn": "try-doing",
+    "pattern": "とりあえず、___てみます。",
+    "core": [
+      "てみます"
+    ],
+    "meaning": {
+      "en": "Saying you'll give it a try: For now, I'll try ___.",
+      "ko": "해 보겠다고 말하기: 일단 ___아/어 볼게요."
+    },
+    "grammar": [],
+    "expressions": [
+      "とりあえず"
+    ],
+    "examples": [
+      {
+        "text": "とりあえず、やってみます。",
+        "slot": "やっ",
+        "cue": {
+          "en": "do it",
+          "ko": "하다"
+        },
+        "gloss": {
+          "en": "I'll give it a try for now.",
+          "ko": "일단 해 볼게요."
+        }
+      },
+      {
+        "text": "とりあえず、店の人に聞いてみます。",
+        "slot": "店の人に聞い",
+        "cue": {
+          "en": "ask the shop staff",
+          "ko": "가게 직원에게 묻다"
+        },
+        "gloss": {
+          "en": "For now, I'll try asking the shop staff.",
+          "ko": "일단 가게 직원에게 물어볼게요."
+        }
+      },
+      {
+        "text": "とりあえず、一人で作ってみます。",
+        "slot": "一人で作っ",
+        "cue": {
+          "en": "make it on my own",
+          "ko": "혼자 만들다"
+        },
+        "gloss": {
+          "en": "For now, I'll try making it on my own.",
+          "ko": "일단 혼자 만들어 볼게요."
+        }
+      },
+      {
+        "text": "とりあえず、駅まで行ってみます。",
+        "slot": "駅まで行っ",
+        "cue": {
+          "en": "go to the station",
+          "ko": "역까지 가다"
+        },
+        "gloss": {
+          "en": "For now, I'll try going to the station.",
+          "ko": "일단 역까지 가 볼게요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-f3-20",
+    "stage": 3,
+    "fn": "story-past",
+    "pattern": "ちょっと聞いてよ！___んだ。",
+    "core": [
+      "ちょっと聞いてよ"
+    ],
+    "meaning": {
+      "en": "Sharing news: Guess what! ___.",
+      "ko": "있었던 일 이야기하기: 있잖아, ___거든!"
+    },
+    "grammar": [
+      1,
+      0,
+      7
+    ],
+    "expressions": [
+      "ちょっと聞いてよ"
+    ],
+    "examples": [
+      {
+        "text": "ちょっと聞いてよ！ライブのチケットが当たったんだ。",
+        "slot": "ライブのチケットが当たった",
+        "cue": {
+          "en": "win concert tickets",
+          "ko": "공연 티켓에 당첨되다"
+        },
+        "gloss": {
+          "en": "Guess what! I won concert tickets.",
+          "ko": "있잖아, 공연 티켓에 당첨됐거든!"
+        }
+      },
+      {
+        "text": "ちょっと聞いてよ！昨日、駅で昔の先生に会ったんだ。",
+        "slot": "昨日、駅で昔の先生に会った",
+        "cue": {
+          "en": "run into my old teacher at the station yesterday",
+          "ko": "어제 역에서 옛 선생님을 만나다"
+        },
+        "gloss": {
+          "en": "Guess what! I ran into my old teacher at the station yesterday.",
+          "ko": "있잖아, 어제 역에서 옛날 선생님을 만났거든!"
+        }
+      },
+      {
+        "text": "ちょっと聞いてよ！財布を落としたんだ。",
+        "slot": "財布を落とした",
+        "cue": {
+          "en": "drop my wallet",
+          "ko": "지갑을 떨어뜨리다"
+        },
+        "gloss": {
+          "en": "Listen to this! I lost my wallet.",
+          "ko": "있잖아, 지갑을 잃어버렸어!"
+        }
+      },
+      {
+        "text": "ちょっと聞いてよ！来月、大阪に引っ越すんだ。",
+        "slot": "来月、大阪に引っ越す",
+        "cue": {
+          "en": "move to Osaka next month",
+          "ko": "다음 달에 오사카로 이사하다"
+        },
+        "gloss": {
+          "en": "Guess what! I'm moving to Osaka next month.",
+          "ko": "있잖아, 다음 달에 오사카로 이사해!"
         }
       }
     ]

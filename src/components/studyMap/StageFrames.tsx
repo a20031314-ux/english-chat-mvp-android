@@ -9,7 +9,7 @@ import { usePremium } from "@/contexts/PremiumContext";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
-import { blankOf, framesFor, scriptsWithFrame, type Frame } from "@/lib/curriculum/frames";
+import { blankOf, frameModes, framesFor, scriptsWithFrame, type Frame, type FrameMode } from "@/lib/curriculum/frames";
 import { glossFor, SCRIPT_VOICES, type StageScript } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
@@ -17,11 +17,12 @@ import { playTts, stopTts } from "@/lib/ttsPlayer";
 
 /**
  * 틀 바꿔 말하기(curriculum/frames.ts, 2026-10-28 시범 일본어 1~2단계): 단계 대본 아래 목록 → 틀 하나를 열면 예문 넷을 차례로.
- * "따라 말하기"는 문장을 보고 듣고, "틀만"은 빈칸 틀과 넣을 말만 보고 말한다. 넷을 모두 틀만으로(원문을 열지 않고) 맞히면 통과.
+ * "따라 말하기"는 문장을 보고 듣고, "틀만"은 빈칸 틀과 넣을 말만 보고 말한다. 3단계부터 "내 말로"는 빈칸에 내 이야기를 넣는다.
+ * 넷을 모두 틀만·내 말로(원문을 열지 않고) 맞히면 통과.
  * 끝나면 그 틀이 내 줄에 든 대본으로 이어 간다(onOpenScript — StageScripts가 연다).
  */
 
-type Mode = "shadow" | "blank";
+type Mode = FrameMode;
 type Result = { heard: string; practice: Practice | null; clean: boolean; mode: Mode };
 
 export function StageFrames({
@@ -127,7 +128,7 @@ function FramePlayer({
     done &&
     frame.examples.every((_, i) => {
       const result = results[i];
-      return Boolean(result?.clean && result.mode === "blank" && !revealed[i]);
+      return Boolean(result?.clean && result.mode !== "shadow" && !revealed[i]);
     });
   const scripts = done ? scriptsWithFrame(language, frame) : [];
 
@@ -159,15 +160,17 @@ function FramePlayer({
     if (!example || listening) return;
     stopTts();
     setListening(true);
+    const own = mode === "own";
     const { heard, practice } = await sayLine(example.text, {
       targetLanguage: language as LearningLanguageCode,
       nativeLanguage: locale as LearningLanguageCode,
       isPremium,
       scriptId: frame.id,
+      ...(own ? { frame: frame.pattern, meaning: glossFor(frame.meaning, "en") } : {}),
       onLimit: () => setLimited(true),
     });
     setListening(false);
-    const clean = Boolean(heard) && (compareToTarget(example.text, heard).clean || practice?.good === true);
+    const clean = Boolean(heard) && (own ? practice?.good === true : compareToTarget(example.text, heard).clean || practice?.good === true);
     setResults((current) => ({ ...current, [index]: { heard, practice, clean, mode } }));
   };
 
@@ -196,12 +199,7 @@ function FramePlayer({
         </button>
       </header>
       <div role="group" className="flex shrink-0 gap-1.5 border-b border-line px-4 py-2">
-        {(
-          [
-            ["shadow", ui.scriptModeShadow],
-            ["blank", ui.frameModeBlank],
-          ] as const
-        ).map(([id, label]) => (
+        {frameModes(frame.stage).map((id) => [id, { shadow: ui.scriptModeShadow, blank: ui.frameModeBlank, own: ui.scriptModeOwn }[id]] as const).map(([id, label]) => (
           <button
             key={id}
             type="button"
@@ -218,12 +216,15 @@ function FramePlayer({
         {frame.examples.slice(0, Math.min(index + 1, frame.examples.length)).map((example, i) => {
           const current = i === index;
           const result = results[i];
-          const show = !current || mode === "shadow" || revealed[i] || Boolean(result);
+          const own = (result?.mode ?? mode) === "own";
+          const show = !own && (!current || mode === "shadow" || revealed[i] || Boolean(result));
           return (
             <li key={i} className="mb-2">
               <div className={`rounded-2xl px-3 py-2 ${current ? "border border-amber-300/40 bg-amber-300/[0.06]" : "bg-white/[0.06]"}`}>
                 <p dir="auto" className={current && !result ? "text-note text-slate-200" : "text-caption text-slate-400"}>
-                  {current && !result
+                  {own
+                    ? glossFor(frame.meaning, locale)
+                    : current && !result
                     ? ui.scriptSayPrompt.split("{line}").map((part, k) =>
                         k === 0 ? (
                           part
@@ -238,21 +239,24 @@ function FramePlayer({
                 </p>
                 <div className="mt-1 flex items-start gap-2">
                   <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
-                    {show ? example.text : blankOf(example)}
+                    {own ? (result?.heard || frame.pattern) : show ? example.text : blankOf(example)}
                   </p>
                   {show ? <TTSButton text={example.text} lang={tag} voice={SCRIPT_VOICES.me} className="shrink-0" /> : null}
                 </div>
-                {!show ? (
+                {!show && !own ? (
                   <p dir="auto" className="mt-1 text-caption text-amber-200">
                     ＿＿＿ = {glossFor(example.cue, locale)}
                   </p>
                 ) : null}
                 {result ? (
                   result.clean ? (
-                    <p className="mt-1.5 text-caption text-emerald-300">✓ {ui.scriptClean}</p>
+                    <>
+                      <p className="mt-1.5 text-caption text-emerald-300">✓ {ui.scriptClean}</p>
+                      {own && result.practice ? <p className="mt-1 text-note text-slate-200">{result.practice.note}</p> : null}
+                    </>
                   ) : (
                     <>
-                      <Attempt outcomes={compareToTarget(example.text, result.heard).outcomes} ui={ui} />
+                      {own ? null : <Attempt outcomes={compareToTarget(example.text, result.heard).outcomes} ui={ui} />}
                       {result.practice ? <p className="mt-1.5 text-note text-slate-200">{result.practice.note}</p> : null}
                     </>
                   )
@@ -260,7 +264,7 @@ function FramePlayer({
                 {current && limited ? <p className="mt-2 text-caption text-warn">{ui.scriptLimit}</p> : null}
                 {current && !limited ? (
                   <div className="mt-2 flex flex-wrap justify-end gap-1.5">
-                    {!show ? (
+                    {!show && !own ? (
                       <button type="button" onClick={() => setRevealed((r) => ({ ...r, [i]: true }))} className="rounded-full border border-line px-3 py-1.5 text-caption text-slate-300 hover:bg-white/10">
                         {ui.scriptReveal}
                       </button>
