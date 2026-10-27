@@ -171,7 +171,7 @@ export function practicePrompt(input: {
 
 The sentence they were given: "${input.target}"
 What the recogniser heard: "${input.heard || "(nothing)"}"
-${trouble.length > 0 ? `Where it diverged:\n${trouble.map((line) => `- ${line}`).join("\n")}` : "Every word came through."}
+${trouble.length > 0 ? `Where it diverged (a rough word-by-word alignment — in languages written without spaces it can split one word in two, so judge from the whole heard sentence above):\n${trouble.map((line) => `- ${line}`).join("\n")}` : "Every word came through."}
 
 What you may conclude, and nothing beyond it: a word the recogniser turned into a different word is a word whose sounds did not land, and the word it turned into says which sounds. You are reading text, not listening — you cannot know about vowel length, stress or rhythm, so do not mention them. Never guess at an accent.
 
