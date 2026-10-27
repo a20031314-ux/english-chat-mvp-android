@@ -191,6 +191,32 @@ Reply as JSON only, writing in ${input.nativeLanguage}, politely and in one cons
 "good" is true when nothing is worth raising. "note" is still written then — say what came through well, briefly, without praise it did not earn.`;
 }
 
+/**
+ * "내 말로"(단계 대본 3~5단계, 2026-10-27): 원문을 보지 않고 뜻만 보고 자기 말로 했다. 낱말 비교가 아니라
+ * 그 자리에서 그 뜻이 자연스럽게 통하는지 — good이면 통과. 원어민 줄은 비교 기준이 아니라 한 가지 예.
+ */
+export function ownWordsPrompt(input: {
+  meaning: string;
+  reference: string;
+  heard: string;
+  before: string;
+  targetLanguage: string;
+  nativeLanguage: string;
+}): string {
+  return `Someone learning ${input.targetLanguage} is practising a conversation. They were shown only the meaning of their next line and said it in their own words. You are looking at what a speech recogniser made of it.
+
+${input.before ? `The other person had just said: "${input.before}"\n` : ""}The meaning they had to get across: "${input.meaning}"
+One way a native speaker might say it (not the only right answer): "${input.reference}"
+What the recogniser heard: "${input.heard || "(nothing)"}"
+
+"good" is true when what they said gets that meaning across, fits as a reply at this point, and a native listener would accept it without stumbling — different words from the native line are fine. It is false when the meaning is lost or changed, when a mistake would confuse or sound wrong to a native, or when nothing usable came through. A recogniser slip that sounds the same is not their mistake.
+
+The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is false, say in one sentence what did not come across or what sounds wrong, and how to fix it. When "good" is true, one short line on what worked; if the native line has a more natural turn worth knowing, mention it.
+
+Reply as JSON only, politely and in one consistent level of politeness:
+{"good": true or false, "note": "<one or two sentences>"}`;
+}
+
 export function parsePractice(raw: string): Practice | null {
   let parsed: unknown;
   try {

@@ -12,7 +12,9 @@ import { scriptView, stageViews } from "@/lib/server/stageCopy";
 import { applyEdit, parseEdit, prunePending, skeletonFor, type SkeletonNode } from "@/lib/notes/notebook";
 import { INTERFACE_LANGUAGE_LABELS, coerceLanguageCode } from "@/lib/learningLanguages";
 import { ladderFor } from "@/lib/curriculum/stages";
-import { partHistory, recentMistakes, stageParts, vocabScore, vocabWords } from "@/lib/notes/stageParts";
+import { partHistory, recentMistakes, stageParts, vocabScore, vocabWords, withScripts } from "@/lib/notes/stageParts";
+import { hasScripts } from "@/lib/curriculum/stageScripts";
+import { readPassedScripts } from "@/lib/server/stageScriptStore";
 import { readGrowthRecord } from "@/lib/server/growthStore";
 import { readLearnerProfile } from "@/lib/server/learnerProfileStore";
 import { statusOf } from "@/lib/learner/profile";
@@ -31,6 +33,7 @@ export const maxDuration = 60;
  *   phrases(습득한 표현이 든 칸 [{ key, text, state, node }] — 칸 없는 것은 이 요청 뒤 모델이 고른다).
  *   + parts(단계마다 어휘·문법·표현·발음 [{ order, parts, ready, weakest, expressions }], notes/stageParts.ts),
  *     words(어휘 갈래 목록), pronunciationNotes({ [단계]: 앱 언어 한 줄 }), partDays(지금 단계 갈래별 최근 14일) — 2026-10-25 My 네 갈래.
+ *   + scripts=1(2.76부터): parts[].scripts { done, total, passed } 그리고 ready에 대본 통과가 더해짐(대본이 있는 언어만).
  * GET ?lang=&shot=<화면 id> → { image } — 카드에 붙인 화면.
  * POST { language, edit } — 카드 옮기기·메모·지우기, 칸 더하기·이름 바꾸기·지우기·메모, 제안 칸 받기,
  *   후보 넣기(commit: ids, shots)·버리기(dismiss) → { ok, cards, custom, renames, memos, pending }
@@ -130,6 +133,10 @@ export async function GET(request: NextRequest) {
     // 요소 태그: 튜터가 최근 2주에 짚은 갈래(노트 카드 + 오늘의 학습 후보) — "다음 단계까지"를 자주 짚이는 갈래로.
     const mistakes = recentMistakes([...record.cards, ...record.pending], Date.now());
     parts = source.stages.map((s) => stageParts({ stage: s, language, ledger, phrases: record.phrases, constructionsMastered: mastered, pronunciation, vocab, mistakes }));
+    // 대본이 있는 언어: 다음 단계 = 네 갈래 + 그 단계 대본 모두 통과(2026-10-27). 옛 앱은 scripts=1을 안 보내 예전 조건 그대로.
+    if (request.nextUrl.searchParams.get("scripts") === "1" && hasScripts(language)) {
+      parts = withScripts(parts, language, await readPassedScripts(userId, language));
+    }
     // 그래프 보기: 지금 단계 네 갈래의 최근 14일(사용자 시간대).
     const here = source.stages.find((s) => s.order === stage) ?? source.stages[0];
     const offset = parseOffset(request.headers.get(TZ_OFFSET_HEADER));

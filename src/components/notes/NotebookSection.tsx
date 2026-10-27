@@ -10,6 +10,7 @@ import { sceneShotFor } from "@/lib/notes/sceneShots";
 import { onLocate, takeLocate, type LocateHandoff } from "@/lib/notes/locateHandoff";
 import { PART_IDS, shareOf, type PartId, type StageParts } from "@/lib/notes/stageParts";
 import { sendAppIntent } from "@/lib/appIntents";
+import { StageScripts } from "@/components/studyMap/StageScripts";
 
 /**
  * 노트의 뼈대 칸(글자·소리·문법)과 내가 만든 칸, 그 안의 짚은 장면 카드(notes/notebook.ts, /api/notebook).
@@ -119,6 +120,8 @@ export function NotebookSection({
   // 문장분석 시트 "My에서 찾기"로 넘어온 궁금한 장면(lib/notes/locateHandoff.ts) — 그 칸을 열고 "이 장면 넣기".
   const [question, setQuestion] = useState<LocateHandoff | null>(null);
   const [focusStage, setFocusStage] = useState<number | null>(null);
+  // 대본을 통과하면 다시 불러 다음 단계 조건(parts[].ready)을 새로.
+  const [reload, setReload] = useState(0);
   const loaded = Boolean(book);
   useEffect(() => {
     if (!loaded) return;
@@ -135,7 +138,7 @@ export function NotebookSection({
 
   useEffect(() => {
     let cancelled = false;
-    fetch(apiUrl(`/api/notebook?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(locale)}`), {
+    fetch(apiUrl(`/api/notebook?lang=${encodeURIComponent(language)}&ui=${encodeURIComponent(locale)}&scripts=1`), {
       headers: entitlementHeaders(isPremium),
     })
       .then((response) => (response.ok ? response.json() : null))
@@ -146,7 +149,7 @@ export function NotebookSection({
     return () => {
       cancelled = true;
     };
-  }, [language, locale, isPremium]);
+  }, [language, locale, isPremium, reload]);
 
   const edit = useCallback(
     async (change: NotebookEdit) => {
@@ -311,6 +314,16 @@ export function NotebookSection({
           onNextStage={onNextStage}
           canSpeak={canSpeak}
           focusPart={focusPart}
+          scripts={(order, row) => (
+            <StageScripts
+              ui={ui}
+              locale={locale}
+              language={language}
+              stage={order}
+              passed={row?.scripts?.passed ?? []}
+              onPassed={() => setReload((n) => n + 1)}
+            />
+          )}
         />
       ) : null}
       {!frame && (view === "net" || view === "graph") && book.parts?.length ? (
@@ -597,6 +610,7 @@ function StageFrame({
   onNextStage,
   canSpeak,
   focusPart = null,
+  scripts,
 }: {
   ui: UICopy;
   stages: { order: number; title: string }[];
@@ -619,6 +633,8 @@ function StageFrame({
   canSpeak: boolean;
   /** 망·그래프에서 누른 갈래 — 지금 단계의 그 갈래를 연다. */
   focusPart?: PartId | null;
+  /** 그 단계 대본(맨 위, 2026-10-27 "My탭도 대본에 맞추고"). */
+  scripts?: (order: number, row: StageParts | null) => ReactNode;
 }) {
   const now = Math.max(1, Math.min(current, stages.length));
   const [shown, setShown] = useState(focus ?? now);
@@ -734,6 +750,7 @@ function StageFrame({
       </ol>
       {/* 단계 = 말하는 힘의 크기(상황 이름이 아님, 2026-10-25). 제목은 단계 번호(stageNumber)만 — 상황처럼 읽히는 단계 제목은 뺌(사용자 요청 2026-10-25). */}
       <p className={`mt-3 text-note font-semibold ${shown > now ? "text-slate-400" : "text-ink"}`}>{ui.stageNumber.replace("{n}", String(shown))}</p>
+      {scripts?.(shown, stageParts)}
 
       {stageParts ? (
         <>
@@ -747,6 +764,12 @@ function StageFrame({
               >
                 {ui.partReady} ›
               </button>
+            ) : !stageParts.weakest && stageParts.scripts && stageParts.scripts.done < stageParts.scripts.total ? (
+              <div className="mt-2 flex items-center gap-2 rounded-xl border border-warn/40 bg-warn/10 px-3 py-2">
+                <span className="min-w-0 flex-1 text-note text-ink">
+                  {ui.scriptsToNext.replace("{n}", String(stageParts.scripts.total - stageParts.scripts.done))}
+                </span>
+              </div>
             ) : stageParts.weakest ? (
               <div className="mt-2 flex items-center gap-2 rounded-xl border border-warn/40 bg-warn/10 px-3 py-2">
                 <span className="min-w-0 flex-1 text-note text-ink">{ui.partToNext.replace("{part}", label[stageParts.weakest])}</span>

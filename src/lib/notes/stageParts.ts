@@ -18,6 +18,7 @@
  * 순수.
  */
 import { STAGE_DONE_SHARE, stageProgress } from "../curriculum/stages/index.ts";
+import { scriptTally } from "../curriculum/stageScripts.ts";
 import type { Stage } from "../curriculum/stages/types.ts";
 import type { Ledger, LedgerState } from "../learner/ledger.ts";
 import { ledgerKey } from "../learner/ledger.ts";
@@ -50,6 +51,8 @@ export type StageParts = {
   weakest: PartId | null;
   /** 그 단계 핵심 표현과 지금 상태(표현 갈래를 열면 보이는 목록). */
   expressions: { text: string; state: LedgerState | null }[];
+  /** 그 단계 대본(curriculum/stageScripts.ts): 통과한 수·전체·통과한 id. 대본이 있는 언어에서 앱이 scripts=1로 물을 때만. */
+  scripts?: { done: number; total: number; passed: string[] };
 };
 
 export function shareOf(part: PartView): number {
@@ -150,6 +153,18 @@ export function stageParts(input: {
   });
 
   return { order: stage.order, parts, ready, weakest, expressions };
+}
+
+/**
+ * 다음 단계 = 네 갈래 70% + 그 단계 대본을 모두 통과(2026-10-27 사용자 "네 갈래 70% + 대본").
+ * 대본이 없는 언어·단계는 예전 조건 그대로. 옛 앱(대본 화면 없음)은 이걸 거치지 않는다(/api/notebook scripts=1일 때만).
+ */
+export function withScripts(rows: StageParts[], language: string, passed: ReadonlySet<string>): StageParts[] {
+  return rows.map((row) => {
+    const scripts = scriptTally(language, row.order, passed);
+    if (!scripts.total) return row;
+    return { ...row, scripts, ready: row.ready && scripts.done >= scripts.total };
+  });
 }
 
 /** 표현이 채우는 칸: 주 칸 + 함께 걸친 문법 칸. */
