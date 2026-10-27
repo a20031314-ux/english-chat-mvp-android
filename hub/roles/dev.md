@@ -21,7 +21,7 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
-- **My 단계 "대본으로 연습" 시범 (2026-10-27, 사용자 "가리거나 멈추고 따라 말해보기 > 확인", 앱 2.76 + 서버 practice 설명 언어 고침):** `lib/curriculum/stageScripts.ts`(ko·ja·es 1~2단계 12개, 뜻 en·ko), `studyMap/StageScripts.tsx`(따라 말하기·첫 글자만·가리기, sayLine 비교). 다음 후보(사용자 결정): 다른 언어·3~5단계 대본을 미리 만들지(모델로 만들어 검수) vs 그때그때 만들기, 뜻 14개 언어.
+- **단계 대본 1~5단계 + 다음 단계 조건 (2026-10-27, 사용자 "처음 배우는 단계부터 원어민과 대화가 가능한 수준까지 … My탭도 맞추고" → 네 갈래 70% + 대본, ko·ja·es 먼저, 서버 바로·화면 2.76):** `curriculum/stageScripts.ts` + `stageScripts/{ko,ja,es}.ts`(단계 상황 넷마다 하나, 60개, Claude가 쓰고 다시 고침 — 원어민 확인 전), `StageScripts`(1~2 따라·첫 글자·가리기, 3~5 따라·가리기·내 말로, 3~4 상대 alt, 5 goal·통화로), 통과 `/api/curriculum/scripts`·`stageScripts:v1`, `/api/notebook?scripts=1` → `withScripts`. 다음: 나머지 11개 언어 대본, 원어민 확인(특히 alt 이음·스페인어 스페인식 낱말·한국어 숫자 한글 표기), 뜻 14개 언어.
 - **통화 중 내 말은 오류 있을 때만 (2026-10-27, 앱 2.76):** `lineView.ts`·"내 말" 버튼. 다음 단계 후보(사용자에게 제안만): 튜터 줄도 마지막 한 줄만(통화 화면처럼)·📌 고정. 지켜볼 것: 내 줄이 빠지면 튜터 줄이 연달아 보여 혼잣말처럼 읽힘.
 - **My 예전 기능 뺌 (2026-10-27, 사용자 "My는 변경내용 읽어보고 예전기능은 다 지워줘" → 넷 다 고름, 앱 다음 빌드):** My의 오늘 해볼 것·목표 지도 ›(LearnerPanel·MapView·TopicSheet·MissionScreen·TopicItems 지움)·직접 묻기(AskBox)·노트 목차(장 8×주제 3, `/api/notes/place` 안 부름) + 문장분석 "지도에 넣기"(MarkForMap은 알아요/모르겠어요만). NextStepCard는 지도 할 일(`tab: map`)을 거름, `openTopic` 신호 없앰. 사용법 `r278=1`(옛 빌드 `mapBefore278.json`).
   남은 것: 쓰지 않게 된 문구 키(myAsk*·mission*·partGoalMap·nextOnMap·notesView*·markToMap 등, 옛 앱은 자기 문구를 들고 있어 지워도 됨)·`lib/curriculum/recommend.ts`·`lib/notes/outline.ts` 화면용 정리, 최소 지원 2.75 이상 때 옛 API(STRUCTURE "밖에서 부르는 API") 지움. 지도 기록은 단계·체크용으로 남김(지도 그리기 Sonnet 호출도 그대로 — 단계만 필요하면 가볍게 바꿀지 다음에).
