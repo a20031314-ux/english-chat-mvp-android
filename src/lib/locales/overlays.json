@@ -685,7 +685,10 @@
     "scriptTodayTitle": "今日の台本",
     "scriptWhyGrammar": "最近よく直されたところ:{items}",
     "scriptWhyExpression": "まだ覚えていない表現:{items}",
-    "scriptWhyNext": "まだやっていない台本"
+    "scriptWhyNext": "まだやっていない台本",
+    "framesTitle": "型で言いかえ",
+    "frameModeBlank": "型だけ",
+    "frameScriptsTitle": "この型が出てくる台本"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1373,7 +1376,10 @@
     "scriptTodayTitle": "今日剧本",
     "scriptWhyGrammar": "最近常被纠正：{items}",
     "scriptWhyExpression": "还没学会的表达：{items}",
-    "scriptWhyNext": "还没做过的剧本"
+    "scriptWhyNext": "还没做过的剧本",
+    "framesTitle": "句型替换练习",
+    "frameModeBlank": "只看句型",
+    "frameScriptsTitle": "用到这个句型的剧本"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2063,7 +2069,10 @@
     "scriptTodayTitle": "Kịch bản hôm nay",
     "scriptWhyGrammar": "Gần đây hay bị sửa: {items}",
     "scriptWhyExpression": "Cách nói chưa học: {items}",
-    "scriptWhyNext": "Kịch bản bạn chưa làm"
+    "scriptWhyNext": "Kịch bản bạn chưa làm",
+    "framesTitle": "Đổi mẫu câu",
+    "frameModeBlank": "Chỉ mẫu câu",
+    "frameScriptsTitle": "Kịch bản có mẫu câu này"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2758,7 +2767,10 @@
     "scriptTodayTitle": "Dialogue du jour",
     "scriptWhyGrammar": "Corrigé récemment : {items}",
     "scriptWhyExpression": "Expressions à apprendre : {items}",
-    "scriptWhyNext": "Un dialogue pas encore fait"
+    "scriptWhyNext": "Un dialogue pas encore fait",
+    "framesTitle": "Changer la structure",
+    "frameModeBlank": "Structure seule",
+    "frameScriptsTitle": "Dialogues avec cette structure"
   },
   "it": {
     "archive": "Report",
@@ -3644,7 +3656,10 @@
     "scriptTodayTitle": "Copione di oggi",
     "scriptWhyGrammar": "Corretto di recente: {items}",
     "scriptWhyExpression": "Espressioni da imparare: {items}",
-    "scriptWhyNext": "Un copione non ancora fatto"
+    "scriptWhyNext": "Un copione non ancora fatto",
+    "framesTitle": "Cambia lo schema",
+    "frameModeBlank": "Solo lo schema",
+    "frameScriptsTitle": "Copioni con questo schema"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4342,7 +4357,10 @@
     "scriptTodayTitle": "Roteiro de hoje",
     "scriptWhyGrammar": "Corrigido recentemente: {items}",
     "scriptWhyExpression": "Expressões a aprender: {items}",
-    "scriptWhyNext": "Um roteiro que você ainda não fez"
+    "scriptWhyNext": "Um roteiro que você ainda não fez",
+    "framesTitle": "Troque a estrutura",
+    "frameModeBlank": "Só a estrutura",
+    "frameScriptsTitle": "Roteiros com esta estrutura"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5226,7 +5244,10 @@
     "scriptTodayTitle": "Сценарий на сегодня",
     "scriptWhyGrammar": "Недавно исправляли: {items}",
     "scriptWhyExpression": "Ещё не выучено: {items}",
-    "scriptWhyNext": "Сценарий, который вы ещё не прошли"
+    "scriptWhyNext": "Сценарий, который вы ещё не прошли",
+    "framesTitle": "Подставь в шаблон",
+    "frameModeBlank": "Только шаблон",
+    "frameScriptsTitle": "Сценарии с этим шаблоном"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5920,7 +5941,10 @@
     "scriptTodayTitle": "Naskah hari ini",
     "scriptWhyGrammar": "Baru-baru ini sering dikoreksi: {items}",
     "scriptWhyExpression": "Ungkapan yang belum dipelajari: {items}",
-    "scriptWhyNext": "Naskah yang belum kamu kerjakan"
+    "scriptWhyNext": "Naskah yang belum kamu kerjakan",
+    "framesTitle": "Ganti pola kalimat",
+    "frameModeBlank": "Pola saja",
+    "frameScriptsTitle": "Naskah dengan pola ini"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6608,7 +6632,10 @@
     "scriptTodayTitle": "نص اليوم",
     "scriptWhyGrammar": "صُحّح مؤخرًا: {items}",
     "scriptWhyExpression": "عبارات لم تتعلمها بعد: {items}",
-    "scriptWhyNext": "نص لم تجربه بعد"
+    "scriptWhyNext": "نص لم تجربه بعد",
+    "framesTitle": "بدّل في القالب",
+    "frameModeBlank": "القالب فقط",
+    "frameScriptsTitle": "نصوص فيها هذا القالب"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7296,7 +7323,10 @@
     "scriptTodayTitle": "บทของวันนี้",
     "scriptWhyGrammar": "ถูกแก้บ่อยช่วงนี้: {items}",
     "scriptWhyExpression": "สำนวนที่ยังไม่ได้เรียน: {items}",
-    "scriptWhyNext": "บทที่ยังไม่ได้ทำ"
+    "scriptWhyNext": "บทที่ยังไม่ได้ทำ",
+    "framesTitle": "เปลี่ยนคำในแพตเทิร์น",
+    "frameModeBlank": "แพตเทิร์นอย่างเดียว",
+    "frameScriptsTitle": "บทที่มีแพตเทิร์นนี้"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7984,6 +8014,9 @@
     "scriptTodayTitle": "आज की स्क्रिप्ट",
     "scriptWhyGrammar": "हाल में बार-बार सुधारा गया: {items}",
     "scriptWhyExpression": "अभी सीखनी बाकी अभिव्यक्तियाँ: {items}",
-    "scriptWhyNext": "जो स्क्रिप्ट अभी नहीं की"
+    "scriptWhyNext": "जो स्क्रिप्ट अभी नहीं की",
+    "framesTitle": "ढाँचे में बदलकर बोलें",
+    "frameModeBlank": "सिर्फ़ ढाँचा",
+    "frameScriptsTitle": "इस ढाँचे वाली स्क्रिप्ट"
   }
 }
