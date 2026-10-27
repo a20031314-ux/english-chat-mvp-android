@@ -167,3 +167,12 @@ test("a word heard in two pieces is reported as one, glued without spaces in spa
   const last = es.outcomes.at(-1)!;
   assert.equal(last.kind === "changed" && last.heardAs, "ca fe");
 });
+
+test("pieces are shared out by length when several words went missing", () => {
+  const ja = compareToTarget("はじめまして。민지です。", "初め まして ミンジ です");
+  const changed = ja.outcomes.filter((outcome) => outcome.kind === "changed");
+  assert.deepEqual(
+    changed.map((outcome) => outcome.kind === "changed" && outcome.heardAs),
+    ["初めまして", "ミンジ"],
+  );
+});

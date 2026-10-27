@@ -115,12 +115,28 @@ export function compareToTarget(target: string, heard: string): Comparison {
   const drain = (untilI: number, untilJ: number) => {
     const missing = wanted.slice(i, untilI);
     const extra = said.slice(j, untilJ);
-    // When more came out than went missing, the last missing word takes the rest:
-    // 初めまして is cut into 初め + まして, and both stand for はじめまして.
+    // When more came out than went missing, the pieces are shared out by length:
+    // 初めまして is cut into 初め + まして, and both stand for はじめまして. Each missing
+    // word takes pieces until it is about as long as the word, leaving one for each
+    // word after it; the last takes what is left.
     const tail = missing.length > 0 && extra.length > missing.length;
     const glue = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Thai}]/u.test(heard) ? "" : " ";
+    const shares: string[] = [];
+    if (tail) {
+      let k = 0;
+      missing.forEach((word, index) => {
+        const left = missing.length - index - 1;
+        if (!left) {
+          shares.push(extra.slice(k).join(glue));
+          return;
+        }
+        const taken = [extra[k++]!];
+        while (k < extra.length - left && [...taken.join(glue)].length < [...word].length) taken.push(extra[k++]!);
+        shares.push(taken.join(glue));
+      });
+    }
     missing.forEach((word, index) => {
-      const heardAs = tail && index === missing.length - 1 ? extra.slice(index).join(glue) : extra[index];
+      const heardAs = tail ? shares[index] : extra[index];
       outcomes.push(
         heardAs ? { kind: "changed", word, heardAs } : { kind: "dropped", word },
       );
