@@ -8,7 +8,7 @@ import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { coerceLanguageCode, interfaceLanguageName } from "@/lib/learningLanguages";
 import { findScenario } from "@/lib/roleplay/catalog";
-import { compareToTarget, ownWordsPrompt, parsePractice, practicePrompt, type Practice } from "@/lib/roleplay/practice";
+import { compareToTarget, frameUsePrompt, ownWordsPrompt, parsePractice, practicePrompt, type Practice } from "@/lib/roleplay/practice";
 import { noteMostlyUi } from "@/lib/notes/notebook";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -76,7 +76,7 @@ export async function POST(request: NextRequest) {
   const comparison = compareToTarget(target, heard);
   // Saying a line again is what grows pronunciation (learner/growth.ts): an
   // attempt when something was heard, a point when every word came out right.
-  if (heard && typeof body.meaning !== "string") {
+  if (heard && typeof body.meaning !== "string" && typeof body.frame !== "string") {
     after(() =>
       recordPronunciation({ userId: requestUserId(request), language: scenario.language, clean: comparison.clean }),
     );
@@ -89,7 +89,11 @@ export async function POST(request: NextRequest) {
     // "내 말로"(단계 대본 3~5단계): meaning = 보여 준 뜻(앱 언어), before = 바로 앞 상대 줄. 낱말 비교 대신 뜻이 통하는지.
     const meaning = typeof body.meaning === "string" ? body.meaning.trim().slice(0, 300) : "";
     const before = typeof body.before === "string" ? body.before.trim().slice(0, 300) : "";
-    const system = meaning
+    // 틀 "내 말로"(3단계~): frame = 틀 모양, meaning = 그 틀이 하는 일. 빈칸은 학습자가 고른 말 — 틀을 맞게 썼는지.
+    const frame = typeof body.frame === "string" ? body.frame.trim().slice(0, 200) : "";
+    const system = frame
+      ? frameUsePrompt({ frame, meaning, example: target, heard, targetLanguage: interfaceLanguageName(scenario.language), nativeLanguage: nativeName })
+      : meaning
       ? ownWordsPrompt({ meaning, reference: target, heard, before, targetLanguage: interfaceLanguageName(scenario.language), nativeLanguage: nativeName })
       : practicePrompt({
           target,

@@ -233,6 +233,32 @@ Reply as JSON only, politely and in one consistent level of politeness:
 {"good": true or false, "note": "<one or two sentences>"}`;
 }
 
+/**
+ * 틀 "내 말로"(3단계 틀, 2026-10-28): 틀은 그대로 두고 빈칸에 자기 이야기를 넣어 말했다. 빈칸에 무엇을 넣었는지가 아니라
+ * 틀을 맞게(활용·조사·어순까지) 썼는지와 문장이 자연스러운지 — good이면 그 예문 하나 통과.
+ */
+export function frameUsePrompt(input: {
+  frame: string;
+  meaning: string;
+  example: string;
+  heard: string;
+  targetLanguage: string;
+  nativeLanguage: string;
+}): string {
+  return `Someone learning ${input.targetLanguage} is practising one sentence pattern. They keep the pattern and fill the blank (___) with something true about themselves, in their own words. You are looking at what a speech recogniser made of it.
+
+The pattern: "${input.frame}"${input.meaning ? `\nWhat the pattern does: "${input.meaning}"` : ""}
+One example sentence with this pattern (theirs may fill the blank with anything): "${input.example}"
+What the recogniser heard: "${input.heard || "(nothing)"}"
+
+"good" is true when the sentence uses this pattern — with the blank filled by any sensible content, conjugated or joined to the pattern correctly — and a native listener would accept it as natural. It is false when the pattern is missing or changed into a different one, when the filler is not joined to it correctly (wrong form, particle or agreement), or when nothing usable came through. Do not judge what they chose to talk about. A recogniser slip that sounds the same is not their mistake, and the recogniser often drops punctuation.
+
+The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is false, say in one sentence what is off in how the pattern was used and how to fix it. When "good" is true, one short line on what worked.
+
+Reply as JSON only, politely and in one consistent level of politeness:
+{"good": true or false, "note": "<one or two sentences>"}`;
+}
+
 export function parsePractice(raw: string): Practice | null {
   let parsed: unknown;
   try {

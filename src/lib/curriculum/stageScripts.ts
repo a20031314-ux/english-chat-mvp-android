@@ -24,6 +24,8 @@ export type StageScriptLine = {
   gloss: ScriptGloss;
   /** 3~4단계 상대 줄: 같은 자리에서 원어민이 대신 할 수 있는 말(다음 내 줄은 그대로 맞는다). */
   alt?: ScriptVariant[];
+  /** 내 줄이 쓰는 틀 id(curriculum/frames.ts, 1~3단계) — "이 틀이 나오는 대본"·오늘의 대본이 씀. */
+  frames?: string[];
 };
 
 export type StageScript = {

@@ -5,8 +5,10 @@
  * - 최근 2주에 튜터가 짚은 문법 칸(노트 카드의 node·also = 그 단계 문법) — 그 문법을 내 줄에서 쓰는 대본(`grammar` 태그)이 가장 먼저.
  * - 아직 배우지 않은 핵심 표현(장부) — 그 표현을 쓰는 대본(`expressions`). 표현 갈래가 가장 모자라면 무게를 더.
  * - 아직 통과하지 않은 대본(상황 대본은 다음 단계 조건이라 조금 더).
+ * - 익힌 틀(통과한 틀 id)이 내 줄에 든 대본(줄의 `frames` 태그) — 익힌 틀을 장면에서 바로 써 보게, 대본마다 2까지(2026-10-28 1단계).
  * 이유(why)를 같이 돌려줘서 화면이 "왜 이 대본인지" 한 줄을 보인다.
  */
+import { framesOfScript } from "./frames.ts";
 import { isSituationScript, scriptsFor, type StageScript } from "./stageScripts.ts";
 
 export type ScriptWhy =
@@ -40,6 +42,7 @@ function scoreOf(script: StageScript, input: PickInput): { score: number; gramma
   score += expressions.length * (input.weakest === "expression" ? 2 : 1);
   if (!passed) score += isSituationScript(script) ? 3 : 2;
   else score -= 4;
+  score += Math.min(2, framesOfScript(script).filter((id) => input.passed.has(id)).length);
   return { score, grammar, expressions };
 }
 
