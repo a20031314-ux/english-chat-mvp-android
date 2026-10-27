@@ -6,7 +6,9 @@ import { scriptsFor } from "./stageScripts.ts";
 import { ladderFor } from "./stages/index.ts";
 
 /** 틀이 있는 언어·단계(2026-10-28 1단계 "틀을 뼈대로": ko·es·ja 1~3단계). */
-const FRAMED: Record<string, number[]> = { ja: [1, 2, 3], ko: [1, 2, 3], es: [1, 2, 3] };
+const FRAMED: Record<string, number[]> = Object.fromEntries(
+  ["ko", "ja", "es", "en", "zh", "vi", "id", "th", "fr", "it", "pt", "ru", "ar", "hi"].filter((language) => framesFor(language, 1).length).map((language) => [language, [1, 2, 3]]),
+);
 
 test("공통 기능 목록: id 겹침 없음, 이름 en·ko, 단계 1~5", () => {
   const ids = new Set<string>();
@@ -50,7 +52,7 @@ test("틀: 예문 넷, 빈칸·틀 조각이 문장에, 기능 id, 단계 문법
       assert.deepEqual(stage.grammar.map((_, i) => i).filter((i) => !covered.has(i)), [], `${language}-${order} 틀 없는 문법`);
     }
   }
-  assert.deepEqual(framesFor("fr", 1), []);
+  assert.deepEqual(framesFor("xx", 1), []);
   assert.equal(frameById("ja", "없음"), null);
 });
 

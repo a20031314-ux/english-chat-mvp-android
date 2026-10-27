@@ -5,9 +5,11 @@ import { ladderFor } from "./stages/index.ts";
 import { withScripts, type StageParts } from "../notes/stageParts.ts";
 
 const LINES = [8, 10, 12, 14, 16];
+/** 대본이 있는 학습 언어 전부(2026-10-28: ko·ja·es에서 나머지 언어로 늘어남). */
+const SCRIPTED = ["ko", "ja", "es", "en", "zh", "vi", "id", "th", "fr", "it", "pt", "ru", "ar", "hi"].filter((language) => scriptsFor(language, 1).length);
 
-test("ko·ja·es: 단계 상황마다 대본 하나(줄 수는 단계마다 늘고), 핵심 표현은 모두 어느 대본엔가 — 없던 표현은 짧은 표현 대본으로", () => {
-  for (const language of ["ko", "ja", "es"]) {
+test("대본 있는 언어: 단계 상황마다 대본 하나(줄 수는 단계마다 늘고), 핵심 표현은 모두 어느 대본엔가 — 없던 표현은 짧은 표현 대본으로", () => {
+  for (const language of SCRIPTED) {
     const ladder = ladderFor(language)!;
     const ids = new Set<string>();
     for (const stage of ladder.stages) {
@@ -45,7 +47,7 @@ test("ko·ja·es: 단계 상황마다 대본 하나(줄 수는 단계마다 늘�
       }
     }
   }
-  assert.deepEqual(scriptsFor("th", 1), []);
+  assert.deepEqual(scriptsFor("xx", 1), []);
 });
 
 const two: StageScript = {
@@ -85,8 +87,8 @@ test("다음 단계 = 네 갈래 + 그 단계 대본 모두 통과(대본 없는
   assert.equal(some.scripts?.done, 2);
   assert.equal(withScripts([row], "es", new Set(ids))[0]!.ready, true);
   assert.equal(withScripts([{ ...row, ready: false }], "es", new Set(ids))[0]!.ready, false);
-  assert.equal(withScripts([row], "th", new Set())[0]!.ready, true);
-  assert.equal(withScripts([row], "th", new Set())[0]!.scripts, undefined);
+  assert.equal(withScripts([row], "xx", new Set())[0]!.ready, true);
+  assert.equal(withScripts([row], "xx", new Set())[0]!.scripts, undefined);
   // 표현 대본은 다음 단계 조건에 안 든다(통과한 id로는 남음).
   const extra = scriptsFor("es", 1).find((script) => !isSituationScript(script));
   if (extra) {
@@ -97,7 +99,7 @@ test("다음 단계 = 네 갈래 + 그 단계 대본 모두 통과(대본 없는
 });
 
 test("표현 갈래 연습 → 아직인 표현이 든 대본(표현 대본 먼저), 힌트를 봤으면 도움 받음", () => {
-  for (const language of ["ko", "ja", "es"]) {
+  for (const language of SCRIPTED) {
     const stage = ladderFor(language)!.stages[0]!;
     for (const expression of stage.expressions) {
       const script = scriptForExpressions(language, 1, [expression]);
@@ -135,7 +137,7 @@ test("학습자 이름 자리: 닉네임으로 바꾸고, 한국어는 조사를
   assert.equal(cleanBesidesName([{ kind: "changed", word: "민지です" }, { kind: "kept", word: "よろしく" }], "민지"), true);
   assert.equal(cleanBesidesName([{ kind: "changed", word: "よろしく" }], "민지"), false);
   // 이름을 표시한 대본은 그 모양이 실제로 글에 있다
-  for (const language of ["ko", "ja", "es"]) {
+  for (const language of SCRIPTED) {
     for (const stage of [1, 2, 3, 4, 5]) {
       for (const script of scriptsFor(language, stage)) {
         if (!script.name) continue;
@@ -147,7 +149,7 @@ test("학습자 이름 자리: 닉네임으로 바꾸고, 한국어는 조사를
 });
 
 test("문법 태그: 그 단계 문법 번호 안, 앞 단계는 더 낮은 단계", () => {
-  for (const language of ["ko", "ja", "es"]) {
+  for (const language of SCRIPTED) {
     const ladder = ladderFor(language)!;
     for (const stage of ladder.stages) {
       for (const script of scriptsFor(language, stage.order)) {
@@ -163,7 +165,7 @@ test("문법 태그: 그 단계 문법 번호 안, 앞 단계는 더 낮은 단�
 });
 
 test("단계 문법은 모두 어느 대본엔가(내 줄에서) — 오늘의 대본이 짚인 문법으로 고를 수 있게", () => {
-  for (const language of ["ko", "ja", "es"]) {
+  for (const language of SCRIPTED) {
     for (const stage of ladderFor(language)!.stages) {
       const covered = new Set(scriptsFor(language, stage.order).flatMap((script) => script.grammar ?? []));
       const missing = stage.grammar.map((_, i) => i).filter((i) => !covered.has(i));

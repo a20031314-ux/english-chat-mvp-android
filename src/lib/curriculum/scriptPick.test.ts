@@ -22,7 +22,7 @@ test("오늘의 대본: 최근 짚인 문법을 쓰는 대본이 먼저, 그다�
   const next = pickScript({ language: "ja", stage: 2, passed: passedAllButOne, expressionStates: learned, grammarMistakes: new Map() });
   assert.deepEqual(next, { id: scripts[0]!.id, why: { kind: "next" } });
 
-  assert.equal(pickScript({ language: "th", stage: 1, passed: new Set(), expressionStates: {}, grammarMistakes: new Map() }), null);
+  assert.equal(pickScript({ language: "xx", stage: 1, passed: new Set(), expressionStates: {}, grammarMistakes: new Map() }), null);
 });
 
 test("오늘의 대본: 다른 신호가 같으면 익힌 틀이 든 대본을 먼저", () => {
