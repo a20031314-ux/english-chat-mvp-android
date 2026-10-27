@@ -354,7 +354,17 @@ function ScriptPlayer({
                 {/* The line to say now: its meaning framed as an instruction (scriptSayPrompt, user request 2026-10-28). */}
                 {current && !result ? (
                   <p dir="auto" className="text-note text-slate-200">
-                    {ui.scriptSayPrompt.replace("{line}", glossFor(line.gloss, locale))}
+                    {ui.scriptSayPrompt.split("{line}").map((part, k) =>
+                      k === 0 ? (
+                        part
+                      ) : (
+                        <span key={k}>
+                          {/* bdi: an English meaning inside an Arabic prompt keeps its own direction. */}
+                          <bdi dir="auto">{glossFor(line.gloss, locale)}</bdi>
+                          {part}
+                        </span>
+                      ),
+                    )}
                   </p>
                 ) : (
                   <p dir="auto" className="text-caption text-slate-400">
