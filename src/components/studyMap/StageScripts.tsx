@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
+import { StageFrames } from "@/components/studyMap/StageFrames";
 import { Attempt } from "@/components/RoleplayReview";
 import { sayLine } from "@/components/RoleplayOwnLine";
 import { TTSButton } from "@/components/TTSButton";
@@ -185,6 +186,7 @@ export function StageScripts({
           {extras.map(row)}
         </>
       ) : null}
+      <StageFrames ui={ui} locale={locale} language={language} stage={stage} passed={passed} onPassed={onPassed} onOpenScript={setOpen} />
       {open ? (
         <ScriptPlayer
           ui={ui}

@@ -19,6 +19,7 @@
  */
 import { STAGE_DONE_SHARE, stageProgress } from "../curriculum/stages/index.ts";
 import { scriptTally } from "../curriculum/stageScripts.ts";
+import { framesFor } from "../curriculum/frames.ts";
 import type { Stage } from "../curriculum/stages/types.ts";
 import type { Ledger, LedgerState } from "../learner/ledger.ts";
 import { ledgerKey } from "../learner/ledger.ts";
@@ -161,8 +162,11 @@ export function stageParts(input: {
  */
 export function withScripts(rows: StageParts[], language: string, passed: ReadonlySet<string>): StageParts[] {
   return rows.map((row) => {
-    const scripts = scriptTally(language, row.order, passed);
-    if (!scripts.total) return row;
+    const tally = scriptTally(language, row.order, passed);
+    if (!tally.total) return row;
+    // 틀 바꿔 말하기(curriculum/frames.ts)의 통과도 같은 목록에 — 다음 단계 조건(done/total)에는 넣지 않는다.
+    const frames = framesFor(language, row.order).filter((frame) => passed.has(frame.id)).map((frame) => frame.id);
+    const scripts = { ...tally, passed: [...tally.passed, ...frames] };
     return { ...row, scripts, ready: row.ready && scripts.done >= scripts.total };
   });
 }
