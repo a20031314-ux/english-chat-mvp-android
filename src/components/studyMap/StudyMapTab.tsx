@@ -29,6 +29,12 @@ import { AccountCard } from "@/components/account/AccountCard";
 import { isFeatureOn, readFeatures, readFeaturesOnServer, subscribeFeatures } from "@/lib/features";
 import { readEntryDoor } from "@/lib/doors";
 
+/**
+ * 커리큘럼만(2026-10-28 사용자 "커리큘럼이랑 동떨어져 있는 이전 기능은 다 숨겨줘"): 시작은 대화 예시로 단계만 고르고(체크 3질문·지도 그리기 없음,
+ * POST /api/learner/self-check), 내 표현 목록·노트 칸은 숨긴다. 기록은 서버에 그대로. 되돌리려면 false.
+ */
+const CURRICULUM_ONLY = true;
+
 const noSubscribe = () => () => {};
 
 /**
@@ -84,7 +90,28 @@ export function StudyMapTab({
   }, [targetLanguage, isPremium]);
 
   const map = record?.map ?? null;
-  const showForm = !loading && (editing || !map);
+  // 고른 시작 단계(지도 없이 단계만 고른 사람도 단계 보기로).
+  const [chosenStage, setChosenStage] = useState<string | null>(null);
+  const [stageLoaded, setStageLoaded] = useState(!CURRICULUM_ONLY);
+  useEffect(() => {
+    if (!CURRICULUM_ONLY) return;
+    let cancelled = false;
+    void fetch(apiUrl(`/api/learner/self-check?lang=${encodeURIComponent(targetLanguage)}`), { headers: entitlementHeaders(isPremium) })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data: { selfCheck?: { stage?: string } | null } | null) => {
+        if (cancelled) return;
+        setChosenStage(data?.selfCheck?.stage ?? null);
+        setStageLoaded(true);
+      })
+      .catch(() => {
+        if (!cancelled) setStageLoaded(true);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [targetLanguage, isPremium]);
+  const started = Boolean(map) || (CURRICULUM_ONLY && Boolean(chosenStage));
+  const showForm = !loading && stageLoaded && (editing || !started);
   // 단계 범위(영어·일본어·한국어): 대화 예시로 시작 단계 고르기·지도 위 목표 대화. 지도가 바뀌면 진행을 다시 읽는다.
   const stagesData = useStages(targetLanguage, locale, isPremium, map ? `${map.id}:${Object.keys(record?.missions ?? {}).length}` : "");
   const stages = stagesData?.stages ?? null;
@@ -187,13 +214,13 @@ export function StudyMapTab({
     <div className="tb-panel flex h-full min-h-0 flex-col overflow-hidden rounded-2xl">
       <header className="flex shrink-0 items-center justify-between gap-2 border-b border-white/10 px-4 py-3">
         <h1 className="text-base font-semibold text-white">{ui.homeTabProfile}</h1>
-        {map && !editing ? (
+        {started && !editing ? (
           <button
             type="button"
             onClick={() => setEditing(true)}
             className="rounded-lg border border-white/15 px-3 py-1.5 text-[12px] text-neutral-300 hover:bg-white/10"
           >
-            {ui.mapNewGoal}
+            {CURRICULUM_ONLY ? ui.stageRechoose : ui.mapNewGoal}
           </button>
         ) : null}
       </header>
@@ -214,8 +241,24 @@ export function StudyMapTab({
             </button>
           )}
         </div>
-        {loading ? (
+        {loading || !stageLoaded ? (
           <p className="text-sm text-slate-400">{ui.mapLoading}</p>
+        ) : showForm && CURRICULUM_ONLY ? (
+          <StageStart
+            ui={ui}
+            locale={locale}
+            targetLanguage={targetLanguage}
+            isPremium={isPremium}
+            stages={stages}
+            startStage={startStage ?? chosenStage}
+            canCancel={started}
+            onCancel={() => setEditing(false)}
+            onStarted={(stageId) => {
+              setChosenStage(stageId);
+              setStartStage(null);
+              setEditing(false);
+            }}
+          />
         ) : showForm ? (
           <>
             <GoalForm
@@ -248,13 +291,15 @@ export function StudyMapTab({
               </div>
             ) : null}
           </>
-        ) : map ? (
+        ) : started ? (
           <div className="mx-auto max-w-2xl">
             <GrowthNetwork ui={ui} board={board} />
-            <div className="mt-3">
-              <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
-            </div>
-            {notesOn ? (
+            {CURRICULUM_ONLY ? null : (
+              <div className="mt-3">
+                <LedgerPanel ui={ui} locale={locale} targetLanguage={targetLanguage} isPremium={isPremium} />
+              </div>
+            )}
+            {notesOn && !CURRICULUM_ONLY ? (
               <div className="mt-3">
                 <NotesPanel ui={ui} locale={locale} targetLanguage={targetLanguage} />
               </div>
@@ -516,3 +561,68 @@ function MapDrawProgress({ ui, targetLanguage }: { ui: UICopy; targetLanguage: s
   );
 }
 
+
+/**
+ * 커리큘럼만(CURRICULUM_ONLY): 대화 예시로 시작 단계를 고르고 "시작"(지도 그리기·체크 질문 없음). 고르면 서버에 단계만 저장.
+ */
+function StageStart({
+  ui,
+  locale,
+  targetLanguage,
+  isPremium,
+  stages,
+  startStage,
+  canCancel,
+  onCancel,
+  onStarted,
+}: {
+  ui: UICopy;
+  locale: string;
+  targetLanguage: string;
+  isPremium: boolean;
+  stages: StageView[] | null;
+  startStage: string | null;
+  canCancel: boolean;
+  onCancel: () => void;
+  onStarted: (stageId: string) => void;
+}) {
+  const [stage, setStage] = useState<string | null>(startStage);
+  const [saving, setSaving] = useState(false);
+  const [failed, setFailed] = useState(false);
+  const stageOk = Boolean(stage && stages?.some((entry) => entry.id === stage));
+  if (!stages?.length) return <p className="text-sm text-slate-400">{ui.mapLoading}</p>;
+  const start = async () => {
+    if (!stage || !stageOk || saving) return;
+    setSaving(true);
+    setFailed(false);
+    const ok = await fetch(apiUrl("/api/learner/self-check"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+      body: JSON.stringify({ language: targetLanguage, stage }),
+    })
+      .then((response) => response.ok)
+      .catch(() => false);
+    setSaving(false);
+    if (ok) onStarted(stage);
+    else setFailed(true);
+  };
+  return (
+    <div className="mx-auto flex max-w-md flex-col gap-4">
+      <StagePicker ui={ui} stages={stages} chosen={stageOk ? stage : null} onChoose={setStage} disabled={saving} script={{ targetLanguage, locale, isPremium }} />
+      <button
+        type="button"
+        disabled={!stageOk || saving}
+        onClick={() => void start()}
+        className="tb-btn rounded-xl px-4 py-3 text-note font-semibold disabled:opacity-40"
+      >
+        {ui.stageBegin}
+      </button>
+      {failed ? <p className="text-sm text-rose-300">{ui.mapFailed}</p> : null}
+      {canCancel ? (
+        <button type="button" onClick={onCancel} className="self-center text-meta text-slate-400 underline-offset-4 hover:underline">
+          {ui.billingClose}
+        </button>
+      ) : null}
+    </div>
+  );
+}

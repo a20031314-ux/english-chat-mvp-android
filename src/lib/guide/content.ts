@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-28i";
+export const GUIDE_VERSION = "2026-10-28j";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -129,8 +129,7 @@ export const GUIDE_KO: Guide = {
       {
         heading: "1. 대화로 시작",
         body: [
-          "‘{ui:stageCheckTitle}’ 대화를 보고 ‘{ui:stageCan}’·‘{ui:stageAlmost}’·‘{ui:stageHard}’로 답하면 시작할 곳을 찾아요. 레벨 이름은 보이지 않아요.",
-          "아래 체크로 부족한 부분과 위주로 할 것을 고르고 ‘{ui:mapDraw}’. 고른 범위로 지도를 그려요(1분쯤 걸려요).",
+          "‘{ui:stageCheckTitle}’ 대화를 보고 ‘{ui:stageCan}’·‘{ui:stageAlmost}’·‘{ui:stageHard}’로 답하면 시작할 단계를 찾아요. ‘{ui:stageBegin}’을 누르면 그 단계의 대본으로 바로 시작해요. 단계는 위 ‘{ui:stageRechoose}’로 다시 골라요.",
         ],
         shot: "stage-start",
       },
@@ -185,17 +184,16 @@ export const GUIDE_KO: Guide = {
       {
         heading: "8. 노트",
         body: [
-          "튜터가 고친 줄은 자라는 중 맨 위 ‘{ui:notebookToday}’에 모여요. 남길 것만 체크하고 ‘{ui:notebookAddToNotes}’, ‘{ui:notebookWithScreen}’를 켜면 그때 화면도 붙고, 카드는 ‘{ui:myViewMap}’의 맞는 칸에 들어가요.",
-          "칸을 열어 카드를 옮기거나 메모하고, 이름을 바꾸거나 ‘{ui:notebookMine}’에 칸을 더해요. 노트에는 내 표현·단어·물은 것이 한 줄씩 모이고(검색칸으로 찾아요), ‘{ui:homeTabVocab}’ 줄은 단어장이에요.",
-          "문장분석에서 ‘{ui:findInMy}’를 누르면 그 부분이 틀의 어느 칸인지 찾아 그 칸을 열어요. ‘{ui:notebookQuestionAdd}’로 한 줄 설명과 그때 화면을 ❓ 카드로 남겨요(사람끼리 대화는 화면 없이).",
+          "튜터가 고친 줄은 자라는 중 맨 위 ‘{ui:notebookToday}’에 모여요. 남길 것만 체크하고 ‘{ui:notebookAddToNotes}’ — 카드는 ‘{ui:myViewMap}’의 맞는 문법 칸에 들어가요.",
+          "문법 칸을 열면 그 문법이 나오는 대본·문장구조가 보이고, 누르면 바로 열려요.",
+          "문장분석에서 ‘{ui:findInMy}’를 누르면 그 부분이 어느 칸인지 찾아 그 칸을 열어요.",
         ],
         shot: "notebook-today",
       },
       {
         heading: "그 밖에",
         body: [
-          "‘{ui:ledgerTitle}’에 모든 탭에서 만난 표현이 쌓여요. 목표가 바뀌면 ‘{ui:mapNewGoal}’. 배우는 언어마다 따로예요.",
-          "도움 없이 꺼내 쓴 표현만 숙지로 세요(레벨이 아니라 쓸 수 있게 된 표현 수). 튜터가 고친 줄은 ‘{ui:notebookToday}’에서 고른 것만 노트에 남아요. 문장분석에서 표현을 표시하면 내 표현에 남아요.",
+          "도움 없이 꺼내 쓴 표현만 숙지로 세요(레벨이 아니라 쓸 수 있게 된 표현 수). 배우는 언어마다 따로예요.",
           "‘{ui:feedbackOpen}’로 보낸 의견이 반영되면 중요도에 따라 3~20포인트를 드려요.",
         ],
       },
@@ -560,8 +558,7 @@ export const GUIDE_EN: Guide = {
       {
         heading: "1. Start with a conversation",
         body: [
-          "Read ‘{ui:stageCheckTitle}’ and answer ‘{ui:stageCan}’, ‘{ui:stageAlmost}’ or ‘{ui:stageHard}’ to find where to begin. No level names are shown.",
-          "Tick what you find hard and what you want to focus on below, then ‘{ui:mapDraw}’. The map is drawn for the part you chose (about a minute).",
+          "Read the ‘{ui:stageCheckTitle}’ conversation and answer ‘{ui:stageCan}’, ‘{ui:stageAlmost}’ or ‘{ui:stageHard}’ to find your stage. ‘{ui:stageBegin}’ starts that stage's scripts right away. Change stage with ‘{ui:stageRechoose}’ at the top.",
         ],
         shot: "stage-start",
       },
@@ -616,17 +613,16 @@ export const GUIDE_EN: Guide = {
       {
         heading: "8. Notes",
         body: [
-          "Lines the tutor corrected gather in ‘{ui:notebookToday}’ at the top of Growing. Tick the ones to keep and ‘{ui:notebookAddToNotes}’; turn on ‘{ui:notebookWithScreen}’ to attach that moment's screen. Cards go into the matching section of ‘{ui:myViewMap}’.",
-          "Open a section to move or annotate cards, rename it, or add your own in ‘{ui:notebookMine}’. Notes list your phrases, words and questions one per line (search to find one), and ‘{ui:homeTabVocab}’ opens the word list.",
-          "In sentence analysis, ‘{ui:findInMy}’ finds which section that part belongs to and opens it. ‘{ui:notebookQuestionAdd}’ keeps a ❓ card with a one-line explanation and that moment's screen (no screen for chats with people).",
+          "Lines the tutor corrected gather in ‘{ui:notebookToday}’ at the top of Growing. Tick the ones to keep and ‘{ui:notebookAddToNotes}’ — each card goes into its grammar box in ‘{ui:myViewMap}’.",
+          "Open a grammar box to see the scripts and sentence structures that use it; tap one to open it.",
+          "In sentence analysis, ‘{ui:findInMy}’ finds which box that part belongs to and opens it.",
         ],
         shot: "notebook-today",
       },
       {
         heading: "Also",
         body: [
-          "‘{ui:ledgerTitle}’ gathers phrases from every tab. New goal? ‘{ui:mapNewGoal}’. Each learning language has its own.",
-          "Only phrases you produced without help count as mastered (not a level, just how many you can use). Of the lines the tutor corrected, only the ones you pick in ‘{ui:notebookToday}’ stay in your notes. Marking a phrase in sentence analysis keeps it in My phrases.",
+          "Only phrases you produced without help count as mastered (not a level, just how many you can use). Each learning language has its own.",
           "If feedback you send with ‘{ui:feedbackOpen}’ is adopted, you get 3–20 points depending on how much it matters.",
         ],
       },

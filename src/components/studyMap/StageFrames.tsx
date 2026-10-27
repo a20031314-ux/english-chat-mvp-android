@@ -52,6 +52,7 @@ export function StageFrames({
   stage,
   passed,
   redo = [],
+  openFor = null,
   onPassed,
   onOpenScript,
 }: {
@@ -62,11 +63,19 @@ export function StageFrames({
   passed: readonly string[];
   /** 다시 권하는 틀(/api/notebook redo) — 목록에 ◐. */
   redo?: readonly RedoItem[];
+  /** 밖(문법 칸)에서 고른 문장구조를 연다(at = 누른 때). */
+  openFor?: { id: string; at: number } | null;
   onPassed?: (id: string) => void;
   onOpenScript: (script: StageScript) => void;
 }) {
   const frames = framesFor(language, stage);
   const [open, setOpen] = useState<Frame | null>(null);
+  const [handled, setHandled] = useState(0);
+  if (openFor && openFor.at !== handled) {
+    setHandled(openFor.at);
+    const found = frames.find((frame) => frame.id === openFor.id);
+    if (found) setOpen(found);
+  }
   if (!frames.length) return null;
   const done = frames.filter((frame) => passed.includes(frame.id)).length;
   const again = new Set(redo.map((item) => item.frame));

@@ -25,6 +25,14 @@
         "+ 버튼으로 사진을 보내면 사진을 보며 대화할 수 있어요.",
         "무료로는 하루 7번까지 보낼 수 있어요. 구독하면 요금에 따라 더 많이 보낼 수 있어요."
       ]
+    },
+    "my.start": {
+      "heading": "1. 대화로 시작",
+      "body": [
+        "‘{ui:stageCheckTitle}’ 대화를 보고 ‘{ui:stageCan}’·‘{ui:stageAlmost}’·‘{ui:stageHard}’로 답하면 시작할 곳을 찾아요. 레벨 이름은 보이지 않아요.",
+        "아래 체크로 부족한 부분과 위주로 할 것을 고르고 ‘{ui:mapDraw}’. 고른 범위로 지도를 그려요(1분쯤 걸려요)."
+      ],
+      "shot": "stage-start"
     }
   },
   "en": {
@@ -53,6 +61,14 @@
         "Use + to send a photo and talk about it.",
         "Free accounts can send 7 messages a day. Subscriptions give you more, depending on the plan."
       ]
+    },
+    "my.start": {
+      "heading": "1. Start with a conversation",
+      "body": [
+        "Read ‘{ui:stageCheckTitle}’ and answer ‘{ui:stageCan}’, ‘{ui:stageAlmost}’ or ‘{ui:stageHard}’ to find where to begin. No level names are shown.",
+        "Tick what you find hard and what you want to focus on below, then ‘{ui:mapDraw}’. The map is drawn for the part you chose (about a minute)."
+      ],
+      "shot": "stage-start"
     }
   },
   "es": {
@@ -81,6 +97,14 @@
         "Usa + para enviar una foto y hablar sobre ella.",
         "Con la cuenta gratis puedes enviar 7 mensajes al día. Con una suscripción tienes más, según el plan."
       ]
+    },
+    "my.start": {
+      "heading": "1. Empieza con una conversación",
+      "body": [
+        "Lee «{ui:stageCheckTitle}» y responde «{ui:stageCan}», «{ui:stageAlmost}» o «{ui:stageHard}» para encontrar por dónde empezar. No se muestran niveles.",
+        "Abajo marca lo que te cuesta y en qué quieres centrarte, y pulsa «{ui:mapDraw}». El mapa se hace para la parte que elegiste (un minuto más o menos)."
+      ],
+      "shot": "stage-start"
     }
   },
   "ja": {
@@ -109,6 +133,14 @@
         "+ボタンで写真を送って、それについて話すこともできます。",
         "無料では1日7回まで送れます。サブスクリプションではプランに応じてもっと送れます。"
       ]
+    },
+    "my.start": {
+      "heading": "1. 会話で始める",
+      "body": [
+        "「{ui:stageCheckTitle}」の会話を見て「{ui:stageCan}」「{ui:stageAlmost}」「{ui:stageHard}」で答えると、始める場所が見つかります。レベル名は表示されません。",
+        "下のチェックで足りないところと中心にしたいことを選んで「{ui:mapDraw}」。選んだ範囲で地図を作ります（1分ほどかかります）。"
+      ],
+      "shot": "stage-start"
     }
   },
   "zh": {
@@ -137,6 +169,14 @@
         "点击+可以发送照片，一起聊图片。",
         "免费账户每天可以发 7 条。订阅后可按方案发更多。"
       ]
+    },
+    "my.start": {
+      "heading": "1. 从对话开始",
+      "body": [
+        "看“{ui:stageCheckTitle}”的对话，用“{ui:stageCan}”“{ui:stageAlmost}”“{ui:stageHard}”回答，就能找到起点。不会显示级别名称。",
+        "在下面勾选不足之处和想侧重的练习，然后点“{ui:mapDraw}”。会按你选的范围画出地图（大约一分钟）。"
+      ],
+      "shot": "stage-start"
     }
   },
   "vi": {
@@ -165,6 +205,14 @@
         "Dùng dấu + để gửi ảnh và trò chuyện về ảnh đó.",
         "Tài khoản miễn phí gửi được 7 tin nhắn mỗi ngày. Đăng ký thì được nhiều hơn, tùy gói."
       ]
+    },
+    "my.start": {
+      "heading": "1. Bắt đầu bằng hội thoại",
+      "body": [
+        "Xem đoạn hội thoại “{ui:stageCheckTitle}” rồi trả lời “{ui:stageCan}”, “{ui:stageAlmost}” hoặc “{ui:stageHard}” để tìm chỗ bắt đầu. Không hiện tên cấp độ.",
+        "Ở dưới, chọn phần bạn còn yếu và điều muốn tập trung, rồi nhấn “{ui:mapDraw}”. Bản đồ được vẽ theo phần bạn chọn (khoảng một phút)."
+      ],
+      "shot": "stage-start"
     }
   },
   "fr": {
@@ -193,6 +241,14 @@
         "Utilisez + pour envoyer une photo et en discuter.",
         "Le compte gratuit permet 7 messages par jour. Un abonnement en donne plus, selon la formule."
       ]
+    },
+    "my.start": {
+      "heading": "1. Commencer par une conversation",
+      "body": [
+        "Lis « {ui:stageCheckTitle} » et réponds « {ui:stageCan} », « {ui:stageAlmost} » ou « {ui:stageHard} » pour trouver par où commencer. Aucun niveau n'est affiché.",
+        "En dessous, coche ce qui te manque et ce sur quoi te concentrer, puis « {ui:mapDraw} ». La carte est faite pour la partie choisie (environ une minute)."
+      ],
+      "shot": "stage-start"
     }
   },
   "it": {
@@ -221,6 +277,14 @@
         "Con il + puoi inviare una foto e parlarne insieme.",
         "Con l’account gratuito puoi inviare 7 messaggi al giorno. Con un abbonamento ne hai di più, in base al piano."
       ]
+    },
+    "my.start": {
+      "heading": "1. Inizia da una conversazione",
+      "body": [
+        "Leggi «{ui:stageCheckTitle}» e rispondi «{ui:stageCan}», «{ui:stageAlmost}» o «{ui:stageHard}» per trovare da dove partire. Non vengono mostrati livelli.",
+        "Sotto, spunta ciò che ti riesce difficile e su cosa vuoi concentrarti, poi «{ui:mapDraw}». La mappa viene creata per la parte scelta (circa un minuto)."
+      ],
+      "shot": "stage-start"
     }
   },
   "pt": {
@@ -249,6 +313,14 @@
         "Use o + para enviar uma foto e conversar sobre ela.",
         "A conta grátis envia 7 mensagens por dia. Com assinatura você tem mais, conforme o plano."
       ]
+    },
+    "my.start": {
+      "heading": "1. Comece com uma conversa",
+      "body": [
+        "Leia “{ui:stageCheckTitle}” e responda “{ui:stageCan}”, “{ui:stageAlmost}” ou “{ui:stageHard}” para achar por onde começar. Nenhum nível é mostrado.",
+        "Abaixo, marque o que é difícil para você e o que quer focar, depois toque em “{ui:mapDraw}”. O mapa é feito para a parte escolhida (cerca de um minuto)."
+      ],
+      "shot": "stage-start"
     }
   },
   "ru": {
@@ -277,6 +349,14 @@
         "Через + можно отправить фото и обсудить его.",
         "Бесплатно — 7 сообщений в день. С подпиской — больше, в зависимости от тарифа."
       ]
+    },
+    "my.start": {
+      "heading": "1. Начните с разговора",
+      "body": [
+        "Прочитайте «{ui:stageCheckTitle}» и ответьте «{ui:stageCan}», «{ui:stageAlmost}» или «{ui:stageHard}», чтобы найти, с чего начать. Названия уровней не показываются.",
+        "Ниже отметьте, что даётся трудно и на чём хотите сосредоточиться, затем «{ui:mapDraw}». Карта строится для выбранной части (около минуты)."
+      ],
+      "shot": "stage-start"
     }
   },
   "id": {
@@ -305,6 +385,14 @@
         "Gunakan + untuk kirim foto dan ngobrol tentangnya.",
         "Akun gratis bisa kirim 7 pesan per hari. Dengan langganan kamu dapat lebih banyak, tergantung paketnya."
       ]
+    },
+    "my.start": {
+      "heading": "1. Mulai dari percakapan",
+      "body": [
+        "Baca “{ui:stageCheckTitle}” lalu jawab “{ui:stageCan}”, “{ui:stageAlmost}”, atau “{ui:stageHard}” untuk menemukan titik mulai. Nama level tidak ditampilkan.",
+        "Di bawah, centang bagian yang masih sulit dan yang ingin difokuskan, lalu “{ui:mapDraw}”. Peta dibuat untuk bagian yang dipilih (sekitar satu menit)."
+      ],
+      "shot": "stage-start"
     }
   },
   "ar": {
@@ -333,6 +421,14 @@
         "استخدم + لإرسال صورة والدردشة عنها.",
         "الحساب المجاني يسمح بإرسال 7 رسائل يومياً. الاشتراك يمنحك أكثر حسب الخطة."
       ]
+    },
+    "my.start": {
+      "heading": "1. ابدأ بمحادثة",
+      "body": [
+        "اقرأ «{ui:stageCheckTitle}» وأجب بـ«{ui:stageCan}» أو «{ui:stageAlmost}» أو «{ui:stageHard}» لتجد من أين تبدأ. لا تظهر أسماء المستويات.",
+        "حدّد في الأسفل ما يصعب عليك وما تريد التركيز عليه، ثم «{ui:mapDraw}». تُرسم الخريطة للجزء الذي اخترته (نحو دقيقة)."
+      ],
+      "shot": "stage-start"
     }
   },
   "th": {
@@ -361,6 +457,14 @@
         "กด + เพื่อส่งรูปภาพแล้วคุยเกี่ยวกับรูปได้",
         "บัญชีฟรีส่งข้อความได้วันละ 7 ข้อความ สมัครสมาชิกแล้วส่งได้มากขึ้นตามแพ็กเกจ"
       ]
+    },
+    "my.start": {
+      "heading": "1. เริ่มจากบทสนทนา",
+      "body": [
+        "อ่าน “{ui:stageCheckTitle}” แล้วตอบ “{ui:stageCan}” “{ui:stageAlmost}” หรือ “{ui:stageHard}” เพื่อหาจุดเริ่มต้น ไม่มีชื่อระดับแสดง",
+        "ด้านล่างเลือกส่วนที่ยังไม่ถนัดและสิ่งที่อยากเน้น แล้วกด “{ui:mapDraw}” แผนที่จะวาดตามส่วนที่เลือก (ประมาณหนึ่งนาที)"
+      ],
+      "shot": "stage-start"
     }
   },
   "hi": {
@@ -389,6 +493,14 @@
         "+ से फोटो भेजें और उस पर बात करें।",
         "फ़्री खाते से दिन में 7 संदेश भेज सकते हैं। सब्सक्रिप्शन में प्लान के हिसाब से ज़्यादा मिलते हैं।"
       ]
+    },
+    "my.start": {
+      "heading": "1. बातचीत से शुरू करें",
+      "body": [
+        "“{ui:stageCheckTitle}” वाली बातचीत पढ़ें और “{ui:stageCan}”, “{ui:stageAlmost}” या “{ui:stageHard}” चुनें — इससे पता चलता है कि कहाँ से शुरू करें। लेवल के नाम नहीं दिखते।",
+        "नीचे जो मुश्किल लगता है और जिस पर ध्यान देना है उसे चुनें, फिर “{ui:mapDraw}”। चुने हुए हिस्से के लिए नक्शा बनता है (लगभग एक मिनट)।"
+      ],
+      "shot": "stage-start"
     }
   }
 }

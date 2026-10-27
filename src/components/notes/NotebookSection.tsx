@@ -14,7 +14,8 @@ import { ScriptAmount } from "@/components/studyMap/ScriptAmount";
 import { StageScripts, type ScriptRecommend } from "@/components/studyMap/StageScripts";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
 import { useScriptPack } from "@/lib/curriculum/useScriptPack";
-import { scriptForExpressions } from "@/lib/curriculum/stageScripts";
+import { allScriptsFor, glossFor, scriptForExpressions } from "@/lib/curriculum/stageScripts";
+import { allFramesFor } from "@/lib/curriculum/frames";
 
 /**
  * 노트의 뼈대 칸(글자·소리·문법)과 내가 만든 칸, 그 안의 짚은 장면 카드(notes/notebook.ts, /api/notebook).
@@ -50,6 +51,29 @@ type Book = {
   /** 틀린 틀 다시 연습(서버 curriculum/frameRedo.ts, scripts=1). */
   redo?: RedoItem[];
 };
+/**
+ * 커리큘럼(단계·대본·문장구조)만 남기기(2026-10-28 사용자 "커리큘럼이랑 동떨어져 있는 이전 기능은 다 숨겨줘", 노트 틀은 "대본에 붙이기"):
+ * 노트 칸 목록(관용·세부·내 칸·자리 없음)·칸 이름 바꾸기·칸 추가·메모·카드 옮기기를 숨기고, 문법 칸은 그 문법이 나오는 대본·문장구조로 잇는다.
+ * 기록(카드·칸)은 서버에 그대로 — 다시 연습·오늘의 대본이 쓴다. 되돌리려면 false.
+ */
+const CURRICULUM_ONLY = true;
+
+type RelatedItem = { id: string; stage: number; kind: "script" | "frame"; label: string; passed: boolean };
+
+/** 문법 칸(그 단계 문법 번호)이 나오는 대본·문장구조 — 대본의 grammar·뒤 단계의 earlierGrammar, 문장구조의 grammar. */
+function relatedFor(language: string, locale: string, stage: number, index: number, passed: ReadonlySet<string>): RelatedItem[] {
+  const out: RelatedItem[] = [];
+  for (const script of allScriptsFor(language)) {
+    const here = script.stage === stage && (script.grammar ?? []).includes(index);
+    const later = script.stage > stage && (script.earlierGrammar ?? []).includes(`${stage}:${index}`);
+    if (here || later) out.push({ id: script.id, stage: script.stage, kind: "script", label: glossFor(script.setting, locale), passed: passed.has(script.id) });
+  }
+  for (const frame of allFramesFor(language)) {
+    if (frame.stage === stage && (frame.grammar ?? []).includes(index)) out.push({ id: frame.id, stage: frame.stage, kind: "frame", label: frame.pattern, passed: passed.has(frame.id) });
+  }
+  return out.sort((a, b) => a.stage - b.stage || (a.kind === b.kind ? 0 : a.kind === "script" ? -1 : 1)).slice(0, 8);
+}
+
 type PhraseView = { key: string; text: string; state: "met" | "learned" | "mastered"; node: string };
 type Group = NotebookChapter | "mine" | "loose";
 
@@ -130,6 +154,8 @@ export function NotebookSection({
   // 문장분석 시트 "My에서 찾기"로 넘어온 궁금한 장면(lib/notes/locateHandoff.ts) — 그 칸을 열고 "이 장면 넣기".
   const [question, setQuestion] = useState<LocateHandoff | null>(null);
   const [focusStage, setFocusStage] = useState<number | null>(null);
+  // 문법 칸 → 그 문법의 대본·문장구조 열기(CURRICULUM_ONLY).
+  const [jump, setJump] = useState<{ stage: number; id: string; at: number } | null>(null);
   // 대본을 통과하면 다시 불러 다음 단계 조건(parts[].ready)을 새로.
   const [reload, setReload] = useState(0);
   const loaded = Boolean(book);
@@ -327,6 +353,7 @@ export function NotebookSection({
           onNextStage={onNextStage}
           canSpeak={canSpeak}
           focusPart={focusPart}
+          jump={jump}
           scripts={(order, row, openFor) => (
             <StageScripts
               ui={ui}
@@ -351,7 +378,7 @@ export function NotebookSection({
       {!frame && (view === "net" || view === "graph") && book.parts?.length ? (
         <PartsOverview ui={ui} view={view} parts={book.parts.find((row) => row.order === book.stage) ?? book.parts[0]!} days={book.partDays ?? null} onPart={onPart} />
       ) : null}
-      {frame ? (
+      {frame && !CURRICULUM_ONLY ? (
       <ul className="mt-2 divide-y divide-white/5">
         {rows
           .filter((row) => row.show)
@@ -425,6 +452,15 @@ export function NotebookSection({
             onMove={setMoving}
             onShot={setViewShot}
             edit={edit}
+            related={
+              CURRICULUM_ONLY && openNode.view?.chapter === "grammar" && openNode.view.stage !== undefined && openNode.view.index !== undefined
+                ? relatedFor(language, locale, openNode.view.stage, openNode.view.index, new Set((book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])))
+                : undefined
+            }
+            onJump={(stage, id) => {
+              setNodeOpen(null);
+              setJump({ stage, id, at: Date.now() });
+            }}
             onTry={
               onTry && openNode.view?.chapter === "grammar" && openNode.view.stage !== undefined && openNode.view.index !== undefined
                 ? () => {
@@ -634,6 +670,7 @@ function StageFrame({
   focusPart = null,
   scripts,
   scriptFor,
+  jump = null,
 }: {
   ui: UICopy;
   stages: { order: number; title: string }[];
@@ -660,6 +697,8 @@ function StageFrame({
   scripts?: (order: number, row: StageParts | null, openFor: { id: string; at: number } | null) => ReactNode;
   /** 아직 배우지 않은 표현이 든 대본 id(표현 갈래 연습 → 그 대본, 2026-10-28 "표현연결"). */
   scriptFor?: (order: number, open: string[]) => string | null;
+  /** 밖(문법 칸)에서 고른 대본·문장구조 — 그 단계로 옮겨 연다. */
+  jump?: { stage: number; id: string; at: number } | null;
 }) {
   const now = Math.max(1, Math.min(current, stages.length));
   const [shown, setShown] = useState(focus ?? now);
@@ -671,6 +710,13 @@ function StageFrame({
   // 고른 갈래: 처음엔 가장 모자란 갈래(없으면 문법). "My에서 찾기"로 온 문법 칸이면 문법.
   const [picked, setPicked] = useState<PartId | null>(focusPart);
   const [openScript, setOpenScript] = useState<{ id: string; at: number } | null>(null);
+  const [jumped, setJumped] = useState(0);
+  if (jump && jump.at !== jumped) {
+    // 렌더 중 한 번(같은 at은 다시 안 함) — 그 단계를 보이고 대본·문장구조를 연다.
+    setJumped(jump.at);
+    setShown(jump.stage);
+    setOpenScript({ id: jump.id, at: jump.at });
+  }
   const part: PartId = picked ?? (focus ? "grammar" : (stageParts?.weakest ?? "grammar"));
   const inStage = (order: number) => nodes.filter((node) => (node.stage ?? 1) === order);
   const filledOf = (node: NodeView) => Boolean(fill[node.id]) || Boolean(masteredOf?.(node.stage ?? 1, node.index ?? -1));
@@ -1027,6 +1073,8 @@ function NodeBody({
   phrases = [],
   onMovePhrase,
   top,
+  related,
+  onJump,
 }: {
   ui: UICopy;
   locale: string;
@@ -1036,6 +1084,9 @@ function NodeBody({
   phrases?: PhraseView[];
   onMovePhrase?: (key: string) => void;
   top?: ReactNode;
+  /** 이 문법이 나오는 대본·문장구조(CURRICULUM_ONLY, 2026-10-28 "대본에 붙이기"). */
+  related?: RelatedItem[];
+  onJump?: (stage: number, id: string) => void;
   view?: NodeView;
   memo: string;
   cards: FixCard[];
@@ -1062,6 +1113,28 @@ function NodeBody({
         </button>
       ) : null}
 
+      {related?.length ? (
+        <ul className="mt-3 flex flex-col gap-1.5">
+          {related.map((item) => (
+            <li key={item.id}>
+              <button
+                type="button"
+                onClick={() => onJump?.(item.stage, item.id)}
+                className="flex w-full items-center gap-2 rounded-xl border border-line px-3 py-2 text-start hover:bg-white/5"
+              >
+                <span className="shrink-0 text-meta text-slate-400">{item.kind === "frame" ? ui.amountFrames : ui.stageScriptsTitle}</span>
+                <span dir="auto" className="min-w-0 flex-1 truncate text-note text-ink">
+                  {item.label}
+                </span>
+                {item.passed ? <span className="shrink-0 text-caption text-good">✓</span> : null}
+                <span aria-hidden className="shrink-0 text-caption text-slate-500 rtl:rotate-180">›</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : null}
+      {CURRICULUM_ONLY ? null : (
+      <>
       <div className="mt-2 flex flex-wrap gap-1.5">
         <button
           type="button"
@@ -1116,6 +1189,8 @@ function NodeBody({
         dir="auto"
         className="mt-3 w-full resize-y rounded-lg border border-line bg-surface px-3 py-2 text-note text-ink placeholder:text-slate-500"
       />
+      </>
+      )}
 
       {phrases.length ? (
         <ul className="mt-3 space-y-1">
@@ -1127,7 +1202,7 @@ function NodeBody({
                 <span dir="auto" className="min-w-0 flex-1 text-note text-ink">
                   {phrase.text}
                 </span>
-                {onMovePhrase ? (
+                {onMovePhrase && !CURRICULUM_ONLY ? (
                   <button type="button" onClick={() => onMovePhrase(phrase.key)} className="shrink-0 text-caption text-slate-400 hover:text-slate-200">
                     {ui.notebookMove}
                   </button>
@@ -1229,7 +1304,7 @@ function FixCardRow({
           {card.memo}
         </p>
       ) : null}
-      {card.suggest && !card.node ? (
+      {card.suggest && !card.node && !CURRICULUM_ONLY ? (
         <button
           type="button"
           onClick={() => void edit({ op: "acceptSuggest", card: card.id, id: newNodeId() })}
@@ -1271,12 +1346,16 @@ function FixCardRow({
             {ui.notebookScreen}
           </button>
         ) : null}
-        <button type="button" onClick={() => onMove(card.id)} className="shrink-0 hover:text-slate-300">
-          {ui.notebookMove}
-        </button>
-        <button type="button" onClick={() => setMemoOpen((on) => !on)} className="shrink-0 hover:text-slate-300">
-          {ui.notebookMemo}
-        </button>
+        {CURRICULUM_ONLY ? null : (
+          <>
+            <button type="button" onClick={() => onMove(card.id)} className="shrink-0 hover:text-slate-300">
+              {ui.notebookMove}
+            </button>
+            <button type="button" onClick={() => setMemoOpen((on) => !on)} className="shrink-0 hover:text-slate-300">
+              {ui.notebookMemo}
+            </button>
+          </>
+        )}
         <button type="button" onClick={() => void edit({ op: "deleteCard", card: card.id })} className="shrink-0 hover:text-slate-300">
           {ui.notebookDelete}
         </button>

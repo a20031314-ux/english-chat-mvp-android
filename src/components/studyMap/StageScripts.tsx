@@ -105,10 +105,13 @@ export function StageScripts({
   // 같은 대본이면 같은 객체(재생 effect가 다시 돌지 않게).
   const shown = useMemo(() => (open ? personalize(open, language, nickname) : null), [open, language, nickname]);
   const [handled, setHandled] = useState(0);
+  const [frameFor, setFrameFor] = useState<{ id: string; at: number } | null>(null);
   if (openFor && openFor.at !== handled) {
     // 밖에서 고른 대본을 연다(렌더 중 한 번 — 같은 at은 다시 안 연다).
     setHandled(openFor.at);
     setOpen(scripts.find((script) => script.id === openFor.id) ?? null);
+    // 문장구조 id면 아래 StageFrames가 연다(문법 칸 → 문장구조, 2026-10-28).
+    setFrameFor(scripts.some((script) => script.id === openFor.id) ? null : openFor);
   }
   if (!scripts.length) return null;
   const situations = scripts.filter(isSituationScript);
@@ -206,7 +209,7 @@ export function StageScripts({
           {extras.map(row)}
         </>
       ) : null}
-      <StageFrames ui={ui} locale={locale} language={language} stage={stage} passed={passed} redo={redo} onPassed={onPassed} onOpenScript={setOpen} />
+      <StageFrames ui={ui} locale={locale} language={language} stage={stage} passed={passed} redo={redo} openFor={frameFor} onPassed={onPassed} onOpenScript={setOpen} />
       {open ? (
         <ScriptPlayer
           ui={ui}

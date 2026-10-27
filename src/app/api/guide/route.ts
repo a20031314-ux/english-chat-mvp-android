@@ -84,6 +84,8 @@ export async function GET(request: NextRequest) {
         ...newest,
         roleplay: { ...newest.roleplay, sections: newest.roleplay.sections.map((section, index) => before279[GUIDE_SECTION_IDS.roleplay[index]] ?? section) },
         chat: { ...newest.chat, sections: newest.chat.sections.map((section, index) => before279[GUIDE_SECTION_IDS.chat[index]] ?? section) },
+        // 시작(my.start): 2.76부터 단계만 고르기(체크 3질문·지도 그리기 숨김, 2026-10-28 "커리큘럼과 떨어진 예전 기능 숨기기") — 그 전 빌드는 예전 글.
+        map: { ...newest.map, sections: newest.map.sections.map((section, index) => before279[GUIDE_SECTION_IDS.map[index]] ?? section) },
       }
     : newest;
   const withMy: Guide = before278

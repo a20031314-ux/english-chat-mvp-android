@@ -700,7 +700,8 @@
     "scriptAmountTitle": "台本で身についたこと",
     "amountFrames": "文型",
     "amountLines": "言った文",
-    "canDoTitle": "できること"
+    "canDoTitle": "できること",
+    "stageBegin": "この段階で始める"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1403,7 +1404,8 @@
     "scriptAmountTitle": "通过剧本学到的",
     "amountFrames": "句子结构",
     "amountLines": "说过的句子",
-    "canDoTitle": "能做到的事"
+    "canDoTitle": "能做到的事",
+    "stageBegin": "从这个阶段开始"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2108,7 +2110,8 @@
     "scriptAmountTitle": "Học được qua kịch bản",
     "amountFrames": "Cấu trúc câu",
     "amountLines": "Câu đã nói",
-    "canDoTitle": "Việc bạn làm được"
+    "canDoTitle": "Việc bạn làm được",
+    "stageBegin": "Bắt đầu từ đây"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2818,7 +2821,8 @@
     "scriptAmountTitle": "Acquis avec les dialogues",
     "amountFrames": "Structures",
     "amountLines": "Phrases dites",
-    "canDoTitle": "Ce que vous savez faire"
+    "canDoTitle": "Ce que vous savez faire",
+    "stageBegin": "Commencer ici"
   },
   "it": {
     "archive": "Report",
@@ -3719,7 +3723,8 @@
     "scriptAmountTitle": "Imparato con i copioni",
     "amountFrames": "Strutture",
     "amountLines": "Frasi dette",
-    "canDoTitle": "Cosa sai fare"
+    "canDoTitle": "Cosa sai fare",
+    "stageBegin": "Inizia da qui"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4432,7 +4437,8 @@
     "scriptAmountTitle": "Aprendido com roteiros",
     "amountFrames": "Estruturas",
     "amountLines": "Frases ditas",
-    "canDoTitle": "O que você já consegue"
+    "canDoTitle": "O que você já consegue",
+    "stageBegin": "Começar aqui"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5331,7 +5337,8 @@
     "scriptAmountTitle": "Освоено по сценариям",
     "amountFrames": "Структуры",
     "amountLines": "Сказано фраз",
-    "canDoTitle": "Что вы умеете"
+    "canDoTitle": "Что вы умеете",
+    "stageBegin": "Начать отсюда"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6040,7 +6047,8 @@
     "scriptAmountTitle": "Dipelajari lewat naskah",
     "amountFrames": "Struktur",
     "amountLines": "Kalimat diucapkan",
-    "canDoTitle": "Yang sudah bisa kamu lakukan"
+    "canDoTitle": "Yang sudah bisa kamu lakukan",
+    "stageBegin": "Mulai dari sini"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6743,7 +6751,8 @@
     "scriptAmountTitle": "ما تعلّمته بالنصوص",
     "amountFrames": "التراكيب",
     "amountLines": "جمل قلتها",
-    "canDoTitle": "ما تستطيع فعله"
+    "canDoTitle": "ما تستطيع فعله",
+    "stageBegin": "ابدأ من هنا"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7446,7 +7455,8 @@
     "scriptAmountTitle": "สิ่งที่ได้จากบท",
     "amountFrames": "โครงสร้าง",
     "amountLines": "ประโยคที่พูด",
-    "canDoTitle": "สิ่งที่ทำได้"
+    "canDoTitle": "สิ่งที่ทำได้",
+    "stageBegin": "เริ่มที่ขั้นนี้"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8149,6 +8159,7 @@
     "scriptAmountTitle": "स्क्रिप्ट से सीखा",
     "amountFrames": "संरचनाएँ",
     "amountLines": "बोले गए वाक्य",
-    "canDoTitle": "आप क्या कर सकते हैं"
+    "canDoTitle": "आप क्या कर सकते हैं",
+    "stageBegin": "यहीं से शुरू करें"
   }
 }
