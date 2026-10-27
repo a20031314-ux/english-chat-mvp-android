@@ -31,8 +31,10 @@ export type StageScript = {
   id: string;
   /** 단계 순서(1 = 가장 쉬움) — stages의 order와 같다. */
   stage: number;
-  /** 그 단계 situations의 몇 번째(0부터). */
-  situation: number;
+  /** 그 단계 situations의 몇 번째(0부터). 없으면 표현 대본(그 단계 핵심 표현 중 상황 대본에 안 나온 것을 쓰는 짧은 대본). */
+  situation?: number;
+  /** 학습자가 내 줄에서 쓰는 그 단계 핵심 표현(stages expressions 글 그대로) — 통과하면 장부에 오른다(2026-10-28 "표현연결"). */
+  expressions: string[];
   setting: ScriptGloss;
   /** 5단계: 이 대화에서 해낼 것. */
   goal?: ScriptGloss;
@@ -90,11 +92,34 @@ export function glossFor(gloss: ScriptGloss, uiLanguage: string): string {
   return uiLanguage === "ko" ? (gloss.ko ?? gloss.en) : gloss.en;
 }
 
-/** 단계마다 통과한 수 / 대본 수 — /api/notebook parts에 붙는다. */
+/** 상황 대본인지(다음 단계 조건에 드는 것). 표현 대본은 표현 갈래를 채우는 연습. */
+export function isSituationScript(script: StageScript): boolean {
+  return typeof script.situation === "number";
+}
+
+/**
+ * 단계마다 상황 대본 통과 수 / 상황 대본 수(다음 단계 조건) + 통과한 id 전부(표현 대본 포함) — /api/notebook parts에 붙는다.
+ */
 export function scriptTally(language: string, stage: number, passed: ReadonlySet<string>): { done: number; total: number; passed: string[] } {
   const list = scriptsFor(language, stage);
-  const ids = list.filter((script) => passed.has(script.id)).map((script) => script.id);
-  return { done: ids.length, total: list.length, passed: ids };
+  const situations = list.filter(isSituationScript);
+  return {
+    done: situations.filter((script) => passed.has(script.id)).length,
+    total: situations.length,
+    passed: list.filter((script) => passed.has(script.id)).map((script) => script.id),
+  };
+}
+
+/** 통과로 장부에 올릴 결과: 첫 글자 힌트를 본 줄이 있으면 도움 받음, 아니면 혼자. */
+export function passOutcome(runs: Record<number, LineRun>): "unaided" | "helped" {
+  return Object.values(runs).some((run) => run.mode === "hint") ? "helped" : "unaided";
+}
+
+/** 아직 배우지 않은 표현이 든 첫 대본(표현 갈래 연습 → 그 대본을 연다). */
+export function scriptForExpressions(language: string, stage: number, open: readonly string[]): StageScript | null {
+  const wanted = new Set(open);
+  const list = scriptsFor(language, stage);
+  return list.find((script) => !isSituationScript(script) && script.expressions.some((e) => wanted.has(e))) ?? list.find((script) => script.expressions.some((e) => wanted.has(e))) ?? null;
 }
 
 /**
