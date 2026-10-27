@@ -213,16 +213,17 @@ Reply as JSON only, writing in ${input.nativeLanguage}, politely and in one cons
  * 받아쓰기가 떨어뜨린 짧은 낱말(관사·전치사)과 같은 소리 다른 글자는 학습자 잘못이 아니다.
  */
 export function recallPrompt(input: { target: string; heard: string; comparison: Comparison; targetLanguage: string; nativeLanguage: string }): string {
-  const trouble = troubleWords(input.comparison);
-  return `Someone learning ${input.targetLanguage} is practising a dialogue line from memory — the line was hidden, so they had to recall it. You are looking at what a speech recogniser made of what they said.
+  return `Someone learning ${input.targetLanguage} is practising a dialogue line from memory — the line was hidden, so they said it in their own way. You are looking at what a speech recogniser made of what they said.
 
 The line in the script: "${input.target}"
 What the recogniser heard: "${input.heard || "(nothing)"}"
-${trouble.length > 0 ? `Where it differs from the script word by word:\n${trouble.map((line) => `- ${line}`).join("\n")}` : "Every word came through."}
 
-"good" is true when what they said works at this point in the dialogue: the same meaning, grammatical, and something a native speaker would naturally say — even if the wording differs from the script (another tense form with the same meaning, a contraction, a synonym, a different but natural order). It is false only when the meaning changed or got lost, when it is ungrammatical or unnatural, or when too little came through to tell. Speech recognisers drop or blur short unstressed words (articles, prepositions, auxiliaries) and write some words with another spelling of the same sound; do not count those against them unless the rest shows the word was really missing. A transcript with almost nothing recognisable is "false" — say gently that it did not come through and to try again a little slower.
+This is not a dictation check. Decide like a friendly native speaker in that conversation: would you understand the same thing, and does it sound like something people really say?
+- "good" is TRUE when the meaning is the same and it is natural and grammatical, even with different wording. Different but equivalent choices are fine: will vs. going to for a plan, a modal or impersonal form instead of a personal one when the question means the same, a synonym, a contraction, a different natural order, a polite form of the same request, a shorter natural way of saying it.
+- Speech recognisers drop or blur short unstressed words (articles, prepositions such as before days of the week, auxiliaries) and spell some words differently. If the rest of the sentence is right, assume those were said.
+- "good" is FALSE only when the meaning really changed (a different fact, time, person or intention), the grammar is clearly wrong in a way a native would notice (wrong tense for what is meant, wrong form, broken agreement), or too little came through to tell.
 
-The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is true and they used different wording, say in one short line that it works and what the script says ("the script uses …"). When "good" is false, say in one sentence what is off and how to fix it.
+The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is true and the wording differs from the script, say in one short line that it works and quote how the script says it. When "good" is false, say in one sentence what is off and how to fix it; if almost nothing came through, say gently to try again a little slower.
 
 Reply as JSON only, politely and in one consistent level of politeness:
 {"good": true or false, "note": "<one or two sentences>"}`;
