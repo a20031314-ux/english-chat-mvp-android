@@ -73,31 +73,40 @@ export async function POST(request: NextRequest) {
     const model = practiceModel();
     const reasoning = isReasoningModel(model);
     const nativeCode = coerceLanguageCode(body.nativeLanguage);
-    const ask = () =>
+    const nativeName = interfaceLanguageName(nativeCode);
+    const system = practicePrompt({
+      target,
+      heard,
+      comparison,
+      targetLanguage: interfaceLanguageName(scenario.language),
+      nativeLanguage: nativeName,
+    });
+    type Turn = { role: "system" | "user" | "assistant"; content: string };
+    const ask = (messages: Turn[]) =>
       completeChat(client, "roleplayPractice", {
-        messages: [
-          {
-            role: "system",
-            content: practicePrompt({
-              target,
-              heard,
-              comparison,
-              targetLanguage: interfaceLanguageName(scenario.language),
-              nativeLanguage: interfaceLanguageName(coerceLanguageCode(body.nativeLanguage)),
-            }),
-          },
-        ],
+        messages,
         response_format: { type: "json_object" },
         ...(reasoning
           ? { max_completion_tokens: 2000, reasoning_effort: fastestEffort(model) as "minimal" }
           : { max_tokens: 300 }),
       });
-    // The note sometimes comes back in the learning language (2026-10-27: a Japanese note for a Korean reader); ask once more when it is not in the interface script.
+    // The note sometimes comes back in the learning language (2026-10-27: a Japanese
+    // note for a Korean reader); ask once more, naming the miss, when it is not in the
+    // interface script.
+    const messages: Turn[] = [
+      { role: "system", content: system },
+      { role: "user", content: `JSON, with the note in ${nativeName}.` },
+    ];
     let practice: Practice | null = null;
     for (let attempt = 0; attempt < 2; attempt += 1) {
-      const completion = await ask();
-      practice = parsePractice(completion.choices[0]?.message?.content ?? "");
+      const completion = await ask(messages);
+      const raw = completion.choices[0]?.message?.content ?? "";
+      practice = parsePractice(raw);
       if (!practice || noteFitsUi(practice.note, nativeCode)) break;
+      messages.push(
+        { role: "assistant", content: raw },
+        { role: "user", content: `That note is not in ${nativeName}. Give the same JSON with the note rewritten in ${nativeName}; quote words of the sentence only where needed.` },
+      );
     }
     if (!practice) {
       return jsonWithCors(request, { error: "NO_PRACTICE" }, { status: 502 });
