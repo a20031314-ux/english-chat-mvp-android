@@ -25,6 +25,7 @@ import { findScenario, sentencesFor } from "@/lib/roleplay/catalog";
 import type { RoleplayScenario, SentenceBank } from "@/lib/roleplay/script";
 import { BANK_GLOSS_LANGUAGE } from "@/lib/roleplay/justTalk";
 import { soundsUnfinished } from "@/lib/roleplay/unfinished";
+import { learnerLineView } from "@/lib/roleplay/lineView";
 import {
   resumeFrom,
   titleFor,
@@ -198,6 +199,10 @@ const REST_OF_SENTENCE_MS = 3500;
 const GENERATED_AUDIO_MS = 30000;
 
 const SHOW_TRANSLATIONS_KEY = "roleplayShowTranslations";
+/** 통화 중 내 말: 기본은 고칠 곳이 있는 줄만(2026-10-27 사용자 "오류가 없을 시 안 띄우는 걸 기본으로"), 켜면 전부. */
+const SHOW_MY_LINES_KEY = "roleplayShowMyLines";
+
+
 
 export function RoleplayScreen({
   scenarioId,
@@ -293,6 +298,23 @@ export function RoleplayScreen({
       return false;
     }
   });
+  const [showMyLines, setShowMyLines] = useState<boolean>(() => {
+    try {
+      return localStorage.getItem(SHOW_MY_LINES_KEY) === "1";
+    } catch {
+      return false;
+    }
+  });
+  const toggleMyLines = () => {
+    setShowMyLines((on) => {
+      try {
+        localStorage.setItem(SHOW_MY_LINES_KEY, on ? "0" : "1");
+      } catch {
+        // Not kept, still switched for this conversation.
+      }
+      return !on;
+    });
+  };
   const toggleTranslations = () => {
     setShowTranslations((on) => {
       try {
@@ -1072,6 +1094,20 @@ export function RoleplayScreen({
             door offers to carry on with it. Once it has ended there is nothing
             to come back to and the button says so. */}
         <div className="flex items-center gap-2">
+        {sceneOver ? null : (
+          <button
+            type="button"
+            onClick={toggleMyLines}
+            aria-pressed={showMyLines}
+            className={`rounded-lg border px-3 py-1.5 text-caption transition ${
+              showMyLines
+                ? "border-white/40 bg-white/15 text-slate-100"
+                : "border-white/15 text-slate-400 hover:bg-white/10"
+            }`}
+          >
+            {ui.roleplayMyLines}
+          </button>
+        )}
         <button
           type="button"
           onClick={toggleTranslations}
@@ -1123,7 +1159,23 @@ export function RoleplayScreen({
         </div>
       ) : null}
       <ol className="min-h-0 flex-1 overflow-y-auto p-3">
-        {said.map((line, index) => (
+        {said.map((line, index) => {
+          const view = learnerLineView(said, index, { showAll: showMyLines, over: sceneOver });
+          if (view === "hidden") return null;
+          if (view === "waiting") {
+            return (
+              <li key={index} className="mb-2 flex justify-end" aria-hidden>
+                <div className="rounded-2xl bg-white/[0.07] px-3 py-2 text-chat text-slate-400">
+                  <span className="composing-dots inline-flex gap-1">
+                    <span>•</span>
+                    <span>•</span>
+                    <span>•</span>
+                  </span>
+                </div>
+              </li>
+            );
+          }
+          return (
           <RoleplayLine
             key={index}
             line={line}
@@ -1139,7 +1191,8 @@ export function RoleplayScreen({
                 : undefined
             }
           />
-        ))}
+          );
+        })}
         {pending ? (
           <li className="mb-2 flex justify-end">
             <div className="max-w-[80%] rounded-2xl border border-dashed border-white/20 px-3 py-2 text-[14px] leading-snug text-neutral-400">

@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-27c";
+export const GUIDE_VERSION = "2026-10-27d";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -288,6 +288,7 @@ export const GUIDE_KO: Guide = {
         heading: "말로 대화하기",
         body: [
           "튜터가 먼저 말하고, 내가 말을 멈추면 자동으로 내 차례가 끝나요.",
+          "내 말은 고칠 곳이 있을 때만 보여요. 전부 보려면 ‘{ui:roleplayMyLines}’을 켜요.",
           "팩에서는 위 띠에 몇 번째 질문인지 보이고, 끝나면 ‘{ui:packSeeRetro}’로 오늘 무엇이 늘었는지 봐요.",
           "주제 없이 말하고 싶으면 AI 대화 머리의 📞를 눌러요. 바로 통화가 시작돼요.",
         ],
@@ -718,6 +719,7 @@ export const GUIDE_EN: Guide = {
         heading: "Talk out loud",
         body: [
           "The tutor speaks first. When you stop speaking, your turn ends by itself.",
+          "Your own lines show only when there's something to fix. To see them all, turn on ‘{ui:roleplayMyLines}’.",
           "In a pack, the band at the top shows which question you're on, and when it ends {ui:packSeeRetro} shows what grew today.",
           "To talk about anything, tap 📞 at the top of the AI chat. The call starts right away.",
         ],

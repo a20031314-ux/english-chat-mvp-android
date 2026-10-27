@@ -166,6 +166,7 @@
           "shot": "call-talk",
           "body": [
             "El tutor habla primero. Cuando dejas de hablar, tu turno termina solo.",
+            "Tus frases solo aparecen cuando hay algo que corregir. Para verlas todas, activa «{ui:roleplayMyLines}».",
             "En el paquete, la franja de arriba muestra en qué pregunta vas, y al terminar {ui:packSeeRetro} muestra qué mejoró hoy.",
             "Para hablar de lo que quieras, toca 📞 arriba en el chat con la IA. La llamada empieza enseguida."
           ]
@@ -595,6 +596,7 @@
           "shot": "call-talk",
           "body": [
             "チューターが先に話します。話し終えると自動で自分の番が終わります。",
+            "自分の発言は直すところがあるときだけ出ます。全部見るには「{ui:roleplayMyLines}」をオンにします。",
             "パックでは上の帯に何問目かが出て、終わったら{ui:packSeeRetro}で今日伸びたところを見られます。",
             "テーマなしで話したいときは、AIチャットの上の📞を押します。すぐに通話が始まります。"
           ]
@@ -1024,6 +1026,7 @@
           "shot": "call-talk",
           "body": [
             "导师先说话。你停下来，你这一轮就自动结束。",
+            "你说的话只有需要改的时候才会显示。想全部看到，打开“{ui:roleplayMyLines}”。",
             "练习包里，上方的条显示正在第几题，结束后用 {ui:packSeeRetro} 看看今天哪里进步了。",
             "想随便聊聊时，点 AI 对话顶部的 📞，通话马上开始。"
           ]
@@ -1453,6 +1456,7 @@
           "shot": "call-talk",
           "body": [
             "Gia sư nói trước. Khi bạn ngừng nói, lượt của bạn tự kết thúc.",
+            "Câu của bạn chỉ hiện khi có chỗ cần sửa. Muốn xem hết, bật “{ui:roleplayMyLines}”.",
             "Trong gói, dải phía trên cho biết bạn đang ở câu hỏi thứ mấy, và khi xong {ui:packSeeRetro} cho thấy hôm nay bạn tiến bộ ở đâu.",
             "Muốn nói chuyện tự do, chạm 📞 ở đầu cuộc trò chuyện với AI. Cuộc gọi bắt đầu ngay."
           ]
@@ -1882,6 +1886,7 @@
           "shot": "call-talk",
           "body": [
             "Le tuteur parle en premier. Quand vous vous arrêtez de parler, votre tour se termine tout seul.",
+            "Vos phrases n’apparaissent que s’il y a quelque chose à corriger. Pour toutes les voir, activez « {ui:roleplayMyLines} ».",
             "Dans le pack, le bandeau du haut indique la question en cours, et à la fin {ui:packSeeRetro} montre ce qui a progressé aujourd’hui.",
             "Pour parler librement, touchez 📞 en haut du chat avec l’IA. L’appel démarre aussitôt."
           ]
@@ -2311,6 +2316,7 @@
           "shot": "call-talk",
           "body": [
             "Il tutor parla per primo. Quando smetti di parlare, il tuo turno finisce da solo.",
+            "Le tue frasi compaiono solo quando c’è qualcosa da correggere. Per vederle tutte, attiva «{ui:roleplayMyLines}».",
             "Nel pacchetto, la fascia in alto mostra a che domanda sei, e alla fine {ui:packSeeRetro} mostra cosa è cresciuto oggi.",
             "Per parlare liberamente, tocca 📞 in alto nella chat con l’IA. La chiamata parte subito."
           ]
@@ -2740,6 +2746,7 @@
           "shot": "call-talk",
           "body": [
             "O tutor fala primeiro. Quando você para de falar, sua vez termina sozinha.",
+            "Suas frases só aparecem quando há algo a corrigir. Para ver todas, ative “{ui:roleplayMyLines}”.",
             "No pacote, a faixa de cima mostra em que pergunta você está, e no fim {ui:packSeeRetro} mostra o que cresceu hoje.",
             "Para falar sobre qualquer coisa, toque em 📞 no topo do chat com a IA. A chamada começa na hora."
           ]
@@ -3169,6 +3176,7 @@
           "shot": "call-talk",
           "body": [
             "Первым говорит репетитор. Когда вы замолкаете, ваш ход заканчивается сам.",
+            "Ваши фразы видны, только если в них есть что исправить. Чтобы видеть все, включите «{ui:roleplayMyLines}».",
             "В наборе полоса вверху показывает, на каком вы вопросе, а в конце {ui:packSeeRetro} показывает, что выросло сегодня.",
             "Чтобы поговорить о чём угодно, нажмите 📞 вверху чата с ИИ. Звонок начнётся сразу."
           ]
@@ -3598,6 +3606,7 @@
           "shot": "call-talk",
           "body": [
             "Tutor bicara lebih dulu. Saat kamu berhenti bicara, giliranmu selesai sendiri.",
+            "Kalimatmu hanya muncul kalau ada yang perlu diperbaiki. Untuk melihat semuanya, nyalakan “{ui:roleplayMyLines}”.",
             "Di paket, pita di atas menunjukkan kamu di pertanyaan ke berapa, dan setelah selesai {ui:packSeeRetro} menunjukkan apa yang berkembang hari ini.",
             "Untuk bicara bebas, ketuk 📞 di atas chat AI. Panggilan langsung dimulai."
           ]
@@ -4027,6 +4036,7 @@
           "shot": "call-talk",
           "body": [
             "يتحدث المعلّم أولًا. عندما تتوقف عن الكلام ينتهي دورك تلقائيًا.",
+            "لا تظهر جملك إلا عندما يكون فيها ما يُصحَّح. لرؤيتها كلها، فعّل «{ui:roleplayMyLines}».",
             "في الباقة يُظهر الشريط في الأعلى رقم السؤال الذي وصلت إليه، وعند الانتهاء يُريك {ui:packSeeRetro} ما تحسّن اليوم.",
             "للحديث بحرية، اضغط 📞 أعلى محادثة الذكاء الاصطناعي. تبدأ المكالمة فورًا."
           ]
@@ -4456,6 +4466,7 @@
           "shot": "call-talk",
           "body": [
             "ติวเตอร์พูดก่อน เมื่อคุณหยุดพูด ตาของคุณจะจบเอง",
+            "ประโยคของคุณจะขึ้นเฉพาะเมื่อมีจุดที่ต้องแก้ ถ้าอยากเห็นทั้งหมด ให้เปิด “{ui:roleplayMyLines}”",
             "ในแพ็ก แถบด้านบนบอกว่าอยู่คำถามที่เท่าไร และเมื่อจบ {ui:packSeeRetro} จะบอกว่าวันนี้อะไรดีขึ้น",
             "อยากคุยเรื่องอะไรก็ได้ แตะ 📞 ด้านบนของแชตกับ AI การโทรจะเริ่มทันที"
           ]
@@ -4885,6 +4896,7 @@
           "shot": "call-talk",
           "body": [
             "ट्यूटर पहले बोलता है। आप बोलना रोकते हैं तो आपकी बारी अपने-आप खत्म हो जाती है।",
+            "आपकी बातें तभी दिखती हैं जब उनमें सुधारने को कुछ हो। सब देखने के लिए “{ui:roleplayMyLines}” चालू करें।",
             "पैक में ऊपर की पट्टी बताती है कि आप कौन-से सवाल पर हैं, और खत्म होने पर {ui:packSeeRetro} दिखाता है कि आज क्या बढ़ा।",
             "किसी भी बारे में बात करनी हो तो AI चैट के ऊपर 📞 दबाएँ। कॉल तुरंत शुरू हो जाती है।"
           ]

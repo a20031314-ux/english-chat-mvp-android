@@ -21,6 +21,7 @@
 - 화면이 바뀌었으면 `inbox.md`에 `dev → qa` 한 줄 (무엇을 어떤 언어 조합으로 볼지).
 
 ## 열린 일
+- **통화 중 내 말은 오류 있을 때만 (2026-10-27, 앱 2.76):** `lineView.ts`·"내 말" 버튼. 다음 단계 후보(사용자에게 제안만): 튜터 줄도 마지막 한 줄만(통화 화면처럼)·📌 고정. 지켜볼 것: 내 줄이 빠지면 튜터 줄이 연달아 보여 혼잣말처럼 읽힘.
 - **My 예전 기능 뺌 (2026-10-27, 사용자 "My는 변경내용 읽어보고 예전기능은 다 지워줘" → 넷 다 고름, 앱 다음 빌드):** My의 오늘 해볼 것·목표 지도 ›(LearnerPanel·MapView·TopicSheet·MissionScreen·TopicItems 지움)·직접 묻기(AskBox)·노트 목차(장 8×주제 3, `/api/notes/place` 안 부름) + 문장분석 "지도에 넣기"(MarkForMap은 알아요/모르겠어요만). NextStepCard는 지도 할 일(`tab: map`)을 거름, `openTopic` 신호 없앰. 사용법 `r278=1`(옛 빌드 `mapBefore278.json`).
   남은 것: 쓰지 않게 된 문구 키(myAsk*·mission*·partGoalMap·nextOnMap·notesView*·markToMap 등, 옛 앱은 자기 문구를 들고 있어 지워도 됨)·`lib/curriculum/recommend.ts`·`lib/notes/outline.ts` 화면용 정리, 최소 지원 2.75 이상 때 옛 API(STRUCTURE "밖에서 부르는 API") 지움. 지도 기록은 단계·체크용으로 남김(지도 그리기 Sonnet 호출도 그대로 — 단계만 필요하면 가볍게 바꿀지 다음에).
 - **My 네 갈래 (2026-10-25, 사용자 "어휘, 문법, 표현, 발음", 서버 바로·화면 2.75 빌드):** `notes/stageParts.ts`(stageParts·partHistory, 70% `STAGE_DONE_SHARE`), `/api/notebook` parts·partDays·words·pronunciationNotes, `NotebookSection` StageFrame·PartsOverview(망·그래프), `StageCheck` StageExamples, `GrowthNetwork` 칩만.
