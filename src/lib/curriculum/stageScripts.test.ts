@@ -1,38 +1,46 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { glossFor, hintOf, modesFor, runPasses, scriptsFor, variantOf, type LineRun, type StageScript } from "./stageScripts.ts";
+import { glossFor, hintOf, isSituationScript, modesFor, passOutcome, runPasses, scriptForExpressions, scriptsFor, variantOf, type LineRun, type StageScript } from "./stageScripts.ts";
 import { ladderFor } from "./stages/index.ts";
 import { withScripts, type StageParts } from "../notes/stageParts.ts";
 
 const LINES = [8, 10, 12, 14, 16];
 
-test("ko·ja·es: 단계마다 상황 다섯에 대본 하나, 줄 수는 단계마다 늘고 상대·나가 번갈아", () => {
+test("ko·ja·es: 단계 상황마다 대본 하나(줄 수는 단계마다 늘고), 핵심 표현은 모두 어느 대본엔가 — 없던 표현은 짧은 표현 대본으로", () => {
   for (const language of ["ko", "ja", "es"]) {
     const ladder = ladderFor(language)!;
     const ids = new Set<string>();
     for (const stage of ladder.stages) {
       const scripts = scriptsFor(language, stage.order);
-      assert.equal(scripts.length, stage.situations.length, `${language}-${stage.order} 대본 수`);
+      const situations = scripts.filter(isSituationScript);
       assert.deepEqual(
-        scripts.map((script) => script.situation).sort(),
+        situations.map((script) => script.situation).sort(),
         stage.situations.map((_, i) => i),
         `${language}-${stage.order} 상황마다 하나`,
       );
+      const covered = new Set(scripts.flatMap((script) => script.expressions));
+      assert.deepEqual(stage.expressions.filter((e) => !covered.has(e)), [], `${language}-${stage.order} 대본에 없는 표현`);
       for (const script of scripts) {
         assert.ok(!ids.has(script.id), `${script.id} 겹침`);
         ids.add(script.id);
-        assert.equal(script.lines.length, LINES[stage.order - 1], `${script.id} 줄 수`);
+        for (const e of script.expressions) assert.ok(stage.expressions.includes(e), `${script.id}: "${e}"는 그 단계 표현이 아님`);
+        const situation = isSituationScript(script);
+        if (situation) assert.equal(script.lines.length, LINES[stage.order - 1], `${script.id} 줄 수`);
+        else {
+          assert.ok(script.lines.length === 6 || script.lines.length === 8, `${script.id} 표현 대본 줄 수`);
+          assert.ok(script.expressions.length >= 1, `${script.id} 표현 대본인데 표현 없음`);
+        }
         script.lines.forEach((line, i) => {
           assert.equal(line.who, i % 2 === 0 ? "them" : "me", `${script.id} ${i}`);
           assert.ok(line.text.trim() && line.gloss.en.trim(), `${script.id} ${i} 빈 줄`);
           if (language !== "ko") assert.ok(line.gloss.ko, `${script.id} ${i} 한국어 뜻`);
           if (line.alt) {
-            assert.ok(stage.order === 3 || stage.order === 4, `${script.id} alt는 3~4단계만`);
+            assert.ok(situation && (stage.order === 3 || stage.order === 4), `${script.id} alt는 3~4단계 상황 대본만`);
             assert.equal(line.who, "them", `${script.id} alt는 상대 줄만`);
           }
           assert.ok(!/\d/.test(line.text), `${script.id} ${i} 숫자는 글로`);
         });
-        assert.equal(Boolean(script.goal), stage.order === 5, `${script.id} goal은 5단계만`);
+        assert.equal(Boolean(script.goal), situation && stage.order === 5, `${script.id} goal은 5단계 상황 대본만`);
         assert.ok(script.setting.en && script.setting.ko, `${script.id} 장면 이름`);
       }
     }
@@ -44,6 +52,7 @@ const two: StageScript = {
   id: "x-1-1",
   stage: 1,
   situation: 0,
+  expressions: [],
   setting: { en: "x", ko: "x" },
   lines: [
     { who: "them", text: "Hola", gloss: { en: "Hi" } },
@@ -70,7 +79,7 @@ test("통과: 내 줄이 모두, 통과 방식(1~2단계 첫 글자만·가리�
 
 test("다음 단계 = 네 갈래 + 그 단계 대본 모두 통과(대본 없는 언어는 그대로)", () => {
   const row: StageParts = { order: 1, parts: [], ready: true, weakest: null, expressions: [] };
-  const ids = scriptsFor("es", 1).map((script) => script.id);
+  const ids = scriptsFor("es", 1).filter(isSituationScript).map((script) => script.id);
   const some = withScripts([row], "es", new Set(ids.slice(0, 2)))[0]!;
   assert.equal(some.ready, false);
   assert.equal(some.scripts?.done, 2);
@@ -78,6 +87,26 @@ test("다음 단계 = 네 갈래 + 그 단계 대본 모두 통과(대본 없는
   assert.equal(withScripts([{ ...row, ready: false }], "es", new Set(ids))[0]!.ready, false);
   assert.equal(withScripts([row], "th", new Set())[0]!.ready, true);
   assert.equal(withScripts([row], "th", new Set())[0]!.scripts, undefined);
+  // 표현 대본은 다음 단계 조건에 안 든다(통과한 id로는 남음).
+  const extra = scriptsFor("es", 1).find((script) => !isSituationScript(script));
+  if (extra) {
+    const both = withScripts([row], "es", new Set([...ids, extra.id]))[0]!;
+    assert.equal(both.scripts?.done, ids.length);
+    assert.ok(both.scripts?.passed.includes(extra.id));
+  }
+});
+
+test("표현 갈래 연습 → 아직인 표현이 든 대본(표현 대본 먼저), 힌트를 봤으면 도움 받음", () => {
+  for (const language of ["ko", "ja", "es"]) {
+    const stage = ladderFor(language)!.stages[0]!;
+    for (const expression of stage.expressions) {
+      const script = scriptForExpressions(language, 1, [expression]);
+      assert.ok(script?.expressions.includes(expression), `${language} ${expression}`);
+    }
+  }
+  assert.equal(scriptForExpressions("es", 1, ["(없는 표현)"]), null);
+  assert.equal(passOutcome({ 1: { clean: true, mode: "hide", revealed: false } }), "unaided");
+  assert.equal(passOutcome({ 1: { clean: true, mode: "hide", revealed: false }, 3: { clean: true, mode: "hint", revealed: false } }), "helped");
 });
 
 test("첫 글자만: 스페인어는 낱말마다, 일본어는 낱말 덩어리마다 첫 글자", () => {

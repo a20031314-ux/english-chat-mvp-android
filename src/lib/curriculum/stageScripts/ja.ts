@@ -1,6 +1,6 @@
 import type { StageScript } from "../stageScripts.ts";
 
-/** ja 단계 대본(curriculum/stageScripts.ts) — Claude가 쓰고 한 번 다시 고침, 원어민 확인 전. */
+/** ja 단계 대본(curriculum/stageScripts.ts) — 상황 대본 + 표현 대본(x), 대본마다 쓰는 핵심 표현. Claude가 쓰고 한 번 다시 고침, 원어민 확인 전. */
 export const JA: StageScript[] = [
   {
     "id": "ja-1-1",
@@ -10,6 +10,11 @@ export const JA: StageScript[] = [
       "en": "Meeting someone for the first time at a language exchange",
       "ko": "언어 교환 모임에서 처음 만난 사람과"
     },
+    "expressions": [
+      "はじめまして",
+      "よろしくお願いします",
+      "ありがとうございます"
+    ],
     "lines": [
       {
         "who": "them",
@@ -85,6 +90,12 @@ export const JA: StageScript[] = [
       "en": "Paying at a convenience store",
       "ko": "편의점 계산대에서 점원과"
     },
+    "expressions": [
+      "すみません",
+      "これください",
+      "いくらですか",
+      "お願いします"
+    ],
     "lines": [
       {
         "who": "them",
@@ -96,10 +107,10 @@ export const JA: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "すみません、これとこれ、お願いします。",
+        "text": "すみません、これください。",
         "gloss": {
-          "en": "Excuse me, this and this, please.",
-          "ko": "저기요, 이거랑 이거 부탁해요."
+          "en": "Excuse me, I'll take this, please.",
+          "ko": "저기요, 이거 주세요."
         }
       },
       {
@@ -160,6 +171,13 @@ export const JA: StageScript[] = [
       "en": "Asking the way at a train station",
       "ko": "역에서 역무원에게 길 묻기"
     },
+    "expressions": [
+      "すみません",
+      "もう一度お願いします",
+      "わかりました",
+      "トイレはどこですか",
+      "ありがとうございます"
+    ],
     "lines": [
       {
         "who": "them",
@@ -235,6 +253,12 @@ export const JA: StageScript[] = [
       "en": "Greetings before and after a meal at a friend's home",
       "ko": "친구 집에서 식사 전후 인사"
     },
+    "expressions": [
+      "ありがとうございます",
+      "いただきます",
+      "大丈夫です",
+      "ごちそうさまでした"
+    ],
     "lines": [
       {
         "who": "them",
@@ -303,6 +327,132 @@ export const JA: StageScript[] = [
     ]
   },
   {
+    "id": "ja-1-x1",
+    "stage": 1,
+    "setting": {
+      "en": "Morning at a homestay",
+      "ko": "홈스테이의 아침"
+    },
+    "expressions": [
+      "おはようございます",
+      "わかりません",
+      "ちょっと待ってください"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "おはようございます。よく寝ましたか。",
+        "gloss": {
+          "en": "Good morning. Did you sleep well?",
+          "ko": "좋은 아침이에요. 잘 잤어요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "おはようございます。はい、よく寝ました。",
+        "gloss": {
+          "en": "Good morning. Yes, I slept well.",
+          "ko": "좋은 아침이에요. 네, 잘 잤어요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "今日は何時に帰りますか。",
+        "gloss": {
+          "en": "What time will you be back today?",
+          "ko": "오늘은 몇 시에 돌아와요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "すみません、まだわかりません。",
+        "gloss": {
+          "en": "Sorry, I don't know yet.",
+          "ko": "죄송해요, 아직 모르겠어요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "午後は雨ですよ。傘はありますか。",
+        "gloss": {
+          "en": "It's going to rain in the afternoon. Do you have an umbrella?",
+          "ko": "오후에 비가 와요. 우산 있어요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "ちょっと待ってください。…はい、あります。",
+        "gloss": {
+          "en": "Just a moment. ...Yes, I have one.",
+          "ko": "잠깐만요. …네, 있어요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-1-x2",
+    "stage": 1,
+    "setting": {
+      "en": "After class with a classmate",
+      "ko": "수업 끝나고 같은 반 친구와"
+    },
+    "expressions": [
+      "こんにちは",
+      "そうです",
+      "じゃあね"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "あ、キムさん、こんにちは。",
+        "gloss": {
+          "en": "Oh, Kim, hi.",
+          "ko": "아, 김 씨, 안녕하세요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "こんにちは、ユナさん。",
+        "gloss": {
+          "en": "Hi, Yuna.",
+          "ko": "안녕하세요, 유나 씨."
+        }
+      },
+      {
+        "who": "them",
+        "text": "これ、キムさんのかばんですか。",
+        "gloss": {
+          "en": "Is this your bag, Kim?",
+          "ko": "이거 김 씨 가방이에요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "はい、そうです。ありがとうございます。",
+        "gloss": {
+          "en": "Yes, it is. Thank you.",
+          "ko": "네, 맞아요. 고마워요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "じゃあ、また明日ね。",
+        "gloss": {
+          "en": "Well, see you tomorrow.",
+          "ko": "그럼 내일 봐."
+        }
+      },
+      {
+        "who": "me",
+        "text": "うん、じゃあね。",
+        "gloss": {
+          "en": "Yeah, bye.",
+          "ko": "응, 안녕."
+        }
+      }
+    ]
+  },
+  {
     "id": "ja-2-1",
     "stage": 2,
     "situation": 0,
@@ -310,6 +460,10 @@ export const JA: StageScript[] = [
       "en": "Making weekend plans with a friend",
       "ko": "친구와 주말 약속 잡기"
     },
+    "expressions": [
+      "いいですね",
+      "楽しみです"
+    ],
     "lines": [
       {
         "who": "them",
@@ -401,6 +555,10 @@ export const JA: StageScript[] = [
       "en": "Ordering at a set-meal restaurant",
       "ko": "정식집에서 점원에게 주문하기"
     },
+    "expressions": [
+      "何がおすすめですか",
+      "写真を撮ってもいいですか"
+    ],
     "lines": [
       {
         "who": "them",
@@ -492,6 +650,10 @@ export const JA: StageScript[] = [
       "en": "Describing a cold at a pharmacy",
       "ko": "약국에서 감기 증상 말하기"
     },
+    "expressions": [
+      "頭が痛いです",
+      "少しだけ"
+    ],
     "lines": [
       {
         "who": "them",
@@ -503,10 +665,10 @@ export const JA: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "風邪をひきました。のどが痛いです。",
+        "text": "風邪をひきました。頭が痛いです。",
         "gloss": {
-          "en": "I've caught a cold. My throat hurts.",
-          "ko": "감기에 걸렸어요. 목이 아파요."
+          "en": "I've caught a cold. I have a headache.",
+          "ko": "감기에 걸렸어요. 머리가 아파요."
         }
       },
       {
@@ -519,10 +681,10 @@ export const JA: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "おとといからです。せきも少し出ています。",
+        "text": "おとといからです。のども痛くて、せきも少しだけ出ています。",
         "gloss": {
-          "en": "Since the day before yesterday. I have a bit of a cough too.",
-          "ko": "그저께부터요. 기침도 조금 나요."
+          "en": "Since the day before yesterday. My throat hurts too, and I have a slight cough.",
+          "ko": "그저께부터요. 목도 아프고 기침도 조금 나요."
         }
       },
       {
@@ -583,6 +745,10 @@ export const JA: StageScript[] = [
       "en": "Checking the schedule with a coworker",
       "ko": "동료와 일정 확인하기"
     },
+    "expressions": [
+      "お疲れさまです",
+      "まだです"
+    ],
     "lines": [
       {
         "who": "them",
@@ -594,10 +760,10 @@ export const JA: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "はい、大丈夫です。",
+        "text": "お疲れさまです。はい、大丈夫です。",
         "gloss": {
-          "en": "Yes, sure.",
-          "ko": "네, 괜찮아요."
+          "en": "Hi, good work. Yes, sure.",
+          "ko": "수고 많으세요. 네, 괜찮아요."
         }
       },
       {
@@ -667,6 +833,259 @@ export const JA: StageScript[] = [
     ]
   },
   {
+    "id": "ja-2-x1",
+    "stage": 2,
+    "setting": {
+      "en": "Running into an old friend on the street",
+      "ko": "길에서 오랜만에 만난 친구"
+    },
+    "expressions": [
+      "久しぶりです",
+      "元気ですか",
+      "本当ですか",
+      "一緒に行きませんか"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "あれ？リンさんですか。",
+        "gloss": {
+          "en": "Huh? Is that you, Lin?",
+          "ko": "어? 린 씨예요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "あ、田中さん！久しぶりです。元気ですか。",
+        "gloss": {
+          "en": "Oh, Tanaka! Long time no see. How are you?",
+          "ko": "아, 다나카 씨! 오랜만이에요. 잘 지내요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "元気ですよ。実は、来月結婚します。",
+        "gloss": {
+          "en": "I'm doing well. Actually, I'm getting married next month.",
+          "ko": "잘 지내요. 실은 다음 달에 결혼해요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "本当ですか！おめでとうございます。",
+        "gloss": {
+          "en": "Really? Congratulations!",
+          "ko": "정말요? 축하해요!"
+        }
+      },
+      {
+        "who": "them",
+        "text": "ありがとうございます。今度、ゆっくり話したいですね。",
+        "gloss": {
+          "en": "Thank you. I'd like to have a proper chat sometime.",
+          "ko": "고마워요. 다음에 천천히 이야기하고 싶네요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "じゃあ、駅の前の新しいカフェに一緒に行きませんか。",
+        "gloss": {
+          "en": "Then would you like to go to the new café in front of the station together?",
+          "ko": "그럼 역 앞에 새로 생긴 카페에 같이 가지 않을래요?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-2-x2",
+    "stage": 2,
+    "setting": {
+      "en": "Leaving the office on a rainy evening",
+      "ko": "비 오는 저녁, 퇴근길"
+    },
+    "expressions": [
+      "もう終わりました",
+      "そうですね",
+      "気をつけて",
+      "また明日"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "リーさん、まだ帰りませんか。",
+        "gloss": {
+          "en": "Lee, aren't you heading home yet?",
+          "ko": "리 씨, 아직 안 가요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "いいえ、仕事はもう終わりました。今から帰ります。",
+        "gloss": {
+          "en": "No, I've already finished work. I'm leaving now.",
+          "ko": "아니요, 일은 벌써 끝났어요. 지금 가요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "外は雨がすごいですよ。",
+        "gloss": {
+          "en": "It's raining really hard outside.",
+          "ko": "밖에 비가 엄청 와요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "そうですね。傘を持ってきてよかったです。",
+        "gloss": {
+          "en": "It is. I'm glad I brought an umbrella.",
+          "ko": "그러네요. 우산 가져와서 다행이에요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "私はバスなので、ここで。お疲れさまでした。",
+        "gloss": {
+          "en": "I'm taking the bus, so I'll say bye here. Good work today.",
+          "ko": "저는 버스라서 여기서 갈게요. 수고하셨어요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "お疲れさまでした。気をつけて帰ってくださいね。また明日。",
+        "gloss": {
+          "en": "Good work today. Get home safely. See you tomorrow.",
+          "ko": "수고하셨어요. 조심히 들어가세요. 내일 봐요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-2-x3",
+    "stage": 2,
+    "setting": {
+      "en": "Phoning a friend after getting lost",
+      "ko": "길을 잃고 친구에게 전화"
+    },
+    "expressions": [
+      "道に迷いました",
+      "何時にしますか"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "もしもし、マリアさん？今どこですか。",
+        "gloss": {
+          "en": "Hello, Maria? Where are you now?",
+          "ko": "여보세요, 마리아 씨? 지금 어디예요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "すみません、道に迷いました。今、大きい公園の前にいます。",
+        "gloss": {
+          "en": "Sorry, I got lost. I'm in front of a big park now.",
+          "ko": "죄송해요, 길을 잃었어요. 지금 큰 공원 앞에 있어요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "そこからなら、歩いて十分ぐらいです。映画は次の回にしましょうか。三時と五時がありますよ。",
+        "gloss": {
+          "en": "From there it's about ten minutes on foot. Shall we go to the next showing? There's one at three and one at five.",
+          "ko": "거기서라면 걸어서 10분 정도예요. 영화는 다음 회차로 할까요? 3시랑 5시가 있어요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "何時にしますか。私はどちらでも大丈夫です。",
+        "gloss": {
+          "en": "What time shall we go for? Either is fine with me.",
+          "ko": "몇 시로 할까요? 저는 어느 쪽이든 괜찮아요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "じゃあ、三時にしましょう。チケットは私が買っておきます。",
+        "gloss": {
+          "en": "Then let's go with three. I'll buy the tickets.",
+          "ko": "그럼 3시로 해요. 표는 제가 사 둘게요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "ありがとうございます。すぐ行きます。",
+        "gloss": {
+          "en": "Thank you. I'll be right there.",
+          "ko": "고마워요. 금방 갈게요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-2-x4",
+    "stage": 2,
+    "setting": {
+      "en": "A teammate who can't run the race",
+      "ko": "마라톤에 못 나가게 된 동료"
+    },
+    "expressions": [
+      "どうしましたか",
+      "残念です",
+      "頑張ってください"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "はあ…。",
+        "gloss": {
+          "en": "Sigh...",
+          "ko": "하아…."
+        }
+      },
+      {
+        "who": "me",
+        "text": "どうしましたか。元気がないですね。",
+        "gloss": {
+          "en": "What's wrong? You seem down.",
+          "ko": "무슨 일 있어요? 기운이 없어 보이네요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "足をけがして、来週のマラソン大会に出られなくなりました。",
+        "gloss": {
+          "en": "I hurt my leg, so I can't run in next week's marathon.",
+          "ko": "다리를 다쳐서 다음 주 마라톤 대회에 못 나가게 됐어요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "そうですか…。残念です。毎日練習していましたよね。",
+        "gloss": {
+          "en": "Oh no... That's a shame. You were practicing every day, weren't you.",
+          "ko": "그래요…. 아쉽네요. 매일 연습했잖아요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "はい。でも、来年また出ます。",
+        "gloss": {
+          "en": "Yes. But I'll enter again next year.",
+          "ko": "네. 그래도 내년에 또 나갈 거예요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "来年は頑張ってください。応援しています。",
+        "gloss": {
+          "en": "Good luck next year. I'll be cheering for you.",
+          "ko": "내년에는 힘내세요. 응원할게요."
+        }
+      }
+    ]
+  },
+  {
     "id": "ja-3-1",
     "stage": 3,
     "situation": 0,
@@ -674,6 +1093,10 @@ export const JA: StageScript[] = [
       "en": "Apologizing to a friend for being late",
       "ko": "늦어서 친구에게 사과하기"
     },
+    "expressions": [
+      "遅れてごめん",
+      "実は"
+    ],
     "lines": [
       {
         "who": "them",
@@ -861,6 +1284,9 @@ export const JA: StageScript[] = [
       "en": "A problem with your hotel room while traveling",
       "ko": "여행 중 숙소 방에 문제가 생겼을 때 프런트에 전화하기"
     },
+    "expressions": [
+      "助かる"
+    ],
     "lines": [
       {
         "who": "them",
@@ -1048,6 +1474,9 @@ export const JA: StageScript[] = [
       "en": "Chatting with a friend about hobbies and a show you watched",
       "ko": "친구와 취미와 본 드라마 이야기"
     },
+    "expressions": [
+      "そういえば"
+    ],
     "lines": [
       {
         "who": "them",
@@ -1235,6 +1664,13 @@ export const JA: StageScript[] = [
       "en": "Asking a coworker for help with a task",
       "ko": "동료에게 일 도움 청하기"
     },
+    "expressions": [
+      "実は",
+      "助かる",
+      "よかったら",
+      "なるほど",
+      "とりあえず"
+    ],
     "lines": [
       {
         "who": "them",
@@ -1415,6 +1851,259 @@ export const JA: StageScript[] = [
     ]
   },
   {
+    "id": "ja-3-x1",
+    "stage": 3,
+    "setting": {
+      "en": "Sharing good news with a friend",
+      "ko": "친구에게 좋은 소식 전하기"
+    },
+    "expressions": [
+      "ちょっと聞いてよ",
+      "マジで",
+      "そうなんだ",
+      "無理しないで"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "どうしたの？なんか嬉しそうだね。",
+        "gloss": {
+          "en": "What's up? You look kind of happy.",
+          "ko": "무슨 일이야? 왠지 기분 좋아 보이네."
+        }
+      },
+      {
+        "who": "me",
+        "text": "ちょっと聞いてよ！好きなバンドの大阪ライブ、チケット当たったんだ！",
+        "gloss": {
+          "en": "Listen to this! I won tickets to my favorite band's show in Osaka!",
+          "ko": "내 말 좀 들어 봐! 좋아하는 밴드 오사카 공연 티켓 당첨됐어!"
+        }
+      },
+      {
+        "who": "them",
+        "text": "え、大阪？実は私、来月から大阪で働くことになったんだよね。",
+        "gloss": {
+          "en": "Wait, Osaka? Actually, I'm going to start working in Osaka next month.",
+          "ko": "어, 오사카? 실은 나 다음 달부터 오사카에서 일하게 됐거든."
+        }
+      },
+      {
+        "who": "me",
+        "text": "マジで？じゃあ、向こうで会えるじゃん！",
+        "gloss": {
+          "en": "Seriously? Then we can meet up there!",
+          "ko": "진짜? 그럼 거기서 만날 수 있잖아!"
+        }
+      },
+      {
+        "who": "them",
+        "text": "うん。でも今、引っ越しの準備で毎日バタバタでさ。",
+        "gloss": {
+          "en": "Yeah. But right now I'm swamped every day getting ready to move.",
+          "ko": "응. 근데 지금 이사 준비 때문에 매일 정신없어."
+        }
+      },
+      {
+        "who": "me",
+        "text": "そうなんだ。無理しないでね。手伝えることがあったら言って。",
+        "gloss": {
+          "en": "I see. Don't overdo it. Tell me if there's anything I can help with.",
+          "ko": "그렇구나. 무리하지 마. 도울 거 있으면 말해."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-3-x2",
+    "stage": 3,
+    "setting": {
+      "en": "Rushing for the last train",
+      "ko": "막차 타러 뛰기"
+    },
+    "expressions": [
+      "どうしよう",
+      "間に合った",
+      "確かに"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "やばい、もう十一時半だよ。終電、何時だっけ？",
+        "gloss": {
+          "en": "Oh no, it's already eleven thirty. What time is the last train again?",
+          "ko": "큰일이다, 벌써 열한 시 반이야. 막차 몇 시였지?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "十一時四十五分！どうしよう、走らないと。",
+        "gloss": {
+          "en": "Eleven forty-five! What do I do, I have to run.",
+          "ko": "열한 시 사십오 분! 어떡해, 뛰어야겠다."
+        }
+      },
+      {
+        "who": "them",
+        "text": "駅まで走ればギリギリいけるよ。…はあ、乗れた！",
+        "gloss": {
+          "en": "If we run to the station we can just make it. ...Phew, we got on!",
+          "ko": "역까지 뛰면 아슬아슬하게 돼. …하아, 탔다!"
+        }
+      },
+      {
+        "who": "me",
+        "text": "よかった…間に合った！",
+        "gloss": {
+          "en": "Thank goodness... we made it!",
+          "ko": "다행이다… 늦지 않았어!"
+        }
+      },
+      {
+        "who": "them",
+        "text": "次はもうちょっと早くお店を出ようね。",
+        "gloss": {
+          "en": "Next time let's leave the place a bit earlier.",
+          "ko": "다음엔 가게에서 좀 더 일찍 나오자."
+        }
+      },
+      {
+        "who": "me",
+        "text": "確かに。次は時計を見ながら飲もう。",
+        "gloss": {
+          "en": "True. Next time let's keep an eye on the clock while we drink.",
+          "ko": "맞아. 다음엔 시계 보면서 마시자."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-3-x3",
+    "stage": 3,
+    "setting": {
+      "en": "A friend lost your umbrella",
+      "ko": "친구가 빌려 간 우산을 잃어버림"
+    },
+    "expressions": [
+      "別にいいよ",
+      "仕方ない",
+      "気にしないで"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "ごめん、この前借りた傘、電車に忘れちゃった…。",
+        "gloss": {
+          "en": "Sorry, I left the umbrella I borrowed the other day on the train...",
+          "ko": "미안, 저번에 빌린 우산 전철에 두고 내렸어…."
+        }
+      },
+      {
+        "who": "me",
+        "text": "え、そうなの？まあ、別にいいよ。安い傘だったし。",
+        "gloss": {
+          "en": "Oh, really? Well, it's fine. It was a cheap one anyway.",
+          "ko": "어, 그래? 뭐, 괜찮아. 싼 우산이었고."
+        }
+      },
+      {
+        "who": "them",
+        "text": "駅にも問い合わせたんだけど、見つからなくて。",
+        "gloss": {
+          "en": "I asked the station too, but they couldn't find it.",
+          "ko": "역에도 물어봤는데 못 찾았대."
+        }
+      },
+      {
+        "who": "me",
+        "text": "それなら仕方ないよ。気にしないで。",
+        "gloss": {
+          "en": "Then it can't be helped. Don't worry about it.",
+          "ko": "그럼 어쩔 수 없지. 신경 쓰지 마."
+        }
+      },
+      {
+        "who": "them",
+        "text": "ありがとう。今度、新しいの買って返すね。",
+        "gloss": {
+          "en": "Thanks. I'll buy you a new one next time.",
+          "ko": "고마워. 다음에 새 거 사서 줄게."
+        }
+      },
+      {
+        "who": "me",
+        "text": "いいって。それより、今日のランチどこ行く？",
+        "gloss": {
+          "en": "Don't bother. More importantly, where should we go for lunch today?",
+          "ko": "됐어. 그보다 오늘 점심 어디 갈래?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-3-x4",
+    "stage": 3,
+    "setting": {
+      "en": "Invited on a hot spring trip",
+      "ko": "온천 여행에 초대받음"
+    },
+    "expressions": [
+      "考えとく",
+      "やっぱり",
+      "せっかくだから"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "来月、みんなで箱根の温泉に行くんだけど、来ない？",
+        "gloss": {
+          "en": "We're all going to a hot spring in Hakone next month. Want to come?",
+          "ko": "다음 달에 다 같이 하코네 온천 가는데, 안 올래?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "いいね！でも、来月はバイトが忙しいんだよね。ちょっと考えとく。",
+        "gloss": {
+          "en": "Sounds nice! But my part-time job is busy next month. I'll think about it.",
+          "ko": "좋다! 근데 다음 달엔 알바가 바빠서. 좀 생각해 볼게."
+        }
+      },
+      {
+        "who": "them",
+        "text": "分かった。一泊の予定だけど、日帰りでも大丈夫だよ。",
+        "gloss": {
+          "en": "Okay. We're planning one night, but a day trip is fine too.",
+          "ko": "알았어. 1박 예정인데 당일치기도 괜찮아."
+        }
+      },
+      {
+        "who": "me",
+        "text": "日帰りならいけるかも。…うん、やっぱり行く！",
+        "gloss": {
+          "en": "A day trip might work. ...Yeah, I'll go after all!",
+          "ko": "당일치기면 될지도. …응, 역시 갈래!"
+        }
+      },
+      {
+        "who": "them",
+        "text": "やった！じゃあ、みんなに言っとくね。",
+        "gloss": {
+          "en": "Yay! Then I'll let everyone know.",
+          "ko": "앗싸! 그럼 다들한테 말해 둘게."
+        }
+      },
+      {
+        "who": "me",
+        "text": "せっかくだから、温泉のあとにおいしいものも食べたいな。",
+        "gloss": {
+          "en": "Since we're going all that way, I'd like to eat something good after the hot spring too.",
+          "ko": "모처럼 가는 거니까 온천 끝나고 맛있는 것도 먹고 싶다."
+        }
+      }
+    ]
+  },
+  {
     "id": "ja-4-1",
     "stage": 4,
     "situation": 0,
@@ -1422,6 +2111,15 @@ export const JA: StageScript[] = [
       "en": "Phoning a client about a delayed delivery",
       "ko": "거래처에 납품 지연을 전화로 알리기"
     },
+    "expressions": [
+      "お世話になっております",
+      "ご迷惑をおかけしました",
+      "申し訳ございません",
+      "確認してまいります",
+      "かしこまりました",
+      "後ほどご連絡します",
+      "失礼いたします"
+    ],
     "lines": [
       {
         "who": "them",
@@ -1641,6 +2339,10 @@ export const JA: StageScript[] = [
       "en": "Discussing a release schedule in a team meeting",
       "ko": "팀 회의에서 출시 일정 논의"
     },
+    "expressions": [
+      "おっしゃる通りです",
+      "承知しました"
+    ],
     "lines": [
       {
         "who": "them",
@@ -1860,6 +2562,10 @@ export const JA: StageScript[] = [
       "en": "Signing a rental contract at a real estate agency",
       "ko": "부동산에서 집 계약하기"
     },
+    "expressions": [
+      "承知しました",
+      "念のため"
+    ],
     "lines": [
       {
         "who": "them",
@@ -2079,6 +2785,10 @@ export const JA: StageScript[] = [
       "en": "Handling a move-in registration at a city office",
       "ko": "구청에서 전입 신고 절차 밟기"
     },
+    "expressions": [
+      "恐れ入りますが",
+      "承知しました"
+    ],
     "lines": [
       {
         "who": "them",
@@ -2291,6 +3001,243 @@ export const JA: StageScript[] = [
     ]
   },
   {
+    "id": "ja-4-x1",
+    "stage": 4,
+    "setting": {
+      "en": "Taking a call for an absent colleague",
+      "ko": "자리에 없는 동료 대신 전화 받기"
+    },
+    "expressions": [
+      "少々お待ちください",
+      "差し支えなければ"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "お世話になっております。大和商事の田中と申します。営業部の鈴木様はいらっしゃいますか。",
+        "gloss": {
+          "en": "Thank you for your business. This is Tanaka from Yamato Trading. Is Mr. Suzuki in sales available?",
+          "ko": "신세 지고 있습니다. 야마토상사의 다나카라고 합니다. 영업부 스즈키 님 계십니까?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "お世話になっております。鈴木でございますね。少々お待ちください。",
+        "gloss": {
+          "en": "Thank you for your business. Suzuki, you said? One moment, please.",
+          "ko": "신세 지고 있습니다. 스즈키 말씀이시죠. 잠시만 기다려 주십시오."
+        }
+      },
+      {
+        "who": "them",
+        "text": "はい、よろしくお願いします。",
+        "gloss": {
+          "en": "Yes, thank you.",
+          "ko": "네, 부탁드립니다."
+        }
+      },
+      {
+        "who": "me",
+        "text": "お待たせいたしました。申し訳ございません、鈴木はただいま外出しておりまして、戻りは夕方の予定です。",
+        "gloss": {
+          "en": "Sorry to keep you waiting. I'm afraid Suzuki is out at the moment and is expected back in the evening.",
+          "ko": "오래 기다리셨습니다. 죄송합니다만, 스즈키는 지금 외출 중이라 저녁에 돌아올 예정입니다."
+        }
+      },
+      {
+        "who": "them",
+        "text": "そうですか。では、また改めてお電話します。",
+        "gloss": {
+          "en": "I see. Then I'll call back another time.",
+          "ko": "그렇군요. 그럼 다시 전화드리겠습니다."
+        }
+      },
+      {
+        "who": "me",
+        "text": "差し支えなければ、ご用件を伺ってもよろしいでしょうか。鈴木に申し伝えます。",
+        "gloss": {
+          "en": "If you don't mind, may I ask what it's regarding? I'll pass it on to Suzuki.",
+          "ko": "괜찮으시다면 용건을 여쭤봐도 될까요? 스즈키에게 전하겠습니다."
+        }
+      },
+      {
+        "who": "them",
+        "text": "ありがとうございます。明日の打ち合わせを午後に変更できないか、お伝えいただけますか。",
+        "gloss": {
+          "en": "Thank you. Could you ask him whether tomorrow's meeting could be moved to the afternoon?",
+          "ko": "감사합니다. 내일 회의를 오후로 바꿀 수 있는지 전해 주시겠어요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "かしこまりました。明日の打ち合わせを午後に、ですね。確かに申し伝えます。",
+        "gloss": {
+          "en": "Certainly. Tomorrow's meeting to the afternoon, then. I'll be sure to pass that on.",
+          "ko": "알겠습니다. 내일 회의를 오후로, 말씀이시죠. 틀림없이 전하겠습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-4-x2",
+    "stage": 4,
+    "setting": {
+      "en": "Revising a proposal with a client",
+      "ko": "거래처와 제안 수정 상의"
+    },
+    "expressions": [
+      "とおっしゃいますと",
+      "要するに",
+      "検討いたします",
+      "今後ともよろしくお願いいたします"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "先日のご提案ですが、今の予算では少し難しいかもしれません。",
+        "gloss": {
+          "en": "About your proposal the other day, it may be a little difficult with our current budget.",
+          "ko": "얼마 전 제안 말인데요, 지금 예산으로는 조금 어려울 것 같습니다."
+        }
+      },
+      {
+        "who": "me",
+        "text": "とおっしゃいますと、費用の面でしょうか。",
+        "gloss": {
+          "en": "By that, do you mean in terms of cost?",
+          "ko": "말씀하시는 건, 비용 면에서일까요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "ええ。内容はいいんですが、一度に全部となると厳しくて。",
+        "gloss": {
+          "en": "Yes. The content is good, but doing it all at once is tough.",
+          "ko": "네. 내용은 좋은데, 한 번에 전부 하기는 버거워서요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "でしたら、二段階に分けるのはいかがでしょうか。要するに、今年度は基本の機能だけを導入して、残りは来年度に回す形です。",
+        "gloss": {
+          "en": "In that case, how about splitting it into two phases? In short, you'd introduce only the basic features this fiscal year and move the rest to next year.",
+          "ko": "그렇다면 두 단계로 나누는 건 어떨까요? 요컨대 올해는 기본 기능만 도입하고 나머지는 내년으로 넘기는 방식입니다."
+        }
+      },
+      {
+        "who": "them",
+        "text": "なるほど、それなら社内でも通しやすいですね。見積もりを出し直していただけますか。",
+        "gloss": {
+          "en": "I see, that would be easier to get approved internally. Could you redo the estimate?",
+          "ko": "그렇군요, 그러면 사내에서도 통과시키기 쉽겠네요. 견적을 다시 내 주시겠어요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "かしこまりました。その形で社内で検討いたしまして、来週中にお見積もりをお送りします。",
+        "gloss": {
+          "en": "Certainly. We'll look into it internally on that basis and send you an estimate within next week.",
+          "ko": "알겠습니다. 그 방식으로 사내에서 검토해서 다음 주 중에 견적을 보내 드리겠습니다."
+        }
+      },
+      {
+        "who": "them",
+        "text": "よろしくお願いします。本日はありがとうございました。",
+        "gloss": {
+          "en": "Thank you. And thank you for today.",
+          "ko": "잘 부탁드립니다. 오늘 감사했습니다."
+        }
+      },
+      {
+        "who": "me",
+        "text": "こちらこそ、ありがとうございました。今後ともよろしくお願いいたします。",
+        "gloss": {
+          "en": "Thank you as well. We look forward to continuing to work with you.",
+          "ko": "저야말로 감사했습니다. 앞으로도 잘 부탁드립니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-4-x3",
+    "stage": 4,
+    "setting": {
+      "en": "Handing over tour documents at a travel agency",
+      "ko": "여행사 창구에서 서류 건네기"
+    },
+    "expressions": [
+      "お手数ですが",
+      "ご確認ください",
+      "結構です"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "すみません、先日申し込んだツアーの書類を受け取りに来たんですが。",
+        "gloss": {
+          "en": "Excuse me, I've come to pick up the documents for the tour I booked the other day.",
+          "ko": "저기요, 얼마 전에 신청한 투어 서류를 받으러 왔는데요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "いらっしゃいませ。お名前を伺ってもよろしいでしょうか。",
+        "gloss": {
+          "en": "Welcome. May I have your name, please?",
+          "ko": "어서 오십시오. 성함을 여쭤봐도 될까요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "山田です。",
+        "gloss": {
+          "en": "It's Yamada.",
+          "ko": "야마다입니다."
+        }
+      },
+      {
+        "who": "me",
+        "text": "山田様ですね。お手数ですが、こちらの用紙にご住所とお電話番号をご記入いただけますか。",
+        "gloss": {
+          "en": "Yamada, thank you. Sorry for the trouble, but could you fill in your address and phone number on this form?",
+          "ko": "야마다 님이시군요. 번거로우시겠지만, 이 용지에 주소와 전화번호를 적어 주시겠어요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "はい。…これでいいですか。",
+        "gloss": {
+          "en": "Sure. ...Is this okay?",
+          "ko": "네. …이러면 될까요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "ありがとうございます。こちらが旅程表です。お名前と日程に間違いがないか、ご確認ください。",
+        "gloss": {
+          "en": "Thank you. Here is your itinerary. Please check that your name and dates are correct.",
+          "ko": "감사합니다. 이게 여행 일정표입니다. 성함과 일정에 틀린 곳이 없는지 확인해 주십시오."
+        }
+      },
+      {
+        "who": "them",
+        "text": "…はい、大丈夫です。印鑑は必要ですか。",
+        "gloss": {
+          "en": "...Yes, it's all fine. Do you need my seal?",
+          "ko": "…네, 괜찮아요. 도장이 필요한가요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "いえ、サインで結構です。こちらにお願いいたします。",
+        "gloss": {
+          "en": "No, a signature is fine. Here, please.",
+          "ko": "아니요, 사인이면 됩니다. 여기에 부탁드립니다."
+        }
+      }
+    ]
+  },
+  {
     "id": "ja-5-1",
     "stage": 5,
     "situation": 0,
@@ -2302,6 +3249,12 @@ export const JA: StageScript[] = [
       "en": "Turn down your senior's request to cover his Saturday shift without ever saying a flat no, and offer other help so the relationship stays warm.",
       "ko": "선배의 토요일 근무 대신 서 달라는 부탁을 '안 돼요'라고 딱 잘라 말하지 않고 거절하고, 다른 도움을 내밀어 관계를 따뜻하게 지킨다."
     },
+    "expressions": [
+      "正直なところ",
+      "ちょっと難しいかもです",
+      "とんでもないです",
+      "お言葉に甘えて"
+    ],
     "lines": [
       {
         "who": "them",
@@ -2361,10 +3314,10 @@ export const JA: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "そうですね…。正直なところ、親が韓国から来ることになっていて、ちょっと動かしにくくて。",
+        "text": "そうですね…。正直なところ、親が韓国から来ることになっていて、ずらすのはちょっと難しいかもです。",
         "gloss": {
-          "en": "Well... honestly, my parents are coming over from Korea, so it's a bit hard to shift.",
-          "ko": "그게요…. 솔직히 부모님이 한국에서 오시기로 돼 있어서 좀 옮기기 어려워서요."
+          "en": "Well... honestly, my parents are coming over from Korea, so moving it might be a bit difficult.",
+          "ko": "그게요…. 솔직히 부모님이 한국에서 오시기로 돼 있어서, 옮기는 건 좀 어려울 것 같아요."
         }
       },
       {
@@ -2445,6 +3398,14 @@ export const JA: StageScript[] = [
       "en": "Argue that the drama's ending didn't make sense, then concede part of your friend's view while still holding your own.",
       "ko": "드라마 결말이 납득이 안 된다고 주장하고, 내 생각은 지키면서 친구 의견도 일부 인정한다."
     },
+    "expressions": [
+      "正直なところ",
+      "腑に落ちない",
+      "筋が通らない",
+      "言われてみれば",
+      "一理ある",
+      "痛いところを突かれた"
+    ],
     "lines": [
       {
         "who": "them",
@@ -2588,6 +3549,10 @@ export const JA: StageScript[] = [
       "en": "Give your view on rural bus routes being cut, propose an idea, and acknowledge the other side's point without dropping your own.",
       "ko": "지방 버스 노선 폐지에 대한 내 생각을 말하고 아이디어를 내되, 내 의견을 지키면서 상대의 논점도 인정한다."
     },
+    "expressions": [
+      "一理ある",
+      "正直なところ"
+    ],
     "lines": [
       {
         "who": "them",
@@ -2731,6 +3696,9 @@ export const JA: StageScript[] = [
       "en": "Comfort your friend after a failed interview, show you understand how they feel, and gently help them look ahead without lecturing.",
       "ko": "면접에 떨어진 친구를 위로하고 마음을 알아준다는 걸 보이며, 훈계하지 않고 다음을 바라보게 살며시 돕는다."
     },
+    "expressions": [
+      "考えすぎだよ"
+    ],
     "lines": [
       {
         "who": "them",
@@ -2774,10 +3742,10 @@ export const JA: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "うーん、それだけで決まるとは限らないと思うよ。面接って、相性とかタイミングもあるし。",
+        "text": "うーん、考えすぎだよ。それだけで決まるとは限らないと思う。面接って、相性とかタイミングもあるし。",
         "gloss": {
-          "en": "Hmm, I don't think it's necessarily decided by that alone. Interviews also come down to fit and timing.",
-          "ko": "음, 그것만으로 결정되는 건 아닐 거야. 면접은 궁합이나 타이밍도 있으니까."
+          "en": "Hmm, you're overthinking it. I don't think it's necessarily decided by that alone. Interviews also come down to fit and timing.",
+          "ko": "음, 너무 깊게 생각하는 거야. 그것만으로 결정되는 건 아닐 거야. 면접은 궁합이나 타이밍도 있으니까."
         }
       },
       {
@@ -2858,6 +3826,244 @@ export const JA: StageScript[] = [
         "gloss": {
           "en": "Of course. But before that, let's go get something sweet. My treat.",
           "ko": "당연하지. 근데 그 전에 일단 단 거라도 먹으러 가자. 내가 살게."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-5-x1",
+    "stage": 5,
+    "setting": {
+      "en": "Your manager offers you a project lead",
+      "ko": "부장이 프로젝트 리더를 제안함"
+    },
+    "expressions": [
+      "身に余るお言葉です",
+      "お察しします",
+      "前向きに検討します",
+      "ご無理のない範囲で"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "今度の新規プロジェクト、リーダーを君に任せたいと思っているんだ。",
+        "gloss": {
+          "en": "I'm thinking of making you the lead on the upcoming new project.",
+          "ko": "이번 신규 프로젝트, 리더를 자네에게 맡기고 싶다고 생각하고 있어."
+        }
+      },
+      {
+        "who": "me",
+        "text": "私にですか。ありがとうございます。身に余るお言葉です。",
+        "gloss": {
+          "en": "Me? Thank you. That's more than I deserve.",
+          "ko": "저한테요? 감사합니다. 과분한 말씀이세요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "正直、上からの期待も大きくてね。私もなかなか大変なんだよ。",
+        "gloss": {
+          "en": "Honestly, expectations from above are high. It's been pretty tough for me too.",
+          "ko": "솔직히 위에서 거는 기대도 커서 말이야. 나도 꽤 힘들어."
+        }
+      },
+      {
+        "who": "me",
+        "text": "お察しします。今の案件の目処が立つか確認したうえで、前向きに検討します。",
+        "gloss": {
+          "en": "I can imagine. Once I've checked whether my current project is on track, I'll consider it positively.",
+          "ko": "그 마음 헤아려집니다. 지금 건이 마무리될지 확인한 다음에 긍정적으로 검토하겠습니다."
+        }
+      },
+      {
+        "who": "them",
+        "text": "ありがとう。来週中に返事をもらえると助かるよ。",
+        "gloss": {
+          "en": "Thanks. It'd help if you could get back to me within next week.",
+          "ko": "고마워. 다음 주 중에 답을 주면 좋겠어."
+        }
+      },
+      {
+        "who": "me",
+        "text": "承知しました。その前に、チームの体制について一度ご相談させていただけますか。ご無理のない範囲で、お時間をいただければと思います。",
+        "gloss": {
+          "en": "Understood. Before that, could I consult you once about the team setup? Whenever it suits you, I'd appreciate a little of your time.",
+          "ko": "알겠습니다. 그 전에 팀 체제에 대해 한번 상의드려도 될까요? 무리가 안 되는 선에서 시간을 내 주시면 좋겠습니다."
+        }
+      },
+      {
+        "who": "them",
+        "text": "いいよ。木曜の午後なら空いてるから。",
+        "gloss": {
+          "en": "Sure. I'm free Thursday afternoon.",
+          "ko": "좋아. 목요일 오후라면 비어 있으니까."
+        }
+      },
+      {
+        "who": "me",
+        "text": "ありがとうございます。では、木曜の午後に伺います。",
+        "gloss": {
+          "en": "Thank you. Then I'll come by on Thursday afternoon.",
+          "ko": "감사합니다. 그럼 목요일 오후에 찾아뵙겠습니다."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-5-x2",
+    "stage": 5,
+    "setting": {
+      "en": "Planning a coworker's farewell party",
+      "ko": "동료 송별회 계획하기"
+    },
+    "expressions": [
+      "水を差すようで悪いけど",
+      "ここだけの話",
+      "それはそれとして"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "田中さんの送別会、サプライズでやらない？みんなで動画も作ってさ。",
+        "gloss": {
+          "en": "Why don't we make Tanaka's farewell party a surprise? We could all make a video too.",
+          "ko": "다나카 씨 송별회, 서프라이즈로 하지 않을래? 다 같이 영상도 만들고."
+        }
+      },
+      {
+        "who": "me",
+        "text": "いいね。ただ、水を差すようで悪いけど、田中さんってサプライズ苦手じゃなかったっけ？",
+        "gloss": {
+          "en": "Nice. But sorry to be a wet blanket — isn't Tanaka not big on surprises?",
+          "ko": "좋다. 근데 찬물 끼얹는 것 같아서 미안한데, 다나카 씨 서프라이즈 싫어하지 않았나?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "え、そうなの？",
+        "gloss": {
+          "en": "Huh, really?",
+          "ko": "어, 그래?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "ここだけの話、前に誕生日のサプライズをされたとき、正直困ったって言ってたんだよね。",
+        "gloss": {
+          "en": "Just between us, when people threw him a surprise birthday before, he said it honestly made him uncomfortable.",
+          "ko": "우리끼리 얘긴데, 전에 생일 서프라이즈 받았을 때 솔직히 곤란했다고 하더라."
+        }
+      },
+      {
+        "who": "them",
+        "text": "そうだったんだ…。じゃあ、普通の送別会にしようか。",
+        "gloss": {
+          "en": "I didn't know... Then let's make it a normal farewell party.",
+          "ko": "그랬구나…. 그럼 평범한 송별회로 할까."
+        }
+      },
+      {
+        "who": "me",
+        "text": "うん、そのほうが喜ぶと思う。それはそれとして、動画はいいアイデアだから、当日みんなで見ようよ。",
+        "gloss": {
+          "en": "Yeah, I think he'd like that better. That aside, the video's a good idea, so let's all watch it on the day.",
+          "ko": "응, 그게 더 좋아할 거야. 그건 그렇고, 영상은 좋은 아이디어니까 당일에 다 같이 보자."
+        }
+      },
+      {
+        "who": "them",
+        "text": "確かに。じゃあ、みんなからメッセージ集めとくね。",
+        "gloss": {
+          "en": "True. Then I'll collect messages from everyone.",
+          "ko": "맞네. 그럼 다들한테 메시지 모아 둘게."
+        }
+      },
+      {
+        "who": "me",
+        "text": "ありがとう。私はお店を探しておくね。",
+        "gloss": {
+          "en": "Thanks. I'll look for a venue.",
+          "ko": "고마워. 나는 가게 찾아 둘게."
+        }
+      }
+    ]
+  },
+  {
+    "id": "ja-5-x3",
+    "stage": 5,
+    "setting": {
+      "en": "Complaining about the company trip",
+      "ko": "사원 여행 푸념하기"
+    },
+    "expressions": [
+      "気が進まない",
+      "悪くはないけど",
+      "今さら言っても"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "来週の社員旅行、行くの？",
+        "gloss": {
+          "en": "Are you going on next week's company trip?",
+          "ko": "다음 주 사원 여행 가?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "一応行くけど、正直あんまり気が進まないんだよね。",
+        "gloss": {
+          "en": "I'm going, technically, but honestly I'm not really in the mood for it.",
+          "ko": "일단 가긴 하는데, 솔직히 별로 내키지 않아."
+        }
+      },
+      {
+        "who": "them",
+        "text": "なんで？温泉でしょ？",
+        "gloss": {
+          "en": "Why? It's a hot spring, isn't it?",
+          "ko": "왜? 온천이잖아?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "温泉は悪くはないけど、夜の宴会で毎年カラオケを歌わされるのがつらくて。",
+        "gloss": {
+          "en": "The hot spring isn't bad, but every year I get made to sing karaoke at the night banquet, and it's painful.",
+          "ko": "온천은 나쁘진 않은데, 밤 연회에서 매년 노래방 노래 부르게 시키는 게 괴로워서."
+        }
+      },
+      {
+        "who": "them",
+        "text": "あー、それはきついね。最初から断っておけばよかったのに。",
+        "gloss": {
+          "en": "Ah, that's rough. You should have said no from the start.",
+          "ko": "아, 그건 힘들겠다. 처음부터 거절해 두지 그랬어."
+        }
+      },
+      {
+        "who": "me",
+        "text": "それ、今さら言っても仕方ないって。もう申し込んじゃったし。",
+        "gloss": {
+          "en": "There's no point saying that now. I've already signed up.",
+          "ko": "그거 이제 와서 말해 봤자 소용없어. 벌써 신청해 버렸고."
+        }
+      },
+      {
+        "who": "them",
+        "text": "じゃあ、宴会では一緒に隅っこで飲んでよう。",
+        "gloss": {
+          "en": "Then let's drink together in a corner at the banquet.",
+          "ko": "그럼 연회 때는 같이 구석에서 마시고 있자."
+        }
+      },
+      {
+        "who": "me",
+        "text": "それいいね。そうしよう。",
+        "gloss": {
+          "en": "That sounds good. Let's do that.",
+          "ko": "그거 좋다. 그렇게 하자."
         }
       }
     ]

@@ -672,7 +672,8 @@
     "scriptRestart": "最初から",
     "scriptModeOwn": "自分の言葉で",
     "scriptCall": "通話でやってみる",
-    "scriptsToNext": "次の段階まで:台本あと{n}つ"
+    "scriptsToNext": "次の段階まで:台本あと{n}つ",
+    "scriptsByExpression": "表現で練習"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1347,7 +1348,8 @@
     "scriptRestart": "从头开始",
     "scriptModeOwn": "用自己的话",
     "scriptCall": "通话试试",
-    "scriptsToNext": "距下一阶段：还有{n}个剧本"
+    "scriptsToNext": "距下一阶段：还有{n}个剧本",
+    "scriptsByExpression": "按表达练习"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2024,7 +2026,8 @@
     "scriptRestart": "Từ đầu",
     "scriptModeOwn": "Bằng lời của bạn",
     "scriptCall": "Thử qua cuộc gọi",
-    "scriptsToNext": "Đến giai đoạn tiếp: còn {n} kịch bản"
+    "scriptsToNext": "Đến giai đoạn tiếp: còn {n} kịch bản",
+    "scriptsByExpression": "Luyện theo cách nói"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2706,7 +2709,8 @@
     "scriptRestart": "Depuis le début",
     "scriptModeOwn": "Avec vos mots",
     "scriptCall": "Essayer en appel",
-    "scriptsToNext": "Jusqu’à l’étape suivante : {n} dialogues"
+    "scriptsToNext": "Jusqu’à l’étape suivante : {n} dialogues",
+    "scriptsByExpression": "S’entraîner par expression"
   },
   "it": {
     "archive": "Report",
@@ -3579,7 +3583,8 @@
     "scriptRestart": "Dall’inizio",
     "scriptModeOwn": "Con parole tue",
     "scriptCall": "Prova in chiamata",
-    "scriptsToNext": "Alla fase successiva: {n} copioni"
+    "scriptsToNext": "Alla fase successiva: {n} copioni",
+    "scriptsByExpression": "Esercitati per espressione"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4264,7 +4269,8 @@
     "scriptRestart": "Do começo",
     "scriptModeOwn": "Com suas palavras",
     "scriptCall": "Testar numa chamada",
-    "scriptsToNext": "Para a próxima etapa: {n} roteiros"
+    "scriptsToNext": "Para a próxima etapa: {n} roteiros",
+    "scriptsByExpression": "Praticar por expressão"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5135,7 +5141,8 @@
     "scriptRestart": "Сначала",
     "scriptModeOwn": "Своими словами",
     "scriptCall": "Попробовать в звонке",
-    "scriptsToNext": "До следующего этапа: сценариев — {n}"
+    "scriptsToNext": "До следующего этапа: сценариев — {n}",
+    "scriptsByExpression": "Тренировка по выражениям"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -5816,7 +5823,8 @@
     "scriptRestart": "Dari awal",
     "scriptModeOwn": "Dengan kata sendiri",
     "scriptCall": "Coba lewat panggilan",
-    "scriptsToNext": "Ke tahap berikutnya: {n} naskah lagi"
+    "scriptsToNext": "Ke tahap berikutnya: {n} naskah lagi",
+    "scriptsByExpression": "Latihan per ungkapan"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6491,7 +6499,8 @@
     "scriptRestart": "من البداية",
     "scriptModeOwn": "بكلماتك",
     "scriptCall": "جرّبها في مكالمة",
-    "scriptsToNext": "حتى المرحلة التالية: {n} نصوص"
+    "scriptsToNext": "حتى المرحلة التالية: {n} نصوص",
+    "scriptsByExpression": "تدرّب حسب العبارة"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7166,7 +7175,8 @@
     "scriptRestart": "เริ่มใหม่",
     "scriptModeOwn": "พูดด้วยคำของคุณ",
     "scriptCall": "ลองในการโทร",
-    "scriptsToNext": "ถึงขั้นถัดไป: อีก {n} บท"
+    "scriptsToNext": "ถึงขั้นถัดไป: อีก {n} บท",
+    "scriptsByExpression": "ฝึกตามสำนวน"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -7841,6 +7851,7 @@
     "scriptRestart": "शुरू से",
     "scriptModeOwn": "अपने शब्दों में",
     "scriptCall": "कॉल पर आज़माएँ",
-    "scriptsToNext": "अगले चरण तक: {n} स्क्रिप्ट"
+    "scriptsToNext": "अगले चरण तक: {n} स्क्रिप्ट",
+    "scriptsByExpression": "अभिव्यक्ति से अभ्यास"
   }
 }

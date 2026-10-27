@@ -13,6 +13,8 @@ import { entitlementHeaders } from "@/lib/billing/billingService";
 import {
   countsForPass,
   glossFor,
+  isSituationScript,
+  passOutcome,
   hintOf,
   modesFor,
   runPasses,
@@ -22,6 +24,7 @@ import {
   type ScriptMode,
   type StageScript,
 } from "@/lib/curriculum/stageScripts";
+import type { LedgerState } from "@/lib/learner/ledger";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
@@ -30,7 +33,8 @@ import { playTts, stopTts } from "@/lib/ttsPlayer";
  * My 단계 보기의 "대본으로 연습" — 단계마다 상황별 대본(curriculum/stageScripts.ts), 맨 위에 둔다.
  * 상대 줄은 소리로 나오고 내 줄에서 멈춘다. 보는 방식은 단계마다(modesFor): 1~2 따라 말하기·첫 글자만·가리기, 3~5 따라 말하기·가리기·내 말로.
  * 🎤 → 원문 방식은 낱말 비교(roleplay/practice.ts) + 한 줄, "내 말로"는 뜻이 통하는지(모델). 내 줄을 모두 통과 방식으로 맞히면
- * /api/curriculum/scripts에 통과를 남긴다 — 다음 단계 = 네 갈래 70% + 그 단계 대본 모두 통과.
+ * /api/curriculum/scripts에 통과를 남기고 그 대본의 핵심 표현이 장부에 오른다(표현 갈래). 다음 단계 = 네 갈래 70% + 그 단계 상황 대본 모두 통과.
+ * 상황 대본에 안 나온 핵심 표현은 짧은 표현 대본(situation 없음)으로 — 목록 아래 따로.
  * 3~4단계 상대 줄은 판마다 바뀐다(alt). 5단계는 goal과 "통화로 해 보기"(그 상황으로 AI 통화).
  */
 
@@ -54,6 +58,8 @@ export function StageScripts({
   stage,
   passed,
   onPassed,
+  expressionStates = {},
+  openFor = null,
 }: {
   ui: UICopy;
   locale: string;
@@ -62,45 +68,78 @@ export function StageScripts({
   /** 통과한 대본 id(/api/notebook parts[].scripts.passed). */
   passed: readonly string[];
   onPassed?: (id: string) => void;
+  /** 그 단계 핵심 표현의 장부 상태(/api/notebook parts[].expressions) — 대본마다 붙은 표현 칩의 점. */
+  expressionStates?: Record<string, LedgerState | null>;
+  /** "다음 단계까지: 표현" 연습 → 이 대본을 연다(at = 누른 때, 같은 대본을 다시 열 수 있게). */
+  openFor?: { id: string; at: number } | null;
 }) {
   const scripts = scriptsFor(language, stage);
   const [open, setOpen] = useState<StageScript | null>(null);
+  const [handled, setHandled] = useState(0);
+  if (openFor && openFor.at !== handled) {
+    // 밖에서 고른 대본을 연다(렌더 중 한 번 — 같은 at은 다시 안 연다).
+    setHandled(openFor.at);
+    setOpen(scripts.find((script) => script.id === openFor.id) ?? null);
+  }
   if (!scripts.length) return null;
-  const done = scripts.filter((script) => passed.includes(script.id)).length;
+  const situations = scripts.filter(isSituationScript);
+  const extras = scripts.filter((script) => !isSituationScript(script));
+  const done = situations.filter((script) => passed.includes(script.id)).length;
+  const dot = (state: LedgerState | null | undefined) =>
+    state === "mastered" ? "bg-status-mastered" : state === "learned" ? "bg-status-learned" : state === "met" ? "bg-status-pending" : "border border-line";
+  const row = (script: StageScript) => {
+    const ok = passed.includes(script.id);
+    return (
+      <button
+        key={script.id}
+        type="button"
+        onClick={() => setOpen(script)}
+        className="flex items-center justify-between gap-2 rounded-xl border border-line px-3 py-2.5 text-start hover:bg-white/5"
+      >
+        <span className="min-w-0 flex-1">
+          <span dir="auto" className="block text-note text-slate-100">
+            {glossFor(script.setting, locale)}
+          </span>
+          {script.expressions.length ? (
+            <span className="mt-1 flex flex-wrap gap-x-2 gap-y-0.5">
+              {script.expressions.map((expression) => (
+                <span key={expression} className="flex items-center gap-1 text-meta text-slate-400">
+                  <span aria-hidden className={`h-1.5 w-1.5 shrink-0 rounded-full ${dot(expressionStates[expression])}`} />
+                  <span dir="auto">{expression}</span>
+                </span>
+              ))}
+            </span>
+          ) : null}
+        </span>
+        {ok ? (
+          <span className="shrink-0 text-caption text-good">✓</span>
+        ) : (
+          <span className="shrink-0 text-meta tabular-nums text-slate-500">{script.lines.filter((line) => line.who === "me").length} 🎤</span>
+        )}
+        <span aria-hidden className="text-caption text-slate-500 rtl:rotate-180">›</span>
+      </button>
+    );
+  };
   return (
     <section className="mt-3 flex flex-col gap-2">
       <div className="flex items-center gap-2">
         <h3 className="min-w-0 flex-1 text-caption font-semibold text-slate-300">{ui.stageScriptsTitle}</h3>
         <span aria-hidden className="flex gap-1">
-          {scripts.map((script) => (
+          {situations.map((script) => (
             <span key={script.id} className={`h-2 w-2 rounded-full ${passed.includes(script.id) ? "bg-status-mastered" : "border border-line"}`} />
           ))}
         </span>
         <span className="text-caption tabular-nums text-slate-400">
-          {done}/{scripts.length}
+          {done}/{situations.length}
         </span>
       </div>
-      {scripts.map((script) => {
-        const ok = passed.includes(script.id);
-        return (
-          <button
-            key={script.id}
-            type="button"
-            onClick={() => setOpen(script)}
-            className="flex items-center justify-between gap-2 rounded-xl border border-line px-3 py-2.5 text-start hover:bg-white/5"
-          >
-            <span dir="auto" className="min-w-0 flex-1 text-note text-slate-100">
-              {glossFor(script.setting, locale)}
-            </span>
-            {ok ? (
-              <span className="shrink-0 text-caption text-good">✓ {ui.scriptPassed}</span>
-            ) : (
-              <span className="shrink-0 text-meta tabular-nums text-slate-500">{script.lines.filter((line) => line.who === "me").length} 🎤</span>
-            )}
-            <span aria-hidden className="text-caption text-slate-500 rtl:rotate-180">›</span>
-          </button>
-        );
-      })}
+      {situations.map(row)}
+      {extras.length ? (
+        <>
+          <h3 className="mt-2 text-caption font-semibold text-slate-300">{ui.scriptsByExpression}</h3>
+          {extras.map(row)}
+        </>
+      ) : null}
       {open ? (
         <ScriptPlayer
           ui={ui}
@@ -187,6 +226,7 @@ function ScriptPlayer({
     Object.entries(results).map(([i, result]) => [i, { clean: result.clean, mode: result.mode, revealed: Boolean(revealed[Number(i)]) }]),
   );
   const passes = done && runPasses(script, runs);
+  const outcome = passes ? passOutcome(runs) : "unaided";
 
   useEffect(() => {
     if (!passes || sent.current) return;
@@ -194,7 +234,7 @@ function ScriptPlayer({
     void fetch(apiUrl("/api/curriculum/scripts"), {
       method: "POST",
       headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
-      body: JSON.stringify({ language, id: script.id }),
+      body: JSON.stringify({ language, id: script.id, outcome }),
     })
       .then((response) => {
         if (!response.ok) return;
@@ -202,7 +242,7 @@ function ScriptPlayer({
         onPassed?.(script.id);
       })
       .catch(() => undefined);
-  }, [passes, language, script.id, isPremium, onPassed]);
+  }, [passes, outcome, language, script.id, isPremium, onPassed]);
 
   const say = async () => {
     const line = script.lines[index];

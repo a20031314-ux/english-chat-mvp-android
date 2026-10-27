@@ -11,6 +11,7 @@ import { onLocate, takeLocate, type LocateHandoff } from "@/lib/notes/locateHand
 import { PART_IDS, shareOf, type PartId, type StageParts } from "@/lib/notes/stageParts";
 import { sendAppIntent } from "@/lib/appIntents";
 import { StageScripts } from "@/components/studyMap/StageScripts";
+import { scriptForExpressions } from "@/lib/curriculum/stageScripts";
 
 /**
  * 노트의 뼈대 칸(글자·소리·문법)과 내가 만든 칸, 그 안의 짚은 장면 카드(notes/notebook.ts, /api/notebook).
@@ -314,7 +315,7 @@ export function NotebookSection({
           onNextStage={onNextStage}
           canSpeak={canSpeak}
           focusPart={focusPart}
-          scripts={(order, row) => (
+          scripts={(order, row, openFor) => (
             <StageScripts
               ui={ui}
               locale={locale}
@@ -322,8 +323,11 @@ export function NotebookSection({
               stage={order}
               passed={row?.scripts?.passed ?? []}
               onPassed={() => setReload((n) => n + 1)}
+              expressionStates={Object.fromEntries((row?.expressions ?? []).map((item) => [item.text, item.state]))}
+              openFor={openFor}
             />
           )}
+          scriptFor={(order, open) => scriptForExpressions(language, order, open)?.id ?? null}
         />
       ) : null}
       {!frame && (view === "net" || view === "graph") && book.parts?.length ? (
@@ -611,6 +615,7 @@ function StageFrame({
   canSpeak,
   focusPart = null,
   scripts,
+  scriptFor,
 }: {
   ui: UICopy;
   stages: { order: number; title: string }[];
@@ -633,8 +638,10 @@ function StageFrame({
   canSpeak: boolean;
   /** 망·그래프에서 누른 갈래 — 지금 단계의 그 갈래를 연다. */
   focusPart?: PartId | null;
-  /** 그 단계 대본(맨 위, 2026-10-27 "My탭도 대본에 맞추고"). */
-  scripts?: (order: number, row: StageParts | null) => ReactNode;
+  /** 그 단계 대본(맨 위, 2026-10-27 "My탭도 대본에 맞추고"). openFor = 표현 연습으로 열 대본. */
+  scripts?: (order: number, row: StageParts | null, openFor: { id: string; at: number } | null) => ReactNode;
+  /** 아직 배우지 않은 표현이 든 대본 id(표현 갈래 연습 → 그 대본, 2026-10-28 "표현연결"). */
+  scriptFor?: (order: number, open: string[]) => string | null;
 }) {
   const now = Math.max(1, Math.min(current, stages.length));
   const [shown, setShown] = useState(focus ?? now);
@@ -645,6 +652,7 @@ function StageFrame({
   const stageParts = parts.find((row) => row.order === shown) ?? null;
   // 고른 갈래: 처음엔 가장 모자란 갈래(없으면 문법). "My에서 찾기"로 온 문법 칸이면 문법.
   const [picked, setPicked] = useState<PartId | null>(focusPart);
+  const [openScript, setOpenScript] = useState<{ id: string; at: number } | null>(null);
   const part: PartId = picked ?? (focus ? "grammar" : (stageParts?.weakest ?? "grammar"));
   const inStage = (order: number) => nodes.filter((node) => (node.stage ?? 1) === order);
   const filledOf = (node: NodeView) => Boolean(fill[node.id]) || Boolean(masteredOf?.(node.stage ?? 1, node.index ?? -1));
@@ -697,8 +705,14 @@ function StageFrame({
     </ul>
   );
 
-  /** 그 갈래 연습: 문법 = 아직 안 찬 첫 칸으로 채팅, 표현·어휘 = 아직인 것 셋으로 채팅, 발음 = 통화. */
+  const openExpressions = (stageParts?.expressions ?? []).filter((item) => item.state !== "mastered" && item.state !== "learned").map((item) => item.text);
+  const expressionScript = scriptFor && openExpressions.length ? scriptFor(shown, openExpressions) : null;
+  /** 그 갈래 연습: 문법 = 아직 안 찬 첫 칸으로 채팅, 표현 = 아직인 표현이 든 대본(없으면 채팅), 어휘 = 아직인 것 셋으로 채팅, 발음 = 통화. */
   const practice = (id: PartId) => {
+    if (id === "expression" && expressionScript) {
+      setOpenScript((current) => ({ id: expressionScript, at: (current?.at ?? 0) + 1 }));
+      return;
+    }
     if (id === "grammar") {
       const open = inStage(shown).find((node) => !filledOf(node)) ?? inStage(shown)[0];
       if (open) onTry?.(shown, open.index ?? 0);
@@ -714,7 +728,8 @@ function StageFrame({
         : (stageParts?.expressions ?? []).filter((item) => item.state !== "mastered").slice(0, 3).map((item) => item.text);
     sendAppIntent("practice", { tab: id === "pronunciation" ? "roleplay" : "chat", goal: { phrases }, title: label[id] });
   };
-  const practiceLabel = (id: PartId) => (id === "pronunciation" ? ui.nextByCall : ui.nextByChat);
+  const practiceLabel = (id: PartId) =>
+    id === "pronunciation" ? ui.nextByCall : id === "expression" && expressionScript ? ui.stageScriptsTitle : ui.nextByChat;
   const canPractice = (id: PartId) => id !== "pronunciation" || canSpeak;
 
   return (
@@ -750,7 +765,7 @@ function StageFrame({
       </ol>
       {/* 단계 = 말하는 힘의 크기(상황 이름이 아님, 2026-10-25). 제목은 단계 번호(stageNumber)만 — 상황처럼 읽히는 단계 제목은 뺌(사용자 요청 2026-10-25). */}
       <p className={`mt-3 text-note font-semibold ${shown > now ? "text-slate-400" : "text-ink"}`}>{ui.stageNumber.replace("{n}", String(shown))}</p>
-      {scripts?.(shown, stageParts)}
+      {scripts?.(shown, stageParts, openScript)}
 
       {stageParts ? (
         <>

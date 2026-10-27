@@ -1,6 +1,6 @@
 import type { StageScript } from "../stageScripts.ts";
 
-/** es 단계 대본(curriculum/stageScripts.ts) — Claude가 쓰고 한 번 다시 고침, 원어민 확인 전. */
+/** es 단계 대본(curriculum/stageScripts.ts) — 상황 대본 + 표현 대본(x), 대본마다 쓰는 핵심 표현. Claude가 쓰고 한 번 다시 고침, 원어민 확인 전. */
 export const ES: StageScript[] = [
   {
     "id": "es-1-1",
@@ -75,6 +75,13 @@ export const ES: StageScript[] = [
           "ko": "응, 물론이지. 여기 있어."
         }
       }
+    ],
+    "expressions": [
+      "hola",
+      "mucho gusto",
+      "me llamo",
+      "soy de Corea",
+      "sí, claro"
     ]
   },
   {
@@ -150,6 +157,16 @@ export const ES: StageScript[] = [
           "ko": "네, 감사해요. 오렌지도 1킬로 주세요."
         }
       }
+    ],
+    "expressions": [
+      "buenos días",
+      "gracias",
+      "por favor",
+      "perdón",
+      "cuánto cuesta",
+      "no entiendo",
+      "más despacio",
+      "vale"
     ]
   },
   {
@@ -225,6 +242,13 @@ export const ES: StageScript[] = [
           "ko": "정말 고마워요. 안녕히 계세요!"
         }
       }
+    ],
+    "expressions": [
+      "gracias",
+      "por favor",
+      "perdón",
+      "otra vez",
+      "adiós"
     ]
   },
   {
@@ -246,9 +270,9 @@ export const ES: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "Hola. Sí, me llamo Daniel Kim.",
+        "text": "Hola, buenas tardes. Sí, me llamo Daniel Kim.",
         "gloss": {
-          "en": "Hi. Yes, my name is Daniel Kim.",
+          "en": "Hi, good afternoon. Yes, my name is Daniel Kim.",
           "ko": "안녕하세요. 네, 제 이름은 다니엘 김이에요."
         }
       },
@@ -298,6 +322,80 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "OK, thanks. And where is the bathroom?",
           "ko": "네, 고마워요. 그리고 화장실은 어디예요?"
+        }
+      }
+    ],
+    "expressions": [
+      "hola",
+      "buenas tardes",
+      "me llamo",
+      "gracias",
+      "cuánto cuesta",
+      "dónde está el baño",
+      "sí, claro",
+      "vale"
+    ]
+  },
+  {
+    "id": "es-1-x1",
+    "stage": 1,
+    "setting": {
+      "en": "Meeting a new neighbour at the building door",
+      "ko": "건물 입구에서 새 이웃과 마주침"
+    },
+    "expressions": [
+      "qué tal",
+      "de nada",
+      "lo siento",
+      "hasta luego"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "¡Hola! ¿Eres el vecino nuevo?",
+        "gloss": {
+          "en": "Hi! Are you the new neighbour?",
+          "ko": "안녕하세요! 새로 온 이웃이에요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Sí. Hola, ¿qué tal?",
+        "gloss": {
+          "en": "Yes. Hi, how are you?",
+          "ko": "네. 안녕하세요, 잘 지내세요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Bien, gracias. Oye, ¿hay una farmacia por aquí?",
+        "gloss": {
+          "en": "Fine, thanks. Hey, is there a pharmacy around here?",
+          "ko": "잘 지내요, 고마워요. 저기, 이 근처에 약국 있어요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Lo siento, no sé. Soy nuevo en el barrio.",
+        "gloss": {
+          "en": "Sorry, I don't know. I'm new in the neighbourhood.",
+          "ko": "미안해요, 잘 몰라요. 동네에 처음 왔거든요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "No pasa nada. Gracias igualmente.",
+        "gloss": {
+          "en": "No problem. Thanks anyway.",
+          "ko": "괜찮아요. 아무튼 고마워요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "De nada. ¡Hasta luego!",
+        "gloss": {
+          "en": "You're welcome. See you later!",
+          "ko": "천만에요. 나중에 봐요!"
         }
       }
     ]
@@ -391,6 +489,14 @@ export const ES: StageScript[] = [
           "ko": "좋아. 토요일에 봐."
         }
       }
+    ],
+    "expressions": [
+      "a qué hora",
+      "nos vemos",
+      "qué buena idea",
+      "me viene bien",
+      "tengo que",
+      "me gusta mucho"
     ]
   },
   {
@@ -482,6 +588,12 @@ export const ES: StageScript[] = [
           "ko": "다 정말 맛있었어요. 커피 한 잔이랑 계산서 주세요."
         }
       }
+    ],
+    "expressions": [
+      "no me gusta",
+      "qué me recomienda",
+      "para mí",
+      "la cuenta"
     ]
   },
   {
@@ -535,10 +647,10 @@ export const ES: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "Un poco, creo. Esta mañana tuve treinta y siete y medio.",
+        "text": "Sí, tengo fiebre, pero no mucha. Esta mañana tuve treinta y siete y medio.",
         "gloss": {
-          "en": "A little, I think. This morning I had thirty-seven and a half.",
-          "ko": "조금요, 아마. 오늘 아침에 37.5도였어요."
+          "en": "Yes, I have a fever, but not much. This morning I had thirty-seven and a half.",
+          "ko": "네, 열이 있는데 많이는 아니에요. 오늘 아침에 37.5도였어요."
         }
       },
       {
@@ -573,6 +685,11 @@ export const ES: StageScript[] = [
           "ko": "알겠습니다, 고마워요. 전부 얼마예요?"
         }
       }
+    ],
+    "expressions": [
+      "tengo que",
+      "tengo fiebre",
+      "estoy cansado"
     ]
   },
   {
@@ -662,6 +779,138 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "What a great idea! You're going to love it.",
           "ko": "좋은 생각이다! 정말 좋을 거야."
+        }
+      }
+    ],
+    "expressions": [
+      "este fin de semana",
+      "qué buena idea",
+      "voy a"
+    ]
+  },
+  {
+    "id": "es-2-x1",
+    "stage": 2,
+    "setting": {
+      "en": "Calling a friend to invite her to the cinema",
+      "ko": "친구에게 전화해서 영화 보러 가자고 하기"
+    },
+    "expressions": [
+      "ayer fui",
+      "quieres venir",
+      "claro que sí"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "¡Hola! ¿Qué tal el día?",
+        "gloss": {
+          "en": "Hi! How's your day going?",
+          "ko": "안녕! 오늘 하루 어때?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Bien. Ayer fui al cine nuevo del centro. ¡Es muy bonito!",
+        "gloss": {
+          "en": "Good. Yesterday I went to the new cinema in the centre. It's really nice!",
+          "ko": "좋아. 어제 시내에 새로 생긴 영화관에 갔는데 정말 예뻐!"
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Ah, sí? Yo también quiero ir. ¿Qué película viste?",
+        "gloss": {
+          "en": "Oh yeah? I want to go too. What film did you see?",
+          "ko": "아, 그래? 나도 가 보고 싶어. 무슨 영화 봤어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Una comedia española. Esta noche hay otra. ¿Quieres venir conmigo?",
+        "gloss": {
+          "en": "A Spanish comedy. There's another one tonight. Do you want to come with me?",
+          "ko": "스페인 코미디. 오늘 밤에 다른 거 하나 해. 같이 갈래?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡Sí! ¿Y puedo llevar a mi hermana?",
+        "gloss": {
+          "en": "Yes! And can I bring my sister?",
+          "ko": "응! 우리 언니도 데려가도 돼?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "¡Claro que sí! Nos vemos a las ocho en la entrada.",
+        "gloss": {
+          "en": "Of course! See you at eight at the entrance.",
+          "ko": "당연하지! 여덟 시에 입구에서 보자."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-2-x2",
+    "stage": 2,
+    "setting": {
+      "en": "Not feeling well at the office",
+      "ko": "회사에서 몸이 안 좋을 때"
+    },
+    "expressions": [
+      "me duele la cabeza",
+      "se puede",
+      "un momento",
+      "depende"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "Oye, ¿estás bien? No tienes buena cara.",
+        "gloss": {
+          "en": "Hey, are you okay? You don't look well.",
+          "ko": "저기, 괜찮아? 안색이 안 좋아."
+        }
+      },
+      {
+        "who": "me",
+        "text": "No mucho. Me duele la cabeza desde esta mañana.",
+        "gloss": {
+          "en": "Not really. I've had a headache since this morning.",
+          "ko": "별로. 아침부터 머리가 아파."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Quieres un café? ¿O prefieres ir a casa?",
+        "gloss": {
+          "en": "Do you want a coffee? Or would you rather go home?",
+          "ko": "커피 마실래? 아니면 집에 갈래?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Depende. ¿Se puede salir antes hoy?",
+        "gloss": {
+          "en": "It depends. Is it possible to leave early today?",
+          "ko": "상황 봐서. 오늘 일찍 나가도 되나?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Sí, pero tienes que hablar con la jefa. Está en su despacho.",
+        "gloss": {
+          "en": "Yes, but you have to talk to the boss. She's in her office.",
+          "ko": "응, 근데 팀장님한테 말해야 해. 사무실에 계셔."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Vale. Un momento, guardo esto y voy.",
+        "gloss": {
+          "en": "Okay. One moment, I'll save this and go.",
+          "ko": "알았어. 잠깐만, 이거 저장하고 갈게."
         }
       }
     ]
@@ -837,6 +1086,13 @@ export const ES: StageScript[] = [
           "ko": "정말 감사합니다. 빈방이 있어서 다행이네요."
         }
       }
+    ],
+    "expressions": [
+      "me parece que",
+      "lo que pasa es que",
+      "tengo un problema con",
+      "no funciona",
+      "menos mal"
     ]
   },
   {
@@ -996,6 +1252,13 @@ export const ES: StageScript[] = [
           "ko": "아니, 가 본 적 없어. 다음엔 꼭 가 보고 싶어... 되도록 캐리어랑 같이."
         }
       }
+    ],
+    "expressions": [
+      "nunca he estado",
+      "lo que pasa es que",
+      "me encantaría",
+      "de hecho",
+      "al final"
     ]
   },
   {
@@ -1155,6 +1418,10 @@ export const ES: StageScript[] = [
           "ko": "네. 팀의 평범한 하루가 어떤지 말씀해 주실 수 있을까요?"
         }
       }
+    ],
+    "expressions": [
+      "creo que",
+      "sin embargo"
     ]
   },
   {
@@ -1201,10 +1468,10 @@ export const ES: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "Me parece que está muy bien escrita. Pero creo que la segunda temporada es más lenta que la primera.",
+        "text": "En mi opinión, está muy bien escrita. Pero creo que la segunda temporada es más lenta que la primera.",
         "gloss": {
-          "en": "I think it's really well written. But I think the second season is slower than the first.",
-          "ko": "대본이 정말 잘 쓰인 것 같아. 근데 시즌 2가 시즌 1보다 느린 것 같아."
+          "en": "In my opinion, it's really well written. But I think the second season is slower than the first.",
+          "ko": "내 생각엔 대본이 정말 잘 쓰였어. 근데 시즌 2가 시즌 1보다 느린 것 같아."
         }
       },
       {
@@ -1321,6 +1588,138 @@ export const ES: StageScript[] = [
           "ko": "모르겠어. 좀 더 가벼운 거, 코미디 같은 걸 보고 싶어. 추천해 줄 거 있어?"
         }
       }
+    ],
+    "expressions": [
+      "creo que",
+      "en mi opinión",
+      "no estoy seguro",
+      "por cierto",
+      "te acuerdas de"
+    ]
+  },
+  {
+    "id": "es-3-x1",
+    "stage": 3,
+    "setting": {
+      "en": "Exchanging a coat at a clothes shop",
+      "ko": "옷 가게에서 코트 교환하기"
+    },
+    "expressions": [
+      "podría cambiarlo",
+      "qué pena",
+      "a ver"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "Buenas tardes. ¿En qué le puedo ayudar?",
+        "gloss": {
+          "en": "Good afternoon. How can I help you?",
+          "ko": "안녕하세요. 무엇을 도와드릴까요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Compré este abrigo la semana pasada, pero me queda pequeño. ¿Podría cambiarlo por una talla más grande?",
+        "gloss": {
+          "en": "I bought this coat last week, but it's too small for me. Could you exchange it for a bigger size?",
+          "ko": "지난주에 이 코트를 샀는데 작아요. 한 치수 큰 걸로 바꿔 주실 수 있을까요?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "Claro. ¿Tiene el recibo?",
+        "gloss": {
+          "en": "Of course. Do you have the receipt?",
+          "ko": "물론이죠. 영수증 있으세요?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "A ver... Sí, aquí está.",
+        "gloss": {
+          "en": "Let's see... Yes, here it is.",
+          "ko": "어디 보자... 네, 여기 있어요."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Lo siento, en la talla grande solo nos queda en negro.",
+        "gloss": {
+          "en": "I'm sorry, in the bigger size we only have it in black.",
+          "ko": "죄송해요, 큰 치수는 검은색만 남았어요."
+        }
+      },
+      {
+        "who": "me",
+        "text": "¡Qué pena! Me gusta mucho el azul. Bueno, me pruebo el negro.",
+        "gloss": {
+          "en": "What a shame! I really like the blue one. Well, I'll try on the black one.",
+          "ko": "아쉽네요! 파란색이 정말 마음에 들었는데. 그럼 검은색을 입어 볼게요."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-3-x2",
+    "stage": 3,
+    "setting": {
+      "en": "A friend planning a first trip to Mexico",
+      "ko": "멕시코 첫 여행을 계획하는 친구와"
+    },
+    "expressions": [
+      "estoy de acuerdo",
+      "alguna vez"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "Estoy pensando en ir a México en diciembre.",
+        "gloss": {
+          "en": "I'm thinking of going to Mexico in December.",
+          "ko": "십이월에 멕시코에 갈까 생각 중이야."
+        }
+      },
+      {
+        "who": "me",
+        "text": "¡Qué bien! ¿Has estado alguna vez allí?",
+        "gloss": {
+          "en": "How nice! Have you ever been there?",
+          "ko": "좋다! 거기 가 본 적 있어?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "No, nunca. Mi hermano dice que hay que ir por lo menos tres semanas, porque es un país enorme.",
+        "gloss": {
+          "en": "No, never. My brother says you need to go for at least three weeks, because it's a huge country.",
+          "ko": "아니, 한 번도. 오빠가 나라가 워낙 커서 적어도 삼 주는 가야 한대."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Estoy de acuerdo con él. Yo estuve hace dos años y no tuve tiempo para todo.",
+        "gloss": {
+          "en": "I agree with him. I was there two years ago and didn't have time for everything.",
+          "ko": "나도 그 말에 동의해. 이 년 전에 가 봤는데 다 볼 시간이 없었어."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Y tú qué me recomiendas? ¿Ciudad o playa?",
+        "gloss": {
+          "en": "So what do you recommend? City or beach?",
+          "ko": "그럼 뭘 추천해? 도시야, 바다야?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Las dos cosas. Yo empezaría por Ciudad de México y terminaría en la costa.",
+        "gloss": {
+          "en": "Both. I'd start in Mexico City and finish on the coast.",
+          "ko": "둘 다. 나라면 멕시코시티에서 시작해서 해변에서 끝낼 거야."
+        }
+      }
     ]
   },
   {
@@ -1374,10 +1773,10 @@ export const ES: StageScript[] = [
       },
       {
         "who": "me",
-        "text": "Por un lado, el cliente cambió los requisitos la semana pasada. Por otro, Ana lleva unos días enferma y me toca hacer su parte.",
+        "text": "Por un lado, el cliente cambió los requisitos la semana pasada. Por otro lado, Ana lleva unos días enferma y me toca hacer su parte.",
         "gloss": {
-          "en": "On the one hand, the client changed the requirements last week. On the other, Ana has been ill for a few days and I've got to do her part.",
-          "ko": "한편으로는 고객이 지난주에 요구 사항을 바꿨고요. 또 아나가 며칠째 아파서 그 부분까지 제가 해야 해요."
+          "en": "On the one hand, the client changed the requirements last week. On the other hand, Ana has been ill for a few days and I've got to do her part.",
+          "ko": "한편으로는 고객이 지난주에 요구 사항을 바꿨고요. 다른 한편으로는 아나가 며칠째 아파서 그 부분까지 제가 해야 해요."
         }
       },
       {
@@ -1519,6 +1918,13 @@ export const ES: StageScript[] = [
           "ko": "약속할게요. 고객이 더는 아무것도 안 바꾸길 바랄 뿐이에요..."
         }
       }
+    ],
+    "expressions": [
+      "no creo que",
+      "aunque",
+      "por un lado",
+      "por otro lado",
+      "ojalá"
     ]
   },
   {
@@ -1710,6 +2116,13 @@ export const ES: StageScript[] = [
           "ko": "하하. 상관없어, 카메라만 안 켠다면."
         }
       }
+    ],
+    "expressions": [
+      "no creo que",
+      "aunque",
+      "por un lado",
+      "me da igual",
+      "lo bueno es que"
     ]
   },
   {
@@ -1915,6 +2328,15 @@ export const ES: StageScript[] = [
           "ko": "정리하면, 해 볼 만한 아이디어지만 차를 대신할 현실적인 수단이 있어야만 성공할 거예요."
         }
       }
+    ],
+    "expressions": [
+      "no creo que",
+      "aunque",
+      "en cambio",
+      "vale la pena",
+      "habría que",
+      "a no ser que",
+      "en resumen"
     ]
   },
   {
@@ -2099,6 +2521,156 @@ export const ES: StageScript[] = [
           "ko": "친구 좋다는 게 뭐야. 뭘 결정하든 잘되길 바라. 그리고 가면 놀러 갈게!"
         }
       }
+    ],
+    "expressions": [
+      "si yo fuera tú",
+      "aunque",
+      "vale la pena",
+      "ojalá",
+      "en cuanto a",
+      "lo bueno es que",
+      "me di cuenta de"
+    ]
+  },
+  {
+    "id": "es-4-x1",
+    "stage": 4,
+    "setting": {
+      "en": "Cheering up a friend after a mistake in a presentation",
+      "ko": "발표에서 실수한 친구를 다독이기"
+    },
+    "expressions": [
+      "a pesar de",
+      "no es para tanto",
+      "estaría bien"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "Estoy fatal. Hoy en la presentación me equivoqué con una cifra delante de todo el equipo.",
+        "gloss": {
+          "en": "I feel awful. In today's presentation I got a figure wrong in front of the whole team.",
+          "ko": "기분 최악이야. 오늘 발표에서 팀 전체 앞에서 숫자를 틀렸어."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Bueno, no es para tanto. Le puede pasar a cualquiera.",
+        "gloss": {
+          "en": "Well, it's not that big a deal. It can happen to anyone.",
+          "ko": "에이, 그렇게 큰일은 아니야. 누구한테나 있을 수 있는 일이야."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Ya, pero mi jefe se dio cuenta y me lo dijo delante de todos.",
+        "gloss": {
+          "en": "Yeah, but my boss noticed and told me in front of everyone.",
+          "ko": "그렇긴 한데, 상사가 알아채고 모두 앞에서 말했단 말이야."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Pues a pesar de eso, seguro que la presentación salió bien. ¿Qué te dijeron los demás?",
+        "gloss": {
+          "en": "Well, despite that, I'm sure the presentation went well. What did the others say?",
+          "ko": "그래도 그거 말고는 발표 잘됐을 거야. 다른 사람들은 뭐래?"
+        }
+      },
+      {
+        "who": "them",
+        "text": "La verdad es que varios me felicitaron después.",
+        "gloss": {
+          "en": "Actually, several people congratulated me afterwards.",
+          "ko": "사실 끝나고 몇 명이 잘했다고 해 줬어."
+        }
+      },
+      {
+        "who": "me",
+        "text": "¿Ves? Quizás estaría bien mandarle a tu jefe un correo con la cifra correcta, y tema cerrado.",
+        "gloss": {
+          "en": "See? Maybe it would be good to send your boss an email with the correct figure, and that's the end of it.",
+          "ko": "거 봐. 상사한테 맞는 숫자로 메일 하나 보내면 좋을 것 같아. 그럼 끝이지."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Sí, buena idea. Lo hago ahora mismo.",
+        "gloss": {
+          "en": "Yes, good idea. I'll do it right now.",
+          "ko": "응, 좋은 생각이다. 지금 바로 할게."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Y luego nos tomamos algo para desconectar, ¿vale?",
+        "gloss": {
+          "en": "And then we'll grab a drink to unwind, okay?",
+          "ko": "그다음에 한잔하면서 머리 좀 식히자, 알았지?"
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-4-x2",
+    "stage": 4,
+    "setting": {
+      "en": "Talking with a flatmate about a high electricity bill",
+      "ko": "룸메이트와 많이 나온 전기 요금 이야기"
+    },
+    "expressions": [
+      "por lo tanto",
+      "tiene sentido"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "Oye, ¿has visto la factura de la luz de este mes? Es altísima.",
+        "gloss": {
+          "en": "Hey, have you seen this month's electricity bill? It's really high.",
+          "ko": "저기, 이번 달 전기 요금 봤어? 엄청 많이 나왔어."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Sí. Tiene sentido, porque con el frío hemos tenido la calefacción encendida todo el día.",
+        "gloss": {
+          "en": "Yes. It makes sense, because with the cold we've had the heating on all day.",
+          "ko": "응. 그럴 만해. 추워서 하루 종일 난방을 켜 뒀잖아."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Ya, pero así no podemos seguir. ¿Qué hacemos?",
+        "gloss": {
+          "en": "Right, but we can't go on like this. What do we do?",
+          "ko": "그렇긴 한데 이렇게 계속은 못 해. 어떡하지?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "La calefacción eléctrica es lo que más gasta. Por lo tanto, deberíamos usarla solo por la noche.",
+        "gloss": {
+          "en": "The electric heating is what uses the most. Therefore, we should only use it at night.",
+          "ko": "전기 난방이 전기를 제일 많이 먹어. 그러니까 밤에만 쓰는 게 좋겠어."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Y pasar frío durante el día? No sé yo...",
+        "gloss": {
+          "en": "And be cold during the day? I'm not so sure...",
+          "ko": "그럼 낮엔 추위에 떨라고? 글쎄..."
+        }
+      },
+      {
+        "who": "me",
+        "text": "Podemos usar mantas en el sofá. Y, si hace falta, la encendemos un rato.",
+        "gloss": {
+          "en": "We can use blankets on the sofa. And if we need to, we turn it on for a while.",
+          "ko": "소파에서 담요를 덮으면 돼. 필요하면 잠깐 켜고."
+        }
+      }
     ]
   },
   {
@@ -2242,6 +2814,15 @@ export const ES: StageScript[] = [
           "ko": "별말을. 제안서는 네 거고, 난 살짝 손만 보는 거야."
         }
       }
+    ],
+    "expressions": [
+      "dar en el clavo",
+      "a lo mejor",
+      "en todo caso",
+      "o sea",
+      "dicho sea de paso",
+      "a grandes rasgos",
+      "no me cabe duda"
     ]
   },
   {
@@ -2385,6 +2966,11 @@ export const ES: StageScript[] = [
           "ko": "저요, 당연하죠. 계속 이렇게 요리해 주시면 일요일마다 와야겠어요."
         }
       }
+    ],
+    "expressions": [
+      "qué va",
+      "tomar el pelo",
+      "estar en las nubes"
     ]
   },
   {
@@ -2528,6 +3114,13 @@ export const ES: StageScript[] = [
           "ko": "좋아, 가자. 근데 미리 말해 두는데, 두 번째 잔쯤에 해 얘기로 다시 공격할 거야."
         }
       }
+    ],
+    "expressions": [
+      "a fin de cuentas",
+      "ni de broma",
+      "a lo mejor",
+      "o sea",
+      "sin ir más lejos"
     ]
   },
   {
@@ -2669,6 +3262,151 @@ export const ES: StageScript[] = [
         "gloss": {
           "en": "No, that's all. You've been very kind. Have a good day.",
           "ko": "아니요, 그거면 됐습니다. 정말 친절하셨어요. 좋은 하루 보내세요."
+        }
+      }
+    ],
+    "expressions": [
+      "cabe destacar",
+      "le agradecería que"
+    ]
+  },
+  {
+    "id": "es-5-x1",
+    "stage": 5,
+    "setting": {
+      "en": "Complaining to a friend about a noisy upstairs neighbour",
+      "ko": "친구에게 시끄러운 윗집 이웃 하소연하기"
+    },
+    "expressions": [
+      "me saca de quicio",
+      "quedarse de piedra",
+      "no pasa nada"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "¿Qué te pasa? Traes una cara...",
+        "gloss": {
+          "en": "What's up with you? You look terrible...",
+          "ko": "무슨 일 있어? 얼굴이 말이 아니네..."
+        }
+      },
+      {
+        "who": "me",
+        "text": "El vecino de arriba. Lleva una semana haciendo obras a las siete de la mañana y me saca de quicio.",
+        "gloss": {
+          "en": "The upstairs neighbour. He's been doing building work at seven in the morning for a week and it drives me up the wall.",
+          "ko": "윗집 사람. 일주일째 아침 일곱 시에 공사를 하는데 미치겠어."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¿Y no has hablado con él?",
+        "gloss": {
+          "en": "And haven't you talked to him?",
+          "ko": "그 사람이랑 얘기는 해 봤어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Ayer subí a quejarme y me quedé de piedra: me abrió la puerta mi jefe.",
+        "gloss": {
+          "en": "Yesterday I went up to complain and I was stunned: my boss opened the door.",
+          "ko": "어제 따지러 올라갔는데 그대로 얼어붙었어. 우리 상사가 문을 열더라고."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡No me digas! ¿Tu jefe vive encima de ti y no lo sabías?",
+        "gloss": {
+          "en": "No way! Your boss lives above you and you didn't know?",
+          "ko": "말도 안 돼! 상사가 윗집에 사는데 몰랐어?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Ni idea. Se mudó hace un mes. Y claro, no supe qué decirle.",
+        "gloss": {
+          "en": "No idea. He moved in a month ago. And of course, I didn't know what to say to him.",
+          "ko": "전혀. 한 달 전에 이사 왔대. 당연히 뭐라고 해야 할지 몰랐지."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Uy, qué situación. ¿Y ahora qué vas a hacer?",
+        "gloss": {
+          "en": "Oof, what a situation. So what are you going to do now?",
+          "ko": "아이고, 난감하다. 그래서 이제 어떡할 거야?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Aguantar. Me pidió perdón por el ruido y le dije que no pasaba nada... aunque sí que pasa.",
+        "gloss": {
+          "en": "Put up with it. He apologised for the noise and I told him it was no problem... even though it is.",
+          "ko": "참아야지. 시끄러워서 미안하다길래 괜찮다고 했어... 사실 안 괜찮은데."
+        }
+      }
+    ]
+  },
+  {
+    "id": "es-5-x2",
+    "stage": 5,
+    "setting": {
+      "en": "Asking a friend to help you move house",
+      "ko": "친구에게 이사를 도와 달라고 부탁하기"
+    },
+    "expressions": [
+      "ir al grano",
+      "echar una mano"
+    ],
+    "lines": [
+      {
+        "who": "them",
+        "text": "¡Hombre, cuánto tiempo! ¿Qué tal todo?",
+        "gloss": {
+          "en": "Hey, long time no see! How's everything?",
+          "ko": "야, 오랜만이다! 다 잘 지내?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Bien, bien. Mira, voy a ir al grano, que sé que tienes poco tiempo: este sábado me mudo.",
+        "gloss": {
+          "en": "Good, good. Look, I'll get straight to the point, since I know you're busy: I'm moving this Saturday.",
+          "ko": "잘 지내. 바쁜 거 아니까 본론만 말할게. 나 이번 토요일에 이사해."
+        }
+      },
+      {
+        "who": "them",
+        "text": "¡Por fin! A ver si lo adivino... ¿necesitas ayuda?",
+        "gloss": {
+          "en": "At last! Let me guess... you need help?",
+          "ko": "드디어! 맞혀 볼까... 도움이 필요하구나?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Has dado en el clavo. ¿Podrías echarme una mano con los muebles? Te invito a comer después.",
+        "gloss": {
+          "en": "Spot on. Could you give me a hand with the furniture? I'll treat you to lunch afterwards.",
+          "ko": "정확해. 가구 옮기는 것 좀 도와줄 수 있어? 끝나고 점심 살게."
+        }
+      },
+      {
+        "who": "them",
+        "text": "Claro, cuenta conmigo. ¿A qué hora empezamos?",
+        "gloss": {
+          "en": "Sure, count me in. What time do we start?",
+          "ko": "당연하지, 나만 믿어. 몇 시에 시작해?"
+        }
+      },
+      {
+        "who": "me",
+        "text": "Sobre las diez. Y si se lo puedes decir a tu primo, que tiene camioneta, sería perfecto.",
+        "gloss": {
+          "en": "Around ten. And if you could tell your cousin, who has a van, that would be perfect.",
+          "ko": "열 시쯤. 그리고 승합차 있는 네 사촌한테도 말해 주면 완벽하고."
         }
       }
     ]
