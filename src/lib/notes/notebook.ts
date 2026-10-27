@@ -412,6 +412,15 @@ export function noteFitsUi(note: string, ui: string): boolean {
   return script ? hits >= Math.min(3, letters) : hits * 2 >= letters;
 }
 
+/** Stricter than noteFitsUi: most letters outside quotes are in the interface script, so a note that drifts halfway does not pass. */
+export function noteMostlyUi(note: string, ui: string): boolean {
+  const bare = note.replace(/["“”«»「」『』'‘’][^"“”«»「」『』'‘’]*["“”«»「」『』'‘’]/gu, " ");
+  const letters = (bare.match(/\p{L}/gu) ?? []).length;
+  if (!letters) return true;
+  const hits = (bare.match(UI_SCRIPT[ui] ?? /\p{Script=Latin}/gu) ?? []).length;
+  return hits * 2 >= letters;
+}
+
 export function locateMessage(text: string, sentence: string): string {
   return JSON.stringify({ part: text, ...(sentence && sentence !== text ? { sentence } : {}) });
 }

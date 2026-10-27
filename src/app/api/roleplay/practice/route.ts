@@ -6,7 +6,7 @@ import { requestUserId } from "@/lib/server/premiumRequest";
 import { coerceLanguageCode, interfaceLanguageName } from "@/lib/learningLanguages";
 import { findScenario } from "@/lib/roleplay/catalog";
 import { compareToTarget, parsePractice, practicePrompt, type Practice } from "@/lib/roleplay/practice";
-import { noteFitsUi } from "@/lib/notes/notebook";
+import { noteMostlyUi } from "@/lib/notes/notebook";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
@@ -102,7 +102,7 @@ export async function POST(request: NextRequest) {
       const completion = await ask(messages);
       const raw = completion.choices[0]?.message?.content ?? "";
       practice = parsePractice(raw);
-      if (!practice || noteFitsUi(practice.note, nativeCode)) break;
+      if (!practice || noteMostlyUi(practice.note, nativeCode)) break;
       messages.push(
         { role: "assistant", content: raw },
         { role: "user", content: `That note is not in ${nativeName}. Give the same JSON with the note rewritten in ${nativeName}; quote words of the sentence only where needed.` },
