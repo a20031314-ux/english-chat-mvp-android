@@ -312,6 +312,7 @@ function FramePlayer({
       nativeLanguage: locale as LearningLanguageCode,
       isPremium,
       scriptId: frame.id,
+      mode: stepMode,
       ...(own ? { frame: frame.pattern, meaning: glossFor(frame.meaning, "en") } : {}),
       onLimit: () => setLimited(true),
     });

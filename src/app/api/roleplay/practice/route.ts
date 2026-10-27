@@ -8,7 +8,7 @@ import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { coerceLanguageCode, interfaceLanguageName } from "@/lib/learningLanguages";
 import { findScenario } from "@/lib/roleplay/catalog";
-import { compareToTarget, frameUsePrompt, ownWordsPrompt, parsePractice, practicePrompt, type Practice } from "@/lib/roleplay/practice";
+import { compareToTarget, frameUsePrompt, ownWordsPrompt, parsePractice, practicePrompt, recallPrompt, type Practice } from "@/lib/roleplay/practice";
 import { noteMostlyUi } from "@/lib/notes/notebook";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest } from "@/lib/server/meterRequest";
@@ -91,10 +91,15 @@ export async function POST(request: NextRequest) {
     const before = typeof body.before === "string" ? body.before.trim().slice(0, 300) : "";
     // 틀 "내 말로"(3단계~): frame = 틀 모양, meaning = 그 틀이 하는 일. 빈칸은 학습자가 고른 말 — 틀을 맞게 썼는지.
     const frame = typeof body.frame === "string" ? body.frame.trim().slice(0, 200) : "";
+    // 대본·문장구조를 보지 않고 떠올려 말함(첫 글자만·가리기·문장구조만): 맞게 바꿔 말한 것도 통과(2026-10-28). 따라 말하기(mode "shadow")만 원문 그대로.
+    // 2.76 첫 빌드는 mode를 안 보내 — 대본 줄(scriptId)이면 떠올리기로 본다.
+    const recalled = typeof body.scriptId === "string" && body.mode !== "shadow";
     const system = frame
       ? frameUsePrompt({ frame, meaning, example: target, heard, targetLanguage: interfaceLanguageName(scenario.language), nativeLanguage: nativeName })
       : meaning
       ? ownWordsPrompt({ meaning, reference: target, heard, before, targetLanguage: interfaceLanguageName(scenario.language), nativeLanguage: nativeName })
+      : recalled
+      ? recallPrompt({ target, heard, comparison, targetLanguage: interfaceLanguageName(scenario.language), nativeLanguage: nativeName })
       : practicePrompt({
           target,
           heard,

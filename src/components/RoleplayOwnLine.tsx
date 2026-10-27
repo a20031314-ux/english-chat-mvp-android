@@ -40,6 +40,7 @@ export async function sayLine(
     before?: string;
     frame?: string;
     scriptId?: string;
+    mode?: string;
     onLimit?: () => void;
   },
 ): Promise<{ heard: string; practice: Practice | null }> {
@@ -56,6 +57,7 @@ export async function sayLine(
       before: input.before,
       frame: input.frame,
       scriptId: input.scriptId,
+      mode: input.mode,
       onLimit: input.onLimit,
     });
     return { heard, practice };

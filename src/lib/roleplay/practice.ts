@@ -208,6 +208,27 @@ Reply as JSON only, writing in ${input.nativeLanguage}, politely and in one cons
 }
 
 /**
+ * 대본·문장구조를 보지 않고(첫 글자만·가리기·문장구조만) 떠올려 말했다(2026-10-28 사용자 "기존 문장에서 변형된 맞는 표현도 고치라고 함" →
+ * 맞게 바꿔 말한 것은 통과). 원문 그대로가 아니어도 같은 뜻을 자연스럽고 맞게 말했으면 good — 원문과 다른 말은 note에 원문 표현을 짧게 알려 준다.
+ * 받아쓰기가 떨어뜨린 짧은 낱말(관사·전치사)과 같은 소리 다른 글자는 학습자 잘못이 아니다.
+ */
+export function recallPrompt(input: { target: string; heard: string; comparison: Comparison; targetLanguage: string; nativeLanguage: string }): string {
+  const trouble = troubleWords(input.comparison);
+  return `Someone learning ${input.targetLanguage} is practising a dialogue line from memory — the line was hidden, so they had to recall it. You are looking at what a speech recogniser made of what they said.
+
+The line in the script: "${input.target}"
+What the recogniser heard: "${input.heard || "(nothing)"}"
+${trouble.length > 0 ? `Where it differs from the script word by word:\n${trouble.map((line) => `- ${line}`).join("\n")}` : "Every word came through."}
+
+"good" is true when what they said works at this point in the dialogue: the same meaning, grammatical, and something a native speaker would naturally say — even if the wording differs from the script (another tense form with the same meaning, a contraction, a synonym, a different but natural order). It is false only when the meaning changed or got lost, when it is ungrammatical or unnatural, or when too little came through to tell. Speech recognisers drop or blur short unstressed words (articles, prepositions, auxiliaries) and write some words with another spelling of the same sound; do not count those against them unless the rest shows the word was really missing. A transcript with almost nothing recognisable is "false" — say gently that it did not come through and to try again a little slower.
+
+The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is true and they used different wording, say in one short line that it works and what the script says ("the script uses …"). When "good" is false, say in one sentence what is off and how to fix it.
+
+Reply as JSON only, politely and in one consistent level of politeness:
+{"good": true or false, "note": "<one or two sentences>"}`;
+}
+
+/**
  * "내 말로"(단계 대본 3~5단계, 2026-10-27): 원문을 보지 않고 뜻만 보고 자기 말로 했다. 낱말 비교가 아니라
  * 그 자리에서 그 뜻이 자연스럽게 통하는지 — good이면 통과. 원어민 줄은 비교 기준이 아니라 한 가지 예.
  */

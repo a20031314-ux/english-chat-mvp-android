@@ -332,6 +332,7 @@ function ScriptPlayer({
       nativeLanguage: locale as LearningLanguageCode,
       isPremium,
       scriptId: script.id,
+      mode,
       onLimit: () => setLimited(true),
       ...(own ? { meaning: glossFor(line.gloss, locale), before } : {}),
     });

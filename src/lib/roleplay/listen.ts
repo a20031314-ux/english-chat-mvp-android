@@ -880,6 +880,8 @@ export async function fetchPractice(input: {
   frame?: string;
   /** My 단계 대본의 줄이면 그 대본 id — 서버가 요금별 하루 한도를 센다. */
   scriptId?: string;
+  /** 대본 줄 보는 방식(따라 말하기 "shadow"면 원문 그대로, 그 밖엔 맞게 바꿔 말한 것도 통과 — 2026-10-28). */
+  mode?: string;
   /** 오늘 대본 한도에 닿았을 때(429 SCRIPT_LIMIT). */
   onLimit?: () => void;
 }): Promise<Practice | null> {
@@ -898,6 +900,7 @@ export async function fetchPractice(input: {
         ...(input.meaning ? { meaning: input.meaning, before: input.before ?? "" } : {}),
         ...(input.frame ? { frame: input.frame } : {}),
         ...(input.scriptId ? { scriptId: input.scriptId } : {}),
+        ...(input.mode ? { mode: input.mode } : {}),
       }),
     });
     if (response.status === 429) {
