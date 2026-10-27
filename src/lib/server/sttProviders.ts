@@ -32,7 +32,21 @@ class SttHttpError extends Error {
   }
 }
 
+/**
+ * Scribe가 바쁠 때(2026-10-27 운영: 429 system_busy가 몇 분씩, 한 번에 약 4초 걸려 거절) 1분 동안 묻지 않고 바로 OpenAI로 —
+ * 실패할 때마다 한 마디가 4초씩 늦어지지 않게. 서버 인스턴스마다 따로 센다.
+ */
+let scribeRestUntil = 0;
+const SCRIBE_REST_MS = 60_000;
+export function scribeResting(now = Date.now()): boolean {
+  return now < scribeRestUntil;
+}
+function noteScribeFailure(status: number, now = Date.now()) {
+  if (status === 429 || status >= 500) scribeRestUntil = now + SCRIBE_REST_MS;
+}
+
 async function scribe(bytes: Buffer, mimeType: string, filename: string, languages: string[]): Promise<SttResult> {
+  if (scribeResting()) throw new SttHttpError(429, "scribe resting after a recent 429/5xx");
   const form = new FormData();
   form.set("model_id", "scribe_v2");
   form.set("file", new Blob([new Uint8Array(bytes)], { type: mimeType }), filename);
@@ -48,7 +62,10 @@ async function scribe(bytes: Buffer, mimeType: string, filename: string, languag
     body: form,
     signal: AbortSignal.timeout(20_000),
   });
-  if (!response.ok) throw new SttHttpError(response.status, `scribe ${response.status} ${(await response.text()).slice(0, 200)}`);
+  if (!response.ok) {
+    noteScribeFailure(response.status);
+    throw new SttHttpError(response.status, `scribe ${response.status} ${(await response.text()).slice(0, 200)}`);
+  }
   const body = (await response.json()) as {
     text?: string;
     language_code?: string;
@@ -140,6 +157,7 @@ export type ScribeToken = { text: string; start: number; end: number; kind: "wor
  * 한 마디용 `scribe`와 같은 주소지만 조각이 길어 기다림을 늘리고, 띄어쓰기 토큰도 남긴다. 배경 소리 표시는 끈다.
  */
 export async function scribeTimed(input: { bytes: Buffer; mimeType: string; filename: string; language?: string }): Promise<{ tokens: ScribeToken[]; text: string; language: string | null }> {
+  if (scribeResting()) throw new SttHttpError(429, "scribe resting after a recent 429/5xx");
   const form = new FormData();
   form.set("model_id", "scribe_v2");
   form.set("file", new Blob([new Uint8Array(input.bytes)], { type: input.mimeType }), input.filename);
@@ -152,7 +170,10 @@ export async function scribeTimed(input: { bytes: Buffer; mimeType: string; file
     body: form,
     signal: AbortSignal.timeout(90_000),
   });
-  if (!response.ok) throw new SttHttpError(response.status, `scribe ${response.status} ${(await response.text()).slice(0, 200)}`);
+  if (!response.ok) {
+    noteScribeFailure(response.status);
+    throw new SttHttpError(response.status, `scribe ${response.status} ${(await response.text()).slice(0, 200)}`);
+  }
   const body = (await response.json()) as {
     text?: string;
     language_code?: string;
