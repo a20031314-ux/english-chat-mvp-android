@@ -26,6 +26,7 @@ import {
 import { cleanBesidesName, glossFor, SCRIPT_VOICES, usableName, type StageScript } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
+import { LineGrade } from "@/components/studyMap/StageScripts";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 
 /**
@@ -38,7 +39,7 @@ import { playTts, stopTts } from "@/lib/ttsPlayer";
  */
 
 type Mode = FrameMode;
-type Result = { heard: string; practice: Practice | null; clean: boolean; mode: Mode };
+type Result = { heard: string; practice: Practice | null; clean: boolean; mode: Mode; unclear?: string[] };
 type Step = { example: FrameExample; mode: Mode };
 
 function useNickname(): string | null {
@@ -307,7 +308,7 @@ function FramePlayer({
     stopTts();
     setListening(true);
     const own = stepMode === "own";
-    const { heard, practice } = await sayLine(example.text, {
+    const { heard, practice, unclear } = await sayLine(example.text, {
       targetLanguage: language as LearningLanguageCode,
       nativeLanguage: locale as LearningLanguageCode,
       isPremium,
@@ -325,7 +326,7 @@ function FramePlayer({
         : compareToTarget(example.text, heard).clean ||
           practice?.good === true ||
           (isNameExample(example) && cleanBesidesName(outcomes, name)));
-    setResults((current) => ({ ...current, [index]: { heard, practice, clean, mode: stepMode } }));
+    setResults((current) => ({ ...current, [index]: { heard, practice, clean, mode: stepMode, unclear } }));
   };
 
   const restart = () => {
@@ -434,8 +435,8 @@ function FramePlayer({
                 {result ? (
                   result.clean ? (
                     <>
-                      <p className="mt-1.5 text-caption text-emerald-300">✓ {ui.scriptClean}</p>
-                      {result.practice && (own || (stepMode !== "shadow" && !compareToTarget(example.text, result.heard).clean)) ? (
+                      <LineGrade ui={ui} exact={!own && compareToTarget(example.text, result.heard).clean} unclear={result.unclear ?? []} />
+                      {result.practice && (own || (stepMode !== "shadow" && !compareToTarget(example.text, result.heard).clean) || (result.unclear?.length ?? 0) > 0) ? (
                         <p className="mt-1 text-note text-slate-200">{result.practice.note}</p>
                       ) : null}
                     </>

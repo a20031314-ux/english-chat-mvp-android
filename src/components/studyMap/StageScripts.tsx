@@ -54,7 +54,7 @@ export type ScriptRecommend = {
   id: string;
   why: { kind: "grammar" | "expression"; items: string[] } | { kind: "next" };
 };
-type Result = { heard: string; practice: Practice | null; clean: boolean; mode: ScriptMode };
+type Result = { heard: string; practice: Practice | null; clean: boolean; mode: ScriptMode; unclear?: string[] };
 
 function readMode(stage: number): ScriptMode {
   const allowed = modesFor(stage);
@@ -327,7 +327,7 @@ function ScriptPlayer({
     setListening(true);
     const own = mode === "own" && !revealed[index];
     const before = index > 0 ? textAt(index - 1) : "";
-    const { heard, practice } = await sayLine(line.text, {
+    const { heard, practice, unclear } = await sayLine(line.text, {
       targetLanguage: language as LearningLanguageCode,
       nativeLanguage: locale as LearningLanguageCode,
       isPremium,
@@ -343,7 +343,7 @@ function ScriptPlayer({
     const named = Boolean(learnerName) && line.text.includes(learnerName!);
     const exact = compared.clean || (named && cleanBesidesName(compared.outcomes, learnerName));
     const clean = Boolean(heard) && (own ? practice?.good === true : exact || practice?.good === true);
-    setResults((current) => ({ ...current, [index]: { heard, practice, clean, mode: own ? "own" : mode } }));
+    setResults((current) => ({ ...current, [index]: { heard, practice, clean, mode: own ? "own" : mode, unclear } }));
   };
 
   const next = () => setIndex((current) => current + 1);
@@ -472,12 +472,10 @@ function ScriptPlayer({
                 {result ? (
                   result.clean ? (
                     <>
-                    <p className="mt-1.5 text-caption text-emerald-300">
-                      ✓ {ui.scriptClean}
-                      {countsForPass(script.stage, result.mode) && !revealed[i] ? null : <span className="text-slate-500"> · {modeLabel[result.mode]}</span>}
-                    </p>
-                    {/* 맞게 바꿔 말해 통과(낱말이 대본과 다름): 대본은 어떻게 말하는지 한 줄(2026-10-28). */}
-                    {result.mode !== "shadow" && result.practice?.note && !compareToTarget(line.text, result.heard).clean ? (
+                    <LineGrade ui={ui} exact={compareToTarget(line.text, result.heard).clean} unclear={result.unclear ?? []} />
+                    {countsForPass(script.stage, result.mode) && !revealed[i] ? null : <span className="text-caption text-slate-500">{modeLabel[result.mode]}</span>}
+                    {/* 맞게 바꿔 말해 통과(낱말이 대본과 다름)·흐릿했던 낱말: 한마디(2026-10-28). */}
+                    {result.practice?.note && ((result.mode !== "shadow" && !compareToTarget(line.text, result.heard).clean) || (result.unclear?.length ?? 0) > 0) ? (
                       <p className="mt-1 text-note text-slate-200">{result.practice.note}</p>
                     ) : null}
                     </>
@@ -561,4 +559,27 @@ function freshPicks(script: StageScript): Record<number, number> {
     if (line.who === "them" && line.alt?.length) picks[i] = Math.floor(Math.random() * (line.alt.length + 1));
   });
   return picks;
+}
+
+/**
+ * 맞힌 줄의 평가(2026-10-28 사용자 "잘 들렸어요보다 perfect 느낌으로, 아니면 이 부분 발음이 약간 어긋났다"):
+ * 낱말이 대본 그대로 + 받아쓰기가 망설인 낱말이 없으면 ★ 완벽해요, 아니면 ✓ 잘 들렸어요 + 흐릿했던 낱말 칩.
+ */
+export function LineGrade({ ui, exact, unclear }: { ui: UICopy; exact: boolean; unclear: readonly string[] }) {
+  const perfect = exact && unclear.length === 0;
+  return (
+    <div className="mt-1.5 flex flex-col gap-1">
+      <p className={`text-caption font-semibold ${perfect ? "text-status-learned" : "text-emerald-300"}`}>{perfect ? `★ ${ui.scriptPerfect}` : `✓ ${ui.scriptClean}`}</p>
+      {unclear.length ? (
+        <p className="flex flex-wrap items-center gap-1.5 text-caption text-slate-400">
+          <span>{ui.scriptUnclear}</span>
+          {unclear.map((word) => (
+            <span key={word} dir="auto" className="rounded-full border border-warn/50 px-2 py-0.5 text-warn">
+              {word}
+            </span>
+          ))}
+        </p>
+      ) : null}
+    </div>
+  );
 }

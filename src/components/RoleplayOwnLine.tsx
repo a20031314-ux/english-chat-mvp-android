@@ -5,7 +5,7 @@ import { SayItBack } from "@/components/RoleplayReview";
 import { TTSButton } from "@/components/TTSButton";
 import type { UICopy } from "@/lib/copy";
 import type { LearningLanguageCode } from "@/lib/learningLanguages";
-import { fetchPractice, listenOnce } from "@/lib/roleplay/listen";
+import { fetchPractice, listenOnce, unclearWords } from "@/lib/roleplay/listen";
 import { justTalkId } from "@/lib/roleplay/justTalk";
 import type { Practice } from "@/lib/roleplay/practice";
 
@@ -43,11 +43,13 @@ export async function sayLine(
     mode?: string;
     onLimit?: () => void;
   },
-): Promise<{ heard: string; practice: Practice | null }> {
+): Promise<{ heard: string; practice: Practice | null; unclear: string[] }> {
   try {
     const { heard } = await listenOnce({ language: input.targetLanguage, isPremium: input.isPremium });
-    if (!heard) return { heard: "", practice: null };
+    if (!heard) return { heard: "", practice: null, unclear: [] };
+    const unclear = unclearWords(heard);
     const practice = await fetchPractice({
+      unclear,
       scenarioId: justTalkId(input.targetLanguage),
       target: line,
       heard,
@@ -60,10 +62,10 @@ export async function sayLine(
       mode: input.mode,
       onLimit: input.onLimit,
     });
-    return { heard, practice };
+    return { heard, practice, unclear };
   } catch {
     // No microphone, or it was refused: nothing came through.
-    return { heard: "", practice: null };
+    return { heard: "", practice: null, unclear: [] };
   }
 }
 

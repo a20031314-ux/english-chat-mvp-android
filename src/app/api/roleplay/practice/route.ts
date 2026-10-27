@@ -94,16 +94,21 @@ export async function POST(request: NextRequest) {
     // 대본·문장구조를 보지 않고 떠올려 말함(첫 글자만·가리기·문장구조만): 맞게 바꿔 말한 것도 통과(2026-10-28). 따라 말하기(mode "shadow")만 원문 그대로.
     // 2.76 첫 빌드는 mode를 안 보내 — 대본 줄(scriptId)이면 떠올리기로 본다.
     const recalled = typeof body.scriptId === "string" && body.mode !== "shadow";
+    // 받아쓰기가 망설인 낱말(앱이 listen의 clarity로 고름) — 맞게 받아쓴 낱말이지만 소리가 흐렸을 수 있어 한마디에 짚는다.
+    const unclear = Array.isArray(body.unclear)
+      ? (body.unclear as unknown[]).filter((word): word is string => typeof word === "string" && word.trim().length > 0 && word.length <= 40).slice(0, 3)
+      : [];
     const system = frame
       ? frameUsePrompt({ frame, meaning, example: target, heard, targetLanguage: interfaceLanguageName(scenario.language), nativeLanguage: nativeName })
       : meaning
       ? ownWordsPrompt({ meaning, reference: target, heard, before, targetLanguage: interfaceLanguageName(scenario.language), nativeLanguage: nativeName })
       : recalled
-      ? recallPrompt({ target, heard, comparison, targetLanguage: interfaceLanguageName(scenario.language), nativeLanguage: nativeName })
+      ? recallPrompt({ target, heard, comparison, targetLanguage: interfaceLanguageName(scenario.language), nativeLanguage: nativeName, unclear })
       : practicePrompt({
           target,
           heard,
           comparison,
+          unclear,
           targetLanguage: interfaceLanguageName(scenario.language),
           nativeLanguage: nativeName,
         });

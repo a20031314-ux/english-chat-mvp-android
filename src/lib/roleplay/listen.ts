@@ -179,6 +179,28 @@ export function heardUnsure(text: string): boolean {
   return Boolean(text) && unsureHeard.includes(text.trim());
 }
 
+/**
+ * 낱말마다 받아쓰기 확신(서버 `clarity`, Scribe일 때) — 대본·문장구조에서 "조금 흐릿했던 낱말"을 짚는다(2026-10-28 사용자 "디테일하게 이 부분의 발음이 약간 어긋났다").
+ * 확신이 낮은 낱말 = 받아쓰기가 망설인 낱말이라 소리가 또렷하지 않았을 가능성이 높다(발음 점수는 아님). 최근 몇 개만, 글로 찾는다.
+ */
+const clarityHeard: { text: string; words: [string, number | null][] }[] = [];
+/** 이 아래면 흐릿했던 낱말(Scribe 낱말 확신, 0~1). */
+export const UNCLEAR_BELOW = 0.8;
+export function unclearWords(text: string, max = 3): string[] {
+  const found = clarityHeard.find((entry) => entry.text === text.trim());
+  if (!found) return [];
+  return found.words
+    .filter(([word, confidence]) => confidence !== null && confidence < UNCLEAR_BELOW && /[\p{L}\p{N}]/u.test(word))
+    .sort((a, b) => (a[1] ?? 1) - (b[1] ?? 1))
+    .slice(0, max)
+    .map(([word]) => word.trim().replace(/^[^\p{L}\p{N}]+|[^\p{L}\p{N}]+$/gu, ""))
+    .filter(Boolean);
+}
+/** 확신을 받아 온 말인지(받아쓰기가 Scribe가 아니면 없음 — 그때는 "완벽해요"를 낱말만으로). */
+export function hasClarity(text: string): boolean {
+  return clarityHeard.some((entry) => entry.text === text.trim());
+}
+
 async function transcribe(
   blob: Blob,
   mimeType: string,
@@ -208,7 +230,15 @@ async function transcribe(
     segments?: { text?: unknown }[];
     text?: unknown;
     unsure?: unknown;
+    clarity?: unknown;
   };
+  if (typeof body.text === "string" && body.text.trim() && Array.isArray(body.clarity)) {
+    const words = (body.clarity as unknown[]).filter(
+      (entry): entry is [string, number | null] => Array.isArray(entry) && typeof entry[0] === "string" && (entry[1] === null || typeof entry[1] === "number"),
+    );
+    clarityHeard.push({ text: body.text.trim(), words });
+    if (clarityHeard.length > 20) clarityHeard.shift();
+  }
   if (typeof body.text === "string" && body.text.trim()) {
     if (body.unsure === true) {
       unsureHeard.push(body.text.trim());
@@ -880,6 +910,8 @@ export async function fetchPractice(input: {
   frame?: string;
   /** My 단계 대본의 줄이면 그 대본 id — 서버가 요금별 하루 한도를 센다. */
   scriptId?: string;
+  /** 받아쓰기가 망설인 낱말(clarity) — 확인 한마디가 짚는다. */
+  unclear?: string[];
   /** 대본 줄 보는 방식(따라 말하기 "shadow"면 원문 그대로, 그 밖엔 맞게 바꿔 말한 것도 통과 — 2026-10-28). */
   mode?: string;
   /** 오늘 대본 한도에 닿았을 때(429 SCRIPT_LIMIT). */
@@ -901,6 +933,7 @@ export async function fetchPractice(input: {
         ...(input.frame ? { frame: input.frame } : {}),
         ...(input.scriptId ? { scriptId: input.scriptId } : {}),
         ...(input.mode ? { mode: input.mode } : {}),
+        ...(input.unclear?.length ? { unclear: input.unclear } : {}),
       }),
     });
     if (response.status === 429) {

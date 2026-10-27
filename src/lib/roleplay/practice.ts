@@ -179,12 +179,19 @@ export type Practice = {
 
 export const MAX_PRACTICE_CHARS = 400;
 
+/** 받아쓰기가 망설인 낱말(clarity, 2026-10-28) — 확인 한마디에 넣는 문단. good은 바꾸지 않는다. */
+function unclearPart(unclear: readonly string[] | undefined, nativeLanguage: string): string {
+  if (!unclear?.length) return "";
+  return `\nThe recogniser hesitated over ${unclear.length === 1 ? "this word" : "these words"}: ${unclear.map((word) => `"${word}"`).join(", ")}. It still wrote ${unclear.length === 1 ? "it" : "them"} correctly, so ${unclear.length === 1 ? "it counts" : "they count"} as said and does not change "good" — but hesitation usually means the sounds were not quite clear. In the note, after saying what went well, name the least clear word and give one concrete, short tip a ${nativeLanguage} speaker can act on (which sound in the word to make clearer, e.g. a final consonant or a vowel), without claiming to know about stress, rhythm or accent.\n`;
+}
+
 export function practicePrompt(input: {
   target: string;
   heard: string;
   comparison: Comparison;
   targetLanguage: string;
   nativeLanguage: string;
+  unclear?: string[];
 }): string {
   const trouble = troubleWords(input.comparison);
   return `Someone learning ${input.targetLanguage} was given a sentence to say out loud, and has just said it. You are looking at what a speech recogniser made of it.
@@ -192,7 +199,7 @@ export function practicePrompt(input: {
 The sentence they were given: "${input.target}"
 What the recogniser heard: "${input.heard || "(nothing)"}"
 ${trouble.length > 0 ? `Where it diverged:\n${trouble.map((line) => `- ${line}`).join("\n")}` : "Every word came through."}
-
+${unclearPart(input.unclear, input.nativeLanguage)}
 What you may conclude, and nothing beyond it: a word the recogniser turned into a different word is a word whose sounds did not land, and the word it turned into says which sounds. You are reading text, not listening — you cannot know about vowel length, stress or rhythm, so do not mention them. Never guess at an accent.
 
 One exception, and it matters: if the word it heard sounds the same as the word they were given — here and hear, piece and peace, to and too — then the sounds did land and the recogniser simply chose the other spelling. Say that it was said correctly, and when every divergence is of this kind — including the same word written in kana instead of kanji or the other way round — "good" is true. Telling someone to fix a sound they got right is the fastest way to make them stop believing the rest of this.
@@ -212,12 +219,12 @@ Reply as JSON only, writing in ${input.nativeLanguage}, politely and in one cons
  * 맞게 바꿔 말한 것은 통과). 원문 그대로가 아니어도 같은 뜻을 자연스럽고 맞게 말했으면 good — 원문과 다른 말은 note에 원문 표현을 짧게 알려 준다.
  * 받아쓰기가 떨어뜨린 짧은 낱말(관사·전치사)과 같은 소리 다른 글자는 학습자 잘못이 아니다.
  */
-export function recallPrompt(input: { target: string; heard: string; comparison: Comparison; targetLanguage: string; nativeLanguage: string }): string {
+export function recallPrompt(input: { target: string; heard: string; comparison: Comparison; targetLanguage: string; nativeLanguage: string; unclear?: string[] }): string {
   return `Someone learning ${input.targetLanguage} is practising a dialogue line from memory — the line was hidden, so they said it in their own way. You are looking at what a speech recogniser made of what they said.
 
 The line in the script: "${input.target}"
 What the recogniser heard: "${input.heard || "(nothing)"}"
-
+${unclearPart(input.unclear, input.nativeLanguage)}
 This is not a dictation check. Decide like a friendly native speaker in that conversation: would you understand the same thing, and does it sound like something people really say?
 - "good" is TRUE when the meaning is the same and it is natural and grammatical, even with different wording. Different but equivalent choices are fine: will vs. going to for a plan, a modal or impersonal form instead of a personal one when the question means the same, a synonym, a contraction, a different natural order, a polite form of the same request, a shorter natural way of saying it.
 - Speech recognisers drop or blur short unstressed words (articles, prepositions such as before days of the week, auxiliaries) and spell some words differently; they also drop punctuation and the rise of a question, so a statement-shaped transcript of something that works as the question here is fine. If the rest of the sentence is right, assume those small words were said.

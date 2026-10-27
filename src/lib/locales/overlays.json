@@ -701,7 +701,9 @@
     "amountFrames": "文型",
     "amountLines": "言った文",
     "canDoTitle": "できること",
-    "stageBegin": "この段階で始める"
+    "stageBegin": "この段階で始める",
+    "scriptPerfect": "完璧です！",
+    "scriptUnclear": "少し不明瞭だった語："
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1405,7 +1407,9 @@
     "amountFrames": "句子结构",
     "amountLines": "说过的句子",
     "canDoTitle": "能做到的事",
-    "stageBegin": "从这个阶段开始"
+    "stageBegin": "从这个阶段开始",
+    "scriptPerfect": "完美！",
+    "scriptUnclear": "有点不清楚的词："
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2111,7 +2115,9 @@
     "amountFrames": "Cấu trúc câu",
     "amountLines": "Câu đã nói",
     "canDoTitle": "Việc bạn làm được",
-    "stageBegin": "Bắt đầu từ đây"
+    "stageBegin": "Bắt đầu từ đây",
+    "scriptPerfect": "Hoàn hảo!",
+    "scriptUnclear": "Hơi chưa rõ:"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2822,7 +2828,9 @@
     "amountFrames": "Structures",
     "amountLines": "Phrases dites",
     "canDoTitle": "Ce que vous savez faire",
-    "stageBegin": "Commencer ici"
+    "stageBegin": "Commencer ici",
+    "scriptPerfect": "Parfait !",
+    "scriptUnclear": "Un peu flou :"
   },
   "it": {
     "archive": "Report",
@@ -3724,7 +3732,9 @@
     "amountFrames": "Strutture",
     "amountLines": "Frasi dette",
     "canDoTitle": "Cosa sai fare",
-    "stageBegin": "Inizia da qui"
+    "stageBegin": "Inizia da qui",
+    "scriptPerfect": "Perfetto!",
+    "scriptUnclear": "Un po’ poco chiaro:"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4438,7 +4448,9 @@
     "amountFrames": "Estruturas",
     "amountLines": "Frases ditas",
     "canDoTitle": "O que você já consegue",
-    "stageBegin": "Começar aqui"
+    "stageBegin": "Começar aqui",
+    "scriptPerfect": "Perfeito!",
+    "scriptUnclear": "Um pouco confuso:"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5338,7 +5350,9 @@
     "amountFrames": "Структуры",
     "amountLines": "Сказано фраз",
     "canDoTitle": "Что вы умеете",
-    "stageBegin": "Начать отсюда"
+    "stageBegin": "Начать отсюда",
+    "scriptPerfect": "Идеально!",
+    "scriptUnclear": "Немного нечётко:"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6048,7 +6062,9 @@
     "amountFrames": "Struktur",
     "amountLines": "Kalimat diucapkan",
     "canDoTitle": "Yang sudah bisa kamu lakukan",
-    "stageBegin": "Mulai dari sini"
+    "stageBegin": "Mulai dari sini",
+    "scriptPerfect": "Sempurna!",
+    "scriptUnclear": "Agak kurang jelas:"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6752,7 +6768,9 @@
     "amountFrames": "التراكيب",
     "amountLines": "جمل قلتها",
     "canDoTitle": "ما تستطيع فعله",
-    "stageBegin": "ابدأ من هنا"
+    "stageBegin": "ابدأ من هنا",
+    "scriptPerfect": "ممتاز!",
+    "scriptUnclear": "غير واضح قليلًا:"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7456,7 +7474,9 @@
     "amountFrames": "โครงสร้าง",
     "amountLines": "ประโยคที่พูด",
     "canDoTitle": "สิ่งที่ทำได้",
-    "stageBegin": "เริ่มที่ขั้นนี้"
+    "stageBegin": "เริ่มที่ขั้นนี้",
+    "scriptPerfect": "เยี่ยมมาก!",
+    "scriptUnclear": "ยังไม่ค่อยชัด:"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8160,6 +8180,8 @@
     "amountFrames": "संरचनाएँ",
     "amountLines": "बोले गए वाक्य",
     "canDoTitle": "आप क्या कर सकते हैं",
-    "stageBegin": "यहीं से शुरू करें"
+    "stageBegin": "यहीं से शुरू करें",
+    "scriptPerfect": "बिल्कुल सही!",
+    "scriptUnclear": "थोड़ा अस्पष्ट:"
   }
 }

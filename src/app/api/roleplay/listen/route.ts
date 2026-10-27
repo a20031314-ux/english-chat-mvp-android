@@ -160,7 +160,12 @@ export async function POST(request: NextRequest) {
       if (wantsTrialReport(request)) {
         return jsonWithCors(request, { text, raw, confidence: heard.confidence, sure, unsure, detected: heard.languages, words: heard.words, model, ms: Date.now() - started, ...fix });
       }
-      return jsonWithCors(request, { text, ...(unsure ? { unsure } : {}), ...fix });
+      // 낱말마다 받아쓰기 확신(대본·문장구조 "또렷하지 않았던 낱말", 2026-10-28) — 방 밖, 글이 받아쓴 그대로일 때만.
+      const clarity =
+        !forRoom && text === raw.trim() && heard.words.some((word) => word.confidence !== null)
+          ? heard.words.map((word) => [word.text, word.confidence === null ? null : Math.round(word.confidence * 100) / 100] as const)
+          : undefined;
+      return jsonWithCors(request, { text, ...(unsure ? { unsure } : {}), ...(clarity ? { clarity } : {}), ...fix });
     } catch (error) {
       console.error(`[roleplay/listen] ${model} failed, falling back:`, error);
       if (wantsTrialReport(request)) {
