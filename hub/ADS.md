@@ -42,6 +42,7 @@
 |---|---|---|
 | `callEnd` | AI 통화가 끝나고 돌아보기로 넘어갈 때 | AI 통화 (대화 → AI 튜터 📞) · 오늘의 팩 `call` · `RoleplayScreen.tsx` |
 | `chatLeave` | AI 채팅을 몇 번(설정 `interstitialAfterChats`) 보낸 뒤 채팅 화면을 떠나거나 대화를 끝낼 때 | 앱 틀 `shell` · `AppHome.tsx` ／ AI 채팅 (대화 → AI 튜터 줄) `chat` · `ChatWindow.tsx` |
+| `checkupEnd` | My 이번 주 확인을 끝까지 풀고 결과를 닫을 때 | My 탭 `my` · `studyMap/CheckupPlayer.tsx` |
 | `packEnd` | 오늘의 팩을 끝까지 마쳤을 때 | AI 통화 (대화 → AI 튜터 📞) · 오늘의 팩 `call` · `RoleplayScreen.tsx` |
 | `quizEnd` | My 퀴즈를 끝까지 풀고 닫을 때 | My 탭 `my` · `studyMap/QuizPlayer.tsx` |
 | `roomLeave` | 공개 말하는 방에 몇 분(설정 `roomLeaveMinutes`) 넘게 있다 나올 때 — 1:1·단체방 통화는 제외 | Room 탭 `room` · `rooms/RoomsScreen.tsx` |

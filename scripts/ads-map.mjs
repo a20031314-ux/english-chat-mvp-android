@@ -37,6 +37,7 @@ const MOMENTS = {
   videoLeave: "영상을 몇 분(설정 `videoLeaveMinutes`) 넘게 보고 나올 때",
   scriptEnd: "My 대본·문장구조를 끝까지 하고 닫을 때(중간에 닫으면 없음, 통화로 넘어갈 때도 없음 — 2026-10-29 무료 대본 판단 원가)",
   quizEnd: "My 퀴즈를 끝까지 풀고 닫을 때",
+  checkupEnd: "My 이번 주 확인을 끝까지 풀고 결과를 닫을 때",
 };
 
 /** 탭 id → 화면 이름(hub/STRUCTURE.md "안에서 쓰는 이름"). */

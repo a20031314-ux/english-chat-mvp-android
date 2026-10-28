@@ -1,5 +1,6 @@
 import { kvGetJson, kvSetJson } from "./kv.ts";
 import { applyCheck, type ReviewMap } from "../curriculum/dailyPlan.ts";
+import { CHECKUP_KEEP, type CheckResult } from "../curriculum/checkup.ts";
 
 /**
  * 통과한 단계 대본(curriculum/stageScripts.ts) — 대본 id와 통과한 때만, 학습 언어별.
@@ -13,7 +14,8 @@ export function stageScriptKey(userId: string, language: string): string {
 
 /** passed: 대본·틀 id → 처음 통과한 때. redo: 틀 id → 마지막으로 "다시 연습"을 끝낸 때(2026-10-28, 틀린 틀 다시 권유를 3일 쉼). */
 /** asked: 직접 물어본 곳(문법·문장구조·표현 열쇠) → 몇 번·마지막 때(2026-10-28 "어디가 부족하고 어디를 모르는지 기록", 질문·답 글은 남기지 않음). */
-type Record_ = { passed: Record<string, number>; redo?: Record<string, number>; review?: ReviewMap; asked?: Record<string, { n: number; at: number }> };
+/** checkups: 이번 주 확인 결과(curriculum/checkup.ts) — 갈래·칸별 맞힘 수와 틀린 열쇠만, 최근 12번(2026-10-29). */
+type Record_ = { passed: Record<string, number>; redo?: Record<string, number>; review?: ReviewMap; asked?: Record<string, { n: number; at: number }>; checkups?: CheckResult[] };
 
 export async function readPassedScripts(userId: string, language: string): Promise<Set<string>> {
   const record = await kvGetJson<Record_>(stageScriptKey(userId, language)).catch(() => null);
@@ -85,4 +87,21 @@ export async function recordAsked(userId: string, language: string, keys: readon
 export async function readAsked(userId: string, language: string): Promise<Record<string, { n: number; at: number }>> {
   const record = await kvGetJson<Record_>(stageScriptKey(userId, language)).catch(() => null);
   return record?.asked ?? {};
+}
+
+export async function readCheckups(userId: string, language: string): Promise<CheckResult[]> {
+  const record = await kvGetJson<Record_>(stageScriptKey(userId, language)).catch(() => null);
+  return record?.checkups ?? [];
+}
+
+/** 이번 주 확인 하나를 남기고, 틀린 열쇠는 헷갈려요처럼 다시 볼 것(2일 뒤)에 넣는다. */
+export async function saveCheckup(userId: string, language: string, result: CheckResult, now = Date.now()): Promise<{ checkups: CheckResult[]; review: ReviewMap }> {
+  const key = stageScriptKey(userId, language);
+  const record = (await kvGetJson<Record_>(key).catch(() => null)) ?? { passed: {} };
+  let review = record.review ?? {};
+  for (const wrong of result.wrong) review = applyCheck(review, wrong, false, now);
+  review = Object.fromEntries(Object.entries(review).sort((a, b) => b[1].at - a[1].at).slice(0, 400));
+  const checkups = [...(record.checkups ?? []), result].sort((a, b) => a.at - b.at).slice(-CHECKUP_KEEP);
+  await kvSetJson(key, { ...record, review, checkups }, TTL_SECONDS);
+  return { checkups, review };
 }

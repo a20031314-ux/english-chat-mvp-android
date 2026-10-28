@@ -758,7 +758,15 @@
     "quizSkip": "スキップ",
     "scriptUnsure": "よく分からない",
     "scriptSaidAll": "言い終わった",
-    "scriptPaused": "詰まったところ:"
+    "scriptPaused": "詰まったところ:",
+    "checkupTitle": "今週の確認",
+    "checkupMeta": "{n}問 · 約{m}分",
+    "checkupAgo": "{n}日前",
+    "checkupPrev": "前回",
+    "checkupWrong": "まちがえたもの",
+    "checkupRecent": "最近学んだこと",
+    "checkupOld": "前に学んだこと",
+    "checkupAhead": "次の段階"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1519,7 +1527,15 @@
     "quizSkip": "跳过",
     "scriptUnsure": "不太确定",
     "scriptSaidAll": "说完了",
-    "scriptPaused": "停顿处："
+    "scriptPaused": "停顿处：",
+    "checkupTitle": "本周检测",
+    "checkupMeta": "{n}题 · 约{m}分钟",
+    "checkupAgo": "{n}天前",
+    "checkupPrev": "上次",
+    "checkupWrong": "做错的",
+    "checkupRecent": "最近学的",
+    "checkupOld": "以前学的",
+    "checkupAhead": "下一阶段"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2283,7 +2299,15 @@
     "quizSkip": "Bỏ qua",
     "scriptUnsure": "Không chắc lắm",
     "scriptSaidAll": "Nói xong rồi",
-    "scriptPaused": "Ngập ngừng ở:"
+    "scriptPaused": "Ngập ngừng ở:",
+    "checkupTitle": "Kiểm tra tuần này",
+    "checkupMeta": "{n} câu · khoảng {m} phút",
+    "checkupAgo": "{n} ngày trước",
+    "checkupPrev": "Lần trước",
+    "checkupWrong": "Câu sai",
+    "checkupRecent": "Mới học",
+    "checkupOld": "Học từ trước",
+    "checkupAhead": "Giai đoạn tiếp"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3052,7 +3076,15 @@
     "quizSkip": "Passer",
     "scriptUnsure": "Je ne sais pas",
     "scriptSaidAll": "J'ai fini",
-    "scriptPaused": "Hésitation :"
+    "scriptPaused": "Hésitation :",
+    "checkupTitle": "Bilan de la semaine",
+    "checkupMeta": "{n} questions · environ {m} min",
+    "checkupAgo": "il y a {n} jours",
+    "checkupPrev": "La dernière fois",
+    "checkupWrong": "Ratés",
+    "checkupRecent": "Appris récemment",
+    "checkupOld": "Appris plus tôt",
+    "checkupAhead": "Étape suivante"
   },
   "it": {
     "archive": "Report",
@@ -4012,7 +4044,15 @@
     "quizSkip": "Salta",
     "scriptUnsure": "Non sono sicuro",
     "scriptSaidAll": "Ho finito",
-    "scriptPaused": "Esitazione su:"
+    "scriptPaused": "Esitazione su:",
+    "checkupTitle": "Verifica della settimana",
+    "checkupMeta": "{n} domande · circa {m} min",
+    "checkupAgo": "{n} giorni fa",
+    "checkupPrev": "L'ultima volta",
+    "checkupWrong": "Sbagliati",
+    "checkupRecent": "Imparato da poco",
+    "checkupOld": "Imparato prima",
+    "checkupAhead": "Fase successiva"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4784,7 +4824,15 @@
     "quizSkip": "Pular",
     "scriptUnsure": "Não tenho certeza",
     "scriptSaidAll": "Terminei",
-    "scriptPaused": "Hesitou em:"
+    "scriptPaused": "Hesitou em:",
+    "checkupTitle": "Revisão da semana",
+    "checkupMeta": "{n} perguntas · cerca de {m} min",
+    "checkupAgo": "há {n} dias",
+    "checkupPrev": "Da última vez",
+    "checkupWrong": "Errou",
+    "checkupRecent": "Aprendido há pouco",
+    "checkupOld": "Aprendido antes",
+    "checkupAhead": "Próxima etapa"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5742,7 +5790,15 @@
     "quizSkip": "Пропустить",
     "scriptUnsure": "Не уверен",
     "scriptSaidAll": "Я закончил",
-    "scriptPaused": "Запинка:"
+    "scriptPaused": "Запинка:",
+    "checkupTitle": "Проверка недели",
+    "checkupMeta": "{n} вопросов · около {m} мин",
+    "checkupAgo": "{n} дн. назад",
+    "checkupPrev": "В прошлый раз",
+    "checkupWrong": "Ошибки",
+    "checkupRecent": "Выучено недавно",
+    "checkupOld": "Выучено раньше",
+    "checkupAhead": "Следующий этап"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6510,7 +6566,15 @@
     "quizSkip": "Lewati",
     "scriptUnsure": "Kurang yakin",
     "scriptSaidAll": "Sudah selesai",
-    "scriptPaused": "Ragu di:"
+    "scriptPaused": "Ragu di:",
+    "checkupTitle": "Cek minggu ini",
+    "checkupMeta": "{n} soal · sekitar {m} menit",
+    "checkupAgo": "{n} hari lalu",
+    "checkupPrev": "Terakhir kali",
+    "checkupWrong": "Yang salah",
+    "checkupRecent": "Baru dipelajari",
+    "checkupOld": "Dipelajari sebelumnya",
+    "checkupAhead": "Tahap berikutnya"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7271,7 +7335,15 @@
     "quizSkip": "تخطٍّ",
     "scriptUnsure": "لست متأكدًا",
     "scriptSaidAll": "انتهيت",
-    "scriptPaused": "تردّدت عند:"
+    "scriptPaused": "تردّدت عند:",
+    "checkupTitle": "مراجعة هذا الأسبوع",
+    "checkupMeta": "{n} أسئلة · نحو {m} دقائق",
+    "checkupAgo": "قبل {n} أيام",
+    "checkupPrev": "المرة السابقة",
+    "checkupWrong": "ما أخطأت فيه",
+    "checkupRecent": "تعلّمته مؤخرًا",
+    "checkupOld": "تعلّمته من قبل",
+    "checkupAhead": "المرحلة التالية"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -8032,7 +8104,15 @@
     "quizSkip": "ข้าม",
     "scriptUnsure": "ไม่แน่ใจ",
     "scriptSaidAll": "พูดจบแล้ว",
-    "scriptPaused": "ติดขัดที่:"
+    "scriptPaused": "ติดขัดที่:",
+    "checkupTitle": "ทดสอบประจำสัปดาห์",
+    "checkupMeta": "{n} ข้อ · ประมาณ {m} นาที",
+    "checkupAgo": "{n} วันก่อน",
+    "checkupPrev": "ครั้งก่อน",
+    "checkupWrong": "ข้อที่ผิด",
+    "checkupRecent": "เพิ่งเรียน",
+    "checkupOld": "เรียนไปก่อนหน้า",
+    "checkupAhead": "ขั้นถัดไป"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8793,6 +8873,14 @@
     "quizSkip": "छोड़ें",
     "scriptUnsure": "पक्का नहीं पता",
     "scriptSaidAll": "बोल दिया",
-    "scriptPaused": "यहाँ रुके:"
+    "scriptPaused": "यहाँ रुके:",
+    "checkupTitle": "इस हफ़्ते की जाँच",
+    "checkupMeta": "{n} सवाल · लगभग {m} मिनट",
+    "checkupAgo": "{n} दिन पहले",
+    "checkupPrev": "पिछली बार",
+    "checkupWrong": "गलत हुए",
+    "checkupRecent": "हाल में सीखा",
+    "checkupOld": "पहले सीखा",
+    "checkupAhead": "अगला चरण"
   }
 }

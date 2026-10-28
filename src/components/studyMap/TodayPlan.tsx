@@ -21,6 +21,8 @@ import {
 import { allFramesFor } from "@/lib/curriculum/frames";
 import type { QuizCard } from "@/lib/curriculum/quiz";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
+import { CheckupPlayer } from "@/components/studyMap/CheckupPlayer";
+import { buildCheckup, checkupDue, checkupReady, checkupWeakest, type CheckResult } from "@/lib/curriculum/checkup";
 import { useBillingUiOptional } from "@/components/BillingScreen";
 import { MorningControl } from "@/components/studyMap/WeakStrip";
 import { allScriptsFor, glossFor } from "@/lib/curriculum/stageScripts";
@@ -159,6 +161,21 @@ export function TodayPlan({
   const [missRun, setMissRun] = useState(0);
   const [round, setRound] = useState(0);
   const [studying, setStudying] = useState<StudyPick | null>(null);
+  // 이번 주 확인(lib/curriculum/checkup.ts): 서버에 남긴 결과(최근 12번)와 지금 연 것("take" = 풀기, "view" = 지난 결과 보기).
+  const [checkups, setCheckups] = useState<CheckResult[]>([]);
+  const [checkupOpen, setCheckupOpen] = useState<"take" | "view" | null>(null);
+  useEffect(() => {
+    let alive = true;
+    void fetch(apiUrl(`/api/curriculum/scripts?lang=${encodeURIComponent(language)}&checkups=1`), { headers: entitlementHeaders(isPremium) })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((body: { checkups?: CheckResult[] } | null) => {
+        if (alive && Array.isArray(body?.checkups)) setCheckups(body.checkups);
+      })
+      .catch(() => undefined);
+    return () => {
+      alive = false;
+    };
+  }, [language, isPremium]);
   useEffect(() => {
     setLog(readQuizLog(language));
     setAsked(new Set());
@@ -256,6 +273,25 @@ export function TodayPlan({
       .catch(() => undefined);
   };
   const finished = items.every(doneOf);
+  // 이번 주 확인에서 약하게 나온 갈래가 있으면 계속 공부가 그것부터(없으면 연습 기록 쪽 갈래).
+  const studyWeakest = checkupWeakest(checkups, now) ?? weakest;
+  const lastCheckup = checkups.length ? checkups[checkups.length - 1]! : null;
+  const checkupItems = checkupOpen === "take" || checkupDue(checkups, now) ? buildCheckup({ language, stage, passed: passedSet, review, log, now }) : [];
+  const checkupOffer = checkupDue(checkups, now) && checkupReady(checkupItems);
+  const checkupMinutes = Math.max(1, Math.round(checkupItems.reduce((sum, item) => sum + (item.question.kind === "say" ? 0.7 : 0.4), 0)));
+  const finishCheckup = (result: CheckResult) => {
+    void fetch(apiUrl("/api/curriculum/scripts"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+      body: JSON.stringify({ language, checkup: result }),
+    })
+      .then((response) => response.json().catch(() => null))
+      .then((body: { checkups?: CheckResult[]; review?: ReviewMap } | null) => {
+        if (Array.isArray(body?.checkups)) setCheckups(body.checkups);
+        if (body?.review) announceReview(language, body.review);
+      })
+      .catch(() => undefined);
+  };
   // 다음에 풀 것(부족한 것부터) — 오늘 목록에 든 퀴즈는 빼고.
   const queue = nextStudy({
     language,
@@ -263,7 +299,7 @@ export function TodayPlan({
     passed: passedSet,
     review,
     log,
-    weakest,
+    weakest: studyWeakest,
     expressions,
     skip: new Set([...asked, ...items.filter((item) => item.kind === "quiz" && !doneOf(item)).map((item) => item.id)]),
     now,
@@ -372,6 +408,39 @@ export function TodayPlan({
           );
         })}
       </ul>
+      {checkupOffer ? (
+        <button
+          type="button"
+          data-checkup-offer
+          onClick={() => setCheckupOpen("take")}
+          className="mt-2 flex w-full items-center gap-3 rounded-xl border border-status-learned/60 px-3 py-2 text-start text-ink hover:bg-white/5"
+        >
+          <span aria-hidden className="shrink-0 text-caption">📝</span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-note font-semibold">{ui.checkupTitle}</span>
+            <span className="block truncate text-meta text-slate-400">{ui.checkupMeta.replace("{n}", String(checkupItems.length)).replace("{m}", String(checkupMinutes))}</span>
+          </span>
+        </button>
+      ) : lastCheckup ? (
+        <button type="button" onClick={() => setCheckupOpen("view")} className="mt-2 flex w-full items-center gap-2 px-1 text-start text-meta text-slate-400 hover:text-slate-200">
+          <span>📝 {ui.checkupTitle} ✓</span>
+          <span className="tabular-nums">· {ui.checkupAgo.replace("{n}", String(Math.max(0, Math.floor((now - lastCheckup.at) / 86_400_000))))}</span>
+        </button>
+      ) : null}
+      {checkupOpen ? (
+        <CheckupPlayer
+          ui={ui}
+          locale={locale}
+          language={language}
+          stage={stage}
+          items={checkupOpen === "take" ? checkupItems : []}
+          result={checkupOpen === "view" ? lastCheckup : null}
+          previous={checkupOpen === "view" ? (checkups.length > 1 ? checkups[checkups.length - 2]! : null) : lastCheckup}
+          labelOf={(key) => keyLabel(language, key, grammarName)}
+          onFinish={finishCheckup}
+          onClose={() => setCheckupOpen(null)}
+        />
+      ) : null}
       {upNext ? (
         <button
           type="button"
@@ -399,7 +468,7 @@ export function TodayPlan({
           seed={studying ? `${day}-${round}` : day}
           reason={studying ? reasonLabel(studying) : undefined}
           stopHint={missRun >= 2}
-          onMore={() => startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest, expressions, skip: new Set([...asked]), now: Date.now() })[0] ?? null)}
+          onMore={() => startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest: studyWeakest, expressions, skip: new Set([...asked]), now: Date.now() })[0] ?? null)}
           onDone={(passedQuiz) => finishQuiz(quiz, passedQuiz)}
           onThen={
             quiz.then

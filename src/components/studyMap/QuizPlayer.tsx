@@ -22,7 +22,7 @@ import { stopTts } from "@/lib/ttsPlayer";
  */
 
 /** skipped = 말하기 한도에 걸려 못 함 — 점수에서 뺀다. */
-type Answer = { correct: boolean; heard?: string; practice?: Practice | null; unclear?: string[]; skipped?: boolean; pauses?: [string, number][] };
+export type Answer = { correct: boolean; heard?: string; practice?: Practice | null; unclear?: string[]; skipped?: boolean; pauses?: [string, number][] };
 
 export function QuizPlayer({
   ui,
@@ -151,7 +151,7 @@ function kindName(ui: UICopy, kind: QuizQuestion["kind"]): string {
   return { fix: ui.quizKindFix, choose: ui.quizKindChoose, order: ui.quizKindOrder, say: ui.quizKindSay }[kind];
 }
 
-function QuestionView({
+export function QuestionView({
   ui,
   locale,
   language,
