@@ -10,8 +10,8 @@ import { fileFix } from "@/lib/server/notebookStore";
 import { localDay as notebookDay, parseOffset as notebookOffset, TZ_OFFSET_HEADER as NOTEBOOK_TZ } from "@/lib/billing/plans";
 import { recordTurn } from "@/lib/server/ledgerStore";
 import { forgetLearnerBrief, readLearnerBrief } from "@/lib/server/learnerBrief";
-import { readReview, saveChecks } from "@/lib/server/stageScriptStore";
-import { reusePrompt, reuseTargets, unchanged, usedTargets, type ReuseTarget } from "@/lib/curriculum/reuse";
+import { readReview } from "@/lib/server/stageScriptStore";
+import { reuseTargets, unchanged, usedTargets, type ReuseTarget } from "@/lib/curriculum/reuse";
 import { profileTurn, withProfileLine } from "@/lib/server/profileContext";
 import { recordGrowthTurn } from "@/lib/server/growthStore";
 import { nearlySame } from "@/lib/learner/growth";
@@ -1263,18 +1263,15 @@ export async function POST(request: NextRequest) {
     const [learnerBrief, profileLine, review] = await Promise.all([
       readLearnerBrief(userId, langs.targetLanguage),
       profileTurn(request),
-      // 대화 속에서 다시 쓰게(curriculum/reuse.ts): 헷갈려요·물어본 표현·문장구조 둘을 튜터에게.
+      // 대화에서 잘 썼어요(curriculum/reuse.ts): 체크한 표현·문장구조를 학습자가 스스로 쓰는지만 본다(튜터에게는 넘기지 않음).
       readReview(userId, langs.targetLanguage).catch(() => ({})),
     ]);
     const reuse: ReuseTarget[] = conversationMode ? reuseTargets(langs.targetLanguage, review) : [];
-    const brief = [withProfileLine(learnerBrief.prompt, profileLine), reusePrompt(reuse)].filter(Boolean).join("\n\n");
-    // 학습자가 그 말을 고칠 데 없이 썼으면 "알아요"처럼 반영(다음은 7일 뒤 한 번)하고, 화면에 보일 이름을 돌려준다.
+    const brief = withProfileLine(learnerBrief.prompt, profileLine);
+    // 학습자가 그 말을 고칠 데 없이 썼으면 화면에 보일 이름만 돌려준다(다시 볼 날짜·숙지는 그대로 — 2026-10-29 사용자).
     const markReused = async (corrected: string | null | undefined): Promise<string[]> => {
       if (!reuse.length || !unchanged(message, corrected)) return [];
-      const used = usedTargets(langs.targetLanguage, message, reuse);
-      if (!used.length) return [];
-      await saveChecks(userId, langs.targetLanguage, Object.fromEntries(used.map((target) => [target.key, true]))).catch(() => undefined);
-      return used.map((target) => target.label);
+      return usedTargets(langs.targetLanguage, message, reuse).slice(0, 3).map((target) => target.label);
     };
     const turnOptions: ChatTurnOptions = {
       conversationMode,

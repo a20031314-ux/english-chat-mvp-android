@@ -1,7 +1,8 @@
 /**
- * 대화 속에서 다시 쓰게(2026-10-28 사용자 "대화 속에서 다시 쓰게 하는 기능"): 헷갈려요·직접 물어본 표현·문장구조(다시 볼 것 1단계)
- * 둘을 튜터에게 넘겨, 그 말이 자연스럽게 나올 질문을 하게 한다. 학습자가 고칠 데 없이 쓰면 "알아요"처럼 반영(다음은 7일 뒤 한 번).
- * 모델을 더 부르지 않는다 — 원래 부르는 튜터 지시에 한 단락, 썼는지는 낱말 맞춤으로.
+ * 대화에서 잘 썼어요(2026-10-29 사용자 "자유대화에 어떻게든 표현을 끼워 넣으면 수행 완료가 돼 버려 — 적용은 빼고, 체크한 것들은
+ * 자유롭게 학습하다가 그 표현을 쓸 때 잘 적용했다 정도의 표시"): 튜터가 표현을 끌어내지 않는다(예전 reusePrompt는 뺌).
+ * 학습자가 채팅에서 스스로 체크한 표현·문장구조(헷갈려요·물어본 것 — 다시 볼 것 어느 단계든)를 고칠 데 없이 쓰면 그 줄 아래 표시만.
+ * 다시 볼 날짜·숙지는 바꾸지 않는다(끼워 넣어 끝내는 일이 없게). 모델을 더 부르지 않는다 — 낱말 맞춤.
  */
 import { allFramesFor } from "./frames.ts";
 import type { ReviewMap } from "./dailyPlan.ts";
@@ -9,11 +10,10 @@ import { hasPhrase } from "./learnedWhere.ts";
 
 export type ReuseTarget = { key: string; label: string; kind: "phrase" | "frame"; pieces: string[] };
 
-export function reuseTargets(language: string, review: ReviewMap, limit = 2): ReuseTarget[] {
+export function reuseTargets(language: string, review: ReviewMap, limit = 40): ReuseTarget[] {
   const frames = allFramesFor(language);
   const out: ReuseTarget[] = [];
-  for (const [key, entry] of Object.entries(review).sort((a, b) => b[1].at - a[1].at)) {
-    if (entry.step !== 1) continue;
+  for (const [key] of Object.entries(review).sort((a, b) => b[1].at - a[1].at)) {
     if (key.startsWith("e|")) out.push({ key, label: key.slice(2), kind: "phrase", pieces: [key.slice(2)] });
     else if (key.startsWith("f|")) {
       const frame = frames.find((f) => f.id === key.slice(2));
@@ -22,17 +22,6 @@ export function reuseTargets(language: string, review: ReviewMap, limit = 2): Re
     if (out.length >= limit) break;
   }
   return out;
-}
-
-/** 튜터 지시에 붙일 단락(영어 — 다른 지시와 같은 말). 예문은 넣지 않는다(베껴 쓰지 않게). */
-export function reusePrompt(targets: readonly ReuseTarget[]): string {
-  if (!targets.length) return "";
-  const list = targets.map((target) => `"${target.label}" (${target.kind === "frame" ? "sentence pattern, ___ is the slot" : "expression"})`).join(", ");
-  return [
-    `Practice to bring back: the learner recently marked ${list} as unsure.`,
-    "When it fits what you are talking about, ask something whose natural answer would use one of them — at most one per reply, and not every reply.",
-    "Never name them, never quiz or explain them unless asked; if the learner uses one, just carry on the conversation.",
-  ].join(" ");
 }
 
 /** 학습자 줄에 그 표현·문장구조가 들었는지(문장구조는 조각이 모두). */

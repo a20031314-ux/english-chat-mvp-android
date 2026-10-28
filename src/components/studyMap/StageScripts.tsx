@@ -424,14 +424,6 @@ function ScriptPlayer({
     sendAppIntent("practice", { tab: "roleplay", goal: { situation: goal ? `${setting} — ${goal}` : setting }, title: setting });
   };
 
-  // 배운 표현을 자유 대화에서(2026-10-28 사용자 "주기적으로 자유대화에서 적용"): 그 대본의 핵심 표현으로 AI 통화. 통화 분이 없는 요금은 통화 쪽이 구독 안내를 띄운다.
-  const applyCall = () => {
-    stopTts();
-    onClose();
-    const setting = glossFor(script.setting, locale);
-    sendAppIntent("practice", { tab: "roleplay", goal: { situation: setting, phrases: script.expressions.slice(0, 3) }, title: setting });
-  };
-
   const modeLabel: Record<ScriptMode, string> = {
     shadow: ui.scriptModeShadow,
     hint: ui.scriptModeHint,
@@ -640,15 +632,9 @@ function ScriptPlayer({
               <button type="button" onClick={restart} className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10">
                 {ui.scriptRestart}
               </button>
-              {script.goal ? (
-                <button type="button" onClick={call} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
-                  📞 {ui.scriptCall}
-                </button>
-              ) : script.expressions.length ? (
-                <button type="button" onClick={applyCall} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
-                  📞 {ui.scriptApplyCall}
-                </button>
-              ) : null}
+              <button type="button" onClick={closeScript} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
+                {ui.billingClose}
+              </button>
             </div>
           </li>
         ) : null}

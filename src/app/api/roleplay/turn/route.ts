@@ -43,8 +43,6 @@ import { fileFix } from "@/lib/server/notebookStore";
 import { localDay as notebookDay, parseOffset as notebookOffset, TZ_OFFSET_HEADER as NOTEBOOK_TZ } from "@/lib/billing/plans";
 import { recordMeets, recordTurn } from "@/lib/server/ledgerStore";
 import { readLearnerBrief } from "@/lib/server/learnerBrief";
-import { readReview } from "@/lib/server/stageScriptStore";
-import { reusePrompt, reuseTargets } from "@/lib/curriculum/reuse";
 import { profileTurn, studyTick, withProfileLine } from "@/lib/server/profileContext";
 import { recordGrowthTurn, recordStuck } from "@/lib/server/growthStore";
 import { quotedPhrases } from "@/lib/learner/stuck";
@@ -387,17 +385,14 @@ export async function POST(request: NextRequest) {
   // (learner/brief.ts). Cached for minutes, so a call does not rebuild it on
   // every turn. A scripted scene keeps to its script.
   // 로그인했으면 공부한 날(꾸준함 칸)을 남기고, 자유 대화면 관심사 한 줄도(server/profileContext.ts).
-  const [learnerBrief, profileLine, review] = await Promise.all([
+  // 튜터가 체크한 표현을 끌어내지 않는다(2026-10-29 사용자 "자유대화에 어떻게든 끼워 넣으면 수행 완료" — curriculum/reuse.ts).
+  const [learnerBrief, profileLine] = await Promise.all([
     scenario.openEnded ? readLearnerBrief(requestUserId(request), turn.targetLanguage) : null,
     profileTurn(request),
-    // 대화 속에서 다시 쓰게(curriculum/reuse.ts) — 자유 통화만, 지시 한 단락(통화는 썼는지 기록은 아직 안 함).
-    scenario.openEnded ? readReview(requestUserId(request), turn.targetLanguage).catch(() => ({})) : null,
   ]);
   // 통화에서 한 말 — 프로필 공부 기록 "말한 문장"(들린 말이 있는 턴만, 2026-10-28).
   if (turn.heard) after(() => studyTick(request, "lines"));
-  const brief = [learnerBrief ? withProfileLine(learnerBrief.prompt, profileLine) : "", review ? reusePrompt(reuseTargets(turn.targetLanguage, review)) : ""]
-    .filter(Boolean)
-    .join("\n\n");
+  const brief = learnerBrief ? withProfileLine(learnerBrief.prompt, profileLine) : "";
   // A pack turn: the tutor reacts and picks the pack's next question rather
   // than asking its own, so the practice brief's "ask the question a phrase
   // answers" would pull the other way and is left out (pack.ts packPrompt).

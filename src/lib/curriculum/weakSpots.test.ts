@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { allMisses, missedLines, noteLine } from "./scriptMisses.ts";
 import { weakSpots, wordsToShow } from "./weakSpots.ts";
 import { morningDays } from "./morningDigest.ts";
-import { reusePrompt, reuseTargets, unchanged, usedTargets } from "./reuse.ts";
+import { reuseTargets, unchanged, usedTargets } from "./reuse.ts";
 import { allScriptsFor } from "./stageScripts.ts";
 import { allFramesFor } from "./frames.ts";
 
@@ -75,9 +75,8 @@ test("대화 속에서 다시 쓰게: 헷갈려요 둘, 문장구조는 조각�
     "e|adiós": { due: NOW, step: 1, at: NOW - 5 },
   };
   const targets = reuseTargets("es", review);
-  assert.deepEqual(targets.map((target) => target.key), ["e|mucho gusto", `f|${frame.id}`]);
-  assert.ok(reusePrompt(targets).includes("mucho gusto"));
-  assert.equal(reusePrompt([]), "");
+  // 체크한 것 모두(다시 볼 단계와 상관없이), 최근 순 — 2026-10-29 "잘 썼어요" 표시만.
+  assert.deepEqual(targets.map((target) => target.key), ["e|mucho gusto", "e|vale", `f|${frame.id}`, "e|adiós"]);
   assert.deepEqual(usedTargets("es", "¡Mucho gusto, Ana!", targets).map((target) => target.key), ["e|mucho gusto"]);
   assert.ok(usedTargets("es", frame.examples[0]!.text, targets).some((target) => target.kind === "frame"));
   const ja = reuseTargets("ja", { "e|よろしくお願いします": { due: NOW, step: 1, at: NOW } });
