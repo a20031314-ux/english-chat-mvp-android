@@ -316,54 +316,6 @@ Reply as JSON only, politely and in one consistent level of politeness:
 }
 
 /**
- * 2차 판단(2026-10-29 사용자 "판단 > 2차 판단(진짜 틀린 건지 확인)"): 1차(Haiku)가 "틀림"이라 한 떠올려 말하기 줄을 더 좋은 모델이 확인만 한다.
- * 전체 판단을 다시 하지 않고 1차의 근거(뜻 풀이·한마디)를 받아 "정말 뜻이 다른가"만 — 지시가 짧고 답도 짧아 다시 판단하는 것보다 싸다.
- * 맞으면 1차 한마디를 그대로 쓰고, 뒤집을 때만 새 한마디를 쓴다.
- */
-export function recheckPrompt(input: {
-  target: string;
-  heard: string;
-  first: Practice;
-  targetLanguage: string;
-  nativeLanguage: string;
-}): string {
-  return `A first reader marked a ${input.targetLanguage} learner's line as wrong. Check whether it really is wrong.
-
-The learner was practising a dialogue line from memory and could say it in their own words.
-The line in the script: "${input.target}"
-What a speech recogniser heard: "${input.heard}"
-${input.first.scriptMeaning ? `First reader — what the script says: ${input.first.scriptMeaning}\n` : ""}${input.first.saidMeaning ? `First reader — what the learner said: ${input.first.saidMeaning}\n` : ""}First reader's reason: ${input.first.note}
-
-It is really wrong only when a listener would come away believing something different about the situation: a fact, time, person, place, amount, feeling or intention missing, added or changed, or too little came through. It is not wrong when:
-- the same event is put in other words (another verb for the same happening, a verb that implies the script's one, a synonym, another natural order, a shorter way);
-- one content word was written as a different real word that sounds very close and makes no sense here — a recogniser slip; read the script's word;
-- the meaning is the same and only the grammar slipped (article, particle, ending, word order) — that is "awkward", a pass with a correction.
-The recogniser keeps small words and endings, so do not excuse those as slips.
-
-Reply as JSON only:
-{"wrong": true or false, "verdict": "wrong or awkward or natural", "better": "<the correct natural line in ${input.targetLanguage} when awkward, else empty>", "note": "<only when not wrong: one or two sentences in ${input.nativeLanguage} — for awkward the slip and the natural way, for natural that it works and, if worded differently, how the script says it; for a recogniser slip add that that one word could be said more clearly. Empty when wrong.>"}`;
-}
-
-/** 2차 판단 답 → 뒤집을 때의 판단(맞으면 null = 1차 그대로). */
-export function parseRecheck(raw: string): Practice | "confirmed" | null {
-  let parsed: unknown;
-  try {
-    parsed = JSON.parse(raw);
-  } catch {
-    return null;
-  }
-  if (typeof parsed !== "object" || parsed === null) return null;
-  const record = parsed as { wrong?: unknown; verdict?: unknown; better?: unknown; note?: unknown };
-  if (record.wrong === true || record.verdict === "wrong") return "confirmed";
-  if (record.wrong !== false) return null;
-  const note = typeof record.note === "string" ? record.note.trim().slice(0, MAX_PRACTICE_CHARS) : "";
-  if (!note) return null;
-  const verdict = record.verdict === "awkward" ? "awkward" : "natural";
-  const better = typeof record.better === "string" ? record.better.trim().slice(0, 200) : "";
-  return { good: true, note, verdict, ...(verdict === "awkward" && better ? { better } : {}) };
-}
-
-/**
  * "내 말로"(단계 대본 3~5단계, 2026-10-27): 원문을 보지 않고 뜻만 보고 자기 말로 했다. 낱말 비교가 아니라
  * 그 자리에서 그 뜻이 자연스럽게 통하는지 — good이면 통과. 원어민 줄은 비교 기준이 아니라 한 가지 예.
  */

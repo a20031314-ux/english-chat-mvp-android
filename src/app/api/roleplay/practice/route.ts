@@ -9,7 +9,7 @@ import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { coerceLanguageCode, interfaceLanguageName } from "@/lib/learningLanguages";
 import { findScenario } from "@/lib/roleplay/catalog";
-import { compareToTarget, frameUsePrompt, ownWordsPrompt, parsePractice, parseRecheck, practicePrompt, recallPrompt, recheckPrompt, type Practice } from "@/lib/roleplay/practice";
+import { compareToTarget, frameUsePrompt, ownWordsPrompt, parsePractice, practicePrompt, recallPrompt, type Practice } from "@/lib/roleplay/practice";
 import { noteMostlyUi } from "@/lib/notes/notebook";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { meterRequest, simDetail } from "@/lib/server/meterRequest";
@@ -166,26 +166,9 @@ export async function POST(request: NextRequest) {
     if (judged && practice && !practice.good) {
       try {
         await meterRequest(request, "scriptRecheck");
-        if (recalled && !frame && !meaning) {
-          // 떠올려 말하기: 2차는 "정말 틀렸나"만 확인(짧은 지시·짧은 답). 맞으면 1차 한마디 그대로, 뒤집을 때만 새 한마디.
-          const first = practice;
-          const content = recheckPrompt({ target, heard, first, targetLanguage: interfaceLanguageName(scenario.language), nativeLanguage: nativeName });
-          const model = MODEL_OF.scriptRecheck();
-          const completion = await completeChat(client, "scriptRecheck", {
-            messages: [
-              { role: "system", content },
-              { role: "user", content: "JSON." },
-            ],
-            response_format: { type: "json_object" },
-            ...(isReasoningModel(model) ? { max_completion_tokens: 1500, reasoning_effort: fastestEffort(model) as "minimal" } : { max_tokens: 300 }),
-          });
-          track("recheck", completion);
-          const second = parseRecheck(completion.choices[0]?.message?.content ?? "");
-          if (second && second !== "confirmed" && noteMostlyUi(second.note, nativeCode)) practice = second;
-        } else {
-          // 내 말로·문장구조: 1차 근거(뜻 풀이)가 없어 처음부터 다시 판단.
-          practice = (await judge("scriptRecheck")) ?? practice;
-        }
+        // 2차는 1차 근거를 보여 주지 않고 처음부터 다시 판단한다 — 1차의 이유를 주고 "정말 틀렸나"만 물었더니
+        // 33번 중 한 번도 뒤집지 않아(1차에 끌려감) 통과/틀림 63/72로 떨어졌다(2026-10-29 점검, 다시 판단은 69/72).
+        practice = (await judge("scriptRecheck")) ?? practice;
       } catch (error) {
         console.error("[roleplay/practice] recheck", error);
       }

@@ -3,7 +3,6 @@ import test from "node:test";
 import {
   compareToTarget,
   parsePractice,
-  parseRecheck,
   practicePrompt,
   troubleWords,
   type WordOutcome,
@@ -214,16 +213,3 @@ test("what was heard is shown in the script's own case and punctuation (2026-10-
   assert.equal(compareToTarget("¿Dónde está el baño?", "dónde está el baño").clean, true);
 });
 
-test("2차 판단: 맞으면 1차 그대로, 뒤집을 때만 새 판단(2026-10-29)", () => {
-  assert.equal(parseRecheck('{"wrong": true, "verdict": "wrong", "better": "", "note": ""}'), "confirmed");
-  assert.deepEqual(parseRecheck('{"wrong": false, "verdict": "awkward", "better": "Fui a la playa.", "note": "관사를 la로."}'), {
-    good: true,
-    note: "관사를 la로.",
-    verdict: "awkward",
-    better: "Fui a la playa.",
-  });
-  assert.deepEqual(parseRecheck('{"wrong": false, "verdict": "natural", "better": "x", "note": "좋아요."}'), { good: true, note: "좋아요.", verdict: "natural" });
-  // 뒤집는데 한마디가 없거나 모양이 틀리면 1차 그대로(null).
-  assert.equal(parseRecheck('{"wrong": false, "verdict": "natural", "note": ""}'), null);
-  assert.equal(parseRecheck("not json"), null);
-});
