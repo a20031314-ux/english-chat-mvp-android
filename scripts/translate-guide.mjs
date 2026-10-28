@@ -83,6 +83,7 @@ You get the English guide and the Korean one, with the same structure. Write the
 Hard rules:
 - Keep exactly the same JSON structure: the same tabs, the same number of sections, the same number of paragraphs in each body, in the same order.
 - Every {ui:something} is the name of a button, filled in by the app. Copy each one exactly, unchanged, in the paragraph or heading where it appears. Never translate or remove it, and never add one.
+- Each paragraph is one short line next to a screenshot (2026-10-29). Keep it as short as the source; never add explanation.
 - Numbers (10 messages, 20 points, 100 minutes, 5 minutes, 3 videos, 80 points, 15 minutes) stay the same.
 Return only the translated json object.`;
 }

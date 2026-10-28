@@ -156,10 +156,21 @@ const GUIDE_SOCIAL_ITEMS = [
   { shot: "talk-calls", step: "talk-list" },
   { shot: "invite-rewards" },
 ];
+// `guide-more`: 글을 한 줄로 줄이면서(2026-10-29, 사용자 "설명은 한두 줄, 그림으로") 그림이 없던 칸 — 1:1 메시지·라이어 게임(관전자 칸도 같은 그림)·
+// 아이콘·친구 초대 — 과 2.76 대화 목록(팩 카드가 빠진 talk-calls). 전부 고정 응답이라 모델을 부르지 않는다(번역 몇 번).
+const GUIDE_MORE = VERSION === "guide-more";
+const GUIDE_MORE_ITEMS = [
+  { shot: "rooms", save: false },
+  { shot: "talk-dm", step: "dm" },
+  { shot: "talk-calls", step: "talk-list" },
+  { shot: "room-game" },
+  { shot: "people-icons", step: "icons" },
+  { shot: "people-invite", step: "invite" },
+];
 // `guide-calls`: 통화 기록을 채팅과 따로(2026-10-27) — 대화 목록에 "AI 튜터와 통화" 줄이 생겨 talk-list 대신 talk-calls.
 const GUIDE_CALLS = VERSION === "guide-calls";
 const GUIDE_PARTS = VERSION === "guide-parts";
-const GUIDE = VERSION === "guide" || GUIDE_PARTS || GUIDE_CALLS || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
+const GUIDE = VERSION === "guide" || GUIDE_MORE || GUIDE_PARTS || GUIDE_CALLS || GUIDE_VIDEO || GUIDE_CHAT || GUIDE_VOCAB || GUIDE_CALL || GUIDE_SOCIAL;
 const GUIDE_ITEMS = [
   // 2.71: My 첫 화면 맨 위 "이런 대화, 할 수 있어요?"(단계 고르기, 사용법 my.start).
   { shot: "stage-start" },
@@ -320,6 +331,8 @@ const note = PROMO
   ? { version: "guide", items: GUIDE_VIDEO_ITEMS }
   : GUIDE_SOCIAL
   ? { version: "guide", items: GUIDE_SOCIAL_ITEMS }
+  : GUIDE_MORE
+  ? { version: "guide", items: GUIDE_MORE_ITEMS }
   : GUIDE_PARTS
   ? { version: "guide", items: GUIDE_PARTS_ITEMS }
   : GUIDE_CALLS
@@ -1244,7 +1257,8 @@ const STEPS = {
     // 자리의 방장 얼굴 → 프로필 시트 → 메시지 → 대화(고정 응답).
     await page.locator('div[class*="z-[80]"] header ul li button').first().click();
     await wait(1500);
-    await page.locator('div[class*="z-[90]"]').getByRole("button", { name: new RegExp(escape(t.message)) }).click();
+    // 프로필 시트 층은 숫자(style z-index)일 때가 있어(2026-10-28 above·layer) 클래스 대신 이름으로 찾는다.
+    await page.getByRole("button", { name: new RegExp(escape(t.message)) }).last().click();
     await wait(2500);
     await page.locator('div[class*="z-[95]"] button', { hasText: t.callEnded }).click();
     await wait(600);
