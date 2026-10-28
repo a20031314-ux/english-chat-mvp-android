@@ -171,6 +171,11 @@ export async function decline(me: string, id: string): Promise<boolean> {
   return true;
 }
 
+/** 이 사람이 이 대화에서 읽은 마지막 줄 번호 — 상대 화면의 "읽음" 표시에 씀. */
+export async function readUpTo(account: string, id: string): Promise<number> {
+  return (await kvGetJson<number>(readKey(account, id))) ?? 0;
+}
+
 export async function markRead(me: string, id: string, seq: number): Promise<void> {
   const have = (await kvGetJson<number>(readKey(me, id))) ?? 0;
   if (seq > have) await kvSetJson(readKey(me, id), seq, DM_TTL_SECONDS);

@@ -531,11 +531,11 @@ export function dmInbox(): Promise<{ threads: DmSummary[] }> {
   return dm("inbox", {});
 }
 
-export function dmOpen(target: string): Promise<{ thread: DmThread | null; messages: DmMessage[]; blocked: boolean; gone?: number[] }> {
+export function dmOpen(target: string): Promise<{ thread: DmThread | null; messages: DmMessage[]; blocked: boolean; gone?: number[]; peerRead?: number }> {
   return dm("open", { target });
 }
 
-export function dmPoll(threadId: string, since: number): Promise<{ thread: DmThread; messages: DmMessage[]; gone?: number[] }> {
+export function dmPoll(threadId: string, since: number): Promise<{ thread: DmThread; messages: DmMessage[]; gone?: number[]; peerRead?: number }> {
   return dm("poll", { threadId, since });
 }
 

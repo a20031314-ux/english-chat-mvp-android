@@ -5,7 +5,7 @@ import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
 import { readAccount } from "@/lib/server/accountStore";
 import { blockedEitherWay, isAccountId } from "@/lib/server/socialStore";
-import { claimCallLog, decline, findQuote, hiddenUpTo, hideThread, inbox, markRead, readGone, readMessages, readThread, send, unsend, withoutGone } from "@/lib/server/dmStore";
+import { claimCallLog, decline, findQuote, hiddenUpTo, hideThread, inbox, markRead, readGone, readUpTo, readMessages, readThread, send, unsend, withoutGone } from "@/lib/server/dmStore";
 import { createRoom, isInviteCode, liveCount, readLines, readMeta } from "@/lib/server/roomStore";
 import { cleanFocus, clipQuote, type LineQuote } from "@/lib/rooms/quote";
 import { DM_MAX_CHARS, isThreadId, otherOf, threadIdFor } from "@/lib/rooms/dm";
@@ -21,7 +21,8 @@ export const dynamic = "force-dynamic";
  *
  *   inbox                     → { threads: DmSummary[] }
  *   open { target }           → { thread | null, messages }   (읽음 표시)
- *   poll { threadId, since }  → { thread, messages }           (읽음 표시)
+ *   poll { threadId, since }  → { thread, messages, peerRead } (읽음 표시)
+ *   peerRead: 상대가 읽은 마지막 줄 번호(open·poll) — 내 말 아래 "읽음". 옛 앱은 무시.
  *   send { target, text }     → { thread, message }
  *   decline { threadId }      → 받은 요청 거절
  *   call { threadId, peerId } → 둘만의 통화 방을 열고 대화에 "통화" 줄 → { room }
@@ -65,7 +66,8 @@ export async function POST(request: NextRequest) {
       const gone = thread ? await readGone(id) : [];
       const messages = thread ? withoutGone((await readMessages(id)).filter((row) => row.seq > hidden), gone) : [];
       if (thread?.lastSeq) await markRead(me, id, thread.lastSeq);
-      return jsonWithCors(request, { thread, messages, blocked, gone });
+      const peerRead = thread ? await readUpTo(target, id) : 0;
+      return jsonWithCors(request, { thread, messages, blocked, gone, peerRead });
     }
     if (blocked) return bad(request, "BLOCKED", 403);
     const text = cleanText(body.text, DM_MAX_CHARS);
@@ -136,8 +138,9 @@ export async function POST(request: NextRequest) {
     const [hidden, gone] = await Promise.all([hiddenUpTo(me, thread.id), readGone(thread.id)]);
     const messages = withoutGone((await readMessages(thread.id, pollFrom(since))).filter((row) => row.seq > hidden), gone);
     if (thread.lastSeq) await markRead(me, thread.id, thread.lastSeq);
+    const peerRead = await readUpTo(other, thread.id);
     // gone: 모두에게서 지운 줄 — 이미 받아 둔 앱이 화면에서 뺀다.
-    return jsonWithCors(request, { thread, messages, gone });
+    return jsonWithCors(request, { thread, messages, gone, peerRead });
   }
 
   if (action === "unsend") {

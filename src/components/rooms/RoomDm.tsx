@@ -14,7 +14,7 @@ import {
   dmSend,
   dmUnsend,
   translateLine, aiFailText } from "@/lib/rooms/client";
-import { DM_PENDING_LIMIT, type DmMessage, type DmSummary, type DmThread } from "@/lib/rooms/dm";
+import { DM_PENDING_LIMIT, lastSeenMine, type DmMessage, type DmSummary, type DmThread } from "@/lib/rooms/dm";
 import type { RoomMeta } from "@/lib/rooms/protocol";
 import { askPhraseAbout, questionCount } from "@/lib/rooms/quote";
 import { ThankButton } from "@/components/account/ProfileFacts";
@@ -177,6 +177,8 @@ export function DmThreadView({
   const [blocked, setBlocked] = useState(false);
   const [notice, setNotice] = useState("");
   const [loaded, setLoaded] = useState(false);
+  // 상대가 읽은 마지막 줄 번호(서버 peerRead, 2.76~) — 내 말 중 그 안의 가장 마지막 줄에만 "읽음".
+  const [peerRead, setPeerRead] = useState(0);
   const since = useRef(0);
   const scroller = useRef<HTMLDivElement>(null);
 
@@ -211,6 +213,7 @@ export function DmThreadView({
           setThread(body.thread);
           threadId = body.thread?.id ?? null;
           add(body.messages);
+          if (typeof body.peerRead === "number") setPeerRead(body.peerRead);
           setLoaded(true);
         } else {
           const body = await dmPoll(threadId, since.current);
@@ -218,6 +221,7 @@ export function DmThreadView({
           setThread(body.thread);
           add(body.messages);
           drop(body.gone);
+          if (typeof body.peerRead === "number") setPeerRead(body.peerRead);
         }
       } catch {
         // 다음 물음에서 다시.
@@ -241,6 +245,7 @@ export function DmThreadView({
   const isRequestToMe = thread?.status === "pending" && thread.starter !== me;
   const pendingMine = thread?.status === "pending" && thread.starter === me;
   const mineSent = messages.filter((message) => message.from === me && message.kind === "text").length;
+  const seenSeq = lastSeenMine(messages, me, peerRead);
   const contextFor = (seq: number) =>
     messages
       .filter((message) => message.seq < seq && message.kind === "text")
@@ -319,6 +324,7 @@ export function DmThreadView({
                 t={t}
                 message={message}
                 mine={message.from === me}
+                seen={message.seq === seenSeq}
                 me={me}
                 locale={locale}
                 targetLanguage={targetLanguage}
@@ -422,9 +428,12 @@ function Bubble({
   asked,
   onQuote,
   thankThreadId,
+  seen = false,
 }: {
   t: RoomCopy;
   ended: boolean;
+  /** 상대가 읽은 내 말 중 가장 마지막 줄 — 시간 옆에 "읽음". */
+  seen?: boolean;
   /** 있으면 이 메시지 아래 "도움됐어요"(내 질문에 단 답). */
   thankThreadId?: string;
   quoteName: (accountId: string | null | undefined, fallback: string) => string;
@@ -570,6 +579,7 @@ function Bubble({
           <ThankButton locale={locale} target={{ kind: "dm", threadId: thankThreadId, seq: message.seq }} learn={targetLanguage} />
         ) : null}
         <p className={`mt-0.5 px-1 text-[10px] text-slate-600 ${mine ? "text-end" : ""}`}>
+          {mine && seen ? <span className="text-sky-300/80">{t.seen} · </span> : null}
           {time}
           {asked > 0 ? ` · ❓ ${asked}` : ""}
         </p>
@@ -628,3 +638,4 @@ function LogLine({
     </li>
   );
 }
+

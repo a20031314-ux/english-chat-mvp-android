@@ -92,3 +92,12 @@ export function canSend(thread: DmThread | null, me: string, sentByStarter: numb
   if (thread.starter !== me) return "ok";
   return sentByStarter >= DM_PENDING_LIMIT ? "PENDING_LIMIT" : "ok";
 }
+
+/** 상대가 읽은(seq ≤ peerRead) 내 글 메시지 중 가장 마지막 줄 번호 — 없으면 0. */
+export function lastSeenMine(messages: Pick<DmMessage, "seq" | "from" | "kind">[], me: string, peerRead: number): number {
+  let found = 0;
+  for (const message of messages) {
+    if (message.from === me && message.kind === "text" && message.seq <= peerRead && message.seq > found) found = message.seq;
+  }
+  return found;
+}
