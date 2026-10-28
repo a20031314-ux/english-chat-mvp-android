@@ -237,6 +237,9 @@ export type Practice = {
   verdict?: "natural" | "awkward" | "wrong";
   /** awkward·wrong일 때 더 자연스러운(맞는) 말 한 줄(학습 언어). */
   better?: string;
+  /** 떠올려 말하기(2026-10-29): 대본 줄의 뜻과 내 말의 뜻(앱 언어) — 이 둘을 맞춰 판단한다. 아직 화면에는 안 씀. */
+  scriptMeaning?: string;
+  saidMeaning?: string;
 };
 
 export const MAX_PRACTICE_CHARS = 400;
@@ -276,42 +279,39 @@ Reply as JSON only, writing in ${input.nativeLanguage}, politely and in one cons
 "good" is true when nothing is worth raising. "note" is still written then — say what came through well, briefly, without praise it did not earn.`;
 }
 
-/** 떠올려 말하기에 주는 낱말 대조(2026-10-29: 대조 없이 맡겼더니 맞게 말한 과거형을 "빠졌다"고 짚음). 판단 근거가 아니라 어디가 다른지의 사실. */
-function recallDiff(comparison: Comparison): string {
-  const trouble = troubleWords(comparison);
-  if (!trouble.length && !comparison.added.length) return "Word by word, every word of the script came through.\n";
-  return `Word by word against the script (a fact about the transcript, not yet a verdict — reworded parts show up here too):\n${trouble.map((line) => `- ${line}`).join("\n")}${comparison.added.length ? `\n- also heard, not in the script: ${comparison.added.map((word) => `"${word}"`).join(", ")}` : ""}\nAny word not listed came through exactly as in the script. In the note, talk only about these differences — never call a word missing or wrong when it is not listed.\n`;
-}
-
 /**
  * 대본·문장구조를 보지 않고(첫 글자만·가리기·문장구조만) 떠올려 말했다(2026-10-28 사용자 "기존 문장에서 변형된 맞는 표현도 고치라고 함" →
  * 맞게 바꿔 말한 것은 통과). 원문 그대로가 아니어도 같은 뜻을 자연스럽고 맞게 말했으면 good — 원문과 다른 말은 note에 원문 표현을 짧게 알려 준다.
  * 받아쓰기가 떨어뜨린 짧은 낱말(관사·전치사)과 같은 소리 다른 글자는 학습자 잘못이 아니다.
  */
 export function recallPrompt(input: { target: string; heard: string; comparison: Comparison; targetLanguage: string; nativeLanguage: string; unclear?: string[] }): string {
+  // 2026-10-29 사용자 "맞는 문장이랑 대조하지 말고 맞는 문장, 내 발화를 각각 해석해서 그걸 대조 — 의미상 어긋난 점만": 낱말이 아니라 뜻끼리 맞춘다.
   return `Someone learning ${input.targetLanguage} is practising a dialogue line from memory — the line was hidden, so they said it in their own way. You are looking at what a speech recogniser made of what they said.
 
 The line in the script: "${input.target}"
 What the recogniser heard: "${input.heard || "(nothing)"}"
-${recallDiff(input.comparison)}${unclearPart(input.unclear, input.nativeLanguage)}
-This is not a dictation check. Decide like a friendly native speaker in that conversation: would you understand the same thing, and does it sound like something people really say?
-- "good" is TRUE when the meaning is the same and it is natural and grammatical, even with different wording. Different but equivalent choices are fine: will vs. going to for a plan, a modal or impersonal form instead of a personal one when the question means the same, a synonym, a contraction, a different natural order, a polite form of the same request, a shorter natural way of saying it.
-- Speech recognisers drop or blur short unstressed words (articles, prepositions such as before days of the week, auxiliaries) and spell some words differently; they also drop punctuation and the rise of a question, so a statement-shaped transcript of something that works as the question here is fine. If the rest of the sentence is right, assume those small words were said.
-- Recognisers also turn a word into a similar-sounding word, or run it together with its neighbour into one wrong word. When the rest of the line is right and the odd piece of the transcript sounds close to the script's word or words, assume the script's words were said a little unclearly: that is not a change of meaning, so it is not "wrong". Count it as said (natural), and in the note name that word as the one to say more clearly — without claiming anything about stress or accent.
-- Recognisers do not strip word endings. A missing past tense, plural, conjugation or agreement — especially more than once — is the learner's mistake, not the recogniser's.
-- "good" is FALSE only when the meaning really changed (a different fact, time, person or intention), the grammar is clearly wrong in a way a native would notice (wrong tense for what is meant, wrong form, broken agreement), or too little came through to tell.
+${unclearPart(input.unclear, input.nativeLanguage)}
+Do not compare the words. Compare the meanings, in three steps:
+1. "scriptMeaning": what the script line says, as a plain paraphrase in ${input.nativeLanguage} — every fact, time, person, feeling and intention in it, and whether it asks something.
+2. "saidMeaning": what the learner's line says, paraphrased the same way. Read it as a listener would: speech recognisers drop punctuation and the rise of a question, blur or drop short unstressed words (articles, prepositions, auxiliaries), and turn a word into a similar-sounding one or run two words together. Where the transcript only makes sense as such a slip of the script's word, read the script's word — but never invent content that is not there: a word that is simply absent is absent.
+3. Compare the two paraphrases. Different wording that ends up with the same paraphrase is the same meaning — synonyms, another verb for the same action, a different but natural order, a contraction, a shorter way of saying it.
 
-Also sort it into one of three verdicts:
-- "natural": the meaning fits and a native speaker could comfortably say it this way in this conversation — casual, slightly more formal or simply different from the script all count as natural.
-- "awkward": completely grammatical and understandable, but no native would phrase it like this here (clumsy, stiff or odd word choice) — still counts as a pass; give the more natural way in "better".
-- "wrong": the meaning changed or got lost, or there is any grammar mistake (wrong verb form or tense, wrong preposition or particle, wrong agreement), even if the meaning still comes through — give the correct way in "better".
-When in doubt between "natural" and "awkward", choose "natural"; when in doubt between "awkward" and "wrong" because of a grammar slip, choose "wrong". A recogniser slip (a similar-sounding word, a dropped small word) is never a reason for "awkward" — judge the line as if the script's word had been written.
-"good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural"). In the note, for "awkward" say briefly why the better line sounds more natural.
+Verdicts:
+- "wrong": the two meanings differ — something is missing, added or changed (a fact, time or tense of what happened, person, amount, feeling, intention, or a question turned into a statement where it matters), or too little came through to tell.
+- "awkward": the meanings match, but the line has a grammar slip or is phrased in a way a native would not say here — still a pass; give the correct, natural line in "better".
+- "natural": the meanings match and it is fine as said.
+When in doubt between "natural" and "awkward", choose "natural". A recogniser slip is never a reason for "awkward" or "wrong".
+"good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural").
 
-The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. A part they reworded into something with the same meaning is fine — when the line is "wrong" for another reason, leave the reworded part out of the note entirely and talk only about what made it wrong. When "good" is true and the wording differs from the script, say in one short line that it works and quote how the script says it. When "good" is false, say in one sentence what is off and how to fix it — only what made it wrong, never an equivalent rewording that you would have accepted on its own; if almost nothing came through, say gently to try again a little slower.
+The note is for someone who speaks ${input.nativeLanguage}: write it entirely in ${input.nativeLanguage}, quoting ${input.targetLanguage} words only where you must, in one or two sentences.
+- "wrong": name only the meaning that differs (what the script says vs what came across) and the ${input.targetLanguage} words that would carry it. Say nothing about parts whose meaning matched, however differently they were worded.
+- "awkward": the slip, and the natural way to say it.
+- "natural": one short line that it works; if the wording differs from the script, quote how the script says it.
+- If a word read as a recogniser slip, add that that word could be said more clearly.
+- If almost nothing came through, say gently to try again a little slower.
 
 Reply as JSON only, politely and in one consistent level of politeness:
-{"good": true or false, "verdict": "natural or awkward or wrong", "better": "<more natural or correct line, or empty>", "note": "<one or two sentences>"}`;
+{"scriptMeaning": "...", "saidMeaning": "...", "good": true or false, "verdict": "natural or awkward or wrong", "better": "<line or empty>", "note": "<one or two sentences>"}`;
 }
 
 /**
@@ -388,12 +388,21 @@ export function parsePractice(raw: string): Practice | null {
     return null;
   }
   if (typeof parsed !== "object" || parsed === null) return null;
-  const record = parsed as { good?: unknown; note?: unknown; verdict?: unknown; better?: unknown };
+  const record = parsed as { good?: unknown; note?: unknown; verdict?: unknown; better?: unknown; scriptMeaning?: unknown; saidMeaning?: unknown };
+  const meaning = (value: unknown) => (typeof value === "string" ? value.trim().slice(0, 300) : "");
+  const scriptMeaning = meaning(record.scriptMeaning);
+  const saidMeaning = meaning(record.saidMeaning);
   const note = typeof record.note === "string" ? record.note.trim().slice(0, MAX_PRACTICE_CHARS) : "";
   if (!note) return null;
   const verdict = record.verdict === "natural" || record.verdict === "awkward" || record.verdict === "wrong" ? record.verdict : undefined;
   const better = typeof record.better === "string" ? record.better.trim().slice(0, 200) : "";
   // 세 갈래가 오면 그것으로 good을 정한다(맞지만 어색한 것도 통과).
   const good = verdict ? verdict !== "wrong" : record.good === true;
-  return { good, note, ...(verdict ? { verdict } : {}), ...(better && verdict !== "natural" ? { better } : {}) };
+  return {
+    good,
+    note,
+    ...(verdict ? { verdict } : {}),
+    ...(better && verdict !== "natural" ? { better } : {}),
+    ...(scriptMeaning && saidMeaning ? { scriptMeaning, saidMeaning } : {}),
+  };
 }

@@ -122,7 +122,7 @@ export async function POST(request: NextRequest) {
         response_format: { type: "json_object" },
         ...(reasoning
           ? { max_completion_tokens: 2000, reasoning_effort: fastestEffort(model) as "minimal" }
-          : { max_tokens: 300 }),
+          : { max_tokens: recalled ? 700 : 300 }),
       });
     // The note sometimes comes back in the learning language (2026-10-27: a Japanese
     // note for a Korean reader); ask once more, naming the miss, when it is not in the
