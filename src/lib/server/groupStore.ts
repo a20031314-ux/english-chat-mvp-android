@@ -31,7 +31,7 @@ import {
 } from "../rooms/group.ts";
 import { cleanFocus, clipQuote, type LineQuote } from "../rooms/quote.ts";
 import type { MediaRef } from "../rooms/media.ts";
-import { kvDelete, kvGetJson, kvIncrBy, kvListPush, kvListRange, kvListRemove, kvListTrim, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
+import { kvDelete, kvGetJson, kvGetJsonMany, kvIncrBy, kvListPush, kvListRange, kvListRemove, kvListTrim, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
 import { rowsAfter } from "./lateRows.ts";
 
 const groupKey = (id: string) => `grp:v1:g:${id}`;
@@ -254,6 +254,14 @@ async function sendToGroupUnlocked(input: {
     await addSpaceItem(group, { kind: "phrase", by: input.from, text: quote.focus ?? quote.text, from: quote.accountId ?? null });
   }
   return { ok: true, ...result };
+}
+
+/** 이 단체방에서 다른 사람들이 읽은 마지막 줄 번호들(누구인지는 빼고) — 읽음 표시를 끈 사람(off)은 뺀다. */
+export async function othersRead(group: Pick<Group, "id" | "members">, me: string, off: (account: string) => boolean): Promise<number[]> {
+  const others = group.members.filter((account) => account !== me && !off(account));
+  if (!others.length) return [];
+  const rows = await kvGetJsonMany<number>(others.map((account) => readKey(account, group.id)));
+  return rows.map((row) => (typeof row === "number" ? row : 0));
 }
 
 export async function markGroupRead(account: string, id: string, seq: number): Promise<void> {

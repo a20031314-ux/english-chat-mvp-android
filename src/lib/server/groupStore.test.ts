@@ -11,6 +11,7 @@ import {
   noteGroupCall,
   markGroupRead,
   myGroups,
+  othersRead,
   readGroup,
   readGroupGone,
   readGroupMessages,
@@ -123,4 +124,15 @@ test("보낸 줄 지우기: 내 글만, 모두에게서 빠지고 gone에 남는
   await logGroupCall((await readGroup(group.id))!, YUKI, "room01", [{ from: YUKI, nickname: "ゆき", text: "もしもし" }]);
   const log = (await readGroupMessages(group.id)).find((row) => row.kind === "callLog")!;
   assert.equal((await unsendGroupMessage(MINJI, group.id, log.seq)).ok, true); // 방장
+});
+
+test("읽음: 다른 사람이 읽은 줄 번호만(나·끈 사람 빼고)", async () => {
+  const group = await createGroup({ owner: MINJI, name: "읽음", languages: ["ja", "ko"], invite: [YUKI, OMAR] });
+  await answerInvite(YUKI, group.id, true);
+  await answerInvite(OMAR, group.id, true);
+  const now = (await readGroup(group.id))!;
+  await markGroupRead(YUKI, group.id, 3);
+  assert.deepEqual((await othersRead(now, MINJI, () => false)).sort(), [0, 3]);
+  assert.deepEqual(await othersRead(now, MINJI, (account) => account === OMAR), [3]);
+  assert.deepEqual(await othersRead(now, MINJI, () => true), []);
 });

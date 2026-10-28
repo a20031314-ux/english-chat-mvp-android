@@ -170,3 +170,14 @@ export function canInvite(group: Group, target: string): "ok" | "ALREADY" | "FUL
   if (group.members.length + group.invited.length >= GROUP_MAX_MEMBERS) return "FULL";
   return "ok";
 }
+
+/**
+ * 단체방 읽음: 내 가장 마지막 글 줄과, 다른 사람들이 읽은 줄 번호(reads) 중 그 줄까지 읽은 사람 수.
+ * 아무도 안 읽었거나 내 글이 없으면 count 0.
+ */
+export function groupSeen(messages: Pick<GroupMessage, "seq" | "from" | "kind">[], me: string, reads: number[]): { seq: number; count: number } {
+  let seq = 0;
+  for (const message of messages) if (message.from === me && message.kind === "text" && message.seq > seq) seq = message.seq;
+  if (!seq) return { seq: 0, count: 0 };
+  return { seq, count: reads.filter((read) => read >= seq).length };
+}

@@ -55,6 +55,8 @@ export type AccountRecord = {
     hasPhoto: boolean;
     updatedAt: string;
     hidden?: boolean;
+    /** 1:1·단체방 읽음 표시를 끔(없으면 켬) — 끄면 내가 읽은 것도 안 알리고 남이 읽은 것도 안 봄. */
+    noReadReceipts?: boolean;
     /** 나에 대한 사실(칩 id, account/profileFacts.ts). 예전 계정은 없음 = 빈 값. */
     facts?: ProfileFacts;
     /** 프로필에 보일 칸 켬/끔. 없으면 처음 값(DEFAULT_SHOW). */
@@ -66,6 +68,8 @@ const accountKey = (id: string) => `account:v1:${id}`;
 const emailKey = (email: string) => `account:v1:email:${email}`;
 const googleKey = (sub: string) => `account:v1:google:${sub}`;
 const photoKey = (id: string) => `account:v1:photo:${id}`;
+/** 읽음 표시를 끈 계정(있으면 끔) — 1:1·단체방이 3초마다 한 번에 읽도록 계정 줄과 따로 둔다. */
+const readReceiptsOffKey = (id: string) => `account:v1:rroff:${id}`;
 const userKey = (name: string) => `account:v1:user:${name}`;
 const failKey = (name: string) => `account:v1:fail:${name}`;
 const codeKey = (email: string) => `account:v1:code:${email}`;
@@ -107,6 +111,7 @@ export async function toPublic(record: AccountRecord): Promise<PublicAccount> {
       bio: record.profile.bio,
       photo: record.profile.hasPhoto ? await readPhoto(record.id) : null,
       hidden: record.profile.hidden === true,
+      readReceipts: record.profile.noReadReceipts !== true,
       facts: factsOf(record.profile.facts),
       show: showOf(record.profile.show),
     },
@@ -183,7 +188,7 @@ function defaultNickname(name: string | null): string {
 
 export async function saveProfile(
   record: AccountRecord,
-  next: { nickname: string; bio: string; photo?: string | null; hidden?: boolean; facts?: ProfileFacts; show?: ProfileShow },
+  next: { nickname: string; bio: string; photo?: string | null; hidden?: boolean; readReceipts?: boolean; facts?: ProfileFacts; show?: ProfileShow },
   now: Date = new Date(),
 ): Promise<AccountRecord> {
   const updated: AccountRecord = {
@@ -194,11 +199,14 @@ export async function saveProfile(
       hasPhoto: next.photo === undefined ? record.profile.hasPhoto : next.photo !== null,
       updatedAt: now.toISOString(),
       hidden: next.hidden === undefined ? record.profile.hidden === true : next.hidden,
+      ...((next.readReceipts === undefined ? record.profile.noReadReceipts === true : !next.readReceipts) ? { noReadReceipts: true } : {}),
       // 보내지 않은 칸은 그대로 — 예전 앱(사실·칸을 모름)이 저장해도 지워지지 않게.
       ...((next.facts ?? record.profile.facts) ? { facts: next.facts ?? record.profile.facts } : {}),
       ...((next.show ?? record.profile.show) ? { show: next.show ?? record.profile.show } : {}),
     },
   };
+  if (next.readReceipts === false) await kvSetJson(readReceiptsOffKey(record.id), 1);
+  else if (next.readReceipts === true) await kvDelete([readReceiptsOffKey(record.id)]);
   if (next.photo === null) await kvDelete([photoKey(record.id)]);
   else if (typeof next.photo === "string") await kvSetJson(photoKey(record.id), { photo: next.photo });
   await kvSetJson(accountKey(record.id), updated);
@@ -214,7 +222,7 @@ export const PURGE_QUEUE_KEY = "account:v1:purge";
  * `scripts/account-purge.mjs`가 그 목록을 비우며 지운다.
  */
 export async function deleteAccount(record: AccountRecord): Promise<void> {
-  const keys = [accountKey(record.id), photoKey(record.id)];
+  const keys = [accountKey(record.id), photoKey(record.id), readReceiptsOffKey(record.id)];
   if (record.email) keys.push(emailKey(record.email), codeKey(record.email), sendKey(record.email));
   if (record.googleSub) keys.push(googleKey(record.googleSub));
   if (record.username) keys.push(userKey(record.username), failKey(record.username));
@@ -376,3 +384,10 @@ export async function changePassword(
 }
 
 export type { AccountProfile };
+
+/** 계정마다 읽음 표시를 껐는지(같은 순서) — 키 하나씩, 한 번에 읽는다. */
+export async function readReceiptsOff(ids: string[]): Promise<boolean[]> {
+  if (!ids.length) return [];
+  const rows = await kvGetJsonMany<number>(ids.map(readReceiptsOffKey));
+  return rows.map((row) => row !== null);
+}

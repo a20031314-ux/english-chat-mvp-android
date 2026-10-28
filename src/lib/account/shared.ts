@@ -44,6 +44,8 @@ export type AccountProfile = {
   photo: string | null;
   /** 사람 목록(말하는 방 → 사람)에서 나를 숨김. 기본은 보임. */
   hidden: boolean;
+  /** 1:1·단체방 읽음 표시(기본 켬). 끄면 내 읽음도 안 알리고 남의 읽음도 안 봄. 예전 서버 응답에는 없을 수 있다. */
+  readReceipts?: boolean;
   /** 나에 대한 사실(칩 id). 예전 서버 응답에는 없을 수 있다. */
   facts?: ProfileFacts;
   /** 프로필에 보일 칸 켬/끔. */

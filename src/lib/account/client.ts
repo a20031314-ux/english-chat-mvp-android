@@ -162,6 +162,7 @@ export async function saveProfile(next: {
   bio: string;
   photo?: string | null;
   hidden?: boolean;
+  readReceipts?: boolean;
   /** 나에 대한 사실·프로필에 보일 칸(account/profileFacts.ts). 안 보내면 서버 값 그대로. */
   facts?: ProfileFacts;
   show?: Partial<ProfileShow>;

@@ -6,7 +6,7 @@ import { withoutGone } from "@/lib/server/dmStore";
 import { pollFrom } from "@/lib/server/lateRows";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
-import { readAccount } from "@/lib/server/accountStore";
+import { readAccount, readReceiptsOff } from "@/lib/server/accountStore";
 import { blockedEitherWay, isAccountId } from "@/lib/server/socialStore";
 import {
   answerInvite,
@@ -24,6 +24,7 @@ import {
   noteGroupCall,
   saveGroupMeta,
   markGroupRead,
+  othersRead,
   myGroups,
   readGroup,
   readGroupGone,
@@ -138,8 +139,12 @@ export async function POST(request: NextRequest) {
     const since = action === "poll" && typeof body.since === "number" && Number.isFinite(body.since) ? body.since : 0;
     const [rows, call, gone] = await Promise.all([readGroupMessages(group.id, pollFrom(since)), callStatus(group.callRoomId), readGroupGone(group.id)]);
     if (group.lastSeq) await markGroupRead(me, group.id, group.lastSeq);
+    // reads: 다른 사람들이 읽은 마지막 줄 번호(이름 없이) — 내 마지막 줄 아래 "n명 읽음". 내가 읽음 표시를 껐으면 빈 목록, 끈 사람은 빠짐. 옛 앱은 무시.
+    const offList = await readReceiptsOff(group.members);
+    const off = new Set(group.members.filter((_, index) => offList[index]));
+    const reads = off.has(me) ? [] : await othersRead(group, me, (account) => off.has(account));
     // gone: 모두에게서 지운 줄 — 이미 받아 둔 앱이 화면에서 뺀다.
-    return jsonWithCors(request, { group, messages: withoutGone(rows, gone), call, gone });
+    return jsonWithCors(request, { group, messages: withoutGone(rows, gone), call, gone, reads });
   }
 
   if (action === "unsend") {

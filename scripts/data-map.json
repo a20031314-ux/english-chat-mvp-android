@@ -10,7 +10,7 @@
   "groups": {
     "icon:v1": { "feature": "사용자 아이콘·짤 묶음", "scope": "account", "onAccountDelete": "지움(만든 묶음·그림·받아 둔 목록·산 목록, 판매 묶음을 지우면 산 사람에게 포인트를 돌려줌, 쓰인 날 표시는 2일 기한)", "what": "묶음(만든 사람·이름·라이선스 CC BY 4.0/CC0/앱 안 판매·가격·판매 상태·아이콘 크기·붙인 한 마디)·새/인기 목록·만든 사람별 목록·받아 둔 묶음·산 묶음·판매 묶음을 산 사람(계정·포인트 id·낸 포인트·만든 사람 몫)·쓰인 수·하루 올린 수 — 그림은 Vercel Blob(private) icons/<묶음>/<아이콘>.webp, 모두에게 공개" },
     "media:v1": { "feature": "사람 사이 사진(1:1·단체방·게시판)", "scope": "room", "onAccountDelete": "지움", "what": "사진 정보(올린 사람·붙인 곳·Blob 경로·크기·지울 때)·하루 올린 수·올린 사람별 id·날짜별 지울 목록 — 파일은 Vercel Blob(private) media/<id>, 1:1·단체방 30일·안 보낸 사진 하루·게시판은 글과 함께" },
-    "account:v1": { "feature": "계정", "scope": "account", "onAccountDelete": "지움", "what": "계정 줄·아이디/이메일/Google 연결·사진·이메일 코드·로그인 실패 수, 지울 학습 id 목록(purge)" },
+    "account:v1": { "feature": "계정", "scope": "account", "onAccountDelete": "지움", "what": "계정 줄·아이디/이메일/Google 연결·사진·이메일 코드·로그인 실패 수, 읽음 표시 끔(rroff), 지울 학습 id 목록(purge)" },
     "ads:tx": { "feature": "광고", "scope": "system", "onAccountDelete": "해당 없음", "what": "보상형 광고 거래 번호(같은 보상 두 번 막기)" },
     "usage:adreward": { "feature": "광고", "scope": "user", "onAccountDelete": "지움(주 1회 정리)", "what": "오늘 본 보상형 광고 수" },
     "bank:last": { "feature": "통화·오늘의 팩(문장 은행)", "scope": "shared", "onAccountDelete": "해당 없음", "what": "은행 문장이 마지막으로 쓰인 날(언어별)" },

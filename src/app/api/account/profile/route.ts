@@ -28,6 +28,7 @@ export async function POST(request: NextRequest) {
     bio?: unknown;
     photo?: unknown;
     hidden?: unknown;
+    readReceipts?: unknown;
     facts?: unknown;
     show?: unknown;
   }>(request);
@@ -46,6 +47,7 @@ export async function POST(request: NextRequest) {
     bio: cleanBio(body.bio),
     photo,
     hidden: typeof body.hidden === "boolean" ? body.hidden : undefined,
+    readReceipts: typeof body.readReceipts === "boolean" ? body.readReceipts : undefined,
     facts: body.facts === undefined ? undefined : mergeFacts(body.facts, found.account.profile.facts),
     show: body.show === undefined ? undefined : cleanShow(body.show, found.account.profile.show),
   });

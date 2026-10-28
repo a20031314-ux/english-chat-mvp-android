@@ -20,7 +20,7 @@ import {
   groupTransfer,
   myRelations,
   translateLine, aiFailText } from "@/lib/rooms/client";
-import { GROUP_MAX_MEMBERS, GROUP_MAX_NAME_CHARS, type Group, type GroupCall, type GroupMessage, type GroupSummary } from "@/lib/rooms/group";
+import { GROUP_MAX_MEMBERS, GROUP_MAX_NAME_CHARS, groupSeen, type Group, type GroupCall, type GroupMessage, type GroupSummary } from "@/lib/rooms/group";
 import { requestGroupCall } from "@/lib/rooms/openDm";
 import { askPhraseAbout, questionCount } from "@/lib/rooms/quote";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
@@ -436,10 +436,13 @@ function GroupBubble({
   context,
   asked,
   onQuote,
+  seenBy = 0,
 }: {
   t: RoomCopy;
   me: string;
   message: GroupMessage;
+  /** 내 마지막 줄이면 그 줄까지 읽은 사람 수 — 시간 앞에 "n명 읽음". */
+  seenBy?: number;
   locale: string;
   targetLanguage: string;
   context: string[];
@@ -525,6 +528,7 @@ function GroupBubble({
           />
         ) : null}
         <p className={`mt-0.5 px-1 text-meta text-slate-600 ${mine ? "text-end" : ""}`}>
+          {mine && seenBy > 0 ? <span className="text-sky-300/80">{t.seenBy.replace("{n}", String(seenBy))} · </span> : null}
           {time}
           {asked > 0 ? ` · ❓ ${asked}` : ""}
         </p>
@@ -681,6 +685,8 @@ export function GroupThreadView({
   // 내보내졌거나(removed) 방이 없어졌으면(gone) 입력을 막고 안내.
   const [gone, setGone] = useState<"" | "removed" | "gone">("");
   const [call, setCall] = useState<GroupCall>(null);
+  // 다른 사람들이 읽은 줄 번호(서버 reads, 2.76~) — 내 마지막 줄 아래 "n명 읽음".
+  const [reads, setReads] = useState<number[]>([]);
   // 팀·메이트면 대화 / 워크스페이스 전환.
   const [pane, setPane] = useState<"chat" | "space">("chat");
   const tt = teamCopy(locale);
@@ -732,6 +738,7 @@ export function GroupThreadView({
         setCall(body.call ?? null);
         add(body.messages);
         drop(body.gone);
+        if (Array.isArray(body.reads)) setReads(body.reads);
       } catch (error) {
         if (error instanceof RoomApiError && (error.status === 403 || error.status === 404)) {
           if (alive) setGone(error.code === "REMOVED" ? "removed" : "gone");
@@ -753,6 +760,7 @@ export function GroupThreadView({
   }, [messages.length]);
 
   const texts = useMemo(() => messages.filter((row) => row.kind === "text"), [messages]);
+  const seen = useMemo(() => groupSeen(messages, me, reads), [messages, me, reads]);
   // 📞: 말하는 방 화면(RoomsScreen)이 통화 방을 연다. 대화는 닫았다가 통화가 끝나면 다시 열린다.
   const startCall = () => {
     if (!group || gone) return;
@@ -868,6 +876,7 @@ export function GroupThreadView({
                 <GroupBubble
                   t={t}
                   me={me}
+                  seenBy={message.seq === seen.seq ? seen.count : 0}
                   message={message}
                   locale={locale}
                   targetLanguage={targetLanguage}

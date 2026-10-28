@@ -602,11 +602,11 @@ export function groupCreate(name: string, languages: string[], invite: string[])
   return groups("create", { name, languages, invite });
 }
 
-export function groupOpen(groupId: string): Promise<{ group: Group; messages: GroupMessage[]; call?: GroupCall; gone?: number[] }> {
+export function groupOpen(groupId: string): Promise<{ group: Group; messages: GroupMessage[]; call?: GroupCall; gone?: number[]; reads?: number[] }> {
   return groups("open", { groupId });
 }
 
-export function groupPoll(groupId: string, since: number): Promise<{ group: Group; messages: GroupMessage[]; call?: GroupCall; gone?: number[] }> {
+export function groupPoll(groupId: string, since: number): Promise<{ group: Group; messages: GroupMessage[]; call?: GroupCall; gone?: number[]; reads?: number[] }> {
   return groups("poll", { groupId, since });
 }
 

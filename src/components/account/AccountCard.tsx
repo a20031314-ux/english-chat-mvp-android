@@ -518,6 +518,7 @@ function ProfileEditor({ ui, locale, account, onClose }: { ui: UICopy; locale: s
   const [show, setShow] = useState<ProfileShow>(() => showOf(account.profile.show));
   const [bio, setBio] = useState(account.profile.bio);
   const [hidden, setHidden] = useState(account.profile.hidden === true);
+  const [receipts, setReceipts] = useState(account.profile.readReceipts !== false);
   // undefined = 그대로, null = 빼기, 글자 = 새 사진
   const [photo, setPhoto] = useState<string | null | undefined>(undefined);
   const [busy, setBusy] = useState(false);
@@ -533,6 +534,7 @@ function ProfileEditor({ ui, locale, account, onClose }: { ui: UICopy; locale: s
     cleanNickname(nickname) !== account.profile.nickname ||
     cleanBio(bio) !== account.profile.bio ||
     hidden !== (account.profile.hidden === true) ||
+    receipts !== (account.profile.readReceipts !== false) ||
     JSON.stringify(facts) !== JSON.stringify(factsOf(account.profile.facts)) ||
     JSON.stringify(show) !== JSON.stringify(showOf(account.profile.show));
 
@@ -540,7 +542,7 @@ function ProfileEditor({ ui, locale, account, onClose }: { ui: UICopy; locale: s
     setBusy(true);
     setError(null);
     try {
-      await saveProfile({ nickname, bio, hidden, facts, show, ...(photo === undefined ? {} : { photo }) });
+      await saveProfile({ nickname, bio, hidden, readReceipts: receipts, facts, show, ...(photo === undefined ? {} : { photo }) });
       setPhoto(undefined);
       setSaved(true);
       setTimeout(() => setSaved(false), 2000);
@@ -656,7 +658,9 @@ function ProfileEditor({ ui, locale, account, onClose }: { ui: UICopy; locale: s
           locale={locale}
           show={show}
           onShow={setShow}
-          {...(socialFeaturesEnabled() ? { hidden, onHidden: setHidden, hiddenLabel: ui.accountHideFromPeople } : {})}
+          {...(socialFeaturesEnabled()
+            ? { hidden, onHidden: setHidden, hiddenLabel: ui.accountHideFromPeople, receipts, onReceipts: setReceipts, receiptsLabel: ui.accountReadReceipts }
+            : {})}
         />
 
         {message ? <p className="mt-3 text-[12px] text-rose-300">{message}</p> : null}

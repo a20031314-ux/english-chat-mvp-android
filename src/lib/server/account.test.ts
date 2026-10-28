@@ -142,6 +142,22 @@ test("프로필 저장·사진 넣고 빼기·삭제", async () => {
   assert.ok((await kvListRange(store.PURGE_QUEUE_KEY)).includes("rc:prof"));
 });
 
+test("읽음 표시: 기본 켬, 끄면 표시·키, 다른 칸만 저장해도 그대로, 켜면 키 지움, 계정 지우면 키도", async () => {
+  const { account } = await store.findOrCreateAccount({ kind: "email", email: "rr@example.com" }, "rc:rr");
+  assert.equal((await store.toPublic(account)).profile.readReceipts, true);
+  const off = await store.saveProfile(account, { nickname: "Yuki", bio: "", readReceipts: false });
+  assert.equal((await store.toPublic(off)).profile.readReceipts, false);
+  assert.deepEqual(await store.readReceiptsOff([off.id, "lb_" + "9".repeat(24)]), [true, false]);
+  const kept = await store.saveProfile(off, { nickname: "Yuki", bio: "こんにちは" });
+  assert.equal((await store.toPublic(kept)).profile.readReceipts, false);
+  const on = await store.saveProfile(kept, { nickname: "Yuki", bio: "", readReceipts: true });
+  assert.equal((await store.toPublic(on)).profile.readReceipts, true);
+  assert.deepEqual(await store.readReceiptsOff([on.id]), [false]);
+  const offAgain = await store.saveProfile(on, { nickname: "Yuki", bio: "", readReceipts: false });
+  await store.deleteAccount(offAgain);
+  assert.deepEqual(await store.readReceiptsOff([offAgain.id]), [false]);
+});
+
 test("이메일 코드: 맞으면 한 번만, 틀리면 다섯 번에 막힘, 한 시간 다섯 번 발송", async () => {
   const code = await store.createEmailCode("c@example.com");
   assert.ok(code && shared.isEmailCode(code));

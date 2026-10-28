@@ -196,6 +196,9 @@ export function ShowToggles({
   hidden,
   onHidden,
   hiddenLabel,
+  receipts,
+  onReceipts,
+  receiptsLabel,
 }: {
   locale: string;
   show: ProfileShow;
@@ -203,6 +206,10 @@ export function ShowToggles({
   hidden?: boolean;
   onHidden?: (next: boolean) => void;
   hiddenLabel?: string;
+  /** 1:1·단체방 읽음 표시(켬 = 체크). */
+  receipts?: boolean;
+  onReceipts?: (next: boolean) => void;
+  receiptsLabel?: string;
 }) {
   const t = profileCopy(locale);
   const rows: [ShowKey, string][] = [
@@ -232,6 +239,12 @@ export function ShowToggles({
           <label className="flex items-center gap-2 px-3 py-2.5 text-note text-slate-200">
             <span className="min-w-0 flex-1">{hiddenLabel}</span>
             <input type="checkbox" checked={hidden === true} onChange={(event) => onHidden(event.target.checked)} className="accent-white" />
+          </label>
+        ) : null}
+        {onReceipts && receiptsLabel ? (
+          <label className="flex items-center gap-2 px-3 py-2.5 text-note text-slate-200">
+            <span className="min-w-0 flex-1">{receiptsLabel}</span>
+            <input type="checkbox" checked={receipts !== false} onChange={(event) => onReceipts(event.target.checked)} className="accent-white" />
           </label>
         ) : null}
       </div>
