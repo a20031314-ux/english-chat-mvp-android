@@ -28,7 +28,7 @@ type AdsConfig = {
   rewarded: { enabled: boolean; chats: number; dailyMax: number; left: number; token: string | null };
 };
 
-export type InterstitialMoment = "callEnd" | "packEnd" | "missionDone" | "chatLeave" | "roomLeave" | "videoLeave";
+export type InterstitialMoment = "callEnd" | "packEnd" | "missionDone" | "chatLeave" | "roomLeave" | "videoLeave" | "scriptEnd" | "quizEnd";
 
 /** Google 데모 광고 단위(개발·내부 테스트용). `NEXT_PUBLIC_ADS_TEST=1`로 빌드하면 실제 광고 대신 이것. */
 const TEST_UNITS = {

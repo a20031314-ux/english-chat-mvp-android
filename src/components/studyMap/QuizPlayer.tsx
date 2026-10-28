@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { Attempt } from "@/components/RoleplayReview";
 import { sayLine } from "@/components/RoleplayOwnLine";
@@ -64,6 +65,11 @@ export function QuizPlayer({
   const reported = useRef(false);
   const questions = quiz?.questions ?? [];
   const done = index >= questions.length;
+  // 끝까지 푼 퀴즈를 닫을 때만 전면 광고(무료·안드로이드, 간격은 lib/ads.ts).
+  const closeQuiz = () => {
+    if (done && questions.length) void maybeShowInterstitial("quizEnd");
+    onClose();
+  };
   const correct = Object.values(answers).filter((answer) => answer.correct).length;
   const counted = questions.length - Object.values(answers).filter((answer) => answer.skipped).length;
   const passed = quizPassed(correct, counted);
@@ -90,7 +96,7 @@ export function QuizPlayer({
             {reason ? <span className="text-slate-500"> · {reason}</span> : null}
           </p>
         </div>
-        <button type="button" onClick={onClose} aria-label={ui.billingClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
+        <button type="button" onClick={closeQuiz} aria-label={ui.billingClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
           ✕
         </button>
       </header>
@@ -130,7 +136,7 @@ export function QuizPlayer({
                   {ui.quizNext} ›
                 </button>
               ) : null}
-              <button type="button" onClick={onClose} className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10">
+              <button type="button" onClick={closeQuiz} className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10">
                 {ui.billingClose}
               </button>
             </div>

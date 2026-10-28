@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { Attempt } from "@/components/RoleplayReview";
 import { sayLine } from "@/components/RoleplayOwnLine";
@@ -375,7 +376,16 @@ function FramePlayer({
             {glossFor(frame.meaning, locale)}
           </p>
         </div>
-        <button type="button" onClick={onClose} aria-label={ui.billingClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
+        <button
+          type="button"
+          onClick={() => {
+            // 끝까지 한 문장구조를 닫을 때만 전면 광고(대본과 같은 순간).
+            if (done) void maybeShowInterstitial("scriptEnd");
+            onClose();
+          }}
+          aria-label={ui.billingClose}
+          className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10"
+        >
           ✕
         </button>
       </header>

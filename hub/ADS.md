@@ -43,7 +43,9 @@
 | `callEnd` | AI 통화가 끝나고 돌아보기로 넘어갈 때 | AI 통화 (대화 → AI 튜터 📞) · 오늘의 팩 `call` · `RoleplayScreen.tsx` |
 | `chatLeave` | AI 채팅을 몇 번(설정 `interstitialAfterChats`) 보낸 뒤 채팅 화면을 떠나거나 대화를 끝낼 때 | 앱 틀 `shell` · `AppHome.tsx` ／ AI 채팅 (대화 → AI 튜터 줄) `chat` · `ChatWindow.tsx` |
 | `packEnd` | 오늘의 팩을 끝까지 마쳤을 때 | AI 통화 (대화 → AI 튜터 📞) · 오늘의 팩 `call` · `RoleplayScreen.tsx` |
+| `quizEnd` | My 퀴즈를 끝까지 풀고 닫을 때 | My 탭 `my` · `studyMap/QuizPlayer.tsx` |
 | `roomLeave` | 공개 말하는 방에 몇 분(설정 `roomLeaveMinutes`) 넘게 있다 나올 때 — 1:1·단체방 통화는 제외 | Room 탭 `room` · `rooms/RoomsScreen.tsx` |
+| `scriptEnd` | My 대본·문장구조를 끝까지 하고 닫을 때(중간에 닫으면 없음, 통화로 넘어갈 때도 없음 — 2026-10-29 무료 대본 판단 원가) | My 탭 `my` · `studyMap/StageFrames.tsx` ／ My 탭 `my` · `studyMap/StageScripts.tsx` |
 | `videoLeave` | 영상을 몇 분(설정 `videoLeaveMinutes`) 넘게 보고 나올 때 | 영상 학습 탭 `video` · `videoLearning/VideoLearningTab.tsx` |
 
 모든 전면 광고는 서로 3분(설정 `interstitialMinGapSeconds`) 안에 다시 뜨지 않고, 미리 받아 둔 광고가 있을 때만 뜬다.

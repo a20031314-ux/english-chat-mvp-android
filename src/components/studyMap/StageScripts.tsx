@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
+import { maybeShowInterstitial } from "@/lib/ads";
 import { FullScreenLayer } from "@/components/FullScreenLayer";
 import { FrameRedoCards, StageFrames } from "@/components/studyMap/StageFrames";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
@@ -392,6 +393,11 @@ function ScriptPlayer({
     setRetrying(true);
     setIndex(toRedo[0]!);
   };
+  // 끝까지 한 대본을 닫을 때만 전면 광고(무료·안드로이드, lib/ads.ts가 간격·요금을 본다 — 2026-10-29 사용자 "무료 사용자 대상 광고").
+  const closeScript = () => {
+    if (done) void maybeShowInterstitial("scriptEnd");
+    onClose();
+  };
   const restart = () => {
     stopTts();
     clearResume(resumeId);
@@ -435,7 +441,7 @@ function ScriptPlayer({
           {glossFor(script.setting, locale)}
         </h2>
         {passed ? <span className="shrink-0 text-caption text-good">✓</span> : null}
-        <button type="button" onClick={onClose} aria-label={ui.billingClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
+        <button type="button" onClick={closeScript} aria-label={ui.billingClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
           ✕
         </button>
       </header>
