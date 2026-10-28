@@ -9,10 +9,10 @@ import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { coerceLanguageCode, interfaceLanguageName } from "@/lib/learningLanguages";
 import { findScenario } from "@/lib/roleplay/catalog";
-import { compareToTarget, frameUsePrompt, ownWordsPrompt, parsePractice, practicePrompt, recallPrompt, type Practice } from "@/lib/roleplay/practice";
+import { compareToTarget, frameUsePrompt, ownWordsPrompt, parsePractice, parseRecheck, practicePrompt, recallPrompt, recheckPrompt, type Practice } from "@/lib/roleplay/practice";
 import { noteMostlyUi } from "@/lib/notes/notebook";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
-import { meterRequest } from "@/lib/server/meterRequest";
+import { meterRequest, simDetail } from "@/lib/server/meterRequest";
 import { getOpenAIClient } from "@/lib/server/openai";
 
 export const dynamic = "force-dynamic";
@@ -124,6 +124,10 @@ export async function POST(request: NextRequest) {
           nativeLanguage: nativeName,
         });
     type Turn = { role: "system" | "user" | "assistant"; content: string };
+    // 점검(simcheck-)에만 돌려주는 토큰 기록 — 판단·2차 판단 비용을 재려고(2026-10-29).
+    const spent: string[] = [];
+    const track = (use: string, completion: { usage?: { prompt_tokens?: number; completion_tokens?: number } | null }) =>
+      spent.push(`${use}:${completion.usage?.prompt_tokens ?? 0}/${completion.usage?.completion_tokens ?? 0}`);
     const ask = (messages: Turn[], use: JudgeTask) => {
       const model = MODEL_OF[use]();
       return completeChat(client, use, {
@@ -145,6 +149,7 @@ export async function POST(request: NextRequest) {
       let found: Practice | null = null;
       for (let attempt = 0; attempt < 2; attempt += 1) {
         const completion = await ask(messages, use);
+        track(use, completion);
         const raw = completion.choices[0]?.message?.content ?? "";
         found = parsePractice(raw);
         if (!found || noteMostlyUi(found.note, nativeCode)) break;
@@ -161,7 +166,26 @@ export async function POST(request: NextRequest) {
     if (judged && practice && !practice.good) {
       try {
         await meterRequest(request, "scriptRecheck");
-        practice = (await judge("scriptRecheck")) ?? practice;
+        if (recalled && !frame && !meaning) {
+          // 떠올려 말하기: 2차는 "정말 틀렸나"만 확인(짧은 지시·짧은 답). 맞으면 1차 한마디 그대로, 뒤집을 때만 새 한마디.
+          const first = practice;
+          const content = recheckPrompt({ target, heard, first, targetLanguage: interfaceLanguageName(scenario.language), nativeLanguage: nativeName });
+          const model = MODEL_OF.scriptRecheck();
+          const completion = await completeChat(client, "scriptRecheck", {
+            messages: [
+              { role: "system", content },
+              { role: "user", content: "JSON." },
+            ],
+            response_format: { type: "json_object" },
+            ...(isReasoningModel(model) ? { max_completion_tokens: 1500, reasoning_effort: fastestEffort(model) as "minimal" } : { max_tokens: 300 }),
+          });
+          track("recheck", completion);
+          const second = parseRecheck(completion.choices[0]?.message?.content ?? "");
+          if (second && second !== "confirmed" && noteMostlyUi(second.note, nativeCode)) practice = second;
+        } else {
+          // 내 말로·문장구조: 1차 근거(뜻 풀이)가 없어 처음부터 다시 판단.
+          practice = (await judge("scriptRecheck")) ?? practice;
+        }
       } catch (error) {
         console.error("[roleplay/practice] recheck", error);
       }
@@ -169,7 +193,7 @@ export async function POST(request: NextRequest) {
     if (!practice) {
       return jsonWithCors(request, { error: "NO_PRACTICE" }, { status: 502 });
     }
-    return jsonWithCors(request, { ...practice, outcomes: comparison.outcomes });
+    return jsonWithCors(request, { ...practice, outcomes: comparison.outcomes, ...simDetail(request, spent.join(" ")) });
   } catch (error) {
     console.error("[roleplay/practice]", error);
     return jsonWithCors(request, { error: "PRACTICE_FAILED" }, { status: 502 });
