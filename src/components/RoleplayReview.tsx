@@ -269,22 +269,28 @@ export function RoleplayLine({
  * and it stands whether or not the sentence explaining it ever arrives.
  */
 export function Attempt({ outcomes, ui }: { outcomes: WordOutcome[]; ui: UICopy }) {
+  // 대본 모양(대소문자·문장부호, outcome.shown)으로 보인다 — 옛 서버 답은 shown이 없어 비교용 낱말 그대로(2026-10-29).
+  const edge = (shown: string | undefined, at: "lead" | "trail") =>
+    shown ? (shown.match(at === "lead" ? /^[^\p{L}\p{M}\p{N}']*/u : /[^\p{L}\p{M}\p{N}']*$/u)?.[0] ?? "") : "";
   return (
     <div className="mt-3 rounded-xl bg-white/5 p-3">
       <p className="text-[11px] text-neutral-500">{ui.roleplayPracticeHeard}</p>
-      <p className="mt-1 text-[14px] leading-relaxed">
+      <p dir="auto" className="mt-1 text-[14px] leading-relaxed">
         {outcomes.map((outcome, index) => (
           <span key={index}>
             {outcome.kind === "kept" ? (
-              <span className="text-neutral-100">{outcome.word}</span>
+              <span className="text-neutral-100">{outcome.shown ?? outcome.word}</span>
             ) : outcome.kind === "changed" ? (
               <span className="text-amber-300">
+                {edge(outcome.shown, "lead")}
                 {outcome.heardAs}
-                <span className="text-neutral-500"> ({outcome.word})</span>
+                <span className="text-neutral-500"> ({outcome.shown ? outcome.shown.slice(edge(outcome.shown, "lead").length, outcome.shown.length - edge(outcome.shown, "trail").length) || outcome.word : outcome.word})</span>
+                {edge(outcome.shown, "trail")}
               </span>
             ) : (
-              <span className="text-neutral-500 line-through">{outcome.word}</span>
-            )}{" "}
+              <span className="text-neutral-500 line-through">{outcome.shown ?? outcome.word}</span>
+            )}
+            {outcome.space === false ? "" : " "}
           </span>
         ))}
       </p>

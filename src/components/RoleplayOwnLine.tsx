@@ -48,7 +48,8 @@ export async function sayLine(
     const { heard } = await listenOnce({ language: input.targetLanguage, isPremium: input.isPremium });
     if (!heard) return { heard: "", practice: null, unclear: [] };
     const unclear = unclearWords(heard);
-    const practice = await fetchPractice({
+    let limited = false;
+    const ask = () => fetchPractice({
       unclear,
       scenarioId: justTalkId(input.targetLanguage),
       target: line,
@@ -60,8 +61,13 @@ export async function sayLine(
       frame: input.frame,
       scriptId: input.scriptId,
       mode: input.mode,
-      onLimit: input.onLimit,
+      onLimit: () => {
+        limited = true;
+        input.onLimit?.();
+      },
     });
+    // 한마디가 한 번 비어 오면(네트워크·모델) 한 번 더 — 없으면 낱말이 하나만 달라도 틀린 줄로 남는다(2026-10-29).
+    const practice = (await ask()) ?? (limited ? null : await ask());
     return { heard, practice, unclear };
   } catch {
     // No microphone, or it was refused: nothing came through.

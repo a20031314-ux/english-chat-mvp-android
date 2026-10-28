@@ -5,7 +5,11 @@ import {
   parsePractice,
   practicePrompt,
   troubleWords,
+  type WordOutcome,
 } from "./practice.ts";
+
+/** 비교 결과만(화면 모양 shown·space 빼고). */
+const bare = ({ shown: _shown, space: _space, ...rest }: WordOutcome) => rest;
 
 test("a sentence said as given comes back clean", () => {
   const comparison = compareToTarget("Large, please.", "large please");
@@ -21,7 +25,7 @@ test("a word that came out as another word is located, not just noticed", () => 
   // The whole reason the target is given first: this is evidence about a sound,
   // where the same transcript in free conversation would be ambiguous.
   const comparison = compareToTarget("Large, please.", "large peace");
-  assert.deepEqual(comparison.outcomes, [
+  assert.deepEqual(comparison.outcomes.map(bare), [
     { kind: "kept", word: "large" },
     { kind: "changed", word: "please", heardAs: "peace" },
   ]);
@@ -130,20 +134,20 @@ test("a script with no spaces is cut into words, and the changed one located", (
   // (wordSegments.ts) now cuts it, so the word that came out wrong is named.
   const thai = compareToTarget("ไว้เจอกันใหม่นะ", "ไว้เจอกันเก่านะ");
   assert.deepEqual(
-    thai.outcomes.filter((o) => o.kind !== "kept"),
+    thai.outcomes.filter((o) => o.kind !== "kept").map(bare),
     [{ kind: "changed", word: "ใหม่", heardAs: "เก่า" }],
   );
   assert.equal(thai.outcomes.length, 5);
   const japanese = compareToTarget("そこで何したの", "そこで何時なの");
   assert.equal(japanese.clean, false);
-  assert.deepEqual(japanese.outcomes[0], { kind: "kept", word: "そこで" });
-  assert.deepEqual(japanese.outcomes.at(-1), { kind: "kept", word: "の" });
+  assert.deepEqual(bare(japanese.outcomes[0]!), { kind: "kept", word: "そこで" });
+  assert.deepEqual(bare(japanese.outcomes.at(-1)!), { kind: "kept", word: "の" });
 });
 
 test("languages that do use spaces are untouched by any of this", () => {
   const english = compareToTarget("Can I get a latte please", "Can I get a latte peace");
   assert.equal(english.outcomes.length, 6);
-  assert.deepEqual(english.outcomes.at(-1), {
+  assert.deepEqual(bare(english.outcomes.at(-1)!), {
     kind: "changed",
     word: "please",
     heardAs: "peace",
@@ -189,4 +193,22 @@ test("떠올려 말하기 세 갈래: 맞지만 어색함도 통과, 틀림은 �
   assert.equal(wrong.good, false);
   assert.equal(wrong.better, "y");
   assert.equal(parsePractice('{"good": true, "note": "n"}')!.verdict, undefined);
+});
+
+test("what was heard is shown in the script's own case and punctuation (2026-10-29)", () => {
+  const show = (target: string, heard: string) =>
+    compareToTarget(target, heard)
+      .outcomes.map((o) => (o.kind === "changed" ? `[${o.heardAs}]` : o.shown) + (o.space === false ? "" : " "))
+      .join("")
+      .trim();
+  assert.equal(show("It was fun! I went to the beach.", "it was fun i went to the beach"), "It was fun! I went to the beach.");
+  // 바뀐 낱말도 대본이 대문자로 시작하면 대문자로.
+  assert.equal(show("Large, please.", "large peace"), "Large, [peace]");
+  // 띄어쓰기 없는 언어는 붙여서, 문장부호는 그대로.
+  assert.equal(show("はじめまして田中です。", "はじめまして田中です"), "はじめまして田中です。");
+  assert.equal(show("สวัสดีครับ ผมชื่อทอม", "สวัสดีครับ ผมชื่อทอม"), "สวัสดีครับ ผมชื่อทอม");
+  // 영어 아닌 라틴: 앞에 붙는 부호(¿)와 악센트.
+  assert.equal(show("¿Dónde está el baño?", "dónde está el baño"), "¿Dónde está el baño?");
+  // 비교는 예전 그대로(소문자·부호 없음).
+  assert.equal(compareToTarget("¿Dónde está el baño?", "dónde está el baño").clean, true);
 });

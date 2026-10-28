@@ -23,12 +23,21 @@ import { segmentChunk } from "../wordSegments.ts";
  */
 
 /** One word of the sentence they were given, and what came out of it. */
-export type WordOutcome =
+export type WordOutcome = (
   | { kind: "kept"; word: string }
   /** Said as something else — the evidence a sound did not land. */
   | { kind: "changed"; word: string; heardAs: string }
   /** Not in what was heard at all. */
-  | { kind: "dropped"; word: string };
+  | { kind: "dropped"; word: string }
+) & {
+  /**
+   * 화면에 보일 모양(2026-10-29 사용자 "첫 글자가 소문자로, 온점도 없고"): 대본 그대로의 대소문자와 붙은 문장부호.
+   * word는 비교용(소문자·부호 없음) 그대로 — 옛 앱은 이 칸을 모른다.
+   */
+  shown?: string;
+  /** 뒤에 띄어쓰기가 오는지(띄어쓰기 없는 언어의 조각 사이는 false). */
+  space?: boolean;
+};
 
 export type Comparison = {
   outcomes: WordOutcome[];
@@ -61,6 +70,48 @@ function words(text: string): string[] {
     // Japanese, Chinese and Thai have no spaces to split on: without this a
     // whole sentence was one word, and one wrong word made all of it wrong.
     .flatMap((chunk) => segmentChunk(chunk));
+}
+
+/**
+ * words()와 같은 조각을, 화면용 모양으로(대소문자 그대로, 앞뒤 문장부호를 그 조각에 붙여서).
+ * 공백으로 나눈 덩어리마다 words()를 하면 전체 words()와 같은 순서가 나온다.
+ */
+function shownWords(text: string): { shown: string; space: boolean }[] {
+  const out: { shown: string; space: boolean }[] = [];
+  for (const chunk of text.split(/\s+/).filter(Boolean)) {
+    const pieces = words(chunk);
+    if (!pieces.length) {
+      // 부호만 있는 덩어리("—", "?")는 앞 조각에 붙인다.
+      if (out.length) out[out.length - 1]!.shown += chunk;
+      continue;
+    }
+    if (pieces.length === 1) {
+      out.push({ shown: chunk, space: true });
+      continue;
+    }
+    // 한 덩어리에 여러 조각(띄어쓰기 없는 언어, "fun!I"): 원래 글자로 다시 자르고, 개수가 어긋나면 비교용 조각을 쓴다.
+    const original = chunk
+      .replace(/[^\p{L}\p{M}\p{N}\s']/gu, " ")
+      .split(/\s+/)
+      .filter(Boolean)
+      .flatMap((part) => segmentChunk(part));
+    const parts = original.length === pieces.length ? original : pieces;
+    // 띄어쓰기 없는 글자(일·중·태) 조각 사이는 붙이고, 라틴 등("fun!I")은 띄운다.
+    const spaceless = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}\p{Script=Thai}]/u;
+    parts.forEach((part, index) => {
+      const last = index === parts.length - 1;
+      out.push({ shown: index === 0 ? chunk.match(/^[^\p{L}\p{M}\p{N}']*/u)![0] + part : last ? part + chunk.match(/[^\p{L}\p{M}\p{N}']*$/u)![0] : part, space: last || !(spaceless.test(part) && spaceless.test(parts[index + 1] ?? "")) });
+    });
+  }
+  return out;
+}
+
+/** 들린 낱말을 대본 낱말 모양에 맞춘다: 대본이 대문자로 시작하면 들린 말도(라틴·키릴 등 대소문자 있는 글자만). */
+function caseLike(heardAs: string, shown: string | undefined): string {
+  if (!shown) return heardAs;
+  const first = shown.replace(/^[^\p{L}]+/u, "")[0];
+  if (first && first !== first.toLowerCase() && heardAs[0]) return heardAs[0].toUpperCase() + heardAs.slice(1);
+  return heardAs;
 }
 
 /** Longest common subsequence, as pairs of indexes that matched. */
@@ -105,6 +156,9 @@ function commonPairs(a: string[], b: string[]): [number, number][] {
 export function compareToTarget(target: string, heard: string): Comparison {
   const wanted = words(target);
   const said = words(heard);
+  const display = shownWords(target);
+  const look = display.length === wanted.length ? display : null;
+  const dress = (index: number) => (look ? { shown: look[index]!.shown, space: look[index]!.space } : {});
   const pairs = commonPairs(wanted, said);
 
   const outcomes: WordOutcome[] = [];
@@ -137,8 +191,9 @@ export function compareToTarget(target: string, heard: string): Comparison {
     }
     missing.forEach((word, index) => {
       const heardAs = tail ? shares[index] : extra[index];
+      const dressed = dress(i + index);
       outcomes.push(
-        heardAs ? { kind: "changed", word, heardAs } : { kind: "dropped", word },
+        heardAs ? { kind: "changed", word, heardAs: caseLike(heardAs, dressed.shown), ...dressed } : { kind: "dropped", word, ...dressed },
       );
     });
     if (!tail) added.push(...extra.slice(missing.length));
@@ -146,7 +201,7 @@ export function compareToTarget(target: string, heard: string): Comparison {
 
   for (const [pi, pj] of pairs) {
     drain(pi, pj);
-    outcomes.push({ kind: "kept", word: wanted[pi]! });
+    outcomes.push({ kind: "kept", word: wanted[pi]!, ...dress(pi) });
     i = pi + 1;
     j = pj + 1;
   }
@@ -235,6 +290,7 @@ ${unclearPart(input.unclear, input.nativeLanguage)}
 This is not a dictation check. Decide like a friendly native speaker in that conversation: would you understand the same thing, and does it sound like something people really say?
 - "good" is TRUE when the meaning is the same and it is natural and grammatical, even with different wording. Different but equivalent choices are fine: will vs. going to for a plan, a modal or impersonal form instead of a personal one when the question means the same, a synonym, a contraction, a different natural order, a polite form of the same request, a shorter natural way of saying it.
 - Speech recognisers drop or blur short unstressed words (articles, prepositions such as before days of the week, auxiliaries) and spell some words differently; they also drop punctuation and the rise of a question, so a statement-shaped transcript of something that works as the question here is fine. If the rest of the sentence is right, assume those small words were said.
+- Recognisers also turn a word into a similar-sounding word, or run it together with its neighbour into one wrong word. When the rest of the line is right and the odd piece of the transcript sounds close to the script's word or words, assume the script's words were said a little unclearly: that is not a change of meaning, so it is not "wrong". Count it as said (natural), and in the note name that word as the one to say more clearly — without claiming anything about stress or accent.
 - Recognisers do not strip word endings. A missing past tense, plural, conjugation or agreement — especially more than once — is the learner's mistake, not the recogniser's.
 - "good" is FALSE only when the meaning really changed (a different fact, time, person or intention), the grammar is clearly wrong in a way a native would notice (wrong tense for what is meant, wrong form, broken agreement), or too little came through to tell.
 
@@ -245,7 +301,7 @@ Also sort it into one of three verdicts:
 When in doubt between "natural" and "awkward", choose "natural"; when in doubt between "awkward" and "wrong" because of a grammar slip, choose "wrong".
 "good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural"). In the note, for "awkward" say briefly why the better line sounds more natural.
 
-The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is true and the wording differs from the script, say in one short line that it works and quote how the script says it. When "good" is false, say in one sentence what is off and how to fix it; if almost nothing came through, say gently to try again a little slower.
+The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is true and the wording differs from the script, say in one short line that it works and quote how the script says it. When "good" is false, say in one sentence what is off and how to fix it — only what made it wrong, never an equivalent rewording that you would have accepted on its own; if almost nothing came through, say gently to try again a little slower.
 
 Reply as JSON only, politely and in one consistent level of politeness:
 {"good": true or false, "verdict": "natural or awkward or wrong", "better": "<more natural or correct line, or empty>", "note": "<one or two sentences>"}`;
