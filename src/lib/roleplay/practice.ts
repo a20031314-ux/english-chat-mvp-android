@@ -239,9 +239,10 @@ This is not a dictation check. Decide like a friendly native speaker in that con
 - "good" is FALSE only when the meaning really changed (a different fact, time, person or intention), the grammar is clearly wrong in a way a native would notice (wrong tense for what is meant, wrong form, broken agreement), or too little came through to tell.
 
 Also sort it into one of three verdicts:
-- "natural": the meaning fits and it is something a native speaker would naturally say here (wording may differ from the script).
-- "awkward": understandable and grammatical, but a native speaker would put it differently — still counts as a pass; give the more natural way in "better".
-- "wrong": the meaning changed or got lost, or there is a real grammar mistake — give the correct way in "better".
+- "natural": the meaning fits and a native speaker could comfortably say it this way in this conversation — casual, slightly more formal or simply different from the script all count as natural.
+- "awkward": completely grammatical and understandable, but no native would phrase it like this here (clumsy, stiff or odd word choice) — still counts as a pass; give the more natural way in "better".
+- "wrong": the meaning changed or got lost, or there is any grammar mistake (wrong verb form or tense, wrong preposition or particle, wrong agreement), even if the meaning still comes through — give the correct way in "better".
+When in doubt between "natural" and "awkward", choose "natural"; when in doubt between "awkward" and "wrong" because of a grammar slip, choose "wrong".
 "good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural"). In the note, for "awkward" say briefly why the better line sounds more natural.
 
 The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is true and the wording differs from the script, say in one short line that it works and quote how the script says it. When "good" is false, say in one sentence what is off and how to fix it; if almost nothing came through, say gently to try again a little slower.
@@ -271,9 +272,10 @@ What the recogniser heard: "${input.heard || "(nothing)"}"
 "good" is true when what they said gets that meaning across, fits as a reply at this point, and a native listener would accept it without stumbling — different words from the native line are fine. It is false when the meaning is lost or changed, when a mistake would confuse or sound wrong to a native, or when nothing usable came through. A recogniser slip that sounds the same is not their mistake, and the recogniser often drops punctuation and the rise of a question — a statement-shaped transcript of something that works as a question at this point is fine. Bring up politeness only when it clearly clashes with the relationship the conversation shows; match the speech level the native line uses.
 
 Also sort it into one of three verdicts:
-- "natural": the meaning fits and it is something a native speaker would naturally say here (wording may differ from the script).
-- "awkward": understandable and grammatical, but a native speaker would put it differently — still counts as a pass; give the more natural way in "better".
-- "wrong": the meaning changed or got lost, or there is a real grammar mistake — give the correct way in "better".
+- "natural": the meaning fits and a native speaker could comfortably say it this way in this conversation — casual, slightly more formal or simply different from the script all count as natural.
+- "awkward": completely grammatical and understandable, but no native would phrase it like this here (clumsy, stiff or odd word choice) — still counts as a pass; give the more natural way in "better".
+- "wrong": the meaning changed or got lost, or there is any grammar mistake (wrong verb form or tense, wrong preposition or particle, wrong agreement), even if the meaning still comes through — give the correct way in "better".
+When in doubt between "natural" and "awkward", choose "natural"; when in doubt between "awkward" and "wrong" because of a grammar slip, choose "wrong".
 "good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural"). In the note, for "awkward" say briefly why the better line sounds more natural.
 
 The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is false, say in one sentence what did not come across or what sounds wrong, and how to fix it. When "good" is true, one short line on what worked; if the native line has a more natural turn worth knowing, mention it.
@@ -303,9 +305,10 @@ What the recogniser heard: "${input.heard || "(nothing)"}"
 "good" is true when the sentence uses this pattern — with the blank filled by any sensible content, conjugated or joined to the pattern correctly — and a native listener would accept it as natural. It is false when the pattern is missing or changed into a different one, when the filler is not joined to it correctly (wrong form, particle or agreement), or when nothing usable came through. Do not judge what they chose to talk about.
 
 Also sort it into one of three verdicts:
-- "natural": the meaning fits and it is something a native speaker would naturally say here (wording may differ from the script).
-- "awkward": understandable and grammatical, but a native speaker would put it differently — still counts as a pass; give the more natural way in "better".
-- "wrong": the meaning changed or got lost, or there is a real grammar mistake — give the correct way in "better".
+- "natural": the meaning fits and a native speaker could comfortably say it this way in this conversation — casual, slightly more formal or simply different from the script all count as natural.
+- "awkward": completely grammatical and understandable, but no native would phrase it like this here (clumsy, stiff or odd word choice) — still counts as a pass; give the more natural way in "better".
+- "wrong": the meaning changed or got lost, or there is any grammar mistake (wrong verb form or tense, wrong preposition or particle, wrong agreement), even if the meaning still comes through — give the correct way in "better".
+When in doubt between "natural" and "awkward", choose "natural"; when in doubt between "awkward" and "wrong" because of a grammar slip, choose "wrong".
 "good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural"). In the note, for "awkward" say briefly why the better line sounds more natural. A recogniser slip that sounds the same is not their mistake, and the recogniser often drops punctuation.
 
 The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is false, say in one sentence what is off in how the pattern was used and how to fix it. When "good" is true, one short line on what worked.
