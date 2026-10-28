@@ -1,30 +1,24 @@
-languagebank vous aide à vraiment parler et écrire dans la langue que vous apprenez, avec un tuteur IA, de vraies vidéos et d'autres apprenants. Apprenez l'une des 14 langues, avec l'app dans l'une des 14 langues.
+languagebank fixe ce que vous étudiez chaque jour et vous le fait dire à voix haute. Apprenez l'une des 14 langues, avec l'app dans l'une des 14 langues.
 
-DISCUTEZ AVEC UN TUTEUR IA
-• Discutez dans la langue que vous apprenez. Bloqué ? Écrivez dans votre langue : le tuteur continue dans la langue que vous apprenez, et « Voir comment le dire » place l'expression juste sous cette ligne.
-• Si une phrase contient une erreur, l'étiquette « Il y a quelque chose à corriger » apparaît dessous. Touchez-la pour voir la phrase corrigée.
-• Touchez 📞 en haut de la discussion pour appeler le tuteur et parler à voix haute. Chaque appel reste dans la discussion sous forme de carte 🗒, à reprendre ou revoir. Le pack du jour est un court appel avec un objectif.
+VOTRE PARCOURS DU JOUR
+1. Partez de votre étape : lisez une courte conversation et répondez « Oui, je peux », « Presque » ou « Pas encore » pour commencer à la bonne étape sur cinq. Écriture nouvelle ? Commencez par les lettres et les sons.
+2. Au programme aujourd'hui : choisissez 5, 10 ou 20 minutes par jour et voyez en combien de jours vous finirez. « Dans l'ordre » ou « Selon mon parcours » fixe les dialogues et structures du jour.
+3. Dites le dialogue : dites vos répliques dans des dialogues de situations avec 🎤 — Répéter, Premières lettres, Masqué ou Avec vos mots. Une réplique parfaite reçoit ★ ; correcte mais peu naturelle, une tournure plus naturelle est proposée, et les mots mal entendus sont signalés. Une autre formulation correcte passe aussi, et vous reprenez où vous en étiez le même jour.
+4. Changer dans la structure de phrase : dites une même structure plusieurs fois en changeant seulement les mots.
+5. Révision : à la fin d'un dialogue, marquez chaque expression « Je sais » ou « Pas sûr ». Ce qui est flou et les répliques ratées reviennent en petit quiz après 2 et 7 jours, et se regroupent en haut de Moi, dans « Ce que tu as raté la dernière fois ». Avec le « Rappel du matin », ils s'affichent sur l'écran verrouillé.
+6. Ce que tu as appris aujourd'hui : structures, grammaire et mots du jour, chacun avec le dialogue et la phrase d'où il vient.
 
-POSEZ DES QUESTIONS SUR N'IMPORTE QUELLE PHRASE
-• Ouvrez l'analyse de phrase sur une ligne de discussion, d'appel, de vidéo ou de vos notes. Choisissez la partie que vous ne comprenez pas et demandez ce qu'elle veut dire. La réponse arrive dans votre langue, et « Trouver dans Moi » montre où elle se place dans vos étapes.
+UTILISEZ-LE EN CONVERSATION
+• Chat avec le tuteur IA : parlez comme entre amis, seules les erreurs sont corrigées. Bloqué ? Écrivez en français, le tuteur continue dans la langue apprise ; « Voir comment le dire » montre la phrase voulue. Utilisez de vous-même une expression que vous avez marquée et la ligne affiche « Réutilisé ».
+• Appels IA : parlez à voix haute. Même si c'est confus, le tuteur retrouve ce que vous vouliez dire, et vous pouvez revoir l'appel ensuite.
+• Analyse de phrase : dans n'importe quelle phrase, choisissez juste la partie incomprise et demandez ce qu'elle veut dire.
+• Vidéo : de vraies vidéos découpées en phrases à réécouter et questionner.
 
-APPRENEZ AVEC DE VRAIES VIDÉOS
-• Les vidéos sont découpées en phrases, avec des sous-titres dans la langue que vous apprenez. Touchez une phrase pour la réécouter et posez une question sur n'importe quelle ligne.
+APPRENDRE AVEC D'AUTRES
+• Dans les Salons, parlez de vive voix avec ceux qui apprennent la même langue, sous-titres en direct, puis continuez en groupe ou en message privé.
 
-VOYEZ CE QUI VOUS MANQUE
-• Pas de notes. Chaque phrase montre seulement ce qui était faux ou manquant, et ce que vous écrivez révèle vos points faibles et la suite à travailler.
-• Dans Moi, commencez par de courtes conversations d'exemple. Répondez « Oui, je peux », « Presque » ou « Pas encore », et vous démarrez à l'étape qui vous correspond.
-• Les indices des missions s'ouvrent un par un, pour essayer d'abord.
-• « Étapes » dans Moi : une échelle de 1 à 5, chaque étape avec sa grammaire, la conversation que vous saurez tenir et ce que vous saurez faire, et d'abord les lettres et les sons si vous débutez. Les lignes corrigées et les expressions apprises viennent à leur place.
-• « Appris aujourd'hui » : les lignes que le tuteur a corrigées aujourd'hui. Gardez celles que vous voulez, elles vont à leur place, avec l'écran du moment si vous le souhaitez.
+PAS DE NOTE DE NIVEAU
+• Chaque phrase reçoit ses erreurs et ses manques ; votre historique décide de la suite.
 
-APPRENEZ AVEC D'AUTRES
-• Room : des salons vocaux avec sous-titres en direct, jusqu'à 40 personnes. Touchez une ligne pour la traduire, ou choisissez seulement les mots sur lesquels vous voulez poser une question. Vos propres lignes peuvent afficher des corrections visibles par vous seul. L'hôte peut lancer avec 🎭 les jeux du Menteur et de la Mafia.
-• Discussions : groupes et messages 1:1, appels vocaux et appels vidéo 1:1, et espaces d'équipe avec des partenaires d'étude.
-• Personnes : n'affichez que ceux qui apprennent la même langue, ou ceux qui parlent aussi votre langue ; suivez-les et publiez sur le forum. Les profils montrent pays, langues et centres d'intérêt, et vous pouvez envoyer « 🙌 Utile » à qui vous a répondu.
-• Icônes : créez vos propres packs d'icônes (animées aussi) et envoyez-les en message ou en commentaire.
-• Invitez un ami avec un seul lien.
-• Désactivez les fonctions que vous n'utilisez pas : l'app n'affiche que ce dont vous avez besoin.
-
-FORMULES
-Gratuit pour commencer, avec des limites quotidiennes. La formule gratuite affiche des publicités. Les abonnements ajoutent plus de discussions, plus d'aide de l'IA et du temps d'appel chaque jour, sans publicité.
+TARIFS
+• Les dialogues par étape sont gratuits (avec publicité). La formule « Dialogues » ajoute des appels courts et le chat ; Lite, Plus et Premium suppriment la publicité et donnent plus de chat et de minutes d'appel par jour.
