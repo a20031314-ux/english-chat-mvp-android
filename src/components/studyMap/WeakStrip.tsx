@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import type { UICopy } from "@/lib/copy";
 import { glossFor } from "@/lib/curriculum/stageScripts";
+import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import type { WeakSpot } from "@/lib/curriculum/weakSpots";
 import { localNotificationsAvailable } from "@/lib/platform";
 import { allowMorning, MORNING_WORDS, onMorningChange, readMorning, saveMorning, type MorningSettings } from "@/lib/morningNotify";
@@ -14,14 +15,22 @@ import { allowMorning, MORNING_WORDS, onMorningChange, readMorning, saveMorning,
 export function WeakStrip({
   ui,
   locale,
+  language,
   spots,
   onOpen,
 }: {
   ui: UICopy;
   locale: string;
+  language: string;
   spots: readonly WeakSpot[];
   onOpen: (stage: number, id: string) => void;
 }) {
+  // 대본 줄 뜻은 앱 언어로(서버가 옮김) — 받으면 다시 그린다.
+  useStageGlosses(language, 1, locale);
+  useStageGlosses(language, 2, locale);
+  useStageGlosses(language, 3, locale);
+  useStageGlosses(language, 4, locale);
+  useStageGlosses(language, 5, locale);
   if (!spots.length) return null;
   return (
     <section className="mt-3">

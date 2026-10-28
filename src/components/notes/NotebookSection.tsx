@@ -374,6 +374,7 @@ export function NotebookSection({
         <WeakStrip
           ui={ui}
           locale={locale}
+          language={language}
           spots={weakSpots({
             language,
             fixes: [...book.cards, ...book.pending],
