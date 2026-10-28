@@ -18,6 +18,7 @@ import {
 } from "@/lib/curriculum/dailyPlan";
 import { allFramesFor } from "@/lib/curriculum/frames";
 import { allScriptsFor, glossFor } from "@/lib/curriculum/stageScripts";
+import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 
 /**
  * 오늘 할 것(lib/curriculum/dailyPlan.ts, 2026-10-28 사용자 "매일 학습할 걸 정해 주는 흐름"):
@@ -80,6 +81,9 @@ export function TodayPlan({
   recommended: string | null;
   onOpen: (stage: number, id: string) => void;
 }) {
+  // 대본 이름은 앱 언어로(서버가 옮김) — 받으면 다시 그린다. 오늘 목록은 지금 단계와 다음 단계까지.
+  useStageGlosses(language, stage, locale);
+  useStageGlosses(language, Math.min(5, stage + 1), locale);
   const [settings, setSettings] = useState<Settings>({ pace: 10, order: "curriculum" });
   const [review, setReview] = useState<ReviewMap>(initialReview);
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
