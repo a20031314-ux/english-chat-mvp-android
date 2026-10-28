@@ -1266,7 +1266,7 @@ export async function POST(request: NextRequest) {
       // 대화에서 잘 썼어요(curriculum/reuse.ts): 체크한 표현·문장구조를 학습자가 스스로 쓰는지만 본다(튜터에게는 넘기지 않음).
       readReview(userId, langs.targetLanguage).catch(() => ({})),
     ]);
-    const reuse: ReuseTarget[] = conversationMode ? reuseTargets(langs.targetLanguage, review) : [];
+    const reuse: ReuseTarget[] = reuseTargets(langs.targetLanguage, review);
     const brief = withProfileLine(learnerBrief.prompt, profileLine);
     // 학습자가 그 말을 고칠 데 없이 썼으면 화면에 보일 이름만 돌려준다(다시 볼 날짜·숙지는 그대로 — 2026-10-29 사용자).
     const markReused = async (corrected: string | null | undefined): Promise<string[]> => {
