@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-28r";
+export const GUIDE_VERSION = "2026-10-29a";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -144,14 +144,14 @@ export const GUIDE_KO: Guide = {
         heading: "3. 자라는 중",
         body: [
           "‘{ui:partVocab}’·‘{ui:partGrammar}’·‘{ui:partExpression}’·‘{ui:partPronunciation}’ 네 칸이 지금 단계에서 얼마나 찼는지 보여요. 점선이 다음 단계 기준이고, 가장 부족한 칸은 노란 글씨예요.",
-          "칸을 누르면 ‘{ui:myViewMap}’에서 그 칸을 열어요.",
+          "칸을 누르면 최근 2주에 그 칸에서 무엇을 공부했는지 날짜별로 보여요 — ‘{ui:itemsLearned}’·‘{ui:itemsMastered}’·‘{ui:partFixed}’(튜터가 고친 줄)과 어디서 했는지. 아래는 그 칸 전체, 낱말을 누르면 자세히. ‘{ui:partOpenStage}’로 단계 보기의 그 칸.",
         ],
         shot: "parts-net",
       },
       {
         heading: "4. 그래프로 보기",
         body: [
-          "‘{ui:myViewGraph}’을 누르면 네 칸이 최근 2주 하루하루 얼마나 늘었는지 막대로 보여요. 고른 보기는 다음에도 그대로예요.",
+          "‘{ui:myViewGraph}’을 누르면 네 칸이 최근 2주 하루하루 얼마나 늘었는지 막대로 보여요. 막대를 누르면 그날 공부한 것만, 칸 이름을 누르면 2주 전부. 고른 보기는 다음에도 그대로예요.",
         ],
         shot: "parts-graph",
       },
@@ -573,14 +573,14 @@ export const GUIDE_EN: Guide = {
         heading: "3. Growing",
         body: [
           "Four parts — ‘{ui:partVocab}’, ‘{ui:partGrammar}’, ‘{ui:partExpression}’ and ‘{ui:partPronunciation}’ — show how full they are at your stage. The dotted line is what the next stage needs, and the weakest part is in yellow.",
-          "Tap a part to open it in ‘{ui:myViewMap}’.",
+          "Tap a part to see what you studied in it over the last two weeks, day by day — ‘{ui:itemsLearned}’, ‘{ui:itemsMastered}’ and ‘{ui:partFixed}’ (lines the tutor corrected), and where. Below is everything in that part; tap a word for details. ‘{ui:partOpenStage}’ opens it in the stage view.",
         ],
         shot: "parts-net",
       },
       {
         heading: "4. As a graph",
         body: [
-          "Tap ‘{ui:myViewGraph}’ to see how much each part grew each day over the last two weeks. The view you pick stays next time.",
+          "Tap ‘{ui:myViewGraph}’ to see how much each part grew each day over the last two weeks. Tap a bar for what you studied that day, or a part’s name for the whole two weeks. The view you pick stays next time.",
         ],
         shot: "parts-graph",
       },

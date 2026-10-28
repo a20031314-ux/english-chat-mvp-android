@@ -12,7 +12,7 @@ import { scriptView, stageViews } from "@/lib/server/stageCopy";
 import { applyEdit, grammarNodeId, parseEdit, prunePending, skeletonFor, type SkeletonNode } from "@/lib/notes/notebook";
 import { INTERFACE_LANGUAGE_LABELS, coerceLanguageCode } from "@/lib/learningLanguages";
 import { ladderFor } from "@/lib/curriculum/stages";
-import { partHistory, recentMistakes, stageParts, vocabScore, vocabWords, withScripts } from "@/lib/notes/stageParts";
+import { partHistory, partLog, recentMistakes, stageParts, vocabScore, vocabWords, withScripts } from "@/lib/notes/stageParts";
 import { hasScripts } from "@/lib/curriculum/stageScripts";
 import { pickScript } from "@/lib/curriculum/scriptPick";
 import { readPassedScripts, readRedoDone, readReview } from "@/lib/server/stageScriptStore";
@@ -36,6 +36,7 @@ export const maxDuration = 60;
  *   phrases(습득한 표현이 든 칸 [{ key, text, state, node }] — 칸 없는 것은 이 요청 뒤 모델이 고른다).
  *   + parts(단계마다 어휘·문법·표현·발음 [{ order, parts, ready, weakest, expressions }], notes/stageParts.ts),
  *     words(어휘 갈래 목록), pronunciationNotes({ [단계]: 앱 언어 한 줄 }), partDays(지금 단계 갈래별 최근 14일) — 2026-10-25 My 네 갈래.
+ *     partItems(같은 14일의 낱낱 — 배움·숙지·고침, 갈래마다 60개, stageParts.ts partLog) — 2026-10-29 망·그래프를 누르면.
  *   + scripts=1(2.76부터): parts[].scripts { done, total, passed } 그리고 ready에 대본 통과가 더해짐(대본이 있는 언어만),
  *     recommend { stage, id, why } — 오늘의 대본(curriculum/scriptPick.ts).
  *     review { 열쇠: { due, step, at } } — 다시 볼 것(오늘 할 것, curriculum/dailyPlan.ts).
@@ -127,6 +128,7 @@ export async function GET(request: NextRequest) {
   const source = ladderFor(language);
   let parts: ReturnType<typeof stageParts>[] = [];
   let partDays: ReturnType<typeof partHistory> | null = null;
+  let partItems: ReturnType<typeof partLog> | null = null;
   let redo: RedoItem[] = [];
   let review: ReviewMap | null = null;
   let recommend: { stage: number; id: string; why: { kind: "grammar" | "expression"; items: string[] } | { kind: "next" } } | null = null;
@@ -200,6 +202,8 @@ export async function GET(request: NextRequest) {
         now: Date.now(),
         dayOf: (at) => localDay(at, offset),
       });
+      // 망·그래프를 누르면 보이는 낱낱(2026-10-29): 같은 14일, 고친 줄 포함. 옛 앱은 이 칸을 읽지 않음.
+      partItems = partLog({ stage: here, language, ledger, phrases: record.phrases, cards: [...record.cards, ...record.pending], now: Date.now() });
     }
   }
   const pronunciationNotes = Object.fromEntries((stages ?? []).map((s) => [s.order, s.pronunciation ?? ""]));
@@ -211,6 +215,7 @@ export async function GET(request: NextRequest) {
     phrases,
     parts,
     partDays,
+    ...(partItems ? { partItems } : {}),
     ...(recommend ? { recommend } : {}),
     ...(redo.length ? { redo } : {}),
     ...(review ? { review } : {}),

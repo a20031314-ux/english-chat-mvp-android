@@ -8,7 +8,7 @@ import type { UICopy } from "@/lib/copy";
 import type { CustomNode, FixCard, NotebookChapter, NotebookEdit } from "@/lib/notes/notebook";
 import { sceneShotFor } from "@/lib/notes/sceneShots";
 import { onLocate, takeLocate, type LocateHandoff } from "@/lib/notes/locateHandoff";
-import { PART_IDS, shareOf, type PartId, type StageParts } from "@/lib/notes/stageParts";
+import { PART_IDS, shareOf, type PartId, type PartLogItem, type StageParts } from "@/lib/notes/stageParts";
 import { sendAppIntent } from "@/lib/appIntents";
 import { ScriptAmount } from "@/components/studyMap/ScriptAmount";
 import { StageScripts, type ScriptRecommend } from "@/components/studyMap/StageScripts";
@@ -16,6 +16,7 @@ import type { RedoItem } from "@/lib/curriculum/frameRedo";
 import { useScriptPack } from "@/lib/curriculum/useScriptPack";
 import type { ReviewMap } from "@/lib/curriculum/dailyPlan";
 import { TodayPlan } from "@/components/studyMap/TodayPlan";
+import { dayOfBar, PartDetailSheet, type PartAll } from "@/components/notes/PartDetailSheet";
 import { WeakStrip } from "@/components/studyMap/WeakStrip";
 import { curriculumItems } from "@/lib/curriculum/dailyPlan";
 import { allMisses } from "@/lib/curriculum/scriptMisses";
@@ -54,6 +55,8 @@ type Book = {
   pronunciationNotes?: Record<string, string>;
   /** 지금 단계 갈래별 최근 14일(그래프 보기). */
   partDays?: Record<PartId, number[]> | null;
+  /** 같은 14일의 낱낱(배움·숙지·고침) — 망·그래프를 누르면(PartDetailSheet). 옛 서버면 없다. */
+  partItems?: Record<PartId, PartLogItem[]> | null;
   /** 오늘의 대본(서버 curriculum/scriptPick.ts, scripts=1). */
   recommend?: ScriptRecommend;
   /** 틀린 틀 다시 연습(서버 curriculum/frameRedo.ts, scripts=1). */
@@ -452,7 +455,27 @@ export function NotebookSection({
         />
       ) : null}
       {!frame && (view === "net" || view === "graph") && book.parts?.length ? (
-        <PartsOverview ui={ui} view={view} parts={book.parts.find((row) => row.order === book.stage) ?? book.parts[0]!} days={book.partDays ?? null} onPart={onPart} />
+        <PartsOverview
+          ui={ui}
+          locale={locale}
+          view={view}
+          parts={book.parts.find((row) => row.order === book.stage) ?? book.parts[0]!}
+          days={book.partDays ?? null}
+          items={book.partItems ?? null}
+          allOf={(id, row) =>
+            id === "vocab"
+              ? (book.words ?? []).map((word) => ({ text: word.text, state: word.state }))
+              : id === "expression"
+                ? row.expressions.map((item) => ({ text: item.text, state: item.state }))
+                : id === "grammar"
+                  ? book.nodes
+                      .filter((node) => node.chapter === "grammar" && node.stage === row.order)
+                      .map((node) => ({ text: nameOf(node.id), state: fill[node.id] ?? null }))
+                  : []
+          }
+          nodeName={nameOf}
+          onPart={onPart}
+        />
       ) : null}
       {frame && !CURRICULUM_ONLY ? (
       <ul className="mt-2 divide-y divide-white/5">
@@ -612,19 +635,59 @@ function partLabels(ui: UICopy): Record<PartId, string> {
  */
 function PartsOverview({
   ui,
+  locale,
   view,
   parts,
   days,
+  items,
+  allOf,
+  nodeName,
   onPart,
 }: {
   ui: UICopy;
+  locale: string;
   view: "net" | "graph";
   parts: StageParts;
   days: Record<PartId, number[]> | null;
+  /** 같은 14일의 낱낱(서버 partItems) — 없으면(옛 서버) 누르면 예전처럼 단계 보기로. */
+  items: Record<PartId, PartLogItem[]> | null;
+  allOf: (part: PartId, row: StageParts) => PartAll;
+  nodeName: (id: string) => string;
   onPart?: (part: PartId) => void;
 }) {
   const label = partLabels(ui);
   const byId = new Map(parts.parts.map((row) => [row.id, row]));
+  // 누르면 "무엇을 공부했나"(2026-10-29): 갈래(망 꼭짓점·그래프 이름) 또는 그 갈래의 하루(그래프 막대).
+  const [detail, setDetail] = useState<{ part: PartId; bar: number | null } | null>(null);
+  const summaryOf = (id: PartId) => {
+    const row = byId.get(id);
+    return row?.measured ? `${Math.round(row.done)}/${row.total}` : "";
+  };
+  const show = (part: PartId, bar: number | null = null) => (items ? setDetail({ part, bar }) : onPart?.(part));
+  const sheet = detail ? (
+    <PartDetailSheet
+      ui={ui}
+      locale={locale}
+      part={detail.part}
+      title={label[detail.part]}
+      summary={summaryOf(detail.part)}
+      items={items?.[detail.part] ?? []}
+      all={allOf(detail.part, parts)}
+      day={detail.bar === null ? null : dayOfBar(detail.bar)}
+      dayCount={detail.bar === null ? undefined : days?.[detail.part]?.[detail.bar]}
+      nodeName={nodeName}
+      onStage={
+        onPart
+          ? () => {
+              const part = detail.part;
+              setDetail(null);
+              onPart(part);
+            }
+          : undefined
+      }
+      onClose={() => setDetail(null)}
+    />
+  ) : null;
   const head = (
     <p className="mt-2 text-caption text-slate-400">
       <span className="font-semibold text-ink">{ui.stageNumber.replace("{n}", String(parts.order))}</span>
@@ -643,26 +706,34 @@ function PartsOverview({
             const sum = list.reduce((a, b) => a + b, 0);
             const weakest = parts.weakest === id;
             return (
-              <li key={id}>
-                <button type="button" onClick={() => onPart?.(id)} className="flex w-full items-center gap-3 rounded-lg px-2 py-2 text-start hover:bg-white/5">
-                  <span className={`w-20 shrink-0 text-note ${weakest ? "font-semibold text-warn" : "text-ink"}`}>{label[id]}</span>
-                  <span dir="ltr" className="flex h-8 min-w-0 flex-1 items-end gap-0.5">
-                    {list.map((value, index) => (
+              <li key={id} className="flex w-full items-center gap-3 rounded-lg px-2 py-1">
+                <button type="button" onClick={() => show(id)} className={`w-20 shrink-0 py-2 text-start text-note hover:underline ${weakest ? "font-semibold text-warn" : "text-ink"}`}>
+                  {label[id]}
+                </button>
+                <span dir="ltr" className="flex h-10 min-w-0 flex-1 items-end gap-0.5">
+                  {list.map((value, index) => (
+                    <button
+                      key={index}
+                      type="button"
+                      aria-label={`${label[id]} ${index + 1}`}
+                      onClick={() => show(id, index)}
+                      className="flex h-full min-w-0 flex-1 items-end hover:bg-white/5"
+                    >
                       <span
-                        key={index}
-                        className={`min-w-0 flex-1 rounded-sm ${value ? (weakest ? "bg-warn" : "bg-status-learned") : "bg-white/[0.06]"}`}
+                        className={`block w-full rounded-sm ${value ? (weakest ? "bg-warn" : "bg-status-learned") : "bg-white/[0.06]"}`}
                         style={{ height: `${value ? Math.max(12, Math.round((value / top) * 100)) : 8}%` }}
                       />
-                    ))}
-                  </span>
-                  <span className="w-12 shrink-0 text-end text-caption tabular-nums text-slate-400">
-                    {row && !row.measured ? "–" : sum ? `+${Math.round(sum * 10) / 10}` : ""}
-                  </span>
+                    </button>
+                  ))}
+                </span>
+                <button type="button" onClick={() => show(id)} className="w-12 shrink-0 py-2 text-end text-caption tabular-nums text-slate-400">
+                  {row && !row.measured ? "–" : sum ? `+${Math.round(sum * 10) / 10}` : ""}
                 </button>
               </li>
             );
           })}
         </ul>
+        {sheet}
       </div>
     );
   }
@@ -698,7 +769,7 @@ function PartsOverview({
             <button
               key={id}
               type="button"
-              onClick={() => onPart?.(id)}
+              onClick={() => show(id)}
               className={`absolute ${pos} rounded-lg bg-surface/80 px-2 py-1 text-center text-caption ${weakest ? "text-warn" : "text-ink"}`}
             >
               <span className="block font-semibold">{label[id]}</span>
@@ -707,6 +778,7 @@ function PartsOverview({
           );
         })}
       </div>
+      {sheet}
     </div>
   );
 }

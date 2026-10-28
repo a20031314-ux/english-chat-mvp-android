@@ -741,7 +741,12 @@
     "quizScore": "{m}問中{n}問正解",
     "quizToScript": "台本で練習",
     "whatsNewWeakTitle": "よく間違えることがマップに入ります",
-    "whatsNewWeakBody": "チャットや通話で同じ種類の間違いを2回すると、それを練習するタスクがマップに加わり、おすすめの順番の先頭に来ます。"
+    "whatsNewWeakBody": "チャットや通話で同じ種類の間違いを2回すると、それを練習するタスクがマップに加わり、おすすめの順番の先頭に来ます。",
+    "partRecent": "直近14日",
+    "partFixed": "直した",
+    "partEmpty": "この日の学習記録はありません",
+    "partPronDay": "言い直し {n}回",
+    "partOpenStage": "ステージで見る"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1485,7 +1490,12 @@
     "quizScore": "{m}题答对{n}题",
     "quizToScript": "用台本练习",
     "whatsNewWeakTitle": "常犯的错误会进入地图",
-    "whatsNewWeakBody": "在聊天或通话中同一类错误犯两次，地图上就会出现练习它的任务，并排到推荐顺序的最前面。"
+    "whatsNewWeakBody": "在聊天或通话中同一类错误犯两次，地图上就会出现练习它的任务，并排到推荐顺序的最前面。",
+    "partRecent": "最近14天",
+    "partFixed": "已改正",
+    "partEmpty": "这一天没有学习记录",
+    "partPronDay": "重说 {n}次",
+    "partOpenStage": "在阶段中查看"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2231,7 +2241,12 @@
     "quizScore": "Đúng {n}/{m}",
     "quizToScript": "Luyện với kịch bản",
     "whatsNewWeakTitle": "Lỗi hay mắc sẽ vào bản đồ",
-    "whatsNewWeakBody": "Mắc cùng một loại lỗi hai lần trong chat hoặc cuộc gọi, bản đồ sẽ có một nhiệm vụ để luyện nó, đứng đầu thứ tự gợi ý."
+    "whatsNewWeakBody": "Mắc cùng một loại lỗi hai lần trong chat hoặc cuộc gọi, bản đồ sẽ có một nhiệm vụ để luyện nó, đứng đầu thứ tự gợi ý.",
+    "partRecent": "14 ngày gần đây",
+    "partFixed": "Đã sửa",
+    "partEmpty": "Ngày này chưa học gì",
+    "partPronDay": "Nói lại {n} lần",
+    "partOpenStage": "Xem trong Giai đoạn"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2982,7 +2997,12 @@
     "quizScore": "{n} sur {m} juste",
     "quizToScript": "S’entraîner avec le dialogue",
     "whatsNewWeakTitle": "Tes erreurs fréquentes entrent dans ta carte",
-    "whatsNewWeakBody": "Fais deux fois le même type d’erreur dans le chat ou un appel, et une mission pour le travailler apparaît sur ta carte, en tête de l’ordre suggéré."
+    "whatsNewWeakBody": "Fais deux fois le même type d’erreur dans le chat ou un appel, et une mission pour le travailler apparaît sur ta carte, en tête de l’ordre suggéré.",
+    "partRecent": "14 derniers jours",
+    "partFixed": "Corrigé",
+    "partEmpty": "Rien étudié ce jour-là",
+    "partPronDay": "Phrases redites : {n}",
+    "partOpenStage": "Voir dans les étapes"
   },
   "it": {
     "archive": "Report",
@@ -3924,7 +3944,12 @@
     "quizScore": "{n} su {m} giuste",
     "quizToScript": "Esercitati con il copione",
     "whatsNewWeakTitle": "Gli errori ricorrenti entrano nella mappa",
-    "whatsNewWeakBody": "Se fai due volte lo stesso tipo di errore in chat o in chiamata, sulla mappa compare un compito per esercitarlo, primo nell’ordine consigliato."
+    "whatsNewWeakBody": "Se fai due volte lo stesso tipo di errore in chat o in chiamata, sulla mappa compare un compito per esercitarlo, primo nell’ordine consigliato.",
+    "partRecent": "Ultimi 14 giorni",
+    "partFixed": "Corretto",
+    "partEmpty": "Nessuno studio in questo giorno",
+    "partPronDay": "Frasi ridette: {n}",
+    "partOpenStage": "Vedi nelle tappe"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4678,7 +4703,12 @@
     "quizScore": "{n} de {m} certas",
     "quizToScript": "Praticar com o roteiro",
     "whatsNewWeakTitle": "O que você sempre erra entra no mapa",
-    "whatsNewWeakBody": "Cometa o mesmo tipo de erro duas vezes no chat ou numa chamada e aparece no mapa uma tarefa para praticá-lo, no topo da ordem sugerida."
+    "whatsNewWeakBody": "Cometa o mesmo tipo de erro duas vezes no chat ou numa chamada e aparece no mapa uma tarefa para praticá-lo, no topo da ordem sugerida.",
+    "partRecent": "Últimos 14 dias",
+    "partFixed": "Corrigido",
+    "partEmpty": "Nada estudado neste dia",
+    "partPronDay": "Frases repetidas: {n}",
+    "partOpenStage": "Ver nas etapas"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5618,7 +5648,12 @@
     "quizScore": "Верно {n} из {m}",
     "quizToScript": "Потренироваться по сценарию",
     "whatsNewWeakTitle": "Частые ошибки попадают на карту",
-    "whatsNewWeakBody": "Ошибитесь одинаково дважды в чате или звонке — на карте появится задание, чтобы это отработать, первым в рекомендуемом порядке."
+    "whatsNewWeakBody": "Ошибитесь одинаково дважды в чате или звонке — на карте появится задание, чтобы это отработать, первым в рекомендуемом порядке.",
+    "partRecent": "Последние 14 дней",
+    "partFixed": "Исправлено",
+    "partEmpty": "В этот день занятий не было",
+    "partPronDay": "Повторено фраз: {n}",
+    "partOpenStage": "Открыть в этапах"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6368,7 +6403,12 @@
     "quizScore": "Benar {n} dari {m}",
     "quizToScript": "Latihan dengan naskah",
     "whatsNewWeakTitle": "Kesalahan yang sering muncul masuk ke peta",
-    "whatsNewWeakBody": "Kalau kamu membuat jenis kesalahan yang sama dua kali di chat atau panggilan, muncul tugas untuk melatihnya di peta, paling depan dalam urutan saran."
+    "whatsNewWeakBody": "Kalau kamu membuat jenis kesalahan yang sama dua kali di chat atau panggilan, muncul tugas untuk melatihnya di peta, paling depan dalam urutan saran.",
+    "partRecent": "14 hari terakhir",
+    "partFixed": "Dikoreksi",
+    "partEmpty": "Tidak ada belajar di hari ini",
+    "partPronDay": "Ucap ulang {n} kali",
+    "partOpenStage": "Lihat di Tahap"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7112,7 +7152,12 @@
     "quizScore": "{n} من {m} صحيحة",
     "quizToScript": "تدرّب بالحوار",
     "whatsNewWeakTitle": "أخطاؤك المتكررة تدخل خريطتك",
-    "whatsNewWeakBody": "إذا ارتكبت النوع نفسه من الخطأ مرتين في الدردشة أو المكالمة، تظهر في خريطتك مهمة للتدرّب عليه، في أول الترتيب المقترح."
+    "whatsNewWeakBody": "إذا ارتكبت النوع نفسه من الخطأ مرتين في الدردشة أو المكالمة، تظهر في خريطتك مهمة للتدرّب عليه، في أول الترتيب المقترح.",
+    "partRecent": "آخر 14 يومًا",
+    "partFixed": "تم التصحيح",
+    "partEmpty": "لا يوجد تعلّم في هذا اليوم",
+    "partPronDay": "أعدت قول الجمل: {n}",
+    "partOpenStage": "عرض في المراحل"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7856,7 +7901,12 @@
     "quizScore": "ถูก {n} จาก {m}",
     "quizToScript": "ฝึกกับบทสนทนา",
     "whatsNewWeakTitle": "จุดที่ผิดบ่อยจะเข้าไปอยู่ในแผนที่",
-    "whatsNewWeakBody": "ถ้าผิดแบบเดียวกันสองครั้งในแชตหรือการโทร จะมีภารกิจสำหรับฝึกจุดนั้นเพิ่มในแผนที่ และขึ้นไปอยู่ลำดับแรกของลำดับที่แนะนำ"
+    "whatsNewWeakBody": "ถ้าผิดแบบเดียวกันสองครั้งในแชตหรือการโทร จะมีภารกิจสำหรับฝึกจุดนั้นเพิ่มในแผนที่ และขึ้นไปอยู่ลำดับแรกของลำดับที่แนะนำ",
+    "partRecent": "14 วันล่าสุด",
+    "partFixed": "แก้แล้ว",
+    "partEmpty": "วันนี้ยังไม่มีการเรียน",
+    "partPronDay": "พูดซ้ำ {n} ครั้ง",
+    "partOpenStage": "ดูในขั้น"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8600,6 +8650,11 @@
     "quizScore": "{m} में से {n} सही",
     "quizToScript": "स्क्रिप्ट से अभ्यास करें",
     "whatsNewWeakTitle": "बार-बार होने वाली गलती नक्शे में आती है",
-    "whatsNewWeakBody": "चैट या कॉल में एक ही तरह की गलती दो बार हो, तो उसका अभ्यास कराने वाला टास्क नक्शे में जुड़ जाता है और सुझाए गए क्रम में सबसे आगे आता है।"
+    "whatsNewWeakBody": "चैट या कॉल में एक ही तरह की गलती दो बार हो, तो उसका अभ्यास कराने वाला टास्क नक्शे में जुड़ जाता है और सुझाए गए क्रम में सबसे आगे आता है।",
+    "partRecent": "पिछले 14 दिन",
+    "partFixed": "सुधारा",
+    "partEmpty": "इस दिन कुछ नहीं पढ़ा",
+    "partPronDay": "दोबारा बोला: {n} बार",
+    "partOpenStage": "चरणों में देखें"
   }
 }

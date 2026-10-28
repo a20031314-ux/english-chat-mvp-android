@@ -1,0 +1,240 @@
+{
+  "ko": {
+    "my.growth": {
+      "heading": "3. 자라는 중",
+      "body": [
+        "‘{ui:partVocab}’·‘{ui:partGrammar}’·‘{ui:partExpression}’·‘{ui:partPronunciation}’ 네 칸이 지금 단계에서 얼마나 찼는지 보여요. 점선이 다음 단계 기준이고, 가장 부족한 칸은 노란 글씨예요.",
+        "칸을 누르면 ‘{ui:myViewMap}’에서 그 칸을 열어요."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. 그래프로 보기",
+      "body": [
+        "‘{ui:myViewGraph}’을 누르면 네 칸이 최근 2주 하루하루 얼마나 늘었는지 막대로 보여요. 고른 보기는 다음에도 그대로예요."
+      ],
+      "shot": "parts-graph"
+    }
+  },
+  "en": {
+    "my.growth": {
+      "heading": "3. Growing",
+      "body": [
+        "Four parts — ‘{ui:partVocab}’, ‘{ui:partGrammar}’, ‘{ui:partExpression}’ and ‘{ui:partPronunciation}’ — show how full they are at your stage. The dotted line is what the next stage needs, and the weakest part is in yellow.",
+        "Tap a part to open it in ‘{ui:myViewMap}’."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. As a graph",
+      "body": [
+        "Tap ‘{ui:myViewGraph}’ to see how much each part grew each day over the last two weeks. The view you pick stays next time."
+      ],
+      "shot": "parts-graph"
+    }
+  },
+  "es": {
+    "my.growth": {
+      "heading": "3. Creciendo",
+      "body": [
+        "Cuatro partes — «{ui:partVocab}», «{ui:partGrammar}», «{ui:partExpression}» y «{ui:partPronunciation}» — muestran cuánto llevas en tu etapa. La línea punteada es lo que pide la siguiente etapa y la parte más floja va en amarillo.",
+        "Toca una parte para abrirla en «{ui:myViewMap}»."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. En gráfica",
+      "body": [
+        "Toca «{ui:myViewGraph}» para ver cuánto creció cada parte día a día en las últimas dos semanas. La vista que elijas se queda."
+      ],
+      "shot": "parts-graph"
+    }
+  },
+  "ja": {
+    "my.growth": {
+      "heading": "3. 成長中",
+      "body": [
+        "「{ui:partVocab}」「{ui:partGrammar}」「{ui:partExpression}」「{ui:partPronunciation}」の4つが、今の段階でどれだけ埋まったかを表します。点線が次の段階の基準で、いちばん足りない項目は黄色です。",
+        "項目を押すと「{ui:myViewMap}」でその項目を開きます。"
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. グラフで見る",
+      "body": [
+        "「{ui:myViewGraph}」を押すと、4つの項目が最近2週間に毎日どれだけ伸びたかが棒で見えます。選んだ表示は次回もそのままです。"
+      ],
+      "shot": "parts-graph"
+    }
+  },
+  "zh": {
+    "my.growth": {
+      "heading": "3. 成长中",
+      "body": [
+        "“{ui:partVocab}”“{ui:partGrammar}”“{ui:partExpression}”“{ui:partPronunciation}”四项显示在当前阶段完成了多少。虚线是进入下一阶段的标准，最薄弱的一项是黄色。",
+        "点一项，就在“{ui:myViewMap}”里打开它。"
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. 图表",
+      "body": [
+        "点“{ui:myViewGraph}”，可以看到四项在最近两周每天增长了多少。选的视图下次还在。"
+      ],
+      "shot": "parts-graph"
+    }
+  },
+  "vi": {
+    "my.growth": {
+      "heading": "3. Đang lớn",
+      "body": [
+        "Bốn phần “{ui:partVocab}”, “{ui:partGrammar}”, “{ui:partExpression}” và “{ui:partPronunciation}” cho thấy bạn đã lấp đầy bao nhiêu ở giai đoạn hiện tại. Đường chấm là mức cần cho giai đoạn sau, phần yếu nhất có chữ vàng.",
+        "Chạm một phần để mở nó trong “{ui:myViewMap}”."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. Xem biểu đồ",
+      "body": [
+        "Chạm “{ui:myViewGraph}” để xem mỗi phần tăng bao nhiêu mỗi ngày trong hai tuần qua. Kiểu xem bạn chọn sẽ được giữ lại."
+      ],
+      "shot": "parts-graph"
+    }
+  },
+  "fr": {
+    "my.growth": {
+      "heading": "3. En progrès",
+      "body": [
+        "Quatre parties — « {ui:partVocab} », « {ui:partGrammar} », « {ui:partExpression} » et « {ui:partPronunciation} » — montrent où vous en êtes à votre étape. La ligne pointillée est ce qu’il faut pour l’étape suivante, la partie la plus faible est en jaune.",
+        "Touchez une partie pour l’ouvrir dans « {ui:myViewMap} »."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. En graphique",
+      "body": [
+        "Touchez « {ui:myViewGraph} » pour voir combien chaque partie a progressé chaque jour ces deux dernières semaines. La vue choisie est gardée."
+      ],
+      "shot": "parts-graph"
+    }
+  },
+  "it": {
+    "my.growth": {
+      "heading": "3. In crescita",
+      "body": [
+        "Quattro parti — «{ui:partVocab}», «{ui:partGrammar}», «{ui:partExpression}» e «{ui:partPronunciation}» — mostrano quanto hai riempito nella tua fase. La linea tratteggiata è ciò che serve per la fase successiva, la parte più debole è in giallo.",
+        "Tocca una parte per aprirla in «{ui:myViewMap}»."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. Come grafico",
+      "body": [
+        "Tocca «{ui:myViewGraph}» per vedere quanto è cresciuta ogni parte giorno per giorno nelle ultime due settimane. La vista scelta resta."
+      ],
+      "shot": "parts-graph"
+    }
+  },
+  "pt": {
+    "my.growth": {
+      "heading": "3. Crescendo",
+      "body": [
+        "Quatro partes — “{ui:partVocab}”, “{ui:partGrammar}”, “{ui:partExpression}” e “{ui:partPronunciation}” — mostram quanto você já preencheu na sua etapa. A linha pontilhada é o que a próxima etapa pede, e a parte mais fraca fica em amarelo.",
+        "Toque numa parte para abri-la em “{ui:myViewMap}”."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. Em gráfico",
+      "body": [
+        "Toque em “{ui:myViewGraph}” para ver quanto cada parte cresceu a cada dia nas últimas duas semanas. A visão escolhida fica salva."
+      ],
+      "shot": "parts-graph"
+    }
+  },
+  "ru": {
+    "my.growth": {
+      "heading": "3. Рост",
+      "body": [
+        "Четыре части — «{ui:partVocab}», «{ui:partGrammar}», «{ui:partExpression}» и «{ui:partPronunciation}» — показывают, насколько заполнен ваш этап. Пунктир — то, что нужно для следующего этапа, самая слабая часть выделена жёлтым.",
+        "Нажмите на часть, чтобы открыть её в «{ui:myViewMap}»."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. График",
+      "body": [
+        "Нажмите «{ui:myViewGraph}», чтобы увидеть, на сколько выросла каждая часть за каждый день последних двух недель. Выбранный вид сохранится."
+      ],
+      "shot": "parts-graph"
+    }
+  },
+  "id": {
+    "my.growth": {
+      "heading": "3. Bertumbuh",
+      "body": [
+        "Empat bagian — “{ui:partVocab}”, “{ui:partGrammar}”, “{ui:partExpression}”, dan “{ui:partPronunciation}” — menunjukkan seberapa penuh tahapmu sekarang. Garis putus-putus adalah batas untuk tahap berikutnya, bagian paling lemah berwarna kuning.",
+        "Ketuk satu bagian untuk membukanya di “{ui:myViewMap}”."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. Sebagai grafik",
+      "body": [
+        "Ketuk “{ui:myViewGraph}” untuk melihat seberapa banyak tiap bagian bertambah setiap hari dalam dua minggu terakhir. Tampilan yang kamu pilih tetap tersimpan."
+      ],
+      "shot": "parts-graph"
+    }
+  },
+  "ar": {
+    "my.growth": {
+      "heading": "3. ينمو",
+      "body": [
+        "تُظهر الأجزاء الأربعة «{ui:partVocab}» و«{ui:partGrammar}» و«{ui:partExpression}» و«{ui:partPronunciation}» كم امتلأت في مرحلتك الحالية. الخط المنقط هو ما تحتاجه المرحلة التالية، والجزء الأضعف باللون الأصفر.",
+        "اضغط على جزء لفتحه في «{ui:myViewMap}»."
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. كرسم بياني",
+      "body": [
+        "اضغط «{ui:myViewGraph}» لترى كم نما كل جزء يومًا بيوم خلال الأسبوعين الأخيرين. يبقى العرض الذي تختاره في المرة القادمة."
+      ],
+      "shot": "parts-graph"
+    }
+  },
+  "th": {
+    "my.growth": {
+      "heading": "3. กำลังเติบโต",
+      "body": [
+        "สี่ส่วน “{ui:partVocab}” “{ui:partGrammar}” “{ui:partExpression}” และ “{ui:partPronunciation}” แสดงว่าขั้นตอนตอนนี้เต็มแค่ไหน เส้นประคือเกณฑ์ของขั้นถัดไป ส่วนที่อ่อนที่สุดเป็นตัวสีเหลือง",
+        "แตะส่วนใดเพื่อเปิดใน “{ui:myViewMap}”"
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. ดูเป็นกราฟ",
+      "body": [
+        "แตะ “{ui:myViewGraph}” เพื่อดูว่าแต่ละส่วนเพิ่มขึ้นเท่าไรในแต่ละวันช่วงสองสัปดาห์ที่ผ่านมา มุมมองที่เลือกจะคงไว้ครั้งหน้า"
+      ],
+      "shot": "parts-graph"
+    }
+  },
+  "hi": {
+    "my.growth": {
+      "heading": "3. बढ़ रहा है",
+      "body": [
+        "चार हिस्से — “{ui:partVocab}”, “{ui:partGrammar}”, “{ui:partExpression}” और “{ui:partPronunciation}” — दिखाते हैं कि अभी के चरण में कितना भर गया है। बिंदुदार रेखा अगले चरण की ज़रूरत है, और सबसे कमज़ोर हिस्सा पीले अक्षरों में है।",
+        "किसी हिस्से को दबाएँ तो वह “{ui:myViewMap}” में खुलता है।"
+      ],
+      "shot": "parts-net"
+    },
+    "my.graph": {
+      "heading": "4. ग्राफ़ में देखें",
+      "body": [
+        "“{ui:myViewGraph}” दबाएँ तो पिछले दो हफ़्तों में हर हिस्सा रोज़ कितना बढ़ा, वह बार में दिखता है। चुना हुआ व्यू अगली बार भी रहता है।"
+      ],
+      "shot": "parts-graph"
+    }
+  }
+}

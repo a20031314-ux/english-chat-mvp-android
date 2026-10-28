@@ -21,14 +21,14 @@
           "heading": "3. Creciendo",
           "body": [
             "Cuatro partes — «{ui:partVocab}», «{ui:partGrammar}», «{ui:partExpression}» y «{ui:partPronunciation}» — muestran cuánto llevas en tu etapa. La línea punteada es lo que pide la siguiente etapa y la parte más floja va en amarillo.",
-            "Toca una parte para abrirla en «{ui:myViewMap}»."
+            "Toca una parte para ver qué estudiaste en ella las últimas dos semanas, día por día: «{ui:itemsLearned}», «{ui:itemsMastered}» y «{ui:partFixed}» (frases que corrigió el tutor), y dónde. Abajo está todo lo de esa parte; toca una palabra para ver detalles. «{ui:partOpenStage}» la abre en la vista de etapas."
           ],
           "shot": "parts-net"
         },
         {
           "heading": "4. En gráfica",
           "body": [
-            "Toca «{ui:myViewGraph}» para ver cuánto creció cada parte día a día en las últimas dos semanas. La vista que elijas se queda."
+            "Toca «{ui:myViewGraph}» para ver cuánto creció cada parte día a día en las últimas dos semanas. Toca una barra para ver lo que estudiaste ese día, o el nombre de la parte para las dos semanas. La vista que elijas se queda."
           ],
           "shot": "parts-graph"
         },
@@ -449,14 +449,14 @@
           "heading": "3. 成長中",
           "body": [
             "「{ui:partVocab}」「{ui:partGrammar}」「{ui:partExpression}」「{ui:partPronunciation}」の4つが、今の段階でどれだけ埋まったかを表します。点線が次の段階の基準で、いちばん足りない項目は黄色です。",
-            "項目を押すと「{ui:myViewMap}」でその項目を開きます。"
+            "項目を押すと、最近2週間にその項目で何を学んだかが日付ごとに見えます。「{ui:itemsLearned}」「{ui:itemsMastered}」「{ui:partFixed}」（チューターが直した文）と、どこでやったか。下はその項目の全部で、単語を押すと詳しく見られます。「{ui:partOpenStage}」でステージ表示のその項目へ。"
           ],
           "shot": "parts-net"
         },
         {
           "heading": "4. グラフで見る",
           "body": [
-            "「{ui:myViewGraph}」を押すと、4つの項目が最近2週間に毎日どれだけ伸びたかが棒で見えます。選んだ表示は次回もそのままです。"
+            "「{ui:myViewGraph}」を押すと、4つの項目が最近2週間に毎日どれだけ伸びたかが棒で見えます。棒を押すとその日に学んだものだけ、項目名を押すと2週間分が見えます。選んだ表示は次回もそのままです。"
           ],
           "shot": "parts-graph"
         },
@@ -877,14 +877,14 @@
           "heading": "3. 成长中",
           "body": [
             "“{ui:partVocab}”“{ui:partGrammar}”“{ui:partExpression}”“{ui:partPronunciation}”四项显示在当前阶段完成了多少。虚线是进入下一阶段的标准，最薄弱的一项是黄色。",
-            "点一项，就在“{ui:myViewMap}”里打开它。"
+            "点一个项目，可以按日期看到最近两周在这个项目里学了什么：“{ui:itemsLearned}”“{ui:itemsMastered}”“{ui:partFixed}”（老师改过的句子），以及在哪里学的。下面是这个项目的全部，点单词看详情。“{ui:partOpenStage}”在阶段视图中打开。"
           ],
           "shot": "parts-net"
         },
         {
           "heading": "4. 图表",
           "body": [
-            "点“{ui:myViewGraph}”，可以看到四项在最近两周每天增长了多少。选的视图下次还在。"
+            "点“{ui:myViewGraph}”，可以看到四项在最近两周每天增长了多少。点柱子只看那一天学的，点项目名看两周全部。选的视图下次还在。"
           ],
           "shot": "parts-graph"
         },
@@ -1305,14 +1305,14 @@
           "heading": "3. Đang lớn",
           "body": [
             "Bốn phần “{ui:partVocab}”, “{ui:partGrammar}”, “{ui:partExpression}” và “{ui:partPronunciation}” cho thấy bạn đã lấp đầy bao nhiêu ở giai đoạn hiện tại. Đường chấm là mức cần cho giai đoạn sau, phần yếu nhất có chữ vàng.",
-            "Chạm một phần để mở nó trong “{ui:myViewMap}”."
+            "Bấm vào một phần để xem trong 2 tuần qua bạn đã học gì ở phần đó, theo từng ngày — “{ui:itemsLearned}”, “{ui:itemsMastered}” và “{ui:partFixed}” (câu gia sư đã sửa), và học ở đâu. Bên dưới là toàn bộ phần đó; bấm vào từ để xem chi tiết. “{ui:partOpenStage}” mở phần đó trong chế độ giai đoạn."
           ],
           "shot": "parts-net"
         },
         {
           "heading": "4. Xem biểu đồ",
           "body": [
-            "Chạm “{ui:myViewGraph}” để xem mỗi phần tăng bao nhiêu mỗi ngày trong hai tuần qua. Kiểu xem bạn chọn sẽ được giữ lại."
+            "Chạm “{ui:myViewGraph}” để xem mỗi phần tăng bao nhiêu mỗi ngày trong hai tuần qua. Bấm vào một cột để xem những gì đã học hôm đó, hoặc bấm tên phần để xem cả 2 tuần. Kiểu xem bạn chọn sẽ được giữ lại."
           ],
           "shot": "parts-graph"
         },
@@ -1733,14 +1733,14 @@
           "heading": "3. En progrès",
           "body": [
             "Quatre parties — « {ui:partVocab} », « {ui:partGrammar} », « {ui:partExpression} » et « {ui:partPronunciation} » — montrent où vous en êtes à votre étape. La ligne pointillée est ce qu’il faut pour l’étape suivante, la partie la plus faible est en jaune.",
-            "Touchez une partie pour l’ouvrir dans « {ui:myViewMap} »."
+            "Touche une partie pour voir ce que tu y as étudié ces deux dernières semaines, jour par jour : « {ui:itemsLearned} », « {ui:itemsMastered} » et « {ui:partFixed} » (phrases corrigées par le tuteur), et où. En dessous, tout ce que contient la partie ; touche un mot pour le détail. « {ui:partOpenStage} » l’ouvre dans la vue des étapes."
           ],
           "shot": "parts-net"
         },
         {
           "heading": "4. En graphique",
           "body": [
-            "Touchez « {ui:myViewGraph} » pour voir combien chaque partie a progressé chaque jour ces deux dernières semaines. La vue choisie est gardée."
+            "Touchez « {ui:myViewGraph} » pour voir combien chaque partie a progressé chaque jour ces deux dernières semaines. Touche une barre pour voir ce que tu as étudié ce jour-là, ou le nom de la partie pour les deux semaines. La vue choisie est gardée."
           ],
           "shot": "parts-graph"
         },
@@ -2161,14 +2161,14 @@
           "heading": "3. In crescita",
           "body": [
             "Quattro parti — «{ui:partVocab}», «{ui:partGrammar}», «{ui:partExpression}» e «{ui:partPronunciation}» — mostrano quanto hai riempito nella tua fase. La linea tratteggiata è ciò che serve per la fase successiva, la parte più debole è in giallo.",
-            "Tocca una parte per aprirla in «{ui:myViewMap}»."
+            "Tocca una parte per vedere cosa hai studiato lì nelle ultime due settimane, giorno per giorno: «{ui:itemsLearned}», «{ui:itemsMastered}» e «{ui:partFixed}» (frasi corrette dal tutor), e dove. Sotto c’è tutto quello della parte; tocca una parola per i dettagli. «{ui:partOpenStage}» la apre nella vista delle tappe."
           ],
           "shot": "parts-net"
         },
         {
           "heading": "4. Come grafico",
           "body": [
-            "Tocca «{ui:myViewGraph}» per vedere quanto è cresciuta ogni parte giorno per giorno nelle ultime due settimane. La vista scelta resta."
+            "Tocca «{ui:myViewGraph}» per vedere quanto è cresciuta ogni parte giorno per giorno nelle ultime due settimane. Tocca una barra per vedere cosa hai studiato quel giorno, o il nome della parte per le due settimane. La vista scelta resta."
           ],
           "shot": "parts-graph"
         },
@@ -2589,14 +2589,14 @@
           "heading": "3. Crescendo",
           "body": [
             "Quatro partes — “{ui:partVocab}”, “{ui:partGrammar}”, “{ui:partExpression}” e “{ui:partPronunciation}” — mostram quanto você já preencheu na sua etapa. A linha pontilhada é o que a próxima etapa pede, e a parte mais fraca fica em amarelo.",
-            "Toque numa parte para abri-la em “{ui:myViewMap}”."
+            "Toque numa parte para ver o que você estudou nela nas últimas duas semanas, dia a dia: “{ui:itemsLearned}”, “{ui:itemsMastered}” e “{ui:partFixed}” (frases que o tutor corrigiu), e onde. Abaixo está tudo da parte; toque numa palavra para ver detalhes. “{ui:partOpenStage}” abre na visão de etapas."
           ],
           "shot": "parts-net"
         },
         {
           "heading": "4. Em gráfico",
           "body": [
-            "Toque em “{ui:myViewGraph}” para ver quanto cada parte cresceu a cada dia nas últimas duas semanas. A visão escolhida fica salva."
+            "Toque em “{ui:myViewGraph}” para ver quanto cada parte cresceu a cada dia nas últimas duas semanas. Toque numa barra para ver o que estudou naquele dia, ou no nome da parte para as duas semanas. A visão escolhida fica salva."
           ],
           "shot": "parts-graph"
         },
@@ -3017,14 +3017,14 @@
           "heading": "3. Рост",
           "body": [
             "Четыре части — «{ui:partVocab}», «{ui:partGrammar}», «{ui:partExpression}» и «{ui:partPronunciation}» — показывают, насколько заполнен ваш этап. Пунктир — то, что нужно для следующего этапа, самая слабая часть выделена жёлтым.",
-            "Нажмите на часть, чтобы открыть её в «{ui:myViewMap}»."
+            "Нажми на часть, чтобы увидеть, что ты изучал в ней за последние две недели, по дням: «{ui:itemsLearned}», «{ui:itemsMastered}» и «{ui:partFixed}» (фразы, которые исправил репетитор), и где. Ниже — всё в этой части; нажми на слово, чтобы увидеть подробности. «{ui:partOpenStage}» открывает её в виде этапов."
           ],
           "shot": "parts-net"
         },
         {
           "heading": "4. График",
           "body": [
-            "Нажмите «{ui:myViewGraph}», чтобы увидеть, на сколько выросла каждая часть за каждый день последних двух недель. Выбранный вид сохранится."
+            "Нажмите «{ui:myViewGraph}», чтобы увидеть, на сколько выросла каждая часть за каждый день последних двух недель. Нажми на столбик — увидишь, что изучал в тот день, на название части — за две недели. Выбранный вид сохранится."
           ],
           "shot": "parts-graph"
         },
@@ -3445,14 +3445,14 @@
           "heading": "3. Bertumbuh",
           "body": [
             "Empat bagian — “{ui:partVocab}”, “{ui:partGrammar}”, “{ui:partExpression}”, dan “{ui:partPronunciation}” — menunjukkan seberapa penuh tahapmu sekarang. Garis putus-putus adalah batas untuk tahap berikutnya, bagian paling lemah berwarna kuning.",
-            "Ketuk satu bagian untuk membukanya di “{ui:myViewMap}”."
+            "Ketuk satu bagian untuk melihat apa yang kamu pelajari di situ selama 2 minggu terakhir, per hari — “{ui:itemsLearned}”, “{ui:itemsMastered}”, dan “{ui:partFixed}” (kalimat yang dikoreksi tutor), serta di mana. Di bawahnya semua isi bagian itu; ketuk kata untuk detail. “{ui:partOpenStage}” membukanya di tampilan tahap."
           ],
           "shot": "parts-net"
         },
         {
           "heading": "4. Sebagai grafik",
           "body": [
-            "Ketuk “{ui:myViewGraph}” untuk melihat seberapa banyak tiap bagian bertambah setiap hari dalam dua minggu terakhir. Tampilan yang kamu pilih tetap tersimpan."
+            "Ketuk “{ui:myViewGraph}” untuk melihat seberapa banyak tiap bagian bertambah setiap hari dalam dua minggu terakhir. Ketuk batang untuk melihat yang dipelajari hari itu, atau nama bagian untuk 2 minggu penuh. Tampilan yang kamu pilih tetap tersimpan."
           ],
           "shot": "parts-graph"
         },
@@ -3873,14 +3873,14 @@
           "heading": "3. ينمو",
           "body": [
             "تُظهر الأجزاء الأربعة «{ui:partVocab}» و«{ui:partGrammar}» و«{ui:partExpression}» و«{ui:partPronunciation}» كم امتلأت في مرحلتك الحالية. الخط المنقط هو ما تحتاجه المرحلة التالية، والجزء الأضعف باللون الأصفر.",
-            "اضغط على جزء لفتحه في «{ui:myViewMap}»."
+            "اضغط على جزء لترى ما تعلّمته فيه خلال الأسبوعين الأخيرين يومًا بيوم: «{ui:itemsLearned}» و«{ui:itemsMastered}» و«{ui:partFixed}» (جمل صحّحها المدرّس)، وأين. وفي الأسفل كل ما في هذا الجزء؛ اضغط على كلمة لترى التفاصيل. «{ui:partOpenStage}» يفتحه في عرض المراحل."
           ],
           "shot": "parts-net"
         },
         {
           "heading": "4. كرسم بياني",
           "body": [
-            "اضغط «{ui:myViewGraph}» لترى كم نما كل جزء يومًا بيوم خلال الأسبوعين الأخيرين. يبقى العرض الذي تختاره في المرة القادمة."
+            "اضغط «{ui:myViewGraph}» لترى كم نما كل جزء يومًا بيوم خلال الأسبوعين الأخيرين. اضغط على عمود لترى ما تعلّمته في ذلك اليوم، أو على اسم الجزء لترى الأسبوعين كاملين. يبقى العرض الذي تختاره في المرة القادمة."
           ],
           "shot": "parts-graph"
         },
@@ -4301,14 +4301,14 @@
           "heading": "3. กำลังเติบโต",
           "body": [
             "สี่ส่วน “{ui:partVocab}” “{ui:partGrammar}” “{ui:partExpression}” และ “{ui:partPronunciation}” แสดงว่าขั้นตอนตอนนี้เต็มแค่ไหน เส้นประคือเกณฑ์ของขั้นถัดไป ส่วนที่อ่อนที่สุดเป็นตัวสีเหลือง",
-            "แตะส่วนใดเพื่อเปิดใน “{ui:myViewMap}”"
+            "แตะส่วนหนึ่งเพื่อดูว่า 2 สัปดาห์ที่ผ่านมาเรียนอะไรในส่วนนั้น แยกตามวัน — “{ui:itemsLearned}” “{ui:itemsMastered}” และ “{ui:partFixed}” (ประโยคที่ติวเตอร์แก้) และเรียนที่ไหน ด้านล่างคือทั้งหมดของส่วนนั้น แตะคำเพื่อดูรายละเอียด “{ui:partOpenStage}” เปิดในมุมมองขั้น"
           ],
           "shot": "parts-net"
         },
         {
           "heading": "4. ดูเป็นกราฟ",
           "body": [
-            "แตะ “{ui:myViewGraph}” เพื่อดูว่าแต่ละส่วนเพิ่มขึ้นเท่าไรในแต่ละวันช่วงสองสัปดาห์ที่ผ่านมา มุมมองที่เลือกจะคงไว้ครั้งหน้า"
+            "แตะ “{ui:myViewGraph}” เพื่อดูว่าแต่ละส่วนเพิ่มขึ้นเท่าไรในแต่ละวันช่วงสองสัปดาห์ที่ผ่านมา แตะแท่งเพื่อดูสิ่งที่เรียนวันนั้น หรือแตะชื่อส่วนเพื่อดูทั้ง 2 สัปดาห์ มุมมองที่เลือกจะคงไว้ครั้งหน้า"
           ],
           "shot": "parts-graph"
         },
@@ -4729,14 +4729,14 @@
           "heading": "3. बढ़ रहा है",
           "body": [
             "चार हिस्से — “{ui:partVocab}”, “{ui:partGrammar}”, “{ui:partExpression}” और “{ui:partPronunciation}” — दिखाते हैं कि अभी के चरण में कितना भर गया है। बिंदुदार रेखा अगले चरण की ज़रूरत है, और सबसे कमज़ोर हिस्सा पीले अक्षरों में है।",
-            "किसी हिस्से को दबाएँ तो वह “{ui:myViewMap}” में खुलता है।"
+            "किसी हिस्से पर टैप करें तो पिछले 2 हफ़्तों में उसमें क्या पढ़ा, दिन के हिसाब से दिखेगा — “{ui:itemsLearned}”, “{ui:itemsMastered}” और “{ui:partFixed}” (जिन लाइनों को ट्यूटर ने सुधारा), और कहाँ पढ़ा। नीचे उस हिस्से का सब कुछ है; किसी शब्द पर टैप करें तो विस्तार दिखेगा। “{ui:partOpenStage}” उसे चरणों वाले दृश्य में खोलता है।"
           ],
           "shot": "parts-net"
         },
         {
           "heading": "4. ग्राफ़ में देखें",
           "body": [
-            "“{ui:myViewGraph}” दबाएँ तो पिछले दो हफ़्तों में हर हिस्सा रोज़ कितना बढ़ा, वह बार में दिखता है। चुना हुआ व्यू अगली बार भी रहता है।"
+            "“{ui:myViewGraph}” दबाएँ तो पिछले दो हफ़्तों में हर हिस्सा रोज़ कितना बढ़ा, वह बार में दिखता है। किसी पट्टी पर टैप करें तो उस दिन का पढ़ा हुआ, हिस्से के नाम पर टैप करें तो पूरे 2 हफ़्ते। चुना हुआ व्यू अगली बार भी रहता है।"
           ],
           "shot": "parts-graph"
         },

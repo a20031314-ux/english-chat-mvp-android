@@ -124,3 +124,35 @@ test("요소 태그: 최근 자주 짚인 갈래를 '다음 단계까지'로, �
   const few = stageParts({ stage, language: "es", ledger, phrases: {}, pronunciation: { points: 0, tries: 0 }, mistakes: { vocab: 2 } });
   assert.equal(few.weakest, "grammar");
 });
+
+test("갈래 기록: 그래프 막대와 같은 셈의 낱낱 + 고친 줄, 새것부터(일본어·스페인어)", async () => {
+  const { partLog } = await import("./stageParts.ts");
+  for (const language of ["ja", "es"]) {
+    const stage = ladderFor(language)!.stages[0]!;
+    const now = Date.UTC(2026, 9, 29, 3);
+    const word = language === "ja" ? "駅" : "la cuenta";
+    const sentence = language === "ja" ? "昨日は友達と映画を見ました" : "Ayer fui al cine con mis amigos";
+    const ledger = ledgerWith(language, [[word, "mastered"], [stage.expressions[0]!, "learned"], [sentence, "learned"], ["old", "learned"]]);
+    ledger.items[ledgerKey(word)]!.masteredAt = now - 1000;
+    ledger.items[ledgerKey(word)]!.outputs = [{ at: now - 2 * 86_400_000, where: "mission", unaided: false }];
+    ledger.items[ledgerKey(stage.expressions[0]!)]!.outputs = [{ at: now - 3000, where: "chat", unaided: true }];
+    ledger.items[ledgerKey(sentence)]!.outputs = [{ at: now - 5000, where: "call", unaided: true }];
+    ledger.items[ledgerKey("old")]!.outputs = [{ at: now - 40 * 86_400_000, where: "chat", unaided: true }];
+    const node = grammarNodeId(1, stage.grammar[0]!);
+    const cards = [
+      { id: "c1", wrong: "w1", right: "r1", note: "", node, where: "chat", at: now - 100, kind: "mistake" },
+      { id: "c2", wrong: "w1", right: "r1", note: "", node, where: "chat", at: now - 50, kind: "mistake" },
+      { id: "c3", wrong: "typo", right: "type", note: "", node: "d-spelling", where: "chat", at: now, kind: "typo" },
+    ] as FixCard[];
+    const log = partLog({ stage, language, ledger, phrases: { [ledgerKey(sentence)]: { node, at: now - 4000 } }, cards, now });
+    assert.deepEqual(log.vocab.map((item) => item.kind), ["mastered", "learned"], language);
+    assert.equal(log.vocab[1]!.where, "mission");
+    assert.equal(log.expression[0]!.text, stage.expressions[0]);
+    assert.ok(log.grammar.some((item) => item.text === sentence && item.node === node && item.where === "call"), language);
+    const fixed = log.grammar.filter((item) => item.kind === "fixed");
+    assert.equal(fixed.length, 1, "같은 줄은 한 번");
+    assert.equal(fixed[0]!.right, "r1");
+    assert.ok(!Object.values(log).flat().some((item) => item.text === "old" || item.text === "typo"), "14일 밖·오타는 뺌");
+    assert.ok(log.grammar.every((item, i, all) => i === 0 || all[i - 1]!.at >= item.at), "새것부터");
+  }
+});

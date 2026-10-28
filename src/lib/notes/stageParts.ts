@@ -21,7 +21,7 @@ import { STAGE_DONE_SHARE, stageProgress } from "../curriculum/stages/index.ts";
 import { scriptTally } from "../curriculum/stageScripts.ts";
 import { framesFor } from "../curriculum/frames.ts";
 import type { Stage } from "../curriculum/stages/types.ts";
-import type { Ledger, LedgerState } from "../learner/ledger.ts";
+import type { Ledger, LedgerState, LedgerTab, OutputPlace } from "../learner/ledger.ts";
 import { ledgerKey } from "../learner/ledger.ts";
 import { segmentWords } from "../wordSegments.ts";
 import { grammarNodeId, type FixCard, type PhrasePlace } from "./notebook.ts";
@@ -250,5 +250,70 @@ export function partHistory(input: {
   days.forEach((day, i) => {
     out.pronunciation[i] = input.pronunciationDays[day] ?? 0;
   });
+  return out;
+}
+
+/** 갈래 기록 한 줄(망·그래프를 누르면 보이는 "무엇을 공부했나", 2026-10-29 사용자 "누르면 뭘 공부했는지 구체적으로"). */
+export type PartLogItem = {
+  at: number;
+  /** 배움(처음 써 봄) · 숙지(혼자 씀) · 고침(튜터가 고친 내 줄). */
+  kind: "learned" | "mastered" | "fixed";
+  /** 학습 언어 — 낱말·표현, 고침이면 내가 쓴 줄. */
+  text: string;
+  /** 고침: 고친 줄. */
+  right?: string;
+  /** 어디서: 채팅·통화·대본(mission)·복습·영상 등. */
+  where?: OutputPlace | LedgerTab | FixCard["where"];
+  /** 문법: 그 단계 문법 칸 id(앱이 칸 이름으로). */
+  node?: string;
+};
+
+export const PART_LOG_MAX = 60;
+
+/**
+ * 지금 단계 네 갈래의 최근 기록(partHistory와 같은 셈의 낱낱 + 튜터가 고친 줄), 새것부터, 갈래마다 60개까지.
+ * 그래프 막대(하루)를 누르면 그날 것만, 망 꼭짓점을 누르면 그 갈래 전부. 발음은 줄이 남지 않아(growth는 날마다 숫자) 고침만.
+ */
+export function partLog(input: {
+  stage: Stage;
+  language: string;
+  ledger: Ledger | null;
+  phrases: Record<string, PhrasePlace>;
+  cards: readonly FixCard[];
+  now: number;
+  days?: number;
+}): Record<PartId, PartLogItem[]> {
+  const since = input.now - (input.days ?? HISTORY_DAYS) * 24 * 60 * 60 * 1000;
+  const out: Record<PartId, PartLogItem[]> = { vocab: [], grammar: [], expression: [], pronunciation: [] };
+  const push = (part: PartId, item: PartLogItem) => {
+    if (item.at >= since && item.at <= input.now + 60_000) out[part].push(item);
+  };
+  const stageKeys = new Set(input.stage.expressions.map((text) => ledgerKey(text)).filter(Boolean));
+  const grammarNodes = new Set(input.stage.grammar.map((g) => grammarNodeId(input.stage.order, g)));
+  for (const [key, item] of Object.entries(input.ledger?.items ?? {})) {
+    if (item.state === "met") continue;
+    const learnedAt = item.outputs[0]?.at ?? item.firstMet?.at;
+    const where = item.outputs[0]?.where ?? item.firstMet?.tab;
+    const part: PartId | null = stageKeys.has(key) ? "expression" : isWordish(item.text, input.language) ? "vocab" : null;
+    if (part) {
+      if (learnedAt) push(part, { at: learnedAt, kind: "learned", text: item.text, where });
+      if (item.state === "mastered" && item.masteredAt) push(part, { at: item.masteredAt, kind: "mastered", text: item.text, where: item.outputs.at(-1)?.where });
+    }
+    const place = input.phrases[key];
+    const node = place ? nodesOf(place).find((one) => grammarNodes.has(one)) : undefined;
+    if (node && place) push("grammar", { at: place.at, kind: item.state === "mastered" ? "mastered" : "learned", text: item.text, where, node });
+  }
+  const seen = new Set<string>();
+  for (const card of input.cards) {
+    if ((card.kind ?? "mistake") !== "mistake") continue;
+    const key = `${card.wrong}\u0000${card.right}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+    for (const part of partsOfCard(card)) {
+      const node = part === "grammar" ? [card.node, ...(card.also ?? [])].find((one) => one && grammarNodes.has(one)) ?? card.node ?? undefined : undefined;
+      push(part, { at: card.at, kind: "fixed", text: card.wrong, right: card.right, where: card.where, ...(node ? { node } : {}) });
+    }
+  }
+  for (const part of PART_IDS) out[part] = out[part].sort((a, b) => b.at - a.at).slice(0, PART_LOG_MAX);
   return out;
 }

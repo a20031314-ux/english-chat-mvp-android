@@ -17,6 +17,7 @@ import mapBefore275 from "@/lib/guide/mapBefore275.json";
 import mapBefore278 from "@/lib/guide/mapBefore278.json";
 import callBefore277 from "@/lib/guide/callBefore277.json";
 import callBefore279 from "@/lib/guide/callBefore279.json";
+import mapBefore280 from "@/lib/guide/mapBefore280.json";
 
 export const runtime = "nodejs";
 
@@ -79,15 +80,22 @@ export async function GET(request: NextRequest) {
   const before279 = r279
     ? undefined
     : (callBefore279 as Partial<Record<string, Record<string, Guide["roleplay"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  // 망·그래프를 누르면 "무엇을 공부했나" 시트가 있는 빌드(`r280=1`, 2.78, 2026-10-29): 그 전 빌드는 자라는 중·그래프 칸을 예전 글로(mapBefore280.json — 누르면 단계 보기).
+  const before280 = request.nextUrl.searchParams.get("r280") === "1"
+    ? undefined
+    : (mapBefore280 as Partial<Record<string, Record<string, Guide["map"]["sections"][number]>>>)[asked === "ko" || asked === "en" || translated ? asked : "en"];
+  const withParts280: Guide = before280
+    ? { ...newest, map: { ...newest.map, sections: newest.map.sections.map((section, index) => before280[GUIDE_SECTION_IDS.map[index]] ?? section) } }
+    : newest;
   const base: Guide = before279
     ? {
-        ...newest,
-        roleplay: { ...newest.roleplay, sections: newest.roleplay.sections.map((section, index) => before279[GUIDE_SECTION_IDS.roleplay[index]] ?? section) },
-        chat: { ...newest.chat, sections: newest.chat.sections.map((section, index) => before279[GUIDE_SECTION_IDS.chat[index]] ?? section) },
+        ...withParts280,
+        roleplay: { ...withParts280.roleplay, sections: withParts280.roleplay.sections.map((section, index) => before279[GUIDE_SECTION_IDS.roleplay[index]] ?? section) },
+        chat: { ...withParts280.chat, sections: withParts280.chat.sections.map((section, index) => before279[GUIDE_SECTION_IDS.chat[index]] ?? section) },
         // 시작(my.start): 2.76부터 단계만 고르기(체크 3질문·지도 그리기 숨김, 2026-10-28 "커리큘럼과 떨어진 예전 기능 숨기기") — 그 전 빌드는 예전 글.
-        map: { ...newest.map, sections: newest.map.sections.map((section, index) => before279[GUIDE_SECTION_IDS.map[index]] ?? section) },
+        map: { ...withParts280.map, sections: withParts280.map.sections.map((section, index) => before279[GUIDE_SECTION_IDS.map[index]] ?? section) },
       }
-    : newest;
+    : withParts280;
   const withMy: Guide = before278
     ? { ...base, map: { ...base.map, sections: base.map.sections.map((section, index) => before278[GUIDE_SECTION_IDS.map[index]] ?? section) } }
     : r278
