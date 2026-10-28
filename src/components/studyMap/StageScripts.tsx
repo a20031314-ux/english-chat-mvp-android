@@ -37,6 +37,7 @@ import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/lear
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 import { SelfCheck } from "@/components/studyMap/TodayPlan";
+import { weakKeysOfScript } from "@/lib/curriculum/quiz";
 import { clearResume, readResume, resumeKey, saveResume, type ResumeState } from "@/lib/curriculum/resume";
 
 /**
@@ -254,6 +255,8 @@ function ScriptPlayer({
   const [index, setIndex] = useState(0);
   const [results, setResults] = useState<Record<number, Result>>({});
   const [revealed, setRevealed] = useState<Record<number, boolean>>({});
+  // 줄마다 틀린 횟수(들렸는데 안 맞은 것) — 두 번이면 끝 체크에 헷갈려요로 미리(curriculum/quiz.ts weakKeysOfScript).
+  const [misses, setMisses] = useState<Record<number, number>>({});
   // 3~4단계 상대 줄: 판마다 고른 말(원래 줄 또는 alt).
   const [picks, setPicks] = useState<Record<number, number>>(() => freshPicks(script));
   const [listening, setListening] = useState(false);
@@ -364,6 +367,7 @@ function ScriptPlayer({
     const exact = compared.clean || (named && cleanBesidesName(compared.outcomes, learnerName));
     const clean = Boolean(heard) && (own ? practice?.good === true : exact || practice?.good === true);
     setResults((current) => ({ ...current, [index]: { heard, practice, clean, mode: own ? "own" : mode, unclear } }));
+    if (heard && !clean) setMisses((current) => ({ ...current, [index]: (current[index] ?? 0) + 1 }));
   };
 
   const next = () => setIndex((current) => current + 1);
@@ -375,6 +379,7 @@ function ScriptPlayer({
     setJustPassed(false);
     setResults({});
     setRevealed({});
+    setMisses({});
     setPicks(freshPicks(script));
     setIndex(0);
   };
@@ -559,7 +564,7 @@ function ScriptPlayer({
         {done ? (
           <li className="mt-3 flex flex-col items-center gap-2">
             <p className="text-note text-slate-200">{passes || justPassed ? `✓ ${ui.scriptPassed}` : ui.scriptDone}</p>
-            <SelfCheck ui={ui} language={language} id={script.id} />
+            <SelfCheck ui={ui} language={language} id={script.id} weak={weakKeysOfScript(script, misses)} />
             <div className="flex gap-2">
               <button type="button" onClick={restart} className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10">
                 {ui.scriptRestart}

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { usePremium } from "@/contexts/PremiumContext";
 import { apiUrl } from "@/lib/apiBase";
 import { entitlementHeaders } from "@/lib/billing/billingService";
@@ -18,6 +18,8 @@ import {
   type ReviewMap,
 } from "@/lib/curriculum/dailyPlan";
 import { allFramesFor } from "@/lib/curriculum/frames";
+import type { QuizCard } from "@/lib/curriculum/quiz";
+import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { useBillingUiOptional } from "@/components/BillingScreen";
 import { allScriptsFor, glossFor } from "@/lib/curriculum/stageScripts";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
@@ -33,6 +35,25 @@ import { whereLearned } from "@/lib/curriculum/learnedWhere";
 const SETTINGS_KEY = "dailyPlan.v1";
 const TODAY_KEY = "dailyPlan.today.v1";
 const REVIEW_EVENT = "lb-review";
+/** 오늘 끝낸 퀴즈(열쇠) — 틀린 틀 다시 연습에서 온 퀴즈는 다시 볼 것에 없어서 이 폰에 날짜로 남긴다. */
+const QUIZ_DONE_KEY = "dailyPlan.quizDone.v1";
+
+function readQuizDone(day: string): Set<string> {
+  try {
+    const raw = JSON.parse(localStorage.getItem(QUIZ_DONE_KEY) ?? "null") as { day?: string; keys?: string[] } | null;
+    return new Set(raw?.day === day ? (raw.keys ?? []) : []);
+  } catch {
+    return new Set();
+  }
+}
+
+function saveQuizDone(day: string, keys: Set<string>) {
+  try {
+    localStorage.setItem(QUIZ_DONE_KEY, JSON.stringify({ day, keys: [...keys] }));
+  } catch {
+    // 이 화면에서만.
+  }
+}
 
 type Settings = { pace: Pace; order: PlanOrder };
 type Snapshot = { day: string; language: string; pace: number; order: PlanOrder; items: PlanItem[] };
@@ -74,6 +95,7 @@ export function TodayPlan({
   recommended,
   onOpen,
   grammarName,
+  redo = [],
 }: {
   ui: UICopy;
   locale: string;
@@ -81,6 +103,8 @@ export function TodayPlan({
   stage: number;
   passed: readonly string[];
   review: ReviewMap;
+  /** 튜터가 같은 틀을 두 번 고친 것(/api/notebook redo) — 고친 줄과 함께 퀴즈로. */
+  redo?: readonly { frame: string; card: QuizCard }[];
   /** 서버가 고른 오늘의 대본(내 기록에 맞춰). */
   recommended: string | null;
   onOpen: (stage: number, id: string) => void;
@@ -90,12 +114,16 @@ export function TodayPlan({
   // 대본 이름은 앱 언어로(서버가 옮김) — 받으면 다시 그린다. 오늘 목록은 지금 단계와 다음 단계까지.
   useStageGlosses(language, stage, locale);
   useStageGlosses(language, Math.min(5, stage + 1), locale);
+  const { isPremium } = usePremium();
   const [settings, setSettings] = useState<Settings>({ pace: 10, order: "curriculum" });
   const [review, setReview] = useState<ReviewMap>(initialReview);
   const [snapshot, setSnapshot] = useState<Snapshot | null>(null);
   const [now, setNow] = useState(0);
   // 오늘 배운 것에서 누른 칩 — 위 목록에서 그게 나온 대본·문장구조를 표시한다.
   const [picked, setPicked] = useState<string | null>(null);
+  // 지금 연 퀴즈(오늘 목록의 한 칸)와 오늘 끝낸 퀴즈.
+  const [quiz, setQuiz] = useState<PlanItem | null>(null);
+  const [quizDone, setQuizDone] = useState<Set<string>>(new Set());
   useEffect(() => {
     // 저장해 둔 분량·순서와 오늘 목록은 화면에 붙은 뒤 읽는다(서버 그림과 어긋나지 않게).
     setSettings(readSettings());
@@ -117,11 +145,15 @@ export function TodayPlan({
   const passedKey = passed.join(",");
   const passedSet = useMemo(() => new Set(passedKey ? passedKey.split(",") : []), [passedKey]);
   const day = now ? localDay(new Date(now)) : "";
+  useEffect(() => {
+    if (day) setQuizDone(readQuizDone(day));
+  }, [day]);
+  const redoKey = redo.map((item) => `${item.frame}:${item.card.wrong}`).join("|");
   const fresh = useMemo(
-    () => (now ? todayPlan({ language, stage, passed: passedSet, review, pace: settings.pace, order: settings.order, recommended, now }) : []),
+    () => (now ? todayPlan({ language, stage, passed: passedSet, review, pace: settings.pace, order: settings.order, recommended, redo, now }) : []),
     // 오늘 목록은 분량·순서·언어가 바뀔 때만 새로(하나 끝냈다고 바꾸지 않는다) — passed·review는 처음 계산에만.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [now, language, stage, settings.pace, settings.order, recommended],
+    [now, language, stage, settings.pace, settings.order, recommended, redoKey],
   );
   const same = snapshot && snapshot.day === day && snapshot.language === language && snapshot.pace === settings.pace && snapshot.order === settings.order;
   const items = same ? snapshot.items : fresh;
@@ -149,10 +181,36 @@ export function TodayPlan({
   const scripts = allScriptsFor(language);
   const frames = allFramesFor(language);
   const labelOf = (item: PlanItem) =>
-    item.kind === "script"
+    item.kind === "quiz"
+      ? keyLabel(language, item.id, grammarName)
+      : item.kind === "script"
       ? glossFor(scripts.find((s) => s.id === item.id)?.setting ?? { en: item.id }, locale)
       : (frames.find((f) => f.id === item.id)?.pattern ?? item.id);
-  const doneOf = (item: PlanItem) => (item.review ? !review[item.review] || review[item.review]!.due > now : passedSet.has(item.id));
+  const doneOf = (item: PlanItem) =>
+    item.kind === "quiz" && quizDone.has(item.id)
+      ? true
+      : item.review
+        ? !review[item.review] || review[item.review]!.due > now
+        : item.kind === "quiz"
+          ? false
+          : passedSet.has(item.id);
+  const finishQuiz = (item: PlanItem, passedQuiz: boolean) => {
+    const next = new Set([...quizDone, item.id]);
+    setQuizDone(next);
+    saveQuizDone(day, next);
+    // 다시 볼 것에서 온 퀴즈는 결과 그대로(맞음 → 7일 뒤 한 번 더, 틀림 → 2일 뒤), 고친 줄에서 온 퀴즈는 틀렸을 때만 다시 볼 것에 넣는다.
+    if (!item.review && passedQuiz) return;
+    void fetch(apiUrl("/api/curriculum/scripts"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+      body: JSON.stringify({ language, check: { [item.id]: passedQuiz } }),
+    })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((body: { review?: ReviewMap } | null) => {
+        if (body?.review) announceReview(language, body.review);
+      })
+      .catch(() => undefined);
+  };
   const finished = items.every(doneOf);
   const pickedIn = new Set(picked && finished ? whereLearned(language, picked, items.map((item) => item.id)).map((where) => where.id) : []);
   const minutes = items.reduce((sum, item) => sum + item.minutes, 0);
@@ -201,7 +259,7 @@ export function TodayPlan({
             <li key={`${item.id}-${item.review ?? ""}`}>
               <button
                 type="button"
-                onClick={() => onOpen(item.stage, item.id)}
+                onClick={() => (item.kind === "quiz" ? setQuiz(item) : onOpen(item.stage, item.id))}
                 className={`flex w-full items-center gap-3 rounded-xl border px-3 py-2 text-start hover:bg-white/5 ${pickedIn.has(item.id) ? "border-status-learned bg-status-learned/10" : "border-line"}`}
               >
                 <span aria-hidden className={`flex h-5 w-5 shrink-0 items-center justify-center rounded-full text-caption ${done ? "bg-status-mastered text-slate-900" : "border border-line"}`}>
@@ -209,9 +267,10 @@ export function TodayPlan({
                 </span>
                 <span className="min-w-0 flex-1">
                   <span dir="auto" className={`block truncate text-note ${done ? "text-slate-400" : "text-ink"}`}>
+                    {item.kind === "quiz" ? <span className="text-warn">{ui.quizTag} · </span> : null}
                     {labelOf(item)}
                   </span>
-                  {item.review ? (
+                  {item.review && item.kind !== "quiz" ? (
                     <span dir="auto" className="block truncate text-meta text-warn">
                       {ui.planAgain} · {keyLabel(language, item.review, grammarName)}
                     </span>
@@ -223,6 +282,28 @@ export function TodayPlan({
           );
         })}
       </ul>
+      {quiz ? (
+        <QuizPlayer
+          ui={ui}
+          locale={locale}
+          language={language}
+          quizKey={quiz.id}
+          title={labelOf(quiz)}
+          card={quiz.card}
+          seed={day}
+          onDone={(passedQuiz) => finishQuiz(quiz, passedQuiz)}
+          onThen={
+            quiz.then
+              ? () => {
+                  const then = quiz.then!;
+                  setQuiz(null);
+                  onOpen(then.stage, then.id);
+                }
+              : undefined
+          }
+          onClose={() => setQuiz(null)}
+        />
+      ) : null}
       {finished ? (
         <LearnedToday
           ui={ui}
@@ -449,10 +530,32 @@ function WherePanel({
  * 대본·문장구조 끝: 그 대본의 핵심 표현·문장구조마다 알아요/헷갈려요(헷갈려요 → 2일 뒤, 그 뒤 알아요 → 7일 뒤 한 번 더, 또 알아요 → 끝).
  * 누를 때마다 서버에 바로(POST /api/curriculum/scripts check).
  */
-export function SelfCheck({ ui, language, id }: { ui: UICopy; language: string; id: string }) {
+export function SelfCheck({ ui, language, id, weak = [] }: { ui: UICopy; language: string; id: string; weak?: readonly string[] }) {
   const { isPremium } = usePremium();
-  const keys = useMemo(() => reviewKeysOf(language, id), [language, id]);
-  const [marks, setMarks] = useState<Record<string, boolean>>({});
+  const weakKey = weak.join(",");
+  // 대본에서 자꾸 틀린 줄의 열쇠(weak)는 맨 앞에, 헷갈려요로 미리 표시하고 한 번 보낸다 — 알아요로 바꿀 수 있다.
+  const keys = useMemo(() => {
+    const extra = weakKey ? weakKey.split(",") : [];
+    return [...new Set([...extra, ...reviewKeysOf(language, id)])].slice(0, 10);
+  }, [language, id, weakKey]);
+  // SelfCheck는 대본을 끝낼 때 새로 붙으므로 그때의 weak로 미리 표시한다.
+  const [marks, setMarks] = useState<Record<string, boolean>>(() => Object.fromEntries(weak.map((key) => [key, false])));
+  const sentWeak = useRef("");
+  useEffect(() => {
+    if (!weakKey || sentWeak.current === weakKey) return;
+    sentWeak.current = weakKey;
+    const extra = weakKey.split(",");
+    void fetch(apiUrl("/api/curriculum/scripts"), {
+      method: "POST",
+      headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+      body: JSON.stringify({ language, check: Object.fromEntries(extra.map((key) => [key, false])) }),
+    })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((body: { review?: ReviewMap } | null) => {
+        if (body?.review) announceReview(language, body.review);
+      })
+      .catch(() => undefined);
+  }, [weakKey, language, isPremium]);
   if (!keys.length) return null;
   const mark = (key: string, known: boolean) => {
     setMarks((current) => ({ ...current, [key]: known }));

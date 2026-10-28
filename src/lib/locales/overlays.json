@@ -720,7 +720,17 @@
     "learnedTitle": "今日学んだこと",
     "learnedWords": "単語・表現",
     "askSubscribe": "購読して質問する",
-    "askLimit": "今日の質問はもう使い切りました"
+    "askLimit": "今日の質問はもう使い切りました",
+    "quizTag": "クイズ",
+    "quizKindFix": "間違いを探す",
+    "quizKindChoose": "穴埋め",
+    "quizKindOrder": "並べ替え",
+    "quizKindSay": "言ってみる",
+    "quizCheck": "確認",
+    "quizRight": "正解",
+    "quizWrong": "おしい",
+    "quizScore": "{m}問中{n}問正解",
+    "quizToScript": "台本で練習"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1443,7 +1453,17 @@
     "learnedTitle": "今天学到的",
     "learnedWords": "单词·表达",
     "askSubscribe": "订阅后提问",
-    "askLimit": "今天的提问次数已用完"
+    "askLimit": "今天的提问次数已用完",
+    "quizTag": "小测验",
+    "quizKindFix": "找错误",
+    "quizKindChoose": "填空",
+    "quizKindOrder": "排顺序",
+    "quizKindSay": "说出来",
+    "quizCheck": "检查",
+    "quizRight": "答对了",
+    "quizWrong": "差一点",
+    "quizScore": "{m}题答对{n}题",
+    "quizToScript": "用台本练习"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2168,7 +2188,17 @@
     "learnedTitle": "Hôm nay đã học",
     "learnedWords": "Từ và cách nói",
     "askSubscribe": "Đăng ký để hỏi",
-    "askLimit": "Hôm nay đã hết lượt hỏi"
+    "askLimit": "Hôm nay đã hết lượt hỏi",
+    "quizTag": "Câu đố",
+    "quizKindFix": "Tìm lỗi",
+    "quizKindChoose": "Điền chỗ trống",
+    "quizKindOrder": "Sắp xếp",
+    "quizKindSay": "Nói thử",
+    "quizCheck": "Kiểm tra",
+    "quizRight": "Đúng rồi",
+    "quizWrong": "Gần đúng",
+    "quizScore": "Đúng {n}/{m}",
+    "quizToScript": "Luyện với kịch bản"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2898,7 +2928,17 @@
     "learnedTitle": "Ce que tu as appris aujourd'hui",
     "learnedWords": "Mots et expressions",
     "askSubscribe": "S'abonner pour poser une question",
-    "askLimit": "Plus de questions pour aujourd'hui"
+    "askLimit": "Plus de questions pour aujourd'hui",
+    "quizTag": "Quiz",
+    "quizKindFix": "Trouve l’erreur",
+    "quizKindChoose": "Complète",
+    "quizKindOrder": "Remets dans l’ordre",
+    "quizKindSay": "Dis-le",
+    "quizCheck": "Vérifier",
+    "quizRight": "Correct",
+    "quizWrong": "Presque",
+    "quizScore": "{n} sur {m} juste",
+    "quizToScript": "S’entraîner avec le dialogue"
   },
   "it": {
     "archive": "Report",
@@ -3819,7 +3859,17 @@
     "learnedTitle": "Cosa hai imparato oggi",
     "learnedWords": "Parole ed espressioni",
     "askSubscribe": "Abbonati per chiedere",
-    "askLimit": "Domande finite per oggi"
+    "askLimit": "Domande finite per oggi",
+    "quizTag": "Quiz",
+    "quizKindFix": "Trova l’errore",
+    "quizKindChoose": "Completa",
+    "quizKindOrder": "Metti in ordine",
+    "quizKindSay": "Dillo",
+    "quizCheck": "Controlla",
+    "quizRight": "Giusto",
+    "quizWrong": "Quasi",
+    "quizScore": "{n} su {m} giuste",
+    "quizToScript": "Esercitati con il copione"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4552,7 +4602,17 @@
     "learnedTitle": "O que você aprendeu hoje",
     "learnedWords": "Palavras e expressões",
     "askSubscribe": "Assine para perguntar",
-    "askLimit": "Acabaram as perguntas de hoje"
+    "askLimit": "Acabaram as perguntas de hoje",
+    "quizTag": "Quiz",
+    "quizKindFix": "Encontre o erro",
+    "quizKindChoose": "Complete",
+    "quizKindOrder": "Coloque em ordem",
+    "quizKindSay": "Fale",
+    "quizCheck": "Verificar",
+    "quizRight": "Certo",
+    "quizWrong": "Quase",
+    "quizScore": "{n} de {m} certas",
+    "quizToScript": "Praticar com o roteiro"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5471,7 +5531,17 @@
     "learnedTitle": "Что ты сегодня выучил",
     "learnedWords": "Слова и выражения",
     "askSubscribe": "Оформить подписку, чтобы спросить",
-    "askLimit": "Вопросы на сегодня закончились"
+    "askLimit": "Вопросы на сегодня закончились",
+    "quizTag": "Тест",
+    "quizKindFix": "Найди ошибку",
+    "quizKindChoose": "Заполни пропуск",
+    "quizKindOrder": "Расставь по порядку",
+    "quizKindSay": "Скажи",
+    "quizCheck": "Проверить",
+    "quizRight": "Верно",
+    "quizWrong": "Почти",
+    "quizScore": "Верно {n} из {m}",
+    "quizToScript": "Потренироваться по сценарию"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6200,7 +6270,17 @@
     "learnedTitle": "Yang dipelajari hari ini",
     "learnedWords": "Kata dan ungkapan",
     "askSubscribe": "Berlangganan untuk bertanya",
-    "askLimit": "Jatah pertanyaan hari ini habis"
+    "askLimit": "Jatah pertanyaan hari ini habis",
+    "quizTag": "Kuis",
+    "quizKindFix": "Cari yang salah",
+    "quizKindChoose": "Isi yang kosong",
+    "quizKindOrder": "Susun urutannya",
+    "quizKindSay": "Ucapkan",
+    "quizCheck": "Periksa",
+    "quizRight": "Benar",
+    "quizWrong": "Hampir",
+    "quizScore": "Benar {n} dari {m}",
+    "quizToScript": "Latihan dengan naskah"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6923,7 +7003,17 @@
     "learnedTitle": "ما تعلّمته اليوم",
     "learnedWords": "كلمات وعبارات",
     "askSubscribe": "اشترك لتسأل",
-    "askLimit": "انتهت أسئلة اليوم"
+    "askLimit": "انتهت أسئلة اليوم",
+    "quizTag": "اختبار",
+    "quizKindFix": "اعثر على الخطأ",
+    "quizKindChoose": "املأ الفراغ",
+    "quizKindOrder": "رتّب الكلمات",
+    "quizKindSay": "قلها",
+    "quizCheck": "تحقّق",
+    "quizRight": "صحيح",
+    "quizWrong": "قريب",
+    "quizScore": "{n} من {m} صحيحة",
+    "quizToScript": "تدرّب بالحوار"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7646,7 +7736,17 @@
     "learnedTitle": "สิ่งที่เรียนวันนี้",
     "learnedWords": "คำและสำนวน",
     "askSubscribe": "สมัครสมาชิกเพื่อถาม",
-    "askLimit": "วันนี้ถามครบแล้ว"
+    "askLimit": "วันนี้ถามครบแล้ว",
+    "quizTag": "ควิซ",
+    "quizKindFix": "หาจุดผิด",
+    "quizKindChoose": "เติมคำ",
+    "quizKindOrder": "เรียงลำดับ",
+    "quizKindSay": "ลองพูด",
+    "quizCheck": "ตรวจ",
+    "quizRight": "ถูกต้อง",
+    "quizWrong": "เกือบแล้ว",
+    "quizScore": "ถูก {n} จาก {m}",
+    "quizToScript": "ฝึกกับบทสนทนา"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8369,6 +8469,16 @@
     "learnedTitle": "आज क्या सीखा",
     "learnedWords": "शब्द और अभिव्यक्तियाँ",
     "askSubscribe": "पूछने के लिए सदस्यता लें",
-    "askLimit": "आज के सवाल खत्म हो गए"
+    "askLimit": "आज के सवाल खत्म हो गए",
+    "quizTag": "क्विज़",
+    "quizKindFix": "गलती ढूँढें",
+    "quizKindChoose": "खाली जगह भरें",
+    "quizKindOrder": "क्रम में लगाएँ",
+    "quizKindSay": "बोलकर देखें",
+    "quizCheck": "जाँचें",
+    "quizRight": "सही",
+    "quizWrong": "लगभग",
+    "quizScore": "{m} में से {n} सही",
+    "quizToScript": "स्क्रिप्ट से अभ्यास करें"
   }
 }

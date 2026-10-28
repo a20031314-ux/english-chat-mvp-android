@@ -1,0 +1,296 @@
+/**
+ * 약한 곳 퀴즈(2026-10-28 사용자 "어려워하거나 틀린 부분을 퀴즈로" → "퀴즈부터 만들어줘", `hub/drafts/today-weak-practice-2026-10-28.md`).
+ *
+ * 다시 볼 열쇠 하나(e|표현 · f|문장구조 · g|단계:문법)와, 있으면 튜터가 고친 내 줄(노트 카드)로 짧은 문제 셋을 기기에서 만든다 — 모델을 부르지 않는다.
+ * 재료는 이미 앱에 든 것뿐: 문장구조 예문, 대본 내 줄(문장구조 태그·핵심 표현·문법 태그), 고친 줄.
+ *
+ * 문제 종류:
+ * - fix    내가 틀린 줄에서 틀린 낱말 누르기(고친 줄과 낱말 차이). 차이가 빠진 말뿐이면 두 문장 중 맞는 것 고르기.
+ * - choose 문장에서 그 표현·문장구조 조각을 비우고 셋 중 고르기(오답 = 같은 갈래 다른 열쇠의 조각, 그 문장에 없는 것).
+ * - order  낱말 조각을 섞어 순서 맞추기(띄어쓰기 없는 언어는 wordSegments로 자름).
+ * - say    뜻만 보고 말하기(🎤, 대본과 같은 판정) — 늘 마지막.
+ * 맞음 = 셋 중 둘 이상. 순수 모듈: 화면(TodayPlan QuizPlayer)과 테스트가 같이 쓴다.
+ */
+import { allFramesFor } from "./frames.ts";
+import { allScriptsFor, type ScriptGloss, type StageScript } from "./stageScripts.ts";
+import { segmentWords, isSpaceless } from "../wordSegments.ts";
+
+export type QuizSource = { text: string; gloss: ScriptGloss; from: string; stage: number; piece?: string };
+
+/** 튜터가 고친 내 줄(노트 카드에서 — 폰의 오늘 목록에만 들고 다닌다). */
+export type QuizCard = { wrong: string; right: string; note?: string };
+
+export type QuizQuestion =
+  | { kind: "fix"; wrong: string; right: string; note?: string; words: string[]; bad: number[]; options?: string[]; answer?: number }
+  | { kind: "choose"; text: string; before: string; after: string; options: string[]; answer: number; gloss: ScriptGloss; from: string }
+  | { kind: "order"; text: string; words: string[]; tiles: number[]; spaced: boolean; gloss: ScriptGloss; from: string }
+  | { kind: "say"; text: string; gloss: ScriptGloss; from: string };
+
+export type Quiz = { key: string; questions: QuizQuestion[] };
+
+export const QUIZ_MINUTES = 2;
+export const QUIZ_SIZE = 3;
+
+/** 셋 중 둘 이상 맞으면 맞음(둘뿐이면 둘 다). */
+export function quizPassed(correct: number, total: number): boolean {
+  return total > 0 && correct >= Math.min(total, 2);
+}
+
+function hash(text: string): number {
+  let h = 2166136261;
+  for (let i = 0; i < text.length; i += 1) {
+    h ^= text.charCodeAt(i);
+    h = Math.imul(h, 16777619);
+  }
+  return h >>> 0;
+}
+
+/** 같은 열쇠·같은 날이면 같은 문제(다시 열어도 바뀌지 않게). */
+function rng(seed: string): () => number {
+  let a = hash(seed) || 1;
+  return () => {
+    a = (a + 0x6d2b79f5) | 0;
+    let t = Math.imul(a ^ (a >>> 15), 1 | a);
+    t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+}
+
+function shuffled<T>(list: readonly T[], random: () => number): T[] {
+  const out = [...list];
+  for (let i = out.length - 1; i > 0; i -= 1) {
+    const j = Math.floor(random() * (i + 1));
+    [out[i], out[j]] = [out[j]!, out[i]!];
+  }
+  return out;
+}
+
+/** 문장 안에서 표현을 대소문자 구별 없이 찾아, 문장에 적힌 그대로의 조각을 돌려준다. */
+export function pieceOf(text: string, expression: string): string | null {
+  if (!expression) return null;
+  const at = text.toLocaleLowerCase().indexOf(expression.toLocaleLowerCase());
+  if (at < 0 || text.toLocaleLowerCase().length !== text.length) return text.includes(expression) ? expression : null;
+  return text.slice(at, at + expression.length);
+}
+
+function frameOf(language: string, id: string) {
+  return allFramesFor(language).find((frame) => frame.id === id) ?? null;
+}
+
+/** 열쇠가 가리키는 문장들(문제 재료) — 그 조각(piece)이 문장에 그대로 든 것엔 piece를 붙인다. */
+export function quizSources(language: string, key: string): QuizSource[] {
+  const scripts = allScriptsFor(language);
+  const out: QuizSource[] = [];
+  const seen = new Set<string>();
+  const add = (source: QuizSource) => {
+    if (!source.text || seen.has(source.text)) return;
+    seen.add(source.text);
+    out.push(source);
+  };
+  if (key.startsWith("f|")) {
+    const frame = frameOf(language, key.slice(2));
+    if (!frame) return [];
+    const pieceIn = (text: string) => frame.core.find((core) => core && text.includes(core));
+    for (const example of frame.examples) add({ text: example.text, gloss: example.gloss, from: frame.id, stage: frame.stage, piece: pieceIn(example.text) });
+    for (const script of scripts) {
+      for (const line of script.lines) {
+        if (line.who === "me" && line.frames?.includes(frame.id)) add({ text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece: pieceIn(line.text) });
+      }
+    }
+    return out;
+  }
+  if (key.startsWith("e|")) {
+    const expression = key.slice(2);
+    for (const script of scripts) {
+      if (!script.expressions.includes(expression)) continue;
+      for (const line of script.lines) {
+        // 핵심 표현은 소문자·문장부호 없이 적혀 있다("hola" ↔ "¡Hola!") — 줄에 든 그대로의 조각을 쓴다.
+        const piece = line.who === "me" ? pieceOf(line.text, expression) : null;
+        if (piece) add({ text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece });
+      }
+    }
+    return out;
+  }
+  if (key.startsWith("g|")) {
+    const [stage, index] = key.slice(2).split(":").map(Number);
+    for (const script of scripts) {
+      if (script.stage !== stage || !(script.grammar ?? []).includes(index!)) continue;
+      for (const line of script.lines) {
+        if (line.who !== "me") continue;
+        // 문법 칸은 낱말 조각이 없다 — 그 줄의 문장구조 조각이 있으면 고르기 문제에 쓴다.
+        const piece = (line.frames ?? []).map((id) => frameOf(language, id)?.core.find((core) => core && line.text.includes(core))).find(Boolean);
+        add({ text: line.text, gloss: line.gloss, from: script.id, stage: script.stage, piece });
+      }
+    }
+    return out;
+  }
+  return [];
+}
+
+/** 고르기 오답 후보: 같은 갈래 다른 열쇠의 조각(가까운 단계 먼저). */
+function decoys(language: string, key: string, stage: number): string[] {
+  const near = (s: number) => Math.abs(s - stage) <= 1;
+  if (key.startsWith("e|")) {
+    const mine = key.slice(2);
+    return [
+      ...new Set(
+        allScriptsFor(language)
+          .filter((script) => near(script.stage))
+          .flatMap((script) => script.expressions)
+          .filter((expression) => expression !== mine),
+      ),
+    ];
+  }
+  const mine = key.startsWith("f|") ? key.slice(2) : "";
+  return [
+    ...new Set(
+      allFramesFor(language)
+        .filter((frame) => frame.id !== mine && near(frame.stage))
+        .flatMap((frame) => frame.core),
+    ),
+  ];
+}
+
+/** 띄어쓰기 없는 문장인지(조각을 붙여 보여 줄지). */
+function spacedText(text: string): boolean {
+  return !isSpaceless(text);
+}
+
+const lower = (text: string) => text.toLocaleLowerCase();
+const same = (a: string, b: string) => lower(a) === lower(b);
+
+function chooseOf(language: string, key: string, source: QuizSource, random: () => number): QuizQuestion | null {
+  const piece = source.piece;
+  if (!piece) return null;
+  const at = source.text.indexOf(piece);
+  if (at < 0) return null;
+  const wrong = shuffled(
+    decoys(language, key, source.stage).filter((one) => one && !same(one, piece) && !lower(source.text).includes(lower(one)) && !lower(piece).includes(lower(one)) && !lower(one).includes(lower(piece))),
+    random,
+  ).slice(0, 2);
+  if (wrong.length < 2) return null;
+  const options = shuffled([piece, ...wrong], random);
+  return {
+    kind: "choose",
+    text: source.text,
+    before: source.text.slice(0, at),
+    after: source.text.slice(at + piece.length),
+    options,
+    answer: options.indexOf(piece),
+    gloss: source.gloss,
+    from: source.from,
+  };
+}
+
+export function orderOf(language: string, source: QuizSource, random: () => number): QuizQuestion | null {
+  const words = segmentWords(source.text, language);
+  if (words.length < 3 || words.length > 10) return null;
+  const indices = words.map((_, i) => i);
+  let tiles = shuffled(indices, random);
+  for (let tries = 0; tries < 4 && tiles.every((value, i) => words[value] === words[i]); tries += 1) tiles = shuffled(indices, random);
+  if (tiles.every((value, i) => words[value] === words[i])) return null;
+  return { kind: "order", text: source.text, words, tiles, spaced: spacedText(source.text), gloss: source.gloss, from: source.from };
+}
+
+/** 고른 조각 차례가 맞는지(같은 낱말이 둘이면 어느 쪽이든). */
+export function orderCorrect(words: readonly string[], picked: readonly number[]): boolean {
+  return picked.length === words.length && picked.every((index, i) => words[index] === words[i]);
+}
+
+/** 틀린 줄의 낱말 중 고친 줄과 맞춰지지 않는 것(가장 긴 공통 차례 밖). */
+export function wrongWords(wrong: readonly string[], right: readonly string[]): number[] {
+  const norm = (word: string) => word.toLocaleLowerCase().replace(/[\p{P}]/gu, "");
+  const a = wrong.map(norm);
+  const b = right.map(norm);
+  const table: number[][] = Array.from({ length: a.length + 1 }, () => new Array<number>(b.length + 1).fill(0));
+  for (let i = a.length - 1; i >= 0; i -= 1) {
+    for (let j = b.length - 1; j >= 0; j -= 1) table[i]![j] = a[i] === b[j] ? table[i + 1]![j + 1]! + 1 : Math.max(table[i + 1]![j]!, table[i]![j + 1]!);
+  }
+  const kept = new Set<number>();
+  let i = 0;
+  let j = 0;
+  while (i < a.length && j < b.length) {
+    if (a[i] === b[j]) {
+      kept.add(i);
+      i += 1;
+      j += 1;
+    } else if (table[i + 1]![j]! >= table[i]![j + 1]!) i += 1;
+    else j += 1;
+  }
+  return a.map((_, index) => index).filter((index) => !kept.has(index) && a[index]);
+}
+
+export function fixOf(language: string, card: QuizCard, random: () => number): QuizQuestion | null {
+  if (!card.wrong || !card.right || card.wrong === card.right) return null;
+  const words = segmentWords(card.wrong, language);
+  const bad = wrongWords(words, segmentWords(card.right, language));
+  if (bad.length && bad.length < words.length) return { kind: "fix", wrong: card.wrong, right: card.right, note: card.note, words, bad };
+  // 고친 게 빠진 말을 더한 것뿐이면(또는 다 바뀌었으면) 두 문장 중 맞는 것.
+  const options = shuffled([card.right, card.wrong], random);
+  return { kind: "fix", wrong: card.wrong, right: card.right, note: card.note, words, bad: [], options, answer: options.indexOf(card.right) };
+}
+
+/**
+ * 열쇠 하나의 퀴즈: [고친 줄] → 고르기·순서 → 말하기, 셋까지. 재료가 모자라면 문제가 둘 이하일 수 있고, 하나도 못 만들면 null(그땐 원래 대본으로).
+ * seed = 그날(같은 날 다시 열면 같은 문제).
+ */
+export function buildQuiz(language: string, key: string, options: { card?: QuizCard | null; seed?: string } = {}): Quiz | null {
+  const random = rng(`${key}|${options.seed ?? ""}`);
+  const sources = shuffled(quizSources(language, key), random);
+  const questions: QuizQuestion[] = [];
+  const used = new Set<string>();
+  const fix = options.card ? fixOf(language, options.card, random) : null;
+  if (fix) questions.push(fix);
+  const middle: QuizQuestion[] = [];
+  for (const source of sources) {
+    if (middle.some((q) => q.kind === "choose")) break;
+    const choose = chooseOf(language, key, source, random);
+    if (choose) {
+      middle.push(choose);
+      used.add(source.text);
+    }
+  }
+  for (const source of sources) {
+    if (used.has(source.text)) continue;
+    const order = orderOf(language, source, random);
+    if (order) {
+      middle.push(order);
+      used.add(source.text);
+      break;
+    }
+  }
+  const sayFrom = sources.find((source) => !used.has(source.text)) ?? sources[0];
+  const room = QUIZ_SIZE - questions.length - (sayFrom ? 1 : 0);
+  questions.push(...middle.slice(0, Math.max(0, room)));
+  if (sayFrom) questions.push({ kind: "say", text: sayFrom.text, gloss: sayFrom.gloss, from: sayFrom.from });
+  return questions.length >= 2 ? { key, questions } : null;
+}
+
+/** 이 열쇠로 퀴즈를 낼 수 있는지(오늘 할 것이 퀴즈와 원래 대본 중 고를 때). */
+export function canQuiz(language: string, key: string): boolean {
+  return buildQuiz(language, key) !== null;
+}
+
+/** 조각 순서 문제의 맞는 문장 모양(띄어쓰기 없는 언어는 붙여서). */
+export function joinWords(words: readonly string[], spaced: boolean): string {
+  return words.join(spaced ? " " : "");
+}
+
+
+/** 대본 🎤에서 같은 줄을 두 번 이상 틀리면 약한 곳으로 본다. */
+export const SCRIPT_MISSES = 2;
+
+/**
+ * 대본에서 자꾸 틀린 내 줄 → 다시 볼 열쇠(그 줄의 문장구조 태그 + 그 줄에 든 핵심 표현). 학습 끝 체크에 "헷갈려요"로 미리 들어간다.
+ * misses = 줄 번호 → 틀린 횟수(말이 들렸는데 맞지 않은 것만).
+ */
+export function weakKeysOfScript(script: StageScript, misses: Readonly<Record<number, number>>): string[] {
+  const out = new Set<string>();
+  for (const [at, count] of Object.entries(misses)) {
+    const line = script.lines[Number(at)];
+    if (!line || line.who !== "me" || count < SCRIPT_MISSES) continue;
+    for (const frame of line.frames ?? []) out.add(`f|${frame}`);
+    for (const expression of script.expressions) if (pieceOf(line.text, expression)) out.add(`e|${expression}`);
+  }
+  return [...out];
+}

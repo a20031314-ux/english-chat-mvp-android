@@ -6,15 +6,30 @@
  * - 다시 볼 것: 헷갈려요 → 2일 뒤, 다시 헷갈려요 → 또 2일 뒤, 그 뒤 알아요 → 7일 뒤 한 번 더, 또 알아요 → 끝.
  * - 오늘 목록: 날짜가 지난 다시 볼 것 먼저, 그다음 아직 안 한 것(커리큘럼 순서 = 지금 단계부터 상황 대본 → 표현·문법 대본 → 문장구조,
  *   내 기록에 맞춰 = 오늘의 대본(서버 scriptPick)을 맨 앞에) — 고른 분량(분)이 찰 때까지.
+ * - 약한 곳은 퀴즈로(2026-10-28 사용자 "틀린 부분을 퀴즈로", curriculum/quiz.ts): 날짜 된 다시 볼 것·틀린 틀 다시 연습(노트 카드)은
+ *   원래 대본 대신 짧은 퀴즈(문제를 못 만들면 원래 대본). 약한 곳은 분량의 절반까지 — 새 것도 매일 조금은.
  */
 import { framesOfScript, allFramesFor, type Frame } from "./frames.ts";
 import { allScriptsFor, isSituationScript, scriptForExpressions, type StageScript } from "./stageScripts.ts";
+import { canQuiz, QUIZ_MINUTES, type QuizCard } from "./quiz.ts";
 
 export type PlanOrder = "curriculum" | "record";
 export const PACES = [5, 10, 20] as const;
 export type Pace = (typeof PACES)[number];
 
-export type PlanItem = { id: string; kind: "script" | "frame"; stage: number; minutes: number; review?: string };
+/**
+ * 오늘 목록 한 칸. quiz는 id = 열쇠(e|·f|·g|), review = 다시 볼 것 열쇠(틀린 틀 다시 연습에서 온 것은 없음 — 그땐 card),
+ * then = 퀴즈를 틀렸을 때 이어서 할 원래 대본·문장구조.
+ */
+export type PlanItem = {
+  id: string;
+  kind: "script" | "frame" | "quiz";
+  stage: number;
+  minutes: number;
+  review?: string;
+  card?: QuizCard;
+  then?: { id: string; stage: number };
+};
 
 export type ReviewEntry = { due: number; step: number; at: number };
 export type ReviewMap = Record<string, ReviewEntry>;
@@ -125,7 +140,7 @@ export function applyCheck(review: ReviewMap, key: string, known: boolean, now =
 }
 
 /** 다시 볼 열쇠를 무엇으로 연습할지: 문장구조는 그대로, 문법(g|단계:번호)은 그 문법을 쓰는 대본, 표현은 그 표현이 든 대본. */
-function itemForKey(language: string, key: string): PlanItem | null {
+export function itemForKey(language: string, key: string): PlanItem | null {
   if (key.startsWith("g|")) {
     const [stage, index] = key.slice(2).split(":").map(Number);
     const script = allScriptsFor(language).find((s) => s.stage === stage && (s.grammar ?? []).includes(index!));
@@ -152,6 +167,8 @@ export function todayPlan(input: {
   order: PlanOrder;
   /** 내 기록에 맞춰: 서버가 고른 오늘의 대본 id(scriptPick). */
   recommended?: string | null;
+  /** 튜터가 같은 틀을 두 번 고친 것(/api/notebook redo) — 고친 줄로 퀴즈. */
+  redo?: readonly { frame: string; card: QuizCard }[];
   now?: number;
 }): PlanItem[] {
   const now = input.now ?? Date.now();
@@ -164,14 +181,35 @@ export function todayPlan(input: {
     used += item.minutes;
     return true;
   };
+  // 약한 곳(날짜 된 다시 볼 것 → 틀린 틀 다시 연습)은 분량의 절반까지, 하나는 늘.
+  const weakBudget = Math.max(QUIZ_MINUTES, Math.floor(input.pace / 2));
+  const weak = (key: string, card?: QuizCard) => {
+    const practice = itemForKey(input.language, key);
+    if (!practice) return;
+    const item: PlanItem = canQuiz(input.language, key)
+      ? {
+          id: key,
+          kind: "quiz",
+          stage: practice.stage,
+          minutes: QUIZ_MINUTES,
+          ...(card ? { card } : { review: key }),
+          then: { id: practice.id, stage: practice.stage },
+        }
+      : card
+        ? { ...practice, review: undefined }
+        : practice;
+    if (out.length && used + item.minutes > weakBudget) return;
+    take(item);
+  };
   const due = Object.entries(input.review)
     .filter(([, entry]) => entry.due <= now)
     .sort((a, b) => a[1].due - b[1].due);
-  for (const [key] of due) {
-    const item = itemForKey(input.language, key);
-    if (item) take(item);
-    if (used >= input.pace) return out;
+  for (const [key] of due) weak(key);
+  for (const redo of input.redo ?? []) {
+    const key = `f|${redo.frame}`;
+    if (!out.some((item) => item.id === key)) weak(key, redo.card);
   }
+  if (used >= input.pace) return out;
   const fresh = curriculumItems(input.language, input.stage).filter((item) => !input.passed.has(item.id));
   if (input.order === "record" && input.recommended) {
     const first = fresh.find((item) => item.id === input.recommended);

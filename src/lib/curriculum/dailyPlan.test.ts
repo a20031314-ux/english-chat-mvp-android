@@ -71,8 +71,10 @@ test("오늘 배운 것: 문장구조·문법·단어 열쇠, 문법 다시 볼 
   assert.equal(isCurriculumKey("es", "g|9:9"), false);
   const review: ReviewMap = { [grammarKey(1, script.grammar![0]!)]: { due: NOW - 1, step: 1, at: NOW - DAY_MS } };
   const plan = todayPlan({ language: "ja", stage: 1, passed: new Set(), review, pace: 5, order: "curriculum", now: NOW });
-  assert.equal(plan[0]!.kind, "script");
-  assert.ok(allScriptsFor("ja").find((s) => s.id === plan[0]!.id)!.grammar!.includes(script.grammar![0]!));
+  // 퀴즈를 만들 수 있으면 퀴즈, 틀리면 이어서 그 문법 대본.
+  const first = plan[0]!;
+  const practice = first.kind === "quiz" ? first.then!.id : first.id;
+  assert.ok(allScriptsFor("ja").find((s) => s.id === practice)!.grammar!.includes(script.grammar![0]!));
 });
 
 test("직접 묻기: 답과 오늘 열쇠만 남김", async () => {
@@ -83,4 +85,25 @@ test("직접 묻기: 답과 오늘 열쇠만 남김", async () => {
   assert.equal(parseAskAnswer('{"answer":""}', allowed), null);
   const topics = parseTopics([{ key: "f|th-f1-01", label: " a  b " }, { key: "zz", label: "x" }, "no"], (key) => key.startsWith("f|"));
   assert.deepEqual(topics, [{ key: "f|th-f1-01", label: "a b" }]);
+});
+
+test("오늘 할 것: 약한 곳은 퀴즈로, 분량 절반까지, 틀린 틀 다시 연습도 고친 줄과 함께", () => {
+  const review: ReviewMap = {
+    "f|ja-f1-01": { due: NOW - 3, step: 1, at: NOW - 2 * DAY_MS },
+    "f|ja-f1-02": { due: NOW - 2, step: 1, at: NOW - 2 * DAY_MS },
+    "f|ja-f1-03": { due: NOW - 1, step: 1, at: NOW - 2 * DAY_MS },
+    "f|ja-f1-04": { due: NOW - 1, step: 1, at: NOW - 2 * DAY_MS },
+  };
+  const plan = todayPlan({ language: "ja", stage: 1, passed: new Set(), review, pace: 10, order: "curriculum", now: NOW });
+  const quizzes = plan.filter((item) => item.kind === "quiz");
+  assert.equal(quizzes[0]!.id, "f|ja-f1-01");
+  assert.equal(quizzes[0]!.review, "f|ja-f1-01");
+  assert.equal(quizzes[0]!.then!.id, "ja-f1-01");
+  assert.ok(quizzes.reduce((sum, item) => sum + item.minutes, 0) <= 5, "약한 곳은 절반까지");
+  assert.ok(plan.some((item) => item.kind !== "quiz"), "새 것도 들어감");
+  const card = { wrong: "わたしはキムだ。", right: "わたしはキムです。" };
+  const redo = todayPlan({ language: "ja", stage: 1, passed: new Set(), review: {}, pace: 5, order: "curriculum", redo: [{ frame: "ja-f1-01", card }], now: NOW });
+  assert.equal(redo[0]!.kind, "quiz");
+  assert.deepEqual(redo[0]!.card, card);
+  assert.equal(redo[0]!.review, undefined);
 });

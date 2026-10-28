@@ -343,6 +343,7 @@ export function NotebookSection({
           passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])}
           review={book.review ?? NO_REVIEW}
           recommended={book.recommend?.id ?? null}
+          redo={(book.redo ?? []).map((item) => ({ frame: item.frame, card: { wrong: item.card.wrong, right: item.card.right, note: item.card.note } }))}
           onOpen={(stage, id) => setJump({ stage, id, at: Date.now() })}
           grammarName={(stage, index) => {
             const node = book.nodes.find((one) => one.chapter === "grammar" && one.stage === stage && one.index === index);
