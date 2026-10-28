@@ -12,7 +12,8 @@ export function stageScriptKey(userId: string, language: string): string {
 }
 
 /** passed: 대본·틀 id → 처음 통과한 때. redo: 틀 id → 마지막으로 "다시 연습"을 끝낸 때(2026-10-28, 틀린 틀 다시 권유를 3일 쉼). */
-type Record_ = { passed: Record<string, number>; redo?: Record<string, number>; review?: ReviewMap };
+/** asked: 직접 물어본 곳(문법·문장구조·표현 열쇠) → 몇 번·마지막 때(2026-10-28 "어디가 부족하고 어디를 모르는지 기록", 질문·답 글은 남기지 않음). */
+type Record_ = { passed: Record<string, number>; redo?: Record<string, number>; review?: ReviewMap; asked?: Record<string, { n: number; at: number }> };
 
 export async function readPassedScripts(userId: string, language: string): Promise<Set<string>> {
   const record = await kvGetJson<Record_>(stageScriptKey(userId, language)).catch(() => null);
@@ -49,13 +50,13 @@ export async function readReview(userId: string, language: string): Promise<Revi
   return record?.review ?? {};
 }
 
-/** 학습 끝 체크(알아요·헷갈려요)를 반영. 열쇠는 e| 또는 f|로 시작하고 80자까지, 한 번에 12개까지. */
+/** 학습 끝 체크(알아요·헷갈려요)를 반영. 열쇠는 e|·f|·g|로 시작하고 80자까지, 한 번에 12개까지. */
 export async function saveChecks(userId: string, language: string, checks: Record<string, boolean>, now = Date.now()): Promise<ReviewMap> {
   const key = stageScriptKey(userId, language);
   const record = (await kvGetJson<Record_>(key).catch(() => null)) ?? { passed: {} };
   let review = record.review ?? {};
   for (const [check, known] of Object.entries(checks).slice(0, 12)) {
-    if (!/^[ef]\|/.test(check) || check.length > 80) continue;
+    if (!/^[efg]\|/.test(check) || check.length > 80) continue;
     review = applyCheck(review, check, known, now);
   }
   // 오래 묵은 것은 400개까지만(가장 최근 체크 순).
@@ -63,4 +64,25 @@ export async function saveChecks(userId: string, language: string, checks: Recor
   review = Object.fromEntries(entries);
   await kvSetJson(key, { ...record, review }, TTL_SECONDS);
   return review;
+}
+
+/** 직접 물어본 곳: 몇 번 물었는지 남기고, 헷갈려요처럼 다시 볼 것에 넣는다(2일 뒤 오늘 할 것에 "다시"). 열쇠는 부르는 쪽이 거른 것. */
+export async function recordAsked(userId: string, language: string, keys: readonly string[], now = Date.now()): Promise<ReviewMap> {
+  const key = stageScriptKey(userId, language);
+  const record = (await kvGetJson<Record_>(key).catch(() => null)) ?? { passed: {} };
+  let review = record.review ?? {};
+  const asked = { ...(record.asked ?? {}) };
+  for (const one of keys.slice(0, 4)) {
+    review = applyCheck(review, one, false, now);
+    asked[one] = { n: (asked[one]?.n ?? 0) + 1, at: now };
+  }
+  const trimmedAsked = Object.fromEntries(Object.entries(asked).sort((a, b) => b[1].at - a[1].at).slice(0, 300));
+  const trimmedReview = Object.fromEntries(Object.entries(review).sort((a, b) => b[1].at - a[1].at).slice(0, 400));
+  await kvSetJson(key, { ...record, review: trimmedReview, asked: trimmedAsked }, TTL_SECONDS);
+  return trimmedReview;
+}
+
+export async function readAsked(userId: string, language: string): Promise<Record<string, { n: number; at: number }>> {
+  const record = await kvGetJson<Record_>(stageScriptKey(userId, language)).catch(() => null);
+  return record?.asked ?? {};
 }

@@ -62,10 +62,51 @@ export function daysLeft(language: string, pace: number, passed: ReadonlySet<str
 /** 다시 볼 열쇠가 가리키는 것(표현 글자 또는 문장구조 틀). */
 export function reviewLabel(language: string, key: string): string {
   if (key.startsWith("f|")) return allFramesFor(language).find((f) => f.id === key.slice(2))?.pattern ?? "";
+  if (key.startsWith("g|")) return "";
   return key.slice(2);
 }
 
-/** 다시 볼 것 열쇠: 표현은 e|표현, 문장구조는 f|id. */
+/** 문법 칸 열쇠(g|단계:번호) — 대본의 grammar 태그. */
+export function grammarKey(stage: number, index: number): string {
+  return `g|${stage}:${index}`;
+}
+
+export type Learned = { frames: string[]; grammar: string[]; words: string[] };
+
+/**
+ * 오늘 한 것으로 배운 것 정리(2026-10-28 사용자 "학습한 걸 문장구조, 문법, 단어로 정리"): 대본·문장구조 id → 세 갈래 열쇠.
+ * 문장구조 = 문장구조 자체 + 대본 줄의 문장구조 태그, 문법 = 대본 grammar 태그, 단어 = 대본 핵심 표현.
+ */
+export function learnedFrom(language: string, ids: readonly string[]): Learned {
+  const scripts = allScriptsFor(language);
+  const frames = allFramesFor(language);
+  const out = { frames: new Set<string>(), grammar: new Set<string>(), words: new Set<string>() };
+  for (const id of ids) {
+    const frame = frames.find((f) => f.id === id);
+    if (frame) {
+      out.frames.add(`f|${frame.id}`);
+      for (const index of frame.grammar ?? []) out.grammar.add(grammarKey(frame.stage, index));
+      continue;
+    }
+    const script = scripts.find((s) => s.id === id);
+    if (!script) continue;
+    for (const f of framesOfScript(script)) out.frames.add(`f|${f}`);
+    for (const index of script.grammar ?? []) out.grammar.add(grammarKey(script.stage, index));
+    for (const e of script.expressions) out.words.add(`e|${e}`);
+  }
+  return { frames: [...out.frames].slice(0, 12), grammar: [...out.grammar].slice(0, 12), words: [...out.words].slice(0, 16) };
+}
+
+/** 열쇠가 이 언어 커리큘럼에 있는 것인지(서버가 받은 열쇠를 거른다). */
+export function isCurriculumKey(language: string, key: string): boolean {
+  if (key.length > 80) return false;
+  if (key.startsWith("f|")) return allFramesFor(language).some((f) => f.id === key.slice(2));
+  if (key.startsWith("g|")) return itemForKey(language, key) !== null;
+  if (key.startsWith("e|")) return allScriptsFor(language).some((s) => s.expressions.includes(key.slice(2)));
+  return false;
+}
+
+/** 다시 볼 것 열쇠: 표현은 e|표현, 문장구조는 f|id, 문법은 g|단계:번호. */
 export function reviewKeysOf(language: string, id: string): string[] {
   const script = allScriptsFor(language).find((s) => s.id === id);
   if (script) return [...script.expressions.map((e) => `e|${e}`), ...framesOfScript(script).map((f) => `f|${f}`)].slice(0, 8);
@@ -83,8 +124,13 @@ export function applyCheck(review: ReviewMap, key: string, known: boolean, now =
   return next;
 }
 
-/** 다시 볼 열쇠를 무엇으로 연습할지: 문장구조는 그대로, 표현은 그 표현이 든 대본. */
+/** 다시 볼 열쇠를 무엇으로 연습할지: 문장구조는 그대로, 문법(g|단계:번호)은 그 문법을 쓰는 대본, 표현은 그 표현이 든 대본. */
 function itemForKey(language: string, key: string): PlanItem | null {
+  if (key.startsWith("g|")) {
+    const [stage, index] = key.slice(2).split(":").map(Number);
+    const script = allScriptsFor(language).find((s) => s.stage === stage && (s.grammar ?? []).includes(index!));
+    return script ? { id: script.id, kind: "script", stage: script.stage, minutes: minutesOf(script), review: key } : null;
+  }
   if (key.startsWith("f|")) {
     const frame = allFramesFor(language).find((f) => f.id === key.slice(2));
     return frame ? { id: frame.id, kind: "frame", stage: frame.stage, minutes: minutesOf(frame), review: key } : null;

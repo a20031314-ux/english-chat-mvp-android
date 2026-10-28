@@ -716,7 +716,11 @@
     "planAgain": "もう一度",
     "planAllDone": "今日は完了",
     "checkKnown": "わかる",
-    "checkUnsure": "あやふや"
+    "checkUnsure": "あやふや",
+    "learnedTitle": "今日学んだこと",
+    "learnedWords": "単語・表現",
+    "askSubscribe": "購読して質問する",
+    "askLimit": "今日の質問はもう使い切りました"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1435,7 +1439,11 @@
     "planAgain": "再练",
     "planAllDone": "今天完成",
     "checkKnown": "我会了",
-    "checkUnsure": "还不确定"
+    "checkUnsure": "还不确定",
+    "learnedTitle": "今天学到的",
+    "learnedWords": "单词·表达",
+    "askSubscribe": "订阅后提问",
+    "askLimit": "今天的提问次数已用完"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2156,7 +2164,11 @@
     "planAgain": "Ôn lại",
     "planAllDone": "Xong hôm nay",
     "checkKnown": "Tôi biết rồi",
-    "checkUnsure": "Còn lẫn lộn"
+    "checkUnsure": "Còn lẫn lộn",
+    "learnedTitle": "Hôm nay đã học",
+    "learnedWords": "Từ và cách nói",
+    "askSubscribe": "Đăng ký để hỏi",
+    "askLimit": "Hôm nay đã hết lượt hỏi"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2882,7 +2894,11 @@
     "planAgain": "À revoir",
     "planAllDone": "Fini pour aujourd'hui",
     "checkKnown": "Je sais",
-    "checkUnsure": "Pas sûr"
+    "checkUnsure": "Pas sûr",
+    "learnedTitle": "Ce que tu as appris aujourd'hui",
+    "learnedWords": "Mots et expressions",
+    "askSubscribe": "S'abonner pour poser une question",
+    "askLimit": "Plus de questions pour aujourd'hui"
   },
   "it": {
     "archive": "Report",
@@ -3799,7 +3815,11 @@
     "planAgain": "Ripassa",
     "planAllDone": "Fatto per oggi",
     "checkKnown": "Lo so",
-    "checkUnsure": "Non sono sicuro"
+    "checkUnsure": "Non sono sicuro",
+    "learnedTitle": "Cosa hai imparato oggi",
+    "learnedWords": "Parole ed espressioni",
+    "askSubscribe": "Abbonati per chiedere",
+    "askLimit": "Domande finite per oggi"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4528,7 +4548,11 @@
     "planAgain": "Revisar",
     "planAllDone": "Feito por hoje",
     "checkKnown": "Eu sei",
-    "checkUnsure": "Não tenho certeza"
+    "checkUnsure": "Não tenho certeza",
+    "learnedTitle": "O que você aprendeu hoje",
+    "learnedWords": "Palavras e expressões",
+    "askSubscribe": "Assine para perguntar",
+    "askLimit": "Acabaram as perguntas de hoje"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5443,7 +5467,11 @@
     "planAgain": "Повторить",
     "planAllDone": "На сегодня всё",
     "checkKnown": "Знаю",
-    "checkUnsure": "Путаюсь"
+    "checkUnsure": "Путаюсь",
+    "learnedTitle": "Что ты сегодня выучил",
+    "learnedWords": "Слова и выражения",
+    "askSubscribe": "Оформить подписку, чтобы спросить",
+    "askLimit": "Вопросы на сегодня закончились"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6168,7 +6196,11 @@
     "planAgain": "Ulangi",
     "planAllDone": "Selesai hari ini",
     "checkKnown": "Sudah tahu",
-    "checkUnsure": "Masih bingung"
+    "checkUnsure": "Masih bingung",
+    "learnedTitle": "Yang dipelajari hari ini",
+    "learnedWords": "Kata dan ungkapan",
+    "askSubscribe": "Berlangganan untuk bertanya",
+    "askLimit": "Jatah pertanyaan hari ini habis"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6887,7 +6919,11 @@
     "planAgain": "مراجعة",
     "planAllDone": "انتهى اليوم",
     "checkKnown": "أعرفه",
-    "checkUnsure": "لست متأكدًا"
+    "checkUnsure": "لست متأكدًا",
+    "learnedTitle": "ما تعلّمته اليوم",
+    "learnedWords": "كلمات وعبارات",
+    "askSubscribe": "اشترك لتسأل",
+    "askLimit": "انتهت أسئلة اليوم"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7606,7 +7642,11 @@
     "planAgain": "ทบทวน",
     "planAllDone": "วันนี้เสร็จแล้ว",
     "checkKnown": "รู้แล้ว",
-    "checkUnsure": "ยังสับสน"
+    "checkUnsure": "ยังสับสน",
+    "learnedTitle": "สิ่งที่เรียนวันนี้",
+    "learnedWords": "คำและสำนวน",
+    "askSubscribe": "สมัครสมาชิกเพื่อถาม",
+    "askLimit": "วันนี้ถามครบแล้ว"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8325,6 +8365,10 @@
     "planAgain": "दोहराएँ",
     "planAllDone": "आज का हो गया",
     "checkKnown": "मुझे आता है",
-    "checkUnsure": "पक्का नहीं"
+    "checkUnsure": "पक्का नहीं",
+    "learnedTitle": "आज क्या सीखा",
+    "learnedWords": "शब्द और अभिव्यक्तियाँ",
+    "askSubscribe": "पूछने के लिए सदस्यता लें",
+    "askLimit": "आज के सवाल खत्म हो गए"
   }
 }

@@ -344,6 +344,10 @@ export function NotebookSection({
           review={book.review ?? NO_REVIEW}
           recommended={book.recommend?.id ?? null}
           onOpen={(stage, id) => setJump({ stage, id, at: Date.now() })}
+          grammarName={(stage, index) => {
+            const node = book.nodes.find((one) => one.chapter === "grammar" && one.stage === stage && one.index === index);
+            return node ? nameOf(node.id) : "";
+          }}
         />
       ) : null}
       {frame && book.stages.length && book.parts?.some((row) => row.scripts) ? (

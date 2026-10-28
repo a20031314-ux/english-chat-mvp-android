@@ -7,6 +7,7 @@ import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
 import {
   daysLeft,
+  learnedFrom,
   PACES,
   reviewKeysOf,
   reviewLabel,
@@ -17,6 +18,7 @@ import {
   type ReviewMap,
 } from "@/lib/curriculum/dailyPlan";
 import { allFramesFor } from "@/lib/curriculum/frames";
+import { useBillingUiOptional } from "@/components/BillingScreen";
 import { allScriptsFor, glossFor } from "@/lib/curriculum/stageScripts";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 
@@ -70,6 +72,7 @@ export function TodayPlan({
   review: initialReview,
   recommended,
   onOpen,
+  grammarName,
 }: {
   ui: UICopy;
   locale: string;
@@ -80,6 +83,8 @@ export function TodayPlan({
   /** 서버가 고른 오늘의 대본(내 기록에 맞춰). */
   recommended: string | null;
   onOpen: (stage: number, id: string) => void;
+  /** 문법 칸 이름(단계·번호 → 앱 언어, NotebookSection의 노트 칸). */
+  grammarName: (stage: number, index: number) => string;
 }) {
   // 대본 이름은 앱 언어로(서버가 옮김) — 받으면 다시 그린다. 오늘 목록은 지금 단계와 다음 단계까지.
   useStageGlosses(language, stage, locale);
@@ -90,13 +95,11 @@ export function TodayPlan({
   const [now, setNow] = useState(0);
   useEffect(() => {
     // 저장해 둔 분량·순서와 오늘 목록은 화면에 붙은 뒤 읽는다(서버 그림과 어긋나지 않게).
-     
     setSettings(readSettings());
     setSnapshot(readSnapshot());
     setNow(Date.now());
   }, []);
   useEffect(() => {
-     
     setReview(initialReview);
   }, [initialReview]);
   useEffect(() => {
@@ -127,7 +130,6 @@ export function TodayPlan({
     } catch {
       // 이 화면에서만.
     }
-     
     setSnapshot(next);
   }, [same, day, fresh, language, settings.pace, settings.order]);
 
@@ -207,7 +209,7 @@ export function TodayPlan({
                   </span>
                   {item.review ? (
                     <span dir="auto" className="block truncate text-meta text-warn">
-                      {ui.planAgain} · {reviewLabel(language, item.review)}
+                      {ui.planAgain} · {keyLabel(language, item.review, grammarName)}
                     </span>
                   ) : null}
                 </span>
@@ -217,7 +219,138 @@ export function TodayPlan({
           );
         })}
       </ul>
+      {finished ? <LearnedToday ui={ui} locale={locale} language={language} ids={items.map((item) => item.id)} grammarName={grammarName} /> : null}
     </section>
+  );
+}
+
+/** 다시 볼 것·배운 것 열쇠의 이름(문법은 노트 칸 이름). */
+function keyLabel(language: string, key: string, grammarName: (stage: number, index: number) => string): string {
+  if (!key.startsWith("g|")) return reviewLabel(language, key);
+  const [stage, index] = key.slice(2).split(":").map(Number);
+  return grammarName(stage!, index!);
+}
+
+const PAID_TIERS = new Set(["lite", "plus", "premium"]);
+
+/**
+ * 오늘 분량을 다 하면: 오늘 배운 것(문장구조·문법·단어, curriculum/dailyPlan.ts learnedFrom) + 직접 묻기(유료만, /api/curriculum/ask).
+ * 질문·답 글은 남기지 않고, 서버가 질문이 걸린 곳만 기록해 다시 볼 것에 넣는다 — 그 칩에 ?가 붙는다.
+ */
+function LearnedToday({
+  ui,
+  locale,
+  language,
+  ids,
+  grammarName,
+}: {
+  ui: UICopy;
+  locale: string;
+  language: string;
+  ids: readonly string[];
+  grammarName: (stage: number, index: number) => string;
+}) {
+  const { isPremium, tier } = usePremium();
+  const billing = useBillingUiOptional();
+  const idKey = ids.join(",");
+  const learned = useMemo(() => learnedFrom(language, idKey ? idKey.split(",") : []), [language, idKey]);
+  const [question, setQuestion] = useState("");
+  const [asking, setAsking] = useState(false);
+  const [answer, setAnswer] = useState<{ text: string; about: string[] } | null>(null);
+  const [problem, setProblem] = useState<string | null>(null);
+  const [asked, setAsked] = useState<Set<string>>(new Set());
+  const groups = [
+    { id: "frames", label: ui.amountFrames, keys: learned.frames },
+    { id: "grammar", label: ui.partGrammar, keys: learned.grammar },
+    { id: "words", label: ui.learnedWords, keys: learned.words },
+  ].filter((group) => group.keys.length);
+  if (!groups.length) return null;
+  const paid = PAID_TIERS.has(tier);
+  const topics = groups.flatMap((group) => group.keys.map((key) => ({ key, label: keyLabel(language, key, grammarName) }))).filter((topic) => topic.label);
+
+  const ask = async () => {
+    const text = question.trim();
+    if (text.length < 2 || asking) return;
+    setAsking(true);
+    setProblem(null);
+    try {
+      const response = await fetch(apiUrl("/api/curriculum/ask"), {
+        method: "POST",
+        headers: { "Content-Type": "application/json", ...entitlementHeaders(isPremium) },
+        body: JSON.stringify({ language, interfaceLanguage: locale, question: text, topics }),
+      });
+      const body = (await response.json().catch(() => null)) as { answer?: string; about?: string[]; review?: ReviewMap; error?: string } | null;
+      if (response.ok && body?.answer) {
+        setAnswer({ text: body.answer, about: body.about ?? [] });
+        setAsked((current) => new Set([...current, ...(body.about ?? [])]));
+        setQuestion("");
+        if (body.review) announceReview(language, body.review);
+      } else {
+        setProblem(body?.error === "DAILY_LIMIT_REACHED" ? ui.askLimit : ui.askFailed);
+      }
+    } catch {
+      setProblem(ui.askFailed);
+    } finally {
+      setAsking(false);
+    }
+  };
+
+  return (
+    <div className="mt-3 flex flex-col gap-2 border-t border-line pt-3">
+      <h4 className="text-caption font-semibold text-slate-300">{ui.learnedTitle}</h4>
+      {groups.map((group) => (
+        <div key={group.id} className="flex flex-col gap-1">
+          <span className="text-meta text-slate-500">{group.label}</span>
+          <div className="flex flex-wrap gap-1.5">
+            {group.keys.map((key) => {
+              const label = keyLabel(language, key, grammarName);
+              if (!label) return null;
+              const flagged = asked.has(key);
+              return (
+                <span key={key} dir="auto" className={`rounded-full border px-2.5 py-1 text-caption ${flagged ? "border-warn/60 text-warn" : "border-line text-slate-200"}`}>
+                  {label}
+                  {flagged ? " ?" : ""}
+                </span>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+      {paid ? (
+        <>
+          <div className="mt-1 flex items-center gap-2">
+            <input
+              value={question}
+              onChange={(event) => setQuestion(event.target.value.slice(0, 300))}
+              onKeyDown={(event) => {
+                if (event.key === "Enter") void ask();
+              }}
+              aria-label={ui.askSend}
+              dir="auto"
+              className="min-w-0 flex-1 rounded-xl border border-line bg-transparent px-3 py-2 text-note text-ink"
+            />
+            <button
+              type="button"
+              onClick={() => void ask()}
+              disabled={asking || question.trim().length < 2}
+              className="shrink-0 rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-50"
+            >
+              {asking ? "…" : ui.askSend}
+            </button>
+          </div>
+          {problem ? <p className="text-caption text-warn">{problem}</p> : null}
+          {answer ? (
+            <p dir="auto" className="whitespace-pre-line rounded-xl bg-white/5 px-3 py-2 text-note text-slate-100">
+              {answer.text}
+            </p>
+          ) : null}
+        </>
+      ) : billing ? (
+        <button type="button" onClick={billing.openBilling} className="mt-1 self-start rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10">
+          {ui.askSubscribe}
+        </button>
+      ) : null}
+    </div>
   );
 }
 
