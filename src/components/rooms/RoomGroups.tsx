@@ -21,10 +21,10 @@ import {
   myRelations,
   translateLine, aiFailText } from "@/lib/rooms/client";
 import { GROUP_MAX_MEMBERS, GROUP_MAX_NAME_CHARS, groupSeen, type Group, type GroupCall, type GroupMessage, type GroupSummary } from "@/lib/rooms/group";
-import { requestGroupCall } from "@/lib/rooms/openDm";
+import { requestDm, requestGroupCall } from "@/lib/rooms/openDm";
 import { askPhraseAbout, questionCount } from "@/lib/rooms/quote";
 import { isLearningLanguageCode } from "@/lib/learningLanguages";
-import { Composer, Face, LineActions, MyLinePolish, QuoteText, Unsendable, languagePair, useProfile } from "./RoomParts";
+import { Composer, Face, LineActions, MyLinePolish, ProfileSheet, QuoteText, Unsendable, languagePair, useProfile } from "./RoomParts";
 import { MediaImage } from "./MediaImage";
 import { IconImage } from "./IconPacks";
 import { teamCopy, type TeamCopy } from "@/lib/rooms/teamCopy";
@@ -437,10 +437,13 @@ function GroupBubble({
   asked,
   onQuote,
   seenBy = 0,
+  onProfile,
 }: {
   t: RoomCopy;
   me: string;
   message: GroupMessage;
+  /** 남의 줄 얼굴을 누르면 그 사람 프로필. */
+  onProfile?: (accountId: string) => void;
   /** 내 마지막 줄이면 그 줄까지 읽은 사람 수 — 시간 앞에 "n명 읽음". */
   seenBy?: number;
   locale: string;
@@ -469,7 +472,11 @@ function GroupBubble({
   const time = new Date(message.at).toLocaleTimeString(locale, { hour: "2-digit", minute: "2-digit" });
   return (
     <div className={`flex gap-2 ${mine ? "justify-end" : "justify-start"}`}>
-      {mine ? null : <Face accountId={message.from} name={name} size={30} />}
+      {mine ? null : (
+        <button type="button" onClick={() => onProfile?.(message.from)} aria-label={name} className="shrink-0 self-start rounded-full">
+          <Face accountId={message.from} name={name} size={30} />
+        </button>
+      )}
       <div className="max-w-[78%]">
         {mine ? null : (
           <p className="mb-0.5 px-1 text-meta text-slate-400" dir="auto">
@@ -545,6 +552,7 @@ function MembersSheet({
   onClose,
   onChanged,
   onLeft,
+  onProfile,
 }: {
   t: RoomCopy;
   tt: TeamCopy;
@@ -553,6 +561,8 @@ function MembersSheet({
   onClose: () => void;
   onChanged: () => void;
   onLeft: () => void;
+  /** 다른 멤버를 누르면 그 사람 프로필(멤버 목록은 닫힘). */
+  onProfile: (accountId: string) => void;
 }) {
   const [inviting, setInviting] = useState(false);
   const [picked, setPicked] = useState<string[]>([]);
@@ -579,11 +589,18 @@ function MembersSheet({
           <ul className="space-y-1.5">
             {group.members.map((id) => (
               <li key={id} className="flex items-center gap-2">
-                <PersonFace id={id} size={30} />
-                <span className="min-w-0 flex-1 truncate text-sm text-white" dir="auto">
-                  {id === group.owner ? "👑 " : ""}
-                  {id === me ? t.you : <Name id={id} />}
-                </span>
+                <button
+                  type="button"
+                  disabled={id === me}
+                  onClick={() => onProfile(id)}
+                  className="flex min-w-0 flex-1 items-center gap-2 rounded-lg text-start enabled:hover:bg-white/5"
+                >
+                  <PersonFace id={id} size={30} />
+                  <span className="min-w-0 flex-1 truncate text-sm text-white" dir="auto">
+                    {id === group.owner ? "👑 " : ""}
+                    {id === me ? t.you : <Name id={id} />}
+                  </span>
+                </button>
                 {owner && id !== me ? (
                   <>
                     <button type="button" onClick={() => void act(() => groupTransfer(group.id, id))} className="rounded-lg border border-amber-300/40 px-2 py-0.5 text-xs text-amber-200">
@@ -687,6 +704,8 @@ export function GroupThreadView({
   const [call, setCall] = useState<GroupCall>(null);
   // 다른 사람들이 읽은 줄 번호(서버 reads, 2.76~) — 내 마지막 줄 아래 "n명 읽음".
   const [reads, setReads] = useState<number[]>([]);
+  // 얼굴·멤버를 누르면 그 사람 프로필(사람 탭·게시판·Room과 같은 시트).
+  const [profileOf, setProfileOf] = useState<string | null>(null);
   // 팀·메이트면 대화 / 워크스페이스 전환.
   const [pane, setPane] = useState<"chat" | "space">("chat");
   const tt = teamCopy(locale);
@@ -876,6 +895,7 @@ export function GroupThreadView({
                 <GroupBubble
                   t={t}
                   me={me}
+                  onProfile={setProfileOf}
                   seenBy={message.seq === seen.seq ? seen.count : 0}
                   message={message}
                   locale={locale}
@@ -930,6 +950,31 @@ export function GroupThreadView({
           onLeft={() => {
             setMembers(false);
             onClose();
+          }}
+          onProfile={(id) => {
+            setMembers(false);
+            setProfileOf(id);
+          }}
+        />
+      ) : null}
+      {profileOf ? (
+        <ProfileSheet
+          t={t}
+          locale={locale}
+          member={null}
+          accountId={profileOf}
+          nickname=""
+          above
+          isHostView={false}
+          roomId=""
+          recentLines={texts.filter((row) => row.from === profileOf).slice(-3).map((row) => row.text)}
+          onClose={() => setProfileOf(null)}
+          onGrant={() => {}}
+          onBlockedChange={() => setProfileOf(null)}
+          onMessage={(id) => {
+            setProfileOf(null);
+            onClose();
+            requestDm(id);
           }}
         />
       ) : null}

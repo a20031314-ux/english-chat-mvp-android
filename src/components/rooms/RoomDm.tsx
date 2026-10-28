@@ -19,7 +19,7 @@ import type { RoomMeta } from "@/lib/rooms/protocol";
 import { askPhraseAbout, questionCount } from "@/lib/rooms/quote";
 import { ThankButton } from "@/components/account/ProfileFacts";
 import type { RoomNote } from "@/lib/rooms/layout";
-import { Composer, Face, LineActions, MyLinePolish, QuoteText, Unsendable, useProfile } from "./RoomParts";
+import { Composer, Face, LineActions, MyLinePolish, ProfileSheet, QuoteText, Unsendable, useProfile } from "./RoomParts";
 import { MediaImage } from "./MediaImage";
 import { IconImage } from "./IconPacks";
 
@@ -179,6 +179,8 @@ export function DmThreadView({
   const [loaded, setLoaded] = useState(false);
   // 상대가 읽은 마지막 줄 번호(서버 peerRead, 2.76~) — 내 말 중 그 안의 가장 마지막 줄에만 "읽음".
   const [peerRead, setPeerRead] = useState(0);
+  // 머리의 사진·이름을 누르면 상대 프로필(사람 탭·게시판·Room과 같은 시트).
+  const [profileOpen, setProfileOpen] = useState(false);
   const since = useRef(0);
   const scroller = useRef<HTMLDivElement>(null);
 
@@ -280,10 +282,17 @@ export function DmThreadView({
             <button type="button" onClick={onClose} className="rounded-lg px-2 py-1 text-sm text-slate-300 hover:bg-white/10">
               ← {t.back}
             </button>
-            <Face accountId={other} name={name} size={36} />
-            <p className="min-w-0 flex-1 truncate text-[15px] font-semibold text-white" dir="auto">
-              {name}
-            </p>
+            <button
+              type="button"
+              onClick={() => setProfileOpen(true)}
+              aria-label={name}
+              className="flex min-w-0 flex-1 items-center gap-3 rounded-lg text-start hover:bg-white/5"
+            >
+              <Face accountId={other} name={name} size={36} />
+              <span className="min-w-0 flex-1 truncate text-[15px] font-semibold text-white" dir="auto">
+                {name}
+              </span>
+            </button>
             <button
               type="button"
               onClick={() => void startCall()}
@@ -410,6 +419,26 @@ export function DmThreadView({
           </footer>
         </div>
       </div>
+      {profileOpen ? (
+        <ProfileSheet
+          t={t}
+          locale={locale}
+          member={null}
+          accountId={other}
+          nickname={name}
+          above
+          isHostView={false}
+          roomId=""
+          recentLines={messages.filter((message) => message.from === other && message.kind === "text").slice(-3).map((message) => message.text)}
+          onClose={() => setProfileOpen(false)}
+          onGrant={() => {}}
+          onBlockedChange={() => {
+            setProfileOpen(false);
+            // 차단·해제가 바뀌면 입력·통화 막힘을 다시 받는다.
+            void dmOpen(other).then((body) => setBlocked(body.blocked), () => {});
+          }}
+        />
+      ) : null}
     </BodyLayer>
   );
 }

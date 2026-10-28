@@ -141,6 +141,7 @@ export function ProfileSheet({
   onTransfer,
   onBlockedChange,
   onMessage,
+  above = false,
 }: {
   t: RoomCopy;
   locale: string;
@@ -158,6 +159,8 @@ export function ProfileSheet({
   onBlockedChange: () => void;
   /** 있으면 "메시지" 버튼(1:1 대화 열기). */
   onMessage?: (accountId: string) => void;
+  /** 1:1·단체방 화면(z-[95]) 위에서 열 때 — 그보다 위 층(z-[97])에. */
+  above?: boolean;
 }) {
   const profile = useProfile(accountId);
   const [busy, setBusy] = useState(false);
@@ -209,7 +212,7 @@ export function ProfileSheet({
 
   return (
     <BodyLayer>
-      <div className="fixed inset-0 z-[90] flex items-end justify-center bg-black/60 p-3 sm:items-center" onClick={onClose}>
+      <div className={`fixed inset-0 ${above ? "z-[97]" : "z-[90]"} flex items-end justify-center bg-black/60 p-3 sm:items-center`} onClick={onClose}>
         <div
           role="dialog"
           aria-modal="true"
