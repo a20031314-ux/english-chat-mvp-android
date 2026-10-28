@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <application
         android:allowBackup="true"
@@ -82,4 +83,6 @@
     <uses-permission android:name="com.android.vending.BILLING" />
     <!-- 광고 ID: 광고 SDK가 병합해 넣지만 Play 신고(광고 ID 사용)와 맞추려고 밝혀 둔다. -->
     <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+    <!-- 아침 알림(로컬 알림)은 정확한 시각이 아니어도 된다 — 알람 앱 권한은 빼서 Play 정책·사용자 허락 화면을 피한다(2026-10-28). -->
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" tools:node="remove" />
 </manifest>

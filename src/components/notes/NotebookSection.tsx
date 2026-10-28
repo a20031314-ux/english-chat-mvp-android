@@ -16,6 +16,12 @@ import type { RedoItem } from "@/lib/curriculum/frameRedo";
 import { useScriptPack } from "@/lib/curriculum/useScriptPack";
 import type { ReviewMap } from "@/lib/curriculum/dailyPlan";
 import { TodayPlan } from "@/components/studyMap/TodayPlan";
+import { WeakStrip } from "@/components/studyMap/WeakStrip";
+import { curriculumItems } from "@/lib/curriculum/dailyPlan";
+import { allMisses } from "@/lib/curriculum/scriptMisses";
+import { weakSpots, wordsToShow } from "@/lib/curriculum/weakSpots";
+import { morningDays } from "@/lib/curriculum/morningDigest";
+import { onMorningChange, readMorning, scheduleMorning } from "@/lib/morningNotify";
 import { allScriptsFor, glossFor, scriptForExpressions } from "@/lib/curriculum/stageScripts";
 import { allFramesFor } from "@/lib/curriculum/frames";
 
@@ -285,6 +291,36 @@ export function NotebookSection({
     [edit],
   );
 
+  // 아침 알림(lib/morningNotify.ts): 기록을 받을 때마다·설정을 바꿀 때 앞으로 7일을 다시 건다. 단계 보기에서만(두 번 걸지 않게).
+  useEffect(() => {
+    if (!book || !frame) return;
+    const run = () => {
+      const settings = readMorning();
+      if (!settings.on) {
+        void scheduleMorning([], ui.morningSetting);
+        return;
+      }
+      const review = book.review ?? NO_REVIEW;
+      const passed = new Set((book.parts ?? []).flatMap((row) => row.scripts?.passed ?? []));
+      const spots = weakSpots({ language, fixes: [...book.cards, ...book.pending], misses: allMisses(language), review, limit: 14 });
+      const upcoming = curriculumItems(language, book.stage)
+        .filter((item) => !passed.has(item.id))
+        .slice(0, 12)
+        .map((item) => item.id);
+      const texts = morningDays({
+        locale,
+        title: ui.morningTitle,
+        fallback: ui.planTitle,
+        spots,
+        words: wordsToShow(language, review, upcoming, settings.words * 7),
+        wordsPerDay: settings.words,
+      });
+      void scheduleMorning(texts, ui.morningSetting);
+    };
+    run();
+    return onMorningChange(run);
+  }, [book, frame, language, locale, ui]);
+
   if (!book) return null;
   const nameOf = (id: string) =>
     book.custom.find((node) => node.id === id)?.name ?? book.renames[id] ?? fixedName(ui, id) ?? book.nodes.find((node) => node.id === id)?.name ?? "";
@@ -333,6 +369,23 @@ export function NotebookSection({
       ) : null}
       {question && !question.node ? (
         <QuestionBox ui={ui} question={question} onAdd={(withShot) => void addQuestion(question, withShot)} onClose={() => setQuestion(null)} />
+      ) : null}
+      {frame && CURRICULUM_ONLY && book.stages.length ? (
+        <WeakStrip
+          ui={ui}
+          locale={locale}
+          spots={weakSpots({
+            language,
+            fixes: [...book.cards, ...book.pending],
+            misses: allMisses(language),
+            review: book.review ?? NO_REVIEW,
+            grammarName: (stage, index) => {
+              const node = book.nodes.find((one) => one.chapter === "grammar" && one.stage === stage && one.index === index);
+              return node ? nameOf(node.id) : "";
+            },
+          })}
+          onOpen={(stage, id) => setJump({ stage, id, at: Date.now() })}
+        />
       ) : null}
       {frame && CURRICULUM_ONLY && book.stages.length && book.parts?.some((row) => row.scripts) ? (
         <TodayPlan

@@ -27,6 +27,7 @@ import { cleanBesidesName, glossFor, SCRIPT_VOICES, usableName, type StageScript
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
 import { LineGrade, ResumeChoice } from "@/components/studyMap/StageScripts";
+import { missedLines, noteLine } from "@/lib/curriculum/scriptMisses";
 import { clearResume, readResume, resumeKey, saveResume, type ResumeState } from "@/lib/curriculum/resume";
 import { SelfCheck } from "@/components/studyMap/TodayPlan";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
@@ -271,6 +272,8 @@ function FramePlayer({
   // 이어서 하기(lib/curriculum/resume.ts) — 다시 연습은 차례가 달라 따로 남긴다.
   const resumeId = resumeKey(redo ? "redo" : "frame", language, baseFrame.id);
   const [offer, setOffer] = useState<ResumeState<Result> | null>(() => readResume<Result>(resumeId));
+  // 지난번에 틀린 예문(이 폰) — 다시 연습 차례는 예문 순서가 달라 표시만 안 한다.
+  const [missed] = useState<Set<number>>(() => (redo ? new Set<number>() : missedLines(language, baseFrame.id)));
   useEffect(() => {
     if (offer) return;
     if (done) clearResume(resumeId);
@@ -346,6 +349,7 @@ function FramePlayer({
           practice?.good === true ||
           (isNameExample(example) && cleanBesidesName(outcomes, name)));
     setResults((current) => ({ ...current, [index]: { heard, practice, clean, mode: stepMode, unclear } }));
+    if (heard && !redo) noteLine(language, frame.id, index, !clean);
   };
 
   const restart = () => {
@@ -427,6 +431,7 @@ function FramePlayer({
               <div className={`rounded-2xl px-3 py-2 ${current ? "border border-amber-300/40 bg-amber-300/[0.06]" : "bg-white/[0.06]"}`}>
                 {own || gloss ? (
                   <p dir="auto" className={current && !result ? "text-note text-slate-200" : "text-caption text-slate-400"}>
+                    {current && !result && missed.has(i) ? <span className="text-warn">◐ </span> : null}
                     {own
                       ? glossFor(frame.meaning, locale)
                       : current && !result

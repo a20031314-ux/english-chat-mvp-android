@@ -82,6 +82,11 @@ export function adsAvailable(): boolean {
   return appPlatform() === "android";
 }
 
+/** 아침 알림(로컬 알림, lib/morningNotify.ts) — 앱 안에서만(웹은 알림 플러그인이 없음). */
+export function localNotificationsAvailable(): boolean {
+  return appPlatform() !== "web";
+}
+
 /**
  * 다른 스토어에서 이미 구독 중인지(사용자 결정 2026-10-20: 안드로이드 구독자는 아이폰에서 결제를 막는다,
  * 거꾸로도 같게). RevenueCat 권한의 `store`("PLAY_STORE"·"APP_STORE"…)를 보고, 이 기기와 다른 스토어면

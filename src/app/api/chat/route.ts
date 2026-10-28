@@ -10,6 +10,8 @@ import { fileFix } from "@/lib/server/notebookStore";
 import { localDay as notebookDay, parseOffset as notebookOffset, TZ_OFFSET_HEADER as NOTEBOOK_TZ } from "@/lib/billing/plans";
 import { recordTurn } from "@/lib/server/ledgerStore";
 import { forgetLearnerBrief, readLearnerBrief } from "@/lib/server/learnerBrief";
+import { readReview, saveChecks } from "@/lib/server/stageScriptStore";
+import { reusePrompt, reuseTargets, unchanged, usedTargets, type ReuseTarget } from "@/lib/curriculum/reuse";
 import { profileTurn, withProfileLine } from "@/lib/server/profileContext";
 import { recordGrowthTurn } from "@/lib/server/growthStore";
 import { nearlySame } from "@/lib/learner/growth";
@@ -1258,11 +1260,22 @@ export async function POST(request: NextRequest) {
     // bring back, whether to ease off or stretch (learner/brief.ts). Built from
     // what is kept and cached for minutes; empty when there is nothing yet.
     // 로그인했으면 관심사 한 줄(튜터 사용을 켰을 때)과 공부한 날(꾸준함 칸) — server/profileContext.ts.
-    const [learnerBrief, profileLine] = await Promise.all([
+    const [learnerBrief, profileLine, review] = await Promise.all([
       readLearnerBrief(userId, langs.targetLanguage),
       profileTurn(request),
+      // 대화 속에서 다시 쓰게(curriculum/reuse.ts): 헷갈려요·물어본 표현·문장구조 둘을 튜터에게.
+      readReview(userId, langs.targetLanguage).catch(() => ({})),
     ]);
-    const brief = withProfileLine(learnerBrief.prompt, profileLine);
+    const reuse: ReuseTarget[] = conversationMode ? reuseTargets(langs.targetLanguage, review) : [];
+    const brief = [withProfileLine(learnerBrief.prompt, profileLine), reusePrompt(reuse)].filter(Boolean).join("\n\n");
+    // 학습자가 그 말을 고칠 데 없이 썼으면 "알아요"처럼 반영(다음은 7일 뒤 한 번)하고, 화면에 보일 이름을 돌려준다.
+    const markReused = async (corrected: string | null | undefined): Promise<string[]> => {
+      if (!reuse.length || !unchanged(message, corrected)) return [];
+      const used = usedTargets(langs.targetLanguage, message, reuse);
+      if (!used.length) return [];
+      await saveChecks(userId, langs.targetLanguage, Object.fromEntries(used.map((target) => [target.key, true]))).catch(() => undefined);
+      return used.map((target) => target.label);
+    };
     const turnOptions: ChatTurnOptions = {
       conversationMode,
       imageDataUrl,
@@ -1324,7 +1337,8 @@ export async function POST(request: NextRequest) {
           const correction = ownLanguage
             ? { corrected: message, natural: message, explanation: "" }
             : corrected?.correction ?? null;
-          send({ type: "correction", correction });
+          const reused = correction && !ownLanguage ? await markReused(correction.corrected) : [];
+          send({ type: "correction", correction, ...(reused.length ? { reused } : {}) });
           controller.close();
           // 교정이 없으면(실패) 기록을 건너뛴다 — 맞은 줄로 잘못 세지 않게.
           finish(correction ? { ...reply, correction } : null);
@@ -1348,7 +1362,8 @@ export async function POST(request: NextRequest) {
     );
     await incrementDailyUsed(userId);
     after(() => chatBookkeeping(data));
-    return jsonWithCors(request, data);
+    const reused = turnOptions.ownLanguage ? [] : await markReused(data.correction?.corrected);
+    return jsonWithCors(request, reused.length ? { ...data, reused } : data);
   } catch (error) {
     console.error("[chat]", error);
     const detail = simErrorDetail(error);

@@ -21,6 +21,7 @@ import { allFramesFor } from "@/lib/curriculum/frames";
 import type { QuizCard } from "@/lib/curriculum/quiz";
 import { QuizPlayer } from "@/components/studyMap/QuizPlayer";
 import { useBillingUiOptional } from "@/components/BillingScreen";
+import { MorningControl } from "@/components/studyMap/WeakStrip";
 import { allScriptsFor, glossFor } from "@/lib/curriculum/stageScripts";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
@@ -252,6 +253,7 @@ export function TodayPlan({
           </button>
         ))}
       </div>
+      <MorningControl ui={ui} />
       <ul className="mt-2 flex flex-col gap-1.5">
         {items.map((item) => {
           const done = doneOf(item);

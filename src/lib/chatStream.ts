@@ -9,7 +9,7 @@ export type ChatCorrectionPayload = { corrected: string; natural: string; explan
 
 export type ChatStreamLine =
   | ({ type: "reply" } & ChatReply)
-  | { type: "correction"; correction: ChatCorrectionPayload | null }
+  | { type: "correction"; correction: ChatCorrectionPayload | null; reused?: unknown[] }
   | { type: "error"; error: string };
 
 /** 쌓인 글에서 끝난 줄만 꺼낸다. 남은 조각은 rest로. 깨진 줄은 건너뛴다. */
@@ -59,6 +59,8 @@ export async function postChatStream(
   headers: HeadersInit,
   body: Record<string, unknown>,
   onReply: (reply: ChatReply) => void,
+  /** 약한 곳을 대화에서 다시 썼을 때 그 이름들(서버 curriculum/reuse.ts, 교정 줄에 같이 옴). */
+  onReused?: (labels: string[]) => void,
 ): Promise<ChatCorrectionPayload | null> {
   const response = await streamingFetch()(url, {
     method: "POST",
@@ -76,8 +78,9 @@ export async function postChatStream(
   }
   if (!type.includes("ndjson") || !response.body) {
     // 스트림을 모르는 서버: 한 덩어리 답.
-    const data = (await response.json()) as ChatReply & { correction?: ChatCorrectionPayload };
+    const data = (await response.json()) as ChatReply & { correction?: ChatCorrectionPayload; reused?: string[] };
     onReply({ assistantMessage: data.assistantMessage, spokenReply: data.spokenReply });
+    if (Array.isArray(data.reused) && data.reused.length) onReused?.(data.reused);
     return data.correction ?? null;
   }
   const reader = response.body.getReader();
@@ -96,6 +99,7 @@ export async function postChatStream(
           replied = true;
           onReply({ assistantMessage: line.assistantMessage, spokenReply: line.spokenReply });
         } else if (line.type === "correction") {
+          if (Array.isArray(line.reused) && line.reused.length) onReused?.(line.reused.filter((x: unknown): x is string => typeof x === "string"));
           return line.correction;
         } else if (line.type === "error" && !replied) {
           throw new ChatHttpError(500, line.error);

@@ -39,6 +39,7 @@ import { playTts, stopTts } from "@/lib/ttsPlayer";
 import { SelfCheck } from "@/components/studyMap/TodayPlan";
 import { weakKeysOfScript } from "@/lib/curriculum/quiz";
 import { clearResume, readResume, resumeKey, saveResume, type ResumeState } from "@/lib/curriculum/resume";
+import { missedLines, noteLine } from "@/lib/curriculum/scriptMisses";
 
 /**
  * My 단계 보기의 "대본으로 연습" — 단계마다 상황별 대본(curriculum/stageScripts.ts), 맨 위에 둔다.
@@ -264,6 +265,8 @@ function ScriptPlayer({
   // 이어서 하기(lib/curriculum/resume.ts): 오늘 중간까지 한 것이 있으면 먼저 "이어서 하기 / 처음부터".
   const resumeId = resumeKey("script", language, script.id);
   const [offer, setOffer] = useState<ResumeState<Result> | null>(() => readResume<Result>(resumeId));
+  // 지난번에 🎤로 틀린 줄(이 폰, curriculum/scriptMisses.ts) — 열 때 한 번 읽어 그 줄에 ◐.
+  const [missed] = useState<Set<number>>(() => missedLines(language, script.id));
   // 오늘 대본 말하기 한도(plans.ts dailyScriptLines)에 닿으면 🎤를 닫는다.
   const [limited, setLimited] = useState(false);
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
@@ -368,6 +371,8 @@ function ScriptPlayer({
     const clean = Boolean(heard) && (own ? practice?.good === true : exact || practice?.good === true);
     setResults((current) => ({ ...current, [index]: { heard, practice, clean, mode: own ? "own" : mode, unclear } }));
     if (heard && !clean) setMisses((current) => ({ ...current, [index]: (current[index] ?? 0) + 1 }));
+    // 틀린 줄을 이 폰에 남긴다(맞히면 지움) — 다음에 열면 ◐, My "지난번에 틀린 것"(curriculum/scriptMisses.ts).
+    if (heard) noteLine(language, script.id, index, !clean);
   };
 
   const next = () => setIndex((current) => current + 1);
@@ -472,6 +477,7 @@ function ScriptPlayer({
                 {/* The line to say now: its meaning framed as an instruction (scriptSayPrompt, user request 2026-10-28). */}
                 {current && !result ? (
                   <p dir="auto" className="text-note text-slate-200">
+                    {missed.has(i) ? <span className="text-warn">◐ </span> : null}
                     {ui.scriptSayPrompt.split("{line}").map((part, k) =>
                       k === 0 ? (
                         part

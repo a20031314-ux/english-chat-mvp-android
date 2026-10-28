@@ -98,6 +98,8 @@ type ChatTurn = {
   ownLanguage?: boolean;
   /** The folded correction was opened ("눌러서 보기"). */
   correctionOpen?: boolean;
+  /** 헷갈렸던 표현·문장구조를 이 줄에서 맞게 다시 씀(서버 curriculum/reuse.ts). */
+  reused?: string[];
   /** The check model is looking at this correction right now. */
   correctionChecking?: boolean;
   /** The check model has already looked (or it was not worth a look). */
@@ -1113,11 +1115,17 @@ export function ChatWindow({
         const repliedSignal = new Promise<void>((resolve) => {
           markReplied = resolve;
         });
-        const correctionArrives = postChatStream(url, headers, requestBody, (reply) => {
-          replied = true;
-          showReply(reply);
-          markReplied();
-        });
+        const correctionArrives = postChatStream(
+          url,
+          headers,
+          requestBody,
+          (reply) => {
+            replied = true;
+            showReply(reply);
+            markReplied();
+          },
+          (reused) => setTurns((previous) => previous.map((t) => (t.id === turnId ? { ...t, reused } : t))),
+        );
         // 답이 뜰 때까지만 기다린다 — 교정은 뒤에서.
         await Promise.race([repliedSignal, correctionArrives.then(() => undefined)]);
         void correctionArrives
@@ -1158,9 +1166,13 @@ export function ChatWindow({
       throw new Error("Failed to get chat response.");
     }
 
-    const data = (await response.json()) as ChatModeApiResponse;
+    const data = (await response.json()) as ChatModeApiResponse & { reused?: string[] };
     showReply(data);
     applyCorrection(data.correction);
+    if (Array.isArray(data.reused) && data.reused.length) {
+      const reused = data.reused;
+      setTurns((previous) => previous.map((t) => (t.id === turnId ? { ...t, reused } : t)));
+    }
   };
 
   /** 확인 모델에 교정을 한 번 더(위험한 줄만 — 서버도 같은 규칙으로 다시 거른다). 끝나면 그 턴의 교정을 바꾼다. */
@@ -1857,6 +1869,13 @@ export function ChatWindow({
                       analyze: ui.insightAnalyze,
                     }}
                   />
+                ) : null}
+
+                {/* 헷갈렸던 표현·문장구조를 맞게 다시 씀(curriculum/reuse.ts). */}
+                {turn.reused?.length ? (
+                  <p dir="auto" className="text-end text-caption text-good">
+                    ✓ {ui.reuseDone} · {turn.reused.join(" · ")}
+                  </p>
                 ) : null}
 
                 {/* Phrases in their sentence met in another tab, or just

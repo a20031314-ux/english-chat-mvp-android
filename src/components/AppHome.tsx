@@ -38,6 +38,7 @@ import { useGroups } from "@/components/rooms/RoomGroups";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { readMiniRoom, subscribeMiniRoom } from "@/lib/rooms/miniRoom";
 import { isIosApp, socialFeaturesEnabled, voiceCallAvailable } from "@/lib/platform";
+import { onMorningTap } from "@/lib/morningNotify";
 import { bottomTabs, featureOfTab, isFeatureOn, readFeatures, readFeaturesOnServer, subscribeFeatures, type FeatureId } from "@/lib/features";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
@@ -202,6 +203,9 @@ function AppHomeInner({
     document.documentElement.lang = locale;
     document.documentElement.dir = learningLanguageTextDir(locale);
   }, [locale]);
+
+  // 아침 알림을 눌러 열면 My(lib/morningNotify.ts).
+  useEffect(() => onMorningTap(() => sendAppIntent("openTab", { tab: "map" })), []);
 
   useEffect(() => {
     try {
