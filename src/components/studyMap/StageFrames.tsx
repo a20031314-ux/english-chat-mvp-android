@@ -26,7 +26,8 @@ import {
 import { cleanBesidesName, glossFor, SCRIPT_VOICES, usableName, type StageScript } from "@/lib/curriculum/stageScripts";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
-import { LineGrade } from "@/components/studyMap/StageScripts";
+import { LineGrade, ResumeChoice } from "@/components/studyMap/StageScripts";
+import { clearResume, readResume, resumeKey, saveResume, type ResumeState } from "@/lib/curriculum/resume";
 import { SelfCheck } from "@/components/studyMap/TodayPlan";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 
@@ -267,6 +268,22 @@ function FramePlayer({
   const sent = useRef(false);
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
   const done = index >= steps.length;
+  // 이어서 하기(lib/curriculum/resume.ts) — 다시 연습은 차례가 달라 따로 남긴다.
+  const resumeId = resumeKey(redo ? "redo" : "frame", language, baseFrame.id);
+  const [offer, setOffer] = useState<ResumeState<Result> | null>(() => readResume<Result>(resumeId));
+  useEffect(() => {
+    if (offer) return;
+    if (done) clearResume(resumeId);
+    else saveResume<Result>(resumeId, { index, results, revealed, mode });
+  }, [offer, done, resumeId, index, results, revealed, mode]);
+  const resume = () => {
+    if (!offer) return;
+    setResults(offer.results);
+    setRevealed(offer.revealed);
+    if (offer.mode && !redo) setMode(offer.mode as Mode);
+    setIndex(Math.min(offer.index, steps.length));
+    setOffer(null);
+  };
   const passes =
     done &&
     steps.every((step, i) => {
@@ -280,9 +297,10 @@ function FramePlayer({
 
   // 따라 말하기면 문장을 먼저 들려준다.
   useEffect(() => {
+    if (offer) return;
     const step = steps[index];
     if (step && currentMode === "shadow") void playTts(step.example.text, tag, SCRIPT_VOICES.me);
-  }, [index, currentMode, steps, tag]);
+  }, [index, currentMode, steps, tag, offer]);
   useEffect(() => () => stopTts(), []);
 
   useEffect(() => {
@@ -332,6 +350,8 @@ function FramePlayer({
 
   const restart = () => {
     stopTts();
+    clearResume(resumeId);
+    setOffer(null);
     sent.current = false;
     setJustPassed(false);
     setResults({});
@@ -392,7 +412,8 @@ function FramePlayer({
         </div>
       )}
 
-      <ol className="min-h-0 flex-1 overflow-y-auto px-3 py-3">
+      {offer ? <ResumeChoice ui={ui} at={offer.index} total={steps.length} onResume={resume} onRestart={restart} /> : null}
+      <ol className={`min-h-0 flex-1 overflow-y-auto px-3 py-3 ${offer ? "hidden" : ""}`}>
         {steps.slice(0, Math.min(index + 1, steps.length)).map((step, i) => {
           const { example } = step;
           const current = i === index;

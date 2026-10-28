@@ -37,6 +37,7 @@ import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/lear
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 import { SelfCheck } from "@/components/studyMap/TodayPlan";
+import { clearResume, readResume, resumeKey, saveResume, type ResumeState } from "@/lib/curriculum/resume";
 
 /**
  * My 단계 보기의 "대본으로 연습" — 단계마다 상황별 대본(curriculum/stageScripts.ts), 맨 위에 둔다.
@@ -257,6 +258,9 @@ function ScriptPlayer({
   const [picks, setPicks] = useState<Record<number, number>>(() => freshPicks(script));
   const [listening, setListening] = useState(false);
   const [justPassed, setJustPassed] = useState(false);
+  // 이어서 하기(lib/curriculum/resume.ts): 오늘 중간까지 한 것이 있으면 먼저 "이어서 하기 / 처음부터".
+  const resumeId = resumeKey("script", language, script.id);
+  const [offer, setOffer] = useState<ResumeState<Result> | null>(() => readResume<Result>(resumeId));
   // 오늘 대본 말하기 한도(plans.ts dailyScriptLines)에 닿으면 🎤를 닫는다.
   const [limited, setLimited] = useState(false);
   const tag = learningLanguageSpeechTag(language as LearningLanguageCode);
@@ -281,6 +285,7 @@ function ScriptPlayer({
 
   // 상대 줄은 들려주고 다음으로, 내 줄은 멈춘다(따라 말하기면 내 줄도 먼저 들려준다).
   useEffect(() => {
+    if (offer) return;
     const line = script.lines[index];
     if (!line) return;
     const token = ++run.current;
@@ -294,11 +299,25 @@ function ScriptPlayer({
     bottom.current?.scrollIntoView({ block: "end", behavior: "smooth" });
     // textAt은 picks로 정해진다 — picks가 바뀌는 건 처음부터 다시 할 때뿐.
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [index, script, tag, mode]);
+  }, [index, script, tag, mode, offer]);
 
   useEffect(() => () => stopTts(), []);
 
   const done = index >= script.lines.length;
+  // 한 줄 지날 때마다 이 폰에 남기고, 끝까지 하면 지운다.
+  useEffect(() => {
+    if (offer) return;
+    if (done) clearResume(resumeId);
+    else saveResume<Result>(resumeId, { index, results, revealed, picks });
+  }, [offer, done, resumeId, index, results, revealed, picks]);
+  const resume = () => {
+    if (!offer) return;
+    setResults(offer.results);
+    setRevealed(offer.revealed);
+    if (offer.picks) setPicks(offer.picks);
+    setIndex(Math.min(offer.index, script.lines.length));
+    setOffer(null);
+  };
   const runs: Record<number, LineRun> = Object.fromEntries(
     Object.entries(results).map(([i, result]) => [i, { clean: result.clean, mode: result.mode, revealed: Boolean(revealed[Number(i)]) }]),
   );
@@ -350,6 +369,8 @@ function ScriptPlayer({
   const next = () => setIndex((current) => current + 1);
   const restart = () => {
     stopTts();
+    clearResume(resumeId);
+    setOffer(null);
     sent.current = false;
     setJustPassed(false);
     setResults({});
@@ -415,7 +436,8 @@ function ScriptPlayer({
         ))}
       </div>
 
-      <ol className="min-h-0 flex-1 overflow-y-auto px-3 py-3">
+      {offer ? <ResumeChoice ui={ui} at={offer.index} total={script.lines.length} onResume={resume} onRestart={restart} /> : null}
+      <ol className={`min-h-0 flex-1 overflow-y-auto px-3 py-3 ${offer ? "hidden" : ""}`}>
         {script.lines.slice(0, Math.min(index + 1, script.lines.length)).map((line, i) => {
           if (line.who === "them") {
             const variant = variantOf(line, picks[i] ?? 0);
@@ -557,6 +579,30 @@ function ScriptPlayer({
         <div ref={bottom} />
       </ol>
     </FullScreenLayer>
+  );
+}
+
+/** 오늘 중간까지 한 대본·문장구조를 다시 열면: 어디까지 했는지 + 이어서 하기 / 처음부터. */
+export function ResumeChoice({ ui, at, total, onResume, onRestart }: { ui: UICopy; at: number; total: number; onResume: () => void; onRestart: () => void }) {
+  return (
+    <div className="flex min-h-0 flex-1 flex-col items-center justify-center gap-3 px-6">
+      <span aria-hidden className="flex gap-1">
+        {Array.from({ length: total }, (_, i) => (
+          <span key={i} className={`h-2 w-2 rounded-full ${i < at ? "bg-status-learned" : "border border-line"}`} />
+        ))}
+      </span>
+      <p className="text-caption tabular-nums text-slate-400">
+        {Math.min(at, total)}/{total}
+      </p>
+      <div className="flex gap-2">
+        <button type="button" onClick={onRestart} className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10">
+          {ui.scriptRestart}
+        </button>
+        <button type="button" onClick={onResume} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
+          {ui.scriptResume}
+        </button>
+      </div>
+    </div>
   );
 }
 
