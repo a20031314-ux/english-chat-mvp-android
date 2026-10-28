@@ -1,0 +1,4 @@
+• My: each stage has situation scripts. Say your lines and pass them all to open the next stage.
+• "Today's plan": pick minutes a day and see how many days to finish. What confused you comes back as a short quiz.
+• "What you got wrong last time" sits at the top of My, and a "Morning reminder" can show it on your lock screen.
+• Stage scripts are free; the "Scripts" plan adds short calls and chat. The AI tutor is now at the top of People.
