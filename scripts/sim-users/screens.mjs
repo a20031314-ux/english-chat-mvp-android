@@ -721,6 +721,15 @@ const SCENES = [
     },
   },
   {
+    id: "dm-profile",
+    label: "메시지 — 1:1 머리 사진·이름 → 상대 프로필 시트(대화 화면 위에 보여야 함)",
+    async run({ page, wait, state }) {
+      await page.locator(`header button[aria-label="${state.hostNickname}"]`).first().click();
+      await wait(2000);
+      await sheetOnTop(page);
+    },
+  },
+  {
     id: "group-thread",
     label: "메시지 — 단체방 대화(집어 묻기)",
     async run({ page, wait, state }) {
@@ -730,7 +739,43 @@ const SCENES = [
       await wait(5000);
     },
   },
+  {
+    id: "group-profile",
+    label: "메시지 — 단체방 남의 줄 얼굴 → 프로필 시트(\"메시지\" 버튼, 대화 화면 위에 보여야 함)",
+    async run({ page, wait, state }) {
+      await page.locator(`button[aria-label="${state.hostNickname}"]`).first().click();
+      await wait(2000);
+      await sheetOnTop(page);
+    },
+  },
+  {
+    id: "group-member-profile",
+    label: "메시지 — 단체방 👥 멤버 목록 → 다른 사람 → 프로필 시트(대화 화면 위에 보여야 함)",
+    async run({ page, wait, state }) {
+      await page.mouse.click(8, 8); // 앞 장면의 시트 닫기(바깥 누르기)
+      await wait(800);
+      await page.locator("header button", { hasText: "👥" }).last().click();
+      await wait(1200);
+      // 멤버 시트는 body 끝에 붙는다 — 뒤 대화 화면에도 같은 이름이 있어 마지막 것을 누른다.
+      await page.locator("li button", { hasText: state.friendNickname }).last().click();
+      await wait(2000);
+      await sheetOnTop(page);
+    },
+  },
 ];
+
+/**
+ * UI 숨겨짐 점검(사용자 2026-10-28): 방금 연 시트(role=dialog)가 보이고 맨 위층인지 — 시트 안 한 점을 눌렀을 때 시트가 잡혀야 한다.
+ * 1:1·단체방 화면(z-[95]) 위에서 연 시트가 그 뒤에 깔리면(10-28 프로필 시트에서 실제로 있었음) 장면이 ✗로 실패한다.
+ */
+async function sheetOnTop(page) {
+  const dialog = page.locator('[role="dialog"]').last();
+  await dialog.waitFor({ state: "visible", timeout: 5000 });
+  const box = await dialog.boundingBox();
+  if (!box) throw new Error("시트가 화면에 없음");
+  const onTop = await page.evaluate(([x, y]) => Boolean(document.elementFromPoint(x, y)?.closest('[role="dialog"]')), [box.x + box.width / 2, box.y + Math.min(24, box.height / 2)]);
+  if (!onTop) throw new Error("UI 숨겨짐: 시트가 다른 화면 뒤에 깔림(맨 위층 아님)");
+}
 
 /**
  * 사람 사이 장면에 쓸 기록: 방장(B)·친구(C)와 1:1 대화(집어 묻기·통화 기록), 단체방 둘(참여한 것·받은 초대),
