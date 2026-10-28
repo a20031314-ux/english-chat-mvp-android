@@ -38,7 +38,7 @@ import { useGroups } from "@/components/rooms/RoomGroups";
 import { readCachedAccount, subscribeSession } from "@/lib/account/session";
 import { readMiniRoom, subscribeMiniRoom } from "@/lib/rooms/miniRoom";
 import { isIosApp, socialFeaturesEnabled, voiceCallAvailable } from "@/lib/platform";
-import { bottomTabs, featureOfTab, isFeatureOn, matchingPreset, readFeatures, readFeaturesOnServer, subscribeFeatures, type FeatureId } from "@/lib/features";
+import { bottomTabs, featureOfTab, isFeatureOn, readFeatures, readFeaturesOnServer, subscribeFeatures, type FeatureId } from "@/lib/features";
 import { LearningLanguageProvider, useLearningLanguage } from "@/contexts/LearningLanguageContext";
 import { useUiCopy } from "@/hooks/useUiCopy";
 import { APP_LOCALE_STORAGE_KEY, type Locale } from "@/lib/copy";
@@ -74,7 +74,8 @@ function isAppTab(value: string | null): value is AppTab {
 }
 
 function resolveTab(raw: string | null | undefined): AppTab {
-  if (!raw) return socialFeaturesEnabled() ? "talk" : "chat";
+  // 첫 화면은 My(2026-10-28 사용자 "첫 화면을 my로" — 2.76부터 무료는 대본만이라 오늘 할 것이 먼저).
+  if (!raw) return "map";
   if (raw === "home" || raw === "saved") return "chat";
   if (raw === "reports" || raw === "sessions" || raw === "monthly") return "chat";
   if (raw === "quiz" || raw === "explore") return "chat";
@@ -108,7 +109,7 @@ function AppHomeInner({
   locale: Locale;
   setLocale: (locale: Locale) => void;
 }) {
-  const [tab, setTab] = useState<AppTab>("chat");
+  const [tab, setTab] = useState<AppTab>("map");
   const ui = useUiCopy(locale);
   const { targetLanguage } = useLearningLanguage();
   // Hidden rather than shown empty: only English has scenarios written, so a
@@ -389,10 +390,7 @@ function AppHomeInner({
                     <LanguageSelector locale={locale} onChange={setLocale} label={ui.uiLanguageLabel} />
                   </>
                 }
-                onChosen={(off) => {
-                  // "영상으로" 묶음이면 첫 화면을 영상으로.
-                  if (matchingPreset(off) === "video") openTab("video");
-                }}
+                onChosen={() => openTab("map")}
               />
               <FeedbackButton ui={ui} locale={locale} tab={shownTab} />
             </div>

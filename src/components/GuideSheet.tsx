@@ -172,6 +172,83 @@ function FeatureSwitch({ ui, feature, off }: { ui: UICopy; feature: FeatureId | 
   );
 }
 
+/**
+ * 처음 설치(2026-10-28 사용자 "처음 설치한 사람은 기능 설명 > 사용/안 씀 체크 흐름"): 고를 수 있는 기능마다 한 장씩 —
+ * 그 장의 첫 칸(그림 + 한두 줄) 아래 "사용함 / 사용안함", 누르면 다음 장. 끝나면 고른 대로 시작(첫 화면 My).
+ * 노트는 2.76에서 화면이 숨어 있어(CURRICULUM_ONLY) 묻지 않는다. 사람을 안 쓰면 Room도 묻지 않고 끈다(방은 사람 기능의 일부).
+ */
+function FirstRunSteps({
+  ui,
+  locale,
+  chapters,
+  off,
+  onDone,
+}: {
+  ui: UICopy;
+  locale: Locale;
+  chapters: GuideChapter[];
+  off: FeatureId[];
+  onDone: () => void;
+}) {
+  const steps: { chapter: GuideChapter; feature: FeatureId }[] = [];
+  for (const chapter of chapters) {
+    const feature = featureOfGo(chapter.go);
+    if (!feature || feature === "notes") continue;
+    const at = steps.findIndex((step) => step.feature === feature);
+    // 같은 기능의 장이 둘이면(대화·사람 = 사람 기능) 사람 장으로.
+    if (at >= 0) {
+      if (chapter.go === "people") steps[at] = { chapter, feature };
+      continue;
+    }
+    steps.push({ chapter, feature });
+  }
+  const [index, setIndex] = useState(0);
+  const visible = steps.filter((step) => !(step.feature === "rooms" && !isFeatureOn(off, "people")));
+  const step = visible[Math.min(index, visible.length - 1)];
+  if (!step) return null;
+  const answer = (on: boolean) => {
+    setFeatureOn(step.feature, on);
+    if (step.feature === "people" && !on) setFeatureOn("rooms", false);
+    // 이번 답을 넣은 뒤의 장 목록(사람을 끄면 Room 장이 빠진다)에서 다음 장으로.
+    const peopleOn = step.feature === "people" ? on : isFeatureOn(off, "people");
+    const next = steps.filter((one) => !(one.feature === "rooms" && !peopleOn));
+    const at = next.findIndex((one) => one.feature === step.feature);
+    if (at + 1 >= next.length) onDone();
+    else setIndex(at + 1);
+  };
+  // 그림 먼저: 그림·영상이 있는 첫 칸(없으면 첫 칸).
+  const section = step.chapter.sections.find((one) => one.shot || one.clip) ?? step.chapter.sections[0];
+  return (
+    <div className="mx-auto flex max-w-xl flex-col gap-4">
+      <div className="flex items-center gap-2">
+        {index > 0 ? (
+          <button type="button" onClick={() => setIndex(index - 1)} aria-label={ui.billingClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
+            <span aria-hidden className="inline-block rtl:rotate-180">‹</span>
+          </button>
+        ) : null}
+        <span aria-hidden className="flex flex-1 justify-center gap-1.5">
+          {visible.map((one, i) => (
+            <span key={one.feature} className={`h-1.5 w-6 rounded-full ${i <= index ? "bg-platinum" : "bg-white/15"}`} />
+          ))}
+        </span>
+        <span className="text-caption tabular-nums text-slate-400">
+          {Math.min(index + 1, visible.length)}/{visible.length}
+        </span>
+      </div>
+      <h2 className="text-title font-semibold text-ink">{fillGuideLabels(step.chapter.title, ui)}</h2>
+      {section ? <SectionView key={section.id} section={section} ui={ui} locale={locale} anchor={section.id} /> : null}
+      <div className="sticky bottom-0 flex gap-2 bg-canvas pb-1 pt-2">
+        <button type="button" onClick={() => answer(false)} className="flex-1 rounded-xl border border-line py-3 text-note text-slate-200 hover:bg-white/10">
+          {ui.featureOff}
+        </button>
+        <button type="button" onClick={() => answer(true)} className="flex-1 rounded-xl bg-platinum py-3 text-note font-medium text-canvas hover:bg-platinum-hover">
+          {ui.featureOn}
+        </button>
+      </div>
+    </div>
+  );
+}
+
 const PICK_VIEW_KEY = "featurePickView";
 function readPickView(): "map" | "list" {
   try {
@@ -391,7 +468,9 @@ export function GuideButton({
             </div>
           )}
           <div ref={scroller} className="min-h-0 flex-1 overflow-y-auto px-4 pb-[calc(1.5rem+env(safe-area-inset-bottom,0px))] pt-4">
-            {showMap ? (
+            {picking && chapters.length ? (
+              <FirstRunSteps ui={ui} locale={locale} chapters={chapters} off={off} onDone={() => finish(false)} />
+            ) : showMap ? (
               <div className="mx-auto flex max-w-xl flex-col gap-4">
                 {pickTop}
                 <FeatureMap
@@ -457,7 +536,7 @@ export function GuideButton({
               <p className="mt-10 text-center text-note text-slate-400">{failed ? ui.guideUnavailable : ui.guideLoading}</p>
             )}
           </div>
-          {picking ? (
+          {picking && !chapters.length ? (
             <div className="shrink-0 border-t border-line px-4 pb-[calc(0.75rem+env(safe-area-inset-bottom,0px))] pt-3">
               <button
                 type="button"
