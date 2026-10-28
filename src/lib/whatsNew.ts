@@ -44,6 +44,16 @@ export type ReleaseNote = {
 
 export const RELEASE_NOTES: ReleaseNote[] = [
   {
+    // 2.77(91): My 오늘 할 것(분량·n일 완성·순서, 헷갈린 곳 퀴즈, 오늘 배운 것·직접 묻기), 지난번에 틀린 것 + 아침 알림(새 로컬 알림 플러그인).
+    // 첫 화면 My·처음 설치 기능 한 장씩·대본 평가(★·더 자연스러운 말)·이어서 하기·채팅에서 다시 쓰기·1:1 읽음·팔로우 목록은 사용법·출시 노트에만.
+    version: "2.77",
+    code: 91,
+    items: [
+      { id: "today-plan", title: "whatsNewTodayTitle", body: "whatsNewTodayBody", shot: "today-plan", tab: "map", guide: "my.map" },
+      { id: "weak-strip", title: "whatsNewMissedTitle", body: "whatsNewMissedBody", shot: "weak-strip", tab: "map", guide: "my.map" },
+    ],
+  },
+  {
     // 2.76(90): My 단계 대본(상황마다, 통과해야 다음 단계)·오늘의 대본, 틀 바꿔 말하기(ko·ja·es 1~3, 3단계 내 말로)·틀린 틀 다시 연습,
     // AI 튜터를 사람 탭으로(프로필 시트 메시지·통화·통화 기록). 무료 = 대본·대본 플랜·팩 뺌, 통화 기록을 채팅과 따로, My 예전 기능 뺌은 사용법·출시 노트에만.
     version: "2.76",

@@ -3,7 +3,7 @@
 > 모든 채팅이 시작할 때 자동으로 읽는 한 장입니다. 역할별 자세한 내용은
 > `hub/roles/`, 역할 사이에 넘긴 일은 `hub/inbox.md`, 지난 기록은 `hub/log/`.
 > 새 채팅이면 `hub/HANDOFF.md`(직전 채팅의 인계 노트)부터. 자동 실행이 남긴 보고·결정 대기는 `hub/reports.md`.
-> 허브 쓰는 법: `hub/README.md`. 서비스 지도(구조도 + 화면 그림): https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y. 마지막 갱신: 2026-10-27(2.75 Play 공개).
+> 허브 쓰는 법: `hub/README.md`. 서비스 지도(구조도 + 화면 그림): https://claude.ai/artifact/NBkDqLoixshhxKugCtuR8y. 마지막 갱신: 2026-10-29(2.77 자름).
 
 ## 버전
 
@@ -13,7 +13,7 @@
 | 서버 | main에 push하면 Vercel이 바로 배포 | — |
 | 업데이트 권장 배너 기준 | 2.66 (2026-10-16) | `src/lib/appVersion.ts` `RECOMMENDED_APP_VERSION` |
 | 최소 지원 버전 | 2.48 (올리면 그 아래는 앱을 못 씀, 거의 건드리지 않음) | 같은 파일 `MIN_SUPPORTED_APP_VERSION` |
-| 다음 앱 버전 | **2.76 (versionCode 90) 자름(2026-10-28)** — 단계 대본·틀·다시 연습·대본 플랜·AI 튜터 사람 탭·통화 기록 따로·My 예전 기능 뺌. 출시 노트 90은 PR. PC에서 `npm run pc:build` → Signed Bundle(사람). 이후 더하는 학습 언어 대본·틀은 서버에서 받아 빌드 없이 보임 | — |
+| 다음 앱 버전 | **2.77 (versionCode 91) 자름(2026-10-29)** — 2.76(90)은 Play에 안 나가 그 내용 + 오늘 할 것·퀴즈·지난번에 틀린 것·아침 알림(새 플러그인 local-notifications)·대본 평가·이어서 하기·첫 화면 My·1:1 읽음·팔로우 목록. 출시 노트 91은 PR #25(#24는 닫아도 됨). PC에서 `npm run pc:build` → Signed Bundle(사람) | — |
 | iOS | **App Store 심사 다시 제출(2026-10-23 15:0x KST)** — 2.71 + 구독 그룹·구독 3·포인트 4 한 제출(처음 05:12 제출은 상품 빠짐·진단 빌드 85.9라 취소). 심사 대기 중. 앱 ID 6824542951. 남은 일 `hub/drafts/ios-launch.md` "심사 중" | `npm run build:ios`, `hub/drafts/ios-launch.md` |
 
 ## 역할

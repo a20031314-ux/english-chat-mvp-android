@@ -983,6 +983,13 @@ async function partsScene({ page, locale, wait, target }, mode, open) {
 }
 
 /** 2.76 다시 연습 그림: 학습 언어마다 틀 하나와 그 틀을 틀린 줄·고친 줄(카드는 끼움). */
+/** 2.76~: My는 단계를 고른 사람만 단계 보기 — 캡처 사용자에게 1단계를 골라 둔다(learner/self-check, 모델 없음). */
+async function pickStageOne(page, target) {
+  await page.evaluate(async (t) => {
+    await fetch("/api/learner/self-check", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ language: t, stage: `${t}-1` }) }).catch(() => undefined);
+  }, target);
+}
+
 const REDO_CARDS = {
   en: { frame: "en-f2-01", wrong: "Last night I watch a movie with my sister.", right: "Last night I watched a movie with my sister." },
   es: { frame: "es-f2-20", wrong: "¿Se puede pago con tarjeta?", right: "¿Se puede pagar con tarjeta?" },
@@ -1296,7 +1303,7 @@ const STEPS = {
     await page.getByRole("button", { name: ui.talkAiTutor }).first().click();
     await wait(2000);
   },
-  async "stage-scripts"({ page, ui, locale, wait }) {
+  async "stage-scripts"({ page, ui, locale, wait, target }) {
     // 2.76: My 단계 보기 — 오늘의 대본 카드 + "대본으로 연습"(상황마다 ●○, 핵심 표현 칩). 운영 응답 그대로(새 사용자 1단계).
     await page.route("**/api/notebook?*", async (route) => {
       if (route.request().method() !== "GET" || route.request().url().includes("shot=")) return route.fallback();
@@ -1308,12 +1315,66 @@ const STEPS = {
       localStorage.setItem("myViewMode", "map");
       localStorage.setItem("myViewMode.stageShown", "1");
     });
+    await pickStageOne(page, target);
     await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
-    const title = page.getByText(ui.scriptTodayTitle, { exact: true }).first();
+    // 2.77: 오늘의 대본 카드는 오늘 할 것으로 합쳐졌다 — "대본으로 연습" 목록 머리로.
+    const title = page.getByRole("heading", { name: ui.stageScriptsTitle, exact: true }).first();
     for (let i = 0; i < 60 && !(await title.count()); i++) await wait(500);
-    await title.evaluate((el) => el.closest("button")?.scrollIntoView({ block: "start" }));
+    await title.evaluate((el) => el.scrollIntoView({ block: "start" }));
     await page.mouse.wheel(0, -40);
     await wait(1500);
+  },
+  async "today-plan"({ page, ui, locale, wait, target }) {
+    // 2.77: My 단계 보기 오늘 할 것 — 분량 칩(n일 완성)·순서·목록 맨 위 "퀴즈 · …"(날짜 된 헷갈려요 하나를 끼움).
+    await page.route("**/api/notebook?*", async (route) => {
+      if (route.request().method() !== "GET" || route.request().url().includes("shot=")) return route.fallback();
+      const response = await route.fetch({ headers: { ...route.request().headers(), "x-rc-user": `whats-new-capture-notebook-${locale}` }, timeout: 60_000 }).catch(() => null);
+      if (!response) return;
+      const book = await response.json();
+      const expression = book.parts?.[0]?.expressions?.[1]?.text ?? book.parts?.[0]?.expressions?.[0]?.text;
+      if (expression) book.review = { [`e|${expression}`]: { due: Date.now() - 60_000, step: 1, at: Date.now() - 2 * 86_400_000 } };
+      return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(book) }).catch(() => undefined);
+    });
+    await page.evaluate(() => {
+      localStorage.setItem("myViewMode", "map");
+      localStorage.setItem("myViewMode.stageShown", "1");
+      localStorage.removeItem("dailyPlan.today.v1");
+    });
+    await pickStageOne(page, target);
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    const title = page.getByRole("heading", { name: ui.planTitle, exact: true }).first();
+    for (let i = 0; i < 60 && !(await title.count()); i++) await wait(500);
+    await title.evaluate((el) => el.closest("section")?.scrollIntoView({ block: "start" }));
+    await page.mouse.wheel(0, -16);
+    await wait(2500);
+  },
+  async "weak-strip"({ page, ui, locale, wait, target }) {
+    // 2.77: My 맨 위 "지난번에 틀린 것" — 튜터가 고친 줄(끼움)·대본에서 틀린 줄(이 폰 기록을 끼움)·헷갈려요, 그 아래 오늘 할 것.
+    const card = REDO_CARDS[target] ?? REDO_CARDS.en;
+    await page.route("**/api/notebook?*", async (route) => {
+      if (route.request().method() !== "GET" || route.request().url().includes("shot=")) return route.fallback();
+      const response = await route.fetch({ headers: { ...route.request().headers(), "x-rc-user": `whats-new-capture-notebook-${locale}` }, timeout: 60_000 }).catch(() => null);
+      if (!response) return;
+      const book = await response.json();
+      book.cards = [{ id: "fxcaptureweak01", wrong: card.wrong, right: card.right, note: "", node: null, where: "chat", at: Date.now() - 3_600_000, kind: "mistake", frame: card.frame }];
+      book.pending = [];
+      const expression = book.parts?.[0]?.expressions?.[2]?.text;
+      if (expression) book.review = { [`e|${expression}`]: { due: Date.now() + 86_400_000, step: 1, at: Date.now() - 7_200_000 } };
+      return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(book) }).catch(() => undefined);
+    });
+    await page.evaluate((t) => {
+      localStorage.setItem("myViewMode", "map");
+      localStorage.setItem("myViewMode.stageShown", "1");
+      localStorage.removeItem("dailyPlan.today.v1");
+      localStorage.setItem("scriptMisses.v1", JSON.stringify({ [t]: { [`${t}-1-1`]: { 1: { n: 1, at: Date.now() - 5_400_000 } } } }));
+    }, target);
+    await pickStageOne(page, target);
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    const title = page.getByRole("heading", { name: ui.weakTitle, exact: true }).first();
+    for (let i = 0; i < 60 && !(await title.count()); i++) await wait(500);
+    await title.evaluate((el) => el.closest("section")?.scrollIntoView({ block: "start" }));
+    await page.mouse.wheel(0, -16);
+    await wait(2500);
   },
   async "frames-redo"({ page, ui, locale, wait, target }) {
     // 2.76: 대본 목록 맨 위 ◐ 다시 연습 카드(튜터가 같은 틀을 두 번 고친 줄은 끼움) → 연 화면(내가 쓴 줄·고친 줄·대본에서).
