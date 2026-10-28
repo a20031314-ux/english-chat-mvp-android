@@ -945,9 +945,11 @@ export async function fetchPractice(input: {
       console.error("[roleplay] practice failed with", response.status);
       return null;
     }
-    const body = (await response.json()) as { note?: unknown; good?: unknown };
+    const body = (await response.json()) as { note?: unknown; good?: unknown; verdict?: unknown; better?: unknown };
     if (typeof body.note !== "string" || !body.note.trim()) return null;
-    return { good: body.good === true, note: body.note.trim() };
+    const verdict = body.verdict === "natural" || body.verdict === "awkward" || body.verdict === "wrong" ? body.verdict : undefined;
+    const better = typeof body.better === "string" && body.better.trim() ? body.better.trim() : undefined;
+    return { good: body.good === true, note: body.note.trim(), ...(verdict ? { verdict } : {}), ...(better ? { better } : {}) };
   } catch (error) {
     console.error("[roleplay] practice threw", error);
     return null;

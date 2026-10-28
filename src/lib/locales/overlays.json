@@ -703,7 +703,9 @@
     "canDoTitle": "できること",
     "stageBegin": "この段階で始める",
     "scriptPerfect": "完璧です！",
-    "scriptUnclear": "少し不明瞭だった語："
+    "scriptUnclear": "少し不明瞭だった語：",
+    "scriptNatural": "その言い方でも正解です！",
+    "scriptAwkward": "正しいです。こちらの方が自然です："
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1409,7 +1411,9 @@
     "canDoTitle": "能做到的事",
     "stageBegin": "从这个阶段开始",
     "scriptPerfect": "完美！",
-    "scriptUnclear": "有点不清楚的词："
+    "scriptUnclear": "有点不清楚的词：",
+    "scriptNatural": "这样说也对！",
+    "scriptAwkward": "没错，这样更自然："
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2117,7 +2121,9 @@
     "canDoTitle": "Việc bạn làm được",
     "stageBegin": "Bắt đầu từ đây",
     "scriptPerfect": "Hoàn hảo!",
-    "scriptUnclear": "Hơi chưa rõ:"
+    "scriptUnclear": "Hơi chưa rõ:",
+    "scriptNatural": "Nói vậy cũng đúng!",
+    "scriptAwkward": "Đúng rồi, nói thế này tự nhiên hơn:"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2830,7 +2836,9 @@
     "canDoTitle": "Ce que vous savez faire",
     "stageBegin": "Commencer ici",
     "scriptPerfect": "Parfait !",
-    "scriptUnclear": "Un peu flou :"
+    "scriptUnclear": "Un peu flou :",
+    "scriptNatural": "Ça marche aussi !",
+    "scriptAwkward": "C’est correct ; ceci est plus naturel :"
   },
   "it": {
     "archive": "Report",
@@ -3734,7 +3742,9 @@
     "canDoTitle": "Cosa sai fare",
     "stageBegin": "Inizia da qui",
     "scriptPerfect": "Perfetto!",
-    "scriptUnclear": "Un po’ poco chiaro:"
+    "scriptUnclear": "Un po’ poco chiaro:",
+    "scriptNatural": "Va bene anche così!",
+    "scriptAwkward": "Corretto; così è più naturale:"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4450,7 +4460,9 @@
     "canDoTitle": "O que você já consegue",
     "stageBegin": "Começar aqui",
     "scriptPerfect": "Perfeito!",
-    "scriptUnclear": "Um pouco confuso:"
+    "scriptUnclear": "Um pouco confuso:",
+    "scriptNatural": "Assim também está certo!",
+    "scriptAwkward": "Certo; assim soa mais natural:"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5352,7 +5364,9 @@
     "canDoTitle": "Что вы умеете",
     "stageBegin": "Начать отсюда",
     "scriptPerfect": "Идеально!",
-    "scriptUnclear": "Немного нечётко:"
+    "scriptUnclear": "Немного нечётко:",
+    "scriptNatural": "Так тоже правильно!",
+    "scriptAwkward": "Верно, но так естественнее:"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6064,7 +6078,9 @@
     "canDoTitle": "Yang sudah bisa kamu lakukan",
     "stageBegin": "Mulai dari sini",
     "scriptPerfect": "Sempurna!",
-    "scriptUnclear": "Agak kurang jelas:"
+    "scriptUnclear": "Agak kurang jelas:",
+    "scriptNatural": "Begitu juga benar!",
+    "scriptAwkward": "Benar, ini terdengar lebih alami:"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6770,7 +6786,9 @@
     "canDoTitle": "ما تستطيع فعله",
     "stageBegin": "ابدأ من هنا",
     "scriptPerfect": "ممتاز!",
-    "scriptUnclear": "غير واضح قليلًا:"
+    "scriptUnclear": "غير واضح قليلًا:",
+    "scriptNatural": "هذا صحيح أيضًا!",
+    "scriptAwkward": "صحيح، وهذا أكثر طبيعية:"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7476,7 +7494,9 @@
     "canDoTitle": "สิ่งที่ทำได้",
     "stageBegin": "เริ่มที่ขั้นนี้",
     "scriptPerfect": "เยี่ยมมาก!",
-    "scriptUnclear": "ยังไม่ค่อยชัด:"
+    "scriptUnclear": "ยังไม่ค่อยชัด:",
+    "scriptNatural": "พูดแบบนี้ก็ถูก!",
+    "scriptAwkward": "ถูกต้อง แบบนี้ฟังเป็นธรรมชาติกว่า:"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8182,6 +8202,8 @@
     "canDoTitle": "आप क्या कर सकते हैं",
     "stageBegin": "यहीं से शुरू करें",
     "scriptPerfect": "बिल्कुल सही!",
-    "scriptUnclear": "थोड़ा अस्पष्ट:"
+    "scriptUnclear": "थोड़ा अस्पष्ट:",
+    "scriptNatural": "ऐसे भी सही है!",
+    "scriptAwkward": "सही है, यह ज़्यादा स्वाभाविक है:"
   }
 }

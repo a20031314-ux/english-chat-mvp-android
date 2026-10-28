@@ -472,7 +472,7 @@ function ScriptPlayer({
                 {result ? (
                   result.clean ? (
                     <>
-                    <LineGrade ui={ui} exact={compareToTarget(line.text, result.heard).clean} unclear={result.unclear ?? []} />
+                    <LineGrade ui={ui} exact={compareToTarget(line.text, result.heard).clean} unclear={result.unclear ?? []} practice={result.practice} />
                     {countsForPass(script.stage, result.mode) && !revealed[i] ? null : <span className="text-caption text-slate-500">{modeLabel[result.mode]}</span>}
                     {/* 맞게 바꿔 말해 통과(낱말이 대본과 다름)·흐릿했던 낱말: 한마디(2026-10-28). */}
                     {result.practice?.note && ((result.mode !== "shadow" && !compareToTarget(line.text, result.heard).clean) || (result.unclear?.length ?? 0) > 0) ? (
@@ -488,11 +488,17 @@ function ScriptPlayer({
                         </p>
                       </div>
                       {result.practice ? <p className="mt-1.5 text-note text-slate-200">{result.practice.note}</p> : null}
+                      {result.practice?.verdict === "wrong" && result.practice.better ? (
+                        <p dir="auto" className="mt-1 text-chat text-emerald-200">→ {result.practice.better}</p>
+                      ) : null}
                     </>
                   ) : (
                     <>
                       <Attempt outcomes={compareToTarget(line.text, result.heard).outcomes} ui={ui} />
                       {result.practice ? <p className="mt-1.5 text-note text-slate-200">{result.practice.note}</p> : null}
+                      {result.practice?.verdict === "wrong" && result.practice.better ? (
+                        <p dir="auto" className="mt-1 text-chat text-emerald-200">→ {result.practice.better}</p>
+                      ) : null}
                     </>
                   )
                 ) : null}
@@ -565,11 +571,30 @@ function freshPicks(script: StageScript): Record<number, number> {
  * 맞힌 줄의 평가(2026-10-28 사용자 "잘 들렸어요보다 perfect 느낌으로, 아니면 이 부분 발음이 약간 어긋났다"):
  * 낱말이 대본 그대로 + 받아쓰기가 망설인 낱말이 없으면 ★ 완벽해요, 아니면 ✓ 잘 들렸어요 + 흐릿했던 낱말 칩.
  */
-export function LineGrade({ ui, exact, unclear }: { ui: UICopy; exact: boolean; unclear: readonly string[] }) {
+export function LineGrade({
+  ui,
+  exact,
+  unclear,
+  practice = null,
+}: {
+  ui: UICopy;
+  exact: boolean;
+  unclear: readonly string[];
+  /** 떠올려 말한 줄의 세 갈래(natural·awkward) — 대본과 낱말이 다를 때만 의미가 있다. */
+  practice?: Practice | null;
+}) {
   const perfect = exact && unclear.length === 0;
+  const awkward = !exact && practice?.verdict === "awkward";
+  const natural = !exact && practice?.verdict === "natural";
+  const label = perfect ? `★ ${ui.scriptPerfect}` : awkward ? `△ ${ui.scriptAwkward}` : natural ? `✓ ${ui.scriptNatural}` : `✓ ${ui.scriptClean}`;
   return (
     <div className="mt-1.5 flex flex-col gap-1">
-      <p className={`text-caption font-semibold ${perfect ? "text-status-learned" : "text-emerald-300"}`}>{perfect ? `★ ${ui.scriptPerfect}` : `✓ ${ui.scriptClean}`}</p>
+      <p className={`text-caption font-semibold ${perfect ? "text-status-learned" : awkward ? "text-warn" : "text-emerald-300"}`}>{label}</p>
+      {awkward && practice?.better ? (
+        <p dir="auto" className="text-chat text-ink">
+          {practice.better}
+        </p>
+      ) : null}
       {unclear.length ? (
         <p className="flex flex-wrap items-center gap-1.5 text-caption text-slate-400">
           <span>{ui.scriptUnclear}</span>

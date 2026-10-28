@@ -176,3 +176,17 @@ test("pieces are shared out by length when several words went missing", () => {
     ["初めまして", "ミンジ"],
   );
 });
+
+test("떠올려 말하기 세 갈래: 맞지만 어색함도 통과, 틀림은 고친 줄과 함께", () => {
+  const awkward = parsePractice('{"good": false, "verdict": "awkward", "better": "I\'ll finish it on Wednesday.", "note": "n"}')!;
+  assert.equal(awkward.good, true);
+  assert.equal(awkward.verdict, "awkward");
+  assert.equal(awkward.better, "I'll finish it on Wednesday.");
+  const natural = parsePractice('{"good": true, "verdict": "natural", "better": "x", "note": "n"}')!;
+  assert.equal(natural.good, true);
+  assert.equal(natural.better, undefined);
+  const wrong = parsePractice('{"good": true, "verdict": "wrong", "better": "y", "note": "n"}')!;
+  assert.equal(wrong.good, false);
+  assert.equal(wrong.better, "y");
+  assert.equal(parsePractice('{"good": true, "note": "n"}')!.verdict, undefined);
+});

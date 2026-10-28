@@ -175,6 +175,13 @@ export type Practice = {
   good: boolean;
   /** One or two sentences, in the learner's own language. */
   note: string;
+  /**
+   * 떠올려 말한 줄·내 말로·문장구조(2026-10-28 사용자 "의미상 맞는 문장 / 문법적으로 맞지만 자연스럽지 않은 문장 / 틀린 문장으로 나눠서"):
+   * natural = 맞는 표현, awkward = 맞지만 더 자연스러운 말이 있음(통과), wrong = 틀림. 없으면 예전 판단만.
+   */
+  verdict?: "natural" | "awkward" | "wrong";
+  /** awkward·wrong일 때 더 자연스러운(맞는) 말 한 줄(학습 언어). */
+  better?: string;
 };
 
 export const MAX_PRACTICE_CHARS = 400;
@@ -231,10 +238,16 @@ This is not a dictation check. Decide like a friendly native speaker in that con
 - Recognisers do not strip word endings. A missing past tense, plural, conjugation or agreement — especially more than once — is the learner's mistake, not the recogniser's.
 - "good" is FALSE only when the meaning really changed (a different fact, time, person or intention), the grammar is clearly wrong in a way a native would notice (wrong tense for what is meant, wrong form, broken agreement), or too little came through to tell.
 
+Also sort it into one of three verdicts:
+- "natural": the meaning fits and it is something a native speaker would naturally say here (wording may differ from the script).
+- "awkward": understandable and grammatical, but a native speaker would put it differently — still counts as a pass; give the more natural way in "better".
+- "wrong": the meaning changed or got lost, or there is a real grammar mistake — give the correct way in "better".
+"good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural"). In the note, for "awkward" say briefly why the better line sounds more natural.
+
 The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is true and the wording differs from the script, say in one short line that it works and quote how the script says it. When "good" is false, say in one sentence what is off and how to fix it; if almost nothing came through, say gently to try again a little slower.
 
 Reply as JSON only, politely and in one consistent level of politeness:
-{"good": true or false, "note": "<one or two sentences>"}`;
+{"good": true or false, "verdict": "natural or awkward or wrong", "better": "<more natural or correct line, or empty>", "note": "<one or two sentences>"}`;
 }
 
 /**
@@ -257,10 +270,16 @@ What the recogniser heard: "${input.heard || "(nothing)"}"
 
 "good" is true when what they said gets that meaning across, fits as a reply at this point, and a native listener would accept it without stumbling — different words from the native line are fine. It is false when the meaning is lost or changed, when a mistake would confuse or sound wrong to a native, or when nothing usable came through. A recogniser slip that sounds the same is not their mistake, and the recogniser often drops punctuation and the rise of a question — a statement-shaped transcript of something that works as a question at this point is fine. Bring up politeness only when it clearly clashes with the relationship the conversation shows; match the speech level the native line uses.
 
+Also sort it into one of three verdicts:
+- "natural": the meaning fits and it is something a native speaker would naturally say here (wording may differ from the script).
+- "awkward": understandable and grammatical, but a native speaker would put it differently — still counts as a pass; give the more natural way in "better".
+- "wrong": the meaning changed or got lost, or there is a real grammar mistake — give the correct way in "better".
+"good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural"). In the note, for "awkward" say briefly why the better line sounds more natural.
+
 The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is false, say in one sentence what did not come across or what sounds wrong, and how to fix it. When "good" is true, one short line on what worked; if the native line has a more natural turn worth knowing, mention it.
 
 Reply as JSON only, politely and in one consistent level of politeness:
-{"good": true or false, "note": "<one or two sentences>"}`;
+{"good": true or false, "verdict": "natural or awkward or wrong", "better": "<more natural or correct line, or empty>", "note": "<one or two sentences>"}`;
 }
 
 /**
@@ -281,12 +300,18 @@ The pattern: "${input.frame}"${input.meaning ? `\nWhat the pattern does: "${inpu
 One example sentence with this pattern (theirs may fill the blank with anything): "${input.example}"
 What the recogniser heard: "${input.heard || "(nothing)"}"
 
-"good" is true when the sentence uses this pattern — with the blank filled by any sensible content, conjugated or joined to the pattern correctly — and a native listener would accept it as natural. It is false when the pattern is missing or changed into a different one, when the filler is not joined to it correctly (wrong form, particle or agreement), or when nothing usable came through. Do not judge what they chose to talk about. A recogniser slip that sounds the same is not their mistake, and the recogniser often drops punctuation.
+"good" is true when the sentence uses this pattern — with the blank filled by any sensible content, conjugated or joined to the pattern correctly — and a native listener would accept it as natural. It is false when the pattern is missing or changed into a different one, when the filler is not joined to it correctly (wrong form, particle or agreement), or when nothing usable came through. Do not judge what they chose to talk about.
+
+Also sort it into one of three verdicts:
+- "natural": the meaning fits and it is something a native speaker would naturally say here (wording may differ from the script).
+- "awkward": understandable and grammatical, but a native speaker would put it differently — still counts as a pass; give the more natural way in "better".
+- "wrong": the meaning changed or got lost, or there is a real grammar mistake — give the correct way in "better".
+"good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural"). In the note, for "awkward" say briefly why the better line sounds more natural. A recogniser slip that sounds the same is not their mistake, and the recogniser often drops punctuation.
 
 The person reading your note speaks ${input.nativeLanguage}: write the note entirely in ${input.nativeLanguage}, never in ${input.targetLanguage}, quoting ${input.targetLanguage} words only where you must. When "good" is false, say in one sentence what is off in how the pattern was used and how to fix it. When "good" is true, one short line on what worked.
 
 Reply as JSON only, politely and in one consistent level of politeness:
-{"good": true or false, "note": "<one or two sentences>"}`;
+{"good": true or false, "verdict": "natural or awkward or wrong", "better": "<more natural or correct line, or empty>", "note": "<one or two sentences>"}`;
 }
 
 export function parsePractice(raw: string): Practice | null {
@@ -297,8 +322,12 @@ export function parsePractice(raw: string): Practice | null {
     return null;
   }
   if (typeof parsed !== "object" || parsed === null) return null;
-  const record = parsed as { good?: unknown; note?: unknown };
+  const record = parsed as { good?: unknown; note?: unknown; verdict?: unknown; better?: unknown };
   const note = typeof record.note === "string" ? record.note.trim().slice(0, MAX_PRACTICE_CHARS) : "";
   if (!note) return null;
-  return { good: record.good === true, note };
+  const verdict = record.verdict === "natural" || record.verdict === "awkward" || record.verdict === "wrong" ? record.verdict : undefined;
+  const better = typeof record.better === "string" ? record.better.trim().slice(0, 200) : "";
+  // 세 갈래가 오면 그것으로 good을 정한다(맞지만 어색한 것도 통과).
+  const good = verdict ? verdict !== "wrong" : record.good === true;
+  return { good, note, ...(verdict ? { verdict } : {}), ...(better && verdict !== "natural" ? { better } : {}) };
 }

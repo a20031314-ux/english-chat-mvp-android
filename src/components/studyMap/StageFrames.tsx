@@ -435,7 +435,7 @@ function FramePlayer({
                 {result ? (
                   result.clean ? (
                     <>
-                      <LineGrade ui={ui} exact={!own && compareToTarget(example.text, result.heard).clean} unclear={result.unclear ?? []} />
+                      <LineGrade ui={ui} exact={!own && compareToTarget(example.text, result.heard).clean} unclear={result.unclear ?? []} practice={result.practice} />
                       {result.practice && (own || (stepMode !== "shadow" && !compareToTarget(example.text, result.heard).clean) || (result.unclear?.length ?? 0) > 0) ? (
                         <p className="mt-1 text-note text-slate-200">{result.practice.note}</p>
                       ) : null}
@@ -444,6 +444,9 @@ function FramePlayer({
                     <>
                       {own ? null : <Attempt outcomes={compareToTarget(example.text, result.heard).outcomes} ui={ui} />}
                       {result.practice ? <p className="mt-1.5 text-note text-slate-200">{result.practice.note}</p> : null}
+                      {result.practice?.verdict === "wrong" && result.practice.better ? (
+                        <p dir="auto" className="mt-1 text-chat text-emerald-200">→ {result.practice.better}</p>
+                      ) : null}
                     </>
                   )
                 ) : null}
