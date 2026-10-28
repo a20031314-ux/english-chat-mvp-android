@@ -31,6 +31,7 @@ export const OPENAI_TEXT_DEFAULTS = {
   vision: "gpt-6-luna",
   roleplayTutor: "gpt-6-luna",
   roleplayPractice: "gpt-6-luna",
+  scriptJudge: "gpt-6-luna",
   ask: "gpt-6-luna",
   mission: "gpt-6-luna",
   curriculum: "gpt-6-luna",
@@ -76,6 +77,9 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   video: HAIKU,
   vision: HAIKU,
   roleplayPractice: HAIKU,
+  // 대본 떠올려 말하기·내 말로·문장구조 판단(2026-10-29 사용자 "방법은 B로"): Haiku는 같은 말에 판단이 갈려(가상 사용자 36문장 중 7) Sonnet.
+  // 따라 말하기·통화 다시 말해보기는 낱말 대조라 Haiku 그대로(roleplayPractice). 되돌리기 Vercel `MODEL_ROUTES={"scriptJudge":"anthropic: claude-haiku-5-5"}`.
+  scriptJudge: SONNET,
   learnerRead: HAIKU,
   ask: HAIKU,
   roleplayReview: SONNET,

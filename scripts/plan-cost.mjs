@@ -63,7 +63,8 @@ export const HEAVY_DAY = { callMinutes: 7.1, chat: 3, packs: 1, scriptLines: 12,
  * My 단계 대본(2026-10-28, 모든 요금 — 무료는 이것만): 내 줄 한 번 = 받아쓰기 + 확인 한마디. 최악은 요금의 하루 한도(dailyScriptLines)를 다 씀.
  * 대본 소리는 공유 캐시(앱이 쓴 줄, 한 번 만들면 모두가 씀)라 넣지 않는다.
  */
-const scriptLineUsd = () => opUsd("roleplayListen") + opUsd("roleplayPractice");
+// 대본 한 줄: 받아쓰기 + 판단(떠올려 말하기가 대부분 — Sonnet scriptJudge, 따라 말하기는 더 싼 roleplayPractice).
+const scriptLineUsd = () => opUsd("roleplayListen") + opUsd("scriptJudge");
 
 const krw = (usd) => usd * KRW_PER_USD.rate;
 const won = (n) => `${Math.round(n).toLocaleString("ko-KR")}원`;

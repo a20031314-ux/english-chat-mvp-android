@@ -133,6 +133,7 @@ export const OP_COST: Record<string, OpCost> = {
   // 장면·대화 약 1,500토큰 + 이유 문장(추론 모델이면 생각 토큰 포함 약 800, 2026-10-22 어림 — 예전 정액 $0.002와 같은 규모).
   roleplayReview: estimated("roleplayReview", { input: 1500, output: 800 }),
   roleplayPractice: llm("roleplayPractice"),
+  scriptJudge: llm("scriptJudge"),
   roleplayBankLine: counter,
   roleplayInventedLine: counter,
   roleplaySplitTurn: counter,

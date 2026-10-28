@@ -293,21 +293,22 @@ What the recogniser heard: "${input.heard || "(nothing)"}"
 ${unclearPart(input.unclear, input.nativeLanguage)}
 Do not compare the words. Compare what a listener would take away, in three steps:
 1. "scriptMeaning": what a listener in this conversation would take away from the script line, written in ${input.nativeLanguage} as short facts — what happened or is wanted, who, with whom, where, when (past, now or future), how it felt, and whether it asks something. Write the situation, not the wording: going somewhere to do something and having done it there, or being somewhere and having gone there, end up as the same fact.
-2. "saidMeaning": the same facts for the learner's line, written in the same style. Read it as a listener would: speech recognisers drop punctuation and the rise of a question, blur or drop short unstressed words (articles, prepositions, auxiliaries), and turn a word into a similar-sounding one or run two words together. Where a word of the transcript sounds close to the script's word (or two of them run together) and makes no better sense in this conversation, it is such a slip: write the script's word in "saidMeaning", as if it had been transcribed right, and mention the slip only in the note. If you catch yourself thinking a word "was probably misrecognised", that is exactly this case — it can never make the line "wrong". But never invent content that is not there: a word that is simply absent is absent.
+2. "saidMeaning": the same facts for the learner's line, written in the same style. The recogniser writes what it heard quite faithfully, including small words, particles, articles and endings, but it drops punctuation and the rise of a question. Exactly one kind of recogniser slip is allowed for: a single content word written as a different real word that sounds very close to the script's word and makes no sense in this conversation (a near-homophone). Only then write the script's word in "saidMeaning". Everything else in the transcript is what the learner said: a wrong or missing article, particle, preposition or ending, a changed word order, a word that does not sound like the script's, or a different word that still makes sense in the sentence. Never invent content that is not there.
 3. Compare the two lists of facts. A difference counts only when a listener would come away believing something different about the situation. Another verb for the same event, a verb that implies the script's one, a synonym, a different natural order, a contraction or a shorter way of saying it all leave the facts the same.
 
 Verdicts:
 - "wrong": the two meanings differ — something is missing, added or changed (a fact, time or tense of what happened, person, amount, feeling, intention, or a question turned into a statement where it matters), or too little came through to tell.
 - "awkward": the meanings match, but the line has a grammar slip or is phrased in a way a native would not say here — still a pass; give the correct, natural line in "better".
 - "natural": the meanings match and it is fine as said.
-When in doubt between "natural" and "awkward", choose "natural". A recogniser slip is never a reason for "awkward" or "wrong".
+When in doubt between "natural" and "awkward", choose "natural". A near-homophone slip (step 2) is never a reason for "awkward" or "wrong"; a grammar slip with the same meaning is "awkward", never "natural".
 "good" is true for "natural" and "awkward", false for "wrong". "better" is one short line in ${input.targetLanguage} (empty for "natural").
 
 The note is for someone who speaks ${input.nativeLanguage}: write it entirely in ${input.nativeLanguage}, quoting ${input.targetLanguage} words only where you must, in one or two sentences.
-- "wrong": name only the meaning that differs (what the script says vs what came across) and the ${input.targetLanguage} words that would carry it. Say nothing about parts whose meaning matched, however differently they were worded.
+- "wrong": name only the meaning that differs (what the script says vs what came across) and the ${input.targetLanguage} words that would carry it. Say nothing about parts whose meaning matched, however differently they were worded. Treat it as something they said, not as a sound: do not tell them to pronounce it more clearly.
 - "awkward": the slip, and the natural way to say it.
 - "natural": one short line that it works; if the wording differs from the script, quote how the script says it.
-- If a word read as a recogniser slip, add that that word could be said more clearly.
+- Only when you read a near-homophone as a recogniser slip (step 2), add that that one word could be said more clearly. Never give pronunciation advice for anything else.
+- Do not mention punctuation, question intonation or how the recogniser works.
 - If almost nothing came through, say gently to try again a little slower.
 
 Reply as JSON only, politely and in one consistent level of politeness:

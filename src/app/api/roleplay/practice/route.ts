@@ -32,8 +32,8 @@ export const dynamic = "force-dynamic";
  * point is saying the line again and again. The finding is already made; this
  * is phrasing.
  */
-function practiceModel(): string {
-  return routeFor("roleplayPractice").model;
+function practiceModel(task: "roleplayPractice" | "scriptJudge"): string {
+  return routeFor(task).model;
 }
 
 export async function OPTIONS(request: NextRequest) {
@@ -74,7 +74,13 @@ export async function POST(request: NextRequest) {
     if (heard) after(() => studyTick(request, "lines"));
   }
 
-  await meterRequest(request, "roleplayPractice");
+  // 뜻으로 판단하는 줄(떠올려 말하기·내 말로·문장구조)은 Sonnet(scriptJudge), 따라 말하기·통화 다시 말해보기는 낱말 대조라 Haiku.
+  const judged =
+    typeof body.frame === "string" ||
+    typeof body.meaning === "string" ||
+    (typeof body.scriptId === "string" && Boolean(body.scriptId) && body.mode !== "shadow");
+  const task = judged ? "scriptJudge" : "roleplayPractice";
+  await meterRequest(request, task);
 
   const comparison = compareToTarget(target, heard);
   // Saying a line again is what grows pronunciation (learner/growth.ts): an
@@ -85,7 +91,7 @@ export async function POST(request: NextRequest) {
     );
   }
   try {
-    const model = practiceModel();
+    const model = practiceModel(task);
     const reasoning = isReasoningModel(model);
     const nativeCode = coerceLanguageCode(body.nativeLanguage);
     const nativeName = interfaceLanguageName(nativeCode);
@@ -117,7 +123,7 @@ export async function POST(request: NextRequest) {
         });
     type Turn = { role: "system" | "user" | "assistant"; content: string };
     const ask = (messages: Turn[]) =>
-      completeChat(client, "roleplayPractice", {
+      completeChat(client, task, {
         messages,
         response_format: { type: "json_object" },
         ...(reasoning
