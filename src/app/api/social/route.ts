@@ -1,22 +1,25 @@
 import { NextRequest } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestAuth } from "@/lib/server/premiumRequest";
-import { readAccount, readAccounts, readPhoto } from "@/lib/server/accountStore";
+import { accountsExist, readAccount, readAccounts, readPhoto } from "@/lib/server/accountStore";
 import { readPresence, recentPeople, touchPresence } from "@/lib/server/presenceStore";
 import {
   addReport,
   block,
+  blockedEitherWay,
   counts,
   follow,
+  followerCount,
   isAccountId,
   readBlocked,
   readBlockedMany,
+  readFollowers,
   readFollowing,
   unblock,
   unfollow,
 } from "@/lib/server/socialStore";
 import { cleanText, isRoomId } from "@/lib/rooms/protocol";
-import { PEOPLE_WINDOW_MS, type PersonCard, type PublicProfile } from "@/lib/rooms/social";
+import { PEOPLE_WINDOW_MS, type FollowList, type PersonCard, type PublicProfile } from "@/lib/rooms/social";
 import { suspendedResponse } from "@/lib/server/suspension";
 import { factsOf, learnsOf, sharedInterests, showOf, speaksOf } from "@/lib/account/profileFacts";
 import { isLangMatch, langMatches } from "@/lib/rooms/langMatch";
@@ -58,6 +61,8 @@ export async function OPTIONS(request: NextRequest) {
 }
 
 const bad = (request: NextRequest, error: string, status = 400) => jsonWithCors(request, { error }, { status });
+/** 팔로워·팔로잉 목록 한 번에 보이는 최대 사람 수. */
+const FOLLOW_LIST_MAX = 200;
 
 
 export async function POST(request: NextRequest) {
@@ -174,6 +179,28 @@ export async function POST(request: NextRequest) {
   if (!isAccountId(body.target)) return bad(request, "BAD_TARGET");
   const target = body.target;
 
+  // 팔로워·팔로잉 목록(2026-10-28, 2.76 앱부터): 로그인한 사람만, 서로 차단이면 안 됨, 주인이 숨겼으면(show.follows 끔) 주인만.
+  // 목록 속 사람 중 나와 서로 차단·지운 계정은 뺀다. more = 숫자에는 있는데 목록에 없는 사람(백필 전 팔로워·뺀 사람·200명 넘음).
+  if (action === "follows") {
+    if (!me) return bad(request, "SIGNED_OUT", 401);
+    const which = body.list === "following" ? "following" : "followers";
+    const account = await readAccount(target);
+    if (!account) return bad(request, "NO_ACCOUNT", 404);
+    if (me !== target && (await blockedEitherWay(me, target))) return bad(request, "BLOCKED", 403);
+    if (me !== target && !showOf(account.profile.show).follows) {
+      const hidden: FollowList = { ids: [], more: 0, hidden: true };
+      return jsonWithCors(request, hidden);
+    }
+    const [raw, total] =
+      which === "followers"
+        ? await Promise.all([readFollowers(target, FOLLOW_LIST_MAX), followerCount(target)])
+        : await readFollowing(target).then((list) => [[...list].reverse().slice(0, FOLLOW_LIST_MAX), list.length] as const);
+    const [myBlocked, theirBlocks, alive] = await Promise.all([readBlocked(me), readBlockedMany(raw), accountsExist(raw)]);
+    const ids = raw.filter((id, index) => alive[index] && !myBlocked.includes(id) && !theirBlocks[index].includes(me));
+    const list: FollowList = { ids, more: Math.max(0, total - ids.length) };
+    return jsonWithCors(request, list);
+  }
+
   if (action === "profile") {
     const account = await readAccount(target);
     if (!account) return bad(request, "NO_ACCOUNT", 404);
@@ -215,6 +242,7 @@ export async function POST(request: NextRequest) {
       ...(check && learn ? { goal: { language: learn, use: check.use ?? null, focus: check.focus } } : {}),
       ...(posts ? { posts } : {}),
       ...(me === target ? { show } : {}),
+      ...(me !== target && !show.follows ? { followsHidden: true } : {}),
     };
     return jsonWithCors(request, { profile });
   }

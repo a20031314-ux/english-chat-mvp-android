@@ -5,6 +5,7 @@ import { useEffect, useMemo, useRef, useState, useSyncExternalStore, type ReactN
 import { BodyLayer } from "@/components/FullScreenLayer";
 import type { RoomCopy } from "@/lib/rooms/copy";
 import {
+  fetchFollows,
   fetchProfile,
   howToSay,
   reportPerson,
@@ -142,6 +143,7 @@ export function ProfileSheet({
   onBlockedChange,
   onMessage,
   above = false,
+  layer,
 }: {
   t: RoomCopy;
   locale: string;
@@ -161,8 +163,13 @@ export function ProfileSheet({
   onMessage?: (accountId: string) => void;
   /** 1:1·단체방 화면(z-[95]) 위에서 열 때 — 그보다 위 층(z-[97])에. */
   above?: boolean;
+  /** 층을 직접(팔로우 목록에서 연 프로필은 목록 위 99). 있으면 above보다 앞선다. */
+  layer?: number;
 }) {
   const profile = useProfile(accountId);
+  // 팔로워·팔로잉 숫자를 누르면 목록, 목록의 사람을 누르면 그 사람 프로필(이 시트 위에 겹침).
+  const [listOpen, setListOpen] = useState<"followers" | "following" | null>(null);
+  const zIndex = layer ?? (above ? 97 : 90);
   const [busy, setBusy] = useState(false);
   const [confirmTransfer, setConfirmTransfer] = useState(false);
   const [reporting, setReporting] = useState(false);
@@ -212,7 +219,7 @@ export function ProfileSheet({
 
   return (
     <BodyLayer>
-      <div className={`fixed inset-0 ${above ? "z-[97]" : "z-[90]"} flex items-end justify-center bg-black/60 p-3 sm:items-center`} onClick={onClose}>
+      <div className="fixed inset-0 flex items-end justify-center bg-black/60 p-3 sm:items-center" style={{ zIndex }} onClick={onClose}>
         <div
           role="dialog"
           aria-modal="true"
@@ -258,17 +265,34 @@ export function ProfileSheet({
             <dl className="mt-3 grid grid-cols-4 gap-1 text-center">
               {(
                 [
-                  [t.followers, profile.followers],
-                  [t.followingCount, profile.following],
-                  [t.hosted, profile.hosted],
-                  [t.helped, profile.helped],
+                  [t.followers, profile.followers, "followers"],
+                  [t.followingCount, profile.following, "following"],
+                  [t.hosted, profile.hosted, null],
+                  [t.helped, profile.helped, null],
                 ] as const
-              ).map(([label, value]) => (
-                <div key={label} className="rounded-lg bg-white/[0.04] py-1.5">
-                  <dd className="text-base font-semibold text-white">{value}</dd>
-                  <dt className="text-[10px] text-slate-400">{label}</dt>
-                </div>
-              ))}
+              ).map(([label, value, list]) =>
+                list && accountId ? (
+                  // 숨긴 사람(남이 볼 때)은 숫자만 — 자물쇠, 누를 수 없음.
+                  <button
+                    key={label}
+                    type="button"
+                    disabled={profile.followsHidden === true}
+                    onClick={() => setListOpen(list)}
+                    className="rounded-lg bg-white/[0.04] py-1.5 enabled:hover:bg-white/[0.08]"
+                  >
+                    <dd className="text-base font-semibold text-white">{value}</dd>
+                    <dt className="text-meta text-slate-400">
+                      {profile.followsHidden ? "🔒 " : ""}
+                      {label}
+                    </dt>
+                  </button>
+                ) : (
+                  <div key={label} className="rounded-lg bg-white/[0.04] py-1.5">
+                    <dd className="text-base font-semibold text-white">{value}</dd>
+                    <dt className="text-[10px] text-slate-400">{label}</dt>
+                  </div>
+                ),
+              )}
             </dl>
           ) : null}
           {profile?.blockedByMe ? <p className="mt-3 text-xs text-rose-300">{t.blockedNote}</p> : null}
@@ -375,6 +399,17 @@ export function ProfileSheet({
           ) : null}
         </div>
       </div>
+      {listOpen && accountId ? (
+        <FollowListSheet
+          t={t}
+          locale={locale}
+          accountId={accountId}
+          list={listOpen}
+          zIndex={zIndex + 1}
+          onClose={() => setListOpen(null)}
+          onMessage={onMessage}
+        />
+      ) : null}
     </BodyLayer>
   );
 }
@@ -1188,5 +1223,96 @@ export function Unsendable({
         </div>
       ) : null}
     </div>
+  );
+}
+
+/** 팔로워·팔로잉 목록 시트(2026-10-28). 사람을 누르면 그 사람 프로필이 이 목록 위에. */
+function FollowListSheet({
+  t,
+  locale,
+  accountId,
+  list,
+  zIndex,
+  onClose,
+  onMessage,
+}: {
+  t: RoomCopy;
+  locale: string;
+  accountId: string;
+  list: "followers" | "following";
+  zIndex: number;
+  onClose: () => void;
+  onMessage?: (accountId: string) => void;
+}) {
+  const [rows, setRows] = useState<{ ids: string[]; more: number } | null>(null);
+  const [failed, setFailed] = useState(false);
+  const [person, setPerson] = useState<string | null>(null);
+  useEffect(() => {
+    let alive = true;
+    fetchFollows(accountId, list).then(
+      (body) => alive && setRows(body.hidden ? { ids: [], more: 0 } : { ids: body.ids, more: body.more }),
+      () => alive && setFailed(true),
+    );
+    return () => {
+      alive = false;
+    };
+  }, [accountId, list]);
+  return (
+    <BodyLayer>
+      <div className="fixed inset-0 flex items-end justify-center bg-black/60 p-3 sm:items-center" style={{ zIndex }} onClick={onClose}>
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={list === "followers" ? t.followers : t.followingCount}
+          className="flex max-h-[80dvh] w-full max-w-md flex-col rounded-2xl border border-white/10 bg-surface p-4 shadow-2xl"
+          onClick={(event) => event.stopPropagation()}
+        >
+          <div className="mb-2 flex items-center justify-between">
+            <p className="text-base font-semibold text-white">{list === "followers" ? t.followers : t.followingCount}</p>
+            <button type="button" onClick={onClose} className="rounded-lg px-2 py-1 text-sm text-slate-400 hover:bg-white/10">
+              {t.close2}
+            </button>
+          </div>
+          <ul className="min-h-0 flex-1 space-y-1 overflow-y-auto">
+            {rows?.ids.map((id) => <FollowRow key={id} id={id} onOpen={() => setPerson(id)} />)}
+          </ul>
+          {failed ? <p className="py-4 text-center text-sm text-rose-300">{t.error}</p> : null}
+          {rows && !rows.ids.length && !rows.more ? <p className="py-4 text-center text-sm text-slate-400">{t.followListEmpty}</p> : null}
+          {rows && rows.more > 0 ? <p className="pt-2 text-center text-xs text-slate-500">{t.followListMore.replace("{n}", String(rows.more))}</p> : null}
+        </div>
+      </div>
+      {person ? (
+        <ProfileSheet
+          t={t}
+          locale={locale}
+          member={null}
+          accountId={person}
+          nickname=""
+          isHostView={false}
+          roomId=""
+          recentLines={[]}
+          layer={zIndex + 1}
+          onClose={() => setPerson(null)}
+          onGrant={() => {}}
+          onBlockedChange={() => setPerson(null)}
+          {...(onMessage ? { onMessage } : {})}
+        />
+      ) : null}
+    </BodyLayer>
+  );
+}
+
+function FollowRow({ id, onOpen }: { id: string; onOpen: () => void }) {
+  const profile = useProfile(id);
+  const name = profile?.nickname || "…";
+  return (
+    <li>
+      <button type="button" onClick={onOpen} className="flex w-full items-center gap-3 rounded-lg px-1 py-1.5 text-start hover:bg-white/5">
+        <Face accountId={id} name={name} size={36} />
+        <span className="min-w-0 flex-1 truncate text-sm text-white" dir="auto">
+          {name}
+        </span>
+      </button>
+    </li>
   );
 }

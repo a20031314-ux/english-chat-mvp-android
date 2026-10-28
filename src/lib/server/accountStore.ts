@@ -391,3 +391,10 @@ export async function readReceiptsOff(ids: string[]): Promise<boolean[]> {
   const rows = await kvGetJsonMany<number>(ids.map(readReceiptsOffKey));
   return rows.map((row) => row !== null);
 }
+
+/** 계정이 아직 있는지(같은 순서) — 팔로우 목록에서 지운 계정을 뺄 때. 한 번에 읽는다. */
+export async function accountsExist(ids: string[]): Promise<boolean[]> {
+  if (!ids.length) return [];
+  const rows = await kvGetJsonMany<unknown>(ids.map(accountKey));
+  return rows.map((row) => row !== null);
+}

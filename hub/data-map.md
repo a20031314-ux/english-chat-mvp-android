@@ -41,7 +41,7 @@
 | 비용 | `usage:op` | 학습자 한 명 | 45일 | 지움(주 1회 정리) | 기능별 사용 횟수(비용 보고, 일별) | `entitlementStore.ts` |
 | 비용 | `usage:tok` | 운영 | 45일 | 해당 없음 | 기능별 잰 토큰(일별, 사람 없음) | `meterRequest.ts` |
 | 사람 사이 사진(1:1·단체방·게시판) | `media:v1` | 방·대화 | 2일 · 365일 · 37일 · 40일 · 계산(board ? BOARD_META_TTL : MEDIA) | 지움 | 사진 정보(올린 사람·붙인 곳·Blob 경로·크기·지울 때)·하루 올린 수·올린 사람별 id·날짜별 지울 목록 — 파일은 Vercel Blob(private) media/<id>, 1:1·단체방 30일·안 보낸 사진 하루·게시판은 글과 함께 | `mediaStore.ts` |
-| 사람·팔로우 | `social:v1` | 계정 | 60일 · 90일 · 영구 | 지움(일부: 접속 기록) | 팔로우·차단·관계·신고·접속·도운 수 | `opsStore.ts` `presenceStore.ts` `socialStore.ts` |
+| 사람·팔로우 | `social:v1` | 계정 | 60일 · 90일 · 영구 | 지움(일부: 접속 기록) | 팔로우·팔로워 목록(followerset)·차단·관계·신고·접속·도운 수 | `opsStore.ts` `presenceStore.ts` `socialStore.ts` |
 | 사용자 아이콘·짤 묶음 | `icon:v1` | 계정 | 2일 · 30초 · 3650일 · 영구 | 지움(만든 묶음·그림·받아 둔 목록·산 목록, 판매 묶음을 지우면 산 사람에게 포인트를 돌려줌, 쓰인 날 표시는 2일 기한) | 묶음(만든 사람·이름·라이선스 CC BY 4.0/CC0/앱 안 판매·가격·판매 상태·아이콘 크기·붙인 한 마디)·새/인기 목록·만든 사람별 목록·받아 둔 묶음·산 묶음·판매 묶음을 산 사람(계정·포인트 id·낸 포인트·만든 사람 몫)·쓰인 수·하루 올린 수 — 그림은 Vercel Blob(private) icons/<묶음>/<아이콘>.webp, 모두에게 공개 | `iconStore.ts` |
 | 영상 | `usage:trial` | 학습자 한 명 | 영구 | 지움(주 1회 정리) | 영상 체험 쓴 것 | `entitlementStore.ts` |
 | 영상 | `usage:video` | 학습자 한 명 | 70일 | 지움(주 1회 정리) | 영상 준비 사용(월별) | `entitlementStore.ts` |

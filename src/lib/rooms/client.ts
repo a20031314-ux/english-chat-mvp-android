@@ -6,7 +6,7 @@ import { noteSuspended } from "./suspended";
 import { entitlementHeaders } from "@/lib/billing/billingService";
 import { readCachedAccount } from "@/lib/account/session";
 import type { LineKind, PollResponse, RoomLine, RoomMember, RoomMeta, RoomRole, RoomSummary, SignalKind } from "./protocol";
-import type { PersonCard, PublicProfile } from "./social";
+import type { FollowList, PersonCard, PublicProfile } from "./social";
 import type { LiarMode, LiarTopic, LiarView } from "./liarGame";
 import type { MafiaView } from "./mafiaGame";
 import type { DmMessage, DmSummary, DmThread } from "./dm";
@@ -482,6 +482,11 @@ export type ThankTarget =
 /** 도움됐어요. 이미 누른 답·오늘 이미 그 사람에게 누름은 오류 코드로(ALREADY·TODAY). */
 export async function sendThank(target: ThankTarget, learn: string): Promise<void> {
   await social("thank", { ...target, learn });
+}
+
+/** 팔로워·팔로잉 목록(2026-10-28). 주인이 숨겼으면 hidden. */
+export function fetchFollows(target: string, list: "followers" | "following"): Promise<FollowList> {
+  return social<FollowList>("follows", { target, list });
 }
 
 export async function setFollow(target: string, on: boolean): Promise<void> {

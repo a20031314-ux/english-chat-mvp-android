@@ -29,7 +29,12 @@ export type PublicProfile = {
   posts?: BoardPost[];
   /** 본인 프로필이면 칸 켬/끔(편집 시트가 쓴다). */
   show?: Record<string, boolean>;
+  /** 이 사람이 팔로워·팔로잉 목록을 숨김(남이 볼 때만 true) — 숫자는 보이고 눌러도 목록이 안 열림. */
+  followsHidden?: boolean;
 };
+
+/** 팔로워·팔로잉 목록 한 번(api/social follows). 이름·사진은 화면이 계정 id로 따로 받는다. */
+export type FollowList = { ids: string[]; more: number; hidden?: boolean };
 
 /** 사람 목록 한 사람(api/social people). 사진은 목록에 싣지 않고 프로필에서 따로 받는다. */
 export type PersonCard = {

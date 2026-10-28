@@ -5,6 +5,8 @@
  *   social:v1:block:<계정>       내가 차단한 계정 id 목록(JSON, 나만 씀)
  *   social:v1:edge:<나>:<상대>   팔로우 한 줄(있으면 1) — 팔로워 수를 두 번 세지 않게
  *   social:v1:followers:<계정>   팔로워 수(카운터)
+ *   social:v1:followerset:<계정> 팔로워 목록(정렬된 집합, 점수 = 팔로우한 때 ms) — 2026-10-28부터, 그 전 팔로우는
+ *                                `scripts/followers-backfill.mjs`(PC, KV 키)가 채움(점수 0)
  *   social:v1:hosted:<계정>      연 방 수(카운터)
  *   social:v1:helped:<계정>      손든 사람을 올려 준 횟수(카운터, 튜터 지표의 씨앗)
  *   social:v1:reports            신고 목록(운영자가 읽음, 90일)
@@ -12,7 +14,7 @@
  * 목록은 그 주인만 쓰므로 읽고-고치고-쓰기가 다른 사람과 엉키지 않는다.
  * 팔로워는 여러 사람이 동시에 바꾸므로 목록 대신 카운터와 관계 줄로 센다.
  */
-import { kvDelete, kvGetJson, kvGetJsonMany, kvGetNumber, kvIncrBy, kvListPush, kvListRange, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
+import { kvDelete, kvGetJson, kvGetJsonMany, kvGetNumber, kvIncrBy, kvListPush, kvListRange, kvSetJson, kvSetJsonIfAbsent, kvZAdd, kvZRem, kvZRevRange } from "./kv.ts";
 
 const MAX_FOLLOWING = 500;
 const MAX_BLOCKED = 500;
@@ -22,6 +24,7 @@ const followingKey = (id: string) => `social:v1:following:${id}`;
 const blockKey = (id: string) => `social:v1:block:${id}`;
 const edgeKey = (from: string, to: string) => `social:v1:edge:${from}:${to}`;
 const followersKey = (id: string) => `social:v1:followers:${id}`;
+export const followerSetKey = (id: string) => `social:v1:followerset:${id}`;
 const hostedKey = (id: string) => `social:v1:hosted:${id}`;
 const helpedKey = (id: string) => `social:v1:helped:${id}`;
 const REPORTS_KEY = "social:v1:reports";
@@ -61,6 +64,8 @@ export async function follow(me: string, target: string): Promise<FollowResult> 
   }
   // 관계 줄을 처음 만든 요청만 팔로워 수를 올린다(두 번 눌러도 한 번).
   if (await kvSetJsonIfAbsent(edgeKey(me, target), 1)) await kvIncrBy(followersKey(target), 1);
+  // 팔로워 목록(여러 사람이 동시에 바꿔도 되는 정렬된 집합) — 다시 눌러도 같은 한 줄.
+  await kvZAdd(followerSetKey(target), Date.now(), me);
   return "ok";
 }
 
@@ -71,6 +76,17 @@ export async function unfollow(me: string, target: string): Promise<void> {
     await kvDelete([edgeKey(me, target)]);
     await kvIncrBy(followersKey(target), -1);
   }
+  await kvZRem(followerSetKey(target), me);
+}
+
+/** 팔로워 목록(최근 팔로우한 사람부터, 최대 limit명). 목록이 생기기 전 팔로우는 백필 전까지 빠질 수 있다. */
+export async function readFollowers(id: string, limit = 200): Promise<string[]> {
+  return (await kvZRevRange(followerSetKey(id), 0, limit - 1)).map((row) => row.member);
+}
+
+/** 팔로워 수(카운터). */
+export async function followerCount(id: string): Promise<number> {
+  return Math.max(0, await kvGetNumber(followersKey(id)));
 }
 
 /** 차단: 서로의 팔로우를 끊고, 내 목록에 넣는다. */

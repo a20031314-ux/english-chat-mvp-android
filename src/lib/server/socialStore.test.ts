@@ -33,3 +33,21 @@ test("차단하면 서로의 팔로우가 끊기고 다시 팔로우할 수 없�
   await unblock(A, C);
   assert.equal(await follow(C, A), "ok");
 });
+
+test("팔로워 목록: 팔로우하면 들어가고(최근 순), 다시 눌러도 한 번, 끊거나 차단하면 빠짐", async () => {
+  const id = (c: string) => "lb_" + c.repeat(24);
+  const [star, a, b, c] = [id("a"), id("b"), id("c"), id("d")];
+  const { follow, unfollow, block, readFollowers, followerCount } = await import("./socialStore.ts");
+  assert.equal(await follow(a, star), "ok");
+  await new Promise((r) => setTimeout(r, 5));
+  assert.equal(await follow(b, star), "ok");
+  await follow(b, star);
+  assert.deepEqual(await readFollowers(star), [b, a]);
+  assert.equal(await followerCount(star), 2);
+  await follow(c, star);
+  await unfollow(a, star);
+  assert.deepEqual((await readFollowers(star)).sort(), [b, c].sort());
+  await block(star, c);
+  assert.deepEqual(await readFollowers(star), [b]);
+  assert.equal(await followerCount(star), 1);
+});

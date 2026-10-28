@@ -218,6 +218,7 @@ export function ShowToggles({
     ["goal", t.showGoal],
     ["maker", t.showMaker],
     ["posts", t.posts],
+    ["follows", t.showFollows],
     ["tutor", t.showTutor],
   ];
   return (
