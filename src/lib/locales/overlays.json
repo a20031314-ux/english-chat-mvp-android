@@ -746,7 +746,10 @@
     "partFixed": "直した",
     "partEmpty": "この日の学習記録はありません",
     "partPronDay": "言い直し {n}回",
-    "partOpenStage": "ステージで見る"
+    "partOpenStage": "ステージで見る",
+    "scriptToPass": "通過まであと{n}行",
+    "scriptRetryMissed": "その行だけもう一度",
+    "practiceAllUsed": "全部使えました"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1495,7 +1498,10 @@
     "partFixed": "已改正",
     "partEmpty": "这一天没有学习记录",
     "partPronDay": "重说 {n}次",
-    "partOpenStage": "在阶段中查看"
+    "partOpenStage": "在阶段中查看",
+    "scriptToPass": "还差 {n} 句通过",
+    "scriptRetryMissed": "只重做这几句",
+    "practiceAllUsed": "都用上了"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2246,7 +2252,10 @@
     "partFixed": "Đã sửa",
     "partEmpty": "Ngày này chưa học gì",
     "partPronDay": "Nói lại {n} lần",
-    "partOpenStage": "Xem trong Giai đoạn"
+    "partOpenStage": "Xem trong Giai đoạn",
+    "scriptToPass": "Còn {n} câu nữa là qua",
+    "scriptRetryMissed": "Làm lại những câu đó",
+    "practiceAllUsed": "Đã dùng hết"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3002,7 +3011,10 @@
     "partFixed": "Corrigé",
     "partEmpty": "Rien étudié ce jour-là",
     "partPronDay": "Phrases redites : {n}",
-    "partOpenStage": "Voir dans les étapes"
+    "partOpenStage": "Voir dans les étapes",
+    "scriptToPass": "Encore {n} pour réussir",
+    "scriptRetryMissed": "Refaire ces répliques",
+    "practiceAllUsed": "Toutes utilisées"
   },
   "it": {
     "archive": "Report",
@@ -3949,7 +3961,10 @@
     "partFixed": "Corretto",
     "partEmpty": "Nessuno studio in questo giorno",
     "partPronDay": "Frasi ridette: {n}",
-    "partOpenStage": "Vedi nelle tappe"
+    "partOpenStage": "Vedi nelle tappe",
+    "scriptToPass": "Ancora {n} per superarlo",
+    "scriptRetryMissed": "Rifai quelle battute",
+    "practiceAllUsed": "Usate tutte"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4708,7 +4723,10 @@
     "partFixed": "Corrigido",
     "partEmpty": "Nada estudado neste dia",
     "partPronDay": "Frases repetidas: {n}",
-    "partOpenStage": "Ver nas etapas"
+    "partOpenStage": "Ver nas etapas",
+    "scriptToPass": "Faltam {n} para passar",
+    "scriptRetryMissed": "Refazer essas falas",
+    "practiceAllUsed": "Todas usadas"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5653,7 +5671,10 @@
     "partFixed": "Исправлено",
     "partEmpty": "В этот день занятий не было",
     "partPronDay": "Повторено фраз: {n}",
-    "partOpenStage": "Открыть в этапах"
+    "partOpenStage": "Открыть в этапах",
+    "scriptToPass": "До зачёта: {n}",
+    "scriptRetryMissed": "Повторить эти реплики",
+    "practiceAllUsed": "Все использованы"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6408,7 +6429,10 @@
     "partFixed": "Dikoreksi",
     "partEmpty": "Tidak ada belajar di hari ini",
     "partPronDay": "Ucap ulang {n} kali",
-    "partOpenStage": "Lihat di Tahap"
+    "partOpenStage": "Lihat di Tahap",
+    "scriptToPass": "{n} lagi untuk lulus",
+    "scriptRetryMissed": "Ulangi baris itu saja",
+    "practiceAllUsed": "Semua terpakai"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7157,7 +7181,10 @@
     "partFixed": "تم التصحيح",
     "partEmpty": "لا يوجد تعلّم في هذا اليوم",
     "partPronDay": "أعدت قول الجمل: {n}",
-    "partOpenStage": "عرض في المراحل"
+    "partOpenStage": "عرض في المراحل",
+    "scriptToPass": "بقي {n} للنجاح",
+    "scriptRetryMissed": "أعد تلك الجمل",
+    "practiceAllUsed": "استُخدمت كلها"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7906,7 +7933,10 @@
     "partFixed": "แก้แล้ว",
     "partEmpty": "วันนี้ยังไม่มีการเรียน",
     "partPronDay": "พูดซ้ำ {n} ครั้ง",
-    "partOpenStage": "ดูในขั้น"
+    "partOpenStage": "ดูในขั้น",
+    "scriptToPass": "อีก {n} บรรทัดก็ผ่าน",
+    "scriptRetryMissed": "ทำบรรทัดนั้นใหม่",
+    "practiceAllUsed": "ใช้ครบแล้ว"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8655,6 +8685,9 @@
     "partFixed": "सुधारा",
     "partEmpty": "इस दिन कुछ नहीं पढ़ा",
     "partPronDay": "दोबारा बोला: {n} बार",
-    "partOpenStage": "चरणों में देखें"
+    "partOpenStage": "चरणों में देखें",
+    "scriptToPass": "पास होने में {n} बाकी",
+    "scriptRetryMissed": "बस वही पंक्तियाँ दोबारा",
+    "practiceAllUsed": "सब इस्तेमाल हुए"
   }
 }

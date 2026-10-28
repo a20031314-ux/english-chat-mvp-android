@@ -277,11 +277,17 @@ export function PracticeBanner({
   onStop: () => void;
 }) {
   const { goal, title, mistakeLabel } = request;
+  const allUsed = Boolean(goal.phrases?.length) && goal.phrases!.every((phrase) => said.has(phrase));
   return (
     <div className="rounded-xl border border-white/10 bg-white/[0.04] px-3 py-2 text-start">
       <div className="flex items-start gap-2">
         <div className="min-w-0 flex-1">
-          <p className="text-[11px] font-semibold text-slate-400">{ui.practiceNow}</p>
+          {/* All phrases used: the band says so (user, 2026-10-29). The talk is free and can go on. */}
+          {allUsed ? (
+            <p className="text-caption font-semibold text-good">✓ {ui.practiceAllUsed}</p>
+          ) : (
+            <p className="text-[11px] font-semibold text-slate-400">{ui.practiceNow}</p>
+          )}
           {title ? <p className="mt-0.5 text-[13px] leading-snug text-slate-100">{title}</p> : null}
           {mistakeLabel ? (
             <p className="mt-0.5 text-[12px] text-rose-200">{ui.practiceWatch.replace("{label}", mistakeLabel)}</p>

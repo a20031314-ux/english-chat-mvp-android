@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { cleanBesidesName, glossFor, hintOf, isSituationScript, personalize, scriptById, swapName, usableName, modesFor, passOutcome, runPasses, scriptForExpressions, scriptsFor, variantOf, type LineRun, type StageScript } from "./stageScripts.ts";
+import { cleanBesidesName, glossFor, hintOf, isSituationScript, personalize, scriptById, swapName, usableName, modesFor, passOutcome, runPasses, linesToRedo, scriptForExpressions, scriptsFor, variantOf, type LineRun, type StageScript } from "./stageScripts.ts";
 import { ladderFor } from "./stages/index.ts";
 import { withScripts, type StageParts } from "../notes/stageParts.ts";
 
@@ -77,6 +77,15 @@ test("통과: 내 줄이 모두, 통과 방식(1~2단계 첫 글자만·가리�
   assert.equal(variantOf(two.lines[2]!, 0).text, "¿Qué tal?");
   assert.equal(variantOf(two.lines[2]!, 1).text, "¿Cómo estás?");
   assert.equal(variantOf(two.lines[0]!, 3).text, "Hola");
+});
+
+test("통과까지 남은 줄: 틀림·원문 열어 봄·따라 말하기·안 한 줄, 상대 줄은 빼고", () => {
+  const ok = (mode: LineRun["mode"], revealed = false, clean = true): LineRun => ({ clean, mode, revealed });
+  assert.deepEqual(linesToRedo(two, { 1: ok("hide"), 3: ok("hint") }), []);
+  assert.deepEqual(linesToRedo(two, { 1: ok("hide", false, false), 3: ok("shadow") }), [1, 3]);
+  assert.deepEqual(linesToRedo(two, { 1: ok("hide", true) }), [1, 3]);
+  // 3단계 이상은 내 말로도 통과(일본어 같은 띄어쓰기 없는 대본도 줄 번호로만 셈).
+  assert.deepEqual(linesToRedo({ ...two, stage: 3 }, { 1: ok("own"), 3: ok("hint") }), [3]);
 });
 
 test("다음 단계 = 네 갈래 + 그 단계 대본 모두 통과(대본 없는 언어는 그대로)", () => {

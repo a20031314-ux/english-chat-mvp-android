@@ -48,7 +48,7 @@
         {
           "heading": "7. Etapas",
           "body": [
-            "Escucha el guion y di tus frases con 🎤; acértalas todas para superarlo."
+            "Escucha y di tus frases con 🎤. Lo superas si las aciertas todas sin repetir en voz alta ni abrir el texto."
           ],
           "shot": "stage-scripts"
         },
@@ -378,7 +378,7 @@
         }
       ]
     },
-    "_version": "2026-10-29t"
+    "_version": "2026-10-29u"
   },
   "ja": {
     "map": {
@@ -429,7 +429,7 @@
         {
           "heading": "7. ステージで見る",
           "body": [
-            "台本を聞いて、自分のセリフを🎤で言います。全部合えば合格。"
+            "台本を聞いて自分のセリフを🎤で。まね読みせず、原文を開かずに全部合えば合格。"
           ],
           "shot": "stage-scripts"
         },
@@ -759,7 +759,7 @@
         }
       ]
     },
-    "_version": "2026-10-29t"
+    "_version": "2026-10-29u"
   },
   "zh": {
     "map": {
@@ -810,7 +810,7 @@
         {
           "heading": "7. 按阶段看",
           "body": [
-            "听剧本，轮到你时按 🎤 说出来；全部说对就通过。"
+            "听剧本，用 🎤 说你的台词。不用跟读、不看原文全部说对就通过。"
           ],
           "shot": "stage-scripts"
         },
@@ -1140,7 +1140,7 @@
         }
       ]
     },
-    "_version": "2026-10-29t"
+    "_version": "2026-10-29u"
   },
   "vi": {
     "map": {
@@ -1191,7 +1191,7 @@
         {
           "heading": "7. Xem theo giai đoạn",
           "body": [
-            "Nghe kịch bản và nói câu của bạn bằng 🎤; đúng hết là qua."
+            "Nghe và nói câu của bạn bằng 🎤. Đúng hết mà không nói theo, không mở câu gốc là qua."
           ],
           "shot": "stage-scripts"
         },
@@ -1521,7 +1521,7 @@
         }
       ]
     },
-    "_version": "2026-10-29t"
+    "_version": "2026-10-29u"
   },
   "fr": {
     "map": {
@@ -1572,7 +1572,7 @@
         {
           "heading": "7. Par étapes",
           "body": [
-            "Écoutez le script et dites vos répliques avec 🎤 ; tout juste, c'est réussi."
+            "Écoutez et dites vos répliques avec 🎤. Réussi si tout est juste, sans répéter ni ouvrir le texte."
           ],
           "shot": "stage-scripts"
         },
@@ -1902,7 +1902,7 @@
         }
       ]
     },
-    "_version": "2026-10-29t"
+    "_version": "2026-10-29u"
   },
   "it": {
     "map": {
@@ -1953,7 +1953,7 @@
         {
           "heading": "7. Per fasi",
           "body": [
-            "Ascolta il copione e di' le tue battute con 🎤; tutte giuste e lo superi."
+            "Ascolta e di' le tue battute con 🎤. Lo superi se sono tutte giuste, senza ripetere né aprire il testo."
           ],
           "shot": "stage-scripts"
         },
@@ -2283,7 +2283,7 @@
         }
       ]
     },
-    "_version": "2026-10-29t"
+    "_version": "2026-10-29u"
   },
   "pt": {
     "map": {
@@ -2334,7 +2334,7 @@
         {
           "heading": "7. Por etapas",
           "body": [
-            "Ouça o roteiro e diga suas falas com 🎤; acertou todas, passou."
+            "Ouça e diga suas falas com 🎤. Passa se acertar todas sem repetir junto nem abrir o texto."
           ],
           "shot": "stage-scripts"
         },
@@ -2664,7 +2664,7 @@
         }
       ]
     },
-    "_version": "2026-10-29t"
+    "_version": "2026-10-29u"
   },
   "ru": {
     "map": {
@@ -2715,7 +2715,7 @@
         {
           "heading": "7. По этапам",
           "body": [
-            "Слушайте сценарий и говорите свои реплики с 🎤; все верно — пройдено."
+            "Слушайте и говорите свои реплики с 🎤. Зачёт — все верно, без повтора за диктором и без открытого текста."
           ],
           "shot": "stage-scripts"
         },
@@ -3045,7 +3045,7 @@
         }
       ]
     },
-    "_version": "2026-10-29t"
+    "_version": "2026-10-29u"
   },
   "id": {
     "map": {
@@ -3096,7 +3096,7 @@
         {
           "heading": "7. Per tahap",
           "body": [
-            "Dengarkan naskah dan ucapkan bagianmu dengan 🎤; benar semua berarti lulus."
+            "Dengarkan dan ucapkan bagianmu dengan 🎤. Lulus jika benar semua tanpa menirukan dan tanpa membuka teks."
           ],
           "shot": "stage-scripts"
         },
@@ -3426,7 +3426,7 @@
         }
       ]
     },
-    "_version": "2026-10-29t"
+    "_version": "2026-10-29u"
   },
   "ar": {
     "map": {
@@ -3477,7 +3477,7 @@
         {
           "heading": "7. حسب المراحل",
           "body": [
-            "استمع إلى النص وقل جملك بـ🎤؛ إن أصبت فيها كلها نجحت."
+            "استمع وقل جملك بـ🎤. تنجح إذا أصبت فيها كلها دون الترديد ودون فتح النص."
           ],
           "shot": "stage-scripts"
         },
@@ -3807,7 +3807,7 @@
         }
       ]
     },
-    "_version": "2026-10-29t"
+    "_version": "2026-10-29u"
   },
   "th": {
     "map": {
@@ -3858,7 +3858,7 @@
         {
           "heading": "7. ดูตามขั้น",
           "body": [
-            "ฟังบทพูด แล้วพูดบทของคุณด้วย 🎤 ถูกครบก็ผ่าน"
+            "ฟังแล้วพูดบทของคุณด้วย 🎤 ผ่านเมื่อถูกครบ โดยไม่พูดตามและไม่เปิดต้นฉบับ"
           ],
           "shot": "stage-scripts"
         },
@@ -4188,7 +4188,7 @@
         }
       ]
     },
-    "_version": "2026-10-29t"
+    "_version": "2026-10-29u"
   },
   "hi": {
     "map": {
@@ -4239,7 +4239,7 @@
         {
           "heading": "7. चरणों में देखें",
           "body": [
-            "स्क्रिप्ट सुनें और अपनी पंक्तियाँ 🎤 से बोलें; सब सही तो पास।"
+            "सुनें और अपनी पंक्तियाँ 🎤 से बोलें। बिना दोहराए और मूल पाठ खोले सब सही हों तो पास।"
           ],
           "shot": "stage-scripts"
         },
@@ -4569,6 +4569,6 @@
         }
       ]
     },
-    "_version": "2026-10-29t"
+    "_version": "2026-10-29u"
   }
 }

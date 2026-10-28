@@ -128,6 +128,15 @@ export function runPasses(script: StageScript, runs: Record<number, LineRun>): b
   });
 }
 
+/** 통과로 셈해지지 않은 내 줄 번호(틀림·원문 열어 봄·통과로 안 세는 방식) — 끝 화면 "통과까지 n줄"·"그 줄만 다시". */
+export function linesToRedo(script: StageScript, runs: Record<number, LineRun>): number[] {
+  return script.lines.flatMap((line, i) => {
+    if (line.who !== "me") return [];
+    const run = runs[i];
+    return run && run.clean && !run.revealed && countsForPass(script.stage, run.mode) ? [] : [i];
+  });
+}
+
 /** 상대 줄의 이번 판: 원래 줄 또는 alt 중 하나(pick = 0..n). */
 export function variantOf(line: StageScriptLine, pick: number): ScriptVariant {
   const all: ScriptVariant[] = [{ text: line.text, gloss: line.gloss }, ...(line.alt ?? [])];

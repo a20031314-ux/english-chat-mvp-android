@@ -17,6 +17,7 @@ import { entitlementHeaders } from "@/lib/billing/billingService";
 import {
   cleanBesidesName,
   countsForPass,
+  linesToRedo,
   glossFor,
   isSituationScript,
   passOutcome,
@@ -262,6 +263,8 @@ function ScriptPlayer({
   const [picks, setPicks] = useState<Record<number, number>>(() => freshPicks(script));
   const [listening, setListening] = useState(false);
   const [justPassed, setJustPassed] = useState(false);
+  // 끝까지 했는데 통과 못 한 줄만 다시(2026-10-29 사용자 "무슨 기준으로 완료되는지") — 그 줄들만 차례로, 상대 줄은 건너뜀.
+  const [retrying, setRetrying] = useState(false);
   // 이어서 하기(lib/curriculum/resume.ts): 오늘 중간까지 한 것이 있으면 먼저 "이어서 하기 / 처음부터".
   const resumeId = resumeKey("script", language, script.id);
   const [offer, setOffer] = useState<ResumeState<Result> | null>(() => readResume<Result>(resumeId));
@@ -328,6 +331,8 @@ function ScriptPlayer({
     Object.entries(results).map(([i, result]) => [i, { clean: result.clean, mode: result.mode, revealed: Boolean(revealed[Number(i)]) }]),
   );
   const passes = done && runPasses(script, runs);
+  // 통과로 셈해지지 않은 내 줄(틀림·원문 열어 봄·따라 말하기) — 끝 화면의 "통과까지 n줄"과 "그 줄만 다시".
+  const toRedo = linesToRedo(script, runs);
   const outcome = passes ? passOutcome(runs) : "unaided";
 
   useEffect(() => {
@@ -375,13 +380,25 @@ function ScriptPlayer({
     if (heard) noteLine(language, script.id, index, !clean);
   };
 
-  const next = () => setIndex((current) => current + 1);
+  const next = () =>
+    setIndex((current) => (retrying ? (toRedo.find((i) => i > current) ?? script.lines.length) : current + 1));
+  const redoMissed = () => {
+    if (!toRedo.length) return;
+    stopTts();
+    const drop = <T,>(rows: Record<number, T>) => Object.fromEntries(Object.entries(rows).filter(([i]) => !toRedo.includes(Number(i)))) as Record<number, T>;
+    setResults(drop);
+    setRevealed(drop);
+    sent.current = false;
+    setRetrying(true);
+    setIndex(toRedo[0]!);
+  };
   const restart = () => {
     stopTts();
     clearResume(resumeId);
     setOffer(null);
     sent.current = false;
     setJustPassed(false);
+    setRetrying(false);
     setResults({});
     setRevealed({});
     setMisses({});
@@ -471,6 +488,14 @@ function ScriptPlayer({
           const result = results[i];
           const show = !current || mode === "shadow" || revealed[i] || Boolean(result);
           const ownResult = result?.mode === "own";
+          // 맞았지만 대본과 낱말이 다른 줄(바꿔 말함·어색함): 내가 한 말을 그대로 보이고 대본 줄로 덮지 않는다(2026-10-29 사용자 "내 발화도 치환시켜서 띄워").
+          const heardDiffers = (() => {
+            if (!result?.clean || !result.heard) return false;
+            const compared = compareToTarget(line.text, result.heard);
+            const named = Boolean(learnerName) && line.text.includes(learnerName!);
+            return !(compared.clean || (named && cleanBesidesName(compared.outcomes, learnerName)));
+          })();
+          const betterShown = heardDiffers && result?.practice?.verdict === "awkward" && Boolean(result.practice.better);
           return (
             <li key={i} className="mb-2 flex justify-end">
               <div className={`max-w-[88%] rounded-2xl px-3 py-2 ${current ? "border border-amber-300/40 bg-amber-300/[0.06]" : "bg-white/[0.09]"}`}>
@@ -495,7 +520,14 @@ function ScriptPlayer({
                     {glossFor(line.gloss, locale)}
                   </p>
                 )}
-                {show || mode === "hint" ? (
+                {heardDiffers ? (
+                  <div className="mt-2 rounded-xl bg-white/5 p-2.5">
+                    <p className="text-meta text-slate-500">{ui.roleplayPracticeHeard}</p>
+                    <p dir="auto" className="mt-1 text-chat text-slate-100">
+                      {result!.heard}
+                    </p>
+                  </div>
+                ) : show || mode === "hint" ? (
                   <div className="mt-1 flex items-start gap-2">
                     <p dir="auto" className="min-w-0 flex-1 text-chat text-slate-100">
                       {show ? line.text : hintOf(line.text, language)}
@@ -507,6 +539,15 @@ function ScriptPlayer({
                   result.clean ? (
                     <>
                     <LineGrade ui={ui} exact={compareToTarget(line.text, result.heard).clean} unclear={result.unclear ?? []} practice={result.practice} />
+                    {/* 대본 줄은 내 말 아래에(어색함이면 더 자연스러운 말이 이미 위에 있음). */}
+                    {heardDiffers && !betterShown ? (
+                      <div className="mt-1 flex items-start gap-2">
+                        <p dir="auto" className="min-w-0 flex-1 text-note text-slate-400">
+                          {line.text}
+                        </p>
+                        <TTSButton text={line.text} lang={tag} voice={scriptVoice("me", line.text, learnerName)} className="shrink-0" />
+                      </div>
+                    ) : null}
                     {countsForPass(script.stage, result.mode) && !revealed[i] ? null : <span className="text-caption text-slate-500">{modeLabel[result.mode]}</span>}
                     {/* 맞게 바꿔 말해 통과(낱말이 대본과 다름)·흐릿했던 낱말: 한마디(2026-10-28). */}
                     {result.practice?.note && ((result.mode !== "shadow" && !compareToTarget(line.text, result.heard).clean) || (result.unclear?.length ?? 0) > 0) ? (
@@ -570,6 +611,14 @@ function ScriptPlayer({
         {done ? (
           <li className="mt-3 flex flex-col items-center gap-2">
             <p className="text-note text-slate-200">{passes || justPassed ? `✓ ${ui.scriptPassed}` : ui.scriptDone}</p>
+            {!passes && !justPassed && toRedo.length ? (
+              <div className="flex items-center gap-2">
+                <span className="text-caption text-warn">◐ {ui.scriptToPass.replace("{n}", String(toRedo.length))}</span>
+                <button type="button" onClick={redoMissed} className="rounded-full border border-warn/60 px-3 py-1 text-caption text-warn hover:bg-white/10">
+                  {ui.scriptRetryMissed}
+                </button>
+              </div>
+            ) : null}
             <SelfCheck ui={ui} language={language} id={script.id} weak={weakKeysOfScript(script, misses)} />
             <div className="flex gap-2">
               <button type="button" onClick={restart} className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10">
