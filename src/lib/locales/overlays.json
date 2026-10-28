@@ -749,7 +749,13 @@
     "partOpenStage": "ステージで見る",
     "scriptToPass": "通過まであと{n}行",
     "scriptRetryMissed": "その行だけもう一度",
-    "practiceAllUsed": "全部使えました"
+    "practiceAllUsed": "全部使えました",
+    "studyMore": "続けて勉強",
+    "studyWhyMissed": "前に間違えた",
+    "studyWhyWeak": "弱いところ · {part}",
+    "studyWhyNew": "もうすぐ出る",
+    "studyWhyKeep": "おさらい",
+    "quizSkip": "スキップ"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1501,7 +1507,13 @@
     "partOpenStage": "在阶段中查看",
     "scriptToPass": "还差 {n} 句通过",
     "scriptRetryMissed": "只重做这几句",
-    "practiceAllUsed": "都用上了"
+    "practiceAllUsed": "都用上了",
+    "studyMore": "继续学习",
+    "studyWhyMissed": "之前错过",
+    "studyWhyWeak": "薄弱 · {part}",
+    "studyWhyNew": "马上会学",
+    "studyWhyKeep": "巩固",
+    "quizSkip": "跳过"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2255,7 +2267,14 @@
     "partOpenStage": "Xem trong Giai đoạn",
     "scriptToPass": "Còn {n} câu nữa là qua",
     "scriptRetryMissed": "Làm lại những câu đó",
-    "practiceAllUsed": "Đã dùng hết"
+    "practiceAllUsed": "Đã dùng hết",
+    "studyMore": "Học tiếp",
+    "studyWhyMissed": "Từng sai",
+    "studyWhyWeak": "Chỗ yếu · {part}",
+    "studyWhyNew": "Sắp gặp",
+    "studyWhyKeep": "Ôn lại",
+    "quizNext": "Tiếp",
+    "quizSkip": "Bỏ qua"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -3014,7 +3033,14 @@
     "partOpenStage": "Voir dans les étapes",
     "scriptToPass": "Encore {n} pour réussir",
     "scriptRetryMissed": "Refaire ces répliques",
-    "practiceAllUsed": "Toutes utilisées"
+    "practiceAllUsed": "Toutes utilisées",
+    "studyMore": "Continuer",
+    "studyWhyMissed": "Raté avant",
+    "studyWhyWeak": "Point faible · {part}",
+    "studyWhyNew": "À venir",
+    "studyWhyKeep": "À consolider",
+    "quizNext": "Suivant",
+    "quizSkip": "Passer"
   },
   "it": {
     "archive": "Report",
@@ -3964,7 +3990,14 @@
     "partOpenStage": "Vedi nelle tappe",
     "scriptToPass": "Ancora {n} per superarlo",
     "scriptRetryMissed": "Rifai quelle battute",
-    "practiceAllUsed": "Usate tutte"
+    "practiceAllUsed": "Usate tutte",
+    "studyMore": "Continua a studiare",
+    "studyWhyMissed": "Sbagliato prima",
+    "studyWhyWeak": "Punto debole · {part}",
+    "studyWhyNew": "In arrivo",
+    "studyWhyKeep": "Da ripassare",
+    "quizNext": "Avanti",
+    "quizSkip": "Salta"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4726,7 +4759,14 @@
     "partOpenStage": "Ver nas etapas",
     "scriptToPass": "Faltam {n} para passar",
     "scriptRetryMissed": "Refazer essas falas",
-    "practiceAllUsed": "Todas usadas"
+    "practiceAllUsed": "Todas usadas",
+    "studyMore": "Continuar estudando",
+    "studyWhyMissed": "Errou antes",
+    "studyWhyWeak": "Ponto fraco · {part}",
+    "studyWhyNew": "Vem aí",
+    "studyWhyKeep": "Para fixar",
+    "quizNext": "Próxima",
+    "quizSkip": "Pular"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5674,7 +5714,14 @@
     "partOpenStage": "Открыть в этапах",
     "scriptToPass": "До зачёта: {n}",
     "scriptRetryMissed": "Повторить эти реплики",
-    "practiceAllUsed": "Все использованы"
+    "practiceAllUsed": "Все использованы",
+    "studyMore": "Учиться дальше",
+    "studyWhyMissed": "Была ошибка",
+    "studyWhyWeak": "Слабое место · {part}",
+    "studyWhyNew": "Скоро будет",
+    "studyWhyKeep": "Закрепить",
+    "quizNext": "Дальше",
+    "quizSkip": "Пропустить"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6432,7 +6479,14 @@
     "partOpenStage": "Lihat di Tahap",
     "scriptToPass": "{n} lagi untuk lulus",
     "scriptRetryMissed": "Ulangi baris itu saja",
-    "practiceAllUsed": "Semua terpakai"
+    "practiceAllUsed": "Semua terpakai",
+    "studyMore": "Lanjut belajar",
+    "studyWhyMissed": "Pernah salah",
+    "studyWhyWeak": "Titik lemah · {part}",
+    "studyWhyNew": "Segera muncul",
+    "studyWhyKeep": "Pemantapan",
+    "quizNext": "Berikutnya",
+    "quizSkip": "Lewati"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -7184,7 +7238,13 @@
     "partOpenStage": "عرض في المراحل",
     "scriptToPass": "بقي {n} للنجاح",
     "scriptRetryMissed": "أعد تلك الجمل",
-    "practiceAllUsed": "استُخدمت كلها"
+    "practiceAllUsed": "استُخدمت كلها",
+    "studyMore": "واصل التعلّم",
+    "studyWhyMissed": "أخطأت فيه سابقًا",
+    "studyWhyWeak": "نقطة ضعف · {part}",
+    "studyWhyNew": "قادم قريبًا",
+    "studyWhyKeep": "للتثبيت",
+    "quizSkip": "تخطٍّ"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7936,7 +7996,13 @@
     "partOpenStage": "ดูในขั้น",
     "scriptToPass": "อีก {n} บรรทัดก็ผ่าน",
     "scriptRetryMissed": "ทำบรรทัดนั้นใหม่",
-    "practiceAllUsed": "ใช้ครบแล้ว"
+    "practiceAllUsed": "ใช้ครบแล้ว",
+    "studyMore": "เรียนต่อ",
+    "studyWhyMissed": "เคยผิด",
+    "studyWhyWeak": "จุดอ่อน · {part}",
+    "studyWhyNew": "กำลังจะเจอ",
+    "studyWhyKeep": "ทบทวน",
+    "quizSkip": "ข้าม"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8688,6 +8754,12 @@
     "partOpenStage": "चरणों में देखें",
     "scriptToPass": "पास होने में {n} बाकी",
     "scriptRetryMissed": "बस वही पंक्तियाँ दोबारा",
-    "practiceAllUsed": "सब इस्तेमाल हुए"
+    "practiceAllUsed": "सब इस्तेमाल हुए",
+    "studyMore": "पढ़ाई जारी रखें",
+    "studyWhyMissed": "पहले गलत हुआ",
+    "studyWhyWeak": "कमज़ोर हिस्सा · {part}",
+    "studyWhyNew": "जल्द आएगा",
+    "studyWhyKeep": "पक्का करें",
+    "quizSkip": "छोड़ें"
   }
 }

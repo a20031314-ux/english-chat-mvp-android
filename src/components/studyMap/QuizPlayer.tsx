@@ -34,6 +34,9 @@ export function QuizPlayer({
   onDone,
   onThen,
   onClose,
+  reason,
+  onMore,
+  stopHint = false,
 }: {
   ui: UICopy;
   locale: string;
@@ -48,6 +51,12 @@ export function QuizPlayer({
   /** 틀렸을 때 원래 대본·문장구조로 — 없으면 버튼 없음. */
   onThen?: () => void;
   onClose: () => void;
+  /** 계속 공부에서 연 퀴즈: 왜 이 문제인지(다시·틀렸던 것·부족 · 문법·곧 나옴·다지기). */
+  reason?: string;
+  /** 끝나면 "다음 문제" — 다음 필요한 것으로(lib/curriculum/nextStudy.ts). 없으면 버튼 없음. */
+  onMore?: () => void;
+  /** 연달아 두 번 틀림: 다음 문제보다 원래 대본을 앞에. */
+  stopHint?: boolean;
 }) {
   const quiz = useMemo(() => buildQuiz(language, quizKey, { card, seed }), [language, quizKey, card, seed]);
   const [index, setIndex] = useState(0);
@@ -78,6 +87,7 @@ export function QuizPlayer({
           </h2>
           <p className="mt-0.5 text-caption tabular-nums text-slate-400">
             {Math.min(index + 1, questions.length)}/{questions.length}
+            {reason ? <span className="text-slate-500"> · {reason}</span> : null}
           </p>
         </div>
         <button type="button" onClick={onClose} aria-label={ui.billingClose} className="rounded-lg px-2 py-1 text-note text-slate-400 hover:bg-white/10">
@@ -103,8 +113,21 @@ export function QuizPlayer({
             <p className="text-caption tabular-nums text-slate-400">{ui.quizScore.replace("{n}", String(correct)).replace("{m}", String(counted))}</p>
             <div className="flex flex-wrap justify-center gap-2">
               {!passed && onThen ? (
-                <button type="button" onClick={onThen} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900">
+                <button
+                  type="button"
+                  onClick={onThen}
+                  className={`rounded-full px-4 py-1.5 text-caption font-semibold ${!onMore || stopHint ? "bg-white/90 text-slate-900" : "border border-line text-slate-200 hover:bg-white/10"}`}
+                >
                   {ui.quizToScript}
+                </button>
+              ) : null}
+              {onMore ? (
+                <button
+                  type="button"
+                  onClick={onMore}
+                  className={`rounded-full px-4 py-1.5 text-caption font-semibold ${!passed && onThen && stopHint ? "border border-line text-slate-200 hover:bg-white/10" : "bg-white/90 text-slate-900"}`}
+                >
+                  {ui.quizNext} ›
                 </button>
               ) : null}
               <button type="button" onClick={onClose} className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10">
@@ -418,6 +441,15 @@ function SayView({
       </p>
       {result ? (
         <>
+          {/* 맞았지만 낱말이 다르면 내가 한 말 그대로(대본 화면과 같음, 2026-10-29). */}
+          {result.correct && result.heard && !compareToTarget(question.text, result.heard).clean ? (
+            <div className="rounded-xl bg-white/5 p-2.5">
+              <p className="text-meta text-slate-500">{ui.roleplayPracticeHeard}</p>
+              <p dir="auto" className="mt-1 text-chat text-slate-100">
+                {result.heard}
+              </p>
+            </div>
+          ) : null}
           <div className="flex items-start gap-2">
             <p dir="auto" className="min-w-0 flex-1 text-chat text-emerald-200">
               {question.text}
@@ -433,9 +465,17 @@ function SayView({
       ) : null}
       {limited ? <p className="text-caption text-warn">{ui.scriptLimit}</p> : null}
       {!limited && (!result || !result.correct) ? (
-        <button type="button" onClick={() => void say()} disabled={listening} className="self-end rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-60">
-          {listening ? ui.roleplayPracticeListening : result ? ui.roleplayPracticeRetry : ui.scriptSay}
-        </button>
+        <div className="flex items-center justify-end gap-2">
+          {/* 말할 수 없을 때(마이크·자리): 건너뛰면 점수에서 뺀다 — 계속 공부가 여기서 막히지 않게. */}
+          {!result ? (
+            <button type="button" onClick={() => onAnswer({ correct: false, skipped: true })} disabled={listening} className="rounded-full px-3 py-1.5 text-caption text-slate-400 hover:bg-white/10 disabled:opacity-50">
+              {ui.quizSkip}
+            </button>
+          ) : null}
+          <button type="button" onClick={() => void say()} disabled={listening} className="rounded-full bg-white/90 px-4 py-1.5 text-caption font-semibold text-slate-900 disabled:opacity-60">
+            {listening ? ui.roleplayPracticeListening : result ? ui.roleplayPracticeRetry : ui.scriptSay}
+          </button>
+        </div>
       ) : null}
     </div>
   );

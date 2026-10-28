@@ -7,6 +7,7 @@ import { entitlementHeaders } from "@/lib/billing/billingService";
 import type { UICopy } from "@/lib/copy";
 import {
   daysLeft,
+  itemForKey,
   learnedFrom,
   PACES,
   reviewKeysOf,
@@ -25,6 +26,9 @@ import { MorningControl } from "@/components/studyMap/WeakStrip";
 import { allScriptsFor, glossFor } from "@/lib/curriculum/stageScripts";
 import { useStageGlosses } from "@/lib/curriculum/useStageGlosses";
 import { whereLearned } from "@/lib/curriculum/learnedWhere";
+import { nextStudy, recordQuiz, type QuizLog, type StudyPick } from "@/lib/curriculum/nextStudy";
+import type { PartId } from "@/lib/notes/stageParts";
+import type { LedgerState } from "@/lib/learner/ledger";
 
 /**
  * 오늘 할 것(lib/curriculum/dailyPlan.ts, 2026-10-28 사용자 "매일 학습할 걸 정해 주는 흐름"):
@@ -38,6 +42,24 @@ const TODAY_KEY = "dailyPlan.today.v1";
 const REVIEW_EVENT = "lb-review";
 /** 오늘 끝낸 퀴즈(열쇠) — 틀린 틀 다시 연습에서 온 퀴즈는 다시 볼 것에 없어서 이 폰에 날짜로 남긴다. */
 const QUIZ_DONE_KEY = "dailyPlan.quizDone.v1";
+/** 계속 공부: 열쇠마다 이 폰에서 푼 기록(lib/curriculum/nextStudy.ts) — 배우는 언어마다. */
+const QUIZ_LOG_KEY = "quizLog.v1";
+
+function readQuizLog(language: string): QuizLog {
+  try {
+    return (JSON.parse(localStorage.getItem(`${QUIZ_LOG_KEY}.${language}`) ?? "null") as QuizLog | null) ?? {};
+  } catch {
+    return {};
+  }
+}
+
+function saveQuizLog(language: string, log: QuizLog) {
+  try {
+    localStorage.setItem(`${QUIZ_LOG_KEY}.${language}`, JSON.stringify(log));
+  } catch {
+    // 이 화면에서만.
+  }
+}
 
 function readQuizDone(day: string): Set<string> {
   try {
@@ -97,6 +119,8 @@ export function TodayPlan({
   onOpen,
   grammarName,
   redo = [],
+  weakest = null,
+  expressions = [],
 }: {
   ui: UICopy;
   locale: string;
@@ -111,6 +135,10 @@ export function TodayPlan({
   onOpen: (stage: number, id: string) => void;
   /** 문법 칸 이름(단계·번호 → 앱 언어, NotebookSection의 노트 칸). */
   grammarName: (stage: number, index: number) => string;
+  /** 지금 단계에서 가장 모자란 갈래(stageParts weakest) — 계속 공부가 여기부터. */
+  weakest?: PartId | null;
+  /** 지금 단계 핵심 표현과 장부 상태(stageParts expressions). */
+  expressions?: readonly { text: string; state: LedgerState | null }[];
 }) {
   // 대본 이름은 앱 언어로(서버가 옮김) — 받으면 다시 그린다. 오늘 목록은 지금 단계와 다음 단계까지.
   useStageGlosses(language, stage, locale);
@@ -125,6 +153,17 @@ export function TodayPlan({
   // 지금 연 퀴즈(오늘 목록의 한 칸)와 오늘 끝낸 퀴즈.
   const [quiz, setQuiz] = useState<PlanItem | null>(null);
   const [quizDone, setQuizDone] = useState<Set<string>>(new Set());
+  // 계속 공부(끝없이): 푼 기록·이번에 낸 열쇠·연달아 틀린 수·지금 문제가 몇 번째인지(같은 열쇠라도 문제를 바꾸는 씨앗).
+  const [log, setLog] = useState<QuizLog>({});
+  const [asked, setAsked] = useState<Set<string>>(new Set());
+  const [missRun, setMissRun] = useState(0);
+  const [round, setRound] = useState(0);
+  const [studying, setStudying] = useState<StudyPick | null>(null);
+  useEffect(() => {
+    setLog(readQuizLog(language));
+    setAsked(new Set());
+    setMissRun(0);
+  }, [language]);
   useEffect(() => {
     // 저장해 둔 분량·순서와 오늘 목록은 화면에 붙은 뒤 읽는다(서버 그림과 어긋나지 않게).
     setSettings(readSettings());
@@ -196,6 +235,10 @@ export function TodayPlan({
           ? false
           : passedSet.has(item.id);
   const finishQuiz = (item: PlanItem, passedQuiz: boolean) => {
+    const logged = recordQuiz(log, item.id, passedQuiz);
+    setLog(logged);
+    saveQuizLog(language, logged);
+    setMissRun((run) => (passedQuiz ? 0 : run + 1));
     const next = new Set([...quizDone, item.id]);
     setQuizDone(next);
     saveQuizDone(day, next);
@@ -213,6 +256,51 @@ export function TodayPlan({
       .catch(() => undefined);
   };
   const finished = items.every(doneOf);
+  // 다음에 풀 것(부족한 것부터) — 오늘 목록에 든 퀴즈는 빼고.
+  const queue = nextStudy({
+    language,
+    stage,
+    passed: passedSet,
+    review,
+    log,
+    weakest,
+    expressions,
+    skip: new Set([...asked, ...items.filter((item) => item.kind === "quiz" && !doneOf(item)).map((item) => item.id)]),
+    now,
+  });
+  const upNext = queue[0] ?? null;
+  const studyItem = (pick: StudyPick): PlanItem => {
+    const practice = itemForKey(language, pick.key);
+    return {
+      id: pick.key,
+      kind: "quiz",
+      stage: practice?.stage ?? stage,
+      minutes: 2,
+      ...(review[pick.key] ? { review: pick.key } : {}),
+      ...(practice ? { then: { id: practice.id, stage: practice.stage } } : {}),
+    };
+  };
+  const startStudy = (pick: StudyPick | null) => {
+    if (!pick) {
+      setStudying(null);
+      setQuiz(null);
+      return;
+    }
+    setAsked((current) => new Set([...current, pick.key]));
+    setRound((n) => n + 1);
+    setStudying(pick);
+    setQuiz(studyItem(pick));
+  };
+  const reasonLabel = (pick: StudyPick) =>
+    pick.reason === "again"
+      ? ui.planAgain
+      : pick.reason === "missed"
+        ? ui.studyWhyMissed
+        : pick.reason === "weak"
+          ? ui.studyWhyWeak.replace("{part}", pick.part ? partName(ui, pick.part) : "")
+          : pick.reason === "new"
+            ? ui.studyWhyNew
+            : ui.studyWhyKeep;
   const pickedIn = new Set(picked && finished ? whereLearned(language, picked, items.map((item) => item.id)).map((where) => where.id) : []);
   const minutes = items.reduce((sum, item) => sum + item.minutes, 0);
 
@@ -284,15 +372,34 @@ export function TodayPlan({
           );
         })}
       </ul>
+      {upNext ? (
+        <button
+          type="button"
+          onClick={() => startStudy(upNext)}
+          className={`mt-2 flex w-full items-center gap-3 rounded-xl px-3 py-2 text-start ${finished ? "bg-white/90 text-slate-900" : "border border-dashed border-line text-ink hover:bg-white/5"}`}
+        >
+          <span aria-hidden className="shrink-0 text-caption">▶</span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-note font-semibold">{ui.studyMore}</span>
+            <span dir="auto" className={`block truncate text-meta ${finished ? "text-slate-600" : "text-slate-400"}`}>
+              {reasonLabel(upNext)} · <bdi>{keyLabel(language, upNext.key, grammarName)}</bdi>
+            </span>
+          </span>
+        </button>
+      ) : null}
       {quiz ? (
         <QuizPlayer
+          key={`${quiz.id}-${round}`}
           ui={ui}
           locale={locale}
           language={language}
           quizKey={quiz.id}
           title={labelOf(quiz)}
           card={quiz.card}
-          seed={day}
+          seed={studying ? `${day}-${round}` : day}
+          reason={studying ? reasonLabel(studying) : undefined}
+          stopHint={missRun >= 2}
+          onMore={() => startStudy(nextStudy({ language, stage, passed: passedSet, review, log, weakest, expressions, skip: new Set([...asked]), now: Date.now() })[0] ?? null)}
           onDone={(passedQuiz) => finishQuiz(quiz, passedQuiz)}
           onThen={
             quiz.then
@@ -303,7 +410,10 @@ export function TodayPlan({
                 }
               : undefined
           }
-          onClose={() => setQuiz(null)}
+          onClose={() => {
+            setQuiz(null);
+            setStudying(null);
+          }}
         />
       ) : null}
       {finished ? (
@@ -324,6 +434,10 @@ export function TodayPlan({
       ) : null}
     </section>
   );
+}
+
+function partName(ui: UICopy, part: PartId): string {
+  return { vocab: ui.partVocab, grammar: ui.partGrammar, expression: ui.partExpression, pronunciation: ui.partPronunciation }[part];
 }
 
 /** 다시 볼 것·배운 것 열쇠의 이름(문법은 노트 칸 이름). */
