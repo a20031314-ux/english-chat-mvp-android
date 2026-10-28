@@ -1,4 +1,4 @@
-import { kvDelete, kvGetJson, kvGetJsonMany, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
+import { kvDelete, kvGetJson, kvGetJsonMany, kvGetNumbers, kvIncrBy, kvSetJson, kvSetJsonIfAbsent } from "./kv.ts";
 import { readAccount } from "./accountStore.ts";
 import { readBlocked } from "./socialStore.ts";
 import { readLines } from "./roomStore.ts";
@@ -22,6 +22,7 @@ import {
  *   contrib:v1:pair:<누른 사람>:<받는 사람>:<날짜> 같은 두 사람 하루 한 번(2일)
  *   contrib:v1:made:<카드>:<계정>              반영된 의견 하나에 한 번(120일)
  *   contrib:v1:day:<계정>:<날짜>               공부한 날을 하루 한 번만 쓰기(2일)
+ *   contrib:v1:n:<계정>:<scripts|frames|lines> 공부 기록 숫자(통과한 대본·문장구조, 말한 문장 — 2026-10-28, 400일)
  *
  * 문장·질문 내용은 남기지 않는다(숫자·시각·상대 계정 id만). 계정을 지우면 요약을 지운다(나머지는 기한으로 사라짐).
  */
@@ -30,6 +31,9 @@ const onceKey = (giver: string, kind: ThankKind, ref: string) => `contrib:v1:onc
 const pairKey = (giver: string, receiver: string, day: string) => `contrib:v1:pair:${giver}:${receiver}:${day}`;
 const madeKey = (card: string, id: string) => `contrib:v1:made:${card}:${id}`;
 const dayKey = (id: string, day: string) => `contrib:v1:day:${id}:${day}`;
+export const STUDY_KINDS = ["scripts", "frames", "lines"] as const;
+export type StudyKind = (typeof STUDY_KINDS)[number];
+const studyKey = (id: string, kind: StudyKind) => `contrib:v1:n:${id}:${kind}`;
 
 /** 요약은 기여가 끊겨도 배지 숫자를 남기려고 길게(400일 — 학습 기록과 같음). */
 const SUMMARY_TTL_SECONDS = 400 * 24 * 60 * 60;
@@ -154,12 +158,22 @@ export async function creditFixedFeedback(accountId: string, cards: string[], no
   return credited;
 }
 
-/** 채팅·통화한 날. 하루 첫 번째에만 요약을 다시 쓴다. */
+/** 채팅·통화·대본·문장구조를 한 날. 하루 첫 번째에만 요약을 다시 쓴다. */
 export async function markStudyDay(accountId: string, day: string): Promise<void> {
   if (!(await kvSetJsonIfAbsent(dayKey(accountId, day), 1, SHORT_TTL_SECONDS))) return;
   await writeContrib(accountId, addStudyDay(await readContrib(accountId), day));
 }
 
+/** 공부 기록 숫자 하나 올리기(대본·문장구조 통과, 말한 문장). 공부한 날도 같이. */
+export async function noteStudy(accountId: string, day: string, kind: StudyKind, amount = 1): Promise<void> {
+  await Promise.all([markStudyDay(accountId, day), kvIncrBy(studyKey(accountId, kind), amount, SUMMARY_TTL_SECONDS)]);
+}
+
+export async function readStudy(accountId: string): Promise<Record<StudyKind, number>> {
+  const [scripts, frames, lines] = await kvGetNumbers(STUDY_KINDS.map((kind) => studyKey(accountId, kind)));
+  return { scripts: Math.max(0, scripts ?? 0), frames: Math.max(0, frames ?? 0), lines: Math.max(0, lines ?? 0) };
+}
+
 export async function forgetContrib(accountId: string): Promise<void> {
-  await kvDelete([summaryKey(accountId)]);
+  await kvDelete([summaryKey(accountId), ...STUDY_KINDS.map((kind) => studyKey(accountId, kind))]);
 }

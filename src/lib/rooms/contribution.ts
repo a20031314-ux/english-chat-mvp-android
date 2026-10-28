@@ -173,6 +173,8 @@ export type ProfileBadges = {
   help?: { count: number; lang: string | null };
   streak?: { week: number; run: number };
   maker?: { count: number };
+  /** 공부 기록(칸 study를 켰을 때, 숫자만 — server/contribStore readStudy, 2026-10-28). */
+  study?: { scripts: number; frames: number; lines: number };
 };
 
 export function badgesFor(

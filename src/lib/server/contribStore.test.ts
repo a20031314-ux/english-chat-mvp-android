@@ -128,3 +128,16 @@ test("반영된 의견은 카드마다 한 번, 공부한 날은 하루 한 번,
   await forgetContrib(asker);
   assert.equal((await readContrib(asker)).made, 0);
 });
+
+test("공부 기록: 숫자가 쌓이고 공부한 날도 남고, 계정을 지우면 함께 사라짐", async () => {
+  const { noteStudy, readStudy, readContrib, forgetContrib } = await import("./contribStore.ts");
+  const who = "lb_" + "7".repeat(24);
+  await noteStudy(who, "2026-10-28", "scripts");
+  await noteStudy(who, "2026-10-28", "lines", 3);
+  await noteStudy(who, "2026-10-29", "frames");
+  await noteStudy(who, "2026-10-29", "scripts", 0);
+  assert.deepEqual(await readStudy(who), { scripts: 1, frames: 1, lines: 3 });
+  assert.deepEqual((await readContrib(who)).days, ["2026-10-28", "2026-10-29"]);
+  await forgetContrib(who);
+  assert.deepEqual(await readStudy(who), { scripts: 0, frames: 0, lines: 0 });
+});

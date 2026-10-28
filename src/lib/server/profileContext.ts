@@ -1,7 +1,7 @@
 import type { NextRequest } from "next/server";
 import { requestAuth } from "./premiumRequest.ts";
 import { readAccount } from "./accountStore.ts";
-import { markStudyDay } from "./contribStore.ts";
+import { markStudyDay, noteStudy, type StudyKind } from "./contribStore.ts";
 import { factsOf, factsPrompt, showOf } from "../account/profileFacts.ts";
 import { localDay, parseOffset, TZ_OFFSET_HEADER } from "../billing/plans.ts";
 
@@ -30,4 +30,18 @@ export async function profileTurn(request: NextRequest): Promise<string> {
 export function withProfileLine(brief: string, line: string): string {
   if (!line) return brief;
   return brief ? `${brief}\n${line}` : line;
+}
+
+/**
+ * 공부 기록(프로필 "공부 기록" 칸, 2026-10-28): 로그인했으면 숫자 하나 + 공부한 날. 안 했으면 아무것도 안 함.
+ * 응답을 늦추지 않게 after()에서 부른다. 실패해도 공부는 그대로.
+ */
+export async function studyTick(request: NextRequest, kind: StudyKind, amount = 1): Promise<void> {
+  const accountId = requestAuth(request)?.accountId;
+  if (!accountId) return;
+  try {
+    await noteStudy(accountId, localDay(Date.now(), parseOffset(request.headers.get(TZ_OFFSET_HEADER))), kind, amount);
+  } catch (error) {
+    console.error("[study-tick]", error);
+  }
 }

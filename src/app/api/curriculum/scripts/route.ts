@@ -1,4 +1,4 @@
-import { NextRequest } from "next/server";
+import { NextRequest, after } from "next/server";
 import { corsPreflightResponse, jsonWithCors } from "@/lib/server/cors";
 import { requestUserId } from "@/lib/server/premiumRequest";
 import { isIdentified } from "@/lib/server/identity";
@@ -11,6 +11,7 @@ import { meterRequest } from "@/lib/server/meterRequest";
 import { INTERFACE_LANGUAGE_LABELS } from "@/lib/learningLanguages";
 import { updateLedger } from "@/lib/server/ledgerStore";
 import { applyMissionResult } from "@/lib/learner/ledger";
+import { studyTick } from "@/lib/server/profileContext";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -79,6 +80,7 @@ export async function POST(request: NextRequest) {
   }
   // 대본은 짜인 연습이라 "배움"까지(도움 받은 써 봄). 숙지는 채팅·통화에서 혼자 쓸 때(장부 규칙) — 2026-10-28: 혼자로 올렸더니 한 번에 숙지가 됨.
   const outcome = "helped";
+  const before = await readPassedScripts(userId, language);
   const [passed] = await Promise.all([
     markScriptPassed(userId, language, id),
     script.expressions.length
@@ -87,5 +89,8 @@ export async function POST(request: NextRequest) {
         )
       : Promise.resolve(),
   ]);
+  // 처음 통과한 것만 공부 기록 숫자로(다시 통과는 세지 않음) — 공부한 날은 다시 해도 남긴다.
+  const isFrame = Boolean(frameById(language, id));
+  after(() => (before.has(id) ? studyTick(request, isFrame ? "frames" : "scripts", 0) : studyTick(request, isFrame ? "frames" : "scripts")));
   return jsonWithCors(request, { passed });
 }

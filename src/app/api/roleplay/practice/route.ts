@@ -3,6 +3,7 @@ import { completeChat, routeFor } from "@/lib/server/llm";
 import { NextRequest, after } from "next/server";
 import { recordPronunciation } from "@/lib/server/growthStore";
 import { takeScriptLine } from "@/lib/server/entitlementStore";
+import { studyTick } from "@/lib/server/profileContext";
 import { resolveRequestEntitlement } from "@/lib/server/premiumRequest";
 import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
 import { requestUserId } from "@/lib/server/premiumRequest";
@@ -69,6 +70,8 @@ export async function POST(request: NextRequest) {
     if (!(await takeScriptLine(userId, terms.dailyScriptLines, day))) {
       return jsonWithCors(request, { error: "SCRIPT_LIMIT", limit: terms.dailyScriptLines }, { status: 429 });
     }
+    // 대본·문장구조 한 줄을 말함 — 프로필 공부 기록 "말한 문장"(들린 말이 있을 때만).
+    if (heard) after(() => studyTick(request, "lines"));
   }
 
   await meterRequest(request, "roleplayPractice");

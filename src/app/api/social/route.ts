@@ -24,7 +24,7 @@ import { suspendedResponse } from "@/lib/server/suspension";
 import { factsOf, learnsOf, sharedInterests, showOf, speaksOf } from "@/lib/account/profileFacts";
 import { isLangMatch, langMatches } from "@/lib/rooms/langMatch";
 import { badgesFor, contribScore, peopleBoostMs } from "@/lib/rooms/contribution";
-import { readContrib, readContribMany, recordThank, type ThankTarget } from "@/lib/server/contribStore";
+import { readContrib, readContribMany, readStudy, recordThank, type ThankTarget } from "@/lib/server/contribStore";
 import { readSelfCheck } from "@/lib/server/selfCheckStore";
 import { listPostsBy, withLikes } from "@/lib/server/boardStore";
 import { localDay, parseOffset, TZ_OFFSET_HEADER } from "@/lib/billing/plans";
@@ -212,7 +212,7 @@ export async function POST(request: NextRequest) {
         : show.goal
           ? ((await readPresence(target))?.learn ?? null)
           : null;
-    const [numbers, photo, following, blocked, contrib, check] = await Promise.all([
+    const [numbers, photo, following, blocked, contrib, check, study] = await Promise.all([
       counts(target),
       account.profile.hasPhoto ? readPhoto(target) : Promise.resolve(null),
       me ? readFollowing(me) : Promise.resolve([] as string[]),
@@ -220,7 +220,11 @@ export async function POST(request: NextRequest) {
       readContrib(target),
       // 목표 한 줄: 그 사람이 지금 배우는 언어(사람 목록에서 받은 learn)의 체크 답.
       show.goal && learn ? readSelfCheck(account.dataUserId, learn) : Promise.resolve(null),
+      // 공부 기록(칸 study를 켰거나 본인일 때) — 숫자만.
+      show.study || me === target ? readStudy(target) : Promise.resolve(null),
     ]);
+    const badges = badgesFor(contrib, show, localDay(Date.now(), null));
+    if (study && show.study && study.scripts + study.frames + study.lines > 0) badges.study = study;
     // 올린 글(켰을 때, 로그인한 사람에게만 — 게시판이 로그인해야 보이는 것과 같게). 서로 차단이면 보이지 않는다.
     let posts: PublicProfile["posts"];
     if (show.posts && me && !blocked.includes(target) && !(await readBlocked(target)).includes(me)) {
@@ -238,7 +242,7 @@ export async function POST(request: NextRequest) {
       isFollowing: following.includes(target),
       blockedByMe: blocked.includes(target),
       facts: factsOf(account.profile.facts),
-      badges: badgesFor(contrib, show, localDay(Date.now(), null)),
+      badges,
       ...(check && learn ? { goal: { language: learn, use: check.use ?? null, focus: check.focus } } : {}),
       ...(posts ? { posts } : {}),
       ...(me === target ? { show } : {}),

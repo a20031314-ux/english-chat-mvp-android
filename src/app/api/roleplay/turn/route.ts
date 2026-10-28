@@ -43,7 +43,7 @@ import { fileFix } from "@/lib/server/notebookStore";
 import { localDay as notebookDay, parseOffset as notebookOffset, TZ_OFFSET_HEADER as NOTEBOOK_TZ } from "@/lib/billing/plans";
 import { recordMeets, recordTurn } from "@/lib/server/ledgerStore";
 import { readLearnerBrief } from "@/lib/server/learnerBrief";
-import { profileTurn, withProfileLine } from "@/lib/server/profileContext";
+import { profileTurn, studyTick, withProfileLine } from "@/lib/server/profileContext";
 import { recordGrowthTurn, recordStuck } from "@/lib/server/growthStore";
 import { quotedPhrases } from "@/lib/learner/stuck";
 import { writtenInLearningLanguage } from "@/lib/inputLanguage";
@@ -389,6 +389,8 @@ export async function POST(request: NextRequest) {
     scenario.openEnded ? readLearnerBrief(requestUserId(request), turn.targetLanguage) : null,
     profileTurn(request),
   ]);
+  // 통화에서 한 말 — 프로필 공부 기록 "말한 문장"(들린 말이 있는 턴만, 2026-10-28).
+  if (turn.heard) after(() => studyTick(request, "lines"));
   const brief = learnerBrief ? withProfileLine(learnerBrief.prompt, profileLine) : "";
   // A pack turn: the tutor reacts and picks the pack's next question rather
   // than asking its own, so the practice brief's "ask the question a phrase

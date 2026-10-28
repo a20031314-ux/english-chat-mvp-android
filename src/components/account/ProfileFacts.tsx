@@ -215,6 +215,7 @@ export function ShowToggles({
   const rows: [ShowKey, string][] = [
     ["help", t.showHelp],
     ["streak", t.showStreak],
+    ["study", t.showStudy],
     ["goal", t.showGoal],
     ["maker", t.showMaker],
     ["posts", t.posts],
@@ -286,6 +287,14 @@ export function FactsView({
   if (badges?.help) lines.push(fillCount(t.badgeHelp, badges.help.count) + (badges.help.lang ? ` · ${learningLanguageUiLabel(badges.help.lang, locale)}` : ""));
   if (badges?.streak) lines.push(fillCount(t.badgeWeek, badges.streak.week) + (badges.streak.run > 1 ? ` · ${fillCount(t.badgeRun, badges.streak.run)}` : ""));
   if (badges?.maker) lines.push(fillCount(t.badgeMaker, badges.maker.count));
+  if (badges?.study) {
+    const parts = [
+      badges.study.scripts ? fillCount(t.badgeScripts, badges.study.scripts) : "",
+      badges.study.frames ? fillCount(t.badgeFrames, badges.study.frames) : "",
+      badges.study.lines ? fillCount(t.badgeLines, badges.study.lines) : "",
+    ].filter(Boolean);
+    if (parts.length) lines.push(parts.join(" · "));
+  }
   const goalLine = goal ? goalText(t, goal) : "";
   if (goalLine) lines.push(goalLine);
   const langs = facts ? [facts.native, ...facts.speaks, ...facts.learns].filter((code): code is string => Boolean(code)) : [];
