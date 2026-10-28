@@ -7,7 +7,7 @@
 import { existsSync, mkdirSync, readFileSync, rmSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { chromium } from "playwright";
+const { chromium } = await import(process.env.PLAYWRIGHT_MODULE || "playwright");
 import { COPY, LISTINGS, OVERRIDES, SHOTS } from "./strings.mjs";
 
 const here = path.dirname(fileURLToPath(import.meta.url));

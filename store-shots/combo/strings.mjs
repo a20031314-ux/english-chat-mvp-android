@@ -8,26 +8,18 @@
  * 카드는 화면 높이의 약 56%를 보여준다.
  */
 export const SHOTS = [
-  // 2026-10-25 사용자: 로그인·아이콘·프로필 세부 같은 자잘한 건 빼고 핵심 기능 위주로.
-  { id: "map", main: "mapview", details: [["stage-start", 0.36], ["mission", 0.08]] },
-  { id: "chat", main: "chat-expression", details: [["chat-fix-open", 0.06], ["links", 0.3]] },
-  { id: "ask", main: "chat-ask", details: [["chat-word", 0.0], ["pick", 0.4]] },
-  { id: "my", main: "growth", details: [["myask", 0.44], ["notebook-today", 0.45]] },
-  { id: "call", main: "meant", details: [["call-pack", 0.17], ["calltools", 0.4]] },
-  { id: "video", main: "video-study", details: [["video-ask", 0.0], ["vocab-search", 0.04]] },
-  { id: "room", main: "quote", details: [["room-game", 0.28], ["freetalk", 0.2]] },
-  { id: "people", main: "group-pick", details: [["people-lang", 0.18], ["layouts", 0.22]] },
+  // 2026-10-29 사용자: "모든 기능을 다 넣지 말고 핵심 기능, 학습 흐름 중심으로" — 학습 흐름 셋 + 핵심 기능 넷.
+  { id: "plan", main: "today-plan", details: [["stage-start", 0.24], ["learned", 0.1]] },
+  { id: "script", main: "script-play", details: [["stage-scripts", 0.08], ["frames-list", 0.1]] },
+  { id: "review", main: "weak-strip", details: [["quiz", 0.0], ["learned-where", 0.42]] },
+  { id: "chat4", main: "chat-expression", details: [["chat-fix-open", 0.06], ["chat-ask", 0.25]] },
+  { id: "call5", main: "meant", details: [["call-ownline", 0.9], ["calltools", 0.4]] },
+  { id: "video6", main: "video-study", details: [["video-ask", 0.0], ["video-bar", 0.62]] },
+  { id: "together7", main: "quote", details: [["group-pick", 0.08], ["people-lang", 0.18]] },
 ];
 
-/** 등록정보마다 바꾸는 장면. 오늘의 팩은 영어·일본어 학습만 있어 영어 앱(스페인어 학습)은 내 문장 말해보기로. */
-export const OVERRIDES = {
-  en: { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
-  // 오늘의 팩이 없는 배우는 언어(중국어·스페인어·한국어).
-  "ko-zh": { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
-  "ko-es": { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
-  "en-ko": { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
-  "ja-ko": { call: { details: [["call-ownline", 0.3], ["calltools", 0.4]] } },
-};
+/** 등록정보마다 바꾸는 장면(지금은 없음 — 오늘의 팩이 빠져 모두 같은 장면). */
+export const OVERRIDES = {};
 
 export const LISTINGS = [
   { folder: "0_default-english", locale: "en", lang: "en", font: "'Noto Sans', sans-serif" },
@@ -277,4 +269,587 @@ for (const [key, copy] of Object.entries(COPY)) {
   }
   done273.add(people);
   done273.add(room);
+}
+
+// ── 2026-10-29 사용자 "핵심 기능, 학습 흐름 중심으로": 7장 = 오늘 할 것 → 대본 말하기 → 다시 보기 → 채팅 → 통화 → 영상 → 같이.
+// 화면은 capture-whats-new.mjs store-flow(tmp/store-raw/<locale>/). 앱 이름은 앱 문구 그대로(copy.ts·overlays.json).
+const FLOW = {
+ "ko": {
+  "plan": [
+   "1 · 오늘 할 것",
+   "하루 10분,\n며칠이면 끝나는지 보여요",
+   "할 수 있는 대화로 단계를 고르면, 매일 할 대본을 정해 줘요",
+   [
+    "오늘 할 것",
+    "이런 대화, 할 수 있어요?",
+    "오늘 배운 것"
+   ],
+   [
+    "커리큘럼 순서",
+    "내 기록에 맞춰"
+   ]
+  ],
+  "script": [
+   "2 · 대본으로 말하기",
+   "내 줄을 말하면\n바로 평가해요",
+   "완벽하면 ★, 더 자연스러운 말이 있으면 알려 줘요",
+   [
+    "대본으로 연습",
+    "상황마다 대본",
+    "문장구조 바꿔 말하기"
+   ],
+   [
+    "가리기",
+    "이어서 하기",
+    "★ 완벽해요!"
+   ]
+  ],
+  "review": [
+   "3 · 다시 보기",
+   "틀린 건 잊기 전에\n다시 나와요",
+   "헷갈린 곳은 퀴즈로, 아침엔 잠금화면에",
+   [
+    "지난번에 틀린 것",
+    "퀴즈",
+    "어디서 어떻게 나왔는지"
+   ],
+   [
+    "아침 알림",
+    "헷갈려요",
+    "다시 썼어요"
+   ]
+  ],
+  "own": "내 문장 말해보기"
+ },
+ "en": {
+  "plan": [
+   "1 · TODAY'S PLAN",
+   "Ten minutes a day.\nSee when you'll finish.",
+   "Pick your stage from real conversations; the app sets each day's scripts",
+   [
+    "Today's plan",
+    "Could you have this conversation?",
+    "What you learned today"
+   ],
+   [
+    "In order",
+    "From my record"
+   ]
+  ],
+  "script": [
+   "2 · SPEAK THE SCRIPT",
+   "Say your line,\nget it rated",
+   "★ when it's perfect, and a more natural way when there is one",
+   [
+    "Practise with a script",
+    "A script for every situation",
+    "Swap the sentence structure"
+   ],
+   [
+    "Hidden",
+    "Continue",
+    "★ Perfect!"
+   ]
+  ],
+  "review": [
+   "3 · REVIEW",
+   "Mistakes come back\nbefore you forget",
+   "What confused you returns as a quiz, and on your lock screen in the morning",
+   [
+    "What you got wrong last time",
+    "Quiz",
+    "Where you met it"
+   ],
+   [
+    "Morning reminder",
+    "Not sure",
+    "Used again"
+   ]
+  ],
+  "own": "Say a sentence of your own"
+ },
+ "ja": {
+  "plan": [
+   "1 · 今日やること",
+   "1日10分、\n何日で終わるかわかる",
+   "できる会話から段階を選ぶと、毎日の台本を決めてくれます",
+   [
+    "今日やること",
+    "こんな会話、できますか？",
+    "今日学んだこと"
+   ],
+   [
+    "カリキュラム順",
+    "自分の記録に合わせて"
+   ]
+  ],
+  "script": [
+   "2 · 台本で話す",
+   "自分のセリフを言うと\nすぐに評価",
+   "完璧なら★、もっと自然な言い方があれば教えてくれます",
+   [
+    "台本で練習",
+    "場面ごとの台本",
+    "文型で言いかえ"
+   ],
+   [
+    "隠す",
+    "続きから",
+    "★ 完璧です！"
+   ]
+  ],
+  "review": [
+   "3 · 振り返り",
+   "間違えたところは\n忘れる前にまた出る",
+   "あやふやなところはクイズで、朝はロック画面に",
+   [
+    "前回まちがえたところ",
+    "クイズ",
+    "どこでどう出てきたか"
+   ],
+   [
+    "朝の通知",
+    "あやふや",
+    "また使えました"
+   ]
+  ],
+  "own": "自分の文を言ってみる"
+ },
+ "zh": {
+  "plan": [
+   "1 · 今天要做的",
+   "每天10分钟，\n看得到几天学完",
+   "用会说的对话选好阶段，每天的剧本帮你排好",
+   [
+    "今天要做的",
+    "这样的对话，你能做到吗？",
+    "今天学到的"
+   ],
+   [
+    "按课程顺序",
+    "按我的记录"
+   ]
+  ],
+  "script": [
+   "2 · 用剧本开口",
+   "说出你的台词，\n马上给出评价",
+   "说得完美就给★，有更自然的说法也会告诉你",
+   [
+    "用剧本练习",
+    "每个情境一个剧本",
+    "句子结构替换练习"
+   ],
+   [
+    "隐藏",
+    "继续",
+    "★ 完美！"
+   ]
+  ],
+  "review": [
+   "3 · 复习",
+   "错过的地方\n在忘记前再出现",
+   "不确定的变成小测验，早上还会出现在锁屏上",
+   [
+    "上次错的地方",
+    "小测验",
+    "在哪里、怎么出现的"
+   ],
+   [
+    "早晨提醒",
+    "还不确定",
+    "又用上了"
+   ]
+  ],
+  "own": "说说自己的句子"
+ },
+ "es": {
+  "plan": [
+   "1 · PARA HOY",
+   "Diez minutos al día.\nVe cuándo terminas.",
+   "Elige tu etapa con conversaciones reales; la app fija los guiones de cada día",
+   [
+    "Para hoy",
+    "¿Podrías tener esta conversación?",
+    "Lo que aprendiste hoy"
+   ],
+   [
+    "En orden",
+    "Según mi historial"
+   ]
+  ],
+  "script": [
+   "2 · HABLA CON EL GUION",
+   "Di tu línea\ny recibe la nota",
+   "★ si es perfecta, y una forma más natural cuando la hay",
+   [
+    "Practica con un guion",
+    "Un guion por situación",
+    "Cambia la estructura de la frase"
+   ],
+   [
+    "Oculto",
+    "Continuar",
+    "★ ¡Perfecto!"
+   ]
+  ],
+  "review": [
+   "3 · REPASO",
+   "Lo que fallaste vuelve\nantes de olvidarlo",
+   "Lo que te confundió vuelve como quiz, y por la mañana en la pantalla de bloqueo",
+   [
+    "Lo que fallaste la última vez",
+    "Quiz",
+    "Dónde salió y cómo"
+   ],
+   [
+    "Aviso por la mañana",
+    "Me confunde",
+    "Lo usaste otra vez"
+   ]
+  ],
+  "own": "Di una frase tuya"
+ },
+ "hi": {
+  "plan": [
+   "1 · आज की योजना",
+   "रोज़ 10 मिनट,\nपता रहे कब पूरा होगा",
+   "असली बातचीत से अपना चरण चुनें, रोज़ की स्क्रिप्ट ऐप तय करता है",
+   [
+    "आज की योजना",
+    "क्या आप ऐसी बातचीत कर सकते हैं?",
+    "आज क्या सीखा"
+   ],
+   [
+    "क्रम से",
+    "मेरे रिकॉर्ड के अनुसार"
+   ]
+  ],
+  "script": [
+   "2 · स्क्रिप्ट बोलें",
+   "अपनी पंक्ति बोलें,\nतुरंत आकलन पाएँ",
+   "सही हो तो ★, ज़्यादा स्वाभाविक तरीका हो तो वह भी",
+   [
+    "स्क्रिप्ट से अभ्यास",
+    "हर स्थिति की स्क्रिप्ट",
+    "वाक्य संरचना में बदलकर बोलें"
+   ],
+   [
+    "छिपा हुआ",
+    "जारी रखें",
+    "★ बिल्कुल सही!"
+   ]
+  ],
+  "review": [
+   "3 · दोहराव",
+   "गलतियाँ भूलने से पहले\nफिर सामने आती हैं",
+   "उलझन वाली चीज़ें क्विज़ बनकर, सुबह लॉक स्क्रीन पर",
+   [
+    "पिछली बार की गलतियाँ",
+    "क्विज़",
+    "कहाँ और कैसे आया"
+   ],
+   [
+    "सुबह का रिमाइंडर",
+    "पक्का नहीं",
+    "फिर से इस्तेमाल किया"
+   ]
+  ],
+  "own": "अपना वाक्य बोलकर देखें"
+ },
+ "pt": {
+  "plan": [
+   "1 · PLANO DE HOJE",
+   "Dez minutos por dia.\nVeja quando termina.",
+   "Escolha sua etapa por conversas reais; o app monta os roteiros de cada dia",
+   [
+    "Plano de hoje",
+    "Você conseguiria ter esta conversa?",
+    "O que você aprendeu hoje"
+   ],
+   [
+    "Na ordem",
+    "Pelo meu histórico"
+   ]
+  ],
+  "script": [
+   "2 · FALE O ROTEIRO",
+   "Diga sua fala\ne receba a nota",
+   "★ quando está perfeita, e um jeito mais natural quando existe",
+   [
+    "Praticar com um roteiro",
+    "Um roteiro por situação",
+    "Troque na estrutura da frase"
+   ],
+   [
+    "Oculto",
+    "Continuar",
+    "★ Perfeito!"
+   ]
+  ],
+  "review": [
+   "3 · REVISÃO",
+   "Os erros voltam\nantes de você esquecer",
+   "O que confundiu volta como quiz, e de manhã na tela de bloqueio",
+   [
+    "O que você errou da última vez",
+    "Quiz",
+    "Onde e como apareceu"
+   ],
+   [
+    "Lembrete da manhã",
+    "Não tenho certeza",
+    "Usou de novo"
+   ]
+  ],
+  "own": "Dizer uma frase sua"
+ },
+ "fr": {
+  "plan": [
+   "1 · AU PROGRAMME",
+   "Dix minutes par jour.\nVoyez quand vous finirez.",
+   "Choisissez votre étape avec de vraies conversations ; l'app prépare les dialogues du jour",
+   [
+    "Au programme aujourd'hui",
+    "Pourrais-tu tenir cette conversation ?",
+    "Ce que tu as appris aujourd'hui"
+   ],
+   [
+    "Dans l'ordre",
+    "Selon mon parcours"
+   ]
+  ],
+  "script": [
+   "2 · DITES LE DIALOGUE",
+   "Dites votre réplique,\nobtenez une note",
+   "★ quand c'est parfait, et une tournure plus naturelle s'il y en a une",
+   [
+    "S’entraîner avec un dialogue",
+    "Un dialogue par situation",
+    "Changer dans la structure de phrase"
+   ],
+   [
+    "Masqué",
+    "Reprendre",
+    "★ Parfait !"
+   ]
+  ],
+  "review": [
+   "3 · RÉVISION",
+   "Vos erreurs reviennent\navant l'oubli",
+   "Ce qui est flou revient en quiz, et le matin sur l'écran verrouillé",
+   [
+    "Ce que tu as raté la dernière fois",
+    "Quiz",
+    "Où et comment c'est apparu"
+   ],
+   [
+    "Rappel du matin",
+    "Pas sûr",
+    "Réutilisé"
+   ]
+  ],
+  "own": "Dire une phrase à toi"
+ },
+ "vi": {
+  "plan": [
+   "1 · HÔM NAY HỌC GÌ",
+   "Mỗi ngày 10 phút,\nbiết khi nào xong",
+   "Chọn giai đoạn bằng hội thoại thật, ứng dụng xếp kịch bản cho từng ngày",
+   [
+    "Hôm nay học gì",
+    "Bạn có nói được đoạn hội thoại này không?",
+    "Hôm nay đã học"
+   ],
+   [
+    "Theo lộ trình",
+    "Theo kết quả của tôi"
+   ]
+  ],
+  "script": [
+   "2 · NÓI THEO KỊCH BẢN",
+   "Nói câu của bạn,\nđược chấm ngay",
+   "Hoàn hảo thì ★, có cách nói tự nhiên hơn thì gợi ý",
+   [
+    "Luyện theo kịch bản",
+    "Mỗi tình huống một kịch bản",
+    "Đổi trong cấu trúc câu"
+   ],
+   [
+    "Ẩn",
+    "Học tiếp",
+    "★ Hoàn hảo!"
+   ]
+  ],
+  "review": [
+   "3 · ÔN LẠI",
+   "Chỗ sai quay lại\ntrước khi bạn quên",
+   "Chỗ còn lẫn lộn thành câu đố, buổi sáng hiện trên màn hình khóa",
+   [
+    "Lần trước sai ở đâu",
+    "Câu đố",
+    "Xuất hiện ở đâu, thế nào"
+   ],
+   [
+    "Nhắc buổi sáng",
+    "Còn lẫn lộn",
+    "Đã dùng lại"
+   ]
+  ],
+  "own": "Nói câu của riêng bạn"
+ },
+ "id": {
+  "plan": [
+   "1 · RENCANA HARI INI",
+   "Sepuluh menit sehari,\ntahu kapan selesai",
+   "Pilih tahap dari percakapan nyata; aplikasi menyusun naskah tiap hari",
+   [
+    "Rencana hari ini",
+    "Bisakah kamu melakukan percakapan ini?",
+    "Yang dipelajari hari ini"
+   ],
+   [
+    "Sesuai urutan",
+    "Sesuai riwayatku"
+   ]
+  ],
+  "script": [
+   "2 · UCAPKAN NASKAH",
+   "Ucapkan kalimatmu,\nlangsung dinilai",
+   "★ kalau sempurna, dan cara yang lebih wajar kalau ada",
+   [
+    "Latihan dengan naskah",
+    "Naskah untuk tiap situasi",
+    "Ganti dalam struktur kalimat"
+   ],
+   [
+    "Disembunyikan",
+    "Lanjutkan",
+    "★ Sempurna!"
+   ]
+  ],
+  "review": [
+   "3 · ULANGI",
+   "Yang salah muncul lagi\nsebelum kamu lupa",
+   "Yang membingungkan jadi kuis, dan pagi hari di layar kunci",
+   [
+    "Yang salah terakhir kali",
+    "Kuis",
+    "Muncul di mana dan bagaimana"
+   ],
+   [
+    "Pengingat pagi",
+    "Masih bingung",
+    "Dipakai lagi"
+   ]
+  ],
+  "own": "Ucapkan kalimatmu sendiri"
+ },
+ "th": {
+  "plan": [
+   "1 · แผนวันนี้",
+   "วันละ 10 นาที\nรู้ว่าจะจบเมื่อไร",
+   "เลือกขั้นจากบทสนทนาจริง แอปจัดบทให้ทุกวัน",
+   [
+    "แผนวันนี้",
+    "คุณพูดบทสนทนาแบบนี้ได้ไหม",
+    "สิ่งที่เรียนวันนี้"
+   ],
+   [
+    "ตามลำดับหลักสูตร",
+    "ตามผลของฉัน"
+   ]
+  ],
+  "script": [
+   "2 · พูดตามบท",
+   "พูดประโยคของคุณ\nได้ผลทันที",
+   "ถ้าเป๊ะได้ ★ ถ้ามีแบบที่เป็นธรรมชาติกว่าก็บอก",
+   [
+    "ฝึกด้วยบทสนทนา",
+    "บทสำหรับทุกสถานการณ์",
+    "เปลี่ยนคำในโครงสร้างประโยค"
+   ],
+   [
+    "ซ่อน",
+    "ทำต่อ",
+    "★ เยี่ยมมาก!"
+   ]
+  ],
+  "review": [
+   "3 · ทบทวน",
+   "ที่ผิดจะกลับมา\nก่อนคุณลืม",
+   "ที่สับสนกลายเป็นควิซ ตอนเช้าขึ้นบนหน้าจอล็อก",
+   [
+    "ที่ผิดครั้งก่อน",
+    "ควิซ",
+    "เจอที่ไหน ใช้อย่างไร"
+   ],
+   [
+    "แจ้งเตือนตอนเช้า",
+    "ยังสับสน",
+    "ใช้ได้อีกครั้ง"
+   ]
+  ],
+  "own": "พูดประโยคของคุณเอง"
+ },
+ "ar": {
+  "plan": [
+   "1 · خطة اليوم",
+   "عشر دقائق يوميًا\nوتعرف متى تنتهي",
+   "اختر مرحلتك بمحادثات حقيقية، والتطبيق يرتّب نصوص كل يوم",
+   [
+    "خطة اليوم",
+    "هل تستطيع إجراء هذه المحادثة؟",
+    "ما تعلّمته اليوم"
+   ],
+   [
+    "بالترتيب",
+    "حسب سجلي"
+   ]
+  ],
+  "script": [
+   "2 · تكلّم بالنص",
+   "قل جملتك\nواحصل على التقييم",
+   "★ إذا كانت مثالية، وصيغة أكثر طبيعية إن وُجدت",
+   [
+    "تدرّب بنصّ حواري",
+    "نص لكل موقف",
+    "بدّل في تركيب الجملة"
+   ],
+   [
+    "مخفي",
+    "متابعة",
+    "★ ممتاز!"
+   ]
+  ],
+  "review": [
+   "3 · مراجعة",
+   "ما أخطأت فيه يعود\nقبل أن تنساه",
+   "ما التبس عليك يعود اختبارًا، وصباحًا على شاشة القفل",
+   [
+    "ما أخطأت فيه آخر مرة",
+    "اختبار",
+    "أين ظهر وكيف"
+   ],
+   [
+    "تذكير الصباح",
+    "لست متأكدًا",
+    "استخدمته مجددًا"
+   ]
+  ],
+  "own": "قل جملة من عندك"
+ }
+};
+const FLOW_KICKER = {"ko-ja": "일본어", "ko-zh": "중국어", "ko-es": "스페인어", "en-ko": "KOREAN", "ja-ko": "韓国語"};
+for (const [key, copy] of Object.entries(COPY)) {
+  const base = key.split("-")[0];
+  const f = structuredClone(FLOW[base]);
+  if (FLOW_KICKER[key]) f.plan[0] = `${FLOW_KICKER[key]} · ${f.plan[0].replace(/^1 · /, "")}`;
+  copy.plan = f.plan;
+  copy.script = f.script;
+  copy.review = f.review;
+  const chat = copy.chat, ask = copy.ask, call = copy.call, video = copy.video, room = copy.room, people = copy.people;
+  copy.chat4 = [`4 · ${chat[0]}`, chat[1], chat[2], [chat[3][0], chat[3][1], ask[3][0]], chat[4]];
+  copy.call5 = [`5 · ${call[0]}`, call[1], call[2], [call[3][0], f.own, call[3][2]], [call[4][0], call[4][1]]];
+  copy.video6 = [`6 · ${video[0]}`, video[1], video[2], [video[3][0], video[3][1], video[4][0]], [video[4][1], video[4][2]]];
+  copy.together7 = [`7 · ${room[0]}`, room[1], room[2], [room[3][0], people[3][0], people[3][1]], [room[3][1], room[4][0], room[4][1]].filter(Boolean)];
 }

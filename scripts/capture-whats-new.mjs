@@ -212,7 +212,10 @@ const GUIDE_VOCAB_ITEMS = [
 // vocabulary; three lines). Run each with its own CAPTURE_RUN.
 const STORE_MY = VERSION === "store-my";
 const STORE_TABS = VERSION === "store-tabs";
-const STORE = STORE_MY || STORE_TABS;
+// `store-flow`(2026-10-29 사용자 "핵심 기능, 학습 흐름 중심"): 스토어 7장에 쓰는 화면만 한 번에 —
+// 단계 고르기 → 오늘 할 것 → 대본 말하기(평가) → 틀린 것·퀴즈·오늘 배운 것 → 채팅·통화·영상·같이. 합성은 store-shots/combo.
+const STORE_FLOW = VERSION === "store-flow";
+const STORE = STORE_MY || STORE_TABS || STORE_FLOW;
 const STORE_MY_ITEMS = [
   // My: 단계 시작·내 표현·자라는 중·오늘의 학습(예전 지도·미션·직접 묻기는 2026-10-27에 뺐다).
   // 2.71: 지도가 없을 때 맨 위 "이런 대화, 할 수 있어요?"(대화 예시로 시작 단계 고르기).
@@ -223,6 +226,34 @@ const STORE_MY_ITEMS = [
   { shot: "growth" },
   // 2.73: 노트 "오늘의 학습"(고정 응답으로 후보만 바꿔 끼움 — 맨 끝에).
   { shot: "notebook-today" },
+];
+const STORE_FLOW_ITEMS = [
+  { shot: "stage-start" },
+  { shot: "stage-next" },
+  { shot: "today-plan" },
+  { shot: "quiz" },
+  { shot: "learned" },
+  { shot: "learned-where" },
+  { shot: "weak-strip" },
+  { shot: "stage-scripts" },
+  { shot: "frames-list" },
+  { shot: "script-play" },
+  { shot: "chat-correct" },
+  { shot: "chat-fix-open" },
+  { shot: "chat-expression" },
+  { shot: "chat-ask" },
+  { shot: "meant" },
+  { shot: "calltools" },
+  { shot: "call-ownline" },
+  { shot: "video-study" },
+  { shot: "video-bar" },
+  { shot: "video-ask" },
+  { shot: "people" },
+  { shot: "people-lang" },
+  { shot: "groups", save: false },
+  { shot: "group-pick" },
+  { shot: "freetalk", save: false },
+  { shot: "quote" },
 ];
 const STORE_TABS_ITEMS = [
   // 2.71: 고친 문장은 눌러서 보는 칩. chat-correct와 같은 장면이라 그 뒤에 한 번 더 찍지 않고 칩을 연 모습도 남긴다.
@@ -277,6 +308,8 @@ const note = PROMO
   ? { version: "store", items: STORE_MY_ITEMS }
   : STORE_TABS
   ? { version: "store", items: STORE_TABS_ITEMS }
+  : STORE_FLOW
+  ? { version: "store", items: STORE_FLOW_ITEMS }
   : GUIDE_CHAT
   ? { version: "guide", items: GUIDE_CHAT_ITEMS }
   : GUIDE_VOCAB
@@ -969,6 +1002,7 @@ async function partsScene({ page, locale, wait, target }, mode, open) {
     localStorage.setItem("myViewMode", view);
     localStorage.setItem("myViewMode.stageShown", "1");
   }, mode);
+  await pickStageOne(page, target);
   await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
   const chips = page.locator('section[aria-label] div[role="group"]');
   for (let i = 0; i < 40 && !(await chips.count()); i++) await wait(500);
@@ -1347,6 +1381,96 @@ const STEPS = {
     await title.evaluate((el) => el.closest("section")?.scrollIntoView({ block: "start" }));
     await page.mouse.wheel(0, -16);
     await wait(2500);
+  },
+  async quiz(ctx) {
+    // 스토어(2026-10-29): 오늘 할 것의 "퀴즈 · …" 칸을 연 첫 문제(틀린 곳·빈칸·순서 중 하나, 고르는 문제라 마이크 없음).
+    const { page, ui, wait } = ctx;
+    await STEPS["today-plan"](ctx);
+    const item = page.locator("ul li button").filter({ hasText: new RegExp(`^${escape(ui.quizTag)}`) }).first();
+    for (let i = 0; i < 20 && !(await item.count()); i++) await wait(500);
+    await item.click();
+    await wait(2500);
+  },
+  async learned({ page, ui, locale, wait, target }) {
+    // 스토어(2026-10-29): 오늘 할 것을 다 한 날 — "오늘 배운 것"(문장구조·문법·단어 칩). 오늘 목록의 대본을 통과한 것으로 끼운다.
+    const passed = { ids: [] };
+    await page.route("**/api/notebook?*", async (route) => {
+      if (route.request().method() !== "GET" || route.request().url().includes("shot=")) return route.fallback();
+      const response = await route.fetch({ headers: { ...route.request().headers(), "x-rc-user": `whats-new-capture-notebook-${locale}` }, timeout: 60_000 }).catch(() => null);
+      if (!response) return;
+      const book = await response.json();
+      if (passed.ids.length && book.parts?.[0]?.scripts) book.parts[0].scripts.passed = [...new Set([...book.parts[0].scripts.passed, ...passed.ids])];
+      book.review = {};
+      return route.fulfill({ status: 200, contentType: "application/json", body: JSON.stringify(book) }).catch(() => undefined);
+    });
+    await page.evaluate(() => {
+      localStorage.setItem("myViewMode", "map");
+      localStorage.setItem("myViewMode.stageShown", "1");
+      localStorage.removeItem("dailyPlan.today.v1");
+    });
+    await pickStageOne(page, target);
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    const plan = page.getByRole("heading", { name: ui.planTitle, exact: true }).first();
+    for (let i = 0; i < 60 && !(await plan.count()); i++) await wait(500);
+    await wait(1000);
+    passed.ids = await page.evaluate(() => (JSON.parse(localStorage.getItem("dailyPlan.today.v1") || "{}").items ?? []).map((item) => item.id));
+    await page.reload({ waitUntil: "networkidle" });
+    const title = page.getByRole("heading", { name: ui.learnedTitle, exact: true }).first();
+    for (let i = 0; i < 60 && !(await title.count()); i++) await wait(500);
+    await title.evaluate((el) => el.scrollIntoView({ block: "start" }));
+    await page.mouse.wheel(0, -120);
+    await wait(1500);
+  },
+  async "learned-where"({ page, ui, wait }) {
+    // 이어서: 단어·표현 칩 하나를 누르면 그게 나온 대본의 줄(굵게)과 뜻.
+    const box = page.getByRole("heading", { name: ui.learnedTitle, exact: true }).first().locator("..");
+    const chip = box.locator("button[aria-pressed]").nth(9);
+    await chip.click().catch(async () => box.locator("button[aria-pressed]").first().click());
+    await wait(1200);
+    await chip.evaluate((el) => el.scrollIntoView({ block: "center" })).catch(() => undefined);
+    await wait(800);
+  },
+  async "frames-list"({ page, ui, wait }) {
+    // 스토어: 이어서 같은 화면의 "문장구조 바꿔 말하기" 목록.
+    const title = page.getByRole("heading", { name: ui.framesTitle, exact: true }).first();
+    for (let i = 0; i < 20 && !(await title.count()); i++) await wait(500);
+    await title.evaluate((el) => el.scrollIntoView({ block: "start" }));
+    await page.mouse.wheel(0, -40);
+    await wait(1000);
+  },
+  async "script-play"({ page, ui, wait, target }) {
+    // 스토어: 대본을 말한 모습 — ★ 완벽해요 / △ 더 자연스러운 말 / ✓ + 흐릿했던 낱말. 마이크 없이 "이어서 하기" 기록(폰에 남는 것)을 끼워 연다.
+    const id = `${target}-1-1`;
+    await page.evaluate(async ([t, scriptId]) => {
+      const pack = await fetch(`/api/curriculum/scripts?pack=1&lang=${t}`).then((r) => r.json());
+      const script = (pack.scripts ?? []).find((one) => one.id === scriptId);
+      if (!script) return;
+      const mine = script.lines.map((line, i) => [line, i]).filter(([line]) => line.who === "me").map(([, i]) => i);
+      const words = (text) => text.split(/\s+/);
+      const results = {};
+      const [a, b, c] = mine;
+      if (a !== undefined) results[a] = { heard: script.lines[a].text, practice: null, clean: true, mode: "hint" };
+      if (b !== undefined) {
+        const text = script.lines[b].text;
+        const heard = words(text).length > 2 ? words(text).slice(0, -1).join(" ") : text.slice(0, Math.max(1, text.length - 2));
+        results[b] = { heard, practice: { good: true, note: "", verdict: "awkward", better: text }, clean: true, mode: "hide" };
+      }
+      if (c !== undefined) results[c] = { heard: script.lines[c].text, practice: { good: true, note: "" }, clean: true, mode: "hide", unclear: [words(script.lines[c].text)[0].replace(/[.,!?。、！？]/g, "")] };
+      const last = c ?? b ?? a ?? 0;
+      const now = new Date();
+      const day = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
+      localStorage.setItem(`scriptResume.v1.script.${t}.${scriptId}`, JSON.stringify({ day, index: last + 1, results, revealed: {}, picks: {} }));
+    }, [target, id]);
+    await page.goto(`${BASE}/?screen=map`, { waitUntil: "networkidle" });
+    const plan = page.getByRole("heading", { name: ui.planTitle, exact: true }).first();
+    for (let i = 0; i < 60 && !(await plan.count()); i++) await wait(500);
+    await plan.locator("xpath=ancestor::section[1]").locator("ul li button").first().click();
+    const resume = page.getByRole("button", { name: exactly(ui.scriptResume) });
+    for (let i = 0; i < 20 && !(await resume.count()); i++) await wait(500);
+    await resume.first().click();
+    await wait(1500);
+    await page.locator("ol").last().evaluate((el) => (el.scrollTop = el.scrollHeight));
+    await wait(1000);
   },
   async "weak-strip"({ page, ui, locale, wait, target }) {
     // 2.77: My 맨 위 "지난번에 틀린 것" — 튜터가 고친 줄(끼움)·대본에서 틀린 줄(이 폰 기록을 끼움)·헷갈려요, 그 아래 오늘 할 것.
@@ -2154,9 +2278,10 @@ const STEPS = {
     await page.goto(`${BASE}/?screen=chat`, { waitUntil: "domcontentloaded" });
     await wait(3000);
     await page.getByRole("button", { name: exactly(ui.sessionMenu) }).first().click();
-    await page.getByRole("button", { name: exactly(ui.chatHistoryTitle) }).first().click();
+    // 2026-10-27부터 통화 기록은 채팅과 따로(⋮ → 통화 기록 → 돌아보기).
+    await page.getByRole("button", { name: exactly(ui.callRecordsTitle) }).first().click();
     await wait(800);
-    await page.getByRole("button", { name: new RegExp(escape(PAST_CALL[target][1].text)) }).first().click();
+    await page.getByRole("button", { name: exactly(ui.packSeeRetro) }).first().click();
     await wait(1500);
     // 2026-10-23부터 돌아보기는 줄 아래 ✎ 칩(눌러야 하려던 말 카드) — 첫 칩을 연다.
     const chip = page.locator('div[class*="z-[70]"]').last().getByRole("button", { name: exactly(ui.chatCorrectionChip) });
@@ -2313,9 +2438,12 @@ for (const locale of only ?? Object.keys(copy)) {
     });
   }
   const page = await context.newPage();
-  await page.route("**/api/**", (route) =>
-    route.continue({ headers: { ...route.request().headers(), "x-rc-user": captureUser } }),
-  );
+  await page.route("**/api/**", (route) => {
+    const headers = { ...route.request().headers(), "x-rc-user": captureUser };
+    // 스토어 그림: 2.76~ 무료는 채팅이 없다 — 채팅 장면을 찍으려고 앱 버전을 빼 예전 무료 한도로(구독 화면이 그 장면을 덮지 않게).
+    if (STORE_FLOW) delete headers["x-app-version"];
+    return route.continue({ headers });
+  });
   if (IOS) {
     await page.route(`${API}/**`, async (route) => {
       const cors = { "access-control-allow-origin": BASE, "access-control-allow-headers": "*", "access-control-allow-methods": "GET,POST,PUT,DELETE,OPTIONS" };
