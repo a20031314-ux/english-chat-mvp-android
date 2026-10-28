@@ -27,6 +27,7 @@ import { cleanBesidesName, glossFor, SCRIPT_VOICES, usableName, type StageScript
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
 import { LineGrade } from "@/components/studyMap/StageScripts";
+import { SelfCheck } from "@/components/studyMap/TodayPlan";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
 
 /**
@@ -483,6 +484,7 @@ function FramePlayer({
         {done ? (
           <li className="mt-3 flex flex-col gap-2">
             <p className="text-center text-note text-slate-200">{passes || justPassed ? `✓ ${ui.scriptPassed}` : ui.scriptDone}</p>
+            <SelfCheck ui={ui} language={language} id={frame.id} />
             <div className="flex justify-center">
               <button type="button" onClick={restart} className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10">
                 {ui.scriptRestart}

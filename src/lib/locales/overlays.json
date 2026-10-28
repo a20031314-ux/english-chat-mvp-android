@@ -705,7 +705,16 @@
     "scriptPerfect": "完璧です！",
     "scriptUnclear": "少し不明瞭だった語：",
     "scriptNatural": "その言い方でも正解です！",
-    "scriptAwkward": "正しいです。こちらの方が自然です："
+    "scriptAwkward": "正しいです。こちらの方が自然です：",
+    "planTitle": "今日やること",
+    "planMinutes": "{n}分",
+    "planDays": "{n}日で完了",
+    "planOrderCurriculum": "カリキュラム順",
+    "planOrderRecord": "自分の記録に合わせて",
+    "planAgain": "もう一度",
+    "planAllDone": "今日は完了",
+    "checkKnown": "わかる",
+    "checkUnsure": "あやふや"
   },
   "zh": {
     "paywallNativeOnly": "请在应用内订阅。用同一账号登录，网页版也能照常使用。",
@@ -1413,7 +1422,16 @@
     "scriptPerfect": "完美！",
     "scriptUnclear": "有点不清楚的词：",
     "scriptNatural": "这样说也对！",
-    "scriptAwkward": "没错，这样更自然："
+    "scriptAwkward": "没错，这样更自然：",
+    "planTitle": "今天要做的",
+    "planMinutes": "{n}分钟",
+    "planDays": "{n}天完成",
+    "planOrderCurriculum": "按课程顺序",
+    "planOrderRecord": "按我的记录",
+    "planAgain": "再练",
+    "planAllDone": "今天完成",
+    "checkKnown": "我会了",
+    "checkUnsure": "还不确定"
   },
   "vi": {
     "paywallNativeOnly": "Đăng ký trong ứng dụng. Đăng nhập cùng tài khoản là gói của bạn dùng được cả trên web.",
@@ -2123,7 +2141,16 @@
     "scriptPerfect": "Hoàn hảo!",
     "scriptUnclear": "Hơi chưa rõ:",
     "scriptNatural": "Nói vậy cũng đúng!",
-    "scriptAwkward": "Đúng rồi, nói thế này tự nhiên hơn:"
+    "scriptAwkward": "Đúng rồi, nói thế này tự nhiên hơn:",
+    "planTitle": "Hôm nay học gì",
+    "planMinutes": "{n} phút",
+    "planDays": "xong trong {n} ngày",
+    "planOrderCurriculum": "Theo lộ trình",
+    "planOrderRecord": "Theo kết quả của tôi",
+    "planAgain": "Ôn lại",
+    "planAllDone": "Xong hôm nay",
+    "checkKnown": "Tôi biết rồi",
+    "checkUnsure": "Còn lẫn lộn"
   },
   "fr": {
     "paywallNativeOnly": "Abonnez-vous dans l’app. Connectez-vous avec le même compte et votre formule marche aussi ici, sur le web.",
@@ -2838,7 +2865,16 @@
     "scriptPerfect": "Parfait !",
     "scriptUnclear": "Un peu flou :",
     "scriptNatural": "Ça marche aussi !",
-    "scriptAwkward": "C’est correct ; ceci est plus naturel :"
+    "scriptAwkward": "C’est correct ; ceci est plus naturel :",
+    "planTitle": "Au programme aujourd'hui",
+    "planMinutes": "{n} min",
+    "planDays": "en {n} jours",
+    "planOrderCurriculum": "Dans l'ordre",
+    "planOrderRecord": "Selon mon parcours",
+    "planAgain": "À revoir",
+    "planAllDone": "Fini pour aujourd'hui",
+    "checkKnown": "Je sais",
+    "checkUnsure": "Pas sûr"
   },
   "it": {
     "archive": "Report",
@@ -3744,7 +3780,16 @@
     "scriptPerfect": "Perfetto!",
     "scriptUnclear": "Un po’ poco chiaro:",
     "scriptNatural": "Va bene anche così!",
-    "scriptAwkward": "Corretto; così è più naturale:"
+    "scriptAwkward": "Corretto; così è più naturale:",
+    "planTitle": "Il piano di oggi",
+    "planMinutes": "{n} min",
+    "planDays": "in {n} giorni",
+    "planOrderCurriculum": "In ordine",
+    "planOrderRecord": "In base ai miei progressi",
+    "planAgain": "Ripassa",
+    "planAllDone": "Fatto per oggi",
+    "checkKnown": "Lo so",
+    "checkUnsure": "Non sono sicuro"
   },
   "pt": {
     "paywallNativeOnly": "Subscreva na app. Inicie sessão com a mesma conta e o seu plano funciona também aqui na web.",
@@ -4462,7 +4507,16 @@
     "scriptPerfect": "Perfeito!",
     "scriptUnclear": "Um pouco confuso:",
     "scriptNatural": "Assim também está certo!",
-    "scriptAwkward": "Certo; assim soa mais natural:"
+    "scriptAwkward": "Certo; assim soa mais natural:",
+    "planTitle": "Plano de hoje",
+    "planMinutes": "{n} min",
+    "planDays": "em {n} dias",
+    "planOrderCurriculum": "Na ordem",
+    "planOrderRecord": "Pelo meu histórico",
+    "planAgain": "Revisar",
+    "planAllDone": "Feito por hoje",
+    "checkKnown": "Eu sei",
+    "checkUnsure": "Não tenho certeza"
   },
   "ru": {
     "archive": "Отчёты",
@@ -5366,7 +5420,16 @@
     "scriptPerfect": "Идеально!",
     "scriptUnclear": "Немного нечётко:",
     "scriptNatural": "Так тоже правильно!",
-    "scriptAwkward": "Верно, но так естественнее:"
+    "scriptAwkward": "Верно, но так естественнее:",
+    "planTitle": "План на сегодня",
+    "planMinutes": "{n} мин",
+    "planDays": "за {n} дн.",
+    "planOrderCurriculum": "По порядку",
+    "planOrderRecord": "По моим результатам",
+    "planAgain": "Повторить",
+    "planAllDone": "На сегодня всё",
+    "checkKnown": "Знаю",
+    "checkUnsure": "Путаюсь"
   },
   "id": {
     "paywallNativeOnly": "Berlangganan di aplikasi. Masuk dengan akun yang sama, paketmu juga berlaku di web.",
@@ -6080,7 +6143,16 @@
     "scriptPerfect": "Sempurna!",
     "scriptUnclear": "Agak kurang jelas:",
     "scriptNatural": "Begitu juga benar!",
-    "scriptAwkward": "Benar, ini terdengar lebih alami:"
+    "scriptAwkward": "Benar, ini terdengar lebih alami:",
+    "planTitle": "Rencana hari ini",
+    "planMinutes": "{n} mnt",
+    "planDays": "selesai {n} hari",
+    "planOrderCurriculum": "Sesuai urutan",
+    "planOrderRecord": "Sesuai riwayatku",
+    "planAgain": "Ulangi",
+    "planAllDone": "Selesai hari ini",
+    "checkKnown": "Sudah tahu",
+    "checkUnsure": "Masih bingung"
   },
   "ar": {
     "paywallNativeOnly": "اشترك من التطبيق. سجّل الدخول بالحساب نفسه وستعمل خطتك هنا على الويب أيضًا.",
@@ -6788,7 +6860,16 @@
     "scriptPerfect": "ممتاز!",
     "scriptUnclear": "غير واضح قليلًا:",
     "scriptNatural": "هذا صحيح أيضًا!",
-    "scriptAwkward": "صحيح، وهذا أكثر طبيعية:"
+    "scriptAwkward": "صحيح، وهذا أكثر طبيعية:",
+    "planTitle": "خطة اليوم",
+    "planMinutes": "{n} د",
+    "planDays": "خلال {n} يومًا",
+    "planOrderCurriculum": "بالترتيب",
+    "planOrderRecord": "حسب سجلي",
+    "planAgain": "مراجعة",
+    "planAllDone": "انتهى اليوم",
+    "checkKnown": "أعرفه",
+    "checkUnsure": "لست متأكدًا"
   },
   "th": {
     "paywallNativeOnly": "สมัครสมาชิกในแอป เข้าสู่ระบบด้วยบัญชีเดียวกันแล้วใช้แพ็กเกจบนเว็บได้เลย",
@@ -7496,7 +7577,16 @@
     "scriptPerfect": "เยี่ยมมาก!",
     "scriptUnclear": "ยังไม่ค่อยชัด:",
     "scriptNatural": "พูดแบบนี้ก็ถูก!",
-    "scriptAwkward": "ถูกต้อง แบบนี้ฟังเป็นธรรมชาติกว่า:"
+    "scriptAwkward": "ถูกต้อง แบบนี้ฟังเป็นธรรมชาติกว่า:",
+    "planTitle": "แผนวันนี้",
+    "planMinutes": "{n} นาที",
+    "planDays": "จบใน {n} วัน",
+    "planOrderCurriculum": "ตามลำดับหลักสูตร",
+    "planOrderRecord": "ตามผลของฉัน",
+    "planAgain": "ทบทวน",
+    "planAllDone": "วันนี้เสร็จแล้ว",
+    "checkKnown": "รู้แล้ว",
+    "checkUnsure": "ยังสับสน"
   },
   "hi": {
     "paywallNativeOnly": "सदस्यता ऐप में लें। उसी खाते से साइन इन करें, तो आपका प्लान यहाँ वेब पर भी चलेगा।",
@@ -8204,6 +8294,15 @@
     "scriptPerfect": "बिल्कुल सही!",
     "scriptUnclear": "थोड़ा अस्पष्ट:",
     "scriptNatural": "ऐसे भी सही है!",
-    "scriptAwkward": "सही है, यह ज़्यादा स्वाभाविक है:"
+    "scriptAwkward": "सही है, यह ज़्यादा स्वाभाविक है:",
+    "planTitle": "आज की योजना",
+    "planMinutes": "{n} मिनट",
+    "planDays": "{n} दिन में पूरा",
+    "planOrderCurriculum": "क्रम से",
+    "planOrderRecord": "मेरे रिकॉर्ड के अनुसार",
+    "planAgain": "दोहराएँ",
+    "planAllDone": "आज का हो गया",
+    "checkKnown": "मुझे आता है",
+    "checkUnsure": "पक्का नहीं"
   }
 }

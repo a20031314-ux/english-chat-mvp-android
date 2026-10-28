@@ -5,7 +5,7 @@ import { isIdentified } from "@/lib/server/identity";
 import { coerceLanguageCode } from "@/lib/learningLanguages";
 import { allScriptsFor, scriptById } from "@/lib/curriculum/stageScripts";
 import { allFramesFor, frameById } from "@/lib/curriculum/frames";
-import { markRedoDone, markScriptPassed, readPassedScripts } from "@/lib/server/stageScriptStore";
+import { markRedoDone, markScriptPassed, readPassedScripts, saveChecks } from "@/lib/server/stageScriptStore";
 import { scriptGlosses } from "@/lib/server/stageCopy";
 import { meterRequest } from "@/lib/server/meterRequest";
 import { INTERFACE_LANGUAGE_LABELS } from "@/lib/learningLanguages";
@@ -20,6 +20,7 @@ export const maxDuration = 60;
  * GET ?lang= → { passed: [id] }
  * GET ?lang=&pack=1 → { scripts, frames } — 그 언어 대본·틀 전부(앱에 없는 언어를 2.76 앱이 받아 씀, curriculum/useScriptPack.ts). 로그인 없이.
  * GET ?lang=&stage=&ui=&glosses=1 → { glosses: {영어 원문: 앱 언어} } — 대본·틀 뜻풀이(영어·한국어 앱은 빈 표, 다른 앱 언어는 처음 한 번 옮겨 저장, server/stageCopy.ts). 로그인 없이.
+ * POST { language, check: { 열쇠(e|표현 또는 f|문장구조 id): true(알아요) | false(헷갈려요) } } — 학습 끝 체크(오늘 할 것, curriculum/dailyPlan.ts) → { review }.
  * POST { language, id, redo: true } — 틀린 틀 "다시 연습"을 끝냄(/api/notebook redo에서 3일 빠짐).
  * POST { language, id, outcome? } → { passed: [id] } — id는 대본 또는 틀(frames.ts) — 앱이 내 줄을 모두 통과 방식으로 맞혔을 때만 보낸다(curriculum/stageScripts.ts runPasses).
  *   대본의 핵심 표현(expressions)을 장부에 "도움 받은 써 봄"으로 올린다(만남 → 배움, 2026-10-28 "표현연결"). outcome(앱이 보냄)은 지금 안 씀.
@@ -62,6 +63,10 @@ export async function POST(request: NextRequest) {
     return jsonWithCors(request, { error: "Invalid JSON" }, { status: 400 });
   }
   const language = coerceLanguageCode(body.language);
+  if (body.check && typeof body.check === "object" && !Array.isArray(body.check)) {
+    const checks = Object.fromEntries(Object.entries(body.check as Record<string, unknown>).filter(([, value]) => typeof value === "boolean")) as Record<string, boolean>;
+    return jsonWithCors(request, { review: await saveChecks(userId, language, checks) });
+  }
   const id = typeof body.id === "string" ? body.id : "";
   // 대본 또는 틀 바꿔 말하기의 틀(curriculum/frames.ts, id "ja-f1-01") — 통과 기록은 같은 곳.
   const script = scriptById(language, id) ?? (() => {

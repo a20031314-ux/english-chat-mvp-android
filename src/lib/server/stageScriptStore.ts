@@ -1,4 +1,5 @@
 import { kvGetJson, kvSetJson } from "./kv.ts";
+import { applyCheck, type ReviewMap } from "../curriculum/dailyPlan.ts";
 
 /**
  * 통과한 단계 대본(curriculum/stageScripts.ts) — 대본 id와 통과한 때만, 학습 언어별.
@@ -11,7 +12,7 @@ export function stageScriptKey(userId: string, language: string): string {
 }
 
 /** passed: 대본·틀 id → 처음 통과한 때. redo: 틀 id → 마지막으로 "다시 연습"을 끝낸 때(2026-10-28, 틀린 틀 다시 권유를 3일 쉼). */
-type Record_ = { passed: Record<string, number>; redo?: Record<string, number> };
+type Record_ = { passed: Record<string, number>; redo?: Record<string, number>; review?: ReviewMap };
 
 export async function readPassedScripts(userId: string, language: string): Promise<Set<string>> {
   const record = await kvGetJson<Record_>(stageScriptKey(userId, language)).catch(() => null);
@@ -40,4 +41,26 @@ export async function markRedoDone(userId: string, language: string, frameId: st
   const redo = { ...(record.redo ?? {}), [frameId]: at };
   await kvSetJson(key, { ...record, passed, redo }, TTL_SECONDS);
   return redo;
+}
+
+/** 다시 볼 것(오늘 할 것, curriculum/dailyPlan.ts) — 표현·문장구조 열쇠마다 다음 날짜. 문장은 없음. */
+export async function readReview(userId: string, language: string): Promise<ReviewMap> {
+  const record = await kvGetJson<Record_>(stageScriptKey(userId, language)).catch(() => null);
+  return record?.review ?? {};
+}
+
+/** 학습 끝 체크(알아요·헷갈려요)를 반영. 열쇠는 e| 또는 f|로 시작하고 80자까지, 한 번에 12개까지. */
+export async function saveChecks(userId: string, language: string, checks: Record<string, boolean>, now = Date.now()): Promise<ReviewMap> {
+  const key = stageScriptKey(userId, language);
+  const record = (await kvGetJson<Record_>(key).catch(() => null)) ?? { passed: {} };
+  let review = record.review ?? {};
+  for (const [check, known] of Object.entries(checks).slice(0, 12)) {
+    if (!/^[ef]\|/.test(check) || check.length > 80) continue;
+    review = applyCheck(review, check, known, now);
+  }
+  // 오래 묵은 것은 400개까지만(가장 최근 체크 순).
+  const entries = Object.entries(review).sort((a, b) => b[1].at - a[1].at).slice(0, 400);
+  review = Object.fromEntries(entries);
+  await kvSetJson(key, { ...record, review }, TTL_SECONDS);
+  return review;
 }

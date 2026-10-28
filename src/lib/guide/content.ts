@@ -17,7 +17,7 @@
  * language missing there is served the English.
  */
 
-export const GUIDE_VERSION = "2026-10-28j";
+export const GUIDE_VERSION = "2026-10-28k";
 
 export type GuideTabId = "map" | "chat" | "roleplay" | "video" | "vocab" | "rooms" | "talk";
 
@@ -177,7 +177,7 @@ export const GUIDE_KO: Guide = {
           "‘{ui:myViewMap}’에는 단계가 1부터 5까지 이어져 있어요. 번호를 누르면 그 단계를 미리 봐요.",
           "칸을 누르면 펼쳐져요. ‘{ui:partVocab}’은 익힌 낱말과 단어장, ‘{ui:partGrammar}’은 그 단계 문법 칸(✓·‘{ui:stageTry}’), ‘{ui:partExpression}’은 핵심 표현과 ‘{ui:notebookIdioms}’ 칸, ‘{ui:partPronunciation}’은 그 단계 발음 포인트와 글자·소리 칸. 쓸 수 있게 된 표현과 노트에 넣은 장면이 맞는 칸을 채워요.",
           "아래 ‘{ui:stageExamplesTitle}’에서 그 단계로 되는 대화를 보고 ‘{ui:stageTry}’로 해 봐요.",
-          "단계 맨 위 ‘{ui:stageScriptsTitle}’: 대본을 들으면 내 줄에서 멈춰요. 보는 방식(‘{ui:scriptModeShadow}’·‘{ui:scriptModeHint}’·‘{ui:scriptModeHide}’·‘{ui:scriptModeOwn}’)을 고르고 🎤로 말해요. 따라 말하기 말고 다른 방식으로 내 줄을 모두 맞히면 그 대본은 통과 — 다음 단계는 네 갈래 70%와 그 단계 대본을 모두 통과한 것이 함께 있어야 열려요. 3~4단계 상대 말은 할 때마다 조금 바뀌고, 5단계는 대본 뒤 ‘{ui:scriptCall}’로 같은 상황을 통화로. 대본마다 그 단계 핵심 표현이 붙어 있고, 통과하면 그 표현이 표현 갈래에 쌓여요. 상황 대본에 없는 표현은 아래 ‘{ui:scriptsByExpression}’의 짧은 대본으로. 맨 위 ‘{ui:scriptTodayTitle}’은 최근 튜터가 짚은 문법과 아직 안 익힌 표현을 보고 고른 대본이에요. 아래 ‘{ui:framesTitle}’은 빈칸 하나 있는 문장구조예요. 빈칸만 바꿔 네 번 말하고, ‘{ui:frameModeBlank}’으로 다 맞히면 통과 — 끝나면 그 문장구조가 나오는 대본으로 이어 가요. 3단계부터는 ‘{ui:scriptModeOwn}’로 빈칸에 내 이야기를 넣어 말해요(1~3단계). 튜터가 2주 안에 같은 문장구조를 두 번 고치면 대본 목록 맨 위에 ◐ ‘{ui:frameRedo}’ 카드가 떠요 — 내가 쓴 줄과 고친 줄을 보고 그 문장구조를 다시 말해요. 단계 보기 맨 위 ‘{ui:scriptAmountTitle}’은 통과한 대본·문장구조로 익힌 표현·문법·문장구조 수와 말한 문장 수, ‘{ui:canDoTitle}’은 문장구조를 통과하면 켜지는 칸이에요.",
+          "단계 맨 위 ‘{ui:stageScriptsTitle}’: 대본을 들으면 내 줄에서 멈춰요. 보는 방식(‘{ui:scriptModeShadow}’·‘{ui:scriptModeHint}’·‘{ui:scriptModeHide}’·‘{ui:scriptModeOwn}’)을 고르고 🎤로 말해요. 따라 말하기 말고 다른 방식으로 내 줄을 모두 맞히면 그 대본은 통과 — 다음 단계는 네 갈래 70%와 그 단계 대본을 모두 통과한 것이 함께 있어야 열려요. 3~4단계 상대 말은 할 때마다 조금 바뀌고, 5단계는 대본 뒤 ‘{ui:scriptCall}’로 같은 상황을 통화로. 대본마다 그 단계 핵심 표현이 붙어 있고, 통과하면 그 표현이 표현 갈래에 쌓여요. 상황 대본에 없는 표현은 아래 ‘{ui:scriptsByExpression}’의 짧은 대본으로. 맨 위 ‘{ui:planTitle}’은 하루 분량(분)을 고르면 며칠에 끝나는지 보여 주고, ‘{ui:planOrderCurriculum}’ 또는 ‘{ui:planOrderRecord}’로 오늘 할 대본·문장구조를 골라 줘요. 대본·문장구조 끝에서 표현마다 ‘{ui:checkKnown}’·‘{ui:checkUnsure}’를 누르면, 헷갈린 것은 2일 뒤와 7일 뒤에 ‘{ui:planAgain}’로 돌아와요. 아래 ‘{ui:framesTitle}’은 빈칸 하나 있는 문장구조예요. 빈칸만 바꿔 네 번 말하고, ‘{ui:frameModeBlank}’으로 다 맞히면 통과 — 끝나면 그 문장구조가 나오는 대본으로 이어 가요. 3단계부터는 ‘{ui:scriptModeOwn}’로 빈칸에 내 이야기를 넣어 말해요(1~3단계). 튜터가 2주 안에 같은 문장구조를 두 번 고치면 대본 목록 맨 위에 ◐ ‘{ui:frameRedo}’ 카드가 떠요 — 내가 쓴 줄과 고친 줄을 보고 그 문장구조를 다시 말해요. 단계 보기 맨 위 ‘{ui:scriptAmountTitle}’은 통과한 대본·문장구조로 익힌 표현·문법·문장구조 수와 말한 문장 수, ‘{ui:canDoTitle}’은 문장구조를 통과하면 켜지는 칸이에요.",
         ],
         shot: "stage-scripts",
       },

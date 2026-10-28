@@ -36,6 +36,7 @@ import type { LedgerState } from "@/lib/learner/ledger";
 import { learningLanguageSpeechTag, type LearningLanguageCode } from "@/lib/learningLanguages";
 import { compareToTarget, type Practice } from "@/lib/roleplay/practice";
 import { playTts, stopTts } from "@/lib/ttsPlayer";
+import { SelfCheck } from "@/components/studyMap/TodayPlan";
 
 /**
  * My 단계 보기의 "대본으로 연습" — 단계마다 상황별 대본(curriculum/stageScripts.ts), 맨 위에 둔다.
@@ -536,6 +537,7 @@ function ScriptPlayer({
         {done ? (
           <li className="mt-3 flex flex-col items-center gap-2">
             <p className="text-note text-slate-200">{passes || justPassed ? `✓ ${ui.scriptPassed}` : ui.scriptDone}</p>
+            <SelfCheck ui={ui} language={language} id={script.id} />
             <div className="flex gap-2">
               <button type="button" onClick={restart} className="rounded-full border border-line px-4 py-1.5 text-caption text-slate-200 hover:bg-white/10">
                 {ui.scriptRestart}

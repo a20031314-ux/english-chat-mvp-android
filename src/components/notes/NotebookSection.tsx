@@ -14,6 +14,8 @@ import { ScriptAmount } from "@/components/studyMap/ScriptAmount";
 import { StageScripts, type ScriptRecommend } from "@/components/studyMap/StageScripts";
 import type { RedoItem } from "@/lib/curriculum/frameRedo";
 import { useScriptPack } from "@/lib/curriculum/useScriptPack";
+import type { ReviewMap } from "@/lib/curriculum/dailyPlan";
+import { TodayPlan } from "@/components/studyMap/TodayPlan";
 import { allScriptsFor, glossFor, scriptForExpressions } from "@/lib/curriculum/stageScripts";
 import { allFramesFor } from "@/lib/curriculum/frames";
 
@@ -50,7 +52,10 @@ type Book = {
   recommend?: ScriptRecommend;
   /** 틀린 틀 다시 연습(서버 curriculum/frameRedo.ts, scripts=1). */
   redo?: RedoItem[];
+  /** 학습 끝 체크로 다시 볼 것(서버 curriculum/dailyPlan.ts, scripts=1). */
+  review?: ReviewMap;
 };
+const NO_REVIEW: ReviewMap = {};
 /**
  * 커리큘럼(단계·대본·문장구조)만 남기기(2026-10-28 사용자 "커리큘럼이랑 동떨어져 있는 이전 기능은 다 숨겨줘", 노트 틀은 "대본에 붙이기"):
  * 노트 칸 목록(관용·세부·내 칸·자리 없음)·칸 이름 바꾸기·칸 추가·메모·카드 옮기기를 숨기고, 문법 칸은 그 문법이 나오는 대본·문장구조로 잇는다.
@@ -329,6 +334,18 @@ export function NotebookSection({
       {question && !question.node ? (
         <QuestionBox ui={ui} question={question} onAdd={(withShot) => void addQuestion(question, withShot)} onClose={() => setQuestion(null)} />
       ) : null}
+      {frame && CURRICULUM_ONLY && book.stages.length && book.parts?.some((row) => row.scripts) ? (
+        <TodayPlan
+          ui={ui}
+          locale={locale}
+          language={language}
+          stage={book.stage}
+          passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])}
+          review={book.review ?? NO_REVIEW}
+          recommended={book.recommend?.id ?? null}
+          onOpen={(stage, id) => setJump({ stage, id, at: Date.now() })}
+        />
+      ) : null}
       {frame && book.stages.length && book.parts?.some((row) => row.scripts) ? (
         <ScriptAmount ui={ui} locale={locale} language={language} passed={(book.parts ?? []).flatMap((row) => row.scripts?.passed ?? [])} />
       ) : null}
@@ -364,7 +381,7 @@ export function NotebookSection({
               onPassed={() => setReload((n) => n + 1)}
               expressionStates={Object.fromEntries((row?.expressions ?? []).map((item) => [item.text, item.state]))}
               openFor={openFor}
-              recommended={book.recommend && book.recommend.stage === order ? book.recommend : null}
+              recommended={!CURRICULUM_ONLY && book.recommend && book.recommend.stage === order ? book.recommend : null}
               redo={order === book.stage ? (book.redo ?? []) : []}
               onRedoDone={(id) => {
                 setBook((current) => (current ? { ...current, redo: (current.redo ?? []).filter((item) => item.frame !== id) } : current));
