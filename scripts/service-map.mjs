@@ -308,7 +308,7 @@ const nodes = [
     points: ["로그인해야 보임", "Pingo로 오면 ‘🟢 지금 접속 중’ 거르기로 열림"],
     path: "하단 사람",
     links: ["dm", "invite", "pingo"],
-    steps: [step("people.find"), step("people.board")],
+    steps: [step("people.find"), step("people.board"), step("people.icons")],
     children: ["board", "rewards"],
   },
   {
@@ -336,7 +336,7 @@ const nodes = [
     points: ["보는 방식: 대화 / 사람별 / 채팅 위주 / 통화 위주", "방장이 자리를 올리고 내림", "Moyeo로 오면 여기가 첫 화면"],
     path: "하단 Room → 방 카드",
     links: ["moyeo", "groups", "dm"],
-    steps: [extra("public/guide/ko/rooms-room.webp", "g-rooms-room.webp", "방 안", "자리·듣는 줄·자막·댓글이 한 화면에 있어요."), ...["room.find", "room.layouts", "room.quote", "room.stuck", "room.host"].map(step)],
+    steps: [extra("public/guide/ko/rooms-room.webp", "g-rooms-room.webp", "방 안", "자리·듣는 줄·자막·댓글이 한 화면에 있어요."), ...["room.find", "room.layouts", "room.quote", "room.stuck", "room.game", "room.watch", "room.host"].map(step)],
   },
   {
     id: "my", tier: "tab", tab: "My",
