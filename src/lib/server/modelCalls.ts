@@ -145,6 +145,8 @@ export const MODEL_CALLS_PER_REQUEST = {
   roleplayPractice: 1,
   // 대본 줄을 떠올려(첫 글자만·가리기)·내 말로·문장구조로 말한 한 번의 판단(뜻끼리 맞춤, Sonnet — 2026-10-29).
   scriptJudge: 1,
+  // 그 판단이 "틀림"일 때만 더 좋은 모델로 한 번 더(2026-10-29) — scriptJudge 대비 비율이 Haiku가 틀림이라 한 몫.
+  scriptRecheck: 1,
   // Not model calls — both are zero — but counted here so the ledger can answer
   // what the bank is for. A turn where the character reached for a line that
   // already exists costs no synthesis and plays a read somebody checked; one

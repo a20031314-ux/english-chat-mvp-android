@@ -6,10 +6,11 @@
 
 ## 주의
 
-- **라이트 3,900원**: 한도를 매일 꽉 채우면 한 달 2,700원 손해 (수수료 뺀 3,315원 < 비용 6,015원).
-- **플러스 5,500원**: 한도를 매일 꽉 채우면 한 달 3,585원 손해 (수수료 뺀 4,675원 < 비용 8,260원).
-- **프리미엄 9,900원 (지금, 월 80포인트)**: 한도를 매일 꽉 채우면 한 달 4,034원 손해 (수수료 뺀 8,415원 < 비용 12,449원).
-- **프리미엄 8,900원 (전환 후)**: 한도를 매일 꽉 채우면 한 달 7,194원 손해 (수수료 뺀 7,565원 < 비용 14,759원).
+- **대본 플랜 2,900원**: 한도를 매일 꽉 채우면 한 달 2,132원 손해 (수수료 뺀 2,465원 < 비용 4,597원).
+- **라이트 3,900원**: 한도를 매일 꽉 채우면 한 달 4,905원 손해 (수수료 뺀 3,315원 < 비용 8,220원).
+- **플러스 5,500원**: 한도를 매일 꽉 채우면 한 달 5,790원 손해 (수수료 뺀 4,675원 < 비용 10,465원).
+- **프리미엄 9,900원 (지금, 월 80포인트)**: 한도를 매일 꽉 채우면 한 달 7,562원 손해 (수수료 뺀 8,415원 < 비용 15,977원).
+- **프리미엄 8,900원 (전환 후)**: 한도를 매일 꽉 채우면 한 달 10,722원 손해 (수수료 뺀 7,565원 < 비용 18,287원).
 - 최악은 구독자 모두가 매일 모든 한도를 다 쓰는 경우입니다. 최악의 채팅 한 통 1.5원(모든 문장이 길고 틀림, 보통은 1원)은 잰 값이 아닌 가정(chat, chatReply, learnerObserve, weakRead, notebookFix — 아래 "기능별 한 번 비용"의 토큰)이라, 실측 토큰이 쌓이면 `cost-report.mjs`로 다시 봐야 합니다.
 
 ## 요금별 한 달 비용 (30일)
@@ -19,25 +20,25 @@
 
 | 요금 | 하루 한도 | 수수료 뺀 금액 | 최악 비용 | 최악 남는 돈 | 많이 쓰는 사용자 비용 | 그때 남는 돈 |
 |---|---|---|---|---|---|---|
-| 무료(2.75 이하 앱) | 대본 25줄 · 팩 1번 · 통화 없음(처음 10포인트 별도) · 채팅 7번 | — | 1,841원 | — | 1,230원 | — |
-| 무료(2.76~ 대본 앱) | 대본 25줄 · 팩 없음 · 통화 없음 · 채팅 0번 | — | 746원 | — | 358원 | — |
-| 대본 플랜 2,900원 | 대본 25줄 · 팩 없음 · 통화 3일마다 5분 · 채팅 20번 | 2,465원 | 2,392원 | 73원 (3%) | 1,196원 | 1,269원 (51%) |
-| 라이트 3,900원 | 대본 25줄 · 팩 1번 · 통화 매일 7분 · 채팅 30번 | 3,315원 | 6,015원 | ⚠ -2,700원 (-81%) | 4,370원 | ⚠ -1,055원 (-32%) |
-| 플러스 5,500원 | 대본 25줄 · 팩 1번 · 통화 매일 10분 · 채팅 50번 | 4,675원 | 8,260원 | ⚠ -3,585원 (-77%) | 4,415원 | 260원 (6%) |
-| 프리미엄 9,900원 (지금, 월 80포인트) | 대본 40줄 · 팩 1번 · 월 80포인트 · 채팅 제한 없음(100번으로 계산) | 8,415원 | 12,449원 | ⚠ -4,034원 (-48%) | 4,415원 | 4,000원 (48%) |
-| 프리미엄 8,900원 (전환 후) | 대본 40줄 · 팩 3번 · 통화 매일 15분 · 채팅 100번 | 7,565원 | 14,759원 | ⚠ -7,194원 (-95%) | 4,415원 | 3,150원 (42%) |
+| 무료(2.75 이하 앱) | 대본 25줄 · 팩 1번 · 통화 없음(처음 10포인트 별도) · 채팅 7번 | — | 4,046원 | — | 2,288원 | — |
+| 무료(2.76~ 대본 앱) | 대본 25줄 · 팩 없음 · 통화 없음 · 채팅 0번 | — | 2,951원 | — | 1,416원 | — |
+| 대본 플랜 2,900원 | 대본 25줄 · 팩 없음 · 통화 3일마다 5분 · 채팅 20번 | 2,465원 | 4,597원 | ⚠ -2,132원 (-86%) | 2,255원 | 210원 (9%) |
+| 라이트 3,900원 | 대본 25줄 · 팩 1번 · 통화 매일 7분 · 채팅 30번 | 3,315원 | 8,220원 | ⚠ -4,905원 (-148%) | 5,428원 | ⚠ -2,113원 (-64%) |
+| 플러스 5,500원 | 대본 25줄 · 팩 1번 · 통화 매일 10분 · 채팅 50번 | 4,675원 | 10,465원 | ⚠ -5,790원 (-124%) | 5,473원 | ⚠ -798원 (-17%) |
+| 프리미엄 9,900원 (지금, 월 80포인트) | 대본 40줄 · 팩 1번 · 월 80포인트 · 채팅 제한 없음(100번으로 계산) | 8,415원 | 15,977원 | ⚠ -7,562원 (-90%) | 5,473원 | 2,942원 (35%) |
+| 프리미엄 8,900원 (전환 후) | 대본 40줄 · 팩 3번 · 통화 매일 15분 · 채팅 100번 | 7,565원 | 18,287원 | ⚠ -10,722원 (-142%) | 5,473원 | 2,092원 (28%) |
 
 최악 비용 내역:
 
 | 요금 | 대본 | 팩 | 자유 통화 | 채팅 | 월 포인트 |
 |---|---|---|---|---|---|
-| 무료(2.75 이하 앱) | 746원 | 781원 | 0원 | 315원 | 0원 |
-| 무료(2.76~ 대본 앱) | 746원 | 0원 | 0원 | 0원 | 0원 |
-| 대본 플랜 2,900원 | 746원 | 0원 | 748원 | 899원 | 0원 |
-| 라이트 3,900원 | 746원 | 781원 | 3,140원 | 1,348원 | 0원 |
-| 플러스 5,500원 | 746원 | 781원 | 4,486원 | 2,247원 | 0원 |
-| 프리미엄 9,900원 (지금, 월 80포인트) | 1,193원 | 781원 | 0원 | 4,494원 | 5,981원 |
-| 프리미엄 8,900원 (전환 후) | 1,193원 | 2,344원 | 6,729원 | 4,494원 | 0원 |
+| 무료(2.75 이하 앱) | 2,951원 | 781원 | 0원 | 315원 | 0원 |
+| 무료(2.76~ 대본 앱) | 2,951원 | 0원 | 0원 | 0원 | 0원 |
+| 대본 플랜 2,900원 | 2,951원 | 0원 | 748원 | 899원 | 0원 |
+| 라이트 3,900원 | 2,951원 | 781원 | 3,140원 | 1,348원 | 0원 |
+| 플러스 5,500원 | 2,951원 | 781원 | 4,486원 | 2,247원 | 0원 |
+| 프리미엄 9,900원 (지금, 월 80포인트) | 4,721원 | 781원 | 0원 | 4,494원 | 5,981원 |
+| 프리미엄 8,900원 (전환 후) | 4,721원 | 2,344원 | 6,729원 | 4,494원 | 0원 |
 
 무료는 처음 한 번 10포인트(통화 50분, 약 748원)를 따로 씁니다. 이달의 영상(라이브러리)은 자막이 미리 만들어져 있어 비용에 넣지 않았습니다.
 
@@ -74,6 +75,7 @@
 | curriculumGenerate | 65.8원 | 1 | claude-sonnet-5-5 3500/4000 토큰 (기능 curriculumMap) | 가정 |
 | curriculumMapFill | 36.4원 | 1 | claude-sonnet-5-5 4000/1800 토큰 (기능 curriculumMapFill) | 가정 |
 | roleplayReview | 15.4원 | 1 | claude-sonnet-5-5 1500/800 토큰 (기능 roleplayReview) | 가정 |
+| scriptRecheck | 9.8원 | 1 | claude-sonnet-5-5 2000/300 토큰 (기능 scriptRecheck) | 가정 |
 | chatVerify | 5.3원 | 1 | claude-sonnet-5-5 900/200 토큰 (기능 chatVerify) | 가정 |
 | tts | 3.7원 | 1 | 음성 합성 6초 gpt-realtime-2.1-mini | 가정 |
 | stageCopy | 3.6원 | 1 | claude-haiku-5-5 3500/4500 토큰 (기능 translate) | 가정 |
@@ -156,6 +158,7 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 | roleplayTutor | gpt-6-luna (OpenAI 기본) | $0.1 / $0.5 | hub/MODELS.md 2026-10-21 조사 |
 | roleplayPractice | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | scriptJudge | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
+| scriptRecheck | claude-sonnet-5-5 | $2 / $10 | platform.claude.com pricing 2026-10-22 |
 | ask | claude-haiku-5-5 | $0.1 / $0.5 | platform.claude.com pricing 2026-10-22 (10만 토큰 이하 프롬프트) |
 | mission | gpt-6-luna (OpenAI 기본) | $0.1 / $0.5 | hub/MODELS.md 2026-10-21 조사 |
 | curriculum | gpt-6-luna (OpenAI 기본) | $0.1 / $0.5 | hub/MODELS.md 2026-10-21 조사 |
@@ -187,7 +190,7 @@ Vercel에 `MODEL_ROUTES`·`OPENAI_*_MODEL`·`TTS_ENGINE` 값을 넣었다면 운
 - 모델 단가: https://developers.openai.com/api/docs/pricing (2026-09-04 확인). 1달러 1400원(2026-09-04).
 - 음성 합성 분당 $0.0264 — 통화 비용의 대부분, `cost.ts`에서 가장 약한 숫자.
 - 잰 적 없는 모델 호출 한 번 = 2000/300 토큰. 실측 보고서는 서버가 잰 토큰(`usage:tok:*`)이 20번 넘게 쌓인 기능부터 그 값을 씁니다.
-- 가정으로 값을 매기는 기능 53개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, iconUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, learnerObserve, curriculumMissions, learnerPick, notesPlace, notebookFix, notebookPhrases, notebookLocate, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roomGameStory, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, scriptJudge, expressionUnits, vocabSearch, contentDiscovery.
+- 가정으로 값을 매기는 기능 54개: chat, chatReread, chatReply, howToSay, howToSayCard, mediaUpload, iconUpload, randomFrame, chatStart, learnerAsk, analysisInput, analysisElement, expressionInsight, chatVerify, expressionAsk, expressionAskRetry, expressionAskQuick, curriculumGenerate, curriculumMapFill, stageCopy, learnerObserve, curriculumMissions, learnerPick, notesPlace, notebookFix, notebookPhrases, notebookLocate, missionCheck, weakRead, weakMission, vocabGloss, learningSpans, translate, tts, videoPrepare, videoWindow, videoGloss, videoAnalyze, roleplayListen, roomListen, roomFix, roomFixListen, roomGameWord, roomGameJudge, roomGameStory, roleplayCorrect, roleplayContext, roleplayReview, roleplayPractice, scriptJudge, scriptRecheck, expressionUnits, vocabSearch, contentDiscovery.
 
 ## 새 기능을 넣을 때
 

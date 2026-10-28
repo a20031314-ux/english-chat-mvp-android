@@ -32,9 +32,13 @@ export const dynamic = "force-dynamic";
  * point is saying the line again and again. The finding is already made; this
  * is phrasing.
  */
-function practiceModel(task: "roleplayPractice" | "scriptJudge"): string {
-  return routeFor(task).model;
-}
+// 기능마다 지금 쓰는 모델(글자로 적어 둠 — scripts/cost-coverage.mjs가 이 경로의 기능을 글자로 찾는다).
+type JudgeTask = "roleplayPractice" | "scriptJudge" | "scriptRecheck";
+const MODEL_OF: Record<JudgeTask, () => string> = {
+  roleplayPractice: () => routeFor("roleplayPractice").model,
+  scriptJudge: () => routeFor("scriptJudge").model,
+  scriptRecheck: () => routeFor("scriptRecheck").model,
+};
 
 export async function OPTIONS(request: NextRequest) {
   return corsPreflightResponse(request);
@@ -79,8 +83,8 @@ export async function POST(request: NextRequest) {
     typeof body.frame === "string" ||
     typeof body.meaning === "string" ||
     (typeof body.scriptId === "string" && Boolean(body.scriptId) && body.mode !== "shadow");
-  const task = judged ? "scriptJudge" : "roleplayPractice";
-  await meterRequest(request, task);
+  const task: JudgeTask = judged ? "scriptJudge" : "roleplayPractice";
+  await meterRequest(request, judged ? "scriptJudge" : "roleplayPractice");
 
   const comparison = compareToTarget(target, heard);
   // Saying a line again is what grows pronunciation (learner/growth.ts): an
@@ -91,8 +95,6 @@ export async function POST(request: NextRequest) {
     );
   }
   try {
-    const model = practiceModel(task);
-    const reasoning = isReasoningModel(model);
     const nativeCode = coerceLanguageCode(body.nativeLanguage);
     const nativeName = interfaceLanguageName(nativeCode);
     // "내 말로"(단계 대본 3~5단계): meaning = 보여 준 뜻(앱 언어), before = 바로 앞 상대 줄. 낱말 비교 대신 뜻이 통하는지.
@@ -122,31 +124,47 @@ export async function POST(request: NextRequest) {
           nativeLanguage: nativeName,
         });
     type Turn = { role: "system" | "user" | "assistant"; content: string };
-    const ask = (messages: Turn[]) =>
-      completeChat(client, task, {
+    const ask = (messages: Turn[], use: JudgeTask) => {
+      const model = MODEL_OF[use]();
+      return completeChat(client, use, {
         messages,
         response_format: { type: "json_object" },
-        ...(reasoning
+        ...(isReasoningModel(model)
           ? { max_completion_tokens: 2000, reasoning_effort: fastestEffort(model) as "minimal" }
           : { max_tokens: recalled ? 700 : 300 }),
       });
+    };
     // The note sometimes comes back in the learning language (2026-10-27: a Japanese
     // note for a Korean reader); ask once more, naming the miss, when it is not in the
     // interface script.
-    const messages: Turn[] = [
-      { role: "system", content: system },
-      { role: "user", content: `JSON, with the note in ${nativeName}.` },
-    ];
-    let practice: Practice | null = null;
-    for (let attempt = 0; attempt < 2; attempt += 1) {
-      const completion = await ask(messages);
-      const raw = completion.choices[0]?.message?.content ?? "";
-      practice = parsePractice(raw);
-      if (!practice || noteMostlyUi(practice.note, nativeCode)) break;
-      messages.push(
-        { role: "assistant", content: raw },
-        { role: "user", content: `That note is not in ${nativeName}. Give the same JSON with the note rewritten in ${nativeName}; quote words of the sentence only where needed.` },
-      );
+    const judge = async (use: JudgeTask): Promise<Practice | null> => {
+      const messages: Turn[] = [
+        { role: "system", content: system },
+        { role: "user", content: `JSON, with the note in ${nativeName}.` },
+      ];
+      let found: Practice | null = null;
+      for (let attempt = 0; attempt < 2; attempt += 1) {
+        const completion = await ask(messages, use);
+        const raw = completion.choices[0]?.message?.content ?? "";
+        found = parsePractice(raw);
+        if (!found || noteMostlyUi(found.note, nativeCode)) break;
+        messages.push(
+          { role: "assistant", content: raw },
+          { role: "user", content: `That note is not in ${nativeName}. Give the same JSON with the note rewritten in ${nativeName}; quote words of the sentence only where needed.` },
+        );
+      }
+      return found;
+    };
+    let practice = await judge(task);
+    // 2026-10-29 사용자 "Haiku가 틀리는 부분만 Sonnet": 가상 사용자 72번에서 Haiku는 틀린 줄을 통과시킨 적이 없고(24/24),
+    // 틀림 쪽으로만 엄했다(맞는 줄 5번·어색한 줄 5번을 틀림). 그래서 Haiku가 "틀림"이라 할 때만 Sonnet이 다시 보고 그 판단을 쓴다.
+    if (judged && practice && !practice.good) {
+      try {
+        await meterRequest(request, "scriptRecheck");
+        practice = (await judge("scriptRecheck")) ?? practice;
+      } catch (error) {
+        console.error("[roleplay/practice] recheck", error);
+      }
     }
     if (!practice) {
       return jsonWithCors(request, { error: "NO_PRACTICE" }, { status: 502 });

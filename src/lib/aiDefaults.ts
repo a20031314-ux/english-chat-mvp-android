@@ -32,6 +32,7 @@ export const OPENAI_TEXT_DEFAULTS = {
   roleplayTutor: "gpt-6-luna",
   roleplayPractice: "gpt-6-luna",
   scriptJudge: "gpt-6-luna",
+  scriptRecheck: "gpt-6-luna",
   ask: "gpt-6-luna",
   mission: "gpt-6-luna",
   curriculum: "gpt-6-luna",
@@ -77,10 +78,11 @@ export const DEFAULT_ROUTES: Partial<Record<TextTask, string>> = {
   video: HAIKU,
   vision: HAIKU,
   roleplayPractice: HAIKU,
-  // 대본 떠올려 말하기·내 말로·문장구조 판단(뜻끼리 맞춤, 2026-10-29). 사용자가 Sonnet(B)을 골랐지만 단가가 Haiku의 20배라
-  // (무료 대본 원가 월 746원 → 약 7,700원, hub/costs.md) 사용자 확인 전까지 Haiku. Sonnet으로: 이 줄을 SONNET으로(또는 Vercel `MODEL_ROUTES={"scriptJudge":"anthropic: claude-sonnet-5-5"}`).
+  // 대본 떠올려 말하기·내 말로·문장구조 판단(뜻끼리 맞춤, 2026-10-29): 먼저 Haiku, Haiku가 "틀림"이라 할 때만 Sonnet이 다시 봄(scriptRecheck).
+  // 근거: 가상 사용자 72번 — Haiku는 틀린 줄을 통과시킨 적 없고 틀림 쪽으로만 엄함, 이렇게 하면 통과/틀림 69/72(Sonnet만 쓸 때와 같음).
   // 따라 말하기·통화 다시 말해보기는 낱말 대조라 roleplayPractice(Haiku).
   scriptJudge: HAIKU,
+  scriptRecheck: SONNET,
   learnerRead: HAIKU,
   ask: HAIKU,
   roleplayReview: SONNET,
